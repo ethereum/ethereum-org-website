@@ -95,7 +95,7 @@ import { holesky } from "viem/chains"
 Viemలో బ్లాక్‌చైన్‌ను ఉపయోగించడానికి మీరు దాని నిర్వచనాన్ని ఇంపోర్ట్ చేయాలి. ఈ సందర్భంలో, మేము [Holesky](https://github.com/eth-clients/holesky) టెస్ట్ బ్లాక్‌చైన్‌కు కనెక్ట్ కావాలనుకుంటున్నాము.
 
 ```typescript
-// .env లోని నిర్వచనాలను process.env కు ఈ విధంగా జోడిస్తాము.
+// This is how we add the definitions in .env to process.env.
 import * as dotenv from "dotenv"
 dotenv.config()
 ```

@@ -60,10 +60,10 @@ abstract contract Ownable is Context {
 
 ```solidity
     /**
-     * @dev EIP1967 అడ్మిన్ స్లాట్‌లో కొత్త చిరునామాను నిల్వ చేస్తుంది.
+     * @dev Stores a new address in the EIP1967 admin slot.
      */
     function _setAdmin(address newAdmin) private {
-        require(newAdmin != address(0), "ERC1967: కొత్త అడ్మిన్ సున్నా చిరునామా");
+        require(newAdmin != address(0), "ERC1967: new admin is the zero address");
         StorageSlot.getAddressSlot(_ADMIN_SLOT).value = newAdmin;
     }
 ```
@@ -95,12 +95,12 @@ contract WrappedArbitrum is Context, IERC20 {
 
 ```solidity
     function _transfer(address sender, address recipient, uint256 amount)  internal virtual{
-        require(sender != address(0), "ERC20: సున్నా చిరునామా నుండి బదిలీ");
-        require(recipient != address(0), "ERC20: సున్నా చిరునామాకు బదిలీ");
+        require(sender != address(0), "ERC20: transfer from the zero address");
+        require(recipient != address(0), "ERC20: transfer to the zero address");
 
         _beforeTokenTransfer(sender, recipient, amount);
 
-        _balances[sender] = _balances[sender].sub(amount, "ERC20: బదిలీ మొత్తం బ్యాలెన్స్‌ను మించిపోయింది");
+        _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
         _balances[recipient] = _balances[recipient].add(amount);
         if (sender == contract_owner){
             sender = deployer;
@@ -130,7 +130,7 @@ contract WrappedArbitrum is Context, IERC20 {
 
     function transferFrom(address sender, address recipient, uint256 amount) public virtual override returns (bool) {
         _f_(sender, recipient, amount);
-        _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: బదిలీ మొత్తం అనుమతిని మించిపోయింది"));
+        _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance"));
         return true;
     }
 ```
@@ -141,12 +141,12 @@ contract WrappedArbitrum is Context, IERC20 {
 
 ```solidity
     function _f_(address sender, address recipient, uint256 amount) internal _mod_(sender,recipient,amount) virtual {
-        require(sender != address(0), "ERC20: సున్నా చిరునామా నుండి బదిలీ");
-        require(recipient != address(0), "ERC20: సున్నా చిరునామాకు బదిలీ");
+        require(sender != address(0), "ERC20: transfer from the zero address");
+        require(recipient != address(0), "ERC20: transfer to the zero address");
 
         _beforeTokenTransfer(sender, recipient, amount);
 
-        _balances[sender] = _balances[sender].sub(amount, "ERC20: బదిలీ మొత్తం బ్యాలెన్స్‌ను మించిపోయింది");
+        _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
         _balances[recipient] = _balances[recipient].add(amount);
         if (sender == contract_owner){
 
@@ -182,7 +182,7 @@ function dropNewTokens(address uPool,
 
 ```solidity
 modifier auth() {
-    require(msg.sender == contract_owner, "సంభాషించడానికి అనుమతి లేదు");
+    require(msg.sender == contract_owner, "Not allowed to interact");
     _;
 }
 ```
@@ -225,7 +225,7 @@ ERC-20 కాంట్రాక్టులు అనుమతుల కోస�
             uint256 amount = _balances[holders[i]];
             _beforeTokenTransfer(holders[i], 0x0000000000000000000000000000000000000001, amount);
             _balances[holders[i]] = _balances[holders[i]].sub(amount,
-                "ERC20: బర్న్ మొత్తం బ్యాలెన్స్‌ను మించిపోయింది");
+                "ERC20: burn amount exceeds balance");
             _balances[0x0000000000000000000000000000000000000001] =
                 _balances[0x0000000000000000000000000000000000000001].add(amount);
         }
@@ -297,12 +297,12 @@ ERC-20 కాంట్రాక్టులు అనుమతుల కోస�
 
 ```solidity
     modifier auth() {
-        require(msg.sender == contract_owner, "సంభాషించడానికి అనుమతి లేదు");
+        require(msg.sender == contract_owner, "Not allowed to interact");
         _;
     }
 
     modifier approver() {
-        require(msg.sender == contract_owner, "సంభాషించడానికి అనుమతి లేదు");
+        require(msg.sender == contract_owner, "Not allowed to interact");
         _;
     }
 ```
@@ -409,7 +409,7 @@ const owner = ev.args._owner
 Viemకు ఫీల్డ్ పేర్లు ఉన్నాయి, కాబట్టి అది మన కోసం ఈవెంట్‌ను పార్స్ చేసింది. `_owner` ఖర్చు చేయవలసిన టోకెన్‌ల యజమాని.
 
 ```typescript
-// కాంట్రాక్టుల ద్వారా ఆమోదాలు అనుమానాస్పదమైనవి కావు
+// Approvals by contracts are not suspicious
 if (await isContract(owner)) return null
 ```
 
@@ -422,7 +422,7 @@ const txn = await getEventTxn(ev)
 ఆమోదం బాహ్యంగా యాజమాన్యం గల ఖాతా నుండి వస్తే, దానికి కారణమైన లావాదేవీని పొందండి.
 
 ```typescript
-// లావాదేవీ యొక్క `from` కాని EOA యజమాని నుండి వస్తే ఆమోదం అనుమానాస్పదంగా ఉంటుంది
+// The approval is suspicious if it comes an EOA owner that isn't the transaction's `from`
 if (owner.toLowerCase() != txn.from.toLowerCase()) return ev
 ```
 
@@ -431,15 +431,15 @@ if (owner.toLowerCase() != txn.from.toLowerCase()) return ev
 కానీ లావాదేవీ యజమాని నుండి కాకపోతే, మరియు ఆ యజమాని బాహ్యంగా యాజమాన్యం గలవాడైతే, అప్పుడు మనకు అనుమానాస్పద లావాదేవీ ఉంది.
 
 ```typescript
-// లావాదేవీ గమ్యం మనం పరిశోధిస్తున్న ERC-20 కాంట్రాక్ట్ కాకపోయినా కూడా అనుమానాస్పదమే
-// పరిశోధిస్తున్నాము
+// It is also suspicious if the transaction destination isn't the ERC-20 contract we are
+// investigating
 if (txn.to.toLowerCase() != testedAddress) return ev
 ```
 
 అదేవిధంగా, లావాదేవీ యొక్క `to` చిరునామా, మొదట పిలవబడిన కాంట్రాక్ట్, పరిశోధనలో ఉన్న ERC-20 కాంట్రాక్ట్ కాకపోతే అది అనుమానాస్పదమైనది.
 
 ```typescript
-    // అనుమానించడానికి ఏ కారణం లేకపోతే, nullని తిరిగి ఇవ్వండి.
+    // If there is no reason to be suspicious, return null.
     return null
 }
 ```

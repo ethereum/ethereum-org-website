@@ -182,7 +182,7 @@ FROM temp_table
 క్వెరీలు ఇవి:
 
 ```sql
-# 2016 నుండి రోజుకు ఉత్పత్తి చేయబడిన బ్లాక్‌ల సంఖ్యను దృశ్యమానం చేయడానికి క్వెరీ
+# query to visualize number of blocks produced daily since 2016
 
 SELECT
     DATE_TRUNC('day', time) AS dt,
@@ -191,7 +191,7 @@ FROM ethereum."blocks"
 GROUP BY dt
 OFFSET 1
 
-# రోజుకు ఉత్పత్తి చేయబడిన బ్లాక్‌ల సగటు సంఖ్య
+# average number of blocks produced per day
 
 WITH temp_table AS (
 SELECT

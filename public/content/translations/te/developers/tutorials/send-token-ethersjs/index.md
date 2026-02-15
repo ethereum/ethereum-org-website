@@ -32,7 +32,7 @@ ethers.js(5.0)ను చేర్చండి
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // మీ కోడ్ ఇక్కడ...
+  // Your code here...
 </script>
 ```
 
@@ -117,7 +117,7 @@ const tx = {
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("పంపడం పూర్తయింది!")
+  alert("Send finished!")
 })
 ```
 
@@ -166,23 +166,23 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // సాధారణ టోకెన్ పంపడం
+      // general token send
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // ఎన్ని టోకెన్లు?
+      // How many tokens?
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // టోకెన్లను పంపండి
+      // Send tokens
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("టోకెన్ పంపబడింది")
+        alert("sent token")
       })
-    } // ఈథర్ పంపడం
+    } // ether send
     else {
       const tx = {
         from: send_account,
@@ -199,10 +199,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("పంపడం పూర్తయింది!")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("పంపడంలో విఫలమైంది!!")
+        alert("failed to send!!")
       }
     }
   })

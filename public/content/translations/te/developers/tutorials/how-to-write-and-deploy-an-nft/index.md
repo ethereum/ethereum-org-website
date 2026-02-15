@@ -88,19 +88,19 @@ Makersplace (ఇటీవల క్రిస్టీస్‌లో $69 మి�
 ```json
     package name: (my-nft)
     version: (1.0.0)
-    description: నా మొదటి NFT!
+    description: My first NFT!
     entry point: (index.js)
     test command:
     git repository:
     keywords:
     author:
     license: (ISC)
-    /Users/thesuperb1/Desktop/my-nft/package.jsonకు వ్రాయబోతున్నారు:
+    About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
 
     {
       "name": "my-nft",
       "version": "1.0.0",
-      "description": "నా మొదటి NFT!",
+      "description": "My first NFT!",
       "main": "index.js",
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -325,10 +325,10 @@ Hardhat అదనపు పనిముట్లు మరియు విస్
 async function main() {
   const MyNFT = await ethers.getContractFactory("MyNFT")
 
-  // డిప్లోయ్‌మెంట్‌ను ప్రారంభించండి, ఇది ఒక కాంట్రాక్ట్ ఆబ్జెక్ట్‌కు పరిష్కరించే ఒక ప్రామిస్‌ను తిరిగి ఇస్తుంది
+  // Start deployment, returning a promise that resolves to a contract object
   const myNFT = await MyNFT.deploy()
   await myNFT.deployed()
-  console.log("కాంట్రాక్ట్ డిప్లోయ్ చేయబడిన చిరునామా:", myNFT.address)
+  console.log("Contract deployed to address:", myNFT.address)
 }
 
 main()

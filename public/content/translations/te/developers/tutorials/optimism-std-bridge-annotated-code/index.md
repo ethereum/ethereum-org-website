@@ -91,7 +91,7 @@ pragma solidity >0.5.0 <0.9.0;
  */
 interface IL1ERC20Bridge {
     /**********
-     * ఈవెంట్‌లు *
+     * Events *
      **********/
 
     event ERC20DepositInitiated(
@@ -136,12 +136,12 @@ L1 బ్రిడ్జ్ విషయంలో, దీని అర్థం 
 ```solidity
 
     /********************
-     * పబ్లిక్ ఫంక్షన్‌లు *
+     * Public Functions *
      ********************/
 
     /**
-     * @dev సంబంధిత L2 బ్రిడ్జ్ కాంట్రాక్ట్ యొక్క చిరునామాను పొందండి.
-     * @return సంబంధిత L2 బ్రిడ్జ్ కాంట్రాక్ట్ యొక్క చిరునామా.
+     * @dev get the address of the corresponding L2 bridge contract.
+     * @return Address of the corresponding L2 bridge contract.
      */
     function l2TokenBridge() external returns (address);
 ```
@@ -151,12 +151,14 @@ L1 బ్రిడ్జ్ విషయంలో, దీని అర్థం 
 
 ```solidity
     /**
-     * @dev L2లోని కాలర్ బ్యాలెన్స్‌కు ERC20 మొత్తాన్ని డిపాజిట్ చేయండి.
-     * @param _l1Token మేము డిపాజిట్ చేస్తున్న L1 ERC20 యొక్క చిరునామా
-     * @param _l2Token L1 సంబంధిత L2 ERC20 యొక్క చిరునామా
-     * @param _amount డిపాజిట్ చేయడానికి ERC20 మొత్తం
-     * @param _l2Gas L2లో డిపాజిట్‌ను పూర్తి చేయడానికి అవసరమైన గ్యాస్ పరిమితి.
-     * @param _data L2కి ఫార్వార్డ్ చేయడానికి ఐచ్ఛిక డేటా. ఈ డేటా బాహ్య కాంట్రాక్టుల సౌలభ్యం కోసం మాత్రమే అందించబడుతుంది. గరిష్ట పొడవును అమలు చేయడం మినహా, ఈ కాంట్రాక్టులు దాని కంటెంట్ గురించి ఎటువంటి హామీలను ఇవ్వవు.
+     * @dev deposit an amount of the ERC20 to the caller's balance on L2.
+     * @param _l1Token Address of the L1 ERC20 we are depositing
+     * @param _l2Token Address of the L1 respective L2 ERC20
+     * @param _amount Amount of the ERC20 to deposit
+     * @param _l2Gas Gas limit required to complete the deposit on L2.
+     * @param _data Optional data to forward to L2. This data is provided
+     *        solely as a convenience for external contracts. Aside from enforcing a maximum
+     *        length, these contracts provide no guarantees about its content.
      */
     function depositERC20(
         address _l1Token,
@@ -173,13 +175,15 @@ L1 బ్రిడ్జ్ విషయంలో, దీని అర్థం 
 
 ```solidity
     /**
-     * @dev L2లోని ఒక గ్రహీత యొక్క బ్యాలెన్స్‌కు ERC20 మొత్తాన్ని డిపాజిట్ చేయండి.
-     * @param _l1Token మేము డిపాజిట్ చేస్తున్న L1 ERC20 యొక్క చిరునామా
-     * @param _l2Token L1 సంబంధిత L2 ERC20 యొక్క చిరునామా
-     * @param _to విత్‌డ్రాయల్‌ను క్రెడిట్ చేయడానికి L2 చిరునామా.
-     * @param _amount డిపాజిట్ చేయడానికి ERC20 మొత్తం.
-     * @param _l2Gas L2లో డిపాజిట్ పూర్తి చేయడానికి అవసరమైన గ్యాస్ పరిమితి.
-     * @param _data L2కి ఫార్వార్డ్ చేయడానికి ఐచ్ఛిక డేటా. ఈ డేటా బాహ్య కాంట్రాక్టుల సౌలభ్యం కోసం మాత్రమే అందించబడుతుంది. గరిష్ట పొడవును అమలు చేయడం మినహా, ఈ కాంట్రాక్టులు దాని కంటెంట్ గురించి ఎటువంటి హామీలను ఇవ్వవు.
+     * @dev deposit an amount of ERC20 to a recipient's balance on L2.
+     * @param _l1Token Address of the L1 ERC20 we are depositing
+     * @param _l2Token Address of the L1 respective L2 ERC20
+     * @param _to L2 address to credit the withdrawal to.
+     * @param _amount Amount of the ERC20 to deposit.
+     * @param _l2Gas Gas limit required to complete the deposit on L2.
+     * @param _data Optional data to forward to L2. This data is provided
+     *        solely as a convenience for external contracts. Aside from enforcing a maximum
+     *        length, these contracts provide no guarantees about its content.
      */
     function depositERC20To(
         address _l1Token,
@@ -195,21 +199,22 @@ L1 బ్రిడ్జ్ విషయంలో, దీని అర్థం 
 
 ```solidity
     /*************************
-     * క్రాస్-చైన్ ఫంక్షన్‌లు *
+     * Cross-chain Functions *
      *************************/
 
     /**
-     * @dev L2 నుండి L1కి విత్‌డ్రాయల్‌ను పూర్తి చేసి, గ్రహీత యొక్క L1 ERC20 టోకెన్ బ్యాలెన్స్‌కు నిధులను క్రెడిట్ చేయండి.
-     * L2 నుండి ప్రారంభించబడిన విత్‌డ్రాయల్ ఖరారు చేయబడకపోతే ఈ కాల్ విఫలమవుతుంది.
+     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
+     * L1 ERC20 token.
+     * This call will fail if the initialized withdrawal from L2 has not been finalized.
      *
-     * @param _l1Token finalizeWithdrawal కోసం L1 టోకెన్ చిరునామా.
-     * @param _l2Token విత్‌డ్రాయల్ ప్రారంభించబడిన L2 టోకెన్ చిరునామా.
-     * @param _from బదిలీని ప్రారంభించే L2 చిరునామా.
-     * @param _to విత్‌డ్రాయల్‌ను క్రెడిట్ చేయడానికి L1 చిరునామా.
-     * @param _amount డిపాజిట్ చేయడానికి ERC20 మొత్తం.
-     * @param _data L2లో పంపినవారు అందించిన డేటా. ఈ డేటా
-     * బాహ్య కాంట్రాక్టుల సౌలభ్యం కోసం మాత్రమే అందించబడుతుంది. గరిష్ట
-     * పొడవును అమలు చేయడం మినహా, ఈ కాంట్రాక్టులు దాని కంటెంట్ గురించి ఎటువంటి హామీలను ఇవ్వవు.
+     * @param _l1Token Address of L1 token to finalizeWithdrawal for.
+     * @param _l2Token Address of L2 token where withdrawal was initiated.
+     * @param _from L2 address initiating the transfer.
+     * @param _to L1 address to credit the withdrawal to.
+     * @param _amount Amount of the ERC20 to deposit.
+     * @param _data Data provided by the sender on L2. This data is provided
+     *   solely as a convenience for external contracts. Aside from enforcing a maximum
+     *   length, these contracts provide no guarantees about its content.
      */
     function finalizeERC20Withdrawal(
         address _l1Token,
@@ -248,7 +253,7 @@ import "./IL1ERC20Bridge.sol";
  */
 interface IL1StandardBridge is IL1ERC20Bridge {
     /**********
-     * ఈవెంట్‌లు *
+     * Events *
      **********/
     event ETHDepositInitiated(
         address indexed _from,
@@ -269,11 +274,11 @@ interface IL1StandardBridge is IL1ERC20Bridge {
     );
 
     /********************
-     * పబ్లిక్ ఫంక్షన్‌లు *
+     * Public Functions *
      ********************/
 
     /**
-     * @dev L2లోని కాలర్ బ్యాలెన్స్‌కు ETH మొత్తాన్ని డిపాజిట్ చేయండి.
+     * @dev Deposit an amount of the ETH to the caller's balance on L2.
             .
             .
             .
@@ -281,7 +286,7 @@ interface IL1StandardBridge is IL1ERC20Bridge {
     function depositETH(uint32 _l2Gas, bytes calldata _data) external payable;
 
     /**
-     * @dev L2లోని గ్రహీత బ్యాలెన్స్‌కు ETH మొత్తాన్ని డిపాజిట్ చేయండి.
+     * @dev Deposit an amount of ETH to a recipient's balance on L2.
             .
             .
             .
@@ -293,13 +298,13 @@ interface IL1StandardBridge is IL1ERC20Bridge {
     ) external payable;
 
     /*************************
-     * క్రాస్-చైన్ ఫంక్షన్‌లు *
+     * Cross-chain Functions *
      *************************/
 
     /**
-     * @dev L2 నుండి L1కి విత్‌డ్రాయల్‌ను పూర్తి చేసి, గ్రహీత యొక్క బ్యాలెన్స్‌కు నిధులను క్రెడిట్ చేయండి
-     * L1 ETH టోకెన్. xDomainMessenger మాత్రమే ఈ ఫంక్షన్‌ను కాల్ చేయగలదు కాబట్టి, ఇది ఎప్పటికీ కాల్ చేయబడదు
-     * విత్‌డ్రాయల్ ఖరారు చేయబడక ముందు.
+     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
+     * L1 ETH token. Since only the xDomainMessenger can call this function, it will never be called
+     * before the withdrawal is finalized.
                 .
                 .
                 .
@@ -331,24 +336,24 @@ import { ICrossDomainMessenger } from "./ICrossDomainMessenger.sol";
 ```solidity
 /**
  * @title CrossDomainEnabled
- * @dev క్రాస్-డొమైన్ కమ్యూనికేషన్‌లను నిర్వహించే కాంట్రాక్ట్‌ల కోసం సహాయక కాంట్రాక్ట్
+ * @dev Helper contract for contracts performing cross-domain communications
  *
- * ఉపయోగించిన కంపైలర్: వారసత్వ కాంట్రాక్ట్ ద్వారా నిర్వచించబడింది
+ * Compiler used: defined by inheriting contract
  */
 contract CrossDomainEnabled {
     /*************
-     * వేరియబుల్స్ *
+     * Variables *
      *************/
 
-    // ఇతర డొమైన్ నుండి సందేశాలను పంపడానికి మరియు స్వీకరించడానికి ఉపయోగించే మెసెంజర్ కాంట్రాక్ట్.
+    // Messenger contract used to send and receive messages from the other domain.
     address public messenger;
 
     /***************
-     * కన్‌స్ట్రక్టర్ *
+     * Constructor *
      ***************/
 
     /**
-     * @param _messenger ప్రస్తుత లేయర్‌పై ఉన్న CrossDomainMessenger యొక్క చిరునామా.
+     * @param _messenger Address of the CrossDomainMessenger on the current layer.
      */
     constructor(address _messenger) {
         messenger = _messenger;
@@ -361,12 +366,13 @@ contract CrossDomainEnabled {
 ```solidity
 
     /**********************
-     * ఫంక్షన్ మాడిఫైయర్‌లు *
+     * Function Modifiers *
      **********************/
 
     /**
-     * మార్పు చేసిన ఫంక్షన్‌ను నిర్దిష్ట క్రాస్-డొమైన్ ఖాతా ద్వారా మాత్రమే పిలవగలరని నిర్ధారిస్తుంది.
-     * @param _sourceDomainAccount ఈ ఫంక్షన్‌ను కాల్ చేయడానికి ప్రామాణీకరించబడిన ఆరిజినేటింగ్ డొమైన్‌లోని ఏకైక ఖాతా.
+     * Enforces that the modified function is only callable by a specific cross-domain account.
+     * @param _sourceDomainAccount The only account on the originating domain which is
+     *  authenticated to call this function.
      */
     modifier onlyFromCrossDomainAccount(address _sourceDomainAccount) {
 ```
@@ -402,13 +408,13 @@ contract CrossDomainEnabled {
     }
 
     /**********************
-     * అంతర్గత ఫంక్షన్‌లు *
+     * Internal Functions *
      **********************/
 
     /**
-     * సాధారణంగా స్టోరేజ్ నుండి మెసెంజర్‌ను పొందుతుంది. చైల్డ్ కాంట్రాక్ట్‌కు
-     * ఓవర్‌రైడ్ చేయాల్సిన అవసరం ఉంటే ఈ ఫంక్షన్ బహిర్గతం చేయబడుతుంది.
-     * @return ఉపయోగించాల్సిన క్రాస్-డొమైన్ మెసెంజర్ కాంట్రాక్ట్ యొక్క చిరునామా.
+     * Gets the messenger, usually from storage. This function is exposed in case a child contract
+     * needs to override.
+     * @return The address of the cross-domain messenger contract which should be used.
      */
     function getCrossDomainMessenger() internal virtual returns (ICrossDomainMessenger) {
         return ICrossDomainMessenger(messenger);
@@ -421,11 +427,11 @@ contract CrossDomainEnabled {
 ```solidity
 
     /**
-     * మరొక డొమైన్‌లోని ఒక ఖాతాకు సందేశాన్ని పంపుతుంది
-     * @param _crossDomainTarget గమ్యస్థాన డొమైన్‌లోని ఉద్దేశించిన గ్రహీత
-     * @param _message లక్ష్యానికి పంపాల్సిన డేటా (సాధారణంగా `onlyFromCrossDomainAccount()`తో
-     * ఒక ఫంక్షన్‌కు కాల్‌డేటా)
-     * @param _gasLimit లక్ష్య డొమైన్‌పై సందేశ రసీదు కోసం గ్యాస్‌లిమిట్.
+     * Sends a message to an account on another domain
+     * @param _crossDomainTarget The intended recipient on the destination domain
+     * @param _message The data to send to the target (usually calldata to a function with
+     *  `onlyFromCrossDomainAccount()`)
+     * @param _gasLimit The gasLimit for the receipt of the message on the target domain.
      */
     function sendCrossDomainMessage(
         address _crossDomainTarget,
@@ -522,7 +528,9 @@ import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.s
 ```solidity
 /**
  * @title L1StandardBridge
- * @dev L1 ETH మరియు ERC20 బ్రిడ్జ్ అనేది డిపాజిట్ చేయబడిన L1 నిధులను మరియు L2లో ఉపయోగంలో ఉన్న స్టాండర్డ్ టోకెన్‌లను నిల్వ చేసే కాంట్రాక్ట్. ఇది సంబంధిత L2 బ్రిడ్జ్‌ను సింక్రొనైజ్ చేస్తుంది, డిపాజిట్ల గురించి తెలియజేస్తుంది మరియు కొత్తగా ఖరారు చేయబడిన విత్‌డ్రాయల్స్ కోసం దాని నుండి వింటుంది.
+ * @dev The L1 ETH and ERC20 Bridge is a contract which stores deposited L1 funds and standard
+ * tokens that are in use on L2. It synchronizes a corresponding L2 Bridge, informing it of deposits
+ * and listening to it for newly finalized withdrawals.
  *
  */
 contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
@@ -534,7 +542,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 ```solidity
 
     /********************************
-     * బాహ్య కాంట్రాక్ట్ రిఫరెన్స్‌లు *
+     * External Contract References *
      ********************************/
 
     address public l2TokenBridge;
@@ -544,7 +552,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
 ```solidity
 
-    // L1 టోకెన్‌ను L2 టోకెన్‌కు మ్యాప్ చేస్తుంది మరియు డిపాజిట్ చేయబడిన L1 టోకెన్ యొక్క బ్యాలెన్స్
+    // Maps L1 token to L2 token to balance of the L1 token deposited
     mapping(address => mapping(address => uint256)) public deposits;
 ```
 
@@ -556,10 +564,10 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 ```solidity
 
     /***************
-     * కన్‌స్ట్రక్టర్ *
+     * Constructor *
      ***************/
 
-    // ఈ కాంట్రాక్ట్ ప్రాక్సీ వెనుక ఉంటుంది, కాబట్టి కన్‌స్ట్రక్టర్ పరామితులు ఉపయోగించబడవు.
+    // This contract lives behind a proxy, so the constructor parameters will go unused.
     constructor() CrossDomainEnabled(address(0)) {}
 ```
 
@@ -573,12 +581,12 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
 ```solidity
     /******************
-     * ఇనిషియలైజేషన్ *
+     * Initialization *
      ******************/
 
     /**
-     * @param _l1messenger క్రాస్-చైన్ కమ్యూనికేషన్స్ కోసం ఉపయోగించే L1 మెసెంజర్ చిరునామా.
-     * @param _l2TokenBridge L2 స్టాండర్డ్ బ్రిడ్జ్ చిరునామా.
+     * @param _l1messenger L1 Messenger address being used for cross-chain communications.
+     * @param _l2TokenBridge L2 standard bridge address.
      */
     // slither-disable-next-line external-function
 ```
@@ -616,14 +624,14 @@ L1 క్రాస్ డొమైన్ మెసెంజర్ లేదా L
 ```solidity
 
     /**************
-     * డిపాజిటింగ్ *
+     * Depositing *
      **************/
 
-    /** @dev పంపినవారు EOA అయి ఉండాలని కోరే మాడిఫైయర్. ఈ తనిఖీని ఒక దురుద్దేశపూర్వక
-     * కాంట్రాక్ట్ ద్వారా initcode ద్వారా తప్పించుకోవచ్చు, కానీ ఇది మనం నివారించాలనుకుంటున్న వినియోగదారు లోపాన్ని చూసుకుంటుంది.
+    /** @dev Modifier requiring sender to be EOA.  This check could be bypassed by a malicious
+     *  contract via initcode, but it takes care of the user error we want to avoid.
      */
     modifier onlyEOA() {
-        // కాంట్రాక్ట్‌ల నుండి డిపాజిట్‌లను ఆపడానికి ఉపయోగించబడుతుంది (ప్రమాదవశాత్తు కోల్పోయిన టోకెన్‌లను నివారించడానికి)
+        // Used to stop deposits from contracts (avoid accidentally lost tokens)
         require(!Address.isContract(msg.sender), "Account not EOA");
         _;
     }
@@ -633,10 +641,10 @@ L1 క్రాస్ డొమైన్ మెసెంజర్ లేదా L
 
 ```solidity
     /**
-     * @dev ఈ ఫంక్షన్‌ను ఏ డేటా లేకుండా పిలవవచ్చు
-     * L2లోని కాలర్ బ్యాలెన్స్‌కు ETH మొత్తాన్ని డిపాజిట్ చేయడానికి.
-     * receive ఫంక్షన్ డేటాను తీసుకోదు కాబట్టి, ఒక సంప్రదాయవాద
-     * డిఫాల్ట్ మొత్తం L2కి ఫార్వార్డ్ చేయబడుతుంది.
+     * @dev This function can be called with no data
+     * to deposit an amount of ETH to the caller's balance on L2.
+     * Since the receive function doesn't take data, a conservative
+     * default amount is forwarded to L2.
      */
     receive() external payable onlyEOA {
         _initiateETHDeposit(msg.sender, msg.sender, 200_000, bytes(""));
@@ -670,11 +678,14 @@ L1 క్రాస్ డొమైన్ మెసెంజర్ లేదా L
 
 ```solidity
     /**
-     * @dev ETHని నిల్వ చేయడం మరియు డిపాజిట్ గురించి L2 ETH గేట్‌వేకు తెలియజేయడం ద్వారా డిపాజిట్‌ల కోసం తర్కాన్ని నిర్వహిస్తుంది.
-     * @param _from L1పై డిపాజిట్‌ను లాగాల్సిన ఖాతా.
-     * @param _to L2పై డిపాజిట్‌ను ఇవ్వాల్సిన ఖాతా.
-     * @param _l2Gas L2లో డిపాజిట్ పూర్తి చేయడానికి అవసరమైన గ్యాస్ పరిమితి.
-     * @param _data L2కి ఫార్వార్డ్ చేయడానికి ఐచ్ఛిక డేటా. ఈ డేటా బాహ్య కాంట్రాక్టుల సౌలభ్యం కోసం మాత్రమే అందించబడుతుంది. గరిష్ట పొడవును అమలు చేయడం మినహా, ఈ కాంట్రాక్టులు దాని కంటెంట్ గురించి ఎటువంటి హామీలను ఇవ్వవు.
+     * @dev Performs the logic for deposits by storing the ETH and informing the L2 ETH Gateway of
+     * the deposit.
+     * @param _from Account to pull the deposit from on L1.
+     * @param _to Account to give the deposit to on L2.
+     * @param _l2Gas Gas limit required to complete the deposit on L2.
+     * @param _data Optional data to forward to L2. This data is provided
+     *        solely as a convenience for external contracts. Aside from enforcing a maximum
+     *        length, these contracts provide no guarantees about its content.
      */
     function _initiateETHDeposit(
         address _from,
@@ -682,7 +693,7 @@ L1 క్రాస్ డొమైన్ మెసెంజర్ లేదా L
         uint32 _l2Gas,
         bytes memory _data
     ) internal {
-        // finalizeDeposit కాల్ కోసం కాల్‌డేటాను నిర్మించండి
+        // Construct calldata for finalizeDeposit call
         bytes memory message = abi.encodeWithSelector(
 ```
 
@@ -714,7 +725,7 @@ Solidity ఫంక్షన్ [`abi.encodeWithSelector`](https://docs.solidityl
 | \_data    | \_data                                                             | డిపాజిట్‌కు జోడించడానికి అదనపు డేటా                                                                                                                                |
 
 ```solidity
-        // కాల్‌డేటాను L2కి పంపండి
+        // Send calldata into L2
         // slither-disable-next-line reentrancy-events
         sendCrossDomainMessage(l2TokenBridge, _l2Gas, message);
 ```
@@ -757,16 +768,18 @@ Solidity ఫంక్షన్ [`abi.encodeWithSelector`](https://docs.solidityl
 
 ```solidity
     /**
-     * @dev డిపాజిట్ గురించి L2 డిపాజిటెడ్ టోకెన్
-     * కాంట్రాక్ట్‌కు తెలియజేయడం మరియు L1 నిధులను లాక్ చేయడానికి ఒక హ్యాండ్లర్‌ను పిలవడం ద్వారా డిపాజిట్‌ల కోసం తర్కాన్ని నిర్వహిస్తుంది. (ఉదా., transferFrom)
+     * @dev Performs the logic for deposits by informing the L2 Deposited Token
+     * contract of the deposit and calling a handler to lock the L1 funds. (e.g., transferFrom)
      *
-     * @param _l1Token మేము డిపాజిట్ చేస్తున్న L1 ERC20 యొక్క చిరునామా
-     * @param _l2Token L1 సంబంధిత L2 ERC20 యొక్క చిరునామా
-     * @param _from L1పై డిపాజిట్‌ను లాగాల్సిన ఖాతా
-     * @param _to L2పై డిపాజిట్‌ను ఇవ్వాల్సిన ఖాతా
-     * @param _amount డిపాజిట్ చేయడానికి ERC20 మొత్తం.
-     * @param _l2Gas L2లో డిపాజిట్ పూర్తి చేయడానికి అవసరమైన గ్యాస్ పరిమితి.
-     * @param _data L2కి ఫార్వార్డ్ చేయడానికి ఐచ్ఛిక డేటా. ఈ డేటా బాహ్య కాంట్రాక్టుల సౌలభ్యం కోసం మాత్రమే అందించబడుతుంది. గరిష్ట పొడవును అమలు చేయడం మినహా, ఈ కాంట్రాక్టులు దాని కంటెంట్ గురించి ఎటువంటి హామీలను ఇవ్వవు.
+     * @param _l1Token Address of the L1 ERC20 we are depositing
+     * @param _l2Token Address of the L1 respective L2 ERC20
+     * @param _from Account to pull the deposit from on L1
+     * @param _to Account to give the deposit to on L2
+     * @param _amount Amount of the ERC20 to deposit.
+     * @param _l2Gas Gas limit required to complete the deposit on L2.
+     * @param _data Optional data to forward to L2. This data is provided
+     *        solely as a convenience for external contracts. Aside from enforcing a maximum
+     *        length, these contracts provide no guarantees about its content.
      */
     function _initiateERC20Deposit(
         address _l1Token,
@@ -784,9 +797,9 @@ Solidity ఫంక్షన్ [`abi.encodeWithSelector`](https://docs.solidityl
 ETH విషయంలో, బ్రిడ్జ్‌కు కాల్ ఇప్పటికే బ్రిడ్జ్ ఖాతాకు ఆస్తి బదిలీని కలిగి ఉంటుంది (`msg.value`).
 
 ```solidity
-        // L1లో డిపాజిట్ ప్రారంభించబడినప్పుడు, L1 బ్రిడ్జ్ భవిష్యత్
-        // విత్‌డ్రాయల్స్ కోసం నిధులను దానికి బదిలీ చేస్తుంది. safeTransferFrom కాంట్రాక్ట్‌లో కోడ్ ఉందో లేదో కూడా తనిఖీ చేస్తుంది, కాబట్టి
-        // _from ఒక EOA లేదా చిరునామా(0) అయితే ఇది విఫలమవుతుంది.
+        // When a deposit is initiated on L1, the L1 Bridge transfers the funds to itself for future
+        // withdrawals. safeTransferFrom also checks if the contract has code, so this will fail if
+        // _from is an EOA or address(0).
         // slither-disable-next-line reentrancy-events, reentrancy-benign
         IERC20(_l1Token).safeTransferFrom(_from, address(this), _amount);
 ```
@@ -801,7 +814,7 @@ ERC-20 టోకెన్ బదిలీలు ETH నుండి భిన్
 అయినప్పటికీ, ఫ్రంట్-రన్నింగ్ ఒక సమస్య కాదు ఎందుకంటే `_initiateERC20Deposit` (`depositERC20` మరియు `depositERC20To`) అని పిలిచే రెండు ఫంక్షన్‌లు ఈ ఫంక్షన్‌ను `msg.sender`ని `_from` పరామితిగా మాత్రమే పిలుస్తాయి.
 
 ```solidity
-        // _l2Token.finalizeDeposit(_to, _amount) కోసం కాల్‌డేటాను నిర్మించండి
+        // Construct calldata for _l2Token.finalizeDeposit(_to, _amount)
         bytes memory message = abi.encodeWithSelector(
             IL2ERC20Bridge.finalizeDeposit.selector,
             _l1Token,
@@ -812,7 +825,7 @@ ERC-20 టోకెన్ బదిలీలు ETH నుండి భిన్
             _data
         );
 
-        // కాల్‌డేటాను L2కి పంపండి
+        // Send calldata into L2
         // slither-disable-next-line reentrancy-events, reentrancy-benign
         sendCrossDomainMessage(l2TokenBridge, _l2Gas, message);
 
@@ -830,7 +843,7 @@ ERC-20 టోకెన్ బదిలీలు ETH నుండి భిన్
     }
 
     /*************************
-     * క్రాస్-చైన్ ఫంక్షన్‌లు *
+     * Cross-chain Functions *
      *************************/
 
     /**
@@ -894,7 +907,7 @@ ETHని బదిలీ చేయడానికి మార్గం `msg.va
 
 ```solidity
 
-        // L1లో విత్‌డ్రాయల్ ఖరారు చేయబడినప్పుడు, L1 బ్రిడ్జ్ నిధులను విత్‌డ్రాయర్‌కు బదిలీ చేస్తుంది
+        // When a withdrawal is finalized on L1, the L1 Bridge transfers the funds to the withdrawer
         // slither-disable-next-line reentrancy-events
         IERC20(_l1Token).safeTransfer(_to, _amount);
 
@@ -904,14 +917,14 @@ ETHని బదిలీ చేయడానికి మార్గం `msg.va
 
 
     /*****************************
-     * తాత్కాలికం - ETHని మైగ్రేట్ చేయడం *
+     * Temporary - Migrating ETH *
      *****************************/
 
     /**
-     * @dev ఖాతాకు ETH బ్యాలెన్స్‌ను జోడిస్తుంది. ఇది పాత గేట్‌వే నుండి కొత్త గేట్‌వేకు
-     * ETHని మైగ్రేట్ చేయడానికి అనుమతించడానికి ఉద్దేశించబడింది.
-     * గమనిక: ఇది ఒక అప్‌గ్రేడ్ కోసం మాత్రమే మిగిలి ఉంది, తద్వారా పాత కాంట్రాక్ట్ నుండి
-     * మైగ్రేట్ చేయబడిన ETHని మేము స్వీకరించగలుగుతాము
+     * @dev Adds ETH balance to the account. This is meant to allow for ETH
+     * to be migrated from an old gateway to a new gateway.
+     * NOTE: This is left for one upgrade only so we are able to receive the migrated ETH from the
+     * old contract
      */
     function donateETH() external payable {}
 }
@@ -1002,10 +1015,10 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 ```solidity
 
     /**
-     * @param _l2Bridge L2 స్టాండర్డ్ బ్రిడ్జ్ యొక్క చిరునామా.
-     * @param _l1Token సంబంధిత L1 టోకెన్ యొక్క చిరునామా.
-     * @param _name ERC20 పేరు.
-     * @param _symbol ERC20 చిహ్నం.
+     * @param _l2Bridge Address of the L2 standard bridge.
+     * @param _l1Token Address of the corresponding L1 token.
+     * @param _name ERC20 name.
+     * @param _symbol ERC20 symbol.
      */
     constructor(
         address _l2Bridge,
@@ -1101,13 +1114,16 @@ import { IL2StandardERC20 } from "../../standards/IL2StandardERC20.sol";
 
 /**
  * @title L2StandardBridge
- * @dev L2 స్టాండర్డ్ బ్రిడ్జ్ అనేది L1 మరియు L2 మధ్య ETH మరియు ERC20 పరివర్తనలను ప్రారంభించడానికి L1 స్టాండర్డ్ బ్రిడ్జ్‌తో కలిసి పనిచేసే కాంట్రాక్ట్.
- * ఈ కాంట్రాక్ట్ L1 స్టాండర్డ్ బ్రిడ్జ్‌లో డిపాజిట్ల గురించి విన్నప్పుడు కొత్త టోకెన్ల కోసం మింటర్‌గా పనిచేస్తుంది.
- * ఈ కాంట్రాక్ట్ విత్‌డ్రాయల్ కోసం ఉద్దేశించిన టోకెన్ల బర్నర్‌గా కూడా పనిచేస్తుంది, L1 నిధులను విడుదల చేయమని L1 బ్రిడ్జ్‌కు తెలియజేస్తుంది.
+ * @dev The L2 Standard bridge is a contract which works together with the L1 Standard bridge to
+ * enable ETH and ERC20 transitions between L1 and L2.
+ * This contract acts as a minter for new tokens when it hears about deposits into the L1 Standard
+ * bridge.
+ * This contract also acts as a burner of the tokens intended for withdrawal, informing the L1
+ * bridge to release L1 funds.
  */
 contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     /********************************
-     * బాహ్య కాంట్రాక్ట్ రిఫరెన్స్‌లు *
+     * External Contract References *
      ********************************/
 
     address public l1TokenBridge;
@@ -1120,12 +1136,12 @@ L1 బ్రిడ్జ్ చిరునామా ముందుగానే
 ```solidity
 
     /***************
-     * కన్‌స్ట్రక్టర్ *
+     * Constructor *
      ***************/
 
     /**
-     * @param _l2CrossDomainMessenger ఈ కాంట్రాక్ట్ ఉపయోగించే క్రాస్-డొమైన్ మెసెంజర్.
-     * @param _l1TokenBridge ప్రధాన చైన్‌కు డిప్లాయ్ చేయబడిన L1 బ్రిడ్జ్ చిరునామా.
+     * @param _l2CrossDomainMessenger Cross-domain messenger used by this contract.
+     * @param _l1TokenBridge Address of the L1 bridge deployed to the main chain.
      */
     constructor(address _l2CrossDomainMessenger, address _l1TokenBridge)
         CrossDomainEnabled(_l2CrossDomainMessenger)
@@ -1134,7 +1150,7 @@ L1 బ్రిడ్జ్ చిరునామా ముందుగానే
     }
 
     /***************
-     * విత్‌డ్రాయింగ్ *
+     * Withdrawing *
      ***************/
 
     /**
@@ -1170,14 +1186,16 @@ L2 టోకెన్లు మాకు L1 సమానమైన చిరు�
 ```solidity
 
     /**
-     * @dev టోకెన్‌ను బర్న్ చేయడం మరియు విత్‌డ్రాయల్ గురించి L1 టోకెన్
-     * గేట్‌వేకు తెలియజేయడం ద్వారా విత్‌డ్రాయల్స్ కోసం తర్కాన్ని నిర్వహిస్తుంది.
-     * @param _l2Token విత్‌డ్రాయల్ ప్రారంభించబడిన L2 టోకెన్ చిరునామా.
-     * @param _from L2పై విత్‌డ్రాయల్‌ను లాగాల్సిన ఖాతా.
-     * @param _to L1పై విత్‌డ్రాయల్‌ను ఇవ్వాల్సిన ఖాతా.
-     * @param _amount విత్‌డ్రా చేయడానికి టోకెన్ మొత్తం.
-     * @param _l1Gas ఉపయోగించబడలేదు, కానీ సంభావ్య ఫార్వర్డ్ కంపాటిబిలిటీ పరిగణనల కోసం చేర్చబడింది.
-     * @param _data L1కి ఫార్వార్డ్ చేయడానికి ఐచ్ఛిక డేటా. ఈ డేటా బాహ్య కాంట్రాక్టుల సౌలభ్యం కోసం మాత్రమే అందించబడుతుంది. గరిష్ట పొడవును అమలు చేయడం మినహా, ఈ కాంట్రాక్టులు దాని కంటెంట్ గురించి ఎటువంటి హామీలను ఇవ్వవు.
+     * @dev Performs the logic for withdrawals by burning the token and informing
+     *      the L1 token Gateway of the withdrawal.
+     * @param _l2Token Address of L2 token where withdrawal is initiated.
+     * @param _from Account to pull the withdrawal from on L2.
+     * @param _to Account to give the withdrawal to on L1.
+     * @param _amount Amount of the token to withdraw.
+     * @param _l1Gas Unused, but included for potential forward compatibility considerations.
+     * @param _data Optional data to forward to L1. This data is provided
+     *        solely as a convenience for external contracts. Aside from enforcing a maximum
+     *        length, these contracts provide no guarantees about its content.
      */
     function _initiateWithdrawal(
         address _l2Token,
@@ -1187,8 +1205,8 @@ L2 టోకెన్లు మాకు L1 సమానమైన చిరు�
         uint32 _l1Gas,
         bytes calldata _data
     ) internal {
-        // విత్‌డ్రాయల్ ప్రారంభించబడినప్పుడు, మేము తదుపరి L2
-        // వినియోగాన్ని నివారించడానికి విత్‌డ్రాయర్ నిధులను బర్న్ చేస్తాము
+        // When a withdrawal is initiated, we burn the withdrawer's funds to prevent subsequent L2
+        // usage
         // slither-disable-next-line reentrancy-events
         IL2StandardERC20(_l2Token).burn(msg.sender, _amount);
 ```
@@ -1197,7 +1215,7 @@ L2 టోకెన్లు మాకు L1 సమానమైన చిరు�
 
 ```solidity
 
-        // l1TokenBridge.finalizeERC20Withdrawal(_to, _amount) కోసం కాల్‌డేటాను నిర్మించండి
+        // Construct calldata for l1TokenBridge.finalizeERC20Withdrawal(_to, _amount)
         // slither-disable-next-line reentrancy-events
         address l1Token = IL2StandardERC20(_l2Token).l1Token();
         bytes memory message;
@@ -1227,7 +1245,7 @@ L1లో ETH మరియు ERC-20 మధ్య తేడాను గుర్
             );
         }
 
-        // సందేశాన్ని L1 బ్రిడ్జ్‌కు పంపండి
+        // Send message up to L1 bridge
         // slither-disable-next-line reentrancy-events
         sendCrossDomainMessage(l1TokenBridge, _l1Gas, message);
 
@@ -1236,7 +1254,7 @@ L1లో ETH మరియు ERC-20 మధ్య తేడాను గుర్
     }
 
     /************************************
-     * క్రాస్-చైన్ ఫంక్షన్: డిపాజిటింగ్ *
+     * Cross-chain Function: Depositing *
      ************************************/
 
     /**
@@ -1261,8 +1279,8 @@ L1లో ETH మరియు ERC-20 మధ్య తేడాను గుర్
 ఇది ముఖ్యం ఎందుకంటే ఈ ఫంక్షన్ `_mint`ను పిలుస్తుంది మరియు L1లో బ్రిడ్జ్ యాజమాన్యంలోని టోకెన్ల ద్వారా కవర్ చేయబడని టోకెన్లను ఇవ్వడానికి ఉపయోగించబడుతుంది.
 
 ```solidity
-        // లక్ష్య టోకెన్ అనుగుణంగా ఉందో లేదో తనిఖీ చేయండి మరియు
-        // L1లో డిపాజిట్ చేయబడిన టోకెన్ ఇక్కడ L2 డిపాజిటెడ్ టోకెన్ ప్రాతినిధ్యంతో సరిపోలుతుందో లేదో ధృవీకరించండి
+        // Check the target token is compliant and
+        // verify the deposited token on L1 matches the L2 deposited token representation here
         if (
             // slither-disable-next-line reentrancy-events
             ERC165Checker.supportsInterface(_l2Token, 0x1d1d8b63) &&
@@ -1276,8 +1294,8 @@ L1లో ETH మరియు ERC-20 మధ్య తేడాను గుర్
 
 ```solidity
         ) {
-            // డిపాజిట్ ఖరారు చేయబడినప్పుడు, మేము అదే మొత్తంలో టోకెన్లతో
-            // L2లోని ఖాతాను క్రెడిట్ చేస్తాము.
+            // When a deposit is finalized, we credit the account on L2 with the same amount of
+            // tokens.
             // slither-disable-next-line reentrancy-events
             IL2StandardERC20(_l2Token).mint(_to, _amount);
             // slither-disable-next-line reentrancy-events
@@ -1291,14 +1309,14 @@ L1లో ETH మరియు ERC-20 మధ్య తేడాను గుర్
 
 ```solidity
         } else {
-            // డిపాజిట్ చేయబడుతున్న L2 టోకెన్ దాని L1 టోకెన్ యొక్క సరైన చిరునామా
-            // గురించి విభేదిస్తుంది, లేదా సరైన ఇంటర్‌ఫేస్‌కు మద్దతు ఇవ్వదు.
-            // ఇది దురుద్దేశపూర్వక L2 టోకెన్ ఉన్నప్పుడు, లేదా ఒక వినియోగదారు ఎలాగైనా
-            // డిపాజిట్ చేయడానికి తప్పు L2 టోకెన్ చిరునామాను పేర్కొన్నప్పుడు మాత్రమే జరగాలి.
-            // ఏ సందర్భంలోనైనా, మేము ఇక్కడ ప్రక్రియను ఆపి, ఒక విత్‌డ్రాయల్
-            // సందేశాన్ని నిర్మిస్తాము, తద్వారా వినియోగదారులు కొన్ని సందర్భాల్లో తమ నిధులను బయటకు తీయగలరు.
-            // దురుద్దేశపూర్వక టోకెన్ కాంట్రాక్ట్‌లను పూర్తిగా నిరోధించడానికి మార్గం లేదు, కానీ ఇది వినియోగదారు
-            // లోపాన్ని పరిమితం చేస్తుంది మరియు కొన్ని రకాల దురుద్దేశపూర్వక కాంట్రాక్ట్ ప్రవర్తనను తగ్గిస్తుంది.
+            // Either the L2 token which is being deposited-into disagrees about the correct address
+            // of its L1 token, or does not support the correct interface.
+            // This should only happen if there is a  malicious L2 token, or if a user somehow
+            // specified the wrong L2 token address to deposit into.
+            // In either case, we stop the process here and construct a withdrawal
+            // message so that users can get their funds out in some cases.
+            // There is no way to prevent malicious token contracts altogether, but this does limit
+            // user error and mitigate some forms of malicious contract behavior.
 ```
 
 ఒక వినియోగదారు తప్పు L2 టోకెన్ చిరునామాను ఉపయోగించడం ద్వారా గుర్తించగల లోపాన్ని చేస్తే, మేము డిపాజిట్‌ను రద్దు చేసి, L1లో టోకెన్లను తిరిగి ఇవ్వాలనుకుంటున్నాము.
@@ -1309,13 +1327,13 @@ L2 నుండి మేము దీనిని చేయగల ఏకైక 
                 IL1ERC20Bridge.finalizeERC20Withdrawal.selector,
                 _l1Token,
                 _l2Token,
-                _to, // డిపాజిట్‌ను పంపినవారికి తిరిగి పంపడానికి ఇక్కడ _to మరియు _fromని మార్చాము
+                _to, // switched the _to and _from here to bounce back the deposit to the sender
                 _from,
                 _amount,
                 _data
             );
 
-            // సందేశాన్ని L1 బ్రిడ్జ్‌కు పంపండి
+            // Send message up to L1 bridge
             // slither-disable-next-line reentrancy-events
             sendCrossDomainMessage(l1TokenBridge, 0, message);
             // slither-disable-next-line reentrancy-events

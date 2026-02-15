@@ -38,16 +38,16 @@ contract Counter {
 
     event ValueChanged(uint oldValue, uint256 newValue);
 
-    // గణనల సంఖ్యను ఉంచడానికి సంజ్ఞలేని పూర్ణాంకం రకం యొక్క ప్రైవేట్ వేరియబుల్
+    // Private variable of type unsigned int to keep the number of counts
     uint256 private count = 0;
 
-    // మన కౌంటర్‌ను పెంచే ఫంక్షన్
+    // Function that increments our counter
     function increment() public {
         count += 1;
         emit ValueChanged(count - 1, count);
     }
 
-    // కౌంట్ విలువను పొందడానికి గెట్టర్
+    // Getter to get the count value
     function getCount() public view returns (uint256) {
         return count;
     }

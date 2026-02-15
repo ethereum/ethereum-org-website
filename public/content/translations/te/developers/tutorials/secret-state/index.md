@@ -318,7 +318,7 @@ def main(bool[${width+2}][${height+2}] map) -> field {
 ```
 ${hashFragment}
 
-// స్థానం (x,y) లో మైన్‌ల సంఖ్య
+// The number of mines in location (x,y)
 def map2mineCount(bool[${width+2}][${height+2}] map, u32 x, u32 y) -> u8 {
    return if map[x+1][y+1] { 1 } else { 0 };
 }
@@ -430,8 +430,8 @@ const hashCompiled = zokrates.compile(hashProgram)
 ఇక్కడ మేము ఆ ప్రోగ్రామ్‌లను కంపైల్ చేస్తాము.
 
 ```typescript
-// జీరో కనౌలెడ్జి వెరిఫికేషన్ కోసం కీలను సృష్టించండి.
-// ప్రొడక్షన్ సిస్టమ్‌లో మీరు సెటప్ వేడుకను ఉపయోగించాలనుకుంటారు.
+// Create the keys for zero knowledge verification.
+// On a production system you'd want to use a setup ceremony.
 // (https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony).
 const keySetupResults = zokrates.setup(digCompiled.program, "")
 const verifierKey = keySetupResults.vk
@@ -460,8 +460,8 @@ const calculateMapHash = function (hashMe: boolean[][]): string {
 అవుట్‌పుట్ `"31337"` రూపంలో ఒక స్ట్రింగ్, కొటేషన్ మార్కులలో ఉంచబడిన దశాంశ సంఖ్య. కానీ `viem` కోసం మనకు అవసరమైన అవుట్‌పుట్ `0x60A7` రూపంలో ఒక హెక్సాడెసిమల్ సంఖ్య. కాబట్టి మేము కొటేషన్ మార్కులను తొలగించడానికి `.slice(1,-1)` ఉపయోగిస్తాము మరియు ఆ తర్వాత మిగిలిన స్ట్రింగ్‌ను, ఇది దశాంశ సంఖ్య, [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)కు నడపడానికి `BigInt` ఉపయోగిస్తాము. `.toString(16)` ఈ `BigInt`ను హెక్సాడెసిమల్ స్ట్రింగ్‌గా మారుస్తుంది, మరియు `"0x"+` హెక్సాడెసిమల్ సంఖ్యల కోసం మార్కర్‌ను జోడిస్తుంది.
 
 ```typescript
-// తవ్వి, ఫలితం యొక్క జీరో కనౌలెడ్జి రుజువును తిరిగి ఇవ్వండి
-// (సర్వర్-సైడ్ కోడ్)
+// Dig and return a zero knowledge proof of the result
+// (server-side code)
 ```
 
 జీరో కనౌలెడ్జి రుజువులో పబ్లిక్ ఇన్‌పుట్‌లు (`x` మరియు `y`) మరియు ఫలితాలు (మ్యాప్ యొక్క హాష్ మరియు బాంబుల సంఖ్య) ఉంటాయి.
@@ -494,7 +494,7 @@ const runResults = zokrates.computeWitness(digCompiled, [map, `${x}`, `${y}`])
 
 ```typescript
 const solidityVerifier = `
-        // మ్యాప్ పరిమాణం: ${width} x ${height}
+        // Map size: ${width} x ${height}
         \n${zokrates.exportSolidityVerifier(verifierKey)}
         `
 ```

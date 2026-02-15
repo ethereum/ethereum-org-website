@@ -47,9 +47,9 @@ const ethers = require("ethers")
 [మేము ఈథర్స్ ప్యాకేజీ నుండి హాష్ ఫంక్షన్‌ను ఉపయోగిస్తాము](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
 
 ```javascript
-// మనం సమగ్రతను ధృవీకరించాల్సిన ముడి డేటా. మొదటి రెండు బైట్‌లు
-// ఒక వినియోగదారు ఐడెంటిఫైయర్, మరియు చివరి రెండు బైట్‌లు ప్రస్తుతం
-// వినియోగదారు సొంతం చేసుకున్న టోకెన్‌ల మొత్తం.
+// The raw data whose integrity we have to verify. The first two bytes a
+// are a user identifier, and the last two bytes the amount of tokens the
+// user owns at present.
 const dataArray = [
   0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
   0xface0070, 0xbad00080, 0x060d0091,
@@ -59,15 +59,15 @@ const dataArray = [
 ఉదాహరణకు, JSON ఉపయోగించడం కంటే ప్రతి ఎంట్రీని ఒకే 256-బిట్ పూర్ణాంకంలోకి ఎన్‌కోడ్ చేయడం వల్ల తక్కువ చదవగలిగే కోడ్ వస్తుంది. అయితే, దీని అర్థం కాంట్రాక్ట్‌లో డేటాను తిరిగి పొందడానికి చాలా తక్కువ ప్రాసెసింగ్, కాబట్టి చాలా తక్కువ గ్యాస్ ఖర్చులు. [మీరు ఆన్‌చెయిన్‌లో JSON చదవవచ్చు](https://github.com/chrisdotn/jsmnSol), వీలైతే అది ఒక చెడ్డ ఆలోచన.
 
 ```javascript
-// హాష్ విలువలు, BigIntsగా
+// The array of hash values, as BigInts
 const hashArray = dataArray
 ```
 
 ఈ సందర్భంలో మన డేటా ప్రారంభంలో 256-బిట్ విలువలు, కాబట్టి ప్రాసెసింగ్ అవసరం లేదు. మనం స్ట్రింగ్‌ల వంటి మరింత సంక్లిష్టమైన డేటా నిర్మాణాన్ని ఉపయోగిస్తే, హాష్‌ల శ్రేణిని పొందడానికి ముందుగా డేటాను హాష్ చేశామని నిర్ధారించుకోవాలి. వినియోగదారులకు ఇతర వినియోగదారుల సమాచారం తెలిసినా మేము పట్టించుకోము అనే కారణం కూడా ఇది అని గమనించండి. లేకపోతే మేము హాష్ చేయవలసి వచ్చేది, తద్వారా వినియోగదారు 1కి వినియోగదారు 0 విలువ తెలియదు, వినియోగదారు 2కి వినియోగదారు 3 విలువ తెలియదు, మొదలైనవి.
 
 ```javascript
-// హాష్ ఫంక్షన్ ఆశించే స్ట్రింగ్ మరియు మనం అన్ని చోట్లా ఉపయోగించే
-// BigInt మధ్య మార్చండి.
+// Convert between the string the hash function expects and the
+// BigInt we use everywhere else.
 const hash = (x) =>
   BigInt(ethers.utils.keccak256("0x" + x.toString(16).padStart(64, 0)))
 ```
@@ -75,7 +75,7 @@ const hash = (x) =>
 ఈథర్స్ హాష్ ఫంక్షన్ `0x60A7` వంటి హెక్సాడెసిమల్ సంఖ్యతో కూడిన జావాస్క్రిప్ట్ స్ట్రింగ్‌ను పొందాలని ఆశిస్తుంది మరియు అదే నిర్మాణంతో మరో స్ట్రింగ్‌తో ప్రతిస్పందిస్తుంది. అయితే, మిగిలిన కోడ్ కోసం `BigInt`ని ఉపయోగించడం సులభం, కాబట్టి మేము హెక్సాడెసిమల్ స్ట్రింగ్‌కి మరియు మళ్లీ వెనక్కి మారుస్తాము.
 
 ```javascript
-// ఒక జత యొక్క సౌష్టవ హాష్, కాబట్టి క్రమం తారుమారైనా మేము పట్టించుకోము.
+// Symmetrical hash of a pair so we won't care if the order is reversed.
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
@@ -88,8 +88,8 @@ const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ఈ ఫంక్షన్‌తో మీరు `b'`ను లెక్కించాలి, తద్వారా `hash(a') ^ hash(b')` ఒక తెలిసిన విలువకు (రూట్‌కు వెళ్లే మార్గంలో తదుపరి శాఖ) సమానంగా ఉంటుంది, ఇది చాలా కష్టం.
 
 ```javascript
-// ఒక నిర్దిష్ట శాఖ ఖాళీగా ఉందని సూచించడానికి విలువ,
-// ఒక విలువ లేదు
+// The value to denote that a certain branch is empty, doesn't
+// have a value
 const empty = 0n
 ```
 
@@ -98,11 +98,11 @@ const empty = 0n
 ![కొమ్మలు లేని మెర్కిల్ ట్రీ](merkle-empty-hash.png)
 
 ```javascript
-// క్రమంలో ప్రతి జత యొక్క హాష్‌ను తీసుకోవడం ద్వారా హాష్ శ్రేణి యొక్క ట్రీ నుండి ఒక స్థాయి పైకి లెక్కించండి
-// 
+// Calculate one level up the tree of a hash array by taking the hash of
+// each pair in sequence
 const oneLevelUp = (inputArray) => {
   var result = []
-  var inp = [...inputArray] // ఇన్‌పుట్‌ను ఓవర్‌రైట్ చేయకుండా ఉండటానికి // అవసరమైతే ఖాళీ విలువను జోడించండి (మనకు అన్ని ఆకులు // జతగా ఉండాలి)
+  var inp = [...inputArray] // To avoid over writing the input // Add an empty value if necessary (we need all the leaves to be // paired)
 
   if (inp.length % 2 === 1) inp.push(empty)
 
@@ -119,7 +119,7 @@ const oneLevelUp = (inputArray) => {
 const getMerkleRoot = (inputArray) => {
   var result
 
-  result = [...inputArray] // ఒకే ఒక విలువ మిగిలే వరకు ట్రీని ఎక్కండి, అదే // రూట్. // // ఒక లేయర్‌లో బేసి సంఖ్యలో ఎంట్రీలు ఉంటే // వన్‌లెవల్‌అప్‌లోని కోడ్ ఒక ఖాళీ విలువను జోడిస్తుంది, కాబట్టి మనకు, ఉదాహరణకు, // 10 ఆకులు ఉంటే, రెండవ లేయర్‌లో 5 శాఖలు, మూడవ లేయర్‌లో 3 // శాఖలు, నాల్గవ దానిలో 2 మరియు రూట్ ఐదవది
+  result = [...inputArray] // Climb up the tree until there is only one value, that is the // root. // // If a layer has an odd number of entries the // code in oneLevelUp adds an empty value, so if we have, for example, // 10 leaves we'll have 5 branches in the second layer, 3 // branches in the third, 2 in the fourth and the root is the fifth
 
   while (result.length > 1) result = oneLevelUp(result)
 
@@ -134,22 +134,22 @@ const getMerkleRoot = (inputArray) => {
 మెర్కిల్ ప్రూఫ్ అనేది మెర్కిల్ రూట్‌ను తిరిగి పొందడానికి నిరూపించబడుతున్న విలువతో పాటు కలిసి హాష్ చేయవలసిన విలువలు. నిరూపించాల్సిన విలువ తరచుగా ఇతర డేటా నుండి అందుబాటులో ఉంటుంది, కాబట్టి నేను దానిని కోడ్‌లో భాగంగా కాకుండా విడిగా అందించడానికి ఇష్టపడతాను.
 
 ```javascript
-// ఒక మెర్కిల్ ప్రూఫ్, హాష్ చేయడానికి ఎంట్రీల
-// జాబితా విలువను కలిగి ఉంటుంది. మనం ఒక సౌష్టవ హాష్ ఫంక్షన్‌ను ఉపయోగిస్తున్నందున, ప్రూఫ్‌ను ధృవీకరించడానికి మనకు
-// ఐటెమ్ యొక్క స్థానం అవసరం లేదు, దాన్ని సృష్టించడానికి మాత్రమే అవసరం
+// A merkle proof consists of the value of the list of entries to
+// hash with. Because we use a symmetrical hash function, we don't
+// need the item's location to verify the proof, only to create it
 const getMerkleProof = (inputArray, n) => {
     var result = [], currentLayer = [...inputArray], currentN = n
 
-    // మనం పైకి చేరే వరకు
+    // Until we reach the top
     while (currentLayer.length > 1) {
-        // బేసి పొడవు లేయర్లు లేవు
+        // No odd length layers
         if (currentLayer.length % 2)
             currentLayer.push(empty)
 
         result.push(currentN % 2
-               // currentN బేసి అయితే, దాని ముందున్న విలువతో ప్రూఫ్‌కు జోడించండి
+               // If currentN is odd, add with the value before it to the proof
             ? currentLayer[currentN-1]
-               // అది సరి అయితే, దాని తర్వాత విలువను జోడించండి
+               // If it is even, add the value after it
             : currentLayer[currentN+1])
 
 ```
@@ -157,10 +157,10 @@ const getMerkleProof = (inputArray, n) => {
 మేము `(v[0],v[1])`, `(v[2],v[3])`, మొదలైన వాటిని హాష్ చేస్తాము. కాబట్టి సరి విలువల కోసం మనకు తదుపరిది అవసరం, బేసి విలువల కోసం మునుపటిది అవసరం.
 
 ```javascript
-        // తదుపరి లేయర్‌కు వెళ్లండి
+        // Move to the next layer up
         currentN = Math.floor(currentN/2)
         currentLayer = oneLevelUp(currentLayer)
-    }   // currentLayer.length > 1 అయితే
+    }   // while currentLayer.length > 1
 
     return result
 }   // getMerkleProof
@@ -188,9 +188,9 @@ contract MerkleProof {
       return merkleRoot;
     }
 
-    // అత్యంత అసురక్షితం, ప్రొడక్షన్ కోడ్‌లో దీనికి యాక్సెస్
-    // ఈ ఫంక్షన్ ఖచ్చితంగా పరిమితం చేయబడాలి, బహుశా ఒక
-    // యజమానికి
+    // Extremely insecure, in production code access to
+    // this function MUST BE strictly limited, probably to an
+    // owner
     function setRoot(uint _merkleRoot) external {
       merkleRoot = _merkleRoot;
     }   // setRoot
@@ -213,7 +213,7 @@ contract MerkleProof {
 **గమనిక:** ఇది చదవడానికి వీలుగా ఆప్టిమైజేషన్ యొక్క మరో సందర్భం. [ఫంక్షన్ నిర్వచనం](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm) ఆధారంగా, డేటాను [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) విలువగా నిల్వ చేయడం మరియు మార్పిడులను నివారించడం సాధ్యం కావచ్చు.
 
 ```solidity
-    // ఒక మెర్కిల్ ప్రూఫ్‌ను ధృవీకరించండి
+    // Verify a Merkle proof
     function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
       uint temp = _value;

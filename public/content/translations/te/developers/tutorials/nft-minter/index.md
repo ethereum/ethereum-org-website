@@ -99,7 +99,7 @@ npm start
 ఈ ఫైల్ పైన, మా స్టేట్ వేరియబుల్స్ ఉన్నాయి, వాటిని మేము నిర్దిష్ట ఈవెంట్‌ల తర్వాత అప్‌డేట్ చేస్తాము.
 
 ```javascript
-//స్టేట్ వేరియబుల్స్
+//State variables
 const [walletAddress, setWallet] = useState("")
 const [status, setStatus] = useState("")
 const [name, setName] = useState("")
@@ -121,15 +121,15 @@ React స్టేట్ వేరియబుల్స్ లేదా స్�
 
 ```javascript
 useEffect(async () => {
-  //TODO: అమలు చేయండి
+  //TODO: implement
 }, [])
 
 const connectWalletPressed = async () => {
-  //TODO: అమలు చేయండి
+  //TODO: implement
 }
 
 const onMintPressed = async () => {
-  //TODO: అమలు చేయండి
+  //TODO: implement
 }
 ```
 
@@ -142,50 +142,50 @@ const onMintPressed = async () => {
 మీరు `mintButton` మరియు `walletButton` ఐడీలతో ఉన్న బటన్‌లను వరుసగా క్లిక్ చేసినప్పుడు `connectWalletPressed` మరియు `onMintPressed` కాల్ చేయబడతాయని కూడా మీరు చూస్తారు.
 
 ```javascript
-//మా కాంపోనెంట్ యొక్క UI
+//the UI of our component
 return (
   <div className="Minter">
     <button id="walletButton" onClick={connectWalletPressed}>
       {walletAddress.length > 0 ? (
-        "కనెక్ట్ చేయబడింది: " +
+        "Connected: " +
         String(walletAddress).substring(0, 6) +
         "..." +
         String(walletAddress).substring(38)
       ) : (
-        <span>వాలెట్‌ను కనెక్ట్ చేయండి</span>
+        <span>Connect Wallet</span>
       )}
     </button>
 
     <br></br>
-    <h1 id="title">🧙‍♂️ Alchemy NFT మింటర్</h1>
+    <h1 id="title">🧙‍♂️ Alchemy NFT Minter</h1>
     <p>
-      కేవలం మీ ఆస్తి యొక్క లింక్, పేరు మరియు వివరణను జోడించి, ఆపై "ముద్రించు." నొక్కండి.
+      Simply add your asset's link, name, and description, then press "Mint."
     </p>
     <form>
-      <h2>🖼 ఆస్తికి లింక్: </h2>
+      <h2>🖼 Link to asset: </h2>
       <input
         type="text"
-        placeholder="ఉదా., https://gateway.pinata.cloud/ipfs/<hash>"
+        placeholder="e.g., https://gateway.pinata.cloud/ipfs/<hash>"
         onChange={(event) => setURL(event.target.value)}
       />
-      <h2>🤔 పేరు: </h2>
+      <h2>🤔 Name: </h2>
       <input
         type="text"
-        placeholder="ఉదా., నా మొదటి NFT!"
+        placeholder="e.g., My first NFT!"
         onChange={(event) => setName(event.target.value)}
       />
-      <h2>✍️ వివరణ: </h2>
+      <h2>✍️ Description: </h2>
       <input
         type="text"
-        placeholder="ఉదా., క్రిప్టోకిట్టీల కన్నా కూడా బాగుంది ;)"
+        placeholder="e.g., Even cooler than cryptokitties ;)"
         onChange={(event) => setDescription(event.target.value)}
       />
     </form>
     <button id="mintButton" onClick={onMintPressed}>
-      NFTని ముద్రించు
+      Mint NFT
     </button>
     <p id="status">{status}</p>
-</div>
+  </div>
 )
 ```
 
@@ -245,7 +245,7 @@ export const connectWallet = async () => {
         method: "eth_requestAccounts",
       })
       const obj = {
-        status: "👆🏽 పైన ఉన్న టెక్స్ట్-ఫీల్డ్‌లో ఒక సందేశం వ్రాయండి.",
+        status: "👆🏽 Write a message in the text-field above.",
         address: addressArray[0],
       }
       return obj
@@ -263,7 +263,8 @@ export const connectWallet = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              మీరు మీ బ్రౌజర్‌లో MetaMask, ఒక వర్చువల్ Ethereum వాలెట్‌ను ఇన్‌స్టాల్ చేయాలి.
+              You must install MetaMask, a virtual Ethereum wallet, in your
+              browser.
             </a>
           </p>
         </span>
@@ -302,7 +303,7 @@ import { connectWallet } from "./utils/interact.js";
 
 const Minter = (props) => {
 
-  //స్టేట్ వేరియబుల్స్
+  //State variables
   const [walletAddress, setWallet] = useState("");
   const [status, setStatus] = useState("");
   const [name, setName] = useState("");
@@ -350,12 +351,12 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 పైన ఉన్న టెక్స్ట్-ఫీల్డ్‌లో ఒక సందేశం వ్రాయండి.",
+          status: "👆🏽 Write a message in the text-field above.",
         }
       } else {
         return {
           address: "",
-          status: "🦊 కుడి ఎగువ బటన్‌ను ఉపయోగించి MetaMaskకు కనెక్ట్ అవ్వండి.",
+          status: "🦊 Connect to MetaMask using the top right button.",
         }
       }
     } catch (err) {
@@ -372,7 +373,8 @@ export const getCurrentWalletConnected = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              మీరు మీ బ్రౌజర్‌లో MetaMask, ఒక వర్చువల్ Ethereum వాలెట్‌ను ఇన్‌స్టాల్ చేయాలి.
+              You must install MetaMask, a virtual Ethereum wallet, in your
+              browser.
             </a>
           </p>
         </span>
@@ -394,7 +396,7 @@ export const getCurrentWalletConnected = async () => {
 import { useEffect, useState } from "react"
 import {
   connectWallet,
-  getCurrentWalletConnected, //ఇక్కడ దిగుమతి చేసుకోండి
+  getCurrentWalletConnected, //import here
 } from "./utils/interact.js"
 ```
 
@@ -424,10 +426,10 @@ function addWalletListener() {
     window.ethereum.on("accountsChanged", (accounts) => {
       if (accounts.length > 0) {
         setWallet(accounts[0])
-        setStatus("👆🏽 పైన ఉన్న టెక్స్ట్-ఫీల్డ్‌లో ఒక సందేశం వ్రాయండి.")
+        setStatus("👆🏽 Write a message in the text-field above.")
       } else {
         setWallet("")
-        setStatus("🦊 కుడి ఎగువ బటన్‌ను ఉపయోగించి MetaMaskకు కనెక్ట్ అవ్వండి.")
+        setStatus("🦊 Connect to MetaMask using the top right button.")
       }
     })
   } else {
@@ -435,7 +437,7 @@ function addWalletListener() {
       <p>
         {" "}
         🦊 <a target="_blank" href={`https://metamask.io/download`}>
-          మీరు మీ బ్రౌజర్‌లో MetaMask, ఒక వర్చువల్ Ethereum వాలెట్‌ను ఇన్‌స్టాల్ చేయాలి.
+          You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
     )
@@ -539,7 +541,7 @@ const axios = require("axios")
 
 export const pinJSONToIPFS = async (JSONBody) => {
   const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`
-  //Pinata కు axios POST అభ్యర్థన చేయడం ⬇️
+  //making axios POST request to Pinata ⬇️
   return axios
     .post(url, JSONBody, {
       headers: {
@@ -663,11 +665,11 @@ export const mintNFT = async (url, name, description) => {}
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //దోష నిర్వహణ
+  //error handling
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗మింట్ చేయడానికి ముందు దయచేసి అన్ని ఫీల్డ్‌లు పూర్తి చేశారని నిర్ధారించుకోండి.",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 }
@@ -691,26 +693,26 @@ import { pinJSONToIPFS } from "./pinata.js"
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //దోష నిర్వహణ
+  //error handling
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗మింట్ చేయడానికి ముందు దయచేసి అన్ని ఫీల్డ్‌లు పూర్తి చేశారని నిర్ధారించుకోండి.",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 
-  //మెటాడేటా తయారు చేయండి
+  //make metadata
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //pinata కాల్ చేయండి
+  //make pinata call
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "😢 మీ tokenURIని అప్‌లోడ్ చేస్తున్నప్పుడు ఏదో తప్పు జరిగింది.",
+      status: "😢 Something went wrong while uploading your tokenURI.",
     }
   }
   const tokenURI = pinataResponse.pinataUrl
@@ -730,16 +732,16 @@ window.contract = await new web3.eth.Contract(contractABI, contractAddress)
 మా `mintNFT` ఫంక్షన్‌లో జోడించాల్సిన చివరి విషయం మా Ethereum లావాదేవీ:
 
 ```javascript
-//మీ Ethereum లావాదేవీని సెటప్ చేయండి
+//set up your Ethereum transaction
 const transactionParameters = {
-  to: contractAddress, // కాంట్రాక్ట్ ప్రచురణల సమయంలో తప్ప అవసరం.
-  from: window.ethereum.selectedAddress, // వినియోగదారుడి క్రియాశీల చిరునామాతో సరిపోలాలి.
+  to: contractAddress, // Required except during contract publications.
+  from: window.ethereum.selectedAddress, // must match user's active address.
   data: window.contract.methods
     .mintNFT(window.ethereum.selectedAddress, tokenURI)
-    .encodeABI(), //NFT స్మార్ట్ కాంట్రాక్ట్‌కు కాల్ చేయండి
+    .encodeABI(), //make call to NFT smart contract
 }
 
-//MetaMask ద్వారా లావాదేవీపై సంతకం చేయండి
+//sign the transaction via MetaMask
 try {
   const txHash = await window.ethereum.request({
     method: "eth_sendTransaction",
@@ -748,13 +750,13 @@ try {
   return {
     success: true,
     status:
-      "✅ Etherscanలో మీ లావాదేవీని చూడండి: https://ropsten.etherscan.io/tx/" +
+      "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
   return {
     success: false,
-    status: "😥 ఏదో తప్పు జరిగింది: " + error.message,
+    status: "😥 Something went wrong: " + error.message,
   }
 }
 ```
@@ -773,43 +775,43 @@ try {
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //దోష నిర్వహణ
+  //error handling
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗మింట్ చేయడానికి ముందు దయచేసి అన్ని ఫీల్డ్‌లు పూర్తి చేశారని నిర్ధారించుకోండి.",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 
-  //మెటాడేటా తయారు చేయండి
+  //make metadata
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //pinata పిన్ అభ్యర్థన
+  //pinata pin request
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "😢 మీ tokenURIని అప్‌లోడ్ చేస్తున్నప్పుడు ఏదో తప్పు జరిగింది.",
+      status: "😢 Something went wrong while uploading your tokenURI.",
     }
   }
   const tokenURI = pinataResponse.pinataUrl
 
-  //స్మార్ట్ కాంట్రాక్ట్ లోడ్ చేయండి
+  //load smart contract
   window.contract = await new web3.eth.Contract(contractABI, contractAddress) //loadContract();
 
-  //మీ Ethereum లావాదేవీని సెటప్ చేయండి
+  //set up your Ethereum transaction
   const transactionParameters = {
-    to: contractAddress, // కాంట్రాక్ట్ ప్రచురణల సమయంలో తప్ప అవసరం.
-    from: window.ethereum.selectedAddress, // వినియోగదారుడి క్రియాశీల చిరునామాతో సరిపోలాలి.
+    to: contractAddress, // Required except during contract publications.
+    from: window.ethereum.selectedAddress, // must match user's active address.
     data: window.contract.methods
       .mintNFT(window.ethereum.selectedAddress, tokenURI)
-      .encodeABI(), //NFT స్మార్ట్ కాంట్రాక్ట్‌కు కాల్ చేయండి
+      .encodeABI(), //make call to NFT smart contract
   }
 
-  //MetaMask ద్వారా లావాదేవీపై సంతకం చేయండి
+  //sign transaction via MetaMask
   try {
     const txHash = await window.ethereum.request({
       method: "eth_sendTransaction",
@@ -818,13 +820,13 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Etherscanలో మీ లావాదేవీని చూడండి: https://ropsten.etherscan.io/tx/" +
+        "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {
     return {
       success: false,
-      status: "😥 ఏదో తప్పు జరిగింది: " + error.message,
+      status: "😥 Something went wrong: " + error.message,
     }
   }
 }
