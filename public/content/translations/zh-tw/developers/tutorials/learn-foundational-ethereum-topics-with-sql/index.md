@@ -2,7 +2,7 @@
 title: "使用 SQL 學習基礎以太坊主題"
 description: "本教學課程將透過結構化查詢語言 (SQL) 查詢鏈上資料，協助讀者了解基本的以太坊概念，包括交易、區塊和 Gas。"
 author: "Paul Apivat"
-tags: [ "SQL", "查詢", "交易" ]
+tags: [ "SQL", "Querying", "Transactions" ]
 skill: beginner
 lang: zh-tw
 published: 2021-05-11

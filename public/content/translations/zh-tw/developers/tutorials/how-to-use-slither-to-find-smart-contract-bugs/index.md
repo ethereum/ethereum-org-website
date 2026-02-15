@@ -3,7 +3,7 @@ title: "如何使用 Slither 來尋找智能合約漏洞"
 description: "如何使用 Slither 自動尋找智能合約中的漏洞"
 author: Trailofbits
 lang: zh-tw
-tags: [ "穩固", "智能合約", "安全性", "測試" ]
+tags: [ "solidity", "smart contracts", "security", "testing" ]
 skill: advanced
 published: 2020-06-09
 source: Building secure contracts

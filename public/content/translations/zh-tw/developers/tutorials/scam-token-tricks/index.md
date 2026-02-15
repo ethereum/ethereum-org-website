@@ -4,7 +4,7 @@ description: "在本使用教學中，我們將剖析一個詐騙代幣，以了
 author: Ori Pomerantz
 tags:
   [
-    "詐騙",
+    "scam",
     "solidity",
     "erc-20",
     "javascript",

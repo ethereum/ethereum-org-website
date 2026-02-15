@@ -3,7 +3,7 @@ title: "如何使用 Manticore 尋找智能合約中的程式錯誤"
 description: "如何使用 Manticore 自動尋找智能合約中的程式錯誤"
 author: Trailofbits
 lang: zh-tw
-tags: [ "穩固", "智能合約", "安全性", "測試", "正式驗證" ]
+tags: [ "solidity", "smart contracts", "security", "testing", "formal verification" ]
 skill: advanced
 published: 2020-01-13
 source: Building secure contracts

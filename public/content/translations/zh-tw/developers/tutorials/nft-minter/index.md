@@ -2,7 +2,7 @@
 title: "非同質化代幣鑄幣機使用教學"
 description: "在本教學中，你將建構一個 NFT 鑄造器，並學習如何透過 MetaMask 和 Web3 工具將你的智能合約連接到 React 前端，來建立一個全端去中心化應用程式。"
 author: "smudgil"
-tags: [ "穩固", "非同質化代幣", "alchemy", "智能合約", "前端", "Pinata" ]
+tags: [ "solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata" ]
 skill: intermediate
 lang: zh-tw
 published: 2021-10-06
@@ -16,9 +16,9 @@ published: 2021-10-06
 - 在前端調用智慧型合約的方法
 - 使用MetaMask簽署交易
 
-在本教學中，我們將使用 [React](https://react.dev/) 作為前端框架。 因為此教程最初是專注於Web3的發展上，我們將不會花費過多的時間來解釋功能「反應」的基本概念。 反之，我們將會集中在往我們專案帶來功能的方法。
+在本教學中，我們將使用 [React](https://react.dev/) 作為前端框架。 因為此教程最初是專注於 Web3 的發展上，我們將不會花費過多的時間來解釋 React 的基本概念。 反之，我們將會集中在往我們專案帶來功能的方法。
 
-作為一個前提，你理應有一個初學者對「反應」的理解 - 會知道組件、道具、useState/useEffect，還有基本功能回呼的運作。 如果你之前從未聽過這些術語，不妨先看看這篇 [React 入門教學](https://react.dev/learn/tutorial-tic-tac-toe)。 對於偏好視覺學習的讀者，我們強烈推薦由 Net Ninja 製作的這套優質影片系列：[Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)。
+作為一個前提，你理應有初學者對 React 的理解 - 會知道組件、道具、useState/useEffect，還有基本功能回呼的運作。 如果你之前從未聽過這些術語，不妨先看看這篇 [React 入門教學](https://react.dev/learn/tutorial-tic-tac-toe)。 對於偏好視覺學習的讀者，我們強烈推薦由 Net Ninja 製作的這套優質影片系列：[Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)。
 
 而且如果你還沒準備好，你且將會一定需要一個Alchemy的帳戶來完成該份教程，也會在區塊鏈上建立任何東西。 [在此](https://alchemy.com/)註冊一個免費帳戶。
 
@@ -38,7 +38,7 @@ published: 2021-10-06
 
 一個NFT的元數據是把NFT從虛擬帶到現實的東西，它容許NFT持有特質，如一個名字、描述、圖像（或不同的電子資產），還有其他屬性。 這是 [一個 tokenURI 的範例](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)，其中包含了 NFT 的元資料。
 
-在此教程內，我們將會專注於第二部分，它是有關使用我們的功能「反應」UI回呼一個現存NFT的智慧型合約挖礦功能的方法。
+在此教程內，我們將會專注於第二部分，它是有關使用我們的 React UI 呼叫一個現存 NFT 智慧型合約的鑄造功能。
 
 [這個連結](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) 是我們在本教學中將會呼叫的 ERC-721 NFT 智能合約。 如果你想學習我們是如何製作它的，我們強烈推薦你查看我們的另一篇教學：["如何建立一個 NFT"](https://www.alchemy.com/docs/how-to-create-an-nft)。
 
@@ -63,7 +63,7 @@ published: 2021-10-06
 
 ### 讓你的 React 專案動起來 {#get-your-react-project-running}
 
-讓我們透過在我們的瀏覽器內運行這個「反應」專案來開始是日的教程吧： 「反應」的美在於一旦我們在瀏覽器內已經有在運行自己的專案，我們儲存下來的任何改變都將會被實時更新到我們的瀏覽器裡。
+讓我們透過在瀏覽器內執行這個 React 專案來開始今天的教程吧。 React 的優點在於一旦我們在瀏覽器內已經有在運行自己的專案，我們儲存下來的任何改變都將會被即時更新到瀏覽器裡。
 
 要讓專案動起來，請導覽至 `minter-starter-files` 資料夾的根目錄，然後在你的終端機中執行 `npm install` 來安裝專案的依賴項：
 
@@ -80,13 +80,13 @@ npm start
 
 此舉理應會在你的瀏覽器內打開網站（http://localhost:3000/），在那裡你將會看見我們專案的前端。 它應該由三個欄位組成：一個輸入往你的NFT資產所在地的連結空位、一個輸入你的NFT名字的空格，以及一個提供形容段落的欄位。
 
-如你試圖點擊按鈕「連結錢包」或「挖取NFT」，你將會注意到它們不會如常運作 - 這是因為我們將仍然需要設計一下它們的功能！ :\)
+如你試圖點擊按鈕「Connect Wallet」或「Mint NFT」，你將會注意到它們不會如常運作 - 這是因為我們將仍然需要設計一下它們的功能！ :\)
 
 ### Minter.js 元件 {#minter-js}
 
 **注意：** 請確保你位在 `minter-starter-files` 資料夾，而不是 `nft-minter` 資料夾！
 
-讓我們回到編輯器中的 `src` 資料夾，並開啟 `Minter.js` 檔案。 這個動作在我們理解該檔案內所有東西上有著超級關鍵的作用，因為它是我們將會首先處理的第一個「反應」組件。
+讓我們回到編輯器中的 `src` 資料夾，並開啟 `Minter.js` 檔案。 這個動作在我們理解該檔案內所有東西上有著超級關鍵的作用，因為它是我們將會首先處理的第一個 React 組件。
 
 在此檔案的最頂部，有著我們將會在特定事件後更新的一些狀態變數。
 
@@ -99,7 +99,7 @@ const [description, setDescription] = useState("")
 const [url, setURL] = useState("")
 ```
 
-從來沒有聽過「反應」狀態變數或者狀態勾手嗎？ 查看[這些](https://legacy.reactjs.org/docs/hooks-state.html)文件。
+從來沒有聽過 React 狀態變數或者狀態鉤子嗎？ 查看[這些](https://legacy.reactjs.org/docs/hooks-state.html)文件。
 
 在此是每個變數代表的意思：
 
@@ -201,7 +201,7 @@ return (
 
 ### 從水龍頭取得以太幣 {#add-ether-from-faucet}
 
-為了要挖取我們的NFT（或是簽署任何在以太坊區塊鏈的交易），我們將需要一些假ETH。 要取得 Eth，你可以前往 [Ropsten 水龍頭](https://faucet.ropsten.be/)，輸入你的 Ropsten 帳戶位址，然後點擊「Send Ropsten Eth」。 你應該很快便能在你的MetaMask帳戶裡看見ETH！
+為了要鑄造我們的 NFT（或是簽署任何在以太坊區塊鏈的交易），我們將需要一些假 ETH。 要取得 Eth，你可以前往 [Ropsten 水龍頭](https://faucet.ropsten.be/)，輸入你的 Ropsten 帳戶位址，然後點擊「Send Ropsten Eth」。 你應該很快便能在你的MetaMask帳戶裡看見ETH！
 
 ### 檢查你的餘額 {#check-your-balance}
 
@@ -453,7 +453,7 @@ useEffect(async () => {
 }, [])
 ```
 
-然後就沒有然後了！ 我們已經完成了所有有關我們錢包功能的編程！ 現在我們的錢包已被設定好，讓我們探索一下這樣挖取我們的NFT吧！
+然後就沒有然後了！ 我們已經完成了所有有關我們錢包功能的編程！ 現在我們的錢包已被設定好，讓我們探索一下怎樣鑄造我們的 NFT 吧！
 
 ## NFT 元資料入門 {#nft-metadata-101}
 
@@ -635,7 +635,7 @@ const contractABI = require("../contract-abi.json")
 const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
 ```
 
-一旦我們有以上兩者，我們已經準備好開始為挖礦功能進行編碼了！
+一旦我們有以上兩者，我們已經準備好開始為鑄造功能進行編碼了！
 
 ## 實作 mintNFT 函式 {#implement-the-mintnft-function}
 
@@ -855,7 +855,7 @@ const onMintPressed = async () => {
 
 開玩笑的，你成功堅持到教程的最終點了！
 
-可以透過建立一個NFT挖礦者來複習。你已經成功學會怎樣：
+可以透過建立一個 NFT 鑄造器來複習，你已經成功學會怎樣：
 
 - 通過你的前端專案連接到 MetaMask
 - 在前端調用智慧型合約的方法

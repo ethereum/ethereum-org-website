@@ -3,7 +3,7 @@ title: "如何模擬 Solidity 智能合約進行測試"
 description: "為什麼在測試時應該要取笑你的合約"
 author: Markus Waas
 lang: zh-tw
-tags: [ "穩固", "智能合約", "測試", "模擬" ]
+tags: [ "solidity", "smart contracts", "testing", "mocking" ]
 skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com

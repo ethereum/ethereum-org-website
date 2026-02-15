@@ -2,7 +2,7 @@
 title: "從 Solidity 與其他合約互動"
 description: "如何從現有合約部署智能合約並與其互動"
 author: "jdourlens"
-tags: [ "智能合約", "穩固", "remix", "部署", "可組合性" ]
+tags: [ "smart contracts", "solidity", "remix", "deploying", "composability" ]
 skill: advanced
 lang: zh-tw
 published: 2020-04-05

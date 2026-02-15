@@ -3,7 +3,7 @@ title: "如何將 Tellor 設定為您的預言機"
 description: "入門指南：將 Tellor 預言機整合至您的協定"
 author: "Tellor"
 lang: zh-tw
-tags: [ "穩固", "智能合約", "預言機" ]
+tags: [ "solidity", "smart contracts", "oracles" ]
 skill: beginner
 published: 2021-06-29
 source: Tellor Docs

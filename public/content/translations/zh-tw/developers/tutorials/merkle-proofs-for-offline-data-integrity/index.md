@@ -2,7 +2,7 @@
 title: "用於離線資料完整性的默克爾證明"
 description: "為儲存在鏈下的資料確保其鏈上完整性"
 author: Ori Pomerantz
-tags: [ "儲存" ]
+tags: [ "storage" ]
 skill: advanced
 lang: zh-tw
 published: 2021-12-30
@@ -208,7 +208,7 @@ contract MerkleProof {
 
 這個功能產生了一對雜湊值。 這只是 JavaScript 程式碼中 `hash` 和 `pairHash` 的 Solidity 轉譯。
 
-\*\*注意：\*\*這是另一個為了可讀性而進行最佳化的案例。 根據[函式定義](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm)，或許可以將資料儲存為 [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) 值並避免轉換。
+**注意：**這是另一個為了可讀性而進行最佳化的案例。 根據[函式定義](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm)，或許可以將資料儲存為 [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) 值並避免轉換。
 
 ```solidity
     // 驗證默克爾證明

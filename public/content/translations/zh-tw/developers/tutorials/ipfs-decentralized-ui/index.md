@@ -8,7 +8,7 @@ lang: zh-tw
 published: 2024-06-29
 ---
 
-您寫了一個很棒的全新去中心化應用程式。 您甚至還為它寫了一個[使用者介面](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)。 但現在您擔心有人會透過讓您的使用者介面下線來審查它，而它只是雲端上的一台伺服器。 在本使用教學中，您會學習如何將使用者介面放到\*\*[星際檔案系統 (IPFS)](https://ipfs.tech/developers/)\*\* 上以避免審查，如此一來任何感興趣的人都能將它釘選在伺服器上供未來存取。
+您寫了一個很棒的全新去中心化應用程式。 您甚至還為它寫了一個[使用者介面](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)。 但現在您擔心有人會透過讓您的使用者介面下線來審查它，而它只是雲端上的一台伺服器。 在本使用教學中，您會學習如何將使用者介面放到**[星際檔案系統 (IPFS)](https://ipfs.tech/developers/)** 上以避免審查，如此一來任何感興趣的人都能將它釘選在伺服器上供未來存取。
 
 您可以使用第三方服務 (例如 [Fleek](https://resources.fleek.xyz/docs/)) 來完成所有工作。 本使用教學適合想要深入了解自己在做什麼的人，即使這代表更多的工作。
 

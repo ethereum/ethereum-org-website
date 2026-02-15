@@ -2,7 +2,7 @@
 title: "給初學者的 Hello World 智能合約"
 description: "在以太坊上撰寫和部署簡單智能合約的入門教學。"
 author: "elanh"
-tags: [ "穩固", "hardhat", "alchemy", "智能合約", "部署" ]
+tags: [ "solidity", "hardhat", "alchemy", "smart contracts", "deploying" ]
 skill: beginner
 lang: zh-tw
 published: 2021-03-31
@@ -54,7 +54,7 @@ published: 2021-03-31
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> \*\*注意：\*\*此結果以 wei 為單位，而非 ETH。 Wei是一個被用來計算以太最少分數的單位。 wei 與 ETH 的換算為：1 eth = 10<sup>18</sup> wei。 因此，如果我們將 0x2B5E3AF16B1880000 轉換為十進位，我們會得到 5\*10¹⁸，相當於 5 ETH。
+> **注意：**此結果以 wei 為單位，而非 ETH。 Wei是一個被用來計算以太最少分數的單位。 wei 與 ETH 的換算為：1 eth = 10<sup>18</sup> wei。 因此，如果我們將 0x2B5E3AF16B1880000 轉換為十進位，我們會得到 5\*10¹⁸，相當於 5 ETH。
 >
 > 哈! 我們的假錢都在這裡了 <Emoji text=":money_mouth_face:" size={1} />。
 
@@ -356,4 +356,4 @@ npx hardhat run scripts/deploy.js --network sepolia
 
 本教學的第 1 部分到此結束，在第 2 部分中，我們將實際[與我們的智能合約互動](https://www.alchemy.com/docs/interacting-with-a-smart-contract)，方法是更新我們的初始訊息；在第 3 部分中，我們將[把我們的智能合約發布到 Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan)，這樣每個人都會知道如何與它互動。
 
-**想了解更多關於 Alchemy 的資訊嗎？** 請查看我們的[網站](https://www.alchemy.com/eth)。 不想錯過任何更新嗎？ [在此](https://www.alchemy.com/newsletter)訂閱我們的電子報！ 也請務必加入我們的 [Discord](https://discord.gg/u72VCg3)。\*\*.
+**想了解更多關於 Alchemy 的資訊嗎？** 請查看我們的[網站](https://www.alchemy.com/eth)。 不想錯過任何更新嗎？ [在此](https://www.alchemy.com/newsletter)訂閱我們的電子報！ 也請務必加入我們的 [Discord](https://discord.gg/u72VCg3)。

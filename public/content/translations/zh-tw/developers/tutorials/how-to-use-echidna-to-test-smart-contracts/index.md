@@ -3,7 +3,7 @@ title: "如何使用 Echidna 測試智能合約"
 description: "如何使用 Echidna 自動測試智能合約"
 author: "Trailofbits"
 lang: zh-tw
-tags: [ "穩固", "智能合約", "安全性", "測試", "模糊測試" ]
+tags: [ "solidity", "smart contracts", "security", "testing", "fuzzing" ]
 skill: advanced
 published: 2020-04-10
 source: Building secure contracts
