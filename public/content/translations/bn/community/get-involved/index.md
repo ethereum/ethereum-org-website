@@ -119,7 +119,7 @@ lang: bn
 
 "DAO"-গুলো হলো বিকেন্দ্রীভূত স্বায়ত্তশাসিত সংস্থা। এই গোষ্ঠীগুলো সংগঠন এবং সহযোগিতার সুবিধার্থে ইথেরিয়াম প্রযুক্তি ব্যবহার করে। উদাহরণস্বরূপ, সদস্যপদ নিয়ন্ত্রণ, প্রস্তাবে ভোটদান, বা সম্মিলিত সম্পদ পরিচালনা করার জন্য। যদিও DAO-গুলো এখনও পরীক্ষামূলক, তারা আপনার জন্য এমন গোষ্ঠী খুঁজে বের করার, সহযোগী খুঁজে বের করার, এবং ইথেরিয়াম কমিউনিটিতে আপনার প্রভাব বাড়ানোর সুযোগ করে দেয়। [DAO সম্পর্কে আরও](/dao/)
 
-- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _অ-প্রযুক্তিগত ক্ষেত্রে DAO ধারণার প্রচার করুন এবং लोकांना DAO-এর মাধ্যমে ভ্যালু তৈরি করতে সাহায্য করুন_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _অ-প্রযুক্তিগত ক্ষেত্রে DAO ধারণার প্রচার করুন এবং মানুষকে DAO-এর মাধ্যমে ভ্যালু তৈরি করতে সাহায্য করুন_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _নির্মাতাদের কমিউনিটি যারা ইন্টারনেটের সম্মিলিত মালিকানায় বিশ্বাসী_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _একটি DAO হিসাবে কর্মরত ফ্রিল্যান্সার Web3 ডেভেলপমেন্ট সমষ্টি_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus-এর কমিউনিটি গভর্নেন্স_
