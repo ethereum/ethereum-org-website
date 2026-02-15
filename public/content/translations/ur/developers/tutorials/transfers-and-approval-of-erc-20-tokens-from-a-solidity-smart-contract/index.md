@@ -142,8 +142,8 @@ contract DEX {
 function buy() payable public {
     uint256 amountTobuy = msg.value;
     uint256 dexBalance = token.balanceOf(address(this));
-    require(amountTobuy > 0, "کچھ ایتھر بھیجنا ضروری ہے");
-    require(amountTobuy <= dexBalance, "ریزرو میں کافی ٹوکنز نہیں ہیں");
+    require(amountTobuy > 0, "You need to send some ether");
+    require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
     token.transfer(msg.sender, amountTobuy);
     emit Bought(amountTobuy);
 }
@@ -158,23 +158,23 @@ function buy() payable public {
 فروخت کے لیے ذمہ دار فنکشن کے لیے پہلے یہ ضروری ہوگا کہ صارف نے پہلے سے approve فنکشن کو کال کرکے رقم کی منظوری دی ہو۔ ٹرانسفر کی منظوری کے لیے ضروری ہے کہ DEX کے ذریعے انسٹینشیئٹ کردہ ERC20Basic ٹوکن کو صارف کے ذریعے کال کیا جائے۔ یہ پہلے DEX کنٹریکٹ کے `token()` فنکشن کو کال کرکے اس ایڈریس کو حاصل کرکے کیا جا سکتا ہے جہاں DEX نے `token` نامی ERC20Basic کنٹریکٹ ڈیپلائے کیا تھا۔ پھر ہم اپنے سیشن میں اس کنٹریکٹ کا ایک انسٹینس بناتے ہیں اور اس کے `approve` فنکشن کو کال کرتے ہیں۔ پھر ہم DEX کے `sell` فنکشن کو کال کرنے اور اپنے ٹوکنز کو واپس ایتھر کے لیے سواپ کرنے کے قابل ہوتے ہیں۔ مثال کے طور پر، ایک انٹرایکٹو براؤنی سیشن میں یہ اس طرح نظر آتا ہے:
 
 ```python
-#### انٹرایکٹو براؤنی کنسول میں Python...
+#### Python in interactive brownie console...
 
-# DEX کو ڈیپلائے کریں
+# deploy the DEX
 dex = DEX.deploy({'from':account1})
 
-# ٹوکن کے لیے ایتھر سواپ کرنے کے لیے buy فنکشن کو کال کریں
-# 1e18, 1 ایتھر ہے جسے wei میں ظاہر کیا گیا ہے
+# call the buy function to swap ether for token
+# 1e18 is 1 ether denominated in wei
 dex.buy({'from': account2, 1e18})
 
-# ERC20 ٹوکن کے لیے ڈیپلائیمنٹ ایڈریس حاصل کریں
-# جو DEX کنٹریکٹ کی تخلیق کے دوران ڈیپلائے کیا گیا تھا
-# dex.token() ٹوکن کے لیے ڈیپلائے کیا گیا ایڈریس واپس کرتا ہے
+# get the deployment address for the ERC20 token
+# that was deployed during DEX contract creation
+# dex.token() returns the deployed address for token
 token = ERC20Basic.at(dex.token())
 
-# ٹوکن کے approve فنکشن کو کال کریں
-# dex ایڈریس کو خرچ کرنے والے کے طور پر منظور کریں
-# اور یہ آپ کے کتنے ٹوکن خرچ کرنے کی اجازت رکھتا ہے
+# call the token's approve function
+# approve the dex address as spender
+# and how many of your tokens it is allowed to spend
 token.approve(dex.address, 3e18, {'from':account2})
 
 ```
@@ -183,9 +183,9 @@ token.approve(dex.address, 3e18, {'from':account2})
 
 ```solidity
 function sell(uint256 amount) public {
-    require(amount > 0, "آپ کو کم از کم کچھ ٹوکن فروخت کرنے کی ضرورت ہے");
+    require(amount > 0, "You need to sell at least some tokens");
     uint256 allowance = token.allowance(msg.sender, address(this));
-    require(allowance >= amount, "ٹوکن الاؤنس چیک کریں");
+    require(allowance >= amount, "Check the token allowance");
     token.transferFrom(msg.sender, address(this), amount);
     payable(msg.sender).transfer(amount);
     emit Sold(amount);
@@ -295,16 +295,16 @@ contract DEX {
     function buy() payable public {
         uint256 amountTobuy = msg.value;
         uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "کچھ ایتھر بھیجنا ضروری ہے");
-        require(amountTobuy <= dexBalance, "ریزرو میں کافی ٹوکنز نہیں ہیں");
+        require(amountTobuy > 0, "You need to send some ether");
+        require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
         token.transfer(msg.sender, amountTobuy);
         emit Bought(amountTobuy);
     }
 
     function sell(uint256 amount) public {
-        require(amount > 0, "آپ کو کم از کم کچھ ٹوکن فروخت کرنے کی ضرورت ہے");
+        require(amount > 0, "You need to sell at least some tokens");
         uint256 allowance = token.allowance(msg.sender, address(this));
-        require(allowance >= amount, "ٹوکن الاؤنس چیک کریں");
+        require(allowance >= amount, "Check the token allowance");
         token.transferFrom(msg.sender, address(this), amount);
         payable(msg.sender).transfer(amount);
         emit Sold(amount);

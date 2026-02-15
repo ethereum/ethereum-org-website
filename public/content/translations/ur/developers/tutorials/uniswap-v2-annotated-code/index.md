@@ -173,14 +173,14 @@ Uniswap نے جو حل نکالا وہ یہ ہے کہ 224 بٹ کی قدریں �
 یہ ان دو قسم کے ERC-20 ٹوکنز کے کنٹریکٹس کے پتے ہیں جن کا اس پول کے ذریعے تبادلہ کیا جا سکتا ہے۔
 
 ```solidity
-    uint112 private reserve0;           // ایک اسٹوریج سلاٹ استعمال کرتا ہے، getReserves کے ذریعے قابل رسائی
-    uint112 private reserve1;           // ایک اسٹوریج سلاٹ استعمال کرتا ہے، getReserves کے ذریعے قابل رسائی
+    uint112 private reserve0;           // uses single storage slot, accessible via getReserves
+    uint112 private reserve1;           // uses single storage slot, accessible via getReserves
 ```
 
 ہر ٹوکن کی قسم کے لیے پول کے پاس موجود ذخائر۔ ہم فرض کرتے ہیں کہ دونوں ایک ہی قدر کی نمائندگی کرتے ہیں، اور اس لیے ہر token0 کی قدر reserve1/reserve0 token1's کے برابر ہے۔
 
 ```solidity
-    uint32  private blockTimestampLast; // ایک اسٹوریج سلاٹ استعمال کرتا ہے، getReserves کے ذریعے قابل رسائی
+    uint32  private blockTimestampLast; // uses single storage slot, accessible via getReserves
 ```
 
 آخری بلاک کا ٹائم اسٹیمپ جس میں ایک ایکسچینج ہوا، وقت کے ساتھ ایکسچینج کی شرحوں کو ٹریک کرنے کے لیے استعمال ہوتا ہے۔
@@ -195,7 +195,7 @@ Ethereum کنٹریکٹس کے سب سے بڑے گیس کے اخراجات می�
 یہ متغیرات ہر ٹوکن کے لیے مجموعی لاگت رکھتے ہیں (ہر ایک دوسرے کے لحاظ سے)۔ ان کا استعمال وقت کی ایک مدت کے دوران اوسط ایکسچینج کی شرح کا حساب لگانے کے لیے کیا جا سکتا ہے۔
 
 ```solidity
-    uint public kLast; // reserve0 * reserve1، تازہ ترین لیکویڈیٹی ایونٹ کے فوراً بعد
+    uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
 ```
 
 جس طریقے سے جوڑا ایکسچینج token0 اور token1 کے درمیان ایکسچینج کی شرح کا فیصلہ کرتا ہے وہ یہ ہے کہ تجارت کے دوران دونوں ذخائر کے ضرب کو مستقل رکھا جائے۔ یہ قدر `kLast` ہے۔ یہ اس وقت تبدیل ہوتا ہے جب کوئی لیکویڈیٹی فراہم کرنے والا ٹوکن جمع کرتا ہے یا نکالتا ہے، اور یہ 0.3% مارکیٹ فیس کی وجہ سے قدرے بڑھ جاتا ہے۔
@@ -409,7 +409,7 @@ Uniswap 2.0 میں تاجر مارکیٹ کو استعمال کرنے کے لی�
 فیکٹری کی فیس کی منزل پڑھیں۔ اگر یہ صفر ہے تو کوئی پروٹوکول فیس نہیں ہے اور اس فیس کا حساب لگانے کی ضرورت نہیں ہے۔
 
 ```solidity
-        uint _kLast = kLast; // گیس کی بچت
+        uint _kLast = kLast; // gas savings
 ```
 
 `kLast` اسٹیٹ متغیر اسٹوریج میں واقع ہے، لہذا کنٹریکٹ پر مختلف کالز کے درمیان اس کی ایک قدر ہوگی۔
@@ -470,7 +470,7 @@ Uniswap 2.0 میں تاجر مارکیٹ کو استعمال کرنے کے لی�
 یہ فنکشن اس وقت کال کیا جاتا ہے جب کوئی لیکویڈیٹی فراہم کرنے والا پول میں لیکویڈیٹی شامل کرتا ہے۔ یہ انعام کے طور پر اضافی لیکویڈیٹی ٹوکنز منٹ کرتا ہے۔ اسے [ایک پیریفری کنٹریکٹ](#UniswapV2Router02) سے کال کیا جانا چاہئے جو اسے اسی ٹرانزیکشن میں لیکویڈیٹی شامل کرنے کے بعد کال کرتا ہے (تاکہ کوئی اور جائز مالک سے پہلے نئی لیکویڈیٹی کا دعوی کرنے کے لئے ٹرانزیکشن جمع نہ کر سکے)۔
 
 ```solidity
-        (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // گیس کی بچت
+        (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
 ```
 
 یہ Solidity فنکشن کے نتائج کو پڑھنے کا طریقہ ہے جو متعدد قدریں واپس کرتا ہے۔ ہم آخری واپس کی گئی قدریں، بلاک ٹائم اسٹیمپ، کو رد کر دیتے ہیں، کیونکہ ہمیں اس کی ضرورت نہیں ہے۔
@@ -514,7 +514,6 @@ Uniswap 2.0 میں تاجر مارکیٹ کو استعمال کرنے کے لی�
 ```solidity
         } else {
             liquidity = Math.min(amount0.mul(_totalSupply) / _reserve0, amount1.mul(_totalSupply) / _reserve1);
-
 ```
 
 ہر بعد کے ڈپازٹ کے ساتھ ہم پہلے ہی دونوں اثاثوں کے درمیان ایکسچینج کی شرح جانتے ہیں، اور ہم توقع کرتے ہیں کہ لیکویڈیٹی فراہم کرنے والے دونوں میں برابر قدر فراہم کریں گے۔ اگر وہ ایسا نہیں کرتے ہیں، تو ہم انہیں سزا کے طور پر ان کی فراہم کردہ کم قدر کی بنیاد پر لیکویڈیٹی ٹوکنز دیتے ہیں۔
@@ -791,6 +790,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
         getPair[token1][token0] = pair; // populate mapping in the reverse direction
         allPairs.push(pair);
         emit PairCreated(token0, token1, pair, allPairs.length);
+    }
 ```
 
 نئی جوڑی کی معلومات کو اسٹیٹ متغیرات میں محفوظ کریں اور دنیا کو نئے جوڑا ایکسچینج کے بارے میں مطلع کرنے کے لیے ایک ایونٹ خارج کریں۔
@@ -1033,7 +1033,6 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 ```solidity
         if (reserveA == 0 && reserveB == 0) {
             (amountA, amountB) = (amountADesired, amountBDesired);
-
 ```
 
 اگر موجودہ ریزرو خالی ہیں تو یہ ایک نیا جوڑا ایکسچینج ہے۔ جمع کی جانے والی رقوم بالکل وہی ہونی چاہئیں جو لیکویڈیٹی فراہم کرنے والا فراہم کرنا چاہتا ہے۔
@@ -1312,7 +1311,7 @@ ETH کے لیے لیکویڈیٹی ہٹانا تقریباً وہی ہے، سو�
 
 ```solidity
     // **** SWAP ****
-    // پہلے جوڑے کو ابتدائی رقم پہلے ہی بھیجے جانے کی ضرورت ہے
+    // requires the initial amount to have already been sent to the first pair
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
@@ -1359,6 +1358,7 @@ ETH کے لیے لیکویڈیٹی ہٹانا تقریباً وہی ہے، سو�
 کیا یہ آخری ایکسچینج ہے؟ اگر ایسا ہے تو، تجارت کے لیے موصول ہونے والے ٹوکن کو منزل پر بھیج دیں۔ اگر نہیں، تو اسے اگلے جوڑے کے تبادلے پر بھیجیں۔
 
 ```solidity
+
             IUniswapV2Pair(UniswapV2Library.pairFor(factory, input, output)).swap(
                 amount0Out, amount1Out, to, new bytes(0)
             );
@@ -1503,7 +1503,7 @@ ETH کے لیے لیکویڈیٹی ہٹانا تقریباً وہی ہے، سو�
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-        // اگر کوئی ہے تو ڈسٹ ایتھ واپس کریں
+        // refund dust eth, if any
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
 ```
@@ -1511,8 +1511,8 @@ ETH کے لیے لیکویڈیٹی ہٹانا تقریباً وہی ہے، سو�
 ان چاروں اقسام میں ETH اور ٹوکنز کے درمیان تجارت شامل ہے۔ فرق صرف اتنا ہے کہ ہم یا تو تاجر سے ETH وصول کرتے ہیں اور اسے WETH بنانے کے لیے استعمال کرتے ہیں، یا ہم راستے میں آخری ایکسچینج سے WETH وصول کرتے ہیں اور اسے جلاتے ہیں، جس سے تاجر کو نتیجے میں ETH واپس بھیجا جاتا ہے۔
 
 ```solidity
-    // **** SWAP (ٹرانسفر ٹوکنز پر فیس کی حمایت) ****
-    // پہلے جوڑے کو ابتدائی رقم پہلے ہی بھیجے جانے کی ضرورت ہے
+    // **** SWAP (supporting fee-on-transfer tokens) ****
+    // requires the initial amount to have already been sent to the first pair
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
@@ -1525,7 +1525,7 @@ ETH کے لیے لیکویڈیٹی ہٹانا تقریباً وہی ہے، سو�
             IUniswapV2Pair pair = IUniswapV2Pair(UniswapV2Library.pairFor(factory, input, output));
             uint amountInput;
             uint amountOutput;
-            { // بہت گہری غلطیوں سے بچنے کے لیے دائرہ کار
+            { // scope to avoid stack too deep errors
             (uint reserve0, uint reserve1,) = pair.getReserves();
             (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
             amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
@@ -1616,7 +1616,7 @@ ETH کے لیے لیکویڈیٹی ہٹانا تقریباً وہی ہے، سو�
 یہ وہی قسمیں ہیں جو عام ٹوکنز کے لیے استعمال ہوتی ہیں، لیکن وہ اس کے بجائے `_swapSupportingFeeOnTransferTokens` کو کال کرتی ہیں۔
 
 ```solidity
-    // **** لائبریری فنکشنز ****
+    // **** LIBRARY FUNCTIONS ****
     function quote(uint amountA, uint reserveA, uint reserveB) public pure virtual override returns (uint amountB) {
         return UniswapV2Library.quote(amountA, reserveA, reserveB);
     }
@@ -1680,14 +1680,14 @@ ETH کے لیے لیکویڈیٹی ہٹانا تقریباً وہی ہے، سو�
 ```solidity
 pragma solidity =0.5.16;
 
-// مختلف ریاضی کے آپریشنز کرنے کے لیے ایک لائبریری
+// a library for performing various math operations
 
 library Math {
     function min(uint x, uint y) internal pure returns (uint z) {
         z = x < y ? x : y;
     }
 
-    // بابلی طریقہ (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
+    // babylonian method (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
     function sqrt(uint y) internal pure returns (uint z) {
         if (y > 3) {
             z = y;
@@ -1725,10 +1725,10 @@ x سے ایک تخمینہ کے طور پر شروع کریں جو مربع جڑ
 ```solidity
 pragma solidity =0.5.16;
 
-// بائنری فکسڈ پوائنٹ نمبرز کو ہینڈل کرنے کے لیے ایک لائبریری (https://wikipedia.org/wiki/Q_(number_format))
+// a library for handling binary fixed point numbers (https://wikipedia.org/wiki/Q_(number_format))
 
-// رینج: [0, 2**112 - 1]
-// ریزولوشن: 1 / 2**112
+// range: [0, 2**112 - 1]
+// resolution: 1 / 2**112
 
 library UQ112x112 {
     uint224 constant Q112 = 2**112;
@@ -1737,16 +1737,16 @@ library UQ112x112 {
 `Q112` ایک کے لیے انکوڈنگ ہے۔
 
 ```solidity
-    // ایک uint112 کو UQ112x112 کے بطور انکوڈ کریں
+    // encode a uint112 as a UQ112x112
     function encode(uint112 y) internal pure returns (uint224 z) {
-        z = uint224(y) * Q112; // کبھی اوور فلو نہیں ہوتا
+        z = uint224(y) * Q112; // never overflows
     }
 ```
 
 کیونکہ y `uint112` ہے، یہ زیادہ سے زیادہ 2^112-1 ہو سکتا ہے۔ اس نمبر کو اب بھی `UQ112x112` کے بطور انکوڈ کیا جا سکتا ہے۔
 
 ```solidity
-    // ایک UQ112x112 کو ایک uint112 سے تقسیم کریں، ایک UQ112x112 واپس کریں
+    // divide a UQ112x112 by a uint112, returning a UQ112x112
     function uqdiv(uint224 x, uint112 y) internal pure returns (uint224 z) {
         z = x / uint224(y);
     }
@@ -1769,7 +1769,7 @@ import "./SafeMath.sol";
 library UniswapV2Library {
     using SafeMath for uint;
 
-    // ترتیب شدہ ٹوکن پتے واپس کرتا ہے، جو اس ترتیب میں ترتیب دیے گئے جوڑوں سے واپسی کی قدروں کو ہینڈل کرنے کے لیے استعمال ہوتا ہے
+    // returns sorted token addresses, used to handle return values from pairs sorted in this order
     function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {
         require(tokenA != tokenB, 'UniswapV2Library: IDENTICAL_ADDRESSES');
         (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
@@ -1780,7 +1780,7 @@ library UniswapV2Library {
 دونوں ٹوکنز کو پتے کے لحاظ سے ترتیب دیں، تاکہ ہم ان کے لیے جوڑا ایکسچینج کا پتہ حاصل کر سکیں۔ یہ ضروری ہے کیونکہ بصورت دیگر ہمارے پاس دو امکانات ہوں گے، ایک پیرامیٹرز A,B کے لیے اور دوسرا پیرامیٹرز B,A کے لیے، جس کے نتیجے میں ایک کے بجائے دو تبادلے ہوں گے۔
 
 ```solidity
-    // بغیر کسی بیرونی کال کے ایک جوڑے کے لیے CREATE2 ایڈریس کا حساب لگاتا ہے
+    // calculates the CREATE2 address for a pair without making any external calls
     function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair) {
         (address token0, address token1) = sortTokens(tokenA, tokenB);
         pair = address(uint(keccak256(abi.encodePacked(
@@ -1795,7 +1795,7 @@ library UniswapV2Library {
 یہ فنکشن دو ٹوکنز کے لیے جوڑا ایکسچینج کے پتے کا حساب لگاتا ہے۔ یہ معاہدہ [CREATE2 opcode](https://eips.ethereum.org/EIPS/eip-1014) کا استعمال کرتے ہوئے بنایا گیا ہے، لہذا اگر ہم اس کے استعمال کردہ پیرامیٹرز کو جانتے ہیں تو ہم اسی الگورتھم کا استعمال کرتے ہوئے پتے کا حساب لگا سکتے ہیں۔ یہ فیکٹری سے پوچھنے سے بہت سستا ہے، اور
 
 ```solidity
-    // ایک جوڑے کے لیے ذخائر حاصل کرتا ہے اور ترتیب دیتا ہے
+    // fetches and sorts the reserves for a pair
     function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {
         (address token0,) = sortTokens(tokenA, tokenB);
         (uint reserve0, uint reserve1,) = IUniswapV2Pair(pairFor(factory, tokenA, tokenB)).getReserves();
@@ -1806,7 +1806,7 @@ library UniswapV2Library {
 یہ فنکشن ان دو ٹوکنز کے ذخائر کو واپس کرتا ہے جو جوڑا ایکسچینج کے پاس ہیں۔ نوٹ کریں کہ یہ کسی بھی ترتیب میں ٹوکن وصول کر سکتا ہے، اور انہیں اندرونی استعمال کے لیے ترتیب دیتا ہے۔
 
 ```solidity
-    // کسی اثاثے اور جوڑے کے ذخائر کی کچھ مقدار کو دیکھتے ہوئے، دوسرے اثاثے کی مساوی رقم واپس کرتا ہے
+    // given some amount of an asset and pair reserves, returns an equivalent amount of the other asset
     function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {
         require(amountA > 0, 'UniswapV2Library: INSUFFICIENT_AMOUNT');
         require(reserveA > 0 && reserveB > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1817,13 +1817,14 @@ library UniswapV2Library {
 یہ فنکشن آپ کو ٹوکن B کی وہ رقم دیتا ہے جو آپ کو ٹوکن A کے بدلے میں ملے گی اگر کوئی فیس شامل نہ ہو۔ یہ حساب اس بات کو مدنظر رکھتا ہے کہ منتقلی سے شرح تبادلہ بدل جاتی ہے۔
 
 ```solidity
-    // کسی اثاثے کی ان پٹ رقم اور جوڑے کے ذخائر کو دیکھتے ہوئے، دوسرے اثاثے کی زیادہ سے زیادہ آؤٹ پٹ رقم واپس کرتا ہے
+    // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
 اوپر `quote` فنکشن بہت اچھا کام کرتا ہے اگر جوڑا ایکسچینج استعمال کرنے کے لیے کوئی فیس نہ ہو۔ تاہم، اگر 0.3% ایکسچینج فیس ہے تو آپ کو اصل میں ملنے والی رقم کم ہے۔ یہ فنکشن ایکسچینج فیس کے بعد رقم کا حساب لگاتا ہے۔
 
 ```solidity
+
         require(amountIn > 0, 'UniswapV2Library: INSUFFICIENT_INPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
         uint amountInWithFee = amountIn.mul(997);
@@ -1836,7 +1837,7 @@ library UniswapV2Library {
 سولیڈیٹی مقامی طور پر کسروں کو ہینڈل نہیں کرتی ہے، لہذا ہم صرف رقم کو 0.997 سے ضرب نہیں دے سکتے۔ اس کے بجائے، ہم نیومریٹر کو 997 سے اور ڈینومینیٹر کو 1000 سے ضرب دیتے ہیں، وہی اثر حاصل کرتے ہیں۔
 
 ```solidity
-    // کسی اثاثے کی آؤٹ پٹ رقم اور جوڑے کے ذخائر کو دیکھتے ہوئے، دوسرے اثاثے کی مطلوبہ ان پٹ رقم واپس کرتا ہے
+    // given an output amount of an asset and pair reserves, returns a required input amount of the other asset
     function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {
         require(amountOut > 0, 'UniswapV2Library: INSUFFICIENT_OUTPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1850,7 +1851,7 @@ library UniswapV2Library {
 
 ```solidity
 
-    // کسی بھی تعداد میں جوڑوں پر زنجیروں سے getAmountOut حسابات انجام دیتا ہے
+    // performs chained getAmountOut calculations on any number of pairs
     function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1861,7 +1862,7 @@ library UniswapV2Library {
         }
     }
 
-    // کسی بھی تعداد میں جوڑوں پر زنجیروں سے getAmountIn حسابات انجام دیتا ہے
+    // performs chained getAmountIn calculations on any number of pairs
     function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1885,7 +1886,7 @@ library UniswapV2Library {
 
 pragma solidity >=0.6.0;
 
-// ERC20 ٹوکنز کے ساتھ تعامل کرنے اور ETH بھیجنے کے لیے مددگار طریقے جو مستقل طور پر true/false واپس نہیں کرتے ہیں
+// helper methods for interacting with ERC20 tokens and sending ETH that do not consistently return true/false
 library TransferHelper {
     function safeApprove(
         address token,

@@ -42,7 +42,7 @@ cd dynamic-mocking
 mkdir contracts src
 
 yarn init
-# یا اگر آپ npm استعمال کر رہے ہیں
+# or if you're using npm
 npm init
 ```
 
@@ -50,7 +50,7 @@ npm init
 
 ```bash
 yarn add --dev @types/chai @types/mocha chai mocha ts-node typescript
-# یا اگر آپ npm استعمال کر رہے ہیں
+# or if you're using npm
 npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
 ```
 
@@ -58,7 +58,7 @@ npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
 
 ```bash
 yarn add --dev ethereum-waffle ethers
-# یا اگر آپ npm استعمال کر رہے ہیں
+# or if you're using npm
 npm install ethereum-waffle ethers --save-dev
 ```
 
@@ -212,7 +212,7 @@ await mockERC20.mock.<nameOfMethod>.withArgs(<arguments>).returns(<value>)
 اس علم کے ساتھ ہم آخر کار اپنا پہلا ٹیسٹ لکھ سکتے ہیں:
 
 ```typescript
-it("اگر والیٹ میں 1000000 سے کم ٹوکن ہوں تو غلط واپس کرتا ہے", async () => {
+it("returns false if the wallet has less than 1000000 tokens", async () => {
   await mockERC20.mock.balanceOf.returns(utils.parseEther("999999"))
   expect(await contract.check()).to.be.equal(false)
 })
@@ -230,7 +230,7 @@ it("اگر والیٹ میں 1000000 سے کم ٹوکن ہوں تو غلط وا�
 تو ٹیسٹ کام کرتا ہے، لیکن... اب بھی بہتری کی گنجائش ہے۔ `balanceOf()` فنکشن ہمیشہ 999999 واپس کرے گا۔ ہم ایک والیٹ کی وضاحت کرکے اسے بہتر بنا سکتے ہیں جس کے لئے فنکشن کو کچھ واپس کرنا چاہئے - بالکل ایک حقیقی کانٹریکٹ کی طرح:
 
 ```typescript
-it("اگر والیٹ میں 1000001 سے کم ٹوکن ہوں تو غلط واپس کرتا ہے", async () => {
+it("returns false if the wallet has less than 1000001 tokens", async () => {
   await mockERC20.mock.balanceOf
     .withArgs(wallet.address)
     .returns(utils.parseEther("999999"))
@@ -241,7 +241,7 @@ it("اگر والیٹ میں 1000001 سے کم ٹوکن ہوں تو غلط وا�
 اب تک، ہم نے صرف اس معاملے کی جانچ کی ہے جہاں ہم کافی امیر نہیں ہیں۔ اس کے بجائے آئیے اس کے برعکس جانچتے ہیں:
 
 ```typescript
-it("اگر والیٹ میں کم از کم 1000001 ٹوکن ہوں تو صحیح واپس کرتا ہے", async () => {
+it("returns true if the wallet has at least 1000001 tokens", async () => {
   await mockERC20.mock.balanceOf
     .withArgs(wallet.address)
     .returns(utils.parseEther("1000001"))
@@ -260,7 +260,7 @@ it("اگر والیٹ میں کم از کم 1000001 ٹوکن ہوں تو صحی�
 آئیے اس کا خلاصہ کریں جو ہم نے اب تک کیا ہے۔ ہم نے اپنے `AmIRichAlready` کانٹریکٹ کی فعالیت کی جانچ کی ہے اور یہ ٹھیک سے کام کرتا نظر آتا ہے۔ اس کا مطلب ہے کہ ہمارا کام ہو گیا، ٹھیک ہے؟ بالکل نہیں! Waffle ہمیں اپنے کانٹریکٹ کو مزید جانچنے کی اجازت دیتا ہے۔ لیکن ٹھیک ٹھیک کیسے؟ خیر، Waffle کے آرسینل میں `calledOnContract()` اور `calledOnContractWith()` میچرز ہیں۔ وہ ہمیں یہ جانچنے کی اجازت دیں گے کہ آیا ہمارے کانٹریکٹ نے ERC20 نقلی کانٹریکٹ کو کال کیا ہے۔ ان میچرز میں سے ایک کے ساتھ ایک بنیادی ٹیسٹ یہ ہے:
 
 ```typescript
-it("جانچتا ہے کہ کیا کانٹریکٹ نے ERC20 ٹوکن پر balanceOf کو کال کیا ہے", async () => {
+it("checks if contract called balanceOf on the ERC20 token", async () => {
   await mockERC20.mock.balanceOf.returns(utils.parseEther("999999"))
   await contract.check()
   expect("balanceOf").to.be.calledOnContract(mockERC20)
@@ -270,7 +270,7 @@ it("جانچتا ہے کہ کیا کانٹریکٹ نے ERC20 ٹوکن پر bala
 ہم مزید آگے جا سکتے ہیں اور اس ٹیسٹ کو دوسرے میچر کے ساتھ بہتر بنا سکتے ہیں جس کے بارے میں میں نے آپ کو بتایا تھا:
 
 ```typescript
-it("جانچتا ہے کہ کیا کانٹریکٹ نے ERC20 ٹوکن پر مخصوص والیٹ کے ساتھ balanceOf کو کال کیا ہے", async () => {
+it("checks if contract called balanceOf with certain wallet on the ERC20 token", async () => {
   await mockERC20.mock.balanceOf
     .withArgs(wallet.address)
     .returns(utils.parseEther("999999"))

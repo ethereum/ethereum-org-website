@@ -36,7 +36,7 @@ contract Game {
 
         if (hasWon) {
             (bool success, ) = msg.sender.call{ value: msg.value * 2 }('');
-            require(success, "منتقلی ناکام");
+            require(success, "Transfer failed");
             totalGamesPlayerWon++;
         } else {
             totalGamesPlayerLost++;
@@ -60,13 +60,13 @@ GameContract.events.BetPlaced({
     fromBlock: 0
 }, function(error, event) { console.log(event); })
 .on('data', function(event) {
-    // ایونٹ فائر ہوا
+    // event fired
 })
 .on('changed', function(event) {
-    // ایونٹ دوبارہ ہٹا دیا گیا
+    // event was removed again
 })
 .on('error', function(error, receipt) {
-    // tx مسترد کر دیا گیا
+    // tx rejected
 });
 ```
 
@@ -129,8 +129,8 @@ GameContract.events.BetPlaced({
 
 ```yaml
 specVersion: 0.0.1
-description: ایتھریم پر شرط لگانا
-repository: - GitHub لنک -
+description: Placing Bets on Ethereum
+repository: - GitHub link -
 schema:
   file: ./schema.graphql
 dataSources:
@@ -207,7 +207,7 @@ export function handleNewBet(event: PlacedBet): void {
   let player = Player.load(event.transaction.from.toHex())
 
   if (player == null) {
-    // اگر پہلے سے موجود نہیں ہے تو بنائیں
+    // create if doesn't exist yet
     player = new Player(event.transaction.from.toHex())
     player.bets = new Array<string>(0)
     player.totalPlayedCount = 0
@@ -230,7 +230,7 @@ export function handleNewBet(event: PlacedBet): void {
     player.hasLostCount++
   }
 
-  // اس طرح ایرے کو اپ ڈیٹ کریں
+  // update array like this
   let bets = player.bets
   bets.push(bet.id)
   player.bets = bets
@@ -244,7 +244,7 @@ export function handleNewBet(event: PlacedBet): void {
 Apollo Boost جیسی چیز کا استعمال کرتے ہوئے، آپ آسانی سے اپنے React dapp (یا Apollo-Vue) میں دی گراف کو ضم کر سکتے ہیں۔ خاص طور پر جب React hooks اور Apollo کا استعمال کرتے ہیں، تو ڈیٹا حاصل کرنا اتنا ہی آسان ہے جتنا کہ اپنے جزو میں ایک واحد GraphQL استفسار لکھنا۔ ایک عام سیٹ اپ کچھ اس طرح نظر آ سکتا ہے:
 
 ```javascript
-// تمام سب گراف دیکھیں: https://thegraph.com/explorer/
+// See all subgraphs: https://thegraph.com/explorer/
 const client = new ApolloClient({
   uri: "{{ subgraphUrl }}",
 })

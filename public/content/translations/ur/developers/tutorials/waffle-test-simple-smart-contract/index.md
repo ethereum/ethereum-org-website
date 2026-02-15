@@ -55,7 +55,7 @@ contract EtherSplitter {
     }
 
     function split() public payable {
-        require(msg.value % 2 == 0, 'غیر مساوی wei رقم کی اجازت نہیں ہے');
+        require(msg.value % 2 == 0, 'Uneven wei amount not allowed');
         receiver1.transfer(msg.value / 2);
         emit Transfer(msg.sender, receiver1, msg.value / 2);
         receiver2.transfer(msg.value / 2);
@@ -113,7 +113,7 @@ import EtherSplitter from "../build/EtherSplitter.json"
 
 use(solidity)
 
-describe("Ether اسپلٹر", () => {
+describe("Ether Splitter", () => {
   const [sender, receiver1, receiver2] = new MockProvider().getWallets()
   let splitter: Contract
 
@@ -124,7 +124,7 @@ describe("Ether اسپلٹر", () => {
     ])
   })
 
-  // یہاں ٹیسٹ شامل کریں
+  // add the tests here
 })
 ```
 
@@ -138,7 +138,7 @@ describe("Ether اسپلٹر", () => {
 سب سے پہلے، ہم یہ چیک کریں گے کہ آیا اسپلٹ میتھڈ واقعی وصول کنندگان کے والیٹس کے بیلنس کو تبدیل کرتا ہے۔ اگر ہم بھیجنے والے کے اکاؤنٹ سے 50 wei کو اسپلٹ کرتے ہیں، تو ہم توقع کریں گے کہ دونوں وصول کنندگان کے بیلنس میں 25 wei کا اضافہ ہوگا۔ ہم Waffle کا `changeBalances` میچر استعمال کریں گے:
 
 ```ts
-it("اکاؤنٹس بیلنس کو تبدیل کرتا ہے", async () => {
+it("Changes accounts balances", async () => {
   await expect(() => splitter.split({ value: 50 })).to.changeBalances(
     [receiver1, receiver2],
     [25, 25]
@@ -150,7 +150,7 @@ it("اکاؤنٹس بیلنس کو تبدیل کرتا ہے", async () => {
 اگر ہم کسی ایک مخصوص والیٹ کا بیلنس چیک کرنا چاہتے ہیں، تو ہم `changeBalance` میچر بھی استعمال کر سکتے ہیں، جس کے لیے ارے پاس کرنے کی ضرورت نہیں ہے، جیسا کہ نیچے دی گئی مثال میں ہے:
 
 ```ts
-it("اکاؤنٹ بیلنس کو تبدیل کرتا ہے", async () => {
+it("Changes account balance", async () => {
   await expect(() => splitter.split({ value: 50 })).to.changeBalance(
     receiver1,
     25
@@ -165,13 +165,13 @@ it("اکاؤنٹ بیلنس کو تبدیل کرتا ہے", async () => {
 ## Emit {#emit}
 
 ```ts
-it("پہلے وصول کنندہ کو منتقلی پر ایونٹ خارج کرتا ہے", async () => {
+it("Emits event on the transfer to the first receiver", async () => {
   await expect(splitter.split({ value: 50 }))
     .to.emit(splitter, "Transfer")
     .withArgs(sender.address, receiver1.address, 25)
 })
 
-it("دوسرے وصول کنندہ کو منتقلی پر ایونٹ خارج کرتا ہے", async () => {
+it("Emits event on the transfer to the second receiver", async () => {
   await expect(splitter.split({ value: 50 }))
     .to.emit(splitter, "Transfer")
     .withArgs(sender.address, receiver2.address, 25)
@@ -185,9 +185,9 @@ it("دوسرے وصول کنندہ کو منتقلی پر ایونٹ خارج ک
 آخری مثال کے طور پر، ہم یہ چیک کریں گے کہ آیا wei کی غیر مساوی تعداد کی صورت میں ٹرانزیکشن کو واپس کر دیا گیا تھا۔ ہم `revertedWith` میچر استعمال کریں گے:
 
 ```ts
-it("جب wei کی رقم غیر مساوی ہو تو واپس کرتا ہے", async () => {
+it("Reverts when Vei amount uneven", async () => {
   await expect(splitter.split({ value: 51 })).to.be.revertedWith(
-    "غیر مساوی wei رقم کی اجازت نہیں ہے"
+    "Uneven wei amount not allowed"
   )
 })
 ```

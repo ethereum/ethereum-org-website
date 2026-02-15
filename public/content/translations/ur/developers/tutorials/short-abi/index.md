@@ -90,11 +90,11 @@ L1 پر 160 گیس کا ضیاع عام طور پر نہ ہونے کے براب�
 
 ```solidity
     /**
-     * @dev کالر کو کھیلنے کے لیے 1000 ٹوکن دیتا ہے
+     * @dev Gives the caller 1000 tokens to play with
      */
     function faucet() external {
         _mint(msg.sender, 1000);
-    }   // فنکشن faucet
+    }   // function faucet
 ```
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol}
@@ -123,8 +123,8 @@ contract CalldataInterpreter {
 ```solidity
 
     /**
-     * @dev ٹوکن کا پتہ متعین کریں
-     * @param tokenAddr_ ERC-20 کنٹریکٹ کا پتہ
+     * @dev Specify the token address
+     * @param tokenAddr_ ERC-20 contract address
      */
     constructor(
         address tokenAddr_
@@ -146,10 +146,10 @@ contract CalldataInterpreter {
         uint _retVal;
 
         require(length < 0x21,
-            "calldataVal لمبائی کی حد 32 بائٹس ہے");
+            "calldataVal length limit is 32 bytes");
 
         require(length + startByte <= msg.data.length,
-            "calldataVal کال ڈیٹا سائز سے آگے پڑھنے کی کوشش کر رہا ہے");
+            "calldataVal trying to read beyond calldatasize");
 ```
 
 ہم میموری میں ایک 32-بائٹ (256-بٹ) ورڈ لوڈ کرنے جا رہے ہیں اور ان بائٹس کو ہٹانے جا رہے ہیں جو اس فیلڈ کا حصہ نہیں ہیں جسے ہم چاہتے ہیں۔
@@ -206,8 +206,8 @@ L1 پر گیس بچانے کے لیے ان ٹیسٹوں کو چھوڑنا ضرو
 
 ```solidity
 
-        // کال ڈیٹا سے معلومات کا استعمال کرتے ہوئے ٹوکن کے
-        // اسٹیٹ کو تبدیل کرنے والے طریقوں کو کال کریں
+        // Call the state changing methods of token using
+        // information from the calldata
 
         // faucet
         if (_func == 1) {
@@ -227,7 +227,7 @@ EOA (بیرونی ملکیت والا اکاؤنٹ) یا وہ کنٹریکٹ ج�
 لہذا ہم اپنے تمام ٹوکنز اس کو منتقل کر دیتے ہیں جس نے ہمیں کال کیا تھا۔
 
 ```solidity
-        // منتقلی (فرض کریں کہ ہمارے پاس اس کے لیے الاؤنس ہے)
+        // transfer (assume we have an allowance for it)
         if (_func == 2) {
 ```
 
@@ -298,7 +298,7 @@ describe("CalldataInterpreter", function () {
 ہم دونوں کنٹریکٹس کو تعینات کرکے شروع کرتے ہیں۔
 
 ```javascript
-    // کھیلنے کے لیے ٹوکن حاصل کریں
+    // Get tokens to play with
     const faucetTx = {
 ```
 
@@ -326,7 +326,7 @@ describe("CalldataInterpreter", function () {
 ہم [the signer's `sendTransaction` method](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) کو کال کرتے ہیں کیونکہ ہم نے پہلے ہی منزل (`faucetTx.to`) کی وضاحت کر دی ہے اور ہمیں ٹرانزیکشن پر دستخط کرنے کی ضرورت ہے۔
 
 ```javascript
-// چیک کریں کہ faucet ٹوکنز کو صحیح طریقے سے فراہم کرتا ہے
+// Check the faucet provides the tokens correctly
 expect(await token.balanceOf(signer.address)).to.equal(1000)
 ```
 
@@ -334,7 +334,7 @@ expect(await token.balanceOf(signer.address)).to.equal(1000)
 `view` فنکشنز پر گیس بچانے کی ضرورت نہیں ہے، لہذا ہم انہیں عام طور پر چلاتے ہیں۔
 
 ```javascript
-// CDI کو ایک الاؤنس دیں (منظوریوں کو پراکسی نہیں کیا جا سکتا)
+// Give the CDI an allowance (approvals cannot be proxied)
 const approveTX = await token.approve(cdi.address, 10000)
 await approveTX.wait()
 expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
@@ -343,7 +343,7 @@ expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
 منتقلی کرنے کے قابل ہونے کے لیے کال ڈیٹا انٹرپریٹر کو ایک الاؤنس دیں۔
 
 ```javascript
-// ٹوکن منتقل کریں
+// Transfer tokens
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -356,10 +356,10 @@ const transferTx = {
 ```javascript
     await (await signer.sendTransaction(transferTx)).wait()
 
-    // چیک کریں کہ ہمارے پاس 256 ٹوکن کم ہیں
+    // Check that we have 256 tokens less
     expect (await token.balanceOf(signer.address)).to.equal(1000-256)
 
-    // اور یہ کہ ہماری منزل کو وہ مل گئے ہیں
+    // And that our destination got them
     expect (await token.balanceOf(destAddr)).to.equal(256)
   })    // it
 })      // describe
@@ -381,10 +381,10 @@ const transferTx = {
 یہاں نئے حصے ہیں:
 
 ```solidity
-    // CalldataInterpreter ایڈریس کی وضاحت کرنے کی اجازت والا واحد ایڈریس
+    // The only address allowed to specify the CalldataInterpreter address
     address owner;
 
-    // CalldataInterpreter ایڈریس
+    // The CalldataInterpreter address
     address proxy = address(0);
 ```
 
@@ -394,7 +394,7 @@ ERC-20 کنٹریکٹ کو مجاز پراکسی کی شناخت جاننے کی
 
 ```solidity
     /**
-     * @dev ERC20 کنسٹرکٹر کو کال کرتا ہے۔
+     * @dev Calls the ERC20 constructor.
      */
     constructor(
     ) ERC20("Oris useless token-2", "OUT-2") {
@@ -406,15 +406,15 @@ ERC-20 کنٹریکٹ کو مجاز پراکسی کی شناخت جاننے کی
 
 ```solidity
     /**
-     * @dev پراکسی (CalldataInterpreter) کے لیے پتہ سیٹ کریں۔
-     * مالک کے ذریعہ صرف ایک بار کال کیا جاسکتا ہے
+     * @dev set the address for the proxy (the CalldataInterpreter).
+     * Can only be called once by the owner
      */
     function setProxy(address _proxy) external {
-        require(msg.sender == owner, "صرف مالک کے ذریعہ کال کیا جاسکتا ہے");
-        require(proxy == address(0), "پراکسی پہلے ہی سیٹ ہے");
+        require(msg.sender == owner, "Can only be called by owner");
+        require(proxy == address(0), "Proxy is already set");
 
         proxy = _proxy;
-    }    // فنکشن setProxy
+    }    // function setProxy
 ```
 
 پراکسی کو مراعات یافتہ رسائی حاصل ہے، کیونکہ یہ سیکیورٹی چیک کو بائی پاس کر سکتا ہے۔
@@ -423,7 +423,7 @@ ERC-20 کنٹریکٹ کو مجاز پراکسی کی شناخت جاننے کی
 
 ```solidity
     /**
-     * @dev کچھ فنکشنز صرف پراکسی کے ذریعے ہی کال کیے جا سکتے ہیں۔
+     * @dev Some functions may only be called by the proxy.
      */
     modifier onlyProxy {
 ```
@@ -445,7 +445,7 @@ ERC-20 کنٹریکٹ کو مجاز پراکسی کی شناخت جاننے کی
 اگر ایسا ہے تو، اس فنکشن کو چلائیں جس میں ہم ترمیم کرتے ہیں۔
 
 ```solidity
-   /* وہ فنکشنز جو پراکسی کو اکاؤنٹس کے لیے پراکسی کرنے کی اجازت دیتے ہیں */
+   /* Functions that allow the proxy to actually proxy for accounts */
 
     function transferProxy(address from, address to, uint256 amount)
         public virtual onlyProxy() returns (bool)
@@ -485,7 +485,7 @@ ERC-20 کنٹریکٹ کو مجاز پراکسی کی شناخت جاننے کی
 کال ڈیٹا انٹرپریٹر اوپر والے سے تقریباً مماثل ہے، سوائے اس کے کہ پراکسیڈ فنکشنز کو `msg.sender` پیرامیٹر ملتا ہے اور `transfer` کے لیے الاؤنس کی کوئی ضرورت نہیں ہے۔
 
 ```solidity
-        // منتقلی (الاؤنس کی ضرورت نہیں)
+        // transfer (no need for allowance)
         if (_func == 2) {
             token.transferProxy(
                 msg.sender,
@@ -494,7 +494,7 @@ ERC-20 کنٹریکٹ کو مجاز پراکسی کی شناخت جاننے کی
             );
         }
 
-        // منظوری
+        // approve
         if (_func == 3) {
             token.approveProxy(
                 msg.sender,
@@ -530,7 +530,7 @@ await token.setProxy(cdi.address)
 ```js
 console.log("CalldataInterpreter addr:", cdi.address)
 
-// الاؤنس کی تصدیق کے لیے دو دستخط کنندگان کی ضرورت ہے
+// Need two signers to verify allowances
 const signers = await ethers.getSigners()
 const signer = signers[0]
 const poorSigner = signers[1]
@@ -540,7 +540,7 @@ const poorSigner = signers[1]
 ہم اسے `poorSigner` کہتے ہیں کیونکہ اسے ہمارے کوئی ٹوکن نہیں ملتے (اس کے پاس ETH ہونا ضروری ہے، یقیناً)۔
 
 ```js
-// ٹوکن منتقل کریں
+// Transfer tokens
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -552,7 +552,7 @@ await (await signer.sendTransaction(transferTx)).wait()
 کیونکہ ERC-20 کنٹریکٹ پراکسی (`cdi`) پر بھروسہ کرتا ہے، ہمیں منتقلیوں کو ریلے کرنے کے لیے الاؤنس کی ضرورت نہیں ہے۔
 
 ```js
-// منظوری اور transferFrom
+// approval and transferFrom
 const approveTx = {
   to: cdi.address,
   data: "0x03" + poorSigner.address.slice(2, 42) + "00FF",
@@ -567,7 +567,7 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// چیک کریں کہ منظوری / transferFrom کا امتزاج صحیح طریقے سے کیا گیا تھا
+// Check the approve / transferFrom combo was done correctly
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 

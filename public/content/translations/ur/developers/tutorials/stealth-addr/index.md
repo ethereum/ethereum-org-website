@@ -173,7 +173,7 @@ use wasm_bindgen::prelude::*;
 
 Rust سے WASM پیکیج بنانے کی تعریفیں۔ وہ [یہاں](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) دستاویزی ہیں۔
 
-```rust
+```rust 
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -390,8 +390,8 @@ function App() {
         await init();
         setWasmReady(true)
       } catch (err) {
-        console.error('Wasm لوڈ کرنے میں خرابی:', err)
-        alert("Wasm خرابی: " + err)
+        console.error('Error loading wasm:', err)
+        alert("Wasm error: " + err)
       }
     }
 
