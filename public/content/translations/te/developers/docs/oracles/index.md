@@ -88,29 +88,29 @@ lang: te
 pragma solidity >=0.4.21 <0.6.0;
 
 contract Oracle {
-  Request[] requests; //కాంట్రాక్ట్‌కు చేసిన అభ్యర్థనల జాబితా
-  uint currentId = 0; //అభ్యర్థన ఐడిని పెంచడం
-  uint minQuorum = 2; //తుది ఫలితాన్ని ప్రకటించే ముందు స్వీకరించవలసిన కనీస స్పందనల సంఖ్య
-  uint totalOracleCount = 3; //హార్డ్‌కోడ్ చేయబడిన ఒరాకిల్ లెక్కింపు
+  Request[] requests; //list of requests made to the contract
+  uint currentId = 0; //increasing request id
+  uint minQuorum = 2; //minimum number of responses to receive before declaring final result
+  uint totalOracleCount = 3; // Hardcoded oracle count
 
-  // ఒక సాధారణ api అభ్యర్థనను నిర్వచిస్తుంది
+  // defines a general api request
   struct Request {
-    uint id;                            //అభ్యర్థన ఐడి
-    string urlToQuery;                  //API యుఆర్ఎల్
-    string attributeToFetch;            //స్పందనలో తిరిగి పొందవలసిన json లక్షణం (కీ)
-    string agreedValue;                 //కీ నుండి విలువ
-    mapping(uint => string) answers;     //ఒరాకిల్స్ అందించిన సమాధానాలు
-    mapping(address => uint) quorum;    //సమాధానాన్ని ప్రశ్నించే ఒరాకిల్స్ (1=ఒరాకిల్ ఓటు వేయలేదు, 2=ఒరాకిల్ ఓటు వేసింది)
+    uint id;                            //request id
+    string urlToQuery;                  //API url
+    string attributeToFetch;            //json attribute (key) to retrieve in the response
+    string agreedValue;                 //value from key
+    mapping(uint => string) answers;     //answers provided by the oracles
+    mapping(address => uint) quorum;    //oracles which will query the answer (1=oracle hasn't voted, 2=oracle has voted)
   }
 
-  //బ్లాక్‌చెయిన్ వెలుపల ఒరాకిల్‌ను ప్రేరేపించే ఈవెంట్
+  //event that triggers oracle outside of the blockchain
   event NewRequest (
     uint id,
     string urlToQuery,
     string attributeToFetch
   );
 
-  //తుది ఫలితంపై ఏకాభిప్రాయం ఉన్నప్పుడు ప్రేరేపించబడుతుంది
+  //triggered when there's a consensus on the final result
   event UpdatedRequest (
     uint id,
     string urlToQuery,
@@ -127,23 +127,23 @@ contract Oracle {
     uint length = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
     Request storage r = requests[length-1];
 
-    // హార్డ్‌కోడ్ చేయబడిన ఒరాకిల్స్ చిరునామా
+    // Hardcoded oracles address
     r.quorum[address(0x6c2339b46F41a06f09CA0051ddAD54D1e582bA77)] = 1;
     r.quorum[address(0xb5346CF224c02186606e5f89EACC21eC25398077)] = 1;
     r.quorum[address(0xa2997F1CA363D11a0a35bB1Ac0Ff7849bc13e914)] = 1;
 
-    // బ్లాక్‌చెయిన్ వెలుపల ఒరాకిల్ ద్వారా గుర్తించబడటానికి ఒక ఈవెంట్‌ను ప్రారంభించండి
+    // launch an event to be detected by oracle outside of blockchain
     emit NewRequest (
       currentId,
       _urlToQuery,
       _attributeToFetch
     );
 
-    // అభ్యర్థన ఐడిని పెంచండి
+    // increase request id
     currentId++;
   }
 
-  //దాని సమాధానాన్ని రికార్డ్ చేయడానికి ఒరాకిల్ ద్వారా పిలవబడుతుంది
+  //called by the oracle to record its answer
   function updateRequest (
     uint _id,
     string memory _valueRetrieved
@@ -151,18 +151,18 @@ contract Oracle {
 
     Request storage currRequest = requests[_id];
 
-    //ఒరాకిల్ విశ్వసనీయ ఒరాకిల్స్ జాబితాలో ఉందో లేదో తనిఖీ చేయండి
-    //మరియు ఒరాకిల్ ఇంకా ఓటు వేయకపోతే
+    //check if oracle is in the list of trusted oracles
+    //and if the oracle hasn't voted yet
     if(currRequest.quorum[address(msg.sender)] == 1){
 
-      //ఈ చిరునామా ఓటు వేసిందని గుర్తు పెట్టడం
+      //marking that this address has voted
       currRequest.quorum[msg.sender] = 2;
 
-      //ఒక స్థానం ఖాళీగా ఉంటే సమాధానాల "శ్రేణి" ద్వారా పునరావృతం చేసి, తిరిగి పొందిన విలువను సేవ్ చేయండి
+      //iterate through "array" of answers until a position if free and save the retrieved value
       uint tmpI = 0;
       bool found = false;
       while(!found) {
-        //మొదటి ఖాళీ జాబితాను కనుగొనండి
+        //find first empty slot
         if(bytes(currRequest.answers[tmpI]).length == 0){
           found = true;
           currRequest.answers[tmpI] = _valueRetrieved;
@@ -172,8 +172,8 @@ contract Oracle {
 
       uint currentQuorum = 0;
 
-      //ఒరాకిల్ జాబితా ద్వారా పునరావృతం చేసి, తగినంత ఒరాకిల్స్ (కనీస కోరం) ఉన్నాయో లేదో తనిఖీ చేయండి
-      //ప్రస్తుత సమాధానం లాగానే ఓటు వేసాయి
+      //iterate through oracle list and check if enough oracles(minimum quorum)
+      //have voted the same answer as the current one
       for(uint i = 0; i < totalOracleCount; i++){
         bytes memory a = bytes(currRequest.answers[i]);
         bytes memory b = bytes(_valueRetrieved);
