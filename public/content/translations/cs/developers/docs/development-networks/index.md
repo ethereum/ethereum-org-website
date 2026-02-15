@@ -37,9 +37,9 @@ Síť Hardhat Network je integrovaná s Hardhatem, vývojovým prostředím Ethe
 - [Webové stránky](https://hardhat.org/)
 - [GitHub](https://github.com/NomicFoundation/hardhat)
 
-### Lokální řetězové vazby {#local-beacon-chains}
+### Lokální Beacon Chainy {#local-beacon-chains}
 
-Někteří konsensuální klienti mají vestavěné nástroje pro spuštění lokálních řetězových vazeb pro účely testování. Jsou k dispozici pokyny pro Lighthouse, Nimbus a Lodestar:
+Někteří konsensuální klienti mají vestavěné nástroje pro spuštění lokálních Beacon Chainů pro účely testování. Jsou k dispozici pokyny pro Lighthouse, Nimbus a Lodestar:
 
 - [Lokální testovací síť s použitím Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Lokální testovací síť s použitím Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)

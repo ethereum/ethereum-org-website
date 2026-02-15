@@ -9,7 +9,7 @@ Ethereum je peer-to-peer síť s tisíci uzly, které musí být schopny spolu k
 
 Klientský software má dvě části (exekuční klienty a konsensuální klienty), z nichž každá má vlastní specifickou síťovou vrstvu. Kromě komunikace s ostatními uzly Etherea musí exekuční a konsensuální klienti komunikovat mezi sebou. Tato stránka poskytuje úvodní vysvětlení protokolů, které umožňují tuto komunikaci.
 
-Exekuční klienti šíří transakce po peer-to-peer síti exekuční vrstvy. To vyžaduje šifrovanou komunikaci mezi ověřenými peery. Když je validátor vybrán k návrhu bloku, transakce z místního transakčního poolu uzlu jsou předány konsensuálním klientům prostřednictvím lokálního RPC připojení, které je následně zabalí do Beacon bloků. Konsensuální klienti pak šíří Beacon bloky po své p2p síti. To vyžaduje dvě samostatné p2p sítě: Kednu pro propojení exekučních klientů pro gossiping transakcí a druhou pro propojení konsensuálních klientů pro gossiping bloků.
+Exekuční klienti šíří transakce po peer-to-peer síti exekuční vrstvy. To vyžaduje šifrovanou komunikaci mezi ověřenými peery. Když je validátor vybrán k návrhu bloku, transakce z místního transakčního poolu uzlu jsou předány konsensuálním klientům prostřednictvím lokálního RPC připojení, které je následně zabalí do Beacon bloků. Konsensuální klienti pak šíří Beacon bloky po své p2p síti. To vyžaduje dvě samostatné p2p sítě: Jednu pro propojení exekučních klientů pro gossiping transakcí a druhou pro propojení konsensuálních klientů pro gossiping bloků.
 
 ## Předpoklady {#prerequisites}
 
@@ -93,7 +93,7 @@ Whisper byl protokol, který měl za cíl poskytovat bezpečné zprávy mezi pee
 
 ## Konsensuální vrstva {#consensus-layer}
 
-Konsensuální klienti se účastní samostatné peer-to-peer sítě s odlišnou specifikací. Konsensuální klienti se potřebují účastnit gossipu bloků, aby mohli přijímat nové bloky od kolegů a šířit je, když jsou na řadě v nahrhování bloku. Podobně jako u exekuční vrstvy, toto nejprve vyžaduje objevovací protokol, aby uzel mohl najít peery a vytvořit zabezpečené relace pro výměnu bloků, potvrzení atd.
+Konsensuální klienti se účastní samostatné peer-to-peer sítě s odlišnou specifikací. Konsensuální klienti se potřebují účastnit gossipu bloků, aby mohli přijímat nové bloky od kolegů a šířit je, když jsou na řadě v navrhování bloku. Podobně jako u exekuční vrstvy, toto nejprve vyžaduje objevovací protokol, aby uzel mohl najít peery a vytvořit zabezpečené relace pro výměnu bloků, potvrzení atd.
 
 ### Objevování {#consensus-discovery}
 
@@ -132,7 +132,7 @@ Souhrn toku řízení je uveden níže, s relevantní síťovou vrstvou v závor
 - Transakce v bloku jsou odeslány do exekuční vrstvy jako exekuční payload (lokální RPC spojení)
 - Exekuční vrstva provede transakce a zvaliduje stav v hlavičce bloku (tj. zkontroluje, zda se shodují haše).
 - Exekuční vrstva předává validační data zpět konsensuální vrstvě, blok je nyní považován za validovaný (lokální RPC spojení)
-- Konsensuální vrstva přidá blok na svéůj vlastní blockchain a potvrzuje ho, přičemž vysílá potvrzení po síti (konsensuální p2p)
+- Konsensuální vrstva přidá blok na svůj vlastní blockchain a potvrzuje ho, přičemž vysílá potvrzení po síti (konsensuální p2p)
 
 ### Když je konsensuální klient producentem bloku: {#when-consensus-client-is-block-producer}
 
