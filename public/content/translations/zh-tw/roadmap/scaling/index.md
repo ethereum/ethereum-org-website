@@ -49,7 +49,7 @@ template: roadmap
 
 ## 目前進度 {#current-progress}
 
-Proto-Danksharding 已成功於 2024 年 3 月的 Cancun-Deneb（「坎昆」）網路升級中實施。 自那以後，卷軸開始使用 blob 存儲，從而降低了用戶的交易成本，并在 blob 中處理了數百萬筆交易。
+Proto-Danksharding 已成功於 2024 年 3 月的 Cancun-Deneb（「坎昆」）網路升級中實施。 自那以後，卷軸開始使用 blob 存儲，從而降低了用戶的交易成本，並在 blob 中處理了數百萬筆交易。
 
 完整 Danksharding 的研發工作仍在進行，相關前置需求包括 PBS (提議者-建構者分離) 和 DAS (資料可用性抽樣) 均已取得進展。 卷軸基礎設施的去中心化是一個漸進的過程，有許多不同的卷軸正在構建略有不同的系統，並將以不同的速率完全去中心化。
 

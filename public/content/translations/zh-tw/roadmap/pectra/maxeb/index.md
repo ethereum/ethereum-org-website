@@ -6,7 +6,7 @@ lang: zh-tw
 
 # MaxEB {#maxeb}
 
-_簡單來說：_ Pectra 強分叉允許以太坊驗證程式將 **類型1** 提款憑證轉換為 **類型2** 提款憑證，從而參與更高的最大有效余額和復利機制。 執行这个操作的官方工具是 Launchpad（啟動面板）。 這個操作無法撤銷。
+_簡單來說：_ Pectra 強分叉允許以太坊驗證程式將 **類型1** 提款憑證轉換為 **類型2** 提款憑證，從而參與更高的最大有效余額和復利機制。 執行這個操作的官方工具是 Launchpad（啟動面板）。 這個操作無法撤銷。
 
 ## 概覽 {#overview}
 
@@ -105,7 +105,7 @@ MaxEB 允許驗證程式將其全部餘額轉賬給另一個驗證程式。 提�
 2. 來源驗證程式的公鑰（例如：`0xa1d1ad0714035353258038e964ae9675dc0252ee22cea896825c01458e1807bfad2f9969338798548d9858a571f7425c`）
 3. 目標驗證程式的公鑰
 
-在轉換過程中，2和3將保持同樣。 這個操作可以在[Launchpad]上完成（https://launchpad.ethereum.org/）。
+在轉換過程中，2和3將保持同樣。 這個操作可以在[Launchpad](https://launchpad.ethereum.org/)上完成。
 
 ### 簽名的要求 {#signing-requirements}
 
@@ -115,7 +115,7 @@ MaxEB 允許驗證程式將其全部餘額轉賬給另一個驗證程式。 提�
 
 使用 `合併請求` 的域名分隔[簽名根](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#compute_signing_root)。
 
-- **領域**“領域合并請求”
+- **領域**"領域合併請求"
 - **簽名根欄位:**
   - `源公鑰`: `BLSPubkey`
   - `目標公鑰`: `BLSPubkey`
@@ -127,7 +127,7 @@ MaxEB 允許驗證程式將其全部餘額轉賬給另一個驗證程式。 提�
 
 ### 部分取款 {#partial-withdrawals}
 
-有着**類型1** 憑證的驗證者會自動地、無需Gas 費地把它們的超額餘額（任何超過 32 ETH的）清理到他們的提款地址。 由於 **類型2**驗證者​​允許以 ​​1 ETH 為增量單位​​進行餘額複利累積，在餘額達到 ​​2048 ETH​​ 之前，系統​​不會自動清理餘額。 在 **類型 2** 驗證程式上的部分提取必須被手動觸發，且需要消耗燃料。
+有著**類型1** 憑證的驗證者會自動地、無需Gas 費地把它們的超額餘額（任何超過 32 ETH的）清理到他們的提款地址。 由於 **類型2**驗證者​​允許以 ​​1 ETH 為增量單位​​進行餘額複利累積，在餘額達到 ​​2048 ETH​​ 之前，系統​​不會自動清理餘額。 在 **類型 2** 驗證程式上的部分提取必須被手動觸發，且需要消耗燃料。
 
 ## 合併工具 {#consolidation-tooling}
 
@@ -197,8 +197,8 @@ MaxEB 允許驗證程式將其全部餘額轉賬給另一個驗證程式。 提�
 
 ## 資源 {#resources}
 
-- 【Electra 共識規範】（https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md）這是您應該參照的最權威的版本。 當您感到疑惑的時候，請閱讀這些規範
+- [Electra 共識規範](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md)：這是您應該參照的最權威的版本。 當您感到疑惑的時候，請閱讀這些規範
 - 並非每個人都擅長閱讀程式碼。因此，[這個 maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) 可以幫助解讀規範。 _免責聲明：應參照規範本身，而非AI作為事實的來源，因為AI可能會誤解信息或者提供幻覺回答_
-- 【pectrified.com】（https://pectrified.com/）：]：查看合併、存款及隊列等待時間的狀態
-- 【Ethereal】（https://github.com/wealdtech/ethereal）：社區創造的 CLI 工具，用於管理常見的驗證程式任務
+- [pectrified.com](https://pectrified.com/)：查看合併、存款及隊列等待時間的狀態
+- [Ethereal](https://github.com/wealdtech/ethereal)：社區創造的 CLI 工具，用於管理常見的驗證程式任務
 - [batch-validator-depositor](https://github.com/attestantio/batch-validator-depositor)：社區創建的合約，允許在單筆交易中存入多個以太坊驗證程式

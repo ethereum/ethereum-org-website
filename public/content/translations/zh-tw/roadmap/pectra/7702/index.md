@@ -114,10 +114,10 @@ EOA 的私鑰在委派後仍對帳戶保有完全控制權。 例如，將權限
 | 合約地址                                       | 來源                                                                                                                            | 審核                                                                                                                                                        |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x000000009B1D0aF20D8C6d0A44e162d11F9b8f00 | [Uniswap/calibur](https://github.com/Uniswap/calibur)                                                                         | [稽核](https://github.com/Uniswap/calibur/tree/main/audits)                                                                                                 |
-| 0x69007702764179f14F51cdce752f4f775d74E139 | [煉金術平台/模組化帳戶](https://github.com/alchemyplatform/modular-account)                                                             | [稽核](https://github.com/alchemyplatform/modular-account/tree/develop/audits)                                                                              |
+| 0x69007702764179f14F51cdce752f4f775d74E139 | [alchemyplatform/modular-account](https://github.com/alchemyplatform/modular-account)                                                             | [稽核](https://github.com/alchemyplatform/modular-account/tree/develop/audits)                                                                              |
 | 0x5A7FC11397E9a8AD41BF10bf13F22B0a63f96f6d | [AmbireTech/ambire-common](https://github.com/AmbireTech/ambire-common/blob/feature/eip-7702/contracts/AmbireAccount7702.sol) | [稽核](https://github.com/AmbireTech/ambire-common/tree/feature/eip-7702/audits)                                                                            |
-| 0x63c0c19a282a1b52b07dd5a65b58948a07dae32b | [MetaMask錢包/delegation-framework委派框架](https://github.com/MetaMask/delegation-framework)                                       | [稽核](https://github.com/MetaMask/delegation-framework/tree/main/audits)                                                                                   |
-| 0x4Cd241E8d1510e30b2076397afc7508Ae59C66c9 | [以太坊基金會賬戶抽象化團隊](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/accounts/Simple7702Account.sol)  | [稽核](https://github.com/eth-infinitism/account-abstraction/blob/develop/audits/SpearBit%20Account%20Abstraction%20Security%20Review%20-%20Mar%202025.pdf) |
+| 0x63c0c19a282a1b52b07dd5a65b58948a07dae32b | [MetaMask/delegation-framework](https://github.com/MetaMask/delegation-framework)                                       | [稽核](https://github.com/MetaMask/delegation-framework/tree/main/audits)                                                                                   |
+| 0x4Cd241E8d1510e30b2076397afc7508Ae59C66c9 | [Ethereum Foundation AA team](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/accounts/Simple7702Account.sol)  | [稽核](https://github.com/eth-infinitism/account-abstraction/blob/develop/audits/SpearBit%20Account%20Abstraction%20Security%20Review%20-%20Mar%202025.pdf) |
 | 0x17c11FDdADac2b341F2455aFe988fec4c3ba26e3 | [Luganodes/Pectra-Batch-Contract](https://github.com/Luganodes/Pectra-Batch-Contract)                                         | [稽核](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html)                             |
 
 ## 硬體錢包指南 {#hardware-wallet-guidelines}
@@ -144,6 +144,6 @@ EOA 的私鑰在委派後仍對帳戶保有完全控制權。 例如，將權限
 
 #### 自訂委派 {#custom-delegation}
 
-硬體供應商實施其專屬的委派合約，並將其加入清單，同時在軟體伴侶中實現其支援功能。 。
+硬體供應商實施其專屬的委派合約，並將其加入清單，同時在軟體伴侶中實現其支援功能。
 
 委派給不同個體的外部賬戶將會被當作標準賬戶處理。
