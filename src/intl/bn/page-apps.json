@@ -58,7 +58,7 @@
   "page-apps-filter-by": "অনুসারে ফিল্টার করুন",
   "page-apps-filter-all": "সব",
   "page-apps-showing": "দেখাচ্ছে",
-  "page-apps-visit-app": "দেখুন {এ্যাপের নাম}",
+  "page-apps-visit-app": "দেখুন {appName}",
   "page-apps-see-next": "পরবর্তী দেখুন",
   "page-apps-info-title": "তথ্য",
   "page-apps-info-founded": "প্রতিষ্ঠিত",
@@ -68,5 +68,5 @@
   "page-apps-more-apps-like-this": "এ ধরনের আরও এ্যাপ",
   "page-apps-today": "আজকে",
   "page-apps-one-day-ago": "১ দিন আগে",
-  "page-apps-days-ago": "{} দিন আগে"
+  "page-apps-days-ago": "{days} দিন আগে"
 }

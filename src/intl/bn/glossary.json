@@ -238,7 +238,7 @@
   "merkle-root-term": "মার্কেল রুট",
   "merkle-root-definition": "একটি মার্কেল রুট হল একটি মার্কেল গাছের একক শীর্ষ হ্যাশ। এটি একটি ব্লকের মধ্যে সমস্ত লেনদেন যাচাই করে।",
   "message-term": "বার্তা",
-  "message-definition": "একটি <a href=\"/glossary/#internal-transaction\">অভ্যন্তরীণ লেনদেন</a> যা কখনও সিরিয়ালাইজ করা হয় না এবং শুধুমাত্র <a href=\"/glossary/#evm\">EVM</evm>-এর মধ্যে পাঠানো হয়।",
+  "message-definition": "একটি <a href=\"/glossary/#internal-transaction\">অভ্যন্তরীণ লেনদেন</a> যা কখনও সিরিয়ালাইজ করা হয় না এবং শুধুমাত্র <a href=\"/glossary/#evm\">EVM</a>-এর মধ্যে পাঠানো হয়।",
   "message-call-term": "বার্তা কল",
   "message-call-definition": "একটি অ্যাকাউন্ট থেকে অন্য অ্যাকাউন্টে <a href=\"/glossary/#message\">বার্তা</a> পাঠানোর কাজ। যদি গন্তব্য অ্যাকাউন্টটি <a href=\"/glossary/#evm\">EVM</a> কোডের সাথে যুক্ত থাকে, তাহলে VM টি সেই বস্তুর অবস্থা দিয়ে শুরু হবে এবং বার্তাটি কার্যকর করা হবে।",
   "mev-term": "ম্যাক্সিমাল এক্সট্রাক্টবল ভ্যালু (MEV)",
