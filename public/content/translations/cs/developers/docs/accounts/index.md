@@ -79,16 +79,16 @@ Např.:
 Následující příklad ukazuje, jak použít nástroj pro podepisování zvaný [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) k vygenerování nového účtu. Clef je nástroj pro správu účtů a podepisování, který je dodáván s klientem Etherea, [Geth](https://geth.ethereum.org). Příkaz `clef newaccount` vytvoří nový pár klíčů a uloží je do zašifrovaného úložiště klíčů.
 
 ```
-> clef newaccount --keystore <cesta>
+> clef newaccount --keystore <path>
 
-Zadejte prosím heslo pro nově vytvářený účet:
-> <heslo>
+Please enter a password for the new account to be created:
+> <password>
 
 ------------
-INFO [10-28|16:19:09.156] Váš nový klíč byl vygenerován       adresa=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Zálohujte si prosím soubor s klíčem      cesta=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Zapamatujte si prosím své heslo!
-Vygenerován účet 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Dokumentace Geth](https://geth.ethereum.org/docs)
@@ -109,7 +109,7 @@ Adresa kontraktu je obvykle přidělena při prvním spuštění kontraktu na bl
 
 ## Klíče validátorů {#validators-keys}
 
-V Ethereu existuje také další typ klíče, který byl zaveden při přechodu Etherea z konsenzu založeného na důkazu prací na důkaz podílem. Jedná se o tzv. „BLS“ klíče, které slouží k identifikaci validátorů. Tyto klíče mohou být efektivně sdružovány, což snižuje sířku pásma potřebnou k dosažení konsenzu v síti. Bez této agregace by byla minimální uzamčená částka pro validátora mnohem vyšší.
+V Ethereu existuje také další typ klíče, který byl zaveden při přechodu Etherea z konsenzu založeného na důkazu prací na důkaz podílem. Jedná se o tzv. „BLS“ klíče, které slouží k identifikaci validátorů. Tyto klíče mohou být efektivně sdružovány, což snižuje šířku pásma potřebnou k dosažení konsenzu v síti. Bez této agregace by byla minimální uzamčená částka pro validátora mnohem vyšší.
 
 [Více o klíčích validátorů](/developers/docs/consensus-mechanisms/pos/keys/).
 

@@ -32,7 +32,7 @@ Tento princip tak otevírá mnoho nových příležitostí ke globální spolupr
 | DAO                                                                                                                                           | Tradiční organizace                                                                                                    |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Obvykle má horizontální strukturu a je plně demokratická.                                                                     | Obvykle má hierarchickou strukturu.                                                                    |
-| Veškeré plánované změny vyžadují členské hlasování.                                                                           | V závislosti na struktuře se změny dějí buď pomocí hlasování nebo rozhodnutím členů s výhraním právem. |
+| Veškeré plánované změny vyžadují členské hlasování.                                                                           | V závislosti na struktuře se změny dějí buď pomocí hlasování nebo rozhodnutím členů s výhradním právem. |
 | Výsledky hlasování jsou zpracovávané automaticky bez nutnosti důvěryhodného prostředníka.                                     | Pokud je hlasování povoleno, je vyřizováno ručně a výsledek je zpracováván interně.                    |
 | Služby jsou řízeny automatickým a decentralizovaným způsobem (například distribuce filantropických fondů). | Vyžaduje lidskou manipulaci nebo centrálně řízenou automatizaci náchylnou k falšování.                 |
 | Veškerá činnost je transparentní a zcela veřejná.                                                                             | Aktivity jsou obvykle soukromé a skryté před veřejností.                                               |
@@ -49,7 +49,7 @@ Několik příkladů, k čemu je možné DAO využít:
 
 ## Jak fungují DAO? {#how-daos-work}
 
-Základem DAO je její [chytrý kontrakt](/glossary/#smart-contract), který definuje pravidla organizace a spravuje pokladnu skupiny. Jakmile je kontrakt nasazen na Ethereu, nikdo nemůže změnit pravidla jinak než hlasováním. Pokud by se tedy někdo prokusil provést akci, která není definována pravidly a logikou počítačového kódu, skončí to neúspěchem. Stejně tak i finanční prostředky jsou řízeny chytrým kontraktem, takže nikdo nemůže utratit peníze bez souhlasu skupiny Znamená to tedy, že DAO nepotřebuje žádnou ústřední entitu a namísto toho jsou všechna rozhodnutí i platby prováděny kolektivně na základě společného hlasování.
+Základem DAO je její [chytrý kontrakt](/glossary/#smart-contract), který definuje pravidla organizace a spravuje pokladnu skupiny. Jakmile je kontrakt nasazen na Ethereu, nikdo nemůže změnit pravidla jinak než hlasováním. Pokud by se tedy někdo pokusil provést akci, která není definována pravidly a logikou počítačového kódu, skončí to neúspěchem. Stejně tak i finanční prostředky jsou řízeny chytrým kontraktem, takže nikdo nemůže utratit peníze bez souhlasu skupiny. Znamená to tedy, že DAO nepotřebuje žádnou ústřední entitu a namísto toho jsou všechna rozhodnutí i platby prováděny kolektivně na základě společného hlasování.
 
 To je možné z toho důvodu, že chytré kontrakty jsou po nasazení na Ethereum chráněny proti nedovolené manipulaci. Pravidla DAO jsou totiž zapsaná pomocí veřejně dostupného kódu a nelze je tak upravovat bez povšimnutí.
 
@@ -70,7 +70,9 @@ Při řízení DAO je třeba zvážit mnoho aspektů, například způsob hlasov
 
 Delegování je něco jako DAO verze zastupitelské demokracie. Držitelé tokenu delegují hlasy uživatelům, kteří se nabídnou a slíbí, že budou spravovat protokol a zůstanou o něm informováni.
 
-#### Známý příklad {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – Držitelé ENS mohou delegovat své hlasy angažovaným členům komunity, aby je zastupovali.
+#### Známý příklad {#governance-example}
+
+[ENS](https://claim.ens.domains/delegate-ranking) – Držitelé ENS mohou delegovat své hlasy angažovaným členům komunity, aby je zastupovali.
 
 ### Automatická správa transakcí {#governance-example}
 
@@ -98,7 +100,7 @@ Existují různé typy členství v DAO. Na základně nich je pak určeno, jak 
 
 ### Členství na základě tokenů {#token-based-membership}
 
-Obvykle zcela [bez oprávnění](/glossary/#permissionless), v závislosti na použitém tokenu. S těmito tokeny pro správu lze většinou obchodovat bez oprávnění na [decentralizované burze](/glossary/#dex). získávány poskytnutím likvidity anebo těženy nějakým „důkazem prací“. Ve všech případech ale pouhé držení tokenu umožňuje přístup k hlasování.
+Obvykle zcela [bez oprávnění](/glossary/#permissionless), v závislosti na použitém tokenu. S těmito tokeny pro správu lze většinou obchodovat bez oprávnění na [decentralizované burze](/glossary/#dex). Ostatní mohou být získávány poskytnutím likvidity anebo těženy nějakým „důkazem prací“. Ve všech případech ale pouhé držení tokenu umožňuje přístup k hlasování.
 
 _Obvykle se používá k řízení rozsáhlých decentralizovaných protokolů a/nebo tokenů samotných._
 

@@ -46,7 +46,7 @@ Blok obsahuje spoustu informací. Na nejvyšší úrovni blok obsahuje následuj
 | `proposer_index` | ID validátora, který navrhuje blok                      |
 | `parent_root`    | hash předchozího bloku                                  |
 | `state_root`     | kořenový hash stavového objektu                         |
-| `tělo`           | tělo bloku obsahující několik polí, jak je uvedeno níže |
+| `body`           | tělo bloku obsahující několik polí, jak je uvedeno níže |
 
 Tělo bloku obsahuje několik vlastních polí:
 
@@ -57,8 +57,8 @@ Tělo bloku obsahuje několik vlastních polí:
 | `graffiti`           | libovolná data používaná k označování bloků                     |
 | `proposer_slashings` | seznam validátorů, kteří budou penalizováni                     |
 | `attester_slashings` | seznam atestátorů bloků, kteří budou penalizováni               |
-| `atestace`           | seznam atestací provedených proti předchozím slotům             |
-| `vklady`             | seznam nových vkladů do vkladového kontraktu                    |
+| `attestations`       | seznam atestací provedených proti předchozím slotům             |
+| `deposits`           | seznam nových vkladů do vkladového kontraktu                    |
 | `voluntary_exits`    | seznam validátorů odcházejících ze sítě                         |
 | `sync_aggregate`     | podmnožina validátorů používaná k obsluze lehkých klientů       |
 | `execution_payload`  | transakce předané z exekučního klienta                          |
@@ -69,7 +69,7 @@ Pole `attestations` obsahuje seznam všech atestací v bloku. Atestace mají sv�
 | :----------------- | :-------------------------------------------------- |
 | `aggregation_bits` | seznam validátorů, kteří se účastnili této atestace |
 | `data`             | objekt s několika podpoli                           |
-| `podpis`           | souhrnný podpis sady validátorů proti části `data`  |
+| `signature`        | souhrnný podpis sady validátorů proti části `data`  |
 
 Pole `data` v `attestation` obsahuje následující:
 
@@ -78,7 +78,7 @@ Pole `data` v `attestation` obsahuje následující:
 | `slot`              | slot, k němuž se atestace vztahuje                             |
 | `index`             | indexy pro atestující validátory                               |
 | `beacon_block_root` | kořenový haš Beacon bloku, který je považován za hlavu řetězce |
-| `zdroj`             | poslední oprávněný kontrolní bod                               |
+| `source`            | poslední oprávněný kontrolní bod                               |
 | `target`            | poslední hraniční blok epochy                                  |
 
 Provedení transakcí v `execution_payload` aktualizuje globální stav. Všichni klienti znovu provedou transakce v `execution_payload`, aby se ujistili, že nový stav odpovídá stavu v poli `state_root` nového bloku. Takto mohou klienty zjistit, že nový blok je platný a bezpečný pro přidání do jejich blockchainu. Samotný `execution_payload` je objekt s několika poli. Existuje také `execution_payload_header` – hlavička, která obsahuje důležité souhrnné informace o datech provádění. Tyto datové struktury jsou organizovány následovně:
@@ -120,15 +120,15 @@ Samotný `execution_payload` obsahuje následující (všimněte si, že je toto
 | `extra_data`       | libovolná dodatečná data v surových bajtech                     |
 | `base_fee_per_gas` | hodnota základního poplatku                                     |
 | `block_hash`       | hash exekučního bloku                                           |
-| `transakce`        | seznam transakcí připravených k realizaci                       |
-| `výběry`           | seznam objektů výběru                                           |
+| `transactions`     | seznam transakcí připravených k realizaci                       |
+| `withdrawals`      | seznam objektů výběru                                           |
 
 Seznam `withdrawals` obsahuje objekty `withdrawal` strukturované následovně:
 
 | Pole             | Popis                            |
 | :--------------- | :------------------------------- |
-| `adresa`         | adresa účtu, který provádí výběr |
-| `částka`         | částka výběru                    |
+| `address`        | adresa účtu, který provádí výběr |
+| `amount`         | částka výběru                    |
 | `index`          | indexní hodnota výběru           |
 | `validatorIndex` | indexní hodnota validátora       |
 
