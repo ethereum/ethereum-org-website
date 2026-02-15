@@ -5,6 +5,7 @@ import { getFullUrl, slugify } from "@/lib/utils/url"
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
 
 import { appsCategories } from "@/data/apps/categories"
+import { DEV_TOOL_CATEGORIES } from "./[locale]/developers/tools/constants"
 
 import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
 
@@ -59,6 +60,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entries.push({
       url: `${SITE_URL}/apps/categories/${category.slug}/`,
       changeFrequency: "weekly",
+      priority: 0.6,
+      lastModified: new Date(),
+    })
+  }
+
+  // Add developer tools category pages (dynamic route: /developers/tools/[category])
+  for (const { slug } of DEV_TOOL_CATEGORIES) {
+    entries.push({
+      url: `${SITE_URL}/developers/tools/${slug}/`,
+      changeFrequency: "monthly",
       priority: 0.6,
       lastModified: new Date(),
     })
