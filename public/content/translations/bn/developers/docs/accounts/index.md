@@ -81,14 +81,14 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 ```
 > clef newaccount --keystore <path>
 
-তৈরি করা নতুন অ্যাকাউন্টের জন্য একটি পাসওয়ার্ড লিখুন:
+Please enter a password for the new account to be created:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] আপনার নতুন কী তৈরি করা হয়েছে       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] অনুগ্রহ করে আপনার কী ফাইলের ব্যাকআপ নিন      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] অনুগ্রহ করে আপনার পাসওয়ার্ড মনে রাখবেন!
-অ্যাকাউন্ট তৈরি হয়েছে 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Geth ডকুমেন্টেশন](https://geth.ethereum.org/docs)
