@@ -1,6 +1,6 @@
 ---
 title: "ERC-223 代幣標準"
-description: "關於 ERC-223 同質性代筆標準的概述，包含它的運作方式以及與 ERC-20 的對代幣"
+description: "關於 ERC-223 同質性代幣標準的概述，包含它的運作方式以及與 ERC-20 的比較"
 lang: zh-tw
 ---
 
@@ -8,7 +8,7 @@ lang: zh-tw
 
 ### 什麼是 ERC-223？ {#what-is-erc223}
 
-ERC-223 是一種同質性代筆標準，與 ERC-20 標準類似。 主要的區別在於 ERC-223 不但定義了代幣應用程式介面，還定義了從發送者向接收者傳送代幣的邏輯。 它引入了一個交流模型，使代幣傳送能夠在接收者處進行處理。
+ERC-223 是一種同質性代幣標準，與 ERC-20 標準類似。 主要的區別在於 ERC-223 不但定義了代幣應用程式介面，還定義了從發送者向接收者傳送代幣的邏輯。 它引入了一個交流模型，使代幣傳送能夠在接收者處進行處理。
 
 ### 與 ERC-20 的區別 {#erc20-differences}
 
@@ -55,7 +55,7 @@ function transfer(address _to, uint256 _value, bytes calldata _data) public retu
 function tokenReceived(address _from, uint _value, bytes calldata _data)
 ```
 
-如果 ERC-223 代筆被發送到沒有實現 `tokenReceived(..)` 函數的合約，該傳送則必定會失效，並且代幣不會從發送者的餘額中移動。
+如果 ERC-223 代幣被發送到沒有實現 `tokenReceived(..)` 函數的合約，該傳送則必定會失效，並且代幣不會從發送者的餘額中移動。
 
 ### Events {#events}
 
@@ -140,7 +140,7 @@ contract RecipientContract is IERC223Recipient {
 
 ## 常見問題 {#faq}
 
-### 如果我們將一些 tokenB 發送到合約會發生什麽？ {#sending-tokens}
+### 如果我們將一些 tokenB 發送到合約會發生什麼？ {#sending-tokens}
 
 交易會失敗，並且不會發生代幣傳送。 代幣將返回至發送者的地址。
 
@@ -148,7 +148,7 @@ contract RecipientContract is IERC223Recipient {
 
 調用 ERC-223 代幣的 `transfer(address,uint256)` 或 `transfer(address,uint256,bytes)` 函數，指定 `RecipientContract` 的地址。
 
-### 如果我們將 ERC-20 代币傳送到該合約會發生什麽？ {#erc-20-transfers}
+### 如果我們將 ERC-20 代幣傳送到該合約會發生什麼？ {#erc-20-transfers}
 
 如果 ERC-20 代幣被發送到 `RecipientContract`，這些代幣將被傳送，但該傳送不會被識別 (不會釋出 `Deposit()` 事件，存款值不會發生改變)。 無法過濾或防止不必要的 ERC-20 存款。
 
@@ -187,8 +187,8 @@ contract RecipientContract is IERC223Recipient {
 
 雖然 ERC-223 解決了 ERC-20 標準中的一些問題，但它也有自己的限制:
 
-- 采用與兼容性: ERC-223 目前還未被廣泛采用，這可能會限制其與現存工具和平台的兼容性。
-- 向後兼容性: ERC-223 不向後兼容 ERC-20，這意味著現存的 ERC-20 合約和工具無法再未經修改的情況下與 ERC-223 代幣一起使用。
+- 採用與兼容性: ERC-223 目前還未被廣泛採用，這可能會限制其與現存工具和平台的兼容性。
+- 向後兼容性: ERC-223 不向後兼容 ERC-20，這意味著現存的 ERC-20 合約和工具無法在未經修改的情況下與 ERC-223 代幣一起使用。
 - 燃料成本: 與 ERC-20 的交易相比，ERC-223 中的額外檢查與功能可能會導致更高的燃料成本。
 
 ## 延伸閱讀 {#further-reading}
