@@ -19,11 +19,11 @@ W Ethereum każdy inteligentny kontrakt jest jak taki klocek lego — możesz u�
 
 Inteligentne kontrakty Ethereum są jak publiczne interfejsy API, więc każdy może wchodzić z nimi w interakcję lub zintegrować je ze swoją dapką, aby rozszerzyć jej funkcjonalność. Łatwość łączenia w większe struktury inteligentnych kontraktów jest oparta na trzech zasadach: modularności, autonomii oraz wykrywalności:
 
-\*\*1. **Modularność**: jest to umiejętność poszczególnych komponentów do wykonywania określonych zadań. W Ethereum każdy inteligentny kontrakt ma określone zastosowanie (jak w przykładzie Uniswap).
+**1. Modularność**: jest to umiejętność poszczególnych komponentów do wykonywania określonych zadań. W Ethereum każdy inteligentny kontrakt ma określone zastosowanie (jak w przykładzie Uniswap).
 
-\*\*2. **Autonomia**: Komponowalne komponenty muszą mieć możliwość niezależnego działania. Każdy inteligentny kontrakt Ethereum jest samorealizujący i może działać bez konieczności polegania na innych częściach systemu.
+**2. Autonomia**: Komponowalne komponenty muszą mieć możliwość niezależnego działania. Każdy inteligentny kontrakt Ethereum jest samorealizujący i może działać bez konieczności polegania na innych częściach systemu.
 
-\*\*3. **Wykrywalność**: Programiści nie mogą wywoływać zewnętrznych kontraktów ani integrować bibliotek oprogramowania w aplikacjach, jeśli te pierwsze nie są publicznie dostępne. Inteligentne kontrakty są z założenia otwarte; każdy może wywołać inteligentny kontrakt lub rozwidlić bazę kodu.
+**3. Wykrywalność**: Programiści nie mogą wywoływać zewnętrznych kontraktów ani integrować bibliotek oprogramowania w aplikacjach, jeśli te pierwsze nie są publicznie dostępne. Inteligentne kontrakty są z założenia otwarte; każdy może wywołać inteligentny kontrakt lub rozwidlić bazę kodu.
 
 ## Korzyści z kompozycyjności {#benefits-of-composability}
 
