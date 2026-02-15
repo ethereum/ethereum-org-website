@@ -53,7 +53,7 @@ Zanim zagłębisz się w frameworki, zalecamy najpierw przeczytać nasze wprowad
 - [Przykłady](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Twórz aplikacje oparte na Ethereum za pomocą jednego polecenia._** Zawiera szeroką ofertę frameworków interfejsu użytkownika i szablonów DeFi do wyboru._\*\*
+**Create Eth App -** **_Twórz aplikacje oparte na Ethereum za pomocą jednego polecenia. Zawiera szeroką ofertę frameworków interfejsu użytkownika i szablonów DeFi do wyboru._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Szablony](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
