@@ -8,7 +8,7 @@ lang: mr
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-प्रूफ-ऑफ-वर्क आता इथेरियमच्या एकमत यंत्रणेचा आधार नाही, याचा अर्थ मायनिंग बंद करण्यात आले आहे. त्याऐवजी, इथेरियम ETH स्टेक करणाऱ्या व्हॅलिडेटर्सद्वारे सुरक्षित आहे. तुम्ही आजच तुमचे ETH स्टेक करणे सुरू करू शकता. <a href='/roadmap/merge/'>द मर्ज</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>प्रूफ-ऑफ-स्टेक</a>, आणि <a href='/staking/'>स्टॅकिंग</a> यावर अधिक वाचा. हे पान केवळ ऐतिहासिक माहितीसाठी आहे.
+प्रूफ-ऑफ-वर्क आता Ethereum च्या एकमत यंत्रणेचा आधार नाही, याचा अर्थ मायनिंग बंद करण्यात आले आहे. त्याऐवजी, Ethereum ETH स्टेक करणाऱ्या व्हॅलिडेटर्सद्वारे सुरक्षित आहे. तुम्ही आजच तुमचे ETH स्टेक करणे सुरू करू शकता. <a href='/roadmap/merge/'>द मर्ज</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>प्रूफ-ऑफ-स्टेक</a>, आणि <a href='/staking/'>स्टेकिंग</a> यावर अधिक वाचा. हे पान केवळ ऐतिहासिक माहितीसाठी आहे.
 </AlertDescription>
 </AlertContent>
 </Alert>
