@@ -3,7 +3,7 @@ title: "代幣整合清單"
 description: "與代幣互動時應考量的事項清單"
 author: "Trailofbits"
 lang: zh-tw
-tags: [ "穩固", "智能合約", "安全性", "代幣" ]
+tags: [ "solidity", "smart contracts", "security", "tokens" ]
 skill: intermediate
 published: 2020-08-13
 source: Building secure contracts

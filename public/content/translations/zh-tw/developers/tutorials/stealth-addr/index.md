@@ -2,7 +2,7 @@
 title: "使用隱匿地址"
 description: "隱匿地址讓使用者能夠匿名轉移資產。 閱讀本文後，您將能夠：解釋什麼是隱匿地址及其運作方式、瞭解如何以維護匿名性的方式使用隱匿地址，以及編寫使用隱匿地址的網頁應用程式。"
 author: Ori Pomerantz
-tags: [ "隱匿地址", "隱私", "密碼學", "rust", "wasm" ]
+tags: [ "Stealth address", "privacy", "cryptography", "rust", "wasm" ]
 skill: intermediate
 published: 2025-11-30
 lang: zh-tw

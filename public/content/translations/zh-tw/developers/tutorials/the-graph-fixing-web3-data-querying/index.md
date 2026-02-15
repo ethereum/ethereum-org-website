@@ -3,7 +3,7 @@ title: "The Graph：解決 Web3 資料查詢的問題"
 description: "區塊鏈就像一個資料庫，但沒有 SQL。 所有資料都在那裡，但卻沒有方法可以存取。 讓我為您示範如何使用 The Graph 和 GraphQL 解決這個問題。"
 author: Markus Waas
 lang: zh-tw
-tags: [ "穩固", "智能合約", "諮詢", "the graph", "反應" ]
+tags: [ "solidity", "smart contracts", "querying", "the graph", "react" ]
 skill: intermediate
 published: 2020-09-06
 source: soliditydeveloper.com

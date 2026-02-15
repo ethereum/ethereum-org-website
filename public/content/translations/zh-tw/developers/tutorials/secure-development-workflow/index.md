@@ -2,7 +2,7 @@
 title: "智慧型合約安全列清單"
 description: "一推薦程序來編輯安全智慧型合約"
 author: "Trailofbits"
-tags: [ "智能合約", "安全性", "solidity" ]
+tags: [ "smart contracts", "security", "solidity" ]
 skill: intermediate
 lang: zh-tw
 published: 2020-09-07

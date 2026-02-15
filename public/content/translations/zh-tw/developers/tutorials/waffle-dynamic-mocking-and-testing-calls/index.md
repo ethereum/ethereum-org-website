@@ -2,7 +2,7 @@
 title: "Waffle：動態模擬與測試合約呼叫"
 description: "使用動態模擬與測試合約呼叫的進階 Waffle 教學"
 author: "Daniel Izdebski"
-tags: [ "waffle", "智能合約", "穩固", "測試", "模擬" ]
+tags: [ "waffle", "smart contracts", "solidity", "testing", "mocking" ]
 skill: intermediate
 lang: zh-tw
 published: 2020-11-14

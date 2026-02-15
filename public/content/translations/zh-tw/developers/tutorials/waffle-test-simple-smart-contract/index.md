@@ -2,7 +2,7 @@
 title: "使用 Waffle 程式庫測試簡單的智能合約"
 description: "初學者教學"
 author: Ewa Kowalska
-tags: [ "智能合約", "穩固", "Waffle", "測試" ]
+tags: [ "smart contracts", "solidity", "Waffle", "testing" ]
 skill: beginner
 lang: zh-tw
 published: 2021-02-26

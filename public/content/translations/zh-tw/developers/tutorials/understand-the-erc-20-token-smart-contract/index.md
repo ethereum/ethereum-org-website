@@ -2,7 +2,7 @@
 title: "了解 ERC-20 代幣智能合約"
 description: "透過完整的 Solidity 智能合約範例和說明，學習如何實作 ERC-20 代幣標準。"
 author: "jdourlens"
-tags: [ "智能合約", "代幣", "穩固", "erc-20" ]
+tags: [ "smart contracts", "tokens", "solidity", "erc-20" ]
 skill: beginner
 lang: zh-tw
 published: 2020-04-05

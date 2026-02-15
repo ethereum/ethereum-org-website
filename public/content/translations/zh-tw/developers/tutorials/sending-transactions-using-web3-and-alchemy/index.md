@@ -2,7 +2,7 @@
 title: "使用 Web3 發送交易"
 description: "這是一份初學者友善指南，說明如何使用 Web3 發送以太坊交易。 將交易發送到以太坊區塊鏈有三個主要步驟：建立、簽署和廣播。 我們將會逐一說明。"
 author: "Elan Halpern"
-tags: [ "交易", "web3.js", "alchemy" ]
+tags: [ "transactions", "web3.js", "alchemy" ]
 skill: beginner
 lang: zh-tw
 published: 2020-11-04

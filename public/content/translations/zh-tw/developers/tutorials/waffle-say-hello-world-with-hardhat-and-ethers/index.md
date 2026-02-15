@@ -5,9 +5,9 @@ author: "MiZiet"
 tags:
   [
     "waffle",
-    "智能合約",
-    "穩固",
-    "測試",
+    "smart contracts",
+    "solidity",
+    "testing",
     "hardhat",
     "ethers.js"
   ]

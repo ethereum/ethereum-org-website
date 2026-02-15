@@ -42,14 +42,14 @@ lang: zh-tw
 
 ## 今日的以太幣供給和發行 {#eth-supply-today}
 
-與以太坊先前的工作量證明（PoW）相比，權益證明（PoS）系統大量地減少以太幣的發行。 驗證者將以太幣鎖定以保護網路，賺取以太幣作為獎勵。 您可以在 [Ultrasound Money]（https://ultrasound.money）上看到最新的發行速度。
+與以太坊先前的工作量證明（PoW）相比，權益證明（PoS）系統大量地減少以太幣的發行。 驗證者將以太幣鎖定以保護網路，賺取以太幣作為獎勵。 您可以在 [Ultrasound Money](https://ultrasound.money)上看到最新的發行速度。
 
 然而，這個數字是動態的。 因為 EIP-1559，當網路活動活躍時，以太幣的銷毀速度會超過發行率，造成通貨緊縮。 舉例來說，在需求旺盛的時期，像是非同質化代幣的發行或是去中心化金融活動，以太幣的銷毀量可能會超越發行量。
 
 ### 追蹤以太幣供給和發行的工具：
 
-- [Ultrasound Money]（https://ultrasound.money）- 即時追蹤以太幣的供給、發行，和銷毀速度
-- [Etherscan]（https://etherscan.io） - 具有供給指標的區塊瀏覽器
+- [Ultrasound Money](https://ultrasound.money)- 即時追蹤以太幣的供給、發行，和銷毀速度
+- [Etherscan](https://etherscan.io) - 具有供給指標的區塊瀏覽器
 
 ## 影響未來以太幣供給和發行的因素 {#future-eth-supply}
 
@@ -58,23 +58,23 @@ lang: zh-tw
 1. **質押參與**：
    - 更多的驗證者加入網路代表分配更多的以太幣獎勵。
    - 較少的驗證者參與可能會減少發行。
-   - 了解更多關於 [質押]（/staking/）。
+   - 了解更多關於 [質押](/staking/)。
 
 2. **網路活動**：
    - 高交易量會導致更多的以太幣被銷毀，可能抵銷或超越發行量。
-   - 閱讀關於 [燃料費]（/developers/docs/gas/）以及其如何影響銷毀。
+   - 閱讀關於 [燃料費](/developers/docs/gas/)以及其如何影響銷毀。
 
 3. **協議升級**：
    - 未來以太坊程式碼的改變可能會調整質押獎勵或銷毀機制，進一步塑造供給動態。
-   - 保持關注 [以太坊開發藍圖]（/roadmap/）。
+   - 保持關注 [以太坊開發藍圖](/roadmap/)。
 
 ## 回顧：以太坊供給、發行，和未來展望 {#recap}
 
 以下是關於以太幣供給和發行知識的摘要：
 
-- **以太幣供給**：動態且時常變化，可以通過如 [Ultrasound Money]（https://ultrasound.money）等工具即時追蹤
-- **權益證明下的發行**：相較於工作量證明，發行大幅減少，且獎勵贈予驗證者。 在 [Ultrasound Money]（https://ultrasound.money）上查看當前發行率
+- **以太幣供給**：動態且時常變化，可以通過如 [Ultrasound Money](https://ultrasound.money)等工具即時追蹤
+- **權益證明下的發行**：相較於工作量證明，發行大幅減少，且獎勵贈予驗證者。 在 [Ultrasound Money](https://ultrasound.money)上查看當前發行率
 - **EIP-1559的作用**：銷毀以太幣可以使網路在高度活躍時通貨緊縮
 - **未來趨勢**：質押參與、網路需求，和協議升級都會塑造以太幣的供給
 
-認識以太幣的發行有助於了解以太坊的價值，以及其作為通貨緊縮和去中心化資產的潛力。 了解合併如何影響以太幣供給的詳細資訊，請參考 [詳細分析]（/roadmap/merge/issuance/）。 好奇以太幣的未來？ 使用像 [Ultrasound Money]（https://ultrasound.money）的工具深入了解，或參考 [質押指南]（/staking/）。
+認識以太幣的發行有助於了解以太坊的價值，以及其作為通貨緊縮和去中心化資產的潛力。 了解合併如何影響以太幣供給的詳細資訊，請參考 [詳細分析](/roadmap/merge/issuance/)。 好奇以太幣的未來？ 使用像 [Ultrasound Money](https://ultrasound.money)的工具深入了解，或參考 [質押指南](/staking/)。

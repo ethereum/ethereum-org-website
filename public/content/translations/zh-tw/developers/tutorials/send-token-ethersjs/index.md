@@ -2,7 +2,7 @@
 title: "使用 ethers.js 傳送代幣"
 description: "使用 ethers.js 傳送代幣的初學者指南。"
 author: Kim YongJun
-tags: [ "ETHERS.JS", "ERC-20", "代幣" ]
+tags: [ "ETHERS.JS", "ERC-20", "TOKENS" ]
 skill: beginner
 lang: zh-tw
 published: 2021-04-06

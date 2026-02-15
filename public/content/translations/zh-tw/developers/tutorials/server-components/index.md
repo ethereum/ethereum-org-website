@@ -4,7 +4,7 @@ description: "閱讀本教學後，您將能編寫 TypeScript 伺服器，以偵
 
 author: Ori Pomerantz
 lang: zh-tw
-tags: [ "代理", "伺服器", "鏈下" ]
+tags: [ "agent", "server", "offchain" ]
 skill: beginner
 published: 2024-07-15
 ---

@@ -2,7 +2,7 @@
 title: "Uniswap-v2 合約逐步詳解"
 description: "Uniswap-v2 合約如何運作？ 為何要這樣編寫？"
 author: Ori Pomerantz
-tags: [ "穩固" ]
+tags: [ "solidity" ]
 skill: intermediate
 published: 2021-05-01
 lang: zh-tw
@@ -77,7 +77,7 @@ Uniswap v2 分為兩個部分：核心與周邊。 這種劃分讓持有資產�
 
 3. 如有需要，建立一個新的成對交易所
 4. 如果已有成對交易所，計算要添加的代幣數量。 這兩種代幣的價值理應相同，因此新代幣與現有代幣的比例應保持一致。
-5. 檢查数量是否可接受（呼叫者可以指定一个最低数量，低于此数量他们宁愿不增加流动性）
+5. 檢查數量是否可接受（呼叫者可以指定一個最低數量，低於此數量他們寧願不增加流動性）
 6. 呼叫核心合約。
 
 #### 在核心合約 (UniswapV2Pair.sol) 中 {#in-the-core-contract-uniswapv2pairsol-2}
