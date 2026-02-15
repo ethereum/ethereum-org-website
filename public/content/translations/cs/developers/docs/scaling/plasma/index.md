@@ -18,7 +18,7 @@ Měli byste dobře rozumět všem základním tématům a mít obecný přehled 
 
 Plasma je vývojová platforma pro zlepšení škálovatelnosti na veřejných blockchainech, jako je Ethereum. Jak je popsáno v původní [bílé knize Plasma](http://plasma.io/plasma.pdf), jsou plasma řetězce postaveny na jiném blockchainu (nazývaném „kořenový řetězec“). Každý „dceřiný řetězec“ se rozšiřuje z kořenového řetězce a je obecně spravován smart kontraktem nasazeným na mateřském řetězci.
 
-Kontrakt Plasma funguje mimo jiné jako [přemostění](/developers/docs/bridges/), které umožňuje uživatelům přesouvat aktiva mezi hlavní sítí Ethereum a plazmovým řetězcem. Ačkoli je to činí podobnými [sidechainům](/developers/docs/scaling/sidechains/), plazmové řetězce těží – alespoň do určité míry – z bezpečnosti hlavní sítě Ethereum. A tím se od postranním řetězců, které jsou zodpovědné za svou bezpečnost samy, odlišují.
+Kontrakt Plasma funguje mimo jiné jako [přemostění](/developers/docs/bridges/), které umožňuje uživatelům přesouvat aktiva mezi hlavní sítí Ethereum a plazmovým řetězcem. Ačkoli je to činí podobnými [sidechainům](/developers/docs/scaling/sidechains/), plazmové řetězce těží – alespoň do určité míry – z bezpečnosti hlavní sítě Ethereum. A tím se od postranních řetězců, které jsou zodpovědné za svou bezpečnost samy, odlišují.
 
 ## Jak Plasma funguje?
 

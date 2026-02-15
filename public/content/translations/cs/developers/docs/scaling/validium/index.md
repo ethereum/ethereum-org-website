@@ -5,7 +5,7 @@ lang: cs
 sidebarDepth: 3
 ---
 
-Validium je [škalovací řešení](/developers/docs/scaling/), které zajišťuje integritu transakcí pomocí důkazů o platnosti, podobně jako [ZK-rollupy](/developers/docs/scaling/zk-rollups/), ale neukládá transakční data na Ethereum Mainnet. Ačkoli dostupnost dat off-chain přináší kompromisy, může vést k masivnímu zlepšení škálovatelnosti (validia mohou zpracovat [~9 000 transakcí za sekundu nebo více](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Validium je [škálovací řešení](/developers/docs/scaling/), které zajišťuje integritu transakcí pomocí důkazů o platnosti, podobně jako [ZK-rollupy](/developers/docs/scaling/zk-rollups/), ale neukládá transakční data na Ethereum Mainnet. Ačkoli dostupnost dat off-chain přináší kompromisy, může vést k masivnímu zlepšení škálovatelnosti (validia mohou zpracovat [~9 000 transakcí za sekundu nebo více](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Předpoklady {#prerequisites}
 

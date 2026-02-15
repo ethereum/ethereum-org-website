@@ -6,13 +6,13 @@ lang: cs
 
 Oracles jsou aplikace, které vytvářejí datové kanály, jež zpřístupňují blockchainu pro smart kontrakty offchainové datové zdroje. To je nezbytné, protože smart kontrakty založené na Ethereu nemohou ve výchozím nastavení přistupovat k informacím uloženým mimo blockchainovou síť.
 
-Poskytnutí možnosti smart kontraktům provádět operace s využitím offchainových dat rozšiřuje užitečnost a hodnotu decentralizovaných aplikací. Například onchainové predikční trhy se spoléhají na oracles, které jim poskytují informace o výsledcích, jež používají k ověření předpovědí uživatelů. Představme si, že Alice vsadí 20 ETH na to, kdo se stane příštím prezidentem USA. V takovém případě bude predikční aplikace potřebovat orákulum, které potvrdí výsledky voleb a určilí, zda má Alice nárok na výplatu.
+Poskytnutí možnosti smart kontraktům provádět operace s využitím offchainových dat rozšiřuje užitečnost a hodnotu decentralizovaných aplikací. Například onchainové predikční trhy se spoléhají na oracles, které jim poskytují informace o výsledcích, jež používají k ověření předpovědí uživatelů. Představme si, že Alice vsadí 20 ETH na to, kdo se stane příštím prezidentem USA. V takovém případě bude predikční aplikace potřebovat orákulum, které potvrdí výsledky voleb a určí, zda má Alice nárok na výplatu.
 
 ## Předpoklady {#prerequisites}
 
 Tato stránka předpokládá, že je čtenář obeznámen se základy Etherea, včetně [uzlů](/developers/docs/nodes-and-clients/), [mechanismů konsenzu](/developers/docs/consensus-mechanisms/) a [EVM](/developers/docs/evm/). Měli byste také dobře rozumět [smart kontraktům](/developers/docs/smart-contracts/) a [anatomii smart kontraktů](/developers/docs/smart-contracts/anatomy/), zejména [událostem](/glossary/#events).
 
-## Co je blockchainové orákulum? Co je to blockchain oracle? {#what-is-a-blockchain-oracle}
+## Co je blockchainové orákulum? {#what-is-a-blockchain-oracle}
 
 Oracles jsou aplikace, které získávají, ověřují a přenášejí externí informace (tj. informace uložené mimo blockchain) do smart kontraktů běžících na blockchainu. Kromě „tahání“ offchainových dat a jejich vysílání na Ethereu mohou oracles také „tlačit“ informace z blockchainu do externích systémů, např. odemknutí chytrého zámku, jakmile uživatel odešle poplatek prostřednictvím transakce na Ethereu.
 
@@ -24,7 +24,7 @@ Orákula se liší podle zdroje dat (jeden nebo více zdrojů), modelů důvěry
 
 Mnoho vývojářů vidí smart kontrakty jako kód běžící na specifických adresách na blockchainu. Obecnější [pohled na smart kontrakty](/smart-contracts/) je však takový, že se jedná o samočinně se provádějící softwarové programy, které jsou schopny vynucovat dohody mezi stranami, jakmile jsou splněny určité podmínky – odtud pochází termín „smart kontrakty“.
 
-Použití smart kontraktů k vynucování dohod mezi lidmi však není jednoduché, vzhledem k tomu, že Ethereum je deterministické. [Deterministický systém](https://en.wikipedia.org/wiki/Deterministic_algorithm) je takový systém, který při daném počátečním stavu a konkrétním vstupu vždy produkuje stejné výsledky, což znamená, že v procesu výpočtu výstupů ze vstupů není žiadna náhodnost ani variace.
+Použití smart kontraktů k vynucování dohod mezi lidmi však není jednoduché, vzhledem k tomu, že Ethereum je deterministické. [Deterministický systém](https://en.wikipedia.org/wiki/Deterministic_algorithm) je takový systém, který při daném počátečním stavu a konkrétním vstupu vždy produkuje stejné výsledky, což znamená, že v procesu výpočtu výstupů ze vstupů není žádná náhodnost ani variace.
 
 Pro dosažení deterministického provádění omezují blockchainy uzly na dosažení konsenzu u jednoduchých binárních otázek (pravda/nepravda) s použitím _pouze_ dat uložených na samotném blockchainu. Příklady takových otázek zahrnují:
 
@@ -42,7 +42,7 @@ Za tímto účelem se oracle obvykle skládá ze smart kontraktu běžícího on
 
 Orákulum v podstatě překlenuje informační propast mezi blockchainem a externím prostředím a vytváří „hybridní smart kontrakty“. Hybridní smart kontrakt je takový, který funguje na základě kombinace kódu onchainového kontraktu a offchainové infrastruktury. Decentralizované predikční trhy jsou vynikajícím příkladem hybridních smart kontraktů. Dalšími příklady mohou být smart kontrakty určené k pojištění plodin, které vyplácejí pojistné plnění, když určitá orákula určí, že došlo k určitému meteorologickému jevu.
 
-## Jaké problémy se s orákuly pojí? Problém oracles {#the-oracle-problem}
+## Jaké problémy se s orákuly pojí? {#the-oracle-problem}
 
 Orákula řeší důležitý problém, ale zároveň přinášejí některé komplikace, např.,:
 
@@ -60,7 +60,7 @@ Různá orákula nabízejí různé způsoby řešení problému orákulí, kter
 
 3. **Kompatibilita pobídek**: Oracle by měl motivovat offchainové poskytovatele dat k předkládání správných informací smart kontraktům. Kompatibilita pobídek zahrnuje _přiřaditelnost_ a _odpovědnost_. Možnost přiřazení umožňuje spojit externí informaci s jejím poskytovatelem, zatímco odpovědnost váže poskytovatele dat k informacím, které poskytují, aby mohli být odměněni nebo potrestáni na základě kvality poskytnutých informací.
 
-## Jak funguje služba blockchainového orákula? Jak funguje služba blockchain oracle? {#how-does-a-blockchain-oracle-service-work}
+## Jak funguje služba blockchainového orákula? {#how-does-a-blockchain-oracle-service-work}
 
 ### Uživatelé {#users}
 
@@ -198,7 +198,7 @@ contract Oracle {
 
 ### Uzly oraclu {#oracle-nodes}
 
-Uzel oraclu je offchainová komponenta služby oraclu. Získává informace z externích zdrojů, jako jsou API hostované на serverech třetích stran, a ukládá je onchain pro využití smart kontrakty. Uzly oraclu naslouchají událostem z onchainového kontraktu oraclu a přistupují k dokončení úkolu popsaného v protokolu.
+Uzel oraclu je offchainová komponenta služby oraclu. Získává informace z externích zdrojů, jako jsou API hostované na serverech třetích stran, a ukládá je onchain pro využití smart kontrakty. Uzly oraclu naslouchají událostem z onchainového kontraktu oraclu a přistupují k dokončení úkolu popsaného v protokolu.
 
 Běžným úkolem uzlů oraclu je odeslání požadavku [HTTP GET](https://www.w3schools.com/tags/ref_httpmethods.asp) službě API, parsování odpovědi za účelem extrakce relevantních dat, jejich formátování do výstupu čitelného pro blockchain a odeslání onchain zahrnutím do transakce do kontraktu oraclu. Orákulový uzel může být také povinen potvrdit platnost a integritu předkládaných informací pomocí „důkazů autenticity“, které prozkoumáme později.
 
@@ -236,7 +236,7 @@ U centralizovaných oraclů není zaručeno, že budou offchainová data vždy d
 
 #### Špatná kompatibilita pobídek {#poor-incentive-compatibility}
 
-Centralizovaná orákula často nemají dobře navržené motivace (případně nemajjí vůbec žádné motivace) pro poskytovatele dat, nemohou tak zaručit, že jim budou zasílat přesné a nepozměněné informace. Platba za správnost orákula nezaručuje jeho poctivost. Tento problém se zhoršuje, jakmile se zvýší hodnota, kterou smart kontrakty spravují.
+Centralizovaná orákula často nemají dobře navržené motivace (případně nemají vůbec žádné motivace) pro poskytovatele dat, nemohou tak zaručit, že jim budou zasílat přesné a nepozměněné informace. Platba za správnost orákula nezaručuje jeho poctivost. Tento problém se zhoršuje, jakmile se zvýší hodnota, kterou smart kontrakty spravují.
 
 ### Decentralizované oracles {#decentralized-oracles}
 
@@ -292,7 +292,7 @@ Mechanismy Schelling point jsou atraktivní, protože minimalizují onchainovou 
 
 Decentralizované služby oraclů zajišťují vysokou dostupnost offchainových dat pro smart kontrakty. Toho je dosaženo decentralizací jak zdroje offchainových informací, tak uzlů odpovědných za přenos informací onchain.
 
-Tím je zajišťema odolnost proti chybám, protože orákulový kontrakt se při plnění dotazů z jiných kontraktů může spolehnout na více uzlů (které se také spoléhají na více zdrojů dat). Decentralizace na úrovni zdroje _a_ operátorů uzlů je klíčová – síť uzlů oraclu poskytujících informace získané ze stejného zdroje se dostane do stejného problému jako centralizovaný oracle.
+Tím je zajištěna odolnost proti chybám, protože orákulový kontrakt se při plnění dotazů z jiných kontraktů může spolehnout na více uzlů (které se také spoléhají na více zdrojů dat). Decentralizace na úrovni zdroje _a_ operátorů uzlů je klíčová – síť uzlů oraclu poskytujících informace získané ze stejného zdroje se dostane do stejného problému jako centralizovaný oracle.
 
 Je také možné, aby oracly založené na stakování trestaly operátory uzlů, kteří na požadavky o data nereagují dostatečně rychle. To výrazně motivuje orákulové uzly investovat do infrastruktury odolné proti chybám a poskytovat data včas.
 

@@ -25,7 +25,7 @@ On-chain škálování vyžaduje změny v protokolu Ethereum (vrstva 1 [Mainnet]
 
 ### Sharding {#sharding}
 
-Sharding je proces rozdělení databáze. Podskupiny validátorů by byly zodpovědné za jednotlivé shardery, místo aby sledovaly celé Ethereum. Sharding byl dlouhou dobu součástí [plánu](/roadmap/) Etherea a původně se počítalo s jeho spuštěním před přechodem na proof-of-stake (The Merge). Rychlý vývoj [rollupů vrstvy 2](#layer-2-scaling) a vynález [Dankshardingu](/roadmap/danksharding) (přidávání datových blobů z rollupů do bloků Etherea, které mohou validátoři velmi efektivně ověřit) však vedly komunitu Etherea k upřednostnění škálování zaměřeného na rollupy namísto škálování pomocí shardingu. To také pomůže udržet logiku konsensu Etherea jednodušší.
+Sharding je proces rozdělení databáze. Podskupiny validátorů by byly zodpovědné za jednotlivé shardy, místo aby sledovaly celé Ethereum. Sharding byl dlouhou dobu součástí [plánu](/roadmap/) Etherea a původně se počítalo s jeho spuštěním před přechodem na proof-of-stake (The Merge). Rychlý vývoj [rollupů vrstvy 2](#layer-2-scaling) a vynález [Dankshardingu](/roadmap/danksharding) (přidávání datových blobů z rollupů do bloků Etherea, které mohou validátoři velmi efektivně ověřit) však vedly komunitu Etherea k upřednostnění škálování zaměřeného na rollupy namísto škálování pomocí shardingu. To také pomůže udržet logiku konsensu Etherea jednodušší.
 
 ## Off-chain škálování {#offchain-scaling}
 
@@ -89,7 +89,7 @@ Zjistěte více o [Validium](/developers/docs/scaling/validium/).
 - Celek je efektivnější než součet efektivity jeho částí. Různá řešení mohou existovat a pracovat v harmonii, což aplikuje exponenciální efekt na budoucí rychlost transakcí a propustnost.
 - Ne všechna řešení vyžadují přímé využití konsensuálního algoritmu Etherea a alternativy mohou nabízet výhody, které by jinak bylo obtížné získat.
 
-## Učíte se spíše vizuálně? Vizuální výuka {#visual-learner}
+## Učíte se spíše vizuálně? {#visual-learner}
 
 <YouTube id="BgCgauWVTs0" />
 

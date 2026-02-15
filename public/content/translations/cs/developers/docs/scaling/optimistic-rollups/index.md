@@ -1,6 +1,6 @@
 ---
 title: "Optimistické rollupy"
-description: "Úvod do optimistických rollapů – řešení pro škálování, které používá komunita Etherea."
+description: "Úvod do optimistických rollupů – řešení pro škálování, které používá komunita Etherea."
 lang: cs
 ---
 
@@ -26,7 +26,7 @@ Pokud důkaz podvodu uspěje, protokol rollupu transakce znovu provede a podle t
 
 Pokud balíček rollupu zůstane bez výzvy (tj. všechny transakce jsou správně provedeny) po skončení časového okna, je považován za platný a přijatý na Ethereum. Ostatní mohou nadále stavět na nepotvrzeném bloku rollupu, ale s podmínkou: Výsledky transakcí budou zrušeny, pokud budou založeny na nesprávně provedené transakci.
 
-## Jak optimistické rollupy interagují s Ethereum? Jak optimistické rollupy škálují Ethereum? {#optimistic-rollups-and-Ethereum}
+## Jak optimistické rollupy interagují s Ethereem? {#optimistic-rollups-and-Ethereum}
 
 Optimistické rollupy jsou [řešení pro škálování mimo řetězec](/developers/docs/scaling/#offchain-scaling) navržená k provozu nad Ethereem. Každý optimistický rollup je spravován sadou smart kontraktů nasazených na síti Ethereum. Optimistické rollupy zpracovávají transakce mimo hlavní řetězec Ethereum, ale odesílají transakce mimo řetězec (v balíčcích) do rollupového kontraktu na řetězci. Stejně jako blockchain Ethereum je tento záznam transakcí neměnný a tvoří „optimistický rollupový řetězec“.
 

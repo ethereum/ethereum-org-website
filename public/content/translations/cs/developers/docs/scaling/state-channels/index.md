@@ -253,7 +253,7 @@ Několik projektů poskytuje implementace stavových kanálů, které můžete i
 
 **Stavové kanály**
 
-- [Porozumění škalovacím řešením na vrstvě 2 Etherea: Stavové kanály, Plasma a Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12. února 2018_
+- [Porozumění škálovacím řešením na vrstvě 2 Etherea: Stavové kanály, Plasma a Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12. února 2018_
 - [Stavové kanály - vysvětlení](https://www.jeffcoleman.ca/state-channels/) _6. listopadu 2015 – Jeff Coleman_
 - [Základy stavových kanálů](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 - [Stavové kanály na blockchainu: Špička blockchainu](https://ieeexplore.ieee.org/document/9627997)
