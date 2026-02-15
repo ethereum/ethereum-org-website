@@ -15,7 +15,7 @@
   "page-layer-2-learn-layer-1-list-2": "<strong>síť výrobců bloků</strong>",
   "page-layer-2-learn-layer-1-list-3": "<strong>samotný blockchain</strong> a historii transakčních dat",
   "page-layer-2-learn-layer-1-list-4": "<strong>mechanismus konsenzu</strong> pro síť",
-  "page-layer-2-learn-why-do-we-need-layer-2-title": "Proč potřebujeme vrstu 2?",
+  "page-layer-2-learn-why-do-we-need-layer-2-title": "Proč potřebujeme vrstvu 2?",
   "page-layer-2-learn-why-do-we-need-layer-2-1": "Tři žádoucí vlastnosti blockchainu jsou decentralizace, bezpečnost a škálovatelnost. Blockchainové trilema říká, že jednoduchá blockchainová architektura může dosáhnout pouze dvou z těchto tří vlastností. Chcete bezpečný a decentralizovaný blockchain? Musíte obětovat škálovatelnost. A zde přicházejí na řadu sítě druhé vrstvy.",
   "page-layer-2-learn-why-do-we-need-layer-2-2": "Ethereum dosáhlo současné kapacity sítě s více než 1 milionem transakcí denně, přičemž po každé z těchto transakcí je vysoká poptávka. Úspěch Etherea a poptávka po jeho používání způsobily podstatné zvýšení cen za plyn. Proto také vrcholí potřeba škálovacích řešení.",
   "page-layer-2-learn-why-do-we-need-layer-2-scalability": "Škálovatelnost",
