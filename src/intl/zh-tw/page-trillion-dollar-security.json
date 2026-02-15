@@ -1,6 +1,6 @@
 {
   "page-trillion-dollar-security-meta-title": "萬億美元安全項目—安全挑戰概述報告",
-  "page-trillion-dollar-security-meta-description": "一萬億安全项目，一項爲了提高以太坊安全性的生態系統層級的努力。 本报告调查了生态系统面临的现有安全挑战。",
+  "page-trillion-dollar-security-meta-description": "萬億美元安全計劃，一項為了提高以太坊安全性的生態系統層級努力。本報告調查了生態系統面臨的現有安全挑戰。",
   "page-trillion-dollar-security-subtitle": "萬億美元安全項目",
   "page-trillion-dollar-security-title": "安全挑戰概述",
   "page-trillion-dollar-security-hero-paragraph-1": "以太坊是最安全、最具韌性且最值得信賴的區塊鏈生態系統。過去10年間，以太坊生態系統已發展出支撐當今數百萬用戶的技術、標準與知識體系，更匯聚了超過600百萬美元的資本。",
@@ -156,7 +156,7 @@
   "page-trillion-dollar-security-section-4-4-paragraph": "在某些極端故障模式下，以太坊將依賴「社會性懲罰」機制來懲罰惡意攻擊網路的驗證程式（參見第6.1節）。然而，此類懲罰所需的基礎設施、規範及預期流程尚未完善。目前社群尚無既定機制可執行此類懲戒程序。",
   "page-trillion-dollar-security-section-4-5-title": "4.5 經濟與博弈理論的攻擊途徑",
   "page-trillion-dollar-security-section-4-5-paragraph": "許多潛在的經濟攻擊途徑仍未被充分研究，包括：",
-  "page-trillion-dollar-security-section-4-5-list-1": "惡意攻擊還是懲罰惡意。驗證程式可能并非因自身過失而承擔成本或遭受懲罰，而是純粹源於攻擊者意圖傷害他人的敵對行為，此舉將使攻擊者蒙受淨損失。",
+  "page-trillion-dollar-security-section-4-5-list-1": "惡意攻擊還是懲罰惡意。驗證程式可能並非因自身過失而承擔成本或遭受懲罰，而是純粹源於攻擊者意圖傷害他人的敵對行為，此舉將使攻擊者蒙受淨損失。",
   "page-trillion-dollar-security-section-4-5-list-2": "策略性退出或定時閒置。驗證者可能在關鍵時刻故意離線或退出，藉此在承受最低懲罰的前提下，最大化利潤或擾亂共識機制。",
   "page-trillion-dollar-security-section-4-5-list-3": "驗證程式或中繼節點之間的串通行為。驗證程式之間，或中繼節點與驗證程式之間的協調行為，可能削弱去中心化程度，或藉此榨取MEV利潤。",
   "page-trillion-dollar-security-section-4-5-list-4": "在MEV、提案者與建設者分離機制或流動性質押設計中，利用邊際案例激勵機制。行為者可能操縱罕見的協議條件以獲取超額報酬。",
