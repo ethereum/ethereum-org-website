@@ -11,7 +11,7 @@ incomplete: true
 
 मायक्रोसॉफ्ट टेक्नॉलॉजी स्टॅकमधील साधने आणि भाषा वापरून इथेरियमवर विकेंद्रित ऍप्लिकेशन्स तयार करा आणि स्मार्ट कॉन्ट्रॅक्ट्सशी संवाद साधा - जे .NET फ्रेमवर्क/.NET कोअर/.NET स्टँडर्डवर VSCode आणि व्हिज्युअल स्टुडिओ सारख्या टूलिंगवर C#, व्हिज्युअल बेसिक .NET, F# ला सपोर्ट करते. Microsoft Azure ब्लॉकचेन वापरून काही मिनिटांत Azure वर इथेरियम ब्लॉकचेन तैनात करा. .NET ची आवड इथेरियममध्ये आणा!
 
-## स्मार्ट कॉन्ट्रॅक्ट्स आणि सॉलिडिटी भाषेसह सुरुवात करणे {#getting-started-with-smart-contracts-and-the-solidity-language}
+## स्मार्ट कॉन्ट्रॅक्ट्स आणि Solidity भाषेसह सुरुवात करणे {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **इथेरियमसोबत .NET एकत्रित करण्यासाठी तुमची पहिली पायरी उचला**
 
@@ -20,14 +20,14 @@ incomplete: true
 - [ब्लॉकचेन स्पष्टीकरण](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [स्मार्ट कॉन्ट्रॅक्ट्स समजून घेणे](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [तुमचा पहिला स्मार्ट कॉन्ट्रॅक्ट लिहा](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [सॉलिडिटी कसे संकलित आणि तैनात करायचे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Solidity कसे संकलित आणि तैनात करायचे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## नवशिक्यांसाठी संदर्भ आणि लिंक्स {#beginner-references-and-links}
 
-**Nethereum लायब्ररी आणि VS Code सॉलिडिटीची ओळख**
+**Nethereum लायब्ररी आणि VS Code Solidityची ओळख**
 
 - [Nethereum, सुरुवात करणे](https://docs.nethereum.com/en/latest/getting-started/)
-- [VS Code सॉलिडिटी इंस्टॉल करणे](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
+- [VS Code Solidity इंस्टॉल करणे](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [इथेरियम स्मार्ट कॉन्ट्रॅक्ट्स तयार करण्यासाठी आणि कॉल करण्यासाठी .NET डेव्हलपरची कार्यप्रणाली](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
 - [Nethereum सोबत स्मार्ट कॉन्ट्रॅक्ट्सचे एकत्रीकरण](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
 - [Nethereum सह .NET आणि इथेरियम ब्लॉकचेन स्मार्ट कॉन्ट्रॅक्ट्सला इंटरफेस करणे](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1) मध्ये देखील
@@ -47,7 +47,7 @@ incomplete: true
 
 - [Nethereum वर्कबुक/सॅम्पल लिस्ट](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [तुमच्या स्वतःच्या डेव्हलपमेंट टेस्टचेन्स तैनात करा](https://github.com/Nethereum/Testchains)
-- [सॉलिडिटीसाठी VSCode कोडजेन प्लगिन](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
+- [Solidityसाठी VSCode कोडजेन प्लगिन](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [युनिटी आणि इथेरियम: का आणि कसे](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [इथेरियम dapps साठी ASP.NET कोअर वेब API तयार करा](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Nethereum Web3 वापरून सप्लाय चेन ट्रॅकिंग सिस्टीम लागू करणे](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)

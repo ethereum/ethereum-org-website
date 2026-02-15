@@ -9,7 +9,7 @@ incomplete: true
 
 विकेंद्रित ॲप्लिकेशन्स (किंवा "dapps") तयार करण्यासाठी इथेरियमचा वापर करा. हे dapps विश्वासार्ह असू शकतात, याचा अर्थ असा की एकदा ते इथेरियमवर तैनात केले की, ते नेहमी प्रोग्राम केल्याप्रमाणे चालतील. ते विकेंद्रित आहेत, याचा अर्थ ते पीअर-टू-पीअर नेटवर्कवर चालतात आणि अपयशासाठी कोणताही एक बिंदू नाही. कोणतीही एक संस्था किंवा व्यक्ती त्यांना नियंत्रित करत नाही आणि त्यांना सेन्सॉर करणे जवळजवळ अशक्य आहे. नवीन प्रकारचे ॲप्लिकेशन्स तयार करण्यासाठी ते डिजिटल मालमत्ता नियंत्रित करू शकतात.
 
-## स्मार्ट कॉन्ट्रॅक्ट्स आणि सॉलिडिटी भाषेसह प्रारंभ करणे {#getting-started-with-smart-contracts-and-solidity}
+## स्मार्ट कॉन्ट्रॅक्ट्स आणि Solidity भाषेसह प्रारंभ करणे {#getting-started-with-smart-contracts-and-solidity}
 
 **Go ला इथेरियमसोबत एकत्रित करण्यासाठी तुमची पहिली पावले उचला**
 
@@ -18,7 +18,7 @@ incomplete: true
 - [ब्लॉकचेन स्पष्टीकरण](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [स्मार्ट कॉन्ट्रॅक्ट्स समजून घेणे](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [तुमचा पहिला स्मार्ट कॉन्ट्रॅक्ट लिहा](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [सॉलिडिटी कसे संकलित आणि तैनात करायचे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Solidity कसे संकलित आणि तैनात करायचे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [कॉन्ट्रॅक्ट ट्यूटोरियल](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
 ## नवशिक्यांसाठी लेख आणि पुस्तके {#beginner-articles-and-books}
@@ -38,7 +38,7 @@ incomplete: true
 - [Go इथेरियम GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
 - [Geth सह Go मध्ये dapp तयार करणे](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Golang आणि Geth सह इथेरियम खाजगी नेटवर्कवर काम करणे](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
-- [Go सह इथेरियमवर सॉलिडिटी कॉन्ट्रॅक्ट्सची युनिट टेस्टिंग](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
+- [Go सह इथेरियमवर Solidity कॉन्ट्रॅक्ट्सची युनिट टेस्टिंग](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Geth चा लायब्ररी म्हणून वापर करण्यासाठी त्वरित संदर्भ](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
 ## प्रगत वापर पद्धती {#advanced-use-patterns}

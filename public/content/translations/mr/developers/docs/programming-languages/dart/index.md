@@ -5,7 +5,7 @@ lang: mr
 incomplete: true
 ---
 
-## स्मार्ट कॉन्ट्रॅक्ट्स आणि सॉलिडिटी भाषेसह प्रारंभ करणे {#getting-started-with-smart-contracts-and-solidity}
+## स्मार्ट कॉन्ट्रॅक्ट्स आणि Solidity भाषेसह प्रारंभ करणे {#getting-started-with-smart-contracts-and-solidity}
 
 ## ट्यूटोरियल्स {#tutorials}
 

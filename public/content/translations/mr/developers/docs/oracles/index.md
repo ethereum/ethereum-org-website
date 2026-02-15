@@ -425,9 +425,9 @@ contract PriceConsumerV3 {
 
 **शिकवण्या**
 
-- [सॉलिडिटीमध्ये इथेरियमची सध्याची किंमत कशी मिळवायची](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _चेनलिंक_
+- [Solidityमध्ये इथेरियमची सध्याची किंमत कशी मिळवायची](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _चेनलिंक_
 - [ओरॅकल डेटा वापरणे](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _क्रॉनिकल_
 
 **उदाहरणार्थ प्रकल्प**
 
-- [सॉलिडिटीमध्ये इथेरियमसाठी पूर्ण चेनलिंक स्टार्टर प्रोजेक्ट](https://github.com/hackbg/chainlink-fullstack) — _HackBG_
+- [Solidityमध्ये इथेरियमसाठी पूर्ण चेनलिंक स्टार्टर प्रोजेक्ट](https://github.com/hackbg/chainlink-fullstack) — _HackBG_

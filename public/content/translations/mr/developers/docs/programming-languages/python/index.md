@@ -9,7 +9,7 @@ incomplete: true
 
 क्रिप्टोकरन्सी आणि ब्लॉकचेन तंत्रज्ञानाच्या फायद्यांचा उपयोग करणाऱ्या विकेंद्रीकृत ॲप्लिकेशन्स (किंवा "dapps") तयार करण्यासाठी इथेरियम वापरा. हे dapps विश्वासार्ह असू शकतात, याचा अर्थ असा की एकदा ते इथेरियमवर तैनात केले की, ते नेहमी प्रोग्राम केल्याप्रमाणे चालतील. नवीन प्रकारचे आर्थिक ॲप्लिकेशन्स तयार करण्यासाठी ते डिजिटल मालमत्ता नियंत्रित करू शकतात. ते विकेंद्रित असू शकतात, याचा अर्थ असा की कोणतीही एक संस्था किंवा व्यक्ती त्यांना नियंत्रित करत नाही आणि सेन्सॉर करणे जवळजवळ अशक्य आहे.
 
-## स्मार्ट कॉन्ट्रॅक्ट्स आणि सॉलिडिटी भाषेसह प्रारंभ करणे {#getting-started-with-smart-contracts-and-solidity}
+## स्मार्ट कॉन्ट्रॅक्ट्स आणि Solidity भाषेसह प्रारंभ करणे {#getting-started-with-smart-contracts-and-solidity}
 
 **पायथॉनला इथेरियमसोबत एकत्रित करण्यासाठी तुमची पहिली पाऊले उचला**
 
@@ -18,7 +18,7 @@ incomplete: true
 - [ब्लॉकचेन स्पष्टीकरण](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [स्मार्ट कॉन्ट्रॅक्ट्स समजून घेणे](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [तुमचा पहिला स्मार्ट कॉन्ट्रॅक्ट लिहा](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [सॉलिडिटी कसे संकलित आणि तैनात करायचे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Solidity कसे संकलित आणि तैनात करायचे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [ब्लॉकचेनमधील पायथॉनची स्थिती 2023 अहवाल](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 
 ## नवशिक्यांसाठी लेख {#beginner-articles}
@@ -44,7 +44,7 @@ incomplete: true
 - [web3.py पद्धती: रिअल-टाइम इव्हेंट सबस्क्रिप्शन्स](https://snakecharmers.ethereum.org/subscriptions/)
 - [web3.py पद्धती: WebSocketProvider](https://snakecharmers.ethereum.org/websocketprovider/)
 - [पायथॉन वापरून इथेरियम स्मार्ट कॉन्ट्रॅक्ट संकलित करणे, तैनात करणे आणि कॉल करणे](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Slither सह सॉलिडिटी स्मार्ट कॉन्ट्रॅक्ट्सचे विश्लेषण करा](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
+- [Slither सह Solidity स्मार्ट कॉन्ट्रॅक्ट्सचे विश्लेषण करा](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 - [ब्लॉकचेन फिनटेक ट्युटोरियल: पायथॉनसह कर्ज देणे आणि घेणे](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
 
 ## संग्रहित लेख
@@ -63,11 +63,11 @@ incomplete: true
 - [py-evm](https://github.com/ethereum/py-evm) - _इथेरियम व्हर्च्युअल मशीनची अंमलबजावणी_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _इथेरियम-आधारित ॲप्लिकेशन्सची चाचणी करण्यासाठीची साधने_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _इथेरियम संबंधित कोडबेससह काम करण्यासाठी युटिलिटी फंक्शन्स_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x समर्थनासह solc सॉलिडिटी कंपाइलरभोवती पायथॉन रॅपर_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x समर्थनासह solc Solidity कंपाइलरभोवती पायथॉन रॅपर_
 - [pymaker](https://github.com/makerdao/pymaker) - _मेकर कॉन्ट्रॅक्ट्ससाठी पायथॉन API_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _पायथॉनसाठी इथेरियमसह साइन इन करा (siwe)_
 - [इथेरियम इंटिग्रेशन्ससाठी Web3 DeFi](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, Uniswap आणि इतर लोकप्रिय प्रकल्पांसाठी तयार इंटिग्रेशन्स असलेले एक पायथॉन पॅकेज_
-- [Wake](https://getwake.io) - _कॉन्ट्रॅक्ट टेस्टिंग, फझिंग, डिप्लॉयमेंट, व्हल्नरेबिलिटी स्कॅनिंग आणि कोड नेव्हिगेशनसाठी ऑल-इन-वन पायथॉन फ्रेमवर्क (लँग्वेज सर्व्हर - [सॉलिडिटीसाठी साधने](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [Wake](https://getwake.io) - _कॉन्ट्रॅक्ट टेस्टिंग, फझिंग, डिप्लॉयमेंट, व्हल्नरेबिलिटी स्कॅनिंग आणि कोड नेव्हिगेशनसाठी ऑल-इन-वन पायथॉन फ्रेमवर्क (लँग्वेज सर्व्हर - [Solidityसाठी साधने](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 
 ### संग्रहित / आता देखरेख केली जात नाही: {#archived--no-longer-maintained}
 

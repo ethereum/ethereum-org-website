@@ -15,7 +15,7 @@ incomplete: true
 
 इथेरियमवर विकेंद्रीकृत ऍप्लिकेशन्स तयार करा आणि डेल्फी प्रोग्रामिंग भाषेचा वापर करून स्मार्ट कॉन्ट्रॅक्ट्सशी संवाद साधा!
 
-## स्मार्ट कॉन्ट्रॅक्ट्स आणि सॉलिडिटी भाषेसह सुरुवात करणे {#getting-started-with-smart-contracts-and-the-solidity-language}
+## स्मार्ट कॉन्ट्रॅक्ट्स आणि Solidity भाषेसह सुरुवात करणे {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **डेल्फीला इथेरियमसोबत समाकलित करण्यासाठी तुमची पहिली पाऊले उचला**
 
@@ -24,7 +24,7 @@ incomplete: true
 - [ब्लॉकचेन स्पष्टीकरण](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [स्मार्ट कॉन्ट्रॅक्ट्स समजून घेणे](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [तुमचा पहिला स्मार्ट कॉन्ट्रॅक्ट लिहा](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [सॉलिडिटी कसे संकलित आणि तैनात करायचे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Solidity कसे संकलित आणि तैनात करायचे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## नवशिक्यांसाठी संदर्भ आणि लिंक्स {#beginner-references-and-links}
 

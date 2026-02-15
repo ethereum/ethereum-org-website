@@ -9,7 +9,7 @@ incomplete: true
 
 क्रिप्टोकरन्सी आणि ब्लॉकचेन तंत्रज्ञानाच्या फायद्यांचा उपयोग करणाऱ्या विकेंद्रीकृत ॲप्लिकेशन्स (किंवा "dapps") तयार करण्यासाठी इथेरियम वापरा. हे dapps विश्वासार्ह असू शकतात, याचा अर्थ असा की एकदा ते इथेरियमवर तैनात केले की, ते नेहमी प्रोग्राम केल्याप्रमाणे चालतील. नवीन प्रकारचे आर्थिक ॲप्लिकेशन्स तयार करण्यासाठी ते डिजिटल मालमत्ता नियंत्रित करू शकतात. ते विकेंद्रित असू शकतात, याचा अर्थ असा की कोणतीही एक संस्था किंवा व्यक्ती त्यांना नियंत्रित करत नाही आणि सेन्सॉर करणे जवळजवळ अशक्य आहे.
 
-## स्मार्ट कॉन्ट्रॅक्ट्स आणि सॉलिडिटी भाषेसह प्रारंभ करणे {#getting-started-with-smart-contracts-and-solidity}
+## स्मार्ट कॉन्ट्रॅक्ट्स आणि Solidity भाषेसह प्रारंभ करणे {#getting-started-with-smart-contracts-and-solidity}
 
 **इथेरियमसह रस्टला एकत्रित करण्यासाठी तुमची पहिली पावले उचला**
 
@@ -18,7 +18,7 @@ incomplete: true
 - [ब्लॉकचेन स्पष्टीकरण](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [स्मार्ट कॉन्ट्रॅक्ट्स समजून घेणे](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [तुमचा पहिला स्मार्ट कॉन्ट्रॅक्ट लिहा](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [सॉलिडिटी कसे संकलित आणि तैनात करायचे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Solidity कसे संकलित आणि तैनात करायचे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## नवशिक्यांसाठी लेख {#beginner-articles}
 
@@ -44,7 +44,7 @@ incomplete: true
 - [Lighthouse](https://github.com/sigp/lighthouse) - _जलद इथेरियम कन्सेन्सस लेयर क्लायंट_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly च्या एका निश्चित उपसंचाचा वापर करून इथेरियम स्मार्ट कॉन्ट्रॅक्ट एक्झिक्यूशन लेयरची प्रस्तावित पुनर्रचना_
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API संदर्भ_
-- [Solaris](https://github.com/paritytech/sol-rs) - _मूळ Parity Client EVM वापरून सॉलिडिटी स्मार्ट कॉन्ट्रॅक्ट्स युनिट टेस्ट हार्नेस._
+- [Solaris](https://github.com/paritytech/sol-rs) - _मूळ Parity Client EVM वापरून Solidity स्मार्ट कॉन्ट्रॅक्ट्स युनिट टेस्ट हार्नेस._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _रस्ट इथेरियम व्हर्च्युअल मशीन अंमलबजावणी_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _रस्टमध्ये वेव्हलेट स्मार्ट कॉन्ट्रॅक्ट_
 - [Foundry](https://github.com/foundry-rs/foundry) - _इथेरियम ॲप्लिकेशन विकासासाठी टूलकिट_
