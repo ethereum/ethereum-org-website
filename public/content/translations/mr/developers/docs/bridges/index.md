@@ -103,13 +103,13 @@ L1 ब्लॉकचेन आणि L2 [स्केलिंग](/developers/
 
 ### एकाधिक चेनवर dapp तैनात करणे {#deploying-a-dapp-on-multiple-chains}
 
-एकाधिक चेनवर dapp तैनात करण्यासाठी, डेव्हलपर [अल्केमी](https://www.alchemy.com/), [हार्डहॅट](https://hardhat.org/), [मोरॅलिस](https://moralis.io/) इत्यादींसारख्या डेव्हलपमेंट प्लॅटफॉर्मचा वापर करू शकतात. सामान्यतः, हे प्लॅटफॉर्म कंपोजेबल प्लगइन्ससह येतात जे dapps ला क्रॉस-चेन जाण्यास सक्षम करू शकतात. उदाहरणार्थ, डेव्हलपर [हार्डहॅट-डिप्लॉय प्लगइन](https://github.com/wighawag/hardhat-deploy) द्वारे ऑफर केलेल्या डिटरमिनिस्टिक डिप्लॉयमेंट प्रॉक्सीचा वापर करू शकतात.
+एकाधिक चेनवर dapp तैनात करण्यासाठी, डेव्हलपर [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/) इत्यादींसारख्या डेव्हलपमेंट प्लॅटफॉर्मचा वापर करू शकतात. सामान्यतः, हे प्लॅटफॉर्म कंपोजेबल प्लगइन्ससह येतात जे dapps ला क्रॉस-चेन जाण्यास सक्षम करू शकतात. उदाहरणार्थ, डेव्हलपर [hardhat-deploy प्लगइन](https://github.com/wighawag/hardhat-deploy) द्वारे ऑफर केलेल्या डिटरमिनिस्टिक डिप्लॉयमेंट प्रॉक्सीचा वापर करू शकतात.
 
 #### उदाहरणे:
 
 - [क्रॉस-चेन dapps कसे तयार करावे](https://moralis.io/how-to-build-cross-chain-dapps/)
 - [क्रॉस-चेन NFT मार्केटप्लेस तयार करणे](https://youtu.be/WZWCzsB1xUE)
-- [मोरॅलिस: क्रॉस-चेन NFT dapps तयार करणे](https://www.youtube.com/watch?v=ehv70kE1QYo)
+- [Moralis: क्रॉस-चेन NFT dapps तयार करणे](https://www.youtube.com/watch?v=ehv70kE1QYo)
 
 ### चेनवर कॉन्ट्रॅक्टच्या क्रियाकलापांचे निरीक्षण करणे {#monitoring-contract-activity-across-chains}
 

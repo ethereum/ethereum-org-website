@@ -133,7 +133,7 @@ Web3 पॅटर्नचा वापर करून वैज्ञानि
 
 - [विकेंद्रित विज्ञान म्हणजे काय?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [दीर्घायुष्य संशोधन आणि क्रिप्टोच्या छेदनबिंदूबद्दल विटालिक बुटेरिन आणि वैज्ञानिक ऑब्रे डी ग्रे यांच्यातील संभाषण](https://www.youtube.com/watch?v=x9TSJK1widA)
-- वैज्ञानिक प्रकाशन व्यवस्था कोलमडली आहे. Web3 ते दुरुस्त करू शकते का?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
+- [वैज्ञानिक प्रकाशन व्यवस्था कोलमडली आहे. Web3 ते दुरुस्त करू शकते का?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, स्वतंत्र लॅब्स, आणि मोठ्या प्रमाणातील डेटा सायन्स](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - DeSci बायोमेडिकल संशोधन आणि व्हेंचर कॅपिटलमध्ये कसे परिवर्तन घडवू शकते](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
 - [Paige Donner - Web3 आणि ब्लॉकचेनसह ओपन सायन्सची टूलिंग](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)
