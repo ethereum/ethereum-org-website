@@ -2,13 +2,7 @@
 title: Endesha nodi ya Ethereum kwenye Raspberry Pi 4
 description: Weka picha ya programu kwenye Raspberry Pi 4 yako, chomeka kebo ya ethaneti, unganisha diski ya SSD na uwashe kifaa ili kuigeuza Raspberry Pi 4 kuwa nodi kamili ya Ethereum + mthibitishaji.
 author: "EthereumOnArm"
-tags:
-  [
-    "wateja",
-    "safu ya utekelezaji",
-    "safu ya makubaliano",
-    "nodi"
-  ]
+tags: ["clients", "execution layer", "consensus layer", "nodes"]
 lang: sw
 skill: intermediate
 published: 2022-06-10

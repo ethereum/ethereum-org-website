@@ -2,7 +2,7 @@
 title: Jifunze Mada za Msingi za Ethereum kwa kutumia SQL
 description: Mafunzo haya yanawasaidia wasomaji kuelewa dhana za msingi za Ethereum ikiwemo miamala, bloku na gesi kwa kuuliza data iliyo kwenye mtandao kwa kutumia Lugha ya Kuuliza Data Iliyopangwa (SQL).
 author: "Paul Apivat"
-tags: [ "SQL", "Kuuliza", "Miamala" ]
+tags: ["SQL", "Querying", "Transactions"]
 skill: beginner
 lang: sw
 published: 2021-05-11

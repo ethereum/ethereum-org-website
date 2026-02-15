@@ -4,7 +4,7 @@ description: Baada ya kusoma mafunzo haya, utaweza kuandika seva za TypeScript z
 
 author: Ori Pomerantz
 lang: sw
-tags: [ "wakala", "seva", "offchain" ]
+tags: ["agent", "server", "offchain"]
 skill: beginner
 published: 2024-07-15
 ---

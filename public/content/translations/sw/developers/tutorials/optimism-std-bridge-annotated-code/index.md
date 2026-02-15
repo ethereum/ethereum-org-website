@@ -2,7 +2,7 @@
 title: "Mwongozo wa mkataba wa daraja la kawaida la Optimism"
 description: Je, daraja la kawaida la Optimism linafanyaje kazi? Kwa nini linafanya kazi kwa njia hii?
 author: Ori Pomerantz
-tags: [ "uimara", "daraja", "safu ya 2" ]
+tags: ["solidity", "bridge", "layer 2"]
 skill: intermediate
 published: 2022-03-30
 lang: sw

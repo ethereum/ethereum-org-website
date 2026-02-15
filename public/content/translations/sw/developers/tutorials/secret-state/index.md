@@ -2,15 +2,7 @@
 title: Kutumia zero-knowledge kwa hali ya siri
 description: michezo ya onchain ina mipaka kwa sababu haiwezi kutunza taarifa zozote zilizofichwa. Baada ya kusoma mafunzo haya, msomaji ataweza kuchanganya uthibitisho wa zero-knowledge na vipengele vya seva ili kuunda michezo inayoweza kuthibitishwa na hali ya siri, offchain, na sehemu. Mbinu ya kufanya hivi itaonyeshwa kwa kuunda mchezo wa minesweeper.
 author: Ori Pomerantz
-tags:
-  [
-    "seva",
-    "offchain",
-    "kati",
-    "zero-knowledge",
-    "zokrates",
-    "mud"
-  ]
+tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud"]
 skill: advanced
 lang: sw
 published: 2025-03-15

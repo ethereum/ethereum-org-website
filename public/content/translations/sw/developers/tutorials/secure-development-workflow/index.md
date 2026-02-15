@@ -2,7 +2,7 @@
 title: Orodha hakiki ya usalama wa mkataba-erevu
 description: Mtiririko wa kazi unaopendekezwa wa kuandika mikataba-erevu salama
 author: "Trailofbits"
-tags: [ "mikataba erevu", "usalama", "uimara" ]
+tags: ["smart contracts", "security", "solidity"]
 skill: intermediate
 lang: sw
 published: 2020-09-07

@@ -2,15 +2,7 @@
 title: Mafunzo ya Muunda wa NFT
 description: Katika mafunzo haya, utaunda muunda wa NFT na kujifunza jinsi ya kuunda mfumo kamili uliotawanywa kwa kuunganisha mkataba wako erevu kwenye frontend ya React kwa kutumia zana za MetaMask na Web3.
 author: "smudgil"
-tags:
-  [
-    "uimara",
-    "NFT",
-    "alchemy",
-    "mikataba erevu",
-    "frontend",
-    "Pinata"
-  ]
+tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata"]
 skill: intermediate
 lang: sw
 published: 2021-10-06

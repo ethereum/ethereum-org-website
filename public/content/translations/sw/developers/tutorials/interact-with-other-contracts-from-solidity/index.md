@@ -2,14 +2,7 @@
 title: Kuingiliana na mikataba mingine kutoka Solidity
 description: Jinsi ya kupeleka mkataba-erevu kutoka kwa mkataba uliopo na kuingiliana nao
 author: "jdourlens"
-tags:
-  [
-    "mikataba erevu",
-    "uimara",
-    "remix",
-    "upelekaji",
-    "utunzi"
-  ]
+tags: ["smart contracts", "solidity", "remix", "deploying", "composability"]
 skill: advanced
 lang: sw
 published: 2020-04-05

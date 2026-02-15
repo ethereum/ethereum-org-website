@@ -2,14 +2,7 @@
 title: "Baadhi ya hila zinazotumiwa na tokeni za ulaghai na jinsi ya kuzigundua"
 description: Katika mafunzo haya tunachambua tokeni ya ulaghai ili kuona baadhi ya hila ambazo walaghai hutumia, jinsi wanavyozitekeleza, na jinsi tunavyoweza kuzigundua.
 author: Ori Pomerantz
-tags:
-  [
-    "ulaghai",
-    "uimara",
-    "erc-20",
-    "javascript",
-    "typescript"
-  ]
+tags: ["scam", "solidity", "erc-20", "javascript", "typescript"]
 skill: intermediate
 published: 2023-09-15
 lang: sw

@@ -2,7 +2,7 @@
 title: Kuweka data kutoka kwa mikataba-erevu na matukio
 description: Utangulizi wa matukio ya mkataba-erevu na jinsi unavyoweza kuyatumia kuweka data
 author: "jdourlens"
-tags: [ "mikataba erevu", "remix", "uimara", "matukio" ]
+tags: ["smart contracts", "remix", "solidity", "events"]
 skill: intermediate
 lang: sw
 published: 2020-04-03

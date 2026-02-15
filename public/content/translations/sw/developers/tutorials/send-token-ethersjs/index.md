@@ -2,7 +2,7 @@
 title: Kutuma Tokeni Kwa Kutumia ethers.js
 description: Mwongozo rahisi kwa wanaoanza wa kutuma tokeni kwa kutumia ethers.js.
 author: Kim YongJun
-tags: [ "ETHERS.JS", "ERC-20", "TOKENI" ]
+tags: ["ETHERS.JS", "ERC-20", "TOKENS"]
 skill: beginner
 lang: sw
 published: 2021-04-06

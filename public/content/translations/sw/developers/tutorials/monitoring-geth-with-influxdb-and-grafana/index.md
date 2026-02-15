@@ -2,7 +2,7 @@
 title: Kufuatilia Geth kwa kutumia InfluxDB na Grafana
 description: Weka ufuatiliaji kwa nodi yako ya Geth kwa kutumia InfluxDB na Grafana ili kufuatilia utendaji na kutambua matatizo.
 author: "Mario Havel"
-tags: [ "wateja", "nodi" ]
+tags: ["clients", "nodes"]
 skill: intermediate
 lang: sw
 published: 2021-01-13

@@ -2,7 +2,7 @@
 title: Jinsi ya Kuandika & Kupeleka NFT (Sehemu ya 1/3 ya Mfululizo wa Mafunzo ya NFT)
 description: Mafunzo haya ni Sehemu ya 1 ya mfululizo kuhusu NFTs ambayo itakuongoza hatua kwa hatua jinsi ya kuandika na kupeleka mkataba-erevu wa Tokeni Isiyoweza Kugawanyika (tokeni ya ERC-721) kwa kutumia Ethereum na Mfumo wa Faili wa Inter Planetary (IPFS).
 author: "Sumi Mudgil"
-tags: [ "ERC-721", "Alchemy", "Uimara", "mikataba erevu" ]
+tags: ["ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
 lang: sw
 published: 2021-04-22

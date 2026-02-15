@@ -3,7 +3,7 @@ title: Jinsi ya Kusanidi Tellor kama Oracle yako
 description: Mwongozo wa jinsi ya kuanza kuunganisha oracle ya Tellor kwenye itifaki yako
 author: "Tellor"
 lang: sw
-tags: [ "uimara", "mikataba erevu", "oracles" ]
+tags: ["solidity", "smart contracts", "oracles"]
 skill: beginner
 published: 2021-06-29
 source: Tellor Docs

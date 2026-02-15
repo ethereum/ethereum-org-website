@@ -3,14 +3,7 @@ title: Jinsi ya kutumia Manticore kupata hitilafu katika Mkataba-erevu
 description: Jinsi ya kutumia Manticore kupata hitilafu kiotomatiki katika Mkataba-erevu
 author: Trailofbits
 lang: sw
-tags:
-  [
-    "uimara",
-    "mikataba erevu",
-    "usalama",
-    "majaribio",
-    "uthibitishaji rasmi"
-  ]
+tags: ["solidity", "smart contracts", "security", "testing", "formal verification"]
 skill: advanced
 published: 2020-01-13
 source: Building secure contracts

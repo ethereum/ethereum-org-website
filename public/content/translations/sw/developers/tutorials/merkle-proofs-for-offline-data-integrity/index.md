@@ -2,7 +2,7 @@
 title: Uthibitisho wa Merkle kwa uadilifu wa data nje ya mtandao
 description: Kuhakikisha uadilifu wa data onchain kwa data ambayo imehifadhiwa, zaidi, offchain
 author: Ori Pomerantz
-tags: [ "ghala" ]
+tags: ["storage"]
 skill: advanced
 lang: sw
 published: 2021-12-30

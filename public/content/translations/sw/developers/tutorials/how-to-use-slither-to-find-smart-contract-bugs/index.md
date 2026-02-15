@@ -3,7 +3,7 @@ title: Jinsi ya kutumia Slither kupata hitilafu za mkataba-erevu
 description: Jinsi ya kutumia Slither kupata hitilafu kiotomatiki katika mikataba-erevu
 author: Trailofbits
 lang: sw
-tags: [ "uimara", "mikataba erevu", "usalama", "majaribio" ]
+tags: ["solidity", "smart contracts", "security", "testing"]
 skill: advanced
 published: 2020-06-09
 source: Building secure contracts

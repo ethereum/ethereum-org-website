@@ -3,14 +3,7 @@ title: Jinsi ya kutumia Echidna kujaribu mikataba-erevu
 description: Jinsi ya kutumia Echidna kujaribu mikataba-erevu kiotomatiki
 author: "Trailofbits"
 lang: sw
-tags:
-  [
-    "uimara",
-    "mikataba erevu",
-    "usalama",
-    "majaribio",
-    "fuzzing"
-  ]
+tags: ["solidity", "smart contracts", "security", "testing", "fuzzing"]
 skill: advanced
 published: 2020-04-10
 source: Building secure contracts
