@@ -333,6 +333,15 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         </Button>
       </div>
 
+      <div className="px-4 py-4">
+        <BaseLink
+          href="/"
+          className="text-lg font-bold no-underline hover:text-primary"
+        >
+          Ethereum.org
+        </BaseLink>
+      </div>
+
       <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {linkSections.map((section: FooterLinkSection, idx) => (
           <div key={idx}>
