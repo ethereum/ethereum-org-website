@@ -55,7 +55,7 @@ contract EtherSplitter {
     }
 
     function split() public payable {
-        require(msg.value % 2 == 0, 'Kiasi cha wei kisicho shufwa hakiruhusiwi');
+        require(msg.value % 2 == 0, 'Uneven wei amount not allowed');
         receiver1.transfer(msg.value / 2);
         emit Transfer(msg.sender, receiver1, msg.value / 2);
         receiver2.transfer(msg.value / 2);
@@ -113,7 +113,7 @@ import EtherSplitter from "../build/EtherSplitter.json"
 
 use(solidity)
 
-describe("Kigawanyaji cha Ether", () => {
+describe("Ether Splitter", () => {
   const [sender, receiver1, receiver2] = new MockProvider().getWallets()
   let splitter: Contract
 
@@ -124,7 +124,7 @@ describe("Kigawanyaji cha Ether", () => {
     ])
   })
 
-  // ongeza majaribio hapa
+  // add the tests here
 })
 ```
 
@@ -138,7 +138,7 @@ Ifuatayo, tunatangaza kigezo kinachoitwa 'splitter' - huu ni mkataba wetu wa mfa
 Kwanza, tutaangalia ikiwa mbinu ya kugawanya inabadilisha salio kweli la mikoba ya wapokeaji. Ikiwa tutagawanya wei 50 kutoka kwa akaunti ya mtumaji, tutarajia salio la wapokeaji wote wawili kuongezeka kwa wei 25. Tutatumia kilinganishi cha `changeBalances` cha Waffle:
 
 ```ts
-it("Hubadilisha salio la akaunti", async () => {
+it("Changes accounts balances", async () => {
   await expect(() => splitter.split({ value: 50 })).to.changeBalances(
     [receiver1, receiver2],
     [25, 25]
@@ -150,7 +150,7 @@ Kama kigezo cha kwanza cha kilinganishi, tunapitisha safu ya mikoba ya wapokeaji
 Ikiwa tungetaka kuangalia salio la mkoba mmoja maalum, tungeweza pia kutumia kilinganishi cha `changeBalance`, ambacho hakihitaji kupitisha safu, kama katika mfano hapa chini:
 
 ```ts
-it("Hubadilisha salio la akaunti", async () => {
+it("Changes account balance", async () => {
   await expect(() => splitter.split({ value: 50 })).to.changeBalance(
     receiver1,
     25
@@ -165,13 +165,13 @@ Ifuatayo, tutajaribu ikiwa tukio la Uhamisho lilitolewa baada ya kila uhamisho w
 ## Emit {#emit}
 
 ```ts
-it("Hutoa tukio kwenye uhamisho kwa mpokeaji wa kwanza", async () => {
+it("Emits event on the transfer to the first receiver", async () => {
   await expect(splitter.split({ value: 50 }))
     .to.emit(splitter, "Transfer")
     .withArgs(sender.address, receiver1.address, 25)
 })
 
-it("Hutoa tukio kwenye uhamisho kwa mpokeaji wa pili", async () => {
+it("Emits event on the transfer to the second receiver", async () => {
   await expect(splitter.split({ value: 50 }))
     .to.emit(splitter, "Transfer")
     .withArgs(sender.address, receiver2.address, 25)
@@ -185,14 +185,14 @@ Kilinganishi cha `emit` kinaturuhusu kuangalia ikiwa mkataba ulitoa tukio wakati
 Kama mfano wa mwisho, tutaangalia ikiwa muamala ulirejeshwa ikiwa nambari ya wei si shufwa. Tutatumia kilinganishi cha `revertedWith`:
 
 ```ts
-it("Hurejesha kiasi cha Wei kikiwa si shufwa", async () => {
+it("Reverts when Vei amount uneven", async () => {
   await expect(splitter.split({ value: 51 })).to.be.revertedWith(
-    "Kiasi cha wei kisicho shufwa hakiruhusiwi"
+    "Uneven wei amount not allowed"
   )
 })
 ```
 
-Jaribio, likifaulu, litatuhakikishia kwamba muamala ulirejeshwa kweli. Hata hivyo, lazima pia kuwe na mlingano kamili kati ya ujumbe tuliouweka katika taarifa ya `require` na ujumbe tunaotarajia katika `revertedWith`. Tukirudi kwenye msimbo wa mkataba wa EtherSplitter, katika taarifa ya `require` kwa kiasi cha wei, tunatoa ujumbe: 'Kiasi cha wei kisicho shufwa hakiruhusiwi'. Huu unalingana na ujumbe tunaotarajia katika jaribio letu. Kama hazingekuwa sawa, jaribio lingefeli.
+Jaribio, likifaulu, litatuhakikishia kwamba muamala ulirejeshwa kweli. Hata hivyo, lazima pia kuwe na mlingano kamili kati ya ujumbe tuliouweka katika taarifa ya `require` na ujumbe tunaotarajia katika `revertedWith`. Tukirudi kwenye msimbo wa mkataba wa EtherSplitter, katika taarifa ya `require` kwa kiasi cha wei, tunatoa ujumbe: 'Uneven wei amount not allowed'. Huu unalingana na ujumbe tunaotarajia katika jaribio letu. Kama hazingekuwa sawa, jaribio lingefeli.
 
 ## Hongera! {#congratulations}
 

@@ -90,11 +90,11 @@ Ingefanya mkataba wa uzalishaji wa ERC-20 usiwe na maana, lakini hurahisisha mai
 
 ```solidity
     /**
-     * @dev Humpa mpigaji simu tokeni 1000 za kuchezea
+     * @dev Gives the caller 1000 tokens to play with
      */
     function faucet() external {
         _mint(msg.sender, 1000);
-    }   // chaguo za kukokotoa bomba
+    }   // function faucet
 ```
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol}
@@ -123,14 +123,14 @@ Anwani ya tokeni ambayo sisi ni proksi.
 ```solidity
 
     /**
-     * @dev Bainisha anwani ya tokeni
-     * @param tokenAddr_ Anwani ya mkataba wa ERC-20
+     * @dev Specify the token address
+     * @param tokenAddr_ The ERC-20 contract address
      */
     constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);
-    }   // mjenzi
+    }   // constructor
 ```
 
 Anwani ya tokeni ndiyo kigezo pekee tunachohitaji kubainisha.
@@ -146,10 +146,10 @@ Soma thamani kutoka kwa calldata.
         uint _retVal;
 
         require(length < 0x21,
-            "Kikomo cha urefu wa calldataVal ni baiti 32");
+            "calldataVal length limit is 32 bytes");
 
         require(length + startByte <= msg.data.length,
-            "calldataVal inajaribu kusoma zaidi ya calldatasize");
+            "calldataVal trying to read beyond calldatasize");
 ```
 
 Tutaipakia neno moja la baiti 32 (biti 256) kwenye kumbukumbu na kuondoa baiti ambazo si sehemu ya uga tunaotaka.
@@ -206,10 +206,10 @@ Hii inatuacha na chaguo mbili tu za kukokotoa: `transfer` (kwa sababu tunaweza k
 
 ```solidity
 
-        // Piga simu kwa mbinu za kubadilisha hali za tokeni kwa kutumia
-        // maelezo kutoka kwa calldata
+        // Call the state changing methods of token using
+        // information from the calldata
 
-        // bomba
+        // faucet
         if (_func == 1) {
 ```
 
@@ -227,7 +227,7 @@ EOA (akaunti inayomilikiwa nje) au mkataba uliotuita unahitaji.
 Kwa hivyo tunahamisha tokeni zetu zote kwa yeyote aliyetuita.
 
 ```solidity
-        // hamisha (fikiria tuna posho kwa ajili yake)
+        // transfer (assume we have an allowance for it)
         if (_func == 2) {
 ```
 
@@ -267,9 +267,9 @@ Kwa ujumla, uhamisho unachukua baiti 35 za calldata:
 | Kiasi                           |     2 | 33-34 |
 
 ```solidity
-    }   // anguko
+    }   // fallback
 
-}       // mkataba CalldataInterpreter
+}       // contract CalldataInterpreter
 ```
 
 ### test.js {#test-js}
@@ -298,7 +298,7 @@ describe("CalldataInterpreter", function () {
 Tunaanza kwa kupeleka mikataba yote miwili.
 
 ```javascript
-    // Pata tokeni za kuchezea
+    // Get tokens to play with
     const faucetTx = {
 ```
 
@@ -326,7 +326,7 @@ Kuna vigezo viwili tunavyohitaji kutoa kwa muamala:
 Tunaita [mbinu ya `sendTransaction` ya mtia saini](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) kwa sababu tayari tumebainisha lengo (`faucetTx.to`) na tunahitaji muamala utiwe saini.
 
 ```javascript
-// Angalia bomba linatoa tokeni kwa usahihi
+// Check the faucet provides the tokens correctly
 expect(await token.balanceOf(signer.address)).to.equal(1000)
 ```
 
@@ -334,7 +334,7 @@ Hapa tunathibitisha salio.
 Hakuna haja ya kuokoa gesi kwenye chaguo za kukokotoa za `view`, kwa hivyo tunaziendesha kawaida.
 
 ```javascript
-// Ipe CDI posho (idhini haziwezi kuwakilishwa)
+// Give the CDI an allowance (approvals cannot be proxied)
 const approveTX = await token.approve(cdi.address, 10000)
 await approveTX.wait()
 expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
@@ -343,7 +343,7 @@ expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
 Mpe mkalimani wa calldata posho ili aweze kufanya uhamisho.
 
 ```javascript
-// Hamisha tokeni
+// Transfer tokens
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -356,13 +356,13 @@ Unda muamala wa uhamisho. Baiti ya kwanza ni "0x02", ikifuatiwa na anwani ya mwi
 ```javascript
     await (await signer.sendTransaction(transferTx)).wait()
 
-    // Angalia kuwa tuna tokeni 256 pungufu
+    // Check that we have 256 tokens less
     expect (await token.balanceOf(signer.address)).to.equal(1000-256)
 
-    // Na kwamba mwishilio wetu ulizipata
+    // And that our destination got them
     expect (await token.balanceOf(destAddr)).to.equal(256)
-  })    // hiyo
-})      // eleza
+  })    // it
+})      // describe
 ```
 
 ## Kupunguza gharama unapodhibiti mkataba wa mwisho {#reducing-the-cost-when-you-do-control-the-destination-contract}
@@ -381,10 +381,10 @@ Hii inatuwezesha kuwa na idadi ya chaguo za kukokotoa ambazo proksi pekee inawez
 Hapa kuna sehemu mpya:
 
 ```solidity
-    // Anwani pekee inayoruhusiwa kubainisha anwani ya CalldataInterpreter
+    // The only address allowed to specify the CalldataInterpreter address
     address owner;
 
-    // Anwani ya CalldataInterpreter
+    // The CalldataInterpreter address
     address proxy = address(0);
 ```
 
@@ -394,7 +394,7 @@ Mkataba huu unathibitishwa kwanza kwa sababu proksi inatarajia anwani ya tokeni 
 
 ```solidity
     /**
-     * @dev Huita mjenzi wa ERC20.
+     * @dev Calls the ERC20 constructor.
      */
     constructor(
     ) ERC20("Oris useless token-2", "OUT-2") {
@@ -406,15 +406,15 @@ Anwani ya muundaji (inayoitwa `owner`) huhifadhiwa hapa kwa sababu hiyo ndiyo an
 
 ```solidity
     /**
-     * @dev weka anwani ya proksi (CalldataInterpreter).
-     * Inaweza kuitwa mara moja tu na mmiliki
+     * @dev set the proxy address (CalldataInterpreter).
+     * Can only be called once by the owner
      */
     function setProxy(address _proxy) external {
-        require(msg.sender == owner, "Inaweza kuitwa tu na mmiliki");
-        require(proxy == address(0), "Proksi tayari imewekwa");
+        require(msg.sender == owner, "Can only be called by owner");
+        require(proxy == address(0), "Proxy is already set");
 
         proxy = _proxy;
-    }    // chaguo la kukokotoa setProxy
+    }    // function setProxy
 ```
 
 Proksi ina ufikiaji wa upendeleo, kwa sababu inaweza kukwepa ukaguzi wa usalama.
@@ -423,7 +423,7 @@ Mara `proksi` inapokuwa na thamani halisi (sio sifuri), thamani hiyo haiwezi kub
 
 ```solidity
     /**
-     * @dev Chaguo fulani za kukokotoa zinaweza kuitwa tu na proksi.
+     * @dev Some functions can only be called by the proxy.
      */
     modifier onlyProxy {
 ```
@@ -445,7 +445,7 @@ Ikiwa sivyo, `revert`.
 Ikiwa ndivyo, endesha kitendakazi tunachorekebisha.
 
 ```solidity
-   /* Chaguo za kukokotoa zinazoruhusu proksi kuwakilisha akaunti */
+   /* Functions that allow the proxy to act on behalf of accounts */
 
     function transferProxy(address from, address to, uint256 amount)
         public virtual onlyProxy() returns (bool)
@@ -485,7 +485,7 @@ Hapa tuna toleo la proksi la shughuli hizi ambalo:
 Mkalimani wa calldata karibu anafanana na ule ulio juu, isipokuwa kwamba chaguo za kukokotoa zinazowakilishwa hupokea kigezo cha `msg.sender` na hakuna haja ya posho ya `transfer`.
 
 ```solidity
-        // hamisha (hakuna haja ya posho)
+        // transfer (no need for allowance)
         if (_func == 2) {
             token.transferProxy(
                 msg.sender,
@@ -494,7 +494,7 @@ Mkalimani wa calldata karibu anafanana na ule ulio juu, isipokuwa kwamba chaguo 
             );
         }
 
-        // idhinisha
+        // approve
         if (_func == 3) {
             token.approveProxy(
                 msg.sender,
@@ -503,7 +503,7 @@ Mkalimani wa calldata karibu anafanana na ule ulio juu, isipokuwa kwamba chaguo 
             );
         }
 
-        // hamishaKutoka
+        // transferFrom
         if (_func == 4) {
             token.transferFromProxy(
                 msg.sender,
@@ -528,9 +528,9 @@ await token.setProxy(cdi.address)
 Tunahitaji kuuambia mkataba wa ERC-20 ni proksi gani ya kuamini
 
 ```js
-console.log("Anwani ya CalldataInterpreter:", cdi.address)
+console.log("CalldataInterpreter address:", cdi.address)
 
-// Unahitaji watiaji saini wawili ili kuthibitisha posho
+// Need two signers to verify allowances
 const signers = await ethers.getSigners()
 const signer = signers[0]
 const poorSigner = signers[1]
@@ -540,7 +540,7 @@ Ili kuangalia `approve()` na `transferFrom()` tunahitaji mtia saini wa pili.
 Tunaiita `poorSigner` kwa sababu haipati tokeni zetu zozote (inahitaji kuwa na ETH, bila shaka).
 
 ```js
-// Hamisha tokeni
+// Transfer tokens
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -552,7 +552,7 @@ await (await signer.sendTransaction(transferTx)).wait()
 Kwa sababu mkataba wa ERC-20 unaiamini proksi (`cdi`), hatuhitaji posho ya kuwasilisha uhamisho.
 
 ```js
-// idhinisha na uhamisheKutoka
+// approval and transferFrom
 const approveTx = {
   to: cdi.address,
   data: "0x03" + poorSigner.address.slice(2, 42) + "00FF",
@@ -567,7 +567,7 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Angalia mchanganyiko wa idhinisha / uhamisheKutoka ulifanywa kwa usahihi
+// Check the approve / transferFrom combo was done correctly
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 

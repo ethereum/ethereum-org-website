@@ -570,7 +570,7 @@ The Tangerine Whistle fork lilikuwa jibu la kwanza kwa mashambulizi ya kunyimwa 
 
 Uma wa DAO ulikuwa jibu kwa [shambulio la DAO la 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) ambapo mkataba usio salama wa [DAO](/glossary/#dao) uliporwa zaidi ya ETH milioni 3.6 katika udukuzi. Uma ulihamisha fedha kutoka kwa mkataba wenye hitilafu hadi [mkataba mpya](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) wenye kazi moja tu: kutoa. Mtu yeyote aliyepoteza pesa anaweza kutoa ETH 1 kwa kila tokeni 100 za DAO kwenye pochi zao.
 
-''Njia hii ya utekelezaji iliamuliwa kwa kura na jamii ya Ethereum.''. Mmiliki yeyote wa ETH aliweza kupiga kura kupitia muamala kwenye [jukwaa la kupigia kura](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). ''Uamuzi wa kugawanya ilifika zaidi ya asilimia 85 ya kura.''.
+Njia hii ya utekelezaji iliamuliwa kwa kura na jamii ya Ethereum. Mmiliki yeyote wa ETH aliweza kupiga kura kupitia muamala kwenye [jukwaa la kupigia kura](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Uamuzi wa kugawanya ilifika zaidi ya asilimia 85 ya kura.
 
 Baadhi ya wachimbaji walikataa kutumia uma kwa sababu tukio la DAO halikuwa na kasoro katika itifaki. Waliendelea na kuunda [Ethereum Classic](https://ethereumclassic.org/).
 
