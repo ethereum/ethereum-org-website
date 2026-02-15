@@ -58,8 +58,8 @@ contract VendingMachine {
     error Unauthorized();
     function buy(uint amount) public payable {
         if (amount > msg.value / 2 ether)
-            revert("যথেষ্ট ইথার প্রদান করা হয়নি।");
-        // ক্রয় সম্পাদন করুন।
+            revert("Not enough Ether provided.");
+        // Perform the purchase.
     }
     function withdraw() public {
         if (msg.sender != owner)
@@ -152,7 +152,7 @@ contract VendingMachine {
 একবার কন্ট্র্যাক্ট জরুরী স্টপ সক্রিয় করলে, নির্দিষ্ট ফাংশনগুলো কলযোগ্য হবে না। এটি গ্লোবাল ভ্যারিয়েবলকে রেফারেন্স করে এমন একটি মডিফায়ারে নির্বাচিত ফাংশনগুলো র‍্যাপ করে অর্জন করা হয়। নীচে [একটি উদাহরণ](https://github.com/fravoll/solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol) দেওয়া হল যা কন্ট্র্যাক্টে এই প্যাটার্নের একটি বাস্তবায়ন বর্ণনা করে:
 
 ```solidity
-// এই কোডটি পেশাগতভাবে অডিট করা হয়নি এবং নিরাপত্তা বা সঠিকতা সম্পর্কে কোনো প্রতিশ্রুতি দেয় না। আপনার নিজের ঝুঁকিতে ব্যবহার করুন।
+// This code has not been professionally audited and makes no promises about safety or correctness. Use at your own risk.
 
 contract EmergencyStop {
 
@@ -169,7 +169,7 @@ contract EmergencyStop {
     }
 
     modifier onlyAuthorized {
-        // এখানে msg.sender-এর অনুমোদনের জন্য চেক করুন
+        // Check for authorization of msg.sender here
         _;
     }
 
@@ -182,11 +182,11 @@ contract EmergencyStop {
     }
 
     function deposit() public payable stoppedInEmergency {
-        // এখানে ডিপোজিট লজিক ঘটছে
+        // Deposit logic happening here
     }
 
     function emergencyWithdraw() public onlyWhenStopped {
-        // এখানে জরুরী উইথড্র ঘটছে
+        // Emergency withdraw happening here
     }
 }
 ```
@@ -238,7 +238,7 @@ EVM কনকারেন্সি অনুমতি দেয় না, য�
 একটি সাধারণ স্মার্ট কন্ট্র্যাক্ট (‘ভিকটিম’) বিবেচনা করুন যা যে কাউকে ইথার জমা এবং উইথড্র করতে দেয়:
 
 ```solidity
-// এই কন্ট্র্যাক্টটি দুর্বল। প্রোডাকশনে ব্যবহার করবেন না
+// This contract is vulnerable. Do not use in production
 
 contract Victim {
     mapping (address => uint256) public balances;
@@ -292,16 +292,16 @@ contract Victim {
 এখানে কোনো ভুল নেই, শুধুমাত্র `Attacker`-এর আরেকটি ফাংশন আছে যা `Victim`-এ আবার `withdraw()` কল করে যদি ইনকামিং `msg.sender.call.value` থেকে অবশিষ্ট গ্যাস 40,000 এর বেশি হয়। এটি `Attacker` কে `Victim`-এ পুনরায় প্রবেশ করার এবং `withdraw`-এর প্রথম ইনভোকেশন সম্পূর্ণ হওয়ার _আগে_ আরও ফান্ড উইথড্র করার ক্ষমতা দেয়। চক্রটি দেখতে এইরকম:
 
 ```solidity
-- অ্যাটাকারের EOA 1 ETH দিয়ে `Attacker.beginAttack()` কল করে
-- `Attacker.beginAttack()` `Victim`-এ 1 ETH জমা করে
-- `Attacker` `Victim`-এ `withdraw()` কল করে
-- `Victim` `Attacker`-এর ব্যালেন্স চেক করে (1 ETH)
-- `Victim` `Attacker`-কে 1 ETH পাঠায় (যা ডিফল্ট ফাংশন ট্রিগার করে)
-- `Attacker` আবার `Victim.withdraw()` কল করে (নোট করুন যে `Victim` প্রথম উইথড্রয়াল থেকে `Attacker`-এর ব্যালেন্স কমায়নি)
-- `Victim` `Attacker`-এর ব্যালেন্স চেক করে (যা এখনও 1 ETH কারণ এটি প্রথম কলের ইফেক্ট প্রয়োগ করেনি)
-- `Victim` `Attacker`-কে 1 ETH পাঠায় (যা ডিফল্ট ফাংশন ট্রিগার করে এবং `Attacker`-কে `withdraw` ফাংশনে পুনরায় প্রবেশ করতে দেয়)
-- প্রক্রিয়াটি চলতে থাকে যতক্ষণ না `Attacker`-এর গ্যাস শেষ হয়ে যায়, সেই সময়ে `msg.sender.call.value` অতিরিক্ত উইথড্রয়াল ট্রিগার না করে ফিরে আসে
-- `Victim` অবশেষে প্রথম লেনদেনের (এবং পরবর্তীগুলোর) ফলাফল তার স্টেটে প্রয়োগ করে, তাই `Attacker`-এর ব্যালেন্স 0 এ সেট করা হয়
+- Attacker's EOA calls `Attacker.beginAttack()` with 1 ETH
+- `Attacker.beginAttack()` deposits 1 ETH into `Victim`
+- `Attacker` calls `withdraw() in `Victim`
+- `Victim` checks `Attacker`’s balance (1 ETH)
+- `Victim` sends 1 ETH to `Attacker` (which triggers the default function)
+- `Attacker` calls `Victim.withdraw()` again (note that `Victim` hasn’t reduced `Attacker`’s balance from the first withdrawal)
+- `Victim` checks `Attacker`’s balance (which is still 1 ETH because it hasn’t applied the effects of the first call)
+- `Victim` sends 1 ETH to `Attacker` (which triggers the default function and allows `Attacker` to reenter the `withdraw` function)
+- The process repeats until `Attacker` runs out of gas, at which point `msg.sender.call.value` returns without triggering additional withdrawals
+- `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
 সারাংশ হল যে যেহেতু ফাংশন এক্সিকিউশন সম্পূর্ণ না হওয়া পর্যন্ত কলারের ব্যালেন্স 0 এ সেট করা হয় না, তাই পরবর্তী ইনভোকেশনগুলো সফল হবে এবং কলারকে তাদের ব্যালেন্স একাধিকবার উইথড্র করতে দেবে। এই ধরনের অ্যাটাক একটি স্মার্ট কন্ট্র্যাক্টকে তার ফান্ড থেকে খালি করার জন্য ব্যবহার করা যেতে পারে, যেমনটি [2016 সালের DAO হ্যাক](https://www.coindesk.com/learn/understanding-the-dao-attack)-এ হয়েছিল। রিএন্ট্রেন্সি অ্যাটাক এখনও স্মার্ট কন্ট্র্যাক্টগুলোর জন্য একটি গুরুতর সমস্যা যেমন [রিএন্ট্রেন্সি এক্সপ্লয়েটের পাবলিক তালিকা](https://github.com/pcaversaccio/reentrancy-attacks) দেখায়।
@@ -335,15 +335,15 @@ contract MutexPattern {
     mapping(address => uint256) public balances;
 
     modifier noReentrancy() {
-        require(!locked, "রিএন্ট্রেন্সি থেকে ব্লক করা হয়েছে।");
+        require(!locked, "Blocked from reentrancy.");
         locked = true;
         _;
         locked = false;
     }
-    // এই ফাংশনটি একটি মিউটেক্স দ্বারা সুরক্ষিত, তাই `msg.sender.call` এর মধ্যে থেকে রিএন্ট্রেন্ট কলগুলো আবার `withdraw` কল করতে পারে না।
-    // `return` স্টেটমেন্ট `true` মূল্যায়ন করে কিন্তু এখনও মডিফায়ারে `locked = false` স্টেটমেন্ট মূল্যায়ন করে
+    // This function is protected by a mutex, so reentrant calls from within `msg.sender.call` cannot call `withdraw` again.
+    //  The `return` statement evaluates to `true` but still evaluates the `locked = false` statement in the modifier
     function withdraw(uint _amount) public payable noReentrancy returns(bool) {
-        require(balances[msg.sender] >= _amount, "উইথড্র করার জন্য কোনো ব্যালেন্স নেই।");
+        require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
         balances[msg.sender] -= _amount;
         (bool success, ) = msg.sender.call{value: _amount}("");
@@ -367,18 +367,19 @@ contract MutexPattern {
 ```
 pragma solidity ^0.7.6;
 
-// এই কন্ট্র্যাক্টটি একটি টাইম ভল্ট হিসেবে কাজ করার জন্য ডিজাইন করা হয়েছে।
-// ব্যবহারকারী এই কন্ট্র্যাক্টে জমা করতে পারে কিন্তু অন্তত এক সপ্তাহের জন্য উইথড্র করতে পারে না।
-// ব্যবহারকারী 1 সপ্তাহের অপেক্ষার সময়কাল পরেও অপেক্ষার সময় বাড়াতে পারে।
+// This contract is designed to act as a time vault.
+// User can deposit into this contract but cannot withdraw for at least a week.
+// User can also extend the wait time beyond the 1 week waiting period.
 
 /*
-1. TimeLock ডিপ্লয় করুন
-2. TimeLock এর অ্যাড্রেস দিয়ে Attack ডিপ্লয় করুন
-3. 1 ইথার পাঠিয়ে Attack.attack কল করুন। আপনি অবিলম্বে আপনার ইথার
-   উইথড্র করতে পারবেন।
+1. Deploy TimeLock
+2. Deploy Attack with address of TimeLock
+3. Call Attack.attack sending 1 ether. You will immediately be able to
+   withdraw your ether.
 
-কি হলো?
-Attack TimeLock.lockTime ওভারফ্লো ঘটিয়েছে এবং 1 সপ্তাহের অপেক্ষার সময়কালের আগে উইথড্র করতে পেরেছে।
+What happened?
+Attack caused the TimeLock.lockTime to overflow and was able to withdraw
+before the 1 week waiting period.
 */
 
 contract TimeLock {
@@ -395,14 +396,14 @@ contract TimeLock {
     }
 
     function withdraw() public {
-        require(balances[msg.sender] > 0, "অপর্যাপ্ত ফান্ড");
-        require(block.timestamp > lockTime[msg.sender], "লক টাইম মেয়াদোত্তীর্ণ হয়নি");
+        require(balances[msg.sender] > 0, "Insufficient funds");
+        require(block.timestamp > lockTime[msg.sender], "Lock time not expired");
 
         uint amount = balances[msg.sender];
         balances[msg.sender] = 0;
 
         (bool sent, ) = msg.sender.call{value: amount}("");
-        require(sent, "ইথার পাঠাতে ব্যর্থ");
+        require(sent, "Failed to send Ether");
     }
 }
 
@@ -418,11 +419,11 @@ contract Attack {
     function attack() public payable {
         timeLock.deposit{value: msg.value}();
         /*
-        যদি t = বর্তমান লক টাইম হয় তবে আমাদের এমন x খুঁজে বের করতে হবে যাতে
+        if t = current lock time then we need to find x such that
         x + t = 2**256 = 0
-        তাই x = -t
+        so x = -t
         2**256 = type(uint).max + 1
-        তাই x = type(uint).max + 1 - t
+        so x = type(uint).max + 1 - t
         */
         timeLock.increaseLockTime(
             type(uint).max + 1 - timeLock.lockTime(address(this))

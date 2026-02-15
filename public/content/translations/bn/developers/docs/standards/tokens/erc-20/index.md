@@ -91,12 +91,12 @@ from web3 import Web3
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
 dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
-weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # র‍্যাপড ইথার (WETH)
+weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ether (WETH)
 
 acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
-# এটি একটি ERC-20 টোকেন কন্ট্রাক্টের একটি সরলীকৃত কন্ট্রাক্ট অ্যাপ্লিকেশন বাইনারি ইন্টারফেস (ABI)।
-# এটি শুধুমাত্র এই পদ্ধতিগুলিকে প্রকাশ করবে: balanceOf(address), decimals(), symbol() এবং totalSupply()
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-20 Token Contract.
+# It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'account', 'type': 'address'}],
@@ -132,8 +132,8 @@ addr_balance = dai_contract.functions.balanceOf(acc_address).call() / 10**decima
 
 #  DAI
 print("===== %s =====" % symbol)
-print("মোট সাপ্লাই:", totalSupply)
-print("ঠিকানার ব্যালেন্স:", addr_balance)
+print("Total Supply:", totalSupply)
+print("Addr Balance:", addr_balance)
 
 weth_contract = w3.eth.contract(address=w3.to_checksum_address(weth_token_addr), abi=simplified_abi)
 symbol = weth_contract.functions.symbol().call()
@@ -143,8 +143,8 @@ addr_balance = weth_contract.functions.balanceOf(acc_address).call() / 10**decim
 
 #  WETH
 print("===== %s =====" % symbol)
-print("মোট সাপ্লাই:", totalSupply)
-print("ঠিকানার ব্যালেন্স:", addr_balance)
+print("Total Supply:", totalSupply)
+print("Addr Balance:", addr_balance)
 ```
 
 ## জ্ঞাত সমস্যা {#erc20-issues}

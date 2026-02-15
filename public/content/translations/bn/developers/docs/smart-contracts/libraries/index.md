@@ -31,7 +31,7 @@ contract Ownable {
     }
 
     modifier onlyOwner() {
-        require(owner == msg.sender, "Ownable: আহ্বানকারী মালিক নন");
+        require(owner == msg.sender, "Ownable: caller is not the owner");
         _;
     }
 }
@@ -40,10 +40,10 @@ contract Ownable {
 আপনার কন্ট্র্যাক্টে এই ধরনের একটি বিল্ডিং ব্লক ব্যবহার করার জন্য, আপনাকে প্রথমে এটি ইমপোর্ট করতে হবে এবং তারপরে আপনার নিজের কন্ট্র্যাক্টে এটি থেকে এক্সটেন্ড করতে হবে। এটি আপনাকে আপনার নিজের ফাংশন সুরক্ষিত করতে বেস `Ownable` কন্ট্র্যাক্ট দ্বারা প্রদত্ত মডিফায়ার ব্যবহার করার অনুমতি দেবে।
 
 ```solidity
-import ".../Ownable.sol"; // ইমপোর্ট করা লাইব্রেরির পাথ
+import ".../Ownable.sol"; // Path to the imported library
 
 contract MyContract is Ownable {
-    // নিম্নলিখিত ফাংশনটি শুধুমাত্র মালিক দ্বারা কল করা যেতে পারে
+    // The following function can only be called by the owner
     function secured() onlyOwner public {
         msg.sender.transfer(1 ether);
     }
@@ -65,7 +65,7 @@ contract MyContract is Ownable {
 আপনার প্রজেক্টে কীভাবে অন্তর্ভুক্ত করবেন তার নির্দিষ্ট নির্দেশাবলীর জন্য আপনি যে লাইব্রেরিটি অন্তর্ভুক্ত করছেন তার নথিপত্র দেখুন। বেশ কয়েকটি Solidity কন্ট্র্যাক্ট লাইব্রেরি `npm` ব্যবহার করে প্যাকেজ করা হয়, তাই আপনি শুধু `npm install` করে সেগুলিকে ইনস্টল করতে পারেন। কন্ট্র্যাক্ট [কম্পাইল](/developers/docs/smart-contracts/compiling/) করার জন্য বেশিরভাগ টুল আপনার `node_modules`-এ স্মার্ট কন্ট্র্যাক্ট লাইব্রেরি খুঁজবে, তাই আপনি নিম্নলিখিতটি করতে পারেন:
 
 ```solidity
-// এটি আপনার node_modules থেকে @openzeppelin/contracts লাইব্রেরি লোড করবে
+// This will load the @openzeppelin/contracts library from your node_modules
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract MyNFT is ERC721 {

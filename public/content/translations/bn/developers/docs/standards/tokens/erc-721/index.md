@@ -86,12 +86,12 @@ from web3._utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties কন্ট্র্যাক্ট
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties সেলস অকশন
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction
 
-# এটি একটি ERC-721 NFT কন্ট্র্যাক্টের একটি সরলীকৃত কন্ট্র্যাক্ট অ্যাপ্লিকেশন বাইনারি ইন্টারফেস (ABI)।
-# এটি শুধুমাত্র এই পদ্ধতিগুলিকে প্রকাশ করবে: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-721 NFT Contract.
+# It will expose only the methods: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
@@ -144,12 +144,12 @@ ck_contract = w3.eth.contract(address=w3.to_checksum_address(ck_token_addr), abi
 name = ck_contract.functions.name().call()
 symbol = ck_contract.functions.symbol().call()
 kitties_auctions = ck_contract.functions.balanceOf(acc_address).call()
-print(f"{name} [{symbol}] অকশনে থাকা NFTs: {kitties_auctions}")
+print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 
 pregnant_kitties = ck_contract.functions.pregnantKitties().call()
-print(f"{name} [{symbol}] গর্ভবতী NFTs: {pregnant_kitties}")
+print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
-# স্থানান্তরিত কিটিদের সম্পর্কে তথ্য পেতে ট্রান্সফার ইভেন্ট ABI ব্যবহার করে।
+# Using the Transfer Event ABI to get info about transferred Kitties.
 tx_event_abi = {
     'anonymous': False,
     'inputs': [
@@ -160,7 +160,7 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# লগগুলি ফিল্টার করার জন্য আমাদের ইভেন্টের স্বাক্ষর প্রয়োজন
+# We need the event's signature to filter the logs
 event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.get_logs({
@@ -169,17 +169,17 @@ logs = w3.eth.get_logs({
     "topics": [event_signature]
 })
 
-# নোট:
-#   - যদি কোনো ট্রান্সফার ইভেন্ট ফেরত না আসে তাহলে ব্লকের সংখ্যা 120 থেকে বাড়ান।
-#   - আপনি যদি কোনো ট্রান্সফার ইভেন্ট খুঁজে না পান তাহলে আপনি এখানে একটি টোকেনআইডি পাওয়ার চেষ্টাও করতে পারেন:
+# Notes:
+#   - Increase the number of blocks up from 120 if no Transfer event is returned.
+#   - If you didn't find any Transfer event you can also try to get a tokenId at:
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-#       ইভেন্টের লগগুলি প্রসারিত করতে ক্লিক করুন এবং এর "tokenId" আর্গুমেন্টটি কপি করুন
+#       Click to expand the event's logs and copy its "tokenId" argument
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
 if recent_tx:
-    kitty_id = recent_tx[0]['tokenId'] # উপরের লিঙ্ক থেকে "tokenId" এখানে পেস্ট করুন
+    kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
     is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
-    print(f"{name} [{symbol}] NFTs {kitty_id} গর্ভবতী: {is_pregnant}")
+    print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
 CryptoKitties কন্ট্র্যাক্টে স্ট্যান্ডার্ড ইভেন্টগুলি ছাড়াও কিছু আকর্ষণীয় ইভেন্ট রয়েছে।
@@ -187,7 +187,7 @@ CryptoKitties কন্ট্র্যাক্টে স্ট্যান্�
 আসুন তাদের মধ্যে দুটি পরীক্ষা করি, `Pregnant` এবং `Birth`।
 
 ```python
-# নতুন কিটিদের সম্পর্কে তথ্য পেতে Pregnant এবং Birth ইভেন্টের ABI ব্যবহার করে।
+# Using the Pregnant and Birth Events ABI to get info about new Kitties.
 ck_extra_events_abi = [
     {
         'anonymous': False,
@@ -211,13 +211,13 @@ ck_extra_events_abi = [
         'type': 'event'
     }]
 
-# লগগুলি ফিল্টার করার জন্য আমাদের ইভেন্টের স্বাক্ষর প্রয়োজন
+# We need the event's signature to filter the logs
 ck_event_signatures = [
     w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
     w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
-# এখানে একটি Pregnant ইভেন্ট রয়েছে:
+# Here is a Pregnant Event:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
 pregnant_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,
@@ -227,7 +227,7 @@ pregnant_logs = w3.eth.get_logs({
 
 recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
-# এখানে একটি Birth ইভেন্ট রয়েছে:
+# Here is a Birth Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
 birth_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,

@@ -49,33 +49,33 @@ Remix IDE, Solidity এবং Vyper উভয় ক্ষেত্রেই ক
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // "public" কীওয়ার্ডটি ভেরিয়েবলগুলোকে
-    // অন্যান্য কন্ট্র্যাক্ট থেকে অ্যাক্সেসযোগ্য করে তোলে
+    // The keyword "public" makes variables
+    // accessible from other contracts
     address public minter;
     mapping (address => uint) public balances;
 
-    // ইভেন্টগুলো ক্লায়েন্টদের আপনার ঘোষিত নির্দিষ্ট
-    // কন্ট্র্যাক্ট পরিবর্তনে প্রতিক্রিয়া জানাতে দেয়
+    // Events allow clients to react to specific
+    // contract changes you declare
     event Sent(address from, address to, uint amount);
 
-    // কন্সট্রাক্টর কোড শুধুমাত্র তখনই চলে যখন কন্ট্র্যাক্টটি
-    // তৈরি করা হয়
+    // Constructor code is only run when the contract
+    // is created
     constructor() {
         minter = msg.sender;
     }
 
-    // একটি ঠিকানায় নতুন তৈরি করা কয়েনের একটি পরিমাণ পাঠায়
-    // শুধুমাত্র কন্ট্র্যাক্ট সৃষ্টিকর্তা দ্বারা কল করা যেতে পারে
+    // Sends an amount of newly created coins to an address
+    // Can only be called by the contract creator
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
         balances[receiver] += amount;
     }
 
-    // যেকোনো কলার থেকে একটি ঠিকানায়
-    // বিদ্যমান কয়েনের একটি পরিমাণ পাঠায়
+    // Sends an amount of existing coins
+    // from any caller to an address
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "অপর্যাপ্ত ব্যালেন্স।");
+        require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -120,101 +120,87 @@ contract Coin {
 ### উদাহরণ {#example}
 
 ```python
-# ওপেন অকশন
+# Open Auction
 
-# অকশনের প্যারামিটার
-
-# বেনিফিশিয়ারি সর্বোচ্চ দরদাতার কাছ থেকে টাকা পায়
-
+# Auction params
+# Beneficiary receives money from the highest bidder
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
-# অকশনের বর্তমান অবস্থা
-
+# Current state of auction
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# শেষে true তে সেট করা হয়, কোনো পরিবর্তন নিষিদ্ধ করে
-
+# Set to true at the end, disallows any change
 ended: public(bool)
 
-# রিফান্ড করা বিডগুলোর হিসাব রাখুন যাতে আমরা উইথড্র প্যাটার্ন অনুসরণ করতে পারি
-
+# Keep track of refunded bids so we can follow the withdraw pattern
 pendingReturns: public(HashMap[address, uint256])
 
-# `_beneficiary` ঠিকানার পক্ষ থেকে `_bidding_time`
-
-# সেকেন্ড বিডিং সময় সহ একটি সাধারণ অকশন তৈরি করুন।
-
+# Create a simple auction with `_bidding_time`
+# seconds bidding time on behalf of the
+# beneficiary address `_beneficiary`.
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# এই লেনদেনের সাথে পাঠানো ভ্যালু দিয়ে অকশনে বিড করুন।
-
-# অকশন না জিতলে শুধুমাত্র ভ্যালুটি
-
-# রিফান্ড করা হবে।
-
+# Bid on the auction with the value sent
+# together with this transaction.
+# The value will only be refunded if the
+# auction is not won.
 @external
 @payable
 def bid():
-    # বিডিংয়ের সময়সীমা শেষ হয়েছে কিনা তা পরীক্ষা করুন।
+    # Check if bidding period is over.
     assert block.timestamp < self.auctionEnd
-    # বিড যথেষ্ট বেশি কিনা তা পরীক্ষা করুন
+    # Check if bid is high enough
     assert msg.value > self.highestBid
-    # আগের উচ্চ দরদাতার জন্য রিফান্ডের হিসাব রাখুন
+    # Track the refund for the previous high bidder
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # নতুন উচ্চ বিডের হিসাব রাখুন
+    # Track new high bid
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# পূর্বে রিফান্ড করা একটি বিড উইথড্র করুন। উইথড্র প্যাটার্নটি
-
-# এখানে একটি নিরাপত্তা সমস্যা এড়াতে ব্যবহার করা হয়েছে। যদি রিফান্ডগুলো সরাসরি
-
-# bid() এর অংশ হিসাবে পাঠানো হতো, একটি ক্ষতিকারক বিডিং কন্ট্র্যাক্ট
-
-# সেই রিফান্ডগুলো ব্লক করতে পারত এবং এভাবে নতুন উচ্চতর বিড আসা ব্লক করে দিত।
-
+# Withdraw a previously refunded bid. The withdraw pattern is
+# used here to avoid a security issue. If refunds were directly
+# sent as part of bid(), a malicious bidding contract could block
+# those refunds and thus block new higher bids from coming in.
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# অকশন শেষ করুন এবং সর্বোচ্চ বিড
-
-# বেনিফিশিয়ারির কাছে পাঠান।
-
+# End the auction and send the highest bid
+# to the beneficiary.
 @external
 def endAuction():
-    # অন্যান্য কন্ট্র্যাক্টের সাথে ইন্টারঅ্যাক্ট করে এমন ফাংশনগুলোকে গঠন করার জন্য এটি একটি ভালো নির্দেশিকা
-    # (যেমন, তারা ফাংশন কল করে বা ইথার পাঠায়)
-    # তিনটি পর্যায়ে:
-    # ১. শর্তাবলী পরীক্ষা করা
-    # ২. কাজ সম্পাদন করা (সম্ভাব্য শর্তাবলী পরিবর্তন করা)
-    # ৩. অন্যান্য কন্ট্র্যাক্টের সাথে ইন্টারঅ্যাক্ট করা
-    # যদি এই পর্যায়গুলো মিশ্রিত হয়, তবে অন্য কন্ট্র্যাক্টটি
-    # বর্তমান কন্ট্র্যাক্টে আবার কল করতে পারে এবং স্টেট পরিবর্তন করতে পারে বা
-    # একাধিকবার এফেক্ট (ইথার পেআউট) সম্পাদন করতে পারে।
-    # যদি অভ্যন্তরীণভাবে কল করা ফাংশনগুলোতে এক্সটার্নাল
-    # কন্ট্র্যাক্টের সাথে ইন্টারঅ্যাকশন অন্তর্ভুক্ত থাকে, তবে সেগুলোকে
-    # এক্সটার্নাল কন্ট্র্যাক্টের সাথে ইন্টারঅ্যাকশন হিসেবেও বিবেচনা করতে হবে।
+    # It is a good guideline to structure functions that interact
+    # with other contracts (i.e., they call functions or send ether)
+    # into three phases:
+    # 1. checking conditions
+    # 2. performing actions (potentially changing conditions)
+    # 3. interacting with other contracts
+    # If these phases are mixed up, the other contract could call
+    # back into the current contract and modify the state or cause
+    # effects (ether payout) to be performed multiple times.
+    # If functions called internally include interaction with external
+    # contracts, they also have to be considered interaction with
+    # external contracts.
 
-    # ১. শর্তাবলী
-    # অকশনের শেষ সময় পৌঁছেছে কিনা তা পরীক্ষা করুন
+    # 1. Conditions
+    # Check if auction endtime has been reached
     assert block.timestamp >= self.auctionEnd
-    # এই ফাংশনটি ইতিমধ্যে কল করা হয়েছে কিনা তা পরীক্ষা করুন
+    # Check if this function has already been called
     assert not self.ended
 
-    # ২. এফেক্টস
+    # 2. Effects
     self.ended = True
 
-    # ৩. ইন্টারঅ্যাকশন
+    # 3. Interaction
     send(self.beneficiary, self.highestBid)
 ```
 

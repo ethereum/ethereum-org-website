@@ -124,14 +124,14 @@ contract VeryBasicERC223Token {
 contract RecipientContract is IERC223Recipient {
     event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
-    address tokenA; // একমাত্র টোকেন যা আমরা গ্রহণ করতে চাই।
+    address tokenA; // The only token that we want to accept.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // এটা বোঝা গুরুত্বপূর্ণ যে এই ফাংশনের মধ্যে
-        // msg.sender হল প্রাপ্ত টোকেনের ঠিকানা,
-        // msg.value সর্বদা 0 কারণ বেশিরভাগ ক্ষেত্রে টোকেন কন্ট্র্যাক্টটি ইথারের মালিক নয় বা পাঠায় না,
-        // _from হল টোকেন স্থানান্তরের প্রেরক,
-        // _value হল জমাকৃত টোকেনের পরিমাণ।
+        // It is important to understand that within this function
+        // msg.sender is the address of a token that is being received,
+        // msg.value  is always 0 as the token contract does not own or send ether in most cases,
+        // _from      is the sender of the token transfer,
+        // _value     is the amount of tokens that was deposited.
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
@@ -161,11 +161,11 @@ ERC-223 টোকেনের `transfer(address,uint256)` বা `transfer(addre
 contract RecipientContract is IERC223Recipient {
     event Foo();
     event Bar(uint256 someNumber);
-    address tokenA; // একমাত্র টোকেন যা আমরা গ্রহণ করতে চাই।
+    address tokenA; // The only token that we want to accept.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
         require(msg.sender == tokenA);
-        address(this).call(_data); // ইনকামিং লেনদেন পরিচালনা করুন এবং একটি পরবর্তী ফাংশন কল সঞ্চালন করুন।
+        address(this).call(_data); // Handle incoming transaction and perform a subsequent function call.
     }
     function foo() public
     {
