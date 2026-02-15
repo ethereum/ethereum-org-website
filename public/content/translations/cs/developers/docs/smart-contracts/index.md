@@ -4,7 +4,7 @@ description: "Přehled smart kontraktů se zaměřením na jejich jedinečné vl
 lang: cs
 ---
 
-## Co to je smart kontrakt? Co je to chytrý kontrakt? {#what-is-a-smart-contract}
+## Co je to smart kontrakt? {#what-is-a-smart-contract}
 
 „Smart kontrakt“ je jednoduše program, který je spuštěn na blockchainu Ethereum. Je to sbírka kódu (jeho funkcí) a dat (jeho stavu), které sídlí na specifické adrese na blockchainu Ethereum.
 
@@ -49,14 +49,14 @@ contract VendingMachine {
 
     // Umožní vlastníkovi navýšit zůstatek cupcake v chytrém kontraktu
     function refill(uint amount) public {
-        require(msg.sender == owner, "Doplňovat může pouze vlastník.");
+        require(msg.sender == owner, "Only the owner can refill.");
         cupcakeBalances[address(this)] += amount;
     }
 
     // Umožní komukoliv zakoupit cupcake
     function purchase(uint amount) public payable {
-        require(msg.value >= amount * 1 ether, "Za jeden cupcake musíte zaplatit alespoň 1 ETH");
-        require(cupcakeBalances[address(this)] >= amount, "Na skladě není dostatek cupcaků k dokončení tohoto nákupu");
+        require(msg.value >= amount * 1 ether, "You must pay at least 1 ETH per cupcake");
+        require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
         cupcakeBalances[address(this)] -= amount;
         cupcakeBalances[msg.sender] += amount;
     }

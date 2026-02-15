@@ -1,5 +1,5 @@
 ---
-title: "Rollupy s nulovým přístupem"
+title: "Rollupy s nulovou znalostí"
 description: "Úvod do rollupů s nulovou znalostí – řešení pro škálování, které používá komunita Etherea."
 lang: cs
 ---

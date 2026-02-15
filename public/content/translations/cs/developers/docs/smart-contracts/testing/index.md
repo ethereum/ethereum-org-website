@@ -12,7 +12,7 @@ Z těchto důvodů je testování chytrých kontraktů před [nasazením](/devel
 
 Tato stránka vysvětluje, jak testovat chytré kontrakty před nasazením do Etherea. Předpokládá se, že jste obeznámeni s [chytrými kontrakty](/developers/docs/smart-contracts/).
 
-## Co je to testování chytrého kontraktu? Co je testování chytrých kontraktů? {#what-is-smart-contract-testing}
+## Co je testování chytrých kontraktů? {#what-is-smart-contract-testing}
 
 Testování chytrých kontraktů je proces ověřování, zda kód chytrého kontraktu funguje podle očekávání. Testování je užitečné pro kontrolu, zda konkrétní chytrý kontrakt splňuje požadavky na spolehlivost, použitelnost a bezpečnost.
 

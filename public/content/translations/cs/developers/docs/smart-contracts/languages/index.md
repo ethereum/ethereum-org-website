@@ -75,7 +75,7 @@ contract Coin {
     // Odešle množství existujících mincí
     // od jakéhokoli volajícího na adresu
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "Nedostatečný zůstatek.");
+        require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -93,7 +93,7 @@ Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontr
 - Efektivní generování bytekódu
 - Úmyslně má méně funkcí než Solidity s cílem učinit kontrakty bezpečnějšími a snáze auditovatelnými. Vyper nepodporuje:
   - Modifikátory
-  - \#Dědičnost
+  - Dědičnost
   - Inline sestavení (assembly)
   - Přetěžování funkcí
   - Přetěžování operátorů

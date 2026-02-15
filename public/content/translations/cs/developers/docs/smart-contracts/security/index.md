@@ -58,7 +58,7 @@ contract VendingMachine {
     error Unauthorized();
     function buy(uint amount) public payable {
         if (amount > msg.value / 2 ether)
-            revert("Nebylo poskytnuto dostatek etherů.");
+            revert("Not enough Ether provided.");
         // Proveďte nákup.
     }
     function withdraw() public {
@@ -396,14 +396,14 @@ contract TimeLock {
     }
 
     function withdraw() public {
-        require(balances[msg.sender] > 0, "Nedostatečné prostředky");
-        require(block.timestamp > lockTime[msg.sender], "Doba uzamčení nevypršela");
+        require(balances[msg.sender] > 0, "Insufficient funds");
+        require(block.timestamp > lockTime[msg.sender], "Lock time not expired");
 
         uint amount = balances[msg.sender];
         balances[msg.sender] = 0;
 
         (bool sent, ) = msg.sender.call{value: amount}("");
-        require(sent, "Nepodařilo se odeslat ether");
+        require(sent, "Failed to send Ether");
     }
 }
 

@@ -1,5 +1,5 @@
 ---
-title: Standart tokenu ERC-20
+title: Standard tokenu ERC-20
 description: "Seznamte se s ERC-20, standardem pro zaměnitelné tokeny na síti Ethereum, který umožňuje interoperabilní tokenové aplikace."
 lang: cs
 ---
@@ -85,12 +85,12 @@ from web3 import Web3
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
 dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
-weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Zabalený ether (WETH)
+weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ether (WETH)
 
 acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
-# Toto je zjednodušené binární rozhraní aplikace (ABI) kontraktu tokenu ERC-20.
-# Zpřístupní pouze metody: balanceOf(address), decimals(), symbol() a totalSupply()
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-20 Token Contract.
+# It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'account', 'type': 'address'}],
@@ -126,8 +126,8 @@ addr_balance = dai_contract.functions.balanceOf(acc_address).call() / 10**decima
 
 #  DAI
 print("===== %s =====" % symbol)
-print("Celková zásoba:", totalSupply)
-print("Zůstatek na adrese:", addr_balance)
+print("Total Supply:", totalSupply)
+print("Addr Balance:", addr_balance)
 
 weth_contract = w3.eth.contract(address=w3.to_checksum_address(weth_token_addr), abi=simplified_abi)
 symbol = weth_contract.functions.symbol().call()
@@ -137,8 +137,8 @@ addr_balance = weth_contract.functions.balanceOf(acc_address).call() / 10**decim
 
 #  WETH
 print("===== %s =====" % symbol)
-print("Celková zásoba:", totalSupply)
-print("Zůstatek na adrese:", addr_balance)
+print("Total Supply:", totalSupply)
+print("Addr Balance:", addr_balance)
 ```
 
 ## Známé problémy {#erc20-issues}
@@ -165,7 +165,7 @@ Když jsou ERC-20 tokeny poslány do smart kontraktu, který není k práci s ni
 I když není možné tomuto problému s ERC-20 zcela zabránit, existují metody, které umožňují výrazně snížit možnost ztráty tokenů pro koncového uživatele:
 
 - Nejčastějším problémem je, když uživatel pošle tokeny na adresu samotného kontraktu tokenu (např. USDT vložené na adresu kontraktu tokenu USDT). Doporučuje se omezit funkci `transfer(..)` tak, aby takové pokusy o převod vrátila zpět. Zvažte přidání kontroly `require(_to != address(this));` v rámci implementace funkce `transfer(..)`.
-- Funkce `transfer(..)` obecně není určena k vkládání tokenů do kontraktů. `approve(..) Vzor `& transferFrom(..)`se namísto toho používá k vkládání tokenů ERC-20 do kontraktů. Je možné omezit funkci převodu tak, aby se s ní zakázalo vkládání tokenů do jakýchkoli kontraktů, může to však narušit kompatibilitu s kontrakty, které předpokládají, že tokeny lze vkládat do kontraktů pomocí funkce`trasnfer(..)` (např. u poolů likvidity Uniswap).
+- Funkce `transfer(..)` obecně není určena k vkládání tokenů do kontraktů. Vzor `approve(..) & transferFrom(..)` se namísto toho používá k vkládání tokenů ERC-20 do kontraktů. Je možné omezit funkci převodu tak, aby se s ní zakázalo vkládání tokenů do jakýchkoli kontraktů, může to však narušit kompatibilitu s kontrakty, které předpokládají, že tokeny lze vkládat do kontraktů pomocí funkce `trasnfer(..)` (např. u poolů likvidity Uniswap).
 - Vždy předpokládejte, že tokeny ERC-20 mohou skončit ve vašem kontraktu, i když váš kontrakt nemá nikdy žádné přijímat. Na straně příjemce neexistuje žádný způsob, jak zabránit náhodným vkladům nebo je odmítnout. Doporučuje se implementovat funkci, která by umožnila extrahovat náhodně vložené tokeny ERC-20.
 - Zvažte použití alternativních standardů tokenů.
 
