@@ -31,13 +31,13 @@ Kwa kutumia watoa huduma, maktaba hizi zinakuruhusu kuungana na Ethereum na kuso
 **Mfano wa Ethers**
 
 ```js
-// BrowserProvider hufunga mtoa huduma wa kawaida wa Web3, ambayo ni
-// kile MetaMask hudunga kama window.ethereum katika kila ukurasa
+// A BrowserProvider wraps a standard Web3 provider, which is
+// what MetaMask injects as window.ethereum into each page
 const provider = new ethers.BrowserProvider(window.ethereum)
 
-// Programu-jalizi ya MetaMask pia inaruhusu kusaini miamala ili
-// kutuma ether na kulipia ili kubadilisha hali ndani ya mnyororo wa bloku.
-// Kwa hili, tunahitaji msaini wa akaunti...
+// The MetaMask plugin also allows signing transactions to
+// send ether and pay to change state within the blockchain.
+// For this, we need the account signer...
 const signer = provider.getSigner()
 ```
 
@@ -45,23 +45,23 @@ const signer = provider.getSigner()
 
 ```js
 var web3 = new Web3("http://localhost:8545")
-// au
+// or
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
-// badilisha mtoa huduma
+// change provider
 web3.setProvider("ws://localhost:8546")
-// au
+// or
 web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
-// Kutumia mtoa huduma wa IPC katika node.js
+// Using the IPC provider in node.js
 var net = require("net")
-var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // njia ya mac os
-// au
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // mac os path
+// or
 var web3 = new Web3(
   new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
-) // njia ya mac os
-// kwenye windows njia ni: "\\\\.\\pipe\\geth.ipc"
-// kwenye linux njia ni: "/users/myuser/.ethereum/geth.ipc"
+) // mac os path
+// on windows the path is: "\\\\.\\pipe\\geth.ipc"
+// on linux the path is: "/users/myuser/.ethereum/geth.ipc"
 ```
 
 Baada ya kusanidi utaweza kuuliza mnyororo wa bloku kwa:
@@ -79,32 +79,32 @@ Maktaba hizi hukupa utendaji wa kuunda mikoba, kusimamia funguo na kusaini miama
 Huu hapa ni mfano kutoka kwa Ethers
 
 ```js
-// Unda kielelezo cha mkoba kutoka kwa mnemonic...
+// Create a wallet instance from a mnemonic...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
 walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ...au kutoka kwa ufunguo wa faragha
+// ...or from a private key
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
-// kweli
+// true
 
-// Anwani kama Ahadi kulingana na API ya Signer
+// The address as a Promise per the Signer API
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// Anwani ya Mkoba pia inapatikana kwa usawa
+// A Wallet address is also available synchronously
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
-// Vipengele vya ndani vya kriptografia
+// The internal cryptographic components
 walletMnemonic.privateKey
 // '0x1da6847600b0ee25e9ad9a52abbd786dd2502fa4005dd5af9310b7cc7a3b25db'
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// Mnemonic ya mkoba
+// The wallet mnemonic
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -112,12 +112,12 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// Kumbuka: Mkoba ulioundwa na ufunguo wa faragha hauna
-//       mnemonic (utolewaji unazuia)
+// Note: A wallet created with a private key does not
+//       have a mnemonic (the derivation prevents it)
 walletPrivateKey.mnemonic
-// batili
+// null
 
-// Kusaini ujumbe
+// Signing a message
 walletMnemonic.signMessage("Hello World")
 // { Promise: '0x14280e5885a19f60e536de50097e96e3738c7acae4e9e62d67272d794b8127d31c03d9cd59781d4ee31fb4e1b893bd9b020ec67dfa65cfb51e2bdadbb1de26d91c' }
 
@@ -126,21 +126,21 @@ tx = {
   value: utils.parseEther("1.0"),
 }
 
-// Kusaini muamala
+// Signing a transaction
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// Mbinu ya kuunganisha inarudisha kielelezo kipya cha
-// Mkoba uliounganishwa na mtoa huduma
+// The connect method returns a new instance of the
+// Wallet connected to a provider
 wallet = walletMnemonic.connect(provider)
 
-// Kuuliza mtandao
+// Querying the network
 wallet.getBalance()
 // { Promise: { BigNumber: "42" } }
 wallet.getTransactionCount()
 // { Promise: 0 }
 
-// Kutuma ether
+// Sending ether
 wallet.sendTransaction(tx)
 ```
 
@@ -224,12 +224,12 @@ Thamani za ETH ziko katika Wei kwa chaguo-msingi. ETH 1 = WEI 1,000,000,000,000,
 Na katika ethers inaonekana kama hivi:
 
 ```js
-// Pata salio la akaunti (kwa anwani au jina la ENS)
+// Get the balance of an account (by address or ENS name)
 balance = await provider.getBalance("ethers.eth")
 // { BigNumber: "2337132817842795605" }
 
-// Mara nyingi utahitaji kupangilia matokeo kwa ajili ya mtumiaji
-// ambaye anapendelea kuona thamani katika ether (badala ya wei)
+// Often you will need to format the output for the user
+// which prefer to see values in ether (instead of wei)
 ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```

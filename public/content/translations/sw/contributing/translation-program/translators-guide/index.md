@@ -1,14 +1,14 @@
 ---
-title: "''Mwongozo wa watafsiri.''"
+title: Mwongozo wa watafsiri
 lang: sw
-description: "''Maelekezo na vidokezo kwa watafsiri wa ethereum.org.''"
+description: Maelekezo na vidokezo kwa watafsiri wa ethereum.org
 ---
 
 # Mwongozo wa Mtindo wa Tafsiri wa Ethereum.org {#style-guide}
 
-''Mwongozo wa mtindo wa tafsiri wa ethereum.org unaorodhesha baadhi ya miongozo muhimu, maelekezo na vidokezo kwa watafsiri, ukitusaidia kutafsiri na kuandaa wavuti kwa lugha za mtaa.''.
+Mwongozo wa mtindo wa tafsiri wa ethereum.org unaorodhesha baadhi ya miongozo muhimu, maelekezo na vidokezo kwa watafsiri, ukitusaidia kutafsiri na kuandaa wavuti kwa lugha za mtaa.
 
-''Hati hii inatumika kama mwongozo wa jumla na haijaziingizwa kwenye lugha yoyote maalum.''.
+Hati hii inatumika kama mwongozo wa jumla na haijaziingizwa kwenye lugha yoyote maalum.
 
 Ikiwa una maswali, mapendekezo au maoni yoyote, jisikie huru kuwasiliana nasi kupitia translations@ethereum.org, tuma ujumbe kwa @ethdotorg kwenye Crowdin, au [jiunge na Discord yetu](https://discord.gg/ethereum-org), ambapo unaweza kututumia ujumbe katika chaneli ya #translations au wasiliana na mwanachama yeyote wa timu.
 
@@ -20,9 +20,9 @@ Ikiwa ungependa kujifunza zaidi kuhusu Crowdin na kutumia baadhi ya vipengele vy
 
 ## Kupata Kiini cha Ujumbe {#capturing-the-essence}
 
-''Wakati wa kutafsiri maudhui ya ethereum.org, epuka tafsiri ya maneno moja kwa moja.''.
+Wakati wa kutafsiri maudhui ya ethereum.org, epuka tafsiri ya maneno moja kwa moja.
 
-''Ni muhimu kwamba tafsiri zikamatishe kiini cha ujumbe.''. Hii inaweza kumaanisha kutunga upya maneno fulani, au kutumia tafsiri zenye maelezo badala ya kutafsiri maudhui neno kwa neno.
+Ni muhimu kwamba tafsiri zikamatishe kiini cha ujumbe. Hii inaweza kumaanisha kutunga upya maneno fulani, au kutumia tafsiri zenye maelezo badala ya kutafsiri maudhui neno kwa neno.
 
 Lugha tofauti zina kanuni tofauti za sarufi, kaida na mpangilio wa maneno. Wakati wa kutafsiri, tafadhali zingatia jinsi sentensi zinavyoundwa katika lugha lengwa, na epuka kutafsiri neno kwa neno kutoka kwa chanzo cha Kiingereza, kwani hii inaweza kusababisha muundo duni wa sentensi na usomaji.
 
@@ -76,7 +76,7 @@ Baadhi ya mifano ya misimbo ya lugha kwa lugha zinazozungumzwa zaidi:
 
 Baadhi ya misururu ina vichwa vya habari vya makala za nje. Kurasa zetu nyingi za nyaraka za wasanidi programu zina viungo vya makala za nje kwa ajili ya usomaji zaidi. Mifuatano iliyo na mada za makala inahitaji kutafsiliwa, bila kujali lugha ya makala, ili kuhakikisha matumizi thabiti zaidi ya mtumiaji kwa wanaotazama ukurasa katika lugha yao.
 
-''Unaweza kupata baadhi ya mifano ya jinsi mistari hii inavyoonekana kwa watafsiri na jinsi ya kuibaini hapa chini (viungo vya makala vinapatikana zaidi sehemu ya chini ya kurasa hizi, katika sehemu ya 'kusoma zaidi'):
+Unaweza kupata baadhi ya mifano ya jinsi mistari hii inavyoonekana kwa watafsiri na jinsi ya kuibaini hapa chini (viungo vya makala vinapatikana zaidi sehemu ya chini ya kurasa hizi, katika sehemu ya 'kusoma zaidi'):
 
 ![Vichwa vya habari vya makala katika upau wa kando.png](./article-titles-in-sidebar.png)
 ![Vichwa vya habari vya makala katika kihariri.png](./article-titles-in-editor.png)
@@ -93,23 +93,23 @@ Mfano wa onyo la Crowdin unaposahau kuongeza lebo kwenye tafsiri yako:
 
 ## Kushughulikia lebo na vijisehemu vya msimbo {#dealing-with-tags}
 
-''Sehemu kubwa ya maudhui ya kozi ina alama na vigezo, ambavyo vinaangaziwa kwa rangi ya njano katika mhariri wa jukwaa la tafsiri.''. 'Kila moja ina kazi yake, hivyo zinapaswa kutumika kwa njia sahihi.''.
+Sehemu kubwa ya maudhui ya kozi ina alama na vigezo, ambavyo vinaangaziwa kwa rangi ya njano katika mhariri wa jukwaa la tafsiri. Kila moja ina kazi yake, hivyo zinapaswa kutumika kwa njia sahihi.
 
 **Mipangilio ya Crowdin**
 
-''Ili iwe rahisi kusimamia alama na kunakili moja kwa moja kutoka chanzo, tunapendekeza ubadilishe mipangilio yako kwenye mhariri wa jukwaa la tafsiri.''.
+Ili iwe rahisi kusimamia alama na kunakili moja kwa moja kutoka chanzo, tunapendekeza ubadilishe mipangilio yako kwenye mhariri wa jukwaa la tafsiri.
 
 1. Fungua mipangilio
    ![Jinsi ya kufungua mipangilio katika kihariri](./editor-settings.png)
 
-2. ''Shuka chini hadi sehemu ya 'alama ya HTML'.''
+2. Shuka chini hadi sehemu ya 'alama ya HTML'.
 
 3. Chagua 'Ficha'
    ![Tafadhali chagua 'Ficha'](./hide-tags.png)
 
-4. ''Bonyeza 'hifadhi'.''
+4. Bonyeza 'hifadhi'.
 
-''Kwa kuchagua chaguo hili, maandiko kamili ya alama hayatatarajiwa kuonekana tena, na badala yake yataonyesha kwa namba.''.
+Kwa kuchagua chaguo hili, maandiko kamili ya alama hayatatarajiwa kuonekana tena, na badala yake yataonyesha kwa namba.
 Wakati wa kutafsiri, kubofya lebo hii kutanakili kiotomatiki lebo kamili kwenye sehemu ya tafsiri.
 
 **Viungo**
