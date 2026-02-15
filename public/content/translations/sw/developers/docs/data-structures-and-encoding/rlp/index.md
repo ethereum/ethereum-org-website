@@ -156,7 +156,7 @@ def to_integer(b):
 
 - [RLP katika Ethereum](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [Ethereum kwa ndani: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
-- Coglio, A. (2020). Kiambishi awali cha Urefu Kinachojirudia cha Ethereum katika ACL2. Nakala ya awali ya arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
+- [Coglio, A. (2020). Kiambishi awali cha Urefu Kinachojirudia cha Ethereum katika ACL2. Nakala ya awali ya arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
 ## Mada zinazohusiana {#related-topics}
 
