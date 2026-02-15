@@ -88,29 +88,29 @@ lang: uk
 pragma solidity >=0.4.21 <0.6.0;
 
 contract Oracle {
-  Request[] requests; //список запитів, зроблених до контракту
-  uint currentId = 0; //збільшення ідентифікатора запиту
-  uint minQuorum = 2; //мінімальна кількість відповідей, яку потрібно отримати, перш ніж оголосити остаточний результат
-  uint totalOracleCount = 3; //Жорстко закодована кількість оракулів
+  Request[] requests; //list of requests made to the contract
+  uint currentId = 0; //increasing request id
+  uint minQuorum = 2; //minimum number of responses to receive before declaring final result
+  uint totalOracleCount = 3; // Hardcoded oracle count
 
-  // визначає загальний запит до API
+  // defines a general api request
   struct Request {
-    uint id;                            //ідентифікатор запиту
-    string urlToQuery;                  //URL-адреса API
-    string attributeToFetch;            //атрибут json (ключ), який потрібно отримати у відповіді
-    string agreedValue;                 //значення з ключа
-    mapping(uint => string) answers;     //відповіді, надані оракулами
-    mapping(address => uint) quorum;    //оракули, які запитуватимуть відповідь (1=оракул не проголосував, 2=оракул проголосував)
+    uint id;                            //request id
+    string urlToQuery;                  //API url
+    string attributeToFetch;            //json attribute (key) to retrieve in the response
+    string agreedValue;                 //value from key
+    mapping(uint => string) answers;     //answers provided by the oracles
+    mapping(address => uint) quorum;    //oracles which will query the answer (1=oracle hasn't voted, 2=oracle has voted)
   }
 
-  //подія, яка запускає оракула за межами блокчейну
+  //event that triggers oracle outside of the blockchain
   event NewRequest (
     uint id,
     string urlToQuery,
     string attributeToFetch
   );
 
-  //спрацьовує, коли є консенсус щодо остаточного результату
+  //triggered when there's a consensus on the final result
   event UpdatedRequest (
     uint id,
     string urlToQuery,
@@ -127,23 +127,23 @@ contract Oracle {
     uint length = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
     Request storage r = requests[length-1];
 
-    // Жорстко закодовані адреси оракулів
+    // Hardcoded oracles address
     r.quorum[address(0x6c2339b46F41a06f09CA0051ddAD54D1e582bA77)] = 1;
     r.quorum[address(0xb5346CF224c02186606e5f89EACC21eC25398077)] = 1;
     r.quorum[address(0xa2997F1CA363D11a0a35bB1Ac0Ff7849bc13e914)] = 1;
 
-    // запустити подію, яку має виявити оракул за межами блокчейну
+    // launch an event to be detected by oracle outside of blockchain
     emit NewRequest (
       currentId,
       _urlToQuery,
       _attributeToFetch
     );
 
-    // збільшити ідентифікатор запиту
+    // increase request id
     currentId++;
   }
 
-  //викликається оракулом для запису своєї відповіді
+  //called by the oracle to record its answer
   function updateRequest (
     uint _id,
     string memory _valueRetrieved
@@ -151,18 +151,18 @@ contract Oracle {
 
     Request storage currRequest = requests[_id];
 
-    //перевірити, чи є оракул у списку довірених оракулів
-    //і чи оракул ще не проголосував
+    //check if oracle is in the list of trusted oracles
+    //and if the oracle hasn't voted yet
     if(currRequest.quorum[address(msg.sender)] == 1){
 
-      //позначка, що ця адреса проголосувала
+      //marking that this address has voted
       currRequest.quorum[msg.sender] = 2;
 
-      //перебір «масиву» відповідей, доки позиція не звільниться, і збереження отриманого значення
+      //iterate through "array" of answers until a position if free and save the retrieved value
       uint tmpI = 0;
       bool found = false;
       while(!found) {
-        //знайти перший порожній слот
+        //find first empty slot
         if(bytes(currRequest.answers[tmpI]).length == 0){
           found = true;
           currRequest.answers[tmpI] = _valueRetrieved;
@@ -172,8 +172,8 @@ contract Oracle {
 
       uint currentQuorum = 0;
 
-      //перебір списку оракулів і перевірка, чи достатньо оракулів (мінімальний кворум)
-      //проголосували за ту саму відповідь, що й поточна
+      //iterate through oracle list and check if enough oracles(minimum quorum)
+      //have voted the same answer as the current one
       for(uint i = 0; i < totalOracleCount; i++){
         bytes memory a = bytes(currRequest.answers[i]);
         bytes memory b = bytes(_valueRetrieved);
