@@ -65,11 +65,12 @@ pragma solidity ^0.8.0;
 
 /**
  * @title ERC1363
- * @dev ERC-20 टोकनसाठी एक एक्सटेंशन इंटरफेस जो `transfer` किंवा `transferFrom` नंतर प्राप्तकर्ता करारावर कोड कार्यान्वित करण्यास, किंवा `approve` नंतर स्पेंडर करारावर कोड कार्यान्वित करण्यास समर्थन देतो, हे सर्व एकाच व्यवहारामध्ये.
+ * @dev An extension interface for ERC-20 tokens that supports executing code on a recipient contract
+ * after `transfer` or `transferFrom`, or code on a spender contract after `approve`, in a single transaction.
  */
 interface ERC1363 is ERC20, ERC165 {
   /*
-   * टीप: या इंटरफेससाठी ERC-165 आयडेंटिफायर 0xb0202a11 आहे.
+   * NOTE: the ERC-165 identifier for this interface is 0xb0202a11.
    * 0xb0202a11 ===
    *   bytes4(keccak256('transferAndCall(address,uint256)')) ^
    *   bytes4(keccak256('transferAndCall(address,uint256,bytes)')) ^
@@ -80,61 +81,61 @@ interface ERC1363 is ERC20, ERC165 {
    */
 
   /**
-   * @dev कॉलरच्या खात्यातून `to` कडे `value` रकमेचे टोकन हलवते
-   * आणि नंतर `to` वर `ERC1363Receiver::onTransferReceived` कॉल करते.
-   * @param to तो पत्ता जिथे टोकन हस्तांतरित केले जात आहेत.
-   * @param value हस्तांतरित करायच्या टोकनची रक्कम.
-   * @return एक बुलियन मूल्य जे ऑपरेशन यशस्वी झाले असल्याचे दर्शवते, एरर थ्रो न केल्यास.
+   * @dev Moves a `value` amount of tokens from the caller's account to `to`
+   * and then calls `ERC1363Receiver::onTransferReceived` on `to`.
+   * @param to The address to which tokens are being transferred.
+   * @param value The amount of tokens to be transferred.
+   * @return A boolean value indicating the operation succeeded unless throwing.
    */
   function transferAndCall(address to, uint256 value) external returns (bool);
 
   /**
-   * @dev कॉलरच्या खात्यातून `to` कडे `value` रकमेचे टोकन हलवते
-   * आणि नंतर `to` वर `ERC1363Receiver::onTransferReceived` कॉल करते.
-   * @param to तो पत्ता जिथे टोकन हस्तांतरित केले जात आहेत.
-   * @param value हस्तांतरित करायच्या टोकनची रक्कम.
-   * @param data अतिरिक्त डेटा, ज्याचे कोणतेही विशिष्ट स्वरूप नाही, `to` ला कॉलमध्ये पाठवला जातो.
-   * @return एक बुलियन मूल्य जे ऑपरेशन यशस्वी झाले असल्याचे दर्शवते, एरर थ्रो न केल्यास.
+   * @dev Moves a `value` amount of tokens from the caller's account to `to`
+   * and then calls `ERC1363Receiver::onTransferReceived` on `to`.
+   * @param to The address to which tokens are being transferred.
+   * @param value The amount of tokens to be transferred.
+   * @param data Additional data with no specified format, sent in call to `to`.
+   * @return A boolean value indicating the operation succeeded unless throwing.
    */
   function transferAndCall(address to, uint256 value, bytes calldata data) external returns (bool);
 
   /**
-   * @dev अलाउन्स मेकॅनिझम वापरून `from` कडून `to` कडे `value` रकमेचे टोकन हलवते
-   * आणि नंतर `to` वर `ERC1363Receiver::onTransferReceived` कॉल करते.
-   * @param from तो पत्ता जिथून टोकन पाठवायचे आहेत.
-   * @param to तो पत्ता जिथे टोकन हस्तांतरित केले जात आहेत.
-   * @param value हस्तांतरित करायच्या टोकनची रक्कम.
-   * @return एक बुलियन मूल्य जे ऑपरेशन यशस्वी झाले असल्याचे दर्शवते, एरर थ्रो न केल्यास.
+   * @dev Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism
+   * and then calls `ERC1363Receiver::onTransferReceived` on `to`.
+   * @param from The address from which to send tokens.
+   * @param to The address to which tokens are being transferred.
+   * @param value The amount of tokens to be transferred.
+   * @return A boolean value indicating the operation succeeded unless throwing.
    */
   function transferFromAndCall(address from, address to, uint256 value) external returns (bool);
 
   /**
-   * @dev अलाउन्स मेकॅनिझम वापरून `from` कडून `to` कडे `value` रकमेचे टोकन हलवते
-   * आणि नंतर `to` वर `ERC1363Receiver::onTransferReceived` कॉल करते.
-   * @param from तो पत्ता जिथून टोकन पाठवायचे आहेत.
-   * @param to तो पत्ता जिथे टोकन हस्तांतरित केले जात आहेत.
-   * @param value हस्तांतरित करायच्या टोकनची रक्कम.
-   * @param data अतिरिक्त डेटा, ज्याचे कोणतेही विशिष्ट स्वरूप नाही, `to` ला कॉलमध्ये पाठवला जातो.
-   * @return एक बुलियन मूल्य जे ऑपरेशन यशस्वी झाले असल्याचे दर्शवते, एरर थ्रो न केल्यास.
+   * @dev Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism
+   * and then calls `ERC1363Receiver::onTransferReceived` on `to`.
+   * @param from The address from which to send tokens.
+   * @param to The address to which tokens are being transferred.
+   * @param value The amount of tokens to be transferred.
+   * @param data Additional data with no specified format, sent in call to `to`.
+   * @return A boolean value indicating the operation succeeded unless throwing.
    */
   function transferFromAndCall(address from, address to, uint256 value, bytes calldata data) external returns (bool);
 
   /**
-   * @dev कॉलरच्या टोकनवर `spender` च्या अलाउन्स म्हणून `value` रकमेचे टोकन सेट करते
-   * आणि नंतर `spender` वर `ERC1363Spender::onApprovalReceived` कॉल करते.
-   * @param spender तो पत्ता जो निधी खर्च करेल.
-   * @param value खर्च करायच्या टोकनची रक्कम.
-   * @return एक बुलियन मूल्य जे ऑपरेशन यशस्वी झाले असल्याचे दर्शवते, एरर थ्रो न केल्यास.
+   * @dev Sets a `value` amount of tokens as the allowance of `spender` over the caller's tokens
+   * and then calls `ERC1363Spender::onApprovalReceived` on `spender`.
+   * @param spender The address which will spend the funds.
+   * @param value The amount of tokens to be spent.
+   * @return A boolean value indicating the operation succeeded unless throwing.
    */
   function approveAndCall(address spender, uint256 value) external returns (bool);
 
   /**
-   * @dev कॉलरच्या टोकनवर `spender` च्या अलाउन्स म्हणून `value` रकमेचे टोकन सेट करते
-   * आणि नंतर `spender` वर `ERC1363Spender::onApprovalReceived` कॉल करते.
-   * @param spender तो पत्ता जो निधी खर्च करेल.
-   * @param value खर्च करायच्या टोकनची रक्कम.
-   * @param data अतिरिक्त डेटा, ज्याचे कोणतेही विशिष्ट स्वरूप नाही, `spender` ला कॉलमध्ये पाठवला जातो.
-   * @return एक बुलियन मूल्य जे ऑपरेशन यशस्वी झाले असल्याचे दर्शवते, एरर थ्रो न केल्यास.
+   * @dev Sets a `value` amount of tokens as the allowance of `spender` over the caller's tokens
+   * and then calls `ERC1363Spender::onApprovalReceived` on `spender`.
+   * @param spender The address which will spend the funds.
+   * @param value The amount of tokens to be spent.
+   * @param data Additional data with no specified format, sent in call to `spender`.
+   * @return A boolean value indicating the operation succeeded unless throwing.
    */
   function approveAndCall(address spender, uint256 value, bytes calldata data) external returns (bool);
 }
@@ -160,22 +161,22 @@ interface ERC165 {
 ```solidity
 /**
  * @title ERC1363Receiver
- * @dev कोणत्याही करारासाठी इंटरफेस जो ERC-1363 टोकन करारांमधून `transferAndCall` किंवा `transferFromAndCall` ला समर्थन देऊ इच्छितो.
+ * @dev Interface for any contract that wants to support `transferAndCall` or `transferFromAndCall` from ERC-1363 token contracts.
  */
 interface ERC1363Receiver {
   /**
-   * @dev जेव्हा ERC-1363 टोकन `operator` द्वारे `from` कडून `ERC1363::transferAndCall` किंवा `ERC1363::transferFromAndCall` द्वारे या करारावर हस्तांतरित केले जातात,
-   * तेव्हा हे फंक्शन कॉल केले जाते.
+   * @dev Whenever ERC-1363 tokens are transferred to this contract via `ERC1363::transferAndCall` or `ERC1363::transferFromAndCall`
+   * by `operator` from `from`, this function is called.
    *
-   * टीप: हस्तांतरण स्वीकारण्यासाठी, याने हे परत केले पाहिजे
+   * NOTE: To accept the transfer, this must return
    * `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))`
-   * (म्हणजे 0x88a7ca5c, किंवा त्याचे स्वतःचे फंक्शन सिलेक्टर).
+   * (i.e. 0x88a7ca5c, or its own function selector).
    *
-   * @param operator तो पत्ता ज्याने `transferAndCall` किंवा `transferFromAndCall` फंक्शन कॉल केले.
-   * @param from तो पत्ता जिथून टोकन हस्तांतरित केले आहेत.
-   * @param value हस्तांतरित केलेल्या टोकनची रक्कम.
-   * @param data कोणत्याही विशिष्ट स्वरूपाशिवाय अतिरिक्त डेटा.
-   * @return `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))` जर हस्तांतरणास परवानगी असेल, एरर थ्रो न केल्यास.
+   * @param operator The address which called `transferAndCall` or `transferFromAndCall` function.
+   * @param from The address which are tokens transferred from.
+   * @param value The amount of tokens transferred.
+   * @param data Additional data with no specified format.
+   * @return `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))` if transfer is allowed unless throwing.
    */
   function onTransferReceived(address operator, address from, uint256 value, bytes calldata data) external returns (bytes4);
 }
@@ -186,21 +187,21 @@ interface ERC1363Receiver {
 ```solidity
 /**
  * @title ERC1363Spender
- * @dev कोणत्याही करारासाठी इंटरफेस जो ERC-1363 टोकन करारांमधून `approveAndCall` ला समर्थन देऊ इच्छितो.
+ * @dev Interface for any contract that wants to support `approveAndCall` from ERC-1363 token contracts.
  */
 interface ERC1363Spender {
   /**
-   * @dev जेव्हा एखादा ERC-1363 टोकनचा `owner` `ERC1363::approveAndCall` द्वारे या कराराला
-   * त्यांचे टोकन खर्च करण्यासाठी मंजूर करतो, तेव्हा हे फंक्शन कॉल केले जाते.
+   * @dev Whenever an ERC-1363 tokens `owner` approves this contract via `ERC1363::approveAndCall`
+   * to spend their tokens, this function is called.
    *
-   * टीप: मंजुरी स्वीकारण्यासाठी, याने हे परत केले पाहिजे
+   * NOTE: To accept the approval, this must return
    * `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))`
-   * (म्हणजे 0x7b04a2d0, किंवा त्याचे स्वतःचे फंक्शन सिलेक्टर).
+   * (i.e. 0x7b04a2d0, or its own function selector).
    *
-   * @param owner तो पत्ता ज्याने `approveAndCall` फंक्शन कॉल केले आणि जो पूर्वी टोकनचा मालक होता.
-   * @param value खर्च करायच्या टोकनची रक्कम.
-   * @param data कोणत्याही विशिष्ट स्वरूपाशिवाय अतिरिक्त डेटा.
-   * @return `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))` जर मंजुरीस परवानगी असेल, एरर थ्रो न केल्यास.
+   * @param owner The address which called `approveAndCall` function and previously owned the tokens.
+   * @param value The amount of tokens to be spent.
+   * @param data Additional data with no specified format.
+   * @return `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))` if approval is allowed unless throwing.
    */
   function onApprovalReceived(address owner, uint256 value, bytes calldata data) external returns (bytes4);
 }

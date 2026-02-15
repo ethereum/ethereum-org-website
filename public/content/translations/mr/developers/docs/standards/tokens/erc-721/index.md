@@ -84,12 +84,12 @@ from web3._utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties कॉन्ट्रॅक्ट
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties सेल्स ऑक्शन
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction
 
-# हे ERC-721 NFT कॉन्ट्रॅक्टचे एक सरलीकृत कॉन्ट्रॅक्ट ॲप्लिकेशन बायनरी इंटरफेस (ABI) आहे.
-# हे फक्त balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply() या पद्धती उघड करेल.
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-721 NFT Contract.
+# It will expose only the methods: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
@@ -147,7 +147,7 @@ print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 pregnant_kitties = ck_contract.functions.pregnantKitties().call()
 print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
-# हस्तांतरित किटीजची माहिती मिळविण्यासाठी ट्रान्सफर इव्हेंट ABI चा वापर करणे.
+# Using the Transfer Event ABI to get info about transferred Kitties.
 tx_event_abi = {
     'anonymous': False,
     'inputs': [
@@ -158,7 +158,7 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# लॉग फिल्टर करण्यासाठी आम्हाला इव्हेंटच्या स्वाक्षरीची आवश्यकता आहे
+# We need the event's signature to filter the logs
 event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.get_logs({
@@ -167,15 +167,15 @@ logs = w3.eth.get_logs({
     "topics": [event_signature]
 })
 
-# टीप:
-#   - जर कोणताही ट्रान्सफर इव्हेंट परत आला नाही तर ब्लॉकची संख्या 120 पासून वाढवा.
-#   - जर तुम्हाला कोणताही ट्रान्सफर इव्हेंट आढळला नाही तर तुम्ही येथे tokenId मिळवण्याचा प्रयत्न करू शकता:
+# Notes:
+#   - Increase the number of blocks up from 120 if no Transfer event is returned.
+#   - If you didn't find any Transfer event you can also try to get a tokenId at:
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-#       इव्हेंटचे लॉग विस्तृत करण्यासाठी क्लिक करा आणि त्याचा "tokenId" युक्तिवाद कॉपी करा
+#       Click to expand the event's logs and copy its "tokenId" argument
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
 if recent_tx:
-    kitty_id = recent_tx[0]['tokenId'] # वरील लिंकवरून "tokenId" येथे पेस्ट करा
+    kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
     is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
     print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
@@ -185,7 +185,7 @@ CryptoKitties कॉन्ट्रॅक्टमध्ये मानक इ�
 चला त्यापैकी `Pregnant` आणि `Birth` हे दोन तपासूया.
 
 ```python
-# नवीन किटीजची माहिती मिळविण्यासाठी प्रेग्नंट आणि बर्थ इव्हेंट्स ABI चा वापर करणे.
+# Using the Pregnant and Birth Events ABI to get info about new Kitties.
 ck_extra_events_abi = [
     {
         'anonymous': False,
@@ -209,13 +209,13 @@ ck_extra_events_abi = [
         'type': 'event'
     }]
 
-# लॉग फिल्टर करण्यासाठी आम्हाला इव्हेंटच्या स्वाक्षरीची आवश्यकता आहे
+# We need the event's signature to filter the logs
 ck_event_signatures = [
     w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
     w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
-# येथे एक प्रेग्नंट इव्हेंट आहे:
+# Here is a Pregnant Event:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
 pregnant_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,
@@ -225,7 +225,7 @@ pregnant_logs = w3.eth.get_logs({
 
 recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
-# येथे एक बर्थ इव्हेंट आहे:
+# Here is a Birth Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
 birth_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,

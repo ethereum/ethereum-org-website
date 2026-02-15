@@ -23,7 +23,7 @@ lang: mr
 वेंडिंग मशीनमधून स्नॅक मिळवण्यासाठी:
 
 ```
-पैसे + स्नॅक निवड = स्नॅक वितरित
+money + snack selection = snack dispensed
 ```
 
 हे लॉजिक वेंडिंग मशीनमध्ये प्रोग्राम केलेले आहे.
@@ -35,28 +35,28 @@ pragma solidity 0.8.7;
 
 contract VendingMachine {
 
-    // कॉन्ट्रॅक्टच्या स्टेट व्हेरिएबल्स घोषित करा
+    // Declare state variables of the contract
     address public owner;
     mapping (address => uint) public cupcakeBalances;
 
-    // जेव्हा 'VendingMachine' कॉन्ट्रॅक्ट तैनात केला जातो:
-    // १. तैनात करणाऱ्या ॲड्रेसला कॉन्ट्रॅक्टचा मालक म्हणून सेट करा
-    // २. तैनात केलेल्या स्मार्ट कॉन्ट्रॅक्टचा कप केक बॅलन्स १०० वर सेट करा
+    // When 'VendingMachine' contract is deployed:
+    // 1. set the deploying address as the owner of the contract
+    // 2. set the deployed smart contract's cupcake balance to 100
     constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
 
-    // मालकाला स्मार्ट कॉन्ट्रॅक्टचा कप केक बॅलन्स वाढवण्याची परवानगी द्या
+    // Allow the owner to increase the smart contract's cupcake balance
     function refill(uint amount) public {
-        require(msg.sender == owner, "केवळ मालकच रिफिल करू शकतो.");
+        require(msg.sender == owner, "Only the owner can refill.");
         cupcakeBalances[address(this)] += amount;
     }
 
-    // कोणालाही कप केक खरेदी करण्याची परवानगी द्या
+    // Allow anyone to purchase cupcakes
     function purchase(uint amount) public payable {
-        require(msg.value >= amount * 1 ether, "तुम्ही प्रति कप केक किमान 1 ETH देणे आवश्यक आहे");
-        require(cupcakeBalances[address(this)] >= amount, "ही खरेदी पूर्ण करण्यासाठी स्टॉकमध्ये पुरेसे कप केक नाहीत");
+        require(msg.value >= amount * 1 ether, "You must pay at least 1 ETH per cupcake");
+        require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
         cupcakeBalances[address(this)] -= amount;
         cupcakeBalances[msg.sender] += amount;
     }

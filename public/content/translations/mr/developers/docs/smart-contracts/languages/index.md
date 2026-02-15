@@ -49,33 +49,33 @@ Remix IDE हे Solidity आणि Vyper या दोन्हीमधील 
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // "पब्लिक" हा कीवर्ड व्हेरिएबल्स
-    // इतर कॉन्ट्रॅक्ट्समधून ॲक्सेस करण्यायोग्य बनवतो
+    // The keyword "public" makes variables
+    // accessible from other contracts
     address public minter;
     mapping (address => uint) public balances;
 
-    // इव्हेंट्स क्लायंटना तुम्ही घोषित केलेल्या विशिष्ट
-    // कॉन्ट्रॅक्ट बदलांवर प्रतिक्रिया देण्यास अनुमती देतात
+    // Events allow clients to react to specific
+    // contract changes you declare
     event Sent(address from, address to, uint amount);
 
-    // कन्स्ट्रक्टर कोड फक्त कॉन्ट्रॅक्ट
-    // तयार झाल्यावर चालतो
+    // Constructor code is only run when the contract
+    // is created
     constructor() {
         minter = msg.sender;
     }
 
-    // एका ॲड्रेसवर नवीन तयार केलेल्या कॉइन्सची रक्कम पाठवते
-    // फक्त कॉन्ट्रॅक्ट तयार करणाऱ्याद्वारे कॉल केले जाऊ शकते
+    // Sends an amount of newly created coins to an address
+    // Can only be called by the contract creator
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
         balances[receiver] += amount;
     }
 
-    // अस्तित्वात असलेल्या कॉइन्सची रक्कम
-    // कोणत्याही कॉलरकडून एका ॲड्रेसवर पाठवते
+    // Sends an amount of existing coins
+    // from any caller to an address
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "अपुरी शिल्लक.");
+        require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -120,105 +120,87 @@ contract Coin {
 ### उदाहरण {#example}
 
 ```python
-# ओपन ऑक्शन
+# Open Auction
 
-# लिलाव पॅरामीटर्स
-
-# लाभार्थीला सर्वाधिक बोली लावणाऱ्याकडून पैसे मिळतात
-
+# Auction params
+# Beneficiary receives money from the highest bidder
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
-# लिलावाची सद्यस्थिती
-
+# Current state of auction
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# शेवटी खरे वर सेट केले, कोणताही बदल करण्यास मनाई करते
-
+# Set to true at the end, disallows any change
 ended: public(bool)
 
-# परत केलेल्या बोलींचा मागोवा ठेवा जेणेकरून आम्ही काढण्याच्या पद्धतीचे अनुसरण करू शकू
-
+# Keep track of refunded bids so we can follow the withdraw pattern
 pendingReturns: public(HashMap[address, uint256])
 
-# `_bidding_time` सह एक साधा लिलाव तयार करा
-
-# लाभार्थीच्या वतीने सेकंदांची बोली वेळ
-
-# लाभार्थी पत्ता `_beneficiary`.
-
+# Create a simple auction with `_bidding_time`
+# seconds bidding time on behalf of the
+# beneficiary address `_beneficiary`.
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# पाठवलेल्या मूल्याने लिलावावर बोली लावा
-
-# या व्यवहारासोबत.
-
-# मूल्य फक्त परत केले जाईल जर
-
-# लिलाव जिंकला नाही.
-
+# Bid on the auction with the value sent
+# together with this transaction.
+# The value will only be refunded if the
+# auction is not won.
 @external
 @payable
 def bid():
-    # बोलीचा कालावधी संपला आहे का ते तपासा.
+    # Check if bidding period is over.
     assert block.timestamp < self.auctionEnd
-    # बोली पुरेशी आहे का ते तपासा
+    # Check if bid is high enough
     assert msg.value > self.highestBid
-    # मागील उच्च बोली लावणाऱ्यासाठी परताव्याचा मागोवा घ्या
+    # Track the refund for the previous high bidder
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # नवीन उच्च बोलीचा मागोवा घ्या
+    # Track new high bid
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# पूर्वी परत केलेली बोली काढा. काढण्याची पद्धत
-
-# येथे सुरक्षा समस्या टाळण्यासाठी वापरली जाते. जर परतावे थेट
-
-# bid() चा भाग म्हणून पाठवले गेले, तर एक दुर्भावनापूर्ण बोली करार ब्लॉक करू शकतो
-
-# ते परतावे आणि त्यामुळे नवीन उच्च बोली येण्यापासून रोखू शकतो.
-
+# Withdraw a previously refunded bid. The withdraw pattern is
+# used here to avoid a security issue. If refunds were directly
+# sent as part of bid(), a malicious bidding contract could block
+# those refunds and thus block new higher bids from coming in.
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# लिलाव समाप्त करा आणि सर्वोच्च बोली पाठवा
-
-# लाभार्थीला.
-
+# End the auction and send the highest bid
+# to the beneficiary.
 @external
 def endAuction():
-    # संवाद साधणाऱ्या फंक्शन्सची रचना करणे हे एक चांगले मार्गदर्शक तत्त्व आहे
-    # इतर करारांसह (म्हणजे, ते फंक्शन्सना कॉल करतात किंवा इथर पाठवतात)
-    # तीन टप्प्यांमध्ये:
-    # 1. अटी तपासणे
-    # 2. क्रिया करणे (संभाव्यतः अटी बदलणे)
-    # 3. इतर करारांशी संवाद साधणे
-    # जर हे टप्पे मिसळले गेले, तर दुसरा करार कॉल करू शकतो
-    # सध्याच्या करारामध्ये परत आणि स्थिती सुधारित करू शकतो किंवा
-    # परिणाम (इथर पेआउट) अनेक वेळा केले जाऊ शकतात.
-    # जर अंतर्गत कॉल केलेल्या फंक्शन्समध्ये बाह्य करारांसह
-    # संवाद समाविष्ट असेल, तर त्यांना देखील बाह्य करारांसह
-    # संवाद मानले पाहिजे.
+    # It is a good guideline to structure functions that interact
+    # with other contracts (i.e., they call functions or send ether)
+    # into three phases:
+    # 1. checking conditions
+    # 2. performing actions (potentially changing conditions)
+    # 3. interacting with other contracts
+    # If these phases are mixed up, the other contract could call
+    # back into the current contract and modify the state or cause
+    # effects (ether payout) to be performed multiple times.
+    # If functions called internally include interaction with external
+    # contracts, they also have to be considered interaction with
+    # external contracts.
 
-    # 1. अटी
-    # लिलावाची समाप्तीची वेळ आली आहे का ते तपासा
+    # 1. Conditions
+    # Check if auction endtime has been reached
     assert block.timestamp >= self.auctionEnd
-    # हे फंक्शन आधीच कॉल केले आहे का ते तपासा
+    # Check if this function has already been called
     assert not self.ended
 
-    # 2. परिणाम
+    # 2. Effects
     self.ended = True
 
-    # 3. संवाद
+    # 3. Interaction
     send(self.beneficiary, self.highestBid)
 ```
 

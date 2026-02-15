@@ -59,7 +59,7 @@ contract VendingMachine {
     function buy(uint amount) public payable {
         if (amount > msg.value / 2 ether)
             revert("Not enough Ether provided.");
-        // खरेदी करा.
+        // Perform the purchase.
     }
     function withdraw() public {
         if (msg.sender != owner)
@@ -152,7 +152,7 @@ Ethereum स्मार्ट कॉन्ट्रॅक्ट्स डीफ
 एकदा कॉन्ट्रॅक्टने आपत्कालीन थांबा सक्रिय केल्यावर, काही फंक्शन्स कॉल करण्यायोग्य नसतील. हे ग्लोबल व्हेरिएबलचा संदर्भ देणाऱ्या मॉडिफायरमध्ये निवडक फंक्शन्स गुंडाळून साध्य केले जाते. खाली [एक उदाहरण](https://github.com/fravoll/solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol) आहे जे कॉन्ट्रॅक्ट्समध्ये या पॅटर्नची अंमलबजावणी दर्शवते:
 
 ```solidity
-// हा कोड व्यावसायिकरित्या ऑडिट केलेला नाही आणि सुरक्षितता किंवा अचूकतेबद्दल कोणतेही वचन देत नाही. तुमच्या स्वतःच्या जोखमीवर वापरा.
+// This code has not been professionally audited and makes no promises about safety or correctness. Use at your own risk.
 
 contract EmergencyStop {
 
@@ -169,7 +169,7 @@ contract EmergencyStop {
     }
 
     modifier onlyAuthorized {
-        // msg.sender च्या अधिकृततेसाठी येथे तपासा
+        // Check for authorization of msg.sender here
         _;
     }
 
@@ -182,11 +182,11 @@ contract EmergencyStop {
     }
 
     function deposit() public payable stoppedInEmergency {
-        // येथे ठेव प्रक्रिया होत आहे
+        // Deposit logic happening here
     }
 
     function emergencyWithdraw() public onlyWhenStopped {
-        // येथे आपत्कालीन काढण्याची प्रक्रिया होत आहे
+        // Emergency withdraw happening here
     }
 }
 ```
@@ -238,7 +238,7 @@ EVM समवर्तीतेस परवानगी देत नाही,
 एक साधा स्मार्ट कॉन्ट्रॅक्ट (‘Victim’) विचारात घ्या जो कोणालाही इथर जमा आणि काढण्याची परवानगी देतो:
 
 ```solidity
-// हा कॉन्ट्रॅक्ट असुरक्षित आहे. उत्पादनात वापरू नका
+// This contract is vulnerable. Do not use in production
 
 contract Victim {
     mapping (address => uint256) public balances;
@@ -292,16 +292,16 @@ contract Victim {
 येथे काहीही चुकीचे नाही, फक्त `Attacker` कडे आणखी एक फंक्शन आहे जे `Victim` मधील `withdraw()` ला पुन्हा कॉल करते जर येणाऱ्या `msg.sender.call.value` मधून उरलेला गॅस 40,000 पेक्षा जास्त असेल. हे `Attacker` ला `Victim` मध्ये पुन्हा प्रवेश करण्याची आणि `withdraw` ची पहिली विनंती पूर्ण होण्यापूर्वी अधिक निधी काढण्याची क्षमता देते. हे चक्र असे दिसते:
 
 ```solidity
-- हल्लेखोराचा EOA `Attacker.beginAttack()` ला 1 ETH सह कॉल करतो
-- `Attacker.beginAttack()` `Victim` मध्ये 1 ETH जमा करतो
-- `Attacker` `Victim` मधील `withdraw()` ला कॉल करतो
-- `Victim` `Attacker` ची शिल्लक (1 ETH) तपासतो
-- `Victim` `Attacker` ला 1 ETH पाठवतो (जे डीफॉल्ट फंक्शन सुरू करते)
-- `Attacker` `Victim.withdraw()` ला पुन्हा कॉल करतो (लक्षात घ्या की `Victim` ने पहिल्या काढण्यामधून `Attacker` ची शिल्लक कमी केलेली नाही)
-- `Victim` `Attacker` ची शिल्लक तपासतो (जी अजूनही 1 ETH आहे कारण त्याने पहिल्या कॉलचे परिणाम लागू केलेले नाहीत)
-- `Victim` `Attacker` ला 1 ETH पाठवतो (जे डीफॉल्ट फंक्शन सुरू करते आणि `Attacker` ला `withdraw` फंक्शनमध्ये पुन्हा प्रवेश करण्याची परवानगी देते)
-- `Attacker` चा गॅस संपेपर्यंत ही प्रक्रिया पुनरावृत्त होते, ज्यावेळी `msg.sender.call.value` अतिरिक्त काढण्याशिवाय परत येतो
-- `Victim` शेवटी पहिल्या व्यवहाराचे (आणि त्यानंतरच्या) परिणाम त्याच्या स्थितीवर लागू करतो, त्यामुळे `Attacker` ची शिल्लक 0 वर सेट केली जाते
+- Attacker's EOA calls `Attacker.beginAttack()` with 1 ETH
+- `Attacker.beginAttack()` deposits 1 ETH into `Victim`
+- `Attacker` calls `withdraw() in `Victim`
+- `Victim` checks `Attacker`’s balance (1 ETH)
+- `Victim` sends 1 ETH to `Attacker` (which triggers the default function)
+- `Attacker` calls `Victim.withdraw()` again (note that `Victim` hasn’t reduced `Attacker`’s balance from the first withdrawal)
+- `Victim` checks `Attacker`’s balance (which is still 1 ETH because it hasn’t applied the effects of the first call)
+- `Victim` sends 1 ETH to `Attacker` (which triggers the default function and allows `Attacker` to reenter the `withdraw` function)
+- The process repeats until `Attacker` runs out of gas, at which point `msg.sender.call.value` returns without triggering additional withdrawals
+- `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
 सारांश असा आहे की कॉलरची शिल्लक फंक्शनची अंमलबजावणी पूर्ण होईपर्यंत 0 वर सेट केली जात नसल्यामुळे, त्यानंतरच्या विनंत्या यशस्वी होतील आणि कॉलरला त्यांची शिल्लक अनेक वेळा काढण्याची परवानगी मिळेल. [2016 च्या DAO हॅक](https://www.coindesk.com/learn/understanding-the-dao-attack) मध्ये घडल्याप्रमाणे, या प्रकारचा हल्ला स्मार्ट कॉन्ट्रॅक्टमधील निधी काढून घेण्यासाठी वापरला जाऊ शकतो. आजही स्मार्ट कॉन्ट्रॅक्ट्ससाठी रीएन्ट्रन्सी हल्ले ही एक गंभीर समस्या आहे, जसे की [रीएन्ट्रन्सी शोषणांची सार्वजनिक सूची](https://github.com/pcaversaccio/reentrancy-attacks) दर्शवते.
@@ -340,8 +340,8 @@ contract MutexPattern {
         _;
         locked = false;
     }
-    // हे फंक्शन म्यूटेक्सद्वारे संरक्षित आहे, त्यामुळे `msg.sender.call` मधून येणारे रीएन्ट्रंट कॉल `withdraw` ला पुन्हा कॉल करू शकत नाहीत.
-    // `return` विधान `true` ठरते पण तरीही मॉडिफायरमधील `locked = false` विधान मूल्यांकन करते
+    // This function is protected by a mutex, so reentrant calls from within `msg.sender.call` cannot call `withdraw` again.
+    //  The `return` statement evaluates to `true` but still evaluates the `locked = false` statement in the modifier
     function withdraw(uint _amount) public payable noReentrancy returns(bool) {
         require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
@@ -367,17 +367,19 @@ contract MutexPattern {
 ```
 pragma solidity ^0.7.6;
 
-// हा कॉन्ट्रॅक्ट टाइम वॉल्ट म्हणून काम करण्यासाठी डिझाइन केलेला आहे.
-// वापरकर्ता या कॉन्ट्रॅक्टमध्ये जमा करू शकतो परंतु किमान एक आठवड्यासाठी पैसे काढू शकत नाही.
-// वापरकर्ता 1 आठवड्याच्या प्रतीक्षा कालावधीच्या पलीकडे प्रतीक्षा वेळ वाढवू शकतो.
+// This contract is designed to act as a time vault.
+// User can deposit into this contract but cannot withdraw for at least a week.
+// User can also extend the wait time beyond the 1 week waiting period.
 
 /*
-1. TimeLock तैनात करा
-2. TimeLock च्या ॲड्रेससह Attack तैनात करा
-3. 1 इथर पाठवून Attack.attack कॉल करा. तुम्ही तुमचा इथर ताबडतोब काढू शकाल.
+1. Deploy TimeLock
+2. Deploy Attack with address of TimeLock
+3. Call Attack.attack sending 1 ether. You will immediately be able to
+   withdraw your ether.
 
-काय झाले?
-Attack मुळे TimeLock.lockTime ओव्हरफ्लो झाला आणि 1 आठवड्याच्या प्रतीक्षा कालावधीपूर्वी पैसे काढता आले.
+What happened?
+Attack caused the TimeLock.lockTime to overflow and was able to withdraw
+before the 1 week waiting period.
 */
 
 contract TimeLock {
@@ -417,11 +419,11 @@ contract Attack {
     function attack() public payable {
         timeLock.deposit{value: msg.value}();
         /*
-        जर t = सध्याचा लॉक टाइम असेल तर आपल्याला x असा शोधायचा आहे की
+        if t = current lock time then we need to find x such that
         x + t = 2**256 = 0
-        म्हणून x = -t
+        so x = -t
         2**256 = type(uint).max + 1
-        म्हणून x = type(uint).max + 1 - t
+        so x = type(uint).max + 1 - t
         */
         timeLock.increaseLockTime(
             type(uint).max + 1 - timeLock.lockTime(address(this))
