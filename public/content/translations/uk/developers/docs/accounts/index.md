@@ -79,16 +79,16 @@ _Схема адаптована з [Ethereum EVM illustrated](https://takenobu-
 У наведеному нижче прикладі показано, як використовувати інструмент для підпису під назвою [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) для створення нового облікового запису. Clef — це інструмент для керування обліковими записами та підпису, який постачається в комплекті з клієнтом Ethereum, [Geth](https://geth.ethereum.org). Команда `clef newaccount` створює нову пару ключів і зберігає їх у зашифрованому сховищі ключів.
 
 ```
-> clef newaccount --keystore <шлях>
+> clef newaccount --keystore <path>
 
-Будь ласка, введіть пароль для нового облікового запису, що створюється:
-> <пароль>
+Please enter a password for the new account to be created:
+> <password>
 
 ------------
-INFO [10-28|16:19:09.156] Ваш новий ключ згенеровано       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Будь ласка, створіть резервну копію вашого файлу ключа      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Будь ласка, запам'ятайте свій пароль!
-Створено обліковий запис 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Документація Geth](https://geth.ethereum.org/docs)
