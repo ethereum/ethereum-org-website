@@ -43,11 +43,11 @@ Odhady spotřeby energie a emisí uhlíku pro mnoho průmyslových odvětví si 
 
 Několik článků odhaduje výdaje energie „na transakci“ pro různé blockchainy. To může být zavádějící, protože energie potřebná k navržení a validaci bloku je nezávislá na počtu transakcí v něm. Jednotka energetického výdaje na transakci znamená, že menší počet transakcí by vedl k menšímu energetickému výdaji a naopak, což není pravda. Odhady na jednotlivé transakce jsou také velmi citlivé na to, jak je definována propustnost transakcí blockchainu, a vyladění této definice lze ovlivnit tak, aby se hodnota zdála větší nebo menší.
 
-Například na Ethereu není transakční propustnost jen propustností základní vrstvy – je to také součet transakční propustnosti všech jeho rollupů na ["vrstvě 2"](/layer-2/). 2. vrstva vetšinou není zahrnuta do výpočtů, ale zohlednění energie dodatečně spotřebované sekvencery (malá) a počtu transakcí, které zpracovávají (velká), by pravděpodobně drasticky snížilo odhady spotřeby energie na transakci. To je jedním z důvodů, proč může být srovnání spotřeby energie na transakci napříč platformami zavádějící.
+Například na Ethereu není transakční propustnost jen propustností základní vrstvy – je to také součet transakční propustnosti všech jeho rollupů na ["vrstvě 2"](/layer-2/). 2. vrstva většinou není zahrnuta do výpočtů, ale zohlednění energie dodatečně spotřebované sekvencery (malá) a počtu transakcí, které zpracovávají (velká), by pravděpodobně drasticky snížilo odhady spotřeby energie na transakci. To je jedním z důvodů, proč může být srovnání spotřeby energie na transakci napříč platformami zavádějící.
 
 ## Uhlíkový dluh Etherea {#carbon-debt}
 
-Energetický výdej Etherea je velmi nízký, ale ne vždy tomu tak bylo. Ethereum původně používalo machanismus důkazu prací, který měl mnohem vyšší ekologické náklady než současný důkaz podílem.
+Energetický výdej Etherea je velmi nízký, ale ne vždy tomu tak bylo. Ethereum původně používalo mechanismus důkazu prací, který měl mnohem vyšší ekologické náklady než současný důkaz podílem.
 
 Od samého začátku Ethereum plánovalo implementovat mechanismus konsensu založený na důkazu podílem, ale aby to bylo možné uskutečnit bez snížení bezpečnosti a decentralizace, si vyžádalo roky soustředěného výzkumu a vývoje. Proto byl ke spuštění sítě použit mechanismus důkazu prací. Ten vyžaduje, aby těžaři k výpočtu hodnoty použili svůj hardware, a tím spotřebovali energii.
 
@@ -65,7 +65,7 @@ Platformy pro financování veřejných statků nativní pro Web3, jako je [Gitc
 <AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
-  Pokud si myslíte, že by tato stránka mohla být přesnější, založze prosím issue nebo PR. Statistiky na této stránce jsou odhady založené na veřejně dostupných datech – nepředstavují oficiální prohlášení nebo příslib týmu ethereum.org nebo Ethereum Foundation.
+  Pokud si myslíte, že by tato stránka mohla být přesnější, založte prosím issue nebo PR. Statistiky na této stránce jsou odhady založené na veřejně dostupných datech – nepředstavují oficiální prohlášení nebo příslib týmu ethereum.org nebo Ethereum Foundation.
 </AlertDescription>
 </AlertContent>
 </Alert>

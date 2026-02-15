@@ -28,7 +28,7 @@ K dispozici jsou také další profilové filtry, které vyhovují vašim potře
 
 Jakmile se rozhodnete pro konkrétní peněženku, navštivte její oficiální webové stránky nebo obchod s aplikacemi, stáhněte a nainstalujte si ji. Všechny by měly být zdarma.
 
-## Krok 3: Otevřete aplikaci a vytvořte si učet na Ethereu
+## Krok 3: Otevřete aplikaci a vytvořte si účet na Ethereu
 
 Při prvním otevření nové peněženky můžete být vyzváni k volbě mezi vytvořením nového účtu a importem stávajícího účtu. Klikněte na vytvoření nového účtu. **Toto je krok, během kterého software peněženky vygeneruje váš Ethereum účet.**
 

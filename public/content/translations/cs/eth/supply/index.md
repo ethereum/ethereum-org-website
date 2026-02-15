@@ -58,7 +58,7 @@ Budoucí nabídka Etherea není neměnná - závisí na několika proměnných:
 1. **Účast na stakingu**:
    - Více validátorů znamená více distribuovaných odměn a tím pádem vyšší emise.
    - Méně validátorů může znamenat nižší emise.
-   - Další informace o stakingu(/staking/).
+   - Další informace o [stakingu](/staking/).
 
 2. **Aktivita sítě**:
    - Vyšší objemy transakcí vedou ke spálění většího počtu ETH, což může vyrovnat nebo převýšit vydávání.
