@@ -1,6 +1,6 @@
 ---
 title: La fusione
-description: "Scopri La Fusione: quando la Rete principale di Ethereum ha adottato il Poof of stake."
+description: "Scopri La Fusione: quando la Rete principale di Ethereum ha adottato il proof-of-stake."
 lang: it
 template: upgrade
 image: /images/upgrades/merge.png
@@ -21,13 +21,13 @@ La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la
 
 <MergeInfographic />
 
-Inizialmente, la [Beacon Chain](/roadmap/beacon-chain/) è stata distribuita separatamente dalla [Rete Principale](/glossary/#mainnet). La Rete Principale di Ethereum, con tutti i suoi conti, saldi, contratti intelligenti e stati della blockchain, ha continuato a essere protetta da [proof-of-work](/developers/docs/consensus-mechanisms/pow/), anche mentre la Beacon Chain veniva eseguita in parallelo utilizzando il [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). La Fusione si è verificata quando, finalmente, questi due sistemi si sono uniti e il Poof of Work è stata permanentemente sostituita dal Proof of stake.
+Inizialmente, la [Beacon Chain](/roadmap/beacon-chain/) è stata distribuita separatamente dalla [Rete Principale](/glossary/#mainnet). La Rete Principale di Ethereum, con tutti i suoi conti, saldi, contratti intelligenti e stati della blockchain, ha continuato a essere protetta da [proof-of-work](/developers/docs/consensus-mechanisms/pow/), anche mentre la Beacon Chain veniva eseguita in parallelo utilizzando il [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). La Fusione si è verificata quando, finalmente, questi due sistemi si sono uniti e il proof-of-work è stato permanentemente sostituito dal proof-of-stake.
 
 Immagina Ethereum come una nave lanciata prima di essere pronta per un viaggio interstellare. Con la Beacon Chain, la community ha costruito un nuovo motore e uno scafo più resistente. Dopo test significativi, è arrivato il momento di scambiare il vecchio motore con quello nuovo durante il volo. Questo ha aggiunto il nuovo e più efficiente motore nella nave esistente, consentendole di percorrere diversi anni luce e conquistare l'universo.
 
 ## Fusione con la Rete Principale {#merging-with-mainnet}
 
-La Proof of Work ha protetto la Rete rrincipale di Ethereum dalla genesi alla Fusione. Questo ha consentito alla blockchain di Ethereum a cui siamo tutti abituati di venire alla luce nel luglio 2015 con tutte le sue funzionalità familiari: transazioni, contratti intelligenti, conti, ecc.
+La proof-of-work ha protetto la Rete Principale di Ethereum dalla genesi alla Fusione. Questo ha consentito alla blockchain di Ethereum a cui siamo tutti abituati di venire alla luce nel luglio 2015 con tutte le sue funzionalità familiari: transazioni, contratti intelligenti, conti, ecc.
 
 Nella storia di Ethereum, gli sviluppatori si sono preparati per un'eventuale transizione dal Proof of Work al Proof of stake. Il 1° dicembre 2020, la Beacon Chain è stata creata come una blockchain separata dalla Rete principale, eseguita in parallelo.
 
@@ -149,7 +149,7 @@ title="Equivoco: &quot;Le transazioni sono state accelerate in modo sostanziale 
 contentPreview="Falso. Sebbene esistano alcune lievi modifiche, la velocità delle transazioni sul livello 1 è per lo più la stessa di prima de La Fusione.">
 La "velocità" di una transazione può essere misurata in diversi modi, tra cui il tempo necessario per essere inclusa in un blocco e il tempo per la finalizzazione. Entrambi cambiano lievemente, ma non in modo apprezzabile dagli utenti.
 
-Storicamente, con il Poof of Work, l'obiettivo era avere un nuovo blocco ogni 13,3 secondi circa. Con il Poof of stake, gli slot si verificano precisamente ogni 12 secondi, e ciascuno rappresenta un'opportunità per un validatore di pubblicare un blocco. Gran parte degli slot contiene blocchi, ma non necessariamente tutti (cioè un validatore è offline). Nel Proof of stake, i blocchi sono prodotti a una frequenza del 10% circa maggiore che nel Proof of Work. Questo è stato un cambiamento abbastanza irrilevante ed è improbabile che sia notato dagli utenti.
+Storicamente, con il proof-of-work, l'obiettivo era avere un nuovo blocco ogni 13,3 secondi circa. Con il proof-of-stake, gli slot si verificano precisamente ogni 12 secondi, e ciascuno rappresenta un'opportunità per un validatore di pubblicare un blocco. Gran parte degli slot contiene blocchi, ma non necessariamente tutti (cioè un validatore è offline). Nel Proof of stake, i blocchi sono prodotti a una frequenza del 10% circa maggiore che nel Proof of Work. Questo è stato un cambiamento abbastanza irrilevante ed è improbabile che sia notato dagli utenti.
 
 La Proof of stake ha introdotto il concetto di finalità della transazione che, precedentemente, non esisteva. Nel Proof of Work, la capacità di annullare un blocco diventa esponenzialmente più difficile all'aumentare dei blocchi minati su una transazione, ma non raggiunge mai lo zero. In modalità Proof of stake, i blocchi sono raggruppati in epoche (intervalli di 6,4 minuti contenenti 32 possibili blocchi), su cui votano i validatori. Quando termina un'epoca, i validatori votano se considerare l'epoca 'giustificata'. Se i validatori acconsentono a giustificare l'epoca, questa viene finalizzata nell'epoca successiva. Annullare le transazioni finalizzate è economicamente non redditizio, in quanto richiederebbe di ottenere e bruciare oltre un terzo dell'ETH in staking totale.
 </ExpandableCard>

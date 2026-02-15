@@ -6,7 +6,7 @@ summaryPoints:
   - Il danksharding è un aggiornamento multi-fase per migliorare la scalabilità e la capacità di Ethereum.
   - La prima fase, il Proto-Danksharding, aggiunge i blob di dati ai blocchi
   - I blob di dati offrono un modo più economico per i rollup di pubblicare i dati su Ethereum, tali costi possono essere trasferiti agli utenti sotto forma di commissioni di transazione inferiori.
-  - In seguito, il Dansharding completo diffonderà la responsabilità di verificare i blob di dati tra i sottoinsiemi di nodi, ridimensionando ulteriormente Ethereum, a oltre 100.000 transazioni al secondo.
+  - In seguito, il Danksharding completo diffonderà la responsabilità di verificare i blob di dati tra i sottoinsiemi di nodi, ridimensionando ulteriormente Ethereum, a oltre 100.000 transazioni al secondo.
 ---
 
 # Danksharding {#danksharding}
@@ -59,7 +59,7 @@ Se qualcuno conosce le posizioni casuali utilizzate per l'impegno, è facile gen
 
 ## Cos'è il Danksharding? {#what-is-danksharding}
 
-Il Danksharding è la piena realizzazione del ridimensionamento del rollup, avviata con il Proto-Danksharding. Il Dankshaarding comporterà enormi quantità di spazio su Ethereum, dove i rollup potranno riversare i dati compressi delle loro transazioni. Ciò significa che Ethereum potrà supportare centinaia di rollup individuali con facilità, rendendo realtà milioni di transazioni al secondo.
+Il Danksharding è la piena realizzazione del ridimensionamento del rollup, avviata con il Proto-Danksharding. Il Danksharding comporterà enormi quantità di spazio su Ethereum, dove i rollup potranno riversare i dati compressi delle loro transazioni. Ciò significa che Ethereum potrà supportare centinaia di rollup individuali con facilità, rendendo realtà milioni di transazioni al secondo.
 
 Funziona espandendo i blob collegati ai blocchi da sei (6) nel proto-danksharding, a 64 nel Danksharding completo. Il resto delle modifiche necessarie sono tutti gli aggiornamenti al metodo di operazione dei client del consenso, per consentire loro di gestire i nuovi, grandi blob. Svariate di queste modifiche sono già sulla tabella di marcia per altri scopi, indipendenti dal Danksharding. Ad esempio, il Danksharding richiede la separazione del propositore e del costruttore, per essere implementata. Questo è un aggiornamento che separa le mansioni di costruzione e proposta dei blocchi, tra validatori differenti. Similmente, il campionamento della disponibilità dei dati è necessario per il Danksharding, ma è anche necessario per lo sviluppo di client molto leggeri, che non memorizzano molti dati storici ("client privi di stato").
 

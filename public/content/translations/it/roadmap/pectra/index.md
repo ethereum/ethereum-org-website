@@ -6,7 +6,7 @@ lang: it
 
 # Pectra {#pectra}
 
-L’aggiornamento della rete Petra è seguito a [Dencun](/roadmap/dencun/) e ha introdotto modifiche sia al livello di esecuzione che al livello di consenso di Ethereum. Il nome abbreviato Petra è una combinazione di Praga ed Elettra, che sono i rispettivi nomi delle modifiche alle specifiche del livello di esecuzione e del livello di consenso. Insieme, questi cambiamenti apportano numerosi miglioramenti agli utenti, agli sviluppatori e ai validatori di Ethereum.
+L'aggiornamento della rete Pectra è seguito a [Dencun](/roadmap/dencun/) e ha introdotto modifiche sia al livello di esecuzione che al livello di consenso di Ethereum. Il nome abbreviato Pectra è una combinazione di Praga ed Electra, che sono i rispettivi nomi delle modifiche alle specifiche del livello di esecuzione e del livello di consenso. Insieme, questi cambiamenti apportano numerosi miglioramenti agli utenti, agli sviluppatori e ai validatori di Ethereum.
 
 Questo aggiornamento è stato attivato con successo sulla rete principale di Ethereum all'epoca `364032`, il **07-maggio-2025 alle 10:05 (UTC)**.
 
@@ -36,7 +36,7 @@ L'attuale saldo effettivo del validatore è esattamente di 32 ETH. È l'importo 
 
 [EIP-7251](https://eips.ethereum.org/EIPS/eip-7251) aumenta il saldo effettivo massimo possibile a 2048 ETH, il che significa che un singolo validatore può ora mettere in staking tra 32 e 2048 ETH. Invece di multipli di 32, gli staker possono ora scegliere un importo arbitrario di ETH da mettere in staking e ricevere ricompense per ogni 1 ETH al di sopra del minimo. Ad esempio, se il saldo di un validatore cresce con le sue ricompense a 33 ETH, l'ETH extra viene considerato parte del saldo effettivo e riceve ricompense.
 
-Ma il vantaggio di un migliore sistema di ricompense per i validatori è solo una parte di questo miglioramento. Gli [staker](/staking/) che gestiscono più validatori possono ora aggregarli in uno solo, il che consente un'operatività più semplice e riduce il sovraccarico della rete. Poiché ogni validatore nella Bacon Chain invia una firma in ogni epoca, i requisiti di larghezza di banda aumentano con l’aumentare dei validatori e dell’elevato numero di firme da propagare. L'aggregazione dei validatori alleggerirà il carico sulla rete e aprirà nuove opzioni di scalabilità, mantenendo la stessa sicurezza economica.
+Ma il vantaggio di un migliore sistema di ricompense per i validatori è solo una parte di questo miglioramento. Gli [staker](/staking/) che gestiscono più validatori possono ora aggregarli in uno solo, il che consente un'operatività più semplice e riduce il sovraccarico della rete. Poiché ogni validatore nella Beacon Chain invia una firma in ogni epoca, i requisiti di larghezza di banda aumentano con l’aumentare dei validatori e dell’elevato numero di firme da propagare. L'aggregazione dei validatori alleggerirà il carico sulla rete e aprirà nuove opzioni di scalabilità, mantenendo la stessa sicurezza economica.
 
 Leggi un approfondimento su maxEB [qui](/roadmap/pectra/maxeb/)
 
@@ -50,7 +50,7 @@ Attualmente, la rete ha come obiettivo una media di 3 blob per blocco, con un ma
 
 Prima dell'introduzione dei [blob nell'aggiornamento Dencun](/roadmap/danksharding), gli L2 utilizzavano i [calldata](/developers/docs/data-availability/blockchain-data-storage-strategies/#calldata) per archiviare i propri dati su Ethereum. Sia i blob che i calldata influiscono sull'uso della larghezza di banda di Ethereum. Mentre la maggior parte dei blocchi utilizza solo una quantità minima di calldata, i blocchi con un elevato volume di dati che contengono anche molti blob possono essere dannosi per la rete p2p di Ethereum.
 
-Per risolvere questo problema, [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) aumenta il prezzo dei calldata, ma solo per le transazioni con un elevato volume di dati. Questo limita la dimensione massima del blocco, fornisce un incentivo ai livelli 2 (L2) a utilizzare solo i lob e lascia oltre il 99% delle transazioni inalterate.
+Per risolvere questo problema, [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) aumenta il prezzo dei calldata, ma solo per le transazioni con un elevato volume di dati. Questo limita la dimensione massima del blocco, fornisce un incentivo ai livelli 2 (L2) a utilizzare solo i blob e lascia oltre il 99% delle transazioni inalterate.
 
 ### Uscite attivabili a livello di esecuzione {#7002}
 

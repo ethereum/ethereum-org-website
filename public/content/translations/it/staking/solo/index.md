@@ -1,5 +1,5 @@
 ---
-title: Staking dometico dei tuoi ETH
+title: Staking domestico dei tuoi ETH
 description: Una panoramica su come iniziare a mettere i tuoi ETH in staking domestico
 lang: it
 template: staking
