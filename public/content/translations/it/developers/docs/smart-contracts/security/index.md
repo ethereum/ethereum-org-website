@@ -515,7 +515,7 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi degli a
 
 - **[Oxorio](https://oxor.io/)** - _Audit di contratti intelligenti e servizi di sicurezza blockchain con esperienza in EVM, Solidity, ZK, tecnologia cross-chain per aziende di criptovalute e progetti DeFi._
 
-- **[Inference](https://inference.ag/)** - _Società di audit di sicurezza, specializzata nell'audit di contratti intelligenti per blockchain basate su EVM. Grazie ai suoi esperti revisori, identifica le potenziali problematiche e suggerisce le soluzioni attuabili per risoverle prima della distribuzione._
+- **[Inference](https://inference.ag/)** - _Società di audit di sicurezza, specializzata nell'audit di contratti intelligenti per blockchain basate su EVM. Grazie ai suoi esperti revisori, identifica le potenziali problematiche e suggerisce le soluzioni attuabili per risolverle prima della distribuzione._
 
 ### Piattaforme di bug bounty {#bug-bounty-platforms}
 

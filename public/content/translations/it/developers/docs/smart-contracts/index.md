@@ -88,7 +88,7 @@ Scopri di più sulla [componibilità dei contratti intelligenti](/developers/doc
 
 Gli smart contract da soli non possono ottenere informazioni sugli eventi del “mondo reale” perché non sono in grado di recuperare dati da fonti off-chain. Questo significa che non possono rispondere a eventi nel mondo reale. Sono stati progettati così. Basarsi su informazioni esterne potrebbe pregiudicare il consenso, importante per la sicurezza e la decentralizzazione.
 
-However, it is important for blockchain applications to be able to use offchain data. La soluzione sono gli [oracoli](/developers/docs/oracles/), strumenti che acquisiscono dati off-chain e li rendono disponibili ai contratti intelligenti.
+Tuttavia, è importante che le applicazioni blockchain possano utilizzare dati off-chain. La soluzione sono gli [oracoli](/developers/docs/oracles/), strumenti che acquisiscono dati off-chain e li rendono disponibili ai contratti intelligenti.
 
 Un'altra limitazione dei contratti intelligenti è la dimensione massima del contratto. Un contratto intelligente può avere una dimensione massima di 24 Kb; altrimenti, esaurirà il gas. Questo può essere aggirato usando il [Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
 

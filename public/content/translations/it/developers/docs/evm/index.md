@@ -16,7 +16,7 @@ Per descrivere blockchain come Bitcoin, viene spesso utilizzata l'analogia con u
 
 Mentre Ethereum ha la propria criptovaluta nativa (Ether) che segue quasi esattamente le stesse regole intuitive, consente anche una funzione molto più potente: i [contratti intelligenti](/developers/docs/smart-contracts/). Per questa caratteristica più complessa, è necessaria un'analogia più complessa. Invece di essere un libro mastro distribuito, Ethereum è una [macchina di stato distribuita](https://wikipedia.org/wiki/Finite-state_machine). Lo stato di Ethereum è una grande struttura di dati che contiene non solo tutti i conti e i saldi, ma uno _stato della macchina_, che può cambiare da blocco a blocco secondo una serie predefinita di regole e che può eseguire il codice arbitrario della macchina. Le regole specifiche di cambio stato da blocco a blocco sono definite dall'EVM.
 
-![Ddiagramma che mostra la composizione dell'EVM](./evm.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra la composizione dell'EVM](./evm.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## La funzione di transizione di stato di Ethereum {#the-ethereum-state-transition-function}
 
