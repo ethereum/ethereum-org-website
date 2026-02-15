@@ -64,7 +64,7 @@ Ačkoliv klíčové rysy Web3 nejsou izolované a nedají se zařadit do pevnýc
 
 Web3 vám umožňuje vlastnit vaše digitální aktiva dosud nevídaným způsobem. Představte si například, že hrajete hru na Web2. Pokud si v této hře zakoupíte nějaký předmět, je přímo spojen s vaším účtem. V případě, že tvůrci hry smažou váš účet, o všechny zakoupené předměty přijdete. Nebo pokud tuto hru přestanete hrát, přijdete o veškeré prostředky, které jste do herních předmětů vložili.
 
-Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných tokenů (NFT)](/glossary/#nft). Nikdo, ani tvůrci hry, nemají moc vás vlastnictví zbavit. A pokud přestanete hrát, můžete své herní předměty prodat nebo vyměnit na veřejně přístupných tržištíích a získat tak zpět prostředky, které jste vynaložili na jejich pořízení. Prozkoumejte [hraní na blockchainu](/gaming/) a uvidíte to v akci.
+Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných tokenů (NFT)](/glossary/#nft). Nikdo, ani tvůrci hry, nemají moc vás vlastnictví zbavit. A pokud přestanete hrát, můžete své herní předměty prodat nebo vyměnit na veřejně přístupných tržištích a získat tak zpět prostředky, které jste vynaložili na jejich pořízení. Prozkoumejte [hraní na blockchainu](/gaming/) a uvidíte to v akci.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -80,7 +80,7 @@ Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných token
 
 Poměr síly mezi platformami a tvůrci obsahu je značně nevyvážený.
 
-OnlyFans je web s obsahem pro dospěléi s více než 1 milionem tvůrců obsahu, z nichž mnozí využívají platformu jako svůj primární zdroj příjmu. V srpnu 2021 OnlyFans oznámila plán zakázat sexuálně explicitního obsah. Toto oznámení vyvolalo pobouření mezi tvůrci, kteří měli pocit, že by mohli být okradeni o příjem na platformě, kterou reálně pomohli rozvíjet. Po této vlně odporu se rozhodnutí vedení OnlyFans rychle obrátilo. I přesto, že tvůrci bitvu tentokrát vyhráli, tento spor skvěle ilustruje problém Webu 2.0: Pokud platformu opustíte, ztratíte reputaci a pracně nasbírané sledující.
+OnlyFans je web s obsahem pro dospělé s více než 1 milionem tvůrců obsahu, z nichž mnozí využívají platformu jako svůj primární zdroj příjmu. V srpnu 2021 OnlyFans oznámila plán zakázat sexuálně explicitního obsah. Toto oznámení vyvolalo pobouření mezi tvůrci, kteří měli pocit, že by mohli být okradeni o příjem na platformě, kterou reálně pomohli rozvíjet. Po této vlně odporu se rozhodnutí vedení OnlyFans rychle obrátilo. I přesto, že tvůrci bitvu tentokrát vyhráli, tento spor skvěle ilustruje problém Webu 2.0: Pokud platformu opustíte, ztratíte reputaci a pracně nasbírané sledující.
 
 Na Web3 jsou vaše data uložena na blockchainu. Když se rozhodnete nějakou platformu opustit, můžete si vzít svou reputaci s sebou a připojit se k jinému rozhraní, které je ve větším souladu s vašimi hodnotami.
 
@@ -121,7 +121,7 @@ Web3 používá tokeny jako [ETH](/glossary/#ether) k posílání peněz přímo
 
 ## Omezení Web3 {#web3-limitations}
 
-Navzdory četným výhodám Web3 sxistuje v jeho současné podobě stále mnoho omezení, která musí ekosystém vyřešit, aby se mohl dále rozvíjet.
+Navzdory četným výhodám Web3 existuje v jeho současné podobě stále mnoho omezení, která musí ekosystém vyřešit, aby se mohl dále rozvíjet.
 
 ### Přístupnost {#accessibility}
 

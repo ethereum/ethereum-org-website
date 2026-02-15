@@ -109,7 +109,7 @@ Operátoři validátoru v průběhu životního cyklu validátoru provádějí p
 
 ### Bez gasu {#gas-free}
 
-Tento přístup k výběrům vkladů zabraňuje tomu, aby satkeři museli ručně odeslat transakci požadující výběr konkrétní částky ETH. To znamená, že **není vyžadován žádný gas (transakční poplatek)**, a výběry také nesoutěží o stávající blokový prostor exekuční vrstvy.
+Tento přístup k výběrům vkladů zabraňuje tomu, aby stakeři museli ručně odeslat transakci požadující výběr konkrétní částky ETH. To znamená, že **není vyžadován žádný gas (transakční poplatek)**, a výběry také nesoutěží o stávající blokový prostor exekuční vrstvy.
 
 ### Jak často dostanu odměny za vklady? Jak brzy? {#how-soon}
 
