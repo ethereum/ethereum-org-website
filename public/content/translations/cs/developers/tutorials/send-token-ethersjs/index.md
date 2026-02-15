@@ -117,7 +117,7 @@ const tx = {
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("Odesílání dokončeno!")
+  alert("Send finished!")
 })
 ```
 
@@ -180,7 +180,7 @@ function send_token(
       // Odeslat tokeny
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("token odeslán")
+        alert("sent token")
       })
     } // odeslání etheru
     else {
@@ -199,10 +199,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("Odesílání dokončeno!")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("odeslání se nezdařilo!!")
+        alert("failed to send!!")
       }
     }
   })

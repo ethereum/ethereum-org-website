@@ -146,10 +146,10 @@ Přečtěte hodnotu z calldata.
         uint _retVal;
 
         require(length < 0x21,
-            "limit délky calldataVal je 32 bajtů");
+            "calldataVal length limit is 32 bytes");
 
         require(length + startByte <= msg.data.length,
-            "calldataVal se pokouší číst za velikostí calldata");
+            "calldataVal trying to read beyond calldatasize");
 ```
 
 Chystáme se načíst jedno 32bajtové (256bitové) slovo do paměti a odstranit bajty, které nejsou součástí požadovaného pole.
@@ -281,16 +281,16 @@ Budu předpokládat, že rozumíte [chai](https://www.chaijs.com/) a [ethers](ht
 const { expect } = require("chai");
 
 describe("CalldataInterpreter", function () {
-  it("Mělo by nám umožnit používat tokeny", async function () {
+  it("Should let us use tokens", async function () {
     const Token = await ethers.getContractFactory("OrisUselessToken")
     const token = await Token.deploy()
     await token.deployed()
-    console.log("Adresa tokenu:", token.address)
+    console.log("Token addr:", token.address)
 
     const Cdi = await ethers.getContractFactory("CalldataInterpreter")
     const cdi = await Cdi.deploy(token.address)
     await cdi.deployed()
-    console.log("Adresa CalldataInterpreter:", cdi.address)
+    console.log("CalldataInterpreter addr:", cdi.address)
 
     const signer = await ethers.getSigner()
 ```
@@ -410,8 +410,8 @@ Adresa tvůrce (nazývaná `owner`) je zde uložena, protože je to jediná adre
      * Může být zavolána pouze jednou vlastníkem
      */
     function setProxy(address _proxy) external {
-        require(msg.sender == owner, "Může být voláno pouze vlastníkem");
-        require(proxy == address(0), "Proxy je již nastaveno");
+        require(msg.sender == owner, "Can only be called by owner");
+        require(proxy == address(0), "Proxy is already set");
 
         proxy = _proxy;
     }    // function setProxy
@@ -528,7 +528,7 @@ await token.setProxy(cdi.address)
 Musíme kontraktu ERC-20 sdělit, kterému proxy má důvěřovat.
 
 ```js
-console.log("Adresa CalldataInterpreter:", cdi.address)
+console.log("CalldataInterpreter addr:", cdi.address)
 
 // K ověření povolenek potřebujeme dva podepisující
 const signers = await ethers.getSigners()

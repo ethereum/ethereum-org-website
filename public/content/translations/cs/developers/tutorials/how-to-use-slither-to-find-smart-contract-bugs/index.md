@@ -157,7 +157,7 @@ Například následující detektory hledají problémy související se syntax�
 
 Na rozdíl od syntaktické analýzy jde sémantická analýza hlouběji a analyzuje „význam“ kódu. Tato rodina zahrnuje několik širokých typů analýz. Vedou k výkonnějším a užitečnějším výsledkům, ale jsou také složitější na psaní.
 
-Sémantické analýzy se používají pro nej pokročilejší detekce zranitelností.
+Sémantické analýzy se používají pro nejpokročilejší detekce zranitelností.
 
 #### Analýza závislosti dat {#fixed-point-computation}
 
@@ -184,7 +184,7 @@ for(uint i; i < range; ++){
 }
 ```
 
-Vaše analýza bude muset vědět, kdy se zastavit. Existují zde dvě hlavní strategie: (1) iterovat na každém uzlu konečný početkrát, (2) vypočítat takzvaný _pevný bod_. Pevný bod v podstatě znamená, že analýza tohoto uzlu již neposkytuje žádné smysluplné informace.
+Vaše analýza bude muset vědět, kdy se zastavit. Existují zde dvě hlavní strategie: (1) iterovat na každém uzlu konečný počet krát, (2) vypočítat takzvaný _pevný bod_. Pevný bod v podstatě znamená, že analýza tohoto uzlu již neposkytuje žádné smysluplné informace.
 
 Příklad použití pevného bodu lze nalézt v detektorech reentrancy: Slither prozkoumává uzly a hledá externí volání, zápisy do úložiště a čtení z něj. Jakmile dosáhne pevného bodu ([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131)), zastaví průzkum a analyzuje výsledky, aby zjistil, zda je přítomna reentrancy, a to prostřednictvím různých vzorců reentrancy ([reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py), [reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py), [reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py)).
 

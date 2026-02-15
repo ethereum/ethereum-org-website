@@ -99,7 +99,7 @@ Nezáleží na tom, jak odpovíte na instalační otázky; zde je pro informaci,
       "description": "Moje první NFT!",
       "main": "index.js",
       "scripts": {
-        "test": "echo \"Chyba: není zadán žádný test\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1"
       },
       "author": "",
       "license": "ISC"
@@ -324,7 +324,7 @@ async function main() {
   // Spusťte nasazení, vrátí se promise, která se vyřeší na objekt kontraktu
   const myNFT = await MyNFT.deploy()
   await myNFT.deployed()
-  console.log("Kontrakt nasazen na adresu:", myNFT.address)
+  console.log("Contract deployed to address:", myNFT.address)
 }
 
 main()
@@ -360,7 +360,7 @@ Konečně jsme připraveni nasadit náš chytrý kontrakt! Vraťte se do kořeno
 Měli byste pak vidět něco takového:
 
     ```
-    Kontrakt nasazen na adresu: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
+    Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
     ```
 
 Pokud přejdeme na [Sepolia etherscan](https://sepolia.etherscan.io/) a vyhledáme adresu našeho kontraktu, měli bychom vidět, že byl úspěšně nasazen. Pokud ji nevidíte okamžitě, chvíli prosím počkejte, protože to může nějakou dobu trvat. Transakce bude vypadat nějak takto:

@@ -63,7 +63,7 @@ Smlouva o [tokenu `ARB`](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dc
      * @dev Uloží novou adresu do slotu správce EIP1967.
      */
     function _setAdmin(address newAdmin) private {
-        require(newAdmin != address(0), "ERC1967: nový správce je nulová adresa");
+        require(newAdmin != address(0), "ERC1967: new admin is the zero address");
         StorageSlot.getAddressSlot(_ADMIN_SLOT).value = newAdmin;
     }
 ```
@@ -95,8 +95,8 @@ Ve `wARB` tato funkce vypadá téměř legitimně:
 
 ```solidity
     function _transfer(address sender, address recipient, uint256 amount)  internal virtual{
-        require(sender != address(0), "ERC20: převod z nulové adresy");
-        require(recipient != address(0), "ERC20: převod na nulovou adresu");
+        require(sender != address(0), "ERC20: transfer from the zero address");
+        require(recipient != address(0), "ERC20: transfer to the zero address");
 
         _beforeTokenTransfer(sender, recipient, amount);
 
@@ -141,8 +141,8 @@ Když se podíváme na funkce, které se volají pro převod tokenů, `transfer`
 
 ```solidity
     function _f_(address sender, address recipient, uint256 amount) internal _mod_(sender,recipient,amount) virtual {
-        require(sender != address(0), "ERC20: převod z nulové adresy");
-        require(recipient != address(0), "ERC20: převod na nulovou adresu");
+        require(sender != address(0), "ERC20: transfer from the zero address");
+        require(recipient != address(0), "ERC20: transfer to the zero address");
 
         _beforeTokenTransfer(sender, recipient, amount);
 
@@ -182,7 +182,7 @@ Tato funkce má modifikátor `auth()`, což znamená, že ji může volat pouze 
 
 ```solidity
 modifier auth() {
-    require(msg.sender == contract_owner, "Interakce není povolena");
+    require(msg.sender == contract_owner, "Not allowed to interact");
     _;
 }
 ```
@@ -265,7 +265,7 @@ Samotná funkce `mount` je také podezřelá.
 
 ```solidity
     function mount(address account, uint256 amount) public {
-        require(msg.sender == contract_owner, "ERC20: ražba na nulovou adresu");
+        require(msg.sender == contract_owner, "ERC20: mint to the zero address");
 ```
 
 Při pohledu na `require` vidíme, že pouze vlastník smlouvy má povoleno razit. To je legitimní. Ale chybová zpráva by měla být _pouze vlastník má povoleno razit_ nebo něco podobného. Místo toho je to irelevantní _ERC20: ražba na nulovou adresu_. Správný test pro ražbu na nulovou adresu je `require(account != address(0), "<chybová zpráva>")`, což se smlouva nikdy neobtěžuje zkontrolovat.
@@ -297,12 +297,12 @@ Tato smlouva obsahuje tři modifikátory: `_mod_`, `auth` a `approver`.
 
 ```solidity
     modifier auth() {
-        require(msg.sender == contract_owner, "Interakce není povolena");
+        require(msg.sender == contract_owner, "Not allowed to interact");
         _;
     }
 
     modifier approver() {
-        require(msg.sender == contract_owner, "Interakce není povolena");
+        require(msg.sender == contract_owner, "Not allowed to interact");
         _;
     }
 ```

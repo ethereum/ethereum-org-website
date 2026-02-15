@@ -600,7 +600,7 @@ V tomto případě je funkce volána pouze jednou, takže neefektivita pro nás 
 
 ```solidity
     function initialize(address _l1messenger, address _l2TokenBridge) public {
-        require(messenger == address(0), "Kontrakt již byl inicializován.");
+        require(messenger == address(0), "Contract has already been initialized.");
 ```
 
 Funkce `initialize` by měla být volána pouze jednou.
@@ -632,7 +632,7 @@ Toto jsou dva parametry, které přemostění potřebuje znát.
      */
     modifier onlyEOA() {
         // Používá se k zastavení vkladů z kontraktů (zabraňuje náhodné ztrátě tokenů)
-        require(!Address.isContract(msg.sender), "Účet není EOA");
+        require(!Address.isContract(msg.sender), "Account not EOA");
         _;
     }
 ```
@@ -873,7 +873,7 @@ Tato funkce se používá k výběru ETH z přemostění, takže se musíme ujis
 Způsobem převodu ETH je zavolat příjemce s částkou wei v `msg.value`.
 
 ```solidity
-        require(success, "TransferHelper::safeTransferETH: Převod ETH selhal");
+        require(success, "TransferHelper::safeTransferETH: ETH transfer failed");
 
         // slither-disable-next-line reentrancy-events
         emit ETHWithdrawalFinalized(_from, _to, _amount, _data);
@@ -1036,7 +1036,7 @@ Nejprve zavoláme konstruktor kontraktu, ze kterého dědíme (`ERC20(_name, _sy
 ```solidity
 
     modifier onlyL2Bridge() {
-        require(msg.sender == l2Bridge, "Razit a pálit může pouze přemostění L2");
+        require(msg.sender == l2Bridge, "Only L2 Bridge can mint and burn");
         _;
     }
 
