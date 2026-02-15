@@ -13,7 +13,7 @@
   "page-staking-deposit-contract-launchpad": "Staking usando launchpad",
   "page-staking-deposit-contract-launchpad-2": "Usa launchpad",
   "page-staking-deposit-contract-meta-desc": "Verifica l'indirizzo del contratto di deposito per lo staking di Ethereum.",
-  "page-staking-deposit-contract-meta-title": "Indirizzo del contratto di deposito di stacking di Ethereum",
+  "page-staking-deposit-contract-meta-title": "Indirizzo del contratto di deposito di staking di Ethereum",
   "page-staking-deposit-contract-read-aloud": "Leggi l'indirizzo ad alta voce",
   "page-staking-deposit-contract-reveal-address-btn": "Rivela indirizzo",
   "page-staking-deposit-contract-staking": "Per fare staking con i tuoi ETH in Eth2 devi utilizzare il prodotto launchpad dedicato e seguire le istruzioni. L'invio di ETH all'indirizzo di questa pagina non ti renderà un staker e produrrà una transazione non riuscita.",
