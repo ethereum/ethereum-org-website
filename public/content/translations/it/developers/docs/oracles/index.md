@@ -202,7 +202,7 @@ Il nodo dell'oracolo è il componente off-chain del servizio dell'oracolo. Estra
 
 Un'attività comune per i nodi dell'oracolo è l'invio di una richiesta [HTTP GET](https://www.w3schools.com/tags/ref_httpmethods.asp) a un servizio API, l'analisi della risposta per estrarre i dati rilevanti, la formattazione in un risultato leggibile dalla blockchain e il suo invio sulla catena, includendolo in una transazione al contratto dell'oracolo. Inoltre, al nodo dell'oracolo, potrebbe essere richiesto di attestare la validità e l'integrità delle informazioni inviate utilizzando le "prove di autenticità", che esploreremo in seguito.
 
-Anche gli oracoli di calcolo si affidano a nodi off-chain per eseguire compiti di calcolo che non sarebbe pratico eseguire on-chain dati i costi del carburante e i limiti di dimensione dei blocchi. Ad esempio, il nodo dell'oracolo potrebbe essere incaricato della generazone di una cifra casuale verificabile (es., per i giochi basati sulla blockchain).
+Anche gli oracoli di calcolo si affidano a nodi off-chain per eseguire compiti di calcolo che non sarebbe pratico eseguire on-chain dati i costi del carburante e i limiti di dimensione dei blocchi. Ad esempio, il nodo dell'oracolo potrebbe essere incaricato della generazione di una cifra casuale verificabile (es., per i giochi basati sulla blockchain).
 
 ## Modelli di progettazione degli oracoli {#oracle-design-patterns}
 

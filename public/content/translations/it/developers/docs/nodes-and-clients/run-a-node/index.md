@@ -35,7 +35,7 @@ Quando il nodo è in esecuzione e si sta sincronizzando, sei pronto per [usarlo]
 
 #### Locale o cloud {#local-vs-cloud}
 
-I client di Ethereum possono funzionare su computer di livelo consumer e non richiedono alcun hardware speciale, come ad esempio per le macchine di mining. Dunque, hai varie opzioni per distribuire il nodo a seconda delle tue esigenze.
+I client di Ethereum possono funzionare su computer di livello consumer e non richiedono alcun hardware speciale, come ad esempio per le macchine di mining. Dunque, hai varie opzioni per distribuire il nodo a seconda delle tue esigenze.
 Per semplificare, pensiamo all'esecuzione di un nodo sia su una macchina fisica locale che su un server cloud:
 
 - Cloud
@@ -302,7 +302,7 @@ I documenti di Nethermind offrono una [guida completa](https://docs.nethermind.i
 
 Il client di esecuzione avvierà le sue funzioni principali, gli endpoint scelti e inizierà a cercare i pari. Dopo aver scoperto correttamente i pari, il client avvia la sincronizzazione. Il client di esecuzione attenderà una connessione dal client di consenso. I dati correnti della blockchain saranno disponibili una volta che il client è sincronizzato correttamente allo stato corrente.
 
-##### Eseguire Geth
+##### Eseguire Reth
 
 Questo esempio avvia Reth sulla Rete Principale, utilizzando la posizione dei dati predefinita. Abilita l'autenticazione JSON-RPC e Engine RPC per la connessione del client di consenso, che è definito dal percorso di `jwtsecret`, consentendo solo chiamate da `localhost`.
 

@@ -10,7 +10,7 @@ I rollup a conoscenza-zero (rollup ZK) sono [soluzioni di scalabilità](/develop
 
 Dovresti aver letto e compreso la nostra pagina sulla [scalabilità di Ethereum](/developers/docs/scaling/) e sul [livello 2](/layer-2).
 
-## What are zero-knowledge rollups? {#what-are-zk-rollups}
+## Cosa sono i rollup a conoscenza zero? {#what-are-zk-rollups}
 
 **I rollup a conoscenza-zero (rollup ZK)** raggruppano (o "eseguono il rollup") le transazioni in batch eseguiti fuori dalla catena. Il calcolo fuori dalla catena riduce la quantità di dati che devono essere pubblicati sulla blockchain. Gli operatori del rollup ZK inviano un riepilogo delle modifiche necessarie per rappresentare tutte le transazioni in un batch, piuttosto che inviare individualmente ogni transazione. Inoltre, producono [prove di validità](/glossary/#validity-proof) per dimostrare la correttezza delle loro modifiche.
 
@@ -18,7 +18,7 @@ Lo stato del rollup ZK è mantenuto da un contratto intelligente distribuito sul
 
 Spostando i fondi da un rollup ZK a Ethereum non ci sono ritardi perché le transazioni di uscita sono eseguite una volta che il contratto del rollup ZK verifica la prova di validità. Viceversa, il prelievo di fondi dai rollup ottimistici è soggetto a un ritardo per consentire a chiunque di contestare la transazione di uscita con una [prova di frode](/glossary/#fraud-proof).
 
-I rollup ZK scrivono le transazioni su Ethereum come `calldata`. `calldata` è dove vengono archiviati i dati inclusi nelle chiamate esterne alle funzioni di un contratto intelligente. Le informazioni in `calldata` sono pubblicate sulla blockchain, consentendo a chiunque di ricostruire lo stato del rollup in modo indipendente. I rollup ZK usano delle tecniche di compressione per ridurre i dati della transazione; ad esempio, i conti sono rappresentati da un indicec, piuttosto che da un indirizzo, risparmiando 28 byte di dati. La pubblicazione di dati sulla catena è un costo significativo per i rollup, quindi la compressione dei dati può ridurre le commissioni per gli utenti.
+I rollup ZK scrivono le transazioni su Ethereum come `calldata`. `calldata` è dove vengono archiviati i dati inclusi nelle chiamate esterne alle funzioni di un contratto intelligente. Le informazioni in `calldata` sono pubblicate sulla blockchain, consentendo a chiunque di ricostruire lo stato del rollup in modo indipendente. I rollup ZK usano delle tecniche di compressione per ridurre i dati della transazione; ad esempio, i conti sono rappresentati da un indice, piuttosto che da un indirizzo, risparmiando 28 byte di dati. La pubblicazione di dati sulla catena è un costo significativo per i rollup, quindi la compressione dei dati può ridurre le commissioni per gli utenti.
 
 ## Come interagiscono i rollup ZK con Ethereum? I rollup ZK ed Ethereum {#zk-rollups-and-ethereum}
 
@@ -40,7 +40,7 @@ I rollup ZK pubblicano i dati sullo stato di ogni transazione elaborata fuori da
 
 I rollup ZK non hanno bisogno di pubblicare molti dati delle transazioni sulla catena perché le prove di validità verificano già l'autenticità delle transizioni di stato. Tuttavia, l'archiviazione dei dati sulla catena è ancora importante perché consente una verifica indipendente e senza autorizzazione dello stato della catena L2, che a sua volta permette a chiunque di inviare batch di transazioni, impedendo agli operatori malintenzionati di censurare o bloccare la catena.
 
-Per interagire con il rollup, gli utenti devono essere sulla catena. Senza l'accesso ai dati di stato, gli utenti non possono richiededre il saldo del proprio conto né avviare transazioni (es., prelievi), che si affidino alle informazioni di stato.
+Per interagire con il rollup, gli utenti devono essere sulla catena. Senza l'accesso ai dati di stato, gli utenti non possono richiedere il saldo del proprio conto né avviare transazioni (es., prelievi), che si affidino alle informazioni di stato.
 
 ### Finalità della transazione {#transaction-finality}
 

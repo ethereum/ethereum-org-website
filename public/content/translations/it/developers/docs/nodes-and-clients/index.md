@@ -29,7 +29,7 @@ Diagramma semplificato di un client di esecuzione e di consenso accoppiato.
 
 Sia i [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) che i [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients) esistono in una varietà di linguaggi di programmazione sviluppati da team diversi.
 
-Diverse implementazioni del client possono rafforzare la rete, riducendone la dipendenza da un'unica base di codice. L'obiettivo ideale è raggiungere la diversità senza che nessun client domini la rete, eliminando così eventuali un potenziale punto di errore singolo.
+Diverse implementazioni del client possono rafforzare la rete, riducendone la dipendenza da un'unica base di codice. L'obiettivo ideale è raggiungere la diversità senza che nessun client domini la rete, eliminando così un potenziale punto di errore singolo.
 La varietà di linguaggi invita inoltre una community di sviluppatori più ampia e consente loro di creare integrazioni nel loro linguaggio preferito.
 
 Scopri di più sulla [diversità dei client](/developers/docs/nodes-and-clients/client-diversity/).
@@ -126,7 +126,7 @@ Configurare un nodo può richiedere tempo e risorse e non sempre è necessario e
 
 Se qualcuno esegue un nodo Ethereum con un'API pubblica nella tua community, puoi puntare i tuoi portafogli a un nodo della community tramite RPC personalizzato e ottenere più privacy rispetto a terze parti casuali affidabili.
 
-D'altro canto, se esegui un client, puoi condividerlo con i amici che potrebbero averne bisogno.
+D'altro canto, se esegui un client, puoi condividerlo con gli amici che potrebbero averne bisogno.
 
 ## Client di esecuzione {#execution-clients}
 
