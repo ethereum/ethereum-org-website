@@ -29,7 +29,7 @@ Dagger-Hashimoto має на меті досягнення двох цілей:
 NUM_BITS = 512
 
 def encode_int(x):
-    "Кодує ціле число x як рядок з 64 символів, використовуючи схему big-endian"
+    "Encode an integer x as a string of 64 characters using a big-endian scheme"
     o = ''
     for _ in range(NUM_BITS / 8):
         o = chr(x % 256) + o
@@ -37,7 +37,7 @@ def encode_int(x):
     return o
 
 def decode_int(s):
-    "Декодує ціле число x з рядка, використовуючи схему big-endian"
+    "Unencode an integer x from a string using a big-endian scheme"
     x = 0
     for c in s:
         x *= 256
@@ -65,19 +65,20 @@ def dbl_sha3(x):
 Для алгоритму використовуються такі параметри:
 
 ```python
-SAFE_PRIME_512 = 2**512 - 38117     # Найбільше безпечне просте число, менше за 2**512
+SAFE_PRIME_512 = 2**512 - 38117     # Largest Safe Prime less than 2**512
 
 params = {
-      "n": 4000055296 * 8 // NUM_BITS,  # Розмір набору даних (4 ГБ); МАЄ БУТИ КРАТНИМ 65536
-      "n_inc": 65536,                   # Приріст значення n за період; МАЄ БУТИ КРАТНИМ 65536
-                                        # з epochtime=20000 дає 882 МБ зростання на рік
-      "cache_size": 2500,               # Розмір кешу легкого клієнта (може вибиратися легким клієнтом; не є частиною специфікації алгоритму)
-      "diff": 2**14,                    # Складність (коригується під час оцінки блоку)
-      "epochtime": 100000,              # Тривалість епохи в блоках (як часто оновлюється набір даних)
-      "k": 1,                           # Кількість батьківських вузлів
-      "w": w,                          # Використовується для гешування модульним піднесенням до степеня
-      "accesses": 200,                  # Кількість доступів до набору даних під час hashimoto
-      "P": SAFE_PRIME_512               # Безпечне просте число для гешування та генерації випадкових чисел
+      "n": 4000055296 * 8 // NUM_BITS,  # Size of the dataset (4 Gigabytes); MUST BE MULTIPLE OF 65536
+      "n_inc": 65536,                   # Increment in value of n per period; MUST BE MULTIPLE OF 65536
+                                        # with epochtime=20000 gives 882 MB growth per year
+      "cache_size": 2500,               # Size of the light client's cache (can be chosen by light
+                                        # client; not part of the algo spec)
+      "diff": 2**14,                    # Difficulty (adjusted during block evaluation)
+      "epochtime": 100000,              # Length of an epoch in blocks (how often the dataset is updated)
+      "k": 1,                           # Number of parents of a node
+      "w": w,                          # Used for modular exponentiation hashing
+      "accesses": 200,                  # Number of dataset accesses during hashimoto
+      "P": SAFE_PRIME_512               # Safe Prime for hashing and random number generation
 }
 ```
 
@@ -163,7 +164,7 @@ def get_daggerset(params, block):
     dagsz = get_dagsize(params, block)
     seedset = get_seedset(params, block)
     if seedset["front_hash"] <= 0:
-        # Немає можливості створити задній буфер, просто створіть передній буфер
+        # No back buffer is possible, just make front buffer
         return {"front": {"dag": produce_dag(params, seedset["front_hash"], dagsz),
                           "block_number": 0}}
     else:

@@ -31,11 +31,11 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 Загальна винагорода розраховується як сума п'яти компонентів, кожен з яких має вагу, що визначає, скільки кожен компонент додає до загальної винагороди. Цими компонентами є:
 
 ```
-1. голосування за джерело: валідатор своєчасно проголосував за правильну контрольну точку джерела
-2. голосування за ціль: валідатор своєчасно проголосував за правильну цільову контрольну точку
-3. голосування за голову: валідатор своєчасно проголосував за правильний головний блок
-4. винагорода комітету синхронізації: валідатор брав участь у комітеті синхронізації
-5. винагорода автора пропозиції: валідатор запропонував блок у правильному слоті
+1. source vote: the validator has made a timely vote for the correct source checkpoint
+2. target vote: the validator has made a timely vote for the correct target checkpoint
+3. head vote: the validator has made a timely vote for the correct head block
+4. sync committee reward: the validator has participated in a sync committee
+5. proposer reward: the validator has proposed a block in the correct slot
 ```
 
 Вагові коефіцієнти для кожного компонента є наступними:
