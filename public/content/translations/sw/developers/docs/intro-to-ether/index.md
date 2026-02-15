@@ -1,5 +1,5 @@
 ---
-title: "''Utangulizi wa kiufundi wa Ether''"
+title: "Utangulizi wa kiufundi wa Ether"
 description: Utangulizi wa msanidi programu katika sarafu ya kripto.
 lang: sw
 ---
@@ -20,7 +20,7 @@ Sarafu ya kwanza ya kidijitali ilikuwa Bitcoin, iliyoundwa na Satoshi Nakamoto. 
 
 **Ether (ETH)** ni sarafu ya kidigitali inayotumika kwa mambo mengi kwenye mtandao wa Ethereum. Kimsingi, ndiyo njia pekee inayokubalika ya malipo kwa ada za miamala, na baada ya [The Merge](/roadmap/merge), ether inahitajika ili kuthibitisha na kupendekeza vizuizi kwenye Mainnet. Ether pia hutumika kama aina ya msingi ya dhamana katika masoko ya ukopeshaji ya [DeFi](/defi), kama kipimo cha hesabu katika masoko ya NFT, kama malipo yanayopatikana kwa kutoa huduma au kuuza bidhaa halisi za ulimwengu, na zaidi.
 
-Ethereum inaruhusu wasanidi programu kuunda [**mfumo uliotawanywa (mfumo mtawanyo wa kimamlaka)**](/developers/docs/dapps), ambapo zote hushiriki bwawa la nguvu za kompyuta. ''Bwawa hili ni ndogo, hivyo Ethereum inahitaji utaratibu wa kuamua ni nani atakayelipata kulitumia.''. Vinginevyo, mfumo mtawanyo wa kimamlaka unaweza kwa bahati mbaya au kwa nia mbaya kutumia rasilimali zote za mtandao, jambo ambalo lingezuia wengine kuufikia.
+Ethereum inaruhusu wasanidi programu kuunda [**mfumo uliotawanywa (mfumo mtawanyo wa kimamlaka)**](/developers/docs/dapps), ambapo zote hushiriki bwawa la nguvu za kompyuta. Bwawa hili ni ndogo, hivyo Ethereum inahitaji utaratibu wa kuamua ni nani atakayelipata kulitumia. Vinginevyo, mfumo mtawanyo wa kimamlaka unaweza kwa bahati mbaya au kwa nia mbaya kutumia rasilimali zote za mtandao, jambo ambalo lingezuia wengine kuufikia.
 
 Sarafu ya kidigitali ya ether inasaidia utaratibu wa bei kwa nguvu za kompyuta za Ethereum. Watumiaji wanapotaka kufanya muamala, lazima walipe ether ili muamala wao utambuliwe kwenye mnyororo wa vizuizi. Gharama hizi za matumizi zinajulikana kama [ada za gesi](/developers/docs/gas/), na ada ya gesi inategemea kiasi cha nguvu ya kompyuta inayohitajika kutekeleza muamala na mahitaji ya mtandao mzima ya nguvu ya kompyuta kwa wakati huo.
 
