@@ -272,7 +272,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                 />
               </div>
 
-              <div>
+              <div className="flex flex-col gap-1">
                 <Link
                   href="https://docs.scaffoldeth.io/llms-full.txt"
                   customEventOptions={{
@@ -282,6 +282,17 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                   }}
                 >
                   Scaffold-ETH 2 <code>llms-full.txt</code>
+                </Link>
+                <Link
+                  href="https://ethskills.com/"
+                  target="_blank"
+                  customEventOptions={{
+                    eventCategory: "mid_boxes",
+                    eventAction: "click",
+                    eventName: "ethskills",
+                  }}
+                >
+                  ethskills.com — AI agent context for Ethereum
                 </Link>
               </div>
             </Card>
