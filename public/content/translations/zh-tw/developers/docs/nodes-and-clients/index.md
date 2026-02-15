@@ -1,5 +1,5 @@
 ---
-title: "節點和客戶"
+title: "節點和用戶端"
 description: "以太坊節點及用戶端軟體概述，以及如何設定節點和你為何應該這麼做。"
 lang: zh-tw
 sidebarDepth: 2
