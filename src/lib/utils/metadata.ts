@@ -141,7 +141,7 @@ export const getMetadata = async ({
   }
 
   if (!isCurrentPageTranslated) {
-    return { ...base, robots: { index: true, follow: true } }
+    return { ...base, robots: { index: false, follow: true } }
   }
 
   return base
