@@ -24,7 +24,7 @@
   "page-roadmap-vision-security-desc-10": "質押還意味著你無需投資頂尖硬體即可直接參與共識。這應該會鼓勵更多的人成為驗證者，從而提高網路的去中心化程度並縮減攻擊面。",
   "page-roadmap-vision-security-staking": "質押以太幣",
   "page-roadmap-vision-security-validator": "只要願意質押以太幣，任何人都能成為驗證者。",
-  "page-roadmap-vision-staking-lower": "更多權益質押相關資訊",
+  "page-roadmap-vision-staking-lower": "更多質押相關訊息",
   "page-roadmap-vision-subtitle": "讓以太坊發展壯大，使其足以幫助全人類。",
   "page-roadmap-vision-sustainability": "永續性",
   "page-roadmap-vision-sustainability-desc-1": "以太坊現在是一個綠色區塊鏈。當權益證明替代工作量證明時，能耗降低了約 99.95%。",
@@ -62,6 +62,6 @@
   "page-roadmap-vision-upgrade-needs-desc-5": "既然這項技術已經成熟，這些升級將重新建構以太坊，使其更具可擴容性、安全性和永續性，使現有使用者的生活變得更好並吸引新使用者。這一切都不會改變以太坊去中心化的核心價值。",
   "page-roadmap-vision-upgrade-needs-desc-6": "這意味著實現以太坊的可擴容性並非一蹴而就之事。改進會隨著時間的推移逐步實現。",
   "page-roadmap-vision-upgrade-needs-serenity": "檢視 2015 年的一篇探討「寧靜」的部落格文章",
-  "ethereum": "Ethereum",
+  "ethereum": "以太坊",
   "page-roadmap-vision-danksharding": "更多分片相關資訊"
 }
