@@ -1,11 +1,11 @@
 ---
 title: Recursive-length prefix (RLP) serialization
-description: "Giải thích về mã hóa rlp trong excution layer của Ethereum."
+description: "Giải thích về mã hóa rlp trong execution layer của Ethereum."
 lang: vi
 sidebarDepth: 2
 ---
 
-Recursive Length Prefix (RLP) serialization được sử dụng phổ biến trong các execution client của Ethereum. RLP chuẩn hóa việc truyền dữ liệu giữa các node với một định dạng tiết kiệm không gian. Mục đích của RLP là mã hóa các mảng dữ liệu nhị phân lồng nhau bất kỳ, và RLP là phương thức mã hóa chính được sử dụng để tuần tự hóa các đối tượng trong excution layer của Ethereum. Mục đích chính của RLP là mã hóa cấu trúc; ngoại trừ các số nguyên dương, RLP ủy thác việc mã hóa các kiểu dữ liệu cụ thể (ví dụ: chuỗi, số thực) cho các giao thức bậc cao hơn. Các số nguyên dương phải được biểu diễn dưới dạng nhị phân big-endian không có số không ở đầu (do đó làm cho giá trị số nguyên không tương đương với mảng byte trống). Các số nguyên dương được giải tuần tự hóa có số không ở đầu phải bị coi là không hợp lệ bởi bất kỳ giao thức bậc cao nào sử dụng RLP.
+Recursive Length Prefix (RLP) serialization được sử dụng phổ biến trong các execution client của Ethereum. RLP chuẩn hóa việc truyền dữ liệu giữa các node với một định dạng tiết kiệm không gian. Mục đích của RLP là mã hóa các mảng dữ liệu nhị phân lồng nhau bất kỳ, và RLP là phương thức mã hóa chính được sử dụng để tuần tự hóa các đối tượng trong execution layer của Ethereum. Mục đích chính của RLP là mã hóa cấu trúc; ngoại trừ các số nguyên dương, RLP ủy thác việc mã hóa các kiểu dữ liệu cụ thể (ví dụ: chuỗi, số thực) cho các giao thức bậc cao hơn. Các số nguyên dương phải được biểu diễn dưới dạng nhị phân big-endian không có số không ở đầu (do đó làm cho giá trị số nguyên không tương đương với mảng byte trống). Các số nguyên dương được giải tuần tự hóa có số không ở đầu phải bị coi là không hợp lệ bởi bất kỳ giao thức bậc cao nào sử dụng RLP.
 
 Thông tin thêm trong [sách vàng Ethereum (Phụ lục B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
@@ -101,7 +101,7 @@ Trong số đó, các quy tắc giải mã kiểu dữ liệu và offset như sa
 
 3. dữ liệu là một chuỗi nếu phạm vi của byte đầu tiên là [0xb8, 0xbf] và độ dài của chuỗi có độ dài tính bằng byte bằng byte đầu tiên trừ đi 0xb7 theo sau byte đầu tiên và chuỗi theo độ dài của chuỗi;
 
-4. dữ liệu là một list nếu phạm vi của byte đầu tiên là [0xc0, 0xf7], và phần mã hóa rlp của tất cả item của list có độ lớn băngf byte đầu tiên trừ 0xc0 theo sau byte đầu tiên;
+4. dữ liệu là một list nếu phạm vi của byte đầu tiên là [0xc0, 0xf7], và phần mã hóa rlp của tất cả item của list có độ lớn bằng byte đầu tiên trừ 0xc0 theo sau byte đầu tiên;
 
 5. dữ liệu là một list nếu phạm vi của byte đầu tiên là [0xb8, 0xff] và toàn bộ payload của list có độ dài bằng byte đầu tiên trừ đi 0xf7 theo sau byte đầu tiên, và các mã hóa rlp của các item nối tiếp nhau nằm tiếp sau;
 
