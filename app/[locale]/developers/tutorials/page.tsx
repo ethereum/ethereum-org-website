@@ -9,6 +9,7 @@ import {
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import FeedbackCard from "@/components/FeedbackCard"
+import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Skeleton, SkeletonCardContent } from "@/components/ui/skeleton"
@@ -21,14 +22,31 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import TutorialsPageJsonLD from "./page-jsonld"
 
+import heroImg from "@/public/images/doge-computer.png"
+
 const TutorialsList = dynamic(() => import("./_components/tutorials"), {
   ssr: false,
   loading: () => (
     <div className="mt-8 w-full md:w-2/3">
-      <div className="grid w-full grid-cols-3 gap-2 px-8 pb-16 pt-12 sm:grid-cols-4 lg:gap-4 2xl:grid-cols-5">
-        {Array.from({ length: 30 }).map((_, index) => (
-          <Skeleton key={"tag" + index} className="h-8 rounded-full" />
-        ))}
+      <div className="border-b border-border px-8 pb-6 pt-8">
+        {/* Skill tabs + search skeleton */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex gap-2">
+            {Array.from({ length: 4 }).map((_, index) => (
+              <Skeleton
+                key={"skill" + index}
+                className="h-8 w-24 rounded-full"
+              />
+            ))}
+          </div>
+          <Skeleton className="h-10 w-full rounded sm:w-64" />
+        </div>
+        {/* Tag pills skeleton */}
+        <div className="mt-5 flex flex-wrap gap-2">
+          {Array.from({ length: 8 }).map((_, index) => (
+            <Skeleton key={"tag" + index} className="h-8 w-20 rounded-full" />
+          ))}
+        </div>
       </div>
       {Array.from({ length: 5 }).map((_, index) => (
         <SkeletonCardContent key={"card" + index} className="p-8" />
@@ -75,6 +93,14 @@ const Page = async ({ params }: { params: PageParams }) => {
     commitHistoryCache
   )
 
+  const heroProps: ContentHeroProps = {
+    breadcrumbs: { slug: "developers/tutorials", startDepth: 1 },
+    heroImg,
+    title: t("page-tutorial-title"),
+    description: t("page-tutorial-subtitle"),
+    buttons: [<TutorialSubmitModal key="submit" dir={dir} />],
+  }
+
   return (
     <>
       <TutorialsPageJsonLD
@@ -83,19 +109,11 @@ const Page = async ({ params }: { params: PageParams }) => {
         contributors={contributors}
       />
       <I18nProvider locale={locale} messages={messages}>
+        <ContentHero {...heroProps} />
         <MainArticle
-          className="mx-auto my-0 mt-16 flex w-full flex-col items-center"
+          className="mx-auto my-0 flex w-full flex-col items-center"
           dir={dir}
         >
-          <h1 className="no-italic mb-4 text-center font-monospace text-[2rem] font-semibold uppercase leading-[1.4] max-sm:mx-4 max-sm:mt-4 sm:mb-[1.625rem]">
-            {t("page-tutorial-title")}
-          </h1>
-          <p className="mb-4 text-center leading-xs text-body-medium">
-            {t("page-tutorial-subtitle")}
-          </p>
-
-          <TutorialSubmitModal dir={dir} />
-
           <TutorialsList internalTutorials={internalTutorials} />
 
           <FeedbackCard />
