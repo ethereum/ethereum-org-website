@@ -8,7 +8,7 @@ lang: ko
 
 ethereum.org는 누구나 참여할 수 있는 이더리움 커뮤니티의 공개 오픈소스 리소스입니다. 저희는 사이트를 유지하고 개발하는 데 전념하는 소규모 핵심 팀으로, 전 세계 수천 명의 커뮤니티 구성원들의 기여로 운영됩니다.
 
-**ethereum.orgethereum.org의 누구도 당신에게 연락하지는 않을 것입니다. 답변하지 말아 주세요.**
+**ethereum.org의 누구도 당신에게 연락하지는 않을 것입니다. 답변하지 말아 주세요.**
 
 ## 이름에 대한 참고 사항 {#a-note-on-names}
 
@@ -111,7 +111,7 @@ ETH의 크라우드세일로 초기 자금을 조달한 비영리 단체로, 이
 
 우리는 기능을 더 빨리 출시하고 커뮤니티 구성원이 ethereum.org의 공개 디자인에 참여할 수 있도록 [디자인 시스템](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)을 구축하고 출시했습니다.
 
-참여하고 싶으신가요?[Figma에서 따라가기](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [GitHub 이슈](https://github.com/ethereum/ethereum-org-website/issues/6284)를 확인하고 [#design Discord 채널](https://discord.gg/ethereum-org)에서 대화에 참여하세요.
+참여하고 싶으신가요? [Figma에서 따라가기](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [GitHub 이슈](https://github.com/ethereum/ethereum-org-website/issues/6284)를 확인하고 [#design Discord 채널](https://discord.gg/ethereum-org)에서 대화에 참여하세요.
 
 ## 스타일 가이드 {#style-guide}
 
