@@ -105,10 +105,7 @@ module.exports = [
   ["/10-years", "/10years"],
   ["/history", "/ethereum-forks"],
   ["/developers/docs/scaling/rollups", "/developers/docs/scaling/"],
-  [
-    "/eth2/get-involved/staking-community-grants",
-    "/staking/",
-  ],
+  ["/eth2/get-involved/staking-community-grants", "/staking/"],
   ["/developers/docs/zk", "/zero-knowledge-proofs/"],
   ["/developers/docs/security", "/developers/docs/smart-contracts/security/"],
   ["/wallet", "/wallets/"],
