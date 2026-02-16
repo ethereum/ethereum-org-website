@@ -12,21 +12,21 @@ Vì mục đích này, mọi [máy khách Ethereum](/developers/docs/nodes-and-c
 
 ## Triển khai máy khách {#client-implementations}
 
-Mỗi máy khách Ethereum có thể sử dụng các ngôn ngữ lập trình khác nhau khi triển khai đặc tả JSON-RPC. Xem [tài liệu tham khảo của từng máy khách](/developers/docs/nodes-and-clients/#execution-clients) để biết thêm chi tiết liên quan đến các ngôn ngữ lập trình cụ thể. Chúng tôi khuyên bạn nên kiểm tra tài liệu tham khảo của từng máy khách để biết thông tin hỗ trợ Giao diện Lập trình Ứng dụng mới nhất.
+Mỗi máy khách Ethereum có thể sử dụng các ngôn ngữ lập trình khác nhau khi triển khai đặc tả JSON-RPC. Xem [tài liệu tham khảo của từng máy khách](/developers/docs/nodes-and-clients/#execution-clients) để biết thêm chi tiết liên quan đến các ngôn ngữ lập trình cụ thể. Chúng tôi khuyên bạn nên kiểm tra tài liệu tham khảo của từng máy khách để biết thông tin hỗ trợ API mới nhất.
 
 ## Thư viện tiện lợi {#convenience-libraries}
 
-Mặc dù bạn có thể chọn tương tác trực tiếp với các máy khách Ethereum thông qua Giao diện Lập trình Ứng dụng JSON-RPC, nhưng thường có các tùy chọn dễ dàng hơn cho các nhà phát triển ứng dụng phi tập trung. Nhiều thư viện [JavaScript](/developers/docs/apis/javascript/#available-libraries) và [Giao diện Lập trình Ứng dụng backend](/developers/docs/apis/backend/#available-libraries) tồn tại để cung cấp các trình bao bọc trên Giao diện Lập trình Ứng dụng JSON-RPC. Với các thư viện này, các nhà phát triển có thể viết các phương thức trực quan, một dòng bằng ngôn ngữ lập trình mà họ chọn để khởi tạo các yêu cầu JSON-RPC (ngầm) tương tác với Ethereum.
+Mặc dù bạn có thể chọn tương tác trực tiếp với các máy khách Ethereum thông qua API JSON-RPC, nhưng thường có các tùy chọn dễ dàng hơn cho các nhà phát triển ứng dụng phi tập trung. Nhiều thư viện [JavaScript](/developers/docs/apis/javascript/#available-libraries) và [API backend](/developers/docs/apis/backend/#available-libraries) tồn tại để cung cấp các trình bao bọc trên API JSON-RPC. Với các thư viện này, các nhà phát triển có thể viết các phương thức trực quan, một dòng bằng ngôn ngữ lập trình mà họ chọn để khởi tạo các yêu cầu JSON-RPC (ngầm) tương tác với Ethereum.
 
-## Các Giao diện Lập trình Ứng dụng của máy khách đồng thuận {#consensus-clients}
+## Các API của máy khách đồng thuận {#consensus-clients}
 
-Trang này chủ yếu đề cập đến Giao diện Lập trình Ứng dụng JSON-RPC được sử dụng bởi các máy khách thực thi Ethereum. Tuy nhiên, các máy khách đồng thuận cũng có một Giao diện Lập trình Ứng dụng RPC cho phép người dùng truy vấn thông tin về nút, yêu cầu các khối Beacon, trạng thái Beacon và các thông tin khác liên quan đến sự đồng thuận trực tiếp từ một nút. Giao diện Lập trình Ứng dụng này được ghi lại trên [trang web Giao diện Lập trình Ứng dụng Beacon](https://ethereum.github.io/beacon-APIs/#/).
+Trang này chủ yếu đề cập đến API JSON-RPC được sử dụng bởi các máy khách thực thi Ethereum. Tuy nhiên, các máy khách đồng thuận cũng có một API RPC cho phép người dùng truy vấn thông tin về nút, yêu cầu các khối Beacon, trạng thái Beacon và các thông tin khác liên quan đến sự đồng thuận trực tiếp từ một nút. API này được ghi lại trên [trang web API Beacon](https://ethereum.github.io/beacon-APIs/#/).
 
-Một Giao diện Lập trình Ứng dụng nội bộ cũng được sử dụng để liên lạc giữa các máy khách trong một nút - nghĩa là nó cho phép máy khách đồng thuận và máy khách thực thi hoán đổi dữ liệu. Đây được gọi là 'Engine API' và các thông số kỹ thuật có sẵn trên [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Một API nội bộ cũng được sử dụng để liên lạc giữa các máy khách trong một nút - nghĩa là nó cho phép máy khách đồng thuận và máy khách thực thi hoán đổi dữ liệu. Đây được gọi là 'Engine API' và các thông số kỹ thuật có sẵn trên [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Đặc tả máy khách thực thi {#spec}
 
-[Đọc toàn bộ đặc tả Giao diện Lập trình Ứng dụng JSON-RPC trên GitHub](https://github.com/ethereum/execution-apis). Giao diện Lập trình Ứng dụng này được ghi lại trên [trang web Giao diện Lập trình Ứng dụng Thực thi](https://ethereum.github.io/execution-apis/) và bao gồm một Trình kiểm tra để dùng thử tất cả các phương thức có sẵn.
+[Đọc toàn bộ đặc tả API JSON-RPC trên GitHub](https://github.com/ethereum/execution-apis). API này được ghi lại trên [trang web API Thực thi](https://ethereum.github.io/execution-apis/) và bao gồm một Trình kiểm tra để dùng thử tất cả các phương thức có sẵn.
 
 ## Quy ước {#conventions}
 
@@ -81,11 +81,11 @@ Các tùy chọn sau đây có thể có cho thông số khối:
 
 ## Ví dụ
 
-Trên trang này, chúng tôi cung cấp các ví dụ về cách sử dụng các điểm cuối API JSON_RPC riêng lẻ bằng công cụ dòng lệnh, [curl](https://curl.se). Các ví dụ điểm cuối riêng lẻ này được tìm thấy bên dưới trong phần [Ví dụ về Curl](#curl-examples). Ở phần sau của trang, chúng tôi cũng cung cấp một [ví dụ từ đầu đến cuối](#usage-example) để biên dịch và triển khai một hợp đồng thông minh bằng cách sử dụng một nút Geth, Giao diện Lập trình Ứng dụng JSON_RPC và curl.
+Trên trang này, chúng tôi cung cấp các ví dụ về cách sử dụng các điểm cuối API JSON_RPC riêng lẻ bằng công cụ dòng lệnh, [curl](https://curl.se). Các ví dụ điểm cuối riêng lẻ này được tìm thấy bên dưới trong phần [Ví dụ về Curl](#curl-examples). Ở phần sau của trang, chúng tôi cũng cung cấp một [ví dụ từ đầu đến cuối](#usage-example) để biên dịch và triển khai một hợp đồng thông minh bằng cách sử dụng một nút Geth, API JSON_RPC và curl.
 
 ## Ví dụ về Curl {#curl-examples}
 
-Các ví dụ về việc sử dụng Giao diện Lập trình Ứng dụng JSON_RPC bằng cách thực hiện các yêu cầu [curl](https://curl.se) tới một nút Ethereum được cung cấp bên dưới. Mỗi ví dụ
+Các ví dụ về việc sử dụng API JSON_RPC bằng cách thực hiện các yêu cầu [curl](https://curl.se) tới một nút Ethereum được cung cấp bên dưới. Mỗi ví dụ
 bao gồm mô tả về điểm cuối cụ thể, các tham số, loại trả về của nó và một ví dụ đã thực hiện về cách sử dụng nó.
 
 Các yêu cầu curl có thể trả về một thông điệp lỗi liên quan đến loại nội dung. Điều này là do tùy chọn `--data` đặt loại nội dung thành `application/x-www-form-urlencoded`. Nếu nút của bạn phàn nàn về điều này, hãy đặt tiêu đề theo cách thủ công bằng cách đặt `-H "Content-Type: application/json"` ở đầu cuộc gọi. Các ví dụ cũng không bao gồm tổ hợp URL/IP & cổng phải là đối số cuối cùng được cung cấp cho curl (ví dụ: `127.0.0.1:8545`). Một yêu cầu curl hoàn chỉnh bao gồm các dữ liệu bổ sung này có dạng sau:
@@ -135,9 +135,9 @@ Một số phương pháp JSON-RPC cốt lõi yêu cầu dữ liệu từ mạng
 
 ## Sân chơi API JSON-RPC
 
-Bạn có thể sử dụng [công cụ sân chơi](https://ethereum-json-rpc.com) để khám phá và dùng thử các phương thức Giao diện Lập trình Ứng dụng. Nó cũng cho bạn thấy những phương pháp và mạng nào được hỗ trợ bởi các nhà cung cấp nút khác nhau.
+Bạn có thể sử dụng [công cụ sân chơi](https://ethereum-json-rpc.com) để khám phá và dùng thử các phương thức API. Nó cũng cho bạn thấy những phương pháp và mạng nào được hỗ trợ bởi các nhà cung cấp nút khác nhau.
 
-## Các phương thức Giao diện Lập trình Ứng dụng JSON-RPC {#json-rpc-methods}
+## Các phương thức API JSON-RPC {#json-rpc-methods}
 
 ### web3_clientVersion {#web3_clientversion}
 
