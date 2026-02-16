@@ -2,7 +2,7 @@
 title: "Uniswap-v2 컨트랙트 살펴보기"
 description: "Uniswap-v2 컨트랙트는 어떻게 작동하나요? 왜 그렇게 작성되었을까요?"
 author: Ori Pomerantz
-tags: [ "솔리디티" ]
+tags: ["solidity"]
 skill: intermediate
 published: 2021-05-01
 lang: ko

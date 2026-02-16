@@ -3,7 +3,7 @@ title: "토큰 통합 체크리스트"
 description: "토큰과 상호작용할 때 고려해야 할 점검 사항"
 author: "Trailofbits"
 lang: ko
-tags: [ "솔리디티", "스마트 계약", "보안", "토큰" ]
+tags: ["solidity", "smart contracts", "security", "tokens"]
 skill: intermediate
 published: 2020-08-13
 source: Building secure contracts

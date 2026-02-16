@@ -3,7 +3,7 @@ title: "Calldata 최적화를 위한 짧은 ABI"
 description: "낙관적 롤업을 위한 스마트 계약 최적화"
 author: Ori Pomerantz
 lang: ko
-tags: [ "레이어 2" ]
+tags: ["layer 2"]
 skill: intermediate
 published: 2022-04-01
 ---

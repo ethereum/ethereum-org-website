@@ -2,7 +2,7 @@
 title: "Waffle 라이브러리를 사용한 간단한 스마트 계약 테스트"
 description: "초보자를 위한 튜토리얼"
 author: Ewa Kowalska
-tags: [ "스마트 계약", "솔리디티", "Waffle", "테스트" ]
+tags: ["smart contracts", "solidity", "waffle", "testing"]
 skill: beginner
 lang: ko
 published: 2021-02-26

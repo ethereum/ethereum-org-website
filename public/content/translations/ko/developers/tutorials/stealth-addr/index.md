@@ -2,7 +2,7 @@
 title: "스텔스 주소 사용하기"
 description: "스텔스 주소는 사용자가 자산을 익명으로 전송할 수 있게 해줍니다. 이 기사를 읽고 나면 스텔스 주소가 무엇이며 어떻게 작동하는지 설명하고, 익명성을 유지하는 방식으로 스텔스 주소를 사용하는 방법을 이해하며, 스텔스 주소를 사용하는 웹 기반 애플리케이션을 작성할 수 있게 됩니다."
 author: Ori Pomerantz
-tags: [ "스텔스 주소", "개인정보 보호", "암호학", "러스트", "wasm" ]
+tags: ["Stealth address", "privacy", "cryptography", "rust", "wasm"]
 skill: intermediate
 published: 2025-11-30
 lang: ko

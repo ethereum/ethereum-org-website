@@ -2,7 +2,7 @@
 title: "옐로우 페이퍼의 EVM 사양 이해하기"
 description: "이더리움의 공식 사양인 옐로우 페이퍼에서 이더리움 가상 머신(EVM)을 설명하는 부분 이해하기."
 author: "qbzzt"
-tags: [ "evm" ]
+tags: ["evm"]
 skill: intermediate
 lang: ko
 published: 2022-05-15

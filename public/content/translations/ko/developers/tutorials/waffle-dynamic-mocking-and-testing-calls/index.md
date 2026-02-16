@@ -2,7 +2,7 @@
 title: "Waffle: 동적 모킹 및 계약 호출 테스트"
 description: "동적 모킹 및 계약 호출 테스트를 위한 고급 Waffle 튜토리얼"
 author: "Daniel Izdebski"
-tags: [ "waffle", "스마트 계약", "솔리디티", "테스트", "모킹" ]
+tags: ["waffle", "smart contracts", "solidity", "testing", "mocking"]
 skill: intermediate
 lang: ko
 published: 2020-11-14

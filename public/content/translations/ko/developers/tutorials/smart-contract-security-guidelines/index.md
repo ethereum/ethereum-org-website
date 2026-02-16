@@ -2,7 +2,7 @@
 title: "스마트 계약 보안 가이드라인"
 description: "탈중앙화앱을 빌드할 때 고려해야 할 보안 가이드라인 체크리스트"
 author: "Trailofbits"
-tags: [ "솔리디티", "스마트 컨트랙트", "보안" ]
+tags: ["solidity", "smart contracts", "security"]
 skill: intermediate
 lang: ko
 published: 2020-09-06

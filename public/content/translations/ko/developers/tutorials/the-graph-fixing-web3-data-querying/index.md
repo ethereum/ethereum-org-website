@@ -3,7 +3,7 @@ title: "The Graph: 웹3 데이터 쿼리 문제 해결"
 description: "블록체인은 데이터베이스와 같지만 SQL이 없어요. 모든 데이터는 있지만, 접근할 방법이 없어요. The Graph와 GraphQL로 이 문제를 해결하는 방법을 알려드릴게요."
 author: Markus Waas
 lang: ko
-tags: [ "솔리디티", "스마트 계약", "요청", "the graph", "react" ]
+tags: ["solidity", "smart contracts", "querying", "the graph", "react"]
 skill: intermediate
 published: 2020-09-06
 source: soliditydeveloper.com

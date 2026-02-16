@@ -2,7 +2,7 @@
 title: "ERC-20 토큰 스마트 계약 이해하기"
 description: "완벽한 솔리디티 스마트 계약 예제와 설명을 통해 ERC-20 토큰 표준을 구현하는 방법을 알아보세요."
 author: "jdourlens"
-tags: [ "스마트 계약", "토큰", "솔리디티", "erc-20" ]
+tags: ["smart contracts", "tokens", "solidity", "erc-20"]
 skill: beginner
 lang: ko
 published: 2020-04-05
