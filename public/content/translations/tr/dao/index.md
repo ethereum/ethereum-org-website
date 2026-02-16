@@ -17,7 +17,7 @@ summaryPoint3: "Belirli bir amaca para yatırmak için güvenli bir yer."
 
 DAO, ortak bir misyon için çalışan, toplu olarak sahip olunan bir kuruluştur.
 
-DAO'lar, fonları veya operasyonları yönetme konusunda hayırsever bir lidere güvenmek zorunda kalmadan dünyanın dört bir yanındaki benzer fikirlere sahip kişilerle çalışmamıza olanak tanır. Burada, fonları canı istediği gibi harcayan bir CEO veya hesapları manipüle edecek bi CFO yoktur. Bunun yerine, kuruluşun nasıl çalışacağını ve fonların nasıl harcanacağını koda gömülen blokzincir tabanlı kurallar tanımlar.
+DAO'lar, fonları veya operasyonları yönetme konusunda hayırsever bir lidere güvenmek zorunda kalmadan dünyanın dört bir yanındaki benzer fikirlere sahip kişilerle çalışmamıza olanak tanır. Burada, fonları canı istediği gibi harcayan bir CEO veya hesapları manipüle edecek bir CFO yoktur. Bunun yerine, kuruluşun nasıl çalışacağını ve fonların nasıl harcanacağını koda gömülen blokzincir tabanlı kurallar tanımlar.
 
 Grubun onayı olmadan kimsenin erişme yetkisine sahip olmadığı yerleşik hazinelere sahiplerdir. Kararlar, organizasyondaki herkesin söz sahibi olmasını sağlamak için teklifler ve oylama ile yönetilir ve her şey şeffaf bir şekilde [zincir üstünde](/glossary/#onchain) gerçekleşir.
 
