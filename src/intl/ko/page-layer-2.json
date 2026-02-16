@@ -45,17 +45,17 @@
   "page-layer-2-callout-1-description": "네트워크들이 서로 어떻게 다른지, 그리고 개발에서 얼마나 진전을 이뤘는지 알아보세요.",
   "page-layer-2-callout-2-title": "더 많은 세부 사항에 대해 관심이 있으신가요?",
   "page-layer-2-callout-2-description": "이러한 확장 접근 방식의 기술과 이유가 궁금하신가요? 사고 과정과 다양한 기술적 접근 방법에 대해 더 알아보세요.",
-  "page-layer-2-arbitrum-description": "Arbitrum One은 Offchain Labs에서 구축하고 Arbitrum DAO에서 관리하는 범용 옵티미스틱 롤업입니다.",
-  "page-layer-2-base-description": "Base는 OP Stack으로 구축된 옵티미스틱 롤업입니다. 누구나, 어디서나 온체인에서 구축할 수 있는 저비용 그리고 개발자 친화적인 방법을 제공합니다.",
+  "page-layer-2-arbitrum-description": "Arbitrum One은 Offchain Labs가 구축하고 Arbitrum DAO가 관리하는 범용 옵티미스틱 롤업입니다.",
+  "page-layer-2-base-description": "Base는 OP Stack으로 구축된 옵티미스틱 롤업입니다. 누구나, 어디서나 온체인에서 구축할 수 있는 저비용, 개발자 친화적인 방법을 제공합니다.",
   "page-layer-2-optimism-description": "OP Mainnet은 EVM과 동등한 옵티미스틱 롤업입니다. 빠르고, 간단하며, 안전한 것을 목표로 합니다.",
   "page-layer-2-blast-description": "Blast는 네이티브 수익률을 지원하는 EVM 호환 옵티미스틱 롤업입니다.",
   "page-layer-2-zksync2-description": "ZKsync Era는 완전한 EVM 호환성을 가진 범용 ZK 롤업입니다.",
-  "page-layer-2-linea-description": "Linea는 이더리움 네트워크 확장을 위해 설계된 Consensys zkEVM으로 구동되는 ZK 롤업입니다.",
+  "page-layer-2-linea-description": "Linea는 이더리움 네트워크 확장을 위해 설계된 ConsenSys zkEVM으로 구동되는 ZK 롤업입니다.",
   "page-layer-2-scroll-description": "Scroll은 ZK 기술과 EVM 호환성을 통해 이더리움의 기능을 확장하는 ZK 롤업입니다.",
-  "page-layer-2-starknet-description": "Starknet은 STARKs와 Cairo VM 기반의 범용 ZK 롤업입니다.",
+  "page-layer-2-starknet-description": "StarkNet은 STARKs와 Cairo VM 기반의 범용 ZK 롤업입니다.",
   "page-layer-2-mode-description": "Mode는 AIFi 경제를 구축하는 OP stack 옵티미스틱 롤업입니다.",
-  "page-layer-2-taiko-description": "Taiko는 원활한 크로스체인 통신을 가능하게 하는 탈중앙화된, 이더리움과 동등한 ZK-EVM 롤업입니다.",
+  "page-layer-2-taiko-description": "Taiko는 원활한 크로스체인 통신을 가능하게 하는 탈중앙화, 이더리움 동등 ZK-EVM 롤업입니다.",
   "page-layer-2-unichain-description": "Unichain은 여러 체인에 걸친 유동성의 본거지가 되도록 구축된 디파이 네이티브 이더리움 L2입니다.",
   "page-layer-2-ink-description": "Ink는 슈퍼체인을 위한 디파이의 본거지가 되도록 설계된 이더리움 OP 스택 레이어 2 블록체인으로, 혁신적인 디파이 프로토콜을 배포하기 위한 강력한 베이스레이어입니다.",
-  "page-layer-2-zircuit-description": "Zircuit는 악성 트랜잭션을 감지하고 방지하기 위한 AI 기반 시퀀서 수준 보안 기능을 갖춘 EVM 호환 ZK 롤업입니다."
+  "page-layer-2-zircuit-description": "Zircuit은 악성 트랜잭션을 감지하고 방지하기 위한 AI 기반 시퀀서 수준 보안 기능을 갖춘 EVM 호환 ZK 롤업입니다."
 }
