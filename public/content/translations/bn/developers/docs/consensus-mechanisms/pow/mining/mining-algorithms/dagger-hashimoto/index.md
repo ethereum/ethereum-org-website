@@ -29,7 +29,7 @@ Dagger-Hashimoto দুটি লক্ষ্য পূরণের লক্ষ
 NUM_BITS = 512
 
 def encode_int(x):
-    "একটি ইন্টিজার x কে একটি স্ট্রিং হিসাবে এনকোড করুন যা 64টি অক্ষর নিয়ে গঠিত, একটি বড়-এন্ডিয়ান স্কিম ব্যবহার করে"
+    "Encode an integer x as a string of 64 characters using a big-endian scheme"
     o = ''
     for _ in range(NUM_BITS / 8):
         o = chr(x % 256) + o
@@ -37,7 +37,7 @@ def encode_int(x):
     return o
 
 def decode_int(s):
-    "একটি বড়-এন্ডিয়ান স্কিম ব্যবহার করে একটি স্ট্রিং থেকে একটি ইন্টিজার x আনএনকোড করুন"
+    "Unencode an integer x from a string using a big-endian scheme"
     x = 0
     for c in s:
         x *= 256
@@ -65,20 +65,20 @@ def dbl_sha3(x):
 অ্যালগরিদমের জন্য ব্যবহৃত প্যারামিটারগুলি হল:
 
 ```python
-SAFE_PRIME_512 = 2**512 - 38117     # ২**৫১২ এর চেয়ে কম বৃহত্তম সেফ প্রাইম
+SAFE_PRIME_512 = 2**512 - 38117     # Largest Safe Prime less than 2**512
 
 params = {
-      "n": 4000055296 * 8 // NUM_BITS,  # ডেটাসেটের আকার (4 গিগাবাইট); অবশ্যই 65536 এর গুণিতক হতে হবে
-      "n_inc": 65536,                   # প্রতি পিরিয়ডে n-এর মানের বৃদ্ধি; অবশ্যই 65536 এর গুণিতক হতে হবে
-                                        # epochtime=20000 হলে প্রতি বছর 882 MB বৃদ্ধি পায়
-      "cache_size": 2500,               # লাইট ক্লায়েন্টের ক্যাশের আকার (লাইট ক্লায়েন্ট দ্বারা নির্বাচিত হতে পারে;
-                                        # অ্যালগো স্পেকের অংশ নয়)
-      "diff": 2**14,                    # কঠিনতা (ব্লক মূল্যায়নের সময় সমন্বয় করা হয়)
-      "epochtime": 100000,              # ব্লকগুলিতে একটি যুগের দৈর্ঘ্য (কত ঘন ঘন ডেটাসেট আপডেট করা হয়)
-      "k": 1,                           # একটি নোডের প্যারেন্টের সংখ্যা
-      "w": w,                          # মডুলার এক্সপোনেনশিয়েশন হ্যাশিংয়ের জন্য ব্যবহৃত হয়
-      "accesses": 200,                  # হ্যাশিমোটো চলাকালীন ডেটাসেট অ্যাক্সেসের সংখ্যা
-      "P": SAFE_PRIME_512               # হ্যাশিং এবং র‍্যান্ডম নম্বর জেনারেশনের জন্য নিরাপদ প্রাইম
+      "n": 4000055296 * 8 // NUM_BITS,  # Size of the dataset (4 Gigabytes); MUST BE MULTIPLE OF 65536
+      "n_inc": 65536,                   # Increment in value of n per period; MUST BE MULTIPLE OF 65536
+                                        # with epochtime=20000 gives 882 MB growth per year
+      "cache_size": 2500,               # Size of the light client's cache (can be chosen by light
+                                        # client; not part of the algo spec)
+      "diff": 2**14,                    # Difficulty (adjusted during block evaluation)
+      "epochtime": 100000,              # Length of an epoch in blocks (how often the dataset is updated)
+      "k": 1,                           # Number of parents of a node
+      "w": w,                          # Used for modular exponentiation hashing
+      "accesses": 200,                  # Number of dataset accesses during hashimoto
+      "P": SAFE_PRIME_512               # Safe Prime for hashing and random number generation
 }
 ```
 
@@ -164,7 +164,7 @@ def get_daggerset(params, block):
     dagsz = get_dagsize(params, block)
     seedset = get_seedset(params, block)
     if seedset["front_hash"] <= 0:
-        # কোনো ব্যাক বাফার সম্ভব নয়, শুধু ফ্রন্ট বাফার তৈরি করুন
+        # No back buffer is possible, just make front buffer
         return {"front": {"dag": produce_dag(params, seedset["front_hash"], dagsz),
                           "block_number": 0}}
     else:

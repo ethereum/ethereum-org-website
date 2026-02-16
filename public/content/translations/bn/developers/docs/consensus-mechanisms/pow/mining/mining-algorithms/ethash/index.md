@@ -33,18 +33,18 @@ Ethash হল [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/minin
 আমরা নিম্নলিখিত সংজ্ঞাগুলো ব্যবহার করি:
 
 ```
-WORD_BYTES = 4                    # শব্দে বাইট
-DATASET_BYTES_INIT = 2**30        # জেনেসিসে ডেটাসেটে বাইট
-DATASET_BYTES_GROWTH = 2**23      # প্রতি ইপকে ডেটাসেট বৃদ্ধি
-CACHE_BYTES_INIT = 2**24          # জেনেসিসে ক্যাশে বাইট
-CACHE_BYTES_GROWTH = 2**17        # প্রতি ইপকে ক্যাশে বৃদ্ধি
-CACHE_MULTIPLIER=1024             # ক্যাশের সাপেক্ষে DAG-এর আকার
-EPOCH_LENGTH = 30000              # প্রতি ইপকে ব্লক
-MIX_BYTES = 128                   # মিক্সের প্রস্থ
-HASH_BYTES = 64                   # বাইটে হ্যাশের দৈর্ঘ্য
-DATASET_PARENTS = 256             # প্রতিটি ডেটাসেট উপাদানের প্যারেন্টের সংখ্যা
-CACHE_ROUNDS = 3                  # ক্যাশে উৎপাদনে রাউন্ডের সংখ্যা
-ACCESSES = 64                     # হ্যাশিমোটো লুপে অ্যাক্সেসের সংখ্যা
+WORD_BYTES = 4                    # bytes in word
+DATASET_BYTES_INIT = 2**30        # bytes in dataset at genesis
+DATASET_BYTES_GROWTH = 2**23      # dataset growth per epoch
+CACHE_BYTES_INIT = 2**24          # bytes in cache at genesis
+CACHE_BYTES_GROWTH = 2**17        # cache growth per epoch
+CACHE_MULTIPLIER=1024             # Size of the DAG relative to the cache
+EPOCH_LENGTH = 30000              # blocks per epoch
+MIX_BYTES = 128                   # width of mix
+HASH_BYTES = 64                   # hash length in bytes
+DATASET_PARENTS = 256             # number of parents of each dataset element
+CACHE_ROUNDS = 3                  # number of rounds in cache production
+ACCESSES = 64                     # number of accesses in hashimoto loop
 ```
 
 ### 'SHA3'-এর ব্যবহার {#sha3}
@@ -86,12 +86,12 @@ def get_full_size(block_number):
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # ক্রমানুসারে প্রাথমিক ডেটাসেট তৈরি করুন
+    # Sequentially produce the initial dataset
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # randmemohash এর একটি লো-রাউন্ড সংস্করণ ব্যবহার করুন
+    # Use a low-round version of randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -123,11 +123,11 @@ def fnv(v1, v2):
 def calc_dataset_item(cache, i):
     n = len(cache)
     r = HASH_BYTES // WORD_BYTES
-    # মিক্স শুরু করুন
+    # initialize the mix
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # i-এর উপর ভিত্তি করে অনেক র‍্যান্ডম ক্যাশে নোডের সাথে এটিকে fnv করুন
+    # fnv it with a lot of random cache nodes based on i
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
@@ -150,20 +150,20 @@ def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # হেডার+ননসকে একটি 64 বাইট সীডে একত্রিত করুন
+    # combine header+nonce into a 64 byte seed
     s = sha3_512(header + nonce[::-1])
-    # রেপ্লিকেটেড s দিয়ে মিক্স শুরু করুন
+    # start the mix with replicated s
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # র‍্যান্ডম ডেটাসেট নোডগুলোতে মিক্স করুন
+    # mix in random dataset nodes
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
         for j in range(MIX_BYTES / HASH_BYTES):
             newdata.extend(dataset_lookup(p + j))
         mix = map(fnv, mix, newdata)
-    # মিক্স কম্প্রেস করুন
+    # compress mix
     cmix = []
     for i in range(0, len(mix), 4):
         cmix.append(fnv(fnv(fnv(mix[i], mix[i+1]), mix[i+2]), mix[i+3]))
@@ -189,7 +189,7 @@ def hashimoto_full(full_size, dataset, header, nonce):
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # একই ডিজিটে হ্যাশের সাথে তুলনা করার জন্য টার্গেটকে জিরো-প্যাড করুন
+    # zero-pad target to compare with hash on the same digit
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -223,7 +223,7 @@ _এমন কোনো কমিউনিটি রিসোর্স সম্
 ```python
 import sha3, copy
 
-# লিটল এন্ডিয়ান বিট অর্ডারিং ধরে নেয় (Intel আর্কিটেকচারের মতো)
+# Assumes little endian bit ordering (same as Intel architectures)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -251,7 +251,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 হ্যাস ফাংশন, 64 বাইট আউটপুট দেয়
+# sha3 hash function, outputs 64 bytes
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
