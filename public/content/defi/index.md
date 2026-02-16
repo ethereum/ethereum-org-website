@@ -17,7 +17,7 @@ DeFi is an open and global financial system built for the internet age – an al
 
 ## What's DeFi? {#what-is-defi}
 
-DeFi is a collective term for financial products and services that are accessible to anyone who can use Ethereum – anyone with an internet connection. With DeFi, the markets are always open and there are no centralized authorities who can block payments or deny you access to anything. Services that were previously slow and at risk of human error are automatic and safer now that they're handled by code that anyone can inspect and scrutinize.
+DeFi is a collective term for financial products and services that are accessible to anyone who can use [Ethereum](/) – anyone with an internet connection. With DeFi, the markets are always open and there are no centralized authorities who can block payments or deny you access to anything. Services that were previously slow and at risk of human error are automatic and safer now that they're handled by code that anyone can inspect and scrutinize.
 
 There's a booming crypto economy out there, where you can lend, borrow, long/short, earn interest, and more. Crypto-savvy Argentinians have used DeFi to escape crippling inflation. Companies have started streaming their employees their wages in real time. Some folks have even taken out and paid off loans worth millions of dollars without the need for any personal identification.
 
