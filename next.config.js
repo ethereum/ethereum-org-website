@@ -19,14 +19,14 @@ const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
 const experimental = LIMIT_CPUS
   ? {
-      // This option could be enabled in the future when flagged as stable, to speed up builds
-      // (see https://nextjs.org/docs/pages/building-your-application/configuring/mdx#using-the-rust-based-mdx-compiler-experimental)
-      // mdxRs: true,
+    // This option could be enabled in the future when flagged as stable, to speed up builds
+    // (see https://nextjs.org/docs/pages/building-your-application/configuring/mdx#using-the-rust-based-mdx-compiler-experimental)
+    // mdxRs: true,
 
-      // Reduce the number of cpus and disable parallel threads in prod envs to consume less memory
-      workerThreads: false,
-      cpus: LIMIT_CPUS,
-    }
+    // Reduce the number of cpus and disable parallel threads in prod envs to consume less memory
+    workerThreads: false,
+    cpus: LIMIT_CPUS,
+  }
   : {}
 
 /** @type {import('next').NextConfig} */
@@ -96,25 +96,67 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "crowdin-static.cf-downloads.crowdin.com",
         },
-        { protocol: "https", hostname: "pvvrtckedmrkyzfxubkk.supabase.co" },
-        { protocol: "https", hostname: "avatars.githubusercontent.com" },
-        { protocol: "https", hostname: "opengraph.githubassets.com" },
-        { protocol: "https", hostname: "github.com" },
-        { protocol: "https", hostname: "coin-images.coingecko.com" },
-        { protocol: "https", hostname: "i.imgur.com" },
-        { protocol: "https", hostname: "s3-dcl1.ethquokkaops.io" },
-        { protocol: "https", hostname: "cdn.galxe.com" },
-        { protocol: "https", hostname: "assets.poap.xyz" },
-        { protocol: "https", hostname: "unavatar.io" },
-        { protocol: "https", hostname: "secure.meetupstatic.com" },
-        { protocol: "https", hostname: "pbs.twimg.com" },
-        { protocol: "https", hostname: "images.lumacdn.com" },
-        { protocol: "https", hostname: "framerusercontent.com" },
-        { protocol: "https", hostname: "img.evbuc.com" },
-        { protocol: "https", hostname: "storage.googleapis.com" },
-        { protocol: "https", hostname: "cdn.charmverse.io" },
-        { protocol: "https", hostname: "ethwingman.com" },
-        { protocol: "https", hostname: "eth-mcp.dev" },
+        {
+          protocol: "https",
+          hostname: "pvvrtckedmrkyzfxubkk.supabase.co",
+        },
+        {
+          protocol: "https",
+          hostname: "avatars.githubusercontent.com",
+        },
+        {
+          protocol: "https",
+          hostname: "github.com",
+        },
+        {
+          protocol: "https",
+          hostname: "coin-images.coingecko.com",
+        },
+        {
+          protocol: "https",
+          hostname: "i.imgur.com",
+        },
+        {
+          protocol: "https",
+          hostname: "s3-dcl1.ethquokkaops.io",
+        },
+        {
+          protocol: "https",
+          hostname: "cdn.galxe.com",
+        },
+        {
+          protocol: "https",
+          hostname: "assets.poap.xyz",
+        },
+        {
+          protocol: "https",
+          hostname: "unavatar.io",
+        },
+        {
+          protocol: "https",
+          hostname: "secure.meetupstatic.com",
+        },
+        {
+          protocol: "https",
+          hostname: "pbs.twimg.com",
+        },
+        {
+          protocol: "https",
+          hostname: "images.lumacdn.com",
+        },
+        {
+          protocol: "https",
+          hostname: "framerusercontent.com",
+        },
+        {
+          protocol: "https",
+          hostname: "img.evbuc.com",
+        },
+        {
+          protocol: "https",
+          hostname: "img.youtube.com",
+          pathname: "/vi/**",
+        },
       ],
     },
     async headers() {
