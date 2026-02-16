@@ -1,14 +1,14 @@
 ---
-title: 共識機制
-description: 解釋分佈式系統中的共識協定及其於以太坊中扮演的角色。
+title: "共識機制"
+description: "解釋分佈式系統中的共識協定及其於以太坊中扮演的角色。"
 lang: zh-tw
 ---
 
-「共識機制」一詞常泛指「權益證明」、「工作量證明」或「權威證明」協定。 然而，這些證明方式僅為共識機制當中用來抵禦[女巫攻擊](/glossary/#sybil-attack)的組成部分。 共識機制是由一整套想法、協定和激勵構成的體系，使得一系列分佈式節點能夠就區塊鏈狀態達成一致。
+「共識機制」一詞常泛指「權益證明」、「工作量證明」或「權威證明」協定。 然而，這些只是共識機制中，用來抵禦[女巫攻擊](/glossary/#sybil-attack)的元件。 共識機制是由一整套想法、協定和激勵構成的體系，使得一系列分佈式節點能夠就區塊鏈狀態達成一致。
 
-## 基本資訊 {#prerequisites}
+## 先決條件 {#prerequisites}
 
-為了加深對本頁內容的理解，我們推薦你先仔細閱讀我們的[以太坊介紹](/developers/docs/intro-to-ethereum/)。
+為能更了解本頁面，我們建議您先閱讀我們的[以太坊簡介](/developers/docs/intro-to-ethereum/)。
 
 ## 何為共識？ {#what-is-consensus}
 
@@ -28,11 +28,11 @@ lang: zh-tw
 
 這些部分共同組成了共識機制。
 
-## 共識機制種類 {#types-of-consensus-mechanisms}
+## 共識機制的類型 {#types-of-consensus-mechanisms}
 
 ### 基於工作量證明 {#proof-of-work}
 
-和比特幣類似，以太坊也曾經使用基於**工作量證明 (PoW)** 的共識協定。
+和比特幣一樣，以太坊曾經也使用基於**工作量證明 (PoW)** 的共識協定。
 
 #### 區塊建立 {#pow-block-creation}
 
@@ -46,9 +46,9 @@ lang: zh-tw
 
 ### 基於權益證明 {#proof-of-stake}
 
-以太坊目前使用基於**權益證明 (PoS)** 的共識協定。
+以太坊現在使用基於**權益證明 (PoS)** 的共識協定。
 
-#### 區塊生成 {#pos-block-creation}
+#### 區塊建立 {#pos-block-creation}
 
 驗證者建立區塊。 每個時隙都會隨機選擇一個驗證者成為區塊提議者。 區塊提議者的共識用戶端請求配對的執行用戶端對交易打包，作為「執行有效負載」。 然後它們將其包裝成共識資料以形成區塊，再把這個區塊傳送給以太坊網路上的其他節點。 這樣的區塊產生會得到以太幣獎勵。 在極少數情況下，當一個時隙中存在多個可能的區塊，或節點在不同時間收到區塊，分叉選擇演算法就會選擇使形成的鏈具有最大證明權重的區塊（證明權重是指提供證明的驗證者數量，並按驗證者質押的以太幣餘額進行調整）。
 
@@ -58,35 +58,35 @@ lang: zh-tw
 
 更多關於[權益證明](/developers/docs/consensus-mechanisms/pos/)的資訊
 
-### 視覺導覽 {#types-of-consensus-video}
+### 視覺化指南 {#types-of-consensus-video}
 
 觀看以太坊上所用不同類型之共識機制的更多資訊：
 
 <YouTube id="ojxfbN78WFQ" />
 
-### 抵禦女巫攻擊與區塊鏈選擇 {#sybil-chain}
+### 抗女巫攻擊與鏈選擇 {#sybil-chain}
 
 僅僅工作量證明和權益證明還不能構成共識協定，但為了簡便起見，通常將它們稱為共識協定。 它們實際是抵禦女巫攻擊機制及區塊鏈創作者選擇程式；提供了一種方法來決定誰能成為最新區塊創作者。 另一個重要組成部分是鏈選擇（又稱分叉選擇）演算法，在同一位置有多個區塊的情況下，它讓節點可以在鏈頭部選擇一個正確的區塊。
 
-**抵禦女巫攻擊**衡量協定有效對抗女巫攻擊的能力。 抵禦此類攻擊對於去中心化區塊鏈至關緊要，可使所有礦工與驗證者能夠基於其投入的資源平等地獲得獎勵。 工作量證明及權益證明透過讓使用者耗費大量能源或投入大量抵押，來防範此類攻擊。 此類保護會對女巫攻擊形成經濟上的威懾。
+**抗女巫攻擊**能力衡量的是一個協定對抗女巫攻擊的表現。 抵禦此類攻擊對於去中心化區塊鏈至關緊要，可使所有礦工與驗證者能夠基於其投入的資源平等地獲得獎勵。 工作量證明及權益證明透過讓使用者耗費大量能源或投入大量抵押，來防範此類攻擊。 此類保護會對女巫攻擊形成經濟上的威懾。
 
-**區塊鏈選擇規則**被用來決定哪條鏈為「正確」的鏈。 比特幣使用「最長鏈」規則。這意味著，任何最長的區塊鏈，都會被其他節點接受並與之合作。 對於工作量證明區塊鏈，最長鏈取決於該鏈所累積之工作量證明總難度。 以太坊也曾經用過最長鏈規則；但現在以太坊在權益證明機制下運作，採用了經過更新的分叉選擇演算法來衡量鏈的「權重」。 權重是累積的驗證者投票數累積總和，並以驗證者質押的以太幣餘額進行加權。
+**鏈選擇規則**是用來決定哪一條鏈是「正確」的鏈。 比特幣使用「最長鏈」規則。這意味著，任何最長的區塊鏈，都會被其他節點接受並與之合作。 對於工作量證明區塊鏈，最長鏈取決於該鏈所累積之工作量證明總難度。 以太坊也曾經用過最長鏈規則；但現在以太坊在權益證明機制下運作，採用了經過更新的分叉選擇演算法來衡量鏈的「權重」。 權重是累積的驗證者投票數累積總和，並以驗證者質押的以太幣餘額進行加權。
 
-以太坊使用一種被稱為 [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) 的共識機制，它結合了 [Casper 友善最終確定性組件權益證明](https://arxiv.org/abs/1710.09437)和[最貪婪最重觀測子樹 (GHOST) 分叉選擇規則](https://arxiv.org/abs/2003.03052)。
+以太坊使用一種名為 [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) 的共識機制，它將 [Casper FFG 權益證明](https://arxiv.org/abs/1710.09437)與 [GHOST 分叉選擇規則](https://arxiv.org/abs/2003.03052)結合起來。
 
-## 衍生閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
-- [何為區塊鏈共識演算法？](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
-- [何為 Nakamoto 共識？ 完整初學者指南](https://blockonomi.com/nakamoto-consensus/)
-- [Casper 機制如何運作？](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
-- [關於權益證明區塊鏈的安全性及效能](https://eprint.iacr.org/2016/555.pdf)
-- [拜占庭問題](https://en.wikipedia.org/wiki/Byzantine_fault)
+- [什麼是區塊鏈共識演算法？](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
+- [什麼是中本聰共識？ 完整新手指南](https://blockonomi.com/nakamoto-consensus/)
+- [Casper 如何運作？](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
+- [關於工作量證明區塊鏈的安全性與效能](https://eprint.iacr.org/2016/555.pdf)
+- [拜占庭故障](https://en.wikipedia.org/wiki/Byzantine_fault)
 
-_知道一個曾經幫助你學習更多社區或社團資源? 歡迎在本頁自由編輯或添加內容！！_
+_知道一個曾經幫助你學習更多社區或社團資源? 歡迎在本頁自由編輯或添加內容！_
 
 ## 相關主題 {#related-topics}
 
 - [工作量證明](/developers/docs/consensus-mechanisms/pow/)
 - [挖礦](/developers/docs/consensus-mechanisms/pow/mining/)
-- [持有量證明（又稱：權益證明）](/developers/docs/consensus-mechanisms/pos/)
+- [權益證明](/developers/docs/consensus-mechanisms/pos/)
 - [權威證明](/developers/docs/consensus-mechanisms/poa/)

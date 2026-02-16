@@ -1,23 +1,23 @@
 ---
-title: 節點做為一服務
-description: 節點服務、優缺點及熱門提供者入門級概覽
+title: "節點即服務"
+description: "節點服務、優缺點及熱門提供者入門級概覽"
 lang: zh-tw
 sidebarDepth: 2
 ---
 
-## 簡介 {#Introduction}
+## 介紹 {#Introduction}
 
-運作自己的[以太坊節點](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients)可能比較困難，特別是初始階段或快速擴容時。 有[許多服務](#popular-node-services)可以為你運行最佳化的節點基礎設施，因此你可以專注於開發應用程式或產品。 我們將解釋節點服務的工作原理、使用節點服務的優缺點，並列出提供者（如果你有興趣開始使用）。
+自行執行 [以太坊節點](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) 可能會充滿挑戰，尤其是在剛開始或快速擴展時。 有許多 [服務](#popular-node-services) 可以為你執行最佳化的節點基礎架構，讓你專注於開發應用程式或產品。 我們將解釋節點服務的工作原理、使用節點服務的優缺點，並列出提供者（如果你有興趣開始使用）。
 
-## 基本資訊 {#prerequisites}
+## 先決條件 {#prerequisites}
 
-如你還不太瞭解節點及用戶端，請查看[節點及用戶端](/developers/docs/nodes-and-clients/)。
+如果你還不了解什麼是節點和用戶端，請參閱 [節點和用戶端](/developers/docs/nodes-and-clients/)。
 
 ## 質押者 {#stakoooooooooooooors}
 
-單獨質押者必須運行自己的基礎設施，而非依賴第三方提供者。 這表示運行一個執行用戶端和一個關聯的共識用戶端。 在[合併](/roadmap/merge)前，只運行共識用戶端且使用中心化提供者以執行資料是可行的；但現在已不再可行 - 單獨質押者必須同時運行兩種用戶端。 然而，有些服務可以簡化這個流程。
+單獨質押者必須運行自己的基礎設施，而非依賴第三方提供者。 這表示運行一個執行用戶端和一個關聯的共識用戶端。 在 [合併](/roadmap/merge) 之前，只執行共識用戶端並使用中心化提供者來取得執行資料是可行的；但現在已不可行——單獨質押者必須同時執行兩種用戶端。 然而，有些服務可以簡化這個流程。
 
-[閱讀更多關於運行節點的相關資訊](/developers/docs/nodes-and-clients/run-a-node/)。
+[深入了解執行節點的相關資訊](/developers/docs/nodes-and-clients/run-a-node/)。
 
 本頁說明的服務適用於非質押節點。
 
@@ -25,13 +25,13 @@ sidebarDepth: 2
 
 節點服務提供者在幕後為你運行分散式節點用戶端，因此你無需再這麼做。
 
-這些服務通常提供一個應用程式介面金鑰，你可以使用該金鑰在區塊鏈中寫入和讀取。 除了包含存取以太坊主網的權限外，它們通常還包含存取[測試網](/developers/docs/networks/#ethereum-testnets)的權限。
+這些服務通常提供一個應用程式介面金鑰，你可以使用該金鑰在區塊鏈中寫入和讀取。 除了主網之外，它們通常還提供對 [以太坊測試網](/developers/docs/networks/#ethereum-testnets) 的存取權限。
 
 一些服務為你提供屬於你的專用節點並為你管理這些節點，而其他服務使用負載平衡器於各節點間分配活動。
 
 幾乎所有節點服務極易整合，只需變更一行程式碼就能更換自託管節點，甚至可以在服務本身之間進行切換。
 
-通常，節點服務運行多種[節點用戶端](/developers/docs/nodes-and-clients/#execution-clients)與[類型](/developers/docs/nodes-and-clients/#node-types)，讓你能在一個應用程式介面中除了存取特定於用戶端的方法外，還能存取全節點和歸檔節點。
+節點服務通常會執行各種 [節點用戶端](/developers/docs/nodes-and-clients/#execution-clients) 和 [類型](/developers/docs/nodes-and-clients/#node-types)，讓您除了用戶端專用方法之外，還能透過單一 API 存取完整節點和封存節點。
 
 值得關注的是，節點服務不會也不應儲存你的私密金鑰或個人資訊。
 
@@ -45,14 +45,14 @@ sidebarDepth: 2
 
 使用節點服務，意味著你在中心化產品的基礎設施。 因此，最重視去中心化的專案可能會傾向於自託管節點，而不是外包給第三方。
 
-閱讀更多關於[運行你自己的節點之優點](/developers/docs/nodes-and-clients/#benefits-to-you)。
+深入了解 [自行執行節點的好處](/developers/docs/nodes-and-clients/#benefits-to-you)。
 
 ## 熱門節點服務 {#popular-node-services}
 
 下方列出了最熱門的以太坊節點服務提供者，歡迎新增此處遺漏的提供者。 除了免費或付費方案，每個節點服務還提供不同的優點和功能，你應該在做出決定之前先調查哪些服務最符合你的需求。
 
 - [**Alchemy**](https://alchemy.com/)
-  - [文件](https://docs.alchemyapi.io/)
+  - [文件](https://www.alchemy.com/docs/)
   - 功能
     - 最大的免費方案每個月提供了 3 億運算單元 (約 3000 萬次 getLatestBlock 請求)
     - 支援多鏈，如 Polygon、Starknet、Optimism、Arbitrum
@@ -64,9 +64,22 @@ sidebarDepth: 2
     - 整合測試網水龍頭存取
     - 超過 1.8 萬使用者的活躍 Discord 建構者社群
 
+- [**Allnodes**](https://www.allnodes.com/)
+  - [文件](https://docs.allnodes.com/)
+  - 功能
+    - 在 Allnodes 作品集頁面建立的 PublicNode 代幣沒有速率限制。
+    - [PublicNode](https://www.publicnode.com) 上注重隱私的免費 RPC 端點 (100+ 區塊鏈)
+    - 為超過 90 個區塊鏈提供無速率限制的專用節點
+    - 為超過 30 個區塊鏈提供歸檔節點
+    - 在 3 個地區可用（美國、歐盟、亞洲）
+    - [PublicNode](https://www.publicnode.com/snapshots) 上 100 多個區塊鏈的快照
+    - 提供全天候技術支援，正常運行時間 SLA 為 99.90%-99.98%（取決於具體計劃）。
+    - 按小時付費定價
+    - 使用信用卡、PayPal 或加密貨幣支付
+
 - [**All That Node**](https://allthatnode.com/)
   - [文件](https://docs.allthatnode.com/)
-  - 特徵
+  - 功能
     - 免費方案每天 50,000 個請求
     - 支援 40 多種協定
     - 支援 JSON-RPC（以太坊虛擬機、Tendermint）、具象狀態傳輸和 Websocket 應用程式介面
@@ -89,7 +102,7 @@ sidebarDepth: 2
 
 - [**Ankr**](https://www.ankr.com/)
   - [文件](https://docs.ankr.com/)
-  - 特徵
+  - 功能
     - Ankr 協定 - 開放對超過 8 個鏈的公共遠端程序呼叫應用程式介面端點的存取
     - 負載平衡與節點健康監控，以取得連結到最近可用節點的更快更可靠的閘道
     - 支援 WSS 端點與無上限速率限制的高級方案
@@ -118,14 +131,14 @@ sidebarDepth: 2
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [文件](https://ubiquity.docs.blockdaemon.com/)
   - 優點
-    - 控制面板
+    - 儀表板
     - 基於節點
     - 分析
 
 - [**BlockPI**](https://blockpi.io/)
   - [文件](https://docs.blockpi.io/)
   - 功能
-    - 分散式的穩健節點結構
+    - 穩健的分散式節點結構
     - 多達 40 多種超文字安全傳輸通訊協定與 WSS 端點
     - 免費註冊方案及每月方案
     - 追蹤 method + 歸檔資料支援
@@ -145,7 +158,7 @@ sidebarDepth: 2
 
 - [**Chainstack**](https://chainstack.com/)
   - [文件](https://docs.chainstack.com/)
-  - 特徵
+  - 功能
     - 免費共享節點
     - 共享歸檔節點
     - GraphQL 支援
@@ -156,20 +169,20 @@ sidebarDepth: 2
     - 按小時付費定價
     - 全年無休直接支援
 
-- [**DRPC**](https://drpc.org/)
-  - [文件](https://docs.drpc.org/)
-  - 功能
-    - 去中心化遠端程序呼叫節點
-    - 超過 15 個節點提供者
-    - 節點平衡
-    - 免費方案每個月擁有無上限的運算單元
-    - 資料驗證
-    - 自訂端點
-    - 超文字安全傳輸通訊協定與 WSS 端點
-    - 不限數量的金鑰（免費和付費方案）
-    - 彈性的備援選項
-    - [公共端點](https://eth.drpc.org)
-    - 免費共享歸檔節點
+- [**dRPC**](https://drpc.org/)
+  - [文件](https://drpc.org/docs)
+  - NodeCloud：隨插即用的 RPC 基礎架構，10 美元起——全速，無限制
+  - NodeCloud 功能特色：
+    - 為 185 個網路提供 API 支援
+    - 超過 40 家供應商的分散式池
+    - 九 (9) 個地理叢集提供全球覆蓋
+    - AI 驅動的負載平衡系統
+    - 按用量付費的統一價格——不漲價、不過期、不鎖定
+    - 無限金鑰、精細的金鑰調整、團隊角色、前端保護
+    - 每個方法 20 個計算單元 (CU) 的統一費率
+    - [公用端點鏈清單](https://drpc.org/chainlist)
+    - [價格計算機](https://drpc.org/pricing#calculator)
+  - NodeCore：為希望完全控制的組織提供的開源堆疊
 
 - [**GetBlock**](https://getblock.io/)
   - [文件](https://getblock.io/docs/get-started/authentication-with-api-key/)
@@ -184,7 +197,7 @@ sidebarDepth: 2
     - 技術支援
 
 - [**InfStones**](https://infstones.com/)
-  - 特色功能
+  - 功能
     - 免費方案選項
     - 隨時擴容
     - 分析
@@ -197,7 +210,7 @@ sidebarDepth: 2
 
 - [**Infura**](https://infura.io/)
   - [文件](https://infura.io/docs)
-  - 特色功能
+  - 功能
     - 免費方案選項
     - 隨時擴容
     - 付費歸檔資料
@@ -206,28 +219,28 @@ sidebarDepth: 2
 
 - [**Kaleido**](https://kaleido.io/)
   - [文件](https://docs.kaleido.io/)
-  - 特徵
+  - 功能
     - 免費新手方案
     - 一鍵部署以太坊節點
-    - 可自訂的用戶端與演算法（Geth、 Quorum 和 Besu || PoA、IBFT 和 Raft）
+    - 可自訂的用戶端和演算法 (Geth、Quorum 和 Besu / PoA、IBFT 和 Raft)
     - 超過 500 個管理與服務應用程式介面
     - 用於以太坊交易提交的 RESTful 介面（Apache Kafka 支援）
     - 用於事件傳遞的出站串流（Apache Kafka 支援）
-    - 「鏈下」與輔助服務（例如雙層加密訊息傳輸）的深度集合
+    - 「鏈下」和輔助服務的深度集合 (例如，雙向加密訊息傳輸)
     - 透過管理體系和基於角色的存取控制實現簡單的網路接入
     - 面向管理員與終端使用者的精細使用者管理
     - 高度可擴充、有彈性的企業級基礎設施
     - 雲端 HSM 私密金鑰管理
     - 以太坊主網繫連
     - ISO 27k 與 SOC 2、Type 2 驗證
-    - 動態執行階段配置（例如新增雲端整合、變更節點入口等等）
+    - 動態執行階段組態 (例如，新增雲端整合、變更節點入口等)
     - 支援多雲端、多區域和混合部署編排
     - 單純按小時的基於 SaaS 的定價
     - SLA 與全年無休支援
 
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [文件](https://docs.lavanet.xyz/)
-  - 特徵
+  - 功能
     - 免費使用測試網
     - 支援高正常運行時間的去中心化冗餘
     - 開源
@@ -274,11 +287,11 @@ sidebarDepth: 2
   - 功能
     - 去中央化遠端程序中呼叫協定與市場
     - 免費方案每天 100 萬個請求（每個端點，最大為 2）
-    - [公共端點](https://docs.pokt.network/developers/public-endpoints)
+    - [公用端點](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ 計畫（如果你每天需要超過 100 萬個請求）
     - 支援超過 15 條區塊鏈
     - 6400+ 節點透過服務應用程式賺取 POKT 幣
-    - 歸檔節點、具追蹤功能的歸檔節點和測試網節點支援
+    - 封存節點、具追蹤功能的封存節點和測試網節點支援
     - 以太坊主網節點用戶端多樣性
     - 無單點故障
     - 零停機時間
@@ -288,20 +301,20 @@ sidebarDepth: 2
     - 隨時無限擴充每天的請求數和每小時的節點數
     - 最私密、抗審查之選項
     - 實際開發者支援
-    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) 儀表板和分析
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) 儀表板與分析
 
 - [**QuickNode**](https://www.quicknode.com)
   - [文件](https://www.quicknode.com/docs/)
   - 功能
-    - 全年無休技術支援和 Discord 開發者社群
+    - 全年無休技術支援與開發者 Discord 社群
     - 平衡地理分佈、多雲端/伺服器的環境、低延遲的網路
     - 支援多鏈（Optimism、Arbitrum、Polygon 及另外 11 條鏈）
-    - 快速穩定的中間層（呼叫路由、快取、索引）
+    - 用於提升速度和穩定性的中介層 (呼叫路由、快取、索引)
     - 透過 Webhook 監控智慧型合約
     - 直覺化的儀表板、分析套件、遠端程序呼叫編寫器
     - 進階安全功能（JWT、遮罩、白名單）
     - 非同質化代幣資料及分析應用程式介面
-    - [已獲得 SOC2 認證](https://www.quicknode.com/security)
+    - [SOC2 認證](https://www.quicknode.com/security)
     - 適合開發者和企業
 
 - [**Rivet**](https://rivet.cloud/)
@@ -350,7 +363,7 @@ sidebarDepth: 2
 - [**Tokenview**](https://services.tokenview.io/)
   - [文件](https://services.tokenview.io/docs?type=nodeService)
   - 功能
-    - 全年無休技術支援和 Telegram 開發者社群
+    - 全年無休技術支援與開發者 Telegram 社群
     - 支援多鏈（比特幣、以太坊、波場、BNB 智能鏈、以太坊經典）
     - 遠端程序呼叫和 WSS 端點均開放使用
     - 無限制存取歸檔資料應用程式介面
@@ -384,13 +397,12 @@ sidebarDepth: 2
   - [文件](https://www.zeeve.io/docs/)
   - 功能
     - 企業級的無程式碼自動化平臺，提供了部署、監測和管理區塊鏈節點和網路的功能
-    - 支援及整合超過 30 個以上協定，持續增加中
+    - 支援並整合超過 30 種協定，且持續增加中
     - 增值 Web3 基礎設施服務，如去中心化儲存、去中心化身份和用於現實世界的區塊鏈帳本資料應用程度介面
     - 全年無休支援和主動監控以確保節點健康。
     - 遠端程序呼叫端點提供了經驗證的應用程式介面存取，透過直覺式的儀表板和分析輕鬆愉快地進行管理。
     - 提供託管雲端服務和使用自己的雲端服務兩種選項，支援所有主流的雲端提供商，如 AWS、Azure、Google Cloud、Digital Ocean 和本地部署雲端。
     - 我們總是使用智慧路由以連接最靠近你的使用者的節點
-
 
 ## 延伸閱讀 {#further-reading}
 
@@ -400,7 +412,7 @@ sidebarDepth: 2
 
 - [節點和用戶端](/developers/docs/nodes-and-clients/)
 
-## 相關教程 {#related-tutorials}
+## 相關教學 {#related-tutorials}
 
 - [使用 Alchemy 開始以太坊開發](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [使用 web3 和 Alchemy 發送交易的指南](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [使用 web3 和 Alchemy 傳送交易的指南](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
