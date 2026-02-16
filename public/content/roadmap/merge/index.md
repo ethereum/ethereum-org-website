@@ -12,7 +12,7 @@ summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  The Merge was executed on September 15, 2022. This completed Ethereum's transition to proof-of-stake consensus, officially deprecating proof-of-work and reducing energy consumption by ~99.95%.
+  The Merge was executed on September 15, 2022. This completed [Ethereum's](/) transition to proof-of-stake consensus, officially deprecating proof-of-work and reducing energy consumption by ~99.95%.
 </UpgradeStatus>
 
 ## What was The Merge? {#what-is-the-merge}
