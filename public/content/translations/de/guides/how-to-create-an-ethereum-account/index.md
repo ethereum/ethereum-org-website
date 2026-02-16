@@ -1,6 +1,6 @@
 ---
-title: Wie man ein Ethereum-Konto „anlegt"
-description: Eine Schritt-für-Schritt-Anleitung für die Erstellung eines Ethereum-Kontos mithilfe einer Wallet.
+title: "Wie man ein Ethereum-Konto „anlegt\""
+description: "Eine Schritt-für-Schritt-Anleitung für die Erstellung eines Ethereum-Kontos mithilfe einer Wallet."
 lang: de
 ---
 
@@ -47,7 +47,7 @@ Einige Apps werden Sie auffordern, eine geheime „Wiederherstellungsphrase“ (
   <ButtonLink href="/guides/how-to-use-a-wallet">
     So verwenden Sie eine Wallet
   </ButtonLink>
- </AlertContent>
+</AlertContent>
 </Alert>
 </div>
 

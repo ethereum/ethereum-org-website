@@ -1,6 +1,6 @@
 ---
 title: Null-Wissen-Beweise
-description: Eine nicht-technische Einführung in Null-Wissen-Beweise für Anfänger.
+description: "Eine nicht-technische Einführung in Null-Wissen-Beweise für Anfänger."
 lang: de
 ---
 

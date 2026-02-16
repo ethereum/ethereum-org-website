@@ -1,6 +1,6 @@
 ---
-title: Wie man Token auf die Layer 2 überträgt
-description: Ein Leitfaden, der erklärt, wie man Token von Ethereum mithilfe eines Übergangs zu Ebene 2 überträgt.
+title: "Wie man Token auf die Layer 2 überträgt"
+description: "Ein Leitfaden, der erklärt, wie man Token von Ethereum mithilfe eines Übergangs zu Ebene 2 überträgt."
 lang: de
 ---
 

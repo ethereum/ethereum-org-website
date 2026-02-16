@@ -1,6 +1,6 @@
 ---
 title: Mining-Algorithmen
-description: Ein detailierter Einblick in die Algorithmen, welche für das Ethereum-Mining eingesetzt werden.
+description: "Ein detailierter Einblick in die Algorithmen, welche für das Ethereum-Mining eingesetzt werden."
 lang: de
 ---
 

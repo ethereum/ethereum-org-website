@@ -1,6 +1,6 @@
 ---
-title: Ethereum für JavaScript-Entwickler
-description: Lernen, wie Sie JavaScript-basierte Projekte und Tools für die Ethereum-Entwicklung nutzen können
+title: "Ethereum für JavaScript-Entwickler"
+description: "Lernen, wie Sie JavaScript-basierte Projekte und Tools für die Ethereum-Entwicklung nutzen können"
 lang: de
 ---
 

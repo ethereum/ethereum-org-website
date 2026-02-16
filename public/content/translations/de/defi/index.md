@@ -1,6 +1,6 @@
 ---
 title: Dezentrales Finanzwesen (DeFi)
-description: Eine Übersicht über DeFi auf Ethereum
+description: "Eine Übersicht über DeFi auf Ethereum"
 lang: de
 template: use-cases
 emoji: ":money_with_wings:"
@@ -8,7 +8,7 @@ image: /images/use-cases/defi.png
 alt: Ein ETH-Logo aus Legosteinen.
 sidebarDepth: 2
 summaryPoint1: Eine globale, offene Alternative zum aktuellen Finanzsystem.
-summaryPoint2: Produkte, mit denen Sie sich Geld leihen, sparen, investieren sowie Handel treiben können und mehr.
+summaryPoint2: "Produkte, mit denen Sie sich Geld leihen, sparen, investieren sowie Handel treiben können und mehr."
 summaryPoint3: Die Grundlage bildet Open-Source-Technologie, mit der jeder programmieren kann.
 ---
 

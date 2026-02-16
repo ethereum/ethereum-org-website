@@ -1,6 +1,6 @@
 ---
 title: Netzwerke
-description: Eine Übersicht über Ethereums Netzwerke und wo man Testnet Ether (ETH) zum Testen neuer Anwendungen bekommt.
+description: "Eine Übersicht über Ethereums Netzwerke und wo man Testnet Ether (ETH) zum Testen neuer Anwendungen bekommt."
 lang: de
 ---
 

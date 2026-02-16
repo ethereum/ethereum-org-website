@@ -1,6 +1,6 @@
 ---
 title: So widerrufen Sie den Smart-Contract-Zugriff auf Ihre Krypto-Gelder
-description: Ein Leitfaden für den Widerruf des Zugriffs auf ausbeuterische Smart Contract Token
+description: "Ein Leitfaden für den Widerruf des Zugriffs auf ausbeuterische Smart Contract Token"
 lang: de
 ---
 

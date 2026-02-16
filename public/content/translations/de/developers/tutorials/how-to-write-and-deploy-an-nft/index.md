@@ -1,6 +1,6 @@
 ---
-title: So erstellen und veröffentlichen Sie einen NFT (Teil 1/3 von unserer NFT-Tutorialreihe)
-description: Dieses Tutorial ist Teil 1 einer Serie über NFTs, die Ihnen Schritt für Schritt zeigt, wie Sie einen Non Fungible Token (ERC-721 Token) Smart Contract mit Ethereum und Inter Planetary File System (IPFS) erstellen und veröffentlichen.
+title: "So erstellen und veröffentlichen Sie einen NFT (Teil 1/3 von unserer NFT-Tutorialreihe)"
+description: "Dieses Tutorial ist Teil 1 einer Serie über NFTs, die Ihnen Schritt für Schritt zeigt, wie Sie einen Non Fungible Token (ERC-721 Token) Smart Contract mit Ethereum und Inter Planetary File System (IPFS) erstellen und veröffentlichen."
 author: "Sumi Mudgil"
 tags:
   - "NFTs"

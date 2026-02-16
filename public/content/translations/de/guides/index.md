@@ -1,6 +1,6 @@
 ---
-title: Ethereum Leitfäden
-description: Eine Sammlung an praktischen Leitfäden, welche Anfängern die Grundlagen von Ethereum erklärt.
+title: "Ethereum Leitfäden"
+description: "Eine Sammlung an praktischen Leitfäden, welche Anfängern die Grundlagen von Ethereum erklärt."
 lang: de
 ---
 

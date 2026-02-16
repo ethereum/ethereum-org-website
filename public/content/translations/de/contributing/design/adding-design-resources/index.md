@@ -1,6 +1,6 @@
 ---
-title: Design-Ressourcen hinzufügen
-description: Richtlinien und Anforderungen zur Gewährleistung der Qualität von Designmaterialien auf ethereum.org
+title: "Design-Ressourcen hinzufügen"
+description: "Richtlinien und Anforderungen zur Gewährleistung der Qualität von Designmaterialien auf ethereum.org"
 lang: de
 ---
 

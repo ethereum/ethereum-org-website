@@ -7,7 +7,7 @@ incomplete: true
 
 ## Standards-Übersicht {#standards-overview}
 
-Die Ethereum-Community hat viele Standards angenommen, die dazu beitragen, Projekte (wie [Ethereum-Clients](/Developers/Docs/Nodes-and-Clients/) und Wallets) über alle Implementierungen hinweg interoperabel zu halten. Sie sorgen dafür, dass Smart Contracts und dApps kompatibel bleiben.
+Die Ethereum-Community hat viele Standards angenommen, die dazu beitragen, Projekte (wie [Ethereum-Clients](/developers/docs/nodes-and-clients/) und Wallets) über alle Implementierungen hinweg interoperabel zu halten. Sie sorgen dafür, dass Smart Contracts und dApps kompatibel bleiben.
 
 Normalerweise werden diese als [Ethereum Improvement Proposals](/eips/) (EIPs) eingeführt, die von Community-Mitgliedern über einen [Standardprozess](https://eips.ethereum.org/EIPS/eip-1) diskutiert werden.
 

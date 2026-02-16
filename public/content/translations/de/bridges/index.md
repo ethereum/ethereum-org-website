@@ -1,6 +1,6 @@
 ---
-title: Einführung in Blockchain-Brücken
-description: Brücken erlauben es Benutzern, ihr Guthaben über verschiedene Blockchains zu verschieben
+title: "Einführung in Blockchain-Brücken"
+description: "Brücken erlauben es Benutzern, ihr Guthaben über verschiedene Blockchains zu verschieben"
 lang: de
 ---
 
@@ -63,7 +63,7 @@ Nehmen wir an, Sie möchten native Bitcoin (BTC) besitzen, aber Sie haben nur Ge
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Sie können all dies auch mit [zentralisierten Krypto-Börsen](/get-eth/) tun. Wenn Ihr Guthaben jedoch nicht bereits auf einer Krypto-Börse ist, würde dies mehrere Schritte erfordern, und es wäre wahrscheinlich besser, eine Brücke zu benutzen.
+  Sie können all dies auch mit [zentralisierten Krypto-Börsen](/get-eth) tun. Wenn Ihr Guthaben jedoch nicht bereits auf einer Krypto-Börse ist, würde dies mehrere Schritte erfordern, und es wäre wahrscheinlich besser, eine Brücke zu benutzen.
 </AlertDescription>
 </AlertContent>
 </Alert>

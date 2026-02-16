@@ -1,6 +1,6 @@
 ---
 title: Errichten Sie Ihren eigenen Ethereum-Node
-description: Allgemeine Einführung in den Betrieb einer eigenen Ethereum-Client-Instanz.
+description: "Allgemeine Einführung in den Betrieb einer eigenen Ethereum-Client-Instanz."
 lang: de
 sidebarDepth: 2
 ---
@@ -234,7 +234,7 @@ Dieser Abschnitt führt Sie durch die Einrichtung eines Ausführungsclients. Er 
 
 Bitte beachten Sie, dass dies nur ein einfaches Beispiel ist, alle anderen Einstellungen werden auf die Standardeinstellung gesetzt. Beachten Sie die Dokumentation der einzelnen Clients, um sich über standardmäßige Werte, Einstellungen und Funktionen zu informieren. Weitere Funktionen, z. B. zur Ausführung von Validatoren, zur Überwachung usw., finden Sie in der Dokumentation des jeweiligen Clients.
 
-> Beachten Sie, dass die Schrägstriche `\` in den Beispielen nur der Formatierung dienen; Konfigurations-Flags können in einer einzigen Zeile definiert werden.
+> Beachten Sie, dass die Schrägstriche `` in den Beispielen nur der Formatierung dienen; Konfigurations-Flags können in einer einzigen Zeile definiert werden.
 
 ##### Ausführen von Besu
 

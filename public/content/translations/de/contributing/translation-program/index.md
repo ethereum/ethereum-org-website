@@ -1,7 +1,7 @@
 ---
-title: Übersetzungsprogramm
+title: "Übersetzungsprogramm"
 lang: de
-description: Informationen zum Übersetzungsprogramm von ethereum.org
+description: "Informationen zum Übersetzungsprogramm von ethereum.org"
 ---
 
 # Übersetzungsprogramm {#translation-program}
@@ -50,9 +50,9 @@ Ethereum.org wird von Tausenden von Community-Mitgliedern übersetzt und sie bil
 
 Wenn Sie zum Übersetzungsprogramm beigetragen haben und mindestens 5.000 Ihrer übersetzten Wörter genehmigt wurden, haben Sie Anspruch auf ein ethereum.org-Übersetzerzertifikat. [Mehr über Zertifikate](/contributing/translation-program/acknowledgements/#certificate)
 
-#### POAPs {#poaps}
+#### POAPs {#oats}
 
-Alle unsere Übersetzer haben Anspruch auf ein POAP (Proof of Attendance Protocol) – ein NFT, das ihren Beitrag zum Übersetzungsprogramm von ethereum.org belegt. [Mehr über POAPs](/contributing/translation-program/acknowledgements/#poap)
+Alle unsere Übersetzer haben Anspruch auf ein POAP (Proof of Attendance Protocol) – ein NFT, das ihren Beitrag zum Übersetzungsprogramm von ethereum.org belegt. [Mehr über POAPs](/contributing/translation-program/acknowledgements/#oats)
 
 #### Danksagungen an die Übersetzer {#translator-acknowledgements}
 

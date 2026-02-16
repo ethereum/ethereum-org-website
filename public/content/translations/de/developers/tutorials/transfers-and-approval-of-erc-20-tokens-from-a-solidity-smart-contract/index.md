@@ -1,6 +1,6 @@
 ---
-title: ERC-20-Token aus einem Solidity-Smart Contract übertragen und genehmigen
-description: So verwendne Sie einen Smart Contract, um über die Sprache Solidity mit einem Token zu interagieren
+title: "ERC-20-Token aus einem Solidity-Smart Contract übertragen und genehmigen"
+description: "So verwendne Sie einen Smart Contract, um über die Sprache Solidity mit einem Token zu interagieren"
 author: "jdourlens"
 tags:
   - "Smart Contracts"

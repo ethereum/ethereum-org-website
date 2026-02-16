@@ -1,6 +1,6 @@
 ---
 title: Online-Gemeinschaften
-description: Eine Auflistung der Förderprogramme im gesamten Ethereum-Ökosystem.
+description: "Eine Auflistung der Förderprogramme im gesamten Ethereum-Ökosystem."
 lang: de
 ---
 
@@ -46,5 +46,5 @@ Hunderttausende von Ethereum-Enthusiasten treffen sich in diesen Online-Foren, u
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Erfahren Sie mehr über DAO's
     </ButtonLink>
-  </div>
+</div>
 </Callout>

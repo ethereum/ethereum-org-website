@@ -1,6 +1,6 @@
 ---
 title: Non Fungible Token (NFT)
-description: Ein Überblick über NFTs bei Ethereum
+description: "Ein Überblick über NFTs bei Ethereum"
 lang: de
 template: use-cases
 emoji: ":frame_with_picture:"
@@ -9,7 +9,7 @@ image: /images/infrastructure_transparent.png
 alt: Ein als Hologramm abgebildetes ETH-Logo.
 summaryPoint1: Ein Weg, alles Einzigartige als eine Ethereum-basierte Anlage darzustellen.
 summaryPoint2: NFTs geben Inhaltserstellern mehr Einfluss denn je.
-summaryPoint3: Auf Grundlage von intelligenten Verträgen auf der Ethereum-Blockchain.
+summaryPoint3: "Auf Grundlage von intelligenten Verträgen auf der Ethereum-Blockchain."
 ---
 
 ## Was sind NFTs? {#what-are-nfts}

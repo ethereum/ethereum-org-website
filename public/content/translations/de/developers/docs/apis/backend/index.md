@@ -1,6 +1,6 @@
 ---
 title: Backend-API-Bibliotheken
-description: Eine Einführung in die Ethereum-Client-APIs, über die Sie mit der Blockchain Ihrer Anwendung interagieren können.
+description: "Eine Einführung in die Ethereum-Client-APIs, über die Sie mit der Blockchain Ihrer Anwendung interagieren können."
 lang: de
 ---
 

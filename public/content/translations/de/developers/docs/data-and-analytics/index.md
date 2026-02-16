@@ -1,6 +1,6 @@
 ---
 title: Daten und Analysen
-description: So bekommen Sie Analysen und Daten in der Chain für die Nutzung in Ihren dApps
+description: "So bekommen Sie Analysen und Daten in der Chain für die Nutzung in Ihren dApps"
 lang: de
 ---
 
@@ -43,6 +43,7 @@ Die [Client-Vielfalt](/developers/docs/nodes-and-clients/client-diversity/) ist 
 Um loszulegen, sehen Sie sich die [Ethereum-Schnellstartanleitung](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) an, um in wenigen Minuten Daten der Ethereum-Blockchain in einer lokalen Docker-Umgebung zu indizieren und vor der Live-Schaltung auf dem [verwalteten Dienst von SubQuery](https://managedservice.subquery.network/) oder dem [dezentralen Netzwerk von SubQuery](https://app.subquery.network/dashboard) zu testen.
 
 ## Etherenow – Mempool-Datenprogramm {#ethernow}
+
 [Blocknative](https://www.blocknative.com/) bietet einen offenen Zugang zu seinem historischen [Mempool-Datenarchiv](https://www.ethernow.xyz/mempool-data-archive) für Ethereum. Dies ermöglicht Forschern und Projekten im Gemeinwohl, die Pre-Chain-Ebene des Ethereum-Mainnets zu erkunden. Der Datensatz wird aktiv gepflegt und stellt das umfassendste historische Protokoll von Mempool-Transaktionsereignissen innerhalb des Ethereum-Ökosystems dar. Erfahren Sie mehr bei [Ethernow](https://www.ethernow.xyz/).
 
 ## Weiterführende Informationen {#further-reading}

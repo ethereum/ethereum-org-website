@@ -1,5 +1,5 @@
 ---
-title: Einführung in Dapps
+title: "Einführung in Dapps"
 description:
 lang: de
 ---

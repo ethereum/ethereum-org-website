@@ -1,10 +1,10 @@
 ---
 title: Ethereum Virtual Machine (EVM)
-description: Eine Einführung in die virtuelle Maschine von Ethereum und wie sie sich auf Zustand, Transaktionen und Smart Contracts bezieht.
+description: "Eine Einführung in die virtuelle Maschine von Ethereum und wie sie sich auf Zustand, Transaktionen und Smart Contracts bezieht."
 lang: de
 ---
 
-Die Ethereum Virtual Machine (EVM) ist eine dezentrale virtuelle Umgebung, die Code konsistent und sicher auf allen Ethereum-Knoten ausführt. Knoten führen die EVM aus, um Smart Contracts auszuführen, wobei sie "[Gas](/gas/)" verwenden, um den für [Operationen](/developers/docs/evm/opcodes/) erforderlichen Rechenaufwand zu messen, wodurch eine effiziente Ressourcenzuweisung und Netzwerksicherheit gewährleistet werden.
+Die Ethereum Virtual Machine (EVM) ist eine dezentrale virtuelle Umgebung, die Code konsistent und sicher auf allen Ethereum-Knoten ausführt. Knoten führen die EVM aus, um Smart Contracts auszuführen, wobei sie "[Gas](/developers/docs/gas/)" verwenden, um den für [Operationen](/developers/docs/evm/opcodes/) erforderlichen Rechenaufwand zu messen, wodurch eine effiziente Ressourcenzuweisung und Netzwerksicherheit gewährleistet werden.
 
 ## Voraussetzungen {#prerequisites}
 

@@ -1,6 +1,6 @@
 ---
-title: Layer 2s hinzufügen
-description: Regeln zum Hinzufügen einer Ebene 2 zu ethereum.org
+title: "Layer 2s hinzufügen"
+description: "Regeln zum Hinzufügen einer Ebene 2 zu ethereum.org"
 lang: de
 ---
 

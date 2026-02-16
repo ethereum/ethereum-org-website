@@ -1,6 +1,6 @@
 ---
 title: Geschichte und Forks von Ethereum
-description: Eine Geschichte der Ethereum-Blockchain, einschließlich der wichtigsten Meilensteine, Veröffentlichungen und Abspaltungen.
+description: "Eine Geschichte der Ethereum-Blockchain, einschließlich der wichtigsten Meilensteine, Veröffentlichungen und Abspaltungen."
 lang: de
 sidebarDepth: 1
 ---
@@ -15,7 +15,6 @@ Forks entstehen, wenn größere technische Aktualisierungen oder Änderungen am 
 
 Wenn für eine Standardsoftware eine Aktualisierung benötigt wird, veröffentlicht der Hersteller lediglich eine neue Version für den Endbenutzer. Blockchains arbeiten anders, da es keinen alleinigen Besitzer gibt. [Ethereum-Clients](/developers/docs/nodes-and-clients/) müssen ihre Software aktualisieren, um die neuen Fork-Regeln zu implementieren. Plus Block Ersteller (Miner in einer Proof-of-Work Umgebung, Validatoren in einer Proof-of-Stake Umgebung) und Nodes erstellen neue Blöcke und müssen diese, entsprechend der neuen Richtlinien, validieren. [Mehr zu Konsensmechanismen](/developers/docs/consensus-mechanisms/)
 Diese Regeländerungen können eine vorübergehende Aufspaltung des Netzwerks verursachen. Neue Blöcke konnen nach den neuen oder den alten Regeln erzeugt werden. Forks werden in der Regel im Voraus vereinbart, damit die Clients die Änderungen einheitlich übernehmen und der Fork mit den Upgrades zur Main Chain wird. In seltenen Fällen können jedoch Meinungsverschiedenheiten über Forks dazu führen, dass das Netzwerk dauerhaft gespalten wird – am bekanntesten ist die Entstehung von Ethereum Classic durch den <a href="#dao-fork">DAO Fork</a>.
-
 </ExpandableCard>
 
 Springen Sie direkt zu Informationen über einige besonders wichtige vergangene Upgrades: [Die Beacon Chain](/roadmap/beacon-chain/); [Die Zusammenführung](/roadmap/merge/); und [EIP-1559](#london)
@@ -43,7 +42,6 @@ Das Shanghai-Update ebnete den Weg für Staking-Auszahlungen auf der Ausführung
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>Beacon Chain Push-Abhebungen als Operationen</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> – <em>Veraltet <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Lesen Sie die Spezifikation für das Shanghai-Upgrade](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -79,7 +77,6 @@ Das Paris-Upgrade wurde durch das Erreichen einer [endgültigen Gesamtschwierigk
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Ermöglicht den Übergang des Ethereum-Netzwerks vom Konsensmechanismus Proof-of-Work (PoW) zum Proof-of-Stake (PoS).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em> Die SCHWIERIGKEITEN mit der Wiederverwendung und Lesbarkeit des Opcodes werden durch den PREVRANDAO behoben</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -111,7 +108,6 @@ Das Gray Glacier Netzwerk-Upgrade hat die [Schwierigkeitsbombe](/glossary/#diffi
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>Verzögert die Explosion der Schwierigkeitsbombe bis Ende September 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -134,7 +130,6 @@ Das Arrow Glacier Netzwerk-Upgrade hat die [Schwierigkeitsbombe](/glossary/#diff
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>verzögert die Schwierigkeitsbombe bis Juni 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -178,7 +173,6 @@ Das London-Upgrade führte die [EIP-1559](https://eips.ethereum.org/EIPS/eip-155
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> – <em>verhindert die Bereitstellung von Verträgen, verhindert, die mit <code>0xEF</code></em> beginnen</li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>plant, das Ice Age bis Dezember 2021 zu verlängern</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -202,7 +196,6 @@ Mit dem Berlin-Upgrade wurden die Gaskosten für bestimmte EVM-Aktionen optimier
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>Gaskostenerhöhung für Zustandszugriffs-Opcodes</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>fügt eine optionale Zugriffsliste hinzu</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -257,7 +250,6 @@ Die Muir-Glacier-Fork führte eine Verzögerung in die [Schwierigkeitsbombe](/gl
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>verzögert die Schwierigkeitsbombe um weitere 4.000.000 Blöcke, oder etwa 611 Tage.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ Die Istanbul-Fork:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>
 weitere Änderungen der Gaspreisverfahrenscodes.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -318,7 +309,6 @@ Die Constantinople-Fork:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>optimiert die Kosten bestimmter On-Chain-Aktionen.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>stellt sicher, dass die Blockchain vor dem Proof-of-Stake-Verfahren nicht eingefroren wird.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -353,7 +343,6 @@ Die Byzantium-Fork:
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>ändert die Formel für die Einstellung des Schwierigkeitsgrades.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>verzögert die [ Schwierigkeitsbombe](/glossary/#difficulty-bomb) um ein Jahr und senkt die vollen Blockprämien von 5 auf 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -382,7 +371,6 @@ Die Spurious-Dragon-Fork war die zweite Reaktion auf die Denial-of-Service(DoS)-
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>ermöglicht das Löschen leerer Konten, die bei DOS-Attacken hinzugefügt wurden.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>ändert die maximale Codegröße, die ein Vertrag in der Blockchain haben kann, in 24576 Bytes.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -405,7 +393,6 @@ Die Tangerine-Whistle-Fork war die erste Reaktion auf die Denial-of-Service(DoS)
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>erhöht die Gaskosten der Verfahrenscodes, die bei Spam-Attacken verwendet werden können.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>reduziert die Zustandsgröße, indem sie eine große Anzahl leerer Konten entfernt, die aufgrund von Fehlern in früheren Versionen des Ethereum-Protokolls ursprünglich minimale Transaktionsgebühren enthielten.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -444,7 +431,6 @@ Die Homestead-Fork, die in die Zukunft schaute. Sie enthielt mehrere Protokollä
 führt einen neuen Verfahrenscode ein: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>präsentiert DEVP2P zur Erfüllung der Kompatibilitätsanforderungen</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

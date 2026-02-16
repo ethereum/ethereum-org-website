@@ -1,6 +1,6 @@
 ---
 title: Wie kann ich mich einbringen?
-description: So können Sie sich in der Ethereum-Community engagieren
+description: "So können Sie sich in der Ethereum-Community engagieren"
 lang: de
 ---
 
@@ -64,7 +64,7 @@ Wenn Sie kein Entwickler sind, ist es nicht ganz so einfach, herauszufinden, wo 
 ### Ethereum-Inhalte in Ihre Muttersprache übersetzen {#translate-ethereum}
 
 - ethereum.org unterhält ein Übersetzungsprogramm, über das die Website und andere Ressourcen in viele verschiedene Sprachen übersetzt werden.
-- Wie Sie sich beteiligen können, erfahren Sie [hier](/Beitrag/Übersetzungsprogramm).
+- Wie Sie sich beteiligen können, erfahren Sie [hier](/contributing/translation-program).
 
 ### Einen Knoten ausführen {#run-a-node}
 

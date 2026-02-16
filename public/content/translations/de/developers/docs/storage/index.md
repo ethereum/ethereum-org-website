@@ -1,6 +1,6 @@
 ---
 title: Dezentrale Speicher
-description: Übersicht über dezentrale Speicher und verfügbare Tools für die Integration der Speicher in eine dApp
+description: "Übersicht über dezentrale Speicher und verfügbare Tools für die Integration der Speicher in eine dApp"
 lang: de
 ---
 

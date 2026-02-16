@@ -1,6 +1,6 @@
 ---
 title: Plasma-Kette
-description: Eine Einführung in Plasma-Ketten als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
+description: "Eine Einführung in Plasma-Ketten als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird."
 lang: de
 incomplete: true
 sidebarDepth: 3

@@ -1,6 +1,6 @@
 ---
-title: So verwandeln Sie Ihren Raspberry Pi 4 durch Überschreiben der MicroSD-Karte in einen Node
-description: Verbinden Sie Ihren Raspberry Pi 4 mit einem Ethernetkabel, schließen Sie ihn anschließend an die SSD-Festplatte an und starten Sie das Gerät. Nun können Sie es als Ethereum-Node nutzen und eine Ausführungsebene oder Konsensebene (Beacon Chain/Validator) ausführen.
+title: "So verwandeln Sie Ihren Raspberry Pi 4 durch Überschreiben der MicroSD-Karte in einen Node"
+description: "Verbinden Sie Ihren Raspberry Pi 4 mit einem Ethernetkabel, schließen Sie ihn anschließend an die SSD-Festplatte an und starten Sie das Gerät. Nun können Sie es als Ethereum-Node nutzen und eine Ausführungsebene oder Konsensebene (Beacon Chain/Validator) ausführen."
 author: "EthereumOnArm"
 tags:
   - "Clients"
@@ -8,10 +8,10 @@ tags:
   - "Konsensebene"
   - "Nodes"
 lang: de
-skill: advanced
-published: 2020-05-07
-source: r/ethereum
-sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
+skill: intermediate
+published: 2022-06-10
+source: Ethereum on ARM
+sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 
 **TL;DR**: Verbinden Sie Ihren Raspberry Pi 4 mit einem Ethernetkabel, schließen Sie ihn anschließend an die SSD-Festplatte an und starten Sie das Gerät. Nun können Sie es als Ethereum-Node nutzen und eine Ausführungsebene oder Konsensebene (Beacon Chain/Validator) ausführen.
