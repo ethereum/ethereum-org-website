@@ -4,7 +4,7 @@ description: "Nach dem Lesen dieses Tutorials können Sie TypeScript-Server schr
 
 author: Ori Pomerantz
 lang: de
-tags: [ "Agent", "Server", "Off-Chain" ]
+tags: ["agent", "server", "offchain"]
 skill: beginner
 published: 2024-07-15
 ---

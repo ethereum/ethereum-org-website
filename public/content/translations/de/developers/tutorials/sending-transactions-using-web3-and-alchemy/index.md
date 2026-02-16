@@ -2,7 +2,7 @@
 title: Versenden von Transaktionen mit Web3
 description: "Dies ist eine anfängerfreundliche Anleitung zum Versenden von Ethereum-Transaktionen mit Web3. Es gibt drei Hauptschritte, um eine Transaktion an die Ethereum-Blockchain zu senden: Erstellen, Signieren und Übertragen. Wir werden alle drei durchgehen."
 author: "Elan Halpern"
-tags: [ "Transaktionen", "web3.js", "Alchemy" ]
+tags: ["transactions", "web3.js", "alchemy"]
 skill: beginner
 lang: de
 published: 2020-11-04
