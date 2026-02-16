@@ -31,8 +31,8 @@ const SectionSkeleton = ({ className }: { className?: string }) => (
 
 type Homepage2026Props = {
   locale: Lang
-  accountHolders: number
-  transactionsToday: number
+  accountHolders: number | null
+  transactionsToday: number | null
   ctaVariant?: CTAVariant
 }
 

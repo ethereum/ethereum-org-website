@@ -9,8 +9,8 @@ import { Section, SectionHeader, SectionTag } from "@/components/ui/section"
 import { cn } from "@/lib/utils/cn"
 
 type KPISectionProps = {
-  accountHolders: number
-  transactionsToday: number
+  accountHolders: number | null
+  transactionsToday: number | null
   className?: string
 }
 
@@ -23,8 +23,12 @@ const ANIMATION_DURATION_MS = 2000
 /**
  * Hook that returns an incrementing transaction count
  * Adds ~2,914 transactions every 12 seconds when visible
+ * Returns null if initialValue is null (error state)
  */
-function useIncrementalCounter(initialValue: number, isVisible: boolean) {
+function useIncrementalCounter(
+  initialValue: number | null,
+  isVisible: boolean
+): number | null {
   const [target, setTarget] = useState(initialValue)
 
   // Sync with new initial value when it changes
@@ -32,16 +36,18 @@ function useIncrementalCounter(initialValue: number, isVisible: boolean) {
     setTarget(initialValue)
   }, [initialValue])
 
-  // Increment counter every 12 seconds when visible
+  // Increment counter every 12 seconds when visible (only if we have a valid value)
   useEffect(() => {
-    if (!isVisible) return
+    if (!isVisible || initialValue === null) return
 
     const interval = setInterval(() => {
-      setTarget((prev) => prev + TRANSACTIONS_PER_INTERVAL)
+      setTarget((prev) =>
+        prev !== null ? prev + TRANSACTIONS_PER_INTERVAL : null
+      )
     }, INTERVAL_MS)
 
     return () => clearInterval(interval)
-  }, [isVisible])
+  }, [isVisible, initialValue])
 
   return target
 }
@@ -187,7 +193,7 @@ const KPISection = ({
             />
             <div className="flex flex-col gap-1">
               <p className="text-4xl font-bold leading-[1.2]">
-                {formatNumber(accountHolders)}
+                {accountHolders !== null ? formatNumber(accountHolders) : "—"}
               </p>
               <p className="text-base leading-[1.6] text-body-medium">
                 ETH holders
@@ -201,11 +207,15 @@ const KPISection = ({
               strokeWidth={1.5}
             />
             <div className="flex flex-col gap-1">
-              <AnimatedNumber
-                value={liveTransactions}
-                formatter={formatTransactions}
-                className="text-4xl font-bold leading-[1.2]"
-              />
+              {liveTransactions !== null ? (
+                <AnimatedNumber
+                  value={liveTransactions}
+                  formatter={formatTransactions}
+                  className="text-4xl font-bold leading-[1.2]"
+                />
+              ) : (
+                <p className="text-4xl font-bold leading-[1.2]">—</p>
+              )}
               <p className="text-base leading-[1.6] text-body-medium">
                 Transactions today
               </p>

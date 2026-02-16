@@ -145,6 +145,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const { direction: dir, isRtl } = getDirection(locale)
 
   // Fetch data using the new data-layer functions (already cached)
+  // Each fetch is wrapped with .catch() to prevent Promise.all from rejecting entirely
+  // when a single API fails - enables graceful degradation
   const [
     ethPrice,
     beaconchainData,
@@ -156,69 +158,100 @@ const Page = async ({ params }: { params: PageParams }) => {
     eventsData,
     accountHolders,
   ] = await Promise.all([
-    getEthPrice(),
-    getBeaconchainData(),
-    getTotalValueLockedData(),
-    getGrowThePieData(),
-    getAttestantPosts(),
-    getRSSData(),
-    getAppsData(),
-    getEventsData(),
-    getAccountHolders(),
+    getEthPrice().catch(() => null),
+    getBeaconchainData().catch(() => null),
+    getTotalValueLockedData().catch(() => null),
+    getGrowThePieData().catch(() => null),
+    getAttestantPosts().catch(() => null),
+    getRSSData().catch(() => null),
+    getAppsData().catch(() => null),
+    getEventsData().catch(() => null),
+    getAccountHolders().catch(() => null),
   ])
 
-  // Handle null cases - throw error if required data is missing
+  // Graceful degradation: log errors and use fallback values
+  // With force-dynamic, there's no ISR cache to fall back to, so we must handle failures gracefully
+
+  // Error fallback helper
+  const createErrorMetric = (error: string) => ({ error })
+
+  // ETH Price - show "—" on failure
   if (!ethPrice) {
-    throw new Error("Failed to fetch ETH price data")
+    console.error("[Homepage] Failed to fetch ETH price data")
   }
+  const safeEthPrice =
+    ethPrice ?? createErrorMetric("Failed to fetch ETH price")
+
+  // Beaconchain data - show "—" on failure
   if (!beaconchainData) {
-    throw new Error("Failed to fetch Beaconchain data")
+    console.error("[Homepage] Failed to fetch Beaconchain data")
   }
+  const totalEthStaked =
+    beaconchainData?.totalEthStaked ??
+    createErrorMetric("Failed to fetch staked ETH")
+
+  // Total Value Locked - show "—" on failure
   if (!totalValueLocked) {
-    throw new Error("Failed to fetch total value locked data")
+    console.error("[Homepage] Failed to fetch TVL data")
   }
+  const safeTotalValueLocked =
+    totalValueLocked ?? createErrorMetric("Failed to fetch TVL")
+
+  // GrowThePie data - show "—" on failure
   if (!growThePieData) {
-    throw new Error("Failed to fetch GrowThePie data")
+    console.error("[Homepage] Failed to fetch GrowThePie data")
   }
-  if (!appsData) {
-    throw new Error("Failed to fetch apps data")
-  }
+  const safeTxCount =
+    growThePieData?.txCount ?? createErrorMetric("Failed to fetch tx count")
+  const safeTxCostsMedianUsd =
+    growThePieData?.txCostsMedianUsd ??
+    createErrorMetric("Failed to fetch tx costs")
+
+  // Account holders - show "—" on failure (only used by redesign variants)
   if (!accountHolders || "error" in accountHolders) {
-    throw new Error("Failed to fetch account holders data")
+    console.error("[Homepage] Failed to fetch account holders data")
   }
+  const accountHoldersValue =
+    accountHolders && "value" in accountHolders ? accountHolders.value : null
 
-  // Extract data for Homepage2026 A/B test variant
-  const accountHoldersValue = accountHolders.value
+  // Transactions today for KPIs (redesign variants) - show "—" on failure
   const transactionsToday =
-    "value" in growThePieData.txCount ? growThePieData.txCount.value : 0
+    growThePieData && "value" in growThePieData.txCount
+      ? growThePieData.txCount.value
+      : null
 
-  // RSS feeds - graceful degradation: use what's available if we have enough items
+  // Apps data - hide section on failure
+  if (!appsData) {
+    console.error("[Homepage] Failed to fetch apps data")
+  }
+  const hasAppsData = !!appsData
+
+  // RSS feeds - hide section if insufficient items
   const rssFeeds = rssData ?? []
   const attestantFeed = attestantPosts ?? []
   const totalRssItems =
     rssFeeds.reduce((sum, feed) => sum + feed.length, 0) + attestantFeed.length
 
   if (totalRssItems < RSS_DISPLAY_COUNT) {
-    throw new Error(
-      `Insufficient RSS data: need at least ${RSS_DISPLAY_COUNT} items`
+    console.error(
+      `[Homepage] Insufficient RSS data: have ${totalRssItems}, need ${RSS_DISPLAY_COUNT}`
     )
   }
-
-  // Extract totalEthStaked from beaconchainData
-  const { totalEthStaked } = beaconchainData
+  const hasEnoughRssItems = totalRssItems >= RSS_DISPLAY_COUNT
 
   // Events - use empty array as fallback
   const upcomingEvents = (eventsData ?? []).slice(0, 3)
 
-  const appsOfTheWeek = parseAppsOfTheWeek(appsData)
+  // Apps of the week - only parse if we have data
+  const appsOfTheWeek = hasAppsData ? parseAppsOfTheWeek(appsData) : []
 
   const bentoItems = await getBentoBoxItems(locale)
 
-  const ethPriceHasError = "error" in ethPrice
+  const ethPriceHasError = "error" in safeEthPrice
 
   const price = ethPriceHasError
-    ? t("loading-error-refresh")
-    : formatPriceUSD(ethPrice.value, locale)
+    ? "—"
+    : formatPriceUSD(safeEthPrice.value, locale)
 
   const eventCategory = `Homepage - ${locale}`
 
@@ -444,24 +477,29 @@ const Page = async ({ params }: { params: PageParams }) => {
   ]
 
   const metricResults: AllHomepageActivityData = {
-    ethPrice,
+    ethPrice: safeEthPrice,
     totalEthStaked,
-    totalValueLocked,
-    txCount: growThePieData.txCount,
-    txCostsMedianUsd: growThePieData.txCostsMedianUsd,
+    totalValueLocked: safeTotalValueLocked,
+    txCount: safeTxCount,
+    txCostsMedianUsd: safeTxCostsMedianUsd,
   }
   const metrics = await getActivity(metricResults, locale)
 
-  // RSS feed items
-  // polishRSSList expects RSSItem[][], so wrap attestantFeed in an array
-  const polishedRssItems = polishRSSList([attestantFeed, ...rssFeeds], locale)
+  // RSS feed items - only process if we have enough items
+  const polishedRssItems = hasEnoughRssItems
+    ? polishRSSList([attestantFeed, ...rssFeeds], locale)
+    : []
   const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
 
-  const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({
-    name: source,
-    href: sourceUrl,
-  })) as CommunityBlog[]
-  blogLinks.push(...BLOGS_WITHOUT_FEED)
+  const blogLinks = hasEnoughRssItems
+    ? ([
+        ...polishedRssItems.map(({ source, sourceUrl }) => ({
+          name: source,
+          href: sourceUrl,
+        })),
+        ...BLOGS_WITHOUT_FEED,
+      ] as CommunityBlog[])
+    : []
 
   return (
     <>
@@ -648,14 +686,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                       <p>{t("page-index-what-is-ether-description-2")}</p>
                     </div>
                     <div id="price" className="py-8">
-                      <div
-                        className={cn(
-                          "text-5xl font-bold",
-                          ethPriceHasError && "text-md text-error"
-                        )}
-                      >
-                        {price}
-                      </div>
+                      <div className="text-5xl font-bold">{price}</div>
                       <div className="mt-1 flex items-center gap-1 text-sm text-body-medium">
                         {tCommon("eth-current-price")}
                         <Tooltip
@@ -691,7 +722,7 @@ const Page = async ({ params }: { params: PageParams }) => {
 
               {/* Apps of the week - Discover the best apps on Ethereum */}
               {/* // TODO: Remove locale restriction after translation */}
-              {locale === DEFAULT_LOCALE && (
+              {locale === DEFAULT_LOCALE && hasAppsData && (
                 <TrackedSection
                   id="apps_of_the_week"
                   eventCategory={eventCategory}
@@ -859,41 +890,43 @@ const Page = async ({ params }: { params: PageParams }) => {
                 </Section>
               </TrackedSection>
 
-              {/* Recent posts */}
-              <TrackedSection id="recent" eventCategory={eventCategory}>
-                <Section id="recent">
-                  <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
-                    {t("page-index-posts-header")}
-                  </h3>
-                  <p>{t("page-index-posts-subtitle")}</p>
+              {/* Recent posts - hide if insufficient RSS items */}
+              {hasEnoughRssItems && (
+                <TrackedSection id="recent" eventCategory={eventCategory}>
+                  <Section id="recent">
+                    <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+                      {t("page-index-posts-header")}
+                    </h3>
+                    <p>{t("page-index-posts-subtitle")}</p>
 
-                  {/* dynamic / lazy loaded */}
-                  <RecentPostsSwiper
-                    className="mt-4 md:mt-16"
-                    rssItems={rssItems}
-                    eventCategory={eventCategory}
-                  />
+                    {/* dynamic / lazy loaded */}
+                    <RecentPostsSwiper
+                      className="mt-4 md:mt-16"
+                      rssItems={rssItems}
+                      eventCategory={eventCategory}
+                    />
 
-                  <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
-                    <p className="text-lg">{t("page-index-posts-action")}</p>
-                    <div className="flex flex-wrap gap-x-6 gap-y-4">
-                      {blogLinks.map(({ name, href }) => (
-                        <Link
-                          href={href}
-                          key={name}
-                          customEventOptions={{
-                            eventCategory,
-                            eventAction: "blogs_read_more",
-                            eventName: name!,
-                          }}
-                        >
-                          {name}
-                        </Link>
-                      ))}
+                    <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
+                      <p className="text-lg">{t("page-index-posts-action")}</p>
+                      <div className="flex flex-wrap gap-x-6 gap-y-4">
+                        {blogLinks.map(({ name, href }) => (
+                          <Link
+                            href={href}
+                            key={name}
+                            customEventOptions={{
+                              eventCategory,
+                              eventAction: "blogs_read_more",
+                              eventName: name!,
+                            }}
+                          >
+                            {name}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </Section>
-              </TrackedSection>
+                  </Section>
+                </TrackedSection>
+              )}
 
               {/* Events */}
               <TrackedSection id="events" eventCategory={eventCategory}>
