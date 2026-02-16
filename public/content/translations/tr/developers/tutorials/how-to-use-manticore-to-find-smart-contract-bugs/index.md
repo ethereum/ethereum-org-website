@@ -3,14 +3,7 @@ title: "Akıllı sözleşmelerdeki hataları bulmak için Manticore nasıl kulla
 description: "Akıllı sözleşmelerdeki hataları otomatik olarak bulmak için Manticore nasıl kullanılır"
 author: Trailofbits
 lang: tr
-tags:
-  [
-    "katılık",
-    "akıllı kontratlar",
-    "güvenlik",
-    "test etmek",
-    "resmi doğrulama"
-  ]
+tags: ["solidity", "smart contracts", "security", "testing", "formal verification"]
 skill: advanced
 published: 2020-01-13
 source: Building secure contracts

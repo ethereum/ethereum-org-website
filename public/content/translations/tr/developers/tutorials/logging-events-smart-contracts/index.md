@@ -2,7 +2,7 @@
 title: "Olaylar ile akıllı sözleşmelerden veri kaydetme"
 description: "Akıllı sözleşme olaylarına giriş ve bunları veri kaydetmek için nasıl kullanabileceğiniz"
 author: "jdourlens"
-tags: [ "akıllı kontratlar", "remix", "katılık", "olaylar" ]
+tags: ["smart contracts", "remix", "solidity", "events"]
 skill: intermediate
 lang: tr
 published: 2020-04-03

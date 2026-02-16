@@ -3,13 +3,7 @@ title: "Solidity akıllı sözleşmeleri test etmek için nasıl taklit edilir?"
 description: "Neden sözleşmelerinizi test ederken dalga geçmelisiniz?"
 author: Markus Waas
 lang: tr
-tags:
-  [
-    "katılık",
-    "akıllı kontratlar",
-    "test etmek",
-    "taklit etme"
-  ]
+tags: ["solidity", "smart contracts", "testing", "mocking"]
 skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com

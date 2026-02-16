@@ -3,13 +3,7 @@ title: "Akıllı sözleşme hatalarını bulmak için Slither nasıl kullanılı
 description: "Akıllı sözleşmelerdeki hataları otomatik olarak bulmak için Slither'ı kullanma"
 author: Trailofbits
 lang: tr
-tags:
-  [
-    "katılık",
-    "akıllı kontratlar",
-    "güvenlik",
-    "test etmek"
-  ]
+tags: ["solidity", "smart contracts", "security", "testing"]
 skill: advanced
 published: 2020-06-09
 source: Building secure contracts

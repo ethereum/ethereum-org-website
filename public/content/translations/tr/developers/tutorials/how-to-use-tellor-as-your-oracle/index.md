@@ -3,7 +3,7 @@ title: "Tellor'u Kâhininiz Olarak Nasıl Kurarsınız?"
 description: "Tellor kâhinini protokolünüze entegre etmeye başlamak için bir rehber"
 author: "Tellor"
 lang: tr
-tags: [ "katılık", "akıllı kontratlar", "kâhinler" ]
+tags: ["solidity", "smart contracts", "oracles"]
 skill: beginner
 published: 2021-06-29
 source: Tellor Docs

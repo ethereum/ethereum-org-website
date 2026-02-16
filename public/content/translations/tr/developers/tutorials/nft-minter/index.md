@@ -2,15 +2,7 @@
 title: "NFT Minter Öğreticisi"
 description: "Bu eğitimde, bir NFT minter oluşturacak ve akıllı sözleşmenizi MetaMask ve Web3 araçlarını kullanarak bir React ön ucuna bağlayarak tam yığınlı bir merkeziyetsiz uygulama oluşturmayı öğreneceksiniz."
 author: "smudgil"
-tags:
-  [
-    "katılık",
-    "NFT",
-    "alchemy",
-    "akıllı kontratlar",
-    "ön uç",
-    "Pinata"
-  ]
+tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata"]
 skill: intermediate
 lang: tr
 published: 2021-10-06
