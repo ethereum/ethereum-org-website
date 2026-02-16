@@ -88,7 +88,6 @@ module.exports = (phase, { defaultConfig }) => {
 
       return config
     },
-    trailingSlash: true,
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
       remotePatterns: [
@@ -190,6 +189,8 @@ module.exports = (phase, { defaultConfig }) => {
       }
 
       return [
+        // Strip trailing slashes for SEO (must come first)
+        { source: "/:path+/", destination: "/:path+", permanent: true },
         // All primary redirects
         ...redirects.flatMap(([source, destination, permanent]) =>
           createRedirect(source, destination, permanent)

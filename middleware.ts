@@ -91,13 +91,6 @@ export default async function middleware(request: NextRequest) {
   // Handle i18n routing first
   const i18nResponse = handleI18nRouting(request)
 
-  // Debug: log if i18n middleware is redirecting
-  if (i18nResponse.status >= 300 && i18nResponse.status < 400) {
-    console.log(
-      `[Middleware] i18n redirect: ${pathname} -> ${i18nResponse.headers.get("location")} (${i18nResponse.status})`
-    )
-  }
-
   // Determine locale from the response or request
   const locale =
     firstSegment && !DEPRECATED_LOCALES.has(firstSegment)
@@ -120,24 +113,14 @@ export default async function middleware(request: NextRequest) {
 
   if (shouldPrecompute) {
     try {
-      // Precompute flag values and get signed code
       const code = await precompute(abTestFlags)
-
-      // Rewrite to include the code in the path
-      // Note: Must include trailing slash to match trailingSlash: true config
-      // Otherwise Next.js will 308 redirect, exposing the internal URL
       const newUrl = new URL(request.url)
-      const basePath = `/${code}${pathWithoutLocale}`
-      const codePath = basePath.endsWith("/") ? basePath : `${basePath}/`
-      newUrl.pathname = `/${locale}${codePath}`
-
+      newUrl.pathname = `/${locale}/${code}${pathWithoutLocale}`
       console.log(`[Middleware] A/B rewrite: ${pathname} -> ${newUrl.pathname}`)
-
       return NextResponse.rewrite(newUrl)
     } catch (error) {
       const message = error instanceof Error ? error.message : "Unknown error"
       console.error("[Middleware] A/B precompute failed:", message)
-      // Fall through to normal i18n handling
     }
   }
 
