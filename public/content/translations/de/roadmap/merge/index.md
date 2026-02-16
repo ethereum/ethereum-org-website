@@ -1,13 +1,13 @@
 ---
-title: Die Zusammenführung
-description: Erfahren Sie mehr über die Zusammenführung, als Mainnet Ethereum Proof-of-Stake einführte.
+title: "Die Zusammenführung"
+description: "Erfahren Sie mehr über die Zusammenführung, als Mainnet Ethereum Proof-of-Stake einführte."
 lang: de
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
 summaryPoint1: Im Ethereum Mainnet wird Proof-of-Stake verwendet, aber dies war nicht immer der Fall.
-summaryPoint2: Der Wechsel vom ursprünglichen Proof-of-Work-Mechanismus zu Proof-of-Stake wurde The Merge genannt.
-summaryPoint3: The Merge bezieht sich darauf, dass das ursprüngliche Ethereum Mainnet mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain zusammengeführt wurde und somit nun beide als eine Blockchain existieren.
+summaryPoint2: "Der Wechsel vom ursprünglichen Proof-of-Work-Mechanismus zu Proof-of-Stake wurde The Merge genannt."
+summaryPoint3: "The Merge bezieht sich darauf, dass das ursprüngliche Ethereum Mainnet mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain zusammengeführt wurde und somit nun beide als eine Blockchain existieren."
 summaryPoint4: Nach The Merge reduzierte sich Ethereums Energieverbrauch um ~99,95 %.
 ---
 
@@ -88,7 +88,6 @@ Schlüssel-Aktionen beinhalten:
 - Authentifizieren Sie die Ausführung und Konsens-Clients mit einem gemeinsam genutzten JWT-Geheimnis, so dass sie sicher miteinander kommunizieren können.
 
 Wenn Sie die ersten beiden obigen Elemente nicht abschließen, wird Ihre Node als "offline" betrachtet, bis beide Ebenen synchronisiert und authentifiziert sind.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -107,7 +106,6 @@ The Merge trat ein, indem es Änderungen an der Konsens-Methode mit sich brachte
 </ul>
 
 Weitere Informationen findest Du in diesem Blogartikel von Tim Heiko zum <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Thema The Merge Update: Welche Auswirkungen hat das Ereignis auf die Ethereum-Execution Layer?</a>.
-
 </ExpandableCard>
 
 ## Die Zusammenführung und der Energieverbrauch {#merge-and-energy}
@@ -116,7 +114,7 @@ The Merge markierte das Ende von Proof-of-Work für Ethereum und läutete die Ä
 
 ## Die Zusammenführung und Skalierbarkeit {#merge-and-scaling}
 
-Die Zusammenführung ebnet auch den Weg für weitere Skalierungsupgrades, welche unter Proof-of-Work nicht möglich waren. Dies bringt Ethereum einen Schritt näher die volle Skalierung, Sicherheit und Nachhaltigkeit zu erreichen, die in der [Ethereum Vision](/roadmap/vision/) beschrieben ist.
+Die Zusammenführung ebnet auch den Weg für weitere Skalierungsupgrades, welche unter Proof-of-Work nicht möglich waren. Dies bringt Ethereum einen Schritt näher die volle Skalierung, Sicherheit und Nachhaltigkeit zu erreichen, die in der [Ethereum Vision](/energy-consumption/) beschrieben ist.
 
 ## Misverständnisse über die Zusammenführung {#misconceptions}
 
@@ -135,7 +133,6 @@ Jeder kann einen Knoten betreiben, der allerdings nicht erlaubt, andere Blöcke 
 Die Möglichkeit für jeden, einen eigenen Node zu betreiben, ist <em>absolut essentiell</em> zur Aufrechterhaltung der Dezentralisierung des Ethereum-Netzwerks.
 
 [Mehr zum Betrieb eines eigenen Nodes](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -145,7 +142,6 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 Die Gasgebühren sind ein Produkt der Netznachfrage im Verhältnis zur Netzkapazität. Der Merge veraltete den Einsatz von Proof-of-Work für den Übergang zu Proof-of-Stake als Konsens, aber keine signifikante Änderung von Parametern, die direkt Einfluss auf Netzwerk-Kapazität oder Durchsatz haben.
 
 Mit einer <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Rollup-zentrierten Roadmap</a>, die Bemühungen konzentrieren sich auf die Ausweitung der Nutzeraktivitäten auf [Ebene 2](/layer-2/), und gleichzeitig das Ebene 1 Mainnet als sichere dezentrale Abwicklungsschicht zu etablieren, die für die Speicherung von Rollup-Daten optimiert ist und dazu beiträgt, Rollup-Transaktionen exponentiell billiger zu machen. Der Übergang zu Proof-of-Stake ist ein entscheidender Vorläufer für die Umsetzung. [Mehr zum Thema Gas-Kosten.](/developers/docs/gas/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -156,7 +152,6 @@ Die "Geschwindigkeit" einer Transaktion kann auf einige Arten gemessen werden, e
 Historisch war es nach Proof-of-Work das Ziel, alle ~13.3 Sekunden einen neuen Block zu haben. Unter Proof-of-Stake stellen wir fest, dass Slots genau alle 12 Sekunden auftreten, wobei jeder von ihnen eine Möglichkeit für einen Validator ist, einen Block zu veröffentlichen. Die meisten Slots haben Blöcke, aber nicht unbedingt alle (d.h. ein Validator ist offline). Bei Proof-of-Stake werden Blöcke ~10% häufiger produziert als bei Proof-of-Work. Das war eine ziemlich unbedeutende Änderung und Benutzer werden es wahrscheinlich nicht bemerken.
 
 Proof-of-Stake führte das bisher nicht existierende Konzept der Transaktionsfinalität ein. Bei Proof-of-Work wird die Rückgängigmachung eines Blocks exponentiell schwieriger, wenn neue Blöcke auf vorherigen aufgebaut werden, aber es erreicht nie ganz Null. Unter Proof-of-Stake werden Blöcke in Epochen (6,4 Minuten Zeitspanne mit 32 Chancen für Blöcke) gebündelt, über die Validatoren abstimmen. Wenn eine Epoche endet, stimmen die Validatoren darüber ab, ob sie die Epoche als "gerechtfertigt" betrachten sollen. Wenn die Validatoren einverstanden sind, die Epoche zu rechtfertigen, wird sie in der nächsten Epoche fertiggestellt. Abgeschlossene Transaktionen rückgängig zu machen ist wirtschaftlich unrentabel, da sie mehr als ein Drittel der insgesamt eingesetzten ETH einsetzen und verbrennen müssten.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -168,7 +163,6 @@ Nach dem Zusammenführen hatten die Staker zunächst nur Zugriff auf Gebührenti
 Seit des Netzwerk-Upgrades namens Shanghai/Capella können die Staker nun einen <em>Abhebungsadresse</em> um automatische Auszahlungen von überschüssigem für Staking eingesetzten ETH zu erhalten (ETH über 32 aus Protokollbelohnungen). Mit diesem Upgrade wurde auch die Möglichkeit geschaffen, dass ein Validator sein gesamtes Guthaben beim Verlassen des Netzwerkes entsperren und zurückfordern kann.
 
 [Mehr zu Staking-Auszahlungen](/staking/withdrawals/)
-
 </ExpandableCard>
 
 <ExpandableCard

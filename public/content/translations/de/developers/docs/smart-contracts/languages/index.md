@@ -1,6 +1,6 @@
 ---
 title: Sprachen von Smart Contracts
-description: Übersicht und Vergleich der zwei wichtigsten Smart-Contract-Sprachen – Solidity und Vyper
+description: "Übersicht und Vergleich der zwei wichtigsten Smart-Contract-Sprachen – Solidity und Vyper"
 lang: de
 ---
 
@@ -123,24 +123,32 @@ Weitere Informationen finden Sie im [Vyper-Grundprinzip](https://vyper.readthedo
 # Öffne Auktion
 
 # Auktionsparameter
+
 # Begünstigter erhält Geld vom Meistbietenden
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Aktueller Stand der Auktion
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Setze am Ende auf wahr, um jede Änderung zu verbieten
+
 ended: public(bool)
 
 # Erstattete Gebote nachverfolgen, um dem Abhebemuster folgen zu können
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Eine einfache Auktion mit `_bidding_time`
+
 # Sekunden Bieterzeit für die
+
 # Begünstigtenadresse `_beneficiary` erstellen.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Biete in der Auktion mit dem Betrag der
+
 # zusammen mit dieser Transaktion gesendet wurde.
+
 # Der Betrag wird nur erstattet, wenn die
+
 # Auktion nicht gewonnen wurde.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Ziehe ein zuvor erstattetes Gebot zurück. Das Abhebemuster
+
 # wird verwendet um ein Sicherheitsproblem zu vermeiden. Wenn Erstattungen direkt
+
 # als Teil von bid() gesendet würden, könnte ein böswilliger Bieter-Vertrag
+
 # diese Erstattungen blockieren und damit den Eingang neuer Höchstgebote.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Beende die Auktion und sende das Höchstgebot
+
 # an den Begünstigten.
+
 @extern
 def endAuction():
     # Es ist eine gute Richtlinie, Funktionen zu strukturieren, die

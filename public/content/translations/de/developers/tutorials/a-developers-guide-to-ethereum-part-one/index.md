@@ -1,6 +1,6 @@
 ---
-title: Ethereum-Einführung für Pythonentwickler, Teil 1
-description: Eine Einführung in die Entwicklung von Ethereum, zugeschnitten auf Entwickler mit einem Hintergrund in Python
+title: "Ethereum-Einführung für Pythonentwickler, Teil 1"
+description: "Eine Einführung in die Entwicklung von Ethereum, zugeschnitten auf Entwickler mit einem Hintergrund in Python"
 author: Marc Garreau
 lang: de
 tags:

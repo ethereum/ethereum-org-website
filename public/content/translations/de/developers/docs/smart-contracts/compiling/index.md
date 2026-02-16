@@ -1,6 +1,6 @@
 ---
 title: Smart Contracts erstellen
-description: Eine Erklärung, warum Sie Smart Contracts kompilieren müssen und was bei der Kompilierung tatsächlich passiert
+description: "Eine Erklärung, warum Sie Smart Contracts kompilieren müssen und was bei der Kompilierung tatsächlich passiert"
 lang: de
 incomplete: true
 ---

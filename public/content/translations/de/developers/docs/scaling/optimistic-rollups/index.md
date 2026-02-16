@@ -1,6 +1,6 @@
 ---
 title: Optimistische Rollups
-description: Einführung in optimistische Rollups
+description: "Einführung in optimistische Rollups"
 lang: de
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC-API
-description: Ein zustandsloses, leichtgewichtiges Remote Procedure Call (RPC)-Protokoll für Ethereum-Clients
+description: "Ein zustandsloses, leichtgewichtiges Remote Procedure Call (RPC)-Protokoll für Ethereum-Clients"
 lang: de
 ---
 
@@ -58,7 +58,7 @@ Hier sind einige Beispiele:
 - FALSCH: 0xf0f0f (muss eine gerade Anzahl von Ziffern haben)
 - FALSCH: 004200 (muss 0x als Präfix hinzufügen)
 
-### Der Standardblockparameter {#default-block}
+### Der Standardblockparameter {#block-parameter}
 
 Die folgenden Methoden haben einen zusätzlichen Standardblockparameter:
 

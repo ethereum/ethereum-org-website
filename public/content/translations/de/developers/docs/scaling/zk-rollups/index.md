@@ -1,6 +1,6 @@
 ---
 title: Zero-Knowledge Rollups
-description: Einführung in Zero-Knowledge Rollups
+description: "Einführung in Zero-Knowledge Rollups"
 lang: de
 ---
 

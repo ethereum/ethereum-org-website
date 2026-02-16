@@ -1,15 +1,15 @@
 ---
 title: Dezentrale autonome Organisationen (DAOs)
-description: Eine Übersicht über DAOs auf Ethereum
+description: "Eine Übersicht über DAOs auf Ethereum"
 lang: de
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: Eine Repräsentation einer DAO, wie sie über einen Vorschlag abstimmt.
-summaryPoint1: Communitys im Besitz ihrer Mitglieder ohne zentralisierte Führung.
-summaryPoint2: Eine sichere Möglichkeit der Zusammenarbeit mit Fremden im Internet.
-summaryPoint3: Ein Ort, an dem sich Geldmittel für einen bestimmten Zweck sicher bereitstellen lassen.
+alt: "Eine Repräsentation einer DAO, wie sie über einen Vorschlag abstimmt."
+summaryPoint1: "Communitys im Besitz ihrer Mitglieder ohne zentralisierte Führung."
+summaryPoint2: "Eine sichere Möglichkeit der Zusammenarbeit mit Fremden im Internet."
+summaryPoint3: "Ein Ort, an dem sich Geldmittel für einen bestimmten Zweck sicher bereitstellen lassen."
 ---
 
 ## Was sind DAOs? {#what-are-daos}
@@ -18,7 +18,7 @@ Eine DAO ist eine Organisation im kollektiven Besitz, die auf eine gemeinsame Mi
 
 DAOs ermöglichen es uns, mit Gleichgesinnten rund um den Globus zusammenzuarbeiten, ohne auf das Wohlwollen einer Führungskraft vertrauen zu müssen, die unsere Geldmittel oder die Operationen verwaltet. Es gibt keinen CEO, der Geldmittel nach Lust und Laune ausgibt, und keinen Finanzchef, der die Buchhaltung manipulieren kann. Stattdessen bestimmen die in den Code eingebauten, Blockchain-basierten Regeln, wie die Organisation funktioniert und wie Geldmittel ausgegeben werden.
 
-Die Finanzverwaltung ist integriert und niemand kann ohne die Zustimmung der Gruppe auf die Mittel zugreifen. Entscheidungen werden nach Vorschlägen und Abstimmungen getroffen. So wird sichergestellt, dass jeder in der Organisation eine Stimme hat und dass alles transparent [on-Chain](/glossary/#on-chain) abläuft.
+Die Finanzverwaltung ist integriert und niemand kann ohne die Zustimmung der Gruppe auf die Mittel zugreifen. Entscheidungen werden nach Vorschlägen und Abstimmungen getroffen. So wird sichergestellt, dass jeder in der Organisation eine Stimme hat und dass alles transparent [on-Chain](/glossary/#onchain) abläuft.
 
 ## Wofür brauchen wir DAOs? {#why-dao}
 
@@ -69,9 +69,7 @@ Um DAOs zu verwalten, sind vorher zahlreiche Überlegungen notwendig – etwa wi
 
 Die Delegation ist die DAO-Variante repräsentativer Demokratie. Tokenbesitzer delegieren Stimmen an Benutzer, die sich selbst nominieren und sich verpflichten, auf dem aktuellen Stand zu bleiben und das Protokoll zu verwalten.
 
-#### Bekanntes Beispiel {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – Um sie zu vertreten, können ENS-Besitzer ihre Stimmen an engagierte Communitymitglieder delegieren.
+#### Bekanntes Beispiel {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – Um sie zu vertreten, können ENS-Besitzer ihre Stimmen an engagierte Communitymitglieder delegieren.
 
 ### Automatische Transaktionsverwaltung {#governance-example}
 

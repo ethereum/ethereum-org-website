@@ -1,6 +1,6 @@
 ---
 title: Ethereum-Support
-description: Support im Ethereum-Ökosystem erhalten
+description: "Support im Ethereum-Ökosystem erhalten"
 lang: de
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Sidechains
-description: Eine Einführung in Sidechains als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
+description: "Eine Einführung in Sidechains als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird."
 lang: de
 incomplete: true
 sidebarDepth: 3

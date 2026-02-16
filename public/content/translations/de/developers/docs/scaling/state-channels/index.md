@@ -1,6 +1,6 @@
 ---
-title: Zustandskanäle
-description: Eine Einführung in Zustandskanäle und Zahlungskanäle als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
+title: "Zustandskanäle"
+description: "Eine Einführung in Zustandskanäle und Zahlungskanäle als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird."
 lang: de
 incomplete: true
 sidebarDepth: 3

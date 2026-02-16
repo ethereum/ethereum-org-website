@@ -1,6 +1,6 @@
 ---
 title: Konsensmechanismus
-description: Eine Erklärung von Konsensprotokollen in verteilten Systemen und die Rolle, die sie in Ethereum spielen.
+description: "Eine Erklärung von Konsensprotokollen in verteilten Systemen und die Rolle, die sie in Ethereum spielen."
 lang: de
 ---
 

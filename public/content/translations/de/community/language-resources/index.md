@@ -1,6 +1,6 @@
 ---
 title: Sprachressourcen
-description: Ressourcen in nicht englischer Sprache, um mehr über Ethereum zu erfahren
+description: "Ressourcen in nicht englischer Sprache, um mehr über Ethereum zu erfahren"
 lang: de
 ---
 

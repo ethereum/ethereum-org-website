@@ -1,6 +1,6 @@
 ---
 title: Den ERC-20-Token-Smart-Contract verstehen
-description: Einführung in die Bereitstellung Ihres ersten Smart Contracts in einem Ethereum-Testnet
+description: "Einführung in die Bereitstellung Ihres ersten Smart Contracts in einem Ethereum-Testnet"
 author: "jdourlens"
 tags:
   - "Smart Contracts"

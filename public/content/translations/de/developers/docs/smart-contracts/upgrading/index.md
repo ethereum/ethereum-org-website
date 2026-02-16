@@ -1,6 +1,6 @@
 ---
 title: Aktualisierung von Smart Contracts
-description: Ein Überblick über Upgrade-Muster für Ethereum-Smart-Contracts
+description: "Ein Überblick über Upgrade-Muster für Ethereum-Smart-Contracts"
 lang: de
 ---
 

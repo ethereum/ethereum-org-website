@@ -1,13 +1,13 @@
 ---
 title: Die Beacon Chain
-description: Informieren Sie sich über die Beacon Chain – das Upgrade, mit dem Proof-of-Stake für Ethereum eingeführt wurde
+description: "Informieren Sie sich über die Beacon Chain – das Upgrade, mit dem Proof-of-Stake für Ethereum eingeführt wurde"
 lang: de
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: Mit der Bacon Chain wurde Proof-of-Stake in das Ethereum-Ökosystem eingeführt.
-summaryPoint2: Sie wurde im September 2022 mit der ursprünglichen Proof-of-Work-Blockchain von Ethereum vereinigt.
-summaryPoint3: Mit der Beacon Chain wurde die Konsenslogik und das Block-Gossip-Protokoll eingeführt, die heute für die Sicherheit von Ethereum sorgen.
+summaryPoint1: "Mit der Bacon Chain wurde Proof-of-Stake in das Ethereum-Ökosystem eingeführt."
+summaryPoint2: "Sie wurde im September 2022 mit der ursprünglichen Proof-of-Work-Blockchain von Ethereum vereinigt."
+summaryPoint3: "Mit der Beacon Chain wurde die Konsenslogik und das Block-Gossip-Protokoll eingeführt, die heute für die Sicherheit von Ethereum sorgen."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -32,7 +32,7 @@ Staking erfüllt einen ähnlichen Zweck wie einst [Mining](/developers/docs/cons
 
 Der Wechsel zu Proof-of-Stake machte Ethereum wesentlich sicherer und dezentralisierte im Vergleich zu Proof-of-Work. Je mehr Menschen sich am Netzwerk beteiligen, desto dezentralisierter und sicherer wird es vor Angriffen.
 
-Und die Verwendung von Proof-of-Stake als Konsensmechanismus ist eine grundlegende Komponente für [das sichere, umweltfreundliche und skalierbare Ethereum, das wir jetzt haben](/roadmap/vision/).
+Und die Verwendung von Proof-of-Stake als Konsensmechanismus ist eine grundlegende Komponente für [das sichere, umweltfreundliche und skalierbare Ethereum, das wir jetzt haben](/staking/).
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>

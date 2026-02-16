@@ -1,6 +1,6 @@
 ---
 title: Ethereum-Governance
-description: Eine Einführung in die Entscheidungsfindung bei Ethereum
+description: "Eine Einführung in die Entscheidungsfindung bei Ethereum"
 lang: de
 ---
 
@@ -22,7 +22,7 @@ Niemand besitzt oder kontrolliert das Ethereum-Protokoll. Dennoch müssen Entsch
 
 Ethereum-Governance ist der Prozess, über den Protokolländerungen vorgenommen werden. Wichtig ist, zu betonen, dass dieser Prozess nicht damit zusammenhängt, wie Menschen und Anwendungen das Protokoll benutzen. Bei Ethereum gibt es keine Berechtigungen. Jeder kann von überall auf der Welt an On-Chain-Aktivitäten teilnehmen. Es gibt keine Regeln dafür, wer eine Anwendung erstellen oder eine Transaktion senden kann oder auch nicht. Allerdings gibt es einen Prozess, um Änderungen am Kernprotokoll vorzuschlagen, auf dem diese Anwendungen laufen. Da so viele Menschen abhängig von Ethereums Stabilität sind, gibt es einen sehr hohen Koordinationsschwellenwert für wesentliche Änderungen, einschließlich sozialer und technischer Prozesse. So ist sichergestellt, dass alle Veränderungen an Ethereum sicher sind und von der Community weiterhin unterstützt werden.
 
-### Governance – On-Chain vs. Off-Chain {#on-chain-vs-off-chain}
+### Governance – On-Chain vs. Off-Chain {#onchain-vs-offchain}
 
 Die Blockchain-Technologie ermöglicht neue Governance-Fähigkeiten, die sogenannte On-Chain-Governance. Bei der On-Chain-Governance werden vorgeschlagene Protokolländerungen durch eine Abstimmung der Beteiligten beschlossen. In der Regel sind das Inhaber eines Governance-Tokens. Die Abstimmung erfolgt über die Blockchain. Bei einigen Formen der On-Chain-Governance werden die vorgeschlagenen Protokolländerungen bereits im Code niedergeschrieben und automatisch umgesetzt, wenn die Interessenvertreter die Änderungen genehmigen.
 

@@ -1,6 +1,6 @@
 ---
-title: So prägen Sie einen NFT (Teil 2/3 der NFT-Tutorialreihe)
-description: In diesem Tutorial wird beschrieben, wie Sie ein NFT auf der Ethereum-Blockchain mit unserem Smart Contract und Web3 prägen können
+title: "So prägen Sie einen NFT (Teil 2/3 der NFT-Tutorialreihe)"
+description: "In diesem Tutorial wird beschrieben, wie Sie ein NFT auf der Ethereum-Blockchain mit unserem Smart Contract und Web3 prägen können"
 author: "Sumi Mudgil"
 tags:
   - "NFTs"

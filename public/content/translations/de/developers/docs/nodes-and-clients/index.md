@@ -1,6 +1,6 @@
 ---
 title: Nodes und Clients
-description: Eine Übersicht über Ethereum-Nodes und Client-Software, wie eine Node eingerichtet wird und warum Sie dies tun sollten.
+description: "Eine Übersicht über Ethereum-Nodes und Client-Software, wie eine Node eingerichtet wird und warum Sie dies tun sollten."
 lang: de
 sidebarDepth: 2
 ---

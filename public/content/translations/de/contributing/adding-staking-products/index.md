@@ -1,6 +1,6 @@
 ---
-title: Staking-Produkte oder -Services hinzufügen
-description: Richtlinien, die wir beim Hinzufügen von Staking-Produkten oder -Dienstleistungen zu ethereum.org anwenden
+title: "Staking-Produkte oder -Services hinzufügen"
+description: "Richtlinien, die wir beim Hinzufügen von Staking-Produkten oder -Dienstleistungen zu ethereum.org anwenden"
 lang: de
 ---
 
@@ -119,7 +119,7 @@ Für [Staking-as-a-Service-Listings](/staking/saas/) (d. h. delegierter Node-Bet
 
 #### Staking-Pool {#staking-pool}
 
-Für [Staking-Services im Pool](/Staking/pools/):
+Für [Staking-Services im Pool](/staking/pools/):
 
 **Wie hoch ist die Mindest-ETH, die für einen Einsatz erforderlich ist?**
 

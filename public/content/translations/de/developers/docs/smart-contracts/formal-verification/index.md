@@ -1,6 +1,6 @@
 ---
 title: Formale Verifizierung von Smart Contracts
-description: Ein Überblick über die formale Verifizierung von Ethereum-Smart-Contracts
+description: "Ein Überblick über die formale Verifizierung von Ethereum-Smart-Contracts"
 lang: de
 ---
 

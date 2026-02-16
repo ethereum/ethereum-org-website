@@ -1,6 +1,6 @@
 ---
 title: Einleitung zu Ethereum
-description: Die Einführung eines dApp Entwicklers in die Kernkonzepte von Ethereum.
+description: "Die Einführung eines dApp Entwicklers in die Kernkonzepte von Ethereum."
 lang: de
 ---
 

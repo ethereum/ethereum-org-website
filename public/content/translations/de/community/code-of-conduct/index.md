@@ -1,6 +1,6 @@
 ---
 title: Verhaltenskodex
-description: Die grundlegenden Standards, die wir für alle Bereiche von ethereum.org anstreben.
+description: "Die grundlegenden Standards, die wir für alle Bereiche von ethereum.org anstreben."
 lang: de
 ---
 

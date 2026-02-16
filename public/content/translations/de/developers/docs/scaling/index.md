@@ -1,6 +1,6 @@
 ---
 title: Skalierung
-description: Eine Einführung in die verschiedenen Skalierungsoptionen, die derzeit von der Ethereum Community entwickelt werden.
+description: "Eine Einführung in die verschiedenen Skalierungsoptionen, die derzeit von der Ethereum Community entwickelt werden."
 lang: de
 sidebarDepth: 3
 ---
@@ -19,7 +19,7 @@ Konzeptionell unterteilen wir die Skalierung zunächst in On-Chain-Skalierung un
 
 Sie sollten über ein gutes Verständnis aller grundlegenden Themen verfügen. Die Umsetzung von Skalierungslösungen ist weit fortgeschritten, da die Technologie weniger erprobt ist und weiter erforscht und entwickelt wird.
 
-## On-Chain Skalierung {#on-chain-scaling}
+## On-Chain Skalierung {#onchain-scaling}
 
 Diese Methode der Skalierung erfordert Änderungen am Ethereum-Protokoll (Layer 1 [Mainnet](/glossary/#mainnet)). Dem Sharding gilt derzeit das Hauptaugenmerk für diese Skalierungsmethode.
 
@@ -29,7 +29,7 @@ Unter Sharding versteht man die horizontale Aufteilung einer Datenbank, um die L
 
 Erfahren Sie mehr über [Sharding](/roadmap/danksharding/).
 
-## Off-Chain-Skalierung {#off-chain-scaling}
+## Off-Chain-Skalierung {#offchain-scaling}
 
 Off-Chain-Lösungen werden getrennt vom Layer 1 Mainnet implementiert - sie erfordern keine Änderungen am bestehenden Ethereum-Protokoll. Einige Lösungen, die als „Layer-2"-Lösungen bekannt sind, leiten ihre Sicherheit direkt vom Layer-1 Ethereum Konsens her, wie zum Beispiel [optimistische Rollups](/developers/docs/scaling/optimistic-rollups/),[Zero-Knowledge Rollups](/developers/docs/scaling/zk-rollups/) oder [State Channels](/developers/docs/scaling/state-channels/). Andere Lösungen beinhalten die Schaffung neuer Ketten in verschiedenen Formen, die ihre Sicherheit getrennt vom Mainnet beziehen, wie [Sidechains](#sidechains) oder [Plasma](#plasma) Ketten. Diese Lösungen kommunizieren mit dem Mainnet, leiten aber ihre Sicherheit anders ab, um eine Vielzahl von Zielen zu erreichen.
 
@@ -63,7 +63,7 @@ Es gibt zwei Arten von Rollups mit verschiedenen Sicherheitsmodellen:
 
 Zustandskanäle nutzen Multisig-Verträge, um den Teilnehmenden die Möglichkeit zu geben, schnell und frei Transaktionen außerhalb der Kette durchzuführen und diese dann über das Mainnet abzurechnen. Dadurch werden Netzwerküberlastungen, Gebühren und Verzögerungen auf ein Minimum reduziert. Die beiden Arten von Kanälen sind derzeit Zustandskanäle und Zahlungskanäle.
 
-Erfahren Sie mehr über [Zustandskanäle](/Developers/Docs/Scaling/State-Channels/).
+Erfahren Sie mehr über [Zustandskanäle](/developers/docs/scaling/state-channels/).
 
 ### Seitenketten {#sidechains}
 
@@ -75,7 +75,7 @@ Erfahren Sie mehr über [Seitenketten](/developers/docs/scaling/sidechains/).
 
 Eine Plasmakette ist eine separate Blockchain, die an der Ethereum-Blockchain verankert ist und Betrugsnachweise (wie [Optimistische Rollups](/developers/docs/scaling/optimistic-rollups/)) verwendet, um Streitigkeiten zu schlichten.
 
-Erfahren Sie mehr über [Plasma](/Developers/Docs/Scaling/Plasma/).
+Erfahren Sie mehr über [Plasma](/developers/docs/scaling/plasma/).
 
 ### Validium {#validium}
 

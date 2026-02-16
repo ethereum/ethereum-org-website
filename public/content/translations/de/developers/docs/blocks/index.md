@@ -1,6 +1,6 @@
 ---
-title: Blöcke
-description: Eine Übersicht über Blöcke in der Ethereum Blockchain – ihre Datenstruktur, warum sie benötigt werden und wie sie erstellt werden.
+title: "Blöcke"
+description: "Eine Übersicht über Blöcke in der Ethereum Blockchain – ihre Datenstruktur, warum sie benötigt werden und wie sie erstellt werden."
 lang: de
 ---
 
@@ -24,7 +24,7 @@ Um die Transaktionsgeschichte zu erhalten, sind Blöcke streng sortiert (jeder n
 
 Sobald ein Block von einem zufällig ausgewählten Validator im Netzwerk erstellt wird, wird er im gesamten Netzwerk verbreitet. Alle Knoten fügen diesen Block dann am Ende ihrer Blockchain hinzu und ein neuer Validator wird ausgewählt, um den nächsten Block zu erstellen. Der genaue Prozess der Blockzusammenstellung und Festlegung/Konsensbildung ist zurzeit in Ethereums Proof-of-Stake-Protokoll festgelegt.
 
-## Proof-of-Stake-Protokoll {#proof-of-work-protocol}
+## Proof-of-Stake-Protokoll {#proof-of-stake-protocol}
 
 Proof-of-Stake bedeutet Folgendes:
 

@@ -1,5 +1,5 @@
 ---
-title: Gas und Gebühren
+title: "Gas und Gebühren"
 description:
 lang: de
 ---

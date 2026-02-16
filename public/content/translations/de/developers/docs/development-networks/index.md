@@ -1,6 +1,6 @@
 ---
 title: Entwicklungsnetzwerke
-description: Eine Übersicht über Entwicklungsnetzwerke und die zur Erstellung von Ethereum-Anwendungen verfügbaren Tools
+description: "Eine Übersicht über Entwicklungsnetzwerke und die zur Erstellung von Ethereum-Anwendungen verfügbaren Tools"
 lang: de
 ---
 
