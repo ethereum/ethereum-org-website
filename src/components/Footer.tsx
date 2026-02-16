@@ -62,7 +62,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("what-is-ethereum"),
         },
         {
-          href: "/eth/",
+          href: "/what-is-ether/",
           text: t("what-is-ether"),
         },
         {
@@ -185,7 +185,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("nav-docs-design-label"),
         },
         {
-          href: "/enterprise/",
+          href: "https://institutions.ethereum.org/",
           text: t("enterprise-mainnet"),
         },
         {
