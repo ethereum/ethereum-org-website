@@ -2,7 +2,7 @@
 title: "Waffleライブラリを使用したシンプルなスマートコントラクトのテスト"
 description: "初心者用チュートリアル"
 author: Ewa Kowalska
-tags: [ "スマート契約", "Solidity", "Waffle", "テスト" ]
+tags: ["smart contracts", "solidity", "waffle", "testing"]
 skill: beginner
 lang: ja
 published: 2021-02-26

@@ -2,7 +2,7 @@
 title: "Waffle: 動的モッキングとコントラクト呼び出しのテスト"
 description: "動的モッキングとコントラクト呼び出しのテストのためのWaffle上級チュートリアル"
 author: "Daniel Izdebski"
-tags: [ "waffle", "スマート契約", "Solidity", "テスト", "モックアップ作成" ]
+tags: ["waffle", "smart contracts", "solidity", "testing", "mocking"]
 skill: intermediate
 lang: ja
 published: 2020-11-14

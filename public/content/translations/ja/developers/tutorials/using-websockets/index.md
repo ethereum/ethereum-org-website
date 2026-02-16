@@ -3,7 +3,7 @@ title: "WebSocketを利用する"
 description: "WebSocketsとAlchemyを使って、JSON-RPCリクエストを作成し、イベントを講読するためのガイド"
 author: "Elan Halpern"
 lang: ja
-tags: [ "Alchemy", "WebSockets", "クエリ", "JavaScript" ]
+tags: ["alchemy", "websockets", "querying", "javascript"]
 skill: beginner
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3

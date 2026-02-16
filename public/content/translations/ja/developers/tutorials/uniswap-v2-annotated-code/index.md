@@ -2,7 +2,7 @@
 title: "Uniswap-v2コントラクトの詳細解説"
 description: "Uniswap-v2コントラクトはどのように機能するのか? なぜそのように記述されているのか?"
 author: Ori Pomerantz
-tags: [ "Solidity" ]
+tags: ["solidity"]
 skill: intermediate
 published: 2021-05-01
 lang: ja

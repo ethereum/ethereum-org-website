@@ -2,7 +2,7 @@
 title: "スマートコントラクトに対するセキュリティ・ガイドライン"
 description: "Dapp開発時に参照すべきセキュリティ・ガイドラインのチェックリスト"
 author: "Trailofbits"
-tags: [ "Solidity", "スマート契約", "セキュリティ" ]
+tags: ["solidity", "smart contracts", "security"]
 skill: intermediate
 lang: ja
 published: 2020-09-06

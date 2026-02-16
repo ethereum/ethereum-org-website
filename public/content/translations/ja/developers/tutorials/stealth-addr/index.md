@@ -2,7 +2,7 @@
 title: "ステルスアドレスの使用"
 description: "ステルスアドレスを使用すると、ユーザーは匿名で資産を送金できます。 この記事を読むと、ステルスアドレスとは何か、またその仕組みを説明し、匿名性を保つ方法でステルスアドレスを使用する方法を理解し、ステルスアドレスを使用するウェブベースのアプリケーションを作成できるようになります。"
 author: Ori Pomerantz
-tags: [ "ステルスアドレス", "プライバシー", "暗号技術", "rust", "wasm" ]
+tags: ["Stealth address", "privacy", "cryptography", "rust", "wasm"]
 skill: intermediate
 published: 2025-11-30
 lang: ja
