@@ -2,7 +2,7 @@
 title: "Merkle-Beweise für Offline Datenintegrität"
 description: "Sicherstellung der Datenintegrität onchain für Daten, die größtenteils offchain gespeichert sind"
 author: Ori Pomerantz
-tags: [ "Speicher" ]
+tags: ["storage"]
 skill: advanced
 lang: de
 published: 2021-12-30

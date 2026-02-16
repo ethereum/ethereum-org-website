@@ -2,7 +2,7 @@
 title: "Überwachung von Geth mit InfluxDB und Grafana"
 description: "Richten Sie die Überwachung für Ihren Geth-Node mit InfluxDB und Grafana ein, um die Leistung zu verfolgen und Probleme zu identifizieren."
 author: "Mario Havel"
-tags: [ "Clients", "Nodes" ]
+tags: ["clients", "nodes"]
 skill: intermediate
 lang: de
 published: 2021-01-13

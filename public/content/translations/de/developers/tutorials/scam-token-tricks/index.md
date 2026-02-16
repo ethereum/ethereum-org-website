@@ -2,14 +2,7 @@
 title: "Einige Tricks, die von Betrugs-Tokens verwendet werden, und wie man sie erkennt"
 description: "In diesem Tutorial analysieren wir einen Betrugs-Token, um einige der Tricks zu sehen, die Betrüger anwenden, wie sie sie implementieren und wie wir sie erkennen können."
 author: Ori Pomerantz
-tags:
-  [
-    "Betrug",
-    "Solidity",
-    "Erc-20",
-    "javascript",
-    "typescript"
-  ]
+tags: ["scam", "solidity", "erc-20", "javascript", "typescript"]
 skill: intermediate
 published: 2023-09-15
 lang: de

@@ -3,13 +3,7 @@ title: Starte deine Dapp-Frontend-Entwicklung mit create-eth-app
 description: "Ein Überblick über die Verwendung und Funktionen von create-eth-app"
 author: "Markus Waas"
 tags:
-  [
-    "Frontend",
-    "javascript",
-    "ethers.js",
-    "the graph",
-    "defi"
-  ]
+  ["frontend", "javascript", "ethers.js", "the graph", "defi"]
 skill: beginner
 lang: de
 published: 2020-04-27

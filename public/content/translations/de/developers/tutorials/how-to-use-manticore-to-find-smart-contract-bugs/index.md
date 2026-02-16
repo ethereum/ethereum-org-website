@@ -4,13 +4,7 @@ description: So nutzt du Manticore, um automatisiert Fehler in Smart Contracts z
 author: Trailofbits
 lang: de
 tags:
-  [
-    "solidity",
-    "intelligente Verträge",
-    "Sicherheit",
-    "testen",
-    "Formale Verifizierung"
-  ]
+  ["solidity", "smart contracts", "security", "testing", "formal verification"]
 skill: advanced
 published: 2020-01-13
 source: Building secure contracts

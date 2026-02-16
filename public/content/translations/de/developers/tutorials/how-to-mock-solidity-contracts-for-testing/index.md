@@ -3,13 +3,7 @@ title: "So simulieren Sie Solidity Smart Contracts für Testzwecke"
 description: "Warum Sie sich beim Testen über Ihre Verträge lustig machen sollten"
 author: Markus Waas
 lang: de
-tags:
-  [
-    "solidity",
-    "intelligente Verträge",
-    "testen",
-    "mocking"
-  ]
+tags: ["solidity", "smart contracts", "testing", "mocking"]
 skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com

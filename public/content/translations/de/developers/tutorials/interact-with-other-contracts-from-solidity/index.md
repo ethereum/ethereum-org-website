@@ -2,14 +2,7 @@
 title: Mit anderen Contracts von Solidity aus interagieren
 description: Wie man einen Smart Contract von einem bestehenden Contract aus bereitstellt und mit ihm interagiert
 author: "jdourlens"
-tags:
-  [
-    "intelligente Verträge",
-    "solidity",
-    "remix",
-    "Bereitstellung",
-    "Komponierbarkeit"
-  ]
+tags: ["smart contracts", "solidity", "remix", "deploying", "composability"]
 skill: advanced
 lang: de
 published: 2020-04-05

@@ -2,7 +2,7 @@
 title: Smart-Contract-Sicherheitscheckliste
 description: Ein empfohlener Workflow zum Schreiben sicherer Smart Contracts
 author: "Trailofbits"
-tags: [ "Smart Contracts", "Sicherheit", "Solidity" ]
+tags: ["smart contracts", "security", "solidity"]
 skill: intermediate
 lang: de
 published: 2020-09-07

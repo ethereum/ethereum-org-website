@@ -2,15 +2,7 @@
 title: NFT-Minter Tutorial
 description: In diesem Tutorial erstellst du einen NFT-Minter und lernst, wie man eine Full-Stack-Dapp erstellt, indem du deinen Smart Contract mit einem React-Frontend unter Verwendung von MetaMask und Web3-Tools verbindest.
 author: "smudgil"
-tags:
-  [
-    "solidity",
-    "NFT",
-    "Alchemy",
-    "Smart Contracts",
-    "Frontend",
-    "Pinata"
-  ]
+tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata"]
 skill: intermediate
 lang: de
 published: 2021-10-06
