@@ -83,7 +83,7 @@ contract Coin {
 }
 ```
 
-Ví dụ trên sẽ cho bạn biết cú phát của hợp đồng được viết bằng Solidity là như thế nào. Để có mô tả chi tiết hơn về các hàm và biến, [xem tài liệu](https://docs.soliditylang.org/en/latest/contracts.html).
+Ví dụ trên sẽ cho bạn biết cú pháp của hợp đồng được viết bằng Solidity là như thế nào. Để có mô tả chi tiết hơn về các hàm và biến, [xem tài liệu](https://docs.soliditylang.org/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 
@@ -222,17 +222,17 @@ def endAuction():
     send(self.beneficiary, self.highestBid)
 ```
 
-Ví dụ trên sẽ cho bạn biết cú phát của hợp đồng được viết bằng Vyper là như thế nào. Để có mô tả chi tiết hơn về các hàm và biến, [xem tài liệu](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
+Ví dụ trên sẽ cho bạn biết cú pháp của hợp đồng được viết bằng Vyper là như thế nào. Để có mô tả chi tiết hơn về các hàm và biến, [xem tài liệu](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
 ## Yul và Yul+ {#yul}
 
-Nếu bạn mới tiếp cận Ethereum và chưa thực hiện bất kỳ đoạn mã nào với các ngôn ngữ lập trình hợp đồng thông minh, chúng tôi khuyên bạn nên bắt đầu với Solidity hoặc Vyper. Bạn chỉ nên tìm hiểu Yul hoặc Yu+ khi bạn đã quen thuộc với các kĩ thuật tốt nhất về bảo mật hợp đồng thông minh và các chi tiết công việc với Máy chủ ảo Ethereum.
+Nếu bạn mới tiếp cận Ethereum và chưa thực hiện bất kỳ đoạn mã nào với các ngôn ngữ lập trình hợp đồng thông minh, chúng tôi khuyên bạn nên bắt đầu với Solidity hoặc Vyper. Bạn chỉ nên tìm hiểu Yul hoặc Yul+ khi bạn đã quen thuộc với các kỹ thuật tốt nhất về bảo mật hợp đồng thông minh và các chi tiết công việc với Máy ảo Ethereum.
 
 **Yul**
 
 - Là ngôn ngữ trung gian cho Ethereum.
-- Hỗ trợ [Máy chủ ảo Ethereum (EVM)](/developers/docs/evm) và [Ewasm](https://github.com/ewasm), một WebAssembly đặc trưng của Ethereum, và được thiết kế để trở thành một mẫu số chung có thể sử dụng được của cả hai nền tảng.
-- Mục tiêu tốt cho các giai đoạn tối ưu hóa cấp cao, có thể mang lại lợi ích ngang nhau cho cả hai nền tảng Máy chủ ảo Ethereum và Ewasm.
+- Hỗ trợ [Máy ảo Ethereum (EVM)](/developers/docs/evm) và [Ewasm](https://github.com/ewasm), một WebAssembly đặc trưng của Ethereum, và được thiết kế để trở thành một mẫu số chung có thể sử dụng được của cả hai nền tảng.
+- Mục tiêu tốt cho các giai đoạn tối ưu hóa cấp cao, có thể mang lại lợi ích ngang nhau cho cả hai nền tảng Máy ảo Ethereum và Ewasm.
 
 **Yul+**
 
@@ -330,7 +330,7 @@ Dưới đây là một vài gợi ý mà bạn có thể cân nhắc nếu bạ
 ### Thế mạnh của Yul và Yul+? {#yul-advantages}
 
 - Ngôn ngữ cấp thấp đơn giản.
-- Cho phép tiếp cận gần hơn đến phần gốc máy chủ ảo Ethereum, giúp tối ưu hóa việc sử dụng gas trong các hợp động của bạn.
+- Cho phép tiếp cận gần hơn đến phần gốc Máy ảo Ethereum, giúp tối ưu hóa việc sử dụng gas trong các hợp đồng của bạn.
 
 ## So sánh các ngôn ngữ {#language-comparisons}
 

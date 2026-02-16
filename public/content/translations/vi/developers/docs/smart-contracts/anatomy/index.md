@@ -16,7 +16,7 @@ Bất kỳ dữ liệu hợp đồng nào cũng phải được gán cho một v
 
 ### Lưu trữ {#storage}
 
-Storage là nơi lưu trữu các dữ liệu được truy không thường xuyên, ít khi được sửa đổi và được đại diện bởi các biến trạng thái. Các giá trị này được lưu trữ vĩnh viễn trên chuỗi khối. Bạn cần khai báo kiểu dữ liệu để hợp đồng có thể theo dõi được dung lượng lưu trữ trên chuỗi khối mà nó cần khi biên dịch.
+Storage là nơi lưu trữ các dữ liệu truy cập không thường xuyên, ít khi được sửa đổi và được đại diện bởi các biến trạng thái. Các giá trị này được lưu trữ vĩnh viễn trên chuỗi khối. Bạn cần khai báo kiểu dữ liệu để hợp đồng có thể theo dõi được dung lượng lưu trữ trên chuỗi khối mà nó cần khi biên dịch.
 
 ```solidity
 // Ví dụ về Solidity
