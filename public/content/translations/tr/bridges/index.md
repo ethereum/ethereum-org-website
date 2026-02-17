@@ -125,7 +125,7 @@ Kullanıcının varlıkları:
 
 - akıllı sözleşmede hata varsa
 - kullanıcı hata yaparsa
-- altında yatak blockchain hacklenirse
+- altta yatan blokzincir hacklenirse
 - köprü operatörlerinin güvenilir bir köprüde kötü niyetli olması
 - köprü hacklenirse risk altındadır
 

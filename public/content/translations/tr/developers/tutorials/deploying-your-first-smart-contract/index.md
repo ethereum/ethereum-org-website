@@ -2,7 +2,7 @@
 title: "İlk akıllı sözleşmeni dağıtma"
 description: "Bir Ethereum test ağında ilk akıllı sözleşmeni dağıtmaya giriş"
 author: "jdourlens"
-tags: [ "akıllı kontratlar", "remix", "katılık", "dağıtma" ]
+tags: [ "akıllı kontratlar", "remix", "solidity", "dağıtma" ]
 skill: beginner
 lang: tr
 published: 2020-04-03

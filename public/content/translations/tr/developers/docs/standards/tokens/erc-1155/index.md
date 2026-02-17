@@ -20,12 +20,12 @@ Bu sayfayı daha iyi anlamak için öncelikle [jeton standartları](/developers/
 
 ## ERC-1155 Fonksiyonları ve Özellikleri: {#body}
 
-- [Toplu Aktarım](#batch_transfers): Tek bir çağrıda birden çok varlığı aktarın.
-- [Toplu Bakiye](#batch_balance): Tek bir çağrıda birden fazla varlığın bakiyesini alın.
-- [Toplu Onay](#batch_approval): Bir adrese tüm jetonları onaylayın.
-- [Kancalar](#receive_hook): Jeton alma kancası.
-- [NFT Desteği](#nft_support): Arz yalnızca 1 ise bunu NFT olarak kabul edin.
-- [Güvenli Aktarım Kuralları](#safe_transfer_rule): Güvenli aktarım için kurallar dizisi.
+- [Toplu Aktarım](#batch-transfers): Tek bir çağrıda birden çok varlığı aktarın.
+- [Toplu Bakiye](#batch-balance): Tek bir çağrıda birden fazla varlığın bakiyesini alın.
+- [Toplu Onay](#batch-approval): Bir adrese tüm jetonları onaylayın.
+- [Kancalar](#receive-hook): Jeton alma kancası.
+- [NFT Desteği](#nft-support): Arz yalnızca 1 ise bunu NFT olarak kabul edin.
+- [Güvenli Aktarım Kuralları](#safe-transfer-rule): Güvenli aktarım için kurallar dizisi.
 
 ### Toplu Aktarımlar {#batch-transfers}
 

@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: tr
 tags:
   [
-    "katılık",
+    "solidity",
     "akıllı kontratlar",
     "güvenlik",
     "token'lar"

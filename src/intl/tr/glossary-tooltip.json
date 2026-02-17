@@ -134,7 +134,7 @@
   "smart-contract-term": "Akıllı sözleşme",
   "smart-contract-definition": "Akıllı sözleşme, tıpkı kendi kendini uygulayan dijital bir sözleşme gibi blokzincir üzerinde anlaşmaları otomatik olarak yürüten bir programdır. <a href=\"/smart-contracts/\">Akıllı sözleşmelere giriş</a>.",
   "stablecoin-term": "Sabit para",
-  "stablecoin-definition": "Sabir para, fiyat dalgalanmasını en aza indirmek için genellikle bir para birimine veya emtiaya (örneğin ABD doları) sabitlenmiş, istikrarlı bir değere sahip olmak üzere tasarlanmış bir kripto para birimi türüdür. <a href=\"/stablecoins/\">Sabit paralar hakkında daha fazla bilgi</a>.",
+  "stablecoin-definition": "Sabit para, fiyat dalgalanmasını en aza indirmek için genellikle bir para birimine veya emtiaya (örneğin ABD doları) sabitlenmiş, istikrarlı bir değere sahip olmak üzere tasarlanmış bir kripto para birimi türüdür. <a href=\"/stablecoins/\">Sabit paralar hakkında daha fazla bilgi</a>.",
   "staking-term": "Hisseleme",
   "staking-definition": "Doğrulayıcı olmak ve <a href=\"/glossary/#network\">ağı</a> güvence altına almak için bir miktar <a href=\"/glossary/#ether\">ether</a> (hisseniz) yatırmak. Doğrulayıcı, <a href=\"/glossary/#transaction\">işlemleri</a> kontrol eder ve <a href=\"/glossary/#pos\">hisse ispatı</a> altında <a href=\"/glossary/#block\">bloklar</a> önerir. Hisseleme, ağın çıkarlarına en uygun şekilde hareket etmeniz için size ekonomik bir teşvik sağlar. <a href=\"/glossary/#validator\">Doğrulayıcı</a> görevlerinizi yerine getirdiğiniz için ödüller alırsınız, ancak bunu yapmazsanız değişen miktarlarda ETH kaybedersiniz. <a href=\"/staking/\">Ethereum hisselemesi hakkında daha fazla bilgi</a>.",
   "staking-pool-term": "Stake havuzu",

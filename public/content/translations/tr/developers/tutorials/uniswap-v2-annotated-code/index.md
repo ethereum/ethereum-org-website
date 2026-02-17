@@ -2,7 +2,7 @@
 title: "Uniswap-v2 Contract Walk-Through"
 description: How does the Uniswap-v2 contract work? Why is it written that way?
 author: Ori Pomerantz
-tags: [ "katılık" ]
+tags: [ "solidity" ]
 skill: intermediate
 published: 2021-05-01
 lang: tr

@@ -5,7 +5,7 @@ author: Ewa Kowalska
 tags:
   [
     "akıllı kontratlar",
-    "katılık",
+    "solidity",
     "Waffle",
     "test etmek"
   ]

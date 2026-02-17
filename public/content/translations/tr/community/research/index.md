@@ -10,17 +10,17 @@ Ethereum'un en önemli güçlerinden biri, aktif bir araştırma ve mühendislik
 
 ## Ethereum araştırmaları nasıl işler? {#how-ethereum-research-works}
 
-Ethereum araştırması genellikle [Merkeziyetsiz Bilimin (DeSci)] prensiplerini destekler şekilde açık ve şeffaftır (https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). Kültürü; örneğin çalıştırılabilir defterler aracılığıyla araştırma araçlarını ve çıktılarını mümkün olduğunca açık ve interaktif hale getimeyi hedefler. Ethereum araştırmaları, yeni fikirlerin geleneksel yayınlarda olduğu gibi tekrar tekrar yapılan incelemelerden sonra toplulukla paylaşılmasından ziyade [ethresear.ch](https://ethresear.ch/) gibi forumlarda açık olarak tartışılmasıyla hızlı bir şekilde ilerler.
+Ethereum araştırması genellikle [Merkeziyetsiz Bilimin (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science) prensiplerini destekler şekilde açık ve şeffaftır. Kültürü; örneğin çalıştırılabilir defterler aracılığıyla araştırma araçlarını ve çıktılarını mümkün olduğunca açık ve interaktif hale getimeyi hedefler. Ethereum araştırmaları, yeni fikirlerin geleneksel yayınlarda olduğu gibi tekrar tekrar yapılan incelemelerden sonra toplulukla paylaşılmasından ziyade [ethresear.ch](https://ethresear.ch/) gibi forumlarda açık olarak tartışılmasıyla hızlı bir şekilde ilerler.
 
 ## Genel araştırma kaynakları {#general-research-resources}
 
 Spesifik konudan bağımsız olarak, [ethresear.ch](https://ethresear.ch) ve [Eth R&D discord kanalında](https://discord.gg/qGpsxSA) Ethereum araştırmalarıyla ilgili pek çok bilgi mevcuttur. Bunlar, Ethereum araştırmacılarının en güncel fikirleri ve geliştirme fırsatlarını tartıştığı birincil platformlardır.
 
-[DelphiDigital] tarafından Mayıs 2022'de yayınlanan bu rapor (https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) Ethereum yol haritasıyla ilgili iyi bir özet sunuyor.
+[DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) tarafından Mayıs 2022'de yayınlanan bu rapor Ethereum yol haritasıyla ilgili iyi bir özet sunuyor.
 
 ## Fon Kaynakları {#sources-of-funding}
 
-Ethereum araştırmalarında yer alabilir ve bundan gelir elde edebilirsiniz! Mesela [Ethereum Foundation](/foundation/) yakın zamanda bir [Akademik Hibe Fonlama turu] başlattı. (https://esp.ethereum.foundation/academic-grants). [Ethereum hibeleri sayfasında](/community/grants/) aktif ve yakında ortaya çıkacak fonlama fırsatlarıyla ilgili bilgiler bulabilirsiniz.
+Ethereum araştırmalarında yer alabilir ve bundan gelir elde edebilirsiniz! Mesela [Ethereum Foundation](/foundation/) yakın zamanda bir [Akademik Hibe Fonlama turu](https://esp.ethereum.foundation/academic-grants) başlattı.. [Ethereum hibeleri sayfasında](/community/grants/) aktif ve yakında ortaya çıkacak fonlama fırsatlarıyla ilgili bilgiler bulabilirsiniz.
 
 ## Protokol araştırması {#protocol-research}
 

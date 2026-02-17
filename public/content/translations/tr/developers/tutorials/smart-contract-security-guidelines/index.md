@@ -2,7 +2,7 @@
 title: "Akıllı sözleşme güvenlik yönergeleri"
 description: "Dapp'inizi oluştururken göz önünde bulundurmanız gereken güvenlik yönergelerinin bir kontrol listesi"
 author: "Trailofbits"
-tags: [ "katılık", "akıllı kontratlar", "güvenlik" ]
+tags: [ "solidity", "akıllı kontratlar", "güvenlik" ]
 skill: intermediate
 lang: tr
 published: 2020-09-06

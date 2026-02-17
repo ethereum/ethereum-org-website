@@ -4,7 +4,7 @@ description: "Bu eğitimde, bir NFT minter oluşturacak ve akıllı sözleşmeni
 author: "smudgil"
 tags:
   [
-    "katılık",
+    "solidity",
     "NFT",
     "alchemy",
     "akıllı kontratlar",

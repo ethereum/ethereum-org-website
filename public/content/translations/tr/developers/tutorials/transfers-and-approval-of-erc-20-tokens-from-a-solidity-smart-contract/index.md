@@ -2,7 +2,7 @@
 title: "Bir Solidity akıllı sözleşmesinden ERC-20 jetonlarının transferleri ve onaylanması"
 description: "Solidity kullanarak ERC-20 jeton transferlerini ve onaylarını yöneten bir DEX akıllı sözleşmesi oluşturun."
 author: "jdourlens"
-tags: [ "akıllı kontratlar", "token'lar", "katılık", "erc-20" ]
+tags: [ "akıllı kontratlar", "token'lar", "solidity", "erc-20" ]
 skill: intermediate
 lang: tr
 published: 2020-04-07

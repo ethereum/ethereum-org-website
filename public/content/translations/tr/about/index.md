@@ -55,7 +55,7 @@ Yeni kullanıcıların gerek Ethereum gerekse ana konseptleri ile daha aşina ol
 - topluluk tarafından oluşturulan kaynakları sergilemek
 - Ethereum eğitimini olabildiğince çok dile ulaştırmak
 
-Bu misyona ulaşmak için ekibimiz, ethererum.org'da iki ana hedefe odaklanmıştır:
+Bu misyona ulaşmak için ekibimiz, ethereum.org'da iki ana hedefe odaklanmıştır:
 
 ### 1. ethereum.org ziyaretçileri için kullanıcı deneyimini geliştirme {#visitors}
 

@@ -2,7 +2,7 @@
 title: "ERC-20 jeton akıllı sözleşmesini anlamak"
 description: "Eksiksiz bir Solidity akıllı sözleşme örneği ve açıklamasıyla ERC-20 jeton standardının nasıl uygulanacağını öğrenin."
 author: "jdourlens"
-tags: [ "akıllı kontratlar", "token'lar", "katılık", "erc-20" ]
+tags: [ "akıllı kontratlar", "token'lar", "solidity", "erc-20" ]
 skill: beginner
 lang: tr
 published: 2020-04-05

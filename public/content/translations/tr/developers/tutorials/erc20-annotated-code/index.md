@@ -3,7 +3,7 @@ title: "ERC-20 Sözleşmesine Genel Bakış"
 description: "OpenZeppelin ERC-20 sözleşmesinde ne var ve neden var?"
 author: Ori Pomerantz
 lang: tr
-tags: [ "katılık", "erc-20" ]
+tags: [ "solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---

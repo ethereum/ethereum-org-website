@@ -5,7 +5,7 @@ author: Vladislav Starostenko
 tags:
   - "waffle"
   - "akıllı sözleşmeler"
-  - "katılık"
+  - "solidity"
   - "test"
   - "erc-20"
 skill: intermediate

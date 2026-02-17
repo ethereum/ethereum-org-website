@@ -4,7 +4,7 @@ description: "Ethereum'da basit bir akıllı sözleşme yazma ve dağıtma üzer
 author: "nstrike2"
 tags:
   [
-    "katılık",
+    "solidity",
     "hardhat",
     "alchemy",
     "akıllı kontratlar",

@@ -2,7 +2,7 @@
 title: "Optimism standart köprü sözleşmesine genel bakış"
 description: "Optimism için standart köprü nasıl çalışır? Neden bu şekilde çalışıyor?"
 author: Ori Pomerantz
-tags: [ "katılık", "köprü", "katman 2" ]
+tags: [ "solidity", "köprü", "katman 2" ]
 skill: intermediate
 published: 2022-03-30
 lang: tr

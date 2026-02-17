@@ -8,7 +8,7 @@ lang: tr
 
 Kullanıcıların kendilerinden emin bir tarzda Ethereum'da yön bulabilmeleri için cüzdanların özellik açısından zengin manzaralarını kapsayan, çeşitli cüzdanları gösterdiğimizden emin olmak isteriz.
 
-Herkes, ethererum.org'a bir cüzdan önermekte özgürdür. Gözden kaçırdığımız bir cüzdan varsa lütfen bildirin!
+Herkes, ethereum.org'a bir cüzdan önermekte özgürdür. Gözden kaçırdığımız bir cüzdan varsa lütfen bildirin!
 
 Cüzdanlar şu anda aşağıdakilerde listeleniyor:
 

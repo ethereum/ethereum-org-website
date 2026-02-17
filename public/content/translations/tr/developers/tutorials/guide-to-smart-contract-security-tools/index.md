@@ -3,7 +3,7 @@ title: "Akıllı sözleşme güvenlik araçlarına yönelik bir kılavuz"
 description: "Üç farklı test ve program analizi tekniğine genel bakış"
 author: "Trailofbits"
 lang: tr
-tags: [ "katılık", "akıllı kontratlar", "güvenlik" ]
+tags: [ "solidity", "akıllı kontratlar", "güvenlik" ]
 skill: intermediate
 published: 2020-09-07
 source: Building secure contracts

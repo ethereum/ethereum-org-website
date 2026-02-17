@@ -5,7 +5,7 @@ author: "jdourlens"
 tags:
   [
     "akıllı kontratlar",
-    "katılık",
+    "solidity",
     "remix",
     "dağıtma",
     "birleştirilebilirlik"

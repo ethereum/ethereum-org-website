@@ -10,7 +10,7 @@ lang: tr
 <ListenToPlayer slug="/web3/" />
 </div>
 
-Merkezileştirme, milyarlarca insanın World Wide Web'e katılmasına yardımcı oldu ve üzerinde yaşadığı istikrarlı, sağlam altyapıyı yarattı. Aynı zamanda bir avuç merkezi kuruluş World Wibe Web'in büyük bölümünde neye izin verilip verilmemesi gerektiğine tek taraflı olarak karar verebilmelerini sağlayan bir güce sahip oldu.
+Merkezileştirme, milyarlarca insanın World Wide Web'e katılmasına yardımcı oldu ve üzerinde yaşadığı istikrarlı, sağlam altyapıyı yarattı. Aynı zamanda bir avuç merkezi kuruluş World Wide Web'in büyük bölümünde neye izin verilip verilmemesi gerektiğine tek taraflı olarak karar verebilmelerini sağlayan bir güce sahip oldu.
 
 Web3 bu ikileme bir cevaptır. Büyük teknoloji şirketleri tarafından tekelleştirilen bir Web yerine, Web3 merkeziyetsizliği benimsiyor ve kullanıcıları tarafından inşa ediliyor, işletiliyor ve sahipleniliyor. Web3, gücü şirketlerden ziyade bireylerin eline verir.
 Web3 hakkında konuşmadan önce buraya nasıl geldiğimizi keşfedelim.

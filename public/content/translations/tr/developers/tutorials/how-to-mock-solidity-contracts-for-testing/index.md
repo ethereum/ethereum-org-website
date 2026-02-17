@@ -5,7 +5,7 @@ author: Markus Waas
 lang: tr
 tags:
   [
-    "katılık",
+    "solidity",
     "akıllı kontratlar",
     "test etmek",
     "taklit etme"

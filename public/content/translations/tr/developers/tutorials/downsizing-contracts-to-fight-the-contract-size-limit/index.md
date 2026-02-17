@@ -3,7 +3,7 @@ title: "Sözleşme boyutu sınırıyla mücadele etmek için sözleşmelerin kü
 description: "Akıllı sözleşmelerinizin çok fazla büyümesini önlemek için ne yapabilirsiniz?"
 author: Markus Waas
 lang: tr
-tags: [ "katılık", "akıllı kontratlar", "depolama" ]
+tags: [ "solidity", "akıllı kontratlar", "depolama" ]
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com

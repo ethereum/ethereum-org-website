@@ -6,7 +6,7 @@ tags:
   [
     "waffle",
     "akıllı kontratlar",
-    "katılık",
+    "solidity",
     "test etmek",
     "taklit etme"
   ]
