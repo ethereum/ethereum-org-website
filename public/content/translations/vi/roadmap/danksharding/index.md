@@ -17,7 +17,7 @@ summaryPoints:
 
 Tiền phân đoạn thế hệ mới (Proto-Danksharding), còn được gọi là [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), là một cách để các [rollup](/layer-2/#rollups) thêm dữ liệu rẻ hơn vào các khối. Cái tên (Proto-Danksharding) đến từ người đề xuất ý tưởng: Protolambda và Dankrad Feist. Trong lịch sử, các rollup bị giới hạn về mức độ có thể làm cho các giao dịch của người dùng rẻ hơn bởi thực tế là chúng đăng các giao dịch của mình trong `CALLDATA`.
 
-Việc này rất đắt đỏ vì quá trình này được thực hiện bởi tất cả nút xác thực Ethereum và trực tiếp nằm trên chuỗi vĩnh viễn, mặc dù Rollups chỉ cần dữ liệu một cách tạm thời. Tiền phân đoạn thế hệ mới giới thiệu dữ liệu Blob có thể gửi và nối với khối. Những dữ liệu Blob này không thể truy cập từ máy chủ ảo Ethereum và được tự động xóa đi sau một quãng thời gian (Đặt khoảng 4096 chu kỳ ở thời điểm bài viết này, khoảng 18 ngày). Điều này có nghĩa rằng Rollups có thể gửi dữ liệu một cách rẻ hơn và giúp người dùng cuối tiết kiệm nhờ phí giao dịch rẻ hơn.
+Việc này rất đắt đỏ vì quá trình này được thực hiện bởi tất cả nút xác thực Ethereum và trực tiếp nằm trên chuỗi vĩnh viễn, mặc dù Rollups chỉ cần dữ liệu một cách tạm thời. Tiền phân đoạn thế hệ mới giới thiệu dữ liệu Blob có thể gửi và nối với khối. Những dữ liệu Blob này không thể truy cập từ máy ảo Ethereum và được tự động xóa đi sau một quãng thời gian (Đặt khoảng 4096 chu kỳ ở thời điểm bài viết này, khoảng 18 ngày). Điều này có nghĩa rằng Rollups có thể gửi dữ liệu một cách rẻ hơn và giúp người dùng cuối tiết kiệm nhờ phí giao dịch rẻ hơn.
 
 <ExpandableCard title="Tại sao các blob giúp rollup rẻ hơn?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 

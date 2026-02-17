@@ -1,10 +1,10 @@
 ---
-title: "Máy chủ Ảo Ethereum"
-description: "Một bài giới thiệu về máy chủ ảo Ethereum và cách nó liên quan đến trạng thái, giao dịch và hợp đồng thông minh."
+title: "Máy Ảo Ethereum"
+description: "Một bài giới thiệu về máy ảo Ethereum và cách nó liên quan đến trạng thái, giao dịch và hợp đồng thông minh."
 lang: vi
 ---
 
-Máy chủ ảo Ethereum là một môi trường ảo phi tập trung, thực thi mã một cách nhất quán và an toàn trên tất cả các nút của Ethereum. Các nút chạy EVM để thực thi các hợp đồng thông minh, sử dụng "[gas](/developers/docs/gas/)" để đo lường nỗ lực tính toán cần thiết cho các [thao tác](/developers/docs/evm/opcodes/), đảm bảo phân bổ tài nguyên hiệu quả và an ninh mạng.
+Máy ảo Ethereum là một môi trường ảo phi tập trung, thực thi mã một cách nhất quán và an toàn trên tất cả các nút của Ethereum. Các nút chạy EVM để thực thi các hợp đồng thông minh, sử dụng "[gas](/developers/docs/gas/)" để đo lường nỗ lực tính toán cần thiết cho các [thao tác](/developers/docs/evm/opcodes/), đảm bảo phân bổ tài nguyên hiệu quả và an ninh mạng.
 
 ## Điều kiện tiên quyết {#prerequisites}
 

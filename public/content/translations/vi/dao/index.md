@@ -1,6 +1,6 @@
 ---
 title: "DAO là gì?"
-metaTitle: "DAO là gì? | Tổ chức ẩn danh phi tập trung"
+metaTitle: "DAO là gì? | Tổ chức tự trị phi tập trung"
 description: "Tổng quan về DAO trên Ethereum"
 lang: vi
 template: use-cases

@@ -1094,7 +1094,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 ### eth_estimateGas {#eth_estimategas}
 
-Tạo và trả về một ước tính về lượng gas cần thiết để cho phép giao dịch hoàn tất. Giao dịch sẽ không được thêm vào chuỗi khối. Lưu ý rằng ước tính có thể lớn hơn đáng kể so với lượng gas thực sự được sử dụng bởi giao dịch, vì nhiều lý do bao gồm cơ chế Máy chủ ảo Ethereum và hiệu suất nút.
+Tạo và trả về một ước tính về lượng gas cần thiết để cho phép giao dịch hoàn tất. Giao dịch sẽ không được thêm vào chuỗi khối. Lưu ý rằng ước tính có thể lớn hơn đáng kể so với lượng gas thực sự được sử dụng bởi giao dịch, vì nhiều lý do bao gồm cơ chế Máy ảo Ethereum và hiệu suất nút.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
   Thử điểm cuối trong sân chơi
@@ -1794,7 +1794,7 @@ web3.fromWei("0x1639e49bba16280000", "ether")
 
 Bây giờ có một số ether trên chuỗi phát triển riêng của chúng tôi, chúng tôi có thể triển khai hợp đồng. Bước đầu tiên là biên dịch hợp đồng Multiply7 thành mã byte có thể được gửi đến EVM. Để cài đặt solc, trình biên dịch Solidity, hãy làm theo [tài liệu tham khảo Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Bạn có thể muốn sử dụng bản phát hành `solc` cũ hơn để khớp với [phiên bản trình biên dịch được sử dụng cho ví dụ của chúng tôi](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
 
-Bước tiếp theo là biên dịch hợp đồng Multiply7 thành mã byte có thể được gửi đến Máy chủ ảo Ethereum.
+Bước tiếp theo là biên dịch hợp đồng Multiply7 thành mã byte có thể được gửi đến Máy ảo Ethereum.
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -1818,7 +1818,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-Giao dịch được chấp nhận bởi nút và một hàm băm giao dịch được trả về. Hàm băm này có thể được sử dụng để theo dõi giao dịch. Bước tiếp theo là xác định địa chỉ nơi hợp đồng của chúng ta được triển khai. Mỗi giao dịch được thực thi sẽ tạo ra một biên nhận. Biên nhận này chứa nhiều thông tin khác nhau về giao dịch, chẳng hạn như giao dịch được bao gồm trong khối nào và Máy chủ ảo Ethereum đã sử dụng bao nhiêu gas. Nếu một giao dịch
+Giao dịch được chấp nhận bởi nút và một hàm băm giao dịch được trả về. Hàm băm này có thể được sử dụng để theo dõi giao dịch. Bước tiếp theo là xác định địa chỉ nơi hợp đồng của chúng ta được triển khai. Mỗi giao dịch được thực thi sẽ tạo ra một biên nhận. Biên nhận này chứa nhiều thông tin khác nhau về giao dịch, chẳng hạn như giao dịch được bao gồm trong khối nào và Máy ảo Ethereum đã sử dụng bao nhiêu gas. Nếu một giao dịch
 tạo ra một hợp đồng, nó cũng sẽ chứa địa chỉ hợp đồng. Chúng ta có thể truy xuất biên nhận bằng phương thức RPC `eth_getTransactionReceipt`.
 
 ```bash
@@ -1832,7 +1832,7 @@ Hợp đồng của chúng ta được tạo trên `0x4d03d617d700cf81935d7f797f
 
 Trong ví dụ này, chúng ta sẽ gửi một giao dịch bằng cách sử dụng `eth_sendTransaction` đến phương thức `multiply` của hợp đồng.
 
-`eth_sendTransaction` yêu cầu một số đối số, cụ thể là `from`, `to` và `data`. `From` là địa chỉ công khai của tài khoản của chúng ta và `to` là địa chỉ hợp đồng. Đối số `data` chứa một tải trọng xác định phương thức nào phải được gọi và với đối số nào. Đây là lúc [ABI (giao diện nhị phân ứng dụng)](https://docs.soliditylang.org/en/latest/abi-spec.html) phát huy tác dụng. ABI là một tệp JSON xác định cách định nghĩa và mã hóa dữ liệu cho Máy chủ ảo Ethereum.
+`eth_sendTransaction` yêu cầu một số đối số, cụ thể là `from`, `to` và `data`. `From` là địa chỉ công khai của tài khoản của chúng ta và `to` là địa chỉ hợp đồng. Đối số `data` chứa một tải trọng xác định phương thức nào phải được gọi và với đối số nào. Đây là lúc [ABI (giao diện nhị phân ứng dụng)](https://docs.soliditylang.org/en/latest/abi-spec.html) phát huy tác dụng. ABI là một tệp JSON xác định cách định nghĩa và mã hóa dữ liệu cho Máy ảo Ethereum.
 
 Các byte của tải trọng xác định phương thức nào trong hợp đồng được gọi. Đây là 4 byte đầu tiên từ hàm băm Keccak trên tên hàm và các loại đối số của nó, được mã hóa dưới dạng hex. Hàm nhân chấp nhận một uint là bí danh cho uint256. Điều này cho chúng ta:
 
@@ -1880,7 +1880,7 @@ Vì một giao dịch đã được gửi, một hàm băm giao dịch đã đư
 }
 ```
 
-Biên nhận có chứa một nhật ký. Nhật ký này được tạo bởi Máy chủ ảo Ethereum khi thực thi giao dịch và được bao gồm trong biên nhận. Hàm `multiply` cho thấy sự kiện `Print` đã được đưa ra với đầu vào nhân với 7. Vì đối số cho sự kiện `Print` là một uint256, chúng ta có thể giải mã nó theo các quy tắc ABI, điều này sẽ cho chúng ta kết quả thập phân 42 như mong đợi. Ngoài dữ liệu, cần lưu ý rằng các chủ đề có thể được sử dụng để xác định sự kiện nào đã tạo ra nhật ký:
+Biên nhận có chứa một nhật ký. Nhật ký này được tạo bởi Máy ảo Ethereum khi thực thi giao dịch và được bao gồm trong biên nhận. Hàm `multiply` cho thấy sự kiện `Print` đã được đưa ra với đầu vào nhân với 7. Vì đối số cho sự kiện `Print` là một uint256, chúng ta có thể giải mã nó theo các quy tắc ABI, điều này sẽ cho chúng ta kết quả thập phân 42 như mong đợi. Ngoài dữ liệu, cần lưu ý rằng các chủ đề có thể được sử dụng để xác định sự kiện nào đã tạo ra nhật ký:
 
 ```javascript
 web3.sha3("Print(uint256)")

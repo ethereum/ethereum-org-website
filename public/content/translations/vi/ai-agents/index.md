@@ -15,7 +15,7 @@ buttons:
   - content: Tác nhân AI là gì?
     toId: ai-agents-on-ethereum
   - content: Khám phá tác nhân Ai
-    toId: "tác nhân ai trên ethereum"
+    toId: ai-agents-on-ethereum
     isSecondary: false
 ---
 

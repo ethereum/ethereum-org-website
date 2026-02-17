@@ -67,7 +67,7 @@ Các bản nâng cấp Ethereum đều có liên hệ với nhau. Vậy hãy cù
 
 ### Các shard và Chuỗi Hải Đăng {#shards-and-beacon-chain}
 
-Sharding chỉ có thể triển khai một cách an toàn trong hệ sinh thái Ethereum khi cơ chế đồng thuận bằng chứng cổ phần được áp dụng. Chuỗi Beacon giới thiệu Skating, được hợp nhất với mạng chính, giúp mở đường cho shardign và giúp mở rộng mạng lưới Ethereum.
+Sharding chỉ có thể triển khai một cách an toàn trong hệ sinh thái Ethereum khi cơ chế đồng thuận bằng chứng cổ phần được áp dụng. Chuỗi Beacon giới thiệu Staking, được hợp nhất với mạng chính, giúp mở đường cho sharding và giúp mở rộng mạng lưới Ethereum.
 
 <ButtonLink href="/roadmap/danksharding/">
   Các chuỗi phân đoạn

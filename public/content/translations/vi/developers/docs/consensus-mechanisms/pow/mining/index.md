@@ -52,14 +52,14 @@ Phần sau đây cung cấp tổng quan về cách các giao dịch được kha
 2. Người dùng phát tán yêu cầu giao dịch đến toàn bộ mạng Ethereum từ một [nút](/developers/docs/nodes-and-clients/) nào đó.
 3. Khi nhận được thông tin về yêu cầu giao dịch mới, mỗi nút trong mạng Ethereum sẽ thêm yêu cầu đó vào bộ nhớ tạm cục bộ, là danh sách tất cả các yêu cầu giao dịch mà chúng biết nhưng chưa được ghi vào chuỗi khối dưới dạng một khối.
 4. Tại một thời điểm nào đó, một nút khai thác tổng hợp vài chục hoặc hàng trăm yêu cầu giao dịch thành một [khối](/developers/docs/blocks/) tiềm năng, theo cách tối đa hóa [phí giao dịch](/developers/docs/gas/) mà họ kiếm được trong khi vẫn ở dưới giới hạn gas của khối. Nút khai thác sau đó sẽ là:
-   1. Xác minh tính hợp lệ của từng yêu cầu giao dịch (tức là không ai đang cố gắng chuyển ether ra khỏi một tài khoản mà họ chưa ký, yêu cầu không bị sai định dạng, v.v.), sau đó thực thi mã của yêu cầu, làm thay đổi trạng thái bản sao cục bộ của Máy chủ ảo Ethereum của họ. Thợ đào sẽ nhận phí giao dịch của mỗi yêu cầu giao dịch đó vào tài khoản của chính họ.
-   2. Bắt đầu quá trình tạo chứng chỉ hợp lệ cho khối tiềm năng, sau khi tất cả các yêu cầu giao dịch trong khối đã được xác minh và thực thi trên bản sao Máy chủ ảo Ethereum cục bộ.
-5. Cuối cùng, một thợ đào sẽ hoàn tất việc tạo chứng chỉ cho một khối, trong đó bao gồm yêu cầu giao dịch cụ thể của chúng ta. Sau đó, thợ khai thác phát tán khối đã hoàn tất, trong đó bao gồm chứng chỉ và một giá trị kiểm tra của trạng thái Máy chủ ảo Ethereum mới được khai báo.
-6. Các nút khác nhận được thông tin về khối mới. Họ xác minh chứng chỉ, tự thực thi tất cả các giao dịch trong khối (bao gồm cả giao dịch ban đầu do người dùng của chúng ta phát tán), và kiểm tra xem giá trị kiểm tra của trạng thái Máy chủ ảo Ethereum mới sau khi thực thi tất cả giao dịch có khớp với giá trị kiểm tra của trạng thái do khối của Thợ đào khai báo hay không. Chỉ sau đó, các nút này mới thêm khối này vào cuối chuỗi blockchain của họ và chấp nhận trạng thái Máy chủ ảo Ethereum mới là trạng thái chính thức.
+   1. Xác minh tính hợp lệ của từng yêu cầu giao dịch (tức là không ai đang cố gắng chuyển ether ra khỏi một tài khoản mà họ chưa ký, yêu cầu không bị sai định dạng, v.v.), sau đó thực thi mã của yêu cầu, làm thay đổi trạng thái bản sao cục bộ của Máy ảo Ethereum của họ. Thợ đào sẽ nhận phí giao dịch của mỗi yêu cầu giao dịch đó vào tài khoản của chính họ.
+   2. Bắt đầu quá trình tạo chứng chỉ hợp lệ cho khối tiềm năng, sau khi tất cả các yêu cầu giao dịch trong khối đã được xác minh và thực thi trên bản sao Máy ảo Ethereum cục bộ.
+5. Cuối cùng, một thợ đào sẽ hoàn tất việc tạo chứng chỉ cho một khối, trong đó bao gồm yêu cầu giao dịch cụ thể của chúng ta. Sau đó, thợ khai thác phát tán khối đã hoàn tất, trong đó bao gồm chứng chỉ và một giá trị kiểm tra của trạng thái Máy ảo Ethereum mới được khai báo.
+6. Các nút khác nhận được thông tin về khối mới. Họ xác minh chứng chỉ, tự thực thi tất cả các giao dịch trong khối (bao gồm cả giao dịch ban đầu do người dùng của chúng ta phát tán), và kiểm tra xem giá trị kiểm tra của trạng thái Máy ảo Ethereum mới sau khi thực thi tất cả giao dịch có khớp với giá trị kiểm tra của trạng thái do khối của Thợ đào khai báo hay không. Chỉ sau đó, các nút này mới thêm khối này vào cuối chuỗi blockchain của họ và chấp nhận trạng thái Máy ảo Ethereum mới là trạng thái chính thức.
 7. Mỗi nút sẽ xóa tất cả các giao dịch trong khối mới khỏi bộ nhớ tạm cục bộ của mình, nơi lưu trữ các yêu cầu giao dịch chưa được thực hiện.
-8. Các nút mới tham gia mạng sẽ tải xuống tất cả các khối theo thứ tự, bao gồm cả khối chứa giao dịch mà chúng ta quan tâm. Chúng khởi tạo một bản sao Máy chủ ảo Ethereum cục bộ (bắt đầu từ trạng thái trống), sau đó thực hiện quá trình thực thi mọi giao dịch trong từng khối trên bản sao Máy chủ ảo Ethereum cục bộ của mình, đồng thời kiểm tra giá trị kiểm tra trạng thái ở mỗi khối trong quá trình này.
+8. Các nút mới tham gia mạng sẽ tải xuống tất cả các khối theo thứ tự, bao gồm cả khối chứa giao dịch mà chúng ta quan tâm. Chúng khởi tạo một bản sao Máy ảo Ethereum cục bộ (bắt đầu từ trạng thái trống), sau đó thực hiện quá trình thực thi mọi giao dịch trong từng khối trên bản sao Máy ảo Ethereum cục bộ của mình, đồng thời kiểm tra giá trị kiểm tra trạng thái ở mỗi khối trong quá trình này.
 
-Mỗi giao dịch chỉ được khai thác một lần (được đưa vào khối mới và truyền đi lần đầu), nhưng lại được thực thi và xác minh bởi mọi người tham gia trong quá trình cập nhật trạng thái Máy chủ ảo Ethereum chính thức. Điều này nhấn mạnh một trong những phương châm cốt lõi của chuỗi khối: **Đừng tin, hãy xác minh**.
+Mỗi giao dịch chỉ được khai thác một lần (được đưa vào khối mới và truyền đi lần đầu), nhưng lại được thực thi và xác minh bởi mọi người tham gia trong quá trình cập nhật trạng thái Máy ảo Ethereum chính thức. Điều này nhấn mạnh một trong những phương châm cốt lõi của chuỗi khối: **Đừng tin, hãy xác minh**.
 
 ## Các khối Ommer (chú) {#ommer-blocks}
 
@@ -82,5 +82,5 @@ Mạng chính Ethereum chỉ từng sử dụng một thuật toán khai thác -
 ## Các chủ đề liên quan {#related-topics}
 
 - [Gas](/developers/docs/gas/)
-- [Máy chủ ảo Ethereum](/developers/docs/evm/)
+- [Máy ảo Ethereum](/developers/docs/evm/)
 - [Bằng chứng công việc](/developers/docs/consensus-mechanisms/pow/)

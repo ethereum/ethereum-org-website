@@ -1,7 +1,7 @@
 ---
 title: "Tài chính phi tập trung (DeFi)"
 metaTitle: "DeFi là gì? | Sử dụng Tài chính Phi tập trung và lợi ích"
-description: "EthereumTổng quan về tài chính phi tập trung trên Ethereum"
+description: "Tổng quan về tài chính phi tập trung trên Ethereum"
 lang: vi
 template: use-cases
 emoji: ":money_with_wings:"

@@ -33,7 +33,7 @@ Tài liệu có thể được viết ở các cấp độ khác nhau và nên �
 Chúng tôi đã thảo luận về các giải pháp khả năng nâng cấp khác nhau trong [bài đăng trên blog của chúng tôi](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Hãy đưa ra lựa chọn có chủ ý về việc có hỗ trợ khả năng nâng cấp hay không trước khi viết bất kỳ mã nào. Quyết định này sẽ ảnh hưởng đến cách bạn cấu trúc mã của mình. Nói chung, chúng tôi khuyên bạn nên:
 
 - **Ưu tiên [di chuyển hợp đồng](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) hơn khả năng nâng cấp.** Các hệ thống di chuyển có nhiều ưu điểm tương tự như các hệ thống có thể nâng cấp, mà không có nhược điểm của chúng.
-- **Sử dụng mẫu tách dữ liệu thay vì mẫu delegatecallproxy.** Nếu dự án của bạn có sự tách biệt trừu tượng rõ ràng, khả năng nâng cấp bằng cách tách dữ liệu sẽ chỉ cần một vài điều chỉnh. Delegatecallproxy đòi hỏi chuyên môn về Máy chủ ảo Ethereum và rất dễ xảy ra lỗi.
+- **Sử dụng mẫu tách dữ liệu thay vì mẫu delegatecallproxy.** Nếu dự án của bạn có sự tách biệt trừu tượng rõ ràng, khả năng nâng cấp bằng cách tách dữ liệu sẽ chỉ cần một vài điều chỉnh. Delegatecallproxy đòi hỏi chuyên môn về Máy ảo Ethereum và rất dễ xảy ra lỗi.
 - **Ghi lại quy trình di chuyển/nâng cấp trước khi triển khai.** Nếu bạn phải phản ứng trong tình trạng căng thẳng mà không có bất kỳ hướng dẫn nào, bạn sẽ mắc sai lầm. Viết trước quy trình cần tuân theo. Nó nên bao gồm:
   - Các lệnh gọi khởi tạo các hợp đồng mới
   - Nơi lưu trữ các khóa và cách truy cập chúng
@@ -79,7 +79,7 @@ Kiến trúc của cơ sở mã nên giúp mã của bạn dễ dàng xem xét. 
 
 - **Ưu tiên Solidity 0.5 hơn 0.4 và 0.6.** Theo chúng tôi, Solidity 0.5 bảo mật hơn và có các phương pháp thực hành tích hợp sẵn tốt hơn so với 0.4. Solidity 0.6 đã tỏ ra quá không ổn định để sản xuất và cần thời gian để hoàn thiện.
 - **Sử dụng một bản phát hành ổn định để biên dịch; sử dụng bản phát hành mới nhất để kiểm tra cảnh báo.** Kiểm tra xem mã của bạn không có vấn đề nào được báo cáo với phiên bản trình biên dịch mới nhất. Tuy nhiên, Solidity có chu kỳ phát hành nhanh và có tiền sử về lỗi trình biên dịch, vì vậy chúng tôi không khuyến nghị phiên bản mới nhất để triển khai (xem [khuyến nghị về phiên bản solc của Slither](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33)).
-- **Không sử dụng hợp ngữ nội tuyến.** Hợp ngữ đòi hỏi chuyên môn về Máy chủ ảo Ethereum. Đừng viết mã EVM nếu bạn chưa _nắm vững_ sách vàng.
+- **Không sử dụng hợp ngữ nội tuyến.** Hợp ngữ đòi hỏi chuyên môn về Máy ảo Ethereum. Đừng viết mã EVM nếu bạn chưa _nắm vững_ sách vàng.
 
 ## Nguyên tắc triển khai {#deployment-guidelines}
 

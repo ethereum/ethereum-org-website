@@ -6,9 +6,9 @@ template: upgrade
 image: /images/upgrades/merge.png
 alt:
 summaryPoint1: "Mạng chính Ethereum sử dụng bằng chứng cổ phần, nhưng trước đây thì không như vậy."
-summaryPoint2: "Nâng cấp từ cơ chế bằng chứng công việc sang bằng chứng cổ phần được gọi à sự kiện hợp nhất."
+summaryPoint2: "Nâng cấp từ cơ chế bằng chứng công việc sang bằng chứng cổ phần được gọi là sự kiện hợp nhất."
 summaryPoint3: "Sự kiện hợp nhất là sự kiện mạng chính Ethereum bắt đầu hợp nhất với chuỗi bằng chứng cổ phần riêng gọi là chuỗi Beacon, bây giờ là một chuỗi thống nhất."
-summaryPoint4: "Sự kiện sự kiện hợp nhất giảm ~95,95% năng lượng tiêu thụ của Ethereum."
+summaryPoint4: "Sự kiện hợp nhất giảm ~99,95% năng lượng tiêu thụ của Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

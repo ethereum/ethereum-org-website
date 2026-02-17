@@ -76,7 +76,7 @@ Bạn có muốn gửi ETH sang một ví khác?
 
 ### Nếu tôi sở hữu một địa chỉ ETH, tôi có sở hữu cùng một địa chỉ trên các chuỗi khối khác không?
 
-Bạn có thể sử dụng địa chỉ trên mọi chuỗi khối tương thích với máy chủ ảo Ethereum (nếu như bạn sử dụng ví có cụm từ khôi phục). [Danh sách](https://chainlist.org/) này sẽ cho bạn biết bạn có thể sử dụng những chuỗi khối nào với cùng một địa chỉ. Một số mạng lưới, như Bitcoin, triển khai một bộ quy tắc mạng hoàn toàn riêng biệt và bạn sẽ cần một địa chỉ khác có định dạng khác. Nếu bạn có ví hợp đồng thông minh, bạn nên kiểm tra trang web sản phẩm của nó để biết thêm thông tin xem nó hỗ trợ những blockchain nào.
+Bạn có thể sử dụng địa chỉ trên mọi chuỗi khối tương thích với máy ảo Ethereum (nếu như bạn sử dụng ví có cụm từ khôi phục). [Danh sách](https://chainlist.org/) này sẽ cho bạn biết bạn có thể sử dụng những chuỗi khối nào với cùng một địa chỉ. Một số mạng lưới, như Bitcoin, triển khai một bộ quy tắc mạng hoàn toàn riêng biệt và bạn sẽ cần một địa chỉ khác có định dạng khác. Nếu bạn có ví hợp đồng thông minh, bạn nên kiểm tra trang web sản phẩm của nó để biết thêm thông tin xem nó hỗ trợ những blockchain nào.
 
 ### Tôi có thể sử dụng cùng địa chỉ ví trên nhiều thiết bị?
 

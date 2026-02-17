@@ -17,7 +17,7 @@ Một giao dịch Ethereum ám chỉ một hành động được thực hiện 
 ![Sơ đồ thể hiện một giao dịch gây ra thay đổi trạng thái](./tx.png)
 _Sơ đồ được điều chỉnh từ [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Các giao dịch, mà làm thay đổi trạng thái của Máy chủ ảo Ethereum, cần được phát sóng tới toàn bộ mạng lưới. Bất kỳ nút nào đều có thể phát đi một yêu cầu thực thi một giao dịch trên Máy chủ ảo Ethereum, sau khi điều này diễn ra, một trình xác thực sẽ thực thi giao dịch và truyền bá kết quả của sự thay đổi trạng thái đến phần còn lại của mạng lưới.
+Các giao dịch, mà làm thay đổi trạng thái của Máy ảo Ethereum, cần được phát sóng tới toàn bộ mạng lưới. Bất kỳ nút nào đều có thể phát đi một yêu cầu thực thi một giao dịch trên Máy ảo Ethereum, sau khi điều này diễn ra, một trình xác thực sẽ thực thi giao dịch và truyền bá kết quả của sự thay đổi trạng thái đến phần còn lại của mạng lưới.
 
 Các giao dịch yêu cầu một khoản phí và phải được bao gồm trong một khối đã được xác thực. Để làm cho phần tổng quan này đơn giản hơn, chúng tôi sẽ tài trợ phí gas và xác thực ở nơi khác.
 

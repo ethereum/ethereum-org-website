@@ -26,7 +26,7 @@ Xem Ander giải thích hàm băm trong chuỗi khối:
 
 Ethereum là một chuỗi khối với một máy tính nhúng vào nó. Nó là nền tảng để xây dựng ứng dụng và tổ chức trong một môi trường phi tập trung, không cần xin phép và chống kiểm duyệt.
 
-Nếu như trong vũ trụ Ethereum, sẽ chỉ có một, máy tính chuẩn tắc duy nhất (được gọi là máy chủ ảo Ethereum) mà toàn bộ mạng lưới Ethereum đều đồng thuận về trạng thái của nó. Những ai tham gia vào mạng lưới Ethereum (mỗi nút Ethereum) giữ một phiên bản trạng thái của máy tính này. Thêm vào đó, những người tham gia có thể phát tán những yêu cầu từ máy chủ để thực hiện phép tính tùy thích. Khi nào những yêu cầu đó được phát tán đi, những người tham gia mạng lưới sẽ tham gia xác thực, hợp thuwcss hóa, và xử lí tính toán. Sự thực thi này làm một thay đổi trên trạng thái máy chủ ảo Ethereum (EVM), được ghi nhận và phát tán ra khắp mạng lưới.
+Nếu như trong vũ trụ Ethereum, sẽ chỉ có một, máy tính chuẩn tắc duy nhất (được gọi là máy ảo Ethereum) mà toàn bộ mạng lưới Ethereum đều đồng thuận về trạng thái của nó. Những ai tham gia vào mạng lưới Ethereum (mỗi nút Ethereum) giữ một phiên bản trạng thái của máy tính này. Thêm vào đó, những người tham gia có thể phát tán những yêu cầu từ máy chủ để thực hiện phép tính tùy thích. Khi nào những yêu cầu đó được phát tán đi, những người tham gia mạng lưới sẽ tham gia xác thực, hợp thuwcss hóa, và xử lí tính toán. Sự thực thi này làm một thay đổi trên trạng thái máy ảo Ethereum (EVM), được ghi nhận và phát tán ra khắp mạng lưới.
 
 Những yêu cầu tính toán này được gọi là yêu cầu giao dịch; những ghi chép của tất cả giao dịch và trạng thái EVM hiện tại được lưu trữ trên chuỗi khối, sau đó được lưu trữ và đồng tình ở trên tất cả các nút.
 
@@ -66,7 +66,7 @@ Thứ tự của những khối được ghi vĩnh viễn lên mạng lưới Et
 
 ### Máy ảo Ethereum {#evm}
 
-Máy chủ ảo Ethereum là một máy chủ ảo toàn cầu mà trạng thái của mỗi người tham gia mạng lưới của Ethereum được lưu trữ và đồng thuận. Bất kì người tham gia có thể yêu câu một thực thi mã nguồn tùy thích trên EVM; mã nguồn được thực thi sẽ thay đổi trạng thái của EVM.
+Máy ảo Ethereum là một máy ảo toàn cầu mà trạng thái của mỗi người tham gia mạng lưới của Ethereum được lưu trữ và đồng thuận. Bất kì người tham gia có thể yêu câu một thực thi mã nguồn tùy thích trên EVM; mã nguồn được thực thi sẽ thay đổi trạng thái của EVM.
 
 [Tìm hiểu thêm về EVM](/developers/docs/evm/)
 
