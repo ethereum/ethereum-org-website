@@ -5,6 +5,7 @@ author: Ori Pomerantz
 tags: ["typescript", "react", "vite", "wagmi", "frontend"]
 skill: beginner
 published: 2023-11-01
+updated: 2026-03-01
 lang: en
 sidebarDepth: 3
 ---
@@ -15,7 +16,7 @@ This article is for you. I assume you know programming, and maybe a bit of JavaS
 
 ## Why is this important {#why-important}
 
-In theory, you could just have people use [Etherscan](https://holesky.etherscan.io/address/0x432d810484add7454ddb3b5311f0ac2e95cecea8#writeContract) or [Blockscout](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=write_contract) to interact with your contracts. That will be great for the experienced Ethereans. But we are trying to serve [another billion people](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion). This won't happen without a great user experience, and a friendly user interface is a big part of that.
+In theory, you could just have people use [Etherscan](https://sepolia.etherscan.io/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA#readContract) or [Blockscout](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_write_contract) to interact with your contracts. That will be great for the experienced Ethereans. But we are trying to serve [another billion people](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion). This won't happen without a great user experience, and a friendly user interface is a big part of that.
 
 ## Greeter application {#greeter-app}
 
@@ -23,30 +24,25 @@ There is a lot of theory behind for a modern UI works, and [a lot of good sites]
 
 ### Installation {#installation}
 
-1. If necessary, add [the Holesky blockchain](https://chainlist.org/?search=holesky&testnets=true) to your wallet and [get test ETH](https://www.holeskyfaucet.io/).
+1. The application uses the [Sepolia](https://sepolia.dev/) test network. If necessary, [get Sepolia test ETH](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) and [add Sepolia to your wallet](https://chainlist.org/chain/11155111).
 
-1. Clone the github repository.
+2. Clone the GitHub repository and install the necessary packages.
 
    ```sh
    git clone https://github.com/qbzzt/20230801-modern-ui.git
-   ```
-
-1. Install the necessary packages.
-
-   ```sh
    cd 20230801-modern-ui
    pnpm install
    ```
 
-1. Start the application.
+3. Start the application.
 
    ```sh
    pnpm dev
    ```
 
-1. Browse to the URL shown by the application. In most cases, that is [http://localhost:5173/](http://localhost:5173/).
+4. Browse to the URL shown by the application. In most cases, that is [http://localhost:5173/](http://localhost:5173/).
 
-1. You can see the contract source code, a slightly modified version of Hardhat's Greeter, [on a blockchain explorer](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contract).
+5. You can see the contract source code, a modified version of Hardhat's Greeter, [on a blockchain explorer](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code).
 
 ### File walk through {#file-walk-through}
 
@@ -62,22 +58,39 @@ This file is standard HTML boilerplate except for this line, which imports the s
 
 The file extension tells us that this file is a [React component](https://www.w3schools.com/react/react_components.asp) written in [TypeScript](https://www.typescriptlang.org/), an extension of JavaScript that supports [type checking](https://en.wikipedia.org/wiki/Type_system#Type_checking). TypeScript is compiled into JavaScript, so we can use it for client-side execution.
 
+This file is mostly explained in case you are interested. Usually you do not modify this file, but [`src/App.tsx`](#app-tsx) and the files it imports.
+
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css'
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-import * as React from 'react'
-import * as ReactDOM from 'react-dom/client'
-import { WagmiConfig } from 'wagmi'
-import { chains, config } from './wagmi'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { WagmiProvider } from 'wagmi'
 ```
 
 Import the library code we need.
 
 ```tsx
-import { App } from './App'
+import App from './App.tsx'
 ```
 
 Import the React component that implements the application (see below).
+
+```tsx
+import { config } from './wagmi.ts'
+```
+
+Import the [wagmi](https://wagmi.sh/) configuration.
+
+```tsx
+const queryClient = new QueryClient()
+```
+
+Creates a new instance of [React Query’s](https://tanstack.com/query/latest/docs/framework/react/overview) cache manager. This object will store:
+- Cached RPC calls
+- Contract reads
+- Background refetching state
+
+We need the cache manager because wagmi v3 uses React Query internally.
 
 ```tsx
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -98,10 +111,10 @@ The application is going inside [a `React.StrictMode` component](https://react.d
 The application is also inside [a `WagmiConfig` component](https://wagmi.sh/react/api/WagmiProvider). [The wagmi (we are going to make it) library](https://wagmi.sh/) connects the React UI definitions with [the viem library](https://viem.sh/) for writing an Ethereum decentralized application.
 
 ```tsx
-      <RainbowKitProvider chains={chains}>
+      <QueryClientProvider client={queryClient}>
 ```
 
-And finally, [a `RainbowKitProvider` component](https://www.rainbowkit.com/). This component handles logging on and the communication between the wallet and the application.
+And finally, have a React Query provider so any of the application's components can use cached queries.
 
 ```tsx
         <App />
@@ -121,54 +134,129 @@ Of course, we have to close off the other components.
 #### `src/App.tsx` {#app-tsx}
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit'
-import { useAccount } from 'wagmi'
-import { Greeter } from './components/Greeter'
+import { 
+  useConnect, 
+  useConnection, 
+  useConnectors, 
+  useDisconnect 
+} from 'wagmi'
 
-export function App() {
+import { Greeter } from './Greeter'
+
+function App() {
 ```
 
 This is the standard way to create a React component - define a function that is called every time it needs to be rendered. This function typically has some TypeScript or JavaScript code on top, followed by a `return` statement that returns the JSX code.
 
 ```tsx
-  const { isConnected } = useAccount()
+  const connection = useConnection()
 ```
 
-Here we use [`useAccount`](https://wagmi.sh/react/api/hooks/useAccount) to check if we are connected to a blockchain through a wallet or not.
+Use [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) to get information related to the current connection, such as the address and `chainId`.
 
-By convention, in React functions called `use...` are [hooks](https://www.w3schools.com/react/react_hooks.asp) that return some kind of data. When you use such hooks, not only does your component get the data, but when that data changes the component is re-rendered with the updated information.
+By convention, in React functions called `use...` are [hooks](https://www.w3schools.com/react/react_hooks.asp). These functions don't just return data to the component, they make sure it is re-rendered (the component function executed again, and that output replaces the previous one in the HTML) when that data changes. 
+
+
+```tsx
+  const { connectors, connect, status, error } = useConnect()
+```
+
+Use [`useConnect`](https://wagmi.sh/react/api/hooks/useConnect) to get information about the wallet connection.
+
+```tsx
+  const { disconnect } = useDisconnect()
+```
+
+[This hook](https://wagmi.sh/react/api/hooks/useDisconnect) gives us the function to disconnect from the wallet.
+
 
 ```tsx
   return (
     <>
 ```
 
-The JSX of a React component _has_ to return one component. When we have multiple components and we don't have anything that wraps up "naturally" we use an empty component (`<> ... </>`) to make them into a single component.
+The JSX of a React component _has_ to return one HTML component. When we have multiple components and we don't have anything that wraps up "naturally" we use an empty component (`<> ... </>`) to make them into a single component.
 
 ```tsx
-      <h1>Greeter</h1>
-      <ConnectButton />
+      <h2>Connection</h2>
+      <div>
+        status: {connection.status}
+        <br />
+        addresses: {JSON.stringify(connection.addresses)}
+        <br />
+        chainId: {connection.chainId}
+      </div>
 ```
 
-We get [the `ConnectButton` component](https://www.rainbowkit.com/docs/connect-button) from RainbowKit. When we are not connected, it gives us a `Connect Wallet` button that opens a modal that explains wallets and lets you choose which one you use. When we are connected, it displays the blockchain we use, our account address, and our ETH balance. We can use these displays to switch network or to disconnect.
+Provide information about the current connection. Within JSX, `{<expression>}` means to evaluate the expression as JavaScript. 
 
 ```tsx
-      {isConnected && (
+      {connection.status === 'connected' && (
 ```
 
-When we need to insert actual JavaScript (or TypeScript that will be compiled to JavaScript) into a JSX, we use brackets (`{}`).
+The syntax `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`".
 
-The syntax `a && b` is short for [`a ? b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). That is, if `a` is true it evaluates to `b` and otherwise it evaluates to `a` (which can be `false`, `0`, etc). This is an easy way to tell React that a component should only be displayed if a certain condition is fulfilled.
-
-In this case, we only want to show the user `Greeter` if the user is connected to a blockchain.
+This is the standard way to put if statements inside JSX.
 
 ```tsx
+        <div>
           <Greeter />
-      )}
-    </>
-  )
-}
+          <hr />
 ```
+
+JSX follows the XML standard, which is more strict than HTML. If a tag does not have internal text, it *must* have a slash (`/`) at the end to terminate it.
+
+Here we have two such tags, `<Greeter />` (which actually contains the HTML code that talks to the contract) and [`<hr />` for a horizontal line](https://www.w3schools.com/tags/tag_hr.asp).
+
+```tsx
+          <button type="button" onClick={disconnect}>
+            Disconnect
+          </button>
+        </div>
+      )}
+```
+
+If the user clicks this button, call the `disconnect` function.
+
+```tsx
+      {connection.status !== 'connected' && (
+```
+
+If we can *not* connected, show the necessary options to connect to the wallet.
+
+```tsx
+        <div>
+          <h2>Connect</h2>
+          {connectors.map((connector) => (
+```
+
+In `connectors` we have a list of connectors. We use [`map`](https://www.w3schools.com/jsref/jsref_map.asp) to turn it into a list of JSX buttons to display.
+
+```tsx
+            <button
+              key={connector.uid}
+```
+
+In JSX it is necessary for "sibling" tags (tags that descend from the same parent) to have different identifiers.
+
+```tsx
+              onClick={() => connect({ connector })}
+              type="button"
+            >
+              {connector.name}
+            </button>
+          ))}
+```
+
+
+
+```tsx
+          <div>{status}</div>
+          <div>{error?.message}</div>
+        </div>
+      )}
+```
+
 
 #### `src/components/Greeter.tsx` {#greeter-tsx}
 
