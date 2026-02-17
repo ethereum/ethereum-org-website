@@ -83,14 +83,28 @@ jobs:
 
       - name: Get PR number
         id: pr
+        env:
+          # All values moved to env block to prevent shell injection
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_PR_NUMBER: ${{ github.event.inputs.pr_number }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            echo "number=${{ github.event.inputs.pr_number }}" >> $GITHUB_OUTPUT
-          elif [[ "${{ github.event_name }}" == "pull_request" || "${{ github.event_name }}" == "pull_request_review_comment" ]]; then
-            echo "number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            PR_NUM="$INPUT_PR_NUMBER"
+          elif [[ "$EVENT_NAME" == "pull_request" || "$EVENT_NAME" == "pull_request_review_comment" ]]; then
+            PR_NUM="$PR_NUMBER"
           else
-            echo "number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
+            PR_NUM="$ISSUE_NUMBER"
           fi
+
+          # Validate PR number is numeric to prevent injection in downstream usage
+          if [[ ! "$PR_NUM" =~ ^[0-9]+$ ]]; then
+            echo "Error: PR number must be numeric, got: $PR_NUM"
+            exit 1
+          fi
+
+          echo "number=$PR_NUM" >> $GITHUB_OUTPUT
 
       - name: Extract flags from comment
         id: parse
@@ -162,9 +176,11 @@ jobs:
       - name: Post acknowledgment
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          gh pr comment ${{ steps.pr.outputs.number }} --body "$(cat <<EOF
-          :globe_with_meridians: **Translation review started.** [View progress](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          gh pr comment "$PR_NUMBER" --body "$(cat <<EOF
+          :globe_with_meridians: **Translation review started.** [View progress]($RUN_URL)
           EOF
           )"
 
