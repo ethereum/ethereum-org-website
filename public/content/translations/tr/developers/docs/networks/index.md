@@ -91,7 +91,7 @@ Ephemery, her ay tamamen sıfırlanan benzersiz bir test ağı türüdür. Yür�
 - Her zaman yeni durum, doğrulayıcıların ve uygulamaların kısa süreli test edilmesi
 - Yalnızca temel sözleşme setini içerir
 - Açık doğrulayıcı seti ve büyük miktarda fona kolay erişim
-- En düşük düğüm gereksinimleri ve en hızlı senkronizasyon, ortalama <5GB
+- En düşük düğüm gereksinimleri ve en hızlı senkronizasyon, ortalama &lt;5GB
 
 ##### Kaynaklar
 

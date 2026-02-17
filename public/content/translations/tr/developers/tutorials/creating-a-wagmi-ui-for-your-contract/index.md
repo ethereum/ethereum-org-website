@@ -143,7 +143,7 @@ Geleneksel olarak, React'ta `use...` olarak adlandırılan işlevler, bir tür v
     <>
 ```
 
-Bir React bileşeninin JSX'i tek bir bileşen döndürmek _zorundadır_. Birden çok bileşenimiz olduğunda ve bunları "doğal olarak" saran bir şeyimiz olmadığında, boş bir bileşen kullanırız (`<> ...` </>`) onları tek bir bileşen haline getirmek için.
+Bir React bileşeninin JSX'i tek bir bileşen döndürmek _zorundadır_. Birden çok bileşenimiz olduğunda ve bunları "doğal olarak" saran bir şeyimiz olmadığında, boş bir bileşen kullanırız (`<> ... </>`) onları tek bir bileşen haline getirmek için.
 
 ```tsx
       <h1>Greeter</h1>

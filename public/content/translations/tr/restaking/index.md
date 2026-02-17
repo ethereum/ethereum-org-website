@@ -144,7 +144,7 @@ AVS'ler farklı oranlar sunsa da, eETH gibi Likit Yeniden Hisseleme Jetonları (
 <AlertDescription>
   <p className="mt-0"><strong>Ethereum'un kurucu ortağı yazıyor…</strong></p>
   <p className="mt-2">
-    Ethereum'un kurucu ortağı Vitalik, 2021 tarihli <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus</a> adlı blog yazısında yeniden hisselemenin potansiyel riskleri konusunda uyardı. </a>  
+    Ethereum'un kurucu ortağı Vitalik, 2021 tarihli <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus</a> adlı blog yazısında yeniden hisselemenin potansiyel riskleri konusunda uyardı.  
 </p>
 </AlertDescription>
 </AlertContent>
