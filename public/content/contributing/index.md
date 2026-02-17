@@ -38,6 +38,7 @@ We are a welcoming community that will help you grow and educate in the Ethereum
 - [Add a staking product or service](/contributing/adding-staking-products/) – Add a project that helps facilitate solo staking, pooled staking, or staking as a service
 - [Add a wallet](/contributing/adding-wallets/) – Add a wallet for the [find wallets page](/wallets/find-wallet/)
 - [Suggest a project for our DeSci page](/contributing/adding-desci-projects/) – Add a project built on Ethereum that contributes to decentralized science
+- [Add a resource](/contributing/adding-resources/) – Add a useful resource to any relevant page
 
 Any questions? 🤔 Join our [Discord server](https://discord.gg/ethereum-org)
 

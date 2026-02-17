@@ -1,267 +1,184 @@
 ---
-title: So verwandeln Sie Ihren Raspberry Pi 4 durch Überschreiben der MicroSD-Karte in einen Node
-description: Verbinden Sie Ihren Raspberry Pi 4 mit einem Ethernetkabel, schließen Sie ihn anschließend an die SSD-Festplatte an und starten Sie das Gerät. Nun können Sie es als Ethereum-Node nutzen und eine Ausführungsebene oder Konsensebene (Beacon Chain/Validator) ausführen.
+title: Betreibe einen Ethereum-Node auf einem Raspberry Pi 4
+description: "Flashe deinen Raspberry Pi 4, stecke ein Ethernet-Kabel ein, schließe die SSD-Festplatte an und schalte das Gerät ein, um den Raspberry Pi 4 in einen vollwertigen Ethereum-Node + Validator zu verwandeln"
 author: "EthereumOnArm"
-tags:
-  - "Clients"
-  - "Ausführungsebene"
-  - "Konsensebene"
-  - "Nodes"
+tags: ["clients", "execution layer", "consensus layer", "nodes"]
 lang: de
-skill: advanced
-published: 2020-05-07
-source: r/ethereum
-sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
+skill: intermediate
+published: 2022-06-10
+source: Ethereum on ARM
+sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 
-**TL;DR**: Verbinden Sie Ihren Raspberry Pi 4 mit einem Ethernetkabel, schließen Sie ihn anschließend an die SSD-Festplatte an und starten Sie das Gerät. Nun können Sie es als Ethereum-Node nutzen und eine Ausführungsebene oder Konsensebene (Beacon Chain/Validator) ausführen.
+**Ethereum on Arm ist ein benutzerdefiniertes Linux-Image, das einen Raspberry Pi in einen Ethereum-Node verwandeln kann.**
 
-[Mehr erfahren über Ethereum-Upgrades](/roadmap/)
+Um Ethereum on Arm zu verwenden, um einen Raspberry Pi in einen Ethereum-Node zu verwandeln, wird die folgende Hardware empfohlen:
 
-Zunächst ein paar Hintergrundinformationen: Wie Sie bereits wissen, gibt es einige Speicherprobleme [[1]](/developers/tutorials/run-node-raspberry-pi/#references) bei dem Raspberry Pi 4-Image, da die Betriebssoftware Raspbian OS bisher nur mit der 32-Bit-Version erhältlich ist [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (das gilt jedenfalls für die Benutzeroberfläche). Obwohl wir das offizielle Betriebssystem bevorzugen würden, sind wir zu dem Entschluss gekommen, dass wir auf ein natives 64-Bit-Betriebssystem umsteigen müssen, um diese Probleme zu lösen.
-
-Außerdem unterstützen Konsens-Clients keine 32-Bit-Binärdateien, so dass die Verwendung von Raspbian den Raspberry Pi 4 vom Betrieb eines Node auf Konsensebene (und der Möglichkeit des Staking) ausschließen würde.
-
-Nach mehreren Tests veröffentlichen wir nun zwei verschiedene Images auf Basis von Ubuntu 20.04 64-Bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): Ausführungsebenen- und Konsensebenen-Editionen.
-
-Im Grunde genommen handelt es sich bei beiden um das gleiche Image, das die gleichen Funktionen wie die Raspbian-basierten Images enthält. Sie sind jedoch standardmäßig für die Ausführung von Software der Ausführungsebene oder der Konsensebene eingerichtet.
-
-**Images übernehmen alle notwendigen Schritte**, von der Einrichtung der Umgebung und der Formatierung der SSD-Platte über die Installation und Ausführung der Ethereum-Software bis hin zum Start der Blockchain-Synchronisation.
-
-## Hauptfunktionen {#main-features}
-
-- Basierend auf Ubuntu 20.04 64-Bit
-- Automatische Partitionierung und Formatierung von USB-Festplatten
-- Fügt Swap-Speicher hinzu (ZRAM-Kernel-Modul und eine Swap-Datei), basierend auf der Arbeit von Armbian [[7]](/developers/tutorials/run-node-raspberry-pi/#references)
-- Ändert den Hostnamen anhand des MAC-Hashes in etwas wie "ethnode-e2a3e6fe"
-- Führt Software als systemd-Dienst aus und beginnt mit der Synchronisierung der Blockchain
-- Enthält ein APT-Repository für die Installation und Aktualisierung von Ethereum-Software
-- Enthält ein auf Grafana/Prometheus basierendes Überwachungs-Dashboard
-
-## Enthaltene Software {#software-included}
-
-Beide Images enthalten die gleichen Pakete. Der einzige Unterschied besteht darin, dass die Ausführungsversion standardmäßig Geth und die Konsensversion standardmäßig die Prysm-Beacon Chain ausführt.
-
-### Ausführungs-Clients {#execution-clients}
-
-- Geth [[8]](/developers/tutorials/run-node-raspberry-pi/#references): 1.9.13 (offizielle Binärdatei)
-- Parity [[9]](/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (quer kompiliert)
-- Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (quer kompiliert)
-- Hyperledger Besu [[11]](/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (kompiliert)
-
-### Konsens-Clients {#consensus-clients}
-
-- Prysm [[12]](/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (offizielle Binärdatei)
-- Lighthouse [[13]](/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (kompiliert)
-
-### Ethereum-Framework {#ethereum-framework}
-
-- Swarm [[14]](/developers/tutorials/run-node-raspberry-pi/#references): 0.5.7 (offizielle Binärdatei)
-- Raiden Network [[15]](/developers/tutorials/run-node-raspberry-pi/#references): 0.200.0~rc1 (offizielle Binärdatei)
-- IPFS [[16]](/developers/tutorials/run-node-raspberry-pi/#references): 0.5.0 (offizielle Binärdatei)
-- Statusd [[17]](/developers/tutorials/run-node-raspberry-pi/#references): 0.52.3 (kompiliert)
-- Vipnode [[18]](/developers/tutorials/run-node-raspberry-pi/#references): 2.3.3 (offizielle Binärdatei)
-
-## Installationsanleitung und Anwendung {#installation-guide-and-usage}
-
-### Empfohlene Hardware und Einrichtung {#recommended-hardware-and-setup}
-
-- Raspberry 4 (Model B) – 4 GB
-- MicroSD-Karte (mindestens 16 GB Klasse 10)
-- SSD-USB-3.0-Festplatte (siehe Speicherabschnitt)
+- Raspberry 4 (Modell B 8 GB), Odroid M1 oder Rock 5B (8 GB/16 GB RAM) Platine
+- MicroSD-Karte (mindestens 16 GB, Klasse 10)
+- Mindestens 2 TB große SSD als USB-3.0-Laufwerk oder eine SSD in einem USB-zu-SATA-Gehäuse.
 - Stromversorgung
 - Ethernet-Kabel
-- 30303-Portweiterleitung (Ausführungseben) und 13000-Portweiterleitung (Konsensebene) [[4]](/developers/tutorials/run-node-raspberry-pi/#references)
-- Ein Gehäuse mit Kühlkörper und Lüfter (optional, aber dringend empfohlen)
-- USB-Tastatur, Monitor und HDMI-Kabel (micro-HDMI) (optional)
+- Portweiterleitung (siehe Clients für weitere Informationen)
+- Ein Gehäuse mit Kühlkörper und Lüfter
+- USB-Tastatur, Monitor und HDMI-Kabel (Micro-HDMI) (optional)
 
-## Speicher {#storage}
+## Warum Ethereum auf ARM betreiben? {#why-run-ethereum-on-arm}
 
-Sie benötigen eine SSD, um die Ethereum-Clients auszuführen (ohne SSD-Laufwerk gibt es absolut keine Chance, die Ethereum-Blockchain zu synchronisieren). Es gibt zwei Optionen:
+ARM-Platinen sind sehr preisgünstige, flexible, kleine Computer. Sie sind eine gute Wahl für den Betrieb von Ethereum-Nodes, weil sie günstig zu erwerben sind, so konfiguriert werden können, dass alle ihre Ressourcen nur auf den Node ausgerichtet sind, was sie effizient macht, sie wenig Strom verbrauchen und physisch klein sind, sodass sie unauffällig in jedes Zuhause passen. Es ist auch sehr einfach, Nodes zu starten, da die MicroSD-Karte des Raspberry Pi einfach mit einem vorgefertigten Image geflasht werden kann, ohne dass Software heruntergeladen oder erstellt werden muss.
 
-- Verwenden Sie eine tragbare USB-SSD-Festplatte wie die Samsung T5 Portable SSD.
-- Verwenden Sie ein externes USB 3.0-Festplattengehäuse mit einer SSD-Festplatte. In unserem Fall haben wir ein Inateck 2.5 Hard Drive Enclosure FE2011 verwendet. Achten Sie darauf, ein Gehäuse mit einem UAS-kompatiblen Chip zu kaufen, insbesondere einen der folgenden: JMicron (JMS567 oder JMS578) oder ASMedia (ASM1153E).
+## Wie funktioniert das? {#how-does-it-work}
 
-In beiden Fällen sollten Sie vermeiden, minderwertige SSD-Festplatten zu kaufen, da sie eine Schlüsselkomponente Ihrer Nodes sind und die Leistung (und die Synchronisierungszeiten) drastisch beeinträchtigen können.
+Die Speicherkarte des Raspberry Pi wird mit einem vorgefertigten Image geflasht. Dieses Image enthält alles, was zum Betreiben eines Ethereum-Nodes benötigt wird. Mit einer geflashten Karte musst du nur noch den Raspberry Pi einschalten. Alle Prozesse, die für den Betrieb des Nodes erforderlich sind, werden automatisch gestartet. Das funktioniert, weil die Speicherkarte ein Linux-basiertes Betriebssystem (OS) enthält, auf dem automatisch Prozesse auf Systemebene ausgeführt werden, die das Gerät in einen Ethereum-Node verwandeln.
 
-Beachten Sie, dass die Festplatte an einen USB 3.0-Anschluss (blau) angeschlossen sein muss.
+Ethereum kann nicht mit dem beliebten Raspberry Pi Linux-Betriebssystem „Raspbian“ betrieben werden, da Raspbian immer noch eine 32-Bit-Architektur verwendet, was dazu führt, dass Ethereum-Benutzer auf Speicherprobleme stoßen und Konsens-Clients keine 32-Bit-Binärdateien unterstützen. Um dies zu überwinden, ist das Ethereum-on-Arm-Team auf ein natives 64-Bit-Betriebssystem namens „Armbian“ umgestiegen.
 
-## Images herunterladen und Installieren {#image-download-and-installation}
+**Images übernehmen alle notwendigen Schritte, von der Einrichtung der Umgebung und der Formatierung der SSD-Platte über die Installation und Ausführung der Ethereum-Software bis hin zum Start der Blockchain-Synchronisation.**
 
-### 1. Laden Sie die Images der Ausführungs- und Konsensebene herunter {#1-download-execution-or-consensus-images}
+## Hinweis zu Ausführungs- und Konsens-Clients {#note-on-execution-and-consensus-clients}
 
-<ButtonLink href="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
-  Image der Ausführungsebene herunterladen
-</ButtonLink>
+Das Ethereum on Arm-Image enthält vorgefertigte Ausführungs- und Konsens-Clients als Dienste. Ein Ethereum-Node erfordert, dass beide Clients synchronisiert sind und laufen. Du musst nur das Image herunterladen, es flashen und dann die Dienste starten. Das Image ist mit den folgenden Ausführungs-Clients vorinstalliert:
 
-sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
+- Geth
+- Nethermind
+- Besu
 
-<ButtonLink href="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
-  Image der Konsensebene herunterladen
-</ButtonLink>
+und die folgenden Konsens-Clients:
 
-sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
+- Lighthouse
+- Nimbus
+- Prysm
+- Teku
 
-### 2. Das Image flashen {#2-flash-the-image}
+Du solltest einen von jedem zum Ausführen auswählen - alle Ausführungs-Clients sind mit allen Konsens-Clients kompatibel. Wenn du nicht explizit einen Client auswählst, greift der Node auf seine Standardeinstellungen - Geth und Lighthouse - zurück und führt sie automatisch aus, wenn die Platine eingeschaltet wird. Du musst Port 30303 auf deinem Router öffnen, damit Geth Peers finden und sich mit ihnen verbinden kann.
 
-Stecken Sie die microSD-Karte in Ihren Desktop/Laptop und laden Sie die Datei herunter (z. B. die Ausführungsebene):
+## Herunterladen des Images {#downloading-the-image}
 
-```bash
-wget https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
+Das Raspberry Pi 4 Ethereum-Image ist ein „Plug-and-Play“-Image, das automatisch sowohl die Ausführungs- als auch die Konsens-Clients installiert und einrichtet, sie so konfiguriert, dass sie miteinander kommunizieren und sich mit dem Ethereum-Netzwerk verbinden. Alles, was du tun musst, ist, deine Prozesse mit einem einfachen Befehl zu starten.
+
+Lade das Raspberry Pi-Image von [Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/Ec_VmUvr80VFjf3RYSU-NzkBmj2JOteDECj8Bibde929Gw?download=1) herunter und überprüfe den SHA256-Hash:
+
+```sh
+# Aus dem Verzeichnis, das das heruntergeladene Image enthält
+shasum -a 256 ethonarm_22.04.00.img.zip
+# Der Hash sollte Folgendes ausgeben: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Hinweis: Wenn Sie mit der Befehlszeile nicht vertraut sind oder unter Windows arbeiten, können Sie [Etcher](https://etcher.io) verwenden.
+Beachte, dass Images für Rock 5B- und Odroid M1-Platinen auf der Ethereum-on-Arm-[Download-Seite](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) verfügbar sind.
 
-Öffnen Sie ein Terminal und überprüfen Sie den Namen Ihres MicroSD-Geräts:
+## Flashen der MicroSD {#flashing-the-microsd}
 
-```bash
+Die MicroSD-Karte, die für den Raspberry Pi verwendet werden soll, sollte zuerst in einen Desktop oder Laptop eingelegt werden, damit sie geflasht werden kann. Mit den folgenden Terminalbefehlen wird das heruntergeladene Image auf die SD-Karte geflasht:
+
+```shell
+# Namen der MicroSD-Karte überprüfen
 sudo fdisk -l
+
+>> sdxxx
 ```
 
-Sie sollten ein Gerät namens "mmcblk0" oder "sdd" sehen. Entpacken und flashen des Images:
+Es ist sehr wichtig, den richtigen Namen zu verwenden, da der nächste Befehl `dd` enthält, der den gesamten Inhalt der Karte löscht, bevor das Image darauf geschrieben wird. Um fortzufahren, navigiere zu dem Verzeichnis, das das gezippte Image enthält:
 
-```bash
-unzip ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
-sudo dd bs=1M if=ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img of=/dev/mmcblk0 && sync
+```shell
+# Image entpacken und flashen
+unzip ethonarm_22.04.00.img.zip
+sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=progress
 ```
 
-### 3. Setzen Sie die MicroSD-Karte in den Raspberry Pi 4 ein. Schließen ein Ethernet-Kabel und die USB-SSD-Festplatte an (stellen Sie sicher, dass Sie einen blauen Anschluss verwenden). {#3-insert-the-microsd-into-the-raspberry-pi-4-connect-an-ethernet-cable-and-attach-the-usb-ssd-disk-make-sure-you-are-using-a-blue-port}
+Die Karte ist nun geflasht und kann in den Raspberry Pi eingelegt werden.
 
-### 4. Das Gerät einschalten {#4-power-on-the-device}
+## Den Node starten {#start-the-node}
 
-Das Ubuntu-Betriebssystem wird in weniger als einer Minute hochgefahren, aber Sie müssen **etwa 10 Minuten warten**, damit das Skript die notwendigen Aufgaben durchführen kann, um das Gerät in einen Ethereum-Node zu verwandeln und den Raspberry neu zu starten.
+Stecke die SD-Karte in den Raspberry Pi, schließe das Ethernet-Kabel und die SSD an und schalte das Gerät ein. Das Betriebssystem wird hochfahren und automatisch damit beginnen, die vorkonfigurierten Aufgaben auszuführen, die den Raspberry Pi in einen Ethereum-Node verwandeln, einschließlich der Installation und Erstellung der Client-Software. Dies wird wahrscheinlich 10-15 Minuten dauern.
 
-Je nach Image, wird das wie folgt ausgeführt:
+Sobald alles installiert und konfiguriert ist, melde dich über eine SSH-Verbindung am Gerät an oder verwende das Terminal direkt, wenn ein Monitor und eine Tastatur an die Platine angeschlossen sind. Verwende das `ethereum`-Konto zum Anmelden, da dieses die erforderlichen Berechtigungen zum Starten des Nodes hat.
 
-- Ausführungs-Client: Geth als Standard-Client für die Synchronisierung der Blockchain
-- Konsens-Client: Prysm als Standard-Client für die Synchronisierung der Beacon Chain (Goerli-Testnet)
-
-### 5. Anmelden {#5-log-in}
-
-Sie können sich über SSH oder über die Konsole anmelden (wenn Sie einen Monitor und eine Tastatur angeschlossen haben).
-
-```bash
-User: ethereum
-Password: ethereum
+```shell
+Benutzer: ethereum
+Passwort: ethereum
 ```
 
-Bei der ersten Anmeldung werden Sie aufgefordert, das Passwort zu ändern, so dass Sie sich zweimal anmelden müssen.
+Der Standard-Ausführungs-Client, Geth, startet automatisch. Du kannst dies bestätigen, indem du die Protokolle mit dem folgenden Terminal-Befehl überprüfst:
 
-### 6. Öffnen Sie den Port 30303 für Geth und 13000, wenn Sie eine Prysm-Beacon Chain verwenden. Wenn Sie nicht wissen, wie das geht, geben Sie in einer Suchmaschine "Portweiterleitung" gefolgt von Ihrem Routermodell ein. {#6-open-30303-port-for-geth-and-13000-if-you-are-running-prysm-beacon-chain-if-you-dont-know-how-to-do-this-google-port-forwarding-followed-by-your-router-model}
-
-### 7. Konsolenausgabe abrufen {#7-get-console-output}
-
-Sie können sehen, was im Hintergrund passiert, indem Sie Folgendes eingeben:
-
-```bash
-sudo tail -f /var/log/syslog
+```sh
+sudo journalctl -u geth -f
 ```
 
-**Herzlichen Glückwunsch. Sie betreiben nun einen vollständigen Ethereum-Node auf Ihrem Raspberry Pi 4.**
+Der Konsens-Client muss explizit gestartet werden. Öffne dazu zuerst Port 9000 auf deinem Router, damit Lighthouse Peers finden und eine Verbindung zu ihnen herstellen kann. Aktivieren und starten Sie dann den Lighthouse-Dienst:
 
-## Synchronisierung mit der Blockchain {#syncing-the-blockchain}
-
-Jetzt müssen Sie warten, bis die Blockchain synchronisiert ist. Im Falle der Ausführungsebene wird dieser Vorgang einige Tage dauern, da er von verschiedenen Faktoren abhängig ist. Sie können mit bis zu 5-7 Tagen rechnen.
-
-Wenn Sie die Konsensebene des Goerli-Testnets verwenden, können Sie mit einer Synchronisationszeit von 1-2 Tagen für die Beacon Chain rechnen. Denken Sie daran, dass Sie den Validator später einrichten müssen, um den Staking-Prozess zu starten. [So führen Sie den Konsensebenen-Validator aus](/developers/tutorials/run-node-raspberry-pi/#validator).
-
-## Dashboards überwachen {#monitoring-dashboards}
-
-Für diese erste Version haben wir 3 Überwachungs-Dashboards auf Grundlage von Prometheus [[5]](/developers/tutorials/run-node-raspberry-pi/#references)/Grafana [[6]](/developers/tutorials/run-node-raspberry-pi/#references) eingebaut, um den Node und die Daten der Clients (Geth und Besu) zu überwachen. Sie können über Ihren Webbrowser darauf zugreifen:
-
-```bash
-URL: http://your_raspberrypi_IP:3000
-User: admin
-Password: ethereum
+```sh
+sudo systemctl enable lighthouse-beacon
+sudo systemctl start lighthouse-beacon
 ```
 
-## Clients wechseln {#switching-clients}
+Überprüfe den Client anhand der Protokolle:
 
-Alle Clients laufen als Systemdienst. Das ist wichtig, denn wenn ein Problem auftritt, wird das System den Prozess automatisch neu starten.
-
-Die Beacon Chain von Geth und Prysm läuft standardmäßig (je nachdem, wie Sie synchronisieren, Ausführungsebene oder Konsensebene). Wenn Sie also zu einem anderen Client wechseln möchten (z. B. von Geth zu Nethermind), müssen Sie zuerst Geth anhalten und deaktivieren und dann den anderen Client aktivieren und starten:
-
-```bash
-sudo systemctl stop geth && sudo systemctl disable geth
+```sh
+sudo journalctl -u lighthouse-beacon
 ```
 
-Befehle zum Aktivieren und Starten jedes Ausführungs-Clients:
+Beachte, dass der Konsens-Client in wenigen Minuten synchronisiert wird, da er die Checkpoint-Synchronisierung verwendet. Der Ausführungs-Client wird länger brauchen – möglicherweise mehrere Stunden – und er startet erst, wenn der Konsens-Client bereits synchronisiert ist (das liegt daran, dass der Ausführungs-Client ein Ziel für die Synchronisierung benötigt, das der synchronisierte Konsens-Client bereitstellt).
 
-```bash
-sudo systemctl enable besu && sudo systemctl start besu
-sudo systemctl enable nethermind && sudo systemctl start nethermind
-sudo systemctl enable parity && sudo systemctl start parity
+Wenn die Dienste Geth und Lighthouse laufen und synchronisiert sind, ist dein Raspberry Pi jetzt ein Ethereum-Node! Am häufigsten wird mit dem Ethereum-Netzwerk über die Javascript-Konsole von Geth interagiert, die an den Geth-Client an Port 8545 angehängt werden kann. Es ist auch möglich, Befehle, die als JSON-Objekte formatiert sind, mit einem Anfrage-Tool wie Curl zu übermitteln. Mehr dazu findest du in der [Geth-Dokumentation](https://geth.ethereum.org/).
+
+Geth ist so vorkonfiguriert, dass es Metriken an ein Grafana-Dashboard meldet, das im Browser angezeigt werden kann. Als fortgeschrittener Benutzer möchtest du diese Funktion möglicherweise nutzen, um den Zustand deines Nodes zu überwachen, indem du zu `ipaddress:3000` navigierst und `user: admin` sowie `passwd: ethereum` eingibst.
+
+## Validatoren {#validators}
+
+Optional kann auch ein Validator zum Konsens-Client hinzugefügt werden. Die Validator-Software ermöglicht es deinem Node, aktiv am Konsens teilzunehmen und versorgt das Netzwerk mit kryptoökonomischer Sicherheit. Für diese Arbeit wirst du in ETH belohnt. Um einen Validator zu betreiben, musst du zunächst 32 ETH besitzen, die in den Einzahlungsvertrag eingezahlt werden müssen. Die Einzahlung kann erfolgen, indem du der Schritt-für-Schritt-Anleitung auf dem [Launchpad](https://launchpad.ethereum.org/) folgst. Führe dies auf einem Desktop/Laptop durch, aber generiere keine Schlüssel – dies kann direkt auf dem Raspberry Pi erledigt werden.
+
+Öffne ein Terminal auf dem Raspberry Pi und führe den folgenden Befehl aus, um die Einzahlungsschlüssel zu generieren:
+
+```
+sudo apt-get update
+sudo apt-get install staking-deposit-cli
+cd && deposit new-mnemonic --num_validators 1
 ```
 
-Konsens-Clients:
+(Oder lade das [staking-deposit-cli](https://github.com/ethereum/staking-deposit-cli) herunter, um es auf einer Air-Gapped-Maschine auszuführen, und führe den Befehl `deposit new-mnemnonic` aus)
 
-```bash
-sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
-sudo systemctl start lighthouse && sudo systemctl enable lighthouse
+Bewahre die mnemonische Phrase sicher auf! Der obige Befehl hat zwei Dateien im Keystore des Nodes generiert: die Validator-Schlüssel und eine Einzahlungsdatendatei. Die Einzahlungsdaten müssen auf das Launchpad hochgeladen werden, daher müssen sie vom Raspberry Pi auf den Desktop/Laptop kopiert werden. Dies kann über eine SSH-Verbindung oder eine andere Kopieren-und-Einfügen-Methode erfolgen.
+
+Sobald die Einzahlungsdatendatei auf dem Computer verfügbar ist, auf dem das Launchpad läuft, kann sie auf das `+` auf dem Launchpad-Bildschirm gezogen und abgelegt werden. Folge den Anweisungen auf dem Bildschirm, um eine Transaktion an den Einzahlungsvertrag zu senden.
+
+Zurück auf dem Raspberry Pi kann ein Validator gestartet werden. Dies erfordert den Import der Validator-Schlüssel, das Festlegen der Adresse zum Sammeln von Belohnungen und dann das Starten des vorkonfigurierten Validator-Prozesses. Das folgende Beispiel gilt für Lighthouse – Anleitungen für andere Konsens-Clients sind in den [Ethereum-on-Arm-Dokumenten](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) verfügbar:
+
+```shell
+# Validator-Schlüssel importieren
+lighthouse account validator import --directory=/home/ethereum/validator_keys
+
+# Belohnungsadresse festlegen
+sudo sed -i 's/<ETH_ADDRESS>' /etc/ethereum/lighthouse-validator.conf
+
+# Validator starten
+sudo systemctl start lighthouse-validator
 ```
 
-## Parameter ändern {#changing-parameters}
+Herzlichen Glückwunsch, du hast jetzt einen vollständigen Ethereum-Node und Validator, der auf einem Raspberry Pi läuft!
 
-Die Konfigurationsdateien der Clients befinden sich in dem Verzeichnis /etc/ethereum/. Sie können diese Dateien bearbeiten und den Systemdienst neu starten, damit die Änderungen wirksam werden. Die einzige Ausnahme ist Nethermind, das zusätzlich eine Mainnet-Konfigurationsdatei hat, die sich hier befindet:
+## Weitere Details {#more-details}
 
-```bash
-/etc/nethermind/configs/mainnet.cfg
-```
-
-Die Daten der Blockchain-Clients werden wie folgt auf dem Ethereum-Home-Konto gespeichert (beachten Sie den Punkt vor dem Verzeichnisnamen):
-
-### Ausführungsebene {#execution-layer}
-
-```bash
-/home/ethereum/.geth
-/home/ethereum/.parity
-/home/ethereum/.besu
-/home/ethereum/.nethermind
-```
-
-### Konsensebene {#consensus-layer}
-
-```bash
-/home/ethereum/.eth2
-/home/ethereum/.eth2validators
-/home/ethereum/.lighthouse
-```
-
-## Nethermind und Hyperledger Besu {#nethermind-and-hyperledger-besu}
-
-Diese beiden großartigen Ausführungs-Clients sind eine sehr gute Alternative zu Geth und Parity geworden. Je größer die Vielfalt im Netz, desto besser. Also probieren Sie sie aus und leisten Sie damit einen Beitrag zur Gesundheit des Netzwerks.
-
-Beide Clients müssen noch weiter getestet werden. Experimentieren Sie also gerne damit und geben Sie uns Feedback dazu.
-
-## So führen Sie den Konsensvalidator aus (Staking) {#validator}
-
-Sobald die Görli-Testnet-Beacon-Chain synchronisiert ist, können Sie einen Validator in demselben Gerät ausführen. Sie müssen [diese Teilnahmeschritte](https://prylabs.net/participate) befolgen.
-
-Beim ersten Mal ist es erforderlich, manuell ein Konto zu erstellen. Führen Sie dazu das Binärprogramm "validator" aus und legen Sie ein Passwort fest. Sobald Sie diesen Schritt abgeschlossen haben, können Sie das Passwort zu `/etc/ethereum/prysm-validator.conf` hinzufügen und den Validator als Systemdienst starten.
+Diese Seite gab einen Überblick darüber, wie man einen Geth-Lighthouse-Node und -Validator mit einem Raspberry Pi einrichtet. Detailliertere Anweisungen sind auf der [Ethereum-on-Arm-Webseite](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html) verfügbar.
 
 ## Feedback erwünscht {#feedback-appreciated}
 
-Wir haben viel Arbeit investiert, um den Raspberry Pi 4 als vollwertigen Ethereum-Node einzurichten, da wir wissen, dass die große Nutzerbasis dieses Geräts einen sehr positiven Einfluss auf das Netzwerk haben kann.
-
-Beachten Sie, dass dies das erste Image auf Basis von Ubuntu 20.04 ist und es daher noch einige Fehler enthalten kann. Wenn Sie das feststellen, eröffnen Sie ein Thema auf [GitHub](https://github.com/diglos/ethereumonarm) oder kontaktieren Sie uns auf [Twitter](https://twitter.com/EthereumOnARM).
+Wir wissen, dass der Raspberry Pi eine riesige Nutzerbasis hat, die einen sehr positiven Einfluss auf die Gesundheit des Ethereum-Netzwerks haben könnte.
+Bitte vertiefe dich in die Details dieses Tutorials, probiere es auf Testnets aus, sieh dir das Ethereum on Arm GitHub an, gib Feedback, melde Probleme und erstelle Pull-Requests und hilf mit, die Technologie und Dokumentation voranzubringen!
 
 ## Referenzen {#references}
 
-1. [geth stürzt wiederholt mit SIGSEGV ab](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
-3. https://ubuntu.com/download/raspberry-pi
-4. https://wikipedia.org/wiki/Port_forwarding
-5. https://prometheus.io
-6. https://grafana.com
-7. https://forum.armbian.com/topic/5565-zram-vs-swap/
-8. https://geth.ethereum.org
-9. https://github.com/openethereum/openethereum \* **Beachten Sie, dass OpenEthereum [veraltet](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ist und nicht mehr gepflegt wird.** Verwenden Sie es mit Vorsicht und wechseln Sie lieber zu einer anderen Client-Implementierung.
-10. https://nethermind.io
-11. https://www.hyperledger.org/projects/besu
-12. https://github.com/prysmaticlabs/prysm
-13. https://lighthouse.sigmaprime.io
-14. https://ethersphere.github.io/swarm-home
-15. https://raiden.network
-16. https://ipfs.io
-17. https://status.im
-18. https://vipnode.org
+1. https://ubuntu.com/download/raspberry-pi
+2. https://wikipedia.org/wiki/Port_forwarding
+3. https://prometheus.io
+4. https://grafana.com
+5. https://forum.armbian.com/topic/5565-zram-vs-swap/
+6. https://geth.ethereum.org
+7. https://nethermind.io
+8. https://www.hyperledger.org/projects/besu
+9. https://github.com/prysmaticlabs/prysm
+10. https://lighthouse.sigmaprime.io
+11. https://ethersphere.github.io/swarm-home
+12. https://raiden.network
+13. https://ipfs.io
+14. https://status.im
+15. https://vipnode.org

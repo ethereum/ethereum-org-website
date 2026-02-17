@@ -1,6 +1,6 @@
 ---
-title: Technologie distribuovaných validátorů
-description: Technologie distribuovaných validátorů umožňuje distribuovaný provoz ethereovského validátoru více stranami.
+title: "Technologie distribuovaných validátorů"
+description: "Technologie distribuovaných validátorů umožňuje distribuovaný provoz ethereovského validátoru více stranami."
 lang: cs
 ---
 
