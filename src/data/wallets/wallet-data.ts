@@ -29,6 +29,7 @@ import GemWalletImage from "@/public/images/wallets/gemwallet.png"
 import GridPlusImage from "@/public/images/wallets/gridplus.png"
 import imKeyImage from "@/public/images/wallets/imkey.png"
 import imTokenImage from "@/public/images/wallets/imtoken.png"
+import InfinexImage from "@/public/images/wallets/infinexwallet.png"
 import IoFinnetImage from "@/public/images/wallets/iofinnet.png"
 import KeystoneImage from "@/public/images/wallets/keystone.png"
 import LedgerImage from "@/public/images/wallets/ledger.png"
@@ -2993,6 +2994,68 @@ export const walletsData: WalletData[] = [
       "Abstract",
       "World Chain",
     ],
+  },
+  {
+    // https://github.com/ethereum/ethereum-org-website/issues/17586
+    last_updated: "2026-02-17",
+    name: "Infinex Wallet & Crypto Superapp",
+    image: InfinexImage,
+    twBackgroundColor: "bg-[#FE6F39]",
+    twGradiantBrandColor: "from-[#FE6F39]",
+    active_development_team: true,
+    url: "https://infinex.xyz/extension?ref=ethfw",
+    twitter: "https://x.com/infinex",
+    discord: "https://discord.com/invite/infinex",
+    reddit: "",
+    telegram: "https://t.me/infinexbroadcast",
+    onboard_documentation:
+      "https://support.infinex.xyz/en/articles/12854879-infinex-browser-extension?ref=ethfw",
+    documentation:
+      "https://support.infinex.xyz/en/collections/9874360-your-infinex-account?ref=ethfw",
+    ios: true, // pinnable webapp
+    android: true, // pinnable webapp
+    linux: true, // pinnable webapp
+    windows: true, // pinnable webapp
+    macOS: true, // pinnable webapp
+    firefox: false,
+    chromium: true, // https://chromewebstore.google.com/detail/infinex/ibcnlnjajdjfjdcogphnhombiegpcnbj
+    hardware: false,
+    multichain: true,
+    supported_chains: [
+      // https://infinex.xyz/legals/supported-assets
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "OP Mainnet",
+      "Base",
+      "Blast",
+      "Unichain",
+      "Ink",
+    ],
+    languages_supported: ["en"],
+    buy_crypto: false,
+    withdraw_crypto: false,
+    connect_to_dapps: true,
+    nft_support: true,
+    staking: true,
+    layer_2: true,
+    swaps: true,
+    hardware_support: true, // https://infinex.xyz/news/59-hardware-wallet-support-bulk-move
+    ens_support: true,
+    open_source: false,
+    repo_url: "https://github.com/infinex-xyz",
+    non_custodial: true,
+    security_audit: [
+      "https://iosiro.com/audits/infinex-accounts-smart-account-smart-contract-audit",
+      "https://ottersec.notion.site/Infinex-68e26cdbdc7848b7992b80d5b7005063",
+    ],
+    scam_protection: true,
+    multisig: false,
+    mpc: false,
+    social_recovery: true,
+    privacy: true, // no KYC, private send https://infinex.xyz/news/61-incognito-mode
+    rpc_importing: false,
+    erc_20_support: true, // auto, but scam assets are filtered (can be selectively disabled)
+    gas_fee_customization: false,
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
