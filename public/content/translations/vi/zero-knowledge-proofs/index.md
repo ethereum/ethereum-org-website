@@ -50,7 +50,8 @@ Bằng chứng không kiến thức đặc biệt hữu ích trong bối cảnh 
   <AlertEmoji text="💡" />
   <AlertContent>
     <AlertTitle className="mb-2">
-ZKP + Danh tính trong thực tế: ID kỹ thuật số quốc gia (NDI) của Bhutan trên Ethereum</AlertTitle>
+      ZKP + Danh tính trong thực tế: ID kỹ thuật số quốc gia (NDI) của Bhutan trên Ethereum
+    </AlertTitle>
     <AlertDescription>
       <p>
         Một ví dụ trong thế giới thực về việc sử dụng ZKP cho các hệ thống quản lý danh tính là hệ thống ID kỹ thuật số quốc gia (NDI) của Vương quốc Bhutan, được xây dựng trên Ethereum. NDI của Bhutan sử dụng ZKP để cho phép công dân chứng minh một cách mã hóa các sự thật về bản thân họ, như "Tôi là một công dân" hoặc "Tôi trên 18 tuổi", mà không tiết lộ dữ liệu cá nhân nhạy cảm trên ID của họ.

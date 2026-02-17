@@ -144,7 +144,7 @@ Mặc dù AVS cung cấp các tỷ lệ khác nhau, các Token Tái cổ phần 
 <AlertDescription>
   <p className="mt-0"><strong>Đồng sáng lập Ethereum đang gõ…</strong></p>
   <p className="mt-2">
-    Vitalik, đồng sáng lập Ethereum, đã cảnh báo về những rủi ro tiềm tàng của việc tái cổ phần trong một bài đăng blog năm 2021 có tên <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> Don't Overload Consensus</a>. </a>  
+    Vitalik, đồng sáng lập Ethereum, đã cảnh báo về những rủi ro tiềm tàng của việc tái cổ phần trong một bài đăng blog năm 2021 có tên <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> Don't Overload Consensus.</a>  
 </p>
 </AlertDescription>
 </AlertContent>

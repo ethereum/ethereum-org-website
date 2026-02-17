@@ -254,7 +254,7 @@ với `"""`), và không sử dụng nó theo bất kỳ cách nào. Những bì
     self.minter = msg.sender
 ```
 
-Để truy cập các biến trạng thái, bạn sử dụng `self.<tên biến>`` (một lần nữa, giống như trong Python).
+Để truy cập các biến trạng thái, bạn sử dụng `self.<tên biến>` (một lần nữa, giống như trong Python).
 
 #### Xem Hàm {#views}
 

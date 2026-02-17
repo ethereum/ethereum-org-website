@@ -143,7 +143,7 @@ Theo quy ước, trong React, các hàm được gọi là `use...` là các [ho
     <>
 ```
 
-JSX của một thành phần React _phải_ trả về một thành phần. Khi chúng ta có nhiều thành phần và không có gì bao bọc "một cách tự nhiên", chúng ta sử dụng một thành phần trống (`<> ...` </>`) để biến chúng thành một thành phần duy nhất.
+JSX của một thành phần React _phải_ trả về một thành phần. Khi chúng ta có nhiều thành phần và không có gì bao bọc "một cách tự nhiên", chúng ta sử dụng một thành phần trống (`<> ... </>`) để biến chúng thành một thành phần duy nhất.
 
 ```tsx
       <h1>Greeter</h1>

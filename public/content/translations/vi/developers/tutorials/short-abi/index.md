@@ -165,7 +165,7 @@ Trên L1, có thể cần bỏ qua các bài kiểm tra này để tiết kiệm
 Chúng ta có thể sao chép dữ liệu từ lệnh gọi đến `fallback()` (xem bên dưới), nhưng việc sử dụng [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), ngôn ngữ hợp ngữ của máy ảo ethereum (EVM), sẽ dễ dàng hơn.
 
 Ở đây chúng ta sử dụng [opcode CALLDATALOAD](https://www.evm.codes/#35) để đọc các byte từ `startByte` đến `startByte+31` vào ngăn xếp.
-Nói chung, cú pháp của một opcode trong Yul là `<tên opcode>(<giá trị ngăn xếp đầu tiên, nếu có>,<giá trị ngăn xếp thứ hai, nếu có>...).
+Nói chung, cú pháp của một opcode trong Yul là `<tên opcode>(<giá trị ngăn xếp đầu tiên, nếu có>,<giá trị ngăn xếp thứ hai, nếu có>...)`.
 
 ```solidity
 

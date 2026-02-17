@@ -252,7 +252,7 @@ import "../../math/SafeMath.sol";
   sử dụng chuỗi khối. Lưu ý rằng đây là một phiên bản cũ, nếu bạn muốn tích hợp với OpenGSN
   [hãy sử dụng hướng dẫn này](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [Thư viện SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), ngăn chặn
-  tràn số/tràn số dưới cho các phiên bản Solidity **<0.8.0**. Trong Solidity ≥0.8.0, các phép toán số học tự động
+  tràn số/tràn số dưới cho các phiên bản Solidity **&lt;0.8.0**. Trong Solidity ≥0.8.0, các phép toán số học tự động
   hoàn nguyên khi tràn số/tràn số dưới, khiến SafeMath không cần thiết. Hợp đồng này sử dụng SafeMath để tương thích ngược với
   các phiên bản trình biên dịch cũ hơn.
 

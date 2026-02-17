@@ -444,9 +444,9 @@ Phân nhánh Istanbul:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">Đề xuất cải thiện Ethereum-152</a> - <em> cho phép Ethereum làm việc với đồng tiền bảo vệ quyền riêng tư như Zcash.</em></li>
   <li>EIP-1108 – mật mã học rẻ hơn nhằm cải thiện chi phí [gas]</li>
-  <li>EIP-1344 – bảo vệ Ethereum khỏi các cuộc tấn công lặp lại bằng cách thêm <CHAINID> [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)..</em></li>
+  <li>EIP-1344 – bảo vệ Ethereum khỏi các cuộc tấn công lặp lại bằng cách thêm <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">opcode</a>.</li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">Đề xuất cải thiện Ethereum-1884</a> - <em>tối ưu hóa mã lệnh chi phí gas dựa trên tiêu thụ.</em></li>
-  <li>EIP-2028 – làm giảm chi phí CallData để cho phép nhiều dữ liệu hơn trong các khối – điều này có lợi cho [Layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).</em></li>
+  <li>EIP-2028 – <em>làm giảm chi phí CallData để cho phép nhiều dữ liệu hơn trong các khối – điều này có lợi cho [Layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">Đề xuất cải thiện Ethereum-2200</a> - <em>thay đổi giá gas mã lệnh khác.</em></li>
 </ul>
 </ExpandableCard>
@@ -502,13 +502,13 @@ Phân nhánh Byzantium:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>thêm opcode <code>REVERT</code>.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">Đề xuất cải thiện Ethereum-658</a> - <em>trường trạng thái được thêm vào danh sách giao dịch để chỉ ra trạng thái giao dịch thành công hay thất bại.</em></li>
-  <li>EIP-196 – bổ sung phép nhân trên đường cong ellip và phép nhân vô hướng để cho phép [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
-  <li>EIP-197 – bổ sung phép nhân trên đường cong ellip và phép nhân vô hướng để cho phép [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li>EIP-196 – <em>bổ sung phép nhân trên đường cong ellip và phép nhân vô hướng để cho phép [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li>EIP-197 – <em>bổ sung phép nhân trên đường cong ellip và phép nhân vô hướng để cho phép [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">Đề xuất cải thiện Ethereum-198</a> - <em> cho phép xác minh chữ ký thuật toán mã hóa công khai.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">Đề xuất cải thiện Ethereum-211</a> - <em> bổ sung hỗ trợ cho các giá trị lợi nhuận có độ dài khác nhau.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">Đề xuất cải thiện Etherem-214</a> - <em> thêm vào mã lệnh <code> STATICCALL</code>, cho phép các cuộc gọi không thay đổi trạng thái tới các hợp đồng khác.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">Đề xuất cải thiện Ethereum-100</a> - <em> thay đổi công thức chỉnh sửa độ khó.</em></li>
-  <li>EIP-649 – trì hoãn [dificulty bomb](/glossary/#difficulty-bomb) thêm 1 năm và giảm phần thưởng khối từ 5 xuống 3 ETH.</em></li>
+  <li>EIP-649 – <em>trì hoãn [dificulty bomb](/glossary/#difficulty-bomb) thêm 1 năm và giảm phần thưởng khối từ 5 xuống 3 ETH.</em></li>
 </ul>
 </ExpandableCard>
 
