@@ -9,7 +9,7 @@ tags:
 skill: intermediate
 lang: it
 published: 2020-09-06
-source: Creare contratti sicuri
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 
@@ -27,7 +27,7 @@ La documentazione può essere scritta su diversi livelli e deve essere aggiornat
 - **Schema e diagrammi architettonici**, incluse le interazioni del contratto e la macchina a stati del sistema. Le [stampanti Slither](https://github.com/crytic/slither/wiki/Printer-documentation) possono aiutare a generare questi schemi.
 - **Documentazione approfondita sul codice**, il [formato Natspec](https://solidity.readthedocs.io/en/develop/natspec-format.html) si può usare per Solidity.
 
-### Calcolo sulla catena ed esterno alla catena {#on-chain-vs-off-chain-computation}
+### Calcolo sulla catena ed esterno alla catena {#onchain-vs-offchain-computation}
 
 - **Mantieni quanto più codice possibile al di fuori della catena.** Il livello sulla catena deve essere il più ridotto possibile. Elabora anticipatamente i dati con il codice esternamente alla catena così che la verifica su di essa sia semplice. Ti serve un elenco ordinato? Ordina l'elenco esternamente alla catena, poi controlla solo l'ordine sulla catena.
 

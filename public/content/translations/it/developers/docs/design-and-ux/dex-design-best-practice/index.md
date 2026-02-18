@@ -206,7 +206,7 @@ Il pulsante può anche venire **mappato all'azione** che deve essere eseguita. P
 
 ![Messaggio di errore visualizzato nella CTA principale](./17.png)
 
-### Costruisci la tua con questo file di Figma {#build-your-own-with-this-figma-file}
+## Costruisci la tua con questo file di Figma {#build-your-own-with-this-figma-file}
 
 Grazie al duro lavoro di vari protocolli, la progettazione delle DEX è migliorata parecchio. Sappiamo di quali informazioni ha bisogno l'utente, come dobbiamo visualizzarle e come far andare più liscio possibile il flusso.
 Speriamo che questo articolo ti abbia dato una solida panoramica dei principi UX.

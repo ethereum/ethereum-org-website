@@ -71,6 +71,7 @@ Differente dalle sanzioni di inattività per esser offline, il <em>taglio</em> �
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Ulteriori informazioni sullo slashing e sul ciclo di vita dei validatori</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -130,7 +131,6 @@ Esistono alcune domande molto comuni sullo staking che meritano di essere affron
 <ExpandableCard title="Cos'è un validatore?">
 
 Un <em>validatore</em> è un'entità virtuale che risiede su Ethereum e partecipa al consenso del protocollo di Ethereum. I validatori sono rappresentati da un saldo, una chiave pubblica e altre proprietà. Un <em>client del validatore</em> è il software che agisce per conto del validatore detenendone e usandone la chiave privata. Un singolo client del validatore può detenere molte coppie di chiavi, controllando molti validatori.
-
 </ExpandableCard>
 
 <ExpandableCard title="Posso depositare più di 32 ETH?">
