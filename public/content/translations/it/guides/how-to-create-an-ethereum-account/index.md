@@ -47,7 +47,7 @@ Alcune applicazioni chiederanno di salvare una "frase di recupero" segreta (a vo
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Come utilizzare un portafoglio
   </ButtonLink>
- </AlertContent>
+</AlertContent>
 </Alert>
 </div>
 

@@ -1,6 +1,6 @@
 ---
 title: Linguaggi dei contratti intelligenti
-description: 'Panoramica e confronto dei due linguaggi principali dei contratti intelligenti: Solidity e Viper.'
+description: 'Panoramica e confronto dei due linguaggi principali dei contratti intelligenti: Solidity e Vyper.'
 lang: it
 ---
 
@@ -91,7 +91,7 @@ Questo esempio dà un'idea della sintassi di un contratto in Solidity. Per una d
 - Tipizzazione forte
 - Codice del compilatore contenuto e comprensibile
 - Generazione di bytecode efficiente
-- Contiene deliberatamente meno funzionalità di Solidity, mirando a rendere i contratti più sicuri e facili da xcontcontrollare. Vyper non supporta:
+- Contiene deliberatamente meno funzionalità di Solidity, mirando a rendere i contratti più sicuri e facili da controllare. Vyper non supporta:
   - Modificatori
   - Ereditarietà
   - Assemblaggio in linea
@@ -123,24 +123,32 @@ Per ulteriori informazioni, [consulta la logica di Vyper](https://vyper.readthed
 # Apertura asta
 
 # Parametri d'asta
+
 # Il beneficiario riceve denaro dal miglior offerente
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Stato attuale dell'asta
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Imposta a true alla fine per non permettere più modifiche
+
 ended: public(bool)
 
 # Tiene traccia delle offerte rimborsate in modo da poter seguire il modello di prelievo
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Crea una semplice asta con `_bidding_time`
+
 # tempo di offerta in secondi per conto 
+
 # dell'indirizzo del beneficiario `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Offerta sull'asta con il valore inviato
+
 # insieme a questa transazione.
+
 # Il valore sarà rimborsato solo se l'asta
+
 # non viene vinta.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Preleva un'offerta precedentemente rimborsata. Il modello di prelievo è
+
 # utilizzato qui per evitare un problema di sicurezza. Se i rimborsi venissero inviati direttamente
+
 # come parte di bid(), un contratto di offerta malevolo potrebbe bloccarli
+
 # e quindi bloccare le nuove offerte più alte in arrivo.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Termina l'asta e invia l'offerta più alta
+
 # al beneficiario.
+
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact

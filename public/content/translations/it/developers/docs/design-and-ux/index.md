@@ -78,7 +78,7 @@ Partecipate ad organizzazioni professionali guidate dalla community o unitevi a 
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
 
-## Sistemi di progettazione {#design-systems}
+## Sistemi di progettazione {#design-systems-and-resources}
 
 - [Progettazione di Optimism](https://www.figma.com/@optimism) (Figma)
 - [Sistema di progettazione di Ethereum.org](https://www.figma.com/@ethdotorg) (Figma)

@@ -9,11 +9,11 @@ Un nodo archivio è un'istanza di un client di Ethereum configurata per creare u
 
 ## Prerequisiti {#prerequisites}
 
-Dovresti comprendere il concetto di [nodo di Ethereum](/developers/docs/nodes-and-clients/), [la sua architettura](/developers/docs/nodes-and-clients/node-architecture/), le [strategie di sincronizzazione](/developers/docs/nodes-and-clients/#sync-modes) e le pratiche della sua [esecuzione](/developers/docs/nodes-and-clients/run-a-node/) e [utilizzo](/developers/docs/apis/json-rpc/).
+Dovresti comprendere il concetto di un [nodo Ethereum](/developers/docs/nodes-and-clients/), [la sua architettura](/developers/docs/nodes-and-clients/node-architecture/), le [strategie di sincronizzazione](/developers/docs/nodes-and-clients/#sync-modes), le pratiche per [eseguirlo](/developers/docs/nodes-and-clients/run-a-node/) e [utilizzarlo](/developers/docs/apis/json-rpc/).
 
 ## Cos'è un nodo archivio
 
-Per cogliere l'importanza di un nodo archivio, chiariamo il concetto di "stato". Ethereum è definibile come una _macchina di stato basata sulle transazioni_. Consiste in conti e applicazioni che eseguono transazioni, i cui stati cambiano. I dati globali con informazioni su ogni conto e contratto sono memorizzati in un database ad albero, detto stato. Questo è gestito dal client del livello di esecuzione (EL) e include:
+Per cogliere l'importanza di un nodo archivio, chiariamo il concetto di "stato". Ethereum è definibile come una _macchina a stati basata sulle transazioni_. Consiste in conti e applicazioni che eseguono transazioni, i cui stati cambiano. I dati globali con informazioni su ogni conto e contratto sono memorizzati in un database ad albero, detto stato. Questo è gestito dal client del livello di esecuzione (EL) e include:
 
 - Saldi e nonce dei conti
 - Codice del contratto e archiviazione
@@ -46,7 +46,7 @@ Come spiegato sopra, un nodo completo dovrebbe generare questi dati dall'esecuzi
 - Sviluppatori di Dapp
 - Controllo e conformità
 
-Esistono anche vari [servizi](/developers/docs/nodes-and-clients/nodes-as-a-service/) gratuiti che consentono l'accesso a dati storici. Essendo più impegnativo eseguire un nodo archivio, questo accesso è per lo più limitato e funziona soltanto per l'accesso occasionale. Se il tuo progetto richiede l'accesso costante ai dati storici, dovresti considerare di eseguirne uno tu stesso.
+Esistono vari [servizi](/developers/docs/nodes-and-clients/nodes-as-a-service/) gratuiti che consentono anche l'accesso ai dati storici. Essendo più impegnativo eseguire un nodo archivio, questo accesso è per lo più limitato e funziona soltanto per l'accesso occasionale. Se il tuo progetto richiede l'accesso costante ai dati storici, dovresti considerare di eseguirne uno tu stesso.
 
 ## Implementazioni e utilizzi
 
@@ -56,25 +56,26 @@ Prima di avviare il tuo nodo archivio, scopri le differenze tra i client e, in p
 
 ## Pratiche consigliate
 
-Oltre ai [consigli generali per eseguire un nodo](developers/docs/nodes-and-clients/run-a-node/), un nodo archivio potrebbe avere requisiti maggiori in termini di hardware e manutenzione. Considerando le [funzionalità chiave](https://github.com/ledgerwatch/erigon#key-features) di Erigon, l'approccio più pratico è utilizzare l'implementazione del client di [Erigon](/developers/docs/nodes-and-clients/#erigon).
+Oltre ai [consigli generali per eseguire un nodo](/developers/docs/nodes-and-clients/run-a-node/), un nodo archivio potrebbe avere requisiti maggiori in termini di hardware e manutenzione. Considerando le [funzionalità chiave](https://github.com/ledgerwatch/erigon#key-features) di Erigon, l'approccio più pratico consiste nell'utilizzare l'implementazione del client [Erigon](/developers/docs/nodes-and-clients/#erigon).
 
 ### Hardware
 
-Assicurati sempre di verificare i requisiti hardware per una data modalità nella documentazione di un client. Il principale requisito per i nodi archivio è lo spazio su disco. A seconda del client, varia da 3TB a 12TB. Anche se gli HDD potrebbero essere considerati la migliore soluzione per grandi quantità di dati, sincronizzare e aggiornare costantemente la testa della catena richiederà dischi SSD. I dischi [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) sono abbastanza buoni ma dovrebbero essere di una qualità affidabile, almeno [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). I dischi possono esser montati in un computer fisso o un server dotato di un numero sufficiente di slot. Tali dispositivi dedicati sono ideali per eseguire nodi con tempi di disponibilità elevati. È assolutamente possibile eseguirli su un laptop, ma la portabilità comporterà un costo aggiuntivo.
+Assicurati sempre di verificare i requisiti hardware per una data modalità nella documentazione di un client.
+Il principale requisito per i nodi archivio è lo spazio su disco. A seconda del client, varia da 3TB a 12TB. Anche se gli HDD potrebbero essere considerati la migliore soluzione per grandi quantità di dati, sincronizzare e aggiornare costantemente la testa della catena richiederà dischi SSD. Le unità [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) sono sufficienti, ma dovrebbero essere di qualità affidabile, almeno [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). I dischi possono esser montati in un computer fisso o un server dotato di un numero sufficiente di slot. Tali dispositivi dedicati sono ideali per eseguire nodi con tempi di disponibilità elevati. È assolutamente possibile eseguirli su un laptop, ma la portabilità comporterà un costo aggiuntivo.
 
-Tutti i dati devono entrare in un volume, dunque i dischi devono essere uniti, ad esempio con [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) o LVM. Inoltre, potrebbe valere la pena di considerare l'utilizzo di [ZFS](https://en.wikipedia.org/wiki/ZFS) poiché supporta la "Copy-on-write", che assicura che i dati siano scritti correttamente senza alcun errore di basso livello.
+Tutti i dati devono entrare in un volume, dunque i dischi devono essere uniti, ad esempio con [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) o LVM. Inoltre, potrebbe valere la pena di considerare l'utilizzo di [ZFS](https://en.wikipedia.org/wiki/ZFS) poiché supporta la "Copy-on-write", che assicura che i dati siano scritti correttamente sul disco senza alcun errore di basso livello.
 
-Per una maggiore stabilità e sicurezza nel prevenire la corruzione accidentale del database, specialmente in una configurazione professionale, prendi in considerazione di utilizzare la [memoria ECC](https://en.wikipedia.org/wiki/ECC_memory), se il tuo sistema la supporta. Generalmente si consiglia che le dimensioni della RAM siano le stesse richieste per un nodo completo, ma maggiori quantità di RAM possono aiutare a velocizzare la sincronizzazione.
+Per una maggiore stabilità e sicurezza nel prevenire la corruzione accidentale del database, specialmente in una configurazione professionale, prendi in considerazione di utilizzare la [memoria ECC](https://en.wikipedia.org/wiki/ECC_memory) se il tuo sistema la supporta. Generalmente si consiglia che le dimensioni della RAM siano le stesse richieste per un nodo completo, ma maggiori quantità di RAM possono aiutare a velocizzare la sincronizzazione.
 
 Durante la sincronizzazione iniziale, i client in modalità archivio eseguiranno ogni transazione dalla genesi. La velocità di esecuzione è per lo più limitata dalla CPU, quindi una CPU più veloce può aiutare con i tempi della sincronizzazione iniziale. Sul computer del consumatore medio, la sincronizzazione iniziale può richiedere fino a un mese.
 
 ## Letture consigliate {#further-reading}
 
-- [Nodo completo vs nodo archivio di Ethereum](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode, settembre 2022_
+- [Nodo completo Ethereum vs Nodo archivio](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode, settembre 2022_
 - [Costruire il proprio nodo archivio di Ethereum](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush, agosto 2021_
-- [Come configurare Erigon, RPC di Erigon e TrueBlocks (scrape e API) come servizi](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, aggiornato a settembre 2022_
+- [Come impostare Erigon, l'RPC di Erigon e TrueBlocks (scrape e API) come servizi](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, aggiornato a settembre 2022_
 
 ## Argomenti correlati {#related-topics}
 
-- [ Nodi e client](/developers/docs/nodes-and-clients/)
+- [Nodi e client](/developers/docs/nodes-and-clients/)
 - [Eseguire un nodo](/developers/docs/nodes-and-clients/run-a-node/)

@@ -9,8 +9,8 @@ tags:
   - "query"
   - "javascript"
 skill: beginner
-source: documentazione Alchemy
-sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
+source: Alchemy docs
+sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
 
