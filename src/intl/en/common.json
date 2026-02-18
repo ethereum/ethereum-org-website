@@ -88,6 +88,7 @@
   "error-page-description": "You can help us improve by reporting this issue on our <a href='https://github.com/ethereum/ethereum-org-website/issues/new?label%3A%22bug%20%F0%9F%90%9B%22&template=bug_report.yaml'>GitHub repository</a>.",
   "error-page-home-link": "Return to the home page",
   "esp": "Ecosystem Support Program",
+  "eth-convert-to-usd": "Convert ETH to USD",
   "eth-current-price": "Current ETH price (USD)",
   "ethereum": "Ethereum",
   "ethereum-basics": "Ethereum basics",
