@@ -1,0 +1,23 @@
+{
+  "page-upgrades-merge-infographic-el": "ఎథెరియం స్టేట్: లావాదేవీలు, అనువర్తనాలు, ఒప్పందాలు, బ్యాలెన్స్ లు",
+  "page-upgrades-merge-infographic-alt-text": "ప్రూఫ్-ఆఫ్-వర్క్ నుండి ప్రూఫ్-ఆఫ్-స్టేక్ వరకు పరివర్తన సమయంలో బెకన్ చైన్ ఎథెరియం యొక్క అమలు పొరలో ఎలా విలీనం అవుతుందో వివరించే ఇన్ఫోగ్రాఫిక్.",
+  "page-upgrades-beacon-date": "రవాణా చేయబడింది!",
+  "page-upgrades-merge-date": "సెప్టెంబర్ 2022",
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-pbs": "వెంటనే కాదు - 2024/25లో ఆశించవచ్చు",
+  "page-upgrades-post-merge-banner-tutorial-ood": "ది మెర్జ్ తరువాత ఈ ట్యుటోరియల్ పాతబడిపోయింది మరియు పనిచేయకపోవచ్చు. మీరు సహకరించాలనుకుంటే దయచేసి ఒక PRను పంపండి.",
+  "page-upgrades-upgrades-guide": "ఎథెరియం అప్‌గ్రేడ్‌లకు గైడ్",
+  "page-upgrades-upgrades-docking": "ది మెర్జ్",
+  "page-upgrades-shard-title": "శార్డింగ్",
+  "page-upgrades-upgrades-beacon-chain": "ది బీకన్ చైన్",
+  "consensus-beaconscan-title": "beaconscan",
+  "consensus-beaconscan-in-title": "beaconcha.in",
+  "consensus-beaconcha-in-desc": "ఓపెన్ సోర్స్ బీకన్ చైన్ ఎక్స్‌ప్లోరర్",
+  "consensus-beaconscan-desc": "బీకన్ చైన్ ఎక్స్‌ప్లోరర్ - ఏకాభిప్రాయం లేయర్ కోసం Etherscan",
+  "consensus-become-staker": "స్టేకర్ అవ్వండి",
+  "consensus-become-staker-desc": "స్టేకింగ్ లైవ్‌లో ఉంది! నెట్‌వర్క్‌ను సురక్షితం చేయడంలో సహాయపడటానికి మీరు మీ ETHను స్టేక్ చేయాలనుకుంటే, మీరు నష్టాల గురించి తెలుసుకున్నారని నిర్ధారించుకోండి.",
+  "consensus-explore": "డేటాను అన్వేషించండి",
+  "consensus-run-beacon-chain": "ఒక ఏకాభిప్రాయం క్లయింట్‌ను రన్ చేయండి",
+  "consensus-run-beacon-chain-desc": "ఇతీరియముకు వీలైనన్ని ఎక్కువ క్లయింట్లు అమలు కావడం అవసరం. ఈ ఇతీరియము ప్రజా ప్రయోజనానికి సహాయం చేయండి!",
+  "read-more": "ఇంకా చదవండి"
+}

@@ -1,6 +1,6 @@
 import { Fragment } from "react"
 import { Info } from "lucide-react"
-import dynamic from "next/dynamic"
+import nextDynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
@@ -12,14 +12,12 @@ import type {
 } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
-import ABTestWrapper from "@/components/AB/TestWrapper"
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
 import HomepageSectionImage from "@/components/Homepage/HomepageSectionImage"
-import PersonaModalCTA from "@/components/Homepage/PersonaModalCTA"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
 import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
 import BlockHeap from "@/components/icons/block-heap.svg"
@@ -92,7 +90,7 @@ import {
 } from "@/lib/data"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
-const BentoCardSwiper = dynamic(
+const BentoCardSwiper = nextDynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
   {
     ssr: false,
@@ -105,7 +103,7 @@ const BentoCardSwiper = dynamic(
   }
 )
 
-const RecentPostsSwiper = dynamic(
+const RecentPostsSwiper = nextDynamic(
   () => import("@/components/Homepage/RecentPostsSwiper"),
   {
     ssr: false,
@@ -118,7 +116,7 @@ const RecentPostsSwiper = dynamic(
   }
 )
 
-const ValuesMarquee = dynamic(
+const ValuesMarquee = nextDynamic(
   () => import("@/components/Homepage/ValuesMarquee"),
   {
     ssr: false,
@@ -452,60 +450,44 @@ const Page = async ({ params }: { params: PageParams }) => {
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
         <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
-          <ABTestWrapper
-            testKey="HomepagePersonaCTAs"
-            variants={[
-              // Original: 4 CTAs grid
-              <div
-                key="four-ctas"
-                className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12"
-              >
-                {subHeroCTAs.map(
-                  ({ label, description, href, className, Svg }, idx) => {
-                    const Link = (
-                      props: Omit<
-                        SvgButtonLinkProps,
-                        "Svg" | "href" | "label" | "children"
-                      >
-                    ) => (
-                      <SvgButtonLink
-                        Svg={Svg}
-                        href={href}
-                        label={label}
-                        customEventOptions={{
-                          eventCategory,
-                          eventAction: "Top 4 CTAs",
-                          eventName: subHeroCTAs[idx].eventName,
-                        }}
-                        {...props}
-                      >
-                        <p className="text-body">{description}</p>
-                      </SvgButtonLink>
-                    )
-                    return (
-                      <Fragment key={label}>
-                        <Link
-                          className={cn("xl:hidden", className)}
-                          variant="col"
-                        />
-                        <Link
-                          className={cn("hidden xl:block", className)}
-                          variant="row"
-                        />
-                      </Fragment>
-                    )
-                  }
-                )}
-              </div>,
-              // Variation1: "Start here" button with persona modal
-              <div
-                key="persona-modal"
-                className="flex w-full items-center justify-center border-b pb-10"
-              >
-                <PersonaModalCTA eventCategory={eventCategory} />
-              </div>,
-            ]}
-          />
+          <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
+            {subHeroCTAs.map(
+              ({ label, description, href, className, Svg }, idx) => {
+                const Link = (
+                  props: Omit<
+                    SvgButtonLinkProps,
+                    "Svg" | "href" | "label" | "children"
+                  >
+                ) => (
+                  <SvgButtonLink
+                    Svg={Svg}
+                    href={href}
+                    label={label}
+                    customEventOptions={{
+                      eventCategory,
+                      eventAction: "Top 4 CTAs",
+                      eventName: subHeroCTAs[idx].eventName,
+                    }}
+                    {...props}
+                  >
+                    <p className="text-body">{description}</p>
+                  </SvgButtonLink>
+                )
+                return (
+                  <Fragment key={label}>
+                    <Link
+                      className={cn("xl:hidden", className)}
+                      variant="col"
+                    />
+                    <Link
+                      className={cn("hidden xl:block", className)}
+                      variant="row"
+                    />
+                  </Fragment>
+                )
+              }
+            )}
+          </div>
 
           {/* What is Ethereum */}
           <Section

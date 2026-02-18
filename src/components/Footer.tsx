@@ -62,7 +62,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("what-is-ethereum"),
         },
         {
-          href: "/eth/",
+          href: "/what-is-ether/",
           text: t("what-is-ether"),
         },
         {
@@ -165,12 +165,12 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("documentation"),
         },
         {
-          href: "/developers/learning-tools/",
-          text: t("learn-by-coding"),
+          href: "/developers/tools/",
+          text: t("start-building"),
         },
         {
-          href: "/developers/local-environment/",
-          text: t("set-up-local-env"),
+          href: "/developers/tools/education/",
+          text: t("learn-ethereum-development"),
         },
         {
           href: "/community/grants/",
@@ -185,7 +185,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("nav-docs-design-label"),
         },
         {
-          href: "/enterprise/",
+          href: "https://institutions.ethereum.org/",
           text: t("enterprise-mainnet"),
         },
         {
@@ -331,6 +331,15 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         >
           <ChevronUp /> <Translation id="go-to-top" />
         </Button>
+      </div>
+
+      <div className="px-4 py-4">
+        <BaseLink
+          href="/"
+          className="text-lg font-bold no-underline hover:text-primary"
+        >
+          Ethereum.org
+        </BaseLink>
       </div>
 
       <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
