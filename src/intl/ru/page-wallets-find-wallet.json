@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Ссылки",
   "page-find-wallet-empty-results-title": "Нет результатов",
   "page-find-wallet-empty-results-desc": "Нет кошельков, соответствующих критериям, попробуйте убрать некоторые фильтры.",
-  "page-find-wallet-see-wallets": "Посмотреть кошельки"
+  "page-find-wallet-privacy": "Конфиденциальность",
+  "page-find-wallet-privacy-desc": "Кошельки с поддержкой встроенных приватных транзакций",
+  "page-find-wallet-see-wallets": "Посмотреть кошельки",
+  "page-find-wallet-search-languages": "Поиск языков..."
 }
