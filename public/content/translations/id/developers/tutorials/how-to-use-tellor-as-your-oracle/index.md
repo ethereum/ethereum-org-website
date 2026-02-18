@@ -1,100 +1,81 @@
 ---
 title: Cara Menyiapkan Tellor sebagai Oracle Anda
-description: Sebuah panduan untuk memulai mengintegrasikan oracle Tellor ke dalam protokol Anda
+description: Panduan untuk memulai pengintegrasian oracle Tellor ke dalam protokol Anda
 author: "Tellor"
 lang: id
-tags:
-  - "solidity"
-  - "kontrak pintar"
-  - "feed harga"
-  - "oracle"
+tags: [ "Solidity", "kontrak pintar", "oracle" ]
 skill: beginner
 published: 2021-06-29
-source: Dokumen Tellor
+source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-Pop Quiz: Your protocol is just about finished, but it needs an oracle to get access to off chain data...What do you do?
+Kuis Pop: Protokol Anda hampir selesai, tetapi memerlukan oracle untuk mendapatkan akses ke data off-chain... Apa yang Anda lakukan?
 
-## Prasyarat (perangkat lunak) {#soft-prerequisites}
+## (Prasyarat Tidak Wajib) {#soft-prerequisites}
 
-Posting ini bertujuan untuk membuat akses ke feed oracle semudah dan sesederhana mungkin. Oleh karena itu, kami menggangap yang berikut ini kira - kira adalah tingkat kemahiran pengodean Anda untuk berfokus pada aspek oracle.
+Postingan ini bertujuan untuk membuat akses ke feed oracle sesederhana dan semudah mungkin. Meskipun begitu, kami mengasumsikan hal berikut mengenai tingkat keahlian pengodean Anda untuk fokus pada aspek oracle.
 
 Asumsi:
 
-- Anda dapat menavigasikan suatu terminal
-- Anda memiliki npm yang telah terinstal
-- Anda mengetahui cara menggunakan npm untuk mengelola dependensi
+- Anda dapat menavigasi terminal
+- Anda sudah menginstal npm
+- Anda tahu cara menggunakan npm untuk mengelola dependensi
 
-Tellor adalah oracle sumber terbuka dan langsung yang siap untuk diimplementasikan. Panduan pemula ini ada untuk menampilkan kemudahan yang dengannya seseorang dapat memulai dan menjalankan Tellor, yang menyediakan proyek Anda dengan oracle yang sepenuhnya terdesentralisasi dan tahan penyensoran.
+Tellor adalah oracle sumber terbuka dan aktif yang siap untuk diimplementasikan. Panduan pemula ini hadir untuk menunjukkan betapa mudahnya seseorang dapat memulai dan menjalankan Tellor, menyediakan proyek Anda oracle yang sepenuhnya terdesentralisasi dan tahan sensor.
 
-## Gambaran umum {#overview}
+## Overview {#overview}
 
-Tellor is an oracle system where parties can request the value of an off-chain data point (e.g., BTC/USD) and reporters compete to add this value to an on-chain data-bank, accessible by all Ethereum smart contracts. The inputs to this data-bank are secured by a network of staked reporters. Tellor utilizes crypto-economic incentive mechanisms, rewarding honest data submissions by reporters and punishing bad actors through the issuance of Tellor’s token, Tributes (TRB) and a dispute mechanism.
+Tellor adalah sistem oracle tempat para pihak dapat meminta nilai dari titik data di luar rantai (misalnya, BTC/USD) dan para pelapor bersaing untuk menambahkan nilai ini ke bank data di dalam rantai, yang dapat diakses oleh semua kontrak pintar Ethereum. Masukan ke bank data ini diamankan oleh jaringan reporter yang di-stake. Tellor menggunakan mekanisme insentif kripto-ekonomi, memberi imbalan atas pengiriman data yang jujur oleh reporter dan menghukum pelaku jahat melalui penerbitan token Tellor, Tributes (TRB), dan mekanisme sengketa.
 
-Dalam tutorial ini, kita akan membahas:
+Dalam tutorial ini kita akan membahas:
 
-- Menyiapkan toolkit awal yang akan Anda butuhkan untuk memulai dan menjalankannya.
-- Membahas suatu contoh sederhana.
-- Merinci alamat testnet jaringan yang dapat Anda gunakan untuk menguji Tellor saat ini.
+- Menyiapkan perangkat awal yang Anda perlukan untuk memulai dan menjalankannya.
+- Membahas contoh sederhana.
+- Mendaftar alamat testnet dari jaringan tempat Anda saat ini dapat menguji Tellor.
 
 ## Menggunakan Tellor {#usingtellor}
 
-Hal pertama yang akan ingin Anda lakukan adalah menginstal perangkat dasar yang diperlukan untuk menggunakan Tellor sebagai oracle Anda. Use [this package](https://github.com/tellor-io/usingtellor) to install the Tellor User Contracts:
+Hal pertama yang ingin Anda lakukan adalah menginstal alat-alat dasar yang diperlukan untuk menggunakan Tellor sebagai oracle Anda. Gunakan [paket ini](https://github.com/tellor-io/usingtellor) untuk menginstal Kontrak Pengguna Tellor:
 
 `npm install usingtellor`
 
 Setelah diinstal, ini akan memungkinkan kontrak Anda untuk mewarisi fungsi dari kontrak 'UsingTellor'.
 
-Bagus! Now that you've got the tools ready, let's go through a simple exercise where we retrieve the bitcoin price:
+Bagus! Sekarang setelah Anda menyiapkan peralatannya, mari kita lakukan latihan sederhana tempat kita mengambil harga bitcoin:
 
 ### Contoh BTC/USD {#btcusd-example}
 
-Wariskan kontrak UsingTellor, yang meneruskan alamat Tellor sebagai argumen konstruktor:
+Wariskan kontrak UsingTellor, dengan meneruskan alamat Tellor sebagai argumen konstruktor:
 
 Berikut contohnya:
 
 ```solidity
 import "usingtellor/contracts/UsingTellor.sol";
 
-contract BtcPriceContract is UsingTellor {
+contract PriceContract is UsingTellor {
+  uint256 public btcPrice;
 
-  //This Contract now has access to all functions in UsingTellor
+ //Kontrak ini sekarang memiliki akses ke semua fungsi di UsingTellor
 
-  bytes btcPrice;
-  bytes32 btcQueryId = 0x0000000000000000000000000000000000000000000000000000000000000002;
+constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
-  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
+function setBtcPrice() public {
+    bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
+    bytes32 _queryId = keccak256(_b);
 
-  function setBtcPrice() public {
-    bool _didGet;
     uint256 _timestamp;
+    bytes _value;
 
-    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcQueryId);
+    (_value, _timestamp) = getDataBefore(_queryId, block.timestamp - 15 minutes);
+
+    btcPrice = abi.decode(_value,(uint256));
   }
 }
 ```
 
-**Want to try a different data feed? Check out the list of supported data feeds here: [Current Data Feeds](https://docs.tellor.io/tellor/integration/data-feed-ids)**
+Untuk daftar lengkap alamat kontrak, rujuk [di sini](https://docs.tellor.io/tellor/the-basics/contracts-reference).
 
-## Alamat: {#addresses}
+Untuk kemudahan penggunaan, repo UsingTellor dilengkapi dengan versi kontrak [Tellor Playground](https://github.com/tellor-io/TellorPlayground) untuk integrasi yang lebih mudah. Lihat [di sini](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) untuk daftar fungsi yang bermanfaat.
 
-Mainnet: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
-
-### Ingin melakukan beberapa pengujian terlebih dahulu? Lihat daftar di bawah untuk alamat testnet aktif kami: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
-
-Rinkeby: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://rinkeby.etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
-
-Kovan: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://kovan.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
-
-Ropsten: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://ropsten.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
-
-Goerli: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://goerli.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
-
-BSC Testnet: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://testnet.bscscan.com/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
-
-Polygon Mumbai Testnet: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://mumbai.polygonscan.com/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7/contracts#code)
-
-Arbitrum Testnet: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://rinkeby-explorer.arbitrum.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7)
-
-### Untuk implementasi yang lebih kuat pada oracle Tellor, lihat daftar lengkap fungsi yang tersedia [di sini.](https://github.com/tellor-io/usingtellor/blob/master/README.md) {#for-a-more-robust-implementation-of-the-tellor-oracle-check-out-the-full-list-of-available-functions-here}
+Untuk implementasi oracle Tellor yang lebih kuat, periksa daftar lengkap fungsi yang tersedia [di sini](https://github.com/tellor-io/usingtellor/blob/master/README.md).
