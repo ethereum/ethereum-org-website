@@ -4,9 +4,20 @@
   "page-upgrades-beacon-date": "أصبح متاحًا!",
   "page-upgrades-merge-date": "سبتمبر 2022",
   "page-upgrades-shards-date": "~2023",
+  "page-upgrades-pbs": "ليس وشيكًا – توقع 2024/25",
   "page-upgrades-post-merge-banner-tutorial-ood": "تعليمات الاستخدام هذه قديمة بعد الدمج وقد لا تفيد. يُرجى تقديم طلب سحب إذا كنت ترغب في المساهمة.",
   "page-upgrades-upgrades-guide": "دليل ترقيات إثيريوم",
   "page-upgrades-upgrades-docking": "الدمج",
   "page-upgrades-shard-title": "التقسيم",
-  "page-upgrades-upgrades-beacon-chain": "سلسلة المنارة"
+  "page-upgrades-upgrades-beacon-chain": "سلسلة المنارة",
+  "consensus-beaconscan-title": "beaconscan",
+  "consensus-beaconscan-in-title": "beaconcha.in",
+  "consensus-beaconcha-in-desc": "مستكشف سلسلة المنارة مفتوح المصدر",
+  "consensus-beaconscan-desc": "مستكشف سلسلة المنارة - مسح إثير من أجل طبقة إجماع الآراء",
+  "consensus-become-staker": "كن مراهنًا",
+  "consensus-become-staker-desc": "بدأ تجميد العملات! إذا كنت تتطلع لتجميد عملة إثير للمساعدة على تأمين الشبكة، فتأكد من أنك على دراية بالمخاطر.",
+  "consensus-explore": "استكشاف البيانات",
+  "consensus-run-beacon-chain": "تشغيل عميل إجماع آراء",
+  "consensus-run-beacon-chain-desc": "يحتاج إثيريوم إلى أكبر عدد ممكن من العملاء. ساعد إثيريوم للمصلحة العامة!",
+  "read-more": "قراءة المزيد"
 }
