@@ -1,105 +1,102 @@
 ---
-title: スマートコントラクト関連セキュリティツールのガイド
-description: テストおよびプログラム分析に関する3種類のテクニックの概要
+title: "スマートコントラクトセキュリティツールのガイド"
+description: "3つの異なるテストおよびプログラム分析手法の概要"
 author: "Trailofbits"
 lang: ja
-tags:
-  - "Solidity"
-  - "スマートコントラクト"
-  - "セキュリティ"
+tags: [ "Solidity", "スマート契約", "セキュリティ" ]
 skill: intermediate
 published: 2020-09-07
-source: セキュアなコントラクトの開発
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 
-このチュートリアルでは、以下の3種類のテスト／プログラム分析テクニックを取り上げます：
+ここでは、3つの特徴的なテストおよびプログラム分析の手法を使用します。
 
-- **[Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)を用いた静的解析**では、プログラムのすべてのパスにつき、様々なプログラム表示（例：制御フローグラフ）を通じて同時に近似値を求め、分析します。
-- **[Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)を用いたファジング**では、疑似乱数に基づいて生成したトランザクションを用いてコードを実行します。 ファザーは、特定のプロパティに違反する一連のトランザクションを見つけようとします。
-- **[Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)を用いたシンボリック実行**は、各実行パスを数式に変換した上で、制約条件をチェックできるフォーマルな検証テクニックです。
+- **[Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)による静的解析。** プログラムのすべてのパスが、異なるプログラム表示(例：制御フローグラフ)を通じて、同時に近似、分析されます。
+- **[Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)によるファジング。** コードは、トランザクションの疑似ランダム生成によって実行されます。 ファザーは、特定のプロパティに違反する一連のトランザクションを見つけようとします。
+- **[Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)によるシンボリック実行。** 各実行パスを数式に変換し、その上で制約をチェックできる形式的検証テクニックです。
 
-上記の手法はそれぞれの利点と欠点を持つため、[特定の用途](#determining-security-properties)に合わせて選択すべきです。
+各テクニックには長所と短所があり、[特定のケース](#determining-security-properties)で役立ちます：
 
-| 手法       | ツール       | 用途                       | 速度  | バグを見落とす可能性 | 偽陽性の可能性 |
-| -------- | --------- | ------------------------ | --- | ---------- | ------- |
-| 静的解析     | Slither   | CLI およびスクリプト             | 数秒  | 中程度        | 低い      |
-| ファジング    | Echidna   | Solidityのプロパティ           | 数分間 | 低い         | なし      |
-| シンボリック実行 | Manticore | Solidity のプロパティおよび スクリプト | 数時間 | なし*        | なし      |
+| テクニック    | ツール       | 使用法                  | 速度  | 見逃されるバグ | 誤検知 |
+| -------- | --------- | -------------------- | --- | ------- | --- |
+| 静的解析     | Slither   | CLIとスクリプト            | 数秒  | 中       | 低   |
+| ファジング    | Echidna   | Solidityのプロパティ       | 数分間 | 低       | なし  |
+| シンボリック実行 | Manticore | Solidityのプロパティとスクリプト | 数時間 | なし\*    | なし  |
 
-* すべてのパスをタイムアウトなしで検証した場合
+- すべてのパスがタイムアウトなしで探索された場合
 
-**Slither**は、コントラクトを数秒間で分析できますが、 静的解析は誤検知を伴う場合があり、複雑なチェック作業（例：算術演算の検査）にはあまり適していません。 Slitherは、APIを通じてプッシュボタンによりビルトインの検知器にアクセスするか、ユーザー定義のチェック作業用のAPIを通じて実行します。
+**Slither**は数秒でコントラクトを分析しますが、静的解析は誤検知につながる可能性があり、複雑なチェック(算術チェックなど)にはあまり適していません。 Slitherは、API経由で実行し、組み込みの検出器にプッシュボタンでアクセスするか、ユーザー定義のチェックを行います。
 
-**Echidna**では、検出に数分間を要しますが、偽陽性は検出しません。 Echidnaでは、Solidityで作成され、ユーザーが提供したセキュリティ属性をチェックします。 ただし、ランダムな検索に基づくため、すべてのバグを検出するとは限りません。
+**Echidna**は、実行に数分を要しますが、生成するのは真陽性のみです。 Echidnaは、ユーザーが提供した、Solidityで記述されたセキュリティプロパティをチェックします。 ランダムな探索に基づいているため、バグを見逃す可能性があります。
 
-**Manticore**は、「最も徹底的な」分析を行います。 Echidnaの場合と同様に、ユーザーが提供した属性を検証します。 検出時間はさらに長くなりますが、特定のプロパティを検証でき、偽陽性を検出することもありません。
+**Manticore**は、"最もヘビー級"の分析を実行します。 Echidnaと同様に、Manticoreはユーザーが提供したプロパティを検証します。 実行にはより時間がかかりますが、プロパティの有効性を証明でき、誤検知を報告しません。
 
-## 推奨するワークフロー {#suggested-workflow}
+## 推奨ワークフロー {#suggested-workflow}
 
-まず、Slitherに内蔵されている検出機能で開始し、現時点において単純なバグが存在せず、今後も紛れ込む可能性がないことを確認しましょう。 Slither を使って、継承、変数の依存関係、および構造的な問題についてチェックします。 コードベースの規模が拡大するのに伴い、Echidnaを使って、ステートマシンにおけるより複雑なプロパティをテストします。 また、上書きされる機能に対する保護などのSolidityでは提供されない保護については、Slitherを使ってカスタムチェックを作成してください。 最後にManticoreを使用して、セキュリティに関する最重要のプロパティ（例：算術演算）のみに対象を絞った検証を行います。
+まずSlitherの組み込み検出器から始めて、単純なバグが現在存在しないこと、そして後で入り込まないことを確認します。 Slitherを使用して、継承、変数の依存関係、構造上の問題に関連するプロパティをチェックします。 コードベースが大きくなるにつれて、Echidnaを使用してステートマシンのより複雑なプロパティをテストします。 Solidityでは利用できない保護(関数のオーバーライドに対する保護など)のために、Slitherを再検討してカスタムチェックを開発します。 最後に、Manticoreを使用して、重要なセキュリティプロパティ(算術演算など)の的を絞った検証を実行します。
 
-- SlitherのCLIを使って、よくある問題を検出する
-- Echidnaを使って、スマートコントラクトにおける高度なセキュリティ関連プロパティをテストする
-- Slitherを使って、カスタムの静的解析を作成する
-- 最重要なセキュリティ属性について詳細な保証が必要になったら、Manticoreを使用する
+- SlitherのCLIを使用して、一般的な問題を検出する
+- Echidnaを使用して、コントラクトの高レベルのセキュリティプロパティをテストする
+- Slitherを使用して、カスタムの静的チェックを作成する
+- 重要なセキュリティプロパティの詳細な保証が必要になったら、Manticoreを使用する
 
-**単体テストに関する注意事項**： 高品質のソフトウェア開発には、単体テストが必須です。 一方で、セキュリティ欠陥を検出する上で、単体テストは最善の方法とは言えません。 通常、単体テストはコードの望ましい動作を確認するため（つまり、通常の環境において予想通りに動作するかどうか）に用いられますが、セキュリティ上の欠陥は、デベロッパが見落としていた周縁的なケースで発生する場合が多いのです。 スマートコントラクトを対象とする数十件のセキュリティレビューを調査した結果、[単体テストのカバレッジは、クライアントのコード上で特定されたセキュリティ上の欠陥の数や重大性には影響を与えていないことが分かりました](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/)。
+**単体テストに関する注記**。 高品質のソフトウェアを構築するには、単体テストが必要です。 しかし、これらのテクニックはセキュリティ上の欠陥を見つけるのに最適というわけではありません。 単体テストは通常、コードの正常な動作(つまり、通常のコンテキストで期待どおりにコードが機能すること)をテストするために使用されますが、セキュリティ上の欠陥は、開発者が考慮しなかったエッジケースに存在する傾向があります。 数十件のスマートコントラクトのセキュリティレビューに関する我々の調査では、クライアントのコードで発見されたセキュリティ上の欠陥の数や重大度に対して、[単体テストのカバレッジは影響を与えませんでした](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/)。
 
-## 対象とするセキュリティ属性を決定する {#determining-security-properties}
+## セキュリティプロパティの決定 {#determining-security-properties}
 
-コードを効果的にテスト、検証するには、まず、対象とすべき分野を特定する必要があります。 セキュリティのためのリソースには限りがありますから、コードベースにおける脆弱な部分や高価値の部分に注力して、この取り組みを最適化することが重要です。 これには、脅威モデリングの手法を用いるとよいでしょう。 以下の事項をレビューしてください：
+コードを効果的にテストおよび検証するには、注意が必要な領域を特定する必要があります。 セキュリティに費やすリソースは限られているため、労力を最適化するには、コードベースの脆弱な部分や価値の高い部分を特定することが重要です。 脅威モデリングが役立ちます。 以下をレビューすることを検討してください：
 
-- [迅速リスク評価](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html)（短時間に完了しなければならない場合に推奨するアプローチです）
-- [データ中心システムにおける脅威モデル作成ガイド](https://csrc.nist.gov/publications/detail/sp/800-154/draft)（別名：NIST 800-154）
-- [Shostackスレッド・モデリング](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
-- [STRIDE](https://wikipedia.org/wiki/STRIDE_(security)) / [DREAD](https://wikipedia.org/wiki/DREAD_(risk_assessment_model))
+- [迅速なリスク評価](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html) (時間がない場合に推奨されるアプローチ)
+- [データ中心システム脅威モデリングガイド](https://csrc.nist.gov/pubs/sp/800/154/ipd)(別名NIST 800-154)
+- [Shostack脅威モデリング](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
+- [STRIDE](https://wikipedia.org/wiki/STRIDE_\(security\)) / [DREAD](https://wikipedia.org/wiki/DREAD_\(risk_assessment_model\))
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
-- [アサーションを活用する](https://blog.regehr.org/archives/1091)
+- [アサーションの使用](https://blog.regehr.org/archives/1091)
 
-### 構成要素 {#components}
+### コンポーネント {#components}
 
-どの事項をチェックしたいのかを把握しておくと、適切なツール選択に役立ちます。
+何をチェックしたいかを知ることも、適切なツールを選ぶのに役立ちます。
 
-スマートコントラクトにおいて問題となる可能性が高い分野としては、以下が挙げられます：
+スマートコントラクトに頻繁に関連する幅広い分野には、以下が含まれます：
 
-- **状態マシン** ほとんどのコントラクトは、状態マシンとして表示することが可能です。 ですから、（1）無効な状態に達していないか、（2）状態が有効かつ到達しうるか、および（3）コントラクトをトラップする状態が存在しないか、についてチェックするとよいでしょう。
+- **ステートマシン。** ほとんどのコントラクトはステートマシンとして表現できます。 (1) 無効なステートに到達できないこと、(2) ステートが有効である場合に到達可能であること、(3) コントラクトをトラップするステートがないこと、を確認することを検討してください。
 
-  - 状態マシンの仕様をテストするのに適しているのは、EchidnaとManticoreです。
+  - EchidnaとManticoreは、ステートマシンの仕様をテストするのに適したツールです。
 
-- **アクセス管理。** あなたのシステムに特権ユーザー（例：所有者、管理者など）が含まれる場合、（1）各ユーザーが、権限を持つアクションのみ実行可能であること、および（2）権限レベルがより上のユーザーによるアクションをブロックできる下位ユーザーが存在しないこと、を確認してください。
+- **アクセス制御。** システムに特権ユーザー(例：オーナー、コントローラーなど)がいる場合 (1) 各ユーザーが許可されたアクションのみを実行できること、(2) より特権的なユーザーからのアクションをブロックできるユーザーがいないこと、を保証する必要があります。
 
-  - アクセス管理については、Slither、Echidna、およびManticoreのいずれも適切なチェックを実行できます。 例えばSlitherでは、ホワイトリストに登録された関数のうち、onlyOwner修飾子を持たない関数のみをチェックすることができます。 一方、EchidnaおよびManticoreは、コントラクトが特定のステートに達した場合のみに権限が付与される場合など、より複雑なアクセス管理を確認するのに適しています。
+  - Slither、Echidna、Manticoreは、正しいアクセス制御をチェックできます。 例えばSlitherは、`onlyOwner`修飾子を欠く関数がホワイトリスト登録済みのものだけであることをチェックできます。 EchidnaとManticoreは、コントラクトが特定のステートに達した場合にのみ許可が与えられるなど、より複雑なアクセス制御に役立ちます。
 
-- **算術演算。** 算術演算が正しく実行されるかを確認することは、非常に重要です。 オーバーフロー／アンダーフローを防止するには、`SafeMath`を常に利用することを推奨しますが、同時に、端数処理に関する問題やコントラクトをトラップしてしまうような欠陥など、その他の演算上の欠陥についても確認する必要があります。
+- **算術演算。** 算術演算の健全性をチェックすることは非常に重要です。 あらゆる場所で`SafeMath`を使用することは、オーバーフロー/アンダーフローを防ぐための良い一歩ですが、丸め誤差の問題やコントラクトをトラップする欠陥など、他の算術的な欠陥も考慮する必要があります。
 
-  - この分野では、Manticoreを使用するのがよいでしょう。 当該の算術演算がSMTソルバーの対象範囲外である場合は、Echidnaを選択してもよいです。
+  - ここではManticoreが最良の選択です。 算術がSMTソルバーの範囲外である場合は、Echidnaを使用できます。
 
-- **継承の正確性。** Solidityで作成したコントラクトは、複数の継承に大きく依存しています。 シャドーイング関数において`super`コールが含まれていない場合や、C3 linearizationの順序の誤解釈などのミスは、容易に発生する可能性があります。
+- **継承の正確性。** Solidityコントラクトは多重継承に大きく依存しています。 `super`呼び出しを欠いたシャドウイング関数や、誤って解釈されたC3線形化の順序などの間違いは、簡単に発生し得ます。
 
-  - これらの問題を検出するには、Slitherが最適です。
+  - Slitherは、これらの問題を確実に検出するためのツールです。
 
-- **外部とのやりとり。** コントラクトは相互にやりとりを行いますが、外部のコントラクトの中には信用すべきでないものもあります。 例えば、あなたのコントラクトが外部オラクルに依存する場合、利用可能なオラクルの半分が汚染されていれば、あなたのコントラクトはセキュアであるとは言えないでしょう。
+- **外部とのやりとり。** コントラクトは相互にやりとりしますが、一部の外部コントラクトは信頼すべきではありません。 例えば、コントラクトが外部のオラクルに依存している場合、利用可能なオラクルの半分が侵害されても、そのコントラクトは安全なままでしょうか？
 
-  - コントラクトにおける外部とのやりとりをテストするには、ManticoreおよびEchidnaが最適です。 Manticoreには、外部のコントラクトをスタブするためのメカニズムが内蔵されています。
+  - ManticoreとEchidnaは、コントラクトと外部とのやりとりをテストするための最良の選択です。 Manticoreには、外部コントラクトをスタブするための組み込みメカニズムがあります。
 
-- **規格適合性。** イーサリアムの標準（例：ERC-20）には、これまで様々な設計ミスが含まれていました。 ですから、作成するコントラクトの規格上の制約に十分注意してください。
-  - Slither、Echidna、およびManticoreはいずれも、特定の規格に対する非遵守を検知するのに役立ちます。
+- **標準準拠。** イーサリアムの標準(例：ERC20)には、その設計に欠陥があった歴史があります。 構築の基盤となる標準の制限に注意してください。
+  - Slither、Echidna、Manticoreは、特定の標準からの逸脱を検出するのに役立ちます。
 
-### ツール選択の早見表 {#tool-selection-cheatsheet}
+### ツール選択のチートシート {#tool-selection-cheatsheet}
 
-| 構成要素     | ツール                       | 具体例                                                                                                                                                                                                                                                   |
-| -------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 状態マシン    | Echidna、Manticore         |                                                                                                                                                                                                                                                       |
-| アクセス管理   | Slither、Echidna、Manticore | [Slither エクササイズ2](https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise2.md)、[Echidna エクササイズ2](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-2.md)    |
-| 算術演算     | Manticore、Echidna         | [Echidna エクササイズ1](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-1.md)、[Manticore エクササイズ1～3](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore/exercises) |
-| 継承の正確さ   | Slither                   | [Slither エクササイズ1](https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise1.md)                                                                                                                              |
-| 外部とのやりとり | Manticore、Echidna         |                                                                                                                                                                                                                                                       |
-| 規格の遵守    | Slither、Echidna、Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                               |
+| コンポーネント  | ツール                       | 実例：                                                                                                                                                                                                                                                              |
+| -------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ステートマシン  | Echidna、Manticore         |                                                                                                                                                                                                                                                                  |
+| アクセス制御   | Slither、Echidna、Manticore | [Slither 演習 2](https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise2.md)、[Echidna 演習 2](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-2.md) |
+| 算術演算     | Manticore、Echidna         | [Echidna 演習 1](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-1.md)、[Manticore 演習 1～3](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore/exercises)        |
+| 継承の正確性   | Slither                   | [Slither 演習 1](https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise1.md)                                                                                                                                  |
+| 外部とのやりとり | Manticore、Echidna         |                                                                                                                                                                                                                                                                  |
+| 標準準拠     | Slither、Echidna、Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                          |
 
-コントラクトの目的に応じて他の分野についてもチェックする必要がありますが、あらゆるスマートコントラクトにおいて、上記の大まかな注力分野から確認することをお勧めします。
+目標によっては他の領域もチェックする必要がありますが、これらの大まかな重点領域は、あらゆるスマートコントラクトシステムにとって良い出発点となります。
 
-本サイトのパブリック監査には、検証／テスト済みのプロパティの具体例が含まれています。 実際のセキュリティ関連プロパティについてレビューしたい場合は、以下のレポートの`Automated Testing and Verification（自動テスト／検証）`セクションを参照してください。
+我々の公開監査には、検証またはテストされたプロパティの例が含まれています。 実際のセキュリティプロパティをレビューするには、以下のレポートの`Automated Testing and Verification`のセクションを読むことを検討してください：
 
 - [0x](https://github.com/trailofbits/publications/blob/master/reviews/0x-protocol.pdf)
 - [Balancer](https://github.com/trailofbits/publications/blob/master/reviews/BalancerCore.pdf)

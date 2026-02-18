@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Ethashアルゴリズムの詳細
+description: "Ethashアルゴリズムの詳細"
 lang: ja
 ---
 
@@ -8,12 +8,12 @@ lang: ja
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethashは、イーサリアムのプルーフ・オブ・ワークのマイニングアルゴリズムでした。 プルーフ・オブ・ワークは、今『完全に廃止』されており、イーサリアムは現在[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)により安全が確保されています。 詳細については、[マージ](/roadmap/merge/)、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)および[ステーキング](/staking/)を参照してください。 このページについては、これまでのイーサリアムの歩みを学ぶための参考としてお読みください。  
+   Ethashは、イーサリアムのプルーフ・オブ・ワークのマイニングアルゴリズムでした。 プルーフ・オブ・ワークは、現在『完全に停止』となっています。イーサリアムは今、代わりに[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)によって安全が確保されています。 [マージ](/roadmap/merge/)、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/) 、[ステーキング](/staking/)について詳しく読む。 このページについては、これまでのイーサリアムの歩みを学ぶための参考としてお読みください。
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Ethashは、[ダガーハシモト](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)アルゴリズムを部分的に修正したバージョンです。 Ethashプルーフ・オブ・ワークは、[メモリハード](https://wikipedia.org/wiki/Memory-hard_function)になっており、アルゴリズムでASIC耐性が高まると考えられました。 最終的には、Ethash ASICが開発されましたが、GPUマイニングは、プルーフ・オブ・ワークが停止されるまでが実行可能なオプションでした。 Ethashは現在でも、イーサリアム以外のプルール・オブ・ワーク・ネットワークで他のコインのマイニングに使われています。
+Ethashは[Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)アルゴリズムの修正版です。 Ethashのプルーフ・オブ・ワークは[メモリハード](https://wikipedia.org/wiki/Memory-hard_function)であり、このアルゴリズムはASIC耐性があると考えられていました。 最終的には、Ethash ASICが開発されましたが、GPUマイニングは、プルーフ・オブ・ワークが停止されるまでが実行可能なオプションでした。 Ethashは現在でも、イーサリアム以外のプルール・オブ・ワーク・ネットワークで他のコインのマイニングに使われています。
 
 ## Ethashの仕組み {#how-does-ethash-work}
 
@@ -21,9 +21,9 @@ Ethashは、[ダガーハシモト](/developers/docs/consensus-mechanisms/pow/mi
 
 アルゴリズムが取る一般的なルートは以下のとおりです。
 
-1. **シード**が存在し、その時点までブロックヘッダーをスキャンすることで、ブロックごとに計算できる。
-2. シードから**16MBの疑似乱数キャッシュ**を計算できる。 ライトクライアントは、キャッシュを保存する。
-3. キャッシュから各アイテムがキャッシュの少数のアイテムのみに依存するプロパティを持つ**1GB データセット**を生成できる。 フルクライアントとマイナーは、データセットを保存する。 データセットは時間とともに線形的に増加する。
+1. 各ブロックについて、その時点までのブロックヘッダーをスキャンすることで計算できる**シード**が存在します。
+2. シードから、**16MBの疑似ランダムキャッシュ**を計算できます。 ライトクライアントは、キャッシュを保存する。
+3. キャッシュから、データセット内の各アイテムがキャッシュ内の少数のアイテムのみに依存するという特性を持つ、**1GBのデータセット**を生成できます。 フルクライアントとマイナーは、データセットを保存する。 データセットは時間とともに線形的に増加する。
 4. マイニングは、データセットのランダムなスライスを取得し、それらを結合してハッシュ化する。 検証はキャッシュを使用して必要なデータセットの特定の部分を再生成するため、少ないメモリで実行できる(そのためキャッシュの保存だけ必要)。
 
 大きなデータセットでは、30000ブロックごとに一度更新されます。マイナーの労力の大部分は、データセットを読み込むことであり、データセットに変更を加えることではありません。
@@ -33,23 +33,23 @@ Ethashは、[ダガーハシモト](/developers/docs/consensus-mechanisms/pow/mi
 以下の定義を採用しています。
 
 ```
-WORD_BYTES = 4                    # bytes in word
-DATASET_BYTES_INIT = 2**30        # bytes in dataset at genesis
-DATASET_BYTES_GROWTH = 2**23      # dataset growth per epoch
-CACHE_BYTES_INIT = 2**24          # bytes in cache at genesis
-CACHE_BYTES_GROWTH = 2**17        # cache growth per epoch
-CACHE_MULTIPLIER=1024             # Size of the DAG relative to the cache
-EPOCH_LENGTH = 30000              # blocks per epoch
-MIX_BYTES = 128                   # width of mix
-HASH_BYTES = 64                   # hash length in bytes
-DATASET_PARENTS = 256             # number of parents of each dataset element
-CACHE_ROUNDS = 3                  # number of rounds in cache production
-ACCESSES = 64                     # number of accesses in hashimoto loop
+WORD_BYTES = 4                    # ワード内のバイト数
+DATASET_BYTES_INIT = 2**30        # ジェネシス時のデータセットのバイト数
+DATASET_BYTES_GROWTH = 2**23      # エポックごとのデータセットの増加量
+CACHE_BYTES_INIT = 2**24          # ジェネシス時のキャッシュのバイト数
+CACHE_BYTES_GROWTH = 2**17        # エポックごとのキャッシュの増加量
+CACHE_MULTIPLIER=1024             # キャッシュに対するDAGのサイズ
+EPOCH_LENGTH = 30000              # エポックごとのブロック数
+MIX_BYTES = 128                   # mixの幅
+HASH_BYTES = 64                   # ハッシュの長さ (バイト単位)
+DATASET_PARENTS = 256             # 各データセット要素の親の数
+CACHE_ROUNDS = 3                  # キャッシュ生成におけるラウンド数
+ACCESSES = 64                     # hashimotoループ内のアクセス数
 ```
 
 ### 「SHA3」の使用 {#sha3}
 
-イーサリアムの開発は、SHA3標準の開発と同時期に起こりました。標準プロセスは、最終決定したハッシュアルゴリズムのパディングが遅れて変更されたため、イーサリアムの「sha3_256」および「sha3_512」ハッシュは、標準のsha3ハッシュではありません。他の文脈の多くでは、変異型として「Keccak-256」および「Keccak-512」と呼ばれています。 [こちら](https://eips.ethereum.org/EIPS/eip-1803)、[こちら](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)、 または[こちら](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)の議論をご覧ください。
+イーサリアムの開発は、SHA3標準の開発と同時期に起こりました。標準プロセスは、最終決定したハッシュアルゴリズムのパディングが遅れて変更されたため、イーサリアムの「sha3_256」および「sha3_512」ハッシュは、標準のsha3ハッシュではありません。他の文脈の多くでは、変異型として「Keccak-256」および「Keccak-512」と呼ばれています。 議論については、例えば[こちら](https://eips.ethereum.org/EIPS/eip-1803)、[こちら](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)、または[こちら](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)を参照してください。
 
 以下のアルゴリズムの説明では、「sha3」ハッシュが参照されることを覚えておいてください。
 
@@ -83,12 +83,12 @@ def get_full_size(block_number):
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Sequentially produce the initial dataset
+    # 初期データセットを順番に生成
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Use a low-round version of randmemohash
+    # randmemohashの低ラウンド版を使用
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,11 +97,11 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-キャッシュ生成プロセスは、最初に32MBのメモリを順番に埋め、次に、[_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf)に掲載されているSergio Demian Lerner氏の_RandMemoHash_アルゴリズムを2パス実行します。 出力は、524288個の64バイトの値のセットです。
+キャッシュ生成プロセスでは、まず32MBのメモリを順番に埋め、次にSergio Demian Lernerの[_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf)にある_RandMemoHash_アルゴリズムの2パスを実行します。 出力は、524288個の64バイトの値のセットです。
 
 ## データ集約関数 {#date-aggregation-function}
 
-いくつかのケースにおいて、排他的論理和の非結合的代替として[FNV hash](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)から発想を得たアルゴリズムを使用します。 素数を1バイト(オクテット)ずつ順番に乗算するFNV-1の仕様ではなく、素数を全32ビットの入力で乗算することに注意してください。
+[FNVハッシュ](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)に触発されたアルゴリズムを、XORの非結合的な代替として使用する場合があります。 素数を1バイト(オクテット)ずつ順番に乗算するFNV-1の仕様ではなく、素数を全32ビットの入力で乗算することに注意してください。
 
 ```python
 FNV_PRIME = 0x01000193
@@ -110,7 +110,7 @@ def fnv(v1, v2):
     return ((v1 * FNV_PRIME) ^ v2) % 2**32
 ```
 
-イエローペーパーでは、FNVをv1*(FNV_PRIME ^ v2)と指定していますが、現在の実装ではすべて上記の定義で統一しています。
+イエローペーパーでは、FNVをv1\*(FNV_PRIME ^ v2)と指定していますが、現在の実装ではすべて上記の定義で統一しています。
 
 ## フルデータセットの計算 {#full-dataset-calculation}
 
@@ -120,11 +120,11 @@ def fnv(v1, v2):
 def calc_dataset_item(cache, i):
     n = len(cache)
     r = HASH_BYTES // WORD_BYTES
-    # initialize the mix
+    # mixを初期化
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # fnv it with a lot of random cache nodes based on i
+    # iに基づいて多数のランダムなキャッシュノードでfnvを適用
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
@@ -140,27 +140,27 @@ def calc_dataset(full_size, cache):
 
 ## メインループ {#main-loop}
 
-ここでは、メインのハシモトに似たループを記述します。特定のヘッダーとノンス (nonce)の最終的な値を生成するために、フルデータセットからデータを集約します。 以下のコードでは、`header`は_切り捨てられた_ブロックヘッダー(すなわち、フィールド**mixHash**と**nonce**を除外したヘッダー)のRLP表現のSHA3-256_ハッシュ_を表します。 `nonce`は、ビッグエンディアンオーダーの64ビット符号なし整数8バイトです。 したがって、`nonce[::-1]`は、その値の8バイトのリトルエンディアン表現です。
+ここでは、メインのハシモトに似たループを記述します。特定のヘッダーとノンス (nonce)の最終的な値を生成するために、フルデータセットからデータを集約します。 以下のコードでは、`header`は、_切り捨てられた_ブロックヘッダー、つまり**mixHash**と**nonce**フィールドを除いたヘッダーのRLP表現のSHA3-256_ハッシュ_を表します。 `nonce`は、ビッグエンディアンオーダーの64ビット符号なし整数の8バイトです。 したがって、`nonce[::-1]`は、その値の8バイトのリトルエンディアン表現です：
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # combine header+nonce into a 64 byte seed
+    # headerとnonceを結合して64バイトのシードにする
     s = sha3_512(header + nonce[::-1])
-    # start the mix with replicated s
+    # 複製されたsでmixを開始
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # mix in random dataset nodes
+    # ランダムなデータセットノードをmix
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
         for j in range(MIX_BYTES / HASH_BYTES):
             newdata.extend(dataset_lookup(p + j))
         mix = map(fnv, mix, newdata)
-    # compress mix
+    # mixを圧縮
     cmix = []
     for i in range(0, len(mix), 4):
         cmix.append(fnv(fnv(fnv(mix[i], mix[i+1]), mix[i+2]), mix[i+3]))
@@ -176,9 +176,9 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-基本的に、128バイト幅の「mix」を維持し、フルデータセットから128バイトを繰り返し順番にフェッチし、`fnv`関数を使って、それをmixと結合します。 128バイトのシーケンシャルアクセス が使用されており、アルゴリズムの各ラウンドは、常にRAMから完全なページをフェッチし、理論的にASICが回避できるトランスレーション・ルックアサイド・バッファのミスを最小限にします。
+基本的に、幅128バイトの\"mix\"を維持し、フルデータセットから128バイトを繰り返しシーケンシャルにフェッチし、`fnv`関数を使用してそれをmixと結合します。 128バイトのシーケンシャルアクセス が使用されており、アルゴリズムの各ラウンドは、常にRAMから完全なページをフェッチし、理論的にASICが回避できるトランスレーション・ルックアサイド・バッファのミスを最小限にします。
 
-アルゴリズムの出力が目標値を下回っている場合は、ノンス (nonce)は有効です。 `sha3_256`を最後に追加適用することで、ノンス (nonce)が必ず存在することになります。これは、少なくとも少量のワークが行われたことを証明するために提供でき、このクイックアウタ・ープルーフ・オブ・ワーク(PoW)検証は、DDoS対策に利用できます。 また、その結果が不偏の256ビットの数であることを統計的に保証する役割もあります。
+アルゴリズムの出力が目標値を下回っている場合は、ノンス (nonce)は有効です。 最後に`sha3_256`を追加適用することで、少なくとも少量の作業が行われたことを証明するために提供できる中間ノンスが存在することが保証されることに注意してください。この迅速な外部PoW検証は、DDoS対策に利用できます。 また、その結果が不偏の256ビットの数であることを統計的に保証する役割もあります。
 
 ## マイニング {#mining}
 
@@ -186,7 +186,7 @@ def hashimoto_full(full_size, dataset, header, nonce):
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # zero-pad target to compare with hash on the same digit
+    # 同じ桁でハッシュと比較するためにターゲットをゼロパディングする
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -209,9 +209,9 @@ def mine(full_size, dataset, header, difficulty):
 
 スムーズなマイニングと検証のために、別々のスレッドで将来のシードハッシュとデータセットを事前計算することを推奨します。
 
-## 参考文献 {#further-reading}
+## 参考リンク {#further-reading}
 
-_役に立つコミュニティリソースをご存知の場合は、 このページを編集して追加してください。_
+_役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
 ## 付録 {#appendix}
 
@@ -220,7 +220,7 @@ _役に立つコミュニティリソースをご存知の場合は、 このペ
 ```python
 import sha3, copy
 
-# Assumes little endian bit ordering (same as Intel architectures)
+# リトルエンディアンのビット順を想定 (Intelアーキテクチャと同じ)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 hash function, outputs 64 bytes
+# sha3ハッシュ関数、64バイトを出力
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -390,7 +390,7 @@ data_sizes = [
 5687474048, 5695864448, 5704251008, 5712641408, 5721030272,
 5729416832, 5737806208, 5746194304, 5754583936, 5762969984,
 5771358592, 5779748224, 5788137856, 5796527488, 5804911232,
-5813300608, 5821692544, 5830082176, 5838468992, 5846855552,
+5813300608, 5821692544, 5830082176, 5838468992, 584685552,
 5855247488, 5863636096, 5872024448, 5880411008, 5888799872,
 5897186432, 5905576832, 5913966976, 5922352768, 5930744704,
 5939132288, 5947522432, 5955911296, 5964299392, 5972688256,

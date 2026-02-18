@@ -1,31 +1,30 @@
 ---
-title: ブロックエクスプローラー
-description: ブロックエクスプローラー (トランザクション、アカウント、コントラクトなどの情報のクエリを実行できる、ブロックチェーンデータのポータル) の紹介
+title: "ブロックエクスプローラー"
+description: "ブロックエクスプローラー (トランザクション、アカウント、コントラクトなどの情報のクエリを実行できる、ブロックチェーンデータのポータル) の紹介"
 lang: ja
 sidebarDepth: 3
 ---
 
-ブロックエクスプローラーは、イーサリアムデータのポータルとして機能します。 これらを使用して、ブロック、トランザクション、バリデータ、アカウント、その他のオンチェーン活動に関するリアルタイムデータを確認できます。
+ブロックエクスプローラーは、イーサリアムデータのポータルとして機能します。 これらを使用して、ブロック、トランザクション、バリデーター、アカウント、その他のオンチェーンアクティビティのリアルタイムデータを確認できます。
 
-## 前提知識 {#prerequisites}
+## 前提条件 {#prerequisites}
 
-ブロックエクスプローラーから提供されるデータを理解するためには、イーサリアムの基本的な概念を理解する必要があります。 [イーサリアム入門](/developers/docs/intro-to-ethereum/)から始めましょう。
+ブロックエクスプローラーから提供されるデータを理解するためには、イーサリアムの基本的な概念を理解する必要があります。 「[イーサリアム入門](/developers/docs/intro-to-ethereum/)」から始めましょう。
 
 ## サービス {#services}
 
-- [Etherscan](https://etherscan.io/) –_中国語、韓国語、ロシア語、日本語でも利用できます_
+- [Etherscan](https://etherscan.io/) -_中国語、韓国語、ロシア語、日本語にも対応_
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
-- [blockchair](https://blockchair.com/ethereum) –_スペイン語、フランス語、イタリア語、オランダ語、ポルトガル語、ロシア語、中国語、ペルシア語でも利用できます_
+- [Blockchair](https://blockchair.com/ethereum) -_スペイン語、フランス語、イタリア語、オランダ語、ポルトガル語、ロシア語、中国語、ペルシア語にも対応_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuruブロックエクスプローラー](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/) –_中国語、スペイン語、フランス語、トルコ語、ロシア語、韓国語、ベトナム語でも利用できます_
+- [Ethplorer](https://ethplorer.io/) -_中国語、スペイン語、フランス語、トルコ語、ロシア語、韓国語、ベトナム語にも対応_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## オープンソースツール {#open-source-tools}
 
@@ -94,7 +93,7 @@ sidebarDepth: 3
 - Gas limit (ガスリミット) - このトランザクションで消費できるガス単位の最大値
 - Gas used (ガス使用量) - トランザクションで消費された実際のガス量
 - Gas price (ガス価格) - ガス単位あたりの設定価格
-- Nonce (ノンス) - `from`のアドレスのトランザクション番号 (この番号は0から始まります。そのため、この値が`100`の場合、このアカウントから送信された101番目のトランザクションとなることに留意する必要があります)
+- ノンス - `from`アドレスのトランザクション番号 (0から始まるため、`100` のノンスは実際にはこのアカウントによって送信された101番目のトランザクションであることに注意してください)
 - Input data (入力情報) - トランザクションで必要とされる追加情報
 
 ### アカウント {#accounts}
@@ -144,7 +143,7 @@ sidebarDepth: 3
 - Total ETH supply (総ETH供給量) - 流通しているETHの数。ETHは、ブロックが作成されるごとにブロック報酬というかたちで新規に作成される
 - Market cap (時価総額) - 計算式: 価格\*供給量
 
-## コンセンサスレイヤーのデータ {#consensus-layer-data}
+## コンセンサスレイヤーデータ {#consensus-layer-data}
 
 ### エポック {#epoch}
 
@@ -173,7 +172,7 @@ sidebarDepth: 3
 - Block root (ブロックルート) - ビーコンブロックのハッシュツリーのルート
 - Parent root (親ルート) - 直前のブロックのハッシュ
 - State root (状態ルート) - ビーコン状態のハッシュツリーのルート
-- Signature (署名)
+- 署名
 - Randao reveal (RanDAO公開)
 - Graffiti (グラフィティ) - ブロック提案者は、32バイト長のメッセージをブロック提案に含めることができる
 - Execution Data (実行データ)
@@ -183,7 +182,7 @@ sidebarDepth: 3
 - Attestations (アテステーション) - スロット内のブロックのアテステーションの数
 - Deposits (デポジット) - このスロットでのデポジットの数
 - Voluntary exits (自主退出) - スロット中に退出したバリデータの数
-- Slashings (スラッシング) - ブロックの提案者またはアテスターに対するペナルティの数
+- Slashings (スラッシング) - ブロック提案者またはアテスターに対するペナルティの数
 - Votes (投票数) - このスロットのブロックに投票したバリデータの数
 
 ### ブロック {#blocks-1}
@@ -222,7 +221,7 @@ sidebarDepth: 3
 - Beacon block root (ビーコンブロックルート) - バリデータが証明しているブロックをポイントする
 - Source (ソース) - 最新の正当化されたエポックをポイントする
 - Target (ターゲット) - 最新のエポック境界をポイントする
-- Signature (署名)
+- 署名
 
 ### ネットワーク {#network-1}
 
@@ -237,19 +236,16 @@ sidebarDepth: 3
 
 ## ブロックエクスプローラー {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - イーサリアムメインネット、Sepoliaテストネットのデータを取得するために使用できるブロックエクスプローラー
-- [3xpl](https://3xpl.com/ethereum) - 広告無しのオープンソース・イーサリアム・エクスプローラでデータセットのダウンロードが可能
-- [Beaconcha.in](https://beaconcha.in/) - イーサリアムメインネットとSepoliaテストネットのオープンソースブロックエクスプローラー
+- [Etherscan](https://etherscan.io/) - イーサリアムメインネットとテストネットのデータを取得するために使用できるブロックエクスプローラー
+- [3xpl](https://3xpl.com/ethereum) - データセットのダウンロードが可能な、広告なしのオープンソースのイーサリアムエクスプローラー
+- [Beaconcha.in](https://beaconcha.in/) - イーサリアムメインネットとテストネット向けのオープンソースブロックエクスプローラー
 - [Blockchair](https://blockchair.com/ethereum) - 最もプライベートなイーサリアムエクスプローラー。 データのソートやフィルタリング(メンプール)も可能
-- [Etherchain](https://www.etherchain.org/) - イーサリアムメインネットのブロックエクスプローラー
-- [Ethplorer](https://ethplorer.io/) - イーサリアムメインネットとSepoliaテストネットのトークンを中心としたブロックエクスプローラー
-- [Rantom](https://rantom.app/) - ユーザーフレンドリーで、DeFi&NFTトランザクションを詳細に把握できるオープンソースのビューア
-- [Ethernow](https://www.ethernow.xyz/) - リアルタイムのトランザクションエクスプローラーで、イーサリアムメインネットのプリチェーンレイヤーを確認可能
-- [Otterscan](https://otterscan.io/) - イーサリアム用のオープンソースの代替ブロックエクスプローラー
+- [Etherchain](https://www.etherchain.org/) - イーサリアムメインネット向けのブロックエクスプローラー
+- [Ethplorer](https://ethplorer.io/) - イーサリアムメインネットおよびKovanテストネットのトークンに焦点を当てたブロックエクスプローラー
 
-## 参考文献 {#further-reading}
+## 参考リンク {#further-reading}
 
-_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
+_役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
 ## 関連トピック {#related-topics}
 

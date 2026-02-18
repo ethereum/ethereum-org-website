@@ -1,11 +1,11 @@
 ---
-title: Web3インターフェースデザインのための7つのヒューリスティック
-description: Web3のユーザビリティを向上させるための原則
+title: "Web3インターフェースデザインのための7つのヒューリスティック"
+description: "Web3のユーザビリティを向上させるための原則"
 lang: ja
 ---
 
 ユーザビリティヒューリスティックとは、サイトの使いやすさを評価するために使用できる広範な「経験則」です。
-これらのヒューリスティックは、特にWeb3に合わせて調整されており、Jakob Nielsenの[インタラクションデザインに関する10の一般原則](https://www.nngroup.com/articles/ten-usability-heuristics/)と併せて使用するべきものです。
+ここでは、ジャコブ・ニールセンの[インタラクションデザインのための10の一般的な原則](https://www.nngroup.com/articles/ten-usability-heuristics/)と合わせて、特にWeb3向けに調整された7つのヒューリスティクスを用いるべきです。
 
 ## Web3のための7つのユーザビリティヒューリスティック {#seven-usability-heuristics-for-web3}
 
@@ -52,7 +52,7 @@ lang: ja
 
 例: フッターに目立つサイズで監査結果を掲載します。
 
-![Audits referenced in the website footer](./Image2.png)
+![ウェブサイトのフッターで参照されている監査](./Image2.png)
 
 ### 3. 最も重要な情報が明確である {#the-most-important-info-is-obvious}
 
