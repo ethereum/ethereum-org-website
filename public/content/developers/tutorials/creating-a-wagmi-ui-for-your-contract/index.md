@@ -29,8 +29,8 @@ There is a lot of theory behind for a modern UI works, and [a lot of good sites]
 2. Clone the GitHub repository and install the necessary packages.
 
    ```sh
-   git clone https://github.com/qbzzt/20230801-modern-ui.git
-   cd 20230801-modern-ui
+   git clone https://github.com/qbzzt/260301-modern-ui-web3.git
+   cd 260301-modern-ui-web3
    pnpm install
    ```
 
@@ -79,7 +79,7 @@ Import the React component that implements the application (see below).
 import { config } from './wagmi.ts'
 ```
 
-Import the [wagmi](https://wagmi.sh/) configuration.
+Import the [wagmi](https://wagmi.sh/) configuration, which includes the blockchain configuration.
 
 ```tsx
 const queryClient = new QueryClient()
@@ -134,15 +134,26 @@ Of course, we have to close off the other components.
 #### `src/App.tsx` {#app-tsx}
 
 ```tsx
-import { 
-  useConnect, 
-  useConnection, 
-  useConnectors, 
-  useDisconnect 
+import {
+  useConnect,
+  useConnection,
+  useDisconnect,
+  useSwitchChain
 } from 'wagmi'
 
+import { useEffect } from 'react'
 import { Greeter } from './Greeter'
+```
 
+Import the libraries we need, as well as [the `Greeter` component](#greeter-tsx).
+
+```tsx
+const SEPOLIA_CHAIN_ID = 11155111
+```
+
+The Sepolia chain ID.
+
+```
 function App() {
 ```
 
