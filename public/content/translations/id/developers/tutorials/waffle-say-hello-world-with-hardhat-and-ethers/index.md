@@ -1,20 +1,22 @@
 ---
-title: "Tutorial Waffle hello world menggunakan hardhat dan ether"
+title: "Tutorial Waffle hello world dengan hardhat dan ethers"
 description: Buat proyek Waffle pertama Anda dengan hardhat dan ethers.js
 author: "MiZiet"
 tags:
-  - "waffle"
-  - "kontrak pintar"
-  - "solidity"
-  - "pengujian"
-  - "hardhat"
-  - "ethers.js"
+  [
+    "waffle",
+    "kontrak pintar",
+    "Solidity",
+    "pengujian",
+    "hardhat",
+    "ethers.js"
+  ]
 skill: beginner
 lang: id
 published: 2020-10-16
 ---
 
-Dalam tutorial [Waffle](https://ethereum-waffle.readthedocs.io) ini, kita akan belajar cara menyiapkan proyek kontrak pintar "Hello world" yang sederhana, menggunakan [hardhat](https://hardhat.org/) dan [ethers.js](https://docs.ethers.io/v5/). Kemudian kita akan belajar cara menambahkan fungsionalitas baru ke kontrak pintar kita dan cara mengujinya dengan Waffle.
+Dalam tutorial [Waffle](https://ethereum-waffle.readthedocs.io) ini, kita akan belajar cara menyiapkan proyek kontrak pintar "Hello world" sederhana, menggunakan [hardhat](https://hardhat.org/) dan [ethers.js](https://docs.ethers.io/v5/). Kemudian kita akan belajar cara menambahkan fungsionalitas baru ke kontrak pintar kita dan cara mengujinya dengan Waffle.
 
 Mari kita mulai dengan membuat proyek baru:
 
@@ -40,7 +42,7 @@ atau
 npm install -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
-Langkah selanjutnya adalah membuat proyek hardhat percontohan dengan menjalankan `npx hardhat`.
+Langkah selanjutnya adalah membuat proyek hardhat sampel dengan menjalankan `npx hardhat`.
 
 ```bash
 888    888                      888 888               888
@@ -52,7 +54,7 @@ Langkah selanjutnya adalah membuat proyek hardhat percontohan dengan menjalankan
 888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
 888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
 
-👷 Selamat datang di HardHat v2.0.3 👷‍
+👷 Welcome to Hardhat v2.0.3 👷‍
 
 ? What do you want to do? …
 ❯ Create a sample project
@@ -60,7 +62,7 @@ Create an empty hardhat.config.js
 Quit
 ```
 
-Pilih `Buat proyek sampel`
+Pilih `Create a sample project`
 
 Struktur proyek kita seharusnya terlihat seperti ini:
 
@@ -73,7 +75,7 @@ MyWaffleProject
 │   └── sample-script.js
 ├── test
 │   └── sample-test.js
-├── .gitattributs
+├── .gitattributes
 ├── .gitignore
 ├── hardhat.config.js
 └── package.json
@@ -81,7 +83,7 @@ MyWaffleProject
 
 ### Sekarang mari kita bicara tentang beberapa file ini: {#now-lets-talk}
 
-- Greeter.sol - kontrak pintar kita yang ditulis dalam solidity;
+- Greeter.sol - kontrak pintar kita yang ditulis dalam Solidity;
 
 ```solidity
 contract Greeter {
@@ -128,7 +130,7 @@ describe("Greeter", function () {
 
 ### Langkah selanjutnya terdiri dari mengompilasi kontrak kita dan menjalankan pengujian: {#compiling-and-testing}
 
-Pengujian wafel menggunakan Mocha (kerangka pengujian) dengan Chai (pustaka assertion). Yang harus Anda lakukan adalah menjalankan `npx hardhat test` dan menunggu pesan berikut muncul.
+Tes Waffle menggunakan Mocha (kerangka kerja pengujian) dengan Chai (pustaka asersi). Yang harus Anda lakukan adalah menjalankan `npx hardhat test` dan menunggu pesan berikut muncul.
 
 ```bash
 ✓ Should return the new greeting once it's changed
@@ -136,10 +138,10 @@ Pengujian wafel menggunakan Mocha (kerangka pengujian) dengan Chai (pustaka asse
 
 ### Semuanya terlihat bagus sejauh ini, mari tambahkan lebih banyak kerumitan pada proyek kita <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
-Bayangkan suatu situasi ketika seseorang menambahkan string kosong sebagai salam. Ini bukan sapaan yang hangat, bukan?  
-Mari kita pastikan itu tidak terjadi:
+Bayangkan suatu situasi ketika seseorang menambahkan string kosong sebagai salam. Itu bukan sapaan yang hangat, kan?  
+Mari kita pastikan hal itu tidak terjadi:
 
-Kita ingin menggunakan `revert` solidity ketika seseorang melewati string kosong. Hal baiknya adalah kita bisa dengan mudah menguji fungsionalitas ini dengan `to.be.revertedWith ()` matcher chai Waffle.
+Kita ingin menggunakan `revert` dari Solidity ketika seseorang memasukkan string kosong. Untungnya, kita dapat dengan mudah menguji fungsionalitas ini dengan pencocok chai dari Waffle `to.be.revertedWith()`.
 
 ```js
 it("Should revert when passing an empty string", async () => {
@@ -168,10 +170,10 @@ Changing greeting from 'Hello, world!' to ''
   1 failing
 ```
 
-Mari kita terapkan fungsi ini ke dalam kontrak pintar kita:
+Mari kita implementasikan fungsionalitas ini ke dalam kontrak pintar kita:
 
 ```solidity
-require(bytes(_greeting).length > 0, "Salam tidak boleh kosong");
+require(bytes(_greeting).length > 0, "Greeting should not be empty");
 ```
 
 Sekarang, fungsi setGreeting kita terlihat seperti ini:
@@ -197,6 +199,6 @@ Selamat! Anda berhasil :)
 
 ### Kesimpulan {#conclusion}
 
-Kita membuat proyek sederhana dengan Waffle, Hardhat, dan eters.js. Kita mempelajari cara menyiapkan proyek, menambahkan pengujian, dan mengimplementasikan fungsionalitas baru.
+Kita membuat proyek sederhana dengan Waffle, Hardhat dan ethers.js. Kita mempelajari cara menyiapkan proyek, menambahkan pengujian, dan mengimplementasikan fungsionalitas baru.
 
-Untuk chai matcher yang lebih hebat untuk menguji kontrak pintar Anda, lihat [dokumen resmi Waffle](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).
+Untuk pencocok chai hebat lainnya untuk menguji kontrak pintar Anda, periksa [dokumentasi resmi Waffle](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).
