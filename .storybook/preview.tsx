@@ -6,6 +6,7 @@ import type { Preview } from "@storybook/react"
 import ThemeProvider from "@/components/ThemeProvider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 
+import { withVisualTest } from "./decorators/visualTest"
 import nextIntl, { baseLocales } from "./next-intl"
 import { withNextThemes } from "./withNextThemes"
 
@@ -45,6 +46,7 @@ const preview: Preview = {
     locales: baseLocales,
   },
   decorators: [
+    withVisualTest,
     withNextThemes({
       themes: {
         light: "light",

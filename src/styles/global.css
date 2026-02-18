@@ -224,3 +224,22 @@
     animation-play-state: paused;
   }
 }
+
+/* Visual regression testing: disable animations and hide dynamic content */
+.visual-test-mode *,
+.visual-test-mode *::before,
+.visual-test-mode *::after {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+.visual-test-mode [data-visual-test-hide] {
+  visibility: hidden !important;
+}
+
+.visual-test-mode [data-testid="skeleton"] {
+  background: #e5e5e5 !important;
+  animation: none !important;
+}

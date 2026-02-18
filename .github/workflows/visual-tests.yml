@@ -1,0 +1,289 @@
+name: Visual Regression Tests
+
+on:
+  pull_request:
+    branches: [dev, main]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "PR number for re-validation after approval"
+        required: false
+        type: string
+      validation_only:
+        description: "Skip screenshot capture, just check approval status"
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: visual-${{ github.event.inputs.pr_number || github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+env:
+  VISUAL_TEST_BUCKET: eth-org-visual-baselines
+  # S3-compatible endpoint (self-hosted). Leave empty for AWS S3.
+  S3_ENDPOINT: ${{ secrets.S3_ENDPOINT || '' }}
+
+jobs:
+  visual-test:
+    name: Visual Regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      # --- Checkout ---
+      - name: Checkout (PR)
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@v4
+
+      - name: Checkout (re-validation)
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.pr_number != ''
+        uses: actions/checkout@v4
+        with:
+          ref: refs/pull/${{ github.event.inputs.pr_number }}/head
+
+      # --- Configure S3 access ---
+      # Works with both AWS S3 and S3-compatible stores (MinIO, Ceph, etc.)
+      - name: Configure S3 credentials
+        run: |
+          aws configure set aws_access_key_id "${{ secrets.VISUAL_TEST_AWS_ACCESS_KEY_ID }}"
+          aws configure set aws_secret_access_key "${{ secrets.VISUAL_TEST_AWS_SECRET_ACCESS_KEY }}"
+          aws configure set default.region "${{ secrets.VISUAL_TEST_AWS_REGION || 'us-east-1' }}"
+
+      # --- Validation-only mode ---
+      - name: Validation-only check
+        if: github.event.inputs.validation_only == 'true'
+        run: |
+          PR=${{ github.event.inputs.pr_number }}
+          ENDPOINT_FLAG=""
+          if [ -n "$S3_ENDPOINT" ]; then
+            ENDPOINT_FLAG="--endpoint-url $S3_ENDPOINT"
+          fi
+
+          aws s3 cp "s3://${{ env.VISUAL_TEST_BUCKET }}/metadata/${PR}.json" /tmp/metadata.json $ENDPOINT_FLAG
+
+          PENDING=$(node -e "
+            const m = require('/tmp/metadata.json');
+            console.log(m.summary.pending || 0);
+          ")
+
+          if [ "$PENDING" -eq 0 ]; then
+            echo "All visual changes approved."
+            exit 0
+          else
+            echo "::error::${PENDING} visual changes still pending approval."
+            exit 1
+          fi
+
+      # --- Full capture mode ---
+      - name: Setup pnpm
+        if: github.event.inputs.validation_only != 'true'
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        if: github.event.inputs.validation_only != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        if: github.event.inputs.validation_only != 'true'
+        run: pnpm install --frozen-lockfile
+
+      # --- Build Storybook ---
+      - name: Build Storybook
+        if: github.event.inputs.validation_only != 'true'
+        run: pnpm build-storybook
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+
+      # --- Download baselines ---
+      - name: Download baselines from S3
+        if: github.event.inputs.validation_only != 'true'
+        run: |
+          ENDPOINT_FLAG=""
+          if [ -n "$S3_ENDPOINT" ]; then
+            ENDPOINT_FLAG="--endpoint-url $S3_ENDPOINT"
+          fi
+
+          mkdir -p ".lostpixel/baseline"
+          aws s3 sync \
+            "s3://${{ env.VISUAL_TEST_BUCKET }}/baselines/" \
+            ".lostpixel/baseline/" \
+            $ENDPOINT_FLAG --quiet --no-progress || echo "No baselines yet"
+
+      # --- Run Lost Pixel ---
+      - name: Run Lost Pixel
+        if: github.event.inputs.validation_only != 'true'
+        id: lostpixel
+        uses: lost-pixel/lost-pixel@v3.22.0
+        continue-on-error: true
+
+      # Guard: distinguish "diffs found" from "Lost Pixel crashed"
+      - name: Check Lost Pixel health
+        if: steps.lostpixel.outcome == 'failure' && github.event.inputs.validation_only != 'true'
+        run: |
+          dir=".lostpixel/current"
+          if [ ! -d "$dir" ] || [ -z "$(ls -A "$dir" 2>/dev/null)" ]; then
+            echo "::error::Lost Pixel crashed — no screenshots captured."
+            exit 1
+          fi
+          echo "Lost Pixel completed (diffs may exist)."
+
+      # --- Set HAS_DIFFS flag ---
+      - name: Check for diffs
+        if: github.event.inputs.validation_only != 'true'
+        id: diffs
+        run: |
+          if [ "${{ steps.lostpixel.outcome }}" == "failure" ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # --- On diff: generate metadata, upload, comment ---
+      - name: Resolve PR number
+        if: steps.diffs.outputs.found == 'true'
+        id: pr
+        run: |
+          if [ -n "${{ github.event.inputs.pr_number }}" ]; then
+            echo "number=${{ github.event.inputs.pr_number }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "number=${{ github.event.pull_request.number }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate metadata
+        if: steps.diffs.outputs.found == 'true'
+        run: npx tsx scripts/visual-test/generate-metadata.ts
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          BRANCH: ${{ github.head_ref }}
+          COMMIT: ${{ github.sha }}
+          AUTHOR: ${{ github.event.pull_request.user.login || 'unknown' }}
+          S3_BUCKET: ${{ env.VISUAL_TEST_BUCKET }}
+          S3_ENDPOINT: ${{ env.S3_ENDPOINT }}
+
+      - name: Generate thumbnails
+        if: steps.diffs.outputs.found == 'true'
+        run: npx tsx scripts/visual-test/generate-thumbnails.ts
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+
+      - name: Upload to S3
+        if: steps.diffs.outputs.found == 'true'
+        run: |
+          PR=${{ steps.pr.outputs.number }}
+          ENDPOINT_FLAG=""
+          if [ -n "$S3_ENDPOINT" ]; then
+            ENDPOINT_FLAG="--endpoint-url $S3_ENDPOINT"
+          fi
+
+          # Retry wrapper for S3 operations
+          s3_retry() {
+            local max_attempts=3
+            local attempt=1
+            while [ $attempt -le $max_attempts ]; do
+              if "$@"; then return 0; fi
+              echo "Attempt $attempt/$max_attempts failed. Retrying in 5s..."
+              sleep 5
+              attempt=$((attempt + 1))
+            done
+            echo "::error::S3 operation failed after $max_attempts attempts: $*"
+            return 1
+          }
+
+          s3_retry aws s3 sync ".lostpixel/current/" \
+            "s3://${{ env.VISUAL_TEST_BUCKET }}/pending/${PR}/" $ENDPOINT_FLAG --quiet
+
+          s3_retry aws s3 sync ".lostpixel/difference/" \
+            "s3://${{ env.VISUAL_TEST_BUCKET }}/diffs/${PR}/" $ENDPOINT_FLAG --quiet
+
+          s3_retry aws s3 sync .lostpixel/thumbnails/ \
+            "s3://${{ env.VISUAL_TEST_BUCKET }}/thumbnails/${PR}/" $ENDPOINT_FLAG --quiet
+
+          s3_retry aws s3 cp .lostpixel/metadata.json \
+            "s3://${{ env.VISUAL_TEST_BUCKET }}/metadata/${PR}.json" $ENDPOINT_FLAG
+
+      - name: Update dashboard index
+        if: steps.diffs.outputs.found == 'true'
+        run: npx tsx scripts/visual-test/update-index.ts
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          S3_BUCKET: ${{ env.VISUAL_TEST_BUCKET }}
+          S3_ENDPOINT: ${{ env.S3_ENDPOINT }}
+
+      - name: Post PR comment
+        if: steps.diffs.outputs.found == 'true' && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const metadata = JSON.parse(
+              fs.readFileSync('.lostpixel/metadata.json', 'utf8')
+            );
+            const { summary } = metadata;
+            const pr = context.issue.number;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr,
+            });
+
+            const existing = comments.find(
+              (c) => c.user.type === 'Bot' && c.body.includes('visual change')
+            );
+
+            const body = [
+              `### ${summary.total} visual change${summary.total !== 1 ? 's' : ''} detected`,
+              '',
+              `| Added | Changed | Removed | Pending | Approved |`,
+              `|-------|---------|---------|---------|----------|`,
+              `| ${summary.added} | ${summary.changed} | ${summary.removed} | ${summary.pending} | ${summary.approved} |`,
+              '',
+              `<details>`,
+              `<summary>Changed stories</summary>`,
+              '',
+              ...metadata.changes.map(c => {
+                const pct = c.diffPercent != null ? ` (${c.diffPercent.toFixed(1)}%)` : '';
+                return `- \`${c.story}\` [${c.type}]${pct}`;
+              }),
+              '',
+              `</details>`,
+              '',
+              `Commit: \`${metadata.snapshotCommit.slice(0, 8)}\``,
+              '',
+              `Approve with: \`pnpm visual:approve\``,
+            ].join('\n');
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr,
+                body,
+              });
+            }
+
+      - name: Upload artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-test-results
+          path: |
+            .lostpixel/current/
+            .lostpixel/difference/
+            .lostpixel/metadata.json
+          retention-days: 14
+
+      - name: Fail if visual changes detected
+        if: steps.diffs.outputs.found == 'true'
+        run: exit 1
