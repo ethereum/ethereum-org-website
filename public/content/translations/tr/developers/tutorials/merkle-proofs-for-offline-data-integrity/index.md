@@ -12,8 +12,7 @@ published: 2021-12-30
 
 İdeal olarak tüm verileri binlerce bilgisayarda depolanan ve son derece yüksek kullanılabilirlik (veri sansürlenemez) ve bütünlüğe (veri yetkisiz bir şekilde değiştirilemez) sahip olan Ethereum depolaması üzerinde saklamak isteriz ancak 32 bayt büyüklüğünde bir kelime depolamanın maliyeti yaklaşık olarak 20,000 gazdır. Bunu yazarken, bu maliyet $6,60'a eşittir. Bayt başına 21 sentlik ücret birçok kullanıcı için çok pahalıdır.
 
-Bu sorunu çözmek için Ethereum ekosistemi, verileri merkeziyetsiz bir
-şekilde depolamanın birçok alternatif yolunu geliştirdi. Eğer ağ müsaitse maliyet daha az olacaktır ancak ağ eğer yoğunsa maliyet daha fazla olacaktır. Ancak ağın bütünlüğü hep aynı olacaktır.
+Bu sorunu çözmek için Ethereum ekosistemi, [verileri merkeziyetsiz bir şekilde depolamanın birçok alternatif yolunu](/developers/docs/storage/) geliştirdi. Eğer ağ müsaitse maliyet daha az olacaktır ancak ağ eğer yoğunsa maliyet daha fazla olacaktır. Ancak ağın bütünlüğü hep aynı olacaktır.
 
 Bu makalede, [Merkle ispatlarını](https://computersciencewiki.org/index.php/Merkle_proof) kullanarak verileri blokzincirde depolamadan veri bütünlüğünün **nasıl** sağlanacağını
 öğreneceksiniz.

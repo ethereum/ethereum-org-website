@@ -40,7 +40,7 @@
   "dex-term": "Merkeziyetsiz borsa (DEX)",
   "dex-definition": "Ağdaki eşler ile jeton takası yapmanızı sağlayan bir tür Ethereum uygulamasıdır. DEX'ler, merkezi borsalar gibi coğrafi kısıtlamalara tabi değildir; herkes katılabilir.",
   "difficulty-bomb-term": "Bomba değeri",
-  "difficulty-bomb-definition": "<a href=\"/glossary/#pos\">Hisse ispatına</a> geçiş yapmayı teşvik etmek için tasarlanmış, <a href=\"/glossary/#pos\">çatallanma</a> olasılığını azaltan, <a href=\"/glossary/#pow\">iş ispatı</a> <a href=\"/glossary/#difficulty\">zorluk</a> ayarında planlanan üssel bir artıştır. Bomba değeri, <a href=\"/roadmap/merge\">Birleşim</a> sonrası kullanımdan kaldırılmıştır.",
+  "difficulty-bomb-definition": "<a href=\"/glossary/#pos\">Hisse ispatına</a> geçiş yapmayı teşvik etmek için tasarlanmış, <a href=\"/glossary/#hard-fork\">çatallanma</a> olasılığını azaltan, <a href=\"/glossary/#pow\">iş ispatı</a> <a href=\"/glossary/#difficulty\">zorluk</a> ayarında planlanan üssel bir artıştır. Bomba değeri, <a href=\"/roadmap/merge\">Birleşim</a> sonrası kullanımdan kaldırılmıştır.",
   "ecdsa-term": "Eliptik Eğri Dijital İmza Algoritması (ECDSA)",
   "ecdsa-definition": "Ethereum tarafından fonların yalnızca sahipleri tarafından harcanabilmesini sağlamak için kullanılan bir kriptografik algoritmadır. Genel ve özel anahtarlar oluşturmak için tercih edilen yöntemdir. Hesap <a href=\"/glossary/#address\">adresi</a> oluşturma ve <a href=\"/glossary/#transaction\">işlem</a> doğrulaması için önemlidir.",
   "ens-term": "Ethereum İsim Servisi (ENS)",
