@@ -5,11 +5,11 @@ description: Una panoramica dei NFT su Ethereum
 lang: it
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebarDepth: 3
+sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Un logo Eth visualizzato tramite ologramma.
 summaryPoint1: Un modo pe rappresentare qualsiasi cosa sia univoca, come una risorsa basata su Ethereum.
-summaryPoint2: I NFT stanno dando ai creatori di contenuti più potere che mai.
+summaryPoint2: "I NFT stanno dando ai creatori di contenuti più potere che mai."
 summaryPoint3: Basati sui contratti intelligenti, sulla blockchain di Ethereum.
 ---
 

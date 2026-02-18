@@ -1,6 +1,6 @@
 ---
-title: Soggettività debole
-description: Una spiegazione della soggettività debole e del suo ruolo nell'Ethereum PoS.
+title: "Soggettività debole"
+description: "Una spiegazione della soggettività debole e del suo ruolo nell'Ethereum PoS."
 lang: it
 ---
 

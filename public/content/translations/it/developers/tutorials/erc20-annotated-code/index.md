@@ -1,6 +1,6 @@
 ---
 title: "Guida dettagliata al contratto ERC-20"
-description: Cosa c'è nel contratto ERC-20 di OpenZeppelin e a cosa serve?
+description: "Cosa c'è nel contratto ERC-20 di OpenZeppelin e a cosa serve?"
 author: Ori Pomerantz
 lang: it
 tags:

@@ -24,7 +24,7 @@ Per preservare la cronologia delle transazioni, i blocchi sono ordinati in modo 
 
 Dopo essere stato realizzato da un validatore della rete selezionato casualmente, un blocco viene propagato al resto della rete; tutti i nodi vengono aggiunti al blocco alla fine della relativa blockchain e un nuovo validatore viene selezionato per creare il successivo. Il processo esatto di costruzione dei blocchi e il processo di invio/consenso è attualmente specificato nel protocollo "Proof of Stake" di Ethereum.
 
-## Protocollo Proof of Stake {#proof-of-work-protocol}
+## Protocollo Proof of Stake {#proof-of-stake-protocol}
 
 Proof of Stake significa quanto segue:
 
