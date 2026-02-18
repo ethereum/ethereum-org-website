@@ -32,6 +32,7 @@ export const SITE_URL =
   process.env.URL || // Primary site URL
   "https://ethereum.org"
 export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
+export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`

@@ -71,6 +71,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { formatPriceUSD } from "@/lib/utils/numbers"
 import { polishRSSList } from "@/lib/utils/rss"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 import {
   BLOGS_WITHOUT_FEED,
   DEFAULT_LOCALE,
@@ -778,7 +779,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                       <div className="mt-12 flex flex-wrap gap-6 py-8">
                         <ButtonLink
                           size="lg"
-                          href="https://institutions.ethereum.org/"
+                          href={ENTERPRISE_ETHEREUM_URL}
                           customEventOptions={{
                             eventCategory: eventCategory,
                             eventAction: "ethereum_activity",

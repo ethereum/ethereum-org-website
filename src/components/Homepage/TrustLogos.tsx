@@ -12,6 +12,8 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 import FloatingCard from "./FloatingCard"
 
 import builtToLastImage from "@/public/images/homepage/built-to-last.png"
@@ -103,8 +105,9 @@ const TrustLogos = ({
         </p>
 
         <BaseLink
-          href="/enterprise"
+          href={ENTERPRISE_ETHEREUM_URL}
           className="inline-flex items-center gap-1 no-underline"
+          hideArrow
           customEventOptions={{
             eventCategory,
             eventAction: "section_click",

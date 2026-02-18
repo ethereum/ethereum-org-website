@@ -7,6 +7,8 @@ import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 import developersImage from "@/public/images/homepage/get-started/developers.png"
 import enterpriseImage from "@/public/images/homepage/get-started/enterprise.png"
 import learnImage from "@/public/images/homepage/get-started/learn.png"
@@ -63,7 +65,7 @@ const cards = [
     ],
     bulletColor: "bg-accent-c",
     cta: "Explore enterprise",
-    href: "https://institutions.ethereum.org/",
+    href: ENTERPRISE_ETHEREUM_URL,
     image: enterpriseImage,
   },
 ]

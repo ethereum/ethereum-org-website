@@ -18,6 +18,8 @@ import { BaseLink } from "@/components/ui/Link"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 type PersonaLink = {
   label: string
   href: string
@@ -79,7 +81,7 @@ const categories: PersonaCategory[] = [
       { label: "Founders", href: "/founders/", eventName: "founders" },
       {
         label: "Institutions",
-        href: "https://institutions.ethereum.org/",
+        href: ENTERPRISE_ETHEREUM_URL,
         isExternal: true,
         eventName: "institutions",
       },
