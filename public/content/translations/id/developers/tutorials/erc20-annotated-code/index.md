@@ -1,30 +1,39 @@
 ---
 title: "Panduan Lengkap Kontrak ERC-20"
-description: Apa yang terdapat dalam kontrak ERC-20 OpenZeppelin dan mengapa terdapat di sana?
+description: Apa isi kontrak ERC-20 OpenZeppelin dan mengapa ada di sana?
 author: Ori Pomerantz
 lang: id
-tags:
-  - "solidity"
-  - "erc-20"
+tags: [ "Solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---
 
-## Pendahuluan {#introduction}
+## Pengenalan {#introduction}
 
-Salah satu kegunaan paling umum dari Ethereum untuk suatu grup adalah membuat token yang dapat dipertukarkan, dalam pengertian sebagai mata uang mereka sendiri. Token ini biasanya mengikuti standar, [ERC-20](/developers/docs/standards/tokens/erc-20/). Standar ini memungkinkan penulisan perangkat, seperti kumpulan likuiditas dan dompet, yang bekerja dengan semua token ERC-20. Dalam artikel ini, kita akan menganalisis [penerapan ERC20 Solidity OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), maupun [definisi antarmuka](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+Salah satu kegunaan paling umum dari Ethereum untuk suatu grup adalah membuat token yang dapat dipertukarkan, dalam pengertian sebagai mata uang mereka sendiri. Token ini biasanya mengikuti standar,
+[ERC-20](/developers/docs/standards/tokens/erc-20/). Standar ini memungkinkan pembuatan alat, seperti pool likuiditas dan dompet, yang berfungsi dengan semua token
+ERC-20. Dalam artikel ini kami akan menganalisis
+[implementasi Solidity ERC20 dari OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), serta
+[definisi antarmukanya](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
-Ini adalah kode sumber beranotasi. Jika Anda ingin menerapkan ERC-20, [baca tutorial ini](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+Ini adalah kode sumber beranotasi. Jika Anda ingin mengimplementasikan ERC-20,
+[baca tutorial ini](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
 ## Antarmuka {#the-interface}
 
-Tujuan standar seperti ERC-20 adalah membuat banyak penerapan token yang saling berinteraksi di seluruh aplikasi, seperti dompet dan bursa terdesentralisasi. Untuk mencapai hal tersebut, kita membuat [antamuka](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Kode apa pun yang perlu menggunakan kontrak token dapat menggunakan definisi yang sama dalam antarmuka dan dapat menjadi kompatibel dengan semua kontrak token yang menggunakannya, apakah dompet seperti MetaMask, dapp seperti etherscan.io, atau kontrak berbeda seperti pool likuiditas.
+Tujuan dari standar seperti ERC-20 adalah untuk memungkinkan banyak implementasi token yang interoperabel di seluruh aplikasi, seperti dompet dan bursa terdesentralisasi. Untuk mencapainya, kami membuat sebuah
+[antarmuka](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Setiap kode yang perlu menggunakan kontrak
+token dapat menggunakan definisi yang sama di antarmuka dan kompatibel dengan semua kontrak token yang menggunakannya, baik itu dompet seperti
+MetaMask, sebuah dapp seperti etherscan.io, atau kontrak lain seperti pool likuiditas.
 
 ![Ilustrasi antarmuka ERC-20](erc20_interface.png)
 
-Jika Anda adalah pemrogram yang berpengalaman, Anda mungkin pernah melihat konstruk serupa dalam [Java](https://www.w3schools.com/java/java_interface.asp) atau bahkan dalam [file header C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
+Jika Anda seorang pemrogram berpengalaman, Anda mungkin ingat pernah melihat konstruksi serupa di [Java](https://www.w3schools.com/java/java_interface.asp)
+atau bahkan di [file header C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
-Ini adalah definisi dari [Antarmuka ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) dari OpenZeppelin. Ini adalah terjemahan dari [standar yang dapat dibaca manusia](https://eips.ethereum.org/EIPS/eip-20) ke kode Solidity. Tentu saja, antarmukanya sendiri tidak menentukan _cara_ melakukan apa pun. Cara ini dijelaskan dalam kode sumber kontrak di bawah.
+Ini adalah definisi dari [Antarmuka ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)
+dari OpenZeppelin. Ini adalah terjemahan dari [standar yang dapat dibaca manusia](https://eips.ethereum.org/EIPS/eip-20) ke dalam kode Solidity. Tentu saja,
+antarmuka itu sendiri tidak mendefinisikan _bagaimana_ melakukan apa pun. Hal itu dijelaskan dalam kode sumber kontrak di bawah ini.
 
 &nbsp;
 
@@ -32,7 +41,8 @@ Ini adalah definisi dari [Antarmuka ERC-20](https://github.com/OpenZeppelin/open
 // SPDX-License-Identifier: MIT
 ```
 
-File Solidity seharusnya mencakup pengenal lisensi. [Anda dapat melihat daftar lisensi di sini](https://spdx.org/licenses/). Jika Anda perlu lisensi yang berbeda, cukup jelaskan dalam bagian komentar.
+File Solidity seharusnya menyertakan pengenal lisensi. [Anda dapat melihat daftar lisensinya di sini](https://spdx.org/licenses/). Jika Anda memerlukan lisensi yang
+berbeda, jelaskan saja di kolom komentar.
 
 &nbsp;
 
@@ -40,17 +50,20 @@ File Solidity seharusnya mencakup pengenal lisensi. [Anda dapat melihat daftar l
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
-Bahasa Solidity masih berevolusi secara cepat, dan versi barunya mungkin tidak kompatibel dengan kode yang lama ([lihat di sini](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Oleh karena itu, sebaiknya Anda tidak hanya menentukan versi minimum dari bahasa, tetapi juga versi maksimumnya, versi terbaru saat Anda menguji kode.
+Bahasa Solidity masih berkembang pesat, dan versi baru mungkin tidak kompatibel dengan kode lama
+([lihat di sini](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Oleh karena itu, ada baiknya untuk menentukan tidak hanya versi minimum
+bahasa, tetapi juga versi maksimumnya, yaitu versi terbaru yang Anda gunakan untuk menguji kode tersebut.
 
 &nbsp;
 
 ```solidity
 /**
- * @dev Antarmuka standar ERC20 seperti yang didefinisikan dalam EIP.
+ * @dev Antarmuka standar ERC20 sebagaimana didefinisikan dalam EIP.
  */
 ```
 
-`@dev` dalam komentar adalah bagian dari [format NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html), yang digunakan untuk membuat dokumentasi dari kode sumber.
+`@dev` di dalam komentar adalah bagian dari [format NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html), yang digunakan untuk menghasilkan
+dokumentasi dari kode sumber.
 
 &nbsp;
 
@@ -58,7 +71,7 @@ Bahasa Solidity masih berevolusi secara cepat, dan versi barunya mungkin tidak k
 interface IERC20 {
 ```
 
-Secara konvensi, nama antarmuka dimulai dengan `I`.
+Menurut konvensi, nama antarmuka diawali dengan `I`.
 
 &nbsp;
 
@@ -69,51 +82,72 @@ Secara konvensi, nama antarmuka dimulai dengan `I`.
     function totalSupply() external view returns (uint256);
 ```
 
-Fungsi ini bersifat `external`, artinya [hanya dapat dipanggil dari luar kontrak](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2). Fungsi ini mengembalikan total persediaan dari token dalam kontrak. Nilai ini dikembalikan menggunakan jenis yang paling umum di Ethereum, 256 bit yang tak bertandatangan (256 bit adalah ukuran kata asli untuk EVM). Fungsi ini juga adalah `view`, artinya tidak mengubah status, sehingga dapat dilaksanakan pada simpul tunggal alih-alih membuat semua simpul dalam rantai blok menjalankannya. Jenis fungsi tidaktidak menghasilkan transaksi dan tidak memerlukan biaya [gas](/developers/docs/gas/).
+Fungsi ini `external`, artinya [hanya dapat dipanggil dari luar kontrak](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
+Fungsi ini mengembalikan total pasokan token dalam kontrak. Nilai ini dikembalikan menggunakan tipe paling umum di Ethereum, 256-bit unsigned (256 bit adalah
+ukuran kata asli dari EVM). Fungsi ini juga merupakan `view`, yang berarti tidak mengubah state, sehingga dapat dieksekusi pada satu simpul, alih-alih harus dijalankan oleh
+setiap simpul di rantai blok. Fungsi semacam ini tidak menghasilkan transaksi dan tidak memerlukan biaya [gas](/developers/docs/gas/).
 
-**Catatan:** Dalam teori, mungkin tampak bahwa pembuat kontrak dapat melakukan kecurangan dengan mengembalikan total persediaan yang lebih kecil dari nilai aslinya, sehingga membuat setiap token tampak lebih berharga dari nilai sebenarnya. Namun, ketakutan itu mengabaikan sifat sebenarnya dari rantai blok. Semua hal yang terjadi di rantai blok dapat diverifikasi oleh setiap simpul. Untuk mencapai hal tersebut, setiap kode bahasa mesin dan penyimpanan kontrak tersedia di setiap simpul. Meskipun Anda tidak diharuskan menerbitkan kode Solidity untuk kontrak Anda, tidak seorang pun akan menghargai Anda kecuali jika Anda menerbitkan kode sumber dan versi Solidity yang dengannya kontrak dikumpulkan, sehingga dapat diverifikasi terhadap kode bahasa mesin yang Anda sediakan. Contohnya, lihat [kontrak ini](https://etherscan.io/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD#code).
+**Catatan:** Secara teori, sepertinya pembuat kontrak bisa berbuat curang dengan mengembalikan total pasokan yang lebih kecil dari nilai sebenarnya, membuat setiap token tampak
+lebih berharga daripada yang sebenarnya. Namun, kekhawatiran itu mengabaikan sifat asli dari rantai blok. Semua yang terjadi di rantai blok dapat diverifikasi oleh
+setiap simpul. Untuk mencapai ini, kode bahasa mesin dan penyimpanan setiap kontrak tersedia di setiap simpul. Meskipun Anda tidak diwajibkan untuk memublikasikan kode Solidity
+untuk kontrak Anda, tidak ada yang akan menganggap Anda serius kecuali Anda memublikasikan kode sumber dan versi Solidity yang digunakan untuk mengompilasinya, sehingga dapat
+diverifikasi terhadap kode bahasa mesin yang Anda berikan.
+Sebagai contoh, lihat [kontrak ini](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Mengembalikan jumlah token yang dimiliki oleh `akun`.
+     * @dev Mengembalikan jumlah token yang dimiliki oleh `account`.
      */
     function balanceOf(address account) external view returns (uint256);
 ```
 
-Seperti namanya, `balanceOf` mengembalikan saldo akun. Akun Ethereum dikenali dalam Solidity menggunakan jenis `alamat`, yang menampung 160 bit. Selain itu, merupakan `external` dan `view`.
+Seperti namanya, `balanceOf` mengembalikan saldo sebuah akun. Akun Ethereum diidentifikasi di Solidity menggunakan tipe `address`, yang menampung 160 bit.
+Fungsi ini juga `external` dan `view`.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Memindahkan `jumlah` token dari akun pemanggil ke `penerima`.
+     * @dev Memindahkan token `amount` dari akun pemanggil ke `recipient`.
      *
      * Mengembalikan nilai boolean yang menunjukkan apakah operasi berhasil.
      *
-     * Memancarkan peristiwa {Transfer}.
+     * Memancarkan aksi {Transfer}.
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-Fungsi `transfer` mentransfer token dari pemanggil ke alamat berbeda. Fungsi ini melibatkan perubahan status, sehingga bukan `view`. Ketika pengguna memanggil fungsi ini, pihaknya membuat transaksi dan memerlukan gas. Selain itu, memancarkan peristiwa, `Transfer`, untuk memberitahu semua orang di rantai blok tentang peristiwa tersebut.
+Fungsi `transfer` mentransfer token dari pemanggil ke alamat yang berbeda. Ini melibatkan perubahan state, jadi ini bukan fungsi `view`.
+Ketika pengguna memanggil fungsi ini, sebuah transaksi akan dibuat dan akan dikenakan biaya gas. Fungsi ini juga memancarkan aksi, `Transfer`, untuk menginformasikan semua orang di
+rantai blok tentang aksi tersebut.
 
-Fungsi tersebut memiliki dua jenis output untuk dua jenis pemanggil yang berbeda:
+Fungsi ini memiliki dua jenis keluaran untuk dua jenis pemanggil yang berbeda:
 
-- Pengguna yang memanggil fungsi secara langsung dari antarmuka pengguna. Pada umumnya, pengguna mengirimkan transaksi dan tidak menunggu respon, yang dapat memerlukan waktu yang tak dapat diperkirakan. Pengguna dapat melihat hal yang terjadi dengan mencari tanda terima transaksi (yang dikenali melalui hash transaksi) atau mencari peristiwa `Transfer`.
-- Kontrak lainnya, yang memanggil fungsi sebagai bagian dari transaksi secara keseluruhan. Kontrak-kontrak ini mendapatkan hasil segera, karena beroperasi dalam transaksi yang sama, sehingga dapat menggunakan nilai pengembalian fungsi.
+- Pengguna yang memanggil fungsi secara langsung dari antarmuka pengguna. Biasanya pengguna mengirimkan transaksi
+  dan tidak menunggu respons, yang bisa memakan waktu yang tidak ditentukan. Pengguna dapat melihat apa yang terjadi
+  dengan mencari resi transaksi (yang diidentifikasi oleh hash transaksi) atau dengan mencari
+  aksi `Transfer`.
+- Kontrak lain, yang memanggil fungsi sebagai bagian dari transaksi keseluruhan. Kontrak-kontrak tersebut langsung mendapatkan hasilnya,
+  karena berjalan di transaksi yang sama, sehingga mereka dapat menggunakan nilai kembalian fungsi.
 
-Jenis output yang sama dibuat dengan fungsi lainnya yang mengubah status kontrak.
+Tipe keluaran yang sama dibuat oleh fungsi-fungsi lain yang mengubah state kontrak.
 
 &nbsp;
 
-Tunjangan membuat akun mengeluarkan beberapa token yang dimiliki oleh pengguna yang berbeda. Hal ini berguna, contohnya, untuk kontrak yang bertindak sebagai penjual. Kontrak tidak dapat memantau aksi, sehingga jika pembeli mentransfer token ke kontrak penjual secara langsung, maka kontrak tersebut tidak akan diketahui telah dibayar. Sebagai gantinya, pembeli mengizinkan kontrak penjual mengeluarkan jumlah tertentu, dan penjual mentransfer jumlah tersebut. Hal ini dilakukan melalui fungsi yang dipanggil kontrak penjual, sehingga kontrak penjual dapat mengetahui jika transfer berhasil.
+Allowance mengizinkan sebuah akun untuk membelanjakan sejumlah token yang dimiliki oleh pemilik yang berbeda.
+Ini berguna, misalnya, untuk kontrak yang bertindak sebagai penjual. Kontrak tidak
+dapat memantau aksi, jadi jika pembeli mentransfer token ke kontrak penjual
+secara langsung, kontrak tersebut tidak akan tahu bahwa ia telah dibayar. Sebagai gantinya, pembeli mengizinkan
+kontrak penjual untuk membelanjakan sejumlah tertentu, dan penjual mentransfer jumlah tersebut.
+Ini dilakukan melalui fungsi yang dipanggil kontrak penjual, sehingga kontrak penjual
+dapat mengetahui apakah itu berhasil.
 
 ```solidity
     /**
-     * @dev Mengembalikan sisa jumlah token yang akan
-     * diizinkan untuk dikeluarkan oleh `pengguna` atas nama `pemilik` melalui {transferFrom}. Nilai ini merupakan
+     * @dev Mengembalikan jumlah token yang tersisa yang akan diizinkan untuk dibelanjakan oleh `spender`
+     * atas nama `owner` melalui {transferFrom}. Ini adalah
      * nol secara default.
      *
      * Nilai ini berubah ketika {approve} atau {transferFrom} dipanggil.
@@ -121,20 +155,21 @@ Tunjangan membuat akun mengeluarkan beberapa token yang dimiliki oleh pengguna y
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-Fungsi `tunjangan` membiarkan setiap orang membuat kueri untuk melihat tunjangan yang diizinkan satu alamat (`owner`) untuk digunakan oleh alamat (`spender`).
+Fungsi `allowance` memungkinkan siapa saja untuk melakukan kueri untuk melihat berapa allowance yang
+diberikan satu alamat (`owner`) kepada alamat lain (`spender`) untuk dibelanjakan.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Menetapkan `jumlah` sebagai uang tunjangan `pengguna` melalui token pemanggil.
+     * @dev Menetapkan `amount` sebagai allowance `spender` atas token pemanggil.
      *
      * Mengembalikan nilai boolean yang menunjukkan apakah operasi berhasil.
      *
-     * PENTING: Ingatlah bahwa mengubah uang tunjangan dengan cara ini membawa resiko
-     * seseorang mungkin menggunakan baik uang tunjangan lama maupun baru dengan
-     * pengurutan transaksi yang tidak diharapkan. Satu solusi yang mungkin untuk mengatasi kompetisi ini
-     * adalah pertama-tama mengurangi uang tunjangan pengguna ke 0 dan menetapkan
+     * PENTING: Waspadalah bahwa mengubah allowance dengan metode ini membawa risiko
+     * bahwa seseorang dapat menggunakan allowance lama dan baru dengan urutan
+     * transaksi yang tidak menguntungkan. Salah satu solusi yang mungkin untuk mengurangi kondisi
+     * balapan ini adalah dengan terlebih dahulu mengurangi allowance spender menjadi 0 dan menetapkan
      * nilai yang diinginkan setelahnya:
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
@@ -143,19 +178,23 @@ Fungsi `tunjangan` membiarkan setiap orang membuat kueri untuk melihat tunjangan
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-Fungsi `persetujuan` membuat tunjangan. Pastikan membaca pesan tentang cara tunjangan dapat disalahgunakan. Di Ethereum, Anda mengendalikan urutan transaksi Anda sendiri, tetapi Anda tidak dapat mengendalikan urutan di mana transaksi orang lain akan dilaksanakan, kecuali jika Anda tidak mengirimkan transaksi Anda sendiri sampai Anda melihat transaksi pihak lainnya telah terjadi.
+Fungsi `approve` membuat sebuah allowance. Pastikan untuk membaca pesan tentang
+bagaimana hal itu dapat disalahgunakan. Di Ethereum, Anda mengendalikan urutan transaksi Anda sendiri,
+tetapi Anda tidak dapat mengendalikan urutan di mana transaksi orang lain
+akan dilaksanakan, kecuali jika Anda tidak mengirimkan transaksi Anda sendiri sampai
+Anda melihat transaksi pihak lainnya telah terjadi.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Memindahkan `jumlah` token dari `pengirim` ke `penerima` menggunakan
-     * mekanisme tunjangan. `jumlah` kemudian dikurangi dari tunjangan
-     * pemanggil.
+     * @dev Memindahkan `amount` token dari `sender` ke `recipient` menggunakan
+     * mekanisme tunjangan. `amount` kemudian dikurangi dari
+     * tunjangan pemanggil.
      *
      * Mengembalikan nilai boolean yang menunjukkan apakah operasi berhasil.
      *
-     * Memancarkan peristiwa {Transfer}.
+     * Memancarkan sebuah aksi {Transfer}.
      */
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
@@ -167,16 +206,16 @@ Akhirnya, `transferFrom` digunakan oleh pembelanja untuk benar-benar menggunakan
 ```solidity
 
     /**
-     * @dev Dipancarkan ketika token `nilai` dipindahkan dari satu akun (`dari`) ke
-     * lainnya (`ke`).
+     * @dev Dipancarkan ketika `value` token dipindahkan dari satu akun (`from`) ke
+     * akun lain (`to`).
      *
-     * Perhatikan bahwa `nilai` dapat menjadi nol.
+     * Perhatikan bahwa `value` mungkin nol.
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
-     * a call to {approve}. `nilai` adalah tunjangan baru.
+     * @dev Dipancarkan ketika tunjangan `spender` untuk `owner` diatur oleh
+     * panggilan ke {approve}. `value` adalah tunjangan baru.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
@@ -186,7 +225,10 @@ Aksi ini dipancarkan ketika status kontrak ERC-20 berubah.
 
 ## Kontrak Sebenarnya {#the-actual-contract}
 
-Ini adalah kontrak sebenarnya yang menerapkan standar ERC-20, [yang diambil dari sini](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Kontrak ini tidak dimaksudkan untuk digunakan seperti namanya, tetapi Anda dapat [mewarisi](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) untuk memperluasnya menjadi sesuatu yang berguna.
+Ini adalah kontrak sebenarnya yang mengimplementasikan standar ERC-20,
+[diambil dari sini](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
+Ini tidak dimaksudkan untuk digunakan apa adanya, tetapi Anda dapat
+[mewarisi](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) darinya untuk mengembangkannya menjadi sesuatu yang dapat digunakan.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -195,7 +237,7 @@ pragma solidity >=0.6.0 <0.8.0;
 
 &nbsp;
 
-### Impor Pernyataan {#import-statements}
+### Pernyataan Impor {#import-statements}
 
 Selain definisi antarmuka di atas, definisi kontrak mengimpor dua file lainnya:
 
@@ -206,8 +248,13 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` adalah definisi yang diperlukan untuk menggunakan [OpenGSN](https://www.opengsn.org/), sistem yang mengizinkan pengguna tanpa ether untuk menggunakan rantai blok. Perhatikan bahwa versi ini adalah versi yang lama, jika Anda ingin mengintegrasikannya dengan OpenGSN, [gunakan tutorial ini](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [Pustaka SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), yang digunakan untuk membuat penambahan dan pengurangan tanpa berlebihan. Pustaka ini diperlukan karena jika tidak seseorang dapat entah bagaimana memiliki satu token, membelanjakan dua token, dan kemudian memiliki 2^256-1 token.
+- `GSN/Context.sol` adalah definisi yang diperlukan untuk menggunakan [OpenGSN](https://www.opengsn.org/), sebuah sistem yang memungkinkan pengguna tanpa ether
+  untuk menggunakan rantai blok. Perhatikan bahwa ini adalah versi lama, jika Anda ingin berintegrasi dengan OpenGSN
+  [gunakan tutorial ini](https://docs.opengsn.org/javascript-client/tutorial.html).
+- [Pustaka SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), yang mencegah
+  `overflow`/`underflow` aritmetika untuk Solidity versi **&lt;0.8.0**. Di Solidity ≥0.8.0, operasi aritmetika secara otomatis
+  melakukan `revert` saat terjadi `overflow`/`underflow`, sehingga SafeMath tidak diperlukan. Kontrak ini menggunakan SafeMath untuk kompatibilitas mundur dengan
+  versi kompiler yang lebih lama.
 
 &nbsp;
 
@@ -215,27 +262,27 @@ Komentar ini menjelaskan tujuan dari kontrak.
 
 ```solidity
 /**
- * @dev Penerapan dari antarmuka {IERC20}.
+ * @dev Implementasi dari antarmuka {IERC20}.
  *
- * Penerapan ini bersifat agnostik terhadap cara token dibuat. Artinya,
- * mekanisme persediaan harus ditambahkan dalam kontrak yang dihasilkan menggunakan {_mint}.
- * Untuk mekanisme generik, lihat {ERC20PresetMinterPauser}.
+ * Implementasi ini tidak bergantung pada cara token dibuat. Ini berarti
+ * bahwa mekanisme pasokan harus ditambahkan dalam kontrak turunan menggunakan {_mint}.
+ * Untuk mekanisme umum, lihat {ERC20PresetMinterPauser}.
  *
- * TIP: Untuk tulisan terperinci, lihat panduan kami
+ * TIPS: Untuk tulisan mendetail, lihat panduan kami
  * https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226[Cara
- * menerapkan mekanisme persediaan].
+ * mengimplementasikan mekanisme pasokan].
  *
- * Kita telah mengikuti pedoman OpenZeppelin: fungsi membalikkan alih-alih
- * mengembalikan `salah` saat kegagalan terjadi. Namun, perilaku ini bersifat konvensional
+ * Kami telah mengikuti pedoman umum OpenZeppelin: fungsi melakukan `revert` alih-alih
+ * mengembalikan `false` saat gagal. Perilaku ini tetap konvensional
  * dan tidak bertentangan dengan ekspektasi aplikasi ERC20.
  *
- * Selain itu, aksi {Approval} dipancarkan saat melakukan panggilan ke {transferFrom}.
- * Aksi ini membuat aplikasi merekonstruksi kembali tunjangan untuk semua akun hanya
- * dengan mendengarkan aksi yang dikatakan. Penerapan lain dari EIP tidak dapat memancarkan
- * aksi ini, karena tidak diharuskan oleh spesifikasi.
+ * Selain itu, sebuah aksi {Approval} dipancarkan pada panggilan ke {transferFrom}.
+ * Hal ini memungkinkan aplikasi untuk merekonstruksi tunjangan untuk semua akun hanya
+ * dengan mendengarkan aksi tersebut. Implementasi EIP lain mungkin tidak memancarkan
+ * aksi ini, karena tidak diwajibkan oleh spesifikasi.
  *
- * Akhirnya, fungsi {decreaseAllowance} dan {increaseAllowance}
- * non-standar telah ditambahkan untuk mengurangi masalah yang diketahui seputar pengaturan
+ * Terakhir, fungsi non-standar {decreaseAllowance} dan {increaseAllowance}
+ * telah ditambahkan untuk memitigasi masalah yang sudah dikenal seputar pengaturan
  * tunjangan. Lihat {IERC20-approve}.
  */
 
@@ -247,7 +294,7 @@ Komentar ini menjelaskan tujuan dari kontrak.
 contract ERC20 is Context, IERC20 {
 ```
 
-This line specifies the inheritance, in this case from `IERC20` from above and `Context`, for OpenGSN.
+Baris ini menentukan warisan, dalam kasus ini dari `IERC20` di atas dan `Context`, untuk OpenGSN.
 
 &nbsp;
 
@@ -257,19 +304,27 @@ This line specifies the inheritance, in this case from `IERC20` from above and `
 
 ```
 
-Baris ini melekatkan pustaka `SafeMath` ke jenis `uint256`. Anda dapat menemukan pustaka ini [di sini](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
+Baris ini melekatkan pustaka SafeMath ke jenis `uint256`. Anda dapat menemukan pustaka ini
+[di sini](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
 
 ### Definisi Variabel {#variable-definitions}
 
-Definisi-definisi ini menentukan variabel status kontrak. Variabel-variabel ini dinyatakan bersifat `pribadi`, tetapi hanya berarti bahwa kontrak lain di rantai blok tidak dapat membaca variabel-variabel tersebut. _Tidak ada rahasia di rantai blok_, perangkat lunak di setiap simpul memiliki status dari setiap kontrak dalam setiap blok. Dengan konvensi, variabel status diberi nama `_<something>`.
+Definisi-definisi ini menentukan variabel status kontrak. Variabel-variabel ini dinyatakan bersifat `private`, tetapi
+hanya berarti bahwa kontrak lain di rantai blok tidak dapat membacanya. _Tidak ada
+rahasia di rantai blok_, perangkat lunak di setiap simpul memiliki status dari setiap kontrak
+di setiap blok. Menurut konvensi, variabel status diberi nama `_<something>`.
 
-Kedua variabel pertama adalah [pemetaan](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), artinya berperilaku kurang lebih sama dengan, [larik asosiatif](https://wikipedia.org/wiki/Associative_array), dengan pengecualian bahwa kuncinya adalah nilai angka. Penyimpanan hanya dialokasikan untuk entri yang memiliki nilai berbeda dari default (nol).
+Dua variabel pertama adalah [pemetaan](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
+artinya keduanya berperilaku kurang lebih sama dengan [array asosiatif](https://wikipedia.org/wiki/Associative_array),
+kecuali bahwa kuncinya adalah nilai numerik. Penyimpanan hanya dialokasikan untuk entri yang memiliki nilai
+berbeda dari default (nol).
 
 ```solidity
     mapping (address => uint256) private _balances;
 ```
 
-Pemetaan pertama, `_balances`, adalah alamat dan saldo masing-masing token ini. Untuk mengakses saldo, gunakan sintaksis ini: `_balances[<address>]`.
+Pemetaan pertama, `_balances`, adalah alamat dan saldo masing-masing dari token ini. Untuk mengakses
+saldo, gunakan sintaksis ini: `_balances[<address>]`.
 
 &nbsp;
 
@@ -277,7 +332,9 @@ Pemetaan pertama, `_balances`, adalah alamat dan saldo masing-masing token ini. 
     mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
-Variabel ini, `_allowances`, menyimpan tunjangan yang dijelaskan sebelumnya. Indeks pertama adalah pemiliki token, dan indeks kedua adalah kontrak dengan tunjangan. Untuk mengakses jumlah yang dapat dibelanjakan alamat A dari akun alamat B, gunakan `_allowances[B][A]`.
+Variabel ini, `_allowances`, menyimpan tunjangan yang dijelaskan sebelumnya. Indeks pertama adalah pemilik
+token, dan yang kedua adalah kontrak dengan tunjangan. Untuk mengakses jumlah yang dapat dibelanjakan alamat A
+dari akun alamat B, gunakan `_allowances[B][A]`.
 
 &nbsp;
 
@@ -285,7 +342,7 @@ Variabel ini, `_allowances`, menyimpan tunjangan yang dijelaskan sebelumnya. Ind
     uint256 private _totalSupply;
 ```
 
-Seperti usulan namanya, variabel ini menelusuri total persediaan token.
+Seperti namanya, variabel ini melacak total pasokan token.
 
 &nbsp;
 
@@ -295,34 +352,44 @@ Seperti usulan namanya, variabel ini menelusuri total persediaan token.
     uint8 private _decimals;
 ```
 
-Ketiga variabel ini digunakan untuk meningkatkan keterbacaan. Kedua variabel pertama cukup jelas, tetapi `_decimals` tidak jelas.
+Ketiga variabel ini digunakan untuk meningkatkan keterbacaan. Kedua variabel pertama cukup jelas, tetapi `_decimals`
+tidak.
 
-Di satu sisi, Ethereum tidak memiliki titik mengambang atau variabel pecahan. Di sisi lain, manusia suka bisa membagi token. Satu alasan orang-orang puas dengan emas sebagai mata uang adalah bahwa emas sulit diubah ketika seseorang ingin membeli nilai yang sedikit dari sesuatu yang besar.
+Di satu sisi, Ethereum tidak memiliki titik mengambang atau variabel pecahan. Di sisi lain,
+manusia suka bisa membagi token. Salah satu alasan orang memilih emas sebagai mata
+uang adalah karena sulit untuk membuat kembalian ketika seseorang ingin membeli seekor sapi seharga seekor bebek.
 
-Solusinya adalah menelusuri bilangan bulat, tetapi sebagai gantinya menghitung token aslinya sebagai token pecahan yang hampir tidak berharga. Dalam kasus ether, token pecahan disebut wei, dan 10^18 wei sama dengan satu ETH. Dalam tulisan, 10.000.000.000.000 wei kira-kira sama dengan satu sen AS atau Euro.
+Solusinya adalah dengan melacak bilangan bulat, tetapi alih-alih menghitung token asli, yang dihitung adalah token pecahan yang
+hampir tidak berharga. Dalam kasus ether, token pecahan disebut wei, dan 10^18 wei sama dengan satu
+ETH. Saat tulisan ini dibuat, 10.000.000.000.000 wei kira-kira setara dengan satu sen Dolar AS atau Euro.
 
-Aplikasi perlu mengetahui cara menampilkan saldo token. Jika pengguna memiliki 3.141.000.000.000.000.000 wei, apakah itu sama dengan 3,14 ETH? 31,41 ETH? 3.141 ETH? Dalam kasus ether, nilai ini didefiniskan sebagai 10^18 wei untuk ETH, tetapi untuk token Anda, Anda dapat memilih nilai yang berbeda. Jika membagi token tidak masuk akal, Anda dapat menggunakan nilai nol `_decimals`. Jika Anda ingin menggunakan standar yang sama seperti ETH, gunakan nilai **18**.
+Aplikasi perlu mengetahui cara menampilkan saldo token. Jika pengguna memiliki 3.141.000.000.000.000.000 wei, apakah itu
+3,14 ETH? 31,41 ETH? 3.141 ETH? Dalam kasus ether, nilai ini didefiniskan sebagai 10^18 wei untuk ETH, tetapi untuk
+token Anda, Anda dapat memilih nilai yang berbeda. Jika membagi token tidak masuk akal, Anda dapat menggunakan
+nilai `_decimals` nol. Jika Anda ingin menggunakan standar yang sama dengan ETH, gunakan nilai **18**.
 
 ### Konstruktor {#the-constructor}
 
 ```solidity
     /**
-     * @dev Menetapkan nilai untuk {name} dan {symbol}, menginisialisasi {decimals} dengan
+     * @dev Mengatur nilai untuk {name} dan {symbol}, menginisialisasi {decimals} dengan
      * nilai default 18.
      *
-     * Untuk memilih nilai berbeda untuk {decimals}, gunakan {_setupDecimals}.
+     * Untuk memilih nilai yang berbeda untuk {decimals}, gunakan {_setupDecimals}.
      *
-     * Semua ketiga nilai ini tak dapat diubah: mereka hanya dapat ditetapkan sekali setelah
+     * Ketiga nilai ini tidak dapat diubah: hanya dapat diatur sekali selama
      * konstruksi.
      */
     constructor (string memory name_, string memory symbol_) public {
+        // Di Solidity ≥0.7.0, 'public' bersifat implisit dan dapat dihilangkan.
+
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
     }
 ```
 
-Konstruktor dipanggil ketika kontrak terlebih dahulu dibuat. Dengan konvensi, parameter fungsi diberi nama `<something>_`.
+Konstruktor dipanggil saat kontrak pertama kali dibuat. Menurut konvensi, parameter fungsi diberi nama `<something>_`.
 
 ### Fungsi Antarmuka Pengguna {#user-interface-functions}
 
@@ -335,24 +402,24 @@ Konstruktor dipanggil ketika kontrak terlebih dahulu dibuat. Dengan konvensi, pa
     }
 
     /**
-     * @dev Returns the symbol of the token, usually a shorter version of the
-     * name.
+     * @dev Mengembalikan simbol token, biasanya versi nama yang lebih pendek.
+     * nama.
      */
     function symbol() public view returns (string memory) {
         return _symbol;
     }
 
     /**
-     * @dev Returns the number of decimals used to get its user representation.
-     * Sebagai contoh, jika `desimal` sama dengan `2`, saldo token `505` token harus
-     * ditampilkan untuk pengguna sebagai `5.05` (`505 / 10 ** 2`).
+     * @dev Mengembalikan jumlah desimal yang digunakan untuk mendapatkan representasi penggunanya.
+     * Misalnya, jika `decimals` sama dengan `2`, saldo `505` token harus
+     * ditampilkan kepada pengguna sebagai `5,05` (`505 / 10 ** 2`).
      *
-     * Token biasanya memilih nilai 18, yang meniru hubungan antara
-     * ether dan wei. Ini nilai yang digunakan {ERC20}, kecuali {_setupDecimals} di
-     * panggil.
+     * Token biasanya memilih nilai 18, meniru hubungan antara
+     * ether dan wei. Ini adalah nilai yang digunakan {ERC20}, kecuali jika {_setupDecimals} dipanggil.
+     * dipanggil.
      *
-     * CATATAN: Informasi ini hanya digunakan untuk tujuan _display_: itu tidak
-     * sama sekali berdampak terhadap aritmatika mana pun dari kontrak, termasuk
+     * CATATAN: Informasi ini hanya digunakan untuk tujuan _tampilan_: sama sekali
+     * tidak memengaruhi aritmetika kontrak apa pun, termasuk
      * {IERC20-balanceOf} dan {IERC20-transfer}.
      */
     function decimals() public view returns (uint8) {
@@ -360,61 +427,67 @@ Konstruktor dipanggil ketika kontrak terlebih dahulu dibuat. Dengan konvensi, pa
     }
 ```
 
-Fungsi-fungsi ini, `nama`, `simbol`, dan `desimal` menolong antarmuka pengguna mengetahui tentang kontrak Anda sehingga mereka dapat menampilkannya dengan benar.
+Fungsi-fungsi ini, `name`, `symbol`, dan `decimals` membantu antarmuka pengguna mengetahui tentang kontrak Anda sehingga dapat menampilkannya dengan benar.
 
-Jenis pengembaliannya adalah `memori string`, yang berarti kembalikan string yang tersimpan dalam memori. Variabel-variabel, seperti string, dapat tersimpan dalam tiga lokasi:
+Jenis kembaliannya adalah `string memory`, yang berarti mengembalikan string yang disimpan dalam memori. Variabel, seperti
+string, dapat disimpan di tiga lokasi:
 
-|             | Seumur hidup       | Akses Kontrak | Biaya Gas                                                                              |
-| ----------- | ------------------ | ------------- | -------------------------------------------------------------------------------------- |
-| Memori      | Pemanggilan fungsi | Baca/Tulis    | Puluhan atau ratusan (lebih tinggi untuk lokasi yang lebih tinggi)                     |
-| Calldata    | Pemanggilan fungsi | Baca Saja     | Tidak dapat digunakan sebagai jenis pengembalian, hanya sebagai jenis parameter fungsi |
-| Penyimpanan | Sampai diubah      | Baca/Tulis    | Tinggi (800 untuk baca, 20.000 untuk tulis)                                            |
+|             | Masa Pakai       | Akses Kontrak | Biaya Gas                                                                             |
+| ----------- | ---------------- | ------------- | ------------------------------------------------------------------------------------- |
+| Memori      | Panggilan fungsi | Baca/Tulis    | Puluhan atau ratusan (lebih tinggi untuk lokasi yang lebih tinggi) |
+| Calldata    | Panggilan fungsi | Hanya Baca    | Tidak dapat digunakan sebagai tipe kembalian, hanya tipe parameter fungsi             |
+| Penyimpanan | Sampai diubah    | Baca/Tulis    | Tinggi (800 untuk baca, 20rb untuk tulis)                          |
 
-Dalam kasus ini, `memori` adalah pilihan terbaik.
+Dalam kasus ini, `memory` adalah pilihan terbaik.
 
-### Informasi Token Baca {#read-token-information}
+### Baca Informasi Token {#read-token-information}
 
-Fungsi-fungsi ini menyediakan informasi tentang token, baik total persediaan atau saldo akun.
+Ini adalah fungsi-fungsi yang menyediakan informasi tentang token, baik total pasokan maupun
+saldo akun.
 
 ```solidity
     /**
-     * @dev See {IERC20-totalSupply}.
+     * @dev Lihat {IERC20-totalSupply}.
      */
     function totalSupply() public view override returns (uint256) {
         return _totalSupply;
     }
 ```
 
-Fungsi `totalSupply` mengembalikan total persediaan token.
+Fungsi `totalSupply` mengembalikan total pasokan token.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev See {IERC20-balanceOf}.
+     * @dev Lihat {IERC20-balanceOf}.
      */
     function balanceOf(address account) public view override returns (uint256) {
         return _balances[account];
     }
 ```
 
-Baca saldo akun. Perhatikan bahwa siapa pun boleh mendapatkan saldo akun orang lain. Bagaimanapun juga, tidak ada gunanya mencoba menyembunyikan informasi ini, karena informasi tersebut tersedia di setiap simpul. _Tidak ada rahasia di rantai blok._
+Baca saldo akun. Perhatikan bahwa siapa pun diizinkan untuk mendapatkan saldo akun
+orang lain. Tidak ada gunanya mencoba menyembunyikan informasi ini, karena informasi tersebut tersedia di
+setiap simpul. _Tidak ada rahasia di rantai blok._
 
-### Token Transfer {#transfer-tokens}
+### Transfer Token {#transfer-tokens}
 
 ```solidity
     /**
-     * @dev See {IERC20-transfer}.
+     * @dev Lihat {IERC20-transfer}.
      *
      * Persyaratan:
      *
-     * - `penerima` tidak dapat berupa alamat kosong.
-     * - pemanggil harus memiliki saldo `jumlah` minimum.
+     * - `recipient` tidak boleh alamat nol.
+     * - pemanggil harus memiliki saldo minimal `amount`.
      */
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
 ```
 
-Fungsi `transfer` dipanggil untuk mentransfer token dari akun pengirim ke akun berbeda. Perhatikan bahwa meskipun fungsi tersebut mengembalikan nilai boolean, nilai tesebut selalu **benar**. Jika transfer gagal, kontrak membalikkan panggilannya.
+Fungsi `transfer` dipanggil untuk mentransfer token dari akun pengirim ke akun yang berbeda. Perhatikan
+bahwa meskipun mengembalikan nilai boolean, nilai itu selalu **true**. Jika transfer
+gagal, kontrak akan mengembalikan panggilan.
 
 &nbsp;
 
@@ -424,44 +497,51 @@ Fungsi `transfer` dipanggil untuk mentransfer token dari akun pengirim ke akun b
     }
 ```
 
-Fungsi `_transfer` melakukan pekerjaan sebenarnya. Ini adalah fungsi pribadi yang hanya dapat dipanggil melalui fungsi kontrak lainnya. Dengan konvensi, fungsi pribadi diberi nama `_<something>`, sama seperti variabel status.
+Fungsi `_transfer` melakukan pekerjaan sebenarnya. Ini adalah fungsi privat yang hanya dapat dipanggil oleh
+fungsi kontrak lainnya. Menurut konvensi, fungsi privat diberi nama `_<something>`, sama seperti variabel
+state.
 
-Umumnya dalam Solidity, kita menggunakan `msg.sender` untuk pengirim pesan. Namun, itu memecah [OpenGSN](http://opengsn.org/). Jika kita ingin mengizinkan transaksi tanpa ether dengan token kita, kita perlu menggunakan `_msgSender()`. Fungsi tersebut mengembalikan `msg.sender` untuk transaksi normal, tetapi untuk transaksi tanpa ether mengembalikan penandatangan asli dan bukan kontrak yang menyampaikan pesan.
+Biasanya di Solidity kita menggunakan `msg.sender` untuk pengirim pesan. Namun, itu merusak
+[OpenGSN](http://opengsn.org/). Jika kita ingin mengizinkan transaksi tanpa ether dengan token kita, kita
+perlu menggunakan `_msgSender()`. Ini mengembalikan `msg.sender` untuk transaksi normal, tetapi untuk transaksi tanpa ether
+mengembalikan penanda tangan asli dan bukan kontrak yang menyampaikan pesan.
 
-### Fungsi Tunjangan {#allowance-functions}
+### Fungsi Allowance {#allowance-functions}
 
-Ini adalah fungsi yang menerapkan fungsionalitas tunjangan: `tunjangan`, `persetujuan`, `transferFrom`, dan `_approve`. Selain itu, penerapan OpenZeppelin melebihi standar dasar yang memasukkan beberapa fitur sehingga meningkatkan keamanan: `increaseAllowance`, dan `decreaseAllowance`.
+Ini adalah fungsi-fungsi yang mengimplementasikan fungsionalitas allowance: `allowance`, `approve`, `transferFrom`,
+dan `_approve`. Selain itu, implementasi OpenZeppelin melampaui standar dasar untuk menyertakan beberapa fitur yang meningkatkan
+keamanan: `increaseAllowance`, dan `decreaseAllowance`.
 
-#### Fungsi tunjangan {#allowance}
+#### Fungsi allowance {#allowance}
 
 ```solidity
     /**
-     * @dev See {IERC20-allowance}.
+     * @dev Lihat {IERC20-allowance}.
      */
     function allowance(address owner, address spender) public view virtual override returns (uint256) {
         return _allowances[owner][spender];
     }
 ```
 
-Fungsi `tunjangan` membuat semua orang memeriksa tunjangan mana pun.
+Fungsi `allowance` memungkinkan semua orang untuk memeriksa allowance apa pun.
 
-#### Fungsi persetujuan {#approve}
+#### Fungsi approve {#approve}
 
 ```solidity
     /**
-     * @dev See {IERC20-approve}.
+     * @dev Lihat {IERC20-approve}.
      *
      * Persyaratan:
      *
-     * - `pembelanja` tidak dapat berupa alamat kosong.
+     * - `spender` tidak boleh alamat nol.
      */
     function approve(address spender, uint256 amount) public virtual override returns (bool) {
 ```
 
-Fungsi ini dipanggil untuk membuat tunjangan. Fungsi ini serupa dengan fungsi `transfer` di atas:
+Fungsi ini dipanggil untuk membuat sebuah allowance. Fungsi ini serupa dengan fungsi `transfer` di atas:
 
 - Fungsi hanya memanggil fungsi internal (dalam kasus ini, `_approve`) yang melakukan proses sebenarnya.
-- Fungsi baik mengembalikan yang `benar` (jika berhasil) maupun membalikkan (jika tidak).
+- Fungsi mengembalikan `true` (jika berhasil) atau mengembalikan (jika tidak).
 
 &nbsp;
 
@@ -471,25 +551,27 @@ Fungsi ini dipanggil untuk membuat tunjangan. Fungsi ini serupa dengan fungsi `t
     }
 ```
 
-Kita menggunakan fungsi internal untuk meminimalkan jumlah tempat di mana perubahan status terjadi. Fungsi _mana pun_ yang mengubah status merupakan resiko keamanan berpotensi yang perlu diaudit demi keamanan. Dengan cara ini, kita mengurangi peluang untuk kesalahan.
+Kami menggunakan fungsi internal untuk meminimalkan jumlah tempat di mana perubahan state terjadi. _Setiap_ fungsi yang mengubah
+state adalah risiko keamanan potensial yang perlu diaudit keamanannya. Dengan cara ini, kita memiliki lebih sedikit peluang untuk melakukan kesalahan.
 
 #### Fungsi transferFrom {#transferFrom}
 
-Fungsi ini dipanggil pembelanja untuk membelanjakan tunjangan. Fungsi ini memerlukan dua operasi: transfer jumlah yang akan dibelanjakan dan kurangi tunjangan sebesar jumlah tersebut.
+Ini adalah fungsi yang dipanggil oleh spender untuk membelanjakan sebuah allowance. Ini memerlukan dua operasi: mentransfer jumlah
+yang dibelanjakan dan mengurangi allowance dengan jumlah tersebut.
 
 ```solidity
     /**
-     * @dev See {IERC20-transferFrom}.
+     * @dev Lihat {IERC20-transferFrom}.
      *
-     * Memancarkan aksi {Approval} menunjukkan tunjangan yang diperbarui. Ini tidak
-     * diharuskan oleh EIP. Lihat catatan awal {ERC20}.
+     * Memancarkan aksi {Approval} yang menunjukkan allowance yang diperbarui. Ini tidak
+     * diwajibkan oleh EIP. Lihat catatan di awal {ERC20}.
      *
      * Persyaratan:
      *
-     * - `pengirim` dan `penerima` tidak dapat merupakan alamat nol.
-     * - `pengirim` harus memiliki saldo `jumlah` minimum.
-     * - pemanggil harus memiliki saldo untuk token``pengirim`` sebesar
-     * `jumlah` minimum.
+     * - `sender` dan `recipient` tidak boleh alamat nol.
+     * - `sender` harus memiliki saldo minimal `amount`.
+     * - pemanggil harus memiliki allowance untuk token ``sender`` minimal
+     * `amount`.
      */
     function transferFrom(address sender, address recipient, uint256 amount) public virtual
                                                 override returns (bool) {
@@ -498,59 +580,73 @@ Fungsi ini dipanggil pembelanja untuk membelanjakan tunjangan. Fungsi ini memerl
 
 &nbsp;
 
-Panggilan fungsi `a.sub(b, "message")` melakukan dua hal. Pertama, fungsi tersebut menghitung `a-b`, yang adalah tunjangan baru. Kedua, fungsi tersebut memeriksa apakah hasil ini tidak negatif. Jika negatif, panggilan membalikkan dengan pesan yang disediakan. Perhatikan bahwa ketika panggilan membalikkan, pemrosesan mana pun yang dilakukan sebelumnya selama panggilan tersebut diabaikan, sehingga kita tidak perlu membatalkan `_transfer`.
+Panggilan fungsi `a.sub(b, "message")` melakukan dua hal. Pertama, ia menghitung `a-b`, yang merupakan allowance baru.
+Kedua, ia memeriksa bahwa hasil ini tidak negatif. Jika hasilnya negatif, panggilan akan dibatalkan dengan pesan yang diberikan. Perhatikan bahwa ketika sebuah panggilan dibatalkan, setiap pemrosesan yang dilakukan sebelumnya selama panggilan itu diabaikan sehingga kita tidak perlu
+membatalkan `_transfer`.
 
 ```solidity
         _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount,
-             "ERC20: transfer amount exceeds allowance"));
+             "ERC20: jumlah transfer melebihi allowance"));
         return true;
     }
 ```
 
-#### Penambahan keamanan OpenZeppelin {#openzeppelin-safety-additions}
+#### Tambahan keamanan OpenZeppelin {#openzeppelin-safety-additions}
 
-Menetapkan tunjangan tidak nol ke nilai tidak nol lainnya berbahaya, karena Anda hanya mengendalikan urutan transaksi Anda sendiri, bukan milik orang lain. Bayangkan Anda mempunyai dua pengguna, Alice yang naif dan Bill yang tidak jujur. Alice menginginkan beberapa layanan dari Bill, yang dipikirnya membutuhkan lima token - sehingga ia memberikan tunjangan sebesar lima token kepada Bill.
+Berbahaya untuk mengatur allowance bukan-nol ke nilai bukan-nol lainnya,
+karena Anda hanya mengontrol urutan transaksi Anda sendiri, bukan milik orang lain. Bayangkan Anda
+memiliki dua pengguna, Alice yang naif dan Bill yang tidak jujur. Alice menginginkan beberapa layanan dari
+Bill, yang menurutnya berharga lima token - jadi dia memberi Bill allowance lima token.
 
-Lalu, sesuatu berubah dan harga Bill naik menjadi sepuluh token. Alice, yang masih memerlukan layanan, mengirim transaksi yang menetapkan tunjangan Bill menjadi sepuluh token. Saat Bill melihat transaksi baru ini dalam pool transaksi, ia mengirim transaksi yang membelanjakan lima token Alice dan memiliki harga gas yang jauh lebih tinggi, sehingga transaksi akan ditambang lebih cepat. Dengan cara itu, Bill dapat membelanjakan kelima token pertama dan kemudian, setelah tunjangan baru Alice ditambang, membelanjakan sepuluh token lagi untuk total harga lima belas token, melebihi jumlah yang dizinkan oleh Alice. Teknik ini disebut [front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
+Kemudian sesuatu berubah dan harga Bill naik menjadi sepuluh token. Alice, yang masih menginginkan layanan itu,
+mengirimkan transaksi yang menetapkan allowance Bill menjadi sepuluh. Saat Bill melihat transaksi baru ini
+di pool transaksi, dia mengirimkan transaksi yang menghabiskan lima token Alice dan memiliki harga gas yang jauh
+lebih tinggi sehingga akan ditambang lebih cepat. Dengan cara itu Bill dapat menghabiskan lima token pertama dan kemudian,
+setelah allowance baru Alice ditambang, menghabiskan sepuluh lagi dengan total harga lima belas token, lebih dari
+yang ingin disetujui Alice. Teknik ini disebut
+[front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
-| Transaksi Alice   | Nonce Alice | Transaksi Bill                | Nonce Bill | Tunjangan Bill | Tagihkan Total Pendapatan dari Alice |
-| ----------------- | ----------- | ----------------------------- | ---------- | -------------- | ------------------------------------ |
-| approve(Bill, 5)  | 10          |                               |            | 5              | 0                                    |
-|                   |             | transferFrom(Alice, Bill, 5)  | 10.123     | 0              | 5                                    |
-| approve(Bill, 10) | 11          |                               |            | 10             | 5                                    |
-|                   |             | transferFrom(Alice, Bill, 10) | 10.124     | 0              | 15                                   |
+| Transaksi Alice                      | Nonce Alice | Transaksi Bill                                   | Nonce Bill             | Allowance Bill | Total Pendapatan Bill dari Alice |
+| ------------------------------------ | ----------- | ------------------------------------------------ | ---------------------- | -------------- | -------------------------------- |
+| approve(Bill, 5)  | 10          |                                                  |                        | 5              | 0                                |
+|                                      |             | transferFrom(Alice, Bill, 5)  | 10.123 | 0              | 5                                |
+| approve(Bill, 10) | 11          |                                                  |                        | 10             | 5                                |
+|                                      |             | transferFrom(Alice, Bill, 10) | 10.124 | 0              | 15                               |
 
-Untuk menghindari masalah ini, kedua fungsi ini (`increaseAllowance` dan `decreaseAllowance`) memmbuat Anda dapat memodifikasi tunjangan sebesar jumlah tertentu. Jadi, jika Bill telah membelanjakan lima token, ia hanya akan dapat membelanjakan lima token lagi. Depending on the timing, there are two ways this can work, both of which end with Bill only getting ten tokens:
+Untuk menghindari masalah ini, kedua fungsi ini (`increaseAllowance` dan `decreaseAllowance`) memungkinkan Anda
+untuk mengubah allowance dengan jumlah tertentu. Jadi jika Bill sudah menghabiskan lima token, dia hanya akan
+bisa menghabiskan lima lagi. Tergantung pada waktunya, ada dua cara kerja ini, keduanya
+berakhir dengan Bill hanya mendapatkan sepuluh token:
 
 A:
 
-| Transaksi Alice            | Nonce Alice | Transaksi Bill               | Nonce Bill | Tunjangan Bill | Tagihkan Total Pendapatan dari Alice |
-| -------------------------- | ----------: | ---------------------------- | ---------: | -------------: | ------------------------------------ |
-| approve(Bill, 5)           |          10 |                              |            |              5 | 0                                    |
-|                            |             | transferFrom(Alice, Bill, 5) |     10.123 |              0 | 5                                    |
-| increaseAllowance(Bill, 5) |          11 |                              |            |        0+5 = 5 | 5                                    |
-|                            |             | transferFrom(Alice, Bill, 5) |     10.124 |              0 | 10                                   |
+| Transaksi Alice                               | Nonce Alice | Transaksi Bill                                  |             Nonce Bill | Allowance Bill | Total Pendapatan Bill dari Alice |
+| --------------------------------------------- | ----------: | ----------------------------------------------- | ---------------------: | -------------: | -------------------------------- |
+| approve(Bill, 5)           |          10 |                                                 |                        |              5 | 0                                |
+|                                               |             | transferFrom(Alice, Bill, 5) | 10.123 |              0 | 5                                |
+| increaseAllowance(Bill, 5) |          11 |                                                 |                        |        0+5 = 5 | 5                                |
+|                                               |             | transferFrom(Alice, Bill, 5) | 10.124 |              0 | 10                               |
 
 B:
 
-| Transaksi Alice            | Nonce Alice | Transaksi Bill                | Nonce Bill | Tunjangan Bill | Tagihkan Total Pendapatan dari Alice |
-| -------------------------- | ----------: | ----------------------------- | ---------: | -------------: | -----------------------------------: |
-| approve(Bill, 5)           |          10 |                               |            |              5 |                                    0 |
-| increaseAllowance(Bill, 5) |          11 |                               |            |       5+5 = 10 |                                    0 |
-|                            |             | transferFrom(Alice, Bill, 10) |     10.124 |              0 |                                   10 |
+| Transaksi Alice                               | Nonce Alice | Transaksi Bill                                   |             Nonce Bill | Allowance Bill | Total Pendapatan Bill dari Alice |
+| --------------------------------------------- | ----------: | ------------------------------------------------ | ---------------------: | -------------: | -------------------------------: |
+| approve(Bill, 5)           |          10 |                                                  |                        |              5 |                                0 |
+| increaseAllowance(Bill, 5) |          11 |                                                  |                        |       5+5 = 10 |                                0 |
+|                                               |             | transferFrom(Alice, Bill, 10) | 10.124 |              0 |                               10 |
 
 ```solidity
     /**
-     * @dev Secara atomik meningkatkan tunjangan yang diberikan ke `pembelanja` oleh pemanggil.
+     * @dev Secara atomik meningkatkan allowance yang diberikan kepada `spender` oleh pemanggil.
      *
-     * Alternatif ini untuk {approve} yang dapat digunakan sebagai solusi untuk masalah yang
-     * dideskripsikan dalam {IERC20-approve}.
+     * Ini adalah alternatif untuk {approve} yang dapat digunakan sebagai mitigasi untuk
+     * masalah yang dijelaskan di {IERC20-approve}.
      *
-     * Memancarkan aksi {Approval} menunjukkan tunjangan yang diperbarui.
+     * Memancarkan aksi {Approval} yang menunjukkan allowance yang diperbarui.
      *
      * Persyaratan:
      *
-     * - `pembelanja` tidak dapat berupa alamat kosong.
+     * - `spender` tidak boleh alamat nol.
      */
     function increaseAllowance(address spender, uint256 addedValue) public virtual returns (bool) {
         _approve(_msgSender(), spender, _allowances[_msgSender()][spender].add(addedValue));
@@ -558,65 +654,70 @@ B:
     }
 ```
 
-Fungsi `a.add(b)` aman untuk ditambahkan. Dalam kasus yang jarang terjadi bahwa `a`+`b`>=`2^256`, fungsi tersebut tidak membungkus seperti dalam cara yang dilakukan penambahan normal.
+Fungsi `a.add(b)` adalah penambahan yang aman. Dalam kasus yang tidak mungkin bahwa `a`+`b`>=`2^256`, ia tidak membungkus
+seperti cara penambahan normal.
 
 ```solidity
 
     /**
-     * @dev Secara atomik mengurangi tunjangan yang diberikan ke `pembelanja` oleh pemanggil.
+     * @dev Secara atomik mengurangi allowance yang diberikan kepada `spender` oleh pemanggil.
      *
-     * Alternatif ini untuk {approve} yang dapat digunakan sebagai solusi untuk masalah yang
-     * dideskripsikan dalam {IERC20-approve}.
+     * Ini adalah alternatif untuk {approve} yang dapat digunakan sebagai mitigasi untuk
+     * masalah yang dijelaskan di {IERC20-approve}.
      *
-     * Memancarkan aksi {Approval} menunjukkan tunjangan yang diperbarui.
+     * Memancarkan aksi {Approval} yang menunjukkan allowance yang diperbarui.
      *
      * Persyaratan:
      *
-     * - `pembelanja` tidak dapat berupa alamat kosong.
-     * - `pembelanja` harus memiliki tunjangan untuk pemanggil minimum
+     * - `spender` tidak boleh alamat nol.
+     * - `spender` harus memiliki allowance untuk pemanggil setidaknya
      * `subtractedValue`.
      */
     function decreaseAllowance(address spender, uint256 subtractedValue) public virtual returns (bool) {
         _approve(_msgSender(), spender, _allowances[_msgSender()][spender].sub(subtractedValue,
-                "ERC20: decreased allowance below zero"));
+                "ERC20: allowance yang dikurangi di bawah nol"));
         return true;
     }
 ```
 
-### Fungsi yang Memodifikasi Informasi Token {#functions-that-modify-token-information}
+### Fungsi yang Mengubah Informasi Token {#functions-that-modify-token-information}
 
-Keempat fungsi ini melakukan pekerjaan sebenarnya: `_transfer`, `_mint`, `_burn`, dan `_approve`.
+Ini adalah empat fungsi yang melakukan pekerjaan sebenarnya: `_transfer`, `_mint`, `_burn`, dan `_approve`.
 
-#### Fungsi \_transfer {#_transfer}
+#### Fungsi _transfer {#_transfer}
 
 ```solidity
     /**
-     * @dev Memindahkan `jumlah` token dari `pengirim` ke `penerima`.
+     * @dev Memindahkan token `amount` dari `sender` ke `recipient`.
      *
      * Fungsi internal ini setara dengan {transfer}, dan dapat digunakan untuk
-     * misalnya, menerapkan biaya token otomatis, mekanisme pemotongan, dll.
+     * misalnya, mengimplementasikan biaya token otomatis, mekanisme pemotongan, dll.
      *
-     * Memancarkan peristiwa {Transfer}.
+     * Memancarkan aksi {Transfer}.
      *
      * Persyaratan:
      *
-     * - `pengirim` tidak dapat berupa alamat kosong.
-     * - `penerima` tidak dapat berupa alamat kosong.
-     * - `pengirim` harus memiliki saldo `jumlah` minimum.
+     * - `sender` tidak boleh alamat nol.
+     * - `recipient` tidak boleh alamat nol.
+     * - `sender` harus memiliki saldo minimal `amount`.
      */
     function _transfer(address sender, address recipient, uint256 amount) internal virtual {
 ```
 
-Fungsi ini, `_transfer`, mentransfer token dari satu akun ke akun lainnya. Fungsi ini dipanggil melalui kedua `transfer` (untuk mentransfer dari akun pengirim sendiri) dan `transferFrom` (untuk menggunakan tunjangan guna mentransfer dari akun orang lain).
+Fungsi ini, `_transfer`, mentransfer token dari satu akun ke akun lainnya. Ini dipanggil oleh kedua
+`transfer` (untuk transfer dari akun pengirim sendiri) dan `transferFrom` (untuk menggunakan allowance
+untuk mentransfer dari akun orang lain).
 
 &nbsp;
 
 ```solidity
-        require(sender != address(0), "ERC20: transfer from the zero address");
-        require(recipient != address(0), "ERC20: transfer to the zero address");
+        require(sender != address(0), "ERC20: transfer dari alamat nol");
+        require(recipient != address(0), "ERC20: transfer ke alamat nol");
 ```
 
-Tidak seorang pun yang benar-benar memiliki alamat kosong di Ethereum (yakni, tidak seorang pun yang tahu kunci pribadi di mana kunci publik yang berkesesuaian diubah menjadi alamat kosong). Ketika manusia menggunakan alamat itu, biasanya alamat itu merupakan bug perangkat lunak - sehingga transaksi kita gagal jika alamat kosong digunakan sebagai pengirim atau penerima.
+Tidak ada yang benar-benar memiliki alamat nol di Ethereum (yaitu, tidak ada yang tahu kunci pribadi yang kunci publiknya yang cocok
+diubah menjadi alamat nol). Ketika orang menggunakan alamat itu, biasanya itu adalah bug perangkat lunak - jadi kami
+gagal jika alamat nol digunakan sebagai pengirim atau penerima.
 
 &nbsp;
 
@@ -627,21 +728,27 @@ Tidak seorang pun yang benar-benar memiliki alamat kosong di Ethereum (yakni, ti
 
 Ada dua cara untuk menggunakan kontrak ini:
 
-1. Gunakan kontrak tersebut sebagai templat untuk kode Anda sendiri
-1. [Mewarisi dari kontrak](https://www.bitdegree.org/learn/solidity-inheritance), dan hanya menimpa fungsi-fungsi yang perlu Anda modifikasi
+1. Gunakan sebagai templat untuk kode Anda sendiri
+2. [Mewarisinya](https://www.bitdegree.org/learn/solidity-inheritance), dan hanya menimpa fungsi-fungsi yang perlu Anda modifikasi
 
-Metode kedua jauh lebih baik karena kode ERC-20 OpenZeppelin telah diaudit dan dinyatakan aman. Ketika Anda menggunakan warisan, jelas fungsi yang Anda modifikasi, dan untuk mempercayai kontrak Anda, manusia hanya perlu mengaudit fungsi khusus tersebut.
+Metode kedua jauh lebih baik karena kode ERC-20 OpenZeppelin telah diaudit dan terbukti aman. Ketika Anda menggunakan pewarisan
+, jelas fungsi mana yang Anda modifikasi, dan untuk mempercayai kontrak Anda, orang hanya perlu mengaudit fungsi-fungsi spesifik tersebut.
 
-Sering kali kita perlu menjalankan fungsi setiap kali token berpindah tangan. Namun, `_transfer` merupakan fungsi yang sangat penting dan mungkin untuk menulis dengan tidak aman (lihat di bawah), sehingga menjadi langkah terbaik jika tidak menimpanya. Solusinya adalah `_beforeTokenTransfer`, [fungsi kaitan](https://wikipedia.org/wiki/Hooking). Anda dapat menimpa fungsi ini, dan fungsi tersebut akan dipanggil pada setiap transfer.
+Seringkali berguna untuk melakukan suatu fungsi setiap kali token berpindah tangan. Namun, `_transfer` adalah fungsi yang sangat penting dan
+mungkin untuk menuliskannya secara tidak aman (lihat di bawah), jadi sebaiknya jangan menimpanya. Solusinya adalah `_beforeTokenTransfer`, sebuah
+[fungsi kait](https://wikipedia.org/wiki/Hooking). Anda dapat menimpa fungsi ini, dan fungsi tersebut akan dipanggil pada setiap transfer.
 
 &nbsp;
 
 ```solidity
-        _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
+        _balances[sender] = _balances[sender].sub(amount, "ERC20: jumlah transfer melebihi saldo");
         _balances[recipient] = _balances[recipient].add(amount);
 ```
 
-Baris-baris ini benar-benar melakukan transfer. Perhatikan bahwa **tidak terjadi masalah** di antara baris-baris tersebut, dan bahwa kita mengurangi jumlah yang ditransfer dari pengirim sebelum menambahkannya ke penerima. Ini penting karena jika ada panggilan ke kontrak berbeda di pertengahan, panggilan tersebut dapat digunakan untuk mencurangi kontrak ini. Dengan cara ini, transfer bersifat atomik, tidak ada yang dapat terjadi di pertengahan proses.
+Ini adalah baris-baris yang benar-benar melakukan transfer. Perhatikan bahwa **tidak ada** apa pun di antara mereka, dan bahwa kami mengurangi
+jumlah yang ditransfer dari pengirim sebelum menambahkannya ke penerima. Ini penting karena jika ada
+panggilan ke kontrak lain di tengah, itu bisa digunakan untuk menipu kontrak ini. Dengan cara ini transfer
+bersifat atomik, tidak ada yang bisa terjadi di tengah-tengahnya.
 
 &nbsp;
 
@@ -650,26 +757,35 @@ Baris-baris ini benar-benar melakukan transfer. Perhatikan bahwa **tidak terjadi
     }
 ```
 
-Akhirnya, pancarkan aksi `Transfer`. Aksi tidak dapat diakses oleh kontrak pintar, tetapi kode yang beroperasi di luar rantai blok dapat mendengarkan aksi dan bereaksi terhadapnya. Contohnya, dompet dapat menelusuri waktu pemilik mendapatkan lebih banyak token.
+Akhirnya, pancarkan aksi `Transfer`. Aksi tidak dapat diakses oleh kontrak pintar, tetapi kode yang berjalan di luar rantai blok
+dapat mendengarkan aksi dan bereaksi terhadapnya. Misalnya, dompet dapat melacak kapan pemiliknya mendapatkan lebih banyak token.
 
-#### Fungsi \_mint dan \_burn {#_mint-and-_burn}
+#### Fungsi _mint dan _burn {#_mint-and-_burn}
 
-Kedua fungsi (`_mint` dan `_burn`) ini memodifikasi total persediaan token. Kedua fungsi tersebut bersifat internal dan tidak memiliki fungsi yang memanggil kedua fungsi tersebut dalam kontrak ini, sehingga kedua fungsi tersebut hanya berguna jika Anda mewariskannya dari kontrak dan menambahkan logika Anda sendiri untuk menentukan dalam kondisi apa untuk mencetak token baru atau membakar token yang sudah ada.
+Kedua fungsi ini (`_mint` dan `_burn`) mengubah total pasokan token.
+Mereka bersifat internal dan tidak ada fungsi yang memanggilnya di kontrak ini,
+sehingga mereka hanya berguna jika Anda mewarisi dari kontrak dan menambahkan
+logika Anda sendiri untuk memutuskan dalam kondisi apa untuk mencetak token baru atau membakar yang sudah
+ada.
 
-**CATATAN:** Setiap token ERC-20 memiliki logika bisnisnya sendiri yang mengatur manajemen token. Contohnya, kontrak persediaan yang tetap mungkin hanya memanggil `_mint` dalam konstruktor dan tidak pernah memanggil `_burn`. Kontrak yang menjual token akan memanggil `_mint` ketika ia dibayarkan, dan agaknya memanggil `_burn` pada titik tertentu untuk menghindari inflasi yang cepat.
+**CATATAN:** Setiap token ERC-20 memiliki logika bisnisnya sendiri yang mengatur manajemen token.
+Misalnya, kontrak pasokan tetap mungkin hanya memanggil `_mint`
+di konstruktor dan tidak pernah memanggil `_burn`. Kontrak yang menjual token
+akan memanggil `_mint` ketika dibayar, dan mungkin memanggil `_burn` pada suatu saat
+untuk menghindari inflasi yang tidak terkendali.
 
 ```solidity
-    /** @dev Membuat token `jumlah` dan menetapkan token ke `akun`, yang meningkatkan
-     * total persediaan token.
+    /** @dev Membuat token `amount` dan menugaskannya ke `account`, meningkatkan
+     * total pasokan.
      *
-     * Memancarkan aksi {Transfer} dengan `dari` yang ditetapkan ke alamat kosong.
+     * Memancarkan aksi {Transfer} dengan `from` diatur ke alamat nol.
      *
      * Persyaratan:
      *
-     * - `ke` tidak dapat berupa alamat kosong.
+     * - `to` tidak boleh alamat nol.
      */
     function _mint(address account, uint256 amount) internal virtual {
-        require(account != address(0), "ERC20: mint to the zero address");
+        require(account != address(0), "ERC20: mint ke alamat nol");
         _beforeTokenTransfer(address(0), account, amount);
         _totalSupply = _totalSupply.add(amount);
         _balances[account] = _balances[account].add(amount);
@@ -677,63 +793,67 @@ Kedua fungsi (`_mint` dan `_burn`) ini memodifikasi total persediaan token. Kedu
     }
 ```
 
-Pastikan memperbarui `_totalSupply` ketika total jumlah token berubah.
+Pastikan untuk memperbarui `_totalSupply` ketika jumlah total token berubah.
 
 &nbsp;
 
-```
+```solidity
     /**
-     * @dev Menghancurkan token `jumlah` dari `akun`, yang mengurangi
-     * total persediaan.
+     * @dev Menghancurkan token `amount` dari `account`, mengurangi
+     * total pasokan.
      *
-     * Memancarkan aksi {Transfer} dengan `ke` yang ditetapkan ke alamat kosong.
+     * Memancarkan aksi {Transfer} dengan `to` diatur ke alamat nol.
      *
      * Persyaratan:
      *
-     * - `akun` tidak dapat berupa alamat kosong.
-     * - `akun` harus memiliki token `jumlah` minimum.
+     * - `account` tidak boleh alamat nol.
+     * - `account` harus memiliki setidaknya token `amount`.
      */
     function _burn(address account, uint256 amount) internal virtual {
-        require(account != address(0), "ERC20: burn from the zero address");
+        require(account != address(0), "ERC20: burn dari alamat nol");
 
         _beforeTokenTransfer(account, address(0), amount);
 
-        _balances[account] = _balances[account].sub(amount, "ERC20: burn amount exceeds balance");
+        _balances[account] = _balances[account].sub(amount, "ERC20: jumlah burn melebihi saldo");
         _totalSupply = _totalSupply.sub(amount);
         emit Transfer(account, address(0), amount);
     }
 ```
 
-Fungsi `_burn` hampir sama dengan `_mint`, kecuali bergerak ke arah yang lain.
+Fungsi `_burn` hampir identik dengan `_mint`, kecuali berjalan ke arah yang berlawanan.
 
-#### Fungsi \_approve {#_approve}
+#### Fungsi _approve {#_approve}
 
-Fungsi ini benar-benar menentukan tunjangan. Perhatikan bahwa fungsi tersebut membuat pemilik menentukan tunjangan yang lebih tinggi dari saldo pemilik saat ini. Ini OKE karena saldo diperiksa pada waktu transfer terjadi, ketika saldonya dapat berbeda dari saldo saat tunjangan dibuat.
+Ini adalah fungsi yang sebenarnya menentukan allowance. Perhatikan bahwa ini memungkinkan pemilik untuk menentukan
+allowance yang lebih tinggi dari saldo pemilik saat ini. Ini tidak masalah karena saldo
+diperiksa pada saat transfer, ketika bisa jadi berbeda dari saldo saat allowance
+dibuat.
 
 ```solidity
     /**
-     * @dev Menetapkan `jumlah` sebagai tunjangan `pengguna` melalui token `pemilik`.
+     * @dev Menetapkan `amount` sebagai allowance `spender` atas token `owner`.
      *
-     * Fungsi internal ini sama dengan `persetujuan`, dan dapat digunakan untuk
-     * misalnya, menetapkan tunjangan otomatis untuk subsistem tertentu, dll.
+     * Fungsi internal ini setara dengan `approve`, dan dapat digunakan untuk
+     * misalnya, mengatur allowance otomatis untuk subsistem tertentu, dll.
      *
      * Memancarkan aksi {Approval}.
      *
      * Persyaratan:
      *
-     * - `pemilik` tidak dapat berupa alamat kosong.
-     * - `pembelanja` tidak dapat berupa alamat kosong.
+     * - `owner` tidak boleh alamat nol.
+     * - `spender` tidak boleh alamat nol.
      */
     function _approve(address owner, address spender, uint256 amount) internal virtual {
-        require(owner != address(0), "ERC20: approve from the zero address");
-        require(spender != address(0), "ERC20: approve to the zero address");
+        require(owner != address(0), "ERC20: approve dari alamat nol");
+        require(spender != address(0), "ERC20: approve ke alamat nol");
 
         _allowances[owner][spender] = amount;
 ```
 
 &nbsp;
 
-Pancarkan aksi `Persetujuan`. Bergantung pada cara aplikasi ditulis, kontrak pembelanja dapat diberitahu tentang persetujuan baik oleh pemilik maupun server yang mendengarkan aksi ini.
+Pancarkan aksi `Approval`. Tergantung pada bagaimana aplikasi ditulis, kontrak spender dapat diberitahu tentang
+persetujuan baik oleh pemilik atau oleh server yang mendengarkan aksi-aksi ini.
 
 ```solidity
         emit Approval(owner, spender, amount);
@@ -741,7 +861,7 @@ Pancarkan aksi `Persetujuan`. Bergantung pada cara aplikasi ditulis, kontrak pem
 
 ```
 
-### Modifikasi Variabel Desimal {#modify-the-decimals-variable}
+### Ubah Variabel Desimal {#modify-the-decimals-variable}
 
 ```solidity
 
@@ -749,49 +869,66 @@ Pancarkan aksi `Persetujuan`. Bergantung pada cara aplikasi ditulis, kontrak pem
     /**
      * @dev Menetapkan {decimals} ke nilai selain nilai default 18.
      *
-     * PERINGATAN: Fungsi ini hanya boleh dipanggil dari konstruktor. Kebanyakan
+     * PERINGATAN: Fungsi ini hanya boleh dipanggil dari konstruktor. Sebagian besar
      * aplikasi yang berinteraksi dengan kontrak token tidak akan mengharapkan
-     * {decimals} berubah, dan dapat berfungsi dengan tidak benar jika itu terjadi.
+     * {decimals} untuk berubah, dan mungkin bekerja secara tidak benar jika itu terjadi.
      */
     function _setupDecimals(uint8 decimals_) internal {
         _decimals = decimals_;
     }
 ```
 
-Fungsi ini memodifikasi variabel `_decimals` yang digunakan untuk memberitahu antarmuka pengguna tentang cara menafsirkan jumlahnya. Anda seharusnya memanggilnya dari konstruktor. Tidak jujur untuk memanggilnya pada titik berikut mana pun, dan aplikasi tidak dirancang untuk menangani ketidakjujuran tersebut.
+Fungsi ini memodifikasi variabel `_decimals` yang digunakan untuk memberi tahu antarmuka pengguna cara menafsirkan jumlah tersebut.
+Anda harus memanggilnya dari konstruktor. Akan tidak jujur ​​untuk memanggilnya di titik berikutnya, dan aplikasi
+tidak dirancang untuk menanganinya.
 
-### Kaitan {#hooks}
+### Hooks {#hooks}
 
 ```solidity
 
     /**
-     * @dev Kaitan yang dipanggil sebelum transfer token mana pun. Termasuk
-     * mencetak dan membakar.
+     * @dev Kait yang dipanggil sebelum transfer token apa pun. Ini termasuk
+     * pencetakan dan pembakaran.
      *
-     * Syarat panggilan:
+     * Kondisi pemanggilan:
      *
-     * - ketika `dari` dan `ke` keduanya berupa bukan nol, `jumlah` dari token ``dari``
-     * akan ditransfer ke `ke`.
-     * - ketika `dari` adalah nol, token `jumlah` akan dicetak untuk `ke`.
-     * - ketika `ke` adalah nol, `jumlah` dari token ``dari`` akan dibakar.
-     * - `dari` dan `ke` keduanya tidak pernah berupa nol.
+     * - ketika `from` dan `to` keduanya bukan nol, `amount` dari token ``from``
+     * akan ditransfer ke `to`.
+     * - ketika `from` adalah nol, token `amount` akan dicetak untuk `to`.
+     * - ketika `to` adalah nol, `amount` dari token ``from`` akan dibakar.
+     * - `from` dan `to` tidak pernah keduanya nol.
      *
-     * Untuk mempelajari selengkapnya tentang kaitan, beralih ke xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].
+     * Untuk mempelajari lebih lanjut tentang kait, kunjungi xref:ROOT:extending-contracts.adoc#using-hooks[Menggunakan Kait].
      */
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
 }
 ```
 
-Fungsi kaitan ini yang akan dipanggil selama transfer. It is empty here, but if you need it to do something you just override it.
+Ini adalah fungsi kait yang akan dipanggil selama transfer. Di sini kosong, tetapi jika Anda memerlukannya
+untuk melakukan sesuatu, Anda tinggal menimpanya.
 
 ## Kesimpulan {#conclusion}
 
-Sebagai tinjauan ulang, berikut adalah beberapa pemikiran paling penting dalam kontrak ini (menurut pendapat saya, kepunyaan Anda mungkin bisa saja berbeda):
+Sebagai ulasan, berikut adalah beberapa ide terpenting dalam kontrak ini (menurut pendapat saya, pendapat Anda mungkin berbeda):
 
-- _Tidak ada rahasia di rantai blok_. Informasi apa pun yang dapat diakses oleh kontrak pintar tersedia untuk seluruh dunia.
-- Anda dapat mengendalikan urutan transaksi Anda sendiri, tetapi tidak dapat mengendalikan saat transaksi orang lain terjadi. Alasan ini mengubah tunjangan dapat menjadi berbahaya, karena membiarkan pembelanja membelanjakan jumlah dari kedua tunjangan.
-- Nilai dari jenis `uint256` diperbesar. Dengan kata lain, _0-1=2^256-1_. Jika merupakan perilaku yang tidak diharapkan, Anda perlu memeriksanya (atau gunakan pustaka SafeMath yang melakukannya untuk Anda). Perhatikan bahwa perilaku ini berubah dalam [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html).
-- Lakukan semua perubahan status dari jenis khusus dalam tempat khusus, karena membuat proses audit lebih mudah dilakukan. Alasan ini membuat kita memiliki, contohnya, `_approve`, yang dipanggil melalui `persetujuan`, `transferFrom`, `increaseAllowance`, dan `decreaseAllowance`
-- Perubahan status harus bersifat atomik, tanpa adanya tindakan lain di pertengahan (seperti yang dapat Anda lihat dalam `_transfer`). Perubahan ini terjadi selama perubahan status di mana Anda memiliki status yang tidak konsisten. Contohnya, antara waktu Anda mengurangi saldo pengirim dan waktu Anda menambahkan saldo penerima, lebih sedikit token yang ada dari jumlah sebenarnya. Dapat berpotensi disalahgunakan jika ada operasi di antara kedua waktu tersebut, khususnya panggilan ke kontrak yang berbeda.
+- _Tidak ada rahasia di rantai blok_. Setiap informasi yang dapat diakses oleh kontrak pintar
+  tersedia untuk seluruh dunia.
+- Anda dapat mengontrol urutan transaksi Anda sendiri, tetapi tidak kapan transaksi orang lain
+  terjadi. Ini adalah alasan mengapa mengubah allowance bisa berbahaya, karena itu memungkinkan
+  spender membelanjakan jumlah kedua allowance.
+- Nilai tipe `uint256` berputar. Dengan kata lain, _0-1=2^256-1_. Jika itu bukan perilaku yang diinginkan
+  , Anda harus memeriksanya (atau menggunakan pustaka SafeMath yang melakukannya untuk Anda). Perhatikan bahwa ini berubah di
+  [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html).
+- Lakukan semua perubahan state dari tipe tertentu di tempat tertentu, karena itu membuat audit lebih mudah.
+  Inilah alasannya kita memiliki, misalnya, `_approve`, yang dipanggil oleh `approve`, `transferFrom`,
+  `increaseAllowance`, dan `decreaseAllowance`
+- Perubahan state harus atomik, tanpa tindakan lain di tengahnya (seperti yang dapat Anda lihat
+  di `_transfer`). Ini karena selama perubahan state Anda memiliki state yang tidak konsisten. Sebagai contoh,
+  antara waktu Anda mengurangi dari saldo pengirim dan waktu Anda menambahkan ke saldo
+  penerima, ada lebih sedikit token yang ada daripada yang seharusnya. Ini berpotensi disalahgunakan jika ada
+  operasi di antara mereka, terutama panggilan ke kontrak yang berbeda.
 
-Sekarang, karena Anda telah melihat cara kontrak OpenZeppelin ERC-20 ditulis, dan khususnya caranya dibuat lebih aman, buka dan tulis kontrak dan aplikasi Anda sendiri yang aman.
+Sekarang setelah Anda melihat bagaimana kontrak ERC-20 OpenZeppelin ditulis, dan terutama bagaimana kontrak itu
+dibuat lebih aman, pergilah dan tulis kontrak dan aplikasi aman Anda sendiri.
+
+[Lihat di sini untuk lebih banyak pekerjaan saya](https://cryptodocguy.pro/).
