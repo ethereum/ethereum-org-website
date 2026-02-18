@@ -293,7 +293,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                     eventName: "ethskills",
                   }}
                 >
-                  ethskills.com — {t("page-developers-ethskills-label")}
+                  ethskills.com - {t("page-developers-ethskills-label")}
                 </Link>
               </div>
             </Card>
