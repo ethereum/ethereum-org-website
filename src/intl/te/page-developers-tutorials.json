@@ -1,0 +1,22 @@
+{
+  "comp-tutorial-metadata-minute-read": "నిమిషం పఠనం",
+  "page-tutorial-listing-policy-intro": "మీరు ఒక ట్యుటోరియల్‌ను సమర్పించే ముందు దయచేసి <a href=\"/contributing/content-resources/\">మా జాబితా విధానాన్ని చదవండి</a>.",
+  "comp-tutorial-metadata-tip-author": "రచయితకు చిట్కా ఇవ్వండి",
+  "page-tutorial-create-an-issue": "సమస్యను సృష్టించండి",
+  "page-tutorial-create-an-issue-desc": "మీ ట్యుటోరియల్‌ను వివరిస్తూ ఇష్యూ టెంప్లేట్‌ను పూరించండి.",
+  "page-tutorial-raise-issue-btn": "సమస్యను లేవనెత్తండి",
+  "page-tutorial-read-time": "ని.",
+  "page-tutorial-submit-btn": "ట్యుటోరియల్‌ను సమర్పించండి",
+  "page-tutorial-subtitle": "మా కమ్యూనిటీ ట్యుటోరియల్స్ యొక్క క్యూరేటెడ్ జాబితాకు స్వాగతం.",
+  "page-tutorial-tags-error": "మీరు ఎంచుకున్న అన్ని ట్యాగ్‌లతో ఇంకా ట్యుటోరియల్స్ ఏవీ లేవు",
+  "page-tutorial-title": "ఇతీరియము అభివృద్ధి ట్యుటోరియల్స్",
+  "page-tutorials-meta-description": "అంశాల వారీగా పరిశీలించిన ఇతీరియము కమ్యూనిటీ ట్యుటోరియల్స్‌ను బ్రౌజ్ చేయండి మరియు ఫిల్టర్ చేయండి.",
+  "page-tutorial-external-link": "బాహ్య",
+  "page-tutorials-meta-title": "ఇతీరియము అభివృద్ధి ట్యుటోరియల్స్",
+  "page-tutorial-beginner": "ప్రారంభ",
+  "page-tutorial-intermediate": "మధ్యస్థ",
+  "page-tutorial-advanced": "అధునాతనం",
+  "page-find-wallet-try-removing": "ఒకటి లేదా రెండు ఫీచర్లను తొలగించడానికి ప్రయత్నించండి",
+  "page-find-wallet-clear": "ఫిల్టర్లను తీసివేయండి",
+  "page-tutorials-env-banner": "<code>.env</code>ను కమిట్ చేయవద్దు! దయచేసి మీ <code>.env</code> ఫైల్‌ను ఎవరితోనూ పంచుకోకుండా లేదా బహిర్గతం చేయకుండా చూసుకోండి, ఎందుకంటే అలా చేయడం ద్వారా మీరు మీ రహస్యాలను ప్రమాదంలో పడేస్తున్నారు. మీరు వెర్షన్ కంట్రోల్ ఉపయోగిస్తుంటే, మీ <code>.env</code>ను <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> ఫైల్‌కు జోడించండి."
+}

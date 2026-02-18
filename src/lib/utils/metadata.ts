@@ -136,6 +136,10 @@ export const getMetadata = async ({
     },
   }
 
+  if (SITE_URL !== "https://ethereum.org") {
+    return { ...base, robots: { index: false, follow: false } }
+  }
+
   if (noIndex) {
     return { ...base, robots: { index: false } }
   }
