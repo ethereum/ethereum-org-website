@@ -1,6 +1,6 @@
 ---
-title: Scalabilità
-description: Introduzione alle diverse opzioni di scalabilità attualmente in fase di sviluppo da parte della community Ethereum.
+title: "Scalabilità"
+description: "Introduzione alle diverse opzioni di scalabilità attualmente in fase di sviluppo da parte della community Ethereum."
 lang: it
 sidebarDepth: 3
 ---
@@ -19,15 +19,15 @@ A livello concettuale, per prima cosa occorre distinguere tra scalabilità on-ch
 
 Dovresti avere una buona conoscenza di tutti gli argomenti fondamentali. L'implementazione di soluzioni di scalabilità è un argomento avanzato, in quanto la tecnologia è meno testata sul campo e continua ad essere oggetto di ricerca e sviluppo.
 
-## Scalabilità on-chain {#on-chain-scaling}
+## Scalabilità on-chain {#onchain-scaling}
 
 La scalabilità on-chain richiede modifiche al protocollo Ethereum ([rete principale](/glossary/#mainnet) di livello 1). Per molto tempo si è pensato che lo sharding della blockchain avrebbe ridimensionato Ethereum. Questo avrebbe coinvolto la divisione della blockchain in pezzi discreti (shard), che sarebbero stati verificati da sottoinsiemi dei validatori. Tuttavia, il ridimensionamento dai rollup di livello 2 ha preso il controllo come la tecnica di ridimensionamento principale. Questa è supportata dall'aggiunta di una nuova e più economica forma di dati connessi ai blocchi di Ethereum, progettati specificamente per rendere i rollup economici per gli utenti.
 
 ### Sharding {#sharding}
 
-Lo sharding è il processo di frammentazione di un database. Sottoinsiemi di validatori sarebbero responsabili dei singoli shard invece di tenere traccia di tutta la rete Ethereum. Un tempo destinato a essere trasferito verso il proof-of-stake prima della Fusione, lo sharding è stato per molto tempo sulla [tabella di marcia](/roadmap/) di Ethereum. Tuttavia, il rapido sviluppo dei [rollup di livello 2](#layer-2-scaling) e l'invenzione del [Dansharding](/roadmap/danksharding) (aggiunta di blob di dati di rollup ai blocchi di Ethereum che possono essere verificati in modo molto efficiente dai validatori), ha portato la community di Ethereum a preferire il ridimensionamento incentrato sui rollup piuttosto che sullo sharding. Ciò aiuterà anche a mantenere più semplice la logica del consenso di Ethereum.
+Lo sharding è il processo di frammentazione di un database. Sottoinsiemi di validatori sarebbero responsabili dei singoli shard invece di tenere traccia di tutta la rete Ethereum. Un tempo destinato a essere trasferito verso il proof-of-stake prima della Fusione, lo sharding è stato per molto tempo sulla [tabella di marcia](/roadmap/) di Ethereum. Tuttavia, il rapido sviluppo dei [rollup di livello 2](#layer-2-scaling) e l'invenzione del [Danksharding](/roadmap/danksharding) (aggiunta di blob di dati di rollup ai blocchi di Ethereum che possono essere verificati in modo molto efficiente dai validatori), ha portato la community di Ethereum a preferire il ridimensionamento incentrato sui rollup piuttosto che sullo sharding. Ciò aiuterà anche a mantenere più semplice la logica del consenso di Ethereum.
 
-## Scalabilità off-chain {#off-chain-scaling}
+## Scalabilità off-chain {#offchain-scaling}
 
 Le soluzioni off-chain sono implementate separatamente dalla Rete principale di livello 1, e non richiedono alcuna modifica al protocollo Ethereum esistente. Alcune soluzioni, note come soluzioni di "livello 2", derivano la loro sicurezza direttamente dal consenso del livello 1 di Ethereum, come i [rollup ottimistici](/developers/docs/scaling/optimistic-rollups/), i [rollup a conoscenza zero](/developers/docs/scaling/zk-rollups/) o i [canali di stato](/developers/docs/scaling/state-channels/). Altre soluzioni comportano la creazione di nuove catene in varie forme, che derivano la propria sicurezza separatamente dalla Rete principale, come le [catene secondarie](#sidechains), i [validium](#validium) o le [catene Plasma](#plasma). Queste soluzioni comunicano con la Rete principale, ma derivano la loro sicurezza in modo diverso per raggiungere una serie di obiettivi.
 
