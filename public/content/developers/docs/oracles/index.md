@@ -408,6 +408,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Gas Network](https://gas.network/)** - A distributed oracle platform providing real-time gas price data across blockchain. By bringing data from leading gas price data providers onchain, Gas Network is helping to drive interoperability. Gas Network supports data for over 35 chains, including Ethereum Mainnet and many leading L2s.
 
+**[Stork](https://stork.network)** - *Stork delivers price data at ultra-low latency, supporting a wide range of use cases including perpetuals markets, lending protocols, and DeFi ecosystems, with new assets supported rapidly on listing.*
+
 ## Further reading {#further-reading}
 
 **Articles**
