@@ -1,12 +1,8 @@
 ---
-title: SolidityスマートコントラクトによるERC-20トークンの転送と承認
-description: Solidity言語で書かれたトークンとやり取りするには、スマートコントラクトをどのように使用すればよいか
+title: "SolidityスマートコントラクトによるERC-20トークンの転送と承認"
+description: "Solidityを使用してERC-20トークンの転送と承認を処理するDEXスマートコントラクトを構築します。"
 author: "jdourlens"
-tags:
-  - "スマートコントラクト"
-  - "トークン"
-  - "Solidity"
-  - "erc-20"
+tags: ["smart contracts", "tokens", "solidity", "erc-20"]
 skill: intermediate
 lang: ja
 published: 2020-04-07
@@ -17,7 +13,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 前回のチュートリアルでは、イーサリアムブロックチェーン上の[Solidityで描かれたERC-20トークンの構造](/developers/tutorials/understand-the-erc-20-token-smart-contract/)について学びました。 この記事では、Solidity言語で書かれたトークンとやり取りするためのスマートコントラクトの使い方について説明します。
 
-このスマートコントラクトのために、新しくデプロイされた[ERC-20トークン](/developers/docs/standards/tokens/erc-20/)でイーサを取引できる、ダミーの分散型取引所を実際に作成します。
+このスマートコントラクトのために、ユーザーがイーサを新しくデプロイされた[ERC-20トークン](/developers/docs/standards/tokens/erc-20/)に交換できる、ダミーの分散型取引所を実際に作成します。
 
 このチュートリアルでは、前のチュートリアルで書いたコードをベースとして使います。 この分散型取引所(DEX)では、コントラクトのインスタンスをコンストラクタでインスタンス化し、以下の操作を実行します。
 
@@ -60,11 +56,11 @@ contract ERC20Basic is IERC20 {
 
 
    constructor() {
-    balances[msg.sender] = totalSupply_;
+	balances[msg.sender] = totalSupply_;
     }
 
     function totalSupply() public override view returns (uint256) {
-    return totalSupply_;
+	return totalSupply_;
     }
 
     function balanceOf(address tokenOwner) public override view returns (uint256) {
@@ -104,7 +100,7 @@ contract ERC20Basic is IERC20 {
 
 ```
 
-次の新しい分散型取引所(DEX)スマートコントラクトは 、ERC-20をデプロイし、供給されたすべてを取得します。
+次の新しい分散型取引所(DEX)スマートコントラクトは、ERC-20をデプロイし、供給されたすべてを取得します。
 
 ```solidity
 contract DEX {
@@ -136,7 +132,7 @@ contract DEX {
 
 ## buy関数 {#the-buy-function}
 
-buy関数をコーディングしてみましょう。 まず、メッセージに含まれるイーサ(ETH)の量を確認し、コントラクトが十分なトークンを所有していることと、そのメッセージにいくつかのイーサ(ETH)が含まれていることを検証する必要があります。 コントラクトが十分なトークンを所有している場合、ユーザーにその分のトークンを送信し、 `Bought` イベントを発行します。
+buy関数をコーディングしてみましょう。 まず、メッセージに含まれるイーサ(ETH)の量を確認し、コントラクトが十分なトークンを所有していること、そしてメッセージにイーサ(ETH)が含まれていることを検証する必要があります。 コントラクトが十分なトークンを所有している場合、ユーザーにその分のトークンを送信し、`Bought`イベントを発行します。
 
 require関数の呼び出しがエラーだった場合に、送信されたイーサ(ETH)は直接元に戻され、ユーザーに返されることに注意してください。
 
@@ -146,39 +142,39 @@ require関数の呼び出しがエラーだった場合に、送信されたイ�
 function buy() payable public {
     uint256 amountTobuy = msg.value;
     uint256 dexBalance = token.balanceOf(address(this));
-    require(amountTobuy > 0, "You need to send some ether");
-    require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
+    require(amountTobuy > 0, "イーサを送信する必要があります");
+    require(amountTobuy <= dexBalance, "リザーブに十分なトークンがありません");
     token.transfer(msg.sender, amountTobuy);
     emit Bought(amountTobuy);
 }
 ```
 
-購入が成功した場合、トランザクションには`Transfer`と`Bought`の2つのイベントが表示されます。
+購入が成功した場合、トランザクションにはトークンの`Transfer`と`Bought`の2つのイベントが表示されます。
 
 ![トランザクション内の2つのイベント: TransferとBought](./transfer-and-bought-events.png)
 
 ## sell関数 {#the-sell-function}
 
-売却を行う関数は事前にapprove関数を呼び出し、ユーザーがその金額を承認することを要求します。 転送を承認するには、分散型取引所(DEX)によってインスタンス化されたERC20Basicトークンがユーザーによって呼び出される必要があります。 これは、まず分散型取引所(DEX)コントラクトの`token()`関数を呼び出し、分散型取引所(DEX)が`token`というERC20Basicコントラクトをデプロイしたアドレスを取得することで実現できます。 次に、セッション内にそのコントラクトのインスタンスを作成し、その`approve`関数を呼び出します。 次に、分散型取引所(DEX)の`sell`関数を呼び出すことで、トークンをイーサ(ETH)に交換できます。 例えば、インタラクティブ・ブラウニー(interactive brownie)セッションでは、次のようになります。
+売却を担当する関数では、まずユーザーが事前に`approve`関数を呼び出して、金額を承認しておく必要があります。 転送を承認するには、ユーザーがDEXによってインスタンス化されたERC20Basicトークンコントラクトを呼び出す必要があります。 これは、まずDEXコントラクトの`token()`関数を呼び出して、DEXが`token`というERC20Basicコントラクトをデプロイしたアドレスを取得することで実現できます。 次に、セッション内にそのコントラクトのインスタンスを作成し、その`approve`関数を呼び出します。 次に、DEXの`sell`関数を呼び出すことで、トークンをイーサ(ETH)に交換できます。 例えば、インタラクティブ・ブラウニー(interactive brownie)セッションでは、次のようになります。
 
 ```python
-#### Python in interactive brownie console...
+#### インタラクティブ・ブラウニーコンソール内のPython...
 
-# deploy the DEX
+# DEXをデプロイする
 dex = DEX.deploy({'from':account1})
 
-# call the buy function to swap ether for token
-# 1e18 is 1 ether denominated in wei
+# buy関数を呼び出してイーサをトークンにスワップする
+# 1e18はweiで表記した1イーサ
 dex.buy({'from': account2, 1e18})
 
-# get the deployment address for the ERC20 token
-# that was deployed during DEX contract creation
-# dex.token() returns the deployed address for token
+# DEXコントラクト作成時にデプロイされた
+# ERC20トークンのデプロイメントアドレスを取得する
+# dex.token()はデプロイされたトークンのアドレスを返す
 token = ERC20Basic.at(dex.token())
 
-# call the token's approve function
-# approve the dex address as spender
-# and how many of your tokens it is allowed to spend
+# トークンのapprove関数を呼び出す
+# dexアドレスを使用者(spender)として承認し、
+# いくつのトークンを使用許可するかを指定する
 token.approve(dex.address, 3e18, {'from':account2})
 
 ```
@@ -187,24 +183,24 @@ token.approve(dex.address, 3e18, {'from':account2})
 
 ```solidity
 function sell(uint256 amount) public {
-    require(amount > 0, "You need to sell at least some tokens");
+    require(amount > 0, "少なくともいくらかのトークンを売る必要があります");
     uint256 allowance = token.allowance(msg.sender, address(this));
-    require(allowance >= amount, "Check the token allowance");
+    require(allowance >= amount, "トークンの許可量を確認してください");
     token.transferFrom(msg.sender, address(this), amount);
     payable(msg.sender).transfer(amount);
     emit Sold(amount);
 }
 ```
 
-すべてがうまくいけば、トランザクションに2つのイベント(`Transfer` と `Sold`)が表示され、トークンの残高とイーサの残高が更新されるはずです。
+すべてがうまくいけば、トランザクションに2つのイベント (`Transfer`と`Sold`) が表示され、トークンの残高とイーサの残高が更新されるはずです。
 
 ![トランザクション内の2つのイベント: TransferとSold](./transfer-and-sold-events.png)
 
 <Divider />
 
-このチュートリアルでは、残高とERC-20トークンの割当量を確認する方法と、インターフェースを使用してERC20スマートコントラクトの`Transfer`と`TransferFrom`を呼び出す方法について説明しました。
+このチュートリアルでは、ERC-20トークンの残高と許可量を確認する方法と、インターフェースを使用してERC20スマートコントラクトの`Transfer`と`TransferFrom`を呼び出す方法を学びました。
 
-一度トランザクションが作成されると、コントラクト用に作成されている[待機してトランザクションについての詳細を取得する](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/)ためのJavaScriptチュートリアルや、アプリケーションバイナリインターフェース(ABI)があれば、[トークン転送や他のイベントによって発行されるイベントをデコードするチュートリアル](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/)を参照することで情報を取得できます。
+トランザクションを実行した後には、コントラクトに対して行われた[トランザクションを待機し、詳細を取得する](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/)ためのJavaScriptチュートリアルがあります。また、ABIをお持ちであれば、トークンの転送やその他のイベントによって生成された[イベントをデコードするチュートリアル](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/)も利用できます。
 
 チュートリアルの完全なコードは、次のようになります。
 
@@ -242,11 +238,11 @@ contract ERC20Basic is IERC20 {
 
 
    constructor() {
-    balances[msg.sender] = totalSupply_;
+	balances[msg.sender] = totalSupply_;
     }
 
     function totalSupply() public override view returns (uint256) {
-    return totalSupply_;
+	return totalSupply_;
     }
 
     function balanceOf(address tokenOwner) public override view returns (uint256) {
@@ -299,16 +295,16 @@ contract DEX {
     function buy() payable public {
         uint256 amountTobuy = msg.value;
         uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "You need to send some ether");
-        require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
+        require(amountTobuy > 0, "イーサを送信する必要があります");
+        require(amountTobuy <= dexBalance, "リザーブに十分なトークンがありません");
         token.transfer(msg.sender, amountTobuy);
         emit Bought(amountTobuy);
     }
 
     function sell(uint256 amount) public {
-        require(amount > 0, "You need to sell at least some tokens");
+        require(amount > 0, "少なくともいくらかのトークンを売る必要があります");
         uint256 allowance = token.allowance(msg.sender, address(this));
-        require(allowance >= amount, "Check the token allowance");
+        require(allowance >= amount, "トークンの許可量を確認してください");
         token.transferFrom(msg.sender, address(this), amount);
         payable(msg.sender).transfer(amount);
         emit Sold(amount);
