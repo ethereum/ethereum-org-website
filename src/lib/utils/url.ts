@@ -48,7 +48,10 @@ export const isHash = (href: string): boolean => href.startsWith("#")
 
 export const addSlashes = (href: string): string => {
   if (isExternal(href)) return href
-  return join("/", href, "/")
+  const normalized = join("/", href)
+  return normalized.endsWith("/") && normalized.length > 1
+    ? normalized.slice(0, -1)
+    : normalized
 }
 
 export const getFullUrl = (locale: string | undefined, path: string) => {
@@ -57,8 +60,8 @@ export const getFullUrl = (locale: string | undefined, path: string) => {
       ? new URL(path, SITE_URL)
       : new URL(join(locale, path), SITE_URL)
 
-  if (!url.pathname.endsWith("/")) {
-    url.pathname += "/"
+  if (url.pathname.endsWith("/") && url.pathname.length > 1) {
+    url.pathname = url.pathname.slice(0, -1)
   }
 
   return url.href
