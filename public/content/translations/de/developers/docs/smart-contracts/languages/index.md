@@ -1,19 +1,19 @@
 ---
 title: Sprachen von Smart Contracts
-description: Übersicht und Vergleich der zwei wichtigsten Smart-Contract-Sprachen – Solidity und Vyper
+description: "Übersicht und Vergleich der zwei wichtigsten Smart-Contract-Sprachen – Solidity und Vyper"
 lang: de
 ---
 
-Das Tolle an Ethereum ist, dass Smart Contracts mit relativ Entwickler-freundlichen Sprachen programmiert werden können. Wenn Sie mit Python oder einer anderen [Sprache mit geschweiften Klammern](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) vertraut sind, können Sie eine Sprache mit vertrauter Syntax finden.
+Das Tolle an Ethereum ist, dass Smart Contracts mit relativ Entwickler-freundlichen Sprachen programmiert werden können. Wenn Sie Erfahrung mit Python oder einer [Sprache mit geschweiften Klammern](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) haben, können Sie eine Sprache mit vertrauter Syntax finden.
 
 Die zwei häufig genutzten und aktuellsten Sprachen sind:
 
 - Solidity
 - Vyper
 
-Remix IDE bietet eine umfassende Entwicklungsumgebung zum Erstellen und Testen von Contracts in Solidity als auch in Vyper. [Probieren Sie die Remix IDE im Browser](https://remix.ethereum.org), um mit dem Codieren zu beginnen.
+Remix IDE bietet eine umfassende Entwicklungsumgebung zum Erstellen und Testen von Contracts in Solidity als auch in Vyper. [Probieren Sie die Remix IDE im Browser aus](https://remix.ethereum.org), um mit dem Programmieren zu beginnen.
 
-Für erfahrene Entwickler könnten außerdem Yul, eine intermediäre Sprache für die [Ethereum-Virtual Machine](/developers/docs/evm/), oder Yul+, eine Erweiterung für Yul, interessant sein.
+Erfahrenere Entwickler möchten vielleicht auch Yul, eine Zwischensprache für die [Ethereum Virtual Machine](/developers/docs/evm/), oder Yul+, eine Erweiterung von Yul, verwenden.
 
 Wenn Sie neugierig sind und gerne dabei helfen, neue, noch in der Entwicklung befindliche Sprachen zu testen, können Sie mit Fe experimentieren, einer aufstrebenden Smart-Contract-Sprache, die derzeit noch in den Kinderschuhen steckt.
 
@@ -34,15 +34,15 @@ Vorwissen über andere Programmiersprachen, insbesondere JavaScript oder Python,
 ### Wichtige Links {#important-links}
 
 - [Dokumentation](https://docs.soliditylang.org/en/latest/)
-- [Solidity Sprachportal](https://soliditylang.org/)
-- [Solidity am Beispiel](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+- [Solidity-Sprachportal](https://soliditylang.org/)
+- [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) verbunden mit [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Solidity Gitter-Chatroom](https://gitter.im/ethereum/solidity) überbrückt zum [Solidity Matrix-Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Spickzettel](https://reference.auditless.com/cheatsheet)
 - [Solidity-Blog](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidity auf Twitter](https://twitter.com/solidity_lang)
 
-### Beispiel {#example-contract}
+### Beispielvertrag {#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -50,21 +50,21 @@ pragma solidity >= 0.7.0;
 
 contract Coin {
     // Das Schlüsselwort "public" macht Variablen
-    // für anderen Verträgen zugreifbar
+    // für andere Verträge zugänglich
     address public minter;
     mapping (address => uint) public balances;
 
-    // Ereignisse ermöglichen es Nutzern spezifisch auf
-    // von deklarierte Vertragsänderungen zu reagieren
+    // Ereignisse ermöglichen es Clients, auf bestimmte
+    // von Ihnen deklarierte Vertragsänderungen zu reagieren
     event Sent(address from, address to, uint amount);
 
-    // Die Konstruktoranweisungen werden nur ausgeführt wenn
-    // der Vertrag erstellt wird
+    // Konstruktor-Code wird nur ausgeführt, wenn der Vertrag
+    // erstellt wird
     constructor() {
         minter = msg.sender;
     }
 
-    // Sendet eine Anzahl neu erstellter Coins an eine Adresse
+    // Sendet eine Menge neu erstellter Münzen an eine Adresse
     // Kann nur vom Vertragsersteller aufgerufen werden
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
@@ -72,10 +72,10 @@ contract Coin {
         balances[receiver] += amount;
     }
 
-    // Sendet eine Anzahl vorhandener Coins
-    // von einem Aufrufer an eine Adresse
+    // Sendet eine Menge vorhandener Münzen
+    // von einem beliebigen Aufrufer an eine Adresse
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "Insufficient balance.");
+        require(amount <= balances[msg.sender], "Guthaben nicht ausreichend.");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -83,12 +83,12 @@ contract Coin {
 }
 ```
 
-Dieses Beispiel soll ein Gefühl vermitteln, wie die Smart-Contract-Syntax in Solidity aussieht. Für eine ausführliche Beschreibung aller Funktionen und Variablen [sollten Sie die Dokumentation lesen](https://docs.soliditylang.org/en/latest/contracts.html).
+Dieses Beispiel soll ein Gefühl vermitteln, wie die Smart-Contract-Syntax in Solidity aussieht. Eine detailliertere Beschreibung der Funktionen und Variablen finden Sie [in der Dokumentation](https://docs.soliditylang.org/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 
 - Pythonische Programmiersprache
-- Stark typisiert
+- Starke Typisierung
 - Kompilierter Code ist kurz und nachvollziehbar
 - Effiziente Bytecode-Generierung
 - Hat beabsichtigterweise weniger Funktionen als Solidity – mit dem Ziel, die Smart Contracts sicherer und einfacherer auditierbar zu machen. Vyper bietet keine Untersützung für:
@@ -101,100 +101,118 @@ Dieses Beispiel soll ein Gefühl vermitteln, wie die Smart-Contract-Syntax in So
   - Schleifen mit unendlicher Länge
   - Binäre Fixpunkte
 
-Weitere Informationen finden Sie im [Vyper-Grundprinzip](https://vyper.readthedocs.io/en/latest/index.html).
+Für weitere Informationen [lesen Sie die Begründung für Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Wichtige Links {#important-links-1}
 
 - [Dokumentation](https://vyper.readthedocs.io)
-- [Vyper am Beispiel](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
-- [Mehr Vyper am Beispiel](https://vyper-by-example.org/)
+- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [More Vyper by Example](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Vyper-Community Discord-Chat](https://discord.gg/SdvKC79cJk)
+- [Vyper-Community-Discord-Chat](https://discord.gg/SdvKC79cJk)
 - [Spickzettel](https://reference.auditless.com/cheatsheet)
-- [Entwicklungsframeworks für Smart Contracts und Tools für Vyper](/developers/docs/programming-languages/python/)
-- [VyperPunk - Lernen Sie, Vyper Smart Contracts zu sichern und zu hacken](https://github.com/SupremacyTeam/VyperPunk)
-- [Vyper Hub für Entwicklung](https://github.com/zcor/vyper-dev)
-- [Vyper Greatest Hits Smart Contract – Beispiele](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Großartige, sorgfältig ausgewählte Vyper-Ressourcen](https://github.com/spadebuilders/awesome-vyper)
+- [Entwicklungsframeworks und Tools für Smart Contracts für Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk – Lernen Sie, Vyper-Smart-Contracts zu sichern und zu hacken](https://github.com/SupremacyTeam/VyperPunk)
+- [Vyper-Hub für die Entwicklung](https://github.com/zcor/vyper-dev)
+- [Vyper Greatest Hits: Beispiele für Smart Contracts](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Awesome Vyper – Kuratierte Ressourcen](https://github.com/spadebuilders/awesome-vyper)
 
 ### Beispiel {#example}
 
 ```python
-# Öffne Auktion
+# Offene Auktion
 
 # Auktionsparameter
-# Begünstigter erhält Geld vom Meistbietenden
+
+# Der Begünstigte erhält Geld vom Höchstbietenden
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Aktueller Stand der Auktion
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Setze am Ende auf wahr, um jede Änderung zu verbieten
+# Wird am Ende auf „true“ gesetzt, verbietet jede Änderung
+
 ended: public(bool)
 
-# Erstattete Gebote nachverfolgen, um dem Abhebemuster folgen zu können
+# Nachverfolgung der zurückgezahlten Gebote, damit wir dem Auszahlungsmuster folgen können
+
 pendingReturns: public(HashMap[address, uint256])
 
-# Eine einfache Auktion mit `_bidding_time`
-# Sekunden Bieterzeit für die
-# Begünstigtenadresse `_beneficiary` erstellen.
+# Erstellt eine einfache Auktion mit `_bidding_time`
+
+# Sekunden Bietzeit im Namen der
+
+# Begünstigten-Adresse `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Biete in der Auktion mit dem Betrag der
-# zusammen mit dieser Transaktion gesendet wurde.
-# Der Betrag wird nur erstattet, wenn die
-# Auktion nicht gewonnen wurde.
+# Mit dem Wert, der zusammen mit dieser Transaktion
+
+# gesendet wird, auf die Auktion bieten.
+
+# Der Wert wird nur dann zurückerstattet,
+
+# wenn die Auktion nicht gewonnen wird.
+
 @external
 @payable
 def bid():
-    # Prüfe, ob die Bietezeit vorrüber ist.
+    # Prüfen, ob die Bietfrist abgelaufen ist.
     assert block.timestamp < self.auctionEnd
-    # Prüfe, ob Gebot hoch genug ist
+    # Prüfen, ob das Gebot hoch genug ist
     assert msg.value > self.highestBid
-    # Verfolge die Erstattung der vorigen Meistbietenden nach
+    # Rückerstattung für den vorherigen Höchstbietenden nachverfolgen
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # Verfolge das neue Höchstgebot nach
+    # Neues Höchstgebot nachverfolgen
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Ziehe ein zuvor erstattetes Gebot zurück. Das Abhebemuster
-# wird verwendet um ein Sicherheitsproblem zu vermeiden. Wenn Erstattungen direkt
-# als Teil von bid() gesendet würden, könnte ein böswilliger Bieter-Vertrag
-# diese Erstattungen blockieren und damit den Eingang neuer Höchstgebote.
+# Ein zuvor erstattetes Gebot abheben. Das Auszahlungsmuster wird
+
+# hier verwendet, um ein Sicherheitsproblem zu vermeiden. Wenn Rückerstattungen direkt
+
+# als Teil von bid() gesendet würden, könnte ein bösartiger Bietvertrag
+
+# diese Rückerstattungen blockieren und somit das Eingehen neuer, höherer Gebote verhindern.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# Beende die Auktion und sende das Höchstgebot
-# an den Begünstigten.
-@extern
+# Die Auktion beenden und das höchste Gebot an
+
+# den Begünstigten senden.
+
+@external
 def endAuction():
-    # Es ist eine gute Richtlinie, Funktionen zu strukturieren, die
-    # mit anderen Verträgen interagieren (d. h. sie rufen Funktionen auf oder senden Ether),
-    # in drei Phasen zu unterteilen:
-    # 1. Bedingungen prüfen
-    # 2. Aktionen ausführen (potentiell die Bedingungen ändernd)
-    # 3. mit anderen Verträgen interagieren
-    # Wenn diese Abschnitte vermischt werden, könnte der andere Vertrag
-    # zurück im aktuellen Vertrag ein Aufruf durchführen und den Zustand verändern oder
-    # Effekte (Ether-Auszahlung) mehrfach ausführen.
-    # Wenn interne Funktionen aufgerufen werden, die eine Interaktion mit externen
-    # Verträgen beinhalten, muss auch die Interaktion mit
-    # den externen Verträgen berücksichtigt werden.
+    # Es ist eine gute Richtlinie, Funktionen, die mit anderen Verträgen interagieren
+    # (d. h. sie rufen Funktionen auf oder senden Ether),
+    # in drei Phasen zu gliedern:
+    # 1. Überprüfung der Bedingungen
+    # 2. Ausführung von Aktionen (potenziell ändernde Bedingungen)
+    # 3. Interaktion mit anderen Verträgen
+    # Wenn diese Phasen vermischt werden, könnte der andere Vertrag
+    # in den aktuellen Vertrag zurückrufen und den Zustand ändern oder bewirken,
+    # dass Effekte (Ether-Auszahlung) mehrmals ausgeführt werden.
+    # Wenn intern aufgerufene Funktionen die Interaktion mit externen
+    # Verträgen beinhalten, müssen sie ebenfalls als Interaktion mit
+    # externen Verträgen betrachtet werden.
 
     # 1. Bedingungen
-    # Prüfe ob der Zeitpunkt des Auktionsendes erreicht wurde
+    # Prüfen, ob die Endzeit der Auktion erreicht ist
     assert block.timestamp >= self.auctionEnd
-    # Prüfe ob diese Funktion bereit aufgerufen wurde
+    # Prüfen, ob diese Funktion bereits aufgerufen wurde
     assert not self.ended
 
     # 2. Effekte
@@ -204,7 +222,7 @@ def endAuction():
     send(self.beneficiary, self.highestBid)
 ```
 
-Dieses Beispiel soll ein Gefühl vermitteln, wie die Smart-Contract-Syntax in Vyper aussieht. Eine ausführlicher Beschreibung aller Funktionen und Variablen [finden Sie in der Dokumentation](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
+Dieses Beispiel soll ein Gefühl vermitteln, wie die Smart-Contract-Syntax in Vyper aussieht. Eine detailliertere Beschreibung der Funktionen und Variablen finden Sie [in der Dokumentation](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
 ## Yul und Yul+ {#yul}
 
@@ -213,24 +231,25 @@ Falls Sie noch nicht mit Ethereum vertraut sind und Sie noch nie mit Smart-Contr
 **Yul**
 
 - Intermediäre Sprache für Ethereum.
-- Unterstützt die [EVM](/developers/docs/evm) und [Ewasm](https://github.com/ewasm), eine Ethereum ähnliche WebAssembly, sie ist so konzipiert, dass sie ein nutzbarer gemeinsamer Nenner für beide Plattformen ist
+- Unterstützt die [EVM](/developers/docs/evm) und [Ewasm](https://github.com/ewasm), ein WebAssembly im Ethereum-Stil, und ist als brauchbarer gemeinsamer Nenner beider Plattformen konzipiert.
 - Ein gutes Ziel für High-Level-Optimierungsstufen, von denen sowohl EVM als auch eWASM-Plattformen gleichermaßen profitieren können
 
 **Yul+**
 
 - Eine hocheffiziente Yul-Erweiterung auf unterer Ebene
-- Wurde ursprünglich für einen [Optimistic Rollup](/developers/docs/scaling/optimistic-rollups/)-Vertrag konzipiert
+- Ursprünglich für einen [Optimistic Rollup](/developers/docs/scaling/optimistic-rollups/)-Vertrag konzipiert.
 - Yul+ kann als ein Vorschlag für ein experimentelles Upgrade für Yul betrachtet werden, das neue Funktionen hinzufügt
 
 ### Wichtige Links {#important-links-2}
 
 - [Yul-Dokumentation](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+-Dokumentation](https://github.com/fuellabs/yulp)
-- [Yul+-Einführungsartikel](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+- [Yul+-Einführungsbeitrag](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### Beispiel {#example-contract-2}
+### Beispielvertrag {#example-contract-2}
 
-Das folgende einfache Beispiel implementiert eine Power-Funktion. Es kann mit `solc --strict-assembly --bin input.yul` kompiliert werden. Das Beispiel sollte in der Datei "input.yul" gespeichert werden.
+Das folgende einfache Beispiel implementiert eine Power-Funktion. Es kann mit `solc --strict-assembly --bin input.yul` kompiliert werden. Das Beispiel
+sollte in der Datei "input.yul" gespeichert werden.
 
 ```
 {
@@ -251,7 +270,7 @@ Das folgende einfache Beispiel implementiert eine Power-Funktion. Es kann mit `s
 }
 ```
 
-Wenn Sie bereits Erfahrung mit Smart Contracts haben, finden Sie [hier](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example) eine vollständige ERC20-Implementierung in Yul.
+Wenn Sie bereits viel Erfahrung mit Smart Contracts haben, finden Sie eine vollständige ERC20-Implementierung in Yul [hier](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Fe {#fe}
 
@@ -264,11 +283,11 @@ Wenn Sie bereits Erfahrung mit Smart Contracts haben, finden Sie [hier](https://
 
 - [GitHub](https://github.com/ethereum/fe)
 - [Fe-Ankündigung](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
-- [Fe 2021-Roadmap](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
-- [Fe-Chat auf Discord](https://discord.com/invite/ywpkAXFjZH)
-- [Fe Twitter](https://twitter.com/official_fe)
+- [Fe-Roadmap 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [Fe Discord-Chat](https://discord.com/invite/ywpkAXFjZH)
+- [Fe auf Twitter](https://twitter.com/official_fe)
 
-### Beispiel {#example-contract-3}
+### Beispielvertrag {#example-contract-3}
 
 Im Folgenden ist ein einfacher Vertrag in Fe implementiert:
 
@@ -291,7 +310,7 @@ contract GuestBook:
 
 ```
 
-## So wählen Sie die richtige Sprache {#how-to-choose}
+## Wie Sie die richtige Wahl treffen {#how-to-choose}
 
 Wie bei jeder anderen Programmiersprache geht es vor allem darum, das geeignete Tool für den richtigen Job nach den persönlichen Präferenzen zu wählen.
 
@@ -299,7 +318,7 @@ Im Folgenden finden Sie einige Apsekte, die Sie in Betracht ziehen können, wenn
 
 ### Was ist gut an Solidity? {#solidity-advantages}
 
-- Wenn Sie Anfänger sind, gibt es viele Tutorials und Lerntools. Mehr dazu finden Sie im Bereich [Beim Programmieren lernen](/developers/learning-tools/).
+- Wenn Sie Anfänger sind, gibt es viele Tutorials und Lerntools. Weitere Informationen dazu finden Sie im Abschnitt [Lernen durch Programmieren](/developers/learning-tools/).
 - Gute Entwicklertools verfügbar
 - Solidity hat eine große Entwickler-Community. Das bedeutet, dass Sie höchstwahrscheinlich ziemlich schnell Antworten auf Ihre Fragen finden.
 
@@ -314,11 +333,11 @@ Im Folgenden finden Sie einige Apsekte, die Sie in Betracht ziehen können, wenn
 - Einfache und funktionale Low-Level-Sprachen
 - Ermöglicht die Annäherung an rohe EVM, was dazu beitragen kann, den Ressourcnverbrauch Ihrer Smart Contracts zu optimieren.
 
-## Vergleich zwischen den Sprachen {#language-comparisons}
+## Sprachvergleiche {#language-comparisons}
 
-Für Vergleiche von Basissyntax, des Vertragslebenszyklus, Schnittstellen, Operatoren, Datenstrukturen, Funktionen, Steuerungsfluss und mehr sollten Sie sich diesen [Spickzettel von Auditless](https://reference.auditless.com/cheatsheet/) ansehen.
+Vergleiche von grundlegender Syntax, Vertragslebenszyklus, Schnittstellen, Operatoren, Datenstrukturen, Funktionen, Kontrollfluss und mehr finden Sie in diesem [Spickzettel von Auditless](https://reference.auditless.com/cheatsheet/)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Lektüre {#further-reading}
 
 - [Solidity-Vertragsbibliothek von OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
-- [Solidity am Beispiel](https://solidity-by-example.org)
+- [Solidity by Example](https://solidity-by-example.org)

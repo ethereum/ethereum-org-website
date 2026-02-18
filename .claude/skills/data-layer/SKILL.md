@@ -13,6 +13,7 @@ src/data-layer/
 ├── index.ts          # Public API - typed getter functions
 ├── tasks.ts          # KEYS constant + Trigger.dev scheduled tasks
 ├── storage.ts        # get/set abstraction (Netlify Blobs or mock files)
+├── s3.ts             # S3 image upload utility for external images
 └── mocks/            # Mock data files for local development
 
 src/lib/data/
@@ -63,6 +64,25 @@ export async function set(key: string, data: unknown): Promise<void>
 
 Uses `USE_MOCK_DATA=true` env var for local development.
 
+### s3.ts - Image Upload Utility
+
+Centralized S3 upload for external images. Fetchers use this to upload external images to a single S3 bucket, reducing Next.js `remotePatterns` complexity.
+
+```typescript
+// Upload single image
+const s3Url = await uploadToS3(sourceUrl, "events/logos")
+
+// Batch upload (parallel)
+const s3Urls = await uploadManyToS3(urls, "apps/banners")
+```
+
+Key features:
+- **SSRF protection** - Blocks private/internal network addresses
+- **Deduplication** - SHA256 hash of source URL as key
+- **Existence check** - Skips if already uploaded
+- **5MB size limit** - Returns `null` for large images
+- **Content-Type detection** - From header or URL extension fallback
+
 ## Rules
 
 ### 1. Getters must be pure passthrough
@@ -97,6 +117,20 @@ export const getEventsData = createCachedGetter(
   CACHE_REVALIDATE_DAY  // or CACHE_REVALIDATE_HOUR
 )
 ```
+
+### 4. Use S3 for external images
+
+External images should be uploaded to S3 in the fetcher to centralize image domains:
+
+```typescript
+// In fetcher - correct
+import { uploadToS3 } from "../s3"
+
+const logoUrl = await uploadToS3(event.logoImage, "events/logos")
+return { ...event, logoImage: logoUrl ?? "" }
+```
+
+Always handle `null` returns (upload failures) with fallback/empty string.
 
 ## Adding a New Data Source
 

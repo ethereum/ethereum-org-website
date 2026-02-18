@@ -1,6 +1,6 @@
 import { Fragment } from "react"
 import { Info } from "lucide-react"
-import dynamic from "next/dynamic"
+import nextDynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
@@ -90,7 +90,7 @@ import {
 } from "@/lib/data"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
-const BentoCardSwiper = dynamic(
+const BentoCardSwiper = nextDynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
   {
     ssr: false,
@@ -103,7 +103,7 @@ const BentoCardSwiper = dynamic(
   }
 )
 
-const RecentPostsSwiper = dynamic(
+const RecentPostsSwiper = nextDynamic(
   () => import("@/components/Homepage/RecentPostsSwiper"),
   {
     ssr: false,
@@ -116,7 +116,7 @@ const RecentPostsSwiper = dynamic(
   }
 )
 
-const ValuesMarquee = dynamic(
+const ValuesMarquee = nextDynamic(
   () => import("@/components/Homepage/ValuesMarquee"),
   {
     ssr: false,
