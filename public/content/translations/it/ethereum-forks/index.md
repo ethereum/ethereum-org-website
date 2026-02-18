@@ -16,7 +16,6 @@ Le diramazioni si verificano quando è necessario apportare importanti aggiornam
 Quando sono necessari aggiornamenti in software tradizionali controllati centralmente, l'azienda pubblica una nuova versione per l'utente finale. Le blockchain funzionano diversamente perché non esiste una proprietà centrale. I [client di Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software e implementare le regole della nuova diramazione. Inoltre i creatori dei blocchi (miner in contesto Proof of Work e validatori in contesto Proof of Stake) e i nodi devono creare blocchi e convalidarli in base alle nuove regole. [Maggiori informazioni sui meccanismi di consenso](/developers/docs/consensus-mechanisms/)
 
 Queste modifiche alle regole potrebbero creare una divisione temporanea nella rete. I nuovi blocchi potrebbero essere creati in base alle nuove regole o a quelle vecchie. Le diramazioni di solito sono concordate in anticipo in modo che i client adottino le modifiche all'unisono e la diramazione legata agli upgrade diventi la catena principale. Tuttavia, in rari casi, disaccordi sulle diramazioni possono causare una divisione permanente della rete, come è successo con la creazione di Ethereum Classic con la <a href="#dao-fork">diramazione DAO</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Perché alcuni aggiornamenti hanno più nomi?" contentPreview="Upgrades names follow a pattern">
@@ -59,7 +58,6 @@ Gli aggiornamenti dei livelli di esecuzione e di consenso erano inizialmente dis
 | ----------------- | ----------------- | ---------- |
 | Shanghai          | Capella           | "Shapella" |
 | Cancun            | Deneb             | "Dencun"   |
-
 </ExpandableCard>
 
 Salta direttamente alle informazioni su alcuni degli ultimi aggiornamenti particolarmente importanti: [La Beacon Chain](/roadmap/beacon-chain/); [La Fusione](/roadmap/merge/) ed [EIP-1559](#london)
@@ -90,7 +88,6 @@ Notevolmente, include l'EIP-4844, nota come **Proto-Danksharding**, che riduce s
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a>: <em><code>SELFDESTRUCT</code> soltanto nella stessa transazione</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a>: <em>Codice operativo <code>BLOBBASEFEE</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Rollup del Livello 2](/layer-2/)
@@ -115,7 +112,6 @@ EIP-7514 comporta un rafforzamento dell'emissione di ETH, limitando il tasso di 
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a>: <em>Aumento degli slot massimi di inclusione dell'attestazione</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a>: <em>Aggiunta del limite massimo di churn per epoca</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Leggi le specifiche dell'aggiornamento di Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -142,7 +138,6 @@ L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuz
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>La Beacon Chain lancia i prelievi come operazioni</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>Depreca <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Leggi le specifiche dell'aggiornamento Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -178,7 +173,6 @@ L'aggiornamento Paris è stato attivato dal passaggio da una blockchain proof-of
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Aggiorna il consenso al Proof-of-Stake</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>Sostituisce l'opcode DIFFICULTY con PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -210,7 +204,6 @@ L'aggiornamento della rete di Gray Glacier ha rimandato di tre mesi la [bomba di
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>ritarda la bomba di difficoltà fino a settembre 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -233,7 +226,6 @@ L'aggiornamento di rete Arrow Glacier ha rimandato la [bomba di difficoltà](/gl
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>ritarda la bomba di difficoltà fino a giugno 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -291,7 +283,6 @@ Questo video spiega l'EIP-1559 e i benefici che comporta: [EIP-1559 Explained](h
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>impedisce la distribuzione dei contratti che iniziano con <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>ritarda l'Era Glaciale fino a dicembre 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -315,7 +306,6 @@ L'aggiornamento Berlin ha ottimizzato i costi del carburante per certe azioni de
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>il costo del carburante aumenta per gli opcode d'accesso allo stato</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>aggiunge elenchi d'accesso facoltativi</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -370,7 +360,6 @@ La diramazione Muir Glacier ha introdotto un ritardo nella [bomba di difficoltà
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>ritarda la bomba di difficoltà per altri 4.000.000 blocchi, o circa 611 giorni.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -403,7 +392,6 @@ La diramazione Instanbul:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>riduce il costo di CallData per consentire più dati nei blocchi, buono per il [ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>altre alterazioni del prezzo del carburante dell'opcode.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -431,7 +419,6 @@ La diramazione Constantinople:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a>: <em>Introduce l'istruzione <code>EXTCODEHASH</code> per recuperare l'hash del codice di un altro contratto.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>assicura che la blockchain non si congeli prima del proof-of-stake e riduce la ricompensa per blocco da 3 a 2 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -466,7 +453,6 @@ La diramazione Byzantium:
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>modifica la formula di regolazione della difficoltà.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>ritarda la [bomba di difficoltà](/glossary/#difficulty-bomb) di 1 anno e riduce la ricompensa del blocco da 5 a 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -495,7 +481,6 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>consente la rimozione dei conti vuoti aggiunti tramite attacchi DoS.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>modifica la dimensione massima del codice che un contratto sulla blockchain può avere, a 24576 byte.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -518,7 +503,6 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi di den
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>aumenta i costi del carburante degli opcode utilizzabili negli attacchi di spam.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>riduce le dimensioni di stato rimuovendo un gran numero di conti vuoti messi nello stato a costo bassissimo a causa di bug nelle versioni precedenti del protocollo di Ethereum.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -556,7 +540,6 @@ La diramazione Homestead guardava al futuro. Includeva diverse modifiche al prot
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>aggiunge il nuovo opcode: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>introduce i requisiti di compatibilità progressiva a devp2p</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
