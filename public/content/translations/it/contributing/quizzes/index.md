@@ -15,11 +15,11 @@ Alcuni esempi di quiz aggiornati possono essere trovati qui:
 - [Livello 2](/layer-2)
 - [NFT](/nft/)
 - [Cos'è Ethereum?](/what-is-ethereum/)
-- [Cos'è ETH?](/what-is-ether/)
+- [Cos'è l'ETH?](/what-is-ether/)
 
 ## Aggiungere un quiz di apprendimento
 
-Se c'è una pagina per la quale non è stato creato un quiz di apprendimento, [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) per questa pagina.
+Se per una pagina non è stato ancora creato un quiz di apprendimento, si prega di [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml).
 
 Fornire le seguenti informazioni:
 
@@ -32,7 +32,7 @@ Fornire le seguenti informazioni:
 
 ## Aggiungere una domanda al quiz
 
-Se c'è una domanda che si desidera aggiungere alla banca delle domande del quiz, [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) e fornire le seguenti informazioni:
+Se si desidera aggiungere una domanda all'elenco di domande per un quiz, si prega di [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) e fornire le seguenti informazioni:
 
 - La pagina su cui si desidera aggiunge la domanda al quiz
 - Per ogni domanda fornire le seguenti informazioni:
@@ -43,7 +43,7 @@ Se c'è una domanda che si desidera aggiungere alla banca delle domande del quiz
 
 ## Aggiornare una domanda del quiz
 
-Se c'è una domanda che si desidera aggiornare nella banca delle domande del quiz, [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) e fornire le seguenti informazioni:
+Se si desidera aggiornare una domanda nell'elenco di domande per un quiz, si prega di [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) e fornire le seguenti informazioni:
 
 - La pagina su cui si vuole aggiornare una domanda del quiz
 - Per ogni domanda che deve essere aggiornata, fornire le seguenti informazioni:
@@ -55,7 +55,7 @@ Se c'è una domanda che si desidera aggiornare nella banca delle domande del qui
 
 ## Rimuovere una domanda dal quiz
 
-Se il contenuto di una domanda non esiste più nella pagina e questa deve essere rimossa, [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) per rimuovere la domanda e fornire le seguenti informazioni:
+Se il contenuto di una domanda non esiste più nella pagina e questa deve essere rimossa, si prega di [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) per rimuovere la domanda e fornire le seguenti informazioni:
 
 - La pagina su cui si vuole eliminare una domanda del quiz
 - La domanda che si vuole cancellare

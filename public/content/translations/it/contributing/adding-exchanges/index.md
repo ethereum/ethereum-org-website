@@ -4,7 +4,7 @@ description: La politica che usiamo per l'aggiunta di piattaforme di scambio su 
 lang: it
 ---
 
-# Aggiungere piattaforme di scambio su Ethereum {#adding-ethereum-exchanges}
+# Aggiungere le piattaforme di scambio di Ethereum {#adding-ethereum-exchanges}
 
 Chiunque è libero di suggerire nuove piattaforme di scambio su ethereum.org.
 
@@ -16,7 +16,7 @@ Questa pagina consente a un utente di inserire dove vive e vedere quali piattafo
 
 Alla luce di ciò, abbiamo bisogno di ottenere alcune informazioni specifiche quando suggerisci una piattaforma di scambio.
 
-**NOTA:** Se vuoi inserire uno scambio decentralizzato, dai un'occhiata alla nostra [politica per l'inserimento di portafogli e dapp](/contributing/adding-products/).
+**NOTA:** se vuoi elencare una piattaforma di scambio decentralizzata, dai un'occhiata alla nostra [politica per l'inserimento di portafogli e dApp](/contributing/adding-products/).
 
 ## Di cosa abbiamo bisogno {#what-we-need}
 
@@ -25,7 +25,7 @@ Alla luce di ciò, abbiamo bisogno di ottenere alcune informazioni specifiche qu
 - La prova che la piattaforma di scambio sia una società di trading legittima
 - Qualsiasi altra informazione aggiuntiva in tuo possesso, ad esempio dati sulla società come gli anni di attività, il supporto finanziario, ecc.
 
-Necessitiamo di queste informazioni per poter [aiutare in maniera affidabile gli utenti a trovare una piattaforma di scambio da usare](/get-eth/#country-picker).
+Abbiamo bisogno di queste informazioni per poter [aiutare accuratamente gli utenti a trovare una piattaforma di scambio che possono usare](/get-eth/#country-picker).
 
 Occorre inoltre fornire ad ethereum.org la sicurezza che la piattaforma di scambio sia un servizio legittimo e sicuro.
 
