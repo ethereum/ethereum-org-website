@@ -7,16 +7,19 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type {
   AllHomepageActivityData,
   CommunityBlog,
+  Lang,
   PageParams,
   ValuesPairing,
 } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
+import ABTestWrapper from "@/components/AB/TestWrapper"
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
+import Homepage2026 from "@/components/Homepage/Homepage2026"
 import HomepageSectionImage from "@/components/Homepage/HomepageSectionImage"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
 import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
@@ -35,7 +38,9 @@ import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
 import IntersectionObserverReveal from "@/components/IntersectionObserverReveal"
 import MainArticle from "@/components/MainArticle"
+import ScrollDepthTracker from "@/components/ScrollDepthTracker"
 import Tooltip from "@/components/Tooltip"
+import { TrackedSection } from "@/components/TrackedSection"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import SvgButtonLink, {
   type SvgButtonLinkProps,
@@ -79,6 +84,7 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity } from "./utils"
 
 import {
+  getAccountHolders,
   getAppsData,
   getAttestantPosts,
   getBeaconchainData,
@@ -89,6 +95,9 @@ import {
   getTotalValueLockedData,
 } from "@/lib/data"
 import EventFallback from "@/public/images/events/event-placeholder.png"
+
+// Force dynamic rendering to read headers for A/B testing
+export const dynamic = "force-dynamic"
 
 const BentoCardSwiper = nextDynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
@@ -136,6 +145,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const { direction: dir, isRtl } = getDirection(locale)
 
   // Fetch data using the new data-layer functions (already cached)
+  // Each fetch is wrapped with .catch() to prevent Promise.all from rejecting entirely
+  // when a single API fails - enables graceful degradation
   const [
     ethPrice,
     beaconchainData,
@@ -145,61 +156,102 @@ const Page = async ({ params }: { params: PageParams }) => {
     rssData,
     appsData,
     eventsData,
+    accountHolders,
   ] = await Promise.all([
-    getEthPrice(),
-    getBeaconchainData(),
-    getTotalValueLockedData(),
-    getGrowThePieData(),
-    getAttestantPosts(),
-    getRSSData(),
-    getAppsData(),
-    getEventsData(),
+    getEthPrice().catch(() => null),
+    getBeaconchainData().catch(() => null),
+    getTotalValueLockedData().catch(() => null),
+    getGrowThePieData().catch(() => null),
+    getAttestantPosts().catch(() => null),
+    getRSSData().catch(() => null),
+    getAppsData().catch(() => null),
+    getEventsData().catch(() => null),
+    getAccountHolders().catch(() => null),
   ])
 
-  // Handle null cases - throw error if required data is missing
-  if (!ethPrice) {
-    throw new Error("Failed to fetch ETH price data")
-  }
-  if (!beaconchainData) {
-    throw new Error("Failed to fetch Beaconchain data")
-  }
-  if (!totalValueLocked) {
-    throw new Error("Failed to fetch total value locked data")
-  }
-  if (!growThePieData) {
-    throw new Error("Failed to fetch GrowThePie data")
-  }
-  if (!appsData) {
-    throw new Error("Failed to fetch apps data")
-  }
+  // Graceful degradation: log errors and use fallback values
+  // With force-dynamic, there's no ISR cache to fall back to, so we must handle failures gracefully
 
-  // RSS feeds - graceful degradation: use what's available if we have enough items
+  // Error fallback helper
+  const createErrorMetric = (error: string) => ({ error })
+
+  // ETH Price - show "—" on failure
+  if (!ethPrice) {
+    console.error("[Homepage] Failed to fetch ETH price data")
+  }
+  const safeEthPrice =
+    ethPrice ?? createErrorMetric("Failed to fetch ETH price")
+
+  // Beaconchain data - show "—" on failure
+  if (!beaconchainData) {
+    console.error("[Homepage] Failed to fetch Beaconchain data")
+  }
+  const totalEthStaked =
+    beaconchainData?.totalEthStaked ??
+    createErrorMetric("Failed to fetch staked ETH")
+
+  // Total Value Locked - show "—" on failure
+  if (!totalValueLocked) {
+    console.error("[Homepage] Failed to fetch TVL data")
+  }
+  const safeTotalValueLocked =
+    totalValueLocked ?? createErrorMetric("Failed to fetch TVL")
+
+  // GrowThePie data - show "—" on failure
+  if (!growThePieData) {
+    console.error("[Homepage] Failed to fetch GrowThePie data")
+  }
+  const safeTxCount =
+    growThePieData?.txCount ?? createErrorMetric("Failed to fetch tx count")
+  const safeTxCostsMedianUsd =
+    growThePieData?.txCostsMedianUsd ??
+    createErrorMetric("Failed to fetch tx costs")
+
+  // Account holders - show "—" on failure (only used by redesign variants)
+  if (!accountHolders || "error" in accountHolders) {
+    console.error("[Homepage] Failed to fetch account holders data")
+  }
+  const accountHoldersValue =
+    accountHolders && "value" in accountHolders ? accountHolders.value : null
+
+  // Transactions today for KPIs (redesign variants) - show "—" on failure
+  const transactionsToday =
+    growThePieData && "value" in growThePieData.txCount
+      ? growThePieData.txCount.value
+      : null
+
+  // Apps data - hide section on failure
+  if (!appsData) {
+    console.error("[Homepage] Failed to fetch apps data")
+  }
+  const hasAppsData = !!appsData
+
+  // RSS feeds - hide section if insufficient items
   const rssFeeds = rssData ?? []
   const attestantFeed = attestantPosts ?? []
   const totalRssItems =
     rssFeeds.reduce((sum, feed) => sum + feed.length, 0) + attestantFeed.length
 
   if (totalRssItems < RSS_DISPLAY_COUNT) {
-    throw new Error(
-      `Insufficient RSS data: need at least ${RSS_DISPLAY_COUNT} items`
+    console.error(
+      `[Homepage] Insufficient RSS data: have ${totalRssItems}, need ${RSS_DISPLAY_COUNT}`
     )
   }
-
-  // Extract totalEthStaked from beaconchainData
-  const { totalEthStaked } = beaconchainData
+  const hasEnoughRssItems = totalRssItems >= RSS_DISPLAY_COUNT
 
   // Events - use empty array as fallback
   const upcomingEvents = (eventsData ?? []).slice(0, 3)
 
-  const appsOfTheWeek = parseAppsOfTheWeek(appsData)
+  // Apps of the week - only parse if we have data
+  const appsOfTheWeek = hasAppsData ? parseAppsOfTheWeek(appsData) : []
 
   const bentoItems = await getBentoBoxItems(locale)
 
-  const ethPriceHasError = "error" in ethPrice
+  const ethPriceHasError = "error" in safeEthPrice
 
   const price = ethPriceHasError
-    ? t("loading-error-refresh")
-    : formatPriceUSD(ethPrice.value, locale)
+    ? "—"
+    : formatPriceUSD(safeEthPrice.value, locale)
 
   const eventCategory = `Homepage - ${locale}`
 
@@ -210,7 +262,7 @@ const Page = async ({ params }: { params: PageParams }) => {
       href: "/wallets/find-wallet/",
       Svg: PickWalletIcon,
       className: "text-primary hover:text-primary-hover",
-      eventName: "find wallet",
+      eventName: "find_wallet",
     },
     {
       label: t("page-index-cta-get-eth-label"),
@@ -218,7 +270,7 @@ const Page = async ({ params }: { params: PageParams }) => {
       href: "/get-eth/",
       Svg: EthTokenIcon,
       className: "text-accent-a hover:text-accent-a-hover",
-      eventName: "get eth",
+      eventName: "get_eth",
     },
     {
       label: t("page-index-cta-dapps-label"),
@@ -229,7 +281,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         "text-accent-c hover:text-accent-c-hover",
         isRtl && "[&_svg]:-scale-x-100"
       ),
-      eventName: "dapps",
+      eventName: "try_apps",
     },
     {
       label: t("page-index-cta-build-apps-label"),
@@ -237,7 +289,7 @@ const Page = async ({ params }: { params: PageParams }) => {
       href: "/developers/",
       Svg: BuildAppsIcon,
       className: "text-accent-b hover:text-accent-b-hover",
-      eventName: "build apps",
+      eventName: "start_building",
     },
   ]
 
@@ -425,536 +477,616 @@ const Page = async ({ params }: { params: PageParams }) => {
   ]
 
   const metricResults: AllHomepageActivityData = {
-    ethPrice,
+    ethPrice: safeEthPrice,
     totalEthStaked,
-    totalValueLocked,
-    txCount: growThePieData.txCount,
-    txCostsMedianUsd: growThePieData.txCostsMedianUsd,
+    totalValueLocked: safeTotalValueLocked,
+    txCount: safeTxCount,
+    txCostsMedianUsd: safeTxCostsMedianUsd,
   }
   const metrics = await getActivity(metricResults, locale)
 
-  // RSS feed items
-  // polishRSSList expects RSSItem[][], so wrap attestantFeed in an array
-  const polishedRssItems = polishRSSList([attestantFeed, ...rssFeeds], locale)
+  // RSS feed items - only process if we have enough items
+  const polishedRssItems = hasEnoughRssItems
+    ? polishRSSList([attestantFeed, ...rssFeeds], locale)
+    : []
   const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
 
-  const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({
-    name: source,
-    href: sourceUrl,
-  })) as CommunityBlog[]
-  blogLinks.push(...BLOGS_WITHOUT_FEED)
+  const blogLinks = hasEnoughRssItems
+    ? ([
+        ...polishedRssItems.map(({ source, sourceUrl }) => ({
+          name: source,
+          href: sourceUrl,
+        })),
+        ...BLOGS_WITHOUT_FEED,
+      ] as CommunityBlog[])
+    : []
 
   return (
     <>
       <IndexPageJsonLD locale={locale} />
-      <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-        <HomeHero />
-        <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
-          <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
-            {subHeroCTAs.map(
-              ({ label, description, href, className, Svg }, idx) => {
-                const Link = (
-                  props: Omit<
-                    SvgButtonLinkProps,
-                    "Svg" | "href" | "label" | "children"
-                  >
-                ) => (
-                  <SvgButtonLink
-                    Svg={Svg}
-                    href={href}
-                    label={label}
-                    customEventOptions={{
-                      eventCategory,
-                      eventAction: "Top 4 CTAs",
-                      eventName: subHeroCTAs[idx].eventName,
-                    }}
-                    {...props}
-                  >
-                    <p className="text-body">{description}</p>
-                  </SvgButtonLink>
-                )
-                return (
-                  <Fragment key={label}>
-                    <Link
-                      className={cn("xl:hidden", className)}
-                      variant="col"
-                    />
-                    <Link
-                      className={cn("hidden xl:block", className)}
-                      variant="row"
-                    />
-                  </Fragment>
-                )
-              }
-            )}
-          </div>
-
-          {/* What is Ethereum */}
-          <Section
-            id="what-is-ethereum"
-            variant="responsiveFlex"
-            className="md:flex-row-reverse"
+      <ScrollDepthTracker eventCategory={eventCategory} />
+      <ABTestWrapper
+        testKey="HomepageRedesign2026"
+        variants={[
+          <MainArticle
+            key="current-homepage"
+            className="flex w-full flex-col items-center"
+            dir={dir}
           >
-            <SectionBanner>
-              <HomepageSectionImage sectionId="what-is-ethereum" alt="" />
-            </SectionBanner>
-
-            <SectionContent>
-              <SectionTag>{t("page-index-network-tag")}</SectionTag>
-              <SectionHeader>
-                {t("page-index-what-is-ethereum-title")}
-              </SectionHeader>
-              <div className="space-y-6 py-8 text-lg text-body">
-                <p>{t("page-index-what-is-ethereum-description-1")}</p>
-                <p>{t("page-index-what-is-ethereum-description-2")}</p>
-              </div>
-              <div className="flex">
-                <ButtonLink
-                  href="/what-is-ethereum/"
-                  size="lg"
-                  customEventOptions={{
-                    eventCategory,
-                    eventAction: "what_is_ethereum",
-                    eventName: "learn_about_ethereum",
-                  }}
-                >
-                  {t("page-index-what-is-ethereum-action")} <ChevronNext />
-                </ButtonLink>
-              </div>
-
-              {/* Popular topics */}
-              <div className="flex flex-col gap-y-8 pt-8">
-                <h3 className="text-xl font-bold">
-                  {t("page-index-popular-topics-header")}
-                </h3>
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-                  {popularTopics
-                    .filter((topic) => topic.href !== "/what-is-ethereum/")
-                    .map(({ label, Svg, href, eventName, className }) => (
+            <HomeHero />
+            <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
+              <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
+                {subHeroCTAs.map(
+                  ({ label, description, href, className, Svg }, idx) => {
+                    const Link = (
+                      props: Omit<
+                        SvgButtonLinkProps,
+                        "Svg" | "href" | "label" | "children"
+                      >
+                    ) => (
                       <SvgButtonLink
-                        key={label}
                         Svg={Svg}
                         href={href}
-                        className={cn(
-                          "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
-                          className
-                        )}
+                        label={label}
                         customEventOptions={{
                           eventCategory,
-                          eventAction: "popular topics",
-                          eventName,
+                          eventAction: "cta_click",
+                          eventName: subHeroCTAs[idx].eventName,
+                        }}
+                        {...props}
+                      >
+                        <p className="text-body">{description}</p>
+                      </SvgButtonLink>
+                    )
+                    return (
+                      <Fragment key={label}>
+                        <Link
+                          className={cn("xl:hidden", className)}
+                          variant="col"
+                        />
+                        <Link
+                          className={cn("hidden xl:block", className)}
+                          variant="row"
+                        />
+                      </Fragment>
+                    )
+                  }
+                )}
+              </div>
+
+              {/* What is Ethereum */}
+              <TrackedSection
+                id="what_is_ethereum"
+                eventCategory={eventCategory}
+              >
+                <Section
+                  id="what-is-ethereum"
+                  variant="responsiveFlex"
+                  className="md:flex-row-reverse"
+                >
+                  <SectionBanner>
+                    <HomepageSectionImage sectionId="what-is-ethereum" alt="" />
+                  </SectionBanner>
+
+                  <SectionContent>
+                    <SectionTag>{t("page-index-network-tag")}</SectionTag>
+                    <SectionHeader>
+                      {t("page-index-what-is-ethereum-title")}
+                    </SectionHeader>
+                    <div className="space-y-6 py-8 text-lg text-body">
+                      <p>{t("page-index-what-is-ethereum-description-1")}</p>
+                      <p>{t("page-index-what-is-ethereum-description-2")}</p>
+                    </div>
+                    <div className="flex">
+                      <ButtonLink
+                        href="/what-is-ethereum/"
+                        size="lg"
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "what_is_ethereum",
+                          eventName: "learn_about_ethereum",
                         }}
                       >
-                        <p className="text-start text-xl font-bold text-body group-hover:underline">
-                          {label}
-                        </p>
-                      </SvgButtonLink>
-                    ))}
-                </div>
-              </div>
-            </SectionContent>
-          </Section>
+                        {t("page-index-what-is-ethereum-action")}{" "}
+                        <ChevronNext />
+                      </ButtonLink>
+                    </div>
 
-          {/* Use Cases - A new way to use the internet */}
-          <Section
-            id="use"
-            className={cn(
-              "max-lg:-mx-4 max-lg:flex max-lg:w-[100vw] max-lg:flex-col max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
-              "lg:grid lg:grid-cols-bento lg:gap-4" // Desktop: BentoBox grid
-            )}
-          >
-            <div
-              className={cn("flex flex-col", "lg:col-span-12 xl:col-span-4")}
-            >
-              <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
-                {t("page-index-use-cases-tag")}
-              </div>
-              <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
-                {t("page-index-bento-header")}
-              </h2>
-            </div>
+                    {/* Popular topics */}
+                    <div className="flex flex-col gap-y-8 pt-8">
+                      <h3 className="text-xl font-bold">
+                        {t("page-index-popular-topics-header")}
+                      </h3>
+                      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                        {popularTopics
+                          .filter(
+                            (topic) => topic.href !== "/what-is-ethereum/"
+                          )
+                          .map(({ label, Svg, href, eventName, className }) => (
+                            <SvgButtonLink
+                              key={label}
+                              Svg={Svg}
+                              href={href}
+                              className={cn(
+                                "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
+                                className
+                              )}
+                              customEventOptions={{
+                                eventCategory,
+                                eventAction: "popular topics",
+                                eventName,
+                              }}
+                            >
+                              <p className="text-start text-xl font-bold text-body group-hover:underline">
+                                {label}
+                              </p>
+                            </SvgButtonLink>
+                          ))}
+                      </div>
+                    </div>
+                  </SectionContent>
+                </Section>
+              </TrackedSection>
 
-            {/* Mobile - dynamic / lazy loaded */}
-            <BentoCardSwiper
-              bentoItems={bentoItems}
-              eventCategory={eventCategory}
-            />
-
-            {/* Desktop */}
-            {bentoItems.map(({ className, ...item }) => (
-              <BentoCard
-                key={item.title}
-                {...item}
-                className={cn(className, "max-lg:hidden")} // Desktop only
-                eventCategory={eventCategory}
-              />
-            ))}
-          </Section>
-
-          {/* What is ETH */}
-          <Section id="what-is-ether" variant="responsiveFlex">
-            <SectionBanner>
-              <HomepageSectionImage sectionId="what-is-ether" alt="" />
-            </SectionBanner>
-
-            <SectionContent>
-              <SectionTag>{t("page-index-token-tag")}</SectionTag>
-              <SectionHeader>
-                {t("page-index-what-is-ether-title")}
-              </SectionHeader>
-              <div className="space-y-6 py-8 text-lg text-body">
-                <p>{t("page-index-what-is-ether-description-1")}</p>
-                <p>{t("page-index-what-is-ether-description-2")}</p>
-              </div>
-              <div id="price" className="py-8">
-                <div
+              {/* Use Cases - A new way to use the internet */}
+              <TrackedSection id="use" eventCategory={eventCategory}>
+                <Section
+                  id="use"
                   className={cn(
-                    "text-5xl font-bold",
-                    ethPriceHasError && "text-md text-error"
+                    "max-lg:-mx-4 max-lg:flex max-lg:w-[100vw] max-lg:flex-col max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
+                    "lg:grid lg:grid-cols-bento lg:gap-4" // Desktop: BentoBox grid
                   )}
                 >
-                  {price}
-                </div>
-                <div className="mt-1 flex items-center gap-1 text-sm text-body-medium">
-                  {tCommon("eth-current-price")}
-                  <Tooltip
-                    content={
-                      <div>
-                        {tCommon("data-provided-by")}{" "}
-                        <InlineLink href="https://www.coingecko.com/en/coins/ethereum">
-                          coingecko.com
-                        </InlineLink>
+                  <div
+                    className={cn(
+                      "flex flex-col",
+                      "lg:col-span-12 xl:col-span-4"
+                    )}
+                  >
+                    <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
+                      {t("page-index-use-cases-tag")}
+                    </div>
+                    <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+                      {t("page-index-bento-header")}
+                    </h2>
+                  </div>
+
+                  {/* Mobile - dynamic / lazy loaded */}
+                  <BentoCardSwiper
+                    bentoItems={bentoItems}
+                    eventCategory={eventCategory}
+                  />
+
+                  {/* Desktop */}
+                  {bentoItems.map(({ className, ...item }) => (
+                    <BentoCard
+                      key={item.title}
+                      {...item}
+                      className={cn(className, "max-lg:hidden")} // Desktop only
+                      eventCategory={eventCategory}
+                    />
+                  ))}
+                </Section>
+              </TrackedSection>
+
+              {/* What is ETH */}
+              <TrackedSection id="what_is_ether" eventCategory={eventCategory}>
+                <Section id="what-is-ether" variant="responsiveFlex">
+                  <SectionBanner>
+                    <HomepageSectionImage sectionId="what-is-ether" alt="" />
+                  </SectionBanner>
+
+                  <SectionContent>
+                    <SectionTag>{t("page-index-token-tag")}</SectionTag>
+                    <SectionHeader>
+                      {t("page-index-what-is-ether-title")}
+                    </SectionHeader>
+                    <div className="space-y-6 py-8 text-lg text-body">
+                      <p>{t("page-index-what-is-ether-description-1")}</p>
+                      <p>{t("page-index-what-is-ether-description-2")}</p>
+                    </div>
+                    <div id="price" className="py-8">
+                      <div className="text-5xl font-bold">{price}</div>
+                      <div className="mt-1 flex items-center gap-1 text-sm text-body-medium">
+                        {tCommon("eth-current-price")}
+                        <Tooltip
+                          content={
+                            <div>
+                              {tCommon("data-provided-by")}{" "}
+                              <InlineLink href="https://www.coingecko.com/en/coins/ethereum">
+                                coingecko.com
+                              </InlineLink>
+                            </div>
+                          }
+                        >
+                          <Info className="size-4" />
+                        </Tooltip>
                       </div>
-                    }
-                  >
-                    <Info className="size-4" />
-                  </Tooltip>
-                </div>
-              </div>
-              <div className="flex">
-                <ButtonLink
-                  href="/what-is-ether/"
-                  size="lg"
-                  customEventOptions={{
-                    eventCategory,
-                    eventAction: "what_is_ether",
-                    eventName: "learn_about_eth",
-                  }}
-                >
-                  {t("page-index-what-is-ether-action")} <ChevronNext />
-                </ButtonLink>
-              </div>
-            </SectionContent>
-          </Section>
+                    </div>
+                    <div className="flex">
+                      <ButtonLink
+                        href="/what-is-ether/"
+                        size="lg"
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "what_is_ether",
+                          eventName: "learn_about_eth",
+                        }}
+                      >
+                        {t("page-index-what-is-ether-action")} <ChevronNext />
+                      </ButtonLink>
+                    </div>
+                  </SectionContent>
+                </Section>
+              </TrackedSection>
 
-          {/* Apps of the week - Discover the best apps on Ethereum */}
-          {/* // TODO: Remove locale restriction after translation */}
-          {locale === DEFAULT_LOCALE && (
-            <Section id="apps-of-the-week">
-              <SectionContent className="flex flex-col gap-4">
-                <div className="flex flex-col items-center text-center">
-                  <SectionTag>Apps of the week</SectionTag>
-                  <SectionHeader>Discover apps on Ethereum</SectionHeader>
-                  <p className="text-lg">Start exploring Ethereum today</p>
-                </div>
-                <AppsHighlight
-                  apps={appsOfTheWeek}
-                  matomoCategory="apps-of-the-week"
-                />
-                <div className="!mt-8 flex justify-center">
-                  <ButtonLink href="/apps" size="lg">
-                    Browse apps <ChevronNext />
-                  </ButtonLink>
-                </div>
-              </SectionContent>
-            </Section>
-          )}
-
-          {/* Activity - The strongest ecosystem */}
-          <Section
-            id="activity"
-            variant="responsiveFlex"
-            className="md:flex-row-reverse"
-          >
-            <SectionBanner>
-              <HomepageSectionImage sectionId="activity" alt="" />
-            </SectionBanner>
-
-            <SectionContent>
-              <SectionTag>{t("page-index-activity-tag")}</SectionTag>
-              <SectionHeader>{t("page-index-activity-header")}</SectionHeader>
-              <div className="">
-                <p className="text-body-base mt-8">
-                  {t("page-index-activity-description")}
-                </p>
-                <p className="my-8 text-xl font-bold">
-                  {t("page-index-activity-subtitle")}
-                </p>
-                <ActivityStats metrics={metrics} />
-
-                <div className="mt-12 flex flex-wrap gap-6 py-8">
-                  <ButtonLink
-                    size="lg"
-                    href="https://institutions.ethereum.org/"
-                    customEventOptions={{
-                      eventCategory: eventCategory,
-                      eventAction: "ethereum_activity",
-                      eventName: "institutions",
-                    }}
-                  >
-                    {t("page-index-activity-action-primary")} <ChevronNext />
-                  </ButtonLink>
-                  <ButtonLink
-                    size="lg"
-                    href="/resources/"
-                    isSecondary
-                    variant="outline"
-                    customEventOptions={{
-                      eventCategory: eventCategory,
-                      eventAction: "ethereum_activity",
-                      eventName: "ethereum_activity",
-                    }}
-                  >
-                    {t("page-index-activity-action")} <ChevronNext />
-                  </ButtonLink>
-                </div>
-              </div>
-            </SectionContent>
-          </Section>
-
-          {/* Values - The Internet Is Changing */}
-          <Section id="values" className="!sm:my-64 !my-48 scroll-m-48">
-            <SectionContent className="flex flex-col items-center text-center">
-              <SectionTag>{t("page-index-values-tag")}</SectionTag>
-              <SectionHeader>{t("page-index-values-header")}</SectionHeader>
-              <p className="text-lg text-body-medium">
-                {t("page-index-values-description")}
-              </p>
-            </SectionContent>
-
-            {/* dynamic / lazy loaded */}
-            <IntersectionObserverReveal rootMargin="-50% 0px 0px 0px">
-              <ValuesMarquee
-                pairings={valuesPairings}
-                eventCategory={eventCategory}
-                categoryLabels={{
-                  ethereum: tCommon("ethereum"),
-                  legacy: t("page-index-values-legacy"),
-                }}
-              />
-            </IntersectionObserverReveal>
-          </Section>
-
-          {/* Builders - Blockchain's biggest builder community */}
-          <Section id="builders" variant="responsiveFlex">
-            <SectionBanner className="relative">
-              <HomepageSectionImage sectionId="builders" alt="" />
-            </SectionBanner>
-
-            <SectionContent>
-              <SectionTag>{t("page-index-builders-tag")}</SectionTag>
-              <SectionHeader>{t("page-index-builders-header")}</SectionHeader>
-              <p className="text-lg">{t("page-index-builders-description")}</p>
-              <div className="flex flex-wrap gap-6 py-8">
-                <ButtonLink
-                  href="/developers/"
-                  size="lg"
-                  className="w-fit"
-                  customEventOptions={{
-                    eventCategory,
-                    eventAction: "builders",
-                    eventName: "developers",
-                  }}
-                >
-                  {t("page-index-builders-action-primary")} <ChevronNext />
-                </ButtonLink>
-                <ButtonLink
-                  href="/developers/docs/"
-                  size="lg"
-                  variant="outline"
-                  isSecondary
-                  className="w-fit"
-                  customEventOptions={{
-                    eventCategory,
-                    eventAction: "builders",
-                    eventName: "dev docs",
-                  }}
-                >
-                  {t("page-index-builders-action-secondary")}
-                </ButtonLink>
-              </div>
-              <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
-                {/* CLIENT SIDE */}
-                <CodeExamples
-                  title={t("page-index-developers-code-examples")}
-                  codeExamples={codeExamples}
+              {/* Apps of the week - Discover the best apps on Ethereum */}
+              {/* // TODO: Remove locale restriction after translation */}
+              {locale === DEFAULT_LOCALE && hasAppsData && (
+                <TrackedSection
+                  id="apps_of_the_week"
                   eventCategory={eventCategory}
-                />
-              </div>
-            </SectionContent>
-          </Section>
+                >
+                  <Section id="apps-of-the-week">
+                    <SectionContent className="flex flex-col gap-4">
+                      <div className="flex flex-col items-center text-center">
+                        <SectionTag>Apps of the week</SectionTag>
+                        <SectionHeader>Discover apps on Ethereum</SectionHeader>
+                        <p className="text-lg">
+                          Start exploring Ethereum today
+                        </p>
+                      </div>
+                      <AppsHighlight
+                        apps={appsOfTheWeek}
+                        matomoCategory="apps-of-the-week"
+                      />
+                      <div className="!mt-8 flex justify-center">
+                        <ButtonLink href="/apps" size="lg">
+                          Browse apps <ChevronNext />
+                        </ButtonLink>
+                      </div>
+                    </SectionContent>
+                  </Section>
+                </TrackedSection>
+              )}
 
-          {/* Recent posts */}
-          <Section id="recent">
-            <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
-              {t("page-index-posts-header")}
-            </h3>
-            <p>{t("page-index-posts-subtitle")}</p>
+              {/* Activity - The strongest ecosystem */}
+              <TrackedSection id="activity" eventCategory={eventCategory}>
+                <Section
+                  id="activity"
+                  variant="responsiveFlex"
+                  className="md:flex-row-reverse"
+                >
+                  <SectionBanner>
+                    <HomepageSectionImage sectionId="activity" alt="" />
+                  </SectionBanner>
 
-            {/* dynamic / lazy loaded */}
-            <RecentPostsSwiper
-              className="mt-4 md:mt-16"
-              rssItems={rssItems}
-              eventCategory={eventCategory}
-            />
+                  <SectionContent>
+                    <SectionTag>{t("page-index-activity-tag")}</SectionTag>
+                    <SectionHeader>
+                      {t("page-index-activity-header")}
+                    </SectionHeader>
+                    <div className="">
+                      <p className="text-body-base mt-8">
+                        {t("page-index-activity-description")}
+                      </p>
+                      <p className="my-8 text-xl font-bold">
+                        {t("page-index-activity-subtitle")}
+                      </p>
+                      <ActivityStats metrics={metrics} />
 
-            <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
-              <p className="text-lg">{t("page-index-posts-action")}</p>
-              <div className="flex flex-wrap gap-x-6 gap-y-4">
-                {blogLinks.map(({ name, href }) => (
-                  <Link
-                    href={href}
-                    key={name}
-                    customEventOptions={{
-                      eventCategory,
-                      eventAction: "blogs_read_more",
-                      eventName: name!,
-                    }}
-                  >
-                    {name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </Section>
+                      <div className="mt-12 flex flex-wrap gap-6 py-8">
+                        <ButtonLink
+                          size="lg"
+                          href="https://institutions.ethereum.org/"
+                          customEventOptions={{
+                            eventCategory: eventCategory,
+                            eventAction: "ethereum_activity",
+                            eventName: "institutions",
+                          }}
+                        >
+                          {t("page-index-activity-action-primary")}{" "}
+                          <ChevronNext />
+                        </ButtonLink>
+                        <ButtonLink
+                          size="lg"
+                          href="/resources/"
+                          isSecondary
+                          variant="outline"
+                          customEventOptions={{
+                            eventCategory: eventCategory,
+                            eventAction: "ethereum_activity",
+                            eventName: "ethereum_activity",
+                          }}
+                        >
+                          {t("page-index-activity-action")} <ChevronNext />
+                        </ButtonLink>
+                      </div>
+                    </div>
+                  </SectionContent>
+                </Section>
+              </TrackedSection>
 
-          {/* Events */}
-          <Section id="events">
-            <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
-              {t("page-index-events-header")}
-            </h3>
-            <p>{t("page-index-events-subtitle")}</p>
-            <div className="mt-4 md:mt-16">
-              <div className="grid grid-cols-1 gap-8 self-stretch sm:grid-cols-2 md:grid-cols-3">
-                {upcomingEvents.map(
-                  (
-                    {
-                      id,
-                      title,
-                      link,
-                      location,
-                      startTime,
-                      endTime,
-                      bannerImage,
-                    },
-                    idx
-                  ) => (
-                    <Card
-                      key={id}
-                      href={link}
-                      className={cn(
-                        idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
+              {/* Values - The Internet Is Changing */}
+              <TrackedSection id="values" eventCategory={eventCategory}>
+                <Section id="values" className="!sm:my-64 !my-48 scroll-m-48">
+                  <SectionContent className="flex flex-col items-center text-center">
+                    <SectionTag>{t("page-index-values-tag")}</SectionTag>
+                    <SectionHeader>
+                      {t("page-index-values-header")}
+                    </SectionHeader>
+                    <p className="text-lg text-body-medium">
+                      {t("page-index-values-description")}
+                    </p>
+                  </SectionContent>
+
+                  {/* dynamic / lazy loaded */}
+                  <IntersectionObserverReveal rootMargin="-50% 0px 0px 0px">
+                    <ValuesMarquee
+                      pairings={valuesPairings}
+                      eventCategory={eventCategory}
+                      categoryLabels={{
+                        ethereum: tCommon("ethereum"),
+                        legacy: t("page-index-values-legacy"),
+                      }}
+                    />
+                  </IntersectionObserverReveal>
+                </Section>
+              </TrackedSection>
+
+              {/* Builders - Blockchain's biggest builder community */}
+              <TrackedSection id="builders" eventCategory={eventCategory}>
+                <Section id="builders" variant="responsiveFlex">
+                  <SectionBanner className="relative">
+                    <HomepageSectionImage sectionId="builders" alt="" />
+                  </SectionBanner>
+
+                  <SectionContent>
+                    <SectionTag>{t("page-index-builders-tag")}</SectionTag>
+                    <SectionHeader>
+                      {t("page-index-builders-header")}
+                    </SectionHeader>
+                    <p className="text-lg">
+                      {t("page-index-builders-description")}
+                    </p>
+                    <div className="flex flex-wrap gap-6 py-8">
+                      <ButtonLink
+                        href="/developers/"
+                        size="lg"
+                        className="w-fit"
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "builders",
+                          eventName: "developers",
+                        }}
+                      >
+                        {t("page-index-builders-action-primary")}{" "}
+                        <ChevronNext />
+                      </ButtonLink>
+                      <ButtonLink
+                        href="/developers/docs/"
+                        size="lg"
+                        variant="outline"
+                        isSecondary
+                        className="w-fit"
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "builders",
+                          eventName: "dev docs",
+                        }}
+                      >
+                        {t("page-index-builders-action-secondary")}
+                      </ButtonLink>
+                    </div>
+                    <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
+                      {/* CLIENT SIDE */}
+                      <CodeExamples
+                        title={t("page-index-developers-code-examples")}
+                        codeExamples={codeExamples}
+                        eventCategory={eventCategory}
+                      />
+                    </div>
+                  </SectionContent>
+                </Section>
+              </TrackedSection>
+
+              {/* Recent posts - hide if insufficient RSS items */}
+              {hasEnoughRssItems && (
+                <TrackedSection id="recent" eventCategory={eventCategory}>
+                  <Section id="recent">
+                    <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+                      {t("page-index-posts-header")}
+                    </h3>
+                    <p>{t("page-index-posts-subtitle")}</p>
+
+                    {/* dynamic / lazy loaded */}
+                    <RecentPostsSwiper
+                      className="mt-4 md:mt-16"
+                      rssItems={rssItems}
+                      eventCategory={eventCategory}
+                    />
+
+                    <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
+                      <p className="text-lg">{t("page-index-posts-action")}</p>
+                      <div className="flex flex-wrap gap-x-6 gap-y-4">
+                        {blogLinks.map(({ name, href }) => (
+                          <Link
+                            href={href}
+                            key={name}
+                            customEventOptions={{
+                              eventCategory,
+                              eventAction: "blogs_read_more",
+                              eventName: name!,
+                            }}
+                          >
+                            {name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </Section>
+                </TrackedSection>
+              )}
+
+              {/* Events */}
+              <TrackedSection id="events" eventCategory={eventCategory}>
+                <Section id="events">
+                  <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+                    {t("page-index-events-header")}
+                  </h3>
+                  <p>{t("page-index-events-subtitle")}</p>
+                  <div className="mt-4 md:mt-16">
+                    <div className="grid grid-cols-1 gap-8 self-stretch sm:grid-cols-2 md:grid-cols-3">
+                      {upcomingEvents.map(
+                        (
+                          {
+                            id,
+                            title,
+                            link,
+                            location,
+                            startTime,
+                            endTime,
+                            bannerImage,
+                          },
+                          idx
+                        ) => (
+                          <Card
+                            key={id}
+                            href={link}
+                            className={cn(
+                              idx === 0 &&
+                                "col-span-1 sm:col-span-2 md:col-span-1"
+                            )}
+                            customEventOptions={{
+                              eventCategory,
+                              eventAction: "events",
+                              eventName: title,
+                            }}
+                          >
+                            <CardBanner background="accent-b">
+                              {bannerImage ? (
+                                <CardImage
+                                  src={bannerImage}
+                                  className="max-w-full object-cover object-center"
+                                />
+                              ) : (
+                                <Image
+                                  src={EventFallback}
+                                  alt=""
+                                  sizes="276px"
+                                />
+                              )}
+                            </CardBanner>
+                            <CardContent>
+                              <CardTitle>{title}</CardTitle>
+                              <CardParagraph variant="subtitle" size="sm">
+                                {formatDateRange(startTime, endTime, locale, {
+                                  month: "long",
+                                  year: "numeric",
+                                })}
+                              </CardParagraph>
+                              <CardParagraph variant="uppercase">
+                                {location}
+                              </CardParagraph>
+                            </CardContent>
+                          </Card>
+                        )
                       )}
+                    </div>
+                  </div>
+                  <div className="flex py-8 sm:justify-center">
+                    <ButtonLink
+                      href="/community/events/"
+                      size="lg"
                       customEventOptions={{
                         eventCategory,
                         eventAction: "events",
-                        eventName: title,
+                        eventName: "community events",
                       }}
                     >
-                      <CardBanner background="accent-b">
-                        {bannerImage ? (
-                          <CardImage
-                            src={bannerImage}
-                            className="max-w-full object-cover object-center"
-                          />
-                        ) : (
-                          <Image src={EventFallback} alt="" sizes="276px" />
-                        )}
-                      </CardBanner>
-                      <CardContent>
-                        <CardTitle>{title}</CardTitle>
-                        <CardParagraph variant="subtitle" size="sm">
-                          {formatDateRange(startTime, endTime, locale, {
-                            month: "long",
-                            year: "numeric",
-                          })}
-                        </CardParagraph>
-                        <CardParagraph variant="uppercase">
-                          {location}
-                        </CardParagraph>
-                      </CardContent>
-                    </Card>
-                  )
-                )}
-              </div>
-            </div>
-            <div className="flex py-8 sm:justify-center">
-              <ButtonLink
-                href="/community/events/"
-                size="lg"
-                customEventOptions={{
-                  eventCategory,
-                  eventAction: "events",
-                  eventName: "community events",
-                }}
-              >
-                {t("page-index-events-action")} <ChevronNext />
-              </ButtonLink>
-            </div>
-          </Section>
+                      {t("page-index-events-action")} <ChevronNext />
+                    </ButtonLink>
+                  </div>
+                </Section>
+              </TrackedSection>
 
-          {/* Join ethereum.org */}
-          <Section
-            id="join"
-            className={cn(
-              "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
-              "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
-              "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
-            )}
-          >
-            <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
-              <div className="flex flex-col gap-y-4 text-center">
-                <h2>{t("page-index-join-header")}</h2>
-                <p>{t("page-index-join-description")}</p>
-              </div>
-              <div className="mx-auto grid grid-cols-1 gap-16 md:grid-cols-2">
-                {joinActions.map(
-                  ({ Svg, label, href, className, description, eventName }) => (
-                    <SvgButtonLink
-                      key={label}
-                      Svg={Svg}
-                      label={label}
-                      href={href}
-                      className={cn("max-w-screen-sm", className)}
-                      variant="row"
-                      customEventOptions={{
-                        eventCategory,
-                        eventAction: "join",
-                        eventName,
-                      }}
-                    >
-                      <p className="text-body">{description}</p>
-                    </SvgButtonLink>
-                  )
-                )}
-              </div>
-              <div className="mt-8 flex justify-center">
-                <ButtonLink
-                  href="/community/"
-                  size="lg"
-                  customEventOptions={{
-                    eventCategory,
-                    eventAction: "join",
-                    eventName: "contributor_hub",
-                  }}
+              {/* Join ethereum.org */}
+              <TrackedSection id="join" eventCategory={eventCategory}>
+                <Section
+                  id="join"
+                  className={cn(
+                    "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
+                    "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
+                    "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
+                  )}
                 >
-                  {t("page-index-join-action-hub")} <ChevronNext />
-                </ButtonLink>
-              </div>
+                  <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
+                    <div className="flex flex-col gap-y-4 text-center">
+                      <h2>{t("page-index-join-header")}</h2>
+                      <p>{t("page-index-join-description")}</p>
+                    </div>
+                    <div className="mx-auto grid grid-cols-1 gap-16 md:grid-cols-2">
+                      {joinActions.map(
+                        ({
+                          Svg,
+                          label,
+                          href,
+                          className,
+                          description,
+                          eventName,
+                        }) => (
+                          <SvgButtonLink
+                            key={label}
+                            Svg={Svg}
+                            label={label}
+                            href={href}
+                            className={cn("max-w-screen-sm", className)}
+                            variant="row"
+                            customEventOptions={{
+                              eventCategory,
+                              eventAction: "join",
+                              eventName,
+                            }}
+                          >
+                            <p className="text-body">{description}</p>
+                          </SvgButtonLink>
+                        )
+                      )}
+                    </div>
+                    <div className="mt-8 flex justify-center">
+                      <ButtonLink
+                        href="/community/"
+                        size="lg"
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "join",
+                          eventName: "contributor_hub",
+                        }}
+                      >
+                        {t("page-index-join-action-hub")} <ChevronNext />
+                      </ButtonLink>
+                    </div>
+                  </div>
+                </Section>
+              </TrackedSection>
             </div>
-          </Section>
-        </div>
-      </MainArticle>
+          </MainArticle>,
+          <Homepage2026
+            key="redesign-1cta"
+            locale={locale as Lang}
+            accountHolders={accountHoldersValue}
+            transactionsToday={transactionsToday}
+            ctaVariant="modal"
+          />,
+          <Homepage2026
+            key="redesign-4cta"
+            locale={locale as Lang}
+            accountHolders={accountHoldersValue}
+            transactionsToday={transactionsToday}
+            ctaVariant="direct-buttons"
+          />,
+        ]}
+      />
     </>
   )
 }
