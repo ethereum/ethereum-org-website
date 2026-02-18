@@ -83,9 +83,9 @@ These controls enable the deployment of autonomous agents that are not unbounded
 
 It provides:
 
-- An **Identity Registry** for portable, censorship-resistant agent identifiers
-- A **Reputation Registry** for standardized feedback signals across applications
-- A **Validation Registry** for requesting independent verification (zkML, TEE, staked re-execution)
+- An **identity registry** for portable, censorship-resistant agent identifiers
+- A **reputation registry** for standardized feedback signals across applications
+- A **validation registry** for requesting independent verification (zkML, TEE, staked re-execution)
 
 ERC-8004 makes it easier for agents to discover, verify, and transact with each other in a fully decentralized environment.
 
