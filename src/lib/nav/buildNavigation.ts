@@ -329,6 +329,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               description: t("nav-grants-description"),
               href: "/community/grants/",
             },
+            {
+              label: t("nav-use-cases-explorer-label"),
+              description: t("nav-use-cases-explorer-description"),
+              href: "/developers/use-cases/",
+            },
           ],
         },
         {
