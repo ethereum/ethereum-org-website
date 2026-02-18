@@ -58,7 +58,7 @@ Ecco alcuni esempi:
 - ERRATO: 0xf0f0f (dev'essere un numero di cifre pari)
 - ERRATO: 004200 (deve avere il prefisso 0x)
 
-### Il parametro del blocco predefinito {#default-block}
+### Il parametro del blocco predefinito {#block-parameter}
 
 I seguenti metodi hanno un parametro del blocco predefinito aggiuntivo:
 
@@ -566,7 +566,7 @@ Restituisce il saldo del conto del dato indirizzo.
 **Parametri**
 
 1. `DATA`, 20 byte - indirizzo per controllare il saldo.
-2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -597,7 +597,7 @@ Restituisce il valore da una posizione di archiviazione a un dato indirizzo.
 
 1. `DATA`, 20 byte - Indirizzo di archiviazione.
 2. `QUANTITY` - intero della posizione di archiviazione.
-3. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
+3. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Restituisce**
 
@@ -663,7 +663,7 @@ Restituisce il numero di transazioni _inviate_da un indirizzo.
 **Parametri**
 
 1. `DATA`, 20 byte - indirizzo.
-2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -724,7 +724,7 @@ Restituisce il numero di transazioni in un blocco corrispondente al numero di bl
 
 **Parametri**
 
-1. `QUANTITY|TAG` - intero del numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"` o `"finalized"`, come nel [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - intero del numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"` o `"finalized"`, come nel [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#block-parameter).
 
 ```js
 params: [
@@ -784,7 +784,7 @@ Restituisce il numero di ommer in un blocco da un blocco che corrisponde all'has
 
 **Parametri**
 
-1. `QUANTITY|TAG` - intero del numero di un blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - intero del numero di un blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -816,7 +816,7 @@ Restituisce il codice ad un dato indirizzo.
 **Parametri**
 
 1. `DATA`, 20 byte - indirizzo
-2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -1003,7 +1003,7 @@ Esegue immediatamente una nuova chiamata di messaggio senza creare una transazio
 - `value`: `QUANTITY` - (facoltativo) Intero del valore inviato con questa transazione
 - `input`: `DATA` - (facoltativo) Hash della firma del metodo e dei parametri codificati. Per i dettagli, consulta [ABI del Contratto di Ethereum nella documentazione di Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Restituisce**
 
@@ -1130,7 +1130,7 @@ Restituisce informazioni su un blocco per numero di blocco.
 
 **Parametri**
 
-1. `QUANTITY|TAG` - intero del numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"` o `"finalized"`, come nel [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - intero del numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"` o `"finalized"`, come nel [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#block-parameter).
 2. `Boolean` - Se `true` restituisce gli oggetti di transazione completi, se `falso` solo gli hash delle transazioni.
 
 ```js
@@ -1243,7 +1243,7 @@ Restituisce informazioni su una transazione per hash del blocco e posizione dell
 
 **Parametri**
 
-1. `QUANTITY|TAG`: il numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"` o `"finalized"`, come nel [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG`: il numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"` o `"finalized"`, come nel [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - la posizione dell'indice della transazione.
 
 ```js
@@ -1366,7 +1366,7 @@ Restituisce informazioni su un ommer di un blocco in base al numero e alla posiz
 
 **Parametri**
 
-1. `QUANTITY|TAG` - il numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, come nel [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - il numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, come nel [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - la posizione dell'indice dell'ommer.
 
 ```js
