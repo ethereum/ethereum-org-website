@@ -43,7 +43,8 @@ Beberapa aplikasi akan meminta Anda untuk menyimpan frasa pemulihan rahasia "fra
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Dompet sudah terinstal??</b><br/>Pelajari cara menggunakannya.</div>
+  <div><b>Dompet sudah terinstal??</b><br/>Pelajari cara menggunakannya.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Cara menggunakan dompet
   </ButtonLink>
