@@ -166,7 +166,6 @@ eventName="read more">
 Se fai parte di un [pool di staking](/staking/pools/) o detieni token di staking, dovresti chiedere al tuo fornitore ulteriori dettagli su come vengono gestiti i prelievi dallo staking, poiché ogni servizio opera in modo diverso.
 
 In generale, gli utenti dovrebbero essere liberi di rivendicare i propri ETH in staking sottostanti, o di modificare il fornitore di staking che utilizzano. Se un pool in particolare sta diventando troppo grande, è possibile uscire, riscattare i fondi e rimetterli in staking con un <a href="https://rated.network/">fornitore di dimensioni minori</a>. O, se hai accumulato abbastanza ETH, potresti [fare staking da casa](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -186,7 +185,6 @@ eventName="read more">
 No, se il tuo validatore è ancora attivo sulla rete, un prelievo completo non si verificherà automaticamente. Questo richiede l'avvio manuale di un'uscita volontaria.
 
 Una volta che un validatore ha completato il procedimento di uscita e supponendo che il conto abbia le credenziali di prelievo, il saldo rimanente sarà <em>then</em> prelevato durante la successiva<a href="#validator-sweeping">pulizia del validatore</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Posso prelevare un importo personalizzato?"
@@ -207,7 +205,6 @@ eventName="read more">
 Gli operatori del validatore dovrebbero visitare la pagina dei <a href="https://launchpad.ethereum.org/withdrawals/">Prelievi del Launchpad di Staking</a>, dove troveranno ulteriori dettagli su come preparare il proprio validatore ai prelievi, le tempistiche degli eventi e ulteriori dettagli sul funzionamento dei prelievi.
 
 Per testare la tua configurazione su una rete di prova, visita il <a href="https://holesky.launchpad.ethereum.org">Launchpad di Staking della rete di prova di Holesky</a> per iniziare.
-
 </ExpandableCard>
 
 <ExpandableCard
