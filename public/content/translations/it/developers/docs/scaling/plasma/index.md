@@ -1,6 +1,6 @@
 ---
 title: Catene plasma
-description: Un'introduzione alle catene plasma come soluzione di scalabilità, attualmente utilizzata dalla comunità Ethereum.
+description: "Un'introduzione alle catene plasma come soluzione di scalabilità, attualmente utilizzata dalla comunità Ethereum."
 lang: it
 incomplete: true
 sidebarDepth: 3
@@ -24,7 +24,7 @@ Le funzioni del contratto Plasma, tra le altre cose, fungono da [ponte](/develop
 
 I componenti di base del quadro Plasma sono:
 
-### Calcolo off-chain {#off-chain-computation}
+### Calcolo off-chain {#offchain-computation}
 
 La velocità di elaborazione attuale di Ethereum è limitata a circa 15-20 transazioni al secondo, riducendo la possibilità a breve termine di ridimensionamento per gestire più utenti. Questo problema esiste principalmente perché il [meccanismo di consenso](/developers/docs/consensus-mechanisms/) di Ethereum richiede molti nodi peer-to-peer per verificare ogni aggiornamento allo stato della blockchain.
 
