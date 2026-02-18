@@ -12,6 +12,7 @@ import type {
 } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
+import { ABTest } from "@/components/AB/ABTest"
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -124,7 +125,13 @@ const ValuesMarquee = nextDynamic(
   }
 )
 
-const Page = async ({ params }: { params: PageParams }) => {
+interface PagePropsExtended {
+  params: PageParams
+  /** Optional precomputed A/B test variant index for the homepage hero */
+  heroVariant?: number
+}
+
+const Page = async ({ params, heroVariant }: PagePropsExtended) => {
   const { locale } = params
 
   if (!LOCALES_CODES.includes(locale)) return notFound()
@@ -448,7 +455,18 @@ const Page = async ({ params }: { params: PageParams }) => {
     <>
       <IndexPageJsonLD locale={locale} />
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-        <HomeHero />
+        {heroVariant !== undefined ? (
+          <ABTest
+            testKey="HomepageHero"
+            variantIndex={heroVariant}
+            variants={[
+              <HomeHero key="original" />,
+              <div key="variant-a">Variant A</div>, // TODO: Replace with actual variant
+            ]}
+          />
+        ) : (
+          <HomeHero />
+        )}
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
           <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
             {subHeroCTAs.map(

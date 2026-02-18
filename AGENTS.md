@@ -218,62 +218,24 @@ This project enforces type-safe chain names via TypeScript. When working with la
 
 ## A/B Testing
 
-### Overview
+The site uses a GDPR-compliant, cookie-less A/B testing system with Vercel Flags SDK and Matomo.
 
-The site uses a GDPR-compliant, cookie-less A/B testing system integrated with Matomo. Tests are configured entirely through the Matomo dashboard with no code changes required.
+**Key concepts:**
+- Middleware precomputes flags and rewrites URLs (e.g., `/en/` → `/en/abc123`)
+- Each A/B tested route needs a page under `app/[locale]/[code]/`
+- Variants assigned deterministically via IP + User-Agent fingerprinting
 
-### Key Features
+**For detailed instructions on adding new experiments or routes, use the `ab-testing` skill.**
 
-- **Matomo API Integration** - Experiments configured in Matomo dashboard
-- **Cookie-less Variant Persistence** - Uses deterministic IP + User-Agent fingerprinting for variant assignment
-- **Server-side Rendering** - No layout shifts, consistent variants on first load
-- **Real-time Updates** - Change weights instantly via Matomo (no deployments)
-- **Preview Mode** - Debug panel available in development and preview environments
-- **Automatic Fallbacks** - Graceful degradation when API fails (shows original variant)
+**Core Files:**
+- `middleware.ts` - Precomputes flags, rewrites URLs
+- `src/lib/ab-testing/flags.ts` - Flag definitions
+- `src/lib/ab-testing/matomo-adapter.ts` - Matomo API integration
+- `app/[locale]/[code]/page.tsx` - Precomputed homepage route
 
-### Adding a New A/B Test
-
-1. **Create experiment in Matomo dashboard**:
-
-   - Go to Experiments → Manage Experiments
-   - Create new experiment with desired name (e.g., "HomepageHero")
-   - Add variations with weights (original is implicit)
-   - Set status to "running"
-
-2. **Implement in component**:
-
-   ```tsx
-   import ABTestWrapper from "@/components/AB/TestWrapper"
-   ;<ABTestWrapper
-     testKey="HomepageHero" // Must match Matomo experiment name exactly
-     variants={[
-       <OriginalComponent key="current-hero" />, // Index 0: Original
-       <NewComponent key="redesigned-hero" />, // Index 1: Variation
-     ]}
-     fallback={<OriginalComponent />}
-   />
-   ```
-
-**Important**:
-
-- Variants matched by **array index**, not names
-- Array order must match Matomo experiment order exactly
-- JSX `key` props become debug panel labels: `"redesigned-hero"` → `"Redesigned Hero"`
-- No TypeScript changes required - system fetches configuration from Matomo
-
-### Architecture
-
-- **`/api/ab-config`** - Fetches experiment data from Matomo API
-- **`src/lib/ab-testing/`** - Core logic for assignment and tracking
-- **`src/components/AB/`** - React components for testing and debugging
-
-### Environment Variables
-
-Required for Matomo integration:
-
-- `NEXT_PUBLIC_MATOMO_URL` - Matomo instance URL
-- `NEXT_PUBLIC_MATOMO_SITE_ID` - Site ID in Matomo
-- `MATOMO_API_TOKEN` - API token with experiments access
+**Environment Variables:**
+- `NEXT_PUBLIC_MATOMO_URL`, `NEXT_PUBLIC_MATOMO_SITE_ID`, `MATOMO_API_TOKEN`, `FLAGS_SECRET`
+- `USE_MOCK_EXPERIMENTS=true` - Use mock experiments for local dev without Matomo
 
 ## Deployment
 
