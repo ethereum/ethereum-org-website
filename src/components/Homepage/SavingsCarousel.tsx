@@ -84,7 +84,7 @@ const slides: Slide[] = [
     description:
       "Send stablecoins for just $0.2, and your family receives the funds almost instantly.",
     cta: "Send money →",
-    href: "/stablecoins/",
+    href: "/payments/",
     image: remittancesImage,
     comparison: {
       traditional: { label: "WIRE TRANSFER", value: "3-5 days" },

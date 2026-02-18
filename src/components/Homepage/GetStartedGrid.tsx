@@ -43,7 +43,7 @@ const cards = [
       "Smart contract tutorials",
       "Development tools & frameworks",
     ],
-    bulletColor: "bg-body",
+    bulletColor: "bg-accent-a",
     cta: "View materials",
     href: "/developers/",
     image: developersImage,

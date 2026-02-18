@@ -111,7 +111,7 @@ const TrustLogos = ({
             eventName: "trust_logos/enterprise",
           }}
         >
-          See Institutional adoption
+          See institutional adoption
           <ArrowRight className="size-4" />
         </BaseLink>
 

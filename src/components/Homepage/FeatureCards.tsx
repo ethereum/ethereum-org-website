@@ -32,7 +32,7 @@ const FeatureCards = ({
             What makes Ethereum <span className="text-body">different</span>
           </SectionHeader>
           <p className="max-w-xl text-lg text-body-medium">
-            Principles that set Ethereum apart from traditional systems
+            Principles set Ethereum apart from traditional systems
           </p>
         </div>
 
