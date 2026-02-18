@@ -4,6 +4,7 @@ import type { StaticImageData } from "next/image"
 import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/ui/Link"
 import {
+  Section,
   SectionContent,
   SectionHeader,
   SectionTag,
@@ -46,11 +47,10 @@ const TrustLogos = ({
   eventCategory = "Homepage",
 }: TrustLogosProps) => {
   return (
-    <section
-      className={cn(
-        "flex w-full flex-col justify-between gap-8 md:flex-row md:items-center lg:gap-16",
-        className
-      )}
+    <Section
+      id="trust"
+      variant="responsiveFlex"
+      className={cn("justify-between md:items-center", className)}
     >
       <div className="relative shrink-0 md:w-96 lg:w-128">
         <div className="relative min-h-[400px] md:min-h-[500px] lg:min-h-[700px]">
@@ -131,7 +131,7 @@ const TrustLogos = ({
           ))}
         </div>
       </SectionContent>
-    </section>
+    </Section>
   )
 }
 
