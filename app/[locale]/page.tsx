@@ -47,6 +47,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Heading } from "@/components/ui/heading"
 import InlineLink from "@/components/ui/Link"
 import Link from "@/components/ui/Link"
 import {
@@ -524,9 +525,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
               {/* Popular topics */}
               <div className="flex flex-col gap-y-8 pt-8">
-                <h3 className="text-xl font-bold">
+                <Heading as="h3" size="sm" className="lg:text-xl">
                   {t("page-index-popular-topics-header")}
-                </h3>
+                </Heading>
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                   {popularTopics
                     .filter((topic) => topic.href !== "/what-is-ethereum/")
@@ -796,9 +797,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
           {/* Recent posts */}
           <Section id="recent">
-            <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+            <Heading as="h3" size="xl" weight="black" className="mb-4 mt-2">
               {t("page-index-posts-header")}
-            </h3>
+            </Heading>
             <p>{t("page-index-posts-subtitle")}</p>
 
             {/* dynamic / lazy loaded */}
@@ -830,9 +831,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
           {/* Events */}
           <Section id="events">
-            <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+            <Heading as="h3" size="xl" weight="black" className="mb-4 mt-2">
               {t("page-index-events-header")}
-            </h3>
+            </Heading>
             <p>{t("page-index-events-subtitle")}</p>
             <div className="mt-4 md:mt-16">
               <div className="grid grid-cols-1 gap-8 self-stretch sm:grid-cols-2 md:grid-cols-3">

@@ -24,6 +24,7 @@ import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
+import { Heading } from "@/components/ui/heading"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
@@ -158,9 +159,9 @@ const Page = async ({ params }: { params: PageParams }) => {
         <MainArticle className="space-y-20 px-4 py-10 md:px-8">
           {/* Major blockchain conferences */}
           <Section id="highlights">
-            <h2 className="mb-6 font-bold">
+            <Heading as="h2" className="mb-6">
               {t("page-events-section-major-conferences")}
-            </h2>
+            </Heading>
             <EdgeScrollContainer>
               {highlightedConferences.map((event) => (
                 <EdgeScrollItem
@@ -224,7 +225,9 @@ const Page = async ({ params }: { params: PageParams }) => {
                           sizes="6rem"
                         />
                       </div>
-                      <h3 className="text-2xl font-bold">{location}</h3>
+                      <Heading as="h3" className="lg:text-2xl">
+                        {location}
+                      </Heading>
                       <div className="space-y-[1lh]">
                         <p>{t(descriptionKey)}</p>
                         <p>{t(ctaKey)}</p>
@@ -400,9 +403,9 @@ const Page = async ({ params }: { params: PageParams }) => {
                 />
               </div>
               <div>
-                <h3 className="mb-2 text-xl font-bold">
+                <Heading as="h3" size="sm" className="mb-2 lg:text-xl">
                   {t("page-events-section-organizers-planning")}
-                </h3>
+                </Heading>
                 <p className="mb-4 max-w-4xl">
                   {t("page-events-section-organizers-planning-description")}
                 </p>
@@ -440,9 +443,9 @@ const Page = async ({ params }: { params: PageParams }) => {
                       sizes="4rem"
                     />
                   </div>
-                  <h3 className="text-xl font-bold">
+                  <Heading as="h3" size="sm" className="lg:text-xl">
                     {t("page-events-support-ethereum-everywhere")}
-                  </h3>
+                  </Heading>
                 </div>
 
                 <div className="space-y-[1lh]">
@@ -508,9 +511,9 @@ const Page = async ({ params }: { params: PageParams }) => {
                       sizes="4rem"
                     />
                   </div>
-                  <h3 className="text-xl font-bold">
+                  <Heading as="h3" size="sm" className="lg:text-xl">
                     {t("page-events-support-geode-labs")}
-                  </h3>
+                  </Heading>
                 </div>
                 <div className="space-y-[1lh] [&_a]:no-underline">
                   <p>{t("page-events-support-geode-labs-description")}</p>

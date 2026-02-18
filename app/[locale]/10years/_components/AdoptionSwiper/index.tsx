@@ -3,6 +3,7 @@
 import { Image } from "@/components/Image"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Heading } from "@/components/ui/heading"
 import {
   Swiper,
   SwiperContainer,
@@ -37,7 +38,9 @@ const AdoptionSwiper = ({
                   alt={title}
                   className="mx-auto mb-4 h-36 object-contain"
                 />
-                <h3 className="mb-4 text-2xl font-bold">{title}</h3>
+                <Heading as="h3" className="mb-4 lg:text-2xl">
+                  {title}
+                </Heading>
                 <p className="mb-8">
                   <Translation
                     id={`page-10-year-adoption-card-${index + 1}-description`}

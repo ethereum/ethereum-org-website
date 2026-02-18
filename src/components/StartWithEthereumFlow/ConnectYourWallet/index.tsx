@@ -6,6 +6,7 @@ import ConnectToEthereumButton from "@/components/ConnectToEthereumButton"
 import Emoji from "@/components/Emoji"
 import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
+import { Heading } from "@/components/ui/heading"
 import { Tag } from "@/components/ui/tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -43,9 +44,9 @@ const ConnectYourWallet = ({
               {stepIndex} / {totalSteps}
             </Tag>
           </div>
-          <h2 className="text-3xl font-bold">
+          <Heading as="h2" className="lg:text-3xl">
             {t("page-start-connect-wallet-title")}
-          </h2>
+          </Heading>
           <p>{t("page-start-connect-wallet-description")}</p>
         </div>
         <div className="hidden flex-col items-center justify-center gap-4 lg:flex">

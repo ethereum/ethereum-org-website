@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 import { Button } from "./ui/buttons/Button"
+import { Heading } from "./ui/heading"
 import { BaseLink } from "./ui/Link"
 import { List, ListItem } from "./ui/list"
 
@@ -345,7 +346,9 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {linkSections.map((section: FooterLinkSection, idx) => (
           <div key={idx}>
-            <h3 className="my-5 text-sm font-bold">{section.title}</h3>
+            <Heading as="h3" size="2xs" className="my-5 lg:text-sm">
+              {section.title}
+            </Heading>
             <List className="m-0 mb-4 list-none text-sm">
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} className="mb-4">

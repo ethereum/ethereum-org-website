@@ -1,5 +1,6 @@
 import { Image } from "@/components/Image"
 import { Card } from "@/components/ui/card"
+import { Heading } from "@/components/ui/heading"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
@@ -37,9 +38,12 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
       >
         {course.hours}
       </Tag>
-      <h3 className="text-lg font-bold text-body group-hover:underline">
+      <Heading
+        as="h3"
+        className="text-lg text-body group-hover:underline lg:text-lg"
+      >
         {course.title}
-      </h3>
+      </Heading>
       <p className="mb-4 text-sm text-body-medium">{course.description}</p>
     </div>
   </Card>

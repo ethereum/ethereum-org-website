@@ -10,6 +10,7 @@ import {
 } from "@/components/icons/staking"
 import Translation from "@/components/Translation"
 import { Flex, VStack } from "@/components/ui/flex"
+import { Heading } from "@/components/ui/heading"
 import { List, ListItem } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
@@ -96,7 +97,9 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
       </div>
       <Flex className="min-h-[410px] flex-[2] flex-col items-center bg-background-highlight p-6">
         <StyledSvg />
-        <h3 className="mt-10 text-2xl font-bold leading-[1.4]">{title}</h3>
+        <Heading as="h3" className="mt-10 leading-[1.4] lg:text-2xl">
+          {title}
+        </Heading>
         <p>{description}</p>
         <Flex className="mt-auto justify-center gap-8">
           {!!valid && (

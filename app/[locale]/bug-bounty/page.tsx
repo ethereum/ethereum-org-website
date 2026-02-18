@@ -20,6 +20,7 @@ import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Center, Flex, VStack } from "@/components/ui/flex"
+import { Heading } from "@/components/ui/heading"
 import InlineLink from "@/components/ui/Link"
 import Link from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
@@ -275,10 +276,10 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                <h1 className="mb-6 text-4xl font-bold lg:text-5xl">
+                <Heading className="mb-6">
                   {t("page-upgrades-bug-bounty-slogan")}&nbsp;
                   <Emoji text=":bug:" />
-                </h1>
+                </Heading>
               </div>
               <Text className="mt-4 max-w-[480px] leading-xs text-body-medium">
                 {t("page-upgrades-bug-bounty-subtitle")}

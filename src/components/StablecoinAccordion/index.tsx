@@ -13,6 +13,7 @@ import CardList from "../CardList"
 import Translation from "../Translation"
 import { Accordion } from "../ui/accordion"
 import { Alert, AlertContent, AlertEmoji } from "../ui/alert"
+import { Heading } from "../ui/heading"
 
 import {
   AccordionCustomItem,
@@ -24,7 +25,7 @@ import { useStablecoinAccordion } from "./useStablecoinAccordion"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const SectionTitle = (props: ChildOnlyProp) => (
-  <h4 className="mb-8 mt-0 text-start text-xl font-bold" {...props} />
+  <Heading as="h4" className="mb-8 mt-0 text-start lg:text-xl" {...props} />
 )
 
 const StepBoxContainer = (props: ChildOnlyProp) => (
@@ -57,7 +58,7 @@ const StepBox = (
 }
 
 const H4 = (props: ChildOnlyProp) => (
-  <h4 className="mb-4 text-xl font-bold" {...props} />
+  <Heading as="h4" className="mb-4 lg:text-xl" {...props} />
 )
 
 const StablecoinAccordion = () => {

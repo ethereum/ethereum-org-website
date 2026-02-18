@@ -5,6 +5,7 @@ import type { CommonHeroProps } from "@/lib/types"
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 import { Stack } from "@/components/ui/flex"
+import { Heading } from "@/components/ui/heading"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -61,9 +62,11 @@ const HubHero = ({
         ) : null}
         <Stack className="max-w-screen-md gap-2 self-center md:gap-1">
           {title ? (
-            <h2 className="text-4xl lg:text-5xl">{header}</h2>
+            <Heading as="h2" size="xl">
+              {header}
+            </Heading>
           ) : (
-            <h1 className="text-4xl lg:text-5xl">{header}</h1>
+            <Heading>{header}</Heading>
           )}
 
           <p className="text-lg">{description}</p>

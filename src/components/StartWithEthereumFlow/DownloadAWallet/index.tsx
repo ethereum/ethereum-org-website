@@ -6,6 +6,7 @@ import { Wallet } from "@/lib/types"
 import { Image } from "@/components/Image"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import Checkbox from "@/components/ui/checkbox"
+import { Heading } from "@/components/ui/heading"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
@@ -35,9 +36,9 @@ const DownloadAWallet = ({
               {stepIndex} / {totalSteps}
             </Tag>
           </div>
-          <h2 className="text-3xl font-bold">
+          <Heading as="h2" className="lg:text-3xl">
             {t("page-start-download-wallet-title")}
-          </h2>
+          </Heading>
           <p>{t("page-start-download-wallet-description")}</p>
         </div>
         <div className="hidden flex-col gap-8 lg:flex">

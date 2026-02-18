@@ -11,6 +11,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { Button } from "./ui/buttons/Button"
+import { Heading } from "./ui/heading"
 import Translation from "./Translation"
 
 import { useSurvey } from "@/hooks/useSurvey"
@@ -69,9 +70,9 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
       dir={dir}
     >
       <div className="flex flex-col gap-4">
-        <h2 className="mb-2 text-xl lg:text-2xl">
+        <Heading as="h2" size="sm" className="mb-2">
           {getTitle(feedbackSubmitted)}
-        </h2>
+        </Heading>
         {feedbackSubmitted && (
           <p>
             {t("feedback-widget-thank-you-subtitle")}{" "}

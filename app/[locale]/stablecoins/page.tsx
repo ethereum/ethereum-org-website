@@ -27,6 +27,7 @@ import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
+import { Heading } from "@/components/ui/heading"
 import InlineLink from "@/components/ui/Link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -671,9 +672,9 @@ async function Page({ params }: { params: PageParams }) {
                       <Emoji text={feature.emoji} />
                     </div>
                     <div className="flex-1">
-                      <h3 className="mb-4 text-3xl font-bold">
+                      <Heading as="h3" className="mb-4 text-3xl lg:text-3xl">
                         {feature.title}
-                      </h3>
+                      </Heading>
                       <div className="mb-6 text-lg">{feature.description}</div>
                       <div className="my-6 grid grid-cols-1 gap-6 md:grid-cols-2">
                         {feature.pros && (
