@@ -1,5 +1,5 @@
 ---
-title: Providing your customers with a gasless experience
+title: Sponsoring gas fees: How to cover transaction costs for your users
 description: It is easy to create a private key and an address; it's just a matter of running the right software. But there are many places in the world where getting the ETH to send transactions is much harder. In this tutorial you learn how to cover the onchain gas costs for executing user-signed, off-chain structured data in your smart contract. You have the user sign a structure containing the transaction information, which your offchain code then submits to the blockchain as a transaction.
 author: Ori Pomerantz
 tags: ["gasless"]
@@ -14,9 +14,8 @@ If we want Ethereum to serve [a billion more people](https://blog.ethereum.org/c
 
 If you have a dapp that makes money from users, it might make sense to let users submit transactions through your server and pay the transaction fees yourself. Because users still sign an authorization message in their wallets, they retain Ethereum's guarantees of integrity. Availability depends on the server that relays transactions, so it is more limited. However, you can set things up so users can also access the smart contract directly (if they get ETH), and let others set up their own servers if they want to sponsor transactions.
 
-The technique in this tutorial only works when you control the smart contract. There are other techniques, including [account abstraction](https://eips.ethereum.org/EIPS/eip-4337) that let you sponsor transactions to other smart contracts, which I hope to cover in a future tutorial.
+The technique in this tutorial only works when you control the smart contract. There are [other techniques](https://eips.ethereum.org/EIPS/eip-4337) that let you sponsor transactions to other smart contracts, which I hope to cover in a future tutorial.
 
-Note: This is *not* production-level code. It is vulnerable to significant attacks and lacks major features. Learn more in the [vulnerabilities section of this guide](#vulnerabilities).
 ## The sample application {#sample-app}
 
 The sample application here is a variant on HardHat's `Greeter` contract. You can see it [on GitHub](https://github.com/qbzzt/260301-gasless). The smart contract is already deployed on the [Sepolia](https://sepolia.dev/), at address [`0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA). 
@@ -70,7 +69,7 @@ The React hook [`useCallback`](https://react.dev/reference/react/useCallback) le
         if (!account) throw new Error("Wallet not connected")
 ```
 
-If there is no account, raise an error. This should never happen because the button that calls us is disabled, but future programmers may remove that safeguard.
+If there is no account, raise an error. This should never happen because the UI button that starts the process that calls `signGreeting` is disabled in that case. However, future programmers may remove that safeguard, so it's a good idea to check this condition here as well.
 
 ```js
         const domain = {
@@ -343,6 +342,6 @@ A user submits a greeting. Maybe it gets updated at the next block. Maybe it doe
 
 At this point, you should be able to create a gasless experience for your dapp users, at the cost of some centralization.
 
-However, this only works with smart contracts that support ERC-712. To transfer an ERC-20 token, for example, it is necessary to have the transaction signed by the owner rather than just a message. The solution is [account abstraction (ERC-4337)](https://docs.erc4337.io/index.html). I hope to write a future tutorial about it.
+However, this only works with smart contracts that support ERC-712. To transfer an ERC-20 token, for example, it is necessary to have the transaction signed by the owner rather than just a message. The solution is [ERC-4337](https://docs.erc4337.io/index.html). I hope to write a future tutorial about it.
 
 [See here for more of my work](https://cryptodocguy.pro/).
