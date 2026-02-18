@@ -1,7 +1,7 @@
 ---
 title: "Crie seu próprio agente de negociação de IA no Ethereum"
 description: "Neste tutorial, você aprenderá a criar um agente simples de negociação de IA. Este agente lê informações da cadeia de blocos, solicita uma recomendação a um LLM com base nessas informações, executa a negociação que o LLM recomenda e, em seguida, aguarda e repete."
-author: |
+author: Ori Pomerantz
   Ori Pomerantz
 tags: [ "IA", "negociação", "agente", "python" ]
 skill: intermediate
