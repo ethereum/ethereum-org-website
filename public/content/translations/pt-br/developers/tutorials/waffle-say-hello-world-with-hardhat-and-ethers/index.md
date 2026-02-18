@@ -1,20 +1,22 @@
 ---
-title: "Tutorial Waffle diz hello world com hardhat e ethers"
-description: Faça seu primeiro projeto Waffle com hardhat e ethers.js
+title: "Tutorial de 'olá mundo' do Waffle com Hardhat e Ethers"
+description: "Faça seu primeiro projeto Waffle com Hardhat e ethers.js"
 author: "MiZiet"
 tags:
-  - "waffle"
-  - "contratos inteligentes"
-  - "solidity"
-  - "testando"
-  - "hardhat"
-  - "ethers.js"
-skill: intermediate
+  [
+    "waffle",
+    "smart contracts",
+    "solidez",
+    "testando",
+    "hardhat",
+    "ethers.js"
+  ]
+skill: beginner
 lang: pt-br
 published: 2020-10-16
 ---
 
-Neste [tutorial do Waffle](https://ethereum-waffle.readthedocs.io), aprenderemos como criar um simples projeto de contrato inteligente "Hello world", usando [hardhat](https://hardhat.org/) e [ethers. s](https://docs.ethers.io/v5/). Em seguida, aprenderemos como adicionar uma nova funcionalidade ao nosso contrato inteligente e como testá-lo com Waffle.
+Neste tutorial do [Waffle](https://ethereum-waffle.readthedocs.io), aprenderemos a configurar um projeto simples de contrato inteligente "olá mundo", usando [Hardhat](https://hardhat.org/) e [ethers.js](https://docs.ethers.io/v5/). Em seguida, aprenderemos como adicionar uma nova funcionalidade ao nosso contrato inteligente e como testá-lo com o Waffle.
 
 Vamos começar criando um novo projeto:
 
@@ -40,7 +42,7 @@ ou
 npm install -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
-O próximo passo é criar um projeto hardhat de amostra, executando `npx hardhat`.
+O próximo passo é criar um projeto de amostra do Hardhat executando `npx hardhat`.
 
 ```bash
 888    888                      888 888               888
@@ -52,17 +54,17 @@ O próximo passo é criar um projeto hardhat de amostra, executando `npx hardhat
 888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
 888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
 
-👷 Welcome to Hardhat v2.0.3 👷‍
+👷 Bem-vindo ao Hardhat v2.0.3 👷‍
 
-? O que você deseja fazer? …
-★ Crie um projeto de exemplo
-Crie um hardhat.config.js vazio
-Saia
+? O que você quer fazer? …
+❯ Criar um projeto de amostra
+Criar um hardhat.config.js vazio
+Sair
 ```
 
-Selecione `Create a sample project`
+Selecione `Criar um projeto de amostra`
 
-A nossa estrutura de projetos deverá ficar assim:
+A estrutura do nosso projeto deve ser parecida com esta:
 
 ```
 MyWaffleProject
@@ -73,7 +75,7 @@ MyWaffleProject
 │   └── sample-script.js
 ├── test
 │   └── sample-test.js
-├── .gitattributs
+├── .gitattributes
 ├── .gitignore
 ├── hardhat.config.js
 └── package.json
@@ -81,7 +83,7 @@ MyWaffleProject
 
 ### Agora vamos falar sobre alguns desses arquivos: {#now-lets-talk}
 
-- Greeter.sol - nosso smart contract escrito em Solidity;
+- Greeter.sol - nosso contrato inteligente escrito em Solidity;
 
 ```solidity
 contract Greeter {
@@ -105,20 +107,20 @@ greeting = _greeting;
 
 Nosso contrato inteligente pode ser dividido em três partes:
 
-1. constructor - onde declaramos uma variável de tipo string chamada `greeting`,
-2. function greet - função que retornará  `greeting` quando chamada,
-3. function setGreeting - uma função que nos permite alterar o valor da função `greeting`.
+1. construtor - onde declaramos uma variável do tipo string chamada `greeting`,
+2. função greet - uma função que retornará a `greeting` quando chamada,
+3. função setGreeting - uma função que nos permite alterar o valor de `greeting`.
 
 - sample-test.js - nosso arquivo de testes
 
 ```js
 describe("Greeter", function () {
-  it("Should return the new greeting once it's changed", async function () {
+  it("Deve retornar a nova saudação assim que for alterada", async function () {
     const Greeter = await ethers.getContractFactory("Greeter")
-    const greeter = await Greeter.deploy("Hello, world!")
+    const greeter = await Greeter.deploy("Olá, mundo!")
 
     await greeter.deployed()
-    expect(await greeter.greet()).to.equal("Hello, world!")
+    expect(await greeter.greet()).to.equal("Olá, mundo!")
 
     await greeter.setGreeting("Hola, mundo!")
     expect(await greeter.greet()).to.equal("Hola, mundo!")
@@ -128,57 +130,57 @@ describe("Greeter", function () {
 
 ### O próximo passo consiste em compilar nosso contrato e executar testes: {#compiling-and-testing}
 
-Testes de Waffle usam Mocha (um framework de teste) com Chai (uma biblioteca de asserção). Tudo o que você precisa fazer é executar `npx hardhat test` e esperar que a seguinte mensagem apareça.
+Os testes do Waffle usam Mocha (um framework de teste) com Chai (uma biblioteca de asserção). Tudo o que você precisa fazer é executar `npx hardhat test` e esperar que a seguinte mensagem apareça.
 
 ```bash
-✓ Deve retornar a nova saudação uma vez alterada
+✓ Deve retornar a nova saudação assim que for alterada
 ```
 
-### Tudo parece ótimo até agora, vamos adicionar mais complexidade ao nosso projeto <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
+### Até agora tudo parece ótimo, vamos adicionar um pouco mais de complexidade ao nosso projeto <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
-Imagine uma situação quando alguém adiciona uma string vazia como saudação. Não seria uma saudação calorosa, né?  
-Vamos nos certicar que isso não aconteça:
+Imagine uma situação em que alguém adiciona uma string vazia como saudação. Não seria uma saudação calorosa, certo?  
+Vamos garantir que isso não aconteça:
 
-Queremos usar o `revert` do Solidity quando alguém passar uma string vazia. Uma coisa boa é que podemos facilmente testar esta funcionalidade com o chai matcher do Waffle `to.be.revertedWith()`.
+Queremos usar o `revert` do Solidity quando alguém passa uma string vazia. O bom é que podemos testar facilmente essa funcionalidade com o matcher `to.be.revertedWith()` do Chai do Waffle.
 
 ```js
-it("Should revert when passing an empty string", async () => {
+it("Deve reverter ao passar uma string vazia", async () => {
   const Greeter = await ethers.getContractFactory("Greeter")
-  const greeter = await Greeter.deploy("Hello, world!")
+  const greeter = await Greeter.deploy("Olá, mundo!")
 
   await greeter.deployed()
   await expect(greeter.setGreeting("")).to.be.revertedWith(
-    "Greeting should not be empty"
+    "A saudação não deve estar vazia"
   )
 })
 ```
 
-Parece que o nosso novo teste não passou:
+Parece que nosso novo teste não passou:
 
 ```bash
-Implantando um Greeter com saudação: Olá, mundo!
-Mude de saudação de 'Hello, world!' para 'Hola, mundo!'
-    ✓ Deve devolver a nova saudação uma vez que ela tenha sido alterada (1514ms)
-Implantando um Greeter com saudação: Olá, mundo!
-Mudar saudação de 'Olá, mundo!' para ''
-    1) Deve reverter quando passar uma seqüência vazia
+Deploying a Greeter with greeting: Hello, world!
+Changing greeting from 'Hello, world!' to 'Hola, mundo!'
+    ✓ Deve retornar a nova saudação assim que for alterada (1514ms)
+Deploying a Greeter with greeting: Hello, world!
+Changing greeting from 'Hello, world!' to ''
+    1) Deve reverter ao passar uma string vazia
 
 
-  1 passagem (2s)
-  1 falhando
+  1 aprovado (2s)
+  1 reprovado
 ```
 
-Vamos implementar esta funcionalidade em nosso contrato inteligente:
+Vamos implementar essa funcionalidade em nosso contrato inteligente:
 
 ```solidity
-require(bytes(_greeting).length > 0, "Greeting message is empty");
+require(bytes(_greeting).length > 0, "A saudação não deve estar vazia");
 ```
 
-Agora, nossa função setGreeting se parece com isso:
+Agora, nossa função setGreeting se parece com isto:
 
 ```solidity
 function setGreeting(string memory _greeting) public {
-require(bytes(_greeting).length > 0, "Greeting should not be empty");
+require(bytes(_greeting).length > 0, "A saudação não deve estar vazia");
 console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
 greeting = _greeting;
 }
@@ -187,16 +189,16 @@ greeting = _greeting;
 Vamos executar os testes novamente:
 
 ```bash
-✓ Deve retornar a nova saudação quando ela for alterada (1467ms)
-✓ Deve reverter quando passar uma string vazia (276ms)
+✓ Deve retornar a nova saudação assim que for alterada (1467ms)
+✓ Deve reverter ao passar uma string vazia (276ms)
 
-2 passagem (2s)
+2 aprovados (2s)
 ```
 
-Parabéns! Você terminou :)
+Parabéns! Você conseguiu :)
 
 ### Conclusão {#conclusion}
 
-Fizemos um projeto simples com Waffle, Hardhat e ethers.js. Aprendemos como criar um projeto, adicionar um teste e implementar novas funcionalidades.
+Fizemos um projeto simples com Waffle, Hardhat e ethers.js. Aprendemos como configurar um projeto, adicionar um teste e implementar uma nova funcionalidade.
 
-Para mais combinações excelentes de chai para testar seus smart contracts, confira a [documentação oficial da Waffle](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).
+Para mais excelentes matchers do Chai para testar seus contratos inteligentes, confira a [documentação oficial do Waffle](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).

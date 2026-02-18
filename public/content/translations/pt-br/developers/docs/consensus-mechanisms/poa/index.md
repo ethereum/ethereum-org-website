@@ -1,6 +1,6 @@
 ---
 title: Prova de autoridade (PoA)
-description: Uma explicação do protocolo de consenso de prova de autoridade e seu papel no ecossistema.
+description: "Uma explicação do protocolo de consenso de prova de autoridade e seu papel no ecossistema."
 lang: pt-br
 ---
 
@@ -77,3 +77,4 @@ Assista a uma explicação visual da prova de autoridade:
 
 - [Prova de trabalho](/developers/docs/consensus-mechanisms/pow/)
 - [Prova de participação](/developers/docs/consensus-mechanisms/pos/)
+

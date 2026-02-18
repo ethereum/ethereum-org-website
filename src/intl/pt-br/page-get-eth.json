@@ -1,7 +1,7 @@
 {
   "page-get-eth-article-keeping-crypto-safe": "As chaves para manter suas criptomoedas seguras",
-  "page-get-eth-article-protecting-yourself": "Protegendo a si mesmo e seus fundos",
-  "page-get-eth-article-store-digital-assets": "Como armazenar ativos digitais no Ethereum",
+  "page-get-eth-article-protecting-yourself": "Protegendo a si mesmo e seu fundo",
+  "page-get-eth-article-store-digital-assets": "Como armazenar ativo digital no Ethereum",
   "page-get-eth-article-protecting-yourself-desc": "MyCrypto",
   "page-get-eth-article-keeping-crypto-safe-desc": "Coinbase",
   "page-get-eth-article-store-digital-assets-desc": "ConsenSys",
@@ -74,6 +74,6 @@
   "page-get-eth-your-address-desc": "Ao baixar uma carteira, ela criará um endereço público de ETH para você, como no exemplo abaixo:",
   "page-get-eth-your-address-desc-3": "Pense nele como seu endereço de e-mail, mas em vez de mensagens, ele pode receber ETH. Se você quiser transferir ETH de uma corretora para sua carteira, use seu endereço como destino. Sempre confira tudo novamente antes de enviar!",
   "page-get-eth-your-address-wallet-link": "Confira as carteiras",
-  "listing-policy-raise-issue-link": "Levante um problema",
+  "listing-policy-raise-issue-link": "Fazer uma consulta",
   "page-find-wallet-last-updated": "Última atualização"
 }

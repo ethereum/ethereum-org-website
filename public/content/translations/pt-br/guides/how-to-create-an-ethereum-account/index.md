@@ -6,14 +6,13 @@ lang: pt-br
 
 # Como criar uma conta Ethereum
 
-**Qualquer pessoa pode criar uma conta Ethereum de graça.** Você só precisa instalar um aplicativo de carteira de criptomoedas. As carteiras criam e gerenciam sua conta Ethereum. Elas permitem enviar transações, verificar seus saldos e conectá-lo a outros aplicativos desenvolvidos em Ethereum.
+\*\*Qualquer pessoa pode criar uma conta Ethereum de graça. Você só precisa instalar um aplicativo de carteira de criptomoedas. As carteiras criam e gerenciam sua conta Ethereum. Elas permitem enviar transações, verificar seus saldos e conectá-lo a outros aplicativos desenvolvidos em Ethereum.
 
-Com uma carteira, você também pode fazer login em qualquer exchange de tokens, jogos e mercados [NFT](/glossary/#nft) de forma imediata. Não há necessidade de inscrição individual. Uma única conta é compartilhada por todos os aplicativos criados com base em Ethereum.
+Com uma carteira, você também pode fazer login instantaneamente em qualquer exchange de tokens, jogos e mercados de [NFT](/glossary/#nft). Não há necessidade de inscrição individual. Uma única conta é compartilhada por todos os aplicativos criados com base em Ethereum.
 
 ## Etapa 1: Escolha uma carteira
 
 Uma carteira é um aplicativo que ajuda você controlar a sua conta Ethereum. Existem dezenas de carteiras diferentes para escolher: móveis, de desktop ou até mesmo extensões de navegador.
-
 
 <ButtonLink href="/wallets/find-wallet/">
   Lista de carteiras
@@ -21,7 +20,7 @@ Uma carteira é um aplicativo que ajuda você controlar a sua conta Ethereum. Ex
 
 Se for iniciante, poderá selecionar o filtro "New to crypto" (Novo em cripto) na página "find a wallet" (encontrar uma carteira) para identificar carteiras que incluam todos os recursos necessários e adequados para iniciantes.
 
-![Seleção de filtros na página "encontrar uma carteira"](./wallet-box.png)
+![Seleção de filtros na página 'encontrar uma carteira'](./wallet-box.png)
 
 Também existem outros filtros de perfil para atender às suas necessidades. Esses são exemplos de carteiras utilizadas normalmente. Você deve fazer a sua própria pesquisa antes de confiar em qualquer software.
 
@@ -37,21 +36,21 @@ Ao abrir uma nova carteira pela primeira vez, será necessário escolher entre c
 
 Alguns aplicativos vão te pedir para salvar uma "chave de recuperação" secreta (algumas vezes chamada de "frase semente" ou de "mnemônico"). Manter essa frase a salvo é extremamente importante! Ela é usada para gerar sua conta Ethereum e pode ser usada para fazer transações.
 
-**Qualquer pessoa que conheça essa frase pode tomar o controle de todos os seus fundos.** Nunca compartilhe ela com ninguém. Essa frase deve conter entre 12 e 24 palavras geradas aleatoriamente (a ordem das palavras importa).
+**Qualquer pessoa que saiba a frase pode assumir o controle de todos os fundos.** Nunca a compartilhe com ninguém. Essa frase deve conter entre 12 e 24 palavras geradas aleatoriamente (a ordem das palavras importa).
 
 <div>
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Carteira instalada?</b><br/> Aprenda como usá-la.</div>
+  <div><b>Carteira instalada?</b><br/>Aprenda a usá-la.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Como usar uma carteira
   </ButtonLink>
- </AlertContent>
+</AlertContent>
 </Alert>
 </div>
 
-Tem interesse em outros guias? Verifique os nossos: [Guias passo a passo](/guides/)
+Tem interesse em outros guias? Confira nossos: [Guias passo a passo](/guides/)
 
 ## Perguntas frequentes
 
@@ -61,11 +60,11 @@ Não. A carteira é uma ferramenta de gerenciamento que ajuda você a gerenciar 
 
 ### Posso enviar bitcoins para uma conta/endereço Ethereum ou enviar ethers para uma conta/endereço Bitcoin?
 
-Não, não é possível. O Bitcoin e o ether existem em duas redes separadas (ou seja, blockchains diferentes), cada uma com seus próprios formatos de contabilidade e endereço. Houve várias tentativas de unir as duas redes diferentes, das quais a mais ativa atualmente é a [Wrapped Bitcoin ou WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Isso não é uma recomendação, pois o WBTC é uma solução de custódia (ou seja, um único grupo de pessoas controla determinadas funções críticas) e é fornecido aqui apenas a título informativo.
+Não, não é possível. O Bitcoin e o ether existem em duas redes separadas (ou seja, blockchains diferentes), cada uma com seus próprios formatos de contabilidade e de endereço. Houve várias tentativas de criar uma ponte entre as duas redes diferentes, das quais a mais ativa atualmente é o [Wrapped Bitcoin ou WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Isso não é uma recomendação, pois o WBTC é uma solução de custódia (ou seja, um único grupo de pessoas controla determinadas funções críticas) e é fornecido aqui apenas a título informativo.
 
 ### Se eu tenho um endereço de ETH, o endereço é o mesmo para outras blockchains?
 
-Você pode usar o mesmo [endereço](/glossary/#address) em todas as blockchains que usam software subjacente semelhante ao Ethereum (conhecido como "compatível com EVM"). Esta [lista](https://chainlist.org/) mostra quais blockchains você pode usar com o mesmo endereço. Algumas blockchains, como o Bitcoin, implementam um conjunto completamente separado de regras de rede e você precisará de um endereço diferente com um formato diferente. Se você tem uma carteira de contrato inteligente então deve verificar o site do produto para ver mais informações sobre quais blockchains são permitidas porque geralmente elas têm uma abrangência limitada, porém mais segura.
+Você pode usar o mesmo [endereço](/glossary/#address) em todas as blockchains que usam software subjacente semelhante ao Ethereum (conhecidas como 'compatíveis com EVM'). Esta [lista](https://chainlist.org/) mostra quais blockchains você pode usar com o mesmo endereço. Algumas blockchains, como o Bitcoin, implementam um conjunto completamente separado de regras de rede e você precisará de um endereço diferente com um formato diferente. Se você tem uma carteira de contrato inteligente então deve verificar o site do produto para ver mais informações sobre quais blockchains são permitidas porque geralmente elas têm uma abrangência limitada, porém mais segura.
 
 ### Ter a minha própria carteira é mais seguro do que manter os meus fundos em uma corretora?
 
