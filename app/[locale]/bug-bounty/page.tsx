@@ -178,7 +178,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     },
     {
       title: "Nimbus",
-      link: "https://our.status.im/tag/nimbus/",
+      link: "https://nimbus.team/",
       image: nimbus,
     },
     {
