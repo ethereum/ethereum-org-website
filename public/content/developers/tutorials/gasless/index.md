@@ -14,7 +14,9 @@ If we want Ethereum to serve [a billion more people](https://blog.ethereum.org/c
 
 If you have a dapp that makes money from users, it might make sense to let users submit transactions through your server and pay the transaction fees yourself. Because users still sign an authorization message in their wallets, they retain Ethereum's guarantees of integrity. Availability depends on the server that relays transactions, so it is more limited. However, you can set things up so users can also access the smart contract directly (if they get ETH), and let others set up their own servers if they want to sponsor transactions.
 
-The technique in this tutorial only works when you control the smart contract. There are [other techniques](https://eips.ethereum.org/EIPS/eip-4337) that let you sponsor transactions to other smart contracts, which I hope to cover in a future tutorial.
+The technique in this tutorial only works when you control the smart contract. There are other techniques, including [account abstraction](https://eips.ethereum.org/EIPS/eip-4337) that let you sponsor transactions to other smart contracts, which I hope to cover in a future tutorial.
+
+Note: This is *not* production-level code. It is vulnerable to significant attacks and lacks major features. Learn more in the [vulnerabilities section of this guide](#vulnerabilities).
 
 ## The sample application {#sample-app}
 
@@ -342,6 +344,6 @@ A user submits a greeting. Maybe it gets updated at the next block. Maybe it doe
 
 At this point, you should be able to create a gasless experience for your dapp users, at the cost of some centralization.
 
-However, this only works with smart contracts that support ERC-712. To transfer an ERC-20 token, for example, it is necessary to have the transaction signed by the owner rather than just a message. The solution is [ERC-4337](https://docs.erc4337.io/index.html). I hope to write a future tutorial about it.
+However, this only works with smart contracts that support ERC-712. To transfer an ERC-20 token, for example, it is necessary to have the transaction signed by the owner rather than just a message. The solution is [account abstraction (ERC-4337)](https://docs.erc4337.io/index.html). I hope to write a future tutorial about it.
 
 [See here for more of my work](https://cryptodocguy.pro/).
