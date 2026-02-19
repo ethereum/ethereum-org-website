@@ -13,6 +13,8 @@ import Translation from "@/components/Translation"
 import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 import { Button } from "./ui/buttons/Button"
 import { BaseLink } from "./ui/Link"
 import { List, ListItem } from "./ui/list"
@@ -185,7 +187,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("nav-docs-design-label"),
         },
         {
-          href: "https://institutions.ethereum.org/",
+          href: ENTERPRISE_ETHEREUM_URL,
           text: t("enterprise-mainnet"),
         },
         {
