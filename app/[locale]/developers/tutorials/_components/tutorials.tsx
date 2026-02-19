@@ -224,7 +224,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
   }, [filteredTutorialsByLang, selectedTags, selectedSkill, searchQuery])
 
   const handleTagSelect = (tagName: string) => {
-    const tempSelectedTags = selectedTags
+    const tempSelectedTags = [...selectedTags]
 
     const index = tempSelectedTags.indexOf(tagName)
     if (index > -1) {
@@ -458,7 +458,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
                 <Emoji text=":writing_hand:" className="me-2 text-sm" />
                 {tutorial.author}
                 {tutorial.published ? (
-                  <> •{published(locale!, tutorial.published!)}</>
+                  <> •{published(locale, tutorial.published!)}</>
                 ) : null}
                 {tutorial.timeToRead && (
                   <>
