@@ -20,6 +20,7 @@ import { getTutorialsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import TutorialSubmitModal from "./_components/modal"
 import TutorialsPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/doge-computer.png"
@@ -51,15 +52,6 @@ const TutorialsList = dynamic(() => import("./_components/tutorials"), {
       {Array.from({ length: 5 }).map((_, index) => (
         <SkeletonCardContent key={"card" + index} className="p-8" />
       ))}
-    </div>
-  ),
-})
-
-const TutorialSubmitModal = dynamic(() => import("./_components/modal"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full max-w-40 rounded border p-3">
-      <Skeleton className="h-5 w-full" />
     </div>
   ),
 })
@@ -98,7 +90,11 @@ const Page = async ({ params }: { params: PageParams }) => {
     heroImg,
     title: t("page-tutorial-title"),
     description: t("page-tutorial-subtitle"),
-    buttons: [<TutorialSubmitModal key="submit" dir={dir} />],
+    buttons: [
+      <TutorialSubmitModal key="submit" dir={dir}>
+        {t("page-tutorial-submit-btn")}
+      </TutorialSubmitModal>,
+    ],
   }
 
   return (
