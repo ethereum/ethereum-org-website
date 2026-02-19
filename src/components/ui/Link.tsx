@@ -101,10 +101,13 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   // Create click handler that tracks events and calls any passed onClick
   const createClickHandler =
-    (defaultEventOptions: Omit<MatomoEventOptions, "eventValue">) =>
-    (e: React.MouseEvent<HTMLAnchorElement>) => {
+    (eventName: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
       trackCustomEvent(
-        customEventOptions ?? { ...defaultEventOptions, eventValue: href }
+        customEventOptions ?? {
+          eventCategory: "Link",
+          eventAction: "Clicked",
+          eventName: `${eventName} - ${href}`,
+        }
       )
       onClick?.(e)
     }
@@ -117,11 +120,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         target="_blank"
         rel="noopener noreferrer"
         {...rest}
-        onClick={createClickHandler({
-          eventCategory: "Link",
-          eventAction: "Clicked",
-          eventName: "Clicked on external link",
-        })}
+        onClick={createClickHandler("Clicked on external link")}
         className={cn("relative", className)}
       >
         {isMailto ? (
@@ -148,11 +147,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         target="_blank"
         rel="noopener noreferrer"
         {...commonProps}
-        onClick={createClickHandler({
-          eventCategory: "Link",
-          eventAction: "Clicked",
-          eventName: "Clicked on internal PDF",
-        })}
+        onClick={createClickHandler("Clicked on internal PDF")}
       >
         {children}
       </NextLink>
@@ -169,11 +164,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {...commonProps}
         onClick={(e) => {
           e.stopPropagation()
-          createClickHandler({
-            eventCategory: "Link",
-            eventAction: "Clicked",
-            eventName: "Clicked on hash link",
-          })(e)
+          createClickHandler("Clicked on hash link")(e)
         }}
       >
         {children}
@@ -184,11 +175,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   return (
     <I18nLink
       {...commonProps}
-      onClick={createClickHandler({
-        eventCategory: "Link",
-        eventAction: "Clicked",
-        eventName: "Clicked on internal link",
-      })}
+      onClick={createClickHandler("Clicked on internal link")}
     >
       {children}
     </I18nLink>
