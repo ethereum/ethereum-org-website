@@ -25,6 +25,7 @@ import { Flex } from "@/components/ui/flex"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import { Tag } from "@/components/ui/tag"
+import VideoWatch from "@/components/Videos/VideoWatch"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
@@ -184,6 +185,7 @@ export const reactComponents = {
   Tag,
   Title,
   WhatAreAppsStories,
+  VideoWatch,
   YouTube,
 }
 

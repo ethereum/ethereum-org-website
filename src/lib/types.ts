@@ -598,6 +598,25 @@ export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
+/**
+ * Video data structure
+ */
+export type Video = {
+  slug: string
+  youtubeId: string
+  title: string
+  description: string
+  uploadDate: string
+  duration: string
+  educationLevel: "beginner" | "intermediate" | "advanced"
+  topic: string
+  format: "presentation" | "explainer" | "interview" | "tutorial" | "panel"
+  language: "en"
+  author: string
+  thumbnailUrl?: string
+  transcriptPath: string
+}
+
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
   activeAddresses: Record<string, number | undefined>
