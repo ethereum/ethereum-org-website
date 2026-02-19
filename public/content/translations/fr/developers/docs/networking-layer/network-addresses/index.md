@@ -1,6 +1,6 @@
 ---
-title: Adresses réseau
-description: Une introduction aux adresses réseau.
+title: "Adresses réseau"
+description: "Une introduction aux adresses réseau."
 lang: fr
 sidebarDepth: 2
 ---
@@ -13,7 +13,7 @@ Une certaine compréhension de la [couche réseau](/developers/docs/networking-l
 
 ## Multiaddr {#multiaddr}
 
-Le format originel d'adresse des nœuds Ethereum était le 'multiaddr' (abréviation de 'multi-addresses' en anglais). Multiaddr est un format universel conçu pour les réseaux de pair-à-pair. Les adresses sont représentées par des paires clé-valeur avec des clés et des valeurs séparées par un slash. Par exemple, la multiaddr pour un nœud avec une adresse IPv4 `192.168.22.27` à l'écoute du port TCP `33000` ressemble à :
+Le format originel d'adresse des nœuds Ethereum était le 'multiaddr' (abréviation de 'multi-addresses' en anglais). Multiaddr est un format universel conçu pour les réseaux de pair-à-pair. Les adresses sont représentées par des paires clé-valeur avec des clés et des valeurs séparées par un slash. Par exemple, la multiaddr pour un nœud avec l'adresse IPv4 `192.168.22.27` écoutant sur le port TCP `33000` ressemble à :
 
 `/ip4/192.168.22.27/tcp/33000`
 
@@ -25,15 +25,15 @@ Pour un nœud Ethereum, la multiaddr contient l'identifiant du nœud (un hachage
 
 Un enode est un moyen d'identifier un nœud Ethereum en utilisant un format d'adresse URL. L'identifiant hexadécimal de nœud est encodé dans la partie nom d'utilisateur de l'URL, séparée de l'hôte à l'ide du signe @. Le nom d'hôte ne peut être donné qu'en tant qu'adresse IP, les noms DNS ne sont pas autorisés. Le port dans la section nom d'hôte est le port d'écoute TCP. Si les ports TCP et UDP (découverte) diffèrent, le port UDP est spécifié comme paramètre de requête "discport".
 
-Dans l'exemple suivant, l'URL du nœud décrit un nœud avec une adresse IP `10.3.58.`, port TCP `30303` et port de découverte UDP `30301`.
+Dans l'exemple suivant, l'URL du nœud décrit un nœud avec l'adresse IP `10.3.58.6`, le port TCP `30303` et le port de découverte UDP `30301`.
 
 `enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301`
 
-## Registres de nœuds Ethereum (ENRs en anglais) {#enr}
+## Enregistrements de nœuds Ethereum (ENR) {#enr}
 
-Les registres de Nœuds Ethereum (ENRs en anglais) sont un format standardisé pour les adresses réseau sur Ethereum. Ils remplacent les 'multiaddr' et les 'enodes'. Ceux-ci sont particulièrement utiles car ils permettent un échange plus large d'informations entre les nœuds. L'ENR contient une signature, un numéro de séquence et des champs détaillant le schéma d'identité utilisé pour générer et valider les signatures. L'ENR peut également être alimenté de données arbitraires organisées sous la forme de paires valeur-clé. Ces paires valeur-clé contiennent l'adresse IP du nœud ainsi que les informations sur les sous-protocoles que le nœud peut utiliser. Les clients de consensus utilisent une [structure ENR spécifique](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) pour identifier les nœuds d'amorçage et incluent également un champ `eth2` contenant des informations sur la fourche Ethereum actuelle et le sous-réseau de l'attestation de commutation (cela permet de connecter le nœud à un ensemble particulier de pairs dont les attestations sont regroupées).
+Les registres de Nœuds Ethereum (ENRs en anglais) sont un format standardisé pour les adresses réseau sur Ethereum. Ils remplacent les 'multiaddr' et les 'enodes'. Ceux-ci sont particulièrement utiles car ils permettent un échange plus large d'informations entre les nœuds. L'ENR contient une signature, un numéro de séquence et des champs détaillant le schéma d'identité utilisé pour générer et valider les signatures. L'ENR peut également être alimenté de données arbitraires organisées sous la forme de paires valeur-clé. Ces paires valeur-clé contiennent l'adresse IP du nœud ainsi que les informations sur les sous-protocoles que le nœud peut utiliser. Les clients de consensus utilisent une [structure ENR spécifique](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) pour identifier les nœuds de démarrage et incluent également un champ `eth2` contenant des informations sur la fourche Ethereum actuelle et le sous-réseau de potins d'attestation (ceci connecte le nœud à un ensemble particulier de pairs dont les attestations sont agrégées).
 
-## Complément d'information {#further-reading}
+## En savoir plus {#further-reading}
 
-- [EIP-778 : enregistrements de nœuds Ethereum (ENR)](https://eips.ethereum.org/EIPS/eip-778)
-- [LibP2P : Multiaddr-Enode-ENE ?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
+- [EIP-778 : Enregistrements de nœuds Ethereum (ENR)](https://eips.ethereum.org/EIPS/eip-778)
+- [LibP2P: Multiaddr-Enode-ENR ?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

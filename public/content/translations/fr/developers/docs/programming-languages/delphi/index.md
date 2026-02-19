@@ -1,6 +1,6 @@
 ---
-title: Ethereum pour les développeurs Delphi
-description: Apprendre à développer pour Ethereum avec le langage de programmation Delphi
+title: "Ethereum pour les développeurs Delphi"
+description: "Apprendre à développer pour Ethereum avec le langage de programmation Delphi"
 lang: fr
 incomplete: true
 ---
@@ -11,7 +11,7 @@ Apprendre à développer pour Ethereum avec le langage de programmation Delphi
 
 </FeaturedText>
 
-Utilisez Ethereum pour créer des applications décentralisées (ou « dApps ») qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces dApps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
+Utilisez Ethereum pour créer des applications décentralisées (ou « dApps ») qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces dApps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
 
 Créez des applications décentralisées sur Ethereum et interagissez avec des contrats intelligents en utilisant le langage de programmation Delphi !
 
@@ -19,38 +19,38 @@ Créez des applications décentralisées sur Ethereum et interagissez avec des c
 
 **Commencer à intégrer Delphi à Ethereum**
 
-Besoin d’une approche plus élémentaire ? Jetez un oeil à [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
+Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
 
-- [Explication de la blockchain](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Comprendre les contrats intelligents](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [Écrire votre premier contrat intelligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [Apprendre à compiler et à déployer avec Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Blockchain expliquée](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Comprendre les contrats intelligents (https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [Écrivez votre premier contrat intelligent (https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [Apprenez comment compiler et déployer Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Références et liens pour les débutants {#beginner-references-and-links}
+## Références et liens pour débutants {#beginner-references-and-links}
 
 **Présentation de la bibliothèque Delphereum**
 
 - [Qu'est-ce que Delphereum ?](https://github.com/svanas/delphereum/blob/master/README.md)
-- [Connecter Delphi à une blockchain locale (en mémoire)](https://medium.com/@svanas/connecting-delphi-to-a-local-in-memory-blockchain-9a1512d6c5b0)
-- [Connecter Delphi au réseau principal Ethereum](https://medium.com/@svanas/connecting-delphi-to-the-ethereum-main-net-5faf1feffd83)
-- [Connecter Delphi à des contrats intelligents](https://medium.com/@svanas/connecting-delphi-to-smart-contracts-3146b12803a1)
+- [Connexion de Delphi à une blockchain locale (en mémoire)](https://medium.com/@svanas/connecting-delphi-to-a-local-in-memory-blockchain-9a1512d6c5b0)
+- [Connexion de Delphi au réseau principal d'Ethereum](https://medium.com/@svanas/connecting-delphi-to-the-ethereum-main-net-5faf1feffd83)
+- [Connexion de Delphi aux contrats intelligents](https://medium.com/@svanas/connecting-delphi-to-smart-contracts-3146b12803a1)
 
 **Vous voulez éviter toute configuration pour l'instant et accéder directement aux échantillons ?**
 
-- [Un contrat intelligent de 3 minutes et Delphi : 1ère partie](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
-- [Un contrat intelligent de 3 minutes et Delphi : 2ème partie](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
+- [Un contrat intelligent en 3 minutes avec Delphi - Partie 1](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
+- [Un contrat intelligent en 3 minutes avec Delphi - Partie 2](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
 ## Articles intermédiaires {#intermediate-articles}
 
-- [Génération d'une signature de message signée par Ethereum dans Delphi](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
+- [Génération d'une signature de message signé par Ethereum dans Delphi](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Transfert d'éther avec Delphi](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [Transfert de jetons ERC-20 avec Delphi](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
 ## Modèles d'utilisation avancés {#advanced-use-patterns}
 
-- [Delphi et Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
+- [Delphi et l'Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum et Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 - [Delphi et la forêt sombre d'Ethereum](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
-- [Échanger un jeton contre un autre avec Delphi](https://svanas.medium.com/swap-one-token-for-another-in-delphi-bcb999c47f7)
+- [Échanger un jeton contre un autre dans Delphi](https://svanas.medium.com/swap-one-token-for-another-in-delphi-bcb999c47f7)
 
-Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers.](/developers/).
+Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers](/developers/).

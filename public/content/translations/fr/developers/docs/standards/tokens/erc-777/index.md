@@ -1,6 +1,6 @@
 ---
 title: Norme de jeton ERC-777
-description:
+description: "Découvrez ERC-777, une norme de jeton fongible améliorée avec des crochets, bien qu'ERC-20 soit recommandé pour des raisons de sécurité."
 lang: fr
 ---
 
@@ -42,4 +42,4 @@ Les contrats ERC-777 peuvent interagir comme s'il s'agissait de contrats ERC-20.
 
 ## En savoir plus {#further-reading}
 
-[EIP-777 : Jeton standard] (https://eips.ethereum.org/EIPS/eip-777)
+[EIP-777 : Jeton standard](https://eips.ethereum.org/EIPS/eip-777)

@@ -1,16 +1,16 @@
 ---
 title: Assistance Ethereum
-description: Obtenez de l'aide sur l'écosystème Ethereum.
+description: "Obtenez de l'aide sur l'écosystème Ethereum."
 lang: fr
 ---
 
 # Assistance Ethereum {#support}
 
-## Asistance officielle Ethereum {#official-support}
+## Assistance Ethereum officielle {#official-support}
 
 Vous recherchez l'assistance officielle Ethereum ? La première chose que vous devez savoir est le fait qu'Ethereum est décentralisé. Cela signifie qu'aucune organisation, entité ou personne n'est propriétaire d'Ethereum et, de ce fait, il n'existe aucune assistance officielle.
 
-Comprendre la nature décentralisée d’Ethereum est essentiel car **toute personne prétendant être le support officiel d’Ethereum essaie probablement de vous arnaquer !** La meilleure protection contre les escrocs est de vous informer et de prendre la sécurité au sérieux.
+Comprendre la nature décentralisée d’Ethereum est essentiel car **toute personne prétendant être une assistance officielle pour Ethereum essaie probablement de vous arnaquer !** La meilleure protection contre les escrocs est de vous informer et de prendre la sécurité au sérieux.
 
 <DocLink href="/security/">
   Sécurité d'Ethereum et prévention des arnaques
@@ -20,11 +20,11 @@ Comprendre la nature décentralisée d’Ethereum est essentiel car **toute pers
   Apprendre les fondamentaux d'Ethereum
 </DocLink>
 
-Malgré le manque d'assistance officielle, de nombreux groupes, communautés et projets à travers l'écosystème Ethereum sont heureux de vous aider. Vous pouvez trouver beaucoup d'informations et de ressources utiles sur cette page. Vous avez d'autres questions ? Rejoignez le [Discord ethereum.org](https://discord.gg/ethereum-org) et nous essaierons de vous aider.
+Malgré le manque d'assistance officielle, de nombreux groupes, communautés et projets à travers l'écosystème Ethereum sont heureux de vous aider. Vous pouvez trouver beaucoup d'informations et de ressources utiles sur cette page. Vous avez d'autres questions ? Rejoignez le [Discord ethereum.org](https://discord.gg/ethereum-org), et nous essaierons de vous aider.
 
-## Questions fréquemment posées {#faq}
+## Foire aux questions {#faq}
 
-### J'ai transféré mes ETH vers le mauvais portefeuille {#wrong-wallet}
+### J'ai envoyé des ETH au mauvais portefeuille {#wrong-wallet}
 
 Les transactions effectuées sur Ethereum sont irréversibles. Malheureusement, si vous avez envoyé des ETH au mauvais portefeuille, il n'y a aucun moyen de récupérer ces fonds. Aucune organisation centrale, entité ou personne n'est propriétaire d'Ethereum, ce qui signifie que personne ne peut annuler les transactions. Pour cette raison, il est primordial de vérifier deux fois vos transactions avant de les effectuer.
 
@@ -38,29 +38,29 @@ Les concours Ethereum sont des arnaques conçues pour récupérer vos ETH. Ne vo
 
 Les transactions sur Ethereum peuvent parfois se bloquer si vous avez soumis des frais de transactions inférieurs à ceux requis en raison de la demande du réseau. De nombreux portefeuilles offrent la possibilité de renvoyer la même transaction avec des frais de transaction plus élevés, afin de permettre à celle-ci d'être traitée. Vous pouvez aussi annuler une transaction en cours en envoyant une transaction vers votre propre adresse en utilisant le même nonce que la transaction en cours.
 
-[Comment accélérer ou annuler une transaction en cours via MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
+[Comment accélérer ou annuler une transaction en attente sur MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
 
-[Comment annuler des transactions Ethereum en cours](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+[Comment annuler les transactions Ethereum en attente](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
 ### Comment miner de l'Ethereum ? {#mining-ethereum}
 
-Le minage d'Ethereum n'est plus possible. La possibilité de miner a disparu lors du passage d'Ethereum de la [preuve de travail](/glossary/#pow) à la [preuve d'enjeu](/glossary/#pos). Désormais, en place des mineurs, Ethereum dispose de validateurs. Tout le monde peut [mettre en jeu](/glossary/#staking) de l'ETH et recevoir des récompenses de mise en jeu en exécutant un programme de validation pour sécuriser le réseau.
+Le minage d'Ethereum n'est plus possible. Le minage a été désactivé lorsqu'Ethereum est passé de la [preuve de travail](/glossary/#pow) à la [preuve d'enjeu](/glossary/#pos). Désormais, en place des mineurs, Ethereum dispose de validateurs. Tout le monde peut [mettre en jeu](/glossary/#staking) des ETH et recevoir des récompenses de mise en jeu en exécutant un logiciel de validateur pour sécuriser le réseau.
 
 ### Comment devenir un validateur / faire fonctionner un validateur ? {#how-to-stake}
 
-Pour devenir un validateur, vous devez miser 32 ETH dans le contrat de dépôt Ethereum et mettre en place un nœud de validateur. Davantage d'informations sont disponibles sur nos [pages de staking](/staking) et sur [la plateforme de lancement de staking](https://launchpad.ethereum.org/).
+Pour devenir un validateur, vous devez miser 32 ETH dans le contrat de dépôt Ethereum et mettre en place un nœud de validateur. Plus d'informations sont disponibles sur nos [pages de staking](/staking) et sur [le launchpad de staking](https://launchpad.ethereum.org/).
 
-## Créer des applications décentralisées {#building-support}
+## Créer des dapps {#building-support}
 
 Le développement d'une application décentralisée peut être difficile. Voici quelques espaces axés sur leur création, avec des développeurs Ethereum chevronnés qui seront heureux de vous faire part de leur expérience.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
-- [StackExchange Ethereum](https://ethereum.stackexchange.com/)
+- [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 
-Vous pouvez aussi consulter notre documentation ainsi que des guides de développement dans notre section [Ressources pour les développeurs Ethereum](/developers/).
+Vous pouvez également trouver de la documentation et des guides de développement dans notre section [ressources pour les développeurs Ethereum](/developers/).
 
 ### Outils {#dapp-tooling}
 
@@ -101,4 +101,4 @@ La plupart des équipes qui créent des clients Ethereum disposent aussi d'espac
 - [Lodestar](https://discord.gg/aMxzVcr)
 - [Grandine](https://discord.gg/H9XCdUSyZd)
 
-Vous pouvez aussi [apprendre comment exécuter un nœud ici](/developers/docs/nodes-and-clients/run-a-node/).
+Vous pouvez également [apprendre à exécuter un nœud ici](/developers/docs/nodes-and-clients/run-a-node/).
