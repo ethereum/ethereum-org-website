@@ -21,7 +21,7 @@ Cela réduit considérablement le coût des rollups, limite la croissance de la 
 ## Comment ETH peut-il être converti après la fourche majeure ? {#scam-alert}
 
 - **Aucune action requise pour vos ETH** : Suite à la mise à niveau Dencun d'Ethereum, il n'est pas nécessaire de convertir ou de mettre à niveau vos ETH. Vos soldes de compte resteront inchangés, et les ETH que vous détenez actuellement resteront accessibles sous leur forme actuelle après la fourche majeure.
-- **Attention aux arnaques !** <Emoji text="⚠️" />**quiconque vous demandant de "mettre àniveau" vos ETH essaie de vous arnaquer.** Vous n'avez rien à faire en relation avec cette mise à niveau. Vos actifs resteront totalement inchangés. N'oubliez pas, rester informé est la meilleure défense contre les arnaques.
+- **Attention aux arnaques !** <Emoji text="⚠️" />**quiconque vous demandant de "mettre à niveau" vos ETH essaie de vous arnaquer.** Vous n'avez rien à faire en relation avec cette mise à niveau. Vos actifs resteront totalement inchangés. N'oubliez pas, rester informé est la meilleure défense contre les arnaques.
 
 [En savoir plus sur comment reconnaitre et éviter les arnaques](/security/)
 
