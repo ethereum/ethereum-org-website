@@ -5,6 +5,7 @@ import type {
   CommunityPick,
   EventItem,
   GHIssue,
+  GitHubContributorsData,
   GithubRepoData,
   GrowThePieData,
   GrowThePieMasterData,
@@ -45,3 +46,4 @@ export const getTotalEthStakedData = () => get<MetricReturnData>(KEYS.TOTAL_ETH_
 export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
 export const getDeveloperToolsData = () => get<DeveloperToolsDataEnvelope>(KEYS.DEVELOPER_TOOLS)
+export const getGitHubContributors = () => get<GitHubContributorsData>(KEYS.GITHUB_CONTRIBUTORS)

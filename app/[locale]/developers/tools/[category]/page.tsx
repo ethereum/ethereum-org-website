@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -72,11 +72,9 @@ const Page = async ({
     .filter(Boolean)
 
   // Get contributor info for JSON-LD
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     `developers/tools/${category}`,
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

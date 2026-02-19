@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server"
 import type { ComponentProps } from "react"
 
-import type { ChildOnlyProp, CommitHistory, Lang, Params } from "@/lib/types"
+import type { ChildOnlyProp, Lang, Params } from "@/lib/types"
 
 /* Uncomment for Bug Bounty Banner: */
 import BugBountyBanner from "@/components/Banners/BugBountyBanner"
@@ -115,13 +115,8 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   const t = await getTranslations({ namespace: "page-bug-bounty" })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "bug-bounty",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("bug-bounty", locale as Lang)
 
   const consensusBountyHunters: Node[] = consensusData.sort(sortBountyHuntersFn)
   const executionBountyHunters: Node[] = executionData.sort(sortBountyHuntersFn)

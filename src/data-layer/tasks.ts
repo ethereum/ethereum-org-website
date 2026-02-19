@@ -1,6 +1,7 @@
 /**
  * Trigger.dev scheduled tasks for data fetching.
  *
+ * Weekly tasks run on Sundays at midnight UTC.
  * Daily tasks run at midnight UTC.
  * Hourly tasks run every hour.
  */
@@ -19,6 +20,7 @@ import { fetchEthPrice } from "./fetchers/fetchEthPrice"
 import { fetchEvents } from "./fetchers/fetchEvents"
 import { fetchGFIs } from "./fetchers/fetchGFIs"
 import { fetchGitHistory } from "./fetchers/fetchGitHistory"
+import { fetchGitHubContributors } from "./fetchers/fetchGitHubContributors"
 import { fetchGithubRepoData } from "./fetchers/fetchGithubRepoData"
 import { fetchGrowThePie } from "./fetchers/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "./fetchers/fetchGrowThePieBlockspace"
@@ -34,6 +36,7 @@ import { set } from "./storage"
 export const KEYS = {
   APPS: "fetch-apps",
   CALENDAR_EVENTS: "fetch-calendar-events",
+  GITHUB_CONTRIBUTORS: "fetch-github-contributors",
   COMMUNITY_PICKS: "fetch-community-picks",
   DEVELOPER_TOOLS: "fetch-developer-tools",
   GFIS: "fetch-gfis",
@@ -58,6 +61,8 @@ export const KEYS = {
 
 // Task definition: storage key + fetch function
 type TaskDef = [string, () => Promise<unknown>]
+
+const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 
 const DAILY: TaskDef[] = [
   [KEYS.APPS, fetchApps],
@@ -107,6 +112,7 @@ function createDataTask([key, fetchFn]: TaskDef) {
   })
 }
 
+const weeklyFetchTasks = WEEKLY.map(createDataTask)
 const dailyFetchTasks = DAILY.map(createDataTask)
 const hourlyFetchTasks = HOURLY.map(createDataTask)
 
@@ -114,6 +120,12 @@ const hourlyFetchTasks = HOURLY.map(createDataTask)
 export const allFetchTasks = [...dailyFetchTasks, ...hourlyFetchTasks]
 
 // ─── Scheduled orchestrators ───
+export const weeklyTask = schedules.task({
+  id: "weekly-data-fetch",
+  cron: "0 0 * * 0", // Sundays at midnight UTC
+  run: () => Promise.all(weeklyFetchTasks.map((t) => t.trigger())),
+})
+
 export const dailyTask = schedules.task({
   id: "daily-data-fetch",
   cron: "0 0 * * *",

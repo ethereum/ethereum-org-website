@@ -7,12 +7,7 @@ import {
 } from "next-intl/server"
 import type { ReactNode } from "react"
 
-import type {
-  ChildOnlyProp,
-  CommitHistory,
-  Lang,
-  PageParams,
-} from "@/lib/types"
+import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -42,10 +37,11 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getLastGitCommitDateByPath } from "@/lib/utils/gh"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { exchangesByCountryLastUpdated } from "@/data/exchangesByCountry"
 
 import GetEthPageJsonLD from "./page-jsonld"
 
@@ -131,10 +127,6 @@ export default async function Page({ params }: { params: PageParams }) {
     },
   ]
 
-  const lastDataUpdateDate = getLastGitCommitDateByPath(
-    "src/data/exchangesByCountry.ts"
-  )
-
   setRequestLocale(locale)
 
   // Get i18n messages
@@ -142,13 +134,8 @@ export default async function Page({ params }: { params: PageParams }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/get-eth")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "get-eth",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("get-eth", locale as Lang)
 
   return (
     <>
@@ -284,7 +271,9 @@ export default async function Page({ params }: { params: PageParams }) {
 
               {/* CLIENT SIDE */}
               <I18nProvider locale={locale} messages={messages}>
-                <CentralizedExchanges lastDataUpdateDate={lastDataUpdateDate} />
+                <CentralizedExchanges
+                  lastDataUpdateDate={exchangesByCountryLastUpdated}
+                />
               </I18nProvider>
             </div>
           </div>
