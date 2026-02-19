@@ -69,7 +69,10 @@ const FilterTag = forwardRef<
 
 FilterTag.displayName = "FilterTag"
 
-const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadElement>) => (
+const Text = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLParagraphElement>) => (
   <p className={cn("mb-6", className)} {...props} />
 )
 
@@ -243,7 +246,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
       })
     }
 
-    setSelectedTags([...tempSelectedTags])
+    setSelectedTags(tempSelectedTags)
   }
 
   const handleSkillSelect = (key: string) => {
@@ -295,6 +298,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
             <Input
               type="text"
               placeholder={t("page-tutorial-search-placeholder")}
+              aria-label={t("page-tutorial-search-placeholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full ps-9 text-sm"
@@ -369,7 +373,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
                   className="cursor-pointer gap-1"
                   onClick={() => setSelectedSkill("all")}
                 >
-                  {selectedSkill}
+                  {t(`page-tutorial-${selectedSkill}`)}
                   <X className="size-3" />
                 </Tag>
               )}
@@ -439,20 +443,22 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
                     <ExternalLink className="mb-[0.25em] ms-[0.25em] inline-block size-[0.875em]" />
                   )}
                 </Text>
-                <Tag
-                  variant="outline"
-                  status={
-                    tutorial.skill === "beginner"
-                      ? "tag-green"
-                      : tutorial.skill === "intermediate"
-                        ? "tag-yellow"
-                        : tutorial.skill === "advanced"
-                          ? "tag-red"
-                          : "normal"
-                  }
-                >
-                  <Translation id={getSkillTranslationId(tutorial.skill!)} />
-                </Tag>
+                {tutorial.skill && (
+                  <Tag
+                    variant="outline"
+                    status={
+                      tutorial.skill === "beginner"
+                        ? "tag-green"
+                        : tutorial.skill === "intermediate"
+                          ? "tag-yellow"
+                          : tutorial.skill === "advanced"
+                            ? "tag-red"
+                            : "normal"
+                    }
+                  >
+                    <Translation id={getSkillTranslationId(tutorial.skill)} />
+                  </Tag>
+                )}
               </Flex>
               <Text className="mt-6 uppercase text-body-medium">
                 <Emoji text=":writing_hand:" className="me-2 text-sm" />
