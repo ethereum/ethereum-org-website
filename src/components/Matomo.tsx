@@ -19,6 +19,12 @@ export default function Matomo() {
         siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID!,
       })
 
+      // Use sendBeacon API for reliable tracking during page navigation
+      // Without this, click events on internal links are lost due to race
+      // conditions with Next.js client-side routing
+      // See: https://matomo.org/faq/how-to/faq_33087/
+      push(["alwaysUseSendBeacon"])
+
       console.log(
         "[Matomo] initialized with URL:",
         process.env.NEXT_PUBLIC_MATOMO_URL
