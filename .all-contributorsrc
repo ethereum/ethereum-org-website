@@ -14071,6 +14071,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Uaitt",
+      "name": "Lorenzo Zabot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97030518?v=4",
+      "profile": "https://github.com/Uaitt",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
