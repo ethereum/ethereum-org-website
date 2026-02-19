@@ -239,7 +239,7 @@ When you use a centralized exchange you have to deposit your assets before the t
 
 There are fund management products on Ethereum that will try to grow your portfolio based on a strategy of your choice. This is automatic, open to everyone, and doesn't need a human manager taking a cut of your profits.
 
-A good example is the [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). This is a fund that rebalances automatically to ensure your portfolio always includes the top DeFi tokens by market capitalization. You never have to manage any of the details and you can withdraw from the fund whenever you like.
+For example, there are tokenized index funds that rebalance automatically to ensure your portfolio always includes the top DeFi tokens by market capitalization. You never have to manage any of the details and you can withdraw from the fund whenever you like.
 
 <ButtonLink href="/apps/categories/defi">
   See investment dapps
@@ -368,7 +368,6 @@ The DeFi ecosystem continues to expand into new areas:
 ### Communities {#communities}
 
 - [DeFi Llama Discord server](https://discord.defillama.com/)
-- [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
 
 <Divider />
 

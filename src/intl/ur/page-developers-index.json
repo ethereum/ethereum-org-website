@@ -1,4 +1,5 @@
 {
+  "alt-eth-blocks": "ETH کی علامت کی طرح ترتیب دیے جانے والے بلاکس کی تصویر",
   "page-developer-meta-title": "ایتھیریم ڈیولپر کے وسائل",
   "page-developers-account-desc": "نیٹ ورک پر معاہدے یا لوگ",
   "page-developers-accounts-link": "اکاؤنٹس",
@@ -11,6 +12,7 @@
   "page-developers-dev-env-desc": "IDEs جو dapp ڈیولپمنٹ کے لیے موزوں ہیں",
   "page-developers-dev-env-link": "ڈیولپمنٹ کے ماحول",
   "page-developers-docs-introductions": "تعارف",
+  "page-developers-ethskills-label": "ایتھیریم کے لیے AI ایجنٹ سیاق و سباق",
   "page-developers-evm-desc": "وہ کمپیوٹر جو لین دین پر کارروائی کرتا ہے",
   "page-developers-evm-link": "ایتھیریم ورچوئل مشین (EVM)",
   "page-developers-explore-documentation": "ڈاکومنٹیشن کو دریافت کریں",
@@ -75,7 +77,6 @@
   "page-developers-data-structures-and-encoding": "ڈیٹا کی ساختیں اور انکوڈنگ",
   "page-developers-data-structures-and-encoding-link": "ڈیٹا کی ساختیں اور انکوڈنگ",
   "page-developers-data-structures-and-encoding-desc": "ایتھیریم اسٹیک میں استعمال ہونے والے ڈیٹا ڈھانچے اور انکوڈنگ اسکیم کا تعارف",
-  "alt-eth-blocks": "ETH کی علامت کی طرح ترتیب دیے جانے والے بلاکس کی تصویر",
   "page-assets-doge": "dapps استعمال کرتا ہوا Doge",
   "page-developers-build-section-desc": "ایتھیریم پر اپنی پہلی ایپس سیکھنے اور بنانے کے لیے ہر چیز جو آپ کو درکار ہے",
   "page-developers-resources-section-title": "مددگار ڈیولپر وسائل",
