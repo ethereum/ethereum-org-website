@@ -452,12 +452,14 @@ function syncHeaderIdsWithEnglish(
   const englishHeaders = extractHeaderStructure(englishMd)
   const translatedHeaders = extractHeaderStructure(translatedMd)
 
-  // Match headers by position and level in the document structure
-  // If structure matches, copy English IDs to translated headers
+  // Only sync header IDs when structure matches (same count).
+  // Positional sync with mismatched counts shifts all IDs after the
+  // first missing/extra heading, corrupting anchors across the file.
   if (englishHeaders.length !== translatedHeaders.length) {
     console.warn(
-      `[WARN] Header count mismatch: English has ${englishHeaders.length}, translated has ${translatedHeaders.length}`
+      `[WARN] Header count mismatch: English has ${englishHeaders.length}, translated has ${translatedHeaders.length} — skipping header ID sync`
     )
+    return translatedMd
   }
 
   let result = translatedMd
@@ -465,11 +467,6 @@ function syncHeaderIdsWithEnglish(
   for (let i = 0; i < translatedHeaders.length; i++) {
     const translatedHeader = translatedHeaders[i]
     const englishHeader = englishHeaders[i]
-
-    if (!englishHeader) {
-      // More headers in translation than English - skip
-      continue
-    }
 
     if (translatedHeader.level !== englishHeader.level) {
       console.warn(
