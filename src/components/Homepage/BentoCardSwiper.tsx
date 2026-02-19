@@ -32,8 +32,8 @@ const BentoCardSwiper = ({
       onSlideChange={({ activeIndex }) => {
         trackCustomEvent({
           eventCategory,
-          eventAction: "mobile use cases",
-          eventName: `swipe to card ${activeIndex + 1}`,
+          eventAction: "cta_swipe",
+          eventName: String(activeIndex + 1),
         })
       }}
     >

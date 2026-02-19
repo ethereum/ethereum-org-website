@@ -152,12 +152,6 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
     },
     ref
   ) => {
-    const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (
-      ...args
-    ) => {
-      customEventOptions && trackCustomEvent(customEventOptions)
-      onClick?.(...args)
-    }
     return (
       <Button
         asChild
@@ -173,8 +167,9 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             className
           )}
           activeClassName=""
+          customEventOptions={customEventOptions}
+          onClick={onClick}
           {...linkProps}
-          onClick={handleClick}
         >
           {children}
         </BaseLink>
