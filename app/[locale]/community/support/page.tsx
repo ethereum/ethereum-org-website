@@ -7,6 +7,12 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
 import { SimpleHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
+import {
+  Alert,
+  AlertContent,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import InlineLink from "@/components/ui/Link"
@@ -44,18 +50,20 @@ export default async function Page({ params }: { params: PageParams }) {
       />
 
       <MainArticle className="space-y-16 px-4 py-16 md:px-10 md:py-20">
-        {/* Decentralization callout */}
-        <div className="flex max-w-3xl items-start gap-4 rounded-xl border bg-background-highlight p-5">
-          <Shield className="mt-0.5 size-6 shrink-0 text-body-medium" />
-          <div className="space-y-1">
-            <p className="font-bold">Ethereum is decentralized</p>
-            <p className="text-sm leading-relaxed text-body-medium">
+        {/* Decentralization alert */}
+        <Alert className="max-w-3xl text-body-medium">
+          <Shield className="mt-0.5 size-6 shrink-0 self-start" />
+          <AlertContent>
+            <AlertTitle className="text-body">
+              Ethereum is decentralized
+            </AlertTitle>
+            <AlertDescription className="text-sm">
               There is no company, support team, or help desk behind Ethereum.
               No one from ethereum.org will ever contact you. Transactions on
               the blockchain are final and cannot be reversed by anyone.
-            </p>
-          </div>
-        </div>
+            </AlertDescription>
+          </AlertContent>
+        </Alert>
 
         {/* Section 1: Get help */}
         <Section id="get-help" className="space-y-6">
@@ -70,7 +78,7 @@ export default async function Page({ params }: { params: PageParams }) {
             >
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
                 <ShieldAlert className="size-8 text-accent-a" />
-                <span className="text-2xl font-bold">Something went wrong</span>
+                Something went wrong
               </CardTitle>
               <CardContent className="space-y-5 bg-gradient-to-br from-white to-primary/5 p-8 dark:from-transparent dark:to-primary/5">
                 <p className="text-sm leading-relaxed text-body-medium">
@@ -112,7 +120,7 @@ export default async function Page({ params }: { params: PageParams }) {
             >
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
                 <Shield className="size-8 text-accent-b" />
-                <span className="text-2xl font-bold">Protect yourself</span>
+                Protect yourself
               </CardTitle>
               <CardContent className="space-y-5 bg-gradient-to-br from-white to-primary/5 p-8 dark:from-transparent dark:to-primary/5">
                 <p className="text-sm leading-relaxed text-body-medium">
@@ -150,7 +158,7 @@ export default async function Page({ params }: { params: PageParams }) {
             >
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
                 <BookOpen className="size-8 text-accent-c" />
-                <span className="text-2xl font-bold">Using Ethereum</span>
+                Using Ethereum
               </CardTitle>
               <CardContent className="space-y-5 bg-gradient-to-br from-white to-primary/5 p-8 dark:from-transparent dark:to-primary/5">
                 <p className="text-sm leading-relaxed text-body-medium">
@@ -185,9 +193,7 @@ export default async function Page({ params }: { params: PageParams }) {
             >
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
                 <HelpCircle className="size-8 text-accent-a" />
-                <span className="text-2xl font-bold">
-                  Common misconceptions
-                </span>
+                Common misconceptions
               </CardTitle>
               <CardContent className="space-y-5 bg-gradient-to-br from-white to-primary/5 p-8 dark:from-transparent dark:to-primary/5">
                 <p className="text-sm leading-relaxed text-body-medium">
