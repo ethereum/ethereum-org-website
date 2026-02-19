@@ -5,11 +5,7 @@ import { useTranslations } from "next-intl"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
 import { ChevronNext } from "@/components/Chevron"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-} from "@/components/ui/accordion"
+import { Accordion, AccordionItem } from "@/components/ui/accordion"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -41,7 +37,14 @@ const Transcript = ({ children, className }: TranscriptProps) => {
               </div>
             </AccordionPrimitive.Trigger>
           </h2>
-          <AccordionContent>{children}</AccordionContent>
+          {/* forceMount keeps transcript in DOM for SEO crawlers;
+                        h-0/overflow-hidden hides it visually when collapsed */}
+          <AccordionPrimitive.Content
+            forceMount
+            className="overflow-hidden transition-all data-[state=closed]:h-0 data-[state=open]:h-auto"
+          >
+            <div className="p-2 md:p-4">{children}</div>
+          </AccordionPrimitive.Content>
         </AccordionItem>
       </Accordion>
     </div>
