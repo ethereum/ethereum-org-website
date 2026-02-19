@@ -1,14 +1,14 @@
 ---
 title: Foire aux questions
-description: Foire aux questions à propos de la preuve d'enjeu Ethereum.
+description: "Foire aux questions à propos de la preuve d'enjeu Ethereum."
 lang: fr
 ---
 
-## Qu'est-ce que la preuve d'enjeu ? {#what-is-proof-of-stake}
+## Qu'est-ce que la preuve d'enjeu {#what-is-proof-of-stake}
 
 La preuve d'enjeu est une classe d'algorithme qui assure la sécurité des blockchains en garantissant que les actifs de valeur sont perdus par les attaquants qui agissent de manière malhonnête. Les systèmes de preuve d'enjeu nécessitent qu'un ensemble de validateurs mette à disposition un actif qui peut être détruit si le validateur se livre à un comportement manifestement malhonnête. Ethereum utilise un mécanisme de preuve d'enjeu pour sécuriser sa blockchain.
 
-## Comment la preuve d'enjeu se compare-t-elle à la preuve de travail ? {#comparison-to-proof-of-work}
+## Comment la preuve d'enjeu se compare-t-elle à la preuve de travail ? Comparaison avec la preuve de travail {#comparison-to-proof-of-work}
 
 La preuve de travail et la preuve d'enjeu sont toutes deux des mécanismes qui dissuadent économiquement les acteurs malveillants de ralentir ou de frauder le réseau. Dans les deux cas, les nœuds qui participent activement au consensus mettent un actif « dans le réseau » qu'ils perdront s'ils se comportent mal.
 
@@ -18,7 +18,7 @@ La preuve d'enjeu nécessite que les nœuds, appelés validateurs, soumettent ex
 
 La preuve de travail est beaucoup plus gourmande en énergie car de l'électricité est consommée lors du processus de minage. La preuve d'enjeu, en revanche, ne nécessite qu'une très faible quantité d'énergie - les validateurs Ethereum peuvent même fonctionner sur un appareil à faible puissance tel qu'un Raspberry Pi. Le mécanisme de preuve d'enjeu d'Ethereum est considéré comme plus sûr que la preuve de travail car le coût d'une attaque est plus élevé et les conséquences pour un attaquant sont plus graves.
 
-La comparaison entre la preuve de travail et la preuve d'enjeu est un sujet controversé. Le blog de [Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) et le débat entre Justin Drake et Lyn Alden offrent un bon résumé des arguments.
+La comparaison entre la preuve de travail et la preuve d'enjeu est un sujet controversé. Le [blog de Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) et le débat entre Justin Drake et Lyn Alden donnent un bon résumé des arguments.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -26,27 +26,27 @@ La comparaison entre la preuve de travail et la preuve d'enjeu est un sujet cont
 
 Oui. Les nœuds sur un réseau en preuve d'enjeu utilisent une quantité infime d'énergie. Une étude tierce a conclu que l'ensemble du réseau Ethereum basé sur la preuve d'enjeu consomme environ 0,0026 TWh/an - soit environ 13 000 fois moins que les jeux vidéo aux États-Unis uniquement.
 
-[Plus d'infos sur la consommation d'énergie d'Ethereum](/energy-consumption/).
+[En savoir plus sur la consommation d'énergie d'Ethereum](/energy-consumption/).
 
 ## La preuve d'enjeu est-elle sécurisée ? {#is-pos-secure}
 
 La preuve d'enjeu d'Ethereum est très sécurisée. Le mécanisme a été recherché, développé et testé rigoureusement pendant huit ans avant d'être mis en service. Les garanties de sécurité sont différentes des blockchains basées sur la preuve de travail. Dans la preuve d'enjeu, les validateurs malveillants peuvent être activement sanctionnés (« évincés ») et expulsés de l'ensemble des validateurs, ce qui coûte une somme importante d'ETH. Sous le régime de la preuve de travail, un attaquant peut continuer à répéter son attaque tant qu'il dispose d'une puissance de hachage suffisante. Il est également plus coûteux de lancer des attaques équivalentes sur Ethereum en preuve d'enjeu qu'en preuve de travail. Pour affecter la validation de la chaîne, au moins 33 % de l'ether total misé sur le réseau sont nécessaires (sauf dans les cas d'attaques très sophistiquées avec une probabilité de succès extrêmement faible). Pour contrôler le contenu des blocs futurs, au moins 51 % de l'ETH total misé est nécessaire, et pour réécrire l'histoire, plus de 66 % de la mise totale est nécessaire. Le protocole Ethereum détruirait ces actifs dans les scénarios d'attaque de 33 % ou 51 % et par consensus social dans le scénario d'attaque de 66 %.
 
-- [Plus d'informations sur la défense contre les attaquants d'Ethereum en preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
+- [En savoir plus sur la défense de la preuve d'enjeu d'Ethereum contre les attaquants](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 - [En savoir plus sur la conception de la preuve d'enjeu](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
 
 ## Est-ce que la preuve d'enjeu rend Ethereum moins cher à utiliser ? {#does-pos-make-ethereum-cheaper}
 
 Non. Le coût d'envoi d'une transaction (frais de gaz) est déterminé par un marché dynamique des frais qui augmente avec la demande sur le réseau. Le mécanisme de consensus n'influence pas directement cela.
 
-[Plus d'information sur le gaz](/developers/docs/gas).
+[En savoir plus sur le gaz](/developers/docs/gas).
 
 ## Que sont les nœuds, les clients et les validateurs ? {#what-are-nodes-clients-and-validators}
 
 Les nœuds sont des ordinateurs connectés au réseau Ethereum. Les clients sont les logiciels qu'ils exécutent et qui transforment l'ordinateur en un nœud. Il existe deux types de clients : les clients d'exécution et les clients de consensus. Les deux sont nécessaires pour créer un nœud. Un validateur est un complément optionnel à un client de consensus qui permet au nœud de participer à un consensus à preuve d'enjeu. Cela signifie créer et proposer des blocs lorsqu'ils sont sélectionnés et attester des blocs dont ils entendent parler sur le réseau. Pour faire fonctionner un validateur, l'opérateur du nœud doit déposer 32 ETH dans le contrat de dépôt.
 
 - [En savoir plus sur les nœuds et les clients](/developers/docs/nodes-and-clients)
-- [Plus d'infos sur la mise en jeu](/staking)
+- [En savoir plus sur la mise en jeu](/staking)
 
 ## Est-ce que la preuve d'enjeu est une nouvelle idée ? {#is-pos-new}
 
@@ -66,7 +66,7 @@ La combinaison de Casper et LMD_GHOST est connue sous le nom de Gasper.
 
 La « pénalisation » est le terme donné à la destruction d'une partie de la mise d'un validateur et à l'expulsion du validateur du réseau. La quantité d'ETH perdue lors d'une sanction augmente proportionnellement avec le nombre de validateurs sanctionnés - cela signifie que les validateurs regroupés sont punis plus sévèrement que les individus.
 
-[En savoir plus sur les sanctions](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing)
+[En savoir plus sur le délestage](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing)
 
 ## Pourquoi les validateurs ont-ils besoin de 32 ETH ? {#why-32-eth}
 
@@ -82,26 +82,26 @@ Un seul validateur est choisi de manière pseudo-aléatoire pour proposer un blo
 
 La « manipulation d'enjeu » est une catégorie d'attaque sur les réseaux de preuve d'enjeu où l'attaquant tente de biaiser l'algorithme de sélection des validateurs en faveur de ses propres validateurs. Les attaques de « manipulation » sur RANDAO nécessitent environ la moitié du total d'ETH mis en jeu.
 
-[En savoir plus sur la manipulation de la mise en jeu](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
+[En savoir plus sur le stake grinding](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
 
 ## Qu'est-ce qu'une sanction communautaire ? {#what-is-social-slashing}
 
 Le « sanction communautaire » est la capacité de la communauté à coordonner une fourche de la blockchain en réponse à une attaque. Elle permet à la communauté de se remettre d'une attaque ayant finalisé une chaîne malhonnête. La répression sociale peut également être utilisée contre les attaques de censure.
 
-- [En savoir plus sur la sanction communautaire](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin à propos des sanctions communautaires](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [En savoir plus sur le délestage social](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
+- [Vitalik Buterin sur le délestage social](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## Vais-je être sanctionné ? {#will-i-get-slashed}
 
 En tant que validateur, il est très difficile d'être sanctionné à moins de vous engager délibérément dans un comportement malveillant. La sanction n'est mise en œuvre que dans des scénarios très spécifiques où les validateurs proposent plusieurs blocs pour le même créneau ou se contredisent avec leurs attestations - ces situations sont très peu susceptibles de survenir accidentellement.
 
-[En savoir plus sur les conditions entrainant une sanction](https://eth2book.info/altair/part2/incentives/slashing)
+[En savoir plus sur les conditions de délestage](https://eth2book.info/altair/part2/incentives/slashing)
 
 ## Qu'est-ce que le problème dit de l'absence d'enjeu ? {#what-is-nothing-at-stake-problem}
 
 Le problème de l'absence d'enjeu est un problème conceptuel avec certains mécanismes de preuve d'enjeu où il n'y a que des récompenses et aucune pénalité. Si rien n'est en jeu, un validateur pragmatique est tout aussi heureux d'attester de n'importe quelle fourche, voire de plusieurs fourches, de la blockchain, car cela augmente ses récompenses. Ethereum contourne ce problème en utilisant des conditions de finalité et des sanctions pour garantir une chaîne canonique unique.
 
-[En savoir plus le problème dit de l'absence d'enjeu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[En savoir plus sur le problème du rien en jeu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## Qu'est-ce que l'algorithme de choix de fourche ? {#what-is-a-fork-choice-algorithm}
 
@@ -121,13 +121,13 @@ La finalité dans la preuve d'enjeu est la garantie qu'un bloc donné fait parti
 
 La subjectivité faible ou weak subjectivity est une caractéristique des réseaux de preuve d'enjeu où l'information sociale est utilisée pour confirmer l'état actuel de la blockchain. Les nouveaux nœuds ou les nœuds rejoignant le réseau après avoir été hors ligne pendant une longue période peuvent recevoir un état récent afin que le nœud puisse voir immédiatement s'ils sont sur la bonne chaîne. Ces états sont connus sous le nom de « points de contrôle de la faible subjectivité » et peuvent être obtenus auprès d'autres opérateurs de nœuds éloignés, ou auprès d'explorateurs de blocs, ou de plusieurs points de terminaison publics.
 
-[En savoir plus sur la « faible subjectivité »](/developers/docs/consensus-mechanisms/pos/weak-subjectivity)
+[En savoir plus sur la subjectivité faible](/developers/docs/consensus-mechanisms/pos/weak-subjectivity)
 
 ## Est-ce que la preuve d'enjeu peut résister à la censure ? {#is-pos-censorship-resistant}
 
 La résistance à la censure est actuellement difficile à prouver. Cependant, contrairement à la preuve de travail, la preuve d'enjeu offre la possibilité de coordonner les sanctions pour punir les validateurs pratiquant la censure. Il y a des changements à venir dans le protocole qui séparent les constructeurs de blocs des proposeurs de blocs et mettent en œuvre des listes de transactions que les constructeurs doivent inclure dans chaque bloc. Cette proposition est connue sous le nom de séparation des constructeurs et des proposeurs appropriés et aide à empêcher les validateurs de censurer les transactions.
 
-[En savoir plus sur la séparation des rôles de constructeur et de proposeur](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
+[En savoir plus sur la séparation proposant-constructeur](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
 
 ## Est-ce qu'Ethereum en système de preuve d'enjeu peut subir une attaque 51% ? {#pos-51-attack}
 
@@ -139,7 +139,7 @@ Oui. La preuve d'enjeu est vulnérable aux attaques à 51%, tout comme la preuve
 
 La coordination sociale est la dernière ligne de défense pour Ethereum qui permettrait de récupérer une chaîne honnête à la suite d'une attaque ayant finalisé des blocs malhonnêtes. Dans ce cas, la communauté Ethereum devrait se coordonner « hors chaine » et s'accorder pour utiliser une fourche minoritaire honnête, tout en sanctionnant les validateurs de l'attaquant dans le processus. Cela nécessiterait également que les applications et les plateformes d'échange reconnaissent la fourche honnête.
 
-[En savoir plus sur la coordination communautaire](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
+[En savoir plus sur la coordination sociale](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
 
 ## Est-ce que les riches deviennent plus riches grâce à la preuve d'enjeu ? {#do-rich-get-richer}
 
@@ -147,9 +147,9 @@ Plus une personne doit miser d’ETH, plus elle peut exécuter de validateurs et
 
 ## Est-ce que la preuve d'enjeu est plus centralisée que la preuve de travail ? {#is-pos-decentralized}
 
-Non, la preuve de travail tend vers la centralisation car les coûts d'exploitation minière augmentent et évincent les individus, puis évincent les petites entreprises, et ainsi de suite. Le problème actuel avec la preuve d'enjeu est l'influence des produits dérivés de mise en jeu (DSL). Ce sont des jetons représentant de l'ETH mis en jeu par un fournisseur que n'importe qui peut échanger sur les marchés secondaires sans que l'ETH réel ne soit retiré de la mise. Les LSD permettent aux utilisateurs de mettre en jeu moins de 32 ETH, mais ils créent également un risque de centralisation où quelques grandes organisations peuvent finir par contrôler une grande partie de la mise. C'est pourquoi [mettre en jeu ses propres Eth](/staking/solo) est le mieux pour le réseau.
+Non, la preuve de travail tend vers la centralisation car les coûts d'exploitation minière augmentent et évincent les individus, puis évincent les petites entreprises, et ainsi de suite. Le problème actuel avec la preuve d'enjeu est l'influence des produits dérivés de mise en jeu (DSL). Ce sont des jetons représentant de l'ETH mis en jeu par un fournisseur que n'importe qui peut échanger sur les marchés secondaires sans que l'ETH réel ne soit retiré de la mise. Les LSD permettent aux utilisateurs de mettre en jeu moins de 32 ETH, mais ils créent également un risque de centralisation où quelques grandes organisations peuvent finir par contrôler une grande partie de la mise. C'est pourquoi la [mise en jeu en solo](/staking/solo) est la meilleure option pour Ethereum.
 
-[En savoir plus sur la centralisation des LSD](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+[En savoir plus sur la centralisation de la mise en jeu dans les LSD](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Pourquoi je ne peux mettre en jeu que des ETH ? {#why-can-i-only-stake-eth}
 
@@ -163,10 +163,10 @@ Non, il existe plusieurs blockchains basées sur la preuve d'enjeu. Aucun n'est 
 
 La fusion a été le moment où Ethereum a désactivé son mécanisme de consensus basé sur la preuve de travail et a activé son mécanisme de consensus basé sur la preuve d'enjeu. La Fusion a eu lieu le 15 septembre 2022.
 
-[Plus d'infos sur la fusion](/roadmap/merge)
+[En savoir plus sur La Fusion](/roadmap/merge)
 
 ## Qu'est-ce que la disponibilité et la sécurité ? {#what-are-liveness-and-safety}
 
-La disponibilité et la sécurité sont les deux préoccupations fondamentales en matière de sécurité pour une blockchain. La disponibilité est l'accessibilité à une chaîne finalisée. Si la chaîne cesse de se finaliser ou si les utilisateurs ne peuvent pas y accéder facilement, ce sont des échecs de disponibilité. Un coût d'accès extrêmement élevé pourrait également être considéré comme un échec de disponibilité. La sécurité fait référence à la difficulté d'attaquer la chaîne - c'est-à-dire de finaliser des points de contrôle conflictuels.
+La disponibilité et la sécurité sont les deux préoccupations fondamentales en matière de sécurité pour une blockchain. La disponibilité est l'accessibilité à une chaîne finalisée. Si la chaîne cesse de se finaliser ou si les utilisateurs ne peuvent pas y accéder facilement, ce sont des échecs de disponibilité. Un coût d'accès extrêmement élevé pourrait également être considéré comme un échec de disponibilité. La sécurité fait référence à la difficulté d'attaquer la chaîne, c'est-à-dire de finaliser des points de contrôle conflictuels.
 
-[En savoir plus sur Casper](https://arxiv.org/pdf/1710.09437.pdf)
+[En savoir plus dans l'article Casper](https://arxiv.org/pdf/1710.09437.pdf)
