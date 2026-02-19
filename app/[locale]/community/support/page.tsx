@@ -5,6 +5,7 @@ import type { PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
+import { SimpleHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardTitle } from "@/components/ui/card"
@@ -21,19 +22,17 @@ export default async function Page({ params }: { params: PageParams }) {
   return (
     <div>
       {/* Hero */}
-      <div className="mx-auto w-full max-w-screen-2xl border-b">
-        <div className="flex flex-col gap-9 p-8 lg:px-11 lg:py-16">
-          <Breadcrumbs slug="community/support" startDepth={1} />
-          <div className="flex flex-col gap-6">
-            <h1 className="text-4xl font-black lg:text-7xl">
-              Ethereum support
-            </h1>
-            <p className="max-w-2xl text-lg text-body-medium">
+      <SimpleHero
+        breadcrumbs={<Breadcrumbs slug="community/support" startDepth={1} />}
+        title="Ethereum support"
+        subtitle={
+          <div className="space-y-[1lh] text-base text-body-medium">
+            <p className="text-lg">
               Whether you need help with a transaction, want to stay safe, or
               are just getting started, this page connects you to the right
               resources.
             </p>
-            <p className="max-w-2xl text-body-medium">
+            <p>
               Ethereum is a decentralized network, not a company. ethereum.org
               is an educational website. It is not a wallet, exchange, or
               financial platform. We do not hold any funds and cannot access any
@@ -41,8 +40,8 @@ export default async function Page({ params }: { params: PageParams }) {
               Anyone claiming otherwise is a scammer.
             </p>
           </div>
-        </div>
-      </div>
+        }
+      />
 
       <MainArticle className="space-y-16 px-4 py-16 md:px-10 md:py-20">
         {/* Decentralization callout */}
