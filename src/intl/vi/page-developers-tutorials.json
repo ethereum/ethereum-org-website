@@ -1,4 +1,22 @@
 {
+  "comp-tutorial-metadata-minute-read": "số phút đọc",
+  "page-tutorial-listing-policy-intro": "Trước khi bạn gửi một hướng dẫn, vui lòng <a href=\"/contributing/content-resources/\">đọc chính sách niêm yết của chúng tôi</a>.",
+  "comp-tutorial-metadata-tip-author": "Hướng dẫn tác giả",
+  "page-tutorial-create-an-issue": "Tạo góp ý",
+  "page-tutorial-create-an-issue-desc": "Điền vào mẫu issue để phác thảo hướng dẫn của bạn.",
+  "page-tutorial-raise-issue-btn": "Báo cáo vấn đề",
+  "page-tutorial-read-time": "Phút",
+  "page-tutorial-submit-btn": "Gửi một bài hướng dẫn",
+  "page-tutorial-subtitle": "Chào mừng bạn đến với danh sách hướng dẫn cộng đồng được chọn lọc của chúng tôi.",
+  "page-tutorial-tags-error": "Không có hướng dẫn nào với tất cả các thẻ bạn đã chọn",
+  "page-tutorial-title": "Hướng dẫn nhà phát triển Ethereum",
+  "page-tutorials-meta-description": "Duyệt và lọc các hướng dẫn đã được kiểm duyệt theo chủ đề.",
+  "page-tutorial-external-link": "Liên kết ngoài",
+  "page-tutorials-meta-title": "Hướng dẫn nhà phát triển Ethereum",
+  "page-tutorial-beginner": "Người mới bắt đầu",
+  "page-tutorial-intermediate": "Trung gian",
+  "page-tutorial-advanced": "Nâng cao",
   "page-find-wallet-try-removing": "Thử xóa một hoặc hai tính năng",
-  "page-find-wallet-clear": "Xóa bộ lọc"
+  "page-find-wallet-clear": "Xóa bộ lọc",
+  "page-tutorials-env-banner": "Không ủy thác <code>.env</code>! Làm ơn chắc chắn rằng bạn không chia sẻ hoặc tiết lộ tệp <code>.env</code> với bất kì ai, bởi bạn đang làm tổn hại bí mật của mình nếu làm như thế. Nếu bạn đang sử dụng bản tự kiểm soát, thêm <code>.env</code> vào tệp <a href=\"https://git-scm.com/docs/gitignore\"> gitignore</a>."
 }
