@@ -267,22 +267,22 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
 
   return (
     <>
-      <div className="my-8 w-full shadow-table-box md:w-2/3">
+      <div className="my-8 w-full max-w-screen-lg shadow-table-box">
         {/* Skill level TabNav + Search */}
-        <div className="flex flex-col gap-3 px-8 pt-6 sm:flex-row sm:items-center">
+        <div className="flex flex-col gap-3 px-8 pt-6 md:max-lg:w-fit lg:flex-row lg:items-center">
           <TabNav
             sections={skillSections}
             activeSection={selectedSkill}
             onSelect={handleSkillSelect}
             useMotion
             motionLayoutId="tutorial-skill-highlight"
-            className="w-auto justify-start [&>nav]:mx-0 [&>nav]:w-auto [&>nav]:max-w-none [&>nav]:overflow-visible"
+            className="w-auto justify-start md:w-fit [&>nav]:mx-0 [&>nav]:w-auto [&>nav]:max-w-none"
             customEventOptions={{
               eventCategory: "tutorial tags",
               eventAction: "click",
             }}
           />
-          <div className="relative w-full flex-shrink-0 sm:ms-auto sm:w-44">
+          <div className="relative w-full lg:ms-auto lg:w-44">
             <Search className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-body-medium" />
             <Input
               type="text"
