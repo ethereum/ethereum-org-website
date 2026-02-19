@@ -45,6 +45,8 @@ import externalTutorials from "@/data/externalTutorials.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import useTranslation from "@/hooks/useTranslation"
+
 const MAX_DEFAULT_TAGS = 12
 
 const FilterTag = forwardRef<
@@ -106,6 +108,7 @@ type TutorialsListProps = {
 }
 
 const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
+  const { t } = useTranslation("page-developers-tutorials")
   const locale = useLocale()
   const effectiveLocale = internalTutorials.length > 0 ? locale : DEFAULT_LOCALE
   const filteredTutorialsByLang = useMemo(
@@ -128,29 +131,34 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
     const counts: Record<string, number> = {
       all: filteredTutorialsByLang.length,
     }
-    filteredTutorialsByLang.forEach((t) => {
-      if (t.skill) counts[t.skill] = (counts[t.skill] || 0) + 1
+    filteredTutorialsByLang.forEach((tutorial) => {
+      if (tutorial.skill)
+        counts[tutorial.skill] = (counts[tutorial.skill] || 0) + 1
     })
 
     return [
-      { key: "all", label: `All (${counts.all})`, icon: SKILL_ICONS.all },
+      {
+        key: "all",
+        label: `${t("page-tutorial-all")} (${counts.all})`,
+        icon: SKILL_ICONS.all,
+      },
       {
         key: "beginner",
-        label: `Beginner (${counts.beginner ?? 0})`,
+        label: `${t("page-tutorial-beginner")} (${counts.beginner ?? 0})`,
         icon: SKILL_ICONS.beginner,
       },
       {
         key: "intermediate",
-        label: `Intermediate (${counts.intermediate ?? 0})`,
+        label: `${t("page-tutorial-intermediate")} (${counts.intermediate ?? 0})`,
         icon: SKILL_ICONS.intermediate,
       },
       {
         key: "advanced",
-        label: `Advanced (${counts.advanced ?? 0})`,
+        label: `${t("page-tutorial-advanced")} (${counts.advanced ?? 0})`,
         icon: SKILL_ICONS.advanced,
       },
     ]
-  }, [filteredTutorialsByLang])
+  }, [filteredTutorialsByLang, t])
 
   const [filteredTutorials, setFilteredTutorials] = useState(
     filteredTutorialsByLang
@@ -286,7 +294,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
             <Search className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-body-medium" />
             <Input
               type="text"
-              placeholder="Search tutorials..."
+              placeholder={t("page-tutorial-search-placeholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full ps-9 text-sm"
@@ -307,7 +315,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
           {/* Row 2: Topic tags */}
           <div className="mt-5">
             <p className="mb-3 text-xs uppercase tracking-wider text-body-medium">
-              Topics
+              <Translation id="page-developers-tutorials:page-tutorial-topics" />
             </p>
             <div className="flex flex-wrap gap-2">
               {visibleTags.map(([tagName, tagCount]) => {
@@ -330,11 +338,15 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
                 >
                   {showAllTags ? (
                     <>
-                      Show less <ChevronUp className="size-3" />
+                      <Translation id="show-less" />{" "}
+                      <ChevronUp className="size-3" />
                     </>
                   ) : (
                     <>
-                      +{nicheTags.length} more{" "}
+                      <Translation
+                        id="page-developers-tutorials:page-tutorial-more-tags"
+                        values={{ count: nicheTags.length }}
+                      />{" "}
                       <ChevronDown className="size-3" />
                     </>
                   )}
@@ -346,7 +358,9 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
           {/* Row 3: Active filters summary (only when filters active) */}
           {hasActiveFilters && (
             <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-border pt-4">
-              <span className="text-xs text-body-medium">Filtering by:</span>
+              <span className="text-xs text-body-medium">
+                <Translation id="page-developers-tutorials:page-tutorial-filtering-by" />
+              </span>
 
               {selectedSkill !== "all" && (
                 <Tag
