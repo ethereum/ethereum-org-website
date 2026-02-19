@@ -1,6 +1,6 @@
 ---
-title: ERC-20 token'larını Waffle ile test etme
-description: Solidity akıllı sözleşmelerini nasıl test edeceğinizi ve Waffle ile akıllı sözleşme eşleyicileri nasıl kullanacağınızı öğrenin.
+title: "ERC-20 token'larını Waffle ile test etme"
+description: "Solidity akıllı sözleşmelerini nasıl test edeceğinizi ve Waffle ile akıllı sözleşme eşleyicileri nasıl kullanacağınızı öğrenin."
 author: Vladislav Starostenko
 tags:
   - "waffle"
