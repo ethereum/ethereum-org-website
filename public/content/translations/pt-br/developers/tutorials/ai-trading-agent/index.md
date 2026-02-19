@@ -444,7 +444,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Para saber se um pool precisa ser revertido, precisamos obter isso como entrada para `read_pool`. Além disso, o símbolo do ativo precisa ser configurado corretamente.
 
-A sintaxe `<a> if <b> else <c>` é o equivalente em Python do [operador condicional ternário](https://en.wikipedia.org/wiki/Ternary_conditional_operator), que em uma linguagem derivada de C seria `<b> ?` <a> : <c>`.`
+A sintaxe `<a> if <b> else <c>` é o equivalente em Python do [operador condicional ternário](https://en.wikipedia.org/wiki/Ternary_conditional_operator), que em uma linguagem derivada de C seria `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

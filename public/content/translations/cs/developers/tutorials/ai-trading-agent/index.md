@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Abychom věděli, zda je třeba fond obrátit, musíme to získat jako vstup do `read_pool`. Také je třeba správně nastavit symbol aktiva.
 
-Syntaxe `<a> if <b> else <c>` je pythonovský ekvivalent [ternárního podmíněného operátoru](https://en.wikipedia.org/wiki/Ternary_conditional_operator), který by v jazyce odvozeném od C byl `<b> ?` <a> : <c>`.
+Syntaxe `<a> if <b> else <c>` je pythonovský ekvivalent [ternárního podmíněného operátoru](https://en.wikipedia.org/wiki/Ternary_conditional_operator), který by v jazyce odvozeném od C byl `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

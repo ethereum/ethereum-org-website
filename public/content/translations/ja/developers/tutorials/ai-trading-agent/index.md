@@ -442,7 +442,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 プールを逆にする必要があるかどうかを知るには、それを`read_pool`への入力として取得します。 また、資産シンボルも正しく設定する必要があります。
 
-`<a> if <b> else <c>`という構文は、Pythonにおける[三項条件演算子](https://en.wikipedia.org/wiki/Ternary_conditional_operator)に相当し、C派生言語では `<b> ?` <a> : <c>`となります。
+`<a> if <b> else <c>`という構文は、Pythonにおける[三項条件演算子](https://en.wikipedia.org/wiki/Ternary_conditional_operator)に相当し、C派生言語では `<b> ? <a> : <c>`となります。
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

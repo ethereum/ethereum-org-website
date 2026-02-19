@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 یہ جاننے کے لیے کہ آیا کسی پول کو الٹنے کی ضرورت ہے، ہم اسے `read_pool` کے ان پٹ کے طور پر حاصل کرتے ہیں۔ اس کے علاوہ، اثاثہ کی علامت کو صحیح طریقے سے ترتیب دینے کی ضرورت ہے۔
 
-سنٹیکس `<a> if <b> else <c>` [ٹرنری کنڈیشنل آپریٹر](https://en.wikipedia.org/wiki/Ternary_conditional_operator) کا Python مساوی ہے، جو C-اخذ کردہ زبان میں `<b> ?` ہوگا <a> : <c>`۔
+سنٹیکس `<a> if <b> else <c>` [ٹرنری کنڈیشنل آپریٹر](https://en.wikipedia.org/wiki/Ternary_conditional_operator) کا Python مساوی ہے، جو C-اخذ کردہ زبان میں `<b> ? <a> : <c>` ہوگا۔
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:
