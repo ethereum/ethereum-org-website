@@ -18,5 +18,10 @@
   "page-tutorial-advanced": "Для досвідчених користувачів",
   "page-find-wallet-try-removing": "Спробуйте вилучити одну або дві функції",
   "page-find-wallet-clear": "Очистити фільтри",
-  "page-tutorials-env-banner": "Не затверджуйте <code>.env</code>! Переконайтеся, що ви нікому не передаєте і не показуєте свій <code>.env</code> файл, оскільки таким чином ви розкриваєте свої секрети. Якщо ви використовуєте систему контролю версій, додайте свій <code>.env</code> до файлу <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
+  "page-tutorials-env-banner": "Не затверджуйте <code>.env</code>! Переконайтеся, що ви нікому не передаєте і не показуєте свій <code>.env</code> файл, оскільки таким чином ви розкриваєте свої секрети. Якщо ви використовуєте систему контролю версій, додайте свій <code>.env</code> до файлу <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>.",
+  "page-tutorial-all": "Усі",
+  "page-tutorial-topics": "Теми",
+  "page-tutorial-search-placeholder": "Шукати посібники...",
+  "page-tutorial-filtering-by": "Фільтрування за:",
+  "page-tutorial-more-tags": "+{count} ще"
 }

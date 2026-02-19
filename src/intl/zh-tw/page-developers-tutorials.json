@@ -18,5 +18,10 @@
   "page-tutorial-advanced": "進階",
   "page-find-wallet-try-removing": "嘗試移除一兩項功能",
   "page-find-wallet-clear": "清除篩選條件",
-  "page-tutorials-env-banner": "請勿提交<code>.env</code>!請確保永遠別 公開/分享 你的<code>.env </code>文件泄露給任何人，因爲這樣做會泄露你的秘密。假如你正使用版本控制，應添加<code>.env </code>到<a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>文件。"
+  "page-tutorials-env-banner": "請勿提交<code>.env</code>!請確保永遠別 公開/分享 你的<code>.env </code>文件泄露給任何人，因爲這樣做會泄露你的秘密。假如你正使用版本控制，應添加<code>.env </code>到<a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>文件。",
+  "page-tutorial-all": "全部",
+  "page-tutorial-topics": "主題",
+  "page-tutorial-search-placeholder": "搜尋教學...",
+  "page-tutorial-filtering-by": "篩選條件:",
+  "page-tutorial-more-tags": "還有 +{count} 個"
 }

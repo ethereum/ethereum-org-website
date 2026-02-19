@@ -18,5 +18,10 @@
   "page-tutorial-advanced": "Zaawansowane funkcje",
   "page-find-wallet-try-removing": "Spróbuj usunąć jedną lub dwie funkcje",
   "page-find-wallet-clear": "Wyczyść filtry",
-  "page-tutorials-env-banner": "Nie udostępniaj pliku <code>.env</code>! Upewnij się, że nigdy nie udostępniasz ani nie ujawniasz nikomu swojego pliku <code>.env</code>, ponieważ narażasz w ten sposób swoje sekrety. Jeśli korzystasz z kontroli wersji, dodaj swój plik <code>.env</code> do pliku <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
+  "page-tutorials-env-banner": "Nie udostępniaj pliku <code>.env</code>! Upewnij się, że nigdy nie udostępniasz ani nie ujawniasz nikomu swojego pliku <code>.env</code>, ponieważ narażasz w ten sposób swoje sekrety. Jeśli korzystasz z kontroli wersji, dodaj swój plik <code>.env</code> do pliku <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>.",
+  "page-tutorial-all": "Wszystkie",
+  "page-tutorial-topics": "Tematy",
+  "page-tutorial-search-placeholder": "Szukaj samouczków...",
+  "page-tutorial-filtering-by": "Filtrowanie według:",
+  "page-tutorial-more-tags": "+{count} więcej"
 }
