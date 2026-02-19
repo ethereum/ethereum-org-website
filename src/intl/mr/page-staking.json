@@ -10,6 +10,7 @@
   "comp-withdrawal-comparison-new-link": "स्टेकिंग लॉन्चपॅडला भेट द्या",
   "comp-withdrawal-credentials-placeholder": "व्हॅलिडेटर इंडेक्स",
   "comp-withdrawal-credentials-error": "अरेरे! व्हॅलिडेटर इंडेक्स नंबर पुन्हा तपासा आणि पुन्हा प्रयत्न करा.",
+  "comp-withdrawal-credentials-max-eb": "कमाल प्रभावी शिल्लक:",
   "comp-withdrawal-credentials-upgraded-1": "व्हॅलिडेटर इंडेक्स {validatorIndex} बक्षिसे मिळवण्यास प्रारंभ करण्यासाठी सज्ज आहे!",
   "comp-withdrawal-credentials-upgraded-2": "एक्झिक्यूशन ॲड्रेसशी लिंक केलेले पैसे काढण्याचे क्रेडेंशियल्स:",
   "comp-withdrawal-credentials-not-upgraded-1": "या {network} व्हॅलिडेटरला अपग्रेड करणे आवश्यक आहे.",

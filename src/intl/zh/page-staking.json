@@ -12,6 +12,7 @@
   "comp-withdrawal-credentials-error": "哎呀！请仔细检查验证者索引编号然后重试。",
   "comp-withdrawal-credentials-upgraded-1": "验证者引索 {validatorIndex} 准备好开始接收奖励了！",
   "comp-withdrawal-credentials-upgraded-2": "关联执行地址的提款凭证：",
+  "comp-withdrawal-credentials-max-eb": "最大有效余额：",
   "comp-withdrawal-credentials-not-upgraded-1": "此 {network} 验证者需要升级。",
   "comp-withdrawal-credentials-not-upgraded-2": "如何升级的说明目前可以在<a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">质押启动板</a>上找到。",
   "comp-withdrawal-credentials-verify": "在 {network} 上验证",

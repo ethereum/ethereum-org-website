@@ -7,21 +7,28 @@ image: /images/staking/leslie-withdrawal.png
 alt: Leslie the rhino with her staking rewards
 sidebarDepth: 2
 summaryPoints:
-  - The Shanghai/Capella upgrade enabled staking withdrawals on Ethereum
-  - Validator operators must provide a withdrawal address to enable
-  - Rewards are automatically distributed every few days
+  - Validator operators must provide a withdrawal address to enable withdrawals
+  - Legacy validators have excess balance over 32 ETH automatically withdrawn every few days
+  - Compounding validators earn rewards on their full balance up to 2048 ETH
   - Validators who fully exit staking will receive their remaining balance
 ---
 
 **Staking withdrawals** refer to transfers of ETH from a validator account on Ethereum's consensus layer (the Beacon Chain), to the execution layer where it can be transacted with.
 
-**Reward payments of excess balance** over 32 ETH will automatically and regularly be sent to a withdrawal address linked to each validator, once provided by the user. Users can also **exit staking entirely**, unlocking their full validator balance.
+How withdrawals work depends on your validator's withdrawal credential type:
+
+- **Legacy validators (Type 1)**: Excess balance over 32 ETH is automatically and regularly sent to the withdrawal address linked to the validator. Rewards above 32 ETH do not contribute to the validator's weight on the network.
+- **Compounding validators (Type 2)**: Rewards compound into the validator's effective balance up to 2048 ETH, increasing the validator's weight and earning more rewards. Only balance exceeding 2048 ETH is automatically swept.
+
+Users can also **exit staking entirely**, unlocking their full validator balance.
 
 ## Staking rewards {#staking-rewards}
 
-Reward payments are automatically processed for active validator accounts with a maxed out effective balance of 32 ETH.
+How rewards are handled depends on the validator's credential type:
 
-Any balance above 32 ETH earned through rewards does not actually contribute to principal, or increase the weight of this validator on the network, and is thus automatically withdrawn as a reward payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator. This is all initiated on the consensus layer, thus no gas (transaction fee) is required at any step.
+**Legacy validators (Type 1)** have an effective balance capped at 32 ETH. Any balance above 32 ETH earned through rewards does not contribute to principal or increase the weight of this validator on the network, and is automatically withdrawn as a reward payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator. This is all initiated on the consensus layer, thus no gas (transaction fee) is required at any step.
+
+**Compounding validators (Type 2)** can have an effective balance anywhere between 32 and 2048 ETH. Rewards earned by these validators compound into their effective balance, increasing the validator's weight and future rewards. Automatic sweeps only occur for balance exceeding 2048 ETH. To withdraw rewards below the 2048 ETH threshold, compounding validators must trigger a partial withdrawal manually from the execution layer, which does require gas.
 
 ### How did we get here? {#how-did-we-get-here}
 
@@ -50,11 +57,34 @@ Providing a withdrawal address is a required step for any validator account befo
 
 There is <strong>no threat to your funds in the meantime</strong> for not providing this, assuming your mnemonic/seed phrase has remained safe offline, and has not been compromised in any way. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
 
+## Compounding validators {#compounding-validators}
+
+Validators can opt into **compounding** by converting their withdrawal credentials from Type 1 to Type 2. This raises the maximum effective balance from 32 ETH to **2048 ETH**, allowing rewards to compound into the validator's effective balance instead of being automatically swept.
+
+With compounding enabled:
+
+- Rewards increase the validator's effective balance in 1 ETH increments (subject to a small [hysteresis buffer](https://www.attestant.io/posts/understanding-validator-effective-balance/)), earning more rewards over time
+- Automatic sweeps only occur for balance exceeding 2048 ETH
+- Partial withdrawals below the 2048 ETH threshold must be triggered manually from the execution layer (this costs gas)
+- Multiple validators can be **consolidated** into a single compounding validator, reducing operational overhead
+
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
+  <strong>Converting from Type 1 to Type 2 withdrawal credentials is irreversible.</strong> Use the <a href="https://launchpad.ethereum.org/validator-actions">Staking Launchpad</a> as the official tool for this conversion. For more details on the conversion process, risks, and consolidation, see the <a href="/roadmap/pectra/maxeb/">MaxEB deep-dive</a>.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
 ## Exiting staking entirely {#exiting-staking-entirely}
 
 Providing a withdrawal address is required before _any_ funds can be transferred out of a validator account balance.
 
-Users looking to exit staking entirely and withdraw their full balance back must also sign and broadcast a "voluntary exit" message with validator keys which will start the process of exiting from staking. This is done with your validator client and submitted to your consensus node, and does not require gas.
+Users looking to exit staking entirely and withdraw their full balance back must initiate a "voluntary exit". This can be done in two ways:
+
+- **Using validator keys**: Sign and broadcast a voluntary exit message with your validator client, submitted to your consensus node. This does not require gas.
+- **Using withdrawal credentials**: Trigger an exit from the execution layer using your withdrawal address, without needing access to the validator signing key. This requires a transaction and costs gas.
 
 The process of a validator exiting from staking takes variable amounts of time, depending on how many others are exiting at the same time. Once complete, this account will no longer be responsible for performing validator network duties, is no longer eligible for rewards, and no longer has their ETH "at stake". At this time the account will be marked as fully “withdrawable”.
 
@@ -62,7 +92,7 @@ Once an account is flagged as "withdrawable", and withdrawal credentials have be
 
 ## When were staking withdrawals enabled? {#when}
 
-Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on **April 12, 2023**.
+Withdrawal functionality was originally enabled as part of the Shanghai/Capella upgrade on **April 12, 2023**. The [Pectra upgrade](/roadmap/pectra/) (May 2025) later introduced compounding validators with a higher maximum effective balance of 2048 ETH, as well as execution layer triggered exits and partial withdrawals.
 
 The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into regular Ethereum accounts. This closed the loop on staking liquidity, and brought Ethereum one step closer on its journey towards building a sustainable, scalable, secure decentralized ecosystem.
 
@@ -100,7 +130,7 @@ While a proposer is sweeping through validators for possible withdrawals, each v
 
 1. **Has a withdrawal address been provided?** If no withdrawal address has been provided, the account is skipped and no withdrawal initiated.
 2. **Is the validator exited and withdrawable?** If the validator has fully exited, and we have reached the epoch where their account is considered to be "withdrawable", then a full withdrawal will be processed. This will transfer the entire remaining balance to the withdrawal address.
-3. **Is the effective balance maxed out at 32?** If the account has withdrawal credentials, is not fully exited, and has rewards above 32 waiting, a partial withdrawal will be processed which transfers only the rewards above 32 to the user's withdrawal address.
+3. **Does the balance exceed the maximum effective balance?** For legacy (Type 1) validators, this threshold is 32 ETH. For compounding (Type 2) validators, this threshold is 2048 ETH. If the account has withdrawal credentials, is not fully exited, and has balance above its threshold, a partial withdrawal will be processed which transfers only the excess to the user's withdrawal address.
 
 There are only two actions that are taken by validator operators during the course of a validator's life cycle that influence this flow directly:
 
@@ -109,7 +139,9 @@ There are only two actions that are taken by validator operators during the cour
 
 ### Gas free {#gas-free}
 
-This approach to staking withdrawals avoids requiring stakers to manually submit a transaction requesting a particular amount of ETH to be withdrawn. This means there is **no gas (transaction fee) required**, and withdrawals also do not compete for existing execution layer block space.
+Automatic withdrawal sweeps do not require stakers to manually submit a transaction. This means there is **no gas (transaction fee) required** for automatic sweeps, and they do not compete for existing execution layer block space.
+
+Note that [compounding validators](#compounding-validators) who wish to trigger a partial withdrawal below the 2048 ETH threshold must do so manually from the execution layer, which does require gas.
 
 ### How frequently will I get my staking rewards? {#how-soon}
 
@@ -170,7 +202,9 @@ title="Do reward payments (partial withdrawals) happen automatically?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-Yes, as long as your validator has provided a withdrawal address. This must be provided once to initially enable any withdrawals, then reward payments will be automatically triggered every few days with each validator sweep.
+For **legacy (Type 1) validators**, yes — as long as your validator has provided a withdrawal address. This must be provided once to initially enable any withdrawals, then reward payments will be automatically triggered every few days with each validator sweep.
+
+For **compounding (Type 2) validators**, rewards compound into the effective balance rather than being swept. Automatic sweeps only occur for balance exceeding 2048 ETH. To withdraw rewards below this threshold, you must manually trigger a partial withdrawal from the execution layer.
 </ExpandableCard>
 
 <ExpandableCard
@@ -189,9 +223,9 @@ Once a validator has completed the exiting process, and assuming the account has
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
-Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake. This includes full balances for accounts that have completed the exiting process.
+For **legacy (Type 1) validators**, withdrawals are pushed automatically, transferring any ETH that is not actively contributing to stake. This includes full balances for accounts that have completed the exiting process. It is not possible to manually request specific amounts of ETH to be withdrawn for Type 1 validators.
 
-It is not possible to manually request specific amounts of ETH to be withdrawn.
+**Compounding (Type 2) validators** can trigger partial withdrawals of a specific amount from the execution layer, as long as the remaining balance stays at or above 32 ETH. This requires a transaction and costs gas.
 </ExpandableCard>
 
 <ExpandableCard
@@ -214,9 +248,33 @@ eventName="read more">
 No. Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated.
 </ExpandableCard>
 
+<ExpandableCard
+title="What is the difference between legacy and compounding validators?"
+eventCategory="FAQ"
+eventAction="What is the difference between legacy and compounding validators?"
+eventName="read more">
+Legacy validators use **Type 1** withdrawal credentials and have an effective balance capped at 32 ETH. Any excess is automatically swept to the withdrawal address every few days.
+
+Compounding validators use **Type 2** withdrawal credentials and can have an effective balance up to 2048 ETH. Rewards compound into their effective balance, increasing the validator's weight on the network and future rewards. Automatic sweeps only occur for balance exceeding 2048 ETH. To withdraw below this threshold, a manual partial withdrawal must be triggered from the execution layer.
+
+For more details, see the [MaxEB deep-dive](/roadmap/pectra/maxeb/).
+</ExpandableCard>
+
+<ExpandableCard
+title="How do I convert to a compounding validator?"
+eventCategory="FAQ"
+eventAction="How do I convert to a compounding validator?"
+eventName="read more">
+You can convert from Type 1 to Type 2 withdrawal credentials using the <a href="https://launchpad.ethereum.org/validator-actions">Staking Launchpad</a>. This operation is **irreversible** — once you convert, you cannot go back to Type 1 credentials.
+
+After converting, you can also **consolidate** multiple validators into one, combining their balances into a single compounding validator. For a full walkthrough of the conversion process, risks, and consolidation tooling, see the [MaxEB deep-dive](/roadmap/pectra/maxeb/).
+</ExpandableCard>
+
 ## Further reading {#further-reading}
 
 - [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
+- [Staking Launchpad Validator Actions](https://launchpad.ethereum.org/validator-actions)
+- [MaxEB deep-dive: compounding and consolidation](/roadmap/pectra/maxeb/)
 - [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
