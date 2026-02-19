@@ -1,10 +1,10 @@
-# The DeSci Movement with Juan Benet
+A seminar presentation by **Juan Benet**, founder of Protocol Labs and inventor of IPFS and Filecoin, on how the decentralized science (DeSci) movement can transform scientific research over the next decade. Recorded as part of the Future of Science Seminar series hosted by the DeSci Foundation. 
 
-A seminar presentation by **Juan Benet**, founder of Protocol Labs and inventor of IPFS and Filecoin, on how the decentralized science (DeSci) movement can transform scientific research over the next decade. Recorded as part of the Future of Science Seminar series hosted by the DeSci Foundation.
+*This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=5ORvbCIW39o) published by the DeSci Foundation. It has been lightly edited for readability.*
 
 **Host:** Welcome to the Future of Science Seminar. This time we're joined by Juan Benet, founder of Protocol Labs and the inventor of IPFS and Filecoin. In this seminar, we talk about Juan's visions for the next thirty years in science and technology — including how we can close the gap between scientific research and technological innovation, translating new knowledge into new technologies. We also talk about research funding, how we can increase it, and how we can make sure it's spent more efficiently. And we talk about open source software development and how it's a lot like open science — with the exception that open source software is really a thing in software development, while open science is kind of a niche. We explore why that is and what we can do to change that, so make sure you stick around for that part as well.
 
-## Science as the Engine of Progress {0:59}
+## Science as the engine of progress {0:59}
 
 **Juan Benet:** What I'm going to do today is focus on DeSci — the DeSci-oriented changes and the opportunities it has to improve science over the next two to five years. The technology changes happening now can put in place a better trajectory for the next five to fifteen years. There are other technological improvements to science that are going to be transcendental — things like all of the machine-learning-based discovery — but I'm going to separate that out into a future conversation.
 
@@ -18,7 +18,7 @@ In a sense, most of our day-to-day attention as a species doesn't go to science,
 
 Science tends to be divided into many different fields, but the divisions are much fuzzier than they might have been portrayed. There are tons of areas of science that we have yet to discover, all kinds of physical laws and emerging phenomena we haven't found yet. This is an ever-expanding range of knowledge, and what we need to get really good at is systematizing this area of discovery — this process by which we find things out as an entire species, ideally leveraging all the technology at our disposal.
 
-## The Scientific Method at Scale {7:50}
+## The scientific method at scale {7:50}
 
 Everyone knows the scientific method is a cornerstone of the individual approach to science — formulating better explanations and hypotheses, creating testable ways of falsifying those hypotheses, discarding bad ones, and arriving at better structures. From there you share results and get peer review.
 
@@ -34,13 +34,13 @@ DeSci in general is an attempt by many groups around the world that recognize pr
 
 Science works extremely well for many things, but today we can point to all kinds of problems. Misallocated funding. Enormous amounts of time going to writing grant proposals. Grant-making systems whose selective ability isn't particularly good — there have been experiments where replacing them with drastically more efficient approaches doesn't perform much worse. We lose data over time as papers age. Software environments rot. Our ability to reproduce and reconfirm results decreases over time. This is a ridiculous problem given that we have computers, version control, and vast data storage. We should have a dramatically higher standard for how we keep our scientific results and data.
 
-## Open Access and Knowledge Distribution {13:54}
+## Open access and knowledge distribution {13:54}
 
 Beyond data issues, there's the Open Access movement. We're in a much better place than we were fifteen years ago. Back then, many papers around the world had a bleak future behind paywalls. Today, many laws have been passed that have improved this dramatically, and we can see a pathway toward all kinds of scientific results being forced to be open access.
 
 However, in practice, when you try to find papers, you still hit all kinds of paywalls and friction. We still have a bad, predatory system where parties that are supposed to keep our data, disseminate it well, and highlight it aren't doing that well — and they end up rate-limiting the progress of science through bad data practices and withholding access. This is an area that needs drastic improvement. The good news is we have all of the tools needed to build a better system. It just depends on coordinating social change and building alternative platforms.
 
-## What Is DeSci? {16:04}
+## What is DeSci? {16:04}
 
 DeSci is an approach to address some of these problems with technologies available today. It's not going to solve everything on its own — it's a subset of approaches that starts from organizing systems in a more bottom-up way, as opposed to relying on very large-scale institutions to prescribe how things are done.
 
@@ -52,7 +52,7 @@ There are lots of different organizations in this space — the landscape has pe
 
 One thing that's very exciting to see is how broadly international this movement is. Having grown up in different places and seen how different institutions work, certain countries just have better infrastructure for doing science. It's been great to see the DeSci movement exporting and diffusing infrastructure to be broadly available to anybody around the internet.
 
-## Funding Structures and the Innovation Chasm {19:54}
+## Funding structures and the innovation chasm {19:54}
 
 I want to talk about funding structures — both the short-term and long-term picture, bounded in the ten to twenty year time scale. There are really massive opportunities here for DeSci.
 
@@ -74,7 +74,7 @@ The problem today is that these fields are broken up by systemic structures. Mos
 
 If we can create a way of linking credit attribution and tracing how conceptual results yield certain technologies that do extremely well in the market over a ten to twenty year scale, we can build a regenerative loop connecting these two areas and build a much stronger way of funding science — especially today, when the fruits of scientific enterprise are being used by corporations generating massive revenue that never flows back to the beginning.
 
-## Worldwide R&D Funding Scale {29:44}
+## Worldwide R&D funding scale {29:44}
 
 You can look at worldwide R&D funding as fairly large relative to past periods of history, but these scales don't quite match the GDP of the nations investing in them. Just by looking at the actual scales and comparing to similar areas of investment, you can see why certain things aren't progressing that strongly.
 
@@ -84,7 +84,7 @@ If humanity properly invested in science at the scale that it deserves, say five
 
 The amazing thing about the last year and a half is seeing a ton of groups already tackling these kinds of problems, building different grant structures and grant programs. Special highlight to Gitcoin in the DeSci space — many groups are talking about different mechanisms that could be deployed.
 
-## New Funding Mechanisms {34:27}
+## New funding mechanisms {34:27}
 
 There are new algorithmic ways of gathering input from many participants in a community to make funding allocation decisions — things like the S-process, N-process, and quadratic funding.
 
@@ -96,7 +96,7 @@ Another area where we've perhaps under-invested but which is potentially extreme
 
 If the startup world helped make it way easier to start corporations, how could we create an analogous environment for starting new scientific labs or R&D labs? The ability to innovate in the structure of science itself has a much lower innovation rate compared to the commercial sector. With DAOs and crypto wallets, you already have what you need to organize people with some funding structure and decision-making ability.
 
-## Coordination and Open Source Parallels {38:57}
+## Coordination and open source parallels {38:57}
 
 Even with better funding structures, better reward allocation, and better incentives, we still need better ways of coordinating. I've been disappointed that in the last twenty years, we haven't seen that much success in how to organize large groups of people beyond the traditional structures discovered in the last century and a half.
 
@@ -104,7 +104,7 @@ The open source movement and the emergence of version control and GitHub is an e
 
 What are the analogs of those structures that we could build for scientific enterprises? The DeSci movement is generating a lot of conversation about this. There are lots of talks and discussions about potential mechanisms, and the last year alone has yielded tons of new structures and innovative ideas. I think 2023 is a time to put a lot of these into action — we've spent time deploying a few and generating many ideas; now we need to turn more of those ideas into measurable experiments.
 
-## Better Tooling for Scientists {42:24}
+## Better tooling for scientists {42:24}
 
 I want to go deeper on some concrete areas where I think we can have short-term successes. The first area is knowledge and making it open access — things like the kind of efforts around peer review tools, new kinds of structures for organizing how knowledge gets assessed and processed.
 
@@ -116,7 +116,7 @@ IPFS itself began as an attempt to accelerate science by enabling broad distribu
 
 This is being scaled now with the inclusion of CIDs in scientific literature. Papers are starting to include CIDs, which means you can make the publication graph itself interlinked with content identifiers — direct cryptographic identifiers for each paper, artifact, or dataset.
 
-## Data Infrastructure and Reproducibility {47:02}
+## Data infrastructure and reproducibility {47:02}
 
 So one part is being able to move around all the information — providing free and open access to everybody around the world. This is already working pretty well. There are lots of large-scale paper archives moved around with IPFS, and lots of data archives as well.
 
@@ -124,7 +124,7 @@ The next step is getting to reproducible pipelines — being able to describe al
 
 The people working on this have to fight against traditional choices that software development platforms tend to make, and really create an environment optimizing for reproducibility.
 
-## Large-Scale Decentralized Compute {49:10}
+## Large-scale decentralized compute {49:10}
 
 Another piece is building computable platforms for larger-scale data science. I think one of the areas 2023 is going to bring is this: we have large-scale incentivized platforms for storage and compute, and now we can start doing large-scale data science over them — data pipelines in the hundreds of petabytes scale, with massive datasets, running computations over them.
 
@@ -136,7 +136,7 @@ I want to finish with a broader call to action: join up and try to create new fu
 
 **Host:** Wonderful, thank you so much Juan.
 
-## Q&A Session {52:10}
+## Q&A session {52:10}
 
 **Host:** How can traditional science funders like the NSF or NIH participate in DeSci without disrupting existing structures?
 
