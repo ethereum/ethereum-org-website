@@ -1,89 +1,92 @@
 ---
-title: Yeni Başlayanlar İçin Merhaba Dünya Akıllı Sözleşmesi - FullStack
-description: Ethereum üzerinde basit bir akıllı sözleşme yazma ve dağıtmaya yönelik giriş seviyesinde öğretici.
+title: Hello World Smart Contract for Beginners - Fullstack
+description: "Ethereum'da basit bir akıllı sözleşme yazma ve dağıtma üzerine başlangıç seviyesi bir öğretici."
 author: "nstrike2"
 tags:
-  - "solidity"
-  - "hardhat"
-  - "alchemy"
-  - "akıllı sözleşmeler"
-  - "dağıtma"
-  - "blok bulucu"
-  - "ön yüz"
-  - "İşlemler"
+  [
+    "katılık",
+    "hardhat",
+    "alchemy",
+    "akıllı kontratlar",
+    "dağıtma",
+    "block explorer",
+    "ön uç",
+    "işlemler"
+  ]
 skill: beginner
 lang: tr
 published: 2021-10-25
 ---
 
-Bu rehber, blokzincir geliştirme konusunda yeniyseniz, nereden başlayacağınızı bilmiyorsanız veya akıllı sözleşmeleri nasıl dağıtacağınızı ya da onlarla nasıl etkileşim kuracağınızı bilmiyorsanız tam size göre. Size, Goerli test ağında [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org) ve [Alchemy](https://alchemyapi.io/eth)'yi kullanarak basit bir akıllı sözleşme oluşturmayı ve dağıtmayı öğreteceğiz.
+This guide is for you if you are new to blockchain development and don't know where to start or how to deploy and interact with smart contracts. We will walk through creating and deploying a simple, smart contract on the Goerli test network using [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), and [Alchemy](https://alchemy.com/eth).
 
-Bu öğreticiyi tamamlamak için bir Alchemy hesabına ihtiyacınız olacak. [Ücretsiz bir hesap açmak için kaydolun](https://www.alchemy.com/).
+You'll need an Alchemy account to complete this tutorial. [Sign up for a free account](https://www.alchemy.com/).
 
-Herhangi bir noktada sorunuz olursa, [Alchemy Discord](https://discord.gg/gWuC7zB)'unu ziyaret etmekten çekinmeyin!
+If you have questions at any point, feel free to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
-## 1. Bölüm - Hardhat Kullanarak Akıllı Sözleşmenizi Oluşturma ve Dağıtma {#part-1}
+## Part 1 - Create and Deploy your Smart Contract using Hardhat {#part-1}
 
-### Ethereum ağına bağlanın {#connect-to-the-ethereum-network}
+### Connect to the Ethereum network {#connect-to-the-ethereum-network}
 
-Ethereum zincirine istek göndermenin birçok yolu vardır. Kolay anlaşılabilmesi için düğümü kendimiz çalıştırmadan Ethereum zinciriyle bağlantı kurabilmemize olanak tanıyan bir blokzincir geliştirme platformu ve API'si olan Alchemy'de açtığımız ücretsiz bir hesabı kullanacağız. Alchemy ayrıca, akıllı sözleşme dağıtımımızda arka planda neler olup bittiğini anlamak için bu öğreticide yararlanacağımız izleme ve analitiğe yönelik geliştirici araçlarına sahiptir.
+Ethereum zincirine istek göndermenin birçok yolu vardır. For simplicity, we'll use a free account on Alchemy, a blockchain developer platform and API that allows us to communicate with the Ethereum chain without running a node ourselves. Alchemy also has developer tools for monitoring and analytics; we'll take advantage of these in this tutorial to understand what's going on under the hood in our smart contract deployment.
 
-### Uygulamanızı ve API anahtarınızı oluşturun {#create-your-app-and-api-key}
+### Create your app and API key {#create-your-app-and-api-key}
 
-Bir Alchemy hesabı oluşturduktan sonra, bir uygulama yaratarak bir API anahtarı oluşturabilirsiniz. Bu Goerli test ağına taleplerde bulunmanızı sağlayacaktır. Test ağlarıyla ilgili pek bilginiz yoksa [Alchemy'nin ağ seçme rehberini okuyabilirsiniz](https://docs.alchemyapi.io/guides/choosing-a-network).
+Once you've created an Alchemy account, you can generate an API key by creating an app. This will allow you to make requests to the Goerli testnet. If you're not familiar with testnets you can [read Alchemy's guide to choosing a network](https://www.alchemy.com/docs/choosing-a-web3-network).
 
-Alchemy'nin sayfasında **Uygulamalar** seçeneğini bulun ve aşağı inip **Uygulama Oluştur**'a tıklayın.
+On the Alchemy dashboard, find the **Apps** dropdown in the navigation bar and click **Create App**.
 
 ![Merhaba dünya uygulama oluşturma](./hello-world-create-app.png)
 
-Uygulamanıza "_Merhaba Dünya_" ismini verin ve kısa bir açıklama yazın. Ortam olarak **Hazırlama**'yı ve ağ olarak da **Goerli**'yi seçin.
+Give your app the name '_Hello World_' and write a short description. Select **Staging** as your environment and **Goerli** as your network.
 
-![merhaba dünya görüntüleme uygulamasını oluşturma](./create-app-view-hello-world.png)
+![uygulama oluşturma görünümü merhaba dünya](./create-app-view-hello-world.png)
 
-_Not: **Goerli**'yi seçmezseniz bu öğretici çalışmaz._
+_Note: be sure to select **Goerli**, or this tutorial won't work._
 
-**Uygulama oluştur**'a tıklayın. Uygulamanız aşağıdaki tabloda görünecektir.
+Click **Create app**. Your app will appear in the table below.
 
-### Bir Ethereum hesabı oluşturun {#create-an-ethereum-account}
+### Create an Ethereum account {#create-an-ethereum-account}
 
-İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacınız vardır. Kullanıcıların Ethereum hesap adreslerini yönetmelerini sağlayan bir sanal tarayıcı cüzdanı olan MetaMask'i kullanacağız.
+You need an Ethereum account to send and receive transactions. We'll use MetaMask, a virtual wallet in the browser that lets users manage their Ethereum account address.
 
-[Buradan](https://metamask.io/download) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken ya da zaten bir hesabınız varsa, sağ üstten "Goerli Test Ağına" geçin (bu sayede gerçek parayla denemeler yapmayız).
+MetaMask'ı [buradan](https://metamask.io/download) ücretsiz indirip bir hesap oluşturabilirsiniz. When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right (so that we’re not dealing with real money).
 
 ### Adım 4: Bir Musluktan ether ekleyin {#step-4-add-ether-from-a-faucet}
 
-Akıllı sözleşmenizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacınız olacak. Goerli ağında ETH alabilmek için bir Goerli musluğuna gidin ve Goerli hesabınızın adresini girin. Goerli musluklarının son zamanlarda biraz güvenilmez olduğunu da dikkate alın; [test ağları sayfası](/developers/docs/networks/#goerli)'ndan denenebilecek seçeneklerin listesine göz atın:
+To deploy your smart contract to the test network, you'll need some fake ETH. To get ETH on the Goerli network, go to a Goerli faucet and enter your Goerli account address. Note that Goerli faucets can be a bit unreliable recently - see the [test networks page](/developers/docs/networks/#goerli) for a list of options to try:
 
-_Not: Ağ sıkışıklığı sebebiyle bu biraz zaman alabilir._ ``
+_Note: due to network congestion, this might take a while._
+``
 
-### Adım 5: Bakiyenizi kontrol edin {#step-5-check-your-balance}
+### Step 5: Check your Balance {#step-5-check-your-balance}
 
-ETH'nin cüzdanınızda olduğundan emin olmak için [Alchemy'nin derleyici aracını](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) kullanarak bir [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) isteği oluşturalım. Bu, cüzdanımızdaki ETH miktarını döndürür. Daha fazla bilgi edinmek için [Alchemy'nin derleyici aracını kullanma hakkındaki kısa öğreticisine](https://youtu.be/r6sjRxBZJuU) göz atabilirsiniz.
+To double-check the ETH is in your wallet, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Bu, cüzdanımızdaki ETH miktarını döndürür. To learn more check out [Alchemy's short tutorial on how to use the composer tool](https://youtu.be/r6sjRxBZJuU).
 
-Metamask hesap adresinizi girin ve **İstek Gönder**'e tıklayın. Aşağıdaki ufak kod parçası gibi bir cevap göreceksiniz.
+Enter you input your MetaMask account address and click **Send Request**. You will see a response that looks like the code snippet below.
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> _Not: Bu sonuç ETH değil, wei cinsindendir. Wei, ether'ın en küçük birimi olarak kullanılır._
+> _Note: This result is in wei, not ETH. Wei is used as the smallest denomination of ether._
 
 Vay be! Tüm sahte paramız yerli yerinde.
 
-### Adım 6: Projemizi başlatın {#step-6-initialize-our-project}
+### Step 6: Initialize our project {#step-6-initialize-our-project}
 
-Önce, projemiz için bir klasör oluşturmamız gerekecek. Komut satırınıza gidin ve aşağıdakini girin.
+First, we'll need to create a folder for our project. Navigate to your command line and input the following.
 
 ```
 mkdir hello-world
 cd hello-world
 ```
 
-Artık proje klasörümüzün içinde olduğumuza göre, projeyi başlatmak için `npm init` kullanacağız.
+Artık proje klasörümüzün içinde olduğumuza göre projeyi başlatmak için `npm init` komutunu kullanacağız.
 
-> Eğer npm'i hala yüklemediyseniz [Node.js ve npm'i yüklemek için bu talimatları uygulayın](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> If you don’t have npm installed yet, follow [these instructions to install Node.js and npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
 
-Başlangıç sorularını nasıl cevapladığınız bu öğreticinin amacıyla alakasızdır. Biz referans olarak bu şekilde yaptık:
+For the purpose of this tutorial, it doesn't matter how you answer the initialization questions. Here is how we did it for reference:
 
 ```
 package name: (hello-world)
@@ -111,13 +114,13 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-package.json'ı onayladıktan sonra hazırız!
+package.json dosyasını onaylayın ve artık hazırız!
 
-### 7. Adım: Hardhat'i indirin {#step-7-download-hardhat}
+### Step 7: Download Hardhat {#step-7-download-hardhat}
 
 Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Bu geliştiricilere canlı zincirde dağıtmadan önce akıllı sözleşmelerini ve merkeziyetsiz uygulamalarını geliştirirken yardımcı olur.
 
-`hello-world` projemizin içinde şunu yürütün:
+`hello-world` projemizin içinde şunu çalıştırın:
 
 ```
 npm install --save-dev hardhat
@@ -125,9 +128,9 @@ npm install --save-dev hardhat
 
 [Kurulum talimatları](https://hardhat.org/getting-started/#overview) hakkında daha fazla ayrıntı için bu sayfaya göz atın.
 
-### Adım 8: Hardhat projesi oluşturun {#step-8-create-hardhat-project}
+### Step 8: Create Hardhat project {#step-8-create-hardhat-project}
 
-`hello-world` proje klasörümüzde aşağıdaki komutu çalıştırın:
+Inside our `hello-world` project folder, run:
 
 ```
 npx hardhat
@@ -153,30 +156,30 @@ Create a sample project
 Quit
 ```
 
-Bu, projenin içinde bir `hardhat.config.js` dosyası oluşturacaktır. Bunu, bu öğreticinin içinde daha sonra projemizin kurulumunu özelleştirmek için kullanacağız.
+This will generate a `hardhat.config.js` file in the project. We'll use this later in the tutorial to specify the setup for our project.
 
-### Adım 9: Proje klasörleri ekleyin {#step-9-add-project-folders}
+### Step 9: Add project folders {#step-9-add-project-folders}
 
-Bu projeyi düzenli tutmak için iki yeni klasör daha oluşturalım. Komut satırına `hello-world` projenizin kök rehberine gidip şunları yazın:
+To keep the project organized, let's create two new folders. In the command line, navigate to the root directory of your `hello-world` project and type:
 
 ```
 mkdir contracts
 mkdir scripts
 ```
 
-- `contracts/` merhaba dünya akıllı sözleşme kod dosyamızı tutacağımız yerdir
-- `scripts/`, sözleşmemizi dağıtmak ve etkileşim kurmak için komut dosyalarını tutacağımız yerdir
+- `contracts/`, merhaba dünya akıllı sözleşme kodu dosyamızı tutacağımız yerdir
+- `scripts/`, sözleşmemizi dağıtmak ve onunla etkileşim kurmak için komut dosyalarını tutacağımız yerdir
 
-### Adım 10: Sözleşmemizi yazın {#step-10-write-our-contract}
+### Step 10: Write our contract {#step-10-write-our-contract}
 
-Kendinize, ne zaman kod yazmaya başlayacağız diye mi soruyorsunuz? İşte o vakit geldi!
+You might be asking yourself, when are we going to write code? It's time!
 
-En sevdiğiniz düzenleyicide hello-world projenizi açın. Akıllı sözleşmeler genelde Solidity'de yazılır, biz de akıllı sözleşmemizi yazmak için onu kullanacağız.
+Open up the hello-world project in your favorite editor. Smart contracts most commonly are written in Solidity, which we will use to write our smart contract.‌
 
-1. `contracts` klasörüne gidin ve `HelloWorld.sol` adında bir dosya oluşturun
-2. Aşağıda bu öğreticide kullanacağımız örnek bir Hello World akıllı sözleşmesi var. Aşağıdaki içerikleri `HelloWorld.sol` dosyasına kopyalayın.
+1. Navigate to the `contracts` folder and create a new file called `HelloWorld.sol`
+2. Below is a sample Hello World smart contract that we will be using for this tutorial. Copy the contents below into the `HelloWorld.sol` file.
 
-_Not: Bu sözleşmenin ne yaptığını anlayabilmek için yorumları okuduğunuzdan emin olun._
+_Note: Be sure to read the comments to understand what this contract does._
 
 ```
 // Specifies the version of Solidity, using semantic versioning.
@@ -212,15 +215,15 @@ contract HelloWorld {
 }
 ```
 
-Bu, oluşturma aşaması tamamlandığında bir mesaj depolayan temel bir akıllı sözleşmedir. `update` fonksiyonunu kullanarak bu akıllı sözleşmeyi güncelleyebiliriz.
+This is a basic smart contract that stores a message upon creation. It can be updated by calling the `update` function.
 
-### Adım 11: MetaMask ve Alchemy'i projenize bağlayın {#step-11-connect-metamask-alchemy-to-your-project}
+### Step 11: Connect MetaMask & Alchemy to your project {#step-11-connect-metamask-alchemy-to-your-project}
 
-Bir MetaMask cüzdanı ile Alchemy hesabı oluşturduk ve akıllı sözleşmemizi yazdık, şimdi üçünü birleştirme zamanı.
+Bir MetaMask cüzdanı ve Alchemy hesabı oluşturduk ve akıllı sözleşmemizi yazdık, şimdi bu üçünü birbirine bağlama zamanı.
 
-Cüzdanınızdan gönderilen her işlem kendi benzersiz özel anahtarınızı kullanan bir imzaya ihtiyaç duyar. Programımıza bu izni sağlamak için özel anahtarımızı bir ortam dosyasında güvenle saklayabiliriz. Ayrıca burada, Alchemy için bir API anahtarı da depolayacağız.
+Every transaction sent from your wallet requires a signature using your unique private key. To provide our program with this permission, we can safely store our private key in an environment file. We will also store an API key for Alchemy here.
 
-> İşlem gönderme hakkında daha fazla bilgi edinmek için web3 kullanarak işlem gönderme ile ilgili [bu öğreticiye](https://docs.alchemyapi.io/alchemy/tutorials/sending-transactions-using-web3-and-alchemy) göz atın.
+> To learn more about sending transactions, check out [this tutorial](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) on sending transactions using web3.
 
 İlk önce dotenv paketini proje dizininize kurun:
 
@@ -228,14 +231,14 @@ Cüzdanınızdan gönderilen her işlem kendi benzersiz özel anahtarınızı ku
 npm install dotenv --save
 ```
 
-Sonra, projenin kök rehberinde bir `.env` dosyası oluşturun. MetaMask özel anahtarınızı ve HTTP Alchemy API URL'nizi bu dosyaya ekleyin.
+Then, create a `.env` file in the root directory of the project. Add your MetaMask private key and HTTP Alchemy API URL to it.
 
-Ortam dosyanızın adı `.env` olmak zorundadır, aksi takdirde ortam dosyası olarak tanınmaz.
+Your environment file must be named `.env` or it won't be recognized as an environment file.
 
-Dosyanıza `process.env`, `.env-custom` ya da başka bir isim vermeyin.
+Do not name it `process.env` or `.env-custom` or anything else.
 
-- Özel anahtarınızı almak için [şu talimatları](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) takip edin
-- HTTP Alchemy API URL'sini almak için aşağıya göz atın
+- Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key
+- HTTP Alchemy API URL'sini almak için aşağıya bakın
 
 ![](./get-alchemy-api-key.gif)
 
@@ -246,13 +249,13 @@ API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
-Bunları kodumuza gerçekten bağlamak için, adım 13'te `hardhat.config.js` dosyamızda bu değişkenlere başvuracağız.
+Bunları gerçekten kodumuza bağlamak için 13. adımda `hardhat.config.js` dosyamızdaki bu değişkenlere başvuracağız.
 
-### Adım 12: Ethers.js'yi kurun {#step-12-install-ethersjs}
+### Adım 12: Ethers.js'i Yükleyin {#step-12-install-ethersjs}
 
-Ethers.js, [standart JSON-RPC yöntemlerini](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) daha kullanıcı dostu yöntemlerle birleştirerek Ethereum'la etkileşimde bulunmayı ve Ethereum'a istek göndermeyi kolaylaştıran bir kütüphanedir.
+Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) with more user friendly methods.
 
-Hardhat, ek araçlar ve daha fazla işlevsellik için [eklentiler](https://hardhat.org/plugins/) kullanmamıza olanak tanır. Sözleşme dağıtımı için [Ethers eklentisinden](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) yararlanacağız.
+Hardhat allows us to integrate [plugins](https://hardhat.org/plugins/) for additional tooling and extended functionality. We’ll be taking advantage of the [Ethers plugin](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) for contract deployment.
 
 Proje klasörünüzde şunu yazın:
 
@@ -260,11 +263,11 @@ Proje klasörünüzde şunu yazın:
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### Adım 13: hardhat.config.js'yi güncelleyin {#step-13-update-hardhat-configjs}
+### Step 13: Update hardhat.config.js {#step-13-update-hardhat-configjs}
 
-Şimdiye kadar birkaç bağımlılık ve eklenti ekledik, şimdi projemizin bunların hepsini tanıması için `hardhat.config.js`'yi güncellememiz gerekiyor.
+Şimdiye kadar birkaç bağımlılık ve eklenti ekledik, şimdi projemizin hepsini tanıması için `hardhat.config.js` dosyasını güncellememiz gerekiyor.
 
-`hardhat.config.js` dosyanızı şöyle görünecek şekilde güncelleyin:
+`hardhat.config.js` dosyanızı aşağıdaki gibi görünecek şekilde güncelleyin:
 
 ```javascript
 /**
@@ -289,9 +292,9 @@ module.exports = {
 }
 ```
 
-### Adım 14: Sözleşmemizi derleyin {#step-14-compile-our-contract}
+### Step 14: Compile our contract {#step-14-compile-our-contract}
 
-Şimdiye kadar yaptığımız her şeyin çalıştığından emin olmak için sözleşmemizi derleyelim. `compile` görevi, yerleşik hardhat görevlerden biridir.
+Şimdiye kadar yaptığımız her şeyin çalıştığından emin olmak için sözleşmemizi derleyelim. `compile` görevi, yerleşik hardhat görevlerinden biridir.
 
 Komut satırından şunu yürütün:
 
@@ -299,13 +302,13 @@ Komut satırından şunu yürütün:
 npx hardhat compile
 ```
 
-`SPDX license identifier not provided in source file` uyarısı alabilirsiniz, ancak bunun için endişelenmenize gerek yok, geri kalan her şey düzgün olacaktır! Düzgün değilse, istediğiniz zaman [Alchemy discord](https://discord.gg/u72VCg3)'da mesaj gönderebilirsiniz.
+You might get a warning about `SPDX license identifier not provided in source file`, but no need to worry about that — hopefully everything else looks good! Sorun yaşarsanız [Alchemy Discord](https://discord.gg/u72VCg3) üzerinden her zaman mesaj atabilirsiniz.
 
-### Adım 15: Dağıtım komut dosyamızı yazın {#step-15-write-our-deploy-script}
+### Step 15: Write our deploy script {#step-15-write-our-deploy-script}
 
 Artık sözleşmemiz yazıldığına ve yapılandırma dosyamız kullanıma hazır olduğuna göre, sözleşme dağıtım komut dosyanızı yazmanın zamanı geldi.
 
-`scripts/` klasörüne gidin ve aşağıdaki içeriği ekleyerek `deploy.js` adlı yeni bir dosya oluşturun:
+`scripts/` klasörüne gidin ve `deploy.js` adında yeni bir dosya oluşturup içine aşağıdaki içeriği ekleyin:
 
 ```javascript
 async function main() {
@@ -324,23 +327,23 @@ main()
   })
 ```
 
-Hardhat, bu kod satırlarının her birinin ne işe yaradığını [Sözleşme öğreticisinde](https://hardhat.org/tutorial/testing-contracts.html#writing-tests) harika bir şekilde açıklıyor, Hardhat açıklamalarını buraya aktardık.
+Hardhat, [Sözleşmeler öğreticisinde](https://hardhat.org/tutorial/testing-contracts.html#writing-tests) bu kod satırlarının her birinin ne işe yaradığını harika bir şekilde açıklıyor, biz de buraya onların açıklamalarını aldık.
 
 ```javascript
 const HelloWorld = await ethers.getContractFactory("HelloWorld")
 ```
 
-Ethers.js'deki bir `ContractFactory`, yeni akıllı sözleşmeleri dağıtmak için kullanılan bir soyutlamadır, bu nedenle `HelloWorld`, merhaba dünya sözleşmemizin örnekleri için bir [fabrika](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>)'dır. `hardhat-ethers` eklentisini kullanırken `ContractFactory` ve `Contract` örnekleri varsayılan olarak ilk imzalayana (sahip) bağlanır.
+A `ContractFactory` in ethers.js is an abstraction used to deploy new smart contracts, so `HelloWorld` here is a [factory](https://en.wikipedia.org/wiki/Factory_\(object-oriented_programming\)) for instances of our hello world contract. When using the `hardhat-ethers` plugin `ContractFactory` and `Contract`, instances are connected to the first signer (owner) by default.
 
 ```javascript
 const hello_world = await HelloWorld.deploy()
 ```
 
-Bir `ContractFactory` üzerinde `deploy()` öğesinin çağrılması, dağıtımı başlatır ve `Contract` nesnesi olarak çözümlenen bir `Promise` döndürür. Bu, akıllı sözleşme fonksiyonlarımızın her biri için bir yöntemi olan nesnedir.
+Calling `deploy()` on a `ContractFactory` will start the deployment, and return a `Promise` that resolves to a `Contract` object. Bu, akıllı sözleşme fonksiyonlarımızın her biri için bir yöntemi olan nesnedir.
 
 ### Adım 16: Sözleşmemizi dağıtın {#step-16-deploy-our-contract}
 
-Sonunda akıllı sözleşmemizi uygulamaya hazırız! Komut satırına gidin ve şunu yürütün:
+Sonunda akıllı sözleşmemizi uygulamaya hazırız! Komut satırına gidin ve şunu çalıştırın:
 
 ```bash
 npx hardhat run scripts/deploy.js --network goerli
@@ -349,36 +352,36 @@ npx hardhat run scripts/deploy.js --network goerli
 Daha sonra şöyle bir şey görmelisiniz:
 
 ```bash
-Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
+Sözleşme şu adrese dağıtıldı: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-**Bu adresi lütfen kaydedin**. Öğreticide daha sonra kullanacağız.
+**Please save this address**. We will be using it later in the tutorial.
 
-[Goerli etherscan](https://goerli.etherscan.io)'e gider ve sözleşme adresimizi aratırsak başarıyla dağıtılmış olduğunu görürüz. İşlem şunun gibi gözükecektir:
+If we go to the [Goerli etherscan](https://goerli.etherscan.io) and search for our contract address we should able to see that it has been deployed successfully. İşlem şunun gibi gözükecektir:
 
 ![](./etherscan-contract.png)
 
-`From` adresi MetaMask hesap adresinizle eşleşmelidir ve `To` adresi **Sözleşme Oluşturma** ifadesini barındıracaktır. İşleme tıklarsak `To` alanında sözleşme adresimizi görürüz.
+The `From` address should match your MetaMask account address and the `To` address will say **Contract Creation**. If we click into the transaction we’ll see our contract address in the `To` field.
 
 ![](./etherscan-transaction.png)
 
-Tebrikler! Az önce Ethereum test ağına bir akıllı sözleşme dağıttınız.
+Tebrikler! You just deployed a smart contract to an Ethereum testnet.
 
-Perde arkasında neler olduğunu anlamak için [Alchemy gösterge panelimizde](https://dashboard.alchemyapi.io/explorer) Explorer (Gezgin) sekmesine gidelim. Birden fazla Alchemy uygulamanız varsa, uygulamaya göre filtreleme yaptığınızdan ve **Merhaba Dünya**'yı seçtiğinizden emin olun.
+To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemy.com/explorer). If you have multiple Alchemy apps make sure to filter by app and select **Hello World**.
 
 ![](./hello-world-explorer.png)
 
-Burada, `.deploy()` fonksiyonunu çağırdığımızda Hardhat/Ethers'ın bizim için arka planda oluşturduğu bir avuç JSON-RPC yöntemini göreceksiniz. Buradaki iki önemli yöntem, akıllı sözleşmemizi Goerli zincirine yazma isteği olan [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) ve karma değerine göre işlemimiz hakkındaki bilgileri okuma isteği olan [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) öğeleridir. İşlem gönderme hakkında daha fazla bilgi edinmek için [Web3 kullanarak işlem göndermeyle ilgili öğreticimize](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
+Here you’ll see a handful of JSON-RPC methods that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important methods here are [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), which is the request to write our contract onto the Goerli chain, and [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), which is a request to read information about our transaction given the hash. To learn more about sending transactions, check out [our tutorial on sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
-## 2. Bölüm: Akıllı Sözleşmenizle etkileşime geçin {#part-2-interact-with-your-smart-contract}
+## Part 2: Interact with your Smart Contract {#part-2-interact-with-your-smart-contract}
 
-Akıllı sözleşmemizi Goerli ağına başarılı bir şekilde dağıttığımıza göre, artık sözleşmeyle nasıl etkileşim kuracağımızı öğrenebiliriz.
+Now that we've successfully deployed a smart contract to the Goerli network let's learn how to interact with it.
 
-### Bir interact.js dosyası oluşturun {#create-a-interactjs-file}
+### Create a interact.js file {#create-a-interactjs-file}
 
-Bu etkileşim komut dosyamızı yazacağımız dosyadır. Burada, daha önce 1.Bölüm'de yüklemiş olduğunuz Ethers.js kütüphanesini kullancağız.
+This is the file where we'll write our interaction script. We'll be using the Ethers.js library that you previously installed in Part 1.
 
-`scripts/` dosyasının içinde `interact.js` adında yeni bir dosya oluşturun ve aşağıdaki kodu ekleyin:
+Inside the `scripts/`folder, create a new file named `interact.js` add the following code:
 
 ```javascript
 // interact.js
@@ -388,13 +391,13 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 ```
 
-### .env dosyanızı güncelleyin {#update-your-env-file}
+### Update your .env file {#update-your-env-file}
 
-Yeni ortam değişkenleri kullanacağımız için bu değişkenleri [daha önce oluşturduğumuz](#step-11-connect-metamask-&-alchemy-to-your-project) `.env` dosyasında tanımlayacağız.
+We will be using new environment variables, so we need to define them in the `.env`file that [we created earlier](#step-11-connect-metamask-&-alchemy-to-your-project).
 
-Alchemy `API_KEY`'imiz ve akıllı sözleşmenizin dağıtıldığı yer olan `CONTRACT_ADDRESS` için bir tanım eklememiz gerekecektir.
+We'll need to add a definition for our Alchemy `API_KEY` and the `CONTRACT_ADDRESS` where your smart contract was deployed.
 
-`.env` aşağıdaki gibi görünmelidir:
+Your `.env` file should look something like this:
 
 ```bash
 # .env
@@ -405,36 +408,36 @@ PRIVATE_KEY = "<your-metamask-private-key>"
 CONTRACT_ADDRESS = "0x<your contract address>"
 ```
 
-### Sözleşme ABI'nizi alın {#grab-your-contract-ABI}
+### Grab your contract ABI {#grab-your-contract-ABI}
 
-Sözleşme [ABI 'miz (Uygulama İkili Arayüzü)](/glossary/#abi), akıllı sözleşmemizle etkileşim kurmak için kullanılan arayüzdür. Hardhat otomatik olarak bir ABI oluşturur ve `HelloWorld.json`'un içine kaydeder. ABI'yi kullanmak için `interact.js` dosyamıza aşağıdaki kod satırlarını ekleyerek içeriği ayrıştırmamız gerekir:
+Our contract [ABI (Application Binary Interface)](/glossary/#abi) is the interface to interact with our smart contract. Hardhat automatically generates an ABI and saves it in `HelloWorld.json`. To use the ABI, we'll need to parse out the contents by adding the following lines of code to our `interact.js` file:
 
 ```javascript
 // interact.js
 const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json")
 ```
 
-ABI'yi görmek istiyorsanız onu konsolunuza yazdırabilirsiniz:
+ABI'yi görmek isterseniz konsolunuza yazdırabilirsiniz:
 
 ```javascript
 console.log(JSON.stringify(contract.abi))
 ```
 
-ABI'nizin konsola yazdırıldığını görmek için terminalinize gidin ve şunu çalıştırın:
+To see your ABI printed to the console, navigate to your terminal and run:
 
 ```bash
 npx hardhat run scripts/interact.js
 ```
 
-### Sözleşmenizin bir örneğini oluşturun {#create-an-instance-of-your-contract}
+### Create an instance of your contract {#create-an-instance-of-your-contract}
 
-Sözleşmenizle etkileşim kurmak için kodumuzda bir sözleşme örneği oluşturmamız gerekir. Bunu Ethers.js ile yapmak için üç konseptle çalışacağız:
+To interact with our contract, we need to create a contract instance in our code. To do so with Ethers.js, we'll need to work with three concepts:
 
-1. Sağlayıcı - size blockzincir için okuma ve yazma erişimi veren bir düğüm sağlayıcısıdır
-2. İmzalayıcı - işlem imzalayabilen bir Ethereum hesabını gösterir
-3. Sözleşme - zincir üstünde dağıtılmış olan spesifik bir sözleşmeyi temsil eden bir Ethers.js objesidir
+1. Provider - a node provider that gives you read and write access to the blockchain
+2. Signer - represents an Ethereum account that can sign transactions
+3. Contract - an Ethers.js object representing a specific contract deployed onchain
 
-Sözleşme örneğimizi oluşturmak için önceki adımdaki sözleşme ABI'mizi kullanacağız:
+We'll use the contract ABI from the previous step to create our instance of the contract:
 
 ```javascript
 // interact.js
@@ -456,15 +459,15 @@ const helloWorldContract = new ethers.Contract(
 )
 ```
 
-Sağlayıcı, İmzalayıcı ve Sözleşmelerle ilgili [ethers.js dokümanlarından](https://docs.ethers.io/v5/) daha fazla bilgi edinebilirsiniz.
+Learn more about Providers, Signers, and Contracts in the [ethers.js documentation](https://docs.ethers.io/v5/).
 
-### Başlangıç mesajını okuyun {#read-the-init-message}
+### Read the init message {#read-the-init-message}
 
-Sözleşmemizi `initMessage = "Hello world!"` ile dağıttığımızı hatırlıyor musunuz? Şimdi akıllı sözleşmemizde depolanmış olan bu mesajı okuyacağız ve konsola yazdıracağız.
+Remember when we deployed our contract with the `initMessage = "Hello world!"`? We are now going to read that message stored in our smart contract and print it to the console.
 
-JavaScript'te ağlarla etkileşim kurulurken asenkronize fonksiyonlar kullanılır. Asenkronize fonksiyonlarla ilgili daha fazla bilgi edinmek için [bu medium makalesini okuyun](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff).
+In JavaScript, asynchronous functions get used when interacting with networks. To learn more about asynchronous functions, [read this medium article](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff).
 
-Akıllı sözleşmemizdeki `message` fonksiyonunu çağırmak için aşağıdaki kodu kullanın ve başlangıç mesajını okuyun:
+Use the code below to call the `message` function in our smart contract and read the init message:
 
 ```javascript
 // interact.js
@@ -478,19 +481,19 @@ async function main() {
 main()
 ```
 
-Dosyayı terminaldeki `npx hardhat run scripts/interact.js` öğesini kullanarak çalıştırdıktan sonra şu yanıtı görmeliyiz:
+After running the file using `npx hardhat run scripts/interact.js` in the terminal we should see this response:
 
 ```
 The message is: Hello world!
 ```
 
-Tebrikler! Az önce Ethereum blokzincirinden başarıyla bir akıllı sözleşme verisi okudunuz, bravo!
+Tebrikler! You've just successfully read smart contract data from the Ethereum blockchain, way to go!
 
-### Mesajı güncelleyin {#update-the-message}
+### Update the message {#update-the-message}
 
-Sadece mesajı okumak yerine, `update` fonksiyonunu kullanarak akıllı sözleşmemizde kayıtlı olan mesajı güncelleyebiliriz! Oldukça havalı, değil mi?
+Instead of just reading the message, we can also update the message saved in our smart contract using the `update` function! Pretty cool, right?
 
-Bu mesajı güncellemek için somutlaşmış sözleşme nesnemizde doğrudan `update` fonksiyonunu çağırabiliriz:
+To update the message, we can directly call the `update` function on our instantiated Contract object:
 
 ```javascript
 // interact.js
@@ -508,13 +511,13 @@ async function main() {
 main()
 ```
 
-11. satırda dönen işlem nesnesi için `.wait()` çağrısını yaptığımızı not alın. Bunu yapmak, komut dosyamızın fonksiyondan çıkmadan önce işlemin blokzincirde basılmasını beklediğinden emin olmamızı sağlar. Eğer `.wait()` çağrısı dahil edilmemişse komut dosyası, sözleşmedeki güncellenmiş `message` değerini görmeyebilir.
+Note that on line 11, we make a call to `.wait()` on the returned transaction object. This ensures that our script waits for the transaction to get mined on the blockchain before exiting the function. If the `.wait()` call isn't included, the script may not see the updated `message` value in the contract.
 
-### Yeni mesajı okuyun {#read-the-new-message}
+### Read the new message {#read-the-new-message}
 
-Güncellenmiş `message` değerini okumak için [önceki adımı](#read-the-init-message) tekrar edebilmelisiniz. Bir saniye durun ve yeni değeri yazdırabilmek için gerekli değişiklikleri yapıp yapamadığınıza bakın!
+You should be able to repeat the [previous step](#read-the-init-message) to read the updated `message` value. Take a moment and see if you can make the changes necessary to print out that new value!
 
-Eğer ipucuna ihtiyacınız varsa, bu noktada `interact.js` dosyanız bu şekilde görünmelidir:
+If you need a hint, here's what your `interact.js` file should look like at this point:
 
 ```javascript
 // interact.js
@@ -556,7 +559,7 @@ async function main() {
 main()
 ```
 
-Şimdi sadece komut dosyasını çalıştırın; eski mesajı, güncelleme durumunu ve yeni mesajı terminalinizde yazdırılmış şekilde görebilmelisiniz!
+Now just run the script and you should be able to see the old message, the updating status, and the new message printed out to your terminal!
 
 `npx hardhat run scripts/interact.js --network goerli`
 
@@ -566,29 +569,29 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-Komut dosyasını çalıştırırken, yeni mesaj yüklenmeden önce `Updating the message...` adımının biraz uzun sürdüğünü fark edebilirsiniz. Bunun sebebi madencilik sürecidir; işlemleri çıkarılırken takip etme konusunda meraklıysanız işlemin durumunu görüntülemek için [Alchemy bellek havuzunu](https://dashboard.alchemyapi.io/mempool) ziyaret edebilirsiniz. İşlem düştüyse, [Goerli Etherscan](https://goerli.etherscan.io)'i kontrol etmek ve işlem karmanızı aramak da faydalı olur.
+While running that script, you may notice that the `Updating the message...` step takes a while to load before the new message loads. That is due to the mining process; if you are curious about tracking transactions while they are being mined, visit the [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of a transaction. If the transaction is dropped, it's also helpful to check [Goerli Etherscan](https://goerli.etherscan.io) and search for your transaction hash.
 
-## 3. Bölüm: Akıllı Sözleşmenizi Etherscan'de yayımlayın {#part-3-publish-your-smart-contract-to-etherscan}
+## Part 3: Publish your Smart Contract to Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
-Akıllı sözleşmenizi hayata geçirmek için tüm zor işleri hallettiniz, şimdi bunu dünyayla paylaşma zamanı!
+You did all the hard work of bringing your smart contract to life; now it's time to share it with the world!
 
-Akıllı sözleşmenizi Etherscan'de doğruladığınızda, herkes kaynak kodunuzu görebilir ve akıllı sözleşmenizle etkileşim kurabilir. Haydi başlayalım!
+By verifying your smart contract on Etherscan, anyone can view your source code and interact with your smart contract. Let's get started!
 
-### 1. Adım: Etherscan hesabınızda bir API anahtarı oluşturun {#step-1-generate-an-api-key-on-your-etherscan-account}
+### Step 1: Generate an API Key on your Etherscan account {#step-1-generate-an-api-key-on-your-etherscan-account}
 
-Etherscan API anahtarı paylaşmaya çalıştığınız akıllı sözleşmenin sahibinin siz olduğunu onaylamak için gereklidir.
+An Etherscan API Key is necessary to verify that you own the smart contract you are trying to publish.
 
-Eğer hala bir Etherscan hesabınız yoksa [hesap oluşturmak için kaydolun](https://etherscan.io/register).
+If you don't have an Etherscan account already, [sign up for an account](https://etherscan.io/register).
 
-Hesaba girdiğinizde, gezinti çubuğunda kullanıcı adınızı bulun, imleci üstüne getirin ve **Profilim** butonuna tıklayın.
+Once logged in, find your username in the navigation bar, hover over it and select the **My profile** button.
 
-Profil sayfanızda, bir yan gezinti çubuğu görmelisiniz. Yan gezinti çubuğundan **API Anahtarları**'nı seçin. Sonra, yeni bir API anahtarı oluşturmak için "Ekle" butonuna tıklayın, uygulamanıza **hello-world** adını verin ve **Yeni API Anahtarı Oluştur** butonuna tıklayın.
+On your profile page, you should see a side navigation bar. From the side navigation bar, select **API Keys**. Next, press the "Add" button to create a new API key, name your app **hello-world**and press the **Create New API Key** button.
 
-Yeni API anahtarınız API anahtar tablosunda görünüyor olmalıdır. API anahtarını panonuza kopyalayın.
+Your new API key should appear in the API key table. Copy the API key to your clipboard.
 
-Şimdi, `.env` dosyamıza Etherscan API anahtarını eklemeliyiz.
+Next, we need to add the Etherscan API key to our `.env` file.
 
-Ekledikten sonra, `.env` dosyanız şu şekilde görünmelidir:
+After adding it, your `.env`file should look like this:
 
 ```javascript
 API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
@@ -598,17 +601,17 @@ CONTRACT_ADDRESS = "your-contract-address"
 ETHERSCAN_API_KEY = "your-etherscan-key"
 ```
 
-### Hardhat dağıtılmış akıllı sözleşmeler {#hardhat-deployed-smart-contracts}
+### Hardhat-deployed smart contracts {#hardhat-deployed-smart-contracts}
 
-#### Hardhat-etherscan'i yükleme {#install-hardhat-etherscan}
+#### Install hardhat-etherscan {#install-hardhat-etherscan}
 
-Sözleşmenizi Hardhat kullanarak Etherscan'de yayımlamak basittir. Başlamak için öncelikle `hardhat-etherscan` eklentisini yüklemeniz gerekir. `hardhat-etherscan`, akıllı sözleşmenin kaynak kodunu ve ABI'sini Etherscan'de otomatik olarak doğrulayacaktır. Bunu eklemek için `hello-world` rehberinizde şunu çalıştırın:
+Publishing your contract to Etherscan using Hardhat is straightforward. You will first need to install the `hardhat-etherscan` plugin to get started. `hardhat-etherscan` will automatically verify the smart contract's source code and ABI on Etherscan. To add this, in the `hello-world` directory run:
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan
 ```
 
-Yüklendiğinde, aşağıdaki ifadeyi `hardhat.config.js`'nizin en üstüne dahil edin ve Etherscan yapılandırma seçeneklerini ekleyin:
+Once installed, include the following statement at the top of your `hardhat.config.js`, and add the Etherscan config options:
 
 ```javascript
 // hardhat.config.js
@@ -637,19 +640,19 @@ module.exports = {
 }
 ```
 
-#### Akıllı Sözleşmenizi Etherscan üzerinden doğrulama {#verify-your-smart-contract-on-etherscan}
+#### Verify your smart contract on Etherscan {#verify-your-smart-contract-on-etherscan}
 
-Tüm dosyaların kaydedildiğinden ve tüm değişkenlerin `.env` doğru şekilde yapılandırıldığından emin olun.
+Ensure all files are saved and all `.env` variables are correctly configured.
 
-`verify` görevini çalıştırarak sözleşme adresinizi ve ağınızı dağıtıldığı konuma aktarın:
+Run the `verify` task, passing the contract address, and the network to where it's deployed:
 
 ```text
 npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-`DEPLOYED_CONTRACT_ADDRESS` adresinin Goerli test ağında dağıtılan akıllı sözleşmenizin adresi olduğundan emin olun. Ayrıca son bağımsız değişken olan (`'Hello World!'`), 1. Bölüm'de dağıtım aşamasında kullanılan dizi değeriyle [ aynı olmak zorundadır](#write-our-deploy-script).
+Make sure that `DEPLOYED_CONTRACT_ADDRESS` is the address of your deployed smart contract on the Goerli test network. Also, the final argument (`'Hello World!'`) must be the same string value used [during the deploy step in part 1](#write-our-deploy-script).
 
-Eğer her şey yolunda gittiyse, terminalinizde aşağıdaki mesajı göreceksiniz:
+If all goes well, you will see the following message in your terminal:
 
 ```text
 Successfully submitted source code for contract
@@ -661,48 +664,48 @@ Successfully verified contract HelloWorld on Etherscan.
 https://goerli.etherscan.io/address/<contract-address>#contracts
 ```
 
-Tebrikler! Akıllı sözleşmeniz artık Etherscan'de!
+Tebrikler! Your smart contract code is on Etherscan!
 
-### Akıllı sözleşmenize Etherscan'de göz atın! {#check-out-your-smart-contract-on-etherscan}
+### Check out your smart contract on Etherscan! {#check-out-your-smart-contract-on-etherscan}
 
-Terminalinizde sağlanan bağlantıya gittiğinizde, akıllı sözleşme kodunuzun ve ABI'nizin Etherscan'de yayımlandığını göreceksiniz!
+When you navigate to the link provided in your terminal, you should be able to see your smart contract code and ABI published on Etherscan!
 
-**Bravo, başardınız! Artık herkes akıllı sözleşmenize yazabilir ya da onu çağırabilir! Bir dahaki sefere ne geliştireceğinizi görmek için sabırsızlanıyoruz!**
+**Wahooo - you did it champ! Now anyone can call or write to your smart contract! We can't wait to see what you build next!**
 
-## 4. Bölüm - Akıllı sözleşmenizi ön yüzle entegre etme {#part-4-integrating-your-smart-contract-with-the-frontend}
+## Part 4 - Integrating your smart contract with the frontend {#part-4-integrating-your-smart-contract-with-the-frontend}
 
-Bu öğreticinin sonuna geldiğinize, şunları nasıl yapacağınızı biliyor olacaksınız:
+By the end of this tutorial, you'll know how to:
 
-- Merkeziyetsiz uygulamanıza bir MetaMask cüzdanı bağlamak
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API'sini kullanarak akıllı sözleşmenizden veri okumak
-- MetaMask kullanarak Ethereum işlemlerini imzalamak
+- Connect a MetaMask wallet to your dapp
+- Read data from your smart contract using the [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API
+- Sign Ethereum transactions using MetaMask
 
-Bu merkeziyetsiz uygulama için ön yüz çerçevemiz olarak [React](https://reactjs.org/)'i kullanacağız, fakat genel olarak projemize Web3 işlevselliğini getirmeye odaklanacağımız için temellerini açıklamaya çok vakit ayırmayacağımızı unutmayın.
+For this dapp, we'll be using [React](https://react.dev/) as our frontend framework; however, it's important to note that we won't be spending much time breaking down its fundamentals, as we'll mostly be focusing on bringing Web3 functionality to our project.
 
-Ön şart olarak, React'i yeni başlayan seviyesinde anlıyor olmanız gerekir. Eğer böyle değilse, [Resmi React öğreticisini](https://reactjs.org/tutorial/tutorial.html) bitirmenizi tavsiye ederiz.
+As a prerequisite, you should have a beginner-level understanding of React. If not, we recommend completing the official [Intro to React tutorial](https://react.dev/learn).
 
-### Başlangıç ​​dosyalarını klonlayın {#clone-the-starter-files}
+### Başlangıç dosyalarını klonlayın {#clone-the-starter-files}
 
-İlk olarak, bu projenin başlangıç dosyalarını almak ve bu kaynağı kendi yerel makinemize klonlamak için [hello-world-part-four GitHub deposuna](https://github.com/alchemyplatform/hello-world-part-four-tutorial) gideceğiz.
+First, go to the [hello-world-part-four GitHub repository](https://github.com/alchemyplatform/hello-world-part-four-tutorial) to get the starter files for this project and clone this repository to your local machine.
 
-Klonlanmış depoyu yerel olarak açın. İki klasöre sahip olduğunu göreceksiniz: `starter-files` ve `completed`.
+Open the cloned repository locally. Notice that it contains two folders: `starter-files` and `completed`.
 
-- `starter-files`- **bu dizinde çalışacağız**, kullanıcı arayüzünü Ethereum cüzdanınıza ve [3. Bölüm](#part-3)'de Etherscan'de yayımladığımız akıllı sözleşmeye bağlayacağız.
-- Bu `completed`, tamamlanmış olan öğreticiyi içerir ve sadece takıldığınızda yararlanacağınız bir kaynak olarak kullanılmalıdır.
+- `starter-files`- **we will be working in this directory**, we will connect the UI to your Ethereum wallet and the smart contract we published to Etherscan in [Part 3](#part-3).
+- `completed` contains the entire completed tutorial and should only be used as a reference if you get stuck.
 
-Ardından, `starter-files` kopyanızı en sevdiğiniz kod düzenleyicide açın ve `src` klasörüne gidin.
+Next, open your copy of `starter-files` to your favorite code editor, and then navigate into the `src` folder.
 
-Yazacağımız tüm kodlar `src` klasörünün altında yer alacaktır. Projemize Web3 işlevselliğini eklemek için `HelloWorld.js` bileşenini ve `util/interact.js` JavaScript dosyalarını düzenleyeceğiz.
+Yazacağımız tüm kodlar `src` klasörünün altında yer alacaktır. We'll be editing the `HelloWorld.js` component and the `util/interact.js` JavaScript files to give our project Web3 functionality.
 
-### Başlangıç dosyalarına göz atın {#check-out-the-starter-files}
+### Check out the starter files {#check-out-the-starter-files}
 
-Kodlamaya başlamadan önce, başlangıç dosyalarında bize neler sağlandığını öğrenelim.
+Before we start coding, let's explore what is provided to us in the starter files.
 
 #### React projenizi çalıştırın {#get-your-react-project-running}
 
 Tarayıcımızda React projesini çalıştırarak başlayalım. React'in güzelliği, projemizi tarayıcımızda çalıştırdıktan sonra, kaydettiğimiz tüm değişikliklerin tarayıcımızda canlı olarak güncellenmesidir.
 
-Projeyi çalıştırmak için `starter-files` klasörünün kök dizinine gidip projenin bağımlılıklarını yüklemek için terminalinizde `npm install`'ı çalıştırın:
+To get the project running, navigate to the root directory of the `starter-files` folder, and the run `npm install` in your terminal to install the dependencies of the project:
 
 ```bash
 cd starter-files
@@ -715,15 +718,15 @@ Bunların kurulumu tamamlandıktan sonra terminalinizde `npm start` komutunu ça
 npm start
 ```
 
-Bunu yaptığınızda, tarayıcınızda projemizin ön ucunu göreceğiniz [http://localhost:3000/](http://localhost:3000/) adresi açılmalıdır. Bu, bir alandan \(akıllı sözleşmenizde depolanan mesajı güncellemek için bir yer\), bir "Connect Wallet" butonundan ve bir "Udate" butonundan oluşmalıdır.
+Doing so should open [http://localhost:3000/](http://localhost:3000/) in your browser, where you'll see the frontend for our project. It should consist of one field \(a place to update the message stored in your smart contract\), a "Connect Wallet" button, and an "Update" button.
 
-Butonlardan birini tıklamayı denediğinizde çalışmadığını göreceksiniz, bunun sebebi hala işlevselliklerini programlamamız gerekmesidir.
+If you try clicking either button, you'll notice that they don't work—that's because we still need to program their functionality.
 
-#### `HelloWorld.js` bileşeni {#the-helloworld-js-component}
+#### The `HelloWorld.js` component {#the-helloworld-js-component}
 
-Düzenleyicimizdeki `src` klasörüne geri dönelim ve `HelloWorld.js` dosyasını açalım. Üzerinde çalışacağımız birincil React bileşeni olduğu için bu dosyadaki her şeyi anlamamız çok önemlidir.
+Let's go back into the `src` folder in our editor and open the `HelloWorld.js` file. Üzerinde çalışacağımız birincil React bileşeni olduğu için bu dosyadaki her şeyi anlamamız çok önemlidir.
 
-Bu dosyanın en üstünde React kütüphanesini, useEffect ve useState kancalarını, `./util/interact.js`'den bazı öğeleri (bunları yakında daha detaylı anlatacağız!) ve Alchemy logosunu içeren ve projemizi çalışır hale getirmemiz için gerekli olan birkaç önemli içe aktarım ifadeleri olduğunu fark edeceksiniz.
+At the top of this file, you'll notice we have several import statements that are necessary to get our project running, including the React library, useEffect and useState hooks, some items from the `./util/interact.js` (we'll describe them in more details soon!), and the Alchemy logo.
 
 ```javascript
 // HelloWorld.js
@@ -741,7 +744,7 @@ import {
 import alchemylogo from "./alchemylogo.svg"
 ```
 
-Sırada, belirli olaylardan sonra güncelleyeceğimiz durum değişkenlerimiz var.
+Next, we have our state variables that we will update after specific events.
 
 ```javascript
 // HelloWorld.js
@@ -753,14 +756,14 @@ const [message, setMessage] = useState("No connection to the network.")
 const [newMessage, setNewMessage] = useState("")
 ```
 
-Değişkenlerin her birinin temsil ettiği şeyler:
+Here's what each of the variables represents:
 
-- `walletAddress` - kullanıcının cüzdan adresini saklayan bir dize
-- `status`- kullanıcıya, merkeziyetsiz uygulama ile nasıl etkileşim kuracağı konusunda yardımcı olacak mesajlar içeren bir dizi
-- `message` - akıllı sözleşmedeki güncel mesajı depolayan bir dizi
-- `newMessage` - akıllı sözleşmeye yazılacak yeni mesajı depolayan bir dizi
+- `walletAddress` - kullanıcının cüzdan adresini saklayan bir dizedir
+- `status`- a string that stores a helpful message that guides the user on how to interact with the dapp
+- `message` - a string that stores the current message in the smart contract
+- `newMessage` - a string that stores the new message that will be written to the smart contract
 
-Durum değişkenlerinden sonra, beş tane uygulanmamış fonksiyon göreceksiniz: `useEffect` ,`addSmartContractListener`, `addWalletListener`, `connectWalletPressed` ve `onUpdatePressed`. Bu fonksiyonların neler yaptığını aşağıda açıklayacağız:
+After the state variables, you'll see five un-implemented functions: `useEffect` ,`addSmartContractListener`, `addWalletListener` , `connectWalletPressed`, and `onUpdatePressed`. We'll explain what they do below:
 
 ```javascript
 // HelloWorld.js
@@ -787,11 +790,11 @@ const onUpdatePressed = async () => {
 }
 ```
 
-- [`useEffect`](https://reactjs.org/docs/hooks-effect.html)- bu, bileşeniniz oluşturulduktan sonra çağrılan bir React kancasıdır. İçine geçirilen boş bir `[]` dizisine sahip olduğundan \(4. satıra bakın\), yalnızca bileşenin _ilk_ oluşturmasında çağrılır. Buraya akıllı sözleşmemizde depolanan mesajı yükleyecek, akıllı sözleşmelerimizi ve cüzdan dinleyicilerimizi çağıracak ve kullanıcı arayüzümüzü, bir cüzdanın zaten bağlı olup olmadığını yansıtacak şekilde güncelleyeceğiz.
-- `addSmartContractListener`- bu fonksiyon, Merhaba Dünya sözleşmemizin `UpdatedMessages` olayını takip edecek ve akıllı sözleşmemizdeki mesaj değiştiğinde kullanıcı arayüzümüzü güncelleyecek bir dinleyici oluşturur.
-- `addWalletListener`- bu fonksiyon, kullanıcının bağlantıyı kesmesi ve adres değişiklikleri yapması gibi MetaMask cüzdan durumundaki değişiklikleri takip eder.
-- `connectWalletPressed`- bu fonksiyon, kullanıcının MetaMask cüzdanını merkeziyetsiz uygulamamıza bağlamak için çağrılır.
-- `onUpdatePressed` - bu fonksiyon, kullanıcı akıllı sözleşmede depolanan mesajı güncellemek istediğinde çağrılır.
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html)- this is a React hook that is called after your component is rendered. Because it has an empty array `[]` prop passed into it \(see line 4\), it will only be called on the component's _first_ render. Here we'll load the current message stored in our smart contract, call our smart contract and wallet listeners, and update our UI to reflect whether a wallet is already connected.
+- `addSmartContractListener`- this function sets up a listener that will watch for our HelloWorld contract's `UpdatedMessages` event and update our UI when the message is changed in our smart contract.
+- `addWalletListener`- this function sets up a listener that detects changes in the user's MetaMask wallet state, such as when the user disconnects their wallet or switches addresses.
+- `connectWalletPressed`- this function will be called to connect the user's MetaMask wallet to our dapp.
+- `onUpdatePressed` - this function will be called when the user wants to update the message stored in the smart contract.
 
 Bu dosyanın sonuna doğru, bileşenimizin kullanıcı arayüzü bulunuyor.
 
@@ -830,32 +833,33 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 
-Bu kodu dikkatli bir şekilde tararsanız, kullanıcı arayüzümüzde çeşitli durum değişkenleri kullandığımız yeri fark edeceksiniz:
+If you scan this code carefully, you'll notice where we use our various state variables in our UI:
 
-- 6 ila 12. satırlar arasında, kullanıcının cüzdanı bağlıysa \(örn.`walletAddress.length > 0`\), "walletButton;" kimlikli butonda kullanıcının `walletAddress`'inin kırpılmış bir versiyonunu gösteririz; aksi takdirde, sadece "Connect Wallet" yazar.
-- 17. satırda, akıllı sözleşmemizde depolanan ve `message` dizesinde bulunan güncel mesajımızı görüntüleriz.
-- 23-26. satırlar arasında `newMessage` durum değişkenimizi metin alanındaki girdi değiştiğinde güncelleyebilmek için bir [kontrollü bileşen](https://reactjs.org/docs/forms.html#controlled-components) kullanıyoruz.
+- On lines 6-12, if the user's wallet is connected \(i.e., `walletAddress.length > 0`\), we display a truncated version of the user `walletAddress` in the button with ID "walletButton;" otherwise it simply says "Connect Wallet."
+- On line 17, we display the current message stored in the smart contract, which is captured in the `message` string.
+- On lines 23-26, we use a [controlled component](https://legacy.reactjs.org/docs/forms.html#controlled-components) to update our `newMessage` state variable when the input in the text field changes.
 
-Durum değişkenlerimize ek olarak `publishButton` ve `walletButton` butonları sırasıyla tıklandığında `connectWalletPressed` ve `onUpdatePressed` fonksiyonlarının çağrıldığını da göreceksiniz.
+In addition to our state variables, you'll also see that `connectWalletPressed` and `onUpdatePressed` functions are called when the buttons with IDs `publishButton` and `walletButton` are clicked respectively.
 
-Son olarak, `HelloWorld.js` bileşeninin nereye eklendiğine değinelim.
+Finally, let's address where is this `HelloWorld.js` component added.
 
-React'teki diğer tüm bileşenler için bir kapsayıcı görevi gören ana bileşen olan `App.js` dosyasına giderseniz, `HelloWorld.js` bileşenimizin 7. satıra enjekte edildiğini görürsünüz.
+If you go to the `App.js` file, which is the main component in React that acts as a container for all other components, you'll see that our `HelloWorld.js` component is injected on line 7.
 
-Sonuncu ama diğerleriyle eşit öneme sahip olarak, size sağlanan bir dosyaya daha göz atalım: `interact.js` dosyası.
+Last but not least, let's check out one more file provided for you, the `interact.js` file.
 
-#### `interact.js` dosyası {#the-interact-js-file}
+#### The `interact.js` file {#the-interact-js-file}
 
-[M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) paradigmasını kurala bağlamak istediğimiz için merkeziyetsiz uygulamamızın mantığını, verilerini ve kurallarını yönetmek amacıyla fonksiyonlarımızı içeren ayrı bir dosya oluşturmak ve ardından bu fonksiyonları ön ucumuza \(our `HelloWorld.js` component\) aktarabilmek isteyeceğiz.
+Because we want to prescribe to the [M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) paradigm, we'll want a separate file that contains all our functions to manage the logic, data, and rules of our dapp, and then be able to export those functions to our frontend \(our `HelloWorld.js` component\).
 
-👆🏽Bu tam olarak `interact.js` dosyamızın amacı!
+👆🏽This is the exact purpose of our `interact.js` file!
 
-`src` dizininizde `util` klasörüne gittiğinizde bütün akıllı sözleşme etkileşimlerimizi, cüzdan işlevlerini ve değişkenleri içeren `interact.js` adında bir dosya eklemiş olduğumuzu göreceksiniz.
+Navigate to the `util` folder in your `src` directory, and you'll notice we've included a file called `interact.js` that will contain all of our smart contract interaction and wallet functions and variables.
 
 ```javascript
 // interact.js
@@ -871,55 +875,55 @@ const getCurrentWalletConnected = async () => {}
 export const updateMessage = async (message) => {}
 ```
 
-Bu dosyanın en üstündeki `helloWorldContract` nesnesine yorum yazdığımızı fark edeceksiniz. Bu öğreticinin ilerleyen kısımlarında, nesnenin yorumkarını kaldıracak, akıllı sözleşmemimizi bu değişkenin içinde oluşturacak ve ardından `HelloWorld.js` bileşenimize aktaracağız.
+You'll notice at the top of the file that we've commented out the `helloWorldContract` object. Later in this tutorial, we will uncomment this object and instantiate our smart contract in this variable, which we will then export into our `HelloWorld.js` component.
 
-`helloWorldContract` nesnemiz aşağıdakileri yaptıktan sonra dört uygulanmamış fonksiyon:
+The four unimplemented functions after our `helloWorldContract` object do the following:
 
-- `loadCurrentMessage` - bu fonksiyon, akıllı sözleşmede depolanan güncel mesajın yüklenmesinin mantığını işler. Merhaba Dünya akıllı sözleşmesine, [Alchemy Web3 API](https://github.com/alchemyplatform/alchemy-web3)'sini kullanarak bir _okuma_ çağrısı yapacaktır.
-- `connectWallet` - bu fonksiyon, kullanıcının MetaMask'ını merkeziyetsiz uygulamamıza bağlar.
-- `getCurrentWalletConnected` - bu fonksiyon, sayfa yüklendiğinde merkeziyetsiz uygulamamıza zaten bir Ethereum hesabının bağlı olup olmadığını kontrol eder ve kullanıcı arayüzümüzü buna göre günceller.
-- `updateMessage` - bu fonksiyon, akıllı sözleşmede depolanmış olan mesajı günceller. Merhaba Dünya akıllı sözleşmesine bir _write_ çağrısı yapar ve bu sayede kullanıcının MetaMask cüzdanının mesajı güncelleyebilmek için bir Ethereum işlemi imzalaması gerekir.
+- `loadCurrentMessage` - this function handles the logic of loading the current message stored in the smart contract. It will make a _read_ call to the Hello World smart contract using the [Alchemy Web3 API](https://github.com/alchemyplatform/alchemy-web3).
+- `connectWallet` - this function will connect the user's MetaMask to our dapp.
+- `getCurrentWalletConnected` - this function will check if an Ethereum account is already connected to our dapp on page load and update our UI accordingly.
+- `updateMessage` - this function will update the message stored in the smart contract. It will make a _write_ call to the Hello World smart contract, so the user's MetaMask wallet will have to sign an Ethereum transaction to update the message.
 
-Ne üzerinde çalıştığımızı anladığımıza göre, akıllı sözleşmemizi nasıl okuyacağımızı öğrenelim!
+Now that we understand what we're working with, let's figure out how to read from our smart contract!
 
-### 3. Adım: Akıllı sözleşmenizden okuma {#step-3-read-from-your-smart-contract}
+### Step 3: Read from your smart contract {#step-3-read-from-your-smart-contract}
 
-Akıllı sözleşmenizi okuyabilmek için aşağıdakileri başarıyla kurmanız gerekir:
+To read from your smart contract, you'll need to successfully set up:
 
-- Ethereum zincirine bir API bağlantısı
-- Akıllı sözleşmenizin yüklenmiş bir örneği
-- Akıllı sözleşme fonksiyonunuzu çağıran bir fonksiyon
-- Akıllı sözleşme değişikliklerinden okuduğunuz verilerin güncellemelerini takip eden bir dinleyici
+- An API connection to the Ethereum chain
+- A loaded instance of your smart contract
+- A function to call to your smart contract function
+- A listener to watch for updates when the data you're reading from the smart contract changes
 
-Çok fazla adım varmış gibi görünebilir, fakat endişe etmeyin! Hepsini nasıl yapacağınızı adım adım göstereceğiz! :\)
+This may sounds like a lot of steps, but don't worry! We'll walk you through how to do each of them step-by-step! :)
 
-#### Ethereum zincirine bir API bağlantısı kurma {#establish-an-api-connection-to-the-ethereum-chain}
+#### Establish an API connection to the Ethereum chain {#establish-an-api-connection-to-the-ethereum-chain}
 
-Bu öğreticinin 2. Bölümü'nde [Alchemy Web3 anahtarını akıllı sözleşmemizi okuyabilmek için kullandığımızı hatırlıyor musunuz](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? Zinciri okuyabilmek için de merkeziyetsiz uygulamanızda bir Alchemy Web3 anahtarına ihtiyacınız olacak.
+So remember how in Part 2 of this tutorial, we used our [Alchemy Web3 key to read from our smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? You'll also need an Alchemy Web3 key in your dapp to read from the chain.
 
-Eğer sizde hala yoksa, ilk olarak kök dizininizin `starter-files` öğesinden [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)'e gidip yüklemek için aşağıdaki kodu terminalinizde çalıştırın:
+If you don't have it already, first install [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) by navigating to the root directory of your `starter-files` and running the following in your terminal:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), [Web3.js](https://docs.web3js.org/) paketleyicisidir. Bir web3 geliştiricisi olarak hayatınızı kolaylaştıracak gelişmiş API yöntemleri ve diğer önemli avantajlar sağlar. Uygulamanızda hemen kullanmaya başlayabilmeniz için minimum yapılandırma gerektirecek şekilde tasarlanmıştır!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), [Web3.js](https://docs.web3js.org/) için bir sarmalayıcıdır ve bir web3 geliştiricisi olarak hayatınızı kolaylaştırmak için gelişmiş API yöntemleri ve diğer önemli avantajları sağlar. Uygulamanızda hemen kullanmaya başlayabilmeniz için minimum yapılandırma gerektirecek şekilde tasarlanmıştır!
 
-Ardından, API anahtarımızı aldıktan sonra depolayacağımız güvenli bir yerimiz olması için [dotenv](https://www.npmjs.com/package/dotenv) paketini proje dizinimize yükleyin.
+Then, install the [dotenv](https://www.npmjs.com/package/dotenv) package in your project directory, so we have a secure place to store our API key after we fetch it.
 
 ```text
 npm install dotenv --save
 ```
 
-Merkeziyetsiz uygulamamız için HTTP API anahtarımız yerine **Websockets API anahtarımızı kullanıyor** olacağız; bu, bizim akıllı sözleşmemizdeki mesajların değişip değişmediğini kontrol eden bir dinleyici kurmamızı sağlayacaktır.
+For our dapp, **we'll be using our Websockets API key** instead of our HTTP API key, as it will allow us to set up a listener that detects when the message stored in the smart contract changes.
 
-API anahtarına sahip olduğunuzda, kök dizininizde bir `.env` dosyası oluşturun ve Alchemy Websockets url'nizi içine ekleyin. Sonrasında `.env` dosyanız şu şekilde görünmelidir:
+Once you have your API key, create a `.env` file in your root directory and add your Alchemy Websockets url to it. Afterwards, your `.env` file should look like so:
 
 ```javascript
 REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-Artık Alchemy Web3 uç noktamızı merkeziyetsiz uygulamamıza kurmaya hazırız! `util` klasörümüzde yuvalanmış `interact.js` öğemize geri dönelim ve dosyanın başına aşağıdaki kodu ekleyelim:
+Now, we're ready to set up our Alchemy Web3 endpoint in our dapp! Let's go back to our `interact.js`, which is nested inside our `util` folder and add the following code at the top of the file:
 
 ```javascript
 // interact.js
@@ -932,23 +936,23 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-Yukarıda, ilk olarak Alchemy anahtarımızı `.env` dosyasından içe aktardık ve sonra da Alchemy Web3 uç noktamızı kurmak için `alchemyKey`'imizi `createAlchemyWeb3`'e gönderdik.
+Above, we first imported the Alchemy key from our `.env` file and then passed our `alchemyKey` to `createAlchemyWeb3` to establish our Alchemy Web3 endpoint.
 
-Bu uç nokta hazır olduğuna göre akıllı sözleşmemizi yükleme zamanı!
+With this endpoint ready, it's time to load our smart contract!
 
-#### Merhaba Dünya akıllı sözleşmenizi yükleme {#loading-your-hello-world-smart-contract}
+#### Loading your Hello World smart contract {#loading-your-hello-world-smart-contract}
 
-Merhaba Dünya akıllı sözleşmenizi yükleyebilmek için sözleşmenin adresine ve ABI'sine ihtiyacınız olacak. [Bu öğreticinin 3. Bölümü'nü](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan) bitirdiyseniz bunların ikisini de Etherscan'de bulabilirsiniz.
+To load your Hello World smart contract, you'll need its contract address and ABI, both of which can be found on Etherscan if you completed [Part 3 of this tutorial.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
-#### Sözleşme ABI'nizi Etherscan'den alma {#how-to-get-your-contract-abi-from-etherscan}
+#### How to get your contract ABI from Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
-Bu öğreticinin 3. Bölüm'ünü atladıysanız, [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) adresli Merhaba Dünya sözleşmesini kullanabilirsiniz. Sözleşmenin ABI'sini [burada](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) bulabilirsiniz.
+If you skipped Part 3 of this tutorial, you can use the HelloWorld contract with address [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). Its ABI can be found [here](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
 
-Bir sözleşmenin hangi fonksiyonu çağıracağını belirlemek ve fonksiyonun beklediğiniz biçimde veri döndürmesini sağlamak için bir sözleşme ABI'si gereklidir. Sözleşme ABI'mizi kopyaladıktan sonra onu `src` dizinindeki `contract-abi.json` adlı JSON dosyasına kaydedelim.
+A contract ABI is necessary for specifying which function a contract will invoke as well ensuring that the function will return data in the format you're expecting. Once we've copied our contract ABI, let's save it as a JSON file called `contract-abi.json` in your `src` directory.
 
-Contract-abi.json'unuz src klasöründe depolanmış olmalıdır.
+Your contract-abi.json should be stored in your src folder.
 
-Sözleşme adresimiz, ABI ve Alchemy Web3 uç noktamız hazır olduğuna göre, sözleşmemizin bir örneğini yüklemek için bu [sözleşme yöntemini](https://docs.web3js.org/api/web3-eth-contract/class/Contract) kullanabiliriz. Sözleşme ABI'nizi `interact.js` dosyasının içine aktarın ve sözleşme adresinizi ekleyin.
+Armed with our contract address, ABI, and Alchemy Web3 endpoint, we can use the [contract method](https://docs.web3js.org/api/web3-eth-contract/class/Contract) to load an instance of our smart contract. Import your contract ABI into the `interact.js` file and add your contract address.
 
 ```javascript
 // interact.js
@@ -957,7 +961,7 @@ const contractABI = require("../contract-abi.json")
 const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
 ```
 
-Sonunda `helloWorldContract` değişkenimizin yorumunu kaldırabilir ve AlchemyWeb3 uç noktasını kullanarak akıllı sözleşmemizi yükleyebiliriz:
+We can now finally uncomment our `helloWorldContract` variable, and load the smart contract using our AlchemyWeb3 endpoint:
 
 ```javascript
 // interact.js
@@ -967,7 +971,7 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-Hatırlatma olarak, `interact.js` kodunuzun ilk 12 satırı aşağıdaki gibi görünmelidir:
+To recap, the first 12 lines of your `interact.js` should now look like this:
 
 ```javascript
 // interact.js
@@ -986,13 +990,13 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-Sözleşmemizi yüklediğimize göre, artık `loadCurrentMessage` fonksiyonunu uygulayabiliriz!
+Now that we have our contract loaded, we can implement our `loadCurrentMessage` function!
 
-#### `interact.js` dosyanıza `loadCurrentMessage`'ı uygulama {#implementing-loadCurrentMessage-in-your-interact-js-file}
+#### Implementing `loadCurrentMessage` in your `interact.js` file {#implementing-loadCurrentMessage-in-your-interact-js-file}
 
-Bu fonksiyon aşırı basittir. Sözleşmemizi okumak için basit bir asenkronize web3 çağrısı yapacağız. Fonksiyonumuz akıllı sözleşmede depolanmış olan mesajı döndürecek:
+This function is super simple. We're going make a simple async web3 call to read from our contract. Our function will return the message stored in the smart contract:
 
-`interact.js` dosyanızdaki `loadCurrentMessage`'ı aşağıdaki şekilde güncelleyin:
+Update the `loadCurrentMessage` in your `interact.js` file to the following:
 
 ```javascript
 // interact.js
@@ -1003,7 +1007,7 @@ export const loadCurrentMessage = async () => {
 }
 ```
 
-Kullanıcı arayüzümüzde akıllı sözleşmeyi görüntülemek istediğimiz için `HelloWorld.js` bileşenimizdeki `useEffect` fonksiyonunu aşağıdaki şekilde güncelleyelim:
+Since we want to display this smart contract in our UI, let's update the `useEffect` function in our `HelloWorld.js` component to the following:
 
 ```javascript
 // HelloWorld.js
@@ -1015,19 +1019,19 @@ useEffect(async () => {
 }, [])
 ```
 
-Bileşenin ilk işlemesinde sadece `loadCurrentMessage`'ın çağrılmasını istediğimize dikkat edin. Yakında akıllı sözleşmedeki mesaj değiştiğinde kullanıcı arayüzünü otomatik olarak güncelleyen `addSmartContractListener`'ı uygulayacağız.
+Note, we only want our `loadCurrentMessage` to be called once during the component's first render. We'll soon implement `addSmartContractListener` to automatically update the UI after the message in the smart contract changes.
 
-Dinleyicimize geçmeden önce, şu anda elimizde ne olduğuna bir bakalım! `HelloWorld.js` ve `interact.js` dosyalarınızı kaydedip [http://localhost:3000/](http://localhost:3000/) öğesine gidin
+Before we dive into our listener, let's check out what we have so far! Save your `HelloWorld.js` and `interact.js` files, and then go to [http://localhost:3000/](http://localhost:3000/)
 
-Güncel mesajda artık "Ağ bağlantısı yok" yazmadığını göreceksiniz. Onun yerine, akıllı sözleşmede depolanmış olan mesajı yansıtır. İnanılmaz!
+You'll notice that the current message no longer says "No connection to the network." Instead it reflects the message stored in the smart contract. Sick!
 
-#### Kullanıcı arayüzünüz artık akıllı sözleşmede depolanan mesajı yansıtıyor olmalı {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
+#### Your UI should now reflect the message stored in the smart contract {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
 
-Dinleyiciye gelirsek...
+Now speaking of that listener...
 
-#### `addSmartContractListener`'ı uygulayın {#implement-addsmartcontractlistener}
+#### Implement `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-[Bu öğretici serisinin 1. Bölümü'nde](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract) yazdığımız `HelloWorld.sol` dosyasına dönerseniz, burada akıllı sözleşmemizin `update` fonksiyonunu çağırdıktan sonra meydana gelen `UpdatedMessages` adlı bir olay olduğunu hatırlayacaksınız \(bkz. satır 9 ve 27\):
+If you think back to the `HelloWorld.sol` file we wrote in [Part 1 of this tutorial series](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), you'll recall that there is a smart contract event called `UpdatedMessages` that is emitted after our smart contract's `update` function is invoked \(see lines 9 and 27\):
 
 ```javascript
 // HelloWorld.sol
@@ -1065,11 +1069,11 @@ contract HelloWorld {
 }
 ```
 
-Akıllı sözleşme olayları sözleşmenizin, ön yüz uygulamanızın blokzinciri üzerinde bir olay olduğunda \(yani bir _olay_ gerçekleştiğinde\) iletişim kurmasının bir yoludur. Bu yol, belli başlı olaylar için bir şeyleri dinlemek ve bu olaylar olduğunda aksiyon almak olabilir.
+Smart contract events are a way for your contract to communicate that something happened \(i.e., there was an _event_\) on the blockchain to your front-end application, which can be 'listening' for specific events and take action when they happen.
 
-`addSmartContractListener` fonksiyonu spesifik olarak Merhaba Dünya akıllı sözleşmemizin `UpdatedMessages` olayını dinleyecek ve kullanıcı arayüzümüzü yeni mesajı gösterecek şekilde güncelleyecektir.
+The `addSmartContractListener` function is going to specifically listen for our Hello World smart contract's `UpdatedMessages` event, and update our UI to display the new message.
 
-`addSmartContractListener`'ı aşağıdaki gibi değiştirin:
+Modify `addSmartContractListener` to the following:
 
 ```javascript
 // HelloWorld.js
@@ -1087,12 +1091,12 @@ function addSmartContractListener() {
 }
 ```
 
-Dinleyici bir olay algıladığında olacakları masaya yatıralım:
+Let's break down what happens when the listener detects an event:
 
-- Olay yayımlandığında bir hata oluşursa, `status` durum değişkenimiz bu hatayı kullanıcı arayüzüne yansıtır.
-- Aksi takdirde döndürülen `data` nesnesini kullanacağız. `data.returnValues` dizinin ilk öğesinin önceki mesajı ve ikinci öğesinin güncellenmiş mesajı depoladığı sıfırdan başlatılan bir dizidir. Bütün olarak bakıldığında, başarılı bir olayda güncellenmiş mesajımıza `message` dizemizi kuracağız, `newMessage` dizesini sileceğiz ve `status` durum değişkenimizi akıllı sözleşmemizde yeni bir mesajın yayımlandığını yansıtacak şekilde güncelleyeceğiz.
+- If an error occurs when the event is emitted, it will be reflected in the UI via our `status` state variable.
+- Otherwise, we will use the `data` object returned. The `data.returnValues` is an array indexed at zero where the first element in the array stores the previous message and second element stores the updated one. Altogether, on a successful event we'll set our `message` string to the updated message, clear the `newMessage` string, and update our `status` state variable to reflect that a new message has been published on our smart contract.
 
-Son olarak, `useEffect` fonksiyonumuzdaki dinleyicimizi çağırarak `HelloWorld.js` bileşenimizin ilk işlemesini başlatalım. Toparlarsak, `useEffect` fonksiyonunuz şu şekilde görünmelidir:
+Finally, let's call our listener in our `useEffect` function so it is initialized on the `HelloWorld.js` component's first render. Altogether, your `useEffect` function should look like this:
 
 ```javascript
 // HelloWorld.js
@@ -1104,45 +1108,45 @@ useEffect(async () => {
 }, [])
 ```
 
-Artık akıllı sözleşmemizi okuyabildiğimize göre, ona nasıl bir şeyler yazabileceğimizi öğrenmek de süper olur! Bununla birlikte, merkeziyetsiz uygulamamıza yazabilmek için önce ona bağlı bir Ethereum cüzdanı olmalıdır.
+Now that we're able to read from our smart contract, it would be great to figure out how to write to it too! However, to write to our dapp, we must first have an Ethereum wallet connected to it.
 
-Yapacağımız bir sonraki şey ise Ethereum cüzdanımızı \(MetaMask\) kurmak ve merkeziyetsiz uygulamamıza bağlamaktır!
+So, next we'll tackle setting up our Ethereum wallet \(MetaMask\) and then connecting it to our dapp!
 
-### 4. Adım: Ethereum cüzdanınızı kurun {#step-4-set-up-your-ethereum-wallet}
+### Step 4: Set up your Ethereum wallet {#step-4-set-up-your-ethereum-wallet}
 
-Kullanıcılar, Ethereum zincirine herhangi bir şey yazabilmek için sanal cüzdanlarının özel anahtarlarını kullanarak işlemler imzalamalıdır. Bu öğreticide, Ethereum hesap adresinizi yönetmeniz için tarayıcıda bulunan bir sanal cüzdan olan ve son kullanıcı için işlem imzalamayı çok basit bir hale getiren [MetaMask](https://metamask.io/)'ı kullanacağız.
+To write anything to the Ethereum chain, users must sign transactions using their virtual wallet's private keys. For this tutorial, we’ll use [MetaMask](https://metamask.io/), a virtual wallet in the browser used to manage your Ethereum account address, as it makes this transaction signing super easy for the end-user.
 
 Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edinmek istiyorsanız, Ethereum Vakfı'nın [bu sayfasına](/developers/docs/transactions/) göz atın.
 
-#### MetaMask'i indirin {#download-metamask}
+#### MetaMask'ı indirin {#download-metamask}
 
-[Buradan](https://metamask.io/download) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken ya da zaten bir hesabınız varsa, sağ üstten "Goerli Test Ağına" geçin \(bu sayede gerçek parayla denemeler yapmayız\).
+MetaMask'ı [buradan](https://metamask.io/download) ücretsiz indirip bir hesap oluşturabilirsiniz. When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right \(so that we’re not dealing with real money\).
 
-#### Bir Musluktan ether ekleyin {#add-ether-from-a-faucet}
+#### Add ether from a Faucet {#add-ether-from-a-faucet}
 
-Ethereum blokzincirinde bir işlem imzalamak için biraz sahte Eth'ye ihtiyacımız olacak. Eth almak için [FaucETH](https://fauceth.komputing.org)'e gidip Goerli hesap adresinizi girebilir, "Fon iste" öğesine tıklayıp açılır menüden "Ethereum Test Ağı Goerli" seçimi yapabilir ve son olarak tekrar "Fon iste" düğmesine tıklayabilirsiniz. Kısa bir süre sonra MetaMask hesabınızda Eth'i görmelisiniz!
+To sign a transaction on the Ethereum blockchain, we’ll need some fake Eth. To get Eth you can go to the [FaucETH](https://fauceth.komputing.org) and enter your Goerli account address, click “Request funds”, then select “Ethereum Testnet Goerli” in the dropdown and finally click “Request funds” button again. Kısa bir süre sonra MetaMask hesabınızda Eth'i görmelisiniz!
 
-#### Bakiyenizi kontrol etme {#check-your-balance}
+#### Check your Balance {#check-your-balance}
 
-Bakiyemizin yerinde olduğundan emin olmak için [Alchemy'nin düzenleyici aracını](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) kullanarak bir [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) isteği oluşturalım. Bu, cüzdanımızdaki Eth miktarını döndürür. MetaMask hesap adresinizi girdikten ve "Send Request"e tıkladıktan sonra aşağıdaki gibi bir yanıt görmelisiniz:
+Bakiyemizin orada olup olmadığını iki kez kontrol etmek için [Alchemy’nin composer aracını](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) kullanarak bir [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) isteği yapalım. Bu, cüzdanımızdaki Eth miktarını döndürür. MetaMask hesap adresinizi girdikten ve "Send Request"e tıkladıktan sonra aşağıdaki gibi bir yanıt görmelisiniz:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**NOT:** Bu sonuç eth değil wei hâlindedir. Wei, ether'ın en küçük birimi olarak kullanılır. Wei'den eth'e dönüşüm: 1 eth = 10¹⁸ wei. Yani 0xde0b6b3a7640000'ı ondalık sayıya dönüştürürsek 1\*10¹⁸ elde ederiz, bu da 1 eth'e eşittir.
+**NOT:** Bu sonuç eth cinsinden değil wei cinsindendir. Wei, ether'ın en küçük birimi olarak kullanılır. Wei'den eth'e dönüşüm: 1 eth = 10¹⁸ wei. Yani 0xde0b6b3a7640000'ı ondalık sayıya dönüştürürsek 1\*10¹⁸ elde ederiz, bu da 1 eth'e eşittir.
 
-Vay be! Tüm sahte paramız yerli yerinde! 🤑
+Vay be! Tüm sahte paramız yerinde! 🤑
 
-### 5. Adım: MetaMask'ı kullanıcı arayüzünüze bağlayın {#step-5-connect-metamask-to-your-UI}
+### Step 5: Connect MetaMask to your UI {#step-5-connect-metamask-to-your-UI}
 
 Artık MetaMask cüzdanımız kurulduğuna göre, merkeziyetsiz uygulamamızı ona bağlayalım!
 
-#### `connectWallet` fonksiyonu {#the-connectWallet-function}
+#### The `connectWallet` function {#the-connectWallet-function}
 
-`interact.js` dosyamızda `connectWallet` fonksiyonunu uygulayalım, bu fonksiyonu sonrasında `HelloWorld.js` bileşenimizde çağırabiliriz.
+In our `interact.js`file, let's implement the `connectWallet` function, which we can then call in our `HelloWorld.js` component.
 
-`connectWallet`'u aşağıdaki gibi değiştirelim:
+Let's modify `connectWallet` to the following:
 
 ```javascript
 // interact.js
@@ -1183,26 +1187,26 @@ export const connectWallet = async () => {
 }
 ```
 
-Bu dev kod bloğu tam olarak ne yapar?
+So what does this giant block of code do exactly?
 
-İlk olarak, tarayıcınızda `window.ethereum`'un etkinleştirilmiş olup olmadığını kontrol eder.
+Well, first, it checks if it `window.ethereum` is enabled in your browser.
 
-`window.ethereum`, MetaMask ve diğer cüzdan sağlayıcıları tarafından enjekte edilen ve web sitelerinin kullanıcıların Ethereum hesaplarını talep etmesine izin veren küresel bir API'dir. Onaylandıysa, kullanıcının bağlı olduğu blokzincirlerden veri okuyabilir ve kullanıcıya mesajlar ve işlemler imzalamasını önerebilir. Daha fazla bilgi için [MetaMask belgelerine](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) göz atın!
+`window.ethereum`, MetaMask ve diğer cüzdan sağlayıcıları tarafından eklenen ve web sitelerinin kullanıcıların Ethereum hesaplarını talep etmesine olanak tanıyan küresel bir API'dir. If approved, it can read data from the blockchains the user is connected to, and suggest that the user sign messages and transactions . Daha fazla bilgi için [MetaMask belgelerine](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) göz atın!
 
-`window.ethereum` _yoksa_, MetaMask kurulu değil demektir. Bu, bir JSON nesnesinin döndürülmesiyle sonuçlanır; burada döndürülen `address` boş bir dizedir ve `status` JSX nesnesi, kullanıcının MetaMask'i yüklemesi gerektiğini bildirir.
+Eğer `window.ethereum` mevcut _değilse_, bu MetaMask'in kurulu olmadığı anlamına gelir. Bu, döndürülen `address`'in boş bir dize olduğu ve `status` JSX nesnesinin kullanıcının MetaMask'i yüklemesi gerektiğini ilettiği bir JSON nesnesinin döndürülmesiyle sonuçlanır.
 
-Şimdi, eğer `window.ethereum` _varsa_, işte o zaman işler ilginçleşiyor.
+Eğer `window.ethereum` mevcut _ise_, o zaman işler ilginçleşir.
 
-Bir deneme/yakalama döngüsü ile [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts) çağrısı yaparak MetaMask'a bağlanmaya çalışacağız. Bu fonksiyonun çağrılması, tarayıcıda MetaMask'i açar ve bu sayede kullanıcıdan cüzdanını merkeziyetsiz uygulamanıza bağlaması istenir.
+Bir try/catch döngüsü kullanarak, [`window.ethereum.request({ method: \"eth_requestAccounts\" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts) çağrısı yaparak MetaMask'e bağlanmaya çalışacağız. Bu fonksiyonun çağrılması, tarayıcıda MetaMask'i açar ve bu sayede kullanıcıdan cüzdanını merkeziyetsiz uygulamanıza bağlaması istenir.
 
-- Kullanıcı bağlanmayı seçerse, `method: "eth_requestAccounts"`, kullanıcının merkeziyetsiz uygulamaya bağlı tüm hesap adreslerini içeren bir dizi döndürür. Toplamda, `connectWallet` fonksiyonumuz bu dizideki _ilk_ `address`'i içeren bir JSON nesnesi \(9. satıra bakın\) ve kullanıcıdan akıllı sözleşmeye bir mesaj yazmasını isteyen bir `status` mesajı döndürür.
-- Kullanıcı bağlantıyı reddederse, JSON nesnesi, döndürülen `address` için boş bir dize ve kullanıcının bağlantıyı reddettiğini yansıtan bir `status` mesajı içerir.
+- If the user chooses to connect, `method: "eth_requestAccounts"` will return an array that contains all of the user's account addresses that connected to the dapp. Sonuç olarak, `connectWallet` fonksiyonumuz bu dizideki _ilk_ `address`'i (bkz. satır 9) ve kullanıcıyı akıllı sözleşmeye bir mesaj yazmaya yönlendiren bir `status` mesajını içeren bir JSON nesnesi döndürecektir.
+- Kullanıcı bağlantıyı reddederse JSON nesnesi, döndürülen `address` için boş bir dize ve kullanıcının bağlantıyı reddettiğini yansıtan bir `status` mesajı içerir.
 
-Artık bu `connectWallet`'ı yazdığımıza göre, sonraki adım onu `HelloWorld.js` bileşenimize çağırmaktır.
+Now that we've written this `connectWallet` function, the next step is to call it to our `HelloWorld.js`component.
 
-#### `HelloWorld.js` Kullanıcı Arayüzü Bileşenimize `connectWallet` fonksiyonunu ekleyelim {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
+#### Add the `connectWallet` function to your `HelloWorld.js` UI Component {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
 
-`HelloWorld.js` içinde bulunan `connectWalletPressed`'a gidin ve aşağıdaki gibi güncelleyin:
+Navigate to the `connectWalletPressed` function in `HelloWorld.js`, and update it to the following:
 
 ```javascript
 // HelloWorld.js
@@ -1214,25 +1218,25 @@ const connectWalletPressed = async () => {
 }
 ```
 
-İşlevselliğimizin çoğunun `interact.js` dosyasındaki `HelloWorld.js`'den nasıl da soyutlandığını görebiliyor musunuz? Bu, M-V-C paradigmasına uymamız içindir!
+Notice how most of our functionality is abstracted away from our `HelloWorld.js` component from the `interact.js` file? Bu, M-V-C paradigmasına uymamız içindir!
 
-`connectWalletPressed`'de, içe aktarılan `connectWallet` fonksiyonumuza bir bekleme çağrısı yaparız ve yanıtını kullanarak durum kancaları aracılığıyla `status` ve `walletAddress` değişkenlerimizi güncelleriz.
+`connectWalletPressed` içinde, içe aktarılan `connectWallet` fonksiyonumuza bir `await` çağrısı yaparız ve yanıtını kullanarak `status` ve `walletAddress` değişkenlerimizi durum kancaları aracılığıyla güncelleriz.
 
-Şimdi, iki dosyayı da \(`HelloWorld.js` and `interact.js`\) kaydedelim ve şu ana kadarki kullanıcı arayüzümüzü test edelim.
+Now, let's save both files \(`HelloWorld.js` and `interact.js`\) and test out our UI so far.
 
-[http://localhost:3000/](http://localhost:3000/) sayfasında tarayıcınızı açın ve sayfanın sağ üst tarafında bulunan "Connect Wallet" butonuna tıklayın.
+Open your browser on the [http://localhost:3000/](http://localhost:3000/) page, and press the "Connect Wallet" button on the top right of the page.
 
 MetaMask yüklüyse, cüzdanınızı merkeziyetsiz uygulamanıza bağlamanız istenecektir. Bağlanmak için daveti kabul edin.
 
-Cüzdan butonunuzun, adresinizin artık bağlı olduğunu gösterdiğini görmeniz beklenir! Eveeet 🔥
+You should see that the wallet button now reflects that your address is connected! Yasssss 🔥
 
-Ardından, sayfayı yenilemeyi deneyin... Garip. Cüzdan düğmemiz zaten bağlı olmasına rağmen MetaMask'i bağlamamızı istiyor...
+Şimdi, sayfayı yenilemeyi deneyin... bu garip. Cüzdan düğmemiz zaten bağlı olmasına rağmen MetaMask'i bağlamamızı istiyor...
 
-Yine de korkmanıza gerek yok! Bunu, `getCurrentWalletConnected`'ı uygulayarak kolaylıkla adresleyebiliriz (anladınız mı)?; bu da merkeziyetsiz uygulamamıza bir adresin bağlı olup olmadığını kontrol edecek ve buna göre kullanıcı arayüzümüzü güncelleyecektir!
+However, have no fear! We easily can address that (get it?) by implementing `getCurrentWalletConnected`, which will check if an address is already connected to our dapp and update our UI accordingly!
 
-#### `getCurrentWalletConnected` fonksiyonu {#the-getcurrentwalletconnected-function}
+#### The `getCurrentWalletConnected` function {#the-getcurrentwalletconnected-function}
 
-`interact.js` dosyasındaki `getCurrentWalletConnected` fonksiyonunuzu aşağıdaki gibi güncelleyin:
+Update your `getCurrentWalletConnected` function in the `interact.js` file to the following:
 
 ```javascript
 // interact.js
@@ -1279,11 +1283,11 @@ export const getCurrentWalletConnected = async () => {
 }
 ```
 
-Bu kod, önceki adımda yazdığımız `connectWallet` fonksiyonuna _çok_ benzer.
+This code is _very_ similar to the `connectWallet` function we just wrote in the previous step.
 
-Temel fark, kullanıcının cüzdanını bağlaması için MetaMask'i açan `eth_requestAccounts` yöntemini çağırmak yerine, burada yalnızca şu anda merkeziyetsiz uygulamamıza bağlı olan MetaMask adreslerini içeren bir dizi döndüren `eth_accounts` yöntemini çağırmamızdır.
+Temel fark, kullanıcının cüzdanını bağlaması için MetaMask'i açan `eth_requestAccounts` yöntemini çağırmak yerine, burada yalnızca merkeziyetsiz uygulamamıza bağlı olan MetaMask adreslerini içeren bir dizi döndüren `eth_accounts` yöntemini çağırıyoruz.
 
-Bu fonksiyonu çalışırken görmek için onu `HelloWorld.js` bileşenimizin `useEffect` fonksiyonuyla çağıralım:
+To see this function in action, let's call it in our `useEffect` function of our `HelloWorld.js` component:
 
 ```javascript
 // HelloWorld.js
@@ -1299,17 +1303,17 @@ useEffect(async () => {
 }, [])
 ```
 
-Dikkat edin, `walletAddress` ve `status` durum değişkenlerimizi güncellemek için `getCurrentWalletConnected` çağrımızın yanıtını kullanıyoruz.
+Dikkat edin, `getCurrentWalletConnected` çağrımızın yanıtını `walletAddress` ve `status` durum değişkenlerimizi güncellemek için kullanıyoruz.
 
-Artık bu kodu eklediğinize göre, sayfayı yenilemeyi deneyin.
+Now that you've added this code, let's try refreshing our browser window.
 
-Güzeeeeeel! Düğme, bağlı olduğunuzu söylemeli ve yeniledikten sonra bile bağlı cüzdanınızın adresinin bir önizlemesini göstermelidir!
+Niceeeee! Düğme, bağlı olduğunuzu söylemeli ve yeniledikten sonra bile bağlı cüzdanınızın adresinin bir önizlemesini göstermelidir!
 
-#### `addWalletListener`'ı uygulayın {#implement-addwalletlistener}
+#### Implement `addWalletListener` {#implement-addwalletlistener}
 
 Merkeziyetsiz uygulama cüzdanı kurulumumuzun son adımı, örneğin kullanıcı bağlantısını keserek veya hesap değiştirerek cüzdanımızın durumunu değiştirdiğinde kullanıcı arayüzümüzün güncellenmesi için cüzdan dinleyicisini uygulamaktır.
 
-`HelloWorld.js` dosyanızda `addWalletListener` fonksiyonunu aşağıdaki gibi değiştirin:
+In your `HelloWorld.js` file, modify your `addWalletListener` function as the following:
 
 ```javascript
 // HelloWorld.js
@@ -1338,13 +1342,13 @@ function addWalletListener() {
 }
 ```
 
-Bu noktada ne olup bittiğini anlamak için bizim yardımımıza ihtiyacınız olmadığına bahse girebilirim, fakat hiçbir ayrıntıyı atlamamak adına hızlıca anlatalım:
+I bet you don't even need our help to understand what's going on here at this point, but for thoroughness purposes, let's quickly break it down:
 
-- İlk olarak, fonksiyonumuz `window.ethereum`'un etkin olup olmadığını kontrol eder \(yani MetaMask kurulu olup olmadığını\).
-  - Değilse, `status` durum değişkenimizi, kullanıcının MetaMask'i yüklemesini isteyen bir JSX dizesine ayarlamamız yeterlidir.
-  - Etkinleştirilirse, 3. satırda `window.ethereum.on("accountsChanged")` dinleyicisini kurarız ve bu dinleyici MetaMask cüzdanındaki, kullanıcının merkeziyetsiz uygulamaya ek bir hesap bağladığı, hesapları değiştirdiği veya bir hesabın bağlantısını kestiği anları da içeren durum değişikliklerini dinler. Bağlı en az bir hesap varsa, `walletAddress` durum değişkeni, dinleyici tarafından döndürülen `accounts` dizisindeki ilk hesap olarak güncellenir. Aksi takdirde, `walletAddress` boş bir dize olarak ayarlanır.
+- İlk olarak fonksiyonumuz `window.ethereum`'un etkin olup olmadığını kontrol eder (yani MetaMask'in kurulu olup olmadığını).
+  - Etkin değilse, `status` durum değişkenimizi, kullanıcıyı MetaMask'i yüklemeye yönlendiren bir JSX dizesine ayarlarız.
+  - Etkinleştirilmişse, kullanıcının merkeziyetsiz uygulamaya ek bir hesap bağlaması, hesapları değiştirmesi veya bir hesabın bağlantısını kesmesi gibi MetaMask cüzdanındaki durum değişikliklerini dinleyen `window.ethereum.on(\"accountsChanged\")` dinleyicisini 3. satırda kurarız. Bağlı en az bir hesap varsa, `walletAddress` durum değişkeni, dinleyici tarafından döndürülen `accounts` dizisindeki ilk hesap olarak güncellenir. Aksi takdirde, `walletAddress` boş bir dize olarak ayarlanır.
 
-Son ama bir o kadar da önemli olarak, bunu `useEffect` fonksiyonumuzda çağırmalıyız:
+Last but not least, we must call it in our `useEffect` function:
 
 ```javascript
 // HelloWorld.js
@@ -1362,23 +1366,23 @@ useEffect(async () => {
 }, [])
 ```
 
-İşte bu kadar! Cüzdan fonksiyonlarımızın tümünün programlanmasını başarıyla tamamladık! Şimdi sıra son görevimizde: akıllı sözleşmemizde depolanan mesajı güncellemek!
+İşte bu kadar! We've successfully completed programming all of our wallet functionality! Now onto our last task: updating the message stored in our smart contract!
 
-### 6. Adım: `updateMessage` fonksiyonunu uygulama {#step-6-implement-the-updateMessage-function}
+### Step 6: Implement the `updateMessage` function {#step-6-implement-the-updateMessage-function}
 
-Evet dostum, evimizdeki rahatlığa ulaştık! `interact.js` dosyanızın `updateMessage` kısmında şunları yapacağız:
+Alrighty fam, we've arrived at the home stretch! In the `updateMessage` of your `interact.js` file, we're going to do the following:
 
-1. Yayımlayamak istediğimiz mesajın geçerli olduğundan emin olmak
-2. MetaMask kullanarak işlemimizi imzalamak
-3. `HelloWorld.js` ön yüz bileşenimizden bu fonksiyonu çağırmak
+1. Make sure the message we wish to publish in our smart contact is valid
+2. Sign our transaction using MetaMask
+3. Call this function from our `HelloWorld.js` frontend component
 
-Bu, fazla zaman almayacak; hadi bu merkeziyetsiz uygulamayı bitirelim!
+This won't take very long; let's finish this dapp!
 
-#### Girdi hatası işleme {#input-error-handling}
+#### Giriş hata yönetimi {#input-error-handling}
 
-Doğal olarak, fonksiyonun başında bir çeşit girdi hatasını işlemek mantıklı olur.
+Naturally, it makes sense to have some sort of input error handling at the start of the function.
 
-Yüklü bir MetaMask uzantısı veya bağlı bir cüzdan yoksa \(yani aktarılan `address` boş bir dizeyse\) ya da `message` boş bir dizeyse fonksiyonumuzun erken dönüş yapmasını isteriz. Hadi `updateMessage`'a aşağıdaki hata işlemeleri ekleyelim:
+We'll want our function to return early if there is no MetaMask extension installed, there is no wallet connected \(i.e., the `address` passed in is an empty string\), or the `message` is an empty string. Let's add the following error handling to `updateMessage`:
 
 ```javascript
 // interact.js
@@ -1399,11 +1403,11 @@ export const updateMessage = async (address, message) => {
 }
 ```
 
-Artık düzgün bir girdi hatası işleme sistemimiz olduğuna göre, işlemi MetaMask üzerinden imzalama zamanı geldi demektir!
+Now that it have proper input error handling, it's time to sign the transaction via MetaMask!
 
-#### İşlemimizi imzalama {#signing-our-transaction}
+#### Signing our transaction {#signing-our-transaction}
 
-Geleneksel web3 Ethereum işlemleri ile haşır neşirseniz, az sonra yazacağımız kod tanıdık gelecektir. Girdi hatası işleme kodunuzun altında `updateMessage`'a şunları ekleyin:
+If you're already comfortable with traditional web3 Ethereum transactions, the code we write next will be very familiar. Below your input error handling code, add the following to `updateMessage`:
 
 ```javascript
 // interact.js
@@ -1441,20 +1445,20 @@ try {
 }
 ```
 
-Olan biteni açıklayalım. Önce, işlem parametrelerimizi oluşturuyoruz; burada:
+Let's breakdown what's happening. First, we set up our transactions parameters, where:
 
-- `to` alıcı adresini belirtir \(akıllı sözleşmemiz\)
-- `from`, fonksiyonumuza aktardığımız `address` değişkeni olan işlemin imzalayıcısını belirtir
-- `data` ise Merhaba Dünya akıllı sözleşmesinin `update` yöntemlerine yönelik çağrıları içerir ve `message` dizesi değişkenlerini girdi olarak alır
+- `to` alıcı adresini belirtir (akıllı sözleşmemiz)
+- `from` specifies the signer of the transaction, the `address` variable we passed into our function
+- `data` contains the call to our Hello World smart contract's `update` method, receiving our `message` string variable as input
 
-Ardından, MetaMask'ten işlemi imzalamasını istediğimiz bir `window.ethereum.request` bekleme çağrısı yaparız. 11. ve 12. satırlarda eth yöntemimizi, `eth_sendTransaction`, belirttiğimizi ve `transactionParameters`'ımıza aktardığımızı gözdn kaçırmayın.
+Then, we make an await call, `window.ethereum.request`, where we ask MetaMask to sign the transaction. Notice, on lines 11 and 12, we're specifying our eth method, `eth_sendTransaction`and passing in our `transactionParameters`.
 
 Bu noktada, MetaMask tarayıcıda açılır ve kullanıcıdan işlemi imzalamasını veya reddetmesini ister.
 
-- İşlem başarılı olursa fonksiyon, `status` JSX dizesinin kullanıcıya Etherscan'den işlem hakkında daha fazla bilgi edinmesini anımsattığı bir JSON nesnesi döndürür.
-- İşlem başarısız olursa fonksiyon, `status` dizesinin hata mesajını aktardığı bir JSON öğesi döndürür.
+- If the transaction is successful, the function will return a JSON object where the `status` JSX string prompts the user to check out Etherscan for more information about their transaction.
+- If the transaction fails, the function will return a JSON object where the `status` string relays the error message.
 
-Toparlarsak, `updateMessage` fonksiyonumuz şu şekilde görünmelidir:
+Altogether, our `updateMessage` function should look like this:
 
 ```javascript
 // interact.js
@@ -1508,11 +1512,11 @@ export const updateMessage = async (address, message) => {
 }
 ```
 
-Son ama bir o kadar da önemli olarak, `updateMessage` fonksiyonumuzu `HelloWorld.js` bileşenimize bağlamalıyız.
+Last but not least, we need to connect our `updateMessage` function to our `HelloWorld.js` component.
 
-#### `updateMessage`'ı `HelloWorld.js` ön yüzüne bağlama {#connect-updatemessage-to-the-helloworld-js-frontend}
+#### Connect `updateMessage` to the `HelloWorld.js` frontend {#connect-updatemessage-to-the-helloworld-js-frontend}
 
-`onUpdatePressed` fonksiyonumuz içeri aktarılan `updateMessage` fonksiyonuna bir bekleme çağrısı yapmalı ve `status` durum değişkenini işlemimizin başarılı ya da başarısız olduğunu yansıtacak şekilde güncellemelidir:
+Our `onUpdatePressed` function should make an await call to the imported `updateMessage` function and modify the `status` state variable to reflect whether our transaction succeeded or failed:
 
 ```javascript
 // HelloWorld.js
@@ -1523,18 +1527,18 @@ const onUpdatePressed = async () => {
 }
 ```
 
-Bu çok açık ve basit. Bilin bakalım ne oldu? MERKEZİYETSİZ UYGULAMANIZ TAMAMLANDI!!!
+It's super clean and simple. And guess what... YOUR DAPP IS COMPLETE!!!
 
-Devam edin ve **Güncelle** butonunu test edin!
+Go ahead and test out the **Update** button!
 
-### Kişiye özel merkeziyetsiz uygulamanızı üretin {#make-your-own-custom-dapp}
+### Make your own custom dapp {#make-your-own-custom-dapp}
 
-Tebrikler, öğreticinin sonuna geldiniz! Hatırlatma olarak, burada şunları nasıl yapacağınızı öğrendiniz:
+Wooooo, you made it to the end of the tutorial! To recap, you learned how to:
 
-- Merkeziyetsiz uygulama projenize bir MetaMask cüzdanı bağlama
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API'sini kullanarak akıllı sözleşmenizden veri okumak
-- MetaMask kullanarak Ethereum işlemlerini imzalamak
+- Connect a MetaMask wallet to your dapp project
+- Read data from your smart contract using the [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API
+- Sign Ethereum transactions using MetaMask
 
-Artık bu öğreticide size verilmiş olan bu becerileri kullanarak kendi kişisel merkeziyetsiz uygulama projenizi yapabilirsiniz! Her zamanki gibi, herhangi bir sorunuz varsa yardım istemek için bize [Alchemy Discord](https://discord.gg/gWuC7zB) aracılığıyla ulaşmaktan çekinmeyin. 🧙‍♂️
+Now you're fully equipped to apply the skills from this tutorial to build out your own custom dapp project! As always, if you have any questions, don't hesitate to reach out to us for help in the [Alchemy Discord](https://discord.gg/gWuC7zB). 🧙‍♂️
 
-Bu öğreticiyi bitirdiğinize, yaşadığınız deneyimi ya da yorumlarınızı Twitter'dan [@alchemyplatform](https://twitter.com/AlchemyPlatform) bizi etiketleyerek aktarabilirsiniz!
+Once you complete this tutorial, let us know how your experience was or if you have any feedback by tagging us on Twitter [@alchemyplatform](https://twitter.com/AlchemyPlatform)!
