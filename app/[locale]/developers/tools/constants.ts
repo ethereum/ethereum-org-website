@@ -39,3 +39,7 @@ export const DEV_TOOL_CATEGORIES = [
   Icon: LucideIcon
   tag: TagProps["status"]
 }[]
+
+export const VALID_CATEGORY_SLUGS = new Set(
+  DEV_TOOL_CATEGORIES.map(({ slug }) => slug)
+)
