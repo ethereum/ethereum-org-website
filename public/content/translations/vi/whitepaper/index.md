@@ -6,7 +6,7 @@ sidebarDepth: 2
 hideEditButton: true
 ---
 
-# Giấy trắng Ethereum {#ethereum-whitepaper}
+# Sách trắng Ethereum {#ethereum-whitepaper}
 
 _Bài viết giới thiệu này được xuất bản lần đầu vào năm 2014 bởi Vitalik Buterin, người sáng lập [Ethereum](/what-is-ethereum/), trước khi dự án ra mắt vào năm 2015. Nên biết rằng, tương tự như nhiều dự án phần mềm mã nguồn mở và được phát triển bởi cộng đồng khác, Ethereum đã tiến hoá nhiều lần từ khi nó được tạo ra._
 

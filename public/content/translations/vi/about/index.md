@@ -69,7 +69,7 @@ Chúng tôi nỗ lực xây dựng một kho tài liệu giáo dục về tất 
 - Tăng tổng số cộng tác viên tham gia trang web
 - Nâng cao tỷ lệ quay lại của cộng tác viên thông qua các hoạt động gắn kết, ghi nhận và trao thưởng
 - Trao quyền cho các thành viên trong cộng đồng để họ phát huy đóng góp những vai trò quan trọng hơn
-- Thức đẩy sự đa dạng trong đóng góp: viết code, làm nội dung, thiết kế, dịch thuật, điều phối
+- Thúc đẩy sự đa dạng trong đóng góp: viết code, làm nội dung, thiết kế, dịch thuật, điều phối
 - Duy trì cơ sở mã nguồn hiện đại, sạch rõ và được ghi chép đầy đủ
 
 ## Các nguyên tắc cốt lõi {#core-principles}
@@ -78,13 +78,13 @@ Chúng tôi có một số nguyên tắc cốt lõi là kim chỉ nam giúp chú
 
 ### 1. ethereum.org là một cổng thông tin đến Ethereum 🌏 {#core-principles-1}
 
-Chúng tôi muốn thu hút sự quan tâm của người dùng và giải đáp những vướng mắt của họ. Vì vậy, cổng thông tin của chúng tôi cần kết hợp và phổ biến thông tin, nhu cầu, liên kết với các tài nguyên cộng đồng có sẵn. Mục đích chính của những nội dung này là giúp những người mới tiếp xúc, làm quen và nắm rõ thông tin mạng lưới. Chúng tôi mong muốn hỗ trợ và làm việc tích hợp với các tài nguyên do cộng đồng xây dựng, giúp họ hiểu biết hơn và dễ khám phá hơn.
+Chúng tôi muốn thu hút sự quan tâm của người dùng và giải đáp những vướng mắc của họ. Vì vậy, cổng thông tin của chúng tôi cần kết hợp và phổ biến thông tin, nhu cầu, liên kết với các tài nguyên cộng đồng có sẵn. Mục đích chính của những nội dung này là giúp những người mới tiếp xúc, làm quen và nắm rõ thông tin mạng lưới. Chúng tôi mong muốn hỗ trợ và làm việc tích hợp với các tài nguyên do cộng đồng xây dựng, giúp họ hiểu biết hơn và dễ khám phá hơn.
 [Cộng đồng của Ethereum](/community/) là trọng tâm của việc này: chúng tôi không chỉ cần phục vụ cộng đồng, mà còn cần làm việc với họ và ghi nhận phản hồi của họ. Trang web không chỉ đơn thuần dành cho cộng đồng mà nó còn là niềm hi vọng của chúng tôi đối với sự phát triển lớn mạnh. Chúng ta phải nhớ rằng cộng đồng này được phổ biến toàn cầu, bao gồm những con người không cùng ngôn ngữ, khu vực và văn hóa.
 
 ### 2. ethereum.org luôn luôn phát triển 🛠 {#core-principles-2}
 
 Ethereum và cộng đồng sẽ luôn luôn không ngừng phát triển, ethereum.org cũng thế. Đó là lý do tại sao trang web có một hệ thống thiết kế đơn giản và cấu trúc mô-đun. Chúng tôi sẽ luôn thay đổi khi chúng tôi hiểu được cách mà mọi người sử dụng trang web và cộng đồng muốn gì từ những trang web đó.
-Chúng tôi là chiếc mã nguồn mở, với một cộng đồng xây dựng bởi những người đóng góp, vì vậy sẽ không tránh khỏi những sai sót có thể xảy ra. Chúng tôi rất mong bạn có thể đề xuất các thay đổi hoặc trợ giúp chúng tôi.
+Chúng tôi là mã nguồn mở, với một cộng đồng xây dựng bởi những người đóng góp, vì vậy sẽ không tránh khỏi những sai sót có thể xảy ra. Chúng tôi rất mong bạn có thể đề xuất các thay đổi hoặc trợ giúp chúng tôi.
 [Tìm hiểu về việc đóng góp](/contributing/)
 
 ### 3. ethereum.org không phải là một trang web sản phẩm thông thường 🦄 {#core-principles-3}

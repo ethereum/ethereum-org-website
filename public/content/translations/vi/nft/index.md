@@ -1,5 +1,5 @@
 ---
-title: "Mã thông báo không thể thay thế (NFT)"
+title: "Token không thể thay thế (NFT)"
 metaTitle: "NFT là gì? | Lợi ích và cách sử dụng"
 description: "Tổng quan về NFT trên Ethereum"
 lang: vi

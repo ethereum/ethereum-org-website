@@ -16,7 +16,7 @@ Sự quan tâm ngày càng tăng đối với tiền điện tử kéo theo rủ
 
 ### Nâng cao kiến thức của bạn {#level-up-your-knowledge}
 
-Những hiểu lầm về cách thức hoạt động của tiền điện tử có thể dẫn đến những sai lầm tổn thất tới kinh tế. Ví dụ, nếu ai đó giả mạo làm 1 chăm sóc khách hàng của 1 sàn giao dịch, họ sẽ nói rằng họ có thể trả lại ETH bạn làm mấtmất nếu bạn đưa mã 12 ký tự cho họ. Chính những tin tặc đang săn lùng những người không hiểu rằng Ethereum là một mạng phi tập trung và không ai có thể can thiệp theo phương thức đó. Tự giáo dục bản thân về cách mà Ethereum hoạt động là một khoản đầu tư đáng giá.
+Những hiểu lầm về cách thức hoạt động của tiền điện tử có thể dẫn đến những sai lầm tổn thất tới kinh tế. Ví dụ, nếu ai đó giả mạo làm 1 chăm sóc khách hàng của 1 sàn giao dịch, họ sẽ nói rằng họ có thể trả lại ETH bạn làm mất nếu bạn đưa mã 12 ký tự cho họ. Chính những tin tặc đang săn lùng những người không hiểu rằng Ethereum là một mạng phi tập trung và không ai có thể can thiệp theo phương thức đó. Tự giáo dục bản thân về cách mà Ethereum hoạt động là một khoản đầu tư đáng giá.
 
 <DocLink href="/what-is-ethereum/">
   Ethereum là gì?
@@ -160,7 +160,7 @@ Nếu bạn nhận được email từ một người gửi không xác định,
 
 Những kẻ lừa đảo sẽ giả vờ làm các nhà môi giới giao dịch tiền điện tử, chúng sẽ tự nhận là nhà môi giới chuyên nghiệp. Từ đây, chúng sẽ đề nghị bạn gửi tiền để chúng đầu tư giúp bạn. Sau khi kẻ lừa đảo nhận được tiền của bạn, họ có thể dẫn bạn đến, yêu cầu bạn gửi thêm tiền, để bạn không bỏ lỡ thêm lợi nhuận đầu tư, hoặc chúng có thể biến mất hoàn toàn.
 
-Những kẻ môi giới lừa đảo này tìm mục tiêu của họ bằng cách sử dụng các tài khoản giả mạo trên YouTube và bình luận 1 cách tự nhiên về 1 chủ đề nào đó. Các cuộc trò chuyện này thường nhận được lượt tương tác cao (thích, bình luận đồng tính) để tăng tính tin cậy, nhưng tất cả các bình luận tán thành đều từ các tài khoản bot.
+Những kẻ môi giới lừa đảo này tìm mục tiêu của họ bằng cách sử dụng các tài khoản giả mạo trên YouTube và bình luận 1 cách tự nhiên về 1 chủ đề nào đó. Các cuộc trò chuyện này thường nhận được lượt tương tác cao (thích, bình luận được tán thành) để tăng tính tin cậy, nhưng tất cả các bình luận tán thành đều từ các tài khoản bot.
 
 **Đừng tin tưởng những người lạ trên internet để đầu tư thay mặt bạn. Bạn sẽ mất tiền điện tử của mình.**
 
@@ -202,7 +202,7 @@ Ví dụ về mật khẩu yếu: CuteFluffyKittens!
 Ví dụ về mật khẩu mạnh: ymv\*azu.EAC8eyp8umf
 ```
 
-Một sai lầm phổ biến khác là sử dụng mật khẩu có thể dễ dàng bị đoán hoặc bị phát hiện thông qua [tấn công phi kỹ thuật](https://wikipedia.org/wiki/Social_engineering_\(security\)). Việc đưa biệt danh thời thiếu nữ của mẹ, tên của con cái, vật nuôi hoặc ngày sinh vào mật khẩu của bạn sẽ làm tăng nguy cơ bị hack.
+Một sai lầm phổ biến khác là sử dụng mật khẩu có thể dễ dàng bị đoán hoặc bị phát hiện thông qua [tấn công phi kỹ thuật](https://wikipedia.org/wiki/Social_engineering_\(security\)). Việc đưa tên thời con gái của mẹ, tên của con cái, vật nuôi hoặc ngày sinh vào mật khẩu của bạn sẽ làm tăng nguy cơ bị hack.
 
 #### Các phương pháp tạo mật khẩu tốt: {#good-password-practices}
 

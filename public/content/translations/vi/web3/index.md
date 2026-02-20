@@ -10,7 +10,7 @@ lang: vi
 <ListenToPlayer slug="/web3/" />
 </div>
 
-Centralized đã giúp hàng tỷ người tiếp cận với Www ( World Wide Web) và tạo ra cơ sở hạ tầng ổn đinh, mạnh mẽ. Đồng thời, một số ít có tầm ảnh hưởng lớn trên không gian của World Wide Web đơn phương quyết định điều gì nên và không nên.
+Tập trung đã giúp hàng tỷ người tiếp cận với Www ( World Wide Web) và tạo ra cơ sở hạ tầng ổn đinh, mạnh mẽ. Đồng thời, một số ít có tầm ảnh hưởng lớn trên không gian của World Wide Web đơn phương quyết định điều gì nên và không nên.
 
 Web3 là câu trả lời cho tình huống khó xử này. Thay vì một trang web được quản lí độc quyền bởi các công ty công nghệ lớn thì Web3 bao gồm sự phân quyền và được người dùng xây dựng, vận hành cũng như sở hữu. Web3 đặt quyền hạn vào tay các cá nhân hơn là các tập đoàn.
 Trước khi bàn luận về Web3, hãy cùng nhau phân tích xem chúng có mặt ở đây như thế nào.
@@ -106,7 +106,7 @@ Tuy nhiên, mọi người định nghĩa nhiều cộng đồng Web3 là DAO. C
 
 ### Danh tính {#identity}
 
-Theo truyền thống, bạn sẽ tạo một tài khoản cho mọi nền tảng bạn sử dụng. Ví dụ bạn có thể có tài khoản Twitter, Facebook, Youtube và Reddit. Bạn muốn thay đổi thông tin hiển thị hoặc ảnh trang cá nhân? Bạn phải thao thác điều đó trên mọi tài khoản. Bạn có thể sử dụng đăng nhập mạng xã hội trong một số trường hợp, nhưng điều này gây ra một vấn đề quen thuộc — kiểm duyệt. Chỉ với một cú nhấp chuột, các nền tảng này có thể khóa bạn khỏi toàn bộ cuộc sống trực tuyến của mình. Thậm chí tệ hơn, nhiều nền tảng yêu cầu bạn phải cung cấp cho họ thông tin nhận dạng cá nhân để tạo tài khoản.
+Theo truyền thống, bạn sẽ tạo một tài khoản cho mọi nền tảng bạn sử dụng. Ví dụ bạn có thể có tài khoản Twitter, Facebook, Youtube và Reddit. Bạn muốn thay đổi thông tin hiển thị hoặc ảnh trang cá nhân? Bạn phải thao tác điều đó trên mọi tài khoản. Bạn có thể sử dụng đăng nhập mạng xã hội trong một số trường hợp, nhưng điều này gây ra một vấn đề quen thuộc — kiểm duyệt. Chỉ với một cú nhấp chuột, các nền tảng này có thể khóa bạn khỏi toàn bộ cuộc sống trực tuyến của mình. Thậm chí tệ hơn, nhiều nền tảng yêu cầu bạn phải cung cấp cho họ thông tin nhận dạng cá nhân để tạo tài khoản.
 
 Web3 giải quyết các vấn đề này bằng cách cho phép bạn kiểm soát danh tính kỹ thuật số của mình bằng một địa chỉ Ethereum và hồ sơ [Dịch vụ Định danh Ethereum (ENS)](/glossary/#ens). Sử dụng địa chỉ Ethereum cung cấp một thông tin đăng nhập duy nhất trên các nền tảng an toàn, chống kiểm duyệt và ẩn danh.
 

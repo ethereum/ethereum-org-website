@@ -112,7 +112,7 @@ Và nếu bạn không muốn gửi hoặc truyền [ETH](/glossary/#ether) vì 
 
 Sự biến động của tiền mã hóa là một vấn đề đối với các sản phẩm tài chính và việc tiêu dùng nói chung. Cộng đồng tài chính phi tập trung đã giải quyết vấn đề này bằng những đồng tiền ổn định (stablecoins). Giá trị của chúng được neo vào một tài sản khác, thường là một loại tiền tệ phổ biến như đồng đô la Mỹ.
 
-Các đồng tiền như Dai hay USDC có giá trị chênh lệch chỉ vài cents so với một đô la. Điều này khiến cho chúng trở nên hoàn hảo cho thu nhập hay hoạt động bán lẻ. Nhiều người ở châu Mỹ La-tinh dùng các đồng tiền ổn định như là một cách để bảo vệ những khoản tiết kiệm của họ trong một giai đoạn bầy bất trắc với những đồng tiền do chính phủ của họ phát hành.
+Các đồng tiền như Dai hay USDC có giá trị chênh lệch chỉ vài cents so với một đô la. Điều này khiến cho chúng trở nên hoàn hảo cho thu nhập hay hoạt động bán lẻ. Nhiều người ở châu Mỹ La-tinh dùng các đồng tiền ổn định như là một cách để bảo vệ những khoản tiết kiệm của họ trong một giai đoạn đầy bất trắc với những đồng tiền do chính phủ của họ phát hành.
 
 <ButtonLink href="/stablecoins/">
 Thêm về Stablecoins
@@ -323,7 +323,7 @@ Ethereum là nền tảng hoàn hảo cho tài chính phi tập trung vì một 
 
 Bạn có thể nghĩ về DeFi theo từng lớp:
 
-1. Chuỗi khốiChuỗi khối – Ethereum chứa đựng lịch sử giao dịch và tình trạng hiện thời của các tài khoản.
+1. Chuỗi khối – Ethereum chứa đựng lịch sử giao dịch và tình trạng hiện thời của các tài khoản.
 2. Các tài sản – [ETH](/what-is-ether/) và các token (tiền tệ) khác.
 3. Các giao thức – [hợp đồng thông minh](/glossary/#smart-contract) cung cấp chức năng, ví dụ, một dịch vụ cho phép cho vay tài sản phi tập trung.
 4. [Các ứng dụng](/apps/) – các sản phẩm chúng tôi sử dụng để quản lý và truy cập các giao thức.
@@ -359,8 +359,16 @@ Tài chính phi tập trung là một phong trào nguồn mở. Các giao thức
 ### Cộng đồng {#communities}
 
 - [Máy chủ Discord của DeFi Llama](https://discord.defillama.com/)
-- [Máy chủ Discord của DeFi Pulse](https://discord.gg/Gx4TCTk)
 
 <Divider />
 
 <QuizWidget quizKey="defi" />
+
+## Ngoài DeFi truyền thống {#beyond-traditional-defi}
+
+Hệ sinh thái DeFi tiếp tục mở rộng sang các lĩnh vực mới:
+
+- **[Thị trường dự đoán](/prediction-markets/)** – Các nền tảng phi tập trung nơi bạn có thể đặt cược vào kết quả của các sự kiện trong tương lai, từ bầu cử đến các sự kiện thể thao, mà không cần trung gian.
+- **[Tài sản trong thế giới thực (RWA)](/real-world-assets/)** – Token hóa các tài sản vật chất như bất động sản, hàng hóa và trái phiếu trên Ethereum, mang lại hàng nghìn tỷ đô la giá trị trên chuỗi.
+- **[Thanh toán](/payments/)** – Sử dụng Ethereum và stablecoin để thanh toán toàn cầu nhanh chóng, chi phí thấp mà không cần cơ sở hạ tầng ngân hàng truyền thống.
+- **[Tác nhân AI](/ai-agents/)** – Các tác nhân phần mềm tự trị có thể giao dịch trên Ethereum, cho phép các hình thức giao dịch tự động, quản lý danh mục đầu tư và tương tác trên chuỗi mới.
