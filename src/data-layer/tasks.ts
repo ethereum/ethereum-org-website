@@ -8,8 +8,10 @@
 import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
 import { fetchDeveloperTools } from "./fetchers/developer-tools"
+import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
+import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
@@ -53,12 +55,14 @@ export const KEYS = {
   TOTAL_ETH_STAKED: "fetch-total-eth-staked",
   TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
   STABLECOINS_DATA: "fetch-stablecoins-data",
+  ACCOUNT_HOLDERS: "fetch-account-holders",
 } as const
 
 // Task definition: storage key + fetch function
 type TaskDef = [string, () => Promise<unknown>]
 
 const DAILY: TaskDef[] = [
+  [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
   [KEYS.CALENDAR_EVENTS, fetchCalendarEvents],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
@@ -77,7 +81,7 @@ const DAILY: TaskDef[] = [
 
 const HOURLY: TaskDef[] = [
   [KEYS.BEACONCHAIN, fetchBeaconChain],
-  // [KEYS.BLOBSCAN_STATS, fetchBlobscanStats], // Temporarily disabled - Blobscan API is down
+  [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.ETH_PRICE, fetchEthPrice],
