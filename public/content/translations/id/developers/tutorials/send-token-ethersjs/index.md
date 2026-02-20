@@ -1,11 +1,8 @@
 ---
 title: Mengirimkan Token Menggunakan ethers.js
-description: Panduan yang ramah pemula untuk mengirimkan token menggunakan ethers.js.
+description: Panduan yang ramah bagi pemula untuk mengirimkan token menggunakan ethers.js.
 author: Kim YongJun
-tags:
-  - "ETHERS.JS"
-  - "ERC-20"
-  - "TOKEN"
+tags: [ "ETHERS.JS", "ERC-20", "TOKEN" ]
 skill: beginner
 lang: id
 published: 2021-04-06
@@ -21,9 +18,10 @@ published: 2021-04-06
 
 ### Untuk Memulai {#to-get-started}
 
-Untuk memulai, kita harus terlebih dahulu mengimpor pustaka ethers.js ke dalam Include ethers.js(5.0) javascript kita
+Untuk memulai, kita harus terlebih dahulu mengimpor pustaka ethers.js ke dalam javascript kita
+Sertakan ethers.js(5.0)
 
-### Menginstal {#install-ethersjs}
+### Pemasangan {#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -34,11 +32,11 @@ ES6 di Peramban
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // Your code here...
+  // Kode Anda di sini...
 </script>
 ```
 
-ES3 (UMD) di Peramban
+ES3(UMD) di Peramban
 
 ```html
 <script
@@ -49,7 +47,7 @@ ES3 (UMD) di Peramban
 
 ### Parameter {#param}
 
-1. **`contract_address`**: Akun kontrak token (akun kontrak diperlukan ketika token yang ingin Anda transfer bukan merupakan ether)
+1. **`contract_address`**: Akun Kontrak Token (Akun Kontrak diperlukan ketika token yang ingin Anda transfer bukan ether)
 2. **`send_token_amount`**: Jumlah yang ingin Anda kirimkan ke penerima
 3. **`to_address`**: Alamat penerima
 4. **`send_account`**: Alamat pengirim
@@ -57,15 +55,15 @@ ES3 (UMD) di Peramban
 
 ## Pemberitahuan {#notice}
 
-`signTransaction(tx)` dihilangkan karena `sendTransaction()` dilakukan secara internal.
+`signTransaction(tx)` dihilangkan karena `sendTransaction()` melakukannya secara internal.
 
-## Prosedur Mengirim {#procedure}
+## Prosedur Pengiriman {#procedure}
 
-### 1. Hubungkan ke jaringan (jaringan percobaan) {#connect-to-network}
+### 1. Hubungkan ke jaringan (testnet) {#connect-to-network}
 
-#### Tetapkan Penyedia (Infura) {#set-provider}
+#### Atur Penyedia (Infura) {#set-provider}
 
-Hubungkan ke jaringan percobaan Ropsten
+Hubungkan ke testnet Ropsten
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
@@ -77,7 +75,7 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Hubungkan Dompet ke net {#connect-wallet-to-net}
+### 3. Hubungkan Dompet ke jaringan {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
@@ -89,9 +87,9 @@ let walletSigner = wallet.connect(window.ethersProvider)
 window.ethersProvider.getGasPrice() // gasPrice
 ```
 
-### 5. Tentukan Transaksi {#define-transaction}
+### 5. Definisikan Transaksi {#define-transaction}
 
-Variabel-variabel ini yang ditentukan di bawah bergantung pada `send_token()`
+Variabel-variabel yang didefinisikan di bawah ini bergantung pada `send_token()`
 
 ### Parameter transaksi {#transaction-params}
 
@@ -101,7 +99,7 @@ Variabel-variabel ini yang ditentukan di bawah bergantung pada `send_token()`
 4. **`gas_limit`**: batas gas
 5. **`gas_price`**: harga gas
 
-[Lihat di bawah untuk cara mengggunakan](#how-to-use)
+[Lihat di bawah untuk cara penggunaan](#how-to-use)
 
 ```javascript
 const tx = {
@@ -119,7 +117,7 @@ const tx = {
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("Send finished!")
+  alert("Pengiriman selesai!")
 })
 ```
 
@@ -148,7 +146,7 @@ send_token(
 
 ### Sukses! {#success}
 
-![gambar transaksi berhasil](./successful-transaction.png)
+![gambar transaksi yang berhasil dilakukan](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -168,23 +166,23 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // general token send
+      // pengiriman token umum
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // How many tokens?
+      // Berapa banyak token?
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // Send tokens
+      // Kirim token
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("sent token")
+        alert("token terkirim")
       })
-    } // ether send
+    } // pengiriman ether
     else {
       const tx = {
         from: send_account,
@@ -201,10 +199,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("Send finished!")
+          alert("Pengiriman selesai!")
         })
       } catch (error) {
-        alert("failed to send!!")
+        alert("gagal mengirim!!")
       }
     }
   })

@@ -1,11 +1,12 @@
 {
   "comp-tutorial-metadata-minute-read": "bacaan singkat",
-  "page-tutorial-listing-policy-intro": "Sebelum Anda mengirimkan tutorial, harap baca kebijakan pendaftaran kami.",
+  "page-tutorial-listing-policy-intro": "Sebelum Anda mengirimkan tutorial, silakan <a href=\"/contributing/content-resources/\">baca kebijakan pencantuman kami</a>.",
   "comp-tutorial-metadata-tip-author": "Penulis tips",
+  "page-tutorial-create-an-issue": "Buat isu",
+  "page-tutorial-create-an-issue-desc": "Isi templat isu yang menguraikan tutorial Anda.",
   "page-tutorial-raise-issue-btn": "Angkat masalah",
   "page-tutorial-read-time": "menit",
   "page-tutorial-submit-btn": "Kirimkan tutorial",
-  "page-tutorial-submit-tutorial": "Untuk mengirimkan tutorial, Anda perlu menggunakan GitHub. Kami mempersilakan Anda membuat masalah atau permintaan penarikan.",
   "page-tutorial-subtitle": "Selamat datang di daftar pilihan tutorial komunitas kami.",
   "page-tutorial-tags-error": "Belum ada tutorialdengan semua tag yang Anda pilih",
   "page-tutorial-title": "Tutorial Pengembangan Ethereum",
@@ -13,8 +14,9 @@
   "page-tutorial-external-link": "Eksternal",
   "page-tutorials-meta-title": "Tutorial Pengembangan Ethereum",
   "page-tutorial-beginner": "Pemula",
-  "page-tutorial-intermediate": "Tingkat menengah",
-  "page-tutorial-advanced": "Tingkat lanjut",
+  "page-tutorial-intermediate": "Menengah",
+  "page-tutorial-advanced": "Tingkat Lanjut",
   "page-find-wallet-try-removing": "Cobalah menghapus satu atau dua fitur",
-  "page-find-wallet-clear": "Hapus filter"
+  "page-find-wallet-clear": "Hapus filter",
+  "page-tutorials-env-banner": "Jangan lakukan <code>.env</code>! Pastikan untuk tidak pernah membagikan atau mengekspos <code>.env</code> berkas kepada siapapun, karena Anda akan mengorbankan rahasia-rahasia Anda dengan melakukannya. Jika Anda menggunakan kontrol versi, tambahkan <code>.env</code> to a <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> berkas Anda."
 }

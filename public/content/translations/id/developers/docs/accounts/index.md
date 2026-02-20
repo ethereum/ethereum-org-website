@@ -4,18 +4,18 @@ description: Penjelasan tentang akun Ethereum - struktur datanya dan hubungannya
 lang: id
 ---
 
-Akun Ethereum adalah entitas dengan saldo eter (ETH) yang dapat mengirim transaksi di Ethereum. Akun dapat dikontrol pengguna atau digunakan sebagai kontrak pintar.
+Akun Ethereum adalah entitas dengan saldo ether (ETH) yang dapat mengirim pesan di jaringan Ethereum. Akun dapat dikontrol pengguna atau digunakan sebagai kontrak pintar.
 
-## Prasyarat {#prerequisites}
+## Persyaratan {#prerequisites}
 
-Akun adalah topik yang sangat ramah bagi pemula. Tetapi untuk membantu Anda lebih memahami halaman ini, kami sarankan Anda terlebih dahulu membaca [pengantar Ethereum](/developers/docs/intro-to-ethereum/).
+Untuk membantu Anda lebih memahami halaman ini, kami sarankan Anda membaca [pengenalan ke Ethereum](/developers/docs/intro-to-ethereum/) kami terlebih dahulu.
 
-## Jenis akun {#types-of-account}
+## Jenis-jenis akun {#types-of-account}
 
 Ethereum mempunyai dua jenis akun:
 
-- Dimiliki secara eksternal - dikendalikan oleh siapa saja yang memiliki kunci privat
-- Kontrak – kontrak pintar yang diterapkan ke jaringan, dikendalikan oleh kode. Pelajari tentang [kontrak pintar](/developers/docs/smart-contracts/)
+- Akun yang dimiliki secara eksternal (EOA) - dikontrol oleh siapa saja yang memiliki kunci pribadi
+- Akun kontrak - kontrak pintar yang diterapkan ke jaringan, dikendalikan oleh kode. Pelajari tentang [kontrak pintar](/developers/docs/smart-contracts/)
 
 Kedua jenis akun tersebut memiliki kemampuan untuk:
 
@@ -24,32 +24,35 @@ Kedua jenis akun tersebut memiliki kemampuan untuk:
 
 ### Perbedaan utama {#key-differences}
 
-**Kepemilikan Eksternal**
+**Kepemilikan eksternal**
 
 - Membuat akun tidak memerlukan biaya
 - Dapat memulai transaksi
 - Transaksi antar akun dengan kepemilikan eksternal hanya dapat berupa transfer ETH/token
+- Terdiri dari sepasang kunci kriptografi: kunci publik dan privat yang mengontrol aktivitas akun
 
 **Kontrak**
 
 - Membuat sebuah kontrak memerlukan biaya karena Anda menggunakan penyimpanan jaringan
-- Hanya dapat mengirim transaksi sebagai tanggapan untuk menerima transaksi
+- Hanya dapat mengirim pesan sebagai respons terhadap penerimaan transaksi
 - Transaksi dari akun eksternal ke akun kontrak dapat memicu kode yang dapat melakukan banyak tindakan berbeda, seperti mentransfer token atau bahkan membuat kontrak baru
+- Akun kontrak tidak memiliki kunci pribadi. Sebaliknya, mereka dikendalikan oleh logika kode kontrak pintar
 
-## Pemeriksaan akun {#an-account-examined}
+## Menelaah sebuah akun {#an-account-examined}
 
 Akun Ethereum memiliki empat bidang:
 
-- `nonce` – penghitung yang menunjukkan jumlah transaksi yang dikirim dari akun. Ini memastikan transaksi hanya diproses sekali. Dalam akun kontrak, angka ini mewakili jumlah kontrak yang dibuat oleh akun tersebut.
+- `nonce` – Penghitung yang menunjukkan jumlah transaksi yang dikirim dari akun yang dimiliki secara eksternal atau jumlah kontrak yang dibuat oleh akun kontrak. Hanya satu transaksi dengan nonce tertentu yang dapat dieksekusi untuk setiap akun, melindungi dari serangan replay di mana transaksi yang ditandatangani disiarkan berulang kali dan dieksekusi ulang.
 - `balance` – Jumlah wei yang dimiliki oleh alamat ini. Wei adalah denominasi ETH dan ada 1e+18 wei per ETH.
-- `codeHash` – Hash ini merujuk pada _kode_ sebuah akun di mesin virtual Ethereum (EVM). Akun kontrak memiliki potongan kode yang diprogramkan ke dalamnya yang dapat melakukan berbagai operasi. Kode EVM ini dieksekusi jika akun menerima pemanggilan message. Tidak dapat diubah, tidak seperti field akun lainnya. Semua potongan kode tersebut disimpan dalam basis data state di bawah hash yang sesuai untuk proses pengambilan nanti. Nilai hash ini dikenal sebagai codeHash. Untuk kepemilikan akun eksternal, bidang codeHash adalah hash dari string kosong.
-- `storageRoot` – Terkadang dikenal sebagai hash penyimpanan. Hash 256-bit dari node akar pohon Merkle Patricia yang mengkodekan konten penyimpanan akun (pemetaan di antara nilai bilangan bulat 256-bit), yang dikodekan ke dalam pohon sebagai pemetaan dari hash 256-bit Keccak dari kunci bilangan bulat 256-bit ke nilai bilangan bulat 256-bit yang dikodekan RLP. Pohon ini mengkodekan hash dari konten penyimpanan akun ini, dan bersifat kosong secara default.
+- `codeHash` – Hash ini merujuk pada _kode_ sebuah akun di Mesin Virtual Ethereum (EVM). Akun kontrak memiliki potongan kode yang diprogramkan ke dalamnya yang dapat melakukan berbagai operasi. Kode EVM ini dieksekusi jika akun menerima pemanggilan message. Tidak dapat diubah, tidak seperti field akun lainnya. Semua potongan kode tersebut disimpan dalam basis data state di bawah hash yang sesuai untuk proses pengambilan nanti. Nilai hash ini dikenal sebagai codeHash. Untuk kepemilikan akun eksternal, bidang codeHash adalah hash dari string kosong.
+- `storageRoot` – Terkadang dikenal sebagai hash penyimpanan. Hash 256-bit dari node akar sebuah [Trie Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) yang menyandikan konten penyimpanan dari akun (pemetaan antara nilai-nilai integer 256-bit), disandikan ke dalam trie sebagai pemetaan dari hash Keccak 256-bit dari kunci-kunci integer 256-bit ke nilai-nilai integer 256-bit yang disandikan dengan RLP. Pohon ini mengkodekan hash dari konten penyimpanan akun ini, dan bersifat kosong secara default.
 
-![Diagram yang menunjukan susunan akun](./accounts.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram yang menunjukkan susunan sebuah akun](./accounts.png)
+_Diagram diadaptasi dari [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Akun dan pasangan kunci dengan kepemilikan eksternal {#externally-owned-accounts-and-key-pairs}
+## Akun yang dimiliki secara eksternal dan pasangan kunci {#externally-owned-accounts-and-key-pairs}
 
-Akun terdiri dari sepasang kunci kriptografis: publik dan pribadi. Mereka membantu membuktikan bahwa transaksi benar-benar ditandatangani oleh pengirim dan mencegah pemalsuan. Kunci privat adalah yang Anda gunakan untuk menandatangani transaksi, sehingga memberi Anda pengawasan atas dana yang terkait dengan akun Anda. Anda tidak pernah benar-benar memegang mata uang kripto, Anda memegang kunci privatnya - dananya selalu ada di buku besar Ethereum.
+Sebuah akun terdiri dari sepasang kunci kriptografi: Umum dan pribadi. Mereka membantu membuktikan bahwa transaksi benar-benar ditandatangani oleh pengirim dan mencegah pemalsuan. Kunci privat adalah yang Anda gunakan untuk menandatangani transaksi, sehingga memberi Anda pengawasan atas dana yang terkait dengan akun Anda. Anda tidak pernah benar-benar memegang mata uang kripto, Anda memegang kunci privatnya - dananya selalu ada di buku besar Ethereum.
 
 Ini mencegah pelaku jahat menyiarkan transaksi palsu karena Anda selalu dapat memverifikasi pengirim transaksi.
 
@@ -57,7 +60,7 @@ Jika Alice ingin mengirim eter dari akunnya sendiri ke akun Bob, Alice perlu mem
 
 ## Pembuatan akun {#account-creation}
 
-Saat Anda ingin membuat akun, kebanyakan pustaka akan memberi Anda kunci privat acak.
+Saat kamu ingin membuat akun, sebagian besar pustaka akan menghasilkan kunci pribadi secara acak.
 
 Kunci privat terdiri dari 64 karakter heksa dan dapat dienkripsi dengan kata sandi.
 
@@ -65,27 +68,36 @@ Contoh:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-Kunci publik dihasilkan oleh kunci privat yang menggunakan [Algoritma Tanda Tangan Digital Kurva Eliptik](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Anda mendapatkan alamat publik untuk akun Anda dengan mengambil 20 bita terakhir dari kunci publik hash Keccak-256 dan menambahkan `0x` ke bagian awal alamat.
+Kunci publik dihasilkan dari kunci pribadi menggunakan [Algoritma Tanda Tangan Digital Kurva Elips](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Anda mendapatkan alamat publik untuk akun Anda dengan mengambil 20 bita terakhir dari hash Keccak-256 dari kunci publik dan menambahkan `0x` ke bagian awal.
 
-Berikut adalah contoh membuat akun di konsol menggunakan `personal_newAccount` GETH
+Ini berarti sebuah akun yang dimiliki secara eksternal (EOA) memiliki alamat 42 karakter (segmen 20 bita yang merupakan 40 karakter heksadesimal ditambah awalan `0x`).
 
-```go
-> personal.newAccount()
-Passphrase:
-Repeat passphrase:
-"0x5e97870f263700f46aa00d967821199b9bc5a120"
+Contoh:
 
-> personal.newAccount("h4ck3r")
-"0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
+`0x5e97870f263700f46aa00d967821199b9bc5a120`
+
+Contoh berikut menunjukkan cara menggunakan alat penandatanganan yang disebut [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) untuk membuat akun baru. Clef adalah alat manajemen akun dan penandatanganan yang disertakan dengan klien Ethereum, [Geth](https://geth.ethereum.org). Perintah `clef newaccount` membuat pasangan kunci baru dan menyimpannya di dalam file penyimpanan kunci yang terenkripsi.
+
+```
+> clef newaccount --keystore <path>
+
+Silakan masukkan kata sandi untuk akun baru yang akan dibuat:
+> <password>
+
+------------
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
-[Dokumentasi GETH](https://geth.ethereum.org/docs)
+[Dokumentasi Geth](https://geth.ethereum.org/docs)
 
-Dimungkinkan untuk memperoleh kunci publik baru dari kunci privat Anda tetapi Anda tidak dapat memperoleh kunci privat dari kunci publik. Ini berarti sangat penting untuk menjaga kunci privat tetap aman dan, seperti namanya, **PRIVAT**.
+Dimungkinkan untuk menurunkan kunci publik baru dari kunci pribadi Anda, tetapi Anda tidak dapat menurunkan kunci pribadi dari kunci publik. Sangat penting untuk menjaga kunci pribadi Anda tetap aman dan, seperti namanya, **PRIBADI**.
 
-Anda memerlukan kunci privat untuk menandatangani pesan dan transaksi yang menghasilkan tanda tangan. Orang lain kemudian dapat mengambil tanda tangan untuk mendapatkan kunci publik anda, membuktikan penulis pesan tersebut. Dalam aplikasi Anda, Anda dapat menggunakan pustaka javascript untuk mengirim transaksi ke jaringan.
+Anda memerlukan kunci privat untuk menandatangani pesan dan transaksi yang menghasilkan tanda tangan. Orang lain kemudian dapat mengambil tanda tangan untuk mendapatkan kunci publik anda, membuktikan penulis pesan tersebut. Dalam aplikasi Anda, Anda dapat menggunakan pustaka JavaScript untuk mengirim transaksi ke jaringan.
 
-## Akun Kontrak {#contract-accounts}
+## Akun kontrak {#contract-accounts}
 
 Akun kontrak juga memiliki alamat heksadesimal 42 karakter:
 
@@ -95,9 +107,15 @@ Contoh:
 
 Alamat kontrak biasanya diberikan saat kontrak diterapkan ke Rantai Blok Ethereum. Alamat ini berasal dari alamat pembuat dan jumlah transaksi yang dikirim dari alamat tersebut (“nonce”).
 
-## Catatan pada dompet {#a-note-on-wallets}
+## Kunci validator {#validators-keys}
 
-Akun bukanlah dompet. Akun adalah pasangan kunci untuk akun Ethereum yang dimiliki pengguna. Dompet adalah antarmuka atau aplikasi yang memungkinkan Anda berinteraksi dengan akun Ethereum Anda.
+Ada juga jenis kunci lain di Ethereum, yang diperkenalkan ketika Ethereum beralih dari proof-of-work ke konsensus berbasis proof-of-stake. Ini adalah kunci 'BLS' dan digunakan untuk mengidentifikasi validator. Kunci-kunci ini dapat digabungkan secara efisien untuk mengurangi bandwidth yang diperlukan agar jaringan dapat mencapai konsensus. Tanpa agregasi kunci ini, taruhan minimum untuk validator akan jauh lebih tinggi.
+
+[Selengkapnya tentang kunci validator](/developers/docs/consensus-mechanisms/pos/keys/).
+
+## Catatan tentang dompet {#a-note-on-wallets}
+
+Akun bukanlah dompet. Dompet adalah sebuah antarmuka atau aplikasi yang memungkinkan Anda berinteraksi dengan akun Ethereum Anda, baik itu akun yang dimiliki secara eksternal atau akun kontrak.
 
 ## Demo visual {#a-visual-demo}
 
@@ -108,6 +126,8 @@ Tonton Austin memandu Anda tentang fungsi hash, dan pasangan kunci.
 <YouTube id="9LtBDy67Tho" />
 
 ## Bacaan lebih lanjut {#further-reading}
+
+- [Memahami Akun Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 

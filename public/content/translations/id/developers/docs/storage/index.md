@@ -6,7 +6,7 @@ lang: id
 
 Tidak seperti server terpusat yang dijalankan oleh satu perusahaan atau organisasi, sistem penyimpanan terdesentralisasi terdiri dari jaringan peer-to-peer dari operator pengguna yang memegang satu bagian dari keseluruhan data, yang menciptakan sistem berbagi penyimpana file yang tangguh. Ini dapat dalam bentuk aplikasi berbasis blockchain atau jaringan berbasis peer-to-peer.
 
-Ethereum sendiri dapat digunakan sebagai sistem penyimpanan terdesentralisasi, dan akan berfungsi demikian ketika berkaitan dengan penyimpanan kode di dalam semua kontrak pintar. Namun, ketika berkaitan dengan jumlah data yang besar, ini bukanlah bagian dari tujuan pembuatan Ethereum. Rantainya terus-menerus berkembang, tetapi pada saat penulisan ini, rantai Ethereum memiliki panjang sekitar 500GB - 1TB ([tergantung pada klien](https://etherscan.io/chartsync/chaindefault)), dan setiap node di jaringan harus dapat menyimpan semua data. Jika rantai diperluas ke jumlah data yang sangat besar (anggaplah 5TB), tidak akan memungkinkan bagi semua node untuk terus dijalankan. Selain itu, biaya untuk penggunaan data sebesar ini ke Jaringan Utama akan sangat mahal karena biaya [gas](/developers/docs/gas).
+Ethereum sendiri dapat digunakan sebagai sistem penyimpanan terdesentralisasi, dan akan berfungsi demikian ketika berkaitan dengan penyimpanan kode di dalam semua kontrak pintar. Namun, ketika berkaitan dengan jumlah data yang besar, ini bukanlah bagian dari tujuan pembuatan Ethereum. Rantai ini terus berkembang, tetapi pada saat penulisan ini, rantai Ethereum berukuran sekitar 500GB - 1TB ([tergantung pada klien](https://etherscan.io/chartsync/chaindefault)), dan setiap node di jaringan harus dapat menyimpan semua data. Jika rantai diperluas ke jumlah data yang sangat besar (anggaplah 5TB), tidak akan memungkinkan bagi semua node untuk terus dijalankan. Selain itu, biaya untuk menerapkan data sebanyak ini ke Jaringan Utama akan sangat mahal karena biaya [gas](/developers/docs/gas).
 
 Karena keterbatasan ini, kita memerlukan rantai atau metodologi berbeda untuk menyimpan jumlah data yang sangat besar dalam cara yang terdesentralisasi.
 
@@ -23,11 +23,11 @@ Ketika mempertimbangkan opsi penyimpanan terdesentralisasi (dStorage), ada beber
 
 Agar sepotong data bertahan selamanya, kita perlu menggunakan mekanisme persistensi. Misalnya, di Ethereum, mekanisme persistensi adalah keseluruhan rantai yang perlu diperhitungkan ketika menjalankan node. Bagian data terbaru dilekatkan pada ujung rantai, dan terus berkembang - yang mengharuskan setiap node mereplikasi semua data yang tersemat.
 
-Ini dikenal sebagai persistensi **berbasis blockhain**.
+Ini dikenal sebagai persistensi **berbasis blockchain**.
 
-Masalah dengan persistensi berbasis blockchain adalah bahwa rantainya dapat menjadi terlalu besar untuk dipertahankan dan untuk secara memungkinkan menyimpan semua data (misalnya [banyak sumber](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) memperkirakan Internet akan mengharuskan kapasitas penyimpanan lebih dari 40 Zetabita).
+Masalah dengan persistensi berbasis blockchain adalah bahwa rantainya bisa menjadi terlalu besar untuk dipelihara dan disimpan semua datanya secara layak (misalnya, [banyak sumber](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) memperkirakan Internet memerlukan kapasitas penyimpanan lebih dari 40 Zettabyte).
 
-Blockchain juga harus memiliki beberapa tipe struktur insentif. Dalam persistensi berbasis blockchain, ada pembayaran yang diberikan kepada penambang. Ketika data ditambahkan ke rantai, node dibayar untuk menambahkan data.
+Blockchain juga harus memiliki beberapa tipe struktur insentif. Untuk kegigihan berbasis blockchain, ada pembayaran yang dilakukan kepada validator. Ketika data ditambahkan ke rantai, validator dibayar untuk menambahkan data tersebut.
 
 Platform dengan persistensi berbasis blockchain:
 
@@ -36,16 +36,19 @@ Platform dengan persistensi berbasis blockchain:
 
 ### Berbasis kontrak {#contract-based}
 
-Persistensi **berbasis kontrak** memiliki intuisi bahwa data tidak dapat direplikasi oleh setiap node dan disimpan selamanya, dan sebagai gantinya harus dipelihara dengan kesepakatan kontrak. Ini adalah kesepakatan yang dibuat dengan berbagai node yang telah berjanji untuk menampung sepotong data dalam satu periode waktu. Dananya harus dikembalikan atau diperbarui setiap kali node tidak dapat lagi mempertahankan keberadaan data.
+**Persistensi berbasis kontrak** memiliki intuisi bahwa data tidak dapat direplikasi oleh setiap node dan disimpan selamanya, dan sebagai gantinya harus dipelihara dengan perjanjian kontrak. Ini adalah kesepakatan yang dibuat dengan berbagai node yang telah berjanji untuk menampung sepotong data dalam satu periode waktu. Dananya harus dikembalikan atau diperbarui setiap kali node tidak dapat lagi mempertahankan keberadaan data.
 
-Dalam kebanyakan kasus, alih-alih menyimpan semua data secara on-chain, hash tempat data berada di rantailah yang disimpan. Dengan cara ini, seluruh rantai tidak perlu melakukan penskalaan untuk menyimpan semua data.
+Dalam sebagian besar kasus, alih-alih menyimpan semua data on-chain, yang disimpan adalah hash dari lokasi data tersebut di blockchain. Dengan cara ini, seluruh rantai tidak perlu melakukan penskalaan untuk menyimpan semua data.
 
 Platform dengan persistensi berbasis kontrak:
 
-- [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
-- [Skynet](https://siasky.net/)
+- [Filecoin](https://docs.filecoin.io/basics/what-is-filecoin)
+- [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
 - [Züs](https://zus.network/)
+- [Crust Network](https://crust.network)
+- [Swarm](https://www.ethswarm.org/)
+- [4EVERLAND](https://www.4everland.org/)
 
 ### Pertimbangan tambahan {#additional-consideration}
 
@@ -54,9 +57,15 @@ IPFS adalah sistem terdistribusi untuk menyimpan dan mengakses berkas, situs web
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/) _(layanan penyematan IPFS)_
 - [web3.storage](https://web3.storage/) _(layanan penyematan IPFS/Filecoin)_
-- [Infura](https://infura.io/product/ipfs) _(layanan pinning IPFS)_
+- [Infura](https://infura.io/product/ipfs) _(layanan penyematan IPFS)_
+- [IPFS Scan](https://ipfs-scan.io) _(penjelajah penyematan IPFS)_
+- [4EVERLAND](https://www.4everland.org/)_(layanan penyematan IPFS)_
+- [Filebase](https://filebase.com) _(Layanan Penyematan IPFS)_
+- [Spheron Network](https://spheron.network/) _(layanan penyematan IPFS/Filecoin)_
 
-## Retensi data {#data-retention}
+SWARM adalah teknologi penyimpanan dan distribusi data terdesentralisasi dengan sistem insentif penyimpanan dan orakel harga sewa penyimpanan.
+
+## Penyimpanan data {#data-retention}
 
 Untuk mempertahankan data, sistem harus memiliki beberapa jenis mekanisme untuk memastikan data dipertahankan.
 
@@ -66,105 +75,139 @@ Salah satu cara populer untuk memastikan data dipertahankan, adalah dengan mengg
 
 Jenis dStorage dengan mekanisme tantangan:
 
-- Züs
+- Tentu saja
 - Skynet
 - Arweave
 - Filecoin
+- Crust Network
+- 4EVERLAND
 
-### Desentralisasi {#decentrality}
+### Desentralitas {#decentrality}
 
 Tidak ada peralatan yang bagus untuk mengukur tingkat desentralisasi platform, tapi secara umum, Anda mungkin ingin menggunakan peralatan yang tidak memiliki beberapa bentuk KYC untuk menyediakan bukti bahwa peralatan itu tidak terpusat.
 
 Peralatan desentralisasi tanpa KYC:
 
-- Züs (mengimplementasikan sebuah edisi non-KYC)
 - Skynet
 - Arweave
 - Filecoin
 - IPFS
 - Ethereum
+- Crust Network
+- 4EVERLAND
 
 ### Konsensus {#consensus}
 
-Kebanyakan peralatan ini memiliki versi [mekanisme konsensus](/developers/docs/consensus-mechanisms/)sendiri tetapi secara umum, peralatan ini didasarkan pada [**bukti kerja (PoW)**](/developers/docs/consensus-mechanisms/pow/) atau [**bukti taruhan (PoS)**](/developers/docs/consensus-mechanisms/pos/).
+Sebagian besar alat ini memiliki versi [mekanisme konsensus](/developers/docs/consensus-mechanisms/) mereka sendiri tetapi umumnya didasarkan pada [**bukti kerja (PoW)**](/developers/docs/consensus-mechanisms/pow/) atau [**bukti taruhan (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
-Berbasis PoW:
+Berbasis bukti kerja:
 
 - Skynet
 - Arweave
+
+Berbasis bukti kepemilikan:
+
 - Ethereum
-
-Berbasis PoS:
-
-- [Rantai Suar](/eth2/beacon-chain/)
 - Filecoin
-- Züs
+- Tentu saja
+- Crust Network
 
-## Peralatan terkait {#related-tools}
+## Perangkat terkait {#related-tools}
 
-**IPFS - _Sistem File InterPlanetary adalah penyimpanan terdesentralisasi dan sistem referensi file untuk Ethereum._**
+**IPFS - _Sistem File Antarplanet adalah sistem penyimpanan dan referensi file terdesentralisasi untuk Ethereum._**
 
 - [Ipfs.io](https://ipfs.io/)
 - [Dokumentasi](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
-**Storj DCS - _Tempat penyimpanan objek cloud terdesentralisasi yang aman, privat, dan kompatibel dengan S3 bagi para pengembang._**
+**Storj DCS - _Penyimpanan objek cloud terdesentralisasi yang aman, privat, dan kompatibel dengan S3 untuk pengembang._**
 
 - [Storj.io](https://storj.io/)
 - [Dokumentasi](https://docs.storj.io/)
+- [GitHub](https://github.com/storj/storj)
 
-**Skynet - _Skynet adalah sebuah rantai PoW terdesentralisasi yang didedikasikan untuk web terdesentralisasi._**
+**Sia - _Memanfaatkan kriptografi untuk menciptakan pasar penyimpanan cloud tanpa kepercayaan, yang memungkinkan pembeli dan penjual untuk bertransaksi secara langsung._**
 
-- [Skynet.net](https://siasky.net/)
-- [Dokumentasi](https://siasky.net/docs/)
-- [GitHub](https://github.com/SkynetLabs/)
+- [Skynet.net](https://sia.tech/)
+- [Dokumentasi](https://docs.sia.tech/)
+- [GitHub](https://github.com/SiaFoundation/)
 
-**Filecoin - _Filecoin dibuat oleh tim yang sama yang membuat IPFS. Ini adalah lapisan insentif yang didasarkan pada idealisme IPFS._**
+**Filecoin - _Filecoin dibuat oleh tim yang sama di balik IPFS._** Ini adalah lapisan insentif yang didasarkan pada idealisme IPFS._\*\*
 
 - [Filecoin.io](https://filecoin.io/)
 - [Dokumentasi](https://docs.filecoin.io/)
 - [GitHub](https://github.com/filecoin-project/)
 
-**Arweave - _Arweave adalah sebuah platform dStorage untuk menyimpan data._**
+**Arweave - _Arweave adalah platform dStorage untuk menyimpan data._**
 
 - [Arweave.org](https://www.arweave.org/)
 - [Dokumentasi](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**Züs - _Züs adalah sebuah platform dStorage bukti taruhan dengan sharding dan blobber._**
+**Züs - _Züs adalah platform dStorage bukti taruhan dengan sharding dan blobber._**
 
 - [zus.network](https://zus.network/)
-- [Dokumentasi](https://0chaindocs.gitbook.io/zus-docs)
+- [Dokumentasi](https://docs.zus.network/zus-docs/)
 - [GitHub](https://github.com/0chain/)
 
-**Swarm - _Sebuah plaftorm penyimpanan terdistribusi dan layanan distribusi konten untuk tumpukan web3 Ethereum._**
+**Crust Network - _Crust adalah platform dStorage di atas IPFS._**
+
+- [Crust.network](https://crust.network)
+- [Dokumentasi](https://wiki.crust.network)
+- [GitHub](https://github.com/crustio)
+
+**Swarm - _Platform penyimpanan terdistribusi dan layanan distribusi konten untuk tumpukan web3 Ethereum._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
-- [Dokumentasi](https://docs.ethswarm.org/docs/)
+- [Dokumentasi](https://docs.ethswarm.org/)
 - [GitHub](https://github.com/ethersphere/)
 
-**OrbitDB - _Basis data peer to peer terdesentralisasi yang dibangun berdasarkan IPFS._**
+**OrbitDB - _Basis data peer-to-peer terdesentralisasi di atas IPFS._**
 
 - [OrbitDB.org](https://orbitdb.org/)
 - [Dokumentasi](https://github.com/orbitdb/field-manual/)
 - [GitHub](https://github.com/orbitdb/orbit-db/)
 
-**Aleph.im - _Proyek cloud terdesentralisasi (basis data, penyimpanan file, komputasi, dan DID). Sebuah penggabungan unik teknologi peer-to-peer offchain dan onchain. Kompatibel dengan IPFS dan multirantai._**
+**Aleph.im - _Proyek cloud terdesentralisasi (basis data, penyimpanan file, komputasi dan DID). Sebuah penggabungan unik teknologi peer-to-peer offchain dan onchain. Kompatibel dengan IPFS dan multirantai._**
 
-- [Aleph.im](https://aleph.im/)
-- [Dokumentasi](https://aleph.im/#/developers/)
+- [Aleph.im](https://aleph.cloud/)
+- [Dokumentasi](https://docs.aleph.cloud/)
 - [GitHub](https://github.com/aleph-im/)
 
 **Ceramic - _Penyimpanan basis data IPFS yang dikontrol pengguna untuk aplikasi yang kaya data dan menarik._**
 
 - [Ceramic.network](https://ceramic.network/)
-- [Dokumentasi](https://developers.ceramic.network/learn/welcome/)
+- [Dokumentasi](https://developers.ceramic.network/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
+
+**Filebase - _Penyimpanan terdesentralisasi yang kompatibel dengan S3 dan layanan penyematan IPFS geo-redundan. Semua file yang diunggah ke IPFS melalui Filebase secara otomatis disematkan ke infrastruktur Filebase dengan replikasi 3x di seluruh dunia._**
+
+- [Filebase.com](https://filebase.com/)
+- [Dokumentasi](https://docs.filebase.com/)
+- [GitHub](https://github.com/filebase)
+
+**4EVERLAND - _Platform komputasi cloud Web 3.0 yang mengintegrasikan kemampuan inti penyimpanan, komputasi, dan jaringan, kompatibel dengan S3 dan menyediakan penyimpanan data sinkron pada jaringan penyimpanan terdesentralisasi seperti IPFS dan Arweave._**
+
+- [4everland.org](https://www.4everland.org/)
+- [Dokumentasi](https://docs.4everland.org/)
+- [GitHub](https://github.com/4everland)
+
+**Kaleido - _Platform blockchain-as-a-service dengan Node IPFS tombol-klik_**
+
+- [Kaleido](https://kaleido.io/)
+- [Dokumentasi](https://docs.kaleido.io/kaleido-services/ipfs/)
+- [GitHub](https://github.com/kaleido-io)
+
+**Spheron Network - _Spheron adalah platform-sebagai-layanan (PaaS) yang dirancang untuk dApps yang ingin meluncurkan aplikasi mereka pada infrastruktur terdesentralisasi dengan performa terbaik. Layanan ini menyediakan komputasi, penyimpanan terdesentralisasi, CDN & hosting web siap pakai._**
+
+- [spheron.network](https://spheron.network/)
+- [Dokumentasi](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [Apa itu Penyimpanan Terdesentralisasi?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
-- [Mematahkan Lima Mitos Umum tentang Penyimpanan Terdesentralisasi](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
+- [Apa Itu Penyimpanan Terdesentralisasi?](https://coinmarketcap.com/academy/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
+- [Membongkar Lima Mitos Umum tentang Penyimpanan Terdesentralisasi](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 

@@ -1,16 +1,16 @@
 ---
-title: Cara mencabut akses smart contract ke dana kripto anda
+title: Cara mencabut akses kontrak pintar ke dana kripto Anda
 description: Panduan cara mencabut akses token kontrak pintar yang eksploitatif
 lang: id
 ---
 
-# Cara mencabut akses smart contract ke dana kripto anda
+# Cara mencabut akses kontrak pintar ke dana kripto Anda
 
-Panduan ini akan mengajarkan Anda cara melihat daftar semua kontrak pintar yang sudah Anda izinkan untuk mengakses dana Anda dan cara membatalkannya.
+Panduan ini akan mengajarkan Anda cara melihat daftar semua [kontrak pintar](/glossary/#smart-contract) yang telah Anda izinkan untuk mengakses dana Anda dan cara membatalkannya.
 
-Terkadang pengembang jahat membangun pintu belakang ke dalam kontrak pintar yang memungkinkan akses ke dana pengguna yang tidak sadar yang berinteraksi dengan kontrak pintar. Yang sering terjadi adalah platform semacam itu meminta izin kepada pengguna untuk membelanjakan **jumlah token yang tidak terbatas** dalam upaya untuk menghemat sejumlah kecil gas di masa depan, tetapi hal ini memiliki risiko yang lebih besar.
+Terkadang pengembang jahat membangun pintu belakang ke dalam kontrak pintar yang memungkinkan akses ke dana pengguna yang tidak sadar yang berinteraksi dengan kontrak pintar. Sering kali, platform semacam itu meminta izin kepada pengguna untuk membelanjakan **jumlah token yang tidak terbatas** dalam upaya untuk menghemat sejumlah kecil [gas](/glossary/#gas) di masa depan, namun ini disertai dengan risiko yang lebih tinggi.
 
-Setelah sebuah platform memiliki hak akses tak terbatas ke token di dompet Anda, mereka dapat membelanjakan semua token tersebut meskipun Anda telah menarik dana Anda dari platform mereka ke dalam dompet Anda. Pelaku kejahatan masih dapat mengakses dana Anda dan menariknya ke dalam dompet mereka tanpa ada opsi pemulihan untuk Anda.
+Setelah sebuah platform memiliki hak akses tak terbatas ke token di [dompet](/glossary/#wallet) Anda, mereka dapat membelanjakan semua token tersebut meskipun Anda telah menarik dana Anda dari platform mereka ke dalam dompet Anda. Pelaku kejahatan masih dapat mengakses dana Anda dan menariknya ke dalam dompet mereka tanpa ada opsi pemulihan untuk Anda.
 
 Satu-satunya perlindungan adalah menahan diri untuk tidak menggunakan proyek baru yang belum teruji, hanya menyetujui apa yang Anda perlukan, atau secara teratur mencabut akses. Jadi, bagaimana Anda melakukannya?
 
@@ -18,9 +18,9 @@ Satu-satunya perlindungan adalah menahan diri untuk tidak menggunakan proyek bar
 
 Beberapa situs web memungkinkan Anda untuk melihat dan mencabut kontrak pintar yang terhubung ke alamat Anda. Kunjungi situs web dan hubungkan dompet Anda:
 
-- [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Pencabutan](https://revoke.cash/) (beberapa jaringan)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Revoke](https://revoke.cash/) (beberapa jaringan)
 - [Unrekt](https://app.unrekt.net/) (beberapa jaringan)
 - [EverRevoke](https://everrise.com/everrevoke/) (beberapa jaringan)
 
@@ -42,16 +42,16 @@ Setelah mengklik cabut, Anda akan melihat saran transaksi baru di dompet Anda. H
 
 Kami menyarankan Anda untuk menyegarkan alat pencabutan setelah beberapa menit dan menghubungkan dompet Anda lagi untuk memeriksa apakah kontrak yang dicabut sudah hilang dari daftar.
 
-<mark>Kami menyarankan Anda untuk tidak pernah mengizinkan proyek memiliki akses tanpa batas ke token Anda dan mencabut semua akses token secara teratur. Mencabut akses token tidak akan pernah mengakibatkan hilangnya dana, terutama jika Anda menggunakan perangkat yang tercantum di atas.</mark>
+<mark>Kami menyarankan Anda untuk tidak pernah mengizinkan proyek memiliki akses tanpa batas ke token Anda dan mencabut semua izin akses token secara teratur. Mencabut akses token seharusnya tidak pernah mengakibatkan kehilangan dana, terutama jika Anda menggunakan alat yang tercantum di atas.</mark>
 
- <br />
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Ingin mempelajari selengkapnya?</div>
   <ButtonLink href="/guides/">
-    Lihat panduan lainnya
+    Lihat panduan kami lainnya
   </ButtonLink>
 </AlertContent>
 </Alert>
@@ -60,7 +60,7 @@ Kami menyarankan Anda untuk menyegarkan alat pencabutan setelah beberapa menit d
 
 ### Apakah mencabut akses token juga menghentikan penaruhang, pooling, pemberian pinjaman, dll?
 
-Tidak, ini tidak akan memengaruhi strategi DeFi Anda. Anda akan tetap berada di posisi Anda dan terus mendapatkan hadiah, dll.
+Tidak, ini tidak akan memengaruhi strategi [DeFi](/glossary/#defi) Anda. Anda akan tetap berada di posisi Anda dan terus mendapatkan hadiah, dll.
 
 ### Apakah memutuskan dompet dari sebuah proyek sama dengan menghapus izin untuk menggunakan dana saya?
 

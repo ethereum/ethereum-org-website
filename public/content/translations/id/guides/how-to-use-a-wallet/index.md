@@ -1,12 +1,13 @@
 ---
 title: Cara menggunakan dompet
+metaTitle: Cara menggunakan Dompet Ethereum | Langkah demi langkah
 description: Panduan yang menjelaskan cara mengirim, menerima token, dan terhubung ke proyek web3.
 lang: id
 ---
 
 # Cara menggunakan dompet
 
-Pelajari cara mengoperasikan semua fungsi dasar dompet. Jika Anda belum memilikinya, lihat [Cara: membuat akun Ethereum](/guides/how-to-create-an-ethereum-account/).
+Pelajari cara mengoperasikan semua fungsi dasar dompet. Jika Anda belum memilikinya, lihat [Cara membuat akun Ethereum](/guides/how-to-create-an-ethereum-account/) kami.
 
 ## Buka dompet Anda
 
@@ -38,8 +39,7 @@ Apakah Anda ingin mengirim ETH ke dompet lain?
 3. Masukkan alamat penerima atau pindai kode QR dengan kamera Anda sehingga Anda tidak perlu menulis alamat secara manual.
 4. Klik tombol "Kirim" di dompet Anda (atau tombol lain yang serupa).
 
-![Bidang kirim untuk alamat kripto](./send.png)
-<br/>
+![Kolom kirim untuk alamat kripto](./send.png) <br/>
 
 5. Banyak aset, seperti DAI atau USDC, ada di beberapa jaringan. Saat mentransfer token kripto, pastikan penerima menggunakan jaringan yang sama dengan Anda, karena token ini tidak dapat dipertukarkan.
 6. Pastikan dompet Anda memiliki ETH yang cukup untuk membayar biaya transaksi, yang bervariasi tergantung pada kondisi jaringan. Sebagian besar dompet akan secara otomatis menambahkan biaya yang disarankan ke dalam transaksi yang kemudian dapat Anda konfirmasikan.
@@ -51,23 +51,23 @@ Alamat Anda akan sama di semua proyek Ethereum. Anda tidak perlu mendaftar secar
 
 1. Kunjungi situs web proyek mana pun.
 2. Jika halaman arahan proyek hanya berupa deskripsi statis tentang proyek, Anda seharusnya dapat mengklik tombol "Buka Aplikasi" di menu yang akan menavigasi Anda ke aplikasi web yang sebenarnya.
-3. Setelah Anda berada di dalam aplikasi, klik "Hubungkan"
+3. Setelah Anda berada di dalam aplikasi, klik "Hubungkan".
 
 ![Tombol yang memungkinkan pengguna terhubung ke situs web dengan dompet](./connect1.png)
 
 4. Pilih dompet Anda dari daftar opsi yang tersedia. Jika Anda tidak dapat melihat dompet Anda, dompet tersebut mungkin tersembunyi di bawah opsi "WalletConnect".
 
-![Memilih dari daftar dompet yang akan dihubungkan](./connect2.png)
+![Memilih dari daftar dompet untuk dihubungkan](./connect2.png)
 
 5. Konfirmasikan permintaan tanda tangan di dompet Anda untuk membuat koneksi. **Menandatangani pesan ini tidak perlu mengeluarkan ETH**.
-6. Itu saja! Mulai menggunakan aplikasi. Anda dapat menemukan beberapa proyek menarik di halaman [dApps](/apps/#explore). <br />
+6. Itu saja! Mulai menggunakan aplikasi. Anda dapat menemukan beberapa proyek menarik di [halaman dApps](/apps/#explore) kami. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Ingin mempelajari selengkapnya?</div>
   <ButtonLink href="/guides/">
-    Lihat panduan lainnya
+    Lihat panduan kami lainnya
   </ButtonLink>
 </AlertContent>
 </Alert>
@@ -76,7 +76,7 @@ Alamat Anda akan sama di semua proyek Ethereum. Anda tidak perlu mendaftar secar
 
 ### Jika saya memiliki alamat ETH, apakah akan sama di rantai blok yang lain?
 
-Anda dapat menggunakan alamat yang sama pada semua rantai blok yang kompatibel dengan EVM (jika Anda memiliki jenis dompet dengan frasa pemulihan). [Daftar](https://chainlist.org/) berikut ini memperlihatkan bagaimana cara menggunakan rantai blok dengan alamat yang sama. Beberapa rantai blok seperti Bitcoin, menerapkan peraturan pada jaringan yang terpisah dan Anda akan membutuhkan alamat yang berbeda dengan format yang berbeda pula. Jika Anda memiliki dompet kontrak pintar, maka Anda dapat melihat situs web produknya untuk mendapatkan informasi lebih lanjut mengenai rantai blok yang didukung olehnya.
+Anda dapat menggunakan alamat yang sama pada semua rantai blok yang kompatibel dengan EVM (jika Anda memiliki jenis dompet dengan frasa pemulihan). [Daftar](https://chainlist.org/) ini akan menunjukkan kepada Anda rantai blok mana yang dapat Anda gunakan dengan alamat yang sama. Beberapa rantai blok seperti Bitcoin, menerapkan peraturan pada jaringan yang terpisah dan Anda akan membutuhkan alamat yang berbeda dengan format yang berbeda pula. Jika Anda memiliki dompet kontrak pintar, maka Anda dapat melihat situs web produknya untuk mendapatkan informasi lebih lanjut mengenai rantai blok yang didukung olehnya.
 
 ### Dapatkah saya menggunakan alamat yang sama di beberapa perangkat?
 
@@ -84,7 +84,7 @@ Ya, Anda dapat menggunakan alamat yang sama pada beberapa perangkat. Dompet seca
 
 ### Saya belum menerima kripto, di mana saya bisa mengecek status transaksi?
 
-Anda bisa menggunakan [penjelajah blok](/developers/docs/data-and-analytics/block-explorers/) untuk melihat status transaksi apa pun secara real-time. Yang perlu Anda lakukan adalah mencari alamat dompet Anda atau ID transaksi.
+Anda dapat menggunakan [penjelajah blok](/developers/docs/data-and-analytics/block-explorers/) untuk melihat status transaksi apa pun secara waktu nyata. Yang perlu Anda lakukan adalah mencari alamat dompet Anda atau ID transaksi.
 
 ### Dapatkah saya membatalkan atau mengembalikan transaksi?
 
