@@ -821,6 +821,8 @@ export type WalletData = {
   withdraw_crypto: boolean
   multisig: boolean
   social_recovery: boolean
+  eip_4337_support?: boolean
+  eip_7702_support?: boolean
   onboard_documentation: string
   documentation: string
   mpc?: boolean
