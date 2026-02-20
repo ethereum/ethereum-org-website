@@ -18,5 +18,10 @@
   "page-tutorial-advanced": "மேம்பட்டவை",
   "page-find-wallet-try-removing": "ஒன்று அல்லது இரண்டு அம்சங்களை அகற்ற முயற்சிக்கவும்",
   "page-find-wallet-clear": "வடிகட்டிகளை அழி",
-  "page-tutorials-env-banner": "<code>.env</code> ஐ கமிட் செய்யாதீர்கள்! உங்கள் <code>.env</code> கோப்பை யாருடனும் பகிரவோ அல்லது வெளிப்படுத்தவோ வேண்டாம் என்பதைத் தயவுசெய்து உறுதிப்படுத்திக் கொள்ளுங்கள், ஏனெனில் அவ்வாறு செய்வதன் மூலம் உங்கள் இரகசியங்களை நீங்கள் சமரசம் செய்கிறீர்கள். நீங்கள் பதிப்புக் கட்டுப்பாட்டைப் பயன்படுத்தினால், உங்கள் <code>.env</code>-ஐ ஒரு <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> கோப்பில் சேர்க்கவும்."
+  "page-tutorials-env-banner": "<code>.env</code> ஐ கமிட் செய்யாதீர்கள்! உங்கள் <code>.env</code> கோப்பை யாருடனும் பகிரவோ அல்லது வெளிப்படுத்தவோ வேண்டாம் என்பதைத் தயவுசெய்து உறுதிப்படுத்திக் கொள்ளுங்கள், ஏனெனில் அவ்வாறு செய்வதன் மூலம் உங்கள் இரகசியங்களை நீங்கள் சமரசம் செய்கிறீர்கள். நீங்கள் பதிப்புக் கட்டுப்பாட்டைப் பயன்படுத்தினால், உங்கள் <code>.env</code>-ஐ ஒரு <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> கோப்பில் சேர்க்கவும்.",
+  "page-tutorial-all": "அனைத்தும்",
+  "page-tutorial-topics": "தலைப்புகள்",
+  "page-tutorial-search-placeholder": "டுடோரியல்களைத் தேடு...",
+  "page-tutorial-filtering-by": "வடிகட்டப்படுவது:",
+  "page-tutorial-more-tags": "மேலும் +{count}"
 }

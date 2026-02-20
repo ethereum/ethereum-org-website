@@ -18,5 +18,10 @@
   "page-tutorial-advanced": "అధునాతనం",
   "page-find-wallet-try-removing": "ఒకటి లేదా రెండు ఫీచర్లను తొలగించడానికి ప్రయత్నించండి",
   "page-find-wallet-clear": "ఫిల్టర్లను తీసివేయండి",
-  "page-tutorials-env-banner": "<code>.env</code>ను కమిట్ చేయవద్దు! దయచేసి మీ <code>.env</code> ఫైల్‌ను ఎవరితోనూ పంచుకోకుండా లేదా బహిర్గతం చేయకుండా చూసుకోండి, ఎందుకంటే అలా చేయడం ద్వారా మీరు మీ రహస్యాలను ప్రమాదంలో పడేస్తున్నారు. మీరు వెర్షన్ కంట్రోల్ ఉపయోగిస్తుంటే, మీ <code>.env</code>ను <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> ఫైల్‌కు జోడించండి."
+  "page-tutorials-env-banner": "<code>.env</code>ను కమిట్ చేయవద్దు! దయచేసి మీ <code>.env</code> ఫైల్‌ను ఎవరితోనూ పంచుకోకుండా లేదా బహిర్గతం చేయకుండా చూసుకోండి, ఎందుకంటే అలా చేయడం ద్వారా మీరు మీ రహస్యాలను ప్రమాదంలో పడేస్తున్నారు. మీరు వెర్షన్ కంట్రోల్ ఉపయోగిస్తుంటే, మీ <code>.env</code>ను <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> ఫైల్‌కు జోడించండి.",
+  "page-tutorial-all": "అన్నీ",
+  "page-tutorial-topics": "అంశాలు",
+  "page-tutorial-search-placeholder": "ట్యుటోరియల్స్ వెతకండి...",
+  "page-tutorial-filtering-by": "దీని ద్వారా ఫిల్టర్ చేయబడింది:",
+  "page-tutorial-more-tags": "మరిన్ని +{count}"
 }

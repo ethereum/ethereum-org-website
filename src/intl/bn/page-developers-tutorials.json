@@ -18,5 +18,10 @@
   "page-tutorial-advanced": "উন্নত",
   "page-find-wallet-try-removing": "একটি বা দুটি বৈশিষ্ট্য সরানোর চেষ্টা করুন",
   "page-find-wallet-clear": "ফিল্টার বাদ দিন",
+  "page-tutorial-all": "সব",
+  "page-tutorial-topics": "বিষয়সমূহ",
+  "page-tutorial-search-placeholder": "টিউটোরিয়াল খুঁজুন...",
+  "page-tutorial-filtering-by": "ফিল্টার করা হচ্ছে:",
+  "page-tutorial-more-tags": "আরও +{count}টি",
   "page-tutorials-env-banner": "<code>.env</code> কমিট করবেন না! অনুগ্রহ করে নিশ্চিত করুন যে আপনি আপনার <code>.env</code> ফাইলটি কারো সাথে শেয়ার বা প্রকাশ করবেন না, কারণ এটি করলে আপনি আপনার গোপন তথ্য আপোস করছেন। আপনি যদি ভার্সন কন্ট্রোল ব্যবহার করেন, তাহলে আপনার <code>.env</code> একটি <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> ফাইলে যোগ করুন।"
 }

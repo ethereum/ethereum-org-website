@@ -1,4 +1,9 @@
 {
   "page-find-wallet-try-removing": "Jaribu kuondoa kipengele kimoja ama viwili",
-  "page-find-wallet-clear": "Futa vichujaji"
+  "page-find-wallet-clear": "Futa vichujaji",
+  "page-tutorial-all": "Zote",
+  "page-tutorial-topics": "Mada",
+  "page-tutorial-search-placeholder": "Tafuta mafunzo...",
+  "page-tutorial-filtering-by": "Kuchuja kwa:",
+  "page-tutorial-more-tags": "+{count} zaidi"
 }

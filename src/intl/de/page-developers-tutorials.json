@@ -18,5 +18,10 @@
   "page-tutorial-advanced": "Fortgeschritten",
   "page-find-wallet-try-removing": "Versuchen Sie ein oder zwei Funktionen zu entfernen",
   "page-find-wallet-clear": "Filter aufheben",
-  "page-tutorials-env-banner": "Führe <code>.env</code> nicht aus! Es wird dringend davon abgeraten, Deine persönlichen Daten, die in dieser Datei<code>.env</code> enthalten sind, auszustellen oder sie mit anderen Personen zu teilen, da dies die Vertraulichkeit Deiner persönlichen Daten gefährden könnte. Wenn eine Systemsteuerung schon vorhanden ist, füge in die Datei <a href=\"https://gitscm.com/docs/gitignore\">gitignore</a> Deinen<code>.env</code> ein."
+  "page-tutorials-env-banner": "Führe <code>.env</code> nicht aus! Es wird dringend davon abgeraten, Deine persönlichen Daten, die in dieser Datei<code>.env</code> enthalten sind, auszustellen oder sie mit anderen Personen zu teilen, da dies die Vertraulichkeit Deiner persönlichen Daten gefährden könnte. Wenn eine Systemsteuerung schon vorhanden ist, füge in die Datei <a href=\"https://gitscm.com/docs/gitignore\">gitignore</a> Deinen<code>.env</code> ein.",
+  "page-tutorial-all": "Alle",
+  "page-tutorial-topics": "Themen",
+  "page-tutorial-search-placeholder": "Tutorials suchen...",
+  "page-tutorial-filtering-by": "Gefiltert nach:",
+  "page-tutorial-more-tags": "+{count} weitere"
 }

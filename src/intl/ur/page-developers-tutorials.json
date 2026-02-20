@@ -18,5 +18,10 @@
   "page-tutorial-advanced": "ترقی",
   "page-find-wallet-try-removing": "ایک یا دو خصوصیت ہٹا کر کوشش کریں",
   "page-find-wallet-clear": "فلٹرز صاف کریں",
-  "page-tutorials-env-banner": "<code>.env</code> کو کمٹ نہ کریں! برائے مہربانی اس بات کو یقینی بنائیں کہ اپنی <code>.env</code> فائل کبھی کسی کے ساتھ شیئر یا ظاہر نہ کریں، کیونکہ ایسا کرنے سے آپ اپنے رازوں سے سمجھوتہ کر رہے ہیں۔ اگر آپ ورژن کنٹرول کا استعمال کر رہے ہیں، تو اپنی <code>.env</code> فائل کو <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> فائل میں شامل کریں۔"
+  "page-tutorials-env-banner": "<code>.env</code> کو کمٹ نہ کریں! برائے مہربانی اس بات کو یقینی بنائیں کہ اپنی <code>.env</code> فائل کبھی کسی کے ساتھ شیئر یا ظاہر نہ کریں، کیونکہ ایسا کرنے سے آپ اپنے رازوں سے سمجھوتہ کر رہے ہیں۔ اگر آپ ورژن کنٹرول کا استعمال کر رہے ہیں، تو اپنی <code>.env</code> فائل کو <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> فائل میں شامل کریں۔",
+  "page-tutorial-all": "تمام",
+  "page-tutorial-topics": "موضوعات",
+  "page-tutorial-search-placeholder": "ٹیوٹوریلز تلاش کریں...",
+  "page-tutorial-filtering-by": "فلٹر کردہ بذریعہ:",
+  "page-tutorial-more-tags": "مزید +{count}"
 }

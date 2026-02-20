@@ -18,5 +18,10 @@
   "page-tutorial-advanced": "Gelişmiş",
   "page-find-wallet-try-removing": "Bir veya iki özelliği kaldırmayı deneyin",
   "page-find-wallet-clear": "Filtreleri temizle",
-  "page-tutorials-env-banner": "<code>.env</code>'yi girmeyin! Sırlarınızın başkası tarafından ele geçirilmesi riski taşıdığından lütfen <code>.env</code> dosyanızı başkalarına asla göstermeyin veya başkalarıyla asla paylaşmayın. Versiyon kontrolü kullanıyorsanız <code>.env</code>'nizi bir <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> dosyasına ekleyin."
+  "page-tutorials-env-banner": "<code>.env</code>'yi girmeyin! Sırlarınızın başkası tarafından ele geçirilmesi riski taşıdığından lütfen <code>.env</code> dosyanızı başkalarına asla göstermeyin veya başkalarıyla asla paylaşmayın. Versiyon kontrolü kullanıyorsanız <code>.env</code>'nizi bir <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> dosyasına ekleyin.",
+  "page-tutorial-all": "Tümü",
+  "page-tutorial-topics": "Konular",
+  "page-tutorial-search-placeholder": "Eğitimleri ara...",
+  "page-tutorial-filtering-by": "Şuna göre filtreleniyor:",
+  "page-tutorial-more-tags": "+{count} tane daha"
 }

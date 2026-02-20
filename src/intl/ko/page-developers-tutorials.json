@@ -1,4 +1,9 @@
 {
   "page-find-wallet-try-removing": "한 개 또는 두 개의 기능을 제거해 보세요.",
-  "page-find-wallet-clear": "필터 지우기"
+  "page-find-wallet-clear": "필터 지우기",
+  "page-tutorial-all": "전체",
+  "page-tutorial-topics": "주제",
+  "page-tutorial-search-placeholder": "튜토리얼 검색...",
+  "page-tutorial-filtering-by": "필터링 기준:",
+  "page-tutorial-more-tags": "+{count}개 더보기"
 }
