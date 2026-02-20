@@ -2,14 +2,9 @@ import { getTranslations } from "next-intl/server"
 
 import { EthHomeIcon } from "@/components/icons"
 
-import { breakpointAsNumber } from "@/lib/utils/screen"
-
-import ClientOnly from "../ClientOnly"
-import MediaQuery from "../MediaQuery"
 import { BaseLink } from "../ui/Link"
 
 import DesktopNav from "./DesktopNav"
-import { DesktopNavLoading, MobileNavLoading } from "./loading"
 import MobileNav from "./MobileNav"
 
 const Nav = async () => {
@@ -30,16 +25,12 @@ const Nav = async () => {
       </BaseLink>
 
       <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
-        <ClientOnly fallback={<DesktopNavLoading />}>
-          <MediaQuery queries={[`(min-width: ${breakpointAsNumber.md}px)`]}>
-            <DesktopNav />
-          </MediaQuery>
-        </ClientOnly>
-        <ClientOnly fallback={<MobileNavLoading />}>
-          <MediaQuery queries={[`(max-width: ${breakpointAsNumber.md - 1}px)`]}>
-            <MobileNav />
-          </MediaQuery>
-        </ClientOnly>
+        <div className="hidden md:contents">
+          <DesktopNav />
+        </div>
+        <div className="md:hidden">
+          <MobileNav />
+        </div>
       </div>
     </nav>
   )
