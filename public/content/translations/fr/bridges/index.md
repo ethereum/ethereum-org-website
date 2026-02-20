@@ -53,7 +53,7 @@ Si vous utilisez Aave sur le réseau principal Ethereum pour prêter des USDT ma
 
 ### Explorer les écosystèmes de blockchain {#explore-ecosystems}
 
-Si vous avez des ETH sur le réseau principal Ethereum et que vous voulez explorer un L1 alternatif pour essayer leurs dapps natives. Vous pouvez utilisez un pont pour transférer vos ETH du réseau principal Ethereum vers le L1.
+Si vous avez des ETH sur le réseau principal Ethereum et que vous voulez explorer un L1 alternatif pour essayer leurs dapps natives. Vous pouvez utiliser un pont pour transférer vos ETH du réseau principal Ethereum vers le L1.
 
 ### Posséder des actifs de cryptomonnaie natifs {#own-native}
 
@@ -72,15 +72,15 @@ Disons que vous voulez posséder des bitcoins (BTC) natifs, mais que vous n'avez
 
 ## Types de ponts {#types-of-bridge}
 
-Les ponts présentent de nombreux types de conceptions et de subtilités. En général, les ponts se divisent en deux catégories : les ponts sans risque et les ponts risqués.
+Les ponts présentent de nombreux types de conceptions et de subtilités. En général, les ponts se divisent en deux catégories : les ponts de confiance et les ponts sans confiance.
 
-| Ponts sans risque                                                                                                                                                                                                             | Ponts risqués                                                                                                                                                            |
+| Ponts de confiance                                                                                                                                                                                                             | Ponts sans confiance                                                                                                                                                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Le fonctionnement des ponts sans risque repose sur une entité ou un système central pour leur fonctionnement.                                                                                                 | Le fonctionnement des ponts risqués repose sur des contrats intelligents et des algorithmes.                                                             |
-| Ces ponts sont associés à des hypothèses de confiance en ce qui concerne la garde des fonds et la sécurité du pont. Les utilisateurs se fient surtout à la réputation de l'opérateur du pont. | Ils sont risqués, c'est-à-dire que la sécurité du pont est la même que celle de la blockchain sous-jacente.                                              |
+| Le fonctionnement des ponts de confiance repose sur une entité ou un système central pour leur fonctionnement.                                                                                                 | Le fonctionnement des ponts sans confiance repose sur des contrats intelligents et des algorithmes.                                                             |
+| Ces ponts sont associés à des hypothèses de confiance en ce qui concerne la garde des fonds et la sécurité du pont. Les utilisateurs se fient surtout à la réputation de l'opérateur du pont. | Ils sont sans confiance, c'est-à-dire que la sécurité du pont est la même que celle de la blockchain sous-jacente.                                              |
 | Les utilisateurs doivent renoncer au contrôle de leurs crypto-actifs.                                                                                                                                         | Grâce aux [contrats intelligents](/glossary/#smart-contract), les ponts sans confiance permettent aux utilisateurs de garder le contrôle de leurs fonds. |
 
-Pour résumer, nous pouvons dire que les ponts sans risque reposent sur des hypothèses de confiance, tandis que les ponts risqués minimisent la confiance et ne font pas de nouvelles hypothèses de confiance au-delà de celles des domaines sous-jacents. Voici comment ces termes peuvent être décrits :
+Pour résumer, nous pouvons dire que les ponts de confiance reposent sur des hypothèses de confiance, tandis que les ponts sans confiance minimisent la confiance et ne font pas de nouvelles hypothèses de confiance au-delà de celles des domaines sous-jacents. Voici comment ces termes peuvent être décrits :
 
 - **Sans confiance** : possédant une sécurité équivalente à celle des domaines sous-jacents. Tel que décrit par [Arjun Bhuptani dans cet article.](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
 - **Hypothèses de confiance :** s'éloigner de la sécurité des domaines sous-jacents en ajoutant des vérificateurs externes au système, le rendant ainsi moins sécurisé sur le plan crypto-économique.
@@ -94,7 +94,7 @@ Imaginez que vous soyez à un point de contrôle de sécurité dans un aéroport
 
 Un point de contrôle manuel est similaire à un modèle de confiance puisque qu'il dépend d'une tierce partie, par exemple les fonctionnaires, pour leurs opérations. En tant qu'utilisateur, vous faites confiance aux fonctionnaires pour prendre les bonnes décisions et utiliser correctement vos informations privées.
 
-L'enregistrement automatique s'apparente à un modèle risqué car il supprime le rôle de l'opérateur et utilise la technologie pour ses opérations. Les utilisateurs gardent toujours le contrôle de leurs données et ne doivent pas confier leurs informations privées à un tiers.
+L'enregistrement automatique s'apparente à un modèle sans confiance car il supprime le rôle de l'opérateur et utilise la technologie pour ses opérations. Les utilisateurs gardent toujours le contrôle de leurs données et ne doivent pas confier leurs informations privées à un tiers.
 
 De nombreuses solutions de transition adoptent des modèles entre ces deux extrêmes, avec des degrés de confiance variables.
 
@@ -126,7 +126,7 @@ Les fonds de l'utilisateur sont en danger si :
 - il y a un bug dans le contrat intelligent
 - l'utilisateur fait une erreur
 - la blockchain sous-jacente est hackée
-- les opérateurs du pont ont des intentions malveillantes sur un pont sans risque
+- les opérateurs du pont ont des intentions malveillantes sur un pont de confiance
 - le pont est hacké
 
 L'un des piratages récents concernait le pont Wormhole de Solana, [où 120k de wETH (325 millions de dollars américains) ont été volés](https://rekt.news/wormhole-rekt/). Bon nombre des [plus grands piratages de blockchains impliquaient des ponts](https://rekt.news/leaderboard/).
