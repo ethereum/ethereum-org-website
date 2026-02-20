@@ -1,12 +1,13 @@
 ---
-title: Bir cüzdan nasıl kullanılır
-description: Nasıl token gönderiliip alındığını ve web3 projelerine nasıl bağlanıldığını anlatan bir rehber.
+title: "Cüzdan nasıl kullanılır?"
+metaTitle: "Ethereum Cüzdanları nasıl kullanılır | Adım adım"
+description: "Nasıl token gönderiliip alındığını ve web3 projelerine nasıl bağlanıldığını anlatan bir rehber."
 lang: tr
 ---
 
-# Bir cüzdan nasıl kullanılır
+# Cüzdan nasıl kullanılır?
 
-Bir cüzdanın temel fonksiyonlarının nasıl kullanılacağını öğrenin. Eğer halen bir hesabınız yoksa, [Nasıl Ethereum hesabı açılır](/guides/how-to-create-an-ethereum-account/) yazımızı inceleyebilirsiniz.
+Bir cüzdanın temel fonksiyonlarının nasıl kullanılacağını öğrenin. Henüz bir hesabınız yoksa [Bir Ethereum hesabı nasıl oluşturulur](/guides/how-to-create-an-ethereum-account/) kılavuzumuza göz atın.
 
 ## Cüzdanınızı açın
 
@@ -38,8 +39,7 @@ Başka bir cüzdana ETH göndermek ister miydiniz?
 3. Alıcı adresi girin veya kameranız ile QR code okutun ki, adresi manuel olarak girmek zorunda kalmayasınız.
 4. Cüzdanınızdaki "Gönder" (veya benzeri bir seçenek) butonuna basın.
 
-![Kripto adres için gönderim alanı](./send.png)
-<br/>
+![Kripto adresi için gönderme alanı](./send.png)\n<br/>
 
 5. DAI veya USDC gibi birçok varlık, farklı ağlarda bulunur. Kripto token'ları aktarırken, bunlar değiştirilebilir olmadığı için alıcının sizinle aynı ağı kullandığından emin olun.
 6. Ağ durumuna göre değişen işlem ücretini karşılamak için cüzdanınızda yeterince ETH olduğundan emin olun. Çoğu cüzdan daha sonra onaylayabileceğiniz işleme önerilen ücreti otomatikmen ekleyecektir.
@@ -53,14 +53,14 @@ Adresiniz tüm Ethereum projelerinde aynı olacaktır. Hiçbir projeye tek tek k
 2. Eğer projenin giriş sayfası sadece projenin statik bir açıklamasıysa, menüde olan ve sizi asıl web uygulamasına yönlendirecek "Uygulamayı Aç" butonuna basabiliyor olmalısınız.
 3. Uygulamaya girdiğinizde "Bağlan" düğmesine tıklayın.
 
-![Kullanıcının cüzdan ile web sitesine bağlanmasını sağlayan buton](./connect1.png)
+![Kullanıcının bir cüzdan ile web sitesine bağlanmasını sağlayan buton](./connect1.png)
 
 4. Verilen seçenekler listesinden cüzdanınızı seçin. Cüzdanınızı göremiyorsanız, "WalletConnect" seçeneğinin altında gizli olabilir.
 
 ![Bağlanmak için cüzdan listesinden seçim yapma](./connect2.png)
 
 5. Bağlantıyı kurmak için cüzdanınızdaki imza isteğini kabul edin. **Bu mesajı imzalamak ETH harcamayı gerektirmez**.
-6. Bu kadar! Uygulamayı kullanmaya başlayın. [Merkeziyetsiz uygulamalar sayfamızda](/apps/#explore) bazı ilgi çekici projeleri bulabilirsiniz. <br />
+6. Bu kadar! Uygulamayı kullanmaya başlayın. Bazı ilginç projeleri [merkeziyetsiz uygulamalar sayfamızda](/apps/#explore) bulabilirsiniz. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -76,7 +76,7 @@ Adresiniz tüm Ethereum projelerinde aynı olacaktır. Hiçbir projeye tek tek k
 
 ### Bir ETH adresi sahibiysem, aynı adrese diğer blok zincirlerde de sahip miyim?
 
-Tüm EVM uyumlu blok zincirlerde aynı adresi kullanabilirsiniz (Kurtarma ifadesi içeren bir cüzdan tipine sahipseniz). Bu [liste](https://chainlist.org/) size hangi blok zincirlerde aynı adresi kullanabileceğinizi gösterecektir. Bitcoin gibi bazı blok zincirlerde tamamen farklı ağ kuralları uygulanır ve farklı bir biçimde farklı bir adrese ihtiyaç duyacaksınız. Bir akıllı sözleşme cüzdanına sahipseniz, hangi blok zincirlerin desteklendiği hakkında bilgi almak için ürünün web sitesine bakmalısınız.
+Tüm EVM uyumlu blok zincirlerde aynı adresi kullanabilirsiniz (Kurtarma ifadesi içeren bir cüzdan tipine sahipseniz). Bu [liste](https://chainlist.org/), size hangi blokzincirlerde aynı adresi kullanabileceğinizi gösterecektir. Bitcoin gibi bazı blok zincirlerde tamamen farklı ağ kuralları uygulanır ve farklı bir biçimde farklı bir adrese ihtiyaç duyacaksınız. Bir akıllı sözleşme cüzdanına sahipseniz, hangi blok zincirlerin desteklendiği hakkında bilgi almak için ürünün web sitesine bakmalısınız.
 
 ### Aynı adresi birden fazla cihazda kullanabilir miyim?
 
@@ -84,7 +84,7 @@ Evet, aynı adresi birden fazla cihazda kullanabilirsiniz. Cüzdanlar teknik ola
 
 ### Kriptoyu almadım, bir işlemin durumunu nerede kontrol edebilirim?
 
-[Blok tarayıcılarını](/developers/docs/data-and-analytics/block-explorers/) herhangi bir işlemin durumunu gerçek zamanda takip etmek için kullanabilirsiniz. Tüm yapmanız gereken cüzdan adresinizi veya işlemin kimliğini aramaktır.
+Herhangi bir işlemin durumunu gerçek zamanlı olarak görmek için [blok arayıcılarını](/developers/docs/data-and-analytics/block-explorers/) kullanabilirsiniz. Tüm yapmanız gereken cüzdan adresinizi veya işlemin kimliğini aramaktır.
 
 ### İşlemleri iptal veya iade edebilir miyim?
 

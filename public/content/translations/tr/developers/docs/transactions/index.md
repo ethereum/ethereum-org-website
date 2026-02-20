@@ -1,12 +1,12 @@
 ---
-title: İşlemler
-description: Ethereum işlemlerine genel bir bakış - nasıl çalışırlar, veri yapıları ve bir uygulama aracılığıyla nasıl gönderilirler.
+title: "İşlemler"
+description: "Ethereum işlemlerine genel bir bakış - nasıl çalışırlar, veri yapıları ve bir uygulama aracılığıyla nasıl gönderilirler."
 lang: tr
 ---
 
-İşlemler, hesaplardan kriptografik olarak imzalanmış talimatlardır. Bir hesap, Ethereum ağının durumunu güncellemek için bir işlem başlatacaktır. En basit işlem ETH'yi bir hesaptan diğerine aktarmaktır.
+İşlemler, hesaplardan gelen kriptografik olarak imzalanmış talimatlardır. Bir hesap, Ethereum ağının durumunu güncellemek için bir işlem başlatacaktır. En basit işlem ETH'yi bir hesaptan diğerine aktarmaktır.
 
-## Ön koşullar {#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamanıza yardımcı olmak için önce [Hesaplar](/developers/docs/accounts/) ve [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) bölümlerini okumanızı öneririz.
 
@@ -14,7 +14,8 @@ Bu sayfayı daha iyi anlamanıza yardımcı olmak için önce [Hesaplar](/develo
 
 Bir Ethereum işlemi, harici olarak sahiplenilmiş bir hesap tarafından başlatılan bir eylemi ifade eder, başka bir deyişle, bir sözleşme değil, bir insan tarafından yönetilen bir hesap. Örneğin Bob, Alice'e 1 ETH gönderirse, Bob'un hesabı borçlandırılmalı ve Alice'inki alacaklandırılmalıdır. Bu durum değiştirme eylemi bir işlem içinde gerçekleşir.
 
-![Bir işlemin durum değişikliği yaptığını gösteren diyagram](./tx.png) _Diyagram [Ethereum EVM resmediciden](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) uyarlanmıştır_
+![Bir işlemin durum değişikliğine neden olduğunu gösteren diyagram](./tx.png)
+_[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanan diyagram_
 
 EVM'nin durumunu değiştiren işlemlerin tüm ağa yayınlanması gerekir. Herhangi bir düğüm, Ethereum Sanal Makinesinde ugulanacak işlemleri yayınlamak için talepte bulunabilir, bu olduktan sonra da, doğrulayıcı işlemi uygulayacak ve ortaya çıkan durum değişikliğini ağın geri kalanına yayacaktır.
 
@@ -22,17 +23,17 @@ EVM'nin durumunu değiştiren işlemlerin tüm ağa yayınlanması gerekir. Herh
 
 Gönderilen bir işlem aşağıdaki bilgileri içerir:
 
-- `from` - işlemi imzalayacak olan göndericinin adresi. Bu sözleşme hesapları işlem gönderemeyeceği için harici olarak sahiplenilmiş bir hesap olacaktır.
-- `to` - alıcı adres (harici olarak sahiplenilmiş bir hesapsa, işlem değeri aktaracaktır. Eğer bir sözleşme hesabıysa, işlem sözleşme kodunu yürütecektir)
-- `signature` - gönderenin tanımlayıcısı. Bu, gönderenin özel anahtarı işlemi imzaladığında ve gönderenin bu işleme yetki verdiğini doğruladığında oluşturulur
+- `from` – işlemi imzalayacak olan göndericinin adresi. Bu sözleşme hesapları işlem gönderemeyeceği için harici olarak sahiplenilmiş bir hesap olacaktır
+- `to` – alıcı adres (harici olarak sahiplenilmiş bir hesapsa, işlem değeri aktaracaktır. Eğer bir sözleşme hesabıysa, işlem sözleşme kodunu yürütecektir)
+- `signature` – gönderenin tanımlayıcısı. Bu, gönderenin özel anahtarı işlemi imzaladığında ve gönderenin bu işleme yetki verdiğini doğruladığında oluşturulur
 - `nonce` - hesabın işlem sayısını belirten ve ardışık olarak artan bir sayaç
-- `value` - göndericiden alıcıya aktarılacak ETH miktarı (WEI şeklinde birimlendirilmiştir, 1ETH 1e+18wei'ye eşittir)
-- `giriş verileri` - keyfi verileri dahil etmek için opsiyonel alan
-- `gasLimit` - işlem tarafından tüketilebilecek maksimum gaz birimi miktarı. [EVM](/developers/docs/evm/opcodes) her bir hesaplık adım için gereken gaz birimini belirtir
+- `value` – göndericiden alıcıya aktarılacak ETH miktarı (WEI şeklinde birimlendirilmiştir, 1ETH 1e+18wei'ye eşittir)
+- `input data` – keyfi verileri dahil etmek için isteğe bağlı alan
+- `gasLimit` – işlem tarafından tüketilebilecek maksimum gaz birimi miktarı. [EVM](/developers/docs/evm/opcodes), her bir hesaplama adımı için gereken gaz birimlerini belirtir
 - `maxPriorityFeePerGas` - doğrulayıcıya bir bahşiş olarak eklenmesi için harcanan gazın maksimum fiyatı
-- `maxFeePerGas` - işlem için ödenebilecek gaz birimi başına maksimum ücret (`baseFeePerGas` ve `maxPriorityFeePerGas`'ı kapsayıcıdır)
+- `maxFeePerGas` - işlem için ödenecek gaz birimi başına maksimum ücret (`baseFeePerGas` ve `maxPriorityFeePerGas` dahil)
 
-Gaz, işlemin bir doğrulayıcı tarafından işlenmesi için gereken hesaplamaya bir referanstır. Kullanıcılar bu hesaplama için bir ücret ödemek zorundadır. `gasLimit` ve `maxPriorityFeePerGas` doğrulayıcıya ödenen maksimum işlem ücretini belirler. [Gaz hakkında daha fazla bilgi](/developers/docs/gas/).
+Gaz, işlemin bir doğrulayıcı tarafından işlenmesi için gereken hesaplamaya bir referanstır. Kullanıcılar bu hesaplama için bir ücret ödemek zorundadır. `gasLimit` ve `maxPriorityFeePerGas`, doğrulayıcıya ödenen maksimum işlem ücretini belirler. [Gaz hakkında daha fazla bilgi](/developers/docs/gas/).
 
 İşlem nesnesi biraz şuna benzer:
 
@@ -52,7 +53,7 @@ Ancak, gönderenin özel anahtarı kullanılarak bir işlem nesnesinin imzalanma
 
 Geth gibi bir Ethereum istemcisi bu imzalama sürecini yerine getirir.
 
-[JSON-RPC](/developers/docs/apis/json-rpc) çağrısı örneği:
+Örnek [JSON-RPC](/developers/docs/apis/json-rpc) çağrısı:
 
 ```json
 {
@@ -99,22 +100,26 @@ Yanıt örneği:
 }
 ```
 
-- `raw` [Özyinelemeli Uzunluk Ön Eki (RLP)](/developers/docs/data-structures-and-encoding/rlp) şeklinde şifrelenmiş imzalı işlemdir
-- `tx`, imzalanmış işlemin JSON biçimidir
+- `raw`, [Tekrarlamalı Uzunluk Öneki (RLP)](/developers/docs/data-structures-and-encoding/rlp) kodlanmış formdaki imzalı işlemdir
+- `tx`, JSON formundaki imzalı işlemdir
 
 İmza hash değeri ile işlemin göndericiden geldiği ve ağa gönderildiği kriptografik olarak kanıtlanabilir.
 
 ### Veri alanı {#the-data-field}
 
-İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir. Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzü (ABI)](/glossary/#abi) ile uyumlu olacak şekilde yorumlar.
+İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir.
+Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzü (ABI)](/glossary/#abi) ile uyumlu olacak şekilde yorumlar.
 
-İlk dört bayt, fonksiyonun isminin ve argümanlarının hash değerini kullanarak hangi fonksiyonun çağrılacağını belirler. Bazen seçiciden [bu veri tabanını](https://www.4byte.directory/signatures/) kullanarak fonksiyonu tespit edebilirsiniz.
+İlk dört bayt, fonksiyonun isminin ve argümanlarının hash değerini kullanarak hangi fonksiyonun çağrılacağını belirler.
+Bazen [bu veritabanını](https://www.4byte.directory/signatures/) kullanarak seçiciden işlevi tanımlayabilirsiniz.
 
-Çağrı verisinin geri kalanı, [ABI şartnamesine uygun şekilde şifrelenmiş olan](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding) argümanlardır.
+Çağrı verisinin geri kalanı, [ABI özelliklerinde belirtildiği gibi kodlanmış](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding) bağımsız değişkenlerdir.
 
-Örnek olarak, [bu işleme](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1) bakalım. Çağrı verisini görmek için **Click to see More** düğmesini kullanın.
+Örneğin, [şu işleme](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1) bir bakalım.
+Çağrı verisini görmek için **Click to see More** seçeneğini kullanın.
 
-`0xa9059cbb` fonksiyon seçicisidir. [Bu imza ile bilinen birkaç fonksiyon](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb) var. Bu durumda [sözleşme kaynak kodu](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) Etherscan'e yüklenmiş, yani fonksiyonun `transfer(address,uint256)` olduğunu biliyoruz.
+İşlev seçici `0xa9059cbb`'dir. Bu imzaya sahip birkaç [bilinen işlev](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb) vardır.
+Bu durumda [sözleşme kaynak kodu](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) Etherscan'e yüklenmiştir, bu nedenle işlevin `transfer(address,uint256)` olduğunu biliyoruz.
 
 Verinin geri kalanı:
 
@@ -123,7 +128,9 @@ Verinin geri kalanı:
 000000000000000000000000000000000000000000000000000000003b0559f4
 ```
 
-ABI koşullarına göre, tamsayı değerleri (20 bayt tamsayılar olan adresler gibi) ABI içinde 32 bayt kelimelerin önü sıfırlarla doldurulmuş şekilde bulunurlar. Yani `to` adresinin [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279) olduğunu biliyoruz. `value` ise 0x3b0559f4 = 990206452'dir.
+ABI koşullarına göre, tamsayı değerleri (20 bayt tamsayılar olan adresler gibi) ABI içinde 32 bayt kelimelerin önü sıfırlarla doldurulmuş şekilde bulunurlar.
+Yani `to` adresinin [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279) olduğunu biliyoruz.
+`value` değeri 0x3b0559f4 = 990206452'dir.
 
 ## İşlem türleri {#types-of-transactions}
 
@@ -135,9 +142,9 @@ Ethereum'da birkaç farklı işlem türü vardır:
 
 ### Gaz hakkında {#on-gas}
 
-Belirtildiği gibi, işlemlerin yürütülmesi [gaz](/developers/docs/gas/) harcar. Basit transfer işlemleri 21.000 birim Gaz gerektirir.
+Belirtildiği gibi, işlemlerin yürütülmesi için [gaz](/developers/docs/gas/) gerekir. Basit transfer işlemleri 21.000 birim Gaz gerektirir.
 
-Dolayısıyla Bob'un 1 ETH'yi Alice'e 190 gwei `baseFeePerGas` ve 10 gwei `maxPriorityFeePerGas` ile göndermesi için Bob'un aşağıdaki ücreti ödemesi gerekir:
+Dolayısıyla Bob'un Alice'e 1 ETH'yi 190 gwei `baseFeePerGas` ve 10 gwei `maxPriorityFeePerGas` ile göndermesi için aşağıdaki ücreti ödemesi gerekir:
 
 ```
 (190 + 10) * 21.000 = 4.200.000 gwei
@@ -147,14 +154,14 @@ Dolayısıyla Bob'un 1 ETH'yi Alice'e 190 gwei `baseFeePerGas` ve 10 gwei `maxPr
 
 Bob'un hesabı **-1,0042 ETH** borçlandırılacaktır (Alice için 1 ETH + gaz ücretleri için 0,0042 ETH)
 
-Alice'in hesabı **+1,0 ETH** alacaklandırılır
+Alice'in hesabına **+1,0 ETH** alacak kaydedilecektir
 
 Taban ücret yakılacaktır **-0,00399 ETH**
 
-Doğrulayıcı **+0,000210 ETH** bahşişi tutar
+Doğrulayıcı bahşişi tutar **+0,000210 ETH**
 
-
-![Kullanılmayan gazın nasıl iade edildiğini gösteren diyagram](./gas-tx.png) _Diyagram [Ethereum EVM resmediciden](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) uyarlanmıştır_
+![Kullanılmayan gazın nasıl iade edildiğini gösteren diyagram](./gas-tx.png)
+_[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanan diyagram_
 
 İşlemde kullanılmayan gaz, kullanıcı hesabına iade edilir.
 
@@ -162,34 +169,37 @@ Doğrulayıcı **+0,000210 ETH** bahşişi tutar
 
 Akıllı sözleşme içeren herhangi bir işlem için gaz gereklidir.
 
-Akıllı sözleşmeler, sözleşmenin durumunu değiştirmeyen [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ya da [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) olarak adlandırılan fonksiyonlar da içerebilir. Bu nedenle bu fonksiyonların bir EOA tarafından çağrılması için herhangi bir gaz gerekmez. Bu senaryoda kullanılan temel RPC çağrısı [`"eth_call"`](/developers/docs/apis/json-rpc#eth_call) olarak adlandırılır
+Akıllı sözleşmeler, sözleşmenin durumunu değiştirmeyen [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) veya [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) işlevleri olarak bilinen işlevleri de içerebilir. Bu nedenle bu fonksiyonların bir EOA tarafından çağrılması için herhangi bir gaz gerekmez. Bu senaryo için temel RPC çağrısı [`eth_call`](/developers/docs/apis/json-rpc#eth_call) şeklindedir.
 
-Bu `view` veya `pure` fonksiyonları, `eth_call` kullanılarak erişildiği durumun aksine, genellikle dahili olarak (yani sözleşmenin kendisinden veya başka bir sözleşmeden) çağrılır ve bu da gaz maliyetine yol açmaz.
+`eth_call` kullanılarak erişilmesinin aksine, bu `view` veya `pure` işlevleri dahili olarak da (yani sözleşmenin kendisinden veya başka bir sözleşmeden) yaygın olarak çağrılır ve bu da gaza mal olur.
 
 ## İşlem yaşam döngüsü {#transaction-lifecycle}
 
 İşlem gönderildikten sonra aşağıdakiler gerçekleşir:
 
-1. Bir işlem şifresi kriptografik olarak oluşturulur: `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
+1. Bir işlem karması kriptografik olarak oluşturulur:
+   `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
 2. İşlem sonrasında ağa yayınlanır ve diğer bekleyen ağ işlemlerinden oluşan işlem havuzuna eklenir.
 3. Bir doğrulayıcı, işlemi doğrulamak ve "başarılı" olarak değerlendirmek için işleminizi seçmeli ve bir bloka eklemelidir.
-4. Zaman geçtikçe işleminizi taşıyan blok önce "kanıtlanmış" sonrasında "kesinleştirilmiş" şeklinde güncellenecektir. Bu yükseltmeler işleminizin başarılı olduğunu ve asla değiştirilemeyeceğini daha netleştirir. Bir blok "kesinleştirildikten" sonra sadece milyarlarca dolar maliyetinde ağ seviyesinde bir saldırı ile değiştirilebilir.
+4. Zaman geçtikçe işleminizi taşıyan blok önce "kanıtlanmış" sonrasında "kesinleştirilmiş" şeklinde güncellenecektir. Bu yükseltmeler, işleminizin başarılı olduğunu ve asla değiştirilmeyeceğini çok
+   daha netleştirir. Bir blok "kesinleştirildikten" sonra, yalnızca milyarlarca dolara mal olacak bir
+   ağ düzeyindeki saldırı ile değiştirilebilir.
 
 ## Görsel bir demo {#a-visual-demo}
 
-Austin'in işlemlerde, gazda ve madencilikte size yol göstermesini izleyin.
+Austin'in işlemleri, gazı ve madenciliği açıklamasını izleyin.
 
 <YouTube id="er-0ihqFQB0" />
 
-## Yazılan İşlem Zarfı {#typed-transaction-envelope}
+## Tür Belirtilmiş İşlem Zarfı {#typed-transaction-envelope}
 
-Ethereum'un başlangıçta işlemler için tek bir formatı vardı. Her işlem, adres, değer, veri, v, r ve s için nonce, gaz fiyatı, gaz limiti içeriyordu. Bu alanlar [RLP ile şifrelenmiştir](/developers/docs/data-structures-and-encoding/rlp/), şuna benzer bir şekilde görünür:
+Ethereum'un başlangıçta işlemler için tek bir formatı vardı. Her işlem, adres, değer, veri, v, r ve s için nonce, gaz fiyatı, gaz limiti içeriyordu. Bu alanlar, şuna benzer bir görünüme sahip olacak şekilde [RLP kodludur](/developers/docs/data-structures-and-encoding/rlp/):
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum, erişim listelerini ve [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)'un eski işlem formatlarını etkilemeden uygulanmasını mümkün kılmak için birçok işlem türünü destekleyecek şekilde evrildi.
+Ethereum, eski işlem formatlarını etkilemeden erişim listeleri ve [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) gibi yeni özelliklerin uygulanmasına olanak tanımak için birden fazla işlem türünü destekleyecek şekilde gelişmiştir.
 
-[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) bu davranışa izin verendir. İşlemler şu şekilde yorumlanır:
+Bu davranışa izin veren [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718)'dir. İşlemler şu şekilde yorumlanır:
 
 `TransactionType || TransactionPayload`
 
@@ -198,24 +208,26 @@ Burada alanlar şu şekilde tanımlanır:
 - `TransactionType` - toplam 128 olası işlem türü için 0 ile 0x7f arasında bir sayı.
 - `TransactionPayload` - işlem türü tarafından tanımlanan rastgele bir bayt dizisi.
 
-`TransactionType` değerine göre, bir işlem şöyle sınıflandırılabilir
+`TransactionType` değerine bağlı olarak, bir işlem şu şekilde sınıflandırılabilir:
 
-1. **Tip 0 (Eski) İşlemler:** Ethereum'un başlatılmasından itibaren kullanılan orijinal işlem formatıdır. [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)'dan gelen dinamik gaz ücreti hesaplamaları veya akıllı sözleşmeler için erişim listeleri gibi özellikler içermezler. Eski işlemler, [Tekrarlamalı Uzunluk Öneki (RLP)](/developers/docs/data-structures-and-encoding/rlp) kodlaması kullanıldığında `0xf8` baytıyla başlayarak serileştirilmiş formlarında türlerini belirten belirli bir öneke sahip değildir. Bu işlemler için TransactionType değeri `0x0`'dır.
+1. **Tip 0 (Eski) İşlemler:** Ethereum'un lansmanından bu yana kullanılan orijinal işlem formatı. Akıllı sözleşmeler için dinamik gaz ücreti hesaplamaları veya erişim listeleri gibi [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) özellikleri içermezler. Eski işlemler, serileştirilmiş biçimlerinde türlerini belirten özel bir önekten yoksundur ve [Tekrarlamalı Uzunluk Öneki (RLP)](/developers/docs/data-structures-and-encoding/rlp) kodlaması kullanıldığında `0xf8` baytı ile başlarlar. Bu işlemler için TransactionType değeri `0x0`'dır.
 
-2. **Tip 1 İşlemler:** Ethereum'un [Berlin Yükseltmesi](/ethereum-forks/#berlin)'nin bir parçası olarak [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930)'da kullanıma açılan bu işlemler bir `accessList` parametresi içerir. Bu liste, işlemin erişmeyi beklediği adresleri ve depolama anahtarlarını belirtir, bu da akıllı sözleşmelerle ilgili karmaşık işlemler için [gaz](/developers/docs/gas/) maliyetlerinin potansiyel olarak azaltılmasına yardımcı olur. EIP-1559 ücret piyasası değişiklikleri Tip 1 işlemlere dahil değildir. Tip 1 işlemler buna ek olarak, secp256k1 imzasının y değerinin paritesini gösteren `0x0` veya `0x1` olabilen bir `yParity` parametresi de içerir. Bu işlemler, `0x01` baytıyla başladıkları için kolayca tanınır ve TransactionType değerleri `0x1`'dir.
+2. **Tip 1 İşlemler:** Ethereum'un [Berlin Yükseltmesi](/ethereum-forks/#berlin) kapsamında [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) ile tanıtılan bu işlemler bir `accessList` parametresi içerir. Bu liste, işlemin erişmeyi beklediği adresleri ve depolama anahtarlarını belirtir ve akıllı sözleşmeleri içeren karmaşık işlemler için [gaz](/developers/docs/gas/) maliyetlerini potansiyel olarak azaltmaya yardımcı olur. EIP-1559 ücret piyasası değişiklikleri Tip 1 işlemlere dahil değildir. Tip 1 işlemler ayrıca, secp256k1 imzasının y-değerinin paritesini gösteren `0x0` veya `0x1` olabilen bir `yParity` parametresi içerir. `0x01` baytı ile başlamalarıyla tanımlanırlar ve TransactionType değerleri `0x1`'dir.
 
-3. **Tip 2 İşlemler**, sıklıkla EIP-1559 işlemleri olarak adlandırılır ve Ethereum'un [Londra Yükseltmesi](/ethereum-forks/#london)'nde [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) dahilinde tanıtılan işlemlerdir. Bu işlemler, Ethereum ağında standart işlem tipi haline gelmiştir. Bu işlemler, işlem ücretini ana ücret ve öncelik ücreti olarak ayıran öngörülebilirliği artıran yeni bir ücret piyasası mekanizması sunar. `0x02` baytı ile başlarlar ve `maxPriorityFeePerGas` ile `maxFeePerGas` gibi alanları içerirler. Tip 2 işlemler, esneklikleri ve verimlilikleri nedeniyle varsayılan seçenek durumuna gelmiştir. Özellikle yüksek ağ tıkanıklığı dönemlerinde kullanıcıların işlem ücretlerini daha öngörülebilir şekilde yönetmelerine yardımcı olma yetenekleri nedeniyle tercih edilirler. Bu işlemler için TransactionType değeri `0x2`'dir.
+3. Genellikle EIP-1559 işlemleri olarak adlandırılan **Tip 2 İşlemler**, Ethereum'un [Londra Yükseltmesi](/ethereum-forks/#london) kapsamında [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) ile tanıtılan işlemlerdir. Bu işlemler, Ethereum ağında standart işlem tipi haline gelmiştir. Bu işlemler, işlem ücretini ana ücret ve öncelik ücreti olarak ayıran öngörülebilirliği artıran yeni bir ücret piyasası mekanizması sunar. `0x02` baytı ile başlarlar ve `maxPriorityFeePerGas` ile `maxFeePerGas` gibi alanlar içerirler. Tip 2 işlemler, esneklikleri ve verimlilikleri nedeniyle varsayılan seçenek durumuna gelmiştir. Özellikle yüksek ağ tıkanıklığı dönemlerinde kullanıcıların işlem ücretlerini daha öngörülebilir şekilde yönetmelerine yardımcı olma yetenekleri nedeniyle tercih edilirler. Bu işlemler için TransactionType değeri `0x2`'dir.
 
+4. **Tip 3 (Blob) İşlemler**, Ethereum'un [Dencun Yükseltmesi](/ethereum-forks/#dencun) kapsamında [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) ile tanıtılmıştır. Bu işlemler, "blob" verilerini (İkili Büyük Nesneler) daha verimli bir şekilde işlemek için tasarlanmıştır ve özellikle Ethereum ağına daha düşük bir maliyetle veri göndermenin bir yolunu sağlayarak Katman 2 toplamalarına fayda sağlar. Blob işlemleri, `blobVersionedHashes`, `maxFeePerBlobGas` ve `blobGasPrice` gibi ek alanlar içerir. `0x03` baytı ile başlarlar ve TransactionType değerleri `0x3`'tür. Blob işlemleri, Ethereum'un veri kullanılabilirliği ve ölçeklendirme yeteneklerinde önemli bir gelişmeyi temsil eder.
 
+5. **Tip 4 İşlemler**, Ethereum'un [Pectra Yükseltmesi](/roadmap/pectra/) kapsamında [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) ile tanıtılmıştır. Bu işlemler, hesap soyutlaması ile ileriye dönük uyumlu olacak şekilde tasarlanmıştır. EOA'ların orijinal işlevselliklerinden ödün vermeden geçici olarak akıllı sözleşme hesapları gibi davranmalarına olanak tanırlar. EOA'nın yetkisini devrettiği akıllı sözleşmeyi belirten bir `authorization_list` parametresi içerirler. İşlemden sonra, EOA'nın kod alanı, yetki devredilen akıllı sözleşmenin adresine sahip olacaktır.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-- [EIP-2718: Yazılan İşlem Zarfı](https://eips.ethereum.org/EIPS/eip-2718)
+- [EIP-2718: Tür Belirtilmiş İşlem Zarfı](https://eips.ethereum.org/EIPS/eip-2718)
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
-## İlgili konular {#related-topics}
+## Alakalı başlıklar {#related-topics}
 
 - [Hesaplar](/developers/docs/accounts/)
-- [Ethereum sanal makinesi (EVM)](/developers/docs/evm/)
+- [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/)
 - [Gaz](/developers/docs/gas/)

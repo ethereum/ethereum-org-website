@@ -1,20 +1,20 @@
 ---
-title: Stake ürünleri veya hizmetleri ekleme
-description: Ethereum.org'a stake ürünleri veya hizmetleri eklerken kullandığımız politika
+title: "Stake ürünleri veya hizmetleri ekleme"
+description: "Ethereum.org'a stake ürünleri veya hizmetleri eklerken kullandığımız politika"
 lang: tr
 ---
 
-# Stake ürünleri veya hizmetleri ekleme {#adding-staking-products-or-services}
+# Hisseleme ürünleri veya hizmetleri ekleme {#adding-staking-products-or-services}
 
 Kullanıcıları güvende ve kendinden emin tutarken mümkün olan en iyi kaynakları listelediğimizden emin olmak istiyoruz.
 
-Herkes ethereum.org'da bir stake ürünü veya hizmeti eklemeyi önermekte özgürdür. Gözden kaçırdığımız bir şey varsa **[lütfen önerin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
+Herkes ethereum.org'da bir stake ürünü veya hizmeti eklemeyi önermekte özgürdür. Gözden kaçırdığımız bir tane varsa, **[lütfen onu önerin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
 
 Şu anda stake ürün ve hizmetlerini aşağıdaki sayfalarda listeliyoruz:
 
-- [Tekli staking](/staking/solo/)
-- [Hizmet olarak stake etme](/staking/saas/)
-- [Stake havuzları](/staking/pools/)
+- [Bireysel hisseleme](/staking/solo/)
+- [Hizmet olarak hisseleme](/staking/saas/)
+- [Hisseleme havuzları](/staking/pools/)
 
 İşaret Zincirindeki hisse ispatı, 1 Aralık 2020'den beri yayında. Stake etme hâlâ nispeten yeni olsa da, ethereum.org'da değerlendirilmek üzere adil ve şeffaf bir çerçeve oluşturmaya çalıştık, ancak listeleme kriterleri zamanla değişip gelişecek ve bu kriterler nihayetinde ethereum.org web sitesi ekibinin takdirindedir.
 
@@ -26,7 +26,7 @@ Bir ürünün ethereum.org'da listeleme kararı herhangi bir tek faktöre bağl�
 
 - Düğüm veya istemci araçları
 - Anahtar yönetimi
-- Bir hizmet olarak stake etme (SaaS)
+- Bir hizmet olarak staking (SaaS)
 - Stake havuzu
 
 Şu anda, yalnızca bu kategorilerdeki ürün veya hizmetleri listeliyoruz.
@@ -57,7 +57,7 @@ Stake etme ürünleri veya hizmet sunumları aşağıdaki kriterlere göre değe
 
 **Hangi platformlar destekleniyor?**
 
-- örn. Linux, macOS, Windows, iOS, Android
+- yani Linux, macOS, Windows, iOS, Android
 
 #### Yazılım ve akıllı sözleşmeler {#software-and-smart-contracts}
 
@@ -68,7 +68,7 @@ Stake etme ürünleri veya hizmet sunumları aşağıdaki kriterlere göre değe
 - Açık kaynaklı projeler, herkese açık bir kaynak kodu deposuna sahip olmalıdır
 - Bu, ürünlerin "açık kaynak" puanını belirlemek için kullanılır.
 
-**Ürün, _beta_ geliştirme aşamasından çıkmış mı?**
+**Ürün, _beta_ geliştirme aşamasından çıktı mı?**
 
 - Ürün, geliştirme döngüsünün hangi aşamasında?
 - Beta aşamasındaki ürünler, ethereum.org'a dahil edilmek üzere değerlendirmeye alınmaz
@@ -87,14 +87,14 @@ Stake etme ürünleri veya hizmet sunumları aşağıdaki kriterlere göre değe
 
 Düğüm veya istemci kurulumu, yönetimi veya geçişi ile ilgili yazılım ürünleri için:
 
-**Hangi fikir birliği katmanı istemcileri (yani Lighthouse, Teku, Nimbus, Prysm) destekleniyor?**
+**Hangi mutabakat katmanı istemcileri (yani Lighthouse, Teku, Nimbus, Prysm, Grandine) destekleniyor?**
 
 - Hangi istemciler destekleniyor? Kullanıcı seçebilir mi?
 - Bu, ürünlerin "çoklu istemci" puanını belirlemek için kullanılır.
 
-#### Bir hizmet olarak stake etme {#staking-as-a-service}
+#### Hizmet olarak hisseleme {#staking-as-a-service}
 
-[Bir hizmet olarak hisseleme listeleri](/staking/saas/) için (yani, yetkilendirilmiş düğüm işlemi):
+[Hizmet olarak hisseleme listelemeleri](/staking/saas/) için (yani, yetkilendirilmiş düğüm işlemi):
 
 **Hizmeti kullanmakla ilişkili ücretler nelerdir?**
 
@@ -117,7 +117,7 @@ Düğüm veya istemci kurulumu, yönetimi veya geçişi ile ilgili yazılım ür
 - Son düzenleme itibariyle Prysm, düğüm operatörlerinin çoğunluğu tarafından çalıştırılan fikir birliği katmanı istemcisi hâline gelmiştir ve bu durum, ağ için bir tehlike oluşturmaktadır. Herhangi bir CL istemcisi şu anda ağın %33'ünden fazlası tarafından kullanılıyorsa, kullanımıyla ilgili verileri talep ederiz.
 - Bu, ürünlerin "istemci çeşitliliği" puanını belirlemek için kullanılır.
 
-#### Stake havuzu {#staking-pool}
+#### Hisseleme havuzu {#staking-pool}
 
 [Havuzlu hisseleme hizmetleri](/staking/pools/) için:
 
@@ -147,11 +147,11 @@ Düğüm veya istemci kurulumu, yönetimi veya geçişi ile ilgili yazılım ür
 - Son düzenleme itibariyle Prysm, düğüm operatörlerinin çoğunluğu tarafından çalıştırılan fikir birliği katmanı istemcisi hâline gelmiştir ve bu durum, ağ için bir tehlike oluşturmaktadır. Herhangi bir CL istemcisi şu anda ağın %33'ünden fazlası tarafından kullanılıyorsa, kullanımıyla ilgili verileri talep ederiz.
 - Bu, ürünlerin "istemci çeşitliliği" puanını belirlemek için kullanılır.
 
-### Diğer kriterler: olursa iyi olan şeyler {#other-criteria}
+### Diğer kriterler: olması tercih edilenler {#other-criteria}
 
 **Hangi kullanıcı arayüzleri destekleniyor?**
 
-- örn. Tarayıcı uygulaması, masaüstü uygulaması, mobil uygulama, CLI
+- yani Tarayıcı uygulaması, masaüstü uygulaması, mobil uygulama, CLI
 
 **Düğüm araçları konusunda yazılım, istemciler arasında geçiş yapmanın kolay bir yolunu sağlıyor mu?**
 
@@ -161,16 +161,16 @@ Düğüm veya istemci kurulumu, yönetimi veya geçişi ile ilgili yazılım ür
 
 - Bu, bize hizmetinizin şu ana kadarki erişimi hakkında bir fikir verir.
 
-## Sonuçları nasıl görüntülüyoruz {#product-ordering}
+## Sonuçları nasıl gösteriyoruz {#product-ordering}
 
-Yukarıdaki [dahil edilme kriterleri](#criteria-for-inclusion), her ürün veya hizmet için kümülatif puan hesaplamak için kullanılır. Bu, belirli objektif kriterleri karşılayan ürünleri sıralamak ve sergilemek için bir araç olarak kullanılır. Kanıt için ne kadar çok kriter sağlanırsa, bir ürün o kadar yüksek sıralanır ve beraberlikler yükte rastgele hâle getirilir.
+Yukarıdaki [dahil edilme kriterleri](#criteria-for-inclusion), her ürün veya hizmet için kümülatif bir puanı hesaplamak için kullanılır. Bu, belirli objektif kriterleri karşılayan ürünleri sıralamak ve sergilemek için bir araç olarak kullanılır. Kanıt için ne kadar çok kriter sağlanırsa, bir ürün o kadar yüksek sıralanır ve beraberlikler yükte rastgele hâle getirilir.
 
-Bu kriterlerin kod mantığı ve ağırlıkları şu anda depomuzdaki [bu JavaScript bileşeninde](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) bulunmaktadır.
+Bu kriterlere yönelik kod mantığı ve ağırlıklar şu anda depomuzdaki [bu JavaScript bileşeninde](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) yer almaktadır.
 
 ## Ürününüzü veya hizmetinizi ekleyin {#add-product}
 
 Ethereum.org'a hisseleme ürünü veya hizmeti eklemek istiyorsanız GitHub'da bir konu oluşturun.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
-  Bir konu oluştur
+  Bir konu oluşturun
 </ButtonLink>

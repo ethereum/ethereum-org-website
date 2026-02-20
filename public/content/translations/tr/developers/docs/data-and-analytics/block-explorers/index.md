@@ -1,6 +1,6 @@
 ---
-title: Blok arayıcıları
-description: İşlemler, hesaplar, sözleşmeler ve daha fazlası hakkında bilgi sorgulayabileceğiniz blok zinciri verileri dünyasına açılan portalınız olan blok arayıcılarına giriş.
+title: "Blok arayıcıları"
+description: "İşlemler, hesaplar, sözleşmeler ve daha fazlası hakkında bilgi sorgulayabileceğiniz blok zinciri verileri dünyasına açılan portalınız olan blok arayıcılarına giriş."
 lang: tr
 sidebarDepth: 3
 ---
@@ -13,19 +13,18 @@ Bir blok arayıcısının size verdiği verileri anlamlandırabilmeniz için Eth
 
 ## Hizmetler {#services}
 
-- [Etherscan](https://etherscan.io/) -_Ayrıca Çince, Korece, Rusça ve Japonca dillerinde de mevcut_
+- [Etherscan](https://etherscan.io/) -_Ayrıca Çince, Korece, Rusça ve Japonca dillerinde de mevcuttur_
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) -_Ayrıca İspanyolca, Fransızca, İtalyanca, Danca, Portekizce, Rusça, Çince ve Farsça olarak da mevcut_
+- [Blockchair](https://blockchair.com/ethereum) -_Ayrıca İspanyolca, Fransızca, İtalyanca, Hollandaca, Portekizce, Rusça, Çince ve Farsça dillerinde de mevcuttur_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Blok Arayıcısı](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/) -_Ayrıca Çince, İspanyolca, Fransızca, Türkçe, Rusça, Korece ve Vietnamca dillerinde de mevcut_
+- [Ethplorer](https://ethplorer.io/) -_Ayrıca Çince, İspanyolca, Fransızca, Türkçe, Rusça, Korece ve Vietnamca dillerinde de mevcuttur_
 - [EthVM](https://www.ethvm.com/)
-- [Oklink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
+- [OKLink](https://www.oklink.com/eth)
+- [Ethseer](https://ethseer.io)
 
 ## Açık kaynaklı araçlar {#open-source-tools}
 
@@ -38,7 +37,7 @@ Ethereum, tasarımı itibariyle şeffaf olduğu için yapılan her işlem doğru
 
 İşte bir blok arayıcısından alabileceğiniz veri türlerinin bir özeti.
 
-### Yürütme verisi {#execution-data}
+### Yürütme verileri {#execution-data}
 
 Her 12 saniyede bir Ethereum'a yeni bloklar eklenir (eğer ki bir blok önericisi kendi turunu kaçırmazsa), yani blok arayıcılarına eklenen neredeyse sabit bir veri akışı vardır. Bloklar, yararlı bulabileceğiniz birçok önemli veri içerir:
 
@@ -94,7 +93,7 @@ Blok arayıcıları, insanların işlemlerinin ilerlemesini takip etmeleri için
 - Gaz limiti - Bu işlemin tüketebileceği maksimum gaz birimi sayısı
 - Kullanılan gaz - İşlemin tükettiği gerçek gaz birimi miktarı
 - Gaz fiyatı - Gaz birimi başına belirlenen fiyat
-- Tek seferlik sayı - `başlangıç` adresinin işlem numarası (bu değerin 0'dan başladığını, bu nedenle `100` olan bir tek seferlik sayı değerinin aslında bu hesap tarafından gönderilen 101. işlem olduğunu unutmayın
+- Nonce - `from` adresi için işlem numarasıdır (bunun 0'dan başladığını, bu nedenle `100`'lük bir nonce'nin aslında bu hesap tarafından gönderilen 101. işlem olacağını unutmayın)
 - Giriş verisi – İşlemin gerektirdiği herhangi bir ek bilgi
 
 ### Hesaplar {#accounts}
@@ -120,7 +119,7 @@ Akıllı sözleşme hesapları, bir kullanıcı hesabının sahip olacağı tüm
 - Sözleşme oluşturma kodu - Akıllı sözleşmenin derlenmiş bayt kodu - Solidity veya Vyper vb. ile yazılmış bir akıllı sözleşmeyi derlerken oluşturulur.
 - Sözleşme olayları - Akıllı sözleşmede çağırılan metotların bir geçmişi - temelde sözleşmenin nasıl ve ne sıklıkla kullanıldığını görmek için bir yol
 
-### Token'lar {#tokens}
+### Jetonlar {#tokens}
 
 Token'lar bir tür sözleşmedir, bu nedenle akıllı sözleşmelere benzer verilere sahip olurlar. Ancak değerli oldukları ve alınıp satılabildikleri için ek veri noktalarına sahiptirler:
 
@@ -235,23 +234,20 @@ Fikir birliği katmanı üst düzey verileri şunları içerir:
 - Hisselenmiş ETH - Ağda hisselenmiş ETH miktarı
 - Ortalama bakiye - Doğrulayıcıların ortalama ETH bakiyesi
 
-## Blok arayıcıları {#block-explorers}
+## Blok Arayıcıları {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - Ethereum Ana Ağı ve Sepolia Test Ağı'ndan veri çekmek için kullanabileceğiniz bir blok arayıcısı
-- [3xpl](https://3xpl.com/ethereum) - veri kümelerini indirmeye izin veren reklamsız, açık kaynaklı bir Ethereum arayıcısı
-- [Beaconcha.in](https://beaconcha.in/) - Ethereum Ana Ağı ve Sepolia Test Ağı için açık kaynaklı bir blok arayıcısı
+- [Etherscan](https://etherscan.io/) - Ethereum Ana Ağı ve test ağından veri çekmek için kullanabileceğiniz bir blok arayıcısı
+- [3xpl](https://3xpl.com/ethereum) - veri kümelerini indirmeye izin veren, reklamsız, açık kaynaklı bir Ethereum arayıcısı
+- [Beaconcha.in](https://beaconcha.in/) - Ethereum Ana Ağı ve test ağı için açık kaynaklı bir blok arayıcısı
 - [Blockchair](https://blockchair.com/ethereum) - en özel Ethereum arayıcısı. Ayrıca (bellek havuzu) verileri sıralamak ve filtrelemek için kullanılır
 - [Etherchain](https://www.etherchain.org/) - Ethereum Ana Ağı için bir blok arayıcısı
-- [Ethplorer](https://ethplorer.io/) - Ethereum Ana Ağı ve Sepolia test ağı için token'lar üzerine odaklı bir blok arayıcısı
-- [Rantom](https://rantom.app/) - Detaylı anlayış için kullanıcı dostu açık kaynaklı bir DeFi & NFT işlem görüntüleyicisi
-- [Ethernow](https://www.ethernow.xyz/) - Ethereum ana ağı ön zincir katmanını görmenizi sağlayan gerçek zamanlı bir işlem kâşifi
-- [Otterscan](https://otterscan.io/) - Ethereum için açık kaynaklı alternatif bir blok arayıcısı
+- [Ethplorer](https://ethplorer.io/) - Ethereum Ana Ağı ve Kovan test ağı için jetonlara odaklanan bir blok arayıcısı
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
-## İlgili konular {#related-topics}
+## Alakalı başlıklar {#related-topics}
 
 - [İşlemler](/developers/docs/transactions/)
 - [Hesaplar](/developers/docs/accounts/)

@@ -1,0 +1,14 @@
+{
+  "/content/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-one.png": {
+    "hash": "87fb272a",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAACCAIAAADej8umAAAACXBIWXMAABYlAAAWJQFJUiTwAAAASElEQVR4nGPIzc1du3bt+fPni4qKAgMDExMTA8EgMTGxrKzM19fXy9lJQ1WVAQ4srC0Kygu8fbyVlZVFUQFERJCfn42VFa4BAL9qFSr7dC2TAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-two.png": {
+    "hash": "c9ff224d",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAADCAIAAAAV0xgDAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAYUlEQVR4nGOorau9dOnSz58/KyoqzM3NnZ2dHcEgLCwsMTHR0dHRRFtLTlqKAQ7kFeS9vb1dXFzMzc29vb0hqh0dHRMTE8PCwp2dne1MjCXFxREaTCxM/MP8lZWVEUJ4AQAIOhqsCVrFUwAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-three.png": {
+    "hash": "c5d96e84",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAADCAIAAAAV0xgDAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAaklEQVR4nGNoaWt59vzZ27dvp0+b7uvrm5GREQ0GGWAQHR0d4OOTEB9na2fnYG1tqKXFoKmtWVlZGR8XX1ZWNgkMmpuby8rKjoJBU1PjlIY6E309Pn5+Lg4OLg4OBlsn28SMRA0NDQbiAAByCypJQTzTWgAAAABJRU5ErkJggg=="
+  }
+}
