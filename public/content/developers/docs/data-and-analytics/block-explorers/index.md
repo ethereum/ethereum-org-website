@@ -13,23 +13,23 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 
 ## Services {#services}
 
-- [Etherscan](https://etherscan.io/) -_Also available in Chinese, Korean, Russian, and Japanese_
-- [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) -_Also available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi_
-- [Blockscout](https://eth.blockscout.com/)
+- [Blockchair](https://blockchair.com/ethereum) -_Private Ethereum explorer. Also for sorting and filtering (mempool) data. Available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi_
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/) -_Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
+- [Etherscan](https://etherscan.io/) -_Also available in Chinese, Korean, Russian, and Japanese_
+- [Ethplorer](https://ethplorer.io/) -_A block explorer with a focus on tokens. Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
+- [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Ethseer](https://ethseer.io)
 
 ## Open source tools {#open-source-tools}
 
-- [Otterscan](https://otterscan.io/)
+- [3xpl](https://3xpl.com/ethereum) -_An ad-free Ethereum explorer that allows downloading its datasets (open-core: core modules are open source)_
+- [Beaconcha.in](https://beaconcha.in/)
+- [Blockscout](https://eth.blockscout.com/)
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
+- [Otterscan](https://otterscan.io/)
 
 ## Data {#data}
 
@@ -233,15 +233,6 @@ The consensus layer top-level data includes the following:
 - Pending validators - Number of validators waiting for to be made active
 - Staked ETH - Amount of ETH staked in the network
 - Average balance - Average ETH balance of validators
-
-## Block explorers {#block-explorers}
-
-- [Etherscan](https://etherscan.io/) - a block explorer you can use to fetch data for Ethereum Mainnet and Testnet
-- [3xpl](https://3xpl.com/ethereum) - an ad-free open-source Ethereum explorer which allows downloading its datasets
-- [Beaconcha.in](https://beaconcha.in/) - an open source block explorer for Ethereum Mainnet and Testnet
-- [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data
-- [Etherchain](https://www.etherchain.org/) - a block explorer for the Ethereum Mainnet
-- [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet
 
 ## Further reading {#further-reading}
 
