@@ -17,20 +17,20 @@ Les Dapps sont actuellement listés sur:
 
 Bien que nous appréciions les nouveaux ajouts, nous avons choisi les DApps actuelles en fonction d'une expérience que nous essayons de créer pour nos utilisateurs. Ceux-ci sont basés sur certains de nos principes de conception :
 
-- _Inspirant_ : tout ce qui est sur ethereum.org devrait offrir quelque chose de nouveau aux utilisateurs
-- _Une bonne histoire_ : ce qui est répertorié devrait entraîner un moment de révélation (ah, ah !)
-- _Crédible_ : toutes les entreprises/projets doivent être légitimes pour minimiser les risques pour les utilisateurs
+- _Inspirant_: tout contenu sur ethereum.org devrait apporter quelque chose de nouveau aux utilisateurs
+- _Une bonne histoire_ : ce qui est présenté devrait provoquer un déclic, un moment de révélation
+- _Crédible_ : tout doit provenir de projets/d’entreprises légitimes, afin de minimiser les risques pour les utilisateurs
 
-Dans l’ensemble, **ethereum.org souhaite offrir une « expérience d’intégration transparente » aux nouveaux utilisateurs**. C'est pourquoi nous ajoutons des DApps en fonction de leur :
+Dans l'ensemble, **ethereum.org souhaite offrir une « expérience d'intégration transparente » aux nouveaux utilisateurs.** C'est pourquoi nous ajoutons des DApps en fonction de leur :
 
 - facilité d'utilisation
 - interopérabilité avec d'autres produits
 - sécurité
 - longévité
 
-Voici notre cadre de décision plus en détail. N’hésitez pas à nous faire part de vos commentaires ou à suggérer des changements.
+Vous trouverez ci-dessous notre cadre décisionnel plus en détail. N'hésitez pas à nous faire part de vos commentaires ou à suggérer des changements.
 
-## Le cadre décisionnel {#decision-framework}
+## Le cadre de décision {#decision-framework}
 
 ### Critères d'inclusion : les incontournables {#criteria-for-inclusion-the-must-haves}
 
@@ -39,17 +39,17 @@ Voici notre cadre de décision plus en détail. N’hésitez pas à nous faire p
 - **Développé par une équipe toujours active** : cela permet d'assurer la qualité et de garantir qu'un utilisateur obtiendra de l'aide pour ses demandes.
 - **Informations d'ajout honnêtes et exactes** : nous exigeons que les ajouts suggérés par les projets soient accompagnés d'informations honnêtes et exactes. Les produits dont les informations d'ajout sont falsifiées (par exemple, déclarer que votre produit est « open source » alors qu'il ne l'est pas) seront supprimés.
 
-### Critères de classement : les souhaitables {#criteria-for-ranking-the-nice-to-haves}
+### Critères de classement : les points appréciables {#criteria-for-ranking-the-nice-to-haves}
 
 Votre DApp peut ne pas mise en évidence autant que d'autres sur ethereum.org en raison des critères suivants.
 
 **DApps**
 
 - **Possibilité d'y accéder via la majorité des portefeuilles répertoriés** : les DApps devraient fonctionner avec la majorité des portefeuilles répertoriés sur ethereum.org.
-- **Possibilité pour les utilisateurs de les essayer eux-mêmes** : un utilisateur individuel devrait pouvoir utiliser votre DApp et réaliser quelque chose de concret.
+- **Possibilité pour les utilisateurs de l'essayer eux-mêmes** : un utilisateur individuel devrait pouvoir utiliser votre dapp et réaliser quelque chose de concret.
 - **Intégration** : votre produit doit inclure une expérience d'intégration bien conçue pour aider et former les utilisateurs. Autrement, il doit justifier de son contenu pratique comme des articles ou des vidéos d'aide.
 - **Non-dépositaire** : les utilisateurs contrôlent leurs fonds. Si votre produit disparaît, les utilisateurs peuvent toujours accéder à leurs fonds et les déplacer.
-- ** Accessible dans le monde entier** : votre produit n'a pas de restrictions géographiques ou d'exigences de connaissance du client (KYC) qui empêchent certaines personnes d'accéder à votre service.
+- Accessible dans le monde entier : votre produit n'a pas de restrictions géographiques ou d'exigences de connaissance du client (KYC) qui empêchent certaines personnes d'accéder à votre service.
 - **Open source** : votre code doit être accessible et vous devez accepter les demandes PR de la communauté au sens large.
 - **Communauté** : vous avez une communauté dédiée, peut-être un Discord, où les utilisateurs peuvent interagir avec votre équipe pour obtenir de l'aide ou suggérer de nouvelles fonctionnalités.
 
@@ -68,11 +68,11 @@ Autres éléments qui entreront en ligne de compte dans cette décision :
 
 L'ajout de produits est une décision de conception dont ethereum.org est responsable.
 
-Mais rassurez-vous, **il y aura des liens vers d'autres sites web qui classent plus de DApps **
+Mais rassurez-vous, **il y aura des liens vers d'autres sites Web qui classent plus de DApps**.
 
-### Ordre des produits {#product-ordering}
+### Commande de produits {#product-ordering}
 
-À moins que les produits ne soient délibérément classés autrement, par exemple par ordre alphabétique, ils seront affichés par ordre d'ajout sur la page : du plus récent au moins récent. En d'autres termes, les derniers produits ajoutés figureront en bas de liste.
+À moins que les produits ne soient délibérément classés autrement, par exemple par ordre alphabétique, ils seront affichés par ordre d'ajout sur la page : du plus récent au moins récent. En d'autres termes, les produits les plus récents sont ajoutés au bas de la liste.
 
 ### Conditions d'utilisation {#terms-of-use}
 
@@ -82,19 +82,19 @@ Veuillez également vous reporter à nos [conditions d'utilisation](/terms-of-us
 
 Ethereum étant flexible par nature, les équipes et les produits vont et viennent et l'innovation est quotidienne. Nous procéderons donc à des vérifications de routine de notre contenu pour :
 
-- s'assurer que toutes les DApps répertoriées répondent toujours à nos critères 
+- s'assurer que toutes les DApps répertoriées répondent toujours à nos critères
 - vérifier qu'aucun produit suggéré ne répond à plus de nos critères que ceux actuellement répertoriés
 
-Vous pouvez nous aider en vérifiant par vous-même et en nous le faisant savoir. [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) ou envoyez un email à l'adresse [website@ethereum.org](mailto:website@ethereum.org)
+Vous pouvez nous aider en vérifiant par vous-même et en nous le faisant savoir. [Créer un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) ou envoyer un email à [website@ethereum.org](mailto:website@ethereum.org)
 
 _Nous étudions également des options de vote afin que la communauté puisse indiquer ses préférences et mettre en évidence les meilleurs produits pour que nous puissions les recommander._
 
 ---
 
-## Ajout de votre produit {#add-your-product}
+## Ajoutez votre produit {#add-your-product}
 
-Si vous souhaitez ajouter une DApp à ethereum.org et qu’elle répond aux critères, créez un ticket sur GitHub.
+Si vous souhaitez ajouter une dapp à ethereum.org et qu'elle répond aux critères, veuillez nous en informer.
 
 <ButtonLink href="https://submitapp.paperform.co/">
-  Créez un ticket
+  Suggérer une application
 </ButtonLink>
