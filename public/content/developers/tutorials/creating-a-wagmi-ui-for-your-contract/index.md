@@ -5,7 +5,6 @@ author: Ori Pomerantz
 tags: ["typescript", "react", "vite", "wagmi", "frontend"]
 skill: beginner
 published: 2023-11-01
-updated: 2026-03-01
 lang: en
 sidebarDepth: 3
 ---
