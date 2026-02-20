@@ -10,17 +10,17 @@ lang: en
 sidebarDepth: 3
 ---
 
-You found a feature we need in the Ethereum ecosystem. You wrote the smart contracts to implement it, and maybe even some related code that runs offchain. This is great! Unfortunately, without a user interface you aren't going to have any users, and the last time you wrote a web site people used dial-up modems and JavaScript was new.
+You found a feature we need in the Ethereum ecosystem. You wrote the smart contracts to implement it, and maybe even some related code that runs offchain. This is great! Unfortunately, without a user interface you aren't going to have any users, and the last time you wrote a website people used dial-up modems and JavaScript was new.
 
-This article is for you. I assume you know programming, and maybe a bit of JavaScript and HTML, but that your user interface skills are rusty and out of date. Together we will go over a simple modern application so you'll see how it's done these days.
+This article is for you. I assume you know programming, and maybe a bit of JavaScript and HTML, but that your user interface skills are rusty and outdated. Together we will go over a simple modern application so you'll see how it's done these days.
 
 ## Why is this important {#why-important}
 
-In theory, you could just have people use [Etherscan](https://sepolia.etherscan.io/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA#readContract) or [Blockscout](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_write_contract) to interact with your contracts. That will be great for the experienced Ethereans. But we are trying to serve [another billion people](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion). This won't happen without a great user experience, and a friendly user interface is a big part of that.
+In theory, you could just have people use [Etherscan](https://sepolia.etherscan.io/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA#readContract) or [Blockscout](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_write_contract) to interact with your contracts. That is great for the experienced Ethereans. But we are trying to serve [another billion people](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion). This won't happen without a great user experience, and a friendly user interface is a big part of that.
 
 ## Greeter application {#greeter-app}
 
-There is a lot of theory behind for a modern UI works, and [a lot of good sites](https://react.dev/learn/thinking-in-react) [that explain it](https://wagmi.sh/core/getting-started). Instead of repeating the fine work done by those sites, I'm going to assume you prefer to learn by doing and start with an application you can play with. You still need the theory to get things done, and we'll get to it - we'll just go source file by source file, and discuss things as we get to them.
+There is a lot of theory behind how modern UI works, and [a lot of good sites](https://react.dev/learn/thinking-in-react) [that explain it](https://wagmi.sh/core/getting-started). Instead of repeating the fine work done by those sites, I'm going to assume you prefer to learn by doing and start with an application you can play with. You still need the theory to get things done, and we'll get to it - we'll just go source file by source file, and discuss things as we get to them.
 
 ### Installation {#installation}
 
@@ -31,24 +31,26 @@ There is a lot of theory behind for a modern UI works, and [a lot of good sites]
    ```sh
    git clone https://github.com/qbzzt/260301-modern-ui-web3.git
    cd 260301-modern-ui-web3
-   pnpm install
+   npm install
    ```
 
-3. Start the application.
+3. The application uses free access points, which have performance limitations. If you want to use a [Node as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) provider, replace the URLs in [`src/wagmi.ts`](#wagmi-ts).
+
+4. Start the application.
 
    ```sh
-   pnpm dev
+   npm run dev
    ```
 
-4. Browse to the URL shown by the application. In most cases, that is [http://localhost:5173/](http://localhost:5173/).
+5. Browse to the URL shown by the application. In most cases, that is [http://localhost:5173/](http://localhost:5173/).
 
-5. You can see the contract source code, a modified version of Hardhat's Greeter, [on a blockchain explorer](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code).
+6. You can see the contract source code, a modified version of Hardhat's Greeter, [on a blockchain explorer](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code).
 
 ### File walk through {#file-walk-through}
 
 #### `index.html` {#index-html}
 
-This file is standard HTML boilerplate except for this line, which imports the script file.
+This file is a standard HTML boilerplate except for this line, which imports the script file.
 
 ```html
 <script type="module" src="/src/main.tsx"></script>
@@ -56,7 +58,7 @@ This file is standard HTML boilerplate except for this line, which imports the s
 
 #### `src/main.tsx` {#main-tsx}
 
-The file extension tells us that this file is a [React component](https://www.w3schools.com/react/react_components.asp) written in [TypeScript](https://www.typescriptlang.org/), an extension of JavaScript that supports [type checking](https://en.wikipedia.org/wiki/Type_system#Type_checking). TypeScript is compiled into JavaScript, so we can use it for client-side execution.
+The file extension indicates that this is a [React component](https://www.w3schools.com/react/react_components.asp) written in [TypeScript](https://www.typescriptlang.org/), an extension of JavaScript that supports [type checking](https://en.wikipedia.org/wiki/Type_system#Type_checking). TypeScript is compiled to JavaScript, so we can use it on the client side.
 
 This file is mostly explained in case you are interested. Usually you do not modify this file, but [`src/App.tsx`](#app-tsx) and the files it imports.
 
@@ -114,7 +116,7 @@ The application is also inside [a `WagmiConfig` component](https://wagmi.sh/reac
       <QueryClientProvider client={queryClient}>
 ```
 
-And finally, have a React Query provider so any of the application's components can use cached queries.
+And finally, add a React Query provider so any application component can use cached queries.
 
 ```tsx
         <App />
@@ -157,7 +159,7 @@ The Sepolia chain ID.
 function App() {
 ```
 
-This is the standard way to create a React component - define a function that is called every time it needs to be rendered. This function typically has some TypeScript or JavaScript code on top, followed by a `return` statement that returns the JSX code.
+This is the standard way to create a React component: define a function that is called whenever it needs to be rendered. This function typically contains TypeScript or JavaScript code, followed by a `return` statement that returns the JSX code.
 
 ```tsx
   const connection = useConnection()
@@ -165,8 +167,7 @@ This is the standard way to create a React component - define a function that is
 
 Use [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) to get information related to the current connection, such as the address and `chainId`.
 
-By convention, in React functions called `use...` are [hooks](https://www.w3schools.com/react/react_hooks.asp). These functions don't just return data to the component, they make sure it is re-rendered (the component function executed again, and that output replaces the previous one in the HTML) when that data changes. 
-
+By convention, in React functions called `use...` are [hooks](https://www.w3schools.com/react/react_hooks.asp). These functions don't just return data to the component; they also ensure it is re-rendered (the component function is executed again, and its output replaces the previous one in the HTML) when that data changes. 
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -213,7 +214,7 @@ Rerun the function every time either the connection status or the connection cha
     <>
 ```
 
-The JSX of a React component _has_ to return one HTML component. When we have multiple components and we don't have anything that wraps up "naturally" we use an empty component (`<> ... </>`) to make them into a single component.
+The JSX of a React component _must_ return a single HTML component. When we have multiple components and don't need a container to wrap them all, we use an empty component (`<> ... </>`) to combine them into a single component.
 
 ```tsx
       <h2>Connection</h2>
@@ -242,7 +243,7 @@ This is the standard way to put if statements inside JSX.
           <hr />
 ```
 
-JSX follows the XML standard, which is more strict than HTML. If a tag does not have internal text, it *must* have a slash (`/`) at the end to terminate it.
+JSX follows the XML standard, which is stricter than HTML. If a tag does not have a corresponding end tag, it _must_ have a slash (`/`) at the end to terminate it.
 
 Here we have two such tags, `<Greeter />` (which actually contains the HTML code that talks to the contract) and [`<hr />` for a horizontal line](https://www.w3schools.com/tags/tag_hr.asp).
 
@@ -260,7 +261,7 @@ If the user clicks this button, call the `disconnect` function.
       {connection.status !== 'connected' && (
 ```
 
-If we are *not* connected, show the necessary options to connect to the wallet.
+If we are _not_ connected, show the necessary options to connect to the wallet.
 
 ```tsx
         <div>
@@ -295,11 +296,13 @@ The connector buttons.
       )}
 ```
 
-Provide additional information. The syntax `<>
+Provide additional information. The expression syntax `<variable>?.<field>` tells JavaScript that if the variable is defined, evaluate to that field. If the variable is not defined, then this expression evaluates to `undefined`.
+
+The expression `error.message`, when there is no error, would raise an exception. Using `error?.message` lets us avoid this issue.
 
 #### `src/Greeter.tsx` {#greeter-tsx}
 
-This file contains most of the UI functionality. It includes definitions that would normally be in multiple files, but as this is a tutorial the program is optimized for being easy to understand the first time, rather than performance or ease of maintenance.
+This file contains most of the UI functionality. It includes definitions that would normally be in multiple files, but as this is a tutorial, the program is optimized for being easy to understand the first time, rather than performance or ease of maintenance.
 
 ```tsx
 import {
@@ -313,7 +316,6 @@ import {  useChainId,
           useWatchContractEvent,
           useSimulateContract
        } from 'wagmi'
-import { AddressType } from 'abitype'
 ```
 
 We use these library functions. Again, they are explained below where they are used.
@@ -334,7 +336,7 @@ let greeterABI = [
 ```
 
 The ABI for the `Greeter` contract.
-If you are developing the contracts and UI at the same time you'd normally put them in the same repository and use the ABI generated by the Solidity compiler as a file in your application. However, this is not necessary here because the contract is already developed and not going to change.
+If you are developing the contracts and UI at the same time, you'd normally put them in the same repository and use the ABI generated by the Solidity compiler as a file in your application. However, this is not necessary here because the contract is already developed and will not change.
 
 We use [`as const`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions) to tell TypeScript that this is a *real* constant. Normally, when you specify in JavaScript `const x = {"a": 1}`, you can change the value in `x`, you just can't assign to it.
 
@@ -344,7 +346,7 @@ type AddressPerBlockchainType = {
 }
 ```
 
-TypeScript is strongly typed. We use this definition to specify the address in which the `Greeter` contract is deployed on different chains. The key is a number (the chainId), and the value is an `AddressType` (an address).
+TypeScript is strongly typed. We use this definition to specify the address where the `Greeter` contract is deployed across different chains. The key is a number (the chainId), and the value is an `AddressType` (an address).
 
 ```tsx
 const contractAddrs : AddressPerBlockchainType = {
@@ -353,12 +355,11 @@ const contractAddrs : AddressPerBlockchainType = {
 }
 ```
 
-The address of the contract on the two supported networks, [Sepolia](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract).
-
+The address of the contract on [Sepolia](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract).
 
 ##### `Timer` component {#timer-component}
 
-The `Timer` component shows the number of seconds since a given time.
+The `Timer` component shows the number of seconds since a given time. This is important for usability purposes. When users do something, they expect an immediate reaction. In blockchains, this is often impossible because nothing happens until a transaction is placed in a block. One solution is to show how long it has been since the user performed the action, so the user can decide whether the time required is reasonable.
 
 ```tsx
 type TimerProps = {
@@ -366,20 +367,20 @@ type TimerProps = {
 }
 ```
 
-The `Timer` component gets one parameter, `lastUpdate`, the given time.
+The `Timer` component takes one parameter, `lastUpdate`, which is the time of the last action.
 
 ```tsx
 const Timer = ({ lastUpdate }: TimerProps) => {
   const [_, setNow] = useState(new Date())
 ```
 
-We need to have state (a variable that is tied to the component) and change it for the component to work correctly. But we never need to read it, so don't bother to do a variable.
+We need to have state (a variable tied to the component) and update it for the component to work correctly. But we never need to read it, so don't bother to do a variable.
 
 ```tsx
   setInterval(() => setNow(new Date), 1000)
 ```
 
-The [`setInterval`](https://www.w3schools.com/jsref/met_win_setinterval.asp) function lets us set a function that will run periodically. In this case, every second. The function calls `setNow` to change the state, so the `Timer` component will be rendered again.
+The [`setInterval`](https://www.w3schools.com/jsref/met_win_setinterval.asp) function lets us schedule a function to run periodically. In this case, every second. The function calls `setNow` to update the state, so the `Timer` component will be re-rendered.
 
 ```tsx
   const secondsSinceUpdate = Math.floor(
@@ -399,20 +400,20 @@ Calculate the number of seconds since the last update and return it.
 const Greeter = () => {
 ```
 
-Finally, we get the define the component.
+Finally, we get to define the component.
 
 ```tsx
   const chainId = useChainId()
   const account = useAccount()
 ```
 
-Information about the chain and account we are using, courtesy of [wagmi]. Because this is a hook (`use...`), every time this information changes the component gets rendered again.
+Information about the chain and account we are using, courtesy of [wagmi]. Because this is a hook (`use...`), the component is re-rendered whenever this information changes.
 
 ```tsx
   const greeterAddr = chainId && contractAddrs[chainId] 
 ```
 
-The address of the Greeter contract, which is `undefined` if we don't have chain information or we are on a chain without that contract.
+The address of the Greeter contract, which is `undefined` if we don't have chain information, or we are on a chain without that contract.
 
 ```tsx
   const readResults = useReadContract({
@@ -441,21 +442,27 @@ In this case, we are using a state variable for the new greeting the user wants 
 
 ```tsx
   const [ lastSetterAddress, setLastSetterAddress ] = useState("")
+```
+
+If multiple users are using the same contract at the same time, they might overwrite each other's greetings. This would look to the users as if the application is malfunctioning. If the application shows who last set the greeting, the user will know it was someone else and that the application is working correctly.
+
+```tsx
   const [ status, setStatus ] = useState("")
   const [ statusTime, setStatusTime ] = useState(new Date())
 ```
 
-Users like to see that their actions have immediate effect. However, on a blockchain this is not the case. These state variables let us at least have something to display to users so they'll know their action is in progress.
+Users like to see that their actions have an immediate effect. However, on a blockchain, this is not the case. These state variables let us at least display something to users so they'll know their action is in progress.
 
 ```tsx
   useEffect(() => {
     if (readResults.data) {
       setCurrentGreeting(readResults.data)
+      setStatus("Greeting fetched from blockchain")
     }
   }, [readResults.data])
 ```
 
-If `readResults` above changes the data, and it's not changing into a false value (`undefined`, for example), update the current greeting to the one read from the blockchain.
+If `readResults` above changes the data and it's not set to a false value (`undefined`, for example), update the current greeting to the one read from the blockchain. Also, update the status.
 
 ```tsx
   useWatchContractEvent({
@@ -471,37 +478,53 @@ Listen to `SetGreeting` events.
     enabled: !!greeterAddr,
 ```
 
-`!!<value>` means that if the value is `false`, or a value that evaluates as false such as `undefined`, `0`, or an empty string, the expression overall is `false`. For any other value, it is `true`. It's a way to convert values to booleans, because if ther is no `greeterAddr` we don't want to listen to events. 
+`!!<value>` means that if the value is `false`, or a value that evaluates as false, such as `undefined`, `0`, or an empty string, the expression overall is `false`. For any other value, it is `true`. It's a way to convert values to booleans, because if there is no `greeterAddr`, we don't want to listen to events. 
 
 ```tsx
-    onLogs(logs) {
+    onLogs: logs => {
       const greetingFromContract = logs[0].args.greeting
       setCurrentGreeting(greetingFromContract)
       setLastSetterAddress(logs[0].args.sender)
-      updateStatus("Greeting updated!")
+      updateStatus("Greeting updated by event")
     },
   })
 ```
 
-GOON
-
-
+When we see logs (which happens when we see a new event), it means that the greeting has been modified. In that case, we can update `currentGreeting` and `lastSetterAddress` to the new values. Also, we want to update the status display.
 
 ```tsx
-  const greetingChange : ChangeEventHandler<HTMLInputElement> = (evt) =>
+  const updateStatus = newStatus: string => {
+    setStatus(newStatus)
+    setStatusTime(new Date())
+  }
+```
+
+When we update the status we want to do two things:
+
+1. Update the status string (`status`)
+2. Update the time of last status update (`statusTime`) to now.
+
+```tsx
+  const greetingChange = (evt) =>
     setNewGreeting(evt.target.value)
 ```
 
-This is the event handler for when the new greeting input field changes. The type, [`ChangeEventHandler<HTMLInputElement>`](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events/), specifies that this is handler for a value change of an HTML input element. The `<HTMLInputElement>` part is used because this is a [generic type](https://www.w3schools.com/typescript/typescript_basic_generics.php).
+This is the event handler for changes to the new greeting input field. We could specify the type of the `evt` parameter, but TypeScript is a type option language. As this function is called only once, in an HTML event handler, I don't think it is necessary.
 
 ```tsx
-  const preparedTx = usePrepareContractWrite({
+  const { writeContractAsync } = useWriteContract()
+```
+
+The function to write to a contract. It is similar to [`writeContracts`](https://wagmi.sh/core/api/actions/writeContracts#writecontracts), but enables better status updates.
+
+```tsx
+  const simulation = useSimulateContract({
     address: greeterAddr,
     abi: greeterABI,
     functionName: 'setGreeting',
-    args: [ newGreeting ]
+    args: [newGreeting],
+    account: account.address    
   })
-  const workingTx = useContractWrite(preparedTx.config)
 ```
 
 This is the process to submit a blockchain transaction from the client perspective:
@@ -509,12 +532,12 @@ This is the process to submit a blockchain transaction from the client perspecti
 1. Send the transaction to a node in the blockchain using [`eth_estimateGas`](https://docs.alchemy.com/reference/eth-estimategas).
 2. Wait for a response from the node.
 3. When the response is received, ask the user to sign the transaction through the wallet. This step _has_ to happen after the node response is received because the user is shown the gas cost of the transaction before signing it.
-4. Wait for the user for approve.
+4. Wait for the user to approve.
 5. Send the transaction again, this time using [`eth_sendRawTransaction`](https://docs.alchemy.com/reference/eth-sendrawtransaction).
 
-Step 2 is likely to take a perceptible amount of time, during which users would wonder if their command was really received by the user interface and why they aren't being asked to sign the transaction already. That makes for bad user experience (UX).
+Step 2 is likely to take a perceptible amount of time, during which users may wonder whether their command was received by the user interface and why they aren't being asked to sign the transaction yet. That creates a poor user experience (UX).
 
-The solution is to use [prepare hooks](https://wagmi.sh/react/prepare-hooks). Every time that a parameter changes, immediately send the node the `eth_estimateGas` request. Then, when the user actually wants to send the transaction (in this case by pressing **Update greeting**), the gas cost is known and the user can see the wallet page immediately.
+One solution is to send out `eth_estimateGas` every time that a parameter changes. Then, when the user actually wants to send the transaction (in this case by pressing **Update greeting**), the gas cost is known, and the user can see the wallet page immediately.
 
 ```tsx
   return (
@@ -525,239 +548,115 @@ Now we can finally create the actual HTML to return.
 ```tsx
     <>
       <h2>Greeter</h2>
-      {
-        !readResults.isError && !readResults.isLoading &&
-          <ShowGreeting greeting={readResults.data} />
-      }
-      <hr />
+      {currentGreeting}
 ```
 
-Create a `ShowGreeting` component (explained below), but only if the greeting was read successfully from the blockchain.
+Show the current greeting.
 
 ```tsx
+      {lastSetterAddress && (
+        <p>Last updated by {
+          lastSetterAddress == account.address ? "you" : lastSetterAddress
+        }</p>
+      )}
+```
+
+If we know who set the greeting last, displayed that information. `Greeter` does not keep track of this information, and we don't want to look back for `SetGreeting` events, so we only get it once the greeting is changed while we are running.
+
+```tsx
+      <hr />      
       <input type="text"
         value={newGreeting}
         onChange={greetingChange}
-      />
+      />      
+      <br />
 ```
 
-This is the input text field where the user can set a new greeting. Every time the user presses a key, we call `greetingChange` which calls `setNewGreeting`. As `setNewGreeting` comes from the `useState` hook, it causes the `Greeter` component to be rendered again. This means that:
+This is the input text field where the user can set a new greeting. Every time the user presses a key, we call `greetingChange`, which calls `setNewGreeting`. Since `setNewGreeting` comes from `useState`, it causes the `Greeter` component to be re-rendered. This means that:
 
 - We need to specify `value` to keep the value of the new greeting, because otherwise it would turn back into the default, the empty string.
-- `usePrepareContractWrite` is called every time `newGreeting` changes, which means it is always going to have the latest `newGreeting` in the prepared transaction.
+- `simulation` is also updated every time `newGreeting` changes, which means that we'll get a simulation with the correct greeting. This could be relevant because the gas cost depends on the size of the call data, which depends on the length of the string.
 
 ```tsx
-      <button disabled={!workingTx.write}
-              onClick={workingTx.write}
+      <button disabled={!simulation.data}
+```
+
+Only enable the button once we have the information we need to send the transaction.
+
+```tsx
+        onClick={async () => {
+          updateStatus("Please confirm in wallet...")
+```
+
+Update the status. At this point, the user needs to confirm in the wallet.
+
+```tsx
+          await writeContractAsync(simulation.data.request)
+          updateStatus("Transaction sent, waiting for greeting to change...")
+        }}
       >
         Update greeting
       </button>
+
 ```
 
-If there is no `workingTx.write` then we are still waiting for information necessary for sending the greeting update, so the button is disabled. If there is a `workingTx.write` value then that is the function to call to send the transaction.
+`writeContractAsync` only returns after the transaction is actually sent. This lets us show the user how long the transaction has been waiting to be included in the blockchain. 
 
 ```tsx
-      <hr />
-      <ShowObject name="readResults" object={readResults} />
-      <ShowObject name="preparedTx" object={preparedTx} />
-      <ShowObject name="workingTx" object={workingTx} />
+      <h4>Status: {status}</h4>
+      <p>Updated <Timer lastUpdate={statusTime} /> </p>
     </>
   )
 }
 ```
 
-Finally, to help you see what we're doing, show the three objects we use:
+Show the status and how long it has been since it was updated.
 
-- `readResults`
-- `preparedTx`
-- `workingTx`
-
-##### `ShowGreeting` component {#showgreeting-component}
-
-This component shows
-
-```tsx
-const ShowGreeting = (attrs : ShowGreetingAttrsType) => {
+```
+export {Greeter}
 ```
 
-A component function receives a parameter with all the attributes of the component.
-
-```tsx
-  return <b>{attrs.greeting}</b>
-}
-```
-
-##### `ShowObject` component {#showobject-component}
-
-For information purposes, we use the `ShowObject` component to show the important objects (`readResults` for reading the greeting and `preparedTx` and `workingTx` for transactions we create).
-
-```tsx
-const ShowObject = (attrs: ShowObjectAttrsType ) => {
-  const keys = Object.keys(attrs.object)
-  const funs = keys.filter(k => typeof attrs.object[k] == "function")
-  return <>
-    <details>
-```
-
-We don't want to clutter the UI with all the information, so to make it possible to view them or close them, we use a [`details`](https://www.w3schools.com/tags/tag_details.asp) tag.
-
-```tsx
-      <summary>{attrs.name}</summary>
-      <pre>
-        {JSON.stringify(attrs.object, null, 2)}
-```
-
-Most of the fields are displayed using [`JSON.stringify`](https://www.w3schools.com/js/js_json_stringify.asp).
-
-```tsx
-      </pre>
-      { funs.length > 0 &&
-        <>
-          Functions:
-          <ul>
-```
-
-The exception is functions, which aren't part of [the JSON standard](https://www.json.org/json-en.html), so they have to be displayed separately.
-
-```tsx
-          {funs.map((f, i) =>
-```
-
-Within JSX, code inside `{` curly brackets `}` is interpreted as JavaScript. Then, the code inside the `(` regular brackets `)`, is interpreted again as JSX.
-
-```tsx
-           (<li key={i}>{f}</li>)
-                )}
-```
-
-React requires tags in the [DOM Tree](https://www.w3schools.com/js/js_htmldom.asp) to have distinct identifiers. This means that children of the same tag (in this case, [the unordered list](https://www.w3schools.com/tags/tag_ul.asp)), need different `key` attributes.
-
-```tsx
-          </ul>
-        </>
-      }
-    </details>
-  </>
-}
-```
-
-End the various HTML tags.
-
-##### The final `export` {#the-final-export}
-
-```tsx
-export { Greeter }
-```
-
-The `Greeter` component is the one we need to export for the application.
+Export the component.
 
 #### `src/wagmi.ts` {#wagmi-ts}
 
-Finally, various definitions related to WAGMI are in `src/wagmi.ts`. I am not going to explain everything here, because most of it is boilerplate you are unlikely to need to change.
-
-The code here isn't exactly the same as [on github](https://github.com/qbzzt/20230801-modern-ui/blob/main/src/wagmi.ts) because later in the article we add another chain ([Redstone Holesky](https://redstone.xyz/docs/network-info)).
+Finally, various definitions related to wagmi are in `src/wagmi.ts`. I am not going to explain everything here, because most of it is boilerplate you are unlikely to need to change.
 
 ```ts
-import { getDefaultWallets } from '@rainbow-me/rainbowkit'
-import { configureChains, createConfig } from 'wagmi'
-import { holesky, sepolia } from 'wagmi/chains'
-```
-
-Import the blockchains the application supports. You can see the list of supported chains [in the viem github](https://github.com/wagmi-dev/viem/tree/main/src/chains/definitions).
-
-```ts
-import { publicProvider } from 'wagmi/providers/public'
-
-const walletConnectProjectId = 'c96e690bb92b6311e8e9b2a6a22df575'
-```
-
-To be able to use [WalletConnect](https://walletconnect.com/) you need a project ID for your application. You can get it [on cloud.walletconnect.com](https://cloud.walletconnect.com/sign-in).
-
-```ts
-const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [ holesky, sepolia ],
-  [
-    publicProvider(),
-  ],
-)
-
-const { connectors } = getDefaultWallets({
-  appName: 'My wagmi + RainbowKit App',
-  chains,
-  projectId: walletConnectProjectId,
-})
+import { http, webSocket, createConfig, fallback } from 'wagmi'
+import { sepolia } from 'wagmi/chains'
+import { injected } from 'wagmi/connectors'
 
 export const config = createConfig({
-  autoConnect: true,
-  connectors,
-  publicClient,
-  webSocketPublicClient,
-})
-
-export { chains }
+  chains: [sepolia],
 ```
 
-### Adding another blockchain {#add-blockchain}
+The wagmi configuration includes the chains supported by this application. You can see the [list of available chains](https://wagmi.sh/core/api/chains).
 
-These days there are a lot of [L2 scaling solution](/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
 
-1. Import the `defineChain` type from viem.
+```ts
+  connectors: [
+    injected(),
+  ],
+```
 
-   ```ts
-   import { defineChain } from 'viem'
-   ```
+[This connector](https://wagmi.sh/core/api/connectors/injected) lets us talk to a wallet installed in the browser. 
 
-1. Add the network definition.
+```ts
+  transports: {
+    [sepolia.id]: fallback([
+      webSocket("wss://ethereum-sepolia-rpc.publicnode.com"),
+      http("https://ethereum-sepolia.gateway.tatum.io"),
+    ]),
+```
 
-   ```ts
-   const redstoneHolesky = defineChain({
-      id: 17_001,
-      name: 'Redstone Holesky',
-      network: 'redstone-holesky',
-      nativeCurrency: {
-        decimals: 18,
-        name: 'Ether',
-        symbol: 'ETH',
-      },
-      rpcUrls: {
-        default: {
-          http: ['https://rpc.holesky.redstone.xyz'],
-          webSocket: ['wss://rpc.holesky.redstone.xyz/ws'],
-      },
-      public: {
-          http: ['https://rpc.holesky.redstone.xyz'],
-          webSocket: ['wss://rpc.holesky.redstone.xyz/ws'],
-        },
-      },
-      blockExplorers: {
-        default: { name: 'Explorer', url: 'https://explorer.holesky.redstone.xyz' },
-      },
-   })
-   ```
+To communicate with the blockchain, we will try each access URL in turn. We can use either [WebSockets](/developers/tutorials/using-websockets/) or HTTP. If you have better access URLs, for example, from a [Node as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) provider, add them at the beginning of the list.
 
-1. Add the new chain to the `configureChains` call.
-
-   ```ts
-    const { chains, publicClient, webSocketPublicClient } = configureChains(
-      [ holesky, sepolia, redstoneHolesky ],
-      [ publicProvider(), ],
-    )
-   ```
-
-1. Ensure that the application knows the address for your contracts on the new network. In this case, we modify `src/components/Greeter.tsx`:
-
-    ```ts
-    const contractAddrs : AddressPerBlockchainType = {
-      // Holesky
-      17000: '0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8',
-
-      // Redstone Holesky
-      17001: '0x4919517f82a1B89a32392E1BF72ec827ba9986D3',
-
-      // Sepolia
-      11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
-    }
-    ```
+```ts
+  },
+  multiInjectedProviderDiscovery: false,
+})
+```
 
 ## Conclusion {#conclusion}
 
@@ -766,17 +665,18 @@ Of course, you don't really care about providing a user interface for `Greeter`.
 1. Specify to create a wagmi application.
 
    ```sh copy
-   pnpm create wagmi
+   npm create wagmi
    ```
 
-1. Name the application.
+1. Type `y` to proceed.
 
-1. Select **React** framework.
+2. Name the application.
 
-1. Select the **Vite** variant.
+3. Select **React** framework.
 
-1. You can [add Rainbow kit](https://www.rainbowkit.com/docs/installation#manual-setup).
+4. Select the **Vite** variant.
 
 Now go and make your contracts usable for the wide world.
 
 [See here for more of my work](https://cryptodocguy.pro/).
+
