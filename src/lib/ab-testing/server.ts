@@ -2,12 +2,6 @@ import { SITE_URL } from "@/lib/constants"
 
 import type { ABTestAssignment, ABTestConfig } from "./types"
 
-// Search engine and social media crawlers - serve Original to ensure consistent
-// indexing and link previews. This is NOT cloaking per Google's A/B testing guidelines:
-// https://developers.google.com/search/docs/advanced/guidelines/cloaking
-const BOT_PATTERN =
-  /googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|facebookexternalhit|twitterbot|linkedinbot|discordbot|telegrambot|whatsapp|slackbot/i
-
 const getABTestConfigs = async (): Promise<Record<string, ABTestConfig>> => {
   try {
     const response = await fetch(`${SITE_URL}/api/ab-config`, {
@@ -37,10 +31,6 @@ export const getABTestAssignment = async (
   const forwardedFor =
     headers.get("x-forwarded-for") || headers.get("x-real-ip") || "unknown"
   const userAgent = headers.get("user-agent") || ""
-
-  // Always serve Original to bots to prevent indexing fluctuation during A/B tests
-  // and ensure consistent social media link previews
-  if (BOT_PATTERN.test(userAgent)) return null
 
   // Add privacy-preserving entropy sources
   const acceptLanguage = headers.get("accept-language") || ""
