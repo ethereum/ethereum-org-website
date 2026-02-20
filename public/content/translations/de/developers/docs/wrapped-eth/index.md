@@ -1,6 +1,6 @@
 ---
-title: Was ist „Wrapped Ether“ (WETH)
-description: Eine Einführung in Wrapped Ether (WETH) – ein ERC20-kompatibler Wrapper für Ether (ETH).
+title: "Was ist „Wrapped Ether“ (WETH)"
+description: "Eine Einführung in Wrapped Ether (WETH) – ein ERC20-kompatibler Wrapper für Ether (ETH)."
 lang: de
 ---
 
@@ -35,19 +35,16 @@ Sie können WETH in ETH umwandeln, indem Sie den WETH-Smart Contract verwenden. 
 <ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 Sie zahlen Gasgebühren, um ETH mit dem WETH-Vertrag zu verpacken oder zu entpacken.
-
 </ExpandableCard>
 
 <ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH gilt allgemein als sicher, da es auf einem einfachen, bewährten Smart Contract basiert. Der WETH-Vertrag wurde zudem formal verifiziert, was den höchsten Sicherheitsstandard für Smart Contracts auf Ethereum darstellt.
-
 </ExpandableCard>
 
 <ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Neben der [kanonischen Implementierung von WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), die auf dieser Seite beschrieben ist, gibt es auch andere Varianten. Diese können benutzerdefinierte Token sein, die von App-Entwicklern erstellt wurden, oder Versionen, die auf anderen Blockchains herausgegeben wurden, und sich unterschiedlich verhalten oder unterschiedliche Sicherheitseigenschaften haben. **Überprüfen Sie immer die Token-Informationen, um zu erfahren, mit welcher WETH-Implementierung Sie interagieren.**
-
 </ExpandableCard>
 
 <ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
@@ -55,7 +52,6 @@ Neben der [kanonischen Implementierung von WETH](https://etherscan.io/token/0xc0
 - [Ethereum-Mainnet](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
-
 </ExpandableCard>
 
 ## Weiterführende Lektüre {#further-reading}
