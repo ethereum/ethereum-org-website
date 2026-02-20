@@ -9,7 +9,14 @@ import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = await getAllPagesWithTranslations()
 
-  const entries: MetadataRoute.Sitemap = []
+  const entries: MetadataRoute.Sitemap = [
+    {
+      url: "https://ethereum.org/",
+      changeFrequency: "daily",
+      priority: 1.0,
+      lastModified: new Date(),
+    },
+  ]
 
   for (const { slug, translatedLocales } of pages) {
     const normalizedSlug = slug.startsWith("/") ? slug : `/${slug}`
