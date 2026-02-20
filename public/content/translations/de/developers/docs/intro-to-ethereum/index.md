@@ -1,6 +1,6 @@
 ---
-title: Einleitung zu Ethereum
-description: Die Einführung eines dApp Entwicklers in die Kernkonzepte von Ethereum.
+title: "Technische Einführung zu Ethereum"
+description: "Die Einführung eines dApp Entwicklers in die Kernkonzepte von Ethereum."
 lang: de
 ---
 
@@ -16,7 +16,7 @@ Jeder Computer im Netzwerk muss jedem neuen Block und der Kette als Ganzes zusti
 
 Ethereum verwendet einen [Proof-of-Stake-basierten Konsensmechanismus](/developers/docs/consensus-mechanisms/pos/). Jeder, der der Chain neue Blöcke hinzufügen möchte, muss seine ETH – die native Kryptowährung der Ethereum-Blockchain – staken, die als Sicherheit und zum Ausführen der Validatorsoftware verwendet werden können. Diese "Validatoren" können dann nach dem Zufallsprinzip ausgewählt werden, um Blöcke einzureichen, die dann zur Überprüfung an andere Validatoren gesendet und zur Blockchain hinzugefügt werden. Es gibt ein System mit Belohnungen bzw. Strafen, das für die Teilnehmer einen starken Anreiz darstellt, ehrlich zu agieren und weitestgehend online verfügbar zu sein.
 
-Wenn Sie sehen möchten, wie Blockchain-Daten gehasht und anschließend an den Verlauf der Blockreferenzen angehängt werden, sollten Sie sich [diese Demo](https://andersbrownworth.com/blockchain/blockchain) von Anders Brownworth und das dazugehörige Video unten ansehen.
+Wenn Sie sehen möchten, wie Blockchain-Daten gehasht und anschließend an den Verlauf der Blockreferenzen angehängt werden, sollten Sie sich unbedingt [diese Demo](https://andersbrownworth.com/blockchain/blockchain) von Anders Brownworth und das dazugehörige Video unten ansehen.
 
 Sehen Sie sich die Erklärung von Anders Brownworth zu Blockchains an:
 
@@ -44,7 +44,7 @@ ETH wird auch verwendet, um dem Netzwerk auf drei Arten kryptoökonomische Siche
 
 ## Was sind Smart Contracts? {#what-are-smart-contracts}
 
-In der Praxis schreiben die Teilnehmenden nicht jedes Mal einen neuen Code, wenn sie eine Berechnung auf der EVM anfordern wollen. Vielmehr laden Anwendungsentwickler Programme (wiederverwendbare Codeschnipsel) in den EVM-Speicher hoch, und die Nutzer stellen Anfragen, um diese Codeschnipsel mit unterschiedlichen Parametern auszuführen. Wir nennen die Programme, die hochgeladen und durch das Netzwerk ausgeführt werden, Smart Contracts (intelligente Verträge).
+In der Praxis schreiben die Teilnehmenden nicht jedes Mal einen neuen Code, wenn sie eine Berechnung auf der EVM anfordern wollen. Vielmehr laden Anwendungsentwickler Programme (wiederverwendbare Codeschnipsel) in den EVM-Speicher hoch, und die Nutzer stellen Anfragen, um diese Codeschnipsel mit unterschiedlichen Parametern auszuführen. Wir nennen die Programme, die in das Netzwerk hochgeladen und von diesem ausgeführt werden, "Smart Contracts".
 
 Ganz grundsätzlich können Sie sich einen Smart Contract wie eine Art Verkaufsautomat vorstellen: ein Skript, das, wenn es mit bestimmten Parametern aufgerufen wird, bestimmte Aktionen oder Berechnungen durchführt, wenn bestimmte Bedingungen erfüllt sind. Zum Beispiel könnte ein einfacher Verkäufer-Smart-Contract das Eigentum an einem digitalen Vermögenswert schaffen und zuweisen, wenn der Aufrufer ("caller") ETH an einen bestimmten Empfänger sendet.
 
@@ -60,21 +60,21 @@ Die Sequenz aller Blöcke, die dem Ethereum-Netzwerk in der Geschichte des Netzw
 
 ### ETH {#eth}
 
-**Ether (ETH)** ist die einheimische Kryptowährung von Ethereum. Nutzer zahlen ETH an andere Nutzer, damit ihre Anfragen zur Ausführung des Codes erfüllt werden.
+**Ether (ETH)** ist die native Kryptowährung von Ethereum. Nutzer zahlen ETH an andere Nutzer, damit ihre Anfragen zur Ausführung des Codes erfüllt werden.
 
-[Mehr zu ETH](/developers/docs/intro-to-ether/)
+[Mehr über ETH](/developers/docs/intro-to-ether/)
 
 ### EVM {#evm}
 
 Die virtuelle Ethereum-Machine ist der globale virtuelle Computer, dessen Zustand jeder Teilnehmer im Ethereum-Netzwerk speichert und dem er zustimmt. Jeder Teilnehmer kann die Ausführung von beliebigem Code auf der EVM beantragen. Jede Codeausführung ändert den Zustand der EVM.
 
-[Mehr zur EVM](/developers/docs/evm/)
+[Mehr über die EVM](/developers/docs/evm/)
 
 ### Nodes {#nodes}
 
 Die realen Maschinen, die den EVM-Zustand speichern. Knoten kommunizieren miteinander, um Informationen über den EVM-Zustand und neue Zustandsänderungen zu verbreiten. Alle Nutzer können auch die Ausführung von Code anfordern, indem sie eine Anfrage zur Codeausführung von einem Knoten aus senden. Das Ethereum-Netzwerk selbst ist das Aggregat aller Ethereum-Knoten und deren Kommunikation.
 
-[Mehr zu Nodes](/developers/docs/nodes-and-clients/)
+[Mehr über Nodes](/developers/docs/nodes-and-clients/)
 
 ### Konten {#accounts}
 
@@ -96,21 +96,29 @@ Eine "Transaktionsanfrage" ist der formale Begriff für eine Anfrage zur Codeaus
 
 Da das Transaktionsvolumen sehr hoch ist, werden die Transaktionen in Stapeln oder Blöcken "übertragen". Blöcke enthalten in der Regel Dutzende bis Hunderte von Transaktionen.
 
-[Mehr zu Blöcken](/developers/docs/blocks/)
+[Mehr über Blöcke](/developers/docs/blocks/)
 
 ### Smart Contracts {#smart-contracts}
 
-Ein wiederverwendbarer Codeschnipsel (ein Programm), den ein Entwickler in den EVM-Zustand veröffentlicht. Jeder kann anfragen, dass der Smart-Contract-Code ausgeführt wird, indem er eine Transaktionsanfrage stellt. Da Entwickler beliebige ausführbare Anwendungen in die EVM (Spiele, Marktplätze, Finanzinstrumente etc.) schreiben können, werden diese oft auch [dApps oder dezentralisierte Apps](/developers/docs/dapps/) genannt.
+Ein wiederverwendbarer Codeschnipsel (ein Programm), den ein Entwickler in den EVM-Zustand veröffentlicht. Jeder kann anfragen, dass der Smart-Contract-Code ausgeführt wird, indem er eine Transaktionsanfrage stellt. Da Entwickler beliebige ausführbare Anwendungen in die EVM schreiben können (Spiele, Marktplätze, Finanzinstrumente usw.) indem sie Smart Contracts veröffentlichen, werden diese oft auch [Dapps oder dezentrale Anwendungen](/developers/docs/dapps/) genannt.
 
-[Mehr zu Smart Contracts](/developers/docs/smart-contracts/)
+[Mehr über Smart Contracts](/developers/docs/smart-contracts/)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Lektüre {#further-reading}
 
 - [Ethereum-Whitepaper](/whitepaper/)
-- [Wie funktioniert Ethereum überhaupt?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) – _Preethi Kasireddy_ (**Hinweis:** Diese Ressource ist immer noch wertvoll, doch Sie sollten sich bewusst sein, dass sie aus der Zeit vor [der Zusammenführung](/roadmap/merge) stammt und sich daher noch auf den Proof-of-Work-Mechanismus von Ethereum bezieht – Ethereum ist jetzt durch [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos) gesichert)
+- [Wie funktioniert Ethereum eigentlich?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**Hinweis:** Diese Ressource ist immer noch wertvoll, aber beachten Sie, dass sie aus der Zeit vor [der Zusammenführung](/roadmap/merge) stammt und sich daher noch auf den Proof-of-Work-Mechanismus von Ethereum bezieht – Ethereum wird jetzt tatsächlich durch [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos) gesichert)
 
-_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
+### Eher der visuelle Lernende? {#visual-learner}
+
+Diese Videoserie bietet eine gründliche Auseinandersetzung mit grundlegenden Themen:
+
+<YouTube id="j78ZcIIpi0Q"/>
+
+[Ethereum-Grundlagen-Playlist](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
+
+_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
 ## Verwandte Tutorials {#related-tutorials}
 
-- [Eine Anleitung für Entwickler zu Ethereum, Teil 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _ – eine einsteigerfreundliche Einführung zu Ethereum mit Python und web3.py_
+- [Eine Anleitung für Entwickler zu Ethereum, Teil 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Eine sehr einsteigerfreundliche Einführung in Ethereum mit Python und web3.py_
