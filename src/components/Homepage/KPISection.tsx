@@ -185,7 +185,7 @@ const KPISection = ({
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-20">
         <div className="hidden h-[267px] w-px bg-border lg:block" />
 
-        <div className="flex w-[243px] flex-col gap-8">
+        <div className="flex w-[300px] flex-col gap-8">
           <div className="flex items-start gap-3">
             <User
               className="mt-[5.5px] size-8 text-body-medium"
