@@ -86,7 +86,7 @@ As more validators withdraw, the maximum number of exiting validators will gradu
 
 ### Post-merge inflation breakdown {#post-merge-inflation-breakdown}
 
-- Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
+- [Total ETH supply](/eth/supply/): **~120,520,000 ETH** (at time of The Merge in September 2022)
 - Execution layer issuance: **0**
 - Consensus layer issuance: Same as above, **~0.52%** annualized issuance rate (with 14 million total ETH staked)
 
