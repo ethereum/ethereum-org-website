@@ -179,9 +179,69 @@ Key terms from `vi-glossary-terms.json` used during review:
 4. **Run character-set validation** to catch cross-script contamination early
 5. **Document VPS/EVM ambiguity** in Vietnamese translation guidelines for future translators
 
+---
+
+## Phase 2: Deep Quality Review (Feb 19–20)
+
+A second review pass on 49 JSON + 7 high-traffic markdown files found 13 additional critical issues and 20+ diacritical typos missed by Phase 1.
+
+### Additional Critical Issues
+
+- **Offensive mistranslation**: "upvoted" → `bình luận đồng tính` ("homosexual comments") in `security/index.md`
+- **Wrong content**: `page-staking-benefits-1-description` described DeFi collateral instead of consensus rewards
+- **Brand names translated**: "Devcon" → "Hội nghị các nhà phát triển", "Ethereum Foundation" → "Nền tảng Ethereum" (3 locations)
+- **"Gas" as natural gas**: "khí đốt" (fuel gas) instead of "gas" in `page-roadmap.json`
+- **"Token" as "notification code"**: `mã thông báo` used instead of "token" across multiple files, one garbled to `mã thông cáo báo`
+- **Broken HTML**: Subscribe link with invisible `<a>` tag, missing `</strong>` closing tags
+- **Structural drift**: DeFi section ordering didn't match English source
+
+### Vietnamese Diacritical Marks: Semantic, Not Cosmetic
+
+Vietnamese tone marks change meaning entirely. These are not cosmetic typos — 20+ found across files:
+
+| Typo | Meaning | Correct | Meaning |
+|------|---------|---------|---------|
+| địa **chủ** | landlord | địa **chỉ** | address |
+| quyển | book/volume | quyền | right/authority |
+| cổ phẩn | (nonsense) | cổ phần | equity/stake |
+| nâng gấp | (nonsense) | nâng cấp | upgrade |
+| đặc cọc | (nonsense) | đặt cọc | deposit |
+| Tìm hiểm | find danger | Tìm hiểu | learn |
+
+Standard spellcheck won't catch these. A dedicated Vietnamese diacritical validator using a dictionary corpus would.
+
+### AI-Assisted Fixing Introduces New Errors
+
+Gemini 2.5 Pro was used to apply Phase 2 fixes. It resolved most criticals but **introduced 3 new build-breaking errors**:
+- 3 JSON double-comma (`,,`) syntax breaks
+- Subscribe link "fixed" but left `<a>` tag with no link text
+- Single `### Heading {#id}` split into two bare `###` headings
+- 6 explicitly flagged typos missed
+- Summary doc contained false "Refuted" claims about issues it actually changed
+
+**Total fix passes required**: sanitizer → Phase 1 terminology → Gemini fixes → Claude Code re-review → Claude Code final patches. What should be one-click took ~20 rounds.
+
+### Crowdin Glossary Contradictions
+
+The approved glossary contradicts itself on key term families:
+
+| Base Term | Glossary | Compound Term | Glossary | Conflict |
+|-----------|----------|---------------|----------|----------|
+| gas | "ga" | gas fee | "phí **gas**" | ga vs gas |
+| staking | "ký gửi" | staker | "những người **đặt cọc**" | ký gửi vs đặt cọc |
+| token | "token" | non-fungible token | "**mã thông báo** không thể thay thế" | token vs mã thông báo |
+
+### Additional Prevention Recommendations
+
+6. **Post-sanitizer quality gate:** Automated scan for known-bad translations ("mã thông báo", "khí đốt", "Nền tảng Ethereum")
+7. **Vietnamese diacritical validator:** Dictionary-based check for tonal mark errors
+8. **Glossary consistency audit:** Resolve contradictions before next import cycle
+9. **Section ordering check:** Validate translated markdown structure against English source
+10. **AI fix verification:** If using AI to apply fixes, always run a separate verification pass
+
 ## Related Files
 
 - **Sanitizer**: `src/scripts/i18n/post_import_sanitize.ts`
-- **Review Command**: `.claude/commands/review-translations.md`
+- **Review Command**: `.claude/skills/review-translations.md`
+- **Crowdin Glossary**: `docs/translation-glossary-vi.json`
 - **Community Glossary**: `vi-glossary-terms.json` (repo root)
-- **CI Workflow**: `.github/workflows/claude-review-translations.yml`
