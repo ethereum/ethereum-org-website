@@ -70,17 +70,12 @@ export default async function Page({ params }: { params: PageParams }) {
           <h2 className="text-2xl font-bold lg:text-3xl">Get help</h2>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {/* Card 1: Something went wrong */}
-            <Card
-              className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border"
-              style={{
-                boxShadow: "0.75rem 0.75rem 0 hsla(var(--amber-500), 0.25)",
-              }}
-            >
+            <Card className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border border-accent-b/10 bg-gradient-to-r from-accent-b/10 from-20% to-accent-b/5 to-60% dark:from-accent-b/20 dark:to-accent-b/10">
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
-                <ShieldAlert className="size-8 text-accent-a" />
+                <ShieldAlert className="size-8 text-accent-b" />
                 Something went wrong
               </CardTitle>
-              <CardContent className="space-y-5 bg-gradient-to-br from-white to-primary/5 p-8 dark:from-transparent dark:to-primary/5">
+              <CardContent className="space-y-5 p-8">
                 <p className="text-sm leading-relaxed text-body-medium">
                   If you lost funds, got scammed, or something unexpected
                   happened, start here.
@@ -112,17 +107,12 @@ export default async function Page({ params }: { params: PageParams }) {
             </Card>
 
             {/* Card 2: Protect yourself */}
-            <Card
-              className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border"
-              style={{
-                boxShadow: "0.75rem 0.75rem 0 hsla(var(--blue-500), 0.25)",
-              }}
-            >
+            <Card className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border border-accent-a/10 bg-gradient-to-r from-accent-a/10 from-20% to-accent-a/5 to-60% dark:from-accent-a/20 dark:to-accent-a/10">
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
-                <Shield className="size-8 text-accent-b" />
+                <Shield className="size-8 text-accent-a" />
                 Protect yourself
               </CardTitle>
-              <CardContent className="space-y-5 bg-gradient-to-br from-white to-primary/5 p-8 dark:from-transparent dark:to-primary/5">
+              <CardContent className="space-y-5 p-8">
                 <p className="text-sm leading-relaxed text-body-medium">
                   Learn to recognize common scam tactics before they target you.
                 </p>
@@ -150,17 +140,12 @@ export default async function Page({ params }: { params: PageParams }) {
           <h2 className="text-2xl font-bold lg:text-3xl">Learn</h2>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {/* Card 4: Using Ethereum */}
-            <Card
-              className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border"
-              style={{
-                boxShadow: "0.75rem 0.75rem 0 hsla(var(--green-500), 0.25)",
-              }}
-            >
+            <Card className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border border-accent-c/10 bg-gradient-to-r from-accent-c/10 from-20% to-accent-c/5 to-60% dark:from-accent-c/20 dark:to-accent-c/10">
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
                 <BookOpen className="size-8 text-accent-c" />
                 Using Ethereum
               </CardTitle>
-              <CardContent className="space-y-5 bg-gradient-to-br from-white to-primary/5 p-8 dark:from-transparent dark:to-primary/5">
+              <CardContent className="space-y-5 p-8">
                 <p className="text-sm leading-relaxed text-body-medium">
                   Step-by-step guides for wallets, tokens, bridges, and more.
                 </p>
@@ -185,17 +170,12 @@ export default async function Page({ params }: { params: PageParams }) {
             </Card>
 
             {/* Card 5: Common misconceptions */}
-            <Card
-              className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border"
-              style={{
-                boxShadow: "0.75rem 0.75rem 0 hsla(var(--amber-500), 0.25)",
-              }}
-            >
+            <Card className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border border-primary/10 bg-gradient-to-r from-primary/10 from-20% to-primary/5 to-60% dark:from-primary/20 dark:to-primary/10">
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
-                <HelpCircle className="size-8 text-accent-a" />
+                <HelpCircle className="size-8 text-primary" />
                 Common misconceptions
               </CardTitle>
-              <CardContent className="space-y-5 bg-gradient-to-br from-white to-primary/5 p-8 dark:from-transparent dark:to-primary/5">
+              <CardContent className="space-y-5 p-8">
                 <p className="text-sm leading-relaxed text-body-medium">
                   Clearing up the most frequent misunderstandings about
                   Ethereum.
