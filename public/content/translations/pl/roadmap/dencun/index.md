@@ -1,6 +1,6 @@
 ---
 title: Cancun-Deneb (Dencun) FAQ
-description: Często zadawane pytania dotyczące uaktualnienia sieci Cancun-Deneb (Dencun)
+description: "Często zadawane pytania dotyczące uaktualnienia sieci Cancun-Deneb (Dencun)"
 lang: pl
 ---
 
@@ -68,9 +68,9 @@ Tak, Proto-Danksharding (EIP-4844) wymaga zaktualizowania zarówno klienta wykon
 
 Klienty konsensusu zajmują się oprogramowaniem _walidatora_, które zostało zaktualizowane w celu uwzględnienia uaktualnienia.
 
-## W jaki sposób Cancun-Deneb (Dencun) wpływa na Goerli lub inne sieci testowe Ethereum? {#testnet-impact}
+## W jaki sposób Cancun-Deneb (Dencun) wpływa na sieci testowe Ethereum? {#testnet-impact}
 
-- Devnety, Goerli, Sepolia i Holesky przeszły uaktualnienie Dencun i mają w pełni działający Proto-Danksharding
+- Devnety, Sepolia i Holesky przeszły uaktualnienie Dencun i mają w pełni działający Proto-Danksharding
 - Twórcy pakietów zbiorczych mogą używać tych sieci do testowania EIP-4844
 - Większość użytkowników nie odczuje tej zmiany w każdej sieci testowej
 
@@ -99,7 +99,7 @@ Sama kompatybilność z wirtualną maszyną Ethereum (EVM) nie oznacza, że sie�
 
 [Więcej na temat pakietów zbiorczych warstwy 2](/layer-2/)
 
-## Jesteś raczej wzrokowcem? {#visual-learner}
+## Jesteś raczej wzrokowcem? Dla wzrokowców {#visual-learner}
 
 <YouTube id="HT9PHWloIiU" />
 
@@ -109,7 +109,7 @@ _Odblokowanie skalowania Ethereum, EIP-4844 — Finematics_
 
 _Podstawy przestrzeni blobów z Domothy — Bankless_
 
-## Further reading {#further-reading}
+## Dalsza lektura {#further-reading}
 
 - [EIP4844.com](https://www.eip4844.com/)
 - [EIP-4844: Transakcje shard blob (Proto-Danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
