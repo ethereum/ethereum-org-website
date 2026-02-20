@@ -66,7 +66,7 @@ Thứ tự của những khối được ghi vĩnh viễn lên mạng lưới Et
 
 ### Máy ảo Ethereum {#evm}
 
-Máy ảo Ethereum là một máy ảo toàn cầu mà trạng thái của mỗi người tham gia mạng lưới của Ethereum được lưu trữ và đồng thuận. Bất kì người tham gia có thể yêu câu một thực thi mã nguồn tùy thích trên EVM; mã nguồn được thực thi sẽ thay đổi trạng thái của EVM.
+Máy ảo Ethereum là một máy ảo toàn cầu mà trạng thái của mỗi người tham gia mạng lưới của Ethereum được lưu trữ và đồng thuận. Bất kì người tham gia có thể yêu cầu một thực thi mã nguồn tùy thích trên EVM; mã nguồn được thực thi sẽ thay đổi trạng thái của EVM.
 
 [Tìm hiểu thêm về EVM](/developers/docs/evm/)
 
@@ -94,7 +94,7 @@ Một "yêu cầu giao dịch" là thuật ngữ chính thức cho một yêu c�
 
 ### Các khối {#blocks}
 
-Khối lượng giao dịch rất cao, nên các giao dịch được "cam kết" theo lô, hay các khối. Khối nói chúng chứa hàng chục đến hàng trăm giao dịch.
+Khối lượng giao dịch rất cao, nên các giao dịch được "cam kết" theo lô, hay các khối. Khối nói chung chứa hàng chục đến hàng trăm giao dịch.
 
 [Tìm hiểu thêm về các khối](/developers/docs/blocks/)
 
@@ -109,8 +109,7 @@ Một mẫu mã nguồn tái sử dụng (một chương trình) mà lập trìn
 - [Sách trắng Ethereum](/whitepaper/)
 - [Rốt cuộc thì Ethereum hoạt động như thế nào?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**Lưu ý:** tài liệu này vẫn có giá trị nhưng xin lưu ý rằng nó được viết trước [The Merge](/roadmap/merge) và do đó vẫn đề cập đến cơ chế bằng chứng công việc của Ethereum - Ethereum hiện được bảo mật bằng [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos))
 
-### Tìm hiểu thêm từ video trực quan? 
-### Người học qua hình ảnh {#visual-learner}
+### Bạn là người học qua hình ảnh? {#visual-learner}
 
 Chuỗi video này cho phép khám phá các chủ đề nền tảng:
 

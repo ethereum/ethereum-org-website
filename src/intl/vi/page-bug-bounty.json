@@ -49,7 +49,7 @@
   "page-upgrades-bug-bounty-points-rights-desc": "Tổ chức Ethereum Foundation có quyền cứng đáng để thay đổi điều này không cần thông báo trước.",
   "page-upgrades-bug-bounty-points-usd": "2 Đô la Mỹ",
   "page-upgrades-bug-bounty-quality": "Chất lượng mô tả",
-  "page-upgrades-bug-bounty-quality-desc": ": Trả phần thương cao hơn cho các bài nộp rõ ràng, viết tốt.",
+  "page-upgrades-bug-bounty-quality-desc": ": Trả phần thưởng cao hơn cho các bài nộp rõ ràng, viết tốt.",
   "page-upgrades-bug-bounty-quality-fix": "<strong>Chất lượng sửa chữa</strong>, nếu có: Phần thưởng cao hơn được trả cho những bài nộp có mô tả rõ ràng về cách khắc phục vấn đề.",
   "page-upgrades-bug-bounty-quality-repro": "Khả năng tái tạo chất lượng",
   "page-upgrades-bug-bounty-quality-repro-desc": ": Phải bao gồm Bằng chứng về khái niệm (POC) để đủ điều kiện nhận phần thưởng. Vui lòng bao gồm mã kiểm tra, tập lệnh và hướng dẫn chi tiết. Việc chúng tôi tái tạo và xác minh lỗ hổng càng dễ dàng thì phần thưởng càng cao.",

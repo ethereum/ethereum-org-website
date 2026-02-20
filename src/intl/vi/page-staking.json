@@ -233,7 +233,7 @@
   "page-staking-withdrawals-important-notices": "Các lưu ý quan trọng",
   "page-staking-withdrawals-important-notices-desc": "Chức năng rút chưa sẵn sàng. Xin hãy đọc câu hỏi thường gặp về <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Gộp Eth2 và sau khi gộp</a> để biết thêm thông tin.",
   "page-upgrades-merge-btn": "Đọc thêm về sự kiện The Merge",
-  "subscribe-to-ef-blog": "Đăng ký Blog EF để nhận email thông báo mới nhất về các giao thức <a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\"></a>.",
+  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Đăng ký Blog EF</a> để nhận email thông báo mới nhất về các giao thức.",
   "page-staking-comparison-with-other-options": "So sánh với các lựa chọn khác",
   "page-staking-any-amount": "Bất kể số lượng tiền là bao nhiêu",
   "page-staking-network-testnet": "Mạng thử nghiệm {network}"

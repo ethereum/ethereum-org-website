@@ -10,7 +10,7 @@ lang: vi
 <ListenToPlayer slug="/web3/" />
 </div>
 
-Tập trung đã giúp hàng tỷ người tiếp cận với Www ( World Wide Web) và tạo ra cơ sở hạ tầng ổn đinh, mạnh mẽ. Đồng thời, một số ít có tầm ảnh hưởng lớn trên không gian của World Wide Web đơn phương quyết định điều gì nên và không nên.
+Tập trung đã giúp hàng tỷ người tiếp cận với Www ( World Wide Web) và tạo ra cơ sở hạ tầng ổn định, mạnh mẽ. Đồng thời, một số ít có tầm ảnh hưởng lớn trên không gian của World Wide Web đơn phương quyết định điều gì nên và không nên.
 
 Web3 là câu trả lời cho tình huống khó xử này. Thay vì một trang web được quản lí độc quyền bởi các công ty công nghệ lớn thì Web3 bao gồm sự phân quyền và được người dùng xây dựng, vận hành cũng như sở hữu. Web3 đặt quyền hạn vào tay các cá nhân hơn là các tập đoàn.
 Trước khi bàn luận về Web3, hãy cùng nhau phân tích xem chúng có mặt ở đây như thế nào.
