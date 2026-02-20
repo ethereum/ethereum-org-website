@@ -1,16 +1,16 @@
 ---
 title: FAQs zu Cancun-Deneb (Dencun)
-description: Häufig gestellte Fragen zum Netzwerk-Upgrade Cancun-Deneb (Dencun)
+description: "Häufig gestellte Fragen zum Netzwerk-Upgrade Cancun-Deneb (Dencun)"
 lang: de
 ---
 
 # Cancun-Deneb (Dencun) {#dencun}
 
-Cancun-Deneb (Dencun) ist ein Upgrade des Ethereum-Netzwerks, bei dem **Proto-Danksharding (EIP-4844)** aktiviert wird. Im Zuge dessen werden temporäre Daten **Blobs** für günstigere [Layer 2 (L2)](/Glossar/#layer-2)-Rollup-Speicherung einführt.
+Cancun-Deneb (Dencun) ist ein Upgrade des Ethereum-Netzwerks, bei dem **Proto-Danksharding (EIP-4844)** aktiviert wird. Im Zuge dessen werden temporäre Daten **Blobs** für günstigere [Layer 2 (L2)](/glossary/#layer-2)-Rollup-Speicherung einführt.
 
-Ein neuer Transaktionstyp ermöglicht es Rollup-Anbietern, Daten kostengünstiger in sogenannten „Blobs“ zu speichern. Diese Blobs stehen dem Netzwerk etwa 18 Tage lang garantiert zur Verfügung (genauer gesagt 4096 [Epochen](/Glossar/#epoch)). Nach Ablauf dieser Zeit werden die Blobs aus dem Netzwerk entfernt, aber die Anwendungen können die Gültigkeit ihrer Daten immer noch mithilfe von Nachweisen verifizieren.
+Ein neuer Transaktionstyp ermöglicht es Rollup-Anbietern, Daten kostengünstiger in sogenannten „Blobs“ zu speichern. Diese Blobs stehen dem Netzwerk etwa 18 Tage lang garantiert zur Verfügung (genauer gesagt 4096 [Epochen](/glossary/#epoch)). Nach Ablauf dieser Zeit werden die Blobs aus dem Netzwerk entfernt, aber die Anwendungen können die Gültigkeit ihrer Daten immer noch mithilfe von Nachweisen verifizieren.
 
-Dies senkt die Kosten für Rollups erheblich, begrenzt das Wachstum der Chain und sorgt dafür, das mehr Nutzer unterstützt werden. Gleichzeitig bleibt die Sicherheit und eine dezentralisierte Gruppe von Knotenpunktbetreibern erhalten.
+Dies senkt die Kosten für Rollups erheblich, begrenzt das Wachstum der Chain und sorgt dafür, dass mehr Nutzer unterstützt werden. Gleichzeitig bleibt die Sicherheit und eine dezentralisierte Gruppe von Knotenpunktbetreibern erhalten.
 
 ## Wann ist damit zu rechnen, dass Rollups aufgrund von Proto-Danksharding die niedrigeren Transaktionsgebühren widerspiegeln? {#when}
 
@@ -18,12 +18,12 @@ Dies senkt die Kosten für Rollups erheblich, begrenzt das Wachstum der Chain un
 - Alle großen Rollup-Anbieter wie Arbitrum oder Optimism haben signalisiert, dass Blobs unmittelbar nach dem Upgrade unterstützt werden
 - Der Zeitplan für den individuellen Rollup-Support kann variieren, da jeder Anbieter seine Systeme aktualisieren muss, um vom neuen Blob-Space zu profitieren
 
-## Wie kann ETH nach der Hard Fork umgewandelt werden? {#scam-alert}
+## Wie können ETH nach der harten Abspaltung umgewandelt werden? {#scam-alert}
 
-- **Kein Handlungsbedarf für Ihre ETH**: Nach dem Upgrade Ethereum Dencun besteht keine Notwendigkeit, Ihre ETH umzuwandeln oder zu aktualisieren. Ihre Kontoguthaben bleiben unverändert und die ETH, die Sie derzeit besitzen, bleiben auch nach dem Hard Fork in der bestehenden Form zugänglich.
+- **Kein Handlungsbedarf für Ihre ETH**: Nach dem Upgrade Ethereum Dencun besteht keine Notwendigkeit, Ihre ETH umzuwandeln oder zu aktualisieren. Ihre Kontoguthaben bleiben unverändert und die ETH, die Sie derzeit besitzen, bleiben auch nach der harten Abspaltung in der bestehenden Form zugänglich.
 - **Vorsicht vor Betrug!** <Emoji text="⚠️" /> **Jeder, der Sie anweist, Ihre ETH zu „aktualisieren“, versucht, Sie zu betrügen.** Es gibt nichts, was Sie in Bezug auf dieses Upgrade tun müssen. Ihre Assets bleiben davon völlig unberührt. Denken Sie daran: Informiert zu sein ist der beste Schutz vor Betrug.
 
-[Mehr zur Erkennung und Vermeidung von Betrug](/Sicherheit/)
+[Mehr zur Erkennung und Vermeidung von Betrug](/security/)
 
 ## Welches Problem wird durch das Update des Dencun-Netzwerks gelöst? {#network-impact}
 
@@ -31,7 +31,7 @@ Dencun zielt in erster Linie auf **Skalierbarkeit** (Handhabung von mehr Nutzern
 
 Die Ethereum-Community hat sich für ihr Wachstum für einen „Rollup-zentrierten“ Ansatz entschlossen, bei dem Layer-2-Rollups das wichtigste Mittel für die sichere Unterstützung von mehr Nutzern sind.
 
-Rollup-Netzwerke wickeln die _Verarbeitung_ (oder „Ausführung“) von Transaktionen getrennt vom Mainnet ab und veröffentlichen dann zur Aufbewahrung einen kryptografischen Beweis und/oder komprimierte Transaktionsdaten der Ergebnisse zurück im Mainnet. Die Speicherung dieser Nachweise ist mit Kosten verbunden (in Form von [Gas](/Glossar/#gas)). Diese mussten vor dem Proto-Danksharding von allen Betreibern von Netzwerkknoten dauerhaft gespeichert werden, was eine teure Angelegenheit ist.
+Rollup-Netzwerke wickeln die _Verarbeitung_ (oder „Ausführung“) von Transaktionen getrennt vom Mainnet ab und veröffentlichen dann zur Aufbewahrung einen kryptografischen Beweis und/oder komprimierte Transaktionsdaten der Ergebnisse zurück im Mainnet. Die Speicherung dieser Nachweise ist mit Kosten verbunden (in Form von [Gas](/glossary/#gas)). Diese mussten vor dem Proto-Danksharding von allen Betreibern von Netzwerkknoten dauerhaft gespeichert werden, was eine teure Angelegenheit ist.
 
 Durch die Einführung von Proto-Danksharding im Dencun-Upgrade wird die Datenspeicherung für diese Nachweise kostengünstiger, da die Betreiber der Knoten diese Daten nur noch etwa 18 Tage lang speichern müssen. Nach diesem Zeitraum können die Daten sicher entfernt werden, um eine Ausweitung der Hardwareanforderungen zu verhindern.  Da Rollups in der Regel eine Abhebungsfrist von 7 Tagen haben, bleibt ihr Sicherheitsmodell unverändert, solange Blobs für diesen Zeitraum auf L1 verfügbar sind. Das 18-tägige Zeitfenster für die Löschung bietet einen erheblichen Puffer für diesen Zeitraum.
 
@@ -47,9 +47,9 @@ Reguläre Ethereum-Knoten speichern immer den _aktuellen Status_ des Netzwerks. 
 
 _Historische_ Blob-Daten können aus verschiedenen Gründen erwünscht sein und können mit verschiedenen dezentralen Protokollen gespeichert und abgerufen werden:
 
-- **Indexierungsprotokolle von Drittanbietern** wie The Graph speichern diese Daten über ein dezentrales Netzwerk von Knotenbetreibern, die durch kryptoökonomische Mechanismen Anreize erhalten.
+- **Indexierungsprotokolle von Drittanbietern** wie The Graph speichern diese Daten über ein dezentrales Netzwerk von Node-Betreibern, die durch kryptoökonomische Mechanismen Anreize erhalten.
 - **BitTorrent** ist ein dezentrales Protokoll, wo Freiwillige diese Daten speichern und an andere weitergeben können.
-- Das **[Ethereum-Portalnetzwerk](/developers/docs/networking-layer/portal-network/)** zielt darauf ab, Zugang zu allen Ethereum-Daten über ein dezentrales Netzwerk von Knotenbetreibern zu ermöglichen. Hierfür werden Daten ähnlich wie bei BitTorrent an die Teilnehmer weitergegeben.
+- Das **[Ethereum-Portalnetzwerk](/developers/docs/networking-layer/portal-network/)** zielt darauf ab, Zugang zu allen Ethereum-Daten über ein dezentrales Netzwerk von Node-Betreibern zu ermöglichen. Hierfür werden Daten ähnlich wie bei BitTorrent an die Teilnehmer weitergegeben.
 - **Einzelnen Nutzern** steht es jederzeit frei, ihre eigenen Kopien von Daten zu speichern, die sie als historische Referenz benötigen.
 - Für **Rollup-Anbieter** besteht ein Anreiz, diese Daten zu speichern, um die Benutzerfreundlichkeit ihres Rollups zu verbessern.
 - **Block Explorer** betreiben in der Regel Archivierungsknoten, die all diese Informationen für eine einfache historische Referenz indizieren und speichern und sie den Nutzern über eine Weboberfläche zugänglich zu machen.
@@ -68,9 +68,9 @@ Ja, für Proto-Danksharding (EIP-4844) sind Updates sowohl an den Ausführungs- 
 
 Die Konsens-Clients verwalten die _Validatoren_Software, die durchgängig aktualisiert wurde, um das Upgrade zu unterstützen.
 
-## Wie wirkt sich Cancun-Deneb (Dencun) auf Goerli oder andere Ethereum-Testnetze aus? {#testnet-impact}
+## Wie wirkt sich Cancun-Deneb (Dencun) auf Ethereum-Testnets aus? {#testnet-impact}
 
-- Devnets, Goerli, Sepolia und Holesky haben alle das Dencun-Upgrade durchlaufen. Bei ihnen ist Proto-Danksharding vollständig funktionsfähig.
+- Devnets, Sepolia und Holesky haben alle das Dencun-Upgrade durchlaufen. Bei ihnen ist Proto-Danksharding vollständig funktionsfähig.
 - Rollup-Entwickler können diese Netzwerke für EIP-4844-Tests nutzen
 - Die meisten Benutzer sind von dieser Änderung in den einzelnen Testnetzen in keiner Weise betroffen.
 
