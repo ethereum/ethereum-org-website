@@ -136,7 +136,7 @@ Về nguyên tắc chung, nhân viên sẽ không bao giờ liên lạc với b�
 
 ### Lừa đảo token 'Eth2' {#eth2-token-scam}
 
-Trong giai đoạn chuẩn bị cho [Hợp nhất](/roadmap/merge/), những kẻ lừa đảo đã lợi dụng sự nhầm lẫn xung quanh thuật ngữ 'Eth2' để cố gắng lừa người dùng đổi ETH của họ lấy một token 'ETH2'. Không có 'ETH2' nào tồn tại, không có mã thông cáo báo nào được ra mắt trong sự kiện hợp nhất. ETH mà bạn sở hữu trước sự kiện hợp nhất cũng là ETH hiện tại. Bạn **không cần thực hiện bất kỳ hành động nào liên quan đến ETH của mình để chuẩn bị cho việc chuyển đổi từ bằng chứng công việc sang bằng chứng cổ phần**.
+Trong giai đoạn chuẩn bị cho [Hợp nhất](/roadmap/merge/), những kẻ lừa đảo đã lợi dụng sự nhầm lẫn xung quanh thuật ngữ 'Eth2' để cố gắng lừa người dùng đổi ETH của họ lấy một token 'ETH2'. Không có 'ETH2' nào tồn tại, không có token mới nào được ra mắt trong sự kiện hợp nhất. ETH mà bạn sở hữu trước sự kiện hợp nhất cũng là ETH hiện tại. Bạn **không cần thực hiện bất kỳ hành động nào liên quan đến ETH của mình để chuẩn bị cho việc chuyển đổi từ bằng chứng công việc sang bằng chứng cổ phần**.
 
 Những kẻ lừa đảo có thể xuất hiện dưới dạng "hỗ trợ", cho bạn biết rằng nếu bạn gửi ETH của mình, bạn sẽ nhận lại 'ETH2'. Không có [hỗ trợ Ethereum chính thức](/community/support/), và không có token mới nào cả. Không bao giờ chia sẻ cụm từ hạt giống ví của bạn với bất kỳ ai.
 
@@ -182,7 +182,7 @@ Một số thứ cần nhớ:
 
 ### Lừa đảo Airdrop {#airdrop-scams}
 
-Các trò gian lận trong airdrop liên quan đến một dự án lừa đảo chuyển một tài sản (NFT, mã thông báo) vào ví của bạn và đưa bạn đến một trang web lừa đảo để yêu cầu tài sản airdrop. Bạn sẽ được nhắc đăng nhập bằng ví Ethereum của mình và "chấp thuận" giao dịch khi cố gắng nhận thưởng. Giao dịch này xâm phạm tài khoản của bạn bằng cách gửi các khóa công khai và riêng tư của bạn cho kẻ lừa đảo. Một hình thức khác của trò lừa đảo này có thể yêu cầu bạn xác nhận một giao dịch gửi tiền vào tài khoản của kẻ lừa đảo.
+Các trò gian lận trong airdrop liên quan đến một dự án lừa đảo chuyển một tài sản (NFT, token) vào ví của bạn và đưa bạn đến một trang web lừa đảo để yêu cầu tài sản airdrop. Bạn sẽ được nhắc đăng nhập bằng ví Ethereum của mình và "chấp thuận" giao dịch khi cố gắng nhận thưởng. Giao dịch này xâm phạm tài khoản của bạn bằng cách gửi các khóa công khai và riêng tư của bạn cho kẻ lừa đảo. Một hình thức khác của trò lừa đảo này có thể yêu cầu bạn xác nhận một giao dịch gửi tiền vào tài khoản của kẻ lừa đảo.
 
 [Thông tin thêm về lừa đảo Airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
@@ -247,7 +247,7 @@ Việc ghi nhớ mật khẩu mạnh, duy nhất cho mọi tài khoản bạn c�
 - Một cái gì đó của bạn (chẳng hạn như dấu vân tay hoặc máy quét mống mắt / khuôn mặt)
 - Thứ mà bạn sở hữu (khóa bảo mật hoặc ứng dụng xác thực trên điện thoại của bạn)
 
-Sử dụng **Xác thực hai yếu tố (2FA)** cung cấp thêm một _yếu tố bảo mật_ cho tài khoản trực tuyến của bạn. 2FA đảm bảo rằng việc sử dụngmật khẩu là chưa đủ để truy cập tài khoản. Thông thường nhất, yếu tố thứ hai là một mã 6 chữ số ngẫu nhiên, được gọi là **mật khẩu một lần dựa trên thời gian (TOTP)**, mà bạn có thể truy cập thông qua một ứng dụng xác thực như Google Authenticator hoặc Authy. Chúng hoạt động như một yếu tố "thứ gì đó bạn sở hữu" vì hạt giống tạo mã hẹn giờ được lưu trữ trên thiết bị của bạn.
+Sử dụng **Xác thực hai yếu tố (2FA)** cung cấp thêm một _yếu tố bảo mật_ cho tài khoản trực tuyến của bạn. 2FA đảm bảo rằng việc sử dụng mật khẩu là chưa đủ để truy cập tài khoản. Thông thường nhất, yếu tố thứ hai là một mã 6 chữ số ngẫu nhiên, được gọi là **mật khẩu một lần dựa trên thời gian (TOTP)**, mà bạn có thể truy cập thông qua một ứng dụng xác thực như Google Authenticator hoặc Authy. Chúng hoạt động như một yếu tố "thứ gì đó bạn sở hữu" vì hạt giống tạo mã hẹn giờ được lưu trữ trên thiết bị của bạn.
 
 <Alert variant="update">
 <AlertEmoji text=":lock:"/>

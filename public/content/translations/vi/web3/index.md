@@ -88,7 +88,7 @@ Web 2.0 yêu cầu người tạo nội dung tin tưởng các nền tảng khô
 
 #### Các tổ chức tự trị phi tập trung (DAO) {#daos}
 
-Cũng như sở hữu dữ liệu của bạn trong Web3, bạn có thể sở hữu nền tảng này như một tập thể, sử dụng các mã thông báo hoạt động giống như cổ phần trong một công ty. DAO cho phép bạn điều phối quyền sở hữu phi tập trung của một nền tảng và đưa ra quyết định về tương lai của nó.
+Cũng như sở hữu dữ liệu của bạn trong Web3, bạn có thể sở hữu nền tảng này như một tập thể, sử dụng các token hoạt động giống như cổ phần trong một công ty. DAO cho phép bạn điều phối quyền sở hữu phi tập trung của một nền tảng và đưa ra quyết định về tương lai của nó.
 
 Về mặt kỹ thuật, các DAO được định nghĩa là các [hợp đồng thông minh](/glossary/#smart-contract) đã được thống nhất, giúp tự động hóa việc ra quyết định phi tập trung đối với một quỹ tài nguyên (token). Người dùng sở hữu token bỏ phiếu và cách sử dụng tài nguyên và dùng code tự động thực hiện kết quả bỏ phiếu.
 

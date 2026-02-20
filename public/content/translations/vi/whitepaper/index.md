@@ -12,7 +12,7 @@ _Bài viết giới thiệu này được xuất bản lần đầu vào năm 20
 
 _Mặc dù có nhiều năm tuổi, chúng tôi vẫn lưu giữ tài liệu này vì nó vẫn hữu ích cho việc tham khảo và giải thích Ethereum và tầm nhìn của nó. _Để tìm hiểu về những phát triển mới nhất của Ethereum và cách thực hiện các thay đổi đối với giao thức, chúng tôi khuyên bạn nên đọc [hướng dẫn này](/learn/)._
 
-[Các nhà nghiên cứu và học giả đang tìm kiếm phiên bản lịch sử hoặc chính thức của giấy trắng [từ tháng 12 năm 2014] nên sử dụng tệp PDF này.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
+[Các nhà nghiên cứu và học giả đang tìm kiếm phiên bản lịch sử hoặc chính thức của sách trắng [từ tháng 12 năm 2014] nên sử dụng tệp PDF này.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
 ## Nền tảng Hợp đồng thông minh và Ứng dụng phi tập trung thế hệ tiếp theo {#a-next-generation-smart-contract-and-decentralized-application-platform}
 

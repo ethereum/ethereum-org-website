@@ -38,14 +38,14 @@ Một trong những cách hay nhất để nhìn nhận tiềm năng của tài 
 
 ### So sánh {#defi-comparison}
 
-| Tài chính phi tập trung                                                                                                                       | Tài chính truyền thống                                                                                                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bạn giữ tiền của mình.                                                                                                        | Tiền của bạn được giữ tại các tổ chức khác.                                                                                                                                                                                    |
-| Bạn kiểm soát việc tiền của bạn đi đâu và chúng được dùng như thế nào.                                                        | Bạn phải tin tưởng rằng các tổ chức kia sẽ không quản lý tiền của bạn một cách yếu kém, ví dụ như cho những người vay đầy rủi ro vay tiền.                                                                                     |
-| Các giao dịch chuyển khoản diễn ra trong thời gian tính bằng phút.                                                            | Giao dịch có thể mất vài ngày do các quy trình thủ công.                                                                                                                                                                       |
-| Hoạt động giao dịch được mã hóa.                                                                                              | Hoạt động giao dịch gắn liền với danh tính của bạn.                                                                                                                                                                            |
-| Tài chính phi tập trung được mở ra cho bất cứ ai.                                                                             | Bạn phải nộp đơn đăng kí để được sử dụng các dịch vụ tài chính.                                                                                                                                                                |
-| Các thị trường luôn luôn mở cửa.                                                                                              | Các thị trường có thể đóng cửa vì nhân viên cần thời gian nghỉ ngơi.                                                                                                                                                           |
+| Tài chính phi tập trung                                                                                                       | Tài chính truyền thống                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bạn giữ tiền của mình.                                                                                                        | Tiền của bạn được giữ tại các tổ chức khác.                                                                                                                    |
+| Bạn kiểm soát việc tiền của bạn đi đâu và chúng được dùng như thế nào.                                                        | Bạn phải tin tưởng rằng các tổ chức kia sẽ không quản lý tiền của bạn một cách yếu kém, ví dụ như cho những người vay đầy rủi ro vay tiền.                     |
+| Các giao dịch chuyển khoản diễn ra trong thời gian tính bằng phút.                                                            | Giao dịch có thể mất vài ngày do các quy trình thủ công.                                                                                                       |
+| Hoạt động giao dịch được mã hóa.                                                                                              | Hoạt động giao dịch gắn liền với danh tính của bạn.                                                                                                            |
+| Tài chính phi tập trung được mở ra cho bất cứ ai.                                                                             | Bạn phải nộp đơn đăng kí để được sử dụng các dịch vụ tài chính.                                                                                                |
+| Các thị trường luôn luôn mở cửa.                                                                                              | Các thị trường có thể đóng cửa vì nhân viên cần thời gian nghỉ ngơi.                                                                                           |
 | Được xây dựng trên sự minh bạch – bất kì ai cũng có thể nhìn vào dữ liệu sản phẩm và tìm hiểu xem hệ thống hoạt động thế nào. | Các định chế tài chính là những cuốn sách đóng kín: bạn không thể yêu cầu xem lịch sử cho vay của họ hay sổ sách liệt kê những tài sản họ quản lý v.v. và v.v. |
 
 <ButtonLink href="/apps/categories/defi">
@@ -215,7 +215,7 @@ Bể tiền thưởng được tạo ra từ tất cả lãi suất được s�
 
 Có hàng ngàn loại tokens trên Ethereum. Các sàn giao dịch phi tập trung (DEXs) cho phép bạn mua bán những loại tokens khác nhau bất cứ khi nào bạn muốn. Bạn không bao giờ phải từ bỏ quyền kiểm soát tài sản của mình. Nó giống như việc sử dụng một điểm thu đổi ngoại tệ khi bạn đang thăm một quốc gia khác. Nhưng phiên bản tài chính phi tập trung thì không bao giờ đóng cửa. Các thị trường này mở 24/7, 365 ngày một năm và công nghệ của chúng bảo đảm rằng sẽ luôn luôn có một ai đó để chấp nhận một giao dịch.
 
-Ví dụ, nếu bạn muốn tham gia vào xổ số không mất PoolTogether (đề cập ở trên), bạn sẽ cần một loại token như Dai hay USDC. Các DEX này cho phép bạn hoán đổi ETH của mình cho các mã thông báo đó và ngược lại khi bạn hoàn tất.
+Ví dụ, nếu bạn muốn tham gia vào xổ số không mất PoolTogether (đề cập ở trên), bạn sẽ cần một loại token như Dai hay USDC. Các DEX này cho phép bạn hoán đổi ETH của mình cho các token đó và ngược lại khi bạn hoàn tất.
 
 <ButtonLink href="/apps/categories/defi">
   Xem các sàn giao dịch token
@@ -338,6 +338,15 @@ Tài chính phi tập trung là một phong trào nguồn mở. Các giao thức
   Tìm hiểu thêm về việc xây dựng các ứng dụng phi tập trung
 </ButtonLink>
 
+## Ngoài DeFi truyền thống {#beyond-traditional-defi}
+
+Hệ sinh thái DeFi tiếp tục mở rộng sang các lĩnh vực mới:
+
+- **[Thị trường dự đoán](/prediction-markets/)** – Các nền tảng phi tập trung nơi bạn có thể đặt cược vào kết quả của các sự kiện trong tương lai, từ bầu cử đến các sự kiện thể thao, mà không cần trung gian.
+- **[Tài sản trong thế giới thực (RWA)](/real-world-assets/)** – Token hóa các tài sản vật chất như bất động sản, hàng hóa và trái phiếu trên Ethereum, mang lại hàng nghìn tỷ đô la giá trị trên chuỗi.
+- **[Thanh toán](/payments/)** – Sử dụng Ethereum và stablecoin để thanh toán toàn cầu nhanh chóng, chi phí thấp mà không cần cơ sở hạ tầng ngân hàng truyền thống.
+- **[Tác nhân AI](/ai-agents/)** – Các tác nhân phần mềm tự trị có thể giao dịch trên Ethereum, cho phép các hình thức giao dịch tự động, quản lý danh mục đầu tư và tương tác trên chuỗi mới.
+
 ## Đọc thêm {#further-reading}
 
 ### Dữ liệu DeFi {#defi-data}
@@ -363,12 +372,3 @@ Tài chính phi tập trung là một phong trào nguồn mở. Các giao thức
 <Divider />
 
 <QuizWidget quizKey="defi" />
-
-## Ngoài DeFi truyền thống {#beyond-traditional-defi}
-
-Hệ sinh thái DeFi tiếp tục mở rộng sang các lĩnh vực mới:
-
-- **[Thị trường dự đoán](/prediction-markets/)** – Các nền tảng phi tập trung nơi bạn có thể đặt cược vào kết quả của các sự kiện trong tương lai, từ bầu cử đến các sự kiện thể thao, mà không cần trung gian.
-- **[Tài sản trong thế giới thực (RWA)](/real-world-assets/)** – Token hóa các tài sản vật chất như bất động sản, hàng hóa và trái phiếu trên Ethereum, mang lại hàng nghìn tỷ đô la giá trị trên chuỗi.
-- **[Thanh toán](/payments/)** – Sử dụng Ethereum và stablecoin để thanh toán toàn cầu nhanh chóng, chi phí thấp mà không cần cơ sở hạ tầng ngân hàng truyền thống.
-- **[Tác nhân AI](/ai-agents/)** – Các tác nhân phần mềm tự trị có thể giao dịch trên Ethereum, cho phép các hình thức giao dịch tự động, quản lý danh mục đầu tư và tương tác trên chuỗi mới.
