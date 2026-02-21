@@ -28,8 +28,11 @@ export const getABTestAssignment = async (
   const headers = await import("next/headers").then((m) => m.headers())
 
   // Get IP and user agent (primary identifier)
-  const forwardedFor =
-    headers.get("x-forwarded-for") || headers.get("x-real-ip") || "unknown"
+  // x-forwarded-for contains: "client_ip, proxy1, proxy2, ..." - we only want the client IP
+  const forwardedForRaw = headers.get("x-forwarded-for")
+  const realIpRaw = headers.get("x-real-ip")
+  const clientIp = forwardedForRaw?.split(",")[0]?.trim()
+  const forwardedFor = clientIp || realIpRaw || "unknown"
   const userAgent = headers.get("user-agent") || ""
 
   // Add privacy-preserving entropy sources
@@ -45,8 +48,28 @@ export const getABTestAssignment = async (
     testKey, // Include test key to ensure different tests get different distributions
   ].join("|")
 
+  // Debug logging for production investigation
+  console.log("[AB Debug]", {
+    testKey,
+    forwardedForRaw,
+    realIpRaw,
+    clientIp,
+    forwardedFor,
+    userAgent: userAgent.substring(0, 50) + "...",
+    acceptLanguage,
+    acceptEncoding,
+    fingerprintLength: fingerprint.length,
+  })
+
   const variantIndex = assignVariantIndexDeterministic(testConfig, fingerprint)
   const variant = testConfig.variants[variantIndex]
+
+  console.log("[AB Debug] Assignment:", {
+    testKey,
+    variantIndex,
+    variantName: variant?.name,
+    totalVariants: testConfig.variants.length,
+  })
 
   return {
     experimentId: testConfig.id,
