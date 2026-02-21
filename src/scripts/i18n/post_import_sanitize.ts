@@ -445,7 +445,11 @@ function fixTranslatedHrefs(
   // Collect all English internal hrefs as the "valid" set
   const allEnglishHrefs = extractHrefs(englishContent)
 
-  const allFixes: Array<[string, string]> = [] // [wrong, correct]
+  const blockFixes: Array<{
+    blockIdx: number
+    wrong: string
+    correct: string
+  }> = []
   const allWarnings: string[] = []
 
   // Process block by block
@@ -461,15 +465,17 @@ function fixTranslatedHrefs(
     // Skip blocks with no internal hrefs
     if (engHrefs.length === 0 && transHrefs.length === 0) continue
 
-    // Find hrefs in translation that don't exist in English (invalid)
+    // Compare hrefs at block level
+    const engHrefSet = new Set(engHrefs)
     const transHrefSet = new Set(transHrefs)
 
-    const invalidInTrans: string[] = [] // In translation but not in any English href
-    const missingFromTrans: string[] = [] // In English block but not in translation
+    // Hrefs in translation block but NOT in corresponding English block
+    const displacedInTrans: string[] = []
+    const missingFromTrans: string[] = []
 
     for (const href of transHrefs) {
-      if (!allEnglishHrefs.has(href)) {
-        invalidInTrans.push(href)
+      if (!engHrefSet.has(href)) {
+        displacedInTrans.push(href)
       }
     }
 
@@ -480,21 +486,24 @@ function fixTranslatedHrefs(
     }
 
     // No issues in this block
-    if (invalidInTrans.length === 0 && missingFromTrans.length === 0) continue
+    if (displacedInTrans.length === 0 && missingFromTrans.length === 0) continue
 
     // Deduplicate for set comparison
-    const uniqueInvalid = [...new Set(invalidInTrans)]
+    const uniqueDisplaced = [...new Set(displacedInTrans)]
     const uniqueMissing = [...new Set(missingFromTrans)]
 
-    // Only auto-fix when there's exactly 1 invalid and 1 missing in block
-    // Multiple mismatches within same block could be reordered - don't guess
-    if (uniqueInvalid.length === 1 && uniqueMissing.length === 1) {
-      allFixes.push([uniqueInvalid[0], uniqueMissing[0]])
-    } else if (uniqueInvalid.length > 0 || uniqueMissing.length > 0) {
-      // Count mismatch - can't safely fix, warn instead
-      for (const href of uniqueInvalid) {
+    // Auto-fix when there's exactly 1 displaced and 1 missing in the same block
+    if (uniqueDisplaced.length === 1 && uniqueMissing.length === 1) {
+      blockFixes.push({
+        blockIdx: i,
+        wrong: uniqueDisplaced[0],
+        correct: uniqueMissing[0],
+      })
+    } else if (uniqueDisplaced.length > 0 || uniqueMissing.length > 0) {
+      for (const href of uniqueDisplaced) {
+        const globallyValid = allEnglishHrefs.has(href)
         allWarnings.push(
-          `Block ${i + 1}: Invalid href "${href}" - not a valid English path`
+          `Block ${i + 1}: ${globallyValid ? "Displaced" : "Invalid"} href "${href}" - not in corresponding English block`
         )
       }
       for (const href of uniqueMissing) {
@@ -512,25 +521,28 @@ function fixTranslatedHrefs(
     )
   }
 
-  // Apply all fixes
+  // Apply fixes block-by-block to avoid cross-block interference
   let result = translatedContent
   const appliedFixes: string[] = []
 
-  for (const [wrong, correct] of allFixes) {
+  for (const { blockIdx, wrong, correct } of blockFixes) {
+    const originalBlock = translatedBlocks[blockIdx]
+    let fixedBlock = originalBlock
+
     // Replace in markdown links: [text](wrong) → [text](correct)
     const markdownRe = new RegExp(
       `(\\[[^\\]]*\\]\\()${escapeRegex(wrong)}(\\))`,
       "g"
     )
-    const beforeMd = result
-    result = result.replace(markdownRe, `$1${correct}$2`)
+    fixedBlock = fixedBlock.replace(markdownRe, `$1${correct}$2`)
 
     // Replace in href attributes: href="wrong" → href="correct"
     const hrefRe = new RegExp(`(href=["'])${escapeRegex(wrong)}(["'])`, "g")
-    const beforeAttr = result
-    result = result.replace(hrefRe, `$1${correct}$2`)
+    fixedBlock = fixedBlock.replace(hrefRe, `$1${correct}$2`)
 
-    if (result !== beforeMd || result !== beforeAttr) {
+    if (fixedBlock !== originalBlock) {
+      result = result.replace(originalBlock, fixedBlock)
+      translatedBlocks[blockIdx] = fixedBlock // update for subsequent fixes
       appliedFixes.push(`${wrong} → ${correct}`)
     }
   }
@@ -1498,166 +1510,116 @@ function processMarkdownFile(
 
   const before = content
 
-  // Fix duplicated headings (e.g., ## Text? Text? {#id} → ## Text? {#id})
-  const duplicatedResult = fixDuplicatedHeadings(content)
-  content = duplicatedResult.content
-  if (duplicatedResult.fixCount > 0) {
-    issues.push(`Fixed ${duplicatedResult.fixCount} duplicated headings`)
+  // Helper: only log a fix if content actually changed
+  function applyFix(
+    fn: () => { content: string; fixCount: number },
+    label: (count: number) => string
+  ) {
+    const snapshot = content
+    const result = fn()
+    content = result.content
+    if (content !== snapshot) {
+      issues.push(label(result.fixCount))
+    }
   }
 
-  // Fix broken markdown links (] (https:// → ](https://)
-  const brokenLinksResult = fixBrokenMarkdownLinks(content)
-  content = brokenLinksResult.content
-  if (brokenLinksResult.fixCount > 0) {
-    issues.push(`Fixed ${brokenLinksResult.fixCount} broken markdown links`)
-  }
-
-  // Fix frontmatter issues (don't need English source)
-  const dateResult = normalizeFrontmatterDates(content)
-  content = dateResult.content
-  if (dateResult.fixCount > 0) {
-    issues.push(
-      `Normalized ${dateResult.fixCount} frontmatter dates to ISO format`
-    )
-  }
-
-  const quoteResult = quoteFrontmatterNonAscii(content)
-  content = quoteResult.content
-  if (quoteResult.fixCount > 0) {
-    issues.push(
-      `Quoted ${quoteResult.fixCount} frontmatter values with non-ASCII chars`
-    )
-  }
-
-  const guillemetResult = fixAsciiGuillemets(content)
-  content = guillemetResult.content
-  if (guillemetResult.fixCount > 0) {
-    issues.push(
-      `Fixed ${guillemetResult.fixCount} ASCII guillemets (<< >>) to Unicode (« »)`
-    )
-  }
+  applyFix(
+    () => fixDuplicatedHeadings(content),
+    (n) => `Fixed ${n} duplicated headings`
+  )
+  applyFix(
+    () => fixBrokenMarkdownLinks(content),
+    (n) => `Fixed ${n} broken markdown links`
+  )
+  applyFix(
+    () => normalizeFrontmatterDates(content),
+    (n) => `Normalized ${n} frontmatter dates to ISO format`
+  )
+  applyFix(
+    () => quoteFrontmatterNonAscii(content),
+    (n) => `Quoted ${n} frontmatter values with non-ASCII chars`
+  )
+  applyFix(
+    () => fixAsciiGuillemets(content),
+    (n) => `Fixed ${n} ASCII guillemets (<< >>) to Unicode (« »)`
+  )
 
   // Fix escaped backticks (\`) to regular backticks (`)
-  // Crowdin sometimes escapes backticks unnecessarily
-  const escapedBacktickCount = (content.match(/\\`/g) || []).length
-  if (escapedBacktickCount > 0) {
+  {
+    const snapshot = content
     content = content.replace(/\\`/g, "`")
-    issues.push(`Unescaped ${escapedBacktickCount} backslash-escaped backticks`)
+    if (content !== snapshot) {
+      const count = (snapshot.match(/\\`/g) || []).length
+      issues.push(`Unescaped ${count} backslash-escaped backticks`)
+    }
   }
 
-  // Fix ticker symbol transpositions (EHT → ETH, etc.)
-  const tickerResult = fixTickerTranspositions(content)
-  content = tickerResult.content
-  if (tickerResult.fixCount > 0) {
-    issues.push(`Fixed ${tickerResult.fixCount} ticker symbol transpositions`)
-  }
-
-  // Escape raw < before numbers in MDX content
-  const angleBracketResult = escapeMdxAngleBrackets(content)
-  content = angleBracketResult.content
-  if (angleBracketResult.fixCount > 0) {
-    issues.push(
-      `Escaped ${angleBracketResult.fixCount} raw angle brackets before numbers`
-    )
-  }
-
-  // Remove orphaned closing HTML tags
-  const orphanResult = removeOrphanedClosingTags(content)
-  content = orphanResult.content
-  if (orphanResult.fixCount > 0) {
-    issues.push(`Removed ${orphanResult.fixCount} orphaned closing HTML tags`)
-  }
-
-  // Fix block component line breaks (critical for MDX parser)
-  const blockResult = fixBlockComponentLineBreaks(content)
-  content = blockResult.content
-  if (blockResult.fixCount > 0) {
-    issues.push(`Fixed ${blockResult.fixCount} inline block component tags`)
-  }
+  applyFix(
+    () => fixTickerTranspositions(content),
+    (n) => `Fixed ${n} ticker symbol transpositions`
+  )
+  applyFix(
+    () => escapeMdxAngleBrackets(content),
+    (n) => `Escaped ${n} raw angle brackets before numbers`
+  )
+  applyFix(
+    () => removeOrphanedClosingTags(content),
+    (n) => `Removed ${n} orphaned closing HTML tags`
+  )
+  applyFix(
+    () => fixBlockComponentLineBreaks(content),
+    (n) => `Fixed ${n} inline block component tags`
+  )
 
   content = normalizeBlockHtmlLines(content)
 
   // Normalize inline components and restore blank lines from English source
   if (englishMd) {
-    // Sync protected frontmatter fields (template, sidebar, etc.)
-    const protectedResult = syncProtectedFrontmatterFields(content, englishMd)
-    content = protectedResult.content
-    if (protectedResult.fixCount > 0) {
-      issues.push(
-        `Synced ${protectedResult.fixCount} protected frontmatter fields from English`
-      )
-    }
-
-    // Collapse inline HTML tags to match English single-line format
-    const inlineHtmlResult = collapseInlineHtmlFromEnglish(content, englishMd)
-    content = inlineHtmlResult.content
-    if (inlineHtmlResult.fixCount > 0) {
-      issues.push(
-        `Collapsed ${inlineHtmlResult.fixCount} inline HTML tags to match English`
-      )
-    }
-
-    // Fix JSX component closing tags merged with content (split to own line)
-    const mergedTagResult = fixMergedClosingTags(content, englishMd)
-    content = mergedTagResult.content
-    if (mergedTagResult.fixCount > 0) {
-      issues.push(
-        `Split ${mergedTagResult.fixCount} merged closing tags to own lines`
-      )
-    }
-
-    // Collapse inline component line breaks to match English format
-    const inlineResult = normalizeInlineComponentsFromEnglish(
-      content,
-      englishMd
+    applyFix(
+      () => syncProtectedFrontmatterFields(content, englishMd!),
+      (n) => `Synced ${n} protected frontmatter fields from English`
     )
-    content = inlineResult.content
-    if (inlineResult.fixCount > 0) {
-      issues.push(
-        `Normalized ${inlineResult.fixCount} inline components to match English`
-      )
-    }
-
-    // Repair unclosed backticks in inline code
-    const backtickResult = repairUnclosedBackticks(content, englishMd)
-    content = backtickResult.content
-    if (backtickResult.fixCount > 0) {
-      issues.push(`Repaired ${backtickResult.fixCount} unclosed backticks`)
-    }
-
-    const blankLineResult = restoreBlankLinesFromEnglish(content, englishMd)
-    content = blankLineResult.content
-    if (blankLineResult.fixCount > 0) {
-      issues.push(
-        `Restored ${blankLineResult.fixCount} blank lines from English`
-      )
-    }
-
-    // Fix collapsed line breaks between consecutive components
-    const collapsedResult = fixCollapsedComponentLineBreaks(content, englishMd)
-    content = collapsedResult.content
-    if (collapsedResult.fixCount > 0) {
-      issues.push(
-        `Fixed ${collapsedResult.fixCount} collapsed component line breaks`
-      )
-    }
+    applyFix(
+      () => collapseInlineHtmlFromEnglish(content, englishMd!),
+      (n) => `Collapsed ${n} inline HTML tags to match English`
+    )
+    applyFix(
+      () => fixMergedClosingTags(content, englishMd!),
+      (n) => `Split ${n} merged closing tags to own lines`
+    )
+    applyFix(
+      () => normalizeInlineComponentsFromEnglish(content, englishMd!),
+      (n) => `Normalized ${n} inline components to match English`
+    )
+    applyFix(
+      () => repairUnclosedBackticks(content, englishMd!),
+      (n) => `Repaired ${n} unclosed backticks`
+    )
+    applyFix(
+      () => restoreBlankLinesFromEnglish(content, englishMd!),
+      (n) => `Restored ${n} blank lines from English`
+    )
+    applyFix(
+      () => fixCollapsedComponentLineBreaks(content, englishMd!),
+      (n) => `Fixed ${n} collapsed component line breaks`
+    )
 
     // Fix and check protected brand names
     const brandResult = fixProtectedBrandNames(content, englishMd)
-    content = brandResult.content
-    if (brandResult.fixCount > 0) {
+    if (brandResult.content !== content) {
       issues.push(`Fixed ${brandResult.fixCount} brand name issues`)
     }
+    content = brandResult.content
     issues.push(...brandResult.warnings)
 
     // Fix translated hrefs using set comparison
     const hrefResult = fixTranslatedHrefs(content, englishMd)
-    content = hrefResult.content
-    if (hrefResult.fixCount > 0) {
+    if (hrefResult.content !== content) {
       issues.push(
         `Fixed ${hrefResult.fixCount} translated hrefs: ${hrefResult.fixes.join(", ")}`
       )
     }
+    content = hrefResult.content
     issues.push(...hrefResult.warnings)
 
     // Detect cross-script contamination
@@ -1776,7 +1738,7 @@ export async function runSanitizer(
   let jsonFilesToProcess: Array<{ path: string; content: string }> = []
 
   if (filesWithContent && filesWithContent.length > 0) {
-    // Process only the specific files provided with their in-memory content
+    // Process specific files; if content is empty, reads from disk and writes fixes back
     console.log(
       `[SANITIZE] Target: ${filesWithContent.length} specific file(s)`
     )
@@ -1815,10 +1777,15 @@ export async function runSanitizer(
   }
 
   let mdFixed = 0
+  let mdDiskWrites = 0
   const mdIssues: Array<{ file: string; issues: string[] }> = []
   const mdChanged: Array<{ path: string; content: string }> = []
 
   for (const fileInfo of mdFilesToProcess) {
+    // Read original from disk for accurate disk-write detection
+    const originalOnDisk = fs.existsSync(fileInfo.path)
+      ? fs.readFileSync(fileInfo.path, "utf8")
+      : null
     const { fixed, issues, content } = processMarkdownFile(
       fileInfo.path,
       fileInfo.content
@@ -1827,15 +1794,23 @@ export async function runSanitizer(
       mdFixed++
       mdChanged.push({ path: fileInfo.path, content })
     }
+    // Track actual disk changes (content differs from what's on disk)
+    if (originalOnDisk !== null && content !== originalOnDisk) {
+      mdDiskWrites++
+    }
     if (issues.length)
       mdIssues.push({ file: path.relative(ROOT, fileInfo.path), issues })
   }
 
   let jsonFixed = 0
+  let jsonDiskWrites = 0
   const jsonIssues: Array<{ file: string; issues: string[] }> = []
   const jsonChanged: Array<{ path: string; content: string }> = []
 
   for (const fileInfo of jsonFilesToProcess) {
+    const originalOnDisk = fs.existsSync(fileInfo.path)
+      ? fs.readFileSync(fileInfo.path, "utf8")
+      : null
     const { fixed, issues, content } = processJsonFile(
       fileInfo.path,
       fileInfo.content
@@ -1844,15 +1819,18 @@ export async function runSanitizer(
       jsonFixed++
       jsonChanged.push({ path: fileInfo.path, content })
     }
+    if (originalOnDisk !== null && content !== originalOnDisk) {
+      jsonDiskWrites++
+    }
     if (issues.length)
       jsonIssues.push({ file: path.relative(ROOT, fileInfo.path), issues })
   }
 
   console.log(
-    `\n[SANITIZE] Markdown files scanned: ${mdFilesToProcess.length}, fixed: ${mdFixed}`
+    `\n[SANITIZE] Markdown: ${mdFilesToProcess.length} scanned, ${mdDiskWrites} written to disk`
   )
   console.log(
-    `[SANITIZE] JSON files scanned: ${jsonFilesToProcess.length}, fixed: ${jsonFixed}`
+    `[SANITIZE] JSON: ${jsonFilesToProcess.length} scanned, ${jsonDiskWrites} written to disk`
   )
 
   if (mdIssues.length || jsonIssues.length) {
