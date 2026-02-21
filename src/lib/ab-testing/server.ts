@@ -28,9 +28,11 @@ export const getABTestAssignment = async (
   const headers = await import("next/headers").then((m) => m.headers())
 
   // Get IP and user agent (primary identifier)
+  // x-forwarded-for contains: "client_ip, proxy1, proxy2, ..." - we only want the client IP
   const forwardedForRaw = headers.get("x-forwarded-for")
   const realIpRaw = headers.get("x-real-ip")
-  const forwardedFor = forwardedForRaw || realIpRaw || "unknown"
+  const clientIp = forwardedForRaw?.split(",")[0]?.trim()
+  const forwardedFor = clientIp || realIpRaw || "unknown"
   const userAgent = headers.get("user-agent") || ""
 
   // Add privacy-preserving entropy sources
@@ -51,6 +53,7 @@ export const getABTestAssignment = async (
     testKey,
     forwardedForRaw,
     realIpRaw,
+    clientIp,
     forwardedFor,
     userAgent: userAgent.substring(0, 50) + "...",
     acceptLanguage,
