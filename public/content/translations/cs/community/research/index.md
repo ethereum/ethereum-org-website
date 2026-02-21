@@ -362,7 +362,7 @@ Orákula importují data mimo blockchain do blockchainu decentralizovaným způs
 
 #### Základní podklady {#background-reading-18}
 
-- [Úvod do Orákul](/developers/docs/evm)
+- [Úvod do Orákul](/developers/docs/oracles/)
 
 #### Nedávný výzkum {#recent-research-18}
 
