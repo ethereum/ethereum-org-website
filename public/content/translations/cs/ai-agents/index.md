@@ -8,7 +8,7 @@ emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: "Lidé shromáždění u stolu s terminálem"
-summaryPoint1: "UI, která interaguje s blockchainem a samostatně obchoduje"
+summaryPoint1: "AI, která interaguje s blockchainem a samostatně obchoduje"
 summaryPoint2: "Ovládá peněženky a prostředky na blockchainu"
 summaryPoint3: "Najímá lidi nebo jiné agenty na práci"
 buttons:
@@ -45,13 +45,13 @@ Tyto faktory přeměňují AI agenty z jednoduchých botů na dynamické, sebezd
   <Card title="Řízení rizik" emoji="🛠️" description="Sledováním transakčních aktivit mohou AI agenti pomoci odhalit podvody a ochránit vaše digitální aktiva lépe a rychleji." />
 </CardGrid>
 
-## Ověřitelná UI {#verifiable-ai}
+## Ověřitelná AI {#verifiable-ai}
 
 AI agenti běžící mimo blockchain se často chovají jako \"černé skříňky\" – jejich uvažování, vstupy a výstupy nelze nezávisle ověřit. Ethereum to mění. Ukotvením chování agentů na blockchainu mohou vývojáři vytvářet agenty, kteří jsou _na důvěře nezávislí_, _transparentní_ a _ekonomicky autonomní_. Akce takových agentů lze auditovat, omezovat a prokazovat.
 
 ### Ověřitelná inference {#verifiable-inference}
 
-Inference UI se tradičně odehrává mimo blockchain, kde je provádění levné, ale provádění modelu je neprůhledné. Na Ethereu mohou vývojáři párovat agenty s ověřitelným výpočtem pomocí několika technik:
+Inference AI se tradičně odehrává mimo blockchain, kde je provádění levné, ale provádění modelu je neprůhledné. Na Ethereu mohou vývojáři párovat agenty s ověřitelným výpočtem pomocí několika technik:
 
 - [**zkML (strojové učení s nulovou znalostí)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04) umožňuje agentům prokázat, že model byl proveden správně, aniž by odhalili model nebo vstupy
 - [**Atestace TEE (důvěryhodné spouštěcí prostředí)**](https://en.wikipedia.org/wiki/Trusted_execution_environment) umožňují hardwarově podložené důkazy o tom, že agent spustil konkrétní model nebo cestu kódu
@@ -91,7 +91,7 @@ To by agentům usnadnilo vzájemně se objevovat, ověřovat a provádět transa
 
 ## AI agenti na Ethereu {#ai-agents-on-ethereum}
 
-Začínáme zkoumat plný potenciál AI agentů a projekty již využívají synergii mezi UI a blockchainem – zejména v oblasti transparentnosti a monetizace.
+Začínáme zkoumat plný potenciál AI agentů a projekty již využívají synergii mezi AI a blockchainem – zejména v oblasti transparentnosti a monetizace.
 
 <AiAgentProductLists list="ai-agents" />
 
@@ -103,7 +103,7 @@ Začínáme zkoumat plný potenciál AI agentů a projekty již využívají syn
 
 Agenti jako Luna nebo AIXBT ovládají svou vlastní peněženku na blockchainu ([peněženka AIXBT](https://clusters.xyz/aixbt), [peněženka Luny](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)), což jim umožňuje dávat spropitné fanouškům a účastnit se ekonomických aktivit.
 
-Během sociální kampaně Luny na síti X #LunaMuralChallenge Luna vybrala a odměnila vítěze prostřednictvím své peněženky na síti Base – což je <strong>první případ, kdy UI najala lidi za odměnu v kryptoměnách</strong>.
+Během sociální kampaně Luny na síti X #LunaMuralChallenge Luna vybrala a odměnila vítěze prostřednictvím své peněženky na síti Base – což je <strong>první případ, kdy AI najala lidi za odměnu v kryptoměnách</strong>.
 
 <Alert variant="warning">
 <AlertEmoji text="💡"/>

@@ -126,7 +126,7 @@ Finanční prostředky uživatele jsou v ohrožení, pokud:
 - je v chytrém kontraktu chyba
 - uživatel udělá chybu
 - blockchain, na kterém je přemostění spuštěno, je napaden
-- provozovatelé přemostění mejí dobré úmysly
+- provozovatelé přemostění mají zlé úmysly
 - přemostění je pod útokem hackera
 
 Jedním z nedávných hacků bylo přemostění Wormhole na Solaně, [při kterém bylo ukradeno 120k wETH (325 milionů USD)](https://rekt.news/wormhole-rekt/). Mnoho z [největších hacků v historii blockchainu zahrnovalo přemostění](https://rekt.news/leaderboard/).
