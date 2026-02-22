@@ -188,11 +188,12 @@ function fixTickerTranspositions(content: string): {
 }
 
 /**
- * Sync frontmatter tags array from English source.
- * Tags like programming language names should never be translated.
- * Replaces the entire tags array with the English original.
+ * Fix only brand/product/language name tags in frontmatter.
+ * Generic concept tags (e.g. "zero-knowledge" → "nulová znalost") should
+ * remain in the native language. Only tags that match a protected brand name
+ * in the English source are restored to English.
  */
-function syncFrontmatterTags(
+function fixBrandTags(
   translatedContent: string,
   englishContent: string
 ): { content: string; fixCount: number } {
@@ -206,31 +207,56 @@ function syncFrontmatterTags(
   const transFm = transMatch[1]
   const engFm = engMatch[1]
 
-  // Extract tags line (handles both inline array and value)
-  const tagsRe = /^(tags:\s*)(.+)$/m
+  // Extract tags arrays
+  const tagsRe = /^tags:\s*\[([^\]]*)\]/m
   const engTagsMatch = engFm.match(tagsRe)
   const transTagsMatch = transFm.match(tagsRe)
 
   if (!engTagsMatch || !transTagsMatch)
     return { content: translatedContent, fixCount: 0 }
 
-  const engTagsValue = engTagsMatch[2].trim()
-  const transTagsValue = transTagsMatch[2].trim()
+  // Parse tag values (handles quoted and unquoted)
+  const parseTags = (raw: string): string[] =>
+    raw
+      .split(",")
+      .map((t) => t.trim().replace(/^["']|["']$/g, ""))
+      .filter(Boolean)
 
-  if (engTagsValue === transTagsValue)
+  const engTags = parseTags(engTagsMatch[1])
+  const transTags = parseTags(transTagsMatch[1])
+
+  if (engTags.length !== transTags.length)
     return { content: translatedContent, fixCount: 0 }
 
-  // Replace translated tags with English tags
-  const updatedFm = transFm.replace(
-    tagsRe,
-    `${transTagsMatch[1]}${engTagsValue}`
-  )
+  // Build lowercase brand set for matching
+  const brandLower = new Set(PROTECTED_BRAND_NAMES.map((b) => b.toLowerCase()))
+
+  // Only replace tags where the English version is a protected brand
+  let fixCount = 0
+  const fixedTags = transTags.map((transTag, i) => {
+    const engTag = engTags[i]
+    if (brandLower.has(engTag.toLowerCase()) && transTag !== engTag) {
+      fixCount++
+      return engTag
+    }
+    return transTag
+  })
+
+  if (fixCount === 0) return { content: translatedContent, fixCount: 0 }
+
+  // Reconstruct the tags line preserving original quoting style
+  const quote = transTagsMatch[1].includes('"') ? '"' : "'"
+  const newTagsValue = fixedTags.map((t) => `${quote}${t}${quote}`).join(", ")
+  const fullTagsLine = transTagsMatch[0]
+  const newFullTagsLine = `tags: [${newTagsValue}]`
+
+  const updatedFm = transFm.replace(fullTagsLine, newFullTagsLine)
   const content = translatedContent.replace(
     frontmatterRe,
     `---\n${updatedFm}\n---`
   )
 
-  return { content, fixCount: 1 }
+  return { content, fixCount }
 }
 
 /**
@@ -242,7 +268,8 @@ function syncFrontmatterTags(
  * we can't easily know what the mistranslation IS without locale knowledge.
  * So we report these as warnings for the LLM review to handle.
  *
- * However, for frontmatter `tags` arrays, we CAN auto-fix by syncing with English.
+ * For frontmatter `tags`, only brand/product/language names are restored
+ * to English; generic concept tags remain in the native language.
  */
 function fixProtectedBrandNames(
   translatedContent: string,
@@ -252,13 +279,13 @@ function fixProtectedBrandNames(
   let content = translatedContent
   let fixCount = 0
 
-  // Auto-fix: Sync frontmatter tags with English source
-  const tagsSyncResult = syncFrontmatterTags(content, englishContent)
-  content = tagsSyncResult.content
-  fixCount += tagsSyncResult.fixCount
-  if (tagsSyncResult.fixCount > 0) {
+  // Auto-fix: Restore brand-name tags to English (leaves concept tags translated)
+  const brandTagsResult = fixBrandTags(content, englishContent)
+  content = brandTagsResult.content
+  fixCount += brandTagsResult.fixCount
+  if (brandTagsResult.fixCount > 0) {
     warnings.push(
-      `Auto-synced ${tagsSyncResult.fixCount} frontmatter tags with English source`
+      `Restored ${brandTagsResult.fixCount} brand-name tag(s) to English`
     )
   }
 
