@@ -1776,6 +1776,74 @@ export async function runSanitizer(
     jsonFilesToProcess = jsonFilePaths.map((p) => ({ path: p, content: "" }))
   }
 
+  // --- Orphan detection: flag translated files with no English counterpart ---
+  const orphanWarnings: Array<{ file: string; suggestion: string }> = []
+  const translationsDir = path.join(CONTENT_ROOT, "translations")
+
+  for (const fileInfo of [...mdFilesToProcess, ...jsonFilesToProcess]) {
+    const filePath = fileInfo.path
+    // Extract the relative path after translations/<lang>/
+    const txIdx = filePath.indexOf(`${path.sep}translations${path.sep}`)
+    if (txIdx === -1) continue
+
+    const afterTranslations = filePath.substring(
+      txIdx + `${path.sep}translations${path.sep}`.length
+    )
+    // Strip the language code prefix: <lang>/rest/of/path
+    const slashIdx = afterTranslations.indexOf(path.sep)
+    if (slashIdx === -1) continue
+
+    const langCode = afterTranslations.substring(0, slashIdx)
+    const relPathWithinLang = afterTranslations.substring(slashIdx + 1)
+
+    // Derive the expected English source path
+    const englishPath = path.join(CONTENT_ROOT, relPathWithinLang)
+
+    if (!fs.existsSync(englishPath)) {
+      const relFile = path.relative(ROOT, filePath)
+      // Try to find the English file by filename to suggest the correct location
+      const basename = path.basename(relPathWithinLang)
+      const parentDir = path.basename(path.dirname(relPathWithinLang))
+      let suggestion = "No English counterpart found"
+
+      // Search for matching parent/file pattern in English content
+      const englishContentFiles = listFiles(CONTENT_ROOT, (f) => {
+        if (f.includes(`${path.sep}translations${path.sep}`)) return false
+        return (
+          f.endsWith(`${path.sep}${parentDir}${path.sep}${basename}`) &&
+          !f.includes(`${path.sep}translations${path.sep}`)
+        )
+      })
+
+      if (englishContentFiles.length === 1) {
+        const correctEnglishRel = path.relative(
+          CONTENT_ROOT,
+          englishContentFiles[0]
+        )
+        const correctTranslationPath = path.join(
+          translationsDir,
+          langCode,
+          correctEnglishRel
+        )
+        suggestion = `Likely belongs at: ${path.relative(ROOT, correctTranslationPath)}`
+      } else if (englishContentFiles.length > 1) {
+        suggestion = `Ambiguous: ${englishContentFiles.length} English candidates found (${englishContentFiles.map((f) => path.relative(CONTENT_ROOT, f)).join(", ")})`
+      }
+
+      orphanWarnings.push({ file: relFile, suggestion })
+    }
+  }
+
+  if (orphanWarnings.length > 0) {
+    console.log(
+      `\n[SANITIZE] ⚠ Orphaned translations (no English source at expected path):`
+    )
+    for (const w of orphanWarnings) {
+      console.log(`  - ${w.file}`)
+      console.log(`    ${w.suggestion}`)
+    }
+  }
+
   let mdFixed = 0
   let mdDiskWrites = 0
   const mdIssues: Array<{ file: string; issues: string[] }> = []
@@ -1856,6 +1924,7 @@ export async function runSanitizer(
     markdown: { scanned: mdFilesToProcess.length, fixed: mdFixed },
     json: { scanned: jsonFilesToProcess.length, fixed: jsonFixed },
     issues: { markdown: mdIssues, json: jsonIssues },
+    orphanWarnings,
   }
 }
 
