@@ -65,7 +65,7 @@ Pro mapování z klíčů na hodnoty můžeme použít pole, protože klíče p�
 
 ```solidity
     function cacheRead(uint _key) public view returns (uint) {
-        require(_key <= key2val.length, "Čtení neinicializované položky cache");
+        require(_key <= key2val.length, "Reading uninitialize cache entry");
         return key2val[_key-1];
     }  // cacheRead
 ```
@@ -292,7 +292,7 @@ Ostatní hodnoty (3 bajty, 4 bajty atd.) jsou zpracovávány stejným způsobem,
 
 ```solidity
         // Pokud se dostaneme sem, něco je špatně.
-        revert("Chyba v encodeVal, nemělo by se stát");
+        revert("Error in encodeVal, should not happen");
 ```
 
 Pokud se dostaneme sem, znamená to, že jsme dostali klíč, který je větší než 16\*256<sup>15</sup>. Ale `cacheWrite` omezuje klíče, takže se nemůžeme dostat ani na 14\*256<sup>16</sup> (což by mělo první bajt 0xFE, takže by to vypadalo jako `DONT_CACHE`). Ale přidání testu pro případ, že budoucí programátor zavede chybu, nás moc nestojí.
@@ -713,11 +713,11 @@ Funkce čtení je `view`, takže nevyžaduje transakci a nestojí žádný gas. 
     function testWReadWrite() public {
         worm.writeEntry(0xDEAD, 0x60A7);
 
-        vm.expectRevert(bytes("záznam již zapsán"));
+        vm.expectRevert(bytes("entry already written"));
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Tímto (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) v testu Foundry specifikujeme, že další volání by mělo selhat, a uvádíme důvod selhání. To platí, když používáme syntaxi `<kontrakt>.<název funkce>`()` spíše než vytváření calldata a volání kontraktu pomocí nízkoúrovňového rozhraní (`<kontrakt>.call()` atd.).
+[Tímto (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) v testu Foundry specifikujeme, že další volání by mělo selhat, a uvádíme důvod selhání. To platí, když používáme syntaxi `<kontrakt>.<název funkce>()` spíše než vytváření calldata a volání kontraktu pomocí nízkoúrovňového rozhraní (`<kontrakt>.call()` atd.).
 
 ```solidity
     function testReadWriteCached() public {

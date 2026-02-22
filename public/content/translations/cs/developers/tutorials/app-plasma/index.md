@@ -169,7 +169,7 @@ Chcete-li to vidět v akci:
 [Tento soubor](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml) ukazuje formát informací, který očekává Noir.
 
 ```toml
-zpráva="odeslat 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0                             "
+message="send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0                             "
 ```
 
 Zpráva je v textovém formátu, což usnadňuje její pochopení uživatelem (což je nutné při podepisování) a její zpracování kódem Noir. Částka je uvedena ve finney, aby bylo možné na jedné straně provádět zlomkové převody a na druhé straně byla snadno čitelná. Poslední číslo je [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
@@ -185,14 +185,14 @@ signature=["0xb1",...,"0x0d"]
 Tyto tři parametry jsou bajtová pole s pevnou velikostí.
 
 ```toml
-[[účty]]
-adresa="0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
-zůstatek=100_000
+[[accounts]]
+address="0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+balance=100_000
 nonce=0
 
-[[účty]]
-adresa="0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
-zůstatek=100_000
+[[accounts]]
+address="0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+balance=100_000
 nonce=0
 ```
 
@@ -364,8 +364,8 @@ global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH;
 
 ```
 struct Account {
-    zůstatek: u128,
-    adresa: Field,
+    balance: u128,
+    address: Field,
     nonce: u32,
 }
 ```
@@ -374,9 +374,9 @@ Informace, které ukládáme o účtu. [`Field`](https://noir-lang.org/docs/noir
 
 ```
 struct TransferTxn {
-    z: Field,
-    do: Field,
-    částka: u128,
+    from: Field,
+    to: Field,
+    amount: u128,
     nonce: u32
 }
 ```
@@ -836,28 +836,28 @@ Chcete-li to vidět v akci:
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
     
-    Poslouchá na portu 3000
-    Zpracována transakce odeslání 0x90F79bf6EB2c4f870365E785982E1f101E93b906 36000 finney (milliEth) 0
-    Nový stav:
-    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 má 64000 (1)
-    0x70997970C51812dc3A010C7d01b50e0d17dc79C8 má 100000 (0)
-    0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC má 100000 (0)
-    0x90F79bf6EB2c4f870365E785982E1f101E93b906 má 136000 (0)
-    0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 má 100000 (0)
-    Zpracována transakce odeslání 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 7200 finney (milliEth) 1
-    Nový stav:
-    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 má 56800 (2)
-    0x70997970C51812dc3A010C7d01b50e0d17dc79C8 má 107200 (0)
-    0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC má 100000 (0)
-    0x90F79bf6EB2c4f870365E785982E1f101E93b906 má 136000 (0)
-    0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 má 100000 (0)
-    Zpracována transakce odeslání 0x90F79bf6EB2c4f870365E785982E1f101E93b906 3000 finney (milliEth) 2
-    Nový stav:
-    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 má 53800 (3)
-    0x70997970C51812dc3A010C7d01b50e0d17dc79C8 má 107200 (0)
-    0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC má 100000 (0)
-    0x90F79bf6EB2c4f870365E785982E1f101E93b906 má 139000 (0)
-    0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 má 100000 (0)
+    Listening on port 3000
+    Txn send 0x90F79bf6EB2c4f870365E785982E1f101E93b906 36000 finney (milliEth) 0 processed
+    New state:
+    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 has 64000 (1)
+    0x70997970C51812dc3A010C7d01b50e0d17dc79C8 has 100000 (0)
+    0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
+    0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 136000 (0)
+    0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
+    Txn send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 7200 finney (milliEth) 1 processed
+    New state:
+    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 has 56800 (2)
+    0x70997970C51812dc3A010C7d01b50e0d17dc79C8 has 107200 (0)
+    0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
+    0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 136000 (0)
+    0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
+    Txn send 0x90F79bf6EB2c4f870365E785982E1f101E93b906 3000 finney (milliEth) 2 processed
+    New state:
+    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 has 53800 (3)
+    0x70997970C51812dc3A010C7d01b50e0d17dc79C8 has 107200 (0)
+    0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
+    0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
+    0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
     ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
@@ -1021,14 +1021,14 @@ Počáteční struktura `účtů`.
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
 
-    Poslouchání na portu 3000
-    Chyba ověření: ContractFunctionExecutionError: Funkce kontraktu "processTransaction" se vrátila s následujícím důvodem:
-    Špatný hash starého stavu
+    Listening on port 3000
+    Verification error: ContractFunctionExecutionError: The contract function "processTransaction" reverted with the following reason:
+    Wrong old state hash
 
-    Volání kontraktu:
-        adresa:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
-        funkce:  processTransaction(bytes _proof, bytes32[] _publicInputs)
-        argumenty:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000)
+    Contract Call:
+        address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+        function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
+        args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000)
     ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
