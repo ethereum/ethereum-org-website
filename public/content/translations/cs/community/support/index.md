@@ -1,12 +1,12 @@
 ---
-title: Podpora pro Ethereum
-description: "Získejte podporu v ekosystému Etherea."
+title: Ethereum podpora
+description: Získejte podporu v ekosystému Etherea.
 lang: cs
 ---
 
-# Podpora Etherea {#support}
+# Ethereum podpora {#support}
 
-## Oficiální podpora Etherea {#official-support}
+## Oficiální podpora pro Ethereum {#official-support}
 
 Hledáte oficiální podporu pro Ethereum? První věc, kterou byste měli vědět, je, že Ethereum je decentralizované. To znamená, že žádná centrální organizace, entita nebo osoba nevlastní Ethereum, a proto neexistují žádné oficiální kanály podpory.
 
@@ -20,7 +20,7 @@ Pochopení decentralizované povahy Etherea je zásadní, protože **každý, kd
   Osvojte si základy Etherea
 </DocLink>
 
-Přestože neexistuje oficiální podpora, mnoho skupin, komunit a projektů v ekosystému Etherea je ochotných vám pomoci a na této stránce můžete najít mnoho užitečných informací a zdrojů. Stále máte dotazy? Připojte se k [Discordu ethereum.org](https://discord.gg/ethereum-org) a my se vám pokusíme pomoci.
+Přestože neexistuje oficiální podpora, mnoho skupin, komunit a projektů v ekosystému Etherea je ochotných vám pomoci a na této stránce můžete najít mnoho užitečných informací a zdrojů. Stále máte dotazy? Připojte se na [Discordu ethereum.org](https://discord.gg/ethereum-org) a my se vám pokusíme pomoci.
 
 ## Často kladené dotazy {#faq}
 
@@ -38,29 +38,29 @@ Ethereum giveaway jsou podvody navržené k tomu, aby vám ukradly ETH. Nenechte
 
 Transakce na Ethereu se mohou někdy zaseknout, a to v případě, že jste zadali nižší poplatek za transakci, než je požadováno vzhledem k zatížení sítě. Spousta peněženek poskytuje možnost znovu odeslat stejnou transakci s vyšším poplatkem, aby byla transakce zpracována. Alternativně můžete zrušit nevyřízenou transakci tím, že pošlete transakci na svou vlastní adresu a použijete stejné jedinečné číslo nonce jako u nevyřízené transakce.
 
-[Jak zrychlit nebo zrušit nevyřízenou transakci na MetaMasku](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
+[Jak zrychlit nebo zrušit nevyřízenou transakci v MetaMasku](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
 
 [Jak zrušit nevyřízené transakce na Ethereu](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-### Jak mohu těžit Ethereum? Těžba Etherea {#mining-ethereum}
+### Jak mohu těžit Ethereum? {#mining-ethereum}
 
-Těžba Etherea už není možná. Těžba byla ukončena, když Ethereum přešlo z [důkazu prací](/glossary/#pow) na [důkaz podílem](/glossary/#pos). Nyní má Ethereum místo těžařů validátory. Každý může [stakovat](/glossary/#staking) ETH a dostávat odměny za stakování za provozování validačního softwaru zabezpečujícího síť.
+Těžba Etherea už není možná. Těžba byla ukončena, když Ethereum přešlo z [proof of work](/glossary/#pow) na [proof of stake](/glossary/#pos). Nyní má Ethereum místo těžařů validátory. Každý může [stakovat](/glossary/#staking) ETH a dostávat odměny za provozování validačního softwaru zabezpečujícího síť.
 
-### Jak se stát stakerem / provozovat validátor? Jak stakovat {#how-to-stake}
+### Jak se stát stakerem / provozovat validátor? {#how-to-stake}
 
 Chcete-li se stát validátorem, musíte zastakovat 32 ETH v Ethereum deposit contractu a nastavit validační síťový uzel. Další informace naleznete na našich [stránkách o stakování](/staking) a na [staking launchpadu](https://launchpad.ethereum.org/).
 
-## Tvorba dapps {#building-support}
+## Vývoj dappek {#building-support}
 
 Vývoj může být obtížný. Zde najdete několik zdrojů zaměřených na vývoj, kde vám zkušení vývojáři Etherea rádi pomohou.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
+- [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 
-Dokumentaci a příručky pro vývojáře najdete také v naší sekci [zdrojů pro vývojáře Etherea](/developers/).
+V naší sekci [zdrojů pro vývojáře Etherea](/developers/) najdete dokumentaci a průvodce vývojem.
 
 ### Nástroje {#dapp-tooling}
 
@@ -75,12 +75,12 @@ Zde jsou některé oblíbené příklady:
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
-## Provozování uzlu {#node-support}
+## Provozování vlastního síťového uzlu {#node-support}
 
 Pokud provozujete uzel nebo validátora, tady najdete některé komunity, které vám pomohou začít.
 
-- [EthStaker discord](https://discord.gg/ethstaker)
-- [EthStaker reddit](https://www.reddit.com/r/ethstaker)
+- [Discord EthStaker](https://discord.gg/ethstaker)
+- [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
 
 Většina týmů, které vytvářejí klienty na Ethereu, má také veřejně přístupné body, kde můžete získat podporu a ptát se na otázky.
 
@@ -92,7 +92,7 @@ Většina týmů, které vytvářejí klienty na Ethereu, má také veřejně p�
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
 - [Reth](https://github.com/paradigmxyz/reth/discussions)
 
-### Konsensuální klienti {#consensus-clients}
+### Konsenzuální klienti {#consensus-clients}
 
 - [Prysm](https://discord.gg/prysmaticlabs)
 - [Nimbus](https://discord.gg/nSmEH3qgFv)
@@ -101,4 +101,4 @@ Většina týmů, které vytvářejí klienty na Ethereu, má také veřejně p�
 - [Lodestar](https://discord.gg/aMxzVcr)
 - [Grandine](https://discord.gg/H9XCdUSyZd)
 
-Můžete se také [zde naučit, jak provozovat uzel](/developers/docs/nodes-and-clients/run-a-node/).
+[Naučte se provozovat síťový uzel](/developers/docs/nodes-and-clients/run-a-node/).
