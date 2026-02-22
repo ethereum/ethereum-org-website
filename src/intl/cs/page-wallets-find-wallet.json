@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "Importovat libovolný token ERC-20 k použití v peněžence",
   "page-find-wallet-buy-crypto": "Koupit kryptoměny",
   "page-find-wallet-buy-crypto-desc": "Koupit kryptoměny pomocí fiat peněz přímo v peněžence \n *Poznámka: nákup kryptoměn může být specifický pro region, ve kterém žijete",
-  "page-find-wallet-sell-for-fiat": "Prodat za fiat peníze",
+  "page-find-wallet-sell-for-fiat": "Prodat za hotovost",
   "page-find-wallet-sell-for-fiat-desc": "Prodávejte kryptoměny za fiat peníze přímo v peněžence \n *Poznámka: výběr kryptoměn může být specifický pro region, ve kterém žijete",
   "page-find-wallet-multisig": "Multisig",
   "page-find-wallet-multisig-desc": "Peněženky, které vyžadují více podpisů pro autorizaci transakce",
@@ -65,7 +65,7 @@
   "page-find-wallet-new-to-crypto-desc": "Nováček hledající peněženku pro začátečníky.",
   "page-find-wallet-nfts-title": "NFTéčka",
   "page-find-wallet-nfts-desc": "Peněženky se zaměřením na podporu NFT.",
-  "page-find-wallet-hodler-title": "Dlouhodobé",
+  "page-find-wallet-hodler-title": "Hardware",
   "page-find-wallet-hodler-desc": "Pasivní držení tokenů pomocí hardwarových peněženek.",
   "page-find-wallet-finance-title": "Finance",
   "page-find-wallet-finance-desc": "Peněženky zaměřené na časté používání aplikací DeFi.",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Odkazy",
   "page-find-wallet-empty-results-title": "Žádné výsledky",
   "page-find-wallet-empty-results-desc": "Vašim kritériím neodpovídají žádné peněženky, zkuste odstranit některé filtry.",
-  "page-find-wallet-see-wallets": "Zobrazit peněženky"
+  "page-find-wallet-privacy": "Ochrana soukromí",
+  "page-find-wallet-privacy-desc": "Peněženky, které podporují vestavěné soukromé transakce",
+  "page-find-wallet-see-wallets": "Zobrazit peněženky",
+  "page-find-wallet-search-languages": "Vyhledat jazyky..."
 }

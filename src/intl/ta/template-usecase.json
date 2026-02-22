@@ -1,0 +1,20 @@
+{
+  "template-usecase-dropdown-ai-agents": "செயற்கை நுண்ணறிவு முகவர்கள்",
+  "template-usecase-dropdown-defi": "பன்முனைப்படுத்தப்பட்ட நிதி (DeFi)",
+  "template-usecase-dropdown-nft": "மாற்ற முடியாத டோக்கன்கள் (NFTs)",
+  "template-usecase-dropdown-dao": "பரவலாக்கப்பட்ட தன்னாட்சி அமைப்புகள் (DAOs)",
+  "template-usecase-dropdown-apps": "எத்தேரியம் பயன்பாடுகள்",
+  "template-usecase-dropdown-payments": "எத்தேரியம் கொடுப்பனவுகள்",
+  "template-usecase-dropdown-prediction-markets": "கணிப்பு சந்தைகள்",
+  "template-usecase-dropdown-social-networks": "பன்முனைப்படுத்தப்பட்ட சமூக வலைப்பின்னல்கள்",
+  "template-usecase-dropdown-restaking": "மறுபங்குவைத்தல்",
+  "template-usecase-dropdown-identity": "பன்முனைப்படுத்தப்பட்ட அடையாளம்",
+  "template-usecase-dropdown-desci": "பன்முனை அறிவியல் (DeSci)",
+  "template-usecase-dropdown-refi": "மீளுருவாக்க நிதி (ReFi)",
+  "template-usecase-dropdown": "Ethereum பயன்பாடுகள்",
+  "template-usecase-banner": "Ethereum-இன் பயன்பாடுகள் எப்போதும் வளர்ந்து மற்றும் உருவாகி வருகின்றன. விஷயங்களை தெளிவுபடுத்தும் அல்லது மேலும் புதுப்பிக்கும் என்று நீங்கள் நினைக்கும் எந்த தகவலையும் சேர்க்கவும்.",
+  "template-usecase-edit-link": "பக்கத்தைத் திருத்து",
+  "template-usecase-dropdown-aria": "பயன்பாட்டு முறை கீழிறங்கு பட்டி",
+  "template-usecase-dropdown-onchain-gaming": "ஆன்செயின் கேமிங்",
+  "template-usecase-dropdown-rwa": "நிஜ-உலக சொத்துக்கள் (RWAs)"
+}

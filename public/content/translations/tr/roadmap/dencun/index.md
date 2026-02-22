@@ -1,6 +1,6 @@
 ---
 title: Cancun-Deneb (Dencun) SSS
-description: Cancun-Deneb (Dencun) ağ güncellemesi hakkında sıkça sorulan sorular
+description: "Cancun-Deneb (Dencun) ağ güncellemesi hakkında sıkça sorulan sorular"
 lang: tr
 ---
 
@@ -23,7 +23,7 @@ Bu, toplamaların maliyetini önemli ölçüde azaltır, zincir büyümesini sı
 - **ETH'niz İçin Hiçbir İşlem Gerekmiyor**. Ethereum Dencun yükseltmesinin ardından, ETH'nizi dönüştürmeniz ya da yükseltmeniz gerekmez. Hesap bakiyeleriniz aynı kalacak ve sert çatallanmanın ardından şu an sahip olduğunuz ETH mevcut biçiminde erişilebilir olacaktır.
 - **Dolandırıcılıklara Karşı Dikkatli Olun!** <Emoji text="⚠️" /> **ETH'nizi "yükseltmenizi" söyleyen kişiler sizi dolandırmaya çalışıyor.** Bu yükseltmeyle ilgili yapmanız gereken hiçbir şey yok. Varlıklarınız hiçbir şekilde etkilenmeyecek. Unutmayın, bilgi sahibi olmak dolandırıcılıklardan korunmanın en iyi yoludur.
 
-[Dolandırıcılığı tanıma ve dolandırıcılıktan kaçınma hakkında daha fazla bilgi](/güvenlik/)
+[Dolandırıcılığı tanıma ve dolandırıcılıktan kaçınma hakkında daha fazla bilgi](/security/)
 
 ## Dencun ağ yükseltmesi hangi problemi çözüyor? {#network-impact}
 
@@ -68,9 +68,9 @@ Evet, Proto-Danksharding (EIP-4844) hem yürütüm istemcilerinin hem de fikir b
 
 Fikir birliği istemcileri, yükseltmeye uyum sağlayacak şekilde güncellenen _Doğrulayıcı_ yazılımını yönetir.
 
-## Cancun-Deneb (Dencun), Goerli veya diğer Ethereum test ağlarını nasıl etkiler? {#testnet-impact}
+## Cancun-Deneb (Dencun), Ethereum test ağlarını nasıl etkiler? {#testnet-impact}
 
-- Devnets, Goerli, Sepolia ve Holesky'nin her biri Dencun yükseltmesinden geçmiştir ve Proto-Danksharding tüm işlevleriyle çalışmaktadır
+- Devnet'ler, Sepolia ve Holesky, Dencun yükseltmesinden geçmiştir ve Proto-Danksharding tüm işlevleriyle çalışmaktadır.
 - Toplama geliştiricileri, bu ağları EIP-4844 testleri için kullanabilir
 - Çoğu kullanıcı test ağında yapılan bu değişiklikten hiçbir şekilde etkilenmeyecektir
 
@@ -99,7 +99,7 @@ Sadece Ethereum Sanal Makinesi (EVM) ile uyumlu olması, bir ağın bu yükseltm
 
 [Katman 2 toplamaları hakkında daha fazla bilgi](/layer-2/)
 
-## Görsel olarak öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
+## Görerek öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
 
 <YouTube id="HT9PHWloIiU" />
 
