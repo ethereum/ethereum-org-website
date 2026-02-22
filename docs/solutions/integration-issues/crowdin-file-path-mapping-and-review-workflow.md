@@ -235,6 +235,15 @@ NEXT_PUBLIC_BUILD_LOCALES=en,<lang> pnpm build      # Scoped build
 - **Merge conflicts are expected** — misplaced files from prior imports cause modify/delete conflicts; accept the deletion
 - **`franc-min` is required** — ESM-only package, needs devDependency until sanitizer changes reach dev
 
+### Tool Reliability: `diff` Command
+
+During cs-part-07 review, `diff` returned empty output comparing two files that were verifiably different (confirmed by reading both files and re-running `diff` with identical arguments, which then returned correct output). Root cause unknown — not conclusively a sandbox issue since the second run succeeded with the same arguments.
+
+**For automation, do not trust empty `diff` output as proof of file equality.** Mitigations:
+- Check `diff` exit code explicitly (`0` = identical, `1` = different, `2` = error)
+- Use `diff --brief` for a quick same/different check before assuming equality
+- When comparing files for migration decisions (orphan dedup), read and verify content directly if `diff` returns empty
+
 ## Automation Permissions Required
 
 All sandbox-restricted operations needed for this workflow:
