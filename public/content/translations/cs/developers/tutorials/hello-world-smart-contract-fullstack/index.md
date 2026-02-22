@@ -1177,9 +1177,9 @@ export const connectWallet = async () => {
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
               Musíte si do prohlížeče nainstalovat MetaMask, virtuální peněženku Ethereum.
-            </a>
+
           </p>
-        </span>
+
       ),
     }
   }
@@ -1272,9 +1272,9 @@ export const getCurrentWalletConnected = async () => {
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
               Musíte si do prohlížeče nainstalovat MetaMask, virtuální peněženku Ethereum.
-            </a>
+
           </p>
-        </span>
+
       ),
     }
   }
@@ -1333,7 +1333,7 @@ function addWalletListener() {
         {" "}
         🦊 <a target="_blank" href={`https://metamask.io/download`}>
           Musíte si do prohlížeče nainstalovat MetaMask, virtuální peněženku Ethereum.
-        </a>
+
       </p>
     )
   }
@@ -1429,11 +1429,11 @@ try {
         ✅{" "}
         <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
           Zobrazte stav své transakce na Etherscanu!
-        </a>
+
         <br />
         ℹ️ Jakmile bude transakce ověřena sítí, zpráva bude
         aktualizována automaticky.
-      </span>
+
     ),
   }
 } catch (error) {
@@ -1495,11 +1495,11 @@ export const updateMessage = async (address, message) => {
           ✅{" "}
           <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
             Zobrazte stav své transakce na Etherscanu!
-          </a>
+
           <br />
           ℹ️ Jakmile bude transakce ověřena sítí, zpráva bude
           aktualizována automaticky.
-        </span>
+
       ),
     }
   } catch (error) {

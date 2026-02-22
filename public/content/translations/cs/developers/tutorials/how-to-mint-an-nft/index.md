@@ -18,7 +18,7 @@ published: 2021-04-22
 [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 milionů
 [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 milionů
 
-Všichni z nich vyrazili svá NFT pomocí výkonného API od Alchemy. V tomto tutoriálu vás naučíme, jak udělat to samé za \<10 minut.
+Všichni z nich vyrazili svá NFT pomocí výkonného API od Alchemy. V tomto tutoriálu vás naučíme, jak udělat to samé za \&lt;10 minut.
 
 „Ražba NFT“ je akt publikování jedinečné instance vašeho tokenu ERC-721 na blockchainu. Pomocí našeho chytrého kontraktu z [1. části této série tutoriálů o NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/) si procvičíme naše dovednosti s Web3 a vyrazíme si NFT. Na konci tohoto tutoriálu si budete moci vyrazit tolik NFT, kolik jen vaše srdce (a peněženka) bude chtít!
 
