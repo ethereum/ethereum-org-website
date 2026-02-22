@@ -1,13 +1,13 @@
 ---
-title: Akıllı sözleşme birleştirilebilirliği
-description:
+title: "Akıllı sözleşme birleştirilebilirliği"
+description: "Akıllı sözleşmelerin, mevcut bileşenleri yeniden kullanarak karmaşık merkeziyetsiz uygulamalar oluşturmak için Lego blokları gibi nasıl birleştirilebileceğini öğrenin."
 lang: tr
 incomplete: true
 ---
 
 ## Kısa bir giriş {#a-brief-introduction}
 
-Akıllı sözleşmeler Ethereum üzerinde herkese açıktır ve açık API'ler olarak düşünülebilirler. Bir dapp geliştiricisi olmak için kendi akıllı sözleşmenizi yazmanız gerekmez, sadece onlarla nasıl etkileşime geçebileceğinizi bilmelisiniz. Örneğin, bir merkeziyetsiz borsa olan [Uniswap](https://uniswap.exchange/swap)'ın mevcut akıllı sözleşmelerini uygulamanızdaki tüm token değişim mantığını idare etmek için kullanabilirsiniz: Sıfırdan başlamanız gerekmez. Onların [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) ve [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts) sözleşmelerine göz atın.
+Akıllı sözleşmeler Ethereum üzerinde herkese açıktır ve açık API'ler olarak düşünülebilirler. Bir dapp geliştiricisi olmak için kendi akıllı sözleşmenizi yazmanız gerekmez, sadece onlarla nasıl etkileşime geçebileceğinizi bilmelisiniz. Örneğin, uygulamanızdaki tüm jeton takas mantığını yönetmek için merkeziyetsiz bir borsa olan [Uniswap](https://uniswap.exchange/swap)'in mevcut akıllı sözleşmelerini kullanabilirsiniz – sıfırdan başlamanız gerekmez. [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) ve [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts) sözleşmelerinden bazılarına göz atın.
 
 ## Birleştirilebilirlik nedir? {#what-is-composability}
 
@@ -23,17 +23,17 @@ Ethereum akıllı sözleşmeleri, genel API'ler gibidir, bu nedenle herkes sözl
 
 **2. Otonomi**: Birleştirilebilir bileşenler bağımsız olarak çalışabilmelidir. Ethereum'daki her akıllı sözleşme kendi kendini yürütür ve sistemin diğer bölümlerine güvenmeden çalışabilir.
 
-**3. Keşfedilebilirlik**: Geliştiriciler, genel kullanıma açık değilse, harici sözleşmeler arayamaz veya yazılım kitaplıklarını uygulamalara entegre edemezler. Tasarım gereği, akıllı sözleşmeler açık kaynaklıdır; herkes bir akıllı sözleşme çağırabilir veya bir kod tabanını çatallayabilir.
+**3. Keşfedilebilirlik**: Geliştiriciler, kamuya açık olmadıkları takdirde harici sözleşmeleri çağıramaz veya yazılım kütüphanelerini uygulamalara entegre edemezler. Tasarım gereği, akıllı sözleşmeler açık kaynaklıdır; herkes bir akıllı sözleşme çağırabilir veya bir kod tabanını çatallayabilir.
 
 ## Birleştirilebilirliğin faydaları {#benefits-of-composability}
 
 ### Daha kısa geliştirme döngüsü {#shorter-development-cycle}
 
-Birleştirilebilirlik, geliştiricilerin [dapps](/apps/#what-are-dapps) oluştururken yapması gereken işi azaltır. [Naval Ravikant'ın dediği gibi:](https://twitter.com/naval/status/1444366754650656770) "Açık kaynak, her problemin bir kez çözülmesi gerektiği anlamına gelir."
+Birleştirilebilirlik, geliştiricilerin [merkeziyetsiz uygulamalar](/apps/#what-are-dapps) oluştururken yapması gereken işi azaltır. [Naval Ravikant'ın belirttiği gibi:](https://twitter.com/naval/status/1444366754650656770) "Açık kaynak, her sorunun bir kez çözülmesi gerektiği anlamına gelir."
 
 Bir sorunu çözen akıllı bir sözleşme varsa, diğer geliştiriciler onu yeniden kullanabilir, böylece aynı sorunu çözmeleri gerekmez. Bu şekilde, geliştiriciler mevcut yazılım kitaplıklarını alabilir ve yeni dapp'ler oluşturmak için ekstra işlevsellik ekleyebilir.
 
-### Daha fazla yenilik {#greater-innovation}
+### Daha fazla inovasyon {#greater-innovation}
 
 Birleştirilebilirlik, yenilikçiliği ve denemeyi teşvik eder çünkü geliştiriciler, istenen sonuçları oluşturmak için açık kaynak kodunu yeniden kullanmakta, değiştirmekte, çoğaltmakta veya entegre etmekte özgürdür. Sonuç olarak, geliştirme ekipleri temel işlevlere daha az zaman harcar ve yeni özellikleri denemeye daha fazla zaman ayırabilir.
 
@@ -43,34 +43,34 @@ Ethereum ekosisteminin bileşenleri arasındaki birlikte çalışabilirlik, kull
 
 Birlikte çalışabilirliğin faydalarını göstermek için arbitraj ticaretinden bir örnek kullanacağız:
 
-Bir token `A borsasında` `B borsasından` daha yüksek işlem görüyorsa, kâr etmek için fiyat farkından yararlanabilirsiniz. Ancak, bunu yalnızca işlemi mümkün kılmak için yeterli sermayeniz varsa yapabilir (yani, `B borsasından ` tokeni satın alıp `A borsasında` satabilirsiniz).
+Bir jeton `A borsası`nda `B borsası`ndan daha yüksek işlem görüyorsa, kâr etmek için fiyat farkından yararlanabilirsiniz. Ancak, bunu yalnızca işlemi finanse edecek yeterli sermayeniz varsa yapabilirsiniz (yani, jetonu `B borsası`ndan satın alıp `A borsası`nda satmak).
 
-Alım satımı karşılamak için yeterli paranızın olmadığı bir senaryoda, anlık kredi ideal olabilir. [Hızlı krediler](/defi/#flash-loans) oldukça tekniktir, ancak temel fikir, varlıkları (teminatsız) ödünç alabilmeniz ve _bir_ işlem içinde aynı şekilde iade edebilmenizdir.
+Alım satımı karşılamak için yeterli paranızın olmadığı bir senaryoda, anlık kredi ideal olabilir. [Flaş krediler](/defi/#flash-loans) oldukça tekniktir, ancak temel fikir, varlıkları (teminatsız) ödünç alabilmeniz ve aynı varlıkları _tek_ bir işlem içinde iade edebilmenizdir.
 
-İlk örneğimize geri dönersek, bir arbitraj tüccarı, büyük bir flash kredi alabilir, `B borsası`ndan token satın alabilir, bunları `A borsası`nda satabilir, sermayeyi + faizi geri ödeyebilir ve aynı işlem içinde kârı tutabilir. Bu karmaşık mantık, çağrıları birden fazla sözleşmeye birleştirmeyi gerektirir; bu, akıllı sözleşmelerin birlikte çalışabilirliği olmasaydı mümkün olmazdı.
+İlk örneğimize dönecek olursak; bir arbitraj yatırımcısı, aynı işlem içerisinde, büyük miktarda flaş kredi alabilir, `B borsası`ndan jeton satın alabilir, bunları `A borsası`nda satabilir, anaparayı + faizi geri ödeyebilir ve kârı elinde tutabilir. Bu karmaşık mantık, çağrıları birden fazla sözleşmeye birleştirmeyi gerektirir; bu, akıllı sözleşmelerin birlikte çalışabilirliği olmasaydı mümkün olmazdı.
 
 ## Ethereum'da birleştirilebilirlik örnekleri {#composability-in-ethereum}
 
-### Token takasları {#token-swaps}
+### Jeton takasları {#token-swaps}
 
 İşlemlerin ETH'de ödenmesini gerektiren bir dapp oluşturursanız, token takas mantığını entegre ederek kullanıcıların diğer ERC-20 tokenlerinde ödeme yapmasına izin verebilirsiniz. Sözleşme çağrılan işlevi yürütmeden önce kod, kullanıcının tokenini otomatik olarak ETH'ye dönüştürür.
 
-### Yönetim {#governance}
+### Yönetişim {#governance}
 
-Bir [DAO](/dao/) için ısmarlama yönetim sistemleri oluşturmak pahalı ve zaman alıcı olabilir. Bunun yerine, hızlı bir şekilde bir yönetişim çerçevesi oluşturmak üzere DAO'nuzu başlatmak için [Aragon İstemcisi](https://client.aragon.org/) gibi açık kaynaklı bir yönetişim araç seti kullanabilirsiniz.
+Bir [DAO](/dao/) için özel yönetişim sistemleri oluşturmak pahalı ve zaman alıcı olabilir. Bunun yerine, DAO'nuzu başlatmak ve hızlı bir şekilde bir yönetişim çerçevesi oluşturmak için [Aragon Client](https://client.aragon.org/) gibi açık kaynaklı bir yönetişim araç setini kullanabilirsiniz.
 
 ### Kimlik yönetimi {#identity-management}
 
-Özel bir kimlik doğrulama sistemi oluşturmak veya merkezi sağlayıcılara güvenmek yerine, kullanıcılar için kimlik doğrulamayı yönetmek için merkezi olmayan kimlik (DID) araçlarını entegre edebilirsiniz. Bir örnek, kullanıcıların kimliklerini bir Ethereum cüzdanıyla doğrulamasını sağlayan "Ethereum ile oturum açma" işlevi sunan açık kaynaklı bir araç seti olan [SpruceID](https://www.spruceid.com/)'dir.
+Özel bir kimlik doğrulama sistemi oluşturmak veya merkezi sağlayıcılara güvenmek yerine, kullanıcılar için kimlik doğrulamayı yönetmek için merkezi olmayan kimlik (DID) araçlarını entegre edebilirsiniz. Buna bir örnek, kullanıcıların bir Ethereum cüzdanı ile kimliklerini doğrulamasına olanak tanıyan "Ethereum ile Oturum Aç" işlevini sunan açık kaynaklı bir araç seti olan [SpruceID](https://www.spruceid.com/)'dir.
 
 ## İlgili öğreticiler {#related-tutorials}
 
-- [create-eth-app ile merkeziyetsiz uygulama ön yüz geliştirmeye bir adım önde başlayın](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Popüler akıllı sözleşmelerle uygulamalar oluşturmak için create-eth-app kullanımına genel bir bakış._
+- [create-eth-app ile merkeziyetsiz uygulama ön yüz geliştirmeye bir adım önde başlayın](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Popüler akıllı sözleşmelerle kullanıma hazır uygulamalar oluşturmak için create-eth-app'in nasıl kullanılacağına dair genel bir bakış._
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
-- [Birleştirilebilirlik Yeniliktir](https://future.a16z.com/how-composability-unlocks-crypto-and-everything-else/)
-- [Web3 İçin Birleştirilebilirlik Neden Önemlidir](https://hackernoon.com/why-composability-matters-for-web3)
-- [Birleştirilebilirlik nedir?](https://blog.aragon.org/what-is-composability/#:~:text=Aragon,connect%20to%20every%20other%20piece.)
+- [Birleştirilebilirlik İnovasyondur](https://a16zcrypto.com/posts/article/how-composability-unlocks-crypto-and-everything-else/)
+- [Web3 İçin Birleştirilebilirlik Neden Önemlidir?](https://hackernoon.com/why-composability-matters-for-web3)
+- [Birleştirilebilirlik Nedir?](https://blog.aragon.org/what-is-composability/#:~:text=Aragon,connect%20to%20every%20other%20piece.)

@@ -2175,6 +2175,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sankalpk"><img src="https://avatars.githubusercontent.com/u/1317291?v=4?s=100" width="100px;" alt="Sankalp Kulshreshtha"/><br /><sub><b>Sankalp Kulshreshtha</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asankalpk" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://aboutzentex.xyz"><img src="https://avatars.githubusercontent.com/u/182422186?v=4?s=100" width="100px;" alt="Zentex"/><br /><sub><b>Zentex</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AZentex1337" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/riproprip"><img src="https://avatars.githubusercontent.com/u/210665836?v=4?s=100" width="100px;" alt="riproprip"/><br /><sub><b>riproprip</b></sub></a><br /><a href="#maintenance-riproprip" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Uaitt"><img src="https://avatars.githubusercontent.com/u/97030518?v=4?s=100" width="100px;" alt="Lorenzo Zabot"/><br /><sub><b>Lorenzo Zabot</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AUaitt" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
