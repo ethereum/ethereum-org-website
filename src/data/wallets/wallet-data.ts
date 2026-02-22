@@ -3012,11 +3012,11 @@ export const walletsData: WalletData[] = [
       "https://support.infinex.xyz/en/articles/12854879-infinex-browser-extension?ref=ethfw",
     documentation:
       "https://support.infinex.xyz/en/collections/9874360-your-infinex-account?ref=ethfw",
-    ios: true, // pinnable webapp
-    android: true, // pinnable webapp
-    linux: true, // pinnable webapp
-    windows: true, // pinnable webapp
-    macOS: true, // pinnable webapp
+    ios: false, // pinnable webapp
+    android: false, // pinnable webapp
+    linux: false, // pinnable webapp
+    windows: false, // pinnable webapp
+    macOS: false, // pinnable webapp
     firefox: false,
     chromium: true, // https://chromewebstore.google.com/detail/infinex/ibcnlnjajdjfjdcogphnhombiegpcnbj
     hardware: false,
