@@ -13,19 +13,19 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 
 ## Services {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) -_Private Ethereum explorer. Also for sorting and filtering (mempool) data. Available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi_
+- [Blockchair](https://blockchair.com/ethereum) - Private Ethereum explorer. Also for sorting and filtering (mempool) data. Available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Etherscan](https://etherscan.io/) -_Also available in Chinese, Korean, Russian, and Japanese_
-- [Ethplorer](https://ethplorer.io/) -_A block explorer with a focus on tokens. Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
+- [Etherscan](https://etherscan.io/) - Also available in Chinese, Korean, Russian, and Japanese
+- [Ethplorer](https://ethplorer.io/) - A block explorer with a focus on tokens. Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 
 ## Open source tools {#open-source-tools}
 
-- [3xpl](https://3xpl.com/ethereum) -_An ad-free Ethereum explorer that allows downloading its datasets (open-core: core modules are open source)_
+- [3xpl](https://3xpl.com/ethereum) - An ad-free Ethereum explorer that allows downloading its datasets (open-core: core modules are open source)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockscout](https://eth.blockscout.com/)
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
