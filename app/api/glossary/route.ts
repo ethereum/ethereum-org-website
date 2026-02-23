@@ -2,6 +2,8 @@ import { type NextRequest, NextResponse } from "next/server"
 
 import { getTranslationGlossary } from "@/lib/data"
 
+export const dynamic = "force-dynamic"
+
 /**
  * GET /api/glossary
  *
