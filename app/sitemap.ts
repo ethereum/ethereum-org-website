@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 
+import { isLocaleValidISO639_1 } from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
@@ -10,29 +11,38 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = await getAllPagesWithTranslations()
 
   const entries: MetadataRoute.Sitemap = []
+  const seenUrls = new Set<string>()
 
   for (const { slug, translatedLocales } of pages) {
     const normalizedSlug = slug.startsWith("/") ? slug : `/${slug}`
+    const localesForHreflang = translatedLocales.filter(isLocaleValidISO639_1)
+    const alternates =
+      localesForHreflang.length > 0
+        ? {
+            languages: {
+              "x-default": getFullUrl(DEFAULT_LOCALE, normalizedSlug),
+              ...Object.fromEntries(
+                localesForHreflang.map((locale) => [
+                  locale,
+                  getFullUrl(locale, normalizedSlug),
+                ])
+              ),
+            },
+          }
+        : undefined
 
     for (const locale of translatedLocales) {
       const url = getFullUrl(locale, normalizedSlug)
 
-      // Drop the `/en` root entry to avoid duplicating `/`
-      // This happens when slug is "/" and locale is default
-      if (
-        locale === DEFAULT_LOCALE &&
-        (normalizedSlug === "/" || normalizedSlug === "")
-      ) {
+      if (seenUrls.has(url)) {
         continue
       }
 
-      const isDefaultLocale = locale === DEFAULT_LOCALE
+      seenUrls.add(url)
 
       entries.push({
         url,
-        changeFrequency: isDefaultLocale ? "weekly" : "monthly",
-        priority: isDefaultLocale ? 0.7 : 0.5,
-        lastModified: new Date(),
+        alternates,
       })
     }
   }

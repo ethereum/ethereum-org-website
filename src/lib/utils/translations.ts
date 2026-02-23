@@ -44,6 +44,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/developers/local-environment/", "page-developers-local-environment"],
   ["/developers/learning-tools/", "page-developers-learning-tools"],
   ["/developers/tutorials/", "page-developers-tutorials"],
+  ["/developers/tools/", "page-developers-tools"],
   ["/developers/", "page-developers-index"],
   ["/contributing/translation-program/translatathon/", "page-translatathon"],
   ["/community/events/", "page-community-events"],
