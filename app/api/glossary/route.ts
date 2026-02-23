@@ -2,8 +2,6 @@ import { type NextRequest, NextResponse } from "next/server"
 
 import { getTranslationGlossary } from "@/lib/data"
 
-export const dynamic = "force-dynamic"
-
 /**
  * GET /api/glossary
  *
@@ -29,7 +27,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(filtered, {
       headers: {
-        "Cache-Control": "s-maxage=86400, stale-while-revalidate=172800",
+        "CDN-Cache-Control": "no-store",
       },
     })
   } catch (error) {
