@@ -3,7 +3,6 @@
 import React, {
   type ButtonHTMLAttributes,
   forwardRef,
-  HTMLAttributes,
   useEffect,
   useMemo,
   useState,
@@ -33,7 +32,6 @@ import Input from "@/components/ui/input"
 import TabNav from "@/components/ui/TabNav"
 import { Tag, TagButton } from "@/components/ui/tag"
 
-import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
@@ -68,13 +66,6 @@ const FilterTag = forwardRef<
 })
 
 FilterTag.displayName = "FilterTag"
-
-const Text = ({
-  className,
-  ...props
-}: HTMLAttributes<HTMLParagraphElement>) => (
-  <p className={cn("mb-6", className)} {...props} />
-)
 
 type LinkFlexProps = FlexProps & {
   href: string
@@ -279,8 +270,9 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
   return (
     <>
       <div className="my-8 w-full max-w-screen-lg shadow-table-box">
+        <h2 className="sr-only"></h2>
         {/* Skill level TabNav + Search */}
-        <div className="flex flex-col gap-3 px-8 pt-6 md:max-lg:w-fit lg:flex-row lg:items-center">
+        <div className="flex flex-col gap-6 px-8 pt-6 md:max-lg:w-fit lg:flex-row lg:items-center">
           <TabNav
             sections={skillSections}
             activeSection={selectedSkill}
@@ -416,33 +408,33 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
         </div>
 
         {/* Empty state */}
-        {filteredTutorials.length === 0 && (
+        {filteredTutorials.length === 0 ? (
           <div className="mt-0 p-12 text-center">
             <Emoji text=":crying_face:" className="my-8 text-5xl" />
             <h2 className="mb-8 mt-12 leading-xs">
               <Translation id="page-developers-tutorials:page-tutorial-tags-error" />
             </h2>
-            <Text>
-              <Translation id="page-developers-tutorials:page-find-wallet-try-removing" />
-            </Text>
+            <Translation id="page-developers-tutorials:page-find-wallet-try-removing" />
           </div>
+        ) : (
+          <h2 className="sr-only">{t("page-tutorials-available")}</h2>
         )}
 
         {/* Tutorial cards */}
         {filteredTutorials.map((tutorial) => {
           return (
             <LinkFlex
-              className="mb-px w-full flex-col justify-between border-b p-8 text-border no-underline duration-100 hover:bg-background-highlight"
+              className="block w-full space-y-6 border-b p-8 no-underline duration-100 hover:bg-background-highlight"
               key={tutorial.href}
               href={tutorial.href ?? undefined}
             >
-              <Flex className="mb-8 flex-col items-start justify-between gap-y-4 md:-mb-4 md:flex-row">
-                <Text className="relative me-0 text-2xl font-semibold text-body md:me-24">
+              <Flex className="flex-col items-start justify-between gap-y-4 md:flex-row">
+                <h3 className="relative me-0 text-2xl font-semibold text-body md:me-24">
                   {tutorial.title}
                   {tutorial.isExternal && (
                     <ExternalLink className="mb-[0.25em] ms-[0.25em] inline-block size-[0.875em]" />
                   )}
-                </Text>
+                </h3>
                 {tutorial.skill && (
                   <Tag
                     variant="outline"
@@ -460,7 +452,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
                   </Tag>
                 )}
               </Flex>
-              <Text className="mt-6 uppercase text-body-medium">
+              <p className="uppercase text-body-medium">
                 <Emoji text=":writing_hand:" className="me-2 text-sm" />
                 {tutorial.author}
                 {tutorial.published ? (
@@ -484,8 +476,8 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
                     </span>
                   </>
                 )}
-              </Text>
-              <Text className="text-body-medium">{tutorial.description}</Text>
+              </p>
+              <p className="text-body-medium">{tutorial.description}</p>
               <Flex className="w-full flex-wrap">
                 <TutorialTags tags={tutorial.tags ?? []} />
               </Flex>
