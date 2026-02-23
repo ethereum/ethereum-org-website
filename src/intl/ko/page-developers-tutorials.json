@@ -5,5 +5,6 @@
   "page-tutorial-topics": "주제",
   "page-tutorial-search-placeholder": "튜토리얼 검색...",
   "page-tutorial-filtering-by": "필터링 기준:",
-  "page-tutorial-more-tags": "+{count}개 더보기"
+  "page-tutorial-more-tags": "+{count}개 더보기",
+  "page-tutorials-available": "이용 가능한 튜토리얼"
 }
