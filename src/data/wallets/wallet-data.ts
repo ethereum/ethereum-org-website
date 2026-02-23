@@ -426,7 +426,7 @@ export const walletsData: WalletData[] = [
     firefox: true,
     chromium: true,
     hardware: false,
-    open_source: true,
+    open_source: false,
     repo_url: "https://github.com/MetaMask",
     non_custodial: true,
     security_audit: [],

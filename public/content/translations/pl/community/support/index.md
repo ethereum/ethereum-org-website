@@ -10,7 +10,7 @@ lang: pl
 
 Szukasz oficjalnego wsparcia Ethereum? Pierwszą rzeczą, którą powinieneś wiedzieć, jest to, że Ethereum jest zdecentralizowane. Oznacza to, że żadna centralna organizacja, podmiot lub osoba nie jest właścicielem Ethereum i z tego powodu nie istnieją żadne oficjalne kanały wsparcia.
 
-Zrozumienie zdecentralizowanej natury Ethereum jest kluczowe, ponieważ każdy, kto twierdzi, że jest oficjalnym wsparciem Ethereum, prawdopodobnie próbuje cię oszukać! Najlepszą ochroną przed oszustami jest edukacja i poważne podejście do kwestii bezpieczeństwa.
+Zrozumienie zdecentralizowanej natury Ethereum jest kluczowe, ponieważ **każdy, kto twierdzi, że jest oficjalnym wsparciem Ethereum, prawdopodobnie próbuje Cię oszukać!** Najlepszą ochroną przed oszustami jest edukacja i poważne podejście do kwestii bezpieczeństwa.
 
 <DocLink href="/security/">
   Bezpieczeństwo Ethereum i zapobieganie oszustwom
@@ -22,9 +22,9 @@ Zrozumienie zdecentralizowanej natury Ethereum jest kluczowe, ponieważ każdy, 
 
 Pomimo braku oficjalnego wsparcia, wiele grup, społeczności i projektów w całym ekosystemie Ethereum chętnie pomaga, a na tej stronie można znaleźć wiele przydatnych informacji i zasobów. Nadal masz pytania? Dołącz do [Discorda ethereum.org](https://discord.gg/ethereum-org), a my postaramy się pomóc.
 
-## Najczęściej zadawane pytania (FAQ) {#faq}
+## Często zadawane pytania {#faq}
 
-### Wysłałem ETH do niewłaściwego portfela {#wrong-wallet}
+### Wysłanie ETH do niewłaściwego portfela {#wrong-wallet}
 
 Transakcja wysłana na Ethereum jest nieodwracalna. Niestety, jeśli wysłałeś ETH do niewłaściwego portfela, nie ma sposobu na odzyskanie tych środków. Żadna centralna organizacja, podmiot ani osoba nie jest właścicielem Ethereum, co oznacza, że nikt nie może cofnąć transakcji. Dlatego ważne jest, aby zawsze dokładnie sprawdzać transakcje przed ich wysłaniem.
 
@@ -32,7 +32,7 @@ Transakcja wysłana na Ethereum jest nieodwracalna. Niestety, jeśli wysłałeś
 
 Konkursy z nagrodami Ethereum to oszustwa mające na celu kradzież twojego ETH. Nie daj się skusić ofertom, które wydają się zbyt piękne, aby były prawdziwe — jeśli wyślesz ETH na adres konkursowy, nie otrzymasz nagrody i nie będziesz w stanie odzyskać swoich środków.
 
-[Więcej informacji na temat zapobiegania oszustwom](/security/#common-scams)
+[Więcej o zapobieganiu oszustwom](/security/#common-scams)
 
 ### Moja transakcja utknęła {#stuck-transaction}
 
@@ -42,25 +42,25 @@ Transakcje na Ethereum mogą czasami utknąć, jeśli złożyłeś niższą opł
 
 [Jak anulować oczekujące transakcje Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-### Jak wydobywać Ethereum? {#mining-ethereum}
+### Jak wydobywać Ethereum? Wydobycie Ethereum {#mining-ethereum}
 
-Kopanie Ethereum nie jest już dłużej możliwe. Wydobywanie zostało wyłączone, gdy Ethereum przeszło z [proof-of-work](/glossary/#pow) na [proof-of-stake](/glossary/#pos). Teraz, zamiast górników, Ethereum ma walidatory. Każdy może [stakować](/glossary/#staking) ETH i otrzymywać nagrody stakingowe za uruchomienie oprogramowania walidatora zabezpieczającego sieć.
+Kopanie Ethereum nie jest już dłużej możliwe. Wydobycie zostało wyłączone, gdy Ethereum przeszło z [dowodu pracy (proof-of-work)](/glossary/#pow) na [dowód stawki (proof-of-stake)](/glossary/#pos). Teraz, zamiast górników, Ethereum ma walidatory. Każdy może [stakować](/glossary/#staking) ETH i otrzymywać nagrody ze stakowania za uruchamianie oprogramowania walidatora w celu zabezpieczenia sieci.
 
 ### Jak zostać stakerem / uruchomić walidator? {#how-to-stake}
 
-Aby zostać walidatorem, musisz zestakować 32 ETH w kontrakcie depozytowym Ethereum i skonfigurować węzeł walidatora. Więcej informacji można znaleźć na naszych[ stronach poświęconych stakingowi](/staking) oraz na[ launchpadzie stakingu](https://launchpad.ethereum.org/).
+Aby zostać walidatorem, musisz zestakować 32 ETH w kontrakcie depozytowym Ethereum i skonfigurować węzeł walidatora. Więcej informacji można znaleźć na naszych [stronach poświęconych stakowaniu](/staking) oraz na [Staking Launchpadzie](https://launchpad.ethereum.org/).
 
-## Budowanie zdecentralizowanych aplikacji {#building-support}
+## Tworzenie dapek {#building-support}
 
 Budowanie może być trudne. Oto kilka miejsc skoncentrowanych na rozwoju z doświadczonymi deweloperami Ethereum, którzy chętnie pomogą.
 
-- [Alchemy University](https://university.alchemy.com/#starter_code)
+- [Uniwersytet Alchemy](https://university.alchemy.com/#starter_code)
 - [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [Web3 University](https://www.web3.university/)
+- [Uniwersytet Web3](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 
-Dokumentację i przewodniki dla deweloperów można również znaleźć w naszej sekcji [ Zasoby dla deweloperów Ethereum](/developers/).
+Dokumentację i przewodniki deweloperskie można również znaleźć w naszej sekcji [Zasoby dla deweloperów Ethereum](/developers/).
 
 ### Narzędzia {#dapp-tooling}
 
@@ -84,7 +84,7 @@ Jeśli uruchamiasz węzeł lub walidator, oto kilka społeczności, które pomog
 
 Większość zespołów tworzących klienty Ethereum ma również dedykowane, publiczne przestrzenie, w których można uzyskać wsparcie i zadawać pytania.
 
-### Klienty wykonawcze {#execution-clients}
+### Klienci wykonawczy {#execution-clients}
 
 - [Geth](https://discord.gg/FqDzupGyYf)
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
@@ -92,12 +92,13 @@ Większość zespołów tworzących klienty Ethereum ma również dedykowane, pu
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
 - [Reth](https://github.com/paradigmxyz/reth/discussions)
 
-### Klienty konsensusu {#consensus-clients}
+### Klienci konsensusu {#consensus-clients}
 
 - [Prysm](https://discord.gg/prysmaticlabs)
 - [Nimbus](https://discord.gg/nSmEH3qgFv)
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
-Możesz także [ dowiedzieć się, jak uruchomić węzeł tutaj](/developers/docs/nodes-and-clients/run-a-node/).
+Można również [dowiedzieć się tutaj, jak uruchomić węzeł](/developers/docs/nodes-and-clients/run-a-node/).

@@ -16,5 +16,10 @@
   "page-tutorial-intermediate": "Tingkat menengah",
   "page-tutorial-advanced": "Tingkat lanjut",
   "page-find-wallet-try-removing": "Cobalah menghapus satu atau dua fitur",
-  "page-find-wallet-clear": "Hapus filter"
+  "page-find-wallet-clear": "Hapus filter",
+  "page-tutorial-all": "Semua",
+  "page-tutorial-topics": "Topik",
+  "page-tutorial-search-placeholder": "Cari tutorial...",
+  "page-tutorial-filtering-by": "Memfilter berdasarkan:",
+  "page-tutorial-more-tags": "+{count} lainnya"
 }

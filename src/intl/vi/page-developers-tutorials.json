@@ -1,4 +1,9 @@
 {
   "page-find-wallet-try-removing": "Thử xóa một hoặc hai tính năng",
-  "page-find-wallet-clear": "Xóa bộ lọc"
+  "page-find-wallet-clear": "Xóa bộ lọc",
+  "page-tutorial-all": "Tất cả",
+  "page-tutorial-topics": "Chủ đề",
+  "page-tutorial-search-placeholder": "Tìm kiếm hướng dẫn...",
+  "page-tutorial-filtering-by": "Lọc theo:",
+  "page-tutorial-more-tags": "+{count} thêm"
 }

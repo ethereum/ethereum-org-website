@@ -79,15 +79,15 @@ These controls enable the deployment of autonomous agents that are not unbounded
 
 ### Onchain registries: ERC-8004 {#erc-8004}
 
-[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) is an emerging standard (currently in peer review) that proposes onchain registries for agent identity, capabilities, and attestations.
+[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) defines onchain registries for agent identity, reputation, and validation. Co-authored by contributors from MetaMask, Ethereum Foundation, Google, and Coinbase, it is deployed on 16 networks including Ethereum mainnet, Base, Polygon, Arbitrum, and others.
 
-If adopted, it could provide:
+It provides:
 
-- A shared, trustless directory of agents
-- Standardized attestation formats
-- A foundation for "trustless agent infrastructure" directly on the Ethereum mainnet
+- An **identity registry** for portable, censorship-resistant agent identifiers
+- A **reputation registry** for standardized feedback signals across applications
+- A **validation registry** for requesting independent verification (zkML, TEE, staked re-execution)
 
-This would make it easier for agents to discover, verify, and transact with each other in a fully decentralized environment.
+ERC-8004 makes it easier for agents to discover, verify, and transact with each other in a fully decentralized environment.
 
 ## AI agents on Ethereum {#ai-agents-on-ethereum}
 

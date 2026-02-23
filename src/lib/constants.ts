@@ -24,10 +24,15 @@ export const LOCALES_CODES = BUILD_LOCALES
   ? BUILD_LOCALES.split(",")
   : i18nConfig.map(({ code }) => code)
 
-// Site urls
+// Site urls - auto-detect from Netlify deploy context
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  process.env.DEPLOY_PRIME_URL || // Branch/PR deploys
+  process.env.DEPLOY_URL || // Unique deploy URL
+  process.env.URL || // Primary site URL
+  "https://ethereum.org"
 export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
+export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
@@ -41,9 +46,6 @@ export const GITHUB_BASE_API =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
 export const GITHUB_URL = `https://github.com/`
-export const COINGECKO_API_BASE_URL =
-  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
-export const COINGECKO_API_URL_PARAMS = `&order=market_cap_desc&per_page=250&page=1&sparkline=false&x_cg_demo_api_key=${process.env.COINGECKO_API_KEY}`
 export const COLOR_MODE_STORAGE_KEY = "theme"
 
 // API timing

@@ -1,35 +1,35 @@
 ---
 title: Dagger-Hashimoto
-description: Dagger-Hashimoto algoritmasına detaylı bir bakış.
+description: "Dagger-Hashimoto algoritmasına detaylı bir bakış."
 lang: tr
 ---
 
-Dagger-Hashimoto, Ethereum'un madencilik algoritması için orijinal araştırma uygulaması ve şartnamesiydi. Dagger-Hashimoto'nun yerini [Ethash](#ethash) aldı. 15 Eylül 2022'de gerçekleşen [Birleşim](/roadmap/merge/)'den sonra madencilik tamamen durdurulmuştur. O zamandan beri Ethereum [hisse ispatı](/developers/docs/consensus-mechanisms/pos) mekanizmasını kullanmaktadır. Bu sayfa sadece bilgilendirme içindir - burdaki bilgi Birleşim sonrası Ethereum için geçerli değildir.
+Dagger-Hashimoto, Ethereum'un madencilik algoritması için orijinal araştırma uygulaması ve şartnamesiydi. Dagger-Hashimoto'nun yerini [Ethash](#ethash) almıştır. 15 Eylül 2022'deki [Birleşim](/roadmap/merge/) ile madencilik tamamen durduruldu. O zamandan beri Ethereum, bunun yerine bir [hisse ispatı](/developers/docs/consensus-mechanisms/pos) mekanizması kullanılarak güvence altına alınmıştır. Bu sayfa sadece bilgilendirme içindir - burdaki bilgi Birleşim sonrası Ethereum için geçerli değildir.
 
-## Ön koşullar {#prerequisites}
+## Ön Koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamak için önce [iş kanıtı mutabakatı](/developers/docs/consensus-mechanisms/pow), [madencilik](/developers/docs/consensus-mechanisms/pow/mining) ve [>madencilik algoritmaları](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms) hakkında okumanızı öneririz.
+Bu sayfayı daha iyi anlamak için önce [iş ispatı mutabakatı](/developers/docs/consensus-mechanisms/pow), [madencilik](/developers/docs/consensus-mechanisms/pow/mining) ve [madencilik algoritmaları](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms) hakkında bilgi edinmenizi öneririz.
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto iki hedefi gerçekleştirmeyi amaçlar:
 
-1.  **ASIC direnci**: Algoritma için özel donanım oluşturmanın faydası mümkün olduğunca küçük olmalıdır
-2.  **Hafif istemci doğrulanabilirliği**: Bir blok, hafif bir istemci tarafından verimli bir şekilde doğrulanabilir olmalıdır.
+1. **ASIC direnci**: algoritma için özel donanım oluşturmanın faydası mümkün olduğunca az olmalıdır
+2. **Hafif istemci doğrulanabilirliği**: bir blok, hafif bir istemci tarafından verimli bir şekilde doğrulanabilir olmalıdır.
 
 Ek bir değişiklikle, istenirse, ancak ek karmaşıklık pahasına üçüncü bir hedefin nasıl yerine getirileceğini de belirtiyoruz:
 
-**Tam zincir depolama**: madencilik, tam blok zinciri durumunun depolanmasını gerektirmelidir (Ethereum durum üçlüsünün düzensiz yapısı nedeniyle, özellikle sık kullanılan bazı sözleşmelerde bir miktar budamanın mümkün olacağını tahmin ediyoruz, ancak bunu en asgari seviyeye indirmek istiyoruz).
+**Tam zincir depolama**: madencilik, tüm blokzincir durumunun depolanmasını gerektirmelidir (Ethereum durum ağacının düzensiz yapısı nedeniyle, özellikle sık kullanılan bazı sözleşmelerde bir miktar budamanın mümkün olacağını tahmin ediyoruz, ancak bunu en aza indirmek istiyoruz).
 
-## DAG Jenerasyonu {#dag-generation}
+## DAG Üretimi {#dag-generation}
 
-Algoritmanın kodu aşağıdaki Python'da tanımlanacaktır. İlk olarak belirlitilen kesinliklerin belirli olmayan tam sayılarını dizelere sıralamak için `encode_int` ile başlarız. Tersi de aşağıda verilmiştir:
+Algoritmanın kodu aşağıdaki Python'da tanımlanacaktır. İlk olarak, belirtilen hassasiyetteki işaretsiz tam sayıları dizelere sıralamak için `encode_int` veriyoruz. Tersi de aşağıda verilmiştir:
 
 ```python
 NUM_BITS = 512
 
 def encode_int(x):
-    "Encode an integer x as a string of 64 characters using a big-endian scheme"
+    "Bir tamsayı x'i büyük endian şeması kullanarak 64 karakterlik bir dize olarak kodlayın"
     o = ''
     for _ in range(NUM_BITS / 8):
         o = chr(x % 256) + o
@@ -37,7 +37,7 @@ def encode_int(x):
     return o
 
 def decode_int(s):
-    "Unencode an integer x from a string using a big-endian scheme"
+    "Büyük endian şeması kullanarak bir dizeden bir x tamsayısının kodunu çözün"
     x = 0
     for c in s:
         x *= 256
@@ -45,7 +45,7 @@ def decode_int(s):
     return x
 ```
 
-Daha sonra, `sha3`'ün bir tamsayı alan ve bir tamsayı veren bir işlev olduğunu ve `dbl_sha3`'ün bir double-sha3 işlevi olduğunu varsayacağız; bu referans kodunu bir uygulamaya dönüştürüyorsanız:
+Ardından, `sha3`'ün bir tam sayı alıp bir tam sayı çıktısı veren bir işlev ve `dbl_sha3`'ün bir çift sha3 işlevi olduğunu varsayıyoruz; bu referans kodu bir uygulamaya dönüştürüyorsanız, şunu kullanın:
 
 ```python
 from pyethereum import utils
@@ -82,9 +82,9 @@ parametreler = {
 }
 ```
 
-Bu durumda `P`, `log₂(P)`'nin 512'den biraz daha küçük olacağı şekilde seçilen bir asaldır ve bu, sayılarımızı temsil etmek için kullandığımız 512 bite karşılık gelir. DAG'nin yalnızca ikinci yarısının gerçekten depolanması gerektiğini unutmayın, bu nedenle RAM gereksinimi 1 GB'den başlar ve yılda 441 MB büyür.
+Bu durumda `P`, `log₂(P)`'nin 512'den biraz daha küçük olacak şekilde seçilmiş bir asal sayıdır, bu da sayılarımızı temsil etmek için kullandığımız 512 bite karşılık gelir. DAG'nin yalnızca ikinci yarısının gerçekten depolanması gerektiğini unutmayın, bu nedenle RAM gereksinimi 1 GB'den başlar ve yılda 441 MB büyür.
 
-### Dagger grafiği inşa etmek {#dagger-graph-building}
+### Dagger grafiği oluşturma {#dagger-graph-building}
 
 Dagger grafiği oluşturma ilkesi şu şekilde tanımlanır:
 
@@ -101,7 +101,7 @@ def produce_dag(params, seed, length):
     return o
 ```
 
-Esasen, bir grafikten tek bir düğüm, `sha3(tohum)` olarak başlar ve oradan, rastgele önceki düğümlere dayalı olarak diğer düğümlere sırayla eklemeye başlar. Yeni bir düğüm oluşturulduğunda, `i`'den küçük bazı indeksleri (yukarıdaki `x % i` kullanılarak) rastgele seçmek için çekirdeğin modüler bir gücü hesaplanır ve bu indekslerdeki düğümler, `x` için yeni bir değer oluşturmak üzere bir hesaplamada kullanılır, bu daha sonra küçük bir çalışma kanıtı işlevine (XOR'a dayalı olarak) beslenir ve sonuçta `i` dizininde grafiğin değerini oluşturur. Bu özel tasarımın arkasındaki mantık, DAG'nin sıralı erişimini zorlamak; DAG'ın erişilecek bir sonraki değeri, mevcut değer bilinene kadar belirlenemez. Son olarak, modüler üs alma sonucu daha da özetler.
+Esasen, bir grafiği tek bir düğüm olan `sha3(seed)` olarak başlatır ve oradan rastgele önceki düğümlere dayalı olarak diğer düğümleri sırayla eklemeye başlar. Yeni bir düğüm oluşturulduğunda, `i`'den küçük bazı dizinleri rastgele seçmek için tohumun modüler bir gücü hesaplanır (yukarıdaki `x % i` kullanılarak) ve bu dizinlerdeki düğümlerin değerleri, `x` için yeni bir değer oluşturmak üzere bir hesaplamada kullanılır, bu da nihai olarak `i` dizinindeki grafiğin değerini oluşturmak için küçük bir iş ispatı fonksiyonuna (XOR tabanlı) beslenir. Bu özel tasarımın arkasındaki mantık, DAG'nin sıralı erişimini zorlamak; DAG'ın erişilecek bir sonraki değeri, mevcut değer bilinene kadar belirlenemez. Son olarak, modüler üs alma sonucu daha da özetler.
 
 Bu algoritma, sayı teorisinden elde edilen çeşitli sonuçlara dayanır. Bir tartışma için ek bölümü aşağıda görebilirsiniz.
 
@@ -131,11 +131,11 @@ def quick_calc(params, seed, p):
     return quick_calc_cached(p)
 ```
 
-Esasen, tüm DAG için değerleri hesaplama döngüsünü ortadan kaldıran ve önceki düğüm aramasını özyinelemeli bir çağrı veya bir önbellek aramasıyla değiştiren, yukarıdaki algoritmanın basitçe yeniden yazılmasıdır. `k=1` için önbelleğin gereksiz olduğunu unutmayın, ancak daha fazla optimizasyon aslında DAG'nin ilk birkaç bin değerini önceden hesaplar ve bunu, hesaplamalar için statik bir önbellek olarak tutar; bunun bir kod uygulaması için eke bakın.
+Esasen, tüm DAG için değerleri hesaplama döngüsünü ortadan kaldıran ve önceki düğüm aramasını özyinelemeli bir çağrı veya bir önbellek aramasıyla değiştiren, yukarıdaki algoritmanın basitçe yeniden yazılmasıdır. `k=1` için önbelleğin gereksiz olduğunu, ancak daha ileri bir optimizasyonun aslında DAG'nin ilk birkaç bin değerini önceden hesapladığını ve bunu hesaplamalar için statik bir önbellek olarak tuttuğunu unutmayın; bunun bir kod uygulaması için eke bakın.
 
-## DAG'ların duble destekçisi {#double-buffer}
+## DAG'lerin çift arabelleği {#double-buffer}
 
-Bir tam istemcide 2 DAG'ın [_ çifte buffer_](https://wikipedia.org/wiki/Multiple_buffering)' yukarıda kullanılan formül ile üretilir. Burada düşünce, DAG'lar her blok sayısı `döngü zamanı` tarafından yukarıdaki parametrelere göre üretilir. Üretilen en son DAG'ı kullanan istemci yerine, öncekini kullanır. Bunun yararı, madencilerin tüm verileri aniden yeniden hesaplaması gereken bir adımın dahil edilmesine gerek kalmadan, DAG'lerin zaman içinde değiştirilmesine izin vermesidir. Aksi takdirde, düzenli aralıklarla zincir işlemede ani bir geçici yavaşlama ve merkezileşmeyi önemli ölçüde artırma potansiyeli vardır. Bu nedenle, tüm veriler yeniden hesaplanmadan önceki birkaç dakika içinde %51 saldırı riski vardır.
+Tam bir istemcide, yukarıdaki formülle üretilen 2 DAG'den oluşan bir [_çift arabellek_](https://wikipedia.org/wiki/Multiple_buffering) kullanılır. Buradaki fikir, DAG'lerin yukarıdaki parametrelere göre her `epochtime` blok sayısında üretilmesidir. Üretilen en son DAG'ı kullanan istemci yerine, öncekini kullanır. Bunun yararı, madencilerin tüm verileri aniden yeniden hesaplaması gereken bir adımın dahil edilmesine gerek kalmadan, DAG'lerin zaman içinde değiştirilmesine izin vermesidir. Aksi takdirde, düzenli aralıklarla zincir işlemede ani bir geçici yavaşlama ve merkezileşmeyi önemli ölçüde artırma potansiyeli vardır. Bu nedenle, tüm veriler yeniden hesaplanmadan önceki birkaç dakika içinde %51 saldırı riski vardır.
 
 Bir blok için çalışmayı hesaplamak için kullanılan DAG setini oluşturmak için kullanılan algoritma aşağıdaki gibidir:
 
@@ -254,54 +254,50 @@ Ayrıca, Dagger-Hashimoto'nun blok başlığına ek gereksinimler getirdiğini u
 - İki katmanlı doğrulamanın çalışması için, bir blok başlığı hem nonce hem de orta değer pre-sha3'e sahip olmalıdır
 - Bir yerde, bir blok başlığı mevcut tohum setinin sha3'ünü depolamalıdır
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
 ## Ek {#appendix}
 
-Yukarıda belirtildiği gibi, DAG üretimi için kullanılan RNG, sayı teorisinden elde edilen bazı sonuçlara dayanır. İlk olarak, `picker` değişkeninin temeli olan Lehmer RNG'nin geniş bir periyoda sahip olduğuna dair güvence veriyoruz. İkinci olarak, `P-1`'in başlamak için `x ∈ [2,P-2]`'i sağladığını ya da `pow(x,3,P)`'un `x`'i `1`'e adreslemeyeceğini gösteriyoruz. Son olarak, `pow(x,3,P)` öğesinin bir karma işlevi olarak ele alındığında düşük bir çarpışma oranına sahip olduğunu gösteriyoruz.
+Yukarıda belirtildiği gibi, DAG üretimi için kullanılan RNG, sayı teorisinden elde edilen bazı sonuçlara dayanır. İlk olarak, `picker` değişkeninin temeli olan Lehmer RNG'nin geniş bir periyoda sahip olduğuna dair güvence veriyoruz. İkinci olarak, başlangıç için `x ∈ [2,P-2]` sağlandığında `pow(x,3,P)`'nin `x`'i `1`'e veya `P-1`'e eşlemeyeceğini gösteriyoruz. Son olarak, `pow(x,3,P)`'nin bir karma işlevi olarak ele alındığında düşük bir çarpışma oranına sahip olduğunu gösteriyoruz.
 
-### Lehmer rastgele sayı üreticisi {#lehmer-random-number}
+### Lehmer rastgele sayı üreteci {#lehmer-random-number}
 
 `produce_dag` işlevinin tarafsız rastgele sayılar üretmesi gerekmese de, potansiyel bir tehdit, `seed**i % P`'nin yalnızca bir avuç değer almasıdır. Bu, modeli tanımayanlara kıyasla madencilere bir avantaj sağlayabilir.
 
-Bundan kaçınmak için sayı teorisinden bir sonuca başvurulur. Bir [_güvenli asal_](https://en.wikipedia.org/wiki/Safe_prime) olan `P`, `(P-1)/2`'nin asal olduğu yerde asal olarak kabul edilir. Bir `x` üyenin [çarpımsal grup](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) _sıralaması_ `ℤ/nℤ`, minimum `m` olarak tanımlanır, öyle ki <pre>xᵐ mod P ≡ 1</pre>
-Bu tanımlar göz önüne alındığında, elimizde:
+Bundan kaçınmak için sayı teorisinden bir sonuca başvurulur. [_Güvenli Asal_](https://en.wikipedia.org/wiki/Safe_prime), `(P-1)/2` de asal olacak şekilde bir `P` asalı olarak tanımlanır. [Çarpımsal grup](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ`'nin bir `x` üyesinin _mertebesi_, <pre>xᵐ mod P ≡ 1</pre> olacak şekildeki minimum `m` olarak tanımlanır.
+Bu tanımlar göz önüne alındığında, elimizde şunlar vardır:
 
-> Gözlem 1. `x`, güvenli bir asal `P` için `ℤ/Pℤ` çarpımsal grubunun bir üyesi olsun. `x mod P ≠ 1 mod P` ve `x mod P ≠ P-1 mod P` ise, `x`'in sırası ya `P-1` ya da `(P-1)/2`'dir.
+> Gözlem 1. `x`, güvenli bir `P` asalı için `ℤ/Pℤ` çarpımsal grubunun bir üyesi olsun. Eğer `x mod P ≠ 1 mod P` ve `x mod P ≠ P-1 mod P` ise, `x`'in mertebesi ya `P-1` ya da `(P-1)/2`'dir.
 
-_Kanıt_. `P` güvenli bir asal olduğundan, \[Lagrange Teoremi\]\[lagrange\] ile `x` sırası ya `1`, `2`, `(P-1)/2` veya `P-1` olur.
+_Kanıt_. `P` güvenli bir asal olduğundan, [Lagrange Teoremi][lagrange] gereğince `x`'in mertebesinin `1`, `2`, `(P-1)/2` veya `P-1` olduğunu söyleyebiliriz.
 
-`x`'in sırası `1` olamaz, çünkü Fermat'ın Küçük Teoremi'ne göre:
+`x`'in mertebesi `1` olamaz, çünkü Fermat'nın Küçük Teoremi'ne göre elimizde şu vardır:
 
 <pre>x<sup>P-1</sup> mod P ≡ 1</pre>
 
-Bu nedenle `x`, benzersiz olan `ℤ/nℤ`'nin çarpımsal kimliği olmalıdır. `x ≠ 1` olduğunu varsaydığımız için bu mümkün değildir.
+Dolayısıyla `x`, benzersiz olan `ℤ/nℤ`'nin bir çarpımsal birimi olmalıdır. Varsayım gereği `x ≠ 1` olduğunu varsaydığımız için bu mümkün değildir.
 
-`x` dizisi, `x = P-1` olmadıkça `2` olamaz, çünkü bu, `P`'nin asal olması gerektiği kuralını ihlal eder.
+`x`'in mertebesi `x = P-1` olmadıkça `2` olamaz, çünkü bu `P`'nin asal olmasını ihlal eder.
 
-Yukarıdaki önermeden, `(picker * init) % P` yinelemesinin en az `(P-1)/2` döngü uzunluğuna sahip olacağını görebiliriz. Bunun nedeni, `P`'yi ikinin daha yüksek kuvvetine yaklaşık olarak eşit olan güvenli bir asal sayı olarak seçmemiz ve `init`'in `[2,2**256+1]` aralığında olmasıdır. `P`'nin büyüklüğü göz önüne alındığında, modüler üstelleştirmeden asla bir döngü beklememeliyiz.
+Yukarıdaki önermeden, `(picker * init) % P` yinelemesinin en az `(P-1)/2` döngü uzunluğuna sahip olacağını görebiliriz. Bunun nedeni, `P`'yi ikinin daha yüksek bir kuvvetine yaklaşık olarak eşit olan güvenli bir asal olarak seçmemiz ve `init`'in `[2,2**256+1]` aralığında olmasıdır. `P`'nin büyüklüğü göz önüne alındığında, modüler üs almadan asla bir döngü beklememeliyiz.
 
-DAG'daki ilk hücreyi (`init` etiketli değişken) atadığımızda, ` iş kanıtı (sha3 (tohum) + 2, 3, P)` olarak hesaplarız. İlk bakışta bu, sonucun ne `1` ne de `P-1` olduğunu garanti etmez. Ancak, `P-1` güvenli bir asal olduğundan, Gözlem 1'in bir sonucu olan aşağıdaki ek güvenceye sahibiz:
+DAG'deki ilk hücreyi (etiketi `init` olan değişken) atarken, `pow(sha3(seed) + 2, 3, P)` hesaplarız. İlk bakışta bu, sonucun ne `1` ne de `P-1` olduğunu garanti etmez. Ancak, `P-1` güvenli bir asal olduğundan, Gözlem 1'in bir sonucu olan aşağıdaki ek güvenceye sahibiz:
 
-> Gözlem 2. `x`, güvenli bir asal `P` için `ℤ/Pℤ` çarpımsal grubunun bir üyesi olsun ve `w` bir doğal sayı olsun. `x mod P ≠ 1 mod P` ve `x mod P ≠ P-1 mod P` ve ayrıca `w mod P ≠ P-1 mod P` ve `w mod P ≠ 0 mod P` ise, ardından `xʷ mod P ≠ 1 mod P` ve `xʷ mod P ≠ P-1 mod P`
+> Gözlem 2. `x`, güvenli bir `P` asalı için `ℤ/Pℤ` çarpımsal grubunun bir üyesi ve `w` bir doğal sayı olsun. Eğer `x mod P ≠ 1 mod P` ve `x mod P ≠ P-1 mod P` ise, ayrıca `w mod P ≠ P-1 mod P` ve `w mod P ≠ 0 mod P` ise, o zaman `xʷ mod P ≠ 1 mod P` ve `xʷ mod P ≠ P-1 mod P` olur.
 
-### Karma işlevi olarak modüler üstel alma {#modular-exponentiation}
+### Karma işlevi olarak modüler üs alma {#modular-exponentiation}
 
 Belirli `P` ve `w` değerleri için, `pow(x, w, P)` işlevinin birçok çakışması olabilir. Örneğin, `pow(x,9,19)` yalnızca `{1,18}` değerlerini alır.
 
-`P` asal sayı olarak kabul edildiğinde, modüler üs alma karma fonksiyonu için uygun `w` aşağıdaki sonucu kullanarak seçilebilir:
+`P` asal olduğundan, modüler üs alma karma işlevi için uygun bir `w`, aşağıdaki sonuç kullanılarak seçilebilir:
 
-> Gözlem 3. `P` asal olsun; `w` ve `P-1`, ancak ve ancak tüm `a` ve `b`, `ℤ/Pℤ` içinde ise nispeten asaldır:
-> 
-> <center>
->   `aʷ mod P ≡ bʷ mod P` if and only if `a mod P ≡ b mod P`
-> </center>
+> Gözlem 3. `P` bir asal sayı olsun; `w` ve `P-1`'in aralarında asal olması için gerek ve yeter koşul, `ℤ/Pℤ`'deki tüm `a` ve `b` için şudur:<center>`aʷ mod P ≡ bʷ mod P` olması için gerek ve yeter koşul `a mod P ≡ b mod P` olmasıdır</center>
 
-Bu nedenle, `P`'nin asal olduğu ve `w`'un `P-1`'e görece asal olduğu göz önüne alındığında, şu `|{pow(x, w, P) : x ∈ ℤ}| = P`, hash fonksiyonunun mümkün olan minimum çarpışma oranına sahip olduğunu ima eder.
+Dolayısıyla, `P` asal ve `w`, `P-1` ile aralarında asal olduğunda, `|{pow(x, w, P) : x ∈ ℤ}| = P` olur, bu da karma işlevinin mümkün olan en düşük çarpışma oranına sahip olduğu anlamına gelir.
 
-`P`'nin seçtiğimiz gibi güvenli bir asal olması özel durumunda, o zaman `P-1`'in sadece 1, 2, `(P-1)/2` ve `P-1` faktörleri vardır. `P`'den beri > 7'de, 3'ün `P-1`'e göre asal olduğunu biliyoruz, dolayısıyla `w=3` yukarıdaki önermeyi karşılıyor.
+`P`'nin seçtiğimiz gibi güvenli bir asal olduğu özel durumda, `P-1` yalnızca 1, 2, `(P-1)/2` ve `P-1` çarpanlarına sahiptir. `P` > 7 olduğundan, 3'ün `P-1` ile aralarında asal olduğunu biliyoruz, dolayısıyla `w=3` yukarıdaki önermeyi sağlar.
 
 ## Daha verimli önbellek tabanlı değerlendirme algoritması {#cache-based-evaluation}
 

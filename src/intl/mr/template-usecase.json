@@ -1,13 +1,20 @@
 {
+  "template-usecase-dropdown-ai-agents": "एआय एजंट",
   "template-usecase-dropdown-defi": "विकेंद्रीत अर्थव्यवस्था (DeFi)",
   "template-usecase-dropdown-nft": "नॉन-फंजीबल टोकन (NFT)",
-  "template-usecase-dropdown-dao": "विकेंद्रीत स्वायत्त संस्था (DAO)",
+  "template-usecase-dropdown-dao": "विकेंद्रीकृत स्वायत्त संगठन (DAO)",
+  "template-usecase-dropdown-apps": "इथेरियम अ‍ॅप्लिकेशन्स",
+  "template-usecase-dropdown-payments": "इथेरियम देयके",
+  "template-usecase-dropdown-prediction-markets": "भविष्यवाणी बाजार",
   "template-usecase-dropdown-social-networks": "विकेंद्रित सामाजिक जाळे",
+  "template-usecase-dropdown-restaking": "रिस्टेकिंग",
   "template-usecase-dropdown-identity": "विकेंद्रित ओळख",
   "template-usecase-dropdown-desci": "विकेंद्रित विज्ञान (DeSci)",
   "template-usecase-dropdown-refi": "रीजनरेटिव्ह फायनान्स (ReFi)",
   "template-usecase-dropdown": "Ethereum वापर प्रकरणे",
   "template-usecase-banner": "Ethereum चे वापर नेहमीच विकसित आणि विकसित होत असतात. गोष्टी अधिक स्पष्ट किंवा अधिक अद्ययावत होतील असे तुम्हाला वाटत असलेली कोणतीही माहिती जोडा.",
-  "template-usecase-edit-link": "पृष्ठ सुधारणे",
-  "template-usecase-dropdown-aria": "केस ड्रॉपडाउन मेनू वापरा"
+  "template-usecase-edit-link": "पृष्ठ संपादित करा",
+  "template-usecase-dropdown-aria": "केस ड्रॉपडाउन मेनू वापरा",
+  "template-usecase-dropdown-onchain-gaming": "ऑनचेन गेमिंग",
+  "template-usecase-dropdown-rwa": "वास्तविक-जागतिक मालमत्ता (RWAs)"
 }

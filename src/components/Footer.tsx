@@ -13,6 +13,8 @@ import Translation from "@/components/Translation"
 import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 import { Button } from "./ui/buttons/Button"
 import { BaseLink } from "./ui/Link"
 import { List, ListItem } from "./ui/list"
@@ -62,7 +64,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("what-is-ethereum"),
         },
         {
-          href: "/eth/",
+          href: "/what-is-ether/",
           text: t("what-is-ether"),
         },
         {
@@ -185,7 +187,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("nav-docs-design-label"),
         },
         {
-          href: "/enterprise/",
+          href: ENTERPRISE_ETHEREUM_URL,
           text: t("enterprise-mainnet"),
         },
         {
@@ -331,6 +333,15 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         >
           <ChevronUp /> <Translation id="go-to-top" />
         </Button>
+      </div>
+
+      <div className="px-4 py-4">
+        <BaseLink
+          href="/"
+          className="text-lg font-bold no-underline hover:text-primary"
+        >
+          Ethereum.org
+        </BaseLink>
       </div>
 
       <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">

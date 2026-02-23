@@ -1,13 +1,14 @@
 {
   "comp-tutorial-metadata-minute-read": "dakikalık okuma",
-  "page-tutorial-listing-policy-intro": "Eğitime başlamadan önce listeleme politikalarımızı okuyun.",
+  "page-tutorial-listing-policy-intro": "Bir öğretici göndermeden önce lütfen <a href=\"/contributing/content-resources/\">listeleme politikamızı okuyun</a>.",
   "comp-tutorial-metadata-tip-author": "İpucu yazarı",
+  "page-tutorial-create-an-issue": "Bir konu oluşturun",
+  "page-tutorial-create-an-issue-desc": "Öğreticinizi özetleyen konu şablonunu doldurun.",
   "page-tutorial-raise-issue-btn": "Sorun bildir",
   "page-tutorial-read-time": "dk",
   "page-tutorial-submit-btn": "Bir eğitimi iletin",
-  "page-tutorial-submit-tutorial": "Bir eğitimi iletmek için GitHub kullanmanız gerekir. Bir sorun veya bir çekme talebi oluşturmanızı memnuniyetle karşılıyoruz.",
   "page-tutorial-subtitle": "Düzenlenmiş topluluk eğitimleri listemize hoş geldiniz.",
-  "page-tutorial-tags-error": "Bu etiketlerin hiçbirinde eğitici yok",
+  "page-tutorial-tags-error": "Henüz seçtiğiniz tüm etiketleri içeren bir öğretici bulunmuyor.",
   "page-tutorial-title": "Ethereum Geliştirme Sunumları",
   "page-tutorials-meta-description": "İncelenen Ethereum topluluğu eğitimlerine konuya göre göz atın ve filtreleyin.",
   "page-tutorial-external-link": "Harici",
@@ -17,5 +18,10 @@
   "page-tutorial-advanced": "Gelişmiş",
   "page-find-wallet-try-removing": "Bir veya iki özelliği kaldırmayı deneyin",
   "page-find-wallet-clear": "Filtreleri temizle",
-  "page-tutorials-env-banner": "<code>.env</code>'yi girmeyin! Sırlarınızın başkası tarafından ele geçirilmesi riski taşıdığından lütfen <code>.env</code> dosyanızı başkalarına asla göstermeyin veya başkalarıyla asla paylaşmayın. Versiyon kontrolü kullanıyorsanız <code>.env</code>'nizi bir <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> dosyasına ekleyin."
+  "page-tutorials-env-banner": "<code>.env</code>'yi girmeyin! Sırlarınızın başkası tarafından ele geçirilmesi riski taşıdığından lütfen <code>.env</code> dosyanızı başkalarına asla göstermeyin veya başkalarıyla asla paylaşmayın. Versiyon kontrolü kullanıyorsanız <code>.env</code>'nizi bir <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> dosyasına ekleyin.",
+  "page-tutorial-all": "Tümü",
+  "page-tutorial-topics": "Konular",
+  "page-tutorial-search-placeholder": "Eğitimleri ara...",
+  "page-tutorial-filtering-by": "Şuna göre filtreleniyor:",
+  "page-tutorial-more-tags": "+{count} tane daha"
 }
