@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 /**
- * Audits common.json and common-server.json translation namespaces to identify:
+ * Audits common.json translation namespace to identify:
  * 1. Unused keys (not referenced anywhere in the codebase)
  * 2. Page-specific keys (only used in one page, should be moved to page namespace)
  * 3. Keys used in multiple places (correctly in common)
  *
  * Run with: node scripts/audit-common-translations.mjs
  * Options:
- *   --namespace=NAME  Audit specific namespace (common, common-server, or all)
  *   --fix             Remove unused keys from all locales
  *   --json            Output results as JSON
  *   --verbose         Show all key usages
@@ -38,15 +37,6 @@ async function getCommonKeys() {
   return Object.keys(common)
 }
 
-async function getServerKeys() {
-  const serverPath = join(INTL_DIR, "en/common-server.json")
-  try {
-    const server = JSON.parse(await readFile(serverPath, "utf-8"))
-    return Object.keys(server)
-  } catch {
-    return []
-  }
-}
 
 async function* walkDir(dir) {
   const entries = await readdir(dir, { withFileTypes: true })
@@ -219,10 +209,8 @@ async function main() {
   console.log("Auditing common.json translations...\n")
 
   const commonKeys = await getCommonKeys()
-  const serverKeys = await getServerKeys()
 
   console.log(`Found ${commonKeys.length} keys in common.json`)
-  console.log(`Found ${serverKeys.length} keys in common-server.json`)
   console.log("\nBuilding search index...")
 
   const searchIndex = await buildSearchIndex()
