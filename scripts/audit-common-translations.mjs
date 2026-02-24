@@ -7,12 +7,12 @@
  *
  * Run with: node scripts/audit-common-translations.mjs
  * Options:
- *   --fix             Remove unused keys from all locales
+ *   --fix             Remove unused keys and move page-specific keys
  *   --json            Output results as JSON
  *   --verbose         Show all key usages
  */
 
-import { readdir, readFile, writeFile, stat } from "fs/promises"
+import { readdir, readFile, writeFile } from "fs/promises"
 import { join, relative, extname } from "path"
 
 const ROOT = new URL("..", import.meta.url).pathname
@@ -26,10 +26,73 @@ const VERBOSE = args.includes("--verbose")
 
 const EXTENSIONS = new Set([".ts", ".tsx", ".js", ".jsx"])
 
-const DYNAMIC_KEY_PATTERNS = [
-  /^language-/,
-  /^region-/,
+const DYNAMIC_KEY_PATTERNS = [/^language-/, /^region-/]
+
+// Path to namespace mappings (from src/lib/utils/translations.ts)
+const EXACT_PATH_NAMESPACE_MAP = {
+  "/": "page-index",
+  "/10years/": "page-10-year-anniversary",
+  "/assets/": "page-assets",
+  "/collectibles/": "page-collectibles",
+  "/contributing/translation-program/acknowledgements/":
+    "page-contributing-translation-program-acknowledgements",
+  "/contributing/translation-program/contributors/":
+    "page-contributing-translation-program-contributors",
+  "/enterprise/": "page-enterprise",
+  "/ethereum-history-founder-and-ownership/":
+    "page-ethereum-history-founder-and-ownership",
+  "/ethereum-vs-bitcoin/": "page-ethereum-vs-bitcoin",
+  "/founders/": "page-founders",
+  "/get-eth/": "page-get-eth",
+  "/bug-bounty/": "page-bug-bounty",
+  "/quizzes/": "learn-quizzes",
+  "/trillion-dollar-security/": "page-trillion-dollar-security",
+  "/wallets/find-wallet/": "page-wallets-find-wallet",
+  "/wallets/": "page-wallets",
+  "/what-is-ether/": "page-what-is-ether",
+  "/what-is-the-ethereum-network/": "page-what-is-the-ethereum-network",
+}
+
+const PREFIX_PATH_NAMESPACE_MAP = [
+  ["/staking/deposit-contract/", "page-staking-deposit-contract"],
+  ["/staking/", "page-staking"],
+  ["/layer-2/networks/", "page-layer-2-networks"],
+  ["/layer-2/learn/", "page-layer-2-learn"],
+  ["/layer-2/", "page-layer-2"],
+  ["/developers/local-environment/", "page-developers-local-environment"],
+  ["/developers/learning-tools/", "page-developers-learning-tools"],
+  ["/developers/tutorials/", "page-developers-tutorials"],
+  ["/developers/", "page-developers-index"],
+  ["/contributing/translation-program/translatathon/", "page-translatathon"],
+  ["/community/events/", "page-community-events"],
+  ["/community/", "page-community"],
+  ["/apps/", "page-apps"],
+  ["/energy-consumption/", "page-energy-consumption"],
+  ["/eth/", "page-eth"],
+  ["/ethereum-forks/", "page-history"],
+  ["/resources/", "page-resources"],
+  ["/stablecoins/", "page-stablecoins"],
+  ["/learn/", "page-learn"],
+  ["/gas/", "page-gas"],
+  ["/what-is-ethereum/", "page-what-is-ethereum"],
+  ["/run-a-node/", "page-run-a-node"],
+  ["/roadmap/", "page-roadmap"],
+  ["/start/", "page-start"],
 ]
+
+function getNamespaceForPath(pagePath) {
+  // Check exact matches first
+  if (EXACT_PATH_NAMESPACE_MAP[pagePath]) {
+    return EXACT_PATH_NAMESPACE_MAP[pagePath]
+  }
+  // Check prefix matches (order matters - more specific first)
+  for (const [prefix, namespace] of PREFIX_PATH_NAMESPACE_MAP) {
+    if (pagePath.startsWith(prefix)) {
+      return namespace
+    }
+  }
+  return null
+}
 
 async function getCommonKeys() {
   const commonPath = join(INTL_DIR, "en/common.json")
@@ -205,6 +268,86 @@ async function removeUnusedKeys(unusedKeys) {
   }
 }
 
+async function movePageSpecificKeys(keysToMove) {
+  // Group keys by target namespace
+  const keysByNamespace = new Map()
+  for (const item of keysToMove) {
+    const pagePath = item.uniquePages[0]
+    const namespace = getNamespaceForPath(pagePath)
+    if (!namespace) {
+      console.warn(`  ⚠️  No namespace mapping for ${pagePath}, skipping ${item.key}`)
+      continue
+    }
+    if (!keysByNamespace.has(namespace)) {
+      keysByNamespace.set(namespace, [])
+    }
+    keysByNamespace.get(namespace).push(item.key)
+  }
+
+  if (keysByNamespace.size === 0) {
+    console.log("  No keys to move (no namespace mappings found)")
+    return
+  }
+
+  const locales = await readdir(INTL_DIR)
+
+  for (const locale of locales) {
+    const commonPath = join(INTL_DIR, locale, "common.json")
+    let common
+    try {
+      common = JSON.parse(await readFile(commonPath, "utf-8"))
+    } catch {
+      continue
+    }
+
+    let totalMoved = 0
+
+    for (const [namespace, keys] of keysByNamespace) {
+      const namespacePath = join(INTL_DIR, locale, `${namespace}.json`)
+      let namespaceData = {}
+
+      try {
+        namespaceData = JSON.parse(await readFile(namespacePath, "utf-8"))
+      } catch {
+        // File doesn't exist, will create it
+      }
+
+      let moved = 0
+      for (const key of keys) {
+        if (common[key] !== undefined) {
+          namespaceData[key] = common[key]
+          delete common[key]
+          moved++
+        }
+      }
+
+      if (moved > 0) {
+        // Sort and save namespace file
+        const sortedNamespace = Object.fromEntries(
+          Object.entries(namespaceData).sort(([a], [b]) => a.localeCompare(b))
+        )
+        await writeFile(namespacePath, JSON.stringify(sortedNamespace, null, 2) + "\n")
+        totalMoved += moved
+      }
+    }
+
+    if (totalMoved > 0) {
+      // Sort and save common.json
+      const sortedCommon = Object.fromEntries(
+        Object.entries(common).sort(([a], [b]) => a.localeCompare(b))
+      )
+      await writeFile(commonPath, JSON.stringify(sortedCommon, null, 2) + "\n")
+      console.log(`  ${locale}: moved ${totalMoved} keys`)
+    }
+  }
+
+  // Print summary of moves
+  console.log("\n  Moved keys by namespace:")
+  for (const [namespace, keys] of keysByNamespace) {
+    console.log(`    ${namespace}: ${keys.length} keys`)
+  }
+}
+
 async function main() {
   console.log("Auditing common.json translations...\n")
 
@@ -314,7 +457,15 @@ async function main() {
   }
 
   if (results.moveToPage.length > 0) {
-    console.log(`\n💡 Moving page-specific keys could further optimize the common namespace`)
+    const moveSize = results.moveToPage.length * 50
+    console.log(`\n💡 Moving page-specific keys could save ~${moveSize} bytes per locale`)
+
+    if (FIX_MODE) {
+      console.log("\n📦 Moving page-specific keys...")
+      await movePageSpecificKeys(results.moveToPage)
+    } else {
+      console.log("\n   Run with --fix to move page-specific keys")
+    }
   }
 }
 
