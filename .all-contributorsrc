@@ -14089,6 +14089,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "riva-infinex",
+      "name": "Riva",
+      "avatar_url": "https://avatars.githubusercontent.com/u/216983699?v=4",
+      "profile": "https://github.com/riva-infinex",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
