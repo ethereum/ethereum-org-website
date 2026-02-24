@@ -19,7 +19,7 @@ lang: te
 అనేక వెబ్‌సైట్‌లు మీ చిరునామాకు కనెక్ట్ చేయబడిన స్మార్ట్ కాంట్రాక్ట్‌లను వీక్షించడానికి మరియు రద్దు చేయడానికి మిమ్మల్ని అనుమతిస్తాయి. వెబ్‌సైట్‌ను సందర్శించి, మీ వాలెట్‌ను కనెక్ట్ చేయండి:
 
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (ఇతీరియము)
-- [Blockscout](https://eth.blockscout.com/apps/revokescout) (ఇతీరియము)
+- [Blockscout](https://eth.blockscout.com/essential-dapps/revoke) (ఇతీరియము)
 - [Revoke](https://revoke.cash/) (బహుళ నెట్‌వర్క్‌లు)
 - [Unrekt](https://app.unrekt.net/) (బహుళ నెట్‌వర్క్‌లు)
 - [EverRevoke](https://everrise.com/everrevoke/) (బహుళ నెట్‌వర్క్‌లు)

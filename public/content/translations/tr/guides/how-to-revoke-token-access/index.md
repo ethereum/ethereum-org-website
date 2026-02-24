@@ -19,7 +19,7 @@ Buna karşı biricik korunma yolları test edilmemiş yeni projeleri kullanmakta
 Bazı web siteleri adresinize bağlı akıllı sözleşmeleri görmenize ve kaldırmanıza olanak sağlar. Web sitesini ziyaret edin ve cüzdanınızı bağlayın:
 
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Blockscout](https://eth.blockscout.com/essential-dapps/revoke) (Ethereum)
 - [Revoke](https://revoke.cash/) (birden çok ağ)
 - [Unrekt](https://app.unrekt.net/) (birden çok ağ)
 - [EverRevoke](https://everrise.com/everrevoke/) (birden çok ağ)
