@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next"
 
-import { isLocaleValidISO639_1 } from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
@@ -15,14 +14,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   for (const { slug, translatedLocales } of pages) {
     const normalizedSlug = slug.startsWith("/") ? slug : `/${slug}`
-    const localesForHreflang = translatedLocales.filter(isLocaleValidISO639_1)
     const alternates =
-      localesForHreflang.length > 0
+      translatedLocales.length > 0
         ? {
             languages: {
               "x-default": getFullUrl(DEFAULT_LOCALE, normalizedSlug),
               ...Object.fromEntries(
-                localesForHreflang.map((locale) => [
+                translatedLocales.map((locale) => [
                   locale,
                   getFullUrl(locale, normalizedSlug),
                 ])

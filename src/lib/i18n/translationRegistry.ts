@@ -1,9 +1,7 @@
 import { existsSync } from "fs"
 import { join } from "path"
 
-import {
-  DEV_TOOL_CATEGORY_SLUG_LIST,
-} from "@/data-layer/fetchers/developer-tools/utils"
+import { DEV_TOOL_CATEGORY_SLUG_LIST } from "@/data/developerTools"
 import {
   DEFAULT_LOCALE,
   LOCALES_CODES,
