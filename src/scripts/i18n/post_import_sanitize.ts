@@ -1341,9 +1341,67 @@ function escapeMdxAngleBrackets(content: string): {
       fixCount++
       return `&lt;${digit}`
     })
+
+    // Escape bare JSX fragment <> in prose (Crowdin drops backticks around `<>`)
+    parts[i] = parts[i].replace(/(?<!\\|`)<>(?!`)/g, () => {
+      fixCount++
+      return "\\<>"
+    })
+
+    // Escape bare closing JSX fragment </> in prose
+    parts[i] = parts[i].replace(/(?<!\\|`)<\/>(?!`)/g, () => {
+      fixCount++
+      return "\\</>"
+    })
   }
 
   return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Restore backslash escapes before < that Crowdin dropped during translation.
+ * Compares English source to find all \< patterns, then checks if the
+ * translated file has the same context without the backslash.
+ */
+function restoreDroppedBackslashEscapes(
+  content: string,
+  englishContent: string
+): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+
+  // Collect all \<X patterns from English prose (outside code blocks)
+  const enParts = englishContent.split(codeBlockPattern)
+  const escapedFollowers = new Set<string>()
+  for (let i = 0; i < enParts.length; i++) {
+    if (i % 2 === 1) continue
+    const matches = enParts[i].matchAll(/\\<([^\s>]{1,30})/g)
+    for (const m of matches) {
+      escapedFollowers.add(m[1]) // e.g., "Storage[4]", "=2^256"
+    }
+  }
+
+  if (escapedFollowers.size === 0) return { content, fixCount }
+
+  // Check translation for bare <X where English has \<X
+  const trParts = content.split(codeBlockPattern)
+  for (let i = 0; i < trParts.length; i++) {
+    if (i % 2 === 1) continue
+    for (const follower of escapedFollowers) {
+      const bare = `<${follower}`
+      const escaped = `\\<${follower}`
+      if (trParts[i].includes(bare) && !trParts[i].includes(escaped)) {
+        trParts[i] = trParts[i].split(bare).join(escaped)
+        fixCount++
+      }
+    }
+  }
+
+  return { content: trParts.join(""), fixCount }
 }
 
 /**
@@ -1543,7 +1601,7 @@ function processMarkdownFile(
   )
   applyFix(
     () => escapeMdxAngleBrackets(content),
-    (n) => `Escaped ${n} raw angle brackets before numbers`
+    (n) => `Escaped ${n} raw angle brackets in prose`
   )
   applyFix(
     () => removeOrphanedClosingTags(content),
@@ -1573,6 +1631,10 @@ function processMarkdownFile(
     applyFix(
       () => normalizeInlineComponentsFromEnglish(content, englishMd!),
       (n) => `Normalized ${n} inline components to match English`
+    )
+    applyFix(
+      () => restoreDroppedBackslashEscapes(content, englishMd!),
+      (n) => `Restored ${n} dropped backslash escapes before <`
     )
     applyFix(
       () => repairUnclosedBackticks(content, englishMd!),
