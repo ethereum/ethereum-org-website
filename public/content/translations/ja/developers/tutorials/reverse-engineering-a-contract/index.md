@@ -469,8 +469,8 @@ Etherscanによると`1C`は未知のオペコードですが、これは[Ethers
 |   172 | DUP2         | 0x04 calldataload(4) 0x04 calldataload(4) 0xDA                                                                                                                               |
 |   173 | SLOAD        | Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA                                                                     |
 |   174 | DUP2         | calldataload(4) Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA                                  |
-|   175 | LT           | calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
-|   176 | PUSH2 0x017e | 0x017EC calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
+|   175 | LT           | calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
+|   176 | PUSH2 0x017e | 0x017EC calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
 |   179 | JUMPI        | calldataload(4) 0x04 calldataload(4) 0xDA                                                                                                                                    |
 
 最初のワードがStorage[4]以上の場合、この関数は失敗します。 次のように、戻り値なしで元に戻されます。
