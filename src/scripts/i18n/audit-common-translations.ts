@@ -1,11 +1,11 @@
-#!/usr/bin/env node
+#!/usr/bin/env npx tsx
 /**
  * Audits common.json translation namespace to identify:
  * 1. Unused keys (not referenced anywhere in the codebase)
  * 2. Page-specific keys (only used in one page, should be moved to page namespace)
  * 3. Keys used in multiple places (correctly in common)
  *
- * Run with: node scripts/audit-common-translations.mjs
+ * Run with: npx tsx src/scripts/i18n/audit-common-translations.ts
  * Options:
  *   --fix             Remove unused keys and move page-specific keys
  *   --json            Output results as JSON
@@ -13,9 +13,11 @@
  */
 
 import { readdir, readFile, writeFile } from "fs/promises"
-import { join, relative, extname } from "path"
+import { dirname, extname, join, relative } from "path"
+import { fileURLToPath } from "url"
 
-const ROOT = new URL("..", import.meta.url).pathname
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const ROOT = join(__dirname, "../../..")
 const INTL_DIR = join(ROOT, "src/intl")
 const SEARCH_DIRS = [join(ROOT, "src"), join(ROOT, "app")]
 
@@ -29,7 +31,7 @@ const EXTENSIONS = new Set([".ts", ".tsx", ".js", ".jsx"])
 const DYNAMIC_KEY_PATTERNS = [/^language-/, /^region-/]
 
 // Path to namespace mappings (from src/lib/utils/translations.ts)
-const EXACT_PATH_NAMESPACE_MAP = {
+const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/": "page-index",
   "/10years/": "page-10-year-anniversary",
   "/assets/": "page-assets",
@@ -53,7 +55,7 @@ const EXACT_PATH_NAMESPACE_MAP = {
   "/what-is-the-ethereum-network/": "page-what-is-the-ethereum-network",
 }
 
-const PREFIX_PATH_NAMESPACE_MAP = [
+const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/staking/deposit-contract/", "page-staking-deposit-contract"],
   ["/staking/", "page-staking"],
   ["/layer-2/networks/", "page-layer-2-networks"],
@@ -80,7 +82,40 @@ const PREFIX_PATH_NAMESPACE_MAP = [
   ["/start/", "page-start"],
 ]
 
-function getNamespaceForPath(pagePath) {
+interface Usage {
+  file: string
+  line: number
+  content: string
+}
+
+interface Categories {
+  components: Usage[]
+  layouts: Usage[]
+  pages: Usage[]
+  lib: Usage[]
+  hooks: Usage[]
+  other: Usage[]
+}
+
+interface Analysis {
+  key: string
+  usageCount: number
+  usages?: Usage[]
+  categories: {
+    components: number
+    layouts: number
+    pages: number
+    lib: number
+    hooks: number
+    other: number
+  }
+  uniquePages: string[]
+  isDynamic: boolean
+  recommendation: string
+  reason: string
+}
+
+function getNamespaceForPath(pagePath: string): string | null {
   // Check exact matches first
   if (EXACT_PATH_NAMESPACE_MAP[pagePath]) {
     return EXACT_PATH_NAMESPACE_MAP[pagePath]
@@ -94,19 +129,23 @@ function getNamespaceForPath(pagePath) {
   return null
 }
 
-async function getCommonKeys() {
+async function getCommonKeys(): Promise<string[]> {
   const commonPath = join(INTL_DIR, "en/common.json")
   const common = JSON.parse(await readFile(commonPath, "utf-8"))
   return Object.keys(common)
 }
 
-
-async function* walkDir(dir) {
+async function* walkDir(dir: string): AsyncGenerator<string> {
   const entries = await readdir(dir, { withFileTypes: true })
   for (const entry of entries) {
     const path = join(dir, entry.name)
     if (entry.isDirectory()) {
-      if (entry.name === "node_modules" || entry.name === ".next" || entry.name === "intl") continue
+      if (
+        entry.name === "node_modules" ||
+        entry.name === ".next" ||
+        entry.name === "intl"
+      )
+        continue
       yield* walkDir(path)
     } else if (EXTENSIONS.has(extname(entry.name))) {
       yield path
@@ -114,8 +153,8 @@ async function* walkDir(dir) {
   }
 }
 
-async function buildSearchIndex() {
-  const index = new Map()
+async function buildSearchIndex(): Promise<Map<string, Usage[]>> {
+  const index = new Map<string, Usage[]>()
 
   for (const dir of SEARCH_DIRS) {
     for await (const filePath of walkDir(dir)) {
@@ -129,7 +168,7 @@ async function buildSearchIndex() {
           if (!index.has(key)) {
             index.set(key, [])
           }
-          index.get(key).push({
+          index.get(key)!.push({
             file: relative(ROOT, filePath),
             line: lineNum + 1,
             content: line.trim().slice(0, 100),
@@ -142,8 +181,8 @@ async function buildSearchIndex() {
   return index
 }
 
-function categorizeByLocation(usages) {
-  const categories = {
+function categorizeByLocation(usages: Usage[]): Categories {
+  const categories: Categories = {
     components: [],
     layouts: [],
     pages: [],
@@ -171,23 +210,23 @@ function categorizeByLocation(usages) {
   return categories
 }
 
-function isDynamicKey(key) {
+function isDynamicKey(key: string): boolean {
   return DYNAMIC_KEY_PATTERNS.some((pattern) => pattern.test(key))
 }
 
-function getPageFromPath(filePath) {
+function getPageFromPath(filePath: string): string | null {
   const match = filePath.match(/app\/\[locale\]\/(.+?)\/page\.tsx/)
   if (match) return `/${match[1]}/`
   if (filePath.includes("app/[locale]/page.tsx")) return "/"
   return null
 }
 
-function analyzeKey(key, searchIndex) {
+function analyzeKey(key: string, searchIndex: Map<string, Usage[]>): Analysis {
   const usages = searchIndex.get(key) || []
   const categories = categorizeByLocation(usages)
   const isDynamic = isDynamicKey(key)
 
-  const uniquePages = new Set()
+  const uniquePages = new Set<string>()
   for (const usage of categories.pages) {
     const page = getPageFromPath(usage.file)
     if (page) uniquePages.add(page)
@@ -242,7 +281,7 @@ function analyzeKey(key, searchIndex) {
   }
 }
 
-async function removeUnusedKeys(unusedKeys) {
+async function removeUnusedKeys(unusedKeys: string[]): Promise<void> {
   const locales = await readdir(INTL_DIR)
 
   for (const locale of locales) {
@@ -268,20 +307,22 @@ async function removeUnusedKeys(unusedKeys) {
   }
 }
 
-async function movePageSpecificKeys(keysToMove) {
+async function movePageSpecificKeys(keysToMove: Analysis[]): Promise<void> {
   // Group keys by target namespace
-  const keysByNamespace = new Map()
+  const keysByNamespace = new Map<string, string[]>()
   for (const item of keysToMove) {
     const pagePath = item.uniquePages[0]
     const namespace = getNamespaceForPath(pagePath)
     if (!namespace) {
-      console.warn(`  ⚠️  No namespace mapping for ${pagePath}, skipping ${item.key}`)
+      console.warn(
+        `  ⚠️  No namespace mapping for ${pagePath}, skipping ${item.key}`
+      )
       continue
     }
     if (!keysByNamespace.has(namespace)) {
       keysByNamespace.set(namespace, [])
     }
-    keysByNamespace.get(namespace).push(item.key)
+    keysByNamespace.get(namespace)!.push(item.key)
   }
 
   if (keysByNamespace.size === 0) {
@@ -293,7 +334,7 @@ async function movePageSpecificKeys(keysToMove) {
 
   for (const locale of locales) {
     const commonPath = join(INTL_DIR, locale, "common.json")
-    let common
+    let common: Record<string, string>
     try {
       common = JSON.parse(await readFile(commonPath, "utf-8"))
     } catch {
@@ -304,7 +345,7 @@ async function movePageSpecificKeys(keysToMove) {
 
     for (const [namespace, keys] of keysByNamespace) {
       const namespacePath = join(INTL_DIR, locale, `${namespace}.json`)
-      let namespaceData = {}
+      let namespaceData: Record<string, string> = {}
 
       try {
         namespaceData = JSON.parse(await readFile(namespacePath, "utf-8"))
@@ -319,7 +360,10 @@ async function movePageSpecificKeys(keysToMove) {
           namespaceData[key] = common[key]
           delete common[key]
           moved++
-        } else if (common[key] !== undefined && namespaceData[key] !== undefined) {
+        } else if (
+          common[key] !== undefined &&
+          namespaceData[key] !== undefined
+        ) {
           // Key exists in both - just remove from common
           delete common[key]
         }
@@ -327,7 +371,10 @@ async function movePageSpecificKeys(keysToMove) {
 
       if (moved > 0) {
         // Save namespace file (preserve key order, new keys added at end)
-        await writeFile(namespacePath, JSON.stringify(namespaceData, null, 2) + "\n")
+        await writeFile(
+          namespacePath,
+          JSON.stringify(namespaceData, null, 2) + "\n"
+        )
         totalMoved += moved
       }
     }
@@ -346,7 +393,7 @@ async function movePageSpecificKeys(keysToMove) {
   }
 }
 
-async function main() {
+async function main(): Promise<void> {
   console.log("Auditing common.json translations...\n")
 
   const commonKeys = await getCommonKeys()
@@ -358,10 +405,10 @@ async function main() {
   console.log(`Indexed ${searchIndex.size} unique strings from codebase\n`)
 
   const results = {
-    unused: [],
-    moveToPage: [],
-    keepDynamic: [],
-    keep: [],
+    unused: [] as Analysis[],
+    moveToPage: [] as Analysis[],
+    keepDynamic: [] as Analysis[],
+    keep: [] as Analysis[],
   }
 
   for (const key of commonKeys) {
@@ -444,7 +491,9 @@ async function main() {
 
   if (results.unused.length > 0) {
     const unusedSize = results.unused.length * 50
-    console.log(`\n💡 Removing unused keys could save ~${unusedSize} bytes per locale`)
+    console.log(
+      `\n💡 Removing unused keys could save ~${unusedSize} bytes per locale`
+    )
 
     if (FIX_MODE) {
       console.log("\n🔧 Removing unused keys...")
@@ -456,7 +505,9 @@ async function main() {
 
   if (results.moveToPage.length > 0) {
     const moveSize = results.moveToPage.length * 50
-    console.log(`\n💡 Moving page-specific keys could save ~${moveSize} bytes per locale`)
+    console.log(
+      `\n💡 Moving page-specific keys could save ~${moveSize} bytes per locale`
+    )
 
     if (FIX_MODE) {
       console.log("\n📦 Moving page-specific keys...")
