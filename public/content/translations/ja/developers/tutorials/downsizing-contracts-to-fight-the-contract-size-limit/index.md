@@ -3,7 +3,7 @@ title: "コントラクトのサイズ制限に対処するためのコントラ
 description: "スマートコントラクトが大きくなりすぎるのを防ぐためにできること"
 author: Markus Waas
 lang: ja
-tags: [ "Solidity", "スマート契約", "ストレージ" ]
+tags: [ "Solidity", "スマートコントラクト", "ストレージ" ]
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com

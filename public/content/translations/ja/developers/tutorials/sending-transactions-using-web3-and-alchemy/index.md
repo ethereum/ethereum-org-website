@@ -12,7 +12,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 この初心者向けガイドでは、Web3を使用してイーサリアムトランザクションを送信する方法を説明します。 イーサリアムのブロックチェーンでは、作成、署名、およびブロードキャストという主に3つのステップを通じてトランザクションを送信します。 これら3つのステップを説明することで、皆さんの疑問が氷解することを願っています！ このチュートリアルでは、[Alchemy](https://www.alchemy.com/)を使用して、イーサリアムチェーンにトランザクションを送信します。 [こちら](https://auth.alchemyapi.io/signup)で無料のAlchemyアカウントを作成できます。
 
-\*\*注意：\*\*このガイドは、アプリの_バックエンド_でトランザクションに署名するためのものです。 フロントエンドでトランザクションの署名を統合したい場合は、[Web3とブラウザプロバイダの連携](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider)をご確認ください。
+**注意：**このガイドは、アプリの_バックエンド_でトランザクションに署名するためのものです。 フロントエンドでトランザクションの署名を統合したい場合は、[Web3とブラウザプロバイダの連携](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider)をご確認ください。
 
 ## 基本 {#the-basics}
 
@@ -60,7 +60,7 @@ web3を使用する場合、`eth_sendRawTransaction`には[web3.eth.sendSignedTr
 - [AlchemyにはTransact APIスイートがあります](https://docs.alchemy.com/reference/transact-api-quickstart)。 これにより、強化されたトランザクションの送信、トランザクションが発生する前のシミュレーション、プライベートなトランザクションの送信、ガス最適化されたトランザクションの送信が可能です。
 - また、[Notify API](https://docs.alchemy.com/docs/alchemy-notify)を使用して、トランザクションがメンプールから取得されチェーンに追加されたときにアラートを受け取ることもできます。
 
-\*\*注意：\*\*このガイドには、Alchemyアカウント、イーサリアムアドレスまたはMetaMaskウォレット、NodeJs、およびnpmのインストールが必要です。 インストールが完了していない場合は、以下の手順で行ってください：
+**注意：**このガイドには、Alchemyアカウント、イーサリアムアドレスまたはMetaMaskウォレット、NodeJs、およびnpmのインストールが必要です。 インストールが完了していない場合は、以下の手順で行ってください：
 
 1. [無料のAlchemyアカウントを作成](https://auth.alchemyapi.io/signup)
 2. [MetaMaskアカウントを作成する](https://metamask.io/)（またはイーサリアムアドレスを取得する）

@@ -3,7 +3,7 @@ title: "Manticoreを使ってスマートコントラクトのバグを特定す
 description: "Manticoreを使って、自動でスマートコントラクト上のバグを特定する方法"
 author: Trailofbits
 lang: ja
-tags: [ "Solidity", "スマート契約", "セキュリティ", "テスト", "形式的検証" ]
+tags: [ "Solidity", "スマートコントラクト", "セキュリティ", "テスト", "形式的検証" ]
 skill: advanced
 published: 2020-01-13
 source: Building secure contracts

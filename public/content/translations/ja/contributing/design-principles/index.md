@@ -12,7 +12,7 @@ description: "ethereum.orgのデザインとコンテンツに関する原則"
 
 [ethereum.orgに貢献する](/contributing/)前に、こちらをお読みください。
 
-## デザイン原則とは 貢献の方法 {#ways-to-contribute}
+## デザイン原則とは {#ways-to-contribute}
 
 とてもシンプルですので、ご心配は無用です! **デザイン原則**とは、何かをデザイン(作成、維持、更新など)する際に参照する一連のガイドラインです。
 

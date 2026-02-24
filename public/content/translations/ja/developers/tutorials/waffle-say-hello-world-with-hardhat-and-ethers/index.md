@@ -5,7 +5,7 @@ author: "MiZiet"
 tags:
   [
     "Waffle",
-    "スマート契約",
+    "スマートコントラクト",
     "Solidity",
     "テスト",
     "Hardhat",

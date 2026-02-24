@@ -3,7 +3,7 @@ title: "Solidity で、スマートコントラクトのテスト用モックア
 description: "テストでは、コントラクトのモックアップを使用すべき理由"
 author: Markus Waas
 lang: ja
-tags: [ "Solidity", "スマート契約", "テスト", "モックアップ作成" ]
+tags: [ "Solidity", "スマートコントラクト", "テスト", "モックアップ作成" ]
 skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com

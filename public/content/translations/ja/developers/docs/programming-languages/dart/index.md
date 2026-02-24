@@ -24,7 +24,7 @@ incomplete: true
 Dartでイーサリアムの[JSON-RPC API](/developers/docs/apis/json-rpc/)を使用するための、現在メンテナンスされているライブラリが少なくとも2つあります。
 
 1. [pwa.irのWeb3dart](https://pub.dev/packages/web3dart)
-2. [darticulate.com](https://pub.dev/packages/ethereumのEthereum 5.0.0)
+2. [darticulate.comのEthereum 5.0.0](https://pub.dev/packages/ethereum)
 
 特定のイーサリアムアドレスの操作やさまざまな仮想通貨の価格の取得を可能にする、追加のライブラリもあります。
 [全リストはこちらで確認できます](https://pub.dev/dart/packages?q=ethereum)。

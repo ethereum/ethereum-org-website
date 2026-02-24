@@ -210,7 +210,7 @@ contract MerkleProof {
 
 この関数は、ペアのハッシュを生成します。 これは、`hash`と`pairHash`のJavaScriptコードをSolidityに変換したものです。
 
-\*\*注：\*\*これも読みやすさを優先して最適化された例です。 [関数の定義](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm)に基づけば、データを[`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays)値として保存し、変換を回避できる可能性があります。
+**注：**これも読みやすさを優先して最適化された例です。 [関数の定義](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm)に基づけば、データを[`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays)値として保存し、変換を回避できる可能性があります。
 
 ```solidity
     // マークルプルーフを検証します

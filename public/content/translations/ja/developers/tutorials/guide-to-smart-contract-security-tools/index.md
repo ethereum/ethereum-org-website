@@ -3,7 +3,7 @@ title: "スマートコントラクトセキュリティツールのガイド"
 description: "3つの異なるテストおよびプログラム分析手法の概要"
 author: "Trailofbits"
 lang: ja
-tags: [ "Solidity", "スマート契約", "セキュリティ" ]
+tags: [ "Solidity", "スマートコントラクト", "セキュリティ" ]
 skill: intermediate
 published: 2020-09-07
 source: Building secure contracts

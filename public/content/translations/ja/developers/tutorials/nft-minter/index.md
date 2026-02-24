@@ -7,7 +7,7 @@ tags:
     "Solidity",
     "NFT",
     "Alchemy",
-    "スマート契約",
+    "スマートコントラクト",
     "フロントエンド",
     "Pinata"
   ]

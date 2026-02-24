@@ -2,7 +2,7 @@
 title: "はじめてスマートコントラクトをデプロイする"
 description: "初めてイーサリアムのテストネットにスマートコントラクトをデプロイするためのイントロダクション"
 author: "jdourlens"
-tags: [ "スマート契約", "Remix", "Solidity", "デプロイ" ]
+tags: [ "スマートコントラクト", "Remix", "Solidity", "デプロイ" ]
 skill: beginner
 lang: ja
 published: 2020-04-03

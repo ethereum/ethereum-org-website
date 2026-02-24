@@ -16,7 +16,7 @@ lang: ja
 
 このため、取引所の掲載の提案時には具体的な情報が必要となります。
 
-\*\*注：\*\*分散型取引所の掲載をご希望の場合は、[ウォレットとdappsの掲載ポリシー](/contributing/adding-products/)をご参照ください。
+**注：**分散型取引所の掲載をご希望の場合は、[ウォレットとdappsの掲載ポリシー](/contributing/adding-products/)をご参照ください。
 
 ## 必要な情報 {#what-we-need}
 

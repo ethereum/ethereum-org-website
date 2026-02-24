@@ -403,6 +403,6 @@
   "zero-address-definition": "全てがゼロで構成されたイーサリアムアドレスです。流通からトークンを削除するのに頻繁に使用されます。burn()メソッドを介してスマートコントラクトのインデックスから正式に削除されたトークンとゼロアドレスに送ったトークンは区別されます。",
   "zk-proof-term": "ゼロ知識証明",
   "zk-proof-definition": "ゼロ知識証明とは、ある主張が真であることを、追加の情報を伝えることなく証明することができる暗号論的メソッドです。<a href=\"/developers/docs/scaling/zk-rollups/\">ゼロ知識証明の詳細をご覧ください</a>。",
-  "zk-rollup-term": "ゼロ知識糾合",
+  "zk-rollup-term": "ゼロ知識ロールアップ",
   "zk-rollup-definition": "トランザクションに<a href=\"/glossary/#validity-proof\">有効性証明</a>を使う<a href=\"/glossary/#rollups\">ロールアップ</a>です。これにより、メインネット(レイヤー1)によって提供されるセキュリティを使いながら、<a href=\"/glossary/#layer-2\">レイヤー2</a>のトランザクションにおけるスループットを増やすことが出来ます。<a href=\"/glossary/#optimistic-rollup\">オプティミスティック・ロールアップ</a>のような複雑なトランザクションタイプを扱うことは出来ないものの、トランザクションの送信時に有効であることが証明されるため、遅延に関する問題がありません。 詳細は<a href=\"/developers/docs/scaling/zk-rollups/\">ゼロ知識ロールアップ</a>をご覧ください。"
 }

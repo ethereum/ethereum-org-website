@@ -6,7 +6,7 @@ lang: ja
 
 ## 警告 {#warning}
 
-\*\*ERC-777は[さまざまな形態の攻撃に対する脆弱性](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620)があるため、適切に実装することが困難です。 代わりに[ERC-20](/developers/docs/standards/tokens/erc-20/)を使用することが推奨されます。\*\*このページは、歴史的なアーカイブとして残されています。
+**ERC-777は[さまざまな形態の攻撃に対する脆弱性](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620)があるため、適切に実装することが困難です。 代わりに[ERC-20](/developers/docs/standards/tokens/erc-20/)を使用することが推奨されます。**このページは、歴史的なアーカイブとして残されています。
 
 ## はじめに {#introduction}
 

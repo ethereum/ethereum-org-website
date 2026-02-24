@@ -205,7 +205,7 @@ import "../../math/SafeMath.sol";
 ```
 
 - `GSN/Context.sol`は、etherを持たないユーザーがブロックチェーンを使用できるようにするシステムである[OpenGSN](https://www.opengsn.org/)を使用するために必要な定義です。 これは古いバージョンであることに注意してください。OpenGSNと統合する場合は、[このチュートリアル](https://docs.opengsn.org/javascript-client/tutorial.html)を使用してください。
-- [SafeMathライブラリ](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)は、Solidityバージョン\*\*&lt;0.8.0\*\*の算術オーバーフロー/アンダーフローを防ぎます。 Solidity ≥0.8.0では、算術演算はオーバーフロー/アンダーフローで自動的にリバートするため、SafeMathは不要です。 このコントラクトは、古いコンパイラバージョンとの後方互換性のためにSafeMathを使用しています。
+- [SafeMathライブラリ](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)は、Solidityバージョン**&lt;0.8.0**の算術オーバーフロー/アンダーフローを防ぎます。 Solidity ≥0.8.0では、算術演算はオーバーフロー/アンダーフローで自動的にリバートするため、SafeMathは不要です。 このコントラクトは、古いコンパイラバージョンとの後方互換性のためにSafeMathを使用しています。
 
 &nbsp;
 

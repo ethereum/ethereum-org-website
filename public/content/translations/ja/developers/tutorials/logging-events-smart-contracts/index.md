@@ -2,7 +2,7 @@
 title: "イベントを使用して、スマートコントラクトのデータをログに記録する"
 description: "スマートコントラクトにおけるイベントを紹介し、データのログを取るためにイベントを使用する方法を学ぶ"
 author: "jdourlens"
-tags: [ "スマート契約", "Remix", "Solidity", "イベント" ]
+tags: [ "スマートコントラクト", "Remix", "Solidity", "イベント" ]
 skill: intermediate
 lang: ja
 published: 2020-04-03

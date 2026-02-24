@@ -2,7 +2,7 @@
 title: "スマートコントラクトのセキュリティ・チェックリスト"
 description: "セキュアなスマートコントラクトを作成するための推奨ワークフロー"
 author: "Trailofbits"
-tags: [ "スマート契約", "セキュリティ", "Solidity" ]
+tags: [ "スマートコントラクト", "セキュリティ", "Solidity" ]
 skill: intermediate
 lang: ja
 published: 2020-09-07

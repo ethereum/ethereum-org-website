@@ -2,7 +2,7 @@
 title: "Solidityから他のコントラクトとやり取りする"
 description: "既存のコントラクトからスマートコントラクトをデプロイし、それとやり取りする方法"
 author: "jdourlens"
-tags: [ "スマート契約", "Solidity", "Remix", "デプロイ", "構成可能性" ]
+tags: [ "スマートコントラクト", "Solidity", "Remix", "デプロイ", "構成可能性" ]
 skill: advanced
 lang: ja
 published: 2020-04-05
