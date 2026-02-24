@@ -165,5 +165,6 @@
   "page-upgrades-bug-bounty-not-included-li-5": "Typographical errors",
   "page-upgrades-bug-bounty-not-included-li-6": "Tests",
   "page-upgrades-bug-bounty-not-included-li-7": "High-effort (sustained, CPU or bandwidth intensive, and/or requires more than 1 packet or onchain transaction) single-peer DoS attacks",
-  "page-upgrades-bug-bounty-not-included-li-8": "Any publicly known issues (includes forum posts, PRs, github issues, commits, blog posts, public discord messages, etc.)"
+  "page-upgrades-bug-bounty-not-included-li-8": "Any publicly known issues (includes forum posts, PRs, github issues, commits, blog posts, public discord messages, etc.)",
+  "bug-bounty": "Bug bounty"
 }

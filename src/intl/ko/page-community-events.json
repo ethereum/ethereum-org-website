@@ -94,5 +94,7 @@
   "page-events-meetups-events-subtitle": "이더리움 생태계 주변의 예정된 해커톤, 커뮤니티 모임 및 콘퍼런스를 검색하세요.",
   "page-events-cta-title": "이벤트를 주최하시나요?",
   "page-events-cta-body": "이 목록은 커뮤니티가 관리하는 비완전 목록입니다. 이 목록에 추가할 예정된 이더리움 이벤트가 있으신가요?",
-  "page-events-cta-button": "이벤트 제출"
+  "page-events-cta-button": "이벤트 제출",
+  "item-logo": "{item} 로고",
+  "support": "지원"
 }

@@ -93,5 +93,7 @@
   "page-events-meetups-events-subtitle": "Шукайте майбутні хакатони, збори спільноти та конференції в екосистемі Ethereum.",
   "page-events-cta-title": "Організовуєте подію?",
   "page-events-cta-body": "Це неповний список, який підтримується нашою спільнотою. Знаєте про майбутню подію Ethereum, яку можна додати до цього списку?",
-  "page-events-cta-button": "Надіслати подію"
+  "page-events-cta-button": "Надіслати подію",
+  "item-logo": "Логотип {item}",
+  "support": "Підтримка"
 }

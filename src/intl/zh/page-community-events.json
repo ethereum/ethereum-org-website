@@ -94,5 +94,7 @@
   "page-events-meetups-events-subtitle": "搜索以太坊生态系统中的黑客马拉松、社区集会和会议。",
   "page-events-cta-title": "要组织事件吗？",
   "page-events-cta-body": "这是一个由我们的社区维护的非详尽列表。知道有即将举行的以太坊事件要添加到此列表中吗？",
-  "page-events-cta-button": "提交事件"
+  "page-events-cta-button": "提交事件",
+  "item-logo": "{item} 徽标",
+  "support": "支持"
 }

@@ -93,5 +93,7 @@
   "page-events-meetups-events-subtitle": "Ethereum परिसंस्थेतील आगामी हॅकेथॉन, सामुदायिक मेळावे आणि परिषदा शोधा.",
   "page-events-cta-title": "कार्यक्रम आयोजित करत आहात का?",
   "page-events-cta-body": "ही आमच्या समुदायाने सांभाळलेली एक अपूर्ण सूची आहे. या सूचीमध्ये जोडण्यासाठी तुम्हाला आगामी Ethereum कार्यक्रमाबद्दल माहिती आहे का?",
-  "page-events-cta-button": "कार्यक्रम सबमिट करा"
+  "page-events-cta-button": "कार्यक्रम सबमिट करा",
+  "item-logo": "{item} लोगो",
+  "support": "मदत"
 }

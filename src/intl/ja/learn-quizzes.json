@@ -694,5 +694,6 @@
   "smart-contracts-4-c-label": "非代替性トークン(NFT)",
   "smart-contracts-4-c-explanation": "スマートコントラクトは、デジタルアートから資産所有証明書まで、幅広いNFTを定義するために使用されます。",
   "smart-contracts-4-d-label": "オープンな通貨取引",
-  "smart-contracts-4-d-explanation": "分散型取引所（DEX）は、中央集権的な管理なしで運営するために、スマートコントラクトを使用して構築されています。"
+  "smart-contracts-4-d-explanation": "分散型取引所（DEX）は、中央集権的な管理なしで運営するために、スマートコントラクトを使用して構築されています。",
+  "quizzes": "クイズ"
 }

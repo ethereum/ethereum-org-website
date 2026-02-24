@@ -694,5 +694,6 @@
   "smart-contracts-4-c-label": "Nezaměnitelné tokeny (NFT)",
   "smart-contracts-4-c-explanation": "Chytré kontrakty se používají k definování široké škály NFT, od digitálního umění po certifikáty o vlastnictví aktiv.",
   "smart-contracts-4-d-label": "Otevřená směna měn",
-  "smart-contracts-4-d-explanation": "Decentralizované burzy (DEX) jsou postaveny pomocí chytrých kontraktů, aby fungovaly bez centralizované kontroly."
+  "smart-contracts-4-d-explanation": "Decentralizované burzy (DEX) jsou postaveny pomocí chytrých kontraktů, aby fungovaly bez centralizované kontroly.",
+  "quizzes": "Kvízy"
 }

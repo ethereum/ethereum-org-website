@@ -165,5 +165,6 @@
   "page-upgrades-bug-bounty-not-included-li-5": "ٹائپوگرافیکل غلطیاں",
   "page-upgrades-bug-bounty-not-included-li-6": "ٹیسٹس",
   "page-upgrades-bug-bounty-not-included-li-7": "زیادہ کوشش والے (مسلسل، CPU یا بینڈوڈتھ انٹینسیو، اور/یا 1 سے زیادہ پیکٹ یا آن چین ٹرانزیکشن کی ضرورت والے) سنگل پیئر DoS حملے",
-  "page-upgrades-bug-bounty-not-included-li-8": "کوئی بھی عوامی طور پر معلوم مسائل (بشمول فورم پوسٹس، PRs، گٹ ہب کے مسائل، کمٹس، بلاگ پوسٹس، عوامی ڈسکارڈ پیغامات، وغیرہ)"
+  "page-upgrades-bug-bounty-not-included-li-8": "کوئی بھی عوامی طور پر معلوم مسائل (بشمول فورم پوسٹس، PRs، گٹ ہب کے مسائل، کمٹس، بلاگ پوسٹس، عوامی ڈسکارڈ پیغامات، وغیرہ)",
+  "bug-bounty": "بگ باؤنٹی"
 }

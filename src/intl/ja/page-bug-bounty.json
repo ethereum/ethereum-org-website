@@ -165,5 +165,6 @@
   "page-upgrades-bug-bounty-not-included-li-5": "誤植",
   "page-upgrades-bug-bounty-not-included-li-6": "テスト",
   "page-upgrades-bug-bounty-not-included-li-7": "労力がかかる(持続的、CPUまたは帯域幅を多用する、および/または1つ以上のパケットまたはオンチェーントランザクションを必要とする)単一ピアへのDoS攻撃",
-  "page-upgrades-bug-bounty-not-included-li-8": "公に知られている問題(フォーラムの投稿、PR、githubのissue、コミット、ブログ投稿、公開されているdiscordのメッセージなどを含む)"
+  "page-upgrades-bug-bounty-not-included-li-8": "公に知られている問題(フォーラムの投稿、PR、githubのissue、コミット、ブログ投稿、公開されているdiscordのメッセージなどを含む)",
+  "bug-bounty": "バグバウンティ"
 }

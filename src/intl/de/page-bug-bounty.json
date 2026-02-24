@@ -91,5 +91,6 @@
   "page-upgrades-bug-bounty-card-text-1": "Ein Angreifer kann erfolgreich einen Eclipse-Angriff auf Knoten mit Peer-IDs mit 4 führenden Nullbytes ausführen",
   "page-upgrades-bug-bounty-card-text-2": "Es gibt einen Konsensfehler zwischen zwei Clients, aber es ist schwierig oder unpraktisch für den Angreifer, das Ereignis auszulösen.",
   "page-upgrades-bug-bounty-card-text-3": "Es gibt einen Konsensfehler zwischen zwei Clients und es ist trivial für einen Angreifer, das Ereignis auszulösen.",
-  "page-upgrades-question-title": "Häufig gestellte Fragen"
+  "page-upgrades-question-title": "Häufig gestellte Fragen",
+  "bug-bounty": "Fehler-Kopfgeld (Bug-Bounty)"
 }

@@ -93,5 +93,7 @@
   "page-events-meetups-events-subtitle": "イーサリアムエコシステム周辺で開催される、今後のハッカソン、コミュニティの集まり、カンファレンスを検索しましょう。",
   "page-events-cta-title": "イベントを主催しますか？",
   "page-events-cta-body": "これはコミュニティによって維持されている、網羅的ではないリストです。このリストに追加すべき、今後のイーサリアムイベントをご存知ですか？",
-  "page-events-cta-button": "イベントを提出"
+  "page-events-cta-button": "イベントを提出",
+  "item-logo": "{item}のロゴ",
+  "support": "サポート"
 }

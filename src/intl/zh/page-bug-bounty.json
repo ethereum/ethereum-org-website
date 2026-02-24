@@ -165,5 +165,6 @@
   "page-upgrades-bug-bounty-not-included-li-5": "拼写错误",
   "page-upgrades-bug-bounty-not-included-li-6": "测试",
   "page-upgrades-bug-bounty-not-included-li-7": "高工作量（持续、CPU 或带宽密集型，和/或需要超过 1 个数据包或一笔链上交易）的单点 DoS 攻击",
-  "page-upgrades-bug-bounty-not-included-li-8": "任何公开已知的问题（包括论坛帖子、PR、GitHub 问题、提交、博客文章、公开的 Discord 消息等）"
+  "page-upgrades-bug-bounty-not-included-li-8": "任何公开已知的问题（包括论坛帖子、PR、GitHub 问题、提交、博客文章、公开的 Discord 消息等）",
+  "bug-bounty": "漏洞奖励"
 }

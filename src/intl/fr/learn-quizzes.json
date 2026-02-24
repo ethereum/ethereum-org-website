@@ -613,5 +613,6 @@
   "defi-5-c-label": "Bitcoin",
   "defi-5-c-explanation": "C'est incorrect. Bitcoin est un réseau simple pour stocker de la valeur, pas pour exécuter des programmes avancés. La finance décentralisée nécessite un système plus flexible, comme Ethereum, qui peut exécuter des programmes complexes pour gérer automatiquement les prêts et les échanges.",
   "defi-5-d-label": "Institutions financières traditionnelles",
-  "defi-5-d-explanation": "C'est incorrect. Les applications DeFi n'ont pas besoin des institutions financières traditionnelles. Elles utilisent des programmes sur la blockchain appelés contrats intelligents pour gérer les transactions automatiquement."
+  "defi-5-d-explanation": "C'est incorrect. Les applications DeFi n'ont pas besoin des institutions financières traditionnelles. Elles utilisent des programmes sur la blockchain appelés contrats intelligents pour gérer les transactions automatiquement.",
+  "quizzes": "Quiz"
 }

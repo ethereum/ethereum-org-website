@@ -94,5 +94,7 @@
   "page-events-meetups-events-subtitle": "ابحث عن الهاكاثونات القادمة والتجمعات المجتمعية والمؤتمرات حول النظام البيئي لإيثريوم.",
   "page-events-cta-title": "هل تنظم حدثًا؟",
   "page-events-cta-body": "هذه قائمة غير شاملة يحتفظ بها مجتمعنا. هل تعرف عن حدث إيثريوم قادم لإضافته إلى هذه القائمة؟",
-  "page-events-cta-button": "إرسال حدث"
+  "page-events-cta-button": "إرسال حدث",
+  "item-logo": "شعار {item}",
+  "support": "الدعم"
 }

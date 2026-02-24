@@ -93,5 +93,7 @@
   "page-events-meetups-events-subtitle": "Vyhledejte nadcházející hackathony, komunitní srazy a konference v ekosystému Ethereum.",
   "page-events-cta-title": "Organizujete událost?",
   "page-events-cta-body": "Toto je neúplný seznam, který spravuje naše komunita. Víte o nadcházející události Etherea, kterou bychom měli na tento seznam přidat?",
-  "page-events-cta-button": "Odeslat událost"
+  "page-events-cta-button": "Odeslat událost",
+  "item-logo": "Logo {item}",
+  "support": "Podpora"
 }

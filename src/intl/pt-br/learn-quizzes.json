@@ -523,5 +523,6 @@
   "run-a-node-6-prompt": "O funcionamento de um nó gera recompensas para a rede",
   "run-a-node-6-a-label": "Verdadeiro",
   "run-a-node-6-a-explanation": "O simples fato de executar o software do cliente não lhe dá direito a recompensas. Para ganhar recompensas, você também deve fazer staking.",
-  "run-a-node-6-b-label": "Falso"
+  "run-a-node-6-b-label": "Falso",
+  "quizzes": "Questionários"
 }

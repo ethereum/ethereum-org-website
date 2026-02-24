@@ -134,5 +134,6 @@
   "bug-bounty-faq-q8-title": "Você tem uma chave PGP?",
   "bug-bounty-faq-q8-contentPreview": "Sim. Expanda para mais detalhes.",
   "bug-bounty-faq-q8-content-1": "Use <code>AE96 ED96 9E47 9B00 84F3 E17F E88D 3334 FA5F 6A0A</code>",
-  "bug-bounty-faq-q8-PGP-key": "Chave PGP"
+  "bug-bounty-faq-q8-PGP-key": "Chave PGP",
+  "bug-bounty": "Recompensa por bugs"
 }

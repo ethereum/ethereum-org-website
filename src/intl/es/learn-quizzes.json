@@ -694,5 +694,6 @@
   "smart-contracts-4-c-label": "Tókenes No Fungibles (NFT)",
   "smart-contracts-4-c-explanation": "Los contratos inteligentes sirven para definir una amplia gama de NFT, desde arte digítal, hasta activos que representan un certificado de propiedad.",
   "smart-contracts-4-d-label": "Intercambio abierto de monedas",
-  "smart-contracts-4-d-explanation": "Los intercambios descentralizados (DEX) se basan en contratos inteligentes para operar sin un control centralizado."
+  "smart-contracts-4-d-explanation": "Los intercambios descentralizados (DEX) se basan en contratos inteligentes para operar sin un control centralizado.",
+  "quizzes": "Cuestionarios"
 }
