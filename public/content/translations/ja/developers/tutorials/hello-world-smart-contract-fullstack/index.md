@@ -5,7 +5,7 @@ author: "nstrike2"
 tags:
   [
     "Solidity",
-    "hardhat",
+    "Hardhat",
     "Alchemy",
     "スマート契約",
     "デプロイ",

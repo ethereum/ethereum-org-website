@@ -2,7 +2,7 @@
 title: "初心者向けのHello Worldスマートコントラクト"
 description: "イーサリアムでの簡単なスマートコントラクトの作成とデプロイに関する入門チュートリアル。"
 author: "elanh"
-tags: [ "Solidity", "hardhat", "Alchemy", "スマート契約", "デプロイ" ]
+tags: [ "Solidity", "Hardhat", "Alchemy", "スマート契約", "デプロイ" ]
 skill: beginner
 lang: ja
 published: 2021-03-31

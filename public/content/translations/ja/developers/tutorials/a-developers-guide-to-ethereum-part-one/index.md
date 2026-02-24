@@ -3,7 +3,7 @@ title: "Pythonデベロッパーのためのイーサリアム入門、パート
 description: "イーサリアム開発の概要。特に、プログラミング言語であるPythonの知識があるデベロッパーに役立つ情報"
 author: Marc Garreau
 lang: ja
-tags: [ "python", "web3.py" ]
+tags: [ "Python", "web3.py" ]
 skill: beginner
 published: 2020-09-08
 source: Snake charmers

@@ -1,6 +1,6 @@
 ---
 title: ".NETデベロッパーのためのイーサリアム"
-description: ".NETベースのプロジェクトとツールを使ってイーサリムの開発方法を学ぶ"
+description: ".NETベースのプロジェクトとツールを使ってイーサリアムの開発方法を学ぶ"
 lang: ja
 incomplete: true
 ---

@@ -12,7 +12,7 @@ published: 2021-04-22
 [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 1100万ドル
 [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 600万ドル
 
-いずれもAlchemyの強力なAPIを使ってNFTをミントしています。 このチュートリアルでは、\<10分で同じことを行う方法を説明します。
+いずれもAlchemyの強力なAPIを使ってNFTをミントしています。 このチュートリアルでは、\&lt;10分で同じことを行う方法を説明します。
 
 「NFTのミント」とは、ブロックチェーン上にERC-721トークンのユニークなインスタンスを公開することです。 この[NFTチュートリアルシリーズのパート1](/developers/tutorials/how-to-write-and-deploy-an-nft/)で作成したスマートコントラクトを使って、Web3のスキルを駆使し、NFTをミントしてみましょう。 このチュートリアルが終わるころには、あなた(とウォレット)が望むだけNFTをミントできるようになります。
 

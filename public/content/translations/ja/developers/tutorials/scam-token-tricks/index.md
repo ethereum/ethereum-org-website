@@ -8,7 +8,7 @@ tags:
     "Solidity",
     "ERC-20",
     "JavaScript",
-    "typescript"
+    "TypeScript"
   ]
 skill: intermediate
 published: 2023-09-15

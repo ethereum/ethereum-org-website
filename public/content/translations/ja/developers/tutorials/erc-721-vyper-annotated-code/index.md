@@ -3,7 +3,7 @@ title: "Vyper ERC-721コントラクトウォークスルー"
 description: "中村龍矢氏のERC-721コントラクトとその仕組み"
 author: Ori Pomerantz
 lang: ja
-tags: [ "vyper", "ERC-721", "python" ]
+tags: [ "Vyper", "ERC-721", "Python" ]
 skill: beginner
 published: 2021-04-01
 ---
