@@ -117,8 +117,8 @@ _ブロックチェーン上に秘密はありません_。ブロックチェー
 | ----: | ------------ | ---------------------------------------------------------------------------------------------------- |
 |   1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                                  |
 |   1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                                  |
-|   1AE | ISZERO       | Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
-|   1AF | PUSH2 0x01df | 0x01DF Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|   1AE | ISZERO       | Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
+|   1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |   1B2 | JUMPI        |                                                                                                      |
 
 `Value*`の値が、2^256-CALLVALUE-1以下の場合にジャンプします。 これは、オーバーフローを防ぐためのロジックに見えます。 実際に、オフセット0x01DEでいくつかの無意味な操作(例: 削除される寸前にメモリへの書き込み)をした後、オーバーフローが検出されると、標準の動作としてコントラクトが元に戻されます。

@@ -996,13 +996,15 @@ export const helloWorldContract = new web3.eth.Contract(
 
 これは非常にシンプルな関数です。 コントラクトから読み取るために、単純な非同期のweb3呼び出しを作成します。 この関数では、スマートコントラクトに保存されているメッセージを返します。
 
-// interact.jsexport const loadCurrentMessage = async () => {
-const message = await helloWorldContract.methods.message().call()
-return message
-}
+`interact.js`ファイルの `loadCurrentMessage`を次のように更新してください。
 
 ```javascript
-`interact.js`ファイルの `loadCurrentMessage`を次のように更新してください。
+// interact.js
+
+export const loadCurrentMessage = async () => {
+  const message = await helloWorldContract.methods.message().call()
+  return message
+}
 ```
 
 このスマートコントラクトをUIに表示したいので、`HelloWorld.js`コンポーネントの `useEffect`関数を次のように更新します。
