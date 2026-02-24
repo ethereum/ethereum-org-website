@@ -11,7 +11,7 @@ lang: en
 
 The [Ethereum Foundation](http://ethereum.foundation/) (EF) is a non-profit organization that supports the [Ethereum](/) ecosystem. It funds protocol development, grows the ecosystem, and advocates for Ethereum.
 
-The EF is not a company, or even a traditional non-profit. It does not control or lead [Ethereum](/), nor is it the only organization that funds critical development of Ethereum-related technologies. The EF is one part of a much larger [ecosystem](/community/).
+The EF is not a company, or even a traditional non-profit. It does not control or lead Ethereum, nor is it the only organization that funds critical development of Ethereum-related technologies. The EF is one part of a much larger [ecosystem](/community/).
 
 ## What the EF does {#what-the-ef-does}
 
