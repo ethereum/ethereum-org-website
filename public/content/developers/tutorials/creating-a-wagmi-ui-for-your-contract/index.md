@@ -375,10 +375,13 @@ const Timer = ({ lastUpdate }: TimerProps) => {
 We need to have state (a variable tied to the component) and update it for the component to work correctly. But we never need to read it, so don't bother to do a variable.
 
 ```tsx
-  setInterval(() => setNow(new Date), 1000)
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 1000)
+    return () => clearInterval(id)
+  }, [])
 ```
 
-The [`setInterval`](https://www.w3schools.com/jsref/met_win_setinterval.asp) function lets us schedule a function to run periodically. In this case, every second. The function calls `setNow` to update the state, so the `Timer` component will be re-rendered.
+The [`setInterval`](https://www.w3schools.com/jsref/met_win_setinterval.asp) function lets us schedule a function to run periodically. In this case, every second. The function calls `setNow` to update the state, so the `Timer` component will be re-rendered. We wrap this inside [`useEffect`](https://react.dev/reference/react/useEffect) with an empty dependency list so it'll happen just once, rather than each time to component is rendered.
 
 ```tsx
   const secondsSinceUpdate = Math.floor(
@@ -662,13 +665,13 @@ These days there are a lot of [L2 scaling solution](https://ethereum.org/layer-2
 
 1. Edit `src/wagmi.ts`
 
-    1. Import the `defineChain` type from viem.
+    A. Import the `defineChain` type from viem.
 
         ```ts
         import { defineChain } from 'viem'
         ```
 
-    2. Add the network definition. You don't really need to do this for Optimism Sepolia, [it is already in `viem`](https://github.com/wevm/viem/blob/main/src/chains/definitions/optimismSepolia.ts), but this way you learn how to add a blockchain that is not in `viem`.
+    B. Add the network definition. You don't really need to do this for Optimism Sepolia, [it is already in `viem`](https://github.com/wevm/viem/blob/main/src/chains/definitions/optimismSepolia.ts), but this way you learn how to add a blockchain that is not in `viem`.
 
       ```ts
       const optimismSepolia = defineChain({
@@ -696,7 +699,7 @@ These days there are a lot of [L2 scaling solution](https://ethereum.org/layer-2
       })
       ```
 
-    3. Add the new chain to the `createConfig` call.
+    C. Add the new chain to the `createConfig` call.
 
         ```ts
         export const config = createConfig({
@@ -743,9 +746,9 @@ These days there are a lot of [L2 scaling solution](https://ethereum.org/layer-2
 
 3. In your browser.
 
-    1. Browse to [ChainList](https://chainlist.org/chain/11155420?testnets=true) and click one of buttons on the right side of the table to add the chain to your wallet.
+    A. Browse to [ChainList](https://chainlist.org/chain/11155420?testnets=true) and click one of buttons on the right side of the table to add the chain to your wallet.
 
-    2. In the application, **Disconnect** and then reconnect to change the blockchain. There are nicer ways to handle this, but they'd require application changes.
+    B. In the application, **Disconnect** and then reconnect to change the blockchain. There are nicer ways to handle this, but they'd require application changes.
 
 
 ## Conclusion {#conclusion}
