@@ -71,7 +71,7 @@ lang: zh
 - [Solidity](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
-- [安全帽](https://discord.gg/xtrMGhmbfZ)
+- [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 

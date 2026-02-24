@@ -18,5 +18,10 @@
   "page-tutorial-advanced": "Avanzado",
   "page-find-wallet-try-removing": "Intente eliminar una o dos características",
   "page-find-wallet-clear": "Limpiar filtros",
-  "page-tutorials-env-banner": "¡No corra riesgos! <code>.env</code>! Asegúrese de no compartir ni exponer nunca su archivo <code>.env</code> con nadie, ya que de lo contrario estará compartiendo sus secretos. Si está utilizando el control de la versión, añada su <code>.env</code> al archivo <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
+  "page-tutorials-env-banner": "¡No corra riesgos! <code>.env</code>! Asegúrese de no compartir ni exponer nunca su archivo <code>.env</code> con nadie, ya que de lo contrario estará compartiendo sus secretos. Si está utilizando el control de la versión, añada su <code>.env</code> al archivo <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>.",
+  "page-tutorial-all": "Todos",
+  "page-tutorial-topics": "Temas",
+  "page-tutorial-search-placeholder": "Buscar tutoriales...",
+  "page-tutorial-filtering-by": "Filtrando por:",
+  "page-tutorial-more-tags": "+{count} más"
 }

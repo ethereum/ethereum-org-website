@@ -1,4 +1,9 @@
 {
   "page-find-wallet-try-removing": "حاول إزالة ميزة أو اثنين",
-  "page-find-wallet-clear": "إزالة المرشحات"
+  "page-find-wallet-clear": "إزالة المرشحات",
+  "page-tutorial-all": "الكل",
+  "page-tutorial-topics": "المواضيع",
+  "page-tutorial-search-placeholder": "ابحث في البرامج التعليمية...",
+  "page-tutorial-filtering-by": "تصفية حسب:",
+  "page-tutorial-more-tags": "+{count} المزيد"
 }

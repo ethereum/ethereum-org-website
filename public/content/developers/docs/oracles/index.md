@@ -410,6 +410,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[DIA](https://www.diadata.org/)** - A cross-chain oracle network delivering verifiable data feeds for 20,000+ assets across all major asset classes. DIA sources raw trade data directly from 100+ primary markets and computes it onchain, ensuring complete data transparency and verifiability with custom configurations for any use case.
 
+**[Stork](https://stork.network)** - Stork delivers price data at ultra-low latency, supporting a wide range of use cases including perpetuals markets, lending protocols, and DeFi ecosystems, with new assets supported rapidly on listing.
+
 ## Further reading {#further-reading}
 
 **Articles**

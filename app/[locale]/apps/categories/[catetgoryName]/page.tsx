@@ -127,6 +127,12 @@ const Page = async ({
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem>
+                    <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                    /
+                  </BreadcrumbSeparator>
+                  <BreadcrumbItem>
                     <BreadcrumbLink href="/apps" className="uppercase">
                       {t("page-apps-all-apps")}
                     </BreadcrumbLink>

@@ -100,7 +100,6 @@ pnpm build-storybook       # Build Storybook
 pnpm chromatic             # Run Chromatic visual tests
 
 # Content Management
-pnpm crowdin-import        # Import translations from Crowdin
 pnpm markdown-checker      # Validate markdown content
 pnpm events-import         # Import community events
 ```

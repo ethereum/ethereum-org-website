@@ -1,12 +1,9 @@
 ---
 title: "Sözleşme boyutu sınırıyla mücadele etmek için sözleşmelerin küçültülmesi"
-description: Akıllı sözleşmelerinizin çok fazla büyümesini önlemek için ne yapabilirsiniz?
+description: "Akıllı sözleşmelerinizin çok fazla büyümesini önlemek için ne yapabilirsiniz?"
 author: Markus Waas
 lang: tr
-tags:
-  - "solidity"
-  - "akıllı kontratlar"
-  - "depolama"
+tags: [ "solidity", "akıllı kontratlar", "depolama" ]
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
@@ -15,13 +12,13 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## Neden bir sınır var? {#why-is-there-a-limit}
 
-[22 Kasım 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)'da Spurious Dragon sert çatalı 24,576 kb akıllı sözleşme boyutu sınırı ekleyen [EIP-170](https://eips.ethereum.org/EIPS/eip-170)'i tanıttı. Bir Solidity geliştiricisi olarak sizin için bu, sözleşmenize giderek daha fazla işlevsellik eklediğinizde, bir noktada sınıra ulaşacağınız ve dağıtım sırasında şu hatayı göreceğiniz anlamına gelir:
+[22 Kasım 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/) tarihinde Sahte Ejderha sert çatallanması, 24,576 kb'lık bir akıllı sözleşme boyutu sınırı ekleyen [EIP-170](https://eips.ethereum.org/EIPS/eip-170)'i getirdi. Bir Solidity geliştiricisi olarak sizin için bu, sözleşmenize giderek daha fazla işlevsellik eklediğinizde, bir noktada sınıra ulaşacağınız ve dağıtım sırasında şu hatayı göreceğiniz anlamına gelir:
 
 `Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). Bu sözleşme Mainnet'te dağıtılamayabilir. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 
 Bu sınır, hizmet reddi (DOS) saldırılarını önlemek için getirildi. Bir sözleşmeye yapılan herhangi bir çağrı, gaz açısından nispeten ucuzdur. Bununla birlikte, Ethereum düğümleri için bir sözleşme çağrısının etkisi, çağrılan sözleşme kodunun boyutuna bağlı olarak orantısız bir şekilde artar (kodu diskten okumak, kodu önceden işlemek, Merkle kanıtına veri eklemek). Saldırganın başkaları için çok iş yapmak için az kaynağa ihtiyaç duyduğu böyle bir durumunuz olduğunda, DOS saldırıları potansiyeli elde edersiniz.
 
-Bir doğal sözleşme boyutu limiti, blok gaz limiti olduğu için başlangıçta bu çok da büyük bir problem değildi. Açıkça görülüyor ki bir sözleşmenin, sözleşmenin tüm bit kodunu tutan bir işlem içinde dağıtılması gerekir. Bir bloğa yalnızca bir işlemi dahil ederseniz bu gazın tamamını kullanabilirsiniz, ancak bu sonsuz değildir. [Londra Yükseltmesi](/ethereum-forks/#london)'nden bu yana blok gaz limiti, ağ talebine bağlı olarak 15 milyon ile 30 milyon birim arasında değişti.
+Bir doğal sözleşme boyutu limiti, blok gaz limiti olduğu için başlangıçta bu çok da büyük bir problem değildi. Açıkça görülüyor ki bir sözleşmenin, sözleşmenin tüm bit kodunu tutan bir işlem içinde dağıtılması gerekir. Bir bloğa yalnızca bir işlemi dahil ederseniz bu gazın tamamını kullanabilirsiniz, ancak bu sonsuz değildir. [Londra Yükseltmesi](/ethereum-forks/#london)'nden bu yana blok gaz limiti, ağ talebine bağlı olarak 15 milyon ile 30 milyon birim arasında değişebilmektedir.
 
 Aşağıda, potansiyel etkilerine göre sıralanan bazı yöntemlere bakacağız. Bunu, kilo verme gibi düşünün. Birinin hedef kilosuna (bizim durumumuzda 24 kb) ulaşması için en iyi strateji, önce büyük etkiye sahip yöntemlere odaklanmaktır. Çoğu zaman sadece diyeti düzeltmek amaca ulaştırır ancak bazen biraz daha fazlası gerekir. Sonra biraz egzersiz (orta etki) veya hatta takviye besinler (küçük etki) ekleyebilirsiniz.
 
@@ -37,11 +34,11 @@ Bu her zaman ilk yaklaşımınız olmalıdır. Sözleşmeyi birden çok küçük
 
 ### Kütüphaneler {#libraries}
 
-Fonksiyon kodunu depolama alanından uzaklaştırmanın basit bir yolu, bir [kütüphane](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#libraries) kullanmaktır. Kütüphane fonksiyonları derleme esnasında doğrudan [sözleşmeye ekleneceği](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking) için onları dahili olarak duyurmayın. Ancak genel fonksiyonları kullanırsanız, bunlar aslında ayrı bir kütüphane sözleşmesinde olacaktır. Kütüphanelerin kullanımını daha uygun hâle getirmek için [using for](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#using-for)'u göz önüne alın.
+İşlevsellik kodunu depolamadan uzaklaştırmanın basit bir yolu, bir [kütüphane](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#libraries) kullanmaktır. Kütüphane fonksiyonlarını `internal` olarak bildirmeyin, çünkü bunlar derleme sırasında doğrudan [sözleşmeye eklenecektir](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking). Ancak genel fonksiyonları kullanırsanız, bunlar aslında ayrı bir kütüphane sözleşmesinde olacaktır. Kütüphanelerin kullanımını daha kolay hale getirmek için [`using for`](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#using-for) kullanmayı düşünün.
 
 ### Proxy'ler {#proxies}
 
-Proxy sistemi, daha gelişmiş bir stratejidir. Kütüphaneler arka planda, çağıran sözleşmenin durumuyla başka bir sözleşmenin fonksiyonunu yürüten `DELEGATECALL` kullanır. Proxy'ler hakkında dahasını öğrenmek için [bu blog gönderisine](https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2) bakın. Yükseltilebilirliği sağlamak gibi daha fazla işlevsellik sağlarlar ancak aynı zamanda çok fazla karmaşıklık da eklerler. Herhangi bir nedenle tek seçeneğiniz olmadıkça, bunları yalnızca sözleşme boyutlarını azaltmak için eklenmesini tavsiye etmem.
+Proxy sistemi, daha gelişmiş bir stratejidir. Kütüphaneler arka planda, çağıran sözleşmenin durumuyla başka bir sözleşmenin fonksiyonunu yürüten DELEGATECALL kullanır. Proxy sistemleri hakkında daha fazla bilgi edinmek için [bu blog gönderisine](https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2) göz atın. Yükseltilebilirliği sağlamak gibi daha fazla işlevsellik sağlarlar ancak aynı zamanda çok fazla karmaşıklık da eklerler. Herhangi bir nedenle tek seçeneğiniz olmadıkça, bunları yalnızca sözleşme boyutlarını azaltmak için eklenmesini tavsiye etmem.
 
 ## Orta etki {#medium-impact}
 
@@ -53,8 +50,6 @@ Bu bariz bir yöntem. Fonksiyonlar, sözleşme boyutunu biraz artırır.
 - **Dahili**: Ayrıca dahili/özel fonksiyonları kaldırabilir ve fonksiyon yalnızca bir kez çağrıldığı sürece kodu satır içine alabilirsiniz.
 
 ### Ek değişkenlerden kaçının {#avoid-additional-variables}
-
-Bunun gibi küçük bir değişim:
 
 ```solidity
 function get(uint id) returns (address,address) {
@@ -69,7 +64,7 @@ function get(uint id) returns (address,address) {
 }
 ```
 
-**0,28kb**'lık bir fark yaratır. Muhtemelen sözleşmelerinizde birçok benzer durum vardır ve bunlar gerçekten önemli miktarlara ulaşabilir.
+Bunun gibi basit bir değişiklik **0,28kb**'lık bir fark yaratır. Muhtemelen sözleşmelerinizde birçok benzer durum vardır ve bunlar gerçekten önemli miktarlara ulaşabilir.
 
 ### Hata mesajını kısaltın {#shorten-error-message}
 
@@ -77,7 +72,6 @@ Uzun geri dönüş mesajları ve özellikle birçok farklı geri dönüş mesaj�
 
 ```solidity
 require(msg.sender == owner, "Only the owner of this contract can call this function");
-
 ```
 
 ```solidity
@@ -96,15 +90,15 @@ if (msg.sender != owner) {
 }
 ```
 
-### Optimize edicide düşük bir çalıştırma değerini göz önünde bulundurun {#consider-a-low-run-value-in-the-optimizer}
+### Optimize edicide düşük bir çalıştırma değeri düşünün {#consider-a-low-run-value-in-the-optimizer}
 
-Optimize edici ayarlarını da değiştirebilirsiniz. 200 varsayılan değeri, bit kodunu bir fonksiyon 200 kez çağrılmış gibi optimize etmeye çalıştığı anlamına gelir. 1 olarak değiştirirseniz, temel olarak optimize ediciye her fonksiyonu yalnızca bir kez çalıştırma durumu için optimize etmesini söylersiniz. Yalnızca bir kez çalışmak için optimize edilmiş bir fonksiyon, dağıtımın kendisi için optimize edildiği anlamına gelir. Bunun, **işlevleri çalıştırmak için gereken [gaz maliyetlerini](/developers/docs/gas/) artırdığını unutmayın**, yani bunu yapmamak daha iyi olabilir.
+Optimize edici ayarlarını da değiştirebilirsiniz. 200 varsayılan değeri, bit kodunu bir fonksiyon 200 kez çağrılmış gibi optimize etmeye çalıştığı anlamına gelir. 1 olarak değiştirirseniz, temel olarak optimize ediciye her fonksiyonu yalnızca bir kez çalıştırma durumu için optimize etmesini söylersiniz. Yalnızca bir kez çalışmak için optimize edilmiş bir fonksiyon, dağıtımın kendisi için optimize edildiği anlamına gelir. **Bunun, fonksiyonları çalıştırmak için gereken [gaz maliyetlerini](/developers/docs/gas/) artırdığını unutmayın**, bu yüzden bunu yapmak istemeyebilirsiniz.
 
 ## Küçük etki {#small-impact}
 
-### Fonksiyonlara yapılar aktarmaktan kaçının {#avoid-passing-structs-to-functions}
+### Yapıları (structs) fonksiyonlara geçirmekten kaçının {#avoid-passing-structs-to-functions}
 
-Eğer [ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2) kullanıyorsanız bu, fonksiyonlara yapı aktarmamanıza yardımcı olabilir. Parametreyi bir yapı olarak aktarmaktansa...
+[ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2) kullanıyorsanız, bir fonksiyona yapıları (structs) geçirmemek yardımcı olabilir. Parametreyi bir yapı (struct) olarak geçmek yerine gerekli parametreleri doğrudan geçin. Bu örnekte **0,1kb** daha kazandık.
 
 ```solidity
 function get(uint id) returns (address,address) {
@@ -126,12 +120,10 @@ function _get(address addr1, address addr2) private view returns(address,address
 }
 ```
 
-...gerekli parametreleri doğrudan aktarın. Bu örnekte **0,1 kb** daha kazandık.
+### Fonksiyonlar ve değişkenler için doğru görünürlüğü bildirin {#declare-correct-visibility-for-functions-and-variables}
 
-### Fonksiyonlar ve değişkenler için doğru görünürlük duyurun {#declare-correct-visibility-for-functions-and-variables}
-
-- Yalnızca dışarıdan çağrılan fonksiyonlar veya değişkenler ne olacak? Onları `public` yerine `external` olarak duyurun.
-- Yalnızca sözleşmenin içinden çağrılan fonksiyonlar veya değişkenler ne olacak? Onları `public` yerine `private` veya `external` olarak duyurun.
+- Yalnızca dışarıdan çağrılan fonksiyonlar veya değişkenler ne olacak? Onları `public` yerine `external` olarak bildirin.
+- Yalnızca sözleşmenin içinden çağrılan fonksiyonlar veya değişkenler ne olacak? Onları `public` yerine `private` veya `internal` olarak bildirin.
 
 ### Niteleyicileri kaldırın {#remove-modifiers}
 

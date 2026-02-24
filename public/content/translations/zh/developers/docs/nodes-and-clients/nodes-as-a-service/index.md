@@ -1,23 +1,23 @@
 ---
-title: 节点即服务
-description: 节点服务及其利弊和主流供应商的入门级概述。
+title: "节点即服务"
+description: "节点服务及其利弊和主流供应商的入门级概述。"
 lang: zh
 sidebarDepth: 2
 ---
 
 ## 简介 {#Introduction}
 
-运行自己的 [以太坊](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients)节点可能会比较困难，特别是在刚开始时或在快速扩展时。 [许多服务](#popular-node-services)都可以为你运行优化的节点基础设施，藉此，你可以专注于开发你的应用程序或产品。 我们将解释节点服务运行的原理以及它们的优缺点，并列出供应商，如果有兴趣，就着手开始吧。
+运行自己的[以太坊节点](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients)可能具有挑战性，尤其是在入门或快速扩容时。 有许多[服务](#popular-node-services)可以为您运行优化的节点基础架构，以便您可以专注于开发应用程序或产品。 我们将解释节点服务运行的原理以及它们的优缺点，并列出供应商，如果有兴趣，就着手开始吧。
 
 ## 前提条件 {#prerequisites}
 
-如果你还不了解什么是节点和客户端，请查看[节点和客户端](/developers/docs/nodes-and-clients/)。
+如果您还不了解什么是节点和客户端，请查阅[节点和客户端](/developers/docs/nodes-and-clients/)。
 
-## 质押人 {#stakoooooooooooooors}
+## 质押者 {#stakoooooooooooooors}
 
-单独的质押人必须运行自己的基础设施，而不是依赖第三方提供商。 这意味着运行一个执行客户端和一个共识客户端。 在[合并](/roadmap/merge)之前，可以只运行共识客户端并通过中心化的提供商来获取执行数据；但现在已不存在这种情况——单独的质押人必须同时运行两种客户端。 但是，有一些服务可以简化这个过程。
+单独的质押人必须运行自己的基础设施，而不是依赖第三方提供商。 这意味着运行一个执行客户端和一个共识客户端。 在[合并](/roadmap/merge)之前，可以只运行一个共识客户端，并使用一个中心化的提供商来获取执行数据；现在已经不行了——个人质押者必须同时运行两种客户端。 但是，有一些服务可以简化这个过程。
 
-[阅读有关运行节点的更多信息](/developers/docs/nodes-and-clients/run-a-node/)。
+[阅读更多关于运行节点的内容](/developers/docs/nodes-and-clients/run-a-node/)。
 
 本页描述的服务适用于非质押节点。
 
@@ -25,13 +25,13 @@ sidebarDepth: 2
 
 节点服务提供商在幕后为你运行分布式节点客户端，因此你无需自己运行。
 
-这些服务通常提供一个可用来写入和读取区块链的应用程序接口密钥。 除了主网之外，通常还包括[以太坊测试网](/developers/docs/networks/#ethereum-testnets)访问权限。
+这些服务通常提供一个可用来写入和读取区块链的应用程序接口密钥。 除了主网，它们通常还包括对[以太坊测试网](/developers/docs/networks/#ethereum-testnets)的访问权限。
 
 有些服务提供你自己的专用节点但由他们代为管理，而另外一些服务则使用负载均衡器在各节点之间分配活动。
 
 几乎所有的节点服务都非常容易集成，只需要在你的代码中修改一行，就可以替换你自己的托管节点，甚至可以在服务本身之间切换。
 
-通常节点服务会运行各种[节点客户端](/developers/docs/nodes-and-clients/#execution-clients)和[节点](/developers/docs/nodes-and-clients/#node-types)，使得用户可以通过一个应用程序接口访问全节点和归档节点以及客户端特定方法。
+节点服务通常会运行各种[节点客户端](/developers/docs/nodes-and-clients/#execution-clients)和[类型](/developers/docs/nodes-and-clients/#node-types)，让您除了可以通过一个 API 访问客户端的特定方法外，还可以访问完整节点和存档节点。
 
 值得注意的是，节点服务不存储也不应该存储你的私钥或信息。
 
@@ -45,15 +45,15 @@ sidebarDepth: 2
 
 使用节点服务，你产品的基础设施部分走向了中心化。 因此，可能更喜欢对那些极为注重去中心化的项目采用自我托管节点，而不是外包给第三方。
 
-详细了解[运行自己节点的好处](/developers/docs/nodes-and-clients/#benefits-to-you)。
+阅读更多关于[运行您自己的节点的好处](/developers/docs/nodes-and-clients/#benefits-to-you)。
 
-## 主流节点服务 {#popular-node-services}
+## 热门节点服务 {#popular-node-services}
 
 下面列出了一些最受欢迎的以太坊节点服务提供商，如有遗漏，欢迎随时补充！ 每种节点服务除了免费或付费层级外，还提供各种好处和功能。做出决定之前，你应该调查哪些服务最符合自己的需求。
 
 - [**Alchemy**](https://alchemy.com/)
-  - [相关文档](https://docs.alchemyapi.io/)
-  - 特性
+  - [文档](https://www.alchemy.com/docs/)
+  - 功能
     - 最大的免费层级，每月有 3 亿个计算单元（约 3000 万个 getLatestBlock 请求）
     - 对 Polygon、Starknet、Optimism、Arbitrum 的多链支持
     - 为大约 70% 的以太坊去中心化应用程序和去中心化金融最大交易量提供支持
@@ -64,8 +64,21 @@ sidebarDepth: 2
     - 集成了测试网水龙头访问权限
     - 拥有 1.8 万用户的活跃 Discord 构建者社区
 
+- [**Allnodes**](https://www.allnodes.com/)
+  - [文档](https://docs.allnodes.com/)
+  - 功能
+    - 在 Allnodes 投资组合页面上创建的 PublicNode 代币无速率限制。
+    - 在 [PublicNode](https://www.publicnode.com) 上提供注重隐私的免费 RPC 端点（100 多个区块链）
+    - 为 90+ 区块链提供无速率限制的专用节点
+    - 为 30+ 区块链提供专用归档节点
+    - 在 3 个地区可用（美国、欧盟、亚洲）
+    - 在 [PublicNode](https://www.publicnode.com/snapshots) 上提供 100 多个区块链的快照
+    - 提供全天候技术支持，正常运行时间 SLA 为 99.90%-99.98%（取决于套餐）。
+    - 按小时计费定价
+    - 使用信用卡、PayPal 或加密货币支付
+
 - [**All That Node**](https://allthatnode.com/)
-  - [相关文档](https://docs.allthatnode.com/)
+  - [文档](https://docs.allthatnode.com/)
   - 功能
     - 免费套餐每天 50,000 个请求
     - 支持 40 多种协议
@@ -78,8 +91,8 @@ sidebarDepth: 2
     - 自动更新
 
 - [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
-  - [相关文档](https://aws.amazon.com/managed-blockchain/resources/)
-  - 特性
+  - [文档](https://aws.amazon.com/managed-blockchain/resources/)
+  - 功能
     - 完全托管的以太坊节点
     - 可在六个地区使用
     - 基于 HTTP 的 JSON-RPC 和安全 WebSockets
@@ -88,8 +101,8 @@ sidebarDepth: 2
     - Go-ethereum 和 Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
-  - [相关文档](https://docs.ankr.com/)
-  - 特性
+  - [文档](https://docs.ankr.com/)
+  - 功能
     - Ankr 协议 - 在超过 8 条链上开放式访问公共远程过程调用应用程序接口端点
     - 通过负载均衡和节点健康监测，为最近可用节点提供快速可靠的网关
     - 启用网络套接字安全端点和无速率上限的高级套餐
@@ -101,8 +114,8 @@ sidebarDepth: 2
     - 直接支持
 
 - [**Blast**](https://blastapi.io/)
-  - [相关文档](https://docs.blastapi.io/)
-  - 特性
+  - [文档](https://docs.blastapi.io/)
+  - 功能
     - 远程过程调用和网络套接字安全支持
     - 多区域节点托管
     - 去中心化基础设施
@@ -116,15 +129,15 @@ sidebarDepth: 2
     - 加密货币支付
 
 - [**BlockDaemon**](https://blockdaemon.com/)
-  - [相关文档](https://ubiquity.docs.blockdaemon.com/)
+  - [文档](https://ubiquity.docs.blockdaemon.com/)
   - 好处
-    - 管理面板
+    - 仪表板
     - 基于每个节点
     - 分析
 
 - [**BlockPI**](https://blockpi.io/)
-  - [相关文档](https://docs.blockpi.io/)
-  - 特性
+  - [文档](https://docs.blockpi.io/)
+  - 功能
     - 稳健的分布式节点结构
     - 多达 40 个安全套接字层超文本传输协议和网络套接字安全端点
     - 免费注册套餐和月度套餐
@@ -135,44 +148,44 @@ sidebarDepth: 2
     - 直接支持与技术支持
 
 - [**Chainbase**](https://www.chainbase.com/)
-  - [相关文档](https://docs.chainbase.com)
-  - 特性
+  - [文档](https://docs.chainbase.com)
+  - 功能
     - 高可用性、高速和可扩展的远程过程调用服务
     - 多链支持
     - 不收费
     - 用户友好的仪表板
     - 提供远程过程调用之外的区块链数据服务
 
-- [**ChainStack**](https://chainstack.com/)
-  - [相关文档](https://docs.chainstack.com/)
+- [**Chainstack**](https://chainstack.com/)
+  - [文档](https://docs.chainstack.com/)
   - 功能
     - 免费共享节点
     - 共享归档节点
     - GraphQL 支持
-    - 远程过程调用和网络套接字安全端点
+    - RPC 、 HTTPS 和 WSS 端点
     - 专用全节点和归档节点
     - 专用部署的快速同步时间
-    - 使用自己的云服务
+    - 使用自己的云端服务
     - 按小时计费定价
     - 全天候直接支持
 
-- [**DRPC**](https://drpc.org/)
-  - [相关文档](https://docs.drpc.org/)
-  - 特性
-    - 去中心化远程过程调用节点
-    - 超过 15 个节点提供商
-    - 节点平衡
-    - 免费套餐每月计算单元无限制
-    - 数据验证
-    - 自定义端点
-    - HTTP 和 WSS 端点
-    - 无限密钥（免费和付费套餐）
-    - 灵活的回退选项
-    - [公共端点](https://eth.drpc.org)
-    - 免费共享归档节点
+- [**dRPC**](https://drpc.org/)
+  - [文档](https://drpc.org/docs)
+  - NodeCloud：即插即用型 RPC 基础设施，10 美元起步——全速，无限制
+  - NodeCloud 特性：
+    - 支持 185 个网络的 API
+    - 由 40 多个提供商组成的分布式池
+    - 九 (9) 个地理集群实现全球覆盖
+    - 人工智能驱动的负载均衡系统
+    - 按需付费的统一定价——无涨价、无期限、无锁仓
+    - 无限密钥、精细密钥调整、团队角色、前端保护
+    - 每个方法固定费率为 20 个计算单元 (CU)
+    - [公共端点链列表](https://drpc.org/chainlist)
+    - [价格计算器](https://drpc.org/pricing#calculator)
+  - NodeCore：为希望完全控制的组织提供的开源堆栈
 
 - [**GetBlock**](https://getblock.io/)
-  - [相关文档](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - [文档](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - 功能
     - 访问超过 40 个区块链节点
     - 4 万个每日免费请求
@@ -196,7 +209,7 @@ sidebarDepth: 2
     - 访问超过 50 个区块链节点
 
 - [**Infura**](https://infura.io/)
-  - [相关文档](https://infura.io/docs)
+  - [文档](https://infura.io/docs)
   - 功能
     - 免费套餐选项
     - 随时扩容
@@ -205,18 +218,18 @@ sidebarDepth: 2
     - 仪表板
 
 - [**Kaleido**](https://kaleido.io/)
-  - [相关文档](https://docs.kaleido.io/)
+  - [文档](https://docs.kaleido.io/)
   - 功能
-    - 免费初学者套餐
+    - 免费初学者层级
     - 一键部署以太坊节点
     - 可自定义的客户端和算法（Geth、Quorum 和 Besu || PoA、IBFT 和 Raft）
     - 500 多个管理和服务应用程序接口
     - 用于提交以太坊交易的 RESTful 接口（支持 Apache Kafka）
     - 用于事件传送的出站流（支持 Apache Kafka）
-    - “链下”和辅助服务的深度集合（例如双边加密消息传输）
+    - 大量的“链下”和辅助服务（例如，双边加密消息传输）
     - 简单明了的配置入网，提供治理和基于角色的访问控制
     - 适用于管理员和最终用户的精细用户管理
-    - 高度可扩展、复原力强的企业级基础设施
+    - 高度可扩展、恢复力强的企业级基础设施
     - Cloud HSM 私钥管理
     - 以太坊主网网络共享
     - ISO 27k 和 SOC 2 Type 2 认证
@@ -226,7 +239,7 @@ sidebarDepth: 2
     - 服务等级协议和全天候支持
 
 - [**Lava Network**](https://www.lavanet.xyz/)
-  - [相关文档](https://docs.lavanet.xyz/)
+  - [文档](https://docs.lavanet.xyz/)
   - 功能
     - 免费使用测试网
     - 适用于高正常运行时间的去中心化冗余
@@ -238,7 +251,7 @@ sidebarDepth: 2
     - 多链支持
 
 - [**Moralis**](https://moralis.io/)
-  - [相关文档](https://docs.moralis.io/)
+  - [文档](https://docs.moralis.io/)
   - 功能
     - 免费共享节点
     - 免费共享归档节点
@@ -248,10 +261,10 @@ sidebarDepth: 2
     - 仪表板
     - 独特的以太坊软件开发工具包
     - 独有的应用程序接口端点
-    - 直接技术支持
+    - 点对点技术支持
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [相关文档](https://docs.nodereal.io/docs/introduction)
+  - [文档](https://docs.nodereal.io/docs/introduction)
   - 功能
     - 可靠、快速而且可扩展的远程过程调用应用程序接口服务
     - 面向 Web3 开发者的增强型应用程序接口
@@ -278,7 +291,7 @@ sidebarDepth: 2
     - Pre-Stake+ 计划（如果你每天需要超过 100 万个请求）
     - 支持超过 15 条区块链
     - 6400 多个节点为应用程序服务并赚取 POKT
-    - 归档节点、包含追踪数据的归档节点及测试网节点支持
+    - 归档节点、带跟踪的归档节点和测试网节点支持
     - 以太坊主网节点客户端多样性
     - 无单点故障
     - 零停机
@@ -286,22 +299,22 @@ sidebarDepth: 2
     - 无每月沉没成本，将你的基础设施变成资产
     - 协议中内置负载均衡
     - 随时无限增加每日请求数量和每小时节点数量
-    - 最私密的抗审查选项
+    - 最隐密的抗审查选择
     - 开发者实战支持
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) 仪表板和分析
 
 - [**QuickNode**](https://www.quicknode.com)
   - [文档](https://www.quicknode.com/docs/)
   - 功能
-    - 全天候技术支持和开发者 Discord 社区
+    - 全天候技术支持和开发人员 Discord 社区
     - 区域负载均衡、多云端/元模型、低延迟网络
     - 多链支持（Optimism、Arbitrum、Polygon 及 11 个其他网络）
-    - 快速且稳定的中间层（调用路由、缓存、索引）
+    - 用于提高速度和稳定性的中间层（调用路由、缓存、索引）
     - 通过网络钩子进行智能合约监控
     - 直观的仪表板、分析套件、远程过程调用编写器
     - 高级安全功能（JWT、屏蔽、白名单）
     - 非同质化代币数据和分析应用程序接口
-    - [已获 SOC2 认证](https://www.quicknode.com/security)
+    - [SOC2 认证](https://www.quicknode.com/security)
     - 适用于企业开发者
 
 - [**Rivet**](https://rivet.cloud/)
@@ -320,13 +333,13 @@ sidebarDepth: 2
 
 - [**SettleMint**](https://console.settlemint.com/)
   - [文档](https://docs.settlemint.com/)
-  - 特性
+  - 功能
     - 免费试用
     - 随时扩容
     - GraphQL 支持
-    - 远程过程调用和网络套接字安全端点
+    - RPC 、 HTTPS 和 WSS 端点
     - 专用全节点
-    - 使用自己的云服务
+    - 使用自己的云端服务
     - 分析工具
     - 仪表板
     - 按小时计费定价
@@ -334,7 +347,7 @@ sidebarDepth: 2
 
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [文档](https://docs.tenderly.co/web3-gateway/web3-gateway)
-  - 特性
+  - 功能
     - 免费套餐包含每月 2500 万个 Tenderly 单位
     - 免费访问历史数据
     - 读取繁重型工作负载的速度最多提高 8 倍
@@ -349,8 +362,8 @@ sidebarDepth: 2
 
 - [**Tokenview**](https://services.tokenview.io/)
   - [文档](https://services.tokenview.io/docs?type=nodeService)
-  - 特性
-    - 全天候技术支持和开发者 Telegram 社区
+  - 功能
+    - 全天候技术支持和开发人员 Telegram 社区
     - 多链支持（比特币、以太坊、Tron、BNB Smart Chain 和以太坊经典）
     - RPC 和 WSS 端点均开放使用
     - 无限制访问归档数据应用程序接口
@@ -361,7 +374,7 @@ sidebarDepth: 2
 
 - [**Watchdata**](https://watchdata.io/)
   - [文档](https://docs.watchdata.io/)
-  - 特性
+  - 功能
     - 数据可靠性
     - 不间断连接，不会出现停机
     - 过程自动化
@@ -373,7 +386,7 @@ sidebarDepth: 2
 
 - [**ZMOK**](https://zmok.io/)
   - [文档](https://docs.zmok.io/)
-  - 特性
+  - 功能
     - 前台运行即服务
     - 带有搜索/过滤方法的全局交易内存池
     - 发送交易时，交易手续费和燃料均不受限制
@@ -382,21 +395,20 @@ sidebarDepth: 2
 
 - [**Zeeve**](https://www.zeeve.io/)
   - [文档](https://www.zeeve.io/docs/)
-  - 特性
+  - 功能
     - 企业级无代码自动化平台，提供区块链节点和网络的部署、监控和管理
-    - 超过 30 种支持的协议与集成，种类还在增加
+    - 支持超过 30 种协议与集成，且仍在不断增加
     - 增值型 Web3 基础设施服务，如去中心化存储、去中心化身份和用于真实世界用例的区块链账本数据应用程序接口
     - 全天候支持和主动监控始终确保节点的健康
     - 远程过程调用端点提供对应用程序接口的验证访问，并通过直观的仪表板和分析实现无忧管理。
     - 提供托管云和自带云选项，支持所有主要云服务提供商，例如 AWS、Azure、Google Cloud、Digital Ocean 和本地服务
     - 我们每次都会通过智能路由接入到距离你的用户最近的节点
 
-
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
 - [以太坊节点服务列表](https://ethereumnodes.com/)
 
-## 相关主题 {#related-topics}
+## 相关话题 {#related-topics}
 
 - [节点和客户端](/developers/docs/nodes-and-clients/)
 

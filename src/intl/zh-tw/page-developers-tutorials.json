@@ -1,4 +1,27 @@
 {
+  "comp-tutorial-metadata-minute-read": "分鐘閱讀",
+  "page-tutorial-listing-policy-intro": "在您提交教學前，請<a href=\"/contributing/content-resources/\">閱讀我們的刊登政策</a>。",
+  "comp-tutorial-metadata-tip-author": "給作者小費",
+  "page-tutorial-create-an-issue": "創建一個議題",
+  "page-tutorial-create-an-issue-desc": "請填寫議題範本，概述您的教學內容。",
+  "page-tutorial-raise-issue-btn": "提出問題",
+  "page-tutorial-read-time": "分鐘",
+  "page-tutorial-submit-btn": "發表一教學影片",
+  "page-tutorial-subtitle": "歡迎來到社群管理教學影片列表.",
+  "page-tutorial-tags-error": "目前還沒有符合您所選全部標籤的教學。",
+  "page-tutorial-title": "以太坊開發教學影片",
+  "page-tutorials-meta-description": "按主題主題閱覽及過濾已審查以太坊社群教學影片.",
+  "page-tutorial-external-link": "外部",
+  "page-tutorials-meta-title": "以太坊開發教學影片",
+  "page-tutorial-beginner": "新手",
+  "page-tutorial-intermediate": "中等",
+  "page-tutorial-advanced": "進階",
   "page-find-wallet-try-removing": "嘗試移除一兩項功能",
-  "page-find-wallet-clear": "清除篩選條件"
+  "page-find-wallet-clear": "清除篩選條件",
+  "page-tutorials-env-banner": "請勿提交<code>.env</code>!請確保永遠別 公開/分享 你的<code>.env </code>文件泄露給任何人，因爲這樣做會泄露你的秘密。假如你正使用版本控制，應添加<code>.env </code>到<a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>文件。",
+  "page-tutorial-all": "全部",
+  "page-tutorial-topics": "主題",
+  "page-tutorial-search-placeholder": "搜尋教學...",
+  "page-tutorial-filtering-by": "篩選條件:",
+  "page-tutorial-more-tags": "還有 +{count} 個"
 }
