@@ -314,29 +314,27 @@ async function movePageSpecificKeys(keysToMove) {
 
       let moved = 0
       for (const key of keys) {
-        if (common[key] !== undefined) {
+        // Only move if key exists in common and doesn't already exist in target
+        if (common[key] !== undefined && namespaceData[key] === undefined) {
           namespaceData[key] = common[key]
           delete common[key]
           moved++
+        } else if (common[key] !== undefined && namespaceData[key] !== undefined) {
+          // Key exists in both - just remove from common
+          delete common[key]
         }
       }
 
       if (moved > 0) {
-        // Sort and save namespace file
-        const sortedNamespace = Object.fromEntries(
-          Object.entries(namespaceData).sort(([a], [b]) => a.localeCompare(b))
-        )
-        await writeFile(namespacePath, JSON.stringify(sortedNamespace, null, 2) + "\n")
+        // Save namespace file (preserve key order, new keys added at end)
+        await writeFile(namespacePath, JSON.stringify(namespaceData, null, 2) + "\n")
         totalMoved += moved
       }
     }
 
     if (totalMoved > 0) {
-      // Sort and save common.json
-      const sortedCommon = Object.fromEntries(
-        Object.entries(common).sort(([a], [b]) => a.localeCompare(b))
-      )
-      await writeFile(commonPath, JSON.stringify(sortedCommon, null, 2) + "\n")
+      // Save common.json (preserve key order)
+      await writeFile(commonPath, JSON.stringify(common, null, 2) + "\n")
       console.log(`  ${locale}: moved ${totalMoved} keys`)
     }
   }
