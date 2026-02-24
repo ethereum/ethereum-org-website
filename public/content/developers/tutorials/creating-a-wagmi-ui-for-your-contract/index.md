@@ -330,7 +330,6 @@ let greeterABI = [
   { "type": "function", "name": "greet", ... },
   { "type": "function", "name": "setGreeting", ... },
   { "type": "event", "name": "SetGreeting", ... },
-]  // greeterABI
 ] as const   // greeterABI
 ```
 
@@ -406,7 +405,7 @@ Finally, we get to define the component.
   const account = useAccount()
 ```
 
-Information about the chain and account we are using, courtesy of [wagmi]. Because this is a hook (`use...`), the component is re-rendered whenever this information changes.
+Information about the chain and account we are using, courtesy of [wagmi](https://wagmi.sh/). Because this is a hook (`use...`), the component is re-rendered whenever this information changes.
 
 ```tsx
   const greeterAddr = chainId && contractAddrs[chainId] 
@@ -492,7 +491,7 @@ Listen to `SetGreeting` events.
 When we see logs (which happens when we see a new event), it means that the greeting has been modified. In that case, we can update `currentGreeting` and `lastSetterAddress` to the new values. Also, we want to update the status display.
 
 ```tsx
-  const updateStatus = newStatus: string => {
+  const updateStatus = (newStatus: string) => {
     setStatus(newStatus)
     setStatusTime(new Date())
   }
@@ -508,7 +507,7 @@ When we update the status we want to do two things:
     setNewGreeting(evt.target.value)
 ```
 
-This is the event handler for changes to the new greeting input field. We could specify the type of the `evt` parameter, but TypeScript is a type option language. As this function is called only once, in an HTML event handler, I don't think it is necessary.
+This is the event handler for changes to the new greeting input field. We could specify the type of the `evt` parameter, but TypeScript is a type optional language. As this function is called only once, in an HTML event handler, I don't think it is necessary.
 
 ```tsx
   const { writeContractAsync } = useWriteContract()
@@ -555,12 +554,12 @@ Show the current greeting.
 ```tsx
       {lastSetterAddress && (
         <p>Last updated by {
-          lastSetterAddress == account.address ? "you" : lastSetterAddress
+          lastSetterAddress === account.address ? "you" : lastSetterAddress
         }</p>
       )}
 ```
 
-If we know who set the greeting last, displayed that information. `Greeter` does not keep track of this information, and we don't want to look back for `SetGreeting` events, so we only get it once the greeting is changed while we are running.
+If we know who set the greeting last, display that information. `Greeter` does not keep track of this information, and we don't want to look back for `SetGreeting` events, so we only get it once the greeting is changed while we are running.
 
 ```tsx
       <hr />      
@@ -657,6 +656,98 @@ To communicate with the blockchain, we will try each access URL in turn. We can 
 })
 ```
 
+## Adding another blockchain {#add-blockchain}
+
+These days there are a lot of [L2 scaling solution](https://ethereum.org/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Optimism Sepolia](https://chainlist.org/chain/11155420).
+
+1. Edit `src/wagmi.ts`
+
+    1. Import the `defineChain` type from viem.
+
+        ```ts
+        import { defineChain } from 'viem'
+        ```
+
+    2. Add the network definition. You don't really need to do this for Optimism Sepolia, [it is already in `viem`](https://github.com/wevm/viem/blob/main/src/chains/definitions/optimismSepolia.ts), but this way you learn how to add a blockchain that is not in `viem`.
+
+      ```ts
+      const optimismSepolia = defineChain({
+          id: 11_155_420,
+          name: 'OP Sepolia',
+          network: 'redstone-holesky',
+          nativeCurrency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 },
+          rpcUrls: {
+            default: {
+              http: ['https://sepolia.optimism.io'],
+              webSocket: ['wss://optimism-sepolia.drpc.org'],
+          },
+          public: {
+              http: ['https://sepolia.optimism.io'],
+              webSocket: ['wss://optimism-sepolia.drpc.org'],
+            },
+          },
+          blockExplorers: {
+            default: {
+              name: 'Blockscout',
+              url: 'https://optimism-sepolia.blockscout.com',
+              apiUrl: 'https://optimism-sepolia.blockscout.com/api',
+            }
+          },
+      })
+      ```
+
+    3. Add the new chain to the `createConfig` call.
+
+        ```ts
+        export const config = createConfig({
+          chains: [sepolia, optimismSepolia],
+          connectors: [
+            injected(),
+          ],
+          transports: {
+            [optimismSepolia.id]: http(),
+            [sepolia.id]: fallback([
+              webSocket("wss://ethereum-sepolia-rpc.publicnode.com"),
+              http("https://ethereum-sepolia.gateway.tatum.io"),
+            ]),
+          },
+          multiInjectedProviderDiscovery: false,
+        })
+        ```
+
+2. Edit `src/App.tsx` to comment out the automatic switch to Sepolia. On a production system, you'd probably show buttons for users to links to each of the blockchains you support.
+
+    ```ts
+    /*
+    useEffect(() => {
+      if (connection.status === 'connected' &&
+          connection.chainId !== SEPOLIA_CHAIN_ID
+      ) {
+        switchChain({ chainId: SEPOLIA_CHAIN_ID })
+      }
+    }, [connection.status, connection.chainId])
+    */    
+    ```
+
+3. Edit `src/Greeter.tsx` to ensure that the application knows the address for your contracts on the new network.
+
+    ```ts
+    const contractAddrs : AddressPerBlockchainType = {
+      // Optimism Sepolia
+      11155420: '0x4dd85791923E9294E934271522f63875EAe5806f',
+
+      // Sepolia
+      11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
+    }
+    ```
+
+3. In your browser.
+
+    1. Browse to [ChainList](https://chainlist.org/chain/11155420?testnets=true) and click one of buttons on the right side of the table to add the chain to your wallet.
+
+    2. In the application, **Disconnect** and then reconnect to change the blockchain. There are nicer ways to handle this, but they'd require application changes.
+
+
 ## Conclusion {#conclusion}
 
 Of course, you don't really care about providing a user interface for `Greeter`. You want to create a user interface for your own contracts. To create your own application, run these steps:
@@ -667,13 +758,13 @@ Of course, you don't really care about providing a user interface for `Greeter`.
    npm create wagmi
    ```
 
-1. Type `y` to proceed.
+2. Type `y` to proceed.
 
-2. Name the application.
+3. Name the application.
 
-3. Select **React** framework.
+4. Select **React** framework.
 
-4. Select the **Vite** variant.
+5. Select the **Vite** variant.
 
 Now go and make your contracts usable for the wide world.
 
