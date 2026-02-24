@@ -161,37 +161,47 @@ const TICKER_CORRECTIONS: Record<string, string> = {
   EHT: "ETH",
   BSL: "BLS",
   ECDAS: "ECDSA",
-  KECCAK: "Keccak",
 }
 
 /**
  * Fix ticker symbol transpositions.
  * Only matches whole words (word boundaries) to avoid false positives.
+ * Skips code blocks (fenced and inline) where these forms may be valid.
  */
 function fixTickerTranspositions(content: string): {
   content: string
   fixCount: number
 } {
-  let result = content
   let fixCount = 0
 
-  for (const [wrong, correct] of Object.entries(TICKER_CORRECTIONS)) {
-    const re = new RegExp(`\\b${escapeRegex(wrong)}\\b`, "g")
-    const matches = result.match(re)
-    if (matches && matches.length > 0) {
-      fixCount += matches.length
-      result = result.replace(re, correct)
+  // Split content to preserve code blocks
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    for (const [wrong, correct] of Object.entries(TICKER_CORRECTIONS)) {
+      const re = new RegExp(`\\b${escapeRegex(wrong)}\\b`, "g")
+      const matches = parts[i].match(re)
+      if (matches && matches.length > 0) {
+        fixCount += matches.length
+        parts[i] = parts[i].replace(re, correct)
+      }
     }
   }
 
-  return { content: result, fixCount }
+  return { content: parts.join(""), fixCount }
 }
 
 /**
  * Fix only brand/product/language name tags in frontmatter.
  * Generic concept tags (e.g. "zero-knowledge" → "nulová znalost") should
  * remain in the native language. Only tags that match a protected brand name
- * in the English source are restored to English.
+ * in the English source are restored to their canonical casing.
+ *
+ * Uses targeted replacement to preserve original formatting (multi-line YAML,
+ * spacing, quoting style) instead of reconstructing the entire tags line.
  */
 function fixBrandTags(
   translatedContent: string,
@@ -228,29 +238,38 @@ function fixBrandTags(
   if (engTags.length !== transTags.length)
     return { content: translatedContent, fixCount: 0 }
 
-  // Build lowercase brand set for matching
-  const brandLower = new Set(PROTECTED_BRAND_NAMES.map((b) => b.toLowerCase()))
+  // Build a map from lowercase brand name to canonical casing
+  const brandCanonical = new Map<string, string>()
+  for (const brand of PROTECTED_BRAND_NAMES) {
+    brandCanonical.set(brand.toLowerCase(), brand)
+  }
 
-  // Only replace tags where the English version is a protected brand
+  // Identify tags that need fixing: brand tags whose translation differs
+  // from the canonical casing
   let fixCount = 0
-  const fixedTags = transTags.map((transTag, i) => {
+  let updatedFm = transFm
+
+  for (let i = 0; i < transTags.length; i++) {
     const engTag = engTags[i]
-    if (brandLower.has(engTag.toLowerCase()) && transTag !== engTag) {
+    const transTag = transTags[i]
+    const canonical = brandCanonical.get(engTag.toLowerCase())
+
+    if (!canonical) continue // Not a brand tag — leave as-is
+    if (transTag === canonical) continue // Already correct
+
+    // Targeted replacement: find the exact quoted tag in frontmatter and replace
+    // Match the tag with its surrounding quotes to avoid false positives
+    const quotedTagRe = new RegExp(
+      `(["'])${escapeRegex(transTag)}\\1`
+    )
+    if (quotedTagRe.test(updatedFm)) {
+      updatedFm = updatedFm.replace(quotedTagRe, `$1${canonical}$1`)
       fixCount++
-      return engTag
     }
-    return transTag
-  })
+  }
 
   if (fixCount === 0) return { content: translatedContent, fixCount: 0 }
 
-  // Reconstruct the tags line preserving original quoting style
-  const quote = transTagsMatch[1].includes('"') ? '"' : "'"
-  const newTagsValue = fixedTags.map((t) => `${quote}${t}${quote}`).join(", ")
-  const fullTagsLine = transTagsMatch[0]
-  const newFullTagsLine = `tags: [${newTagsValue}]`
-
-  const updatedFm = transFm.replace(fullTagsLine, newFullTagsLine)
   const content = translatedContent.replace(
     frontmatterRe,
     `---\n${updatedFm}\n---`
@@ -451,16 +470,12 @@ function splitIntoBlocks(content: string): string[] {
 }
 
 /**
- * Fix translated hrefs by comparing against English source.
- * Uses paragraph-scoped set comparison for robust matching across languages.
+ * Detect translated/mismatched hrefs by comparing against English source.
+ * Warn-only — does NOT auto-fix, because block-positional alignment between
+ * English and translated documents is unreliable (Crowdin often adds/removes
+ * blank lines, shifting paragraph indices and causing incorrect substitutions).
  *
- * Strategy:
- * 1. Split both documents into blocks (paragraphs separated by blank lines)
- * 2. For each block pair, compare internal href sets
- * 3. Within a block: if invalid href count equals missing href count, we can match
- * 4. This handles grammatical reordering within sentences (common in non-English)
- *
- * Only auto-fixes unambiguous cases; warns for complex mismatches.
+ * Href fixes are left to the AI review agents which have full semantic context.
  */
 function fixTranslatedHrefs(
   translatedContent: string,
@@ -471,113 +486,41 @@ function fixTranslatedHrefs(
 
   // Collect all English internal hrefs as the "valid" set
   const allEnglishHrefs = extractHrefs(englishContent)
+  // Collect all translation internal hrefs
+  const allTransHrefs = extractHrefs(translatedContent)
 
-  const blockFixes: Array<{
-    blockIdx: number
-    wrong: string
-    correct: string
-  }> = []
   const allWarnings: string[] = []
 
-  // Process block by block
-  const blockCount = Math.min(englishBlocks.length, translatedBlocks.length)
-
-  for (let i = 0; i < blockCount; i++) {
-    const engBlock = englishBlocks[i]
-    const transBlock = translatedBlocks[i]
-
-    const engHrefs = extractHrefsFromBlock(engBlock).filter(isInternalHref)
-    const transHrefs = extractHrefsFromBlock(transBlock).filter(isInternalHref)
-
-    // Skip blocks with no internal hrefs
-    if (engHrefs.length === 0 && transHrefs.length === 0) continue
-
-    // Compare hrefs at block level
-    const engHrefSet = new Set(engHrefs)
-    const transHrefSet = new Set(transHrefs)
-
-    // Hrefs in translation block but NOT in corresponding English block
-    const displacedInTrans: string[] = []
-    const missingFromTrans: string[] = []
-
-    for (const href of transHrefs) {
-      if (!engHrefSet.has(href)) {
-        displacedInTrans.push(href)
-      }
-    }
-
-    for (const href of engHrefs) {
-      if (!transHrefSet.has(href)) {
-        missingFromTrans.push(href)
-      }
-    }
-
-    // No issues in this block
-    if (displacedInTrans.length === 0 && missingFromTrans.length === 0) continue
-
-    // Deduplicate for set comparison
-    const uniqueDisplaced = [...new Set(displacedInTrans)]
-    const uniqueMissing = [...new Set(missingFromTrans)]
-
-    // Auto-fix when there's exactly 1 displaced and 1 missing in the same block
-    if (uniqueDisplaced.length === 1 && uniqueMissing.length === 1) {
-      blockFixes.push({
-        blockIdx: i,
-        wrong: uniqueDisplaced[0],
-        correct: uniqueMissing[0],
-      })
-    } else if (uniqueDisplaced.length > 0 || uniqueMissing.length > 0) {
-      for (const href of uniqueDisplaced) {
-        const globallyValid = allEnglishHrefs.has(href)
-        allWarnings.push(
-          `Block ${i + 1}: ${globallyValid ? "Displaced" : "Invalid"} href "${href}" - not in corresponding English block`
-        )
-      }
-      for (const href of uniqueMissing) {
-        allWarnings.push(
-          `Block ${i + 1}: Missing href "${href}" - present in English but not translation`
-        )
-      }
-    }
-  }
-
-  // Warn about block count mismatch
+  // Warn about block count mismatch (indicates paragraph alignment drift)
   if (englishBlocks.length !== translatedBlocks.length) {
     allWarnings.push(
       `Block count mismatch: English has ${englishBlocks.length}, translation has ${translatedBlocks.length}`
     )
   }
 
-  // Apply fixes block-by-block to avoid cross-block interference
-  let result = translatedContent
-  const appliedFixes: string[] = []
+  // Document-level href comparison: find hrefs in translation that don't
+  // exist anywhere in English (likely translated or corrupted paths)
+  for (const href of allTransHrefs) {
+    if (isInternalHref(href) && !allEnglishHrefs.has(href)) {
+      allWarnings.push(
+        `Invalid internal href "${href}" — not found in English source`
+      )
+    }
+  }
 
-  for (const { blockIdx, wrong, correct } of blockFixes) {
-    const originalBlock = translatedBlocks[blockIdx]
-    let fixedBlock = originalBlock
-
-    // Replace in markdown links: [text](wrong) → [text](correct)
-    const markdownRe = new RegExp(
-      `(\\[[^\\]]*\\]\\()${escapeRegex(wrong)}(\\))`,
-      "g"
-    )
-    fixedBlock = fixedBlock.replace(markdownRe, `$1${correct}$2`)
-
-    // Replace in href attributes: href="wrong" → href="correct"
-    const hrefRe = new RegExp(`(href=["'])${escapeRegex(wrong)}(["'])`, "g")
-    fixedBlock = fixedBlock.replace(hrefRe, `$1${correct}$2`)
-
-    if (fixedBlock !== originalBlock) {
-      result = result.replace(originalBlock, fixedBlock)
-      translatedBlocks[blockIdx] = fixedBlock // update for subsequent fixes
-      appliedFixes.push(`${wrong} → ${correct}`)
+  // Find English hrefs missing from translation entirely
+  for (const href of allEnglishHrefs) {
+    if (isInternalHref(href) && !allTransHrefs.has(href)) {
+      allWarnings.push(
+        `Missing href "${href}" — present in English but not in translation`
+      )
     }
   }
 
   return {
-    content: result,
-    fixCount: appliedFixes.length,
-    fixes: appliedFixes,
+    content: translatedContent, // No modifications — warn only
+    fixCount: 0,
+    fixes: [],
     warnings: allWarnings,
   }
 }
@@ -1408,6 +1351,10 @@ function escapeMdxAngleBrackets(content: string): {
  * These appear when translation restructures sentences and leaves behind
  * closing tags like </a> without matching openers.
  * Only removes tags that have NO corresponding opener in the same paragraph.
+ *
+ * Skips code blocks (fenced and inline) where closing tags are valid content.
+ * Removes excess closers from right-to-left (last occurrence first) so that
+ * correctly-paired closers near their openers are preserved.
  */
 function removeOrphanedClosingTags(content: string): {
   content: string
@@ -1416,37 +1363,46 @@ function removeOrphanedClosingTags(content: string): {
   let fixCount = 0
   const orphanTags = ["a", "span", "em", "strong", "b", "i", "u"]
 
-  for (const tag of orphanTags) {
-    // Find closing tags that don't have a matching opener on the same line
-    const lines = content.split("\n")
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i]
-      const closeRe = new RegExp(`</${tag}>`, "g")
-      const openRe = new RegExp(`<${tag}[\\s>]`, "g")
+  // Split content to preserve code blocks (fenced and inline)
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
 
-      const closeCount = (line.match(closeRe) || []).length
-      const openCount = (line.match(openRe) || []).length
+  for (let partIdx = 0; partIdx < parts.length; partIdx++) {
+    if (partIdx % 2 === 1) continue // Skip code blocks
 
-      // If there are more closing tags than opening tags on this line,
-      // remove the excess closing tags (they're orphans)
-      if (closeCount > openCount) {
-        let excess = closeCount - openCount
-        lines[i] = line.replace(closeRe, (match) => {
-          if (excess > 0) {
-            excess--
+    for (const tag of orphanTags) {
+      const lines = parts[partIdx].split("\n")
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i]
+        const closeRe = new RegExp(`</${tag}>`, "g")
+        const openRe = new RegExp(`<${tag}[\\s>]`, "g")
+
+        const closeCount = (line.match(closeRe) || []).length
+        const openCount = (line.match(openRe) || []).length
+
+        // If there are more closing tags than opening tags on this line,
+        // remove the excess closing tags (the trailing orphans)
+        if (closeCount > openCount) {
+          // Keep the first `openCount` closers (paired with openers),
+          // remove the rest (orphans at the end of the line)
+          let kept = 0
+          lines[i] = line.replace(closeRe, (match) => {
+            kept++
+            if (kept <= openCount) {
+              return match // Keep — paired with an opener
+            }
             fixCount++
-            return ""
-          }
-          return match
-        })
-        // Clean up any resulting double spaces
-        lines[i] = lines[i].replace(/  +/g, " ").trim()
+            return "" // Remove — orphaned
+          })
+          // Clean up any resulting double spaces
+          lines[i] = lines[i].replace(/  +/g, " ").trimEnd()
+        }
       }
+      parts[partIdx] = lines.join("\n")
     }
-    content = lines.join("\n")
   }
 
-  return { content, fixCount }
+  return { content: parts.join(""), fixCount }
 }
 
 /**
