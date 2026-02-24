@@ -24,10 +24,15 @@ export const LOCALES_CODES = BUILD_LOCALES
   ? BUILD_LOCALES.split(",")
   : i18nConfig.map(({ code }) => code)
 
-// Site urls
+// Site urls - auto-detect from Netlify deploy context
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  process.env.DEPLOY_PRIME_URL || // Branch/PR deploys
+  process.env.DEPLOY_URL || // Unique deploy URL
+  process.env.URL || // Primary site URL
+  "https://ethereum.org"
 export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
+export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
@@ -41,10 +46,6 @@ export const GITHUB_BASE_API =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
 export const GITHUB_URL = `https://github.com/`
-export const COINGECKO_API_BASE_URL =
-  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
-export const COINGECKO_API_URL_PARAMS =
-  "&order=market_cap_desc&per_page=250&page=1&sparkline=false"
 export const COLOR_MODE_STORAGE_KEY = "theme"
 
 // API timing
@@ -64,11 +65,6 @@ export const TOTAL_QUIZ_RETRY_RATE = 15.6
 
 // Crowdin
 export const CROWDIN_PROJECT_URL = "https://crowdin.com/project/ethereum-org"
-export const CROWDIN_PROJECT_ID = 363359
-export const CROWDIN_API_MAX_LIMIT = 500
-export const FIRST_CROWDIN_CONTRIBUTION_DATE = "2019-07-01T00:00:00+00:00"
-
-export const languagePathRootRegExp = /^.+\/content\/translations\/[a-z-]*\//
 
 // Metrics
 export const DAYS_TO_FETCH = 1
@@ -215,12 +211,12 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     feed: SOLIDITY_FEED,
   },
   {
-    href: "https://mirror.xyz/privacy-scaling-explorations.eth",
-    feed: "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom",
+    href: "https://paragraph.com/@privacy-scaling-explorations",
+    feed: "https://api.paragraph.com/blogs/rss/@privacy-scaling-explorations",
   },
   {
-    href: "https://stark.mirror.xyz/",
-    feed: "https://stark.mirror.xyz/feed/atom",
+    href: "https://paragraph.com/@josh-stark",
+    feed: "https://api.paragraph.com/blogs/rss/@josh-stark",
   },
   {
     href: "https://medium.com/ethereum-cat-herders/newsletter",
@@ -230,6 +226,10 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     href: "https://geodework.com/blog",
     feed: "https://geodework.com/feed.xml",
   },
+  {
+    href: "https://ethereal.news",
+    feed: "https://ethereal.news/rss.xml",
+  },
 ]
 
 export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(
@@ -237,3 +237,18 @@ export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(
 ) as string[]
 
 export const BLOGS_WITHOUT_FEED = COMMUNITY_BLOGS.filter((item) => !item.feed)
+
+export const SIZE_CLASS_MAPPING = {
+  10: "size-10",
+  12: "size-12",
+  14: "size-14",
+  16: "size-16",
+  24: "size-24",
+} as const
+
+export const LINE_CLAMP_CLASS_MAPPING = {
+  1: "line-clamp-1",
+  2: "line-clamp-2",
+  3: "line-clamp-3",
+  4: "line-clamp-4",
+} as const

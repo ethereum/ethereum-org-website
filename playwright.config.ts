@@ -38,8 +38,11 @@ export default defineConfig<ChromaticConfig>({
   expect: {
     timeout: 10000,
   },
+
   projects: [
-    /* E2E tests - require browser */
+    // ─────────────────────────────────────────────────────────────────────────
+    // E2E tests - Visual regression + functional tests across browsers/devices
+    // ─────────────────────────────────────────────────────────────────────────
     {
       name: "e2e",
       testDir: "./tests/e2e",
@@ -60,7 +63,10 @@ export default defineConfig<ChromaticConfig>({
       testDir: "./tests/e2e",
       use: { ...devices["iPhone 12"] },
     },
-    /* Unit tests - no browser needed */
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Unit tests
+    // ─────────────────────────────────────────────────────────────────────────
     {
       name: "unit",
       testDir: "./tests/unit",

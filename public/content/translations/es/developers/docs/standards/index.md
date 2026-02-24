@@ -1,24 +1,24 @@
 ---
-title: Estándares de desarrollo de Ethereum
-description:
+title: "Estándares de desarrollo de Ethereum"
+description: "Conzca los estándares de Ethereum, incluidos los EIP, los estándares de tókenes como ERC-20 y ERC-721, y las convenciones de desarrollo."
 lang: es
 incomplete: true
 ---
 
-## Resumen de estándares {#standards-overview}
+## Resumen de los estándares {#standards-overview}
 
-La comunidad Ethereum ha adoptado muchos estándares que ayudan a mantener interoperables proyectos (como [clientes Ethereum](/developers/docs/nodes-and-clients/) y carteras) a través de implementaciones, y asegurar que los contratos inteligentes y dapps sigan siendo compuestos.
+La comunidad de Ethereum ha adoptado muchos estándares que ayudan a mantener la interoperabilidad de los proyectos (como los [clientes de Ethereum](/developers/docs/nodes-and-clients/) y las billeteras) entre implementaciones, y garantizan que los contratos inteligentes y las dapps sigan siendo componibles.
 
-Normalmente se introducen estándares como [Propuestas de mejora de Ethereum](/eips/) (EIP), que se someten a un debate entre los miembros de la comunidad a través de un [proceso estándar](https://eips.ethereum.org/EIPS/eip-1).
+Normalmente, los estándares se presentan como [Propuestas de Mejora de Ethereum](/eips/) (EIP), que son debatidas por los miembros de la comunidad a través de un [proceso estándar](https://eips.ethereum.org/EIPS/eip-1).
 
-- [Introducción a EIP](/eips/)
+- [Introducción a las EIP](/eips/)
 - [Lista de EIP](https://eips.ethereum.org/)
-- [Repositorio de GitHub de EIP](https://github.com/ethereum/EIPs)
-- [Tablón de discusión de EIP](https://ethereum-magicians.org/c/eips)
-- [Introducción a la Gobernanza de Ethereum](/governance/)
-- [Resumen de gobernanza de Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 de marzo de 2019, Mann Boris_
-- [Gobernanza de desarrollo del protocolo de Ethereum y coordinación de actualización de la red](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 de marzo de 2020, Hudson Jameson_
-- [Lista de reproducción de todas las reuniones de desarrolladores principales de Ethereum](https://www.youtube.com/@EthereumProtocol) _(lista de reproducción de YouTube)_
+- [Repositorio de GitHub de las EIP](https://github.com/ethereum/EIPs)
+- [Foro de debate de las EIP](https://ethereum-magicians.org/c/eips)
+- [Introducción a la gobernanza de Ethereum](/governance/)
+- [Resumen de la gobernanza de Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 de marzo de 2019 - Boris Mann_
+- [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 de marzo de 2020 - Hudson Jameson_
+- [Lista de reproducción de todas las reuniones de los desarrolladores del núcleo de Ethereum](https://www.youtube.com/@EthereumProtocol) _(Lista de reproducción de YouTube)_
 
 ## Tipos de estándares {#types-of-standards}
 
@@ -30,30 +30,30 @@ Hay tres tipos de EIP:
 
 Además, el Standard Track se subdivide en 4 categorías:
 
-- [Core](https://eips.ethereum.org/core): mejoras que requieren una bifurcación de consenso
-- [Networking](https://eips.ethereum.org/networking): mejoras en torno a devp2p y el Light Ethereum Subprotocol (LES), así como propuestas de mejoras a las especificaciones de protocolo de red de whisper y swarm.
-- [Interface](https://eips.ethereum.org/interface): mejoras en torno a especificaciones y estándares API/RPC del cliente, y ciertos estándares a nivel del lenguaje, como nombres de métodos y ABI de contratos.
+- [Núcleo](https://eips.ethereum.org/core): mejoras que requieren una bifurcación de consenso
+- [Redes](https://eips.ethereum.org/networking): mejoras en torno a devp2p y el subprotocolo ligero de Ethereum, así como mejoras propuestas en las especificaciones del protocolo de red de Whisper y Swarm.
+- [Interfaz](https://eips.ethereum.org/interface): mejoras en torno a las especificaciones y estándares de la API/RPC del cliente, y ciertos estándares a nivel de lenguaje, como los nombres de los métodos y las ABI de los contratos.
 - [ERC](https://eips.ethereum.org/erc): estándares y convenciones a nivel de aplicación
 
 Puede encontrar información más detallada sobre estos diferentes tipos y categorías en [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 
 ### Estándares de tokens {#token-standards}
 
-- [ERC-20](/developers/docs/standards/tokens/erc-20/): Una interfaz para tokens fungibles (intercambiables), como tokens de votación, tokens de staking o monedas virtuales.
-  - [ERC-223](/developers/docs/standards/tokens/erc-223/): Estándar de tokens fungibles que hace que los tokens se comporten idénticos a ether y admite el manejo de transferencias de tokens en el lado del destinatario.
-  - [ERC-1363](/developers/docs/standards/tokens/erc-1363/): Define una interfaz de token para los tokens ERC que soporta la ejecución del código del destinatario después de la transferencia o transferFrom, o código spender después de la aprobación.
-- [ERC-721](/developers/docs/standards/tokens/erc-721/): Una interfaz para tokens no fungibles (NFT), como un deed de una obra de arte o una canción.
-  - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309): Un evento estandarizado emitido al crear/transferir uno, o muchos tokens no fungibles usando identificadores consecutivos de token.
-  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400): Extensión de interfaz para el rol de consumidor EIP-721.
-  - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907): Añada un rol de tiempo limitado con permisos restringidos a los tokens ERC-721.
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) - **(NO RECOMENDEDO**: Un mejora de estándar de tokens respecto de ERC-20.
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/): Un estándar de token que puede contener activos fungibles y no fungibles.
-- [ERC-4626](/developers/docs/standards/tokens/erc-4626/): Estándar de bóveda tokenizada diseñado para optimizar y unificar los parámetros técnicos de las bóvedas que otorgan rendimiento.
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) - Una interfaz estándar para tokens fungibles (intercambiables), como los tokens de votación, los tokens de staking o las monedas virtuales.
+  - [ERC-223](/developers/docs/standards/tokens/erc-223/) - Un estándar de tokens fungibles que hace que los tokens se comporten de forma idéntica al ether y admite el manejo de las transferencias de tokens por parte del destinatario.
+  - [ERC-1363](/developers/docs/standards/tokens/erc-1363/) - Una interfaz de extensión para tokens ERC-20 que permite ejecutar una retrollamada en los contratos de los destinatarios en una única transacción.
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - Una interfaz estándar para tokens no fungibles, como un título de propiedad para una obra de arte o una canción.
+  - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - Un evento estandarizado que se emite al crear/transferir uno o varios tokens no fungibles utilizando identificadores de token consecutivos.
+  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - Extensión de la interfaz para la función de consumidor de EIP-721.
+  - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - Añade una función de tiempo limitado con permisos restringidos a los tokens ERC-721.
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - **(NO RECOMENDADO)** Un estándar de token que mejora el ERC-20.
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - Un estándar de token que puede contener tanto activos fungibles como no fungibles.
+- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - Un estándar de bóveda tokenizada diseñado para optimizar y unificar los parámetros técnicos de las bóvedas que generan rendimiento.
 
-Obtenga más información sobre los [estándar de tokens](/developers/docs/standards/tokens/).
+Más información sobre los [estándares de tokens](/developers/docs/standards/tokens/).
 
-## Más lectura {#further-reading}
+## Lecturas adicionales {#further-reading}
 
-- [Propuestas de mejora de Ethereum (EIP)](/eips/)
+- [Propuestas de Mejora de Ethereum (EIP)](/eips/)
 
-_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
+_¿Conoce algún recurso de la comunidad que le haya sido de ayuda? ¡Edite esta página y agréguela!_

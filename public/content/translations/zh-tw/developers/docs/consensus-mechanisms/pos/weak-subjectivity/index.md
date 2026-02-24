@@ -1,14 +1,14 @@
 ---
-title: 弱主觀性
-description: 關於弱主觀性及其在權益證明以太坊中所扮演角色的解釋。
+title: "弱主觀性"
+description: "關於弱主觀性及其在權益證明以太坊中所扮演角色的解釋。"
 lang: zh-tw
 ---
 
 區塊鏈中的主觀性是指依賴社交資訊來達成對當前狀態的共識。 可能有多個有效分叉，可根據從網路上其他對等節點收集而來的資訊進行選擇。 主觀性的反面是客觀性，是指只存在唯一一條可能有效的鏈，所有節點都需要透過套用其程式碼規則達成共識。 還有第三種狀態，稱為弱主觀性。 這是指在擷取一些初始社交資訊種子後，可以客觀地繼續運作的區塊鏈。
 
-## 前置要求 {#prerequisites}
+## 先決條件 {#prerequisites}
 
-要理解本頁內容，需先理解[權益證明](/developers/docs/consensus-mechanisms/pos/)的基礎知識。
+若要了解本頁內容，必須先了解[權益證明](/developers/docs/consensus-mechanisms/pos/)的基礎知識。
 
 ## 弱主觀性解決了什麼問題？ {#problems-ws-solves}
 
@@ -30,10 +30,10 @@ lang: zh-tw
 
 最後，可以從其他節點要求檢查點；或許另一個運作全節點的以太坊使用者可以提供一個檢查點，然後由驗證者比對來自區塊瀏覽器的資料進行驗證。 整體來說，信任弱主觀性檢查點的提供者被認為跟信任用戶端開發者一樣存在問題。 需要的整體信任很低。 值得注意的是，只有當大多數驗證者串謀產生區塊鏈的另一個分叉這種微乎其微的情況下，上述考量才會變得非常重要。 其他情況下，只有一個以太坊鏈可供選擇。
 
-## 衍生閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
-- [以太坊 2.0 中的弱主觀性](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
-- [Vitalik：我如何愛上弱主觀性](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
-- [弱主觀性（Teku 文件）](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
+- [Eth2 中的弱主觀性](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
+- [Vitalik：我是如何學會愛上弱主觀性的](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
+- [弱主觀性 (Teku 文件)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
 - [階段 0 弱主觀性指南](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
-- [以太坊 2.0 中的弱主觀性分析](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)
+- [以太坊 2.0 弱主觀性分析](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

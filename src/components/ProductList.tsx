@@ -1,5 +1,4 @@
 import type { ImageProps } from "next/image"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -90,7 +89,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
                     className="ms-0 mt-4 min-h-fit gap-0 self-center rounded-sm px-6 py-1 sm:ms-8 sm:mt-0"
                   >
                     {actionLabel}
-                    <VisuallyHidden>to {title} website</VisuallyHidden>
+                    <span className="sr-only">to {title} website</span>
                   </ButtonLink>
                 )}
               </Flex>

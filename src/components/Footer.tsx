@@ -13,6 +13,8 @@ import Translation from "@/components/Translation"
 import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 import { Button } from "./ui/buttons/Button"
 import { BaseLink } from "./ui/Link"
 import { List, ListItem } from "./ui/list"
@@ -62,7 +64,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("what-is-ethereum"),
         },
         {
-          href: "/eth/",
+          href: "/what-is-ether/",
           text: t("what-is-ether"),
         },
         {
@@ -165,12 +167,12 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("documentation"),
         },
         {
-          href: "/developers/learning-tools/",
-          text: t("learn-by-coding"),
+          href: "/developers/tools/",
+          text: t("start-building"),
         },
         {
-          href: "/developers/local-environment/",
-          text: t("set-up-local-env"),
+          href: "/developers/tools/education/",
+          text: t("learn-ethereum-development"),
         },
         {
           href: "/community/grants/",
@@ -185,7 +187,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("nav-docs-design-label"),
         },
         {
-          href: "/enterprise/",
+          href: ENTERPRISE_ETHEREUM_URL,
           text: t("enterprise-mainnet"),
         },
         {
@@ -333,6 +335,15 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         </Button>
       </div>
 
+      <div className="px-4 py-4">
+        <BaseLink
+          href="/"
+          className="text-lg font-bold no-underline hover:text-primary"
+        >
+          Ethereum.org
+        </BaseLink>
+      </div>
+
       <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {linkSections.map((section: FooterLinkSection, idx) => (
           <div key={idx}>
@@ -360,10 +371,13 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
               key={href}
               href={href}
               hideArrow
-              aria-label={ariaLabel}
               className="text-body hover:text-primary"
             >
-              <Icon className="h-9 w-9 hover:transform hover:transition-colors" />
+              <Icon
+                aria-hidden="true"
+                className="h-9 w-9 hover:transform hover:transition-colors"
+              />
+              <span className="sr-only">{ariaLabel}</span>
             </BaseLink>
           ))}
         </div>

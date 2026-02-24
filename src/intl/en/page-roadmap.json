@@ -55,6 +55,7 @@
   "page-roadmap-release-status-dev": "In development",
   "page-roadmap-release-main-features": "Main features",
   "page-roadmap-release-learn-more": "Learn more",
+  "page-roadmap-release-forkcast": "Track changes",
   "page-roadmap-paris-pos-title": "Transition to Proof of Stake",
   "page-roadmap-paris-pos-item-1": "Replaced energy-intensive mining with staking-based consensus",
   "page-roadmap-paris-pos-item-2": "Reduced Ethereum's energy consumption by ~99.95%",

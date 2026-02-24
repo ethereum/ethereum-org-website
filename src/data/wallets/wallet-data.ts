@@ -29,6 +29,7 @@ import GemWalletImage from "@/public/images/wallets/gemwallet.png"
 import GridPlusImage from "@/public/images/wallets/gridplus.png"
 import imKeyImage from "@/public/images/wallets/imkey.png"
 import imTokenImage from "@/public/images/wallets/imtoken.png"
+import InfinexImage from "@/public/images/wallets/infinexwallet.png"
 import IoFinnetImage from "@/public/images/wallets/iofinnet.png"
 import KeystoneImage from "@/public/images/wallets/keystone.png"
 import LedgerImage from "@/public/images/wallets/ledger.png"
@@ -38,7 +39,7 @@ import MewImage from "@/public/images/wallets/mew.png"
 import NuFiImage from "@/public/images/wallets/nufi.png"
 import OneKeyImage from "@/public/images/wallets/onekey.png"
 import PhantomImage from "@/public/images/wallets/phantom.png"
-import PillarImage from "@/public/images/wallets/pillar.png"
+import PillarXImage from "@/public/images/wallets/pillarx.png"
 import RabbyWalletImage from "@/public/images/wallets/rabbywallet.png"
 import RailwayImage from "@/public/images/wallets/railway.png"
 import RainbowImage from "@/public/images/wallets/rainbow.png"
@@ -426,7 +427,7 @@ export const walletsData: WalletData[] = [
     firefox: true,
     chromium: true,
     hardware: false,
-    open_source: true,
+    open_source: false,
     repo_url: "https://github.com/MetaMask",
     non_custodial: true,
     security_audit: [],
@@ -898,18 +899,18 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-12-23",
-    name: "Pillar",
-    image: PillarImage,
-    twBackgroundColor: "bg-[#6A12D0]",
-    twGradiantBrandColor: "from-[#6A12D0]",
-    url: "https://www.pillar.fi/",
+    last_updated: "2025-01-12",
+    name: "PillarX",
+    image: PillarXImage,
+    twBackgroundColor: "bg-[#000000]",
+    twGradiantBrandColor: "from-[#000000]",
+    url: "https://pillarx.app/",
     active_development_team: true,
-    languages_supported: ["am", "en", "bs", "zh"],
-    twitter: "https://x.com/PillarWallet",
-    discord: "https://chat.pillar.fi/",
+    languages_supported: ["en"],
+    twitter: "https://x.com/PX_Web3",
+    discord: "https://discord.gg/pillarx",
     reddit: "",
-    telegram: "https://t.me/pillarofficial",
+    telegram: "https://t.me/pilaboratory",
     ios: true,
     android: true,
     linux: false,
@@ -919,7 +920,7 @@ export const walletsData: WalletData[] = [
     chromium: false,
     hardware: false,
     open_source: true,
-    repo_url: "https://github.com/pillarwallet/pillarwallet",
+    repo_url: "https://github.com/pillarwallet/x",
     non_custodial: true,
     security_audit: [
       "https://v1.etherspot.io/reference/etherspot-pillar-audit",
@@ -940,9 +941,14 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    onboard_documentation: "https://docs.pillar.fi/",
-    documentation: "https://docs.pillar.fi/",
-    supported_chains: ["Ethereum Mainnet", "OP Mainnet", "Arbitrum One"],
+    onboard_documentation: "https://docs.pillarx.app/",
+    documentation: "https://docs.pillarx.app/",
+    supported_chains: [
+      "Ethereum Mainnet",
+      "OP Mainnet",
+      "Arbitrum One",
+      "Base",
+    ],
   },
   {
     last_updated: "2025-03-19",
@@ -2988,6 +2994,68 @@ export const walletsData: WalletData[] = [
       "Abstract",
       "World Chain",
     ],
+  },
+  {
+    // https://github.com/ethereum/ethereum-org-website/issues/17586
+    last_updated: "2026-02-17",
+    name: "Infinex Wallet & Crypto Superapp",
+    image: InfinexImage,
+    twBackgroundColor: "bg-[#FE6F39]",
+    twGradiantBrandColor: "from-[#FE6F39]",
+    active_development_team: true,
+    url: "https://infinex.xyz/extension?ref=ethfw",
+    twitter: "https://x.com/infinex",
+    discord: "https://discord.com/invite/infinex",
+    reddit: "",
+    telegram: "https://t.me/infinexbroadcast",
+    onboard_documentation:
+      "https://support.infinex.xyz/en/articles/12854879-infinex-browser-extension?ref=ethfw",
+    documentation:
+      "https://support.infinex.xyz/en/collections/9874360-your-infinex-account?ref=ethfw",
+    ios: false, // pinnable webapp
+    android: false, // pinnable webapp
+    linux: false, // pinnable webapp
+    windows: false, // pinnable webapp
+    macOS: false, // pinnable webapp
+    firefox: false,
+    chromium: true, // https://chromewebstore.google.com/detail/infinex/ibcnlnjajdjfjdcogphnhombiegpcnbj
+    hardware: false,
+    multichain: true,
+    supported_chains: [
+      // https://infinex.xyz/legals/supported-assets
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "OP Mainnet",
+      "Base",
+      "Blast",
+      "Unichain",
+      "Ink",
+    ],
+    languages_supported: ["en"],
+    buy_crypto: false,
+    withdraw_crypto: false,
+    connect_to_dapps: true,
+    nft_support: true,
+    staking: true,
+    layer_2: true,
+    swaps: true,
+    hardware_support: true, // https://infinex.xyz/news/59-hardware-wallet-support-bulk-move
+    ens_support: true,
+    open_source: false,
+    repo_url: "https://github.com/infinex-xyz",
+    non_custodial: true,
+    security_audit: [
+      "https://iosiro.com/audits/infinex-accounts-smart-account-smart-contract-audit",
+      "https://ottersec.notion.site/Infinex-68e26cdbdc7848b7992b80d5b7005063",
+    ],
+    scam_protection: true,
+    multisig: false,
+    mpc: false,
+    social_recovery: true,
+    privacy: true, // no KYC, private send https://infinex.xyz/news/61-incognito-mode
+    rpc_importing: false,
+    erc_20_support: true, // auto, but scam assets are filtered (can be selectively disabled)
+    gas_fee_customization: false,
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 

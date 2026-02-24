@@ -1,6 +1,6 @@
 ---
-title: Áreas activas de investigación en Ethereum
-description: Explore las diferentes áreas de investigación abierta y aprenda a involucrarse.
+title: "Áreas activas de investigación en Ethereum"
+description: "Explore las diferentes áreas de investigación abierta y aprenda a involucrarse."
 lang: es
 ---
 
@@ -57,7 +57,7 @@ La capa de ejecución se ocupa de ejecutar transacciones, ejecutar la [máquina 
 
 - establecer soporte al cliente ligero;
 - investigar los límites del gas;
-- incorporar nuevas estructuras de datos (por ejemplo, Verkle Tries).
+- e incorporando nuevas estructuras de datos (p. ej., Verkle Tries).
 
 #### Lectura de fondo {#background-reading-1}
 
@@ -83,7 +83,7 @@ Se requiere un nodo de Ethereum para ejecutar dos piezas de software:
 1. un cliente de consenso para hacer un seguimiento de la cabeza de la cadena de bloques, bloqueos gossip y la gestión de la lógica de consenso;
 2. un cliente de ejecución para dar soporte a la máquina virtual de Ethereum y ejecutar transacciones y contratos inteligentes.
 
-Véase la [página de nodos y clientes](/developers/docs/nodes-and-clients/) para ver más detalle de los nodos y clientes, y para obtener una lista de todas las implementaciones de clientes. También puede encontrar un historial de todas las actualizaciones de Ethereum en la [página del historial](/ethereum-forks/).
+Consulte la [página de nodos y clientes](/developers/docs/nodes-and-clients/) para ver más detalles sobre nodos y clientes y una lista de todas las implementaciones de clientes actuales. También puede encontrar un historial de todas las actualizaciones de Ethereum en la [página del historial](/ethereum-forks/).
 
 ### Clientes de ejecución {#execution-clients}
 
@@ -111,7 +111,7 @@ Ahora hay varios protocolos de capa 2 que escalan Ethereum utilizando diferentes
 #### Investigación reciente {#recent-research-2}
 
 - [Ordenación justa de Arbitrum para secuenciadores](https://eprint.iacr.org/2021/1465)
-- [Capa 2 de ethresear.ch](https://ethresear.ch/c/layer-2/32)
+- [Capa 2 Ethresear.ch](https://ethresear.ch/c/layer-2/32)
 - [Hoja de ruta centrada en los rollups](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -119,7 +119,7 @@ Ahora hay varios protocolos de capa 2 que escalan Ethereum utilizando diferentes
 
 Un área particular de la capa 2 que requiere más investigación y desarrollo son los puentes seguros y de alto rendimiento. Esto incluye puentes entre varias capas 2 y puentes entre la capa 1 y la capa 2. Esta es un área de investigación particularmente importante porque los puentes suelen ser el objetivo de los hackers.
 
-#### Lectura de fondo{#background-reading-3}
+#### Lectura de fondo {#background-reading-3}
 
 - [Introducción a puentes en cadenas de bloques](/bridges/)
 - [Vitalik sobre los puentes](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
@@ -190,7 +190,7 @@ Las billeteras de Ethereum pueden ser extensiones de navegador, aplicaciones de 
 
 - [Introducción a las billeteras](/wallets/)
 - [Introducción a la seguridad de las billeteras](/security/)
-- [Seguridad ethresear.ch](https://ethresear.ch/tag/security)
+- [Seguridad Ethresear.ch](https://ethresear.ch/tag/security)
 - [EIP-2938: Abstracción de cuentas](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337: Abstracción de cuentas](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -271,7 +271,7 @@ El staking líquido permite a los usuarios con menos de 32 ETH recibir rendimien
 
 #### Lectura de fondo {#background-reading-12}
 
-- [Ethresear.ch staking líquido](https://ethresear.ch/search?Q=liquid%20staking)
+- [Ethresear.ch staking líquido](https://ethresear.ch/search? Q=liquid%20staking)
 - [Lido: El camino hacia el staking en Ethereum sin confianza](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
 - [Rocket Pool: Introducción al protocolo de staking](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
 
@@ -345,7 +345,7 @@ Un caso de uso de alto impacto para Ethereum es la capacidad de organizarse de m
 
 Las herramientas para desarrolladores de Ethereum están evolucionando rápidamente. Hay mucha investigación y desarrollo activo por hacer en esta área general.
 
-#### Lectura de fondo {#lectura-de-fondo-17}
+#### Lectura de fondo {#background-reading-17}
 
 - [Herramientas por lenguaje de programación](/developers/docs/programming-languages/)
 - [Marcos de desarrolladores](/developers/docs/frameworks/)
@@ -359,13 +359,13 @@ Las herramientas para desarrolladores de Ethereum están evolucionando rápidame
 
 ### Oráculos {#oracles}
 
-Los oráculos importan datos fuera de la cadena a la cadena de bloques de manera descentralizada y sin permisos. Obtener estos datos dentro de la cadena permite que las dapps puedan reaccionar ante los fenómenos del mundo real, como las fluctuaciones de precios en los activos del mundo real, los eventos en las aplicaciones fuera de la cadena o incluso los cambios en el clima.
+Los oráculos importan datos de fuera de la cadena a la cadena de bloques de manera descentralizada y sin requerir permiso. Llevar estos datos a la cadena permite que las dapps puede reaccionar a fenómenos del mundo real como fluctuaciones de precios en activos del mundo real, eventos en aplicaciones externas a la cadena o incluso cambios en el tiempo.
 
 #### Lectura de fondo {#background-reading-18}
 
 - [Introducción a los oráculos](/developers/docs/oracles/)
 
-#### Investigación reciente {#recent-research-18}
+#### Búsqueda reciente {#recent-research-18}
 
 - [Encuesta de oráculos de cadenas de bloques](https://arxiv.org/pdf/2004.07140.pdf)
 - [Documento técnico de Chainlink](https://chain.link/whitepaper)
@@ -374,21 +374,21 @@ Los oráculos importan datos fuera de la cadena a la cadena de bloques de manera
 
 Por lo general, los hackeos en Ethereum se aprovechan de puntos flacos en aplicaciones individuales y no en el propio protocolo. Los hackers y los desarrolladores de aplicaciones están enfrascados en una carrera armamentística para desarrollar nuevos ataques y defensas. Esto significa que siempre es necesario realizar una investigación y un desarrollo importantes para mantener las aplicaciones a salvo de los hackeos.
 
-#### Lectura de fondo {#lectura-de-fondo-19}
+#### Lectura de fondo {#background-reading-19}
 
 - [Informe de explotación de agujero de gusano](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Lista de hackeo de contratos de Ethereum post mórtem](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Investigación reciente {#recent-research-19}
 
-- [ethresear.ch Aplicaciones](https://ethresear.ch/c/applications/18)
+- [Applicaciones Ethresear.ch](https://ethresear.ch/c/applications/18)
 
 ### Pila de tecnología {#technology-stack}
 
 La descentralización de toda la pila de tecnología de Ethereum es un área de investigación importante. Actualmente, las dapps en Ethereum suelen tener algunos puntos de centralización, ya que dependen de herramientas o infraestructuras centralizadas.
 
-#### Lectura de fondo {#lectura-de-fondo-20}
+#### Lectura de fondo {#background-reading-20}
 
 - [Pila de Ethereum](/developers/docs/ethereum-stack/)
 - [Coinbase: Introducción al Stack Web3](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)

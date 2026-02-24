@@ -16,4 +16,5 @@ export const LAYER2_GROWTHEPIE_IDS: string[] = [
   "starknet",
   "unichain",
   "ink",
+  "zircuit",
 ]

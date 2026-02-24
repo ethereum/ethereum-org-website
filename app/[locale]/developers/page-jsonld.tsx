@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { CommunityConference, FileContributor } from "@/lib/types"
+import { EventItem, FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -22,7 +22,7 @@ export default async function DevelopersPageJsonLD({
   locale: string
   paths: DevelopersPath[]
   courses: VideoCourse[]
-  hackathons: CommunityConference[]
+  hackathons: EventItem[]
   contributors: FileContributor[]
 }) {
   const t = await getTranslations({ namespace: "page-developers-index" })
@@ -101,8 +101,7 @@ export default async function DevelopersPageJsonLD({
             "@type": "ListItem",
             position: paths.length + courses.length + index + 1,
             name: hackathon.title,
-            description: hackathon.description,
-            url: hackathon.href,
+            url: hackathon.link,
           })),
         ],
         publisher: ethereumFoundationOrganization,

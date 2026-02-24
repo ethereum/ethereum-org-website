@@ -1,0 +1,313 @@
+// GitHub commit operations
+
+import { config, gitHubBearerHeaders } from "../../config"
+import { fetchWithRetry } from "../utils/fetch"
+import { debugLog, delay } from "../workflows/utils"
+
+/** File to be committed in a batch */
+export interface BatchFile {
+  path: string
+  content: Buffer
+}
+
+/**
+ * Commit multiple files in a single commit using GitHub's Git Data API.
+ * This avoids creating one commit per file.
+ *
+ * @param files - Array of files to commit
+ * @param branch - Target branch name
+ * @param message - Commit message
+ */
+export async function batchCommitFiles(
+  files: BatchFile[],
+  branch: string,
+  message: string
+): Promise<void> {
+  if (files.length === 0) {
+    debugLog("batchCommitFiles: No files to commit, skipping")
+    return
+  }
+
+  const baseUrl = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}`
+
+  // 1. Get current branch ref
+  const refRes = await fetchWithRetry(`${baseUrl}/git/ref/heads/${branch}`, {
+    headers: gitHubBearerHeaders,
+  })
+  if (!refRes.ok) {
+    const body = await refRes.text().catch(() => "")
+    throw new Error(`Failed to get branch ref (${refRes.status}): ${body}`)
+  }
+  const refData: { object: { sha: string } } = await refRes.json()
+  const latestCommitSha = refData.object.sha
+
+  // 2. Get the commit to find base tree
+  const commitRes = await fetchWithRetry(
+    `${baseUrl}/git/commits/${latestCommitSha}`,
+    { headers: gitHubBearerHeaders }
+  )
+  if (!commitRes.ok) {
+    const body = await commitRes.text().catch(() => "")
+    throw new Error(`Failed to get commit (${commitRes.status}): ${body}`)
+  }
+  const commitData: { tree: { sha: string } } = await commitRes.json()
+  const baseTreeSha = commitData.tree.sha
+
+  // 3. Create blobs for each file
+  // Add delay between requests to avoid hitting GitHub's secondary rate limits
+  const BLOB_CREATION_DELAY_MS = 200 // 200ms between blob creations
+  const treeItems: { path: string; mode: string; type: string; sha: string }[] =
+    []
+
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i]
+
+    // Add delay before each request (except the first one)
+    if (i > 0) {
+      await delay(BLOB_CREATION_DELAY_MS)
+    }
+
+    const blobRes = await fetchWithRetry(`${baseUrl}/git/blobs`, {
+      method: "POST",
+      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        content: file.content.toString("base64"),
+        encoding: "base64",
+      }),
+    })
+    if (!blobRes.ok) {
+      const body = await blobRes.text().catch(() => "")
+      throw new Error(
+        `Failed to create blob for ${file.path} (${blobRes.status}): ${body}`
+      )
+    }
+    const blobData: { sha: string } = await blobRes.json()
+    treeItems.push({
+      path: file.path,
+      mode: "100644",
+      type: "blob",
+      sha: blobData.sha,
+    })
+
+    // Log progress for large batches
+    if (files.length > 10 && (i + 1) % 10 === 0) {
+      debugLog(`Created ${i + 1}/${files.length} blobs...`)
+    }
+  }
+
+  // 4. Create new tree
+  const treeRes = await fetchWithRetry(`${baseUrl}/git/trees`, {
+    method: "POST",
+    headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      base_tree: baseTreeSha,
+      tree: treeItems,
+    }),
+  })
+  if (!treeRes.ok) {
+    const body = await treeRes.text().catch(() => "")
+    throw new Error(`Failed to create tree (${treeRes.status}): ${body}`)
+  }
+  const treeData: { sha: string } = await treeRes.json()
+
+  // 5. Create commit
+  const newCommitRes = await fetchWithRetry(`${baseUrl}/git/commits`, {
+    method: "POST",
+    headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message,
+      tree: treeData.sha,
+      parents: [latestCommitSha],
+    }),
+  })
+  if (!newCommitRes.ok) {
+    const body = await newCommitRes.text().catch(() => "")
+    throw new Error(`Failed to create commit (${newCommitRes.status}): ${body}`)
+  }
+  const newCommitData: { sha: string } = await newCommitRes.json()
+
+  // 6. Update branch ref
+  const updateRefRes = await fetchWithRetry(
+    `${baseUrl}/git/refs/heads/${branch}`,
+    {
+      method: "PATCH",
+      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({ sha: newCommitData.sha }),
+    }
+  )
+  if (!updateRefRes.ok) {
+    const body = await updateRefRes.text().catch(() => "")
+    throw new Error(`Failed to update ref (${updateRefRes.status}): ${body}`)
+  }
+
+  debugLog(
+    `batchCommitFiles: Committed ${files.length} files in single commit ${newCommitData.sha}`
+  )
+}
+
+/**
+ * Get the destination path for a translated file
+ *
+ * @param crowdinFilePath - The Crowdin file path (e.g., src/intl/en/page-foo.json)
+ * @param internalLanguageCode - The internal language code
+ * @returns The destination path in the repository
+ */
+export const getDestinationFromPath = (
+  crowdinFilePath: string,
+  internalLanguageCode: string
+) => {
+  const normalized = crowdinFilePath.replace(/^\//, "")
+  const isJson = normalized.toLowerCase().endsWith(".json")
+  const isMarkdown = normalized.toLowerCase().endsWith(".md")
+
+  let destinationPath = normalized
+
+  if (isJson) {
+    // JSON: src/intl/en/*.json -> src/intl/<lang>/*.json
+    if (normalized.startsWith("src/intl/en/")) {
+      destinationPath = normalized.replace(
+        /^src\/intl\/en\//,
+        `src/intl/${internalLanguageCode}/`
+      )
+    } else if (normalized.startsWith("src/intl/")) {
+      // Fallback: if for some reason "en" segment is missing, inject lang after src/intl/
+      const parts = normalized.split("/")
+      // parts: [src, intl, ...]
+      parts.splice(2, 0, internalLanguageCode)
+      destinationPath = parts.join("/")
+    }
+  } else if (isMarkdown) {
+    // Markdown: public/content/<path>/index.md -> public/content/translations/<lang>/<path>/index.md
+    if (normalized.startsWith("public/content/")) {
+      const rel = normalized.replace(/^public\/content\//, "")
+      // If already inside translations/, avoid duplicating; rewrite to current lang
+      const relParts = rel.split("/").filter(Boolean)
+      if (relParts[0] === "translations") {
+        // Drop existing translations/<lang>/
+        const rest = relParts.slice(2).join("/")
+        destinationPath = `public/content/translations/${internalLanguageCode}/${rest}`
+      } else {
+        destinationPath = `public/content/translations/${internalLanguageCode}/${rel}`
+      }
+    }
+  }
+
+  debugLog(
+    `Destination mapping: ${crowdinFilePath} -> ${destinationPath} (lang=${internalLanguageCode})`
+  )
+  return destinationPath
+}
+
+/**
+ * Get the SHA of a file at a specific path
+ *
+ * @param path - The file path in the repository
+ * @param branch - The branch name
+ * @returns Object containing the file SHA
+ */
+export const getPathSha = async (path: string, branch: string) => {
+  const url = new URL(
+    `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${path}?ref=${branch}`
+  )
+
+  const res = await fetchWithRetry(url.toString(), {
+    headers: gitHubBearerHeaders,
+  })
+
+  if (!res.ok) {
+    console.warn("Res not OK")
+    const body = await res.text().catch(() => "")
+    throw new Error(`GitHub getPathSha (${res.status}): ${body}`)
+  }
+
+  type JsonResponse = { sha: string }
+  const { sha }: JsonResponse = await res.json()
+
+  return { sha }
+}
+
+/**
+ * Commit a file to a GitHub branch with retry logic for conflicts
+ *
+ * @param buffer - The file contents as a Buffer
+ * @param destinationPath - The path in the repository
+ * @param branch - The branch name
+ * @param sha - Optional SHA for updating existing files
+ * @param attempt - Current retry attempt number
+ */
+export const putCommitFile = async (
+  buffer: Buffer,
+  destinationPath: string,
+  branch: string,
+  sha?: string,
+  attempt = 0
+): Promise<void> => {
+  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${destinationPath}`
+
+  try {
+    // Use the buffer contents as base64-encoded content for the commit
+    const contentBase64 = buffer.toString("base64")
+
+    const body = {
+      message: `update(i18n): ${destinationPath}`,
+      content: contentBase64,
+      branch,
+    }
+
+    if (sha) body["sha"] = sha
+
+    const res = await fetchWithRetry(url.toString(), {
+      method: "PUT",
+      headers: {
+        ...gitHubBearerHeaders,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    })
+
+    if (res.status === 422) {
+      const { sha: fileSha } = await getPathSha(destinationPath, branch)
+      console.warn(
+        `[RETRY] 422 Unprocessable for ${destinationPath}. Retrying with existing SHA ${fileSha}`
+      )
+      return await putCommitFile(
+        buffer,
+        destinationPath,
+        branch,
+        fileSha,
+        attempt
+      )
+    }
+
+    if (res.status === 409) {
+      if (attempt >= 5) {
+        const bodyText = await res.text().catch(() => "")
+        throw new Error(
+          `GitHub putCommitFile conflict persists after ${attempt} retries (${res.status}): ${bodyText}`
+        )
+      }
+      const backoff = 500 * Math.pow(2, attempt) // 500ms, 1s, 2s, 4s, 8s
+      console.warn(
+        `[RETRY] 409 Conflict for ${destinationPath}. Attempt ${attempt + 1}. Waiting ${backoff}ms before retry.`
+      )
+      await delay(backoff)
+      const { sha: latestSha } = await getPathSha(destinationPath, branch)
+      return await putCommitFile(
+        buffer,
+        destinationPath,
+        branch,
+        latestSha,
+        attempt + 1
+      )
+    }
+
+    if (!res.ok) {
+      console.warn("Res not OK")
+      const body = await res.text().catch(() => "")
+      throw new Error(`GitHub putCommitFile (${res.status}): ${body}`)
+    }
+  } catch (error) {
+    console.error(error)
+    process.exit(1)
+  }
+}

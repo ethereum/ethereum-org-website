@@ -32,6 +32,3 @@
 "content 🖋️":
   - src/intl/en/**
   - public/content/**/*
-
-"event 📅":
-  - src/data/community-events.json

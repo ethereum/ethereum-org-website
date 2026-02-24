@@ -56,5 +56,6 @@
   "page-layer-2-mode-description": "Mode is an OP stack Optimistic Rollup building the AIFi economy.",
   "page-layer-2-taiko-description": "Taiko is a decentralized, Ethereum-equivalent ZK-EVM rollup that enables seamless cross-chain communication.",
   "page-layer-2-unichain-description": "Unichain is a DeFi-native Ethereum L2, built to be the home for liquidity across chains",
-  "page-layer-2-ink-description": "Ink is an Ethereum OP Stack layer 2 blockchain designed to be the house of DeFi for the Superchain; a powerful baselayer for deploying innovative DeFi protocols."
+  "page-layer-2-ink-description": "Ink is an Ethereum OP Stack layer 2 blockchain designed to be the house of DeFi for the Superchain; a powerful baselayer for deploying innovative DeFi protocols.",
+  "page-layer-2-zircuit-description": "Zircuit is an EVM-compatible ZK Rollup featuring AI-powered Sequencer-Level Security to detect and prevent malicious transactions."
 }

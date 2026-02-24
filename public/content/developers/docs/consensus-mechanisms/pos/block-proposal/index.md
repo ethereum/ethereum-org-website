@@ -65,5 +65,5 @@ The block proposer receives payment for their work. There is a `base_reward` cal
 - [Introduction to blocks](/developers/docs/blocks/)
 - [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Ethereum consensus specs](https://github.com/ethereum/consensus-specs)
-- [Introduction to Gasper](/developers/docs/consensus-mechanisms/pos/)
+- [Introduction to Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 - [Upgrading Ethereum](https://eth2book.info/)

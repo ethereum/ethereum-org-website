@@ -330,6 +330,11 @@ const config = {
       },
       gridTemplateColumns: {
         bento: "repeat(12, 1fr)",
+        "fill-3": "repeat(auto-fill, minmax(min(100%, 22rem), 1fr))",
+        "fill-4": "repeat(auto-fill, minmax(min(100%, 18rem), 1fr))",
+        "fit-4": "repeat(auto-fit, minmax(min(100%, 18rem), 1fr))",
+        "fill-8": "repeat(auto-fill, minmax(min(100%, 11.25rem), 1fr))",
+        "fill-10": "repeat(auto-fill, minmax(min(100%, 7.5rem), 1fr))",
       },
       textUnderlineOffset: {
         3: "3px",

@@ -10,35 +10,29 @@ import { CommitHistory, Lang, PageParams, StakingStatsData } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import StakingPage from "./_components/staking"
 import StakingPageJsonLD from "./page-jsonld"
 
-import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
-import { fetchBeaconchainEthstore } from "@/lib/api/fetchBeaconchainEthstore"
-
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [
-    ["beaconchainEpoch", fetchBeaconchainEpoch],
-    ["beaconchainApr", fetchBeaconchainEthstore],
-  ],
-  REVALIDATE_TIME * 1000
-)
+import { getBeaconchainData } from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [{ totalEthStaked, validatorscount }, apr] = await loadData()
+  // Fetch data using the new data-layer functions (already cached)
+  const beaconchainData = await getBeaconchainData()
+
+  // Handle null cases - throw error if required data is missing
+  if (!beaconchainData) {
+    throw new Error("Failed to fetch Beaconchain data")
+  }
+
+  // Extract values from data structures
+  const { totalEthStaked, validatorscount, apr } = beaconchainData
 
   const data: StakingStatsData = {
     totalEthStaked: "value" in totalEthStaked ? totalEthStaked.value : 0,

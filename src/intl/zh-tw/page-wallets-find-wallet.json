@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "匯入任何 ERC-20 代幣以便於錢包內使用",
   "page-find-wallet-buy-crypto": "購買加密貨幣",
   "page-find-wallet-buy-crypto-desc": "直接在錢包內使用法幣購買加密貨幣\n*備注：購買加密貨幣可能因地區而異",
-  "page-find-wallet-sell-for-fiat": "出售換取法定貨幣",
+  "page-find-wallet-sell-for-fiat": "出售換取現金",
   "page-find-wallet-sell-for-fiat-desc": "直接在錢包內將加密貨幣出售為法幣\n*備注：提取加密貨幣可能因地區而異",
   "page-find-wallet-multisig": "多簽",
   "page-find-wallet-multisig-desc": "需要多重簽名來授權交易的錢包",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "連結",
   "page-find-wallet-empty-results-title": "找不到任何結果",
   "page-find-wallet-empty-results-desc": "沒有錢包符合你的搜尋標準，請移除部分篩選條件。",
-  "page-find-wallet-see-wallets": "查看錢包"
+  "page-find-wallet-privacy": "隱私",
+  "page-find-wallet-privacy-desc": "支援內建私密交易的錢包",
+  "page-find-wallet-see-wallets": "查看錢包",
+  "page-find-wallet-search-languages": "搜尋語言..."
 }

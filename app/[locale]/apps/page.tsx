@@ -7,49 +7,51 @@ import {
 
 import { CommitHistory, Lang, PageParams } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 
-import { getDiscoverApps, getHighlightedApps } from "@/lib/utils/apps"
+import {
+  APP_TAG_VARIANTS,
+  getDiscoverApps,
+  getHighlightedApps,
+} from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { slugify } from "@/lib/utils/url"
 
 import { appsCategories } from "@/data/apps/categories"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
-import AppCard from "./_components/AppCard"
 import AppsHighlight from "./_components/AppsHighlight"
 import CommunityPicks from "./_components/CommunityPicks"
 import SuggestAnApp from "./_components/SuggestAnApp"
 import TopApps from "./_components/TopApps"
 import AppsJsonLD from "./page-jsonld"
 
-import { fetchApps } from "@/lib/api/fetchApps"
-import { fetchCommunityPicks } from "@/lib/api/fetchCommunityPicks"
-
-// 24 hours
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader(
-  [
-    ["appsData", fetchApps],
-    ["communityPicks", fetchCommunityPicks],
-  ],
-  REVALIDATE_TIME * 1000
-)
+import { getAppsData, getCommunityPicks } from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [appsData, communityPicks] = await loadData()
+  // Fetch data using the new data-layer functions (already cached)
+  const [appsData, communityPicks] = await Promise.all([
+    getAppsData(),
+    getCommunityPicks(),
+  ])
+
+  // Handle null cases - throw error if required data is missing
+  if (!appsData) {
+    throw new Error("Failed to fetch apps data")
+  }
+  if (!communityPicks) {
+    throw new Error("Failed to fetch community picks data")
+  }
 
   // Get 3 random highlighted apps
   const highlightedApps = getHighlightedApps(appsData, 3)
@@ -102,11 +104,24 @@ const Page = async ({ params }: { params: PageParams }) => {
               {discoverApps.map((app) => (
                 <AppCard
                   key={app.name}
-                  app={app}
-                  imageSize={24}
-                  showDescription={true}
-                  matomoCategory="apps"
-                  matomoAction="staff"
+                  name={app.name}
+                  description={app.description}
+                  thumbnail={app.image}
+                  category={app.category}
+                  categoryTagStatus={APP_TAG_VARIANTS[app.category]}
+                  tags={app.subCategory}
+                  href={`/apps/${slugify(app.name)}`}
+                  imageSize="large"
+                  customEventOptions={{
+                    eventCategory: "apps",
+                    eventAction: "staff",
+                    eventName: `app name ${app.name}`,
+                  }}
+                  descriptionTracking={{
+                    eventCategory: "apps",
+                    eventAction: "staff_show_more",
+                    eventName: `app description ${app.name}`,
+                  }}
                 />
               ))}
             </div>

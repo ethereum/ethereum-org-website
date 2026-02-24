@@ -13,11 +13,11 @@ summaryPoint2: Products that let you borrow, save, invest, trade, and more.
 summaryPoint3: Based on open-source technology that anyone can program with.
 ---
 
-DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled, and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It gives you exposure to global markets and alternatives to your local currency or banking options. DeFi products open up financial services to anyone with an internet connection and they're largely owned and maintained by their users. So far tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day.
+DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled, and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It gives you exposure to global markets and alternatives to your local currency or banking options. DeFi products open up financial services to anyone with an internet connection and they're largely owned and maintained by their users. So far, tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day.
 
 ## What's DeFi? {#what-is-defi}
 
-DeFi is a collective term for financial products and services that are accessible to anyone who can use Ethereum – anyone with an internet connection. With DeFi, the markets are always open and there are no centralized authorities who can block payments or deny you access to anything. Services that were previously slow and at risk of human error are automatic and safer now that they're handled by code that anyone can inspect and scrutinize.
+DeFi is a collective term for financial products and services that are accessible to anyone who can use [Ethereum](/) – anyone with an internet connection. With DeFi, the markets are always open and there are no centralized authorities who can block payments or deny you access to anything. Services that were previously slow and at risk of human error are automatic and safer now that they're handled by code that anyone can inspect and scrutinize.
 
 There's a booming crypto economy out there, where you can lend, borrow, long/short, earn interest, and more. Crypto-savvy Argentinians have used DeFi to escape crippling inflation. Companies have started streaming their employees their wages in real time. Some folks have even taken out and paid off loans worth millions of dollars without the need for any personal identification.
 
@@ -62,7 +62,7 @@ Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyon
 
 ## Programmable money {#programmable-money}
 
-This sounds odd... "why would I want to program my money"? However, this is more just a default feature of tokens on Ethereum. Anyone can program logic into payments. So you can get the control and security of Bitcoin mixed with the services provided by financial institutions. This lets you do things with cryptocurrencies that you can't do with Bitcoin like lending and borrowing, scheduling payments, investing in index funds and more.
+This sounds odd... "why would I want to program my money"? However, this is more than just a default feature of tokens on Ethereum. Anyone can program logic into payments. So you can get the control and security of Bitcoin mixed with the services provided by financial institutions. This lets you do things with cryptocurrencies that you can't do with Bitcoin like lending and borrowing, scheduling payments, investing in index funds and more.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -94,7 +94,7 @@ There's a decentralized alternative to most financial services. But Ethereum als
 
 ### Send money around the globe quickly {#send-money}
 
-As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Like Bitcoin, Ethereum makes sending money around the world as easy as sending an email. Just enter your recipient's [ENS name](/glossary/#ens) (like bob.eth) or their account address from your wallet and your payment will go directly to them in minutes (usually). To send or receive payments, you will need a [wallet](/wallets/).
+As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Like Bitcoin, Ethereum makes sending money around the world as easy as sending an email. Just enter your recipient's [ENS name](/glossary/#ens) (like bob.eth) or their account address from your wallet and your payment will go directly to them in minutes (usually). To send or receive payments, you will need a [wallet](/wallets/). [Learn more about crypto payments](/payments/).
 
 <ButtonLink href="/apps/categories/defi">
   See payment dapps
@@ -239,7 +239,7 @@ When you use a centralized exchange you have to deposit your assets before the t
 
 There are fund management products on Ethereum that will try to grow your portfolio based on a strategy of your choice. This is automatic, open to everyone, and doesn't need a human manager taking a cut of your profits.
 
-A good example is the [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). This is a fund that rebalances automatically to ensure your portfolio always includes the top DeFi tokens by market capitalization. You never have to manage any of the details and you can withdraw from the fund whenever you like.
+For example, there are tokenized index funds that rebalance automatically to ensure your portfolio always includes the top DeFi tokens by market capitalization. You never have to manage any of the details and you can withdraw from the fund whenever you like.
 
 <ButtonLink href="/apps/categories/defi">
   See investment dapps
@@ -302,7 +302,7 @@ With so much going on, you'll need a way to keep track of all your investments, 
 
 ## How does DeFi work? {#how-defi-works}
 
-DeFi uses cryptocurrencies and smart contracts to provide services that don't need intermediaries. In today's financial world, financial institutions act as guarantors of transactions. This gives these institutions immense power because your money flows through them. Plus billions of people around the world can't even access a bank account.
+DeFi uses cryptocurrencies and smart contracts to provide services that don't need intermediaries. In today's financial world, financial institutions act as guarantors of transactions. This gives these institutions immense power because your money flows through them. Plus, billions of people around the world can't even access a bank account.
 
 In DeFi, a smart contract replaces the financial institution in the transaction. A smart contract is a type of Ethereum account that can hold funds and can send/refund them based on certain conditions. No one can alter that smart contract when it's live – it will always run as programmed.
 
@@ -338,6 +338,15 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
   More on building dapps
 </ButtonLink>
 
+## Beyond traditional DeFi {#beyond-traditional-defi}
+
+The DeFi ecosystem continues to expand into new areas:
+
+- **[Prediction markets](/prediction-markets/)** – Decentralized platforms where you can bet on the outcome of future events, from elections to sporting events, without intermediaries.
+- **[Real-world assets (RWAs)](/real-world-assets/)** – Tokenizing physical assets like real estate, commodities, and bonds on Ethereum, bringing trillions of dollars of value on-chain.
+- **[Payments](/payments/)** – Using Ethereum and stablecoins for fast, low-cost global payments without traditional banking infrastructure.
+- **[AI agents](/ai-agents/)** – Autonomous software agents that can transact on Ethereum, enabling new forms of automated trading, portfolio management, and on-chain interaction.
+
 ## Further reading {#further-reading}
 
 ### DeFi data {#defi-data}
@@ -359,7 +368,6 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
 ### Communities {#communities}
 
 - [DeFi Llama Discord server](https://discord.defillama.com/)
-- [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
 
 <Divider />
 

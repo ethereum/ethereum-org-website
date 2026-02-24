@@ -35,7 +35,7 @@ This step is important for measuring experiment effectiveness and should be done
    - **Hypothesis**: Explain what you predict to happen when you run the A/B test, what the outcome will be and why it will happen.
    - **Description**: Provide details about the test and its purpose
    - **Variations**: Add your variants (e.g., "NewDesign", "AlternativeLayout")
-4. Define remainder of config:
+4. Define the remainder of the config:
    - **Success metrics**: Goals you want to track (select from previously created goals)
    - **Success conditions**: Statistical thresholds
    - **Target pages**: Specify the pages where this test will run (e.g., `/`, `/wallet`, etc.)
@@ -86,7 +86,7 @@ The experiment will automatically start running when:
 
 ## Multi-Variant Testing
 
-Support for 3+ variants:
+Supports 3+ variants:
 
 ```tsx
 // Matomo experiment configured with variations in this exact order:
@@ -117,7 +117,7 @@ Support for 3+ variants:
 ### Cookie-less Tracking
 
 - Uses deterministic assignment based on IP address + User-Agent fingerprint
-- Same user always gets same variant (consistent experience)
+- The same user always gets the same variant (consistent experience)
 - GDPR compliant - no cookies or personal data storage required
 - Users can't manually switch variants (prevents data pollution)
 
@@ -139,7 +139,7 @@ Support for 3+ variants:
 
 ### Preview Mode
 
-- Preview deployments show debug panel with variant selector
+- Preview deployments show a debug panel with a variant selector
 - No tracking occurs in preview mode
 - Allows manual testing of all variants
 

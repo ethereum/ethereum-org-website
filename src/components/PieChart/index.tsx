@@ -14,9 +14,9 @@ import type { Formatter } from "recharts/types/component/DefaultLegendContent"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import {
@@ -119,7 +119,11 @@ export function PieChart({
         {(title || description) && (
           <CardHeader className="!pt-0">
             {title && <CardTitle>{title}</CardTitle>}
-            {description && <CardDescription>{description}</CardDescription>}
+            {description && (
+              <CardParagraph variant="light" size="sm">
+                {description}
+              </CardParagraph>
+            )}
           </CardHeader>
         )}
         <CardContent className="flex h-64 items-center justify-center">
@@ -195,7 +199,11 @@ export function PieChart({
     >
       <CardHeader className="!pt-0">
         {title && <CardTitle>{title}</CardTitle>}
-        {description && <CardDescription>{description}</CardDescription>}
+        {description && (
+          <CardParagraph variant="light" size="sm">
+            {description}
+          </CardParagraph>
+        )}
       </CardHeader>
 
       <CardContent>

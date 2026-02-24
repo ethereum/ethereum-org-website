@@ -61,5 +61,12 @@
     "social": 0.001,
     "token_transfers": 0.15,
     "unlabeled": 0.2489
+  },
+  "zircuit": {
+    "nft": 0.0002,
+    "defi": 0.55,
+    "social": 0.001,
+    "token_transfers": 0.18,
+    "unlabeled": 0.2688
   }
 }

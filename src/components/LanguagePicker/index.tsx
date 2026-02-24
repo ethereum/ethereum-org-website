@@ -94,7 +94,7 @@ const LanguagePicker = ({
   return (
     <div className={cn("flex flex-col", className)}>
       <LanguagePickerMenu
-        className="flex-1 gap-2 overflow-y-auto p-4"
+        className="min-h-0 flex-1 gap-2 overflow-y-auto p-4"
         languages={sortedLanguages}
         onSelect={handleMenuItemSelect}
         onClose={handleNoResultsClose}

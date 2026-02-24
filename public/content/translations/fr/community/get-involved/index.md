@@ -103,8 +103,7 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 **Vous souhaitez trouver un emploi en rapport avec Ethereum ?**
 
 - [Emplois ethereum.org](/about/#open-jobs)
-- [Offres d'emploi de l'Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Offres d'emploi de l'Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Offres d'emploi de l'Ethereum Foundation](https://jobs.ashbyhq.com/ethereum-foundation)
 - [JobStash](https://jobstash.xyz)
 - [Offres Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Carrières chez ConsenSys](https://consensys.net/careers/)

@@ -1,6 +1,6 @@
 ---
-title: Yetki İspatı (PoA)
-description: Yetki ispatı mutabakat protokolü ve blokzincir ekosistemindeki rolüne dair bir açıklama.
+title: "Yetki İspatı (PoA)"
+description: "Yetki ispatı mutabakat protokolü ve blokzincir ekosistemindeki rolüne dair bir açıklama."
 lang: tr
 ---
 
@@ -67,7 +67,7 @@ Bir PoA ağında, N yetkili imzalayıcı olduğunda her bir imzalayıcı K döng
 - [Kullanımdan kaldırılmış PoA, Aura spesifikasyonu](https://openethereum.github.io/Chain-specification)
 - [IBFT 2.0, başka bir PoA uygulaması](https://besu.hyperledger.org/private-networks/concepts/poa)
 
-### Görsel olarak öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
+### Görerek öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
 
 Yetki ispatının görsel açıklamasını izleyin:
 
@@ -77,3 +77,4 @@ Yetki ispatının görsel açıklamasını izleyin:
 
 - [İş ispatı](/developers/docs/consensus-mechanisms/pow/)
 - [Hisse ispatı](/developers/docs/consensus-mechanisms/pos/)
+

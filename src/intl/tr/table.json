@@ -1,5 +1,7 @@
 {
   "table-active": "aktif",
   "table-filters": "Filtreler",
-  "table-showing": "Gösteriliyor "
+  "table-showing": "Gösteriliyor ",
+  "table-reset-filters": "Sıfırla",
+  "table-what-are-you-looking-for": "Ne arıyorsunuz?"
 }

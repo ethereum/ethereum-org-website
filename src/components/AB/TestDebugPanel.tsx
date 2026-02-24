@@ -1,6 +1,7 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import { createPortal } from "react-dom"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -19,6 +20,7 @@ export const ABTestDebugPanel = ({
   availableVariants,
 }: ABTestDebugPanelProps) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const [selectedVariant, setSelectedVariant] = useLocalStorage<number | null>(
     `ab-test-${testKey}`,
     null
@@ -27,10 +29,14 @@ export const ABTestDebugPanel = ({
 
   useOnClickOutside(panelRef, () => setIsOpen(false))
 
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const forceVariant = (variantIndex: number) =>
     setSelectedVariant(variantIndex)
 
-  return (
+  const panelContent = (
     <div
       ref={panelRef}
       className="fixed bottom-5 right-5 z-modal rounded-lg border-2 bg-background-low p-2.5 font-mono text-xs"
@@ -69,4 +75,9 @@ export const ABTestDebugPanel = ({
       )}
     </div>
   )
+
+  // Only render portal on client side after mount
+  if (!mounted) return null
+
+  return createPortal(panelContent, document.body)
 }

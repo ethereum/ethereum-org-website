@@ -1,45 +1,45 @@
 ---
-title: 区块链桥简介
-description: 桥梁使用户能够跨不同的区块链转移他们的资金
+title: "区块链桥简介"
+description: "桥梁使用户能够跨不同的区块链转移他们的资金"
 lang: zh
 ---
 
-# 区块链桥 {#prerequisites}
+# 区块链链桥 {#prerequisites}
 
-_Web3 已经发展成为一个由一层网络区块链和二层网络扩展解决方案组成的生态系统，每个解决方案都具有独特的功能和权衡。 随着区块链协议数量的增加，跨链转移资产的需求也随之增加。 为了满足这一需求，我们需要桥接。_
+_Web3 已经发展成为一个由 L1 区块链和 L2 扩容解决方案组成的生态系统，每个解决方案都具有独特的功能和权衡取舍。_ 随着区块链协议数量的增加，跨链转移资产的需求也随之增加。为了满足这一需求，我们需要链桥。_
 
 <Divider />
 
 ## 什么是桥梁？ {#what-are-bridges}
 
-区块链桥就像我们在真实世界所知道的桥梁一样。 就像真实桥梁连结两个物理位置一样，区块链桥梁连接两个区块链生态系统。 **链桥传输信息和资产，促进了区块链之间的通信**。
+区块链桥就像我们在真实世界所知道的桥梁一样。 就像真实桥梁连结两个物理位置一样，区块链桥梁连接两个区块链生态系统。 **链桥通过信息和资产的转移来促进区块链之间的通信**。
 
 我们来看一个例子：
 
 你来自美国，正计划去欧洲旅行。 你有美元，但你需要欧元来消费。 要将你的美元兑换成欧元，你可以使用货币兑换并支付少量费用。
 
-但是，如果你想进行类似的兑换以使用一条不同的[区块链](/glossary/#blockchain)，你要怎么做呢？ 假设你想用以太坊主网上的[以太币](/glossary/#ether)兑换 [Arbitrum](https://arbitrum.io/) 上的以太币。 就像我们为欧元进行的货币兑换一样，我们需要一种机制将我们的以太币从以太坊转移到 Arbitrum。 桥梁使这种交易成为可能。 在本例中，[Arbitrum 有一个原生桥梁](https://bridge.arbitrum.io/)，可以将以太币从主网转移到 Arbitrum。
+但是，如果你想使用不同的[区块链](/glossary/#blockchain)进行类似的兑换，你会怎么做？ 假设你想将以太坊主网上的 [ETH](/glossary/#ether) 兑换成 [Arbitrum](https://arbitrum.io/) 上的 ETH。 就像我们为欧元进行的货币兑换一样，我们需要一种机制将我们的以太币从以太坊转移到 Arbitrum。 桥梁使这种交易成为可能。 在这种情况下，[Arbitrum 有一个原生链桥](https://portal.arbitrum.io/bridge)，可以将 ETH 从主网转移到 Arbitrum 上。
 
 ## 我们为什么需要桥梁？ {#why-do-we-need-bridges}
 
-所有区块链都有其局限性。 为了使以太坊实现扩容并满足需求，就必须进行[卷叠](/glossary/#rollups)。 或者，像 Solana 和 Avalanche 这样的一层网络具有不同的设计，以实现更高的吞吐量，但代价是去中心化。
+所有区块链都有其局限性。 为了让以太坊扩容并满足需求，就需要 [Rollup](/glossary/#rollups)。 或者，像 Solana 和 Avalanche 这样的一层网络具有不同的设计，以实现更高的吞吐量，但代价是去中心化。
 
-然而，所有区块链开发都是在孤立环境中进行的，因此具有不同的规则和[共识](/glossary/#consensus)机制。 这意味着它们无法进行原生通信，代币也无法在区块链之间自由移动。
+然而，所有区块链都是在隔离环境中开发的，并且具有不同的规则和[共识](/glossary/#consensus)机制。 这意味着它们无法进行原生通信，代币也无法在区块链之间自由移动。
 
 桥梁的存在为了连接区块链，以便在它们之间进行信息和代币传输。
 
-**链桥的作用**：
+**链桥能够实现**：
 
 - 跨链传输资产和信息。
-- 使[去中心化应用程序](/glossary/#dapp)可以利用各种区块链的优势 — 从而增强功能（因为协议现在有更多的创新设计空间）。
+- 让[去中心化应用程序](/glossary/#dapp)能够利用各个区块链的优势——从而增强其能力（因为协议现在有了更多的创新设计空间）。
 - 使用户能够访问新平台并利用不同链的优势。
 - 使来自不同区块链生态系统的开发人员相互协作并为用户构建新平台。
 
-[如何将代币桥接到二层网络](/guides/how-to-use-a-bridge/)
+[如何将代币跨链至二层网络](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
-## 桥梁用例 {#bridge-use-cases}
+## 链桥用例 {#bridge-use-cases}
 
 以下是你可以使用桥梁的一些场景：
 
@@ -57,20 +57,20 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 ### 拥有原生加密资产 {#own-native}
 
-如果你只有以太坊网络资产但想拥有原生比特币， 你可以先兑换得到以太坊上的 BTC - WBTC（Wrapped Bitcoin）， 然而，包装比特币是以太坊网络的原生 [ERC-20](/glossary/#erc-20) 代币，这意味着它是比特币的以太坊版本，而不是比特币区块链上的原始资产。 然后你可以通过跨链桥，将资产从以太坊网络跨到比特币网络， 即将 WBTC 转换为原生 BTC。 或者，你可能拥有比特币，并且想在以太坊的[去中心化金融](/glossary/#defi)协议中使用它。 用于以太坊网络的 DeFi 协议中。
+如果你只有以太坊网络资产但想拥有原生比特币， 你可以先兑换得到以太坊上的 BTC - WBTC（Wrapped Bitcoin）， 然而，WBTC 是以太坊网络原生的 [ERC-20](/glossary/#erc-20) 代币，这意味着它是比特币的以太坊版本，而不是比特币区块链上的原始资产。 然后你可以通过跨链桥，将资产从以太坊网络跨到比特币网络， 即将 WBTC 转换为原生 BTC。 或者，你可能拥有 BTC，并希望在以太坊 [DeFi](/glossary/#defi) 协议中使用它。 用于以太坊网络的 DeFi 协议中。
 
 <Alert variant="update">
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  你还可以使用[中心化交易所](/get-eth/)完成上述所有操作。 但是，除非你的资金已经在交易所，否则将涉及多个步骤，而且你最好使用桥梁。
+  你还可以使用[中心化交易所](/get-eth)完成上述所有操作。 但是，除非你的资金已经在交易所，否则将涉及多个步骤，而且你最好使用桥梁。
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 <Divider />
 
-## 桥的类型 {#types-of-bridge}
+## 链桥的类型 {#types-of-bridge}
 
 桥梁具有各种设计和复杂程度。 一般来说，桥梁分为两类：需信任桥梁和去信任桥梁。
 
@@ -78,12 +78,12 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 | ------------------------------------- | -------------------------------------------------------- |
 | 需信任桥梁依赖于中心实体或系统的运作。                   | 去信任桥梁使用智能合约和算法运行。                                        |
 | 他们对资金的保管和桥梁的安全性有信任假设。 用户大多依赖桥梁运营商的声誉。 | 这种桥梁免于信任，即桥梁的安全性与底层区块链的安全性相同。                            |
-| 用户需要放弃对其加密资产的控制。                      | 借助[智能合约](/glossary/#smart-contract)，去信任链桥使用户能够始终控制他们的资金。 |
+| 用户需要放弃对其加密资产的控制。                      | 通过[智能合约](/glossary/#smart-contract)，去信任链桥让用户能够继续掌控自己的资金。 |
 
 简而言之，我们可以说需信任桥梁具有信任假设，而去信任桥梁对信任的依赖非常小，因此不会在基础域之外出现新的信任假设。 上述术语的解释如下：
 
-- **去信任**：与底层域具有同等的安全性。 如 [Arjun Bhuptani 在本文中所述。](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
-- **信任假设**：通过在系统中添加外部验证者来摆脱底层域的安全性，从加密经济学的角度来说，这降低了安全性。
+- **去信任**：拥有与底层域同等的安全性。 正如 [Arjun Bhuptani 在这篇文章中所述。](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
+- **信任假设：** 通过在系统中添加外部验证者来摆脱底层域的安全性，从加密经济学的角度来说，这降低了安全性。
 
 为了更好地理解这两种方法之间的主要区别，我们来举个例子：
 
@@ -104,22 +104,22 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 使用链桥可以将资产转移到不同区块链。 下面是一些可以帮助你找到并使用链桥的资源：
 
-- **[L2BEAT 链桥摘要](https://l2beat.com/bridges/summary) & [L2BEAT 链桥风险分析](https://l2beat.com/bridges/summary)**：各种链桥的全面汇总，包括有关市场份额、链桥类型和目的地区块链的详细信息。 L2BEAT 还对链桥进行风险分析，帮助用户在选择链桥时做出明智的决策。
-- **[DefiLlama 链桥摘要](https://defillama.com/bridges/Ethereum)**：跨以太坊网络的链桥交易量摘要。
+- **[L2BEAT 链桥摘要](https://l2beat.com/bridges/summary)和[L2BEAT 链桥风险分析](https://l2beat.com/bridges/summary)**：各种链桥的全面摘要，包括有关市场份额、链桥类型和目标链的详细信息。 L2BEAT 还对链桥进行风险分析，帮助用户在选择链桥时做出明智的决策。
+- **[DefiLlama 链桥摘要](https://defillama.com/bridges/Ethereum)**：以太坊各个网络的链桥交易量摘要。
 
 <Divider />
 
-## 使用桥梁的风险 {#bridge-risk}
+## 使用链桥的风险 {#bridge-risk}
 
 桥梁正处于开发的早期阶段， 很可能尚未发现最佳桥梁设计。 与任何类型的桥梁互动都有风险：
 
-- **智能合约风险 —** 代码中的错误可能导致用户资金丢失的风险
-- **技术风险 —** 软件故障、代码错误、人为错误、垃圾邮件和恶意攻击可能会扰乱用户操作
+- \*\*智能合约风险——\*\*代码漏洞可能导致用户资金损失的风险。
+- \*\*技术风险——\*\*软件故障、有漏洞的代码、人为失误、垃圾信息和恶意攻击都可能干扰用户操作。
 
 此外，由于需信任桥梁增加了信任假设，因此会带来额外的风险，例如：
 
-- **审查风险 —** 桥梁运营商理论上可以阻止用户使用桥梁转移资产
-- **保管风险 —** 桥梁运营商可以串通盗取用户资金
+- \*\*审查风险——\*\*理论上，链桥运营商可以阻止用户使用链桥转移资产。
+- \*\*托管风险——\*\*链桥运营商可以合谋盗取用户资金。
 
 如果出现以下情况，用户的资金将面临风险：
 
@@ -129,16 +129,17 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 - 桥梁运营商对需信任桥梁有恶意
 - 桥梁被非法侵入
 
-最近的一次黑客攻击是 Solana 的虫洞桥，[在黑客攻击期间被窃取了 12 万 包装以太币（3.25 亿美元）](https://rekt.news/wormhole-rekt/)。 [区块链中的许多顶级黑客攻击都涉及到桥梁](https://rekt.news/leaderboard/)。
+最近的一次黑客攻击事件是 Solana 的 Wormhole 链桥，[在这次攻击中，12 万 wETH（价值 3.25 亿美元）被盗](https://rekt.news/wormhole-rekt/)。 [区块链领域很多大型黑客攻击事件都与链桥有关](https://rekt.news/leaderboard/)。
 
-桥梁对于让用户加入以太坊二层网络至关重要，甚至对于想要探索不同生态系统的用户也至关重要。 然而，鉴于与桥梁交互所涉及的风险，用户必须了解桥梁正在做出的权衡取舍。 这些是一些确保[跨链安全的策略](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946)。
+桥梁对于让用户加入以太坊二层网络至关重要，甚至对于想要探索不同生态系统的用户也至关重要。 然而，鉴于与桥梁交互所涉及的风险，用户必须了解桥梁正在做出的权衡取舍。 以下是一些[跨链安全策略](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/)。
 
 <Divider />
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
+
 - [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022 年 6 月 18 日 - Brendan Asselstine_
-- [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022 年 7 月 5日 - Bartek Kiepuszewski_
-- [“为什么未来将出现多链，而不会是跨链。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022 年 1 月 8 日 - Vitalik Buterin_
-- [利用共享安全实现安全的跨链互操作性：Lagrange 状态委员会及其扩展](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _2024 年 6 月 12 日 - Emmanuel Awosika_
+- [L2 链桥风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022 年 7 月 5 日 - Bartek Kiepuszewski_
+- [\"为什么未来将是多链，但不会是跨链。\"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022 年 1 月 8 日 - Vitalik Buterin_
+- [利用共享安全实现安全的跨链互操作性：Lagrange 状态委员会及其他](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _2024 年 6 月 12 日 - Emmanuel Awosika_
 - [Rollup 互操作性解决方案的现状](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _2024 年 6 月 20 日 - Alex Hook_
 

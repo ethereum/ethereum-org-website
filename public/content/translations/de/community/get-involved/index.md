@@ -103,8 +103,7 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 **Möchten Sie einen Job bei Ethereum finden?**
 
 - [Jobs auf ethereum.org](/about/#open-jobs)
-- [Ethereum Foundation-Stellenportal (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Ethereum Foundation-Stellenportal (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Ethereum Foundation-Stellenportal](https://jobs.ashbyhq.com/ethereum-foundation)
 - [JobStash](https://jobstash.xyz)
 - [Jobs im Zusammenhang mit Kryptowährung](https://cryptocurrencyjobs.co/ethereum/)
 - [Karriere bei ConsenSys](https://consensys.net/careers/)

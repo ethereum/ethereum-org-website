@@ -5,10 +5,10 @@
 - [Next.js 14](https://nextjs.org/)
   - React framework with App Router, SSG, SSR, i18n support, Image component, etc.
   - Configurable in `next.config.js`
-  - [NextJS Tutorial](https://nextjs.org/learn)
-  - [NextJS Docs](https://nextjs.org/docs)
+  - [Next.js Tutorial](https://nextjs.org/learn)
+  - [Next.js Docs](https://nextjs.org/docs)
 - [React](https://react.dev/) - A JavaScript library for building component-based user interfaces
-- [Typescript](https://www.typescriptlang.org/) - TypeScript is a strongly typed programming language that builds on JavaScript
+- [TypeScript](https://www.typescriptlang.org/) - TypeScript is a strongly typed programming language that builds on JavaScript
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [shadcn/ui](https://ui.shadcn.com/) - Component library built on Radix UI and Tailwind CSS
 - [Radix UI](https://www.radix-ui.com/) - Accessible component primitives
