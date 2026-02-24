@@ -2177,6 +2177,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/riproprip"><img src="https://avatars.githubusercontent.com/u/210665836?v=4?s=100" width="100px;" alt="riproprip"/><br /><sub><b>riproprip</b></sub></a><br /><a href="#maintenance-riproprip" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Uaitt"><img src="https://avatars.githubusercontent.com/u/97030518?v=4?s=100" width="100px;" alt="Lorenzo Zabot"/><br /><sub><b>Lorenzo Zabot</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AUaitt" title="Bug reports">🐛</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/galenmoore1"><img src="https://avatars.githubusercontent.com/u/219737820?v=4?s=100" width="100px;" alt="Galen Moore"/><br /><sub><b>Galen Moore</b></sub></a><br /><a href="#tool-galenmoore1" title="Tools">🔧</a></td>
+    </tr>
   </tbody>
 </table>
 
