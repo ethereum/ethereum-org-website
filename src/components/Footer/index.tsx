@@ -1,6 +1,4 @@
-"use client"
-
-import { ChevronUp } from "lucide-react"
+import { getTranslations } from "next-intl/server"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
@@ -8,18 +6,14 @@ import Discord from "@/components/icons/discord.svg"
 import Farcaster from "@/components/icons/farcaster.svg"
 import Github from "@/components/icons/github.svg"
 import Twitter from "@/components/icons/twitter.svg"
-import Translation from "@/components/Translation"
+import { BaseLink } from "@/components/ui/Link"
+import { List, ListItem } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
-import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
-import { Button } from "./ui/buttons/Button"
-import { BaseLink } from "./ui/Link"
-import { List, ListItem } from "./ui/list"
-
-import { useTranslation } from "@/hooks/useTranslation"
+import GoToTopButton from "./GoToTopButton"
 
 const socialLinks = [
   {
@@ -48,8 +42,8 @@ type FooterProps = {
   lastDeployLocaleTimestamp: string
 }
 
-const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
-  const { t } = useTranslation("common")
+const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
+  const t = await getTranslations("common")
 
   const linkSections: FooterLinkSection[] = [
     {
@@ -322,17 +316,10 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
     <footer className="px-4 py-4">
       <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light px-4 py-4 md:justify-between">
         <p className="text-sm italic text-body-medium">
-          <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
+          {t("website-last-updated")}: {lastDeployLocaleTimestamp}
         </p>
 
-        <Button
-          variant="outline"
-          isSecondary
-          onClick={() => scrollIntoView("body")}
-          data-testid="footer-go-to-top"
-        >
-          <ChevronUp /> <Translation id="go-to-top" />
-        </Button>
+        <GoToTopButton label={t("go-to-top")} />
       </div>
 
       <div className="px-4 py-4">
