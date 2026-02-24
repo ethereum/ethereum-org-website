@@ -13,7 +13,7 @@ zkEVM is a technology that uses [zero-knowledge proofs](/zero-knowledge-proofs/)
 <AlertContent>
 <AlertTitle>Not to be confused with zkEVM rollups</AlertTitle>
 <AlertDescription>
-This page discusses using zkEVM to verify Ethereum L1 block execution. For zkEVM rollups that use ZK proofs to scale Ethereum as Layer 2 solutions, see <a href="/developers/docs/scaling/zk-rollups/">Zero-knowledge rollups</a>.
+This page discusses using zkEVM to verify Ethereum L1 block execution. For zkEVM rollups that use ZK proofs to scale Ethereum as Layer 2 solutions, see [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -74,7 +74,7 @@ Current zkEVM implementations can take minutes to hours to prove a single block.
 
 ## Current research and implementations {#current-research}
 
-The Ethereum Foundation funds zkEVM research through the [Privacy and Scaling Explorations (PSE)](https://pse.dev/) team. Key research tracks include:
+The Ethereum Foundation funds zkEVM research through the [Privacy Stewards of Ethereum (PSE)](https://pse.dev/) team. Key research tracks include:
 
 - **Real-time proving**: Generating full block proofs within 12-second slots
 - **Client integration**: Standardizing interfaces between execution clients and provers
@@ -111,12 +111,12 @@ zkEVM L1 verification is in active research. Key milestones:
 - Research into real-time proving approaches
 - Client integration specifications being developed
 
-This technology is not yet integrated into production Ethereum clients. Full mainnet deployment is expected to take several years as proving speeds improve and the technology matures.
+This technology is not yet integrated into production Ethereum clients. Full Mainnet deployment is expected to take several years as proving speeds improve and the technology matures.
 
 ## Further reading {#further-reading}
 
-- [zkEVM Foundation](https://zkevm.ethereum.foundation) — Official Ethereum Foundation zkEVM research hub
-- [zkevm.fyi](https://zkevm.fyi) — Technical book on zkEVM for L1
-- [PSE zkEVM Specs](https://github.com/privacy-scaling-explorations/zkevm-specs) — Technical specifications
-- [The Verge](https://vitalik.eth.limo/general/2024/10/23/futures4.html) — Vitalik's overview of verification improvements
-- [Benchmarking zkVMs for Ethereum](https://zkevm.ethereum.foundation/blog) — Performance analysis from the EF team
+- [zkEVM Foundation](https://zkevm.ethereum.foundation) - Official Ethereum Foundation zkEVM research hub
+- [zkevm.fyi](https://zkevm.fyi) - Technical book on zkEVM for L1
+- [PSE zkEVM Specs](https://github.com/privacy-scaling-explorations/zkevm-specs) - Technical specifications
+- [The Verge](https://vitalik.eth.limo/general/2024/10/23/futures4.html) - Vitalik's overview of verification improvements
+- [Benchmarking zkVMs for Ethereum](https://zkevm.ethereum.foundation/blog) - Performance analysis from the EF team

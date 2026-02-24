@@ -230,7 +230,7 @@ Watch Finematics explain ZK-rollups:
 <AlertContent>
 <AlertTitle>zkEVM for L2 vs L1</AlertTitle>
 <AlertDescription>
-The projects below use zkEVM technology to build Layer 2 rollups. There is also research into using zkEVM for <a href="/roadmap/zkevm/">L1 block verification</a>, which would enable validators to verify Ethereum blocks without re-executing transactions.
+The projects below use zkEVM technology to build Layer 2 rollups. There is also research into using zkEVM for [L1 block verification](/roadmap/zkevm/), which would enable validators to verify Ethereum blocks without re-executing transactions.
 </AlertDescription>
 </AlertContent>
 </Alert>
