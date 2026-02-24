@@ -14117,6 +14117,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Nealo",
+      "name": "Neal O'Grady",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3241395?v=4",
+      "profile": "http://neal.is",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
