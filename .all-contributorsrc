@@ -14107,6 +14107,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "nicolasbalao",
+      "name": "Nicolas Balao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61119970?v=4",
+      "profile": "https://github.com/nicolasbalao",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
