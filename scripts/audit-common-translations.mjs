@@ -147,20 +147,22 @@ function analyzeKey(key, searchIndex) {
     recommendation = "unused"
     reason = "No usages found in codebase"
   } else if (
+    categories.components.length > 0 ||
+    categories.layouts.length > 0 ||
+    categories.lib.length > 0
+  ) {
+    recommendation = "keep"
+    reason = "Used in shared components/layouts/lib"
+  } else if (
     usages.length > 0 &&
     categories.components.length === 0 &&
     categories.layouts.length === 0 &&
+    categories.lib.length === 0 &&
     uniquePages.size === 1
   ) {
     recommendation = "move-to-page"
     reason = `Only used in ${[...uniquePages][0]}`
-  } else if (
-    categories.components.length > 0 ||
-    categories.layouts.length > 0
-  ) {
-    recommendation = "keep"
-    reason = "Used in shared components/layouts"
-  } else if (uniquePages.size > 2) {
+  } else if (uniquePages.size > 1) {
     recommendation = "keep"
     reason = `Used across ${uniquePages.size} pages`
   } else if (isDynamic) {

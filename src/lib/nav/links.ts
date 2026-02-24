@@ -22,7 +22,7 @@ export const getLanguagesDisplayInfo = async (): Promise<
   LocaleDisplayInfo[]
 > => {
   const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "common-server" })
+  const t = await getTranslations({ locale, namespace: "common" })
 
   // Early return if no locales
   if (!FILTERED_LOCALES?.length) return []
@@ -34,7 +34,7 @@ export const getLanguagesDisplayInfo = async (): Promise<
 
 export const getNavigation = async () => {
   const t = await getTranslations({
-    namespace: "common-server",
+    namespace: "common",
   })
 
   const linkSections: NavSections = buildNavigation(t)
