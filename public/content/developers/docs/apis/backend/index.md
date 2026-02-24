@@ -187,6 +187,14 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
+**Codex -** **_Real-time, enriched blockchain data API across dozens of chains._**
+
+- [codex.io](https://www.codex.io/)
+- [Documentation](https://docs.codex.io)
+- [Explorer](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [Discord](https://discord.com/invite/mFpUhT3vAq)
+
 **Covalent -** **_Enriched blockchain APIs for 200+ Chains._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
