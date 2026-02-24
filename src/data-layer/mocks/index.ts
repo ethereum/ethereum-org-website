@@ -31,6 +31,7 @@ export const mockTaskIds = [
   "fetch-stablecoins-data",
   "fetch-total-eth-staked",
   "fetch-total-value-locked",
+  "fetch-translation-glossary",
 ] as const
 
 export type MockTaskId = (typeof mockTaskIds)[number]

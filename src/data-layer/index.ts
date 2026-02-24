@@ -18,6 +18,7 @@ import type { DeveloperToolsDataEnvelope } from "./fetchers/developer-tools/util
 import type { BeaconChainData } from "./fetchers/fetchBeaconChain"
 import type { BlobscanStats } from "./fetchers/fetchBlobscanStats"
 import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
+import type { GlossaryEntry } from "./fetchers/fetchTranslationGlossary"
 import { get } from "./storage"
 import { KEYS } from "./tasks"
 
@@ -46,3 +47,4 @@ export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VA
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
 export const getDeveloperToolsData = () => get<DeveloperToolsDataEnvelope>(KEYS.DEVELOPER_TOOLS)
 export const getAccountHolders = () => get<MetricReturnData>(KEYS.ACCOUNT_HOLDERS)
+export const getTranslationGlossary = () => get<GlossaryEntry[]>(KEYS.TRANSLATION_GLOSSARY)
