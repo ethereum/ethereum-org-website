@@ -2182,6 +2182,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/riva-infinex"><img src="https://avatars.githubusercontent.com/u/216983699?v=4?s=100" width="100px;" alt="Riva"/><br /><sub><b>Riva</b></sub></a><br /><a href="#tool-riva-infinex" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/khawlahssn"><img src="https://avatars.githubusercontent.com/u/69622217?v=4?s=100" width="100px;" alt="Khawla"/><br /><sub><b>Khawla</b></sub></a><br /><a href="#tool-khawlahssn" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nicolasbalao"><img src="https://avatars.githubusercontent.com/u/61119970?v=4?s=100" width="100px;" alt="Nicolas Balao"/><br /><sub><b>Nicolas Balao</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Anicolasbalao" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://neal.is"><img src="https://avatars.githubusercontent.com/u/3241395?v=4?s=100" width="100px;" alt="Neal O'Grady"/><br /><sub><b>Neal O'Grady</b></sub></a><br /><a href="#tool-Nealo" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
