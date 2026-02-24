@@ -2180,6 +2180,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/galenmoore1"><img src="https://avatars.githubusercontent.com/u/219737820?v=4?s=100" width="100px;" alt="Galen Moore"/><br /><sub><b>Galen Moore</b></sub></a><br /><a href="#tool-galenmoore1" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/riva-infinex"><img src="https://avatars.githubusercontent.com/u/216983699?v=4?s=100" width="100px;" alt="Riva"/><br /><sub><b>Riva</b></sub></a><br /><a href="#tool-riva-infinex" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/khawlahssn"><img src="https://avatars.githubusercontent.com/u/69622217?v=4?s=100" width="100px;" alt="Khawla"/><br /><sub><b>Khawla</b></sub></a><br /><a href="#tool-khawlahssn" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
