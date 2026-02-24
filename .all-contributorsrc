@@ -14078,7 +14078,53 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/97030518?v=4",
       "profile": "https://github.com/Uaitt",
       "contributions": [
+        "bug",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "galenmoore1",
+      "name": "Galen Moore",
+      "avatar_url": "https://avatars.githubusercontent.com/u/219737820?v=4",
+      "profile": "https://github.com/galenmoore1",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "riva-infinex",
+      "name": "Riva",
+      "avatar_url": "https://avatars.githubusercontent.com/u/216983699?v=4",
+      "profile": "https://github.com/riva-infinex",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "khawlahssn",
+      "name": "Khawla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69622217?v=4",
+      "profile": "https://github.com/khawlahssn",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "nicolasbalao",
+      "name": "Nicolas Balao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61119970?v=4",
+      "profile": "https://github.com/nicolasbalao",
+      "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "Nealo",
+      "name": "Neal O'Grady",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3241395?v=4",
+      "profile": "http://neal.is",
+      "contributions": [
+        "tool"
       ]
     }
   ],
