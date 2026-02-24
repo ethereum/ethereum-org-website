@@ -23,7 +23,7 @@ There is a lot of theory behind how modern UI works, and [a lot of good sites](h
 
 ### Installation {#installation}
 
-1. The application uses the [Sepolia](https://sepolia.dev/) test network. If necessary, [get Sepolia test ETH](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) and [add Sepolia to your wallet](https://chainlist.org/chain/11155111).
+1. The application uses the [Sepolia](https://sepolia.dev/) test network. If necessary, [get Sepolia test ETH](/developers/docs/networks/#sepolia) and [add Sepolia to your wallet](https://chainlist.org/chain/11155111).
 
 2. Clone the GitHub repository and install the necessary packages.
 
