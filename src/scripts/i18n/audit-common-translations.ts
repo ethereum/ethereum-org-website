@@ -16,6 +16,11 @@ import { readdir, readFile, writeFile } from "fs/promises"
 import { dirname, extname, join, relative } from "path"
 import { fileURLToPath } from "url"
 
+import {
+  EXACT_PATH_NAMESPACE_MAP,
+  PREFIX_PATH_NAMESPACE_MAP,
+} from "@/lib/utils/translations"
+
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, "../../..")
 const INTL_DIR = join(ROOT, "src/intl")
@@ -29,58 +34,6 @@ const VERBOSE = args.includes("--verbose")
 const EXTENSIONS = new Set([".ts", ".tsx", ".js", ".jsx"])
 
 const DYNAMIC_KEY_PATTERNS = [/^language-/, /^region-/]
-
-// Path to namespace mappings (from src/lib/utils/translations.ts)
-const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
-  "/": "page-index",
-  "/10years/": "page-10-year-anniversary",
-  "/assets/": "page-assets",
-  "/collectibles/": "page-collectibles",
-  "/contributing/translation-program/acknowledgements/":
-    "page-contributing-translation-program-acknowledgements",
-  "/contributing/translation-program/contributors/":
-    "page-contributing-translation-program-contributors",
-  "/enterprise/": "page-enterprise",
-  "/ethereum-history-founder-and-ownership/":
-    "page-ethereum-history-founder-and-ownership",
-  "/ethereum-vs-bitcoin/": "page-ethereum-vs-bitcoin",
-  "/founders/": "page-founders",
-  "/get-eth/": "page-get-eth",
-  "/bug-bounty/": "page-bug-bounty",
-  "/quizzes/": "learn-quizzes",
-  "/trillion-dollar-security/": "page-trillion-dollar-security",
-  "/wallets/find-wallet/": "page-wallets-find-wallet",
-  "/wallets/": "page-wallets",
-  "/what-is-ether/": "page-what-is-ether",
-  "/what-is-the-ethereum-network/": "page-what-is-the-ethereum-network",
-}
-
-const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
-  ["/staking/deposit-contract/", "page-staking-deposit-contract"],
-  ["/staking/", "page-staking"],
-  ["/layer-2/networks/", "page-layer-2-networks"],
-  ["/layer-2/learn/", "page-layer-2-learn"],
-  ["/layer-2/", "page-layer-2"],
-  ["/developers/local-environment/", "page-developers-local-environment"],
-  ["/developers/learning-tools/", "page-developers-learning-tools"],
-  ["/developers/tutorials/", "page-developers-tutorials"],
-  ["/developers/", "page-developers-index"],
-  ["/contributing/translation-program/translatathon/", "page-translatathon"],
-  ["/community/events/", "page-community-events"],
-  ["/community/", "page-community"],
-  ["/apps/", "page-apps"],
-  ["/energy-consumption/", "page-energy-consumption"],
-  ["/eth/", "page-eth"],
-  ["/ethereum-forks/", "page-history"],
-  ["/resources/", "page-resources"],
-  ["/stablecoins/", "page-stablecoins"],
-  ["/learn/", "page-learn"],
-  ["/gas/", "page-gas"],
-  ["/what-is-ethereum/", "page-what-is-ethereum"],
-  ["/run-a-node/", "page-run-a-node"],
-  ["/roadmap/", "page-roadmap"],
-  ["/start/", "page-start"],
-]
 
 interface Usage {
   file: string
