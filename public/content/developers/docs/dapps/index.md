@@ -94,3 +94,11 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 - [Introduction to the Ethereum stack](/developers/docs/ethereum-stack/)
 - [Development frameworks](/developers/docs/frameworks/)
+
+## Tutorials: Build apps and frontends on Ethereum {#tutorials}
+
+- [Uniswap-v2 Contract Walk-Through](/developers/tutorials/uniswap-v2-annotated-code/) _– An annotated walkthrough of the Uniswap v2 core contracts explaining how the AMM works._
+- [Building a user interface for your contract](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– How to build a modern React + wagmi frontend that connects to your smart contract._
+- [Hello World Smart Contract for Beginners – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– End-to-end tutorial: write, deploy, and build a frontend for a simple smart contract._
+- [Server components and agents for web3 apps](/developers/tutorials/server-components/) _– How to write TypeScript server components that listen to blockchain events and respond with transactions._
+- [IPFS for decentralized user interfaces](/developers/tutorials/ipfs-decentralized-ui/) _– How to host your dapp's frontend on IPFS for censorship resistance._

@@ -110,3 +110,7 @@ Multisig (multiple-signature) contracts are smart contract accounts that require
 - [Chainlink: What is a smart contract?](https://chain.link/education/smart-contracts)
 - [Video: Simply Explained - Smart Contracts](https://youtu.be/ZE2HxTmxfrI)
 - [Cyfrin Updraft: Web3 learning and auditing platform](https://updraft.cyfrin.io)
+
+## Tutorials: Smart contract signatures (EIP-1271) on Ethereum {#tutorials}
+
+- [EIP-1271: Signing and Verifying Smart Contract Signatures](/developers/tutorials/eip-1271-smart-contract-signatures/) _– How EIP-1271 enables smart contracts to verify signatures, with a walkthrough of the Safe implementation._
