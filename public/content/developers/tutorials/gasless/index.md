@@ -2,10 +2,10 @@
 title: "Sponsoring gas fees: How to cover transaction costs for your users"
 description: It is easy to create a private key and an address; it's just a matter of running the right software. But there are many places in the world where getting the ETH to send transactions is much harder. In this tutorial you learn how to cover the onchain gas costs for executing user-signed, off-chain structured data in your smart contract. You have the user sign a structure containing the transaction information, which your offchain code then submits to the blockchain as a transaction.
 author: Ori Pomerantz
-tags: ["gasless"]
-skill: beginner
+tags: ["gasless", "solidity", "eip-712", "meta-transactions"]
+skill: intermediate
 lang: en
-published: 2026-03-01
+published: 2026-02-27
 ---
 
 ## Introduction {#introduction}
@@ -27,7 +27,7 @@ To see it in action, follow these steps.
 1. Clone the repository and install the necessary software.
 
    ```sh
-   github clone https://github.com/qbzzt/260301-gasless.git
+   git clone https://github.com/qbzzt/260301-gasless.git
    cd 260301-gasless/server
    npm install
    ```
@@ -48,7 +48,7 @@ To see it in action, follow these steps.
 
 7. Sign the message.
 
-8. Wait about 12 seconds (the block time om Sepolia). While waiting you can look at the URL in the server's console to see the transaction.
+8. Wait about 12 seconds (the block time on Sepolia). While waiting you can look at the URL in the server's console to see the transaction.
 
 9. See that the greeting changed, and that the last updated by address value is now the address of your browser wallet.
 
