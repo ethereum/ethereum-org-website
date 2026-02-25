@@ -4,7 +4,7 @@ description: Scopri i vari modi in cui puoi contribuire a ethereum.org
 lang: it
 ---
 
-# Contribuire a ethereum.org  {#contributing-to-ethereumorg}
+# Contribuire a ethereum.org {#contributing-to-ethereumorg}
 
 Ethereum.org è un progetto open source con oltre **12000** collaboratori che aiutano a tradurre, scrivere, progettare e mantenere il sito web.
 
@@ -90,6 +90,7 @@ Se il tuo contributo viene aggiunto a ethereum.org, avrai una possibilità di ri
 [Maggiori informazioni sui OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Come reclamare
+
 1. Unisciti al nostro [server Discord](https://discord.gg/ethereum-org).
 2. Incolla un link ai tuoi contributi nel canale `#🥇 | proof-of-contribution`.
 3. Attendi che un membro del nostro team ti invii un collegamento al tuo OAT.

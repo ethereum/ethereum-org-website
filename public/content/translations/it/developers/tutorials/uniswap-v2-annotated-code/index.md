@@ -1,6 +1,6 @@
 ---
 title: "Guida dettagliata al contratto Uniswap-v2"
-description: Come funziona il contratto Uniswap-v2? Perché è scritto così?
+description: "Come funziona il contratto Uniswap-v2? Perché è scritto così?"
 author: Ori Pomerantz
 tags:
   - "solidity"
@@ -55,9 +55,8 @@ Questo è il flusso più comune, usato dai trader:
 3. Identifica l'importo necessario da scambiare su ogni scambio lungo il percorso.
 4. Itera sul percorso. Per ogni scambio lungo il percorso, invia il token di input e poi chiama la funzione di `swap` dello scambio. In gran parte dei casi, l'indirizzo di destinazione per i token è lo scambio in pari successivo nel percorso. Nello scambio finale è presente l'indirizzo fornito dal trader.
 
-#### Nel contratto principale (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Nel contratto principale (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Verifica che il contratto principale non raggiri il sistema e possa mantenere liquidità sufficiente dopo lo scambio.
 
-5. Verifica che il contratto principale non raggiri il sistema e possa mantenere liquidità sufficiente dopo lo scambio.
 6. Vede quanti token aggiuntivi abbiamo, in aggiunta alle riserve note. Quell'importo è il numero di token di input ricevuti da scambiare.
 7. Invia i token d'output alla destinazione.
 8. Chiama `_update` per aggiornare gli importi della riserva
@@ -743,7 +742,7 @@ Questa è la funzione principale della factory, per creare uno scambio in pari t
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Vogliamo che l'indirizzo del nuovo scambio sia deterministico, quindi calcolabile in anticipo al di fuori della catena (questo può essere utile per le [transazioni di livello 2](/developers/docs/layer-2-scaling/)). Per farlo, dobbiamo avere un ordine coerente degli indirizzi del token, indipendentemente dall'ordine in cui li abbiamo ricevuti, quindi li ordiniamo qui.
+Vogliamo che l'indirizzo del nuovo scambio sia deterministico, quindi calcolabile in anticipo al di fuori della catena (questo può essere utile per le [transazioni di livello 2](/developers/docs/scaling/)). Per farlo, dobbiamo avere un ordine coerente degli indirizzi del token, indipendentemente dall'ordine in cui li abbiamo ricevuti, quindi li ordiniamo qui.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');

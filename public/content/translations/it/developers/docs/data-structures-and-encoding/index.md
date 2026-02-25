@@ -9,15 +9,15 @@ Ethereum crea, memorizza e trasferisce grandi volumi di dati. Questi dati devono
 
 ## Prerequisiti {#prerequisites}
 
-È utile comprendere i fondamenti di Ethereum e del [software del client](/developers/docs/nodes-and-clients/). È consigliabile avere familiarità con il livello di rete e il [whitepaper di Ethereum](/whitepaper/).
+Dovresti comprendere i fondamenti di Ethereum e il [software client](/developers/docs/nodes-and-clients/). È consigliabile avere familiarità con il livello di rete e [il whitepaper di Ethereum](/whitepaper/).
 
-## Strutture di dati {#data-structures}
+## Strutture dei dati {#data-structures}
 
-### Trie di Patricia Merkle {#patricia-merkle-tries}
+### Trie Merkle Patricia {#patricia-merkle-tries}
 
 I trie di Patricia Merkle sono strutture che codificano coppie chiave-valore in una prova autenticata crittograficamente e deterministica. Sono usate ampiamente nel livello d'esecuzione di Ethereum.
 
-[Maggiori informazioni sui trie di Patricia Merkle](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
+[Maggiori informazioni sui Trie Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
 
 ### Prefisso di Lunghezza Ricorsiva {#recursive-length-prefix}
 
@@ -25,7 +25,7 @@ Il Prefisso di Lunghezza Ricorsiva (RLP) è un metodo di serializzazione usato a
 
 [Maggiori informazioni su RLP](/developers/docs/data-structures-and-encoding/rlp)
 
-### Simple Serialize {#simple-serialize}
+### Serializzazione Semplice {#simple-serialize}
 
 Simple Serialize (SSZ) è il formato di serializzazione dominante sul livello di consenso di Ethereum, per la sua compatibilità alla Merkle-zzazione.
 
