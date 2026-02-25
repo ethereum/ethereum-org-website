@@ -263,3 +263,7 @@ More of a visual learner? Watch Finematics explain optimistic rollups:
 - [How does Optimism's Rollup really work?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
+
+## Tutorials: Optimistic rollups and bridges on Ethereum {#tutorials}
+
+- [Optimism standard bridge contract walkthrough](/developers/tutorials/optimism-std-bridge-annotated-code/) _– An annotated code walkthrough of the Optimism standard bridge for moving assets between L1 and L2._

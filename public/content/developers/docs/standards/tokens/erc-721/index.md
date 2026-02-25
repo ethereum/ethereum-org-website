@@ -262,3 +262,11 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [OpenZeppelin - ERC-721 Docs](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - ERC-721 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
+
+## Tutorials: Build with non-fungible tokens (ERC-721) on Ethereum {#tutorials}
+
+- [Vyper ERC-721 Contract Walkthrough](/developers/tutorials/erc-721-vyper-annotated-code/) _– An annotated walkthrough of a full ERC-721 NFT contract written in Vyper._
+- [How to Write & Deploy an NFT (Part 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Step-by-step guide to writing and deploying your first ERC-721 smart contract._
+- [How to Mint an NFT (Part 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– How to mint an ERC-721 NFT using your deployed smart contract and Web3._
+- [How to View Your NFT in Your Wallet (Part 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– How to display your minted NFT in MetaMask after deployment._
+- [NFT Minter Tutorial](/developers/tutorials/nft-minter/) _– Build a full-stack NFT minting dapp with a React frontend, MetaMask, and Alchemy._
