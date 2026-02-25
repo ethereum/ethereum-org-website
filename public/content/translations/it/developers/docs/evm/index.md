@@ -4,7 +4,7 @@ description: Un'introduzione alla Macchina Virtuale di Ethereum e a come si rela
 lang: it
 ---
 
-La Macchina Virtuale di Ethereum (EVM) è un ambiente virtuale decentralizzato che esegue il codice con coerenza e sicurezza su tutti i nodi di Ethereum. I nodi eseguono l'EVM per eseguire i contratti intelligenti, utilizzando il "[gas](/gas/)" per misurare lo sforzo di calcolo necessario per le [operazioni](/developers/docs/evm/opcodes/), assicurando un'efficace allocazione delle risorse e la sicurezza della rete.
+La Macchina Virtuale di Ethereum (EVM) è un ambiente virtuale decentralizzato che esegue il codice con coerenza e sicurezza su tutti i nodi di Ethereum. I nodi eseguono l'EVM per eseguire i contratti intelligenti, utilizzando il "[gas](/developers/docs/gas/)" per misurare lo sforzo di calcolo necessario per le [operazioni](/developers/docs/evm/opcodes/), assicurando un'efficace allocazione delle risorse e la sicurezza della rete.
 
 ## Prerequisiti {#prerequisites}
 

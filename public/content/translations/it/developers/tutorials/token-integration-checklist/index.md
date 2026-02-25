@@ -10,7 +10,7 @@ tags:
   - "token"
 skill: intermediate
 published: 2020-08-13
-source: Creare contratti sicuri
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

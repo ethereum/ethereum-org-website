@@ -1,13 +1,15 @@
 ---
 title: Interazione con altri contratti da Solidity
-description: Come distribuire uno Smart Contract da uno esistente e interagirvi
+description: Come distribuire un contratto intelligente da un contratto esistente e interagire con esso
 author: "jdourlens"
 tags:
-  - "smart contract"
-  - "Solidity"
-  - "remix"
-  - "distribuzione"
-  - "componibilità"
+  [
+    "smart contract",
+    "Solidity",
+    "remix",
+    "distribuzione",
+    "componibilità"
+  ]
 skill: advanced
 lang: it
 published: 2020-04-05
@@ -16,9 +18,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Nei tutorial precedenti abbiamo imparato molto su [come distribuire il primo Smart Contract](/developers/tutorials/deploying-your-first-smart-contract/) e aggiungervi alcune funzionalità come il [controllo degli accessi con modificatori](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) o la [gestione degli errori in Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). In questo tutorial impareremo come distribuire uno Smart Contract da uno esistente e interagirvi.
+Nelle guide precedenti abbiamo imparato molto, ad esempio [come distribuire il tuo primo contratto intelligente](/developers/tutorials/deploying-your-first-smart-contract/) e ad aggiungervi alcune funzionalità come [il controllo degli accessi con i modificatori](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) o [la gestione degli errori in Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). In questa guida impareremo come distribuire un contratto intelligente da un contratto esistente e interagire con esso.
 
-Creeremo un contratto che permetta a chiunque ad avere uno Smart Contract `Counter` creando una factory associata, il cui nome sarà `CounterFactory`. Prima di tutto, ecco il codice del nostro Smart Contract iniziale `Counter`:
+Creeremo un contratto che consenta a chiunque di avere il proprio contratto intelligente `Counter`, creando una factory per esso, il cui nome sarà `CounterFactory`. Prima di tutto, ecco il codice del nostro contratto intelligente `Counter` iniziale:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -56,19 +58,19 @@ contract Counter {
 }
 ```
 
-Nota: abbiamo leggermente modificato il codice del contratto per tenere traccia dell'indirizzo della factory e dell'indirizzo del proprietario del contratto. Quando si chiama il codice di un contratto da un altro contratto, msg.sender fa riferimento all'indirizzo della factory del contratto. È **molto importante comprendere questo concetto**, perché usare un contratto per interagire con altri contratti è una prassi comune. Dovresti quindi saper gestire il mittente nei casi complessi.
+Nota: abbiamo leggermente modificato il codice del contratto per tenere traccia dell'indirizzo della factory e dell'indirizzo del proprietario del contratto. Quando si chiama il codice di un contratto da un altro contratto, `msg.sender` si riferisce all'indirizzo della nostra factory del contratto. È molto importante comprendere questo concetto, perché usare un contratto per interagire con altri contratti è una prassi comune. Dovresti quindi prestare attenzione a chi è il mittente nei casi complessi.
 
-Per questo motivo abbiamo aggiunto anche un modificatore `onlyFactory` che fa in modo che la funzione di cambiamento dello stato sia chiamabile solo dalla factory che passerà il chiamante originale come parametro.
+Per questo motivo abbiamo aggiunto anche un modificatore `onlyFactory` che fa in modo che la funzione di cambiamento dello stato possa essere chiamata solo dalla factory, che passerà il chiamante originale come parametro.
 
-Nella nostra nuova `CounterFactory` che gestirà tutti gli altri Counter aggiungeremo un mapping che assocerà un proprietario all'indirizzo del relativo contratto Counter:
+All'interno della nostra nuova `CounterFactory` che gestirà tutti gli altri `Counter`, aggiungeremo un `mapping` che assocerà un proprietario all'indirizzo del suo contratto `Counter`:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-In Ethereum, i mapping equivalgono agli oggetti di Javascript, che permettono di mappare una chiave di tipo A a un valore di tipo B. In questo caso mappiamo l'indirizzo di un proprietario all'istanza del suo Counter.
+In Ethereum, i `mapping` sono l'equivalente degli oggetti in JavaScript: permettono di mappare una chiave di tipo A a un valore di tipo B. In questo caso, mappiamo l'indirizzo di un proprietario con l'istanza del suo `Counter`.
 
-Istanziare un nuovo Counter per un utente sarà più o meno:
+Istanziare un nuovo `Counter` per qualcuno sarà così:
 
 ```solidity
   function createCounter() public {
@@ -77,9 +79,9 @@ Istanziare un nuovo Counter per un utente sarà più o meno:
   }
 ```
 
-Prima controlliamo se la persona possiede già un Counter. Se non lo possiede, istanziamo un nuovo Counter passandone l'indirizzo al costruttore del `Counter` e assegniamo l'istanza appena creata al mapping.
+Per prima cosa, verifichiamo se la persona possiede già un `Counter`. Se non ne possiede uno, istanziamo un nuovo `Counter` passando il suo indirizzo al costruttore di `Counter` e assegniamo l'istanza appena creata al `mapping`.
 
-Ottenere il conteggio di un Counter specifico significa:
+Per ottenere il conteggio di un `Counter` specifico, il codice sarà simile a questo:
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
@@ -92,9 +94,9 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-La prima funzione controlla se il contratto Counter esiste per un determinato indirizzo e poi chiama il metodo `getCount` dall'istanza. La seconda funzione: `getMyCount` è passa direttamente msg.sender alla funzione `getCount`.
+La prima funzione controlla se il contratto `Counter` esiste per un dato indirizzo e poi chiama il metodo `getCount` dall'istanza. La seconda funzione, `getMyCount`, è solo una scorciatoia per passare `msg.sender` direttamente alla funzione `getCount`.
 
-La funzione `increment` è abbastanza simile ma passa il mittente della transazione originale al contratto `Counter`:
+La funzione `increment` è abbastanza simile, ma passa il mittente della transazione originale al contratto `Counter`:
 
 ```solidity
 function increment() public {
@@ -103,9 +105,9 @@ function increment() public {
   }
 ```
 
-Nota: se chiamato troppe volte, il Counter potrebbe rimanere vittima di overflow. È consigliabile usare la [libreria di SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) il più possibile per evitare questa eventualità.
+Nota che, se chiamato troppe volte, il nostro `Counter` potrebbe essere vittima di un sovraflusso. Dovresti usare il più possibile la [libreria SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) per proteggerti da questo possibile caso.
 
-Per distribuire il contratto, dovrai fornire sia il codice della `CounterFactory` che il `Counter`. Quando si esegue la distribuzione ad esempio in Remix, è necessario selezionare CounterFactory.
+Per distribuire il nostro contratto, dovrai fornire sia il codice di `CounterFactory` sia quello di `Counter`. Quando si esegue la distribuzione, ad esempio in Remix, è necessario selezionare `CounterFactory`.
 
 Ecco il codice completo:
 
@@ -170,8 +172,8 @@ contract CounterFactory {
 }
 ```
 
-Dopo la compilazione, nella sezione di distribuzione di Remix si selezionerà la factory da distribuire:
+Dopo la compilazione, nella sezione di distribuzione di Remix, selezionerai la factory da distribuire:
 
 ![Selezione della factory da distribuire in Remix](./counterfactory-deploy.png)
 
-A questo punto puoi fare esperimenti la factory del contratto e controllare il valore che cambia. Se vorresti chiamare il contratto intelligente da un indirizzo differente, dovrai cambiare l'indirizzo nella selezione Conto di Remix.
+A questo punto puoi fare esperimenti con la factory del tuo contratto e controllare il cambiamento del valore. Se desideri chiamare il contratto intelligente da un indirizzo diverso, dovrai modificare l'indirizzo nella selezione 'Conto' di Remix.

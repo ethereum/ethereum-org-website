@@ -1,6 +1,6 @@
 ---
 title: Tecnologia del validatore distribuito
-description: La tecnologia del validatore distribuito consente l'operazione distribuita di un validatore di Ethereum da più parti.
+description: "La tecnologia del validatore distribuito consente l'operazione distribuita di un validatore di Ethereum da più parti."
 lang: it
 ---
 

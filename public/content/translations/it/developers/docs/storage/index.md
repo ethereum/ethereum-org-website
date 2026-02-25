@@ -1,6 +1,6 @@
 ---
 title: Archiviazione Decentralizzata
-description: Panoramica di cos'è l'archiviazione decentralizzata e degli strumenti disponibili per integrarla in una dapp.
+description: "Panoramica di cos'è l'archiviazione decentralizzata e degli strumenti disponibili per integrarla in una dapp."
 lang: it
 ---
 
