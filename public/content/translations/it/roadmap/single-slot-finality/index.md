@@ -1,6 +1,6 @@
 ---
-title: Finalità dello spazio singolo
-description: Spiegazione della finalità dello spazio singolo
+title: "Finalità dello spazio singolo"
+description: "Spiegazione della finalità dello spazio singolo"
 lang: it
 ---
 
