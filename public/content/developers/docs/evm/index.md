@@ -86,3 +86,8 @@ Over Ethereum's ten year history, the EVM has undergone several revisions, and t
 ## Related Topics {#related-topics}
 
 - [Gas](/developers/docs/gas/)
+
+## Tutorials: Ethereum Virtual Machine (EVM) / Opcodes on Ethereum {#tutorials}
+
+- [Understanding the Yellow Paper's EVM Specifications](/developers/tutorials/yellow-paper-evm/) _– A guided walkthrough of the formal EVM spec from the Ethereum Yellow Paper._
+- [Reverse Engineering a Contract](/developers/tutorials/reverse-engineering-a-contract/) _– How to reverse-engineer a compiled smart contract using EVM opcodes._

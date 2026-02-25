@@ -256,3 +256,9 @@ Projects working on zkEVMs include:
 - [Awesome-zkEVM resources](https://github.com/LuozhuZhang/awesome-zkevm)
 - [ZK-SNARKS under the hood](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [How are SNARKs possible?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
+
+## Tutorials: Privacy & zero-knowledge on Ethereum {#tutorials}
+
+- [Using zero-knowledge for a secret state](/developers/tutorials/secret-state/) _– How to use ZK proofs and offchain server components to maintain secret game state on-chain._
+- [Using Stealth Addresses](/developers/tutorials/stealth-addr/) _– How ERC-5564 stealth addresses enable anonymous ETH transfers using cryptographic key derivation._
+- [Using Ethereum for web2 authentication](/developers/tutorials/ethereum-for-web2-auth/) _– How to integrate Ethereum wallet signatures with SAML-based web2 authentication systems._
