@@ -9,7 +9,7 @@ tags:
   - "oracoli"
 skill: beginner
 published: 2021-06-29
-source: Documentazione di Tellor
+source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 

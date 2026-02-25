@@ -43,6 +43,7 @@ La [diversità dei client](/developers/docs/nodes-and-clients/client-diversity/)
 Per iniziare, visita la [guida rapida per principianti di Ethereum](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) per iniziare a indicizzare i dati della blockchain di Ethereum in pochi minuti in un ambiente locale di Docker per i test prima di distribuire il tuo progetto su un [servizio gestito da SubQuery](https://managedservice.subquery.network/) o su una [rete decentralizzata di SubQuery](https://app.subquery.network/dashboard).
 
 ## Ethernow - Programma dei dati del Mempool {#ethernow}
+
 [Blocknative](https://www.blocknative.com/) fornisce l'accesso aperto al suo [archivio dei dati del mempool](https://www.ethernow.xyz/mempool-data-archive) storico di Ethereum. Questo consente ai ricercatori e ai progetti della community di esplorare il livello pre-catena della Rete Principale di Ethereum. La serie di dati è mantenuta attivamente e rappresenta il registro storico più completo degli eventi di transazione del mempool nell'ecosistema di Ethereum. Maggiori informazioni su [Ethernow](https://www.ethernow.xyz/).
 
 ## Letture consigliate {#further-reading}

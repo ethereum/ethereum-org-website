@@ -1,6 +1,6 @@
 ---
-title: Diversità dei client
-description: Una spiegazione generica dell'importanza della diversità di client di Ethereum.
+title: "Diversità dei client"
+description: "Una spiegazione generica dell'importanza della diversità di client di Ethereum."
 lang: it
 sidebarDepth: 2
 ---
