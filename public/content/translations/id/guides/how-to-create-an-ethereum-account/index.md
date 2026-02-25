@@ -6,14 +6,13 @@ lang: id
 
 # Cara membuat akun Ethereum
 
-Siapa pun dapat membuat akun Ethereum secara gratis. Anda hanya perlu memasang aplikasi dompet kripto. Dompet membuat dan mengelola akun Ethereum Anda. Mereka dapat mengirim transaksi, memeriksa saldo, dan menghubungkan Anda ke aplikasi lain yang dibangun di Ethereum.
+**Siapa pun dapat membuat akun Ethereum secara gratis.** Anda hanya perlu memasang aplikasi dompet kripto. Dompet membuat dan mengelola akun Ethereum Anda. Mereka dapat mengirim transaksi, memeriksa saldo, dan menghubungkan Anda ke aplikasi lain yang dibangun di Ethereum.
 
-Dengan dompet kamu juga dapat masuk ke Bursa token, permainan, [NFT](/glossary/#nft) marketplace secara instan. Tidak perlu registrasi individual, satu akun digunakan untuk semua aplikasi yang dibangun di Ethereum.
+Dengan dompet, Anda juga dapat langsung masuk ke bursa token, game, dan marketplace [NFT](/glossary/#nft) mana pun. Tidak perlu registrasi individual, satu akun digunakan untuk semua aplikasi yang dibangun di Ethereum.
 
 ## Langkah 1: Pilih dompet
 
 Dompet adalah aplikasi yang membantu Anda mengelola akun Ethereum Anda. Ada berbagai dompet berbeda untuk dipilih: seluler, desktop, atau bahkan ekstensi browser.
-
 
 <ButtonLink href="/wallets/find-wallet/">
   Daftar dompet
@@ -21,7 +20,7 @@ Dompet adalah aplikasi yang membantu Anda mengelola akun Ethereum Anda. Ada berb
 
 Jika Anda baru, Anda dapat memilih filter "Baru dalam kripto" pada halaman "cari dompet" untuk mengidentifikasi dompet yang seharusnya mencakup semua fitur yang diperlukan dan cocok untuk pemula.
 
-![Pemilihan filter pada halaman 'temukan dompet'](./wallet-box.png)
+![Pemilihan filter di halaman 'temukan dompet'](./wallet-box.png)
 
 Ada juga filter profil lain untuk memenuhi kebutuhan Anda. Ini contoh-contoh dompet yang sering digunakan - Anda sebaiknya melakukan penelitian sendiri sebelum mempercayai perangkat lunak apa pun.
 
@@ -31,27 +30,27 @@ Setelah Anda memilih dompet, buka situs web resmi mereka atau app store kemudian
 
 ## Langkah 3: Buka aplikasi dan buat akun Ethereum Anda
 
-Ketika pertama kali membuka aplikasi dompet yang baru, Anda akan diminta untuk memilih membuat akun baru atau mengimpor akun yang sudah ada. Klik pembuatan akun baru. Ini adalah langkah saat perangkat lunak dompet membuat akun Ethereum Anda.
+Ketika pertama kali membuka aplikasi dompet yang baru, Anda akan diminta untuk memilih membuat akun baru atau mengimpor akun yang sudah ada. Klik pembuatan akun baru. **Ini adalah langkah saat perangkat lunak dompet membuat akun Ethereum Anda.**
 
 ## Langkah 4: Simpan frasa pemulihan Anda
 
 Beberapa aplikasi akan meminta Anda untuk menyimpan frasa pemulihan rahasia "frase benih" (kadang-kadang disebut juga "frasa benih" atau "mnemonic"). Menjaga frasa ini tetap aman sangat penting! Ini digunakan untuk menghasilkan akun Ethereum Anda dan dapat digunakan untuk mengirimkan transaksi.
 
-**Siapa pun yang mengetahui frasa tersebut dapat mengendalikan semua dana.**Jangan pernah membagikannya kepada siapa pun. Kata kunci ini memuat 12 sampai 24 kata-kata acak (urutan kata-kata ini sangat penting).
+**Siapa pun yang mengetahui frasa tersebut dapat mengambil alih semua dana.** Jangan pernah membagikannya kepada siapa pun. Kata kunci ini memuat 12 sampai 24 kata-kata acak (urutan kata-kata ini sangat penting).
 
 <div>
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Dompet sudah terinstal??</b><br/>Pelajari cara menggunakannya.</div>
+  <div><b>Dompet sudah terinstal?</b><br/>Pelajari cara menggunakannya.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Cara menggunakan dompet
   </ButtonLink>
- </AlertContent>
+</AlertContent>
 </Alert>
 </div>
 
-Tertarik dengan panduan lainnya? Lihatlah dokumen kami: [Panduan langkah demi langkah](/guides/)
+Tertarik dengan panduan lainnya? Lihat: [Panduan langkah demi langkah](/guides/)
 
 ## Pertanyaan yang sering diajukan
 
@@ -61,11 +60,11 @@ Tidak. Dompet adalah alat pengelolaan yang membantu Anda mengelola akun. Satu do
 
 ### Apakah saya bisa mengirimkan bitcoin ke alamat Ethereum, atau ether ke alamat Bitcoin?
 
-Tidak, Anda tidak bisa. Bitcoin dan ether ada di dua jaringan terpisah (yaitu, rantai blok yang berbeda), masing-masing dengan format pencatatan dan alamat mereka sendiri. Telah ada berbagai upaya untuk menghubungkan dua jaringan yang berbeda tersebut, di antaranya yang paling aktif saat ini yakni [Wrapped Bitcoin atau WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Ini bukan merupakan dukungan, karena WBTC adalah solusi kustodial (berarti sekelompok orang mengendalikan beberapa fungsi kritis) dan disediakan di sini hanya untuk tujuan informasi.
+Tidak, Anda tidak bisa. Bitcoin dan eter ada di dua jaringan terpisah (yaitu, rantai blok yang berbeda), masing-masing dengan format pencatatan dan alamatnya sendiri. Ada berbagai upaya untuk menjembatani kedua jaringan yang berbeda, di antaranya yang paling aktif saat ini adalah [Wrapped Bitcoin atau WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Ini bukan merupakan dukungan, karena WBTC adalah solusi kustodial (berarti sekelompok orang mengendalikan beberapa fungsi kritis) dan disediakan di sini hanya untuk tujuan informasi.
 
 ### Jika saya memiliki alamat ETH, apakah akan sama di rantai blok yang lain?
 
-Kamu bisa menggunakan yang [alamat](/glossary/#address) yang sama pada semua rantai blok yang menggunakan perangkat lunak dasar yang serupa dengan Ethereum (dikenal sebagai 'kompatibel dengan EVM'). [Daftar](https://chainlist.org/) berikut ini memperlihatkan bagaimana cara menggunakan rantai blok dengan alamat yang sama. Beberapa rantai blok seperti Bitcoin, menerapkan peraturan pada jaringan yang terpisah dan Anda akan membutuhkan alamat yang berbeda dengan format yang berbeda pula. Jika memiliki dompet kontrak pintar, kamu sebaiknya memeriksa situs web produk untuk informasi lebih lanjut tentang rantai blok mana yang didukung, karena biasanya dompet tersebut memiliki jangkauan yang terbatas namun lebih aman.
+Anda dapat menggunakan [alamat](/glossary/#address) yang sama di semua rantai blok yang menggunakan perangkat lunak dasar yang serupa dengan Ethereum (dikenal sebagai 'kompatibel dengan EVM'). [Daftar](https://chainlist.org/) ini akan menunjukkan kepada Anda rantai blok mana yang dapat Anda gunakan dengan alamat yang sama. Beberapa rantai blok seperti Bitcoin, menerapkan peraturan pada jaringan yang terpisah dan Anda akan membutuhkan alamat yang berbeda dengan format yang berbeda pula. Jika memiliki dompet kontrak pintar, kamu sebaiknya memeriksa situs web produk untuk informasi lebih lanjut tentang rantai blok mana yang didukung, karena biasanya dompet tersebut memiliki jangkauan yang terbatas namun lebih aman.
 
 ### Apakah memiliki dompet sendiri lebih aman dibandingkan dengan menyimpan dana di bursa?
 
