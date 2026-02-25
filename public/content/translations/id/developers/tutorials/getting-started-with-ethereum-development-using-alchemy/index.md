@@ -1,61 +1,62 @@
 ---
 title: Memulai Pengembangan Ethereum
-description: "This is a beginner's guide to getting started with Ethereum development. Kami akan memandu Anda mulai dari memutar titik akhir API, membuat permintaan baris perintah, hingga menulis skrip web3 pertama Anda! Pengalaman pengembangan blockchain tidak diperlukan!"
+description: "Ini adalah panduan pemula untuk memulai pengembangan Ethereum. Kami akan memandu Anda mulai dari mengaktifkan titik akhir API, membuat permintaan baris perintah, hingga menulis skrip web3 pertama Anda! Pengalaman pengembangan blockchain tidak diperlukan!"
 author: "Elan Halpern"
 tags:
-  - "memulai"
-  - "javascript"
-  - "ethers.js"
-  - "node"
-  - "membuat kueri"
-  - "alchemy"
+  [
+    "javascript",
+    "ethers.js",
+    "node",
+    "membuat kueri",
+    "alchemy"
+  ]
 skill: beginner
 lang: id
 published: 2020-10-30
-source: Sedang
+source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
-![Ethereum dan logo Alchemy](./ethereum-alchemy.png)
+![Logo Ethereum dan Alchemy](./ethereum-alchemy.png)
 
-Ini adalah panduan bagi pemula untuk memulai pengembangan Ethereum. Untuk tutorial ini, kita akan menggunakan [Alchemy](https://alchemyapi.io/), pelopor platform developer blockchain yang mendukung jutaan pengguna dari 70% aplikasi blockchain teratas, termasuk Maker, 0x, MyEtherWallet, Dharma, dan Kyber. Alchemy akan memberi kita akses ke titik akhir API di rantai Ethereum sehingga kita dapat membaca dan menulis transaksi.
+Ini adalah panduan bagi pemula untuk memulai pengembangan Ethereum. Untuk tutorial ini, kita akan menggunakan [Alchemy](https://alchemyapi.io/), platform pengembang blockchain terkemuka yang mendukung jutaan pengguna dari 70% aplikasi blockchain teratas, termasuk Maker, 0x, MyEtherWallet, Dharma, dan Kyber. Alchemy akan memberi kita akses ke titik akhir API di rantai Ethereum sehingga kita dapat membaca dan menulis transaksi.
 
 Kami akan memandu Anda mulai dari mendaftar di Alchemy hingga menulis skrip web3 pertama Anda! Pengalaman pengembangan blockchain tidak diperlukan!
 
-## 1. Mendaftar Akun Alchemy Secara Gratis {#sign-up-for-a-free-alchemy-account}
+## 1. Daftar untuk Akun Alchemy Gratis {#sign-up-for-a-free-alchemy-account}
 
-Membuat akun Alchemy itu mudah, [daftar secara gratis di sini](https://auth.alchemyapi.io/signup).
+Membuat akun di Alchemy itu mudah, [daftar gratis di sini](https://auth.alchemy.com/).
 
-## 2. Membuat Aplikasi Alchemy {#create-an-alchemy-app}
+## 2. Buat Aplikasi Alchemy {#create-an-alchemy-app}
 
-Untuk berkomunikasi dengan rantai Ethereum dan menggunakan produk-produk Alchemy, Anda memerlukan kunci API untuk mengotentikasi permintaan Anda.
+Untuk berkomunikasi dengan rantai Ethereum dan menggunakan produk-produk Alchemy, Anda memerlukan kunci API untuk mengautentikasi permintaan Anda.
 
-Anda bisa [membuat kunci API dari dasbor](http://dashboard.alchemyapi.io/). Untuk membuat kunci baru, arahkan ke "Create App" seperti contoh dibawah:
+Anda dapat [membuat kunci API dari dasbor](https://dashboard.alchemy.com/). Untuk membuat kunci baru, navigasikan ke “Create App” seperti yang ditunjukkan di bawah ini:
 
-Terima kasih banyak untuk [_ShapeShift_](https://shapeshift.com/) _yang telah mengizinkan kami menampilkan dasbor mereka!_
+Terima kasih khusus kepada [_ShapeShift_](https://shapeshift.com/) _karena mengizinkan kami menampilkan dasbor mereka!_
 
 ![Dasbor Alchemy](./alchemy-dashboard.png)
 
-Isi detail di bawah "Create App" untuk mendapatkan kunci baru. Anda juga bisa melihat aplikasi yang sebelumnya Anda buat dan yang dibuat oleh tim Anda di sini. Tarik kunci yang ada dengan mengklik "View Key" untuk aplikasi apa pun.
+Isi detail di bawah “Create App” untuk mendapatkan kunci baru Anda. Anda juga bisa melihat aplikasi yang sebelumnya Anda buat dan yang dibuat oleh tim Anda di sini. Tarik kunci yang ada dengan mengeklik “View Key” untuk aplikasi apa pun.
 
-![Buat aplikasi dengan tangkapan layar Alchemy](./create-app.png)
+![Tangkapan layar Buat aplikasi dengan Alchemy](./create-app.png)
 
-Anda juga bisa menarik kunci API yang sudah ada dengan mengarahkan kursor ke "Apps" dan pilih salah satu. Anda bisa "View Key" disini, juga "Edit App" untuk memasukkan domain tertentu ke whitelist, melihat beberapa peralatan developer, dan melihat analitik.
+Anda juga dapat menarik kunci API yang ada dengan mengarahkan kursor ke “Apps” dan memilih salah satunya. Anda dapat “View Key” di sini, serta “Edit App” untuk menambahkan domain spesifik ke daftar putih, melihat beberapa perangkat pengembang, dan melihat analitik.
 
-![Gif yang menampilkan ke pengguna bagaimana cara menarik kunci API](./pull-api-keys.gif)
+![Gif yang menunjukkan kepada pengguna cara menarik kunci API](./pull-api-keys.gif)
 
-## 3. Membuat permintaan dari Baris Perintah {#make-a-request-from-the-command-line}
+## 3. Buat Permintaan dari Baris Perintah {#make-a-request-from-the-command-line}
 
 Berinteraksi dengan blockchain Ethereum melalui Alchemy menggunakan JSON-RPC dan curl.
 
-Untuk permintaan manual, kami merekomendasikan berinteraksi dengan `JSON-RPC` via permintaan `POST`. Cukup teruskan dalam header `Content-Type: application/json` dan kueri Anda sebagai isi `POST` yang berisi field sebagai berikut:
+Untuk permintaan manual, kami merekomendasikan untuk berinteraksi dengan `JSON-RPC` melalui permintaan `POST`. Cukup teruskan header `Content-Type: application/json` dan kueri Anda sebagai isi `POST` dengan bidang-bidang berikut:
 
-- `jsonrpc`: Versi JSON-RPC — saat ini, hanya versi `2.0` yang didukung.
+- `jsonrpc`: Versi JSON-RPC—saat ini, hanya `2.0` yang didukung.
 - `method`: Metode API ETH. [Lihat referensi API.](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
 - `params`: Daftar parameter untuk diteruskan ke metode.
 - `id`: ID permintaan Anda. Akan dikembalikan oleh tanggapan, jadi Anda tetap bisa melacak permintaan mana yang ditanggapi.
 
-Berikut contoh yang bisa Anda jalankan di baris perintah untuk mengambil harga gas saat ini:
+Berikut adalah contoh yang dapat Anda jalankan dari baris perintah untuk mengambil harga gas saat ini:
 
 ```bash
 curl https://eth-mainnet.alchemyapi.io/v2/demo \
@@ -64,7 +65,7 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) with your own API key `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`\*\*._
+_**CATATAN:** Ganti [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) dengan kunci API Anda sendiri `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
 
 **Hasil:**
 
@@ -72,15 +73,15 @@ _**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainn
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4. Menyiapkan Client Web3 Anda {#set-up-your-web3-client}
+## 4. Siapkan Klien Web3 Anda {#set-up-your-web3-client}
 
-**Jika Anda sudah memiliki klien,** ganti URL penyedia node Anda saat ini ke URL Alchemy dengan kunci API Anda: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+**Jika Anda memiliki klien yang sudah ada,** ubah URL penyedia node Anda saat ini ke URL Alchemy dengan kunci API Anda: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key”`
 
-**_CATATAN:_** Skrip di bawah harus dijalankan pada **konteks node** atau **disimpan dalam file**, jangan menjalankannya di baris perintah. Jika Anda tidak memiliki Node atau npm yang terinstal, simak [panduan pengaturan untuk mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) singkat ini.
+**_CATATAN:_** Skrip di bawah ini perlu dijalankan dalam **konteks node** atau **disimpan dalam file**, bukan dijalankan dari baris perintah. Jika Anda belum menginstal Node atau npm, lihat [panduan penyiapan cepat untuk mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) ini.
 
-Ada banyak sekali [pustaka Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) yang bisa Anda integrasikan dengan Alchemy, namun, kami merekomendasikan menggunakan [Web3 Alchemy](https://docs.alchemy.com/reference/api-overview), pengganti web3.js, yang dibuat dan dikonfigurasi agar bekerja dengan mulus dengan Alchemy. Ini menyediakan banyak keuntungan seperti percobaan ulang otomatis dan dukungan WebSocket yang kuat.
+Ada banyak sekali [pustaka Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) yang dapat Anda integrasikan dengan Alchemy, namun, kami merekomendasikan penggunaan [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), pengganti langsung untuk web3.js, yang dibuat dan dikonfigurasi agar dapat bekerja dengan lancar bersama Alchemy. Ini memberikan banyak keuntungan seperti percobaan ulang otomatis dan dukungan WebSocket yang kuat.
 
-Untuk menginstal AlchemyWeb3.js, **arahkan kursor ke direktori proyek Anda** dan jalankan:
+Untuk menginstal AlchemyWeb3.js, **navigasikan ke direktori proyek Anda** dan jalankan:
 
 **Dengan Yarn:**
 
@@ -103,26 +104,26 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5. Tulis Skrip Web3 pertama Anda! {#write-your-first-web3-script}
+## 5. Tulis Skrip Web3 Pertama Anda! {#write-your-first-web3-script}
 
-Sekarang untuk membuat tangan kita kotor dengan sedikit pemrograman web3, kita akan menulis skrip sederhana yang mencetak nomor blok terakhir dari Jaringan Utama Ethereum.
+Sekarang untuk mencoba sedikit pemrograman web3, kita akan menulis skrip sederhana yang mencetak nomor blok terbaru dari Mainnet Ethereum.
 
-**1. Jika Anda belum memilikinya, di terminal Anda, buat direktori proyek dan cd baru kedalamnya:**
+**1. Jika Anda belum melakukannya, di terminal Anda, buat direktori proyek baru dan masuk ke dalamnya dengan cd:**
 
 ```
 mkdir web3-example
 cd web3-example
 ```
 
-**2. Instal dependensi web3 Alchemy (atau web3 apa pun) ke proyek Anda jika belum memilikinya:**
+**2. Instal dependensi Alchemy web3 (atau web3 apa pun) ke dalam proyek Anda jika Anda belum melakukannya:**
 
 ```
 npm install @alch/alchemy-web3
 ```
 
-**3. Create a file named `index.js` and add the following contents:**
+**3. Buat file bernama `index.js` dan tambahkan konten berikut:**
 
-> Pada akhirnya Anda harus mengganti `demo` dengan kunci API HTTP Alchemy.
+> Pada akhirnya, Anda harus mengganti `demo` dengan kunci API HTTP Alchemy Anda.
 
 ```js
 async function main() {
@@ -134,7 +135,7 @@ async function main() {
 main()
 ```
 
-Tidak familiar dengan async? Lihat [postingan Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c) berikut ini.
+Tidak familiar dengan async? [Postingan Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c).
 
 **4. Jalankan di terminal Anda menggunakan node**
 
@@ -142,14 +143,14 @@ Tidak familiar dengan async? Lihat [postingan Medium](https://medium.com/better-
 node index.js
 ```
 
-**5. Sekarang Anda akan melihat output nomor blok terakhir pada konsol Anda!**
+**5. Sekarang Anda akan melihat output nomor blok terbaru di konsol Anda!**
 
 ```
 The latest block number is 11043912
 ```
 
-**Woo! Selamat! You just wrote your first web3 script using Alchemy 🎉**
+**Woo!** Selamat! Anda baru saja menulis skrip web3 pertama Anda menggunakan Alchemy 🎉\*\*
 
-Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
+Tidak yakin apa yang harus dilakukan selanjutnya? Coba sebarkan kontrak pintar pertama Anda dan coba langsung pemrograman Solidity di [Panduan Kontrak Pintar Hello World](https://www.alchemy.com/docs/hello-world-smart-contract) kami, atau uji pengetahuan dasbor Anda dengan [Aplikasi Demo Dasbor](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Daftar Alchemy secara gratis](https://auth.alchemyapi.io/signup), lihat [dokumentasi](https://docs.alchemyapi.io/) kami, dan untuk berita terbaru, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Daftar dengan Alchemy secara gratis](https://auth.alchemy.com/), lihat [dokumentasi](https://www.alchemy.com/docs/) kami, dan untuk berita terbaru, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform)_.
