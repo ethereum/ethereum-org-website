@@ -165,6 +165,5 @@
   "page-upgrades-bug-bounty-not-included-li-5": "Błędy typograficzne",
   "page-upgrades-bug-bounty-not-included-li-6": "Testy",
   "page-upgrades-bug-bounty-not-included-li-7": "Ataki DoS na jednego peera wymagające dużego wysiłku (trwałe, intensywnie wykorzystujące procesor lub przepustowość i/lub wymagające więcej niż 1 pakietu lub transakcji onchain)",
-  "page-upgrades-bug-bounty-not-included-li-8": "Wszelkie publicznie znane problemy (w tym posty na forum, PR, zgłoszenia na GitHub, commity, posty na blogach, publiczne wiadomości na Discordzie itp.)",
-  "bug-bounty": "Nagrody za bugi"
+  "page-upgrades-bug-bounty-not-included-li-8": "Wszelkie publicznie znane problemy (w tym posty na forum, PR, zgłoszenia na GitHub, commity, posty na blogach, publiczne wiadomości na Discordzie itp.)"
 }

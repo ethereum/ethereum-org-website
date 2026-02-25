@@ -694,6 +694,5 @@
   "smart-contracts-4-c-label": "Değiştirilemez tokenler (NFT'ler)",
   "smart-contracts-4-c-explanation": "Akıllı sözleşmeler, dijital sanattan varlık sahipliği sertifikalarına kadar çok çeşitli NFT'leri tanımlamak için kullanılır.",
   "smart-contracts-4-d-label": "Açık para borsası",
-  "smart-contracts-4-d-explanation": "Merkeziyetsiz borsalar (DEX'ler), merkezi kontrol olmaksızın çalışmak için akıllı sözleşmeler kullanılarak oluşturulur.",
-  "quizzes": "Testler"
+  "smart-contracts-4-d-explanation": "Merkeziyetsiz borsalar (DEX'ler), merkezi kontrol olmaksızın çalışmak için akıllı sözleşmeler kullanılarak oluşturulur."
 }

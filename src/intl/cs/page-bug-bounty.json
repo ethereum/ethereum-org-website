@@ -165,6 +165,5 @@
   "page-upgrades-bug-bounty-not-included-li-5": "Typografické chyby",
   "page-upgrades-bug-bounty-not-included-li-6": "Testy",
   "page-upgrades-bug-bounty-not-included-li-7": "Útoky DoS na jednoho peera, které vyžadují velké úsilí (trvalé, náročné na CPU nebo šířku pásma a/nebo vyžadují více než 1 paket nebo transakci na blockchainu)",
-  "page-upgrades-bug-bounty-not-included-li-8": "Jakékoli veřejně známé problémy (zahrnuje příspěvky na fóru, PR, problémy na GitHubu, commity, blogové příspěvky, veřejné zprávy na Discordu atd.)",
-  "bug-bounty": "Odměna za vyřešení chyby"
+  "page-upgrades-bug-bounty-not-included-li-8": "Jakékoli veřejně známé problémy (zahrnuje příspěvky na fóru, PR, problémy na GitHubu, commity, blogové příspěvky, veřejné zprávy na Discordu atd.)"
 }

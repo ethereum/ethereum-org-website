@@ -165,6 +165,5 @@
   "page-upgrades-bug-bounty-not-included-li-5": "Yazım hataları",
   "page-upgrades-bug-bounty-not-included-li-6": "Testler",
   "page-upgrades-bug-bounty-not-included-li-7": "Yüksek çaba gerektiren (sürekli, CPU veya bant genişliği yoğun ve/veya 1'den fazla paket veya zincir üstü işlem gerektiren) tek eşli DoS saldırıları",
-  "page-upgrades-bug-bounty-not-included-li-8": "Halka açık olarak bilinen tüm sorunlar (forum gönderileri, PR'ler, github sorunları, commit'ler, blog gönderileri, herkese açık discord mesajları vb. içerir)",
-  "bug-bounty": "Hata ödülü"
+  "page-upgrades-bug-bounty-not-included-li-8": "Halka açık olarak bilinen tüm sorunlar (forum gönderileri, PR'ler, github sorunları, commit'ler, blog gönderileri, herkese açık discord mesajları vb. içerir)"
 }

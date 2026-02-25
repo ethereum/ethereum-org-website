@@ -613,6 +613,5 @@
   "defi-5-c-label": "Bitcoin",
   "defi-5-c-explanation": "Sbagliato. Bitcoin è una rete semplice che contiene valore, inadatta all'esecuzione di programmi avanzati. La DeFi richiede un sistema più flessibile, come Ethereum, capace di eseguire programmi complessi per gestire automaticamente prestiti e scambi.",
   "defi-5-d-label": "Le istituzioni finanziarie tradizionali",
-  "defi-5-d-explanation": "Sbagliato. Le app della DeFi non necessitano delle istituzioni finanziarie tradizionali. Utilizzano dei programmi della blockchain, detti contratti intelligenti, per gestire automaticamente le transazioni.",
-  "quizzes": "Quiz"
+  "defi-5-d-explanation": "Sbagliato. Le app della DeFi non necessitano delle istituzioni finanziarie tradizionali. Utilizzano dei programmi della blockchain, detti contratti intelligenti, per gestire automaticamente le transazioni."
 }

@@ -694,6 +694,5 @@
   "smart-contracts-4-c-label": "Non-fungible tokens (NFTs)",
   "smart-contracts-4-c-explanation": "Smart contracts are used to define a wide range of NFTs, ranging from digital art to asset ownership certificates.",
   "smart-contracts-4-d-label": "Open currency exchange",
-  "smart-contracts-4-d-explanation": "Decentralized exchanges (DEXs) are build using smart contracts to operate without centralized control.",
-  "quizzes": "Quizzes"
+  "smart-contracts-4-d-explanation": "Decentralized exchanges (DEXs) are build using smart contracts to operate without centralized control."
 }

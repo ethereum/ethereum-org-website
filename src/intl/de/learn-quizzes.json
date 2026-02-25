@@ -694,6 +694,5 @@
   "smart-contracts-4-c-label": "Non-fungible Token (NFT)",
   "smart-contracts-4-c-explanation": "Smart Contracts werden genutzt, um ein breites Spektrum an NFTs zu definieren, angefangen bei digitaler Kunst bis hin zu Besitzurkunden.",
   "smart-contracts-4-d-label": "Freier Devisenhandel",
-  "smart-contracts-4-d-explanation": "Dezentrale Börsen (DEXs) basieren auf Smart Contracts und funktionieren dadurch ohne eine zentrale Kontrollinstanz.",
-  "quizzes": "Quizze"
+  "smart-contracts-4-d-explanation": "Dezentrale Börsen (DEXs) basieren auf Smart Contracts und funktionieren dadurch ohne eine zentrale Kontrollinstanz."
 }

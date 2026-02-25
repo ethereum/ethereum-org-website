@@ -324,6 +324,5 @@
   "merge-5-c-label": "Eth1",
   "merge-5-c-explanation": "Eth1 adalah nama asli yang diberikan untuk lapisan eksekusi, bukan lapisan konsensus.",
   "merge-5-d-label": "Penaruhan",
-  "merge-5-d-explanation": "Penaruhan adalah menyetorkan ETH ke dalam kontrak pintar untuk membantu mengamankan rantai.",
-  "quizzes": "Kuis"
+  "merge-5-d-explanation": "Penaruhan adalah menyetorkan ETH ke dalam kontrak pintar untuk membantu mengamankan rantai."
 }

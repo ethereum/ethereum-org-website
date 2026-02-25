@@ -32,8 +32,42 @@ const JSON_OUTPUT = args.includes("--json")
 const VERBOSE = args.includes("--verbose")
 
 const EXTENSIONS = new Set([".ts", ".tsx", ".js", ".jsx"])
+const APP_DIR = join(ROOT, "app/[locale]")
 
 const DYNAMIC_KEY_PATTERNS = [/^language-/, /^region-/]
+
+/**
+ * Extract all URL slugs from the app directory structure.
+ * These are used as breadcrumb translations via t(path) in Breadcrumbs component.
+ */
+async function getBreadcrumbSlugs(): Promise<Set<string>> {
+  const slugs = new Set<string>()
+
+  async function scanDir(dir: string): Promise<void> {
+    try {
+      const entries = await readdir(dir, { withFileTypes: true })
+      for (const entry of entries) {
+        if (entry.isDirectory()) {
+          const name = entry.name
+          // Skip dynamic routes, private folders, and component folders (PascalCase)
+          if (
+            !name.startsWith("[") &&
+            !name.startsWith("_") &&
+            name[0] === name[0].toLowerCase()
+          ) {
+            slugs.add(name)
+            await scanDir(join(dir, name))
+          }
+        }
+      }
+    } catch {
+      // Directory doesn't exist or can't be read
+    }
+  }
+
+  await scanDir(APP_DIR)
+  return slugs
+}
 
 interface Usage {
   file: string
@@ -163,8 +197,14 @@ function categorizeByLocation(usages: Usage[]): Categories {
   return categories
 }
 
+// Populated at runtime by main()
+let breadcrumbSlugs: Set<string> = new Set()
+
 function isDynamicKey(key: string): boolean {
-  return DYNAMIC_KEY_PATTERNS.some((pattern) => pattern.test(key))
+  return (
+    DYNAMIC_KEY_PATTERNS.some((pattern) => pattern.test(key)) ||
+    breadcrumbSlugs.has(key)
+  )
 }
 
 function getPageFromPath(filePath: string): string | null {
@@ -198,6 +238,10 @@ function analyzeKey(key: string, searchIndex: Map<string, Usage[]>): Analysis {
   ) {
     recommendation = "keep"
     reason = "Used in shared components/layouts/lib"
+  } else if (isDynamic) {
+    // Check dynamic BEFORE move-to-page since breadcrumb slugs appear only in one page
+    recommendation = "keep-dynamic"
+    reason = "Used dynamically (breadcrumb slug or pattern match)"
   } else if (
     usages.length > 0 &&
     categories.components.length === 0 &&
@@ -210,9 +254,6 @@ function analyzeKey(key: string, searchIndex: Map<string, Usage[]>): Analysis {
   } else if (uniquePages.size > 1) {
     recommendation = "keep"
     reason = `Used across ${uniquePages.size} pages`
-  } else if (isDynamic) {
-    recommendation = "keep-dynamic"
-    reason = "Used dynamically, cannot be statically analyzed"
   }
 
   return {
@@ -348,6 +389,10 @@ async function movePageSpecificKeys(keysToMove: Analysis[]): Promise<void> {
 
 async function main(): Promise<void> {
   console.log("Auditing common.json translations...\n")
+
+  // Load breadcrumb slugs from app directory structure
+  breadcrumbSlugs = await getBreadcrumbSlugs()
+  console.log(`Found ${breadcrumbSlugs.size} breadcrumb slugs from app routes`)
 
   const commonKeys = await getCommonKeys()
 

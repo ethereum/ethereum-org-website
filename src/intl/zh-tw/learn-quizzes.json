@@ -694,6 +694,5 @@
   "smart-contracts-4-c-label": "非同質性代幣 (NFT)",
   "smart-contracts-4-c-explanation": "智能合約用來定義各式各樣的非同質化代幣，從數位藝術到資產擁有權證明。",
   "smart-contracts-4-d-label": "開放貨幣交易所",
-  "smart-contracts-4-d-explanation": "去中心化交易所（DEXs）是用智能合約建構，營運無需中心化控制。",
-  "quizzes": "測驗"
+  "smart-contracts-4-d-explanation": "去中心化交易所（DEXs）是用智能合約建構，營運無需中心化控制。"
 }

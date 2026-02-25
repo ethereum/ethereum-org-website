@@ -694,6 +694,5 @@
   "smart-contracts-4-c-label": "非同质化代币 (NFT)",
   "smart-contracts-4-c-explanation": "智能合约被用于定义各种各样的 NFT，从数字艺术品到所有权证明。",
   "smart-contracts-4-d-label": "开放货币交易所",
-  "smart-contracts-4-d-explanation": "去中心化交易所 (DEX) 使用智能合约构建，以实现无需中心化控制的运行。",
-  "quizzes": "测试"
+  "smart-contracts-4-d-explanation": "去中心化交易所 (DEX) 使用智能合约构建，以实现无需中心化控制的运行。"
 }

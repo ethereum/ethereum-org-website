@@ -165,6 +165,5 @@
   "page-upgrades-bug-bounty-not-included-li-5": "打字錯誤",
   "page-upgrades-bug-bounty-not-included-li-6": "測試",
   "page-upgrades-bug-bounty-not-included-li-7": "高度費力 (持續性、CPU 或頻寬密集型，及/或需要超過 1 個封包或鏈上交易) 的單一對等點阻斷服務 (DoS) 攻擊",
-  "page-upgrades-bug-bounty-not-included-li-8": "任何公開已知問題 (包括論壇文章、PR、github 問題、提交、部落格文章、公開的 discord 訊息等)",
-  "bug-bounty": "除錯賞金制度"
+  "page-upgrades-bug-bounty-not-included-li-8": "任何公開已知問題 (包括論壇文章、PR、github 問題、提交、部落格文章、公開的 discord 訊息等)"
 }
