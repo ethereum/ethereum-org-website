@@ -142,6 +142,16 @@ const PROTECTED_BRAND_NAMES = [
   "Lido",
   "Rocket Pool",
   "ENS",
+  // Ethereum clients
+  "Besu",
+  "Geth",
+  "Nethermind",
+  "Erigon",
+  "Prysm",
+  "Lighthouse",
+  "Teku",
+  "Nimbus",
+  "Lodestar",
   // Core terms that must stay English
   "Ethereum",
   "Bitcoin",
@@ -355,6 +365,129 @@ function fixDuplicatedHeadings(content: string): {
 }
 
 /**
+ * Fix escaped bold/italic markers from Crowdin.
+ * Crowdin often escapes markdown emphasis during translation:
+ *   \*\*text\*\* → **text** (bold)
+ *   \*text\*    → *text*   (italic)
+ *
+ * IMPORTANT: Skips table rows (lines starting with |) where \*\* may be
+ * intentional — e.g., `2\*\*256` for exponentiation in EVM opcode tables.
+ * Also skips code blocks.
+ */
+function fixEscapedBoldAndItalic(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Split content to preserve code blocks
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    const lines = parts[i].split("\n")
+    for (let j = 0; j < lines.length; j++) {
+      // Skip table rows — \*\* may be intentional (e.g., 2\*\*256)
+      if (lines[j].trimStart().startsWith("|")) continue
+
+      // Fix escaped bold first: \*\*text\*\* → **text**
+      lines[j] = lines[j].replace(
+        /\\\*\\\*(.+?)\\\*\\\*/g,
+        (_, inner) => {
+          fixCount++
+          return `**${inner}**`
+        }
+      )
+
+      // Fix escaped italic: \*text\* → *text*
+      // Runs after bold fix, so remaining \* pairs are italic
+      lines[j] = lines[j].replace(
+        /\\\*(.+?)\\\*/g,
+        (_, inner) => {
+          fixCount++
+          return `*${inner}*`
+        }
+      )
+    }
+    parts[i] = lines.join("\n")
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Warn on headings where the text is only punctuation (no actual words).
+ * Example: `## 。 {#who-is-involved}` — heading text is just a period.
+ * This indicates Crowdin dropped the heading text during translation.
+ */
+function warnPunctuationOnlyHeadings(content: string): string[] {
+  const warnings: string[] = []
+  const headingRe = /^(#{1,6})\s+(.+?)\s*(\{#[^}]+\})?\s*$/gm
+  let match
+  while ((match = headingRe.exec(content))) {
+    const text = match[2].trim()
+    // Remove the custom ID if it got captured in the text
+    const cleanText = text.replace(/\{#[^}]+\}/, "").trim()
+    // Check if remaining text is only punctuation/whitespace
+    if (cleanText.length > 0 && /^[\p{P}\p{S}\s]+$/u.test(cleanText)) {
+      warnings.push(
+        `Heading text is only punctuation: "${match[0].trim()}" — likely missing translation`
+      )
+    }
+  }
+  return warnings
+}
+
+/**
+ * Warn when fenced code block content differs between English and translation.
+ * Code inside fences should never be translated (variable names, keywords, etc.).
+ * Catches issues like `or` → `または` inside code fences.
+ */
+function warnCodeFenceContentDrift(
+  translatedContent: string,
+  englishContent: string
+): string[] {
+  const warnings: string[] = []
+
+  const extractCodeFences = (
+    content: string
+  ): Array<{ lang: string; body: string }> => {
+    const fences: Array<{ lang: string; body: string }> = []
+    const re = /```(\w*)\n([\s\S]*?)```/g
+    let match
+    while ((match = re.exec(content))) {
+      fences.push({ lang: match[1] || "", body: match[2].trim() })
+    }
+    return fences
+  }
+
+  const engFences = extractCodeFences(englishContent)
+  const transFences = extractCodeFences(translatedContent)
+
+  if (engFences.length !== transFences.length) {
+    warnings.push(
+      `Code fence count mismatch: English has ${engFences.length}, translation has ${transFences.length}`
+    )
+    return warnings
+  }
+
+  for (let i = 0; i < engFences.length; i++) {
+    if (engFences[i].body !== transFences[i].body) {
+      const preview = transFences[i].body
+        .substring(0, 60)
+        .replace(/\n/g, "\\n")
+      warnings.push(
+        `Code fence #${i + 1} content differs from English: "${preview}..."`
+      )
+    }
+  }
+
+  return warnings
+}
+
+/**
  * Fix broken markdown links where there's a space between ] and (.
  * Pattern: ] (https://... → ](https://...
  * This is a common translation artifact from Crowdin.
@@ -438,29 +571,6 @@ function extractHrefs(content: string): Set<string> {
 }
 
 /**
- * Extract hrefs from a single text block (paragraph/section).
- * Returns array to preserve duplicates within the block.
- */
-function extractHrefsFromBlock(block: string): string[] {
-  const hrefs: string[] = []
-
-  // Markdown links: [text](href)
-  const markdownLinkRe = /\[[^\]]*\]\(([^)]+)\)/g
-  let match
-  while ((match = markdownLinkRe.exec(block))) {
-    hrefs.push(match[1])
-  }
-
-  // JSX/HTML href attributes: href="..." or href='...'
-  const hrefAttrRe = /href=["']([^"']+)["']/g
-  while ((match = hrefAttrRe.exec(block))) {
-    hrefs.push(match[1])
-  }
-
-  return hrefs
-}
-
-/**
  * Split markdown content into logical blocks (paragraphs/sections).
  * Blocks are separated by blank lines.
  */
@@ -474,6 +584,10 @@ function splitIntoBlocks(content: string): string[] {
  * Warn-only — does NOT auto-fix, because block-positional alignment between
  * English and translated documents is unreliable (Crowdin often adds/removes
  * blank lines, shifting paragraph indices and causing incorrect substitutions).
+ *
+ * Earlier approach: block-level href comparison using per-paragraph extraction
+ * (extractHrefsFromBlock) to match hrefs positionally. Abandoned because Crowdin
+ * paragraph drift caused incorrect substitutions. See docs/solutions/ for details.
  *
  * Href fixes are left to the AI review agents which have full semantic context.
  */
@@ -1611,6 +1725,10 @@ function processMarkdownFile(
     () => fixBlockComponentLineBreaks(content),
     (n) => `Fixed ${n} inline block component tags`
   )
+  applyFix(
+    () => fixEscapedBoldAndItalic(content),
+    (n) => `Unescaped ${n} bold/italic markers from Crowdin`
+  )
 
   content = normalizeBlockHtmlLines(content)
 
@@ -1666,6 +1784,14 @@ function processMarkdownFile(
     }
     content = hrefResult.content
     issues.push(...hrefResult.warnings)
+
+    // Warn on punctuation-only headings (dropped translation text)
+    const punctuationHeadingWarnings = warnPunctuationOnlyHeadings(content)
+    issues.push(...punctuationHeadingWarnings)
+
+    // Warn on code fence content drift (translated code blocks)
+    const codeFenceWarnings = warnCodeFenceContentDrift(content, englishMd)
+    issues.push(...codeFenceWarnings)
 
     // Detect cross-script contamination
     if (locale) {
