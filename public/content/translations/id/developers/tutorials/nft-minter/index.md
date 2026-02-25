@@ -1,104 +1,105 @@
 ---
-title: NFT Minter Tutorial
-description: In this tutorial, you’ll build an NFT minter and learn how to create a full stack dApp by connecting your smart contract to a React frontend using MetaMask and Web3 tools.
+title: Tutorial mencetak NFT
+description: Dalam tutorial ini, Anda akan membuat minter NFT dan mempelajari cara membuat full stack dapp dengan menghubungkan smart contract Anda ke frontend React menggunakan alat MetaMask dan Web3.
 author: "smudgil"
 tags:
-  - "solidity"
-  - "NFT"
-  - "minter"
-  - "alchemy"
-  - "kontrak pintar"
-  - "frontend"
-  - "Pinata"
+  [
+    "Solidity",
+    "NFT",
+    "alchemy",
+    "kontrak pintar",
+    "frontend",
+    "Pinata"
+  ]
 skill: intermediate
 lang: id
 published: 2021-10-06
 ---
 
-One of the greatest challenges for developers coming from a Web2 background is figuring out how to connect your smart contact to a frontend project and interact with it.
+Salah satu tantangan terbesar bagi pengembang yang berasal dari latar belakang Web2 adalah mencari cara untuk menghubungkan smart contract Anda ke proyek frontend dan berinteraksi dengannya.
 
-By building an NFT minter — a simple UI where you can input a link to your digital asset, a title, and a description — you'll learn how to:
+Dengan membuat minter NFT - UI sederhana tempat Anda dapat memasukkan tautan ke aset digital Anda, judul, dan deskripsi - Anda akan belajar caranya:
 
-- Connect to MetaMask via your frontend project
-- Call smart contract methods from your frontend
-- Sign transactions using MetaMask
+- Terhubung ke MetaMask melalui proyek frontend Anda
+- Panggil metode kontrak pintar dari frontend Anda
+- Menandatangani transaksi menggunakan MetaMask
 
-In this tutorial, we will be using [React](https://reactjs.org/) as our frontend framework. Because this tutorial is primarily focused on Web3 development, we won't be spending much time breaking down React fundamentals. Instead, we'll be focusing on bringing functionality to our project.
+Dalam tutorial ini, kita akan menggunakan [React](https://react.dev/) sebagai kerangka kerja frontend kita. Karena tutorial ini difokuskan pada pengembangan Web3, kita tidak akan menghabiskan banyak waktu untuk menguraikan dasar-dasar React. Sebaliknya, kami akan berfokus pada fungsionalitas pada proyek kami.
 
-As a prerequisite, you should have a beginner-level understanding of React—know how components, props, useState/useEffect, and basic function calling works. If you've never heard of any of those terms before, you may want to check out this [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html). For the more visual learners, we highly recommend this excellent [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) video series by Net Ninja.
+Sebagai prasyarat, Anda harus memiliki pemahaman tingkat pemula tentang React-mengetahui cara kerja komponen, props, useState/useEffect, dan pemanggilan fungsi dasar. Jika Anda belum pernah mendengar istilah-istilah tersebut sebelumnya, Anda mungkin ingin melihat [tutorial Intro ke React](https://react.dev/learn/tutorial-tic-tac-toe) ini. Untuk para pembelajar yang lebih visual, kami sangat merekomendasikan seri video [Tutorial React Modern Lengkap](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) yang luar biasa oleh Net Ninja ini.
 
-And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/).
+Dan jika Anda belum memilikinya, Anda pasti akan membutuhkan akun Alchemy untuk menyelesaikan tutorial ini serta membangun apa pun di blockchain. Daftar untuk mendapatkan akun gratis [di sini](https://alchemy.com/).
 
-Without further ado, let's get started!
+Tanpa basa-basi lagi, mari kita mulai!
 
-## Making NFTs 101 {#making-nfts-101}
+## Membuat NFT 101 {#making-nfts-101}
 
-Before we even start looking at any code, it's important to understand how making an NFT works. It involves two steps:
+Bahkan sebelum kita mulai melihat kode apa pun, penting untuk memahami cara kerja NFT. Ini melibatkan dua langkah:
 
-### Publish an NFT smart contract on the Ethereum blockchain {#publish-nft}
+### Menerbitkan kontrak pintar NFT di rantai blok Ethereum {#publish-nft}
 
-The biggest difference between the two NFT smart contact standards is that ERC-1155 is a multi-token standard and includes batch functionality, whereas with the ERC-721 is a single-token standard and therefore only supports transferring one token at a time.
+Perbedaan terbesar antara dua standar kontrak pintar NFT adalah bahwa ERC-1155 adalah standar multi-token dan mencakup fungsionalitas batch, sedangkan dengan ERC-721 adalah standar token tunggal dan oleh karena itu hanya mendukung transfer satu token pada satu waktu.
 
-### Call the minting function {#minting-function}
+### Memanggil fungsi pencetakan {#minting-function}
 
-Usually, this minting function requires you to pass in two variables as parameters, first the `recipient`, which specifies the address that will receive your freshly minted NFT, and second the NFT's `tokenURI`, a string that resolves to a JSON document describing the NFT's metadata.
+Biasanya, fungsi pencetakan ini mengharuskan Anda untuk memasukkan dua variabel sebagai parameter, pertama `recipient`, yang menentukan alamat yang akan menerima NFT Anda yang baru dicetak, dan kedua `tokenURI` NFT, sebuah string yang mengarah ke dokumen JSON yang mendeskripsikan metadata NFT.
 
-An NFT's metadata is really what brings it to life, allowing it to have properties, such as a name, description, image (or different digital asset), and other attributes. Here's [an example of a tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), which contains an NFT's metadata.
+Metadata NFT adalah apa yang membuatnya hidup, memungkinkannya memiliki properti, seperti nama, deskripsi, gambar (atau aset digital yang berbeda), dan atribut lainnya. Berikut [contoh tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), yang berisi metadata NFT.
 
-In this tutorial, we're going to focus on part 2, calling an existing NFT's smart contract minting function using our React UI.
+Dalam tutorial ini, kita akan fokus pada bagian 2, memanggil fungsi pembuatan kontrak pintar NFT yang sudah ada menggunakan React UI.
 
-[Here's a link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) to the ERC-721 NFT smart contract we will be calling in this tutorial. If you'd like to learn how we made it, we highly recommend that you check out our other tutorial, ["How to Create an NFT"](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
+[Berikut tautan](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) ke kontrak pintar NFT ERC-721 yang akan kita panggil dalam tutorial ini. Jika Anda ingin mempelajari cara kami membuatnya, kami sangat menyarankan Anda untuk melihat tutorial kami yang lain, ["Cara Membuat NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
 
-Cool, now that we understand how making an NFT works, let's clone our starter files!
+Keren, sekarang kita sudah paham bagaimana cara kerja NFT, mari kita kloning file awal kita!
 
-## Clone the starter files {#clone-the-starter-files}
+## Kloning file pemula {#clone-the-starter-files}
 
-First, go to the [nft-minter-tutorial GitHub repository](https://github.com/alchemyplatform/nft-minter-tutorial) to get the starter files for this project. Clone this repository into your local environment.=
+Pertama, buka [repositori GitHub nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial) untuk mendapatkan berkas-berkas awal untuk proyek ini. Kloning repositori ini ke dalam lingkungan lokal Anda.
 
-When you open this cloned `nft-minter-tutorial` repository, you'll notice that it contains two folders: `minter-starter-files` and `nft-minter`.
+Saat Anda membuka repositori `nft-minter-tutorial` yang dikloning ini, Anda akan melihat bahwa itu berisi dua folder: `minter-starter-files` dan `nft-minter`.
 
-- `minter-starter-files` contains the starter files (essentially the React UI) for this project. In this tutorial, **we will be working in this directory**, as you learn how to bring this UI to life by connecting it to your Ethereum wallet and an NFT smart contract.
-- `nft-minter` contains the entire completed tutorial and is there for you as a **reference** **if you get stuck.**
+- `minter-starter-files` berisi berkas pemula (pada dasarnya adalah UI React) untuk proyek ini. Dalam tutorial ini, **kita akan bekerja di direktori ini**, saat Anda mempelajari cara menghidupkan UI ini dengan menghubungkannya ke dompet Ethereum dan kontrak pintar NFT Anda.
+- `nft-minter` berisi seluruh tutorial yang telah selesai dan tersedia untuk Anda sebagai **referensi** **jika Anda mengalami kebuntuan.**
 
-Next, open your copy of `minter-starter-files` in your code editor, and then navigate into your `src` folder.
+Selanjutnya, buka salinan `minter-starter-files` Anda di editor kode, lalu navigasikan ke folder `src` Anda.
 
-All of the code we'll write will live under the `src` folder. We'll be editing the `Minter.js` component and writing additional javascript files to give our project Web3 functionality.
+Semua kode yang akan kita tulis akan berada di bawah folder `src`. Kita akan mengedit komponen `Minter.js` dan menulis file javascript tambahan untuk memberikan fungsionalitas Web3 pada proyek kita.
 
-## Step 2: Check out our starter files {#step-2-check-out-our-starter-files}
+## Langkah 2: Periksa file pemula kami {#step-2-check-out-our-starter-files}
 
-Before we start coding, it's important to check out what's already provided for us in the starter files.
+Sebelum kita mulai membuat kode, penting untuk memeriksa apa yang sudah disediakan untuk kita di dalam file-file pemula.
 
-### Get your react project running {#get-your-react-project-running}
+### Menjalankan proyek React Anda {#get-your-react-project-running}
 
-Let's start by running the React project in our browser. The beauty of React is that once we have our project running in our browser, any changes we save will be updated live in our browser.
+Mari kita mulai dengan menjalankan proyek React di browser kita. Keindahan dari React adalah ketika kita menjalankan proyek kita di browser, setiap perubahan yang kita simpan akan diperbarui secara langsung di browser.
 
-To get the project running, navigate to the root directory of the `minter-starter-files` folder, and the run `npm install` in your terminal to install the dependencies of the project:
+Untuk menjalankan proyek, navigasikan ke direktori root folder `minter-starter-files`, dan jalankan `npm install` di terminal Anda untuk menginstal dependensi proyek:
 
 ```bash
 cd minter-starter-files
 npm install
 ```
 
-Once those have finished installing, run `npm start` in your terminal:
+Setelah penginstalan selesai, jalankan `npm start` di terminal Anda:
 
 ```bash
 npm start
 ```
 
-Doing so should open http://localhost:3000/ in your browser, where you'll see the frontend for our project. It should consist of 3 fields: a place to input a link to your NFT's asset, enter the name of your NFT, and provide a description.
+Untuk melakukannya, Anda harus membuka http://localhost:3000/ di browser Anda, di mana Anda akan melihat halaman depan untuk proyek kami. Ini harus terdiri dari 3 bidang: tempat untuk memasukkan tautan ke aset NFT Anda, masukkan nama NFT Anda, dan berikan deskripsi.
 
-If you try clicking "Connect Wallet" or "Mint NFT" buttons, you'll notice they don't work—that's because we still need to program their functionality! :\)
+Jika Anda mencoba mengklik tombol "Hubungkan Dompet" atau "Mint NFT", Anda akan melihat bahwa tombol tersebut tidak berfungsi - itu karena kami masih perlu memprogram fungsionalitasnya! :\)
 
-### The Minter.js component {#minter-js}
+### Komponen Minter.js {#minter-js}
 
-**NOTE:** Make sure you're in the `minter-starter-files` folder and not the `nft-minter` folder!
+**CATATAN:** Pastikan Anda berada di folder `minter-starter-files` dan bukan di folder `nft-minter`!
 
-Let's go back into the `src` folder in our editor and open the `Minter.js` file. It's super important that we understand everything in this file, as it is the primary React component we will be working on.
+Mari kembali ke folder `src` di editor kita dan buka file `Minter.js`. Sangat penting bagi kita untuk memahami semua yang ada di dalam file ini, karena ini adalah komponen utama React yang akan kita kerjakan.
 
-At the top of our this file, we have our state variables that we will update after specific events.
+Di bagian atas file ini, kita memiliki variabel state yang akan kita perbarui setelah kejadian tertentu.
 
 ```javascript
-//State variables
+//Variabel state
 const [walletAddress, setWallet] = useState("")
 const [status, setStatus] = useState("")
 const [name, setName] = useState("")
@@ -106,135 +107,135 @@ const [description, setDescription] = useState("")
 const [url, setURL] = useState("")
 ```
 
-Never heard of React state variables or state hooks? Check out [these](https://reactjs.org/docs/hooks-state.html) docs.
+Belum pernah mendengar tentang variabel state atau state hook pada React? Lihat dokumentasi [ini](https://legacy.reactjs.org/docs/hooks-state.html).
 
-Here's what each of the variables represent:
+Berikut ini adalah apa yang diwakili oleh masing-masing variabel:
 
-- `walletAddress` - a string that stores the user's wallet address
-- `status` - a string that contains a message to display at the bottom of the UI
-- `name` - a string that stores the NFT's name
-- `description` - a string that stores the NFT's description
-- `url` - a string that is a link to the NFT's digital asset
+- `walletAddress` - sebuah string yang menyimpan alamat dompet pengguna
+- `status` - string yang berisi pesan untuk ditampilkan di bagian bawah UI
+- `name` - string yang menyimpan nama NFT
+- `description` - string yang menyimpan deskripsi NFT
+- `url` - string yang merupakan tautan ke aset digital NFT
 
-After the state variables, you'll see three un-implemented functions: `useEffect`, `connectWalletPressed`, and `onMintPressed`. You'll notice that all of these functions are `async`, that's because we will be making asynchronous API calls in them! Their names are eponymous with their functionalities:
+Setelah variabel state, Anda akan melihat tiga fungsi yang belum diimplementasikan: `useEffect`, `connectWalletPressed`, dan `onMintPressed`. Anda akan melihat bahwa semua fungsi ini `async`, itu karena kita akan membuat panggilan API asinkron di dalamnya! Nama-nama mereka sama dengan fungsinya:
 
 ```javascript
 useEffect(async () => {
-  //TODO: implement
+  //TODO: implementasikan
 }, [])
 
 const connectWalletPressed = async () => {
-  //TODO: implement
+  //TODO: implementasikan
 }
 
 const onMintPressed = async () => {
-  //TODO: implement
+  //TODO: implementasikan
 }
 ```
 
-- [`useEffect`](https://reactjs.org/docs/hooks-effect.html) - this is a React hook that is called after your component is rendered. Because it has an empty array `[]` prop passed into it (see line 3), it will only be called on the component's _first_ render. Here we'll call our wallet listener and another wallet function to update our UI to reflect whether a wallet is already connected.
-- `connectWalletPressed` - this function will be called to connect the user's MetaMask wallet to our dApp.
-- `onMintPressed` - this function will be called to mint the user's NFT.
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html) - ini adalah hook React yang dipanggil setelah komponen Anda dirender. Karena ia memiliki prop array kosong `[]` yang dilewatkan ke dalamnya (lihat baris 3), ia hanya akan dipanggil pada render _pertama_ komponen. Di sini kita akan memanggil fungsi pendengar dompet dan fungsi dompet lain untuk memperbarui UI kita untuk merefleksikan apakah sebuah dompet sudah terhubung.
+- `connectWalletPressed` - fungsi ini akan dipanggil untuk menghubungkan dompet MetaMask pengguna ke dapp kita.
+- `onMintPressed` - fungsi ini akan dipanggil untuk mencetak NFT pengguna.
 
-Near the end of this file, we have the UI of our component. If you scan this code carefully, you'll notice that we update our `url`, `name`, and `description` state variables when the input in their corresponding text fields change.
+Di bagian akhir file ini, kita akan mendapatkan UI dari komponen kita. Jika Anda memeriksa kode ini dengan saksama, Anda akan melihat bahwa kami memperbarui variabel state `url`, `name`, dan `description` kami saat input di bidang teks yang sesuai berubah.
 
-You'll also see that `connectWalletPressed` and `onMintPressed` are called when the buttons with IDs `mintButton` and `walletButton` are clicked respectively.
+Anda juga akan melihat bahwa `connectWalletPressed` dan `onMintPressed` dipanggil saat tombol dengan ID `mintButton` dan `walletButton` masing-masing diklik.
 
 ```javascript
-//the UI of our component
+//UI dari komponen kita
 return (
   <div className="Minter">
     <button id="walletButton" onClick={connectWalletPressed}>
       {walletAddress.length > 0 ? (
-        "Connected: " +
+        "Terhubung: " +
         String(walletAddress).substring(0, 6) +
         "..." +
         String(walletAddress).substring(38)
       ) : (
-        <span>Connect Wallet</span>
+        <span>Hubungkan Dompet</span>
       )}
     </button>
 
     <br></br>
-    <h1 id="title">🧙‍♂️ Alchemy NFT Minter</h1>
+    <h1 id="title">🧙‍♂️ Pencetak NFT Alchemy</h1>
     <p>
-      Simply add your asset's link, name, and description, then press "Mint."
+      Cukup tambahkan tautan, nama, dan deskripsi aset Anda, lalu tekan "Cetak."
     </p>
     <form>
-      <h2>🖼 Link to asset: </h2>
+      <h2>🖼 Tautan ke aset: </h2>
       <input
         type="text"
-        placeholder="e.g., https://gateway.pinata.cloud/ipfs/<hash>"
+        placeholder="misalnya, https://gateway.pinata.cloud/ipfs/<hash>"
         onChange={(event) => setURL(event.target.value)}
       />
-      <h2>🤔 Name: </h2>
+      <h2>🤔 Nama: </h2>
       <input
         type="text"
-        placeholder="e.g., My first NFT!"
+        placeholder="misalnya, NFT pertamaku!"
         onChange={(event) => setName(event.target.value)}
       />
-      <h2>✍️ Description: </h2>
+      <h2>✍️ Deskripsi: </h2>
       <input
         type="text"
-        placeholder="e.g., Even cooler than cryptokitties ;)"
+        placeholder="misalnya, Bahkan lebih keren dari cryptokitties ;)"
         onChange={(event) => setDescription(event.target.value)}
       />
     </form>
     <button id="mintButton" onClick={onMintPressed}>
-      Mint NFT
+      Cetak NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 
-Finally, let's address where is this Minter component added.
+Terakhir, mari kita bahas di mana komponen Minter ini ditambahkan.
 
-If you go to the `App.js` file, which is the main component in React that acts as a container for all other components, you'll see that our Minter component is injected on line 7.
+Jika Anda membuka berkas `App.js`, yang merupakan komponen utama dalam React yang bertindak sebagai wadah untuk semua komponen lainnya, Anda akan melihat bahwa komponen Minter kita disuntikkan pada baris 7.
 
-**In this tutorial, we'll only be editing the `Minter.js file` and adding files in our `src` folder.**
+**Dalam tutorial ini, kita hanya akan mengedit `file Minter.js` dan menambahkan file di folder `src` kita.**
 
-Now that we understand what we're working with, let's set up our Ethereum wallet!
+Sekarang setelah kita memahami apa yang sedang kita kerjakan, mari siapkan dompet Ethereum kita!
 
-## Set up your Ethereum wallet {#set-up-your-ethereum-wallet}
+## Menyiapkan dompet Ethereum Anda {#set-up-your-ethereum-wallet}
 
-For users to be able to interact with your smart contract they will need to connect their Ethereum wallet to your dApp.
+Agar pengguna dapat berinteraksi dengan smart contract Anda, mereka perlu menghubungkan dompet Ethereum mereka ke dapp Anda.
 
-### Download MetaMask {#download-metamask}
+### Mengunduh MetaMask {#download-metamask}
 
-Untuk tutorial ini, kita akan menggunakan MetaMask, dompet virtual dalam peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/).
+Untuk tutorial ini, kita akan menggunakan MetaMask, dompet virtual dalam peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. Jika Anda ingin lebih memahami tentang cara kerja transaksi di Ethereum, lihat [halaman ini](/developers/docs/transactions/).
 
-Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
+Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download). Ketika Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Ropsten Test Network" di bagian kanan atas (agar kita tidak berurusan dengan uang sungguhan).
 
-### Add ether from a Faucet {#add-ether-from-faucet}
+### Menambahkan ether dari Faucet {#add-ether-from-faucet}
 
-In order to mint our NFTs (or sign any transactions on the Ethereum blockchain), we’ll need some fake Eth. To get Eth you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten Eth.” You should see Eth in your MetaMask account soon after!
+Untuk mencetak NFT kita (atau menandatangani transaksi apa pun di blockchain Ethereum), kita membutuhkan Eth palsu. Untuk mendapatkan Eth, Anda dapat membuka [faucet Ropsten](https://faucet.ropsten.be/) dan masukkan alamat akun Ropsten Anda, lalu klik “Kirim Ropsten Eth.” Anda akan segera melihat Eth di akun MetaMask Anda!
 
-### Check your balance {#check-your-balance}
+### Memeriksa saldo Anda {#check-your-balance}
 
-To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. Setelah Anda memasukkan alamat akun MetaMask Anda dan klik "Kirim Permintaan", Anda akan melihat respons seperti ini:
+Untuk memeriksa ulang saldo kita, mari buat permintaan [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) menggunakan [alat penyusun Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Ini akan mengembalikan jumlah Eth di dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan klik "Kirim Permintaan", Anda akan melihat respons seperti ini:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**NOTE:** This result is in wei not eth. Wei digunakan sebagai denominasi terkecil dari ether. The conversion from wei to eth is: 1 eth = 10¹⁸ wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10¹⁸ which equals 1 eth.
+**CATATAN:** Hasil ini dalam wei, bukan eth. Wei digunakan sebagai denominasi terkecil dari ether. Konversi dari wei ke eth adalah: 1 eth = 10¹⁸ wei. Jadi, jika kita mengonversi 0xde0b6b3a7640000 ke desimal, kita akan mendapatkan 1\*10¹⁸ yang sama dengan 1 eth.
 
-Fiuh! Uang palsu kita semuanya ada di sana! <Emoji text=":money_mouth_face:" size={1} />
+Fiuh! Uang palsu kita ada di sana! <Emoji text=":money_mouth_face:" size={1} />
 
-## Connect MetaMask to your UI {#connect-metamask-to-your-UI}
+## Menghubungkan MetaMask ke UI Anda {#connect-metamask-to-your-UI}
 
-Now that our MetaMask wallet is set up, let's connect our dApp to it!
+Sekarang dompet MetaMask kita sudah siap, mari hubungkan dapp kita ke dompet tersebut!
 
-Because we want to prescribe to the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) paradigm, we're going to create a separate file that contains our functions to manage the logic, data, and rules of our dApp, and then pass those functions to our frontend (our Minter.js component).
+Karena kami ingin mengikuti paradigma [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), kami akan membuat file terpisah yang berisi fungsi kami untuk mengelola logika, data, dan aturan dapp kami, dan kemudian meneruskan fungsi-fungsi tersebut ke frontend kami (komponen Minter.js kami).
 
-### The `connectWallet` function {#connect-wallet-function}
+### Fungsi `connectWallet` {#connect-wallet-function}
 
-To do so, let's create a new folder called `utils` in your `src` directory and add a file called `interact.js` inside it, which will contain all of our wallet and smart contract interaction functions.
+Untuk melakukannya, mari kita buat folder baru bernama `utils` di direktori `src` Anda dan tambahkan file bernama `interact.js` di dalamnya, yang akan berisi semua fungsi interaksi dompet dan kontrak pintar kita.
 
-In our `interact.js` file, we will write a `connectWallet` function, which we will then import and call in our `Minter.js` component.
+Di file `interact.js` kita, kita akan menulis fungsi `connectWallet`, yang kemudian akan kita impor dan panggil di komponen `Minter.js` kita.
 
-In your `interact.js` file, add the following
+Pada berkas `interact.js` Anda, tambahkan berikut ini
 
 ```javascript
 export const connectWallet = async () => {
@@ -244,7 +245,7 @@ export const connectWallet = async () => {
         method: "eth_requestAccounts",
       })
       const obj = {
-        status: "👆🏽 Write a message in the text-field above.",
+        status: "👆🏽 Tulis pesan di bidang teks di atas.",
         address: addressArray[0],
       }
       return obj
@@ -262,8 +263,8 @@ export const connectWallet = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              You must install MetaMask, a virtual Ethereum wallet, in your
-              browser.
+              Anda harus menginstal MetaMask, dompet virtual Ethereum, di
+              peramban Anda.
             </a>
           </p>
         </span>
@@ -273,28 +274,28 @@ export const connectWallet = async () => {
 }
 ```
 
-Let's breakdown what this code does:
+Mari kita uraikan apa yang dilakukan oleh kode ini:
 
-First, our function checks if it `window.ethereum` is enabled in your browser.
+Pertama, fungsi kita akan memeriksa apakah `window.ethereum` diaktifkan di peramban Anda.
 
-`window.ethereum` is a global API injected by MetaMask and other wallet providers that allows websites to request users' Ethereum accounts. If approved, it can read data from the blockchains the user is connected to, and suggest that the user sign messages and transactions. Check out the [MetaMask docs](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) for more info!
+`window.ethereum` adalah API global yang disuntikkan oleh MetaMask dan penyedia dompet lainnya yang memungkinkan situs web untuk meminta akun Ethereum pengguna. Jika disetujui, ia dapat membaca data dari blockchain yang terhubung dengan pengguna, dan menyarankan agar pengguna menandatangani pesan dan transaksi. Lihat [dokumentasi MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) untuk info lebih lanjut!
 
-If `window.ethereum` _is not_ present, then that means MetaMask is not installed. This results in a JSON object being returned, where `address` returned is an empty string, and the `status` JSX object relays that the user must install MetaMask.
+Jika `window.ethereum` _tidak_ ada, maka itu berarti MetaMask tidak terinstal. Ini menghasilkan objek JSON yang dikembalikan, di mana `address` yang dikembalikan adalah string kosong, dan objek `status` JSX menyampaikan bahwa pengguna harus menginstal MetaMask.
 
-**Most of the functions we write will be returning JSON objects that we can use to update our state variables and UI.**
+**Sebagian besar fungsi yang kita tulis akan mengembalikan objek JSON yang dapat kita gunakan untuk memperbarui variabel state dan UI kita.**
 
-Now if `window.ethereum` _is_ present, then that's when things get interesting.
+Sekarang jika `window.ethereum` _ada_, saat itulah segalanya menjadi menarik.
 
-Using a try/catch loop, we'll try to connect to MetaMask by calling`[window.ethereum.request({ method: "eth_requestAccounts" });](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts)`. Calling this function will open up MetaMask in the browser, whereby the user will be prompted to connect their wallet to your dApp.
+Menggunakan perulangan coba/tangkap, kita akan mencoba menyambungkan ke MetaMask dengan memanggil [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Memanggil fungsi ini akan membuka MetaMask di browser, di mana pengguna akan diminta untuk menghubungkan dompet mereka ke dapp Anda.
 
-- If the user chooses to connect, `method: "eth_requestAccounts"` will return an array that contains all of the user's account addresses that are connected to the dApp. Altogether, our `connectWallet` function will return a JSON object that contains the _first_ `address` in this array \(see line 9\) and a `status` message that prompts the user to write a message to the smart contract.
-- If the user rejects the connection, then the JSON object will contain an empty string for the `address` returned and a `status` message that reflects that the user rejected the connection.
+- Jika pengguna memilih untuk terhubung, `method: "eth_requestAccounts"` akan mengembalikan sebuah array yang berisi semua alamat akun pengguna yang terhubung ke dapp. Secara keseluruhan, fungsi `connectWallet` kita akan mengembalikan objek JSON yang berisi `address` _pertama_ dalam array ini \(lihat baris 9\) dan pesan `status` yang meminta pengguna untuk menulis pesan ke kontrak pintar.
+- Jika pengguna menolak koneksi, maka objek JSON akan berisi string kosong untuk `address` yang dikembalikan dan pesan `status` yang mencerminkan bahwa pengguna menolak koneksi.
 
-### Add connectWallet function to your Minter.js UI Component {#add-connect-wallet}
+### Menambahkan fungsi connectWallet ke Komponen UI Minter.js Anda {#add-connect-wallet}
 
-Now that we've written this `connectWallet` function, let's connect it to our `Minter.js.` component.
+Sekarang setelah kita menulis fungsi `connectWallet` ini, mari kita hubungkan ke komponen `Minter.js` kita.
 
-First, we'll have to import our function into our `Minter.js` file by adding `import { connectWallet } from "./utils/interact.js";` to the top of the `Minter.js` file. Your first 11 lines of `Minter.js` should now look like this:
+Pertama, kita harus mengimpor fungsi kita ke file `Minter.js` kita dengan menambahkan `import { connectWallet } from "./utils/interact.js";` ke bagian atas file `Minter.js`. 11 baris pertama `Minter.js` Anda sekarang akan terlihat seperti ini:
 
 ```javascript
 import { useEffect, useState } from "react";
@@ -302,7 +303,7 @@ import { connectWallet } from "./utils/interact.js";
 
 const Minter = (props) => {
 
-  //State variables
+  //Variabel state
   const [walletAddress, setWallet] = useState("");
   const [status, setStatus] = useState("");
   const [name, setName] = useState("");
@@ -310,7 +311,7 @@ const Minter = (props) => {
   const [url, setURL] = useState("");
 ```
 
-Then, inside our `connectWalletPressed` function, we'll call our imported `connectWallet` function, like so:
+Kemudian, di dalam fungsi `connectWalletPressed` kita, kita akan memanggil fungsi `connectWallet` yang diimpor, seperti ini:
 
 ```javascript
 const connectWalletPressed = async () => {
@@ -320,25 +321,25 @@ const connectWalletPressed = async () => {
 }
 ```
 
-Notice how most of our functionality is abstracted away from our `Minter.js` component from the `interact.js` file? This is so we comply with the M-V-C paradigm!
+Perhatikan bagaimana sebagian besar fungsionalitas kami diabstraksikan dari komponen `Minter.js` dari file `interact.js`? Hal ini kami lakukan agar kami mematuhi paradigma M-V-C!
 
-In `connectWalletPressed`, we simply make an await call to our imported `connectWallet` function, and using its response, we update our `status` and `walletAddress` variables via their state hooks.
+Di `connectWalletPressed`, kita hanya membuat panggilan tunggu ke fungsi `connectWallet` yang diimpor, dan menggunakan responsnya, kita memperbarui variabel `status` dan `walletAddress` kita melalui hook state mereka.
 
-Now, let's save both files `Minter.js` and `interact.js` and test out our UI so far.
+Sekarang, mari simpan kedua file `Minter.js` dan `interact.js` dan uji UI kita sejauh ini.
 
-Open your browser on localhost:3000, and press the "Connect Wallet" button on the top right of the page.
+Buka browser Anda di localhost:3000, dan tekan tombol "Hubungkan Dompet" di bagian kanan atas halaman.
 
-If you have MetaMask installed, you should be prompted to connect your wallet to your dApp. Accept the invitation to connect.
+Jika Anda telah menginstal MetaMask, Anda akan diminta untuk menghubungkan dompet Anda ke dapp. Terima undangan untuk terhubung.
 
-You should see that the wallet button now reflects that your address is connected.
+Anda akan melihat bahwa tombol dompet sekarang mencerminkan bahwa alamat Anda telah terhubung.
 
-Next, try refreshing the page... this is strange. Our wallet button is prompting us to connect MetaMask, even though it is already connected...
+Selanjutnya, coba segarkan halaman... ini aneh. Tombol dompet kami meminta kami untuk menghubungkan MetaMask, meskipun sudah terhubung...
 
-Don't worry though! We easily can fix that by implementing a function called `getCurrentWalletConnected`, which will check if an address is already connected to our dApp and update our UI accordingly!
+Namun, jangan khawatir! Kita dapat dengan mudah memperbaikinya dengan mengimplementasikan fungsi yang disebut `getCurrentWalletConnected`, yang akan memeriksa apakah sebuah alamat telah terhubung ke dapp kita dan memperbarui UI kita sesuai dengan itu!
 
-### The getCurrentWalletConnected function {#get-current-wallet}
+### Fungsi getCurrentWalletConnected {#get-current-wallet}
 
-In your `interact.js` file, add the following `getCurrentWalletConnected` function:
+Di file `interact.js` Anda, tambahkan fungsi `getCurrentWalletConnected` berikut:
 
 ```javascript
 export const getCurrentWalletConnected = async () => {
@@ -350,12 +351,12 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 Write a message in the text-field above.",
+          status: "👆🏽 Tulis pesan di bidang teks di atas.",
         }
       } else {
         return {
           address: "",
-          status: "🦊 Connect to MetaMask using the top right button.",
+          status: "🦊 Hubungkan ke MetaMask menggunakan tombol kanan atas.",
         }
       }
     } catch (err) {
@@ -372,8 +373,8 @@ export const getCurrentWalletConnected = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              You must install MetaMask, a virtual Ethereum wallet, in your
-              browser.
+              Anda harus menginstal MetaMask, dompet virtual Ethereum, di
+              peramban Anda.
             </a>
           </p>
         </span>
@@ -383,23 +384,23 @@ export const getCurrentWalletConnected = async () => {
 }
 ```
 
-This code is _very_ similar to the `connectWallet` function we just wrote earlier.
+Kode ini _sangat_ mirip dengan fungsi `connectWallet` yang baru saja kita tulis sebelumnya.
 
-The main difference is that instead of calling the method `eth_requestAccounts`, which opens MetaMask for the user to connect their wallet, here we call the method `eth_accounts`, which simply returns an array containing the MetaMask addresses currently connected to our dApp.
+Perbedaan utamanya adalah bahwa alih-alih memanggil metode `eth_requestAccounts`, yang membuka MetaMask bagi pengguna untuk menghubungkan dompet mereka, di sini kita memanggil metode `eth_accounts`, yang hanya mengembalikan sebuah array yang berisi alamat MetaMask yang saat ini terhubung ke dapp kita.
 
-To see this function in action, let's call it in the `useEffect` function of our `Minter.js` component.
+Untuk melihat fungsi ini beraksi, mari kita panggil di fungsi `useEffect` dari komponen `Minter.js` kita.
 
-Like we did for `connectWallet`, we must import this function from our `interact.js` file into our `Minter.js` file like so:
+Seperti yang kita lakukan untuk `connectWallet`, kita harus mengimpor fungsi ini dari file `interact.js` kita ke file `Minter.js` kita seperti ini:
 
 ```javascript
 import { useEffect, useState } from "react"
 import {
   connectWallet,
-  getCurrentWalletConnected, //import here
+  getCurrentWalletConnected, //impor di sini
 } from "./utils/interact.js"
 ```
 
-Now, we simply call it in our `useEffect` function:
+Sekarang, kita tinggal memanggilnya di fungsi `useEffect` kita:
 
 ```javascript
 useEffect(async () => {
@@ -409,15 +410,15 @@ useEffect(async () => {
 }, [])
 ```
 
-Notice, we use the response of our call to `getCurrentWalletConnected` to update our `walletAddress` and `status` state variables.
+Perhatikan, kami menggunakan respons dari panggilan kami ke `getCurrentWalletConnected` untuk memperbarui variabel state `walletAddress` dan `status` kami.
 
-Once you've added this code, try refreshing our browser window. The button should say that you're connected, and show a preview of your connected wallet's address - even after you refresh!
+Setelah Anda menambahkan kode ini, coba segarkan jendela browser Anda. Tombolnya akan mengatakan bahwa Anda terhubung, dan menampilkan pratinjau alamat dompet Anda yang terhubung - bahkan setelah Anda menyegarkan!
 
-### Implement addWalletListener {#implement-add-wallet-listener}
+### Mengimplementasikan addWalletListener {#implement-add-wallet-listener}
 
-The final step in our dApp wallet setup is implementing the wallet listener so our UI updates when our wallet's state changes, such as when the user disconnects or switches accounts.
+Langkah terakhir dalam penyiapan dompet dapp kita adalah mengimplementasikan pendengar dompet sehingga UI kita diperbarui ketika state dompet kita berubah, seperti ketika pengguna memutuskan koneksi atau beralih akun.
 
-In your `Minter.js` file, add a function `addWalletListener` that looks like the following:
+Di file `Minter.js` Anda, tambahkan fungsi `addWalletListener` yang terlihat seperti berikut:
 
 ```javascript
 function addWalletListener() {
@@ -425,10 +426,10 @@ function addWalletListener() {
     window.ethereum.on("accountsChanged", (accounts) => {
       if (accounts.length > 0) {
         setWallet(accounts[0])
-        setStatus("👆🏽 Write a message in the text-field above.")
+        setStatus("👆🏽 Tulis pesan di bidang teks di atas.")
       } else {
         setWallet("")
-        setStatus("🦊 Connect to MetaMask using the top right button.")
+        setStatus("🦊 Hubungkan ke MetaMask menggunakan tombol kanan atas.")
       }
     })
   } else {
@@ -436,7 +437,7 @@ function addWalletListener() {
       <p>
         {" "}
         🦊 <a target="_blank" href={`https://metamask.io/download`}>
-          You must install MetaMask, a virtual Ethereum wallet, in your browser.
+          Anda harus menginstal MetaMask, dompet virtual Ethereum, di peramban Anda.
         </a>
       </p>
     )
@@ -444,13 +445,13 @@ function addWalletListener() {
 }
 ```
 
-Let's quickly break down what's happening here:
+Mari kita uraikan dengan cepat apa yang terjadi di sini:
 
-- First, our function checks if `window.ethereum` is enabled \(i.e., MetaMask is installed\).
-  - If it's not, we simply set our `status` state variable to a JSX string that prompts the user to install MetaMask.
-  - If it is enabled, we set up the listener `window.ethereum.on("accountsChanged")` on line 3 that listens for state changes in the MetaMask wallet, which include when the user connects an additional account to the dApp, switches accounts, or disconnects an account. If there is at least one account connected, the `walletAddress` state variable is updated as the first account in the `accounts` array returned by the listener. Otherwise, `walletAddress` is set as an empty string.
+- Pertama, fungsi kita memeriksa apakah `window.ethereum` diaktifkan (yaitu, MetaMask diinstal).
+  - Jika tidak, kita hanya mengatur variabel state `status` kita ke string JSX yang meminta pengguna untuk menginstal MetaMask.
+  - Jika diaktifkan, kita mengatur pendengar `window.ethereum.on("accountsChanged")` pada baris 3 yang mendengarkan perubahan state di dompet MetaMask, yang meliputi saat pengguna menghubungkan akun tambahan ke dapp, beralih akun, atau memutuskan koneksi akun. Jika ada setidaknya satu akun yang terhubung, variabel state `walletAddress` diperbarui sebagai akun pertama dalam array `accounts` yang dikembalikan oleh pendengar. Jika tidak, `walletAddress` diatur sebagai string kosong.
 
-Finally, we must call it in our `useEffect` function:
+Terakhir, kita harus memanggilnya di fungsi `useEffect` kita:
 
 ```javascript
 useEffect(async () => {
@@ -462,66 +463,66 @@ useEffect(async () => {
 }, [])
 ```
 
-And voila! We've completed programming all of our wallet functionality! Now that our wallet is set up, let's figure out how to mint our NFT!
+Dan voila! Kita telah menyelesaikan semua pemrograman fungsionalitas dompet kita! Sekarang dompet kita sudah diatur, mari kita cari tahu cara mencetak NFT kita!
 
-## NFT Metadata 101 {#nft-metadata-101}
+## Metadata NFT 101 {#nft-metadata-101}
 
-So remember the NFT metadata we just talked about in Step 0 of this tutorial—it brings an NFT to life, allowing it to have properties, such as a digital asset, name, description, and other attributes.
+Jadi ingat metadata NFT yang baru saja kita bicarakan di Langkah 0 tutorial ini—ia menghidupkan NFT, memungkinkannya memiliki properti, seperti aset digital, nama, deskripsi, dan atribut lainnya.
 
-We're going to need to configure this metadata as a JSON object and store it, so we can pass it in as the `tokenURI` parameter when calling our smart contract's `mintNFT` function.
+Kita perlu mengonfigurasi metadata ini sebagai objek JSON dan menyimpannya, sehingga kita dapat meneruskannya sebagai parameter `tokenURI` saat memanggil fungsi `mintNFT` kontrak pintar kita.
 
-The text in the "Link to Asset", "Name", "Description" fields will comprise the different properties of our NFT's metadata. We'll format this metadata as a JSON object, but there are a couple options for where we can store this JSON object:
+Teks di bidang "Tautan ke Aset", "Nama", "Deskripsi" akan terdiri dari berbagai properti metadata NFT kita. Kami akan memformat metadata ini sebagai objek JSON, tetapi ada beberapa opsi untuk tempat kami dapat menyimpan objek JSON ini:
 
-- We could store it on the Ethereum blockchain; however, doing so would be very expensive.
-- We could store it on a centralized server, like AWS or Firebase. But that would defeat our decentralization ethos.
-- We could use IPFS, a decentralized protocol and peer-to-peer network for storing and sharing data in a distributed file system. As this protocol is decentralized and free, it is our best option!
+- Kita bisa menyimpannya di rantai blok Ethereum; namun, melakukannya akan sangat mahal.
+- Kita bisa menyimpannya di server terpusat, seperti AWS atau Firebase. Tapi itu akan mengalahkan etos desentralisasi kita.
+- Kita dapat menggunakan IPFS, protokol terdesentralisasi dan jaringan peer-to-peer untuk menyimpan dan berbagi data dalam sistem file terdistribusi. Karena protokol ini terdesentralisasi dan gratis, ini adalah pilihan terbaik kita!
 
-To store our metadata on IPFS, we will use [Pinata](https://pinata.cloud/), a convenient IPFS API and toolkit. In the next step, we'll explain exactly how to do this!
+Untuk menyimpan metadata kita di IPFS, kita akan menggunakan [Pinata](https://pinata.cloud/), sebuah API dan toolkit IPFS yang nyaman. Pada langkah selanjutnya, kami akan menjelaskan dengan tepat cara melakukannya!
 
-## Use Pintata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Gunakan Pinata untuk menyematkan metadata Anda ke IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
 
-If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://app.pinata.cloud/auth/signup) and complete the steps to verify your email and account.
+Jika Anda tidak memiliki akun [Pinata](https://pinata.cloud/), daftar untuk mendapatkan akun gratis [di sini](https://app.pinata.cloud/auth/signup) dan selesaikan langkah-langkah untuk memverifikasi email dan akun Anda.
 
-### Create your Pinata API key {#create-pinata-api-key}
+### Buat kunci API Pinata Anda {#create-pinata-api-key}
 
-Navigate to the [https://pinata.cloud/keys](https://pinata.cloud/keys) page, then select the "New Key" button at the top, set the Admin widget as enabled, and name your key.
+Navigasi ke halaman [https://pinata.cloud/keys](https://pinata.cloud/keys), lalu pilih tombol "Kunci Baru" di bagian atas, atur widget Admin sebagai diaktifkan, dan beri nama kunci Anda.
 
-You'll then be shown a popup with your API info. Make sure to put this somewhere safe.
+Anda kemudian akan ditampilkan popup dengan info API Anda. Pastikan untuk meletakkannya di tempat yang aman.
 
-Now that our key is set up, let's add it to our project so we can use it.
+Sekarang setelah kunci kami diatur, mari kita tambahkan ke proyek kita agar kita dapat menggunakannya.
 
-### Create a .env file {#create-a-env}
+### Buat file .env {#create-a-env}
 
-We can safely store our Pinata key and secret in an environment file. Let's install the [dotenv package](https://www.npmjs.com/package/dotenv) in your project directory.
+Kita dapat menyimpan kunci dan rahasia Pinata kita dengan aman di file lingkungan. Mari kita instal [paket dotenv](https://www.npmjs.com/package/dotenv) di direktori proyek Anda.
 
-Open up a new tab in your terminal \(separate from the one running local host\) and make sure you are in the `minter-starter-files` folder, then run the following command in your terminal:
+Buka tab baru di terminal Anda (terpisah dari yang menjalankan host lokal) dan pastikan Anda berada di folder `minter-starter-files`, lalu jalankan perintah berikut di terminal Anda:
 
 ```text
 npm install dotenv --save
 ```
 
-Next, create a `.env` file in the root directory of your `minter-starter-files` by entering the following on your command line:
+Selanjutnya, buat file `.env` di direktori root dari `minter-starter-files` Anda dengan memasukkan yang berikut di baris perintah Anda:
 
 ```javascript
-vim.env
+vim .env
 ```
 
-This will pop open your `.env` file in vim \(a text editor\). To save it hit "esc" + ":" + "q" on your keyboard in that order.
+Ini akan membuka file `.env` Anda di vim (editor teks). Untuk menyimpannya, tekan "esc" + ":" + "q" pada keyboard Anda secara berurutan.
 
-Next, in VSCode, navigate to your `.env` file and add your Pinata API key and API secret to it, like so:
+Selanjutnya, di VSCode, navigasikan ke file `.env` Anda dan tambahkan kunci API Pinata dan rahasia API Anda ke dalamnya, seperti ini:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-api-key>
 REACT_APP_PINATA_SECRET = <pinata-api-secret>
 ```
 
-Save the file, and then you're ready to start writing the function to upload your JSON metadata to IPFS!
+Simpan file tersebut, dan kemudian Anda siap untuk mulai menulis fungsi untuk mengunggah metadata JSON Anda ke IPFS!
 
-### Implement pinJSONToIPFS {#pin-json-to-ipfs}
+### Mengimplementasikan pinJSONToIPFS {#pin-json-to-ipfs}
 
-Fortunately for us, Pinata has an [API specifically for uploading JSON data to IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) and a convenient JavaScript with axios example that we can use, with some slight modifications.
+Untungnya bagi kita, Pinata memiliki [API khusus untuk mengunggah data JSON ke IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) dan contoh JavaScript yang nyaman dengan axios yang dapat kita gunakan, dengan beberapa modifikasi kecil.
 
-In your `utils` folder, let's create another file called `pinata.js` and then import our Pinata secret and key from the .env file like so:
+Di folder `utils` Anda, mari kita buat file lain bernama `pinata.js` dan kemudian impor rahasia dan kunci Pinata kita dari file .env seperti ini:
 
 ```javascript
 require("dotenv").config()
@@ -529,7 +530,7 @@ const key = process.env.REACT_APP_PINATA_KEY
 const secret = process.env.REACT_APP_PINATA_SECRET
 ```
 
-Next, paste the additional code from below into your `pinata.js` file. Don't worry, we'll break down what everything means!
+Selanjutnya, tempelkan kode tambahan dari bawah ke file `pinata.js` Anda. Jangan khawatir, kami akan menguraikan apa artinya semua itu!
 
 ```javascript
 require("dotenv").config()
@@ -540,7 +541,7 @@ const axios = require("axios")
 
 export const pinJSONToIPFS = async (JSONBody) => {
   const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`
-  //making axios POST request to Pinata ⬇️
+  //membuat permintaan POST axios ke Pinata ⬇️
   return axios
     .post(url, JSONBody, {
       headers: {
@@ -565,44 +566,44 @@ export const pinJSONToIPFS = async (JSONBody) => {
 }
 ```
 
-So what does this code do exactly?
+Jadi, apa yang sebenarnya dilakukan oleh kode ini?
 
-First, it imports [axios](https://www.npmjs.com/package/axios), a promise based HTTP client for the browser and node.js, which we will use to make a request to Pinata.
+Pertama, ia mengimpor [axios](https://www.npmjs.com/package/axios), klien HTTP berbasis janji untuk peramban dan node.js, yang akan kita gunakan untuk membuat permintaan ke Pinata.
 
-Then we have our asynchronous function `pinJSONToIPFS`, which takes a `JSONBody` as its input and the Pinata api key and secret in its header, all to make a POST request to their `pinJSONToIPFS` API.
+Kemudian kita memiliki fungsi asinkron `pinJSONToIPFS`, yang mengambil `JSONBody` sebagai inputnya dan kunci serta rahasia api Pinata di headernya, semua untuk membuat permintaan POST ke API `pinJSONToIPFS` mereka.
 
-- If this POST request is successful, then our function returns a JSON object with the `success` boolean as true and the `pinataUrl` where our metadata was pinned. We will use this `pinataUrl` returned as the `tokenURI` input to our smart contract's mint function.
-- If this post request fails, then our function returns a JSON object with the `success` boolean as false and a `message` string that relays our error.
+- Jika permintaan POST ini berhasil, maka fungsi kita mengembalikan objek JSON dengan boolean `success` sebagai true dan `pinataUrl` di mana metadata kita disematkan. Kami akan menggunakan `pinataUrl` yang dikembalikan ini sebagai input `tokenURI` ke fungsi cetak kontrak pintar kami.
+- Jika permintaan posting ini gagal, maka fungsi kami mengembalikan objek JSON dengan boolean `success` sebagai false dan string `message` yang menyampaikan kesalahan kami.
 
-As with our `connectWallet`function return types, we're returning JSON objects so we can use their parameters to update our state variables and UI.
+Seperti halnya tipe pengembalian fungsi `connectWallet` kami, kami mengembalikan objek JSON sehingga kami dapat menggunakan parameternya untuk memperbarui variabel state dan UI kami.
 
-## Load your smart contract {#load-your-smart-contract}
+## Memuat kontrak pintar Anda {#load-your-smart-contract}
 
-Now that we have a way to upload our NFT metadata to IPFS via our `pinJSONToIPFS` function, we're going to need a way to load an instance of our smart contract so we can call its `mintNFT` function.
+Sekarang setelah kita memiliki cara untuk mengunggah metadata NFT kita ke IPFS melalui fungsi `pinJSONToIPFS` kita, kita akan memerlukan cara untuk memuat instance kontrak pintar kita sehingga kita dapat memanggil fungsi `mintNFT` nya.
 
-As we mentioned earlier, in this tutorial we will be using [this existing NFT smart contract](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); however, if you'd like to learn how we made it, or make one yourself, we highly recommend you check out our other tutorial, ["How to Create an NFT."](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
+Seperti yang kami sebutkan sebelumnya, dalam tutorial ini kami akan menggunakan [kontrak pintar NFT yang ada ini](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); namun, jika Anda ingin mempelajari cara kami membuatnya, atau membuatnya sendiri, kami sangat menyarankan Anda memeriksa tutorial kami yang lain, ["Cara Membuat NFT."](https://www.alchemy.com/docs/how-to-create-an-nft).
 
-### The contract ABI {#contract-abi}
+### ABI kontrak {#contract-abi}
 
-If you examined our files closely, you'll have noticed that in our `src` directory, there's a `contract-abi.json` file. An ABI is necessary for specifying which function a contract will invoke as well ensuring that the function will return data in the format you're expecting.
+Jika Anda memeriksa file kami dengan cermat, Anda akan melihat bahwa di direktori `src` kami, ada file `contract-abi.json`. ABI diperlukan untuk menentukan fungsi mana yang akan dipanggil oleh kontrak serta memastikan bahwa fungsi tersebut akan mengembalikan data dalam format yang Anda harapkan.
 
-We're also going to need an Alchemy API key and the Alchemy Web3 API to connect to the Ethereum blockchain and load our smart contract.
+Kami juga akan memerlukan kunci API Alchemy dan API Web3 Alchemy untuk terhubung ke rantai blok Ethereum dan memuat kontrak pintar kami.
 
-### Create your Alchemy API key {#create-alchemy-api}
+### Buat kunci API Alchemy Anda {#create-alchemy-api}
 
-If you don't already have an Alchemy account, [sign up for free here.](https://alchemy.com/?a=eth-org-nft-minter)
+Jika Anda belum memiliki akun Alchemy, [daftar gratis di sini.](https://alchemy.com/?a=eth-org-nft-minter)
 
 Setelah Anda membuat akun Alchemy, Anda dapat membuat kunci API dengan membuat aplikasi. Ini akan memungkinkan kita untuk membuat permintaan ke jaringan pengujian Ropsten.
 
-Navigate to the “Create App” page in your Alchemy Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”.
+Arahkan ke halaman "Buat Aplikasi" di Dasbor Alchemy Anda dengan mengarahkan kursor ke "Aplikasi" di bilah navigasi dan mengklik "Buat Aplikasi".
 
-Name your app we chose "My First NFT!", offer a short description, select “Staging” for the Environment used for your app bookkeeping, and choose “Ropsten” for your network.
+Beri nama aplikasi Anda, kami memilih "NFT Pertamaku!", tawarkan deskripsi singkat, pilih "Staging" untuk Lingkungan yang digunakan untuk pembukuan aplikasi Anda, dan pilih "Ropsten" untuk jaringan Anda.
 
 Klik "Buat aplikasi" dan selesai! Aplikasi Anda akan muncul dalam tabel di bawahnya.
 
-Awesome so now that we've created our HTTP Alchemy API URL, copy it to your clipboard...
+Luar biasa, jadi sekarang setelah kita membuat URL API HTTP Alchemy kita, salin ke papan klip Anda...
 
-…and then let's add it to our `.env` file. Altogether, your .env file should look like this:
+…dan kemudian mari kita tambahkan ke file `.env` kita. Secara keseluruhan, file .env Anda akan terlihat seperti ini:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
@@ -610,18 +611,18 @@ REACT_APP_PINATA_SECRET = <pinata-secret>
 REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 ```
 
-Now that we have our contract ABI and our Alchemy API key, we're ready to load our smart contract using [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
+Sekarang setelah kita memiliki ABI kontrak dan kunci API Alchemy, kita siap untuk memuat kontrak pintar kita menggunakan [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
 
-### Set up your Alchemy Web3 endpoint and contract {#setup-alchemy-endpoint}
+### Mengatur endpoint dan kontrak Alchemy Web3 Anda {#setup-alchemy-endpoint}
 
-First, if you don't have it already, you'll need to install [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) by navigating to the home directory: `nft-minter-tutorial` in the terminal:
+Pertama, jika Anda belum memilikinya, Anda perlu menginstal [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) dengan menavigasi ke direktori beranda: `nft-minter-tutorial` di terminal:
 
 ```text
 cd ..
 npm install @alch/alchemy-web3
 ```
 
-Next let's go back to our `interact.js` file. At the top of the file, add the following code to import your Alchemy key from your .env file and set up your Alchemy Web3 endpoint:
+Selanjutnya mari kita kembali ke file `interact.js` kita. Di bagian atas file, tambahkan kode berikut untuk mengimpor kunci Alchemy Anda dari file .env Anda dan atur titik akhir Alchemy Web3 Anda:
 
 ```javascript
 require("dotenv").config()
@@ -630,9 +631,9 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) is a wrapper around [Web3.js](https://docs.web3js.org/), providing enhanced API methods and other crucial benefits to make your life as a web3 developer easier. It is designed to require minimal configuration so you can start using it in your app right away!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) adalah pembungkus di sekitar [Web3.js](https://docs.web3js.org/), menyediakan metode API yang disempurnakan dan manfaat penting lainnya untuk membuat hidup Anda sebagai pengembang web3 lebih mudah. Ini dirancang untuk membutuhkan konfigurasi minimal sehingga Anda dapat mulai menggunakannya di aplikasi Anda segera!
 
-Next, let's add our contract ABI and contract address to our file.
+Selanjutnya, mari kita tambahkan ABI kontrak dan alamat kontrak kita ke file kita.
 
 ```javascript
 require("dotenv").config()
@@ -644,103 +645,103 @@ const contractABI = require("../contract-abi.json")
 const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
 ```
 
-Once we have both of those, we're ready to start coding our mint function!
+Setelah kita memiliki keduanya, kita siap untuk mulai membuat kode fungsi cetak kita!
 
-## Implement the mintNFT function {#implement-the-mintnft-function}
+## Mengimplementasikan fungsi mintNFT {#implement-the-mintnft-function}
 
-Inside your `interact.js` file, let's define our function, `mintNFT`, which eponymously will mint our NFT.
+Di dalam file `interact.js` Anda, mari kita definisikan fungsi kita, `mintNFT`, yang secara eponim akan mencetak NFT kita.
 
-Because we will be making numerous asynchronous calls \(to Pinata to pin our metadata to IPFS, Alchemy Web3 to load our smart contract, and MetaMask to sign our transactions\), our function will also be asynchronous.
+Karena kita akan melakukan banyak panggilan asinkron (ke Pinata untuk menyematkan metadata kita ke IPFS, Alchemy Web3 untuk memuat kontrak pintar kita, dan MetaMask untuk menandatangani transaksi kita), fungsi kita juga akan asinkron.
 
-The three inputs to our function will be the `url` of our digital asset, `name`, and `description`. Add the following function signature below the `connectWallet` function:
+Tiga input untuk fungsi kami adalah `url` aset digital kami, `name`, dan `description`. Tambahkan tanda tangan fungsi berikut di bawah fungsi `connectWallet`:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {}
 ```
 
-### Input error handling {#input-error-handling}
+### Penanganan kesalahan input {#input-error-handling}
 
-Naturally, it makes sense to have some sort of input error handling at the start of the function, so we exit this function if our input parameters aren't correct. Inside our function, let's add the following code:
+Tentu saja, masuk akal untuk memiliki semacam penanganan kesalahan input di awal fungsi, sehingga kita keluar dari fungsi ini jika parameter input kita tidak benar. Di dalam fungsi kita, mari kita tambahkan kode berikut:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //error handling
+  //penanganan eror
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗Please make sure all fields are completed before minting.",
+      status: "❗Pastikan semua bidang diisi sebelum mencetak.",
     }
   }
 }
 ```
 
-Essentially, if any of the input parameters are an empty string, then we return a JSON object where the `success` boolean is false, and the `status` string relays that all fields in our UI must be complete.
+Intinya, jika ada parameter input yang merupakan string kosong, maka kita mengembalikan objek JSON di mana boolean `success` adalah false, dan string `status` menyampaikan bahwa semua bidang di UI kita harus lengkap.
 
-### Upload the metadata to IPFS {#upload-metadata-to-ipfs}
+### Mengunggah metadata ke IPFS {#upload-metadata-to-ipfs}
 
-Once we know our metadata is formatted properly, the next step is to wrap it into a JSON object and upload it to IPFS via the `pinJSONToIPFS` we wrote!
+Setelah kita tahu metadata kita diformat dengan benar, langkah selanjutnya adalah membungkusnya ke dalam objek JSON dan mengunggahnya ke IPFS melalui `pinJSONToIPFS` yang kita tulis!
 
-To do so, we first we need to import the `pinJSONToIPFS` function into our `interact.js` file. At the very top of the `interact.js`, let's add:
+Untuk melakukannya, pertama-tama kita perlu mengimpor fungsi `pinJSONToIPFS` ke dalam file `interact.js` kita. Di bagian paling atas dari `interact.js`, mari kita tambahkan:
 
 ```javascript
 import { pinJSONToIPFS } from "./pinata.js"
 ```
 
-Recall that `pinJSONToIPFS` takes in a JSON body. So before we make a call to it, we're going to need to format our `url`, `name`, and `description` parameters into a JSON object.
+Ingat bahwa `pinJSONToIPFS` menerima badan JSON. Jadi sebelum kita memanggilnya, kita perlu memformat parameter `url`, `name`, dan `description` kita menjadi objek JSON.
 
-Let's update our code to create a JSON object called `metadata` and then make a call to `pinJSONToIPFS` with this `metadata` parameter:
+Mari kita perbarui kode kita untuk membuat objek JSON bernama `metadata` dan kemudian melakukan panggilan ke `pinJSONToIPFS` dengan parameter `metadata` ini:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //error handling
+  //penanganan eror
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗Please make sure all fields are completed before minting.",
+      status: "❗Pastikan semua bidang diisi sebelum mencetak.",
     }
   }
 
-  //make metadata
+  //buat metadata
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //make pinata call
+  //lakukan panggilan pinata
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "😢 Something went wrong while uploading your tokenURI.",
+      status: "😢 Terjadi kesalahan saat mengunggah tokenURI Anda.",
     }
   }
   const tokenURI = pinataResponse.pinataUrl
 }
 ```
 
-Notice, we store the response of our call to `pinJSONToIPFS(metadata)` in the `pinataResponse` object. Then, we parse this object for any errors.
+Perhatikan, kami menyimpan respons dari panggilan kami ke `pinJSONToIPFS(metadata)` di objek `pinataResponse`. Kemudian, kami mem-parsing objek ini untuk setiap kesalahan.
 
-If there's an error, we return a JSON object where the `success` boolean is false and our `status` string relays that our call failed. Otherwise, we extract the `pinataURL` from the `pinataResponse` and store it as our `tokenURI` variable.
+Jika ada kesalahan, kami mengembalikan objek JSON di mana boolean `success` adalah false dan string `status` kami menyampaikan bahwa panggilan kami gagal. Jika tidak, kami mengekstrak `pinataURL` dari `pinataResponse` dan menyimpannya sebagai variabel `tokenURI` kami.
 
-Now it's time to load our smart contract using the Alchemy Web3 API that we initialized at the top of our file. Add the following line of code to the bottom of the `mintNFT` function to set the contract at the `window.contract` global variable:
+Sekarang saatnya memuat kontrak pintar kami menggunakan API Alchemy Web3 yang kami inisialisasi di bagian atas file kami. Tambahkan baris kode berikut ke bagian bawah fungsi `mintNFT` untuk mengatur kontrak pada variabel global `window.contract`:
 
 ```javascript
 window.contract = await new web3.eth.Contract(contractABI, contractAddress)
 ```
 
-The last thing to add in our `mintNFT` function is our Ethereum transaction:
+Hal terakhir yang perlu ditambahkan dalam fungsi `mintNFT` kami adalah transaksi Ethereum kami:
 
 ```javascript
-//set up your Ethereum transaction
+//siapkan transaksi Ethereum Anda
 const transactionParameters = {
-  to: contractAddress, // Required except during contract publications.
-  from: window.ethereum.selectedAddress, // must match user's active address.
+  to: contractAddress, // Wajib kecuali selama publikasi kontrak.
+  from: window.ethereum.selectedAddress, // harus cocok dengan alamat aktif pengguna.
   data: window.contract.methods
     .mintNFT(window.ethereum.selectedAddress, tokenURI)
-    .encodeABI(), //make call to NFT smart contract
+    .encodeABI(), //lakukan panggilan ke kontrak pintar NFT
 }
 
-//sign the transaction via MetaMask
+//tanda tangani transaksi melalui MetaMask
 try {
   const txHash = await window.ethereum.request({
     method: "eth_sendTransaction",
@@ -749,68 +750,68 @@ try {
   return {
     success: true,
     status:
-      "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+      "✅ Lihat transaksi Anda di Etherscan: https://ropsten.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
   return {
     success: false,
-    status: "😥 Something went wrong: " + error.message,
+    status: "😥 Terjadi kesalahan: " + error.message,
   }
 }
 ```
 
-If you're already familiar with Ethereum transactions, you'll notice that the structure is pretty similar to what you've seen.
+Jika Anda sudah terbiasa dengan transaksi Ethereum, Anda akan melihat bahwa strukturnya cukup mirip dengan yang pernah Anda lihat.
 
-- First, we set up our transactions parameters.
-  - `to` specifies the recipient address \(our smart contract\)
-  - `from` specifies the signer of the transaction \(the user's connected address to MetaMask: `window.ethereum.selectedAddress`\)
-  - `data` contains the call to our smart contract `mintNFT` method, which receives our `tokenURI` and the user's wallet address, `window.ethereum.selectedAddress`, as inputs
-- Then, we make an await call, `window.ethereum.request,` where we ask MetaMask to sign the transaction. Notice, in this request, we're specifying our eth method \(eth_SentTransaction\) and passing in our `transactionParameters`. At this point, MetaMask will open up in the browser, and prompt the user to sign or reject the transaction.
-  - If the transaction is successful, the function will return a JSON object where the boolean `success` is set to true and the `status` string prompts the user to check out Etherscan for more information about their transaction.
-  - If the transaction fails, the function will return a JSON object where the `success` boolean is set to false, and the `status` string relays the error message.
+- Pertama, kami mengatur parameter transaksi kami.
+  - `to` menentukan alamat penerima (kontrak pintar kami)
+  - `from` menentukan penanda tangan transaksi (alamat pengguna yang terhubung ke MetaMask: `window.ethereum.selectedAddress`)
+  - `data` berisi panggilan ke metode `mintNFT` kontrak pintar kami, yang menerima `tokenURI` kami dan alamat dompet pengguna, `window.ethereum.selectedAddress`, sebagai input
+- Kemudian, kami membuat panggilan tunggu, `window.ethereum.request,` di mana kami meminta MetaMask untuk menandatangani transaksi. Perhatikan, dalam permintaan ini, kami menentukan metode eth kami (eth_SentTransaction) dan meneruskan `transactionParameters` kami. Pada titik ini, MetaMask akan terbuka di peramban, dan meminta pengguna untuk menandatangani atau menolak transaksi.
+  - Jika transaksi berhasil, fungsi akan mengembalikan objek JSON di mana boolean `success` diatur ke true dan string `status` meminta pengguna untuk memeriksa Etherscan untuk informasi lebih lanjut tentang transaksi mereka.
+  - Jika transaksi gagal, fungsi akan mengembalikan objek JSON di mana `success` boolean diatur ke false, dan string `status` menyampaikan pesan kesalahan.
 
-Altogether, our `mintNFT` function should look like this:
+Secara keseluruhan, fungsi `mintNFT` kita akan terlihat seperti ini:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //error handling
+  //penanganan eror
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗Please make sure all fields are completed before minting.",
+      status: "❗Pastikan semua bidang diisi sebelum mencetak.",
     }
   }
 
-  //make metadata
+  //buat metadata
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //pinata pin request
+  //permintaan pin pinata
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "😢 Something went wrong while uploading your tokenURI.",
+      status: "😢 Terjadi kesalahan saat mengunggah tokenURI Anda.",
     }
   }
   const tokenURI = pinataResponse.pinataUrl
 
-  //load smart contract
+  //muat kontrak pintar
   window.contract = await new web3.eth.Contract(contractABI, contractAddress) //loadContract();
 
-  //set up your Ethereum transaction
+  //siapkan transaksi Ethereum Anda
   const transactionParameters = {
-    to: contractAddress, // Required except during contract publications.
-    from: window.ethereum.selectedAddress, // must match user's active address.
+    to: contractAddress, // Wajib kecuali selama publikasi kontrak.
+    from: window.ethereum.selectedAddress, // harus cocok dengan alamat aktif pengguna.
     data: window.contract.methods
       .mintNFT(window.ethereum.selectedAddress, tokenURI)
-      .encodeABI(), //make call to NFT smart contract
+      .encodeABI(), //lakukan panggilan ke kontrak pintar NFT
   }
 
-  //sign transaction via MetaMask
+  //tanda tangani transaksi via MetaMask
   try {
     const txHash = await window.ethereum.request({
       method: "eth_sendTransaction",
@@ -819,23 +820,23 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+        "✅ Lihat transaksi Anda di Etherscan: https://ropsten.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {
     return {
       success: false,
-      status: "😥 Something went wrong: " + error.message,
+      status: "😥 Terjadi kesalahan: " + error.message,
     }
   }
 }
 ```
 
-That's one giant function! Now, we just need to connect our `mintNFT` function to our `Minter.js` component...
+Itu satu fungsi raksasa! Sekarang, kita hanya perlu menghubungkan fungsi `mintNFT` kita ke komponen `Minter.js` kita...
 
-## Connect mintNFT to our Minter.js frontend {#connect-our-frontend}
+## Hubungkan mintNFT ke frontend Minter.js kami {#connect-our-frontend}
 
-Open up your `Minter.js` file and update the `import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` line at the top to be:
+Buka file `Minter.js` Anda dan perbarui baris `import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` di bagian atas menjadi:
 
 ```javascript
 import {
@@ -845,7 +846,7 @@ import {
 } from "./utils/interact.js"
 ```
 
-Finally, implement the `onMintPressed` function to make await call to your imported `mintNFT`function and update the `status` state variable to reflect whether our transaction succeeded or failed:
+Terakhir, implementasikan fungsi `onMintPressed` untuk membuat panggilan tunggu ke fungsi `mintNFT` yang Anda impor dan perbarui variabel state `status` untuk mencerminkan apakah transaksi kami berhasil atau gagal:
 
 ```javascript
 const onMintPressed = async () => {
@@ -854,22 +855,22 @@ const onMintPressed = async () => {
 }
 ```
 
-## Deploy your NFT to a live website {#deploy-your-NFT}
+## Menyebarkan NFT Anda ke situs web langsung {#deploy-your-NFT}
 
-Ready to take your project live for users to interact with? Check out [this tutorial](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) for deploying your Minter to a live website.
+Siap untuk meluncurkan proyek Anda secara langsung agar pengguna dapat berinteraksi dengannya? Lihat [tutorial ini](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) untuk menyebarkan Minter Anda ke situs web langsung.
 
-One last step...
+Satu langkah terakhir...
 
-## Take the blockchain world by storm {#take-the-blockchain-world-by-storm}
+## Mengguncang dunia rantai blok {#take-the-blockchain-world-by-storm}
 
-Just kidding, you made it to the end of the tutorial!
+Hanya bercanda, Anda telah berhasil sampai di akhir tutorial!
 
-To recap, by building an NFT minter, you successfully learned how to:
+Sebagai rekap, dengan membangun pencetak NFT, Anda telah berhasil mempelajari cara:
 
-- Connect to MetaMask via your frontend project
-- Call smart contract methods from your frontend
-- Sign transactions using MetaMask
+- Terhubung ke MetaMask melalui proyek frontend Anda
+- Panggil metode kontrak pintar dari frontend Anda
+- Menandatangani transaksi menggunakan MetaMask
 
-Presumably, you'd like to be able to show off the NFTs minted via your dApp in your wallet — so be sure to check out our quick tutorial [How to View Your NFT in Your Wallet](https://docs.alchemyapi.io/alchemy/tutorials/how-to-write-and-deploy-a-nft-smart-contract/how-to-view-your-nft-in-your-wallet)!
+Agaknya, Anda ingin dapat memamerkan NFT yang dicetak melalui dapp Anda di dompet Anda — jadi pastikan untuk memeriksa tutorial singkat kami [Cara Melihat NFT Anda di Dompet Anda](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)!
 
-And, as always, if you have any questions, we're here to help in the [Alchemy Discord](https://discord.gg/gWuC7zB). We can't wait to see how you apply the concepts from this tutorial to your future projects!
+Dan, seperti biasa, jika Anda memiliki pertanyaan, kami siap membantu di [Alchemy Discord](https://discord.gg/gWuC7zB). Kami tidak sabar untuk melihat bagaimana Anda menerapkan konsep dari tutorial ini ke proyek masa depan Anda!

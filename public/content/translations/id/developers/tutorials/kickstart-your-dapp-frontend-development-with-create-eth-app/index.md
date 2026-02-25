@@ -3,12 +3,13 @@ title: Mulai pengembangan frontend dapp Anda dengan create-eth-app
 description: Gambaran umum cara menggunakan create-eth-app beserta fiturnya
 author: "Markus Waas"
 tags:
-  - "create-eth-app"
-  - "frontend"
-  - "javascript"
-  - "ethers.js"
-  - "the graph"
-  - "defi"
+  [
+    "frontend",
+    "javascript",
+    "ethers.js",
+    "the graph",
+    "defi"
+  ]
 skill: beginner
 lang: id
 published: 2020-04-27
@@ -16,11 +17,11 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Sebelumnya, kita membahas tentang [gambaran besar Solidity](https://soliditydeveloper.com/solidity-overview-2020) dan telah menyebutkan [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Sekarang Anda akan melihat cara menggunakannya, fitur apa saja yang terintegrasi di dalamnya, dan ide tambahan untuk memperluas penggunaanya. Dimulai oleh Paul Razvan Berg, pendiri [Sablier](http://sablier.com/), aplikasi ini akan memulai pengembangan frontend Anda dan memiliki beberapa integrasi opsional yang dapat dipilih.
+Terakhir kali kita melihat [gambaran besar Solidity](https://soliditydeveloper.com/solidity-overview-2020) dan telah menyebutkan [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Sekarang Anda akan mengetahui cara menggunakannya, fitur-fitur apa yang terintegrasi, dan ide-ide tambahan tentang cara mengembangkannya. Dimulai oleh Paul Razvan Berg, pendiri [Sablier](http://sablier.com/), aplikasi ini akan memulai pengembangan frontend Anda dan dilengkapi dengan beberapa integrasi opsional yang dapat dipilih.
 
 ## Instalasi {#installation}
 
-Instalasi membutuhkan versi Yarn 0.25 atau yang lebih tinggi (`npm install yarn --global`). Ini hanya tinggal dijalankan:
+Instalasi ini memerlukan Yarn 0.25 atau yang lebih tinggi (`npm install yarn --global`). Caranya semudah menjalankan:
 
 ```bash
 yarn create eth-app my-eth-app
@@ -28,44 +29,44 @@ cd my-eth-app
 yarn react-app:start
 ```
 
-Ini menggunakan [create-react-app](https://github.com/facebook/create-react-app) yang di bawah hood. Untuk melihat aplikasi Anda, buka `http://localhost:3000/`. Bila sudah siap untuk digunakan ke produksi, buat paket yang diperkecil dengan yarn build. Salah cara mudah untuk menghostingnya adalah dengan menggunakan [Netlify](https://www.netlify.com/). You can create a GitHub repo, add it to Netlify, setup the build command and you are finished! Aplikasi Anda akan di-host dan dapat digunakan oleh semua orang. Dan semua ini tidak berbayar.
+Aplikasi ini menggunakan [create-react-app](https://github.com/facebook/create-react-app) di balik layarnya. Untuk melihat aplikasi Anda, buka `http://localhost:3000/`. Saat Anda siap untuk menyebarkan ke produksi, buat bundel yang diperkecil dengan yarn build. Salah satu cara mudah untuk meng-host-nya adalah [Netlify](https://www.netlify.com/). Anda dapat membuat repositori GitHub, menambahkannya ke Netlify, mengatur perintah build, dan selesai! Aplikasi Anda akan di-host dan dapat digunakan oleh semua orang. Dan semua ini gratis.
 
 ## Fitur {#features}
 
-### React dan create-react-app {#react--create-react-app}
+### React & create-react-app {#react--create-react-app}
 
-Pertama-tama, inti aplikasinya: React dan semua fitur tambahannya dilengkapi dengan _create-react-app_. Hanya menggunakan ini adalah opsi yang sangat baik jika Anda tidak ingin mengintegrasikan Ethereum. [React](https://reactjs.org/) sendiri membuat penyusunan UI interaktif menjadi sangat mudah. Ini mungkin tidak seramah [Vue](https://vuejs.org/) bagi pemula, tapi masih yang paling sering digunakan, memiliki lebih banyak fitur, dan yang paling penting ribuan pustaka tambahan yang dapat dipilih. _create-react-app_ membuat sangat mudah untuk memulai dan mencakup:
+Pertama-tama, inti dari aplikasi: React dan semua fitur tambahan yang disertakan dengan _create-react-app_. Hanya menggunakan ini adalah opsi yang bagus jika Anda tidak ingin mengintegrasikan Ethereum. [React](https://react.dev/) sendiri membuat pembuatan UI interaktif menjadi sangat mudah. Mungkin tidak seramah [Vue](https://vuejs.org/) bagi pemula, tetapi masih menjadi yang paling banyak digunakan, memiliki lebih banyak fitur, dan yang terpenting, ribuan pustaka tambahan untuk dipilih. _create-react-app_ juga membuatnya sangat mudah untuk memulai dan menyertakan:
 
 - Dukungan sintaksis React, JSX, ES6, TypeScript, Flow.
 - Tambahan bahasa di luar ES6 seperti operator penyebaran objek.
 - CSS dengan prefiks otomatis, sehingga Anda tidak memerlukan -webkit- atau prefiks lainnya.
 - Pengeksekusi tes unit interaktif cepat dengan dukungan bawaan untuk pelaporan cakupan.
 - Server pengembangan langsung yang memperingatkan tentang kesalahan-kesalahan umum.
-- Sebuah skrip build untuk membuat bundle JS, CSS, dan gambar untuk produksi, dengan hash dan peta sumber.
+- Skrip build untuk memaketkan JS, CSS, dan gambar untuk produksi, dengan hash dan peta sumber.
 
-_create-eth-app_ secara khusus memanfaatkan [efek kaitan](https://reactjs.org/docs/hooks-effect.html) yang baru. Sebuah metode untuk menulis apa yang dinamakan komponen fungsional yang efektif, tapi berukuran kecil. Lihat bagian tentang Apollo di bawah untuk mengetahui cara pemakaiannya di _create-eth-app_.
+_create-eth-app_ secara khusus menggunakan [efek hook](https://legacy.reactjs.org/docs/hooks-effect.html) yang baru. Sebuah metode untuk menulis apa yang disebut komponen fungsional yang kuat, tetapi sangat kecil. Lihat bagian tentang Apollo di bawah ini untuk mengetahui cara penggunaannya di _create-eth-app_.
 
-### Ruang Kerja Yarn {#yarn-workspaces}
+### Yarn Workspaces {#yarn-workspaces}
 
-[Ruang Kerja Yarn](https://classic.yarnpkg.com/en/docs/workspaces/) memungkinkan Anda memiliki beberapa paket, tetapi mampu mengelola semuanya dari folder akar dan menginstal dependensinya sekaligus dengan menggunakan `yarn install`. Ini masuk akal terutama untuk paket tambahan yang lebih kecil seperti alamat kontrak pintar/manajemen ABI (informasi tentang di mana Anda menggunakan kontrak pintar tertentu dan bagaimanan cara berkomunikasi dengannya) atau integrasi grafik, keduanya merupakan bagian dari `create-eth-app`.
+[Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) memungkinkan Anda untuk memiliki beberapa paket, tetapi dapat mengelola semuanya dari folder root dan menginstal dependensi untuk semuanya sekaligus menggunakan `yarn install`. Ini sangat masuk akal untuk paket tambahan yang lebih kecil seperti manajemen alamat/ABI kontrak pintar (informasi tentang di mana Anda menyebarkan kontrak pintar dan cara berkomunikasi dengannya) atau integrasi The Graph, keduanya merupakan bagian dari `create-eth-app`.
 
 ### ethers.js {#ethersjs}
 
-Meskipun [Web3](https://docs.web3js.org/) masih menjadi yang paling sering digunakan, [ether.js](https://docs.ethers.io/) telah mendapatkan lebih banyak daya tarik sebagai alternatif pada tahun lalu dan merupakan salah satu yang diintegrasikan ke dalam _create-eth-app_. Anda dapat bekerja dengan ini, mengubahnya ke Web3, atau mempertimbangkan untuk meningkatkannya ke [ether.js v5](https://docs.ethers.org/v5/) yang hampir keluar dari versi beta.
+Meskipun [Web3](https://docs.web3js.org/) masih paling banyak digunakan, [ethers.js](https://docs.ethers.io/) telah mendapatkan lebih banyak daya tarik sebagai alternatif dalam setahun terakhir dan merupakan salah satu yang diintegrasikan ke dalam _create-eth-app_. Anda dapat menggunakan yang ini, mengubahnya ke Web3 atau mempertimbangkan untuk meningkatkan ke [ethers.js v5](https://docs.ethers.org/v5/) yang hampir keluar dari versi beta.
 
 ### The Graph {#the-graph}
 
-[GraphQL](https://graphql.org/) adalah sebuah cara alternatif untuk menangani data yang dibandingkan dengan sebuah [API Restful](https://restfulapi.net/). The Graph memiliki beberapa keunggulan dibandingkan Api Restful, khususnya untuk data blockchain terdesentralisasi. Jika Anda tertarik dengan pemikiran di balik ini, silakan lihat [GraphQL Akan Mendukung Web Terdesentralisasi](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a).
+[GraphQL](https://graphql.org/) adalah cara alternatif untuk menangani data dibandingkan dengan [API Restful](https://restfulapi.net/). GraphQL memiliki beberapa keunggulan dibandingkan API Restful, terutama untuk data blockchain terdesentralisasi. Jika Anda tertarik dengan alasan di baliknya, lihatlah [GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a).
 
-Biasanya Anda akan mengambil data dari kontrak pintar Anda secara langsung. Ingin membaca waktu perdagangan terbaru? Cukup panggil `MyContract.methods.latestTradeTime().call()` yang mengambilkan data dari node Ethereum seperti Infura ke dalam Dapp Anda. Tetapi bagaimana jika Anda membutuhkan ratusan titik data yang berbeda? Itu akan menghasilkan ratusan pengambilan data ke node, yang setiap kali pengambilan memerlukan [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) yang membuat Dapp Anda menjadi lambat dan tidak efisien. Satu solusi untuk ini mungkin adalah dengan menggunakan fungsi pemanggilan pengambil di dalam kontrak Anda yang mengembalikan beberapa data sekaligus. Namun, ini tidak selalu merupakan cara yang ideal.
+Biasanya Anda akan mengambil data dari kontrak pintar Anda secara langsung. Ingin membaca waktu perdagangan terbaru? Cukup panggil `MyContract.methods.latestTradeTime().call()` yang mengambil data dari node Ethereum ke dalam dapp Anda. Tetapi bagaimana jika Anda memerlukan ratusan titik data yang berbeda? Itu akan mengakibatkan ratusan pengambilan data ke node, yang setiap kalinya memerlukan [RTT](https://wikipedia.org/wiki/Round-trip_delay_time), membuat dapp Anda lambat dan tidak efisien. Salah satu solusinya adalah fungsi panggilan pengambil (fetcher) di dalam kontrak Anda yang mengembalikan beberapa data sekaligus. Namun, ini tidak selalu ideal.
 
-Lalu, Anda juga mungkin tertarik dengan data riwayat. Anda ingin mengetahui tidak hanya waktu perdagangan terakhir, tapi juga waktu dari semua perdagangan yang pernah Anda lakukan sendiri. Gunakan paket subgraph _create-eth-app_, baca [dokumentasi](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) dan sesuaikan dengan kontrak Anda. Jika Anda berencana menggunakan kontrak pintar populer, mungkin telah ada subgraph di dalamnya. Lihat [penjelajah subgraph](https://thegraph.com/explorer/).
+Lalu, Anda mungkin juga tertarik dengan data historis. Anda ingin tahu tidak hanya waktu perdagangan terakhir, tetapi juga waktu dari semua perdagangan yang pernah Anda lakukan sendiri. Gunakan paket subgraph _create-eth-app_, baca [dokumentasinya](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) dan adaptasikan ke kontrak Anda sendiri. Jika Anda mencari kontrak pintar yang populer, mungkin sudah ada subgraph untuknya. Kunjungi [penjelajah subgraph](https://thegraph.com/explorer/).
 
-Setelah memiliki subgraph, ini memungkinkan Anda menulis kueri sederhana di Dapp Anda yang mengambil semua data blockchain penting termasuk data riwayat yang Anda perlukan, cukup dengan satu kali pengambilan.
+Setelah Anda memiliki subgraph, Anda dapat menulis satu kueri sederhana di dapp Anda yang mengambil semua data blockchain penting yang Anda perlukan, termasuk data historis, dengan hanya satu kali pengambilan data.
 
 ### Apollo {#apollo}
 
-Berkat integrasi [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), Anda dapat dengan mudah mengintegrasikan graph ke dalam Dapp React Anda. Khususnya ketika menggunakan [kaitan React dan Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), mengambil data menjadi semudah menulis sebuah kueri GraphQl dalam kompenen Anda:
+Berkat integrasi [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), Anda dapat dengan mudah mengintegrasikan The Graph di dapp React Anda. Terutama saat menggunakan [React hook dan Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), pengambilan data menjadi semudah menulis satu kueri GraphQL di komponen Anda:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)
@@ -79,32 +80,32 @@ React.useEffect(() => {
 
 ## Templat {#templates}
 
-Di atas, Anda dapat memilih dari beberapa templat beragam. Sejauh ini, Anda dapat menggunakan integrasi Aave, Compound, UniSwap, atau sablier. Mereka semua menambahkan layanan penting: alamat kontrak pintar beserta integrasi subgraph yang dibuat sebelumnya. Cukup tambahkan templat ke dalam perintah pembuatan seperti `yarn create eth-app my-eth-app --with-template aave`.
+Selain itu, Anda dapat memilih dari beberapa templat yang berbeda. Sejauh ini, Anda dapat menggunakan integrasi Aave, Compound, UniSwap, atau Sablier. Semuanya menambahkan alamat kontrak pintar layanan yang penting beserta integrasi subgraph yang sudah jadi. Cukup tambahkan templat ke perintah pembuatan seperti `yarn create eth-app my-eth-app --with-template aave`.
 
 ### Aave {#aave}
 
-[Aave](https://aave.com/) adalah sebuah pasar pemberian pinjaman uang terdesentralisasi. Deposan memberikan likuidasi ke pasar untuk menghasilkan pendapatan pasif, sedangkan para peminjam dapat meminjam dengan menyediakan jaminan. Salah satu fitur unik dari Aave adalah [pinjaman cepat](https://docs.aave.com/developers/guides/flash-loans) yang memungkinkan Anda meminjam uang tanpa jaminan apa pun, selama Anda mengembalikan pinjaman dalam satu transaksi. Ini dapat berguna, misalnya, untuk memberikan Anda uang tambahan pada perdagangan arbitrase.
+[Aave](https://aave.com/) adalah pasar pinjaman uang terdesentralisasi. Depositor menyediakan likuiditas ke pasar untuk mendapatkan penghasilan pasif, sementara peminjam dapat meminjam dengan menggunakan jaminan. Salah satu fitur unik Aave adalah [pinjaman kilat (flash loan)](https://aave.com/docs/developers/flash-loans) yang memungkinkan Anda meminjam uang tanpa jaminan apa pun, selama Anda mengembalikan pinjaman dalam satu transaksi. Ini bisa berguna, misalnya, untuk memberi Anda uang tunai tambahan pada perdagangan arbitrase.
 
-Token yang diperdagangkan yang menghasilkan bunga disebut _aTokens_.
+Token yang diperdagangkan yang memberi Anda bunga disebut _aTokens_.
 
-Ketika Anda memilih untuk mengintegrasikan Aave dengan _create-eth-app_, Anda akan mendapatkan [integrasi subgraph](https://docs.aave.com/developers/getting-started/using-graphql). Aave uses The Graph and already provides you with several ready-to-use subgraphs on [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) and [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) in [raw](https://thegraph.com/explorer/subgraph/aave/protocol-raw) or [formatted](https://thegraph.com/explorer/subgraph/aave/protocol) form.
+Saat Anda memilih untuk mengintegrasikan Aave dengan _create-eth-app_, Anda akan mendapatkan [integrasi subgraph](https://docs.aave.com/developers/getting-started/using-graphql). Aave menggunakan The Graph dan sudah menyediakan beberapa subgraph siap pakai di [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) dan [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) dalam bentuk [mentah](https://thegraph.com/explorer/subgraph/aave/protocol-raw) atau [terformat](https://thegraph.com/explorer/subgraph/aave/protocol).
 
-![Meme Pinjaman Cepat Aave – "Yah, jika saya bisa mendapatkan pinjaman cepat lebih lama dari 1 transaksi, itu akan sangat bagus"](./flashloan-meme.png)
+![Meme Pinjaman Kilat Aave – "Yeahhh, kalau saja saya bisa menyimpan pinjaman kilat saya lebih lama dari 1 transaksi, itu akan luar biasa"](./flashloan-meme.png)
 
 ### Compound {#compound}
 
-[Compound](https://compound.finance/) mirip dengan Aave. Integrasinya telah mencakup [Compound v2 Subgraph](https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195) baru. Token penghasil bunga di sini secara mengejutkan disebut _cTokens_.
+[Compound](https://compound.finance/) mirip dengan Aave. Integrasi ini sudah menyertakan [Compound v2 Subgraph](https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195) yang baru. Token penghasil bunga di sini secara mengejutkan disebut _cTokens_.
 
 ### Uniswap {#uniswap}
 
-[Uniswap](https://uniswap.exchange/) adalah decentralized exchange (DEX). Penyedia likuiditas bisa memperoleh bayaran dengan menyediakan token atau ether yang dibutuhkan bagi kedua pihak dalam sebuah perdagangan. Uniswap dipakai secara luas dan oleh karena itu memiliki salah satu dari likuiditas tertinggi untuk kisaran token yang sangat luas. Anda dapat dengan mudah mengintegrasikannya ke dalam Dapp Anda untuk, misalnya, memungkinkan para pengguna menukar ETH mereka dengan DAI.
+[Uniswap](https://uniswap.exchange/) adalah bursa terdesentralisasi (DEX). Penyedia likuiditas dapat memperoleh biaya dengan menyediakan token atau ether yang diperlukan untuk kedua sisi perdagangan. Ini digunakan secara luas dan oleh karena itu memiliki salah satu likuiditas tertinggi untuk berbagai macam token. Anda dapat dengan mudah mengintegrasikannya ke dalam dapp Anda, misalnya, untuk memungkinkan pengguna menukar ETH mereka dengan DAI.
 
-Sayangnya, pada saat penulisan ini, integrasi hanya dapat dilakukan untuk Uniswap v1 dan bukan [v2 yang baru saja dirilis](https://uniswap.org/blog/uniswap-v2/).
+Sayangnya, pada saat penulisan ini, integrasi hanya untuk Uniswap v1 dan bukan [v2 yang baru dirilis](https://uniswap.org/blog/uniswap-v2/).
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.com/) memungkinkan para pengguna menyiarkan pembayaran uang. Alih alih sekali pembayaran, Anda mendapatkan uang secara konstan tanpa administrasi tambahan setelah pengaturan awalnya selesai. Integrasinya mencakup [subgraphnya](https://thegraph.com/explorer/subgraph/sablierhq/sablier) sendiri.
+[Sablier](https://sablier.com/) memungkinkan pengguna untuk mengalirkan pembayaran uang. Alih-alih menerima pembayaran sekaligus, Anda akan terus menerima uang secara konstan tanpa perlu administrasi lebih lanjut setelah pengaturan awal. Integrasi ini menyertakan [subgraph-nya sendiri](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
 
-## Selajutnya? {#whats-next}
+## Apa selanjutnya? {#whats-next}
 
-Jika Anda memiliki pertanyaan tentang _create-eth-app_, kunjungi [server komunitas Sablier](https://discord.gg/bsS8T47), di mana Anda dapat berinteraksi dengan para penulis _create-eth-app_. Sebagai beberapa langkah pertama berikutnya, Anda mungkin ingin mengintegrasikan kerangka kerja UI seperti [Material UI](https://material-ui.com/), menulis kueri GraphQL untuk data yang benar-benar Anda perlukan dan menyiapkan penggunaannya.
+Jika Anda memiliki pertanyaan tentang _create-eth-app_, kunjungi [server komunitas Sablier](https://discord.gg/bsS8T47), tempat Anda dapat menghubungi para pembuat _create-eth-app_. Sebagai beberapa langkah awal berikutnya, Anda mungkin ingin mengintegrasikan kerangka kerja UI seperti [Material UI](https://mui.com/material-ui/), menulis kueri GraphQL untuk data yang benar-benar Anda butuhkan, dan menyiapkan penyebarannya.
