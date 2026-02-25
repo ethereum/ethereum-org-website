@@ -1,13 +1,13 @@
 ---
 title: Beacon chain
-description: Přečtěte si o Řetězové vazbě – vylepšení, které umožnilo důkaz podílem na Ethereu.
+description: "Přečtěte si o Řetězové vazbě – vylepšení, které umožnilo důkaz podílem na Ethereu."
 lang: cs
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: Řetězová vazba zavedla důkaz podílem do ekosystému Etherea.
-summaryPoint2: V září 2022 byla sloučena s původním Ethereem založeným na důkazu prací.
-summaryPoint3: Řetězová vazba představila logiku konsensu a blokový komunikační protokol, který v současné době zabezpečuje Ethereum.
+summaryPoint1: "Řetězová vazba zavedla důkaz podílem do ekosystému Etherea."
+summaryPoint2: "V září 2022 byla sloučena s původním Ethereem založeným na důkazu prací."
+summaryPoint3: "Řetězová vazba představila logiku konsensu a blokový komunikační protokol, který v současné době zabezpečuje Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
