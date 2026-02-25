@@ -4,32 +4,32 @@ description: Dagger-Hashimoto-Algorithmus im Detail.
 lang: de
 ---
 
-Dagger-Hashimoto war die ursprüngliche Forschungsimplementierung und Spezifikation für den Mining-Algorithmus von Ethereum. Dagger-Hashimoto wurde durch [Ethash](#ethash) abgelöst. Das Mining wurde mit [der Zusammenführung](/roadmap/merge/) am 15. September 2022 komplett ausgeschaltet. Seitdem wird die Sicherheit von Ethereum durch einen [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)-Mechanismus gewährleistet. Diese Seite dient dem geschichtlichen Interesse – die Informationen hier sind seit der Zusammenführung für Ethereum nicht mehr relevant.
+Dagger-Hashimoto war die ursprüngliche Forschungsimplementierung und Spezifikation für den Mining-Algorithmus von Ethereum. Dagger-Hashimoto wurde durch [Ethash](#ethash) abgelöst. Das Mining wurde mit [der Zusammenführung](/roadmap/merge/) am 15. September 2022 komplett abgeschaltet. Seitdem wird Ethereum stattdessen über einen [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)-Mechanismus gesichert. Diese Seite dient dem geschichtlichen Interesse – die Informationen hier sind seit der Zusammenführung für Ethereum nicht mehr relevant.
 
 ## Voraussetzungen {#prerequisites}
 
-Um diese Seite besser zu verstehen, empfehlen wir Ihnen, sich zunächst in den [Proof-of-Work-Konsens](/developers/docs/consensus-mechanisms/pow), das [Mining](/developers/docs/consensus-mechanisms/pow/mining) und [Mining-Algorithmen](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms) einzulesen.
+Um diese Seite besser zu verstehen, empfehlen wir Ihnen, sich zunächst über den [Proof-of-Work-Konsens](/developers/docs/consensus-mechanisms/pow), das [Mining](/developers/docs/consensus-mechanisms/pow/mining) und [Mining-Algorithmen](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms) zu informieren.
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto will zwei Ziele erreichen:
 
-1.  **ASIC-Resistenz**: Der Vorteil der Erstellung von spezieller Hardware für den Algorithmus sollte so gering wie möglich sein.
-2.  **Light-Client-Verifizierbarkeit**: Ein Block sollte durch einen Light-Client effizient verifiziert werden können.
+1. **ASIC-Resistenz**: Der Nutzen aus der Erstellung spezialisierter Hardware für den Algorithmus sollte so gering wie möglich sein.
+2. **Light-Client-Verifizierbarkeit**: Ein Block sollte durch einen Light-Client effizient verifiziert werden können.
 
 Durch eine weitere Modifikation spezifizieren wir außerdem, wie – sofern gewünscht – ein drittes Ziel erreicht wird, was jedoch zusätzliche Komplexität mit sich bringt:
 
-**Speichern der vollen Kette**: Mining sollte das Speichern des gesamten Blockchain-Status erfordern (wegen der irregulären Struktur des Ethereum-Statusbaums wird erwartet, dass einige Kürzungen möglich sein werden, insbedondere von eingen oft genutzten Contracts; dies soll aber minimiert werden).
+**Speicherung der gesamten Kette**: Mining sollte die Speicherung des kompletten Blockchain-Zustands erfordern (aufgrund der unregelmäßigen Struktur des Ethereum State-Tries gehen wir davon aus, dass ein gewisses Pruning möglich sein wird, insbesondere bei einigen häufig genutzten Contracts, aber wir wollen dies minimieren).
 
 ## DAG-Generierung {#dag-generation}
 
-Der Code für den Algorithmus wird unten in Python definiert. Zunächst geben wir `encode_int` zur Anordnung nicht unterzeichneter Einheiten spezifizierter Präzision an Strings. Die entsprechend Umkehrung wird ebenfalls bereitgestellt:
+Der Code für den Algorithmus wird unten in Python definiert. Zuerst stellen wir `encode_int` für das Marshalling von vorzeichenlosen Ganzzahlen (unsigned ints) mit festgelegter Präzision in Zeichenketten (Strings) bereit. Die entsprechend Umkehrung wird ebenfalls bereitgestellt:
 
 ```python
 NUM_BITS = 512
 
 def encode_int(x):
-    "Encode an integer x as a string of 64 characters using a big-endian scheme"
+    "Kodiert eine Ganzzahl x als eine Zeichenkette von 64 Zeichen unter Verwendung eines Big-Endian-Schemas"
     o = ''
     for _ in range(NUM_BITS / 8):
         o = chr(x % 256) + o
@@ -37,7 +37,7 @@ def encode_int(x):
     return o
 
 def decode_int(s):
-    "Unencode an integer x from a string using a big-endian scheme"
+    "Dekodiert eine Ganzzahl x aus einer Zeichenkette unter Verwendung eines Big-Endian-Schemas"
     x = 0
     for c in s:
         x *= 256
@@ -45,7 +45,7 @@ def decode_int(s):
     return x
 ```
 
-Als Nächstes gehen wir davon aus, dass `sah3` eine Funktion ist, die eine Ganzzahl bezieht und eine Ganzzahl ausgibt, und `dbl_sah3` eine Doppelt-sah3-Funktion ist; wenn man diesen Referenzcode in eine Implementierungsanwendung umwandelt:
+Als Nächstes nehmen wir an, dass `sha3` eine Funktion ist, die eine Ganzzahl als Eingabe nimmt und eine Ganzzahl ausgibt, und `dbl_sha3` eine doppelte sha3-Funktion ist. Wenn Sie diesen Referenzcode in eine Implementierung umwandeln, verwenden Sie:
 
 ```python
 from pyethereum import utils
@@ -65,26 +65,25 @@ def dbl_sha3(x):
 Folgende Parameter werden für den Algorithmus verwendet:
 
 ```python
-SAFE_PRIME_512 = 2**512 - 38117     # Largest Safe Prime less than 2**512
+SAFE_PRIME_512 = 2**512 - 38117     # Größte sichere Primzahl kleiner als 2**512
 
 params = {
-      "n": 4000055296 * 8 // NUM_BITS,  # Size of the dataset (4 Gigabytes); MUST BE MULTIPLE OF 65536
-      "n_inc": 65536,                   # Increment in value of n per period; MUST BE MULTIPLE OF 65536
-                                        # with epochtime=20000 gives 882 MB growth per year
-      "cache_size": 2500,               # Size of the light client's cache (can be chosen by light
-                                        # client; not part of the algo spec)
-      "diff": 2**14,                    # Difficulty (adjusted during block evaluation)
-      "epochtime": 100000,              # Length of an epoch in blocks (how often the dataset is updated)
-      "k": 1,                           # Number of parents of a node
-      "w": w,                          # Used for modular exponentiation hashing
-      "accesses": 200,                  # Number of dataset accesses during hashimoto
-      "P": SAFE_PRIME_512               # Safe Prime for hashing and random number generation
+      "n": 4000055296 * 8 // NUM_BITS,  # Größe des Datensatzes (4 Gigabyte); MUSS EIN VIELFACHES VON 65536 SEIN
+      "n_inc": 65536,                   # Inkrement des Wertes n pro Periode; MUSS EIN VIELFACHES VON 65536 SEIN
+                                        # bei epochtime=20000 ergibt dies ein Wachstum von 882 MB pro Jahr
+      "cache_size": 2500,               # Größe des Caches des Light-Clients (kann vom Light-Client gewählt werden; nicht Teil der Algo-Spezifikation)
+      "diff": 2**14,                    # Schwierigkeit (wird während der Blockauswertung angepasst)
+      "epochtime": 100000,              # Länge einer Epoche in Blöcken (wie oft der Datensatz aktualisiert wird)
+      "k": 1,                           # Anzahl der Eltern eines Knotens
+      "w": w,                          # Wird für modulares Exponentiations-Hashing verwendet
+      "accesses": 200,                  # Anzahl der Datensatzzugriffe während Hashimoto
+      "P": SAFE_PRIME_512               # Sichere Primzahl für Hashing und Zufallszahlengenerierung
 }
 ```
 
-`P` ist in diesem Fall eine Primzahl, die so gewählt wurde, dass `log₂(P)` nur etwas geringer als 512 ist, was den 512 Bits entspricht, die wir zur Darstellung unserer Zahlen nutzen. Beachten Sie, dass nur die zweite Hälfte des DAG tatsächlich gespeichert werden muss, sodass der tatsächliche RAM-Bedarf bei 1 GB beginnt und um 441 MB pro Jahr wächst.
+`P` ist in diesem Fall eine Primzahl, die so gewählt wurde, dass `log₂(P)` nur geringfügig kleiner als 512 ist, was den 512 Bits entspricht, die wir zur Darstellung unserer Zahlen verwendet haben. Beachten Sie, dass nur die zweite Hälfte des DAG tatsächlich gespeichert werden muss, sodass der tatsächliche RAM-Bedarf bei 1 GB beginnt und um 441 MB pro Jahr wächst.
 
-### Bau eines Dagger-Graphen {#dagger-graph-building}
+### Dagger-Graph-Erstellung {#dagger-graph-building}
 
 Der Primitiv des Baus eines Dagger-Graphen ist wie folgt definiert:
 
@@ -101,11 +100,11 @@ def produce_dag(params, seed, length):
     return o
 ```
 
-Im Wesentlichen wird ein Graph mit einem einzigen Knoten begonnen, `sha3(seed)`, und von dort aus werden nacheinander weitere Knoten auf der Grundlage zufälliger vorheriger Knoten hinzugefügt. Wenn ein neuer Knoten erstellt wird, wird eine modulare Potenz des Seeds berechnet, um zufällig einige Indizes auszuwählen, die kleiner sind als `i` (bei Verwendung von `x % i` oben), und die Werte der Knoten an diesen Indizes werden in einer Berechnung verwendet, um einen neuen Wert für `x` zu generieren, welcher dann in eine kleine Proof-of-Work-Funktion (auf XOR-Basis) hinzugegeben wird, um letztlich den Wert des Graphen an Index `i` zu generieren. Der Grundgedanke hinter diesem speziellen Design ist, einen sequentiellen Zugriff auf den DAG zu erzwingen; der nächste Wert des DAG, auf den zugegriffen wird, kann nicht bestimmt werden, bis der aktuelle Wert bekannt ist. Schließlich wird das Ergebnis durch modulare Potenzierung weiter gehasht.
+Im Wesentlichen beginnt ein Graph mit einem einzigen Knoten, `sha3(seed)`, und von dort aus werden nacheinander weitere Knoten auf der Grundlage zufälliger vorheriger Knoten hinzugefügt. Wenn ein neuer Knoten erstellt wird, wird eine modulare Potenz des Seeds berechnet, um zufällig einige Indizes kleiner als `i` auszuwählen (unter Verwendung von `x % i` oben). Die Werte der Knoten an diesen Indizes werden in einer Berechnung verwendet, um einen neuen Wert für `x` zu generieren, der dann in eine kleine Proof-of-Work-Funktion (basierend auf XOR) eingespeist wird, um schließlich den Wert des Graphen am Index `i` zu erzeugen. Der Grundgedanke hinter diesem speziellen Design ist, einen sequentiellen Zugriff auf den DAG zu erzwingen; der nächste Wert des DAG, auf den zugegriffen wird, kann nicht bestimmt werden, bis der aktuelle Wert bekannt ist. Schließlich wird das Ergebnis durch modulare Potenzierung weiter gehasht.
 
 Dieser Algorithmus stützt sich auf mehrere Ergebnisse aus der Zahlentheorie. Schauen Sie sich den unteren Zusatz mit einer Diskussion an.
 
-## Light-Client-Bewertung {#light-client-evaluation}
+## Light-Client-Evaluierung {#light-client-evaluation}
 
 Die oben beschriebene Konstruktion des Graphen soll es ermöglichen, jeden Knoten des Graphen zu rekonstruieren, indem ein Unterbaum mit nur wenigen Knoten berechnet wird und wobei nur nur eine geringe Menge an Zusatzspeicher notig ist. Beachten Sie, dass mit „k=1“ dieser Unterbaum nur eine Kette von Werten ist, die sich bis zum ersten Element im DAG hochziehen.
 
@@ -131,11 +130,11 @@ def quick_calc(params, seed, p):
     return quick_calc_cached(p)
 ```
 
-Im Wesentlichen handelt es sich einfach um eine neue Implementierung des obigen Algorithmus, bei der die Schleife zur Berechnung der Werte für den gesamten DAG entfällt und die frühere Knotensuche durch einen rekursiven Aufruf oder eine Cache-Suche ersetzt wird. Beachten Sie, dass für `k=1` der Cache unnötig ist, obwohl eine weitere Optimierung die ersten paar Tausend Werte der DAG vorab berechnet und diese als statischen Cache für Berechnungen aufbewahrt; im Zusatz finden Sie eine entsprechende Code-Implementierung.
+Im Wesentlichen handelt es sich einfach um eine neue Implementierung des obigen Algorithmus, bei der die Schleife zur Berechnung der Werte für den gesamten DAG entfällt und die frühere Knotensuche durch einen rekursiven Aufruf oder eine Cache-Suche ersetzt wird. Beachten Sie, dass für `k=1` der Cache unnötig ist, obwohl eine weitere Optimierung tatsächlich die ersten paar tausend Werte des DAG vorab berechnet und diese als statischen Cache für Berechnungen behält; eine Code-Implementierung hierfür finden Sie im Anhang.
 
-## Doppelte DAG-Puffer {#double-buffer}
+## Doppelpuffer von DAGs {#double-buffer}
 
-In einem vollen Client wird ein [_doppelter Puffer_](https://wikipedia.org/wiki/Multiple_buffering) von 2 DAGs verwendet, die mithilfe der obigen Formel produziert wurden. Der Gedanke dahinter ist, dass DAGs jede `epochtime` Anzahl von Blöcken entsprechend den obigen Parametern erzeugt werden. Der Client verwendet nicht den zuletzt erstellten DAG, sondern den vorherigen. Das hat den Vorteil, dass die DAGs im Laufe der Zeit ersetzt werden können, ohne dass ein Schritt eingefügt werden muss, bei dem Miner plötzlich alle Daten neu berechnen müssen. Andernfalls besteht die Gefahr einer abrupten, vorübergehenden Verlangsamung der Chain-Verarbeitung in regelmäßigen Abständen und einer dramatisch zunehmenden Zentralisierung. Dadurch könnte es 51-%-Angriffe in diesen wenigen Minuten geben, bevor alle Daten neu berechnet sind.
+In einem Full-Client wird ein [_Doppelpuffer_](https://wikipedia.org/wiki/Multiple_buffering) aus 2 DAGs verwendet, die mit der obigen Formel erzeugt werden. Die Idee ist, dass DAGs alle `epochtime` Blöcke gemäß der obigen Parameter erzeugt werden. Der Client verwendet nicht den zuletzt erstellten DAG, sondern den vorherigen. Das hat den Vorteil, dass die DAGs im Laufe der Zeit ersetzt werden können, ohne dass ein Schritt eingefügt werden muss, bei dem Miner plötzlich alle Daten neu berechnen müssen. Andernfalls besteht die Gefahr einer abrupten, vorübergehenden Verlangsamung der Chain-Verarbeitung in regelmäßigen Abständen und einer dramatisch zunehmenden Zentralisierung. Dadurch könnte es 51-%-Angriffe in diesen wenigen Minuten geben, bevor alle Daten neu berechnet sind.
 
 Der Algorithmus für das Generieren des DAG-Sets zur Berechnung der Arbeit für einen Block ist wie folgt:
 
@@ -254,56 +253,52 @@ Beachten Sie außerdem, dass Dagger-Hashimoto zusätzliche Anforderungen an den 
 - Damit eine Verifizierung mit zwei Ebenen funktioniert, muss ein Block-Header sowohl die Nonce als auch den mittleren Wert vor sha3 haben.
 - Irgendwo muss ein Block-Header den sha3 des aktuellen Seed-Sets speichern.
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Lektüre {#further-reading}
 
-_Kennst du eine Community-Ressource, die dir geholfen hat? Bearbeite diese Seite und füge sie hinzu!_
+_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
 ## Anhang {#appendix}
 
-Wie oben erwähnt, basiert der für die DAG-Generierung verwendete RNG auf einigen Ergebnissen aus der Zahlentheorie. Zunächst stellen wir sicher, dass der Lehmer-RNG, welcher die Grundlage für die Variable `picker` bildet, eine lange Periode besitzt. Im zweiten Schritt zeigen wir, dass `pow(x,3,P)` `x` nicht `1` oder `P-1` zuordnet, sofern `x ∈ [2,P-2]` als Startwert gilt. Schließlich zeigen wir, dass `pow(x,3,P)` eine niedrige Kollisionsrate hat, wenn es als Hashing-Funktion behandelt wird.
+Wie oben erwähnt, basiert der für die DAG-Generierung verwendete RNG auf einigen Ergebnissen aus der Zahlentheorie. Zunächst stellen wir sicher, dass der Lehmer-RNG, der die Grundlage für die `picker`-Variable ist, eine lange Periode hat. Zweitens zeigen wir, dass `pow(x,3,P)` `x` nicht auf `1` oder `P-1` abbildet, vorausgesetzt `x ∈ [2,P-2]` ist der Startwert. Schließlich zeigen wir, dass `pow(x,3,P)` eine niedrige Kollisionsrate aufweist, wenn es als Hashing-Funktion behandelt wird.
 
 ### Lehmer-Zufallszahlengenerator {#lehmer-random-number}
 
 Obwohl die Funktion `produce_dag` keine unverzerrten Zufallszahlen erzeugen muss, besteht eine potenzielle Gefahr darin, dass `seed**i % P` nur eine Handvoll Werte annimmt. Dies könnte Minern, die das Muster erkennen, einen Vorteil gegenüber denen verschaffen, die es nicht tun.
 
-Um dies zu vermeiden, wird auf ein Ergebnis aus der Zahlentheorie zurückgegriffen. Eine [_sichere Primzahl_](https://en.wikipedia.org/wiki/Safe_prime) ist definiert als eine Primzahl `P`, sodass `(P-1)/2` ebenfalls eine Primzahl ist. Die _Reihenfolge_ eines Mitglieds `x` der [multiplikativen Gruppe](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` ist definiert als das minimale `m`, sodass <pre>xᵐ mod P ≡ 1</pre>
-Angesichts dieser Definitionen haben wir:
+Um dies zu vermeiden, wird auf ein Ergebnis aus der Zahlentheorie zurückgegriffen. Eine [_sichere Primzahl_](https://en.wikipedia.org/wiki/Safe_prime) ist definiert als eine Primzahl `P`, für die `(P-1)/2` ebenfalls eine Primzahl ist. Die _Ordnung_ eines Elements `x` der [multiplikativen Gruppe](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` ist definiert als das minimale `m`, sodass <pre>xᵐ mod P ≡ 1</pre>
+Ausgehend von diesen Definitionen gilt:
 
-> Beobachtung 1. Lassen Sie `x` ein Mitglied der multiplikativen Gruppe `ℤ/Pℤ` für eine sichere Primzahl `P` sein. Bei `x mod P ≠ 1 mod P` und `x mod P ≠ P-1 mod P` ist die Ordnung von `x` entweder `P-1` oder `(P-1)/2`.
+> Beobachtung 1. `x` sei ein Element der multiplikativen Gruppe `ℤ/Pℤ` für eine sichere Primzahl `P`. Wenn `x mod P ≠ 1 mod P` und `x mod P ≠ P-1 mod P`, dann ist die Ordnung von `x` entweder `P-1` oder `(P-1)/2`.
 
-_Beweis_. Da `P` eine sichere Primzahl ist, gilt nach dem \[Satz von Lagrange\]\[lagrange\], dass die Ordnung von `x` entweder `1`, `2`, `(P-1)/2` oder `P-1` ist.
+_Beweis_. Da `P` eine sichere Primzahl ist, ist nach dem [Satz von Lagrange][lagrange] die Ordnung von `x` entweder `1`, `2`, `(P-1)/2` oder `P-1`.
 
-Die Ordnung von `x` kann nicht `1` sein, da wir gemäß dem Little Theorem von Fermat Folgendes haben:
+Die Ordnung von `x` kann nicht `1` sein, da nach dem kleinen Satz von Fermat gilt:
 
 <pre>x<sup>P-1</sup> mod P ≡ 1</pre>
 
-Daher muss `x` eine multiplikative Identität von `ℤ/nℤ` sein, die eindeutig ist. Da wir angenommen haben, dass `x ≠ 1`, ist dies nicht möglich.
+Daher muss `x` eine multiplikative Identität von `ℤ/nℤ` sein, die eindeutig ist. Da wir per Annahme `x ≠ 1` vorausgesetzt haben, ist dies nicht möglich.
 
-Die Ordnung von `x` kann nicht `2` sein, es sei denn, `x = P-1`, weil dies die Aussage verletzen würde, dass `P` eine Primzahl ist.
+Die Ordnung von `x` kann nicht `2` sein, es sei denn, `x = P-1`, da dies der Annahme, dass `P` eine Primzahl ist, widersprechen würde.
 
-Aus dem obigen Vorschlag können wir erkennen, dass die Iteration von `(picker * init) % P` eine Zykluslänge von mindestens `(P-1)/2` hat. Das liegt daran, dass wir `P` als sichere Primzahl gewählt haben, die etwa einer höheren Potenz von zwei entspricht, und `init` im Intervall `[2,2**256+1]` liegt. Angesichts der Größe von `P` sollten wir niemals einen Zyklus aus der modularen Potenzierung erwarten.
+Aus der obigen Aussage können wir erkennen, dass die Iteration von `(picker * init) % P` eine Zykluslänge von mindestens `(P-1)/2` haben wird. Das liegt daran, dass wir `P` als eine sichere Primzahl gewählt haben, die ungefähr einer höheren Zweierpotenz entspricht, und `init` im Intervall `[2,2**256+1]` liegt. Angesichts der Größenordnung von `P` sollten wir niemals einen Zyklus bei der modularen Exponentiation erwarten.
 
-Wenn wir die erste Zelle im DAG zuweisen (die Variable mit der Bezeichnung `init`), berechnen wir `pow(sha3(seed) + 2, 3, P)`. Auf den ersten Blick stellt dies nicht sicher, dass das Ergebnis weder `1` noch `P-1` ist. Da `P-1` jedoch eine sichere Primzahl ist, haben wir die folgende zusätzliche Sicherheit, die eine Folgerung aus Beobachtung 1 ist:
+Wenn wir die erste Zelle im DAG zuweisen (die Variable mit der Bezeichnung `init`), berechnen wir `pow(sha3(seed) + 2, 3, P)`. Auf den ersten Blick garantiert dies nicht, dass das Ergebnis weder `1` noch `P-1` ist. Da `P-1` jedoch eine sichere Primzahl ist, haben wir die folgende zusätzliche Zusicherung, die ein Korollar von Beobachtung 1 ist:
 
-> Beobachtung 2. `x` sei ein Element der multiplikativen Gruppe `ℤ/Pℤ` für eine sichere Primzahl `P`, und `w` sei eine natürliche Zahl. Wenn `x mod P ≠ 1 mod P` und `x mod P ≠ P-1 mod P` sowie `w mod P ≠ P-1 mod P` und `w mod P ≠ 0 mod P`, dann `xʷ mod P ≠ 1 mod P` und `xʷ mod P ≠ P-1 mod P`.
+> Beobachtung 2. `x` sei ein Element der multiplikativen Gruppe `ℤ/Pℤ` für eine sichere Primzahl `P`, und `w` sei eine natürliche Zahl. Wenn `x mod P ≠ 1 mod P` und `x mod P ≠ P-1 mod P`, sowie `w mod P ≠ P-1 mod P` und `w mod P ≠ 0 mod P`, dann `xʷ mod P ≠ 1 mod P` und `xʷ mod P ≠ P-1 mod P`
 
-### Modulare Potenzierung als Hash-Funktion {#modular-exponentiation}
+### Modulare Exponentiation als Hash-Funktion {#modular-exponentiation}
 
-Bei bestimmten Werten von `P` und `w` kann es bei der Funktion `pow(x, w, P)` zu zahlreichen Kollisionen kommen. Beispielsweise nimmt `pow(x,9,19)` nur die Werte `{1,18}` an.
+Für bestimmte Werte von `P` und `w` kann die Funktion `pow(x, w, P)` viele Kollisionen aufweisen. Beispielsweise nimmt `pow(x,9,19)` nur die Werte `{1,18}` an.
 
-Wenn `P` eine Primzahl ist, kann ein geeignetes `w` für eine Hash-Funktion zur modularen Potenzierung mithilfe des folgenden Ergebnisses ausgewählt werden:
+Vorausgesetzt, dass `P` eine Primzahl ist, kann ein geeignetes `w` für eine Hash-Funktion mit modularer Exponentiation unter Verwendung des folgenden Ergebnisses gewählt werden:
 
-> Beobachtung 3. `P` sei eine Primzahl; `w` und `P-1` sind nur dann teilerfremd, wenn für alle `a` und `b` in `ℤ/Pℤ` Folgendes gilt:
-> 
-> <center>
->   „aʷ mod P ≡ bʷ mod P“ gilt nur dann, wenn „a mod P ≡ b mod P“
-> </center>
+> Beobachtung 3. `P` sei eine Primzahl; `w` und `P-1` sind genau dann teilerfremd, wenn für alle `a` und `b` in `ℤ/Pℤ` gilt:<center>`aʷ mod P ≡ bʷ mod P` genau dann, wenn `a mod P ≡ b mod P`</center>
 
-Da `P` eine Primzahl ist und `w` teilerfremd zu `P-1` ist, gilt, dass `|{pow(x, w, P) : x ∈ ℤ}| = P`, was bedeutet, dass die Hashing-Funktion die minimal mögliche Kollisionsrate aufweist.
+Wenn also `P` eine Primzahl ist und `w` teilerfremd zu `P-1` ist, dann gilt `|{pow(x, w, P) : x ∈ ℤ}| = P`, was bedeutet, dass die Hashing-Funktion die geringstmögliche Kollisionsrate hat.
 
-Im speziellen Fall, dass `P` eine sichere Primzahl ist, wie wir sie ausgewählt haben, hat `P-1` nur die Faktoren 1, 2, `(P-1)/2` und `P-1`. Da `P` > 7 ist, wissen wir, dass 3 teilerfremd zu `P-1` ist, daher erfüllt `w=3` die obige Aussage.
+Im Sonderfall, dass `P` eine sichere Primzahl ist, wie wir sie gewählt haben, hat `P-1` nur die Faktoren 1, 2, `(P-1)/2` und `P-1`. Da `P` > 7, wissen wir, dass 3 teilerfremd zu `P-1` ist, daher erfüllt `w=3` die obige Aussage.
 
-## Effizienterer cache-basierter Auswertungsalgorithmus {#cache-based-evaluation}
+## Effizienterer Cache-basierter Auswertungsalgorithmus {#cache-based-evaluation}
 
 ```python
 def quick_calc(params, seed, p):
