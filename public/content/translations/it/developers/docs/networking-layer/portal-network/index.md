@@ -82,7 +82,7 @@ La presenza di più implementazioni client indipendenti aumenta la resilienza e 
 
 Se un client presenta problemi o vulnerabilità, gli altri client possono continuare a funzionare senza problemi, evitando un punto di errore singolo. Inoltre, le diverse implementazioni dei clienti favoriscono l'innovazione e la concorrenza, promuovendo miglioramenti e riducendo il rischio di monopolio all'interno dell'ecosistema.
 
-## Letture consigliate {#futher-reading}
+## Letture consigliate {#further-reading}
 
 - [La Rete Portal (Piper Merriam al Devcon di Bogotà)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [Discord della Rete Portal](https://discord.gg/CFFnmE7Hbs)
