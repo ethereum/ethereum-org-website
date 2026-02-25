@@ -4,7 +4,7 @@ description: Jak se zapojit do Ethereum komunity.
 lang: cs
 ---
 
-# Jak se mohu zapojit? Zapojte se {#get-involved}
+# Jak se mohu zapojit? {#get-involved}
 
 V Ethereum komunitě najdete osoby s různými zázemími a dovednostmi. Ať už jste vývojář, umělec, nebo účetní, existují způsoby, jak se zapojit. Zde je seznam nápadů, které vám mohou pomoci začít.
 

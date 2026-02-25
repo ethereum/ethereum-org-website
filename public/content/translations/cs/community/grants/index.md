@@ -6,7 +6,7 @@ lang: cs
 
 # Granty Etherea {#ethereum-grants}
 
-Níže uvedené programy nabízejí finanční granty pro projekty, které podporují úspěch a růst ekosystému Ethereum. Tento článek berte jako návod k nalezení správného grantu a k podání úspěšné žádosti o finanční prostředky, které vám pomohou k úspěchu vašeho dalšího projektu běžícího na Ethereuu.
+Níže uvedené programy nabízejí finanční granty pro projekty, které podporují úspěch a růst ekosystému Ethereum. Tento článek berte jako návod k nalezení správného grantu a k podání úspěšné žádosti o finanční prostředky, které vám pomohou k úspěchu vašeho dalšího projektu běžícího na Ethereu.
 
 Tento seznam je kurátorován naší komunitou. Pokud zde něco chybí nebo není uvedeno správně, navrhněte prosím úpravu této stránky!
 

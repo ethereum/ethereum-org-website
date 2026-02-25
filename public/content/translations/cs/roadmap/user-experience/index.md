@@ -31,6 +31,6 @@ S těmito vylepšeními budou bariéry pro provoz síťového uzlu sníženy pra
 
 Peněženky založené na chytrých kontraktech jsou už k dispozici, ale je třeba uvést do chodu další vylepšení, aby byly co nejvíce decentralizované a přístupné bez nutnosti povolení třetí strany. EIP-4337 je hotový návrh, který nevyžaduje žádné změny v protokolu Etherea. Hlavní chytrý kontrakt nutný pro EIP-4337 byl **spuštěn v březnu 2023**.
 
-**Úplná bezstavovost je stále ve fázi výzkumu** a její implementace bude pravděpodobně trval několik let. Existuje několik milníků na cestě k úplné bezstavovosti, včetně expirace dat, které mohou být implementovány dříve. Nejprve je ale třeba dokončit jiné body plánu, jako jsou [Verkle Trees](/roadmap/verkle-trees/) a [oddělení navrhovatelů a stavitelů bloků](/roadmap/pbs/).
+**Úplná bezstavovost je stále ve fázi výzkumu** a její implementace bude pravděpodobně trvat několik let. Existuje několik milníků na cestě k úplné bezstavovosti, včetně expirace dat, které mohou být implementovány dříve. Nejprve je ale třeba dokončit jiné body plánu, jako jsou [Verkle Trees](/roadmap/verkle-trees/) a [oddělení navrhovatelů a stavitelů bloků](/roadmap/pbs/).
 
 Testovací sítě Verkle Trees jsou již v provozu a další fáze zahrnuje spuštění klientů podporujících Verkle Tree na soukromých a následně veřejných testovacích sítích. I vy můžete pomoci urychlit tento vývoj tím, že spustíte své kontrakty na testovacích sítích nebo spustíte klienty testovacích sítí.

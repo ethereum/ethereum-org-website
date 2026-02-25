@@ -63,7 +63,7 @@ Představte si, že si chcete koupit Bitcoin (BTC), ale máte peníze pouze na h
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Vše výše uvedené můžete provést také pomocí [centralizované burzy](/get-eth). Ale pokud vaše prostředky ještě na burze nejsou, zahruje taková operace vícero kroků, a pravděpodobně bude jednodušší použít přemostění.
+  Vše výše uvedené můžete provést také pomocí [centralizované burzy](/get-eth). Ale pokud vaše prostředky ještě na burze nejsou, zahrnuje taková operace vícero kroků, a pravděpodobně bude jednodušší použít přemostění.
 </AlertDescription>
 </AlertContent>
 </Alert>
