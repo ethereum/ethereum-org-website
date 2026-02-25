@@ -1,6 +1,6 @@
 ---
 title: 7 euristiche per la progettazione di interfacce Web3
-description: Principi per migliorare l'usabilità del Web3
+description: "Principi per migliorare l'usabilità del Web3"
 lang: it
 ---
 

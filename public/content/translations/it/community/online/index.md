@@ -71,5 +71,5 @@ Se credi che una community dovrebbe essere aggiunta o rimossa secondo queste lin
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Maggiori informazioni sulle DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

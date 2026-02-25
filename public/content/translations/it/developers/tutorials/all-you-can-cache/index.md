@@ -1,6 +1,6 @@
 ---
 title: "Salva nella cache quanto vuoi"
-description: Scopri come creare e utilizzare un contratto di memorizzazione nella cache per transazioni rollup più economiche
+description: "Scopri come creare e utilizzare un contratto di memorizzazione nella cache per transazioni rollup più economiche"
 author: Ori Pomerantz
 tags:
   - "livello 2"

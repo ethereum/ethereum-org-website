@@ -1,13 +1,13 @@
 ---
-title: Componibilità dei contratti intelligenti
-description:
+title: "Componibilità dei contratti intelligenti"
+description: Scopri come i contratti intelligenti possono essere combinati come mattoncini Lego per creare dApp complesse riutilizzando componenti esistenti.
 lang: it
 incomplete: true
 ---
 
-## Breve introduzione {#a-brief-introduction}
+## Una breve introduzione {#a-brief-introduction}
 
-I contratti intelligenti sono pubblici su Ethereum e possono esser considerati come API aperte. Non ti serve di scrivere il tuo contratto intelligente per diventare uno sviluppatore di dapp, basta sapere come interagirvi. Ad esempio, puoi usare i contratti intelligenti esistenti di [Uniswap](https://uniswap.exchange/swap), una borsa decentralizzata, per gestire tutta la logica di scambio di token nella tua app: non devi iniziare da zero. Dai un'occhiata ai loro contratti [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) e [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts).
+I contratti intelligenti sono pubblici su Ethereum e possono esser considerati come API aperte. Non ti serve di scrivere il tuo contratto intelligente per diventare uno sviluppatore di dapp, basta sapere come interagirvi. Ad esempio, puoi usare i contratti intelligenti esistenti di [Uniswap](https://uniswap.exchange/swap), un exchange decentralizzato, per gestire tutta la logica di scambio di token nella tua app: non devi iniziare da zero. Dai un'occhiata ad alcuni dei loro contratti [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) e [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts).
 
 ## Cos'è la componibilità? {#what-is-composability}
 
@@ -23,13 +23,13 @@ I contratti intelligenti di Ethereum sono come API pubbliche, quindi, chiunque p
 
 **2. Autonomia**: i componenti componibili devono poter operare indipendentemente. Ogni contratto intelligente su Ethereum è auto-eseguibile e può funzionare senza affidarsi ad altre parti del sistema.
 
-**3. Scopribilità**: Gli sviluppatori non possono chiamare i contratti esterni o integrare librerie software nelle applicazioni se queste non sono disponibili pubblicamente. Di design, i contratti intelligenti sono open source; chiunque può chiamare un contratto intelligente o biforcare un codebase.
+**3. Rintracciabilità**: gli sviluppatori non possono chiamare i contratti esterni o integrare librerie software nelle applicazioni se queste non sono disponibili pubblicamente. Di design, i contratti intelligenti sono open source; chiunque può chiamare un contratto intelligente o biforcare un codebase.
 
 ## Vantaggi della componibilità {#benefits-of-composability}
 
 ### Ciclo di sviluppo più breve {#shorter-development-cycle}
 
-La componibilità riduce il lavoro degli sviluppatori per la creazione delle [dapp](/apps/#what-are-dapps). [Come dice Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "Open source significa che ogni problema va risolto una sola volta."
+La componibilità riduce il lavoro che gli sviluppatori devono fare durante la creazione di [dApp](/apps/#what-are-dapps). [Come dice Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "L'open source significa che ogni problema deve essere risolto una sola volta."
 
 Se esiste un contratto intelligente che risolve un problema, altri sviluppatori possono riutilizzarlo, così che non debbano risolvere lo stesso problema. In questo modo, gli sviluppatori possono utilizzare librerie software esistenti e aggiungere funzionalità supplementari per creare nuove dapp.
 
@@ -43,34 +43,34 @@ L'interoperabilità tra i componenti dell'ecosistema di Ethereum migliora l'espe
 
 Useremo un esempio dal trading d'arbitraggio per illustrare i benefici dell'interoperabilità:
 
-Se un token ha un valore maggiore sull'`exchange A` rispetto all'`exchange B`, puoi sfruttare la differenza di prezzo per ottenere un profitto. Tuttavia, puoi farlo solo se hai abbastanza capitale per finanziare la transazione (ovvero acquistando il token dall'`exchange B` e vendendolo sull'`exchange A`).
+Se un token è scambiato a un prezzo più alto sull'`exchange A` rispetto all'`exchange B`, puoi sfruttare la differenza di prezzo per ottenere un profitto. Tuttavia, puoi farlo solo se hai abbastanza capitale per finanziare la transazione (ovvero acquistando il token dall'`exchange B` e vendendolo sull'`exchange A`).
 
-In uno scenario in cui non hai fondi sufficienti per coprire lo scambio, un prestito flash potrebbe essere ideale. I [prestiti Flash](/defi/#flash-loans) sono altamente tecnici, ma l'idea di base è che puoi prendere in prestito risorse (senza garanzia) e restituirle entro _una_ transazione.
+In uno scenario in cui non hai fondi sufficienti per coprire lo scambio, un prestito flash potrebbe essere ideale. I [prestiti flash](/defi/#flash-loans) sono molto tecnici, ma l'idea di base è che puoi prendere in prestito asset (senza garanzie collaterali) e restituirli all'interno di _una_ transazione.
 
-Tornando al nostro esempio iniziale, un trader d'arbitraggio può assumere un grande prestito flash, acquistare i token dall'`exchange B`, venderli sull'`exchange A`, ripagare il capitale e gli interessi e conservare il profitto, il tutto nella stessa transazione. Questa logica complessa richiede la combinazione di chiamate a più contratti, che sarebbe impossibile se i contratti intelligenti mancassero di interoperabilità.
+Tornando al nostro esempio iniziale, un trader d'arbitraggio può contrarre un grosso prestito flash, acquistare token dall'`exchange B`, venderli sull'`exchange A`, rimborsare il capitale + gli interessi e trattenere il profitto, il tutto all'interno della stessa transazione. Questa logica complessa richiede la combinazione di chiamate a più contratti, che sarebbe impossibile se i contratti intelligenti mancassero di interoperabilità.
 
-## Esempi di componibilità su Ethereum {#composability-in-ethereum}
+## Esempi di componibilità in Ethereum {#composability-in-ethereum}
 
-### Scambio di token {#token-swaps}
+### Scambi di token {#token-swaps}
 
 Se crei una dapp che richiede il pagamento delle transazioni in ETH, puoi consentire agli utenti di pagare in altri token ERC-20 integrando la logica di scambio dei token. Il codice convertirà automaticamente il token dell'utente in ETH prima che il contratto esegua la funzione chiamata.
 
 ### Governance {#governance}
 
-Creare sistemi di governance su misura per una [DAO](/dao/) può essere costoso e richiedere tempo. Invece, potresti usare un kit di strumenti di governance open source, come [Aragon Client](https://client.aragon.org/), per spingere la tua DAO a creare rapidamente un quadro di governance.
+Creare sistemi di governance su misura per una [DAO](/dao/) può essere costoso e richiedere tempo. In alternativa, potresti usare un toolkit di governance open-source, come [Aragon Client](https://client.aragon.org/), per avviare la tua DAO e creare rapidamente un framework di governance.
 
 ### Gestione dell'identità {#identity-management}
 
-Invece di creare un sistema di autenticazione personalizzato o affidarti a fornitori centralizzati, puoi integrare strumenti di identità decentralizzata (DID) per gestire l'autenticazione per gli utenti. Un esempio è [SpruceID](https://www.spruceid.com/), un kit di strumenti open source che offre una funzionalità "Accedi con Ethereum" che consente agli utenti di autenticare le identità con un portafoglio di Ethereum.
+Invece di creare un sistema di autenticazione personalizzato o affidarti a fornitori centralizzati, puoi integrare strumenti di identità decentralizzata (DID) per gestire l'autenticazione per gli utenti. Un esempio è [SpruceID](https://www.spruceid.com/), un toolkit open-source che offre una funzionalità "Accedi con Ethereum" che permette agli utenti di autenticare le proprie identità con un portafoglio Ethereum.
 
-## Tutorial correlati {#related-tutorials}
+## Guide correlate {#related-tutorials}
 
-- [Avvia lo sviluppo del frontend della tua dapp con create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/)_: una panoramica di come utilizzare create-eth-app per creare app con popolari contratti intelligenti, pronti all'uso._
+- [Avvia lo sviluppo del frontend della tua dApp con create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Una panoramica su come usare create-eth-app per creare app con contratti intelligenti popolari pronti all'uso._
 
-## Lettura consigliate {#further-reading}
+## Letture consigliate {#further-reading}
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-- [Componibilità è Innovazione](https://future.a16z.com/how-composability-unlocks-crypto-and-everything-else/)
-- [Perché la componibilità conta per Web3](https://hackernoon.com/why-composability-matters-for-web3)
+- [La componibilità è innovazione](https://a16zcrypto.com/posts/article/how-composability-unlocks-crypto-and-everything-else/)
+- [Perché la componibilità è importante per il Web3](https://hackernoon.com/why-composability-matters-for-web3)
 - [Cos'è la componibilità?](https://blog.aragon.org/what-is-composability/#:~:text=Aragon,connect%20to%20every%20other%20piece.)
