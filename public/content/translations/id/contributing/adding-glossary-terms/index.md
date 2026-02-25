@@ -6,7 +6,7 @@ description: Kriteria kami untuk menambahkan istilah baru ke glosarium ethereum.
 
 # Menambahkan istilah glosarium {#contributing-to-ethereumorg-}
 
-Ruangan ini berubah setiap hari. Istilah baru terus dimasukkan ke dalam kamus pengguna Ethereum, dan kami membutuhkan bantuan Anda dalam menyediakan referensi yang akurat dan terbaru untuk semua hal yang berkaitan dengan Ethereum. Lihat [glosarium](/glossary/) saat ini dan lihat di bawah jika Anda ingin membantu!
+Ruangan ini berubah setiap hari. Istilah baru terus dimasukkan ke dalam kamus pengguna Ethereum, dan kami membutuhkan bantuan Anda dalam menyediakan referensi yang akurat dan terbaru untuk semua hal yang berkaitan dengan Ethereum. Lihat [glosarium](/glossary/) saat ini dan lihat di bawah ini jika Anda ingin membantu!
 
 ## Kriteria {#criteria}
 
@@ -23,4 +23,4 @@ Istilah glosarium baru akan dinilai berdasarkan kriteria sebagai berikut:
 
 ## Tambahkan istilah Anda {#how-decisions-about-the-site-are-made}
 
-Jika Anda ingin menambahkan istilah glosarium ke ethereum.org dan itu memenuhi kriteria, [buat isu di GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).
+Jika Anda ingin menambahkan istilah glosarium ke ethereum.org dan memenuhi kriteria, [buat masalah di GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).

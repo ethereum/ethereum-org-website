@@ -6,7 +6,7 @@ lang: id
 
 # Menambahkan sumber daya desain {#adding-design-resources}
 
-Siapa pun dapat menyarankan materi desain baru untuk [Desain dan UX di halaman web3](/developers/docs/design-and-ux/).
+Siapa pun dapat menyarankan materi desain baru ke [halaman Desain dan UX di web3](/developers/docs/design-and-ux/).
 
 Perlu diketahui bahwa fokus dari halaman ini adalah untuk memberikan nilai pengguna kepada para calon desainer web3. Bagian desain tidak ada untuk mengiklankan layanan, produk, atau platform Anda.
 
@@ -56,7 +56,7 @@ a. Tujuan utama dari artikel ini seharusnya adalah berbagi wawasan dan bukannya 
 
 a. Manfaat menjadi anggota harus ditampilkan dengan jelas.
 
-**Contoh**: menerima umpan balik tentang pekerjaan, mengakses peluang kerja atau hadiah, berbagi wawasan desain dan penelitian.
+**Contoh**: menerima umpan balik tentang pekerjaan, mengakses peluang kerja atau hadiah bounty, berbagi wawasan desain dan penelitian.
 
 3. Komunikasi yang Aktif dan Bersemangat di Discord
 

@@ -10,39 +10,57 @@ lang: id
 
 Apakah Anda sedang mencari dukungan resmi Ethereum? Hal pertama yang harus Anda ketahui adalah bahwa Ethereum bersifat terdesentralisasi. Ini berarti tidak ada organisasi, entitas, atau orang sentral yang memiliki Ethereum, dan karena ini, tidak ada kanal dukungan resmi.
 
-Memahami sifat terdesentralisasi Ethereum sangat penting karena siapa pun yang mengklaim sebagai pemberi dukungan resmi Ethereum mungkin sedang mencoba menipu Anda! Perlindungan terbaik terhadap para penipu adalah mengedukasi diri Anda sendiri dan memperhatikan aspek keamanan dengan serius.
+Memahami sifat desentralisasi Ethereum sangat penting karena **siapa pun yang mengaku sebagai dukungan resmi untuk Ethereum kemungkinan besar mencoba menipu Anda!** Perlindungan terbaik terhadap para penipu adalah dengan mendidik diri Anda sendiri dan menjaga keamanan dengan serius.
 
 <DocLink href="/security/">
-  Keamanan dan pencegahan penipuan Ethereum
+  Keamanan Ethereum dan pencegahan penipuan
 </DocLink>
 
 <DocLink href="/learn/">
-  Pelajari tentang fundamental Ethereum
+  Pelajari fundamental Ethereum
 </DocLink>
 
-Sekalipun kurang adanya dukungan resmi, banyak kelompok, komunitas, dan proyek di keseluruhan ekosistem Ethereum senang memberikan bantuan.
+Meskipun tidak ada dukungan resmi, banyak kelompok, komunitas, dan proyek di seluruh ekosistem Ethereum bersedia membantu, dan Anda dapat menemukan banyak informasi dan sumber daya bermanfaat di halaman ini. Masih ada pertanyaan? Bergabunglah dengan [Discord ethereum.org](https://discord.gg/ethereum-org), dan kami akan mencoba membantu.
 
-## Dukungan dompet {#wallet-support}
+## Pertanyaan yang sering diajukan {#faq}
 
-Mengalami masalah dengan dompet Anda? Kebanyakan dompet telah mendedikasikan tim dukungan yang dapat menolong:
+### Saya telah mengirim ETH ke dompet yang salah {#wrong-wallet}
 
-- [MetaMask](https://metamask.zendesk.com/hc/)
-- [Argent](https://support.argent.xyz/hc/)
-- [MyEtherWallet](https://help.myetherwallet.com/)
+Transaksi yang dikirimkan di Ethereum tidak dapat dibalikkan. Sayangnya, jika Anda telah mengirim ETH ke dompet yang salah, tidak ada cara untuk mendapatkan kembali dana ini. Tidak ada satu organisasi, entitas, atau orang sentral yang memiliki Ethereum, yang berarti tidak ada satu pun yang dapat membalikkan transaksi. Oleh karena itu, sangat penting untuk selalu memeriksa ulang transaksi Anda sebelum mengirimkannya.
 
-_Ini bukanlah daftar yang lengkap. Perlu bantuan menemukan bantuan untuk dompet yang khusus? Bergabunglah dengan [discord ethereum.org](https://discord.gg/ethereum-org) dan kami akan mencoba menolong Anda._
+### Bagaimana saya dapat mengklaim hadiah Ethereum? {#giveaway-scam}
 
-Sedang mencari dompet Ethereum? [Jelajahi daftar lengkap dompet Ethereum kami](/wallets/find-wallet/).
+Hadiah Ethereum adalah penipuan yang dirancang untuk mencuri ETH Anda. Jangan tergoda dengan penawaran yang tampak terlalu menggiurkan — jika Anda mengirim ETH ke suatu alamat hadiah, Anda tidak akan menerima hadiah, dan Anda tidak akan dapat mendapatkan dana Anda kembali.
+
+[Selengkapnya tentang pencegahan penipuan](/security/#common-scams)
+
+### Transaksi saya macet {#stuck-transaction}
+
+Transaksi di Ethereum dapat terkadang mengalami kemacetan jika Anda telah mengirimkan biaya transaksi yang lebih rendah dari yang diharuskan karena permintaan jaringan. Banyak dompet menyediakan opsi untuk mengirimkan kembali transaksi yang sama dengan biaya transaksi yang lebih tinggi untuk memungkinkan transaksi diproses. Sebagai alternatif, Anda dapat membatalkan transaksi berstatus tunggu dengan mengirimkan transaksi ke alamat Anda sendiri dan menggunakan nonce yang sama sebagai transaksi berstatus tunggu.
+
+[Cara mempercepat atau membatalkan transaksi yang tertunda di MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
+
+[Cara membatalkan transaksi Ethereum yang tertunda](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+
+### Bagaimana cara menambang Ethereum? {#mining-ethereum}
+
+Penambangan Ethereum tidak lagi memungkinkan. Penambangan dinonaktifkan ketika Ethereum beralih dari [bukti kerja](/glossary/#pow) ke [bukti taruhan](/glossary/#pos). Sekarang, Ethereum memiliki validator, bukan penambang. Siapa pun dapat [melakukan penaruhan](/glossary/#staking) ETH dan menerima imbalan penaruhan dengan menjalankan perangkat lunak validator untuk mengamankan jaringan.
+
+### Bagaimana cara menjadi staker / menjalankan validator? {#how-to-stake}
+
+Untuk menjadi seorang validator, Anda harus memasang taruhan 32 ETH di kontrak deposit Ethereum dan mengatur simpul validator. Informasi lebih lanjut tersedia di [halaman penaruhan](/staking) kami dan di [landasan peluncuran penaruhan](https://launchpad.ethereum.org/).
 
 ## Membangun dapps {#building-support}
 
 Membangun dapat bisa saja sulit. Berikut adalah beberapa lingkungan yang berfokus pengembangan dengan para pengembang Ethereum berpengalaman yang senang memberikan bantuan.
 
-- [Discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
-- [StackExchange Ethereum](https://ethereum.stackexchange.com/)
-- [Universitas Web3](https://www.web3.university/)
+- [Alchemy University](https://university.alchemy.com/#starter_code)
+- [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
+- [Ethereum StackExchange](https://ethereum.stackexchange.com/)
+- [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
-Anda juga dapat menemukan dokumentasi dan panduan pengembangan di bagian [Sumber pengembang Ethereum](/developers/) kami.
+Anda juga dapat menemukan dokumentasi dan panduan pengembangan di bagian [sumber daya pengembang Ethereum](/developers/) kami.
 
 ### Perangkat {#dapp-tooling}
 
@@ -55,13 +73,14 @@ Berikut adalah beberapa contoh populer:
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
-## Menjalankan node {#node-support}
+## Menjalankan simpul {#node-support}
 
 Jika Anda menjalankan node atau validator, berikut adalah beberapa komunitas yang dikhususkan untuk menolong Anda memulai.
 
-- [Discord EthStaker](https://discord.gg/ethstaker)
-- [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
+- [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 Kebanyakan tim yang membangun klien Ethereum juga telah mendedikasikan lingkungan untuk publik di mana Anda dapat mendapatkan dukungan dan mengajukan pertanyaan.
 
@@ -71,6 +90,7 @@ Kebanyakan tim yang membangun klien Ethereum juga telah mendedikasikan lingkunga
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Klien konsensus {#consensus-clients}
 
@@ -79,29 +99,6 @@ Kebanyakan tim yang membangun klien Ethereum juga telah mendedikasikan lingkunga
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
-Anda juga dapat [mempelajari cara menjalankan node di sini](/developers/docs/nodes-and-clients/run-a-node/).
-
-## Pertanyaan yang sering diajukan {#faq}
-
-### Saya telah mengirim ETH ke dompet yang salah {#wrong-wallet}
-
-Transaksi yang dikirimkan di Ethereum tidak dapat dibalikkan. Sayangnya, jika Anda telah mengirim ETH ke dompet yang salah, tidak ada cara untuk mendapatkan kembali dana ini. Tidak ada satu organisasi, entitas, atau orang sentral yang memiliki Ethereum, yang berarti tidak ada satu pun yang dapat membalikkan transaksi. Oleh karena itu, sangat penting untuk selalu memeriksa ulang transaksi Anda sebelum mengirimkannya.
-
-### Bagaimana saya dapat mengklaim hadiah Ethereum? {#giveaway-scam}
-
-Hadiah Ethereum adalah penipuan yang dirancang untuk mencuri ETH Anda. Jangan tergoda dengan penawaran yang tampak terlalu menggiurkan — jika Anda mengirim ETH ke suatu alamat hadiah, Anda tidak akan menerima hadiah, dan Anda tidak akan dapat mendapatkan dana Anda kembali.
-
-[Lebih lanjut tentang pencegahan penipuan](/security/#common-scams)
-
-### Transaksi saya macet {#stuck-transaction}
-
-Transaksi di Ethereum dapat terkadang mengalami kemacetan jika Anda telah mengirimkan biaya transaksi yang lebih rendah dari yang diharuskan karena permintaan jaringan. Banyak dompet menyediakan opsi untuk mengirimkan kembali transaksi yang sama dengan biaya transaksi yang lebih tinggi untuk memungkinkan transaksi diproses. Sebagai alternatif, Anda dapat membatalkan transaksi berstatus tunggu dengan mengirimkan transaksi ke alamat Anda sendiri dan menggunakan nonce yang sama sebagai transaksi berstatus tunggu.
-
-[Cara mempercepat atau membatalkan transaksi berstatus tunggu di MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
-
-[Cara membatalkan transaksi Ethereum berstatus tunggu](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
-
-### Bagaimana cara menambang Ethereum? {#mining-ethereum}
-
-Kami tidak menyarankan membeli peralatan menambang jika Anda belum menambang Ethereum. Di ~Q3/Q4 2022, [penggabungan](/roadmap/merge/) akan terjadi, yang mengalihkan Ethereum dari bukti kerja ke bukti taruhan. Perubahan ini berarti menambang Ethereum tidak akan mungkin lagi.
+Anda juga dapat [mempelajari cara menjalankan simpul di sini](/developers/docs/nodes-and-clients/run-a-node/).

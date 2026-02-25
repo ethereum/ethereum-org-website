@@ -16,16 +16,16 @@ Halaman ini memungkinkan pengguna untuk memasukkan di mana mereka tinggal dan me
 
 Karena konteks ini, kami memerlukan beberapa informasi spesifik ketika Anda menyarankan suatu bursa.
 
-**CATATAN:** Jika Anda ingin merinci suatu bursa terdesentralisasi, lihatlah [kebijakan kami terkait dengan merinci dompet dan dapp](/contributing/adding-products/).
+**CATATAN:** Jika Anda ingin mendaftarkan bursa terdesentralisasi, lihat [kebijakan kami untuk mendaftarkan dompet dan dapps](/contributing/adding-products/).
 
-## Apa yang kami butuhkan {#what-we-need}
+## Yang kami butuhkan {#what-we-need}
 
 - Batasan geografis yang berlaku untuk bursanya. Pembatasan geografis terkait dengan bursa harus dijelaskan di halaman atau bagian khusus di situs web bursa tersebut.
 - Mata uang yang dapat digunakan pengguna untuk membeli ETH
 - Bukti bahwa bursa tersebut adalah perusahaan dagang yang sah
 - Informasi tambahan apa pun yang mungkin Anda miliki – ini dapat merupakan informasi tentang perusahaan seperti tahun operasi, dukungan pendanaan dll.
 
-Kami memerlukan info ini sehingga kami dapat secara tepat [menolong pengguna menemukan bursa yang dapat mereka gunakan](/get-eth/#country-picker).
+Kami memerlukan info ini agar kami dapat secara akurat [membantu pengguna menemukan bursa yang dapat mereka gunakan](/get-eth/#country-picker).
 
 Dan supaya ethereum.org dapat semakin yakin bahwa bursa tersebut adalah layanan yang sah dan aman.
 
@@ -35,6 +35,4 @@ Dan supaya ethereum.org dapat semakin yakin bahwa bursa tersebut adalah layanan 
 
 Jika Anda ingin menambahkan suatu bursa ke ethereum.org, buatlah isu di GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-  Buat isu
-</ButtonLink>
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">  Buat masalah</ButtonLink>
