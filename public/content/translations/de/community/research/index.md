@@ -1,6 +1,6 @@
 ---
 title: Aktive Bereiche der Ethereum-Forschung
-description: Machen Sie sich mit den verschiedenen Bereichen der offenen Forschung vertraut und erfahren Sie, wie auch Sie sich beteiligen können.
+description: "Machen Sie sich mit den verschiedenen Bereichen der offenen Forschung vertraut und erfahren Sie, wie auch Sie sich beteiligen können."
 lang: de
 ---
 
@@ -57,7 +57,7 @@ Die Ausführungsebene beschäftigt sich damit, Transaktionen auszuführen, die [
 
 - Unterstützung von leichten Clients etablieren
 - Gas-Limits untersuchen
-- Neue Datenstrukturen (z. B. Verkle-Bäume) etablieren
+- und die Einbindung neuer Datenstrukturen (z. B. Verkle-Tries).
 
 #### Hintergrundlektüre {#background-reading-1}
 
@@ -111,7 +111,7 @@ Es gibt jetzt mehrere Ebene-2-Protokolle, die Ethereum skalieren und dabei versc
 #### Aktuelle Forschung {#recent-research-2}
 
 - [Das Fair-Ordering für Sequencer von Arbitrum](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch – Ebene 2](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
 - [Rollup-zentrierte Roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -128,7 +128,7 @@ Sichere und leistungsfähige Brücken sind ein spezifischer Bereich der Ebene 2,
 
 #### Aktuelle Forschung {#recent-research-3}
 
-- [Validierung von Brücken] (https://stonecoldpat.github.io/images/validatingbridges.pdf)
+- [Validierung von Brücken](https://stonecoldpat.github.io/images/validatingbridges.pdf)
 
 ### Sharding {#sharding}
 
@@ -189,13 +189,13 @@ Ethereum-Wallets können Browsererweiterungen, Desktop- und Handyapps oder Smart
 
 - [Einführung in Wallets](/wallets/)
 - [Einführung in die Sicherheit von Wallets](/security/)
-- [ethresear.ch – Sicherheit](https://ethresear.ch/tag/security)
+- [Ethresear.ch Sicherheit](https://ethresear.ch/tag/security)
 - [EIP-2938 Kontoabstraktion](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 Kontoabstraktion](https://eips.ethereum.org/EIPS/eip-4337)
 
 #### Aktuelle Forschung {#recent-research-7}
 
-- [Validierungsorientierte Smart-Contract-Wallets] (https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [Validierungsorientierte Smart-Contract-Wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [Die Zukunft von Konten](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [EIP-3074: AUTH- und AUTHCALL-Opcodes](https://eips.ethereum.org/EIPS/eip-3074)
 - [Veröffentlichung von Code unter einer EOA-Adresse](https://eips.ethereum.org/EIPS/eip-5003)
@@ -262,11 +262,11 @@ Validatoren nutzen Ethereums natives Asset (Ether) als Sicherheit vor unehrliche
 #### Aktuelle Forschung {#recent-research-11}
 
 - [Erhöhung der Zensurresistenz von Transaktionen im Rahmen der Proposer-Builder-Trennung (PBS)](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
-- [Drei Angriffe auf PoS-Ethereum] (https://arxiv.org/abs/2110.10086)
+- [Drei Angriffe auf PoS-Ethereum](https://arxiv.org/abs/2110.10086)
 
 ### Liquid Staking und Derivate {#liquid-staking-and-derivatives}
 
-Liquid Staking erlaubt Benutzern mit weniger als 32 ETH Stakingerträge zu erhalten, indem sie Ether für einen Token austauschen, der gestaktes Ether darstellt und in DeFi verwendet werden kann. Jedoch müssen die Anreize und Marktdynamiken, die mit Liquid Staking verbunden sind, noch erkundet werden. Es müssen zudem noch die Effekte, die Liquid Staking auf Ethereums Sicherheit hat (z. B. Zentralisierungsrisiken), gefunden werden.
+Liquid Staking erlaubt Benutzern mit weniger als 32 ETH Stakingerträge zu erhalten, indem sie Ether für einen Token austauschen, der gestaktes Ether darstellt und in DeFi verwendet werden kann. Allerdings werden die mit Liquid Staking verbundenen Anreize und Marktdynamiken sowie dessen Auswirkungen auf die Sicherheit von Ethereum (z. B. Zentralisierungsrisiken) noch erforscht.
 
 #### Hintergrundlektüre {#background-reading-12}
 
@@ -276,7 +276,7 @@ Liquid Staking erlaubt Benutzern mit weniger als 32 ETH Stakingerträge zu erhal
 
 #### Aktuelle Forschung {#recent-research-12}
 
-- [Abwicklung von Abhebungen von Lido] (https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
+- [Abwicklung von Abhebungen von Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
 - [Anmeldeinformationen für Abhebungen](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
 - [Die Risiken von Liquid Staking-Derivaten](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
@@ -338,7 +338,7 @@ Ein bedeutender Anwendungsfall von Ethereum ist die Möglichkeit der Organisieru
 
 #### Aktuelle Forschung {#recent-research-16}
 
-- [Zuordnung des DAO-Ökosystems] (https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
+- [Zuordnung des DAO-Ökosystems](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
 
 ### Entwicklerwerkzeuge {#developer-tools}
 
@@ -358,11 +358,11 @@ Die Tools für Ethereum-Entwickler verbessern sich rasant. Dieser Bereich bietet
 
 ### Orakel {#oracles}
 
-Orakel importieren Off-Chain-Daten in die Blockchain auf eine genehmigungsfreie und dezentrale Art. Diese Daten auf die Chain zu bekommen, schafft für dApps die Grundlage, auf Phänomene aus der realen Welt zu reagieren. Dazu gehören Preisveränderungen von Assets der echten Welt, Ereignisse in Off-Chain-Apps und sogar Wetterveränderungen.
+Orakel importieren Offchain-Daten genehmigungsfrei und dezentral auf die Blockchain. Diese Onchain-Daten ermöglichen es Dapps, auf reale Phänomene wie Preisschwankungen von realen Vermögenswerten, Ereignisse in Offchain-Apps oder sogar Wetteränderungen zu reagieren.
 
 #### Hintergrundlektüre {#background-reading-18}
 
-- [Einführung in Oracles](/Entwickler/Dok/Orakel/)
+- [Einführung in Oracles](/developers/docs/oracles/)
 
 #### Aktuelle Forschung {#recent-research-18}
 
@@ -377,11 +377,11 @@ Bei Angriffen auf Ethereum werden meist Schwachstellen von bestimmten Anwendunge
 
 - [Bericht zur Wormhole-Sicherheitslücke](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Liste der Nachbetrachtungen von Ethereum-Vertrags-Hacks](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Aktuelle Forschung {#recent-research-19}
 
-- [ethresear.ch – Anwendungen](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch Anwendungen](https://ethresear.ch/c/applications/18)
 
 ### Technologie-Stack {#technology-stack}
 
