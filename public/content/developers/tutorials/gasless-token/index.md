@@ -59,6 +59,8 @@ This way, we can provide a gasless way for an account to hold assets (tokens, et
 
     ![Screen capture with opaque calldata](./fig-1-opaque-calldata.png)
 
+12. After the transaction is confirmed, wait to see the change in both *your balance* and *proxy balance*. Note that this will also take some time, because Sepolia has a block time of 12 seconds.
+
 ## How it works {#how-work}
 
 ### The wallet samrt contract {#wallet-smart-contract}
