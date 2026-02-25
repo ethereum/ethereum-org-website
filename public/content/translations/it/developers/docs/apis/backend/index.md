@@ -111,7 +111,7 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 
 **Strumenti Python -** **_Diverse librerie per interagire con Ethereum tramite Python_**
 
-- [py.ethereum.org](https://python.ethereum.org/)
+- [py.ethereum.org](https://snakecharmers.ethereum.org)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
