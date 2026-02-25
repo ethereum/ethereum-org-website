@@ -1,6 +1,6 @@
 ---
-title: Web3シークレットストレージの定義
-description: Web3シークレットストレージの正式な定義
+title: "Web3シークレットストレージの定義"
+description: "Web3シークレットストレージの正式な定義"
 lang: ja
 sidebarDepth: 2
 ---
