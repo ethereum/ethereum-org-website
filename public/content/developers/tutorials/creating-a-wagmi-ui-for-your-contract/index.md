@@ -106,10 +106,10 @@ Create the root React component. The parameter to `render` is [JSX](https://www.
 The application is going inside [a `React.StrictMode` component](https://react.dev/reference/react/StrictMode). This component tells the React library to insert additional debugging checks, which is useful during development.
 
 ```tsx
-    <WagmiConfig config={config}>
+    <WagmiProvider config={config}>
 ```
 
-The application is also inside [a `WagmiConfig` component](https://wagmi.sh/react/api/WagmiProvider). [The wagmi (we are going to make it) library](https://wagmi.sh/) connects the React UI definitions with [the viem library](https://viem.sh/) for writing an Ethereum decentralized application.
+The application is also inside [a `WagmiProvider` component](https://wagmi.sh/react/api/WagmiProvider). [The wagmi (we are going to make it) library](https://wagmi.sh/) connects the React UI definitions with [the viem library](https://viem.sh/) for writing an Ethereum decentralized application.
 
 ```tsx
       <QueryClientProvider client={queryClient}>
@@ -124,8 +124,8 @@ And finally, add a React Query provider so any application component can use cac
 Now we can have the component for the application, which actually implements the UI. The `/>` at the end of the component tells React that this component doesn't have any definitions inside it, as per the XML standard.
 
 ```tsx
-      </RainbowKitProvider>
-    </WagmiConfig>
+      </QueryClientProvider>
+    </WagmiProvider>
   </React.StrictMode>,
 )
 ```
@@ -381,7 +381,7 @@ We need to have state (a variable tied to the component) and update it for the c
   }, [])
 ```
 
-The [`setInterval`](https://www.w3schools.com/jsref/met_win_setinterval.asp) function lets us schedule a function to run periodically. In this case, every second. The function calls `setNow` to update the state, so the `Timer` component will be re-rendered. We wrap this inside [`useEffect`](https://react.dev/reference/react/useEffect) with an empty dependency list so it'll happen just once, rather than each time to component is rendered.
+The [`setInterval`](https://www.w3schools.com/jsref/met_win_setinterval.asp) function lets us schedule a function to run periodically. In this case, every second. The function calls `setNow` to update the state, so the `Timer` component will be re-rendered. We wrap this inside [`useEffect`](https://react.dev/reference/react/useEffect) with an empty dependency list so it'll happen just once, rather than each time the component is rendered.
 
 ```tsx
   const secondsSinceUpdate = Math.floor(
@@ -661,7 +661,7 @@ To communicate with the blockchain, we will try each access URL in turn. We can 
 
 ## Adding another blockchain {#add-blockchain}
 
-These days there are a lot of [L2 scaling solution](https://ethereum.org/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Optimism Sepolia](https://chainlist.org/chain/11155420).
+These days there are a lot of [L2 scaling solutions](https://ethereum.org/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Optimism Sepolia](https://chainlist.org/chain/11155420).
 
 1. Edit `src/wagmi.ts`
 
@@ -718,7 +718,7 @@ These days there are a lot of [L2 scaling solution](https://ethereum.org/layer-2
         })
         ```
 
-2. Edit `src/App.tsx` to comment out the automatic switch to Sepolia. On a production system, you'd probably show buttons for users to links to each of the blockchains you support.
+2. Edit `src/App.tsx` to comment out the automatic switch to Sepolia. On a production system, you'd probably show buttons with links to each of the blockchains you support.
 
     ```ts
     /*
@@ -744,7 +744,7 @@ These days there are a lot of [L2 scaling solution](https://ethereum.org/layer-2
     }
     ```
 
-3. In your browser.
+4. In your browser.
 
     A. Browse to [ChainList](https://chainlist.org/chain/11155420?testnets=true) and click one of buttons on the right side of the table to add the chain to your wallet.
 
