@@ -36,7 +36,7 @@ zkEVM verification transforms block validation into a "1-of-N" model:
 
 The security guarantee remains the same: if the execution was incorrect, no valid proof can be generated. But now, instead of every node doing expensive computation, only the prover does—and verification is cheap enough that it doesn't constrain the gas limit.
 
-### What is a Type 1 zkEVM? {#type-1-zkevm}
+### Type 1 zkEVMs {#type-1-zkevm}
 
 zkEVMs are classified into types based on their compatibility with Ethereum:
 
@@ -56,6 +56,8 @@ When verification is cheap, the gas limit can safely increase. This expands netw
 ### Stronger decentralization {#stronger-decentralization}
 
 With zkEVM verification, validators only need to verify proofs rather than execute transactions. This dramatically lowers the hardware requirements for running a validator, enabling more people to participate in securing the network. Greater validator diversity strengthens Ethereum's censorship resistance and resilience.
+
+Note that proving itself requires significant computational resources, greater than current validator hardware. However, unlike validation, proving does not need to be decentralized in the same way: only one correct proof is needed per block, and anyone can verify it quickly. Research into prover markets, proof aggregation, and hardware acceleration aims to ensure that proving remains competitive and accessible rather than concentrated among a few large operators.
 
 ### Predictable finality {#predictable-finality}
 
@@ -84,15 +86,15 @@ The Ethereum Foundation funds zkEVM research through the [Privacy Stewards of Et
 
 Several zkVM implementations are being developed and tested for Ethereum block proving:
 
-| Implementation | Architecture | Test Status |
-|----------------|--------------|-------------|
-| [OpenVM](https://github.com/openvm-org/openvm) | rv32im | 47/47 passing |
-| [RISC0](https://github.com/risc0/risc0) | rv32im | 47/47 passing |
-| [Airbender](https://github.com/matter-labs/era-boojum) | rv32im | 46/47 passing |
-| [Jolt](https://github.com/a16z/jolt) | rv32im | 47/47 passing |
-| [Zisk](https://github.com/0xPolygonHermez/zisk) | rv64ima | 82/82 passing |
+| Implementation | Architecture |
+|----------------|--------------|
+| [OpenVM](https://github.com/openvm-org/openvm) | rv32im |
+| [RISC0](https://github.com/risc0/risc0) | rv32im |
+| [Airbender](https://github.com/matter-labs/zksync-airbender) | rv32im |
+| [Jolt](https://github.com/a16z/jolt) | rv32im |
+| [Zisk](https://github.com/0xPolygonHermez/zisk) | rv64ima |
 
-These implementations use RISC-V based virtual machines to execute EVM bytecode, then generate ZK proofs of correct execution. Progress is tracked at the [zkEVM Foundation's tracker](https://zkevm.ethereum.foundation/zkvm-tracker).
+These use RISC-V based virtual machines to execute EVM bytecode, then generate ZK proofs of correct execution. Up-to-date test results and progress are tracked at the [Ethereum Foundation's zkVM tracker](https://zkevm.ethereum.foundation/zkvm-tracker).
 
 ## How zkEVM fits with other upgrades {#related-upgrades}
 
@@ -103,19 +105,19 @@ zkEVM L1 verification connects with several other Ethereum roadmap items:
 - **[PBS](/roadmap/pbs/)**: Block builders could potentially integrate proof generation, or a separate prover market could emerge
 - **[Single Slot Finality](/roadmap/single-slot-finality/)**: Faster proof generation could enable single-slot finality with cryptographic guarantees
 
-## Current progress {#current-progress}
-
-zkEVM L1 verification is in active research. Key milestones:
-
-- Multiple zkVM implementations passing comprehensive test suites
-- Research into real-time proving approaches
-- Client integration specifications being developed
-
-This technology is not yet integrated into production Ethereum clients. Full Mainnet deployment is expected to take several years as proving speeds improve and the technology matures.
+<Alert variant="warning">
+<AlertEmoji text="🧪" />
+<AlertContent>
+<AlertDescription>
+zkEVM L1 verification is in active research and not yet integrated into production Ethereum clients.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Further reading {#further-reading}
 
 - [zkEVM Foundation](https://zkevm.ethereum.foundation) - Official Ethereum Foundation zkEVM research hub
+- [Ethproofs](https://ethproofs.org/) - Track the race to prove Ethereum in real-time
 - [zkevm.fyi](https://zkevm.fyi) - Technical book on zkEVM for L1
 - [PSE zkEVM Specs](https://github.com/privacy-scaling-explorations/zkevm-specs) - Technical specifications
 - [The Verge](https://vitalik.eth.limo/general/2024/10/23/futures4.html) - Vitalik's overview of verification improvements
