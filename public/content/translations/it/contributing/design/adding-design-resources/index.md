@@ -1,6 +1,6 @@
 ---
 title: Aggiungere risorse di progettazione
-description: Linee guida e requisiti per assicurare la qualità dei materiali di progettazione su ethereum.org
+description: "Linee guida e requisiti per assicurare la qualità dei materiali di progettazione su ethereum.org"
 lang: it
 ---
 

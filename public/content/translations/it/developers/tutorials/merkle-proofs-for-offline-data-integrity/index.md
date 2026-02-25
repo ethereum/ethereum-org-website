@@ -1,6 +1,6 @@
 ---
-title: Prove di Merkle per l'integrità dei dati offline
-description: Garantire l'integrità dei dati sulla catena per i dati memorizzati principalmente al di fuori di essa
+title: "Prove di Merkle per l'integrità dei dati offline"
+description: "Garantire l'integrità dei dati sulla catena per i dati memorizzati principalmente al di fuori di essa"
 author: Ori Pomerantz
 tags:
   - "archiviazione"
@@ -33,7 +33,7 @@ L'hash principale è l'unica parte che deve essere memorizzata sulla catena. Per
 
 [Il campione di codice è disponibile qui](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Codice esterno alla catena {#off-chain-code}
+### Codice esterno alla catena {#offchain-code}
 
 In questo articolo usiamo JavaScript per i calcoli al di fuori della catena. Gran parte delle app decentralizzate hanno i propri componenti esterni alla catena su JavaScript.
 
@@ -163,7 +163,7 @@ Eseguiamo l'hashing di `(v[0],v[1])`, `(v[2],v[3])`, ecc. Quindi per i valori pa
 }   // getMerkleProof
 ```
 
-### Codice on-chain {#on-chain-code}
+### Codice on-chain {#onchain-code}
 
 Finalmente abbiamo il codice che verifica la prova. Il codice on-chain è scritto in [Solidity](https://docs.soliditylang.org/en/v0.8.11/). L'ottimizzazione è molto più importante qui, perché il gas è relativamente costoso.
 
