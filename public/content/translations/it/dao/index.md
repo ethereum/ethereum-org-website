@@ -1,11 +1,11 @@
 ---
-title: Cos'è una DAO?
-metaTitle: Cos'è una DAO? | Organizzazione autonoma decentralizzata
+title: "Cos'è una DAO?"
+metaTitle: "Cos'è una DAO? | Organizzazione autonoma decentralizzata"
 description: Una panoramica delle DAO su Ethereum
 lang: it
 template: use-cases
 emoji: ":handshake:"
-sidebarDepth: 3
+sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: Rappresentazione di una votazione DAO su una proposta.
 summaryPoint1: Community posseduta dai membri, prive di leadership centralizzata.
@@ -19,7 +19,7 @@ Una DAO è un'organizzazione posseduta collettivamente che opera per realizzare 
 
 Le DAO ci consentono di lavorare con persone con la stessa mentalità provenienti da tutto il mondo, senza doversi fidare di un capo benevolo, per la gestione di fondi od operazioni. Non esiste alcun CEO che possa spendere i fondi secondo i propri capricci, o CFO che possa manipolare i libri contabili. Invece, le regole basate sulla blockchain, integrate nel codice, definiscono il funzionamento dell'organizzazione e come vengono spesi i fondi.
 
-Contengono delle tesoriere integrate, a cui nessuno ha l'autorità di accedere senza l'approvazione del gruppo. Le decisioni sono governate da proposte e votazioni, per assicurarsi che tutti nell'organizzazione abbiano voce in capitolo, e che tutto si verifichi in modo trasparente [sulla catena](/glossary/#on-chain).
+Contengono delle tesoriere integrate, a cui nessuno ha l'autorità di accedere senza l'approvazione del gruppo. Le decisioni sono governate da proposte e votazioni, per assicurarsi che tutti nell'organizzazione abbiano voce in capitolo, e che tutto si verifichi in modo trasparente [sulla catena](/glossary/#onchain).
 
 ## Perché abbiamo bisogno delle DAO? {#why-dao}
 
@@ -70,9 +70,7 @@ Ci sono molte considerazioni da fare governando una DAO, ad esempio, come funzio
 
 Una delegazione è la versione della democrazia rappresentativa della DAO. I titolari di token delegano i voti agli utenti da loro stessi nominati e si impegnano a gestire il protocollo e a rimanere informati.
 
-#### Un celebre esempio {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – I titolari di ENS possono delegare i propri voti a membri impegnati della community perché li rappresentino.
+#### Un celebre esempio {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – I titolari di ENS possono delegare i propri voti a membri impegnati della community perché li rappresentino.
 
 ### Governance automatica delle transazioni {#governance-example}
 

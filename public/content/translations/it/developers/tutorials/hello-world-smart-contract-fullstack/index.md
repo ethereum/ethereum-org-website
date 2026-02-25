@@ -628,8 +628,6 @@ ETHERSCAN_API_KEY = "your-etherscan-key"
 
 ### Contratti intelligenti distribuiti su Hardhat {#hardhat-deployed-smart-contracts}
 
-
-
 #### Installa hardhat-etherscan {#install-hardhat-etherscan}
 
 Pubblicare i tuoi contratti su Ethereum usando Hardhat è semplice. Per iniziare è necessario installare il plugin `hardhat-etherscan`. `hardhat-etherscan` verificherà automaticamente il codice sorgente e la ABI del contratto intelligente su Etherscan. Per aggiungerlo, esegui dalla cartella `hello-world`:
@@ -903,8 +901,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 
