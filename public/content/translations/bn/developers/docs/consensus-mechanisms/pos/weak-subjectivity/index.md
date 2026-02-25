@@ -33,7 +33,7 @@ lang: bn
 ## আরও পড়ুন {#further-reading}
 
 - [Eth2-তে দুর্বল বিষয়গততা](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
-- [ভিটালিক: আমি কীভাবে দুর্বল বিষয়গততাকে ভালোবাসতে শিখলাম](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
+- [ভিটালিক: আমি কীভাবে দুর্বল বিষয়গততাকে ভালোবাসতে শিখলাম](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)
 - [দুর্বল বিষয়গততা (Teku ডক্স)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
 - [ফেজ-0 দুর্বল বিষয়গততা নির্দেশিকা](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [ইথেরিয়াম 2.0-তে দুর্বল বিষয়গততার বিশ্লেষণ](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

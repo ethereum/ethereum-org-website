@@ -30,10 +30,10 @@ Puoi trovare utili guide e strumenti per i traduttori di ethereum.org, nonché l
 
 Per mantenerti aggiornato sui più recenti progressi del programma di traduzione, puoi seguire il [blog della Ethereum Foundation](https://blog.ethereum.org/):
 
-- [Aggiornamento sui traguardi di ottobre 2021](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Aggiornamento sui traguardi di dicembre 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Aggiornamento sui traguardi di luglio 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Lancio del programma di traduzione, agosto 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Aggiornamento sui traguardi di ottobre 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Aggiornamento sui traguardi di dicembre 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Aggiornamento sui traguardi di luglio 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Lancio del programma di traduzione, agosto 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Orario d'ufficio per traduttori {#office-hours}
 

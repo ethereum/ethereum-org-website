@@ -168,7 +168,7 @@ DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/lear
 - [加入以太坊研发 Discord](https://discord.gg/mncqtgVSVw)
 - [运行一个节点](/developers/docs/nodes-and-clients/run-a-node/)
 - [为客户端开发做贡献](/developers/docs/nodes-and-clients/#execution-clients)
-- [核心开发者学徒计划](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [核心开发者学徒计划](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## 扩展阅读{#further-reading}
 

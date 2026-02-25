@@ -106,7 +106,7 @@ La Fusione è stata accompagnata da modifiche al consenso, incluse anche modific
   <li>concetto di <em>testa sicura</em> e <em>blocchi finalizzati</em></li>
 </ul>
 
-Per ulteriori informazioni, consulta questo post del blog di Tim Beiko su <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Come La Fusione Influenza il Livello d'Applicazione di Ethereum</a>.
+Per ulteriori informazioni, consulta questo post del blog di Tim Beiko su <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Come La Fusione Influenza il Livello d'Applicazione di Ethereum</a>.
 
 </ExpandableCard>
 
@@ -194,7 +194,7 @@ Per limitare la confusione, la community ha aggiornato questi termini:
 
 Questi aggiornamenti della terminologia cambiano solo le convenzioni di nomenclatura, senza alterare gli obiettivi né la tabella di marcia di Ethereum.
 
-[Scopri di più sulla rinominazione di 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Scopri di più sulla rinominazione di 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Relazione tra gli aggiornamenti {#relationship-between-upgrades}
 

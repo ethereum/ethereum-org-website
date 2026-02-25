@@ -106,7 +106,7 @@ id="developers">
   <li>концепція <em>безпечної голови</em> і <em>завершених блоків</em></li>
 </ul>
 
-Щоб дізнатися більше, перегляньте цю публікацію Тіма Бейко на тему <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Як злиття впливає на прикладний рівень Ethereum</a>.
+Щоб дізнатися більше, перегляньте цю публікацію Тіма Бейко на тему <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Як злиття впливає на прикладний рівень Ethereum</a>.
 
 </ExpandableCard>
 
@@ -194,7 +194,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 Ці оновлення термінології змінюють лише правила найменування; це не впливає на цілі або план розвитку Ethereum.
 
-[Докладніше про перейменування Eth2](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Докладніше про перейменування Eth2](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Зв’язок між оновленнями {#relationship-between-upgrades}
 

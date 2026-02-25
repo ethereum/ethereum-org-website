@@ -30,10 +30,10 @@ Anda dapat menemukan beberapa panduan dan perangkat yang berguna untuk penerjema
 
 Untuk tetap mendapatkan info terkini tentang kemajuan Program Terjemahan terbaru, Anda dapat mengikuti [blog Ethereum Foundation](https://blog.ethereum.org/):
 
-- [Pembaruan pencapaian Oktober 2021](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Pembaruan pencapaian Desember 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Pembaruan pencapaian Juli 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Peluncuran Program Terjemahan Agustus 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Pembaruan pencapaian Oktober 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Pembaruan pencapaian Desember 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Pembaruan pencapaian Juli 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Peluncuran Program Terjemahan Agustus 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Jam kerja untuk para penerjemah {#office-hours}
 

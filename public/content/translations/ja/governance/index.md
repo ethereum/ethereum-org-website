@@ -168,7 +168,7 @@ The DAOハッキング事件をもっと見る
 - [Ethereum R&DのDiscordに参加する](https://discord.gg/mncqtgVSVw)
 - [ノードを実行する](/developers/docs/nodes-and-clients/run-a-node/)
 - [クライアント開発に貢献する](/developers/docs/nodes-and-clients/#execution-clients)
-- [コアデベロッパー見習いプログラム](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [コアデベロッパー見習いプログラム](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## 参考リンク {#further-reading}
 

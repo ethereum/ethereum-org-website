@@ -33,7 +33,7 @@ Hatimaye, vituo vya ukaguzi vinaweza kuombwa kutoka kwa nodi zingine; labda mtum
 ## Masomo zaidi {#further-reading}
 
 - [Udhaifu wa mtazamo katika Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
-- [Vitalik: Jinsi nilivyojifunza kupenda udhaifu wa mtazamo](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
+- [Vitalik: Jinsi nilivyojifunza kupenda udhaifu wa mtazamo](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)
 - [Udhaifu wa mtazamo (nyaraka za Teku)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
 - [Mwongozo wa udhaifu wa mtazamo wa Awamu-0](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [Uchambuzi wa udhaifu wa mtazamo katika Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

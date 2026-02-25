@@ -106,7 +106,7 @@ id="developers">
   <li>Концепт <em>безопасного начала</em> и <em>завершенных блоков</em></li>
 </ul>
 
-Для получения дополнительной информации посмотрите эту запись в блоге, написанную Тимом Бейко: <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Как слияние влияет на уровень применения Ethereum</a>.
+Для получения дополнительной информации посмотрите эту запись в блоге, написанную Тимом Бейко: <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Как слияние влияет на уровень применения Ethereum</a>.
 
 </ExpandableCard>
 
@@ -194,7 +194,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 Изменения касаются только терминологии; цели и дорожная карта Ethereum остаются неизменными.
 
-[Подробнее о переименовании Eth2](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Подробнее о переименовании Eth2](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Взаимосвязь между обновлениями {#relationship-between-upgrades}
 

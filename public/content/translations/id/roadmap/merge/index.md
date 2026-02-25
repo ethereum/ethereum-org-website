@@ -106,7 +106,7 @@ Penggabungan disertai dengan perubahan konsensus, yang juga mencakup perubahan y
   <li>konsep dari <em>blok aman</em> dan <em>blok yang telah difinalisasi</em></li>
 </ul>
 
-Untuk informasi lebih lanjut, lihat tulisan blog ini oleh Tim Beiko tentang <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Bagaimana Penggabungan Memengaruhi Lapisan Aplikasi Ethereum</a>.
+Untuk informasi lebih lanjut, lihat tulisan blog ini oleh Tim Beiko tentang <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Bagaimana Penggabungan Memengaruhi Lapisan Aplikasi Ethereum</a>.
 
 </ExpandableCard>
 
@@ -194,7 +194,7 @@ Untuk mengurangi kebingungan, komunitas telah memperbarui istilah-istilah beriku
 
 Pembaruan terminologi ini hanya mengubah konvensi penamaan; ini tidak mengubah tujuan atau peta perjalanan Ethereum.
 
-[Pelajari selengkapnya tentang penamaan ulang 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Pelajari selengkapnya tentang penamaan ulang 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Hubungan antar peningkatan {#relationship-between-upgrades}
 

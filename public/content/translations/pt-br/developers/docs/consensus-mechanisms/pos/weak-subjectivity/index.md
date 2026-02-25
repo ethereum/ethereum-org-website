@@ -33,7 +33,7 @@ Finalmente, os pontos de verificação podem ser solicitados a partir de outros 
 ## Leitura adicional {#further-reading}
 
 - [Subjetividade fraca em Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
-- [Vitalik: Como eu aprendi a amar a subjetividade fraca](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
+- [Vitalik: Como eu aprendi a amar a subjetividade fraca](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)
 - [Subjetividade fraca (documentos Teku)](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
 - [Guia de subjetividade fraca: fase-0](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [Análise de subjetividade fraca no Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

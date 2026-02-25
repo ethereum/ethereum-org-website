@@ -41,7 +41,7 @@ Uaktualnienie Altair jest pierwszym planowanym uaktualnieniem [łańcucha śledz
 Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), która zreformowała rynek opłat transakcyjnych oraz wprowadziła zmiany do sposobu obsługi zwrotów kosztów gazu oraz do harmonogramu [Epoki Lodowcowej](/glossary/#ice-age) (Ice Age).
 
 - [Jesteś deweloperem aplikacji zdecentralizowanych? Pamiętaj o uaktualnieniu bibliotek i narzędzi.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
-- [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [Przeczytaj objaśnienie Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="EIP London" contentPreview="Official improvements included in this upgrade.">
@@ -64,7 +64,7 @@ Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 
 Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz zwiększa wsparcie wielu rodzajów transakcji.
 
-- [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement)
 - [Przeczytaj objaśnienie Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="EIP Berlin" contentPreview="Official improvements included in this upgrade.">
@@ -88,7 +88,7 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 [Łańcuch śledzący ](/roadmap/beacon-chain/) potrzebował 16384 depozytów z 32 zestakowanymi ETH, aby zapewnić bezpieczną wysyłkę. Stało się to 27 listopada, co oznacza, że łańcuch śledzący (​​Beacon Chain) rozpoczął produkcję bloków 1 grudnia 2020 roku. To ważny pierwszy krok w realizacji [wizji Eth2](/roadmap/).
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21)
 
 <DocLink href="/roadmap/beacon-chain/">
   Łańcuch śledzący
@@ -104,7 +104,7 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć był to kontrakt [sieci głównej](/glossary/#staking), miał bezpośredni wpływ na harmonogram wprowadzania [łańcucha odłamkowego](/roadmap/beacon-chain/), ważnego [ulepszenia Eth2](/roadmap/).
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19)
 
 <DocLink href="/staking/">
   Staking
@@ -120,7 +120,7 @@ Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć by
 
 Fork Muir Glacier wprowadził opóźnienie [bomby trudności](/glossary/#difficulty-bomb). Zwiększona trudność bloków konsensusu[proof-of-work](/developers/docs/consensus-mechanisms/pow/) grozi pogorszeniem przydatności Ethereum na skutek wydłużenia czasu oczekiwania na wysłanie transakcji i korzystanie z aplikacji zdecentralizowanych.
 
-- [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement)
 - [Przeczytaj objaśnienie Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="EIP Muir Glacier" contentPreview="Official improvements included in this fork.">
@@ -147,7 +147,7 @@ Fork Istanbul:
 - Umożliwił współpracę Ethereum i Zcash.
 - Umożliwił wprowadzenie bardziej kreatywnych funkcji kontraktu.
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement)
 
 <ExpandableCard title="EIP Istanbul" contentPreview="Official improvements included in this fork.">
 
@@ -174,7 +174,7 @@ Fork Constantinople:
 - Zoptymalizował koszt [gazu](/glossary/#gas) w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Dodał możliwość interakcji z adresami, które nie zostały jeszcze utworzone.
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement)
 
 <ExpandableCard title="EIP Constantinople" contentPreview="Official improvements included in this fork.">
 
@@ -202,7 +202,7 @@ Fork Byzantium:
 - Dodano możliwość wykonywania niezmieniających stanów wywołań innych kontraktów.
 - Dodano niektóre metody kryptografii, aby umożliwić [skalowanie warstwy 2](/developers/docs/scaling/#rollups).
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement)
 
 <ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
 
@@ -234,7 +234,7 @@ Fork Spurious Dragon był drugą odpowiedzią na ataki typu DoS (odmowa usługi)
 - umożliwienie „debloat” stanu blockchain.
 - dodanie ochrony przed atakami metodą powtórzenia.
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)
 
 <ExpandableCard title="EIP Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
@@ -257,7 +257,7 @@ Fork Tangerine Whistle był pierwszą odpowiedzią na ataki typu „odmowa usłu
 
 - rozwiązywanie pilnych problemów dotyczących kondycji sieci związanych z niedoszacowanymi kodami operacyjnymi.
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork)
 
 <ExpandableCard title="EIP Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
@@ -280,7 +280,7 @@ Ten kierunek działania został przegłosowany przez społeczność Ethereum. Ka
 
 Niektórzy górnicy odmówili forku, ponieważ incydent DAO nie był defektem protokołu. Następnie utworzyli [Ethereum Classic](https://ethereumclassic.org/).
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/07/20/hard-fork-completed)
 
 ---
 
@@ -292,7 +292,7 @@ Niektórzy górnicy odmówili forku, ponieważ incydent DAO nie był defektem pr
 
 Przyszłościowy fork Homestead. Obejmował kilka zmian protokołu i zmianę sieci, która dała Ethereum możliwość wykonywania dalszych aktualizacji sieci.
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release)
 
 <ExpandableCard title="EIP Homestead" contentPreview="Official improvements included in this fork.">
 
@@ -314,7 +314,7 @@ Przyszłościowy fork Homestead. Obejmował kilka zmian protokołu i zmianę sie
 
 Fork frontier thawing podniósł wynoszący 5000 limit [gazu](/glossary/#gas) na [blok](/glossary/#block) i określił domyślną cenę gazu na 51 [gwei](/glossary/#gwei). Pozwoliło to na transakcje – transakcje wymagają 21 tys. gazu.
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier)
 
 ---
 
@@ -326,7 +326,7 @@ Fork frontier thawing podniósł wynoszący 5000 limit [gazu](/glossary/#gas) na
 
 Frontier był działającą, ale surową implementacją projektu Ethereum. Wprowadzono go po udanej fazie testów olimpijskich. Był przeznaczony dla użytkowników technicznych, w szczególności programistów. [Bloki](/glossary/#block) miały limit [gazu](/glossary/#gas) wynoszący 5000. Ten okres „thawing” umożliwił górnikom rozpoczęcie działalności, a wczesnym użytkownikom instalowanie klientów bez konieczności „pośpiechu”.
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare)
 
 <Divider />
 
@@ -338,7 +338,7 @@ Frontier był działającą, ale surową implementacją projektu Ethereum. Wprow
 
 Ether był oficjalnie sprzedawany przez 42 dni. Można było go kupić za BTC.
 
-[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale)
 
 ---
 

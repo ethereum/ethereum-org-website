@@ -106,7 +106,7 @@ The Merge trat ein, indem es Änderungen an der Konsens-Methode mit sich brachte
   <li>Begriffe wie <em>safe head</em> and <em>finalized blocks</em></li>
 </ul>
 
-Weitere Informationen findest Du in diesem Blogartikel von Tim Heiko zum <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Thema The Merge Update: Welche Auswirkungen hat das Ereignis auf die Ethereum-Execution Layer?</a>.
+Weitere Informationen findest Du in diesem Blogartikel von Tim Heiko zum <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Thema The Merge Update: Welche Auswirkungen hat das Ereignis auf die Ethereum-Execution Layer?</a>.
 
 </ExpandableCard>
 
@@ -194,7 +194,7 @@ Um Unklarheiten zu minimieren, hat die Community diese Begriffe aktualisiert:
 
 Diese aktualisierte Terminologie ändert lediglich die Benennungskonventionen. Die Ziele und der Fahrplan von Ethereum ändern sich dadurch nicht.
 
-[Mehr über die „Eth2“-Umbenennung erfahren](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Mehr über die „Eth2“-Umbenennung erfahren](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Beziehung zwischen den Upgrades {#relationship-between-upgrades}
 

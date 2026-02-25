@@ -254,7 +254,7 @@ Bellatrix yükseltmesi, zinciri [Birleşim](/roadmap/merge/)'e hazırlayan [İş
 
 Gray Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) üç ay erteledi. Bu, bu yükseltmede sunulan tek değişikliktir ve doğası gereği [Arrow Glacier](#arrow-glacier) ve [Muir Glacier](#muir-glacier) yükseltmelerine benzer. [Byzantium](#byzantium), [Constantinople](#constantinople) ve [Londra](#london) ağ yükseltmelerinde de benzer değişiklikler yapılmıştır.
 
-- [EF Blog - Gray Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+- [EF Blog - Gray Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement)
 
 <ExpandableCard title="Gray Glacier EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
 
@@ -275,7 +275,7 @@ Gray Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) ü�
 
 Arrow Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) birkaç ay erteledi. Bu, bu yükseltmede sunulan tek değişikliktir ve doğası gereği [Muir Glacier](#muir-glacier) yükseltmesine benzer. [Byzantium](#byzantium), [Constantinople](#constantinople) ve [Londra](#london) ağ yükseltmelerinde de benzer değişiklikler yapılmıştır.
 
-- [EF Blog - Arrow Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [EF Blog - Arrow Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement)
 - [Ethereum Cat Herders - Ethereum Arrow Glacier Yükseltmesi](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
 <ExpandableCard title="Arrow Glacier EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
@@ -328,7 +328,7 @@ Toplam ücret şöyle olurdu: `Gaz birimleri (limit) * Birim başına gaz fiyat�
 Bu video EIP-1559'u ve getirdiği faydaları açıklıyor: [EIP-1559 Açıklaması](https://www.youtube.com/watch?v=MGemhK9t44Q)
 
 - [Merkeziyetsiz uygulama geliştiricisi misiniz? Kütüphanelerinizi ve araçlarınızı yükselttiğinizden emin olun.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
-- [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [Ethereum Cat Herder's açıklamasını okuyun](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="Londra EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
@@ -352,7 +352,7 @@ Bu video EIP-1559'u ve getirdiği faydaları açıklıyor: [EIP-1559 Açıklamas
 
 Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize edilmiş gaz maliyetini yükseltiyor ve çoklu işlem türleri için desteği artırıyor.
 
-- [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement)
 - [Ethereum Cat Herder's açıklamasını okuyun](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="Berlin EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
@@ -377,7 +377,7 @@ Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize ed
 
 [İşaret Zinciri](/roadmap/beacon-chain/), güvenli bir şekilde gönderilebilmek için 32 adet hisselenmiş ETH'den oluşan 16.384 depozitoya ihtiyaç duyuyordu. Bu 27 Kasım'da gerçekleşti ve İşaret Zinciri 1 Aralık 2020'de blok üretmeye başladı.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21)
 
 <DocLink href="/roadmap/beacon-chain/">
   İşaret Zinciri
@@ -393,7 +393,7 @@ Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize ed
 
 Hisseleme depozito sözleşmesi, Ethereum ekosistemine [hisselemeyi](/glossary/#staking) tanıttı. Bir [Ana Ağ](/glossary/#mainnet) sözleşmesi olmasına rağmen, önemli bir [Ethereum yükseltmesi](/roadmap/) olan [İşaret Zinciri](/roadmap/beacon-chain/)'nin başlatılma zaman çizelgesi üzerinde doğrudan bir etkisi oldu.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19)
 
 <DocLink href="/staking/">
   Hisseleme
@@ -409,7 +409,7 @@ Hisseleme depozito sözleşmesi, Ethereum ekosistemine [hisselemeyi](/glossary/#
 
 Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir gecikme getirdi. [İş ispatı](/developers/docs/consensus-mechanisms/pow/) mutabakat mekanizmasının blok zorluğundaki artışlar, işlem gönderme ve merkeziyetsiz uygulamaları kullanma sırasındaki bekleme sürelerini artırarak Ethereum'un kullanılabilirliğinin azalması riski yarattı.
 
-- [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement)
 - [Ethereum Cat Herder's açıklamasını okuyun](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="Muir Glacier EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
@@ -437,7 +437,7 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 - Ethereum'un ve Zcash'in birlikte çalışmasını sağladı.
 - Sözleşmelerin daha yaratıcı fonksiyonlar sunmasını sağladı.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement)
 
 <ExpandableCard title="İstanbul EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
@@ -467,7 +467,7 @@ Konstantinopolis çatallanması:
 - [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) içindeki belirli eylemlerin [gaz](/glossary/#gas) maliyetini optimize etti.
 - Henüz oluşturulmamış adreslerle etkileşim kurma yeteneğini ekledi.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement)
 
 <ExpandableCard title="Constantinople EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
@@ -496,7 +496,7 @@ Bizans çatalı:
 - Diğer sözleşmelere durum değiştirmeyen çağrılar yapabilme olanağı ekledi.
 - [Katman 2 ölçeklendirmeye](/developers/docs/scaling/#layer-2-scaling) olanak sağlamak için belirli kriptografi yöntemleri eklendi.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement)
 
 <ExpandableCard title="Byzantium EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
@@ -529,7 +529,7 @@ Sahte Ejderha çatallanması, ağdaki hizmet reddi (DoS) saldırılarına (Eylü
 - blokzincir durumunun "şişkinliğinin indirilmesini" sağlama.
 - tekrar saldırı koruması ekleme.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)
 
 <ExpandableCard title="Spurious Dragon EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
@@ -553,7 +553,7 @@ Mandalina Düdüğü çatallanması, ağdaki (Eylül/Ekim 2016) hizmet reddi (Do
 
 - düşük fiyatlı işlem kodlarıyla ilgili acil ağ sağlığı sorunlarını ele almak.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork)
 
 <ExpandableCard title="Tangerine Whistle EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
@@ -577,7 +577,7 @@ Bu eylem planı, Ethereum topluluğu tarafından oylandı. Her ETH sahibi, [bir 
 
 Bazı madenciler, DAO olayı protokoldeki bir kusur olmadığı için çatallanmayı reddetti. Onlar da yollarına [Ethereum Classic](https://ethereumclassic.org/) olarak devam ettiler.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/07/20/hard-fork-completed)
 
 ---
 
@@ -589,7 +589,7 @@ Bazı madenciler, DAO olayı protokoldeki bir kusur olmadığı için çatallanm
 
 Geleceğe dönük Homestead çatallanması. Birkaç protokol değişikliği ve Ethereum'a başka ağ yükseltmeleri yapma olanağı tanıyan bir ağ değişikliği içeriyordu.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/02/29/homestead-release)
 
 <ExpandableCard title="Homestead EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
@@ -612,8 +612,8 @@ Geleceğe dönük Homestead çatallanması. Birkaç protokol değişikliği ve E
 
 Sınır eritme çatallanması, [blok](/glossary/#block) başına 5.000 [gaz](/glossary/#gas) sınırını kaldırdı ve varsayılan gaz fiyatını 51 [gwei](/glossary/#gwei) olarak ayarladı. Bu, 21.000 gaz gerektiren işlemleri mümkün kıldı. [Bomba değeri](/glossary/#difficulty-bomb), [hisse ispatına](/glossary/#pos) yönelik gelecekteki bir sert çatalı sağlamak üzere getirildi.
 
-- [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
-- [Ethereum Protokolü Güncellemesi 1'i Okuyun](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+- [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2015/08/04/the-thawing-frontier)
+- [Ethereum Protokolü Güncellemesi 1'i Okuyun](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1)
 
 ---
 
@@ -625,7 +625,7 @@ Sınır eritme çatallanması, [blok](/glossary/#block) başına 5.000 [gaz](/gl
 
 Sınır, Ethereum projesinin canlı ancak yalın bir uygulamasıydı. Başarılı Olimpik test aşamasını takip etti. Teknik kullanıcılar, özellikle geliştiriciler için tasarlanmıştı. [Blokların](/glossary/#block) 5.000'lik bir [gaz](/glossary/#gas) limiti vardı. Bu "eritme" dönemi, madencilerin faaliyetlerine başlamasını ve ilk kullanıcıların istemcilerini "acele etmeden" kurmalarını sağladı.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare)
 
 <Divider />
 
@@ -637,7 +637,7 @@ Sınır, Ethereum projesinin canlı ancak yalın bir uygulamasıydı. Başarıl�
 
 Ethereum resmi olarak 42 günlüğüne satışa çıktı. BTC ile satın alınabiliyordu.
 
-[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale)
 
 ---
 

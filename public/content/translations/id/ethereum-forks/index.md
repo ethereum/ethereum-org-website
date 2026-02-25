@@ -105,7 +105,7 @@ Peningkatan Bellatrix adalah peningkatan terjadwal kedua untuk [Rantai Suar](/ro
 
 Peningkatan jaringan Gray Glacier menunda [bomb kesulitan](/glossary/#difficulty-bomb) selama tiga bulan. Ini adalah satu-satunya perubahan yang dibolehkan dalam pembaruan ini, dan sifatnya serupa dengan pembaruan [Arrow Glacier](#arrow-glacier) dan [Muir Glacier](#muir-glacier). Perubahan serupa telah diterapkan pada peningkatan jaringan [Byzantium](#byzantium), [Konstatinopel](#constantinople) dan [London](#london).
 
-- [EF Blog - Pengumuman Pembaruan Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+- [EF Blog - Pengumuman Pembaruan Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement)
 
 <ExpandableCard title="EIP Gray Glacier" contentPreview="Official improvements included in this upgrade.">
 
@@ -127,7 +127,7 @@ Peningkatan jaringan Gray Glacier menunda [bomb kesulitan](/glossary/#difficulty
 
 Peningkatan jaringan Arrow Glacier menjeda [bom kesulitan](/glossary/#difficulty-bomb) sebanyak beberapa bulan. Ini adalah satu-satunya perubahan yang diperkenalkan dalam peningkatan ini, dan sifatnya sama dengan peningkatan [Muir Glacier](#muir-glacier). Perubahan serupa telah diterapkan pada peningkatan jaringan [Byzantium](#byzantium), [Konstatinopel](#constantinople) dan [London](#london).
 
-- [Blog EF - Pengumuman Peningkatan Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [Blog EF - Pengumuman Peningkatan Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement)
 - [Ethereum Cat Herders - Peningkatan Arrow Glacier Ethereum](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
 <ExpandableCard title="EIP Arrow Glacier" contentPreview="Official improvements included in this upgrade.">
@@ -167,7 +167,7 @@ Altair adalah peningkatan besar dan pertama untuk jaringan yang memiliki waktu r
 Peningkatan London memperkenalkan [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), yang memperbarui pasar biaya transaksi, bersamaan dengan perubahan bagaimana pembayaran kembali gas ditangani dan jadwal untuk [Zaman Es](/glossary/#ice-age).
 
 - [Apakah Anda seorang pengembang dapp? Pastikan untuk meningkatkan pustaka dan peralatan Anda.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
-- [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [Baca penjelasan Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="EIP London" contentPreview="Official improvements included in this upgrade.">
@@ -192,7 +192,7 @@ Peningkatan London memperkenalkan [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 
 Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningkatkan dukungan pada beragam jenis transaksi.
 
-- [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement)
 - [Baca penjelasan Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="EIP Berlin" contentPreview="Official improvements included in this upgrade.">
@@ -218,7 +218,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 
 [Rantai Suar](/roadmap/beacon-chain/) memerlukan deposito 16384 dari 32 ETH yang ditaruhkan untuk diluncurkan secara aman. Ini terjadi pada 27 November yang berarti Rantai Suar mulai memproduksi blok pada 1 Desember 2020. Ini adalah langkah pertama yang penting untuk meraih [visi Ethereum](/roadmap/).
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21)
 
 <DocLink href="/roadmap/beacon-chain/">
   Rantai Suar
@@ -234,7 +234,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 
 Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekosistem Ethereum. Bahkan kontrak [Jaringan Utama](/glossary/#mainnet) memiliki dampak langsung pada linimasa peluncuran [Rantai Suar](/roadmap/beacon-chain/), yaitu [peningkatan Ethereum](/roadmap/) yang penting.
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19)
 
 <DocLink href="/staking/">
   Penaruhan
@@ -250,7 +250,7 @@ Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekos
 
 Fork Gletser Muir memperkenalkan penundaan pada [bom kesulitan](/glossary/#difficulty-bomb). Peningkatan kesulitan blok mekanisme konsensus [bukti kerja](/developers/docs/consensus-mechanisms/pow/) mengancam akan menurunkan kegunaan Ethereum dengan meningkatkan waktu tunggu untuk mengirim transaksi dan menggunakan dapps.
 
-- [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement)
 - [Baca penjelasan Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="EIP Muir Glacier" contentPreview="Official improvements included in this fork.">
@@ -279,7 +279,7 @@ Garpu Istanbul:
 - Memungkinkan Ethereum dan Zcash untuk saling bekerja sama.
 - Kontrak yang diizinkan untuk memperkenalkan lebih banyak fungsi kreatif.
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement)
 
 <ExpandableCard title="EIP Istanbul" contentPreview="Official improvements included in this fork.">
 
@@ -308,7 +308,7 @@ Fork Konstantinopel:
 - Mengoptimalkan biaya [gas](/glossary/#gas) dari aksi tertentu di [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Menambahkan kemampuan untuk berinteraksi dengan alamat yang belum dibuat.
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement)
 
 <ExpandableCard title="EIP Konstantinopel" contentPreview="Official improvements included in this fork.">
 
@@ -338,7 +338,7 @@ Fork Byzantium:
 - Menambahkan kemampuan untuk melakukan panggilan yang tidak mengubah state ke kontrak lain.
 - Menambahkan metode kriptografi tertentu untuk memungkinkan [penskalaan lapisan ke-2](/developers/docs/scaling/#layer-2-scaling).
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement)
 
 <ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
 
@@ -372,7 +372,7 @@ Garpu Spurious Dragon adalah respons kedua terhadap serangan penolakan layanan (
 - memungkinkan "debloat" dari status rantai blok.
 - menambahkan perlindungan terhadap serangan perulangan.
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)
 
 <ExpandableCard title="EIP Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
@@ -397,7 +397,7 @@ Garpu Tangerine Whistle adalah respons pertama terhadap serangan denial of servi
 
 - menangani masalah kesehatan jaringan yang mendesak mengenai kode operasi yang terlalu murah.
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork)
 
 <ExpandableCard title="EIP Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
@@ -422,7 +422,7 @@ Tindakan ini dipilih oleh komunitas Ethereum. Setiap pemegang ETH dapat memilih 
 
 Beberapa penambang menolak melakukan garpu karena insiden DAO bukan merupakan kesalahan dalam protokol. Mereka kemudian membentuk [Ethereum Classic](https://ethereumclassic.org/).
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/07/20/hard-fork-completed)
 
 ---
 
@@ -434,7 +434,7 @@ Beberapa penambang menolak melakukan garpu karena insiden DAO bukan merupakan ke
 
 Garpu Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan protokol dan perubahan jaringan yang memberi Ethereum kemampuan untuk melakukan peningkatan jaringan lebih lanjut.
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release)
 
 <ExpandableCard title="EIP Homestead" contentPreview="Official improvements included in this fork.">
 
@@ -458,8 +458,8 @@ Garpu Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan prot
 
 Garpu thawing frontier mengangkat batas [gas](/glossary/#gas) 5.000 per [blok](/glossary/#block) blok dan menetapkan harga gas default menjadi 51 [gwei](/glossary/#gwei). Ini memungkinkan transaksi–transaksi membutuhkan 21.000 gas. [bom tingkat kesulitan](/glossary/#difficulty-bomb) diperkenalkan untuk memastikan garpu-tangan di masa depan untuk [bukti taruhan](/glossary/#pos).
 
-- [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
-- [Baca Pembaruan Protokol Ethereum 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+- [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier)
+- [Baca Pembaruan Protokol Ethereum 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1)
 
 ---
 
@@ -471,7 +471,7 @@ Garpu thawing frontier mengangkat batas [gas](/glossary/#gas) 5.000 per [blok](/
 
 Frontier adalah implementasi langsung, tetapi barebone dari proyek Ethereum. Ini mengikuti fase pengujian Olimpiade yang sukses. Ditujukan untuk pengguna teknis, khususnya pengembang. [Blok](/glossary/#block) memiliki batas [gas](/glossary/#gas) sebesar 5.000. Periode 'pencairan' ini memungkinkan penambang untuk memulai operasi mereka dan bagi pengguna awal untuk menginstal klien mereka tanpa harus 'terburu-buru'.
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare)
 
 <Divider />
 
@@ -483,7 +483,7 @@ Frontier adalah implementasi langsung, tetapi barebone dari proyek Ethereum. Ini
 
 Ether secara resmi mulai dijual selama 42 hari. Anda dapat membelinya dengan BTC.
 
-[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale)
 
 ---
 

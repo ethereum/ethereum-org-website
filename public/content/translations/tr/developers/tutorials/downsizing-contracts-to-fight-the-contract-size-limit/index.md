@@ -12,7 +12,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## Neden bir sınır var? {#why-is-there-a-limit}
 
-[22 Kasım 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/) tarihinde Sahte Ejderha sert çatallanması, 24,576 kb'lık bir akıllı sözleşme boyutu sınırı ekleyen [EIP-170](https://eips.ethereum.org/EIPS/eip-170)'i getirdi. Bir Solidity geliştiricisi olarak sizin için bu, sözleşmenize giderek daha fazla işlevsellik eklediğinizde, bir noktada sınıra ulaşacağınız ve dağıtım sırasında şu hatayı göreceğiniz anlamına gelir:
+[22 Kasım 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon) tarihinde Sahte Ejderha sert çatallanması, 24,576 kb'lık bir akıllı sözleşme boyutu sınırı ekleyen [EIP-170](https://eips.ethereum.org/EIPS/eip-170)'i getirdi. Bir Solidity geliştiricisi olarak sizin için bu, sözleşmenize giderek daha fazla işlevsellik eklediğinizde, bir noktada sınıra ulaşacağınız ve dağıtım sırasında şu hatayı göreceğiniz anlamına gelir:
 
 `Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). Bu sözleşme Mainnet'te dağıtılamayabilir. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 

@@ -168,7 +168,7 @@ _Примечание. Любой человек может входить в н
 - [Присоединение к дискорду Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Запуск узла](/developers/docs/nodes-and-clients/run-a-node/)
 - [Участие в разработке клиента](/developers/docs/nodes-and-clients/#execution-clients)
-- [Программа подготовки основных разработчиков](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Программа подготовки основных разработчиков](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Дополнительные ресурсы {#further-reading}
 

@@ -254,7 +254,7 @@ Sasisho la Bellatrix lilikuwa sasisho la pili lililopangwa kwa [Mnyororo Kioleza
 
 Sasisho la mtandao la Gray Glacier lilisogeza nyuma [bomu la ugumu](/glossary/#difficulty-bomb) kwa miezi mitatu. Hili ndilo badiliko pekee lililoletwa katika sasisho hili, na linafanana kiasili na masasisho ya [Arrow Glacier](#arrow-glacier) na [Muir Glacier](#muir-glacier). Mabadiliko kama hayo yamefanywa kwenye masasisho ya mtandao ya [Byzantium](#byzantium), [Constantinople](#constantinople) na [London](#london).
 
-- [Blogu ya EF - Tangazo la Sasisho la Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+- [Blogu ya EF - Tangazo la Sasisho la Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement)
 
 <ExpandableCard title="Gray Glacier EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
 
@@ -275,7 +275,7 @@ Sasisho la mtandao la Gray Glacier lilisogeza nyuma [bomu la ugumu](/glossary/#d
 
 Sasisho la mtandao la Arrow Glacier lilisogeza nyuma [bomu la ugumu](/glossary/#difficulty-bomb) kwa miezi kadhaa. Hili ndilo badiliko pekee lililoletwa katika sasisho hili, na linafanana kiasili na sasisho la [Muir Glacier](#muir-glacier). Mabadiliko kama hayo yamefanywa kwenye masasisho ya mtandao ya [Byzantium](#byzantium), [Constantinople](#constantinople) na [London](#london).
 
-- [Blogu ya EF - Tangazo la Sasisho la Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [Blogu ya EF - Tangazo la Sasisho la Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement)
 - [Ethereum Cat Herders - Sasisho la Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
 <ExpandableCard title="Arrow Glacier EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
@@ -328,7 +328,7 @@ Utekelezaji wa [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) katika Sasish
 Video hii inaelezea EIP-1559 na manufaa yake: [EIP-1559 Imefafanuliwa](https://www.youtube.com/watch?v=MGemhK9t44Q)
 
 - [Je, wewe ni mjenzi wa dapp? Hakikisha unasasisha maktaba na zana zako.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
-- [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [Soma ufafanuzi wa Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="London EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
@@ -352,7 +352,7 @@ Video hii inaelezea EIP-1559 na manufaa yake: [EIP-1559 Imefafanuliwa](https://w
 
 Uboreshaji wa Berlin uliboresha gharama za miamala kwa baadhi ya vitendo vya EVM, na kuongeza msaada kwa aina nyingi za miamala.
 
-- [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement)
 - [Soma ufafanuzi wa Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="Berlin EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
@@ -377,7 +377,7 @@ Uboreshaji wa Berlin uliboresha gharama za miamala kwa baadhi ya vitendo vya EVM
 
 [Mnyororo Kioleza](/roadmap/beacon-chain/) ulihitaji amana 16384 za ETH 32 zilizosimamishwa ili uzinduliwe kwa usalama. Hili lilitokea Novemba 27, na Mnyororo Kioleza ulianza kutoa bloku mnamo Desemba 1, 2020.
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21)
 
 <DocLink href="/roadmap/beacon-chain/">
   Mnyororo Kioleza
@@ -393,7 +393,7 @@ Uboreshaji wa Berlin uliboresha gharama za miamala kwa baadhi ya vitendo vya EVM
 
 Mkataba wa amana wa kusimamisha ulianzisha [kusimamisha](/glossary/#staking) kwenye mfumo-ikolojia wa Ethereum. Ingawa ni mkataba wa [Mtandao Mkuu](/glossary/#mainnet), ulikuwa na athari ya moja kwa moja kwenye mfuatano wa matukio ya uzinduzi wa [Mnyororo Kioleza](/roadmap/beacon-chain/), [sasisho muhimu la Ethereum](/roadmap/).
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19)
 
 <DocLink href="/staking/">Kusimamisha</DocLink>
 
@@ -407,7 +407,7 @@ Mkataba wa amana wa kusimamisha ulianzisha [kusimamisha](/glossary/#staking) kwe
 
 Uma wa Muir Glacier ulianzisha ucheleweshaji wa [bomu la ugumu](/glossary/#difficulty-bomb). Kuongezeka kwa ugumu wa bloku wa utaratibu wa makubaliano wa [uthibitishaji-wa-kazi](/developers/docs/consensus-mechanisms/pow/) kulitishia kudhoofisha utumiaji wa Ethereum kwa kuongeza muda wa kusubiri wa kutuma miamala na kutumia mfumo mtawanyo wa kimamlaka.
 
-- [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement)
 - [Soma ufafanuzi wa Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="Muir Glacier EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
@@ -435,7 +435,7 @@ The Istanbul fork:
 - Imewezeshwa Ethereum na Zcash kuingiliana.
 - Kandarasi zinazoruhusiwa ili kuanzisha kazi zaidi za ubunifu.
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement)
 
 <ExpandableCard title="Istanbul EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
@@ -464,7 +464,7 @@ The Constantinople fork:
 - Iliboresha gharama ya [gesi](/glossary/#gas) ya vitendo fulani katika [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Imeongeza uwezo wa kuingiliana na anwani ambazo bado hazijaundwa.
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement)
 
 <ExpandableCard title="Constantinople EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
@@ -493,7 +493,7 @@ Fork ya Byzantium:
 - Imeongezwa uwezo wa kufanya simu zisizobadilisha hali kwa mikataba mingine.
 - Iliongeza mbinu fulani za kriptografia kuruhusu [uongezekaji wa safu ya 2](/developers/docs/scaling/#layer-2-scaling).
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement)
 
 <ExpandableCard title="Byzantium EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
@@ -526,7 +526,7 @@ Uma wa Joka la Uongo lilikuwa jibu la pili kwa mashambulizi ya kunyimwa huduma (
 - kuwezesha "debloat" ya hali ya kiambajengo.
 - kuongeza ulinzi wa mashambulizi ya kurudiwa.
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)
 
 <ExpandableCard title="Spurious Dragon EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
@@ -550,7 +550,7 @@ The Tangerine Whistle fork lilikuwa jibu la kwanza kwa mashambulizi ya kunyimwa 
 
 - kushughulikia masuala ya dharura ya afya ya mtandao kuhusu misimbo ya uendeshaji ya bei ya chini.
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork)
 
 <ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
@@ -574,7 +574,7 @@ Njia hii ya utekelezaji iliamuliwa kwa kura na jamii ya Ethereum. Mmiliki yeyote
 
 Baadhi ya wachimbaji walikataa kutumia uma kwa sababu tukio la DAO halikuwa na kasoro katika itifaki. Waliendelea na kuunda [Ethereum Classic](https://ethereumclassic.org/).
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/07/20/hard-fork-completed)
 
 ---
 
@@ -586,7 +586,7 @@ Baadhi ya wachimbaji walikataa kutumia uma kwa sababu tukio la DAO halikuwa na k
 
 Uma wa Nyumbani ambao uliangalia siku zijazo. Ilijumuisha mabadiliko kadhaa ya itifaki na mabadiliko ya mtandao ambayo yalimpa Ethereum uwezo wa kufanya uboreshaji zaidi wa mtandao.
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release)
 
 <ExpandableCard title="Homestead EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
@@ -609,8 +609,8 @@ Uma wa Nyumbani ambao uliangalia siku zijazo. Ilijumuisha mabadiliko kadhaa ya i
 
 Uma wa uyeyukaji wa Frontier uliondoa [kikomo cha gesi](/glossary/#gas) 5,000 kwa kila [bloku](/glossary/#block) na kuweka bei chaguo-msingi ya gesi kuwa [gwei](/glossary/#gwei) 51. Hii inaruhusiwa kwa shughuli - shughuli zinahitaji gharama ya muamala ya 21,000. [Bomu la ugumu](/glossary/#difficulty-bomb) lilianzishwa ili kuhakikisha uma mgumu wa baadaye kwenda [proof-of-stake](/glossary/#pos).
 
-- [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
-- [Soma Sasisho la 1 la Itifaki ya Ethereum](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+- [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier)
+- [Soma Sasisho la 1 la Itifaki ya Ethereum](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1)
 
 ---
 
@@ -622,7 +622,7 @@ Uma wa uyeyukaji wa Frontier uliondoa [kikomo cha gesi](/glossary/#gas) 5,000 kw
 
 Frontier ilikuwa hai, lakini utekelezaji wa mradi wa Ethereum. Ilifuata awamu ya majaribio ya Olimpiki yenye mafanikio. Ilikusudiwa kwa watumiaji wa kiufundi, haswa watengenezaji. [Bloku](/glossary/#block) zilikuwa na [kikomo cha gesi](/glossary/#gas) cha 5,000. Kipindi hiki cha ‘kuyeyusha’ kiliwawezesha wachimbaji kuanza shughuli zao na kwa watumiaji wa awali kufunga wateja wao bila ‘kuharakisha’.
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare)
 
 <Divider />
 
@@ -634,7 +634,7 @@ Frontier ilikuwa hai, lakini utekelezaji wa mradi wa Ethereum. Ilifuata awamu ya
 
 Ether officially went on sale for 42 days. Unaweza kuinunua na BTC.
 
-[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale)
 
 ---
 

@@ -30,10 +30,10 @@ Nachfolgend finden Sie einige nützliche Anleitungen und Tools für ethereum.org
 
 Damit Sie beim aktuellen Fortschritt des Übersetzungsprogramms auf dem Laufenden bleiben, folgen Sie dem [Ethereum Foundation-Blog](https://blog.ethereum.org/):
 
-- [Oktober 2021, Updates für Meilensteine](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Dezember 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Juli 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [August 2019, Start des Übersetzungsprogramms](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Oktober 2021, Updates für Meilensteine](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Dezember 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Juli 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [August 2019, Start des Übersetzungsprogramms](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Sprechstunde für Übersetzerinnen und Übersetzer {#office-hours}
 
