@@ -1,6 +1,6 @@
 ---
-title: Przyszłościowe zabezpieczenie Ethereum
-description: Te aktualizacje umacniają Ethereum jako odporną, zdecentralizowaną warstwę bazową na przyszłość, cokolwiek ona przyniesie.
+title: "Przyszłościowe zabezpieczenie Ethereum"
+description: "Te aktualizacje umacniają Ethereum jako odporną, zdecentralizowaną warstwę bazową na przyszłość, cokolwiek ona przyniesie."
 lang: pl
 image: /images/roadmap/roadmap-future.png
 alt: "Plan działania Ethereum"
@@ -11,28 +11,43 @@ Niektóre części planu działania niekoniecznie są wymagane do skalowania lub
 
 ## Odporność kwantowa {#quantum-resistance}
 
-Część [kryptografii](/glossary/#cryptography) zabezpieczającej obecne Ethereum zostanie naruszona, gdy obliczenia kwantowe staną się rzeczywistością. Chociaż minie pewnie wiele dziesięcioleci, zanim komputery kwantowe staną się prawdziwym zagrożeniem dla nowoczesnej kryptografii, Ethereum jest budowane tak, aby zapewnić bezpieczeństwo na wiele stuleci. Oznacza to, że [Ethereum ma stać się odporne na obliczenia kwantowe](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) tak szybko, jak to możliwe.
+Część [kryptografii](/glossary/#cryptography) zabezpieczającej obecne Ethereum zostanie naruszona, gdy obliczenia kwantowe staną się rzeczywistością. Chociaż minie pewnie wiele dziesięcioleci, zanim komputery kwantowe staną się prawdziwym zagrożeniem dla nowoczesnej kryptografii, Ethereum jest budowane tak, aby zapewnić bezpieczeństwo na wiele stuleci. Oznacza to, że [Ethereum musi jak najszybciej stać się odporne na ataki kwantowe](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/).
 
 Wyzwanie stojące przed deweloperami Ethereum polega na tym, że obecny protokół [proof-of-stake](/glossary/#pos) opiera się na bardzo wydajnym schemacie podpisu znanym jako BLS do agregowania głosów na ważnych [blokach](/glossary/#block). Ten schemat podpisu jest łamany przez komputery kwantowe, a odporne na nie alternatywy nie są już tak wydajne.
 
-[Schematy zobowiązań „KZG”](/roadmap/danksharding/#what-is-kzg) używane w kilku miejscach w Ethereum do generowania tajemnic kryptograficznych są znane z podatności na ataki kwantowe. Obecnie jest to rozwiązywane za pomocą „zaufanych konfiguracji”, w których wielu użytkowników generuje losowość, której nie można odtworzyć za pomocą komputera kwantowego. Idealnym rozwiązaniem byłoby jednak zastosowanie bezpiecznej kryptografii kwantowej. Istnieją dwa główne podejścia, które mogą stać się skutecznymi zamiennikami schematu BLS: podpisywanie [oparte na STARK](https://hackmd.io/@vbuterin/stark_aggregation) i podpisywanie [oparte na kratach](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). **Są one nadal badane i opracowywane**.
+[Schematy zobowiązań „KZG”](/roadmap/danksharding/#what-is-kzg) używane w kilku miejscach w Ethereum do generowania tajemnic kryptograficznych są znane z podatności na ataki kwantowe. Obecnie problem ten omijany jest poprzez zastosowanie „zaufanych konfiguracji” (których główna ceremonia konfiguracji zakończyła się sukcesem w 2023 roku), w ramach których wielu użytkowników generowało losowość, której nie można odtworzyć za pomocą komputera kwantowego. Jednak idealnym, długoterminowym rozwiązaniem będzie zastosowanie kryptografii odpornej na komputery kwantowe. Istnieją dwa wiodące podejścia, które mogłyby stać się wydajnymi zamiennikami schematu BLS: podpisy [oparte na STARK](https://hackmd.io/@vbuterin/stark_aggregation) oraz [oparte na kratach](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). **Są one nadal aktywnie badane i opracowywane**.
 
-<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Przeczytaj o KZG i zaufanych konfiguracjach</ButtonLink>
+[Przeczytaj o KZG i zaufanych konfiguracjach](/roadmap/danksharding#what-is-kzg)
 
-## Prostsze i wydajniejsze Ethereum {#simpler-more-efficient-ethereum}
+## Prostsze i bardziej wydajne Ethereum {#simpler-more-efficient-ethereum}
 
-Złożoność stwarza możliwości błędów lub luk, które mogą zostać wykorzystane przez atakujących. Dlatego też częścią planu działania jest uproszczenie Ethereum i usunięcie kodu, który pozostawał w różnych aktualizacjach, ale nie jest już potrzebny lub można go teraz ulepszyć. Szczuplejsza, prostsza baza kodu jest łatwiejsza w utrzymaniu i zrozumieniu dla programistów.
+Złożoność tworzy możliwości wystąpienia błędów lub podatności, które mogą być wykorzystane przez atakujących. Dlatego też częścią planu działania jest uproszczenie Ethereum oraz usunięcie lub zmodyfikowanie kodu, który pozostawał w różnych aktualizacjach, ale nie jest już potrzebny lub można go teraz ulepszyć. Smuklejsza i prostsza baza kodu jest łatwiejsza w utrzymaniu i zrozumieniu dla deweloperów.
 
-Istnieje kilka aktualizacji, które zostaną wprowadzone do [maszyny wirtualnej Ethereum (EVM)](/developers/docs/evm), aby zwiększyć jej prostotę i wydajność. Obejmują one [usunięcie kodu operacyjnego SELFDESTRUCT](https://hackmd.io/@vbuterin/selfdestruct) — rzadko używanego polecenia, które nie jest już potrzebne, a w niektórych okolicznościach może być niebezpieczne w użyciu, zwłaszcza w połączeniu z innymi przyszłymi aktualizacjami modelu przechowywania Ethereum. [Klienty Ethereum](/glossary/#consensus-client) nadal obsługują również niektóre stare typy transakcji, które można teraz całkowicie usunąć. Można również ulepszyć sposób obliczania [gazu](/glossary/#gas) i wprowadzić bardziej wydajne metody arytmetyczne leżące u podstaw niektórych operacji kryptograficznych.
+Aby uczynić [Wirtualną Maszynę Ethereum (EVM)](/developers/docs/evm) prostszą i wydajniejszą, nieustannie prowadzone są badania i wdrażane usprawnienia. Obejmuje to zarówno modyfikację lub usunięcie starszych komponentów, jak i wprowadzenie nowych optymalizacji.
 
-Analogicznie istnieją aktualizacje, które można wprowadzić do innych części obecnych klientów Ethereum. Przykładem może być to, że obecne klienty wykonawcze i konsensusu używają różnych rodzajów kompresji danych. Udostępnianie danych między klientami będzie znacznie łatwiejsze i bardziej intuicyjne, gdy schemat kompresji zostanie ujednolicony w całej sieci.
+**Ostatnio wprowadzone zmiany:**
+
+- **Przebudowa obliczania gazu:** Sposób, w jaki obliczany jest [gaz](/glossary/#gas), został znacznie ulepszony dzięki **EIP-1559 (wdrożonemu w aktualizacji London w 2021 r.)**, wprowadzając mechanizm podstawowej opłaty i spalania dla bardziej przewidywalnych cen transakcji.
+- **Ograniczenie `SELFDESTRUCT`:** Kod operacyjny `SELFDESTRUCT`, choć rzadko używany, stwarzał potencjalne zagrożenia. Jego funkcjonalność została mocno **ograniczona w aktualizacji Dencun (marzec 2024) poprzez EIP-6780** w celu zmniejszenia zagrożeń, zwłaszcza dotyczących zarządzania stanem.
+- **Zmodernizowane typy transakcji:** Wprowadzono nowe formaty transakcji (np. za pośrednictwem **EIP-2718** i **EIP-4844** dla blobów w aktualizacji Dencun) w celu obsługi nowych funkcji i poprawy wydajności w porównaniu ze starszymi typami.
+
+**Bieżące i przyszłe cele:**
+
+- **Dalsze postępowanie z `SELFDESTRUCT`:** Mimo ograniczeń, **potencjalne całkowite usunięcie** kodu operacyjnego `SELFDESTRUCT` jest nadal rozważane w przyszłych aktualizacjach, aby jeszcze bardziej uprościć stan EVM. ([Więcej informacji o problemach z SELFDESTRUCT](https://hackmd.io/@vbuterin/selfdestruct)).
+- **Wycofywanie starszych typów transakcji:** Chociaż [klienty Ethereum](/glossary/#consensus-client) wciąż obsługują starsze typy transakcji dla zapewnienia wstecznej kompatybilności, celem jest zachęcenie do migracji do nowszych typów i **potencjalne wycofanie lub całkowite usunięcie obsługi najstarszych formatów** w przyszłości.
+- **Kontynuacja badań nad wydajnością gazu:** Trwają prace nad **dalszymi udoskonaleniami obliczania gazu**, potencjalnie obejmującymi koncepcje, takie jak gaz wielowymiarowy, aby lepiej odzwierciedlić zużycie zasobów.
+- **Zoptymalizowane operacje kryptograficzne:** Trwają prace nad **wprowadzeniem bardziej wydajnych metod arytmetycznych**, które stanowią podstawę operacji kryptograficznych używanych w EVM.
+
+Podobnie, istnieją aktualizacje, które można wprowadzić w innych częściach obecnych klientów Ethereum. Przykładowo obecne klienty wykonawcze i konsensusu korzystają z różnych rodzajów kompresji danych. Ujednolicenie schematu kompresji w całej sieci znacznie ułatwi i uprości wymianę danych między klientami. Pozostaje to jednak obszarem wciąż wymagającym badań.
 
 ## Aktualny postęp {#current-progress}
 
-Większość uaktualnień wymaganych do przyszłościowego zabezpieczenia Ethereum jest **nadal w fazie badań i może minąć kilka lat**, zanim zostaną one wdrożone. Takie uaktualnienia, jak usunięcie SELFDESTRUCT i ujednolicenie schematu kompresji używanego w klientach wykonawczych i konsensusu, prawdopodobnie pojawią się wcześniej niż kryptografia odporna na komputery kwantowe.
+Wiele długoterminowych aktualizacji zapewniających odporność na przyszłość, w szczególności **pełna odporność kwantowa dla podstawowych protokołów, jest wciąż w fazie badań i może upłynąć kilka lat**, zanim zostaną wdrożone.
 
-**Dalsza lektura**
+Jednak **poczyniono już znaczne postępy w zakresie uproszczeń.** Na przykład kluczowe zmiany, takie jak **ograniczenie `SELFDESTRUCT` (EIP-6780)** i wprowadzenie **transakcji przenoszących bloby (EIP-4844)**, zostały zaimplementowane w **aktualizacji Dencun (marzec 2024)**. Prace nad ujednoliceniem schematów kompresji klientów i innymi usprawnieniami wydajności nadal trwają.
 
-- [Paliwo](/developers/docs/gas)
-- [Maszyna Wirtualna Ethereum (EVM)](/developers/docs/evm)
-- [Data structures](/developers/docs/data-structures-and-encoding)
+**Przeczytaj także**
+
+- [Gaz](/developers/docs/gas)
+- [EVM](/developers/docs/evm)
+- [Struktury danych](/developers/docs/data-structures-and-encoding)

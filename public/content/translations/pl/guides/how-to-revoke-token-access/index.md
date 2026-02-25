@@ -1,16 +1,16 @@
 ---
-title: Jak unieważnić dostęp inteligentnych kontraktów do środków kryptowaluty
-description: Przewodnik na temat unieważnienia dostępu do tokenów inteligentnym kontraktom
+title: "Jak unieważnić dostęp inteligentnych kontraktów do środków kryptowaluty"
+description: "Przewodnik na temat unieważnienia dostępu do tokenów inteligentnym kontraktom"
 lang: pl
 ---
 
 # Jak unieważnić dostęp inteligentnych kontraktów do środków kryptowaluty
 
-W tym przewodniku dowiesz się, jak wyświetlić listę wszystkich [inteligentnych kontraktów](/glossary/#smart-contract) mających za Twoją zgodą dostęp do Twoich środków i jak je anulować.
+W tym przewodniku dowiesz się, jak wyświetlić listę wszystkich [inteligentnych kontraktów](/glossary/#smart-contract), którym udzielono dostępu do Twoich środków, oraz jak je anulować.
 
 Czasami złośliwi programiści tworzą backdoory w inteligentnych kontraktach, które umożliwiają dostęp do funduszy nieświadomych użytkowników, którzy wchodzą w interakcję z inteligentnym kontraktem. Często zdarza się, że takie platformy proszą użytkownika o zgodę na wydanie **nieograniczonej liczby tokenów** w celu zaoszczędzenia niewielkich ilości [gazu](/glossary/#gas) w przyszłości, ale wiąże się to ze zwiększonym ryzykiem.
 
-Gdy platforma ma nieograniczone prawa dostępu do tokena w [portfelu](/glossary/#wallet) użytkownika, może wydać wszystkie te tokeny, nawet jeśli użytkownik wycofał swoje środki z ich platformy do portfela. Złośliwi użytkownicy mogą nadal uzyskiwać dostęp do twoich środków i wypłacać je do swoich portfeli bez możliwości ich odzyskania.
+Gdy platforma ma nieograniczone prawa dostępu do tokena w Twoim [portfelu](/glossary/#wallet), może wydać wszystkie te tokeny, nawet po wypłacie środków z jej platformy do Twojego portfela. Złośliwi użytkownicy mogą nadal uzyskiwać dostęp do twoich środków i wypłacać je do swoich portfeli bez możliwości ich odzyskania.
 
 Jedynym zabezpieczeniem jest powstrzymanie się od korzystania z niesprawdzonych nowych projektów, zatwierdzanie tylko tych, które są potrzebne, lub regularne cofanie dostępu. Jak więc to zrobić?
 
@@ -18,11 +18,11 @@ Jedynym zabezpieczeniem jest powstrzymanie się od korzystania z niesprawdzonych
 
 Istnieje kilka stron umożliwiających przeglądanie i unieważnianie inteligentnych kontraktów powiązanych z adresem użytkownika. Odwiedź stronę i podłącz swój portfel:
 
-- [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Revoke](https://revoke.cash/) (wiele sieci)
-- [Unrekt](https://app.unrekt.net/) (wiele sieci)
-- [EverRevoke](https://everrise.com/everrevoke/) (wiele sieci)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Revoke](https://revoke.cash/) (wiele sieci)
+- [Unrekt](https://app.unrekt.net/) (wiele sieci)
+- [EverRevoke](https://everrise.com/everrevoke/) (wiele sieci)
 
 ## Krok 2: Połącz swój portfel
 
@@ -42,9 +42,9 @@ Po kliknięciu przycisku unieważnienia, w portfelu powinna pojawić się sugest
 
 Zalecamy odświeżenie narzędzia do unieważniania po kilku minutach i ponowne podłączenie portfela, aby dwukrotnie sprawdzić, czy unieważniony kontrakt zniknął z listy.
 
-<mark>Zalecamy, aby nigdy nie zezwalać projektom na nieograniczony dostęp do tokenów i regularnie unieważniać wszystkie uprawnienia do tokenów. Unieważnienie dostępu do tokenów nigdy nie powinno skutkować utratą środków, zwłaszcza jeśli korzystasz z narzędzi wymienionych powyżej.</mark>
+<mark>Zalecamy, aby nigdy nie zezwalać projektom na nieograniczony dostęp do Twoich tokenów i regularnie unieważniać wszystkie zgody na dostęp do tokenów. Unieważnienie dostępu do tokenów nigdy nie powinno skutkować utratą środków, zwłaszcza w przypadku korzystania z narzędzi wymienionych powyżej.</mark>
 
- <br />
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
