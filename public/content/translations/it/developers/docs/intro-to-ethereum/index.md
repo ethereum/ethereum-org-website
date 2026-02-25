@@ -111,6 +111,6 @@ Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica n
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-## Tutorial correlati {#related-tutorials}
+## Tutorial correlati {#visual-learner}
 
 - [Una guida per sviluppatori a Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Un'esplorazione di Ethereum pensata per i principianti usando Python e web3.py_
