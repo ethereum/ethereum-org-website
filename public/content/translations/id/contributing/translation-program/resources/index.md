@@ -13,7 +13,7 @@ Anda dapat menemukan beberapa panduan dan perangkat yang berguna untuk penerjema
 - [Panduan Gaya Penerjemahan](/contributing/translation-program/translators-guide/) _– instruksi dan tips untuk penerjemah ethereum.org_
 - [Pertanyaan yang Sering Diajukan tentang penerjemahan](/contributing/translation-program/faq/) _– Pertanyaan yang paling sering diajukan dan jawabannya tentang Program Penerjemahan ethereum.org_
 - [Panduan editor daring Crowdin](https://support.crowdin.com/online-editor/) _– panduan lengkap tentang menggunakan editor daring Crowdin dan beberapa fitur lanjutan Crowdin_
-- [Ember konten](/contributing/translation-program/content-buckets/) _– halaman mana yang termasuk dalam setiap ember konten ethereum.org_
+- [Ember konten](/contributing/translation-program/) _– halaman mana yang termasuk dalam setiap ember konten ethereum.org_
 
 ## Perangkat {#tools}
 
