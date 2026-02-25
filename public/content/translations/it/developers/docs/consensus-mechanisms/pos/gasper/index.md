@@ -10,7 +10,7 @@ Gasper è una combinazione di Casper the Friendly Finality Gadget (Casper-FFG) e
 
 ## Prerequisiti
 
-Per comprendere questo materiale, è necessario leggere la pagina introduttiva sul [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
+Per comprendere questo materiale è necessario leggere la pagina introduttiva su [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
 ## Il ruolo di Gasper {#role-of-gasper}
 
@@ -23,14 +23,14 @@ La finalità è una proprietà di certi blocchi tale per cui non possono essere 
 1. Due terzi dell'ether in staking totale deve aver votato a favore dell'inclusione di quel blocco nella catena canonica. Questa condizione porta il blocco nello stato "giustificato". È improbabile che i blocchi giustificati siano ripristinati anche se in alcune condizioni è possibile.
 2. Quando un altro blocco è giustificato sopra a un blocco giustificato, questo passa allo stato "finalizzato". Finalizzare un blocco corrisponde all'impegno a includere il blocco nella catena canonica. Non può essere ripristinato a meno che un utente malevolo distrugga milioni di ether (miliardi di $USD).
 
-Questi aggiornamenti dei blocchi non si verificano in ogni slot. Al contrario sono giustificabili e finalizzabili solo i blocchi di confine di un'epoca. Questi blocchi sono noti come "punti di controllo" (checkpoint). L'aggiornamento considera coppie di punti di controllo. Per aggiornare il punto di controllo meno recente a finalizzato e il più recente a giustificato deve esistere un "collegamento di super-maggioranza" tra due punti di controllo successivi (es. due terzi dell'ether in staking totale ha votato affinché il punto di controllo B sia il discendente corretto del punto di controllo A).
+Questi aggiornamenti dei blocchi non si verificano in ogni slot. Al contrario sono giustificabili e finalizzabili solo i blocchi di confine di un'epoca. Questi blocchi sono noti come "punti di controllo" (checkpoint). L'aggiornamento considera coppie di punti di controllo. Per aggiornare il punto di controllo meno recente a finalizzato e il blocco più recente a giustificato, deve esistere un "collegamento di supermaggioranza" tra due punti di controllo successivi (cioè, due terzi dell'ether totale in staking votano che il punto di controllo B è il discendente corretto del punto di controllo A).
 
 Poiché la finalità richiede un accordo di due terzi per rendere un blocco canonico, un utente malevolo non può creare una catena finalizzata alternativa senza:
 
 1. Possedere o manipolare due terzi dell'ether in staking totale.
 2. Distruggere almeno un terzo dell'ether in staking totale.
 
-La prima condizione sorge perché per finalizzare una catena servono due terzi dell'ether in staking. La seconda sorge perché se due terzi dello stake totale ha votato in favore di entrambe le biforcazioni, allora un terzo deve aver votato su entrambe. Il doppio voto è una condizione di slashing che subirebbe la punizione massima, con la distruzione di un terzo dello stake totale. A maggio 2022, questo richiederebbe a un utente malevolo di bruciare ether per un valore di circa $10 miliardi. L'algoritmo che giustifica e finalizza i blocchi in Gasper è una forma lievemente modificata di [Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437.pdf).
+La prima condizione sorge perché per finalizzare una catena servono due terzi dell'ether in staking. La seconda sorge perché se due terzi dello stake totale ha votato in favore di entrambe le biforcazioni, allora un terzo deve aver votato su entrambe. Il doppio voto è una condizione di slashing che subirebbe la punizione massima, con la distruzione di un terzo dello stake totale. A maggio 2022, questo richiederebbe a un utente malevolo di bruciare ether per un valore di circa $10 miliardi. L'algoritmo che giustifica e finalizza i blocchi in Gasper è una forma leggermente modificata di [Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437.pdf).
 
 ### Incentivi e slashing {#incentives-and-slashing}
 
@@ -42,11 +42,11 @@ Oltre alla sicurezza, Gasper fornisce anche una "vitalità plausibile". Questa c
 
 ### Scelta della biforcazione {#fork-choice}
 
-La definizione originale di Casper-FFG prevedeva un algoritmo di scelta della biforcazione che imponeva la regola: `segui la catena contenente il punto di controllo giustificato avente l'altezza maggiore`, dove l'altezza è definita come la massima distanza dal blocco di genesi. In Gasper, la regola di scelta della biforcazione originale è deprecata in favore di un algoritmo più sofisticato, denominato LMD-GHOST. È importante rendersi conto che in condizioni normali non è necessaria una regola di scelta della biforcazione: esiste un propositore del singolo blocco per ogni slot e i validatori onesti lo attestano. Serve un algoritmo di scelta della biforcazione solo quando vi è una grande asincronia della rete o quando un propositore del blocco disonesto ha generato confusione. Tuttavia, quando si presentano questi casi, l'algoritmo di scelta della biforcazione è un’importante difesa che protegge la catena corretta.
+La definizione originale di Casper-FFG prevedeva un algoritmo di scelta della biforcazione che imponeva la regola: `segui la catena contenente il punto di controllo giustificato che ha l'altezza maggiore`, dove l'altezza è definita come la massima distanza dal blocco di genesi. In Gasper, la regola di scelta della biforcazione originale è deprecata in favore di un algoritmo più sofisticato, denominato LMD-GHOST. È importante rendersi conto che in condizioni normali non è necessaria una regola di scelta della biforcazione: esiste un propositore del singolo blocco per ogni slot e i validatori onesti lo attestano. Serve un algoritmo di scelta della biforcazione solo quando vi è una grande asincronia della rete o quando un propositore del blocco disonesto ha generato confusione. Tuttavia, quando si presentano questi casi, l'algoritmo di scelta della biforcazione è un’importante difesa che protegge la catena corretta.
 
 LMD-GHOST sta per "latest message-driven greedy heaviest observed sub-tree". Si tratta di un termine molto gergale per definire un algoritmo che seleziona la biforcazione che presenta il peso di attestazioni accumulate più elevato rispetto a quello canonico (greedy heaviest subtree) e che se vengono ricevuti più messaggi da un validatore, viene considerato solo l’ultimo (latest-message driveno). Prima di aggiungere il blocco più pesante alla sua catena canonica, ogni validatore valuta ogni blocco usando questa regola.
 
-## Letture consigliate {#further-reading}
+## Ulteriori letture {#further-reading}
 
-- [Gasper: combinazione di GHOST e Casper](https://arxiv.org/pdf/2003.03052.pdf)
+- [Gasper: Combining GHOST and Casper](https://arxiv.org/pdf/2003.03052.pdf)
 - [Casper the Friendly Finality Gadget](https://arxiv.org/pdf/1710.09437.pdf)

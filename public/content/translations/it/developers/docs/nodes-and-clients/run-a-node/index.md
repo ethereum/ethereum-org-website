@@ -234,7 +234,7 @@ Questa sezione ti guiderà nell'avvio dei client di esecuzione. Serve solo da es
 
 Ricordati che questo è solo un esempio di base, tutte le altre impostazioni saranno predefinite. Presta attenzione alla documentazione di ogni client per conoscere i valori predefiniti, le impostazioni e le funzionalità. Per ulteriori funzionalità, ad esempio per eseguire i validatori, per il monitoraggio, ecc., fai riferimento alla documentazione del client specifico.
 
-> Nota che i backslash `\` negli esempi servono solo a scopi di formattazione; i flag di configurazione sono definibili in una singola riga.
+> Nota che i backslash `` negli esempi servono solo a scopi di formattazione; i flag di configurazione sono definibili in una singola riga.
 
 ##### Eseguire Besu
 
