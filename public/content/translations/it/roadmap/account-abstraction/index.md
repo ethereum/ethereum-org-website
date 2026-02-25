@@ -1,6 +1,6 @@
 ---
 title: Astrazione account
-description: Una panoramica dei piani di Ethereum per rendere i conti degli utenti più semplici e sicuri
+description: "Una panoramica dei piani di Ethereum per rendere i conti degli utenti più semplici e sicuri"
 lang: it
 summaryPoints:
   - L'astrazione del conto semplifica molto la creazione di portafogli di contratti intelligenti
@@ -61,7 +61,6 @@ La gestione del gas, inoltre, è di molto migliorata con l'astrazione del conto.
 La gestione del gas è una delle frizioni principali per gli utenti di Ethereum, principalmente perché gli ETH sono la sola risorsa utilizzabile per pagare le transazioni. Immagina di avere un portafoglio con un saldo di USDC, ma nessun ETH. Non puoi spostare o scambiare quei token USDC, poiché non puoi pagare il gas. Non puoi nemmeno scambiare gli USDC per ETH, poiché anche questo costa del gas. Dovresti inviare altri ETH al tuo conto da una piattaforma di scambio o da un altro indirizzo per risolvere il problema. Con i portafogli di contratti intelligenti, invece, puoi semplicemente pagare il gas in USDC, liberando il tuo conto. Non devi più mantenere un saldo di ETH in tutti i tuoi conti.
 
 L'astrazione del conto, inoltre, consente agli sviluppatori di dapp di essere creativi con la gestione del gas. Ad esempio, potresti riuscire a iniziare a pagare una commissione fissa mensile alla tua DEX preferita, per delle transazioni illimitate. Le Dapp potrebbero offrire di pagare tutte le tue commissioni di gas per conto tuo, come ricompensa per aver utilizzato la loro piattaforma, o come offerta di inserimento. Per gli sviluppatori, sarebbe molto più facile innovare sul gas, quando i portafogli di contratti intelligenti sono supportati al livello del protocollo.
-
 </ExpandableCard>
 
 Le sessioni fidate, inoltre, sono potenzialmente trasformative per le esperienze degli utenti, specialmente per applicazioni come il gaming, in cui grandi numeri di piccole transazioni, potrebbero necessitare dell'approvazione in un breve tempo. Approvare individualmente ogni transazione spezzerebbe l'esperienza di gioco, ma l'approvazione permanente non è sicura. Il portafoglio di un contratto intelligente potrebbe approvare certe transazioni per un dato tempo, fino a un valore specifico o solo per certi indirizzi.
@@ -77,7 +76,6 @@ I portafogli di contratti intelligenti, ad oggi, esistono, ma implementarli è i
 <ExpandableCard title="EIP-2771: astrazione del conto utilizzando le meta-transazioni" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2771: account abstraction using meta-transactions">
 
 EIP-2771 introduce il concetto delle meta-transazioni, che consentono a terze parti di pagare i costi del gas degli utenti senza apportare modifiche al protocollo di Ethereum. L'idea è che le transazioni firmate da un utente sono inviate a un contratto `Corriere`. Il corriere è un'entità fidata che verifica che le transazioni siano valide, prima di inviarle a un ripetitore di gas. Ciò avviene all'esterno della catena, evitando il bisogno di pagare il gas. Il ripetitore di gas passa la transazione a un contratto `Destinatario`, pagando il gas necessario per rendere la transazione eseguibile su Ethereum. La transazione è eseguita se il `Corriere` è noto ed è ritenuto attendibile dal `Destinatario`. Questo modello semplifica, per gli sviluppatori, l'implementazione di transazioni a gas zero per gli utenti.
-
 </ExpandableCard>
 
 <ExpandableCard title="EIP-4337: astrazione del conto senza modificare il protocollo di Ethereum" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
@@ -87,7 +85,6 @@ L'EIP-4337 è il primo passo verso il supporto dei portafogli di contratti intel
 Anche il funzionamento dei portafogli cambierà sotto EIP-4337. Invece di far reimplementare da ogni portafoglio una logica di sicurezza complessa ma comune, queste funzioni saranno affidate a un contratto del portafoglio globale, noto come &quot;punto d'accesso&quot;. Questo, gestirebbe le operazioni come il pagamento delle commissioni e l'esecuzione del codice dell'EVM, così che gli sviluppatori di portafogli possano concentrarsi sul fornire eccellenti esperienze agli utenti.
 
 <strong>Nota:</strong> il contratto del punto d'accesso dell'EIP-4337, è stato distribuito alla Rete Principale di Ethereum l'1 marzo 2023. Puoi visualizzare il contratto su <a href="https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57">Etherscan</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="EIP-2938: modificare il protocollo di Ethereum per supportare l'astrazione del conto" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
@@ -95,7 +92,6 @@ Anche il funzionamento dei portafogli cambierà sotto EIP-4337. Invece di far re
 L'<a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a> mira ad aggiornare il protocollo di Ethereum introducendo un nuovo tipo di transazione, <code>AA_TX_TYPE</code> che include tre campi: <code>nonce</code>, <code>target</code> e <code>data</code>, dove <code>nonce</code> è un contatore di transazioni, <code>target</code> è l'indirizzo del contratto del punto d'accesso, e <code>data</code> è il bytecode dell'EVM. Per eseguire queste transazioni, devono essere aggiunte due nuove istruzioni (note come codici operativi) all'EVM: <code>NONCE</code> e <code>PAYGAS</code>. Il codice operativo <code>NONCE</code> traccia la sequenza della transazione e <code>PAYGAS</code> calcola e preleva il gas necessario per eseguire la transazione dal saldo del contratto. Queste nuove funzionalità consentono a Ethereum di supportare nativamente i portafogli di contratti intelligenti, poiché l'infrastruttura necessaria è integrata nel protocollo di Ethereum.
 
 Nota che l'EIP-2938 non è correntemente attiva. La community, al momento, preferisce EIP-4337 poiché non richiede modifiche al protocollo.
-
 </ExpandableCard>
 
 <ExpandableCard title="EIP-3074: aggiornare i conti posseduti esternamente per l'astrazione del conto" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-3074: upgrading externally-owned accounts for account abstraction">
@@ -103,7 +99,6 @@ Nota che l'EIP-2938 non è correntemente attiva. La community, al momento, prefe
 L'<a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> mira ad aggiornare i conti posseduti esternamente di Ethereum, consentendo loro di delegare il controllo a un contratto intelligente. Ciò significa che la logica dei contratti intelligenti potrebbe approvare le transazioni originate da un EOA. Questo consentirebbe funzionalità come la sponsorizzazione del gas e le transazioni raggruppate. Perché funzioni, devono essere aggiunti due nuovi codici operativi all'EVM: <code>AUTH</code> e <code>AUTHCALL</code>. Con l'EIP-3074, i benefici del portafoglio di un contratto intelligente sono resi disponibili <em>senza la necessità di un contratto</em>, invece un tipo specifico di contratto privo di stato, privo di fiducia e non ggiornabile, noto come "invocatore", gestisce le transazioni.
 
 Nota che EIP-3074 non è correntemente attivo. La community, al momento, preferisce EIP-4337 poiché non richiede modifiche al protocollo.
-
 </ExpandableCard>
 
 ## Stato attuale {#current-progress}
