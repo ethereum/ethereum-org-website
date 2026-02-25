@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Timeline of all Ethereum forks (2014 to present) {#the-history-of-ethereum}
 
-A timeline of all the major milestones, forks, and updates to the Ethereum blockchain.
+A timeline of all the major milestones, forks, and updates to the [Ethereum](/) blockchain.
 
 <ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 

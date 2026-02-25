@@ -18,7 +18,7 @@ It does this by **splitting the private key** used to secure a validator **acros
 
 Validators generate two public-private key pairs: validator keys for participating in consensus and withdrawal keys for accessing funds. While validators can secure withdrawal keys in cold storage, validator private keys must be online 24/7. If a validator private key is compromised, an attacker can control the validator, potentially leading to slashing or the loss of the staker's ETH. DVT can help mitigate this risk. Here's how:
 
-By using DVT, stakers can participate in staking while keeping the validator private key in cold storage. This is achieved by encrypting the original, full validator key and then splitting it into key shares. The key shares live online and are distributed to multiple nodes which enable the distributed operation of the validator. This is possible because Ethereum validators use BLS signatures that are additive, meaning the full key can be reconstructed by summing their component parts. This allows the staker to keep the full, original 'master' validator key securely offline.
+By using DVT, stakers can participate in staking while keeping the validator private key in cold storage. This is achieved by encrypting the original, full validator key and then splitting it into key shares. The key shares live online and are distributed to multiple nodes which enable the distributed operation of the validator. This is possible because [Ethereum](/) validators use BLS signatures that are additive, meaning the full key can be reconstructed by summing their component parts. This allows the staker to keep the full, original 'master' validator key securely offline.
 
 ### No single points of failure {#no-single-point-of-failure}
 

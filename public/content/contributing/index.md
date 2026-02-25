@@ -8,7 +8,7 @@ lang: en
 
 Ethereum.org is an open-source run project with **12 000+** contributors that help translate, write, design and maintain the website.
 
-We are a welcoming community that will help you grow and educate in the Ethereum ecosystem while also meaningfully contribute and get relevant practical experience!
+We are a welcoming community that will help you grow and educate in the [Ethereum](/) ecosystem while also meaningfully contribute and get relevant practical experience!
 
 ## Ways to contribute {#ways-to-contribute}
 

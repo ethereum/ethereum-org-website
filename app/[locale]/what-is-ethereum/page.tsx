@@ -132,6 +132,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <p>
                 {t.rich("page-what-is-ethereum-ethereum-intro-1", {
                   strong: Strong,
+                  a: (chunks) => <Link href="/">{chunks}</Link>,
                 })}
               </p>
               <p>
