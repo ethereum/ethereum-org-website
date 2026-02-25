@@ -57,7 +57,7 @@ Il livello di esecuzione riguarda l'esecuzione delle transazioni, l'esecuzione d
 
 - costruzione del supporto per client leggeri;
 - ricerca dei limiti di gas;
-- e l'incorporazione di nuove strutture di dati (ad es. alberi di Verkle).
+- e l'incorporazione di nuove strutture di dati (ad es., Verkle Tries).
 
 #### Letture di base {#background-reading-1}
 
@@ -242,7 +242,7 @@ I mercati degli spazi di blocco governano l'inclusione delle transazioni dell'ut
 - [Progettazione del meccanismo delle commissioni sulle transazioni per la blockchain di Ethereum: un'analisi economica di EIP-1559 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
 - [Simulazioni di EIP-1559 (Gruppo di incentivi robusti)](https://ethereum.github.io/abm1559)
 - [Economia dei rollup dai primi principi](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
-- [Flash Boys 2.0: frontrunning, riordinamento delle transazioni e instabilità del consenso nelle borse decentralizzate] (https://arxiv.org/abs/1904.05234)
+- [Flash Boys 2.0: frontrunning, riordinamento delle transazioni e instabilità del consenso nelle borse decentralizzate](https://arxiv.org/abs/1904.05234)
 
 #### Ricerca recente {#recent-research-10}
 
@@ -358,7 +358,7 @@ Gli strumenti per gli sviluppatori di Ethereum stanno rapidamente migliorando. C
 
 ### Oracoli {#oracles}
 
-Gli oracoli importano dati off-chain sulla blockchain in modo decentralizzato e senza permessi. Ottenere questi dati on-chain consente alle dApp di reagire ai fenomeni del mondo reale, come le fluttuazioni dei prezzi delle risorse del mondo reale, gli eventi delle app off-chain o persino i cambiamenti meteorologici.
+Gli oracoli importano dati offchain sulla blockchain in modo decentralizzato e senza permessi. Ottenere questi dati onchain consente alle dApp di essere reattive ai fenomeni del mondo reale, come le fluttuazioni dei prezzi degli asset del mondo reale, gli eventi nelle app offchain o persino i cambiamenti meteorologici.
 
 #### Letture di base {#background-reading-18}
 
@@ -377,7 +377,7 @@ Gli attacchi su Ethereum generalmente sfruttano le vulnerabilità di singole app
 
 - [Rapporto sull'exploit "wormhole"](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Elenco degli hack post-mortem dei contratti Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Ultime notizie su Rekt](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Ultime notizie su Rekt](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Ricerca recente {#recent-research-19}
 
