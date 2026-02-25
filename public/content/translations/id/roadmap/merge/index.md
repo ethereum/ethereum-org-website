@@ -116,7 +116,7 @@ Penggabungan ini menandai berakhirnya bukti kerja untuk Ethereum dan memulai era
 
 ## Penggabungan dan penskalaan {#merge-and-scaling}
 
-Penggabungan juga membuka jalan untuk peningkatan skalabilitas lebih lanjut yang tidak mungkin dilakukan di bawah bukti kerja, mendekatkan Ethereum satu langkah lebih dekat untuk mencapai skala penuh, keamanan, dan keberlanjutan seperti yang diuraikan dalam [visi Ethereum](/roadmap/vision/)nya.
+Penggabungan juga membuka jalan untuk peningkatan skalabilitas lebih lanjut yang tidak mungkin dilakukan di bawah bukti kerja, mendekatkan Ethereum satu langkah lebih dekat untuk mencapai skala penuh, keamanan, dan keberlanjutan seperti yang diuraikan dalam [visi Ethereum](/roadmap/)nya.
 
 ## Kesalahpahaman tentang Penggabungan {#misconceptions}
 

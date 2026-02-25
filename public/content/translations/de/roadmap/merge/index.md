@@ -116,7 +116,7 @@ The Merge markierte das Ende von Proof-of-Work für Ethereum und läutete die Ä
 
 ## Die Zusammenführung und Skalierbarkeit {#merge-and-scaling}
 
-Die Zusammenführung ebnet auch den Weg für weitere Skalierungsupgrades, welche unter Proof-of-Work nicht möglich waren. Dies bringt Ethereum einen Schritt näher die volle Skalierung, Sicherheit und Nachhaltigkeit zu erreichen, die in der [Ethereum Vision](/roadmap/vision/) beschrieben ist.
+Die Zusammenführung ebnet auch den Weg für weitere Skalierungsupgrades, welche unter Proof-of-Work nicht möglich waren. Dies bringt Ethereum einen Schritt näher die volle Skalierung, Sicherheit und Nachhaltigkeit zu erreichen, die in der [Ethereum Vision](/roadmap/) beschrieben ist.
 
 ## Misverständnisse über die Zusammenführung {#misconceptions}
 

@@ -116,7 +116,7 @@ A Fusão marcou o fim da prova de trabalho para o Ethereum e deu início à era 
 
 ## A Fusão e a escalabilidade {#merge-and-scaling}
 
-The Merge também preparou o terreno para futuras atualizações de escalabilidade que não eram possíveis na prova de trabalho, deixando o Ethereum mais próximo de alcançar a escalabilidade, segurança e sustentabilidade descritas na [Visão do Ethereum](/roadmap/vision/).
+The Merge também preparou o terreno para futuras atualizações de escalabilidade que não eram possíveis na prova de trabalho, deixando o Ethereum mais próximo de alcançar a escalabilidade, segurança e sustentabilidade descritas na [Visão do Ethereum](/roadmap/).
 
 ## Concepções erradas sobre A Fusão {#misconceptions}
 

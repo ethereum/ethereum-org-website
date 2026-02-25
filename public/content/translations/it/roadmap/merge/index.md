@@ -116,7 +116,7 @@ La Fusione ha segnato la fine del proof-of-work per Ethereum e ha dato inizio al
 
 ## La Fusione e il ridimensionamento {#merge-and-scaling}
 
-La Fusione ha inoltre gettato le basi per ulteriori aggiornamenti di scalabilità, impossibili sotto il Poof of Work, portando Ethereum un po' più vicina al raggiungimento della completa scalabilità, sicurezza e sostenibilità delinate nella [visione di Ethereum](/roadmap/vision/).
+La Fusione ha inoltre gettato le basi per ulteriori aggiornamenti di scalabilità, impossibili sotto il Poof of Work, portando Ethereum un po' più vicina al raggiungimento della completa scalabilità, sicurezza e sostenibilità delinate nella [visione di Ethereum](/roadmap/).
 
 ## Equivoci su La Fusione {#misconceptions}
 

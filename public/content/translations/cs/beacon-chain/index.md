@@ -32,7 +32,7 @@ Uzamčení slouží k podobnému účelu, jako dříve sloužila [těžba](/deve
 
 Přechod na Ethereum založené na důkazu podílem významně zabezpečil a decentralizoval jeho provoz ve srovnání s důkazem prací. Čím více lidí se do sítě zapojí, tím bude decentralizovanější a bezpečnější před útoky.
 
-Použití Důkazu podílem jako mechanismu konsenzu je navíc základním stavebním kamenem [bezpečného, ekologického a škálovatelného Etherea, které máme v současné době](/roadmap/vision/).
+Použití Důkazu podílem jako mechanismu konsenzu je navíc základním stavebním kamenem [bezpečného, ekologického a škálovatelného Etherea, které máme v současné době](/roadmap/).
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>

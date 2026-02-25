@@ -116,7 +116,7 @@ Sloučení znamenalo pro Ethereum konec důkazu prací a zahájilo éru udržite
 
 ## Sloučení a škálování {#merge-and-scaling}
 
-Sloučení také připravilo půdu pro další škálovatelná vylepšení, která nebyla za důkazu prací možná, a přiblížilo Ethereum o krok blíže k dosažení plného škálování, bezpečnosti a udržitelnosti uvedených v [jeho vizi](/roadmap/vision/).
+Sloučení také připravilo půdu pro další škálovatelná vylepšení, která nebyla za důkazu prací možná, a přiblížilo Ethereum o krok blíže k dosažení plného škálování, bezpečnosti a udržitelnosti uvedených v [jeho vizi](/roadmap/).
 
 ## Mýty o Sloučení {#misconceptions}
 

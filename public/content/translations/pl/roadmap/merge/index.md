@@ -116,7 +116,7 @@ Połączenie oznaczało koniec stosowania mechanizmu proof-of-work na platformie
 
 ## Połączenie i skalowanie {#merge-and-scaling}
 
-Połączenie stwarza również miejsce dla dalszych uaktualnień skalowalności, które nie są możliwe w ramach mechanizmu proof-of-work, co przybliży Ethereum o krok do osiągnięcia pełnej skali, bezpieczeństwa i zrównoważenia ekologicznego, o których mowa w [wizji Ethereum](/roadmap/vision/).
+Połączenie stwarza również miejsce dla dalszych uaktualnień skalowalności, które nie są możliwe w ramach mechanizmu proof-of-work, co przybliży Ethereum o krok do osiągnięcia pełnej skali, bezpieczeństwa i zrównoważenia ekologicznego, o których mowa w [wizji Ethereum](/roadmap/).
 
 ## Błędne przekonania o Połączeniu {#misconceptions}
 
