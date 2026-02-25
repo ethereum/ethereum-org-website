@@ -150,7 +150,7 @@
   "ethash-term": "Ethash",
   "ethash-definition": "ایک <a href=\"/glossary/#pow\">پروف-آف-ورک</a> الگورتھم جو ایتھیریم پر <a href=\"/glossary/#pos\">پروف-آف-اسٹیک</a> میں منتقلی سے پہلے استعمال ہوتا تھا۔ <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">مزید پڑھیں</a>",
   "ether-term": "ایتھر",
-  "ether-definition": "ایتھیریم کی مقامی کرپٹو کرنسی، جسے عام طور پر \"ETH\" کہا جاتا ہے۔ یہ ایتھیریم ایکو سسٹم اور ایپلی کیشنز استعمال کرتے وقت ٹرانزیکشن فیس کو پورا کرنے کے لیے استعمال ہوتی ہے۔ <a href=\"/eth/\">ایتھر پر مزید</a>۔",
+  "ether-definition": "ایتھیریم کی مقامی کرپٹو کرنسی، جسے عام طور پر \"ETH\" کہا جاتا ہے۔ یہ ایتھیریم ایکو سسٹم اور ایپلی کیشنز استعمال کرتے وقت ٹرانزیکشن فیس کو پورا کرنے کے لیے استعمال ہوتی ہے۔ <a href=\"/what-is-ether/\">ایتھر پر مزید</a>۔",
   "events-term": "ایونٹس",
   "events-definition": "<a href=\"/glossary/#evm\">EVM</a> لاگنگ کی سہولیات کے استعمال کی اجازت دیتا ہے۔ <a href=\"/glossary/#dapp\">Dapps</a> واقعات کو سن سکتے ہیں اور انہیں صارف کے انٹرفیس میں جاوا اسکرپٹ کال بیکس کو متحرک کرنے کے لیے استعمال کر سکتے ہیں۔ <a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">واقعات اور لاگز پر مزید</a>",
   "evm-term": "Ethereum ورچوئل مشین (EVM)",

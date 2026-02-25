@@ -58,7 +58,7 @@
   "erc-721-term": "ERC-721",
   "erc-721-definition": "NFT(非代替性トークン)を作成する際に使われる標準ルールのセットです。",
   "ether-term": "イーサ",
-  "ether-definition": "イーサリアムのネイティブの暗号通貨で、通常「ETH」と呼ばれます。イーサリアムエコシステムおよびアプリケーションを使う時に、トランザクションフィーの支払いに使われます。詳細は<a href=\"/eth/\">Ether</a>をご覧ください。",
+  "ether-definition": "イーサリアムのネイティブの暗号通貨で、通常「ETH」と呼ばれます。イーサリアムエコシステムおよびアプリケーションを使う時に、トランザクションフィーの支払いに使われます。詳細は<a href=\"/what-is-ether/\">Ether</a>をご覧ください。",
   "events-term": "イベント",
   "events-definition": "<a href=\"/glossary/#evm\">EVM</a>ログ機能の利用を許可します。<a href=\"/glossary/#dapp\">Dapps</a> では、イベントをリッスンしてユーザーインターフェースのJavaScriptコールバックのトリガーに使用します。詳細は<a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">イベントとログ</a>をご覧ください。",
   "execution-client-term": "実行クライアント",

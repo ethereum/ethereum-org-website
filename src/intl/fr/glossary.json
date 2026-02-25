@@ -148,7 +148,7 @@
   "ethash-term": "Ethash",
   "ethash-definition": "Un algorithme de <a href=\"/glossary/#pow\">preuve de travail</a> qui a été utilisé sur Ethereum avant sa transition vers la <a href=\"/glossary/#pos\">preuve d’enjeu</a>. <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">En savoir plus</a>",
   "ether-term": "Ether",
-  "ether-definition": "La cryptomonnaie native d’Ethereum, communément appelée « ETH ». Elle est utilisée pour couvrir les frais de transaction lors de l’utilisation de l’écosystème et des applications Ethereum. <a href=\"/eth/\">En savoir plus sur ether</a>.",
+  "ether-definition": "La cryptomonnaie native d’Ethereum, communément appelée « ETH ». Elle est utilisée pour couvrir les frais de transaction lors de l’utilisation de l’écosystème et des applications Ethereum. <a href=\"/what-is-ether/\">En savoir plus sur ether</a>.",
   "events-term": "Évènements",
   "events-definition": "Permet d'utiliser les fonctions de journalisation de l'<a href=\"/glossary/#evm\">EVM</a>. Les <a href=\"/glossary/#dapp\">dApps</a> peuvent écouter les événements et les utiliser pour déclencher des rappels JavaScript dans l'interface utilisateur. <a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">En savoir plus sur les événements et les journaux</a>.",
   "evm-term": "Machine virtuelle Ethereum (EVM)",
