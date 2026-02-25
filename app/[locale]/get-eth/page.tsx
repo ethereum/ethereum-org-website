@@ -358,7 +358,9 @@ export default async function Page({ params }: { params: PageParams }) {
 
               <Stack className="gap-8">
                 <Stack className="gap-4">
-                  <p>{t("page-get-eth-description")}</p>
+                  <p>
+                    <Translation id="page-get-eth:page-get-eth-description" />
+                  </p>
                   <p>{t("page-get-eth-security")}</p>
                 </Stack>
                 <Stack className="gap-4">

@@ -31,7 +31,7 @@ uses the `tokenId` as input and outputs an image of something cool, like zombies
 
 ## Body {#body}
 
-The ERC-721 (Ethereum Request for Comments 721), proposed by William Entriken, Dieter Shirley, Jacob Evans,
+The ERC-721 ([Ethereum](/) Request for Comments 721), proposed by William Entriken, Dieter Shirley, Jacob Evans,
 Nastassia Sachs in January 2018, is a Non-Fungible Token Standard that implements an API for tokens within Smart Contracts.
 
 It provides functionalities like to transfer tokens from one account to another, to get the current token balance of an

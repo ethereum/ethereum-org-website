@@ -41,7 +41,7 @@ An incomplete list of key problems in science and how decentralized science can 
 
 ## Ethereum and DeSci {#ethereum-and-desci}
 
-A decentralized science system will require robust security, minimal monetary and transaction costs, and a rich ecosystem for application development. Ethereum provides everything needed for building a decentralized science technology.
+A decentralized science system will require robust security, minimal monetary and transaction costs, and a rich ecosystem for application development. [Ethereum](/) provides everything needed for building a decentralized science technology.
 
 ## DeSci use cases {#use-cases}
 

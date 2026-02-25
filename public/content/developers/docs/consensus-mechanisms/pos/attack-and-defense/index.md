@@ -4,7 +4,7 @@ description: Learn about the known attack vectors on proof-of-stake Ethereum and
 lang: en
 ---
 
-Thieves and saboteurs are constantly seeking opportunities to attack Ethereum’s client software. This page outlines the known attack vectors on Ethereum’s consensus layer and outlines how those attacks can be defended. The information on this page is adapted from a [longer form version](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs).
+Thieves and saboteurs are constantly seeking opportunities to attack [Ethereum](/)’s client software. This page outlines the known attack vectors on Ethereum’s consensus layer and outlines how those attacks can be defended. The information on this page is adapted from a [longer form version](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs).
 
 ## Prerequisites {#prerequisites}
 
