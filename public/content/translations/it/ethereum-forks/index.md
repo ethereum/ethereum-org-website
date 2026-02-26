@@ -118,7 +118,7 @@ EIP-7514 comporta un rafforzamento dell'emissione di ETH, limitando il tasso di 
 
 </ExpandableCard>
 
-- [Leggi le specifiche dell'aggiornamento di Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Leggi le specifiche dell'aggiornamento di Deneb](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
 - [Domande frequenti su Cancun-Deneb ("Dencun")](/roadmap/dencun/)
 
 <Divider />
@@ -156,7 +156,7 @@ Questo aggiornamento del livello del consenso ha comportato la possibilità, per
 L'aggiornamento, inoltre, ha fornito la funzionalità di pulizia automatica dei conti, che elabora continuamente sui conti dei validatori qualsiasi pagamento di ricompense o prelievo completo disponibile.
 
 - [Maggiori informazioni sui prelievi in staking](/staking/withdrawals/).
-- [Leggi le specifiche dell'aggiornamento Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Leggi le specifiche dell'aggiornamento Capella](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

@@ -282,7 +282,7 @@ O modo cliente leve baixa todos os cabeçalhos de bloco, dados de bloco e verifi
 
 A sincronização otimista é uma estratégia de sincronização pós-fusão projetada para ser compatível por aceitação (opt-in) e com versões anteriores, permitindo que os nós de execução sincronizem por meio de métodos estabelecidos. O mecanismo de execução pode, de modo _otimista_, importar blocos beacon sem verificá-los completamente, encontrar o cabeçalho mais recente e começar a sincronizar a cadeia com os métodos acima. Em seguida, após a atualização do cliente de execução, ele informará ao cliente de consenso sobre a validade das transações na Beacon Chain.
 
-[Mais sobre sincronização otimista](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[Mais sobre sincronização otimista](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### Sincronização de ponto de verificação {#checkpoint-sync}
 

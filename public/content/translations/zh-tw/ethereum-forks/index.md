@@ -118,7 +118,7 @@ Prague-Electra（“Pectra”）升級包括對以太坊協議的幾項改進，
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Pectra 將如何增強質押體驗](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [閱讀 Electra 升級規範](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [閱讀 Electra 升級規範](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
 - [Prague-Electra (「Pectra」) 常見問題](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514 將驗證者加入網路的「流失」率限制在每個時期八 (8) 
 </ul>
 </ExpandableCard>
 
-- [閱讀 Deneb 升級規範](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [閱讀 Deneb 升級規範](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
 - [Cancun-Deneb (「Dencun」) 常見問題](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ Capella 升級是共識層（信標鏈）的第三次重大升級，實現了質
 此升級還提供了自動帳戶掃描功能，可持續處理驗證者帳戶的任何可用獎勵支付或全額提款。
 
 - [深入了解質押提款](/staking/withdrawals/).
-- [閱讀 Capella 升級規範](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [閱讀 Capella 升級規範](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

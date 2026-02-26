@@ -35,5 +35,5 @@ lang: ta
 - [Eth2 இல் வலுவற்ற அகநிலை](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [விட்டாலிக்: வலுவற்ற அகநிலையை நான் எப்படி விரும்பக் கற்றுக்கொண்டேன்](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)
 - [வலுவற்ற அகநிலை (Teku ஆவணங்கள்)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
-- [கட்டம்-0 வலுவற்ற அகநிலை வழிகாட்டி](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
+- [கட்டம்-0 வலுவற்ற அகநிலை வழிகாட்டி](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/weak-subjectivity.md)
 - [எத்தேரியம் 2.0 இல் வலுவற்ற அகநிலையின் பகுப்பாய்வு](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

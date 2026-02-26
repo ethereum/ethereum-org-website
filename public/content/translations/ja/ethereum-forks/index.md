@@ -118,7 +118,7 @@ Ethereumの基礎となるソフトウェアは二つに分けることができ
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Pectraがステーキング体験を向上させる方法](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Electraアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Electraアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
 - [Prague-Electra(「Pectra」) FAQ](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514では、バリデータがネットワークに参加できる「チャ
 </ul>
 </ExpandableCard>
 
-- [Denebアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Denebアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
 - [Cancun-Deneb(「Dencun」) FAQ](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ EIP-7514では、バリデータがネットワークに参加できる「チャ
 また、このアップグレードによって、自動アカウントスイープ機能も実装され、バリデータアカウントを継続的に処理し、報酬の支払いや全額引き出しができるようになりました。
 
 - [ステーキング出金について詳しく](/staking/withdrawals/).
-- [Capellaアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Capellaアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

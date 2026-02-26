@@ -58,7 +58,7 @@ Peningkatan lapisan konsensus ini membawa kemampuan bagi staker yang tidak menye
 Peningkatan ini juga menyediakan fungsionalitas pemindaian akun otomatis, yang terus-menerus memproses akun validator untuk pembayaran imbalan yang tersedia atau penarikan penuh.
 
 - [Lebih lanjut tentang penarikan penaruhan](/staking/withdrawals/).
-- [Baca spesifikasi peningkatan Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Baca spesifikasi peningkatan Capella](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

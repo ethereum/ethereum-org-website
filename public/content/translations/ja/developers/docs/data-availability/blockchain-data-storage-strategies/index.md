@@ -39,7 +39,7 @@ lang: ja
 
 ## EIP-4844ブロブ {#eip-4844-blobs}
 
-[Dencunハードフォーク](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md) から、イーサリアムブロックチェーンには [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) が導入され、限られた有効期間（初期は約 [18日間](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) ）のデータブロブが追加されました。 これらのブロブは、[実行ガス](/developers/docs/gas) と同様のメカニズムを使用していますが、価格は別に設定されています。 これらは一時的なデータを安価に投稿する手段となっています。
+[Dencunハードフォーク](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md) から、イーサリアムブロックチェーンには [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) が導入され、限られた有効期間（初期は約 [18日間](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) ）のデータブロブが追加されました。 これらのブロブは、[実行ガス](/developers/docs/gas) と同様のメカニズムを使用していますが、価格は別に設定されています。 これらは一時的なデータを安価に投稿する手段となっています。
 
 EIP-4844ブロブの主な利用ケースは、ロールアップによるトランザクションの公開です。 [オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups) は、ブロックチェーン上にトランザクションを公開する必要があります。 これらのトランザクションは、 [チャレンジ期間中](https://docs.optimism.io/connect/resources/glossary#challenge-period) に誰でも利用できる状態にしておく必要があり、ロールアップの [シーケンサー](https://docs.optimism.io/connect/resources/glossary#sequencer) が誤った状態ルートを投稿した場合に [バリデーター](https://docs.optimism.io/connect/resources/glossary#validator) がそのミスを修正できるようにします。
 
@@ -110,7 +110,7 @@ EIP-4844ブロブの主な利用ケースは、ロールアップによるトラ
 
 | ストレージタイプ          | データソース          | 可用性の保証                                                                                                               | オンチェーンでの可用性                              | その他の制限事項                              |
 | ----------------- | --------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------- |
-| EIP-4844ブロブ       | オフチェーン          | イーサリアムによる[約18日間](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)の保証 | ハッシュのみ利用可能                               |                                       |
+| EIP-4844ブロブ       | オフチェーン          | イーサリアムによる[約18日間](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration)の保証 | ハッシュのみ利用可能                               |                                       |
 | コールデータ            | オフチェーン          | イーサリアムによる永続的な保証（ブロックチェーンの一部）                                                                                         | コントラクトに書き込まれた場合のみ、かつそのトランザクションにおいてのみ利用可能 |                                       |
 | L1メカニズムを用いたオフチェーン | オフチェーン          | チャレンジ期間中の「1人の誠実な検証者」による保証                                                                                            | ハッシュのみ                                   | チャレンジメカニズムによって保証されるが、チャレンジ期間中のみ       |
 | コントラクト・コード        | オンチェーンまたはオフチェーン | イーサリアムによる永続的な保証（ブロックチェーンの一部）                                                                                         | はい                                       | 「ランダム」なアドレスに書き込まれ、 `0xEF` で始めることができない |

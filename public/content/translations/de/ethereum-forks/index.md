@@ -57,7 +57,7 @@ Das Upgrade für die Konsensebene ermöglichte es Stakern, die bei der ersten Ei
 Das Upgrade hat auch eine automatische Kontenbereinigungsfunktion bereitgestellt, die kontinuierlich Validator-Konten auf verfügbare Prämienzahlungen oder vollständige Abhebungen überprüft und verarbeitet.
 
 - [Mehr zu Staking-Auszahlungen](/staking/withdrawals/).
-- [Lesen Sie die Spezifikationen für das Capella-Upgrade](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Lesen Sie die Spezifikationen für das Capella-Upgrade](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 
