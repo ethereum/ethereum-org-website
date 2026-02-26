@@ -62,6 +62,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     isPartiallyActive = true,
     activeClassName = "text-primary",
     customEventOptions,
+    onClick,
     ...props
   }: LinkProps,
   ref
@@ -98,6 +99,19 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     href,
   }
 
+  // Create click handler that tracks events and calls any passed onClick
+  const createClickHandler =
+    (eventName: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      trackCustomEvent(
+        customEventOptions ?? {
+          eventCategory: "Link",
+          eventAction: "Clicked",
+          eventName: `${eventName} - ${href}`,
+        }
+      )
+      onClick?.(e)
+    }
+
   if (isExternal) {
     const { className, ...rest } = commonProps
 
@@ -105,18 +119,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       <a
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() =>
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: `Link`,
-              eventAction: `Clicked`,
-              eventName: "Clicked on external link",
-              eventValue: href,
-            }
-          )
-        }
-        className={cn("relative", className)}
         {...rest}
+        onClick={createClickHandler("Clicked on external link")}
+        className={cn("relative", className)}
       >
         {isMailto ? (
           <span className="text-nowrap">
@@ -141,17 +146,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       <NextLink
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() =>
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: `Link`,
-              eventAction: `Clicked`,
-              eventName: "Clicked on internal PDF",
-              eventValue: href,
-            }
-          )
-        }
         {...commonProps}
+        onClick={createClickHandler("Clicked on internal PDF")}
       >
         {children}
       </NextLink>
@@ -165,18 +161,11 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     // as a same-page scroll rather than a route change)
     return (
       <I18nLink
+        {...commonProps}
         onClick={(e) => {
           e.stopPropagation()
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: "Link",
-              eventAction: "Clicked",
-              eventName: "Clicked on hash link",
-              eventValue: href,
-            }
-          )
+          createClickHandler("Clicked on hash link")(e)
         }}
-        {...commonProps}
       >
         {children}
       </I18nLink>
@@ -185,17 +174,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   return (
     <I18nLink
-      onClick={() =>
-        trackCustomEvent(
-          customEventOptions ?? {
-            eventCategory: `Link`,
-            eventAction: `Clicked`,
-            eventName: `Clicked on internal link`,
-            eventValue: href,
-          }
-        )
-      }
       {...commonProps}
+      onClick={createClickHandler("Clicked on internal link")}
     >
       {children}
     </I18nLink>

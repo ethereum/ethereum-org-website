@@ -431,7 +431,7 @@ async function Page({ params }: { params: PageParams }) {
                   {t("page-stablecoins-why-stablecoins")}
                 </h2>
                 <p className="mb-6">
-                  {t("page-stablecoins-prices-definition")}{" "}
+                  <Translation id="page-stablecoins:page-stablecoins-prices-definition" />{" "}
                   <InlineLink href="#how">
                     {t("page-stablecoins-prices-definition-how")}
                   </InlineLink>

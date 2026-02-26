@@ -40,7 +40,9 @@ const LinkOverlay = forwardRef<LinkOverlayElement, LinkOverlayProps>(
       <Comp
         ref={ref}
         className={cn(
-          "before:absolute before:left-0 before:top-0 before:z-0 before:block before:h-full before:w-full before:cursor-pointer before:content-['']",
+          // Use !static to override the `relative` that BaseLink adds to external links
+          // This ensures the ::before pseudo-element is positioned relative to the LinkBox parent
+          "!static before:absolute before:left-0 before:top-0 before:z-0 before:block before:h-full before:w-full before:cursor-pointer before:content-['']",
           className
         )}
         onClick={() => matomoEvent && trackCustomEvent(matomoEvent)}

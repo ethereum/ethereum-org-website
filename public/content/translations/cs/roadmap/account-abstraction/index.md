@@ -48,7 +48,7 @@ Abstrakce účtu výrazně vylepšuje uživatelský prožitek a bezpečnost tím
 
 Správa paliva se výrazně zlepšuje. Aplikace mohou platit uživatelům poplatky za palivo nebo umožnit platbu v jiných tokenech než ETH, čímž odpadá nutnost udržovat zůstatek v ETH.
 
-## Jak bude abstrakce účtu implementována? Jak bude implementována abstrakce účtu {#how-will-aa-be-implemented}
+## Jak bude abstrakce účtu implementována? {#how-will-aa-be-implemented}
 
 V současné době je implementace peněženek s chytrými kontrakty náročná, protože se spoléhají na složitý kód, který obaluje standardní transakce. Ethereum to může změnit tím, že umožní chytrým kontraktům přímo iniciovat transakce a vkládat logiku do chytrých kontraktů na Ethereu namísto spoléhání se na externí relayery.
 

@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 3
 ---
 
-State channels allow participants to securely transact offchain while keeping interaction with Ethereum Mainnet at a minimum. Channel peers can conduct an arbitrary number of offchain transactions while only submitting two onchain transactions to open and close the channel. This allows for extremely high transaction throughput and results in lower costs for users.
+State channels allow participants to securely transact offchain while keeping interaction with [Ethereum](/) Mainnet at a minimum. Channel peers can conduct an arbitrary number of offchain transactions while only submitting two onchain transactions to open and close the channel. This allows for extremely high transaction throughput and results in lower costs for users.
 
 ## Prerequisites {#prerequisites}
 

@@ -6,7 +6,7 @@ lang: en
 
 # Online communities {#online-communities}
 
-Hundreds of thousands of Ethereum enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
+Hundreds of thousands of [Ethereum](/) enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
 
 ## Listing policy {#listing-policy}
 
