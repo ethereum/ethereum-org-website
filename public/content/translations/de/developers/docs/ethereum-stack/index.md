@@ -1,5 +1,5 @@
 ---
-title: Einführung in den Ethereum-Stack
+title: "Einführung in den Ethereum-Stack"
 description: Eine Vorstellung der verschiedenen Ebenen des Ethereum-Stacks und wie sie zusammen passen
 lang: de
 ---
@@ -8,13 +8,13 @@ Wie bei jedem Software-Stack variiert der komplette "Ethereum-Stack" zielabhäng
 
 Es gibt jedoch zentrale Komponenten von Ethereum, die dabei helfen, ein gedankliches Modell für die Interaktion von Softwareanwendungen mit der Ethereum-Blockchain bereitzustellen. Wenn Sie die Ebenen des Stacks verstehen, ist es einfacher, die unterschiedlichen Möglichkeiten für die Integration von Ethereum in Softwareprojekte zu verstehen.
 
-## Ebene 1: Ethereum-Virtual Machine {#ethereum-virtual-machine}
+## Ebene 1: Ethereum Virtual Machine {#ethereum-virtual-machine}
 
-Die [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) ist die Laufzeitumgebung für Smart Contracts in Ethereum. Alle Smart Contracts und Statusänderungen auf der Ethereum-Blockchain erfolgen über [Transaktionen](/developers/docs/transactions/). Die EVM übernimmt die gesamte Transaktionsabwicklung im Ethereum-Netzwerk.
+Die [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) ist die Laufzeitumgebung für Smart Contracts auf Ethereum. Alle Smart Contracts und Zustandsänderungen auf der Ethereum-Blockchain werden durch [Transaktionen](/developers/docs/transactions/) ausgeführt. Die EVM übernimmt die gesamte Transaktionsabwicklung im Ethereum-Netzwerk.
 
-Wie bei jeder virtuellen Maschine erzeugt die EVM einen Abstraktionsgrad zwischen dem ausführenden Code und der ausführenden Maschine (einem Ethereum-Node). Derzeit läuft die EVM auf Tausenden von Knoten auf der ganzen Welt.
+Wie bei jeder virtuellen Maschine erzeugt die EVM einen Abstraktionsgrad zwischen dem ausführenden Code und der ausführenden Maschine (einem Ethereum-Node). Derzeit läuft die EVM auf Tausenden von Knoten, die weltweit verteilt sind.
 
-Unter der Haube verwendet die EVM eine Reihe von Opcode-Anweisungen, um bestimmte Aufgaben auszuführen. Diese (140 einmaligen) Opcodes erlauben es der EVM [Turing-komplett](https://en.wikipedia.org/wiki/Turing_completeness) zu sein, was bedeutet, dass die EVM in der Lage ist, fast alles zu berechnen, wenn man genügend Ressourcen hat.
+Unter der Haube verwendet die EVM eine Reihe von Opcode-Anweisungen, um bestimmte Aufgaben auszuführen. Diese (140 einzigartigen) Opcodes ermöglichen es der EVM, [Turing-vollständig](https://en.wikipedia.org/wiki/Turing_completeness) zu sein, was bedeutet, dass die EVM bei ausreichenden Ressourcen in der Lage ist, so gut wie alles zu berechnen.
 
 Als dApp-Entwickler müssen Sie über die EVM nicht mehr wissen, als dass sie existiert und sie alle Anwendungen auf Ethereum zuverlässig ohne Ausfallzeiten betreibt.
 
@@ -22,9 +22,9 @@ Als dApp-Entwickler müssen Sie über die EVM nicht mehr wissen, als dass sie ex
 
 [Smart Contracts](/developers/docs/smart-contracts/) sind die ausführbaren Programme, die auf der Ethereum-Blockchain laufen.
 
-Smart Contracts werden unter Verwendung bestimmter [Programmiersprachen](/developers/docs/smart-contracts/languages/) geschrieben, die in EVM Bytecode kompiliert werden (Low-Level-Maschinenbefehle, Opcodes genannt).
+Smart Contracts werden in spezifischen [Programmiersprachen](/developers/docs/smart-contracts/languages/) geschrieben, die zu EVM-Bytecode (Maschinenbefehle auf niedriger Ebene, sogenannte Opcodes) kompiliert werden.
 
-Smart Contracts dienen nicht nur als Open-Source-Bibliotheken, sondern sind im Wesentlichen offene API-Dienste, die rund um die Uhr laufen und nicht aufgehoben werden können. Smart Contracts stellen öffentliche Funktionen zur Verfügung, mit denen Nutzer und Anwendungen ([dApps](/developers/docs/dapps/)) interagieren können, ohne dass eine Berechtigung dafür erforderlich ist. Jede Anwendung kann sich in die bereitgestellten Smart Contracts integrieren, um Funktionen zusammenzustellen, wie z. B. das Hinzufügen von [Daten-Feeds](/developers/docs/oracles/) oder die Unterstützung von Token-Swaps. Zudem kann jeder neue Smart Contracts für Ethereum bereitstellen, um maßgeschneiderte Funktionen für die Anforderungen der eigenen Anwendung zu schaffen.
+Smart Contracts dienen nicht nur als Open-Source-Bibliotheken, sondern sind im Wesentlichen offene API-Dienste, die rund um die Uhr laufen und nicht aufgehoben werden können. Smart Contracts stellen öffentliche Funktionen zur Verfügung, mit denen Benutzer und Anwendungen ([Dapps](/developers/docs/dapps/)) ohne Genehmigung interagieren können. Jede Anwendung kann in bereitgestellte Smart Contracts integriert werden, um Funktionalitäten zusammenzustellen, wie z. B. das Hinzufügen von [Daten-Feeds](/developers/docs/oracles/) oder die Unterstützung von Token-Swaps. Zudem kann jeder neue Smart Contracts für Ethereum bereitstellen, um maßgeschneiderte Funktionen für die Anforderungen der eigenen Anwendung zu schaffen.
 
 Als dApp-Entwickler müssen Sie Smart Contracts nur dann schreiben, wenn Sie benutzerdefinierte Funktionen zur Ethereum-Blockchain hinzufügen möchten. Sie werden feststellen, dass sich die meisten oder alle Bedürfnisse Ihres Projekts durch die Integration von bestehenden Smart Contracts erfüllen lassen, zum Beispiel wenn Sie Zahlungen in Stablecoins unterstützen oder den dezentralen Austausch von Tokens ermöglichen möchten.
 
@@ -40,9 +40,9 @@ Indem Sie Ihre Anwendung mit einem Ethereum-Node verbinden (über die [JSON-RPC-
 
 Viele komfortable Bibliotheken (die von der Open-Source-Community von Ethereum erstellt und verwaltet werden) ermöglichen es Ihren Anwendern, sich mit der Ethereum-Blockchain zu verbinden und mit ihr zu kommunizieren.
 
-Wenn Ihre benutzerseitige Anwendung eine Web-App ist, können Sie auch eine entsprechende [JavaScript-API](/developers/docs/apis/javascript/) direkt in Ihr Frontend `installieren`. Oder Sie verwenden eine [Python](/developers/docs/programming-languages/python/)- oder [Java](/developers/docs/programming-languages/java/)-API, um diese Funktionalität serverseitig zu implementieren.
+Wenn Ihre Endbenutzer-Anwendung eine Web-App ist, können Sie eine [JavaScript-API](/developers/docs/apis/javascript/) mit `npm install` direkt in Ihr Frontend installieren. Oder Sie entscheiden sich vielleicht dafür, diese Funktionalität serverseitig zu implementieren und eine API für [Python](/developers/docs/programming-languages/python/) oder [Java](/developers/docs/programming-languages/java/) zu verwenden.
 
-Obwohl diese APIs kein notwendiger Bestandteil des Stacks sind, gestalten sie die direkte Interaktion mit einem Ethereum-Node wesentlich einfacher. Zudem bieten sie Dienstprogrammfunktionen (z. B. Umwandlung von ETH zu GWei), so dass Sie als Entwickler weniger Zeit damit verbringen, Probleme mit Ethereum-Clients zu lösen, und sich auf die konkreten Funktionen Ihrer Anwendung konzentrieren können.
+Obwohl diese APIs kein notwendiger Bestandteil des Stacks sind, gestalten sie die direkte Interaktion mit einem Ethereum-Node wesentlich einfacher. Sie bieten auch Hilfsfunktionen (z. B. die Umrechnung von ETH in Gwei), sodass Sie als Entwickler weniger Zeit mit den Feinheiten von Ethereum-Clients verbringen und sich mehr auf die anwendungsspezifische Funktionalität konzentrieren können.
 
 ## Ebene 5: Endbenutzeranwendungen {#end-user-applications}
 
@@ -52,10 +52,10 @@ Die Art und Weise, wie Sie diese Benutzeroberflächen entwickeln, bleibt im Wese
 
 ## Bereit, Ihren Stack zu wählen? {#ready-to-choose-your-stack}
 
-Machen Sie sich mit unserem Leitfaden vertraut, um [eine lokale Entwicklungsumgebung für Ihre Ethereum-Anwendung aufzusetzen](/developers/local-environment/).
+Lesen Sie unseren Leitfaden zum [Einrichten einer lokalen Entwicklungsumgebung](/developers/local-environment/) für Ihre Ethereum-Anwendung.
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Lektüre {#further-reading}
 
-- [Die Architektur einer Web 3.0-Anwendung](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
+- [Die Architektur einer Web 3.0-Anwendung](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 
-_Kennen Sie eine Community Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
+_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
