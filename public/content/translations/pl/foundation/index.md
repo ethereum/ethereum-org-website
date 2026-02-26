@@ -1,34 +1,33 @@
 ---
-title: Fundacja Ethereum
-description: Dowiedz się więcej o Fundacji Ethereum (EF), organizacji non-profit poświęconej wspieraniu Ethereum i powiązanych technologii.
+title: Ethereum Foundation
+description: "Dowiedz się więcej o Fundacji Ethereum (EF), organizacji non-profit poświęconej wspieraniu Ethereum i powiązanych technologii."
 hideEditButton: true
 lang: pl
 ---
 
-# O Fundacji Ethereum {#about-the-ethereum-foundation}
+# Ethereum Foundation {#ethereum-foundation}
 
 <Logo/>
 
-[Ethereum Foundation](http://ethereum.foundation/) (EF) jest organizacją non-profit zajmującą się wspieraniem [Ethereum](/what-is-ethereum/) i powiązanych technologii.
+[Ethereum Foundation](http://ethereum.foundation/) (EF) to organizacja non-profit, która wspiera ekosystem Ethereum. Finansuje rozwój protokołu, rozwija ekosystem i promuje Ethereum.
 
-EF nie jest firmą, ani nawet tradycyjną organizacją non-profit. Ich rolą nie jest kontrolowanie ani kierowanie Ethereum, ani też nie są jedyną organizacją, która finansuje krytyczny rozwój technologii związanych z Ethereum. EF jest częścią znacznie większego [ekosystemu](/community/).
+EF nie jest firmą, ani nawet tradycyjną organizacją non-profit. Nie kontroluje ani nie przewodzi Ethereum, nie jest też jedyną organizacją, która finansuje kluczowy rozwój technologii związanych z Ethereum. EF jest jedną z części znacznie większego [ekosystemu](/community/).
 
-## Inicjatywy Fundacji Ethereum {#ethereum-foundation-initiatives}
+## Czym zajmuje się EF {#what-the-ef-does}
 
-### Program wsparcia ekosystemów {#ecosystem-support-program}
+- **Rozwój protokołu** – wspieranie zespołów pracujących nad podstawowym protokołem Ethereum, w tym rozwój klienta, badania, aktualizacje i [program nagród za błędy](/bug-bounty/)
+- **Finansowanie ekosystemu** – udzielanie dotacji i wsparcia projektom opartym na Ethereum za pośrednictwem [Programu Wsparcia Ekosystemu](https://esp.ethereum.foundation/)
+- **Badania** – finansowanie badań w zakresie kryptografii, konsensusu, skalowalności, prywatności i bezpieczeństwa
 
-[Program wsparcia ekosystemów](https://esp.ethereum.foundation/) istnieje w celu zapewnienia finansowego i niefinansowego wsparcia projektom i podmiotom w ramach większej społeczności Ethereum, w celu przyspieszenia wzrostu ekosystemu. Program wspierania ekosystemów stanowi rozszerzenie pierwotnego programu Ethereum Grants skupiającego się głównie na wsparciu finansowym.
+## Programy i inicjatywy {#programs-and-initiatives}
 
-Dowiedz się więcej o programie wsparcia ekosystemów, beneficjentach dotacji z przeszłości oraz o procesie składania wniosków o przyznanie dotacji pod adresem [esp.ethereum.foundation](https://esp.ethereum.foundation/). Możesz również zobaczyć [Ecosystem Support Program Blog](https://blog.ethereum.org/category/ecosystem-support-program/) lub obserwować [@EF_ESP](https://twitter.com/EF_ESP) aby uzyskać ich najnowsze wiadomości i ogłoszenia.
+- **[Program Wsparcia Ekosystemu](https://esp.ethereum.foundation/)** – dotacje i wsparcie dla projektów open-source opartych na Ethereum
+- **[Granty akademickie](https://esp.ethereum.foundation/academic-grants)** – wspieranie badań naukowych związanych z Ethereum
+- **[Devcon](https://devcon.org/)** – coroczna konferencja dla deweloperów, badaczy i twórców Ethereum
+- **[Program nagród za błędy](/bug-bounty/)** – nagrody za znalezienie luk w protokole Ethereum
 
-### Devcon {#devcon}
+## Dowiedz się więcej {#learn-more}
 
-Od 2014 r. Fundacja Ethereum organizuje Devcon, coroczną konferencję dla wszystkich deweloperów, badaczy, myślicieli i twórców.
-
-Możesz uzyskać dostęp do wideo zawartości prezentacji konferencji na każdy rok od momentu jej powstania w [archive.devcon.org](https://archive.devcon.org/).
-
-Dowiedz się więcej na [devcon.org](https://devcon.org/), sprawdź [Devcon Blog](https://devcon.org/en/blogs/), lub przejdź do [@efdevcon](https://twitter.com/EFDevcon), aby uzyskać najnowsze ogłoszenia.
-
-<br/>
-
-Aby uzyskać więcej informacji na temat Fundacji i ich pracy, odwiedź [ethereum.foundation](http://ethereum.foundation/)lub sprawdź [Ethereum Foundation Blog](https://blog.ethereum.org/) w celu uzyskania najnowszych informacji i ogłoszeń EF.
+- [ethereum.foundation](https://ethereum.foundation/) – oficjalna strona internetowa EF
+- [Blog EF](https://blog.ethereum.org/) – wiadomości i ogłoszenia
+- [Program Wsparcia Ekosystemu](https://esp.ethereum.foundation/) – dotacje i wsparcie
