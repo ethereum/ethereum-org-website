@@ -9,7 +9,7 @@
   "page-get-eth-cex-desc": "Exchanges are businesses that let you buy crypto using traditional currencies. They have custody over any ETH you buy until you send it to a wallet you control.",
   "page-get-eth-checkout-dapps-btn": "Check out dapps",
   "page-get-eth-community-safety": "Community posts on security",
-  "page-get-eth-description": "Ethereum isn't controlled by any single organization - it is decentralized.",
+  "page-get-eth-description": "<a href=\"/\">Ethereum</a> isn't controlled by any single organization - it is decentralized.",
   "page-get-eth-dex": "Decentralized exchanges (DEXs)",
   "page-get-eth-dex-desc": "If you want more control, buy ETH using <a href=\"/glossary/#smart-contract\">smart contracts</a>. With a DEX you can trade digital assets without ever giving control of your funds to a centralized company.",
   "page-get-eth-peers": "Receive ETH from your peers",

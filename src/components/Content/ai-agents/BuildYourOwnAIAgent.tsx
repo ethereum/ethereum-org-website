@@ -22,7 +22,7 @@ const BuildYourOwnAIAgent = () => {
         </p>
         <div>
           <ButtonLink href="https://elizaos.github.io/eliza/" variant="outline">
-            Use Eliza
+            Use ElizaOS
           </ButtonLink>
         </div>
       </div>

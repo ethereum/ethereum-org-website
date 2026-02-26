@@ -14,11 +14,39 @@ src/data-layer/
 ├── tasks.ts          # KEYS constant + Trigger.dev scheduled tasks
 ├── storage.ts        # get/set abstraction (Netlify Blobs or mock files)
 ├── s3.ts             # S3 image upload utility for external images
-└── mocks/            # Mock data files for local development
+├── mocks/            # Mock data files for local development
+└── .env.example      # Environment variables for data-layer/Trigger.dev
 
 src/lib/data/
 └── index.ts          # Next.js caching adapter (createCachedGetter)
 ```
+
+## Environment Variables
+
+The data-layer uses a **dedicated `.env.local` file** at `src/data-layer/.env.local`, separate from the main app's root `.env.local`.
+
+### Local Development Setup
+
+1. Copy the example file:
+   ```bash
+   cp src/data-layer/.env.example src/data-layer/.env.local
+   ```
+
+2. Fill in the required API keys (see `.env.example` for all options)
+
+3. Run Trigger.dev tasks locally:
+   ```bash
+   pnpm trigger:dev
+   ```
+
+### Variable Categories
+
+- **Shared with Main App**: `GITHUB_TOKEN_READ_ONLY`, Sentry vars (configure in both files)
+- **Data Layer Only**: API keys (CoinGecko, Beaconcha.in, Dune, Google, etc.), Netlify Blobs tokens, S3 credentials, Trigger.dev config
+
+### Production (Trigger.dev Cloud)
+
+Configure environment variables in your Trigger.dev project dashboard. The main app and data-layer run in separate environments.
 
 ## Key Files
 

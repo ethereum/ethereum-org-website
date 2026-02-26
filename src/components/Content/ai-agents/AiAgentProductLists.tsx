@@ -37,10 +37,9 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
             and performed live in a music festival.{" "}
           </p>,
           <p key="luna-description">
-            Luna engages with users constantly through own X account and live
-            stream. You might receive an X reply if you tag her handle or a
-            voice message if you comment on her stream and own her token! Luna
-            controls own onchain wallet.
+            Luna engages with users through her own X account. You might receive
+            an X reply if you tag her handle! Luna controls her own onchain
+            wallet.
           </p>,
           <div key="luna-button">
             <ButtonLink
@@ -60,10 +59,9 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         alt: "AIXBT logo",
         contentItems: [
           <p key="aixbt-description">
-            AIXBT provides crypto market analysis. This AI Agent autonomously
+            AIXBT provides crypto market analysis. This AI agent autonomously
             delivers actionable insights, witty commentary, and market sentiment
-            analysis on Twitter/X, where it gathered almost 500k followers in
-            just 4 months.
+            analysis on Twitter/X, where it has gathered a large following.
           </p>,
           <p key="aixbt-description">
             $AIXBT token holders have access to premium real-time market

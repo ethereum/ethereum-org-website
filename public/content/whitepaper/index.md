@@ -8,7 +8,7 @@ hideEditButton: true
 
 <WhitepaperBridge />
 
-_While several years old, we maintain the original paper below because it continues to serve as a useful reference and an accurate representation of Ethereum and its vision._
+_While several years old, we maintain the original paper below because it continues to serve as a useful reference and an accurate representation of [Ethereum](/) and its vision._
 
 # Ethereum Whitepaper {#ethereum-whitepaper}
 
