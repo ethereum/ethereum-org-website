@@ -180,7 +180,7 @@ contract RecipientContract is IERC223Recipient {
 
 Lorsque le 'RecipientContract' recevra un token ERC-223, le contrat exécutera une fonction encodée sous forme de paramètre '_data' de la transaction du jeton, de la même manière que les transactions d'ether encodent les appels de fonction en tant que 'data' de transaction. Consultez [le champ de données](/developers/docs/transactions/#the-data-field) pour plus d'informations.
 
-Dans l'exemple ci-dessus, un jeton ERC-223 doit être transféré à l'adresse du `RecipientContract` avec la fonction `transfer(address,uint256,bytes calldata _data)`. Si le paramètre de données est `0xc2985578` (la signature de la fonction `faut()`), alors la fonction `foo()` sera invoquée après la réception du dépôt de jetons, et l'événement `Foo()` sera déclenché.
+Dans l'exemple ci-dessus, un jeton ERC-223 doit être transféré à l'adresse du `RecipientContract` avec la fonction `transfer(address,uint256,bytes calldata _data)`. Si le paramètre de données est `0xc2985578` (la signature de la fonction `foo()`), alors la fonction `foo()` sera invoquée après la réception du dépôt de jetons, et l'événement `Foo()` sera déclenché.
 
 Les paramètres peuvent également être encodés dans les `data` du transfert de jetons. Par exemple, nous pouvons appeler la fonction `bar()` avec la valeur `12345` pour `_someNumber`. Dans ce cas, les `data` doivent être `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2`, où `0x0423a132` est la signature de la fonction `bar(uint256)` et `00000000000000000000000000000000000000000000000000000000000004d2` correspond à `12345` en tant que `uint256`.
 

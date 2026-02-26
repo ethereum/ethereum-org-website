@@ -24,7 +24,7 @@ L'ERC-7540 étend l'utilité des coffre-forts ERC-4626 pour les cas d'utilisatio
 
 L'extension ERC-7540 est entièrement décrite dans [l'ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
 
-**Extension du coffre-fort multi-actifs (ERC-75757)**
+**Extension du coffre-fort multi-actifs (ERC-7575)**
 
 Parmi les cas d'utilisation qui ne sont pas pris en charge par l'ERC-4626, on trouve les coffres-forts qui possèdent plusieurs actifs ou points d'entrée, tels que les jetons de fournisseurs de liquidités (LP). Ces derniers sont généralement difficiles à manipuler ou non conformes en raison de l'exigence de l'ERC-4626 d'être lui-même un ERC-20.
 

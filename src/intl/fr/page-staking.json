@@ -191,7 +191,7 @@
   "page-staking-section-comparison-solo-requirements-li1": "Vous devez déposer 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Maintenir un matériel qui exécute à la fois un <a href=\"/glossary/#execution-client\">client d'exécution</a> Ethereum et un <a href=\"/glossary/#consensus-client\">client de consensus</a> tout en étant connecté à l'internet",
   "page-staking-section-comparison-solo-requirements-li3": "La <a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">Plateforme de lancement de la mise en jeu</a> vous guidera à travers le processus et le matériel nécessaire",
-  "page-staking-section-comparison-saas-requirements-li1": "Deposit 32 ETH and generate your keys with assistance",
+  "page-staking-section-comparison-saas-requirements-li1": "Déposer 32 ETH et générer vos clés avec assistance",
   "page-staking-section-comparison-saas-requirements-li2": "Stockez vos clés en toute sécurité",
   "page-staking-section-comparison-saas-requirements-li3": "Le reste est pris en charge, mais les services spécifiques peuvent varier",
   "page-staking-section-comparison-pools-requirements-li1": "Besoin en ETH moins élevé, certains projets n'exigent que 0,01 ETH",

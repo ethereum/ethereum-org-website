@@ -8,9 +8,9 @@ summaryPoint1: "Recevez des incitations financières pour produire des prévisio
 summaryPoint2: "Prédictions de haute qualité sur des événements futurs"
 buttons:
   - content: En savoir plus
-    toId: "comment-fonctionnent-les-marchés-prédictifs"
+    toId: how-prediction-markets-work
   - content: Découvrir les Apps
-    toId: "trouver-un-marché-prédictif"
+    toId: find-a-prediction-market
     isSecondary: false
 ---
 

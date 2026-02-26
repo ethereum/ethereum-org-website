@@ -1,5 +1,5 @@
 ---
-title: Opcodes pour l'EMV
+title: Opcodes pour l'EVM
 description: Une liste de tous les opcodes disponibles pour la machine virtuelle Ethereum.
 lang: fr
 ---

@@ -13,9 +13,9 @@ summaryPoint2: "Contrôle des portefeuilles et des fonds sur la blockchain"
 summaryPoint3: Embauche des humains ou d'autres agents pour travailler
 buttons:
   - content: Que sont les agents IA ?
-    toId: que-sont-les-agents-ia
+    toId: what-are-ai-agents
   - content: Explorer les agents
-    toId: agents-ia-sur-ethereum
+    toId: ai-agents-on-ethereum
     isSecondary: false
 ---
 

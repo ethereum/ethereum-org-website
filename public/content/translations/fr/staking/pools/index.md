@@ -60,7 +60,7 @@ Vous souhaitez suggérer un outil de mise en jeu que nous avons manqué ? Consul
 ## Foire aux questions {#faq}
 
 <ExpandableCard title="Comment gagner des récompenses ?">
-Généralement, des jetons de mise en jeu RC-20 sont émis à destination des participants et représentent la valeur de leur ETH mis en jeu et, en sus, les récompenses. Gardez en mémoire que les différents pools distribueront des récompenses de mise en jeu à leurs utilisateurs selon des règles différentes, mais c'est un sujet général.
+Généralement, des jetons de mise en jeu ERC-20 sont émis à destination des participants et représentent la valeur de leur ETH mis en jeu et, en sus, les récompenses. Gardez en mémoire que les différents pools distribueront des récompenses de mise en jeu à leurs utilisateurs selon des règles différentes, mais c'est un sujet général.
 </ExpandableCard>
 
 <ExpandableCard title="Quand puis-je retirer ma mise ?">

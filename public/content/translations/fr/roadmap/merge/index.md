@@ -162,7 +162,7 @@ Initialement après La Fusion, les stakers ne pouvaient accéder qu'à des frais
 
 Depuis la mise à niveau du réseau Shanghai/Capella, les validateurs peuvent maintenant désigner <em>une adresse de retrait</em> pour commencer à recevoir des paiements automatiques de tout solde excédentaire de mise en jeu (plus de 32 ETH à partir de récompenses de protocole). Cette mise à jour a également permis à un validateur de déverrouiller et de récupérer tout son solde en quittant le réseau.
 
-[En savoir plus sur les retraits](/staking/retraits/)
+[En savoir plus sur les retraits](/staking/withdrawals/)
 </ExpandableCard>
 
 <ExpandableCard

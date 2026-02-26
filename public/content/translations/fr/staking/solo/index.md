@@ -84,7 +84,7 @@ Lorsque vous êtes actif, vous gagnerez des récompenses ETH, qui seront dépos�
 
 Si vous le souhaitez, vous pouvez quitter votre rôle de validateur, ce qui élimine l'obligation d'être en ligne et arrête toute récompense future. Votre solde restant sera alors retiré à l'adresse de retrait que vous avez désignée lors de la configuration.
 
-[En savoir plus sur les retraits](/staking/retraits/)
+[En savoir plus sur les retraits](/staking/withdrawals/)
 
 ## Démarrez sur la plateforme de lancement de la mise en jeu {#get-started-on-the-staking-launchpad}
 

@@ -11,9 +11,9 @@ sidebarDepth: 2
 summaryPoint1: "Utilisez l'ETH mis en jeu pour sécuriser d'autres services décentralisés et gagner des récompenses supplémentaires."
 buttons:
   - content: Qu'est-ce que la re-mise en jeu ?
-    toId: qu-est-ce-que-la-re-mise-en-jeu
+    toId: what-is-restaking
   - content: Comment ça marche ?
-    toId: comment-fonctionne-la-re-mise-en-jeu
+    toId: how-does-restaking-work
     isSecondary: false
 ---
 
@@ -144,7 +144,7 @@ Alors que les AVS offrent des taux différents, les jetons de re-mise en jeu liq
 <AlertDescription>
   <p className="mt-0"><strong>Le cofondateur d'Ethereum est en train d'écrire…</strong></p>
   <p className="mt-2">
- Vitalik, le cofondateur d'Ethereum, a mis en garde contre les risques potentiels de la re-mise en jeu dans un article de blog de 2021 intitulé <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> Don't Overload Consensus.</a>
+ Vitalik, le cofondateur d'Ethereum, a mis en garde contre les risques potentiels de la re-mise en jeu dans un article de blog de 2021 intitulé <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus.</a>
 </p>
 </AlertDescription>
 </AlertContent>

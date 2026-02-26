@@ -207,7 +207,7 @@ Cette mise à jour de la couche de consensus a permis aux validateurs, qui n'ava
 
 La mise à jour a également permis la mise en place d'une fonctionnalité de balayage automatique de compte, qui traite continuellement les comptes de validateur pour tout paiement de récompenses ou retrait intégral disponible.
 
-- [En savoir plus sur les retraits](/staking/retraits/).
+- [En savoir plus sur les retraits](/staking/withdrawals/).
 - [Lire les spécifications de la mise à niveau Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
 <Divider />
@@ -338,7 +338,7 @@ Cette vidéo explique l'EIP-1559 et les avantages qu'il apporte : [EIP-1559 exp
   <li><a href="https://eips.ethereum.org/EIPS/eip-3198">EIP-3198</a> – <em>permet le renvoi de <code>BASEFEE</code> depuis un bloc</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3529">EIP-3529</a> - <em>réduit les remboursements de gas associés aux opérations de la machine virtuelle d'Ethereum (EVM)</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>empêche le déploiement de contrats commençant par <code>0xEF</code></em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>prévoit de repousser l'Ce Age jusqu'au mois de décembre 2021</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>prévoit de repousser l'Ice Age jusqu'au mois de décembre 2021</em></li>
 </ul>
 </ExpandableCard>
 
