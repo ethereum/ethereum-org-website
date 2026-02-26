@@ -1,5 +1,5 @@
 ---
-title: Msingi wa Ethereum na mipango ya ruzuku ya jamii
+title: Programu za ruzuku za Msingi wa Ethereum na jamii
 description: Orodha ya mipango ya ruzuku katika mazingira yote ya Ethereum.
 lang: sw
 ---
@@ -10,36 +10,59 @@ Programu zilizoorodheshwa hapa chini hutoa misaada ya ufadhili kwa miradi inayof
 
 Orodha hii imepangwa na jamii yetu. Ikiwa kuna kitu kinakosekana au sio sahihi, tafadhali hariri ukurasa huu!
 
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>Waanzilishi, mnahitaji msaada kukuza biashara yenu? [Nenda kwenye Usaidizi kwa Waanzilishi](/founders/)</div>
+</Alert>
+
 ## Mfumo mpana wa ikolojia ya Ethereum {#broad-ethereum-ecosystem}
 
 Programu hizi zinasaidia ikolojia ya Ethereum kwa kutoa fedha kwa miradi mingi. Hizi ni pamoja na suluhu za kutoweka, ujenzi wa jamii, usalama, faragha, na zaidi. Ruzuku hizi sio maalum kwa jukwaa moja la Ethereum na ni mahali pazuri pa kuanzia ikiwa huna uhakika.
 
-- [Programu ya Usaidizi wa Ekolojia ya EF](https://esp.ethereum.foundation) - _Kufadhili miradi ya chanzo wazi ambayo inanufaisha Ethereum, kwa kuzingatia zana za ulimwengu , miundombinu, utafiti na bidhaa za umma_
-- [RFPs za Ethereum](https://github.com/ethereum/requests-for-proposals) - _Maombi ya Mapendekezo na Ethereum Foundation ya kazi na miradi katika ikolojia ya Ethereum_
-- [Moloch DAO](https://www.molochdao.com/) - _Faragha, ukuaji wa safu ya 2, usalama wa mteja, na zaidi_
-- [Ruzuku zilizo wazi](https://opengrants.com/explore)
-- [Ruzuku za DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Ukurasa wa google wa mashirika yanayotoa Ruzuku._
+- [Programu ya Usaidizi wa Mfumo Ikolojia ya EF](https://esp.ethereum.foundation) - _Kufadhili miradi ya chanzo huria inayonufaisha Ethereum, kwa kuzingatia hasa zana za jumla, miundombinu, utafiti na bidhaa za umma_
+- [Ruzuku za Kitaaluma](https://esp.ethereum.foundation/academic-grants) - _Ruzuku za kusaidia kazi ya kitaaluma inayohusiana na Ethereum_
 
-## Mradi maalum {#project-specific}
+## Vikusanyaji na mifumo ya orodha za ruzuku {#grant-list-aggregators}
 
-Miradi hii imeunda misaada yao kwa miradi inayolenga kukuza na kujaribu teknolojia yao wenyewe.
+Rasilimali hizi hukusanya na kupanga fursa mbalimbali za ruzuku katika mfumo mzima wa ikolojia ya Ethereum, na kurahisisha ugunduzi wa fursa za ufadhili zinazolingana na mahitaji ya mradi wako. Tumezipanga kulingana na wasifu ili kukusaidia kuanza kutafuta rasilimali muhimu zaidi kulingana na mahitaji yako maalum ya ufadhili.
 
-- [Mpango wa Ruzuku wa Aave](https://aavegrants.org/) - _[Aave](https://aave.com/) hutoa ruzuku za DAO_
-- [Mpango wa Ruzuku za Compound](https://compoundgrants.questbook.app/) - _[Compaound](https://compound.finance/) hugharamia ikolojia_
-- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) - _fedha za ikolojia ya [Balancer](https://balancer.fi/)_
-- [Mpango wa Ruzuku wa Consensys](https://consensys.net/grants/) - _[Consensys](https://consensys.net/) fedha za minyororo ya blocku & ruzuku za Ethereum_
-- [Shirika la Ruzuku ya Ikolojia ya Lido (LEGO)](https://lego.lido.fi/) - _hugharamia ikolojia ya [Lido](https://lido.fi/)_
-- [Programu ya Ruzuku ya mStable](https://docs.mstable.org/advanced/grants-program) - _jamii ya [mStablei](https://mstable.org/)_
-- [Grafu](https://airtable.com/shrdfvnFvVch3IOVm) - _Ikolojia ya [Grafu](https://thegraph.com/)_
-- [Programu ya Ruzuku za Uniswap](https://www.uniswapfoundation.org/) - _Jamii ya [Uniswap](https://uniswap.org/)_
+### Kwa watafutaji wote wa ruzuku: Saraka za kina {#comprehensive-directories}
 
-## Ufadhili wa Kwadratiki {#quadratic-funding}
+Mifumo hii ya jumla inatoa chanjo pana ya ruzuku katika nafasi nzima ya Web3 na ni sehemu muhimu za kuanzia kwa mtu yeyote anayetafuta ufadhili:
 
-Mizizi ya wazi ya Ethereum imesababisha ukuaji wa mtindo mpya wa kuvutia wa kukusanya fedha: fedha za kwadratiki. Hii ina uwezo wa kuboresha jinsi tunavyofadhili aina zote za bidhaa za umma katika siku zijazo. Ufadhili wa kwadaratiki huhakikisha kuwa miradi inayopokea ufadhili mwingi ni ile yenye mahitaji ya kipekee. Kwa maneno mengine, miradi ambayo inasimama kuboresha maisha ya watu wengi. [Zaidi juu ya ufadhili wa kwadaratiki.](/defi/#quadratic-funding)
+- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks imekusanya saraka ya kina ya ruzuku zote, Maombi ya mapendekezo (RFP), na zawadi za hitilafu._
+- [Ruzuku za Blockchain](https://www.blockchaingrants.org/) - _Saraka ya ruzuku za blockchain na sarafu za kidigitali_
+- [Ramani ya Ufadhili ya Karma](https://gap.karmahq.xyz/funding-map) - Saraka ya programu zote za ruzuku za web3, inayosasishwa kila wiki
 
-- [Gitcoin](https://gitcoin.co/grants)
-- [clr.fedha](https://clr.fund/)
+### Kwa wasanidi programu na wajenzi {#for-developers-and-builders}
 
-## Fanya kazi kwenye Ethereum {#work-in-ethereum}
+- [Kitazamaji cha Programu za Ruzuku](https://airtable.com/shr86elKgWTSCP4AY) - _Hifadhidata ya umma ya Airtable ya programu za ruzuku_
+- [Lahajedwali la Ruzuku za Web3](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Lahajedwali la Google la fursa za ruzuku za Web3_
+- [Ruzuku za Arbitrum](https://arbitrum.foundation/grants) — Arbitrum DAO na [The Arbitrum Foundation](https://arbitrum.foundation/)
+
+### Kwa miradi ya DeFi na programu za kifedha {#for-defi-projects}
+
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _Saraka ya programu za ruzuku ya DeFi Llama_
+- [Ruzuku za AlphaGrowth](https://alphagrowth.io/crypto-web3-grants-list) - _Orodha ya kina ya ruzuku za crypto na Web3_
+- [Ruzuku za Uniswap Foundation](https://www.uniswapfoundation.org/build) - _Ruzuku za Unichain na Uniswap v4 na usaidizi kwa wajenzi wa DeFi_
+
+### Kwa wachangiaji wa DAO na wabunifu wa utawala {#for-dao-contributors}
+
+Rasilimali za miradi inayoendeshwa na jamii na majaribio ya utawala:
+
+- [Ruzuku za DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Lahajedwali la Google la mashirika yanayotoa ruzuku_
+- [Hifadhidata ya MetaGov](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Ramani ya kina ya ruzuku za Web3_
+
+### Bidhaa za umma na athari {#public-goods-and-impact}
+
+Programu hizi hulenga kufadhili miradi inayonufaisha jamii pana, bidhaa za umma, na mipango yenye athari. Hizi ni pamoja na watoa ruzuku, pamoja na mifumo ya michango inayotumia mifumo ya ugawaji wa ufadhili wa onchain ikiwa ni pamoja na [ufadhili wa quadratic](/defi/#quadratic-funding):
+
+- [Gitcoin](https://www.gitcoin.co/program) - _Ruzuku za Gitcoin hutumia mifumo mingi ya ugawaji wa mtaji kufadhili miradi ya chanzo huria na bidhaa za umma katika mfumo wa ikolojia wa Ethereum_
+- [Octant](https://octant.app/home) - _Mfumo ikolojia wa ufadhili wa bidhaa za umma unaosawazisha manufaa ya wote na uwezeshaji wa kifedha wa mtu binafsi_
+- [Giveth](https://giveth.io/) - _Jukwaa la michango ya sarafu za kidigitali linalowezesha michango ya moja kwa moja kutoka kwa miradi ya manufaa bila ada zozote za ziada_
+- [Artizen](https://artizen.fund/) - _Husaidia wabunifu kufadhili kwa kulinganisha miradi mipya katika mstari wa mbele wa sanaa, sayansi, teknolojia na utamaduni_
+- [Quadratic Accelerator](https://qacc.giveth.io/) - _Programu ya kuongeza kasi ya uanzishaji inayotumia ufadhili wa quadratic kusaidia miradi inayofaidi umma_
+
+## Kazi katika Ethereum {#work-in-ethereum}
 
 Hauko tayari kuanza rasimu yako mwenyewe? Kuna makampuni zaidi ya mia moja yanayotafuta watu binafsi wenye shauku wafanye kazi na kutoa michango kwenye ikolojia ya Ethereum. Unatafuta taarifa zaidi? [Angalia kazi zinazohusiana na Ethereum](/community/get-involved/#ethereum-jobs)
