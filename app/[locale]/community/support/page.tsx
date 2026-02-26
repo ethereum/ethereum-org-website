@@ -159,6 +159,12 @@ href="/security/"
 >
                     Full security and scam prevention guide
                   </Link>
+                <Link
+                  className="hover:bg-background-highlight"
+                  href="/community/support/scams/#revoke-approvals"
+                >
+                  Revoke unnecessary token approvals
+                </Link>
                 </div>
               </WindowBox>
           </div>
