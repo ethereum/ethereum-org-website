@@ -198,7 +198,7 @@ Consolidationsஐ நிர்வகிக்க பல கருவிகள்
 
 ## ஆதாரங்கள் {#resources}
 
-- [Electra consensus specs](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/beacon-chain.md): இது தான் "மெய்யான" மற்றும் நம்பக்கூடிய தொழில்நுட்ப விவரக்குறிப்பு. சந்தேகம் ஏற்பட்டால் இதைப் படிக்கவும்
+- [Electra consensus specs](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md): இது தான் "மெய்யான" மற்றும் நம்பக்கூடிய தொழில்நுட்ப விவரக்குறிப்பு. சந்தேகம் ஏற்பட்டால் இதைப் படிக்கவும்
 - MaxEB-GPT: அனைவரும் கோடுகளைப் புரிந்துகொள்ள முடியாது என்பதால், [this maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt). உண்மையான தகவலுக்காக, எய்ஐயை (AI) அல்ல, அதிகாரப்பூர்வ ஸ்பெக் (specifications)-ஐ தான் நம்ப வேண்டும்.
   ஏனெனில், எய்ஐ சில நேரங்களில் தவறாக விளக்கமளிக்கலாம் அல்லது எண்ணியதைப் போல் பதில் அளிக்கலாம்
 - [pectrified.com](https://pectrified.com/): ஒன்றிணைப்பு நிலை, டெப்பாசிட் மற்றும் க்யூ நிலைகள் ஆகியவற்றைக் காணலாம்

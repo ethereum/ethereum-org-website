@@ -198,7 +198,7 @@ Sí. Mientras esté activo (no salga) y pueda firmar con su dirección de retira
 
 ## Recursos {#resources}
 
-- [Especificaciones de consenso de Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/beacon-hain.md): esta es la versión más real en la que debe confiar. En caso de duda, lea las especificaciones
+- [Especificaciones de consenso de Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-hain.md): esta es la versión más real en la que debe confiar. En caso de duda, lea las especificaciones
 - No todo el mundo se sienten cómodo operando con un código, por eso [este maxeb-gpt](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) interpretar las especificaciones puede servirle de ayuda. _Descargo de responsabilidad: las especificaciones, no la IA, deben confiar en la verdad, ya que la IA puede malinterpretar la información o dar respuestas descabelladas_
 - [pectrified.com](https://pectrifice.com/): ver el estado de consolidaciones, depósitos y tiempos de listas de espera
 - [Ethereal](https://github.com/wealdtech/ethereal): herramienta CLI creada por la comunidad para administrar tareas de validador comunes

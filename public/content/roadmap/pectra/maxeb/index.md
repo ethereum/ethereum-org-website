@@ -197,7 +197,7 @@ Yes. As long as it's active (not exited) and you can sign with its withdrawal ad
 
 ## Resources {#resources}
 
-- [Electra consensus specs](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/beacon-chain.md): This is the 'truest' version that you should rely on. When in doubt, read the specs
+- [Electra consensus specs](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md): This is the 'truest' version that you should rely on. When in doubt, read the specs
 - Not everybody is comfortable wading through code, so [this maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) can help interpret the specs. *Disclaimer: The specs, not the AI, should be relied on as truth, as the AI may misinterpret information or hallucinate answers*
 - [pectrified.com](https://pectrified.com/): View the state of consolidations, deposits, and queue waiting times
 - [Ethereal](https://github.com/wealdtech/ethereal): Community-created CLI tool for managing common validator tasks

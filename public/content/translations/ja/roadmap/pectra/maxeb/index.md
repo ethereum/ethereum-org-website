@@ -197,7 +197,7 @@ MaxEBにより、バリデータはその全残高を別のバリデータに送
 
 ## 参考リソース {#resources}
 
-- [Electraコンセンサス仕様](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/beacon-chain.md)：これは信頼すべき「最も正確な」バージョンです。 迷ったら、スペックを読んでください
+- [Electraコンセンサス仕様](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md)：これは信頼すべき「最も正確な」バージョンです。 迷ったら、スペックを読んでください
 - 誰もがコードを読み解くのが得意なわけではないため、[このmaxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt)が仕様の解釈を助けることができます。 _免責事項：AIが情報を誤解したり、幻覚の答えを出したりする可能性があるため、真実として信頼すべきはAIではなく仕様です_
 - [pectrified.com](https://pectrified.com/)：統合、デポジット、キューの待機時間の状態を表示します
 - [Ethereal](https://github.com/wealdtech/ethereal)：一般的なバリデータタスクを管理するためのコミュニティ作成のCLIツール

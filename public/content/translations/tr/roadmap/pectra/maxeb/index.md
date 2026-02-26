@@ -197,7 +197,7 @@ Evet. Aktif olduğu (çıkış yapılmadığı) ve para çekme adresiyle imza at
 
 ## Kaynaklar {#resources}
 
-- [Electra mutabakat özellikleri](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/beacon-chain.md): Bu, güvenmeniz gereken 'en doğru' versiyondur. Şüpheye düştüğünüzde, özellikleri okuyun
+- [Electra mutabakat özellikleri](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md): Bu, güvenmeniz gereken 'en doğru' versiyondur. Şüpheye düştüğünüzde, özellikleri okuyun
 - Herkes kodun içinde gezinmekten hoşlanmaz, bu nedenle [bu maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) özellikleri yorumlamanıza yardımcı olabilir. _Sorumluluk Reddi: Yapay zeka bilgiyi yanlış yorumlayabileceğinden veya halüsinasyon cevapları verebileceğinden, doğru olarak yapay zekaya değil, özelliklere güvenilmelidir_
 - [pectrified.com](https://pectrified.com/): Birleştirmelerin, para yatırma işlemlerinin ve sıra bekleme sürelerinin durumunu görüntüleyin
 - [Ethereal](https://github.com/wealdtech/ethereal): Ortak doğrulayıcı görevlerini yönetmek için topluluk tarafından oluşturulmuş CLI aracı
