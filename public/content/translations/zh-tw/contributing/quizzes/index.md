@@ -1,6 +1,6 @@
 ---
-title: 新增測驗
-description: 向 ethereum.org 新增測驗時使用的政策
+title: "新增測驗"
+description: "向 ethereum.org 新增測驗時使用的政策"
 lang: zh-tw
 ---
 
@@ -12,14 +12,14 @@ lang: zh-tw
 
 一些現有測驗的範例可以在下面找到：
 
-- [二層網路](/layer-2)
-- [非同質化代幣](/nft/)
+- [Layer 2](/layer-2)
+- [NFT](/nft/)
 - [什麼是以太坊？](/what-is-ethereum/)
-- [什麼是以太幣？](/what-is-ether/)
+- [什麼是 ETH？](/what-is-ether/)
 
 ## 新增學習測驗
 
-如果有頁面尚未建立學習測驗，請為其[建立一個議題](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)。
+如果某個頁面還沒有學習測驗，請[為此建立議題](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)。
 
 請提供以下資訊：
 
@@ -32,7 +32,7 @@ lang: zh-tw
 
 ## 新增測驗問題
 
-如果你想將一個問題新增到測驗的問題庫中，請[建立一個議題](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)並提供以下資訊：
+如果您想將問題新增至測驗的題庫中，請[建立議題](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)並提供以下資訊：
 
 - 你想新增測驗問題的頁面
 - 對於每個問題，請提供以下資訊：
@@ -43,7 +43,7 @@ lang: zh-tw
 
 ## 更新測驗問題
 
-如果你想在測驗的問題庫中更新問題，請[建立一個議題](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)並提供以下資訊：
+如果您想更新測驗題庫中的某個問題，請[建立議題](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)並提供以下資訊：
 
 - 你想更新測驗問題的頁面
 - 對於每個更新的問題，請提供以下資訊：
@@ -55,7 +55,7 @@ lang: zh-tw
 
 ## 刪除測驗問題
 
-如果頁面上和問題相關的內容不再存在並且需要刪除問題，請[建立一個議題](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)以刪除測驗問題並提供以下資訊：
+如果頁面上與某問題相關的內容已不存在而需要移除該問題，請[建立議題](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)以移除該問題並提供以下資訊：
 
 - 你想刪除測驗問題的頁面
 - 你想刪除的問題
