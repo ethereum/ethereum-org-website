@@ -35,7 +35,7 @@ incomplete: true
 ## 中級者向けの記事 {#intermediate-articles}
 
 - [web3.pyの仲間たち: Ape入門](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [Pythonプログラマーのためのdapp開発](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [Pythonプログラマーのためのdapp開発](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [Pythonイーサリアムインターフェースの作成: パート1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Pythonによるイーサリアムスマートコントラクト: (ほぼ)完全ガイド](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -87,7 +87,7 @@ incomplete: true
 - [Curve](https://www.curve.finance/)および[Curveスマートコントラクトリポジトリ](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/)および[Brownieツールチェーンを使用したスマートコントラクト](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/)は、[べスティングコントラクトの管理とデプロイにPythonを使用](https://github.com/sushiswap/sushi-vesting-protocols)しています
-- Alpha Homoraで有名な[Alpha Finance](https://alphafinance.io/)は、[スマートコントラクトのテストとデプロイにBrownieを使用](https://github.com/AlphaFinanceLab/alpha-staking-contract)しています
+- Alpha Homoraで有名な[Alpha Venture DAO](https://alphaventuredao.io/)は、[スマートコントラクトのテストとデプロイにBrownieを使用](https://github.com/AlphaFinanceLab/alpha-staking-contract)しています
 
 ## Pythonコミュニティディスカッション {#python-community-contributors}
 

@@ -508,10 +508,10 @@ Ethereum как протокол изначально рассчитан на т
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ и автономные агенты, Джефф Гарзик](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Майк Херн об умном имуществе на фестивале Тьюринга](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Деревья Меркла-Патриции в Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://ethereum.org/whitepaper//%5BEnglish%5D-RLP)
+20. [Деревья Меркла-Патриции в Ethereum](https://web.archive.org/web/20250427212320/https://ethereum.org/whitepaper//%5BEnglish%5D-Patricia-Tree)
 21. [Питер Тодд о суммируемых деревьях Меркла](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Историю проектного документа смотрите в [этой статье](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Историю проектного документа смотрите в [этой статье](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)._
 
 _Ethereum, как и многие проекты с открытым исходным кодом, управляемые сообществом, эволюционировал с момента своего создания. Чтобы узнать о последних событиях в Ethereum, и как внесены изменения в протокол, мы рекомендуем [это руководство](/learn/)._

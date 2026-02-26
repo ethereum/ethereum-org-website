@@ -74,7 +74,6 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 **NOWNodes - _Explorateurs de nœuds complets et de blocs._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
 **Quinone -** **_Infrastructure Blockchain en tant que service_**
 

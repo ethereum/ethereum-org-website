@@ -35,7 +35,7 @@ incomplete: true
 ## 中階文章 {#intermediate-articles}
 
 - [web3.py 的夥伴們：Ape 簡介](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [獻給 Python 程式設計師的去中心化應用程式開發](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [獻給 Python 程式設計師的去中心化應用程式開發](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [建立 Python 以太坊介面：第 1 部分](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Python 中的以太坊智能合約：一份（相當）全面的指南](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -87,7 +87,7 @@ incomplete: true
 - [Curve](https://www.curve.finance/) 與 [Curve 智能合約儲存庫](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) 與 [使用 Brownie 工具鏈的智能合約](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) 使用 [Python 來管理和部署其歸屬合約](https://github.com/sushiswap/sushi-vesting-protocols)
-- 以 Alpha Homora 聞名的 [Alpha Finance](https://alphafinance.io/) 使用 [Brownie 來測試和部署智能合約](https://github.com/AlphaFinanceLab/alpha-staking-contract)
+- 以 Alpha Homora 聞名的 [Alpha Venture DAO](https://alphaventuredao.io/) 使用 [Brownie 來測試和部署智能合約](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## Python 社群討論 {#python-community-contributors}
 

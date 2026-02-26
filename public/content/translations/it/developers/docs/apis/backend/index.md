@@ -74,7 +74,6 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 **NOWNodes - _Nodi completi ed esploratori di blocchi._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentazione](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
 **QuickNode -** **_Infrastruttura della Blockchain come servizio._**
 

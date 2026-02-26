@@ -177,7 +177,7 @@ Ethereumలో పాలన కఠినంగా నిర్వచించబ
 - [బ్లాక్‌చైన్ పాలనపై గమనికలు](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _విటాలిక్ బుటెరిన్_
 - [Ethereum పాలన ఎలా పనిచేస్తుంది?](https://cryptotesters.com/blog/ethereum-governance) – _క్రిప్టోటెస్టర్స్_
 - [Ethereum పాలన ఎలా పనిచేస్తుంది](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Ethereum కోర్ డెవలపర్ అంటే ఏమిటి?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _హడ్సన్ జేమ్సన్_
+- [Ethereum కోర్ డెవలపర్ అంటే ఏమిటి?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _హడ్సన్ జేమ్సన్_
 - [పాలన, భాగం 2: ప్లూటోక్రసీ ఇంకా చెడ్డది](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _విటాలిక్ బుటెరిన్_
 - [కాయిన్ ఓటింగ్ పాలనను దాటి వెళ్లడం](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _విటాలిక్ బుటెరిన్_
 - [బ్లాక్‌చైన్ పాలనను అర్థం చేసుకోవడం](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 రీసెర్చ్_

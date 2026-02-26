@@ -520,6 +520,6 @@ _通貨発行は線形であるにもかかわらず、Bitcoinと同様に、時
 20. [Ethereumマークルパトリシアツリー](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 21. [マークルサムツリーに関するPeter Toddの論文](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_ホワイトペーパーの歴史については、[このwiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)を参照してください。_
+_ホワイトペーパーの歴史については、[このwiki](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)を参照してください。_
 
 多くのコミュニティ主導のオープンソースソフトウェアプロジェクトと同様に、イーサリアムは開始当初から進化してきました。 _Ethereumの最新の開発動向や、プロトコルへの変更がどのように行われるかについて学ぶには、[こちらのガイド](/learn/)をお勧めします。_

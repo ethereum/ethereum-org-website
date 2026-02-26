@@ -113,7 +113,7 @@ Pro odeslání žádosti `ConsolidationRequest` musí žádost podepsat **adresa
 
 ### Co se podepisuje? {#what-is-signed}
 
-Používá se doménově oddělený [podpisový kořen](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#compute_signing_root) objektu `ConsolidationRequest`.
+Používá se doménově oddělený [podpisový kořen](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md#compute_signing_root) objektu `ConsolidationRequest`.
 
 - **Doména:** `DOMAIN_CONSOLIDATION_REQUEST`
 - **Pole podpisového kořene:**
@@ -197,7 +197,7 @@ Ano. Dokud je aktivní (není ukončen) a můžete podepisovat jeho adresou pro 
 
 ## Zdroje informací {#resources}
 
-- [Specifikace konsensu Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md): Toto je „nejpravdivější“ verze, na kterou byste se měli spolehnout. V případě pochybností si přečtěte specifikace
+- [Specifikace konsensu Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/beacon-chain.md): Toto je „nejpravdivější“ verze, na kterou byste se měli spolehnout. V případě pochybností si přečtěte specifikace
 - Ne každému vyhovuje probírat se kódem, takže [tento maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) může pomoci s interpretací specifikací. _Upozornění: Jako zdroj pravdy by měly být brány specifikace, nikoli AI, protože AI může špatně interpretovat informace nebo si odpovědi vymýšlet_.
 - [pectrified.com](https://pectrified.com/): Zobrazte si stav konsolidací, vkladů a čekacích dob ve frontě
 - [Ethereal](https://github.com/wealdtech/ethereal): Komunitou vytvořený nástroj CLI pro správu běžných úkolů validátorů

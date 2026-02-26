@@ -218,4 +218,3 @@ Twitter space:
 Articles:
 
 - [Building ETHKL, by Danny H.](https://sekto.tech/ethkl24)
-- [POKT Events Playbook](https://docs.pokt.network/community/pokt-events-playbook)

@@ -52,7 +52,7 @@ Ethereum.org переведен на более чем 40 языков, кото
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) — контент, поддерживаемый сообществом, охватывающий знания, связанные с Ethereum, децентрализованными финансами (DeFi), невзаимозаменяемыми токенами (NFT) и Web3
 - [123ETH](https://123eth.org/) — портал в экосистему Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) — бесплатные онлайн-курсы по криптовалюте и ее применению
-- [Техническая документация об Ethereum](https://github.com/ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) — китайская версия технической документации об Ethereum
+- [Техническая документация об Ethereum](https://ethereum.org/whitepaper//[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) — китайская версия технической документации об Ethereum
 
 **Экосистема Ethereum**
 

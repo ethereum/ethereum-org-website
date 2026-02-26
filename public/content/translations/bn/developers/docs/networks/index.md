@@ -158,7 +158,7 @@ lang: bn
 
 ##### রিসোর্স
 
-- [স্টার্কস্ক্যান](https://sepolia.starkscan.co/)
+- [স্টার্কস্ক্যান](https://sepolia.voyager.online/)
 
 ##### ফসেট
 

@@ -30,7 +30,6 @@ lang: zh-tw
 
 這些平臺涵蓋了對整個 Web3 領域的廣泛資助資訊，對於任何尋求資金的人來説都是有用的起點：
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks 彙整了所有補助金、提案徵求 (RFP) 和漏洞賞金的綜合目錄。_
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _區塊鏈和加密貨幣補助金目錄_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - 所有 Web3 補助金計畫的目錄，每週更新
 

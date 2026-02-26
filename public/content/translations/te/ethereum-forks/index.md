@@ -118,7 +118,7 @@ sidebarDepth: 1
 
 - [Pectra.wtf](https://pectra.wtf)
 - [పెక్ట్రా స్టేకింగ్ అనుభవాన్ని ఎలా మెరుగుపరుస్తుందో](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [ఎలెక్ట్రా నవీకరణ స్పెసిఫికేషన్‌లను చదవండి](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [ఎలెక్ట్రా నవీకరణ స్పెసిఫికేషన్‌లను చదవండి](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [ప్రేగ్-ఎలెక్ట్రా ("పెక్ట్రా") FAQ](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 </ul>
 </ExpandableCard>
 
-- [డెనెబ్ నవీకరణ స్పెసిఫికేషన్‌లను చదవండి](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [డెనెబ్ నవీకరణ స్పెసిఫికేషన్‌లను చదవండి](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [కాన్కున్-డెనెబ్ ("డెన్కున్") FAQ](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 ఈ నవీకరణ ఆటోమేటిక్ ఖాతా స్వీపింగ్ కార్యాచరణను కూడా అందించింది, ఇది ఏదైనా అందుబాటులో ఉన్న రివార్డు చెల్లింపులు లేదా పూర్తి ఉపసంహరణల కోసం వాలిడేటర్ ఖాతాలను నిరంతరం ప్రాసెస్ చేస్తుంది.
 
 - [స్టేకింగ్ ఉపసంహరణల గురించి మరింత](/staking/withdrawals/).
-- [కాపెల్లా నవీకరణ స్పెసిఫికేషన్‌లను చదవండి](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [కాపెల్లా నవీకరణ స్పెసిఫికేషన్‌లను చదవండి](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 

@@ -508,10 +508,10 @@ _연속적인 통화 발행에도 불구하고, 공급 증가율은 비트코인
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ 와 자동화된 에이전트, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [튜링 페스티벌에서 스마트 프로퍼티에 대한 Mike Hearn](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
-19. [이더리움 RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [이더리움 머클 패트리시아 트리](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [이더리움 RLP](https://web.archive.org/web/20250427212320/https://ethereum.org/whitepaper//%5BEnglish%5D-RLP)
+20. [이더리움 머클 패트리시아 트리](https://web.archive.org/web/20250427212320/https://ethereum.org/whitepaper//%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd 의 머클 합 트리](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_본 백서의 역사를 알고 싶으면, [this wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)를 참조하십시오._
+_본 백서의 역사를 알고 싶으면, [this wiki](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)를 참조하십시오._
 
 _여러가지의 커뮤니티 기반 오픈소스 소프트웨어 프로젝트와 마찬가지로, 이더리움은 초기 등장 이후로 발전해왔습니다. 이더리움의 최신 개발 동향과 프로토콜이 어떻게 바뀌었는지에 대해 알고 싶으시다면, [this guide](/learn/)를 추천드립니다._

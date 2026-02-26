@@ -517,6 +517,6 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 20. [Ethereum Merkle Patricia trees](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 21. [Peter Todd on Merkle sum trees](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_For history of the whitepaper, see [this wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_For history of the whitepaper, see [this wiki](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)._
 
 _Ethereum, like many community-driven, open-source software projects, has evolved since its initial inception. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._

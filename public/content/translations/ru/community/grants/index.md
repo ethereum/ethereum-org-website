@@ -18,7 +18,6 @@ lang: ru
 - [DAO Moloch](https://www.molochdao.com/): _конфиденциальность, масштабирование второго уровня, безопасность клиентов и многое другое._
 - [Гранты DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0): _Google-таблица организаций, предлагающих гранты._
 - [Академические гранты](https://esp.ethereum.foundation/academic-grants): _гранты на поддержку академической работы, связанной с Ethereum._
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs): _компания Blockworks составила полный каталог всех грантов, запросов предложений (RFP) и наград за найденные ошибки._
 
 ## Отдельные проекты {#project-specific}
 
@@ -26,14 +25,13 @@ lang: ru
 
 - [Программа грантов Aave](https://aavegrants.org/) — _гранты DAO от [Aave](https://aave.com/)_
 - [Balancer](https://grants.balancer.community/): _фонд экосистемы [Balancer](https://balancer.fi/)._
-- [Программа грантов Chainlink](https://chain.link/community/grants) — _гранты сообщества [Chainlink](https://chain.link/)_
 - [ Программа грантов Decentraland](https://governance.decentraland.org/grants/): _метавселенная DAO [Decentraland](https://decentraland.org/)._
 - [Организация грантов экосистемы Lido (LEGO)](https://lido.fi/lego): _финансовая экосистема [Lido](https://lido.fi/)._
 - [ Программа MetaMask](https://metamaskgrants.org/): _DAO по выдаче грантов под руководством сотрудников [MetaMask](https://metamask.io/)._
 - [Программа грантов SKALE Network](https://skale.space/developers#grants): _экосистема [SKALE Network](https://skale.space/)._
-- [Программа грантов фонда Swarm](https://my.ethswarm.org) — _экосистема [фонда Swarm](https://www.ethswarm.org/)_
+- [Программа грантов фонда Swarm](https://www.ethswarm.org/grants) — _экосистема [фонда Swarm](https://www.ethswarm.org/)_
 - [The Graph](https://thegraph.com/ecosystem/grants/) — _экосистема [Graph](https://thegraph.com/)_
-- [Программа грантов Uniswap](https://www.uniswapfoundation.org/approach) — _сообщество [Uniswap](https://uniswap.org/)_
+- [Программа грантов Uniswap](https://www.uniswapfoundation.org/grants) — _сообщество [Uniswap](https://uniswap.org/)_
 
 ## Квадратичное финансирование {#quadratic-funding}
 

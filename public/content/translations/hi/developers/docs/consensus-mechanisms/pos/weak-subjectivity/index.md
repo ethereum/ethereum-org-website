@@ -35,5 +35,5 @@ lang: hi
 - [Eth2 में कमज़ोर व्यक्तिपरकता](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [विटालिक: मैंने कमज़ोर व्यक्तिपरकता से प्यार करना कैसे सीखा](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
 - [कमज़ोर व्यक्तिपरकता (Teku docs)](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
-- [चरण-0 कमज़ोर व्यक्तिपरकता गाइड](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
+- [चरण-0 कमज़ोर व्यक्तिपरकता गाइड](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/weak-subjectivity.md)
 - [एथेरियम 2.0 में कमज़ोर व्यक्तिपरकता का विश्लेषण](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

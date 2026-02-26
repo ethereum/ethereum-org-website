@@ -114,8 +114,6 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 
 **Catapulta -** **_Outil de déploiement de contrats intelligents multi-chaînes, automatisation des vérifications dans les explorateurs de blocs, suivi des contrats intelligents déployés et partage des rapports de déploiement, plug-n-play pour les projets Foundry et Hardhat._**
 
-- [Site Web](https://catapulta.sh/)
-- [Documentation](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
 
 **Covalent** - **_APIs blockchain enrichie pour plus de 200 chaines._**

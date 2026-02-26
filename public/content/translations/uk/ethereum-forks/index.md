@@ -118,7 +118,7 @@ The software that underlies Ethereum is composed of two halves, known as the [ex
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Як Pectra покращить досвід стейкінгу](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Ознайомтеся зі специфікаціями оновлення Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Ознайомтеся зі специфікаціями оновлення Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [ЧаПи про Prague-Electra («Pectra»)](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514 посилює емісію ETH, обмежуючи швидкість 
 </ul>
 </ExpandableCard>
 
-- [Ознайомтеся зі специфікаціями оновлення Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Ознайомтеся зі специфікаціями оновлення Deneb](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [ЧаПи про Cancun-Deneb («Dencun»)](/roadmap/dencun/)
 
 <Divider />
@@ -213,7 +213,7 @@ Capella відбулася одночасно з оновленням рівня
 Оновлення також забезпечило функцію автоматичного очищення облікового запису, яка постійно обробляє облікові записи валідатора для будь-яких доступних виплат винагород або повного зняття коштів.
 
 - [Докладніше про виведення коштів зі стейкінгу](/staking/withdrawals/).
-- [Ознайомтеся зі специфікаціями оновлення Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Ознайомтеся зі специфікаціями оновлення Capella](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 

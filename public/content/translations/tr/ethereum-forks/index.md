@@ -118,7 +118,7 @@ Protokol verimliliği ve güvenlik iyileştirmeleri:
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Pectra hisseleme deneyimini nasıl geliştirecek?](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Electra yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Electra yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Prag-Electra ("Pectra") SSS](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514, doğrulayıcıların ağa katılabilmeleri için gereken "kazanç" ora
 </ul>
 </ExpandableCard>
 
-- [Deneb yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Deneb yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [Cancun-Deneb ("Dencun") SSS](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ Bu fikir birliği katmanı yükseltmesi, ilk yatırma işlemleriyle birlikte dah
 Yükseltme ayrıca, mevcut tüm ödül ödemeleri veya tam çekimler için doğrulayıcı hesaplarını sürekli işleyen otomatik hesap süpürme işlevselliğini getirdi.
 
 - [Hisseleme para çekme işlemleri hakkında daha fazla bilgi](/staking/withdrawals/).
-- [Capella yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Capella yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 

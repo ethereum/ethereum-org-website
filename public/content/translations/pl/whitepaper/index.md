@@ -533,6 +533,6 @@ Koncepcja dowolnej funkcji przejścia stanu, zaimplementowana w protokole Ethere
 20. [Drzewa Merkle Patricia w Ethereum](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 21. [Peter Todd o drzewach sum Merkle](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Historia białej księgi znajduje się na [tej stronie wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Historia białej księgi znajduje się na [tej stronie wiki](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)._
 
 _Ethereum, podobnie jak wiele projektów oprogramowania open-source tworzonych przez społeczność, rozwija się od czasu jego początkowego powstania. _Aby dowiedzieć się o najnowszych zmianach w Ethereum i o tym, jak wprowadzane są zmiany w protokole, polecamy [ten przewodnik](/learn/)._

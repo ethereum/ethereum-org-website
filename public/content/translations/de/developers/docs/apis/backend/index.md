@@ -74,7 +74,6 @@ Durch Abstraktion vereinfachen diese Programmbibliotheken die komplexe direkte I
 **NOWNodes - _Full Nodes und Block Explorers._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Dokumentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
 **QuickNode –** **_Blockchain-Infrastruktur als Dienstleistung_**
 

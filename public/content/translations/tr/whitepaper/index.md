@@ -521,6 +521,6 @@ Ethereum protokolü tarafından uygulanan keyfi bir durum geçiş fonksiyonu kav
 20. [Ethereum Merkle Patricia ağaçları](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 21. [Peter Todd, Merkle toplam ağaçları hakkında](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Tanıtım belgesinin geçmişi için [bu wiki'ye](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md) bakın._
+_Tanıtım belgesinin geçmişi için [bu wiki'ye](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/) bakın._
 
 _Birçok topluluk odaklı, açık kaynaklı yazılım projesi gibi Ethereum'un da ilk başlangıcından bu yana gelişerek büyümeye devam ediyor. _Ethereum'daki en son gelişmeler ve protokolde nasıl değişiklikler yapıldığı hakkında bilgi edinmek için [bu kılavuzu](/learn/) öneririz._

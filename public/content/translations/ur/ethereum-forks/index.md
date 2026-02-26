@@ -118,7 +118,7 @@ sidebarDepth: 1
 
 - [Pectra.wtf](https://pectra.wtf)
 - [پیکٹرا اسٹیکنگ کے تجربے کو کیسے بہتر بنائے گا](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [الیکٹرا اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [الیکٹرا اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [پراگ-الیکٹرا ("پیکٹرا") عمومی سوالات](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" 
 </ul>
 </ExpandableCard>
 
-- [دینیب اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [دینیب اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [کینکن-دینیب ("ڈینکن") عمومی سوالات](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" 
 اپ گریڈ نے خودکار اکاؤنٹ سویپنگ کی فعالیت بھی فراہم کی، جو کسی بھی دستیاب انعامات کی ادائیگیوں یا مکمل ودڈرالز کے لیے ویلیڈیٹر اکاؤنٹس پر مسلسل کارروائی کرتی ہے۔
 
 - [اسٹیکنگ ودڈرالز پر مزید](/staking/withdrawals/)۔
-- [کپیلا اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [کپیلا اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 

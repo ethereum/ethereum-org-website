@@ -158,7 +158,7 @@ Testnet kwa ajili ya [Starknet](https://www.starknet.io).
 
 ##### Rasilimali
 
-- [Starkscan](https://sepolia.starkscan.co/)
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### Mabomba
 
