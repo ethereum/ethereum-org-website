@@ -1,6 +1,20 @@
 import * as fs from "fs"
 import * as path from "path"
 
+// franc-min is ESM-only; use dynamic import
+let francDetect: ((text: string) => string) | null = null
+async function loadFranc(): Promise<void> {
+  if (francDetect) return
+  try {
+    const francModule = await import("franc-min")
+    francDetect = francModule.franc
+  } catch {
+    console.warn(
+      "[SANITIZE] franc-min not available; skipping language detection"
+    )
+  }
+}
+
 /**
  * Post-import sanitizer for Crowdin translations.
  *
@@ -99,6 +113,10 @@ const PROTECTED_BRAND_NAMES = [
   // Programming languages
   "Solidity",
   "Vyper",
+  "Rust",
+  "JavaScript",
+  "TypeScript",
+  "Python",
   // Companies/Products
   "Alchemy",
   "Infura",
@@ -106,26 +124,207 @@ const PROTECTED_BRAND_NAMES = [
   "Consensys",
   "Chainlink",
   "OpenZeppelin",
+  "Gnosis",
+  "Flashbots",
+  "Etherscan",
+  "Hardhat",
+  "Foundry",
+  "Remix",
+  "Truffle",
+  "Ganache",
+  "Brownie",
+  "Waffle",
+  // Protocols/Projects
+  "Uniswap",
+  "Aave",
+  "Compound",
+  "MakerDAO",
+  "Lido",
+  "Rocket Pool",
+  "ENS",
+  // Ethereum clients
+  "Besu",
+  "Geth",
+  "Nethermind",
+  "Erigon",
+  "Prysm",
+  "Lighthouse",
+  "Teku",
+  "Nimbus",
+  "Lodestar",
+  // Core terms that must stay English
+  "Ethereum",
+  "Bitcoin",
+  "Beacon Chain",
+  "Solana",
+  "Polygon",
+  "Arbitrum",
+  "Optimism",
+  "Base",
 ]
 
 /**
- * Check if protected brand names from English source are preserved in translation.
- * Returns warnings for any brand names that appear in English but not in translation.
+ * Common ticker/acronym transpositions found in translations.
+ * Maps wrong form → correct form.
  */
-function checkProtectedBrandNames(
+const TICKER_CORRECTIONS: Record<string, string> = {
+  EHT: "ETH",
+  BSL: "BLS",
+  ECDAS: "ECDSA",
+}
+
+/**
+ * Fix ticker symbol transpositions.
+ * Only matches whole words (word boundaries) to avoid false positives.
+ * Skips code blocks (fenced and inline) where these forms may be valid.
+ */
+function fixTickerTranspositions(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Split content to preserve code blocks
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    for (const [wrong, correct] of Object.entries(TICKER_CORRECTIONS)) {
+      const re = new RegExp(`\\b${escapeRegex(wrong)}\\b`, "g")
+      const matches = parts[i].match(re)
+      if (matches && matches.length > 0) {
+        fixCount += matches.length
+        parts[i] = parts[i].replace(re, correct)
+      }
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix only brand/product/language name tags in frontmatter.
+ * Generic concept tags (e.g. "zero-knowledge" → "nulová znalost") should
+ * remain in the native language. Only tags that match a protected brand name
+ * in the English source are restored to their canonical casing.
+ *
+ * Uses targeted replacement to preserve original formatting (multi-line YAML,
+ * spacing, quoting style) instead of reconstructing the entire tags line.
+ */
+function fixBrandTags(
   translatedContent: string,
   englishContent: string
-): string[] {
-  const warnings: string[] = []
+): { content: string; fixCount: number } {
+  const frontmatterRe = /^---\n([\s\S]*?)\n---/
+  const transMatch = translatedContent.match(frontmatterRe)
+  const engMatch = englishContent.match(frontmatterRe)
 
+  if (!transMatch || !engMatch)
+    return { content: translatedContent, fixCount: 0 }
+
+  const transFm = transMatch[1]
+  const engFm = engMatch[1]
+
+  // Extract tags arrays
+  const tagsRe = /^tags:\s*\[([^\]]*)\]/m
+  const engTagsMatch = engFm.match(tagsRe)
+  const transTagsMatch = transFm.match(tagsRe)
+
+  if (!engTagsMatch || !transTagsMatch)
+    return { content: translatedContent, fixCount: 0 }
+
+  // Parse tag values (handles quoted and unquoted)
+  const parseTags = (raw: string): string[] =>
+    raw
+      .split(",")
+      .map((t) => t.trim().replace(/^["']|["']$/g, ""))
+      .filter(Boolean)
+
+  const engTags = parseTags(engTagsMatch[1])
+  const transTags = parseTags(transTagsMatch[1])
+
+  if (engTags.length !== transTags.length)
+    return { content: translatedContent, fixCount: 0 }
+
+  // Build a map from lowercase brand name to canonical casing
+  const brandCanonical = new Map<string, string>()
   for (const brand of PROTECTED_BRAND_NAMES) {
-    // Check if brand exists in English source (case-sensitive match with word boundaries)
+    brandCanonical.set(brand.toLowerCase(), brand)
+  }
+
+  // Identify tags that need fixing: brand tags whose translation differs
+  // from the canonical casing
+  let fixCount = 0
+  let updatedFm = transFm
+
+  for (let i = 0; i < transTags.length; i++) {
+    const engTag = engTags[i]
+    const transTag = transTags[i]
+    const canonical = brandCanonical.get(engTag.toLowerCase())
+
+    if (!canonical) continue // Not a brand tag — leave as-is
+    if (transTag === canonical) continue // Already correct
+
+    // Targeted replacement: find the exact quoted tag in frontmatter and replace
+    // Match the tag with its surrounding quotes to avoid false positives
+    const quotedTagRe = new RegExp(
+      `(["'])${escapeRegex(transTag)}\\1`
+    )
+    if (quotedTagRe.test(updatedFm)) {
+      updatedFm = updatedFm.replace(quotedTagRe, `$1${canonical}$1`)
+      fixCount++
+    }
+  }
+
+  if (fixCount === 0) return { content: translatedContent, fixCount: 0 }
+
+  const content = translatedContent.replace(
+    frontmatterRe,
+    `---\n${updatedFm}\n---`
+  )
+
+  return { content, fixCount }
+}
+
+/**
+ * Fix protected brand names that were mistranslated.
+ * For each brand found in English source, if the count drops in translation,
+ * attempt to restore by finding the translated variants and replacing them.
+ *
+ * Strategy: For brand names where English count > translation count,
+ * we can't easily know what the mistranslation IS without locale knowledge.
+ * So we report these as warnings for the LLM review to handle.
+ *
+ * For frontmatter `tags`, only brand/product/language names are restored
+ * to English; generic concept tags remain in the native language.
+ */
+function fixProtectedBrandNames(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number; warnings: string[] } {
+  const warnings: string[] = []
+  let content = translatedContent
+  let fixCount = 0
+
+  // Auto-fix: Restore brand-name tags to English (leaves concept tags translated)
+  const brandTagsResult = fixBrandTags(content, englishContent)
+  content = brandTagsResult.content
+  fixCount += brandTagsResult.fixCount
+  if (brandTagsResult.fixCount > 0) {
+    warnings.push(
+      `Restored ${brandTagsResult.fixCount} brand-name tag(s) to English`
+    )
+  }
+
+  // Warn: Brand names with count mismatches in body content
+  for (const brand of PROTECTED_BRAND_NAMES) {
     const brandRegex = new RegExp(`\\b${escapeRegex(brand)}\\b`, "g")
     const inEnglish = englishContent.match(brandRegex)
 
     if (inEnglish && inEnglish.length > 0) {
-      // Brand is in English, check if it's preserved in translation
-      const inTranslation = translatedContent.match(brandRegex)
+      const inTranslation = content.match(brandRegex)
       const englishCount = inEnglish.length
       const translationCount = inTranslation?.length ?? 0
 
@@ -137,7 +336,7 @@ function checkProtectedBrandNames(
     }
   }
 
-  return warnings
+  return { content, fixCount, warnings }
 }
 
 /**
@@ -163,6 +362,129 @@ function fixDuplicatedHeadings(content: string): {
   })
 
   return { content: result, fixCount }
+}
+
+/**
+ * Fix escaped bold/italic markers from Crowdin.
+ * Crowdin often escapes markdown emphasis during translation:
+ *   \*\*text\*\* → **text** (bold)
+ *   \*text\*    → *text*   (italic)
+ *
+ * IMPORTANT: Skips table rows (lines starting with |) where \*\* may be
+ * intentional — e.g., `2\*\*256` for exponentiation in EVM opcode tables.
+ * Also skips code blocks.
+ */
+function fixEscapedBoldAndItalic(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Split content to preserve code blocks
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    const lines = parts[i].split("\n")
+    for (let j = 0; j < lines.length; j++) {
+      // Skip table rows — \*\* may be intentional (e.g., 2\*\*256)
+      if (lines[j].trimStart().startsWith("|")) continue
+
+      // Fix escaped bold first: \*\*text\*\* → **text**
+      lines[j] = lines[j].replace(
+        /\\\*\\\*(.+?)\\\*\\\*/g,
+        (_, inner) => {
+          fixCount++
+          return `**${inner}**`
+        }
+      )
+
+      // Fix escaped italic: \*text\* → *text*
+      // Runs after bold fix, so remaining \* pairs are italic
+      lines[j] = lines[j].replace(
+        /\\\*(.+?)\\\*/g,
+        (_, inner) => {
+          fixCount++
+          return `*${inner}*`
+        }
+      )
+    }
+    parts[i] = lines.join("\n")
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Warn on headings where the text is only punctuation (no actual words).
+ * Example: `## 。 {#who-is-involved}` — heading text is just a period.
+ * This indicates Crowdin dropped the heading text during translation.
+ */
+function warnPunctuationOnlyHeadings(content: string): string[] {
+  const warnings: string[] = []
+  const headingRe = /^(#{1,6})\s+(.+?)\s*(\{#[^}]+\})?\s*$/gm
+  let match
+  while ((match = headingRe.exec(content))) {
+    const text = match[2].trim()
+    // Remove the custom ID if it got captured in the text
+    const cleanText = text.replace(/\{#[^}]+\}/, "").trim()
+    // Check if remaining text is only punctuation/whitespace
+    if (cleanText.length > 0 && /^[\p{P}\p{S}\s]+$/u.test(cleanText)) {
+      warnings.push(
+        `Heading text is only punctuation: "${match[0].trim()}" — likely missing translation`
+      )
+    }
+  }
+  return warnings
+}
+
+/**
+ * Warn when fenced code block content differs between English and translation.
+ * Code inside fences should never be translated (variable names, keywords, etc.).
+ * Catches issues like `or` → `または` inside code fences.
+ */
+function warnCodeFenceContentDrift(
+  translatedContent: string,
+  englishContent: string
+): string[] {
+  const warnings: string[] = []
+
+  const extractCodeFences = (
+    content: string
+  ): Array<{ lang: string; body: string }> => {
+    const fences: Array<{ lang: string; body: string }> = []
+    const re = /```(\w*)\n([\s\S]*?)```/g
+    let match
+    while ((match = re.exec(content))) {
+      fences.push({ lang: match[1] || "", body: match[2].trim() })
+    }
+    return fences
+  }
+
+  const engFences = extractCodeFences(englishContent)
+  const transFences = extractCodeFences(translatedContent)
+
+  if (engFences.length !== transFences.length) {
+    warnings.push(
+      `Code fence count mismatch: English has ${engFences.length}, translation has ${transFences.length}`
+    )
+    return warnings
+  }
+
+  for (let i = 0; i < engFences.length; i++) {
+    if (engFences[i].body !== transFences[i].body) {
+      const preview = transFences[i].body
+        .substring(0, 60)
+        .replace(/\n/g, "\\n")
+      warnings.push(
+        `Code fence #${i + 1} content differs from English: "${preview}..."`
+      )
+    }
+  }
+
+  return warnings
 }
 
 /**
@@ -249,29 +571,6 @@ function extractHrefs(content: string): Set<string> {
 }
 
 /**
- * Extract hrefs from a single text block (paragraph/section).
- * Returns array to preserve duplicates within the block.
- */
-function extractHrefsFromBlock(block: string): string[] {
-  const hrefs: string[] = []
-
-  // Markdown links: [text](href)
-  const markdownLinkRe = /\[[^\]]*\]\(([^)]+)\)/g
-  let match
-  while ((match = markdownLinkRe.exec(block))) {
-    hrefs.push(match[1])
-  }
-
-  // JSX/HTML href attributes: href="..." or href='...'
-  const hrefAttrRe = /href=["']([^"']+)["']/g
-  while ((match = hrefAttrRe.exec(block))) {
-    hrefs.push(match[1])
-  }
-
-  return hrefs
-}
-
-/**
  * Split markdown content into logical blocks (paragraphs/sections).
  * Blocks are separated by blank lines.
  */
@@ -281,16 +580,16 @@ function splitIntoBlocks(content: string): string[] {
 }
 
 /**
- * Fix translated hrefs by comparing against English source.
- * Uses paragraph-scoped set comparison for robust matching across languages.
+ * Detect translated/mismatched hrefs by comparing against English source.
+ * Warn-only — does NOT auto-fix, because block-positional alignment between
+ * English and translated documents is unreliable (Crowdin often adds/removes
+ * blank lines, shifting paragraph indices and causing incorrect substitutions).
  *
- * Strategy:
- * 1. Split both documents into blocks (paragraphs separated by blank lines)
- * 2. For each block pair, compare internal href sets
- * 3. Within a block: if invalid href count equals missing href count, we can match
- * 4. This handles grammatical reordering within sentences (common in non-English)
+ * Earlier approach: block-level href comparison using per-paragraph extraction
+ * (extractHrefsFromBlock) to match hrefs positionally. Abandoned because Crowdin
+ * paragraph drift caused incorrect substitutions. See docs/solutions/ for details.
  *
- * Only auto-fixes unambiguous cases; warns for complex mismatches.
+ * Href fixes are left to the AI review agents which have full semantic context.
  */
 function fixTranslatedHrefs(
   translatedContent: string,
@@ -301,101 +600,41 @@ function fixTranslatedHrefs(
 
   // Collect all English internal hrefs as the "valid" set
   const allEnglishHrefs = extractHrefs(englishContent)
+  // Collect all translation internal hrefs
+  const allTransHrefs = extractHrefs(translatedContent)
 
-  const allFixes: Array<[string, string]> = [] // [wrong, correct]
   const allWarnings: string[] = []
 
-  // Process block by block
-  const blockCount = Math.min(englishBlocks.length, translatedBlocks.length)
-
-  for (let i = 0; i < blockCount; i++) {
-    const engBlock = englishBlocks[i]
-    const transBlock = translatedBlocks[i]
-
-    const engHrefs = extractHrefsFromBlock(engBlock).filter(isInternalHref)
-    const transHrefs = extractHrefsFromBlock(transBlock).filter(isInternalHref)
-
-    // Skip blocks with no internal hrefs
-    if (engHrefs.length === 0 && transHrefs.length === 0) continue
-
-    // Find hrefs in translation that don't exist in English (invalid)
-    const transHrefSet = new Set(transHrefs)
-
-    const invalidInTrans: string[] = [] // In translation but not in any English href
-    const missingFromTrans: string[] = [] // In English block but not in translation
-
-    for (const href of transHrefs) {
-      if (!allEnglishHrefs.has(href)) {
-        invalidInTrans.push(href)
-      }
-    }
-
-    for (const href of engHrefs) {
-      if (!transHrefSet.has(href)) {
-        missingFromTrans.push(href)
-      }
-    }
-
-    // No issues in this block
-    if (invalidInTrans.length === 0 && missingFromTrans.length === 0) continue
-
-    // Deduplicate for set comparison
-    const uniqueInvalid = [...new Set(invalidInTrans)]
-    const uniqueMissing = [...new Set(missingFromTrans)]
-
-    // Only auto-fix when there's exactly 1 invalid and 1 missing in block
-    // Multiple mismatches within same block could be reordered - don't guess
-    if (uniqueInvalid.length === 1 && uniqueMissing.length === 1) {
-      allFixes.push([uniqueInvalid[0], uniqueMissing[0]])
-    } else if (uniqueInvalid.length > 0 || uniqueMissing.length > 0) {
-      // Count mismatch - can't safely fix, warn instead
-      for (const href of uniqueInvalid) {
-        allWarnings.push(
-          `Block ${i + 1}: Invalid href "${href}" - not a valid English path`
-        )
-      }
-      for (const href of uniqueMissing) {
-        allWarnings.push(
-          `Block ${i + 1}: Missing href "${href}" - present in English but not translation`
-        )
-      }
-    }
-  }
-
-  // Warn about block count mismatch
+  // Warn about block count mismatch (indicates paragraph alignment drift)
   if (englishBlocks.length !== translatedBlocks.length) {
     allWarnings.push(
       `Block count mismatch: English has ${englishBlocks.length}, translation has ${translatedBlocks.length}`
     )
   }
 
-  // Apply all fixes
-  let result = translatedContent
-  const appliedFixes: string[] = []
+  // Document-level href comparison: find hrefs in translation that don't
+  // exist anywhere in English (likely translated or corrupted paths)
+  for (const href of allTransHrefs) {
+    if (isInternalHref(href) && !allEnglishHrefs.has(href)) {
+      allWarnings.push(
+        `Invalid internal href "${href}" — not found in English source`
+      )
+    }
+  }
 
-  for (const [wrong, correct] of allFixes) {
-    // Replace in markdown links: [text](wrong) → [text](correct)
-    const markdownRe = new RegExp(
-      `(\\[[^\\]]*\\]\\()${escapeRegex(wrong)}(\\))`,
-      "g"
-    )
-    const beforeMd = result
-    result = result.replace(markdownRe, `$1${correct}$2`)
-
-    // Replace in href attributes: href="wrong" → href="correct"
-    const hrefRe = new RegExp(`(href=["'])${escapeRegex(wrong)}(["'])`, "g")
-    const beforeAttr = result
-    result = result.replace(hrefRe, `$1${correct}$2`)
-
-    if (result !== beforeMd || result !== beforeAttr) {
-      appliedFixes.push(`${wrong} → ${correct}`)
+  // Find English hrefs missing from translation entirely
+  for (const href of allEnglishHrefs) {
+    if (isInternalHref(href) && !allTransHrefs.has(href)) {
+      allWarnings.push(
+        `Missing href "${href}" — present in English but not in translation`
+      )
     }
   }
 
   return {
-    content: result,
-    fixCount: appliedFixes.length,
-    fixes: appliedFixes,
+    content: translatedContent, // No modifications — warn only
+    fixCount: 0,
+    fixes: [],
     warnings: allWarnings,
   }
 }
@@ -1051,6 +1290,345 @@ function quoteFrontmatterNonAscii(content: string): {
   return { content, fixCount }
 }
 
+/**
+ * Expected Unicode script ranges per locale.
+ * Maps locale prefix to regex of UNEXPECTED characters.
+ * If these characters appear in a file for that locale, it's contamination.
+ */
+const CROSS_SCRIPT_DETECTORS: Record<
+  string,
+  { name: string; pattern: RegExp }
+> = {
+  // Latin-script languages should not contain Devanagari, CJK, Arabic, etc.
+  tr: {
+    name: "Devanagari/CJK/Cyrillic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF]/g,
+  },
+  fr: {
+    name: "Devanagari/CJK/Cyrillic/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF\u0600-\u06FF]/g,
+  },
+  de: {
+    name: "Devanagari/CJK/Cyrillic/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF\u0600-\u06FF]/g,
+  },
+  es: {
+    name: "Devanagari/CJK/Cyrillic/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF\u0600-\u06FF]/g,
+  },
+  it: {
+    name: "Devanagari/CJK/Cyrillic/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF\u0600-\u06FF]/g,
+  },
+  pt: {
+    name: "Devanagari/CJK/Cyrillic/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF\u0600-\u06FF]/g,
+  },
+  pl: {
+    name: "Devanagari/CJK/Cyrillic/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF\u0600-\u06FF]/g,
+  },
+  cs: {
+    name: "Devanagari/CJK/Cyrillic/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF\u0600-\u06FF]/g,
+  },
+  id: {
+    name: "Devanagari/CJK/Cyrillic/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF\u0600-\u06FF]/g,
+  },
+  sw: {
+    name: "Devanagari/CJK/Cyrillic/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF\u0600-\u06FF]/g,
+  },
+  vi: {
+    name: "Devanagari/CJK/Cyrillic/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF\u0600-\u06FF]/g,
+  },
+  // Cyrillic languages should not contain Devanagari, CJK, Arabic, etc.
+  ru: {
+    name: "Devanagari/CJK/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0600-\u06FF]/g,
+  },
+  uk: {
+    name: "Devanagari/CJK/Arabic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0600-\u06FF]/g,
+  },
+  // Arabic should not contain Devanagari, CJK, Cyrillic, etc.
+  ar: {
+    name: "Devanagari/CJK/Cyrillic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF]/g,
+  },
+  ur: {
+    name: "Devanagari/CJK/Cyrillic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF]/g,
+  },
+  // Devanagari languages should not contain CJK, Arabic, Cyrillic
+  hi: {
+    name: "CJK/Arabic/Cyrillic",
+    pattern: /[\u4E00-\u9FFF\u0600-\u06FF\u0400-\u04FF]/g,
+  },
+  mr: {
+    name: "CJK/Arabic/Cyrillic",
+    pattern: /[\u4E00-\u9FFF\u0600-\u06FF\u0400-\u04FF]/g,
+  },
+  // CJK languages should not contain Devanagari, Arabic, Cyrillic
+  ja: {
+    name: "Devanagari/Arabic/Cyrillic",
+    pattern: /[\u0900-\u097F\u0600-\u06FF\u0400-\u04FF]/g,
+  },
+  ko: {
+    name: "Devanagari/Arabic/Cyrillic",
+    pattern: /[\u0900-\u097F\u0600-\u06FF\u0400-\u04FF]/g,
+  },
+  "zh-tw": {
+    name: "Devanagari/Arabic/Cyrillic",
+    pattern: /[\u0900-\u097F\u0600-\u06FF\u0400-\u04FF]/g,
+  },
+  // Tamil/Telugu should not contain Devanagari, CJK, Arabic, Cyrillic
+  ta: {
+    name: "Devanagari/CJK/Arabic/Cyrillic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0600-\u06FF\u0400-\u04FF]/g,
+  },
+  te: {
+    name: "Devanagari/CJK/Arabic/Cyrillic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0600-\u06FF\u0400-\u04FF]/g,
+  },
+  // Bengali should not contain other Indic, CJK, Arabic, Cyrillic
+  bn: {
+    name: "Devanagari/CJK/Arabic/Cyrillic",
+    pattern: /[\u0900-\u097F\u4E00-\u9FFF\u0600-\u06FF\u0400-\u04FF]/g,
+  },
+}
+
+/**
+ * Detect cross-script contamination in translated content.
+ * Returns warnings for unexpected Unicode characters based on the file's locale.
+ */
+function detectCrossScriptContamination(
+  content: string,
+  locale: string
+): string[] {
+  const warnings: string[] = []
+  const detector = CROSS_SCRIPT_DETECTORS[locale]
+  if (!detector) return warnings
+
+  // Skip code blocks — foreign characters in code are valid
+  const codeBlockRe = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockRe)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    const matches = parts[i].match(detector.pattern)
+    if (matches && matches.length > 0) {
+      // Get unique characters found
+      const uniqueChars = Array.from(new Set(matches)).slice(0, 5).join(", ")
+      warnings.push(
+        `Cross-script contamination: found ${matches.length} ${detector.name} character(s) in ${locale} file (e.g., ${uniqueChars})`
+      )
+    }
+  }
+
+  return warnings
+}
+
+/**
+ * Escape raw `<` before numbers in MDX content.
+ * Pattern: `<5GB` becomes `&lt;5GB` to prevent MDX treating it as a JSX tag.
+ * Skips code blocks (fenced and inline) where `<` is valid.
+ */
+function escapeMdxAngleBrackets(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Split content to preserve code blocks
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match < followed by a digit (not already escaped, not part of HTML tag)
+    parts[i] = parts[i].replace(/(?<!&lt|&)<(\d)/g, (_, digit) => {
+      fixCount++
+      return `&lt;${digit}`
+    })
+
+    // Escape bare JSX fragment <> in prose (Crowdin drops backticks around `<>`)
+    parts[i] = parts[i].replace(/(?<!\\|`)<>(?!`)/g, () => {
+      fixCount++
+      return "\\<>"
+    })
+
+    // Escape bare closing JSX fragment </> in prose
+    parts[i] = parts[i].replace(/(?<!\\|`)<\/>(?!`)/g, () => {
+      fixCount++
+      return "\\</>"
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Restore backslash escapes before < that Crowdin dropped during translation.
+ * Compares English source to find all \< patterns, then checks if the
+ * translated file has the same context without the backslash.
+ */
+function restoreDroppedBackslashEscapes(
+  content: string,
+  englishContent: string
+): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+
+  // Collect all \<X patterns from English prose (outside code blocks)
+  const enParts = englishContent.split(codeBlockPattern)
+  const escapedFollowers = new Set<string>()
+  for (let i = 0; i < enParts.length; i++) {
+    if (i % 2 === 1) continue
+    const matches = enParts[i].matchAll(/\\<([^\s>]{1,30})/g)
+    for (const m of matches) {
+      escapedFollowers.add(m[1]) // e.g., "Storage[4]", "=2^256"
+    }
+  }
+
+  if (escapedFollowers.size === 0) return { content, fixCount }
+
+  // Check translation for bare <X where English has \<X
+  const trParts = content.split(codeBlockPattern)
+  for (let i = 0; i < trParts.length; i++) {
+    if (i % 2 === 1) continue
+    for (const follower of escapedFollowers) {
+      const bare = `<${follower}`
+      const escaped = `\\<${follower}`
+      if (trParts[i].includes(bare) && !trParts[i].includes(escaped)) {
+        trParts[i] = trParts[i].split(bare).join(escaped)
+        fixCount++
+      }
+    }
+  }
+
+  return { content: trParts.join(""), fixCount }
+}
+
+/**
+ * Detect and remove orphaned closing HTML tags.
+ * These appear when translation restructures sentences and leaves behind
+ * closing tags like </a> without matching openers.
+ * Only removes tags that have NO corresponding opener in the same paragraph.
+ *
+ * Skips code blocks (fenced and inline) where closing tags are valid content.
+ * Removes excess closers from right-to-left (last occurrence first) so that
+ * correctly-paired closers near their openers are preserved.
+ */
+function removeOrphanedClosingTags(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+  const orphanTags = ["a", "span", "em", "strong", "b", "i", "u"]
+
+  // Split content to preserve code blocks (fenced and inline)
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let partIdx = 0; partIdx < parts.length; partIdx++) {
+    if (partIdx % 2 === 1) continue // Skip code blocks
+
+    for (const tag of orphanTags) {
+      const lines = parts[partIdx].split("\n")
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i]
+        const closeRe = new RegExp(`</${tag}>`, "g")
+        const openRe = new RegExp(`<${tag}[\\s>]`, "g")
+
+        const closeCount = (line.match(closeRe) || []).length
+        const openCount = (line.match(openRe) || []).length
+
+        // If there are more closing tags than opening tags on this line,
+        // remove the excess closing tags (the trailing orphans)
+        if (closeCount > openCount) {
+          // Keep the first `openCount` closers (paired with openers),
+          // remove the rest (orphans at the end of the line)
+          let kept = 0
+          lines[i] = line.replace(closeRe, (match) => {
+            kept++
+            if (kept <= openCount) {
+              return match // Keep — paired with an opener
+            }
+            fixCount++
+            return "" // Remove — orphaned
+          })
+          // Clean up any resulting double spaces
+          lines[i] = lines[i].replace(/  +/g, " ").trimEnd()
+        }
+      }
+      parts[partIdx] = lines.join("\n")
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Detect paragraphs that appear to be untranslated (still in English).
+ * Uses franc-min for language detection on paragraph-sized chunks.
+ * Only flags paragraphs with high confidence of being English in non-English files.
+ */
+function detectUntranslatedContent(content: string, locale: string): string[] {
+  if (!francDetect) return []
+  // Don't check English files
+  if (locale === "en") return []
+
+  const warnings: string[] = []
+
+  // Split into paragraphs (skip frontmatter, code blocks)
+  const withoutFrontmatter = content.replace(/^---\n[\s\S]*?\n---\n?/, "")
+  const withoutCodeBlocks = withoutFrontmatter.replace(/```[\s\S]*?```/g, "")
+
+  const paragraphs = withoutCodeBlocks
+    .split(/\n\s*\n/)
+    .filter((p) => p.trim().length > 100) // Only check substantial paragraphs
+
+  let untranslatedCount = 0
+  for (const para of paragraphs) {
+    const cleanPara = para
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1") // Remove markdown links (keep text)
+      .replace(/<[^>]+>/g, "") // Remove HTML/JSX tags
+      .replace(/`[^`]+`/g, "") // Remove inline code
+      .trim()
+
+    if (cleanPara.length < 80) continue // Too short for reliable detection
+
+    const detected = francDetect(cleanPara)
+    if (detected === "eng") {
+      untranslatedCount++
+      // Only report first 3 to avoid noise
+      if (untranslatedCount <= 3) {
+        const preview = cleanPara.substring(0, 80).replace(/\n/g, " ")
+        warnings.push(
+          `Possibly untranslated paragraph (detected as English): "${preview}..."`
+        )
+      }
+    }
+  }
+
+  if (untranslatedCount > 3) {
+    warnings.push(
+      `...and ${untranslatedCount - 3} more potentially untranslated paragraphs`
+    )
+  }
+
+  return warnings
+}
+
 function processMarkdownFile(
   mdPath: string,
   providedContent?: string
@@ -1067,6 +1645,7 @@ function processMarkdownFile(
   // Map translated path to English path: remove `/translations/<lang>/` segment
   const parts = mdPath.split(path.sep)
   const idx = parts.lastIndexOf("translations")
+  const locale = idx !== -1 && idx + 1 < parts.length ? parts[idx + 1] : ""
   if (idx === -1 || idx + 2 >= parts.length) {
     issues.push("No translations segment found; skipping formatting sync")
   } else {
@@ -1086,140 +1665,145 @@ function processMarkdownFile(
 
   const before = content
 
-  // Fix duplicated headings (e.g., ## Text? Text? {#id} → ## Text? {#id})
-  const duplicatedResult = fixDuplicatedHeadings(content)
-  content = duplicatedResult.content
-  if (duplicatedResult.fixCount > 0) {
-    issues.push(`Fixed ${duplicatedResult.fixCount} duplicated headings`)
+  // Helper: only log a fix if content actually changed
+  function applyFix(
+    fn: () => { content: string; fixCount: number },
+    label: (count: number) => string
+  ) {
+    const snapshot = content
+    const result = fn()
+    content = result.content
+    if (content !== snapshot) {
+      issues.push(label(result.fixCount))
+    }
   }
 
-  // Fix broken markdown links (] (https:// → ](https://)
-  const brokenLinksResult = fixBrokenMarkdownLinks(content)
-  content = brokenLinksResult.content
-  if (brokenLinksResult.fixCount > 0) {
-    issues.push(`Fixed ${brokenLinksResult.fixCount} broken markdown links`)
-  }
-
-  // Fix frontmatter issues (don't need English source)
-  const dateResult = normalizeFrontmatterDates(content)
-  content = dateResult.content
-  if (dateResult.fixCount > 0) {
-    issues.push(
-      `Normalized ${dateResult.fixCount} frontmatter dates to ISO format`
-    )
-  }
-
-  const quoteResult = quoteFrontmatterNonAscii(content)
-  content = quoteResult.content
-  if (quoteResult.fixCount > 0) {
-    issues.push(
-      `Quoted ${quoteResult.fixCount} frontmatter values with non-ASCII chars`
-    )
-  }
-
-  const guillemetResult = fixAsciiGuillemets(content)
-  content = guillemetResult.content
-  if (guillemetResult.fixCount > 0) {
-    issues.push(
-      `Fixed ${guillemetResult.fixCount} ASCII guillemets (<< >>) to Unicode (« »)`
-    )
-  }
+  applyFix(
+    () => fixDuplicatedHeadings(content),
+    (n) => `Fixed ${n} duplicated headings`
+  )
+  applyFix(
+    () => fixBrokenMarkdownLinks(content),
+    (n) => `Fixed ${n} broken markdown links`
+  )
+  applyFix(
+    () => normalizeFrontmatterDates(content),
+    (n) => `Normalized ${n} frontmatter dates to ISO format`
+  )
+  applyFix(
+    () => quoteFrontmatterNonAscii(content),
+    (n) => `Quoted ${n} frontmatter values with non-ASCII chars`
+  )
+  applyFix(
+    () => fixAsciiGuillemets(content),
+    (n) => `Fixed ${n} ASCII guillemets (<< >>) to Unicode (« »)`
+  )
 
   // Fix escaped backticks (\`) to regular backticks (`)
-  // Crowdin sometimes escapes backticks unnecessarily
-  const escapedBacktickCount = (content.match(/\\`/g) || []).length
-  if (escapedBacktickCount > 0) {
+  {
+    const snapshot = content
     content = content.replace(/\\`/g, "`")
-    issues.push(`Unescaped ${escapedBacktickCount} backslash-escaped backticks`)
+    if (content !== snapshot) {
+      const count = (snapshot.match(/\\`/g) || []).length
+      issues.push(`Unescaped ${count} backslash-escaped backticks`)
+    }
   }
 
-  // Fix block component line breaks (critical for MDX parser)
-  const blockResult = fixBlockComponentLineBreaks(content)
-  content = blockResult.content
-  if (blockResult.fixCount > 0) {
-    issues.push(`Fixed ${blockResult.fixCount} inline block component tags`)
-  }
+  applyFix(
+    () => fixTickerTranspositions(content),
+    (n) => `Fixed ${n} ticker symbol transpositions`
+  )
+  applyFix(
+    () => escapeMdxAngleBrackets(content),
+    (n) => `Escaped ${n} raw angle brackets in prose`
+  )
+  applyFix(
+    () => removeOrphanedClosingTags(content),
+    (n) => `Removed ${n} orphaned closing HTML tags`
+  )
+  applyFix(
+    () => fixBlockComponentLineBreaks(content),
+    (n) => `Fixed ${n} inline block component tags`
+  )
+  applyFix(
+    () => fixEscapedBoldAndItalic(content),
+    (n) => `Unescaped ${n} bold/italic markers from Crowdin`
+  )
 
   content = normalizeBlockHtmlLines(content)
 
   // Normalize inline components and restore blank lines from English source
   if (englishMd) {
-    // Sync protected frontmatter fields (template, sidebar, etc.)
-    const protectedResult = syncProtectedFrontmatterFields(content, englishMd)
-    content = protectedResult.content
-    if (protectedResult.fixCount > 0) {
-      issues.push(
-        `Synced ${protectedResult.fixCount} protected frontmatter fields from English`
-      )
-    }
-
-    // Collapse inline HTML tags to match English single-line format
-    const inlineHtmlResult = collapseInlineHtmlFromEnglish(content, englishMd)
-    content = inlineHtmlResult.content
-    if (inlineHtmlResult.fixCount > 0) {
-      issues.push(
-        `Collapsed ${inlineHtmlResult.fixCount} inline HTML tags to match English`
-      )
-    }
-
-    // Fix JSX component closing tags merged with content (split to own line)
-    const mergedTagResult = fixMergedClosingTags(content, englishMd)
-    content = mergedTagResult.content
-    if (mergedTagResult.fixCount > 0) {
-      issues.push(
-        `Split ${mergedTagResult.fixCount} merged closing tags to own lines`
-      )
-    }
-
-    // Collapse inline component line breaks to match English format
-    const inlineResult = normalizeInlineComponentsFromEnglish(
-      content,
-      englishMd
+    applyFix(
+      () => syncProtectedFrontmatterFields(content, englishMd!),
+      (n) => `Synced ${n} protected frontmatter fields from English`
     )
-    content = inlineResult.content
-    if (inlineResult.fixCount > 0) {
-      issues.push(
-        `Normalized ${inlineResult.fixCount} inline components to match English`
-      )
-    }
+    applyFix(
+      () => collapseInlineHtmlFromEnglish(content, englishMd!),
+      (n) => `Collapsed ${n} inline HTML tags to match English`
+    )
+    applyFix(
+      () => fixMergedClosingTags(content, englishMd!),
+      (n) => `Split ${n} merged closing tags to own lines`
+    )
+    applyFix(
+      () => normalizeInlineComponentsFromEnglish(content, englishMd!),
+      (n) => `Normalized ${n} inline components to match English`
+    )
+    applyFix(
+      () => restoreDroppedBackslashEscapes(content, englishMd!),
+      (n) => `Restored ${n} dropped backslash escapes before <`
+    )
+    applyFix(
+      () => repairUnclosedBackticks(content, englishMd!),
+      (n) => `Repaired ${n} unclosed backticks`
+    )
+    applyFix(
+      () => restoreBlankLinesFromEnglish(content, englishMd!),
+      (n) => `Restored ${n} blank lines from English`
+    )
+    applyFix(
+      () => fixCollapsedComponentLineBreaks(content, englishMd!),
+      (n) => `Fixed ${n} collapsed component line breaks`
+    )
 
-    // Repair unclosed backticks in inline code
-    const backtickResult = repairUnclosedBackticks(content, englishMd)
-    content = backtickResult.content
-    if (backtickResult.fixCount > 0) {
-      issues.push(`Repaired ${backtickResult.fixCount} unclosed backticks`)
+    // Fix and check protected brand names
+    const brandResult = fixProtectedBrandNames(content, englishMd)
+    if (brandResult.content !== content) {
+      issues.push(`Fixed ${brandResult.fixCount} brand name issues`)
     }
-
-    const blankLineResult = restoreBlankLinesFromEnglish(content, englishMd)
-    content = blankLineResult.content
-    if (blankLineResult.fixCount > 0) {
-      issues.push(
-        `Restored ${blankLineResult.fixCount} blank lines from English`
-      )
-    }
-
-    // Fix collapsed line breaks between consecutive components
-    const collapsedResult = fixCollapsedComponentLineBreaks(content, englishMd)
-    content = collapsedResult.content
-    if (collapsedResult.fixCount > 0) {
-      issues.push(
-        `Fixed ${collapsedResult.fixCount} collapsed component line breaks`
-      )
-    }
-
-    // Check for mistranslated brand names (report-only)
-    const brandWarnings = checkProtectedBrandNames(content, englishMd)
-    issues.push(...brandWarnings)
+    content = brandResult.content
+    issues.push(...brandResult.warnings)
 
     // Fix translated hrefs using set comparison
     const hrefResult = fixTranslatedHrefs(content, englishMd)
-    content = hrefResult.content
-    if (hrefResult.fixCount > 0) {
+    if (hrefResult.content !== content) {
       issues.push(
         `Fixed ${hrefResult.fixCount} translated hrefs: ${hrefResult.fixes.join(", ")}`
       )
     }
+    content = hrefResult.content
     issues.push(...hrefResult.warnings)
+
+    // Warn on punctuation-only headings (dropped translation text)
+    const punctuationHeadingWarnings = warnPunctuationOnlyHeadings(content)
+    issues.push(...punctuationHeadingWarnings)
+
+    // Warn on code fence content drift (translated code blocks)
+    const codeFenceWarnings = warnCodeFenceContentDrift(content, englishMd)
+    issues.push(...codeFenceWarnings)
+
+    // Detect cross-script contamination
+    if (locale) {
+      const scriptWarnings = detectCrossScriptContamination(content, locale)
+      issues.push(...scriptWarnings)
+    }
+
+    // Detect untranslated content
+    if (locale) {
+      const untranslatedWarnings = detectUntranslatedContent(content, locale)
+      issues.push(...untranslatedWarnings)
+    }
   }
 
   const fixed = before !== content
@@ -1314,17 +1898,18 @@ function languagesFromEnv(): string[] | undefined {
     .filter(Boolean)
 }
 
-export function runSanitizer(
+export async function runSanitizer(
   filesWithContent?: Array<{ path: string; content: string }>,
   langs?: string[]
 ) {
   console.log("[SANITIZE] Starting post-import sanitizer")
+  await loadFranc()
 
   let mdFilesToProcess: Array<{ path: string; content: string }> = []
   let jsonFilesToProcess: Array<{ path: string; content: string }> = []
 
   if (filesWithContent && filesWithContent.length > 0) {
-    // Process only the specific files provided with their in-memory content
+    // Process specific files; if content is empty, reads from disk and writes fixes back
     console.log(
       `[SANITIZE] Target: ${filesWithContent.length} specific file(s)`
     )
@@ -1362,11 +1947,84 @@ export function runSanitizer(
     jsonFilesToProcess = jsonFilePaths.map((p) => ({ path: p, content: "" }))
   }
 
+  // --- Orphan detection: flag translated files with no English counterpart ---
+  const orphanWarnings: Array<{ file: string; suggestion: string }> = []
+  const translationsDir = path.join(CONTENT_ROOT, "translations")
+
+  for (const fileInfo of [...mdFilesToProcess, ...jsonFilesToProcess]) {
+    const filePath = fileInfo.path
+    // Extract the relative path after translations/<lang>/
+    const txIdx = filePath.indexOf(`${path.sep}translations${path.sep}`)
+    if (txIdx === -1) continue
+
+    const afterTranslations = filePath.substring(
+      txIdx + `${path.sep}translations${path.sep}`.length
+    )
+    // Strip the language code prefix: <lang>/rest/of/path
+    const slashIdx = afterTranslations.indexOf(path.sep)
+    if (slashIdx === -1) continue
+
+    const langCode = afterTranslations.substring(0, slashIdx)
+    const relPathWithinLang = afterTranslations.substring(slashIdx + 1)
+
+    // Derive the expected English source path
+    const englishPath = path.join(CONTENT_ROOT, relPathWithinLang)
+
+    if (!fs.existsSync(englishPath)) {
+      const relFile = path.relative(ROOT, filePath)
+      // Try to find the English file by filename to suggest the correct location
+      const basename = path.basename(relPathWithinLang)
+      const parentDir = path.basename(path.dirname(relPathWithinLang))
+      let suggestion = "No English counterpart found"
+
+      // Search for matching parent/file pattern in English content
+      const englishContentFiles = listFiles(CONTENT_ROOT, (f) => {
+        if (f.includes(`${path.sep}translations${path.sep}`)) return false
+        return (
+          f.endsWith(`${path.sep}${parentDir}${path.sep}${basename}`) &&
+          !f.includes(`${path.sep}translations${path.sep}`)
+        )
+      })
+
+      if (englishContentFiles.length === 1) {
+        const correctEnglishRel = path.relative(
+          CONTENT_ROOT,
+          englishContentFiles[0]
+        )
+        const correctTranslationPath = path.join(
+          translationsDir,
+          langCode,
+          correctEnglishRel
+        )
+        suggestion = `Likely belongs at: ${path.relative(ROOT, correctTranslationPath)}`
+      } else if (englishContentFiles.length > 1) {
+        suggestion = `Ambiguous: ${englishContentFiles.length} English candidates found (${englishContentFiles.map((f) => path.relative(CONTENT_ROOT, f)).join(", ")})`
+      }
+
+      orphanWarnings.push({ file: relFile, suggestion })
+    }
+  }
+
+  if (orphanWarnings.length > 0) {
+    console.log(
+      `\n[SANITIZE] ⚠ Orphaned translations (no English source at expected path):`
+    )
+    for (const w of orphanWarnings) {
+      console.log(`  - ${w.file}`)
+      console.log(`    ${w.suggestion}`)
+    }
+  }
+
   let mdFixed = 0
+  let mdDiskWrites = 0
   const mdIssues: Array<{ file: string; issues: string[] }> = []
   const mdChanged: Array<{ path: string; content: string }> = []
 
   for (const fileInfo of mdFilesToProcess) {
+    // Read original from disk for accurate disk-write detection
+    const originalOnDisk = fs.existsSync(fileInfo.path)
+      ? fs.readFileSync(fileInfo.path, "utf8")
+      : null
     const { fixed, issues, content } = processMarkdownFile(
       fileInfo.path,
       fileInfo.content
@@ -1375,15 +2033,23 @@ export function runSanitizer(
       mdFixed++
       mdChanged.push({ path: fileInfo.path, content })
     }
+    // Track actual disk changes (content differs from what's on disk)
+    if (originalOnDisk !== null && content !== originalOnDisk) {
+      mdDiskWrites++
+    }
     if (issues.length)
       mdIssues.push({ file: path.relative(ROOT, fileInfo.path), issues })
   }
 
   let jsonFixed = 0
+  let jsonDiskWrites = 0
   const jsonIssues: Array<{ file: string; issues: string[] }> = []
   const jsonChanged: Array<{ path: string; content: string }> = []
 
   for (const fileInfo of jsonFilesToProcess) {
+    const originalOnDisk = fs.existsSync(fileInfo.path)
+      ? fs.readFileSync(fileInfo.path, "utf8")
+      : null
     const { fixed, issues, content } = processJsonFile(
       fileInfo.path,
       fileInfo.content
@@ -1392,15 +2058,18 @@ export function runSanitizer(
       jsonFixed++
       jsonChanged.push({ path: fileInfo.path, content })
     }
+    if (originalOnDisk !== null && content !== originalOnDisk) {
+      jsonDiskWrites++
+    }
     if (issues.length)
       jsonIssues.push({ file: path.relative(ROOT, fileInfo.path), issues })
   }
 
   console.log(
-    `\n[SANITIZE] Markdown files scanned: ${mdFilesToProcess.length}, fixed: ${mdFixed}`
+    `\n[SANITIZE] Markdown: ${mdFilesToProcess.length} scanned, ${mdDiskWrites} written to disk`
   )
   console.log(
-    `[SANITIZE] JSON files scanned: ${jsonFilesToProcess.length}, fixed: ${jsonFixed}`
+    `[SANITIZE] JSON: ${jsonFilesToProcess.length} scanned, ${jsonDiskWrites} written to disk`
   )
 
   if (mdIssues.length || jsonIssues.length) {
@@ -1426,9 +2095,10 @@ export function runSanitizer(
     markdown: { scanned: mdFilesToProcess.length, fixed: mdFixed },
     json: { scanned: jsonFilesToProcess.length, fixed: jsonFixed },
     issues: { markdown: mdIssues, json: jsonIssues },
+    orphanWarnings,
   }
 }
 
 if (require.main === module) {
-  runSanitizer()
+  runSanitizer().catch(console.error)
 }
