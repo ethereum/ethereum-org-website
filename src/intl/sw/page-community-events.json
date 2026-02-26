@@ -94,5 +94,6 @@
   "page-events-meetups-events-subtitle": "Tafuta hackathons zijazo, mikusanyiko ya jamii, na makongamano katika mfumo ikolojia wa Ethereum.",
   "page-events-cta-title": "Unaandaa tukio?",
   "page-events-cta-body": "Hii ni orodha isiyo kamili inayodumishwa na jamii yetu. Je, unajua tukio lijalo la Ethereum la kuongeza kwenye orodha hii?",
-  "page-events-cta-button": "Wasilisha tukio"
+  "page-events-cta-button": "Wasilisha tukio",
+  "item-logo": "Nembo ya {item}"
 }
