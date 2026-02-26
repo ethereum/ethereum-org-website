@@ -86,7 +86,7 @@ Tyto karty se přímo propojují s non-custodial peněženkami nebo účty s chy
 
 ### Porovnání self-custodial krypto karet {#crypto-card-custody-comparison}
 
-| **Krypto karta**              | **Self-custodial** | **Nekótované** | **Klíčové poznámky**                                                                                       |
+| **Krypto karta**              | **Self-custodial** | **Non-custodial** | **Klíčové poznámky**                                                                                       |
 | ----------------------------- | :----------------: | :------------: | ---------------------------------------------------------------------------------------------------------- |
 | MetaMask Card                 |          ✅         |        ✅       | Peněženka zůstává v MetaMask; automatický off-ramp při platbě                                              |
 | Tuyo Card                     |          ✅         |        ✅       | Chytrá peněženka převádí na USDC; uživatel si ponechává kontrolu                                           |

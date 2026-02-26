@@ -107,7 +107,7 @@ Ano, vylepšení Pectra vyžaduje aktualizace jak [exekučních, tak konsensuál
 
 [Více o rozpoznávání a vyhýbání se podvodům](/security/)
 
-## Učíte se spíše vizuálně? Vizuální výuka {#visual-learner}
+## Učíte se spíše vizuálně? {#visual-learner}
 
 <YouTube id="ufIDBCgdGwY" />
 

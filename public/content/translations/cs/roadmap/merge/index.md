@@ -68,7 +68,7 @@ Klíčové akční položky zahrnují:
 2. Autentizujte exekučního i konsensuálního klienta s použitím sdíleného JWT klíče, aby spolu mohli komunikovat v zabezpečeném prostředí.
 3. Nastavte adresu pro „příjem odměn“ abyste mohli dostat transakční poplatky/MEV, které si vyděláte.
 
-Pokud neprovedete první dvě výše uvedené položky, vámi provozovaný síťový uzel uzel bude považován za „offline“, dokud nebudou obě vrstvy synchronizovány a autentizovány.
+Pokud neprovedete první dvě výše uvedené položky, vámi provozovaný síťový uzel bude považován za „offline“, dokud nebudou obě vrstvy synchronizovány a autentizovány.
 
 Pokud nenastavíte adresu pro „příjem odměn“, váš validátor bude stále fungovat jako obvykle, ale poplatky a MEV, které byste jinak získali v blocích navržených vaším validátorem, budou spáleny.
 </ExpandableCard>

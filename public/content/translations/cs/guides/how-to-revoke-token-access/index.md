@@ -34,7 +34,7 @@ Ujistěte se, že v peněžence a na webové stránce používáte stejnou síť
 
 Měli byste vidět všechny kontrakty, které mají povolený přístup k tokenům, a jejich limit výdajů. Najděte ten, kterému chcete zrušit přístup.
 
-Pokud nevíte, který kontrakt vybrat, můžete zrušit přístup všem. To to pro vás nebude znamenat žádné problémy, ale při příští interakci s některým z těchto kontraktů, jim budete muset znovu povolit přístup.
+Pokud nevíte, který kontrakt vybrat, můžete zrušit přístup všem. To pro vás nebude znamenat žádné problémy, ale při příští interakci s některým z těchto kontraktů, jim budete muset znovu povolit přístup.
 
 ## Krok 4: Zruště přístup k finančním prostředkům
 

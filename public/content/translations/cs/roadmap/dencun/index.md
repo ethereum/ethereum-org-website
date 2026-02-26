@@ -99,7 +99,7 @@ Pouhá kompatibilita s virtuálním strojem Etherea (EVM) neznamená, že síť 
 
 [Další informace o rollupech druhé vrstvy](/layer-2/)
 
-## Učíte se spíše vizuálně? Vizuální výuka {#visual-learner}
+## Učíte se spíše vizuálně? {#visual-learner}
 
 <YouTube id="HT9PHWloIiU" />
 
