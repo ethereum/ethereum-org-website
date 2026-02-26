@@ -1,6 +1,6 @@
 ---
 title: Pakiety zbiorcze warstwy 2
-description: Wprowadzenie do różnych rozwiązania skalowania warstwy 2 opracowywanych obecnie przez społeczność Ethereum.
+description: "Wprowadzenie do różnych rozwiązania skalowania warstwy 2 opracowywanych obecnie przez społeczność Ethereum."
 lang: pl
 incomplete: true
 sidebarDepth: 3

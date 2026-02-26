@@ -18,7 +18,6 @@ Ces programmes soutiennent le vaste écosystème Ethereum en offrant des subvent
 - [DAO Moloch](https://www.molochdao.com/) - _Confidentialité, mise à l'échelle de la couche 2, sécurité du client, etc._
 - [Subventions DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Feuille de calcul Google regroupant les organisations offrant des subventions_
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Subventions pour soutenir les travaux universitaires liés à Ethereum_
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks a compilé un annuaire complet de toutes les subventions, appels d'offres et primes pour la découverte de bugs._
 
 ## Projets spécifiques {#project-specific}
 
@@ -26,14 +25,13 @@ Ces projets ont crée leurs propres subventions pour encourager d'autres projets
 
 - [Programme de subventions Aave](https://aavegrants.org/) – _Subventions DAO [Aave](https://aave.com/)_
 - [Balancer](https://grants.balancer.community/) – _Fonds pour l'écosystème [Balancer](https://balancer.fi/)_
-- [Programme de subventions Chainlink](https://chain.link/community/grants) - _[Subventions de la Communauté](https://chain.link/) Chainlink_
 - [Programme de subventions de décentralisation](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) Metaverse DAO_
 - [Organisme de subvention Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _Écosystème financier [Lido](https://lido.fi/)_
 - [Programme MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) DAO de subventions gérées par les employés_
 - [Programme de subventions SKALE Network](https://skale.space/developers#grants) - _Écosystème [SKALE Network](https://skale.space/)_
-- [Programme de subvention de la fondation Swarm](https://my.ethswarm.org) - _Écosystème de la [fondation Swarm](https://www.ethswarm.org/)_
+- [Programme de subvention de la fondation Swarm](https://www.ethswarm.org/grants) - _Écosystème de la [fondation Swarm](https://www.ethswarm.org/)_
 - [TheGraph](https://thegraph.com/ecosystem/grants/) – _Écosystème [TheGraph](https://thegraph.com/)_
-- [Programme de subventions Uniswap](https://www.uniswapfoundation.org/approach) – _Communauté [Uniswap](https://uniswap.org/)_
+- [Programme de subventions Uniswap](https://www.uniswapfoundation.org/grants) – _Communauté [Uniswap](https://uniswap.org/)_
 
 ## Financement quadratique {#quadratic-funding}
 

@@ -30,7 +30,6 @@ Estos recursos compilan y organizan varias oportunidades de subvenciones en todo
 
 Estas plataformas generales ofrecen una amplia cobertura de las subvenciones en todo el espacio de la Web3 y son útiles puntos de partida para cualquiera que busque financiación:
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks ha compilado un directorio completo de todas las subvenciones, RFPs y recompensas por bugs._
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _Directorio de subvenciones de blockchain y criptomonedas_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Directorio de todos los programas de subvenciones web3, actualizado semanalmente
 

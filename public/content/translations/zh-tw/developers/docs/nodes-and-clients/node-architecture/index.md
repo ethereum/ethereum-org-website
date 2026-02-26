@@ -1,26 +1,28 @@
 ---
-title: 節點架構
-description: 關於如何安排以太坊節點的介紹。
+title: "節點架構"
+description: "關於如何安排以太坊節點的介紹。"
 lang: zh-tw
 ---
 
-一個以太坊節點由兩個用戶端組成：一個[執行用戶端](/developers/docs/nodes-and-clients/#execution-clients)以及一個[共識用戶端](/developers/docs/nodes-and-clients/#consensus-clients)。
+一個以太坊節點由兩個用戶端組成：一個[執行用戶端](/developers/docs/nodes-and-clients/#execution-clients)和一個[共識用戶端](/developers/docs/nodes-and-clients/#consensus-clients)。 節點若要提案新區塊，還必須執行[驗證器用戶端](#validators)。
 
-當以太坊使用[工作量證明](/developers/docs/consensus-mechanisms/pow/)時，一個執行用戶端已足夠運行以太坊全節點。 然而，自從實行[權益證明](/developers/docs/consensus-mechanisms/pow/)，執行用戶端需要與另外一個軟體同時使用，該軟體稱為[「共識用戶端」](/developers/docs/nodes-and-clients/#consensus-clients)。
+當以太坊使用[工作量證明](/developers/docs/consensus-mechanisms/pow/)時，一個執行用戶端已足夠執行一個以太坊全節點。 然而，自從實施[權益證明](/developers/docs/consensus-mechanisms/pow/)後，執行用戶端必須與另一個稱為[共識用戶端](/developers/docs/nodes-and-clients/#consensus-clients)的軟體一起使用。
 
 下圖顯示兩種以太坊用戶端的關係。 兩種用戶端與他們各自的點對點 (P2P) 網路相連。 執行用戶端透過其點對點網路廣播交易，來確保能夠管理自己的本機交易池，而共識用戶端透過其點對點網路廣播區塊，來確保共識和鏈增長，因此需要獨立的點對點網路。
 
 ![](node-architecture-text-background.png)
 
-要讓這兩種用戶端架構運作，驗證用戶端必須能夠將大量交易傳送至執行用戶端。 透過在本機執行交易，用戶端驗證交易沒有違反任何以太坊的規則且提議的以太坊狀態更新是否正確。 同樣地，當節點被選為區塊生產者，共識用戶端必須能夠從 Geth 請求各種交易，以添加到新的區塊裡並執行它們來更新全域狀態。 用戶端間的通訊由本機遠端程序呼叫連線使用[引遠端程序呼叫](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)處理。
+_執行用戶端有多種選擇，包括 Erigon、Nethermind 和 Besu_。
+
+要讓這兩種用戶端架構運作，驗證用戶端必須將大量交易傳送至執行用戶端。 執行用戶端在本地執行交易，以驗證交易沒有違反任何以太坊規則，以及對以太坊狀態的提議更新是正確的。 當一個節點被選為區塊生產者時，其共識用戶端實例會向執行用戶端請求交易捆綁包，以將其納入新區塊並執行，進而更新全域狀態。 共識用戶端使用[引擎 API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)，透過本地 RPC 連線來驅動執行用戶端。
 
 ## 執行用戶端的作用為何？ {#execution-client}
 
-執行用戶端負責處理交易、廣播交易、狀態管理，以及支援以太坊虛擬機 ([EVM](/developers/docs/evm/))。 然而，它並**不**負責產生區塊、廣播區塊，或是處理共識邏輯。 這些為共識用戶端的工作範圍。
+執行用戶端負責交易驗證、處理和傳播，以及狀態管理和支援以太坊虛擬機 ([EVM](/developers/docs/evm/))。 它**不**負責建構區塊、傳播區塊或處理共識邏輯。 這些為共識用戶端的工作範圍。
 
-執行用戶端建立執行有效負載：交易列表、更新的狀態樹，以及其他執行相關的資料。 共識用戶端將執行有效負載加入每一個區塊。 執行用戶端也負責重新執行每個新區塊的交易，確保交易為有效的。 執行交易在執行用戶端的嵌入式電腦上執行，該嵌入式電腦稱為[以太坊虛擬機 (EVM)](/developers/docs/evm)。
+執行用戶端建立執行有效負載：交易列表、更新的狀態樹，以及其他執行相關的資料。 共識用戶端將執行有效負載加入每一個區塊。 執行用戶端也負責重新執行每個新區塊的交易，確保交易為有效的。 交易是在執行用戶端的嵌入式電腦上執行，也就是所謂的[以太坊虛擬機 (EVM)](/developers/docs/evm)。
 
-執行用戶端還透過[遠端程序呼叫方法](/developers/docs/apis/json-rpc)提供一個連接以太坊的使用者介面，讓使用者可以查詢以太坊區塊鏈、提交交易和部署智慧型合約。 遠端程序呼叫呼叫通常由 [Web3js](https://docs.web3js.org/)、[Web3py](https://web3py.readthedocs.io/en/v5/) 這樣的函式庫處理，或是像是瀏覽器錢包的使用者介面。
+執行用戶端也透過 [RPC 方法](/developers/docs/apis/json-rpc) 提供以太坊的使用者介面，讓使用者可以查詢以太坊區塊鏈、提交交易和部署智能合約。 RPC 呼叫通常由 [Web3js](https://docs.web3js.org/)、[Web3py](https://web3py.readthedocs.io/en/v5/) 這類的函式庫，或由瀏覽器錢包等使用者介面來處理。
 
 總而言之，執行用戶端為：
 
@@ -33,25 +35,25 @@ lang: zh-tw
 
 共識用戶端不參與區塊的證明或提議；此由共識用戶端的驗證者（可選附加組件）完成。 沒有驗證者的共識用戶端只會同步鏈頭，使節點能夠保持同步。 這讓使用者可以使用他們的執行用戶端與以太坊交易，並確信位於正確的鏈上。
 
-## 驗證者 {#validators}
+## 驗證程式 {#validators}
 
-節點營運者可以在存款合約中存入 32 以太幣，以添加一個驗證者到他們的共識用戶端。 驗者者用戶端與共識用戶端捆綁在一起，可以隨時添加進節點。 驗證者處理證明及區塊提議。 它們讓節點可以累積獎勵，或因懲罰或罰沒而失去以太幣。 運行驗證者軟體也讓一個節點有資格被選中來提議新區塊。
+質押並運行驗證者軟體將使一個節點有資格被選中來提議新區塊。 節點營運者可以在存款合約中存入 32 以太幣，以添加一個驗證者到他們的共識用戶端。 驗者者用戶端與共識用戶端捆綁在一起，可以隨時添加進節點。 驗證者處理證明及區塊提議。 它也使節點能夠累積獎勵，或因懲罰或罰沒而失去以太幣。
 
-[更多關於質押的資訊](/staking/)。
+[更多關於質押](/staking/)。
 
 ## 節點組成比較 {#node-comparison}
 
-| 執行用戶端                      | 共識用戶端              | 驗證者         |
-| -------------------------- | ------------------ | ----------- |
-| 透過其點對點網路廣播交易               | 透過其點對點網路廣播區塊及證明    | 提議區塊        |
-| 執行/重新執行交易                  | 運行分叉選擇演算法          | 積累獎勵/懲罰     |
-| 驗證傳入狀態的變更                  | 追蹤鏈頭               | 做出證明        |
-| 管理狀態及收據樹                   | 管理信標狀態（包括共識和執行資訊）  | 需要質押 32 以太幣 |
-| 建立執行有效負載                   | 追蹤在 RANDAO 中累積的隨機性 | 可被罰沒        |
-| 公開 JSON-RPC 應用程式介面以便與以太坊互動 | 追蹤證明及最終確定          |             |
+| 執行用戶端                      | 共識用戶端                                                                      | 驗證者         |
+| -------------------------- | -------------------------------------------------------------------------- | ----------- |
+| 透過其點對點網路廣播交易               | 透過其點對點網路廣播區塊及證明                                                            | 提議區塊        |
+| 執行/重新執行交易                  | 運行分叉選擇演算法                                                                  | 積累獎勵/懲罰     |
+| 驗證傳入狀態的變更                  | 追蹤鏈頭                                                                       | 做出證明        |
+| 管理狀態及收據樹                   | 管理信標狀態（包括共識和執行資訊）                                                          | 需要質押 32 以太幣 |
+| 建立執行有效負載                   | 追蹤 RANDAO 中的累積隨機性 (RANDAO 是一種為驗證者選擇和其他共識操作提供可驗證隨機性的演算法) | 可被罰沒        |
+| 公開 JSON-RPC 應用程式介面以便與以太坊互動 | 追蹤證明及最終確定                                                                  |             |
 
-## 了解更多 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
 - [權益證明](/developers/docs/consensus-mechanisms/pos)
-- [區塊提出](/developers/docs/consensus-mechanisms/pos/block-proposal)
-- [驗證者獎勵及懲罰](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
+- [區塊提案](/developers/docs/consensus-mechanisms/pos/block-proposal)
+- [驗證者獎勵與懲罰](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)

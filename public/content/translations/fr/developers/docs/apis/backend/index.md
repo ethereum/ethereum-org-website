@@ -74,7 +74,6 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 **NOWNodes - _Explorateurs de nœuds complets et de blocs._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
 **Quinone -** **_Infrastructure Blockchain en tant que service_**
 
@@ -111,7 +110,7 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 
 **Python Tooling -** **_Diverses bibliothèques pour interagir avec Ethereum via Python_**
 
-- [py.ethereum.org](https://python.ethereum.org/)
+- [py.ethereum.org](https://snakecharmers.ethereum.org)
 - [GitHub Web3.py](https://github.com/ethereum/web3.py)
 - [Chat Web3.py](https://gitter.im/ethereum/web3.py)
 

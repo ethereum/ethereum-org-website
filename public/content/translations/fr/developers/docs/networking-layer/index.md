@@ -97,7 +97,7 @@ Les clients de consensus participent à un réseau distinct de pair-à-pair avec
 
 ### La découverte {#consensus-discovery}
 
-Comme pour les clients d'exécution, les clients de consensus utilisent [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) sur UDP pour trouver des pairs. L'implémentation de la couche de consensus de discv5 diffère de celle des clients d'exécution uniquement en ce qu'elle inclut un adaptateur connectant discv5 dans une pile [libP2P](https://libp2p.io/), dépréciant DevP2P. Les sessions de la couche d'exécution RLPx sont dépréciées au profit du système de liaison sécurisé libP2P.
+Comme pour les clients d'exécution, les clients de consensus utilisent [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) sur UDP pour trouver des pairs. L'implémentation de la couche de consensus de discv5 diffère de celle des clients d'exécution uniquement en ce qu'elle inclut un adaptateur connectant discv5 dans une pile [libP2P](https://libp2p.io/), dépréciant DevP2P. Les sessions de la couche d'exécution RLPx sont dépréciées au profit du système de liaison sécurisé libP2P.
 
 ### ENRs {#consensus-enr}
 
@@ -109,7 +109,7 @@ La pile libP2P prend en charge toutes les communications après la découverte. 
 
 ### Commutation {#gossip}
 
-Le domaine du commutateur inclut toutes les informations qui doivent se propager rapidement sur le réseau. Cela inclut les blocs de la chaîne phare, les preuves, les attestations, les sorties et les coupes. Les informations sont transmises à l'aide de libP2P gossipsub v1 et repose sur diverses métadonnées stockées localement sur chaque nœud, y compris la taille maximale des charges de commutation à recevoir et à transmettre. Des informations plus détaillées sur les domaines de commutation sont disponibles [ici](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+Le domaine du commutateur inclut toutes les informations qui doivent se propager rapidement sur le réseau. Cela inclut les blocs de la chaîne phare, les preuves, les attestations, les sorties et les coupes. Les informations sont transmises à l'aide de libP2P gossipsub v1 et repose sur diverses métadonnées stockées localement sur chaque nœud, y compris la taille maximale des charges de commutation à recevoir et à transmettre. Des informations plus détaillées sur les domaines de commutation sont disponibles [ici](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Question-réponse {#request-response}
 
@@ -152,4 +152,4 @@ Le schéma de couche réseau pour les clients de consensus et d'exécution par [
 
 ## Complément d'information {#further-reading}
 
-[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [spécifications réseau de la couche de consensus](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) [kademlia to discv5](https://vac.dev/kademlia-to-discv5) [kademlia paper](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [introduction à Ethereum p2p](https://p2p.paris/en/talks/intro-ethereum-networking/) [relation eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [vidéo sur les détails de La Fusion avec client eth2](https://www.youtube.com/watch?v=zNIrIninMgg)
+[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [spécifications réseau de la couche de consensus](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure) [kademlia to discv5](https://vac.dev/kademlia-to-discv5) [kademlia paper](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [introduction à Ethereum p2p](https://p2p.paris/en/talks/intro-ethereum-networking/) [relation eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [vidéo sur les détails de La Fusion avec client eth2](https://www.youtube.com/watch?v=zNIrIninMgg)

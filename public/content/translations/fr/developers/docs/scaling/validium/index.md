@@ -162,5 +162,5 @@ De multiples projets fournissent des implémentations de Validium et de volition
 - [Validium et The Layer 2 Two-By-Two - Numéro 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [Rollups ZK vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volition et le spectre émergent de la disponibilité des données](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [Rollups, Validiums, et Volitions : Découvrez les solutions de mise à l'échelle d'Ethereum les plus récentes](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
+- [Rollups, Validiums, et Volitions : Découvrez les solutions de mise à l'échelle d'Ethereum les plus récentes](https://medium.com/coinmonks/rollups-vs-validiums-vs-volitions-d76300170f4a)
 - [Guide Pratique des Rollups Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

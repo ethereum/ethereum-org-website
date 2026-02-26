@@ -290,7 +290,7 @@ Le mode client léger permet de télécharger tous les en-têtes de bloc, les do
 
 La synchronisation optimiste est une stratégie de synchronisation post-fusion conçue pour être opt-in et rétrocompatible. Elle permet à des nœuds d'exécution de se synchroniser via des méthodes reconnues. Le moteur d'exécution peut importer _de manière optimiste_ des blocs phares sans les vérifier complètement, trouver la dernière tête, puis commencer à synchroniser la chaîne en utilisant les méthodes ci-dessus. Ensuite, une fois le client d'exécution mis à jour, il informe le client de consensus de la validité des transactions sur la Chaîne phare.
 
-[En savoir plus sur la synchronisation optimiste](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[En savoir plus sur la synchronisation optimiste](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### Synchronisation des points de contrôle {#checkpoint-sync}
 

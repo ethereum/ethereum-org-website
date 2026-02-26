@@ -106,7 +106,7 @@ La Fusion s'est accompagnée de changements apportés au consensus, qui incluent
   <li>concept de <em>safe head</em> et de <em>blocs finalisés</em></li>
 </ul>
 
-Pour plus d'informations, consultez ce billet de blog de Tim Beiko sur <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Comment La Fusion a un impact sur la couche d'application d'Ethereum</a>.
+Pour plus d'informations, consultez ce billet de blog de Tim Beiko sur <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Comment La Fusion a un impact sur la couche d'application d'Ethereum</a>.
 
 </ExpandableCard>
 
@@ -116,7 +116,7 @@ La Fusion marque la fin de la preuve de travail pour Ethereum, et le début d'un
 
 ## La Fusion et la fragmentation {#merge-and-scaling}
 
-La Fusion permet également de préparer le terrain pour d'autres améliorations des mises à niveau non envisageables avec la preuve de travail, en rapprochant Ethereum d'une étape de la réalisation d'évolutivité, de sécurité et de durabilité décrite dans la [vision d'Ethereum](/roadmap/vision/).
+La Fusion permet également de préparer le terrain pour d'autres améliorations des mises à niveau non envisageables avec la preuve de travail, en rapprochant Ethereum d'une étape de la réalisation d'évolutivité, de sécurité et de durabilité décrite dans la [vision d'Ethereum](/roadmap/).
 
 ## Les idées fausses sur La Fusion {#misconceptions}
 
@@ -194,7 +194,7 @@ Pour limiter la confusion, la communauté a mis à jour ces termes :
 
 Ces mises à jour d'ordre terminologique ne concernent que les conventions de nommage ; les objectifs et la feuille de route d'Ethereum restent inchangés.
 
-[En savoir plus sur le changement de nom « Eth2 »](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[En savoir plus sur le changement de nom « Eth2 »](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Relation entre les mises à niveau {#relationship-between-upgrades}
 

@@ -89,7 +89,7 @@ Pemotongan penaruhan, pengusiran, dan hukuman lainnya, yang dikoordinasikan oleh
 - [Apa itu Bukti Taruhan dan Mengapa Ia Penting](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
 - [Penjelasan Rantai Suar Ethereum 2.0 yang perlu Anda baca terlebih dahulu](https://ethos.dev/beacon-chain/) _Ethos.dev_
 - [Mengapa Bukti Taruhan (Nov 2020)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
-- [Bukti Taruhan: Cara Saya Belajar Mencintai Subjektivitas Lemah](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
+- [Bukti Taruhan: Cara Saya Belajar Mencintai Subjektivitas Lemah](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity) _Vitalik Buterin_
 - [Filosofi Rancangan Bukti Taruhan](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 
 ## Topik Terkait {#related-topics}

@@ -60,7 +60,7 @@ Jusqu'à présent, nous avons pris en compte les validateurs qui agissent confor
 
 Les pénalités pour avoir manqué les votes de cible et de source sont égales aux récompenses que l'attestateur aurait reçues s'il les avait soumis. Cela signifie qu'au lieu d'avoir la récompense ajoutée à leur solde, ils voient une valeur égale retirée de leur solde. Il n'y a pas de pénalité pour avoir manqué le vote de tête (les votes de tête sont uniquement récompensés, jamais pénalisés). Aucune pénalité n'est associée au `inclusion_delay` - la récompense ne sera tout simplement pas ajoutée au solde du validateur. Il n'y a également aucune pénalité pour ne pas avoir réussi à proposer un bloc.
 
-Pour en savoir plus sur les récompenses et les pénalités, consultez les [spécifications de consensus](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Les récompenses et les pénalités ont été ajustées lors de la mise à niveau Bellatrix - regardez Danny Ryan et Vitalik en discuter dans cette vidéo [Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
+Pour en savoir plus sur les récompenses et les pénalités, consultez les [spécifications de consensus](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md). Les récompenses et les pénalités ont été ajustées lors de la mise à niveau Bellatrix - regardez Danny Ryan et Vitalik en discuter dans cette vidéo [Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
 ## Sanction {#slashing}
 
