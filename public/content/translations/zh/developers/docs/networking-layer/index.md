@@ -147,7 +147,7 @@ SSZ 代表简单序列化。 它使用固定偏移量，可以轻松解码编码
 区块被足够多的验证者认证后，就会被添加到链头，经过合理化并最终确定。
 
 ![以太坊共识客户端网络层图](cons_client_net_layer.png)
-![](exe_client_net_layer.png)
+![以太坊执行客户端网络层图](exe_client_net_layer.png)
 
 共识客户端和执行客户端的网络层示意图，来源：[ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
