@@ -1,5 +1,5 @@
 ---
-title: Beacon chain
+title: "Řetězová vazba"
 description: "Přečtěte si o Řetězové vazbě – vylepšení, které umožnilo důkaz podílem na Ethereu."
 lang: cs
 template: upgrade
@@ -20,30 +20,30 @@ summaryPoint3: "Řetězová vazba představila logiku konsensu a blokový komuni
 
 ## Co Řetězová vazba dělá? {#what-does-the-beacon-chain-do}
 
-Řetězová vazba je název pro řetězec účtů, který vedla a koordinovala síť [uzamykatelů](/staking/) Etherea předtím, než tito uzamykatelé začali ověřovat skutečné bloky Etherea. Nezpracovává transakce ani interakce s chytrými kontrakty, protože to se děje v exekuční vrstvě. Řetězová vazba je zodpovědná za akce, jako je zpracování bloků a atestací, provozování algoritmu výběru forku a správa odměn a sankcí. Přečtěte si více na naší stránce věnované [architektuře síťových uzlů](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
+Řetězová vazba je název pro řetězec účtů, který vedl a koordinoval síť [uzamykatelů](/staking/) Etherea předtím, než tito uzamykatelé začali ověřovat skutečné bloky Etherea. Nezpracovává transakce ani interakce s chytrými kontrakty, protože to se děje v exekuční vrstvě.
+Řetězová vazba je zodpovědná za akce, jako je zpracování bloků a atestací, provozování algoritmu výběru forku a správa odměn a sankcí.
+Přečtěte si více na naší [stránce o architektuře uzlů](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
-## Důsledky spuštění Řetězové vazby {#beacon-chain-features}
+## Dopad Řetězové vazby {#beacon-chain-features}
 
-### Zavedení uzamčení {#introducing-staking}
+### Představení uzamčení {#introducing-staking}
 
-Řetězová vazba umožnila v Ethereu [důkaz podílem](/developers/docs/consensus-mechanisms/pos/). To udržuje Ethereum v bezpečí a vydělává validátorům více ETH. V praxi to znamená, že uzamknete ETH, abyste se stali validátorem. Jako uzamykatel spouštíte software, který vytváří a ověřuje nové bloky.
+Řetězová vazba zavedla do Etherea [důkaz podílem](/developers/docs/consensus-mechanisms/pos/). To udržuje Ethereum v bezpečí a vydělává validátorům více ETH. V praxi to znamená, že uzamknete ETH, abyste se stali validátorem. Jako uzamykatel spouštíte software, který vytváří a ověřuje nové bloky.
 
 Uzamčení slouží k podobnému účelu, jako dříve sloužila [těžba](/developers/docs/consensus-mechanisms/pow/mining/), ale v mnoha ohledech se liší. Těžba vyžadovala velké výdaje ve formě pořízení výkonného hardwaru a spotřeby energie, což vedlo k úsporám z rozsahu a tím k podpoře centralizace. Těžba nevyžadovala zablokování aktiv jako kolaterálu, což omezovalo schopnost protokolu uvalit sankce na těžaře, kteří útočili na síť.
 
 Přechod na Ethereum založené na důkazu podílem významně zabezpečil a decentralizoval jeho provoz ve srovnání s důkazem prací. Čím více lidí se do sítě zapojí, tím bude decentralizovanější a bezpečnější před útoky.
 
-Použití Důkazu podílem jako mechanismu konsenzu je navíc základním stavebním kamenem [bezpečného, ekologického a škálovatelného Etherea, které máme v současné době](/roadmap/).
-
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Pokud se chcete stát validátorem a pomoci zabezpečit Ethereum, [zjistěte více o uzamčení](/staking/).
+  Pokud máte zájem stát se validátorem a pomáhat zabezpečit Ethereum, [zjistěte více o uzamčení](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-### Nastavení pro tříštění {#setting-up-for-sharding}
+### Příprava na sharding {#setting-up-for-sharding}
 
 Od té doby, co se Řetězová vazba sloučila s původní hlavní sítí Ethereum, začala komunita Ethereum usilovat o škálování sítě.
 
@@ -51,9 +51,9 @@ Důkaz podílem má tu výhodu, že má neustále registr všech schválených p
 
 Tato odpovědnost je v kontrastu s důkazem prací, kde těžaři nemají žádné závazky vůči síti a mohli by zastavit těžbu a vypnout software síťových uzlů okamžitě a bez následků. V důkazu prací také neexistuje žádný registr známých navrhovatelů bloků a žádný spolehlivý způsob, jak bezpečně rozdělit síťové odpovědnosti.
 
-[Více o tříštění](/roadmap/danksharding/)
+[Více o shardingu](/roadmap/danksharding/)
 
-## Vztahy mezi vylepšeními {#relationship-between-upgrades}
+## Vztah mezi vylepšeními {#relationship-between-upgrades}
 
 Všechna vylepšení Etherea jsou vzájemně provázaná. Pojďme si tedy zrekapitulovat, jak Řetězová vazba ovlivňuje další vylepšení.
 
@@ -65,16 +65,15 @@ Všechna vylepšení Etherea jsou vzájemně provázaná. Pojďme si tedy zrekap
   Sloučení
 </ButtonLink>
 
-### Tříštění a Řetězová vazba {#shards-and-beacon-chain}
+### Shardy a Řetězová vazba {#shards-and-beacon-chain}
 
 Tříštění může být bezpečně implementováno do ekosystému Ethereum pouze se zavedeným mechanismem konsenzu důkazu podílem. Řetězová vazba představila uzamčení, když se „sloučila“ s hlavní sítí, čímž se otevřela cesta pro tříštění, které pomůže dále škálovat Ethereum.
 
 <ButtonLink href="/roadmap/danksharding/">
-  Řetězce úlomků
+  Shardové řetězce
 </ButtonLink>
 
 ## Další informace
 
-- [Více o budoucích vylepšeních Etherea](/roadmap/vision)
-- [Více o architektuře síťových uzlů](/developers/docs/nodes-and-clients/node-architecture)
+- [Více o architektuře uzlů](/developers/docs/nodes-and-clients/node-architecture)
 - [Více o důkazu podílem](/developers/docs/consensus-mechanisms/pos)
