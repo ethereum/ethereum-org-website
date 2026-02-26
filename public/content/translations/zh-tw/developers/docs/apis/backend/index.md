@@ -26,7 +26,7 @@ lang: zh-tw
 
 - [alchemy.com](https://www.alchemy.com/)
 - [文件](https://docs.alchemy.com/)
-- [Github](https://github.com/alchemyplatform)
+- [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
 **All That Node -** **_節點即服務。_**
@@ -45,7 +45,7 @@ lang: zh-tw
 
 - [blockpi.io](https://blockpi.io/)
 - [文檔](https://docs.blockpi.io/)
-- [Github](https://github.com/BlockPILabs)
+- [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
 **Cloudflare 以太坊閘道。**
@@ -64,7 +64,7 @@ lang: zh-tw
 
 - [infura.io](https://infura.io)
 - [文件](https://docs.infura.io/api)
-- [Github](https://github.com/INFURA)
+- [GitHub](https://github.com/INFURA)
 
 **Node RPC - _有成本效益的以太坊虛擬機 JSON-RPC 提供者_**
 
@@ -86,12 +86,12 @@ lang: zh-tw
 
 - [rivet.cloud](https://rivet.cloud)
 - [文件](https://rivet.cloud/docs/)
-- [Github](https://github.com/openrelayxyz/ethercattle-deployment)
+- [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
 **Zmok -** **_速度導向的以太坊節點即 JSON-RPC/WebSockets 應用程式介面。_**
 
 - [zmok.io](https://zmok.io/)
-- [Github](https://github.com/zmok-io)
+- [GitHub](https://github.com/zmok-io)
 - [文檔](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
@@ -99,13 +99,13 @@ lang: zh-tw
 
 **ethers-kt -** **_適用基於以太坊虛擬機區塊鏈的非同步、高效能 Kotlin/Java/Android 程式庫。_**
 
-- [Github](https://github.com/Kr1ptal/ethers-kt)
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [範例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
 **Nethereum -** **_區塊鏈的開源 .NET 整合程式庫。_**
 
-- [Github](https://github.com/Nethereum/Nethereum)
+- [GitHub](https://github.com/Nethereum/Nethereum)
 - [文檔](http://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
@@ -124,7 +124,7 @@ lang: zh-tw
 
 **web3j -** **_以太坊的 Java/Android/Kotlin/Scala 整合程式庫。 _**
 
-- [Github](https://github.com/web3j/web3j)
+- [GitHub](https://github.com/web3j/web3j)
 - [文件](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 

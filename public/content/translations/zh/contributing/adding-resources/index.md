@@ -46,7 +46,7 @@ lang: zh
 
 ## 添加你的资源{#add-your-resource}
 
-如果你想要在以太坊官网（ethereum.org）上添加你的资源且资源符合标准，可以在Github上创设一个开源项目。
+如果你想要在以太坊官网（ethereum.org）上添加你的资源且资源符合标准，可以在GitHub上创设一个开源项目。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=resource+📚&template=suggest_resource.yaml">
 创设一个开源项目

@@ -37,7 +37,7 @@ Ethereum befindet sich in der Entwicklung. Daher kommen und gehen Teams und Prod
 - sicherstellen, dass alle aufgelisteten Projekte weiterhin unsere Kriterien erfüllen
 - Überprüfen, ob Produkte vorgeschlagen wurden, die unsere Kriterien besser erfüllen als die derzeit aufgeführten
 
-Ethereum.org wird von der Open-Source-Community gepflegt; wir sind auf die Hilfe der Community angewiesen, um diese Seite auf dem neuesten Stand zu halten. Wenn Sie bemerken, dass Informationen zu den aufgelisteten Projekten aktualisiert werden müssen, öffnen Sie bitte ein Ticket oder einen Pull-Request in unserem Github-Repository.
+Ethereum.org wird von der Open-Source-Community gepflegt; wir sind auf die Hilfe der Community angewiesen, um diese Seite auf dem neuesten Stand zu halten. Wenn Sie bemerken, dass Informationen zu den aufgelisteten Projekten aktualisiert werden müssen, öffnen Sie bitte ein Ticket oder einen Pull-Request in unserem GitHub-Repository.
 
 ## Nutzungsbedingungen {#terms-of-use}
 

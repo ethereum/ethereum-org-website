@@ -116,7 +116,7 @@ lang: zh
 
 - [网站](https://catapulta.sh/)
 - [文档](https://catapulta.sh/docs)
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
 **GoldRush (由 Covalent 提供支持) -** **_GoldRush 为开发者、分析师和企业提供最全面的区块链数据 API 套件。 无论你是在构建 DeFi 看板、钱包、交易机器人、人工智能代理还是合规平台，数据 API 都能让你快速、准确且对开发者友好地访问所需的基本链上数据_**
 

@@ -116,7 +116,7 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 
 - [Sito Web](https://catapulta.sh/)
 - [Documentazione](https://catapulta.sh/docs)
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
 **Covalent -** **_API della blockchain arricchite per oltre 200 catene._**
 

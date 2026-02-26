@@ -116,7 +116,7 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 
 - [Web sitesi](https://catapulta.sh/)
 - [Belgeler](https://catapulta.sh/docs)
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
 **GoldRush (Covalent tarafından desteklenmektedir) -** **_GoldRush, geliştiriciler, analistler ve işletmeler için en kapsamlı blokzincir veri API paketini sunar. İster bir DeFi panosu, bir cüzdan, bir alım satım botu, bir yapay zeka aracısı isterse bir uyumluluk platformu oluşturuyor olun, veri API'leri ihtiyacınız olan temel zincir üstü verilere hızlı, doğru ve geliştirici dostu erişim sağlar_**
 

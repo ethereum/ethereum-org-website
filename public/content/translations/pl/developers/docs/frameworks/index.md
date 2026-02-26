@@ -118,7 +118,7 @@ Zanim zagłębisz się w frameworki, zalecamy najpierw przeczytać nasze wprowad
 
 - [Strona internetowa](https://catapulta.sh/)
 - [Dokumentacja](https://catapulta.sh/docs)
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
 **GoldRush (obsługiwany przez Covalent) -** **_GoldRush oferuje najbardziej kompleksowy pakiet API z danymi blockchain dla deweloperów, analityków i przedsiębiorstw._** **_Niezależnie od tego, czy budujesz pulpit DeFi, portfel, bota handlowego, agenta AI czy platformę zgodności, interfejsy API danych zapewniają szybki, dokładny i przyjazny dla programistów dostęp do niezbędnych danych on-chain, których potrzebujesz._**
 

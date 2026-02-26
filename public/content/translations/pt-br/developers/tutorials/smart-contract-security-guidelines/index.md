@@ -76,7 +76,7 @@ A arquitetura da sua base de código deve facilitar a revisão do seu código. E
 
 - **Escreva testes unitários completos.** Um conjunto extenso de testes é crucial para construir softwares de alta qualidade.
 - **Escreva propriedades e verificações personalizadas com [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) e [Manticore](https://github.com/trailofbits/manticore).** Ferramentas automatizadas ajudarão a garantir que o seu contrato é seguro. Revise o resto deste guia para aprender a escrever propriedades e verificações eficientes.
-- **Use o [crytic.io](https://crytic.io/).** O Critic integra-se ao Github, fornece acesso a detectores privados do Slither e executa verificações de propriedade personalizadas pelo Echidna.
+- **Use o [crytic.io](https://crytic.io/).** O Critic integra-se ao GitHub, fornece acesso a detectores privados do Slither e executa verificações de propriedade personalizadas pelo Echidna.
 
 ### Solidity {#solidity}
 

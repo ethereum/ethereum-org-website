@@ -96,7 +96,7 @@ lang: te
 ##### వనరులు
 
 - [వెబ్‌సైట్](https://ephemery.dev/)
-- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
 - [కమ్యూనిటీ చాట్](https://matrix.to/#/#staker-testnet:matrix.org)
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)

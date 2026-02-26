@@ -116,7 +116,7 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 
 - [Website](https://catapulta.sh/)
 - [Dokumentation](https://catapulta.sh/docs)
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
 **Covalent –** **_erweiterte Blockchain-APIs für über 200 Ketten._**
 

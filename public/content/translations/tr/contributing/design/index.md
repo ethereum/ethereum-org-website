@@ -18,7 +18,7 @@ Bazen ham fikirlerimizi test etme konusunda yardıma ihtiyaç duyuyoruz. Bu, her
 
 1. Tasarım ekibi, [Discord](https://discord.com/invite/ethereum-org) ve [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) üzerinden bir maket tasarımı paylaşacak.
 2. Tasarımların üzerinden yorumlar seçeneğiyle geribildirim vermeye yönlendirileceksiniz.
-3. Sonuç, Github konusunda paylaşılacak ve ekip tarafından kapatılacaktır.
+3. Sonuç, GitHub konusunda paylaşılacak ve ekip tarafından kapatılacaktır.
 
 ### <Emoji text=":two:" size={1} /> &nbsp;Anket araştırmalarına katılın {#answer-surveys}
 

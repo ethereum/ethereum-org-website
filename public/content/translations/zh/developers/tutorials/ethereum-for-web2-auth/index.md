@@ -54,7 +54,7 @@ SAML 是一种中心化协议。 服务提供者 (SP) 仅在与身份提供者 (
 
 第一步是让 SAML SP 和 SAML IdP 能够相互通信。
 
-1. 下载软件。 本文的示例软件[在 Github 上](https://github.com/qbzzt/250420-saml-ethereum)。 不同阶段存储在不同分支中，此阶段您需要 `saml-only`
+1. 下载软件。 本文的示例软件[在 GitHub 上](https://github.com/qbzzt/250420-saml-ethereum)。 不同阶段存储在不同分支中，此阶段您需要 `saml-only`
 
     ```sh
     git clone https://github.com/qbzzt/250420-saml-ethereum -b saml-only
