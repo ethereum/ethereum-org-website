@@ -219,7 +219,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                       <div className="grid size-fit shrink-0 place-items-center overflow-hidden rounded-full">
                         <Image
                           src={banner}
-                          alt=""
+                          alt={`${location} Ethereum community hub banner`}
                           className="size-24 object-cover object-center"
                           sizes="6rem"
                         />

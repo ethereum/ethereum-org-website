@@ -219,7 +219,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={eth} alt="" />
+                        <ImageHeight200
+                          src={eth}
+                          alt="Illustration of the Ethereum ETH token"
+                        />
                       </CardImage>
                       <ButtonLink href="/eth/">
                         {t("what-is-eth-card-title")}
@@ -232,7 +235,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={impact} alt="" />
+                        <ImageHeight200
+                          src={impact}
+                          alt="Illustration of Ethereum's impact on the world"
+                        />
                       </CardImage>
                       <ButtonLink href="/web3/">
                         {t("what-is-web3-card-title")}
@@ -287,7 +293,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={futureTransparent} alt="" />
+                        <ImageHeight200
+                          src={futureTransparent}
+                          alt="Illustration of Ethereum's future vision"
+                        />
                       </CardImage>
                       <ButtonLink href="/wallets/find-wallet/">
                         {t("find-a-wallet-button")}
@@ -300,7 +309,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={Layer2LearnHero} alt="" />
+                        <ImageHeight200
+                          src={Layer2LearnHero}
+                          alt="Layer 2 Ethereum networks illustration"
+                        />
                       </CardImage>
                       <ButtonLink href="/layer-2/networks">
                         {t("ethereum-networks-card-button")}
@@ -327,7 +339,7 @@ export default async function Page({ params }: { params: PageParams }) {
                     <Image
                       className="max-w-[265px]"
                       src={newRings}
-                      alt=""
+                      alt="Ethereum upgrade rings illustration"
                       sizes="265px"
                     />
                   </div>
@@ -370,7 +382,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={financeTransparent} alt="" />
+                        <ImageHeight200
+                          src={financeTransparent}
+                          alt="Illustration representing decentralized finance"
+                        />
                       </CardImage>
                       <ButtonLink href="/defi/">
                         {t("defi-card-button")}
@@ -383,7 +398,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={stablecoins} alt="" />
+                        <ImageHeight200
+                          src={stablecoins}
+                          alt="Stablecoins hero illustration"
+                        />
                       </CardImage>
                       <ButtonLink href="/stablecoins/">
                         {t("stablecoins-card-button")}
@@ -398,7 +416,7 @@ export default async function Page({ params }: { params: PageParams }) {
                       <CardImage>
                         <ImageHeight200
                           src={infrastructureTransparent}
-                          alt=""
+                          alt="Illustration of Ethereum infrastructure and NFTs"
                         />
                       </CardImage>
                       <ButtonLink href="/nft/">
@@ -412,7 +430,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={dao} alt="" />
+                        <ImageHeight200
+                          src={dao}
+                          alt="Illustration of a decentralized autonomous organization"
+                        />
                       </CardImage>
                       <ButtonLink href="/dao/">
                         {t("dao-card-button")}
@@ -425,7 +446,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={developersEthBlocks} alt="" />
+                        <ImageHeight200
+                          src={developersEthBlocks}
+                          alt="Ethereum developer blocks illustration"
+                        />
                       </CardImage>
                       <ButtonLink href="/what-are-apps/">
                         {t("dapp-card-button")}
@@ -489,7 +513,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={rhino} alt="" />
+                        <ImageHeight200
+                          src={rhino}
+                          alt="Ethereum staking upgrade rhino illustration"
+                        />
                       </CardImage>
                       <ButtonLink href="/staking/">
                         {t("staking-ethereum-card-button")}
@@ -502,7 +529,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={ethereumInside} alt="" />
+                        <ImageHeight200
+                          src={ethereumInside}
+                          alt="Ethereum node illustration"
+                        />
                       </CardImage>
                       <ButtonLink href="/run-a-node/">
                         {t("run-a-node-card-title")}
@@ -524,7 +554,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={hackathon} alt="" />
+                        <ImageHeight200
+                          src={hackathon}
+                          alt="Hackathon illustration"
+                        />
                       </CardImage>
                       <ButtonLink href="/energy-consumption/">
                         {t("energy-consumption-card-button")}
@@ -537,7 +570,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={merge} alt="" />
+                        <ImageHeight200
+                          src={merge}
+                          alt="Illustration of the Ethereum Merge upgrade"
+                        />
                       </CardImage>
                       <ButtonLink href="/roadmap/">
                         {t("ethereum-upgrades-card-button")}
@@ -550,7 +586,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={financeTransparent} alt="" />
+                        <ImageHeight200
+                          src={financeTransparent}
+                          alt="Illustration representing Ethereum documentation"
+                        />
                       </CardImage>
                       <ButtonLink href="/whitepaper/">
                         {t("ethereum-whitepaper-card-button")}
@@ -612,7 +651,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={dogeComputer} alt="" />
+                        <ImageHeight200
+                          src={dogeComputer}
+                          alt="Ethereum community doge computer illustration"
+                        />
                       </CardImage>
                       <ButtonLink href="/community/get-involved/">
                         {t("get-involved-card-title")}
@@ -625,7 +667,10 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={impact} alt="" />
+                        <ImageHeight200
+                          src={impact}
+                          alt="Ethereum community impact illustration"
+                        />
                       </CardImage>
                       <ButtonLink href="/community/online/">
                         {t("online-communities-card-button")}

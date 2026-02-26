@@ -24,6 +24,7 @@ type CopyDetails = {
 }
 export type BentoItem = CopyDetails & {
   imgSrc: StaticImageData
+  imgAlt: string
   imgWidth?: number
   className: string
 }
@@ -116,29 +117,34 @@ export const getBentoBoxItems = async (locale: Lang): Promise<BentoItem[]> => {
     {
       ...getCopy("stablecoins", "/stablecoins/"),
       imgSrc: ManAndDogImage,
+      imgAlt: "Man and dog playing in a futuristic Ethereum landscape",
       className: cn(colorOptions["primary"], getPosition(0)),
     },
     {
       ...getCopy("defi", "/defi/"),
       imgSrc: ImpactImage,
+      imgAlt: "Illustration of Ethereum's impact",
       imgWidth: 400,
       className: cn(colorOptions["accent-c"], getPosition(1)),
     },
     {
       ...getCopy("networks", "/layer-2/"),
       imgSrc: MergeImage,
+      imgAlt: "Illustration of the Ethereum Merge upgrade",
       imgWidth: 320,
       className: cn(colorOptions["accent-b"], getPosition(2)),
     },
     {
       ...getCopy("dapps", "/apps/"),
       imgSrc: ManBabyWomanImage,
+      imgAlt: "Illustration of a man, baby, and woman on Ethereum",
       imgWidth: 324,
       className: cn(colorOptions["accent-a"], getPosition(3)),
     },
     {
       ...getCopy("assets", "/nft/"),
       imgSrc: RobotBarImage,
+      imgAlt: "Illustration of a robot providing help",
       imgWidth: 324,
       className: cn(colorOptions["primary"], getPosition(4)),
     },

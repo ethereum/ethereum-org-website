@@ -90,7 +90,7 @@ const StrongGreaterThan = (chunks: React.ReactNode) => (
 )
 
 type CardDetails = Required<Pick<CardProps, "title" | "link" | "image">> &
-  Pick<CardProps, "className">
+  Pick<CardProps, "className" | "alt">
 
 type Node = {
   readonly name: string
@@ -159,58 +159,69 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       title: "Besu",
       link: "https://besu.hyperledger.org/en/stable/",
       image: besu,
+      alt: "Besu logo",
     },
     {
       title: "Erigon",
       link: "https://github.com/ledgerwatch/erigon",
       image: erigon,
+      alt: "Erigon logo",
     },
     {
       title: "Geth",
       link: "https://geth.ethereum.org/",
       image: geth,
+      alt: "Geth logo",
     },
     {
       title: "Lighthouse",
       link: "https://lighthouse-book.sigmaprime.io/",
       image: lighthouseLight,
+      alt: "Lighthouse logo",
       className: "[&_img]:dark:invert",
     },
     {
       title: "Lodestar",
       link: "https://chainsafe.github.io/lodestar/",
       image: lodestar,
+      alt: "Lodestar logo",
     },
     {
       title: "Nimbus",
       link: "https://nimbus.team/",
       image: nimbus,
+      alt: "Nimbus logo",
     },
     {
       title: "Nethermind",
       link: "https://docs.nethermind.io/",
       image: nethermind,
+      alt: "Nethermind logo",
     },
     {
       title: "Prysm",
       link: "https://prylabs.net/",
       image: prysm,
+      alt: "Prysm logo",
     },
     {
       title: "Reth",
       link: "https://reth.rs/",
       image: reth,
+      alt: "Reth logo",
     },
     {
       title: "Teku",
       link: "https://pegasys.tech/teku",
       image: tekuLight,
+      alt: "Teku logo",
       className: "[&_img]:dark:invert",
     },
     {
       title: "Grandine",
       link: "https://grandine.io/",
       image: grandine,
+      alt: "Grandine logo",
     },
   ]
 
@@ -238,12 +249,14 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       title: "Solidity",
       link: "https://soliditylang.org/",
       image: solidityLight,
+      alt: "Solidity logo",
       className: "[&_img]:dark:invert",
     },
     {
       title: "Vyper",
       link: "https://vyperlang.org/",
       image: vyper,
+      alt: "Vyper logo",
     },
   ]
 
@@ -305,39 +318,47 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         </Text>
         <ClientRow>
           <Client>
-            <Image src={besu} alt="" {...iconImageProps()} />
+            <Image src={besu} alt="Besu logo" {...iconImageProps()} />
           </Client>
           <Client>
-            <Image src={erigon} alt="" {...iconImageProps()} />
+            <Image src={erigon} alt="Erigon logo" {...iconImageProps()} />
           </Client>
           <Client>
-            <Image src={geth} alt="" {...iconImageProps()} />
+            <Image src={geth} alt="Geth logo" {...iconImageProps()} />
           </Client>
           <Client>
-            <Image src={nethermind} alt="" {...iconImageProps()} />
+            <Image
+              src={nethermind}
+              alt="Nethermind logo"
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={reth} alt="" {...iconImageProps()} />
+            <Image src={reth} alt="Reth logo" {...iconImageProps()} />
           </Client>
         </ClientRow>
         <ClientRow>
           <Client>
-            <Image src={lighthouseLight} alt="" {...iconImageProps(true)} />
+            <Image
+              src={lighthouseLight}
+              alt="Lighthouse logo"
+              {...iconImageProps(true)}
+            />
           </Client>
           <Client>
-            <Image src={lodestar} alt="" {...iconImageProps()} />
+            <Image src={lodestar} alt="Lodestar logo" {...iconImageProps()} />
           </Client>
           <Client>
-            <Image src={nimbus} alt="" {...iconImageProps()} />
+            <Image src={nimbus} alt="Nimbus logo" {...iconImageProps()} />
           </Client>
           <Client>
-            <Image src={prysm} alt="" {...iconImageProps()} />
+            <Image src={prysm} alt="Prysm logo" {...iconImageProps()} />
           </Client>
           <Client>
-            <Image src={tekuLight} alt="" {...iconImageProps(true)} />
+            <Image src={tekuLight} alt="Teku logo" {...iconImageProps(true)} />
           </Client>
           <Client>
-            <Image src={grandine} alt="" {...iconImageProps()} />
+            <Image src={grandine} alt="Grandine logo" {...iconImageProps()} />
           </Client>
         </ClientRow>
         <div className="mb-12 mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box">
