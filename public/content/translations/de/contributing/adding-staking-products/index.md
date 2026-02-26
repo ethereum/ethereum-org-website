@@ -119,7 +119,7 @@ Für [Staking-as-a-Service-Listings](/staking/saas/) (d. h. delegierter Node-Bet
 
 #### Staking-Pool {#staking-pool}
 
-Für [Staking-Services im Pool](/Staking/pools/):
+Für [Staking-Services im Pool](/staking/pools/):
 
 **Wie hoch ist die Mindest-ETH, die für einen Einsatz erforderlich ist?**
 

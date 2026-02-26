@@ -42,7 +42,7 @@ Une remarque sur les ensembles de contenu : nous utilisons des « ensembles de c
 
 Nous vous encourageons à traduire dans cet ordre numérique (1 → 2 → 3 → ⋯) afin de garantir que les pages ayant le plus fort impact soient traduites en premier.
 
-[En savoir plus sur les compartiments de contenu ethereum.org](/contributing/translation-program/content-buckets/)
+[En savoir plus sur les compartiments de contenu ethereum.org](/contributing/translation-program/)
 
 ### Traduire {#translate}
 

@@ -32,7 +32,7 @@ Lo staking ha un ruolo simile a quello che aveva il [mining](/developers/docs/co
 
 La transizione al proof of stake ha reso Ethereum significativamente più sicura e decentralizzata rispetto al proof of work. Più persone parteciperanno alla rete, più questa diventerà decentralizzata e protetta dagli attacchi.
 
-E l'utilizzo del proof of stake come meccanismo di consenso è un componente fondamentale per [l'Ethereum sicuro, ecosostenibile e scalabile che conosciamo ora](/roadmap/vision/).
+E l'utilizzo del proof of stake come meccanismo di consenso è un componente fondamentale per [l'Ethereum sicuro, ecosostenibile e scalabile che conosciamo ora](/roadmap/).
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>

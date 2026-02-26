@@ -32,7 +32,7 @@ La mise en jeu a un objectif similaire au [minage](/developers/docs/consensus-me
 
 La transition vers la preuve d'enjeu a rendu Ethereum nettement plus sûr et décentralisé par comparaison avec la preuve de travail. Plus le nombre de participants sera élevé sur le réseau, plus celui-ci sera décentralisé et à l'abri des attaques.
 
-De plus, l'utilisation de la preuve d'enjeu comme mécanisme de consensus est un composant fondamental pour un [Ethereum sécurisé, respectueux de l'environnement et évolutif tel que nous le connaissons maintenant](/roadmap/vision/).
+De plus, l'utilisation de la preuve d'enjeu comme mécanisme de consensus est un composant fondamental pour un [Ethereum sécurisé, respectueux de l'environnement et évolutif tel que nous le connaissons maintenant](/roadmap/).
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>

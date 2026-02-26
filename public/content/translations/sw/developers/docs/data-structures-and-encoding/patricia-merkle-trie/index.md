@@ -262,5 +262,5 @@ Maelezo zaidi kuhusu hili yanaweza kupatikana katika nyaraka za [EIP 2718](https
 ## Masomo zaidi {#further-reading}
 
 - [Merkle Patricia Trie Iliyobadilishwa — Jinsi Ethereum inavyohifadhi hali](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Kufanya Merkle katika Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [Kufanya Merkle katika Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [Kuelewa trie ya Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

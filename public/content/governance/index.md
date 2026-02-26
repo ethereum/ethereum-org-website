@@ -168,7 +168,7 @@ When the Beacon Chain merged with the Ethereum execution layer on September 15th
 - [Join the Ethereum R&D discord](https://discord.gg/mncqtgVSVw)
 - [Run a node](/developers/docs/nodes-and-clients/run-a-node/)
 - [Contribute to client development](/developers/docs/nodes-and-clients/#execution-clients)
-- [Core Developer Apprenticeship Program](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Core Developer Apprenticeship Program](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Further reading {#further-reading}
 

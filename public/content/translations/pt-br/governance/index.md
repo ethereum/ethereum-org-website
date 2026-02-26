@@ -168,7 +168,7 @@ Quando ocorreu a fusão da Beacon Chain com a camada de execução do Ethereum e
 - [Unir-se ao Discord da Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Executar um nó](/developers/docs/nodes-and-clients/run-a-node/)
 - [Contribuir para o desenvolvimento do cliente](/developers/docs/nodes-and-clients/#execution-clients)
-- [Programa de aprendizagem de desenvolvimento principal](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Programa de aprendizagem de desenvolvimento principal](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Leitura adicional {#further-reading}
 

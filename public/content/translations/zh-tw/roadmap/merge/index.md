@@ -105,7 +105,7 @@ id="developers">
   <li><em>安全標頭</em>和<em>定案區塊</em>的概念</li>
 </ul>
 
-更多資訊請閱讀 Tim Beiko 的部落格文章：<a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">合併如何影響以太坊的應用程式層</a>。
+更多資訊請閱讀 Tim Beiko 的部落格文章：<a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">合併如何影響以太坊的應用程式層</a>。
 </ExpandableCard>
 
 ## 合併與能源消耗 {#merge-and-energy}
@@ -188,7 +188,7 @@ contentPreview="錯誤。 基於安全考量，驗證者退出設有速率限制
 
 這些術語更新只是改變了命名慣例；這並沒有改變以太坊的目標或開發藍圖。
 
-[深入了解「Eth2」的更名](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[深入了解「Eth2」的更名](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## 升級之間的關係 {#relationship-between-upgrades}
 

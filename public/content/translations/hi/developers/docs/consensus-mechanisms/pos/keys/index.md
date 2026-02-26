@@ -92,5 +92,5 @@ master_key / purpose / coin_type / account / change / address_index
 
 ## अतिरिक्त पाठ्यसामग्री {#further-reading}
 
-- [कार्ल बीखुइज़न की Ethereum फाउंडेशन ब्लॉग पोस्ट](https://blog.ethereum.org/2020/05/21/keys/)
+- [कार्ल बीखुइज़न की Ethereum फाउंडेशन ब्लॉग पोस्ट](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 BLS12-381 कुंजी जनरेट करना](https://eips.ethereum.org/EIPS/eip-2333)

@@ -161,7 +161,7 @@ Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriente
 
 Go Ethereum (Geth for short) is one of the original implementations of the Ethereum protocol. Currently, it is the most widespread client with the biggest user base and variety of tooling for users and developers. It is written in Go, fully open source and licensed under the GNU LGPL v3.
 
-Learn more about Geth in its [documentation](https://geth.ethereum.org/docs/).
+Learn more about Geth in its [documentation](https://geth.ethereum.org/docs).
 
 ### Nethermind {#nethermind}
 

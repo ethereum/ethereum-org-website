@@ -101,7 +101,7 @@ Ethereum व्यवहारांवर ब्लॉक्समध्ये 
 ## अधिक वाचन {#further-reading}
 
 - [बहुमताचा हल्ला](https://en.bitcoin.it/wiki/Majority_attack)
-- [सेटलमेंटच्या अंतिमातेवर](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [सेटलमेंटच्या अंतिमातेवर](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### व्हिडिओ {#videos}
 

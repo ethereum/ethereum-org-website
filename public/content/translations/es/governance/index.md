@@ -168,7 +168,7 @@ Cuando la Beacon Chain se fusionó con la capa de ejecución de Ethereum el 15 d
 - [Unirse al Discord de I+D de Ethereum](https://discord.gg/mncqtgVSVw)
 - [Ejecutar un nodo](/developers/docs/nodes-and-clients/run-a-node/)
 - [Contribuir al desarrollo de clientes](/developers/docs/nodes-and-clients/#execution-clients)
-- [Programa de Aprendizaje para Desarrolladores Principales](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Programa de Aprendizaje para Desarrolladores Principales](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Lecturas adicionales {#further-reading}
 

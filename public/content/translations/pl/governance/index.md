@@ -168,7 +168,7 @@ Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 w
 - [Dołącz do Discorda R&D Ethereum](https://discord.gg/mncqtgVSVw)
 - [Dodaj serwer](/developers/docs/nodes-and-clients/run-a-node/)
 - [Przyczyń się do rozwoju klientów](/developers/docs/nodes-and-clients/#execution-clients)
-- [Program stażowy dla głównych deweloperów](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Program stażowy dla głównych deweloperów](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Dalsza lektura {#further-reading}
 

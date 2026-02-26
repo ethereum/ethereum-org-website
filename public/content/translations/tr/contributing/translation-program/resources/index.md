@@ -34,10 +34,10 @@ Tercüme toplulukları ve güncellemelerinin yanı sıra, ethereum.org tercüman
 
 Çeviri Programındaki en son gelişmelerden haberdar olmak için [Ethereum Foundation blogunu](https://blog.ethereum.org/) takip edebilirsiniz:
 
-- [Ekim 2021 kilometre taşı güncellemesi](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Aralık 2020 kilometre taşı güncellemesi](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Temmuz 2020 kilometre taşı güncellemesi](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Ağustos 2019 Çeviri Programı başlangıcı](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Ekim 2021 kilometre taşı güncellemesi](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Aralık 2020 kilometre taşı güncellemesi](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Temmuz 2020 kilometre taşı güncellemesi](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Ağustos 2019 Çeviri Programı başlangıcı](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Çevirmenler için çalışma saatleri {#office-hours}
 

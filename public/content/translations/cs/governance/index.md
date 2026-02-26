@@ -168,7 +168,7 @@ Když se 15. září 2022 sloučil Beacon Chain s exekuční vrstvou Etherea, by
 - [Připojte se na Discord Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Provozujte uzel](/developers/docs/nodes-and-clients/run-a-node/)
 - [Přispějte k vývoji klientů](/developers/docs/nodes-and-clients/#execution-clients)
-- [Program pro učně kmenových vývojářů](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Program pro učně kmenových vývojářů](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Další čtení {#further-reading}
 

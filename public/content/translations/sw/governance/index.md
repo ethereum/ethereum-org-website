@@ -168,7 +168,7 @@ Wakati Mnyororo Kioleza ulipounganishwa na safu ya utekelezaji ya Ethereum mnamo
 - [Jiunge na Discord ya Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Endesha nodi](/developers/docs/nodes-and-clients/run-a-node/)
 - [Changia katika uendelezaji wa mteja](/developers/docs/nodes-and-clients/#execution-clients)
-- [Programu ya Uanagenzi ya Msanidi wa Msingi](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Programu ya Uanagenzi ya Msanidi wa Msingi](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Masomo zaidi {#further-reading}
 

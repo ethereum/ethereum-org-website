@@ -259,5 +259,5 @@ Mais informações sobre isso podem ser encontradas na documentação do [EIP 27
 ## Leitura Adicional {#further-reading}
 
 - [Árvore Merkle Patricia modificada: como o Ethereum salva um estado](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Fazendo Merkle no Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [Fazendo Merkle no Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [Entendendo a árvore Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

@@ -110,7 +110,7 @@ Durch Abstraktion vereinfachen diese Programmbibliotheken die komplexe direkte I
 
 **Python Tooling –** **_eine Auswahl von Programmbibliotheken für Ethereum-Interaktion über Python_**
 
-- [py.ethereum.org](https://python.ethereum.org/)
+- [py.ethereum.org](https://snakecharmers.ethereum.org)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 

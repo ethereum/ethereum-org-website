@@ -168,7 +168,7 @@ Am 15. September 2022 wurde die Fusion der Beacon Chain mit der Ethereum-Ausfüh
 - [Dem Ethereum R&D Discord beitreten](https://discord.gg/mncqtgVSVw)
 - [Einen Knoten ausführen](/developers/docs/nodes-and-clients/run-a-node/)
 - [Zur Client-Entwicklung beitragen](/developers/docs/nodes-and-clients/#execution-clients)
-- [Core-Entwickler-Ausbildungsprogramm](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Core-Entwickler-Ausbildungsprogramm](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Weiterführende Informationen {#further-reading}
 

@@ -168,7 +168,7 @@ DAO 해킹에 대해 자세히 보기:
 - [이더리움 R&D 디스코드에 참여하세요](https://discord.gg/mncqtgVSVw)
 - [노드를 운영하세요](/developers/docs/nodes-and-clients/run-a-node/)
 - [클라이언트 개발에 기여하세요](/developers/docs/nodes-and-clients/#execution-clients)
-- [코어 개발자 견습 프로그램](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [코어 개발자 견습 프로그램](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## 더 읽을거리 {#further-reading}
 

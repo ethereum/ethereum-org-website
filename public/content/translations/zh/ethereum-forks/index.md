@@ -254,7 +254,7 @@ Bellatrix 升级是为[信标链](/roadmap/beacon-chain)计划的第二次升级
 
 灰色冰川网络升级将[难度炸弹](/glossary/#difficulty-bomb)推迟了三个月。 这是此次升级中引入的唯一变更，在性质上类似于[箭形冰川](#arrow-glacier)和[缪尔冰川](#muir-glacier)升级。 在[拜占庭](#byzantium)、[君士坦丁堡](#constantinople)和[伦敦](#london)网络升级中也进行了类似的更改。
 
-- [EF 博客 - 灰色冰川升级公告](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+- [EF 博客 - 灰色冰川升级公告](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement)
 
 <ExpandableCard title="灰色冰川 EIP" contentPreview="本次升级包含的官方改进。">
 
@@ -275,7 +275,7 @@ Bellatrix 升级是为[信标链](/roadmap/beacon-chain)计划的第二次升级
 
 箭形冰川网络升级将[难度炸弹](/glossary/#difficulty-bomb)推迟了几个月。 这是此次升级中引入的唯一变更，在性质上类似于[缪尔冰川](#muir-glacier)升级。 在[拜占庭](#byzantium)、[君士坦丁堡](#constantinople)和[伦敦](#london)网络升级中也进行了类似的更改。
 
-- [EF 博客 - 箭形冰川升级公告](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [EF 博客 - 箭形冰川升级公告](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement)
 - [以太坊追猫人 - 以太坊箭形冰川升级](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
 <ExpandableCard title="箭头冰川 EIP" contentPreview="本次升级包含的官方改进。">
@@ -328,7 +328,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 此视频解释了 EIP-1559 及其带来的好处：[EIP-1559 解读](https://www.youtube.com/watch?v=MGemhK9t44Q)
 
 - [你是去中心化应用程序开发者吗？ 请务必升级您的库和工具。](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
-- [阅读以太坊基金会公告](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [阅读以太坊基金会公告](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [阅读以太坊追猫人的解释](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="伦敦 EIP" contentPreview="本次升级包含的官方改进。">
@@ -352,7 +352,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 
 柏林升级优化了某些以太坊虚拟机操作的燃料成本，并增加了对多种交易类型的支持。
 
-- [阅读以太坊基金会公告](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [阅读以太坊基金会公告](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement)
 - [阅读以太坊追猫人的解释](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="柏林 EIP" contentPreview="本次升级包含的官方改进。">
@@ -377,7 +377,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 
 [信标链](/roadmap/beacon-chain/)需要 16384 笔 32 ETH 的质押存款才能安全上线。 这发生在 11 月 27 日，信标链于 2020 年 12 月 1 日开始生成区块。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21)
 
 <DocLink href="/roadmap/beacon-chain/">
   信标链
@@ -393,7 +393,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 
 质押存款合约将[质押](/glossary/#staking)引入以太坊生态系统。 虽然是[主网](/glossary/#mainnet)合约，但它直接影响了[信标链](/roadmap/beacon-chain/)（一项重要的[以太坊升级](/roadmap/)）的发布时间线。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19)
 
 <DocLink href="/staking/">
   质押
@@ -409,7 +409,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 
 缪尔冰川分叉延迟了[难度炸弹](/glossary/#difficulty-bomb)。 [工作量证明](/developers/docs/consensus-mechanisms/pow/)共识机制中区块难度的增加，会延长发送交易和使用去中心化应用程序的等待时间，从而威胁到以太坊的可用性。
 
-- [阅读以太坊基金会公告](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [阅读以太坊基金会公告](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement)
 - [阅读以太坊追猫人的解释](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="缪尔冰川 EIP" contentPreview="本次分叉包含的官方改进。">
@@ -437,7 +437,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 - 使以太坊和 Zcash 能够互用。
 - 让合约能够引入更多创造性功能。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement)
 
 <ExpandableCard title="伊斯坦布尔 EIP" contentPreview="本次分叉包含的官方改进。">
 
@@ -466,7 +466,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 - 优化了 [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) 中某些操作的[燃料](/glossary/#gas)成本。
 - 添加了与尚未创建的地址进行交互的能力。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement)
 
 <ExpandableCard title="君士坦丁堡 EIP" contentPreview="本次分叉包含的官方改进。">
 
@@ -495,7 +495,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 - 增加了调用其他合约而不更改状态的能力。
 - 添加了某些加密方法以支持[二层网络扩容](/developers/docs/scaling/#layer-2-scaling)。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement)
 
 <ExpandableCard title="拜占庭 EIP" contentPreview="本次分叉包含的官方改进。">
 
@@ -528,7 +528,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 - 启用区块链状态的“区块链减重”。
 - 增加重放攻击保护。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)
 
 <ExpandableCard title="伪龙 EIP" contentPreview="本次分叉包含的官方改进。">
 
@@ -552,7 +552,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 
 - 解决与作价低估的操作代码有关的紧急网络健康问题。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork)
 
 <ExpandableCard title="橘子哨声 EIP" contentPreview="本次分叉包含的官方改进。">
 
@@ -576,7 +576,7 @@ DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/lear
 
 一些矿工拒绝分叉，因为那次 DAO 事件并不是协议中的缺陷。 他们后来成立了 [Ethereum Classic](https://ethereumclassic.org/)。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2016/07/20/hard-fork-completed)
 
 ---
 
@@ -588,7 +588,7 @@ DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/lear
 
 家园分叉展望未来， 包括若干协议修改和联网变更，使以太坊能够进一步进行网络升级。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2016/02/29/homestead-release)
 
 <ExpandableCard title="家园 EIP" contentPreview="本次分叉包含的官方改进。">
 
@@ -611,8 +611,8 @@ DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/lear
 
 前沿解冻分叉取消了每个[区块](/glossary/#block) 5,000 的[燃料](/glossary/#gas)限制，并将默认燃料价格设为 51 [gwei](/glossary/#gwei)。 这样便能进行交易 - 交易需要 21,000 单位燃料。 引入[难度炸弹](/glossary/#difficulty-bomb)是为了确保未来硬分叉到[权益证明](/glossary/#pos)。
 
-- [阅读以太坊基金会公告](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
-- [阅读以太坊协议更新 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+- [阅读以太坊基金会公告](https://blog.ethereum.org/2015/08/04/the-thawing-frontier)
+- [阅读以太坊协议更新 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1)
 
 ---
 
@@ -624,7 +624,7 @@ DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/lear
 
 边境是以太坊最初的版本，但在上面能做的事情很少。 该版本在奥利匹克测试阶段成功完成之后推出。 它面向的是技术用户，特别是开发者。 [区块](/glossary/#block)的[燃料](/glossary/#gas)限制为 5,000。 此“解冻”期使矿工能够开始操作，并使早期采用者能够有足够的时间来安装客户端。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare)
 
 <Divider />
 
@@ -636,7 +636,7 @@ DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/lear
 
 以太币的预售期为 42 天， 可以使用比特币进行购买。
 
-[阅读以太坊基金会公告](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[阅读以太坊基金会公告](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale)
 
 ---
 
