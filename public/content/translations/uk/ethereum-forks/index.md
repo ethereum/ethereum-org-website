@@ -247,7 +247,7 @@ Capella відбулася одночасно з оновленням рівня
 
 Оновлення Bellatrix було другим запланованим оновленням для [Beacon Chain](/roadmap/beacon-chain), яке готувало ланцюжок до [The Merge](/roadmap/merge/). Він повертає штрафи валідатора до повного значення за бездіяльність і порушення, які можна скоротити. Bellatrix також включає оновлення правил вибору виделки щоб підготувати ланцюжок до The Merge і переходу від останнього блоку proof-of-work до першого блоку proof-of-stake. Це включає інформування клієнтів консенсусу про [граничну загальну складність](/glossary/#terminal-total-difficulty) у 58750000000000000000000.
 
-- [Ознайомтеся зі специфікацією оновлення Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Ознайомтеся зі специфікацією оновлення Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -300,7 +300,7 @@ Capella відбулася одночасно з оновленням рівня
 
 Оновлення Altair було першим запланованим оновленням [Beacon Chain](/roadmap/beacon-chain). Було додано підтримку "комітетів синхронізації" — дозволяє використовувати легкі клієнти, а також збільшено штрафи за бездіяльність валідаторів і скорочення штрафних санкцій у міру наближення до The Merge.
 
-- [Ознайомтеся зі специфікацією оновлення Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Ознайомтеся зі специфікацією оновлення Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Цікавий факт! {#altair-fun-fact}
 

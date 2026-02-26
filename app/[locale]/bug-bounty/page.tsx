@@ -217,7 +217,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const specs: Spec[] = [
     {
       title: t("page-upgrades-bug-bounty-title-1"),
-      link: "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md",
+      link: "https://github.com/ethereum/consensus-specs/tree/master/specs/phase0/beacon-chain.md",
     },
     {
       title: t("page-upgrades-bug-bounty-title-2"),

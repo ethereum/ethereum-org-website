@@ -243,7 +243,7 @@ La mise à jour de Paris a été déclenchée par le passage de la blockchain de
 
 La mise à jour de Bellatrix était la seconde mise à jour planifiée pour la [Chaîne Phare](/roadmap/beacon-chain), préparant la chaîne à [La Fusion](/roadmap/merge/). Elle porte les pénalités de validateur à leurs valeurs maximales en cas d'inactivité ou d'infractions sanctionnables. Bellatrix inclut également une mise à jour des règles de choix de fourche pour préparer la chaîne à La Fusion et à la transition du dernier bloc de preuve de travail vers le premier bloc de preuve d'enjeu. Cela inclut la sensibilisation des clients de consensus à la [difficulté totale du terminal](/glossary/#terminal-total-difficulty) de 5875000000000000000.
 
-- [Lire les spécifications de la mise à niveau Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Lire les spécifications de la mise à niveau Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -298,7 +298,7 @@ La mise à niveau Arrow Glacier a retardé le déclenchement de la [bombe de dif
 
 La mise à niveau Altair était la première mise à niveau répertoriée pour la [chaîne phare](/roadmap/beacon-chain). La prise en charge des « comités de synchronisation » a été ajoutée, autorisant d'une part les clients légers et augmentant d'autre part les pénalités d'inactivité et de délestage des validateurs à mesure que le système évoluait vers la fusion.
 
-- [Lire les spécifications de la mise à niveau Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Lire les spécifications de la mise à niveau Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <emoji text=":tada:" size={1} classname="me-2" />Anecdote ! {#altair-fun-fact}
 

@@ -93,7 +93,7 @@ Peningkatan Paris dipicu oleh rantai blok bukti kerja mencapai [total tingkat ke
 
 Peningkatan Bellatrix adalah peningkatan terjadwal kedua untuk [Rantai Suar](/roadmap/beacon-chain), mempersiapkan jaringan untuk [Penggabungan](/roadmap/merge/). Peningkatan ini membawa denda validator ke nilai penuh untuk ketidakaktifan dan pelanggaran yang dapat dipotong. Bellatrix juga mencakup pembaruan pada aturan pemilihan garpu untuk mempersiapkan jaringan untuk Penggabungan dan transisi dari blok bukti kerja terakhir ke blok bukti taruhan pertama. Hal ini mencakup membuat klien konsensus menyadari [total kesulitan terminal](/glossary/#terminal-total-difficulty) sebesar 58750000000000000000000.
 
-- [Baca spesifikasi peningkatan Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Baca spesifikasi peningkatan Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -148,7 +148,7 @@ Peningkatan jaringan Arrow Glacier menjeda [bom kesulitan](/glossary/#difficulty
 
 Peningkatan Altair adalah peningkatan pertama yang terjadwal untuk [Rantai Suar](/roadmap/beacon-chain). Ini memberi tambahan dukungan untuk "komite sinkronisasi" — memungkinkan klien ringan, dan meningkatkan ketidakaktifan validator dan memotong hukuman saat pengembangan berkembang menuju Penggabungan.
 
-- [Baca spesifikasi peningkatan Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Baca spesifikasi peningkatan Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Fakta menyenangkan! {#altair-fun-fact}
 

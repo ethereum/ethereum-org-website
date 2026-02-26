@@ -191,7 +191,7 @@ L'aggiornamento Paris è stato attivato dal passaggio da una blockchain proof-of
 
 L'aggiornamento Bellatrix è stato il secondo aggiornamento programmato per la [Beacon Chain](/roadmap/beacon-chain), preparando la catena per [la Fusione](/roadmap/merge/). Porta le penalità dei validatori al valore pieno per inattività e azioni sanzionabili (slashing). Bellatrix include anche un aggiornamento alle regole di scelta della diramazione per preparare la catena per la Fusione e la transizione dall'ultimo blocco di proof-of-work al primo blocco proof-of-stake. A tale scopo occorre far sì che i client di consenso siano consapevoli della [difficoltà terminale totale](/glossary/#terminal-total-difficulty) di 58750000000000000000000.
 
-- [Leggi le specifiche dell'aggiornamento Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Leggi le specifiche dell'aggiornamento Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -246,7 +246,7 @@ L'aggiornamento di rete Arrow Glacier ha rimandato la [bomba di difficoltà](/gl
 
 L'aggiornamento Altair è stato il primo aggiornamento pianificato per la [Beacon Chain](/roadmap/beacon-chain). Ha aggiunto il supporto per le "commissioni di sincronizzazione", abilitando i "client leggeri", aumentando le penalità per inattività e slashing per i validatori man mano che lo sviluppo procedeva verso la Fusione.
 
-- [Leggi le specifiche dell'aggiornamento di Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Leggi le specifiche dell'aggiornamento di Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <emoji text=":tada:" size={1} classname="me-2" />Curiosità! {#altair-fun-fact}
 

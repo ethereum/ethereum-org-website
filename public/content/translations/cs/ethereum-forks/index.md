@@ -242,7 +242,7 @@ Upgrade Paris byl spuštěn, když blockchain proof-of-work překročil [koncovo
 
 Upgrade Bellatrix byl druhý plánovaný upgrade pro [Beacon Chain](/roadmap/beacon-chain), který připravil řetězec na [sloučení (The Merge)](/roadmap/merge/). Zvyšuje postihy pro validátory na jejich plnou hodnotu za nečinnost a postižitelné přestupky. Bellatrix také obsahuje aktualizaci pravidel pro výběr větve, která připraví řetězec na sloučení (The Merge) a přechod z posledního bloku proof-of-work na první blok proof-of-stake. To zahrnuje informování konsensuálních klientů o [koncové celkové obtížnosti (terminal total difficulty)](/glossary/#terminal-total-difficulty) 58750000000000000000000.
 
-- [Přečtěte si specifikace upgradu Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Přečtěte si specifikace upgradu Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -295,7 +295,7 @@ Síťový upgrade Arrow Glacier odsunul [bombu obtížnosti](/glossary/#difficul
 
 Upgrade Altair byl první plánovaný upgrade pro [Beacon Chain](/roadmap/beacon-chain). Přidal podporu pro „synchronizační výbory“ – umožňující lehké klienty a zvýšil postihy za nečinnost a slashing validátorů, jak se vývoj posouval směrem ke sloučení (The Merge).
 
-- [Přečtěte si specifikace upgradu Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Přečtěte si specifikace upgradu Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Zajímavost! {#altair-fun-fact}
 

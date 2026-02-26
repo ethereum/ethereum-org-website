@@ -249,7 +249,7 @@ The Paris upgrade was triggered by the proof-of-work blockchain passing a [termi
 
 The Bellatrix upgrade was the second scheduled upgrade for the [Beacon Chain](/roadmap/beacon-chain), preparing the chain for [The Merge](/roadmap/merge/). It brings validator penalties to their full values for inactivity and slashable offenses. Bellatrix also includes an update to the fork choice rules to prepare the chain for The Merge and the transition from the last proof-of-work block to the first proof-of-stake block. This includes making consensus clients aware of the [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000.
 
-- [Read the Bellatrix upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Read the Bellatrix upgrade specification](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -304,7 +304,7 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 
 The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/roadmap/beacon-chain). It added support for "sync committees"—enabling light clients, and increased validator inactivity and slashing penalties as development progressed towards The Merge.
 
-- [Read the Altair upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Read the Altair upgrade specification](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Fun fact! {#altair-fun-fact}
 

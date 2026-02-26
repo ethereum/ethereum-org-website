@@ -242,7 +242,7 @@ Paris yükseltmesi, iş ispatı blokzincirinin 58750000000000000000000 [son topl
 
 Bellatrix yükseltmesi, zinciri [Birleşim](/roadmap/merge/)'e hazırlayan [İşaret Zinciri](/roadmap/beacon-chain) için ikinci planlanmış yükseltmeydi. Eylemsizlik ve kesinti yapılabilir saldırıların tam değerlerine yönelik doğrulayıcı cezaları getiriyor. Bellatrix ayrıca, çatallanma seçim kurallarına yönelik, zinciri Birleşim'e ve son iş ispatı bloğundan ilk hisse ispatı bloğuna geçişe hazırlamayı amaçlayan bir yükseltme içeriyor. Bu, mutabakat istemcilerinin 58750000000000000000000 [son toplam zorluk](/glossary/#terminal-total-difficulty) değerinden haberdar edilmesini içerir.
 
-- [Bellatrix yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Bellatrix yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -295,7 +295,7 @@ Arrow Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) bi
 
 Altair yükseltmesi, [İşaret Zinciri](/roadmap/beacon-chain) için ilk planlanmış yükseltmeydi. ''Senkronizasyon komiteleri'' için destek ekleyerek Birleşim'e doğru ilerlerken hafif istemcileri, daha yüksek doğrulayıcı durgunluğunu ve kesme cezalarını mümkün kıldı.
 
-- [Altair yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Altair yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Eğlenceli gerçek! {#altair-fun-fact}
 

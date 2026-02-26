@@ -92,7 +92,7 @@ Das Paris-Upgrade wurde durch das Erreichen einer [endgültigen Gesamtschwierigk
 
 Das Bellatrix-Upgrade war das zweite geplante Upgrade für die [Beacon Chain](/roadmap/beacon-chain), das die Blockchain auf die [die Zusammenführung](/roadmap/merge/) vorbereitete. Es setzt Validator-Strafen für Inaktivität und strafbare Vergehen auf alle ihre Werte. Bellatrix beinhaltet auch eine Aktualisierung der Fork-Choice-Regeln, um die Blockchain auf die Zusammenführung und den Übergang vom letzten Proof-of-Work-Block zum ersten Proof-of-Stake-Block vorzubereiten. Dies beinhaltet auch, dass die Konsensclients über die [Terminale Gesamtschwierigkeit](/glossary/#terminal-total-difficulty) von 58750000000000000000000 informiert werden.
 
-- [Lesen Sie die Spezifikation des Bellatrix-Upgrades](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Lesen Sie die Spezifikation des Bellatrix-Upgrades](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -147,7 +147,7 @@ Das Arrow Glacier Netzwerk-Upgrade hat die [Schwierigkeitsbombe](/glossary/#diff
 
 Das Altair-Upgrade war das erste geplante Upgrade für die [Beacon Chain](/roadmap/beacon-chain). Es wurde die Unterstützung für „Sync-Komitees“ hinzugefügt, die leichte Clients aktivierte und die Strafen für Inaktivität und Slashing von Validatoren erhöht, da die Entwicklung der Zusammenführung voranschritt.
 
-- [Lesen Sie die Spezifikation zum Altair-Upgrade](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Lesen Sie die Spezifikation zum Altair-Upgrade](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <emoji text=":tada:" size={1} className="me-2" />Fun Fact! {#altair-fun-fact}
 
