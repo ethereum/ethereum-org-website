@@ -164,7 +164,7 @@ MEV榨取暴增於2021年初期, 而其導長時間之高額Gas費. 快閃機器
 
 儘管提交者-構建者分離有望減少最大可提取價值的影響，但實現它需要對共識協議進行更改。 具體來說，信標鏈上的 [分叉選擇](/developers/docs/consensus-mechanisms/pos/#fork-choice) 規則需要更新。 [建構者 API](https://github.com/ethereum/builder-specs) 是一個臨時解決方案，旨在提供一個可行的提議者-建構者分離實作，儘管它帶有更高的信任假設。
 
-建構者 API 是 [引擎 API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 的修改版本，共識層用戶端用它來向執行層用戶端請求執行負載。 如 [誠實驗證者規範](https://github.com/ethereum/consensus-specs/blob/dev/specs/bellatrix/validator.md) 所述，被選中負責提議區塊的驗證者會向一個已連接的執行用戶端請求交易捆綁包，並將其包含在提議的信標鏈區塊中。
+建構者 API 是 [引擎 API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 的修改版本，共識層用戶端用它來向執行層用戶端請求執行負載。 如 [誠實驗證者規範](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/validator.md) 所述，被選中負責提議區塊的驗證者會向一個已連接的執行用戶端請求交易捆綁包，並將其包含在提議的信標鏈區塊中。
 
 建置者應用程式介面還充當驗證者和執行層用戶端之間的中介軟體；不同之處是它允許信標鏈上的驗證者從外部實體獲取區塊（而不是使用執行用戶端在本地構建區塊）。
 
