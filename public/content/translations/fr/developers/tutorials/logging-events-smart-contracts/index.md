@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "contrats intelligents",
-    "remix",
-    "solidité",
+    "Remix",
+    "Solidity",
     "événements"
   ]
 skill: intermediate

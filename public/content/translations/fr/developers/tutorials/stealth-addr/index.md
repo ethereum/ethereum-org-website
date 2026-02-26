@@ -7,7 +7,7 @@ tags:
     "Adresse furtive",
     "confidentialité",
     "cryptographie",
-    "rust",
+    "Rust",
     "wasm"
   ]
 skill: intermediate
@@ -46,7 +46,7 @@ Bill crée une troisième clé privée, _R<sub>priv</sub>_, et publie _R<sub>pub
 
 Bill calcule _R<sub>priv</sub>V<sub>pub</sub> = GR<sub>priv</sub>V<sub>priv</sub>_, ce qu'il s'attend à ce qu'Alice sache aussi (expliqué ci-dessous). Cette valeur est appelée _S_, le secret partagé. Ceci donne à Bill une clé publique, _P<sub>pub</sub> = K<sub>pub</sub>+G\*hachage(S)_. À partir de cette clé publique, il peut calculer une adresse et y envoyer toutes les ressources qu'il souhaite. À l'avenir, si Alice gagne, Bill peut lui communiquer _R<sub>priv</sub>_ pour prouver que les ressources proviennent de lui.
 
-Alice calcule _R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub>_. Ceci lui donne le même secret partagé, _S_. Comme elle connaît la clé privée, _K<sub>priv</sub>_, elle peut calculer _P<sub>priv</sub> = K<sub>priv</sub>+hachage(S)_. Cette clé lui permet d'accéder aux actifs dans l'adresse qui résulte de _P<sub>pub</sub> = GP<sub>priv</sub> = GK<sub>priv</sub>+G\*hachage(S) = K<sub>pub</sub>+G\*hachage(S)_.
+Alice calcule _R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub>_. Ceci lui donne le même secret partagé, _S_. Comme elle connaît la clé privée, _K<sub>priv</sub>_, elle peut calculer _P<sub>priv</sub> = K<sub>priv</sub>+hachage(S)_. Cette clé lui permet d'accéder aux actifs dans l'adresse qui résulte de _P<sub>pub</sub> = GP<sub>priv</sub> = GK<sub>priv</sub>+G*hachage(S) = K<sub>pub</sub>+G*hachage(S)_.
 
 Nous avons une clé de visualisation distincte pour permettre à Alice de sous-traiter aux services de campagne de domination mondiale de Dave. Alice est prête à faire connaître à Dave les adresses publiques et à l'informer lorsque plus d'argent est disponible, mais elle ne veut pas qu'il dépense l'argent de sa campagne.
 

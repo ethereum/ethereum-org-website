@@ -6,7 +6,7 @@ tags:
   [
     "contrats intelligents",
     "erc-721",
-    "solidité",
+    "Solidity",
     "jetons"
   ]
 skill: intermediate

@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "contrats intelligents",
-    "solidité",
-    "remix",
+    "Solidity",
+    "Remix",
     "déploiement",
     "composabilité"
   ]

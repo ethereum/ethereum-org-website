@@ -4,11 +4,11 @@ description: "Ceci est un guide pour débutants pour se lancer dans le développ
 author: "Elan Halpern"
 tags:
   [
-    "javascript",
+    "JavaScript",
     "ethers.js",
     "nœuds",
     "requêtes",
-    "alchemy"
+    "Alchemy"
   ]
 skill: beginner
 lang: fr

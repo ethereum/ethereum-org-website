@@ -3,7 +3,7 @@ title: "Découvrir le contrat Vyper ERC-721"
 description: Le contrat ERC-721 de Ryuya Nakamura et son fonctionnement
 author: Ori Pomerantz
 lang: fr
-tags: [ "vyper", "erc-721", "python" ]
+tags: [ "Vyper", "erc-721", "Python" ]
 skill: beginner
 published: 2021-04-01
 ---

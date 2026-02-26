@@ -3,7 +3,7 @@ title: Comment configurer Tellor comme oracle
 description: "Un guide pour débuter l'intégration de l'oracle Tellor dans votre protocole"
 author: "Tellor"
 lang: fr
-tags: [ "solidité", "contrats intelligents", "oracles" ]
+tags: [ "Solidity", "contrats intelligents", "oracles" ]
 skill: beginner
 published: 2021-06-29
 source: Tellor Docs

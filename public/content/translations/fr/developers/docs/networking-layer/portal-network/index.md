@@ -55,7 +55,7 @@ Les avantages de cette conception de réseau sont :
 - réduire la dépendance vis-à-vis des fournisseurs centralisés
 - réduire l'utilisation de la bande passante Internet
 - synchronisation minimale ou nulle
-- Accessible aux appareils à ressources limitées (\<1 Go de RAM, \<100 Mo d'espace disque, 1 processeur)
+- Accessible aux appareils à ressources limitées (\&lt;1 Go de RAM, \&lt;100 Mo d'espace disque, 1 processeur)
 
 Le tableau ci-dessous présente les fonctions des clients existants qui peuvent être fournies par le Portal Network, permettant aux utilisateurs d'accéder à ces fonctions sur des appareils à très faibles ressources.
 

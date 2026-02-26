@@ -6,7 +6,7 @@ tags:
   [
     "ERC-721",
     "Alchemy",
-    "solidity",
+    "Solidity",
     "contrats intelligents"
   ]
 skill: beginner

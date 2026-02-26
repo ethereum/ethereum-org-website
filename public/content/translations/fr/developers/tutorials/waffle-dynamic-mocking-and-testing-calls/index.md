@@ -4,9 +4,9 @@ description: "Tutoriel Waffle avancé pour utiliser le bouchonnage dynamique et 
 author: "Daniel Izdebski"
 tags:
   [
-    "waffle",
+    "Waffle",
     "contrats intelligents",
-    "solidité",
+    "Solidity",
     "test",
     "simulation"
   ]

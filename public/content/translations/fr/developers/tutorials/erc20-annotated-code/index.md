@@ -3,7 +3,7 @@ title: "Présentation du contrat ERC-20"
 description: Qu'est-ce que le contrat OpenZeppelin ERC-20 et pourquoi existe-t-il ?
 author: Ori Pomerantz
 lang: fr
-tags: [ "solidité", "erc-20" ]
+tags: [ "Solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---

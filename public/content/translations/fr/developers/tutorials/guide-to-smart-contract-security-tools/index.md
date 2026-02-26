@@ -3,7 +3,7 @@ title: "Un guide des outils de sécurité pour les contrats intelligents"
 description: "Un aperçu de trois différentes techniques de test et d'analyse de programme"
 author: "Trailofbits"
 lang: fr
-tags: [ "solidité", "contrats intelligents", "sécurité" ]
+tags: [ "Solidity", "contrats intelligents", "sécurité" ]
 skill: intermediate
 published: 2020-09-07
 source: Building secure contracts

@@ -5,10 +5,10 @@ author: Ori Pomerantz
 tags:
   [
     "escroquerie",
-    "solidité",
+    "Solidity",
     "erc-20",
-    "javascript",
-    "typescript"
+    "JavaScript",
+    "TypeScript"
   ]
 skill: intermediate
 published: 2023-09-15

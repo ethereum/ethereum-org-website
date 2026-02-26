@@ -4,9 +4,9 @@ description: "Tutoriel d'introduction à l'écriture et au déploiement d'un con
 author: "elanh"
 tags:
   [
-    "solidité",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "contrats intelligents",
     "déploiement"
   ]

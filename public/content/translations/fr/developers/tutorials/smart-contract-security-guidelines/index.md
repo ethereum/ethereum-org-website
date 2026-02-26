@@ -2,7 +2,7 @@
 title: "Directives de sécurité pour les contrats intelligents"
 description: "Une liste de contrôle des consignes de sécurité à prendre en compte lors de la création de votre DApp"
 author: "Trailofbits"
-tags: [ "solidité", "contrats intelligents", "sécurité" ]
+tags: [ "Solidity", "contrats intelligents", "sécurité" ]
 skill: intermediate
 lang: fr
 published: 2020-09-06

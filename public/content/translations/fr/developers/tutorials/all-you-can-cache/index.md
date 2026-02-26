@@ -534,7 +534,7 @@ Cette fonction est similaire à `testReadParam`, sauf qu'au lieu d'écrire les p
     }   // testEncodeVal
 ```
 
-Le seul test supplémentaire dans `testEncodeVal()` consiste à vérifier que la longueur de `_callInput` est correcte. Pour le premier appel, elle est de 4+33\*4. Pour le second, où chaque valeur est déjà dans le cache, elle est de 4+1\*4.
+Le seul test supplémentaire dans `testEncodeVal()` consiste à vérifier que la longueur de `_callInput` est correcte. Pour le premier appel, elle est de 4+33*4. Pour le second, où chaque valeur est déjà dans le cache, elle est de 4+1*4.
 
 ```solidity
     // Tester encodeVal lorsque la clé fait plus d'un seul octet

@@ -3,7 +3,7 @@ title: "Réduire la taille des contrats pour ne pas dépasser la limite"
 description: "Que pouvez-vous faire pour éviter que vos contrats intelligents ne deviennent trop volumineux ?"
 author: Markus Waas
 lang: fr
-tags: [ "solidité", "contrats intelligents", "stockage" ]
+tags: [ "Solidity", "contrats intelligents", "stockage" ]
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com

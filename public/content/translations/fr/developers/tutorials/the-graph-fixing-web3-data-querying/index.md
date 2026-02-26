@@ -5,7 +5,7 @@ author: Markus Waas
 lang: fr
 tags:
   [
-    "solidité",
+    "Solidity",
     "contrats intelligents",
     "requêtes",
     "the graph",

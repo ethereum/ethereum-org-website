@@ -2,7 +2,7 @@
 title: "Liste de contrôle de sécurité des contrats intelligents"
 description: "Un flux de travail suggéré pour la rédaction de contrats intelligents sécurisés"
 author: "Trailofbits"
-tags: [ "contrats intelligents", "sécurité", "solidité" ]
+tags: [ "contrats intelligents", "sécurité", "Solidity" ]
 skill: intermediate
 lang: fr
 published: 2020-09-07

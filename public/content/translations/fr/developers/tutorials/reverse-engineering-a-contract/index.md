@@ -51,8 +51,8 @@ Les contrats sont toujours exécutés à partir du premier octet. Ceci est la pa
 |        4 | MSTORE       | Vide                                         |
 |        5 | PUSH1 0x04   | 0x04                                         |
 |        7 | CALLDATASIZE | CALLDATASIZE 0x04                            |
-|        8 | LT           | CALLDATASIZE<4      |
-|        9 | PUSH2 0x005e | 0x5E CALLDATASIZE<4 |
+|        8 | LT           | CALLDATASIZE&lt;4      |
+|        9 | PUSH2 0x005e | 0x5E CALLDATASIZE&lt;4 |
 |        C | JUMPI        | Vide                                         |
 
 Ce code fait deux choses :
@@ -117,8 +117,8 @@ Le `NOT` est un opérateur au niveau du bit, donc il inverse la valeur de chaque
 | -------: | ------------ | ---------------------------------------------------------------------------------------------------- |
 |      1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                                  |
 |      1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                                  |
-|      1AE | ISZERO       | Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
-|      1AF | PUSH2 0x01df | 0x01DF Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|      1AE | ISZERO       | Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
+|      1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |      1B2 | JUMPI        |                                                                                                      |
 
 On saute si `Value*` est plus petit ou égal à 2^256-CALLVALUE-1. Cela ressemble à une logique pour éviter les dépassements. Et en effet, nous voyons qu'après quelques opérations absurdes (par exemple, écrire dans la mémoire qui est sur le point d'être effacée), au décalage 0x01DE, le contrat est annulé si le dépassement est détecté, ce qui est un comportement normal.
@@ -429,7 +429,7 @@ Le code aux décalages 0x138-0x143 est identique à ce que nous avons vu en 0x10
 |      194 | DUP3         | 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                                  |
 |      195 | DUP5         | CALLDATASIZE 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                     |
 |      196 | SUB          | CALLDATASIZE-4 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                        |
-|      197 | SLT          | CALLDATASIZE-4<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+|      197 | SLT          | CALLDATASIZE-4&lt;32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 |      198 | ISZERO       | CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA                         |
 |      199 | PUSH2 0x01a0 | 0x01A0 CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA                  |
 |      19C | JUMPI        | 0x00 0x04 CALLDATASIZE 0x0153 0xDA                                            |
@@ -590,7 +590,7 @@ def unknown8ffb5c97(uint256 _param1, uint256 _param2) payable:
 require calldata.size - 4 >=′ 64
 if _param1 and _param2 > -1 / _param1:
 revert with 0, 17
-return (_param1 \* _param2 / 100 \* 10^6) Le premier `require` teste si les données d'appel contiennent, en plus des quatre octets de la signature de fonction, au moins 64 octets, ce qui est suffisant pour les deux paramètres.
+return (_param1 * _param2 / 100 * 10^6) Le premier `require` teste si les données d'appel contiennent, en plus des quatre octets de la signature de fonction, au moins 64 octets, ce qui est suffisant pour les deux paramètres.
 
 Sinon, il y a manifestement un problème. L'instruction `if` semble vérifier que `_param1` n'est pas nul et que `_param1 * _param2` n'est pas négatif.
 
@@ -631,7 +631,7 @@ idx = 0
 s = 0
 while idx < _param4.length:
 ...
-if s + sha3(mem[(32 \* _param4.length) + 328 len mem[(32 \* _param4.length) + 296]]) > mem[(32 \* idx) + 296]:
+if s + sha3(mem[(32 * _param4.length) + 328 len mem[(32 * _param4.length) + 296]]) > mem[(32 \* idx) + 296]:
 mem[mem[64] + 32] = mem[(32 \* idx) + 296]
 ...
 s = sha3(mem[_62 + 32 len mem[_62]])
@@ -647,7 +647,7 @@ Cela signifie que `_param4` est une preuve de Merkle.
 ```
 
 call addr(_param2) with:
-value unknown81e580d3[_param1] \* _param3 / 100 \* 10^6 wei
+value unknown81e580d3[_param1] * _param3 / 100 * 10^6 wei
 gas 30000 wei C'est ainsi qu'un contrat transfère ses propres ETH à une autre adresse (contrat ou compte externe). Il l'appelle avec une valeur qui est le montant à transférer.
 
 ```python
@@ -658,7 +658,7 @@ if not return_data.size:
 if not ext_call.success:
 require ext_code.size(stor2)
 call stor2.deposit() with:
-value unknown81e580d3[_param1] \* _param3 / 100 \* 10^6 wei Les deux dernières lignes nous disent que Stockage[2] est aussi un contrat que nous appelons.
+value unknown81e580d3[_param1] * _param3 / 100 * 10^6 wei Les deux dernières lignes nous disent que Stockage[2] est aussi un contrat que nous appelons.
 
 Si nous [examinons la transaction du constructeur](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange), nous voyons que ce contrat est [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), un contrat Wrapped Ether [dont le code source a été téléversé sur Etherscan](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code). Il semble donc que les contrats tentent d'envoyer des ETH à `_param2`. S'il peut le faire, tant mieux. Sinon, il tente d'envoyer du [WETH](https://weth.tkn.eth.limo/). Si `_param2` est un compte externe (EOA), il peut toujours recevoir des ETH, mais les contrats peuvent refuser de recevoir des ETH.
 
@@ -667,7 +667,7 @@ Cependant, le WETH est un ERC-20 et les contrats ne peuvent pas refuser de l'acc
 ```
 
 ...
-log 0xdbd5389f: addr(_param2), unknown81e580d3[_param1] \* _param3 / 100 \* 10^6, bool(ext_call.success) À la fin de la fonction, nous voyons qu'une entrée de journal est générée. [Examinez les entrées de journal générées](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#events) et filtrez sur le sujet qui commence par `0xdbd5...`.
+log 0xdbd5389f: addr(_param2), unknown81e580d3[_param1] * _param3 / 100 * 10^6, bool(ext_call.success) À la fin de la fonction, nous voyons qu'une entrée de journal est générée. [Examinez les entrées de journal générées](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#events) et filtrez sur le sujet qui commence par `0xdbd5...`.
 
 Si nous [cliquons sur l'une des transactions qui ont généré une telle entrée](https://etherscan.io/tx/0xe7d3b7e00f645af17dfbbd010478ef4af235896c65b6548def1fe95b3b7d2274), nous voyons qu'il s'agit bien d'une réclamation : le compte a envoyé un message au contrat sur lequel nous faisons de l'ingénierie inverse et a reçu de l'ETH en retour.
 
@@ -687,11 +687,11 @@ while idx < _param3.length:
 if idx >= mem[96]:
 revert with 0, 50
 _55 = mem[(32 \* idx) + 128]
-if s + sha3(mem[(32 \* _param3.length) + 160 len mem[(32 \* _param3.length) + 128]]) > mem[(32 \* idx) + 128]:
+if s + sha3(mem[(32 * _param3.length) + 160 len mem[(32 * _param3.length) + 128]]) > mem[(32 \* idx) + 128]:
 ...
 s = sha3(mem[_58 + 32 len mem[_58]])
 continue
-mem[mem[64] + 32] = s + sha3(mem[(32 \* _param3.length) + 160 len mem[(32 \* _param3.length) + 128]])
+mem[mem[64] + 32] = s + sha3(mem[(32 * _param3.length) + 160 len mem[(32 * _param3.length) + 128]])
 ...
 if unknown2eb4a7ab != s:
 revert with 0, 'Invalid proof'
@@ -729,12 +729,12 @@ revert with 0, 50
 mem[0] = 4
 if unknown81e580d3[idx] and _param2 > -1 / unknown81e580d3[idx]:
 revert with 0, 17
-if s > !(unknown81e580d3[idx] \* _param2 / 100 \* 10^6):
+if s > !(unknown81e580d3[idx] * _param2 / 100 * 10^6):
 revert with 0, 17
 if idx == -1:
 revert with 0, 17
 idx = idx + 1
-s = s + (unknown81e580d3[idx] \* _param2 / 100 \* 10^6)
+s = s + (unknown81e580d3[idx] * _param2 / 100 * 10^6)
 continue
 
 ## Conclusion {#conclusion}

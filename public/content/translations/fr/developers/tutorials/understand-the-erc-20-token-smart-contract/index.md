@@ -6,7 +6,7 @@ tags:
   [
     "contrats intelligents",
     "jetons",
-    "solidité",
+    "Solidity",
     "erc-20"
   ]
 skill: beginner

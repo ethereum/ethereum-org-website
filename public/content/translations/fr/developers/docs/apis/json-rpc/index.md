@@ -151,7 +151,7 @@ Aucun
 
 `Chaîne` - La version actuelle du client
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -180,7 +180,7 @@ params: ["0x68656c6c6f20776f726c64"]
 
 `DONNÉES` - Le résultat SHA3 de la chaîne donnée.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Requête
@@ -211,7 +211,7 @@ La liste complète des ID de réseau actuels est disponible sur [chainlist.org](
 - `11155111` : Réseau de test Sepolia
 - `560048` : Réseau de test Hoodi
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Requête
@@ -236,7 +236,7 @@ Aucun
 
 `Booléen` - `true` lors de l'écoute, sinon `false`.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Requête
@@ -261,7 +261,7 @@ Aucun
 
 `QUANTITÉ` - nombre entier de pairs connectés.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Requête
@@ -286,7 +286,7 @@ Aucun
 
 `Chaîne` - La version actuelle du protocole Ethereum
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Requête
@@ -364,7 +364,7 @@ Alors que Besu renvoie :
 
 Reportez-vous à la documentation de votre client spécifique pour plus de détails.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -405,7 +405,7 @@ Aucun
 
 `DONNÉES`, 20 octets - l'adresse coinbase actuelle.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -434,7 +434,7 @@ Aucun
 
 `chainId`, valeur hexadécimale sous forme de chaîne représentant l'entier de l'ID de la chaîne actuelle.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -463,7 +463,7 @@ Aucun
 
 `Booléen` - renvoie `true` si le client mine, sinon `false`.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -492,7 +492,7 @@ Aucun
 
 `QUANTITÉ` - nombre de hachages par seconde.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -521,7 +521,7 @@ Aucun
 
 `QUANTITÉ` - entier du prix actuel du gaz en wei.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -550,7 +550,7 @@ Aucun
 
 `Tableau de DONNÉES`, 20 Octets - adresses appartenant au client.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -579,7 +579,7 @@ Aucun
 
 `QUANTITÉ` - entier du numéro de bloc actuel sur lequel se trouve le client.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -613,7 +613,7 @@ params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 
 `QUANTITÉ` - entier du solde actuel en wei.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -722,7 +722,7 @@ params: [
 
 `QUANTITÉ` - entier du nombre de transactions envoyées depuis cette adresse.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -755,7 +755,7 @@ params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 
 `QUANTITÉ` - entier du nombre de transactions dans ce bloc.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -790,7 +790,7 @@ params: [
 
 `QUANTITÉ` - entier du nombre de transactions dans ce bloc.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -823,7 +823,7 @@ params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 
 `QUANTITÉ` - entier du nombre d'oncles dans ce bloc.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -858,7 +858,7 @@ params: [
 
 `QUANTITÉ` - entier du nombre d'oncles dans ce bloc.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -895,7 +895,7 @@ params: [
 
 `DONNÉES` - le code de l'adresse donnée.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -925,7 +925,7 @@ Remarque : l'adresse avec laquelle signer doit être déverrouillée.
 
 `DONNÉES` : Signature
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -959,7 +959,7 @@ Signe une transaction qui pourra être soumise ultérieurement au réseau en uti
 
 `DONNÉES`, l'objet de transaction encodé en RLP signé par le compte spécifié.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1008,7 +1008,7 @@ params: [
 
 Utilisez [eth_getTransactionReceipt](#eth_gettransactionreceipt) pour obtenir l'adresse du contrat, une fois que la transaction a été proposée dans un bloc, lorsque vous avez créé un contrat.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1041,7 +1041,7 @@ params: [
 
 Utilisez [eth_getTransactionReceipt](#eth_gettransactionreceipt) pour obtenir l'adresse du contrat, une fois que la transaction a été proposée dans un bloc, lorsque vous avez créé un contrat.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1079,7 +1079,7 @@ Exécute un nouvel appel de message immédiatement sans créer de transaction su
 
 `DONNÉES` - la valeur de retour du contrat exécuté.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1108,7 +1108,7 @@ Voir les paramètres de [eth_call](#eth_call), sauf que toutes les propriétés 
 
 `QUANTITÉ` - la quantité de gaz utilisée.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1165,7 +1165,7 @@ params: [
 - `transactions` : `Tableau` - Tableau d'objets de transaction, ou hachages de transaction de 32 octets en fonction du dernier paramètre donné.
 - `uncles` : `Tableau` - Tableau de hachages d'oncles.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Requête
@@ -1224,7 +1224,7 @@ params: [
 **Retours**
 Voir [eth_getBlockByHash](#eth_getblockbyhash)
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1268,7 +1268,7 @@ params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 - `r` : `QUANTITÉ` - signature ECDSA r
 - `s` : `QUANTITÉ` - signature ECDSA s
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1319,7 +1319,7 @@ params: [
 **Retours**
 Voir [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1351,7 +1351,7 @@ params: [
 **Retours**
 Voir [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Requête
@@ -1396,7 +1396,7 @@ Il renvoie également _soit_ :
 - `root` : `DONNÉES` 32 octets de la racine de l'état post-transaction (avant Byzance)
 - `status` : `QUANTITÉ` soit `1` (succès), soit `0` (échec)
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1451,7 +1451,7 @@ params: [
 **Retours**
 Voir [eth_getBlockByHash](#eth_getblockbyhash)
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1487,7 +1487,7 @@ Voir [eth_getBlockByHash](#eth_getblockbyhash)
 
 **Remarque** : un oncle ne contient pas de transactions individuelles.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1539,7 +1539,7 @@ params: [
 **Retours**
 `QUANTITÉ` - Un ID de filtre.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1563,7 +1563,7 @@ Aucun
 **Retours**
 `QUANTITÉ` - Un ID de filtre.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1587,7 +1587,7 @@ Aucun
 **Retours**
 `QUANTITÉ` - Un ID de filtre.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1618,7 +1618,7 @@ params: [
 **Retours**
 `Booléen` - `true` si le filtre a été désinstallé avec succès, sinon `false`.
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1663,7 +1663,7 @@ params: [
   - `data` : `DONNÉES` - données de journal non indexées de longueur variable. (En _Solidity_ : zéro ou plusieurs arguments de journal non indexés de 32 octets.)
   - `topics` : `Tableau de DONNÉES` - Tableau de 0 à 4 `DONNÉES` de 32 octets d'arguments de journal indexés. (En _Solidity_ : le premier sujet est le _hachage_ de la signature de l'événement (par ex., `Deposit(address,bytes32,uint256)`), sauf si vous avez déclaré l'événement avec le spécificateur `anonymous`.)
 
-- \*\*Exemple \*\*
+- **Exemple **
 
 ```js
 // Requête
@@ -1704,7 +1704,7 @@ params: [
 **Retours**
 Voir [eth_getFilterChanges](#eth_getfilterchanges)
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request
@@ -1740,7 +1740,7 @@ params: [
 **Retours**
 Voir [eth_getFilterChanges](#eth_getfilterchanges)
 
-\*\*Exemple \*\*
+**Exemple **
 
 ```js
 // Request

@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: fr
 tags:
   [
-    "solidité",
+    "Solidity",
     "contrats intelligents",
     "sécurité",
     "jetons"
