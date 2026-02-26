@@ -29,7 +29,7 @@ Obecně se bezpečnost informací skládá ze tří atributů:
 
 - _Integrita_, informace jsou správné, nemohou je měnit neoprávněné subjekty ani neoprávněnými způsoby (například přenos [tokenů ERC-20](https://eips.ethereum.org/EIPS/eip-20#events) bez události `Transfer`). Na blockchainu každý uzel ověřuje každou změnu stavu, což zajišťuje integritu.
 
-- _Dostupnost_, informace jsou dostupné jakémukoli oprávněnému subjektu. Na blockchainu se toho obvykle dosahuje tak, že jsou informace dostupné na každém [plném uzlu](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
+- _Dostupnost_, informace jsou dostupné jakémukoli oprávněnému subjektu. Na blockchainu se toho obvykle dosahuje tak, že jsou informace dostupné na každém [plném uzlu](https://ethereum.org/developers/docs/nodes-and-clients/#full-node).
 
 Všechna zde uvedená řešení mají vynikající integritu, protože haše jsou zveřejňovány na L1. Mají však různé záruky dostupnosti.
 

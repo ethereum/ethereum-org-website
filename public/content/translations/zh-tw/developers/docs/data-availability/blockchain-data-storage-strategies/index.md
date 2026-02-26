@@ -29,7 +29,7 @@ lang: zh-tw
 
 - _完整性_，資訊正確，無法被未授權的單位或未授權的方法改變，例如，轉帳 [ERC-20 tokens](https://eips.ethereum.org/EIPS/eip-20#events) 不發`Transfer` event。 在區塊鏈上，為了確保完整性，每個節點都會驗證每個狀態的改變。
 
-- _可用性_，任何被授權的單位皆可取得資訊， 在鏈上，通常為了達到在所有 [full node](https://ethereum.org/developers/docs/nodes-and-clients#full-node)上可以獲得資訊可以獲得資訊，
+- _可用性_，任何被授權的單位皆可取得資訊， 在鏈上，通常為了達到在所有 [full node](https://ethereum.org/developers/docs/nodes-and-clients/#full-node)上可以獲得資訊可以獲得資訊，
 
 不同的解決方案都有優秀的完整性，因為hashes 都會上到L1上。 而且，他們有各自的可用性保證。
 

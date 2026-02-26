@@ -114,7 +114,7 @@ Ephemery ni aina ya kipekee ya testnet ambayo huwekwa upya kikamilifu kila mwezi
 Testnet ya Holesky imepitwa na wakati kuanzia Septemba 2025. Waendeshaji wa usimamishaji na watoa huduma za miundombinu wanapaswa kutumia Hoodi kwa majaribio ya wathibitishaji badala yake.
 
 - [Tangazo la Kuzimwa kwa Testnet ya Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _Blogu ya EF, 1-Septemba-2025_
-- [Masasisho ya Testnet za Holesky na Hoodi](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) - _Blogu ya EF, 18-Machi-2025_
+- [Masasisho ya Testnet za Holesky na Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _Blogu ya EF, 18-Machi-2025_
 
 ### Testnet za safu ya 2 {#layer-2-testnets}
 

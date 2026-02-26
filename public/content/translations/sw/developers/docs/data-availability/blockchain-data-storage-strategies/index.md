@@ -29,7 +29,7 @@ Kwa ujumla, usalama wa taarifa una sifa tatu:
 
 - _Uadilifu_, taarifa ni sahihi, haiwezi kubadilishwa na huluki ambazo hazijaidhinishwa, au kwa njia zisizoidhinishwa (kwa mfano, kuhamisha [tokeni za ERC-20](https://eips.ethereum.org/EIPS/eip-20#events) bila tukio la `Transfer`). Kwenye mnyororo wa bloku, kila nodi huthibitisha kila mabadiliko ya hali, ambayo inahakikisha uadilifu.
 
-- _Upatikanaji_, taarifa inapatikana kwa huluki yoyote iliyoidhinishwa. Kwenye mnyororo wa bloku, hii kwa kawaida hufikiwa kwa kuwa na taarifa inayopatikana kwenye kila [nodi kamili](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
+- _Upatikanaji_, taarifa inapatikana kwa huluki yoyote iliyoidhinishwa. Kwenye mnyororo wa bloku, hii kwa kawaida hufikiwa kwa kuwa na taarifa inayopatikana kwenye kila [nodi kamili](https://ethereum.org/developers/docs/nodes-and-clients/#full-node).
 
 Suluhisho tofauti hapa zote zina uadilifu bora, kwa sababu hashi zinachapishwa kwenye L1. Hata hivyo, zina dhamana tofauti za upatikanaji.
 

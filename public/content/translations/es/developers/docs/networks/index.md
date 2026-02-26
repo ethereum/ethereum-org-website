@@ -114,7 +114,7 @@ Ephemery es un tipo único de red de prueba que se reinicia por completo cada me
 La testnet Holesky está obsoleta desde septiembre de 2025. Los operadores de participación y los proveedores de infraestructura deberían usar Hoodi en su lugar para pruebas del validador.
 
 - [Anuncio de cierre de la testnet Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _Blog de EF, 1 de septiembre de 2025_
-- [Actualizaciones de las testnets Holesky y Hoodi](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) - _Blog de EF, 18 de marzo de 2025_
+- [Actualizaciones de las testnets Holesky y Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _Blog de EF, 18 de marzo de 2025_
 
 ### Redes de prueba de capa 2 {#layer-2-testnets}
 
