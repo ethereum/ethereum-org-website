@@ -241,7 +241,7 @@ Bu kod kalitesi sorunları, bu kodun bir dolandırıcılık olduğunu _kanıtlam
 
 #### `mount` fonksiyonu {#the-mount-function}
 
-[Standartta](https://eips.ethereum.org/EIPS/eip-20) belirtilmemiş olsa da, genel olarak yeni jetonlar oluşturan fonksiyon [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) olarak adlandırılır.
+[Standartta](https://eips.ethereum.org/EIPS/eip-20) belirtilmemiş olsa da, genel olarak yeni jetonlar oluşturan fonksiyon [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) olarak adlandırılır.
 
 `wARB` yapıcısına bakarsak, mint (basma) fonksiyonunun bir nedenle `mount` olarak yeniden adlandırıldığını ve verimlilik için tüm miktar için bir kez yerine, ilk arzın beşte biri ile beş kez çağrıldığını görüyoruz.
 

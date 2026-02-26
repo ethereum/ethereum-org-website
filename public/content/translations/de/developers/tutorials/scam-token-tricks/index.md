@@ -234,7 +234,7 @@ Diese Probleme mit der Codequalität _beweisen_ nicht, dass dieser Code ein Betr
 
 #### Die `mount`-Funktion {#the-mount-function}
 
-Obwohl es nicht im [Standard](https://eips.ethereum.org/EIPS/eip-20) spezifiziert ist, wird die Funktion, die neue Tokens erstellt, allgemein [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) genannt.
+Obwohl es nicht im [Standard](https://eips.ethereum.org/EIPS/eip-20) spezifiziert ist, wird die Funktion, die neue Tokens erstellt, allgemein [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) genannt.
 
 Wenn wir uns den `wARB`-Konstruktor ansehen, sehen wir, dass die Mint-Funktion aus irgendeinem Grund in `mount` umbenannt wurde und fünfmal mit einem Fünftel der anfänglichen Versorgung aufgerufen wird, anstatt einmal für den gesamten Betrag aus Effizienzgründen.
 

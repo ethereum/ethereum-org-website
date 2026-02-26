@@ -92,5 +92,5 @@ Chaque branche est séparée par un `/`, donc `m/2` signifie commencer avec la c
 
 ## En savoir plus {#further-reading}
 
-- [Article de blog de l'Ethereum Foundation par Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
+- [Article de blog de l'Ethereum Foundation par Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 BLS12-381 génération de clé](https://eips.ethereum.org/EIPS/eip-2333)

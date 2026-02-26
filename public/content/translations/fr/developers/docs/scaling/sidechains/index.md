@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 Une chaîne latérale est une blockchain séparée qui fonctionne indépendamment d'Ethereum et qui est connectée au réseau principal d'Ethereum par un pont bidirectionnel. Les chaînes latérales peuvent avoir des paramètres de bloc distincts et [des algorithmes de consensus](/developers/docs/consensus-mechanisms/), qui sont souvent conçus pour un traitement efficace des transactions. L'utilisation d'une chaîne latérale implique toutefois des compromis, car elle n'hérite pas des propriétés de sécurité d'Ethereum. Contrairement aux [solutions de mise à l'échelle de couche 2](/layer-2/), les chaînes latérales ne renvoient pas les changements d'état et les données de transaction au réseau principal Ethereum.
 
-Les chaînes latérales compromettent également une partie de la décentralisation ou de la sécurité pour atteindre un débit élevé ([trilemme de l'évolutivité](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Ethereum s'engage toutefois à évoluer sans compromettre la décentralisation et la sécurité, comme indiqué dans sa [déclaration de vision](/roadmap/vision/) pour les mises à niveau.
+Les chaînes latérales compromettent également une partie de la décentralisation ou de la sécurité pour atteindre un débit élevé ([trilemme de l'évolutivité](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Ethereum s'engage toutefois à évoluer sans compromettre la décentralisation et la sécurité, comme indiqué dans sa [déclaration de vision](/roadmap/) pour les mises à niveau.
 
 ## Comment fonctionnent les chaînes latérales ? {#how-do-sidechains-work}
 

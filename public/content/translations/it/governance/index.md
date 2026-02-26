@@ -168,7 +168,7 @@ Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 sett
 - [Unisciti al Discord R&D di Ethereum](https://discord.gg/mncqtgVSVw)
 - [Esegui un nodo](/developers/docs/nodes-and-clients/run-a-node/)
 - [Contribuisci allo sviluppo del client](/developers/docs/nodes-and-clients/#execution-clients)
-- [Programma di apprendistato per sviluppatori core](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Programma di apprendistato per sviluppatori core](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Lettura consigliate {#further-reading}
 

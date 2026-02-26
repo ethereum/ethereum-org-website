@@ -168,7 +168,7 @@ Tanım ve geliştirme uygulamaları her zaman tamamen açık kaynak olsa da, yuk
 - [Ethereum Ar-Ge discord'una katılın](https://discord.gg/mncqtgVSVw)
 - [Bir düğüm çalıştırın](/developers/docs/nodes-and-clients/run-a-node/)
 - [İstemci geliştirmeye katkıda bulunun](/developers/docs/nodes-and-clients/#execution-clients)
-- [Çekirdek Geliştirici Çıraklık Programı](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Çekirdek Geliştirici Çıraklık Programı](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Daha fazla kaynak {#further-reading}
 

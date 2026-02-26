@@ -254,7 +254,7 @@ La actualización Bellatrix fue la segunda actualización programada para la [Be
 
 La actualización de red Gray Glacier pospuso la [bomba de dificultad](/glossary/#difficulty-bomb) por tres meses. Este es el único cambio introducido en esta actualización, y es de naturaleza similar a las actualizaciones [Arrow Glacier](#arrow-glacier) y [Muir Glacier](#muir-glacier). Cambios similares se realizaron en las actualizaciones de red [Bizancio](#byzantium), [Constantinopla](#constantinople) y [Londres](#london).
 
-- [EF Blog - Anuncio de actualización Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+- [EF Blog - Anuncio de actualización Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement)
 
 <ExpandableCard title="EIP de Gray Glacier" contentPreview="Mejoras oficiales incluidas en esta actualización.">
 
@@ -275,7 +275,7 @@ La actualización de red Gray Glacier pospuso la [bomba de dificultad](/glossary
 
 La actualización de red Arrow Glacier pospuso la [bomba de dificultad](/glossary/#difficulty-bomb) por varios meses. Este es el único cambio introducido en esta actualización, y es de naturaleza similar a la actualización [Muir Glacier](#muir-glacier). Cambios similares se realizaron en las actualizaciones de red [Bizancio](#byzantium), [Constantinopla](#constantinople) y [Londres](#london).
 
-- [EF Blog - Anuncio de actualización Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [EF Blog - Anuncio de actualización Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement)
 - [Ethereum Cat Herders - Actualización Arrow Glacier de Ethereum](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
 <ExpandableCard title="EIP de Arrow Glacier" contentPreview="Mejoras oficiales incluidas en esta actualización.">
@@ -328,7 +328,7 @@ La implementación de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) en la 
 Este video explica EIP-1559 y los beneficios que trae: [EIP-1559 Explicado](https://www.youtube.com/watch?v=MGemhK9t44Q)
 
 - [¿Es usted desarrollador de dapps? Asegúrese de actualizar sus librerías y herramientas.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
-- [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [Lea la explicación de Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="EIP de Londres" contentPreview="Mejoras oficiales incluidas en esta actualización.">
@@ -352,7 +352,7 @@ Este video explica EIP-1559 y los beneficios que trae: [EIP-1559 Explicado](http
 
 La actualización Berlin optimizó el coste del gas para ciertas acciones de EVM, y aumentó la compatibilidad con múltiples tipos de transacciones.
 
-- [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement)
 - [Lea la explicación de Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="EIP de Berlín" contentPreview="Mejoras oficiales incluidas en esta actualización.">
@@ -377,7 +377,7 @@ La actualización Berlin optimizó el coste del gas para ciertas acciones de EVM
 
 La [Beacon Chain](/roadmap/beacon-chain/) necesitó 16,384 depósitos de 32 ETH en staking para lanzarse de forma segura. Esto sucedió el 27 de noviembre, y la Cadena de Baliza comenzó a producir bloques el 1 de diciembre de 2020.
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21)
 
 <DocLink href="/roadmap/beacon-chain/">
   La Beacon Chain
@@ -393,7 +393,7 @@ La [Beacon Chain](/roadmap/beacon-chain/) necesitó 16,384 depósitos de 32 ETH 
 
 El contrato de depósito para staking introdujo el [staking](/glossary/#staking) en el ecosistema Ethereum. Aunque fue un contrato de [Mainnet](/glossary/#mainnet), tuvo un impacto directo en el cronograma para lanzar la [Beacon Chain](/roadmap/beacon-chain/), una importante [actualización de Ethereum](/roadmap/).
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19)
 
 <DocLink href="/staking/">
   Staking
@@ -409,7 +409,7 @@ El contrato de depósito para staking introdujo el [staking](/glossary/#staking)
 
 El fork Muir Glacier introdujo un retraso en la [bomba de dificultad](/glossary/#difficulty-bomb). El aumento de dificultad por bloque del mecanismo de consenso [proof-of-work](/developers/docs/consensus-mechanisms/pow/) amenazaba con degradar la usabilidad de Ethereum aumentando los tiempos de espera para enviar transacciones y usar dapps.
 
-- [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement)
 - [Lea la explicación de Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="EIP de Muir Glacier" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
@@ -437,7 +437,7 @@ La bifurcación de Istanbul:
 - Habilitó Ethereum y Zcash para que interoperasen.
 - Permitió que los contratos introdujeran funciones más creativas.
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement)
 
 <ExpandableCard title="EIP de Estambul" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
@@ -466,7 +466,7 @@ La bifurcación Constantinople:
 - Se optimizó el coste de [gas](/glossary/#gas) de ciertas acciones dentro de la [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Añadió la capacidad de interactuar con direcciones que aún no se han creado.
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement)
 
 <ExpandableCard title="EIP de Constantinopla" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
@@ -495,7 +495,7 @@ La bifurcación de Bizantium:
 - Se ha añadido la habilidad para realizar llamadas «sin cambiar de estado» a otros contratos.
 - Se añadieron ciertos métodos criptográficos para permitir la [escalabilidad de capa 2](/developers/docs/scaling/#layer-2-scaling).
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement)
 
 <ExpandableCard title="EIP de Bizancio" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
@@ -528,7 +528,7 @@ La bifurcación Spurious Dragon fue la segunda respuesta a los ataques de denega
 - Activación de la «deflación» del estado de la cadena de bloques.
 - Adición de la protección contra ataques de repetición.
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)
 
 <ExpandableCard title="EIP de Spurious Dragon" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
@@ -552,7 +552,7 @@ La bifurcación Tangerine Whistle fue la primera respuesta a los ataques de dene
 
 - la gestión de problemas urgentes del buen estado de la red relacionados con códigos de operación depreciados.
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork)
 
 <ExpandableCard title="EIP de Tangerine Whistle" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
@@ -576,7 +576,7 @@ Esta acción fue votada por la comunidad Ethereum. Cualquier tenedor de ETH pudo
 
 Algunos mineros se negaron a bifurcar porque el incidente de la DAO no era un defecto en el protocolo. Fueron quienes formaron [Ethereum Classic](https://ethereumclassic.org/).
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/07/20/hard-fork-completed)
 
 ---
 
@@ -588,7 +588,7 @@ Algunos mineros se negaron a bifurcar porque el incidente de la DAO no era un de
 
 Homestead: la bifurcación con perspectivas de futuro. Incluyó varios cambios de protocolo y un cambio de red que concedió a Ethereum la capacidad de hacer más actualizaciones de red.
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release)
 
 <ExpandableCard title="EIP de Homestead" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
@@ -611,8 +611,8 @@ Homestead: la bifurcación con perspectivas de futuro. Incluyó varios cambios d
 
 El fork Frontier Thawing eliminó el límite de 5,000 [gas](/glossary/#gas) por [bloque](/glossary/#block) y estableció el precio por defecto del gas en 51 [gwei](/glossary/#gwei). Esto permitió que se realizaran transacciones que requiriesen 21.000 unidades de gas. Se introdujo la [bomba de dificultad](/glossary/#difficulty-bomb) para asegurar un hard fork futuro hacia [proof-of-stake](/glossary/#pos).
 
-- [Lea el anuncio de Frontier Thawing de la Fundación Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
-- [Lea la Actualización de Protocolo de Ethereum 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+- [Lea el anuncio de Frontier Thawing de la Fundación Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier)
+- [Lea la Actualización de Protocolo de Ethereum 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1)
 
 ---
 
@@ -624,7 +624,7 @@ El fork Frontier Thawing eliminó el límite de 5,000 [gas](/glossary/#gas) por 
 
 Frontier fue una implementación en vivo, pero básica, del proyecto Ethereum. Siguió a la exitosa fase de pruebas Olympic. Estaba destinada a usuarios técnicos, específicamente a desarrolladores. [Los bloques](/glossary/#block) tenían un límite de [gas](/glossary/#gas) de 5,000. Este período de «deshielo» permitió a los mineros iniciar sus operaciones y a los primeros adoptantes instalar sus clientes sin tener que «precipitarse».
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare)
 
 <Divider />
 
@@ -636,7 +636,7 @@ Frontier fue una implementación en vivo, pero básica, del proyecto Ethereum. S
 
 El ether salió oficialmente a la venta durante 42 días. Podía comprarse con BTC.
 
-[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale)
 
 ---
 

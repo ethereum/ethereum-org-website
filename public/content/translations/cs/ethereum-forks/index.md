@@ -254,7 +254,7 @@ Upgrade Bellatrix byl druhý plánovaný upgrade pro [Beacon Chain](/roadmap/bea
 
 Síťový upgrade Gray Glacier odsunul [bombu obtížnosti](/glossary/#difficulty-bomb) o tři měsíce. Toto je jediná změna zavedená v tomto upgradu a je svou povahou podobná upgradům [Arrow Glacier](#arrow-glacier) a [Muir Glacier](#muir-glacier). Podobné změny byly provedeny při síťových upgradech [Byzantium](#byzantium), [Constantinople](#constantinople) a [London](#london).
 
-- [Blog nadace EF – oznámení upgradu Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+- [Blog nadace EF – oznámení upgradu Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement)
 
 <ExpandableCard title="EIP Gray Glacier" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
 
@@ -275,7 +275,7 @@ Síťový upgrade Gray Glacier odsunul [bombu obtížnosti](/glossary/#difficult
 
 Síťový upgrade Arrow Glacier odsunul [bombu obtížnosti](/glossary/#difficulty-bomb) o několik měsíců. Toto je jediná změna zavedená v tomto upgradu a je svou povahou podobná upgradu [Muir Glacier](#muir-glacier). Podobné změny byly provedeny při síťových upgradech [Byzantium](#byzantium), [Constantinople](#constantinople) a [London](#london).
 
-- [Blog nadace EF – oznámení upgradu Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [Blog nadace EF – oznámení upgradu Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement)
 - [Ethereum Cat Herders – upgrade Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
 <ExpandableCard title="EIP Arrow Glacier" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
@@ -328,7 +328,7 @@ Implementace [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) v upgradu Londo
 Toto video vysvětluje EIP-1559 a výhody, které přináší: [Vysvětlení EIP-1559](https://www.youtube.com/watch?v=MGemhK9t44Q)
 
 - [Jste vývojář dapp? Nezapomeňte upgradovat své knihovny a nástroje.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
-- [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [Přečtěte si vysvětlení od Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="EIP London" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
@@ -352,7 +352,7 @@ Toto video vysvětluje EIP-1559 a výhody, které přináší: [Vysvětlení EIP
 
 Upgrade Berlin optimalizoval cenu za transakční poplatek pro určité akce EVM a zvyšuje podporu pro více typů transakcí.
 
-- [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement)
 - [Přečtěte si vysvětlení od Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="EIP Berlin" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
@@ -377,7 +377,7 @@ Upgrade Berlin optimalizoval cenu za transakční poplatek pro určité akce EVM
 
 [Beacon Chain](/roadmap/beacon-chain/) potřeboval 16 384 vkladů ve výši 32 stakovaných ETH, aby mohl být bezpečně spuštěn. K tomu došlo 27. listopadu a Beacon Chain začal vytvářet bloky 1. prosince 2020.
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21)
 
 <DocLink href="/roadmap/beacon-chain/">
   Řetězová vazba
@@ -393,7 +393,7 @@ Upgrade Berlin optimalizoval cenu za transakční poplatek pro určité akce EVM
 
 Vkladový kontrakt pro staking zavedl [staking](/glossary/#staking) do ekosystému Ethereum. Ačkoli se jednalo o kontrakt na [Mainnetu](/glossary/#mainnet), měl přímý dopad na časový plán spuštění [Beacon Chainu](/roadmap/beacon-chain/), což je důležitý [upgrade Etherea](/roadmap/).
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19)
 
 <DocLink href="/staking/">
   Staking
@@ -409,7 +409,7 @@ Vkladový kontrakt pro staking zavedl [staking](/glossary/#staking) do ekosysté
 
 Větev Muir Glacier způsobila zpoždění [bomby obtížnosti](/glossary/#difficulty-bomb). Zvýšení obtížnosti bloku mechanismu konsensu [proof-of-work](/developers/docs/consensus-mechanisms/pow/) ohrožovalo použitelnost Etherea prodloužením doby čekání na odeslání transakcí a používání dapps.
 
-- [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement)
 - [Přečtěte si vysvětlení od Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="EIP Muir Glacier" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
@@ -437,7 +437,7 @@ Větev Istanbul:
 - Umožnila interoperabilitu sítí Ethereum a Zcash.
 - Umožnila kontraktům zavádět kreativnější funkce.
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement)
 
 <ExpandableCard title="EIP Istanbul" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
@@ -466,7 +466,7 @@ Větev Constantinople:
 - Optimalizoval cenu za [transakční poplatek](/glossary/#gas) u některých akcí v [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Přidala možnost interagovat s adresami, které ještě nebyly vytvořeny.
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement)
 
 <ExpandableCard title="EIP Constantinople" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
@@ -495,7 +495,7 @@ Větev Byzantium:
 - Přidala schopnost provádět volání jiných kontraktů, která nemění stav.
 - Přidala určité kryptografické metody, které umožňují [škálování 2. vrstvy](/developers/docs/scaling/#layer-2-scaling).
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement)
 
 <ExpandableCard title="EIP Byzantium" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
@@ -528,7 +528,7 @@ Větev Spurious Dragon byla druhou reakcí na útoky typu odepření služby (Do
 - umožnění „vyčištění“ stavu blockchainu.
 - přidání ochrany proti útoku přehráním.
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)
 
 <ExpandableCard title="EIP Spurious Dragon" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
@@ -552,7 +552,7 @@ Větev Tangerine Whistle byla první reakcí na útoky typu odepření služby (
 
 - řešení naléhavých problémů se stavem sítě týkajících se podceněných operačních kódů.
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork)
 
 <ExpandableCard title="EIP Tangerine Whistle" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
@@ -576,7 +576,7 @@ Tento postup byl odhlasován ethereovskou komunitou. Každý držitel ETH mohl h
 
 Někteří těžaři odmítli větev, protože incident DAO nebyl vadou v protokolu. Ti dále vytvořili [Ethereum Classic](https://ethereumclassic.org/).
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/07/20/hard-fork-completed)
 
 ---
 
@@ -588,7 +588,7 @@ Někteří těžaři odmítli větev, protože incident DAO nebyl vadou v protok
 
 Větev Homestead se dívala do budoucnosti. Zahrnovala několik změn protokolu a síťovou změnu, která dala síti Ethereum schopnost provádět další síťové upgrady.
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release)
 
 <ExpandableCard title="EIP Homestead" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
@@ -611,8 +611,8 @@ Větev Homestead se dívala do budoucnosti. Zahrnovala několik změn protokolu 
 
 Větev rozmrazení Frontieru zrušila limit 5 000 [transakčních poplatků](/glossary/#gas) na [blok](/glossary/#block) a nastavila výchozí cenu za transakční poplatek na 51 [gwei](/glossary/#gwei). To umožnilo transakce – transakce vyžadují 21 000 transakčních poplatků. Byla zavedena [bomba obtížnosti](/glossary/#difficulty-bomb), aby byla zajištěna budoucí hard-fork na [proof-of-stake](/glossary/#pos).
 
-- [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
-- [Přečtěte si aktualizaci protokolu Ethereum 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+- [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier)
+- [Přečtěte si aktualizaci protokolu Ethereum 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1)
 
 ---
 
@@ -624,7 +624,7 @@ Větev rozmrazení Frontieru zrušila limit 5 000 [transakčních poplatků](/gl
 
 Frontier byl živou, ale základní implementací projektu Ethereum. Následoval po úspěšné testovací fázi Olympic. Byl určen pro technické uživatele, konkrétně pro vývojáře. [Bloky](/glossary/#block) měly [limit transakčních poplatků](/glossary/#gas) 5 000. Toto „období rozmrazování“ umožnilo těžařům zahájit své operace a prvním uživatelům nainstalovat své klienty, aniž by museli spěchat.
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare)
 
 <Divider />
 
@@ -636,7 +636,7 @@ Frontier byl živou, ale základní implementací projektu Ethereum. Následoval
 
 Ether se oficiálně prodával 42 dní. Mohli jste ho koupit za BTC.
 
-[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale)
 
 ---
 

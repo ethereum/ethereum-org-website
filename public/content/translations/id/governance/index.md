@@ -168,7 +168,7 @@ Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum pada 15 September 
 - [Bergabunglah dengan discord Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Menjalankan sebuah simpul](/developers/docs/nodes-and-clients/run-a-node/)
 - [Berkontribusilah terhadap pengembangan klien](/developers/docs/nodes-and-clients/#execution-clients)
-- [Program Magang Pengembang Inti](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Program Magang Pengembang Inti](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Bacaan lebih lanjut {#further-reading}
 

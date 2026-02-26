@@ -168,7 +168,7 @@ DAO हैक पर और देखें:
 - [इथेरियम R&D discord में शामिल हों](https://discord.gg/mncqtgVSVw)
 - [नोड चलाएं](/developers/docs/nodes-and-clients/run-a-node/)
 - [क्लाइंट विकास में योगदान करें](/developers/docs/nodes-and-clients/#execution-clients)
-- [कोर डेवलपर शिक्षुता प्रोग्राम](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [कोर डेवलपर शिक्षुता प्रोग्राम](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## अग्रिम पठन {#further-reading}
 

@@ -105,7 +105,7 @@ Sloučení přineslo změny v konsensu, což zahrnuje i změny týkající se:
   <li>konceptu <em>bezpečného prvního prvku</em> a <em>finalizovaných bloků</em></li>
 </ul>
 
-Více informací najdete v tomto příspěvku na blogu od Tima Beika o tom, <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">jak Sloučení ovlivňuje aplikační vrstvu Etherea</a>.
+Více informací najdete v tomto příspěvku na blogu od Tima Beika o tom, <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">jak Sloučení ovlivňuje aplikační vrstvu Etherea</a>.
 </ExpandableCard>
 
 ## Sloučení a spotřeba energie {#merge-and-energy}
@@ -188,7 +188,7 @@ Aby nedošlo ke zmatku, komunita tyto termíny aktualizovala:
 
 Tyto změny termínů slouží pouze k úpravě názvosloví. Cíle ani plán Etherea se nemění.
 
-[Přečtěte si více o přejmenování „Eth2“](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Přečtěte si více o přejmenování „Eth2“](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Vztah mezi vylepšeními {#relationship-between-upgrades}
 

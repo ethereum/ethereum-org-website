@@ -34,10 +34,10 @@ description: "Ethereum.org అనువాదకుల కోసం ఉపయో
 
 తాజా అనువాద కార్యక్రమ పురోగతితో తాజాగా ఉండటానికి, మీరు [Ethereum ఫౌండేషన్ బ్లాగ్](https://blog.ethereum.org/)ను అనుసరించవచ్చు:
 
-- [అక్టోబర్ 2021 మైలురాళ్ల అప్‌డేట్](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [డిసెంబర్ 2020 మైలురాళ్ల అప్‌డేట్](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [జూలై 2020 మైలురాళ్ల అప్‌డేట్](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [ఆగస్టు 2019 అనువాద కార్యక్రమ ప్రారంభం](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [అక్టోబర్ 2021 మైలురాళ్ల అప్‌డేట్](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [డిసెంబర్ 2020 మైలురాళ్ల అప్‌డేట్](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [జూలై 2020 మైలురాళ్ల అప్‌డేట్](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [ఆగస్టు 2019 అనువాద కార్యక్రమ ప్రారంభం](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## అనువాదకుల కోసం కార్యాలయ వేళలు {#office-hours}
 

@@ -280,7 +280,7 @@ contract Oracle {
 
 [謝林點](https://en.wikipedia.org/wiki/Focal_point_\(game_theory\)) 是一個賽局理論概念，假設在沒有任何通訊的情況下，多個實體總是會預設採用一個常見的問題解決方案。 謝林點機制常常被用在去中心化預言機網路，讓節點能就數據請求的答案達成共識。
 
-這個概念的早期想法是 [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/)，這是一個提議的資料饋送機制，參與者提交「純量」問題 (答案可以用量值描述的問題，例如「ETH 的價格是多少？」) 的回應以及一筆押金。 提供介於第 25 和第 75 [百分位數](https://en.wikipedia.org/wiki/Percentile) 之間數值的使用者會獲得獎勵，而數值與中位數相差甚遠的使用者則會受到懲罰。
+這個概念的早期想法是 [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed)，這是一個提議的資料饋送機制，參與者提交「純量」問題 (答案可以用量值描述的問題，例如「ETH 的價格是多少？」) 的回應以及一筆押金。 提供介於第 25 和第 75 [百分位數](https://en.wikipedia.org/wiki/Percentile) 之間數值的使用者會獲得獎勵，而數值與中位數相差甚遠的使用者則會受到懲罰。
 
 雖然 SchellingCoin 現已不復存在，但許多去中心化預言機 (特別是 [Maker 協定預言機](https://docs.makerdao.com/smart-contract-modules/oracle-module)) 仍使用謝林點機制來提高預言機資料的準確性。 每個 Maker 預言機都由一個鏈下的 P2P 網路的節點（「中繼者」和「餵送者」）組成，這些節點提交抵押資產的市場價格，然後由鏈上的「Medianizer」合約計算所有提供值的中位數。 當指定的延遲期結束，這個中位數值就成為相關資產的新參考價格。
 

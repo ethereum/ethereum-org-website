@@ -254,7 +254,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 గ్రే గ్లేసియర్ నెట్‌వర్క్ నవీకరణ [డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb)ను మూడు నెలల పాటు వెనక్కి నెట్టింది. ఈ నవీకరణలో ప్రవేశపెట్టబడిన ఏకైక మార్పు ఇదే, మరియు ఇది [యారో గ్లేసియర్](#arrow-glacier) మరియు [మ్యూయిర్ గ్లేసియర్](#muir-glacier) నవీకరణల స్వభావానికి సమానంగా ఉంటుంది. [బైజాంటియమ్](#byzantium), [కాన్స్టాంటినోపుల్](#constantinople) మరియు [లండన్](#london) నెట్‌వర్క్ నవీకరణలపై ఇలాంటి మార్పులు చేయబడ్డాయి.
 
-- [EF బ్లాగ్ - గ్రే గ్లేసియర్ నవీకరణ ప్రకటన](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+- [EF బ్లాగ్ - గ్రే గ్లేసియర్ నవీకరణ ప్రకటన](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement)
 
 <ExpandableCard title="గ్రే గ్లేసియర్ EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
@@ -275,7 +275,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 యారో గ్లేసియర్ నెట్‌వర్క్ నవీకరణ [డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb)ను చాలా నెలల పాటు వెనక్కి నెట్టింది. ఈ నవీకరణలో ప్రవేశపెట్టబడిన ఏకైక మార్పు ఇదే, మరియు ఇది [మ్యూయిర్ గ్లేసియర్](#muir-glacier) నవీకరణ స్వభావానికి సమానంగా ఉంటుంది. [బైజాంటియమ్](#byzantium), [కాన్స్టాంటినోపుల్](#constantinople) మరియు [లండన్](#london) నెట్‌వర్క్ నవీకరణలపై ఇలాంటి మార్పులు చేయబడ్డాయి.
 
-- [EF బ్లాగ్ - యారో గ్లేసియర్ నవీకరణ ప్రకటన](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [EF బ్లాగ్ - యారో గ్లేసియర్ నవీకరణ ప్రకటన](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement)
 - [ఇతీరియము క్యాట్ హెర్డర్స్ - ఇతీరియము యారో గ్లేసియర్ నవీకరణ](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
 <ExpandableCard title="యారో గ్లేసియర్ EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
@@ -328,7 +328,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 ఈ వీడియో EIP-1559 మరియు దాని వల్ల కలిగే ప్రయోజనాలను వివరిస్తుంది: [EIP-1559 వివరించబడింది](https://www.youtube.com/watch?v=MGemhK9t44Q)
 
 - [మీరు డాప్స్ అభివృద్ధి చేసేవారా? మీ గ్రంథాలయాలను మరియు పనిముట్లను నవీకరించుకోవాలని నిర్ధారించుకోండి.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
-- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [ఇతీరియము క్యాట్ హెర్డర్ వివరణను చదవండి](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="లండన్ EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
@@ -352,7 +352,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 బెర్లిన్ నవీకరణ కొన్ని EVM చర్యల కోసం గ్యాస్ ఖర్చును ఆప్టిమైజ్ చేసింది మరియు బహుళ లావాదేవీ రకాలకు మద్దతును పెంచుతుంది.
 
-- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement)
 - [ఇతీరియము క్యాట్ హెర్డర్ వివరణను చదవండి](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="బెర్లిన్ EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
@@ -377,7 +377,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 సురక్షితంగా పంపడానికి [బీకన్ చైన్](/roadmap/beacon-chain/)కు 32 స్టేక్ చేసిన ETH యొక్క 16384 డిపాజిట్లు అవసరం. ఇది నవంబర్ 27న జరిగింది, మరియు బీకన్ చైన్ డిసెంబర్ 1, 2020న బ్లాక్‌లను ఉత్పత్తి చేయడం ప్రారంభించింది.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21)
 
 <DocLink href="/roadmap/beacon-chain/">
   బీకన్ చైన్
@@ -393,7 +393,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 స్టేకింగ్ డిపాజిట్ కాంట్రాక్ట్ ఇతీరియము పర్యావరణ వ్యవస్థకు [స్టేకింగ్](/glossary/#staking)ను ప్రవేశపెట్టింది. ఇది [మెయిన్‌నెట్](/glossary/#mainnet) కాంట్రాక్ట్ అయినప్పటికీ, ఇది ముఖ్యమైన [ఇతీరియము నవీకరణ](/roadmap/) అయిన [బీకన్ చైన్](/roadmap/beacon-chain/)ను ప్రారంభించే కాలక్రమంపై ప్రత్యక్ష ప్రభావాన్ని చూపింది.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19)
 
 <DocLink href="/staking/">
   స్టేకింగ్
@@ -409,7 +409,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 మ్యూయిర్ గ్లేసియర్ ఫోర్క్ [డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb) ఆలస్యాన్ని ప్రవేశపెట్టింది. [ప్రూఫ్-ఆఫ్-వర్క్](/developers/docs/consensus-mechanisms/pow/) ఏకాభిప్రాయ యంత్రాంగం యొక్క బ్లాక్ డిఫికల్టీలో పెరుగుదల లావాదేవీలను పంపడం మరియు డాప్స్ ఉపయోగించడం కోసం వేచి ఉండే సమయాన్ని పెంచడం ద్వారా ఇతీరియము యొక్క వినియోగితను క్షీణింపజేసే ప్రమాదం ఉంది.
 
-- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement)
 - [ఇతీరియము క్యాట్ హెర్డర్ వివరణను చదవండి](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="ముయిర్ గ్లేసియర్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
@@ -437,7 +437,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 - ఇతీరియము మరియు జడ్‌క్యాష్ పరస్పరం పనిచేయడానికి వీలు కల్పించింది.
 - కాంట్రాక్ట్‌లు మరింత సృజనాత్మక ఫంక్షన్‌లను ప్రవేశపెట్టడానికి అనుమతించింది.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement)
 
 <ExpandableCard title="ఇస్తాంబుల్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
@@ -466,7 +466,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 - [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine)లోని కొన్ని చర్యల [గ్యాస్](/glossary/#gas) ఖర్చును ఆప్టిమైజ్ చేసింది.
 - ఇంకా సృష్టించబడని చిరునామాలతో పరస్పర చర్య జరిపే సామర్థ్యాన్ని జోడించింది.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement)
 
 <ExpandableCard title="కాన్స్టాంటినోపుల్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
@@ -495,7 +495,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 - ఇతర కాంట్రాక్ట్‌లకు స్థితి-మార్చని కాల్స్ చేసే సామర్థ్యాన్ని జోడించింది.
 - [లేయర్ 2 స్కేలింగ్](/developers/docs/scaling/#layer-2-scaling)ను అనుమతించడానికి కొన్ని క్రిప్టోగ్రఫీ పద్ధతులను జోడించింది.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement)
 
 <ExpandableCard title="బైజాంటియం EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
@@ -528,7 +528,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 - బ్లాక్ చైను స్థితిని “డీబ్లోట్” చేయడానికి వీలు కల్పించడం.
 - రీప్లే దాడి రక్షణను జోడించడం.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)
 
 <ExpandableCard title="స్పురియస్ డ్రాగన్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
@@ -552,7 +552,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 - తక్కువ ధర ఉన్న ఆపరేషన్ సంకేత భాషలకు సంబంధించిన అత్యవసర నెట్‌వర్క్ ఆరోగ్య సమస్యలను పరిష్కరించడం.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork)
 
 <ExpandableCard title="టాన్జేరిన్ విజిల్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
@@ -576,7 +576,7 @@ DAO ఫోర్క్ [2016 DAO దాడి](https://www.coindesk.com/learn/un
 
 కొందరు మైనర్లు ఫోర్క్ చేయడానికి నిరాకరించారు ఎందుకంటే DAO సంఘటన ప్రోటోకాల్‌లో లోపం కాదు. వారు [Ethereum Classic](https://ethereumclassic.org/)ని ఏర్పాటు చేశారు.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/07/20/hard-fork-completed)
 
 ---
 
@@ -588,7 +588,7 @@ DAO ఫోర్క్ [2016 DAO దాడి](https://www.coindesk.com/learn/un
 
 హోమ్‌స్టెడ్ ఫోర్క్ భవిష్యత్తును దృష్టిలో ఉంచుకుంది. ఇందులో అనేక ప్రోటోకాల్ మార్పులు మరియు ఒక నెట్‌వర్కింగ్ మార్పు ఉన్నాయి, ఇది ఇతీరియముకు భవిష్యత్ నెట్‌వర్క్ నవీకరణలు చేసే సామర్థ్యాన్ని ఇచ్చింది.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/02/29/homestead-release)
 
 <ExpandableCard title="హోమ్‍‍స్టెడ్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
@@ -611,8 +611,8 @@ DAO ఫోర్క్ [2016 DAO దాడి](https://www.coindesk.com/learn/un
 
 ఫ్రాంటియర్ థావింగ్ ఫోర్క్ ప్రతి [బ్లాక్](/glossary/#block)కు 5,000 [గ్యాస్](/glossary/#gas) పరిమితిని ఎత్తివేసింది మరియు డిఫాల్ట్ గ్యాస్ ధరను 51 [గ్వేయి](/glossary/#gwei)కి సెట్ చేసింది. ఇది లావాదేవీలను అనుమతించింది – లావాదేవీలకు 21,000 గ్యాస్ అవసరం. [ప్రూఫ్-ఆఫ్-స్టేక్](/glossary/#pos)కు భవిష్యత్ హార్డ్-ఫోర్క్‌ను నిర్ధారించడానికి [డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb) ప్రవేశపెట్టబడింది.
 
-- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
-- [ఇతీరియము ప్రోటోకాల్ నవీకరణ 1ని చదవండి](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2015/08/04/the-thawing-frontier)
+- [ఇతీరియము ప్రోటోకాల్ నవీకరణ 1ని చదవండి](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1)
 
 ---
 
@@ -624,7 +624,7 @@ DAO ఫోర్క్ [2016 DAO దాడి](https://www.coindesk.com/learn/un
 
 ఫ్రాంటియర్ ఇతీరియము ప్రాజెక్ట్ యొక్క ప్రత్యక్ష, కానీ బేర్‌బోన్ అమలు. ఇది విజయవంతమైన ఒలింపిక్ పరీక్ష దశను అనుసరించింది. ఇది సాంకేతిక వినియోగదారుల కోసం, ప్రత్యేకంగా డెవలపర్‌ల కోసం ఉద్దేశించబడింది. [బ్లాక్‌లు](/glossary/#block) 5,000 [గ్యాస్](/glossary/#gas) పరిమితిని కలిగి ఉండేవి. ఈ ‘కరిగే’ కాలం మైనర్లు తమ కార్యకలాపాలను ప్రారంభించడానికి మరియు ప్రారంభ స్వీకర్తలు తమ ఖాతాదారులను ‘ поспіхом’ ఇన్‌స్టాల్ చేసుకోవడానికి వీలు కల్పించింది.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare)
 
 <Divider />
 
@@ -636,7 +636,7 @@ DAO ఫోర్క్ [2016 DAO దాడి](https://www.coindesk.com/learn/un
 
 ఈథర్ అధికారికంగా 42 రోజుల పాటు అమ్మకానికి వచ్చింది. మీరు దానిని BTCతో కొనుగోలు చేయవచ్చు.
 
-[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale)
 
 ---
 
