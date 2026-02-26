@@ -14,9 +14,9 @@ import {
   AlertTitle,
 } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card, CardContent, CardTitle } from "@/components/ui/card"
-import InlineLink from "@/components/ui/Link"
+import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
+import WindowBox from "@/components/WindowBox"
 
 import { getMetadata } from "@/lib/utils/metadata"
 
@@ -70,68 +70,97 @@ export default async function Page({ params }: { params: PageParams }) {
           <h2 className="text-2xl font-bold lg:text-3xl">Get help</h2>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {/* Card 1: Something went wrong */}
-            <Card className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border border-accent-b/10 bg-gradient-to-r from-accent-b/10 from-20% to-accent-b/5 to-60% dark:from-accent-b/20 dark:to-accent-b/10">
-              <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
-                <ShieldAlert className="size-8 text-accent-b" />
-                Something went wrong
-              </CardTitle>
-              <CardContent className="space-y-5 p-8">
+            <WindowBox
+              title={<h3>Something went wrong</h3>}
+              svg={<ShieldAlert className="size-8 text-accent-b" />}
+              className="h-fit"
+>
+              <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
                 <p className="text-sm leading-relaxed text-body-medium">
                   If you lost funds, got scammed, or something unexpected
                   happened, start here.
                 </p>
-                <div className="flex flex-col gap-3">
-                  <InlineLink href="/community/support/scams/">
+                <Link
+className="hover:bg-background-highlight"
+href="/community/support/scams/"
+>
                     I lost funds to a scam or fraud
-                  </InlineLink>
-                  <InlineLink href="/community/support/scams/#secure-assets">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/community/support/scams/#secure-assets"
+>
                     Secure remaining funds and revoke permissions
-                  </InlineLink>
-                  <InlineLink href="/community/support/scams/#report">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/community/support/scams/#report"
+>
                     Report a scam address or website
-                  </InlineLink>
-                  <InlineLink href="/community/support/scams/#analyze">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/community/support/scams/#analyze"
+>
                     Trace where funds were sent
-                  </InlineLink>
-                  <InlineLink href="/community/support/faq/#wrong-wallet">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/community/support/faq/#wrong-wallet"
+>
                     I sent to the wrong address
-                  </InlineLink>
-                  <InlineLink href="/community/support/faq/#lost-wallet-access">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/community/support/faq/#lost-wallet-access"
+>
                     I lost access to my wallet
-                  </InlineLink>
-                  <InlineLink href="/community/support/faq/#stuck-transaction">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/community/support/faq/#stuck-transaction"
+>
                     My transaction is stuck
-                  </InlineLink>
+                  </Link>
                 </div>
-              </CardContent>
-            </Card>
+              </WindowBox>
 
             {/* Card 2: Protect yourself */}
-            <Card className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border border-accent-a/10 bg-gradient-to-r from-accent-a/10 from-20% to-accent-a/5 to-60% dark:from-accent-a/20 dark:to-accent-a/10">
-              <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
-                <Shield className="size-8 text-accent-a" />
-                Protect yourself
-              </CardTitle>
-              <CardContent className="space-y-5 p-8">
+            <WindowBox
+              title={<h3>Protect yourself</h3>}
+              svg={<Shield className="size-8 text-accent-a" />}
+              className="h-fit"
+>
+              <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
                 <p className="text-sm leading-relaxed text-body-medium">
                   Learn to recognize common scam tactics before they target you.
                 </p>
-                <div className="flex flex-col gap-3">
-                  <InlineLink href="/security/#common-scams">
+                <Link
+className="hover:bg-background-highlight"
+href="/security/#common-scams"
+>
                     Common scam tactics and how to spot them
-                  </InlineLink>
-                  <InlineLink href="/community/support/scams/#recovery-scams">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/community/support/scams/#recovery-scams"
+>
                     Why &quot;recovery experts&quot; are always scams
-                  </InlineLink>
-                  <InlineLink href="/guides/how-to-id-scam-tokens/">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/guides/how-to-id-scam-tokens/"
+>
                     How to identify scam tokens
-                  </InlineLink>
-                  <InlineLink href="/security/">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/security/"
+>
                     Full security and scam prevention guide
-                  </InlineLink>
+                  </Link>
                 </div>
-              </CardContent>
-            </Card>
+              </WindowBox>
           </div>
         </Section>
 
@@ -139,63 +168,86 @@ export default async function Page({ params }: { params: PageParams }) {
         <Section id="learn" className="space-y-6">
           <h2 className="text-2xl font-bold lg:text-3xl">Learn</h2>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {/* Card 4: Using Ethereum */}
-            <Card className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border border-accent-c/10 bg-gradient-to-r from-accent-c/10 from-20% to-accent-c/5 to-60% dark:from-accent-c/20 dark:to-accent-c/10">
-              <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
-                <BookOpen className="size-8 text-accent-c" />
-                Using Ethereum
-              </CardTitle>
-              <CardContent className="space-y-5 p-8">
+            {/* Card 3: Using Ethereum */}
+            <WindowBox
+              title={<h3>Using Ethereum</h3>}
+              svg={<BookOpen className="size-8 text-primary" />}
+              className="h-fit"
+>
+              <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
                 <p className="text-sm leading-relaxed text-body-medium">
                   Step-by-step guides for wallets, tokens, bridges, and more.
                 </p>
-                <div className="flex flex-col gap-3">
-                  <InlineLink href="/guides/how-to-create-an-ethereum-account/">
+                <Link
+className="hover:bg-background-highlight"
+href="/guides/how-to-create-an-ethereum-account/"
+>
                     How to create an Ethereum account
-                  </InlineLink>
-                  <InlineLink href="/guides/how-to-use-a-wallet/">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/guides/how-to-use-a-wallet/"
+>
                     How to use a wallet
-                  </InlineLink>
-                  <InlineLink href="/guides/how-to-swap-tokens/">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/guides/how-to-swap-tokens/"
+>
                     How to swap tokens
-                  </InlineLink>
-                  <InlineLink href="/guides/how-to-use-a-bridge/">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/guides/how-to-use-a-bridge/"
+>
                     How to bridge tokens to layer 2
-                  </InlineLink>
-                  <InlineLink href="/guides/how-to-revoke-token-access/">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/guides/how-to-revoke-token-access/"
+>
                     How to revoke token access
-                  </InlineLink>
+                  </Link>
                 </div>
-              </CardContent>
-            </Card>
+              </WindowBox>
 
-            {/* Card 5: Common misconceptions */}
-            <Card className="grid grid-rows-[auto_1fr] overflow-hidden rounded-2xl border border-primary/10 bg-gradient-to-r from-primary/10 from-20% to-primary/5 to-60% dark:from-primary/20 dark:to-primary/10">
-              <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-5">
-                <HelpCircle className="size-8 text-primary" />
-                Common misconceptions
-              </CardTitle>
-              <CardContent className="space-y-5 p-8">
+            {/* Card 4: Common misconceptions */}
+            <WindowBox
+              title={<h3>Common misconceptions</h3>}
+              svg={<HelpCircle className="size-8 text-accent-c" />}
+              className="h-fit"
+>
+              <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
                 <p className="text-sm leading-relaxed text-body-medium">
                   Clearing up the most frequent misunderstandings about
                   Ethereum.
                 </p>
-                <div className="flex flex-col gap-3">
-                  <InlineLink href="/community/support/misconceptions/#not-a-company">
+                <Link
+className="hover:bg-background-highlight"
+href="/community/support/misconceptions/#not-a-company"
+>
                     Ethereum is not a company
-                  </InlineLink>
-                  <InlineLink href="/community/support/misconceptions/#no-fund-access">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/community/support/misconceptions/#no-fund-access"
+>
                     No one can access or freeze your funds
-                  </InlineLink>
-                  <InlineLink href="/community/support/misconceptions/#no-mining">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/community/support/misconceptions/#no-mining"
+>
                     Ethereum mining no longer exists
-                  </InlineLink>
-                  <InlineLink href="/community/support/misconceptions/#no-support-team">
+                  </Link>
+                  <Link
+                  className="hover:bg-background-highlight"
+href="/community/support/misconceptions/#no-support-team"
+>
                     There is no &quot;Ethereum support team&quot;
-                  </InlineLink>
+                  </Link>
                 </div>
-              </CardContent>
-            </Card>
+              </WindowBox>
           </div>
         </Section>
 
