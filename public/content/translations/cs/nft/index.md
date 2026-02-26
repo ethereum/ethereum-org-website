@@ -67,7 +67,7 @@ Možná jste umělec, který chce zveřejnit svou práci pomocí NFT, aniž by z
 
 Nebo si představte vstupenku na sportovní událost. Stejně jako si **organizátor události může vybrat, kolik vstupenek prodá**, může tvůrce NFT rozhodnout, kolik replik existuje. Někdy se jedná o přesné kopie, jako je 5 000 všeobecných vstupenek. Někdy je vytvořených několik NFT, která jsou velmi podobná, ale každé mírně odlišné, jako například vstupenka s přiděleným sedadlem. Ty lze kupovat a prodávat peer-to-peer bez placení prodejcům vstupenek a kupující se vždy může ujistit o pravosti vstupenky pomocí kontroly adresy kontraktu.
 
-Na ethereum.org se **NFT používají k prokázání, že lidé smysluplně přispěli** do našeho repozitáře na GitHubu (naprogramovali web, napsali nebo upravili článek...), přeložili náš obsah nebo se zúčastnili našich komunitních hovorů, a dokonce máme i vlastní název domény NFT. Pokud přispějete na ethereum.org, můžete získat [POAP](/glossary/#poap) NFT. Některé krypto meetupy používají POAPy jako vstupenky. [Více o přispívání](/contributing/#poap).
+Na ethereum.org se **NFT používají k prokázání, že lidé smysluplně přispěli** do našeho repozitáře na GitHubu (naprogramovali web, napsali nebo upravili článek...), přeložili náš obsah nebo se zúčastnili našich komunitních hovorů, a dokonce máme i vlastní název domény NFT. Pokud přispějete na ethereum.org, můžete získat [POAP](/glossary/#poap) NFT. Některé krypto meetupy používají POAPy jako vstupenky. [Více o přispívání](/contributing/#poap). Můžete si také prohlédnout naši stránku [ethereum.org sběratelské předměty](/collectibles/), kde najdete NFT za úspěchy v komunitě.
 
 ![ethereum.org POAP](./poap.png)
 

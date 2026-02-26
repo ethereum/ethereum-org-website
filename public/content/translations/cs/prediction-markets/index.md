@@ -31,7 +31,7 @@ Na rozdíl od tradičního prognózování jsou predikční trhy založené na b
 
 <CardGrid>
   <Card title="Motivované" emoji=":money_with_wings:" description="Účastníci stakují reálné prostředky, což vede ke kvalitním předpovědím."/>
-  <Card title="Decentralizace" emoji="🌎" description="Použití blockchainu a chytrých smluv zajišťuje transparentní a automatizované výplaty." />
+  <Card title="Decentralizace" emoji="🌎" description="Použití blockchainu a chytrých kontraktů zajišťuje transparentní a automatizované výplaty." />
   <Card title="Kurzy řízené trhem" emoji="🤝" description="Ceny nastavují obchodníci nákupem a prodejem podílů na výsledku, nikoli centralizovaná sázková kancelář." />
 </CardGrid>
 

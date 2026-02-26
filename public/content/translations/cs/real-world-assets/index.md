@@ -1,7 +1,7 @@
 ---
-title: "Fyzická aktiva (RWAs)"
-metaTitle: "Co jsou fyzická aktiva (RWAs)? | Přínosy a využití fyzických aktiv"
-description: "Přehled fyzických aktiv na Ethereu"
+title: "Aktiva z reálného světa (RWAs)"
+metaTitle: "Co jsou aktiva z reálného světa (RWAs)? | Přínosy a využití aktiv z reálného světa"
+description: "Přehled aktiv z reálného světa na Ethereu"
 lang: cs
 template: use-cases
 emoji: ":house_buildings:"

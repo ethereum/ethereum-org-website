@@ -28,7 +28,7 @@ Zaujalo vás to? Zjistěte více o tom, co jsou [decentralizované finance (DeFi
 
 ## 2. Vyberte dvojici tokenů, které chcete směnit
 
-Například ETH a DAI. Ujistěte se, že máte prostředky na jednom z těchto dvou žetonů.
+Například ETH a DAI. Ujistěte se, že máte prostředky na jednom z těchto dvou tokenů.
 ![Běžné rozhraní pro směnu](./swap1.png)
 
 ## 3. Zadejte množství tokenů, které chcete vyměnit, a klikněte na tlačítko směnit

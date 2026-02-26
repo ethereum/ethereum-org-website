@@ -19,7 +19,7 @@ Jedinou ochranou je vyhnout se interakci s neověřenými novými projekty, schv
 Hned několik webových stránek vám umožňuje zobrazit a zrušit přístup smart kontraktů spojených s vaší adresou. Běžte na některou k následujících stránek a připojte svoji peněženku:
 
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Blockscout](https://eth.blockscout.com/essential-dapps/revoke) (Ethereum)
 - [Revoke](https://revoke.cash/) (více sítí)
 - [Unrekt](https://app.unrekt.net/) (více sítí)
 - [EverRevoke](https://everrise.com/everrevoke/) (více sítí)
