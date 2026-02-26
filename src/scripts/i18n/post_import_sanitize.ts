@@ -2099,6 +2099,49 @@ export async function runSanitizer(
   }
 }
 
+/** @internal Exposed for unit testing only. Not part of the public API. */
+export const _testOnly = {
+  // Standalone fixes
+  fixDuplicatedHeadings,
+  fixBrokenMarkdownLinks,
+  fixEscapedBoldAndItalic,
+  fixAsciiGuillemets,
+  fixBlockComponentLineBreaks,
+  fixTickerTranspositions,
+  escapeMdxAngleBrackets,
+  removeOrphanedClosingTags,
+  normalizeFrontmatterDates,
+  quoteFrontmatterNonAscii,
+  normalizeBlockHtmlLines,
+  // English-comparison fixes
+  syncHeaderIdsWithEnglish,
+  fixTranslatedHrefs,
+  fixBrandTags,
+  fixProtectedBrandNames,
+  syncProtectedFrontmatterFields,
+  restoreBlankLinesFromEnglish,
+  collapseInlineHtmlFromEnglish,
+  fixMergedClosingTags,
+  normalizeInlineComponentsFromEnglish,
+  repairUnclosedBackticks,
+  restoreDroppedBackslashEscapes,
+  fixCollapsedComponentLineBreaks,
+  // Warnings
+  warnPunctuationOnlyHeadings,
+  warnCodeFenceContentDrift,
+  detectCrossScriptContamination,
+  // Utilities
+  toAsciiId,
+  extractHeaderStructure,
+  escapeRegex,
+  extractHrefs,
+  isInternalHref,
+  splitIntoBlocks,
+  // Entry points
+  processMarkdownFile,
+  processJsonFile,
+}
+
 if (require.main === module) {
   runSanitizer().catch(console.error)
 }
