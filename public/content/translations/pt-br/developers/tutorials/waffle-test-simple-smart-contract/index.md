@@ -196,8 +196,4 @@ O teste, se aprovado, nos garantirá que a transação foi revertida de fato. No
 
 ## Parabéns! {#congratulations}
 
-Você acabou de dar seu primeiro grande passo para testar contratos inteligentes com Waffle! Caso esteja interessado em outros tutoriais do Waffle:
-
-- [Testando ERC20 com Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
-- [Waffle: simulações dinâmicas e testando chamadas de contrato](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [Waffle diga olá mundo tutorial com capacete de segurança e ethers](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/)
+Você acabou de dar seu primeiro grande passo para testar contratos inteligentes com Waffle!

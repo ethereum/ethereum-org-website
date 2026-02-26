@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 3
 ---
 
-Validium is a [scaling solution](/developers/docs/scaling/) that enforces integrity of transactions using validity proofs like [ZK-rollups](/developers/docs/scaling/zk-rollups/), but doesn’t store transaction data on the Ethereum Mainnet. While offchain data availability introduces trade-offs, it can lead to massive improvements in scalability (validiums can process [~9,000 transactions, or more, per second](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Validium is a [scaling solution](/developers/docs/scaling/) that enforces integrity of transactions using validity proofs like [ZK-rollups](/developers/docs/scaling/zk-rollups/), but doesn’t store transaction data on the [Ethereum](/) Mainnet. While offchain data availability introduces trade-offs, it can lead to massive improvements in scalability (validiums can process [~9,000 transactions, or more, per second](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Prerequisites {#prerequisites}
 
@@ -162,5 +162,4 @@ Multiple projects provide implementations of Validium and volitions that you can
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZK-rollups vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volition and the Emerging Data Availability spectrum](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [Rollups, Validiums, and Volitions: Learn About the Hottest Ethereum Scaling Solutions](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
 - [The Practical Guide to Ethereum Rollups](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

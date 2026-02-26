@@ -22,7 +22,7 @@ Biaya gas dibayarkan dalam mata uang asli Ethereum, ether (ETH). Harga gas dinya
 
 ## Sebelum peningkatan London {#pre-london}
 
-Cara penghitungan biaya transaksi di jaringan Ethereum diubah dengan [Peningkatan London](/history/#london) pada Agustus 2021. Berikut adalah rekap tentang cara kerja hal-hal tersebut:
+Cara penghitungan biaya transaksi di jaringan Ethereum diubah dengan [Peningkatan London](/ethereum-forks/#london) pada Agustus 2021. Berikut adalah rekap tentang cara kerja hal-hal tersebut:
 
 Katakanlah Alice harus membayar Bob 1 ETH. Dalam transaksi tersebut, batas gas adalah 21.000 unit dan harga gas adalah 200 gwei.
 
@@ -36,7 +36,7 @@ Video ini menawarkan gambaran umum yang ringkas tentang gas dan mengapa gas ada:
 
 ## Setelah peningkatan London {#post-london}
 
-[Peningkatan London](/history/#london) diimplementasikan pada 5 Agustus 2021 untuk membuat kegiatan transaksi di Ethereum lebih dapat diprediksi oleh para pengguna dengan merombak mekanisme biaya transaksi Ethereum. Keuntungan level tinggi yang diperkenalkan oleh perubahan ini termasuk estimasi biaya transaksi yang lebih baik, pemasukan transaksi yang umumnya lebih cepat, dan mengimbangi penerbitan ETH dengan membakar persentase biaya transaksi.
+[Peningkatan London](/ethereum-forks/#london) diimplementasikan pada 5 Agustus 2021 untuk membuat kegiatan transaksi di Ethereum lebih dapat diprediksi oleh para pengguna dengan merombak mekanisme biaya transaksi Ethereum. Keuntungan level tinggi yang diperkenalkan oleh perubahan ini termasuk estimasi biaya transaksi yang lebih baik, pemasukan transaksi yang umumnya lebih cepat, dan mengimbangi penerbitan ETH dengan membakar persentase biaya transaksi.
 
 Dimulai dengan peningkatan jaringan London, setiap blok memiliki biaya dasar, harga minimum per unit gas untuk dimasukkan ke dalam blok ini, yang dihitung oleh jaringan berdasarkan permintaan ruangan blok. Karena biaya dasar dari biaya transaksi dibakar, para pengguna juga diharapkan untuk menetapkan tips (biaya prioritas) dalam transaksi mereka. Tips memberi kompensasi bagi penambang untuk mengeksekusi dan menyebarkan transaksi pengguna dalam blok dan diharapkan diatur secara otomatis oleh sebagian besar dompet.
 
@@ -54,7 +54,7 @@ Selain itu, Jordan juga dapat menetapkan biaya maksimal (`maxFeePerGas`) untuk t
 
 Sebelum Peningkatan London, Ethereum memiliki blok berukuran tetap. Pada waktu permintaan jaringan tinggi, blok-blok ini beroperasi pada kapasitas total. Akibatnya, para pengguna sering harus menunggu permintaan yang tinggi untuk mengurangi penyertaan dalam blok, yang menyebabkan pengalaman pengguna yang buruk.
 
-Peningkatan London memasukkan blok berukuran variabel ke Ethereum. Setiap blok memiliki ukuran target sebesar 15 juta gas tetapi ukuran blok akan bertambah atau berkurang sesuai dengan permintaan jaringan, hingga mencapai batas blok yang berukuran 30 juta gas (2x ukuran blok target). Protokol mencapai keseimbangan untuk ukuran blok sebesar 15 juta pada umumnya melalui proses _tâtonnement_. Ini berarti jika ukuran blok lebih besar dari ukuran blok target, protokol akan meningkatkan harga dasar untuk blok berikutnya. Dalam cara yang sama, protokol akan mengurangi harga dasar jika ukuran blok kurang dari ukuran blok target. Jumlah biaya dasar yang disesuaikan proporsional dengan seberapa besar perbedaan ukuran blok saat ini dari blok target. [Selengkapnya tentang blok](/developers/docs/blocks/).
+Peningkatan London memasukkan blok berukuran variabel ke Ethereum. Setiap blok memiliki ukuran target sebesar 30 juta gas tetapi ukuran blok akan bertambah atau berkurang sesuai dengan permintaan jaringan, hingga mencapai batas blok yang berukuran 60 juta gas (2x ukuran blok target). Protokol mencapai keseimbangan untuk ukuran blok sebesar 30 juta pada umumnya melalui proses _tâtonnement_. Ini berarti jika ukuran blok lebih besar dari ukuran blok target, protokol akan meningkatkan harga dasar untuk blok berikutnya. Dalam cara yang sama, protokol akan mengurangi harga dasar jika ukuran blok kurang dari ukuran blok target. Jumlah biaya dasar yang disesuaikan proporsional dengan seberapa besar perbedaan ukuran blok saat ini dari blok target. [Selengkapnya tentang blok](/developers/docs/blocks/).
 
 ### Biaya dasar {#base-fee}
 

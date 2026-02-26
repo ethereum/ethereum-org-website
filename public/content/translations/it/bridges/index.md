@@ -59,9 +59,14 @@ Se possiedi degli ETH sulla Rete Principale di Ethereum e desideri esplorare un 
 
 Diciamo che vuoi possedere Bitcoin (BTC) nativi, ma hai fondi soltanto sulla Rete Principale di Ethereum. Per esporti ai BTC su Ethereum, puoi acquistare dei Wrapped Bitcoin (WBTC). Tuttavia, WBTC è un token [ERC-20](/glossary/#erc-20) nativo alla rete di Ethereum, il che significa che è una versione di Bitcoin di Ethereum e non la risorsa originale sulla blockchain di Bitcoin. Per possedere BTC nativi, dovresti collegare le tue risorse da Ethereum a Bitcoin usando un ponte. Questo collegherà i tuoi WBTC e li convertirà in BTC nativi. Altrimenti, potresti possedere dei BTC e volerli utilizzare nei protocolli di [DeFi](/glossary/#defi) di Ethereum. Questo richiederebbe il collegamento inverso, da BTC a WBTC, poi utilizzabili come risorse su Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
   Inoltre, puoi fare tutto quanto descritto sopra, usando una [borsa centralizzata](/get-eth/). Tuttavia, a meno che i tuoi fondi non siano già su una borsa, comporterebbe diversi passaggi, e sarebbe più conveniente usare un ponte.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 

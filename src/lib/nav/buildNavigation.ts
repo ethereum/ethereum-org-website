@@ -1,5 +1,7 @@
 import type { NavSections } from "@/components/Nav/types"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 type TranslateFn = (key: string) => string
 
 export const buildNavigation = (t: TranslateFn): NavSections => {
@@ -32,12 +34,19 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("what-is-ether"),
               description: t("nav-what-is-ether-description"),
-              href: "/eth/",
+              href: "/what-is-ether/",
             },
             {
               label: t("ethereum-vs-bitcoin"),
               description: t("nav-ethereum-vs-bitcoin-description"),
               href: "/ethereum-vs-bitcoin/",
+            },
+            {
+              label: t("ethereum-history-founder-and-ownership"),
+              description: t(
+                "nav-ethereum-history-founder-and-ownership-description"
+              ),
+              href: "/ethereum-history-founder-and-ownership/",
             },
             {
               label: t("ethereum-wallets"),
@@ -189,6 +198,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/dao/",
             },
             {
+              label: t("decentralized-social-networks"),
+              description: t("nav-desoc-description"),
+              href: "/social-networks/",
+            },
+            {
               label: t("nav-emerging-label"),
               description: t("nav-emerging-description"),
               items: [
@@ -196,11 +210,6 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
                   label: t("decentralized-identity"),
                   description: t("nav-did-description"),
                   href: "/decentralized-identity/",
-                },
-                {
-                  label: t("decentralized-social-networks"),
-                  description: t("nav-desoc-description"),
-                  href: "/social-networks/",
                 },
                 {
                   label: t("decentralized-science"),
@@ -216,6 +225,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
                   label: t("ai-agents"),
                   description: t("nav-ai-agents-description"),
                   href: "/ai-agents/",
+                },
+                {
+                  label: t("onchain-gaming"),
+                  description: t("nav-gaming-description"),
+                  href: "/gaming/",
                 },
                 {
                   label: t("prediction-markets"),
@@ -295,22 +309,22 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
         {
           id: "build/get-started",
           label: t("get-started"),
-          description: t("nav-start-building-description"),
+          description: t("nav-start-get-started-description"),
           items: [
+            {
+              label: t("start-building"),
+              description: t("nav-start-building-description"),
+              href: "/developers/tools/",
+            },
+            {
+              label: t("learn-ethereum-development"),
+              description: t("nav-learn-ethereum-development-description"),
+              href: "/developers/tools/education/",
+            },
             {
               label: t("tutorials"),
               description: t("nav-tutorials-description"),
               href: "/developers/tutorials/",
-            },
-            {
-              label: t("learn-by-coding"),
-              description: t("nav-learn-by-coding-description"),
-              href: "/developers/learning-tools/",
-            },
-            {
-              label: t("set-up-local-env"),
-              description: t("nav-local-env-description"),
-              href: "/developers/local-environment/",
             },
             {
               label: t("grants"),
@@ -354,7 +368,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("enterprise"),
               description: t("nav-enterprise-description"),
-              href: "/enterprise/",
+              href: ENTERPRISE_ETHEREUM_URL,
             },
             {
               label: t("founders"),
@@ -471,7 +485,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("nav-history-label"),
               description: t("nav-history-description"),
-              href: "/history/",
+              href: "/ethereum-forks/",
             },
             {
               label: t("nav-open-research-label"),

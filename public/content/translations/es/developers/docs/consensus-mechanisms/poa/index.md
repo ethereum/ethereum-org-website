@@ -1,6 +1,6 @@
 ---
 title: Prueba de autoridad (PoA)
-description: Explicación del protocolo de consenso "Prueba de autoridad" y su papel en el ecosistema de cadenas de bloques.
+description: "Explicación del protocolo de consenso \"Prueba de autoridad\" y su papel en el ecosistema de cadenas de bloques."
 lang: es
 ---
 
@@ -16,7 +16,7 @@ La Prueba de autoridad es una versión modificada de **[prueba de participación
 
 La prueba de autoridad requiere confiar en un grupo establecido de firmantes que se establece en el [bloque inicial](/glossary/#genesis-block). En la mayoría de las implementaciones actuales, todos los firmantes autorizados conservan el mismo poder y privilegios al determinar el consenso de la cadena. La idea detrás del staking de reputación es que cada validador autorizado sea conocido por todos a través de mecanismos como el conocimiento del cliente (KYC), o teniendo una organización reconocida como único validador; de este modo, si un validador hace algo incorrecto, se conoce su identidad.
 
-Existen diversas implementaciones de PoA, pero la implementación estándar de Ethereum es **clique**, que implementa [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique es fácil de utilizar para los desarrolladores y un estándar fácil de implementar dado que soporta todo tipo de sincronización de clientes. Otras implementaciones incluyen [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) y [Aura](https://openethereum.github.io/Chain-specification).
+Existen diversas implementaciones de PoA, pero la implementación estándar de Ethereum es **clique**, que implementa [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique es fácil de utilizar para los desarrolladores y un estándar fácil de implementar dado que soporta todo tipo de sincronización de clientes. Otras implementaciones incluyen [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) y [Aura](https://openethereum.github.io/Chain-specification).
 
 ## Cómo funciona {#how-it-works}
 
@@ -50,7 +50,7 @@ Si, por ejemplo, hubiera 10 firmantes autorizados y cada firmante puede crear 1 
 
 ## Ventajas y desventajas {#pros-and-cons}
 
-| Ventajas                                                                                                                                                 | Desventajas                                                                                                                                                                                                                          |
+| Pros                                                                                                                                                     | Contras                                                                                                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Más escalable que otros mecanismos populares, tales como PoS y PoW, dado que está basado en un cantidad limitada de firmantes de bloque. | Las redes de PoA suelen tener una cantidad relativamente pequeña de nodos validadores. Esto hace que las redes PoA sean más centralizadas.                                                           |
 | Las cadenas de bloques de PoA son muy baratas de ejecutar y mantener.                                                                    | Volverse un firmante autorizado suele estár estar fuera del alcance de una persona común y corriente, dado que las cadenas de bloques requieren entidades con reputación establecida.                                |
@@ -65,9 +65,9 @@ Si, por ejemplo, hubiera 10 firmantes autorizados y cada firmante puede crear 1 
 - [PoA en la cadena de bloques](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Clique explicado](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [PoA obsoleta, especificación Aura](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0, otro tipo de implementación de PoA](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0, otro tipo de implementación de PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
-### ¿Es más bien de los que aprende viendo? {#visual-learner}
+### ¿Retiene usted mejor las cosas cuando las ve? {#visual-learner}
 
 Vea una explicación visual de la prueba de autoridad:
 
@@ -77,3 +77,4 @@ Vea una explicación visual de la prueba de autoridad:
 
 - [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
 - [Prueba de participación](/developers/docs/consensus-mechanisms/pos/)
+

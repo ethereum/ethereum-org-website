@@ -17,7 +17,7 @@ summaryPoint4: La Fusione ha ridotto il consumo energetico di Ethereum di circa 
 
 ## In cosa ha consistito la Fusione? {#what-is-the-merge}
 
-La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la Rete principale che esisteva dalla [genesi](/history/#frontier)) con il suo nuovo livello di consenso di Proof of stake, la Beacon Chain. Ha eliminato la necessità di grandi quantità di energia richieste dal processo di mining, consentendo invece di proteggere la rete utilizzando l'ETH in staking. È stato un passo davvero emozionante nel realizzare la visione di Ethereum: maggiori scalabilità, sicurezza e sostenibilità.
+La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la Rete principale che esisteva dalla [genesi](/ethereum-forks/#frontier)) con il suo nuovo livello di consenso di Proof of stake, la Beacon Chain. Ha eliminato la necessità di grandi quantità di energia richieste dal processo di mining, consentendo invece di proteggere la rete utilizzando l'ETH in staking. È stato un passo davvero emozionante nel realizzare la visione di Ethereum: maggiori scalabilità, sicurezza e sostenibilità.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ La Fusione ha rappresentato il passaggio ufficiale all'uso della Beacon Chain co
 
 Con La Fusione, la cronologia non è andata perduta. Quando la Rete principale si è fusa con la Beacon Chain, ha unito anche l'intera cronologia delle transazioni di Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Questa transizione al Proof of stake ha cambiato il metodo di emissione dell'ether. Scopri di più sull'[emissione di ether prima e dopo La Fusione](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Utenti e detentori {#users-holders}
 
@@ -118,7 +122,7 @@ La Fusione ha inoltre gettato le basi per ulteriori aggiornamenti di scalabilit�
 
 <ExpandableCard
 title="Equivoci: &quot;Eseguire un nodo richiede lo staking di 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Esistono due tipi di nodi di Ethereum: i nodi che possono proporre blocchi e quelli che non possono.
 

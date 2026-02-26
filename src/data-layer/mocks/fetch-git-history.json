@@ -1,0 +1,30 @@
+[
+  {
+    "commit": {
+      "author": {
+        "name": "Corwin Smith",
+        "email": "cssmittys@gmail.com",
+        "date": "2025-12-10T18:15:34Z"
+      }
+    },
+    "author": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/15589226?v=4",
+      "login": "corwintines",
+      "html_url": "https://github.com/corwintines"
+    }
+  },
+  {
+    "commit": {
+      "author": {
+        "name": "Pablo Pettinari",
+        "email": "pettinarip@gmail.com",
+        "date": "2025-12-10T16:53:22Z"
+      }
+    },
+    "author": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/468158?v=4",
+      "login": "pettinarip",
+      "html_url": "https://github.com/pettinarip"
+    }
+  }
+]

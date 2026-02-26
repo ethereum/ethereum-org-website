@@ -24,16 +24,18 @@ const SlotCountdownChart = ({ children }: { children: string }) => {
   }, [])
 
   return (
-    <RadialChart
-      value={timeToNextBlock}
-      totalValue={12}
-      displayValue={new Intl.NumberFormat(locale, {
-        style: "unit",
-        unit: "second",
-        unitDisplay: "narrow",
-      }).format(timeToNextBlock)}
-      label={children}
-    />
+    <div className="pb-8 pt-4">
+      <RadialChart
+        value={timeToNextBlock}
+        totalValue={12}
+        displayValue={new Intl.NumberFormat(locale, {
+          style: "unit",
+          unit: "second",
+          unitDisplay: "narrow",
+        }).format(timeToNextBlock)}
+        label={children}
+      />
+    </div>
   )
 }
 

@@ -52,7 +52,7 @@ Read more about the [benefits of running your own node](/developers/docs/nodes-a
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
 - [**Alchemy**](https://alchemy.com/)
-  - [Docs](https://docs.alchemyapi.io/)
+  - [Docs](https://www.alchemy.com/docs/)
   - Features
     - Largest free tier with 300M compute units per month (~30M getLatestBlock requests)
     - Multichain support for Polygon, Starknet, Optimism, Arbitrum
@@ -226,14 +226,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - 500+ administrative and service APIs
     - RESTful interface for Ethereum transaction submission (Apache Kafka backed)
     - Outbound streams for event delivery (Apache Kafka backed)
-    - Deep collection of "offchain" and ancillary services (e.g. bilateral encrypted messaging transport)
+    - Deep collection of "offchain" and ancillary services (e.g., bilateral encrypted messaging transport)
     - Straightforward network onboarding with governance and role-based access control
     - Sophisticated user management for both administrators and end users
     - Highly scalable, resilient, enterprise-grade infrastructure
     - Cloud HSM private key management
     - Ethereum Mainnet Tethering
     - ISO 27k and SOC 2, Type 2 certifications
-    - Dynamic runtime configuration (e.g. adding cloud integrations, altering node ingresses, etc.)
+    - Dynamic runtime configuration (e.g., adding cloud integrations, altering node ingresses, etc.)
     - Support for multi-cloud, multi-region and hybrid deployment orchestrations
     - Simple hourly SaaS-based pricing
     - SLAs and 24x7 support

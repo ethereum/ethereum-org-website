@@ -1,7 +1,7 @@
 ---
-title: Často kladené otázky (FAQ) o překladatelském programu
+title: "Často kladené otázky (FAQ) o překladatelském programu"
 lang: cs
-description: Často kladené otázky týkající se překladatelského programu stránky ethereum.org
+description: "Často kladené otázky týkající se překladatelského programu stránky ethereum.org"
 ---
 
 # Průvodce překladem ethereum.org {#translating-ethereum-guide}
@@ -18,20 +18,20 @@ Cílem překladatelského programu je zpřístupnit obsah Etherea všem bez ohle
 
 Z tohoto důvodu je překladatelský program otevřený a dobrovolný a účast v něm není podmíněna finanční odměnou. Pokud bychom měli překladatele kompenzovat za počet přeložených slov, mohli bychom do překladatelského programu pozvat pouze ty, kteří mají dostatečné překladatelské zkušenosti (profesionální překladatele). Tím by se překladatelský program stal uzavřeným a nedosáhli bychom vytyčených cílů, konkrétně: umožnit všem účastnit se a zapojit se do ekosystému.
 
-Vynakládáme veškeré úsilí, abychom našim přispěvatelům umožnili uspět v ekosystému Etherea; existuje mnoho nepeněžních pobídek, jako např.: [nabízíme POAPy](/contributing/translation-program/acknowledgements/#poap) a [certifikát překladatele](/contributing/translation-program/acknowledgements/#certificate), stejně jako organizujeme [Žebříčky překladatelů](/contributing/translation-program/acknowledgements/) a [seznam všech našich překladatelů na webu](/contributing/translation-program/contributors/).
+Snažíme se našim přispěvatelům umožnit uspět v ekosystému Ethereum; máme zavedeno mnoho nepeněžních pobídek, jako jsou: [nabídka POAP](/contributing/translation-program/acknowledgements/#poap) a [certifikát překladatele](/contributing/translation-program/acknowledgements/#certificate), stejně jako organizování [žebříčků překladatelů](/contributing/translation-program/acknowledgements/) a [uvedení všech našich překladatelů na webu](/contributing/translation-program/contributors/).
 
-## Jak překládat řetězce s `<HTML značkami>`? {#tags}
+## Jak mám překládat řetězce s `<HTML značkami>`? {#tags}
 
-Ne každý řetězec je čistě v textové podobě. Některé řetězce obsahují i kód, jako jsou HTML značky (`<0>`, `</0>`).To obyčejně označuje hypertextové odkazy nebo vložené styly ve větě.
+Ne každý řetězec je čistě v textové podobě. Některé řetězce se skládají ze smíšených skriptů, jako jsou HTML značky (`<0>`, `</0>`). Obvykle se jedná o hypertextové odkazy nebo alternativní styl uprostřed věty.
 
-- Přeložte text mezi značkami, ale ne samotné značky. To, co se nachází mezi `<` a `>`, nesmí být přeloženo ani odstraněno.
+- Přeložte text mezi značkami, ale ne samotné značky. Cokoli mezi znaky `<` a `>` se nesmí překládat ani odstraňovat.
 - Pro jistotu doporučujeme kliknout na tlačítko „Kopírovat zdroj“ vlevo dole. To zkopíruje původní řetězec a vloží jej do textového pole. To vám pomůže si ujasnit, kde jsou značky, a pomáhá vám vyhnout se chybám.
 
 ![Rozhraní Crowdin se zvýrazněným tlačítkem Kopírovat zdroj](./html-tag-strings.png)
 
 Umístění značek v řetězci můžete přesunout, aby překlad ve vašem jazyce zněl přirozeněji. Jen se ujistěte, že přesouváte celou značku.
 
-Podrobnější informace o práci se štítky a úryvky kódu naleznete v [průvodci stylem překladu ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
+Pro podrobnější informace o práci se značkami a úryvky kódu se prosím podívejte do [Průvodce stylem překladu ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
 
 ## Odkud tyto řetězce jsou? {#strings}
 
@@ -42,7 +42,7 @@ Podrobnější informace o práci se štítky a úryvky kódu naleznete v [prův
 
 ![Ukázka toho, jak lze poskytnout kontext pro řetězec pomocí snímku obrazovky](./source-string.png)
 
-![Pro kontext přidán ukázkový snímek obrazovky](./source-string-2.png)
+![Příklad snímku obrazovky přidaný pro kontext](./source-string-2.png)
 
 ## Jak mohu zanechat komentář nebo položit otázku? Rád/a bych upozornil na problém nebo překlepy… {#comment}
 
@@ -52,11 +52,11 @@ Pokud chcete upozornit na určitý řetězec, který vyžaduje pozornost, může
 - Po odeslání bude problém nahlášen našemu týmu. Problém opravíme a dáme vám vědět odpovědí na váš komentář a uzavřením problému.
 - Pokud nahlásíte nesprávný překlad, bude překlad a vámi navržená alternativa při příští kontrole zkontrolována rodilým mluvčím.
 
-![Ukázka toho, jak vznášet připomínky a otázky](./comment-issue.png)
+![Ukázka, jak vytvářet připomínky a hlášení](./comment-issue.png)
 
 ## Co je překladová paměť (PP)? {#translation-memory}
 
-Překladová paměť (PP) je funkce Crowdinu, která ukládá všechny dříve přeložené řetězce na [ethereum.org](https://ethereum.org/). Když je řetězec přeložen, automaticky se uloží do PP našeho projektu. Může to být užitečný nástroj, který vám pomůže ušetřit čas!
+Překladová paměť (PP) je funkce Crowdinu, která ukládá všechny dříve přeložené řetězce na ethereum.org. Když je řetězec přeložen, automaticky se uloží do PP našeho projektu. Může to být užitečný nástroj, který vám pomůže ušetřit čas!
 
 - Podívejte se do sekce „Návrhy PP a SP“ a uvidíte, jak stejný nebo podobný řetězec přeložili jiní překladatelé. Pokud naleznete návrh s vysokou mírou shody, neváhejte na překlad odkázat kliknutím.
 - Pokud v seznamu nic není, můžete v PP vyhledat dříve vytvořené překlady a znovu je použít pro zajištění konzistence.
@@ -71,7 +71,7 @@ Nejlepším místem pro objasnění pojmů a definic je glosář Crowdinu. Na gl
 
 - Když ve zdrojovém řetězci najdete podtržený výraz, můžete na něj najet myší a zobrazit jeho stručnou definici.
 
-![Příklad definice v glosáři](./glossary-definition.png)
+![Příklad definice z glosáře](./glossary-definition.png)
 
 - Dále, pokud uvidíte termín, který vám není známý, ale není podtržený, můžete hledat v kartě glosáře (třetí tlačítko v pravém sloupci). Najdete zde vysvětlení konkrétních a v projektu často používaných pojmů.
 
@@ -79,9 +79,9 @@ Nejlepším místem pro objasnění pojmů a definic je glosář Crowdinu. Na gl
 
 - Pokud ho stále nemůžete najít, máte šanci přidat nový termín! Doporučujeme vám, abyste si ho vyhledali ve vyhledávači a přidali jeho popis do glosáře. Ostatním překladatelům to velmi pomůže lépe porozumět tomuto termínu.
 
-![Snímek obrazovky, který ukazuje, jak přidat termín do Crowdin glosáře](./add-glossary-term.png)
+![Snímek obrazovky ukazující, jak přidat termín do glosáře v Crowdinu](./add-glossary-term.png)
 
-### Politika překladu terminologie {#terminology}
+### Zásady překladu terminologie {#terminology}
 
 _Pro názvy (značek, firem, lidí) a nové technologické termíny (Beacon Chain, shard chains atd.)_
 
@@ -104,16 +104,16 @@ Doporučujeme ponechat názvy značek, firem a zaměstnanců nepřeložené, pro
 
 Abychom zajistili určitou úroveň kvality a konzistence našich překladů, spolupracujeme s [Acolad](https://www.acolad.com/), jedním z největších poskytovatelů jazykových služeb na světě. Acolad má 20 000 profesionálních lingvistů, což znamená, že může poskytnout profesionální revizory pro každý jazyk a typ obsahu, který potřebujeme.
 
-Proces revize je jednoduchý; jakmile je určitá [obsahová kategorie](/contributing/translation-program/content-buckets) přeložena na 100 %, objednáme její revizi. Proces revize probíhá přímo v Crowdinu. Jakmile je revize dokončena, aktualizujeme webové stránky s přeloženým obsahem.
+Proces revize je jednoduchý; jakmile je sada obsahu přeložena na 100 %, objednáme revizi pro danou obsahovou kategorii. Proces revize probíhá přímo v Crowdinu. Jakmile je revize dokončena, aktualizujeme webové stránky s přeloženým obsahem.
 
 ## Jak přidám obsah ve svém jazyce? {#adding-foreign-language-content}
 
 V současné době je veškerý neanglický obsah překládán přímo z anglického zdrojového obsahu a obsah, který neexistuje v angličtině, nelze přidat do jiných jazyků.
 
-Chcete-li navrhnout nový obsah pro ethereum.org, můžete [vytvořit problém](https://github.com/ethereum/ethereum-org-website/issues) na GitHubu. V případě přidání bude obsah sepsán v angličtině a přeložen do dalších jazyků přes Crowdin.
+Chcete-li navrhnout nový obsah pro ethereum.org, můžete [vytvořit hlášení](https://github.com/ethereum/ethereum-org-website/issues) na GitHubu. V případě přidání bude obsah sepsán v angličtině a přeložen do dalších jazyků přes Crowdin.
 
 V blízké budoucnosti plánujeme přidat podporu pro přidávání jiného než anglického obsahu.
 
 ## Kontaktujte nás {#contact}
 
-Děkujeme, že jste si všechno přečetli. Doufáme, že vám to pomůže při nástupu do našeho programu. Neváhejte se připojit k našemu [překladatelskému kanálu na Discordu](https://discord.gg/ethereum-org) a klást otázky a spolupracovat s ostatními překladateli, nebo nás kontaktujte na adrese translations@ethereum.org!
+Děkujeme, že jste si všechno přečetli. Doufáme, že vám to pomůže při nástupu do našeho programu. Neváhejte se připojit k našemu [překladatelskému kanálu na Discordu](https://discord.gg/ethereum-org), kde můžete klást otázky a spolupracovat s ostatními překladateli, nebo nás kontaktujte na adrese translations@ethereum.org!

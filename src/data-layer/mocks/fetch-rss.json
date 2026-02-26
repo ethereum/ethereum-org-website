@@ -1,0 +1,161 @@
+[
+  [
+    {
+      "pubDate": "Tue, 25 Nov 2025 00:00:00 +0000",
+      "title": "Plinko PIR tutorial",
+      "link": "https://vitalik.ca/general/2025/11/25/plinko.html",
+      "imgSrc": "http://vitalik.ca/images/icon.png",
+      "source": "Vitalik Buterin's website",
+      "sourceUrl": "https://vitalik.ca/",
+      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+    },
+    {
+      "pubDate": "Fri, 07 Nov 2025 00:00:00 +0000",
+      "title": "Galaxy brain resistance",
+      "link": "https://vitalik.ca/general/2025/11/07/galaxybrain.html",
+      "imgSrc": "http://vitalik.ca/images/icon.png",
+      "source": "Vitalik Buterin's website",
+      "sourceUrl": "https://vitalik.ca/",
+      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Thu, 04 Dec 2025 00:00:00 GMT",
+      "title": "Devconnect Argentina Recap",
+      "link": "https://blog.ethereum.org/en/2025/12/04/devconnect-arg-wrap",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_1c3b8dfb30c6ab02602f40f675d59422.jpeg",
+      "source": "Ethereum Foundation Blog",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/en/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 02 Dec 2025 00:00:00 GMT",
+      "title": "Allocation Update - Q3 2025",
+      "link": "https://blog.ethereum.org/en/2025/12/02/allocation-q3-25",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_fd63dc334e72e1c2885cb7969adc1faf.jpg",
+      "source": "Ethereum Foundation Blog",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/en/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Wed, 03 Dec 2025 00:00:00 GMT",
+      "title": "Announcing Live Custody Monitoring for PeerDAS",
+      "link": "https://ethpandaops.io/posts/live-custody-monitoring-peerdas/",
+      "imgSrc": "https://ethpandaops.io/img/blog/announcing-dasmon.png",
+      "source": "ethPandaOps Blog",
+      "sourceUrl": "https://ethpandaops.io/posts/",
+      "sourceFeedUrl": "https://ethpandaops.io/posts/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 14 Nov 2025 00:00:00 GMT",
+      "title": "Introducing The Lab",
+      "link": "https://ethpandaops.io/posts/the-lab/",
+      "imgSrc": "https://ethpandaops.io/img/blog/the-new-lab/header.png",
+      "source": "ethPandaOps Blog",
+      "sourceUrl": "https://ethpandaops.io/posts/",
+      "sourceFeedUrl": "https://ethpandaops.io/posts/rss.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Mon, 27 Oct 2025 10:23:24 GMT",
+      "title": "Making Sense of a ZK Staking Node",
+      "link": "https://paragraph.com/@ethstaker/making-sense-of-a-zk-staking-node",
+      "imgSrc": "https://watch.protocol.berlin&quot;,&quot;description&quot;:&quot;Without clear goals for what our network should provide, we end up optimising for our means rather than for our ends. In this talk, I'll discuss the goals of our network - scale, hardness, verifiability and censorship-resistance - and how some of the means (\\&quot;local building\\&quot;, \\&quot;solo staking\\&quot;) should be re-evaluated in light of their contributions to these goals, given advances in protocol research.&quot;,&quot;title&quot;:&quot;What we want from our nodes&quot;,&quot;thumbnail_width&quot;:1280,&quot;url&quot;:&quot;https://watch.protocol.berlin/65a90bf47932ebe436ba9351/watch?session=6858d70d90bd41297b7bc45d&quot;,&quot;thumbnail_url&quot;:&quot;https://storage.googleapis.com/papyrus_images/5040d0969c85a369a71fbf7bfa2d26fd43f4129f454329d478e62a8b6016925f.jpg",
+      "source": "ethstaker",
+      "sourceUrl": "https://paragraph.com/@ethstaker",
+      "sourceFeedUrl": "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml"
+    },
+    {
+      "pubDate": "Tue, 29 Jul 2025 18:31:18 GMT",
+      "title": "2025 Staking Survey Results",
+      "link": "https://paragraph.com/@ethstaker/staking-survey-2025",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/db4017de64f4be77f2acd1bae1dc5875.png",
+      "source": "ethstaker",
+      "sourceUrl": "https://paragraph.com/@ethstaker",
+      "sourceFeedUrl": "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Thu, 04 Dec 2025 00:00:00 GMT",
+      "title": "Solidity Summit 2025 Recap",
+      "link": "https://soliditylang.org///blog/2025/12/04/solidity-summit-2025-recap",
+      "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
+      "source": "Solidity Lang Blog",
+      "sourceUrl": "https://soliditylang.org/",
+      "sourceFeedUrl": "https://soliditylang.org/feed.xml"
+    },
+    {
+      "pubDate": "Wed, 03 Dec 2025 00:00:00 GMT",
+      "title": "Solidity 0.8.31 Release Announcement",
+      "link": "https://soliditylang.org///blog/2025/12/03/solidity-0.8.31-release-announcement",
+      "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
+      "source": "Solidity Lang Blog",
+      "sourceUrl": "https://soliditylang.org/",
+      "sourceFeedUrl": "https://soliditylang.org/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Mon, 26 May 2025 17:52:38 GMT",
+      "title": "We're moving! 👋 ",
+      "link": "https://paragraph.com/@privacy-scaling-explorations/we-re-moving",
+      "source": "Privacy and Scaling Explorations",
+      "sourceUrl": "https://paragraph.com/@privacy-scaling-explorations",
+      "sourceFeedUrl": "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom"
+    },
+    {
+      "pubDate": "Mon, 07 Apr 2025 11:58:40 GMT",
+      "title": "Code Optimizations in the Landscape of Post-Quantum Cryptography",
+      "link": "https://paragraph.com/@privacy-scaling-explorations/code-optimizations-in-the-landscape-of-post-quantum-cryptography",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/135ee851eb93742b292de6194b3dd99e9ff593201202de6678f8e539eb3c05bc.png",
+      "source": "Privacy and Scaling Explorations",
+      "sourceUrl": "https://paragraph.com/@privacy-scaling-explorations",
+      "sourceFeedUrl": "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom"
+    }
+  ],
+  [
+    {
+      "pubDate": "Wed, 30 Jul 2025 17:23:39 GMT",
+      "title": "Happy 10 years of community building with Ethereum!!",
+      "link": "https://medium.com/ethereum-cat-herders/happy-10-years-of-community-building-with-ethereum-7786bfff67c6?source=rss----cb99bef2c5dc---4",
+      "imgSrc": "https://cdn-images-1.medium.com/max/1024/1*RdyIAn70mZa9N9SukJ1Vlg.png",
+      "source": "EthCatHerders - Medium",
+      "sourceUrl": "https://medium.com/ethereum-cat-herders?source=rss----cb99bef2c5dc---4",
+      "sourceFeedUrl": "https://medium.com/feed/ethereum-cat-herders"
+    },
+    {
+      "pubDate": "Tue, 06 May 2025 23:02:00 GMT",
+      "title": "It’s Pectra Time!",
+      "link": "https://medium.com/ethereum-cat-herders/its-pectra-time-0cf5561f662c?source=rss----cb99bef2c5dc---4",
+      "imgSrc": "https://cdn-images-1.medium.com/max/1024/1*sCDRZdHLR2DX32DyCUipNA.png",
+      "source": "EthCatHerders - Medium",
+      "sourceUrl": "https://medium.com/ethereum-cat-herders?source=rss----cb99bef2c5dc---4",
+      "sourceFeedUrl": "https://medium.com/feed/ethereum-cat-herders"
+    }
+  ],
+  [
+    {
+      "pubDate": "Fri, 12 Dec 2025 00:00:00 GMT",
+      "title": "Local Ethereum #11",
+      "link": "https://geodework.com/blog/local-ethereum-11",
+      "imgSrc": "https://geodework.com/og?title=Geode%20Labs%20Blog",
+      "source": "Geode Labs Blog",
+      "sourceUrl": "https://geodework.com",
+      "sourceFeedUrl": "https://geodework.com/feed.xml"
+    },
+    {
+      "pubDate": "Fri, 05 Dec 2025 12:00:00 GMT",
+      "title": "Philippines Ethereum Ecosystem Overview",
+      "link": "https://geodework.com/blog/philippines-ethereum-ecosystem-overview",
+      "imgSrc": "https://geodework.com/og?title=Geode%20Labs%20Blog",
+      "source": "Geode Labs Blog",
+      "sourceUrl": "https://geodework.com",
+      "sourceFeedUrl": "https://geodework.com/feed.xml"
+    }
+  ]
+]

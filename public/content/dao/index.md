@@ -49,7 +49,7 @@ To help this make more sense, here's a few examples of how you could use a DAO:
 
 ## How do DAOs work? {#how-daos-work}
 
-The backbone of a DAO is its [smart contract](/glossary/#smart-contract), which defines the rules of the organization and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead, the group makes decisions collectively, and payments are automatically authorized when votes pass.
+The backbone of a DAO is its [smart contract](/glossary/#smart-contract), which defines the rules of the organization and holds the group's treasury. Once the contract is live on [Ethereum](/), no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead, the group makes decisions collectively, and payments are automatically authorized when votes pass.
 
 This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
 
@@ -134,13 +134,13 @@ _Typically used for decentralized development and governance of protocols and [d
 
 - [Ethereum community DAOs](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus's list of DAOs](https://app.daohaus.club/explore)
-- [Tally.xyz list of DAOs](https://www.tally.xyz)
+- [Tally.xyz list of DAOs](https://www.tally.xyz/explore)
 - [DeGov.AI list of DAOs](https://apps.degov.ai/)
 
 ### Start a DAO {#start-a-dao}
 
 - [Summon a DAO with DAOHaus](https://app.daohaus.club/summon)
-- [Start a Governor DAO with Tally](https://www.tally.xyz/add-a-dao)
+- [Start a Governor DAO with Tally](https://www.tally.xyz/get-started)
 - [Create an Aragon-powered DAO](https://aragon.org/product)
 - [Start a colony](https://colony.io/)
 - [Create a DAO with DAOstack's holographic consensus](https://alchemy.daostack.io/daos/create)

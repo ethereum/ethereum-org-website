@@ -68,8 +68,6 @@ Ethereum.org 是一個開源專案，擁有超過 **12000 名**貢獻者，幫�
 - 我們的[風格指南](/contributing/style-guide/)
 - 我們的[行為準則](/community/code-of-conduct)
 
-<ContributorsQuizBanner className="mt-16 mb-8" />
-
 ## 如何做出有關網站的決定 {#how-decisions-about-the-site-are-made}
 
 有關個人提取請求、設計演進和主要更新的決定由來自整個以太坊生態系統的人員組成的團隊作出。 該團隊包括專案管理人、開發者、設計師、市場和溝通部門，以及內容專家。 社群意見為每個決定提供參考：因此，請在議題中提出問題、提交提取請求或聯絡團隊：

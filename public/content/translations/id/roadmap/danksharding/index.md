@@ -53,9 +53,9 @@ Jika seseorang mengetahui lokasi acak yang digunakan untuk komitmen, maka akan m
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Baik Danksharding maupun Proto-Danksharding tidak mengikuti model "pecahan" tradisional yang bertujuan untuk membagi rantai blok menjadi beberapa bagian. Rantai pecahan tidak lagi menjadi bagian dari peta perjalanan. Sebagai gantinya, Danksharding menggunakan pengambilan sampel data terdistribusi di seluruh blob untuk menskalakan Ethereum. Ini jauh lebih sederhana untuk diterapkan. Model ini kadang-kadang disebut sebagai "data-pecahan".
-</InfoBanner>
+</Alert>
 
 ## Apa yang dimaksud dengan Danksharding? {#what-is-danksharding}
 

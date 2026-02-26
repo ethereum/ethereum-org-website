@@ -138,7 +138,7 @@ Pertimbangkan membuat layanan untuk menjalankan klien Anda secara otomatis saat 
 
 #### Memperbarui klien {#updating-client}
 
-Anda perlu menjaga perangkat lunak klien Anda dalam versi terkini dengan patch keamanan, fitur-fitur, dan [EIPs](/eips/) terbaru. Terutama sebelum [fork keras](/history/), pastikan Anda menjalankan versi klien yang benar.
+Anda perlu menjaga perangkat lunak klien Anda dalam versi terkini dengan patch keamanan, fitur-fitur, dan [EIPs](/eips/) terbaru. Terutama sebelum [fork keras](/ethereum-forks/), pastikan Anda menjalankan versi klien yang benar.
 
 #### Menjalankan layanan tambahan {#running-additional-services}
 

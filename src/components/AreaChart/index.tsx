@@ -11,9 +11,9 @@ import {
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import {
@@ -66,7 +66,11 @@ export function AreaChart({
     <Card>
       <CardHeader>
         {title && <CardTitle>{title}</CardTitle>}
-        {description && <CardDescription>{description}</CardDescription>}
+        {description && (
+          <CardParagraph variant="light" size="sm">
+            {description}
+          </CardParagraph>
+        )}
       </CardHeader>
       <CardContent>
         <ChartContainer config={defaultChartConfig}>

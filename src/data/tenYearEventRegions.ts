@@ -997,7 +997,7 @@ const tenYearEventRegions: Record<
       {
         host: "10 years of ETHEREUM Da Nang",
         eventLink: "https://lu.ma/t3vnzx07",
-        city: "De Nang",
+        city: "Da Nang",
         country: "Vietnam",
         countryFlag: "🇻🇳",
       },

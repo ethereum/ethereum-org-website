@@ -1,19 +1,19 @@
 ---
-title: 面向 Elixir 开发者的以太坊
-description: 了解如何使用基于 Elixir 的项目和工具为以太坊开发。
+title: "面向 Elixir 开发者的以太坊"
+description: "了解如何使用基于 Elixir 的项目和工具为以太坊开发。"
 lang: zh
 incomplete: false
 ---
 
 <FeaturedText>了解如何使用基于 Elixir 的项目和工具为以太坊开发。</FeaturedText>
 
-使用以太坊来创建去中心化应用程序（或称“dapp”），发挥加密货币和区块链技术的优势。 这些去中心化应用程序可以去信任，这意味着在部署到以太坊后，它们将始终按程序设定运行。 去中心化应用程序可以控制数字资产，从而创建新类型的金融应用程序。 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
+使用以太坊来创建去中心化应用程序，发挥加密货币和区块链技术的优势。 这些去中心化应用程序可以去信任，这意味着在部署到以太坊后，它们将始终按程序设定运行。 去中心化应用程序可以控制数字资产，从而创建新类型的金融应用程序。 它们可以是去中心化的，即没有任何单一实体或个人控制它们，而且它们几乎不可能被审查。
 
 ## 从学习智能合约和 Solidity 语言入手 {#getting-started-with-smart-contracts-and-solidity}
 
 **迈出将 Elixir 与以太坊集成的第一步**
 
-需要更基础的入门知识？ 查看 [ethereum.org/learn](/learn/) 或 [ethereum.org/developers](/developers/)。
+想对以太坊有更加全面的认识？ 查看 [ethereum.org/learn](/learn/) 或 [ethereum.org/developers](/developers/)。
 
 - [区块链解析](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [了解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -49,7 +49,7 @@ incomplete: false
 - [exw3](https://github.com/hswick/exw3) - _用于 Elixir 的高级以太坊远程过程调用 (RPC) 客户端_
 - [mana](https://github.com/mana-ethereum/mana) - _一个用 Elixir 编写的以太坊全节点实现_
 
-想要获取更多的资源？ 访问[我们的开发者首页](/developers/)。
+正在寻找更多资源？ 访问[我们的开发者首页](/developers/)。
 
 ## Elixir 社区贡献者 {#elixir-community-contributors}
 

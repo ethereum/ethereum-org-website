@@ -14,6 +14,37 @@ interface FilterProps {
   onChange: (updatedFilter: FilterOption) => void
 }
 
+const arePropsEqual = (prevProps: FilterProps, nextProps: FilterProps) => {
+  if (prevProps.filterIndex !== nextProps.filterIndex) return false
+  if (prevProps.filter.title !== nextProps.filter.title) return false
+  if (prevProps.filter.showFilterOption !== nextProps.filter.showFilterOption)
+    return false
+
+  const prevItems = prevProps.filter.items
+  const nextItems = nextProps.filter.items
+
+  if (prevItems.length !== nextItems.length) return false
+
+  for (let i = 0; i < prevItems.length; i++) {
+    const prevItem = prevItems[i]
+    const nextItem = nextItems[i]
+
+    if (prevItem.filterKey !== nextItem.filterKey) return false
+    if (prevItem.inputState !== nextItem.inputState) return false
+
+    if (prevItem.options.length !== nextItem.options.length) return false
+
+    for (let j = 0; j < prevItem.options.length; j++) {
+      if (prevItem.options[j].filterKey !== nextItem.options[j].filterKey)
+        return false
+      if (prevItem.options[j].inputState !== nextItem.options[j].inputState)
+        return false
+    }
+  }
+
+  return true
+}
+
 const Filter = ({ filter, filterIndex, onChange }: FilterProps) => {
   const handleChange = (
     _: number,
@@ -110,4 +141,4 @@ const Filter = ({ filter, filterIndex, onChange }: FilterProps) => {
   )
 }
 
-export default memo(Filter)
+export default memo(Filter, arePropsEqual)

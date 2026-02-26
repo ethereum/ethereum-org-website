@@ -167,6 +167,6 @@ The Merge was the moment when Ethereum switched off its proof-of-work-based cons
 
 ## What are liveness and safety? {#what-are-liveness-and-safety}
 
-Liveness and safety are the two fundamental security concerns for a blockchain. Liveness is the availability of a finalizing chain. If the chain stops finalizing or users are not able to access it easily, those are liveness failures. Extremely high cost of access could also be considered a liveness failure. Safety refers to how difficult it is to attack the chain - i.e. finalize conflicting checkpoints.
+Liveness and safety are the two fundamental security concerns for a blockchain. Liveness is the availability of a finalizing chain. If the chain stops finalizing or users are not able to access it easily, those are liveness failures. Extremely high cost of access could also be considered a liveness failure. Safety refers to how difficult it is to attack the chain - i.e., finalize conflicting checkpoints.
 
 [Read more in the Casper paper](https://arxiv.org/pdf/1710.09437.pdf)

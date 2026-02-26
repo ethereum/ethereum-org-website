@@ -14,6 +14,12 @@ import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import {
+  HighlightCard,
+  HighlightCardContent,
+  HighlightStack,
+  IconBox,
+} from "@/components/HighlightCard"
 import { Image } from "@/components/Image"
 import { Emphasis, Strong } from "@/components/IntlStringElements"
 import ListenToPlayer from "@/components/ListenToPlayer/server"
@@ -25,10 +31,11 @@ import Link, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
+
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
 import WhatIsEthereumPageJsonLD from "./page-jsonld"
 
@@ -40,49 +47,6 @@ import networksBanner from "@/public/images/heroes/learn-hub-hero.png"
 import etherBanner from "@/public/images/impact_transparent.png"
 import whenWhoBanner from "@/public/images/translatathon/walking.png"
 import heroImg from "@/public/images/what-is-ethereum.png"
-
-const IconBox = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn(
-      "grid size-20 place-items-center rounded-2xl border p-6 shadow-window-box [&_svg]:size-8",
-      className
-    )}
-    {...props}
-  />
-)
-
-const HighlightStack = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn(
-      "divide-y [&>div:first-child]:pt-0 [&>div:last-child]:pb-0 [&>div]:py-8",
-      className
-    )}
-    {...props}
-  />
-)
-
-const HighlightCard = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn("flex flex-col gap-4 pb-8 lg:flex-row", className)}
-    {...props}
-  />
-)
-
-const HighlightCardContent = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("space-y-6 text-body-medium", className)} {...props} />
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
@@ -168,6 +132,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <p>
                 {t.rich("page-what-is-ethereum-ethereum-intro-1", {
                   strong: Strong,
+                  a: (chunks) => <Link href="/">{chunks}</Link>,
                 })}
               </p>
               <p>
@@ -804,20 +769,18 @@ const Page = async ({ params }: { params: PageParams }) => {
                   <div className="space-y-6">
                     <p>{t("page-what-is-ethereum-start-business-desc-1")}</p>
                     <p>{t("page-what-is-ethereum-start-business-desc-2")} </p>
-                    <p>
-                      {t("page-what-is-ethereum-start-business-desc-3")}
-                      <UnorderedList className="[&>li]:mb-0">
-                        <ListItem>
-                          {t("page-what-is-ethereum-start-business-benefit-1")}
-                        </ListItem>
-                        <ListItem>
-                          {t("page-what-is-ethereum-start-business-benefit-2")}
-                        </ListItem>
-                        <ListItem>
-                          {t("page-what-is-ethereum-start-business-benefit-3")}
-                        </ListItem>
-                      </UnorderedList>
-                    </p>
+                    <p>{t("page-what-is-ethereum-start-business-desc-3")}</p>
+                    <UnorderedList className="[&>li]:mb-0">
+                      <ListItem>
+                        {t("page-what-is-ethereum-start-business-benefit-1")}
+                      </ListItem>
+                      <ListItem>
+                        {t("page-what-is-ethereum-start-business-benefit-2")}
+                      </ListItem>
+                      <ListItem>
+                        {t("page-what-is-ethereum-start-business-benefit-3")}
+                      </ListItem>
+                    </UnorderedList>
                     <p>
                       {t.rich("page-what-is-ethereum-start-business-example", {
                         a: (chunks) => (
@@ -828,7 +791,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                       })}
                     </p>
                   </div>
-                  <ButtonLink href="/enterprise/">
+                  <ButtonLink href={ENTERPRISE_ETHEREUM_URL}>
                     {t("page-what-is-ethereum-start-business-cta")}
                   </ButtonLink>
                 </CardContent>
@@ -1040,7 +1003,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                     </p>
                     <p>{t("page-what-is-ethereum-when-who-governance-4")}</p>
                   </div>
-                  <LinkWithArrow href="/history/">
+                  <LinkWithArrow href="/ethereum-history-founder-and-ownership/">
                     {t("page-what-is-ethereum-when-who-learn-more")}
                   </LinkWithArrow>
                 </div>

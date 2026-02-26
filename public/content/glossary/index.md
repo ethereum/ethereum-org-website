@@ -118,6 +118,8 @@ lang: en
 
 <GlossaryDefinition term="dao" />
 
+<GlossaryDefinition term="desci" />
+
 <GlossaryDefinition term="dex" />
 
 <GlossaryDefinition term="deposit-contract" />
@@ -492,7 +494,7 @@ lang: en
 
 ## Sources {#sources}
 
-_Provided in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA_
+_Provided in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) under CC-BY-SA_
 
 <Divider />
 

@@ -15,7 +15,7 @@ Beberapa contoh kuis saat ini dapat ditemukan di sini:
 - [Lapisan 2](/layer-2)
 - [NFT](/nft/)
 - [Apa itu Ethereum?](/what-is-ethereum/)
-- [Apa itu ETH?](/eth/)
+- [Apa itu ETH?](/what-is-ether/)
 
 ## Menambahkan kuis pembelajaran
 

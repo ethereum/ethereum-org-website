@@ -3,7 +3,6 @@
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
 import { ArrowRight, ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import { MatomoEventOptions } from "@/lib/types"
 
@@ -46,13 +45,13 @@ export type LinkProps = BaseProps &
  * Link wrapper which handles:
  *
  * - Hashed links
- * e.g. <Link href="/page-2/#specific-section">
+ * e.g., <Link href="/page-2/#specific-section">
  *
  * - External links
- * e.g. <Link href="https://example.com/">
+ * e.g., <Link href="https://example.com/">
  *
  * - PDFs & static files (which open in a new tab)
- * e.g. <Link href="/eth-whitepaper.pdf">
+ * e.g., <Link href="/eth-whitepaper.pdf">
  */
 export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   {
@@ -63,6 +62,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     isPartiallyActive = true,
     activeClassName = "text-primary",
     customEventOptions,
+    onClick,
     ...props
   }: LinkProps,
   ref
@@ -99,22 +99,29 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     href,
   }
 
+  // Create click handler that tracks events and calls any passed onClick
+  const createClickHandler =
+    (eventName: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      trackCustomEvent(
+        customEventOptions ?? {
+          eventCategory: "Link",
+          eventAction: "Clicked",
+          eventName: `${eventName} - ${href}`,
+        }
+      )
+      onClick?.(e)
+    }
+
   if (isExternal) {
+    const { className, ...rest } = commonProps
+
     return (
       <a
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() =>
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: `Link`,
-              eventAction: `Clicked`,
-              eventName: "Clicked on external link",
-              eventValue: href,
-            }
-          )
-        }
-        {...commonProps}
+        {...rest}
+        onClick={createClickHandler("Clicked on external link")}
+        className={cn("relative", className)}
       >
         {isMailto ? (
           <span className="text-nowrap">
@@ -126,9 +133,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         ) : (
           children
         )}
-        <VisuallyHidden>
+        <span className="sr-only">
           {isMailto ? "opens email client" : "opens in a new tab"}
-        </VisuallyHidden>
+        </span>
         {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>
     )
@@ -139,17 +146,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       <NextLink
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() =>
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: `Link`,
-              eventAction: `Clicked`,
-              eventName: "Clicked on internal PDF",
-              eventValue: href,
-            }
-          )
-        }
         {...commonProps}
+        onClick={createClickHandler("Clicked on internal PDF")}
       >
         {children}
       </NextLink>
@@ -157,39 +155,27 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   if (isHash) {
+    // Use I18nLink for hash links to ensure proper browser history management
+    // This prevents issues where back navigation from a subpage to a page with
+    // a hash URL fails to re-render the page (the browser would interpret it
+    // as a same-page scroll rather than a route change)
     return (
-      <a
+      <I18nLink
+        {...commonProps}
         onClick={(e) => {
           e.stopPropagation()
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: "Link",
-              eventAction: "Clicked",
-              eventName: "Clicked on hash link",
-              eventValue: href,
-            }
-          )
+          createClickHandler("Clicked on hash link")(e)
         }}
-        {...commonProps}
       >
         {children}
-      </a>
+      </I18nLink>
     )
   }
 
   return (
     <I18nLink
-      onClick={() =>
-        trackCustomEvent(
-          customEventOptions ?? {
-            eventCategory: `Link`,
-            eventAction: `Clicked`,
-            eventName: `Clicked on internal link`,
-            eventValue: href,
-          }
-        )
-      }
       {...commonProps}
+      onClick={createClickHandler("Clicked on internal link")}
     >
       {children}
     </I18nLink>

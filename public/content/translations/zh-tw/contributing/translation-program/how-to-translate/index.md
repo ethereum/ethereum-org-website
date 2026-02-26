@@ -76,9 +76,12 @@ description: 使用 Crowdin 翻譯 ethereum.org 的說明
 
 一旦你已經完成了翻譯（即內容門類中的所有檔案都顯示為 100%），我們的專業翻譯服務將會審核（並可能會編輯）這些內容。 一旦審核完成（如：審核進度為 100%），我們將把內容新增到網站上。
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   請不要使用機器翻譯來翻譯這個專案。 所有翻譯將會在新增到網站之前進行審核。 如果你建議的翻譯被發現是機器翻譯的，它們將不被考慮採用，而經常使用機器翻譯的貢獻者將從專案中被移除。
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### 聯絡我們 {#get-in-touch}
 

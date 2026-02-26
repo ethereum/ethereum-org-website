@@ -226,7 +226,7 @@ const ReleaseCarousel = () => {
               }}
             >
               <CarouselContent>
-                {releasesData.map((release) => (
+                {releasesData.map((release: Release) => (
                   <CarouselItem
                     key={release.releaseName}
                     className="w-full pl-4"
@@ -257,12 +257,25 @@ const ReleaseCarousel = () => {
                               : release.content}
                           </div>
                         </div>
-                        <ButtonLink
-                          href={release.href}
-                          className="w-full lg:w-fit"
-                        >
-                          {t("page-roadmap-release-learn-more")}
-                        </ButtonLink>
+                        <div className="flex flex-row gap-4">
+                          {release.href && (
+                            <ButtonLink
+                              href={release.href}
+                              className="w-full lg:w-fit"
+                            >
+                              {t("page-roadmap-release-learn-more")}
+                            </ButtonLink>
+                          )}
+                          {release.forkcast_href && (
+                            <ButtonLink
+                              href={release.forkcast_href}
+                              className="w-full lg:w-fit"
+                              variant={release.href ? "outline" : "solid"}
+                            >
+                              {t("page-roadmap-release-forkcast")}
+                            </ButtonLink>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </CarouselItem>

@@ -55,12 +55,15 @@ summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援�
 
 或許你是位藝術家，想透過非同質化代幣分享你的作品，同時不失去對藝術品的控制權，並且不會因中介而損失收益。 你可以建立一份新合約，並明訂非同質化代幣的數量、屬性，以及連到某些特定藝術品的連結。 作為藝術家，**你可以將您應得的版稅寫入智能合約**（如：每當非同質化代幣被轉移時，支付銷售價格的 5% 給合約擁有者）。 你可以隨時證明該非同質化代幣由您建立，因為您擁有部署該合約的[錢包](/glossary/#wallet)。 你的買家可輕易證明他們擁有賣家收藏品的**正版非同質化代幣**，因為他們的錢包[地址](/glossary/#address)與賣家智能合約中的代幣相關聯。 他們可以在以太坊生態系統中使用非同質化代幣，並可信任代幣的真實性。
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>探索、購買或建立你個人的非同質化代幣藝術品/收藏品……</div>
   <ButtonLink href="/apps/categories/collectibles">
     探索非同質化代幣藝術品
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 又或者以體育賽事的門票為例， 如同**賽事主辦者可以決定要販售幾張門票**，非同質化代幣的創作者也可以決定要發行幾份複製品。 有時可能是完全相同的複製品，例如 5000 張普通門票； 有時可能會製作好幾種極為類似，但各自略有不同的複製品，例如指定席的票券。 此類票券可以在不需要給票務員付款的情況下進行點對點買賣，買家可以隨時檢查合約地址，以確保票券的真實性。
 

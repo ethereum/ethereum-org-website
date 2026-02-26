@@ -3,7 +3,7 @@ export const baseLocales = {
   zh: { title: "中国人", left: "Zh" },
   ru: { title: "Русский", left: "Ru" },
   uk: { title: "українська", left: "Uk" },
-  fa: { title: "فارسی", left: "Fa" },
+  ar: { title: "العربية", left: "Ar" },
 }
 
 // Only i18n files named in this array are being exposed to Storybook. Add filenames as necessary.
@@ -13,6 +13,7 @@ export const ns = [
   "glossary-tooltip",
   "learn-quizzes",
   "page-about",
+  "page-assets",
   "page-index",
   "page-learn",
   "page-upgrades",

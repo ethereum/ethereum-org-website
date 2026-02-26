@@ -1,41 +1,40 @@
 ---
-title: Monitoreando Geth con InfluxDB y Grafana
-description:
+title: "Monitorización de Geth con InfluxDB y Grafana"
+description: "Configure la monitorización de su nodo de Geth con InfluxDB y Grafana para hacer un seguimiento del rendimiento e identificar problemas."
 author: "Mario Havel"
-tags:
-  - "clientes"
-  - "nodos"
+tags: [ "clientes", "nodos" ]
 skill: intermediate
 lang: es
 published: 2021-01-13
 ---
 
-Este tutorial le ayudará a configurar el monitoreo de su nodo Geth para que pueda comprender mejor su rendimiento e identificar problemas potenciales.
+Este tutorial le ayudará a configurar la monitorización para su nodo de Geth, para que pueda comprender mejor su rendimiento e identificar posibles problemas.
 
-## Pre requisitos {#prerequisites}
+## Requisitos previos {#prerequisites}
 
 - Ya debería estar ejecutando una instancia de Geth.
-- La mayoría de los pasos y ejemplos son para el entorno linux; el conocimiento básico sobre terminales será útil.
-- Eche un vistazo a este video de resumen del conjunto de métricas de Geth: [Monitoreo de una infraestructura de Ethereum (Péter Szilágyi)](https://www.youtube.com/watch?v=cOBab8IJMYI).
+- La mayoría de los pasos y ejemplos son para un entorno Linux; los conocimientos básicos sobre la terminal le serán de gran ayuda.
+- Eche un vistazo a este vídeo resumen del conjunto de métricas de Geth: [Monitoring an Ethereum infrastructure por Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
 
-## Pila de monitoreo {#monitoring-stack}
+## Pila de monitorización {#monitoring-stack}
 
-Un cliente de Ethereum recopila muchos datos que pueden ser leídos en forma de una base de datos cronológica. Para facilitar el monitoreo, usted puede colocar esto en software de visualización de datos. Hay varias opciones disponibles:
+Un cliente de Ethereum recopila una gran cantidad de datos que pueden leerse en forma de una base de datos cronológica. Para facilitar la monitorización, puede introducir estos datos en un software de visualización de datos. Hay varias opciones disponibles:
 
-- [Prometheus](https://prometheus.io/) (modelo pull)
-- [InfluxDB](https://www.influxdata.com/get-influxdb/) (modelo push)
+- [Prometheus](https://prometheus.io/) (modelo de extracción)
+- [InfluxDB](https://www.influxdata.com/get-influxdb/) (modelo de inserción)
 - [Telegraf](https://www.influxdata.com/get-influxdb/)
 - [Grafana](https://www.grafana.com/)
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-También está el [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), una opción preconfigurada con InfluxDB y Grafana.
+También existe [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), una opción preconfigurada con InfluxDB y Grafana.
 
-En este tutorial configuraremos su cliente Geth para que envíe datos a InfluxDB a fin de crear una base de datos y Grafana para crear una visualización gráfica de los datos. Hacerlo manualmente le ayudará a entender el proceso mejor, modificarlo e implementarlo en diferentes entornos.
+En este tutorial, configuraremos su cliente de Geth para insertar datos en InfluxDB para crear una base de datos, y en Grafana para crear una visualización gráfica de los datos. Hacerlo manualmente le ayudará a entender mejor el proceso, a alterarlo y a implementarlo en diferentes entornos.
 
 ## Configuración de InfluxDB {#setting-up-influxdb}
 
-Primero, vamos a descargar e instalar InfluxDB. Puede encontrar varias opciones de descarga en la [página de liberaciones de versión de Influxdata](https://portal.influxdata.com/downloads/). Elija la que se adapte a su entorno. También puede instalarlo desde un [repositorio](https://repos.influxdata.com/). Por ejemplo en la distribución basada en Debian:
+Primero, descarguemos e instalemos InfluxDB. Puede encontrar varias opciones de descarga en la [página de lanzamientos de Influxdata](https://portal.influxdata.com/downloads/). Elija la que se adapte a su entorno.
+También puede instalarlo desde un [repositorio](https://repos.influxdata.com/). Por ejemplo, en una distribución basada en Debian:
 
 ```
 curl -tlsv1.3 --proto =https -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add
@@ -48,19 +47,20 @@ sudo systemctl start influxdb
 sudo apt install influxdb-client
 ```
 
-Después de instalar InfluxDB, asegúrese de que se ejecute en segundo plano. Por defecto, es accesible en `localhost:8086`. Antes de usar el cliente `influx`, tiene que crear un nuevo usuario con privilegios de administrador. Este usuario servirá para una gestión de alto nivel, con creación de bases de datos y usuarios.
+Tras instalar InfluxDB correctamente, asegúrese de que se esté ejecutando en segundo plano. De forma predeterminada, es accesible en `localhost:8086`.
+Antes de usar el cliente `influx`, tiene que crear un nuevo usuario con privilegios de administrador. Este usuario servirá para la gestión de alto nivel, como la creación de bases de datos y usuarios.
 
 ```
 curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE USER username WITH PASSWORD 'password' WITH ALL PRIVILEGES"
 ```
 
-Ahora puede utilizar el cliente influx para ingresar [InfluxDB shell](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) con este usuario.
+Ahora puede usar el cliente influx para entrar en el [shell de InfluxDB](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) con este usuario.
 
 ```
 influx -username 'username' -password 'password'
 ```
 
-Comunicándose directamente con InfluxDB en su shell, puede crear una bases de datos y un usuario para las métricas geth.
+Comunicándose directamente con InfluxDB en su shell, puede crear la base de datos y el usuario para las métricas de Geth.
 
 ```
 create database geth
@@ -74,7 +74,7 @@ show databases
 show users
 ```
 
-Abandone el shell de InfluxDB.
+Salga del shell de InfluxDB.
 
 ```
 exit
@@ -82,26 +82,28 @@ exit
 
 InfluxDB se está ejecutando y está configurado para almacenar métricas de Geth.
 
-## Preparar Geth {#preparing-geth}
+## Preparación de Geth {#preparing-geth}
 
-Después de configurar la base de datos, necesitamos habilitar la recolección de métricas en Geth. Preste atención a `METRICS AND STATS OPTIONS` en `geth --help`. Se pueden encontrar múltiples opciones aquí; en este caso queremos que Geth envíe datos a InfluxDB. La configuración básica especifica el endpoint donde InfluxDB es accesible y la autenticación para la base de datos.
+Después de configurar la base de datos, debemos habilitar la recopilación de métricas en Geth. Preste atención a `METRICS AND STATS OPTIONS` en `geth --help`. Ahí se pueden encontrar múltiples opciones; en este caso, queremos que Geth envíe datos a InfluxDB.
+La configuración básica especifica el punto de conexión donde se puede acceder a InfluxDB y la autenticación para la base de datos.
 
 ```
 geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:8086" --metrics.influxdb.username "geth" --metrics.influxdb.password "chosenpassword"
 ```
 
-Estos indicadores, o flags, pueden ser añadidos a un comando que inicie el cliente o guardados en el archivo de configuración.
+Estos indicadores pueden adjuntarse a un comando que inicie el cliente o guardarse en el archivo de configuración.
 
-Puede verificar que Geth esté enviando datos con éxito, por ejemplo, incluyendo métricas en la base de datos. En el shell de InfluxDB:
+Puede verificar que Geth está insertando datos correctamente, por ejemplo, listando las métricas en la base de datos. En el shell de InfluxDB:
 
 ```
 use geth
 show measurements
 ```
 
-## Configurar Grafana {#setting-up-grafana}
+## Configuración de Grafana {#setting-up-grafana}
 
-El siguiente paso es instalar Grafana, que interpretará los datos gráficamente. Siga el proceso de instalación para su entorno en la documentación de Grafana. Asegúrese de instalar la versión OSS si no desea otra cosa. Ejemplo de pasos de instalación para las distribuciones de Debian utilizando el repositorio:
+El siguiente paso es instalar Grafana, que interpretará los datos gráficamente. Siga el proceso de instalación para su entorno en la documentación de Grafana. Asegúrese de instalar la versión OSS si no desea lo contrario.
+Ejemplo de los pasos de instalación para las distribuciones de Debian que utilizan el repositorio:
 
 ```
 curl -tlsv1.3 --proto =https -sL https://packages.grafana.com/gpg.key | sudo apt-key add -
@@ -112,36 +114,38 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-Cuando tenga Grafana funcionando, debería ser accesible en `localhost:3000`. Utilice su navegador preferido para acceder a esta ruta y luego inicie sesión con las credenciales predeterminadas (usuario: `admin` y contraseña: `admin`). Cuando se le solicite, cambie la contraseña por defecto y guárdela.
+Cuando tenga Grafana en ejecución, se podrá acceder a él en `localhost:3000`.
+Use su navegador preferido para acceder a esta ruta, luego inicie sesión con las credenciales predeterminadas (usuario: `admin` y contraseña: `admin`). Cuando se le solicite, cambie la contraseña predeterminada y guárdela.
 
 ![](./grafana1.png)
 
-Será redirigido a la página principal de Grafana. Primero, configure los datos de origen. Haga clic en el ícono de configuración de la barra izquierda y seleccione "Data sources".
+Será redirigido a la página de inicio de Grafana. Primero, configure sus datos de origen. Haga clic en el icono de configuración de la barra izquierda y seleccione "Fuentes de datos".
 
 ![](./grafana2.png)
 
-No hay ninguna fuente de datos creada todavía, así que haga clic en "Add data source" para definir una.
+Aún no se ha creado ninguna fuente de datos; haga clic en "Añadir fuente de datos" para definir una.
 
 ![](./grafana3.png)
 
-Para esta configuración, seleccione "InfluxDB" y proceda.
+Para esta configuración, seleccione "InfluxDB" y continúe.
 
 ![](./grafana4.png)
 
-La configuración de la fuente de datos es bastante sencilla si ejecuta herramientas en la misma máquina. Necesita configurar la dirección de InfluxDB y los detalles para acceder a la base de datos. Consulte la siguiente imagen.
+La configuración de la fuente de datos es bastante sencilla si está ejecutando las herramientas en la misma máquina. Necesita establecer la dirección de InfluxDB y los detalles para acceder a la base de datos. Consulte la imagen de abajo.
 
 ![](./grafana5.png)
 
-Si todo está completado e InfluxDB es alcanzable, haga clic en "Save and test" y espere a que se muestre la confirmación.
+Si todo está completo y se puede acceder a InfluxDB, haga clic en "Guardar y probar" y espere a que aparezca la confirmación.
 
 ![](./grafana6.png)
 
-Grafana ahora está configurado para leer datos de InfluxDB. Ahora necesita crear un panel que se encargará de interpretarlos y mostrarlos. Las propiedades de los paneles están codificados en archivos JSON que pueden ser creados por cualquier persona y fácilmente importados. En la barra lateral, haga clic en "Create and Import".
+Grafana ya está configurado para leer datos de InfluxDB. Ahora necesita crear un panel de control que los interpretará y mostrará. Las propiedades de los paneles de control están codificadas en archivos JSON que cualquiera puede crear e importar fácilmente. En la barra izquierda, haga clic en "Crear e importar".
 
 ![](./grafana7.png)
 
-Para obtener un panel de monitoreo de Geth, copie el ID de [este panel](https://grafana.com/grafana/dashboards/13877/) y péguelo en la "página de importación" de Grafana. Luego de guardar el panel, debería verse así:
+Para un panel de monitorización de Geth, copie el ID de [este panel](https://grafana.com/grafana/dashboards/13877/) y péguelo en la "Página de importación" de Grafana. Después de guardar el panel de control, debería tener este aspecto:
 
 ![](./grafana8.png)
 
-Puede modificar sus paneles. Cada panel puede ser editado, movido, removido o agregado. Puede cambiar las configuraciones. ¡Usted decide! Para leer más sobre el funcionamiento de los paneles, consulte la [documentación de Grafana](https://grafana.com/docs/grafana/latest/dashboards/). También puede que le interese [Alerting](https://grafana.com/docs/grafana/latest/alerting/). Esto le permite configurar notificaciones de alertas para cuando las métricas alcancen ciertos valores. Se admiten varios canales de comunicación.
+Puede modificar sus paneles de control. Cada panel se puede editar, mover, eliminar o añadir. Puede cambiar sus configuraciones. ¡Depende de usted! Para saber más sobre cómo funcionan los paneles de control, consulte la [documentación de Grafana](https://grafana.com/docs/grafana/latest/dashboards/).
+También podría interesarle la sección [Alertas](https://grafana.com/docs/grafana/latest/alerting/). Esto le permite configurar notificaciones de alerta para cuando las métricas alcancen ciertos valores. Se admiten varios canales de comunicación.

@@ -4,7 +4,7 @@ description: An introduction to zero-knowledge rollups—a scaling solution used
 lang: en
 ---
 
-Zero-knowledge rollups (ZK-rollups) are layer 2 [scaling solutions](/developers/docs/scaling/) that increase throughput on Ethereum Mainnet by moving computation and state-storage offchain. ZK-rollups can process thousands of transactions in a batch and then only post some minimal summary data to Mainnet. This summary data defines the changes that should be made to the Ethereum state and some cryptographic proof that those changes are correct.
+Zero-knowledge rollups (ZK-rollups) are layer 2 [scaling solutions](/developers/docs/scaling/) that increase throughput on [Ethereum](/) Mainnet by moving computation and state-storage offchain. ZK-rollups can process thousands of transactions in a batch and then only post some minimal summary data to Mainnet. This summary data defines the changes that should be made to the Ethereum state and some cryptographic proof that those changes are correct.
 
 ## Prerequisites {#prerequisites}
 
@@ -241,6 +241,8 @@ Projects working on zkEVMs include:
 
 - **[Morph](https://www.morphl2.io/)** - _Morph is a hybrid rollup scaling solution that utilizes zk-proof to address the Layer 2 state challenge issue._
 
+- **[Linea](https://linea.build)** - _Linea is an Ethereum-equivalent zkEVM Layer 2 built by Consensys, fully aligned with the Ethereum ecosystem._
+
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 
 - [What Are Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
@@ -254,3 +256,9 @@ Projects working on zkEVMs include:
 - [Awesome-zkEVM resources](https://github.com/LuozhuZhang/awesome-zkevm)
 - [ZK-SNARKS under the hood](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [How are SNARKs possible?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
+
+## Tutorials: Privacy & zero-knowledge on Ethereum {#tutorials}
+
+- [Using zero-knowledge for a secret state](/developers/tutorials/secret-state/) _– How to use ZK proofs and offchain server components to maintain secret game state on-chain._
+- [Using Stealth Addresses](/developers/tutorials/stealth-addr/) _– How ERC-5564 stealth addresses enable anonymous ETH transfers using cryptographic key derivation._
+- [Using Ethereum for web2 authentication](/developers/tutorials/ethereum-for-web2-auth/) _– How to integrate Ethereum wallet signatures with SAML-based web2 authentication systems._

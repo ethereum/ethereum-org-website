@@ -17,7 +17,6 @@
 "config ⚙️":
   - i18n.config.json
   - next.config.js
-  - next-sitemap.config.js
   - tsconfig.json
   - .nvmrc
   - .eslintignore
@@ -33,6 +32,3 @@
 "content 🖋️":
   - src/intl/en/**
   - public/content/**/*
-
-"event 📅":
-  - src/data/community-events.json

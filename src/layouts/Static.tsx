@@ -25,7 +25,6 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
-import MeetupList from "@/components/MeetupList"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
@@ -33,7 +32,7 @@ import TranslationChartImage from "@/components/TranslationChartImage"
 import { Alert } from "@/components/ui/alert"
 import { Flex, Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
-import UpcomingEventsList from "@/components/UpcomingEventsList"
+import WhitepaperBridge from "@/components/WhitepaperBridge"
 
 import { getEditPath } from "@/lib/utils/editPath"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -69,12 +68,11 @@ export const staticComponents = {
   Link,
   Logo,
   MatomoOptOut,
-  MeetupList,
   NetworkUpgradeSummary,
   SocialListItem,
   TranslationChartImage,
-  UpcomingEventsList,
   ListenToPlayer,
+  WhitepaperBridge,
 }
 
 type StaticLayoutProps = ChildOnlyProp &

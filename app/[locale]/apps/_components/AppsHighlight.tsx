@@ -1,12 +1,13 @@
 import { AppData } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import TruncatedText from "@/components/ui/TruncatedText"
 
+import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { slugify } from "@/lib/utils/url"
 
-import AppCard from "./AppCard"
 import AppsSwiper from "./AppsSwiper"
 
 interface AppsHighlightProps {
@@ -39,21 +40,23 @@ const AppsHighlight = ({ apps, matomoCategory }: AppsHighlightProps) => {
         </div>
         <div className="mb-4">
           <TruncatedText
-            text={app.description}
-            maxLines={2}
             matomoEvent={{
               eventCategory: matomoCategory,
               eventAction: "highlights_show_more",
               eventName: `app description ${app.name}`,
             }}
-          />
+          >
+            {app.description}
+          </TruncatedText>
         </div>
         <AppCard
-          app={app}
-          imageSize={16}
-          disableLink
-          matomoCategory={matomoCategory}
-          matomoAction="highlights"
+          name={app.name}
+          thumbnail={app.image}
+          category={app.category}
+          categoryTagStatus={APP_TAG_VARIANTS[app.category]}
+          tags={app.subCategory}
+          layout="horizontal"
+          imageSize="medium"
         />
       </LinkOverlay>
     </LinkBox>

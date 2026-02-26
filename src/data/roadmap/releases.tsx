@@ -10,14 +10,16 @@ import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
 type TranslationFunction = (key: string) => string
 
 type DateString =
-  `2${number}${number}${number}-${number}${number}-${number}${number}`
+  | `2${number}${number}${number}-${number}${number}-${number}${number}`
+  | `${number}${number}${number}${number}-${number}${number}-${number}${number}T${number}${number}:${number}${number}:${number}${number}.${number}${number}${number}Z`
 type YearString = `2${number}${number}${number}`
 
 interface BaseRelease {
   image: StaticImageData
   releaseName: string
   content: React.ReactNode | ((t: TranslationFunction) => React.ReactNode)
-  href: string
+  href?: string
+  forkcast_href?: string
 }
 
 interface ReleaseWithDate extends BaseRelease {
@@ -139,11 +141,12 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
       </div>
     ),
     href: "/roadmap/pectra",
+    forkcast_href: "https://forkcast.org/upgrade/pectra",
   },
   {
     image: FusakaImage,
     releaseName: "Fusaka",
-    plannedReleaseYear: "2025",
+    releaseDate: "2025-12-03T21:49:11.000Z",
     content: (
       <div>
         <p className="font-bold">{t("page-roadmap-fusaka-peerdas-title")}</p>
@@ -167,6 +170,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
       </div>
     ),
     href: "/roadmap/fusaka",
+    forkcast_href: "https://forkcast.org/upgrade/fusaka",
   },
   {
     image: GuidesHubHeroImage,
@@ -183,7 +187,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
         </ul>
       </div>
     ),
-    href: "https://forkcast.org/upgrade/glamsterdam/#scheduled-for-inclusion",
+    forkcast_href: "https://forkcast.org/upgrade/glamsterdam",
   },
 ]
 

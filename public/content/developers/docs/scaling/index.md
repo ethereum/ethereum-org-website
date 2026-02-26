@@ -7,9 +7,9 @@ sidebarDepth: 3
 
 ## Scaling overview {#scaling-overview}
 
-As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
+As the number of people using [Ethereum](/) has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
 
-The main goal of scalability is to increase transaction speed (faster finality) and transaction throughput (higher number of transactions per second) without sacrificing decentralization or security (more on the [Ethereum vision](/roadmap/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable [gas prices](/developers/docs/gas/). Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum.
+The main goal of scalability is to increase transaction speed (faster finality) and transaction throughput (higher number of transactions per second) without sacrificing decentralization or security. On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable [gas prices](/developers/docs/gas/). Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum.
 
 While speed and throughput are important, it is essential that scaling solutions enabling these goals remain decentralized and secure. Keeping the barrier to entry low for node operators is critical in preventing a progression towards centralized and insecure computing power.
 
@@ -88,7 +88,6 @@ Learn more about [Validium](/developers/docs/scaling/validium/).
 - Multiple solutions can help reduce the overall congestion on any one part of the network and also prevent single points of failure.
 - The whole is greater than the sum of its parts. Different solutions can exist and work in harmony, allowing for an exponential effect on future transaction speed and throughput.
 - Not all solutions require utilizing the Ethereum consensus algorithm directly, and alternatives can offer benefits that would otherwise be difficult to obtain.
-- No one scaling solution is enough to fulfill the [Ethereum vision](/roadmap/vision/).
 
 ## More of a visual learner? {#visual-learner}
 
@@ -112,3 +111,8 @@ _Note the explanation in the video uses the term "Layer 2" to refer to all offch
 - [The Practical Guide to Ethereum Rollups](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 
 _Know of a community resource that helped you? Edit this page and add it!_
+
+## Tutorials: Build scalable Layer 2s on Ethereum {#tutorials}
+
+- [All you can cache](/developers/tutorials/all-you-can-cache/) _– How to build and use a caching contract to reduce calldata costs on rollups._
+- [Short ABIs for Calldata Optimization](/developers/tutorials/short-abi/) _– How to use shorter ABIs to reduce calldata costs for layer 2 transactions._

@@ -79,4 +79,4 @@ Possono eseguire calcoli, creare valuta, memorizzare dati, coniare [NFT](/glossa
 - [In che modo i contratti intelligenti cambieranno il mondo](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Contratti intelligenti per sviluppatori](/developers/docs/smart-contracts/)
 - [Impara a scrivere i contratti intelligenti](/developers/learning-tools/)
-- [Padroneggiare Ethereum: Cos'è un Contratto Intelligente?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Padroneggiare Ethereum: Cos'è un Contratto Intelligente?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

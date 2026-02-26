@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-Ethereum is a peer-to-peer network with thousands of nodes that must be able to communicate with one another using standardized protocols. The "networking layer" is the stack of protocols that allow those nodes to find each other and exchange information. This includes "gossiping" information (one-to-many communication) over the network as well as swapping requests and responses between specific nodes (one-to-one communication). Each node must adhere to specific networking rules to ensure they are sending and receiving the correct information.
+[Ethereum](/) is a peer-to-peer network with thousands of nodes that must be able to communicate with one another using standardized protocols. The "networking layer" is the stack of protocols that allow those nodes to find each other and exchange information. This includes "gossiping" information (one-to-many communication) over the network as well as swapping requests and responses between specific nodes (one-to-one communication). Each node must adhere to specific networking rules to ensure they are sending and receiving the correct information.
 
 There are two parts to the client software (execution clients and consensus clients), each with its own distinct networking stack. As well as communicating with other Ethereum nodes, the execution and consensus clients have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication.
 
@@ -128,9 +128,9 @@ A summary of the control flow is shown below, with the relevant networking stack
 ### When consensus client is not block producer: {#when-consensus-client-is-not-block-producer}
 
 - Consensus client receives a block via the block gossip protocol (consensus p2p)
-- Consensus client pre-validates the block, i.e. ensures it arrived from a valid sender with correct metadata
+- Consensus client pre-validates the block, i.e., ensures it arrived from a valid sender with correct metadata
 - The transactions in the block are sent to the execution layer as an execution payload (local RPC connection)
-- The execution layer executes the transactions and validates the state in the block header (i.e. checks hashes match)
+- The execution layer executes the transactions and validates the state in the block header (i.e., checks hashes match)
 - Execution layer passes validation data back to consensus layer, block now considered to be validated (local RPC connection)
 - Consensus layer adds block to head of its own blockchain and attests to it, broadcasting the attestation over the network (consensus p2p)
 

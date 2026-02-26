@@ -4,6 +4,10 @@ import { AppCategoryData, AppData, FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function AppsCategoryJsonLD({
@@ -31,81 +35,68 @@ export default async function AppsCategoryJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the apps category page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t(category.metaTitle),
-    description: t(category.metaDescription),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [
+    "@graph": [
       {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
+        "@type": "WebPage",
+        "@id": url,
+        name: t(category.metaTitle),
+        description: t(category.metaDescription),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
+        },
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Apps",
+              item: normalizeUrlForJsonLd(locale, "/apps/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: t(category.name),
+              item: url,
+            },
+          ],
+        },
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#categories` },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#categories`,
+        name: t(category.name),
+        description: t(category.description),
+        url: url,
+        numberOfItems: categoryApps.length,
+        itemListElement: categoryApps.slice(0, 10).map((app, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: app.name,
+          description: app.description,
+          url: app.url,
+        })),
       },
     ],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Apps",
-          item: normalizeUrlForJsonLd(locale, "/apps/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t(category.name),
-          item: url,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
-  const categoryAppsJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t(category.name),
-    description: t(category.description),
-    url: url,
-    numberOfItems: categoryApps.length,
-    itemListElement: categoryApps.slice(0, 10).map((app, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: app.name,
-      description: app.description,
-      url: app.url,
-    })),
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, categoryAppsJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

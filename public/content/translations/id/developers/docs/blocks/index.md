@@ -56,7 +56,7 @@ Waktu blok merujuk pada waktu yang diperlukan untuk menambang blok baru. Di Ethe
 
 ## Ukuran blok {#block-size}
 
-Catatan penting terakhir adalah bahwa blok itu sendiri terbatas dalam ukurannya. Setiap blok memiliki ukuran target sebesar 15 juta gas tetapi ukuran blok akan bertambah atau berkurang sesuai dengan permintaan jaringan, hingga mencapai batas blok yang berukuran 30 juta gas (2x ukuran blok target). Jumlah total gas yang terpakai oleh semua transaksi dalam blok harus kurang dari batas gas blok. Ini penting karena memastikan bahwa blok tidak boleh terlalu besar. Jika blok dapat berukuran besar tanpa terkendali, maka node penuh yang berkinerja kurang secara bertahap akan berhenti untuk dapat menyesuaikan dengan jaringan karena persyaratan ruang dan kecepatan.
+Catatan penting terakhir adalah bahwa blok itu sendiri terbatas dalam ukurannya. Setiap blok memiliki ukuran target sebesar 30 juta gas tetapi ukuran blok akan bertambah atau berkurang sesuai dengan permintaan jaringan, hingga mencapai batas blok yang berukuran 60 juta gas (2x ukuran blok target). Jumlah total gas yang terpakai oleh semua transaksi dalam blok harus kurang dari batas gas blok. Ini penting karena memastikan bahwa blok tidak boleh terlalu besar. Jika blok dapat berukuran besar tanpa terkendali, maka node penuh yang berkinerja kurang secara bertahap akan berhenti untuk dapat menyesuaikan dengan jaringan karena persyaratan ruang dan kecepatan.
 
 ## Bacaan lebih lanjut {#further-reading}
 

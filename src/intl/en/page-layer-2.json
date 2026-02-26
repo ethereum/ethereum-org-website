@@ -5,7 +5,7 @@
   "page-layer-2-hero-button-2-content": "Learn more",
   "page-layer-2-period": ".",
   "page-layer-2-calloutCard-1-title": "$0.01 fees",
-  "page-layer-2-calloutCard-1-description": "You can trade, send money globally, or use  applications without worrying about high costs.",
+  "page-layer-2-calloutCard-1-description": "You can trade, send money globally, or use applications without worrying about high costs.",
   "page-layer-2-calloutCard-2-title": "Near instant transactions",
   "page-layer-2-calloutCard-2-description": "Whether you are making a quick payment or engaging in decentralized finance (DeFi), all transactions take only a few seconds.",
   "page-layer-2-calloutCard-3-title": "Backed by Ethereum",
@@ -13,7 +13,7 @@
   "page-layer-2-meta-title": "Intro to Ethereum Layer 2: benefits and uses",
   "page-layer-2-meta-description": "Learn about Ethereum layer 2 networks",
   "page-layer-2-powered-by-ethereum-title": "Powered by Ethereum",
-  "page-layer-2-powered-by-ethereum-description-1": "Ethereum is no longer just a single network.",
+  "page-layer-2-powered-by-ethereum-description-1": "<a href=\"/\">Ethereum</a> is no longer just a single network.",
   "page-layer-2-powered-by-ethereum-description-2": "With hundreds of blockchains now built on top of it, Ethereum has become more cost-effective, faster, and accessible for everyday use.",
   "page-layer-2-powered-by-ethereum-description-3": "Embrace the future by joining one of the many networks powered by Ethereum!",
   "page-layer-2-man-and-dog-alt": "Man and dog playing",
@@ -56,5 +56,6 @@
   "page-layer-2-mode-description": "Mode is an OP stack Optimistic Rollup building the AIFi economy.",
   "page-layer-2-taiko-description": "Taiko is a decentralized, Ethereum-equivalent ZK-EVM rollup that enables seamless cross-chain communication.",
   "page-layer-2-unichain-description": "Unichain is a DeFi-native Ethereum L2, built to be the home for liquidity across chains",
-  "page-layer-2-ink-description": "Ink is an Ethereum OP Stack layer 2 blockchain designed to be the house of DeFi for the Superchain; a powerful baselayer for deploying innovative DeFi protocols."
+  "page-layer-2-ink-description": "Ink is an Ethereum OP Stack layer 2 blockchain designed to be the house of DeFi for the Superchain; a powerful baselayer for deploying innovative DeFi protocols.",
+  "page-layer-2-zircuit-description": "Zircuit is an EVM-compatible ZK Rollup featuring AI-powered Sequencer-Level Security to detect and prevent malicious transactions."
 }

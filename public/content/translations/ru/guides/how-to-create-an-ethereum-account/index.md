@@ -40,12 +40,15 @@ lang: ru
 **Любой человек, знающий эту фразу, может получить контроль над всеми средствами.** Никогда не делитесь ею ни с кем. Эта фраза должна содержать от 12 до 24 случайно сгенерированных слов (их порядок важен).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Кошелек установлен?</b><br/>Научитесь им пользоваться.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Как использовать кошелек
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 Заинтересованы в других руководствах? Ознакомьтесь с нашими [пошаговыми руководствами](/guides/)

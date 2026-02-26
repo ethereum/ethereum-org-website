@@ -27,7 +27,7 @@ Finalmente, você precisará compilar seu contrato antes de implantá-lo, então
 
 ### Como implantar um contrato inteligente {#steps-to-deploy}
 
-Os passos específicos envolvidos dependerão do framework de desenvolvimento em questão. Por exemplo, confira [a documentação do Hardhat sobre como implementar seu contrato](https://hardhat.org/guides/deploying.html) ou [a documentação do Foundry sobre como implementar e verificar um contrato inteligente](https://book.getfoundry.sh/forge/deploying). Uma vez implementado, seu contrato terá um endereço Ethereum igual qualquer outra [conta](/developers/docs/accounts/) e poderá ser verificado usando [ferramentas de verificação de código-fonte](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+Os passos específicos envolvidos dependerão do framework de desenvolvimento em questão. Por exemplo, confira [a documentação do Hardhat sobre como implementar seu contrato](https://hardhat.org/docs/tutorial/deploying) ou [a documentação do Foundry sobre como implementar e verificar um contrato inteligente](https://book.getfoundry.sh/forge/deploying). Uma vez implementado, seu contrato terá um endereço Ethereum igual qualquer outra [conta](/developers/docs/accounts/) e poderá ser verificado usando [ferramentas de verificação de código-fonte](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Ferramentas relacionadas {#related-tools}
 
@@ -45,7 +45,7 @@ Os passos específicos envolvidos dependerão do framework de desenvolvimento em
 **Hardhat - _Um ambiente de desenvolvimento para compilar, implantar, testar e depurar seu software de Ethereum_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Documentos na implantação de seus contratos](https://hardhat.org/guides/deploying.html)
+- [Documentos na implantação de seus contratos](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ Os passos específicos envolvidos dependerão do framework de desenvolvimento em
 ## Leia mais {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Implementando seus contratos com Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Implementando seus contratos com Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_
 

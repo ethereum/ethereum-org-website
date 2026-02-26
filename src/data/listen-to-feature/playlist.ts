@@ -1,36 +1,30 @@
 import { normalizeSlug } from "@/lib/utils/url"
 
-import ethAudio from "@/data/audio/eth/eth.mp3"
-import smartContractsAudio from "@/data/audio/smart-contracts/smart-contracts.mp3"
-import walletsAudio from "@/data/audio/wallets/wallets.mp3"
-import web3Audio from "@/data/audio/web3/web3.mp3"
-import whatIsEthereumAudio from "@/data/audio/what-is-ethereum/what-is-ethereum.mp3"
-
 export const listenToPlaylists = {
   learn: [
     {
       title: "what-is-ethereum",
-      audioFile: whatIsEthereumAudio,
+      audioFile: "/audio/what-is-ethereum.mp3",
       slug: "/what-is-ethereum/",
     },
     {
       title: "what-is-ether",
-      audioFile: ethAudio,
+      audioFile: "/audio/eth.mp3",
       slug: "/eth/",
     },
     {
       title: "wallets",
-      audioFile: walletsAudio,
+      audioFile: "/audio/wallets.mp3",
       slug: "/wallets/",
     },
     {
       title: "web3",
-      audioFile: web3Audio,
+      audioFile: "/audio/web3.mp3",
       slug: "/web3/",
     },
     {
       title: "smart-contracts",
-      audioFile: smartContractsAudio,
+      audioFile: "/audio/smart-contracts.mp3",
       slug: "/smart-contracts/",
     },
   ],

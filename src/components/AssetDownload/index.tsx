@@ -5,12 +5,11 @@ import type { ImageProps, StaticImageData } from "next/image"
 
 import AssetDownloadArtist from "@/components/AssetDownload/AssetDownloadArtist"
 import AssetDownloadImage from "@/components/AssetDownload/AssetDownloadImage"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex, Stack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import { ButtonLink } from "../ui/buttons/Button"
-import { Flex, Stack } from "../ui/flex"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -41,7 +40,9 @@ const AssetDownload = ({
       eventName: title,
     })
   }
+
   const imgSrc = (image as StaticImageData).src
+  const fileExtension = extname(imgSrc).slice(1)
 
   return (
     <Stack
@@ -56,12 +57,19 @@ const AssetDownload = ({
         )}
       </div>
       <Flex className="mt-4 gap-5">
-        <ButtonLink href={imgSrc} onClick={matomoHandler} target="_blank">
-          {t("page-assets-download-download")} (
-          {extname(imgSrc).slice(1).toUpperCase()})
+        <ButtonLink
+          href={imgSrc}
+          onClick={matomoHandler}
+          download={`${title.replace(/\s+/g, "-").toLowerCase()}.${fileExtension}`}
+        >
+          {t("page-assets-download-download")} ({fileExtension.toUpperCase()})
         </ButtonLink>
         {svgUrl && (
-          <ButtonLink href={svgUrl} onClick={matomoHandler} target="_blank">
+          <ButtonLink
+            href={svgUrl}
+            onClick={matomoHandler}
+            download={`${title.replace(/\s+/g, "-").toLowerCase()}.svg`}
+          >
             {t("page-assets-download-download")} (SVG)
           </ButtonLink>
         )}

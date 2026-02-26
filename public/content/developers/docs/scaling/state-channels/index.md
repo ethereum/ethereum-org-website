@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 3
 ---
 
-State channels allow participants to securely transact offchain while keeping interaction with Ethereum Mainnet at a minimum. Channel peers can conduct an arbitrary number of offchain transactions while only submitting two onchain transactions to open and close the channel. This allows for extremely high transaction throughput and results in lower costs for users.
+State channels allow participants to securely transact offchain while keeping interaction with [Ethereum](/) Mainnet at a minimum. Channel peers can conduct an arbitrary number of offchain transactions while only submitting two onchain transactions to open and close the channel. This allows for extremely high transaction throughput and results in lower costs for users.
 
 ## Prerequisites {#prerequisites}
 
@@ -31,7 +31,7 @@ A payment channel is best described as a "two-way ledger" collectively maintaine
 
 Updates to the ledger's balance (i.e., the payment channel's state) require the approval of all parties in the channel. A channel update, signed by all channel participants, is considered finalized, much like a transaction on Ethereum.
 
-Payment channels were among the earliest scaling solutions designed to minimize expensive onchain activity of simple user interactions (e.g. ETH transfers, atomic swaps, micropayments). Channel participants can conduct an unlimited amount of instant, feeless transactions between each other as long as the net sum of their transfers does not exceed the deposited tokens.
+Payment channels were among the earliest scaling solutions designed to minimize expensive onchain activity of simple user interactions (e.g., ETH transfers, atomic swaps, micropayments). Channel participants can conduct an unlimited amount of instant, feeless transactions between each other as long as the net sum of their transfers does not exceed the deposited tokens.
 
 ## State channels {#state-channels}
 

@@ -8,6 +8,7 @@ import {
 
 import type { ChainName, CommitHistory, Lang, PageParams } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
 import I18nProvider from "@/components/I18nProvider"
@@ -32,7 +33,6 @@ import { Tag } from "@/components/ui/tag"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
@@ -42,19 +42,10 @@ import {
 import { slugify } from "@/lib/utils/url"
 import { formatStringList } from "@/lib/utils/wallets"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
-import AppCard from "../_components/AppCard"
-
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
 import AppsAppJsonLD from "./page-jsonld"
 
-import { fetchApps } from "@/lib/api/fetchApps"
-
-// 24 hours
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
+import { getAppsData } from "@/lib/data"
 
 const Page = async ({
   params,
@@ -72,8 +63,14 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  // const [application] = application
-  const [appsData] = await loadData()
+  // Fetch apps data using the new data-layer function (already cached)
+  const appsData = await getAppsData()
+
+  // Handle null case - throw error if required data is missing
+  if (!appsData) {
+    throw new Error("Failed to fetch apps data")
+  }
+
   const app = Object.values(appsData)
     .flat()
     .find((app) => slugify(app.name) === application)!
@@ -129,6 +126,11 @@ const Page = async ({
     return t("page-apps-days-ago", { days: diffInDays })
   }
 
+  const getDisplayYear = (dateString: string) => {
+    if (!isValidDate(dateString)) return "—"
+    return new Date(app.dateOfLaunch).getFullYear()
+  }
+
   const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "apps/[application]",
@@ -144,6 +146,12 @@ const Page = async ({
           <div className="flex flex-col gap-10 px-4 md:px-10">
             <Breadcrumb>
               <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  /
+                </BreadcrumbSeparator>
                 <BreadcrumbItem>
                   <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
                 </BreadcrumbItem>
@@ -326,9 +334,7 @@ const Page = async ({
                 <p className="text-sm text-body-medium">
                   {t("page-apps-info-founded")}
                 </p>
-                <p className="text-sm">
-                  {new Date(app.dateOfLaunch).getFullYear()}
-                </p>
+                <p className="text-sm">{getDisplayYear(app.dateOfLaunch)}</p>
               </div>
               <div>
                 <p className="text-sm text-body-medium">
@@ -365,12 +371,27 @@ const Page = async ({
                       className="flex-1 lg:w-1/3 lg:flex-none"
                     >
                       <AppCard
-                        app={relatedApp}
-                        imageSize={24}
-                        showDescription={true}
-                        hoverClassName="hover:bg-background-highlight/50"
-                        matomoCategory="detail"
-                        matomoAction="more_apps"
+                        name={relatedApp.name}
+                        description={relatedApp.description}
+                        thumbnail={relatedApp.image}
+                        category={relatedApp.category}
+                        categoryTagStatus={
+                          APP_TAG_VARIANTS[relatedApp.category]
+                        }
+                        tags={relatedApp.subCategory}
+                        href={`/apps/${slugify(relatedApp.name)}`}
+                        imageSize="large"
+                        className="hover:bg-background-highlight/50"
+                        customEventOptions={{
+                          eventCategory: "detail",
+                          eventAction: "more_apps",
+                          eventName: `app name ${relatedApp.name}`,
+                        }}
+                        descriptionTracking={{
+                          eventCategory: "detail",
+                          eventAction: "more_apps_show_more",
+                          eventName: `app description ${relatedApp.name}`,
+                        }}
                       />
                     </div>
                   ))}
@@ -391,7 +412,13 @@ export async function generateMetadata({
 }) {
   const { locale, application } = params
 
-  const [appsData] = await loadData()
+  // Fetch apps data using the new data-layer function (already cached)
+  const appsData = await getAppsData()
+
+  // Handle null case - throw error if required data is missing
+  if (!appsData) {
+    throw new Error("Failed to fetch apps data")
+  }
 
   const app = Object.values(appsData)
     .flat()

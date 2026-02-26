@@ -4,6 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function Layer2PageJsonLD({
@@ -25,128 +29,96 @@ export default async function Layer2PageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the Layer 2 page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-layer-2-meta-title"),
-    description: t("page-layer-2-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [
+    "@graph": [
       {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-layer-2-meta-title"),
+        description: t("page-layer-2-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-layer-2-meta-title"),
-          item: url,
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("page-layer-2-meta-title"),
+              item: url,
+            },
+          ],
         },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
-  }
-
-  // JSON-LD for the article content about Layer 2
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-layer-2-hero-title"),
-    description: t("page-layer-2-meta-description"),
-    image: "https://ethereum.org/images/layer-2/learn-hero.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    contributor: contributorList,
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
-  }
-
-  // JSON-LD for FAQ section
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: t("page-layer-2-faq-ExpandableCard-1-title"),
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `${t("page-layer-2-faq-ExpandableCard-1-description-1")} ${t("page-layer-2-faq-ExpandableCard-1-description-2")}`,
-        },
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#layer-2` },
       },
       {
-        "@type": "Question",
-        name: t("page-layer-2-faq-ExpandableCard-2-title"),
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `${t("page-layer-2-faq-ExpandableCard-2-description-1")} ${t("page-layer-2-faq-ExpandableCard-2-description-2")}`,
-        },
+        "@type": "Article",
+        "@id": `${url}#layer-2`,
+        headline: t("page-layer-2-hero-title"),
+        description: t("page-layer-2-meta-description"),
+        image: "https://ethereum.org/images/layer-2/learn-hero.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+        author: [ethereumCommunityOrganization],
+        contributor: contributorList,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
       },
       {
-        "@type": "Question",
-        name: t("page-layer-2-faq-ExpandableCard-3-title"),
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: t("page-layer-2-faq-ExpandableCard-3-description"),
-        },
-      },
-      {
-        "@type": "Question",
-        name: t("page-layer-2-faq-ExpandableCard-4-title"),
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: t("page-layer-2-faq-ExpandableCard-4-description"),
-        },
+        "@type": "FAQPage",
+        "@id": `${url}#layer-2-faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: t("page-layer-2-faq-ExpandableCard-1-title"),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `${t("page-layer-2-faq-ExpandableCard-1-description-1")} ${t("page-layer-2-faq-ExpandableCard-1-description-2")}`,
+            },
+          },
+          {
+            "@type": "Question",
+            name: t("page-layer-2-faq-ExpandableCard-2-title"),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `${t("page-layer-2-faq-ExpandableCard-2-description-1")} ${t("page-layer-2-faq-ExpandableCard-2-description-2")}`,
+            },
+          },
+          {
+            "@type": "Question",
+            name: t("page-layer-2-faq-ExpandableCard-3-title"),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: t("page-layer-2-faq-ExpandableCard-3-description"),
+            },
+          },
+          {
+            "@type": "Question",
+            name: t("page-layer-2-faq-ExpandableCard-4-title"),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: t("page-layer-2-faq-ExpandableCard-4-description"),
+            },
+          },
+        ],
       },
     ],
   }
 
-  return (
-    <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd, faqJsonLd]} />
-  )
+  return <PageJsonLD structuredData={jsonLd} />
 }

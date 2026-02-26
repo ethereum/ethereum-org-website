@@ -155,7 +155,7 @@ Quand des jetons ERC-20 sont envoyés à un contrat intelligent qui n'est pas co
 3.  Aucune gestion intégrée
     -   La norme ERC-20 n'inclut pas de fonction obligatoire à mettre en œuvre pour les contrats de réception, ce qui conduit à une situation où de nombreux contrats ne sont pas en mesure de gérer correctement l'arrivée de jetons
 
-Ce problème a donné naissance à des normes alternatives, telles que l'[ERC-223](/developers/docs/standards/tokens/erc-223)
+Ce problème a donné naissance à des normes alternatives, telles que l'[ERC-223](/developers/docs/standards/tokens/erc-223) ou l'[ERC-1363](/developers/docs/standards/tokens/erc-1363).
 
 ## Complément d'information {#further-reading}
 
@@ -168,5 +168,6 @@ Ce problème a donné naissance à des normes alternatives, telles que l'[ERC-22
 ## Autres normes de jetons fongibles {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Coffre-fort à jetons](/developers/docs/standards/tokens/erc-4626)

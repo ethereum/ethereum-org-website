@@ -27,7 +27,7 @@ Finally, you'll need to compile your contract before deploying it, so make sure 
 
 ### Steps to deploy a smart contract {#steps-to-deploy}
 
-The specific steps involved will depend on the development framework in question. For example, you can check out [Hardhat's documentation on deploying your contracts](https://hardhat.org/guides/deploying.html) or [Foundry's documentation on deploying and verifying a smart contract](https://book.getfoundry.sh/forge/deploying). Once deployed, your contract will have an Ethereum address like other [accounts](/developers/docs/accounts/) and can be verified using [source code verification tools](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+The specific steps involved will depend on the development framework in question. For example, you can check out [Hardhat's documentation on deploying your contracts](https://hardhat.org/docs/tutorial/deploying) or [Foundry's documentation on deploying and verifying a smart contract](https://book.getfoundry.sh/forge/deploying). Once deployed, your contract will have an Ethereum address like other [accounts](/developers/docs/accounts/) and can be verified using [source code verification tools](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Related tools {#related-tools}
 
@@ -45,7 +45,7 @@ The specific steps involved will depend on the development framework in question
 **Hardhat - _A development environment to compile, deploy, test, and debug your Ethereum software_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Docs on deploying your contracts](https://hardhat.org/guides/deploying.html)
+- [Docs on deploying your contracts](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ The specific steps involved will depend on the development framework in question
 ## Further reading {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Deploying your contracts with Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Deploying your contracts with Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _Know of a community resource that helped you? Edit this page and add it!_
 

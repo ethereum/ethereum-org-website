@@ -4,13 +4,13 @@ description: An introduction to the JavaScript client libraries that let you int
 lang: en
 ---
 
-In order for a web app to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
+In order for a web app to interact with the Ethereum blockchain (i.e., read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
 
 For this purpose, every Ethereum client implements the [JSON-RPC](/developers/docs/apis/json-rpc/) specification, so there are a uniform set of [methods](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
 
 If you want to use JavaScript to connect with an Ethereum node, it's possible to use vanilla JavaScript but several convenience libraries exist within the ecosystem that make this much easier. With these libraries, developers can write intuitive, one-line methods to initialize JSON-RPC requests (under the hood) that interact with Ethereum.
 
-Please note that since [The Merge](/roadmap/merge/), two connected pieces of Ethereum software - an execution client and a consensus client - are required to run a node. Please ensure your node includes both an execution and consensus client. If your node is not on your local machine (e.g. your node is running on an AWS instance) update the IP addresses in the tutorial accordingly. For more information please see our page on [running a node](/developers/docs/nodes-and-clients/run-a-node/).
+Please note that since [The Merge](/roadmap/merge/), two connected pieces of Ethereum software - an execution client and a consensus client - are required to run a node. Please ensure your node includes both an execution and consensus client. If your node is not on your local machine (e.g., your node is running on an AWS instance) update the IP addresses in the tutorial accordingly. For more information please see our page on [running a node](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Prerequisites {#prerequisites}
 
@@ -18,7 +18,7 @@ As well as understanding JavaScript, it might be helpful to understand the [Ethe
 
 ## Why use a library? {#why-use-a-library}
 
-These libraries abstract away much of the complexity of interacting directly with an Ethereum node. They also provide utility functions (e.g. converting ETH to Gwei) so as a developer you can spend less time dealing with the intricacies of Ethereum clients and more time focused on the unique functionality of your application.
+These libraries abstract away much of the complexity of interacting directly with an Ethereum node. They also provide utility functions (e.g., converting ETH to Gwei) so as a developer you can spend less time dealing with the intricacies of Ethereum clients and more time focused on the unique functionality of your application.
 
 ## Library features {#library-features}
 
@@ -268,6 +268,13 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
+**Codex -** **_Real-time, enriched blockchain data API across dozens of chains._**
+
+- [Documentation](https://docs.codex.io)
+- [Explorer](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [Discord](https://discord.com/invite/mFpUhT3vAq)
+
 **Drift -** **_TypeScript meta-library with built-in caching, hooks, and test mocks._**
 
 - [Documentation](https://ryangoree.github.io/drift/)
@@ -287,3 +294,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Using the DAI token, see how to call contracts function using JavaScript._
 - [Sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Step by step walkthrough for sending transactions from the backend._
+
+## Tutorials: JavaScript APIs & WebSockets on Ethereum {#tutorials}
+
+- [Using WebSockets](/developers/tutorials/using-websockets/) _– How to use WebSockets with Alchemy to subscribe to Ethereum events and make real-time JSON-RPC requests._

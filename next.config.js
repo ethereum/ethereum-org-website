@@ -9,6 +9,10 @@ const createNextIntlPlugin = require("next-intl/plugin")
 
 const { withSentryConfig } = require("@sentry/nextjs")
 
+const redirects = require("./redirects.config")
+
+const i18nConfigJson = require("./i18n.config.json")
+
 const withNextIntl = createNextIntlPlugin()
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
@@ -92,34 +96,25 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "crowdin-static.cf-downloads.crowdin.com",
         },
-        {
-          protocol: "https",
-          hostname: "avatars.githubusercontent.com",
-        },
-        {
-          protocol: "https",
-          hostname: "github.com",
-        },
-        {
-          protocol: "https",
-          hostname: "coin-images.coingecko.com",
-        },
-        {
-          protocol: "https",
-          hostname: "i.imgur.com",
-        },
-        {
-          protocol: "https",
-          hostname: "cdn.galxe.com",
-        },
-        {
-          protocol: "https",
-          hostname: "assets.poap.xyz",
-        },
-        {
-          protocol: "https",
-          hostname: "unavatar.io",
-        },
+        { protocol: "https", hostname: "pvvrtckedmrkyzfxubkk.supabase.co" },
+        { protocol: "https", hostname: "avatars.githubusercontent.com" },
+        { protocol: "https", hostname: "opengraph.githubassets.com" },
+        { protocol: "https", hostname: "github.com" },
+        { protocol: "https", hostname: "coin-images.coingecko.com" },
+        { protocol: "https", hostname: "i.imgur.com" },
+        { protocol: "https", hostname: "s3-dcl1.ethquokkaops.io" },
+        { protocol: "https", hostname: "cdn.galxe.com" },
+        { protocol: "https", hostname: "assets.poap.xyz" },
+        { protocol: "https", hostname: "unavatar.io" },
+        { protocol: "https", hostname: "secure.meetupstatic.com" },
+        { protocol: "https", hostname: "pbs.twimg.com" },
+        { protocol: "https", hostname: "images.lumacdn.com" },
+        { protocol: "https", hostname: "framerusercontent.com" },
+        { protocol: "https", hostname: "img.evbuc.com" },
+        { protocol: "https", hostname: "storage.googleapis.com" },
+        { protocol: "https", hostname: "cdn.charmverse.io" },
+        { protocol: "https", hostname: "ethwingman.com" },
+        { protocol: "https", hostname: "eth-mcp.dev" },
       ],
     },
     async headers() {
@@ -133,6 +128,35 @@ module.exports = (phase, { defaultConfig }) => {
             },
           ],
         },
+      ]
+    },
+    async redirects() {
+      // Build a strict locale matcher from configured locales
+      const LOCALE_ALTS = i18nConfigJson.map(({ code }) => code).join("|") // e.g. "en|es|fr|..."
+
+      // Helper function to generate both English (no prefix) and locale-prefixed redirects
+      const createRedirect = (source, destination, permanent = true) => {
+        // For external URLs, don't modify the destination
+        const isExternal = destination.startsWith("http")
+
+        // English / default-locale: no prefix in source or destination
+        const defaultRedirect = { source, destination, permanent }
+
+        // Locale-prefixed: only match allowed locales (prevents matching arbitrary segments)
+        const localeRedirect = {
+          source: `/:locale(${LOCALE_ALTS})${source}`,
+          destination: isExternal ? destination : `/:locale${destination}`,
+          permanent,
+        }
+
+        return [defaultRedirect, localeRedirect]
+      }
+
+      return [
+        // All primary redirects
+        ...redirects.flatMap(([source, destination, permanent]) =>
+          createRedirect(source, destination, permanent)
+        ),
       ]
     },
   }
@@ -175,6 +199,8 @@ module.exports = (phase, { defaultConfig }) => {
             "public/**/*.txt",
             "public/**/*.xml",
             "public/**/*.pdf",
+            "public/**/*.mp3",
+            "public/audio/**",
             "public/fonts",
             "public/images",
             "public/content",

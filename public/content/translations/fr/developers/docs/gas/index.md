@@ -88,7 +88,7 @@ Pour exécuter une transaction sur le réseau, les utilisateurs peuvent spécifi
 
 ### Taille des blocs {#block-size}
 
-Chaque bloc vise une taille cible de 15 millions de gaz, mais leur taille s'adapte aux exigences du réseau, jusqu'à une limite de 30 millions de gaz (deux fois la taille cible de bloc). Le protocole atteint une taille d'équilibre de bloc de 15 millions en moyenne grâce au processus de _tâtonnement_. Cela signifie que si la taille du bloc est plus importante que la taille cible du bloc, le protocole augmentera les frais de base pour le bloc suivant. De même, le protocole diminuera les frais de base si la taille du bloc est inférieure à la taille cible du bloc. Le montant par lequel les frais de base sont ajustés est proportionnel à l'écart entre la taille actuelle et la taille cible du bloc. [En savoir plus sur les blocs](/developers/docs/blocks/).
+Chaque bloc vise une taille cible de 30 millions de gaz, mais leur taille s'adapte aux exigences du réseau, jusqu'à une limite de 60 millions de gaz (deux fois la taille cible de bloc). Le protocole atteint une taille d'équilibre de bloc de 15 millions en moyenne grâce au processus de _tâtonnement_. Cela signifie que si la taille du bloc est plus importante que la taille cible du bloc, le protocole augmentera les frais de base pour le bloc suivant. De même, le protocole diminuera les frais de base si la taille du bloc est inférieure à la taille cible du bloc. Le montant par lequel les frais de base sont ajustés est proportionnel à l'écart entre la taille actuelle et la taille cible du bloc. [En savoir plus sur les blocs](/developers/docs/blocks/).
 
 ### Calculer les frais de gaz dans la pratique {#calculating-fees-in-practice}
 

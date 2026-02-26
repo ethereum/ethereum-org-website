@@ -7,6 +7,7 @@
   "template-usecase-dropdown-payments": "Ethereum Payments",
   "template-usecase-dropdown-prediction-markets": "Prediction Markets",
   "template-usecase-dropdown-social-networks": "Decentralized social networks",
+  "template-usecase-dropdown-restaking" : "Restaking",
   "template-usecase-dropdown-identity": "Decentralized identity",
   "template-usecase-dropdown-desci": "Decentralized science (DeSci)",
   "template-usecase-dropdown-refi": "Regenerative finance (ReFi)",
@@ -14,5 +15,6 @@
   "template-usecase-banner": "Uses of Ethereum are always developing and evolving. Add any info you think will make things clearer or more up to date.",
   "template-usecase-edit-link": "Edit page",
   "template-usecase-dropdown-aria": "Use case dropdown menu",
+  "template-usecase-dropdown-onchain-gaming": "Onchain Gaming",
   "template-usecase-dropdown-rwa": "Real-world assets (RWAs)"
 }

@@ -37,9 +37,11 @@ The **validator public key** is included in the transaction data when a user dep
 
 ### Withdrawal credentials {#withdrawal-credentials}
 
-Every validator has a property known as _withdrawal credentials_. This 32-byte field begins with either a `0x00`, representing BLS withdrawal credentials, or a `0x01`, representing credentials that point to an execution address.
+Every validator has a property known as _withdrawal credentials_. The first byte of this 32-byte field identifies the account type: `0x00` represents original BLS (pre-Shapella, non-withdrawable) credentials, `0x01` represents legacy credentials that point to an execution address, and `0x02` represents the modern compounding credential type.
 
 Validators with `0x00` BLS keys must update these credentials to point to an execution address in order to activate excess balance payments or full withdrawal from staking. This can be done by providing an execution address in the deposit data during initial key generation, _OR_ by using the withdrawal key at a later time to sign and broadcast a `BLSToExecutionChange` message.
+
+[More on validator withdrawal credentials](/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/)
 
 ### The withdrawal key {#withdrawal-key}
 
@@ -56,7 +58,7 @@ Separating the validator keys from the Ethereum account keys enables multiple va
 
 ![validator key schematic](validator-key-schematic.png)
 
-**Note**: Exiting from staking duties and withdrawing a validator's balance currently requires signing a [voluntary exit message (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) with the validator key. However, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) is a proposal that will allow a user to trigger a validator's exit and withdrawals its balance by signing exit messages with the withdrawal key in the future. This will reduce trust assumptions by enabling stakers who delegate ETH to [staking-as-a-service providers](/staking/saas/#what-is-staking-as-a-service) to remain in control of their funds. 
+**Note**: Exiting from staking duties and withdrawing a validator's balance currently requires signing a [voluntary exit message (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) with the validator key. However, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) is a proposal that will allow a user to trigger a validator's exit and withdrawals its balance by signing exit messages with the withdrawal key in the future. This will reduce trust assumptions by enabling stakers who delegate ETH to [staking-as-a-service providers](/staking/saas/#what-is-staking-as-a-service) to remain in control of their funds.
 
 ## Deriving keys from a seed phrase {#deriving-keys-from-seed}
 

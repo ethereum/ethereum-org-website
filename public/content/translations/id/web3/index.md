@@ -65,12 +65,15 @@ Web3 memberikan Anda kepemilikan atas aset digital dengan cara yang belum pernah
 
 Web3 memperbolehkan kepemilikan langsung melalui [Token yang tidak dapat dipertukarkan (NFTs)](/glossary/#nft). Tidak ada satu pun, bahkan pembuat game, mempunyai kekuatan untuk mengambil kepemilikan Anda. Dan, jika Anda berhenti bermain, Anda dapat menjual atau memperdagangkan barang in-game di pasar terbuka dan menurunkan nilainya.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Pelajari lebih lanjut tentang NFT</div>
   <ButtonLink href="/nft/">
     Selengkapnya tentang NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Tahan Penyensoran {#censorship-resistance}
 
@@ -90,12 +93,15 @@ DAO didefinisikan secara teknis sebagai [kontrak pintar](/glossary/#smart-contra
 
 Namun, orang-orang mendefinisikan banyak komunitas Web3 sebagai DAO. Semua komunitas-komunitas ini memiliki tingkat desentralisasi dan otomatisasi yang berbeda berdasarkan kode. Saat ini, kami sedang mengeksplorasi apa itu DAO dan bagaimana mereka dapat berkembang di masa depan.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Pelajari lebih lanjut tentang DAO</div>
   <ButtonLink href="/dao/">
     Pelajari lebih lanjut tentang DAO
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identitas {#identity}
 

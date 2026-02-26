@@ -63,12 +63,15 @@ Ethereum baseia-se nisso. Como o Bitcoin, as regras não mudam por você, e todo
 
 Isso soa estranho... "Por que eu gostaria de programar meu dinheiro"? No entanto, esta é mais uma característica padrão dos tokens no Ethereum. Qualquer um pode programar a lógica em pagamentos. Assim, você pode ter o controle e a segurança do Bitcoin somados aos serviços fornecidos por instituições financeiras. Isso permite fazer coisas com criptomoedas que você não poderia fazer com o Bitcoin, tais como emprestar e tomar empréstimos, agendar pagamentos, investir em fundos de índices e mais.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Explore nossas sugestões de aplicativos DeFi para iniciar se você é novo no Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Ver aplicativos DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## O que você pode fazer com DeFi? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ Se o estoque da exchange B cair de repente e o usuário não conseguir comprar o
 
 Para ser capaz de fazer o exemplo acima no mundo financeiro tradicional, você precisaria de uma quantidade enorme de dinheiro. Estas estratégias de fazer dinheiro só são acessíveis aos que já possuem economias. Os empréstimos rápidos são um exemplo do futuro em que possuir dinheiro não é necessariamente uma condição prévia para se fazer dinheiro.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Mais sobre empréstimos rápidos
 </ButtonLink>
 
@@ -320,7 +323,7 @@ O Ethereum é a base perfeita para DeFi por várias razões:
 Pense no DeFi como camadas:
 
 1. O blockchain: Ethereum contém o histórico das transações e o estado das contas.
-2. Os ativos: [ETH](/eth/) e outros tokens (moedas).
+2. Os ativos: [ETH](/what-is-ether/) e outros tokens (moedas).
 3. Os protocolos, [contratos inteligentes](/glossary/#smart-contract) que oferecem a funcionalidade, por exemplo, um serviço que permite o empréstimo descentralizado de ativos.
 4. [As aplicações](/apps/): os produtos que usamos para gerenciar e acessar os protocolos.
 

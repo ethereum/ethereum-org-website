@@ -40,12 +40,15 @@ lang: zh-tw
 **任何知道這組助記詞的人都可以掌管所有資金。**切勿與任何人分享此資訊。 這組助記詞應包含 12 到 24 個隨機產生的單字（這些單字的順序很重要）。
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>錢包安裝了嗎？</b><br/>瞭解如何使用它。</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     如何使用錢包
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 對其他指南有興趣嗎？ 查看我們的[逐步指南](/guides/)

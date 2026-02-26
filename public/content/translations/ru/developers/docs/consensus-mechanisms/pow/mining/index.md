@@ -15,9 +15,14 @@ incomplete: true
 
 Сейчас Ethereum, как и Bitcoin, использует механизм консенсуса [«Доказательство работы» (proof-of-work, PoW)](/developers/docs/consensus-mechanisms/pow/). Майнинг — это ключевая составляющая в системе доказательства работы. Майнеры Ethereum (компьютеры с работающим программным обеспечением) используют свою вычислительную мощность для обработки транзакций и создания блоков.
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
    Доказательство владения заменит майнинг и доказательство работы в течение следующего года. Вы можете начать ставить свои ETH уже сегодня. [Подробнее о стейкинге](/staking/)    
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Зачем нужны майнеры? {#why-do-miners-exist}
 

@@ -79,4 +79,4 @@ Eles podem realizar cálculos, criar moeda, armazenar dados, cunhar [NFTs](/glos
 - [Contratos Inteligentes: A Tecnologia Blockchain que substituirá os Advogados](https://blockgeeks.com/guides/smart-contracts/)
 - [Contratos inteligentes para desenvolvedores](/developers/docs/smart-contracts/)
 - [Aprenda a escrever contratos inteligentes](/developers/learning-tools/)
-- [Dominando o Ethereum – O que é um Contrato Inteligente?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Dominando o Ethereum – O que é um Contrato Inteligente?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

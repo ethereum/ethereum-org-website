@@ -4,7 +4,7 @@ description: An overview of development networks and the tools available to help
 lang: en
 ---
 
-When building an Ethereum application with smart contracts, you'll want to run it on a local network to see how it works before deploying it.
+When building an [Ethereum](/) application with smart contracts, you'll want to run it on a local network to see how it works before deploying it.
 
 Similar to how you might run a local server on your computer for web development, you can use a development network to create a local blockchain instance to test your dapp. These Ethereum development networks provide features that allow for much faster iteration than a public testnet (for instance you don’t need to deal with acquiring ETH from a testnet faucet).
 
@@ -20,7 +20,7 @@ Development networks are essentially Ethereum clients (implementations of Ethere
 
 You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-node) but since development networks are purpose-built for development, they often come packed with convenient features like:
 
-- Deterministically seeding your local blockchain with data (e.g. accounts with ETH balances)
+- Deterministically seeding your local blockchain with data (e.g., accounts with ETH balances)
 - Instantly producing blocks with each transaction it receives, in order and with no delay
 - Enhanced debugging and logging functionality
 
@@ -69,3 +69,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 - [Development frameworks](/developers/docs/frameworks/)
 - [Set up a local development environment](/developers/local-environment/)
+
+## Tutorials: Development networks & testing environments on Ethereum {#tutorials}
+
+- [Develop and test dApps with a multi-client local Ethereum testnet](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– How to spin up a local multi-client Ethereum testnet with Kurtosis for dApp development and testing._

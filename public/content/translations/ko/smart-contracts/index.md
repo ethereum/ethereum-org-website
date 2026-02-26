@@ -79,4 +79,4 @@ lang: ko
 - [스마트 계약: 변호사를 대체할 블록체인 기술](https://blockgeeks.com/guides/smart-contracts/)
 - [개발자를 위한 스마트 계약](/developers/docs/smart-contracts/)
 - [스마트 계약 작성 방법 배우기](/developers/learning-tools/)
-- [이더리움 마스터하기 - 스마트 계약이란 무엇입니까?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [이더리움 마스터하기 - 스마트 계약이란 무엇입니까?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

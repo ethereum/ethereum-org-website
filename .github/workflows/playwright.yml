@@ -1,4 +1,4 @@
-name: E2E tests
+name: Playwright Tests
 on:
   workflow_dispatch: # Can be dispatched manually
 jobs:
@@ -7,12 +7,20 @@ jobs:
     env:
       CI: true
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Get Netlify Deploy URL for branch
         id: netlify_deploy
-        if: |
-          github.ref_name == 'dev' || github.ref_name == 'staging' || github.ref_name == 'master'
         run: |
           npx ts-node -O '{ "module": "commonjs" }' src/scripts/get-netlify-branch-deploy.ts
         env:
@@ -20,21 +28,11 @@ jobs:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           GITHUB_REF_NAME: ${{ github.ref_name }}
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-
-      - name: Install dependencies
-        run: pnpm install
-
       - name: Install Playwright with all browsers
         run: npx playwright install --with-deps
 
-      - name: Run E2E Tests on Netlify URL
-        run: pnpm test:e2e
+      - name: Run All Tests (Unit + E2E)
+        run: pnpm test
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{ steps.netlify_deploy.outputs.url }}
 
@@ -42,7 +40,7 @@ jobs:
         if: always()
         with:
           name: playwright-report
-          path: ./tests/e2e/__results__
+          path: ./tests/__results__
           retention-days: 7
 
   chromatic:
@@ -50,23 +48,23 @@ jobs:
     needs: playwright
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22.12.0
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Download Playwright test results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: playwright-report
-          path: ./tests/e2e/__results__
+          path: ./tests/__results__
 
       - name: Run Chromatic
         uses: chromaui/action@latest
@@ -76,4 +74,4 @@ jobs:
           exitZeroOnChanges: true
           storybookBaseDir: .
         env:
-          CHROMATIC_ARCHIVE_LOCATION: ./tests/e2e/__results__
+          CHROMATIC_ARCHIVE_LOCATION: ./tests/__results__

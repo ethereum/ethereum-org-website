@@ -16,7 +16,7 @@ There are multiple ways to store information either directly on the blockchain, 
 The choice of which method to use is based on several criteria:
 
 - The source of the information. Information in calldata cannot come directly from the blockchain itself.
-- The destination of the information. Calldata is available only in the transaction it initiates. Events are not accessible onchain at all.
+- The destination of the information. Calldata is only available in the transaction that includes it. Events are not accessible onchain at all.
 - How much hassle is acceptable? Computers that run a full-scale node can perform more processing than a light client in an application running in a browser.
 - Is it necessary to facilitate easy access to the information from every node?
 - The security requirements.

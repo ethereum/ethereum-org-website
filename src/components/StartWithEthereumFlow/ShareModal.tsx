@@ -39,7 +39,7 @@ const ShareModal = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger>
+      <DialogTrigger asChild>
         <Button>{t("page-start-share-modal-trigger")}</Button>
       </DialogTrigger>
       <DialogContent>

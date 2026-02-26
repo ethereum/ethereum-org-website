@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef } from "react"
+import { ComponentPropsWithRef, Suspense } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -223,7 +223,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           <div className="mb-0 flex flex-col justify-between p-8 lg:flex-row">
             <div className="me-0 flex-[0_1_50%] lg:me-8 lg:mt-0 lg:max-w-full">
               <p className="mb-[1.45rem] text-md leading-base">
-                {t("page-wallets-description")}
+                <Translation id="page-wallets:page-wallets-description" />
               </p>
               <p className="mb-[1.45rem] text-md leading-base">
                 {t("page-wallets-desc-2")}
@@ -305,14 +305,16 @@ const Page = async ({ params }: { params: PageParams }) => {
 
         {locale === "en" ? (
           <div className="my-20 w-full px-0 py-4">
-            <Simulator data={walletOnboardingSimData}>
-              <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
-                Interactive tutorial
-              </p>
-              <h2 className="m-0 text-3xl font-bold leading-[115%] lg:text-5xl">
-                How to use a wallet
-              </h2>
-            </Simulator>
+            <Suspense>
+              <Simulator data={walletOnboardingSimData}>
+                <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
+                  Interactive tutorial
+                </p>
+                <h2 className="m-0 text-3xl font-bold leading-[115%] lg:text-5xl">
+                  How to use a wallet
+                </h2>
+              </Simulator>
+            </Suspense>
           </div>
         ) : (
           <div className="my-12 mt-4 w-full border-t bg-gradient-main px-0 py-16 lg:mt-8">

@@ -1,6 +1,6 @@
 ---
-title: 以太坊研究的活躍領域
-description: 探索不同領域的開放研究，並瞭解如何參與。
+title: "以太坊研究的活躍領域"
+description: "探索不同領域的開放研究，並瞭解如何參與。"
 lang: zh-tw
 ---
 
@@ -41,7 +41,7 @@ lang: zh-tw
 
 - [權益證明簡介](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG 說明](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG 說明](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper 論文](https://arxiv.org/abs/2003.03052)
 
 #### 近期研究 {#recent-research}
@@ -57,7 +57,7 @@ lang: zh-tw
 
 - 發展輕量用戶端支援；
 - 研究燃料限制；
-- 以及與新資料結構的相容性（如沃克爾樹）。
+- 並納入新的資料結構（例如沃克爾樹）。
 
 #### 背景介紹讀物 {#background-reading-1}
 
@@ -83,7 +83,7 @@ lang: zh-tw
 1. 能夠追蹤區塊鏈頭部、廣播區塊以及處理共識邏輯的共識用戶端
 2. 支援以太坊虛擬機和執行交易及智慧型合約的執行用戶端
 
-查看 [節點及用戶端頁面](/developers/docs/nodes-and-clients/) 以獲得關於節點和用戶端的詳細資訊，以及所有目前用戶端實作的清單。 你也可以在 [歷史紀錄頁面](/history/) 找到以太坊的所有升級的歷史紀錄。
+查看 [節點及用戶端頁面](/developers/docs/nodes-and-clients/) 以獲得關於節點和用戶端的詳細資訊，以及所有目前用戶端實作的清單。 你也可以在 [歷史紀錄頁面](/ethereum-forks/) 找到以太坊的所有升級的歷史紀錄。
 
 ### 執行用戶端 {#execution-clients}
 
@@ -377,7 +377,7 @@ lang: zh-tw
 
 - [Wormhole 漏洞報告](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [遭駭以太坊合約事後分析列表](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt 新聞](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt 新聞](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### 近期研究 {#recent-research-19}
 

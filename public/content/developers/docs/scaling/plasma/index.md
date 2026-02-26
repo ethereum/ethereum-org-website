@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-A Plasma chain is a separate blockchain anchored to Ethereum Mainnet but executing transactions offchain with its own mechanism for block validation. Plasma chains are sometimes referred to as "child" chains, essentially smaller copies of the Ethereum Mainnet. Plasma chains use [fraud proofs](/glossary/#fraud-proof) (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
+A Plasma chain is a separate blockchain anchored to [Ethereum](/) Mainnet but executing transactions offchain with its own mechanism for block validation. Plasma chains are sometimes referred to as "child" chains, essentially smaller copies of the Ethereum Mainnet. Plasma chains use [fraud proofs](/glossary/#fraud-proof) (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
 
 Merkle trees enable the creation of an endless stack of these chains that can work to offload bandwidth from parent chains (including Ethereum Mainnet). However, while these chains derive some security from Ethereum (via fraud proofs), their security and efficiency are affected by several design limitations.
 
@@ -72,7 +72,7 @@ If the challenge period elapses without anyone providing a fraud-proof, Alice's 
 
 ### Dispute arbitration {#dispute-arbitration}
 
-Like any blockchain, plasma chains need a mechanism for enforcing the integrity of transactions in case participants act maliciously (e.g. double-spending funds). To this end, plasma chains use fraud proofs to arbitrate disputes concerning the validity of state transitions and penalize bad behavior. Fraud proofs are used as a mechanism through which a Plasma child chain files a complaint to its parent chain or to the root chain.
+Like any blockchain, plasma chains need a mechanism for enforcing the integrity of transactions in case participants act maliciously (e.g., double-spending funds). To this end, plasma chains use fraud proofs to arbitrate disputes concerning the validity of state transitions and penalize bad behavior. Fraud proofs are used as a mechanism through which a Plasma child chain files a complaint to its parent chain or to the root chain.
 
 A fraud-proof is simply a claim that a particular state transition is invalid. An example is if a user (Alice) tries to spend the same funds twice. Perhaps she spent the UTXO in a transaction with Bob and wants to spend the same UTXO (which is now Bob's) in another transaction.
 
@@ -174,3 +174,7 @@ Multiple projects provide implementations of Plasma that you can integrate into 
 - [The Life and Death of Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
 _Know of a community resource that helped you? Edit this page and add it!_
+
+## Tutorials: Plasma chains on Ethereum {#tutorials}
+
+- [Write an app-specific plasma that preserves privacy](/developers/tutorials/app-plasma/) _– Build a privacy-preserving plasma application using zero-knowledge proofs and offchain components._

@@ -37,7 +37,7 @@ sidebarDepth: 2
 - मूल रूप से, [एथेरियम येलो पेपर](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [निष्पादन संबंधी विनिर्देश](https://github.com/ethereum/execution-specs/)
 - [सहमति संबंधी विनिर्देश](https://github.com/ethereum/consensus-specs)
-- विभिन्न [नेटवर्क उन्नयन](/history/) में लागू किए गए [EIP](https://eips.ethereum.org/)
+- विभिन्न [नेटवर्क उन्नयन](/ethereum-forks/) में लागू किए गए [EIP](https://eips.ethereum.org/)
 
 ### नेटवर्क में ट्रैकिंग नोड्स {#network-overview}
 

@@ -10,7 +10,7 @@ skill: beginner
 lang: fr
 published: 2020-11-04
 source: Documentation Alchemy
-sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
+sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
 Voici un guide à l'attention des débutants qui explique comment envoyer des transactions Ethereum en utilisant le Web3. Il y a trois étapes principales pour envoyer une transaction sur la blockchain Ethereum : créer, signer et diffuser. Nous allons passer en revue les trois en espérant répondre à toutes les questions que vous pourriez vous poser ! Dans ce tutoriel, nous utiliserons [Alchemy](https://www.alchemy.com/) pour envoyer nos transactions sur la chaîne Ethereum. Vous pouvez [créer gratuitement un compte sur Alchemy ici](https://auth.alchemyapi.io/signup).
@@ -118,9 +118,13 @@ API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 Ne propagez pas le fichier <code>.env</code> ! Assurez-vous de ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque, car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 7\. Créer le fichier `sendTx.js` {#create-sendtx-js}
 

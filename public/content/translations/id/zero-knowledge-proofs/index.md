@@ -110,7 +110,7 @@ Menggunakan MACI _memerlukan_ kepercayaan pada koordinator untuk tidak berkolusi
 
 Namun dalam kasus di mana koordinator tetap jujur, MACI menjadi alat yang kuat untuk menjamin keadilan pemungutan suara di dalam rantai. Hal ini menjelaskan popularitasnya di antara aplikasi pendanaan kuadratik seperti ([clr.fund](https://clr.fund/#/about/maci)) yang sangat mengandalkan integritas dari setiap pilihan suara individu.
 
-[Pelajari lebih lanjut tentang MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Pelajari lebih lanjut tentang MACI](https://maci.pse.dev/).
 
 ## Bagaimana bukti tanpa pengetahuan bekerja? {#how-do-zero-knowledge-proofs-work}
 

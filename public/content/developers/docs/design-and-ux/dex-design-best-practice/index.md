@@ -72,7 +72,7 @@ In the early days of DeFi, the fiat equivalent was often missing. If you are bui
 
 On the second field (the one where you choose the token you are swapping to) you can also include the price impact next to the fiat currency amount, by calculating the difference between the input amount and estimated output amounts. This is quite a useful detail to include.
 
-Percentage buttons (e.g. 25%, 50%, 75%) can be a useful feature, but they take up more space, add more call to actions, and add more mental load. Same with percentage sliders. Some of these UI decisions will depend on your brand and your user type.
+Percentage buttons (e.g., 25%, 50%, 75%) can be a useful feature, but they take up more space, add more call to actions, and add more mental load. Same with percentage sliders. Some of these UI decisions will depend on your brand and your user type.
 
 Extra details can be shown below the main form. As this type of info is mostly for pro users, it makes sense to either:
 - keep it as minimal as possible, or;
@@ -165,7 +165,7 @@ The bottom line is that it probably doesn’t make a huge difference to usabilit
 
 It’s been mildly interesting to see the fashion change with time. Uniswap initially had the token on the left, but has since moved it to the right. Sushiswap also made this change during a design upgrade. Most, but not all, protocols have followed suit.
 
-Financial convention traditionally puts the currency symbol before the number, e.g. $50, €50, £50, but we *say* 50 dollars, 50 Euros, 50 pounds.
+Financial convention traditionally puts the currency symbol before the number, e.g., $50, €50, £50, but we *say* 50 dollars, 50 Euros, 50 pounds.
 
 To the general user - especially someone who reads left to right, top to bottom - token on the right probably feels more natural.
 

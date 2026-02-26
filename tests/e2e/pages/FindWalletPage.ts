@@ -134,11 +134,12 @@ export class FindWalletPage extends BasePage {
     const desktopCheckbox = desktopLabelParent.locator("button")
     await desktopCheckbox.click()
 
+    const itemContainer = desktopLabelParent.locator("..")
+    const osOptionLabels = itemContainer.locator("label span.select-none")
+    await expect(osOptionLabels.first()).toBeVisible()
+
     // Get OS options
-    const osOptions = await desktopLabelParent
-      .locator("..")
-      .locator("label span.select-none")
-      .allTextContents()
+    const osOptions = await osOptionLabels.allTextContents()
 
     return { initialCount, osOptions }
   }
@@ -168,11 +169,12 @@ export class FindWalletPage extends BasePage {
     const mobileCheckbox = mobileLabelParent.locator("button")
     await mobileCheckbox.click()
 
+    const itemContainer = mobileLabelParent.locator("..")
+    const osOptionLabels = itemContainer.locator("label span.select-none")
+    await expect(osOptionLabels.first()).toBeVisible()
+
     // Get OS options
-    const osOptions = await mobileLabelParent
-      .locator("..")
-      .locator("label span.select-none")
-      .allTextContents()
+    const osOptions = await osOptionLabels.allTextContents()
 
     // Close filters
     await this.mobileFiltersSubmitButton.click()
@@ -219,9 +221,9 @@ export class FindWalletPage extends BasePage {
    * Verify the row counter displays the provided expected count
    */
   async verifyRowCounterEquals(expectedCount: number) {
-    const counterText = await this.rowCounter.textContent()
-
-    expect(counterText).toBe(`Showing all wallets (${expectedCount})`)
+    await expect(this.rowCounter).toHaveText(
+      `Showing all wallets (${expectedCount})`
+    )
   }
 
   /**

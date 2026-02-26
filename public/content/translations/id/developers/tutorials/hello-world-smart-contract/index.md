@@ -231,15 +231,19 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Untuk betul-betul menghubungkannya ke kode kita, kita akan mereferensikan variabel-variabel ini dalam berkas `hardhat.config.js` kita pada langkah ke-13.
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Langkah 12: Instal Ethers.js {#step-12-install-ethersjs}
 
 Ethers.js adalah pustaka yang mempermudah interaksi dan pembuatan permintaan ke Ethereum dengan membungkus [metode JSON-RPC standar](/developers/docs/apis/json-rpc/) dengan metode yang lebih ramah pengguna.
 
-Hardhat menjadikannya sangat mudah untuk mengintegrasikan [Plugin](https://hardhat.org/plugins/) untuk perangkat tambahan dan fungsionalitas yang diperluas. Kita akan mengambil manfaat dari [plugin Ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) untuk penyebaran kontrak ([Ethers.js](https://github.com/ethers-io/ethers.js/) memiliki beberapa metode penyebaran kontrak yang sangat bersih).
+Hardhat menjadikannya sangat mudah untuk mengintegrasikan [Plugin](https://hardhat.org/plugins/) untuk perangkat tambahan dan fungsionalitas yang diperluas. Kita akan mengambil manfaat dari [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) untuk penyebaran kontrak ([Ethers.js](https://github.com/ethers-io/ethers.js/) memiliki beberapa metode penyebaran kontrak yang sangat bersih).
 
 Dalam direktori proyek Anda, ketik:
 

@@ -14,7 +14,6 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import {
   Heading1 as MdHeading1,
@@ -22,6 +21,7 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
+import { PieChart } from "@/components/PieChart"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
 import TableOfContents from "@/components/TableOfContents"
@@ -93,7 +93,7 @@ export const docsComponents = {
   Divider,
   Emoji,
   GlossaryTooltip,
-  InfoBanner,
+  PieChart,
   YouTube,
 } as MDXRemoteProps["components"]
 

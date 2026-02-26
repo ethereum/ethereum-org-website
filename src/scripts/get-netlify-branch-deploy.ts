@@ -1,4 +1,4 @@
-// Fetches the latest published Netlify deploy for the current branch and outputs its URL for GitHub Actions
+// Fetches the latest ready Netlify deploy for the current branch and outputs its URL for GitHub Actions
 import fs from "fs"
 
 const siteId = process.env.NETLIFY_SITE_ID
@@ -13,7 +13,6 @@ if (!siteId || !branch || !token) {
 type NetlifyDeploy = {
   state: string
   branch: string
-  published: boolean
   deploy_ssl_url?: string
   deploy_url?: string
 }
@@ -31,12 +30,10 @@ type NetlifyDeploy = {
     process.exit(1)
   }
   const deploys: NetlifyDeploy[] = await res.json()
-  // Find the latest published deploy for this branch
-  const latest = deploys.find(
-    (d) => d.state === "ready" && d.branch === branch && d.published
-  )
+  // Find the latest ready deploy for this branch
+  const latest = deploys.find((d) => d.state === "ready" && d.branch === branch)
   if (!latest) {
-    console.error("No published deploy found for branch:", branch)
+    console.error("No ready deploy found for branch:", branch)
     process.exit(1)
   }
   // Use GitHub Actions recommended output syntax (GITHUB_OUTPUT)

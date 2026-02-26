@@ -1,5 +1,4 @@
 import { ExternalLink } from "lucide-react"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import Emoji from "@/components/Emoji"
 
@@ -72,12 +71,12 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                     className="text-body no-underline"
                     href={hasGitHub ? `${GITHUB_URL}${username}` : "#"}
                   >
-                    <VisuallyHidden>{`In place number ${
+                    <span className="sr-only">{`In place number ${
                       idx + 1
-                    } with ${score} points`}</VisuallyHidden>
+                    } with ${score} points`}</span>
                     {name}{" "}
                     {hasGitHub && (
-                      <VisuallyHidden>(See Github Profile)</VisuallyHidden>
+                      <span className="sr-only">(See Github Profile)</span>
                     )}
                   </LinkOverlay>
 

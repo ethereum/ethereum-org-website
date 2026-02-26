@@ -1,4 +1,11 @@
-import { useCallback, useEffect, useMemo, useState } from "react"
+import {
+  startTransition,
+  useCallback,
+  useDeferredValue,
+  useEffect,
+  useMemo,
+  useState,
+} from "react"
 import { useSearchParams } from "next/navigation"
 
 import type { FilterOption, TPresetFilters } from "@/lib/types"
@@ -77,15 +84,17 @@ const ProductTable = <T extends { id: string }>({
 
   const updateFilters = useCallback(
     (filters: FilterOption | FilterOption[]) => {
-      setFilters((prevFilters) => {
-        return prevFilters.map((prevFilter) => {
-          const filter = Array.isArray(filters)
-            ? filters.find((f) => f.title === prevFilter.title)
-            : filters.title === prevFilter.title
-              ? filters
-              : prevFilter
-          if (!filter) return prevFilter
-          return filter
+      startTransition(() => {
+        setFilters((prevFilters) => {
+          return prevFilters.map((prevFilter) => {
+            const filter = Array.isArray(filters)
+              ? filters.find((f) => f.title === prevFilter.title)
+              : filters.title === prevFilter.title
+                ? filters
+                : prevFilter
+            if (!filter) return prevFilter
+            return filter
+          })
         })
       })
     },
@@ -93,7 +102,9 @@ const ProductTable = <T extends { id: string }>({
   )
 
   const resetFilters = useCallback(() => {
-    setFilters(initialFilters)
+    startTransition(() => {
+      setFilters(initialFilters)
+    })
     onResetFilters?.()
   }, [initialFilters, onResetFilters])
 
@@ -114,10 +125,7 @@ const ProductTable = <T extends { id: string }>({
     })
   }, [filteredData, presetFilters])
 
-  const activeFiltersCount = useMemo(
-    () => getActiveFiltersCount(filters),
-    [filters]
-  )
+  const activeFiltersCount = useDeferredValue(getActiveFiltersCount(filters))
 
   return (
     <div>

@@ -1,21 +1,18 @@
 import { getLocale, getTranslations } from "next-intl/server"
 
-import { CommunityConference } from "@/lib/types"
-
-import events from "@/data/community-events.json"
-
-import { getUpcomingEvents } from "../utils"
+import type { EventItem } from "@/lib/types"
 
 import type { DevelopersPath, VideoCourse } from "./types"
 
+import { getEventsData } from "@/lib/data"
 import cyfrinBasicBanner from "@/public/images/developers/cyfrin-basic-banner.webp"
 import cyfrinFoundryAdvancedBanner from "@/public/images/developers/cyfrin-foundry-advanced-banner.webp"
 import cyfrinFoundryFundamentalsBanner from "@/public/images/developers/cyfrin-foundry-fundamentals-banner.webp"
 import cyfrinSecurityBanner from "@/public/images/developers/cyfrin-security-banner.webp"
 import cyfrinSolidityBanner from "@/public/images/developers/cyfrin-solidity-banner.webp"
-import speedrunNFT from "@/public/images/developers/speedrun-nft.png"
-import speedrunStakingApp from "@/public/images/developers/speedrun-staking-app.png"
-import speedrunTokenVendor from "@/public/images/developers/speedrun-token-vendor.png"
+import speedrunDex from "@/public/images/developers/speedrun-dex.png"
+import speedrunStablecoins from "@/public/images/developers/speedrun-stablecoins.png"
+import speedrunNFT from "@/public/images/developers/speedrun-tokenization.png"
 
 export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
   const locale = await getLocale()
@@ -30,27 +27,27 @@ export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
       imgAlt: t("page-developers-speedrun-nft-alt"),
       title: t("page-developers-speedrun-nft-title"),
       description: t("page-developers-speedrun-nft-desc"),
-      href: "https://speedrunethereum.com/challenge/simple-nft-example",
+      href: "https://speedrunethereum.com/challenge/tokenization",
       button: t("page-developers-start-quest"),
-      tag: t("page-developers-speedrun-challenge-0"),
+      tag: t("page-developers-skill-beginner"),
     },
     {
-      imgSrc: speedrunStakingApp,
-      imgAlt: t("page-developers-speedrun-staking-alt"),
-      title: t("page-developers-speedrun-staking-title"),
-      description: t("page-developers-speedrun-staking-desc"),
-      href: "https://speedrunethereum.com/challenge/decentralized-staking",
+      imgSrc: speedrunDex,
+      imgAlt: t("page-developers-speedrun-dex-alt"),
+      title: t("page-developers-speedrun-dex-title"),
+      description: t("page-developers-speedrun-dex-desc"),
+      href: "https://speedrunethereum.com/challenge/dex",
       button: t("page-developers-start-quest"),
-      tag: t("page-developers-speedrun-challenge-1"),
+      tag: t("page-developers-skill-intermediate"),
     },
     {
-      imgSrc: speedrunTokenVendor,
-      imgAlt: t("page-developers-speedrun-token-alt"),
-      title: t("page-developers-speedrun-token-title"),
-      description: t("page-developers-speedrun-token-desc"),
-      href: "https://speedrunethereum.com/challenge/token-vendor",
+      imgSrc: speedrunStablecoins,
+      imgAlt: t("page-developers-speedrun-stablecoins-alt"),
+      title: t("page-developers-speedrun-stablecoins-title"),
+      description: t("page-developers-speedrun-stablecoins-desc"),
+      href: "https://speedrunethereum.com/challenge/stablecoins",
       button: t("page-developers-start-quest"),
-      tag: t("page-developers-speedrun-challenge-2"),
+      tag: t("page-developers-skill-advanced"),
     },
   ]
 }
@@ -111,8 +108,12 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
   ]
 }
 
-export const getHackathons = async (): Promise<CommunityConference[]> => {
-  const locale = await getLocale()
-  const allUpcomingEvents = getUpcomingEvents(events, locale)
-  return allUpcomingEvents.filter((e) => e.hackathon) as CommunityConference[]
+export const getHackathons = async (): Promise<EventItem[]> => {
+  const events = await getEventsData()
+  if (!events) return []
+  return events.filter(
+    (e) =>
+      e.eventTypes?.includes("hackathon") ||
+      e.tags?.some((tag) => tag.toLowerCase() === "hackathon")
+  )
 }

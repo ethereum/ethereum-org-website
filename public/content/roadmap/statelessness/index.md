@@ -6,7 +6,7 @@ lang: en
 
 # Statelessness, state expiry and history expiry {#statelessness}
 
-The ability to run Ethereum nodes on modest hardware is critical for true decentralization. This is because running a node gives users the ability to verify information by performing cryptographic checks independently rather than trusting a third party to feed them data. Running a node allows users to submit transactions directly to the Ethereum peer-to-peer network rather than having to trust an intermediary. Decentralization is not possible if these benefits are only available to users with expensive hardware. Instead, nodes should be able to run with extremely modest processing and memory requirements so that they can run on mobile phones, micro-computers or unnoticeably on a home computer.
+The ability to run [Ethereum](/) nodes on modest hardware is critical for true decentralization. This is because running a node gives users the ability to verify information by performing cryptographic checks independently rather than trusting a third party to feed them data. Running a node allows users to submit transactions directly to the Ethereum peer-to-peer network rather than having to trust an intermediary. Decentralization is not possible if these benefits are only available to users with expensive hardware. Instead, nodes should be able to run with extremely modest processing and memory requirements so that they can run on mobile phones, micro-computers or unnoticeably on a home computer.
 
 Today, high disk space requirements is the main barrier preventing universal access to nodes. This is primarily due to the need to store large chunks of Ethereum's state data. This state data contains critical information required to correctly process new blocks and transactions. At the time of writing, a fast 2TB SSD is recommended for running a full Ethereum node. For a node that does not prune any older data, the storage requirement grows at around 14GB/week, and archive nodes that store all data since genesis are approaching 12 TB (at time of writing, in Feb 2023).
 
@@ -56,7 +56,7 @@ Statelessness is a bit of a misnomer because it does not mean the concept of "st
 
 - nearly instant syncing
 - ability to validate blocks out-of-order
-- nodes able to run with very low hardware requirements (e.g. on phones)
+- nodes able to run with very low hardware requirements (e.g., on phones)
 - nodes can run on top of cheap hard drives because there is no disk reading/writing required
 - compatible with future upgrades to Ethereum's cryptography
 
@@ -91,6 +91,7 @@ Weak statelessness, history expiry and state expiry are all in the research phas
 
 ## Further reading {#further-reading}
 
+- [What is Stateless Ethereum?](https://stateless.fyi/)
 - [Vitalik statelessness AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [A theory of state size management](https://hackmd.io/@vbuterin/state_size_management)
 - [Resurrection-conflict-minimized state bounding](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
@@ -101,3 +102,4 @@ Weak statelessness, history expiry and state expiry are all in the research phas
 - [The original stateless client concept notes](https://ethresear.ch/t/the-stateless-client-concept/172)
 - [More on state expiry](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
 - [Even more on state expiry](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Stateless Ethereum Information Page](https://stateless.fyi)

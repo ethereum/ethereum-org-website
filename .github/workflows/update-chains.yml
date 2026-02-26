@@ -11,15 +11,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 10
+        uses: pnpm/action-setup@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 20
           cache: 'pnpm'
@@ -30,18 +28,37 @@ jobs:
       - name: Install ts-node
         run: pnpm add -g ts-node
 
+      - name: Set up git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Generate timestamp and readable date
+        run: |
+          echo "TIMESTAMP=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+          echo "READABLE_DATE=$(date +'%B %-d')" >> $GITHUB_ENV
+
+      - name: Fetch latest dev and create new branch
+        run: |
+          git fetch origin dev
+          git checkout -b "automated-update-${{ env.TIMESTAMP }}" origin/dev
+
       - name: Update chains data
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/update-chains.ts
 
+      - name: Commit and push
+        run: |
+          git add -A
+          git commit -m "Update chains data"
+          git push origin "automated-update-${{ env.TIMESTAMP }}"
+
+      - name: Create PR body
+        run: |
+          echo "Automated update of chains data from https://chainid.network/chains.json" > pr_body.txt
+          echo "" >> pr_body.txt
+          echo "This workflow runs every Friday at 16:20 (UTC)." >> pr_body.txt
+
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: update-chains
-          branch-suffix: timestamp
-          commit-message: |
-            Update chains data
-          base: dev
-          title: Update chains data
-          body: Automated update of chains data from https://chainid.network/chains.json 
-          labels: update 🔄
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+          gh pr create --base dev --head "automated-update-${{ env.TIMESTAMP }}" --title "Update chains data - ${{ env.READABLE_DATE }}" --body-file pr_body.txt --label "update 🔄"

@@ -63,12 +63,15 @@ lang: zh-tw
 5. 在你的錢包中確認並簽名以建立連接。 **簽署此訊息應不會花費任何以太幣**。
 6. 大功告成！ 開始使用應用程式。 你可在我們的[去中心化應用程式頁面](/apps/#explore)找到許多有趣的專案。 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>想要學習更多功能嗎？</div>
   <ButtonLink href="/guides/">
     查看我們的其他指南
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 常見問題
 

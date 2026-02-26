@@ -27,7 +27,7 @@ lang: hi
 
 ### स्मार्ट अनुबंध परिनियोजित करने के चरण {#steps-to-deploy}
 
-इसमें शामिल विशिष्ट चरण प्रश्नगत विकास ढांचे पर निर्भर करेंगे। उदाहरण के लिए, आप [अपने अनुबंधों को परिनियोजित करने पर Hardhat का प्रलेखन](https://hardhat.org/guides/deploying.html) या [स्मार्ट अनुबंध को परिनियोजित करने और सत्यापित करने के लिए फाउंड्री का प्रलेखन](https://book.getfoundry.sh/forge/deploying) देख सकते हैं। एक बार परिनियोजित होने के बाद, आपके अनुबंध में अन्य [खातों](/developers/docs/accounts/) की तरह एक एथेरियम पता होगा और [स्रोत कोड सत्यापन उपकरण](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) का उपयोग करके इसे सत्यापित किया जा सकता है।
+इसमें शामिल विशिष्ट चरण प्रश्नगत विकास ढांचे पर निर्भर करेंगे। उदाहरण के लिए, आप [अपने अनुबंधों को परिनियोजित करने पर Hardhat का प्रलेखन](https://hardhat.org/docs/tutorial/deploying) या [स्मार्ट अनुबंध को परिनियोजित करने और सत्यापित करने के लिए फाउंड्री का प्रलेखन](https://book.getfoundry.sh/forge/deploying) देख सकते हैं। एक बार परिनियोजित होने के बाद, आपके अनुबंध में अन्य [खातों](/developers/docs/accounts/) की तरह एक एथेरियम पता होगा और [स्रोत कोड सत्यापन उपकरण](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) का उपयोग करके इसे सत्यापित किया जा सकता है।
 
 ## संबंधित उपकरण {#related-tools}
 
@@ -45,7 +45,7 @@ lang: hi
 **Hardhat - _आपके एथेरियम सॉफ़्टवेयर को संकलित, परिनियोजित, परीक्षण और डीबग करने का विकास परिवेश_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [अपने अनुबंधों को परिनियोजित करने पर डॉक्स](https://hardhat.org/guides/deploying.html)
+- [अपने अनुबंधों को परिनियोजित करने पर डॉक्स](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [कलह](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ lang: hi
 ## अग्रिम पठन {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Hardhat के साथ अपने अनुबंधों को परिनियोजित करना](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Hardhat के साथ अपने अनुबंधों को परिनियोजित करना](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _एक सामुदायिक संसाधन के बारे में जानें जिसने आपकी मदद की? इस पृष्ठ को संपादित करें और इसे जोड़ें!_
 

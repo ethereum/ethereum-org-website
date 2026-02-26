@@ -9,16 +9,19 @@ const variants = cva("w-full scroll-mt-24 lg:scroll-mt-28", {
     variant: {
       responsiveFlex: "flex flex-col gap-8 md:flex-row lg:gap-16",
     },
+    scrollMargin: {
+      tabNav: "!scroll-mt-36 lg:!scroll-mt-40",
+    },
   },
 })
 
 const Section = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof variants>
->(({ className, variant, ...props }, ref) => (
+>(({ className, variant, scrollMargin, ...props }, ref) => (
   <section
     ref={ref}
-    className={cn(variants({ variant, className }))}
+    className={cn(variants({ variant, scrollMargin, className }))}
     {...props}
   />
 ))
@@ -56,16 +59,23 @@ const SectionHeader = React.forwardRef<
 ))
 SectionHeader.displayName = "SectionHeader"
 
+const tagVariants = cva("w-fit text-sm uppercase", {
+  variants: {
+    variant: {
+      pill: "rounded-full bg-primary-low-contrast px-4 py-0.5 text-primary",
+      plain: "font-semibold tracking-wider text-primary-high-contrast",
+    },
+  },
+  defaultVariants: { variant: "pill" },
+})
+
 const SectionTag = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof tagVariants>
+>(({ className, variant, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(
-      "w-fit rounded-full bg-primary-low-contrast px-4 py-0.5 text-sm uppercase text-primary",
-      className
-    )}
+    className={cn(tagVariants({ variant, className }))}
     {...props}
   />
 ))

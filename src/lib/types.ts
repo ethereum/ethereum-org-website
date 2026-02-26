@@ -24,6 +24,11 @@ import { Rollup, Rollups } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
+import {
+  DeveloperToolCategory,
+  DeveloperToolTag,
+} from "../../app/[locale]/developers/tools/types"
+
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
@@ -71,10 +76,36 @@ export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
 
 export type Lang =
   | "en"
+  | "ar"
+  | "bn"
+  | "cs"
+  | "de"
+  | "es"
+  | "fr"
+  | "hi"
+  | "id"
+  | "it"
+  | "ja"
+  | "ko"
+  | "mr"
+  | "pl"
+  | "pt-br"
+  | "ru"
+  | "sw"
+  | "ta"
+  | "te"
+  | "tr"
+  | "uk"
+  | "ur"
+  | "vi"
+  | "zh-tw"
+  | "zh"
+
+// Languages supported by wallet apps (superset of Lang, includes languages
+// that wallets support even if ethereum.org doesn't have translations for them)
+export type WalletLanguage =
   | "am"
   | "ar"
-  | "az"
-  | "be"
   | "bg"
   | "bn"
   | "bs"
@@ -83,25 +114,21 @@ export type Lang =
   | "da"
   | "de"
   | "el"
+  | "en"
   | "es"
   | "fa"
   | "fi"
-  | "fil"
   | "fr"
-  | "gl"
   | "gu"
   | "ha"
   | "he"
   | "hi"
   | "hr"
   | "hu"
-  | "hy-am"
   | "id"
   | "ig"
   | "it"
   | "ja"
-  | "ka"
-  | "kk"
   | "km"
   | "kn"
   | "ko"
@@ -110,34 +137,26 @@ export type Lang =
   | "mr"
   | "ms"
   | "nb"
-  | "ne-np"
   | "nl"
-  | "pcm"
   | "pl"
-  | "pt-br"
   | "pt"
+  | "pt-br"
   | "ro"
   | "ru"
-  | "se"
   | "sk"
   | "sl"
-  | "sn"
   | "sr"
   | "sw"
   | "ta"
   | "te"
   | "th"
-  | "tk"
-  | "tl"
   | "tr"
-  | "tw"
   | "uk"
   | "ur"
-  | "uz"
   | "vi"
   | "yo"
-  | "zh-tw"
   | "zh"
+  | "zh-tw"
 
 export type Direction = "rtl" | "ltr" | "auto"
 
@@ -148,6 +167,14 @@ export type I18nLocale = {
   localName: string
   langDir: Direction
   dateFormat: string
+  /**
+   * @property forceLocalName - Optional flag to indicate that the local name should be used instead of the fallback from `Intl.DisplayName`.
+   *   Fallback used when locale language name matches English name.
+   *   Set to `true` in cases where the result from `Intl.DisplayName` not desired.
+   *   When enabled, ensure that the `"language-{code}"` string is available in both `en/common.json` and `{code}/common.json` files.
+   * @example Tagalog (tl) results in "Filipino", which is not desired
+   */
+  forceLocalName?: boolean
 }
 
 export type Languages = {
@@ -479,6 +506,10 @@ export type CommonHeroProps<
    * Preface text about the content in the given page
    */
   description: ReactNode
+  /**
+   * Optional CSS class name(s) to apply to the hero component root for styling and layout customization.
+   */
+  className?: string
 }
 
 // Learning Tools
@@ -519,9 +550,14 @@ export type EthStakedResponse = {
   }
 }
 
-export type EpochResponse = Data<{
-  validatorscount: number
-}>
+export type EpochResponse = Data<
+  Record<"eligibleether" | "validatorscount", number>
+>
+
+export type BeaconchainEpochData = Record<
+  "totalEthStaked" | "validatorscount",
+  MetricReturnData
+>
 
 export type StakingStatsData = {
   totalEthStaked: number
@@ -552,8 +588,8 @@ export type EtherscanTxCountResponse = {
 }
 
 export type DefiLlamaTVLResponse = {
-  date: string
-  totalLiquidityUSD: number
+  date: number
+  tvl: number
 }[]
 
 export type MetricReturnData = ValueOrError<number>
@@ -565,6 +601,39 @@ export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
   activeAddresses: Record<string, number | undefined>
+}
+
+export type BlockspaceData = {
+  nft: number
+  defi: number
+  social: number
+  token_transfers: number
+  unlabeled: number
+}
+
+export type GrowThePieMasterData = {
+  launchDates: Record<string, string>
+}
+
+export type GithubRepoData = {
+  starCount: number
+  languages: string[]
+}
+
+export type L2beatData = {
+  projects: Record<
+    string,
+    {
+      stage: string
+      tvl: { total: number }
+      tvs: { breakdown: { total: number } }
+      risks: Array<{ name: string; sentiment: string }>
+    }
+  >
+  chart?: {
+    types: string[]
+    data: number[][]
+  }
 }
 
 export type HomepageActivityMetric =
@@ -605,17 +674,48 @@ export type SimulatorNavProps = {
 export type PhoneScreenProps = SimulatorNavProps & {
   ctaLabel: string
 }
-export type CommunityConference = {
+
+// Events (Geode Labs Supabase API)
+export interface GeodeApiEventItem {
   title: string
-  href: string
+  logoImage: string
+  bannerImage: string
+  startTime: string
+  endTime: string | null
   location: string
-  description: string
-  startDate: string
-  endDate: string
-  imageUrl: string
-  hackathon?: boolean
-  formattedDate?: string
+  link: string
+  tags: string[]
+  highlight?: boolean
+  discord?: string | null
+  telegram?: string | null
+  twitter?: string | null
+  farcaster?: string | null
 }
+
+export type EventType =
+  | "conference"
+  | "hackathon"
+  | "meetup"
+  | "popup"
+  | "group"
+  | "other"
+
+export interface EventItem extends GeodeApiEventItem {
+  id: string // slugified title
+  eventTypes: EventType[]
+  eventTypesLabels?: string[]
+  isOnline: boolean
+  continent: Continent | null
+}
+
+export type Continent =
+  | "africa"
+  | "asia"
+  | "europe"
+  | "north-america"
+  | "south-america"
+  | "oceania"
+  | "middle-east"
 
 // Chains
 export type ChainIdNetworkResponse = {
@@ -687,7 +787,7 @@ export type WalletData = {
   twGradiantBrandColor: string
   url: string
   active_development_team: boolean
-  languages_supported: Lang[]
+  languages_supported: WalletLanguage[]
   twitter: string
   discord: string
   reddit: string
@@ -849,7 +949,7 @@ export type FeedbackWidgetContextType = {
 }
 
 // Historical upgrades
-type NetworkUpgradeDetails = {
+export type NetworkUpgradeDetails = {
   blockNumber?: number
   epochNumber?: number
   slotNumber?: number
@@ -1056,6 +1156,7 @@ export interface ITutorial {
   published?: string | null
   lang: string
   isExternal: boolean
+  isTranslated?: boolean
 }
 
 export enum AppCategoryEnum {
@@ -1108,6 +1209,9 @@ export type App = {
   dateOfLaunch: string
   lastUpdated: string
   ready: string
+  devconnect: string
+  appOfTheWeekStartDate: Date | null
+  appOfTheWeekEndDate: Date | null
 }
 
 export type DefiApp = App & {
@@ -1236,4 +1340,17 @@ export interface MatomoEventOptions {
   eventAction: string
   eventName: string
   eventValue?: string
+}
+
+export type DeveloperToolsResponse = {
+  id: string
+  name: string
+  description: string
+  thumbnail_url?: string
+  banner_url?: string
+  twitter?: string
+  repos: string[]
+  tags: DeveloperToolTag[]
+  website?: string
+  category: DeveloperToolCategory
 }

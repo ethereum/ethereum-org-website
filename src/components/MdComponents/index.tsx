@@ -2,8 +2,8 @@ import { type ComponentProps, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
-import ContributorsQuizBanner from "@/components/Banners/ContributorsQuizBanner"
 import Card from "@/components/Card"
+import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
 import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
 import Contributors from "@/components/Contributors"
@@ -14,7 +14,6 @@ import FeaturedText from "@/components/FeaturedText"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import IdAnchor from "@/components/IdAnchor"
 import MarkdownImage from "@/components/Image/MarkdownImage"
-import InfoBanner from "@/components/InfoBanner"
 import IssuesList from "@/components/IssuesList"
 import LocaleDateTime from "@/components/LocaleDateTime"
 import MainArticle from "@/components/MainArticle"
@@ -29,6 +28,8 @@ import { Tag } from "@/components/ui/tag"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
+
+import * as AlertComponents from "../ui/alert"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
@@ -100,8 +101,10 @@ export const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-export const Paragraph = (props: ChildOnlyProp) => (
-  <p className="mb-4 mt-8" {...props} />
+type ParagraphProps = ChildOnlyProp & { className?: string }
+
+export const Paragraph = ({ className, ...props }: ParagraphProps) => (
+  <p className={cn("mb-4 mt-8", className)} {...props} />
 )
 
 export const Blockquote = (props: ChildOnlyProp) => (
@@ -162,22 +165,22 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
 
 // All custom React components
 export const reactComponents = {
+  ...AlertComponents,
   BrowseApps,
   ButtonLink,
   Card,
   ContentContainer,
   Contributors,
-  ContributorsQuizBanner,
   Divider,
   DocLink,
   Emoji,
   ExpandableCard,
   FeaturedText,
   GlossaryTooltip,
-  InfoBanner,
   Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
+  RestakingList,
   Tag,
   Title,
   WhatAreAppsStories,

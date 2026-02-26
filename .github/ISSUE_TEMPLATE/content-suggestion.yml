@@ -1,0 +1,68 @@
+name: Content suggestion
+description: Suggest new content or improvements to existing pages on ethereum.org.
+title: "[Content] <short summary>"
+labels:
+  - content
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting improvements to ethereum.org!
+        This template is for content-related feedback, such as new pages,
+        updates to existing pages, or missing documentation.
+
+  - type: input
+    id: page-url
+    attributes:
+      label: Affected page URL or path
+      description: Link to the page on ethereum.org or the path to affected files.
+      placeholder: "Example: https://ethereum.org/en/developers/ or src/content/developers/index.md"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: suggestion-type
+    attributes:
+      label: Type of suggestion
+      options:
+        - New page or section
+        - Update existing content
+        - Fix incorrect or outdated information
+        - Improve structure or wording
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current content or behaviour
+      description: Describe what the page currently says or how it behaves.
+      placeholder: "Summarise the current state, including any specific sentences or sections."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: Proposed change
+      description: Describe what you would like to see.
+      placeholder: "Explain your suggestion."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation and context
+      description: Why is this change important? Who does it help?
+      placeholder: "For example: developers new to Ethereum, users confused about gas fees, etc."
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References or related resources
+      description: Optional links to specs, blog posts, or other docs that support your suggestion.
+      placeholder: "EIPs, blog posts, tutorials, etc."

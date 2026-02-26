@@ -40,12 +40,15 @@ Alguns aplicativos vão te pedir para salvar uma "chave de recuperação" secret
 **Qualquer pessoa que conheça essa frase pode tomar o controle de todos os seus fundos.** Nunca compartilhe ela com ninguém. Essa frase deve conter entre 12 e 24 palavras geradas aleatoriamente (a ordem das palavras importa).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Carteira instalada?</b><br/> Aprenda como usá-la.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Como usar uma carteira
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 Tem interesse em outros guias? Verifique os nossos: [Guias passo a passo](/guides/)

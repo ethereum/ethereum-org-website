@@ -71,7 +71,7 @@ EVM работает как [стековая машина](https://wikipedia.or
 - [Машинные коды виртуальной машины Ethereum](https://www.ethervm.io/)
 - [Интерактивный справочник по кодам операций виртуальной машины Ethereum](https://www.evm.codes/)
 - [Краткое введение в документацию по Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [Освоение Ethereum — виртуальная машина Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [Освоение Ethereum — виртуальная машина Ethereum](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## Похожие темы {#related-topics}
 

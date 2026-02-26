@@ -16,7 +16,7 @@ La Preuve d'autorité est une version modifiée de la **[Preuve d'enjeu] (/devel
 
 La Preuve d'autorité nécessite de faire confiance à un ensemble de signataires autorisés qui sont définis dans le [bloc de genèse] (/glossary/#genesis-block). Dans la plupart des implémentations actuelles, tous les signataires autorisés conservent un pouvoir et des privilèges égaux lorsqu'il s'agit de déterminer le consensus de la chaîne. L'idée derrière l'enjeu sur la réputation est que chaque validateur autorisé est bien connu de tous grâce à des éléments tels que la vérification de l'identité des clients (KYC) ou parce qu'il fait partie d'une organisation bien connue qui est le seul validateur. Ainsi, si un validateur commet une erreur, son identité est connue.
 
-Il existe plusieurs implémentations de PoA, mais l'implémentation standard d'Ethereum est **clique**, qui implémente [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique est agréable à utiliser par les développeurs et facilite l'implémentation de normes, prenant en charge tous les types de synchronisation de clients. D'autres implémentations incluent [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) and [Aura](https://openethereum.github.io/Chain-specification).
+Il existe plusieurs implémentations de PoA, mais l'implémentation standard d'Ethereum est **clique**, qui implémente [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique est agréable à utiliser par les développeurs et facilite l'implémentation de normes, prenant en charge tous les types de synchronisation de clients. D'autres implémentations incluent [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) and [Aura](https://openethereum.github.io/Chain-specification).
 
 ## Comment ça marche {#how-it-works}
 
@@ -65,7 +65,7 @@ Par exemple, s'il y a 10 signataires autorisés et que chaque signataire est aut
 - [PoA dans la blockchain](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Explication de Clique](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [PoA obsolète et spécification Aura](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0 et autre implémentation PoA](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0 et autre implémentation PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### Davantage qu'un apprenant visuel ? {#visual-learner}
 

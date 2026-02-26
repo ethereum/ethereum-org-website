@@ -12,7 +12,7 @@ To understand this page it is necessary to first understand the fundamentals of 
 
 ## What problems does weak subjectivity solve? {#problems-ws-solves}
 
-Subjectivity is inherent to proof-of-stake blockchains because selecting the correct chain from multiple forks is done by counting historical votes. This exposes the blockchain to several attack vectors, including long-range attacks whereby nodes that participated very early in the chain maintain an alternative fork that they release much later to their own advantage. Alternatively, if 33% of validators withdraw their stake but continue to attest and produce blocks, they might generate an alternative fork that conflicts with the canonical chain. New nodes or nodes that have been offline for a long time might not be aware that these attacking validators have withdrawn their funds, so attackers could trick them into following an incorrect chain. Ethereum can solve these attack vectors by imposing constraints that diminish the subjective aspects of the mechanism—and therefore trust assumptions—to the bare minimum.
+Subjectivity is inherent to proof-of-stake blockchains because selecting the correct chain from multiple forks is done by counting historical votes. This exposes the blockchain to several attack vectors, including long-range attacks whereby nodes that participated very early in the chain maintain an alternative fork that they release much later to their own advantage. Alternatively, if 33% of validators withdraw their stake but continue to attest and produce blocks, they might generate an alternative fork that conflicts with the canonical chain. New nodes or nodes that have been offline for a long time might not be aware that these attacking validators have withdrawn their funds, so attackers could trick them into following an incorrect chain. [Ethereum](/) can solve these attack vectors by imposing constraints that diminish the subjective aspects of the mechanism—and therefore trust assumptions—to the bare minimum.
 
 ## Weak subjectivity checkpoints {#ws-checkpoints}
 
@@ -34,6 +34,6 @@ Finally, checkpoints can be requested from other nodes; perhaps another Ethereum
 
 - [Weak subjectivity in Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [Vitalik: How I learned to love weak subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
-- [Weak subjectivity (Teku docs)](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
+- [Weak subjectivity (Teku docs)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
 - [Phase-0 Weak subjectivity guide](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [Analysis of weak subjectivity in Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

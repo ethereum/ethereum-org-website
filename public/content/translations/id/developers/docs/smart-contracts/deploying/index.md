@@ -27,7 +27,7 @@ Akhirnya, Anda hanya perlu mengompilasi kontrak sebelum menggunakannya, jadi pas
 
 ### Langkah-langkah untuk menggunakan kontrak pintar {#steps-to-deploy}
 
-Langkah-langkah khusus yang diperlukan akan bergantung pada peralatan yang Anda gunakan. Sebagai contoh, lihat [dokumentasi Hardhat tentang menggunakan kontrak Anda](https://hardhat.org/guides/deploying.html). Ini adalah dua dari peralatan paling populer untuk penggunaan kontrak pintar, yang melibatkan penulisan skrip untuk menangani langkah-langkah penggunaan.
+Langkah-langkah khusus yang diperlukan akan bergantung pada peralatan yang Anda gunakan. Sebagai contoh, lihat [dokumentasi Hardhat tentang menggunakan kontrak Anda](https://hardhat.org/docs/tutorial/deploying). Ini adalah dua dari peralatan paling populer untuk penggunaan kontrak pintar, yang melibatkan penulisan skrip untuk menangani langkah-langkah penggunaan.
 
 Setelah digunakan, kontrak Anda akan memiliki alamat Ethereum seperti [akun](/developers/docs/accounts/) lainnya.
 
@@ -47,7 +47,7 @@ Setelah digunakan, kontrak Anda akan memiliki alamat Ethereum seperti [akun](/de
 **Hardhat - _Lingkungan pengembangan untuk mengompilasi, menggunakan, menguji, dan melakukan debug perangkat lunak Ethereum Anda_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Dokumen tentang penyebaran kontrak Anda](https://hardhat.org/guides/deploying.html)
+- [Dokumen tentang penyebaran kontrak Anda](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -65,7 +65,7 @@ Setelah digunakan, kontrak Anda akan memiliki alamat Ethereum seperti [akun](/de
 ## Bacaan lebih lanjut {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Menyebarkan kontrak Anda dengan Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Menyebarkan kontrak Anda dengan Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _Tahu tentang referensi komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 

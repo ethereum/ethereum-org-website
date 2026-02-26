@@ -15,7 +15,7 @@ summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
 
 ## What are NFTs? {#what-are-nfts}
 
-NFTs are tokens that are **individually unique**. Each NFT has different properties (non-fungible) and is provably scarce. This is different from tokens such as [ETH](/glossary/#ether) or other Ethereum based tokens like USDC where every token is identical and has the same properties ('fungible'). You don't care which specific dollar bill (or ETH) you have in your wallet, because they are all identical and worth the same. However, you _do_ care which specific NFT you own, because they all have individual properties that distinguish them from others ('non-fungible').
+NFTs are tokens that are **individually unique**. Each NFT has different properties (non-fungible) and is provably scarce. This is different from tokens such as [ETH](/glossary/#ether) or other [Ethereum](/) based tokens like USDC where every token is identical and has the same properties ('fungible'). You don't care which specific dollar bill (or ETH) you have in your wallet, because they are all identical and worth the same. However, you _do_ care which specific NFT you own, because they all have individual properties that distinguish them from others ('non-fungible').
 
 The uniqueness of each NFT enables tokenization of things like art, collectibles, or even real estate, where one specific unique NFT represents some specific unique real world or digital item. Ownership of an asset is publicly verifiable on Ethereum [blockchain](/glossary/#blockchain).
 
@@ -46,25 +46,28 @@ NFTs are used for many things, including:
 - certify that you completed a course
 - ownable items for games
 - digital art
-- tokenizing real-world assets
+- tokenizing [real-world assets](/real-world-assets/)
 - proving your online identity
 - gating access to content
 - ticketing
 - decentralized internet domain names
 - collateral in [decentralized finance](/glossary/#defi)
 
-Maybe you are an artist that wants to share their work using NFTs, without losing control and sacrificing your profits to intermediaries. You can create a new contract and specify the number of NFTs, their properties and a link to some specific artwork. As the artist, **you can program into the smart contract the royalties** you should be paid (e.g. transfer 5% of the sale price to the contract owner each time an NFT is transferred). You can also always prove that you created the NFTs because you own the [wallet](/glossary/#wallet) that deployed the contract. Your buyers can easily prove that they own an **authentic NFT** from your collection because their wallet [address](/glossary/#address) is associated with a token in your smart contract. They can use it across the Ethereum ecosystem, confident in its authenticity.
+Maybe you are an artist that wants to share their work using NFTs, without losing control and sacrificing your profits to intermediaries. You can create a new contract and specify the number of NFTs, their properties and a link to some specific artwork. As the artist, **you can program into the smart contract the royalties** you should be paid (e.g., transfer 5% of the sale price to the contract owner each time an NFT is transferred). You can also always prove that you created the NFTs because you own the [wallet](/glossary/#wallet) that deployed the contract. Your buyers can easily prove that they own an **authentic NFT** from your collection because their wallet [address](/glossary/#address) is associated with a token in your smart contract. They can use it across the Ethereum ecosystem, confident in its authenticity.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Explore NFT art
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Or consider a ticket to a sporting event. Just as an **organizer of an event can choose how many tickets to sell**, the creator of an NFT can decide how many replicas exist. Sometimes these are exact replicas, such as 5000 General Admission tickets. Sometimes several are minted that are very similar, but each slightly different, such as a ticket with an assigned seat. These can be bought and sold peer-to-peer without paying ticket handlers and the buyer always with assurance of the ticket authenticity by checking the contract address.
 
-On ethereum.org, **NFTs are used to demonstrate that people have meaningfully contributed** to our Github repository (programmed the website, written or modified an article...), translated our content, or attended our community calls, and we've even got our own NFT domain name. If you contribute to ethereum.org, you can claim a [POAP](/glossary/#poap) NFT. Some crypto meetups have used POAPs as tickets. [More on contributing](/contributing/#poap).
+On ethereum.org, **NFTs are used to demonstrate that people have meaningfully contributed** to our Github repository (programmed the website, written or modified an article...), translated our content, or attended our community calls, and we've even got our own NFT domain name. If you contribute to ethereum.org, you can claim a [POAP](/glossary/#poap) NFT. Some crypto meetups have used POAPs as tickets. [More on contributing](/contributing/#poap). You can also explore our [ethereum.org collectibles](/collectibles/) page to see community achievement NFTs.
 
 ![ethereum.org POAP](./poap.png)
 

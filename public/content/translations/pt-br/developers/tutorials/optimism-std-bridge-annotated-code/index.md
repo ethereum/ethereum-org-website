@@ -725,7 +725,7 @@ Estas duas funções são wrappers em volta do `_initiateERC20Deposit`, a funç�
 ```solidity
     /**
      * @dev Performs the logic for deposits by informing the L2 Deposited Token
-     * contract of the deposit and calling a handler to lock the L1 funds. (e.g. transferFrom)
+     * contract of the deposit and calling a handler to lock the L1 funds. (e.g., transferFrom)
      *
      * @param _l1Token Address of the L1 ERC20 we are depositing
      * @param _l2Token Address of the L1 respective L2 ERC20

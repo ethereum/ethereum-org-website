@@ -58,12 +58,16 @@ Des pays comme le Salvador et la République centrafricaine ont même adopté le
 
 Dans les pays où les moyens de paiement ont été déconnectés du reste du monde, les solutions de paiement intégrant les cryptomonnaies ont constitué un grand soulagement. Le paiement d’abonnements à des plateformes comme Netflix, Spotify ou encore à des cours en ligne est désormais facilité grâce aux plateformes de paiement en cryptomonnaie telles que Gnosis Pay et PayPal.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+
+<Alert variant="update">
+<AlertEmoji text=":eyes:" />
+<AlertContent className="justify-between flex-row items-center">
   <div>Créez votre compte Ethereum dès aujourd’hui avec une application de portefeuille.</div>
   <ButtonLink href="/wallets/find-wallet">
     Commencer
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Paiement des salaires {#salary-payments}
 
@@ -147,9 +151,12 @@ Bien que les monnaies fiduciaires aient l'avantage d'une large acceptation et st
 
 Qu'il s'agisse de faciliter les secours rapides en cas de catastrophe ou d'autonomiser les travailleurs du monde entier, les paiements en Ethereum écrivent un nouveau chapitre dans la longue histoire de l'argent. Bien que des défis subsistent, les avantages uniques offerts par cette technologie en font une option intéressante pour une large gamme de cas d’utilisation.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:" />
+<AlertContent className="justify-between flex-row items-center">
   <div>Le moment est venu de créer votre propre compte Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Commencer
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>

@@ -6,7 +6,7 @@ lang: en
 
 # Ethereum grants {#ethereum-grants}
 
-The programs listed below offer a variety of funding grants for projects working to promote the success and growth of the Ethereum ecosystem. Use this as a guide to find and apply for funds to help make your next Ethereum project a success.
+The programs listed below offer a variety of funding grants for projects working to promote the success and growth of the [Ethereum](/) ecosystem. Use this as a guide to find and apply for funds to help make your next Ethereum project a success.
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
@@ -44,6 +44,7 @@ These general platforms offer broad coverage of grants across the entire Web3 sp
 
 - [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _DeFi Llama's grant program directory_
 - [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _Comprehensive list of crypto and Web3 grants_
+- [Uniswap Foundation Grants](https://www.uniswapfoundation.org/build) - _Unichain and Uniswap v4 grants and support for DeFi builders_
 
 ### For DAO contributors and governance innovators {#for-dao-contributors}
 

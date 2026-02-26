@@ -57,9 +57,9 @@ Se qualcuno conoscesse le posizioni casuali utilizzate per l'impegno, sarebbe fa
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Né il Danksharding né il Proto-Danksharding seguono il tradizionale modello di “frammentazione” (sharding) che mira a dividere la blockchain in più parti. Le catene di frammenti non fanno più parte della tabella di marcia. Invece, il Danksharding utilizza il campionamento dei dati distribuiti tra blob, per ridimensionare Ethereum. Ciò è molto più semplice da implementare. Questo modello, talvolta, è stato indicato come "frammentazione dei dati".
-</InfoBanner>
+</Alert>
 
 ## Cos'è il Danksharding? {#what-is-danksharding}
 

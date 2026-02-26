@@ -104,7 +104,7 @@ We recommend you leave names of brands, companies, and personnel untranslated as
 
 To ensure a certain level of quality and consistency in our translations, we work with [Acolad](https://www.acolad.com/), one of the largest language service providers globally. Acolad has 20,000 professional linguists, which means that they can provide professional reviewers for every language and type of content we need.
 
-The review process is straightforward; once a certain [content bucket](/contributing/translation-program/content-buckets) is 100% translated, we order a review for that content bucket. The review process takes place directly in Crowdin. Once the review is complete, we update the website with the translated content.
+The review process is straightforward; once a set of content is 100% translated, we order a review for that content bucket. The review process takes place directly in Crowdin. Once the review is complete, we update the website with the translated content.
 
 ## How do I add content in my language? {#adding-foreign-language-content}
 
