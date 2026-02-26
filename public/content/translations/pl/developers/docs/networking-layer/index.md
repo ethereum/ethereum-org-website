@@ -146,8 +146,8 @@ Poniżej przedstawiono podsumowanie przepływu, z odpowiednim stosem sieciowym w
 
 Po poświadczeniu bloku przez wystarczającą liczbę walidatorów zostaje on dodany na początek łańcucha, uzasadniony i ostatecznie sfinalizowany.
 
-![](cons_client_net_layer.png)
-![](exe_client_net_layer.png)
+![Schemat warstwy sieci klienta konsensusu Ethereum](cons_client_net_layer.png)
+![Schemat warstwy sieciowej klienta wykonawczego Ethereum](exe_client_net_layer.png)
 
 Schemat warstwy sieciowej dla klientów konsensusu i wykonawczych, z [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 

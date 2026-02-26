@@ -8,7 +8,7 @@ description: Informationen zum Übersetzungsprogramm von ethereum.org
 
 Das Übersetzungsprogramm ist ein gemeinsamer Versuch, ethereum.org in verschiedene Sprachen zu übersetzen, um die Website für Milliarden von Menschen zugänglich zu machen, die kein Englisch sprechen.
 
-![](./enterprise-eth.png)
+![Illustration des Ethereum-Unternehmensnetzwerks](./enterprise-eth.png)
 
 ## Helfen Sie uns bei der Übersetzung {#help-us-translate}
 

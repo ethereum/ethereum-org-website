@@ -8,7 +8,7 @@ description: "Ethererum.org Çeviri Programı hakkında bilgi"
 
 Çeviri Programı, web sitesini dünya çapında İngilizce bilmeyen milyarlarca kişi için daha erişilebilir hâle getirmek için ethereum.org'u farklı dillere çevirmeyi amaçlayan ortak bir çabadır.
 
-![](./enterprise-eth.png)
+![Ethereum kurumsal ağ illüstrasyonu](./enterprise-eth.png)
 
 ## Çevirmemize yardımcı olun {#help-us-translate}
 

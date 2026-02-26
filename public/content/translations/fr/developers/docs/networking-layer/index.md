@@ -146,7 +146,7 @@ Un résumé du flux de contrôle est affiché ci-dessous (la pile réseau pertin
 
 Une fois le bloc attesté par suffisamment de validateurs, il est ajouté en tête de la chaîne, justifié et finalisé.
 
-![](cons_client_net_layer.png) ![](exe_client_net_layer.png)
+![Schéma de la couche réseau client consensus Ethereum](cons_client_net_layer.png) ![Schéma de la couche réseau du client d'exécution Ethereum](exe_client_net_layer.png)
 
 Le schéma de couche réseau pour les clients de consensus et d'exécution par [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 

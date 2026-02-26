@@ -146,7 +146,7 @@ Souhrn toku řízení je uveden níže, s relevantní síťovou vrstvou v závor
 
 Jakmile je blok potvrzen dostatečným počtem validátorů, je přidán na hlavu řetězce, ospravedlněn a nakonec finalizován.
 
-![](cons_client_net_layer.png)\n![](exe_client_net_layer.png)
+![Schéma síťové vrstvy klienta Ethereum consensus](cons_client_net_layer.png)\n![Schéma síťové vrstvy klienta pro provádění Etherea](exe_client_net_layer.png)
 
 Schéma síťové vrstvy pro konsensuální a exekuční klienty, z [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 

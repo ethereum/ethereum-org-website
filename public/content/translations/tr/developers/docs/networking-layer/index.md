@@ -146,7 +146,7 @@ Fikir birliği ve yürütüm istemcileri paralel şekilde çalışır. Fikir bir
 
 Blok, yeterli onaylayıcılar tarafından onaylandıktan sonra, zincirin başına eklenir, gerekçelendirilir ve sonunda kesinleştirilir.
 
-![](cons_client_net_layer.png)\n![](exe_client_net_layer.png)
+![Ethereum konsensüs istemci ağ katmanının şeması](cons_client_net_layer.png)\n![Ethereum yürütme istemcisi ağ katmanının şeması](exe_client_net_layer.png)
 
 [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248) adresinden mutabakat ve yürütme istemcileri için ağ katmanı şeması
 

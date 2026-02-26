@@ -8,7 +8,7 @@ description: "ethereum.org翻訳プログラムについて"
 
 翻訳プログラムは、世界中の何十億もの英語を話さない人たちが、利用できるようethereum.orgをさまざまな言語に翻訳するコラボレーションです。
 
-![](./enterprise-eth.png)
+![イーサリアムエンタープライズネットワークの図](./enterprise-eth.png)
 
 ## 翻訳にご協力ください {#help-us-translate}
 

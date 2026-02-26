@@ -8,7 +8,7 @@ description: Informasi tentang program penerjemahan ethereum.org
 
 Program Terjemahan adalah sebuah usaha kolaboratif untuk menerjemahkan ethereum.org ke berbagai bahasa untuk membuat situs web lebih mudah diakses oleh miliaran penutur non-Inggris di seluruh dunia.
 
-![](./enterprise-eth.png)
+![Ilustrasi jaringan perusahaan Ethereum](./enterprise-eth.png)
 
 ## Bantu kami menerjemahkan {#help-us-translate}
 

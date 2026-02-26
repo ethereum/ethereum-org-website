@@ -146,8 +146,8 @@ Muhtasari wa mtiririko wa udhibiti umeonyeshwa hapa chini, na mrundiko husika wa
 
 Mara tu bloku inapothibitishwa na wathibitishaji wa kutosha, inaongezwa kwenye kichwa cha mnyororo, inahalalishwa na hatimaye kukamilishwa.
 
-![](cons_client_net_layer.png)
-![](exe_client_net_layer.png)
+![Mchoro wa safu ya mtandao wa mteja wa makubaliano ya Ethereum](cons_client_net_layer.png)
+![Mchoro wa safu ya mtandao wa mteja wa utekelezaji wa Ethereum](exe_client_net_layer.png)
 
 Mchoro wa safu ya mtandao kwa wateja wa makubaliano na utekelezaji, kutoka [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 

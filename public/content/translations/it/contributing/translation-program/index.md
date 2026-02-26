@@ -8,7 +8,7 @@ description: Informazioni riguardo il Programma di Traduzione di Ethereum
 
 Il Programma di Traduzione è uno sforzo collaborativo per tradurre ethereum.org in diverse lingue al fine di rendere il sito più accessibile a miliardi di persone che non parlano inglese in tutto il mondo.
 
-![](./enterprise-eth.png)
+![Illustrazione della rete aziendale Ethereum](./enterprise-eth.png)
 
 ## Aiutaci a tradurre {#help-us-translate}
 
