@@ -12,11 +12,19 @@ published: 2026-02-27
 
 If we want Ethereum to serve [a billion more people](https://blog.ethereum.org/category/next-billion), we need to remove friction and make it as easy to use as possible. One source of this friction is the need for ETH to pay gas fees.
 
-If you have a dapp that makes money from users, it might make sense to let users submit transactions through your server and pay the transaction fees yourself. Because users still sign an authorization message in their wallets, they retain Ethereum's guarantees of integrity. Availability depends on the server that relays transactions, so it is more limited. However, you can set things up so users can also access the smart contract directly (if they get ETH), and let others set up their own servers if they want to sponsor transactions.
+If you have a dapp that makes money from users, it might make sense to let users submit transactions through your server and pay the transaction fees yourself. Because users still sign an [EIP-712 authorization message](https://eips.ethereum.org/EIPS/eip-712) in their wallets, they retain Ethereum's guarantees of integrity. Availability depends on the server that relays transactions, so it is more limited. However, you can set things up so users can also access the smart contract directly (if they get ETH), and let others set up their own servers if they want to sponsor transactions.
 
 The technique in this tutorial only works when you control the smart contract. There are other techniques, including [account abstraction](https://eips.ethereum.org/EIPS/eip-4337) that let you sponsor transactions to other smart contracts, which I hope to cover in a future tutorial.
 
 Note: This is *not* production-level code. It is vulnerable to significant attacks and lacks major features. Learn more in the [vulnerabilities section of this guide](#vulnerabilities).
+
+### Prerequisites {#prereq}
+
+To understand this tutorial you need to already be familiar with:
+
+- Solidity
+- JavaScript
+- React and WAGMI. If you are not familiar with these user interface tools, [we have a tutorial for that](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
 ## The sample application {#sample-app}
 
@@ -83,6 +91,11 @@ If there is no account, raise an error. This should never happen because the UI 
 ```
 
 Parameters for the [domain separator](https://eips.ethereum.org/EIPS/eip-712#definition-of-domainseparator). This value is constant, so in a better-optimized implementation, we might calculate it once rather than recalculate it each time the function is called.
+
+- `name` is a user-readable name, such as the name of the dapp for which we are producing signatures.
+- `version` is the version. Different versions are not compatible.
+- `chainId` is the chain we are using, as provided [by WAGMI](https://wagmi.sh/react/api/hooks/useChainId). 
+- `verifyingContract` is the contract address that will verify this signature. We do not want the same signature to apply to multiple contracts, in case there are several `Greeter` contracts and we want them to have different greetings.
 
 ```js
 
