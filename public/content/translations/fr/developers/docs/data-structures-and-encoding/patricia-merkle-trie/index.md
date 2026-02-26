@@ -259,5 +259,5 @@ Plus d'informations à ce sujet peuvent être trouvées dans la documentation [E
 ## Complément d'information {#further-reading}
 
 - [Modification de l'arbre de Merkle Patricia — Comment Ethereum sauvegarde un état](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Le Merkling sur Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [Le Merkling sur Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [Comprendre l'arbre Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

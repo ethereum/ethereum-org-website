@@ -1,102 +1,100 @@
 ---
-title: "Sözleşmeye Tersine Mühendislik Uygulama"
-description: Kaynak koduna sahip olmadığınız bir sözleşmeyi anlama
+title: "Reverse Engineering a Contract"
+description: How to understand a contract when you don't have the source code
 author: Ori Pomerantz
 lang: tr
-tags:
-  - "EVM"
-  - "işlem kodları"
+tags: [ "evm", "opcodes" ]
 skill: advanced
 published: 2021-12-30
 ---
 
 ## Giriş {#introduction}
 
-_Blokzincirde sır yoktur_; her şey tutarlı, doğrulanabilir ve herkes tarafından erişilebilirdir. İdeal olarak [sözleşmelerin kaynak kodları Etherscan'de yayımlanmalı ve doğrulanmalıdır](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code). Fakat, [durum her zaman böyle değildir](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code). Bu makalede, kaynak kodu olmayan bir sözleşmeye bakarak sözleşmelerde tersine mühendislik yapmayı öğreneceksiniz, [`0x2510c039cc3b061d79e564b38836da87e31b342f`](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f).
+_There are no secrets on the blockchain_, everything that happens is consistent, verifiable, and publicly available. Ideally, [contracts should have their source code published and verified on Etherscan](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code). However, [that is not always the case](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code). In this article you learn how to reverse engineer contracts by looking at a contract without source code, [`0x2510c039cc3b061d79e564b38836da87e31b342f`](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f).
 
-Ters derleyiciler vardır, fakat her zaman [ kullanılabilir sonuçlar](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f) üretmezler. Bu makalede manuel olarak bir sözleşmeye [işlem kodlarından](https://github.com/wolflo/evm-opcodes) nasıl ters mühendislik yapabileceğinizi, sözleşmeyi nasıl anlayacağınızı ve bununla birlikte bir ters derleyicinin sonuçlarını nasıl yorumlayacağınızı öğreneceksiniz.
+There are reverse compilers, but they don't always produce [usable results](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). In this article you learn how to manually reverse engineer and understand a contract from [the opcodes](https://github.com/wolflo/evm-opcodes), as well as how to interpret the results of a decompiler.
 
-Bu makaleyi anlayabilmek için Ethereum Sanal Makinesi'nin temellerini çoktan biliyor olmalı ve en azından Ethereum Sanal Makinesi'nin derleyicisine aşina olmalısınız. [Bu konuları buradan okuyabilirsiniz](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
+To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You can read about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
-## Yürütülebilir Kodu Hazırlama {#prepare-the-executable-code}
+## Prepare the Executable Code {#prepare-the-executable-code}
 
-İşlem kodlarını sözleşme için Etherscan'e gidip **Sözleşme** seçeneğine ve sonrasında **İşlem Kodu Görünümüne Geç**'e tıklayarak alabilirsiniz. Bir satıra bir işlem kodunun düştüğü bir görünüm elde edeceksiniz.
+You can get the opcodes by going to Etherscan for the contract, clicking the **Contract** tab and then **Switch to Opcodes View**. You get a view that is one opcode per line.
 
-![Etherscan'den İşlem Kodu Görünümü](opcode-view.png)
+![Opcode View from Etherscan](opcode-view.png)
 
-Bununla birlikte, sıçramaları anlayabilmek için her kodda işlem kodunun nerede olduğunu bilmeniz gerekir. Bunu yapmanın bir yolu, bir Google Elektronik Tablosu açıp işlem kodlarını C sütununa yapıştırmaktır. [Önceden hazırlanmış bu elektronik tablonun bir kopyasını oluşturarak sonraki adımları atlayabilirsiniz](https://docs.google.com/spreadsheets/d/1tKmTJiNjUwHbW64wCKOSJxHjmh0bAUapt6btUYE7kDA/edit?usp=sharing).
+To be able to understand jumps, however, you need to know where in the code each opcode is located. To do that, one way is to open a Google Spreadsheet and paste the opcodes in column C. [You can skip the following steps by making a copy of this already prepared spreadsheet](https://docs.google.com/spreadsheets/d/1tKmTJiNjUwHbW64wCKOSJxHjmh0bAUapt6btUYE7kDA/edit?usp=sharing).
 
-Sonraki adım, sıçramaları anlayabilmemiz için doğru kod konumlarını almaktır. B sütununa işlem kodu boyutunu, A sütünuna da (onaltılık olarak) konumu koyacağız. `B1` hücresine bu fonksiyonu yazın ve kodun sonuna kadar B sütunun geri kalanı için kopyalayıp yapıştırın. Bunu yaptıktan sonra B sütununu gizleyebilirsiniz.
+The next step is to get the correct code locations so we'll be able to understand jumps. We'll put the opcode size in column B, and the location (in hexadecimal) in column A. Type this function in cell `B1` and then copy and paste it for the rest of column B, until the end of the code. After you do this you can hide column B.
 
 ```
 =1+IF(REGEXMATCH(C1,"PUSH"),REGEXEXTRACT(C1,"PUSH(\d+)"),0)
 ```
 
-İlk olarak bu fonksiyon işlem kodunun kendisi için bir bayt ekler, sonra da `PUSH` araması yapar. İtme işlem kodları özeldir, çünkü itilen değer için ekstra baytlara sahip olmak zorundadırlar. Eğer işlem kodu bir `PUSH` ise, bayt sayısını çıkarır ve ekleriz.
+First this function adds one byte for the opcode itself, and then looks for `PUSH`. Push opcodes are special because they need to have additional bytes for the value being pushed. If the opcode is a `PUSH`, we extract the number of bytes and add that.
 
-`A1`'e ilk kayma olan 0'ı koyun. Ardından `A2`'ye bu fonksiyonu koyun ve yine A sütununun geri kalanı için kopyalayıp yapıştırın:
+In `A1` put the first offset, zero. Then, in `A2`, put this function and again copy and paste it for the rest of column A:
 
 ```
 =dec2hex(hex2dec(A1)+B1)
 ```
 
-Bu fonksiyonun bize onaltılık bir değer vermesine ihtiyacımız var çünkü sıçramalardan (`JUMP` and `JUMPI`) önceki itilen değerler de bize onaltılık şekilde verilir.
+We need this function to give us the hexadecimal value because the values that are pushed prior to jumps (`JUMP` and `JUMPI`) are given to us in hexadecimal.
 
-## Giriş Noktası (0x00) {#the-entry-point-0x00}
+## The Entry Point (0x00) {#the-entry-point-0x00}
 
-Sözleşmeler her zaman ilk bayttan yürütülür. Bu kodun ilk kısmıdır:
+Contracts are always executed from the first byte. This is the initial part of the code:
 
-| Offset | İşlem kodları | Yığın (işlem kodundan sonra) |
-| -----: | ------------- | ---------------------------- |
-|      0 | PUSH1 0x80    | 0x80                         |
-|      2 | PUSH1 0x40    | 0x40, 0x80                   |
-|      4 | MSTORE        | Boş                          |
-|      5 | PUSH1 0x04    | 0x04                         |
-|      7 | CALLDATASIZE  | CALLDATASIZE 0x04            |
-|      8 | LT            | CALLDATASIZE\<4               |
-|      9 | PUSH2 0x005e  | 0x5E CALLDATASIZE\<4          |
-|      C | JUMPI         | Boş                          |
+| Offset | Opcode       | Stack (after the opcode)    |
+| -----: | ------------ | ---------------------------------------------- |
+|      0 | PUSH1 0x80   | 0x80                                           |
+|      2 | PUSH1 0x40   | 0x40, 0x80                                     |
+|      4 | MSTORE       | Empty                                          |
+|      5 | PUSH1 0x04   | 0x04                                           |
+|      7 | CALLDATASIZE | CALLDATASIZE 0x04                              |
+|      8 | LT           | CALLDATASIZE\<4      |
+|      9 | PUSH2 0x005e | 0x5E CALLDATASIZE\<4 |
+|      C | JUMPI        | Boş                                            |
 
-Bu kod iki şey yapar:
+This code does two things:
 
-1. 0x80'i 0x40-0x5F bellek konumlarına 32 baytlık bir değer olarak (0x80, 0x5F'de depolanır ve 0x40-0x5E tamamen sıfırlardan oluşur) yazın.
-2. Çağrı verisini boyutunu okuyun. Ethereum sözleşmesi için olan bir çağrı verisi normalde, fonksiyon seçici için minimum 4 bayta ihtiyaç duyan [ABI'yi (uygulama ikili arayüzü)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html) takip eder. Eğer çağrı verisi boyutu dörtten azsa, 0x5E'ye sıçrayın.
+1. Write 0x80 as a 32 byte value to memory locations 0x40-0x5F (0x80 is stored in 0x5F, and 0x40-0x5E are all zeroes).
+2. Read the calldata size. Normally the call data for an Ethereum contract follows [the ABI (application binary interface)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), which at a minimum requires four bytes for the function selector. If the call data size is less than four, jump to 0x5E.
 
-![Bu kısım için akış şeması](flowchart-entry.png)
+![Flowchart for this portion](flowchart-entry.png)
 
-### 0X5E'deki (ABI olmayan çağrı verisi) İşleyici {#the-handler-at-0x5e-for-non-abi-call-data}
+### The Handler at 0x5E (for non-ABI call data) {#the-handler-at-0x5e-for-non-abi-call-data}
 
-| Offset | Opcode       |
+| Offset | İşlem kodu   |
 | -----: | ------------ |
 |     5E | JUMPDEST     |
 |     5F | CALLDATASIZE |
 |     60 | PUSH2 0x007c |
 |     63 | JUMPI        |
 
-Bu kod parçası bir `JUMPDEST` ile başlar. Eğer `JUMPDEST` olmayan bir işlem koduna sıçrama yaparsanız EVM (Ethereum Sanal Makinesi) bir istisna verir. Ardından CALLDATASIZE'a bakar ve eğer "doğru" ise (sıfır değilse) 0x7C'ye sıçrar. Buna aşağıda değineceğiz.
+This snippet starts with a `JUMPDEST`. EVM (Ethereum virtual machine) programs throw an exception if you jump to an opcode that isn't `JUMPDEST`. Then it looks at the CALLDATASIZE, and if it is "true" (that is, not zero) jumps to 0x7C. We'll get to that below.
 
-| Offset | Opcode     | Stack (opcode'dan sonra)                                                       |
-| -----: | ---------- | ------------------------------------------------------------------------------ |
-|     64 | CALLVALUE  | Çağrı tarafından sağlanan [wei](/glossary/#wei). Solidity'de `msg.value` denir |
-|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                    |
-|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                                  |
-|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                        |
-|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                      |
-|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                             |
+| Offset | İşlem kodu | Stack (after opcode)                                                    |
+| -----: | ---------- | ------------------------------------------------------------------------------------------ |
+|     64 | CALLVALUE  | [Wei](/glossary/#wei) provided by the call. Called `msg.value` in Solidity |
+|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                                |
+|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                                              |
+|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                                    |
+|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                                  |
+|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE     |
 
-Yani hiç çağrı verisi olmadığında Depo[6] değerini okuruz. Bu değerin ne olduğunu henüz bilmiyoruz, fakat sözleşmenin hiç çağrı verisi almadığı işlemleri arayabiliriz. Çağrı verisi olmadan (bu sebeple yöntem da olmadan) ETH transfer eden işlemler için Etherscan'de `Transfer` adında bir yöntem vardır. Aslında, [sözleşmenin aldığı ilk işlem](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) bir transferdir.
+So when there is no call data we read the value of Storage[6]. We don't know what this value is yet, but we can look for transactions that the contract received with no call data. Transactions which just transfer ETH without any call data (and therefore no method) have in Etherscan the method `Transfer`. In fact, [the very first transaction the contract received](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) is a transfer.
 
-Eğer işleme bakıp **Daha fazlası için tıklayın** öğesine tıklarsak, girdi verileri de denen çağrı verilerinin aslında boş olduğunu (`0x`) görürüz. Değerin 1,559 ETH olduğuna da dikkat edin, daha sonra işimize yarayacak.
+If we look in that transaction and click **Click to see More**, we see that the call data, called input data, is indeed empty (`0x`). Notice also that the value is 1.559 ETH, that will be relevant later.
 
-![Çağrı verisi boş](calldata-empty.png)
+![The call data is empty](calldata-empty.png)
 
-Şimdi, **Durum** sekmesine tıklayın ve tersine mühendislik yaptığımız sözleşmeyi (0x2510...) genişletin. İşlem sırasında `Storage[6]`'ın değiştiğini görebilirsiniz, eğer Onaltılığı **Sayı** olarak değiştirirseniz değerin, bir sonraki sözleşme değerine karşılık gelen 1.559.000.000.000.000.000'a dönüştüğünü görebilirsiniz, bu değer wei cinsindendir (noktaları kolay anlaşılması için ekledim).
+Next, click the **State** tab and expand the contract we're reverse engineering (0x2510...). You can see that `Storage[6]` did change during the transaction, and if you change Hex to **Number**, you see it became 1,559,000,000,000,000,000, the value transferred in wei (I added the commas for clarity), corresponding to the next contract value.
 
-![Storage[6]'daki değişiklik](storage6.png)
+![The change in Storage[6]](storage6.png)
 
-Aynı zaman aralığında [diğer `Transfer` işlemlerinden kaynaklanan durum değişikliklerine baktığımızda](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) `Storage[6]`'ın, sözleşmenin değerini bir süre takip ettiğiniz görürüz. Şimdilik buna `Value*` adını vereceğiz. Buradaki yıldız işareti (`*`), henüz bu değişkenin ne yaptığını _bilmediğimizi_ hatırlatır, fakat bu sadece sözleşme değerini takip etmeye yönelik olamaz çünkü hesap bakiyenizi `ADDRESS BALANCE`'ı kullanarak görebilirken depolamayı kullanmaya gerek yoktur ve zaten çok pahalıdır. İlk işlem kodu sözleşmenin kendi adresini iter. İkincisi de yığının en üstündeki adresi okur ve bunu hesabın bakiyesiyle değiştirir.
+If we look in the state changes caused by [other `Transfer` transactions from the same period](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) we see that `Storage[6]` tracked the value of the contract for a while. For now we'll call it `Value*`. The asterisk (`*`) reminds us that we don't _know_ what this variable does yet, but it can't be just to track the contract value because there's no need to use storage, which is very expensive, when you can get your accounts balance using `ADDRESS BALANCE`. The first opcode pushes the contract's own address. The second one reads the address at the top of the stack and replaces it with the balance of that address.
 
-| Offset | Opcode       | Yığın                                       |
+| Offset | İşlem kodu   | Yığın                                       |
 | -----: | ------------ | ------------------------------------------- |
 |     6C | PUSH2 0x0075 | 0x75 Value\* CALLVALUE 0 6 CALLVALUE        |
 |     6F | SWAP2        | CALLVALUE Value\* 0x75 0 6 CALLVALUE        |
@@ -104,205 +102,205 @@ Aynı zaman aralığında [diğer `Transfer` işlemlerinden kaynaklanan durum de
 |     71 | PUSH2 0x01a7 | 0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |     74 | JUMP         |                                             |
 
-Bu kodu sıçrama hedefinde takip etmeye devam edeceğiz.
+We'll continue to trace this code at the jump destination.
 
-| Offset | Opcode     | Yığın                                                       |
+| Offset | İşlem kodu | Yığın                                                       |
 | -----: | ---------- | ----------------------------------------------------------- |
 |    1A7 | JUMPDEST   | Value\* CALLVALUE 0x75 0 6 CALLVALUE                        |
 |    1A8 | PUSH1 0x00 | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                   |
 |    1AA | DUP3       | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AB | NOT        | 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 
-`NOT` bitseldir, bu yüzden çağrı değerindeki her bitin değerini tersine çevirir.
+The `NOT` is bitwise, so it reverses the value of every bit in the call value.
 
-| Offset | Opcode       | Yığın                                                                       |
-| -----: | ------------ | --------------------------------------------------------------------------- |
-|    1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
-|    1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
+| Offset | İşlem kodu   | Yığın                                                                                                  |
+| -----: | ------------ | ------------------------------------------------------------------------------------------------------ |
+|    1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                                    |
+|    1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                                    |
 |    1AE | ISZERO       | Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
 |    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
-|    1B2 | JUMPI        |                                                                             |
+|    1B2 | JUMPI        |                                                                                                        |
 
-Eğer `Value*`, 2^256-CALLVALUE-1'den küçük ya da ona eşitse sıçrarız. Bu, taşmayı engelleme mantığına benzer. Ve gerçekten de, 0x01DE ofsetinde birkaç anlamsız işlemden sonra (örneğin belleğe yazma silinmek üzere) normal davranış olan taşma algılanırsa sözleşmenin geri döndüğünü görüyoruz.
+We jump if `Value*` is smaller than 2^256-CALLVALUE-1 or equal to it. This looks like logic to prevent overflow. And indeed, we see that after a few nonsense operations (writing to memory is about to get deleted, for example) at offset 0x01DE the contract reverts if the overflow is detected, which is normal behavior.
 
-Bunun gibi bir taşmanın oldukça uzak bir ihtimal olduğunu da gözden kaçırmayın. Çünkü böyle bir taşma, çağrı değeri ile `Value*` toplamının 2^256 wei ya da 10^59 ETH gibi bir değer civarında olmasını gerektirir. [Toplam ETH arzı, yazıyla iki yüz milyondan azdır](https://etherscan.io/stat/supply).
+Note that such an overflow is extremely unlikely, because it would require the call value plus `Value*` to be comparable to 2^256 wei, about 10^59 ETH. [The total ETH supply, at writing, is less than two hundred million](https://etherscan.io/stat/supply).
 
-| Offset | Opcode   | Yığın                                     |
-| -----: | -------- | ----------------------------------------- |
-|    1DF | JUMPDEST | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
-|    1E0 | POP      | Value\* CALLVALUE 0x75 0 6 CALLVALUE      |
-|    1E1 | EKLE     | Value\*+CALLVALUE 0x75 0 6 CALLVALUE      |
-|    1E2 | SWAP1    | 0x75 Value\*+CALLVALUE 0 6 CALLVALUE      |
-|    1E3 | JUMP     |                                           |
+| Offset | İşlem kodu | Yığın                                     |
+| -----: | ---------- | ----------------------------------------- |
+|    1DF | JUMPDEST   | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|    1E0 | POP        | Value\* CALLVALUE 0x75 0 6 CALLVALUE      |
+|    1E1 | EKLE       | Value\*+CALLVALUE 0x75 0 6 CALLVALUE      |
+|    1E2 | SWAP1      | 0x75 Value\*+CALLVALUE 0 6 CALLVALUE      |
+|    1E3 | JUMP       |                                           |
 
-Eğer buraya geldiysek `Value* + CALLVALUE` değerini alalım ve kayma 0x75 değerine sıçrayalım.
+If we got here, get `Value* + CALLVALUE` and jump to offset 0x75.
 
-| Offset | Opcode   | Yığın                           |
-| -----: | -------- | ------------------------------- |
-|     75 | JUMPDEST | Value\*+CALLVALUE 0 6 CALLVALUE |
-|     76 | SWAP1    | 0 Value\*+CALLVALUE 6 CALLVALUE |
-|     77 | SWAP2    | 6 Value\*+CALLVALUE 0 CALLVALUE |
-|     78 | SSTORE   | 0 CALLVALUE                     |
+| Offset | İşlem kodu | Yığın                           |
+| -----: | ---------- | ------------------------------- |
+|     75 | JUMPDEST   | Value\*+CALLVALUE 0 6 CALLVALUE |
+|     76 | SWAP1      | 0 Value\*+CALLVALUE 6 CALLVALUE |
+|     77 | SWAP2      | 6 Value\*+CALLVALUE 0 CALLVALUE |
+|     78 | SSTORE     | 0 CALLVALUE                     |
 
-Buraya gelince de (bu, çağrı verisinin boş olmasını gerektirir), `Value*`'yu çağrı değerine ekleyelim. Bu `Transfer` işlemlerinin yaptıkları ile tutarlıdır.
+If we get here (which requires the call data to be empty) we add to `Value*` the call value. This is consistent with what we say `Transfer` transactions do.
 
-| Offset | Opcode |
-| -----: | ------ |
-|     79 | POP    |
-|     7A | POP    |
-|     7B | STOP   |
+| Offset | İşlem kodu |
+| -----: | ---------- |
+|     79 | POP        |
+|     7A | POP        |
+|     7B | STOP       |
 
-Son olarak, yığını temizleyin (aslında pek de gerekli değildir) ve işlemin başarıyla tamamlandığına dair sinyali verin.
+Finally, clear the stack (which isn't necessary) and signal the successful end of the transaction.
 
-Hepsini özetlemek için işte başlangıçtaki kod için bir akış şeması.
+To sum it all up, here's a flowchart for the initial code.
 
-![Giriş noktası akış şeması](flowchart-entry.png)
+![Entry point flowchart](flowchart-entry.png)
 
-## 0x7C'deki İşleyici {#the-handler-at-0x7c}
+## The Handler at 0x7C {#the-handler-at-0x7c}
 
-Bu işleyicinin ne yaptığını bilerek başlığa koymadım. Buradaki amaç, size bu spesifik sözleşmenin nasıl çalıştığını değil, sözleşmelere nasıl tersine mühendislik yapacağınızı öğretmek. Ne yaptığını benimle aynı şekilde öğreneceksiniz, yani kodu takip ederek.
+I purposely did not put in the heading what this handler does. The point isn't to teach you how this specific contract works, but how to reverse engineer contracts. You will learn what it does the same way I did, by following the code.
 
-Buraya birkaç farklı yerden geliriz:
+We get here from several places:
 
-- Eğer çağrı verisi 1, 2 ya da 3 baytsa (0x63 kaymasından)
-- Eğer yöntem imzası bilinmiyorsa (0x42 ve 0x5D kaymalarından)
+- If there is call data of 1, 2, or 3 bytes (from offset 0x63)
+- If the method signature is unknown (from offsets 0x42 and 0x5D)
 
-| Offset | Opcode       | Yığın                |
-| -----: | ------------ | -------------------- |
-|     7C | JUMPDEST     |                      |
-|     7D | PUSH1 0x00   | 0x00                 |
-|     7F | PUSH2 0x009d | 0x9D 0x00            |
-|     82 | PUSH1 0x03   | 0x03 0x9D 0x00       |
+| Offset | İşlem kodu   | Yığın                                                                    |
+| -----: | ------------ | ------------------------------------------------------------------------ |
+|     7C | JUMPDEST     |                                                                          |
+|     7D | PUSH1 0x00   | 0x00                                                                     |
+|     7F | PUSH2 0x009d | 0x9D 0x00                                                                |
+|     82 | PUSH1 0x03   | 0x03 0x9D 0x00                                                           |
 |     84 | SLOAD        | Storage[3] 0x9D 0x00 |
 
-Bu başka bir depolama hücresidir, herhangi bir işlemde bulamadığım bir hücre. Bu yüzden bunun ne anlama geldiğini bilmek biraz daha zor. Aşağıdaki kod bunu daha açık hale getirecektir.
+This is another storage cell, one that I couldn't find in any transactions so it's harder to know what it means. The code below will make it clearer.
 
-| Offset | Opcode                                            | Yığın                           |
-| -----: | ------------------------------------------------- | ------------------------------- |
+| Offset | İşlem kodu                                        | Yığın                                                                                                                                               |
+| -----: | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     85 | PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xff....ff Storage[3] 0x9D 0x00 |
-|     9A | AND                                               | Storage[3]-as-address 0x9D 0x00 |
+|     9A | AND                                               | Storage[3]-as-address 0x9D 0x00                                                                 |
 
-Bu işlem kodları Storage[3]'den okuduğumuz değeri 160 bite kırpar, bu da bir Ethereum adresinin uzunluğudur.
+These opcodes truncate the value we read from Storage[3] to 160 bits, the length of an Ethereum address.
 
-| Offset | Opcode | Yığın                           |
-| -----: | ------ | ------------------------------- |
-|     9B | SWAP1  | 0x9D Storage[3]-as-address 0x00 |
-|     9C | JUMP   | Storage[3]-as-address 0x00      |
+| Offset | İşlem kodu | Yığın                                                                               |
+| -----: | ---------- | ----------------------------------------------------------------------------------- |
+|     9B | SWAP1      | 0x9D Storage[3]-as-address 0x00 |
+|     9C | JUMP       | Storage[3]-as-address 0x00      |
 
-Bu sıçrama sadece bir sonraki işlem koduna gideceğimiz için gereksizdir. Bu kod, ulaşabileceği gaz verimliliğine yakın bile değildir.
+This jump is superfluous, since we're going to the next opcode. This code isn't nearly as gas-efficient as it could be.
 
-| Offset | İşlem kodları | Yığın                           |
-| -----: | ------------- | ------------------------------- |
-|     9D | JUMPDEST      | Storage[3]-as-address 0x00      |
-|     9E | SWAP1         | 0x00 Storage[3]-as-address      |
-|     9F | POP           | Storage[3]-as-address           |
-|     A0 | PUSH1 0x40    | 0x40 Storage[3]-as-address      |
-|     A2 | MLOAD         | Mem[0x40] Storage[3]-as-address |
+| Offset | İşlem kodu | Yığın                                                                                                                                   |
+| -----: | ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+|     9D | JUMPDEST   | Depolama[3]-as-address 0x00                                                         |
+|     9E | SWAP1      | 0x00 Storage[3]-as-address                                                          |
+|     9F | POP        | Storage[3]-as-address                                                               |
+|     A0 | PUSH1 0x40 | 0x40 Storage[3]-as-address                                                          |
+|     A2 | MLOAD      | Mem[0x40] Storage[3]-as-address |
 
-Bu kodun en başında Mem[0x40]'i 0x80 olarak ayarlıyoruz. 0x40'ı aradığımızda, değiştirmediğimizi görüyoruz; yani 0x80 olduğunu varsayabiliriz.
+In the very beginning of the code we set Mem[0x40] to 0x80. If we look for 0x40 later, we see that we don't change it - so we can assume it is 0x80.
 
-| Offset | İşlem kodları | Yığın                                             |
-| -----: | ------------- | ------------------------------------------------- |
-|     A3 | CALLDATASIZE  | CALLDATASIZE 0x80 Storage[3]-as-address           |
-|     A4 | PUSH1 0x00    | 0x00 CALLDATASIZE 0x80 Storage[3]-as-address      |
-|     A6 | DUP3          | 0x80 0x00 CALLDATASIZE 0x80 Storage[3]-as-address |
-|     A7 | CALLDATACOPY  | 0x80 Storage[3]-as-address                        |
+| Offset | İşlem kodu   | Yığın                                                                                                 |
+| -----: | ------------ | ----------------------------------------------------------------------------------------------------- |
+|     A3 | CALLDATASIZE | CALLDATASIZE 0x80 Storage[3]-as-address           |
+|     A4 | PUSH1 0x00   | 0x00 CALLDATASIZE 0x80 Storage[3]-as-address      |
+|     A6 | DUP3         | 0x80 0x00 CALLDATASIZE 0x80 Storage[3]-as-address |
+|     A7 | CALLDATACOPY | 0x80 Storage[3]-as-address                        |
 
-0x80'den başlayarak tüm veriyi belleğe kopyalayın.
+Copy all the call data to memory, starting at 0x80.
 
-| Offset | İşlem kodu    | Yığın                                                                            |
-| -----: | ------------- | -------------------------------------------------------------------------------- |
-|     A8 | PUSH1 0x00    | 0x00 0x80 Storage[3]-as-address                                                  |
-|     AA | DUP1          | 0x00 0x00 0x80 Storage[3]-as-address                                             |
-|     AB | CALLDATASIZE  | CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address                                |
-|     AC | DUP4          | 0x80 CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address                           |
-|     AD | DUP6          | Storage[3]-as-address 0x80 CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address     |
-|     AE | GAS           | GAS Storage[3]-as-address 0x80 CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address |
-|     AF | DELEGATE_CALL |                                                                                  |
+| Offset | İşlem kodu                         | Yığın                                                                                                                                                                                    |
+| -----: | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     A8 | PUSH1 0x00                         | 0x00 0x80 Storage[3]-as-address                                                                                                      |
+|     AA | DUP1                               | 0x00 0x00 0x80 Storage[3]-as-address                                                                                                 |
+|     AB | CALLDATASIZE                       | CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address                                                                                    |
+|     AC | DUP4                               | 0x80 CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address                                                                               |
+|     AD | DUP6                               | Storage[3]-as-address 0x80 CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address     |
+|     AE | GAS                                | GAS Storage[3]-as-address 0x80 CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address |
+|     AF | DELEGATE_CALL |                                                                                                                                                                                          |
 
-Şimdi her şey daha açık. Bu sözleşme asıl işi yapması için Storage[3]'teki adresi arayan bir [vekil](https://blog.openzeppelin.com/proxy-patterns/) olarak hareket edebilir. `DELEGATE_CALL` ayrı bir sözleşmeye çağrı yapar, fakat aynı depoda kalır. Bu, vekili olduğumuz yetkili sözleşmenin aynı depolama alanına eriştiği anlamına gelir. Bu çağrı için parametreler şu şekildedir:
+Now things are a lot clearer. This contract can act as a [proxy](https://blog.openzeppelin.com/proxy-patterns/), calling the address in Storage[3] to do the real work. `DELEGATE_CALL` calls a separate contract, but stays in the same storage. This means that the delegated contract, the one we are a proxy for, accesses the same storage space. The parameters for the call are:
 
-- _Gaz_: Kalan tüm gaz
-- _Aranan adres_: Adres-olarak-Storage[3]
-- _Çağrı verisi_ Orijinal çağrı verisini koyduğumuz 0x80'den başlayan CALLDATASIZE baytları
-- _Dönen veri_: Yok (0x00 - 0x00) Dönen veriyi başka şekillerde alacağız (aşağıya bakın)
+- _Gas_: All the remaining gas
+- _Called address_: Storage[3]-as-address
+- _Call data_: The CALLDATASIZE bytes starting at 0x80, which is where we put the original call data
+- _Return data_: None (0x00 - 0x00) We'll get the return data by other means (see below)
 
-| Offset | İşlem kodları  | Yığın                                                                                         |
-| -----: | -------------- | --------------------------------------------------------------------------------------------- |
+| Offset | İşlem kodu     | Yığın                                                                                                                                                                                                      |
+| -----: | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     B0 | RETURNDATASIZE | RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                          |
 |     B1 | DUP1           | RETURNDATASIZE RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address           |
 |     B2 | PUSH1 0x00     | 0x00 RETURNDATASIZE RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address      |
 |     B4 | DUP5           | 0x80 0x00 RETURNDATASIZE RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address |
-|     B5 | RETURNDATACOPY | RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                          |
+|     B5 | RETURNDATACOPY | RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 Depolama[3]-as-address                 |
 
-Burada dönen veriyi 0x80'den başlayan arabellek hafızasına kopyalıyoruz.
+Here we copy all the return data to the memory buffer starting at 0x80.
 
-| Offset | İşlem kodları | Yığın                                                                                                                        |
-| -----: | ------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-|     B6 | DUP2          | (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                              |
-|     B7 | DUP1          | (((call success/failure))) (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address   |
-|     B8 | ISZERO        | (((did the call fail))) (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address      |
-|     B9 | PUSH2 0x00c0  | 0xC0 (((did the call fail))) (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address |
-|     BC | JUMPI         | (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                              |
-|     BD | DUP2          | RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address               |
-|     BE | DUP5          | 0x80 RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address          |
-|     BF | RETURN        |                                                                                                                              |
+| Offset | İşlem kodu   | Yığın                                                                                                                                                                                                                                                                                                                                                       |
+| -----: | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     B6 | DUP2         | (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                                                                                       |
+|     B7 | DUP1         | (((call success/failure))) (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address   |
+|     B8 | ISZERO       | (((did the call fail))) (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address      |
+|     B9 | PUSH2 0x00c0 | 0xC0 (((did the call fail))) (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address |
+|     BC | JUMPI        | (((çağrı başarısı/başarısızlığı))) RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 Depolama[3]-as-address                                                                      |
+|     BD | DUP2         | RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                                                                        |
+|     BE | DUP5         | 0x80 RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                                                                   |
+|     BF | RETURN       |                                                                                                                                                                                                                                                                                                                                                             |
 
-Yani çağrının ardından dönen veriyi 0x80 - 0x80+RETURNDATASIZE arabelleğine kopyaladıktan sonra, çağrı başarılı olduysa sonrasında tam olarak o arabellekle `RETURN` yapıyoruz.
+So after the call we copy the return data to the buffer 0x80 - 0x80+RETURNDATASIZE, and if the call is successful we then `RETURN` with exactly that buffer.
 
-### DELEGATECALL Başarısız oldu {#delegatecall-failed}
+### DELEGATECALL Failed {#delegatecall-failed}
 
-Buraya, yani 0xC0'a geldiysek, çağrı yaptığımız sözleşme geri dönmüştür. Bu sözleşme açısından sadece bir vekil olduğumuz için aynı veriyi döndürmek ve ayrıca geri dönmek istiyoruz.
+If we get here, to 0xC0, it means that the contract we called reverted. As we are just a proxy for that contract, we want to return the same data and also revert.
 
-| Offset | Işlem kodları | Yığın                                                                                                               |
-| -----: | ------------- | ------------------------------------------------------------------------------------------------------------------- |
-|     C0 | JUMPDEST      | (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                     |
-|     C1 | DUP2          | RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address      |
-|     C2 | DUP5          | 0x80 RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address |
-|     C3 | REVERT        |                                                                                                                     |
+| Offset | İşlem kodu | Yığın                                                                                                                                                                                                                                                                                                      |
+| -----: | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     C0 | JUMPDEST   | (((çağrı başarısı/başarısızlığı))) RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 Depolama[3]-as-address                     |
+|     C1 | DUP2       | RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 Depolama[3]-as-address      |
+|     C2 | DUP5       | 0x80 RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 Depolama[3]-as-address |
+|     C3 | REVERT     |                                                                                                                                                                                                                                                                                                            |
 
-Yani daha önce `RETURN`: 0x80 - 0x80+RETURNDATASIZE için kullandığımız arabellekle `REVERT` yapıyoruz
+So we `REVERT` with the same buffer we used for `RETURN` earlier: 0x80 - 0x80+RETURNDATASIZE
 
-![Vekil akış şeması çağrısı](flowchart-proxy.png)
+![Call to proxy flowchart](flowchart-proxy.png)
 
-## ABI çağrıları {#abi-calls}
+## ABI calls {#abi-calls}
 
-Eğer veri boyutu 4 bayt ya da daha fazlaysa bu, geçerli bir ABI çağrısı olabilir.
+If the call data size is four bytes or more this might be a valid ABI call.
 
-| Offset | Opcode       | Yığın                                             |
-| -----: | ------------ | ------------------------------------------------- |
-|      D | PUSH1 0x00   | 0x00                                              |
+| Offset | İşlem kodu   | Yığın                                                                                                                         |
+| -----: | ------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+|      D | PUSH1 0x00   | 0x00                                                                                                                          |
 |      F | CALLDATALOAD | (((First word (256 bits) of the call data)))      |
 |     10 | PUSH1 0xe0   | 0xE0 (((First word (256 bits) of the call data))) |
 |     12 | SHR          | (((first 32 bits (4 bytes) of the call data)))    |
 
-Etherscan bize `1C`'nin bilinmeyen bir işlem kodu olduğunu söylüyor, çünkü [bu, Etherscan bu özelliği yazdıktan sonra eklendi](https://eips.ethereum.org/EIPS/eip-145) ve onu henüz güncellemediler. [Güncel bir işlem kodu tablosu](https://github.com/wolflo/evm-opcodes) bize bunun sağa kaydırma olduğunu gösteriyor
+Etherscan tells us that `1C` is an unknown opcode, because [it was added after Etherscan wrote this feature](https://eips.ethereum.org/EIPS/eip-145) and they haven't updated it. An [up to date opcode table](https://github.com/wolflo/evm-opcodes) shows us that this is shift right
 
-| Offset | Opcode           | Yığın                                                                                                    |
-| -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
+| Offset | İşlem kodu       | Yığın                                                                                                                                                                                                                                                            |
+| -----: | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     13 | DUP1             | (((first 32 bits (4 bytes) of the call data))) (((first 32 bits (4 bytes) of the call data)))            |
 |     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((first 32 bits (4 bytes) of the call data))) (((first 32 bits (4 bytes) of the call data))) |
-|     19 | GT               | 0x3CD8045E>first-32-bits-of-the-call-data (((first 32 bits (4 bytes) of the call data)))                 |
-|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>first-32-bits-of-the-call-data (((first 32 bits (4 bytes) of the call data)))            |
-|     1D | JUMPI            | (((first 32 bits (4 bytes) of the call data)))                                                           |
+|     19 | GT               | 0x3CD8045E>first-32-bits-of-the-call-data (((first 32 bits (4 bytes) of the call data)))                                                                                             |
+|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>first-32-bits-of-the-call-data (((first 32 bits (4 bytes) of the call data)))                                                                                        |
+|     1D | JUMPI            | (((çağrı verisinin ilk 32 biti (4 baytı)))                                                                                                                                           |
 
-Testleri eşleştiren yöntem imzasını buradaki gibi ikiye bölmek, ortalama olarak testlerin yarısından tasarruf etmemizi sağlar. Bu cümlenin hemen ardından gelen kod ve 0x43'teki kod aynı deseni izler: İlk 32 bitlik çağrı verileri için `DUP1`, ardından `PUSH4 (((method signature>` uygulayın, eşitliği kontrol etmek için `EQ` çalıştırın ve ardından yöntem imzası eşleşirse `JUMPI` komutunu kullanın. Yöntem imzaları, adresleri ve biliniyorsa [karşılık gelen yöntem tanımı](https://www.4byte.directory/) aşağıda verilmiştir:
+By dividing the method signature matching tests in two like this saves half the tests on average. The code that immediately follows this and the code in 0x43 follow the same pattern: `DUP1` the first 32 bits of the call data, `PUSH4 (((method signature>`, run `EQ` to check for equality, and then `JUMPI` if the method signature matches. Here are the method signatures, their addresses, and if known [the corresponding method definition](https://www.4byte.directory/):
 
-| Metod                                                                                  | Yöntem imzası | Sıçranacak kayma |
-| -------------------------------------------------------------------------------------- | ------------- | ---------------- |
-| [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e    | 0x0103           |
-| ???                                                                                    | 0x81e580d3    | 0x0138           |
-| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | 0xba0bafb4    | 0x0158           |
-| ???                                                                                    | 0x1f135823    | 0x00C4           |
-| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab    | 0x00ED           |
+| Method                                                                                                    | Method signature | Offset to jump into |
+| --------------------------------------------------------------------------------------------------------- | ---------------- | ------------------- |
+| [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e       | 0x0103              |
+| ???                                                                                                       | 0x81e580d3       | 0x0138              |
+| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | 0xba0bafb4       | 0x0158              |
+| ???                                                                                                       | 0x1f135823       | 0x00C4              |
+| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab       | 0x00ED              |
 
-Eşleşme bulunamazsa kod, bizim vekili olduğumuz sözleşmenin bir eşleşmesi olmasını umarak [0x7C'deki vekil işlayicisine](#the-handler-at-0x7c) sıçrar.
+If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler-at-0x7c), in the hope that the contract to which we are a proxy has a match.
 
-![ABI çağrıları akış şeması](flowchart-abi.png)
+![ABI calls flowchart](flowchart-abi.png)
 
 ## splitter() {#splitter}
 
-| Offset | Opcode       | Yığın                         |
+| Offset | İşlem kodu   | Yığın                         |
 | -----: | ------------ | ----------------------------- |
 |    103 | JUMPDEST     |                               |
 |    104 | CALLVALUE    | CALLVALUE                     |
@@ -314,24 +312,24 @@ Eşleşme bulunamazsa kod, bizim vekili olduğumuz sözleşmenin bir eşleşmesi
 |    10D | DUP1         | 0x00 0x00 CALLVALUE           |
 |    10E | REVERT       |                               |
 
-Bu fonksiyonun yaptığı ilk şey, çağrının ETH göndermediğini doğrulamaktır. Bu fonksiyon [`payable`](https://solidity-by-example.org/payable/) değildir. Eğer biri bize ETH gönderdiyse bu bir hata olarak gerçekleşmiştir ve o kişiyi ETH'lerini geri alamayacağı bir duruma sokmaktan kaçınmak için `REVERT` yapmamız gerekir.
+The first thing this function does is check that the call did not send any ETH. This function is not [`payable`](https://solidity-by-example.org/payable/). If somebody sent us ETH that must be a mistake and we want to `REVERT` to avoid having that ETH where they can't get it back.
 
-| Offset | Opcode                                            | Yığın                                                                       |
-| -----: | ------------------------------------------------- | --------------------------------------------------------------------------- |
-|    10F | JUMPDEST                                          |                                                                             |
-|    110 | POP                                               |                                                                             |
-|    111 | PUSH1 0x03                                        | 0x03                                                                        |
-|    113 | SLOAD                                             | (((Storage[3] a.k.a the contract for which we are a proxy)))                |
-|    114 | PUSH1 0x40                                        | 0x40 (((Storage[3] a.k.a the contract for which we are a proxy)))           |
-|    116 | MLOAD                                             | 0x80 (((Storage[3] a.k.a the contract for which we are a proxy)))           |
+| Offset | İşlem kodu                                        | Yığın                                                                                                                                                                                                                                                                    |
+| -----: | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|    10F | JUMPDEST                                          |                                                                                                                                                                                                                                                                          |
+|    110 | POP                                               |                                                                                                                                                                                                                                                                          |
+|    111 | PUSH1 0x03                                        | 0x03                                                                                                                                                                                                                                                                     |
+|    113 | SLOAD                                             | (((Storage[3] a.k.a the contract for which we are a proxy)))                                                                |
+|    114 | PUSH1 0x40                                        | 0x40 (((Storage[3] a.k.a the contract for which we are a proxy)))                                                           |
+|    116 | MLOAD                                             | 0x80 (((Storage[3] a.k.a the contract for which we are a proxy)))                                                           |
 |    117 | PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xFF...FF 0x80 (((Storage[3] a.k.a the contract for which we are a proxy))) |
 |    12C | SWAP1                                             | 0x80 0xFF...FF (((Storage[3] a.k.a the contract for which we are a proxy))) |
 |    12D | SWAP2                                             | (((Storage[3] a.k.a the contract for which we are a proxy))) 0xFF...FF 0x80 |
-|    12E | VE                                                | ProxyAddr 0x80                                                              |
-|    12F | DUP2                                              | 0x80 ProxyAddr 0x80                                                         |
-|    130 | MSTORE                                            | 0x80                                                                        |
+|    12E | AND                                               | ProxyAddr 0x80                                                                                                                                                                                                                                                           |
+|    12F | DUP2                                              | 0x80 ProxyAddr 0x80                                                                                                                                                                                                                                                      |
+|    130 | MSTORE                                            | 0x80                                                                                                                                                                                                                                                                     |
 
-Ve 0x80 artık vekil adresini içeriyor
+And 0x80 now contains the proxy address
 
 | Offset | Opcode       | Yığın     |
 | -----: | ------------ | --------- |
@@ -340,9 +338,9 @@ Ve 0x80 artık vekil adresini içeriyor
 |    134 | PUSH2 0x00e4 | 0xE4 0xA0 |
 |    137 | JUMP         | 0xA0      |
 
-### E4 Kodu {#the-e4-code}
+### The E4 Code {#the-e4-code}
 
-Bu bu satırları ilk görüşümüz, fakat bunlar diğer yöntemlerle paylaşıldı (aşağı bakın). X yığınındaki değeri arayacağız; `splitter()`'da bu Xin değerinin 0xA0 olduğunu unutmayın.
+This is the first time we see these lines, but they are shared with other methods (see below). So we'll call the value in the stack X, and just remember that in `splitter()` the value of this X is 0xA0.
 
 | Offset | Opcode     | Yığın       |
 | -----: | ---------- | ----------- |
@@ -351,31 +349,31 @@ Bu bu satırları ilk görüşümüz, fakat bunlar diğer yöntemlerle paylaşı
 |     E7 | MLOAD      | 0x80 X      |
 |     E8 | DUP1       | 0x80 0x80 X |
 |     E9 | SWAP2      | X 0x80 0x80 |
-|     EA | ALT        | X-0x80 0x80 |
+|     EA | SUB        | X-0x80 0x80 |
 |     EB | SWAP1      | 0x80 X-0x80 |
 |     EC | RETURN     |             |
 
-Yani bu kod, yığında (X) bir bellek işaretçisi alır ve sözleşmenin, arabelleği 0x80 - X olan bir `RETURN` durumuna uğramasına sebep olur.
+So this code receives a memory pointer in the stack (X), and causes the contract to `RETURN` with a buffer that is 0x80 - X.
 
-`splitter()` durumunda bu, vekili olduğumuz adresi döndürür. `RETURN`, veriyi yazdığımız yerin adresi olan 0x80-0x9F'deki arabelleği verir (0x130un yukarısındaki kayma).
+In the case of `splitter()`, this returns the address for which we are a proxy. `RETURN` returns the buffer in 0x80-0x9F, which is where we wrote this data (offset 0x130 above).
 
 ## currentWindow() {#currentwindow}
 
-0x158-0x163 kaymalarındaki kod, `splitter()` içindeki 0x103-0x10E'de gördüğümüzle aynıdır (`JUMPI` hedefi dışında), bu nedenle `currentWindow()`'un da `payable` olmadığını biliyoruz.
+The code in offsets 0x158-0x163 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know `currentWindow()` is also not `payable`.
 
-| Offset | Opcode       | Yığın                |
-| -----: | ------------ | -------------------- |
-|    164 | JUMPDEST     |                      |
-|    165 | POP          |                      |
-|    166 | PUSH2 0x00da | 0xDA                 |
-|    169 | PUSH1 0x01   | 0x01 0xDA            |
+| Offset | Opcode       | Yığın                                                                    |
+| -----: | ------------ | ------------------------------------------------------------------------ |
+|    164 | JUMPDEST     |                                                                          |
+|    165 | POP          |                                                                          |
+|    166 | PUSH2 0x00da | 0xDA                                                                     |
+|    169 | PUSH1 0x01   | 0x01 0xDA                                                                |
 |    16B | SLOAD        | Storage[1] 0xDA      |
 |    16C | DUP2         | 0xDA Storage[1] 0xDA |
 |    16D | JUMP         | Storage[1] 0xDA      |
 
-### DA kodu {#the-da-code}
+### The DA code {#the-da-code}
 
-Bu kod da diğer yöntemlerle paylaşılmıştır. Yani Y yığınındaki değeri çağıracağız; `currentWindow()`'da bu Y'nin değerinin Storage[1] olduğunu unutmayın.
+This code is also shared with other methods. So we'll call the value in the stack Y, and just remember that in `currentWindow()` the value of this Y is Storage[1].
 
 | Offset | Opcode     | Yığın            |
 | -----: | ---------- | ---------------- |
@@ -386,57 +384,57 @@ Bu kod da diğer yöntemlerle paylaşılmıştır. Yani Y yığınındaki değer
 |     DF | DUP2       | 0x80 Y 0x80 0xDA |
 |     E0 | MSTORE     | 0x80 0xDA        |
 
-0x80-0x9F'e Y'yi yazalım.
+Write Y to 0x80-0x9F.
 
 | Offset | Opcode     | Yığın          |
 | -----: | ---------- | -------------- |
 |     E1 | PUSH1 0x20 | 0x20 0x80 0xDA |
 |     E3 | EKLE       | 0xA0 0xDA      |
 
-Ve geri kalanı da [yukarıda](#the-e4-code) anlatılmıştır. Yani 0xDA'ya yapılan sıçramalar yığının başını (Y), 0x80-0x9F'ye yazar ve bu değeri döndürür. Bir `currentWindow()` durumunda, Storage[1]'ı verir.
+And the rest is already explained [above](#the-e4-code). So jumps to 0xDA write the stack top (Y) to 0x80-0x9F, and return that value. In the case of `currentWindow()`, it returns Storage[1].
 
 ## merkleRoot() {#merkleroot}
 
-0x158-0x163 kaymalarındaki kod, `splitter()` içindeki 0x103-0x10E'de gördüğümüzle aynıdır (`JUMPI` hedefi dışında), bu nedenle `merkleRoot()`'un da `payable` olmadığını biliyoruz.
+The code in offsets 0xED-0xF8 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know `merkleRoot()` is also not `payable`.
 
-| Offset | Opcode       | Yığın                |
-| -----: | ------------ | -------------------- |
-|     F9 | JUMPDEST     |                      |
-|     FA | POP          |                      |
-|     FB | PUSH2 0x00da | 0xDA                 |
-|     FE | PUSH1 0x00   | 0x00 0xDA            |
+| Offset | Opcode       | Yığın                                                                    |
+| -----: | ------------ | ------------------------------------------------------------------------ |
+|     F9 | JUMPDEST     |                                                                          |
+|     FA | POP          |                                                                          |
+|     FB | PUSH2 0x00da | 0xDA                                                                     |
+|     FE | PUSH1 0x00   | 0x00 0xDA                                                                |
 |    100 | SLOAD        | Storage[0] 0xDA      |
 |    101 | DUP2         | 0xDA Storage[0] 0xDA |
 |    102 | JUMP         | Storage[0] 0xDA      |
 
-Sıçramadan sonra ne olduğunu [çoktan anladık](#the-da-code). Yani `merkleRoot()` Storage[0]'ı döndürür.
+What happens after the jump [we already figured out](#the-da-code). So `merkleRoot()` returns Storage[0].
 
 ## 0x81e580d3 {#0x81e580d3}
 
-0xC4-0xCF kaymalarındaki kod, `splitter()` içindeki 0x103-0x10E'de gördüğümüzle aynıdır (`JUMPI` hedefi dışında), dolayısıyla bu fonksiyonun da `payable` olmadığını biliyoruz.
+The code in offsets 0x138-0x143 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know this function is also not `payable`.
 
-| Offset | Opcode       | Yığın                                                        |
-| -----: | ------------ | ------------------------------------------------------------ |
-|    144 | JUMPDEST     |                                                              |
-|    145 | POP          |                                                              |
-|    146 | PUSH2 0x00da | 0xDA                                                         |
-|    149 | PUSH2 0x0153 | 0x0153 0xDA                                                  |
-|    14C | CALLDATASIZE | CALLDATASIZE 0x0153 0xDA                                     |
-|    14D | PUSH1 0x04   | 0x04 CALLDATASIZE 0x0153 0xDA                                |
-|    14F | PUSH2 0x018f | 0x018F 0x04 CALLDATASIZE 0x0153 0xDA                         |
-|    152 | JUMP         | 0x04 CALLDATASIZE 0x0153 0xDA                                |
-|    18F | JUMPDEST     | 0x04 CALLDATASIZE 0x0153 0xDA                                |
-|    190 | PUSH1 0x00   | 0x00 0x04 CALLDATASIZE 0x0153 0xDA                           |
-|    192 | PUSH1 0x20   | 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                      |
-|    194 | DUP3         | 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                 |
-|    195 | DUP5         | CALLDATASIZE 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA    |
-|    196 | SUB          | CALLDATASIZE-4 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA       |
-|    197 | SLT          | CALLDATASIZE-4\<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA         |
-|    198 | ISZERO       | CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA        |
-|    199 | PUSH2 0x01a0 | 0x01A0 CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
-|    19C | JUMPI        | 0x00 0x04 CALLDATASIZE 0x0153 0xDA                           |
+| Offset | Opcode       | Yığın                                                                           |
+| -----: | ------------ | ------------------------------------------------------------------------------- |
+|    144 | JUMPDEST     |                                                                                 |
+|    145 | POP          |                                                                                 |
+|    146 | PUSH2 0x00da | 0xDA                                                                            |
+|    149 | PUSH2 0x0153 | 0x0153 0xDA                                                                     |
+|    14C | CALLDATASIZE | CALLDATASIZE 0x0153 0xDA                                                        |
+|    14D | PUSH1 0x04   | 0x04 CALLDATASIZE 0x0153 0xDA                                                   |
+|    14F | PUSH2 0x018f | 0x018F 0x04 CALLDATASIZE 0x0153 0xDA                                            |
+|    152 | JUMP         | 0x04 CALLDATASIZE 0x0153 0xDA                                                   |
+|    18F | JUMPDEST     | 0x04 CALLDATASIZE 0x0153 0xDA                                                   |
+|    190 | PUSH1 0x00   | 0x00 0x04 CALLDATASIZE 0x0153 0xDA                                              |
+|    192 | PUSH1 0x20   | 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                                         |
+|    194 | DUP3         | 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                                    |
+|    195 | DUP5         | CALLDATASIZE 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                       |
+|    196 | SUB          | CALLDATASIZE-4 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                          |
+|    197 | SLT          | CALLDATASIZE-4\<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+|    198 | ISZERO       | CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA                           |
+|    199 | PUSH2 0x01a0 | 0x01A0 CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA                    |
+|    19C | JUMPI        | 0x00 0x04 CALLDATASIZE 0x0153 0xDA                                              |
 
-Bu fonksiyon en az 32 bayt (1 kelime) çağrı verisi alıyor gibi görünüyor.
+It looks like this function takes at least 32 bytes (one word) of call data.
 
 | Offset | Opcode | Yığın                                        |
 | -----: | ------ | -------------------------------------------- |
@@ -444,80 +442,80 @@ Bu fonksiyon en az 32 bayt (1 kelime) çağrı verisi alıyor gibi görünüyor.
 |    19E | DUP2   | 0x00 0x00 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 |    19F | REVERT |                                              |
 
-Eğer hiçbir çağrı verisi almazsa bu işlem gelen hiçbir veri olmadan geri döndürülür.
+If it doesn't get the call data the transaction is reverted without any return data.
 
-Şimdi de _does_ fonksiyonu ihtiyacı olan çağrı verisini aldığında neler olduğunu görelim.
+Let's see what happens if the function _does_ get the call data it needs.
 
-| Offset | Opcode       | Yığın                                    |
-| -----: | ------------ | ---------------------------------------- |
-|    1A0 | JUMPDEST     | 0x00 0x04 CALLDATASIZE 0x0153 0xDA       |
-|    1A1 | POP          | 0x04 CALLDATASIZE 0x0153 0xDA            |
+| Offset | Opcode       | Yığın                                                       |
+| -----: | ------------ | ----------------------------------------------------------- |
+|    1A0 | JUMPDEST     | 0x00 0x04 CALLDATASIZE 0x0153 0xDA                          |
+|    1A1 | POP          | 0x04 CALLDATASIZE 0x0153 0xDA                               |
 |    1A2 | CALLDATALOAD | calldataload(4) CALLDATASIZE 0x0153 0xDA |
 
-`calldataload(4)`, çağrı verisinin yöntem imzasından _sonraki_ ilk kelimesidir
+`calldataload(4)` is the first word of the call data _after_ the method signature
 
-| Offset | Opcode       | Yığın                                                                        |
-| -----: | ------------ | ---------------------------------------------------------------------------- |
-|    1A3 | SWAP2        | 0x0153 CALLDATASIZE calldataload(4) 0xDA                                     |
-|    1A4 | SWAP1        | CALLDATASIZE 0x0153 calldataload(4) 0xDA                                     |
-|    1A5 | POP          | 0x0153 calldataload(4) 0xDA                                                  |
-|    1A6 | JUMP         | calldataload(4) 0xDA                                                         |
-|    153 | JUMPDEST     | calldataload(4) 0xDA                                                         |
-|    154 | PUSH2 0x016e | 0x016E calldataload(4) 0xDA                                                  |
-|    157 | JUMP         | calldataload(4) 0xDA                                                         |
-|    16E | JUMPDEST     | calldataload(4) 0xDA                                                         |
-|    16F | PUSH1 0x04   | 0x04 calldataload(4) 0xDA                                                    |
-|    171 | DUP2         | calldataload(4) 0x04 calldataload(4) 0xDA                                    |
-|    172 | DUP2         | 0x04 calldataload(4) 0x04 calldataload(4) 0xDA                               |
-|    173 | SLOAD        | Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA                         |
-|    174 | DUP2         | calldataload(4) Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
+| Offset | Opcode       | Yığın                                                                                                                                                                                                                |
+| -----: | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|    1A3 | SWAP2        | 0x0153 CALLDATASIZE calldataload(4) 0xDA                                                                                                                                                          |
+|    1A4 | SWAP1        | CALLDATASIZE 0x0153 calldataload(4) 0xDA                                                                                                                                                          |
+|    1A5 | POP          | 0x0153 calldataload(4) 0xDA                                                                                                                                                                       |
+|    1A6 | JUMP         | calldataload(4) 0xDA                                                                                                                                                                              |
+|    153 | JUMPDEST     | calldataload(4) 0xDA                                                                                                                                                                              |
+|    154 | PUSH2 0x016e | 0x016E calldataload(4) 0xDA                                                                                                                                                                       |
+|    157 | JUMP         | calldataload(4) 0xDA                                                                                                                                                                              |
+|    16E | JUMPDEST     | calldataload(4) 0xDA                                                                                                                                                                              |
+|    16F | PUSH1 0x04   | 0x04 calldataload(4) 0xDA                                                                                                                                                                         |
+|    171 | DUP2         | calldataload(4) 0x04 calldataload(4) 0xDA                                                                                                                                      |
+|    172 | DUP2         | 0x04 calldataload(4) 0x04 calldataload(4) 0xDA                                                                                                                                 |
+|    173 | SLOAD        | Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA                                                                       |
+|    174 | DUP2         | calldataload(4) Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA                                    |
 |    175 | LT           | calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
 |    176 | PUSH2 0x017e | 0x017EC calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
-|    179 | JUMPI        | calldataload(4) 0x04 calldataload(4) 0xDA                                    |
+|    179 | JUMPI        | calldataload(4) 0x04 calldataload(4) 0xDA                                                                                                                                      |
 
-Eğer ilk kelime Storage[4]'ten az değilse, fonksiyon başarısız olur. Herhangi bir gelen veri olmadan geri döndürülür:
+If the first word is not less than Storage[4], the function fails. It reverts without any returned value:
 
-| Offset | Opcode     | Yığın         |
-| -----: | ---------- | ------------- |
+| Offset | Opcode     | Yığın                                                         |
+| -----: | ---------- | ------------------------------------------------------------- |
 |    17A | PUSH1 0x00 | 0x00 ...      |
 |    17C | DUP1       | 0x00 0x00 ... |
-|    17D | REVERT     |               |
+|    17D | REVERT     |                                                               |
 
-Eğer calldataload(4) Storage[4]'ten azsa, şu kodu alırız:
+If the calldataload(4) is less than Storage[4], we get this code:
 
-| Offset | Opcode     | Yığın                                               |
-| -----: | ---------- | --------------------------------------------------- |
+| Offset | Opcode     | Yığın                                                                                     |
+| -----: | ---------- | ----------------------------------------------------------------------------------------- |
 |    17E | JUMPDEST   | calldataload(4) 0x04 calldataload(4) 0xDA           |
 |    17F | PUSH1 0x00 | 0x00 calldataload(4) 0x04 calldataload(4) 0xDA      |
 |    181 | SWAP2      | 0x04 calldataload(4) 0x00 calldataload(4) 0xDA      |
 |    182 | DUP3       | 0x00 0x04 calldataload(4) 0x00 calldataload(4) 0xDA |
 |    183 | MSTORE     | calldataload(4) 0x00 calldataload(4) 0xDA           |
 
-Ve 0x00-0x1F bellek konumları artık 0x04 verilerini içermektedir (0x00-0x1E'lerin hepsi sıfır, 0x1F ise dört)
+And memory locations 0x00-0x1F now contain the data 0x04 (0x00-0x1E are all zeros, 0x1F is four)
 
-| Offset | Opcode     | Yığın                                                                   |
-| -----: | ---------- | ----------------------------------------------------------------------- |
-|    184 | PUSH1 0x20 | 0x20 calldataload(4) 0x00 calldataload(4) 0xDA                          |
-|    186 | SWAP1      | calldataload(4) 0x20 0x00 calldataload(4) 0xDA                          |
-|    187 | SWAP2      | 0x00 0x20 calldataload(4) calldataload(4) 0xDA                          |
-|    188 | SHA3       | (((SHA3 of 0x00-0x1F))) calldataload(4) calldataload(4) 0xDA            |
-|    189 | EKLE       | (((SHA3 of 0x00-0x1F)))+calldataload(4) calldataload(4) 0xDA            |
+| Offset | Opcode     | Yığın                                                                                                                                                                                                                      |
+| -----: | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|    184 | PUSH1 0x20 | 0x20 calldataload(4) 0x00 calldataload(4) 0xDA                                                                                                                                       |
+|    186 | SWAP1      | calldataload(4) 0x20 0x00 calldataload(4) 0xDA                                                                                                                                       |
+|    187 | SWAP2      | 0x00 0x20 calldataload(4) calldataload(4) 0xDA                                                                                                                                       |
+|    188 | SHA3       | (((SHA3 of 0x00-0x1F))) calldataload(4) calldataload(4) 0xDA                                                                |
+|    189 | EKLE       | (((SHA3 of 0x00-0x1F)))+calldataload(4) calldataload(4) 0xDA                                                                |
 |    18A | SLOAD      | Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] calldataload(4) 0xDA |
 
-Öyleyse depolamada, 0x000...0004'ün SHA3'ünde başlayan bir arama tablosu vardır ve bu tablo, her yasal çağrı verisi değeri için bir giriş içerir (Storage[4]'ın altında değer).
+So there is a lookup table in storage, which starts at the SHA3 of 0x000...0004 and has an entry for every legitimate call data value (value below Storage[4]).
 
-| Offset | Opcode | Yığın                                                                   |
-| -----: | ------ | ----------------------------------------------------------------------- |
+| Offset | Opcode | Yığın                                                                                                                                                                                                                      |
+| -----: | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |    18B | SWAP1  | calldataload(4) Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] 0xDA |
-|    18C | POP    | Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] 0xDA                 |
-|    18D | DUP2   | 0xDA Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] 0xDA            |
-|    18E | JUMP   | Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] 0xDA                 |
+|    18C | POP    | Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] 0xDA                                    |
+|    18D | DUP2   | 0xDA Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] 0xDA                               |
+|    18E | JUMP   | Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] 0xDA                                    |
 
-[0xDA kaymasındaki kodun](#the-da-code) ne yaptığını zaten biliyoruz, arayan kişiye yığının üst değerini döndürür. Yani bu fonksiyon, arayana arama tablosundaki değeri döndürür.
+We already know what [the code at offset 0xDA](#the-da-code) does, it returns the stack top value to the caller. So this function returns the value from the lookup table to the caller.
 
 ## 0x1f135823 {#0x1f135823}
 
-0xC4-0xCF kaymalarındaki kod, `splitter()` içindeki 0x103-0x10E'de gördüğümüzle aynıdır (`JUMPI` hedefi dışında), dolayısıyla bu fonksiyonun da `payable` olmadığını biliyoruz.
+The code in offsets 0xC4-0xCF is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know this function is also not `payable`.
 
 | Offset | Opcode       | Yığın             |
 | -----: | ------------ | ----------------- |
@@ -529,60 +527,60 @@ Ve 0x00-0x1F bellek konumları artık 0x04 verilerini içermektedir (0x00-0x1E'l
 |     D8 | DUP2         | 0xDA Value\* 0xDA |
 |     D9 | JUMP         | Value\* 0xDA      |
 
-[0xDA uzaklığındaki kodun](#the-da-code) ne yaptığını zaten biliyoruz, arayan kişiye yığının üst değerini döndürür. Yani bu fonksiyon `Value*` döndürür.
+We already know what [the code at offset 0xDA](#the-da-code) does, it returns the stack top value to the caller. So this function returns `Value*`.
 
-### Yöntem Özeti {#method-summary}
+### Method Summary {#method-summary}
 
-Bu noktada sözleşmeyi anladığınızı düşünüyor musunuz? Ben düşünmüyorum. Şu ana kadar elimizde şu yöntemler var:
+Do you feel you understand the contract at this point? I don't. So far we have these methods:
 
-| Metod                             | Anlam                                                                                        |
-| --------------------------------- | -------------------------------------------------------------------------------------------- |
-| Aktarım                           | Çağrı tarafından sağlanan değeri kabul edin ve `Value*` değerini bu miktarda artırın         |
-| [splitter()](#splitter)           | Return Storage[3], the proxy address                                                         |
-| [currentWindow()](#currentwindow) | Return Storage[1]                                                                            |
-| [merkleRoot()](#merkeroot)        | Return Storage[0]                                                                            |
-| [0x81e580d3](#0x81e580d3)         | Parametrenin Storage[4] değerinden küçük olması koşuluyla, arama tablosundan değeri döndürün |
-| [0x1f135823](#0x1f135823)         | Return Storage[6], a.k.a. Value\*                                                            |
+| Method                                               | Anlamı                                                                                                                                   |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Transfer                                             | Accept the value provided by the call and increase `Value*` by that amount                                                               |
+| [splitter()](#splitter)           | Return Storage[3], the proxy address                                                 |
+| [currentWindow()](#currentwindow) | Return Storage[1]                                                                    |
+| [merkleRoot()](#merkeroot)        | Return Storage[0]                                                                    |
+| [0x81e580d3](#0x81e580d3)                            | Return the value from a lookup table, provided the parameter is less than Storage[4] |
+| [0x1f135823](#0x1f135823)                            | Return Storage[6], a.k.a. Value\*    |
 
-Ancak diğer işlevlerin Storage[3]'da sözleşme tarafından sağlandığını biliyoruz. Belki o sözleşmenin ne olduğunu bilseydik bize bir ipucu verirdi. Neyse ki, blokzincirden bahsediyoruz ve en azından teoride de olsa her şey biliniyor. Storage[3] değerini ayarlayan herhangi bir yöntem görmedik, dolayısıyla bunun oluşturucu tarafından ayarlanmış olması gerekir.
+But we know any other functionality is provided by the contract in Storage[3]. Maybe if we knew what that contract is it'll give us a clue. Thankfully, this is the blockchain and everything is known, at least in theory. We didn't see any methods that set Storage[3], so it must have been set by the constructor.
 
-## Yapıcı {#the-constructor}
+## Oluşturucu {#the-constructor}
 
-[Bir sözleşmeye baktığımızda](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f) onu oluşturan işlemi de görebiliriz.
+When we [look at a contract](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f) we can also see the transaction that created it.
 
-![İşlem oluştur öğesine tıklayın](create-tx.png)
+![Click the create transaction](create-tx.png)
 
-O işleme ve sonrasında da **Durum** sekmesine tıklarsak, parametrelerin başlangıç değerlerini görebiliriz. Spesifik olarak, Storage[3]'ın [0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761](https://etherscan.io/address/0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761) değerini içerdiğini görebiliriz. O sözleşme, eksik işlevselliği içermek zorundadır. Araştırdığımız sözleşme için kullandığımız araçların aynılarını kullanarak bunu anlayabiliriz.
+If we click that transaction, and then the **State** tab, we can see the initial values of the parameters. Specifically, we can see that Storage[3] contains [0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761](https://etherscan.io/address/0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761). That contract must contain the missing functionality. We can understand it using the same tools we used for the contract we are investigating.
 
-## Vekil Sözleşmesi {#the-proxy-contract}
+## The Proxy Contract {#the-proxy-contract}
 
-Yukarıdaki orijinal sözleşme için kullandığımız tekniklerin aynılarını kullanarak kontratın şu durumlarda eski haline döndüğünü görüyoruz:
+Using the same techniques we used for the original contract above we can see that the contract reverts if:
 
-- Çağrıya iliştirilmiş herhangi bir miktarda ETH varsa (0x05-0x0F)
-- Çağrı verisi boyutu dörtten azsa (0x10-0x19 ve 0xBE-0xC2)
+- There is any ETH attached to the call (0x05-0x0F)
+- The call data size is less than four (0x10-0x19 and 0xBE-0xC2)
 
-Desteklediği yöntemler:
+And that the methods it supports are:
 
-| Metod                                                                                                           | Yöntem imzası                | Atlamak için ofset |
-| --------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| [scaleAmountByPercentage(uint256,uint256)](https://www.4byte.directory/signatures/?bytes4_signature=0x8ffb5c97)          | 0x8ffb5c97                   | 0x0135             |
-| [isClaimed(uint256,address)](https://www.4byte.directory/signatures/?bytes4_signature=0xd2ef0795)               | 0xd2ef0795                   | 0x0151             |
-| [claim(uint256,address,uint256,bytes32[])](https://www.4byte.directory/signatures/?bytes4_signature=0x2e7ba6ef) | 0x2e7ba6ef                   | 0x00F4             |
-| [incrementWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0x338b1d31)                        | 0x338b1d31                   | 0x0110             |
-| ???                                                                                                             | 0x3f26479e                   | 0x0118             |
-| ???                                                                                                             | 0x1e7df9d3                   | 0x00C3             |
-| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4)                          | [0xba0bafb4](#currentwindow) | 0x0148             |
-| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)                             | [0x2eb4a7ab](#merkleroot)    | 0x0107             |
-| ???                                                                                                             | [0x81e580d3](#0x81e580d3)    | 0x0122             |
-| ???                                                                                                             | [0x1f135823](#0x1f135823)    | 0x00D8             |
+| Method                                                                                                                                                                                 | Method signature             | Offset to jump into |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| [scaleAmountByPercentage(uint256,uint256)](https://www.4byte.directory/signatures/?bytes4_signature=0x8ffb5c97)                                                     | 0x8ffb5c97                   | 0x0135              |
+| [isClaimed(uint256,address)](https://www.4byte.directory/signatures/?bytes4_signature=0xd2ef0795)                                                                   | 0xd2ef0795                   | 0x0151              |
+| [claim(uint256,address,uint256,bytes32[])](https://www.4byte.directory/signatures/?bytes4_signature=0x2e7ba6ef) | 0x2e7ba6ef                   | 0x00F4              |
+| [incrementWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0x338b1d31)                                                                            | 0x338b1d31                   | 0x0110              |
+| ???                                                                                                                                                                                    | 0x3f26479e                   | 0x0118              |
+| ???                                                                                                                                                                                    | 0x1e7df9d3                   | 0x00C3              |
+| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4)                                                                              | [0xba0bafb4](#currentwindow) | 0x0148              |
+| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)                                                                                 | [0x2eb4a7ab](#merkleroot)    | 0x0107              |
+| ???                                                                                                                                                                                    | [0x81e580d3](#0x81e580d3)    | 0x0122              |
+| ???                                                                                                                                                                                    | [0x1f135823](#0x1f135823)    | 0x00D8              |
 
-Alttaki 4 metodu görmezden gelebiliriz, çünkü onları ele almayacağız. İmzaları, orijinal sözleşmemizin kendileriyle ilgileneceği şekildedir (yukarıdaki ayrıntıları görmek için imzalara tıklayabilirsiniz), bu nedenle bunlar, [geçersiz kılınan yöntemler](https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf) olmalıdır.
+We can ignore the bottom four methods because we will never get to them. Their signatures are such that our original contract takes care of them by itself (you can click the signatures to see the details above), so they must be [methods that are overridden](https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf).
 
-Kalan yöntemlerden biri `claim(<params>)`, diğeri de `isClaimed(<params>)` şeklindedir, dolayısıyla bir airdrop sözleşmesini andırır. İşlem kodundan işlem koduna geri kalanların üzerinden geçmek yerine, bu sözleşmeden üç fonksiyon için kullanılabilir sonuçlar oluşturan [geri derleyiciyi deneyebiliriz](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761). Diğerlerine tersine mühendislik yapmak ise alıştırma olarak okuyucuya bırakılmıştır.
+One of the remaining methods is `claim(<params>)`, and another is `isClaimed(<params>)`, so it looks like an airdrop contract. Instead of going through the rest opcode by opcode, we can [try the decompiler](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), which produces usable results for three functions from this contract. Reverse engineering the other ones is left as an exercise to the reader.
 
 ### scaleAmountByPercentage {#scaleamountbypercentage}
 
-Bu fonksiyon için geri derleyicinin bize verdiği şey şudur:
+This is what the decompiler gives us for this function:
 
 ```python
 def unknown8ffb5c97(uint256 _param1, uint256 _param2) payable:
@@ -592,15 +590,15 @@ def unknown8ffb5c97(uint256 _param1, uint256 _param2) payable:
   return (_param1 * _param2 / 100 * 10^6)
 ```
 
-İlk `require` çağrı verilerinin, fonksiyon imzasının dört baytına ek olarak iki parametre için yeterli olan en az 64 bayta sahip olup olmadığını test eder. Eğer durum bu değilse, kesinlikle yanlış bir şeyler vardır.
+The first `require` tests that the call data has, in addition to the four bytes of the function signature, at least 64 bytes, enough for the two parameters. If not then there is obviously something wrong.
 
-`if` ifadesi, `_param1` değerinin sıfır olmadığını ve `_param1 * _param2` değerinin negatif olmadığını doğrulamaya çalışıyor gibi görünüyor. Muhtemelen paketleme durumlarını önlemek içindir.
+The `if` statement seems to check that `_param1` is not zero, and that `_param1 * _param2` is not negative. It is probably to prevent cases of wrap around.
 
-Son olarak, fonksiyon ölçeklendirilmiş bir değer döndürür.
+Finally, the function returns a scaled value.
 
-### talep et {#claim}
+### claim {#claim}
 
-Geri derleyicinin oluşturduğu kod karmaşık ve bunun haricinde tamamı da bizim açımızdan ilgili değil. Bunların bir kısmını atlayıp bize işe yarar bilgi sağlayacağına inandığım satırlara odaklanacağım
+The code the decompiler creates is complex, and not all of it is relevant for us. I am going to skip some of it to focus on the lines that I believe provide useful information
 
 ```python
 def unknown2e7ba6ef(uint256 _param1, uint256 _param2, uint256 _param3, array _param4) payable:
@@ -611,10 +609,10 @@ def unknown2e7ba6ef(uint256 _param1, uint256 _param2, uint256 _param3, array _pa
       revert with 0, 'cannot claim for a future window'
 ```
 
-Burada iki önemli şey görüyoruz:
+We see here two important things:
 
-- `_param2`, bir `uint256` olarak tanıtılmasına rağmen aslında bir adrestir
-- `_param1`, şimdi ya da öncesinde `currentWindow` olması gereken, üstlenilen penceredir.
+- `_param2`, while it is declared as a `uint256`, is actually an address
+- `_param1` is the window being claimed, which has to be `currentWindow` or earlier.
 
 ```python
   ...
@@ -622,7 +620,7 @@ Burada iki önemli şey görüyoruz:
       revert with 0, 'Account already claimed the given window'
 ```
 
-Yani artık Storage[5]'ın pencere ve adreslerden oluşan bir dizi olduğunu ve adresin o pencere için ödülü alıp almadığını biliyoruz.
+So now we know that Storage[5] is an array of windows and addresses, and whether the address claimed the reward for that window.
 
 ```python
   ...
@@ -642,7 +640,7 @@ Yani artık Storage[5]'ın pencere ve adreslerden oluşan bir dizi olduğunu ve 
       revert with 0, 'Invalid proof'
 ```
 
-`unknown2eb4a7ab` değerinin aslında `merkleRoot()` fonksiyonu olduğunu biliyoruz, dolayısıyla bu kod bir [merkle kanıtını](https://medium.com/crypto-0-nite/merkle-proofs-explained-6dd429623dc5) doğruluyor gibi görünüyor. Bu, `_param4` değerinin bir merkle kanıtı olduğu anlamına geliyor.
+We know that `unknown2eb4a7ab` is actually the function `merkleRoot()`, so this code looks like it is verifying a [merkle proof](https://medium.com/crypto-0-nite/merkle-proofs-explained-6dd429623dc5). This means that `_param4` is a merkle proof.
 
 ```python
   call addr(_param2) with:
@@ -650,7 +648,7 @@ Yani artık Storage[5]'ın pencere ve adreslerden oluşan bir dizi olduğunu ve 
        gas 30000 wei
 ```
 
-Bir sözleşme kendi ETH'sini başka bir adrese (sözleşme ya da harici olarak sahip olunan) işte bu şekilde transfer eder. Transfer edilecek miktar olan bir değerle ona çağrı yapar. Yani bu, ETH'nin bir airdrop'u gibi görünüyor.
+This is how a contract transfers its own ETH to another address (contract or externally owned). It calls it with a value that is the amount to be transferred. So it looks like this is an airdrop of ETH.
 
 ```python
   if not return_data.size:
@@ -660,22 +658,22 @@ Bir sözleşme kendi ETH'sini başka bir adrese (sözleşme ya da harici olarak 
              value unknown81e580d3[_param1] * _param3 / 100 * 10^6 wei
 ```
 
-En alttaki iki satır, bize Storage[2]'ın da çağrı yaptığımız bir sözleşme olduğunu söyler. [Oluşturucu işlemine bakarsak](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange) bu sözleşmenin [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), [kaynak kodu Etherscan'e yüklenmiş bir Paketlenmiş Ether sözleşmesi olduğunu görürüz](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code).
+The bottom two lines tell us that Storage[2] is also a contract that we call. If we [look at the constructor transaction](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange) we see that this contract is [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), a Wrapped Ether contract [whose source code has been uploaded to Etherscan](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code).
 
-Sözleşme, `_param2`'ye ETH göndermeye çalışıyor gibi görünüyor. Eğer yapabilirse, çok iyi. Yapamazsa, [WETH](https://weth.tkn.eth.limo/) göndermeye çalışacak. Eğer `_param2` dışarıdan sahip olunan hesap (EOA) ise, her zaman ETH alabilir, fakat sözleşmeler ETH almayı reddedebilir. Bununla birlikte, WETH bir ERC-20'dir ve sözleşmeler bunu kabul etmeyi reddedemez.
+So it looks like the contracts attempts to send ETH to `_param2`. If it can do it, great. If not, it attempts to send [WETH](https://weth.tkn.eth.limo/). If `_param2` is an externally owned account (EOA) then it can always receive ETH, but contracts can refuse to receive ETH. However, WETH is ERC-20 and contracts can't refuse to accept that.
 
 ```python
   ...
   log 0xdbd5389f: addr(_param2), unknown81e580d3[_param1] * _param3 / 100 * 10^6, bool(ext_call.success)
 ```
 
-Fonksiyonun sonunda bir günlük girdisinin oluşturulduğunu görüyoruz. [Oluşturulmuş günlük girdilerine bakın](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#events) ve `0xdbd5...` ile başlayan konuyu filtreleyin. Böyle bir girdi oluşturmuş işlemlerden birine [tıklarsak](https://etherscan.io/tx/0xe7d3b7e00f645af17dfbbd010478ef4af235896c65b6548def1fe95b3b7d2274) gerçekten de üstlenme gibi göründüğünü görebiliriz; hesap, tersine mühendislik yaptığımız sözleşmeye bir mesaj göndermiş ve karşılığında ETH almıştır.
+At the end of the function we see a log entry being generated. [Look at the generated log entries](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#events) and filter on the topic that starts with `0xdbd5...`. If we [click one of the transactions that generated such an entry](https://etherscan.io/tx/0xe7d3b7e00f645af17dfbbd010478ef4af235896c65b6548def1fe95b3b7d2274) we see that indeed it looks like a claim - the account sent a message to the contract we're reverse engineering, and in return got ETH.
 
-![Üstlenme işlemi](claim-tx.png)
+![A claim transaction](claim-tx.png)
 
 ### 1e7df9d3 {#1e7df9d3}
 
-Bu fonksiyon, yukarıdaki [`claim`](#claim) fonksiyonuna çok benziyor. Ayrıca bir merkle kanıtını kontrol eder, ilkine ETH transfer etmeyi dener ve aynı türde bir günlük girdisi oluşturur.
+This function is very similar to [`claim`](#claim) above. It also checks a merkle proof, attempts to transfer ETH to the first, and produces the same type of log entry.
 
 ```python
 def unknown1e7df9d3(uint256 _param1, uint256 _param2, array _param3) payable:
@@ -708,7 +706,7 @@ def unknown1e7df9d3(uint256 _param1, uint256 _param2, array _param3) payable:
   log 0xdbd5389f: addr(_param1), s, bool(ext_call.success)
 ```
 
-Asıl fark geri çekilecek olan pencere olan ilk parametrenin orada olmamasıdır. Bunun yerine, her pencerenin üstünde alınabilecek bir döngü vardır.
+The main difference is that the first parameter, the window to withdraw, isn't there. Instead, there is a loop over all the windows that could be claimed.
 
 ```python
   idx = 0
@@ -737,8 +735,10 @@ Asıl fark geri çekilecek olan pencere olan ilk parametrenin orada olmamasıdı
       continue
 ```
 
-Yani tüm pencereleri üstlenen bir `claim` varyantı gibi görünüyor.
+So it looks like a `claim` variant that claims all the windows.
 
 ## Sonuç {#conclusion}
 
-Şu ana kadar kaynak kodu ulaşılabilir olmayan sözleşmeleri, işlem kodlarını ya da geri derleyiciyi kullanarak (eğer çalışırsa) nasıl anlayacağınızı öğrenmiş olmalısınız. Bu makalenin uzunluğundan da anlaşılacağı gibi, bir sözleşmeye tersine mühendislik uygulamak önemsiz değildir, ancak güvenliğin önemli olduğu bir sistemde sözleşmelerin vaat edildiği gibi çalıştığını doğrulayabilmek önemli bir beceridir.
+By now you should know how to understand contracts whose source code is not available, using either the opcodes or (when it works) the decompiler. As is evident from the length of this article, reverse engineering a contract is not trivial, but in a system where security is essential it is an important skill to be able to verify contracts work as promised.
+
+[Çalışmalarımdan daha fazlası için buraya bakın](https://cryptodocguy.pro/).

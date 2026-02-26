@@ -3,21 +3,52 @@ name: Import Crowdin AI Translations
 on:
   workflow_dispatch:
     inputs:
-      file_limit:
-        description: "Number of files to process (default: 100, use 1-10 for testing)"
+      target_path:
+        description: "File or directory path to translate (e.g., public/content/developers/index.md or public/content/developers or blank for all files)"
         required: false
-        default: "100"
+        type: string
+      exclude_path:
+        description: "Path to exclude from this job (e.g., public/content/developers/tutorials)"
+        required: false
         type: string
       target_languages:
-        description: "Comma-separated Crowdin language codes (default: es-EM)"
+        description: "Comma-separated internal language codes (blank for all locales)"
         required: false
-        default: "es-EM"
         type: string
       base_branch:
-        description: "Base branch to create PR against (default: dev)"
+        description: "Base branch to create PR against"
         required: false
         default: "dev"
         type: string
+      pretranslation_id:
+        description: "Pre-translation ID(s) to resume from, comma-separated for multiple (leave empty to start new)"
+        required: false
+        type: string
+      split_prs:
+        description: "Create one PR per language instead of one combined PR?"
+        required: false
+        default: false
+        type: boolean
+      pre_translate_prompt_id:
+        description: "AI prompt ID for pre_translate (default: 326942)"
+        required: false
+        default: "326942"
+        type: string
+      skip_pr:
+        description: "Skip PR creation?"
+        required: false
+        default: false
+        type: boolean
+      skip_await:
+        description: "Exit after dispatching pre-translation (resume later with ID)"
+        required: false
+        default: false
+        type: boolean
+      verbose:
+        description: "Enable verbose logging?"
+        required: false
+        default: "false"
+        type: boolean
 
 jobs:
   import_translations:
@@ -41,9 +72,19 @@ jobs:
       - name: Run Crowdin AI translation import
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main.ts
         env:
-          I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+          I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_WORKFLOW_API_KEY }}
           I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
-          FILE_LIMIT: ${{ github.event.inputs.file_limit }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          PRETRANSLATION_ID: ${{ github.event.inputs.pretranslation_id }}
+          TARGET_PATH: ${{ github.event.inputs.target_path }}
+          EXCLUDE_PATH: ${{ github.event.inputs.exclude_path }}
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
           BASE_BRANCH: ${{ github.event.inputs.base_branch }}
+          PRE_TRANSLATE_PROMPT_ID: ${{ github.event.inputs.pre_translate_prompt_id }}
+          VERBOSE: ${{ github.event.inputs.verbose }}
+          SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
+          SKIP_AWAIT: ${{ github.event.inputs.skip_await }}
+          SPLIT_PRS: ${{ github.event.inputs.split_prs }}
           GITHUB_REPOSITORY: ${{ github.repository }}

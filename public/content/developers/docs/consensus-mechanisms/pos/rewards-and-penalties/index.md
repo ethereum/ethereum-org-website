@@ -4,7 +4,7 @@ description: Learn about the in-protocol incentives in proof-of-stake Ethereum.
 lang: en
 ---
 
-Ethereum is secured using its native cryptocurrency, ether (ETH). Node operators that wish to participate in validating blocks and identifying the head of the chain, deposit ether into the [deposit contract](/staking/deposit-contract/) on Ethereum. They are then paid in ether to run validator software that checks the validity of new blocks received over the peer-to-peer network and apply the fork-choice algorithm to identify the head of the chain.
+[Ethereum](/) is secured using its native cryptocurrency, ether (ETH). Node operators that wish to participate in validating blocks and identifying the head of the chain, deposit ether into the [deposit contract](/staking/deposit-contract/) on Ethereum. They are then paid in ether to run validator software that checks the validity of new blocks received over the peer-to-peer network and apply the fork-choice algorithm to identify the head of the chain.
 
 There are two primary roles for a validator: 1) checking new blocks and “attesting” to them if they are valid, 2) proposing new blocks when selected at random from the total validator pool. If the validator fails to do either of these tasks when asked they miss out on an ether payout. Validators are also sometimes tasked with signature aggregation and participating in sync committees.
 
@@ -26,7 +26,7 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 
 where `base_reward_factor` is 64, `base_rewards_per_epoch` is 4 and `sum(active balance)` is the total staked ether across all active validators.
 
-This means the base reward is proportional to the validator's effective balance and inversely proportional to the number of validators on the network. The more validators, the greater the overall issuance (as `sqrt(N)` but the smaller the `base_reward` per validator (as `1/sqrt(N)`). These factors influence the APR for a staking node. Read the rationale for this in [Vitalik's notes](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#Base-rewards).
+This means the base reward is proportional to the validator's effective balance and inversely proportional to the number of validators on the network. The more validators, the greater the overall issuance (as `sqrt(N)` but the smaller the `base_reward` per validator (as `1/sqrt(N)`). These factors influence the APR for a staking node. Read the rationale for this in [Vitalik's notes](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
 The total reward is then calculated as the sum of five components that each have a weighting that determines how much each component adds to the total reward. The components are:
 

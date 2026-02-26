@@ -13,7 +13,7 @@ Vous pouvez trouver ci-dessous des guides et des outils utiles pour les traducte
 - [Guide de style pour la traduction](/contributing/translation-program/translators-guide/)_– instructions et conseils pour les traducteurs d'ethereum.org_
 - [FAQ sur la traduction](/contributing/translation-program/faq/) _– foire aux questions sur le programme de traduction d'ethereum.org_
 - [Guide sur l'éditeur en ligne Crowdin](https://support.crowdin.com/online-editor/) _– un guide détaillé sur l'utilisation de l'éditeur en ligne Crowdin et certaines des fonctionnalités avancées de Crowdin_
-- [Ensembles de contenu](/contributing/translation-program/content-buckets/) _– quelles pages sont incluses dans chaque ensemble de contenu d'ethereum.org_
+- [Ensembles de contenu](/contributing/translation-program/) _– quelles pages sont incluses dans chaque ensemble de contenu d'ethereum.org_
 
 ## Outils {#tools}
 
@@ -30,10 +30,10 @@ Vous pouvez trouver ci-dessous des guides et des outils utiles pour les traducte
 
 Pour vous tenir au courant des dernières avancées du programme de traduction, vous pouvez suivre le blog de l'[Ethereum Foundation](https://blog.ethereum.org/) :
 
-- [Mise à jour d'octobre 2021](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Mise à jour de décembre 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Mise à jour de juillet 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Lancement du programme de traduction, août 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Mise à jour d'octobre 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Mise à jour de décembre 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Mise à jour de juillet 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Lancement du programme de traduction, août 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Permanence pour les traducteurs {#office-hours}
 

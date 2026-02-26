@@ -168,7 +168,7 @@ _Примітка. Будь-хто може належати до кількох
 - [Приєднатися до групи Ethereum R&D на Discord](https://discord.gg/mncqtgVSVw)
 - [Запустити вузол](/developers/docs/nodes-and-clients/run-a-node/)
 - [Узяти участь у розробці клієнта](/developers/docs/nodes-and-clients/#execution-clients)
-- [Програма підготовки основних розробників](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Програма підготовки основних розробників](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Додаткові ресурси {#further-reading}
 

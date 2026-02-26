@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software must be run on your computer to turn it into an Ethereum node. There are two separate pieces of software (known as 'clients') required to form a node.
+[Ethereum](/) is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software must be run on your computer to turn it into an Ethereum node. There are two separate pieces of software (known as 'clients') required to form a node.
 
 ## Prerequisites {#prerequisites}
 
@@ -161,7 +161,7 @@ Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriente
 
 Go Ethereum (Geth for short) is one of the original implementations of the Ethereum protocol. Currently, it is the most widespread client with the biggest user base and variety of tooling for users and developers. It is written in Go, fully open source and licensed under the GNU LGPL v3.
 
-Learn more about Geth in its [documentation](https://geth.ethereum.org/docs/).
+Learn more about Geth in its [documentation](https://geth.ethereum.org/docs).
 
 ### Nethermind {#nethermind}
 

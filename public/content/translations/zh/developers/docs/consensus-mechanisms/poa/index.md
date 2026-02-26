@@ -1,6 +1,6 @@
 ---
-title: 权威证明 (PoA)
-description: 权威证明共识协议的解释及其在区块链生态系统中的作用。
+title: "权威证明 (PoA)"
+description: "权威证明共识协议的解释及其在区块链生态系统中的作用。"
 lang: zh
 ---
 
@@ -77,3 +77,4 @@ lang: zh
 
 - [工作量证明](/developers/docs/consensus-mechanisms/pow/)
 - [权益证明](/developers/docs/consensus-mechanisms/pos/)
+

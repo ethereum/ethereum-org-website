@@ -12,6 +12,7 @@ tags:
     "block explorer",
     "frontend",
     "transactions",
+    "framework",
   ]
 skill: beginner
 lang: en

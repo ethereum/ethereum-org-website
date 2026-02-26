@@ -168,7 +168,7 @@ Lorsque la Chaîne Phare a fusionné avec la couche d'exécution Ethereum le 15 
 - [Rejoignez le Discord Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Exécuter un nœud](/developers/docs/nodes-and-clients/run-a-node/)
 - [Contribuer au développement du client](/developers/docs/nodes-and-clients/#execution-clients)
-- [Programme d’apprentissage pour les développeurs de base](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Programme d’apprentissage pour les développeurs de base](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Complément d'information {#further-reading}
 

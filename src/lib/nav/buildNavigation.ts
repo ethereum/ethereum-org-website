@@ -1,5 +1,7 @@
 import type { NavSections } from "@/components/Nav/types"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 type TranslateFn = (key: string) => string
 
 export const buildNavigation = (t: TranslateFn): NavSections => {
@@ -307,22 +309,22 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
         {
           id: "build/get-started",
           label: t("get-started"),
-          description: t("nav-start-building-description"),
+          description: t("nav-start-get-started-description"),
           items: [
+            {
+              label: t("start-building"),
+              description: t("nav-start-building-description"),
+              href: "/developers/tools/",
+            },
+            {
+              label: t("learn-ethereum-development"),
+              description: t("nav-learn-ethereum-development-description"),
+              href: "/developers/tools/education/",
+            },
             {
               label: t("tutorials"),
               description: t("nav-tutorials-description"),
               href: "/developers/tutorials/",
-            },
-            {
-              label: t("learn-by-coding"),
-              description: t("nav-learn-by-coding-description"),
-              href: "/developers/learning-tools/",
-            },
-            {
-              label: t("set-up-local-env"),
-              description: t("nav-local-env-description"),
-              href: "/developers/local-environment/",
             },
             {
               label: t("grants"),
@@ -366,7 +368,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("enterprise"),
               description: t("nav-enterprise-description"),
-              href: "/enterprise/",
+              href: ENTERPRISE_ETHEREUM_URL,
             },
             {
               label: t("founders"),

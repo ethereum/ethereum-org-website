@@ -2,7 +2,7 @@
 title: Using zero-knowledge for a secret state
 description: onchain games are limited because they cannot keep any hidden information. After reading this tutorial, a reader will be able to combine zero-knowledge proofs and server components to create verifiable games with a secret state, offchain, component. The technique to do this will be demonstrated by creating a minesweeper game.
 author: Ori Pomerantz
-tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud"]
+tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud", "privacy"]
 skill: advanced
 lang: en
 published: 2025-03-15

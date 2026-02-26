@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Links",
   "page-find-wallet-empty-results-title": "Keine Ergebnisse",
   "page-find-wallet-empty-results-desc": "Es gibt keine Wallets, die Ihren Kriterien entsprechen. Versuchen Sie, einige Filter zu entfernen.",
-  "page-find-wallet-see-wallets": "Wallets anschauen"
+  "page-find-wallet-privacy": "Privatsphäre",
+  "page-find-wallet-privacy-desc": "Wallets, die integrierte private Transaktionen unterstützen",
+  "page-find-wallet-see-wallets": "Wallets anschauen",
+  "page-find-wallet-search-languages": "Sprachen suchen..."
 }
