@@ -29,7 +29,7 @@ lang: zh
 
 - _完整性_，使信息保持正确，并且无法被未授权的实体或以未授权的方式改变（例如，在缺少 'Transfer' 事件的情况下转移 [ERC-20 代币](https://eips.ethereum.org/EIPS/eip-20#events)）。 在区块链上，每个节点都会验证每个状态更改，从而确保了完整性。
 
-- _可用性_，使信息可供任何已获授权的实体使用。 在区块链上，这常常通过使信息对每个[全节点](https://ethereum.org/developers/docs/nodes-and-clients#full-node)可用来实现。
+- _可用性_，使信息可供任何已获授权的实体使用。 在区块链上，这常常通过使信息对每个[全节点](https://ethereum.org/developers/docs/nodes-and-clients/#full-node)可用来实现。
 
 这里的不同解决方案全都具有出色的完整性，因为哈希被发布在一层网络上。 但是，它们的可用性保证确实有所不同。
 

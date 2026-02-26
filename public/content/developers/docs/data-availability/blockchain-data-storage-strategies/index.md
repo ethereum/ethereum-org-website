@@ -29,7 +29,7 @@ In general, information security consists of three attributes:
 
 - _Integrity_, the information is correct, it cannot be changed by unauthorized entities, or in unauthorized ways (for example, transferring [ERC-20 tokens](https://eips.ethereum.org/EIPS/eip-20#events) without a `Transfer` event). On the blockchain, every node verifies every state change, which ensures integrity.
 
-- _Availability_, the information is available to any authorized entity. On the blockchain, this is usually achieved by having the information available on every [full node](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
+- _Availability_, the information is available to any authorized entity. On the blockchain, this is usually achieved by having the information available on every [full node](https://ethereum.org/developers/docs/nodes-and-clients/#full-node).
 
 The different solutions here all have excellent integrity, because hashes are posted on L1. However, they do have different availability guarantees.
 

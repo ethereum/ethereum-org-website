@@ -114,7 +114,7 @@ Ephemery je jedinečný druh testnetu, který se každý měsíc plně resetuje.
 Testnet Holesky je od září 2025 zastaralý. Provozovatelé stakingu a poskytovatelé infrastruktury by místo toho měli pro testování validátorů používat Hoodi.
 
 - [Oznámení o ukončení provozu testnetu Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) – _Blog EF, 1. září 2025_
-- [Aktualizace testnetů Holesky a Hoodi](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) – _Blog EF, 18. března 2025_
+- [Aktualizace testnetů Holesky a Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) – _Blog EF, 18. března 2025_
 
 ### Testnety druhé vrstvy {#layer-2-testnets}
 

@@ -29,7 +29,7 @@ Bilgi güvenliği genel olarak üç özellikten oluşur:
 
 - _Bütünlük_, bilgi doğrudur, yetkisiz kişiler tarafından, ya da yetkisiz yollarla değiştirilemez (örneğin bir `Transfer` olayı olmadan [ERC-20 jetonlarını](https://eips.ethereum.org/EIPS/eip-20#events) transfer etmek gibi). Blokzincirde her düğüm her durum değişikliğini doğrular, bu da bütünlüğü sağlar.
 
-- _Erişilebilirlik_, bilgiye yetkisi olan herkes tarafından erişilebilir. Blokzincirde bu genellikle her [tam düğümde](https://ethereum.org/developers/docs/nodes-and-clients#full-node) bilginin mevcut olmasıyla sağlanır.
+- _Erişilebilirlik_, bilgiye yetkisi olan herkes tarafından erişilebilir. Blokzincirde bu genellikle her [tam düğümde](https://ethereum.org/developers/docs/nodes-and-clients/#full-node) bilginin mevcut olmasıyla sağlanır.
 
 Karmalar L1'e gönderildiği için buradaki farklı çözümlerin hepsi mükemmel bütünlüğe sahiptir. Fakat bunların farklı kullanılabilirlik garantileri vardır.
 

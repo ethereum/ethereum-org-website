@@ -29,7 +29,7 @@ In generale la sicurezza delle informazioni consiste in tre attributi:
 
 - _Integrità_, l'informazione è corretta, non può essere modificata da entità non autorizzate o in modalità non autorizzate (ad esempio, trasferendo [token ERC-20](https://eips.ethereum.org/EIPS/eip-20#events) senza un evento `Transfer`). Sulla blockchain ogni nodo verifica ogni modifica di stato, e ciò ne assicura l'integrità.
 
-- _Disponibilità_, le informazioni sono disponibili per ogni entità autorizzata. Sulla blockchain questo di solito è possibile mantenendo le informazioni disponibili in ogni [nodo completo](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
+- _Disponibilità_, le informazioni sono disponibili per ogni entità autorizzata. Sulla blockchain questo di solito è possibile mantenendo le informazioni disponibili in ogni [nodo completo](https://ethereum.org/developers/docs/nodes-and-clients/#full-node).
 
 Le varie soluzioni qui presentate hanno tutte un'integrità eccellente perché gli hash sono pubblicati sul L1. Tuttavia, hanno diverse garanzie di disponibilità.
 

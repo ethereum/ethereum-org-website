@@ -114,7 +114,7 @@ Ephemeryは、毎月完全にリセットされるユニークなテストネッ
 Holeskyテストネットは2025年9月をもって非推奨となります。 ステーキングオペレーターとインフラプロバイダーは、代わりにHoodiをバリデータテストに使用すべきです。
 
 - [Holeskyテストネットのシャットダウンに関するお知らせ](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EFブログ、2025年9月1日_
-- [HoleskyおよびHoodiテストネットのアップデート](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) - _EFブログ、2025年3月18日_
+- [HoleskyおよびHoodiテストネットのアップデート](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _EFブログ、2025年3月18日_
 
 ### レイヤー2テストネット {#layer-2-testnets}
 
