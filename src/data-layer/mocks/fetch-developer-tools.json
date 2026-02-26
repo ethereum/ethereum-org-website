@@ -537,7 +537,7 @@
     "0x2bb095e1f297c71da8bd4ee15097abad3b99e299fe14cd6aa704df3f36d0ae22": {
       "id": "0x2bb095e1f297c71da8bd4ee15097abad3b99e299fe14cd6aa704df3f36d0ae22",
       "name": "solidity-coverage",
-      "description": "solidity-coverage provides smart-contract code coverage for the Hardhat developer platform.  It's highly accurate, supports full viaIR solidity compilation and a large set of solidity-specific code branch patterns. It's installed on ~230k Github projects and is downloaded ~100k times a week from NPM.",
+      "description": "solidity-coverage provides smart-contract code coverage for the Hardhat developer platform.  It's highly accurate, supports full viaIR solidity compilation and a large set of solidity-specific code branch patterns. It's installed on ~230k GitHub projects and is downloaded ~100k times a week from NPM.",
       "thumbnail_url": "https://storage.googleapis.com/op-atlas/bd692393-7f1a-4b91-9887-73f7c3250233.png",
       "banner_url": "https://storage.googleapis.com/op-atlas/dcbdf6ac-f898-4dac-b9d0-087b8d289f4b.png",
       "twitter": null,

@@ -96,7 +96,7 @@ Ephemery ni aina ya kipekee ya testnet ambayo huwekwa upya kikamilifu kila mwezi
 ##### Rasilimali
 
 - [Tovuti](https://ephemery.dev/)
-- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
 - [Soga ya jamii](https://matrix.to/#/#staker-testnet:matrix.org)
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)

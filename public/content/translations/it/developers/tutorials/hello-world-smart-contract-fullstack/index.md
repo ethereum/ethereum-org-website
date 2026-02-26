@@ -733,7 +733,7 @@ Come prerequisito, è necessario avere una comprensione di React a livello princ
 
 ### Clonare i file iniziali {#clone-the-starter-files}
 
-Per prima cosa, vai al [repository hello-world-part-four in Github](https://github.com/alchemyplatform/hello-world-part-four-tutorial) per ottenere i file iniziali per questo progetto e clona questo repository nella tua macchina in locale.
+Per prima cosa, vai al [repository hello-world-part-four in GitHub](https://github.com/alchemyplatform/hello-world-part-four-tutorial) per ottenere i file iniziali per questo progetto e clona questo repository nella tua macchina in locale.
 
 Apri il repository clonato localmente. Si noti che contiene due cartelle `starter-files` e `completed`.
 

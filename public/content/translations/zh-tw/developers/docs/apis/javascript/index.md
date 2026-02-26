@@ -240,29 +240,29 @@ ethers.utils.formatEther(balance)
 **Web3.js -** **_以太坊 JavaScript 應用程式介面。 _**
 
 - [文件](https://docs.web3js.org/)
-- [Github](https://github.com/ethereum/web3.js/)
+- [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_使用 JavaScript 和 TypeScript 的完整以太坊錢包實作和公用程式。 _**
 
 - [文件](https://docs.ethers.io/)
-- [Github](https://github.com/ethers-io/ethers.js/)
+- [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **The Graph -** **_用於為以太坊和星際檔案係統資料編製索引並使用 GraphQL 進行查詢的協議。_**
 
 - [The Graph](https://thegraph.com/)
 - [Graph Explorer](https://thegraph.com/explorer/)
 - [文件](https://thegraph.com/docs/)
-- [Github](https://github.com/graphprotocol/)
+- [GitHub](https://github.com/graphprotocol/)
 - [Discord](https://thegraph.com/discord)
 
 **light.js ****_針對輕量用戶端最佳化的高階回應式 JS 程式庫。_**
 
-- [Github](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
+- [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
 
 **Alchemyweb3 -** **_具有自動重試和增強型應用程式介面的 Web3.js 包裝函式。_**
 
 - [文件](https://docs.alchemy.com/reference/api-overview)
-- [Github](https://github.com/alchemyplatform/alchemy-web3)
+- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy 非同質化代幣應用程式介面 -** **_用於擷取非同質化代幣資料的應用程式介面，包括所有權、中繼資料屬性以及更多。_**
 

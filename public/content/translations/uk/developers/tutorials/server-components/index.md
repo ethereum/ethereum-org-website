@@ -29,7 +29,7 @@ published: 2024-07-15
 
 ## Приклад програми {#sample-program}
 
-Ви можете побачити приклад сервера [на Github](https://github.com/qbzzt/20240715-server-component). Цей сервер прослуховує події, що надходять від [цього контракту](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), модифікованої версії Hardhat Greeter. Коли привітання змінюється, він змінює його назад.
+Ви можете побачити приклад сервера [на GitHub](https://github.com/qbzzt/20240715-server-component). Цей сервер прослуховує події, що надходять від [цього контракту](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), модифікованої версії Hardhat Greeter. Коли привітання змінюється, він змінює його назад.
 
 Щоб запустити її:
 

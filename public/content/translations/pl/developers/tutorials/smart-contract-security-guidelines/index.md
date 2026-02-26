@@ -76,7 +76,7 @@ Architektura Twojej bazy kodu powinna ułatwić sprawdzenie twojego kodu. Unikaj
 
 - **Zapisz dokładne testy jednostkowe.** Rozległy zestaw testowy ma kluczowe znaczenie dla budowy oprogramowania wysokiej jakości.
 - **Napisz niestandardowe kontrole i właściwości dla narzędzi [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) i [Manticore](https://github.com/trailofbits/manticore).** Automatyczne narzędzia pomogą zapewnić bezpieczeństwo umowy. Przejrzyj resztę tego przewodnika, aby dowiedzieć się, jak pisać skuteczne kontrole i właściwości.
-- **Użyj [crytic.io](https://crytic.io/).** Crytic integruje się z Githubem, zapewnia dostęp do prywatnych detektorów Slither, i uruchamia niestandardowe kontrole właściwości z Echidny.
+- **Użyj [crytic.io](https://crytic.io/).** Crytic integruje się z GitHubem, zapewnia dostęp do prywatnych detektorów Slither, i uruchamia niestandardowe kontrole właściwości z Echidny.
 
 ### Solidity {#solidity}
 

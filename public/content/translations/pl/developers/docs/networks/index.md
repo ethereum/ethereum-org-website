@@ -96,7 +96,7 @@ Ephemery jest unikalną siecią testową, która resetuje się w pełni każdego
 ##### Źródła
 
 - [Strona internetowa](https://ephemery.dev/)
-- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
 - [Czat społeczności](https://matrix.to/#/#staker-testnet:matrix.org)
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)

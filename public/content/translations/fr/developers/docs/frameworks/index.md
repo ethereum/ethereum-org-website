@@ -116,7 +116,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 
 - [Site Web](https://catapulta.sh/)
 - [Documentation](https://catapulta.sh/docs)
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
 **Covalent** - **_APIs blockchain enrichie pour plus de 200 chaines._**
 
