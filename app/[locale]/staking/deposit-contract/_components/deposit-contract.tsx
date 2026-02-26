@@ -131,7 +131,7 @@ const Blockie = (props: { src: string }) => (
   <Image
     className="rounded-sm"
     src={props.src}
-    alt={"Ethereum deposit contract address blockie avatar"}
+    alt={""}
     height={64}
     width={64}
   />
@@ -233,19 +233,19 @@ const DepositContractPage = ({ locale }: { locale: Lang }) => {
       title: "ConsenSys",
       link: "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
       image: consensys,
-      alt: "ConsenSys logo",
+      alt: "",
     },
     {
       title: "Ethereum Foundation",
       link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
       image: ef,
-      alt: "Ethereum Foundation blog logo",
+      alt: "",
     },
     {
       title: "Blockscout",
       link: `https://eth.blockscout.com/address/${DEPOSIT_CONTRACT_ADDRESS}`,
       image: blockscout,
-      alt: "Blockscout logo",
+      alt: "",
     },
   ]
 

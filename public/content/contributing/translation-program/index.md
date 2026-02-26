@@ -8,7 +8,7 @@ description: Information about the ethereum.org Translation Program
 
 The Translation Program is a collaborative effort to translate ethereum.org into different languages in order to make the website more accessible to billions of non-English speakers around the world.
 
-![Ethereum enterprise network illustration](./enterprise-eth.png)
+![](./enterprise-eth.png)
 
 ## Help us translate {#help-us-translate}
 

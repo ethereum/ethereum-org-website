@@ -8,7 +8,7 @@ description: "关于 ethereum.org 翻译计划的信息"
 
 翻译计划是一项将 ethereum.org 翻译成不同语言的协同工作计划，方便全球数十亿非英语人士更容易访问网站。
 
-![以太坊企业网络图](./enterprise-eth.png)
+![](./enterprise-eth.png)
 
 ## 帮助我们翻译 {#help-us-translate}
 

@@ -8,7 +8,7 @@ description: "Informace o překladatelském programu ethereum.org"
 
 Překladatelský program je společným úsilím o překlad webu ethereum.org do různých jazyků, aby byl web přístupnější miliardám lidí, kteří nemluví anglicky.
 
-![Ilustrace podnikové sítě Ethereum](./enterprise-eth.png)
+![](./enterprise-eth.png)
 
 ## Pomozte nám s překladem {#help-us-translate}
 

@@ -4,7 +4,7 @@ lang: en
 template: translatathon
 ---
 
-![Hands holding voting cards, representing participation in the Translatathon](./participate.png)
+![](./participate.png)
 
 The Translatathon is open and anyone can participate by filling out the application form and joining the project in Crowdin.
 

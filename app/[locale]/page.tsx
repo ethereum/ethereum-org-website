@@ -566,10 +566,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   className="md:flex-row-reverse"
                 >
                   <SectionBanner>
-                    <HomepageSectionImage
-                      sectionId="what-is-ethereum"
-                      alt="Ethereum learn hub hero image"
-                    />
+                    <HomepageSectionImage sectionId="what-is-ethereum" alt="" />
                   </SectionBanner>
 
                   <SectionContent>
@@ -677,10 +674,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <TrackedSection id="what_is_ether" eventCategory={eventCategory}>
                 <Section id="what-is-ether" variant="responsiveFlex">
                   <SectionBanner>
-                    <HomepageSectionImage
-                      sectionId="what-is-ether"
-                      alt="Ethereum quizzes hub hero image"
-                    />
+                    <HomepageSectionImage sectionId="what-is-ether" alt="" />
                   </SectionBanner>
 
                   <SectionContent>
@@ -765,10 +759,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   className="md:flex-row-reverse"
                 >
                   <SectionBanner>
-                    <HomepageSectionImage
-                      sectionId="activity"
-                      alt="Ethereum Layer 2 hub hero image"
-                    />
+                    <HomepageSectionImage sectionId="activity" alt="" />
                   </SectionBanner>
 
                   <SectionContent>
@@ -848,10 +839,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <TrackedSection id="builders" eventCategory={eventCategory}>
                 <Section id="builders" variant="responsiveFlex">
                   <SectionBanner className="relative">
-                    <HomepageSectionImage
-                      sectionId="builders"
-                      alt="Ethereum developers hub hero image"
-                    />
+                    <HomepageSectionImage sectionId="builders" alt="" />
                   </SectionBanner>
 
                   <SectionContent>
