@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-The state of Ethereum (the totality of all accounts, balances, and smart contracts), is encoded into a special version of the data structure known generally in computer science as a Merkle Tree. This structure is useful for many applications in cryptography because it creates a verifiable relationship between all the individual pieces of data entangled in the tree, resulting in a single **root** value that can be used to prove things about the data.
+The state of [Ethereum](/) (the totality of all accounts, balances, and smart contracts), is encoded into a special version of the data structure known generally in computer science as a Merkle Tree. This structure is useful for many applications in cryptography because it creates a verifiable relationship between all the individual pieces of data entangled in the tree, resulting in a single **root** value that can be used to prove things about the data.
 
 Ethereum's data structure is a 'modified Merkle-Patricia Trie', named so because it borrows some features of PATRICIA (the Practical Algorithm To Retrieve Information Coded in Alphanumeric), and because it is designed for efficient data re**trie**val of items that comprise the Ethereum state.
 

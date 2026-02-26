@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software must be run on your computer to turn it into an Ethereum node. There are two separate pieces of software (known as 'clients') required to form a node.
+[Ethereum](/) is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software must be run on your computer to turn it into an Ethereum node. There are two separate pieces of software (known as 'clients') required to form a node.
 
 ## Prerequisites {#prerequisites}
 

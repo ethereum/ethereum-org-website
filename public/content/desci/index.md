@@ -41,7 +41,7 @@ An incomplete list of key problems in science and how decentralized science can 
 
 ## Ethereum and DeSci {#ethereum-and-desci}
 
-A decentralized science system will require robust security, minimal monetary and transaction costs, and a rich ecosystem for application development. Ethereum provides everything needed for building a decentralized science technology.
+A decentralized science system will require robust security, minimal monetary and transaction costs, and a rich ecosystem for application development. [Ethereum](/) provides everything needed for building a decentralized science technology.
 
 ## DeSci use cases {#use-cases}
 
@@ -109,7 +109,7 @@ Explore projects and join the DeSci community.
 - [ValleyDAO: an open, global community offering funding and translational support for synthetic biology research](https://www.valleydao.bio)
 - [Cerebrum DAO: sourcing and nurturing solutions to advance brain health and prevent neurodegeneration](https://www.cerebrumdao.com/)
 - [CryoDAO: funding moonshot research in the field of cryopreservation](https://www.cryodao.org)
-- [Elata: Have a say in the future of psychiatric medicine](https://www.elata.bio/)
+- [Elata: the platform where your brain powers everyday apps](https://www.elata.bio/)
 
 We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 

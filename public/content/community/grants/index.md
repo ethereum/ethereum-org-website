@@ -6,7 +6,7 @@ lang: en
 
 # Ethereum grants {#ethereum-grants}
 
-The programs listed below offer a variety of funding grants for projects working to promote the success and growth of the Ethereum ecosystem. Use this as a guide to find and apply for funds to help make your next Ethereum project a success.
+The programs listed below offer a variety of funding grants for projects working to promote the success and growth of the [Ethereum](/) ecosystem. Use this as a guide to find and apply for funds to help make your next Ethereum project a success.
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
