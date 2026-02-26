@@ -162,5 +162,5 @@ Validiumは、すべてのトランザクションデータをオフチェーン
 - [Validiumとレイヤー2 Two-By-Two — 第99号](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZKロールアップ vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volitionと新たなデータ可用性スペクトラム](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [ロールアップ、Validium、Volition：最新のイーサリアムスケーリングソリューションについて学ぶ](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
+- [ロールアップ、Validium、Volition：最新のイーサリアムスケーリングソリューションについて学ぶ](https://medium.com/coinmonks/rollups-vs-validiums-vs-volitions-d76300170f4a)
 - [イーサリアムロールアップ実践ガイド](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

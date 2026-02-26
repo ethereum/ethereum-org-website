@@ -55,7 +55,7 @@ Essa atualização da camada de consenso trouxe a capacidade para os stakers que
 A atualização também forneceu a funcionalidade de varredura automática de contas, que processa continuamente as contas do validador para todos os pagamentos de recompensas disponíveis ou saques totais.
 
 - [Mais sobre saques de staking](/staking/withdrawals/).
-- [Leia a especificação da atualização Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Leia a especificação da atualização Capella](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 
@@ -88,7 +88,7 @@ A atualização Paris foi desencadeada pela cadeia de blocos de prova de trabalh
 
 A atualização Bellatrix foi a segunda atualização agendada para a [Beacon Chain](/roadmap/beacon-chain), preparando a cadeia para o [The Merge](/roadmap/merge/). Ela traz penalidades ao validador para seus valores totais por inatividade e ofensas sancionáveis. Bellatrix também inclui uma atualização nas regras de escolha de bifurcações para preparar a cadeia para o The Merge e a transição do último bloco de prova de trabalho para o primeiro bloco de prova de participação. Isso inclui informar os clientes de consenso sobre a [dificuldade total do terminal](/glossary/#terminal-total-difficulty) de 58750000000000000000000.
 
-- [Leia a especificação da atualização Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Leia a especificação da atualização Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -100,7 +100,7 @@ A atualização Bellatrix foi a segunda atualização agendada para a [Beacon Ch
 
 A atualização Gray Glacier atrasou a [bomba de dificuldade](/glossary/#difficulty-bomb) por 3 meses. Esta é a única mudança introduzida nessa atualização, e é parecida com a natureza das atualizações [Arrow Glacier](#arrow-glacier) e [Muir Glacier](#muir-glacier). Mudanças semelhantes foram realizadas nas atualizações de rede [Byzantium](#byzantium), [Constantinople](#constantinople) e [London](#london).
 
-- [Blog da EF – Comunicado da atualização Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+- [Blog da EF – Comunicado da atualização Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement)
 
 <ExpandableCard title="EIPs da Gray Glacier" contentPreview="Official improvements included in this upgrade.">
 
@@ -120,7 +120,7 @@ A atualização Gray Glacier atrasou a [bomba de dificuldade](/glossary/#difficu
 
 A implementação de rede Arrow Glacier atrasou a [bomba de dificuldade](/glossary/#difficulty-bomb) por vários meses. Essa é a única mudança introduzida nesta implementação, e é de natureza similar à atualização [Muir Glacier](#muir-glacier). Mudanças semelhantes foram realizadas nas implementações de rede [Byzantium](#byzantium), [Constantinople](#constantinople) e [London](#london).
 
-- [Blog da EF – Comunicado da atualização Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [Blog da EF – Comunicado da atualização Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement)
 - [Ethereum Cat Herders – Atualização Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
 <ExpandableCard title="EIPs da Arrow Glacier" contentPreview="Official improvements included in this upgrade.">
@@ -139,7 +139,7 @@ A implementação de rede Arrow Glacier atrasou a [bomba de dificuldade](/glossa
 
 A Altair foi a primeira implementação programada para a [Beacon Chain](/roadmap/beacon-chain). Foi adicionado suporte para “comitês de sincronização”, permitindo clientes leves, aumentando a inatividade do validador e removendo penalidades à medida que o desenvolvimento avançava para o The Merge.
 
-- [Leia a especificação de melhoria da Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Leia a especificação de melhoria da Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Fato engraçado! {#altair-fun-fact}
 
@@ -158,7 +158,7 @@ Altair foi a primeira grande atualização de rede que teve um tempo exato de im
 A atualização London introduziu a [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), que reformou o mercado de taxas de transação, além de implementar mudanças na forma como os reembolsos de gás são realizados e no cronograma da [Ice Age](/glossary/#ice-age).
 
 - [Você é um desenvolvedor de dapp? Certifique-se de atualizar suas bibliotecas e ferramentas.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
-- [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [Leia a explicação do Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="EIPs da London" contentPreview="Official improvements included in this upgrade.">
@@ -181,7 +181,7 @@ A atualização London introduziu a [EIP-1559](https://eips.ethereum.org/EIPS/ei
 
 A atualização Berlim otimizou o custo de gás para certas ações de EVM e aumenta o suporte para vários tipos de transação.
 
-- [Leia o anúncio da Fundação Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Leia o anúncio da Fundação Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement)
 - [Leia a explicação do Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="EIPs da Berlim" contentPreview="Official improvements included in this upgrade.">
@@ -203,9 +203,9 @@ A atualização Berlim otimizou o custo de gás para certas ações de EVM e aum
 
 #### Resumo {#beacon-chain-genesis-summary}
 
-A [Beacon Chain](/roadmap/beacon-chain/) precisava de 16.384 depósitos de 32 ETH em stake (participação) para ser transferida com segurança. Isso aconteceu em 27 de novembro, ou seja, a Beacon Chain começou a produzir blocos em 1 de dezembro de 2020. Este é um primeiro passo importante para alcançar a [Visão Ethereum](/roadmap/vision/).
+A [Beacon Chain](/roadmap/beacon-chain/) precisava de 16.384 depósitos de 32 ETH em stake (participação) para ser transferida com segurança. Isso aconteceu em 27 de novembro, ou seja, a Beacon Chain começou a produzir blocos em 1 de dezembro de 2020. Este é um primeiro passo importante para alcançar a [Visão Ethereum](/roadmap/).
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21)
 
 <DocLink href="/roadmap/beacon-chain/">
   A Beacon Chain
@@ -221,7 +221,7 @@ A [Beacon Chain](/roadmap/beacon-chain/) precisava de 16.384 depósitos de 32 ET
 
 O contrato de depósito fixo introduziu [staking](/glossary/#staking) (participação) no ecossistema Ethereum. Embora fosse um contrato da [Mainnet](/glossary/#mainnet), ela teve um impacto direto na linha do tempo para o lançamento da [Beacon Chain](/roadmap/beacon-chain/), uma importante [atualização do Ethereum](/roadmap/).
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19)
 
 <DocLink href="/staking/">
   Participação
@@ -237,7 +237,7 @@ O contrato de depósito fixo introduziu [staking](/glossary/#staking) (participa
 
 O fork (bifurcação) Muir Glacier introduziu um atraso na [bomba de dificuldade](/glossary/#difficulty-bomb). O aumento da dificuldade dos blocos do mecanismo de consenso da [prova de trabalho](/developers/docs/consensus-mechanisms/pow/) ameaçava degradar a usabilidade do Ethereum, aumentando os tempos de espera para o envio de transações e usando dapps.
 
-- [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement)
 - [Leia a explicação do Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="Muir Glacier" contentPreview="Official improvements included in this fork.">
@@ -264,7 +264,7 @@ O fork (bifurcação) Istanbul:
 - Interoperação entre Ethereum e Zcash habilitada.
 - Contratos permitidos para introduzir funções mais criativas.
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement)
 
 <ExpandableCard title="EIPs da Istanbul" contentPreview="Official improvements included in this fork.">
 
@@ -291,7 +291,7 @@ O fork (bifurcação) Constantinople:
 - Otimizado o custo de [gás](/glossary/#gas) de certas ações no [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Adicionada a capacidade de interagir com endereços que ainda não foram criados.
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement)
 
 <ExpandableCard title="EIPs da Constantinople" contentPreview="Official improvements included in this fork.">
 
@@ -319,7 +319,7 @@ O fork (bifurcação) Byzantium:
 - Adicionada a capacidade de fazer chamadas sem alteração de estado para outros contratos.
 - Adicionados alguns métodos de criptografia para permitir o [escalonamento da Camada 2](/developers/docs/scaling/#layer-2-scaling).
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement)
 
 <ExpandableCard title="EIPs da Byzantium" contentPreview="Official improvements included in this fork.">
 
@@ -351,7 +351,7 @@ O fork (bifurcação) Spurious Dragon foi a segunda resposta aos ataques de nega
 - permitindo "desinchar" do estado da cadeia de blocos.
 - adicionando proteção contra ataques de repetição.
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)
 
 <ExpandableCard title="EIPs da Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
@@ -374,7 +374,7 @@ O fork (bifurcação) Whistle Tangerine foi a primeira resposta aos ataques de n
 
 - resolução de problemas urgentes de integridade da rede relacionados a códigos de operação com preços reduzidos.
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork)
 
 <ExpandableCard title="EIPs da Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
@@ -397,7 +397,7 @@ Esse curso de ação foi votado pela comunidade Ethereum. Qualquer titular de ET
 
 Alguns mineradores recusaram a bifurcação porque o incidente da DAO não era um defeito do protocolo. Eles começaram a formar a [Ethereum Classic](https://ethereumclassic.org/).
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/07/20/hard-fork-completed)
 
 ---
 
@@ -409,7 +409,7 @@ Alguns mineradores recusaram a bifurcação porque o incidente da DAO não era u
 
 O fork (bifurcação) Homestead que olhou para o futuro. Incluiu várias alterações no protocolo e uma alteração na rede que deu ao Ethereum a capacidade de fazer mais atualizações na rede.
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release)
 
 <ExpandableCard title="EIPs do Homestead" contentPreview="Official improvements included in this fork.">
 
@@ -431,8 +431,8 @@ O fork (bifurcação) Homestead que olhou para o futuro. Incluiu várias altera�
 
 O fork (bifurcação) Frontier Thawing aumentou o limite de [gás](/glossary/#gas) de 5.000 por [bloco](/glossary/#block) e definiu o preço padrão do gás para 51 [gwei](/glossary/#gwei). Isso é permitido para transações – as transações requerem 21.000 em gás. A [bomba de dificuldade](/glossary/#difficulty-bomb) foi introduzida para garantir uma futura bifurcação fixa para a [prova de participação](/glossary/#pos).
 
-- [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
-- [Leia a atualização do protocolo Ethereum 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+- [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2015/08/04/the-thawing-frontier)
+- [Leia a atualização do protocolo Ethereum 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1)
 
 ---
 
@@ -444,7 +444,7 @@ O fork (bifurcação) Frontier Thawing aumentou o limite de [gás](/glossary/#ga
 
 Frontier era a implementação mais simples do projeto Ethereum. Ela veio após a fase de testes bem-sucedida da Olympic. Ela era destinada a usuários técnicos, especificamente a desenvolvedores. [Blocos](/glossary/#block) tiveram um limite de [gás](/glossary/#gas) de 5.000. Esse período de “escavação” permitiu que os mineradores iniciassem as suas operações e que os primeiros adotantes instalassem os seus clientes sem “pressa”.
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare)
 
 <Divider />
 
@@ -456,7 +456,7 @@ Frontier era a implementação mais simples do projeto Ethereum. Ela veio após 
 
 O Ether permaneceu à venda oficialmente por 42 dias. Era possível comprá-lo com BTC.
 
-[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale)
 
 ---
 

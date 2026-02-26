@@ -168,7 +168,7 @@ _Примечание. Любой человек может входить в н
 - [Присоединение к дискорду Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Запуск узла](/developers/docs/nodes-and-clients/run-a-node/)
 - [Участие в разработке клиента](/developers/docs/nodes-and-clients/#execution-clients)
-- [Программа подготовки основных разработчиков](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Программа подготовки основных разработчиков](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Дополнительные ресурсы {#further-reading}
 
@@ -177,6 +177,6 @@ _Примечание. Любой человек может входить в н
 - [Заметки об управлении блокчейном](https://vitalik.eth.limo/general/2017/12/17/voting.html) — _Виталик Бутерин_
 - [Как работает управление Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Как работает управление Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Кто такой основной разработчик Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) — _Hudson Jameson_
+- [Кто такой основной разработчик Ethereum?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) — _Hudson Jameson_
 - [Управление, часть 2. Плутократия — это все еще плохо](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) — _Виталик Бутерин_
 - [Выход за рамки управления, использующего голосование монетами](https://vitalik.eth.limo/general/2021/08/16/voting3.html) — _Виталик Бутерин_

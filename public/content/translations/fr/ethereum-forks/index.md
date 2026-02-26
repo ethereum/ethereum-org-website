@@ -118,7 +118,7 @@ Améliorations de l'efficacité et de la sécurité du protocole :
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Comment Pectra améliorera l'expérience de la mise en jeu](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Lire les spécifications de la mise à niveau Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Lire les spécifications de la mise à niveau Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
 - [FAQ sur Prague-Electra (« Pectra »)](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514 apporte une restriction de la distribution d'ETH en limitant le taux de
 </ul>
 </ExpandableCard>
 
-- [Lire les spécifications de la mise à niveau Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Lire les spécifications de la mise à niveau Deneb](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
 - [FAQ sur Cancun-Deneb (« Dencun »)](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ Cette mise à jour de la couche de consensus a permis aux validateurs, qui n'ava
 La mise à jour a également permis la mise en place d'une fonctionnalité de balayage automatique de compte, qui traite continuellement les comptes de validateur pour tout paiement de récompenses ou retrait intégral disponible.
 
 - [En savoir plus sur les retraits](/staking/withdrawals/).
-- [Lire les spécifications de la mise à niveau Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Lire les spécifications de la mise à niveau Capella](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 
@@ -242,7 +242,7 @@ La mise à niveau Paris a été déclenchée par la blockchain en preuve de trav
 
 La mise à niveau Bellatrix était la deuxième mise à niveau planifiée pour la [Chaîne phare](/roadmap/beacon-chain), préparant la chaîne pour [La Fusion](/roadmap/merge/). Elle porte les pénalités de validateur à leurs valeurs maximales en cas d'inactivité ou d'infractions sanctionnables. Bellatrix inclut également une mise à jour des règles de choix de fourche pour préparer la chaîne à La Fusion et à la transition du dernier bloc de preuve de travail vers le premier bloc de preuve d'enjeu. Cela inclut la sensibilisation des clients de consensus à la [difficulté totale terminale](/glossary/#terminal-total-difficulty) de 58750000000000000000000.
 
-- [Lire la spécification de la mise à niveau Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Lire la spécification de la mise à niveau Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -295,7 +295,7 @@ La mise à niveau du réseau Arrow Glacier a repoussé la [bombe de difficulté]
 
 La mise à niveau Altair était la première mise à niveau planifiée pour la [Chaîne phare](/roadmap/beacon-chain). La prise en charge des « comités de synchronisation » a été ajoutée, autorisant d'une part les clients légers et augmentant d'autre part les pénalités d'inactivité et de délestage des validateurs à mesure que le système évoluait vers la fusion.
 
-- [Lire la spécification de la mise à niveau Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Lire la spécification de la mise à niveau Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Anecdote ! {#altair-fun-fact}
 

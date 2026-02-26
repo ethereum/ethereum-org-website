@@ -96,7 +96,7 @@ m/44'/60'/0'/0`
 
 ## مزید پڑھیں {#further-reading}
 
-- [کارل بیکھوئزن کا Ethereum فاؤنڈیشن بلاگ پوسٹ](https://blog.ethereum.org/2020/05/21/keys/)
+- [کارل بیکھوئزن کا Ethereum فاؤنڈیشن بلاگ پوسٹ](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 BLS12-381 کلیدی جنریشن](https://eips.ethereum.org/EIPS/eip-2333)
 - [EIP-7002: ایکزیکیوشن لیئر ٹرگرڈ ایگزٹس](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [بڑے پیمانے پر کلیدی انتظام](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

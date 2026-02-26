@@ -150,7 +150,7 @@
   "ethash-term": "Ethash",
   "ethash-definition": "Ethereum <a href=\"/glossary/#pos\">hisse ispatına</a> geçmeden önce üzerinde kullanılan bir <a href=\"/glossary/#pow\">iş ispatı</a> algoritmasıdır. <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">Daha fazla bilgi</a>",
   "ether-term": "Ether'dir",
-  "ether-definition": "Ethereum'un yerel kripto para birimi dir ve genellikle \"ETH\" olarak anılır. Ethereum ekosistemini ve uygulamalarını kullanırken ortaya çıkan işlem ücretlerini karşılamak için kullanılır. <a href=\"/eth/\">Ether hakkında daha fazla bilgi</a>.",
+  "ether-definition": "Ethereum'un yerel kripto para birimi dir ve genellikle \"ETH\" olarak anılır. Ethereum ekosistemini ve uygulamalarını kullanırken ortaya çıkan işlem ücretlerini karşılamak için kullanılır. <a href=\"/what-is-ether/\">Ether hakkında daha fazla bilgi</a>.",
   "events-term": "Olaylar",
   "events-definition": "<a href=\"/glossary/#evm\">EVM</a> günlük kaydı olanaklarının kullanımına olanak tanır. <a href=\"/glossary/#dapp\">Merkeziyetsiz uygulamalar</a> olayları dinleyip kullanıcı arayüzünde JavaScript geri aramalarını tetiklemek için kullanabilir. <a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">Olaylar ve günlükler hakkında daha fazla bilgi</a>",
   "evm-term": "Ethereum Sanal Makinesi (EVM)",

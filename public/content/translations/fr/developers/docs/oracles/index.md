@@ -408,6 +408,10 @@ Il existe de multiples applications oracle que vous pouvez intégrer dans votre 
 
 **[Gas Network](https://gas.network/)** - Une plateforme d'oracle distribuée fournissant des données en temps réel sur le prix du gaz à travers la blockchain. En apportant en chaîne les données des principaux fournisseurs de données sur le prix du gaz, Gas Network contribue à l'interopérabilité. Gas Network prend en charge les données de plus de 35 chaînes, y compris le réseau principal Ethereum et de nombreuses L2 de premier plan.
 
+**[DIA](https://www.diadata.org/)** - A cross-chain oracle network delivering verifiable data feeds for 20,000+ assets across all major asset classes. DIA sources raw trade data directly from 100+ primary markets and computes it onchain, ensuring complete data transparency and verifiability with custom configurations for any use case.
+
+**[Stork](https://stork.network)** - Stork delivers price data at ultra-low latency, supporting a wide range of use cases including perpetuals markets, lending protocols, and DeFi ecosystems, with new assets supported rapidly on listing.
+
 ## En savoir plus {#further-reading}
 
 **Articles**

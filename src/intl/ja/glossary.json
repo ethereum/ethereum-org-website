@@ -150,7 +150,7 @@
   "ethash-term": "Ethash",
   "ethash-definition": "<a href=\"/glossary/#pos\">プルーフ・オブ・ステーク(PoS)</a>に移行する前にイーサリアムで使用されていた<a href=\"/glossary/#pow\">プルーフ・オブ・ワーク(PoW)</a>のアルゴリズム。<a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">詳細</a>をご覧ください。",
   "ether-term": "イーサ",
-  "ether-definition": "イーサリアムのネイティブの暗号通貨で、通常「ETH」と呼ばれます。イーサリアムエコシステムおよびアプリケーションを使う時に、トランザクションフィーの支払いに使われます。詳細は<a href=\"/eth/\">Ether</a>をご覧ください。",
+  "ether-definition": "イーサリアムのネイティブの暗号通貨で、通常「ETH」と呼ばれます。イーサリアムエコシステムおよびアプリケーションを使う時に、トランザクションフィーの支払いに使われます。詳細は<a href=\"/what-is-ether/\">Ether</a>をご覧ください。",
   "events-term": "イベント",
   "events-definition": "<a href=\"/glossary/#evm\">EVM</a>ログ機能の利用を許可します。<a href=\"/glossary/#dapp\">Dapps</a> では、イベントをリッスンしてユーザーインターフェースのJavaScriptコールバックのトリガーに使用します。詳細は<a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">イベントとログ</a>をご覧ください。",
   "evm-term": "イーサリアム仮想マシン(EVM)",

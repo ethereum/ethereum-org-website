@@ -101,7 +101,7 @@ lang: zh-tw
 ## 延伸閱讀 {#further-reading}
 
 - [多數攻擊](https://en.bitcoin.it/wiki/Majority_attack)
-- [關於結算最終性](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [關於結算最終性](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### 影片 {#videos}
 

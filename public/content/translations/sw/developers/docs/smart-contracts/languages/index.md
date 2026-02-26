@@ -37,7 +37,7 @@ Ujuzi wa awali wa lugha za programu, hasa JavaScript au Python, unaweza kukusaid
 - [Tovuti ya Lugha ya Solidity](https://soliditylang.org/)
 - [Solidity kwa Mfano](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Chumba cha Gumzo cha Solidity Gitter](https://gitter.im/ethereum/solidity) kimeunganishwa na [Chumba cha Gumzo cha Solidity Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Chumba cha Gumzo cha Solidity Matrix](https://gitter.im/ethereum/solidity) kimeunganishwa na [Chumba cha Gumzo cha Solidity Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Karatasi ya Kudokezea](https://reference.auditless.com/cheatsheet)
 - [Blogu ya Solidity](https://blog.soliditylang.org/)
 - [Twitter ya Solidity](https://twitter.com/solidity_lang)

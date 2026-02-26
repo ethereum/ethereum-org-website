@@ -101,7 +101,7 @@ Yüksek düzeyde, hisse ispatı ile iş ispatı birbiriyle aynı nihai hedefe sa
 ## Ek Okumalar {#further-reading}
 
 - [Çoğunluk saldırısı](https://en.bitcoin.it/wiki/Majority_attack)
-- [Uzlaşma kesinliği hakkında](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Uzlaşma kesinliği hakkında](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Videolar {#videos}
 

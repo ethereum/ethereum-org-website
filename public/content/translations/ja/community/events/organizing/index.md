@@ -218,4 +218,3 @@ Twitterスペース:
 記事:
 
 - [Danny H.によるETHKLの構築](https://sekto.tech/ethkl24)
-- [POKTイベントプレイブック](https://docs.pokt.network/community/pokt-events-playbook)

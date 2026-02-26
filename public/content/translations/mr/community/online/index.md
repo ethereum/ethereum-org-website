@@ -51,7 +51,7 @@ lang: mr
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - विद्यमान आणि संभाव्य स्टेकर्ससाठी समुदाय-चालित मार्गदर्शन, शिक्षण, समर्थन आणि संसाधने</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - थांबा आणि टीम व समुदायातील लोकांसोबत ethereum.org वेब डेव्हलपमेंट आणि डिझाइनबद्दल गप्पा मारा</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - web3 निर्मात्यांचा समुदाय जिथे बिल्डर्स, औद्योगिक क्षेत्रातील प्रमुख व्यक्ती आणि Ethereum उत्साही एकत्र येतात. आम्ही web3 विकास, डिझाइन आणि संस्कृतीबद्दल उत्साही आहोत. आमच्यासोबत तयार करण्यासाठी या.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - solidity विकासासाठी चॅट (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.element.io/#/room/#solidity:matrix.org">Solidity Matrix</Link> - solidity विकासासाठी चॅट (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - solidity विकासासाठी चॅट (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- प्रश्न आणि उत्तर मंच</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- विकेंद्रीकृत प्रश्न आणि उत्तर मंच</i></SocialListItem>

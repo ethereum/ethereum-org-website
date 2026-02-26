@@ -35,5 +35,5 @@ Enfin, les points de contrôle peuvent être demandés à d'autres nœuds  ; i
 - [La faible subjectivité dans Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [Vitalik : Comment j'ai appris à aimer la faible subjectivité](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
 - [Faible subjectivité (documentation Teku)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
-- [Guide sur la faible subjectivité de la Phase 0](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
+- [Guide sur la faible subjectivité de la Phase 0](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/weak-subjectivity.md)
 - [Analyse de la faible subjectivité dans Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

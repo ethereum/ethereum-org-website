@@ -113,7 +113,7 @@ Pour soumettre une `ConsolidationRequest`, **l’adresse de retrait du validateu
 
 ### Que doit-on signer ? {#what-is-signed}
 
-Une [racine de signature](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#compute_signing_root) avec séparation de domaine de l’objet `ConsolidationRequest` est utilisée.
+Une [racine de signature](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md#compute_signing_root) avec séparation de domaine de l’objet `ConsolidationRequest` est utilisée.
 
 - **Domaine :** `DOMAIN_CONSOLIDATION_REQUEST`
 - **Champs de la racine de signature :**
@@ -197,7 +197,7 @@ Oui. Tant qu’il est actif (non sorti) et que vous pouvez signer avec son adres
 
 ## Ressources {#resources}
 
-- [Spécifications du consensus Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md) : Il s’agit de la version la plus fiable sur laquelle vous devriez vous appuyer. En cas de doute, lisez les spécifications
+- [Spécifications du consensus Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md) : Il s’agit de la version la plus fiable sur laquelle vous devriez vous appuyer. En cas de doute, lisez les spécifications
 - Tout le monde n’est pas à l’aise avec la lecture du code, donc [ce maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) peut aider à interpréter les spécifications. _Avertissement : ce sont les spécifications, et non l’IA, qui doivent être considérées comme source de vérité, car l’IA peut mal interpréter certaines informations ou produire des réponses erronées_
 - [pectrified.com](https://pectrified.com/) : Permet de consulter l’état des consolidations, des dépôts et des temps d’attente dans les files d’attente
 - [Ethereal](https://github.com/wealdtech/ethereal) : Outil en ligne de commande créé par la communauté pour gérer les tâches courantes des validateurs

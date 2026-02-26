@@ -272,7 +272,6 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Essayez gratuitement
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Fonctionnalités
     - Accès à plus de 50 nœuds de blockchain
     - Clé API gratuite
@@ -283,11 +282,10 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Archives, sauvegardes et nœuds dédiés partagés
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Documentation](https://docs.pokt.network/home/)
+  - [Documentation](https://docs.pokt.network/)
   - Fonctionnalités
     - Protocole RPC décentralisé et marketplace
     - 1 million de requêtes gratuites par jour (par point de terminaison, max 2)
-    - [Points de terminaison publics](https://docs.pokt.network/developers/public-endpoints)
     - Programme Pre-Stake+ (si vous avez besoin de plus d'1 million de requêtes par jour)
     - Plus de 15 blockchains prises en charge
     - Plus de 6 400 nœuds alimentent POKT pour répondre aux besoins des applications

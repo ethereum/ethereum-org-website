@@ -516,6 +516,6 @@ Le concept d'une fonction de transition d'état arbitraire telle qu'implémenté
 20. [Arbres de Merkle Patricia d'Ethereum](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 21. [Peter Todd sur les arbres de somme de Merkle](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Pour l'historique du livre blanc, voir [ce wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Pour l'historique du livre blanc, voir [ce wiki](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)._
 
 _Comme de nombreux projets open source communautaires, Ethereum a évolué depuis sa création. Pour en savoir plus sur les derniers développements d'Ethereum et sur la manière dont les modifications du protocole sont apportées, nous vous recommandons [ce guide](/learn/)._

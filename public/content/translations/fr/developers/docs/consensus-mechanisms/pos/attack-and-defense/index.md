@@ -92,7 +92,7 @@ Le [même article](https://econcs.pku.edu.cn/wine2020/wine2020/Workshop/GTiB20_p
 
 #### Attaques à longue portée {#long-range-attacks}
 
-Il existe également une classe d'attaques spécifique aux blockchains à preuve d'enjeu qui implique un validateur ayant participé au bloc d'origine en maintenant une fourche séparée de la blockchain à côté de la fourche honnête, convaincant éventuellement l'ensemble des validateurs honnêtes de basculer dessus à un moment opportun, bien plus tard. Ce type d'attaque n'est pas possible sur Ethereum en raison du gadget de finalité qui garantit que tous les validateurs sont d'accord sur l'état de la chaîne honnête à intervalles réguliers (les « points de contrôle »). Ce mécanisme simple neutralise les attaquants à longue portée car les clients Ethereum ne réorganiseront tout simplement pas les blocs finalisés. Les nouveaux nœuds rejoignant le réseau le font en trouvant un hachage d'état récent de confiance (un [point de contrôle de subjectivité faible](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)) et en l'utilisant comme un pseudo bloc d'origine sur lequel construire. Cela crée une « passerelle de confiance » pour un nouveau nœud entrant dans le réseau avant qu'il puisse commencer à vérifier l'information par lui-même.
+Il existe également une classe d'attaques spécifique aux blockchains à preuve d'enjeu qui implique un validateur ayant participé au bloc d'origine en maintenant une fourche séparée de la blockchain à côté de la fourche honnête, convaincant éventuellement l'ensemble des validateurs honnêtes de basculer dessus à un moment opportun, bien plus tard. Ce type d'attaque n'est pas possible sur Ethereum en raison du gadget de finalité qui garantit que tous les validateurs sont d'accord sur l'état de la chaîne honnête à intervalles réguliers (les « points de contrôle »). Ce mécanisme simple neutralise les attaquants à longue portée car les clients Ethereum ne réorganiseront tout simplement pas les blocs finalisés. Les nouveaux nœuds rejoignant le réseau le font en trouvant un hachage d'état récent de confiance (un [point de contrôle de subjectivité faible](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)) et en l'utilisant comme un pseudo bloc d'origine sur lequel construire. Cela crée une « passerelle de confiance » pour un nouveau nœud entrant dans le réseau avant qu'il puisse commencer à vérifier l'information par lui-même.
 
 #### Déni de service {#denial-of-service}
 
@@ -157,7 +157,7 @@ Les attaques à 34 %, 51 % ou 66 % nécessiteraient probablement une coordinatio
 ## En savoir plus {#further-reading}
 
 - [Version plus détaillée de cette page](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik sur la finalité du règlement](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik sur la finalité du règlement](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [article LMD GHOST](https://arxiv.org/abs/2003.03052)
 - [Article Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Article Gasper](https://arxiv.org/pdf/2003.03052.pdf)

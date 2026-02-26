@@ -26,7 +26,7 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 
 où `base_reward_factor` est 64, `base_rewards_per_epoch` est 4 et `sum(active balance)` est le total d'ether mis en jeu par l'ensemble des validateurs actifs.
 
-Cela signifie que la récompense de base est proportionnelle au solde effectif du validateur et inversement proportionnelle au nombre de validateurs sur le réseau. Plus il y a de validateurs, plus l'émission globale est importante (en tant que `sqrt(N)`), mais plus la `base_reward` par validateur est petite (en tant que `1/sqrt(N)`). Ces facteurs influencent le Taux de Rendement Annuel (APR) pour un nœud de mise en jeu. Lisez la justification de ceci dans les [notes de Vitalik](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#Base-rewards).
+Cela signifie que la récompense de base est proportionnelle au solde effectif du validateur et inversement proportionnelle au nombre de validateurs sur le réseau. Plus il y a de validateurs, plus l'émission globale est importante (en tant que `sqrt(N)`), mais plus la `base_reward` par validateur est petite (en tant que `1/sqrt(N)`). Ces facteurs influencent le Taux de Rendement Annuel (APR) pour un nœud de mise en jeu. Lisez la justification de ceci dans les [notes de Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
 La récompense totale est ensuite calculée comme la somme de cinq composants, chacun ayant un poids qui détermine la contribution de chaque composant à la récompense totale. Les composants sont :
 
@@ -60,7 +60,7 @@ Jusqu'à présent, nous avons pris en compte les validateurs qui agissent confor
 
 Les pénalités pour avoir manqué les votes de cible et de source sont égales aux récompenses que l'attestateur aurait reçues s'il les avait soumis. Cela signifie qu'au lieu d'avoir la récompense ajoutée à leur solde, ils voient une valeur égale retirée de leur solde. Il n'y a pas de pénalité pour avoir manqué le vote de tête (c.-à-d. que les votes de tête sont seulement récompensés, jamais pénalisés). Aucune pénalité n'est associée au `inclusion_delay` : la récompense ne sera tout simplement pas ajoutée au solde du validateur. Il n'y a également aucune pénalité pour ne pas avoir réussi à proposer un bloc.
 
-En savoir plus sur les récompenses et les pénalités dans les [spécifications du consensus](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Les récompenses et les pénalités ont été ajustées dans la mise à niveau Bellatrix : regardez Danny Ryan et Vitalik en discuter dans cette [vidéo Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
+En savoir plus sur les récompenses et les pénalités dans les [spécifications du consensus](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md). Les récompenses et les pénalités ont été ajustées dans la mise à niveau Bellatrix : regardez Danny Ryan et Vitalik en discuter dans cette [vidéo Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
 ## Délestage {#slashing}
 

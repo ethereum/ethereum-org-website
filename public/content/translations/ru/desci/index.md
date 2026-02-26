@@ -101,7 +101,6 @@ Web3 обладает потенциалом, который позволит р
 - [OceanDAO: финансирование науки, связанной с данными, под управлением DAO](https://oceanprotocol.com/)
 - [Opscientia: открытые децентрализованные научные рабочие процессы](https://opsci.io/research/)
 - [Bio.xyz: получите финансирование для своего биотехнологического проекта DAO или desci](https://www.bio.xyz/)
-- [Fleming Protocol: экономика данных с открытым исходным кодом, способствующая совместным биомедицинским открытиям](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: обеспечение децентрализованного научного доверия](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

@@ -70,7 +70,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # Le hachage devrait être : fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Notez que les images pour les cartes Rock 5B et Odroid M1 sont disponibles sur la [page de téléchargement](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) d'Ethereum-on-Arm.
+Notez que les images pour les cartes Rock 5B et Odroid M1 sont disponibles sur la [page de téléchargement](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) d'Ethereum-on-Arm.
 
 ## Flasher la carte MicroSD {#flashing-the-microsd}
 
@@ -183,7 +183,7 @@ N'hésitez pas à examiner les détails de ce tutoriel, à faire des essais sur 
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

@@ -326,7 +326,7 @@ Um validador enviando duas mensagens que se contradizem. Um exemplo simples é u
 
 ### Eth1 {#eth1}
 
-"Eth1" é um termo que se refere à Rede Principal Ethereum, uma cadeira de blocos de prova de trabalho existente. Esse termo já foi descontinuado e substituído por "camada de execução". [Saiba mais sobre essa mudança de nome](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+"Eth1" é um termo que se refere à Rede Principal Ethereum, uma cadeira de blocos de prova de trabalho existente. Esse termo já foi descontinuado e substituído por "camada de execução". [Saiba mais sobre essa mudança de nome](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming).
 
 <DocLink href="/roadmap/">
   Mais sobre as atualizações do Ethereum
@@ -334,7 +334,7 @@ Um validador enviando duas mensagens que se contradizem. Um exemplo simples é u
 
 ### Eth2 {#eth2}
 
-"Eth2" é um termo que se refere a um conjunto de atualizações do protocolo Ethereum, incluindo a transição do Ethereum para a prova de participação. Esse termo foi descontinuado e substituído por "camada de consenso". [Saiba mais sobre essa mudança de nome](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+"Eth2" é um termo que se refere a um conjunto de atualizações do protocolo Ethereum, incluindo a transição do Ethereum para a prova de participação. Esse termo foi descontinuado e substituído por "camada de consenso". [Saiba mais sobre essa mudança de nome](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming).
 
 <DocLink href="/roadmap/">
   Mais sobre as atualizações do Ethereum

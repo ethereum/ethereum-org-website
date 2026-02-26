@@ -30,7 +30,6 @@ lang: ja
 
 これらの一般的なプラットフォームは、Web3空間全体の助成金を幅広くカバーしており、資金調達先を探している人にとって有用な出発点となります:
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworksは、すべての助成金、RFP、バグ報奨金の包括的なディレクトリをまとめています。_
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _ブロックチェーンと暗号資産の助成金ディレクトリ_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - すべてのWeb3助成金プログラムのディレクトリ、毎週更新
 
