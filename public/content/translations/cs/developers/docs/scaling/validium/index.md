@@ -162,5 +162,5 @@ Několik projektů poskytuje implementace validia a volitia, které můžete int
 - [Validium a matice 2x2 vrstvy 2 — vydání č. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZK-rollupy vs. Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volition a vznikající spektrum dostupnosti dat](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [Rollupy, validia a volitions: Poznejte nejžhavější řešení pro škálování Etherea](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
+- [Rollupy, validia a volitions: Poznejte nejžhavější řešení pro škálování Etherea](https://medium.com/coinmonks/rollups-vs-validiums-vs-volitions-d76300170f4a)
 - [Praktický průvodce rollupy na Ethereu](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

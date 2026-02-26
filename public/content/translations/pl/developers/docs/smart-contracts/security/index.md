@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Można również użyć systemu [płatności typu pull](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment), który wymaga od użytkowników wypłacania środków z inteligentnych kontraktów, zamiast systemu „płatności typu push”, który wysyła środki na konta. Eliminuje to możliwość przypadkowego uruchomienia kodu pod nieznanymi adresami (i może również zapobiec niektórym atakom typu „odmowa usługi”).
+Można również użyć systemu [płatności typu pull](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment), który wymaga od użytkowników wypłacania środków z inteligentnych kontraktów, zamiast systemu „płatności typu push”, który wysyła środki na konta. Eliminuje to możliwość przypadkowego uruchomienia kodu pod nieznanymi adresami (i może również zapobiec niektórym atakom typu „odmowa usługi”).
 
 #### Niedomiar i przepełnienie liczb całkowitych {#integer-underflows-and-overflows}
 

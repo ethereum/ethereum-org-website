@@ -37,7 +37,7 @@ lang: hi
 - [Solidity भाषा का पोर्टल](https://soliditylang.org/)
 - [उदाहरण के लिए Solidity](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter चैटरूम](https://gitter.im/ethereum/solidity) को [Solidity Matrix चैटरूम](https://matrix.to/#/#ethereum_solidity:gitter.im) से जोड़ा गया
+- [Solidity Matrix चैटरूम](https://gitter.im/ethereum/solidity) को [Solidity Matrix चैटरूम](https://matrix.to/#/#ethereum_solidity:gitter.im) से जोड़ा गया
 - [चीट शीट](https://reference.auditless.com/cheatsheet)
 - [Solidity ब्लॉग](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)

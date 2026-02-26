@@ -177,7 +177,7 @@ Ethereum'daki yönetişimin katı kuralları yoktur. Çeşitli topluluk katılı
 - [Blokzincir Yönetişimi Üzerine Notlar](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Ethereum Yönetişimi nasıl işler?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Ethereum yönetişimi nasıl işler](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Ethereum çekirdek geliştiricisi nedir?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Ethereum çekirdek geliştiricisi nedir?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Yönetişim, Bölüm 2: Plütokrasi Hâlâ Kötüdür](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Jeton oylamalı yönetişimin ötesine geçmek](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
 - [Blokzincir Yönetişimini Anlamak](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_

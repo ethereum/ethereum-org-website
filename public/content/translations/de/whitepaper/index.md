@@ -508,10 +508,10 @@ Das Konzept einer beliebigen Statusübergangsfunktion, wie es im Ethereum-Protok
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ und autonome Agenten, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn über Smart Property beim Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Ethereum Merkle Patricia Trees](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://ethereum.org/whitepaper//%5BEnglish%5D-RLP)
+20. [Ethereum Merkle Patricia Trees](https://web.archive.org/web/20250427212320/https://ethereum.org/whitepaper//%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd über Merkle Sum Trees](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Informationen zur Geschichte des Whitepapers finden Sie in [diesem Wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Informationen zur Geschichte des Whitepapers finden Sie in [diesem Wiki](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)._
 
 _Ethereum hat sich, wie viele durch die Community unterstützte Open-Source-Softwareprojekte, seit seinen Ursprüngen weiterentwickelt. Um mehr über die neuesten Entwicklungen von Ethereum zu erfahren und wie Änderungen am Protokoll vorgenommen werden, empfehlen wir [diese Anleitung](/learn/)._

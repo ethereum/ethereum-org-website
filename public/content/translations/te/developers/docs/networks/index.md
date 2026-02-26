@@ -158,7 +158,7 @@ lang: te
 
 ##### వనరులు
 
-- [Starkscan](https://sepolia.starkscan.co/)
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### ఫాసెట్‌లు
 

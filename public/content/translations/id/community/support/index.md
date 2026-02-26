@@ -50,7 +50,7 @@ Apakah pertanyaan Anda terkait dengan peralatan, proyek, atau pustaka tertentu? 
 
 Berikut adalah beberapa contoh populer:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://app.element.io/#/room/#solidity:matrix.org)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)

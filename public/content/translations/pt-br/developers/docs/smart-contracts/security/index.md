@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Você também pode usar um sistema de [receber pagamentos](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment), que exige que os usuários retirem fundos dos contratos inteligentes, em vez de um sistema de "envio de pagamentos" que envia fundos para contas. Isso elimina a possibilidade de acionar código inadvertidamente em endereços desconhecidos (e também pode impedir determinados ataques de negação de serviço).
+Você também pode usar um sistema de [receber pagamentos](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment), que exige que os usuários retirem fundos dos contratos inteligentes, em vez de um sistema de "envio de pagamentos" que envia fundos para contas. Isso elimina a possibilidade de acionar código inadvertidamente em endereços desconhecidos (e também pode impedir determinados ataques de negação de serviço).
 
 #### Overflows e underflows em inteiro {#integer-underflows-and-overflows}
 

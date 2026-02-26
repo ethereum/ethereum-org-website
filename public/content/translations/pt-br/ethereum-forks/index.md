@@ -55,7 +55,7 @@ Essa atualização da camada de consenso trouxe a capacidade para os stakers que
 A atualização também forneceu a funcionalidade de varredura automática de contas, que processa continuamente as contas do validador para todos os pagamentos de recompensas disponíveis ou saques totais.
 
 - [Mais sobre saques de staking](/staking/withdrawals/).
-- [Leia a especificação da atualização Capella](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
+- [Leia a especificação da atualização Capella](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 
@@ -88,7 +88,7 @@ A atualização Paris foi desencadeada pela cadeia de blocos de prova de trabalh
 
 A atualização Bellatrix foi a segunda atualização agendada para a [Beacon Chain](/roadmap/beacon-chain), preparando a cadeia para o [The Merge](/roadmap/merge/). Ela traz penalidades ao validador para seus valores totais por inatividade e ofensas sancionáveis. Bellatrix também inclui uma atualização nas regras de escolha de bifurcações para preparar a cadeia para o The Merge e a transição do último bloco de prova de trabalho para o primeiro bloco de prova de participação. Isso inclui informar os clientes de consenso sobre a [dificuldade total do terminal](/glossary/#terminal-total-difficulty) de 58750000000000000000000.
 
-- [Leia a especificação da atualização Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Leia a especificação da atualização Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -139,7 +139,7 @@ A implementação de rede Arrow Glacier atrasou a [bomba de dificuldade](/glossa
 
 A Altair foi a primeira implementação programada para a [Beacon Chain](/roadmap/beacon-chain). Foi adicionado suporte para “comitês de sincronização”, permitindo clientes leves, aumentando a inatividade do validador e removendo penalidades à medida que o desenvolvimento avançava para o The Merge.
 
-- [Leia a especificação de melhoria da Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Leia a especificação de melhoria da Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Fato engraçado! {#altair-fun-fact}
 

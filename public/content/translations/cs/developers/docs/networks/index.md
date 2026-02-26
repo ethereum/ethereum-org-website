@@ -158,7 +158,7 @@ Testnet pro [Starknet](https://www.starknet.io).
 
 ##### Zdroje
 
-- [Starkscan](https://sepolia.starkscan.co/)
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### Faucety
 

@@ -519,6 +519,6 @@ Koncept funkce libovolného přechodu stavu, jak je implementován protokolem Et
 20. [Merkle-Patricia stromy na Ethereu](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 21. [Peter Todd o Merkleových součtových stromech](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Historii bílé knihy najdete na [této wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Historii bílé knihy najdete na [této wiki](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)._
 
 _Ethereum, stejně jako mnoho komunitou řízených softwarových projektů s otevřeným zdrojovým kódem, se od svého počátečního vzniku vyvíjelo. _Chcete-li se dozvědět o nejnovějším vývoji Etherea a o tom, jak se provádějí změny protokolu, doporučujeme [tohoto průvodce](/learn/)._

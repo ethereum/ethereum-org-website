@@ -52,7 +52,7 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - contenu maintenu par la communauté, couvrant Ethereum, la DeFi, les NFT, ainsi que des ressources liées au Web3
 - [123ETH](https://123eth.org/) - un portail vers l'écosystème Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - cours en ligne gratuits sur la cryptomonnaie et ses applications
-- [Livre blanc d'Ethereum](https://github.com/ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - version chinoise du livre blanc d'Ethereum
+- [Livre blanc d'Ethereum](https://ethereum.org/whitepaper//[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - version chinoise du livre blanc d'Ethereum
 
 **Écosystème Ethereum**
 

@@ -51,7 +51,7 @@ Bir topluluğun bu yönergelere göre eklenmesi veya kaldırılması gerektiğin
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - mevcut ve potansiyel paydaşlar için topluluk tarafından yönetilen rehberlik, eğitim, destek ve kaynaklar</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org web sitesi ekibi</Link> - ekiple ve topluluktaki kişilerle ethereum.org web geliştirme ve tasarımı hakkında sohbet etmek için uğrayın</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - kurucuların, sektör liderlerinin ve Ethereum meraklılarının takıldığı web3 yaratıcıları topluluğu. Web3 geliştirme, tasarım ve kültürü hakkında tutkuluyuz. Gelin, bizimle inşa edin.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - Solidity geliştirmesi için sohbet (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.element.io/#/room/#solidity:matrix.org">Solidity Matrix</Link> - Solidity geliştirmesi için sohbet (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity geliştirmesi için sohbet (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- soru ve cevap forumu</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- merkeziyetsiz soru ve cevap forumu</i></SocialListItem>

@@ -118,7 +118,7 @@ Maboresho ya ufanisi na usalama wa itifaki:
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Jinsi Pectra itakavyoboresha uzoefu wa kusimamisha](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Soma vigezo vya sasisho la Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
+- [Soma vigezo vya sasisho la Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Maswali Yanayoulizwa Mara kwa Mara kuhusu Prague-Electra ("Pectra")](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514 inaleta ukaguzi kwenye utoaji wa ETH kwa kuweka kikomo cha kiwango cha 
 </ul>
 </ExpandableCard>
 
-- [Soma vigezo vya sasisho la Deneb](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
+- [Soma vigezo vya sasisho la Deneb](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [Maswali Yanayoulizwa Mara kwa Mara kuhusu Cancun-Deneb ("Dencun")](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ Uboreshaji huu wa safu ya makubaliano ulileta uwezo kwa watumiaji wa staking amb
 Uboreshaji pia uliweka uwezo wa kufutwa kwa akaunti moja kwa moja, ambao unaendelea kuchambua akaunti za wadhibiti kwa malipo yoyote ya tuzo zilizopo au uondoaji kamili.
 
 - [Zaidi kuhusu uondoaji wa kusimamisha](/staking/withdrawals/).
-- [Soma vigezo vya sasisho la Capella](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
+- [Soma vigezo vya sasisho la Capella](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 
@@ -242,7 +242,7 @@ Sasisho la Paris lilianzishwa na mnyororo wa bloku wa uthibitishaji-wa-kazi kupi
 
 Sasisho la Bellatrix lilikuwa sasisho la pili lililopangwa kwa [Mnyororo Kioleza](/roadmap/beacon-chain), likiandaa mnyororo kwa ajili ya [Muungano](/roadmap/merge/). Huleta adhabu za waidhinishaji kwa maadili yao kamili kwa kutokuwa na shughuli na makosa yanayoweza kupunguzwa. Bellatrix pia inajumuisha sasisho kwa sheria za uchaguzi wa umma ili kuandaa mnyororo wa Kuunganisha na mpito kutoka kizuizi cha mwisho cha uthibitisho wa kazi hadi kizuizi cha kwanza cha uthibitisho wa kitalu. Hii inajumuisha kuzifanya programu za makubaliano zifahamu kuhusu [ugumu wa jumla wa mwisho](/glossary/#terminal-total-difficulty) wa 58750000000000000000000.
 
-- [Soma vigezo vya sasisho la Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Soma vigezo vya sasisho la Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -295,7 +295,7 @@ Sasisho la mtandao la Arrow Glacier lilisogeza nyuma [bomu la ugumu](/glossary/#
 
 Sasisho la Altair lilikuwa sasisho la kwanza lililopangwa kwa [Mnyororo Kioleza](/roadmap/beacon-chain). Iliongeza usaidizi kwa "kamati za kusawazisha" - kuwezesha wateja wepesi, na kuongezeka kwa kutotumika kwa kiidhinisha na kupunguza adhabu kadiri maendeleo yanavyosonga mbele kuelekea Kuunganisha.
 
-- [Soma vigezo vya sasisho la Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Soma vigezo vya sasisho la Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Ukweli wa kufurahisha! {#altair-fun-fact}
 

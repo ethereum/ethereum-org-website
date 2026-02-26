@@ -74,7 +74,6 @@ lang: zh-tw
 **NOWNodes - _全節點和區塊瀏覽器。_**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [文件](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
 **QuickNode -** **_區塊鏈基礎設施即服務。_**
 

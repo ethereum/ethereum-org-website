@@ -508,10 +508,10 @@ Konsep dari fungsi transisi keadaan sembarang yang diimplementasikan oleh protok
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ dan Agen Otonom, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn tentang Properti Pintar pada Festival Turing](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [RLP Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Pohon Merkle Patricia Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [RLP Ethereum](https://web.archive.org/web/20250427212320/https://ethereum.org/whitepaper//%5BEnglish%5D-RLP)
+20. [Pohon Merkle Patricia Ethereum](https://web.archive.org/web/20250427212320/https://ethereum.org/whitepaper//%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd tentang pohon jumlah Merkle](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Untuk riwayat kertas putih, lihat [wiki ini](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Untuk riwayat kertas putih, lihat [wiki ini](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)._
 
 _Ethereum, seperti kebanyakan proyek perangkat lunak sumber terbuka yang digerakkan oleh komunitas, telah berkembang sejak peluncuran pertamanya. Untuk mempelajari tentang pengembangan Ethereum terkini, dan bagaimana perubahan protokol dibuat, kami menyarankan [panduan ini](/learn/)._

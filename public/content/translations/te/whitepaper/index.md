@@ -507,6 +507,6 @@ Bitcoin మైనింగ్ అల్గోరిథం మైనింగ్ 
 20. [ఇతీరియము మెర్కిల్ పాట్రీషియా ట్రీస్](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 21. [మెర్కిల్ సమ్ ట్రీస్‌పై పీటర్ టాడ్](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_శ్వేతపత్రం యొక్క చరిత్ర కోసం, [ఈ వికీ](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)ని చూడండి._
+_శ్వేతపత్రం యొక్క చరిత్ర కోసం, [ఈ వికీ](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)ని చూడండి._
 
 _ఇతీరియము, అనేక కమ్యూనిటీ-ఆధారిత, ఓపెన్-సోర్స్ సాఫ్ట్‌వేర్ ప్రాజెక్ట్‌ల వలె, దాని ప్రారంభం నుండి అభివృద్ధి చెందింది. ఎథేరియం యొక్క తాజా అభివృద్ధిల గురించి తెలుసుకోవడానికి, మరియు ప్రోటోకాల్‌కు మార్పులు ఎలా చేయబడతాయో తెలుసుకోవడానికి, మేము [ఈ గైడ్‌ను](/learn/) సిఫార్సు చేస్తున్నాము._

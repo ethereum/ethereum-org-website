@@ -15,7 +15,7 @@ lang: ru
 
 В дополнение к информации на этой странице есть много созданных сообществом ресурсов, которые стоит изучить:
 
-- [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Образовательный ресурс о Ethereum, предназначенный для начинающих_
+- [District0x](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _Образовательный ресурс о Ethereum, предназначенный для начинающих_
 - [Ethereum.wiki](https://eth.wiki) _Созданная сообществом вики о технологии Ethereum_
 - [Kauri](https://kauri.io) _Технические статьи и руководства по Ethereum и связанным с ним проектам_
 - [YouTube Ethereum Foundation](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Видео и выступления о Ethereum_
@@ -28,7 +28,7 @@ lang: ru
 Вы недавно познакомились с Ethereum? Эти статьи и ресурсы – отличное начало.
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
-- [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
+- [What is Ethereum?](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _April 27, 2018 - Tyler Cowen_
@@ -75,7 +75,7 @@ lang: ru
 ### Каналы платежей и состояний {#payment--state-channels}
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
-- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Basics of State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 
 ### Технология Sidechains {#sidechains}
 
@@ -84,7 +84,7 @@ lang: ru
 ### Технология Plasma {#plasma}
 
 - [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) _Feb 7, 2019 - Daniel Goldman_
-- [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
+- [Understanding Plasma](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [Learn Plasma – образовательный ресурс о технологии Plasma](https://www.learnplasma.org/en/)
 
 ## ETH 2.0 {#consensus-layer-upgrades}

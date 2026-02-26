@@ -255,7 +255,7 @@ Ethereum போன்ற பொது பிளாக்செயின்கள
 
 - [Ethereum-இன் அடுக்கு 2 அளவிடுதல் தீர்வுகளைப் புரிந்துகொள்ளுதல்: நிலை சேனல்கள், பிளாஸ்மா மற்றும் Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, பிப் 12 2018_
 - [நிலை சேனல்கள் - ஒரு விளக்கம்](https://www.jeffcoleman.ca/state-channels/) _நவ 6, 2015 - Jeff Coleman_
-- [நிலை சேனல்களின் அடிப்படைகள்](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [நிலை சேனல்களின் அடிப்படைகள்](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [பிளாக்செயின் நிலை சேனல்கள்: ஒரு அதிநவீன பார்வை](https://ieeexplore.ieee.org/document/9627997)
 
 _உங்களுக்கு உதவிய ஒரு சமூக வளம் பற்றி தெரியுமா?_ இந்தப் பக்கத்தைத் திருத்தி அதைச் சேர்க்கவும்!_

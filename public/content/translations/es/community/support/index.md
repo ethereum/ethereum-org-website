@@ -68,7 +68,7 @@ También puede encontrar documentación y guías de desarrollo en nuestra secci�
 
 He aquí algunos ejemplos:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://app.element.io/#/room/#solidity:matrix.org)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)

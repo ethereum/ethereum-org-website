@@ -74,7 +74,6 @@ Essas bibliotecas abstraem muito da complexidade de interagir diretamente com um
 **NOWNodes - _Nós Completos e Exploradores de Blocos._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentação](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
 **QuickNode -** **_Infraestrutura Blockchain como Serviço._**
 

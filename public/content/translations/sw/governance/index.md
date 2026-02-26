@@ -177,7 +177,7 @@ Usimamizi wa Ethereum haiko wazi kwa utaratibu thabiti. Washirika mbalimbali wa 
 - [Dondoo kuhusu Utawala wa Blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Utawala wa Ethereum Hufanyaje Kazi?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Jinsi utawala wa Ethereum unavyofanya kazi](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Msanidi wa msingi wa Ethereum ni nani?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Msanidi wa msingi wa Ethereum ni nani?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Utawala, Sehemu ya 2: Plutokrasia Bado ni Mbaya](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Kuvuka mipaka ya utawala wa upigaji kura wa sarafu](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
 - [Kuelewa Utawala wa Blockchain](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_

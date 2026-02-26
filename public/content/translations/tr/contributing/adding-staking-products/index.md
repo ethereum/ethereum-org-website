@@ -165,7 +165,7 @@ Düğüm veya istemci kurulumu, yönetimi veya geçişi ile ilgili yazılım ür
 
 Yukarıdaki [dahil edilme kriterleri](#criteria-for-inclusion), her ürün veya hizmet için kümülatif bir puanı hesaplamak için kullanılır. Bu, belirli objektif kriterleri karşılayan ürünleri sıralamak ve sergilemek için bir araç olarak kullanılır. Kanıt için ne kadar çok kriter sağlanırsa, bir ürün o kadar yüksek sıralanır ve beraberlikler yükte rastgele hâle getirilir.
 
-Bu kriterlere yönelik kod mantığı ve ağırlıklar şu anda depomuzdaki [bu JavaScript bileşeninde](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) yer almaktadır.
+Bu kriterlere yönelik kod mantığı ve ağırlıklar şu anda depomuzdaki [bu JavaScript bileşeninde](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) yer almaktadır.
 
 ## Ürününüzü veya hizmetinizi ekleyin {#add-product}
 

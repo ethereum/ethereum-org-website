@@ -118,7 +118,7 @@ The software that underlies Ethereum is composed of two halves, known as the [ex
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Як Pectra покращить досвід стейкінгу](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Ознайомтеся зі специфікаціями оновлення Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
+- [Ознайомтеся зі специфікаціями оновлення Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [ЧаПи про Prague-Electra («Pectra»)](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514 посилює емісію ETH, обмежуючи швидкість 
 </ul>
 </ExpandableCard>
 
-- [Ознайомтеся зі специфікаціями оновлення Deneb](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
+- [Ознайомтеся зі специфікаціями оновлення Deneb](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [ЧаПи про Cancun-Deneb («Dencun»)](/roadmap/dencun/)
 
 <Divider />
@@ -213,7 +213,7 @@ Capella відбулася одночасно з оновленням рівня
 Оновлення також забезпечило функцію автоматичного очищення облікового запису, яка постійно обробляє облікові записи валідатора для будь-яких доступних виплат винагород або повного зняття коштів.
 
 - [Докладніше про виведення коштів зі стейкінгу](/staking/withdrawals/).
-- [Ознайомтеся зі специфікаціями оновлення Capella](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
+- [Ознайомтеся зі специфікаціями оновлення Capella](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 
@@ -247,7 +247,7 @@ Capella відбулася одночасно з оновленням рівня
 
 Оновлення Bellatrix було другим запланованим оновленням для [Beacon Chain](/roadmap/beacon-chain), яке готувало ланцюжок до [The Merge](/roadmap/merge/). Він повертає штрафи валідатора до повного значення за бездіяльність і порушення, які можна скоротити. Bellatrix також включає оновлення правил вибору виделки щоб підготувати ланцюжок до The Merge і переходу від останнього блоку proof-of-work до першого блоку proof-of-stake. Це включає інформування клієнтів консенсусу про [граничну загальну складність](/glossary/#terminal-total-difficulty) у 58750000000000000000000.
 
-- [Ознайомтеся зі специфікацією оновлення Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Ознайомтеся зі специфікацією оновлення Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -300,7 +300,7 @@ Capella відбулася одночасно з оновленням рівня
 
 Оновлення Altair було першим запланованим оновленням [Beacon Chain](/roadmap/beacon-chain). Було додано підтримку "комітетів синхронізації" — дозволяє використовувати легкі клієнти, а також збільшено штрафи за бездіяльність валідаторів і скорочення штрафних санкцій у міру наближення до The Merge.
 
-- [Ознайомтеся зі специфікацією оновлення Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Ознайомтеся зі специфікацією оновлення Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Цікавий факт! {#altair-fun-fact}
 

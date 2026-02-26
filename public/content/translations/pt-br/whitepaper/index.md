@@ -508,10 +508,10 @@ O conceito de uma função de transição de estado arbitrária implementada pel
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ e agentes autónomos, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn fala sobre propriedades inteligentes no Festival de Turing](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Árvores Ethereum Merkle Patricia](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://ethereum.org/whitepaper//%5BEnglish%5D-RLP)
+20. [Árvores Ethereum Merkle Patricia](https://web.archive.org/web/20250427212320/https://ethereum.org/whitepaper//%5BEnglish%5D-Patricia-Tree)
 21. [Pedro Todd sobre árvores da soma Merkle](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Para a história do whitepaper, veja [esta wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Para a história do whitepaper, veja [esta wiki](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)._
 
 _O Ethereum, como muitos projetos de software de código aberto impulsionados pela comunidade, evoluiu desde sua criação. Para saber mais sobre desenvolvimentos recentes do Ethereum e como as mudanças no protocolo são feitas, recomendamos a leitura [deste manual](/learn/)._

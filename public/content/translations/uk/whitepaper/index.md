@@ -514,6 +514,6 @@ _Незважаючи на лінійну емісію валюти, так са
 20. [Ethereum Merkle Patricia trees](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 21. [Пітер Тодд про дерева сум Меркла](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Історію білої книги див. у [цій вікі](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Історію білої книги див. у [цій вікі](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)._
 
 _Платформа Ethereum, як і багато інших проєктів програмного забезпечення з відкритим вихідним кодом, що керуються спільнотою, еволюціонувала з моменту її створення. Щоб дізнатися про останні розробки Ethereum і про те, як вносяться зміни до протоколу, ми рекомендуємо [цей посібник](/learn/)._

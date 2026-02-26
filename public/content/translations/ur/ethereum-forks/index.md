@@ -118,7 +118,7 @@ sidebarDepth: 1
 
 - [Pectra.wtf](https://pectra.wtf)
 - [پیکٹرا اسٹیکنگ کے تجربے کو کیسے بہتر بنائے گا](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [الیکٹرا اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
+- [الیکٹرا اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [پراگ-الیکٹرا ("پیکٹرا") عمومی سوالات](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" 
 </ul>
 </ExpandableCard>
 
-- [دینیب اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
+- [دینیب اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [کینکن-دینیب ("ڈینکن") عمومی سوالات](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" 
 اپ گریڈ نے خودکار اکاؤنٹ سویپنگ کی فعالیت بھی فراہم کی، جو کسی بھی دستیاب انعامات کی ادائیگیوں یا مکمل ودڈرالز کے لیے ویلیڈیٹر اکاؤنٹس پر مسلسل کارروائی کرتی ہے۔
 
 - [اسٹیکنگ ودڈرالز پر مزید](/staking/withdrawals/)۔
-- [کپیلا اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
+- [کپیلا اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 
@@ -242,7 +242,7 @@ EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" 
 
 بیلاٹرکس اپ گریڈ [بیکن چین](/roadmap/beacon-chain) کے لیے دوسرا طے شدہ اپ گریڈ تھا، جو چین کو [دی مرج](/roadmap/merge/) کے لیے تیار کرتا ہے۔ یہ ویلیڈیٹر کے جرمانے کو غیرفعالیت اور سلیش ایبل جرائم کے لیے ان کی پوری قدروں تک لاتا ہے۔ بیلاٹرکس میں فورک کے انتخاب کے قواعد میں ایک اپ ڈیٹ بھی شامل ہے تاکہ چین کو دی مرج اور آخری پروف-آف-ورک بلاک سے پہلے پروف-آف-اسٹیک بلاک میں منتقلی کے لیے تیار کیا جا سکے۔ اس میں کنسینسس کلائنٹس کو 58750000000000000000000 کی [ٹرمینل ٹوٹل ڈفیکلٹی](/glossary/#terminal-total-difficulty) سے آگاہ کرنا شامل ہے۔
 
-- [بیلاٹرکس اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [بیلاٹرکس اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -295,7 +295,7 @@ EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" 
 
 Altair اپ گریڈ [بیکن چین](/roadmap/beacon-chain) کے لیے پہلا طے شدہ اپ گریڈ تھا۔ اس نے "سنک کمیٹیوں" کے لیے سپورٹ شامل کی—لائٹ کلائنٹس کو فعال کیا، اور ویلیڈیٹر کی غیرفعالیت اور سلیشنگ جرمانے میں اضافہ کیا جیسے جیسے ترقی دی مرج کی طرف بڑھی۔
 
-- [Altair اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Altair اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />مزے کی بات! {#altair-fun-fact}
 

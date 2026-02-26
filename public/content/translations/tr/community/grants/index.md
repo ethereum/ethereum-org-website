@@ -30,7 +30,6 @@ Bu kaynaklar, Ethereum ekosistemindeki çeşitli hibe fırsatlarını derleyip d
 
 Bu genel platformlar, tüm Web3 alanındaki hibeleri geniş bir şekilde kapsar ve fon arayan herkes için yararlı başlangıç noktalarıdır:
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks, tüm hibelerin, RFP'lerin ve hata ödüllerinin kapsamlı bir dizinini derlemiştir._
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _Blokzincir ve kripto para hibeleri dizini_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Haftalık olarak güncellenen tüm web3 hibe programlarının dizini
 

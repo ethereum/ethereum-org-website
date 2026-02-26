@@ -177,7 +177,7 @@ The DAOハッキング事件をもっと見る
 - [ブロックチェーンのガバナンスに関する注記](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [イーサリアムのガバナンスの仕組み](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [イーサリアムのガバナンスの仕組み](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [イーサリアムのコアデベロッパーとは?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [イーサリアムのコアデベロッパーとは?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [ガバナンス、パート2: 金権政治はやはり良くない](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [コイン投票ガバナンスからの脱却](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
 - [ブロックチェーンのガバナンスを理解する](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_

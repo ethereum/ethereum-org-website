@@ -177,7 +177,7 @@ La gouvernance d'Ethereum n'est pas rigoureusement définie. Divers participants
 - [Notes sur la gouvernance de la Blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Comment fonctionne la gouvernance Ethereum ?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Comment fonctionne la gouvernance Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Qu'est-ce qu'un développeur de base Ethereum ?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Qu'est-ce qu'un développeur de base Ethereum ?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Gouvernance, partie 2 : La ploutocratie est toujours mauvaise](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Aller au-delà de la gouvernance du vote par jeton](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
 - [Comprendre la gouvernance de la blockchain](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_

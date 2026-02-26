@@ -32,7 +32,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 
 ## Articles intermédiaires {#intermediate-articles}
 
-- [Développement de dApp pour programmeurs Python](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [Développement de dApp pour programmeurs Python](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [Création d'une interface Python Ethereum : 1ère partie](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Les contrats intelligents dans Python : un guide complet (ou presque)](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 - [Utiliser Brownie et Python pour déployer des contrats intelligents](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
@@ -78,7 +78,7 @@ Les projets Ethereum suivants utilisent les outils mentionnés sur cette page. L
 - [Curve](https://curve.fi/) et [Répertoire de contrats intelligents Curve](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) et [Contrats intelligents en utilisant Brownie toolchain](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) utilise [Python pour gérer et déployer leurs contrats d'acquisition](https://github.com/sushiswap/sushi-vesting-protocols)
-- [Alpha Finance](https://alphafinance.io/), de la célèbre Alpha Homora, utilise [Brownie pour tester et déployer des contrats intelligents](https://github.com/AlphaFinanceLab/alpha-staking-contract)
+- [Alpha Venture DAO](https://alphaventuredao.io/), de la célèbre Alpha Homora, utilise [Brownie pour tester et déployer des contrats intelligents](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## Discussion de la Communauté Python {#python-community-contributors}
 

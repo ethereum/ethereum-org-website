@@ -158,7 +158,7 @@ Sieć testowa dla [Starknet](https://www.starknet.io).
 
 ##### Źródła
 
-- [Starkscan](https://sepolia.starkscan.co/)
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### Krany
 

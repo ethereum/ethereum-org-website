@@ -118,7 +118,7 @@ Ethereumの基礎となるソフトウェアは二つに分けることができ
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Pectraがステーキング体験を向上させる方法](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Electraアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
+- [Electraアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Prague-Electra(「Pectra」) FAQ](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514では、バリデータがネットワークに参加できる「チャ
 </ul>
 </ExpandableCard>
 
-- [Denebアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
+- [Denebアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [Cancun-Deneb(「Dencun」) FAQ](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ EIP-7514では、バリデータがネットワークに参加できる「チャ
 また、このアップグレードによって、自動アカウントスイープ機能も実装され、バリデータアカウントを継続的に処理し、報酬の支払いや全額引き出しができるようになりました。
 
 - [ステーキング出金について詳しく](/staking/withdrawals/).
-- [Capellaアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
+- [Capellaアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 
@@ -242,7 +242,7 @@ Parisアップグレードは、プルーフ・オブ・ワーク・ブロック
 
 Bellatrixアップグレードは、[ビーコンチェーン](/roadmap/beacon-chain)で2番目に予定されていたアップグレードで、チェーンを[The Merge](/roadmap/merge/)に備えさせるものでした。 これにより、バリデータのペナルティを、非アクティブおよびスラッシング可能な違反に対して完全な値にしました。 ベラトリックスには、マージ向けチェーンと、最後のプルーフ・オブ・ワークのブロックから最初のプルーフ・オブ・ステークのブロックへの移行を準備するためのフォーク選択ルールのアップデートも含まれます。 これには、コンセンサスクライアントに58750000000000000000000の[最終合計難易度(Terminal Total Difficulty)](/glossary/#terminal-total-difficulty)を認識させることが含まれます。
 
-- [Bellatrixアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Bellatrixアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -295,7 +295,7 @@ Arrow Glacierネットワークアップグレードは、[ディフィカルテ
 
 Altairアップグレードは、[ビーコンチェーン](/roadmap/beacon-chain)で最初に予定されていたアップグレードです。 ライトクライアントをサポートするための「同期委員会」を追加しました。また、マージに向けた開発が進むにつれて、バリデータの非アクティブ化とスラッシングのペナルティが増加しました。
 
-- [Altairアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Altairアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />豆知識！ {#altair-fun-fact}
 

@@ -118,7 +118,7 @@ Mejoras en la eficiencia y seguridad del protocolo:
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Cómo Pectra mejorará la experiencia de staking](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Lea las especificaciones de la actualización Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
+- [Lea las especificaciones de la actualización Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Preguntas frecuentes sobre Praga-Electra ("Pectra")](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514 reduce la emisión de ETH limitando la tasa de "churn" a la que los val
 </ul>
 </ExpandableCard>
 
-- [Lea las especificaciones de la actualización Deneb](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
+- [Lea las especificaciones de la actualización Deneb](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [Preguntas frecuentes sobre Cancún-Deneb ("Dencun")](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ Esta actualización de la capa de consenso aporta a los participantes que no pro
 La actualizacion también proporciona la funcionalidad de barrido automático de la cuenta, la cual procesa constantemente cuentas validadoras para cualquier pago de recompensa disponible o retiradas completas.
 
 - [Más información sobre las retiradas de participaciones](/staking/withdrawals/).
-- [Lea las especificaciones de la actualización Capella](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
+- [Lea las especificaciones de la actualización Capella](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 
@@ -242,7 +242,7 @@ La actualización París se activó cuando la blockchain proof-of-work superó u
 
 La actualización Bellatrix fue la segunda actualización programada para la [Beacon Chain](/roadmap/beacon-chain), preparando la cadena para [La Fusión](/roadmap/merge/). Incorpora penalizaciones del validador a sus valores completos por inactividad y recortes por malas conductas. Bellatrix también incluye una actualización de las reglas de elección de la bifurcación para preparar la cadena de cara a La Fusión y la transición del último bloque de prueba de trabajo al primer bloque de prueba de participación. Esto incluye hacer que los clientes de consenso conozcan la [dificultad total terminal](/glossary/#terminal-total-difficulty) de 58750000000000000000000.
 
-- [Lea la especificación de la actualización Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Lea la especificación de la actualización Bellatrix](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -295,7 +295,7 @@ La actualización de red Arrow Glacier pospuso la [bomba de dificultad](/glossar
 
 La actualización Altair fue la primera actualización programada para la [Beacon Chain](/roadmap/beacon-chain). Añadió soporte para los «comités de sincronización», permitiendo clientes ligeros y un aumento de la inactividad del validador y de las penalizaciones de recorte a medida que avanzaba el desarrollo hacia La Fusión.
 
-- [Lea la especificación de la actualización Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Lea la especificación de la actualización Altair](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />¡Dato curioso! {#altair-fun-fact}
 

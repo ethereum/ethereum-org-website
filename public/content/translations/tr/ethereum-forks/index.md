@@ -118,7 +118,7 @@ Protokol verimliliği ve güvenlik iyileştirmeleri:
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Pectra hisseleme deneyimini nasıl geliştirecek?](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Electra yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
+- [Electra yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Prag-Electra ("Pectra") SSS](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514, doğrulayıcıların ağa katılabilmeleri için gereken "kazanç" ora
 </ul>
 </ExpandableCard>
 
-- [Deneb yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
+- [Deneb yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [Cancun-Deneb ("Dencun") SSS](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ Bu fikir birliği katmanı yükseltmesi, ilk yatırma işlemleriyle birlikte dah
 Yükseltme ayrıca, mevcut tüm ödül ödemeleri veya tam çekimler için doğrulayıcı hesaplarını sürekli işleyen otomatik hesap süpürme işlevselliğini getirdi.
 
 - [Hisseleme para çekme işlemleri hakkında daha fazla bilgi](/staking/withdrawals/).
-- [Capella yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
+- [Capella yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 
@@ -242,7 +242,7 @@ Paris yükseltmesi, iş ispatı blokzincirinin 58750000000000000000000 [son topl
 
 Bellatrix yükseltmesi, zinciri [Birleşim](/roadmap/merge/)'e hazırlayan [İşaret Zinciri](/roadmap/beacon-chain) için ikinci planlanmış yükseltmeydi. Eylemsizlik ve kesinti yapılabilir saldırıların tam değerlerine yönelik doğrulayıcı cezaları getiriyor. Bellatrix ayrıca, çatallanma seçim kurallarına yönelik, zinciri Birleşim'e ve son iş ispatı bloğundan ilk hisse ispatı bloğuna geçişe hazırlamayı amaçlayan bir yükseltme içeriyor. Bu, mutabakat istemcilerinin 58750000000000000000000 [son toplam zorluk](/glossary/#terminal-total-difficulty) değerinden haberdar edilmesini içerir.
 
-- [Bellatrix yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Bellatrix yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -295,7 +295,7 @@ Arrow Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) bi
 
 Altair yükseltmesi, [İşaret Zinciri](/roadmap/beacon-chain) için ilk planlanmış yükseltmeydi. ''Senkronizasyon komiteleri'' için destek ekleyerek Birleşim'e doğru ilerlerken hafif istemcileri, daha yüksek doğrulayıcı durgunluğunu ve kesme cezalarını mümkün kıldı.
 
-- [Altair yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Altair yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Eğlenceli gerçek! {#altair-fun-fact}
 

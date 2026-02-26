@@ -158,7 +158,7 @@ A testnet for [Starknet](https://www.starknet.io).
 
 ##### Resources
 
-- [Starkscan](https://sepolia.starkscan.co/)
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### Faucets
 

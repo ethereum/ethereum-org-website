@@ -124,4 +124,4 @@ _Ethereum Pectra Upgrade: What Stakers Need to Know — Blockdaemon_
 - [Pectra.wtf info page](https://pectra.wtf)
 - [How Pectra enhances staker experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 info page](https://eip7702.io/)
-- [Pectra devnets](https://github.com/ethereum/pm/blob/master/Pectra/pectra-pm.md)
+- [Pectra devnets](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

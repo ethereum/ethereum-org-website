@@ -158,7 +158,7 @@ Holesky test ağı Eylül 2025 itibarıyla kullanımdan kaldırılmıştır. His
 
 ##### Kaynaklar
 
-- [Starkscan](https://sepolia.starkscan.co/)
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### Musluklar
 

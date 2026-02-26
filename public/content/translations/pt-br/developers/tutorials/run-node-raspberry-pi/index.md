@@ -68,7 +68,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # Hash should output: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Note que as imagens para as placas Rock 5B e Odroid M1 estão disponíveis no Ethereum-On-Arm [página de downloads](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html).
+Note que as imagens para as placas Rock 5B e Odroid M1 estão disponíveis no Ethereum-On-Arm [página de downloads](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/).
 
 ## Instalando o MicroSD {#flashing-the-microsd}
 
@@ -160,7 +160,7 @@ Parabéns, agora você tem um nó Ethereum completo e um validador rodando em um
 
 ## Mais detalhes {#more-details}
 
-Esta página deu uma visão geral de como configurar um nó e validador Geth-Lighthouse usando Raspberry Pi. Instruções mais detalhadas estão disponíveis no [site Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html).
+Esta página deu uma visão geral de como configurar um nó e validador Geth-Lighthouse usando Raspberry Pi. Instruções mais detalhadas estão disponíveis no [site Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/).
 
 ## Agradecemos o feedback {#feedback-appreciated}
 
@@ -178,7 +178,7 @@ Sabemos que o Raspberry Pi tem uma enorme base de usuários, que pode ter um imp
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im
