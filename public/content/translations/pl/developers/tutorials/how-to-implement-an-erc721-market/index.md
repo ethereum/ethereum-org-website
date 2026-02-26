@@ -1,12 +1,8 @@
 ---
-title: Jak wdrożyć rynek ERC-721
-description: Jak umieścić tokenizowane przedmioty w celu sprzedaży w zdecentralizowanym serwisie ogłoszeniowym
-author: "Alberto Cuesta Cañada"
-tags:
-  - "inteligentne kontrakty"
-  - "erc-721"
-  - "solidity"
-  - "tokeny"
+title: "Jak wdrożyć rynek ERC-721"
+description: "Jak umieścić tokenizowane przedmioty w celu sprzedaży w zdecentralizowanym serwisie ogłoszeniowym"
+author: "Alberto Cuesta Cañada"
+tags: [ "smart kontrakty", "erc-721", "solidity", "tokeny" ]
 skill: intermediate
 lang: pl
 published: 2020-03-19
@@ -26,13 +22,13 @@ Blockchain ponownie zmieni te rynki — pozwolę sobie pokazać, w jaki sposób.
 
 Model biznesowy serwisu ogłoszeniowego w publicznym blockchainie będzie musiał różnić się od modelu Ebay i spółki.
 
-Po pierwsze, jest [kąt decentralizacji](/developers/docs/web2-vs-web3/). Istniejące platformy muszą utrzymywać własne serwery. Zdecentralizowana platforma jest utrzymywana przez użytkowników, a zatem koszt obsługi głównej platformy spadnie do zera dla właściciela platformy.
+Po pierwsze, jest [aspekt decentralizacji](/developers/docs/web2-vs-web3/). Istniejące platformy muszą utrzymywać własne serwery. Zdecentralizowana platforma jest utrzymywana przez użytkowników, a zatem koszt obsługi głównej platformy spadnie do zera dla właściciela platformy.
 
-Następnie frontend — strona internetowa lub interfejs dający dostęp do platformy. Tutaj jest wiele możliwości. Właściciele platformy mogą ograniczyć dostęp i zmusić wszystkich do korzystania ze swojego interfejsu, pobierając opłaty. Właściciele platform mogą również zdecydować o otwarciu dostępu (Power to the People!) i pozwolić każdemu budować interfejsy na platformie. Lub właściciele mogliby wybrać jakiekolwiek pośrednie podejście.
+Następnie frontend — strona internetowa lub interfejs dający dostęp do platformy. Tutaj jest wiele możliwości. Właściciele platformy mogą ograniczyć dostęp i zmusić wszystkich do korzystania ze swojego interfejsu, pobierając opłaty. Właściciele platformy mogą również zdecydować się na otwarcie dostępu (Władza w ręce ludu!) i pozwolić każdemu na budowanie interfejsów do platformy. Lub właściciele mogliby wybrać jakiekolwiek pośrednie podejście.
 
 _Liderzy biznesu, którzy mają więcej wizji niż ja, będą wiedzieć, jak na tym zarabiać. Widzę jedynie, że różni się to od status quo i prawdopodobnie jest opłacalne._
 
-Ponadto istnieje kąt automatyzacji i płatności. Niektóre rzeczy mogą być bardzo [skutecznie tokenizowane](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) i sprzedawane w serwisach. Tokenizowane aktywa są łatwo przenoszone w blockchainie. Bardzo skomplikowane metody płatności mogą być łatwo wdrożone w blockchainie.
+Ponadto istnieje kąt automatyzacji i płatności. Niektóre rzeczy można bardzo [skutecznie stokenizować](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) i handlować nimi na tablicy ogłoszeń. Tokenizowane aktywa są łatwo przenoszone w blockchainie. Bardzo skomplikowane metody płatności mogą być łatwo wdrożone w blockchainie.
 
 Po prostu wyczuwam tutaj okazję biznesową. W łatwy sposób można wdrożyć serwis ogłoszeniowy bez kosztów bieżących, ze złożonymi ścieżkami płatności uwzględnionymi w każdej transakcji. Jestem pewien, że ktoś wymyśli, do czego to wykorzystać.
 
@@ -40,9 +36,9 @@ Po prostu cieszę się, że to buduję. Rzućmy okiem na kod.
 
 ## Implementacja {#implementation}
 
-Jakiś czas temu uruchomiliśmy [repozytorium open source](https://github.com/HQ20/contracts?ref=hackernoon.com) z implementacjami zastosowań biznesowych i innymi ciekawymi rzeczami. Rzuć okiem.
+Jakiś czas temu uruchomiliśmy [repozytorium open source](https://github.com/HQ20/contracts?ref=hackernoon.com) z przykładowymi implementacjami biznesowymi i innymi dodatkami. Zachęcamy do zapoznania się.
 
-Kod tego [serwisu ogłoszeniowego Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) jest dostępny, możesz go używać do woli. Pamiętaj tylko, że kod nie został poddany audytowi i musisz zrobić własną analizę due dililgence, zanim włożysz w niego pieniądze.
+Kod tej [tablicy ogłoszeń Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) jest tam dostępny, prosimy, korzystajcie z niego i testujcie go do woli. Pamiętaj tylko, że kod nie został poddany audytowi i musisz zrobić własną analizę due dililgence, zanim włożysz w niego pieniądze.
 
 Podstawy tablicy nie są skomplikowane. Wszystkie reklamy na tablicy będą tylko strukturą z kilkoma polami:
 
@@ -67,7 +63,7 @@ Korzystanie z mapowania oznacza, że przed opublikowaniem tej wiadomości musimy
 
 Następnie pojawia się pytanie, z czym mamy do czynienia i jaka waluta jest wykorzystywana do zapłaty za transakcję.
 
-Jeśli chodzi o przedmioty, zamierzamy tylko poprosić o implementację interfejsu [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), który naprawdę jest sposobem na reprezentowanie realnych pozycji świata w blockchain, chociaż [najlepiej współpracuje z cyfrowymi aktywami](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Zamierzamy określić nasz własny kontrakt ERC721 w konstruktorze, co oznacza, że wszelkie aktywa w naszym serwisie muszą być uprzednio tokenizowane.
+W przypadku przedmiotów będziemy wymagać jedynie implementacji interfejsu [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), który jest po prostu sposobem reprezentacji rzeczywistych przedmiotów w blockchainie, chociaż [najlepiej działa w przypadku aktywów cyfrowych](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Zamierzamy określić nasz własny kontrakt ERC721 w konstruktorze, co oznacza, że wszelkie aktywa w naszym serwisie muszą być uprzednio tokenizowane.
 
 W przypadku płatności zamierzamy zrobić coś podobnego. Większość projektów blockchain definiuje własną kryptowalutę [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Inni wolą korzystać z głównego nurtu takiego jak DAI. W tym serwisie ogłoszeniowym musisz tylko zdecydować podczas budowy, jaka będzie Twoja waluta. Łatwo.
 
@@ -127,18 +123,18 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "Trade can be cancelled only by poster."
+    "Ogłoszenie może być anulowane tylko przez wystawiającego."
   );
-  require(trade.status == "Open", "Trade is not Open.");
+  require(trade.status == "Open", "Ogłoszenie nie jest otwarte.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
   trades[_trade].status = "Cancelled";
   emit TradeStatusChange(_trade, "Cancelled");
 }
 ```
 
-To już wszystko. Dotrwałeś do końca implementacji. To zaskakujące, jak kompaktowe są niektóre pojęcia biznesowe wyrażane w kodzie i jest to jeden z tych przypadków. Sprawdź pełną umowę [w naszym repozytorium](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
+To już wszystko. Dotrwałeś do końca implementacji. To zaskakujące, jak kompaktowe są niektóre pojęcia biznesowe wyrażane w kodzie i jest to jeden z tych przypadków. Sprawdź pełny kontrakt [w naszym repozytorium](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
-## Podsumowanie {#conclusion}
+## Wnioski {#conclusion}
 
 Serwisy ogłoszeniowe to powszechna konfiguracja rynku, która intensywnie rosła wraz z Internetem, stając się niezwykle popularnym modelem biznesowym z kilkoma monopolistycznymi zwycięzcami.
 
@@ -146,4 +142,4 @@ Serwisy ogłoszeniowe stały się również łatwym narzędziem do replikacji w 
 
 W tym artykule podjąłem próbę połączenia realiów biznesowych serwisów ogłoszeniowych z implementacją technologii. Ta wiedza powinna pomóc w stworzeniu wizji i planu implementacji, jeśli masz odpowiednie umiejętności.
 
-Jak zawsze, jeśli chcesz zbudować coś fajnego i chciałbyś otrzymać jakąś radę, proszę [napisz do mnie](https://albertocuesta.es/)! Zawsze chętnie służę pomocą.
+Jak zawsze, jeśli chcecie zbudować coś fajnego i przydałaby Wam się jakaś rada, [skontaktujcie się ze mną](https://albertocuesta.es/)! Zawsze chętnie służę pomocą.
