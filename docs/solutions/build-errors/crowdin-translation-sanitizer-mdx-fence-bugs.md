@@ -184,11 +184,100 @@ The `reverse-engineering-a-contract/index.md` file required full manual reconstr
 | `public/content/translations/fr/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md` | Fixed `\</>` at line 146 |
 | `public/content/translations/fr/developers/tutorials/reverse-engineering-a-contract/index.md` | Full structural reconstruction of lines 581-746 |
 
+---
+
+## Part 2: Follow-Up Build Failures (Patterns 14-15)
+
+> **Date:** 2026-02-27 (same session, second build attempt)
+
+After the Part 1 fixes were pushed and built, two more MDX compilation errors surfaced in the same PR.
+
+### Pattern 14: Translated Word After Bare `<` Breaks MDX Tag Parsing
+
+**Symptom:** `Unexpected character [ (U+005B) in name` on `/fr/developers/tutorials/reverse-engineering-a-contract`
+
+**Root cause:** English has `\<Storage[4]` in markdown tables (opcode stack notation). Crowdin translated "Storage" to "Stockage" AND dropped the backslash escape, producing `<Stockage[4]`. MDX tries to parse `<Stockage` as a component tag, then chokes on `[`.
+
+The existing `restoreDroppedBackslashEscapes` function only matches exact follower text from English. Since `Stockage[4]` != `Storage[4]`, the bare `<` went undetected.
+
+**Fix:** Extended `escapeMdxAngleBrackets` with a new rule:
+
+```typescript
+// Escape < before word containing [ (e.g., <Stockage[4]) -- never valid MDX
+parts[i] = parts[i].replace(/(?<!\\)<([a-zA-Z]+\[)/g, (_, after) => {
+  fixCount++
+  return `\\<${after}`
+})
+```
+
+The pattern `<Word[` is never valid MDX/HTML syntax, so this is safe to escape unconditionally.
+
+### Pattern 15: `fixBackslashBeforeClosingTag` Too Broad -- Strips `\</>`
+
+**Symptom:** `Unexpected closing slash / in tag` on `/fr/developers/tutorials/creating-a-wagmi-ui-for-your-contract`
+
+**Root cause:** The Pattern 12 fix (from Part 1) used regex `[a-zA-Z]*` (zero or more letters), which matched `\</>` -- a JSX fragment with an empty tag name. Stripping the backslash exposed bare `</>` to the MDX parser.
+
+The `\</>` was actually a legitimate escape (placed by `escapeMdxAngleBrackets`) protecting a bare `</>` that sat outside inline code backticks due to a Crowdin backtick misplacement.
+
+**Fix:** Changed quantifier from `*` to `+`:
+
+```typescript
+// Requires at least one letter in tag name -- leaves \</> (JSX fragment) intact
+parts[i] = parts[i].replace(/\\(<\/[a-zA-Z]+>)/g, (_, tag) => {
+```
+
+**Cascading effect:** Once `\</>` was preserved, the existing `repairUnclosedBackticks` function could detect the real problem (odd backtick count on line 146) and fix the misplaced backtick: `` (`<> ...` </>`) `` became `` (`<> ... </>`) ``.
+
+### Key Lesson: Sanitizer Function Interaction
+
+This was a cascading failure:
+1. `fixBackslashBeforeClosingTag` (Pattern 12 fix) stripped `\</>` -- unmasking a bare `</>` in prose
+2. That bare `</>` was actually the symptom of a deeper problem: a misplaced backtick
+3. `repairUnclosedBackticks` could have fixed the backtick, but only if the escapes were intact
+4. Narrowing the regex (Pattern 15 fix) preserved `\</>`, letting `repairUnclosedBackticks` do its job
+
+**Takeaway:** Sanitizer functions form a pipeline. Earlier functions that strip escapes can mask problems that later functions would fix. Each function should only strip escapes it's certain about -- use `+` not `*`, enumerate known tag names, and test with JSX fragments.
+
+### Tests Added (Part 2)
+
+6 new tests in `standalone-fixes.spec.ts`:
+
+| Test | Description |
+|------|-------------|
+| does NOT strip backslash from JSX fragment `\</>` | Verifies `[a-zA-Z]+` excludes empty tag names |
+| escapes bare `<` before word containing `[` | `<Stockage[4]` -> `\<Stockage[4]` |
+| escapes multiple bare `<` before `word[` patterns | 2 occurrences in one string |
+| leaves already-escaped `\<Word[` unchanged | No double-escaping |
+| skips `<Word[` inside code blocks | Preserves code fence content |
+| does not escape valid MDX component tags | `<Card>` left alone |
+
+**Test results:** All 116 sanitizer tests pass (61 standalone + 22 warnings + 33 other).
+
+### Additional Files Changed (Part 2)
+
+| File | Change |
+|------|--------|
+| `src/scripts/i18n/post_import_sanitize.ts` | Extended `escapeMdxAngleBrackets` (+1 rule); narrowed `fixBackslashBeforeClosingTag` (`*` -> `+`) |
+| `tests/unit/sanitizer/standalone-fixes.spec.ts` | 6 new tests |
+| `docs/solutions/integration-issues/sanitizer-test-research.md` | Added patterns 14 and 15 |
+| `public/content/translations/fr/.../reverse-engineering-a-contract/index.md` | `<Stockage[4]` escaped (lines 472-473) |
+| `public/content/translations/fr/.../creating-a-wagmi-ui-for-your-contract/index.md` | Backtick fixed (line 146) |
+
+### Prevention: Regex Safety Rules for Sanitizer Functions
+
+1. **Use `+` not `*`** when matching tag names -- empty matches cause unintended stripping
+2. **Test with JSX fragments** (`<>`, `</>`) as edge cases for any HTML tag regex
+3. **Test idempotency** -- `sanitize(sanitize(x))` should equal `sanitize(x)`
+4. **Test function composition** -- run functions in sequence and verify escapes survive
+5. **Run `npx tsc --noEmit`** before pushing -- catches unused variables the test runner misses
+
 ## Cross-References
 
-- [Sanitizer Test Research: Pattern Catalog](../integration-issues/sanitizer-test-research.md) -- Patterns 12 and 13
+- [Sanitizer Test Research: Pattern Catalog](../integration-issues/sanitizer-test-research.md) -- Patterns 12-15
 - [Post-Import Sanitizer Bugs Found During Japanese Review](../integration-issues/post-import-sanitizer-bugs-found-japanese-review.md) -- Prior sanitizer bug documentation
 - [Crowdin Import Review Agent Calibration](../integration-issues/crowdin-import-review-agent-calibration.md) -- Agent calibration for translation reviews
 - [Crowdin File Path Mapping and Review Workflow](../integration-issues/crowdin-file-path-mapping-and-review-workflow.md) -- Full review pipeline documentation
+- [French Import Review](../integration-issues/crowdin-french-import-review-pr-17125.md) -- Comprehensive FR import context
 - PR #17125 -- French Crowdin import (source of these bugs)
 - PR #17654 -- Sanitizer test infrastructure (where test framework was established)
