@@ -19,6 +19,8 @@
 | 9 | Simplified Chinese contamination in zh-tw | zh-tw #17544 | `着` (simplified) instead of `著` (traditional) | Medium — wrong variant |
 | 10 | "Gas" translated as "Sprit" (gasoline) in German | de #17389 | 31 replacements needed across files | Medium — semantic error |
 | 11 | Dropped glossary links during translation | ur #17467 | Entire `<a href>` tag removed, only text remains | High — loses links |
+| 12 | Backslash before closing HTML tag | fr #17125 | `<strong>Bon à savoir\</strong>` — backslash inserted before `</` | Critical — breaks MDX compilation |
+| 13 | Code fence drift — comments inside fence, code outside | fr #17125 | Crowdin puts translated comment inside `` ```python `` fence, leaves actual Python code as raw MDX | Critical — breaks MDX compilation |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
@@ -42,6 +44,8 @@ These patterns are covered by existing fix functions and should have regression 
 - **Code fence drift** (`warnCodeFenceContentDrift`)
 - **Backslash escape restoration** (`restoreDroppedBackslashEscapes`)
 - **Unclosed backtick repair** (`repairUnclosedBackticks`)
+- **Backslash before closing tag** (`fixBackslashBeforeClosingTag`) — `\</strong>` → `</strong>`
+- **Catastrophic code fence drift detection** (`warnCatastrophicCodeFenceDrift`) — prose/code boundaries swapped
 
 ## Recommendations for Future Sanitizer Iteration
 
