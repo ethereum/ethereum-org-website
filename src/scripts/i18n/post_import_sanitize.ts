@@ -269,9 +269,7 @@ function fixBrandTags(
 
     // Targeted replacement: find the exact quoted tag in frontmatter and replace
     // Match the tag with its surrounding quotes to avoid false positives
-    const quotedTagRe = new RegExp(
-      `(["'])${escapeRegex(transTag)}\\1`
-    )
+    const quotedTagRe = new RegExp(`(["'])${escapeRegex(transTag)}\\1`)
     if (quotedTagRe.test(updatedFm)) {
       updatedFm = updatedFm.replace(quotedTagRe, `$1${canonical}$1`)
       fixCount++
@@ -393,23 +391,17 @@ function fixEscapedBoldAndItalic(content: string): {
       if (lines[j].trimStart().startsWith("|")) continue
 
       // Fix escaped bold first: \*\*text\*\* → **text**
-      lines[j] = lines[j].replace(
-        /\\\*\\\*(.+?)\\\*\\\*/g,
-        (_, inner) => {
-          fixCount++
-          return `**${inner}**`
-        }
-      )
+      lines[j] = lines[j].replace(/\\\*\\\*(.+?)\\\*\\\*/g, (_, inner) => {
+        fixCount++
+        return `**${inner}**`
+      })
 
       // Fix escaped italic: \*text\* → *text*
       // Runs after bold fix, so remaining \* pairs are italic
-      lines[j] = lines[j].replace(
-        /\\\*(.+?)\\\*/g,
-        (_, inner) => {
-          fixCount++
-          return `*${inner}*`
-        }
-      )
+      lines[j] = lines[j].replace(/\\\*(.+?)\\\*/g, (_, inner) => {
+        fixCount++
+        return `*${inner}*`
+      })
     }
     parts[i] = lines.join("\n")
   }
@@ -475,9 +467,7 @@ function warnCodeFenceContentDrift(
 
   for (let i = 0; i < engFences.length; i++) {
     if (engFences[i].body !== transFences[i].body) {
-      const preview = transFences[i].body
-        .substring(0, 60)
-        .replace(/\n/g, "\\n")
+      const preview = transFences[i].body.substring(0, 60).replace(/\n/g, "\\n")
       warnings.push(
         `Code fence #${i + 1} content differs from English: "${preview}..."`
       )
@@ -1636,7 +1626,7 @@ function fixBackslashBeforeClosingTag(content: string): {
     if (i % 2 === 1) continue // Skip code blocks
 
     // Match backslash immediately before </ (closing HTML tag) or </>
-    parts[i] = parts[i].replace(/\\(<\/[a-zA-Z]*>)/g, (_match, tag) => {
+    parts[i] = parts[i].replace(/\\(<\/[a-zA-Z]*>)/g, (_, tag) => {
       fixCount++
       return tag
     })
