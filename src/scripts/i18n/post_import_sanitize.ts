@@ -488,6 +488,100 @@ function warnCodeFenceContentDrift(
 }
 
 /**
+ * Detects catastrophic code fence drift where Crowdin has structurally
+ * mangled the interleaving of prose and code blocks. Signals include:
+ * - Translated fence bodies contain natural language instead of code
+ * - Programming keywords appear outside code fences
+ * - Heading anchor IDs ({#id}) are detached from heading lines
+ */
+function warnCatastrophicCodeFenceDrift(
+  translatedContent: string,
+  englishContent: string
+): string[] {
+  const warnings: string[] = []
+
+  const extractCodeFences = (
+    content: string
+  ): Array<{ lang: string; body: string; lineCount: number }> => {
+    const fences: Array<{ lang: string; body: string; lineCount: number }> = []
+    const re = /```(\w*)\n([\s\S]*?)```/g
+    let match
+    while ((match = re.exec(content))) {
+      const body = match[2].trim()
+      fences.push({
+        lang: match[1] || "",
+        body,
+        lineCount: body.split("\n").length,
+      })
+    }
+    return fences
+  }
+
+  // Code keywords that should only appear inside fences
+  const codeKeywords =
+    /^(?:def |class |if |elif |else:|while |for |return |require |revert |import |from |call |log )/m
+
+  const engFences = extractCodeFences(englishContent)
+  const transFences = extractCodeFences(translatedContent)
+
+  // Check 1: Fence bodies that look like prose instead of code
+  if (engFences.length === transFences.length) {
+    let proseInFenceCount = 0
+    for (let i = 0; i < engFences.length; i++) {
+      const engHasCode = codeKeywords.test(engFences[i].body)
+      const transHasCode = codeKeywords.test(transFences[i].body)
+      const transIsShort = transFences[i].lineCount <= 2
+      const engIsLong = engFences[i].lineCount >= 3
+
+      if (engHasCode && !transHasCode && transIsShort && engIsLong) {
+        proseInFenceCount++
+      }
+    }
+
+    if (proseInFenceCount >= 1) {
+      warnings.push(
+        `CATASTROPHIC code fence drift: ${proseInFenceCount} fences contain prose instead of code. ` +
+          `File needs structural reconstruction from English source.`
+      )
+    }
+  }
+
+  // Check 2: Code keywords outside fences in translated content
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = translatedContent.split(codeBlockPattern)
+  let codeOutsideFenceCount = 0
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+    const globalKeywords =
+      /^(?:def |class |if |elif |else:|while |for |return |require |revert |import |from |call |log )/gm
+    const matches = parts[i].match(globalKeywords)
+    if (matches) codeOutsideFenceCount += matches.length
+  }
+
+  if (codeOutsideFenceCount >= 3) {
+    warnings.push(
+      `CATASTROPHIC code fence drift: ${codeOutsideFenceCount} code keyword occurrences found outside fences. ` +
+        `Code blocks may have been inverted with prose.`
+    )
+  }
+
+  // Check 3: Detached heading anchor IDs
+  const anchorIdPattern = /\{#[\w-]+\}/g
+  const lines = translatedContent.split("\n")
+  for (const line of lines) {
+    const anchors = line.match(anchorIdPattern)
+    if (anchors && !line.match(/^#{1,6}\s/)) {
+      warnings.push(
+        `Detached heading anchor: "${anchors[0]}" not on a heading line: "${line.substring(0, 80)}"`
+      )
+    }
+  }
+
+  return warnings
+}
+
+/**
  * Fix broken markdown links where there's a space between ] and (.
  * Pattern: ] (https://... → ](https://...
  * This is a common translation artifact from Crowdin.
@@ -1528,6 +1622,29 @@ function restoreDroppedBackslashEscapes(
  * Removes excess closers from right-to-left (last occurrence first) so that
  * correctly-paired closers near their openers are preserved.
  */
+function fixBackslashBeforeClosingTag(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Split content to preserve code blocks (fenced and inline)
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match backslash immediately before </ (closing HTML tag) or </>
+    parts[i] = parts[i].replace(/\\(<\/[a-zA-Z]*>)/g, (_match, tag) => {
+      fixCount++
+      return tag
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
 function removeOrphanedClosingTags(content: string): {
   content: string
   fixCount: number
@@ -1718,6 +1835,10 @@ function processMarkdownFile(
     (n) => `Escaped ${n} raw angle brackets in prose`
   )
   applyFix(
+    () => fixBackslashBeforeClosingTag(content),
+    (n) => `Fixed ${n} backslash-before-closing-tag artifacts`
+  )
+  applyFix(
     () => removeOrphanedClosingTags(content),
     (n) => `Removed ${n} orphaned closing HTML tags`
   )
@@ -1792,6 +1913,12 @@ function processMarkdownFile(
     // Warn on code fence content drift (translated code blocks)
     const codeFenceWarnings = warnCodeFenceContentDrift(content, englishMd)
     issues.push(...codeFenceWarnings)
+
+    const catastrophicDriftWarnings = warnCatastrophicCodeFenceDrift(
+      content,
+      englishMd
+    )
+    issues.push(...catastrophicDriftWarnings)
 
     // Detect cross-script contamination
     if (locale) {
@@ -2128,7 +2255,9 @@ export const _testOnly = {
   fixCollapsedComponentLineBreaks,
   // Warnings
   warnPunctuationOnlyHeadings,
+  fixBackslashBeforeClosingTag,
   warnCodeFenceContentDrift,
+  warnCatastrophicCodeFenceDrift,
   detectCrossScriptContamination,
   // Utilities
   toAsciiId,
