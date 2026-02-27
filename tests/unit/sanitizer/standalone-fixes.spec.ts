@@ -508,5 +508,43 @@ test.describe("Standalone Fixes", () => {
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
+
+    test("skips <digit inside inline backticks", () => {
+      const input =
+        "nibble `1` and nibbles `01` (both stored as `<01>`). To specify odd length"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips <hex inside inline backtick with long content", () => {
+      const input =
+        "`keccak256(<6661e9d6b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("escapes <digit in prose but not in adjacent inline code", () => {
+      const input = "Use `<01>` for values <5GB"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe("Use `<01>` for values &lt;5GB")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles broken backtick parity without corrupting later code spans", () => {
+      // Regression: patricia-merkle-trie line 82 had odd backtick count
+      // `[ v0 ...` v15, vt ]` (Crowdin split the code span)
+      // This caused parity flip, making `<01>` on line 92 land in prose
+      const input = [
+        "`branch` node `[ v0 ...` v15, vt ]`",
+        "stored as `<01>`) to specify",
+      ].join("\n")
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      // The <01> is inside backticks and must NOT be escaped,
+      // even though a broken backtick span above disrupts parity
+      expect(content).not.toContain("&lt;01>")
+      expect(fixCount).toBe(0)
+    })
   })
 })
