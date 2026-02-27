@@ -90,7 +90,7 @@ const StrongGreaterThan = (chunks: React.ReactNode) => (
 )
 
 type CardDetails = Required<Pick<CardProps, "title" | "link" | "image">> &
-  Pick<CardProps, "className" | "alt">
+  Pick<CardProps, "className">
 
 type Node = {
   readonly name: string
