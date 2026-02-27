@@ -1,5 +1,6 @@
 "use client"
 
+import { useMemo } from "react"
 import { useLocale } from "next-intl"
 
 import type { Lang, LocaleDisplayInfo } from "@/lib/types"
@@ -24,9 +25,11 @@ export const useLanguagesDisplayInfo = (): LocaleDisplayInfo[] => {
   // has fallbacks using Intl.DisplayNames
   const { t } = useTranslation("common")
 
-  if (!FILTERED_LOCALES?.length) return []
+  return useMemo(() => {
+    if (!FILTERED_LOCALES?.length) return []
 
-  return (FILTERED_LOCALES as Lang[]).map((localeOption) => {
-    return localeToDisplayInfo(localeOption, locale as Lang, t)
-  })
+    return (FILTERED_LOCALES as Lang[]).map((localeOption) => {
+      return localeToDisplayInfo(localeOption, locale as Lang, t)
+    })
+  }, [locale, t])
 }

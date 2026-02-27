@@ -2,6 +2,7 @@
 
 import * as React from "react"
 
+import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { PersistentPanel } from "@/components/ui/persistent-panel"
 import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -80,9 +81,31 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
         data-testid="mobile-menu-dialog"
       >
         {hasBeenOpened && (
-          <React.Suspense fallback={<MobileMenuContentSkeleton />}>
-            <MobileMenuContent />
-          </React.Suspense>
+          <ErrorBoundary
+            fallback={({ reset }) => (
+              <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
+                <p className="text-body-medium">Failed to load menu</p>
+                <div className="flex gap-3">
+                  <button
+                    className="rounded-md bg-primary px-4 py-2 text-sm text-white hover:bg-primary-hover"
+                    onClick={reset}
+                  >
+                    Try again
+                  </button>
+                  <button
+                    className="rounded-md border border-body-light px-4 py-2 text-sm text-body hover:bg-background-highlight"
+                    onClick={() => handleOpenChange(false)}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
+          >
+            <React.Suspense fallback={<MobileMenuContentSkeleton />}>
+              <MobileMenuContent />
+            </React.Suspense>
+          </ErrorBoundary>
         )}
       </PersistentPanel>
     </Sheet>
