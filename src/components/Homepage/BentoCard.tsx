@@ -14,7 +14,6 @@ export type BentoCardProps = HTMLAttributes<HTMLDivElement> & {
   action: string
   href: string
   imgSrc: StaticImageData
-  imgAlt: string
   imgWidth?: number
   imgHeight?: number
   title: string
@@ -28,7 +27,6 @@ const BentoCard = ({
   className,
   href,
   imgSrc,
-  imgAlt,
   imgWidth,
   imgHeight,
   title,
@@ -42,7 +40,7 @@ const BentoCard = ({
     )}
   >
     <Center>
-      <Image src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} />
+      <Image src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
     </Center>
     <div>
       <CardTitle variant="black" className="mb-2">
