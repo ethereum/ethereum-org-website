@@ -469,8 +469,8 @@ Voyons ce qui se passe si la fonction _obtient_ les données d'appel dont elle a
 |      172 | DUP2         | 0x04 calldataload(4) 0x04 calldataload(4) 0xDA                                                                                                                                |
 |      173 | SLOAD        | Stockage[4] calldataload(4) 0x04 calldataload(4) 0xDA                                                                     |
 |      174 | DUP2         | calldataload(4) Stockage[4] calldataload(4) 0x04 calldataload(4) 0xDA                                  |
-|      175 | LT           | calldataload(4)<Stockage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
-|      176 | PUSH2 0x017e | 0x017EC calldataload(4)<Stockage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
+|      175 | LT           | calldataload(4)\<Stockage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
+|      176 | PUSH2 0x017e | 0x017EC calldataload(4)\<Stockage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
 |      179 | JUMPI        | calldataload(4) 0x04 calldataload(4) 0xDA                                                                                                                                     |
 
 Si le premier mot n'est pas inférieur à Stockage[4], la fonction échoue. Elle annule sans valeur retournée :
