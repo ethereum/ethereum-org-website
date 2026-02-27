@@ -25,6 +25,7 @@ const {
   isInternalHref,
   splitIntoBlocks,
   fixBackslashBeforeClosingTag,
+  fixAsymmetricBackticks,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -544,6 +545,56 @@ test.describe("Standalone Fixes", () => {
       // The <01> is inside backticks and must NOT be escaped,
       // even though a broken backtick span above disrupts parity
       expect(content).not.toContain("&lt;01>")
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixAsymmetricBackticks", () => {
+    test("fixes single-open double-close backtick pattern", () => {
+      // Regression: Crowdin doubled the closing backtick in erc-721-vyper tutorial
+      // `self.<имя переменной>`` → `self.<имя переменной>`
+      const input =
+        "Используйте `self.<имя переменной>`` (опять же, как и в Python)."
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe(
+        "Используйте `self.<имя переменной>` (опять же, как и в Python)."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not touch valid double-backtick code spans", () => {
+      // ``sender`` is a valid double-backtick code span
+      const input = "токенов ``sender`` не менее"
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch triple backtick fences", () => {
+      const input = "```python\ncode here\n```"
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("fixes asymmetric backtick at end of line", () => {
+      const input = "Use `command``"
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe("Use `command`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves balanced single backticks unchanged", () => {
+      const input = "Use `self.<variable name>` as in Python."
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips content inside fenced code blocks", () => {
+      const input = "```\n`broken``\n```"
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
   })

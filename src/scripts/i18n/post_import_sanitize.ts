@@ -1645,6 +1645,52 @@ function restoreDroppedBackslashEscapes(
  * Removes excess closers from right-to-left (last occurrence first) so that
  * correctly-paired closers near their openers are preserved.
  */
+
+/**
+ * Fix asymmetric backtick pairs where Crowdin doubled the closing backtick.
+ * Pattern: `content`` → `content` (single-open, double-close)
+ *
+ * Does NOT touch:
+ * - Valid double-backtick code spans: ``content`` (double-open, double-close)
+ * - Triple-backtick fences: ```
+ * - Already balanced single-backtick spans: `content`
+ */
+function fixAsymmetricBackticks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+  const lines = content.split("\n")
+  let inFencedBlock = false
+
+  for (let lineIdx = 0; lineIdx < lines.length; lineIdx++) {
+    const line = lines[lineIdx]
+
+    // Track fenced code block boundaries
+    if (/^(`{3,}|~{3,})/.test(line)) {
+      inFencedBlock = !inFencedBlock
+      continue
+    }
+    if (inFencedBlock) continue
+
+    // Match single-open, double-close: `content`` (not preceded or followed by `)
+    // (?<!`) ensures the opening backtick is single (not part of ``)
+    // [^`]+ matches the code content (no backticks inside)
+    // ``(?!`) ensures exactly two closing backticks (not part of ```)
+    const asymmetricRe = /(?<!`)(`[^`]+`)`(?!`)/g
+    const fixed = line.replace(asymmetricRe, (_, correctSpan) => {
+      fixCount++
+      return correctSpan
+    })
+
+    if (fixed !== line) {
+      lines[lineIdx] = fixed
+    }
+  }
+
+  return { content: lines.join("\n"), fixCount }
+}
+
 function fixBackslashBeforeClosingTag(content: string): {
   content: string
   fixCount: number
@@ -1853,6 +1899,10 @@ function processMarkdownFile(
   applyFix(
     () => fixTickerTranspositions(content),
     (n) => `Fixed ${n} ticker symbol transpositions`
+  )
+  applyFix(
+    () => fixAsymmetricBackticks(content),
+    (n) => `Fixed ${n} asymmetric backtick pairs`
   )
   applyFix(
     () => escapeMdxAngleBrackets(content),
@@ -2264,6 +2314,7 @@ export const _testOnly = {
   normalizeFrontmatterDates,
   quoteFrontmatterNonAscii,
   normalizeBlockHtmlLines,
+  fixAsymmetricBackticks,
   // English-comparison fixes
   syncHeaderIdsWithEnglish,
   fixTranslatedHrefs,
