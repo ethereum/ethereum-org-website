@@ -21,6 +21,8 @@
 | 11 | Dropped glossary links during translation | ur #17467 | Entire `<a href>` tag removed, only text remains | High — loses links |
 | 12 | Backslash before closing HTML tag | fr #17125 | `<strong>Bon à savoir\</strong>` — backslash inserted before `</` | Critical — breaks MDX compilation |
 | 13 | Code fence drift — comments inside fence, code outside | fr #17125 | Crowdin puts translated comment inside `` ```python `` fence, leaves actual Python code as raw MDX | Critical — breaks MDX compilation |
+| 14 | Translated word after bare `<` breaks MDX tag parsing | fr #17125 | `<Stockage[4]` — Crowdin translates `Storage` to `Stockage` but drops `\` escape before `<` | Critical — breaks MDX compilation |
+| 15 | `fixBackslashBeforeClosingTag` too broad — strips `\</>` | fr #17125 | `\</>` in prose is a legitimate escape; stripping `\` exposes bare `</>` to MDX | Critical — breaks MDX compilation |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
