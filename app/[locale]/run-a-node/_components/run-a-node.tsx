@@ -309,7 +309,9 @@ const RunANodePage = ({
                 <Translation id="page-run-a-node:page-run-a-node-what-title" />
               </H2>
               <H3>{t("page-run-a-node-what-1-subtitle")}</H3>
-              <Text>{t("page-run-a-node-what-1-text")}</Text>
+              <Text>
+                <Translation id="page-run-a-node:page-run-a-node-what-1-text" />
+              </Text>
               <H3>{t("page-run-a-node-what-2-subtitle")}</H3>
               <Text>{t("page-run-a-node-what-2-text")}</Text>
               <H3>{t("page-run-a-node-what-3-subtitle")}</H3>

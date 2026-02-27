@@ -218,4 +218,3 @@ Espacio de Twitter:
 Artículos:
 
 - [Construir ETHKL, por Danny H.](https://sekto.tech/ethkl24)
-- [Manual de creación de eventos de POKT](https://docs.pokt.network/community/pokt-events-playbook)

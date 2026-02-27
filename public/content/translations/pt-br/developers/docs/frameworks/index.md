@@ -114,8 +114,6 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 
 **Catapulta -** **_Ferramenta de contrato inteligente em várias cadeias que automatiza a verificação em exploradores de blocos, monitora os contratos inteligentes e compartilha relatórios de implementação desse contratos plug-n-play para projetos Foundry e Hardhat._**
 
-- [Website](https://catapulta.sh/)
-- [Documentação](https://catapulta.sh/docs)
 - [GitHub](https://github.com/catapulta-sh)
 
 **Covalent -** **_APIs de blockchain enriquecidas para mais de 200 redes._**

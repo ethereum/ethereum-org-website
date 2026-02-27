@@ -46,9 +46,6 @@ export const GITHUB_BASE_API =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
 export const GITHUB_URL = `https://github.com/`
-export const COINGECKO_API_BASE_URL =
-  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
-export const COINGECKO_API_URL_PARAMS = `&order=market_cap_desc&per_page=250&page=1&sparkline=false&x_cg_demo_api_key=${process.env.COINGECKO_API_KEY}`
 export const COLOR_MODE_STORAGE_KEY = "theme"
 
 // API timing
@@ -68,11 +65,6 @@ export const TOTAL_QUIZ_RETRY_RATE = 15.6
 
 // Crowdin
 export const CROWDIN_PROJECT_URL = "https://crowdin.com/project/ethereum-org"
-export const CROWDIN_PROJECT_ID = 363359
-export const CROWDIN_API_MAX_LIMIT = 500
-export const FIRST_CROWDIN_CONTRIBUTION_DATE = "2019-07-01T00:00:00+00:00"
-
-export const languagePathRootRegExp = /^.+\/content\/translations\/[a-z-]*\//
 
 // Metrics
 export const DAYS_TO_FETCH = 1

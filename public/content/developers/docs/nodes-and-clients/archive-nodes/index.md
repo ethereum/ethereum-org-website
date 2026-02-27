@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-An archive node is an instance of an Ethereum client configured to build an archive of all historical states. It is a useful tool for certain use cases but might be more tricky to run than a full node.
+An archive node is an instance of an [Ethereum](/) client configured to build an archive of all historical states. It is a useful tool for certain use cases but might be more tricky to run than a full node.
 
 ## Prerequisites {#prerequisites}
 

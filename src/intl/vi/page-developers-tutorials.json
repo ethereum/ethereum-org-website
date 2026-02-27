@@ -18,5 +18,11 @@
   "page-tutorial-advanced": "Nâng cao",
   "page-find-wallet-try-removing": "Thử xóa một hoặc hai tính năng",
   "page-find-wallet-clear": "Xóa bộ lọc",
-  "page-tutorials-env-banner": "Không ủy thác <code>.env</code>! Làm ơn chắc chắn rằng bạn không chia sẻ hoặc tiết lộ tệp <code>.env</code> với bất kì ai, bởi bạn đang làm tổn hại bí mật của mình nếu làm như thế. Nếu bạn đang sử dụng bản tự kiểm soát, thêm <code>.env</code> vào tệp <a href=\"https://git-scm.com/docs/gitignore\"> gitignore</a>."
+  "page-tutorials-env-banner": "Không ủy thác <code>.env</code>! Làm ơn chắc chắn rằng bạn không chia sẻ hoặc tiết lộ tệp <code>.env</code> với bất kì ai, bởi bạn đang làm tổn hại bí mật của mình nếu làm như thế. Nếu bạn đang sử dụng bản tự kiểm soát, thêm <code>.env</code> vào tệp <a href=\"https://git-scm.com/docs/gitignore\"> gitignore</a>.",
+  "page-tutorial-all": "Tất cả",
+  "page-tutorial-topics": "Chủ đề",
+  "page-tutorial-search-placeholder": "Tìm kiếm hướng dẫn...",
+  "page-tutorial-filtering-by": "Lọc theo:",
+  "page-tutorial-more-tags": "+{count} thêm",
+  "page-tutorials-available": "Các hướng dẫn có sẵn"
 }

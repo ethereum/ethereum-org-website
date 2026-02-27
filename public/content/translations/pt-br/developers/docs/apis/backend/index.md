@@ -74,7 +74,6 @@ Essas bibliotecas abstraem muito da complexidade de interagir diretamente com um
 **NOWNodes - _Nós Completos e Exploradores de Blocos._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentação](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
 **QuickNode -** **_Infraestrutura Blockchain como Serviço._**
 
@@ -111,7 +110,7 @@ Essas bibliotecas abstraem muito da complexidade de interagir diretamente com um
 
 **Python Tooling -** **_Variedade de bibliotecas para interação com a Ethereum via Python._**
 
-- [py.ethereum.org](https://python.ethereum.org/)
+- [py.ethereum.org](https://snakecharmers.ethereum.org)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 

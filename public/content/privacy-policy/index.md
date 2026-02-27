@@ -82,7 +82,7 @@ Any processing of this technical personal data helps us to identify what is work
 
 **3.4 Opening an account for the Ethereum Web Forum**
 
-To access our forums at https://forum.ethereum.org/ you must set up an account and provide us with your username, e-mail address, skype name, and password.
+To access our forums at [https://forum.ethereum.org/](https://wayback.archive-it.org/16516/20210618210825/) you must set up an account and provide us with your username, e-mail address, skype name, and password.
 
 The collected data, which you have voluntarily provided, is used for the purpose of providing your password-protected access to your base data we have stored. The legal basis for processing the data for this purpose lies in the consent you have provided in accordance with Art. 6 Par. 1 lit. a GDPR.
 

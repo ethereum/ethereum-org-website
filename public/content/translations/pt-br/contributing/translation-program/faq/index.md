@@ -104,7 +104,7 @@ Recomendamos que deixe nomes de marcas, empresas e pessoas sem tradução, visto
 
 Para garantir um certo nível de qualidade e consistência nas nossas traduções, trabalhamos com a [Acolad](https://www.acolad.com/), uma das maiores empresas de serviços linguísticos no mundo. A Acolad conta com 20.000 linguistas profissionais, o que significa que ela pode fornecer revisores profissionais para cada idioma e tipo de conteúdo de que precisamos.
 
-O processo de revisão é simples: uma vez que um determinado [lote de conteúdo](/contributing/translation-program/content-buckets) é 100% traduzido, pedimos uma revisão desse conteúdo. O processo de revisão ocorre diretamente no Crowdin. Uma vez que a revisão é concluída, atualizamos o site com o conteúdo traduzido.
+O processo de revisão é simples: uma vez que um determinado [lote de conteúdo](/contributing/translation-program/) é 100% traduzido, pedimos uma revisão desse conteúdo. O processo de revisão ocorre diretamente no Crowdin. Uma vez que a revisão é concluída, atualizamos o site com o conteúdo traduzido.
 
 ## Como faço para adicionar conteúdo no meu idioma? {#adding-foreign-language-content}
 

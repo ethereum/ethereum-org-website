@@ -154,3 +154,9 @@ export const getAccountHolders = createCachedGetter(
   ["account-holders"],
   CACHE_REVALIDATE_DAY
 )
+
+export const getTranslationGlossary = createCachedGetter(
+  dataLayer.getTranslationGlossary,
+  ["translation-glossary"],
+  CACHE_REVALIDATE_DAY
+)

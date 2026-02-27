@@ -37,7 +37,7 @@ Remix IDE، Solidity اور Vyper دونوں میں کنٹریکٹس بنانے 
 - [Solidity لینگویج پورٹل](https://soliditylang.org/)
 - [Solidity بہ مثال](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter چیٹ روم](https://gitter.im/ethereum/solidity) سے [Solidity Matrix چیٹ روم](https://matrix.to/#/#ethereum_solidity:gitter.im) پر برج کیا گیا۔
+- [Solidity Matrix چیٹ روم](https://gitter.im/ethereum/solidity) سے [Solidity Matrix چیٹ روم](https://matrix.to/#/#ethereum_solidity:gitter.im) پر برج کیا گیا۔
 - [چیٹ شیٹ](https://reference.auditless.com/cheatsheet)
 - [Solidity بلاگ](https://blog.soliditylang.org/)
 - [Solidity ٹویٹر](https://twitter.com/solidity_lang)
