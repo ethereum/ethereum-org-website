@@ -53,6 +53,59 @@ test.describe("English Comparison Fixes", () => {
       const result = syncHeaderIdsWithEnglish(translated, english)
       expect(result).toContain("{#uber-uns}")
     })
+
+    test("preserves blank lines after headers with duplicate IDs", () => {
+      // Regression: dao/index.md has multiple headers sharing {#governance-example}.
+      // The regex captured trailing \n in fullMatch, and .replace() with duplicate
+      // fullMatch values double-stripped newlines from the first occurrence,
+      // merging the header with its following paragraph.
+      const english = [
+        "### Delegation {#governance-delegation}",
+        "",
+        "Delegation is like representative democracy.",
+        "",
+        "#### A famous example {#governance-example}",
+        "",
+        "[ENS](https://ens.domains) - ENS holders can delegate.",
+        "",
+        "### Automatic governance {#governance-example}",
+        "",
+        "In many DAOs transactions execute automatically.",
+        "",
+        "#### A famous example {#governance-example}",
+        "",
+        "[Nouns](https://nouns.wtf) - automatic execution.",
+      ].join("\n")
+      const translated = [
+        "### Delegirovanie {#governance-delegation}",
+        "",
+        "Delegirovanie - primer demokratii.",
+        "",
+        "#### Izvestnyj primer {#governance-example}",
+        "",
+        "[ENS](https://ens.domains) - vladeltsy ENS.",
+        "",
+        "### Avtomaticheskoe upravlenie {#governance-example}",
+        "",
+        "Vo mnogih DAO tranzakcii vypolnyayutsya.",
+        "",
+        "#### Izvestnyj primer {#governance-example}",
+        "",
+        "[Nouns](https://nouns.wtf) - avtomaticheskoe.",
+      ].join("\n")
+      const result = syncHeaderIdsWithEnglish(translated, english)
+      // Both h4 headers must retain blank lines after them
+      expect(result).toContain(
+        "#### Izvestnyj primer {#governance-example}\n\n[ENS]"
+      )
+      expect(result).toContain(
+        "#### Izvestnyj primer {#governance-example}\n\n[Nouns]"
+      )
+      // No line merging -- header must not be joined with paragraph
+      expect(result).not.toMatch(
+        /#### Izvestnyj primer \{#governance-example\}\[/
+      )
+    })
   })
 
   test.describe("fixBrandTags", () => {
@@ -219,6 +272,53 @@ test.describe("English Comparison Fixes", () => {
       )
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
+    })
+
+    test("preserves blank lines with multiple same-level headers", () => {
+      // Regression: dao/index.md had multiple h4 headers; the function
+      // must not remove existing blank lines when English also has them
+      const english = [
+        "#### A famous example {#governance-example}",
+        "",
+        "[ENS](https://claim.ens.domains/delegate-ranking) - ENS holders",
+        "",
+        "### Automatic governance {#auto-governance}",
+        "",
+        "In many DAOs transactions execute automatically",
+        "",
+        "#### A famous example {#governance-example-2}",
+        "",
+        "[Nouns](https://nouns.wtf/) - automatic execution",
+      ].join("\n")
+      const translated = [
+        "#### Izvestnyj primer {#governance-example}",
+        "",
+        "[ENS](https://claim.ens.domains/delegate-ranking) - vladeltsy",
+        "",
+        "### Avtomaticheskoe upravlenie {#auto-governance}",
+        "",
+        "Vo mnogih DAO tranzakcii vypolnyayutsya avtomaticheski",
+        "",
+        "#### Izvestnyj primer {#governance-example-2}",
+        "",
+        "[Nouns](https://nouns.wtf/) - avtomaticheskoe vypolnenie",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // All blank lines already present -- nothing should change
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not remove blank lines translation has but English lacks", () => {
+      // Function should only ADD blank lines, never remove them
+      const english = "#### Example {#ex}\nContent without blank line"
+      const translated = "#### Primer {#ex}\n\nContent with blank line"
+      const { content } = restoreBlankLinesFromEnglish(translated, english)
+      // Translation's blank line must be preserved
+      expect(content).toContain("#### Primer {#ex}\n\nContent with blank line")
     })
   })
 

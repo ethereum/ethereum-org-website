@@ -754,7 +754,7 @@ interface HeaderInfo {
 
 function extractHeaderStructure(md: string): HeaderInfo[] {
   const headers: HeaderInfo[] = []
-  const headingRe = /^(#{1,6})\s+(.+?)\s*\{#([^}]+)\}\s*$/gm
+  const headingRe = /^(#{1,6})\s+(.+?)\s*\{#([^}]+)\}[ \t]*$/gm
   let m: RegExpExecArray | null
   while ((m = headingRe.exec(md))) {
     headers.push({
@@ -1527,39 +1527,66 @@ function escapeMdxAngleBrackets(content: string): {
 } {
   let fixCount = 0
 
-  // Split content to preserve code blocks
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  // Process line-by-line, tracking fenced code block state.
+  // This avoids a global split where a broken backtick on one line
+  // (odd count from Crowdin artifacts) cascades to corrupt later lines.
+  const lines = content.split("\n")
+  let inFencedBlock = false
 
-  for (let i = 0; i < parts.length; i++) {
-    if (i % 2 === 1) continue // Skip code blocks
+  for (let lineIdx = 0; lineIdx < lines.length; lineIdx++) {
+    const line = lines[lineIdx]
 
-    // Match < followed by a digit (not already escaped, not part of HTML tag)
-    parts[i] = parts[i].replace(/(?<!&lt|&)<(\d)/g, (_, digit) => {
-      fixCount++
-      return `&lt;${digit}`
-    })
+    // Track fenced code block boundaries
+    if (/^(`{3,}|~{3,})/.test(line)) {
+      inFencedBlock = !inFencedBlock
+      continue
+    }
+    if (inFencedBlock) continue
 
-    // Escape bare JSX fragment <> in prose (Crowdin drops backticks around `<>`)
-    parts[i] = parts[i].replace(/(?<!\\|`)<>(?!`)/g, () => {
-      fixCount++
-      return "\\<>"
-    })
+    // Split this single line on inline code spans.
+    // Per-line splitting ensures broken backticks don't cascade across lines.
+    const inlineCodePattern = /(`[^`]+`)/g
+    const parts = line.split(inlineCodePattern)
 
-    // Escape bare closing JSX fragment </> in prose
-    parts[i] = parts[i].replace(/(?<!\\|`)<\/>(?!`)/g, () => {
-      fixCount++
-      return "\\</>"
-    })
+    let changed = false
+    for (let i = 0; i < parts.length; i++) {
+      if (i % 2 === 1) continue // Skip inline code spans
 
-    // Escape < before word containing [ (e.g., <Stockage[4]) — never valid MDX
-    parts[i] = parts[i].replace(/(?<!\\)<([a-zA-Z]+\[)/g, (_, after) => {
-      fixCount++
-      return `\\<${after}`
-    })
+      const original = parts[i]
+
+      // Match < followed by a digit (not already escaped, not part of HTML tag)
+      parts[i] = parts[i].replace(/(?<!&lt|&)<(\d)/g, (_, digit) => {
+        fixCount++
+        return `&lt;${digit}`
+      })
+
+      // Escape bare JSX fragment <> in prose (Crowdin drops backticks around `<>`)
+      parts[i] = parts[i].replace(/(?<!\\|`)<>(?!`)/g, () => {
+        fixCount++
+        return "\\<>"
+      })
+
+      // Escape bare closing JSX fragment </> in prose
+      parts[i] = parts[i].replace(/(?<!\\|`)<\/>(?!`)/g, () => {
+        fixCount++
+        return "\\</>"
+      })
+
+      // Escape < before word containing [ (e.g., <Stockage[4]) — never valid MDX
+      parts[i] = parts[i].replace(/(?<!\\)<([a-zA-Z]+\[)/g, (_, after) => {
+        fixCount++
+        return `\\<${after}`
+      })
+
+      if (parts[i] !== original) changed = true
+    }
+
+    if (changed) {
+      lines[lineIdx] = parts.join("")
+    }
   }
 
-  return { content: parts.join(""), fixCount }
+  return { content: lines.join("\n"), fixCount }
 }
 
 /**
@@ -1618,6 +1645,52 @@ function restoreDroppedBackslashEscapes(
  * Removes excess closers from right-to-left (last occurrence first) so that
  * correctly-paired closers near their openers are preserved.
  */
+
+/**
+ * Fix asymmetric backtick pairs where Crowdin doubled the closing backtick.
+ * Pattern: `content`` → `content` (single-open, double-close)
+ *
+ * Does NOT touch:
+ * - Valid double-backtick code spans: ``content`` (double-open, double-close)
+ * - Triple-backtick fences: ```
+ * - Already balanced single-backtick spans: `content`
+ */
+function fixAsymmetricBackticks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+  const lines = content.split("\n")
+  let inFencedBlock = false
+
+  for (let lineIdx = 0; lineIdx < lines.length; lineIdx++) {
+    const line = lines[lineIdx]
+
+    // Track fenced code block boundaries
+    if (/^(`{3,}|~{3,})/.test(line)) {
+      inFencedBlock = !inFencedBlock
+      continue
+    }
+    if (inFencedBlock) continue
+
+    // Match single-open, double-close: `content`` (not preceded or followed by `)
+    // (?<!`) ensures the opening backtick is single (not part of ``)
+    // [^`]+ matches the code content (no backticks inside)
+    // ``(?!`) ensures exactly two closing backticks (not part of ```)
+    const asymmetricRe = /(?<!`)(`[^`]+`)`(?!`)/g
+    const fixed = line.replace(asymmetricRe, (_, correctSpan) => {
+      fixCount++
+      return correctSpan
+    })
+
+    if (fixed !== line) {
+      lines[lineIdx] = fixed
+    }
+  }
+
+  return { content: lines.join("\n"), fixCount }
+}
+
 function fixBackslashBeforeClosingTag(content: string): {
   content: string
   fixCount: number
@@ -1826,6 +1899,10 @@ function processMarkdownFile(
   applyFix(
     () => fixTickerTranspositions(content),
     (n) => `Fixed ${n} ticker symbol transpositions`
+  )
+  applyFix(
+    () => fixAsymmetricBackticks(content),
+    (n) => `Fixed ${n} asymmetric backtick pairs`
   )
   applyFix(
     () => escapeMdxAngleBrackets(content),
@@ -2237,6 +2314,7 @@ export const _testOnly = {
   normalizeFrontmatterDates,
   quoteFrontmatterNonAscii,
   normalizeBlockHtmlLines,
+  fixAsymmetricBackticks,
   // English-comparison fixes
   syncHeaderIdsWithEnglish,
   fixTranslatedHrefs,

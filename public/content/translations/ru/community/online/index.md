@@ -1,6 +1,6 @@
 ---
-title: Онлайн-сообщества
-description: Список программ грантов в рамках экосистемы Ethereum.
+title: "Онлайн-сообщества"
+description: "Список программ грантов в рамках экосистемы Ethereum."
 lang: ru
 ---
 
@@ -46,5 +46,5 @@ lang: ru
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Подробнее о DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

@@ -1,6 +1,6 @@
 ---
-title: Фонд Ethereum Foundation и программы грантов сообщества
-description: Список программ грантов в рамках экосистемы Ethereum.
+title: "Фонд Ethereum Foundation и программы грантов сообщества"
+description: "Список программ грантов в рамках экосистемы Ethereum."
 lang: ru
 ---
 

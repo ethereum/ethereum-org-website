@@ -25,6 +25,7 @@ const {
   isInternalHref,
   splitIntoBlocks,
   fixBackslashBeforeClosingTag,
+  fixAsymmetricBackticks,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -505,6 +506,94 @@ test.describe("Standalone Fixes", () => {
     test("does not escape valid MDX component tags", () => {
       const input = "<Card title=\"test\" />"
       const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips <digit inside inline backticks", () => {
+      const input =
+        "nibble `1` and nibbles `01` (both stored as `<01>`). To specify odd length"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips <hex inside inline backtick with long content", () => {
+      const input =
+        "`keccak256(<6661e9d6b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("escapes <digit in prose but not in adjacent inline code", () => {
+      const input = "Use `<01>` for values <5GB"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe("Use `<01>` for values &lt;5GB")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles broken backtick parity without corrupting later code spans", () => {
+      // Regression: patricia-merkle-trie line 82 had odd backtick count
+      // `[ v0 ...` v15, vt ]` (Crowdin split the code span)
+      // This caused parity flip, making `<01>` on line 92 land in prose
+      const input = [
+        "`branch` node `[ v0 ...` v15, vt ]`",
+        "stored as `<01>`) to specify",
+      ].join("\n")
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      // The <01> is inside backticks and must NOT be escaped,
+      // even though a broken backtick span above disrupts parity
+      expect(content).not.toContain("&lt;01>")
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixAsymmetricBackticks", () => {
+    test("fixes single-open double-close backtick pattern", () => {
+      // Regression: Crowdin doubled the closing backtick in erc-721-vyper tutorial
+      // `self.<имя переменной>`` → `self.<имя переменной>`
+      const input =
+        "Используйте `self.<имя переменной>`` (опять же, как и в Python)."
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe(
+        "Используйте `self.<имя переменной>` (опять же, как и в Python)."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not touch valid double-backtick code spans", () => {
+      // ``sender`` is a valid double-backtick code span
+      const input = "токенов ``sender`` не менее"
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch triple backtick fences", () => {
+      const input = "```python\ncode here\n```"
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("fixes asymmetric backtick at end of line", () => {
+      const input = "Use `command``"
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe("Use `command`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves balanced single backticks unchanged", () => {
+      const input = "Use `self.<variable name>` as in Python."
+      const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips content inside fenced code blocks", () => {
+      const input = "```\n`broken``\n```"
+      const { content, fixCount } = fixAsymmetricBackticks(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })

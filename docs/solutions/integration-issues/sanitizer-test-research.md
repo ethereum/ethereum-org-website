@@ -23,6 +23,7 @@
 | 13 | Code fence drift — comments inside fence, code outside | fr #17125 | Crowdin puts translated comment inside `` ```python `` fence, leaves actual Python code as raw MDX | Critical — breaks MDX compilation |
 | 14 | Translated word after bare `<` breaks MDX tag parsing | fr #17125 | `<Stockage[4]` — Crowdin translates `Storage` to `Stockage` but drops `\` escape before `<` | Critical — breaks MDX compilation |
 | 15 | `fixBackslashBeforeClosingTag` too broad — strips `\</>` | fr #17125 | `\</>` in prose is a legitimate escape; stripping `\` exposes bare `</>` to MDX | Critical — breaks MDX compilation |
+| 16 | Asymmetric backtick pair (single-open, double-close) | ru #17127 | `` `self.<name>`` `` — Crowdin doubles closing backtick, exposing `<name>` as raw HTML | Critical — breaks MDX compilation |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
@@ -48,6 +49,7 @@ These patterns are covered by existing fix functions and should have regression 
 - **Unclosed backtick repair** (`repairUnclosedBackticks`)
 - **Backslash before closing tag** (`fixBackslashBeforeClosingTag`) — `\</strong>` → `</strong>`
 - **Catastrophic code fence drift detection** (`warnCatastrophicCodeFenceDrift`) — prose/code boundaries swapped
+- **Asymmetric backtick pairs** (`fixAsymmetricBackticks`) — `` `content`` `` → `` `content` `` (Crowdin doubles closing backtick)
 
 ## Recommendations for Future Sanitizer Iteration
 
