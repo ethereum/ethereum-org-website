@@ -143,7 +143,7 @@ Par convention, dans React, les fonctions appelées `use...` sont des [hooks](ht
     <>
 ```
 
-Le JSX d'un composant React _doit_ renvoyer un seul composant. Lorsque nous avons plusieurs composants et que nous n'avons rien qui les englobe « naturellement », nous utilisons un composant vide (`<> ...` \</>`) pour en faire un seul composant.
+Le JSX d'un composant React _doit_ renvoyer un seul composant. Lorsque nous avons plusieurs composants et que nous n'avons rien qui les englobe « naturellement », nous utilisons un composant vide (`<> ...` </>`) pour en faire un seul composant.
 
 ```tsx
       <h1>Greeter</h1>

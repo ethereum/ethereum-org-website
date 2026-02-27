@@ -39,7 +39,7 @@ De la même manière que de nombreux validateurs d'ETH exécutent un logiciel de
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Bon à savoir\</strong></p>
+  <p className="mt-0"><strong>Bon à savoir</strong></p>
   <p className="mt-2">Bien que « Services validés activement » (AVS) soit le terme le plus courant, différentes plateformes de re-mise en jeu peuvent utiliser d'autres noms pour les services décentralisés qu'elles aident à sécuriser, comme « Services validés de manière autonome », « Services sécurisés distribués » ou « Réseaux ».</p>
 </AlertDescription>
 </AlertContent>
@@ -96,7 +96,7 @@ Plusieurs entités sont impliquées dans la re-mise en jeu — chacune d'entre e
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Bon à savoir\</strong></p>
+  <p className="mt-0"><strong>Bon à savoir</strong></p>
   <p className="mt-2">Les participants natifs et liquides à la re-mise en jeu délèguent souvent leur ETH mis en jeu à un opérateur, au lieu d'exécuter eux-mêmes le logiciel pour sécuriser les AVS.</p>
   <p className="mt-2">De cette façon, ils n'ont pas à se soucier des exigences techniques compliquées des AVS, bien qu'ils reçoivent un taux de récompense inférieur à celui des opérateurs.</p>
 </AlertDescription>
