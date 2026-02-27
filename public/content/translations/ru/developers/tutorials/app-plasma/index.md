@@ -465,7 +465,7 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
 
 _condition<sub>result</sub> = accounts[i].address == address_ // единица, если они равны, ноль в противном случае
 
-_account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>_
+_account<sub>new</sub> = condition<sub>result</sub>*i + (1-condition<sub>result</sub>)*account<sub>old</sub>_
 
 ```rust
     assert (account < ACCOUNT_NUMBER, f"{address} does not have an account");

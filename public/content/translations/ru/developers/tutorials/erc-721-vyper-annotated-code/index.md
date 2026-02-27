@@ -3,7 +3,7 @@ title: "Пошаговый разбор контракта Vyper ERC-721"
 description: "Контракт ERC-721 от Ryuya Nakamura и принцип его работы"
 author: Ori Pomerantz
 lang: ru
-tags: [ "vyper", "erc-721", "python" ]
+tags: [ "Vyper", "erc-721", "Python" ]
 skill: beginner
 published: 2021-04-01
 ---

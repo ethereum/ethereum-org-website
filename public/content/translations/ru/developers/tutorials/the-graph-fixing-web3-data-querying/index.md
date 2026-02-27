@@ -5,7 +5,7 @@ author: Markus Waas
 lang: ru
 tags:
   [
-    "твердость",
+    "Solidity",
     "Умные контракты",
     "запросы",
     "the graph",

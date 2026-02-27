@@ -5,7 +5,7 @@ author: Ewa Kowalska
 tags:
   [
     "Умные контракты",
-    "твердость",
+    "Solidity",
     "Waffle",
     "тестирование"
   ]

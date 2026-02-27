@@ -3,7 +3,7 @@ title: "Как настроить Tellor в качестве оракула"
 description: "Руководство по началу работы с интеграцией оракула Tellor в ваш протокол"
 author: "Tellor"
 lang: ru
-tags: [ "твердость", "Умные контракты", "оракулы" ]
+tags: [ "Solidity", "Умные контракты", "оракулы" ]
 skill: beginner
 published: 2021-06-29
 source: Tellor Docs

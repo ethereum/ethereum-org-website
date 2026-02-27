@@ -5,7 +5,7 @@ author: "Markus Waas"
 tags:
   [
     "интерфейс",
-    "javascript",
+    "JavaScript",
     "ethers.js",
     "the graph",
     "defi"

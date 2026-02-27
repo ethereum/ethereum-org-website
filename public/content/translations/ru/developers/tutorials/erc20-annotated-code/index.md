@@ -3,7 +3,7 @@ title: "Пошаговый разбор контракта ERC-20"
 description: "Что содержит контракт ERC-20 от OpenZeppelin и для чего это нужно?"
 author: Ori Pomerantz
 lang: ru
-tags: [ "твердость", "erc-20" ]
+tags: [ "Solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---

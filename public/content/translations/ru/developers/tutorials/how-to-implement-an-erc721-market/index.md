@@ -2,7 +2,7 @@
 title: "Как внедрить рынок ERC-721"
 description: "Как поставить «токенизированные» товары на продажу на децентрализованную доску объявлений"
 author: "Alberto Cuesta Cañada"
-tags: [ "смарт-контракты", "erc-721", "solidity", "токенов" ]
+tags: [ "смарт-контракты", "erc-721", "Solidity", "токенов" ]
 skill: intermediate
 lang: ru
 published: 2020-03-19

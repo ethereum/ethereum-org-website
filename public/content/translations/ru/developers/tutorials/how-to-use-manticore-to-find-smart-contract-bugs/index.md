@@ -5,7 +5,7 @@ author: Trailofbits
 lang: ru
 tags:
   [
-    "твердость",
+    "Solidity",
     "Умные контракты",
     "безопасность",
     "тестирование",

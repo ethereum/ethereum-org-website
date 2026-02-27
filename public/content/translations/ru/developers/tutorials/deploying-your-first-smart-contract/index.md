@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "Умные контракты",
-    "remix",
-    "твердость",
+    "Remix",
+    "Solidity",
     "развертывание"
   ]
 skill: beginner

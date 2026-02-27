@@ -2,7 +2,7 @@
 title: "Как создать NFT (часть 2 из 3 серии руководств по NFT)"
 description: "Это руководство описывает, как создать NFT в блокчейне Ethereum, используя наш смарт-контракт и Web3."
 author: "Sumi Mudgil"
-tags: [ "ERC-721", "alchemy", "твердость", "Умные контракты" ]
+tags: [ "ERC-721", "Alchemy", "Solidity", "Умные контракты" ]
 skill: beginner
 lang: ru
 published: 2021-04-22

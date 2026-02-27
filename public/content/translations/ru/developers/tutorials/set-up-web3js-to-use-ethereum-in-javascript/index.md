@@ -2,7 +2,7 @@
 title: "Настройка web3.js для использования блокчейна Ethereum в JavaScript"
 description: "Узнайте, как настраивать и конфигурировать библиотеку web3.js для взаимодействия с блокчейном Ethereum из JavaScript-приложений."
 author: "jdourlens"
-tags: [ "web3.js", "javascript" ]
+tags: [ "web3.js", "JavaScript" ]
 skill: beginner
 lang: ru
 published: 2020-04-11

@@ -2,7 +2,7 @@
 title: "Обзор контракта Uniswap-v2"
 description: "Как работает контракт Uniswap-v2? Почему он написан именно так?"
 author: Ori Pomerantz
-tags: [ "твердость" ]
+tags: [ "Solidity" ]
 skill: intermediate
 published: 2021-05-01
 lang: ru

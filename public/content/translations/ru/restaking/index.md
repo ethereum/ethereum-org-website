@@ -144,7 +144,7 @@ buttons:
 <AlertDescription>
   <p className="mt-0"><strong>Сооснователь Ethereum печатает…</strong></p>
   <p className="mt-2">
-    Виталик, сооснователь Ethereum, предупредил о потенциальных рисках рестейкинга в блог-посте 2021 года под названием <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">«Не перегружайте консенсус»</a>. </a>  
+ Виталик, сооснователь Ethereum, предупредил о потенциальных рисках рестейкинга в блог-посте 2021 года под названием <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">«Не перегружайте консенсус»</a>.
 </p>
 </AlertDescription>
 </AlertContent>

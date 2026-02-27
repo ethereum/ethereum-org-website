@@ -8,9 +8,9 @@ summaryPoint1: "Получайте финансовые стимулы за то
 summaryPoint2: "Качественные предсказания будущих событий"
 buttons:
   - content: Узнать больше
-    toId: kak-rabotayut-rynki-prognozov
+    toId: how-prediction-markets-work
   - content: Изучите приложения
-    toId: nayti-rynok-prognozov
+    toId: find-a-prediction-market
     isSecondary: false
 ---
 

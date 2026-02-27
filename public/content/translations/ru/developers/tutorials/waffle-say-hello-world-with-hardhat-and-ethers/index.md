@@ -4,11 +4,11 @@ description: "Создайте свой первый проект Waffle с по
 author: "MiZiet"
 tags:
   [
-    "waffle",
+    "Waffle",
     "Умные контракты",
-    "твердость",
+    "Solidity",
     "тестирование",
-    "hardhat",
+    "Hardhat",
     "ethers.js"
   ]
 skill: beginner

@@ -3,7 +3,7 @@ title: "Уменьшение размера контрактов для борь
 description: "Что можно сделать, чтобы ваши смарт-контракты не становились слишком большими?"
 author: Markus Waas
 lang: ru
-tags: [ "твердость", "Умные контракты", "хранилище" ]
+tags: [ "Solidity", "Умные контракты", "хранилище" ]
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
