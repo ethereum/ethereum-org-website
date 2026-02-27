@@ -1,6 +1,6 @@
 ---
 title: Tester les jetons ERC-20 avec Waffle
-description: Découvrez comment tester les contrats intelligents Solidity et utiliser des correspondances de contrats intelligents avec Waffle.
+description: "Découvrez comment tester les contrats intelligents Solidity et utiliser des correspondances de contrats intelligents avec Waffle."
 author: Vladislav Starostenko
 tags:
   - "waffle"

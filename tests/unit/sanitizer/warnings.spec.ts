@@ -10,6 +10,7 @@ import { _testOnly } from "@/scripts/i18n/post_import_sanitize"
 const {
   warnPunctuationOnlyHeadings,
   warnCodeFenceContentDrift,
+  warnCatastrophicCodeFenceDrift,
   fixTranslatedHrefs,
   detectCrossScriptContamination,
 } = _testOnly
@@ -58,6 +59,113 @@ test.describe("Warning Functions", () => {
       const warnings = warnCodeFenceContentDrift(translated, english)
       expect(warnings.length).toBe(1)
       expect(warnings[0]).toContain("count mismatch")
+    })
+  })
+
+  test.describe("warnCatastrophicCodeFenceDrift", () => {
+    test("detects prose inside fences that should contain code", () => {
+      const english = [
+        "Some prose here.",
+        "",
+        "```python",
+        "def foo(x, y):",
+        "  if x > y:",
+        "    return x",
+        "  return y",
+        "```",
+        "",
+        "More prose.",
+      ].join("\n")
+      const translated = [
+        "Du texte ici.",
+        "",
+        "```python",
+        "Voici une explication de la fonction.",
+        "```",
+        "",
+        "def foo(x, y):",
+        "  if x > y:",
+        "    return x",
+        "  return y",
+        "",
+        "Plus de texte.",
+      ].join("\n")
+      const warnings = warnCatastrophicCodeFenceDrift(translated, english)
+      expect(warnings.length).toBeGreaterThan(0)
+      expect(warnings[0]).toContain("CATASTROPHIC")
+    })
+
+    test("detects code keywords outside fences", () => {
+      const english = [
+        "```python",
+        "def unknown2e7ba6ef(uint256 _param1):",
+        "  require _param2 == addr(_param2)",
+        "  if currentWindow <= _param1:",
+        "    revert with 0, 'error'",
+        "```",
+      ].join("\n")
+      const translated = [
+        "```python",
+        "Voici ce que le decompilateur nous donne.",
+        "```",
+        "",
+        "def unknown2e7ba6ef(uint256 _param1):",
+        "  require _param2 == addr(_param2)",
+        "  if currentWindow <= _param1:",
+        "    revert with 0, 'error'",
+      ].join("\n")
+      const warnings = warnCatastrophicCodeFenceDrift(translated, english)
+      expect(warnings.length).toBeGreaterThan(0)
+      const hasCodeOutsideFence = warnings.some(
+        (w) => w.includes("code keyword") || w.includes("CATASTROPHIC")
+      )
+      expect(hasCodeOutsideFence).toBe(true)
+    })
+
+    test("no warning when fences match correctly", () => {
+      const content = [
+        "Some prose.",
+        "",
+        "```python",
+        "def foo():",
+        "  return 1",
+        "```",
+        "",
+        "More prose.",
+      ].join("\n")
+      const warnings = warnCatastrophicCodeFenceDrift(content, content)
+      expect(warnings).toHaveLength(0)
+    })
+
+    test("detects detached heading anchor IDs", () => {
+      const english = [
+        "### claim {#claim}",
+        "",
+        "Some text about claim.",
+      ].join("\n")
+      const translated = [
+        "### Du texte ici.",
+        "",
+        "claim {#claim} Le code est complexe.",
+      ].join("\n")
+      const warnings = warnCatastrophicCodeFenceDrift(translated, english)
+      const hasDetachedAnchor = warnings.some((w) =>
+        w.includes("anchor")
+      )
+      expect(hasDetachedAnchor).toBe(true)
+    })
+
+    test("no false positive on anchor IDs properly on heading lines", () => {
+      const content = [
+        "### La revendication {#claim}",
+        "",
+        "Some text about claim.",
+      ].join("\n")
+      const warnings = warnCatastrophicCodeFenceDrift(content, content)
+      const anchorWarnings = warnings.filter((w) =>
+        w.includes("anchor")
+      )
+      expect(anchorWarnings).toHaveLength(0)
     })
   })
 
