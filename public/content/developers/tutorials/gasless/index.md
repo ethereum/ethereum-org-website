@@ -1,6 +1,6 @@
 ---
 title: "Sponsoring gas fees: How to cover transaction costs for your users"
-description: It is easy to create a private key and an address; it's just a matter of running the right software. But there are many places in the world where getting the ETH to send transactions is much harder. In this tutorial you learn how to cover the onchain gas costs for executing user-signed, off-chain structured data in your smart contract. You have the user sign a structure containing the transaction information, which your offchain code then submits to the blockchain as a transaction.
+description: It is easy to create a private key and an address; it's just a matter of running the right software. But there are many places in the world where getting the ETH to send transactions is much harder. In this tutorial you learn how to cover the onchain gas costs for executing user-signed, offchain structured data in your smart contract. You have the user sign a structure containing the transaction information, which your offchain code then submits to the blockchain as a transaction.
 author: Ori Pomerantz
 tags: ["gasless", "solidity", "eip-712", "meta-transactions"]
 skill: intermediate
@@ -16,9 +16,9 @@ If you have a dapp that makes money from users, it might make sense to let users
 
 The technique in this tutorial only works when you control the smart contract. There are other techniques, including [account abstraction](https://eips.ethereum.org/EIPS/eip-4337) that let you sponsor transactions to other smart contracts, which I hope to cover in a future tutorial.
 
-Note: This is *not* production-level code. It is vulnerable to significant attacks and lacks major features. Learn more in the [vulnerabilities section of this guide](#vulnerabilities).
+Note: This is _not_ production-level code. It is vulnerable to significant attacks and lacks major features. Learn more in the [vulnerabilities section of this guide](#vulnerabilities).
 
-### Prerequisites {#prereq}
+### Prerequisites {#prerequisites}
 
 To understand this tutorial you need to already be familiar with:
 
@@ -28,7 +28,7 @@ To understand this tutorial you need to already be familiar with:
 
 ## The sample application {#sample-app}
 
-The sample application here is a variant on HardHat's `Greeter` contract. You can see it [on GitHub](https://github.com/qbzzt/260301-gasless). The smart contract is already deployed on the [Sepolia](https://sepolia.dev/), at address [`0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA). 
+The sample application here is a variant on Hardhat's `Greeter` contract. You can see it [on GitHub](https://github.com/qbzzt/260301-gasless). The smart contract is already deployed on the [Sepolia](https://sepolia.dev/), at address [`0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA).
 
 To see it in action, follow these steps.
 
@@ -40,7 +40,7 @@ To see it in action, follow these steps.
    npm install
    ```
 
-2. Edit `.env` to set `PRIVATE_KEY` to a wallet that has ETH on Sepolia. If you need Sepolia ETH, [use a faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia). Ideally, this private key should be different from the one you have in your browser wallet.
+2. Edit `.env` to set `PRIVATE_KEY` to a wallet that has ETH on Sepolia. If you need Sepolia ETH, [use a faucet](/developers/docs/networks/#sepolia). Ideally, this private key should be different from the one you have in your browser wallet.
 
 3. Start the server.
 
@@ -94,7 +94,7 @@ Parameters for the [domain separator](https://eips.ethereum.org/EIPS/eip-712#def
 
 - `name` is a user-readable name, such as the name of the dapp for which we are producing signatures.
 - `version` is the version. Different versions are not compatible.
-- `chainId` is the chain we are using, as provided [by WAGMI](https://wagmi.sh/react/api/hooks/useChainId). 
+- `chainId` is the chain we are using, as provided [by WAGMI](https://wagmi.sh/react/api/hooks/useChainId).
 - `verifyingContract` is the contract address that will verify this signature. We do not want the same signature to apply to multiple contracts, in case there are several `Greeter` contracts and we want them to have different greetings.
 
 ```js
@@ -148,7 +148,7 @@ The function returns a single hexadecimal value. Here we divide it into fields.
 
 If any of these variables change, create a new instance of the function. The `account` and `chainId` parameters can be changed by the user in the wallet. `contractAddr` is a function of the chain Id. `signTypedDataAsync` should not change, but we import it from [a hook](https://wagmi.sh/react/api/hooks/useSignTypedData), so we can't be sure, and it's best to add it here.
 
-Now that the new greeting is signed, we need to send it to the server. 
+Now that the new greeting is signed, we need to send it to the server.
 
 ```js
   const sponsoredGreeting = async () => {
@@ -179,7 +179,7 @@ Use `POST` to send the information JSON-encoded.
     } catch (err) {
       console.error("Error:", err)
     }
-  } 
+  }
 ```
 
 Output the response. On a production system we'd also show the response to the user.
@@ -266,7 +266,7 @@ This is the [structure identifier](https://eips.ethereum.org/EIPS/eip-712#defini
         GreetingRequest calldata req,
         uint8 v,
         bytes32 r,
-        bytes32 s        
+        bytes32 s
     ) external {
 ```
 
@@ -288,7 +288,7 @@ This function receives a signed request and updates the greeting.
         );
 ```
 
-Create the digest in accordance with [EIP 712](https://eips.ethereum.org/EIPS/eip-712). 
+Create the digest in accordance with [EIP 712](https://eips.ethereum.org/EIPS/eip-712).
 
 ```solidity
         // Recover signer
@@ -309,15 +309,15 @@ Update the greeting.
 
 ## Vulnerabilities {#vulnerabilities}
 
-This is *not* production-level code. It is vulnerable to significant attacks and lacks major features. Here are some, along with how to solve them.
+This is _not_ production-level code. It is vulnerable to significant attacks and lacks major features. Here are some, along with how to solve them.
 
-To see some of these attacks, click the buttons under the *Attacks* heading and see what happens. For the **Invalid signature** button, check the server console to see the transaction response.
+To see some of these attacks, click the buttons under the _Attacks_ heading and see what happens. For the **Invalid signature** button, check the server console to see the transaction response.
 
 ### Denial of service on the server {#dos-on-server}
 
 The easiest attack is a [denial-of-service](https://en.wikipedia.org/wiki/Denial-of-service_attack) attack on the server. The server receives requests from anywhere on the Internet and based on those requests sends transactions. There is absolutely nothing preventing an attacker from issuing a bunch of signatures, valid or invalid. Each will cause a transaction. Eventually the server will run out of ETH to pay for gas.
 
-One solution to this problem is to limit the rate to one transaction per block. If the purpose is to show greetings to [externally owned accounts](https://ethereum.org/developers/docs/accounts/#key-differences), it does not matter what the greeting is in the middle of the block anyway.
+One solution to this problem is to limit the rate to one transaction per block. If the purpose is to show greetings to [externally owned accounts](/developers/docs/accounts/#key-differences), it does not matter what the greeting is in the middle of the block anyway.
 
 Another solution is to keep track of addresses and only allow signatures from valid customers.
 
@@ -341,7 +341,7 @@ There are additional features we would add in a production setting.
 
 ### Access from other servers {#other-servers}
 
-Currently, we allow any address to submit a `sponsorSetGreeting`. This may be exactly what we want, in the interest of decentralization. Or maybe we want to ensure that sponsored transactions go through *our* server, in which case we'd check `msg.sender` in the smart contract. 
+Currently, we allow any address to submit a `sponsorSetGreeting`. This may be exactly what we want, in the interest of decentralization. Or maybe we want to ensure that sponsored transactions go through _our_ server, in which case we'd check `msg.sender` in the smart contract.
 
 Either way, this should be a conscious design decision, not just the result of not thinking about the issue.
 
