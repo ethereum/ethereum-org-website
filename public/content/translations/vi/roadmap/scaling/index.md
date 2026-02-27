@@ -7,7 +7,7 @@ alt: "Lộ trình Ethereum"
 template: roadmap
 ---
 
-Ethereum được mở rộng quy mô bằng cách sử dụng các [lớp 2](/layer-2/#rollups) (còn được gọi là rollup), chúng gộp các giao dịch lại với nhau và gửi kết quả đầu ra đến Ethereum. Mặc dù Rollups rẻ hơn gấp tám lần mạng chính Ethereum, tuy nhiên Optimize Rollups vẫn có thể giảm chi phí cho người dùng nhiều hơn. Rollupss cũng phụ thuộc vào một số thành phần tập trung dẫn đến nhà phát triển có thể loại bỏ khi Rollups hoàn thiện.
+Ethereum được mở rộng quy mô bằng cách sử dụng các [lớp 2](/layer-2/#rollups) (còn được gọi là rollup), chúng gộp các giao dịch lại với nhau và gửi kết quả đầu ra đến Ethereum. Mặc dù Rollups rẻ hơn gấp tám lần mạng chính Ethereum, tuy nhiên Optimize Rollups vẫn có thể giảm chi phí cho người dùng nhiều hơn. Rollups cũng phụ thuộc vào một số thành phần tập trung dẫn đến nhà phát triển có thể loại bỏ khi Rollups hoàn thiện.
 
 <Alert variant="update" className="mb-8">
 <AlertContent>

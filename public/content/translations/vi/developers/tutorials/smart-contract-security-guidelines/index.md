@@ -2,7 +2,7 @@
 title: "Các nguyên tắc bảo mật hợp đồng thông minh"
 description: "Danh sách kiểm tra các nguyên tắc bảo mật cần xem xét khi xây dựng ứng dụng phi tập trung của bạn"
 author: "Trailofbits"
-tags: [ "solidity", "hợp đồng thông minh", "tính bảo mật" ]
+tags: [ "Solidity", "hợp đồng thông minh", "tính bảo mật" ]
 skill: intermediate
 lang: vi
 published: 2020-09-06

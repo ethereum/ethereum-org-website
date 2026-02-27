@@ -3,7 +3,7 @@ title: "Hướng dẫn hợp đồng Vyper ERC-721"
 description: "Hợp đồng ERC-721 của Ryuya Nakamura và cách hoạt động"
 author: Ori Pomerantz
 lang: vi
-tags: [ "vyper", "erc-721", "python" ]
+tags: [ "Vyper", "erc-721", "Python" ]
 skill: beginner
 published: 2021-04-01
 ---

@@ -4,11 +4,11 @@ description: "Tạo dự án Waffle đầu tiên của bạn với hardhat và e
 author: "MiZiet"
 tags:
   [
-    "waffle",
+    "Waffle",
     "hợp đồng thông minh",
-    "solidity",
+    "Solidity",
     "kiểm thử",
-    "hardhat",
+    "Hardhat",
     "ethers.js"
   ]
 skill: beginner

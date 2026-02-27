@@ -3,7 +3,7 @@ title: "Hướng dẫn về các công cụ bảo mật hợp đồng thông min
 description: "Tổng quan về ba kỹ thuật kiểm thử và phân tích chương trình khác nhau"
 author: "Trailofbits"
 lang: vi
-tags: [ "solidity", "hợp đồng thông minh", "tính bảo mật" ]
+tags: [ "Solidity", "hợp đồng thông minh", "tính bảo mật" ]
 skill: intermediate
 published: 2020-09-07
 source: Building secure contracts

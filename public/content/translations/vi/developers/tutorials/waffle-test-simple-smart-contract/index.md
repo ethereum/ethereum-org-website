@@ -5,7 +5,7 @@ author: Ewa Kowalska
 tags:
   [
     "hợp đồng thông minh",
-    "solidity",
+    "Solidity",
     "Waffle",
     "kiểm thử"
   ]

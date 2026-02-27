@@ -42,7 +42,7 @@ Hai cơ chế nào quyết định tổng cung Ethereum tăng (lạm phát) hay 
 
 ## Nguồn cung và phát hành ETH hiện tại {#eth-supply-today}
 
-Hệ thống bằng chứng cổ phần (PoS) của Ethereum đã cắt giảm mạnh lượng ETH phát hành so với trước khi áp dụng cơ chế bằng chứng công việc (PoW). Nốt xác thực (Validators) — những người khóa ETH để có thể bảo mật mạng lưới — nhận được ETH như phần thưởng. Bạn có thể theo dõi tỷ lệ phát hành hiện tại trên [Ultrasound Money](https://ultrasound.money).
+Hệ thống bằng chứng cổ phần (PoS) của Ethereum đã cắt giảm mạnh lượng ETH phát hành so với trước khi áp dụng cơ chế bằng chứng công việc (PoW). Nút xác thực (Validators) — những người khóa ETH để có thể bảo mật mạng lưới — nhận được ETH như phần thưởng. Bạn có thể theo dõi tỷ lệ phát hành hiện tại trên [Ultrasound Money](https://ultrasound.money).
 
 Tuy nhiên, con số này luôn biến động. Nhờ có EIP-1559, khi mà mạng lưới hoạt động mạnh, lượng ETH đốt có thể vượt quá lượng phát hành, tạo ra hiệu ứng giảm phát. Ví dụ, trong giai đoạn nhu cầu tăng vọt, như ra mắt NFT hay hoạt động DeFi, ETH có thể bị đốt nhiều hơn phát hành.
 
@@ -56,8 +56,8 @@ Tuy nhiên, con số này luôn biến động. Nhờ có EIP-1559, khi mà mạ
 Nguồn cung tương lai của Ethereum không cố định — nó phụ thuộc vào vài yếu tố:
 
 1. **Mức độ tham gia Staking**:
-   - Càng nhiều nốt xác thực tham gia mạng lưới nghĩa là càng nhiều ETH được phân phối như phần thưởng.
-   - Số nốt xác thực ít đi có thể làm giảm sự phát hành.
+   - Càng nhiều nút xác thực tham gia mạng lưới nghĩa là càng nhiều ETH được phân phối như phần thưởng.
+   - Số nút xác thực ít đi có thể làm giảm sự phát hành.
    - Tìm hiểu thêm về [staking](/staking/).
 
 2. **Các hoạt động của mạng lưới**:
@@ -73,7 +73,7 @@ Nguồn cung tương lai của Ethereum không cố định — nó phụ thuộ
 Đây là tóm tắt nhanh những gì bạn cần nắm về nguồn cung và phát hành ETH:
 
 - **Nguồn cung ETH**: Biến động và sẽ luôn thay đổi, có thể theo dõi theo thời gian thực qua công cụ như [Ultrasound Money](https://ultrasound.money)
-- **Phát hành dưới PoS**: Giảm đáng kể so với PoW, với phần thưởng cho các nốt xác thực. Theo dõi tỷ lệ hiện tại trên [Ultrasound Money](https://ultrasound.money)
+- **Phát hành dưới PoS**: Giảm đáng kể so với PoW, với phần thưởng cho các nút xác thực. Theo dõi tỷ lệ hiện tại trên [Ultrasound Money](https://ultrasound.money)
 - **Luật của EIP-1559**: ETH bị đốt đi giúp mạng lưới giảm phát trong thời gian hoạt động cao
 - **Xu hướng tương lai**: Mức độ tham gia Staking, nhu cầu sử dụng và các bản nâng cấp giao thức sẽ định hình nguồn cung ETH
 

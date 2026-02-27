@@ -1,5 +1,5 @@
 ---
-title: "Đăng kí nốt Ethereum của bạn"
+title: "Đăng kí nút Ethereum của bạn"
 description: "Một giới thiệu chung về cách tự vận hành một Client Ethereum."
 lang: vi
 sidebarDepth: 2

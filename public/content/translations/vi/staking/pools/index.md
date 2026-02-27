@@ -8,7 +8,7 @@ image: /images/staking/leslie-pool.png
 alt: "Chú tê giác Leslie đang bơi trong bể."
 sidebarDepth: 2
 summaryPoints:
-  - Đặc cọc và nhận thưởng với số lượng ETH bất kỳ bằng cách tham gia cùng những người khác
+  - Đặt cọc và nhận thưởng với số lượng ETH bất kỳ bằng cách tham gia cùng những người khác
   - Bỏ qua phần phức tạp và giao phó việc điều hành nút xác thực cho bên thứ ba
   - Giữ các token đã góp trong ví riêng
 ---

@@ -24,9 +24,9 @@ Nhưng bạn sẽ làm gì nếu muốn thực hiện một trao đổi tương 
 
 Tất cả chuỗi khối đều có giới hạn. Để Ethereum mở rộng quy mô và đáp ứng nhu cầu, nó đã yêu cầu các [rollup](/glossary/#rollups). Ngoài ra, các L1 như Solana và Avalanche được thiết kế khác nhau để cho phép thông lượng cao hơn nhưng phải trả giá bằng sự kém phi tập trung.
 
-Tuy nhiên, tất cả các chuỗi khối đều được phát triển trong các môi trường biệt lập và có các quy tắc cũng như cơ chế [sự đồng thuận](/glossary/#consensus) khác nhau. Điều này có nghĩa là chúng không thể giao tiếp tự nhiên và các mã thông báo không thể di chuyển tự do giữa các chuỗi khối.
+Tuy nhiên, tất cả các chuỗi khối đều được phát triển trong các môi trường biệt lập và có các quy tắc cũng như cơ chế [sự đồng thuận](/glossary/#consensus) khác nhau. Điều này có nghĩa là chúng không thể giao tiếp tự nhiên và các token không thể di chuyển tự do giữa các chuỗi khối.
 
-Cầu tồn tại để kết nối các chuỗi khối, cho phép trao đổi thông tin và mã thông báo giữa chúng.
+Cầu tồn tại để kết nối các chuỗi khối, cho phép trao đổi thông tin và token giữa chúng.
 
 **Cầu nối cho phép**:
 
@@ -63,7 +63,7 @@ Giả sử bạn muốn sở hữu Bitcoin (BTC) gốc, nhưng bạn chỉ có t
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Bạn cũng có thể thực hiện tất cả những điều trên bằng cách sử dụng một [sàn giao dịch tập trung](/get-eth). Tuy nhiên, trừ khi tiền của bạn đã có sẵn trên một sàn giao dịch, nó sẽ bao gồm nhiều bước và có thể sẽ tối hơn nếu bạn sử dụng cầu nối.
+  Bạn cũng có thể thực hiện tất cả những điều trên bằng cách sử dụng một [sàn giao dịch tập trung](/get-eth). Tuy nhiên, trừ khi tiền của bạn đã có sẵn trên một sàn giao dịch, nó sẽ bao gồm nhiều bước và có thể sẽ tốt hơn nếu bạn sử dụng cầu nối.
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -4,9 +4,9 @@ description: "Hướng dẫn Waffle nâng cao về cách sử dụng tính năng
 author: "Daniel Izdebski"
 tags:
   [
-    "waffle",
+    "Waffle",
     "hợp đồng thông minh",
-    "solidity",
+    "Solidity",
     "kiểm thử",
     "mocking"
   ]

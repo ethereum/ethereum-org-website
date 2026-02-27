@@ -5,7 +5,7 @@ author: "Markus Waas"
 tags:
   [
     "frontend",
-    "javascript",
+    "JavaScript",
     "ethers.js",
     "the graph",
     "tài chính phi tập trung"

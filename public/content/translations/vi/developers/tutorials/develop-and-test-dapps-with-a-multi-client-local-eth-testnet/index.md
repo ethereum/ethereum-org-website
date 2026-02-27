@@ -116,8 +116,8 @@ git clone https://github.com/kurtosis-tech/awesome-kurtosis.git && cd awesome-ku
 Thư mục [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) được sử dụng ở đây chứa thiết lập điển hình cho một nhà phát triển dApp sử dụng khuôn khổ [Hardhat](https://hardhat.org/):
 
 - [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) chứa một vài hợp đồng thông minh đơn giản cho một dApp Blackjack
-- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) chứa một tập lệnh để triển khai hợp đồng mã thông báo cho mạng Ethereum cục bộ của bạn
-- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) chứa một bài kiểm tra .js đơn giản cho hợp đồng mã thông báo của bạn để xác nhận mỗi người chơi trong dApp Blackjack của chúng tôi có 1000 được đúc cho họ
+- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) chứa một tập lệnh để triển khai hợp đồng token cho mạng Ethereum cục bộ của bạn
+- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) chứa một bài kiểm tra .js đơn giản cho hợp đồng token của bạn để xác nhận mỗi người chơi trong dApp Blackjack của chúng tôi có 1000 được đúc cho họ
 - [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) cấu hình thiết lập Hardhat của bạn
 
 ### Cấu hình Hardhat để sử dụng mạng thử nghiệm cục bộ {#configure-hardhat}

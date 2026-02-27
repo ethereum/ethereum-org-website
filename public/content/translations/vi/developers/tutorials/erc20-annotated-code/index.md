@@ -3,7 +3,7 @@ title: "Hướng dẫn về Hợp đồng ERC-20"
 description: "Hợp đồng ERC-20 của OpenZeppelin chứa những gì và tại sao chúng lại ở đó?"
 author: Ori Pomerantz
 lang: vi
-tags: [ "solidity", "erc-20" ]
+tags: [ "Solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---

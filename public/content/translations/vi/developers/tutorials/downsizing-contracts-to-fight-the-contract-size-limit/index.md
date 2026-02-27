@@ -3,7 +3,7 @@ title: "Thu hẹp hợp đồng để chống lại giới hạn kích thước 
 description: "Bạn có thể làm gì để ngăn các hợp đồng thông minh của mình trở nên quá lớn?"
 author: Markus Waas
 lang: vi
-tags: [ "solidity", "hợp đồng thông minh", "lưu trữ" ]
+tags: [ "Solidity", "hợp đồng thông minh", "lưu trữ" ]
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com

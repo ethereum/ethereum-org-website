@@ -6,7 +6,7 @@ tags:
   [
     "hợp đồng thông minh",
     "erc-721",
-    "solidity",
+    "Solidity",
     "tokens"
   ]
 skill: intermediate

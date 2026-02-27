@@ -3,7 +3,7 @@ title: "Giới thiệu về Ethereum cho nhà phát triển Python, phần 1"
 description: "Nhập môn phát triển Ethereum, đặc biệt hữu ích cho những ai có kiến thức về lập trình ngôn ngữ Python"
 author: Marc Garreau
 lang: vi
-tags: [ "python", "web3.py" ]
+tags: [ "Python", "web3.py" ]
 skill: beginner
 published: 2020-09-08
 source: Snake charmers

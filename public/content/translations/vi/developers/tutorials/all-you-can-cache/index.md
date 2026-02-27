@@ -535,7 +535,7 @@ Hàm này tương tự như `testReadParam`, ngoại trừ việc thay vì viế
     }   // testEncodeVal
 ```
 
-Bài kiểm thử bổ sung duy nhất trong `testEncodeVal()` là để xác minh rằng độ dài của `_callInput` là chính xác. Đối với cuộc gọi đầu tiên, nó là 4+33\*4. Đối với lần thứ hai, nơi mọi giá trị đã có trong bộ nhớ đệm, nó là 4+1\*4.
+Bài kiểm thử bổ sung duy nhất trong `testEncodeVal()` là để xác minh rằng độ dài của `_callInput` là chính xác. Đối với cuộc gọi đầu tiên, nó là 4+33*4. Đối với lần thứ hai, nơi mọi giá trị đã có trong bộ nhớ đệm, nó là 4+1*4.
 
 ```solidity
     // Kiểm tra encodeVal khi khóa dài hơn một byte

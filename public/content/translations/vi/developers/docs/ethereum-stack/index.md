@@ -12,7 +12,7 @@ Tuy nhiên, có những thành phần chính của Ethereum giúp chúng ta hìn
 
 [Máy ảo Ethereum (EVM)](/developers/docs/evm/) là môi trường thực thi cho các hợp đồng thông minh trên Ethereum. Tất cả các hợp đồng thông minh và thay đổi trạng thái trên chuỗi khối Ethereum đều được thực thi bởi [các giao dịch](/developers/docs/transactions/). EVM xử lý toàn bộ quy trình giao dịch trên mạng Ethereum.
 
-Giống như bất kỳ máy ảo nào, EVM tạo ra một lớp trừu tượng giữa các mã và máy đang chạy (một nút Ethereum). Hiện tại, EVM đang chạy trên hàng ngàn nút phân bổkhắp nơi trên thế giới.
+Giống như bất kỳ máy ảo nào, EVM tạo ra một lớp trừu tượng giữa các mã và máy đang chạy (một nút Ethereum). Hiện tại, EVM đang chạy trên hàng ngàn nút phân bổ khắp nơi trên thế giới.
 
 Chi tiết thì EVM sử dụng một bộ lệnh opcode để thực hiện các tác vụ cụ thể. Các mã vận hành này (140 mã riêng biệt) cho phép EVM [hoàn thiện Turing](https://en.wikipedia.org/wiki/Turing_completeness), nghĩa là EVM có thể tính toán gần như mọi thứ, miễn là có đủ tài nguyên.
 

@@ -4,9 +4,9 @@ description: "Hướng dẫn giới thiệu về cách viết và triển khai m
 author: "elanh"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "từ Alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "hợp đồng thông minh",
     "triển khai"
   ]

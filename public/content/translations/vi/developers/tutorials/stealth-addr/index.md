@@ -7,7 +7,7 @@ tags:
     "Địa chỉ ẩn",
     "quyền riêng tư",
     "mật mã học",
-    "rust",
+    "Rust",
     "wasm"
   ]
 skill: intermediate
@@ -46,7 +46,7 @@ Bill tạo khóa riêng tư thứ ba, _R<sub>priv</sub>_, và xuất bản _R<su
 
 Bill tính toán _R<sub>priv</sub>V<sub>pub</sub> = GR<sub>priv</sub>V<sub>priv</sub>_, mà anh ta mong đợi Alice cũng biết (được giải thích bên dưới). Giá trị này được gọi là _S_, bí mật chung. Điều này cho Bill một khóa công khai, _P<sub>pub</sub> = K<sub>pub</sub>+G\*hàm băm(S)_. Từ khóa công khai này, anh ta có thể tính toán một địa chỉ và gửi bất kỳ tài nguyên nào anh ta muốn đến đó. Trong tương lai, nếu Alice thắng, Bill có thể nói cho cô ấy biết _R<sub>priv</sub>_ để chứng minh các tài nguyên đến từ anh ta.
 
-Alice tính toán _R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub>_. Điều này cho cô ấy cùng một bí mật chung, _S_. Bởi vì cô ấy biết khóa riêng tư, _K<sub>priv</sub>_, cô ấy có thể tính toán _P<sub>priv</sub> = K<sub>priv</sub>+hàm băm(S)_. Khóa này cho phép cô ấy truy cập tài sản trong địa chỉ kết quả từ _P<sub>pub</sub> = GP<sub>priv</sub> = GK<sub>priv</sub>+G\*hàm băm(S) = K<sub>pub</sub>+G\*hàm băm(S)_.
+Alice tính toán _R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub>_. Điều này cho cô ấy cùng một bí mật chung, _S_. Bởi vì cô ấy biết khóa riêng tư, _K<sub>priv</sub>_, cô ấy có thể tính toán _P<sub>priv</sub> = K<sub>priv</sub>+hàm băm(S)_. Khóa này cho phép cô ấy truy cập tài sản trong địa chỉ kết quả từ _P<sub>pub</sub> = GP<sub>priv</sub> = GK<sub>priv</sub>+G*hàm băm(S) = K<sub>pub</sub>+G*hàm băm(S)_.
 
 Chúng tôi có một khóa xem riêng để cho phép Alice ký hợp đồng phụ với Dịch vụ Chiến dịch Thống trị Thế giới của Dave. Alice sẵn sàng cho Dave biết các địa chỉ công khai và thông báo cho cô ấy khi có thêm tiền, nhưng cô ấy không muốn anh ta tiêu tiền chiến dịch của mình.
 

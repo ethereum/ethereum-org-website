@@ -4,11 +4,11 @@ description: "Đây là hướng dẫn cho người mới bắt đầu phát tri
 author: "Elan Halpern"
 tags:
   [
-    "javascript",
+    "JavaScript",
     "ethers.js",
     "nút",
     "truy vấn",
-    "từ Alchemy"
+    "Alchemy"
   ]
 skill: beginner
 lang: vi

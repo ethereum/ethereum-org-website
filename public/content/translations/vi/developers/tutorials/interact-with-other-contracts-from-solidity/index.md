@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "hợp đồng thông minh",
-    "solidity",
-    "remix",
+    "Solidity",
+    "Remix",
     "triển khai",
     "khả năng tổng hợp"
   ]

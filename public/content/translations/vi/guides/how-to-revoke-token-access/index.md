@@ -1,6 +1,6 @@
 ---
 title: "Cách thu hồi quyền truy cập hợp đồng thông minh vào tài sản tiền mã hóa của bạn"
-description: "Hướng dẫn thu hồi quyền truy cập mã thông báo hợp đồng thông minh khai thác"
+description: "Hướng dẫn thu hồi quyền truy cập token hợp đồng thông minh khai thác"
 lang: vi
 ---
 

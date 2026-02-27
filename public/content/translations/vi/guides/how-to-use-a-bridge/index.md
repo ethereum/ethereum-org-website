@@ -1,6 +1,6 @@
 ---
 title: "Cách chuyển token sang lớp 2"
-description: "Một hướng dẫn giải thích cách do chuyển mã thông báo từ Ethereum sang lớp thứ 2 bằng cầu nối."
+description: "Một hướng dẫn giải thích cách do chuyển token từ Ethereum sang lớp thứ 2 bằng cầu nối."
 lang: vi
 ---
 

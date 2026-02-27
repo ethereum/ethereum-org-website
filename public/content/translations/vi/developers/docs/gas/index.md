@@ -122,7 +122,7 @@ Phí gas cao là do sự phổ biến của Ethereum. Nếu nhu cầu quá cao, 
 
 Các [bản nâng cấp khả năng mở rộng](/roadmap/) của Ethereum cuối cùng sẽ giải quyết một số vấn đề về phí gas, điều này sẽ cho phép nền tảng xử lý hàng nghìn giao dịch mỗi giây và mở rộng quy mô trên toàn cầu.
 
-Layer 2 là là sáng kiến chính để cải thiện về mặt chi phí gas, trải nghiệm người dùng và khả năng mở rộng quy mô.
+Layer 2 là sáng kiến chính để cải thiện về mặt chi phí gas, trải nghiệm người dùng và khả năng mở rộng quy mô.
 
 [Tìm hiểu thêm về mở rộng quy mô lớp 2](/developers/docs/scaling/#layer-2-scaling)
 

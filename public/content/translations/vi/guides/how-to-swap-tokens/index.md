@@ -63,7 +63,7 @@ Khi giao dịch hoàn thành, bạn sẽ nhận được tài sản mà bạn đ
 
 ### Có thể hoán đổi ETH với BTC ở ví lưu trữ vừa tạo hay không?
 
-Không, bạn chỉ có thể hoán đổi những cặp tài sản được tạo ra trên mạng lưới Ethereum, như là ETH, mã thông báo ERC20, hoặc là NFTs. Hoặc bạn có thể hoán đổi "wrapped" Bitcoin, một dạng tài sản đã được bảo chứng bằng Btc và chuyển đổi, đồng thời có sẵn trên mạng Ethereum.
+Không, bạn chỉ có thể hoán đổi những cặp tài sản được tạo ra trên mạng lưới Ethereum, như là ETH, token ERC20, hoặc là NFTs. Hoặc bạn có thể hoán đổi "wrapped" Bitcoin, một dạng tài sản đã được bảo chứng bằng Btc và chuyển đổi, đồng thời có sẵn trên mạng Ethereum.
 
 ### Tỉ lệ trượt giá là gì?
 

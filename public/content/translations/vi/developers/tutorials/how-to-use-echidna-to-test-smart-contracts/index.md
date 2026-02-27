@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: vi
 tags:
   [
-    "solidity",
+    "Solidity",
     "hợp đồng thông minh",
     "tính bảo mật",
     "kiểm thử",

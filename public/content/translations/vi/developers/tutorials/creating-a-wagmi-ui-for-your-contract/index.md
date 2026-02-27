@@ -2,7 +2,7 @@
 title: "Xây dựng giao diện người dùng cho hợp đồng của bạn"
 description: "Sử dụng các thành phần hiện đại như TypeScript, React, Vite và Wagmi, chúng ta sẽ xem xét một giao diện người dùng hiện đại nhưng tối giản và tìm hiểu cách kết nối ví với giao diện người dùng, gọi hợp đồng thông minh để đọc thông tin, gửi giao dịch đến hợp đồng thông minh và giám sát các sự kiện từ hợp đồng thông minh để xác định các thay đổi."
 author: Ori Pomerantz
-tags: [ "typescript", "react", "vite", "wagmi", "frontend" ]
+tags: [ "TypeScript", "react", "vite", "wagmi", "frontend" ]
 skill: beginner
 published: 2023-11-01
 lang: vi

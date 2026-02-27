@@ -1,11 +1,11 @@
 ---
 title: "Cách viết và triển khai một NFT (Phần 1/3 trong Loạt bài hướng dẫn về NFT)"
-description: "Hướng dẫn này là phần 1 của chuỗi hướng dẫn về NFT mà sẽ đưa bạn từng bước viết và triển khai một hợp đồng thông minh cho mã thông báo không thể thay thế (mã ERC-721) sử dụng Ethereum và Hệ thống tệp liên hành tinh (IPFS)."
+description: "Hướng dẫn này là phần 1 của chuỗi hướng dẫn về NFT mà sẽ đưa bạn từng bước viết và triển khai một hợp đồng thông minh cho token không thể thay thế (mã ERC-721) sử dụng Ethereum và Hệ thống tệp liên hành tinh (IPFS)."
 author: "Sumi Mudgil"
 tags:
   [
     "ERC-721",
-    "Từ Alchemy",
+    "Alchemy",
     "Solidity",
     "hợp đồng thông minh"
   ]
@@ -14,7 +14,7 @@ lang: vi
 published: 2021-04-22
 ---
 
-Với việc NFT đưa blockchain ra mắt công chúng, đây là một cơ hội tuyệt vời để tự mình tìm hiểu về cơn sốt này bằng cách xuất bản hợp đồng NFT (Mã thông báo ERC-721) của riêng bạn trên blockchain Ethereum!
+Với việc NFT đưa blockchain ra mắt công chúng, đây là một cơ hội tuyệt vời để tự mình tìm hiểu về cơn sốt này bằng cách xuất bản hợp đồng NFT (Token ERC-721) của riêng bạn trên blockchain Ethereum!
 
 Alchemy vô cùng tự hào khi cung cấp sức mạnh cho những tên tuổi lớn nhất trong không gian NFT, bao gồm Makersplace (gần đây đã lập kỷ lục bán tác phẩm nghệ thuật kỹ thuật số tại Christie's với giá 69 triệu đô la), Dapper Labs (những người tạo ra NBA Top Shot & Crypto Kitties), OpenSea (thị trường NFT lớn nhất thế giới), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable, và nhiều hơn nữa.
 

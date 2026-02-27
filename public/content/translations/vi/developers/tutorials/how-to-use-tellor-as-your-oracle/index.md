@@ -3,7 +3,7 @@ title: "Cách thiết lập Tellor làm Oracle của bạn"
 description: "Hướng dẫn bắt đầu tích hợp oracle Tellor vào giao thức của bạn"
 author: "Tellor"
 lang: vi
-tags: [ "solidity", "hợp đồng thông minh", "oracles" ]
+tags: [ "Solidity", "hợp đồng thông minh", "oracles" ]
 skill: beginner
 published: 2021-06-29
 source: Tellor Docs

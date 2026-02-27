@@ -5,7 +5,7 @@ author: Markus Waas
 lang: vi
 tags:
   [
-    "solidity",
+    "Solidity",
     "hợp đồng thông minh",
     "truy vấn",
     "the graph",

@@ -1,7 +1,7 @@
 ---
 title: "Cách để sử dụng ví"
 metaTitle: "Hướng dẫn từng bước cách sử dụng ví Ethereum"
-description: "Hướng dẫn giải thích cách gửi, nhận mã thông báo và kết nối với các dự án web3."
+description: "Hướng dẫn giải thích cách gửi, nhận token và kết nối với các dự án web3."
 lang: vi
 ---
 
@@ -11,7 +11,7 @@ Tìm hiểu cách vận hành tất cả các chức năng cơ bản của ví. 
 
 ## Mở ví của bạn
 
-Bạn sẽ thấy một bảng điều khiển có khả năng hiển thị số dư của bạn và chứa các nút để gửi và nhận mã thông báo.
+Bạn sẽ thấy một bảng điều khiển có khả năng hiển thị số dư của bạn và chứa các nút để gửi và nhận token.
 
 ## Nhận tiền mã hóa
 

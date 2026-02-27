@@ -1,6 +1,6 @@
 {
   "51%-attack-term": "tấn công 51%",
-  "51%-attack-definition": "Một loại tấn công mà một nhóm chiếm quyền kiểm soát phần lớn <a href=\"/glossary/#node\">nút</a>. Điều này sẽ cho phép họ gian lận blockchain bằng cách đảo ngược <a href=\"/glossary/#transaction\">giao dịch</a> và chi tiêu gấp đôi <a href=\"ether\">ether</a> và các mã thông báo khác.",
+  "51%-attack-definition": "Một loại tấn công mà một nhóm chiếm quyền kiểm soát phần lớn <a href=\"/glossary/#node\">nút</a>. Điều này sẽ cho phép họ gian lận blockchain bằng cách đảo ngược <a href=\"/glossary/#transaction\">giao dịch</a> và chi tiêu gấp đôi <a href=\"ether\">ether</a> và các token khác.",
   "abi-term": "Giao diện nhị phân ứng dụng (ABI)",
   "abi-definition": "Một tệp JSON xác định các hàm và biến có trong một hợp đồng thông minh. ABI cho phép mã bytecode được ánh xạ sang các định dạng mà con người có thể đọc được.",
   "account-term": "Tài khoản",
@@ -87,7 +87,7 @@
   "key-definition": "Trong bối cảnh Ethereum, khóa (Key) là các mã số điện tử: khóa công khai (Public Key) để nhận giao dịch và khóa riêng tư (Private Key) để truy cập và gửi tài sản.",
   "layer-2-term": "Lớp 2",
   "layer-2-definition": "Các layer 2 là những mạng lưới khác được xây dựng dựa trên mạng chính Ethereum để giúp giao dịch nhanh chóng và rẻ hơn. <a href=\"/layer-2/\">Thêm về layer 2</a>.",
-  "liquidity-tokens-term": "Mã thông báo thanh khoản",
+  "liquidity-tokens-term": "Token thanh khoản",
   "liquidity-tokens-definition": "Liquidity token (LT) là Token điện tử được phát hành cho những người tham gia gửi tài sản vào một quỹ thanh khoản — một tập hợp quỹ được khóa trong hợp đồng thông minh và được sử dụng để hỗ trợ thanh khoản trên sàn phi tập trung (DEX).",
   "mainnet-term": "Mainnet",
   "mainnet-definition": "Viết tắt của \"mạng chính\", đây là <a href=\"/glossary/#blockchain\">chuỗi khối</a> Ethereum công khai chính.",

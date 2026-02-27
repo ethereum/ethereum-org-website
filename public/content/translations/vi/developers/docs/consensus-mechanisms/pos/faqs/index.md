@@ -161,7 +161,7 @@ Không, có vài chuỗi khối bằng chứng cổ phần khác. Không có cá
 
 ## Sự kiện Hợp nhất là gì? {#what-is-the-merge}
 
-Sự kiện Hợp nhất là khoảnh khắc Ethereum tắt cơ chế đồng thuận bằng chứng công việc của mình và bật cơ chế đồng thuận bằng chứng cổ phẩn. Sự kiện Hợp nhất đã diễn ra vào 15 tháng 9 năm 2022.
+Sự kiện Hợp nhất là khoảnh khắc Ethereum tắt cơ chế đồng thuận bằng chứng công việc của mình và bật cơ chế đồng thuận bằng chứng cổ phần. Sự kiện Hợp nhất đã diễn ra vào 15 tháng 9 năm 2022.
 
 [Tìm hiểu thêm về The Merge](/roadmap/merge)
 

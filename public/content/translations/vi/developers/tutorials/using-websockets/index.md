@@ -3,7 +3,7 @@ title: "Sử dụng WebSocket"
 description: "Hướng dẫn sử dụng WebSocket và Alchemy để thực hiện các yêu cầu JSON-RPC và đăng ký các sự kiện."
 author: "Elan Halpern"
 lang: vi
-tags: [ "từ Alchemy", "websockets", "truy vấn", "javascript" ]
+tags: [ "Alchemy", "websockets", "truy vấn", "JavaScript" ]
 skill: beginner
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3

@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "hợp đồng thông minh",
-    "remix",
-    "solidity",
+    "Remix",
+    "Solidity",
     "triển khai"
   ]
 skill: beginner

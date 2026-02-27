@@ -11,7 +11,7 @@ Một trong những ứng dụng cho Ethereum đó là cho một nhóm tạo ra 
 Có hai cách mà họ có thể đã sử dụng để lừa bạn:
 
 - **Bán cho bạn một token lừa đảo**, có thể trông giống như token hợp pháp mà bạn muốn mua, nhưng được những kẻ lừa đảo phát hành và không có giá trị.
-- **Lừa bạn ký các giao dịch xấu**, thường bằng cách hướng bạn vào giao diện người dùng của họ. Họ có thể cố gắng yêu cầu bạn cấp cho hợp đồng của họ một khoản trợ cấp đối với mã thông báo ERC-20 của bạn, tiết lộ thông tin nhạy cảm cho phép họ truy cập vào tài sản của bạn, v.v. Những giao diện người dùng này có thể là bản sao gần như hoàn hảo của các trang web trung thực nhưng có những thủ thuật ẩn.
+- **Lừa bạn ký các giao dịch xấu**, thường bằng cách hướng bạn vào giao diện người dùng của họ. Họ có thể cố gắng yêu cầu bạn cấp cho hợp đồng của họ một khoản trợ cấp đối với token ERC-20 của bạn, tiết lộ thông tin nhạy cảm cho phép họ truy cập vào tài sản của bạn, v.v. Những giao diện người dùng này có thể là bản sao gần như hoàn hảo của các trang web trung thực nhưng có những thủ thuật ẩn.
 
 Để minh họa token lừa đảo là gì và cách nhận diện chúng, chúng ta sẽ xem xét một ví dụ: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Token này cố gắng trông giống như token [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) hợp pháp.
 
@@ -28,10 +28,10 @@ contentPreview=''>
 
 Có một quy ước trong Ethereum là khi một nội dung không tuân thủ ERC-20, chúng tôi sẽ tạo một phiên bản "được bao bọc" của nội dung đó với tên bắt đầu bằng "w". Vì vậy, ví dụ: chúng ta có wBTC cho bitcoin và <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH cho ether</a>.
 
-Không có ý nghĩa gì khi tạo ra một phiên bản được gói của mã thông báo ERC-20 đã có trên Ethereum, nhưng những kẻ lừa đảo dựa vào sự xuất hiện của tính hợp pháp hơn là thực tế cơ bản.
+Không có ý nghĩa gì khi tạo ra một phiên bản được gói của token ERC-20 đã có trên Ethereum, nhưng những kẻ lừa đảo dựa vào sự xuất hiện của tính hợp pháp hơn là thực tế cơ bản.
 </ExpandableCard>
 
-## Làm thế nào để các mã thông báo lừa đảo hoạt động? {#how-do-scam-tokens-work}
+## Làm thế nào để các token lừa đảo hoạt động? {#how-do-scam-tokens-work}
 
 Mục đích chính của Ethereum là mạng lưới phi tập trung. Điều đó có nghĩa là sẽ không có cơ quan tập trung nào có quyền tịch thu tài sản của bạn hoặc ngan cản bạn triển khai hợp đồng thông minh. Nhưng điều đó cũng đồng nghĩa là những người lừa đảo cũng có quyền triển khai hợp đồng thông minh theo họ muốn.
 
@@ -46,7 +46,7 @@ Cụ thể, Arbitrum đã triển khai một hợp đồng sử dụng ký hiệ
 
 ## Trông có vẻ hợp pháp {#appearing-legitimate}
 
-Có một số chiêu trò mà những người tạo mã thông báo lừa đảo sử dụng để xuất hiện hợp pháp.
+Có một số chiêu trò mà những người tạo token lừa đảo sử dụng để xuất hiện hợp pháp.
 
 - **Chứng minh tên và giấu hiệu**. Như đã đề cập trước đó, hợp đồng ERC-20 có thể có cùng ký hiệu và tên như các hợp đồng ERC-20 khác. Bạn không thể dựa vào cách đánh giá đó cho bảo chứng.
 
