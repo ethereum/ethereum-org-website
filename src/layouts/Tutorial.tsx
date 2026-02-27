@@ -4,6 +4,7 @@ import type { HTMLAttributes } from "react"
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
@@ -112,6 +113,7 @@ export const TutorialLayout = ({
         className="min-w-0 max-w-[1000px] rounded bg-background p-0 lg:p-16 lg:shadow"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
+        <Breadcrumbs slug={slug} startDepth={1} />
         <Heading1>{frontmatter.title}</Heading1>
         <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
         <TableOfContents
