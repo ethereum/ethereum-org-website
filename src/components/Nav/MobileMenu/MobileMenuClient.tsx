@@ -15,7 +15,8 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 // Lazy-load the menu content to avoid including it in initial RSC payload
 // This saves ~82KB by not SSR'ing navigation data that's hidden behind a click
-const MobileMenuContent = React.lazy(() => import("./MobileMenuContent"))
+const lazyImport = () => import("./MobileMenuContent")
+const MobileMenuContent = React.lazy(lazyImport)
 
 function MobileMenuContentSkeleton() {
   return (
@@ -41,19 +42,31 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
   // Track if menu has ever been opened to keep content loaded after first open
   const [hasBeenOpened, setHasBeenOpened] = React.useState(false)
 
+  // Prefetch the menu chunk after the page is idle
   React.useEffect(() => {
-    if (open && !hasBeenOpened) {
+    if (hasBeenOpened) return
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(() => lazyImport())
+      return () => window.cancelIdleCallback(id)
+    }
+  }, [hasBeenOpened])
+
+  const handleOpenChange = (nextOpen: boolean) => {
+    // Set hasBeenOpened synchronously to avoid an empty frame before the skeleton
+    if (nextOpen && !hasBeenOpened) {
       setHasBeenOpened(true)
     }
-  }, [open, hasBeenOpened])
+    setOpen(nextOpen)
+  }
 
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
+    <Sheet open={open} onOpenChange={handleOpenChange}>
       <SheetTrigger asChild>
         <HamburgerButton
           ref={triggerRef}
           className={cn("-me-2", className)}
           isMenuOpen={open}
+          onPointerEnter={() => lazyImport()}
         />
       </SheetTrigger>
 
@@ -61,12 +74,11 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
         open={open}
         side={side}
         className="flex flex-col"
-        onOpenChange={setOpen}
+        onOpenChange={handleOpenChange}
         triggerRef={triggerRef}
         aria-label={t("site-title")}
         data-testid="mobile-menu-dialog"
       >
-        {/* Only load content after menu has been opened once */}
         {hasBeenOpened && (
           <React.Suspense fallback={<MobileMenuContentSkeleton />}>
             <MobileMenuContent />
