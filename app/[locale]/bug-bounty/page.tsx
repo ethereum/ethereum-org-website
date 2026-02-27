@@ -114,6 +114,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const { locale } = await params
 
   const t = await getTranslations({ namespace: "page-bug-bounty" })
+  const tCommon = await getTranslations({ namespace: "common" })
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
@@ -159,69 +160,58 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       title: "Besu",
       link: "https://besu.hyperledger.org/en/stable/",
       image: besu,
-      alt: "Besu logo",
     },
     {
       title: "Erigon",
       link: "https://github.com/ledgerwatch/erigon",
       image: erigon,
-      alt: "Erigon logo",
     },
     {
       title: "Geth",
       link: "https://geth.ethereum.org/",
       image: geth,
-      alt: "Geth logo",
     },
     {
       title: "Lighthouse",
       link: "https://lighthouse-book.sigmaprime.io/",
       image: lighthouseLight,
-      alt: "Lighthouse logo",
       className: "[&_img]:dark:invert",
     },
     {
       title: "Lodestar",
       link: "https://chainsafe.github.io/lodestar/",
       image: lodestar,
-      alt: "Lodestar logo",
     },
     {
       title: "Nimbus",
       link: "https://nimbus.team/",
       image: nimbus,
-      alt: "Nimbus logo",
     },
     {
       title: "Nethermind",
       link: "https://docs.nethermind.io/",
       image: nethermind,
-      alt: "Nethermind logo",
     },
     {
       title: "Prysm",
       link: "https://prylabs.net/",
       image: prysm,
-      alt: "Prysm logo",
     },
     {
       title: "Reth",
       link: "https://reth.rs/",
       image: reth,
-      alt: "Reth logo",
     },
     {
       title: "Teku",
       link: "https://pegasys.tech/teku",
       image: tekuLight,
-      alt: "Teku logo",
       className: "[&_img]:dark:invert",
     },
     {
       title: "Grandine",
       link: "https://grandine.io/",
       image: grandine,
-      alt: "Grandine logo",
     },
   ]
 
@@ -249,14 +239,12 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       title: "Solidity",
       link: "https://soliditylang.org/",
       image: solidityLight,
-      alt: "Solidity logo",
       className: "[&_img]:dark:invert",
     },
     {
       title: "Vyper",
       link: "https://vyperlang.org/",
       image: vyper,
-      alt: "Vyper logo",
     },
   ]
 
@@ -318,47 +306,83 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         </Text>
         <ClientRow>
           <Client>
-            <Image src={besu} alt="Besu logo" {...iconImageProps()} />
-          </Client>
-          <Client>
-            <Image src={erigon} alt="Erigon logo" {...iconImageProps()} />
-          </Client>
-          <Client>
-            <Image src={geth} alt="Geth logo" {...iconImageProps()} />
-          </Client>
-          <Client>
             <Image
-              src={nethermind}
-              alt="Nethermind logo"
+              src={besu}
+              alt={tCommon("item-logo", { item: "Besu" })}
               {...iconImageProps()}
             />
           </Client>
           <Client>
-            <Image src={reth} alt="Reth logo" {...iconImageProps()} />
+            <Image
+              src={erigon}
+              alt={tCommon("item-logo", { item: "Erigon" })}
+              {...iconImageProps()}
+            />
+          </Client>
+          <Client>
+            <Image
+              src={geth}
+              alt={tCommon("item-logo", { item: "Geth" })}
+              {...iconImageProps()}
+            />
+          </Client>
+          <Client>
+            <Image
+              src={nethermind}
+              alt={tCommon("item-logo", { item: "Nethermind" })}
+              {...iconImageProps()}
+            />
+          </Client>
+          <Client>
+            <Image
+              src={reth}
+              alt={tCommon("item-logo", { item: "Reth" })}
+              {...iconImageProps()}
+            />
           </Client>
         </ClientRow>
         <ClientRow>
           <Client>
             <Image
               src={lighthouseLight}
-              alt="Lighthouse logo"
+              alt={tCommon("item-logo", { item: "Lighthouse" })}
               {...iconImageProps(true)}
             />
           </Client>
           <Client>
-            <Image src={lodestar} alt="Lodestar logo" {...iconImageProps()} />
+            <Image
+              src={lodestar}
+              alt={tCommon("item-logo", { item: "Lodestar" })}
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={nimbus} alt="Nimbus logo" {...iconImageProps()} />
+            <Image
+              src={nimbus}
+              alt={tCommon("item-logo", { item: "Nimbus" })}
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={prysm} alt="Prysm logo" {...iconImageProps()} />
+            <Image
+              src={prysm}
+              alt={tCommon("item-logo", { item: "Prysm" })}
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={tekuLight} alt="Teku logo" {...iconImageProps(true)} />
+            <Image
+              src={tekuLight}
+              alt={tCommon("item-logo", { item: "Teku" })}
+              {...iconImageProps(true)}
+            />
           </Client>
           <Client>
-            <Image src={grandine} alt="Grandine logo" {...iconImageProps()} />
+            <Image
+              src={grandine}
+              alt={tCommon("item-logo", { item: "Grandine" })}
+              {...iconImageProps()}
+            />
           </Client>
         </ClientRow>
         <div className="mb-12 mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box">
