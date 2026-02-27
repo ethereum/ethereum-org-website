@@ -1551,6 +1551,12 @@ function escapeMdxAngleBrackets(content: string): {
       fixCount++
       return "\\</>"
     })
+
+    // Escape < before word containing [ (e.g., <Stockage[4]) — never valid MDX
+    parts[i] = parts[i].replace(/(?<!\\)<([a-zA-Z]+\[)/g, (_, after) => {
+      fixCount++
+      return `\\<${after}`
+    })
   }
 
   return { content: parts.join(""), fixCount }
@@ -1625,8 +1631,9 @@ function fixBackslashBeforeClosingTag(content: string): {
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
 
-    // Match backslash immediately before </ (closing HTML tag) or </>
-    parts[i] = parts[i].replace(/\\(<\/[a-zA-Z]*>)/g, (_, tag) => {
+    // Match backslash immediately before closing HTML tags like \</strong>
+    // Requires at least one letter in tag name — leaves \</> (JSX fragment) intact
+    parts[i] = parts[i].replace(/\\(<\/[a-zA-Z]+>)/g, (_, tag) => {
       fixCount++
       return tag
     })

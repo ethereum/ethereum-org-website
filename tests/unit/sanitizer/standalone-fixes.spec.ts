@@ -458,14 +458,55 @@ test.describe("Standalone Fixes", () => {
       expect(fixCount).toBe(0)
     })
 
-    test("handles the JSX empty fragment variant", () => {
+    test("does NOT strip backslash from JSX fragment \\</>", () => {
       const input =
         "nous utilisons un composant vide (`<> ...` \\</>`) pour en faire un seul composant."
       const { content, fixCount } = fixBackslashBeforeClosingTag(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("escapeMdxAngleBrackets — extended patterns", () => {
+    test("escapes bare < before word containing [", () => {
+      const input =
+        "| calldataload(4)<Stockage[4] calldataload(4) |"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
       expect(content).toBe(
-        "nous utilisons un composant vide (`<> ...` </>`) pour en faire un seul composant."
+        "| calldataload(4)\\<Stockage[4] calldataload(4) |"
       )
       expect(fixCount).toBe(1)
+    })
+
+    test("escapes multiple bare < before word[ patterns", () => {
+      const input =
+        "| <Stockage[4] foo | bar <Storage[2] baz |"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(
+        "| \\<Stockage[4] foo | bar \\<Storage[2] baz |"
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves already-escaped \\<Word[ unchanged", () => {
+      const input = "| calldataload(4)\\<Storage[4] |"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips <Word[ inside code blocks", () => {
+      const input = "```\n<Storage[4]\n```"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not escape valid MDX component tags", () => {
+      const input = "<Card title=\"test\" />"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 })
