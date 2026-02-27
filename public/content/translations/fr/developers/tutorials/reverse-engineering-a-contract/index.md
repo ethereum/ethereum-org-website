@@ -578,167 +578,169 @@ Nous pouvons ignorer les quatre dernières méthodes, car nous ne les atteindron
 
 L'une des méthodes restantes est `claim(<params>)` et une autre est `isClaimed(<params>)`, donc cela ressemble à un contrat d'airdrop. Une des méthodes restantes est `claim(<params>)`, et une autre est `isClaimed(<params>)`, donc cela ressemble à un contrat d'airdrop. Au lieu de passer en revue le reste des opcodes un par un, nous pouvons [essayer le décompilateur](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), qui produit des résultats utilisables pour trois fonctions de ce contrat.
 
-### L'ingénierie inverse des autres est laissée comme exercice au lecteur.
+L'ingénierie inverse des autres est laissée comme exercice au lecteur.
 
-scaleAmountByPercentage {#scaleamountbypercentage}
+### scaleAmountByPercentage {#scaleamountbypercentage}
 
-```python
 Voici ce que le décompilateur nous donne pour cette fonction :
-```
 
+```python
 def unknown8ffb5c97(uint256 _param1, uint256 _param2) payable:
-require calldata.size - 4 >=′ 64
-if _param1 and _param2 > -1 / _param1:
-revert with 0, 17
-return (_param1 * _param2 / 100 * 10^6) Le premier `require` teste si les données d'appel contiennent, en plus des quatre octets de la signature de fonction, au moins 64 octets, ce qui est suffisant pour les deux paramètres.
-
-Sinon, il y a manifestement un problème. L'instruction `if` semble vérifier que `_param1` n'est pas nul et que `_param1 * _param2` n'est pas négatif.
-
-C'est probablement pour éviter les cas de bouclage (wrap around).
-
-### Enfin, la fonction retourne une valeur mise à l'échelle.
-
-claim {#claim} Le code que le décompilateur crée est complexe, et tout n'est pas pertinent pour nous.
-
-```python
-Je vais en sauter une partie pour me concentrer sur les lignes qui, à mon avis, fournissent des informations utiles.
+  require calldata.size - 4 >=′ 64
+  if _param1 and _param2 > -1 / _param1:
+      revert with 0, 17
+  return (_param1 * _param2 / 100 * 10^6)
 ```
 
+Le premier `require` teste si les données d'appel contiennent, en plus des quatre octets de la signature de fonction, au moins 64 octets, ce qui est suffisant pour les deux paramètres. Sinon, il y a manifestement un problème.
+
+L'instruction `if` semble vérifier que `_param1` n'est pas nul et que `_param1 * _param2` n'est pas négatif. C'est probablement pour éviter les cas de bouclage (wrap around).
+
+Enfin, la fonction retourne une valeur mise à l'échelle.
+
+### claim {#claim}
+
+Le code que le décompilateur crée est complexe, et tout n'est pas pertinent pour nous. Je vais en sauter une partie pour me concentrer sur les lignes qui, à mon avis, fournissent des informations utiles.
+
+```python
 def unknown2e7ba6ef(uint256 _param1, uint256 _param2, uint256 _param3, array _param4) payable:
-...
-require _param2 == addr(_param2)
-...
-if currentWindow <= _param1:
-revert with 0, 'cannot claim for a future window'
+  ...
+  require _param2 == addr(_param2)
+  ...
+  if currentWindow <= _param1:
+      revert with 0, 'cannot claim for a future window'
+```
 
-- Nous voyons ici deux choses importantes :
+Nous voyons ici deux choses importantes :
+
 - `_param2`, bien qu'il soit déclaré comme un `uint256`, est en fait une adresse
+- `_param1` est la fenêtre réclamée, qui doit être `currentWindow` ou une fenêtre antérieure.
 
 ```python
-`_param1` est la fenêtre réclamée, qui doit être `currentWindow` ou une fenêtre antérieure.
+  ...
+  if stor5[_claimWindow][addr(_claimFor)]:
+      revert with 0, 'Account already claimed the given window'
 ```
 
-...
-if stor5[_claimWindow][addr(_claimFor)]:
-revert with 0, 'Account already claimed the given window'
-
-```python
 Nous savons donc maintenant que Stockage[5] est un tableau de fenêtres et d'adresses, et qu'il indique si l'adresse a réclamé la récompense pour cette fenêtre.
-```
-
-...
-idx = 0
-s = 0
-while idx < _param4.length:
-...
-if s + sha3(mem[(32 * _param4.length) + 328 len mem[(32 * _param4.length) + 296]]) > mem[(32 \* idx) + 296]:
-mem[mem[64] + 32] = mem[(32 \* idx) + 296]
-...
-s = sha3(mem[_62 + 32 len mem[_62]])
-continue
-...
-s = sha3(mem[_66 + 32 len mem[_66]])
-continue
-if unknown2eb4a7ab != s:
-revert with 0, 'Invalid proof' Nous savons que `unknown2eb4a7ab` est en fait la fonction `merkleRoot()`, ce code semble donc vérifier une [preuve de Merkle](https://medium.com/crypto-0-nite/merkle-proofs-explained-6dd429623dc5).
 
 ```python
-Cela signifie que `_param4` est une preuve de Merkle.
+  ...
+  idx = 0
+  s = 0
+  while idx < _param4.length:
+  ...
+      if s + sha3(mem[(32 * _param4.length) + 328 len mem[(32 * _param4.length) + 296]]) > mem[(32 * idx) + 296]:
+          mem[mem[64] + 32] = mem[(32 * idx) + 296]
+          ...
+          s = sha3(mem[_62 + 32 len mem[_62]])
+          continue
+      ...
+      s = sha3(mem[_66 + 32 len mem[_66]])
+      continue
+  if unknown2eb4a7ab != s:
+      revert with 0, 'Invalid proof'
 ```
 
-call addr(_param2) with:
-value unknown81e580d3[_param1] * _param3 / 100 * 10^6 wei
-gas 30000 wei C'est ainsi qu'un contrat transfère ses propres ETH à une autre adresse (contrat ou compte externe). Il l'appelle avec une valeur qui est le montant à transférer.
+Nous savons que `unknown2eb4a7ab` est en fait la fonction `merkleRoot()`, ce code semble donc vérifier une [preuve de Merkle](https://medium.com/crypto-0-nite/merkle-proofs-explained-6dd429623dc5). Cela signifie que `_param4` est une preuve de Merkle.
 
 ```python
-Il semble donc qu'il s'agisse d'un airdrop d'ETH.
+  call addr(_param2) with:
+     value unknown81e580d3[_param1] * _param3 / 100 * 10^6 wei
+       gas 30000 wei
 ```
 
-if not return_data.size:
-if not ext_call.success:
-require ext_code.size(stor2)
-call stor2.deposit() with:
-value unknown81e580d3[_param1] * _param3 / 100 * 10^6 wei Les deux dernières lignes nous disent que Stockage[2] est aussi un contrat que nous appelons.
-
-Si nous [examinons la transaction du constructeur](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange), nous voyons que ce contrat est [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), un contrat Wrapped Ether [dont le code source a été téléversé sur Etherscan](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code). Il semble donc que les contrats tentent d'envoyer des ETH à `_param2`. S'il peut le faire, tant mieux. Sinon, il tente d'envoyer du [WETH](https://weth.tkn.eth.limo/). Si `_param2` est un compte externe (EOA), il peut toujours recevoir des ETH, mais les contrats peuvent refuser de recevoir des ETH.
+C'est ainsi qu'un contrat transfère ses propres ETH à une autre adresse (contrat ou compte externe). Il l'appelle avec une valeur qui est le montant à transférer. Il semble donc qu'il s'agisse d'un airdrop d'ETH.
 
 ```python
-Cependant, le WETH est un ERC-20 et les contrats ne peuvent pas refuser de l'accepter.
+  if not return_data.size:
+      if not ext_call.success:
+          require ext_code.size(stor2)
+          call stor2.deposit() with:
+             value unknown81e580d3[_param1] * _param3 / 100 * 10^6 wei
 ```
 
-...
-log 0xdbd5389f: addr(_param2), unknown81e580d3[_param1] * _param3 / 100 * 10^6, bool(ext_call.success) À la fin de la fonction, nous voyons qu'une entrée de journal est générée. [Examinez les entrées de journal générées](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#events) et filtrez sur le sujet qui commence par `0xdbd5...`.
+Les deux dernières lignes nous disent que Stockage[2] est aussi un contrat que nous appelons. Si nous [examinons la transaction du constructeur](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange), nous voyons que ce contrat est [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), un contrat Wrapped Ether [dont le code source a été téléversé sur Etherscan](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code).
 
-Si nous [cliquons sur l'une des transactions qui ont généré une telle entrée](https://etherscan.io/tx/0xe7d3b7e00f645af17dfbbd010478ef4af235896c65b6548def1fe95b3b7d2274), nous voyons qu'il s'agit bien d'une réclamation : le compte a envoyé un message au contrat sur lequel nous faisons de l'ingénierie inverse et a reçu de l'ETH en retour.
-
-### ![Une transaction de réclamation](claim-tx.png)
-
-1e7df9d3 {#1e7df9d3} Cette fonction est très similaire à [`claim`](#claim) ci-dessus.
+Il semble donc que les contrats tentent d'envoyer des ETH à `_param2`. S'il peut le faire, tant mieux. Sinon, il tente d'envoyer du [WETH](https://weth.tkn.eth.limo/). Si `_param2` est un compte externe (EOA), il peut toujours recevoir des ETH, mais les contrats peuvent refuser de recevoir des ETH. Cependant, le WETH est un ERC-20 et les contrats ne peuvent pas refuser de l'accepter.
 
 ```python
-Elle vérifie également une preuve de Merkle, tente de transférer de l'ETH à la première et produit le même type d'entrée de journal.
+  ...
+  log 0xdbd5389f: addr(_param2), unknown81e580d3[_param1] * _param3 / 100 * 10^6, bool(ext_call.success)
 ```
 
+À la fin de la fonction, nous voyons qu'une entrée de journal est générée. [Examinez les entrées de journal générées](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#events) et filtrez sur le sujet qui commence par `0xdbd5...`. Si nous [cliquons sur l'une des transactions qui ont généré une telle entrée](https://etherscan.io/tx/0xe7d3b7e00f645af17dfbbd010478ef4af235896c65b6548def1fe95b3b7d2274), nous voyons qu'il s'agit bien d'une réclamation : le compte a envoyé un message au contrat sur lequel nous faisons de l'ingénierie inverse et a reçu de l'ETH en retour.
+
+![Une transaction de réclamation](claim-tx.png)
+
+### 1e7df9d3 {#1e7df9d3}
+
+Cette fonction est très similaire à [`claim`](#claim) ci-dessus. Elle vérifie également une preuve de Merkle, tente de transférer de l'ETH à la première et produit le même type d'entrée de journal.
+
+```python
 def unknown1e7df9d3(uint256 _param1, uint256 _param2, array _param3) payable:
-...
-idx = 0
-s = 0
-while idx < _param3.length:
-if idx >= mem[96]:
-revert with 0, 50
-_55 = mem[(32 \* idx) + 128]
-if s + sha3(mem[(32 * _param3.length) + 160 len mem[(32 * _param3.length) + 128]]) > mem[(32 \* idx) + 128]:
-...
-s = sha3(mem[_58 + 32 len mem[_58]])
-continue
-mem[mem[64] + 32] = s + sha3(mem[(32 * _param3.length) + 160 len mem[(32 * _param3.length) + 128]])
-...
-if unknown2eb4a7ab != s:
-revert with 0, 'Invalid proof'
-...
-call addr(_param1) with:
-value s wei
-gas 30000 wei
-if not return_data.size:
-if not ext_call.success:
-require ext_code.size(stor2)
-call stor2.deposit() with:
-value s wei
-gas gas_remaining wei
-...
-log 0xdbd5389f: addr(_param1), s, bool(ext_call.success) La principale différence est que le premier paramètre, la fenêtre à retirer, n'est pas là.
-
-```python
-À la place, il y a une boucle sur toutes les fenêtres qui pourraient être réclamées.
+  ...
+  idx = 0
+  s = 0
+  while idx < _param3.length:
+      if idx >= mem[96]:
+          revert with 0, 50
+      _55 = mem[(32 * idx) + 128]
+      if s + sha3(mem[(32 * _param3.length) + 160 len mem[(32 * _param3.length) + 128]]) > mem[(32 * idx) + 128]:
+          ...
+          s = sha3(mem[_58 + 32 len mem[_58]])
+          continue
+      mem[mem[64] + 32] = s + sha3(mem[(32 * _param3.length) + 160 len mem[(32 * _param3.length) + 128]])
+  ...
+  if unknown2eb4a7ab != s:
+      revert with 0, 'Invalid proof'
+  ...
+  call addr(_param1) with:
+     value s wei
+       gas 30000 wei
+  if not return_data.size:
+      if not ext_call.success:
+          require ext_code.size(stor2)
+          call stor2.deposit() with:
+             value s wei
+               gas gas_remaining wei
+  ...
+  log 0xdbd5389f: addr(_param1), s, bool(ext_call.success)
 ```
 
-idx = 0
-s = 0
-while idx < currentWindow:
-...
-if stor5[mem[0]]:
-if idx == -1:
-revert with 0, 17
-idx = idx + 1
-s = s
-continue
-...
-stor5[idx][addr(_param1)] = 1
-if idx >= unknown81e580d3.length:
-revert with 0, 50
-mem[0] = 4
-if unknown81e580d3[idx] and _param2 > -1 / unknown81e580d3[idx]:
-revert with 0, 17
-if s > !(unknown81e580d3[idx] * _param2 / 100 * 10^6):
-revert with 0, 17
-if idx == -1:
-revert with 0, 17
-idx = idx + 1
-s = s + (unknown81e580d3[idx] * _param2 / 100 * 10^6)
-continue
+La principale différence est que le premier paramètre, la fenêtre à retirer, n'est pas là. À la place, il y a une boucle sur toutes les fenêtres qui pourraient être réclamées.
+
+```python
+  idx = 0
+  s = 0
+  while idx < currentWindow:
+      ...
+      if stor5[mem[0]]:
+          if idx == -1:
+              revert with 0, 17
+          idx = idx + 1
+          s = s
+          continue
+      ...
+      stor5[idx][addr(_param1)] = 1
+      if idx >= unknown81e580d3.length:
+          revert with 0, 50
+      mem[0] = 4
+      if unknown81e580d3[idx] and _param2 > -1 / unknown81e580d3[idx]:
+          revert with 0, 17
+      if s > !(unknown81e580d3[idx] * _param2 / 100 * 10^6):
+          revert with 0, 17
+      if idx == -1:
+          revert with 0, 17
+      idx = idx + 1
+      s = s + (unknown81e580d3[idx] * _param2 / 100 * 10^6)
+      continue
+```
+
+Cela ressemble donc à une variante de `claim` qui réclame toutes les fenêtres.
 
 ## Conclusion {#conclusion}
 
-Cela ressemble donc à une variante de `claim` qui réclame toutes les fenêtres. À présent, vous devriez savoir comment comprendre les contrats dont le code source n'est pas disponible, en utilisant soit les opcodes, soit (quand cela fonctionne) le décompilateur.
+À présent, vous devriez savoir comment comprendre les contrats dont le code source n'est pas disponible, en utilisant soit les opcodes, soit (quand cela fonctionne) le décompilateur. Comme le montre la longueur de cet article, l'ingénierie inverse d'un contrat n'est pas triviale, mais dans un système où la sécurité est essentielle, c'est une compétence importante de pouvoir vérifier que les contrats fonctionnent comme promis.
 
 [Voir ici pour plus de mon travail](https://cryptodocguy.pro/).
