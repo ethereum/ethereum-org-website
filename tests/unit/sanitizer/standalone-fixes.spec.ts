@@ -24,6 +24,7 @@ const {
   extractHrefs,
   isInternalHref,
   splitIntoBlocks,
+  fixBackslashBeforeClosingTag,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -404,6 +405,108 @@ test.describe("Standalone Fixes", () => {
       expect(blocks[0]).toBe("Block one")
       expect(blocks[1]).toBe("Block two")
       expect(blocks[2]).toBe("Block three")
+    })
+  })
+
+  test.describe("fixBackslashBeforeClosingTag", () => {
+    test("fixes backslash before </strong>", () => {
+      const input =
+        '<p className="mt-0"><strong>Bon à savoir\\</strong></p>'
+      const { content, fixCount } = fixBackslashBeforeClosingTag(input)
+      expect(content).toBe(
+        '<p className="mt-0"><strong>Bon à savoir</strong></p>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes backslash before </em>", () => {
+      const input = "<em>some text\\</em>"
+      const { content, fixCount } = fixBackslashBeforeClosingTag(input)
+      expect(content).toBe("<em>some text</em>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes backslash before </a>", () => {
+      const input = '<a href="/test">link text\\</a>'
+      const { content, fixCount } = fixBackslashBeforeClosingTag(input)
+      expect(content).toBe('<a href="/test">link text</a>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes multiple occurrences", () => {
+      const input =
+        "<strong>text1\\</strong> and <strong>text2\\</strong>"
+      const { content, fixCount } = fixBackslashBeforeClosingTag(input)
+      expect(content).toBe(
+        "<strong>text1</strong> and <strong>text2</strong>"
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves correct closing tags unchanged", () => {
+      const input = "<strong>Bon à savoir</strong>"
+      const { content, fixCount } = fixBackslashBeforeClosingTag(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input =
+        "```\n<strong>text\\</strong>\n```"
+      const { content, fixCount } = fixBackslashBeforeClosingTag(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does NOT strip backslash from JSX fragment \\</>", () => {
+      const input =
+        "nous utilisons un composant vide (`<> ...` \\</>`) pour en faire un seul composant."
+      const { content, fixCount } = fixBackslashBeforeClosingTag(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("escapeMdxAngleBrackets — extended patterns", () => {
+    test("escapes bare < before word containing [", () => {
+      const input =
+        "| calldataload(4)<Stockage[4] calldataload(4) |"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(
+        "| calldataload(4)\\<Stockage[4] calldataload(4) |"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("escapes multiple bare < before word[ patterns", () => {
+      const input =
+        "| <Stockage[4] foo | bar <Storage[2] baz |"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(
+        "| \\<Stockage[4] foo | bar \\<Storage[2] baz |"
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves already-escaped \\<Word[ unchanged", () => {
+      const input = "| calldataload(4)\\<Storage[4] |"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips <Word[ inside code blocks", () => {
+      const input = "```\n<Storage[4]\n```"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not escape valid MDX component tags", () => {
+      const input = "<Card title=\"test\" />"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 })
