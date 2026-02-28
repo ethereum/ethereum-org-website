@@ -647,26 +647,28 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           </div>
         </Content>
         <div className="mt-8 w-full border-t bg-banner-grid-gradient px-0 py-16 shadow-table-item-box">
-          <FullLeaderboardContainer>
-            <H2 id="el-leaderboard" className="text-center">
-              {t("page-upgrades-bug-bounty-hunting-execution-leaderboard")}
-            </H2>
-            <Text>
-              {t(
-                "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle"
-              )}
-            </Text>
-            <Leaderboard content={executionBountyHunters} />
-          </FullLeaderboardContainer>
-          <FullLeaderboardContainer>
-            <H2 id="cl-leaderboard" className="text-center">
-              {t("page-upgrades-bug-bounty-hunting-leaderboard")}
-            </H2>
-            <Text>
-              {t("page-upgrades-bug-bounty-hunting-leaderboard-subtitle")}
-            </Text>
-            <Leaderboard content={consensusBountyHunters} />
-          </FullLeaderboardContainer>
+          <Flex className="flex-col items-start justify-center lg:flex-row">
+            <FullLeaderboardContainer>
+              <H2 id="el-leaderboard" className="text-center">
+                {t("page-upgrades-bug-bounty-hunting-execution-leaderboard")}
+              </H2>
+              <Text>
+                {t(
+                  "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle"
+                )}
+              </Text>
+              <Leaderboard content={executionBountyHunters} />
+            </FullLeaderboardContainer>
+            <FullLeaderboardContainer>
+              <H2 id="cl-leaderboard" className="text-center">
+                {t("page-upgrades-bug-bounty-hunting-leaderboard")}
+              </H2>
+              <Text>
+                {t("page-upgrades-bug-bounty-hunting-leaderboard-subtitle")}
+              </Text>
+              <Leaderboard content={consensusBountyHunters} />
+            </FullLeaderboardContainer>
+          </Flex>
         </div>
         <Divider />
         <Content>
