@@ -18,7 +18,7 @@ published: 2021-04-22
 [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 triệu đô la
 [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 triệu đô la
 
-Tất cả họ đã đúc các NFT của mình bằng cách sử dụng Giao diện Lập trình Ứng dụng mạnh mẽ của Alchemy. Trong hướng dẫn này, chúng tôi sẽ dạy bạn cách làm điều tương tự trong vòng \&lt;10 phút.
+Tất cả họ đã đúc các NFT của mình bằng cách sử dụng Giao diện Lập trình Ứng dụng mạnh mẽ của Alchemy. Trong hướng dẫn này, chúng tôi sẽ dạy bạn cách làm điều tương tự trong vòng \<10 phút.
 
 “Đúc một NFT” là hành động xuất bản một phiên bản duy nhất của token ERC-721 của bạn trên chuỗi khối. Sử dụng hợp đồng thông minh của chúng tôi từ [Phần 1 của chuỗi hướng dẫn NFT này](/developers/tutorials/how-to-write-and-deploy-an-nft/), hãy vận dụng các kỹ năng Web3 của chúng ta và đúc một NFT. Khi kết thúc hướng dẫn này, bạn sẽ có thể đúc bao nhiêu NFT tùy thích (và ví của bạn cho phép)!
 

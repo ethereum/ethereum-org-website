@@ -18,7 +18,7 @@ published: 2021-04-22
 [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b) : 11 millions de dollars
 [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens) : 6 millions de dollars
 
-Tous ont frappé leurs NFT en utilisant la puissante API d'Alchemy. Dans ce tutoriel, nous vous apprendrons comment faire la même chose en \&lt;10 minutes.
+Tous ont frappé leurs NFT en utilisant la puissante API d'Alchemy. Dans ce tutoriel, nous vous apprendrons comment faire la même chose en \<10 minutes.
 
 « Frapper un NFT » est l'acte de publier une instance unique de votre jeton ERC-721 sur la blockchain. En utilisant notre contrat intelligent de la [partie 1 de cette série de tutoriels sur les NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/), mettons en pratique nos compétences Web3 et frappons un NFT. À la fin de ce tutoriel, vous serez en mesure de frapper autant de NFT que votre cœur (et votre portefeuille) le désire !
 

@@ -55,7 +55,7 @@ Những lợi ích của thiết kế mạng này là:
 - giảm sự phụ thuộc vào các nhà cung cấp tập trung
 - Giảm sử dụng băng thông Internet
 - Đồng bộ hóa tối thiểu hoặc bằng không
-- Có thể truy cập được đối với các thiết bị có tài nguyên hạn chế (\&lt;1 GB RAM, \&lt;100 MB dung lượng đĩa, 1 CPU)
+- Có thể truy cập được đối với các thiết bị có tài nguyên hạn chế (\<1 GB RAM, \<100 MB dung lượng đĩa, 1 CPU)
 
 Bảng dưới đây hiển thị các chức năng của các máy khách hiện có mà Mạng Portal có thể cung cấp, cho phép người dùng truy cập các chức năng này trên các thiết bị có tài nguyên rất thấp.
 
