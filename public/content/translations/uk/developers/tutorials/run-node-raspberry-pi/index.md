@@ -64,7 +64,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # Хеш має вивести: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Зауважте, що образи для плат Rock 5B і Odroid M1 доступні на [сторінці завантажень](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) Ethereum-on-Arm.
+Зауважте, що образи для плат Rock 5B і Odroid M1 доступні на [сторінці завантажень](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) Ethereum-on-Arm.
 
 ## Прошивка MicroSD {#flashing-the-microsd}
 
@@ -158,7 +158,7 @@ sudo systemctl start lighthouse-validator
 
 ## Докладніше {#more-details}
 
-На цій сторінці наведено огляд того, як налаштувати вузол Geth-Lighthouse і валідатор за допомогою Raspberry Pi. Докладніші інструкції доступні на [вебсайті Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html).
+На цій сторінці наведено огляд того, як налаштувати вузол Geth-Lighthouse і валідатор за допомогою Raspberry Pi. Докладніші інструкції доступні на [вебсайті Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/).
 
 ## Будемо вдячні за відгуки {#feedback-appreciated}
 
@@ -177,7 +177,7 @@ sudo systemctl start lighthouse-validator
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

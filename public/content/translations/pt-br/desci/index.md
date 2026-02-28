@@ -101,7 +101,6 @@ Explore projetos e junte-se à comunidade DeSci.
 - [OceanDAO: financiamento governado pela DAO para ciência relacionada a dados](https://oceanprotocol.com/)
 - [Opscientia: fluxos de trabalho de ciência descentralizados abertos](https://opsci.io/research/)
 - [Bio.xyz: obtenha financiamento para sua DAO de biotecnologia ou projeto desci](https://www.bio.xyz/)
-- [Fleming Protocol: economia de dados de código aberto que alimenta a descoberta biomédica colaborativa](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: para uma credibilidade científica descentralizada](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

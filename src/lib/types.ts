@@ -588,8 +588,8 @@ export type EtherscanTxCountResponse = {
 }
 
 export type DefiLlamaTVLResponse = {
-  date: string
-  totalLiquidityUSD: number
+  date: number
+  tvl: number
 }[]
 
 export type MetricReturnData = ValueOrError<number>

@@ -272,7 +272,6 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Kostenloser Einstieg
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Doku](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Eigenschaften
     - Zugang zu mehr als 50 Blockchain-Nodes
     - Kostenloser API-Schlüssel
@@ -283,11 +282,10 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Geteilte, archivierte, Backup- und Spezial-Nodes
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Doku](https://docs.pokt.network/home/)
+  - [Doku](https://docs.pokt.network/)
   - Eigenschaften
     - Dezentrales RPC-Protokoll und Marktplatz
     - 1 Mio. Anfragen pro Tag für kostenlose Stufen (pro Endpunkt, max. 2)
-    - [Öffentliche Endpunkte](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+-Programm (wenn Sie mehr als 1 Mio. Anfragen pro Tag benötigen)
     - Support für mehr als 15 Blockchains
     - Über 6400 Nodes verdienen POKT für die Bedienung von Anwendungen

@@ -234,7 +234,7 @@ Masuala haya ya ubora wa msimbo _hayathibitishi_ kuwa msimbo huu ni ulaghai, lak
 
 #### Kitendakazi cha `mount` {#the-mount-function}
 
-Ingawa haijaainishwa katika [kiwango](https://eips.ethereum.org/EIPS/eip-20), kwa ujumla kitendakazi kinachotengeneza tokeni mpya huitwa [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
+Ingawa haijaainishwa katika [kiwango](https://eips.ethereum.org/EIPS/eip-20), kwa ujumla kitendakazi kinachotengeneza tokeni mpya huitwa [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 
 Tukiangalia katika kiunda cha `wARB`, tunaona kitendakazi cha muda cha mint kimebadilishwa jina na kuwa `mount` kwa sababu fulani, na kinaitwa mara tano na sehemu ya tano ya usambazaji wa awali, badala ya mara moja kwa kiasi chote kwa ufanisi.
 

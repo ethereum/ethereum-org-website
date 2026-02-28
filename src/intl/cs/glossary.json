@@ -150,7 +150,7 @@
   "ethash-term": "Ethash",
   "ethash-definition": "Algoritmus <a href=\"/glossary/#pow\">proof-of-work</a>, který byl používán na Ethereu před přechodem na <a href=\"/glossary/#pos\">proof-of-stake</a>. <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">Přečtěte si více</a>",
   "ether-term": "Ether",
-  "ether-definition": "Nativní kryptoměna Etherea, běžně označovaná jako „ETH“. Používá se k pokrytí transakčních poplatků při používání ekosystému a aplikací Etherea. <a href=\"/eth/\">Více o etheru</a>.",
+  "ether-definition": "Nativní kryptoměna Etherea, běžně označovaná jako „ETH“. Používá se k pokrytí transakčních poplatků při používání ekosystému a aplikací Etherea. <a href=\"/what-is-ether/\">Více o etheru</a>.",
   "events-term": "Události",
   "events-definition": "Umožňuje použití logovacích zařízení <a href=\"/glossary/#evm\">EVM</a>. <a href=\"/glossary/#dapp\">Dapps</a> mohou naslouchat událostem a používat je ke spouštění JavaScriptových zpětných volání v uživatelském rozhraní. <a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">Více o událostech a logách</a>",
   "evm-term": "Virtuální stroj Etherea (EVM)",

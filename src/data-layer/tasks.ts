@@ -30,6 +30,7 @@ import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
+import { fetchTranslationGlossary } from "./fetchers/fetchTranslationGlossary"
 import { set } from "./storage"
 
 export const KEYS = {
@@ -56,6 +57,7 @@ export const KEYS = {
   TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
   STABLECOINS_DATA: "fetch-stablecoins-data",
   ACCOUNT_HOLDERS: "fetch-account-holders",
+  TRANSLATION_GLOSSARY: "fetch-translation-glossary",
 } as const
 
 // Task definition: storage key + fetch function
@@ -77,6 +79,7 @@ const DAILY: TaskDef[] = [
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
   [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
+  [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
 ]
 
 const HOURLY: TaskDef[] = [

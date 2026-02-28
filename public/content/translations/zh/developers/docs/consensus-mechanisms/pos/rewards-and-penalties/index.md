@@ -60,7 +60,7 @@ PROPOSER_WEIGHT	uint64(8)
 
 错失目标和来源投票的惩罚等于认证者提交这些投票时获取到的奖励。 这意味着没有奖励会添加到他们的余额中，反而会从余额中移除同等价值。 错失头部投票没有惩罚（即头部投票只奖励，不惩罚）。 没有与 `inclusion_delay` 相关的惩罚 — 奖励只是不会被添加到验证者的余额中。 区块提议失败也没有惩罚。
 
-请在[共识规范](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md)中阅读更多关于奖励和惩罚的信息。 奖励和惩罚在 Bellatrix 升级中进行了调整——观看 Danny Ryan 和 Vitalik 在这个 [Peep an EIP 视频](https://www.youtube.com/watch?v=iaAEGs1DMgQ)中对此的讨论。
+请在[共识规范](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md)中阅读更多关于奖励和惩罚的信息。 奖励和惩罚在 Bellatrix 升级中进行了调整——观看 Danny Ryan 和 Vitalik 在这个 [Peep an EIP 视频](https://www.youtube.com/watch?v=iaAEGs1DMgQ)中对此的讨论。
 
 ## 罚没 {#slashing}
 

@@ -96,7 +96,7 @@ m/44'/60'/0'/0`
 
 ## மேலும் வாசிக்க {#further-reading}
 
-- [கார்ல் பீக்குசென் எழுதிய எத்தேரியம் அறக்கட்டளை வலைப்பதிவு இடுகை](https://blog.ethereum.org/2020/05/21/keys/)
+- [கார்ல் பீக்குசென் எழுதிய எத்தேரியம் அறக்கட்டளை வலைப்பதிவு இடுகை](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 BLS12-381 விசை உருவாக்கம்](https://eips.ethereum.org/EIPS/eip-2333)
 - [EIP-7002: செயலாக்க அடுக்கு தூண்டப்பட்ட வெளியேற்றங்கள்](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [பெரிய அளவில் விசை மேலாண்மை](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

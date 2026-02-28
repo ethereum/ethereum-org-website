@@ -101,7 +101,6 @@ Jelajahi proyek-proyek dan bergabunglah dengan komunitas DeSci.
 - [OceanDAO: Pendanaan yang diatur oleh DAO untuk ilmu pengetahuan terkait data](https://oceanprotocol.com/)
 - [Opscientia: alur kerja ilmu pengetahuan terbuka dan terdesentralisasi](https://opsci.io/research/)
 - [Bio.xyz: dapatkan pendanaan untuk proyek bioteknologi atau proyek DeSci Anda melalui DAO](https://www.bio.xyz/)
-- [Fleming Protocol: ekonomi data sumber terbuka yang mendukung penemuan biomedis kolaboratif](http://flemingprotocol.io/)
 - [Lembaga Inferensi Aktif](https://www.activeinference.org/)
 - [IdeaMarkets: Memungkinkan kredibilitas ilmiah terdesentralisasi](https://ideamarket.io/)
 - [Lab DeSci](https://www.desci.com/)

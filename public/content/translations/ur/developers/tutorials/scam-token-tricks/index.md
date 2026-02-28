@@ -241,7 +241,7 @@ ERC-20 کنٹریکٹس میں الاؤنس کے لیے [ایک `approve` فنک
 
 #### `mount` فنکشن {#the-mount-function}
 
-جبکہ یہ [معیار](https://eips.ethereum.org/EIPS/eip-20) میں متعین نہیں ہے، عام طور پر نئے ٹوکن بنانے والے فنکشن کو [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) کہا جاتا ہے۔
+جبکہ یہ [معیار](https://eips.ethereum.org/EIPS/eip-20) میں متعین نہیں ہے، عام طور پر نئے ٹوکن بنانے والے فنکشن کو [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) کہا جاتا ہے۔
 
 اگر ہم `wARB` کنسٹرکٹر میں دیکھیں، تو ہم دیکھتے ہیں کہ ٹائم منٹ فنکشن کا نام کسی وجہ سے `mount` رکھ دیا گیا ہے، اور اسے کارکردگی کے لیے پوری رقم کے لیے ایک بار کے بجائے، ابتدائی سپلائی کے پانچویں حصے کے ساتھ پانچ بار کال کیا جاتا ہے۔
 
