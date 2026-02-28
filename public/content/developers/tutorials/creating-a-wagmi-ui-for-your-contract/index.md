@@ -648,7 +648,7 @@ The wagmi configuration includes the chains supported by this application. You c
     [sepolia.id]: http()
 ```
 
-The default HTTP endpoint that comes with Viem is good enough. If we want a different URL, we can use `http("https://<hostname>")` or WebSocket("wss://<hostname>").
+The default HTTP endpoint that comes with Viem is good enough. If we want a different URL, we can use `http("https:// hostname ")` or `webSocket("wss:// hostname ")`.
 
 ```ts
   },
