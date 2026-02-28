@@ -1715,6 +1715,114 @@ function fixBackslashBeforeClosingTag(content: string): {
   return { content: parts.join(""), fixCount }
 }
 
+/**
+ * Remove junk text appended after heading anchor IDs.
+ * Crowdin sometimes appends translated "translations" of the anchor ID
+ * after the {#anchor-id} tag, e.g. {#network-impact}네트워크-충격
+ * These break rendering and must be stripped.
+ */
+function fixJunkAfterHeadingAnchors(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match {#anchor-id} followed by non-whitespace junk on the SAME line
+    // Uses [ \t]* (horizontal whitespace only) to avoid crossing newlines
+    parts[i] = parts[i].replace(
+      /(\{#-?[a-z0-9][-a-z0-9]*\})[ \t]*([^\s\n}][^\n]*)/g,
+      (_match, anchor, junk) => {
+        // Only strip if the junk looks like a translated anchor (non-ASCII or hyphenated)
+        // eslint-disable-next-line no-control-regex
+        if (/[^\x00-\x7F]|^[a-z]+-[a-z]+/.test(junk.trim())) {
+          fixCount++
+          return anchor
+        }
+        return _match // Leave as-is if it's normal trailing content
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Unwrap markdown links that Crowdin wrapped in backticks.
+ * Pattern: `[text](url)` → [text](url)
+ * Only matches when the backtick content is a complete markdown link.
+ */
+function fixBacktickWrappedLinks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip fenced code blocks
+
+    // Match `[link text](url)` - backtick-wrapped markdown links
+    // The content between backticks must be a valid markdown link
+    parts[i] = parts[i].replace(/`(\[[^\]]+\]\([^)]+\))`/g, (_, link) => {
+      fixCount++
+      return link
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix markdown links where parentheses around the URL are missing.
+ * Pattern: [text]https://url or [text]/internal/path/
+ * NOT to be confused with reference-style links [text][ref].
+ */
+function fixMissingLinkParentheses(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match [text] followed immediately by a URL (https://, http://, or /path)
+    // URL ends at whitespace, Korean/CJK chars, or certain punctuation
+    parts[i] = parts[i].replace(
+      /(\[[^\]]+\])((?:https?:\/\/|\/)[^\s[\]()<>\u3000-\u9FFF\uAC00-\uD7AF]*)/g,
+      (match, linkText, rawUrl) => {
+        // Skip if already has parentheses (shouldn't match, but safety check)
+        if (match.includes("](")) return match
+        // Skip reference-style links [text][ref]
+        if (/^\[/.test(rawUrl)) return match
+
+        // Strip trailing punctuation that is prose, not URL
+        const trailingPunct = /[:.,;!?]+$/.exec(rawUrl)
+        const url = trailingPunct
+          ? rawUrl.slice(0, -trailingPunct[0].length)
+          : rawUrl
+        const suffix = trailingPunct ? trailingPunct[0] : ""
+
+        fixCount++
+        return `${linkText}(${url})${suffix}`
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
 function removeOrphanedClosingTags(content: string): {
   content: string
   fixCount: number
@@ -1872,6 +1980,18 @@ function processMarkdownFile(
   applyFix(
     () => fixBrokenMarkdownLinks(content),
     (n) => `Fixed ${n} broken markdown links`
+  )
+  applyFix(
+    () => fixMissingLinkParentheses(content),
+    (n) => `Fixed ${n} links with missing parentheses`
+  )
+  applyFix(
+    () => fixBacktickWrappedLinks(content),
+    (n) => `Unwrapped ${n} backtick-wrapped markdown links`
+  )
+  applyFix(
+    () => fixJunkAfterHeadingAnchors(content),
+    (n) => `Removed ${n} junk text fragments after heading anchors`
   )
   applyFix(
     () => normalizeFrontmatterDates(content),
@@ -2331,6 +2451,9 @@ export const _testOnly = {
   // Warnings
   warnPunctuationOnlyHeadings,
   fixBackslashBeforeClosingTag,
+  fixJunkAfterHeadingAnchors,
+  fixBacktickWrappedLinks,
+  fixMissingLinkParentheses,
   warnCodeFenceContentDrift,
   warnCatastrophicCodeFenceDrift,
   detectCrossScriptContamination,

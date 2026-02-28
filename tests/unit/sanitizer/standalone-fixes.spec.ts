@@ -26,6 +26,9 @@ const {
   splitIntoBlocks,
   fixBackslashBeforeClosingTag,
   fixAsymmetricBackticks,
+  fixJunkAfterHeadingAnchors,
+  fixBacktickWrappedLinks,
+  fixMissingLinkParentheses,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -596,6 +599,183 @@ test.describe("Standalone Fixes", () => {
     test("skips content inside fenced code blocks", () => {
       const input = "```\n`broken``\n```"
       const { content, fixCount } = fixAsymmetricBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Pattern 17: Junk text after heading anchors (ko review PR #17166)
+  // ─────────────────────────────────────────────────────────────────────────
+  test.describe("fixJunkAfterHeadingAnchors", () => {
+    test("removes Korean junk text after anchor ID", () => {
+      const input =
+        "## 덴쿤 네트워크 업그레이드는 어떤 문제를 해결하나요? {#network-impact}네트워크-충격"
+      const { content, fixCount } = fixJunkAfterHeadingAnchors(input)
+      expect(content).toBe(
+        "## 덴쿤 네트워크 업그레이드는 어떤 문제를 해결하나요? {#network-impact}"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("removes junk text with leading space after anchor", () => {
+      const input =
+        "## 이전 블롭 데이터는 어떻게 접근하나요? {#historical-access} 역사적인-접근"
+      const { content, fixCount } = fixJunkAfterHeadingAnchors(input)
+      expect(content).toBe(
+        "## 이전 블롭 데이터는 어떻게 접근하나요? {#historical-access}"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple headings with junk", () => {
+      const input = [
+        "## Heading A {#id-a}한국어",
+        "Some paragraph text.",
+        "## Heading B {#id-b}더-텍스트",
+      ].join("\n")
+      const { content, fixCount } = fixJunkAfterHeadingAnchors(input)
+      expect(content).toBe(
+        [
+          "## Heading A {#id-a}",
+          "Some paragraph text.",
+          "## Heading B {#id-b}",
+        ].join("\n")
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves clean anchors unchanged", () => {
+      const input = "## Normal heading {#normal-heading}"
+      const { content, fixCount } = fixJunkAfterHeadingAnchors(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves anchor followed by only whitespace unchanged", () => {
+      const input = "## Title {#title}  "
+      const { content, fixCount } = fixJunkAfterHeadingAnchors(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n## Code heading {#id}junk\n```"
+      const { content, fixCount } = fixJunkAfterHeadingAnchors(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Pattern 18: Backtick-wrapped markdown links (ko review PR #17166)
+  // ─────────────────────────────────────────────────────────────────────────
+  test.describe("fixBacktickWrappedLinks", () => {
+    test("unwraps a backtick-wrapped internal link", () => {
+      const input =
+        "이를 위해 `[배포](/developers/docs/smart-contracts/deploying/)`하기 전에"
+      const { content, fixCount } = fixBacktickWrappedLinks(input)
+      expect(content).toBe(
+        "이를 위해 [배포](/developers/docs/smart-contracts/deploying/)하기 전에"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("unwraps a backtick-wrapped external link", () => {
+      const input =
+        "`[사용자에게 막대한 손실](https://rekt.news/leaderboard/)`로 이어질 수"
+      const { content, fixCount } = fixBacktickWrappedLinks(input)
+      expect(content).toBe(
+        "[사용자에게 막대한 손실](https://rekt.news/leaderboard/)로 이어질 수"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple backtick-wrapped links in one line", () => {
+      const input = "`[link1](/path1)`와 `[link2](/path2)`를 참조하세요"
+      const { content, fixCount } = fixBacktickWrappedLinks(input)
+      expect(content).toBe("[link1](/path1)와 [link2](/path2)를 참조하세요")
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves legitimate inline code unchanged", () => {
+      const input = "Use `require()` for imports"
+      const { content, fixCount } = fixBacktickWrappedLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves regular markdown links unchanged", () => {
+      const input = "[normal link](/path)"
+      const { content, fixCount } = fixBacktickWrappedLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n`[link](/path)`\n```"
+      const { content, fixCount } = fixBacktickWrappedLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Pattern 19: Missing parentheses in link syntax (ko review PR #17166)
+  // ─────────────────────────────────────────────────────────────────────────
+  test.describe("fixMissingLinkParentheses", () => {
+    test("fixes [text]https://url pattern", () => {
+      const input = "- [EIP4844.com]https://www.eip4844.com/"
+      const { content, fixCount } = fixMissingLinkParentheses(input)
+      expect(content).toBe("- [EIP4844.com](https://www.eip4844.com/)")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes [text]https://url with trailing text", () => {
+      const input =
+        "[Refik Anadol]https://x.com/refikanadol/status/1622623521104089090:는 모금"
+      const { content, fixCount } = fixMissingLinkParentheses(input)
+      expect(content).toBe(
+        "[Refik Anadol](https://x.com/refikanadol/status/1622623521104089090):는 모금"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes [text]/internal/path/ pattern", () => {
+      const input = "더 알아보기[이더리움 확장성]/roadmap/scaling/"
+      const { content, fixCount } = fixMissingLinkParentheses(input)
+      expect(content).toBe("더 알아보기[이더리움 확장성](/roadmap/scaling/)")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves normal markdown links unchanged", () => {
+      const input = "[text](https://example.com)"
+      const { content, fixCount } = fixMissingLinkParentheses(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves reference-style links unchanged", () => {
+      const input = "[text][ref]"
+      const { content, fixCount } = fixMissingLinkParentheses(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple broken links", () => {
+      const input = ["- [link1]https://a.com/", "- [link2]https://b.com/"].join(
+        "\n"
+      )
+      const { content, fixCount } = fixMissingLinkParentheses(input)
+      expect(content).toBe(
+        ["- [link1](https://a.com/)", "- [link2](https://b.com/)"].join("\n")
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n[text]https://url.com\n```"
+      const { content, fixCount } = fixMissingLinkParentheses(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
