@@ -345,11 +345,8 @@ export default async function Page({ params }: { params: Promise<Params> }) {
               <H2 id="in-scope">{t("page-upgrades-bug-bounty-validity")}</H2>
               <Text>
                 {t.rich("page-upgrades-bug-bounty-validity-desc", {
-                  mailto: (chunks) => (
-                    <Link href="mailto:bounty@ethereum.org">{chunks}</Link>
-                  ),
                   a: (chunks) => (
-                    <Link href="https://ethereum.org/security_at_ethereum.org.asc">
+                    <Link href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                       {chunks}
                     </Link>
                   ),
@@ -616,6 +613,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 <li>{t("page-upgrades-bug-bounty-not-included-li-6")}</li>
                 <li>{t("page-upgrades-bug-bounty-not-included-li-7")}</li>
                 <li>{t("page-upgrades-bug-bounty-not-included-li-8")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-9")}</li>
               </ul>
               <Text>
                 <sup>*</sup>
@@ -706,47 +704,6 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           <Flex className="mt-16 flex-col lg:flex-row">
             <div className="w-full">
               <ExpandableCard
-                title={t("bug-bounty-faq-q1-title")}
-                contentPreview={t("bug-bounty-faq-q1-contentPreview")}
-              >
-                <Text>
-                  {t.rich("bug-bounty-faq-q1-content-1", {
-                    strong: Strong,
-                  })}
-                </Text>
-                <Text>
-                  {t.rich("bug-bounty-faq-q1-content-2", {
-                    strong: Strong,
-                  })}
-                </Text>
-                <Text>
-                  {t.rich("bug-bounty-faq-q1-content-3", {
-                    strong: Strong,
-                  })}
-                </Text>
-                <Text>
-                  {t.rich("bug-bounty-faq-q1-content-4", {
-                    strong: Strong,
-                  })}
-                </Text>
-                <Text>
-                  {t.rich("bug-bounty-faq-q1-content-5", {
-                    strong: Strong,
-                  })}
-                </Text>
-                <Text>
-                  {t.rich("bug-bounty-faq-q1-content-6", {
-                    strong: Strong,
-                    code: (chunks) => <code>{chunks}</code>,
-                  })}
-                </Text>
-                <Text>
-                  {t.rich("bug-bounty-faq-q1-content-7", {
-                    strong: Strong,
-                  })}
-                </Text>
-              </ExpandableCard>
-              <ExpandableCard
                 title={t("bug-bounty-faq-q2-title")}
                 contentPreview={t("bug-bounty-faq-q2-contentPreview")}
               >
@@ -780,13 +737,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 title={t("bug-bounty-faq-q5-title")}
                 contentPreview={t("bug-bounty-faq-q5-contentPreview")}
               >
-                <Text>
-                  {t.rich("bug-bounty-faq-q5-content-1", {
-                    a: (chunks) => (
-                      <Link href="mailto:bounty@ethereum.org">{chunks}</Link>
-                    ),
-                  })}
-                </Text>
+                <Text>{t("bug-bounty-faq-q5-content-1")}</Text>
               </ExpandableCard>
               <ExpandableCard
                 title={t("bug-bounty-faq-q6-title")}
@@ -801,19 +752,6 @@ export default async function Page({ params }: { params: Promise<Params> }) {
               >
                 <Text>{t("bug-bounty-faq-q7-content-1")}</Text>
               </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q8-title")}
-                contentPreview={t("bug-bounty-faq-q8-contentPreview")}
-              >
-                <Text>
-                  {t.rich("bug-bounty-faq-q8-content-1", {
-                    code: (chunks) => <code>{chunks}</code>,
-                  })}
-                </Text>
-                <InlineLink href="https://ethereum.org/security_at_ethereum.org.asc">
-                  {t("bug-bounty-faq-q8-PGP-key")}
-                </InlineLink>
-              </ExpandableCard>
             </Flex>
           </Flex>
           <FileContributors
@@ -822,21 +760,6 @@ export default async function Page({ params }: { params: Promise<Params> }) {
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
         </Content>
-        <Divider />
-        <Flex className="mx-32 my-12 w-4/5 items-center justify-between rounded-sm border border-border p-6">
-          <div>
-            <Text className="mb-4 text-xl font-bold">
-              {t("page-upgrades-bug-bounty-questions")}
-            </Text>
-            <Text className="mb-0">
-              {t("page-upgrades-bug-bounty-email-us")}{" "}
-              <InlineLink href="mailto:bounty@ethereum.org">
-                bounty@ethereum.org
-              </InlineLink>
-            </Text>
-          </div>
-          <Emoji className="text-5xl" text=":email:" />
-        </Flex>
         <FeedbackCard />
       </MainArticle>
     </>
