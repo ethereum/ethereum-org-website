@@ -3,7 +3,7 @@ title: "Vyper ERC-721 계약 살펴보기"
 description: "Ryuya Nakamura의 ERC-721 계약 및 작동 원리"
 author: Ori Pomerantz
 lang: ko
-tags: [ "vyper", "erc-721", "python" ]
+tags: [ "Vyper", "erc-721", "Python" ]
 skill: beginner
 published: 2021-04-01
 ---

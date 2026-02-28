@@ -12,7 +12,7 @@ lang: ko
 
 [이더리움 스택의 기본 사항](/developers/docs/ethereum-stack/)과 [이더리움 네트워크](/developers/docs/networks/)를 이해한 후에 개발 네트워크에 대해 자세히 알아보는 것이 좋습니다.
 
-## 개발 네트워크란 무엇인가요? {#what-is-a-development-network}네트워크-충격
+## 개발 네트워크란 무엇인가요? {#what-is-a-development-network}
 
 개발 네트워크는 기본적으로 로컬 개발을 위해 특별히 설계된 이더리움 클라이언트(이더리움 구현)입니다.
 

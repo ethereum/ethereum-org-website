@@ -48,7 +48,7 @@ lang: ko
 - [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
-\*\* Cloudflare Ethereum 게이트웨이. \*\*
+** Cloudflare Ethereum 게이트웨이. **
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 

@@ -60,7 +60,7 @@ summaryPoints:
 
 계정이 "인출 가능"으로 표시되고 출금 자격 증명이 제공된 후에 사용자는 기다리는 것 외에 추가로 실행할 작업이 없습니다. 적격한 출금 자금에 대해 블록 제안자가 계정을 자동적이고 지속적으로 정리하며, 다음 <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>정리</a> 중에 계정 잔액이 전액 이체됩니다('전체 인출'이라고도 함).
 
-## 스테이킹 인출은 언제 활성화되었나요? {#when}언제
+## 스테이킹 인출은 언제 활성화되었나요? {#when}
 
 인출 기능은 **2023년 4월 12일**에 진행된 상하이/카펠라 업그레이드의 일부로 활성화되었습니다.
 

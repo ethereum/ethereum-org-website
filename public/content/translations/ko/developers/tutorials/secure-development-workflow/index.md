@@ -2,7 +2,7 @@
 title: "스마트 계약 보안 점검 사항"
 description: "안전한 스마트 계약 작성을 위한 워크플로 제안"
 author: "Trailofbits"
-tags: [ "스마트 컨트랙트", "보안", "솔리디티" ]
+tags: [ "스마트 컨트랙트", "보안", "Solidity" ]
 skill: intermediate
 lang: ko
 published: 2020-09-07

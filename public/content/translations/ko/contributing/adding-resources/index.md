@@ -4,7 +4,7 @@ description: "Ethereum.org에 자료를 추가할 때 사용하는 정책"
 lang: ko
 ---
 
-# {#adding-resources}에 자료 추가하기
+# {#adding-resources}
 
 우리는 사용자들이 안심하고 신뢰할 수 있도록 가능한 최고의 자료를 제공하고 있다고 분명히 말씀드리고 싶습니다.
 
@@ -44,7 +44,7 @@ lang: ko
 
 ---
 
-## {#add-your-resource}에 자료를 추가하세요
+## {#add-your-resource}
 
 만약 ethereum.org에 콘텐츠 자료를 추가하고자 하고 그것이 기준을 충족한다면, 깃허브에 이슈를 열어 주세요.
 

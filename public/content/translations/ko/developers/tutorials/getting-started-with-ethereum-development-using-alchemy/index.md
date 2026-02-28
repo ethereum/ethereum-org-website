@@ -2,7 +2,7 @@
 title: "이더리움 개발 시작하기"
 description: "이더리움 개발을 시작하는 입문자를 위한 가이드입니다. API 엔드포인트를 구동하는 것부터 명령줄 요청을 보내고, 첫 웹3 스크립트를 작성하는 것까지 안내해 드립니다! 사전 블록체인 개발 경험은 필요 없어요!"
 author: "Elan Halpern"
-tags: [ "자바스크립트", "ethers.js", "노드", "요청", "alchemy" ]
+tags: [ "JavaScript", "ethers.js", "노드", "요청", "Alchemy" ]
 skill: beginner
 lang: ko
 published: 2020-10-30

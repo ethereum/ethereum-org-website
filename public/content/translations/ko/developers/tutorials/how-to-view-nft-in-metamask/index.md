@@ -2,7 +2,7 @@
 title: "지갑에서 자신의 NFT를 보는 방법 (NFT 튜토리얼 시리즈 3/3부)"
 description: "이 튜토리얼은 MetaMask에서 기존 NFT를 보는 방법을 설명합니다!"
 author: "Sumi Mudgil"
-tags: [ "ERC-721", "Alchemy", "솔리디티" ]
+tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
 lang: ko
 published: 2021-04-22

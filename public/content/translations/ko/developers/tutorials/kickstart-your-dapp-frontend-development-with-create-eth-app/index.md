@@ -2,7 +2,7 @@
 title: "create-eth-app으로 탈중앙화앱 프론트엔드 개발 시작하기"
 description: "create-eth-app 사용 방법 및 기능 개요"
 author: "Markus Waas"
-tags: [ "프론트엔드", "자바스크립트", "ethers.js", "the graph", "디파이" ]
+tags: [ "프론트엔드", "JavaScript", "ethers.js", "the graph", "디파이" ]
 skill: beginner
 lang: ko
 published: 2020-04-27

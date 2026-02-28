@@ -3,7 +3,7 @@ title: "Python 개발자를 위한 이더리움 소개, 1부"
 description: "Python 프로그래밍 언어에 대한 지식이 있는 분들에게 특히 유용한 이더리움 개발 입문서입니다."
 author: Marc Garreau
 lang: ko
-tags: [ "python", "web3.py" ]
+tags: [ "Python", "web3.py" ]
 skill: beginner
 published: 2020-09-08
 source: Snake charmers
@@ -58,7 +58,7 @@ _블록체인은 본질적으로 각 블록이 이전 블록을 참조하는 연
 
 <FeaturedText>참고: '이더리움 노드'와 '이더리움 클라이언트'는 같은 의미로 사용됩니다. 두 경우 모두 이더리움 네트워크 참여자가 실행하는 소프트웨어를 의미합니다. 이 소프트웨어는 블록 데이터를 읽고, 새로운 블록이 체인에 추가될 때 업데이트를 수신하고, 새로운 트랜잭션을 브로드캐스트하는 등 다양한 작업을 수행할 수 있습니다. 기술적으로, 클라이언트는 소프트웨어이고, 노드는 소프트웨어를 실행하는 컴퓨터입니다.</FeaturedText>
 
-[이더리움 클라이언트](/developers/docs/nodes-and-clients/)는 [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP 또는 웹소켓으로 연결할 수 있도록 구성할 수 있으므로, Web3.py도 이 구성을 미러링해야 합니다. Web3.py는 이러한 연결 옵션을 \*\*공급자(providers)\*\*라고 부릅니다. Web3.py 인스턴스를 노드에 연결하려면 세 가지 공급자 중 하나를 선택해야 합니다.
+[이더리움 클라이언트](/developers/docs/nodes-and-clients/)는 [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP 또는 웹소켓으로 연결할 수 있도록 구성할 수 있으므로, Web3.py도 이 구성을 미러링해야 합니다. Web3.py는 이러한 연결 옵션을 **공급자(providers)**라고 부릅니다. Web3.py 인스턴스를 노드에 연결하려면 세 가지 공급자 중 하나를 선택해야 합니다.
 
 ![web3.py가 IPC를 사용하여 애플리케이션을 이더리움 노드에 연결하는 방법을 보여주는 다이어그램](./web3py-and-nodes.png)
 

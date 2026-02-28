@@ -2,7 +2,7 @@
 title: "계약용 사용자 인터페이스 구축"
 description: "TypeScript, React, Vite, Wagmi와 같은 최신 구성 요소를 사용하여 현대적이면서도 최소한의 사용자 인터페이스를 살펴보고, 사용자 인터페이스에 지갑을 연결하고, 스마트 계약을 호출하여 정보를 읽고, 스마트 계약에 트랜잭션을 보내고, 스마트 계약의 이벤트를 모니터링하여 변경 사항을 식별하는 방법을 알아봅니다."
 author: Ori Pomerantz
-tags: [ "typescript", "react", "vite", "wagmi", "프론트엔드" ]
+tags: [ "TypeScript", "react", "vite", "wagmi", "프론트엔드" ]
 skill: beginner
 published: 2023-11-01
 lang: ko

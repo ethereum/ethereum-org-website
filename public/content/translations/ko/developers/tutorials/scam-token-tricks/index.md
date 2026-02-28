@@ -2,7 +2,7 @@
 title: "스캠 토큰에 사용되는 몇 가지 속임수와 탐지 방법"
 description: "이 튜토리얼에서는 스캠 토큰을 분석하여 사기꾼들이 사용하는 몇 가지 속임수, 구현 방법, 그리고 탐지 방법을 알아봅니다."
 author: Ori Pomerantz
-tags: [ "스캠", "솔리디티", "erc-20", "자바스크립트", "typescript" ]
+tags: [ "스캠", "Solidity", "erc-20", "JavaScript", "TypeScript" ]
 skill: intermediate
 published: 2023-09-15
 lang: ko
@@ -16,7 +16,7 @@ lang: ko
 
 사용자 관점에서 이 주제에 대한 자세한 내용은 [ethereum.org의 다른 곳](/guides/how-to-id-scam-tokens/)에서 확인할 수 있습니다. 이 튜토리얼은 스캠 토큰을 분석하여 그 수법과 탐지 방법을 알아보는 데 중점을 둡니다.
 
-### wARB가 스캠이라는 것을 어떻게 알 수 있나요? {#warb-scam}사기 주의
+### wARB가 스캠이라는 것을 어떻게 알 수 있나요? {#warb-scam}
 
 분석할 토큰은 [wARB](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code)이며, 이는 합법적인 [ARB 토큰](https://etherscan.io/token/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1)과 동일한 것처럼 위장합니다.
 

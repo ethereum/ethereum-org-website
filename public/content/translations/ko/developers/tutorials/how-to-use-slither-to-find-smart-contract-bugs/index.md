@@ -3,7 +3,7 @@ title: "Slither를 사용하여 스마트 계약 버그를 찾는 방법"
 description: "Slither를 사용하여 스마트 계약에서 자동으로 버그를 찾는 방법"
 author: Trailofbits
 lang: ko
-tags: [ "솔리디티", "스마트 계약", "보안", "테스트" ]
+tags: [ "Solidity", "스마트 계약", "보안", "테스트" ]
 skill: advanced
 published: 2020-06-09
 source: Building secure contracts

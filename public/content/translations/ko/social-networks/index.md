@@ -21,7 +21,7 @@ summaryPoint3: "토큰과 NFT는 콘텐츠를 통한 수익 창출의 새로운 
 
 <YouTube id="UdT2lpcGvcQ" />
 
-### 분산형 소셜 네트워크는 어떻게 작동하나요? {#decentralized-social-networks-overview}네트워크-충격
+### 분산형 소셜 네트워크는 어떻게 작동하나요? {#decentralized-social-networks-overview}
 
 탈중앙화 소셜 네트워크는 블록체인에 배포된 [스마트 계약](/glossary/#smart-contract)으로 구동되는 애플리케이션인 [탈중앙화 애플리케이션(탈중앙화앱)](/apps/)의 한 종류입니다. 계약 코드는 해당 앱에 대한 백엔드로 제공되며 비즈니스 논리를 정의합니다.
 
@@ -84,29 +84,29 @@ Mirror에 게시된 글은 탈중앙화 스토리지 플랫폼인 Arweave에 영
 
 ### Brave 브라우저 {#brave}
 
-- Brave는 디지털 광고 및 콘텐츠 크리에이터 지원에 혁신을 가져오기 위해 Ethereum 기반의 ERC-20 토큰인 \*\*[베이직 어텐션 토큰(BAT)](https://basicattentiontoken.org/)\*\*을 브라우저 생태계에 통합했습니다.
+- Brave는 디지털 광고 및 콘텐츠 크리에이터 지원에 혁신을 가져오기 위해 Ethereum 기반의 ERC-20 토큰인 **[베이직 어텐션 토큰(BAT)](https://basicattentiontoken.org/)**을 브라우저 생태계에 통합했습니다.
 
-- \*\*[Brave Rewards 프로그램](https://brave.com/brave-rewards/)\*\*을 통해 사용자는 개인정보를 존중하는 광고를 보고 BAT를 획득한 다음, 주목 시간을 기준으로 YouTube, Twitter, GitHub와 같은 다양한 플랫폼의 웹사이트 및 콘텐츠 크리에이터에게 자동으로 기여할 수 있습니다.
+- **[Brave Rewards 프로그램](https://brave.com/brave-rewards/)**을 통해 사용자는 개인정보를 존중하는 광고를 보고 BAT를 획득한 다음, 주목 시간을 기준으로 YouTube, Twitter, GitHub와 같은 다양한 플랫폼의 웹사이트 및 콘텐츠 크리에이터에게 자동으로 기여할 수 있습니다.
 
-- 콘텐츠 크리에이터는 \*\*[Brave 인증 크리에이터](https://creators.brave.com/)\*\*로 등록하여 이러한 기여금을 자신의 Ethereum 지갑으로 직접 받을 수 있으며, 이는 기존 웹 플랫폼과 블록체인 기반 수익화 사이의 브리지를 만듭니다.
+- 콘텐츠 크리에이터는 **[Brave 인증 크리에이터](https://creators.brave.com/)**로 등록하여 이러한 기여금을 자신의 Ethereum 지갑으로 직접 받을 수 있으며, 이는 기존 웹 플랫폼과 블록체인 기반 수익화 사이의 브리지를 만듭니다.
 
 - BAT 토큰은 Ethereum 블록체인에 독립적으로 존재하므로, 사용자는 획득한 토큰을 개인 지갑이나 거래소로 전송할 수 있습니다.
 
 ### Audius 음악 플랫폼 {#audius}
 
-- \*\*[Audius](https://audius.co/)\*\*는 Ethereum 블록체인 기술을 사용하여 아티스트와 팬을 직접 연결하는 음악 스트리밍 플랫폼입니다.
+- **[Audius](https://audius.co/)**는 Ethereum 블록체인 기술을 사용하여 아티스트와 팬을 직접 연결하는 음악 스트리밍 플랫폼입니다.
 
-- 이 플랫폼은 콘텐츠는 IPFS에 저장되고 소유권 및 \*\*[AUDIO 토큰](https://eth.blockscout.com/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)\*\*을 위해 블록체인을 활용하는 하이브리드 탈중앙화 아키텍처를 특징으로 합니다.
+- 이 플랫폼은 콘텐츠는 IPFS에 저장되고 소유권 및 **[AUDIO 토큰](https://eth.blockscout.com/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)**을 위해 블록체인을 활용하는 하이브리드 탈중앙화 아키텍처를 특징으로 합니다.
 
-- Audius는 \*\*[TikTok과 파트너십](https://audius.co/tiktok)\*\*을 체결하여 주류 잠재고객에게 Web3 기능을 제공하고, 아티스트가 블록체인 기술을 통해 콘텐츠로 수익을 창출할 수 있도록 합니다.
+- Audius는 **[TikTok과 파트너십](https://audius.co/tiktok)**을 체결하여 주류 잠재고객에게 Web3 기능을 제공하고, 아티스트가 블록체인 기술을 통해 콘텐츠로 수익을 창출할 수 있도록 합니다.
 
-- 플랫폼의 기술적 세부 정보는 이들이 Ethereum 인프라를 기반으로 어떻게 구축했는지 보여주는 \*\*[백서](https://whitepaper.audius.co/)\*\*에서 확인할 수 있습니다.
+- 플랫폼의 기술적 세부 정보는 이들이 Ethereum 인프라를 기반으로 어떻게 구축했는지 보여주는 **[백서](https://whitepaper.audius.co/)**에서 확인할 수 있습니다.
 
 ### Sorare 판타지 스포츠 {#sorare}
 
-- \*\*[Sorare](https://sorare.com/)\*\*는 사용자가 공식 NFT 선수 카드를 수집, 거래, 플레이할 수 있도록 하는 \*\*[Ethereum 기반 판타지 스포츠 플랫폼](https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet)\*\*입니다.
+- **[Sorare](https://sorare.com/)**는 사용자가 공식 NFT 선수 카드를 수집, 거래, 플레이할 수 있도록 하는 **[Ethereum 기반 판타지 스포츠 플랫폼](https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet)**입니다.
 
-- 선수 카드는 Ethereum 블록체인에서 검증 가능한 NFT이며, 플랫폼의 스마트 계약은 \*\*[Etherscan](https://eth.blockscout.com/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205?tab=contract)\*\*에서 볼 수 있습니다.
+- 선수 카드는 Ethereum 블록체인에서 검증 가능한 NFT이며, 플랫폼의 스마트 계약은 **[Etherscan](https://eth.blockscout.com/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205?tab=contract)**에서 볼 수 있습니다.
 
 - Sorare는 전통적인 판타지 스포츠 게임 플레이와 디지털 자산의 블록체인 소유권을 결합하여 주류 스포츠 팬들에게 **[Ethereum 펀딩](https://sorare.com/help/a/10969733392797/what-network-should-i-use-to-fund-my-eth-wallet)** 기능을 제공합니다.
 

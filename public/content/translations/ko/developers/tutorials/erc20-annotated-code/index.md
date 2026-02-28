@@ -3,7 +3,7 @@ title: "ERC-20 계약 살펴보기"
 description: "OpenZeppelin ERC-20 계약에는 무엇이 있으며 왜 사용될까요?"
 author: Ori Pomerantz
 lang: ko
-tags: [ "솔리디티", "erc-20" ]
+tags: [ "Solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---
