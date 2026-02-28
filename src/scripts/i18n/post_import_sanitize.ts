@@ -1555,7 +1555,7 @@ function escapeMdxAngleBrackets(content: string): {
       const original = parts[i]
 
       // Match < followed by a digit (not already escaped, not part of HTML tag)
-      parts[i] = parts[i].replace(/(?<!&lt|&)<(\d)/g, (_, digit) => {
+      parts[i] = parts[i].replace(/(?<!&lt|&|\\)<(\d)/g, (_, digit) => {
         fixCount++
         return `&lt;${digit}`
       })
