@@ -473,7 +473,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
               {/* Out of Scope */}
               <div
                 id="out-of-scope"
-                className="m-4 flex-[1_1_100%] overflow-hidden rounded border border-border bg-background p-6"
+                className="m-4 flex-[1_1_100%] overflow-hidden rounded-sm border border-solid bg-background-highlight p-6"
               >
                 <H2>{t("page-upgrades-bug-bounty-not-included")}</H2>
                 <p className="mb-6 text-body-medium">
@@ -538,7 +538,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
               </div>
 
               {/* Bug Hunting Rules */}
-              <div className="m-4 flex-[1_1_100%] overflow-hidden rounded border border-border bg-background p-6">
+              <div className="m-4 flex-[1_1_100%] overflow-hidden rounded-sm border border-solid bg-background-highlight p-6">
                 <H2 id="rules">{t("page-upgrades-bug-bounty-hunting")}</H2>
                 <Text className="italic text-body-medium">
                   {t("page-upgrades-bug-bounty-hunting-desc")}
@@ -554,7 +554,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                   ).map((key, idx) => (
                     <li
                       key={key}
-                      className="flex items-start gap-4 rounded-sm border border-border bg-background-highlight p-4"
+                      className="flex items-start gap-4 rounded-sm border border-border bg-background p-4"
                     >
                       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
                         {idx + 1}
