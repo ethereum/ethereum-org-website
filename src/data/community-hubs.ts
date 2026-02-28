@@ -2,8 +2,10 @@ import { StaticImageData } from "next/image"
 
 import BerlinHubBanner from "@/public/images/community/hubs/berlin-hub-banner.png"
 import DubaiHubBanner from "@/public/images/community/hubs/dubai-hub-banner.png"
+import HongKongHubBanner from "@/public/images/community/hubs/hong-kong-hub-banner.png"
 import LagosHubBanner from "@/public/images/community/hubs/lagos-hub-banner.png"
 import LondonHubBanner from "@/public/images/community/hubs/london-hub-banner.png"
+import RomeHubBanner from "@/public/images/community/hubs/rome-hub-banner.png"
 import SFHubBanner from "@/public/images/community/hubs/sf-hub-banner.png"
 
 export type CommunityHub = {
@@ -18,6 +20,29 @@ export type CommunityHub = {
 }
 
 const communityHubs: CommunityHub[] = [
+  {
+    id: "hong-kong",
+    location: "Hong Kong",
+    descriptionKey: "page-events-hub-description-hong-kong",
+    ctaKey: "page-events-hub-cta-hong-kong",
+    coworkingSignupUrl: "https://forms.gle/bm78vRjZqvu45tsz5",
+    meetupUrl: "https://luma.com/user/usr-ut3JGCXXuokkPdK",
+    banner: HongKongHubBanner,
+    // TODO: Update
+    brandColor:
+      "bg-gradient-to-b from-[#A4FCF5]/5 to-[#A4FCF5]/10 dark:from-[#A4FCF5]/20 dark:to-[#A4FCF5]/10 border-[#A4FCF5]/20",
+  },
+  {
+    id: "rome",
+    location: "Rome",
+    descriptionKey: "page-events-hub-description-rome",
+    ctaKey: "page-events-hub-cta-rome",
+    coworkingSignupUrl: "https://forms.gle/wrjF85XYghXyFXH87",
+    meetupUrl: "https://luma.com/user/UrbeHub",
+    banner: RomeHubBanner,
+    brandColor:
+      "bg-gradient-to-b from-[#AF4796]/5 to-[#AF4796]/10 dark:from-[#AF4796]/20 dark:to-[#AF4796]/10 border-[#AF4796]/20",
+  },
   {
     id: "london",
     location: "London",
