@@ -106,7 +106,7 @@ A Fusão veio com alterações no consenso, que também inclui alterações rela
   <li>conceito de <em>cabeçalho seguro</em> e <em>blocos finalizados</em></li>
 </ul>
 
-Para obter mais informações, leia esta publicação de Tim Beiko sobre <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">How The Merge Impacts Ethereum’s Application Layer</a> (Como a Fusão afeta a camada de aplicação do Ethereum).
+Para obter mais informações, leia esta publicação de Tim Beiko sobre <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">How The Merge Impacts Ethereum’s Application Layer</a> (Como a Fusão afeta a camada de aplicação do Ethereum).
 
 </ExpandableCard>
 
@@ -116,7 +116,7 @@ A Fusão marcou o fim da prova de trabalho para o Ethereum e deu início à era 
 
 ## A Fusão e a escalabilidade {#merge-and-scaling}
 
-The Merge também preparou o terreno para futuras atualizações de escalabilidade que não eram possíveis na prova de trabalho, deixando o Ethereum mais próximo de alcançar a escalabilidade, segurança e sustentabilidade descritas na [Visão do Ethereum](/roadmap/vision/).
+The Merge também preparou o terreno para futuras atualizações de escalabilidade que não eram possíveis na prova de trabalho, deixando o Ethereum mais próximo de alcançar a escalabilidade, segurança e sustentabilidade descritas na [Visão do Ethereum](/roadmap/).
 
 ## Concepções erradas sobre A Fusão {#misconceptions}
 
@@ -194,7 +194,7 @@ Para diminuir a confusão, a comunidade atualizou estes termos:
 
 Estas atualizações de terminologia apenas alteram as convenções de nomenclatura; isso não altera os objetivos ou o roteiro do Ethereum.
 
-[Saiba mais sobre a renomeação "Eth2"](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Saiba mais sobre a renomeação "Eth2"](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Relação entre as melhorias {#relationship-between-upgrades}
 

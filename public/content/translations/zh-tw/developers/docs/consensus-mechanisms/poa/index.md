@@ -1,6 +1,6 @@
 ---
-title: 權威證明 (PoA)
-description: 解釋權威證明共識協定及其在區塊鏈生態系統中的作用。
+title: "權威證明 (PoA)"
+description: "解釋權威證明共識協定及其在區塊鏈生態系統中的作用。"
 lang: zh-tw
 ---
 
@@ -77,3 +77,4 @@ lang: zh-tw
 
 - [工作量證明](/developers/docs/consensus-mechanisms/pow/)
 - [權益證明](/developers/docs/consensus-mechanisms/pos/)
+

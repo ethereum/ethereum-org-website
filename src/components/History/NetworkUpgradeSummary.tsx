@@ -80,13 +80,13 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
       {epochNumber &&
         blockTypeTranslation(
           "page-history:page-history-epoch-number",
-          "https://beaconscan.com/epoch/",
+          "https://beaconcha.in/epoch/",
           epochNumber
         )}
       {slotNumber &&
         blockTypeTranslation(
           "page-history:page-history-slot-number",
-          "https://beaconscan.com/slot/",
+          "https://beaconcha.in/slot/",
           slotNumber
         )}
       {ethPriceInUSD && (
