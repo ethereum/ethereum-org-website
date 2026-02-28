@@ -341,7 +341,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         </ClientRow>
         <div className="mb-12 mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box">
           <Content>
-            <div className="max-w-[100ch] flex-1">
+            <div className="flex-1">
               <H2 id="in-scope">{t("page-upgrades-bug-bounty-validity")}</H2>
               <Text>
                 {t.rich("page-upgrades-bug-bounty-validity-desc", {
@@ -470,44 +470,17 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                   </InlineLink>
                 </div>
               </StyledCard>
-            </Flex>
-            {/* Bug Hunting Rules */}
-            <div className="mt-8 max-w-[100ch]">
-              <H2 id="rules">{t("page-upgrades-bug-bounty-hunting")}</H2>
-              <Text className="italic text-body-medium">
-                {t("page-upgrades-bug-bounty-hunting-desc")}
-              </Text>
-              <ol className="mt-6 space-y-3">
-                {(
-                  [
-                    "page-upgrades-bug-bounty-hunting-li-1",
-                    "page-upgrades-bug-bounty-hunting-li-2",
-                    "page-upgrades-bug-bounty-hunting-li-3",
-                    "page-upgrades-bug-bounty-hunting-li-4",
-                  ] as const
-                ).map((key, idx) => (
-                  <li
-                    key={key}
-                    className="flex items-start gap-4 rounded-sm border border-border bg-background p-4"
-                  >
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
-                      {idx + 1}
-                    </span>
-                    <span className="text-sm leading-relaxed">{t(key)}</span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-
-            {/* Out of Scope */}
-            <div id="out-of-scope" className="mt-8 max-w-[100ch]">
-              <H2>{t("page-upgrades-bug-bounty-not-included")}</H2>
-              <p className="mb-6 text-body-medium">
-                {t.rich("page-upgrades-bug-bounty-not-included-desc", {
-                  a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
-                })}
-              </p>
-              <div className="rounded-sm border border-border bg-background p-6">
+              {/* Out of Scope */}
+              <div
+                id="out-of-scope"
+                className="m-4 flex-[1_1_100%] overflow-hidden rounded border border-border bg-background p-6"
+              >
+                <H2>{t("page-upgrades-bug-bounty-not-included")}</H2>
+                <p className="mb-6 text-body-medium">
+                  {t.rich("page-upgrades-bug-bounty-not-included-desc", {
+                    a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
+                  })}
+                </p>
                 <ul className="space-y-2">
                   {(
                     [
@@ -563,7 +536,35 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                   {t("page-upgrades-bug-bounty-out-of-scope-footnote")}
                 </p>
               </div>
-            </div>
+
+              {/* Bug Hunting Rules */}
+              <div className="m-4 flex-[1_1_100%] overflow-hidden rounded border border-border bg-background p-6">
+                <H2 id="rules">{t("page-upgrades-bug-bounty-hunting")}</H2>
+                <Text className="italic text-body-medium">
+                  {t("page-upgrades-bug-bounty-hunting-desc")}
+                </Text>
+                <ol className="mt-6 space-y-3">
+                  {(
+                    [
+                      "page-upgrades-bug-bounty-hunting-li-1",
+                      "page-upgrades-bug-bounty-hunting-li-2",
+                      "page-upgrades-bug-bounty-hunting-li-3",
+                      "page-upgrades-bug-bounty-hunting-li-4",
+                    ] as const
+                  ).map((key, idx) => (
+                    <li
+                      key={key}
+                      className="flex items-start gap-4 rounded-sm border border-border bg-background-highlight p-4"
+                    >
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                        {idx + 1}
+                      </span>
+                      <span className="text-sm leading-relaxed">{t(key)}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </Flex>
 
             {/* Vulnerability Severity Qualifications */}
             <div className="mt-8">
