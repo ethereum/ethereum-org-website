@@ -626,32 +626,6 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           <Row>
             <div className="max-w-[100ch] flex-1">
               <H2 id="submit-bug">{t("page-upgrades-bug-bounty-submit")}</H2>
-              <Text>
-                {t.rich("page-upgrades-bug-bounty-submit-desc", {
-                  strong: Strong,
-                })}{" "}
-                <InlineLink href="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
-                  {t("page-upgrades-bug-bounty-owasp")}
-                </InlineLink>
-              </Text>
-              <Text>{t("page-upgrades-bug-bounty-points")}</Text>
-              <Text>
-                <span className="font-bold">
-                  {t("page-upgrades-bug-bounty-quality")}
-                </span>
-                {t("page-upgrades-bug-bounty-quality-desc")}
-              </Text>
-              <Text>
-                <span className="font-bold">
-                  {t("page-upgrades-bug-bounty-quality-repro")}
-                </span>
-                {t("page-upgrades-bug-bounty-quality-repro-desc")}
-              </Text>
-              <Text>
-                {t.rich("page-upgrades-bug-bounty-quality-fix", {
-                  strong: Strong,
-                })}
-              </Text>
             </div>
           </Row>
         </Content>

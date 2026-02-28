@@ -45,10 +45,6 @@ export interface BugBountyCardInfo {
   h2TranslationId: TranslationKey
   descriptionTranslationId: TranslationKey
   subDescriptionTranslationId: TranslationKey
-  subHeader1TranslationId: TranslationKey
-  severityList: TranslationKey[]
-  subHeader2TranslationId: TranslationKey
-  textTranslationId: TranslationKey
   styledButtonTranslationId: TranslationKey
 }
 
@@ -58,13 +54,6 @@ const bugBountyCardsInfo: BugBountyCardInfo[] = [
     h2TranslationId: "page-upgrades-bug-bounty-card-low",
     descriptionTranslationId: "page-upgrades-bug-bounty-card-label-2",
     subDescriptionTranslationId: "page-upgrades-bug-bounty-card-label-1",
-    subHeader1TranslationId: "page-upgrades-bug-bounty-card-subheader",
-    severityList: [
-      "page-upgrades-bug-bounty-card-li-1",
-      "page-upgrades-bug-bounty-card-li-2",
-    ],
-    subHeader2TranslationId: "page-upgrades-bug-bounty-card-subheader-2",
-    textTranslationId: "page-upgrades-bug-bounty-card-text",
     styledButtonTranslationId: "page-upgrades-bug-bounty-card-low-risk",
   },
   {
@@ -72,14 +61,6 @@ const bugBountyCardsInfo: BugBountyCardInfo[] = [
     h2TranslationId: "page-upgrades-bug-bounty-card-h2",
     descriptionTranslationId: "page-upgrades-bug-bounty-card-label-4",
     subDescriptionTranslationId: "page-upgrades-bug-bounty-card-label-3",
-    subHeader1TranslationId: "page-upgrades-bug-bounty-card-subheader",
-    severityList: [
-      "page-upgrades-bug-bounty-card-li-3",
-      "page-upgrades-bug-bounty-card-li-4",
-      "page-upgrades-bug-bounty-card-li-5",
-    ],
-    subHeader2TranslationId: "page-upgrades-bug-bounty-card-subheader-2",
-    textTranslationId: "page-upgrades-bug-bounty-card-text-1",
     styledButtonTranslationId: "page-upgrades-bug-bounty-card-medium-risk",
   },
   {
@@ -87,13 +68,6 @@ const bugBountyCardsInfo: BugBountyCardInfo[] = [
     h2TranslationId: "page-upgrades-bug-bounty-card-high",
     descriptionTranslationId: "page-upgrades-bug-bounty-card-label-6",
     subDescriptionTranslationId: "page-upgrades-bug-bounty-card-label-5",
-    subHeader1TranslationId: "page-upgrades-bug-bounty-card-subheader",
-    severityList: [
-      "page-upgrades-bug-bounty-card-li-6",
-      "page-upgrades-bug-bounty-card-li-7",
-    ],
-    subHeader2TranslationId: "page-upgrades-bug-bounty-card-subheader-2",
-    textTranslationId: "page-upgrades-bug-bounty-card-text-2",
     styledButtonTranslationId: "page-upgrades-bug-bounty-card-high-risk",
   },
   {
@@ -101,10 +75,6 @@ const bugBountyCardsInfo: BugBountyCardInfo[] = [
     h2TranslationId: "page-upgrades-bug-bounty-card-critical",
     descriptionTranslationId: "page-upgrades-bug-bounty-card-label-8",
     subDescriptionTranslationId: "page-upgrades-bug-bounty-card-label-7",
-    subHeader1TranslationId: "page-upgrades-bug-bounty-card-subheader",
-    severityList: ["page-upgrades-bug-bounty-card-li-8"],
-    subHeader2TranslationId: "page-upgrades-bug-bounty-card-subheader-2",
-    textTranslationId: "page-upgrades-bug-bounty-card-text-3",
     styledButtonTranslationId: "page-upgrades-bug-bounty-card-critical-risk",
   },
 ]
@@ -156,11 +126,6 @@ const BugBountyCards = () => {
               <h4 className="text-sm font-normal uppercase opacity-60">
                 {t(card.subHeader1TranslationId)}
               </h4>
-              <ul>
-                {card.severityList.map((listItemId) => (
-                  <li key={listItemId}>{t(listItemId)}</li>
-                ))}
-              </ul>
             </div>
 
             <div className="space-y-2">
