@@ -122,19 +122,6 @@ const BugBountyCards = () => {
               {t(card.subDescriptionTranslationId)}
             </p>
 
-            <div className="space-y-2">
-              <h4 className="text-sm font-normal uppercase opacity-60">
-                {t(card.subHeader1TranslationId)}
-              </h4>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="text-sm font-normal uppercase opacity-60">
-                {t(card.subHeader2TranslationId)}
-              </h4>
-              <p className="my-4 mt-2">{t(card.textTranslationId)}</p>
-            </div>
-
             <ButtonLink href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
               {t(card.styledButtonTranslationId)}
             </ButtonLink>
