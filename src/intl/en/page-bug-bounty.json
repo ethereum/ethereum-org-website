@@ -146,7 +146,7 @@
   "page-upgrades-bug-bounty-severity-critical-li-3": "<strong>Steal ETH</strong> from all EOAs",
   "page-upgrades-bug-bounty-severity-critical-li-4": "<strong>Burn ETH</strong> from all EOAs",
   "page-upgrades-bug-bounty-severity-critical-li-5": "<strong>Take down the entire network</strong> by sending a single malicious onchain transaction that ends up crashing all clients",
-  "page-upgrades-bug-bounty-out-of-scope-footnote": "These are typically not included, however, we can help reach out to affected parties, such as authors or exchanges in such cases",
+  "page-upgrades-bug-bounty-out-of-scope-footnote": "These are not included, however, we can sometimes help reaching out to affected parties",
   "page-upgrades-bug-bounty-not-included-li-1": "Infrastructure bugs—such as webpages, dns, email, etc.",
   "page-upgrades-bug-bounty-not-included-li-2": "ERC-20 contract bugs",
   "page-upgrades-bug-bounty-not-included-li-3": "Ethereum Naming Service (ENS) bugs (maintained by the ENS foundation)",

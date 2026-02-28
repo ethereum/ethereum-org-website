@@ -471,69 +471,116 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 </div>
               </StyledCard>
             </Flex>
-            <div className="max-w-[100ch]">
+            {/* Bug Hunting Rules */}
+            <div className="mt-8 max-w-[100ch]">
               <H2 id="rules">{t("page-upgrades-bug-bounty-hunting")}</H2>
-              <Text className="italic">
+              <Text className="italic text-body-medium">
                 {t("page-upgrades-bug-bounty-hunting-desc")}
               </Text>
-              <UnorderedList>
-                <ListItem>
-                  {t("page-upgrades-bug-bounty-hunting-li-1")}
-                </ListItem>
-                <ListItem>
-                  {t("page-upgrades-bug-bounty-hunting-li-2")}
-                </ListItem>
-                <ListItem>
-                  {t("page-upgrades-bug-bounty-hunting-li-3")}
-                </ListItem>
-                <ListItem id="leaderboard">
-                  {t("page-upgrades-bug-bounty-hunting-li-4")}
-                </ListItem>
-              </UnorderedList>
+              <ol className="mt-6 space-y-3">
+                {(
+                  [
+                    "page-upgrades-bug-bounty-hunting-li-1",
+                    "page-upgrades-bug-bounty-hunting-li-2",
+                    "page-upgrades-bug-bounty-hunting-li-3",
+                    "page-upgrades-bug-bounty-hunting-li-4",
+                  ] as const
+                ).map((key, idx) => (
+                  <li
+                    key={key}
+                    id={idx === 3 ? "leaderboard" : undefined}
+                    className="flex items-start gap-4 rounded-sm border border-border bg-background p-4"
+                  >
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                      {idx + 1}
+                    </span>
+                    <span className="text-sm leading-relaxed">{t(key)}</span>
+                  </li>
+                ))}
+              </ol>
             </div>
-            <div className="max-w-[100ch] flex-1">
-              <H2 id="out-of-scope">
-                {t("page-upgrades-bug-bounty-not-included")}
-              </H2>
-              <p>
+
+            {/* Out of Scope */}
+            <div id="out-of-scope" className="mt-8 max-w-[100ch]">
+              <H2>{t("page-upgrades-bug-bounty-not-included")}</H2>
+              <p className="mb-6 text-body-medium">
                 {t.rich("page-upgrades-bug-bounty-not-included-desc", {
                   a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
                 })}
               </p>
-              <ul className="mt-8 [&>li]:mb-2">
-                <li>
-                  {t("page-upgrades-bug-bounty-not-included-li-1")}
+              <div className="rounded-sm border border-border bg-background p-6">
+                <ul className="space-y-2">
+                  {(
+                    [
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-1",
+                        footnote: true,
+                      },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-2",
+                        footnote: true,
+                      },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-3",
+                        footnote: false,
+                      },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-4",
+                        footnote: false,
+                      },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-5",
+                        footnote: false,
+                      },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-6",
+                        footnote: false,
+                      },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-7",
+                        footnote: false,
+                      },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-8",
+                        footnote: false,
+                      },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-9",
+                        footnote: false,
+                      },
+                    ] as const
+                  ).map(({ key, footnote }) => (
+                    <li key={key} className="flex items-start gap-3 text-sm">
+                      <span className="mt-0.5 shrink-0 text-error">✕</span>
+                      <span>
+                        {t(key)}
+                        {footnote && <sup>*</sup>}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-xs text-body-medium">
                   <sup>*</sup>
-                </li>
-                <li>
-                  {t("page-upgrades-bug-bounty-not-included-li-2")}
-                  <sup>*</sup>
-                </li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-3")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-4")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-5")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-6")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-7")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-8")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-9")}</li>
-              </ul>
-              <Text>
-                <sup>*</sup>
-                {t("page-upgrades-bug-bounty-out-of-scope-footnote")}
-              </Text>
+                  {t("page-upgrades-bug-bounty-out-of-scope-footnote")}
+                </p>
+              </div>
             </div>
-            <div>
+
+            {/* Vulnerability Severity Qualifications */}
+            <div className="mt-8">
               <H2 id="qualifications" className="max-w-[100ch]">
                 {t("page-upgrades-bug-bounty-severity-qualifications-title")}
               </H2>
-              <p className="max-w-[100ch]">
+              <p className="mb-8 max-w-[100ch] text-body-medium">
                 {t("page-upgrades-bug-bounty-severity-qualifications-desc")}
               </p>
-
-              <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-x-8 xl:grid-cols-4">
-                <div className="space-y-4">
-                  <h3>{t("page-upgrades-bug-bounty-severity-low-title")}</h3>
-                  <ul>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+                {/* Low */}
+                <div className="flex flex-col rounded-sm border border-border bg-background p-6">
+                  <span className="mb-4 inline-flex w-fit rounded-full bg-green-500/10 px-3 py-1 text-sm font-semibold text-green-600 dark:text-green-400">
+                    {t("page-upgrades-bug-bounty-severity-low-title")}
+                  </span>
+                  <ul className="space-y-2 text-sm">
                     <li>
                       {t.rich("page-upgrades-bug-bounty-severity-low-li-1", {
                         strong: StrongGreaterThan,
@@ -551,9 +598,12 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                     </li>
                   </ul>
                 </div>
-                <div className="space-y-4">
-                  <h3>{t("page-upgrades-bug-bounty-severity-medium-title")}</h3>
-                  <ul>
+                {/* Medium */}
+                <div className="flex flex-col rounded-sm border border-border bg-background p-6">
+                  <span className="mb-4 inline-flex w-fit rounded-full bg-yellow-500/10 px-3 py-1 text-sm font-semibold text-yellow-600 dark:text-yellow-400">
+                    {t("page-upgrades-bug-bounty-severity-medium-title")}
+                  </span>
+                  <ul className="space-y-2 text-sm">
                     <li>
                       {t.rich("page-upgrades-bug-bounty-severity-medium-li-1", {
                         strong: StrongGreaterThan,
@@ -571,9 +621,12 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                     </li>
                   </ul>
                 </div>
-                <div className="space-y-4">
-                  <h3>{t("page-upgrades-bug-bounty-severity-high-title")}</h3>
-                  <ul>
+                {/* High */}
+                <div className="flex flex-col rounded-sm border border-border bg-background p-6">
+                  <span className="mb-4 inline-flex w-fit rounded-full bg-orange-500/10 px-3 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
+                    {t("page-upgrades-bug-bounty-severity-high-title")}
+                  </span>
+                  <ul className="space-y-2 text-sm">
                     <li>
                       {t.rich("page-upgrades-bug-bounty-severity-high-li-1", {
                         strong: StrongGreaterThan,
@@ -591,49 +644,40 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                     </li>
                   </ul>
                 </div>
-                <div className="space-y-4">
-                  <h3>
+                {/* Critical */}
+                <div className="flex flex-col rounded-sm border border-border bg-background p-6">
+                  <span className="mb-4 inline-flex w-fit rounded-full bg-red-500/10 px-3 py-1 text-sm font-semibold text-red-600 dark:text-red-400">
                     {t("page-upgrades-bug-bounty-severity-critical-title")}
-                  </h3>
-                  <ul>
+                  </span>
+                  <ul className="space-y-2 text-sm">
                     <li>
                       {t.rich(
                         "page-upgrades-bug-bounty-severity-critical-li-1",
-                        {
-                          strong: StrongGreaterThan,
-                        }
+                        { strong: StrongGreaterThan }
                       )}
                     </li>
                     <li>
                       {t.rich(
                         "page-upgrades-bug-bounty-severity-critical-li-2",
-                        {
-                          strong: Strong,
-                        }
+                        { strong: Strong }
                       )}
                     </li>
                     <li>
                       {t.rich(
                         "page-upgrades-bug-bounty-severity-critical-li-3",
-                        {
-                          strong: Strong,
-                        }
+                        { strong: Strong }
                       )}
                     </li>
                     <li>
                       {t.rich(
                         "page-upgrades-bug-bounty-severity-critical-li-4",
-                        {
-                          strong: Strong,
-                        }
+                        { strong: Strong }
                       )}
                     </li>
                     <li>
                       {t.rich(
                         "page-upgrades-bug-bounty-severity-critical-li-5",
-                        {
-                          strong: Strong,
-                        }
+                        { strong: Strong }
                       )}
                     </li>
                   </ul>

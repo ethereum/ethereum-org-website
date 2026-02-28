@@ -18,10 +18,10 @@ type LabelProps = FlexProps & {
 }
 
 const classNameByVariant = {
-  low: "bg-red-100 text-black",
-  medium: "bg-red-300 text-black",
-  high: "bg-red-700 text-white",
-  critical: "bg-red-900 text-white",
+  low: "bg-green-500/15 text-green-700 dark:text-green-300",
+  medium: "bg-yellow-500/15 text-yellow-700 dark:text-yellow-300",
+  high: "bg-orange-500/15 text-orange-700 dark:text-orange-300",
+  critical: "bg-red-500/15 text-red-700 dark:text-red-300",
 }
 
 const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
