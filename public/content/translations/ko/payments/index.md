@@ -38,7 +38,7 @@ summaryPoint3: "1분 이내에 받은 결제 금액"
 
 이더리움 커뮤니티는 어떤 국가의 통화 정책이나 통제에도 독립적인 **강력한 대체 금융 시스템**을 만들었습니다.
 
-이더리움 사용자는 일반적으로 미국 달러\*\*와 같은 강세 통화에 묶여 있는 \*\*스테이블코인(토큰)을 사용할 수 있습니다. 암호화폐를 벌고 저축함으로써 사람들은 자국의 높은 인플레이션으로부터 자신을 보호하고 구매력을 유지하거나 성장시키는 데 도움이 될 수 있습니다. 이를 통해 지역 및 전 세계적으로 상품과 서비스를 더 쉽게 결제할 수 있습니다.
+이더리움 사용자는 일반적으로 미국 달러**와 같은 강세 통화에 묶여 있는 **스테이블코인(토큰)을 사용할 수 있습니다. 암호화폐를 벌고 저축함으로써 사람들은 자국의 높은 인플레이션으로부터 자신을 보호하고 구매력을 유지하거나 성장시키는 데 도움이 될 수 있습니다. 이를 통해 지역 및 전 세계적으로 상품과 서비스를 더 쉽게 결제할 수 있습니다.
 
 <ButtonLink href="/stablecoins">
 스테이블코인에 대한 자세한 내용
@@ -120,7 +120,7 @@ summaryPoint3: "1분 이내에 받은 결제 금액"
 
 현재 많은 미래 지향적인 기업들이 직원들에게 급여 또는 그 중 일부를 이더리움(ETH)과 같은 암호화폐로 받을 수 있는 옵션을 제공하고 있습니다:
 
-- \*\*Gipsybee:\*\*는 전자, 로봇 공학, 게임 제작 및 기타 서비스를 다루는 기관입니다. 직원들은 이더리움으로 급여를 받을 수 있는 옵션을 제공합니다.
+- **Gipsybee:**는 전자, 로봇 공학, 게임 제작 및 기타 서비스를 다루는 기관입니다. 직원들은 이더리움으로 급여를 받을 수 있는 옵션을 제공합니다.
 - **SC5:** 이 핀란드 회사는 비트코인으로 급여를 제공한 최초의 회사 중 하나로, 이더리움과 유사한 계약을 체결할 수 있는 길을 열었습니다.
 - **블록체인 스타트업:** 블록체인 분야의 많은 기업이 직원들에게 자연스럽게 암호화폐 급여 옵션을 제공합니다.
 - **DAO:** DAO 기여자의 특수성과 다양성으로 인해 대부분의 기여금과 급여는 암호화폐로 보상됩니다.
@@ -129,14 +129,14 @@ summaryPoint3: "1분 이내에 받은 결제 금액"
 
 ## 전 세계 구호 활동 {#global-relief-efforts}
 
-2023년 2월, 튀르키예와 시리아에서 대지진이 발생하자 글로벌 암호화폐 커뮤니티가 본격적으로 활동에 나섰습니다. 위기 상황에서 이더리움의 힘을 보여주며 구호 활동을 위한 기금을 모으기 위한 다양한 캠페인이 시작되었습니다. 암호화폐는 [인정되지 않는 형태]임에도 불구하고https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/튀르키예 결제에 대해 당국은 [예외]를 했습니다https://x.com/haluklevent/status/1622913175409623041일부 단체들이 기부금을 모으기 위해. 몇 가지 예는 다음과 같습니다:
+2023년 2월, 튀르키예와 시리아에서 대지진이 발생하자 글로벌 암호화폐 커뮤니티가 본격적으로 활동에 나섰습니다. 위기 상황에서 이더리움의 힘을 보여주며 구호 활동을 위한 기금을 모으기 위한 다양한 캠페인이 시작되었습니다. 암호화폐는 튀르키예에서 [인정되지 않는 결제 형태](https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/)임에도 불구하고, 당국은 일부 단체들이 기부금을 모으기 위해 [예외](https://x.com/haluklevent/status/1622913175409623041)를 허용했습니다. 몇 가지 예는 다음과 같습니다:
 
-- [Refik Anadol]https://x.com/refikanadol/status/1622623521104089090:는 모금 캠페인을 시작한 유명한 디지털 아티스트입니다.
-- DAO 파워: [앙카 구호 DAO]https://ankarelief.org/그리고 [뱅크리스 DAO]https://x.com/banklessDAO[기브]와 힘을 합친https://x.com/Giveth/status/1623493672149843969자금을 조달하기 위해.
+- [Refik Anadol](https://x.com/refikanadol/status/1622623521104089090): 모금 캠페인을 시작한 유명한 디지털 아티스트입니다.
+- DAO 파워: [Anka Relief DAO](https://ankarelief.org/)와 [Bankless DAO](https://x.com/banklessDAO)가 [Giveth](https://x.com/Giveth/status/1623493672149843969)와 힘을 합쳐 자금을 조달했습니다.
 - [박](https://cause.quest/)저명한 NFT 아티스트도 이 대의에 기여했습니다.
-- 이더리움 공동 창립자 [비탈릭 부테린]조차도https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria여러 캠페인에 개인 기부를 했습니다.
+- 이더리움 공동 창립자 [비탈릭 부테린](https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria)조차도 여러 캠페인에 개인 기부를 했습니다.
 
-이것의 결과는? [듄]이 추적한 바에 따르면 며칠 만에 600만 달러 이상이 모금되었습니다https://dune.com/davy42/turkiye-earthquake-donations분석 대시보드.
+이것의 결과는? 며칠 만에 600만 달러 이상이 모금되었으며, [Dune](https://dune.com/davy42/turkiye-earthquake-donations) 분석 대시보드로 추적되었습니다.
 
 인도와 우크라이나에서 발생한 비극에 대해서도 비슷한 반응 시간이 있었습니다. 이러한 신속한 대응은 이더리움 결제의 중요한 장점인 통화 전환, 긴 은행 송금, 과도한 수수료 없이도 글로벌 지원을 신속하게 동원할 수 있다는 점을 강조합니다.
 

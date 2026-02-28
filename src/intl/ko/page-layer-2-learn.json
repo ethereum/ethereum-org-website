@@ -8,7 +8,7 @@
   "page-layer-2-learn-what-is-layer-2-1": "레이어 2 (L2)는 이더리움 확장성 솔루션의 특정 집합을 설명하는 총칭입니다. <strong>레이어 2는 이더리움을 확장하고 이더리움의 보안 보증을 상속받는 별도의 <a href=\"/glossary/#blockchain\">블록체인</a>입니다</strong>.",
   "page-layer-2-learn-what-is-layer-2-2": "이제 조금 더 자세하게 알아봅시다. 이를 위해서는 먼저 레이어 1(L1)을 알아야 합니다.",
   "page-layer-2-learn-what-is-layer-1-title": "레이어 1이란 무엇인가요?",
-  "page-layer-2-learn-what-is-layer-1-1": "이더리움과 비트코인과 같은 레이어 1 블록체인은 레이어 2 프로젝트가 <strong> 위에 구축하는 </strong>한 기반입니다. 레이어 2 프로젝트의 예는 다음과 같습니다<strong>제로지식 롤업</strong>그리고 비트코인 위에 이더리움과 조명 네트워크에서 </strong> 낙관적인 롤업</strong>.",
+  "page-layer-2-learn-what-is-layer-1-1": "이더리움과 비트코인과 같은 레이어 1 블록체인은 <strong>레이어 2 프로젝트가 위에 구축하는</strong> 기반입니다. 레이어 2 프로젝트의 예로는 이더리움의 <strong>제로지식 롤업</strong>과 <strong>옵티미스틱 롤업</strong>, 비트코인 위의 Lightning Network가 있습니다.",
   "page-layer-2-learn-what-is-layer-1-2": "이더리움은 레이어 2의 데이터 가용성 계층으로도 기능하며, 이전 거래에 대한 분쟁이 있는 경우 이더리움에서 이러한 분쟁에 대한 데이터를 제공합니다.",
   "page-layer-2-learn-layer-1-list-title": "레이어 1로서의 이더리움에는 다음이 포함됩니다.",
   "page-layer-2-learn-layer-1-list-1": "네트워크를 보호하고 검증하기 위한 <strong>노드 운영자들의 네트워크</strong>",
