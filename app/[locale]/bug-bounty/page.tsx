@@ -488,7 +488,6 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 ).map((key, idx) => (
                   <li
                     key={key}
-                    id={idx === 3 ? "leaderboard" : undefined}
                     className="flex items-start gap-4 rounded-sm border border-border bg-background p-4"
                   >
                     <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
@@ -694,7 +693,10 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           </Row>
         </Content>
         <BugBountyCards />
-        <div className="mt-8 w-full border-t bg-banner-grid-gradient px-0 py-16 shadow-table-item-box">
+        <div
+          id="leaderboard"
+          className="mt-8 w-full border-t bg-banner-grid-gradient px-0 py-16 shadow-table-item-box"
+        >
           <Flex className="flex-col items-start justify-center lg:flex-row">
             <FullLeaderboardContainer>
               <H2 id="el-leaderboard" className="text-center">
