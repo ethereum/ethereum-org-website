@@ -471,6 +471,57 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 </div>
               </StyledCard>
             </Flex>
+            <div className="max-w-[100ch]">
+              <H2 id="rules">{t("page-upgrades-bug-bounty-hunting")}</H2>
+              <Text className="italic">
+                {t("page-upgrades-bug-bounty-hunting-desc")}
+              </Text>
+              <UnorderedList>
+                <ListItem>
+                  {t("page-upgrades-bug-bounty-hunting-li-1")}
+                </ListItem>
+                <ListItem>
+                  {t("page-upgrades-bug-bounty-hunting-li-2")}
+                </ListItem>
+                <ListItem>
+                  {t("page-upgrades-bug-bounty-hunting-li-3")}
+                </ListItem>
+                <ListItem id="leaderboard">
+                  {t("page-upgrades-bug-bounty-hunting-li-4")}
+                </ListItem>
+              </UnorderedList>
+            </div>
+            <div className="max-w-[100ch] flex-1">
+              <H2 id="out-of-scope">
+                {t("page-upgrades-bug-bounty-not-included")}
+              </H2>
+              <p>
+                {t.rich("page-upgrades-bug-bounty-not-included-desc", {
+                  a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
+                })}
+              </p>
+              <ul className="mt-8 [&>li]:mb-2">
+                <li>
+                  {t("page-upgrades-bug-bounty-not-included-li-1")}
+                  <sup>*</sup>
+                </li>
+                <li>
+                  {t("page-upgrades-bug-bounty-not-included-li-2")}
+                  <sup>*</sup>
+                </li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-3")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-4")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-5")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-6")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-7")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-8")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-9")}</li>
+              </ul>
+              <Text>
+                <sup>*</sup>
+                {t("page-upgrades-bug-bounty-out-of-scope-footnote")}
+              </Text>
+            </div>
             <div>
               <H2 id="qualifications" className="max-w-[100ch]">
                 {t("page-upgrades-bug-bounty-severity-qualifications-title")}
@@ -589,37 +640,6 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 </div>
               </div>
             </div>
-            <div className="max-w-[100ch] flex-1">
-              <H2 id="out-of-scope">
-                {t("page-upgrades-bug-bounty-not-included")}
-              </H2>
-              <p>
-                {t.rich("page-upgrades-bug-bounty-not-included-desc", {
-                  a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
-                })}
-              </p>
-              <ul className="mt-8 [&>li]:mb-2">
-                <li>
-                  {t("page-upgrades-bug-bounty-not-included-li-1")}
-                  <sup>*</sup>
-                </li>
-                <li>
-                  {t("page-upgrades-bug-bounty-not-included-li-2")}
-                  <sup>*</sup>
-                </li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-3")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-4")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-5")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-6")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-7")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-8")}</li>
-                <li>{t("page-upgrades-bug-bounty-not-included-li-9")}</li>
-              </ul>
-              <Text>
-                <sup>*</sup>
-                {t("page-upgrades-bug-bounty-out-of-scope-footnote")}
-              </Text>
-            </div>
           </Content>
         </div>
         <Content>
@@ -630,22 +650,6 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           </Row>
         </Content>
         <BugBountyCards />
-        <Content>
-          <div className="max-w-[100ch]">
-            <H2 id="rules">{t("page-upgrades-bug-bounty-hunting")}</H2>
-            <Text className="italic">
-              {t("page-upgrades-bug-bounty-hunting-desc")}
-            </Text>
-            <UnorderedList>
-              <ListItem>{t("page-upgrades-bug-bounty-hunting-li-1")}</ListItem>
-              <ListItem>{t("page-upgrades-bug-bounty-hunting-li-2")}</ListItem>
-              <ListItem>{t("page-upgrades-bug-bounty-hunting-li-3")}</ListItem>
-              <ListItem id="leaderboard">
-                {t("page-upgrades-bug-bounty-hunting-li-4")}
-              </ListItem>
-            </UnorderedList>
-          </div>
-        </Content>
         <div className="mt-8 w-full border-t bg-banner-grid-gradient px-0 py-16 shadow-table-item-box">
           <Flex className="flex-col items-start justify-center lg:flex-row">
             <FullLeaderboardContainer>
