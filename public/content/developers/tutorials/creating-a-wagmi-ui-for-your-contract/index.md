@@ -645,13 +645,10 @@ The wagmi configuration includes the chains supported by this application. You c
 
 ```ts
   transports: {
-    [sepolia.id]: fallback([
-      webSocket("wss://ethereum-sepolia-rpc.publicnode.com"),
-      http("https://ethereum-sepolia.gateway.tatum.io"),
-    ]),
+    [sepolia.id]: http()
 ```
 
-To communicate with the blockchain, we will try each access URL in turn. We can use either [WebSockets](/developers/tutorials/using-websockets/) or HTTP. If you have better access URLs, for example, from a [Node as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) provider, add them at the beginning of the list.
+The default HTTP endpoint that comes with Viem is good enough. If we want a different URL, we can use `http("https://<hostname>")` or WebSocket("wss://<hostname>").
 
 ```ts
   },
@@ -677,14 +674,9 @@ These days there are a lot of [L2 scaling solutions](https://ethereum.org/layer-
       const optimismSepolia = defineChain({
           id: 11_155_420,
           name: 'OP Sepolia',
-          network: 'redstone-holesky',
           nativeCurrency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 },
           rpcUrls: {
             default: {
-              http: ['https://sepolia.optimism.io'],
-              webSocket: ['wss://optimism-sepolia.drpc.org'],
-          },
-          public: {
               http: ['https://sepolia.optimism.io'],
               webSocket: ['wss://optimism-sepolia.drpc.org'],
             },
@@ -709,10 +701,7 @@ These days there are a lot of [L2 scaling solutions](https://ethereum.org/layer-
           ],
           transports: {
             [optimismSepolia.id]: http(),
-            [sepolia.id]: fallback([
-              webSocket("wss://ethereum-sepolia-rpc.publicnode.com"),
-              http("https://ethereum-sepolia.gateway.tatum.io"),
-            ]),
+            [sepolia.id]: http()
           },
           multiInjectedProviderDiscovery: false,
         })
