@@ -1823,6 +1823,141 @@ function fixMissingLinkParentheses(content: string): {
   return { content: parts.join(""), fixCount }
 }
 
+/**
+ * Fix missing </em> closing tags before </li> in HTML lists.
+ * Crowdin sometimes drops the </em> when translating list items.
+ * Pattern: <em>text.</li> → <em>text.</em></li>
+ */
+function fixMissingClosingEmTag(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Only split on fenced blocks — inline backticks must NOT split here
+  // because <em>..`code`..></li> spans across inline code spans
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match <em> content that ends with </li> without a closing </em>
+    parts[i] = parts[i].replace(
+      /(<em>(?:(?!<\/em>)[\s\S])*?)(<\/li>)/g,
+      (_, emContent, closeLi) => {
+        fixCount++
+        return emContent + "</em>" + closeLi
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix image/link paths where ./ was corrupted to /. by Crowdin.
+ * Pattern: (/.filename) → (./filename)
+ */
+function fixImagePathDotSlash(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match ](/. followed by a word char — the ./ was inverted to /.
+    parts[i] = parts[i].replace(/(\]\()\/\.(\w)/g, (_, prefix, firstChar) => {
+      fixCount++
+      return prefix + "./" + firstChar
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix inner quotes inside JSX attribute values that break MDX parsing.
+ * Crowdin translates attribute content like title="Misconception: &quot;text&quot;"
+ * but uses literal " instead of &quot;, prematurely closing the attribute.
+ * Pattern: title="오해: "text"" → title="오해: &quot;text&quot;"
+ */
+function fixInnerQuotesInJsxAttributes(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip fenced code blocks
+
+    // Line-based: match attr="..." where greedy .* captures all content
+    // up to the LAST " on the line (the real attribute closer).
+    // Allow optional trailing > or /> after the closing quote (last attr on a tag).
+    parts[i] = parts[i].replace(
+      /^(\s*(?:title|contentPreview|label|description)=")(.*)(")(\s*\/?>?\s*)$/gm,
+      (match, prefix, inner, closer, trailing) => {
+        // Skip if no inner quotes or already escaped
+        if (!inner.includes('"') || inner.includes("&quot;")) return match
+        fixCount++
+        return prefix + inner.replace(/"/g, "&quot;") + closer + trailing
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Warn about bare MDX-meaningful tags outside backticks.
+ * Detects <tag> or </> patterns that should be inside inline code
+ * but got exposed by Crowdin splitting backtick spans.
+ */
+function warnExposedMdxTags(content: string): string[] {
+  const warnings: string[] = []
+
+  // Known safe MDX components and HTML tags
+  const safePattern =
+    /^\/?(ExpandableCard|InfoBanner|Card|Emoji|EmojiCard|Button|ButtonLink|Alert|AlertEmoji|AlertContent|AlertDescription|UpgradeStatus|MergeArticleList|MergeInfographic|QuizWidget|GlossaryDefinition|GlossaryTooltip|SocialListItem|Callout|YouTube|NetworkUpgradeSummary|a|em|strong|code|li|ul|ol|p|br|div|span|img|h[1-6]|table|tr|td|th|thead|tbody|blockquote|pre|hr|sup|sub|details|summary)\b/
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip fenced code blocks
+
+    // Split out inline code spans to avoid false positives
+    const inlineParts = parts[i].split(/(`[^`]+`)/g)
+
+    for (let j = 0; j < inlineParts.length; j++) {
+      if (j % 2 === 1) continue // Skip inline code
+
+      // Find bare <tag> or </> patterns
+      const tagMatches = inlineParts[j].matchAll(
+        /<\/?([a-zA-Z][a-zA-Z0-9]*)?[^>]*>/g
+      )
+      for (const m of tagMatches) {
+        const tagName = m[1] || "" // empty for </>
+        if (tagName && safePattern.test(tagName)) continue
+        // This is a bare tag outside backticks — likely exposed by Crowdin
+        warnings.push(
+          `Exposed MDX tag outside backticks: "${m[0]}" — may break MDX compilation`
+        )
+      }
+    }
+  }
+
+  return warnings
+}
+
 function removeOrphanedClosingTags(content: string): {
   content: string
   fixCount: number
@@ -1993,6 +2128,25 @@ function processMarkdownFile(
     () => fixJunkAfterHeadingAnchors(content),
     (n) => `Removed ${n} junk text fragments after heading anchors`
   )
+  applyFix(
+    () => fixMissingClosingEmTag(content),
+    (n) => `Fixed ${n} missing </em> closing tags`
+  )
+  applyFix(
+    () => fixImagePathDotSlash(content),
+    (n) => `Fixed ${n} corrupted ./ image paths`
+  )
+  applyFix(
+    () => fixInnerQuotesInJsxAttributes(content),
+    (n) => `Fixed ${n} unescaped inner quotes in JSX attributes`
+  )
+
+  // Warn about exposed MDX tags from broken backtick spans
+  {
+    const tagWarnings = warnExposedMdxTags(content)
+    issues.push(...tagWarnings)
+  }
+
   applyFix(
     () => normalizeFrontmatterDates(content),
     (n) => `Normalized ${n} frontmatter dates to ISO format`
@@ -2454,6 +2608,10 @@ export const _testOnly = {
   fixJunkAfterHeadingAnchors,
   fixBacktickWrappedLinks,
   fixMissingLinkParentheses,
+  fixMissingClosingEmTag,
+  fixImagePathDotSlash,
+  fixInnerQuotesInJsxAttributes,
+  warnExposedMdxTags,
   warnCodeFenceContentDrift,
   warnCatastrophicCodeFenceDrift,
   detectCrossScriptContamination,

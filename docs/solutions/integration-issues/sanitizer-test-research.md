@@ -28,6 +28,10 @@
 | 17 | Junk text after heading anchors | ko #17166 | `{#network-impact}네트워크-충격` -- Crowdin appends translated anchor IDs | Critical -- breaks rendering |
 | 18 | Backtick-wrapped markdown links | ko #17166 | `` `[text](/path)` `` -- links rendered as inline code | High -- breaks navigation |
 | 19 | Missing parentheses in link syntax | ko #17166 | `[text]https://url` or `[text]/path/` -- parens stripped | Critical -- breaks navigation |
+| 20 | Missing `</em>` before `</li>` in HTML lists | ko #17166 | `<em>text.</li>` -- Crowdin drops closing `</em>` | Critical -- breaks MDX compilation |
+| 21 | Image path `./` corrupted to `/.` | ko #17166 | `(/.computer.png)` instead of `(./computer.png)` | Critical -- ENOENT breaks build |
+| 22 | Backtick split exposing bare `</>` or `<tag>` | ko #17166 | `` `<> ...` </>`) `` -- backtick closed early, `</>` exposed to MDX parser | Critical -- breaks MDX compilation |
+| 23 | Inner quotes in JSX attribute break parsing | ko #17166 | `title="오해: "text""` -- `"` inside `title="..."` terminates attribute early | Critical -- breaks MDX compilation |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
@@ -57,6 +61,10 @@ These patterns are covered by existing fix functions and should have regression 
 - **Junk after heading anchors** (`fixJunkAfterHeadingAnchors`) — `{#id}translated-text` stripped (ko PR #17166)
 - **Backtick-wrapped links** (`fixBacktickWrappedLinks`) — `` `[text](url)` `` → `[text](url)` (ko PR #17166)
 - **Missing link parentheses** (`fixMissingLinkParentheses`) — `[text]https://url` → `[text](https://url)` (ko PR #17166)
+- **Missing closing `</em>`** (`fixMissingClosingEmTag`) — `<em>text.</li>` → `<em>text.</em></li>` (ko PR #17166)
+- **Image path `./` corruption** (`fixImagePathDotSlash`) — `](/.file.png)` → `](./file.png)` (ko PR #17166)
+- **Exposed MDX tags warning** (`warnExposedMdxTags`) — bare `<tag>` or `</>` outside backticks (ko PR #17166)
+- **Inner quotes in JSX attributes** (`fixInnerQuotesInJsxAttributes`) — `title="text: "inner""` → `title="text: &quot;inner&quot;"` (ko PR #17166)
 
 ## Recommendations for Future Sanitizer Iteration
 

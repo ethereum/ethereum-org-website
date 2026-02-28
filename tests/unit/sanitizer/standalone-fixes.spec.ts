@@ -29,6 +29,9 @@ const {
   fixJunkAfterHeadingAnchors,
   fixBacktickWrappedLinks,
   fixMissingLinkParentheses,
+  fixMissingClosingEmTag,
+  fixImagePathDotSlash,
+  fixInnerQuotesInJsxAttributes,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -776,6 +779,149 @@ test.describe("Standalone Fixes", () => {
     test("skips code blocks", () => {
       const input = "```\n[text]https://url.com\n```"
       const { content, fixCount } = fixMissingLinkParentheses(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixMissingClosingEmTag", () => {
+    test("inserts missing </em> before </li>", () => {
+      const input =
+        '  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> \u2013 <em>`CHAINID` \uC635\uCF54\uB4DC\uB97C \uCD94\uAC00\uD558\uC5EC \uC7AC\uC0DD \uACF5\uACA9\uC73C\uB85C\uBD80\uD130 \uC774\uB354\uB9AC\uC6C0\uC744 \uBCF4\uD638\uD569\uB2C8\uB2E4.</li>'
+      const { content, fixCount } = fixMissingClosingEmTag(input)
+      expect(content).toBe(
+        '  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> \u2013 <em>`CHAINID` \uC635\uCF54\uB4DC\uB97C \uCD94\uAC00\uD558\uC5EC \uC7AC\uC0DD \uACF5\uACA9\uC73C\uB85C\uBD80\uD130 \uC774\uB354\uB9AC\uC6C0\uC744 \uBCF4\uD638\uD569\uB2C8\uB2E4.</em></li>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves properly closed <em> unchanged", () => {
+      const input =
+        '  <li><a href="url">EIP-152</a> \u2013 <em>some text.</em></li>'
+      const { content, fixCount } = fixMissingClosingEmTag(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple broken <li> items", () => {
+      const input = [
+        "  <li><em>first item.</li>",
+        "  <li><em>second item.</em></li>",
+        "  <li><em>third item.</li>",
+      ].join("\n")
+      const { content, fixCount } = fixMissingClosingEmTag(input)
+      expect(content).toBe(
+        [
+          "  <li><em>first item.</em></li>",
+          "  <li><em>second item.</em></li>",
+          "  <li><em>third item.</em></li>",
+        ].join("\n")
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n<li><em>broken.</li>\n```"
+      const { content, fixCount } = fixMissingClosingEmTag(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixImagePathDotSlash", () => {
+    test("fixes /.filename to ./filename in image syntax", () => {
+      const input =
+        "![\uCEF4\uD4E8\uD130 \uD654\uBA74\uC758 \uC774\uB354\uB9AC\uC6C0 \uB85C\uACE0](/.computer.png)"
+      const { content, fixCount } = fixImagePathDotSlash(input)
+      expect(content).toBe(
+        "![\uCEF4\uD4E8\uD130 \uD654\uBA74\uC758 \uC774\uB354\uB9AC\uC6C0 \uB85C\uACE0](./computer.png)"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("also fixes in regular link syntax", () => {
+      const input = "[link text](/.file.pdf)"
+      const { content, fixCount } = fixImagePathDotSlash(input)
+      expect(content).toBe("[link text](./file.pdf)")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct ./path unchanged", () => {
+      const input = "![alt](./computer.png)"
+      const { content, fixCount } = fixImagePathDotSlash(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves absolute /path unchanged", () => {
+      const input = "![alt](/images/logo.png)"
+      const { content, fixCount } = fixImagePathDotSlash(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n![alt](/.broken.png)\n```"
+      const { content, fixCount } = fixImagePathDotSlash(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixInnerQuotesInJsxAttributes", () => {
+    test("escapes inner quotes in title attribute", () => {
+      const input =
+        '<ExpandableCard\ntitle="\uC624\uD574: "\uB178\uB4DC\uB97C \uC2E4\uD589\uD558\uB824\uBA74 32 ETH\uB97C \uC2A4\uD14C\uC774\uD0B9\uD574\uC57C \uD569\uB2C8\uB2E4.""'
+      const { content, fixCount } = fixInnerQuotesInJsxAttributes(input)
+      expect(content).toBe(
+        '<ExpandableCard\ntitle="\uC624\uD574: &quot;\uB178\uB4DC\uB97C \uC2E4\uD589\uD558\uB824\uBA74 32 ETH\uB97C \uC2A4\uD14C\uC774\uD0B9\uD574\uC57C \uD569\uB2C8\uB2E4.&quot;"'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("escapes inner quotes in contentPreview attribute", () => {
+      const input = 'contentPreview="\uAC70\uC9D3: "\uB0B4\uC6A9""'
+      const { content, fixCount } = fixInnerQuotesInJsxAttributes(input)
+      expect(content).toBe(
+        'contentPreview="\uAC70\uC9D3: &quot;\uB0B4\uC6A9&quot;"'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple attributes with inner quotes", () => {
+      const input = [
+        "<ExpandableCard",
+        'title="\uC624\uD574: "\uD14D\uC2A4\uD2B8""',
+        'contentPreview="\uAC70\uC9D3: "\uB0B4\uC6A9"">',
+      ].join("\n")
+      const { content, fixCount } = fixInnerQuotesInJsxAttributes(input)
+      expect(content).toContain(
+        'title="\uC624\uD574: &quot;\uD14D\uC2A4\uD2B8&quot;"'
+      )
+      expect(content).toContain(
+        'contentPreview="\uAC70\uC9D3: &quot;\uB0B4\uC6A9&quot;">'
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves attributes without inner quotes unchanged", () => {
+      const input =
+        '<ExpandableCard\ntitle="Normal title without inner quotes">'
+      const { content, fixCount } = fixInnerQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves already-escaped &quot; unchanged", () => {
+      const input = '<ExpandableCard\ntitle="Misconception: &quot;text&quot;">'
+      const { content, fixCount } = fixInnerQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = '```\ntitle="\uC624\uD574: "\uD14D\uC2A4\uD2B8""\\n```'
+      const { content, fixCount } = fixInnerQuotesInJsxAttributes(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
