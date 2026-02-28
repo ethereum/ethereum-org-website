@@ -19,7 +19,7 @@ summaryPoint3: "1분 이내에 받은 결제 금액"
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
-![컴퓨터 화면의 이더리움 로고](/.computer.png)
+![컴퓨터 화면의 이더리움 로고](./computer.png)
 </div>
 
 ## 송금: 저렴한 국제 송금 {#remittances}
