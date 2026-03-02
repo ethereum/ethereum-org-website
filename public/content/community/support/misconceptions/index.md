@@ -51,7 +51,13 @@ The network is now secured by validators who [stake](/glossary/#staking) ETH. An
 
 ## Is there an Ethereum support team? {#no-support-team}
 
-Because Ethereum is decentralized, there is no official support team, help desk, phone number, or email address. No one from Ethereum or ethereum.org will ever:
+Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+
+Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+
+Since Ethereum is publicly transparent by default, you may also find **block explorers** and other **freely available online tools** useful in investigating a problem directly.
+
+That said, no one from Ethereum or ethereum.org will ever:
 
 - Contact you via direct message
 - Ask for your seed phrase or private keys
