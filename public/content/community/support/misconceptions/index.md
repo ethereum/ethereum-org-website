@@ -41,9 +41,9 @@ Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glos
 
 The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
 
-- **Solo staking:** Run your own validator with 32 ETH — [learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys — [learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool — [learn more](/staking/pools/)
+- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
+- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
+- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
 
 <DocLink href="/staking/">
   Learn more about staking
@@ -60,7 +60,7 @@ Because Ethereum is decentralized, there is no official support team, help desk,
 
 **Anyone doing any of the above is trying to scam you.**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities — not official support channels.
+If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
 
 <DocLink href="/security/">
   Ethereum security and scam prevention
