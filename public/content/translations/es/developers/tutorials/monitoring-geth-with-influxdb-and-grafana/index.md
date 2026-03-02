@@ -117,23 +117,23 @@ sudo systemctl start grafana-server
 Cuando tenga Grafana en ejecución, se podrá acceder a él en `localhost:3000`.
 Use su navegador preferido para acceder a esta ruta, luego inicie sesión con las credenciales predeterminadas (usuario: `admin` y contraseña: `admin`). Cuando se le solicite, cambie la contraseña predeterminada y guárdela.
 
-![](./grafana1.png)
+![Captura de pantalla del panel de Grafana para el monitoreo de Geth (panel 1)](./grafana1.png)
 
 Será redirigido a la página de inicio de Grafana. Primero, configure sus datos de origen. Haga clic en el icono de configuración de la barra izquierda y seleccione "Fuentes de datos".
 
-![](./grafana2.png)
+![Captura de pantalla del panel de Grafana para el monitoreo de Geth (panel 2)](./grafana2.png)
 
 Aún no se ha creado ninguna fuente de datos; haga clic en "Añadir fuente de datos" para definir una.
 
-![](./grafana3.png)
+![Captura de pantalla del panel de Grafana para el monitoreo de Geth (panel 3)](./grafana3.png)
 
 Para esta configuración, seleccione "InfluxDB" y continúe.
 
-![](./grafana4.png)
+![Captura de pantalla del panel de Grafana para el monitoreo de Geth (panel 4)](./grafana4.png)
 
 La configuración de la fuente de datos es bastante sencilla si está ejecutando las herramientas en la misma máquina. Necesita establecer la dirección de InfluxDB y los detalles para acceder a la base de datos. Consulte la imagen de abajo.
 
-![](./grafana5.png)
+![Captura de pantalla del panel de Grafana para el monitoreo de Geth (panel 5)](./grafana5.png)
 
 Si todo está completo y se puede acceder a InfluxDB, haga clic en "Guardar y probar" y espere a que aparezca la confirmación.
 

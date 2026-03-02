@@ -62,13 +62,13 @@ FROM temp_table
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Etherscan 交易瀏覽器視圖的螢幕截圖](./etherscan_view.png)
 
 [Blockscout 上的以太坊基金會合約頁面。](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Dune Analytics 查詢儀表板的螢幕截圖](./dune_view.png)
 
 你可以在[此處](https://dune.com/paulapivat/Learn-Ethereum)找到儀表板。 按一下表格以查看查詢 (也請參閱上方)。
 
@@ -146,7 +146,7 @@ ORDER BY block_time DESC`
 
 以下是 Dune 上的 SQL 輸出：
 
-![](./list_of_txn.png)
+![以太坊交易清單截圖](./list_of_txn.png)
 
 這個被新增到鏈上的單一區塊會改變以太坊虛擬機 ([EVM](/developers/docs/evm/)) 的狀態。 有時一次會驗證數十筆，甚至數百筆交易。 在這個特定案例中，共包含了 222 筆交易。
 
@@ -165,7 +165,7 @@ FROM temp_table
 
 在區塊 12396854 中，總共 222 筆交易裡，有 204 筆成功驗證：
 
-![](./successful_txn.png)
+![以太坊交易成功的截圖](./successful_txn.png)
 
 交易請求每秒發生數十次，但區塊大約每 15 秒才提交一次 ([來源](/developers/docs/blocks/))。
 
@@ -173,11 +173,11 @@ FROM temp_table
 
 以太坊每日產生的區塊圖表 (2016 年至今) 如下：
 
-![](./daily_blocks.png)
+![顯示每日以太坊區塊產量的圖表](./daily_blocks.png)
 
 在此期間，每日產生的區塊平均數約為 5,874：
 
-![](./avg_daily_blocks.png)
+![顯示每日以太坊區塊產量的圖表](./avg_daily_blocks.png)
 
 查詢如下：
 
@@ -214,7 +214,7 @@ FROM temp_table
 
 要將區塊 gas 上限概念化，其中一種方式是將其視為可用於批次處理交易的區塊空間的**供給**。 從 2016 年至今的區塊 gas 上限可以查詢並視覺化呈現：
 
-![](./avg_gas_limit.png)
+![顯示一段時間內以太坊平均 Gas 限制的圖表](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -227,7 +227,7 @@ OFFSET 1
 
 然後是每日實際用於支付以太坊鏈上運算費用的 gas (例如傳送交易、呼叫智能合約、鑄造 NFT)。 這是對可用以太坊區塊空間的**需求**：
 
-![](./daily_gas_used.png)
+![顯示每日以太坊 Gas 使用量的圖表](./daily_gas_used.png)
 
 ```sql
 SELECT

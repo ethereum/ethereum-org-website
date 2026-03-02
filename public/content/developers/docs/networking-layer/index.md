@@ -146,8 +146,8 @@ A summary of the control flow is shown below, with the relevant networking stack
 
 Once the block has been attested by sufficient validators it is added to the head of the chain, justified and eventually finalized.
 
-![](cons_client_net_layer.png)
-![](exe_client_net_layer.png)
+![Diagram of the Ethereum consensus client networking layer](cons_client_net_layer.png)
+![Diagram of the Ethereum execution client networking layer](exe_client_net_layer.png)
 
 Network layer schematic for consensus and execution clients, from [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 

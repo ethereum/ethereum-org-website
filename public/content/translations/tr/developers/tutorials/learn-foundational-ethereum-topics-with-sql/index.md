@@ -62,13 +62,13 @@ Bu, Etherscan'in işlem sayfasında sağlanan bilgilerin aynısını verecektir.
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Etherscan işlem gezgini görünümünün ekran görüntüsü](./etherscan_view.png)
 
 [EF'nin Blockscout'taki sözleşme sayfası.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Dune Analytics sorgu panosunun ekran görüntüsü](./dune_view.png)
 
 Panoyu [burada](https://dune.com/paulapivat/Learn-Ethereum) bulabilirsiniz. Sorguyu görmek için tabloya tıklayın (ayrıca yukarıya bakın).
 
@@ -146,7 +146,7 @@ ORDER BY block_time DESC`
 
 İşte Dune'daki SQL çıktısı:
 
-![](./list_of_txn.png)
+![Ethereum işlemleri listesinin ekran görüntüsü](./list_of_txn.png)
 
 Zincire eklenen bu tek blok, Ethereum Sanal Makinesi'nin ([EVM](/developers/docs/evm/)) durumunu değiştirir. Bazen onlarca, bazen de yüzlerce işlem aynı anda doğrulanır. Bu özel durumda 222 işlem dahil edildi.
 
@@ -165,7 +165,7 @@ FROM temp_table
 
 12396854 numaralı blok için, toplam 222 işlemden 204'ü başarıyla doğrulandı:
 
-![](./successful_txn.png)
+![Başarılı bir Ethereum işleminin ekran görüntüsü](./successful_txn.png)
 
 İşlem istekleri saniyede onlarca kez gerçekleşir, ancak bloklar yaklaşık olarak her 15 saniyede bir işlenir ([kaynak](/developers/docs/blocks/)).
 
@@ -173,11 +173,11 @@ Yaklaşık her 15 saniyede bir blok üretildiğini görmek için, bir gündeki s
 
 Günlük üretilen Ethereum blokları için grafik (2016 - günümüz) şöyledir:
 
-![](./daily_blocks.png)
+![Günlük Ethereum blok üretimini gösteren grafik](./daily_blocks.png)
 
 Bu zaman diliminde günlük üretilen ortalama blok sayısı ~5.874'tür:
 
-![](./avg_daily_blocks.png)
+![Günlük Ethereum blok üretimini gösteren grafik](./avg_daily_blocks.png)
 
 Sorgular şunlardır:
 
@@ -214,7 +214,7 @@ Blokların boyutu sınırlıdır. Maksimum blok boyutu dinamiktir ve ağ talebin
 
 Blok gaz limitini kavramsallaştırmanın bir yolu, onu işlemleri gruplamak için mevcut blok alanının **arzı** olarak düşünmektir. Blok gaz limiti 2016'dan günümüze sorgulanabilir ve görselleştirilebilir:
 
-![](./avg_gas_limit.png)
+![Zaman içindeki ortalama Ethereum gaz limitini gösteren grafik](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -227,7 +227,7 @@ OFFSET 1
 
 Ardından, Ethereum zincirinde yapılan hesaplama için günlük olarak kullanılan gerçek gaz vardır (yani, işlem gönderme, bir akıllı sözleşme çağırma, bir NFT basma). Bu, mevcut Ethereum blok alanı için olan **taleptir**:
 
-![](./daily_gas_used.png)
+![Kullanılan günlük Ethereum gazını gösteren grafik](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -246,7 +246,7 @@ Bu nedenle, mevcut arz göz önüne alındığında, gaz fiyatlarını Ethereum 
 
 Son olarak, Ethereum zinciri için ortalama günlük gaz fiyatlarını sorgulamak isteyebiliriz ancak bu, özellikle uzun bir sorgu süresine neden olacaktır, bu yüzden sorgumuzu Ethereum Foundation tarafından işlem başına ödenen ortalama gaz miktarına göre filtreleyeceğiz.
 
-![](./ef_daily_gas.png)
+![Ethereum Vakfı'nın günlük gaz kullanımını gösteren grafik](./ef_daily_gas.png)
 
 Yıllar boyunca Ethereum Foundation adresine yapılan tüm işlemler için ödenen gaz fiyatlarını görebiliriz. Sorgu şu şekildedir:
 

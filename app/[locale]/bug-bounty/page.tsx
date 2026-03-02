@@ -114,6 +114,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const { locale } = await params
 
   const t = await getTranslations({ namespace: "page-bug-bounty" })
+  const tCommon = await getTranslations({ namespace: "common" })
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
@@ -305,39 +306,83 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         </Text>
         <ClientRow>
           <Client>
-            <Image src={besu} alt="" {...iconImageProps()} />
+            <Image
+              src={besu}
+              alt={tCommon("item-logo", { item: "Besu" })}
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={erigon} alt="" {...iconImageProps()} />
+            <Image
+              src={erigon}
+              alt={tCommon("item-logo", { item: "Erigon" })}
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={geth} alt="" {...iconImageProps()} />
+            <Image
+              src={geth}
+              alt={tCommon("item-logo", { item: "Geth" })}
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={nethermind} alt="" {...iconImageProps()} />
+            <Image
+              src={nethermind}
+              alt={tCommon("item-logo", { item: "Nethermind" })}
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={reth} alt="" {...iconImageProps()} />
+            <Image
+              src={reth}
+              alt={tCommon("item-logo", { item: "Reth" })}
+              {...iconImageProps()}
+            />
           </Client>
         </ClientRow>
         <ClientRow>
           <Client>
-            <Image src={lighthouseLight} alt="" {...iconImageProps(true)} />
+            <Image
+              src={lighthouseLight}
+              alt={tCommon("item-logo", { item: "Lighthouse" })}
+              {...iconImageProps(true)}
+            />
           </Client>
           <Client>
-            <Image src={lodestar} alt="" {...iconImageProps()} />
+            <Image
+              src={lodestar}
+              alt={tCommon("item-logo", { item: "Lodestar" })}
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={nimbus} alt="" {...iconImageProps()} />
+            <Image
+              src={nimbus}
+              alt={tCommon("item-logo", { item: "Nimbus" })}
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={prysm} alt="" {...iconImageProps()} />
+            <Image
+              src={prysm}
+              alt={tCommon("item-logo", { item: "Prysm" })}
+              {...iconImageProps()}
+            />
           </Client>
           <Client>
-            <Image src={tekuLight} alt="" {...iconImageProps(true)} />
+            <Image
+              src={tekuLight}
+              alt={tCommon("item-logo", { item: "Teku" })}
+              {...iconImageProps(true)}
+            />
           </Client>
           <Client>
-            <Image src={grandine} alt="" {...iconImageProps()} />
+            <Image
+              src={grandine}
+              alt={tCommon("item-logo", { item: "Grandine" })}
+              {...iconImageProps()}
+            />
           </Client>
         </ClientRow>
         <div className="mb-12 mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box">
