@@ -14,7 +14,7 @@ export interface Contributor {
   login: string
   name: string
   avatar_url: string
-  profile: string
+  profile?: string
   contributions: Array<string>
 }
 
@@ -22,6 +22,48 @@ const allContributors = JSON.parse(data)
 
 interface ContributorsProps {
   contributors?: Contributor[]
+}
+
+const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
+  const content = (
+    <>
+      <Image
+        className="h-[132px] w-[132px]"
+        src={contributor.avatar_url}
+        alt={contributor.name}
+        width={132}
+        height={132}
+        sizes="132px"
+      />
+      <div className="p-4">
+        <h3 className="mb-4 mt-2 text-md text-body">
+          {contributor.profile ? (
+            <LinkOverlay asChild>
+              <InlineLink
+                className="text-body no-underline hover:no-underline"
+                href={contributor.profile}
+                hideArrow
+              >
+                {contributor.name}
+              </InlineLink>
+            </LinkOverlay>
+          ) : (
+            contributor.name
+          )}
+        </h3>
+      </div>
+    </>
+  )
+
+  if (contributor.profile) {
+    return (
+      <LinkBox className="m-2 max-w-[132px] transform shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-highlight focus:scale-[1.02] focus:rounded">
+        {content}
+      </LinkBox>
+    )
+  }
+
+  return <div className="m-2 max-w-[132px] shadow">{content}</div>
 }
 
 const Contributors = ({ contributors }: ContributorsProps) => {
@@ -44,32 +86,7 @@ const Contributors = ({ contributors }: ContributorsProps) => {
 
       <Flex className="flex-wrap">
         {contributorsList.map((contributor) => (
-          <LinkBox
-            className="m-2 max-w-[132px] transform shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-highlight focus:scale-[1.02] focus:rounded"
-            key={contributor.login}
-          >
-            <Image
-              className="h-[132px] w-[132px]"
-              src={contributor.avatar_url}
-              alt={contributor.name}
-              width={132}
-              height={132}
-              sizes="132px"
-            />
-            <div className="p-4">
-              <h3 className="mb-4 mt-2 text-md">
-                <LinkOverlay asChild>
-                  <InlineLink
-                    className="text-body no-underline hover:no-underline"
-                    href={contributor.profile}
-                    hideArrow
-                  >
-                    {contributor.name}
-                  </InlineLink>
-                </LinkOverlay>
-              </h3>
-            </div>
-          </LinkBox>
+          <ContributorCard key={contributor.login} contributor={contributor} />
         ))}
       </Flex>
     </>
