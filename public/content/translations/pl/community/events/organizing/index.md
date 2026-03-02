@@ -218,4 +218,3 @@ Przestrzeń na Twitterze:
 Artykuły:
 
 - [Budowanie ETHKL, autorstwa Danny'ego H.](https://sekto.tech/ethkl24)
-- [Przewodnik po wydarzeniach POKT](https://docs.pokt.network/community/pokt-events-playbook)

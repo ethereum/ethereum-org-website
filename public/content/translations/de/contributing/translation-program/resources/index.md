@@ -13,7 +13,7 @@ Nachfolgend finden Sie einige nützliche Anleitungen und Tools für ethereum.org
 - [Leitfaden für die Übersetzung](/contributing/translation-program/translators-guide/) _ – Anweisungen und Tipps für ethereum.org-Übersetzer_
 - [Übersetzungs-FAQs](/contributing/translation-program/faq/)_ – häufig gestellte Fragen und Antworten zum Übersetzungsprogramm von ethereum.org_
 - [Editorleitfaden für Crowdin-Online](https://support.crowdin.com/online-editor/)_ – ein ausführlicher Ratgeber für die Nutzung des Online-Crowdin-Editors und seiner umfangreichen Funktionen_
-- [Inhaltsbereich](/contributing/translation-program/content-buckets/)_ – welche Seiten gehören zu welchen Inhaltsbereichen von ethereum.org_
+- [Inhaltsbereich](/contributing/translation-program/)_ – welche Seiten gehören zu welchen Inhaltsbereichen von ethereum.org_
 
 ## Tools {#tools}
 
@@ -30,10 +30,10 @@ Nachfolgend finden Sie einige nützliche Anleitungen und Tools für ethereum.org
 
 Damit Sie beim aktuellen Fortschritt des Übersetzungsprogramms auf dem Laufenden bleiben, folgen Sie dem [Ethereum Foundation-Blog](https://blog.ethereum.org/):
 
-- [Oktober 2021, Updates für Meilensteine](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Dezember 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Juli 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [August 2019, Start des Übersetzungsprogramms](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Oktober 2021, Updates für Meilensteine](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Dezember 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Juli 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [August 2019, Start des Übersetzungsprogramms](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Sprechstunde für Übersetzerinnen und Übersetzer {#office-hours}
 

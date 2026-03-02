@@ -150,7 +150,7 @@
   "ethash-term": "एथहॅश",
   "ethash-definition": "एक <a href=\"/glossary/#pow\">प्रूफ-ऑफ-वर्क</a> अल्गोरिदम जो Ethereum ने <a href=\"/glossary/#pos\">प्रूफ-ऑफ-स्टेक</a> मध्ये संक्रमण करण्यापूर्वी वापरला होता. <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">अधिक वाचा</a>",
   "ether-term": "इथर",
-  "ether-definition": "Ethereum ची मूळ क्रिप्टोकरन्सी, सामान्यतः “ETH” म्हणून ओळखली जाते. Ethereum इकोसिस्टम आणि ॲप्लिकेशन्स वापरताना व्यवहार शुल्क भरण्यासाठी याचा वापर केला जातो. <a href=\"/eth/\">इथरबद्दल अधिक</a>.",
+  "ether-definition": "Ethereum ची मूळ क्रिप्टोकरन्सी, सामान्यतः “ETH” म्हणून ओळखली जाते. Ethereum इकोसिस्टम आणि ॲप्लिकेशन्स वापरताना व्यवहार शुल्क भरण्यासाठी याचा वापर केला जातो. <a href=\"/what-is-ether/\">इथरबद्दल अधिक</a>.",
   "events-term": "कार्यक्रम",
   "events-definition": "<a href=\"/glossary/#evm\">EVM</a> लॉगिंग सुविधांचा वापर करण्याची परवानगी देते. <a href=\"/glossary/#dapp\">Dapps</a> इव्हेंट्स ऐकू शकतात आणि वापरकर्ता इंटरफेसमध्ये JavaScript कॉलबॅक ट्रिगर करण्यासाठी त्यांचा वापर करू शकतात. <a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">इव्हेंट्स आणि लॉग्सवर अधिक</a>",
   "evm-term": "इथेरियम व्हर्च्युअल मशीन (EVM)",

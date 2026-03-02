@@ -92,7 +92,7 @@ Há várias outras atualizações futuras possíveis para a regra de escolha do 
 
 #### Ataques de longo alcance {#long-range-attacks}
 
-Também existe uma classe de ataque específico para blockchains de prova de participação que envolve um validador que participou do bloco de origem, mantendo um fork separado da blockchain junto com o honesto, finalmente convencendo o validador honesto definido a mudar para ele em algum momento oportuno, bem mais tarde. Esse tipo de ataque não é possível no Ethereum devido ao dispositivo de finalidade, que garante que todos os validadores concordem com o estado da cadeia honesta em intervalos regulares (“pontos de verificação”). Esse mecanismo simples neutraliza atacantes de longo alcance, pois os clientes do Ethereum simplesmente não irão reorganizar blocos finalizados. Novos nós que ingressam na rede fazem isso encontrando um hash de estado recente confiável (um "ponto de verificação de [subjetividade fraca](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)") e o utilizando como um pseudo-bloco de origem para construir a partir dele. Isso cria um “gateway de confiança” para um novo nó que entra na rede antes de começar a verificar as informações por si mesmo.
+Também existe uma classe de ataque específico para blockchains de prova de participação que envolve um validador que participou do bloco de origem, mantendo um fork separado da blockchain junto com o honesto, finalmente convencendo o validador honesto definido a mudar para ele em algum momento oportuno, bem mais tarde. Esse tipo de ataque não é possível no Ethereum devido ao dispositivo de finalidade, que garante que todos os validadores concordem com o estado da cadeia honesta em intervalos regulares (“pontos de verificação”). Esse mecanismo simples neutraliza atacantes de longo alcance, pois os clientes do Ethereum simplesmente não irão reorganizar blocos finalizados. Novos nós que ingressam na rede fazem isso encontrando um hash de estado recente confiável (um "ponto de verificação de [subjetividade fraca](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)") e o utilizando como um pseudo-bloco de origem para construir a partir dele. Isso cria um “gateway de confiança” para um novo nó que entra na rede antes de começar a verificar as informações por si mesmo.
 
 #### Negação de serviço {#denial-of-service}
 
@@ -157,7 +157,7 @@ Para solucionar ataques de 34%, 51% ou 66% seria provavelmente necessário uma c
 ## Leitura adicional {#further-reading}
 
 - [Versão mais detalhada desta página](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik sobre a finalidade de regulamentação](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik sobre a finalidade de regulamentação](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [Artigo sobre LMD GHOST](https://arxiv.org/abs/2003.03052)
 - [Artigo Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Artigo sobre o Gasper](https://arxiv.org/pdf/2003.03052.pdf)

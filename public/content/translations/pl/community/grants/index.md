@@ -30,7 +30,6 @@ Zasoby te gromadzą i porządkują różne możliwości grantowe w całym ekosys
 
 Te ogólne platformy oferują szeroki zakres grantów w całej przestrzeni Web3 i są użytecznymi punktami wyjścia dla każdego, kto szuka finansowania:
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks opracował kompleksowy katalog wszystkich dotacji, zapytań ofertowych i nagród za błędy._
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _Katalog grantów blockchain i krypto_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Katalog wszystkich programów grantowych Web3, aktualizowany co tydzień
 

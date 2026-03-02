@@ -35,7 +35,7 @@ incomplete: true
 ## Статті для середнього рівня {#intermediate-articles}
 
 - [Друзі web3.py: Вступ до Ape](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [Розробка Dapp для програмістів на Python](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [Розробка Dapp для програмістів на Python](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [Створення інтерфейсу Python для Ethereum: частина 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Смарт-контракти Ethereum на Python: вичерпний(ish) посібник](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -87,7 +87,7 @@ incomplete: true
 - [Curve](https://www.curve.finance/) та [репозиторій смарт-контрактів Curve](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) та [смарт-контракти, що використовують набір інструментів Brownie](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) використовує [Python для управління та розгортання своїх контрактів вестингу](https://github.com/sushiswap/sushi-vesting-protocols)
-- [Alpha Finance](https://alphafinance.io/), відомий своїм проєктом Alpha Homora, використовує [Brownie для тестування та розгортання смарт-контрактів](https://github.com/AlphaFinanceLab/alpha-staking-contract)
+- [Alpha Venture DAO](https://alphaventuredao.io/), відомий своїм проєктом Alpha Homora, використовує [Brownie для тестування та розгортання смарт-контрактів](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## Обговорення спільноти Python {#python-community-contributors}
 

@@ -42,7 +42,7 @@ Uma nota sobre recipientes de conteúdo: utilizamos “recipientes de conteúdos
 
 Recomendamos que você traduza nesta ordem numérica (1 → 2 → 3 → ⋯) para assegurar que as páginas de maior impacto sejam traduzidas primeiro.
 
-[Saiba mais sobre os recipientes de conteúdo do ethereum.org](/contributing/translation-program/content-buckets/)
+[Saiba mais sobre os recipientes de conteúdo do ethereum.org](/contributing/translation-program/)
 
 ### Traduzir {#translate}
 

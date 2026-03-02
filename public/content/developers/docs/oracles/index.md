@@ -10,7 +10,7 @@ Giving smart contracts the ability to execute using offchain data extends the ut
 
 ## Prerequisites {#prerequisites}
 
-This page assumes the reader is familiar with Ethereum fundamentals, including [nodes](/developers/docs/nodes-and-clients/), [consensus mechanisms](/developers/docs/consensus-mechanisms/), and the [EVM](/developers/docs/evm/). You should also have a good grasp of [smart contracts](/developers/docs/smart-contracts/) and [smart contract anatomy](/developers/docs/smart-contracts/anatomy/), especially [events](/glossary/#events).
+This page assumes the reader is familiar with [Ethereum](/) fundamentals, including [nodes](/developers/docs/nodes-and-clients/), [consensus mechanisms](/developers/docs/consensus-mechanisms/), and the [EVM](/developers/docs/evm/). You should also have a good grasp of [smart contracts](/developers/docs/smart-contracts/) and [smart contract anatomy](/developers/docs/smart-contracts/anatomy/), especially [events](/glossary/#events).
 
 ## What is a blockchain oracle? {#what-is-a-blockchain-oracle}
 
@@ -280,7 +280,7 @@ Staking/voting also protects decentralized oracles from [Sybil attacks](/glossar
 
 [Schelling point](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) is a game-theory concept that assumes multiple entities will always default to a common solution to a problem in absence of any communication. Schelling-point mechanisms are often used in decentralized oracle networks to enable nodes reach consensus on answers to data requests.
 
-An early idea for this was [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), a proposed data feed where participants submit responses to "scalar" questions (questions whose answers are described by magnitude, e.g., "what is the price of ETH?"), along with a deposit. Users who provide values between the 25th and 75th [percentile](https://en.wikipedia.org/wiki/Percentile) are rewarded, while those whose values deviate largely from the median value are penalized.
+An early idea for this was [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed), a proposed data feed where participants submit responses to "scalar" questions (questions whose answers are described by magnitude, e.g., "what is the price of ETH?"), along with a deposit. Users who provide values between the 25th and 75th [percentile](https://en.wikipedia.org/wiki/Percentile) are rewarded, while those whose values deviate largely from the median value are penalized.
 
 While SchellingCoin doesn’t exist today, a number of decentralized oracles—notably [Maker Protocol’s Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module)—use the schelling-point mechanism to improve accuracy of oracle data. Each Maker Oracle consists of an offchain P2P network of nodes ("relayers" and "feeds") who submit market prices for collateral assets and an onchain “Medianizer” contract that calculates the median of all provided values. Once the specified delay period is over, this median value becomes the new reference price for the associated asset.
 
@@ -407,6 +407,10 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **[Supra](https://supra.com/)** - A vertically integrated toolkit of cross-chain solutions that interlink all blockchains, public (L1s and L2s) or private (enterprises), providing decentralized oracle price feeds that can be used for onchain and offchain use-cases. 
 
 **[Gas Network](https://gas.network/)** - A distributed oracle platform providing real-time gas price data across blockchain. By bringing data from leading gas price data providers onchain, Gas Network is helping to drive interoperability. Gas Network supports data for over 35 chains, including Ethereum Mainnet and many leading L2s.
+
+**[DIA](https://www.diadata.org/)** - A cross-chain oracle network delivering verifiable data feeds for 20,000+ assets across all major asset classes. DIA sources raw trade data directly from 100+ primary markets and computes it onchain, ensuring complete data transparency and verifiability with custom configurations for any use case.
+
+**[Stork](https://stork.network)** - Stork delivers price data at ultra-low latency, supporting a wide range of use cases including perpetuals markets, lending protocols, and DeFi ecosystems, with new assets supported rapidly on listing.
 
 ## Further reading {#further-reading}
 

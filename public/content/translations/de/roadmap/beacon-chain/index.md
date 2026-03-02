@@ -32,7 +32,7 @@ Staking erfüllt einen ähnlichen Zweck wie einst [Mining](/developers/docs/cons
 
 Der Wechsel zu Proof-of-Stake machte Ethereum wesentlich sicherer und dezentralisierte im Vergleich zu Proof-of-Work. Je mehr Menschen sich am Netzwerk beteiligen, desto dezentralisierter und sicherer wird es vor Angriffen.
 
-Und die Verwendung von Proof-of-Stake als Konsensmechanismus ist eine grundlegende Komponente für [das sichere, umweltfreundliche und skalierbare Ethereum, das wir jetzt haben](/roadmap/vision/).
+Und die Verwendung von Proof-of-Stake als Konsensmechanismus ist eine grundlegende Komponente für [das sichere, umweltfreundliche und skalierbare Ethereum, das wir jetzt haben](/roadmap/).
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>

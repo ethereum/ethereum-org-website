@@ -149,6 +149,18 @@ export const getDeveloperToolsData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+export const getAccountHolders = createCachedGetter(
+  dataLayer.getAccountHolders,
+  ["account-holders"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getTranslationGlossary = createCachedGetter(
+  dataLayer.getTranslationGlossary,
+  ["translation-glossary"],
+  CACHE_REVALIDATE_DAY
+)
+
 export const getGitHubContributors = unstable_cache(async () => {
   console.log("getGitHubContributors")
   return await dataLayer.getGitHubContributors()

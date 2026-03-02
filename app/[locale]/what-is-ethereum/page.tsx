@@ -35,6 +35,8 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 import WhatIsEthereumPageJsonLD from "./page-jsonld"
 
 import contributionBanner from "@/public/images/doge-computer.png"
@@ -125,6 +127,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <p>
                 {t.rich("page-what-is-ethereum-ethereum-intro-1", {
                   strong: Strong,
+                  a: (chunks) => <Link href="/">{chunks}</Link>,
                 })}
               </p>
               <p>
@@ -783,7 +786,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                       })}
                     </p>
                   </div>
-                  <ButtonLink href="/enterprise/">
+                  <ButtonLink href={ENTERPRISE_ETHEREUM_URL}>
                     {t("page-what-is-ethereum-start-business-cta")}
                   </ButtonLink>
                 </CardContent>

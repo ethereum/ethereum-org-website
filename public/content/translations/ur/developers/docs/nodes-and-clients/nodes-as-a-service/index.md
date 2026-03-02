@@ -272,7 +272,6 @@ sidebarDepth: 2
     - مفت میں شروع کریں۔
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Docs](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - خصوصیات
     - 50+ بلاک چین نوڈز تک رسائی۔
     - مفت API کی (Key)۔
@@ -283,11 +282,10 @@ sidebarDepth: 2
     - مشترکہ، آرکائیو، بیک اپ اور وقف شدہ نوڈز۔
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Docs](https://docs.pokt.network/home/)
+  - [Docs](https://docs.pokt.network/)
   - خصوصیات
     - ڈی سینٹرلائزڈ RPC پروٹوکول اور مارکیٹ پلیس۔
     - 1M درخواستیں فی دن مفت ٹائیر (فی اینڈ پوائنٹ، زیادہ سے زیادہ 2)۔
-    - [پبلک اینڈ پوائنٹس](https://docs.pokt.network/developers/public-endpoints)
     - پری-اسٹیک+ پروگرام (اگر آپ کو روزانہ 1M سے زیادہ درخواستوں کی ضرورت ہے)۔
     - 15+ بلاک چینز کی حمایت یافتہ۔
     - 6400+ نوڈز جو ایپلی کیشنز کی خدمت کے لیے POKT کما رہے ہیں۔

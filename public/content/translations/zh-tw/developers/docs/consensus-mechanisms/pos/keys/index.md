@@ -96,7 +96,7 @@ m/44'/60'/0'/0`
 
 ## 延伸閱讀 {#further-reading}
 
-- [Carl Beekhuizen 的以太坊基金會部落格文章](https://blog.ethereum.org/2020/05/21/keys/)
+- [Carl Beekhuizen 的以太坊基金會部落格文章](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 BLS12-381 金鑰產生](https://eips.ethereum.org/EIPS/eip-2333)
 - [EIP-7002：執行層觸發退出](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [大規模金鑰管理](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

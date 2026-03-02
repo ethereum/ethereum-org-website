@@ -81,7 +81,7 @@ Bado hii ni kurahisisha - nambari kamili na sifuri kwenye michoro hapo juu zinge
 
 Kwa hivyo maadili halisi ya aina za urefu tofauti huhifadhiwa kwenye lundo mwishoni mwa kitu kilichopangwa kwa mpangilio na urekebishaji wao ukihifadhiwa katika nafasi zao sahihi katika orodha ya sehemu zilizoagizwa.
 
-Pia kuna baadhi ya kesi maalum zinazohitaji matibabu maalum, kama vile aina ya `BitList` inayohitaji kikomo cha urefu kuongezwa wakati wa userializesheni na kuondolewa wakati wa uondoaji-serializesheni. Maelezo kamili yanapatikana katika [maelezo ya SSZ](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md).
+Pia kuna baadhi ya kesi maalum zinazohitaji matibabu maalum, kama vile aina ya `BitList` inayohitaji kikomo cha urefu kuongezwa wakati wa userializesheni na kuondolewa wakati wa uondoaji-serializesheni. Maelezo kamili yanapatikana katika [maelezo ya SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
 ### Uondoaji-serializesheni {#deserialization}
 
@@ -126,7 +126,7 @@ Faharasa ya jumla ni nambari kamili inayowakilisha nodi katika mti wa Merkle wa 
 
 ## Uthibitisho-anuwai {#multiproofs}
 
-"Kutoa orodha ya viashiria vilivyopanuliwa vinavyo wakilisha kipengele fulani kunaturuhusu kukithibitisha dhidi ya mizizi ya mti wa hash." Mzizi huu ni toleo letu la ukweli linalokubalika. Data yoyote tunayopewa inaweza kuthibitishwa dhidi ya ukweli huo kwa kuiingiza mahali pazuri katika mti wa Merkle na kuzingatia kwamba mzizi unabaki bila kubadilika. Kuna kazi katika maelezo [hapa](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs) zinazoonyesha jinsi ya kukokotoa seti ndogo iwezekanavyo ya nodi zinazohitajika ili kuthibitisha maudhui ya seti maalum ya faharasa za jumla.
+"Kutoa orodha ya viashiria vilivyopanuliwa vinavyo wakilisha kipengele fulani kunaturuhusu kukithibitisha dhidi ya mizizi ya mti wa hash." Mzizi huu ni toleo letu la ukweli linalokubalika. Data yoyote tunayopewa inaweza kuthibitishwa dhidi ya ukweli huo kwa kuiingiza mahali pazuri katika mti wa Merkle na kuzingatia kwamba mzizi unabaki bila kubadilika. Kuna kazi katika maelezo [hapa](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) zinazoonyesha jinsi ya kukokotoa seti ndogo iwezekanavyo ya nodi zinazohitajika ili kuthibitisha maudhui ya seti maalum ya faharasa za jumla.
 
 Kwa mfano, ili kuthibitisha data katika fahirisi ya 9 kwenye mti ulio hapa chini, tunahitaji heshi ya data katika kiashiria 8, 9, 5, 3, 1.
 Heshi ya (8,9) inapaswa kuwa sawa na (4), ambayo heshi na 5 kutoa 2, ambayo heshi yenye 3 ili kutoa mzizi wa mti 1. Ikiwa data isiyo sahihi ilitolewa kwa 9, mzizi ungebadilika - tungegundua hii na kushindwa kuthibitisha tawi.

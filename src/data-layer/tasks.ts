@@ -9,6 +9,7 @@
 import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
 import { fetchDeveloperTools } from "./fetchers/developer-tools"
+import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
 import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
@@ -31,6 +32,7 @@ import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
+import { fetchTranslationGlossary } from "./fetchers/fetchTranslationGlossary"
 import { set } from "./storage"
 
 export const KEYS = {
@@ -57,6 +59,8 @@ export const KEYS = {
   TOTAL_ETH_STAKED: "fetch-total-eth-staked",
   TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
   STABLECOINS_DATA: "fetch-stablecoins-data",
+  ACCOUNT_HOLDERS: "fetch-account-holders",
+  TRANSLATION_GLOSSARY: "fetch-translation-glossary",
 } as const
 
 // Task definition: storage key + fetch function
@@ -65,6 +69,7 @@ type TaskDef = [string, () => Promise<unknown>]
 const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 
 const DAILY: TaskDef[] = [
+  [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
   [KEYS.CALENDAR_EVENTS, fetchCalendarEvents],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
@@ -79,6 +84,7 @@ const DAILY: TaskDef[] = [
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
   [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
+  [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
 ]
 
 const HOURLY: TaskDef[] = [

@@ -20,7 +20,7 @@ Beacon Chain é o nome do blockchain de prova de participação original que foi
 
 ## O que a Beacon Chain faz? {#what-does-the-beacon-chain-do}
 
-Beacon Chain é o nome dado a um registro de contas que orientava e coordenava a rede de [stakers](/participantes/) do Ethereum antes que começassem a validar blocos reais do Ethereum. Entretanto, não processa transações nem interações de contratos inteligentes, pois isso é feito na camada de execução. A Beacon Chain é responsável por atividades como processamento de blocos e atestações, executação do algoritmo de escolha de bifurcação e gerenciamento de recompensas e penalidades. Leia mais em nossa [página de arquitetura de nós](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
+Beacon Chain é o nome dado a um registro de contas que orientava e coordenava a rede de [stakers](/staking/) do Ethereum antes que começassem a validar blocos reais do Ethereum. Entretanto, não processa transações nem interações de contratos inteligentes, pois isso é feito na camada de execução. A Beacon Chain é responsável por atividades como processamento de blocos e atestações, executação do algoritmo de escolha de bifurcação e gerenciamento de recompensas e penalidades. Leia mais em nossa [página de arquitetura de nós](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
 ## O impacto da Beacon Chain {#beacon-chain-features}
 
@@ -32,7 +32,7 @@ O processo de participação tem um objetivo semelhante ao da [mineração](/dev
 
 A transição para a prova de participação tornou o Ethereum consideravelmente mais seguro e descentralizado, em comparação com a prova de trabalho. Quanto mais pessoas participarem da rede, mais descentralizada e segura contra ataques ela será.
 
-E utilizar a prova de participação como mecanismo de consenso é um componente fundamental para [o Ethereum seguro, ecológico e dimensionável que temos agora](/roadmap/vision/).
+E utilizar a prova de participação como mecanismo de consenso é um componente fundamental para [o Ethereum seguro, ecológico e dimensionável que temos agora](/roadmap/).
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>
