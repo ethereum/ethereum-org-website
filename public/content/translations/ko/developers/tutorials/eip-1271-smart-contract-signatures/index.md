@@ -34,7 +34,7 @@ published: 2023-01-12
 
 이더리움 계정(즉, 외부 소유 계정/EOA)에는 개인 키가 연결되어 있으며, 이 개인 키는 웹사이트나 디앱에서 서명을 요청할 때(예: '이더리움으로 로그인') 일반적으로 사용됩니다.
 
-앱은 ethers.js와 같은 제3자 라이브러리를 사용하여 사용자가 생성한 [서명을 확인할](https://www.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) 수 있으며, [사용자의 개인 키를 몰라도](https://en.wikipedia.org/wiki/Public-key_cryptography) _사용자_가 서명을 생성했음을 확신할 수 있습니다.
+앱은 ethers.js와 같은 제3자 라이브러리를 사용하여 사용자가 생성한 [서명을 확인할](https://www.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) 수 있으며, [사용자의 개인 키를 몰라도](https://en.wikipedia.org/wiki/Public-key_cryptography) <em>사용자</em>가 서명을 생성했음을 확신할 수 있습니다.
 
 > 사실, EOA 전자 서명은 공개 키 암호학을 사용하기 때문에 <strong>오프체인</strong>에서 생성 및 확인할 수 있습니다! 이것이 바로 가스 없는 DAO 투표가 작동하는 방식입니다. 온체인에서 투표를 제출하는 대신 암호화 라이브러리를 사용하여 오프체인에서 전자 서명을 생성하고 확인할 수 있습니다.
 

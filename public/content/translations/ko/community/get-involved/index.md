@@ -29,7 +29,7 @@ lang: ko
 - 이더리움 개선 제안서 작성 또는 검토하기
   - EIP 작성하기
     1. [Ethereum Magicians](https://ethereum-magicians.org)에 아이디어를 제출하세요.
-    2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1)을 읽어보세요 - **네, 이게 문서의 _전부_입니다.**
+    2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1)을 읽어보세요 - **네, 이게 문서의 <em>전부</em>입니다.**
     3. EIP-1의 지침을 따르세요. 초안을 작성할 때 참조하세요.
   - [EIP 편집자](https://eips.ethereum.org/EIPS/eip-5069)가 되는 방법을 알아보세요.
     - 지금 바로 EIP를 동료 검토할 수 있습니다! ['e-review' 태그가 있는 공개 PR](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)을 확인하세요. `discussion-to` 링크에 대한 기술적인 피드백을 제공하세요.

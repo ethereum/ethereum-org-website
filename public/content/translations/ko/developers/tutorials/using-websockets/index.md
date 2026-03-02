@@ -86,7 +86,7 @@ WebSocket을 통해 연결하면 `eth_subscribe`와 `eth_unsubscribe`라는 두 
 
 1. `alchemy_newFullPendingTransactions`
 
-보류 상태에 추가된 모든 트랜잭션의 정보를 반환합니다. 이 구독 유형은 표준 웹3 호출 `web3.eth.subscribe("pendingTransactions")`와 유사하게 보류 중인 트랜잭션에 대해 구독하지만, 트랜잭션 해시만이 아닌 _전체 트랜잭션 정보_를 내보낸다는 점에서 차이가 있습니다.
+보류 상태에 추가된 모든 트랜잭션의 정보를 반환합니다. 이 구독 유형은 표준 웹3 호출 `web3.eth.subscribe("pendingTransactions")`와 유사하게 보류 중인 트랜잭션에 대해 구독하지만, 트랜잭션 해시만이 아닌 <em>전체 트랜잭션 정보</em>를 내보낸다는 점에서 차이가 있습니다.
 
 예시:
 

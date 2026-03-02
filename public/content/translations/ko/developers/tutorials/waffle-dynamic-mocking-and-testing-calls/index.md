@@ -149,7 +149,7 @@ use(solidity)
 const [wallet] = new MockProvider().getWallets()
 ```
 
-그런 다음 ERC20 계약을 배포해야 합니다. 여기서 까다로운 부분은 인터페이스만 있다는 것입니다. 이 부분에서 Waffle이 우리를 구해줍니다. Waffle에는 인터페이스의 _abi_만을 사용하여 계약을 생성하는 마법 같은 `deployMockContract()` 함수가 있습니다.
+그런 다음 ERC20 계약을 배포해야 합니다. 여기서 까다로운 부분은 인터페이스만 있다는 것입니다. 이 부분에서 Waffle이 우리를 구해줍니다. Waffle에는 인터페이스의 <em>abi</em>만을 사용하여 계약을 생성하는 마법 같은 `deployMockContract()` 함수가 있습니다.
 
 ```typescript
 const mockERC20 = await deployMockContract(wallet, IERC20.abi)

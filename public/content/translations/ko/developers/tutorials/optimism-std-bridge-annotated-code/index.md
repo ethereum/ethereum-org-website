@@ -97,7 +97,7 @@ interface IL1ERC20Bridge {
     event ERC20DepositInitiated(
 ```
 
-Optimism 브리지 용어에서 _예치(deposit)_는 L1에서 L2로의 전송을 의미하고, _인출(withdrawal)_은 L2에서 L1로의 전송을 의미합니다.
+Optimism 브리지 용어에서 <em>예치(deposit)</em>는 L1에서 L2로의 전송을 의미하고, <em>인출(withdrawal)</em>은 L2에서 L1로의 전송을 의미합니다.
 
 ```solidity
         address indexed _l1Token,
@@ -1126,7 +1126,7 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
 ```
 
 L1 브리지의 주소를 추적합니다.
-L1 등가물과 달리 여기서는 이 변수가 _필요_합니다.
+L1 등가물과 달리 여기서는 이 변수가 <em>필요</em>합니다.
 L1 브리지의 주소는 미리 알 수 없습니다.
 
 ```solidity

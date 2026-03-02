@@ -28,7 +28,7 @@ yarn react-app:start
 
 ### React & create-react-app {#react--create-react-app}
 
-무엇보다도 이 앱의 핵심은 React와 _create-react-app_이 제공하는 모든 추가 기능입니다. 이더리움을 통합하고 싶지 않다면 이것만 사용하는 것도 좋은 방법입니다. [React](https://react.dev/) 자체는 인터랙티브 UI를 정말 쉽게 구축할 수 있도록 해줍니다. [Vue](https://vuejs.org/)만큼 초보자에게 친숙하지는 않을 수 있지만, 여전히 가장 많이 사용되며 더 많은 기능을 갖추고 있으며, 무엇보다도 선택할 수 있는 수천 개의 추가 라이브러리가 있습니다. _create-react-app_은 시작을 정말 쉽게 만들어주며 다음을 포함합니다:
+무엇보다도 이 앱의 핵심은 React와 <em>create-react-app</em>이 제공하는 모든 추가 기능입니다. 이더리움을 통합하고 싶지 않다면 이것만 사용하는 것도 좋은 방법입니다. [React](https://react.dev/) 자체는 인터랙티브 UI를 정말 쉽게 구축할 수 있도록 해줍니다. [Vue](https://vuejs.org/)만큼 초보자에게 친숙하지는 않을 수 있지만, 여전히 가장 많이 사용되며 더 많은 기능을 갖추고 있으며, 무엇보다도 선택할 수 있는 수천 개의 추가 라이브러리가 있습니다. <em>create-react-app</em>은 시작을 정말 쉽게 만들어주며 다음을 포함합니다:
 
 - React, JSX, ES6, TypeScript, Flow 구문 지원.
 - 객체 전개 연산자와 같은 ES6 이상의 언어 추가 기능.
@@ -37,7 +37,7 @@ yarn react-app:start
 - 일반적인 실수에 대해 경고하는 라이브 개발 서버.
 - 프로덕션을 위해 JS, CSS, 이미지를 해시 및 소스맵과 함께 번들로 묶는 빌드 스크립트.
 
-특히 _create-eth-app_은 새로운 [훅 효과](https://legacy.reactjs.org/docs/hooks-effect.html)를 사용하고 있습니다. 강력하면서도 매우 작은 소위 함수형 컴포넌트를 작성하는 방법입니다. _create-eth-app_에서 어떻게 사용되는지에 대해서는 아래의 Apollo 섹션을 참조하세요.
+특히 <em>create-eth-app</em>은 새로운 [훅 효과](https://legacy.reactjs.org/docs/hooks-effect.html)를 사용하고 있습니다. 강력하면서도 매우 작은 소위 함수형 컴포넌트를 작성하는 방법입니다. <em>create-eth-app</em>에서 어떻게 사용되는지에 대해서는 아래의 Apollo 섹션을 참조하세요.
 
 ### Yarn Workspaces {#yarn-workspaces}
 
@@ -45,7 +45,7 @@ yarn react-app:start
 
 ### ethers.js {#ethersjs}
 
-[Web3](https://docs.web3js.org/)가 여전히 주로 사용되지만, [ethers.js](https://docs.ethers.io/)는 지난 한 해 동안 대안으로 많은 주목을 받았으며 _create-eth-app_에 통합된 라이브러리입니다. 이것으로 작업하거나 Web3로 변경하거나 베타 테스트가 거의 끝난 [ethers.js v5](https://docs.ethers.org/v5/)로 업그레이드하는 것을 고려할 수 있습니다.
+[Web3](https://docs.web3js.org/)가 여전히 주로 사용되지만, [ethers.js](https://docs.ethers.io/)는 지난 한 해 동안 대안으로 많은 주목을 받았으며 <em>create-eth-app</em>에 통합된 라이브러리입니다. 이것으로 작업하거나 Web3로 변경하거나 베타 테스트가 거의 끝난 [ethers.js v5](https://docs.ethers.org/v5/)로 업그레이드하는 것을 고려할 수 있습니다.
 
 ### The Graph {#the-graph}
 
@@ -79,15 +79,15 @@ React.useEffect(() => {
 
 [Aave](https://aave.com/)는 탈중앙화 대출 시장입니다. 예금자는 시장에 유동성을 공급하여 패시브 인컴을 얻고, 대출자는 담보를 사용하여 대출할 수 있습니다. Aave의 독특한 기능 중 하나는 [플래시 론](https://aave.com/docs/developers/flash-loans)으로, 하나의 트랜잭션 내에서 대출을 상환하는 한 담보 없이 돈을 빌릴 수 있습니다. 예를 들어, 이는 차익 거래 시 추가 현금을 확보하는 데 유용할 수 있습니다.
 
-이자를 버는 거래 토큰을 _aToken_이라고 합니다.
+이자를 버는 거래 토큰을 <em>aToken</em>이라고 합니다.
 
-_create-eth-app_에 Aave를 통합하도록 선택하면 [서브그래프 통합](https://docs.aave.com/developers/getting-started/using-graphql)을 얻게 됩니다. Aave는 The Graph를 사용하며 [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten)과 [메인넷](https://thegraph.com/explorer/subgraph/aave/protocol)에서 [원시(raw)](https://thegraph.com/explorer/subgraph/aave/protocol-raw) 또는 [형식이 지정된(formatted)](https://thegraph.com/explorer/subgraph/aave/protocol) 형태로 바로 사용할 수 있는 여러 서브그래프를 이미 제공합니다.
+<em>create-eth-app</em>에 Aave를 통합하도록 선택하면 [서브그래프 통합](https://docs.aave.com/developers/getting-started/using-graphql)을 얻게 됩니다. Aave는 The Graph를 사용하며 [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten)과 [메인넷](https://thegraph.com/explorer/subgraph/aave/protocol)에서 [원시(raw)](https://thegraph.com/explorer/subgraph/aave/protocol-raw) 또는 [형식이 지정된(formatted)](https://thegraph.com/explorer/subgraph/aave/protocol) 형태로 바로 사용할 수 있는 여러 서브그래프를 이미 제공합니다.
 
 ![Aave 플래시 론 밈 – "네, 플래시 론을 한 트랜잭션보다 오래 유지할 수 있다면 정말 좋겠네요"](./flashloan-meme.png)
 
 ### Compound {#compound}
 
-[Compound](https://compound.finance/)는 Aave와 유사합니다. 이 통합에는 이미 새로운 [Compound v2 서브그래프](https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195)가 포함되어 있습니다. 여기서 이자를 버는 토큰은 놀랍게도 _cToken_이라고 불립니다.
+[Compound](https://compound.finance/)는 Aave와 유사합니다. 이 통합에는 이미 새로운 [Compound v2 서브그래프](https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195)가 포함되어 있습니다. 여기서 이자를 버는 토큰은 놀랍게도 <em>cToken</em>이라고 불립니다.
 
 ### Uniswap {#uniswap}
 
@@ -101,4 +101,4 @@ _create-eth-app_에 Aave를 통합하도록 선택하면 [서브그래프 통합
 
 ## 다음 단계는 무엇일까요? {#whats-next}
 
-_create-eth-app_에 대해 질문이 있다면 [Sablier 커뮤니티 서버](https://discord.gg/bsS8T47)로 가서 _create-eth-app_의 저자들과 연락할 수 있습니다. 다음 초기 단계로 [Material UI](https://mui.com/material-ui/)와 같은 UI 프레임워크를 통합하고, 실제로 필요한 데이터에 대한 GraphQL 쿼리를 작성하고, 배포를 설정할 수 있습니다.
+<em>create-eth-app</em>에 대해 질문이 있다면 [Sablier 커뮤니티 서버](https://discord.gg/bsS8T47)로 가서 <em>create-eth-app</em>의 저자들과 연락할 수 있습니다. 다음 초기 단계로 [Material UI](https://mui.com/material-ui/)와 같은 UI 프레임워크를 통합하고, 실제로 필요한 데이터에 대한 GraphQL 쿼리를 작성하고, 배포를 설정할 수 있습니다.

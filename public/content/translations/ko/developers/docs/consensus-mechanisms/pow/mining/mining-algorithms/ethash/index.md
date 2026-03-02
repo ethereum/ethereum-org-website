@@ -143,7 +143,7 @@ def calc_dataset(full_size, cache):
 
 ## 메인 루프 {#main-loop}
 
-이제 특정 헤더와 nonce에 대한 최종 값을 생성하기 위해 전체 데이터세트의 데이터를 집계하는 메인 '해시모토'와 유사한 루프를 지정합니다. 아래 코드에서 `header`는 **mixHash** 및 **nonce** 필드를 제외한 _잘린_ 블록 헤더, 즉 RLP 표현의 SHA3-256 _해시_를 나타냅니다. `nonce`는 빅 엔디안 순서의 64비트 부호 없는 정수의 8바이트입니다. 따라서 `nonce[::-1]`는 해당 값의 8바이트 리틀 엔디안 표현입니다.
+이제 특정 헤더와 nonce에 대한 최종 값을 생성하기 위해 전체 데이터세트의 데이터를 집계하는 메인 '해시모토'와 유사한 루프를 지정합니다. 아래 코드에서 `header`는 **mixHash** 및 **nonce** 필드를 제외한 _잘린_ 블록 헤더, 즉 RLP 표현의 SHA3-256 <em>해시</em>를 나타냅니다. `nonce`는 빅 엔디안 순서의 64비트 부호 없는 정수의 8바이트입니다. 따라서 `nonce[::-1]`는 해당 값의 8바이트 리틀 엔디안 표현입니다.
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):

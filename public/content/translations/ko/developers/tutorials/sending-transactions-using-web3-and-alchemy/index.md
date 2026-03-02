@@ -12,7 +12,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 이 문서는 Web3를 사용하여 이더리움 트랜잭션을 전송하는 초보자용 가이드입니다. 이더리움 블록체인으로 트랜잭션을 전송하려면 생성, 서명, 브로드캐스트의 세 가지 주요 단계가 있습니다. 이 세 가지를 모두 살펴보면서 궁금한 점에 대해 답변해 드리겠습니다! 이 튜토리얼에서는 [Alchemy](https://www.alchemy.com/)를 사용하여 이더리움 체인에 트랜잭션을 전송합니다. [여기에서 무료 Alchemy 계정을 만들 수 있습니다](https://auth.alchemyapi.io/signup).
 
-**참고:** 이 가이드는 앱의 _백엔드_에서 트랜잭션에 서명하기 위한 것입니다. 프런트엔드에서 트랜잭션 서명을 통합하려면 [브라우저 공급자와 Web3 통합](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider)을 확인하세요.
+**참고:** 이 가이드는 앱의 <em>백엔드</em>에서 트랜잭션에 서명하기 위한 것입니다. 프런트엔드에서 트랜잭션 서명을 통합하려면 [브라우저 공급자와 Web3 통합](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider)을 확인하세요.
 
 ## 기본 사항 {#the-basics}
 

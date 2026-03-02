@@ -230,7 +230,7 @@ ERC-20 컨트랙트는 허용량에 대한 [`approve` 함수](/developers/tutori
 
 ### 코드 품질 문제 {#code-quality-issues}
 
-이러한 코드 품질 문제가 이 코드가 스캠임을 _증명_하지는 않지만, 의심스러워 보이게 만듭니다. Arbitrum과 같은 조직화된 회사는 보통 이렇게 질이 낮은 코드를 출시하지 않습니다.
+이러한 코드 품질 문제가 이 코드가 스캠임을 <em>증명</em>하지는 않지만, 의심스러워 보이게 만듭니다. Arbitrum과 같은 조직화된 회사는 보통 이렇게 질이 낮은 코드를 출시하지 않습니다.
 
 #### `mount` 함수 {#the-mount-function}
 
@@ -261,7 +261,7 @@ ERC-20 컨트랙트는 허용량에 대한 [`approve` 함수](/developers/tutori
         require(msg.sender == contract_owner, "ERC20: mint to the zero address");
 ```
 
-`require`를 보면 컨트랙트 소유자만 민팅할 수 있다는 것을 알 수 있습니다. 그것은 합법적입니다. 하지만 오류 메시지는 _소유자만 민팅할 수 있습니다_ 또는 그와 비슷한 내용이어야 합니다. 대신, 관련 없는 _ERC20: 0 주소로 민팅_입니다. 0 주소로의 민팅에 대한 올바른 테스트는 `require(account != address(0), "<error message>")`이며, 컨트랙트는 이를 전혀 확인하지 않습니다.
+`require`를 보면 컨트랙트 소유자만 민팅할 수 있다는 것을 알 수 있습니다. 그것은 합법적입니다. 하지만 오류 메시지는 _소유자만 민팅할 수 있습니다_ 또는 그와 비슷한 내용이어야 합니다. 대신, 관련 없는 <em>ERC20: 0 주소로 민팅</em>입니다. 0 주소로의 민팅에 대한 올바른 테스트는 `require(account != address(0), "<error message>")`이며, 컨트랙트는 이를 전혀 확인하지 않습니다.
 
 ```solidity
         _totalSupply = _totalSupply.add(amount);
@@ -300,7 +300,7 @@ ERC-20 컨트랙트는 허용량에 대한 [`approve` 함수](/developers/tutori
     }
 ```
 
-`auth`와 `approver`는 컨트랙트가 `contract_owner`에 의해 호출되었는지 확인하기 때문에 더 합리적입니다. 민팅과 같은 특정 특권 작업은 해당 계정으로 제한될 것으로 예상합니다. 하지만 _정확히 동일한 작업_을 수행하는 두 개의 별도 함수를 갖는 것의 요점은 무엇일까요?
+`auth`와 `approver`는 컨트랙트가 `contract_owner`에 의해 호출되었는지 확인하기 때문에 더 합리적입니다. 민팅과 같은 특정 특권 작업은 해당 계정으로 제한될 것으로 예상합니다. 하지만 <em>정확히 동일한 작업</em>을 수행하는 두 개의 별도 함수를 갖는 것의 요점은 무엇일까요?
 
 ## 무엇을 자동으로 탐지할 수 있을까요? {#what-can-we-detect-automatically}
 

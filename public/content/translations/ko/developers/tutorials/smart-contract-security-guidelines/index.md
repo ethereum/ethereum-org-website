@@ -79,7 +79,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 - **0.4 및 0.6보다 Solidity 0.5를 선호합니다.** 저희 의견으로는 Solidity 0.5가 0.4보다 더 안전하고 더 나은 내장 관행을 가지고 있습니다. Solidity 0.6은 프로덕션에 너무 불안정하여 성숙할 시간이 필요합니다.
 - **안정적인 릴리스를 사용하여 컴파일하고 최신 릴리스를 사용하여 경고를 확인하세요.** 최신 컴파일러 버전에서 코드에 보고된 문제가 없는지 확인하세요. 하지만 Solidity는 릴리스 주기가 빠르고 컴파일러 버그 기록이 있으므로 배포에 최신 버전을 권장하지 않습니다(Slither의 [solc 버전 권장 사항](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) 참조).
-- **인라인 어셈블리를 사용하지 마세요.** 어셈블리에는 EVM 전문 지식이 필요합니다. 옐로우 페이퍼를 _마스터_하지 않았다면 EVM 코드를 작성하지 마세요.
+- **인라인 어셈블리를 사용하지 마세요.** 어셈블리에는 EVM 전문 지식이 필요합니다. 옐로우 페이퍼를 <em>마스터</em>하지 않았다면 EVM 코드를 작성하지 마세요.
 
 ## 배포 가이드라인 {#deployment-guidelines}
 

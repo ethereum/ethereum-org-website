@@ -26,13 +26,13 @@ published: 2025-10-15
 
 ### 영지식 증명 {#zero-knowledge-proofs}
 
-근본적인 수준에서 영지식 증명은 일부 공개 데이터인 _Data<sub>public</sub>_과 _Data<sub>private</sub>_ 사이에 관계 _Relationship_이 존재하도록 증명자가 일부 데이터인 _Data<sub>private</sub>_를 알고 있음을 보여줍니다. 검증자는 _Relationship_과 _Data<sub>public</sub>_을 알고 있습니다.
+근본적인 수준에서 영지식 증명은 일부 공개 데이터인 <em>Data<sub>public</sub></em>과 _Data<sub>private</sub>_ 사이에 관계 <em>Relationship</em>이 존재하도록 증명자가 일부 데이터인 <em>Data<sub>private</sub></em>를 알고 있음을 보여줍니다. 검증자는 <em>Relationship</em>과 <em>Data<sub>public</sub></em>을 알고 있습니다.
 
 개인정보를 보호하려면 상태와 트랜잭션을 비공개로 유지해야 합니다. 하지만 무결성을 보장하려면 상태의 [암호화 해시](https://en.wikipedia.org/wiki/Cryptographic_hash_function)를 공개해야 합니다. 트랜잭션을 제출하는 사람들에게 해당 트랜잭션이 실제로 발생했음을 증명하기 위해 트랜잭션 해시도 게시해야 합니다.
 
-대부분의 경우 _Data<sub>private</sub>_은 영지식 증명 프로그램의 입력이고 _Data<sub>public</sub>_은 출력입니다.
+대부분의 경우 <em>Data<sub>private</sub></em>은 영지식 증명 프로그램의 입력이고 <em>Data<sub>public</sub></em>은 출력입니다.
 
-다음은 _Data<sub>private</sub>_의 필드입니다.
+다음은 <em>Data<sub>private</sub></em>의 필드입니다.
 
 - _State<sub>n</sub>_, 이전 상태
 - _State<sub>n+1</sub>_, 새로운 상태
@@ -43,11 +43,11 @@ published: 2025-10-15
     발신 주소는 서명에서 복구할 수 있으므로 트랜잭션에 포함될 필요가 없습니다.
 - _서명_, 트랜잭션 수행을 승인하는 서명. 이 경우 트랜잭션을 수행할 수 있는 유일한 권한이 있는 주소는 발신 주소입니다. 우리의 영지식 시스템이 작동하는 방식 때문에 이더리움 서명 외에도 계정의 공개 키가 필요합니다.
 
-다음은 _Data<sub>public</sub>_의 필드입니다.
+다음은 <em>Data<sub>public</sub></em>의 필드입니다.
 
 - _Hash(State<sub>n</sub>)_ 이전 상태의 해시
 - _Hash(State<sub>n+1</sub>)_ 새로운 상태의 해시
-- _Hash(Transaction)_, 상태를 _State<sub>n</sub>_에서 _State<sub>n+1</sub>_로 변경하는 트랜잭션의 해시.
+- _Hash(Transaction)_, 상태를 <em>State<sub>n</sub></em>에서 <em>State<sub>n+1</sub></em>로 변경하는 트랜잭션의 해시.
 
 관계는 여러 조건을 확인합니다.
 
