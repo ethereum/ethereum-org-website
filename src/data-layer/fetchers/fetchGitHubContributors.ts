@@ -2,8 +2,6 @@ import type { FileContributor, GitHubContributorsData } from "@/lib/types"
 
 import { CONTENT_DIR, OLD_CONTENT_DIR } from "@/lib/constants"
 
-export const FETCH_GITHUB_CONTRIBUTORS_TASK_ID = "fetch-github-contributors"
-
 const GITHUB_API_BASE =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 
@@ -11,10 +9,14 @@ const GITHUB_API_BASE =
 const BATCH_SIZE = 20 // Concurrent requests per batch
 const BATCH_DELAY_MS = 50 // Small delay between batches to avoid rate limiting
 
-// App pages that display contributors (from grep search of getAppPageContributorInfo calls)
+// App pages that display contributors (must match the pagePath argument
+// passed to getAppPageContributorInfo() in each page.tsx file).
+// Dynamic routes expand to their known static values.
 const APP_PAGE_PATHS = [
   "10years",
   "apps",
+  "apps/[application]",
+  "apps/categories/[catetgoryName]",
   "assets",
   "bug-bounty",
   "collectibles",
@@ -24,8 +26,15 @@ const APP_PAGE_PATHS = [
   "contributing/translation-program/contributors",
   "contributing/translation-program/translatathon/leaderboard",
   "developers",
-  "developers/learning-tools",
-  "developers/local-environment",
+  "developers/tools",
+  // developers/tools/[category] — each category slug passed dynamically
+  "developers/tools/interoperability",
+  "developers/tools/transactions",
+  "developers/tools/analytics",
+  "developers/tools/education",
+  "developers/tools/sdks",
+  "developers/tools/contracts",
+  "developers/tools/security",
   "developers/tutorials",
   "ethereum-history-founder-and-ownership",
   "ethereum-vs-bitcoin",
@@ -39,7 +48,7 @@ const APP_PAGE_PATHS = [
   "quizzes",
   "resources",
   "roadmap",
-  "roadmap/_vision",
+  "roadmap/vision",
   "run-a-node",
   "stablecoins",
   "staking",

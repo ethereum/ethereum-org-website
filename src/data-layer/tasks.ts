@@ -123,7 +123,11 @@ const dailyFetchTasks = DAILY.map(createDataTask)
 const hourlyFetchTasks = HOURLY.map(createDataTask)
 
 // Must export for trigger.dev to discover
-export const allFetchTasks = [...dailyFetchTasks, ...hourlyFetchTasks]
+export const allFetchTasks = [
+  ...weeklyFetchTasks,
+  ...dailyFetchTasks,
+  ...hourlyFetchTasks,
+]
 
 // ─── Scheduled orchestrators ───
 export const weeklyTask = schedules.task({
