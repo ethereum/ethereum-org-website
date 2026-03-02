@@ -72,7 +72,6 @@ Understanding where your funds went can help with reports and may support recove
 - [Etherscan](https://etherscan.io/): look up any transaction hash or wallet address to see where funds were sent
 - [Chainabuse lookup](https://www.chainabuse.com/): check if an address has already been reported by other victims
 - [MetaSleuth](https://metasleuth.io/) by BlockSec: visual transaction tracing tool that maps fund flows
-- [Breadcrumbs](https://www.breadcrumbs.app/): blockchain investigation and fund tracing tool
 
 **If funds were sent to a centralized exchange** (like Coinbase, Binance, Kraken), contact their support team immediately with the transaction details. Exchanges can sometimes freeze accounts flagged for fraud.
 
