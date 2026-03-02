@@ -232,25 +232,25 @@ href="/guides/how-to-revoke-token-access/"
 className="hover:bg-background-highlight"
 href="/community/support/misconceptions/#not-a-company"
 >
-                    Ethereum is not a company
+                    Is Ethereum a company?
                   </Link>
                   <Link
                   className="hover:bg-background-highlight"
 href="/community/support/misconceptions/#no-fund-access"
 >
-                    No one can access or freeze your funds
+                    Can someone recover or freeze my funds?
                   </Link>
                   <Link
                   className="hover:bg-background-highlight"
 href="/community/support/misconceptions/#no-mining"
 >
-                    Ethereum mining no longer exists
+                    Can I still mine Ethereum?
                   </Link>
                   <Link
                   className="hover:bg-background-highlight"
 href="/community/support/misconceptions/#no-support-team"
 >
-                    There is no &quot;Ethereum support team&quot;
+                    Is there an Ethereum support team?
                   </Link>
                 </div>
               </WindowBox>
