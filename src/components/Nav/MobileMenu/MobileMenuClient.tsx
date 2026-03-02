@@ -93,7 +93,6 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
           ref={triggerRef}
           className={cn("-me-2", className)}
           isMenuOpen={open}
-          onPointerEnter={() => lazyImport()}
         />
       </SheetTrigger>
 
@@ -110,19 +109,19 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
           <ErrorBoundary
             fallback={({ reset }) => (
               <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
-                <p className="text-body-medium">Failed to load menu</p>
+                <p className="text-body-medium">{t("loading-error")}</p>
                 <div className="flex gap-3">
                   <button
                     className="rounded-md bg-primary px-4 py-2 text-sm text-white hover:bg-primary-hover"
                     onClick={reset}
                   >
-                    Try again
+                    {t("try-again")}
                   </button>
                   <button
                     className="rounded-md border border-body-light px-4 py-2 text-sm text-body hover:bg-background-highlight"
                     onClick={() => handleOpenChange(false)}
                   >
-                    Close
+                    {t("close")}
                   </button>
                 </div>
               </div>
