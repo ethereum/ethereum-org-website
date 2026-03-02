@@ -32,6 +32,8 @@ const {
   fixMissingClosingEmTag,
   fixImagePathDotSlash,
   fixInnerQuotesInJsxAttributes,
+  escapeTildeStrikethrough,
+  fixBoldAdjacentNonLatin,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -276,6 +278,14 @@ test.describe("Standalone Fixes", () => {
       const { content, fixCount } = removeOrphanedClosingTags(input)
       expect(content).toBe('<a href="/">text</a>')
       expect(fixCount).toBe(1)
+    })
+
+    test("preserves </em> when <em> spans across inline backticks", () => {
+      const input =
+        '  <li><a href="url">EIP-1344</a> – <em>`CHAINID` text.</em></li>'
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 
@@ -922,6 +932,139 @@ test.describe("Standalone Fixes", () => {
     test("skips code blocks", () => {
       const input = '```\ntitle="\uC624\uD574: "\uD14D\uC2A4\uD2B8""\\n```'
       const { content, fixCount } = fixInnerQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixBoldAdjacentNonLatin", () => {
+    test("converts ** to <strong> when followed by Korean josa", () => {
+      const input =
+        "**\uB2E8\uC77C \uC2AC\uB86F \uCD5C\uC885 \uC2B9\uC778(SSF)**\uC73C\uB85C \uC54C\uB824\uC838"
+      const { content, fixCount } = fixBoldAdjacentNonLatin(input)
+      expect(content).toBe(
+        "<strong>\uB2E8\uC77C \uC2AC\uB86F \uCD5C\uC885 \uC2B9\uC778(SSF)</strong>\uC73C\uB85C \uC54C\uB824\uC838"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("converts ** to <strong> with verb suffix", () => {
+      const input =
+        "**\uCD5C\uC18C \uC2A4\uD14C\uC774\uD0B9 \uAE08\uC561\uC744 32 ETH\uB85C \uC124\uC815**\uD569\uB2C8\uB2E4."
+      const { content, fixCount } = fixBoldAdjacentNonLatin(input)
+      expect(content).toBe(
+        "<strong>\uCD5C\uC18C \uC2A4\uD14C\uC774\uD0B9 \uAE08\uC561\uC744 32 ETH\uB85C \uC124\uC815</strong>\uD569\uB2C8\uB2E4."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves bold with space after unchanged", () => {
+      const input = "**some text** and more"
+      const { content, fixCount } = fixBoldAdjacentNonLatin(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves bold followed by ASCII punctuation unchanged", () => {
+      const input = "**text**, and **more**."
+      const { content, fixCount } = fixBoldAdjacentNonLatin(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input = "```\n**text**\uAC00\uB098\uB2E4\n```"
+      const { content, fixCount } = fixBoldAdjacentNonLatin(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles CJK characters (Chinese/Japanese)", () => {
+      const input = "**\u6982\u8981**\u306B\u3064\u3044\u3066"
+      const { content, fixCount } = fixBoldAdjacentNonLatin(input)
+      expect(content).toBe(
+        "<strong>\u6982\u8981</strong>\u306B\u3064\u3044\u3066"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("does NOT match across line boundaries (regression)", () => {
+      // This was the bridges/index.md bug: closing ** on line 1 paired
+      // with opening ** on line 2 because [^*]+ crossed newlines
+      const input = [
+        "- **\uC2A4\uB9C8\uD2B8 \uACC4\uC57D \uC704\uD5D8 \u2014** \uC0AC\uC6A9\uC790 \uC790\uAE08",
+        "- **\uAE30\uC220\uC801 \uC704\uD5D8 \u2014** \uC18C\uD504\uD2B8\uC6E8\uC5B4 \uC624\uB958",
+      ].join("\n")
+      const { content, fixCount } = fixBoldAdjacentNonLatin(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("only converts second bold when first has space after", () => {
+      const input = "**first** text **second**\uAC00"
+      const { content, fixCount } = fixBoldAdjacentNonLatin(input)
+      expect(content).toBe("**first** text <strong>second</strong>\uAC00")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves **text**: pattern unchanged", () => {
+      const input =
+        "- **\uC2E0\uB8B0\uAC00 \uD544\uC694 \uC5C6\uC74C(Trustless)**: \uAE30\uBCF8 \uB3C4\uBA54\uC778\uACFC"
+      const { content, fixCount } = fixBoldAdjacentNonLatin(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("escapeTildeStrikethrough", () => {
+    test("escapes tilde used as range between text", () => {
+      const input = "100만~200만 이더"
+      const { content, fixCount } = escapeTildeStrikethrough(input)
+      expect(content).toBe("100만\\~200만 이더")
+      expect(fixCount).toBe(1)
+    })
+
+    test("escapes multiple tildes on the same line", () => {
+      const input = "100만~200만 이더가 ... 65,536~97,152명의 검증자"
+      const { content, fixCount } = escapeTildeStrikethrough(input)
+      expect(content).toBe(
+        "100만\\~200만 이더가 ... 65,536\\~97,152명의 검증자"
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves tildes in fenced code blocks", () => {
+      const input = "```\n100~200\n```"
+      const { content, fixCount } = escapeTildeStrikethrough(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves already-escaped tildes unchanged", () => {
+      const input = "100만\\~200만 이더"
+      const { content, fixCount } = escapeTildeStrikethrough(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves triple-tilde code fence markers unchanged", () => {
+      const input = "~~~\ncode\n~~~"
+      const { content, fixCount } = escapeTildeStrikethrough(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves tildes in frontmatter unchanged", () => {
+      const input = '---\ntitle: "2014년~현재"\n---\nBody text'
+      const { content, fixCount } = escapeTildeStrikethrough(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves tildes inside markdown link URLs unchanged", () => {
+      const input =
+        "- [\uD615\uC2DD \uAC80\uC99D (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)"
+      const { content, fixCount } = escapeTildeStrikethrough(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })

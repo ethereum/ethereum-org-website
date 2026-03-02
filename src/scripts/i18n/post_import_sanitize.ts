@@ -1917,6 +1917,88 @@ function fixInnerQuotesInJsxAttributes(content: string): {
 }
 
 /**
+ * Escape lone tildes used as range/approximate notation.
+ * In Korean (and other CJK), `100만~200만` uses ~ as "to/approximately",
+ * but remark-gfm treats paired ~text~ as strikethrough (<del>).
+ * Fix: escape as \~ to prevent strikethrough parsing.
+ * Skips frontmatter, fenced code blocks, and already-escaped tildes.
+ */
+function escapeTildeStrikethrough(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Skip frontmatter
+  let frontmatter = ""
+  let body = content
+  const fmMatch = content.match(/^---\n[\s\S]*?\n---\n/)
+  if (fmMatch) {
+    frontmatter = fmMatch[0]
+    body = content.slice(frontmatter.length)
+  }
+
+  // Split on fenced code blocks, inline code, AND markdown link URLs.
+  // The ](url) portion of links is skipped to avoid escaping tildes
+  // in URLs like https://example.com/~user/path
+  const skipPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`|\]\([^)]+\))/g
+  const parts = body.split(skipPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks and link URLs
+
+    // Match a lone ~ between non-whitespace, non-tilde chars
+    // that isn't already escaped with backslash
+    parts[i] = parts[i].replace(/([^\s~\\])~([^\s~])/g, (_, before, after) => {
+      fixCount++
+      return before + "\\~" + after
+    })
+  }
+
+  return { content: frontmatter + parts.join(""), fixCount }
+}
+
+/**
+ * Convert **bold**[non-Latin] to <strong>bold</strong>[non-Latin].
+ * MDX's emphasis parser requires a word boundary after closing **;
+ * without one, asterisks render literally. In Korean (and other CJK),
+ * postpositions (josa) must attach directly to the preceding word --
+ * inserting a space would break grammar. Using HTML <strong> tags
+ * sidesteps the parser limitation while preserving correct orthography.
+ */
+function fixBoldAdjacentNonLatin(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  // Match **bold text** immediately followed by a non-Latin char.
+  // Lookbehind ensures we only match OPENING ** (preceded by whitespace,
+  // opening punctuation, or start of line) -- prevents cross-boundary
+  // matches where a CLOSING ** on one line pairs with an OPENING ** on
+  // the next. [^*\n]+ prevents cross-line matching as extra safety.
+  // Unicode ranges: Hangul Syllables + Compat Jamo, CJK, Hiragana, Katakana.
+  // Ranges with combining marks (Hangul Jamo U+1100, Devanagari, Thai,
+  // Arabic) are excluded to satisfy no-misleading-character-class.
+  const boldFollowedByNonLatin =
+    /(?<=[\s([]|^)\*\*([^*\n]+)\*\*([\u3130-\u318F\uAC00-\uD7AF\u4E00-\u9FFF\u3040-\u309F\u30A0-\u30FF])/gm
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    parts[i] = parts[i].replace(boldFollowedByNonLatin, (_, inner, char) => {
+      fixCount++
+      return "<strong>" + inner + "</strong>" + char
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Warn about bare MDX-meaningful tags outside backticks.
  * Detects <tag> or </> patterns that should be inside inline code
  * but got exposed by Crowdin splitting backtick spans.
@@ -1965,22 +2047,27 @@ function removeOrphanedClosingTags(content: string): {
   let fixCount = 0
   const orphanTags = ["a", "span", "em", "strong", "b", "i", "u"]
 
-  // Split content to preserve code blocks (fenced and inline)
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  // Fenced-only split: inline backticks must NOT fragment the content
+  // because HTML tags like <em>...`code`...</em> legitimately span
+  // across inline code spans (idempotency bug #24).
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
   const parts = content.split(codeBlockPattern)
 
   for (let partIdx = 0; partIdx < parts.length; partIdx++) {
-    if (partIdx % 2 === 1) continue // Skip code blocks
+    if (partIdx % 2 === 1) continue // Skip fenced code blocks
 
     for (const tag of orphanTags) {
       const lines = parts[partIdx].split("\n")
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i]
+        // Strip inline code spans for counting only — tags inside
+        // backticks are literal text, not real HTML
+        const lineForCounting = line.replace(/`[^`]+`/g, "")
         const closeRe = new RegExp(`</${tag}>`, "g")
         const openRe = new RegExp(`<${tag}[\\s>]`, "g")
 
-        const closeCount = (line.match(closeRe) || []).length
-        const openCount = (line.match(openRe) || []).length
+        const closeCount = (lineForCounting.match(closeRe) || []).length
+        const openCount = (lineForCounting.match(openRe) || []).length
 
         // If there are more closing tags than opening tags on this line,
         // remove the excess closing tags (the trailing orphans)
@@ -2139,6 +2226,14 @@ function processMarkdownFile(
   applyFix(
     () => fixInnerQuotesInJsxAttributes(content),
     (n) => `Fixed ${n} unescaped inner quotes in JSX attributes`
+  )
+  applyFix(
+    () => escapeTildeStrikethrough(content),
+    (n) => `Escaped ${n} tildes to prevent strikethrough`
+  )
+  applyFix(
+    () => fixBoldAdjacentNonLatin(content),
+    (n) => `Converted ${n} **bold** to <strong> tags before non-Latin text`
   )
 
   // Warn about exposed MDX tags from broken backtick spans
@@ -2611,6 +2706,8 @@ export const _testOnly = {
   fixMissingClosingEmTag,
   fixImagePathDotSlash,
   fixInnerQuotesInJsxAttributes,
+  escapeTildeStrikethrough,
+  fixBoldAdjacentNonLatin,
   warnExposedMdxTags,
   warnCodeFenceContentDrift,
   warnCatastrophicCodeFenceDrift,
