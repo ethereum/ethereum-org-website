@@ -55,7 +55,7 @@ export default async function Page({ params }: { params: PageParams }) {
           <Shield className="mt-0.5 size-6 shrink-0 self-start" />
           <AlertContent>
             <AlertTitle className="text-body">
-              Ethereum is decentralized
+              Ethereum is not a company
             </AlertTitle>
             <AlertDescription className="text-sm">
               There is no company, support team, or help desk behind Ethereum.
