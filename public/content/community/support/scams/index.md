@@ -35,6 +35,7 @@ When you interact with a dapp or smart contract, you may have granted it permiss
 Use these tools to check and revoke approvals:
 
 - [Revoke.cash](https://revoke.cash/): connect your wallet to see all active approvals and revoke them
+- [Revokescout](https://revoke.blockscout.com/): check and revoke approvals via Blockscout
 - [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): check and revoke approvals via Etherscan
 
 <DocLink href="/guides/how-to-revoke-token-access/">
@@ -69,6 +70,7 @@ Reporting helps warn other users and may assist law enforcement investigations. 
 
 Understanding where your funds went can help with reports and may support recovery efforts if the funds land on a centralized exchange.
 
+- [Blockscout](https://eth.blockscout.com/): open-source block explorer to look up any transaction hash or wallet address to see where funds were sent
 - [Etherscan](https://etherscan.io/): look up any transaction hash or wallet address to see where funds were sent
 - [Chainabuse lookup](https://www.chainabuse.com/): check if an address has already been reported by other victims
 - [MetaSleuth](https://metasleuth.io/) by BlockSec: visual transaction tracing tool that maps fund flows
