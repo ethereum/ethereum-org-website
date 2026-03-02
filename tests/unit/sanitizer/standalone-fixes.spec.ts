@@ -34,6 +34,7 @@ const {
   fixInnerQuotesInJsxAttributes,
   escapeTildeStrikethrough,
   fixBoldAdjacentNonLatin,
+  fixItalicAdjacentNonLatin,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -1013,6 +1014,82 @@ test.describe("Standalone Fixes", () => {
       const { content, fixCount } = fixBoldAdjacentNonLatin(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixItalicAdjacentNonLatin", () => {
+    test("converts *text* to <em> when followed by Korean josa", () => {
+      const input =
+        "_G_\uAC00 \uC788\uC2B5\uB2C8\uB2E4. _G_\uB97C \uACF1\uD560 \uC218"
+      const { content, fixCount } = fixItalicAdjacentNonLatin(input)
+      expect(content).toBe(
+        "<em>G</em>\uAC00 \uC788\uC2B5\uB2C8\uB2E4. <em>G</em>\uB97C \uACF1\uD560 \uC218"
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("converts asterisk italic followed by Korean", () => {
+      const input =
+        "\uACF5\uC720 \uBE44\uBC00\uC778 *S*\uB77C\uACE0 \uD569\uB2C8\uB2E4"
+      const { content, fixCount } = fixItalicAdjacentNonLatin(input)
+      expect(content).toBe(
+        "\uACF5\uC720 \uBE44\uBC00\uC778 <em>S</em>\uB77C\uACE0 \uD569\uB2C8\uB2E4"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles italic with HTML sub tags inside", () => {
+      const input = "*P<sub>pub</sub>*\uB97C \uC0AC\uC6A9\uD558\uC5EC"
+      const { content, fixCount } = fixItalicAdjacentNonLatin(input)
+      expect(content).toBe(
+        "<em>P<sub>pub</sub></em>\uB97C \uC0AC\uC6A9\uD558\uC5EC"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves italic with space after unchanged", () => {
+      const input = "*some text* and more"
+      const { content, fixCount } = fixItalicAdjacentNonLatin(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves italic followed by ASCII punctuation unchanged", () => {
+      const input = "*text*, and _more_."
+      const { content, fixCount } = fixItalicAdjacentNonLatin(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not match ** bold markers", () => {
+      const input = "**\uD14D\uC2A4\uD2B8**\uAC00"
+      const { content, fixCount } = fixItalicAdjacentNonLatin(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input = "```\n_text_\uAC00\uB098\uB2E4\n```"
+      const { content, fixCount } = fixItalicAdjacentNonLatin(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does NOT match across line boundaries", () => {
+      const input = [
+        "- *\uC704\uD5D8 \u2014* \uC0AC\uC6A9\uC790",
+        "- *\uAE30\uC220\uC801 \uC704\uD5D8 \u2014* \uC18C\uD504\uD2B8\uC6E8\uC5B4",
+      ].join("\n")
+      const { content, fixCount } = fixItalicAdjacentNonLatin(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles CJK characters (Japanese)", () => {
+      const input = "*\u6982\u8981*\u306B\u3064\u3044\u3066"
+      const { content, fixCount } = fixItalicAdjacentNonLatin(input)
+      expect(content).toBe("<em>\u6982\u8981</em>\u306B\u3064\u3044\u3066")
+      expect(fixCount).toBe(1)
     })
   })
 

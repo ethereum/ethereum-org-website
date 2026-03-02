@@ -35,6 +35,7 @@
 | 24 | `removeOrphanedClosingTags` strips valid `</em>` | ko #17166 | `<em>`...`` `CHAINID` ``...`</em></li>` -- inline backtick split puts `<em>` and `</em>` in different segments, making `</em>` look orphaned; sanitizer is not idempotent | Critical -- regression breaks MDX compilation |
 | 25 | Tilde range notation triggers strikethrough | ko #17166 | `100만~200만 ... 65,536~97,152명` -- two `~` chars parsed as `<del>` by remark-gfm | High -- garbled rendering |
 | 26 | Bold markers not parsed when adjacent to non-Latin text | ko #17166 | `**단일 슬롯 최종 승인(SSF)**으로` -- MDX emphasis parser requires word boundary after closing `**`; fix converts ONLY non-Latin-adjacent cases to `<strong>` HTML tags to preserve josa attachment; lookbehind prevents cross-boundary matching between closing `**` on one line and opening `**` on the next | High -- asterisks render literally |
+| 27 | Italic markers not parsed when adjacent to non-Latin text | ko #17166 | `_G_가`, `*S*라고` -- same word-boundary issue as bold but for single `*` and `_` italic syntax; fix converts to `<em>` HTML tags; handles both asterisk and underscore variants | High -- asterisks/underscores render literally |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
@@ -71,6 +72,7 @@ These patterns are covered by existing fix functions and should have regression 
 - **Orphan tag idempotency** (`removeOrphanedClosingTags`) — fenced-only split + inline-stripped counting prevents false orphan detection when `<em>` spans inline code (ko PR #17166)
 - **Tilde strikethrough escape** (`escapeTildeStrikethrough`) — `100만~200만` → `100만\~200만` prevents remark-gfm `<del>` (ko PR #17166)
 - **Bold adjacent non-Latin** (`fixBoldAdjacentNonLatin`) — `**text**가` → `<strong>text</strong>가` converts ONLY non-Latin-adjacent cases to HTML tags; uses lookbehind to prevent cross-boundary matching (ko PR #17166)
+- **Italic adjacent non-Latin** (`fixItalicAdjacentNonLatin`) — `*text*가` / `_text_가` → `<em>text</em>가` mirrors bold fix for single `*` and `_` italic syntax (ko PR #17166)
 
 ## Recommendations for Future Sanitizer Iteration
 

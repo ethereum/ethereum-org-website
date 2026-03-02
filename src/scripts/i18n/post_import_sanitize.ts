@@ -1999,6 +1999,54 @@ function fixBoldAdjacentNonLatin(content: string): {
 }
 
 /**
+ * Convert *italic*[non-Latin] to <em>italic</em>[non-Latin].
+ * Same word-boundary issue as bold: MDX emphasis parser requires a word
+ * boundary after closing * or _. Handles both * and _ italic syntax.
+ * Lookbehind prevents cross-boundary matching. Does not match ** bold.
+ */
+function fixItalicAdjacentNonLatin(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  // Non-Latin char class (same as bold fix, no combining-mark ranges)
+  const NL =
+    "[\\u3130-\\u318F\\uAC00-\\uD7AF\\u4E00-\\u9FFF\\u3040-\\u309F\\u30A0-\\u30FF]"
+
+  // Asterisk italic: *text*[non-Latin]
+  // (?<!\*) ensures we don't match inside ** bold markers
+  const asteriskItalic = new RegExp(
+    "(?<=[\\s(\\[]|^)(?<!\\*)\\*([^*\\n]+)\\*(" + NL + ")",
+    "gm"
+  )
+
+  // Underscore italic: _text_[non-Latin]
+  const underscoreItalic = new RegExp(
+    "(?<=[\\s(\\[]|^)_([^_\\n]+)_(" + NL + ")",
+    "gm"
+  )
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    parts[i] = parts[i].replace(asteriskItalic, (_, inner, char) => {
+      fixCount++
+      return "<em>" + inner + "</em>" + char
+    })
+    parts[i] = parts[i].replace(underscoreItalic, (_, inner, char) => {
+      fixCount++
+      return "<em>" + inner + "</em>" + char
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Warn about bare MDX-meaningful tags outside backticks.
  * Detects <tag> or </> patterns that should be inside inline code
  * but got exposed by Crowdin splitting backtick spans.
@@ -2234,6 +2282,11 @@ function processMarkdownFile(
   applyFix(
     () => fixBoldAdjacentNonLatin(content),
     (n) => `Converted ${n} **bold** to <strong> tags before non-Latin text`
+  )
+
+  applyFix(
+    () => fixItalicAdjacentNonLatin(content),
+    (n) => `Converted ${n} *italic* to <em> tags before non-Latin text`
   )
 
   // Warn about exposed MDX tags from broken backtick spans
@@ -2708,6 +2761,7 @@ export const _testOnly = {
   fixInnerQuotesInJsxAttributes,
   escapeTildeStrikethrough,
   fixBoldAdjacentNonLatin,
+  fixItalicAdjacentNonLatin,
   warnExposedMdxTags,
   warnCodeFenceContentDrift,
   warnCatastrophicCodeFenceDrift,
