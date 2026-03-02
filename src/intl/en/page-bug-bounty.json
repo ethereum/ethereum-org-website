@@ -139,7 +139,7 @@
   "page-upgrades-bug-bounty-severity-high-title": "High severity",
   "page-upgrades-bug-bounty-severity-high-li-1": "Slash <strong>33%</strong> of validators",
   "page-upgrades-bug-bounty-severity-high-li-2": "Trivially cause network splits affecting <strong>33%</strong> of the network",
-  "page-upgrades-bug-bounty-severity-high-li-3": "Be able to bring down <strong>33%</strong> of the network by sending a single network packet or an onchain transaction",
+  "page-upgrades-bug-bounty-severity-high-li-3": "Be able to bring down <strong>33%</strong> of the network by sending a single onchain transaction",
   "page-upgrades-bug-bounty-severity-critical-title": "Critical severity",
   "page-upgrades-bug-bounty-severity-critical-li-1": "Slash <strong>50%</strong> of validators",
   "page-upgrades-bug-bounty-severity-critical-li-2": "Exploit an EIP/specification or client bug to easily <strong>create an infinite amount of ETH</strong> which is finalized by the network",
