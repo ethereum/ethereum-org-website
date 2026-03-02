@@ -9,71 +9,35 @@ const GITHUB_API_BASE =
 const BATCH_SIZE = 20 // Concurrent requests per batch
 const BATCH_DELAY_MS = 50 // Small delay between batches to avoid rate limiting
 
-// App pages that display contributors (must match the pagePath argument
-// passed to getAppPageContributorInfo() in each page.tsx file).
-// Dynamic routes expand to their known static values.
-const APP_PAGE_PATHS = [
-  "10years",
-  "apps",
-  "apps/[application]",
-  "apps/categories/[catetgoryName]",
-  "assets",
-  "bug-bounty",
-  "collectibles",
-  "community",
-  "community/events",
-  "contributing/translation-program/acknowledgements",
-  "contributing/translation-program/contributors",
-  "contributing/translation-program/translatathon/leaderboard",
-  "developers",
-  "developers/tools",
-  // developers/tools/[category] — each category slug passed dynamically
-  "developers/tools/interoperability",
-  "developers/tools/transactions",
-  "developers/tools/analytics",
-  "developers/tools/education",
-  "developers/tools/sdks",
-  "developers/tools/contracts",
-  "developers/tools/security",
-  "developers/tutorials",
-  "ethereum-history-founder-and-ownership",
-  "ethereum-vs-bitcoin",
-  "founders",
-  "gas",
-  "get-eth",
-  "layer-2",
-  "layer-2/learn",
-  "layer-2/networks",
-  "learn",
-  "quizzes",
-  "resources",
-  "roadmap",
-  "roadmap/vision",
-  "run-a-node",
-  "stablecoins",
-  "staking",
-  "start",
-  "trillion-dollar-security",
-  "wallets",
-  "wallets/find-wallet",
-  "what-is-ether",
-  "what-is-ethereum",
-  "what-is-the-ethereum-network",
-]
+const APP_PAGES_PREFIX = "app/[locale]/"
 
 /**
  * Generate all historical paths for an app page.
- * Mirrors getAllHistoricalPaths() in contributors.ts
+ * Used to aggregate git history across directory structure migrations.
+ *
+ * For app router paths, also includes underscore-prefixed variants of each
+ * segment (e.g., roadmap/vision → roadmap/_vision) since Next.js private
+ * folders use the _ prefix but represent the same page.
  */
 function getAllHistoricalPaths(pagePath: string): string[] {
-  return [
+  const paths = [
     `src/pages/${pagePath}.tsx`,
     `src/pages/${pagePath}/index.tsx`,
     `src/pages/[locale]/${pagePath}.tsx`,
     `src/pages/[locale]/${pagePath}/index.tsx`,
-    `app/[locale]/${pagePath}/page.tsx`,
-    `app/[locale]/${pagePath}/_components/${pagePath}.tsx`,
+    `${APP_PAGES_PREFIX}${pagePath}/page.tsx`,
+    `${APP_PAGES_PREFIX}${pagePath}/_components/${pagePath}.tsx`,
   ]
+
+  // Add underscore-prefixed variants for each segment
+  const segments = pagePath.split("/")
+  for (let i = 0; i < segments.length; i++) {
+    const variant = [...segments]
+    variant[i] = `_${variant[i]}`
+    paths.push(`${APP_PAGES_PREFIX}${variant.join("/")}/page.tsx`)
+  }
+
+  return paths
 }
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
@@ -204,10 +168,13 @@ interface GitTreeItem {
 }
 
 /**
- * List all content file slugs using GitHub Git Trees API.
- * Gets entire repo tree in ONE API call instead of walking directories.
+ * Fetch the full repo tree in ONE API call.
+ * Returns both content slugs and app page paths discovered from the tree.
  */
-async function listContentSlugs(token: string): Promise<string[]> {
+async function discoverPathsFromTree(token: string): Promise<{
+  contentSlugs: string[]
+  appPagePaths: string[]
+}> {
   const url = `${GITHUB_API_BASE}/git/trees/master?recursive=1`
 
   const response = await fetch(url, {
@@ -224,26 +191,50 @@ async function listContentSlugs(token: string): Promise<string[]> {
   const data = await response.json()
   const tree: GitTreeItem[] = data.tree
 
-  // Filter for index.md files in public/content/, excluding translations
-  const slugs: string[] = []
+  const contentSlugs: string[] = []
+  const appPagePaths: string[] = []
+
   const contentPrefix = `${CONTENT_DIR}/`
   const translationsSegment = "/translations/"
 
   for (const item of tree) {
+    if (item.type !== "blob") continue
+
+    // Content files: public/content/{slug}/index.md (excluding translations)
     if (
-      item.type === "blob" &&
       item.path.startsWith(contentPrefix) &&
       item.path.endsWith("/index.md") &&
       !item.path.includes(translationsSegment)
     ) {
-      // Extract slug from path: public/content/{slug}/index.md -> {slug}
       const relativePath = item.path.slice(contentPrefix.length)
       const slug = relativePath.replace(/\/index\.md$/, "")
-      slugs.push(slug)
+      contentSlugs.push(slug)
+    }
+
+    // App pages: app/[locale]/{pagePath}/page.tsx
+    // Strip the prefix and /page.tsx suffix to get the pagePath key.
+    // Next.js private folders (prefixed with _) are excluded from routing,
+    // so strip leading underscores from segments to match the route key
+    // that page components pass to getAppPageContributorInfo().
+    if (
+      item.path.startsWith(APP_PAGES_PREFIX) &&
+      item.path.endsWith("/page.tsx")
+    ) {
+      const pagePath = item.path
+        .slice(APP_PAGES_PREFIX.length)
+        .replace(/\/page\.tsx$/, "")
+
+      // Normalize private folder prefixes: _vision → vision
+      const normalized = pagePath
+        .split("/")
+        .map((seg) => (seg.startsWith("_") ? seg.slice(1) : seg))
+        .join("/")
+
+      appPagePaths.push(normalized)
     }
   }
 
-  return slugs
+  return { contentSlugs, appPagePaths }
 }
 
 /**
@@ -271,11 +262,11 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
     generatedAt: new Date().toISOString(),
   }
 
-  // 1. Fetch content file contributors
-  console.log("Listing content files using git/trees API...")
-  const contentSlugs = await listContentSlugs(token)
+  // 1. Discover all paths from repo tree (single API call)
+  console.log("Discovering paths from git/trees API...")
+  const { contentSlugs, appPagePaths } = await discoverPathsFromTree(token)
   console.log(
-    `Found ${contentSlugs.length} content slugs in ${Date.now() - startTime}ms`
+    `Found ${contentSlugs.length} content slugs and ${appPagePaths.length} app pages in ${Date.now() - startTime}ms`
   )
 
   // Prepare all paths to fetch (current + legacy for each slug)
@@ -314,12 +305,12 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
 
   // 2. Fetch app page contributors
   console.log(
-    `Fetching contributors for ${APP_PAGE_PATHS.length} app pages (parallel batches of ${BATCH_SIZE})...`
+    `Fetching contributors for ${appPagePaths.length} app pages (parallel batches of ${BATCH_SIZE})...`
   )
   const appPagesStartTime = Date.now()
 
   // Prepare all paths for each app page
-  const appPagePathPairs = APP_PAGE_PATHS.map((pagePath) => ({
+  const appPagePathPairs = appPagePaths.map((pagePath) => ({
     pagePath,
     paths: getAllHistoricalPaths(pagePath),
   }))
