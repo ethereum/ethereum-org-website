@@ -55,7 +55,7 @@ Looking for "official Ethereum support" is similar to looking for "official inte
 
 Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
 
-Since Ethereum is publicly transparent by default, you may also find **block explorers** and other **freely available online tools** useful in investigating a problem directly.
+Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
 
 That said, no one from Ethereum or ethereum.org will ever:
 
