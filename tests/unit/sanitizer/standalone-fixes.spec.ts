@@ -74,8 +74,7 @@ test.describe("Standalone Fixes", () => {
     })
 
     test("fixes multiple broken links in one string", () => {
-      const input =
-        "See [link1] (url1) and [link2]  (url2) for more."
+      const input = "See [link1] (url1) and [link2]  (url2) for more."
       const { content, fixCount } = fixBrokenMarkdownLinks(input)
       expect(content).toBe("See [link1](url1) and [link2](url2) for more.")
       expect(fixCount).toBe(2)
@@ -112,10 +111,9 @@ test.describe("Standalone Fixes", () => {
     })
 
     test("fixes prose but skips table in mixed content", () => {
-      const input = [
-        "\\*\\*bold\\*\\* prose",
-        "| 2\\*\\*256 | value |",
-      ].join("\n")
+      const input = ["\\*\\*bold\\*\\* prose", "| 2\\*\\*256 | value |"].join(
+        "\n"
+      )
       const { content, fixCount } = fixEscapedBoldAndItalic(input)
       expect(content).toContain("**bold** prose")
       expect(content).toContain("| 2\\*\\*256 | value |")
@@ -207,6 +205,23 @@ test.describe("Standalone Fixes", () => {
 
     test("does not double-escape already escaped content", () => {
       const input = "Requires &lt;5GB of space"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not escape < that is already backslash-escaped", () => {
+      // English uses \<1 GB to escape < in MDX prose.
+      // The sanitizer must NOT convert \<1 to \&lt;1 (double-escape).
+      const input =
+        "Accessible to resource-constrained devices (\\<1 GB RAM, \\<100 MB disk space, 1 CPU)"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not escape backslash-escaped < before single digit", () => {
+      const input = "do the same in \\<10 minutes"
       const { content, fixCount } = escapeMdxAngleBrackets(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -320,7 +335,7 @@ test.describe("Standalone Fixes", () => {
 
   test.describe("quoteFrontmatterNonAscii", () => {
     test("quotes values with non-ASCII characters", () => {
-      const input = '---\ntitle: \u00DCber Ethereum\n---\nContent'
+      const input = "---\ntitle: \u00DCber Ethereum\n---\nContent"
       const { content, fixCount } = quoteFrontmatterNonAscii(input)
       expect(content).toContain('title: "\u00DCber Ethereum"')
       expect(fixCount).toBe(1)
@@ -364,9 +379,7 @@ test.describe("Standalone Fixes", () => {
 
   test.describe("Utility functions", () => {
     test("toAsciiId normalizes accented characters", () => {
-      expect(toAsciiId("qu-est-ce-qu-ethereum")).toBe(
-        "qu-est-ce-qu-ethereum"
-      )
+      expect(toAsciiId("qu-est-ce-qu-ethereum")).toBe("qu-est-ce-qu-ethereum")
       expect(toAsciiId("\u00FCber-ethereum")).toBe("uber-ethereum")
     })
 
@@ -411,8 +424,7 @@ test.describe("Standalone Fixes", () => {
 
   test.describe("fixBackslashBeforeClosingTag", () => {
     test("fixes backslash before </strong>", () => {
-      const input =
-        '<p className="mt-0"><strong>Bon à savoir\\</strong></p>'
+      const input = '<p className="mt-0"><strong>Bon à savoir\\</strong></p>'
       const { content, fixCount } = fixBackslashBeforeClosingTag(input)
       expect(content).toBe(
         '<p className="mt-0"><strong>Bon à savoir</strong></p>'
@@ -435,12 +447,9 @@ test.describe("Standalone Fixes", () => {
     })
 
     test("fixes multiple occurrences", () => {
-      const input =
-        "<strong>text1\\</strong> and <strong>text2\\</strong>"
+      const input = "<strong>text1\\</strong> and <strong>text2\\</strong>"
       const { content, fixCount } = fixBackslashBeforeClosingTag(input)
-      expect(content).toBe(
-        "<strong>text1</strong> and <strong>text2</strong>"
-      )
+      expect(content).toBe("<strong>text1</strong> and <strong>text2</strong>")
       expect(fixCount).toBe(2)
     })
 
@@ -452,8 +461,7 @@ test.describe("Standalone Fixes", () => {
     })
 
     test("skips code blocks", () => {
-      const input =
-        "```\n<strong>text\\</strong>\n```"
+      const input = "```\n<strong>text\\</strong>\n```"
       const { content, fixCount } = fixBackslashBeforeClosingTag(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -470,22 +478,16 @@ test.describe("Standalone Fixes", () => {
 
   test.describe("escapeMdxAngleBrackets — extended patterns", () => {
     test("escapes bare < before word containing [", () => {
-      const input =
-        "| calldataload(4)<Stockage[4] calldataload(4) |"
+      const input = "| calldataload(4)<Stockage[4] calldataload(4) |"
       const { content, fixCount } = escapeMdxAngleBrackets(input)
-      expect(content).toBe(
-        "| calldataload(4)\\<Stockage[4] calldataload(4) |"
-      )
+      expect(content).toBe("| calldataload(4)\\<Stockage[4] calldataload(4) |")
       expect(fixCount).toBe(1)
     })
 
     test("escapes multiple bare < before word[ patterns", () => {
-      const input =
-        "| <Stockage[4] foo | bar <Storage[2] baz |"
+      const input = "| <Stockage[4] foo | bar <Storage[2] baz |"
       const { content, fixCount } = escapeMdxAngleBrackets(input)
-      expect(content).toBe(
-        "| \\<Stockage[4] foo | bar \\<Storage[2] baz |"
-      )
+      expect(content).toBe("| \\<Stockage[4] foo | bar \\<Storage[2] baz |")
       expect(fixCount).toBe(2)
     })
 
@@ -504,7 +506,7 @@ test.describe("Standalone Fixes", () => {
     })
 
     test("does not escape valid MDX component tags", () => {
-      const input = "<Card title=\"test\" />"
+      const input = '<Card title="test" />'
       const { content, fixCount } = escapeMdxAngleBrackets(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
