@@ -86,33 +86,32 @@ Sentry.init({
     })
     return isExtensionScript ? null : event
   },
-  // Normalize transaction names for parameterized routes to enable per-page analysis
-  // Sentry uses formats like "/:locale/:slug*" for catch-all routes
+  // Normalize transaction names to strip locale prefixes so all locales
+  // group under one page (e.g., "/en/staking/", "/ko/staking/" → "/staking/")
   beforeSendTransaction(event) {
     const op = event.contexts?.trace?.op
-    const transaction = event.transaction
+    if (op !== "pageload" && op !== "navigation") return event
 
-    // Matches patterns like ":locale", ":slug*", ":id", ":post", etc.
-    const isParameterizedRoute = transaction && /:\w+/.test(transaction)
-    const isPageTransaction = op === "pageload" || op === "navigation"
+    const localePrefix = /^\/[a-z]{2,3}(-[a-z]{2})?(?=\/|$)/
 
-    if (isParameterizedRoute && isPageTransaction) {
-      const url = event.request?.url || (event.tags?.url as string | undefined)
-      if (url) {
-        try {
-          const pathname = new URL(url).pathname
-          // Remove locale prefix (e.g., "/en/", "/fil/", "/zh-tw/", "/pt-br/"), keeping just the page path
-          // e.g., "/en/developers/docs" -> "/developers/docs"
-          // Only match complete path segments (must be followed by "/" or end of string)
-          const normalizedPath = pathname.replace(
-            /^\/[a-z]{2,3}(-[a-z]{2})?(?=\/|$)/,
-            ""
-          )
-          event.transaction = normalizedPath || "/"
-        } catch {
-          // Keep original transaction name if URL parsing fails
-        }
+    // Try to resolve from the actual URL first (most reliable)
+    const url = event.request?.url || (event.tags?.url as string | undefined)
+    if (url) {
+      try {
+        const pathname = new URL(url).pathname
+        event.transaction = pathname.replace(localePrefix, "") || "/"
+        return event
+      } catch {
+        // Fall through to transaction name normalization
       }
+    }
+
+    // Fallback: normalize the transaction name directly
+    // Handles parameterized names like "/:locale/:slug*" → "/:slug*"
+    if (event.transaction) {
+      event.transaction =
+        event.transaction.replace(localePrefix, "").replace(/^\/:locale/, "") ||
+        "/"
     }
     return event
   },
