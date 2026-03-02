@@ -27,7 +27,7 @@ This means:
 - **No one can recover funds** you sent to the wrong address
 - **No one can reverse** a transaction after it is confirmed
 - **No one can freeze** your wallet or block your transactions
-- **No one can reset** your password if you lose your seed phrase
+- **No one can reset your password** if you lose your seed phrase
 
 This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
 
