@@ -52,18 +52,38 @@ Sentry.init({
     /on proxy: trap returned falsish/i,
     /Cannot set property ethereum of #<Window>/,
     /Cannot set property isMetaMask of #<.+> which has only a getter/,
-    // Extension messaging errors
+    // Extension messaging errors (ETHORG-7E)
     /Could not establish connection\. Receiving end does not exist/,
     /Attempting to use a disconnected port object/,
-    // Resource loading errors - network/ad blocker issues, not actionable (ETHORG-A8)
+    /Invalid call to runtime\.sendMessage\(\)/,
+    // Resource loading errors - network/ad blocker issues, not actionable (ETHORG-A8, ETHORG-8N)
     /Event `Event` \(type=error\) captured as promise rejection/,
+    /NetworkError when attempting to fetch resource/,
     // WebView circular reference serialization failures - wallet app injections (ETHORG-72)
     /JSON\.stringify cannot serialize cyclic structures/,
+    // Extension IPC / DApp bridge errors (ETHORG-FN, ETHORG-AT)
+    /Object Not Found Matching Id:\d+/,
+    /DApp request timeout/,
+    // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
+    /^Error: invalid origin$/,
+    // Injected scripts from WebViews, adware, and OEM bloatware (ETHORG-14R, ETHORG-13N, ETHORG-JK, ETHORG-14B)
+    /LIDNotify is not defined/,
+    /tgetT is not defined/,
+    /zaloJSV2 is not defined/,
+    /onPagePause is not defined/,
   ],
 
   beforeSend(event) {
+    // Filter wallet extension JSON-RPC errors that have no stacktrace (ETHORG-7Q)
+    const values = event.exception?.values ?? []
+    const hasNoStacktrace = values.every((v) => !v.stacktrace?.frames?.length)
+    if (hasNoStacktrace) {
+      const message = values[0]?.value ?? ""
+      if (/Internal JSON-RPC error/i.test(message)) return null
+    }
+
     // Filter extension injection script errors not caught by denyUrls
-    const frames = event.exception?.values?.[0]?.stacktrace?.frames ?? []
+    const frames = values.flatMap((v) => v.stacktrace?.frames ?? [])
     const isExtensionScript = frames.some((f) => {
       const filename = f.filename || ""
       const absPath = f.abs_path || ""
