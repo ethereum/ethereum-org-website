@@ -33,6 +33,7 @@ Sentry.init({
   debug: environment === "development",
   environment,
   enabled: environment === "production",
+  initialScope: { tags: { module: "app" } },
 
   // Filter errors from browser extensions and third-party scripts
   denyUrls: [
