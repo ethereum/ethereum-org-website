@@ -11,6 +11,7 @@ import {
   Alert,
   AlertContent,
   AlertDescription,
+  AlertIcon,
   AlertTitle,
 } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -54,7 +55,9 @@ export default async function Page({ params }: { params: PageParams }) {
       <MainArticle className="space-y-16 px-4 py-16 md:px-10 md:py-20">
         {/* Decentralization alert */}
         <Alert className="max-w-3xl text-body-medium">
-          <Shield className="mt-0.5 size-6 shrink-0 self-start" />
+          <AlertIcon>
+            <Shield />
+          </AlertIcon>
           <AlertContent>
             <AlertTitle className="text-body">
               Ethereum is not a company
