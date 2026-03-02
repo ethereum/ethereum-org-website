@@ -1,10 +1,10 @@
 ---
-title: Çeviri Programı sıkça sorulan sorular (SSS)
+title: "Çeviri Programı sıkça sorulan sorular (SSS)"
 lang: tr
-description: Ethereum.org Çeviri Programı hakkında sık sorulan sorular
+description: "Ethereum.org Çeviri Programı hakkında sık sorulan sorular"
 ---
 
-# Ethereum.org çeviri rehberi {#translating-ethereum-guide}
+# ethereum.org çeviri kılavuzu {#translating-ethereum-guide}
 
 Çeviri Programında yeniyseniz ve başlamakta tereddüt ediyorsanız, başlamanıza yardımcı olabilecek bazı SSS'ler burada bulunuyor. En yaygın soruların cevaplarını bulmak için bu rehberi kullanın.
 
@@ -18,20 +18,20 @@ Ethereum.org Çeviri Programı, bunun bir uzantısıdır ve benzer bir felsefe g
 
 Bu nedenle Çeviri Programı açık ve gönüllü olup katılım ücrete tabi değildir. Çevirmenlere çevirdikleri kelime sayısı kadar ücret verseydik, sadece yeterli çeviri tecrübesi olanları (profesyonel çevirmenleri) Çeviri Programına davet edebilirdik. Bu, Çeviri Programını dışlayıcı hâle getirir ve belirtilen hedeflere, özellikle de herkesin katılmasına ve ekosisteme dahil olmasına izin vermemize engel olacaktır.
 
-Katkıda bulunanların Ethereum ekosisteminde başarılı olmalarını sağlamak için her türlü çabayı gösteriyoruz; [POAP'ler sunmak](/contributing/translation-program/acknowledgements/#poap), [çevirmen sertifikası](/contributing/translation-program/acknowledgements/#certificate) ve ayrıca [Çeviri Lider Tabloları](/contributing/translation-program/acknowledgements/) ve [sitede tüm çevirmenlerimizin listelenmesi](/contributing/translation-program/contributors/) gibi pek çok parasal olmayan teşvik mevcuttur.
+Katkıda bulunanlarımızın Ethereum ekosisteminde başarılı olmasını sağlamak için her türlü çabayı gösteriyoruz; [POAP'ler sunma](/contributing/translation-program/acknowledgements/#poap) ve [çevirmen sertifikası](/contributing/translation-program/acknowledgements/#certificate) gibi parasal olmayan birçok teşvikin yanı sıra, [Çeviri Lider Tablolarını](/contributing/translation-program/acknowledgements/) düzenliyor ve [sitede tüm çevirmenlerimizi listeliyoruz](/contributing/translation-program/contributors/).
 
-## `<HTML tags>` bulunan dizgileri nasıl çevirebilirim? {#tags}
+## `<HTML etiketleri>` içeren dizeleri nasıl çevirebilirim? {#tags}
 
-Her dizgi saf yazı biçiminde yazılmamıştır. HTML etiketleri gibi farklı karakterler bulunduran dizgiler mevcuttur (`<0>`, `</0>`). Bu, genelde hyperlink veya cümle ortasında alternatif stil yaratmak için kullanılır.
+Her dizgi saf yazı biçiminde yazılmamıştır. HTML etiketleri (`<0>`, `</0>`) gibi karışık komut dosyaları içeren bazı dizeler vardır. Bu genellikle bir cümlenin ortasındaki köprüler veya alternatif biçimlendirme içindir.
 
-- Etiketlerin içindeki yazıları çevirin, fakat etiketleri çevirmeyin. `<` ve `>` işaretleri içerisindeki hiçbir şey çevrilmemeli ya da silinmemelidir.
+- Etiketlerin içindeki yazıları çevirin, fakat etiketleri çevirmeyin. `<` ve `>` içindeki hiçbir şey çevrilmemeli veya kaldırılmamalıdır.
 - Dizgiyi güvende tutmak için sol alttaki "Copy Source" (Kaynağı Kopyala) düğmesine basmanızı öneririz. Bu, orijinal dizgiyi kopyalayıp metin kutusuna yapıştırır. Bui etiketlerin nerede olduğunu anlamayı sağlar ve hata yapmamaya yardımcı olur.
 
-![Kaynağı kopyala düğmesinin vurgulandığı bir Crowdin ara yüzü](./html-tag-strings.png)
+![Kaynağı kopyala düğmesinin vurgulandığı bir Crowdin arayüzü](./html-tag-strings.png)
 
 Dilinizde daha doğal olması için dizgideki etiketlerin yerlerini değiştirebilirsiniz: Sadece etiketin tamamının yerini değiştirdiğinize emin olun.
 
-Etiketler ve kod parçacıklarıyla ilgili daha ayrıntılı bilgi için lütfen [ethereum.org Çeviri Stili Rehberine](/contributing/translation-program/translators-guide/#dealing-with-tags) bakın.
+Etiketler ve kod parçacıklarıyla ilgili daha ayrıntılı bilgi için lütfen [ethereum.org Çeviri Stil Kılavuzuna](/contributing/translation-program/translators-guide/#dealing-with-tags) bakın.
 
 ## Dizgiler nerede yaşar? {#strings}
 
@@ -40,7 +40,7 @@ Bazen kaynak dizgileri doğru bir çeviri sağlamanız için yeterli olmayabilir
 - Daha fazla bilgi için "ekran fotoğrafları"na ve "bağlam"a bakabilirsiniz. Kaynak dizgi kısmında size metini nasıl kullandığımızı gösteren bir ekran fotoğrafı göreceksiniz.
 - Eğer hâlâ emin değilseniz, "yorum kısmı"nda işaret koyabilirsiniz. [Nasıl yorum bırakacağınızı bilmiyor musunuz?](#comment)
 
-![Bir ekran görüntüsü ile bir dizginin bağlamının nasıl sağlanabileceğinin gösterimi](./source-string.png)
+![Bir ekran görüntüsü ile bir dizenin bağlamının nasıl sağlanabileceğinin gösterimi](./source-string.png)
 
 ![Bağlam için eklenmiş örnek bir ekran görüntüsü](./source-string-2.png)
 
@@ -56,7 +56,7 @@ Dikkat gerektiren özel bir dizgiyi işaretlemek istiyorsanız, yorum yapmaktan 
 
 ## Çeviri Belleği (ÇB) nedir? {#translation-memory}
 
-Çeviri Belleği (ÇB), Crowdin'in önceden çevrilmiş tüm dizgileri [ethereum.org](https://ethereum.org/) üzerinde depolayan bir özelliğidir. Bir dizgi çevirildiğinde, otomatik olarak proje ÇB'mize kaydedilir. Bu, zaman kazanmanıza yardımcı olacak yararlı bir araç olabilir!
+Çeviri Belleği (ÇB), Crowdin'in önceden çevrilmiş tüm dizgileri ethereum.org üzerinde depolayan bir özelliğidir. Bir dizgi çevirildiğinde, otomatik olarak proje ÇB'mize kaydedilir. Bu, zaman kazanmanıza yardımcı olacak yararlı bir araç olabilir!
 
 - "ÇB ve MÇ Önerileri" kısmına bakarak diğer çevirmenlerin aynı veya benzer bir dizgiyi nasıl çevirdiğini görebilirsiniz. Yüksek eşleşme oranı olan bir öneri bulursanız, tıklayarak çeviriden yararlanmaktan çekinmeyin.
 - Listede herhangi bir şey yoksa, önceden yapılmış çeviriler için ÇB'yi arayabilir ve tutarlılık için bu çevirileri yeniden kullanabilirsiniz.
@@ -75,11 +75,11 @@ Crowdin sözlüğü, terim ve anlamların açıklanması için en iyi yerdir. S�
 
 - İkinci olarak, eğer size tanıdık gelmeyen ve altı çizili olmayan bir terim görürseniz, terimler sekmesinde (sağdaki sütunun üçüncü butonu) arattırabilirsiniz. Spesifik terimlerin açıklamalarını ve projede geçmişte kullanılmış olanları bulacaksınız.
 
-![Crowdin'de terimler sekmesinin nerede bulunacağını gösteren bir ekran görüntüsü](./glossary-tab.png)
+![Crowdin'de sözlük sekmesinin nerede bulunacağını gösteren bir ekran görüntüsü](./glossary-tab.png)
 
 - Eğer hâlâ bulamıyorsanız, yeni bir terim ekleme şansınız var! Bir arama motorunda aramanızı ve açıklamasını sözlüğe eklemenizi öneririz. Çevirmenlerimizin terimi daha iyi anlaması için büyük yardımda bulunmuş olursunuz.
 
-![Crowdin'e bir sözlük teriminin nasıl ekleneceğini gösteren ekran görüntüsü](./add-glossary-term.png)
+![Crowdin'e bir sözlük teriminin nasıl ekleneceğini gösteren bir ekran görüntüsü](./add-glossary-term.png)
 
 ### Terminoloji çeviri politikası {#terminology}
 
@@ -93,7 +93,7 @@ Dikkatli bir değerlendirmenin sonucunda en sık kullanılan terminolojiyi siz �
 
 Size tanıdık olmayan bir kelimeyle karşılaştığınızda yapmanızı önerdiklerimiz:
 
-- [Terimler sözlüğüne](#glossary) başvurun, diğer çevirmenlerin bu terimi daha önce nasıl çevirdiklerini bulabilirsiniz. Eğer terimin önceki çevirisinin alakasız olduğunu düşünüyorsanız, Crowdin sözlüğüne yeni terim ekleyerek çevirinizi onarmakta özgürsünüz.
+- [Terimler Sözlüğü'ne](#glossary) başvurun, diğer çevirmenlerin bu terimi daha önce nasıl çevirdiklerini bulabilirsiniz. Eğer terimin önceki çevirisinin alakasız olduğunu düşünüyorsanız, Crowdin sözlüğüne yeni terim ekleyerek çevirinizi onarmakta özgürsünüz.
 - Eğer böyle bir çeviri hâlihazırda sözlükte yoksa sizi topluluğumuz tarafından aslında nasıl kullanıldığını gösteren bir arama motoru araması veya medya makalesinde aramaya teşvik ediyoruz.
 - Eğer hiç referans bulamadıysanız kendi sezginize güvenmekte ve yeni bir çeviri önermekte özgürsünüz!
 - Eğer bunu yapmaktan emin değilseniz, terimi çevirmeden bırakın. Bazen, İngilizce terimler doğru tanımı iletmek için fazlasıyla yeterli.
@@ -102,18 +102,18 @@ Size tanıdık olmayan bir kelimeyle karşılaştığınızda yapmanızı önerd
 
 ## İnceleme süreci nasıl işliyor? {#review-process}
 
-Çevirilerimizde belirli bir kalite ve tutarlılık düzeyi sağlamak için, dünyanın en büyük dil hizmeti sağlayıcılarından biri olan [Acolad](https://www.acolad.com/) ile çalışıyoruz. Acolad'in 20.000 profesyonel dil uzmanı vardır, bu da ihtiyaç duyduğumuz her dil ve içerik türü için profesyonel inceleyiciler sağlayabilecekleri anlamına gelir.
+Çevirilerimizde belirli bir kalite ve tutarlılık düzeyi sağlamak için, küresel olarak en büyük dil hizmeti sağlayıcılarından biri olan [Acolad](https://www.acolad.com/) ile çalışıyoruz. Acolad'in 20.000 profesyonel dil uzmanı vardır, bu da ihtiyaç duyduğumuz her dil ve içerik türü için profesyonel inceleyiciler sağlayabilecekleri anlamına gelir.
 
-İnceleme süreci basittir; belirli bir [içerik grubu](/contributing/translation-program/content-buckets) %100 çevrildiğinde, o içerik grubu için bir inceleme siparişi veririz. İnceleme süreci doğrudan Crowdin'de gerçekleşir. İnceleme tamamlandıktan sonra, web sitesini çevrilmiş içerikle güncelleriz.
+Gözden geçirme süreci basittir; bir dizi içerik %100 çevrildiğinde, o içerik grubu için bir gözden geçirme siparişi veririz. İnceleme süreci doğrudan Crowdin'de gerçekleşir. İnceleme tamamlandıktan sonra, web sitesini çevrilmiş içerikle güncelleriz.
 
 ## Kendi dilimde nasıl içerik eklerim? {#adding-foreign-language-content}
 
 Şu anda, İngilizce olmayan tüm içerik doğrudan İngilizce kaynak içerikten çevrilmektedir ve İngilizce'de olmayan herhangi bir içerik başka dillere eklenemez.
 
-Ethereum.org için yeni içerik önermek için GitHub'da [konu açabilirsiniz](https://github.com/ethereum/ethereum-org-website/issues). Eklenmesi hâlinde içerik İngilizce yazılacak ve Crowdin kullanılarak diğer dillere çevrilecektir.
+ethereum.org için yeni içerik önermek isterseniz, GitHub'da [bir konu oluşturabilirsiniz](https://github.com/ethereum/ethereum-org-website/issues). Eklenmesi hâlinde içerik İngilizce yazılacak ve Crowdin kullanılarak diğer dillere çevrilecektir.
 
 Yakın gelecekte İngilizce olmayan içerik eklenmesi için destek eklemeyi planlıyoruz.
 
 ## İletişime geçin {#contact}
 
-Bunların hepsini okuduğunuz için teşekkürler. Umarız bu, programımıza katılmamıza yardımcı olmuştur. Soru sormak ve diğer çevirmenlerle işbirliği yapmak için [Discord translation channel](https://discord.gg/ethereum-org)'a katılmaktan çekinmeyin veya translations@ethereum.org adresinden bize ulaşın!
+Bunların hepsini okuduğunuz için teşekkürler. Umarız bu, programımıza katılmamıza yardımcı olmuştur. Soru sormak ve diğer çevirmenlerle işbirliği yapmak için [Discord çeviri kanalımıza](https://discord.gg/ethereum-org) katılmaktan çekinmeyin veya bize translations@ethereum.org adresinden ulaşın!

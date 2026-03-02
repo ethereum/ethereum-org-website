@@ -64,7 +64,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # 雜湊值應輸出： fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-請注意，Rock 5B 和 Odroid M1 開發板的映像檔可在 Ethereum-on-Arm 的 [下載頁面](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) 取得。
+請注意，Rock 5B 和 Odroid M1 開發板的映像檔可在 Ethereum-on-Arm 的 [下載頁面](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) 取得。
 
 ## 刷入 MicroSD {#flashing-the-microsd}
 
@@ -158,7 +158,7 @@ sudo systemctl start lighthouse-validator
 
 ## 更多詳細資訊 {#more-details}
 
-本頁面概述了如何使用 Raspberry Pi 設定 Geth-Lighthouse 節點和驗證程式。 更詳細的說明可在 [Ethereum-on-Arm 網站](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html) 上取得。
+本頁面概述了如何使用 Raspberry Pi 設定 Geth-Lighthouse 節點和驗證程式。 更詳細的說明可在 [Ethereum-on-Arm 網站](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) 上取得。
 
 ## 感謝您的回饋 {#feedback-appreciated}
 
@@ -177,7 +177,7 @@ sudo systemctl start lighthouse-validator
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

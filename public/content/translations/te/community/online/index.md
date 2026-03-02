@@ -51,7 +51,7 @@ lang: te
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - ఇప్పటికే ఉన్న మరియు సంభావ్య స్టేకర్‌ల కోసం కమ్యూనిటీ-నడిపే మార్గదర్శకత్వం, విద్య, మద్దతు మరియు వనరులు</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - ఆగి, ethereum.org వెబ్ అభివృద్ధి మరియు డిజైన్ గురించి బృందంతో మరియు కమ్యూనిటీలోని వ్యక్తులతో చాట్ చేయండి</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - వెబ్3 సృష్టికర్తల కమ్యూనిటీ, ఇక్కడ బిల్డర్‌లు, పారిశ్రామిక ప్రముఖులు మరియు ఇతీరియము ఉత్సాహవంతులు సమావేశమవుతారు. మేము వెబ్3 అభివృద్ధి, డిజైన్ మరియు సంస్కృతిపై మక్కువ కలిగి ఉన్నాము. మాతో కలిసి నిర్మించండి.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - సాలిడిటీ అభివృద్ధి కోసం చాట్ (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.element.io/#/room/#solidity:matrix.org">Solidity Matrix</Link> - సాలిడిటీ అభివృద్ధి కోసం చాట్ (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - సాలిడిటీ అభివృద్ధి కోసం చాట్ (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- ప్రశ్న మరియు జవాబు ఫోరమ్</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- వికేంద్రీకృత ప్రశ్న మరియు జవాబు ఫోరమ్</i></SocialListItem>

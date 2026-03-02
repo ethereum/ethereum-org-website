@@ -58,7 +58,7 @@
   "erc-721-term": "ERC-721",
   "erc-721-definition": "Un conjunto estándar de reglas utilizadas para crear NFT (tokens no fungibles).",
   "ether-term": "Ether",
-  "ether-definition": "La criptomoneda nativa de Ethereum, comúnmente conocida como \"ETH\". Se utiliza para cubrir las tarifas de transacción cuando se utiliza el ecosistema y las aplicaciones de Ethereum. <a href=\"/eth/\">Más sobre el ether</a>.",
+  "ether-definition": "La criptomoneda nativa de Ethereum, comúnmente conocida como \"ETH\". Se utiliza para cubrir las tarifas de transacción cuando se utiliza el ecosistema y las aplicaciones de Ethereum. <a href=\"/what-is-ether/\">Más sobre el ether</a>.",
   "events-term": "Eventos",
   "events-definition": "Permite el uso de instalaciones de registro de la <a href=\"/glossary/#evm\">EVM</a>. Las <a href=\"/glossary/#dapp\">Dapps</a> pueden escuchar eventos y usarlos para activar devoluciones de llamada de JavaScript en la interfaz de usuario. <a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">Más sobre eventos y registros</a>",
   "execution-client-term": "Cliente de ejecución",

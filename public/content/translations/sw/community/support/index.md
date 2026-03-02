@@ -50,7 +50,7 @@ Je swali lako linahusiana na chimbo fulani maalum, mradi au maktaba? Miradi ming
 
 Hii ni baadhi ya mifano maalum:
 
-- [Uimara](https://gitter.im/ethereum/solidity)
+- [Uimara](https://app.element.io/#/room/#solidity:matrix.org)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)

@@ -30,7 +30,6 @@ lang: uk
 
 Ці загальні платформи пропонують широке охоплення грантів у всьому просторі Web3 і є корисними відправними точками для всіх, хто шукає фінансування:
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks склав вичерпний каталог усіх грантів, RFP та винагород за виявлення помилок._
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _Каталог грантів у сфері блокчейну та криптовалют_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Каталог усіх грантових програм Web3, що оновлюється щотижня
 

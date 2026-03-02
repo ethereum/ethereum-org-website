@@ -30,7 +30,6 @@ lang: te
 
 ఈ సాధారణ ప్లాట్‌ఫారమ్‌లు మొత్తం Web3 స్పేస్‌లో గ్రాంట్ల యొక్క విస్తృత కవరేజీని అందిస్తాయి మరియు నిధుల కోసం చూస్తున్న ఎవరికైనా ఉపయోగకరమైన ప్రారంభ స్థానాలు:
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks అన్ని గ్రాంట్లు, RFPలు మరియు బగ్ బౌంటీల యొక్క సమగ్ర డైరెక్టరీని సంకలనం చేసింది._
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _బ్లాక్ చైను మరియు క్రిప్టో గ్రాంట్ల డైరెక్టరీ_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - అన్ని Web3 గ్రాంటు కార్యక్రమాల డైరెక్టరీ, వారానికి ఒకసారి నవీకరించబడుతుంది
 

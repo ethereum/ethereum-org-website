@@ -60,7 +60,7 @@ PROPOSER_WEIGHT	uint64(8)
 
 錯過目標和來源投票的懲罰等同於證明者提交它們時獲得的獎勵。 這意味不會有獎勵新增到他們的餘額中，反而會從餘額中移除相應的價值。 錯過鏈頭投票沒有懲罰（即鏈頭投票只會獲得獎勵，從不懲罰）。 `inclusion_delay` 沒有相關懲罰，獎勵只是不會加到驗證者的餘額中。 未能提議區塊也不會受到懲罰。
 
-在[共識規格](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md)中閱讀更多關於獎勵與懲罰的資訊。 獎勵與懲罰在 Bellatrix 升級中進行了調整，敬請觀看 Danny Ryan 和 Vitalik 在 [Peep an EIP 影片](https://www.youtube.com/watch?v=iaAEGs1DMgQ) 中的討論。
+在[共識規格](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md)中閱讀更多關於獎勵與懲罰的資訊。 獎勵與懲罰在 Bellatrix 升級中進行了調整，敬請觀看 Danny Ryan 和 Vitalik 在 [Peep an EIP 影片](https://www.youtube.com/watch?v=iaAEGs1DMgQ) 中的討論。
 
 ## 罰沒 {#slashing}
 

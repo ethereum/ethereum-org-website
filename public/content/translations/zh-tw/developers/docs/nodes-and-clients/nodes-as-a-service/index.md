@@ -272,7 +272,6 @@ sidebarDepth: 2
     - 免費開始試用
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [文件](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - 功能
     - 存取超過 50 個區塊鏈節點
     - 免費應用程式介面金鑰
@@ -283,11 +282,10 @@ sidebarDepth: 2
     - 共享、歸檔、備份和專用節點
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [文件](https://docs.pokt.network/home/)
+  - [文件](https://docs.pokt.network/)
   - 功能
     - 去中央化遠端程序中呼叫協定與市場
     - 免費方案每天 100 萬個請求（每個端點，最大為 2）
-    - [公用端點](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ 計畫（如果你每天需要超過 100 萬個請求）
     - 支援超過 15 條區塊鏈
     - 6400+ 節點透過服務應用程式賺取 POKT 幣

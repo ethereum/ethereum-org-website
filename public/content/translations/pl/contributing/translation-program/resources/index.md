@@ -34,10 +34,10 @@ Poniżej możesz znaleźć przydatne przewodniki i narzędzia dla tłumaczy ethe
 
 Aby być na bieżąco z najnowszymi postępami Programu Tłumaczeń, możesz śledzić [bloga Fundacji Ethereum](https://blog.ethereum.org/):
 
-- [Aktualizacja kamieni milowych z października 2021 r.](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Aktualizacja kamieni milowych z grudnia 2020 r.](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Aktualizacja kamieni milowych z lipca 2020 r.](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Uruchomienie Programu Tłumaczeń w sierpniu 2019 r.](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Aktualizacja kamieni milowych z października 2021 r.](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Aktualizacja kamieni milowych z grudnia 2020 r.](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Aktualizacja kamieni milowych z lipca 2020 r.](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Uruchomienie Programu Tłumaczeń w sierpniu 2019 r.](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Godziny biurowe dla tłumaczy {#office-hours}
 

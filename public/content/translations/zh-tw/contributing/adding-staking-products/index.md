@@ -165,7 +165,7 @@ lang: zh-tw
 
 上述[納入標準](#criteria-for-inclusion)是用來計算各個產品或服務的累積分數。 該評分用來對滿足特定客觀標準的產品進行排序和展示。 能夠證實滿足的標準越多，產品的排序就越高，且載入時是隨機排列的。
 
-這些標準的程式碼邏輯和權重，目前包含在我們儲存庫中的[這個 JavaScript 元件](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350)裡。
+這些標準的程式碼邏輯和權重，目前包含在我們儲存庫中的[這個 JavaScript 元件](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350)裡。
 
 ## 新增您的產品或服務 {#add-product}
 

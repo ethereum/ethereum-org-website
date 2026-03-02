@@ -35,7 +35,7 @@ incomplete: true
 ## মধ্যবর্তী স্তরের নিবন্ধ {#intermediate-articles}
 
 - [web3.py-এর বন্ধুরা: Ape-এর ভূমিকা](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [পাইথন প্রোগ্রামারদের জন্য ডিএ্যাপ ডেভেলপমেন্ট](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [পাইথন প্রোগ্রামারদের জন্য ডিএ্যাপ ডেভেলপমেন্ট](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [একটি পাইথন Ethereum ইন্টারফেস তৈরি করা: পর্ব ১](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [পাইথনে Ethereum স্মার্ট কন্ট্র্যাক্ট: একটি (প্রায়) ব্যাপক নির্দেশিকা](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -87,7 +87,7 @@ incomplete: true
 - [Curve](https://www.curve.finance/) এবং [Curve স্মার্ট কন্ট্র্যাক্ট রিপোজিটরি](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) এবং [Brownie টুলচেইন ব্যবহারকারী স্মার্ট কন্ট্র্যাক্ট](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) তাদের ভেস্টিং চুক্তিগুলি পরিচালনা এবং ডিপ্লয় করার জন্য [পাইথন ব্যবহার করে](https://github.com/sushiswap/sushi-vesting-protocols)
-- [Alpha Finance](https://alphafinance.io/), যা Alpha Homora-এর জন্য বিখ্যাত, [স্মার্ট কন্ট্র্যাক্ট পরীক্ষা এবং ডিপ্লয় করতে Brownie ব্যবহার করে](https://github.com/AlphaFinanceLab/alpha-staking-contract)
+- [Alpha Venture DAO](https://alphaventuredao.io/), যা Alpha Homora-এর জন্য বিখ্যাত, [স্মার্ট কন্ট্র্যাক্ট পরীক্ষা এবং ডিপ্লয় করতে Brownie ব্যবহার করে](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## পাইথন কমিউনিটি আলোচনা {#python-community-contributors}
 

@@ -1,12 +1,12 @@
 ---
-title: İçerik kaynaklarını ekle
-description: Ethereum.org'daki tasarım materyallerinin kaliteli olmasını sağlamak için yönergeler ve gereksinimler
+title: "İçerik kaynaklarını ekle"
+description: "Ethereum.org'daki tasarım materyallerinin kaliteli olmasını sağlamak için yönergeler ve gereksinimler"
 lang: tr
 ---
 
-# İçerik kaynaklarını ekle {#adding-design-resources}
+# Tasarım kaynakları ekleme {#adding-design-resources}
 
-Herkes [Web3 sayfasında tasarım ve kullanıcı deneyimi](/developers/docs/design-and-ux/) için yeni tasarım materyalleri önerebilir.
+Herkes [Web3'te Tasarım ve Kullanıcı Deneyimi sayfasına](/developers/docs/design-and-ux/) yeni tasarım materyalleri önerebilir.
 
 Bu sayfanın, hevesli web3 kullanıcıları için değer sunmaya odaklandığını unutmayın. Tasarım bölümü, hizmetleriniz, ürünleriniz ya da platformlarınızın reklamını yapmak için değildir.
 
@@ -48,7 +48,7 @@ c. Yazı, özlü ve nokta atışı olmalıdır.
 
 a. Makalenin temel amacı, belirli bir projeyi veya şirketi tanıtmak yerine ayrıntılı bilgiler paylaşmak olmalıdır.
 
-## Topluluklar/DAO'lar {#Communities-and-DAOs}
+## Topluluklar / DAO'lar {#Communities-and-DAOs}
 
 1. Web sitesi, DAO'ya/Topluluğa katılma yolunu açıkça belirtmelidir
 
@@ -56,7 +56,7 @@ a. Makalenin temel amacı, belirli bir projeyi veya şirketi tanıtmak yerine ay
 
 a. Üye olmanın faydaları açıkça öne çıkarılmalıdır.
 
-**Örnekler**: çalışmalar hakkında geribildirim almak, iş fırsatlarına veya ödüllere erişim, tasarım ve araştırma bilgilerini paylaşmak.
+**Örnekler**: çalışmalar hakkında geribildirim almak, iş fırsatlarına veya ödüllere erişim, tasarım ve araştırma içgörülerini paylaşmak.
 
 3. Discord'da Aktif ve Canlı İletişim
 

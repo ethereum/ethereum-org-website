@@ -16,7 +16,7 @@ Rising interest in cryptocurrency brings with it growing risk from scammers and 
 
 ### Level up your knowledge {#level-up-your-knowledge}
 
-Misunderstandings about how crypto works can lead to costly mistakes. For example, if someone pretends to be a customer service agent who can return lost ETH in exchange for your private keys, they are preying on people not understanding that Ethereum is a decentralized network lacking this kind of functionality. Educating yourself on how Ethereum works is a worthwhile investment.
+Misunderstandings about how crypto works can lead to costly mistakes. For example, if someone pretends to be a customer service agent who can return lost ETH in exchange for your private keys, they are preying on people not understanding that [Ethereum](/) is a decentralized network lacking this kind of functionality. Educating yourself on how Ethereum works is a worthwhile investment.
 
 <DocLink href="/what-is-ethereum/">
   What is Ethereum?

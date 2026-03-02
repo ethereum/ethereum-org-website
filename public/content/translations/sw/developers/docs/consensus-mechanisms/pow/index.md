@@ -101,7 +101,7 @@ Katika kiwango cha juu, uthibitisho wa stake una lengo sawa na uthibitisho wa ka
 ## Masomo zaidi {#further-reading}
 
 - [Shambulio la walio wengi](https://en.bitcoin.it/wiki/Majority_attack)
-- [Kuhusu mwisho wa malipo](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Kuhusu mwisho wa malipo](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Video {#videos}
 

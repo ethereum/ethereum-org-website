@@ -35,7 +35,7 @@ incomplete: true
 ## درمیانی سطح کے مضامین {#intermediate-articles}
 
 - [web3.py کے دوست: Ape کا تعارف](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [پائیتھن پروگرامرز کے لیے Dapp ڈیولپمنٹ](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [پائیتھن پروگرامرز کے لیے Dapp ڈیولپمنٹ](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [ایک پائیتھن Ethereum انٹرفیس بنانا: حصہ 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [پائیتھن میں Ethereum اسمارٹ کنٹریکٹس: ایک جامع (ish) گائیڈ](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -87,7 +87,7 @@ incomplete: true
 - [Curve](https://www.curve.finance/) اور [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) اور [Brownie ٹول چین کا استعمال کرتے ہوئے اسمارٹ کنٹریکٹس](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) [اپنے ویسٹنگ کنٹریکٹس کو منظم کرنے اور ڈیپلائے کرنے میں پائیتھن کا استعمال کرتا ہے](https://github.com/sushiswap/sushi-vesting-protocols)
-- [Alpha Finance](https://alphafinance.io/)، جو Alpha Homora کی شہرت کا حامل ہے، [اسمارٹ کنٹریکٹس کی جانچ اور ڈیپلائے کرنے کے لیے Brownie کا استعمال کرتا ہے](https://github.com/AlphaFinanceLab/alpha-staking-contract)
+- [Alpha Venture DAO](https://alphaventuredao.io/)، جو Alpha Homora کی شہرت کا حامل ہے، [اسمارٹ کنٹریکٹس کی جانچ اور ڈیپلائے کرنے کے لیے Brownie کا استعمال کرتا ہے](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## پائیتھن کمیونٹی ڈسکشن {#python-community-contributors}
 
