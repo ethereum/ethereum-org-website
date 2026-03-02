@@ -97,7 +97,7 @@ module.exports = (phase, { defaultConfig }) => {
           hostname: "crowdin-static.cf-downloads.crowdin.com",
         },
         { protocol: "https", hostname: "pvvrtckedmrkyzfxubkk.supabase.co" },
-        { protocol: "https", hostname: "avatars.githubusercontent.com" },
+        { protocol: "https", hostname: "*.githubusercontent.com" },
         { protocol: "https", hostname: "opengraph.githubassets.com" },
         { protocol: "https", hostname: "github.com" },
         { protocol: "https", hostname: "coin-images.coingecko.com" },
