@@ -118,7 +118,7 @@ function safe_add(uint a, uint b) returns(uint c){
 
 - `c = a + b AND (c >= a) AND (c=>b) AND (c < a OR c < b)`
 
-이 공식은 풀 수 없습니다. 다시 말해, 이것은 `safe_add`에서 `c`가 항상 증가한다는 **증명**입니다.
+이 공식은 풀 수 없습니다. 다시 말해, 이것은 `safe_add`에서 `c`가 항상 증가한다는 <strong>증명</strong>입니다.
 
 따라서 DSE는 코드에 대한 임의의 제약 조건을 확인할 수 있는 강력한 도구입니다.
 

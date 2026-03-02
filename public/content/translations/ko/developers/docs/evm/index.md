@@ -21,7 +21,7 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 
 ## 이더리움 상태 전환 함수 {#the-ethereum-state-transition-function}
 
-EVM은 하나의 입력으로 하나의 결정된 출력을 생성하는 수학 함수처럼 동작한다. 따라서 이더리움을 **상태 전환 함수**를 갖는 것으로 보다 공식적으로 설명하는 것이 매우 유용합니다.
+EVM은 하나의 입력으로 하나의 결정된 출력을 생성하는 수학 함수처럼 동작한다. 따라서 이더리움을 <strong>상태 전환 함수</strong>를 갖는 것으로 보다 공식적으로 설명하는 것이 매우 유용합니다.
 
 ```
 Y(S, T)= S'

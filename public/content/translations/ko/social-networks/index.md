@@ -37,15 +37,15 @@ summaryPoint3: "토큰과 NFT는 콘텐츠를 통한 수익 창출의 새로운 
 
 1. 분산형 소셜 네트워크는 검열이 불가능하며 모두가 제약 없이 사용할 수 있습니다. 이는 **사용자가 임의로 차단되거나**, 플랫폼에서 퇴출되거나, 제한될 수 없음을 의미합니다.
 
-2. 탈중앙화 소셜 네트워크는 **오픈소스 이상에 기반하여 구축**되며 애플리케이션의 소스 코드를 공개적으로 검사할 수 있도록 합니다. 전통적인 소셜 미디어에 존재하는 일반적인 불투명한 알고리즘의 구현을 제거함으로써, 블록체인 기반의 소셜 네트워크는 사용자와 플랫폼 제작자의 기대에 더욱 부응할 수 있습니다.
+2. 탈중앙화 소셜 네트워크는 <strong>오픈소스 이상에 기반하여 구축</strong>되며 애플리케이션의 소스 코드를 공개적으로 검사할 수 있도록 합니다. 전통적인 소셜 미디어에 존재하는 일반적인 불투명한 알고리즘의 구현을 제거함으로써, 블록체인 기반의 소셜 네트워크는 사용자와 플랫폼 제작자의 기대에 더욱 부응할 수 있습니다.
 
-3. 분산형 소셜 네트워크에서는 "중개자"가 필요 없습니다. 콘텐츠 **크리에이터는 자신의 콘텐츠에 대한 직접적인 소유권**을 가지며, 중간에 스마트 계약 외에는 아무것도 없이 팔로워, 팬, 구매자 및 기타 당사자들과 직접 소통합니다.
+3. 분산형 소셜 네트워크에서는 "중개자"가 필요 없습니다. 콘텐츠 <strong>크리에이터는 자신의 콘텐츠에 대한 직접적인 소유권</strong>을 가지며, 중간에 스마트 계약 외에는 아무것도 없이 팔로워, 팬, 구매자 및 기타 당사자들과 직접 소통합니다.
 
 4. 전 세계적인 P2P(피어 투 피어) 노드 네트워크에 의해 유지되는 Ethereum 네트워크에서 실행되는 탈중앙화앱으로서, 탈중앙화 소셜 네트워크는 **서버 다운타임 및 중단에 덜 취약합니다**.
 
 5. 탈중앙화 소셜 플랫폼은 [대체 불가능 토큰(NFT)](/glossary/#nft), 인앱 암호화폐 결제 등을 통해 콘텐츠 크리에이터에게 **향상된 수익화** 프레임워크를 제공합니다.
 
-6. 탈중앙화 소셜 네트워크는 사용자에게 **높은 수준의 개인정보 보호와 익명성**을 제공합니다. 예를 들어, 개인은 이름, 이메일 주소 등과 같은 개인 식별 정보(PII)를 공유하지 않고도 [ENS](/glossary/#ens) 프로필이나 [지갑](/glossary/#wallet)을 사용하여 Ethereum 기반 소셜 네트워크에 로그인할 수 있습니다.
+6. 탈중앙화 소셜 네트워크는 사용자에게 <strong>높은 수준의 개인정보 보호와 익명성</strong>을 제공합니다. 예를 들어, 개인은 이름, 이메일 주소 등과 같은 개인 식별 정보(PII)를 공유하지 않고도 [ENS](/glossary/#ens) 프로필이나 [지갑](/glossary/#wallet)을 사용하여 Ethereum 기반 소셜 네트워크에 로그인할 수 있습니다.
 
 7. 분산형 소셜 네트워크는 중앙화 데이터베이스 대신 사용자의 데이터를 보다 안전하게 보호할 수 있는 탈중앙화 저장 공간을 이용합니다
 
@@ -84,29 +84,29 @@ Mirror에 게시된 글은 탈중앙화 스토리지 플랫폼인 Arweave에 영
 
 ### Brave 브라우저 {#brave}
 
-- Brave는 디지털 광고 및 콘텐츠 크리에이터 지원에 혁신을 가져오기 위해 Ethereum 기반의 ERC-20 토큰인 **[베이직 어텐션 토큰(BAT)](https://basicattentiontoken.org/)**을 브라우저 생태계에 통합했습니다.
+- Brave는 디지털 광고 및 콘텐츠 크리에이터 지원에 혁신을 가져오기 위해 Ethereum 기반의 ERC-20 토큰인 <strong>[베이직 어텐션 토큰(BAT)](https://basicattentiontoken.org/)</strong>을 브라우저 생태계에 통합했습니다.
 
-- **[Brave Rewards 프로그램](https://brave.com/brave-rewards/)**을 통해 사용자는 개인정보를 존중하는 광고를 보고 BAT를 획득한 다음, 주목 시간을 기준으로 YouTube, Twitter, GitHub와 같은 다양한 플랫폼의 웹사이트 및 콘텐츠 크리에이터에게 자동으로 기여할 수 있습니다.
+- <strong>[Brave Rewards 프로그램](https://brave.com/brave-rewards/)</strong>을 통해 사용자는 개인정보를 존중하는 광고를 보고 BAT를 획득한 다음, 주목 시간을 기준으로 YouTube, Twitter, GitHub와 같은 다양한 플랫폼의 웹사이트 및 콘텐츠 크리에이터에게 자동으로 기여할 수 있습니다.
 
-- 콘텐츠 크리에이터는 **[Brave 인증 크리에이터](https://creators.brave.com/)**로 등록하여 이러한 기여금을 자신의 Ethereum 지갑으로 직접 받을 수 있으며, 이는 기존 웹 플랫폼과 블록체인 기반 수익화 사이의 브리지를 만듭니다.
+- 콘텐츠 크리에이터는 <strong>[Brave 인증 크리에이터](https://creators.brave.com/)</strong>로 등록하여 이러한 기여금을 자신의 Ethereum 지갑으로 직접 받을 수 있으며, 이는 기존 웹 플랫폼과 블록체인 기반 수익화 사이의 브리지를 만듭니다.
 
 - BAT 토큰은 Ethereum 블록체인에 독립적으로 존재하므로, 사용자는 획득한 토큰을 개인 지갑이나 거래소로 전송할 수 있습니다.
 
 ### Audius 음악 플랫폼 {#audius}
 
-- **[Audius](https://audius.co/)**는 Ethereum 블록체인 기술을 사용하여 아티스트와 팬을 직접 연결하는 음악 스트리밍 플랫폼입니다.
+- <strong>[Audius](https://audius.co/)</strong>는 Ethereum 블록체인 기술을 사용하여 아티스트와 팬을 직접 연결하는 음악 스트리밍 플랫폼입니다.
 
-- 이 플랫폼은 콘텐츠는 IPFS에 저장되고 소유권 및 **[AUDIO 토큰](https://eth.blockscout.com/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)**을 위해 블록체인을 활용하는 하이브리드 탈중앙화 아키텍처를 특징으로 합니다.
+- 이 플랫폼은 콘텐츠는 IPFS에 저장되고 소유권 및 <strong>[AUDIO 토큰](https://eth.blockscout.com/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)</strong>을 위해 블록체인을 활용하는 하이브리드 탈중앙화 아키텍처를 특징으로 합니다.
 
-- Audius는 **[TikTok과 파트너십](https://audius.co/tiktok)**을 체결하여 주류 잠재고객에게 Web3 기능을 제공하고, 아티스트가 블록체인 기술을 통해 콘텐츠로 수익을 창출할 수 있도록 합니다.
+- Audius는 <strong>[TikTok과 파트너십](https://audius.co/tiktok)</strong>을 체결하여 주류 잠재고객에게 Web3 기능을 제공하고, 아티스트가 블록체인 기술을 통해 콘텐츠로 수익을 창출할 수 있도록 합니다.
 
-- 플랫폼의 기술적 세부 정보는 이들이 Ethereum 인프라를 기반으로 어떻게 구축했는지 보여주는 **[백서](https://whitepaper.audius.co/)**에서 확인할 수 있습니다.
+- 플랫폼의 기술적 세부 정보는 이들이 Ethereum 인프라를 기반으로 어떻게 구축했는지 보여주는 <strong>[백서](https://whitepaper.audius.co/)</strong>에서 확인할 수 있습니다.
 
 ### Sorare 판타지 스포츠 {#sorare}
 
-- **[Sorare](https://sorare.com/)**는 사용자가 공식 NFT 선수 카드를 수집, 거래, 플레이할 수 있도록 하는 **[Ethereum 기반 판타지 스포츠 플랫폼](https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet)**입니다.
+- <strong>[Sorare](https://sorare.com/)</strong>는 사용자가 공식 NFT 선수 카드를 수집, 거래, 플레이할 수 있도록 하는 <strong>[Ethereum 기반 판타지 스포츠 플랫폼](https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet)</strong>입니다.
 
-- 선수 카드는 Ethereum 블록체인에서 검증 가능한 NFT이며, 플랫폼의 스마트 계약은 **[Etherscan](https://eth.blockscout.com/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205?tab=contract)**에서 볼 수 있습니다.
+- 선수 카드는 Ethereum 블록체인에서 검증 가능한 NFT이며, 플랫폼의 스마트 계약은 <strong>[Etherscan](https://eth.blockscout.com/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205?tab=contract)</strong>에서 볼 수 있습니다.
 
 - Sorare는 전통적인 판타지 스포츠 게임 플레이와 디지털 자산의 블록체인 소유권을 결합하여 주류 스포츠 팬들에게 **[Ethereum 펀딩](https://sorare.com/help/a/10969733392797/what-network-should-i-use-to-fund-my-eth-wallet)** 기능을 제공합니다.
 

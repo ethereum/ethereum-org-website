@@ -14,7 +14,7 @@ published: 2021-12-30
 
 이 문제를 해결하기 위해 이더리움 생태계는 [탈중앙화된 방식으로 데이터를 저장하는 다양한 대체 방법](/developers/docs/storage/)을 개발했습니다. 일반적으로 가용성과 가격 간의 절충이 필요합니다. 하지만 무결성은 일반적으로 보장됩니다.
 
-이 글에서는 [머클 증명](https://computersciencewiki.org/index.php/Merkle_proof)을 사용하여 블록체인에 데이터를 저장하지 않고 데이터 무결성을 보장하는 **방법**을 배웁니다.
+이 글에서는 [머클 증명](https://computersciencewiki.org/index.php/Merkle_proof)을 사용하여 블록체인에 데이터를 저장하지 않고 데이터 무결성을 보장하는 <strong>방법</strong>을 배웁니다.
 
 ## 어떻게 작동하나요? {#how-does-it-work}
 

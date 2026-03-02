@@ -25,7 +25,7 @@ fs.readFile("keyfile.json", (err, data) => {
  */
 ```
 
-이 문서는 웹3 비밀 저장 공간 정의의 **버전 3**에 대한 내용입니다.
+이 문서는 웹3 비밀 저장 공간 정의의 <strong>버전 3</strong>에 대한 내용입니다.
 
 ## 정의 {#definition}
 

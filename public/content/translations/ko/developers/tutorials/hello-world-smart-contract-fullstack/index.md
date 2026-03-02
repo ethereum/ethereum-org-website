@@ -34,17 +34,17 @@ published: 2021-10-25
 
 Alchemy 계정을 생성한 후에는 앱을 만들어 API 키를 생성할 수 있습니다. 이를 통해 Goerli 테스트넷에 요청을 보낼 수 있습니다. 테스트넷에 익숙하지 않은 경우 [네트워크 선택에 대한 Alchemy 가이드](https://www.alchemy.com/docs/choosing-a-web3-network)를 읽어보세요.
 
-Alchemy 대시보드의 탐색 모음에서 **Apps** 드롭다운을 찾아 **Create App**을 클릭합니다.
+Alchemy 대시보드의 탐색 모음에서 **Apps** 드롭다운을 찾아 <strong>Create App</strong>을 클릭합니다.
 
 ![Hello world create app](./hello-world-create-app.png)
 
-앱 이름을 '_Hello World_'로 지정하고 간단한 설명을 작성합니다. 환경으로 **Staging**을, 네트워크로 **Goerli**를 선택합니다.
+앱 이름을 '_Hello World_'로 지정하고 간단한 설명을 작성합니다. 환경으로 <strong>Staging</strong>을, 네트워크로 <strong>Goerli</strong>를 선택합니다.
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-_참고: **Goerli**를 반드시 선택해야 합니다. 그렇지 않으면 이 튜토리얼이 작동하지 않습니다._
+_참고: <strong>Goerli</strong>를 반드시 선택해야 합니다. 그렇지 않으면 이 튜토리얼이 작동하지 않습니다._
 
-**앱 만들기**를 클릭하세요. 생성한 앱이 아래 표에 나타납니다.
+<strong>앱 만들기</strong>를 클릭하세요. 생성한 앱이 아래 표에 나타납니다.
 
 ### 이더리움 계정 만들기 {#create-an-ethereum-account}
 

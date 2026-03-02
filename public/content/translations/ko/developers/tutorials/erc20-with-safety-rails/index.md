@@ -19,13 +19,13 @@ published: 2022-08-15
 1. [Remix IDE](https://remix.ethereum.org/)를 엽니다.
 2. 깃허브 복제 아이콘(![깃허브 복제 아이콘](icon-clone.png))을 클릭합니다.
 3. 깃허브 리포지토리 `https://github.com/qbzzt/20220815-erc20-safety-rails`를 복제합니다.
-4. **contracts > erc20-safety-rails.sol**을 엽니다.
+4. <strong>contracts > erc20-safety-rails.sol</strong>을 엽니다.
 
 ## ERC-20 계약 생성 {#creating-an-erc-20-contract}
 
 안전장치 기능을 추가하기 전에 ERC-20 계약이 필요합니다. 이 글에서는 [OpenZeppelin 계약 마법사](https://docs.openzeppelin.com/contracts/5.x/wizard)를 사용합니다. 다른 브라우저에서 열고 다음 지침을 따르세요.
 
-1. **ERC20**을 선택합니다.
+1. <strong>ERC20</strong>을 선택합니다.
 
 2. 다음 설정을 입력하세요.
 
@@ -38,7 +38,7 @@ published: 2022-08-15
    | 액세스 제어   | Ownable          |
    | 업그레이드 기능 | 없음               |
 
-3. 위로 스크롤하여 **Remix에서 열기**(Remix용)를 클릭하거나 **다운로드**를 클릭하여 다른 환경을 사용합니다. Remix를 사용한다고 가정하고, 다른 것을 사용한다면 적절하게 변경하세요.
+3. 위로 스크롤하여 **Remix에서 열기**(Remix용)를 클릭하거나 <strong>다운로드</strong>를 클릭하여 다른 환경을 사용합니다. Remix를 사용한다고 가정하고, 다른 것을 사용한다면 적절하게 변경하세요.
 
 4. 이제 완전히 작동하는 ERC-20 계약이 있습니다. `.deps` > `npm`을 확장하여 가져온 코드를 볼 수 있습니다.
 

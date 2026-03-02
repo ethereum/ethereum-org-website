@@ -433,7 +433,7 @@ ETH와 같습니다. 작성 시점에서 10,000,000,000,000 wei는 대략 미국
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
 ```
 
-`transfer` 함수는 보낸 사람의 계정에서 다른 계정으로 토큰을 전송하기 위해 호출됩니다. 부울 값을 반환하지만 그 값은 항상 **true**라는 점에 유의하세요. 전송이 실패하면 컨트랙트는 호출을 되돌립니다.
+`transfer` 함수는 보낸 사람의 계정에서 다른 계정으로 토큰을 전송하기 위해 호출됩니다. 부울 값을 반환하지만 그 값은 항상 <strong>true</strong>라는 점에 유의하세요. 전송이 실패하면 컨트랙트는 호출을 되돌립니다.
 
 &nbsp;
 
@@ -626,7 +626,7 @@ uint8 private _decimals;
 이더의 경우 ETH에 대해 10^18 wei로 정의되지만, 토큰에 대해서는 다른 값을 선택할 수 있습니다.
 ```
 
-토큰을 나누는 것이 의미가 없다면 `_decimals` 값을 0으로 사용할 수 있습니다. ETH와 동일한 표준을 사용하려면 값 **18**을 사용하세요.
+토큰을 나누는 것이 의미가 없다면 `_decimals` 값을 0으로 사용할 수 있습니다. ETH와 동일한 표준을 사용하려면 값 <strong>18</strong>을 사용하세요.
 
 ### 생성자 {#the-constructor}
 
@@ -756,7 +756,7 @@ uint8 private _decimals;
 
 ### 훅 {#hooks}
 
-이 함수는 부울 값을 반환하지만, 그 값은 항상 **true**라는 점에 유의하세요. 전송이 실패하면 계약은 호출을 되돌립니다.
+이 함수는 부울 값을 반환하지만, 그 값은 항상 <strong>true</strong>라는 점에 유의하세요. 전송이 실패하면 계약은 호출을 되돌립니다.
 
 ```solidity
         _transfer(_msgSender(), recipient, amount);

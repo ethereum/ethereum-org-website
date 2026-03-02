@@ -26,11 +26,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 \* 시간 초과 없이 모든 경로를 탐색하는 경우
 
-**Slither**는 몇 초 안에 계약을 분석하지만 정적 분석은 오탐을 유발할 수 있으며 복잡한 검사(예: 산술 검사)에는 덜 적합합니다. API를 통해 Slither를 실행하여 내장된 탐지기에 간편하게 액세스하거나 사용자 정의 검사를 수행할 수 있습니다.
+<strong>Slither</strong>는 몇 초 안에 계약을 분석하지만 정적 분석은 오탐을 유발할 수 있으며 복잡한 검사(예: 산술 검사)에는 덜 적합합니다. API를 통해 Slither를 실행하여 내장된 탐지기에 간편하게 액세스하거나 사용자 정의 검사를 수행할 수 있습니다.
 
-**Echidna**는 몇 분 동안 실행해야 하며 실제 참(true positive)만 생성합니다. Echidna는 Solidity로 작성된 사용자 제공 보안 속성을 확인합니다. 무작위 탐색을 기반으로 하므로 버그를 놓칠 수 있습니다.
+<strong>Echidna</strong>는 몇 분 동안 실행해야 하며 실제 참(true positive)만 생성합니다. Echidna는 Solidity로 작성된 사용자 제공 보안 속성을 확인합니다. 무작위 탐색을 기반으로 하므로 버그를 놓칠 수 있습니다.
 
-**Manticore**는 가장 "무거운" 분석을 수행합니다. Echidna와 마찬가지로 Manticore는 사용자가 제공한 속성을 확인합니다. 실행하는 데 더 많은 시간이 필요하지만 속성의 유효성을 증명할 수 있으며 오탐을 보고하지 않습니다.
+<strong>Manticore</strong>는 가장 "무거운" 분석을 수행합니다. Echidna와 마찬가지로 Manticore는 사용자가 제공한 속성을 확인합니다. 실행하는 데 더 많은 시간이 필요하지만 속성의 유효성을 증명할 수 있으며 오탐을 보고하지 않습니다.
 
 ## 권장 워크플로 {#suggested-workflow}
 

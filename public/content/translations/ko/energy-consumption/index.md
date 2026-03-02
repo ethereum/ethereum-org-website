@@ -6,7 +6,7 @@ lang: ko
 
 # 이더리움의 에너지 소비량 {#proof-of-stake-energy}
 
-이더리움은 친환경 블록체인입니다. 이더리움의 [지분 증명](/developers/docs/consensus-mechanisms/pos) 합의 메커니즘은 [네트워크를 보호하기 위한 에너지](/developers/docs/consensus-mechanisms/pow) 대신 ETH를 사용합니다. 이더리움의 에너지 소비량은 전체 글로벌 네트워크에 걸쳐 약 [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022)입니다.
+이더리움은 친환경 블록체인입니다. 이더리움의 [지분 증명](/developers/docs/consensus-mechanisms/pos) 합의 메커니즘은 [네트워크를 보호하기 위한 에너지](/developers/docs/consensus-mechanisms/pow) 대신 ETH를 사용합니다. 이더리움의 에너지 소비량은 전체 글로벌 네트워크에 걸쳐 약 [\~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022)입니다.
 
 이더리움의 에너지 소비 추정치는 [CCRI(암호화폐 탄소 등급 연구소)](https://carbon-ratings.com)의 연구에서 비롯되었습니다. 이들은 이더리움 네트워크의 전력 소비 및 탄소 발자국에 대한 상향식 추정치를 생성했습니다([보고서 참조](https://carbon-ratings.com/eth-report-2022)). CCRI는 다양한 하드웨어와 소프트웨어 설정으로 구성된 다른 노드들의 전기 사용량을 측정했습니다. 네트워크의 연간 전력 소비량 추정치인 **2,601MWh**(0.0026TWh)는 지역별 탄소 집약도 요인을 적용할 경우 연간 **870톤의 CO2e** 탄소 배출량에 해당합니다. 이 값은 노드가 네트워크에 참여하거나 떠날 때 변경됩니다. [케임브리지 블록체인 네트워크 지속 가능성 지수](https://ccaf.io/cbnsi/ethereum)의 7일 이동 평균 추정치를 사용하여 추적할 수 있습니다(해당 기관은 추정에 약간 다른 방법을 사용하며, 자세한 내용은 사이트에서 확인할 수 있습니다).
 

@@ -20,8 +20,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 개발문서는 다양한 수준으로 작성할 수 있으며 계약을 구현하는 동안 업데이트해야 합니다.
 
-- **시스템에 대한 평이한 영어 설명**은 계약의 기능과 코드베이스에 대한 가정을 설명합니다.
-- **스키마 및 아키텍처 다이어그램**은 계약 상호 작용 및 시스템의 상태 머신을 포함합니다. [Slither printers](https://github.com/crytic/slither/wiki/Printer-documentation)는 이러한 스키마를 생성하는 데 도움이 될 수 있습니다.
+- <strong>시스템에 대한 평이한 영어 설명</strong>은 계약의 기능과 코드베이스에 대한 가정을 설명합니다.
+- <strong>스키마 및 아키텍처 다이어그램</strong>은 계약 상호 작용 및 시스템의 상태 머신을 포함합니다. [Slither printers](https://github.com/crytic/slither/wiki/Printer-documentation)는 이러한 스키마를 생성하는 데 도움이 될 수 있습니다.
 - **철저한 코드 개발문서**, Solidity에는 [Natspec 형식](https://docs.soliditylang.org/en/develop/natspec-format.html)을 사용할 수 있습니다.
 
 ### 온체인 대 오프체인 계산 {#onchain-vs-offchain-computation}

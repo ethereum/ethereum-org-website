@@ -37,7 +37,7 @@ ethereum.org 번역 프로그램의 [사명과 비전](/contributing/translation
 ### 현재까지의 진행 상황 {#our-progress}
 
 - [**6,900 +** 명의 번역가](/contributing/translation-program/contributors/)
-- 사이트에서 **68**개 언어 지원
+- 사이트에서 <strong>68</strong>개 언어 지원
 - [2024년 **289만** 단어 번역](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />

@@ -21,7 +21,7 @@ template: roadmap
 
 [노드](/glossary/#node)를 실행하는 사용자는 데이터를 제공받기 위해 제3자를 신뢰할 필요가 없으며, 이더리움 [블록체인](/glossary/#blockchain)과 빠르고, 비공개적으로, 허가 없이 상호작용할 수 있습니다. 하지만 현재 노드 운영에는 기술적 지식과 상당한 디스크 공간이 필요하기 때문에, 많은 사람들이 대신 중개자를 신뢰해야 합니다.
 
-노드 운영을 훨씬 쉽고 자원 집약도를 크게 낮출 수 있는 여러 업그레이드가 있습니다. 데이터 저장 방식은 **버클 트리**로 알려진 더 공간 효율적인 구조를 사용하도록 변경될 것입니다. 또한 [스테이트리스](/roadmap/statelessness) 또는 [데이터 만료](/roadmap/statelessness/#data-expiry)를 통해 이더리움 노드는 전체 이더리움 상태 데이터의 사본을 저장할 필요가 없게 되어 하드 디스크 공간 요구사항이 크게 줄어들 것입니다. [라이트 노드](/developers/docs/nodes-and-clients/light-clients/)는 풀 노드를 실행하는 것의 많은 이점을 제공하지만, 휴대폰이나 간단한 브라우저 앱에서도 쉽게 실행할 수 있습니다.
+노드 운영을 훨씬 쉽고 자원 집약도를 크게 낮출 수 있는 여러 업그레이드가 있습니다. 데이터 저장 방식은 <strong>버클 트리</strong>로 알려진 더 공간 효율적인 구조를 사용하도록 변경될 것입니다. 또한 [스테이트리스](/roadmap/statelessness) 또는 [데이터 만료](/roadmap/statelessness/#data-expiry)를 통해 이더리움 노드는 전체 이더리움 상태 데이터의 사본을 저장할 필요가 없게 되어 하드 디스크 공간 요구사항이 크게 줄어들 것입니다. [라이트 노드](/developers/docs/nodes-and-clients/light-clients/)는 풀 노드를 실행하는 것의 많은 이점을 제공하지만, 휴대폰이나 간단한 브라우저 앱에서도 쉽게 실행할 수 있습니다.
 
 <ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">버클 트리에 대해 읽어보기</ButtonLink>
 

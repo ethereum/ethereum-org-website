@@ -76,7 +76,7 @@ Etherscan을 사용하면 원본 데이터 페이로드(소스 코드, 라이브
 
 검증이 완료되면 계약의 소스 코드는 "검증됨" 라벨을 받고 다른 사람들이 감사할 수 있도록 Etherscan에 게시됩니다. 또한 검증된 소스 코드가 있는 스마트 계약의 저장소인 [검증된 계약](https://etherscan.io/contractsVerified/) 섹션에도 추가됩니다.
 
-Etherscan은 계약을 검증하는 데 가장 많이 사용되는 도구입니다. 그러나 Etherscan의 계약 검증에는 단점이 있습니다. 온체인 바이트코드와 재컴파일된 바이트코드의 **메타데이터 해시**를 비교하지 못합니다. 따라서 Etherscan에서의 일치는 부분 일치입니다.
+Etherscan은 계약을 검증하는 데 가장 많이 사용되는 도구입니다. 그러나 Etherscan의 계약 검증에는 단점이 있습니다. 온체인 바이트코드와 재컴파일된 바이트코드의 <strong>메타데이터 해시</strong>를 비교하지 못합니다. 따라서 Etherscan에서의 일치는 부분 일치입니다.
 
 [Etherscan에서 계약 검증에 대해 더 알아보기](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 

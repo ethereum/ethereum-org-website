@@ -70,11 +70,11 @@ _**참고:** [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alc
 
 **기존 클라이언트가 있는 경우,** 현재 노드 공급자 URL을 API 키가 포함된 Alchemy URL로 변경하세요: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**_참고:_** 아래 스크립트는 명령줄에서 실행하는 것이 아니라 **노드 컨텍스트**에서 실행하거나 **파일에 저장**해야 합니다. Node나 npm이 아직 설치되지 않았다면, 이 빠른 [mac용 설정 가이드](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)를 확인하세요.
+**_참고:_** 아래 스크립트는 명령줄에서 실행하는 것이 아니라 <strong>노드 컨텍스트</strong>에서 실행하거나 <strong>파일에 저장</strong>해야 합니다. Node나 npm이 아직 설치되지 않았다면, 이 빠른 [mac용 설정 가이드](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)를 확인하세요.
 
 Alchemy와 통합할 수 있는 [웹3 라이브러리](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)는 많지만, web3.js를 바로 대체할 수 있으며 Alchemy와 원활하게 작동하도록 빌드 및 구성된 [Alchemy 웹3](https://docs.alchemy.com/reference/api-overview) 사용을 권장합니다. 이는 자동 재시도 및 강력한 WebSocket 지원과 같은 여러 이점을 제공합니다.
 
-AlchemyWeb3.js를 설치하려면 **프로젝트 디렉터리로 이동**하고 다음을 실행하세요:
+AlchemyWeb3.js를 설치하려면 <strong>프로젝트 디렉터리로 이동</strong>하고 다음을 실행하세요:
 
 **Yarn 사용 시:**
 
