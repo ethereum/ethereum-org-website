@@ -6,7 +6,7 @@ lang: en
 
 # Common misconceptions about Ethereum {#misconceptions}
 
-## Ethereum is not a company {#not-a-company}
+## Is Ethereum a company? {#not-a-company}
 
 Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
 
@@ -18,7 +18,7 @@ The Ethereum Foundation is a non-profit organization that supports Ethereum's de
   What is Ethereum?
 </DocLink>
 
-## No one can access or freeze your funds {#no-fund-access}
+## Can someone recover or freeze my funds? {#no-fund-access}
 
 Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
 
@@ -35,7 +35,7 @@ This is why protecting your seed phrase is critical. It is the only way to acces
   Ethereum security and scam prevention
 </DocLink>
 
-## Ethereum mining no longer exists {#no-mining}
+## Can I still mine Ethereum? {#no-mining}
 
 Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
 
@@ -49,7 +49,7 @@ The network is now secured by validators who [stake](/glossary/#staking) ETH. An
   Learn more about staking
 </DocLink>
 
-## There is no "Ethereum support team" {#no-support-team}
+## Is there an Ethereum support team? {#no-support-team}
 
 Because Ethereum is decentralized, there is no official support team, help desk, phone number, or email address. No one from Ethereum or ethereum.org will ever:
 
