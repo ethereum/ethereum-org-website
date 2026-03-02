@@ -255,7 +255,7 @@ sidebarDepth: 3
 
 - [イーサリアムのレイヤー2スケーリングソリューションを理解する：ステートチャネル、Plasma、Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark、2018年2月12日_
 - [ステートチャネル - 解説](https://www.jeffcoleman.ca/state-channels/) _2015年11月6日 - Jeff Coleman_
-- [ステートチャネルの基礎](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [ステートチャネルの基礎](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [ブロックチェーンステートチャネル：最新技術](https://ieeexplore.ieee.org/document/9627997)
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_

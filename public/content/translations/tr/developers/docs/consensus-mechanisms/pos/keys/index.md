@@ -96,7 +96,7 @@ Her dal bir `/` ile ayrılır, dolayısıyla `m/2` ana anahtarla başlayıp 2. d
 
 ## Daha fazla kaynak {#further-reading}
 
-- [Carl Beekhuizen'den Ethereum Foundation blog gönderisi](https://blog.ethereum.org/2020/05/21/keys/)
+- [Carl Beekhuizen'den Ethereum Foundation blog gönderisi](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 BLS12-381 anahtar üretimi](https://eips.ethereum.org/EIPS/eip-2333)
 - [EIP-7002: Yürütme Katmanı Tarafından Tetiklenen Çıkışlar](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [Büyük ölçekte anahtar yönetimi](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

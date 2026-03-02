@@ -101,7 +101,7 @@ Em termos gerais, a prova de participação tem o mesmo objetivo final que a pro
 ## Leitura adicional {#further-reading}
 
 - [Ataque majoritário](https://en.bitcoin.it/wiki/Majority_attack)
-- [Finalidade do acordo](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Finalidade do acordo](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Vídeos {#videos}
 

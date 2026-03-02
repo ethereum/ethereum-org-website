@@ -97,7 +97,7 @@ Wateja wa makubaliano hushiriki katika mtandao tofauti wa rika-kwa-rika wenye vi
 
 ### Ugunduzi {#consensus-discovery}
 
-Sawa na wateja wa utekelezaji, wateja wa makubaliano hutumia [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) juu ya UDP kwa ajili ya kupata rika. Utekelezaji wa safu ya makubaliano ya discv5 unatofautiana na ule wa wateja wa utekelezaji tu kwa kuwa inajumuisha adapta inayounganisha discv5 kwenye mrundiko wa [libP2P](https://libp2p.io/), na kuacha kutumia DevP2P. Vipindi vya RLPx vya safu ya utekelezaji vimepitwa na wakati na badala yake kunatumiwa mpeano wa mikono wa kituo salama cha kelele cha libP2P.
+Sawa na wateja wa utekelezaji, wateja wa makubaliano hutumia [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) juu ya UDP kwa ajili ya kupata rika. Utekelezaji wa safu ya makubaliano ya discv5 unatofautiana na ule wa wateja wa utekelezaji tu kwa kuwa inajumuisha adapta inayounganisha discv5 kwenye mrundiko wa [libP2P](https://libp2p.io/), na kuacha kutumia DevP2P. Vipindi vya RLPx vya safu ya utekelezaji vimepitwa na wakati na badala yake kunatumiwa mpeano wa mikono wa kituo salama cha kelele cha libP2P.
 
 ### ENRs {#consensus-enr}
 
@@ -109,7 +109,7 @@ Mrundiko wa libP2P unaunga mkono mawasiliano yote baada ya ugunduzi. Wateja wana
 
 ### Uvumi {#gossip}
 
-Kikoa cha uvumi kinajumuisha habari zote ambazo zinapaswa kuenea haraka kote kwenye mtandao. Hii inajumuisha bloku za beacon, thibitisho, uthibitisho, kutoka na adhabu. Hii inapitishwa kwa kutumia libP2P gossipsub v1 na inategemea metadata mbalimbali kuhifadhiwa ndani ya kila nodi, ikiwa ni pamoja na ukubwa wa juu wa mizigo ya uvumi kupokea na kusambaza. Taarifa za kina kuhusu kikoa cha uvumi zinapatikana [hapa](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+Kikoa cha uvumi kinajumuisha habari zote ambazo zinapaswa kuenea haraka kote kwenye mtandao. Hii inajumuisha bloku za beacon, thibitisho, uthibitisho, kutoka na adhabu. Hii inapitishwa kwa kutumia libP2P gossipsub v1 na inategemea metadata mbalimbali kuhifadhiwa ndani ya kila nodi, ikiwa ni pamoja na ukubwa wa juu wa mizigo ya uvumi kupokea na kusambaza. Taarifa za kina kuhusu kikoa cha uvumi zinapatikana [hapa](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Ombi-jibu {#request-response}
 
@@ -155,7 +155,7 @@ Mchoro wa safu ya mtandao kwa wateja wa makubaliano na utekelezaji, kutoka [ethr
 
 [DevP2P](https://github.com/ethereum/devp2p)
 [LibP2p](https://github.com/libp2p/specs)
-[Vipimo vya mtandao vya safu ya makubaliano](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)
+[Vipimo vya mtandao vya safu ya makubaliano](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure)
 [kademlia hadi discv5](https://vac.dev/kademlia-to-discv5)
 [karatasi ya kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [utangulizi wa Ethereum p2p](https://p2p.paris/en/talks/intro-ethereum-networking/)

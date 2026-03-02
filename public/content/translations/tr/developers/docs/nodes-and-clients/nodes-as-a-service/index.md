@@ -272,7 +272,6 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Ücretsiz başlayın
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Belgeler](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Özellikler
     - 50'den fazla blok zincir düğümüne erişim
     - Ücretsiz API Anahtarı
@@ -283,11 +282,10 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Paylaşılan, arşivlenen, yedeklenen ve özel düğümler
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Belgeler](https://docs.pokt.network/home/)
+  - [Belgeler](https://docs.pokt.network/)
   - Özellikler
     - Merkeziyetsiz RPC Protokolü ve Pazar Yeri
     - Günlük 1 Milyon Talep Bulunan Ücretsiz Katman (uç nokta başına maks. 2)
-    - [Genel Uç Noktalar](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ Programı (günde 1 milyondan fazla talebe ihtiyacınız varsa)
     - 15'ten Fazla Blok Zinciri Desteklenir
     - Uygulamalara hizmet ederek POKT kazanan 6400'den fazla Düğüm

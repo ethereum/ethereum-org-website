@@ -30,7 +30,6 @@ lang: mr
 
 हे सामान्य प्लॅटफॉर्म संपूर्ण Web3 स्पेसमध्ये अनुदानांचे विस्तृत कव्हरेज देतात आणि निधी शोधणाऱ्या कोणासाठीही उपयुक्त प्रारंभ बिंदू आहेत:
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks ने सर्व अनुदान, RFPs आणि बग बाऊंटीजची एक सर्वसमावेशक डिरेक्टरी संकलित केली आहे._
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _ब्लॉकचेन आणि क्रिप्टो अनुदानांची डिरेक्टरी_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - सर्व web3 अनुदान कार्यक्रमांची डिरेक्टरी, साप्ताहिक आधारावर अद्यतनित
 

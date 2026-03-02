@@ -101,7 +101,7 @@ lang: uk
 ## Додаткові матеріали {#further-reading}
 
 - [Атака більшості](https://en.bitcoin.it/wiki/Majority_attack)
-- [Про завершеність розрахунків](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Про завершеність розрахунків](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Відео {#videos}
 

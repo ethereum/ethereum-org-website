@@ -1,6 +1,6 @@
 ---
-title: Доказательство работы (PoW)
-description: Объяснение протокола доказательства работы и его роли в Ethereum.
+title: "Доказательство работы (PoW)"
+description: "Объяснение протокола доказательства работы и его роли в Ethereum."
 lang: ru
 incomplete: true
 ---
@@ -99,7 +99,7 @@ Ethereum, как и Bitcoin, в настоящий момент использу
 ## Дополнительные ресурсы {#further-reading}
 
 - [Атака большинства](https://en.bitcoin.it/wiki/Majority_attack)
-- [О финальности расчетов](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [О финальности расчетов](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Видео {#videos}
 

@@ -82,6 +82,5 @@ As plataformas nativas de financiamento de bens públicos da Web3, como [Gitcoin
 
 ## Tópicos relacionados {#related-topics}
 
-- [Visão do Ethereum](/roadmap/vision/)
 - [A Beacon Chain](/roadmap/beacon-chain)
 - [The Merge (A Fusão)](/roadmap/merge/)

@@ -18,21 +18,19 @@ Esses programas abrangem um amplo ecossistema Ethereum ao oferecer recompensas a
 - [Moloch DAO](https://www.molochdao.com/) – _Privacidade, dimensionamento da camada 2, segurança do cliente e mais_
 - [Concessões DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _Planilha Google de organizações que oferecem concessões_
 - [Bolsas acadêmicas](https://esp.ethereum.foundation/academic-grants) – _Bolsas para apoiar o trabalho acadêmico relacionado com o Ethereum_
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _A Blockworks compilou um diretório abrangente de todas as recompensas, RFPs e programas de caça a bugs._
 
 ## Especificidades do projeto {#project-specific}
 
 Estes projetos criaram seus próprios programas de recompensas destinados a desenvolvimento e experimentação de suas tecnologias.
 
 - [Programa de concessões Aave](https://aavegrants.org/) – _[Aave](https://aave.com/) concede DAO_
-- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _Fundo do ecossistema [Balancer](https://balancer.fi/)_
-- [Programa de concessões da Chainlink](https://chain.link/community/grants) – _Concessões da comunidade da [Chainlink](https://chain.link/)_
+- [Balancer](https://balancer.gitbook.io/balancer-v2/ecosystem/community/grants) – _Fundo do ecossistema [Balancer](https://balancer.fi/)_
 - [Programa de recompensas Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/)Metaverso DAO_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _Ecossistema financeiro [Lido](https://lido.fi/)_
 - [Programa MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) bolsas lideradas por funcionários DAO_
 - [Programa de bolsas da SKALE Network](https://skale.space/developers#grants) - _[Ecossistema da SKALE Network](https://skale.space/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecossistema [The Graph](https://thegraph.com/)_
-- [Uniswap Grants Program](https://www.uniswapfoundation.org/opportunities) - _[Comunidade da Uniswap](https://uniswap.org/)_
+- [Uniswap Grants Program](https://www.uniswapfoundation.org/grants) - _[Comunidade da Uniswap](https://uniswap.org/)_
 
 ## Financiamento quadrático {#quadratic-funding}
 

@@ -26,8 +26,7 @@ Proyek-proyek ini telah menciptakan hibah sendiri untuk proyek-proyek yang bertu
 
 - [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _ekosistem [The Graph](https://thegraph.com/)_
 - [Program Hibah Uniswap](https://www.uniswapfoundation.org/) – _komunitas [Uniswap](https://uniswap.org/)_
-- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _Dana Ekosistem [Balancer](https://balancer.fi/)_
-- [mStable](https://docs.mstable.org/advanced/grants-program) - _[komunitas](https://mstable.org/) mStable_
+- [Balancer](https://balancer.gitbook.io/balancer-v2/ecosystem/community/grants) – _Dana Ekosistem [Balancer](https://balancer.fi/)_
 
 ## Pendanaan kuadrat {#quadratic-funding}
 

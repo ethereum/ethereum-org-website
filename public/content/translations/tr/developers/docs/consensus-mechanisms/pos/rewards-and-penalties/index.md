@@ -60,7 +60,7 @@ Blok önericileri, bloğa dahil edilen **her geçerli tasdikleme** için `8 / 64
 
 Hedef ve kaynak oylamalarını kaçırmanın cezası tasdik edicinin onları verseydi kazanacağı ödüllere eşittir. Bu ödülün bakiyelerine eklenmesi yerine, eşit bir miktarın bakiyelerinden silindiği anlamına gelir. Baş oylamasını kaçırmanın bir cezası yoktur (yani baş oyları sadece ödüllendirilir, asla cezalandırılmaz). `inclusion_delay` ile ilişkili bir ceza yoktur; ödül yalnızca doğrulayıcının bakiyesine eklenmez. Ayrıca blok önermekte başarısız olunması için de bir ceza yoktur.
 
-Ödüller ve cezalar hakkında [mutabakat spesifikasyonlarında](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md) daha fazlasını okuyun. Ödüller ve cezalar Bellatrix yükseltmesinde ayarlandı - Danny Ryan ve Vitalik'in bunu tartıştığı [Peep an EIP videosunu](https://www.youtube.com/watch?v=iaAEGs1DMgQ) izleyin.
+Ödüller ve cezalar hakkında [mutabakat spesifikasyonlarında](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md) daha fazlasını okuyun. Ödüller ve cezalar Bellatrix yükseltmesinde ayarlandı - Danny Ryan ve Vitalik'in bunu tartıştığı [Peep an EIP videosunu](https://www.youtube.com/watch?v=iaAEGs1DMgQ) izleyin.
 
 ## Kesinti {#slashing}
 

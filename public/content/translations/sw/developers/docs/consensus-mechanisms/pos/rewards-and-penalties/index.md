@@ -60,7 +60,7 @@ Hadi sasa tumezingatia validators kikamilifu vizuri-alitenda, lakini nini kuhusu
 
 Adhabu kwa kukosa lengo na chanzo kura ni sawa na tuzo attestor ingekuwa kupokea kama wao kuwasilishwa yao. Hii ina maana kwamba badala ya kuwa na tuzo aliongeza kwa mizani yao, wana thamani sawa kuondolewa kutoka mizani yao. Hakuna adhabu kwa kukosa kura ya kiongozi (yaani, kura za kiongozi huzawadiwa tu, haziadhibiwi kamwe). Hakuna adhabu inayohusiana na `inclusion_delay` - zawadi haitaongezwa tu kwenye salio la mthibitishaji. Pia hakuna adhabu kwa kushindwa kupendekeza kizuizi.
 
-Soma zaidi kuhusu zawadi na adhabu katika [vipimo vya makubaliano](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Zawadi na adhabu zilirekebishwa katika sasisho la Bellatrix - tazama Danny Ryan na Vitalik wakijadili hili katika [video hii ya Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
+Soma zaidi kuhusu zawadi na adhabu katika [vipimo vya makubaliano](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md). Zawadi na adhabu zilirekebishwa katika sasisho la Bellatrix - tazama Danny Ryan na Vitalik wakijadili hili katika [video hii ya Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
 ## Upunguzaji (Slashing) {#slashing}
 

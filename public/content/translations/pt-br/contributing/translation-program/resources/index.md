@@ -13,7 +13,7 @@ Você pode encontrar alguns guias e ferramentas úteis para tradutores do ethere
 - [Guia de estilo de tradução](/contributing/translation-program/translators-guide/) _: instruções e dicas para tradutores do ethereum.org_
 - [Perguntas frequentes sobre tradução](/contributing/translation-program/faq/) _ — perguntas frequentes e respostas sobre o Programa de Tradução do ethereum.org_
 - [Guia do editor online do Crowdin](https://support.crowdin.com/online-editor/) _ — um guia detalhado sobre como usar o editor online do Crowdin e algumas funcionalidades avançadas do Crowdin_
-- [Pacotes de conteúdo](/contributing/translation-program/content-buckets/) _ — quais páginas estão incluídas em cada pacote de conteúdo do ethereum.org_
+- [Pacotes de conteúdo](/contributing/translation-program/) _ — quais páginas estão incluídas em cada pacote de conteúdo do ethereum.org_
 
 ## Ferramentas {#tools}
 
@@ -30,10 +30,10 @@ Você pode encontrar alguns guias e ferramentas úteis para tradutores do ethere
 
 Para se manter atualizado sobre os avanços mais recentes do Programa de Tradução, você pode seguir o [blog da Fundação Ethereum](https://blog.ethereum.org/):
 
-- [Atualização de outubro de 2021](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Atualização de dezembro de 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Atualização de julho de 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Lançamento do Programa de Tradução de agosto de 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Atualização de outubro de 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Atualização de dezembro de 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Atualização de julho de 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Lançamento do Programa de Tradução de agosto de 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Horários de trabalho para tradutores {#office-hours}
 

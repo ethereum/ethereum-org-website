@@ -51,7 +51,7 @@ lang: zh-tw
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - 為現有和潛在質押者提供由社群經營的指導、教育、支援和資源</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org 網站團隊</Link> - 來和團隊及社群成員聊聊 ethereum.org 的網站開發和設計吧</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - Web3 創作者社群，是開發者、產業領袖和以太坊愛好者的聚集地。 我們熱愛 web3 開發、設計及文化。 來和我們一起開發吧。</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - Solidity 開發聊天室 (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.element.io/#/room/#solidity:matrix.org">Solidity Matrix</Link> - Solidity 開發聊天室 (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity 開發聊天室 (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 問答論壇</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- 去中心化問答論壇</i></SocialListItem>

@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Ayrıca fonları hesaplara gönderen bir "itme ödemeleri" sistemi yerine, kullanıcıların akıllı sözleşmelerden fonlarını çekmesini gerektiren bir [çekme ödemeleri](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) sistemini de kullanabilirsiniz. Bu, bilinmeyen adreslerde yanlışlıkla kod tetikleme ihtimalini ortadan kaldırır (ve aynı zamanda belirli hizmet reddi saldırılarını önleyebilir).
+Ayrıca fonları hesaplara gönderen bir "itme ödemeleri" sistemi yerine, kullanıcıların akıllı sözleşmelerden fonlarını çekmesini gerektiren bir [çekme ödemeleri](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment) sistemini de kullanabilirsiniz. Bu, bilinmeyen adreslerde yanlışlıkla kod tetikleme ihtimalini ortadan kaldırır (ve aynı zamanda belirli hizmet reddi saldırılarını önleyebilir).
 
 #### Tamsayı yetersizlikleri ve taşmaları {#integer-underflows-and-overflows}
 

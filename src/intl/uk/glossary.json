@@ -150,7 +150,7 @@
   "ethash-term": "Ethash",
   "ethash-definition": "Алгоритм <a href=\"/glossary/#pow\">доказу роботи</a>, який використовувався на Ethereum до переходу на <a href=\"/glossary/#pos\">доказ частки</a>. <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">Дізнатися більше</a>",
   "ether-term": "Ефір (Ether)",
-  "ether-definition": "Нативна криптовалюта Ethereum, яку зазвичай називають «ETH». Вона використовується для покриття комісій за транзакції при використанні екосистеми та програм Ethereum. <a href=\"/eth/\">Більше про ефір</a>.",
+  "ether-definition": "Нативна криптовалюта Ethereum, яку зазвичай називають «ETH». Вона використовується для покриття комісій за транзакції при використанні екосистеми та програм Ethereum. <a href=\"/what-is-ether/\">Більше про ефір</a>.",
   "events-term": "Події",
   "events-definition": "Дозволяє використовувати засоби ведення журналів <a href=\"/glossary/#evm\">EVM</a>. <a href=\"/glossary/#dapp\">Dapps</a> можуть прослуховувати події та використовувати їх для запуску зворотних викликів JavaScript в інтерфейсі користувача. <a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">Більше про події та журнали</a>",
   "evm-term": "Віртуальна машина Ethereum (EVM)",

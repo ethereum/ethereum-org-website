@@ -255,7 +255,7 @@ Vários projetos fornecem implementações da cadeia Plasma que você pode integ
 
 - [Entendendo a camada 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _12 de fev., 2018 - Josh Stark_
 - [Canais de estado: uma explicação](https://www.jeffcoleman.ca/state-channels/) _6 de nov., 2015 - Jeff Coleman_
-- [Fundamentos dos canais de estado](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Fundamentos dos canais de estado](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [Canais de estado da blockchain: um componente de última geração](https://ieeexplore.ieee.org/document/9627997)
 
 _Conhece um recurso da comunidade que ajudou você? Edite essa página e adicione-o!_

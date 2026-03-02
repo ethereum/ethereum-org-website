@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-アカウントに資金を送る「プッシュ型決済」システムではなく、ユーザーがスマートコントラクトから資金を引き出す必要がある「[プル型決済](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment)」システムを利用することもできます。 これにより、不明なアドレスで不注意にコードをトリガーする可能性を取り除けます (特定のDoS攻撃も防げます) 。
+アカウントに資金を送る「プッシュ型決済」システムではなく、ユーザーがスマートコントラクトから資金を引き出す必要がある「[プル型決済](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment)」システムを利用することもできます。 これにより、不明なアドレスで不注意にコードをトリガーする可能性を取り除けます (特定のDoS攻撃も防げます) 。
 
 #### 整数アンダーフローとオーバーフロー {#integer-underflows-and-overflows}
 

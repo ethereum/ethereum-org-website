@@ -241,7 +241,7 @@ modifier auth() {
 
 #### Функція `mount` {#the-mount-function}
 
-Хоча це не вказано в [стандарті](https://eips.ethereum.org/EIPS/eip-20), загалом кажучи, функція, що створює нові токени, називається [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
+Хоча це не вказано в [стандарті](https://eips.ethereum.org/EIPS/eip-20), загалом кажучи, функція, що створює нові токени, називається [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 
 Якщо ми подивимося в конструктор `wARB`, ми побачимо, що функцію карбування з якоїсь причини перейменовано на `mount` і викликається п’ять разів з п’ятою частиною початкової пропозиції, замість одного разу для всієї суми для ефективності.
 
