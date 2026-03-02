@@ -230,3 +230,4 @@ parameters: {
 ```
 
 > 🚨 NOTE: This will be noted ahead of time by the team which stories should not receive snapshots.#Test contribution
+> This documentation is maintained by the community.
