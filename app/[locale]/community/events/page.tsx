@@ -224,7 +224,13 @@ const Page = async ({ params }: { params: PageParams }) => {
                           sizes="6rem"
                         />
                       </div>
-                      <h3 className="text-2xl font-bold">{location}</h3>
+                      <h3 className="text-2xl font-bold">
+                        {location}
+                        <span className="sr-only">
+                          &nbsp;
+                          {t("page-events-meta-ethereum-community-hub")}
+                        </span>
+                      </h3>
                       <div className="space-y-[1lh]">
                         <p>{t(descriptionKey)}</p>
                         <p>{t(ctaKey)}</p>
