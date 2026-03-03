@@ -1,7 +1,7 @@
 ---
 title: "Sponsoring gas fees: How to cover transaction costs for your users"
 description: It is easy to create a private key and an address; it's just a matter of running the right software. But there are many places in the world where getting the ETH to send transactions is much harder. In this tutorial you learn how to cover the onchain gas costs for executing user-signed, offchain structured data in your smart contract. You have the user sign a structure containing the transaction information, which your offchain code then submits to the blockchain as a transaction.
-author: اوری پومیرانٹز
+author: "اوری پومیرانٹز"
 tags: [ "gasless", "solidity", "eip-712", "meta-transactions" ]
 skill: intermediate
 lang: ur-in
