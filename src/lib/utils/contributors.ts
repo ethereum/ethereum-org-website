@@ -11,7 +11,7 @@ import {
 import { getAppPageLastCommitDate } from "./gh"
 import { getLocaleTimestamp } from "./time"
 
-import { getGitHubContributors } from "@/lib/data"
+import { getGitHubContributors, getStaticGitHubContributors } from "@/lib/data"
 
 export const getMarkdownFileContributorInfo = async (
   slug: string,
@@ -20,8 +20,7 @@ export const getMarkdownFileContributorInfo = async (
 ) => {
   const mdPath = join(CONTENT_PATH, slug)
 
-  // Load from data-layer (fetched by scheduled task, stored in Netlify Blobs)
-  const contributorsData = await getGitHubContributors()
+  const contributorsData = await getStaticGitHubContributors()
   const gitHubContributors = contributorsData?.content[slug] ?? []
 
   // Use contributor date from data-layer, fallback to current date for new/missing content
@@ -48,7 +47,6 @@ export const getAppPageContributorInfo = async (
 ) => {
   // TODO: Incorporate Crowdin contributor information
 
-  // Load from data-layer (fetched by scheduled task, stored in Netlify Blobs)
   const contributorsData = await getGitHubContributors()
   const gitHubContributors = contributorsData?.appPages[pagePath] ?? []
 

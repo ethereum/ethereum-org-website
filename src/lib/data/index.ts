@@ -11,7 +11,7 @@ const CACHE_REVALIDATE_DAY = BASE_TIME_UNIT * 24
 function createCachedGetter<T>(
   fetcher: () => Promise<T>,
   cacheKey: string[],
-  revalidate: number
+  revalidate: number | false
 ) {
   const persistentCache = unstable_cache(fetcher, cacheKey, { revalidate })
   return cache(persistentCache)
@@ -165,4 +165,16 @@ export const getGitHubContributors = createCachedGetter(
   dataLayer.getGitHubContributors,
   ["github-contributors"],
   CACHE_REVALIDATE_DAY
+)
+
+/**
+ * Static-cached version of getGitHubContributors — no revalidation.
+ * Use this in static pages (e.g., md content pages via [...slug]) to avoid
+ * opting them into ISR, which would cause 404s in the serverless environment
+ * where public/content is not available.
+ */
+export const getStaticGitHubContributors = createCachedGetter(
+  dataLayer.getGitHubContributors,
+  ["github-contributors-static"],
+  false
 )
