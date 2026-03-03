@@ -1050,7 +1050,7 @@ describe("BasicToken", () => {
 })
 ```
 
-Então, usamos o `deployContract` método de `Waffle`para publicar nosso token. Como argumentos, devemos passar a carteira ``, o arquivo json compilado de nosso contrato e saldo padrão.
+Então, usamos o `deployContract` método de `Waffle`para publicar nosso token. Como argumentos, devemos passar a `wallet`, o arquivo json compilado de nosso contrato e saldo padrão.
 
 `Waffle` também nos permite criar uma `carteira`, o que facilita a implantação de um contrato.
 
