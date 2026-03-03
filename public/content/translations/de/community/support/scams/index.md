@@ -103,7 +103,7 @@ Betrüger erstellen gefälschte Giveaways, die versprechen, Ihre ETH zu vervielf
 
 <ExpandableCard
 title="Identitätsdiebstahl und gefälschter Support"
-contentPreview="Niemand von Ethereum oder ethereum.org wird Sie jemals zuerst kontaktieren."
+contentPreview="Niemand von Ethereum oder ethereum.org wird dich jemals zuerst kontaktieren."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 
@@ -122,7 +122,7 @@ Betrüger geben sich auf Discord, Telegram und in den sozialen Medien als Mitgli
 
 <ExpandableCard
 title="Wiederherstellungsbetrug"
-contentPreview="Hüten Sie sich nach einem Betrug vor falschen 'Krypto-Wiederherstellungsexperten'."
+contentPreview="Hüte dich nach einem Betrug vor falschen 'Krypto-Wiederherstellungsexperten'."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 
@@ -138,7 +138,7 @@ Sie versprechen, Ihre gestohlene Kryptowährung gegen eine Vorauszahlung aufzusp
 
 <ExpandableCard
 title="Phishing-Websites und gefälschte Apps"
-contentPreview="Betrügerische Websites ahmen echte Wallets und Börsen nach, um Ihre Anmeldedaten zu stehlen."
+contentPreview="Betrügerische Websites ahmen echte Wallets und Börsen nach, um deine Anmeldedaten zu stehlen."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 
