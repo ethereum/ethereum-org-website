@@ -122,7 +122,7 @@ Podvodníci se na Discordu, Telegramu a sociálních sítích vydávají za čle
 
 <ExpandableCard
 title="Podvody s obnovou"
-contentPreview="Poté, co jste se stali obětí podvodu, dejte si pozor na falešné 'experty na obnovu kryptoměn.'"
+contentPreview="Poté, co jste se stali obětí podvodu, dejte si pozor na falešné „experty na obnovu kryptoměn“."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 
