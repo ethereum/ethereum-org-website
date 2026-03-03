@@ -133,8 +133,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         ) : (
           children
         )}
-        <span className="sr-only">
-          {isMailto ? "opens email client" : "opens in a new tab"}
+        <span className="sr-only select-none">
+          &nbsp;
+          {isMailto ? "(opens email client)" : "(opens in a new tab)"}
         </span>
         {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>

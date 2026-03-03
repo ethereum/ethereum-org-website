@@ -104,11 +104,25 @@ const AlertEmoji = ({ className, ...props }: EmojiProps) => (
   />
 )
 
+const AlertIcon = ({
+  className,
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn("mt-0.5 shrink-0 self-start [&>svg]:size-6", className)}
+    {...props}
+  >
+    {children}
+  </div>
+)
+
 export {
   Alert,
   AlertCloseButton,
   AlertContent,
   AlertDescription,
   AlertEmoji,
+  AlertIcon,
   AlertTitle,
 }

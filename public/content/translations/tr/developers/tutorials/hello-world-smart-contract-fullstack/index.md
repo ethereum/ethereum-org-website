@@ -240,7 +240,7 @@ Do not name it `process.env` or `.env-custom` or anything else.
 - Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key
 - HTTP Alchemy API URL'sini almak için aşağıya bakın
 
-![](./get-alchemy-api-key.gif)
+![Alchemy API anahtarı almanın animasyonlu açıklaması](./get-alchemy-api-key.gif)
 
 `.env` dosyanız şu şekilde görünmelidir:
 
@@ -359,17 +359,17 @@ Sözleşme şu adrese dağıtıldı: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 If we go to the [Goerli etherscan](https://goerli.etherscan.io) and search for our contract address we should able to see that it has been deployed successfully. İşlem şunun gibi gözükecektir:
 
-![](./etherscan-contract.png)
+![Etherscan'de konuşlandırılmış bir akıllı sözleşmenin ekran görüntüsü](./etherscan-contract.png)
 
 The `From` address should match your MetaMask account address and the `To` address will say **Contract Creation**. If we click into the transaction we’ll see our contract address in the `To` field.
 
-![](./etherscan-transaction.png)
+![Etherscan'deki bir işlemin ekran görüntüsü](./etherscan-transaction.png)
 
 Tebrikler! You just deployed a smart contract to an Ethereum testnet.
 
 To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemy.com/explorer). If you have multiple Alchemy apps make sure to filter by app and select **Hello World**.
 
-![](./hello-world-explorer.png)
+![Blok gezginindeki Merhaba Dünya akıllı sözleşmesinin ekran görüntüsü](./hello-world-explorer.png)
 
 Here you’ll see a handful of JSON-RPC methods that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important methods here are [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), which is the request to write our contract onto the Goerli chain, and [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), which is a request to read information about our transaction given the hash. To learn more about sending transactions, check out [our tutorial on sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
