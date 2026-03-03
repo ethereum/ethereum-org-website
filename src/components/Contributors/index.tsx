@@ -30,7 +30,7 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
       <Image
         className="h-[132px] w-[132px]"
         src={contributor.avatar_url}
-        alt={contributor.name}
+        alt=""
         width={132}
         height={132}
         sizes="132px"
