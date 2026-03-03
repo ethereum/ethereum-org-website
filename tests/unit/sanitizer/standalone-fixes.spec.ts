@@ -35,6 +35,8 @@ const {
   escapeTildeStrikethrough,
   fixBoldAdjacentNonLatin,
   fixItalicAdjacentNonLatin,
+  fixDuplicateFrontmatterAuthor,
+  fixBrokenBracketInLinks,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -128,6 +130,42 @@ test.describe("Standalone Fixes", () => {
       expect(content).toContain("| 2\\*\\*256 | value |")
       expect(fixCount).toBe(1)
     })
+
+    test("preserves escaped asterisks used as multiplication signs", () => {
+      const input =
+        "_account<sub>new</sub> = condition<sub>result</sub>\\*i + (1-condition<sub>result</sub>)\\*account<sub>old</sub>_"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("preserves standalone escaped asterisks adjacent to operands", () => {
+      const input = "result = a\\*b + c\\*d"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("still fixes italic when preceded by whitespace", () => {
+      const input = "This is \\*italic text\\* here"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe("This is *italic text* here")
+      expect(fixCount).toBe(1)
+    })
+
+    test("still fixes italic at start of line", () => {
+      const input = "\\*italic\\* at start"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe("*italic* at start")
+      expect(fixCount).toBe(1)
+    })
+
+    test("still fixes bold when preceded by whitespace", () => {
+      const input = "This is \\*\\*bold text\\*\\* here"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe("This is **bold text** here")
+      expect(fixCount).toBe(1)
+    })
   })
 
   test.describe("fixAsciiGuillemets", () => {
@@ -180,6 +218,27 @@ test.describe("Standalone Fixes", () => {
       const { content, fixCount } = fixTickerTranspositions(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
+    })
+
+    test("corrects TNF to NFT", () => {
+      const input = "Um TNF é um token único"
+      const { content, fixCount } = fixTickerTranspositions(input)
+      expect(content).toBe("Um NFT é um token único")
+      expect(fixCount).toBe(1)
+    })
+
+    test("corrects TNFs to NFTs", () => {
+      const input = "representados como TNFs na Ethereum"
+      const { content, fixCount } = fixTickerTranspositions(input)
+      expect(content).toBe("representados como NFTs na Ethereum")
+      expect(fixCount).toBe(1)
+    })
+
+    test("corrects TNF adjacent to markdown italic underscore", () => {
+      const input = "_propriedade de TNF_"
+      const { content, fixCount } = fixTickerTranspositions(input)
+      expect(content).toBe("_propriedade de NFT_")
+      expect(fixCount).toBe(1)
     })
   })
 
@@ -1144,6 +1203,129 @@ test.describe("Standalone Fixes", () => {
       const { content, fixCount } = escapeTildeStrikethrough(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixDuplicateFrontmatterAuthor", () => {
+    test("removes duplicate author continuation line", () => {
+      const input = `---
+title: Merkle proofs
+author: Ori Pomerantz
+  Ori Pomerantz
+tags: ["storage"]
+---
+
+Content here.`
+      const { content, fixCount } = fixDuplicateFrontmatterAuthor(input)
+      expect(content).toBe(`---
+title: Merkle proofs
+author: Ori Pomerantz
+tags: ["storage"]
+---
+
+Content here.`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves single-line author unchanged", () => {
+      const input = `---
+title: Test
+author: Ori Pomerantz
+tags: ["test"]
+---
+
+Content.`
+      const { content, fixCount } = fixDuplicateFrontmatterAuthor(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles author with different name", () => {
+      const input = `---
+title: Test
+author: Jane Doe
+  Jane Doe
+tags: ["test"]
+---
+
+Content.`
+      const { content, fixCount } = fixDuplicateFrontmatterAuthor(input)
+      expect(content).toBe(`---
+title: Test
+author: Jane Doe
+tags: ["test"]
+---
+
+Content.`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not remove non-duplicate continuation", () => {
+      const input = `---
+title: Test
+author: Ori Pomerantz
+  and Sam Richards
+tags: ["test"]
+---
+
+Content.`
+      const { content, fixCount } = fixDuplicateFrontmatterAuthor(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not modify content outside frontmatter", () => {
+      const input = `---
+title: Test
+author: Ori Pomerantz
+---
+
+author: Ori Pomerantz
+  Ori Pomerantz`
+      const { content, fixCount } = fixDuplicateFrontmatterAuthor(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixBrokenBracketInLinks", () => {
+    test("fixes } instead of ] in markdown links", () => {
+      const input = `[Mais em staking withdrawals}(/staking/withdrawals/)`
+      const { content, fixCount } = fixBrokenBracketInLinks(input)
+      expect(content).toBe(
+        `[Mais em staking withdrawals](/staking/withdrawals/)`
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes multiple broken brackets", () => {
+      const input = `[link1}(url1) and [link2}(url2)`
+      const { content, fixCount } = fixBrokenBracketInLinks(input)
+      expect(content).toBe(`[link1](url1) and [link2](url2)`)
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves correct markdown links unchanged", () => {
+      const input = `[correct link](/path/)`
+      const { content, fixCount } = fixBrokenBracketInLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves curly braces in code blocks unchanged", () => {
+      const input = "```\n[something}(other)\n```"
+      const { content, fixCount } = fixBrokenBracketInLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles } followed by newline then (url)", () => {
+      const input = `[Mais em staking withdrawals}\n(/staking/withdrawals/)`
+      const { content, fixCount } = fixBrokenBracketInLinks(input)
+      expect(content).toBe(
+        `[Mais em staking withdrawals](/staking/withdrawals/)`
+      )
+      expect(fixCount).toBe(1)
     })
   })
 })

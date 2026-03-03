@@ -49,7 +49,8 @@ test.describe("English Comparison Fixes", () => {
 
     test("normalizes accented IDs to ASCII", () => {
       const english = "## \u00DCber uns {#\u00FCber-uns}"
-      const translated = "## \u79C1\u305F\u3061\u306B\u3064\u3044\u3066 {#\u79C1\u305F\u3061}"
+      const translated =
+        "## \u79C1\u305F\u3061\u306B\u3064\u3044\u3066 {#\u79C1\u305F\u3061}"
       const result = syncHeaderIdsWithEnglish(translated, english)
       expect(result).toContain("{#uber-uns}")
     })
@@ -147,24 +148,36 @@ test.describe("English Comparison Fixes", () => {
       expect(fixCount).toBe(1)
     })
 
-    test("returns unchanged when tag counts mismatch", () => {
+    test("fixes brand tags even when tag counts differ", () => {
       const english = [
         "---",
-        'tags: ["solidity"]',
+        'tags: ["solidity", "smart contracts", "erc-721"]',
         "---",
       ].join("\n")
       const translated = [
         "---",
-        'tags: ["\u30BD\u30EA\u30C7\u30A3\u30C6\u30A3", "extra"]',
+        'tags: ["solidez", "smart contracts"]',
         "---",
       ].join("\n")
       const { content, fixCount } = fixBrandTags(translated, english)
-      expect(content).toBe(translated)
-      expect(fixCount).toBe(0)
+      expect(content).toContain('"Solidity"')
+      expect(content).not.toContain('"solidez"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes brand tags when translation has fewer tags", () => {
+      const english = ["---", 'tags: ["solidity", "dapps"]', "---"].join("\n")
+      const translated = ["---", 'tags: ["solidez"]', "---"].join("\n")
+      const { content, fixCount } = fixBrandTags(translated, english)
+      expect(content).toContain('"Solidity"')
+      expect(fixCount).toBe(1)
     })
 
     test("returns unchanged when no frontmatter", () => {
-      const { content, fixCount } = fixBrandTags("no frontmatter", "no frontmatter")
+      const { content, fixCount } = fixBrandTags(
+        "no frontmatter",
+        "no frontmatter"
+      )
       expect(content).toBe("no frontmatter")
       expect(fixCount).toBe(0)
     })
@@ -175,21 +188,14 @@ test.describe("English Comparison Fixes", () => {
       const english = "Ethereum is great. Ethereum rocks. Ethereum forever."
       const translated = "Ethereum is great. Something else. Something more."
       const { warnings } = fixProtectedBrandNames(translated, english)
-      const ethereumWarning = warnings.find((w) =>
-        w.includes('"Ethereum"')
-      )
+      const ethereumWarning = warnings.find((w) => w.includes('"Ethereum"'))
       expect(ethereumWarning).toBeDefined()
       expect(ethereumWarning).toContain("3x in English")
       expect(ethereumWarning).toContain("1x in translation")
     })
 
     test("delegates tag fixing to fixBrandTags", () => {
-      const english = [
-        "---",
-        'tags: ["solidity"]',
-        "---",
-        "Content",
-      ].join("\n")
+      const english = ["---", 'tags: ["solidity"]', "---", "Content"].join("\n")
       const translated = [
         "---",
         'tags: ["\u30BD\u30EA\u30C7\u30A3\u30C6\u30A3"]',
@@ -366,7 +372,8 @@ test.describe("English Comparison Fixes", () => {
 
     test("leaves unchanged when English has single-line format", () => {
       const english = '<ButtonLink href="/test">Click</ButtonLink>'
-      const translated = '<ButtonLink href="/test">\u30AF\u30EA\u30C3\u30AF</ButtonLink>'
+      const translated =
+        '<ButtonLink href="/test">\u30AF\u30EA\u30C3\u30AF</ButtonLink>'
       const { content, fixCount } = fixMergedClosingTags(translated, english)
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
@@ -375,8 +382,7 @@ test.describe("English Comparison Fixes", () => {
 
   test.describe("normalizeInlineComponentsFromEnglish", () => {
     test("collapses multi-line ButtonLink to match English single-line", () => {
-      const english =
-        '<ButtonLink href="/docs">Learn more</ButtonLink>'
+      const english = '<ButtonLink href="/docs">Learn more</ButtonLink>'
       const translated =
         '<ButtonLink href="/docs">\n  \u8A73\u7D30\u306F\u3053\u3061\u3089\n</ButtonLink>'
       const { content, fixCount } = normalizeInlineComponentsFromEnglish(
@@ -413,10 +419,7 @@ test.describe("English Comparison Fixes", () => {
     test("adds closing backtick when English has balanced pair", () => {
       const english = "Use the `<Storage[4]>` to store data"
       const translated = "Use the `<Storage[4]> to store data"
-      const { content, fixCount } = repairUnclosedBackticks(
-        translated,
-        english
-      )
+      const { content, fixCount } = repairUnclosedBackticks(translated, english)
       expect(content).toContain("`<Storage[4]>`")
       expect(fixCount).toBe(1)
     })
@@ -424,10 +427,7 @@ test.describe("English Comparison Fixes", () => {
     test("leaves balanced backticks unchanged", () => {
       const english = "Use the `<Storage[4]>` to store data"
       const translated = "Use the `<Storage[4]>` to store data"
-      const { content, fixCount } = repairUnclosedBackticks(
-        translated,
-        english
-      )
+      const { content, fixCount } = repairUnclosedBackticks(translated, english)
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
     })

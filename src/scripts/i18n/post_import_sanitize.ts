@@ -171,6 +171,8 @@ const TICKER_CORRECTIONS: Record<string, string> = {
   EHT: "ETH",
   BSL: "BLS",
   ECDAS: "ECDSA",
+  TNFs: "NFTs",
+  TNF: "NFT",
 }
 
 /**
@@ -192,7 +194,12 @@ function fixTickerTranspositions(content: string): {
     if (i % 2 === 1) continue // Skip code blocks
 
     for (const [wrong, correct] of Object.entries(TICKER_CORRECTIONS)) {
-      const re = new RegExp(`\\b${escapeRegex(wrong)}\\b`, "g")
+      // Use alphanumeric-only boundaries instead of \b so that
+      // markdown syntax chars like _ (italic) don't prevent matching.
+      const re = new RegExp(
+        `(?<![A-Za-z0-9])${escapeRegex(wrong)}(?![A-Za-z0-9])`,
+        "g"
+      )
       const matches = parts[i].match(re)
       if (matches && matches.length > 0) {
         fixCount += matches.length
@@ -245,9 +252,6 @@ function fixBrandTags(
   const engTags = parseTags(engTagsMatch[1])
   const transTags = parseTags(transTagsMatch[1])
 
-  if (engTags.length !== transTags.length)
-    return { content: translatedContent, fixCount: 0 }
-
   // Build a map from lowercase brand name to canonical casing
   const brandCanonical = new Map<string, string>()
   for (const brand of PROTECTED_BRAND_NAMES) {
@@ -255,11 +259,13 @@ function fixBrandTags(
   }
 
   // Identify tags that need fixing: brand tags whose translation differs
-  // from the canonical casing
+  // from the canonical casing. Iterate the shorter list so we only fix
+  // positions that exist in both arrays (Crowdin may drop or add tags).
   let fixCount = 0
   let updatedFm = transFm
+  const minLen = Math.min(engTags.length, transTags.length)
 
-  for (let i = 0; i < transTags.length; i++) {
+  for (let i = 0; i < minLen; i++) {
     const engTag = engTags[i]
     const transTag = transTags[i]
     const canonical = brandCanonical.get(engTag.toLowerCase())
@@ -391,17 +397,29 @@ function fixEscapedBoldAndItalic(content: string): {
       if (lines[j].trimStart().startsWith("|")) continue
 
       // Fix escaped bold first: \*\*text\*\* → **text**
-      lines[j] = lines[j].replace(/\\\*\\\*(.+?)\\\*\\\*/g, (_, inner) => {
-        fixCount++
-        return `**${inner}**`
-      })
+      // Require word-boundary context: opening \*\* must be preceded by
+      // whitespace or start-of-line (not operands like `)` or `>` or word
+      // chars) to avoid stripping literal \*\* in math (e.g., 2\*\*10).
+      lines[j] = lines[j].replace(
+        /(?<=\s|^)\\\*\\\*(.+?)\\\*\\\*(?=\s|$|[.,;:!?\])>])/gm,
+        (_, inner) => {
+          fixCount++
+          return `**${inner}**`
+        }
+      )
 
       // Fix escaped italic: \*text\* → *text*
-      // Runs after bold fix, so remaining \* pairs are italic
-      lines[j] = lines[j].replace(/\\\*(.+?)\\\*/g, (_, inner) => {
-        fixCount++
-        return `*${inner}*`
-      })
+      // Runs after bold fix, so remaining \* pairs are italic.
+      // Same word-boundary guard: \* used as multiplication (e.g.,
+      // result\*i + other\*value) has operands directly adjacent,
+      // while italic \*text\* has whitespace/line-boundary outside.
+      lines[j] = lines[j].replace(
+        /(?<=\s|^)\\\*(.+?)\\\*(?=\s|$|[.,;:!?\])>])/gm,
+        (_, inner) => {
+          fixCount++
+          return `*${inner}*`
+        }
+      )
     }
     parts[i] = lines.join("\n")
   }
@@ -2244,6 +2262,14 @@ function processMarkdownFile(
   }
 
   applyFix(
+    () => fixDuplicateFrontmatterAuthor(content),
+    (n) => `Fixed ${n} duplicate author frontmatter lines`
+  )
+  applyFix(
+    () => fixBrokenBracketInLinks(content),
+    (n) => `Fixed ${n} broken } brackets in markdown links`
+  )
+  applyFix(
     () => fixDuplicatedHeadings(content),
     (n) => `Fixed ${n} duplicated headings`
   )
@@ -2722,6 +2748,69 @@ export async function runSanitizer(
   }
 }
 
+/**
+ * Fix duplicate author continuation line in frontmatter.
+ * Crowdin sometimes duplicates the author name on an indented YAML continuation
+ * line, e.g.:
+ *   author: Ori Pomerantz
+ *     Ori Pomerantz
+ * This collapses it to a single line.
+ */
+function fixDuplicateFrontmatterAuthor(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+  const frontmatterRe = /^---\n([\s\S]*?)\n---/
+  const fmMatch = content.match(frontmatterRe)
+  if (!fmMatch) return { content, fixCount }
+
+  const fm = fmMatch[1]
+  // Match: author: <name>\n  <same name>
+  const dupAuthorRe = /^(author:\s*(.+))$\n^\s+\2$/m
+  const match = fm.match(dupAuthorRe)
+  if (match) {
+    const fixedFm = fm.replace(dupAuthorRe, "$1")
+    fixCount = 1
+    return {
+      content: content.replace(frontmatterRe, `---\n${fixedFm}\n---`),
+      fixCount,
+    }
+  }
+  return { content, fixCount }
+}
+
+/**
+ * Fix broken markdown links where `}` was used instead of `]`.
+ * Crowdin sometimes replaces the closing `]` with `}` in markdown links:
+ *   [link text}(url)  ->  [link text](url)
+ * Also handles cases where a newline separates `}` from `(url)`.
+ */
+function fixBrokenBracketInLinks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match [text}\n?(url) - } instead of ] with optional newline
+    parts[i] = parts[i].replace(
+      /\[([^\]{}]+)\}\s*\n?\s*\(([^)]+)\)/g,
+      (_, text, url) => {
+        fixCount++
+        return `[${text}](${url})`
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
 /** @internal Exposed for unit testing only. Not part of the public API. */
 export const _testOnly = {
   // Standalone fixes
@@ -2762,6 +2851,8 @@ export const _testOnly = {
   escapeTildeStrikethrough,
   fixBoldAdjacentNonLatin,
   fixItalicAdjacentNonLatin,
+  fixDuplicateFrontmatterAuthor,
+  fixBrokenBracketInLinks,
   warnExposedMdxTags,
   warnCodeFenceContentDrift,
   warnCatastrophicCodeFenceDrift,

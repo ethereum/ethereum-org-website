@@ -36,6 +36,9 @@
 | 25 | Tilde range notation triggers strikethrough | ko #17166 | `100만~200만 ... 65,536~97,152명` -- two `~` chars parsed as `<del>` by remark-gfm | High -- garbled rendering |
 | 26 | Bold markers not parsed when adjacent to non-Latin text | ko #17166 | `**단일 슬롯 최종 승인(SSF)**으로` -- MDX emphasis parser requires word boundary after closing `**`; fix converts ONLY non-Latin-adjacent cases to `<strong>` HTML tags to preserve josa attachment; lookbehind prevents cross-boundary matching between closing `**` on one line and opening `**` on the next | High -- asterisks render literally |
 | 27 | Italic markers not parsed when adjacent to non-Latin text | ko #17166 | `_G_가`, `*S*라고` -- same word-boundary issue as bold but for single `*` and `_` italic syntax; fix converts to `<em>` HTML tags; handles both asterisk and underscore variants | High -- asterisks/underscores render literally |
+| 28 | Duplicate author frontmatter continuation line | pt-br #17122 | `author: Ori Pomerantz\n  Ori Pomerantz` -- Crowdin duplicates the author name on an indented YAML continuation line; parsed value becomes "Ori Pomerantz Ori Pomerantz" | High -- broken frontmatter metadata |
+| 29 | Broken markdown link: `}` instead of `]` | pt-br #17122 | `[Mais em staking withdrawals}(/staking/withdrawals/)` -- Crowdin replaces closing `]` with `}`, breaking the link | High -- breaks navigation |
+| 30 | TNF ticker transposition for NFT | pt-br #17122 | `TNF` instead of `NFT` -- 37 occurrences across pt-br files; pt-br uses `NFT` (356 occurrences) confirming TNF is a Crowdin error | Medium -- wrong acronym |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
@@ -43,9 +46,9 @@ These patterns are covered by existing fix functions and should have regression 
 
 - **Duplicated headings** (`fixDuplicatedHeadings`) — `## Text? Text? {#id}`
 - **Broken markdown links** (`fixBrokenMarkdownLinks`) — `] (url)` space
-- **Escaped bold/italic** (`fixEscapedBoldAndItalic`) — `\*\*text\*\*`
+- **Escaped bold/italic** (`fixEscapedBoldAndItalic`) — `\*\*text\*\*`; uses lookbehind to skip `\*` used as multiplication (e.g., `operand\*operand`)
 - **ASCII guillemets** (`fixAsciiGuillemets`) — `<<text>>`
-- **Ticker transpositions** (`fixTickerTranspositions`) — `EHT` → `ETH`
+- **Ticker transpositions** (`fixTickerTranspositions`) — `EHT` → `ETH`, `TNF` → `NFT`, `TNFs` → `NFTs`; uses alphanumeric-only boundaries to match adjacent to markdown `_`
 - **MDX angle brackets** (`escapeMdxAngleBrackets`) — `<5GB`
 - **Orphaned closing tags** (`removeOrphanedClosingTags`) — trailing `</a>`
 - **Block component line breaks** (`fixBlockComponentLineBreaks`)
