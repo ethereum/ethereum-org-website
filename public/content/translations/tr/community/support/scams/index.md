@@ -86,8 +86,8 @@ Reporting is still valuable. Reports help law enforcement track organized fraud 
 ## Types of scams to watch for {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Hediye ve airdrop dolandırıcılıkları"
+contentPreview="Kimse bedava ETH dağıtmıyor. Bu teklifler daima bir aldatmacadır."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 
@@ -102,8 +102,8 @@ Scammers create fake giveaways promising to multiply your ETH or give you free t
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Taklit ve sahte destek"
+contentPreview="Ethereum veya ethereum.org'dan hiç kimse sizinle asla ilk olarak iletişime geçmez."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 
@@ -121,8 +121,8 @@ Scammers impersonate Ethereum team members, moderators, or support agents on Dis
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Kurtarma dolandırıcılıkları"
+contentPreview="Dolandırıldıktan sonra sahte 'kripto kurtarma uzmanlarına' dikkat edin."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 
@@ -137,8 +137,8 @@ They promise to trace and recover your stolen crypto for an upfront fee. After y
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Kimlik avı web siteleri ve sahte uygulamalar"
+contentPreview="Dolandırıcı siteler kimlik bilgilerinizi çalmak için gerçek cüzdanları ve borsaları taklit eder."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 
