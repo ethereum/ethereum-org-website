@@ -86,8 +86,8 @@ Reporting is still valuable. Reports help law enforcement track organized fraud 
 ## Types of scams to watch for {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="गिव्हअवे आणि एअरड्रॉप स्कॅम"
+contentPreview="कोणीही मोफत ETH देत नाही. अशा ऑफर्स नेहमी स्कॅम असतात."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 
@@ -102,8 +102,8 @@ Scammers create fake giveaways promising to multiply your ETH or give you free t
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="तोतयागिरी आणि बनावट सपोर्ट"
+contentPreview="Ethereum किंवा ethereum.org कडून कोणीही तुमच्याशी स्वतःहून संपर्क साधणार नाही."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 
@@ -121,8 +121,8 @@ Scammers impersonate Ethereum team members, moderators, or support agents on Dis
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="रिकव्हरी स्कॅम"
+contentPreview="फसवणूक झाल्यानंतर, बनावट 'क्रिप्टो रिकव्हरी एक्सपर्ट्स' पासून सावध राहा."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 
@@ -137,8 +137,8 @@ They promise to trace and recover your stolen crypto for an upfront fee. After y
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="फिशिंग वेबसाइट्स आणि बनावट ॲप्स"
+contentPreview="स्कॅम साइट्स तुमची क्रेडेन्शियल्स चोरण्यासाठी खऱ्या वॉलेट्स आणि एक्सचेंजेसची नक्कल करतात."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 
