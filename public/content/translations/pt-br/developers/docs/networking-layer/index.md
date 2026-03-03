@@ -146,7 +146,7 @@ Um resumo do fluxo de controle é mostrado abaixo, com a pilha de rede relevante
 
 Uma vez que o bloco tenha sido atestado por validadores suficientes, ele é adicionado ao cabeçalho da cadeia, justificado e finalmente finalizado.
 
-![](cons_client_net_layer.png) ![](exe_client_net_layer.png)
+![Diagrama da camada de rede do cliente de consenso Ethereum](cons_client_net_layer.png) ![Diagrama da camada de rede do cliente de execução Ethereum](exe_client_net_layer.png)
 
 Esquema da camada de rede para clientes de consenso e execução, de [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 

@@ -117,35 +117,35 @@ sudo systemctl start grafana-server
 Lorsque Grafana est en cours d'exécution, il devrait être accessible à l'adresse `localhost:3000`.
 Utilisez votre navigateur préféré pour accéder à ce chemin, puis connectez-vous avec les identifiants par défaut (utilisateur : `admin` et mot de passe : `admin`). Lorsque vous y êtes invité, changez le mot de passe par défaut et enregistrez.
 
-![](./grafana1.png)
+![Capture d'écran du tableau de bord Grafana pour la surveillance Geth (panneau 1)](./grafana1.png)
 
 Vous serez redirigé vers la page d'accueil de Grafana. Tout d'abord, configurez vos données sources. Cliquez sur l'icône de configuration dans la barre de gauche et sélectionnez "Sources de données".
 
-![](./grafana2.png)
+![Capture d'écran du tableau de bord Grafana pour la surveillance Geth (panneau 2)](./grafana2.png)
 
 Aucune source de données n'a encore été créée, cliquez sur "Ajouter une source de données" pour en définir une.
 
-![](./grafana3.png)
+![Capture d'écran du tableau de bord Grafana pour la surveillance Geth (panneau 3)](./grafana3.png)
 
 Pour cette configuration, sélectionnez "InfluxDB" et continuez.
 
-![](./grafana4.png)
+![Capture d'écran du tableau de bord Grafana pour la surveillance Geth (panneau 4)](./grafana4.png)
 
 La configuration de la source de données est assez simple si vous exécutez les outils sur la même machine. Vous devez définir l'adresse d'InfluxDB et les informations d'accès à la base de données. Reportez-vous à l'image ci-dessous.
 
-![](./grafana5.png)
+![Capture d'écran du tableau de bord Grafana pour la surveillance Geth (panneau 5)](./grafana5.png)
 
 Si tout est complet et qu'InfluxDB est accessible, cliquez sur "Enregistrer et tester" et attendez que la confirmation apparaisse.
 
-![](./grafana6.png)
+![Capture d'écran du tableau de bord Grafana pour la surveillance Geth (panneau 6)](./grafana6.png)
 
 Grafana est maintenant configuré pour lire les données depuis InfluxDB. Vous devez maintenant créer un tableau de bord qui interprétera et affichera ces données. Les propriétés des tableaux de bord sont encodées dans des fichiers JSON qui peuvent être créés par n'importe qui et importés facilement. Dans la barre de gauche, cliquez sur "Créer et Importer".
 
-![](./grafana7.png)
+![Capture d'écran du tableau de bord Grafana pour la surveillance Geth (panneau 7)](./grafana7.png)
 
 Pour un tableau de bord de surveillance Geth, copiez l'ID de [ce tableau de bord](https://grafana.com/grafana/dashboards/13877/) et collez-le dans la "Page d'importation" dans Grafana. Après avoir enregistré le tableau de bord, il devrait ressembler à ceci :
 
-![](./grafana8.png)
+![Capture d'écran du tableau de bord Grafana pour la surveillance Geth (panneau 8)](./grafana8.png)
 
 Vous pouvez modifier vos tableaux de bord. Chaque panneau peut être modifié, déplacé, supprimé ou ajouté. Vous pouvez modifier vos configurations. À vous de jouer ! Pour en savoir plus sur le fonctionnement des tableaux de bord, consultez la [documentation de Grafana](https://grafana.com/docs/grafana/latest/dashboards/).
 Les [alertes](https://grafana.com/docs/grafana/latest/alerting/) pourraient également vous intéresser. Cela vous permet de configurer des notifications d'alerte pour les cas où les métriques atteignent certaines valeurs. Divers canaux de communication sont pris en charge.

@@ -10,9 +10,9 @@ lang: en
 
 Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
 
-The Ethereum Foundation is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
+The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
 
-**ethereum.org** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
 
 <DocLink href="/what-is-ethereum/">
   What is Ethereum?
