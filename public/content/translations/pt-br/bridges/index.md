@@ -22,7 +22,7 @@ Mas o que você faz se quiser fazer uma troca semelhante para usar uma [cadeia d
 
 ## Por que precisamos de pontes? {#why-do-we-need-bridges}
 
-Todos os blockchains têm suas limitações. Para que o Ethereum seja dimensionado e acompanhe a demanda, foram necessários [rollups](/glossary/#rollups). Em alternativa, L1s como Javier Solana e Avalanche são concebidos de forma diferente para permitir uma taxa de transferência mais elevada, mas à custa de descentralização.
+Todos os blockchains têm suas limitações. Para que o Ethereum seja dimensionado e acompanhe a demanda, foram necessários [rollups](/glossary/#rollups). Em alternativa, L1s como Solana e Avalanche são concebidos de forma diferente para permitir uma taxa de transferência mais elevada, mas à custa de descentralização.
 
 No entanto, todas as cadeias de blocos são desenvolvidas em ambientes isolados e têm regras e mecanismos de [consenso](/glossary/#consensus) diferentes. Isso significa que eles não podem se comunicar nativamente e os tokens não podem se mover livremente entre os blockchains.
 

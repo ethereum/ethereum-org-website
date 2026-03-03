@@ -139,7 +139,7 @@ Alguns dados do bloco estão preocupados com a funcionalidade da Ethereum de for
 
 - Total de transações - O número de transações desde a criação da Ethereum
 - Transações por segundo - O número de transações processáveis em um segundo
-- Preço ETH - As avaliações atuais de 1 ETTH
+- Preço ETH - As avaliações atuais de 1 ETH
 - Fornecimento total de ETH – Número de ETH em circulação – lembre-se de que o novo ETH é criado com a criação de cada bloco sob a forma de recompensas por bloco
 - Capitalização de mercado - Cálculo do preço \ \* oferta
 

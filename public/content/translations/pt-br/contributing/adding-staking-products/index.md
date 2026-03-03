@@ -169,7 +169,7 @@ A lógica do código e os pesos para esses critérios estão atualmente contidos
 
 ## Adicione seu produto ou serviço {#add-product}
 
-Se você quiser adicionar uma participação (stake) de produto ou serviço ao ethereum.org, crie um tíquete no Github.
+Se você quiser adicionar uma participação (stake) de produto ou serviço ao ethereum.org, crie um tíquete no GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
 Abrir chamado

@@ -1124,7 +1124,7 @@ Você pode baixar e criar uma conta MetaMask gratuitamente [aqui](https://metama
 
 #### Adicione ether de uma Faucet {#add-ether-from-a-faucet}
 
-Para assinar uma transação na blockchain Ethereum, precisaremos de um pouco de Eth falso. Para obter Eth, você pode ir para a [FaucETH](https://fauceth.komputing.org) e inserir o endereço da sua conta Goerli, clicar em “Solicitar fundos”, selecionar “Rede de Teste Ethereum Goerli” no menu suspenso e, finalmente, clicar no botão “Solicitar fundos” novamente. Em seguida, você deve ver Eth em sua conta Metamask!
+Para assinar uma transação na blockchain Ethereum, precisaremos de um pouco de Eth falso. Para obter Eth, você pode ir para a [FaucETH](https://fauceth.komputing.org) e inserir o endereço da sua conta Goerli, clicar em “Solicitar fundos”, selecionar “Rede de Teste Ethereum Goerli” no menu suspenso e, finalmente, clicar no botão “Solicitar fundos” novamente. Em seguida, você deve ver Eth em sua conta MetaMask!
 
 #### Verifique seu saldo {#check-your-balance}
 

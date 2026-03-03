@@ -209,7 +209,7 @@ Você pode baixar e criar uma conta MetaMask gratuitamente [aqui](https://metama
 
 ### Adicione ether de um Faucet {#add-ether-from-faucet}
 
-Para mintar as nossas NFT (ou assinar quaisquer transações no blockchain Ethereum), precisaremos de alguns Eth falsos. Para obter Eth, você pode ir ao [Ropsten faucet](https://faucet.ropsten.be/) e inserir o endereço da sua conta Ropsten, depois clicar em “Send Ropsten Eth.” Em seguida, você deve ver Eth em sua conta Metamask!
+Para mintar as nossas NFT (ou assinar quaisquer transações no blockchain Ethereum), precisaremos de alguns Eth falsos. Para obter Eth, você pode ir ao [Ropsten faucet](https://faucet.ropsten.be/) e inserir o endereço da sua conta Ropsten, depois clicar em “Send Ropsten Eth.” Em seguida, você deve ver Eth em sua conta MetaMask!
 
 ### Verifique seu saldo {#check-your-balance}
 

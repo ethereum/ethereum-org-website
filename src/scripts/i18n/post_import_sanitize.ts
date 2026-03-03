@@ -169,6 +169,7 @@ const PROTECTED_BRAND_NAMES = [
  */
 const TICKER_CORRECTIONS: Record<string, string> = {
   EHT: "ETH",
+  ETTH: "ETH",
   BSL: "BLS",
   ECDAS: "ECDSA",
   TNFs: "NFTs",

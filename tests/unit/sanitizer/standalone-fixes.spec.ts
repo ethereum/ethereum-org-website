@@ -240,6 +240,13 @@ test.describe("Standalone Fixes", () => {
       expect(content).toBe("_propriedade de NFT_")
       expect(fixCount).toBe(1)
     })
+
+    test("corrects ETTH to ETH", () => {
+      const input = "As avaliações atuais de 1 ETTH"
+      const { content, fixCount } = fixTickerTranspositions(input)
+      expect(content).toBe("As avaliações atuais de 1 ETH")
+      expect(fixCount).toBe(1)
+    })
   })
 
   test.describe("escapeMdxAngleBrackets", () => {
