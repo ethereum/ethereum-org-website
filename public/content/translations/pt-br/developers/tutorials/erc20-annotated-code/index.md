@@ -2,9 +2,8 @@
 title: "Passo a passo do contrato ERC-20"
 description: "O que está no contrato ERC-20 da OpenZeppelin e por que está lá?"
 author: Ori Pomerantz
-  Ori Pomerantz
 lang: pt-br
-tags: [ "solidez", "erc-20" ]
+tags: [ "Solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---

@@ -3,7 +3,7 @@ title: "Um guia para ferramentas de segurança de contratos inteligentes"
 description: "Uma visão geral de três técnicas diferentes de teste e análise de programas"
 author: "Trailofbits"
 lang: pt-br
-tags: [ "solidez", "smart contracts", "segurança" ]
+tags: [ "Solidity", "smart contracts", "segurança" ]
 skill: intermediate
 published: 2020-09-07
 source: Building secure contracts

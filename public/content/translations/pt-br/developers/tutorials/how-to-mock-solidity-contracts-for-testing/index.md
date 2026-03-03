@@ -3,7 +3,7 @@ title: Como simular contratos inteligentes em Solidity para teste
 description: "Por que você deve aproveitar os seus contratos ao testar"
 author: Markus Waas
 lang: pt-br
-tags: [ "solidez", "smart contracts", "testando", "simulando" ]
+tags: [ "Solidity", "smart contracts", "testando", "simulando" ]
 skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com

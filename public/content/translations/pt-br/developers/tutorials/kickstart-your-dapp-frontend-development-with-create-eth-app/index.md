@@ -5,7 +5,7 @@ author: "Markus Waas"
 tags:
   [
     "front-end",
-    "javascript",
+    "JavaScript",
     "ethers.js",
     "the graph",
     "defi"

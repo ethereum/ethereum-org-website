@@ -50,7 +50,7 @@ Muitos negócios estão começando a aceitar ether (ETH) e outras criptomoedas c
 
 - **Newegg:** O popular varejista de eletrônicos aceita Ethereum para compras em países selecionados.
 - **Travala.com:** Esta plataforma de reservas de viagens permite que os usuários paguem por hotéis e voos usando Ethereum.
-- \*\*Shopify: \*\* Esta popular plataforma de e-commerce, que serve como um mercado para hospedar negócios, também aceita pagamentos por bens e serviços em Ethereum.
+- **Shopify: ** Esta popular plataforma de e-commerce, que serve como um mercado para hospedar negócios, também aceita pagamentos por bens e serviços em Ethereum.
 - **Sotheby's:** esta organização comercializa artes finas e decorativas, joias e itens colecionáveis e permite pagamentos usando Ethereum e outras criptomoedas.
 
 Países como El Salvador e a República Centro-Africana até mesmo adotaram criptomoedas como moeda de curso legal, abrindo caminho para uma aceitação mais ampla de pagamentos com Ethereum em transações cotidianas.

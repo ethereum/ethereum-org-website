@@ -3,7 +3,7 @@ title: Usando WebSockets
 description: "Guia para usar WebSockets e Alchemy para fazer solicitações JSON-RPC e escutar eventos."
 author: "Elan Halpern"
 lang: pt-br
-tags: [ "alchemy", "websocket", "consultando", "javascript" ]
+tags: [ "Alchemy", "websocket", "consultando", "JavaScript" ]
 skill: beginner
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3

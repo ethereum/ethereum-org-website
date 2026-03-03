@@ -43,7 +43,7 @@ Confira [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/)
 - [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _Gem do Rails que adiciona rotas de login local do SIWE_
 - [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _Exemplo de SIWE usando Ruby on Rails com um controlador personalizado_
 - [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _Estratégia OmniAuth para Sign In With Ethereum (SIWE)_
-- [omniauth-nft](https://github.com/valthon/omniauth-nft) - _Estratégia OmniAuth para autenticação via propriedade de TNF_
+- [omniauth-nft](https://github.com/valthon/omniauth-nft) - _Estratégia OmniAuth para autenticação via propriedade de NFT_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Modelo do Ethereum on Rails que permite conectar a MetaMask ao Ruby on Rails_
 
 ### Arquivado / Não é mais mantido {#archived--no-longer-maintained}

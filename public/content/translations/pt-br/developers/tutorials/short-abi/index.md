@@ -2,7 +2,6 @@
 title: "ABIs curtos para otimização de Calldata"
 description: Otimizando contratos inteligentes para Optimistic Rollups
 author: Ori Pomerantz
-  Ori Pomerantz
 lang: pt-br
 tags: [ "camada 2" ]
 skill: intermediate
@@ -429,7 +428,7 @@ Uma vez que `proxy` tem um valor real (diferente de zero), esse valor não pode 
     modifier onlyProxy {
 ```
 
-Esta é uma [`função `modifier``](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), que modifica a forma como outras funções funcionam.
+Esta é uma [`função `modifier`](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), que modifica a forma como outras funções funcionam.
 
 ```solidity
       require(msg.sender == proxy);

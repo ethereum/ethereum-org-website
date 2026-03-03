@@ -4,9 +4,9 @@ description: "Tutorial avançado do Waffle para usar mockagem dinâmica e testar
 author: "Daniel Izdebski"
 tags:
   [
-    "waffle",
+    "Waffle",
     "smart contracts",
-    "solidez",
+    "Solidity",
     "testando",
     "simulando"
   ]

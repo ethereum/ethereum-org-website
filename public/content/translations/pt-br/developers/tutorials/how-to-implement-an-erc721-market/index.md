@@ -2,7 +2,7 @@
 title: Como implementar um mercado ERC-721
 description: Como colocar itens tokenizados para venda em um mercado descentralizado
 author: "Alberto Cuesta Cañada"
-tags: [ "smart contracts", "erc-721", "solidity", "tokens" ]
+tags: [ "smart contracts", "erc-721", "Solidity", "tokens" ]
 skill: intermediate
 lang: pt-br
 published: 2020-03-19

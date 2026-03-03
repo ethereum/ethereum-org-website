@@ -162,8 +162,7 @@ Inicialmente, após a Fusão, os participantes podiam acessar apenas as comissõ
 
 Desde a melhoria da rede Shanghai/Capella, os participantes agora podem designar um <em>endereço de saque</em> para começar a receber pagamentos automáticos de qualquer saldo de participação excedente (ETH superior a 32 de recompensas do protocolo). Essa melhoria também permitiu que um validador desbloqueasse e recuperasse todo o saldo ao sair da rede.
 
-[Mais em staking withdrawals}
-(/staking/withdrawals/)
+[Mais em staking withdrawals](/staking/withdrawals/)
 </ExpandableCard>
 
 <ExpandableCard

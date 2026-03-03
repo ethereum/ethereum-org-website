@@ -2,14 +2,13 @@
 title: "Alguns truques usados por tokens fraudulentos e como detectá-los"
 description: "Neste tutorial, dissecamos um token fraudulento para ver alguns dos truques que os golpistas usam, como eles os implementam e como podemos detectá-los."
 author: Ori Pomerantz
-  Ori Pomerantz
 tags:
   [
     "fraude",
-    "solidity",
+    "Solidity",
     "erc-20",
-    "javascript",
-    "typescript"
+    "JavaScript",
+    "TypeScript"
   ]
 skill: intermediate
 published: 2023-09-15

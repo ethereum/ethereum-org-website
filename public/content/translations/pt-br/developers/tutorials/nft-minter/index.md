@@ -4,9 +4,9 @@ description: "Neste tutorial, você irá construir um minter NFT e, também, apr
 author: "smudgil"
 tags:
   [
-    "solidez",
+    "Solidity",
     "NFT",
-    "alchemy",
+    "Alchemy",
     "smart contracts",
     "front-end",
     "Pinata"

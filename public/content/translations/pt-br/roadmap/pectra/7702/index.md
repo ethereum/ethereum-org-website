@@ -30,7 +30,7 @@ A chave privada do EOA mantém o controle total sobre a conta após a delegaçã
 **Abstração de conta**: Um contrato de delegação deve estar alinhado aos padrões mais amplos de abstração de conta (AA) do Ethereum para maximizar a compatibilidade. Em particular, o ideal é que ele seja compatível ou complacente com ERC-4337.
 
 **Design Sem permissão e Resistente à Censura**: O Ethereum valoriza a participação sem permissão. Um contrato de delegação NÃO DEVE ser codificado ou depender de qualquer retransmissor, ou serviço “confiável”. Isso bloquearia a conta se o retransmissor ficasse offline. Recursos como o processamento em lote (por exemplo, approve+transferFrom) podem ser usados pela própria EOA sem um retransmissor. Os desenvolvedores de aplicativos que queiram usar funcionalidades avançadas habilitadas pelo 7702 (Abstração de Gas, Saque com preservação de Privacidade) será necessário um relayer. Embora existam diferentes arquiteturas de relayer, nossa recomendação é usar [agrupadores 4337](https://www.erc4337.io/bundlers)
-apontando para pelo menos o [ponto de entrada 0.8}(https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0), porque:
+apontando para pelo menos o [ponto de entrada 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0), porque:
 
 - Eles fornecem interfaces padronizadas para retransmissão
 - Incluir sistemas de pagamento integrados
@@ -106,7 +106,7 @@ Ao adotar estas soluções, os desenvolvedores podem melhorar a segurança dos c
 
 Quando o usuário executa assinaturas delegadas, o contrato alvo que recebe a delegação deve ser exibido de forma clara e destacada para ajudar a mitigar os riscos de ataque cibernético.
 
-\*\* Segurança de superfície confiável\*\*: Embora ofereça flexibilidade, um contrato de delegação deve manter sua lógica básica mínima e auditável. O contrato é efetivamente uma extensão da EOA do usuário, então qualquer falha pode ser catastrófica. As implementações devem seguir as melhores práticas da comunidade de segurança de contratos inteligentes. Por exemplo, funções de construtor ou inicializador devem ser cuidadosamente protegidas – conforme destacado pela Alchemy, se usar um padrão de proxy abaixo de 7702, um inicializador desprotegido pode permitir que um invasor assuma o controle da conta. As equipes devem tentar manter o código onchain simples: o contrato 7702 da Ambire tem apenas ~200 linhas de Solidity, minimizando deliberadamente a complexidade para reduzir bugs. É preciso encontrar um equilíbrio entre a lógica rica em recursos e a simplicidade que facilita a auditoria.
+** Segurança de superfície confiável**: Embora ofereça flexibilidade, um contrato de delegação deve manter sua lógica básica mínima e auditável. O contrato é efetivamente uma extensão da EOA do usuário, então qualquer falha pode ser catastrófica. As implementações devem seguir as melhores práticas da comunidade de segurança de contratos inteligentes. Por exemplo, funções de construtor ou inicializador devem ser cuidadosamente protegidas – conforme destacado pela Alchemy, se usar um padrão de proxy abaixo de 7702, um inicializador desprotegido pode permitir que um invasor assuma o controle da conta. As equipes devem tentar manter o código onchain simples: o contrato 7702 da Ambire tem apenas ~200 linhas de Solidity, minimizando deliberadamente a complexidade para reduzir bugs. É preciso encontrar um equilíbrio entre a lógica rica em recursos e a simplicidade que facilita a auditoria.
 
 ### Implementações conhecidas {#known-implementations}
 

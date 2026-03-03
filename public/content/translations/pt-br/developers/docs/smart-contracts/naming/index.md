@@ -85,7 +85,7 @@ Você pode acessar o [Enscribe App](https://app.enscribe.xyz) para começar a no
 A nomeação de contratos inteligentes oferece benefícios significativos para os usuários do Ethereum, no entanto, os proprietários de domínios ENS devem ser vigilantes em relação à sua gestão. Riscos notáveis incluem:
 
 - **Vencimento**: assim como os nomes de DNS, os registros de nomes de ENS têm duração finita. Portanto, é vital que os proprietários monitorem as datas de validade de seus domínios e os renovem com bastante antecedência do vencimento. Tanto o App ENS quanto o Enscribe fornecem indicadores visuais para os proprietários de domínio quando o vencimento está se aproximando.
-- **Mudança de propriedade**: os registros ENS são representados como TNFs na Ethereum, onde o proprietário de um domínio `.eth` específico tem o TNF associado em sua posse. Portanto, se uma conta diferente assumir a propriedade deste TNF, o novo proprietário poderá modificar quaisquer registros ENS como achar melhor.
+- **Mudança de propriedade**: os registros ENS são representados como NFTs na Ethereum, onde o proprietário de um domínio `.eth` específico tem o NFT associado em sua posse. Portanto, se uma conta diferente assumir a propriedade deste NFT, o novo proprietário poderá modificar quaisquer registros ENS como achar melhor.
 
 Para mitigar esses riscos, a conta do proprietário dos domínios de segundo nível (2LD) `.eth` deve ser protegida por meio de uma carteira de assinaturas múltiplas, com subdomínios sendo criados para gerenciar a nomenclatura de contratos. Dessa forma, no caso de quaisquer alterações acidentais ou maliciosas na propriedade no nível do subdomínio, elas podem ser substituídas pelo proprietário do 2LD.
 

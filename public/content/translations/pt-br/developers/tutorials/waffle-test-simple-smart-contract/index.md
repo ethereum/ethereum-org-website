@@ -2,7 +2,7 @@
 title: Testando um contrato inteligente simples com a biblioteca Waffle
 description: Tutorial para iniciantes
 author: Ewa Kowalska
-tags: [ "smart contracts", "solidez", "Waffle", "testando" ]
+tags: [ "smart contracts", "Solidity", "Waffle", "testando" ]
 skill: beginner
 lang: pt-br
 published: 2021-02-26

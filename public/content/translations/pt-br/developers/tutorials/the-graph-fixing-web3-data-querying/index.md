@@ -5,7 +5,7 @@ author: Markus Waas
 lang: pt-br
 tags:
   [
-    "solidez",
+    "Solidity",
     "smart contracts",
     "consultando",
     "the graph",

@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: pt-br
 tags:
   [
-    "solidez",
+    "Solidity",
     "smart contracts",
     "segurança",
     "testando",

@@ -4,9 +4,9 @@ description: "Tutorial introdutório sobre como escrever e implantar um contrato
 author: "nstrike2"
 tags:
   [
-    "solidez",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "smart contracts",
     "implantação",
     "explorador de blocos",

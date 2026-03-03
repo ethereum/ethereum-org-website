@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "smart contracts",
-    "solidez",
-    "remix",
+    "Solidity",
+    "Remix",
     "implantação",
     "componibilidade"
   ]

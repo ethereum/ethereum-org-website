@@ -223,7 +223,7 @@ Os optimistic rollups usam várias técnicas para obter a compressão de dados d
 | Valor      | 9                                                    | ~3                   |
 | Assinatura | ~68 (2 + 33 + 33) | ~0.5 |
 | De         | 0 (recuperado da assinatura)      | 4                                    |
-| **Total**  | **~112 bytes**                       | **~12 bytes**        |
+| **Total**  | **\~112 bytes**                       | **\~12 bytes**        |
 
 Fazer alguns cálculos aproximados sobre esses números pode ajudar a mostrar as melhorias de dimensionamento oferecidas por um optimistic rollup:
 

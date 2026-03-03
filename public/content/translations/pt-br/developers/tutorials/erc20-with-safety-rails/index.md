@@ -2,7 +2,6 @@
 title: "ERC-20 com Trilhos de Segurança"
 description: Como ajudar as pessoas a evitar erros bobos
 author: Ori Pomerantz
-  Ori Pomerantz
 lang: pt-br
 tags: [ "erc-20" ]
 skill: beginner

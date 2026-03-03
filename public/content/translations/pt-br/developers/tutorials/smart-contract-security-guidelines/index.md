@@ -2,7 +2,7 @@
 title: "Diretrizes de segurança do contrato inteligente"
 description: "Uma lista de verificações de diretrizes de segurança a considerar ao construir seu dapp"
 author: "Trailofbits"
-tags: [ "solidez", "smart contracts", "segurança" ]
+tags: [ "Solidity", "smart contracts", "segurança" ]
 skill: intermediate
 lang: pt-br
 published: 2020-09-06

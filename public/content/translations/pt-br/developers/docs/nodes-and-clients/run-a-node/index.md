@@ -99,7 +99,7 @@ O modo de sincronização e o cliente que você escolher afetará os requisitos 
 | Nethermind | + de 500 GB                                                | + 12 TB                                                |
 | Reth       | N/D                                                        | 2.2TB+                                 |
 
-- Nota: Erigon e Reth não oferecem sincronização instantânea, mas é possível fazer o Full Pruning (~2 Tb para Erigon, ~1,2 Tb para Reth)
+- Nota: Erigon e Reth não oferecem sincronização instantânea, mas é possível fazer o Full Pruning (\~2 Tb para Erigon, ~1,2 Tb para Reth)
 
 Para clientes de consenso, o requisito de espaço também depende da implementação do cliente e dos recursos habilitados (p. ex., slasher de validador), mas geralmente conte com outros 200 GB necessários para dados de beacon. Com um grande número de validadores, a carga de largura de banda também aumenta. Você pode encontrar [detalhes sobre os requisitos do cliente de consenso nesta análise](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 

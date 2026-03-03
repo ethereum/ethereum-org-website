@@ -2,7 +2,7 @@
 title: "Como Cunhar um NFT (Parte 2/3 da Série de Tutoriais sobre NFT)"
 description: Este tutorial descreve como cunhar um NFT na blockchain Ethereum usando nosso contrato inteligente e Web3.
 author: "Sumi Mudgil"
-tags: [ "ERC-721", "alchemy", "solidez", "smart contracts" ]
+tags: [ "ERC-721", "Alchemy", "Solidity", "smart contracts" ]
 skill: beginner
 lang: pt-br
 published: 2021-04-22

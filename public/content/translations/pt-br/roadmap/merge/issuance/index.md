@@ -39,18 +39,18 @@ Os validadores da Beacon Chain são recompensados com ETH, por atestar o estado 
 
 ### Detalhamento da emissão pré-fusão {#pre-merge-issuance-breakdown}
 
-Fornecimento total de ETH: **~120.520.000 ETH** (no momento da Fusão em setembro de 2022)
+Fornecimento total de ETH: **\~120.520.000 ETH** (no momento da Fusão em setembro de 2022)
 
 **Emissão da camada de execução:**
 
-- Estimava-se em 2,08 ETH por 13,3 segundos\*: **~4.930.000** ETH emitidos em um ano
+- Estimava-se em 2,08 ETH por 13,3 segundos\*: **\~4.930.000** ETH emitidos em um ano
 - Resultou em uma taxa de inflação de **aproximadamente 4,09%** (4,93 milhões por ano / 120,5 milhões no total)
 - \*Isso inclui os 2 ETH por bloco canônico, mais uma média de 0,08 ETH ao longo do tempo dos blocos ommer. Também usa 13,3 segundos, o tempo de bloco base alvo sem qualquer influência de uma [bomba de dificuldade](/glossary/#difficulty-bomb). ([Ver fonte](https://bitinfocharts.com/ethereum/))
 
 **Emissão da camada de consenso:**
 
 - Usando um total de 14.000.000 de ETH em stake, a taxa de emissão de ETH é de aproximadamente 1.700 ETH/dia ([Ver fonte](https://ultrasound.money/))
-- Resulta em **~620.500** ETH emitidos em um ano
+- Resulta em **\~620.500** ETH emitidos em um ano
 - Resultou em uma taxa de inflação de **aproximadamente 0,52%** (620,5 mil por ano / 119,3 milhões no total)
 
 <Alert variant="update">
@@ -58,9 +58,9 @@ Fornecimento total de ETH: **~120.520.000 ETH** (no momento da Fusão em setembr
 <AlertDescription>
 **Taxa de emissão anualizada total (pré-fusão): ~4,61%** (4,09% + 0,52%)
 
-**~88,7%** da emissão ia para os mineradores na camada de execução (4,09 / 4,61 \* 100)
+**\~88,7%** da emissão ia para os mineradores na camada de execução (4,09 / 4,61 \* 100)
 
-**~11,3%** era emitido para os stakers na camada de consenso (0,52 / 4,61 \* 100)
+**\~11,3%** era emitido para os stakers na camada de consenso (0,52 / 4,61 \* 100)
 </AlertDescription>
 
 </AlertContent>
@@ -87,16 +87,16 @@ Aproximadamente 0,33% do número total de validadores pode sair em um determinad
 
 ### Detalhamento da inflação pós-fusão {#post-merge-inflation-breakdown}
 
-- Fornecimento total de ETH: **~120.520.000 ETH** (no momento da Fusão em setembro de 2022)
+- Fornecimento total de ETH: **\~120.520.000 ETH** (no momento da Fusão em setembro de 2022)
 - Emissão da camada de execução: **0**
-- Emissão da camada de consenso: o mesmo que acima, taxa de emissão anualizada de **~0,52%** (com 14 milhões de ETH totais em stake)
+- Emissão da camada de consenso: o mesmo que acima, taxa de emissão anualizada de **\~0,52%** (com 14 milhões de ETH totais em stake)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Taxa de emissão anualizada total: **~0,52%**
+Taxa de emissão anualizada total: **\~0,52%**
 
-Redução líquida na emissão anual de ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
+Redução líquida na emissão anual de ETH: **\~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
 </AlertDescription>
 
 </AlertContent>

@@ -4,11 +4,11 @@ description: "Este é um guia para iniciantes no desenvolvimento na Ethereum. Va
 author: "Elan Halpern"
 tags:
   [
-    "javascript",
+    "JavaScript",
     "ethers.js",
     "nós",
     "consultando",
-    "alchemy"
+    "Alchemy"
   ]
 skill: beginner
 lang: pt-br

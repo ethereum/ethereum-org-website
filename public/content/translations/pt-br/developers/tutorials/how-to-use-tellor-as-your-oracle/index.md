@@ -3,7 +3,7 @@ title: "Como configurar o Tellor como seu Oráculo"
 description: "Um guia para começar a integrar o oráculo Tellor ao seu protocolo"
 author: "Tellor"
 lang: pt-br
-tags: [ "solidez", "smart contracts", "oráculos" ]
+tags: [ "Solidity", "smart contracts", "oráculos" ]
 skill: beginner
 published: 2021-06-29
 source: Tellor Docs

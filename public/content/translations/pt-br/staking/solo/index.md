@@ -84,8 +84,7 @@ Enquanto ativo, você ganhará recompensas ETH, que serão depositadas periodica
 
 Se desejar, você pode parar suas atividades como um validador, o que elimina a necessidade de estar on-line e interrompe outras recompensas. O seu saldo restante será então sacado para o endereço de saque que você designar durante a configuração.
 
-[Mais em staking withdrawals}
-(/staking/withdrawals/)
+[Mais em staking withdrawals](/staking/withdrawals/)
 
 ## Comece a usar o Staking Launchpad {#get-started-on-the-staking-launchpad}
 

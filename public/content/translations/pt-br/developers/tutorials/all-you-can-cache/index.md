@@ -2,7 +2,6 @@
 title: "Tudo que você pode colocar em cache"
 description: "Aprenda a criar e usar um contrato de cache para transações de rollup mais baratas"
 author: Ori Pomerantz
-  Ori Pomerantz
 tags: [ "camada 2", "cache", "armazenamento" ]
 skill: intermediate
 published: 2022-09-15

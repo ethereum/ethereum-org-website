@@ -6,7 +6,7 @@ lang: pt-br
 
 ## Aviso {#warning}
 
-\*\*ERC-777 é difícil de implementar propriamente, devido à sua [suscetibilidade a diferentes formas de ataque](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). É recomendável usar [ERC-20](/developers/docs/standards/tokens/erc-20/) ao invés. \*\* Essa página mantém um histórico de arquivos.
+**ERC-777 é difícil de implementar propriamente, devido à sua [suscetibilidade a diferentes formas de ataque](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). É recomendável usar [ERC-20](/developers/docs/standards/tokens/erc-20/) ao invés. ** Essa página mantém um histórico de arquivos.
 
 ## Introdução? {#introduction}
 
