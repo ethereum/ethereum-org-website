@@ -65,13 +65,13 @@ Isso irá gerar as mesmas informações fornecidas na página de transações do
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Captura de tela da visualização do explorador de transações Etherscan](./etherscan_view.png)
 
 [Visualizar página de contratos de EF's no Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Captura de tela de um painel de consulta do Dune Analytics](./dune_view.png)
 
 Você pode encontrar o painel [aqui](https://duneanalytics.com/paulapivat/Learn-Ethereum). Clique na tabela para visualizar a consulta (veja também acima).
 

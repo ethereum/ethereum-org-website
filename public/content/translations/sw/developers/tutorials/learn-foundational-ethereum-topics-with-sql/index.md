@@ -62,13 +62,13 @@ Hii itatoa taarifa sawa na inayotolewa kwenye ukurasa wa miamala wa Etherscan. K
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Picha ya skrini ya mwonekano wa kichunguzi cha muamala wa Etherscan](./etherscan_view.png)
 
 [Ukurasa wa mkataba wa EF kwenye Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Picha ya skrini ya dashibodi ya hoja ya Dune Analytics](./dune_view.png)
 
 Unaweza kupata dashibodi [hapa](https://dune.com/paulapivat/Learn-Ethereum). Bofya kwenye jedwali ili kuona ulizo (pia tazama hapo juu).
 
@@ -146,7 +146,7 @@ ORDER BY block_time DESC`
 
 Huu ndio matokeo ya SQL kwenye Dune:
 
-![](./list_of_txn.png)
+![Picha ya skrini ya orodha ya shughuli za Ethereum](./list_of_txn.png)
 
 Bloku hii moja kuongezwa kwenye mnyororo hubadilisha hali ya mashine halisi ya Ethereum ([EVM](/developers/docs/evm/)). Wakati mwingine makumi, mamia ya miamala huhakikiwa kwa wakati mmoja. Katika kisa hiki maalum, miamala 222 ilijumuishwa.
 
@@ -165,7 +165,7 @@ FROM temp_table
 
 Kwa bloku 12396854, kati ya miamala 222 jumla, 204 zilihakikiwa kwa mafanikio:
 
-![](./successful_txn.png)
+![Picha ya skrini ya shughuli iliyofanikiwa ya Ethereum](./successful_txn.png)
 
 Maombi ya miamala hutokea makumi ya mara kwa sekunde, lakini bloku huhifadhiwa takriban mara moja kila sekunde 15 ([chanzo](/developers/docs/blocks/)).
 
@@ -173,11 +173,11 @@ Ili kuona kwamba kuna bloku moja inayozalishwa takriban kila sekunde 15, tunawez
 
 Chati ya bloku za Ethereum zinazozalishwa kwa siku (2016 - sasa) ni:
 
-![](./daily_blocks.png)
+![Chati inayoonyesha uzalishaji wa kila siku wa Ethereum](./daily_blocks.png)
 
 Wastani wa idadi ya bloku zinazozalishwa kila siku katika kipindi hiki ni ~5,874:
 
-![](./avg_daily_blocks.png)
+![Chati inayoonyesha uzalishaji wa kila siku wa Ethereum](./avg_daily_blocks.png)
 
 Maulizo ni:
 
@@ -214,7 +214,7 @@ Bloku zina ukomo wa ukubwa. Ukubwa wa juu wa bloku hubadilika na hutofautiana ku
 
 Njia moja ya kufikiria kikomo cha gesi cha bloku ni kuifikiria kama **ugavi** wa nafasi ya bloku inayopatikana ambapo miamala inaweza kuwekwa kwa makundi. Kikomo cha gesi cha bloku kinaweza kuulizwa na kuonyeshwa kutoka 2016 hadi leo:
 
-![](./avg_gas_limit.png)
+![Chati inayoonyesha wastani wa kikomo cha gesi ya Ethereum baada ya muda](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -227,7 +227,7 @@ OFFSET 1
 
 Halafu kuna gesi halisi inayotumika kila siku kulipia ukokotoaji unaofanywa kwenye mnyororo wa Ethereum (yaani, kutuma muamala, kuita mkataba-erevu, kutoa NFT). Haya ndiyo **mahitaji** ya nafasi ya bloku ya Ethereum inayopatikana:
 
-![](./daily_gas_used.png)
+![Chati inayoonyesha gesi ya kila siku ya Ethereum inayotumika](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -246,7 +246,7 @@ Kwa hivyo tunaweza kuelewa bei za gesi kama kazi ya mahitaji ya nafasi ya bloku 
 
 Mwishowe, tunaweza kutaka kuuliza wastani wa bei za gesi za kila siku kwa mnyororo wa Ethereum, hata hivyo, kufanya hivyo kutasababisha muda mrefu sana wa kuuliza, kwa hivyo tutachuja ulizo letu kwa kiasi cha wastani cha gesi kilicholipwa kwa kila muamala na Msingi wa Ethereum.
 
-![](./ef_daily_gas.png)
+![Chati inayoonyesha matumizi ya kila siku ya gesi ya Ethereum Foundation](./ef_daily_gas.png)
 
 Tunaweza kuona bei za gesi zilizolipwa kwa miamala yote iliyofanywa kwa anwani ya Msingi wa Ethereum kwa miaka mingi. Hili ndilo ulizo:
 

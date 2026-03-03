@@ -25,6 +25,18 @@
 | 15 | `fixBackslashBeforeClosingTag` too broad — strips `\</>` | fr #17125 | `\</>` in prose is a legitimate escape; stripping `\` exposes bare `</>` to MDX | Critical — breaks MDX compilation |
 | 16 | Asymmetric backtick pair (single-open, double-close) | ru #17127 | `` `self.<name>`` `` — Crowdin doubles closing backtick, exposing `<name>` as raw HTML | Critical — breaks MDX compilation |
 
+| 17 | Junk text after heading anchors | ko #17166 | `{#network-impact}네트워크-충격` -- Crowdin appends translated anchor IDs | Critical -- breaks rendering |
+| 18 | Backtick-wrapped markdown links | ko #17166 | `` `[text](/path)` `` -- links rendered as inline code | High -- breaks navigation |
+| 19 | Missing parentheses in link syntax | ko #17166 | `[text]https://url` or `[text]/path/` -- parens stripped | Critical -- breaks navigation |
+| 20 | Missing `</em>` before `</li>` in HTML lists | ko #17166 | `<em>text.</li>` -- Crowdin drops closing `</em>` | Critical -- breaks MDX compilation |
+| 21 | Image path `./` corrupted to `/.` | ko #17166 | `(/.computer.png)` instead of `(./computer.png)` | Critical -- ENOENT breaks build |
+| 22 | Backtick split exposing bare `</>` or `<tag>` | ko #17166 | `` `<> ...` </>`) `` -- backtick closed early, `</>` exposed to MDX parser | Critical -- breaks MDX compilation |
+| 23 | Inner quotes in JSX attribute break parsing | ko #17166 | `title="오해: "text""` -- `"` inside `title="..."` terminates attribute early | Critical -- breaks MDX compilation |
+| 24 | `removeOrphanedClosingTags` strips valid `</em>` | ko #17166 | `<em>`...`` `CHAINID` ``...`</em></li>` -- inline backtick split puts `<em>` and `</em>` in different segments, making `</em>` look orphaned; sanitizer is not idempotent | Critical -- regression breaks MDX compilation |
+| 25 | Tilde range notation triggers strikethrough | ko #17166 | `100만~200만 ... 65,536~97,152명` -- two `~` chars parsed as `<del>` by remark-gfm | High -- garbled rendering |
+| 26 | Bold markers not parsed when adjacent to non-Latin text | ko #17166 | `**단일 슬롯 최종 승인(SSF)**으로` -- MDX emphasis parser requires word boundary after closing `**`; fix converts ONLY non-Latin-adjacent cases to `<strong>` HTML tags to preserve josa attachment; lookbehind prevents cross-boundary matching between closing `**` on one line and opening `**` on the next | High -- asterisks render literally |
+| 27 | Italic markers not parsed when adjacent to non-Latin text | ko #17166 | `_G_가`, `*S*라고` -- same word-boundary issue as bold but for single `*` and `_` italic syntax; fix converts to `<em>` HTML tags; handles both asterisk and underscore variants | High -- asterisks/underscores render literally |
+
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
 These patterns are covered by existing fix functions and should have regression tests:
@@ -50,6 +62,17 @@ These patterns are covered by existing fix functions and should have regression 
 - **Backslash before closing tag** (`fixBackslashBeforeClosingTag`) — `\</strong>` → `</strong>`
 - **Catastrophic code fence drift detection** (`warnCatastrophicCodeFenceDrift`) — prose/code boundaries swapped
 - **Asymmetric backtick pairs** (`fixAsymmetricBackticks`) — `` `content`` `` → `` `content` `` (Crowdin doubles closing backtick)
+- **Junk after heading anchors** (`fixJunkAfterHeadingAnchors`) — `{#id}translated-text` stripped (ko PR #17166)
+- **Backtick-wrapped links** (`fixBacktickWrappedLinks`) — `` `[text](url)` `` → `[text](url)` (ko PR #17166)
+- **Missing link parentheses** (`fixMissingLinkParentheses`) — `[text]https://url` → `[text](https://url)` (ko PR #17166)
+- **Missing closing `</em>`** (`fixMissingClosingEmTag`) — `<em>text.</li>` → `<em>text.</em></li>` (ko PR #17166)
+- **Image path `./` corruption** (`fixImagePathDotSlash`) — `](/.file.png)` → `](./file.png)` (ko PR #17166)
+- **Exposed MDX tags warning** (`warnExposedMdxTags`) — bare `<tag>` or `</>` outside backticks (ko PR #17166)
+- **Inner quotes in JSX attributes** (`fixInnerQuotesInJsxAttributes`) — `title="text: "inner""` → `title="text: &quot;inner&quot;"` (ko PR #17166)
+- **Orphan tag idempotency** (`removeOrphanedClosingTags`) — fenced-only split + inline-stripped counting prevents false orphan detection when `<em>` spans inline code (ko PR #17166)
+- **Tilde strikethrough escape** (`escapeTildeStrikethrough`) — `100만~200만` → `100만\~200만` prevents remark-gfm `<del>` (ko PR #17166)
+- **Bold adjacent non-Latin** (`fixBoldAdjacentNonLatin`) — `**text**가` → `<strong>text</strong>가` converts ONLY non-Latin-adjacent cases to HTML tags; uses lookbehind to prevent cross-boundary matching (ko PR #17166)
+- **Italic adjacent non-Latin** (`fixItalicAdjacentNonLatin`) — `*text*가` / `_text_가` → `<em>text</em>가` mirrors bold fix for single `*` and `_` italic syntax (ko PR #17166)
 
 ## Recommendations for Future Sanitizer Iteration
 

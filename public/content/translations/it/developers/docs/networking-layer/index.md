@@ -146,7 +146,7 @@ Un sommario del flusso di controllo è mostrato di seguito, con indicazione tra 
 
 Una volta che il blocco è stato attestato da sufficienti validatori, è aggiunto alla testa della catena, giustificato e, infine, finalizzato.
 
-![](cons_client_net_layer.png) ![](exe_client_net_layer.png)
+![Diagramma del livello di rete del client di consenso di Ethereum](cons_client_net_layer.png) ![Diagramma del livello di rete del client di esecuzione di Ethereum](exe_client_net_layer.png)
 
 Schematica del livello di rete per i client del consenso e d'esecuzione, da [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
