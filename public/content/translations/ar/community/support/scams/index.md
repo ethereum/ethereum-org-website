@@ -121,7 +121,7 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="عمليات الاحتيال الخاصة بالاسترداد"
+title="عمليات احتيال الاسترداد"
 contentPreview="بعد التعرض للاحتيال، احذر من 'خبراء استرداد العملات الرقمية' المزيفين."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
