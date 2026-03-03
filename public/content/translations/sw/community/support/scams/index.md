@@ -86,8 +86,8 @@ Reporting is still valuable. Reports help law enforcement track organized fraud 
 ## Types of scams to watch for {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Utapeli wa zawadi na airdrop"
+contentPreview="Hakuna anayetoa ETH bure. Ofa hizi daima ni utapeli."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 
@@ -102,8 +102,8 @@ Scammers create fake giveaways promising to multiply your ETH or give you free t
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Uigaji na usaidizi bandia"
+contentPreview="Hakuna mtu kutoka Ethereum au ethereum.org atakayewasiliana nawe kwanza."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 
@@ -121,8 +121,8 @@ Scammers impersonate Ethereum team members, moderators, or support agents on Dis
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Utapeli wa urejeshaji"
+contentPreview="Baada ya kutapeliwa, jihadhari na 'wataalamu' bandia wa kurejesha sarafu za kidigitali."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 
@@ -137,8 +137,8 @@ They promise to trace and recover your stolen crypto for an upfront fee. After y
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Tovuti za hadaa na programu bandia"
+contentPreview="Tovuti za utapeli huiga mikoba na exchange halisi ili kuiba taarifa zako za siri."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 
