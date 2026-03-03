@@ -10,7 +10,7 @@ Quando o Ethereum estava usando [prova de trabalho](/developers/docs/consensus-m
 
 O diagrama abaixo mostra a relação entre os dois clientes Ethereum. Os dois clientes se conectam às suas respectivas redes ponto a ponto (P2P). As redes P2P separadas são necessárias à medida que os clientes de execução espalham transações em sua rede P2P, permitindo que eles gerenciem seu pool de transações local, enquanto os clientes de consenso distribuem blocos em sua rede P2P, permitindo consenso e crescimento da cadeia.
 
-![](node-architecture-text-background.png)
+![Diagrama da arquitetura do nó Ethereum mostrando camadas de execução e consenso](node-architecture-text-background.png)
 
 _Tem várias opções para a execução do cliente, incluindo Erigon, Nethermind e Besu_.
 

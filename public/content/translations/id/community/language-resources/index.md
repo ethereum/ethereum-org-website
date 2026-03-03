@@ -49,7 +49,7 @@ Jika Anda adalah dwibahasawan dan dapat menolong kami menjangkau lebih banyak or
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - konten yang dipelihara oleh komunitas, yang membahas tentang Ethereum, DeFi, NFT, pengetahuan terkait Web3
 - [123ETH](https://123eth.org/) - sebuah Portal ke ekosistem Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - pelatihan daring gratis tentang mata uang kripto dan penerapannya
-- [Ethereum Whitepaper](https://github.com/ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - versi bahasa Mandarin dari Laporan Resmi Ethereum
+- [Ethereum Whitepaper](https://ethereum.org/whitepaper//[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - versi bahasa Mandarin dari Laporan Resmi Ethereum
 
 **Ekosistem Ethereum**
 

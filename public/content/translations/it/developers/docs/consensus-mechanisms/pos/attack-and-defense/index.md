@@ -92,7 +92,7 @@ Esistono diversi altri potenziali aggiornamenti futuri alla regola di scelta del
 
 #### Attacchi a lunga portata {#long-range-attacks}
 
-Esiste inoltre una classe di attacchi specifica delle blockchain proof-of-stake che prevede che un validatore che ha partecipato al blocco di genesi mantenga una biforcazione separata della blockchain insieme a quella onesta, convincendo alla fine il gruppo di validatori onesti a passare ad essa in un dato momento opportuno molto successivo. Questo tipo di attacco non è possibile su Ethereum per via del dispositivo di finalità che assicura che tutti i validatori concordino sullo stato della catena onesta a intervalli regolari ("punti di controllo"). Questo semplice meccanismo neutralizza gli attacchi a lungo raggio poiché i client di Ethereum semplicemente non riorganizzeranno i blocchi finalizzati. I nuovi nodi che si uniscono alla rete lo fanno trovando uno hash dello stato recente affidabile (un "punto di controllo della [soggettività debole](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)"), utilizzandolo come un blocco di pseudo-genesi per costruire su di esso. Questo crea un "gateway di fiducia" per un nuovo nodo che accede alla rete prima che possa iniziare a verificare le informazioni da solo.
+Esiste inoltre una classe di attacchi specifica delle blockchain proof-of-stake che prevede che un validatore che ha partecipato al blocco di genesi mantenga una biforcazione separata della blockchain insieme a quella onesta, convincendo alla fine il gruppo di validatori onesti a passare ad essa in un dato momento opportuno molto successivo. Questo tipo di attacco non è possibile su Ethereum per via del dispositivo di finalità che assicura che tutti i validatori concordino sullo stato della catena onesta a intervalli regolari ("punti di controllo"). Questo semplice meccanismo neutralizza gli attacchi a lungo raggio poiché i client di Ethereum semplicemente non riorganizzeranno i blocchi finalizzati. I nuovi nodi che si uniscono alla rete lo fanno trovando uno hash dello stato recente affidabile (un "punto di controllo della [soggettività debole](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)"), utilizzandolo come un blocco di pseudo-genesi per costruire su di esso. Questo crea un "gateway di fiducia" per un nuovo nodo che accede alla rete prima che possa iniziare a verificare le informazioni da solo.
 
 #### Negazione del servizio {#denial-of-service}
 
@@ -157,7 +157,7 @@ La risoluzione degli attacchi basati sul 34%, 51% o 66% dello stake richiederebb
 ## Ulteriori letture {#further-reading}
 
 - [Versione più dettagliata di questa pagina](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik sul carattere definitivo del regolamento](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik sul carattere definitivo del regolamento](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [Documentazione su LMD GHOST](https://arxiv.org/abs/2003.03052)
 - [Documento Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Articolo su Gasper](https://arxiv.org/pdf/2003.03052.pdf)

@@ -62,13 +62,13 @@ Isso resultará na mesma informação fornecida na página de transações do Et
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Captura de tela da visualização do explorador de transações Etherscan](./etherscan_view.png)
 
 [Página do contrato da EF no Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Captura de tela de um painel de consulta do Dune Analytics](./dune_view.png)
 
 Você pode encontrar o painel [aqui](https://dune.com/paulapivat/Learn-Ethereum). Clique na tabela para ver a consulta (veja também acima).
 

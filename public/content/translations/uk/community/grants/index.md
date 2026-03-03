@@ -1,6 +1,6 @@
 ---
-title: Фонд Ethereum і програми грантів спільноти
-description: Список програм грантів у межах екосистеми Ethereum.
+title: "Програми грантів від Ethereum Foundation та спільноти"
+description: "Список програм грантів у межах екосистеми Ethereum."
 lang: uk
 ---
 
@@ -10,40 +10,58 @@ lang: uk
 
 Цей перелік зроблено нашою спільнотою. Якщо чогось не вистачає або він містить помилки, відредагуйте цю сторінку!
 
-## Розгалужена екосистема Ethereum {#broad-ethereum-ecosystem}
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>Засновники, вам потрібна допомога у прискоренні вашого бізнесу? [Перейдіть на сторінку підтримки для засновників](/founders/)</div>
+</Alert>
+
+## Широка екосистема Ethereum {#broad-ethereum-ecosystem}
 
 Ці програми підтримують розлогу екосистему Ethereum, пропонуючи гранти для широкого кола проєктів. Вони містять рішення щодо масштабованості, розвитку громад, безпеки, конфіденційності тощо. Ці гранти не стосуються жодної певної платформи Ethereum і є хорошим місцем для старту, особливо якщо ви не впевненні, з чого почати.
 
-- [Програма підтримки EF Ecosystem](https://esp.ethereum.foundation) — _фінансування проєктів із відкритим вихідним кодом, що сприяють Ethereum, з особливим наголосом на універсальні інструменти, інфраструктуру, дослідження й суспільні блага_
-- [Запити пропозицій (RFP) від Ethereum](https://github.com/ethereum/requests-for-proposals) — _запити пропозицій Фондом Ethereum для роботи та проєктів в екосистемі Ethereum_
-- [DAO Moloch](https://www.molochdao.com/) — _конфіденційність, масштабування рівня 2, безпека клієнта й багато іншого_
-- [Відкриті гранти](https://opengrants.com/explore)
-- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Електронна таблиця Google з організацій, які пропонують гранти_
-- [Academic Grants](https://esp.ethereum.foundation/academic-grants) — _гранти для підтримки академічної роботи, пов’язаної з Ethereum_
+- [Програма підтримки екосистеми EF](https://esp.ethereum.foundation) - _фінансування проєктів із відкритим вихідним кодом, що приносять користь Ethereum, з особливим акцентом на універсальні інструменти, інфраструктуру, дослідження та суспільні блага_
+- [Академічні гранти](https://esp.ethereum.foundation/academic-grants) - _Гранти для підтримки академічної роботи, пов'язаної з Ethereum_
 
-## За типами проєктів {#project-specific}
+## Агрегатори списків грантів і платформи {#grant-list-aggregators}
 
-У межах цих проєктів створено власні гранти, спрямовані на розробку й тестування власних технологій.
+Ці ресурси збирають та упорядковують різноманітні грантові можливості в екосистемі Ethereum, полегшуючи пошук можливостей фінансування, що відповідають потребам вашого проєкту. Ми згрупували їх за типом користувачів, щоб допомогти вам розпочати пошук найрелевантніших ресурсів на основі ваших конкретних потреб у фінансуванні.
 
-- [Програма грантів Aave](https://aavegrants.org/) — _гранти DAO від [Aave](https://aave.com/)_
-- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) — _фонд екосистеми [Balancer](https://balancer.fi/)_
-- [Програма грантів Chainlink](https://chain.link/community/grants) — _гранти спільноти [Chainlink](https://chain.link/)_
-- [Програма грантів Compound](https://compoundgrants.questbook.app/) — _фінансова екосистема [Compound](https://compound.finance/)_
-- [Програма грантів Decentraland](https://governance.decentraland.org/grants/) — _[децентралізація](https://decentraland.org/) DAO Metaverse_
-- [Організація грантів Lido Ecosystem (LEGO)](https://lego.lido.fi/) — _фінансова екосистема [Lido](https://lido.fi/)_
-- [Програма MetaMask](https://metamaskgrants.org/) — _гранти під керівництвом співробітників DAO від [MetaMask](https://metamask.io/)_
-- [Програма грантів mStable](https://docs.mstable.org/advanced/grants-program) — _спільнота [mStable](https://mstable.org/)_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _екосистема [The Graph](https://thegraph.com/)_
-- [Програма грантів UMA](https://grants.umaproject.org/) — _підтримка розробників від [UMA](https://umaproject.org/)_
-- [Програма грантів Uniswap](https://www.uniswapfoundation.org/) — _спільнота [Uniswap](https://uniswap.org/)_
+### Для всіх шукачів грантів: вичерпні довідники {#comprehensive-directories}
 
-## Чотиричне фінансування {#quadratic-funding}
+Ці загальні платформи пропонують широке охоплення грантів у всьому просторі Web3 і є корисними відправними точками для всіх, хто шукає фінансування:
 
-Відкрита база Ethereum призвели до розвитку нової моделі збору коштів: квадратичного фінансування. Це може покращити наш спосіб фінансування всіх видів суспільних благ у майбутньому. Квадратичне фінансування гарантує, що проєкти з найунікальнішим попитом отримують найбільше фінансування. Інакше кажучи, проєкти, які сприяють покращенню життя більшості людей. [Докладніше про квадратичне фінансування.](/defi/#quadratic-funding)
+- [Blockchain Grants](https://www.blockchaingrants.org/) - _Каталог грантів у сфері блокчейну та криптовалют_
+- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Каталог усіх грантових програм Web3, що оновлюється щотижня
 
-- [Gitcoin](https://gitcoin.co/grants)
-- [clr.fund](https://clr.fund/)
+### Для розробників і авторів проєктів {#for-developers-and-builders}
+
+- [Переглядач грантових програм](https://airtable.com/shr86elKgWTSCP4AY) - _Публічна база даних Airtable з грантовими програмами_
+- [Таблиця грантів Web3](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Електронна таблиця Google з грантовими можливостями Web3_
+- [Гранти Arbitrum](https://arbitrum.foundation/grants) — Arbitrum DAO та [The Arbitrum Foundation](https://arbitrum.foundation/)
+
+### Для DeFi-проєктів та фінансових застосунків {#for-defi-projects}
+
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _Каталог грантових програм від DeFi Llama_
+- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _Вичерпний список грантів у сфері криптовалют та Web3_
+- [Гранти від Uniswap Foundation](https://www.uniswapfoundation.org/build) - _Гранти Unichain та Uniswap v4 і підтримка для розробників DeFi_
+
+### Для учасників DAO та інноваторів у галузі управління {#for-dao-contributors}
+
+Ресурси для проєктів, керованих спільнотою, та експериментів у сфері управління:
+
+- [Гранти DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Електронна таблиця Google з організаціями, що пропонують гранти_
+- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Вичерпна карта грантів Web3_
+
+### Суспільні блага та їхній вплив {#public-goods-and-impact}
+
+Ці програми зосереджені на фінансуванні проєктів, які приносять користь широкій спільноті, суспільним благам та соціально значущим ініціативам. До них належать надавачі грантів, а також платформи для пожертвувань, що використовують ончейн-механізми розподілу фінансування, зокрема [квадратичне фінансування](/defi/#quadratic-funding):
+
+- [Gitcoin](https://www.gitcoin.co/program) - _Гранти Gitcoin використовують різноманітні механізми розподілу капіталу для фінансування проєктів з відкритим вихідним кодом та суспільних благ в екосистемі Ethereum_
+- [Octant](https://octant.app/home) - _Екосистема фінансування суспільних благ, що збалансовує загальне благо та розширення фінансових можливостей окремих осіб_
+- [Giveth](https://giveth.io/) - _Криптовалютна платформа для пожертв, що дозволяє робити прямі пожертви для некомерційних проєктів без жодних додаткових комісій_
+- [Artizen](https://artizen.fund/) - _Допомога творцям у співфінансуванні нових проєктів на межі мистецтва, науки, технологій та культури_
+- [Quadratic Accelerator](https://qacc.giveth.io/) - _Програма-акселератор для стартапів, яка використовує квадратичне фінансування для підтримки проєктів, що приносять користь суспільному благу_
 
 ## Робота в Ethereum {#work-in-ethereum}
 
-Не готові розпочати власний проект? Сотні компаній активно шукають зацікавлених людей, які бажали б працювати в екосистемі Ethereum і підтримувати її. Шукаєте більше інформації? [Перегляньте вакансії, пов’язані з Ethereum](/community/get-involved/#ethereum-jobs)
+Не готові розпочати власний проект? Сотні компаній активно шукають зацікавлених людей, які бажали б працювати в екосистемі Ethereum і підтримувати її. Шукаєте більше інформації? [Перегляньте вакансії, пов'язані з Ethereum](/community/get-involved/#ethereum-jobs)

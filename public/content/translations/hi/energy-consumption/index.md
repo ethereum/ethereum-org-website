@@ -82,6 +82,5 @@ CCRI का अनुमान है कि मर्ज ने एथेरि
 
 ## संबंधित विषय {#related-topics}
 
-- [इथेरियम का दृष्टिकोण](/roadmap/vision/)
 - [बीकन चेन](/roadmap/beacon-chain)
 - [मर्ज](/roadmap/merge/)

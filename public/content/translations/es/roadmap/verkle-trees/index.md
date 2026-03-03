@@ -39,7 +39,7 @@ El tamaño del testigo varía dependiendo del número de hojas que incluya. Supo
 
 Los árboles de Verkle son pares `(clave,valor)` donde las claves son elementos de 32 bytes compuestos por un _tallo_ de 31 bytes y un _sufijo_ de un solo byte. Estas claves se organizan en nodos de _extensión_ y nodos _internos_. Los nodos de extensión representan una sola raíz para 256 hijos con diferentes sufijos. Los nodos internos también tienen 256 hijos, pero pueden ser otros nodos de extensión. La principal diferencia entre el árbol Verkle y la estructura del árbol Merkle es que el árbol Verkle es mucho más plano, lo que significa que hay menos nodos intermedios que conectan una hoja con la raíz y, por lo tanto, menos datos necesarios para generar una prueba.
 
-![](./verkle.png)
+![Diagrama de una estructura de datos de árbol de Verkle](./verkle.png)
 
 [Lea más sobre la estructura de los árboles de Verkle](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

@@ -6,7 +6,7 @@ lang: en
 
 # Ethereum grants {#ethereum-grants}
 
-The programs listed below offer a variety of funding grants for projects working to promote the success and growth of the Ethereum ecosystem. Use this as a guide to find and apply for funds to help make your next Ethereum project a success.
+The programs listed below offer a variety of funding grants for projects working to promote the success and growth of the [Ethereum](/) ecosystem. Use this as a guide to find and apply for funds to help make your next Ethereum project a success.
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
@@ -30,7 +30,6 @@ These resources compile and organize various grant opportunities across the Ethe
 
 These general platforms offer broad coverage of grants across the entire Web3 space and are useful starting points for anyone looking for funding:
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks has compiled a comprehensive directory of all grants, RFPs, and bug bounties._
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _Directory of blockchain and crypto grants_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Directory of all the web3 grant programs, updated on weekly basis
 

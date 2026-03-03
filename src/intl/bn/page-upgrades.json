@@ -1,3 +1,23 @@
 {
+  "page-upgrades-merge-infographic-el": "ইথেরিয়াম স্টেট: লেনদেন, অ্যাপস, চুক্তি, ব্যালেন্স",
+  "page-upgrades-merge-infographic-alt-text": "ইনফোগ্রাফিকটি চিত্রিত করছে কিভাবে বিকন চেইন প্রুফ-অফ-ওয়ার্ক থেকে প্রুফ-অফ-স্টেকে রূপান্তরের সময় ইথেরিয়ামের এক্সিকিউশন লেয়ারে একীভূত হয়।",
+  "page-upgrades-beacon-date": "চালান করা হয়েছে!",
+  "page-upgrades-merge-date": "সেপ্টেম্বর ২০২২",
+  "page-upgrades-shards-date": "~২০২৩",
+  "page-upgrades-pbs": "আসন্ন নয় - ২০২৪/২৫ সাল নাগাদ প্রত্যাশিত",
+  "page-upgrades-post-merge-banner-tutorial-ood": "এই টিউটোরিয়ালটি মার্জের পরে পুরোনো হয়ে গেছে এবং এটি কাজ নাও করতে পারে। আপনি যদি অবদান রাখতে চান তাহলে অনুগ্রহ করে একটি পিআর (PR) উত্থাপন করুন।",
+  "page-upgrades-upgrades-guide": "Ethereum আপগ্রেডের জন্য গাইড",
+  "page-upgrades-upgrades-docking": "দ্য মার্জ",
+  "page-upgrades-shard-title": "শের্ডিংয়ের",
+  "page-upgrades-upgrades-beacon-chain": "বীকন চেন",
+  "consensus-beaconscan-title": "beaconscan",
+  "consensus-beaconscan-in-title": "beaconcha.in",
+  "consensus-beaconcha-in-desc": "ওপেন সোর্স Eth2 বিকন চেন এক্সপ্লোরার",
+  "consensus-beaconscan-desc": "বিকন চেইন - সম্মতি লেয়ারের জন্য ইথারস্ক্যান",
+  "consensus-become-staker": "একজন স্টেকার হোন",
+  "consensus-become-staker-desc": "স্টেকিং লাইভ আছে! আপনি যদি নেটওয়ার্কটিকে সুরক্ষিত করতে আপনার ETH-কে বাজি ধরতে চান, তাহলে নিশ্চিত করুন যে আপনি ঝুঁকিগুলি সম্পর্কে সচেতন।.",
+  "consensus-explore": "ডেটাটি এক্সপ্লোর করুন",
+  "consensus-run-beacon-chain": "একটি সম্মতি ক্লায়েন্ট চালু করুন",
+  "consensus-run-beacon-chain-desc": "যত বেশি সংখ্যক ক্লায়েন্ট ইথেরিয়াম চালায় ততই ভাল। জনস্বার্থে ইথেরিয়াম ব্যবহার করুন!",
   "read-more": "আরও পড়ুন"
 }

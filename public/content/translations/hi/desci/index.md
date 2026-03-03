@@ -101,7 +101,6 @@ Web3 डेटा समाधान उपरोक्त परिदृश्
 - [OceanDAO: DAO डेटा से संबंधित विज्ञान के लिए शासित वित्त पोषण](https://oceanprotocol.com/)
 - [Opscientia: खुले विकेंद्रीकृत विज्ञान वर्कफ़्लोज़](https://opsci.io/research/)
 - [Bio.xyz: अपने बायोटेक DAO या DeSci परियोजना के लिए वित्त पोषित करें](https://www.bio.xyz/)
-- [Fleming Protocol: ओपन-सोर्स डेटा अर्थव्यवस्था जो सहयोगी बायोमेडिकल खोज को बढ़ावा देती है](http://flemingprotocol.io/)
 - [सक्रिय इंटरफ़ेस इंस्टीट्यूट](https://www.activeinference.org/)
 - [IdeaMarkets: विकेन्द्रीकृत वैज्ञानिक विश्वसनीयता को सक्षम करना](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

@@ -4,7 +4,7 @@ description: A stateless, light-weight remote procedure call (RPC) protocol for 
 lang: en
 ---
 
-In order for a software application to interact with the Ethereum blockchain - either by reading blockchain data or sending transactions to the network - it must connect to an Ethereum node.
+In order for a software application to interact with the [Ethereum](/) blockchain - either by reading blockchain data or sending transactions to the network - it must connect to an Ethereum node.
 
 For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](https://github.com/ethereum/execution-apis), so there is a uniform set of methods that applications can rely on regardless of the specific node or client implementation.
 
