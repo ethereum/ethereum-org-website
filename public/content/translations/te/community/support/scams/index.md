@@ -86,8 +86,8 @@ Reporting is still valuable. Reports help law enforcement track organized fraud 
 ## Types of scams to watch for {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="గివ్‌అవే మరియు ఎయిర్‌డ్రాప్ మోసాలు"
+contentPreview="ఎవ్వరూ ఉచితంగా ETH ఇవ్వరు. ఈ ఆఫర్లు ఎల్లప్పుడూ మోసాలే."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 
@@ -102,8 +102,8 @@ Scammers create fake giveaways promising to multiply your ETH or give you free t
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="నకిలీ మరియు ఫేక్ సపోర్ట్"
+contentPreview="Ethereum లేదా ethereum.org నుండి ఎవరూ మిమ్మల్ని మొదట సంప్రదించరు."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 
@@ -121,8 +121,8 @@ Scammers impersonate Ethereum team members, moderators, or support agents on Dis
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="రికవరీ మోసాలు"
+contentPreview="మోసపోయిన తర్వాత, నకిలీ 'క్రిప్టో రికవరీ నిపుణుల' పట్ల జాగ్రత్త వహించండి."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 
@@ -137,8 +137,8 @@ They promise to trace and recover your stolen crypto for an upfront fee. After y
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="ఫిషింగ్ వెబ్‌సైట్లు మరియు నకిలీ యాప్‌లు"
+contentPreview="మోసపూరిత సైట్లు మీ ఆధారాలను దొంగిలించడానికి నిజమైన వాలెట్లను, ఎక్స్ఛేంజ్‌లను అనుకరిస్తాయి."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 
