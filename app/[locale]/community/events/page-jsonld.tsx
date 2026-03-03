@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
+import communityHubs from "@/data/community-hubs"
 import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
@@ -10,6 +11,24 @@ import {
   ethereumFoundationOrganization,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+/**
+ * Maps hub IDs to their known address locality and country.
+ * Street addresses and geo coordinates can be added here once
+ * collected from hub operators.
+ */
+const hubLocations: Record<
+  string,
+  { addressLocality: string; addressCountry: string }
+> = {
+  "hong-kong": { addressLocality: "Hong Kong", addressCountry: "HK" },
+  rome: { addressLocality: "Rome", addressCountry: "IT" },
+  london: { addressLocality: "London", addressCountry: "GB" },
+  berlin: { addressLocality: "Berlin", addressCountry: "DE" },
+  dubai: { addressLocality: "Dubai", addressCountry: "AE" },
+  lagos: { addressLocality: "Lagos", addressCountry: "NG" },
+  sf: { addressLocality: "San Francisco", addressCountry: "US" },
+}
 
 export default async function EventsJsonLD({
   locale,
@@ -29,6 +48,24 @@ export default async function EventsJsonLD({
     name: contributor.login,
     url: contributor.html_url,
   }))
+
+  const hubPlaces = communityHubs.map((hub) => {
+    const loc = hubLocations[hub.id]
+    return {
+      "@type": "Place",
+      "@id": `${url}#hub-${hub.id}`,
+      name: `${hub.location} Ethereum Community Hub`,
+      description: t(hub.descriptionKey),
+      url: `${url}#community-hubs`,
+      image: `https://ethereum.org/images/community/hubs/${hub.id}-hub-banner.png`,
+      sameAs: [hub.meetupUrl],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: loc.addressLocality,
+        addressCountry: loc.addressCountry,
+      },
+    }
+  })
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -118,6 +155,7 @@ export default async function EventsJsonLD({
         publisher: ethereumFoundationOrganization,
         reviewedBy: ethereumFoundationOrganization,
       },
+      ...hubPlaces,
     ],
   }
 
