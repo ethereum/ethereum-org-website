@@ -434,11 +434,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <div className="flex flex-col gap-y-8 rounded-4xl bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
-                    <Image
-                      src={ethereumEverywhereLogo}
-                      alt={t("item-logo", { name: "Ethereum Everywhere" })}
-                      sizes="4rem"
-                    />
+                    <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
                   </div>
                   <h3 className="text-xl font-bold">
                     {t("page-events-support-ethereum-everywhere")}
@@ -502,11 +498,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <div className="flex flex-col gap-y-8 rounded-4xl bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
-                    <Image
-                      src={geodeLabsLogo}
-                      alt={t("item-logo", { name: "GeodeLabs" })}
-                      sizes="4rem"
-                    />
+                    <Image src={geodeLabsLogo} alt="" sizes="4rem" />
                   </div>
                   <h3 className="text-xl font-bold">
                     {t("page-events-support-geode-labs")}
