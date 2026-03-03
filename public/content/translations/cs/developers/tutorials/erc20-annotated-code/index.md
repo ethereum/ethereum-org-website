@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: cs
 tags: [ "solidity", "erc-20" ]
 skill: beginner
+breadcrumb: "ERC-20 průvodce"
 published: 2021-03-09
 ---
 

@@ -4,6 +4,7 @@ description: "Naučte se implementovat tokenový standard ERC-20 s kompletním p
 author: "jdourlens"
 tags: [ "smart kontrakt účty", "tokeny", "solidity", "erc-20" ]
 skill: beginner
+breadcrumb: "Základy ERC-20"
 lang: cs
 published: 2020-04-05
 source: EthereumDev

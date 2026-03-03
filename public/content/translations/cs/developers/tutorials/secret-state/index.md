@@ -12,6 +12,7 @@ tags:
     "mud"
   ]
 skill: advanced
+breadcrumb: "ZK tajný stav"
 lang: cs
 published: 2025-03-15
 ---

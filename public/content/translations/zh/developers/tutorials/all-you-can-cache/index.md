@@ -4,6 +4,7 @@ description: "学习如何创建和使用缓存合约，以便进行更实惠的
 author: Ori Pomerantz
 tags: [ "二层网络", "缓存", "存储" ]
 skill: intermediate
+breadcrumb: "Rollup缓存"
 published: 2022-09-15
 lang: zh
 ---

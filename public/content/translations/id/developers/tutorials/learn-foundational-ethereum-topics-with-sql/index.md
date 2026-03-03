@@ -12,6 +12,7 @@ tags:
   - "Transaksi"
   - "Gas"
 skill: beginner
+breadcrumb: "Ethereum dengan SQL"
 lang: id
 published: 2021-05-11
 source: paulapivat.com

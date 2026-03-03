@@ -4,6 +4,7 @@ description: "Sicherstellung der Datenintegrität onchain für Daten, die größ
 author: Ori Pomerantz
 tags: ["storage"]
 skill: advanced
+breadcrumb: "Merkle-Beweise"
 lang: de
 published: 2021-12-30
 ---

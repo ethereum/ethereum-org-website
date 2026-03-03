@@ -4,6 +4,7 @@ description: "Como chamar uma função de um contrato inteligente a partir do Ja
 author: jdourlens
 tags: [ "transações", "front-end", "JavaScript", "web3.js" ]
 skill: beginner
+breadcrumb: "Chamar contratos de JS"
 lang: pt-br
 published: 2020-04-19
 source: EthereumDev

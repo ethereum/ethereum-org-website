@@ -10,6 +10,7 @@ tags:
   - "memulai"
   - "menyebarkan"
 skill: beginner
+breadcrumb: "Kontrak Hello World"
 lang: id
 published: 2021-03-31
 ---

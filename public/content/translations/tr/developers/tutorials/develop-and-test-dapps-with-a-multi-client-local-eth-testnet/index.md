@@ -13,6 +13,7 @@ tags:
     "test etmek"
   ]
 skill: intermediate
+breadcrumb: "Çoklu istemci testnet"
 lang: tr
 published: 2023-04-11
 ---

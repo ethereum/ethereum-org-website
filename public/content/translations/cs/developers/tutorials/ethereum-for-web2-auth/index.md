@@ -4,6 +4,7 @@ description: "Po přečtení tohoto tutoriálu bude vývojář schopen integrova
 author: Ori Pomerantz
 tags: [ "web2", "ověření", "eas" ]
 skill: beginner
+breadcrumb: "Ethereum pro web2 auth"
 lang: cs
 published: 2025-04-30
 ---

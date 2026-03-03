@@ -4,6 +4,7 @@ description: "本指南将首先引导你完成实例化和配置多客户端本
 author: "Tedi Mitiku"
 tags: [ "客户端", "节点", "智能合同", "可组合性", "共识层", "执行层", "测试" ]
 skill: intermediate
+breadcrumb: "多客户端测试网"
 lang: zh
 published: 2023-04-11
 ---

@@ -10,6 +10,7 @@ tags:
   - "the graph"
   - "defi"
 skill: beginner
+breadcrumb: "create-eth-app"
 lang: id
 published: 2020-04-27
 source: soliditydeveloper.com

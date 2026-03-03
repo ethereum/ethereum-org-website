@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: es
 tags: [ "agente", "servidor", "fuera de la cadena" ]
 skill: beginner
+breadcrumb: "Server components"
 published: 2024-07-15
 ---
 

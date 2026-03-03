@@ -4,6 +4,7 @@ description: "Ten samouczek uczy czytelnika, jak używać IPFS do przechowywania
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
+breadcrumb: "IPFS dla dapp UI"
 lang: pl
 published: 2024-06-29
 ---

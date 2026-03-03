@@ -8,6 +8,7 @@ tags:
   - "JavaScript"
   - "web3.js"
 skill: beginner
+breadcrumb: "Panggil kontrak dari JS"
 lang: id
 published: 2020-04-19
 source: EthereumDev

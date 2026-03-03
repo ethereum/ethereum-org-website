@@ -4,6 +4,7 @@ description: "Przewodnik dla początkujących dotyczący wysyłania tokenów prz
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "TOKENY" ]
 skill: beginner
+breadcrumb: "Wysyłanie tokenów"
 lang: pl
 published: 2021-04-06
 ---

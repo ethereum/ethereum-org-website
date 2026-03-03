@@ -4,6 +4,7 @@ description: "Ten samouczek opisuje, jak wyświetlić istniejące NFT na MetaMas
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
+breadcrumb: "NFT w portfelu"
 lang: pl
 published: 2021-04-22
 ---

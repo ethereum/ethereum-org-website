@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: fr
 tags: [ "agent", "serveur", "hors-chaîne" ]
 skill: beginner
+breadcrumb: "Server components"
 published: 2024-07-15
 ---
 

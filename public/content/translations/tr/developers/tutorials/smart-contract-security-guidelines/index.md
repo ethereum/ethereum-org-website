@@ -4,6 +4,7 @@ description: "Dapp'inizi oluştururken göz önünde bulundurmanız gereken güv
 author: "Trailofbits"
 tags: [ "solidity", "akıllı kontratlar", "güvenlik" ]
 skill: intermediate
+breadcrumb: "Güvenlik kuralları"
 lang: tr
 published: 2020-09-06
 source: Building secure contracts

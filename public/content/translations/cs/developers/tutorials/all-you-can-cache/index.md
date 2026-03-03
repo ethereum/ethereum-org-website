@@ -4,6 +4,7 @@ description: "Naučte se, jak vytvořit a používat cachovací kontrakt pro lev
 author: Ori Pomerantz
 tags: [ "vrstva 2", "cachování", "úložiště" ]
 skill: intermediate
+breadcrumb: "Cachování pro rollupy"
 published: 2022-09-15
 lang: cs
 ---

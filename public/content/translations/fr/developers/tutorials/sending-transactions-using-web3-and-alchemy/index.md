@@ -4,6 +4,7 @@ description: "Voici un guide pour débutants expliquant comment envoyer des tran
 author: "Elan Halpern"
 tags: [ "transactions", "web3.js", "Alchemy" ]
 skill: beginner
+breadcrumb: "Envoyer des transactions"
 lang: fr
 published: 2020-11-04
 source: Alchemy docs

@@ -4,6 +4,7 @@ description: "Tìm hiểu cách triển khai tiêu chuẩn token ERC-20 thông q
 author: "jdourlens"
 tags: [ "hợp đồng thông minh", "tokens", "Solidity", "erc-20" ]
 skill: beginner
+breadcrumb: "Cơ bản token ERC-20"
 lang: vi
 published: 2020-04-05
 source: EthereumDev

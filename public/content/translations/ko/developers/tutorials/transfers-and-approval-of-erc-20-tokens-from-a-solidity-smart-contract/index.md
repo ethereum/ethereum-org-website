@@ -4,6 +4,7 @@ description: "Solidity를 사용하여 ERC-20 토큰 전송 및 승인을 처리
 author: "jdourlens"
 tags: [ "스마트 계약", "토큰", "Solidity", "erc-20" ]
 skill: intermediate
+breadcrumb: "ERC-20 전송"
 lang: ko
 published: 2020-04-07
 source: EthereumDev

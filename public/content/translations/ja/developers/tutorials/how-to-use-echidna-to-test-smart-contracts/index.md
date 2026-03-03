@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: ja
 tags: [ "Solidity", "スマートコントラクト", "セキュリティ", "テスト", "ファジング" ]
 skill: advanced
+breadcrumb: "Echidna"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

@@ -4,6 +4,7 @@ description: "Ethereum için resmi spesifikasyonlar olan Sarı Kağıt'ın, Ethe
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: tr
 published: 2022-05-15
 ---

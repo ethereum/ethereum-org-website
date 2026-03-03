@@ -11,6 +11,7 @@ tags:
     "Alchemy"
   ]
 skill: beginner
+breadcrumb: "Начало работы"
 lang: ru
 published: 2020-10-30
 source: Medium

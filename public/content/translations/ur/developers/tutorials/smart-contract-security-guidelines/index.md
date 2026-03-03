@@ -4,6 +4,7 @@ description: "اپنا ڈیپ بناتے وقت غور کرنے کے لیے سی
 author: "Trailofbits"
 tags: [ "solidity", "اسمارٹ معاہدات", "سیکورٹی" ]
 skill: intermediate
+breadcrumb: "سیکیورٹی ہدایات"
 lang: ur-in
 published: 2020-09-06
 source: Building secure contracts

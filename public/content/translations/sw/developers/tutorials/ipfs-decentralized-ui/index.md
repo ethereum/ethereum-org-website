@@ -4,6 +4,7 @@ description: Tutorial hii inamfundisha msomaji jinsi ya kutumia IPFS kuhifadhi k
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
+breadcrumb: "IPFS kwa UI ya dapp"
 lang: sw
 published: 2024-06-29
 ---

@@ -10,6 +10,7 @@ tags:
   - "pengujian"
   - "verifikasi formal"
 skill: advanced
+breadcrumb: "Manticore"
 published: 2020-01-13
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

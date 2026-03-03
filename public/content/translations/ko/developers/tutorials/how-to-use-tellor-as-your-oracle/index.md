@@ -5,6 +5,7 @@ author: "Tellor"
 lang: ko
 tags: [ "Solidity", "스마트 계약", "오라클" ]
 skill: beginner
+breadcrumb: "Tellor 오라클"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

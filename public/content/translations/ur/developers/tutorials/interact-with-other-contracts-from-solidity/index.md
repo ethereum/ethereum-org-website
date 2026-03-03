@@ -11,6 +11,7 @@ tags:
     "مرکبیت"
   ]
 skill: advanced
+breadcrumb: "معاہدے کی تعاملات"
 lang: ur-in
 published: 2020-04-05
 source: EthereumDev

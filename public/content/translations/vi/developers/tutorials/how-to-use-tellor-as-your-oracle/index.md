@@ -5,6 +5,7 @@ author: "Tellor"
 lang: vi
 tags: [ "Solidity", "hợp đồng thông minh", "oracles" ]
 skill: beginner
+breadcrumb: "Tellor oracle"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

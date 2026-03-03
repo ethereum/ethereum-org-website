@@ -4,6 +4,7 @@ description: "Comment appeler une fonction de contrat intelligent à partir de J
 author: jdourlens
 tags: [ "transactions", "frontend", "JavaScript", "web3.js" ]
 skill: beginner
+breadcrumb: "Appeler contrats depuis JS"
 lang: fr
 published: 2020-04-19
 source: EthereumDev

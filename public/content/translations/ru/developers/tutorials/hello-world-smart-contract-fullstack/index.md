@@ -14,6 +14,7 @@ tags:
     "транзакции"
   ]
 skill: beginner
+breadcrumb: "Hello World fullstack"
 lang: ru
 published: 2021-10-25
 ---

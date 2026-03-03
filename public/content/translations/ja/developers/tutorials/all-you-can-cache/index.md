@@ -4,6 +4,7 @@ description: "ロールアップのトランザクションをより安くする
 author: Ori Pomerantz
 tags: [ "レイヤー2", "キャッシュ", "ストレージ" ]
 skill: intermediate
+breadcrumb: "Rollupキャッシュ"
 published: 2022-09-15
 lang: ja
 ---

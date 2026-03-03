@@ -4,6 +4,7 @@ description: "Dieses Tutorial beschreibt, wie Sie ein bestehendes NFT auf MetaMa
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner
+breadcrumb: "NFT im Wallet anzeigen"
 lang: de
 published: 2021-04-22
 ---

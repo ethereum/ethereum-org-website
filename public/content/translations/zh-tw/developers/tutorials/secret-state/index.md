@@ -4,6 +4,7 @@ description: "鏈上遊戲有所限制，因為它們無法保存任何隱藏資
 author: Ori Pomerantz
 tags: [ "server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud" ]
 skill: advanced
+breadcrumb: "ZK秘密狀態"
 lang: zh-tw
 published: 2025-03-15
 ---

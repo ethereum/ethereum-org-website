@@ -5,6 +5,7 @@ author: Nathan H. Leung
 lang: zh
 tags: [ "eip-1271", "智能合同", "验证", "签署" ]
 skill: intermediate
+breadcrumb: "EIP-1271签名"
 published: 2023-01-12
 ---
 

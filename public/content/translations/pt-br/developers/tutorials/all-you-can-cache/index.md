@@ -4,6 +4,7 @@ description: "Aprenda a criar e usar um contrato de cache para transações de r
 author: Ori Pomerantz
 tags: [ "camada 2", "cache", "armazenamento" ]
 skill: intermediate
+breadcrumb: "Cache para rollups"
 published: 2022-09-15
 lang: pt-br
 ---

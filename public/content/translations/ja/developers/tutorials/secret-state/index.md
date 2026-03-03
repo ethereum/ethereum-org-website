@@ -12,6 +12,7 @@ tags:
     "mud"
   ]
 skill: advanced
+breadcrumb: "ZK秘密状態"
 lang: ja
 published: 2025-03-15
 ---

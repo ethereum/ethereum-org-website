@@ -4,6 +4,7 @@ description: "ఇతీరియము కోసం అధికారిక స
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: te
 published: 2022-05-15
 ---

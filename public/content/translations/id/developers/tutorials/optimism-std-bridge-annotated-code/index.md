@@ -7,6 +7,7 @@ tags:
   - "bridge"
   - "lapisan 2"
 skill: intermediate
+breadcrumb: "Bridge Optimism"
 published: 2022-03-30
 lang: id
 ---

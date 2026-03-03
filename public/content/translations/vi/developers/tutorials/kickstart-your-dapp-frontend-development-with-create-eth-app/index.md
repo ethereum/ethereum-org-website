@@ -11,6 +11,7 @@ tags:
     "tài chính phi tập trung"
   ]
 skill: beginner
+breadcrumb: "create-eth-app"
 lang: vi
 published: 2020-04-27
 source: soliditydeveloper.com

@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: sw
 tags: ["solidity", "smart contracts", "security", "testing", "fuzzing"]
 skill: advanced
+breadcrumb: "Echidna"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

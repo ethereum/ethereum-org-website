@@ -9,6 +9,7 @@ tags:
   - "Erste Schritte"
   - "Erc-20"
 skill: beginner
+breadcrumb: "ERC-20-Grundlagen"
 lang: de
 published: 2020-04-05
 source: EthereumDev

@@ -9,6 +9,7 @@ tags:
   - "distribuzione"
   - "componibilità"
 skill: advanced
+breadcrumb: "Interazioni tra contratti"
 lang: it
 published: 2020-04-05
 source: EthereumDev

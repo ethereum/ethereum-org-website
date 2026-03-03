@@ -10,6 +10,7 @@ tags:
     "erc-20"
   ]
 skill: beginner
+breadcrumb: "Основи ERC-20"
 lang: uk
 published: 2020-04-05
 source: EthereumDev

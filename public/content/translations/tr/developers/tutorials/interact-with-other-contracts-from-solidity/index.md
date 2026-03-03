@@ -11,6 +11,7 @@ tags:
     "birleştirilebilirlik"
   ]
 skill: advanced
+breadcrumb: "Sözleşme etkileşimi"
 lang: tr
 published: 2020-04-05
 source: EthereumDev

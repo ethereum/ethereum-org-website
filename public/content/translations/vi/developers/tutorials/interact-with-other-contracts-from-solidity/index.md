@@ -11,6 +11,7 @@ tags:
     "khả năng tổng hợp"
   ]
 skill: advanced
+breadcrumb: "Tương tác hợp đồng"
 lang: vi
 published: 2020-04-05
 source: EthereumDev

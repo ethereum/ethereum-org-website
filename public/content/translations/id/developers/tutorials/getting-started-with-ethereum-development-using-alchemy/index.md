@@ -10,6 +10,7 @@ tags:
   - "membuat kueri"
   - "alchemy"
 skill: beginner
+breadcrumb: "Memulai"
 lang: id
 published: 2020-10-30
 source: Sedang

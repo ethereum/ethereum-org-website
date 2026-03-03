@@ -12,6 +12,7 @@ tags:
     "react"
   ]
 skill: intermediate
+breadcrumb: "The Graph"
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph

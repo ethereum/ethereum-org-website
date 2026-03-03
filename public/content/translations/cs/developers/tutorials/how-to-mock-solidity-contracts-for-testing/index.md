@@ -11,6 +11,7 @@ tags:
     "mocking"
   ]
 skill: intermediate
+breadcrumb: "Mockování kontraktu"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

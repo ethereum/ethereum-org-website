@@ -7,6 +7,7 @@ tags:
   - "Alchemy"
   - "Solidity"
 skill: beginner
+breadcrumb: "Vedere NFT nel wallet"
 lang: it
 published: 2021-04-22
 ---

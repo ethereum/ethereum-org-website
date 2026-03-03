@@ -11,6 +11,7 @@ tags:
   ]
 lang: tr
 skill: intermediate
+breadcrumb: "Raspberry Pi düğümü"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

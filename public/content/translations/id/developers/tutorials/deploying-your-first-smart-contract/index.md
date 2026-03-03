@@ -9,6 +9,7 @@ tags:
   - "memulai"
   - "menyebarkan"
 skill: beginner
+breadcrumb: "Deploy kontrak pertama"
 lang: id
 published: 2020-04-03
 source: EthereumDev

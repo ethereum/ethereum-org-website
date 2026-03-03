@@ -4,6 +4,7 @@ description: "初めてイーサリアムのテストネットにスマートコ
 author: "jdourlens"
 tags: [ "スマートコントラクト", "Remix", "Solidity", "デプロイ" ]
 skill: beginner
+breadcrumb: "初めてのデプロイ"
 lang: ja
 published: 2020-04-03
 source: EthereumDev

@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: ja
 tags: [ "レイヤー2" ]
 skill: intermediate
+breadcrumb: "短縮ABI"
 published: 2022-04-01
 ---
 

@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: vi
 tags: [ "lớp 2" ]
 skill: intermediate
+breadcrumb: "ABI ngắn"
 published: 2022-04-01
 ---
 

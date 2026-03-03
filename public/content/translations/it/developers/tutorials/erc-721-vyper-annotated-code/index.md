@@ -8,6 +8,7 @@ tags:
   - "erc-721"
   - "python"
 skill: beginner
+breadcrumb: "Vyper ERC-721"
 published: 2021-04-01
 ---
 

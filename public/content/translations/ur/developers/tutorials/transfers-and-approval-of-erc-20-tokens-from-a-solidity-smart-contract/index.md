@@ -4,6 +4,7 @@ description: "Solidity کا استعمال کرتے ہوئے ایک DEX اسما
 author: "jdourlens"
 tags: [ "اسمارٹ معاہدات", "tokens", "solidity", "erc-20" ]
 skill: intermediate
+breadcrumb: "ERC-20 منتقلی"
 lang: ur-in
 published: 2020-04-07
 source: EthereumDev

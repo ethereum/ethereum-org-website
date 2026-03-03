@@ -4,6 +4,7 @@ description: How does the Uniswap-v2 contract work? Why is it written that way?
 author: Ori Pomerantz
 tags: [ "solidity" ]
 skill: intermediate
+breadcrumb: "Uniswap v2 rehberi"
 published: 2021-05-01
 lang: tr
 ---

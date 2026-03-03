@@ -4,6 +4,7 @@ description: "Aprenda a implementar o padrão de token ERC-20 com um exemplo e e
 author: "jdourlens"
 tags: [ "smart contracts", "tokens", "Solidity", "erc-20" ]
 skill: beginner
+breadcrumb: "Basico ERC-20"
 lang: pt-br
 published: 2020-04-05
 source: EthereumDev

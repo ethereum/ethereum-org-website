@@ -5,6 +5,7 @@ author: "Tellor"
 lang: ja
 tags: [ "Solidity", "スマートコントラクト", "オラクル" ]
 skill: beginner
+breadcrumb: "Tellorオラクル"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

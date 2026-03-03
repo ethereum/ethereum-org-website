@@ -11,6 +11,7 @@ tags:
     "Alchemy"
   ]
 skill: beginner
+breadcrumb: "Premiers pas"
 lang: fr
 published: 2020-10-30
 source: Medium

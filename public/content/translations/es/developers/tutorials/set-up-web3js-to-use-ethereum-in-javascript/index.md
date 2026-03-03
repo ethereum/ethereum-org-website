@@ -4,6 +4,7 @@ description: "Aprenda cómo configurar la librería web3.js para interactuar con
 author: "jdourlens"
 tags: [ "web3.js", "JavaScript" ]
 skill: beginner
+breadcrumb: "Configurar web3.js"
 lang: es
 published: 2020-04-11
 source: EthereumDev

@@ -4,6 +4,7 @@ description: "Dieses Tutorial hilft Lesern, grundlegende Ethereum-Konzepte wie T
 author: "Paul Apivat"
 tags: ["SQL", "Querying", "Transactions"]
 skill: beginner
+breadcrumb: "Ethereum mit SQL"
 lang: de
 published: 2021-05-11
 source: paulapivat.com

@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: es
 tags: [ "capa 2" ]
 skill: intermediate
+breadcrumb: "ABIs cortos"
 published: 2022-04-01
 ---
 

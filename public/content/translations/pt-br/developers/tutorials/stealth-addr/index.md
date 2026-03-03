@@ -11,6 +11,7 @@ tags:
     "wasm"
   ]
 skill: intermediate
+breadcrumb: "Enderecos ocultos"
 published: 2025-11-30
 lang: pt-br
 sidebarDepth: 3

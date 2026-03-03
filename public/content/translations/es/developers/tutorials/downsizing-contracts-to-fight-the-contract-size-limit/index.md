@@ -5,6 +5,7 @@ author: Markus Waas
 lang: es
 tags: [ "Solidity", "contratos Inteligentes", "almacenamiento" ]
 skill: intermediate
+breadcrumb: "Reducir contratos"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

@@ -4,6 +4,7 @@ description: "Розуміння частини Yellow Paper, формально
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: uk
 published: 2022-05-15
 ---

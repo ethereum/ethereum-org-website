@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: es
 tags: [ "evm", "códigos de operación" ]
 skill: advanced
+breadcrumb: "Ingenieria inversa"
 published: 2021-12-30
 ---
 

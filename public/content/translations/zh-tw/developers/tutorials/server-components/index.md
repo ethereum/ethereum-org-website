@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: zh-tw
 tags: [ "agent", "server", "offchain" ]
 skill: beginner
+breadcrumb: "Server元件"
 published: 2024-07-15
 ---
 

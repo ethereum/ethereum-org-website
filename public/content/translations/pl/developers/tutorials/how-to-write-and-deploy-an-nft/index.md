@@ -4,6 +4,7 @@ description: "Ten samouczek jest częścią 1 serii o NFT, która poprowadzi Ci�
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "smart kontrakty" ]
 skill: beginner
+breadcrumb: "Tworzenie i wdrażanie NFT"
 lang: pl
 published: 2021-04-22
 ---

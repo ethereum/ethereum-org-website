@@ -8,6 +8,7 @@ tags:
   - "JavaScript"
   - "web3.js"
 skill: beginner
+breadcrumb: "Chiamare contratti da JS"
 lang: it
 published: 2020-04-19
 source: EthereumDev

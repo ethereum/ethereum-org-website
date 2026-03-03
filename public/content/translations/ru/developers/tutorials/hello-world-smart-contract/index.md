@@ -11,6 +11,7 @@ tags:
     "развертывание"
   ]
 skill: beginner
+breadcrumb: "Контракт Hello World"
 lang: ru
 published: 2021-03-31
 ---

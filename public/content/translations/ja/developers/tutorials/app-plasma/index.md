@@ -4,6 +4,7 @@ description: "このチュートリアルでは、預金用の半秘密の銀行
 author: Ori Pomerantz
 tags: [ "ゼロ知識", "サーバー", "オフチェーン", "プライバシー" ]
 skill: advanced
+breadcrumb: "App Plasma"
 lang: ja
 published: 2025-10-15
 ---

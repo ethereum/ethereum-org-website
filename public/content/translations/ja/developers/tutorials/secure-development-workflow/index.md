@@ -4,6 +4,7 @@ description: "セキュアなスマートコントラクトを作成するため
 author: "Trailofbits"
 tags: [ "スマートコントラクト", "セキュリティ", "Solidity" ]
 skill: intermediate
+breadcrumb: "セキュリティチェックリスト"
 lang: ja
 published: 2020-09-07
 source: Building secure contracts

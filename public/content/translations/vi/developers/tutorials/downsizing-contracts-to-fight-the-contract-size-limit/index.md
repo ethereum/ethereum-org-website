@@ -5,6 +5,7 @@ author: Markus Waas
 lang: vi
 tags: [ "Solidity", "hợp đồng thông minh", "lưu trữ" ]
 skill: intermediate
+breadcrumb: "Thu nhỏ hợp đồng"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

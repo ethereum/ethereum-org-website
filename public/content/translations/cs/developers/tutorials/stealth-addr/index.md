@@ -11,6 +11,7 @@ tags:
     "wasm"
   ]
 skill: intermediate
+breadcrumb: "Stealth adresy"
 published: 2025-11-30
 lang: cs
 sidebarDepth: 3

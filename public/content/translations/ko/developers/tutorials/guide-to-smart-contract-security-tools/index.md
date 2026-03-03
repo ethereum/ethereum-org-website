@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: ko
 tags: [ "Solidity", "스마트 계약", "보안" ]
 skill: intermediate
+breadcrumb: "보안 도구"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

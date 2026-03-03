@@ -7,6 +7,7 @@ tags:
   - "keamanan"
   - "solidity"
 skill: intermediate
+breadcrumb: "Daftar keamanan"
 lang: id
 published: 2020-09-07
 source: Membuat kontrak yang aman

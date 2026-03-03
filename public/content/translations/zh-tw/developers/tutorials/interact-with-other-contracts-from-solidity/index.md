@@ -4,6 +4,7 @@ description: "如何從現有合約部署智能合約並與其互動"
 author: "jdourlens"
 tags: [ "smart contracts", "solidity", "remix", "deploying", "composability" ]
 skill: advanced
+breadcrumb: "合約互動"
 lang: zh-tw
 published: 2020-04-05
 source: EthereumDev

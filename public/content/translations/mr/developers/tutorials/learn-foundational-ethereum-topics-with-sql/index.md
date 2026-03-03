@@ -4,6 +4,7 @@ description: "हे ट्युटोरियल वाचकांना स
 author: "Paul Apivat"
 tags: [ "SQL", "क्वेरी करणे", "व्यवहार" ]
 skill: beginner
+breadcrumb: "SQL सह Ethereum"
 lang: mr
 published: 2021-05-11
 source: paulapivat.com

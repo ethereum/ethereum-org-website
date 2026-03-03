@@ -7,6 +7,7 @@ tags:
   - "ERC-20"
   - "TOKEN"
 skill: beginner
+breadcrumb: "Inviare token"
 lang: it
 published: 2021-04-06
 ---

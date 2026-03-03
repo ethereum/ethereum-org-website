@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: tr
 tags: [ "aracı", "sunucu", "zincir dışında" ]
 skill: beginner
+breadcrumb: "Sunucu bileşenleri"
 published: 2024-07-15
 ---
 

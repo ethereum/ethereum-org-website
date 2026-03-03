@@ -4,6 +4,7 @@ description: "Это удобное руководство для начинаю
 author: "Elan Halpern"
 tags: [ "транзакции", "web3.js", "Alchemy" ]
 skill: beginner
+breadcrumb: "Отправка транзакций"
 lang: ru
 published: 2020-11-04
 source: Alchemy docs

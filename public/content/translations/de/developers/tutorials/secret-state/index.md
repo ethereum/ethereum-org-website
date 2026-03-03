@@ -4,6 +4,7 @@ description: "Onchain-Spiele sind begrenzt, da sie keine versteckten Information
 author: Ori Pomerantz
 tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud"]
 skill: advanced
+breadcrumb: "ZK-Geheimzustand"
 lang: de
 published: 2025-03-15
 ---

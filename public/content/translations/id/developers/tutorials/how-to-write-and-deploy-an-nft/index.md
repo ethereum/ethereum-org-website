@@ -9,6 +9,7 @@ tags:
   - "Solidity"
   - "kontrak pintar"
 skill: beginner
+breadcrumb: "Tulis dan deploy NFT"
 lang: id
 published: 2021-04-22
 ---

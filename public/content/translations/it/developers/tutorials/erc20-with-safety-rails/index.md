@@ -6,6 +6,7 @@ lang: it
 tags:
   - "erc-20"
 skill: beginner
+breadcrumb: "ERC-20 sicuro"
 published: 2022-08-15
 ---
 

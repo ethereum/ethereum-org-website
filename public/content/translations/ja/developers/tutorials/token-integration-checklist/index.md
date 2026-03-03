@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: ja
 tags: [ "Solidity", "スマートコントラクト", "セキュリティ", "トークン" ]
 skill: intermediate
+breadcrumb: "トークン統合"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

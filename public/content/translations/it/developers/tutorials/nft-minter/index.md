@@ -10,6 +10,7 @@ tags:
   - "frontend"
   - "Pinata"
 skill: intermediate
+breadcrumb: "Dapp conio NFT"
 lang: it
 published: 2021-10-06
 ---

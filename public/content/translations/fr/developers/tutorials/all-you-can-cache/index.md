@@ -4,6 +4,7 @@ description: "Apprenez comment créer et utiliser un contrat de mise en cache po
 author: Ori Pomerantz
 tags: [ "couche 2", "mise en cache", "stockage" ]
 skill: intermediate
+breadcrumb: "Cache pour rollups"
 published: 2022-09-15
 lang: fr
 ---

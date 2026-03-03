@@ -4,6 +4,7 @@ description: Un flujo de trabajo recomendado para escribir contratos inteligente
 author: "Trailofbits"
 tags: [ "contratos Inteligentes", "seguridades", "Solidity" ]
 skill: intermediate
+breadcrumb: "Lista de seguridad"
 lang: es
 published: 2020-09-07
 source: Building secure contracts

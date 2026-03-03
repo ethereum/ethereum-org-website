@@ -14,6 +14,7 @@ tags:
     "トランザクション"
   ]
 skill: beginner
+breadcrumb: "Hello Worldフルスタック"
 lang: ja
 published: 2021-10-25
 ---

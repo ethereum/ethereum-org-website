@@ -10,6 +10,7 @@ tags:
     "స్మార్ట్ కాంట్రాక్టులు"
   ]
 skill: beginner
+breadcrumb: "NFT వ్రాయండి డిప్లాయ్"
 lang: te
 published: 2021-04-22
 ---

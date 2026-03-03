@@ -11,6 +11,7 @@ tags:
     "componibilidade"
   ]
 skill: advanced
+breadcrumb: "Interacoes de contratos"
 lang: pt-br
 published: 2020-04-05
 source: EthereumDev

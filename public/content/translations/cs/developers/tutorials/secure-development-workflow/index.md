@@ -4,6 +4,7 @@ description: "Doporučený pracovní postup pro psaní bezpečných chytrých ko
 author: "Trailofbits"
 tags: [ "chytré kontrakty", "bezpečnost", "solidity" ]
 skill: intermediate
+breadcrumb: "Bezpečnostní kontrola"
 lang: cs
 published: 2020-09-07
 source: Building secure contracts

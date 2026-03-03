@@ -11,6 +11,7 @@ tags:
     "wasm"
   ]
 skill: intermediate
+breadcrumb: "Stealth-адреса"
 published: 2025-11-30
 lang: ru
 sidebarDepth: 3

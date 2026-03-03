@@ -8,6 +8,7 @@ tags:
   - "contratti intelligenti"
   - "oracoli"
 skill: beginner
+breadcrumb: "Oracle Tellor"
 published: 2021-06-29
 source: Documentazione di Tellor
 sourceUrl: https://docs.tellor.io/tellor/

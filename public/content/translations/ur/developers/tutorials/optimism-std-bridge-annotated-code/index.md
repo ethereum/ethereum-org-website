@@ -4,6 +4,7 @@ description: "Optimism کے لیے معیاری برج کیسے کام کرتا 
 author: Ori Pomerantz
 tags: [ "solidity", "برج", "لیئر 2" ]
 skill: intermediate
+breadcrumb: "Optimism برج"
 published: 2022-03-30
 lang: ur-in
 ---

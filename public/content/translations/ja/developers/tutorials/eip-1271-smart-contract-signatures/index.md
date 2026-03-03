@@ -5,6 +5,7 @@ author: Nathan H. Leung
 lang: ja
 tags: [ "eip-1271", "スマートコントラクト", "検証", "署名(signing)" ]
 skill: intermediate
+breadcrumb: "EIP-1271署名"
 published: 2023-01-12
 ---
 

@@ -4,6 +4,7 @@ description: "Danh sách kiểm tra các nguyên tắc bảo mật cần xem xé
 author: "Trailofbits"
 tags: [ "Solidity", "hợp đồng thông minh", "tính bảo mật" ]
 skill: intermediate
+breadcrumb: "Nguyên tắc bảo mật"
 lang: vi
 published: 2020-09-06
 source: Building secure contracts

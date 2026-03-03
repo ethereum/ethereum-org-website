@@ -4,6 +4,7 @@ description: "완벽한 솔리디티 스마트 계약 예제와 설명을 통해
 author: "jdourlens"
 tags: [ "스마트 계약", "토큰", "Solidity", "erc-20" ]
 skill: beginner
+breadcrumb: "ERC-20 기초"
 lang: ko
 published: 2020-04-05
 source: EthereumDev

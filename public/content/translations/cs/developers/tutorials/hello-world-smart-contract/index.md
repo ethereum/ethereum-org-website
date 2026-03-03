@@ -11,6 +11,7 @@ tags:
     "nasazování"
   ]
 skill: beginner
+breadcrumb: "Hello World kontrakt"
 lang: cs
 published: 2021-03-31
 ---

@@ -4,6 +4,7 @@ description: "Как вызвать функцию смарт-контракта
 author: jdourlens
 tags: [ "транзакции", "интерфейс", "JavaScript", "web3.js" ]
 skill: beginner
+breadcrumb: "Вызов контрактов из JS"
 lang: ru
 published: 2020-04-19
 source: EthereumDev

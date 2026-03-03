@@ -4,6 +4,7 @@ description: "Ce tutoriel aide les lecteurs à comprendre les concepts fondament
 author: "Paul Apivat"
 tags: [ "SQL", "Requêtes", "Transactions" ]
 skill: beginner
+breadcrumb: "Ethereum avec SQL"
 lang: fr
 published: 2021-05-11
 source: paulapivat.com

@@ -4,6 +4,7 @@ description: Mwongozo rahisi kwa wanaoanza wa kutuma tokeni kwa kutumia ethers.j
 author: Kim YongJun
 tags: ["ETHERS.JS", "ERC-20", "TOKENS"]
 skill: beginner
+breadcrumb: "Tuma tokeni"
 lang: sw
 published: 2021-04-06
 ---

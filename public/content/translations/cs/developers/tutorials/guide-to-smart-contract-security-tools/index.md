@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: cs
 tags: [ "solidity", "smart kontrakt účty", "bezpečnost" ]
 skill: intermediate
+breadcrumb: "Bezpečnostní nástroje"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

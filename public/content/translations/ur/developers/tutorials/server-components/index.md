@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: ur-in
 tags: [ "ایجنٹ", "سرور", "آف چین" ]
 skill: beginner
+breadcrumb: "سرور اجزاء"
 published: 2024-07-15
 ---
 

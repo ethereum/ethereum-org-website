@@ -4,6 +4,7 @@ description: "Bu öğreticiyi okuduktan sonra, bir Geliştirici, tek oturum açm
 author: Ori Pomerantz
 tags: [ "web2", "kimlik doğrulama", "eas" ]
 skill: beginner
+breadcrumb: "Web2 auth için Ethereum"
 lang: tr
 published: 2025-04-30
 ---

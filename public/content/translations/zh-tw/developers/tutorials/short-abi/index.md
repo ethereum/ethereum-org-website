@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: zh-tw
 tags: [ "Layer 2" ]
 skill: intermediate
+breadcrumb: "短ABI"
 published: 2022-04-01
 ---
 

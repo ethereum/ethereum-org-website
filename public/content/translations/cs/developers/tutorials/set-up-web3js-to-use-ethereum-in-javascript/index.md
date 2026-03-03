@@ -4,6 +4,7 @@ description: "Naučte se, jak nastavit a nakonfigurovat knihovnu web3.js pro int
 author: "jdourlens"
 tags: [ "web3.js", "javascript" ]
 skill: beginner
+breadcrumb: "Nastavení web3.js"
 lang: cs
 published: 2020-04-11
 source: EthereumDev

@@ -11,6 +11,7 @@ tags:
     "typescript"
   ]
 skill: intermediate
+breadcrumb: "Scam token hileleri"
 published: 2023-09-15
 lang: tr
 ---

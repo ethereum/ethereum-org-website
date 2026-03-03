@@ -10,6 +10,7 @@ tags:
     "நிகழ்வுகள்"
   ]
 skill: intermediate
+breadcrumb: "நிகழ்வு பதிவு"
 lang: ta
 published: 2020-04-03
 source: EthereumDev

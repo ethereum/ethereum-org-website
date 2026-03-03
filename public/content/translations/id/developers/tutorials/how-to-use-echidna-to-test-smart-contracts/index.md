@@ -10,6 +10,7 @@ tags:
   - "pengujian"
   - "fuzzing"
 skill: advanced
+breadcrumb: "Echidna"
 published: 2020-04-10
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

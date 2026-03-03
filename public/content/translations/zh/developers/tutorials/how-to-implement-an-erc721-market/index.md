@@ -4,6 +4,7 @@ description: "如何在一个去中心化的分类信息板上销售代币化的
 author: "Alberto Cuesta Cañada "
 tags: [ "智能合同", "erc-721", "Solidity", "通证" ]
 skill: intermediate
+breadcrumb: "ERC-721市场"
 lang: zh
 published: 2020-03-19
 source: Hackernoon

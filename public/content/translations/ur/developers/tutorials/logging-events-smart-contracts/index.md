@@ -4,6 +4,7 @@ description: "اسمارٹ کنٹریکٹ ایونٹس کا تعارف اور آ
 author: "jdourlens"
 tags: [ "اسمارٹ معاہدات", "remix", "solidity", "ایونٹس" ]
 skill: intermediate
+breadcrumb: "ایونٹ لاگنگ"
 lang: ur-in
 published: 2020-04-03
 source: EthereumDev

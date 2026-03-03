@@ -4,6 +4,7 @@ description: "Bir Ethereum test ağında ilk akıllı sözleşmeni dağıtmaya g
 author: "jdourlens"
 tags: [ "akıllı kontratlar", "remix", "solidity", "dağıtma" ]
 skill: beginner
+breadcrumb: "İlk sözleşme dağıtımı"
 lang: tr
 published: 2020-04-03
 source: EthereumDev

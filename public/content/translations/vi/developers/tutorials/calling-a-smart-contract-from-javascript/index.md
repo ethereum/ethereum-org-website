@@ -4,6 +4,7 @@ description: "Cách gọi một hàm hợp đồng thông minh từ JavaScript b
 author: jdourlens
 tags: [ "các giao dịch", "frontend", "JavaScript", "web3.js" ]
 skill: beginner
+breadcrumb: "Gọi hợp đồng từ JS"
 lang: vi
 published: 2020-04-19
 source: EthereumDev

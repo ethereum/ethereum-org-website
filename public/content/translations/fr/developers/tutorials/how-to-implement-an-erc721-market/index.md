@@ -10,6 +10,7 @@ tags:
     "jetons"
   ]
 skill: intermediate
+breadcrumb: "Marche ERC-721"
 lang: fr
 published: 2020-03-19
 source: Hackernoon

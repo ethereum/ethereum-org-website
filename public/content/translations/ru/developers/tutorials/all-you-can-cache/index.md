@@ -4,6 +4,7 @@ description: "Узнайте, как создать и использовать 
 author: Ori Pomerantz
 tags: [ "уровень 2", "кеширование", "хранилище" ]
 skill: intermediate
+breadcrumb: "Кэширование для rollupов"
 published: 2022-09-15
 lang: ru
 ---

@@ -10,6 +10,7 @@ tags:
     "स्मार्ट कॉन्ट्रॅक्ट"
   ]
 skill: beginner
+breadcrumb: "NFT लिहा व डिप्लॉय करा"
 lang: mr
 published: 2021-04-22
 ---

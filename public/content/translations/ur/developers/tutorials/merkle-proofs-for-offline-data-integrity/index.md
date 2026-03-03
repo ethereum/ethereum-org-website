@@ -4,6 +4,7 @@ description: "ایسے ڈیٹا کے لیے آن چین ڈیٹا کی سالمی
 author: Ori Pomerantz
 tags: [ "اسٹوریج" ]
 skill: advanced
+breadcrumb: "Merkle ثبوت"
 lang: ur-in
 published: 2021-12-30
 ---

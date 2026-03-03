@@ -4,6 +4,7 @@ description: "Jak volat funkci chytrého kontraktu z JavaScriptu na příkladu t
 author: jdourlens
 tags: [ "transakce", "frontend", "JavaScript", "web3.js" ]
 skill: beginner
+breadcrumb: "Volání kontraktu z JS"
 lang: cs
 published: 2020-04-19
 source: EthereumDev

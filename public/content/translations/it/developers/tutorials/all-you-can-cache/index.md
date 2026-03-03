@@ -7,6 +7,7 @@ tags:
   - "memorizzazione nella cache"
   - "archiviazione"
 skill: intermediate
+breadcrumb: "Cache per rollup"
 published: 2022-09-15
 lang: it
 ---

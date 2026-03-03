@@ -4,6 +4,7 @@ description: "자바스크립트 애플리케이션에서 이더리움 블록체
 author: "jdourlens"
 tags: [ "web3.js", "JavaScript" ]
 skill: beginner
+breadcrumb: "web3.js 설정"
 lang: ko
 published: 2020-04-11
 source: EthereumDev

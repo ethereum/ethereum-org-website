@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: pt-br
 tags: [ "Solidity", "smart contracts", "segurança" ]
 skill: intermediate
+breadcrumb: "Ferramentas de seguranca"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

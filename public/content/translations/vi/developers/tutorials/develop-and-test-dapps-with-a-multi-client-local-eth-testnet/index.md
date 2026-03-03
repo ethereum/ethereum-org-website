@@ -13,6 +13,7 @@ tags:
     "kiểm thử"
   ]
 skill: intermediate
+breadcrumb: "Testnet đa máy khách"
 lang: vi
 published: 2023-04-11
 ---

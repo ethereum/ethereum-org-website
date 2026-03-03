@@ -8,6 +8,7 @@ tags:
   - "Solidity"
   - "token"
 skill: intermediate
+breadcrumb: "Mercato ERC-721"
 lang: it
 published: 2020-03-19
 source: Hackernoon

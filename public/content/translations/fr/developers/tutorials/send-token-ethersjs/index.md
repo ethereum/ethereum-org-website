@@ -4,6 +4,7 @@ description: "Guide pour débutants sur l'envoi de jetons à l'aide d'ethers.js.
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "JETONS" ]
 skill: beginner
+breadcrumb: "Envoyer des tokens"
 lang: fr
 published: 2021-04-06
 ---

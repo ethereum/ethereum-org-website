@@ -4,6 +4,7 @@ description: "Это руководство помогает читателям 
 author: "Paul Apivat"
 tags: [ "SQL", "Запросы", "Транзакции" ]
 skill: beginner
+breadcrumb: "Ethereum с SQL"
 lang: ru
 published: 2021-05-11
 source: paulapivat.com

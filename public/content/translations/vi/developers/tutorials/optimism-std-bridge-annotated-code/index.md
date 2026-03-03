@@ -4,6 +4,7 @@ description: "Cầu nối tiêu chuẩn cho Optimism hoạt động như thế n
 author: Ori Pomerantz
 tags: [ "Solidity", "cầu nối", "lớp 2" ]
 skill: intermediate
+breadcrumb: "Cầu Optimism"
 published: 2022-03-30
 lang: vi
 ---

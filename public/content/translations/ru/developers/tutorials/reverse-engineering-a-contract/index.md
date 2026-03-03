@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: ru
 tags: [ "evm", "опкоды" ]
 skill: advanced
+breadcrumb: "Обратная разработка"
 published: 2021-12-30
 ---
 

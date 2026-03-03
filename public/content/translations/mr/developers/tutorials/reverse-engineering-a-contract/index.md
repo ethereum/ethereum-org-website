@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: mr
 tags: [ "evm", "ऑपकोड्स" ]
 skill: advanced
+breadcrumb: "Reverse engineering"
 published: 2021-12-30
 ---
 

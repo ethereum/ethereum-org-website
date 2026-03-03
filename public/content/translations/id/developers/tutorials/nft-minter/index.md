@@ -11,6 +11,7 @@ tags:
   - "frontend"
   - "Pinata"
 skill: intermediate
+breadcrumb: "Dapp pencetak NFT"
 lang: id
 published: 2021-10-06
 ---

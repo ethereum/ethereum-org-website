@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: vi
 tags: [ "evm", "mã vận hành" ]
 skill: advanced
+breadcrumb: "Reverse engineering"
 published: 2021-12-30
 ---
 

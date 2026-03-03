@@ -4,6 +4,7 @@ description: Je, daraja la kawaida la Optimism linafanyaje kazi? Kwa nini linafa
 author: Ori Pomerantz
 tags: ["solidity", "bridge", "layer 2"]
 skill: intermediate
+breadcrumb: "Daraja la Optimism"
 published: 2022-03-30
 lang: sw
 ---

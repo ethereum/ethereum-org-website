@@ -4,6 +4,7 @@ description: "ステルスアドレスを使用すると、ユーザーは匿名
 author: Ori Pomerantz
 tags: [ "ステルスアドレス", "プライバシー", "暗号技術", "Rust", "wasm" ]
 skill: intermediate
+breadcrumb: "ステルスアドレス"
 published: 2025-11-30
 lang: ja
 sidebarDepth: 3

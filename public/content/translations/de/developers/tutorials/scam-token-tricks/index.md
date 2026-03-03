@@ -4,6 +4,7 @@ description: "In diesem Tutorial analysieren wir einen Betrugs-Token, um einige 
 author: Ori Pomerantz
 tags: ["scam", "solidity", "erc-20", "javascript", "typescript"]
 skill: intermediate
+breadcrumb: "Scam-Token-Tricks"
 published: 2023-09-15
 lang: de
 ---

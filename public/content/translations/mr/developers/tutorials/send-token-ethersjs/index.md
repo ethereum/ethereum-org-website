@@ -4,6 +4,7 @@ description: "ethers.js वापरून टोकन पाठवण्या
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "टोकन्स" ]
 skill: beginner
+breadcrumb: "टोकन पाठवा"
 lang: mr
 published: 2021-04-06
 ---
