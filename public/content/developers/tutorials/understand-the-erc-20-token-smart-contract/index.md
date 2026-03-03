@@ -4,6 +4,7 @@ description: Learn how to implement the ERC-20 token standard with a complete So
 author: "jdourlens"
 tags: ["smart contracts", "tokens", "solidity", "erc-20"]
 skill: beginner
+breadcrumb: ERC-20 token basics
 lang: en
 published: 2020-04-05
 source: EthereumDev

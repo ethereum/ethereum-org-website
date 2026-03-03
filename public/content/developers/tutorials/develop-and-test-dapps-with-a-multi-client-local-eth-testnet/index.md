@@ -13,6 +13,7 @@ tags:
     "testing",
   ]
 skill: intermediate
+breadcrumb: Multi-client testnet
 lang: en
 published: 2023-04-11
 ---

@@ -4,6 +4,7 @@ description: "This is a beginner friendly guide to sending Ethereum transactions
 author: "Elan Halpern"
 tags: ["transactions", "web3.js", "alchemy"]
 skill: beginner
+breadcrumb: Send transactions
 lang: en
 published: 2020-11-04
 source: Alchemy docs

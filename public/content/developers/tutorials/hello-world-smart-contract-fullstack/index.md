@@ -2,6 +2,7 @@
 title: Hello World Smart Contract for Beginners - Fullstack
 description: Introductory tutorial on writing and deploying a simple smart contract on Ethereum.
 author: "nstrike2"
+breadcrumb: Hello World fullstack
 tags:
   [
     "solidity",

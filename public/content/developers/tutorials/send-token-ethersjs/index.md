@@ -4,6 +4,7 @@ description: Beginner friendly guide to sending tokens using ethers.js.
 author: Kim YongJun
 tags: ["ETHERS.JS", "ERC-20", "TOKENS"]
 skill: beginner
+breadcrumb: Send tokens
 lang: en
 published: 2021-04-06
 ---

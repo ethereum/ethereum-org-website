@@ -4,6 +4,7 @@ description: An introduction to deploying your first smart contract on an Ethere
 author: "jdourlens"
 tags: ["smart contracts", "remix", "solidity", "deploying"]
 skill: beginner
+breadcrumb: Deploy first contract
 lang: en
 published: 2020-04-03
 source: EthereumDev

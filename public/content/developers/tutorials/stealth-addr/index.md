@@ -4,6 +4,7 @@ description: "Stealth addresses allow users to transfer assets anonymously. Afte
 author: Ori Pomerantz
 tags: ["Stealth address", "privacy", "cryptography", "rust", "wasm"]
 skill: intermediate
+breadcrumb: Stealth addresses
 published: 2025-11-30
 lang: en
 sidebarDepth: 3

@@ -4,6 +4,7 @@ description: This tutorial describes how to mint an NFT on the Ethereum blockcha
 author: "Sumi Mudgil"
 tags: ["ERC-721", "alchemy", "solidity", "smart contracts"]
 skill: beginner
+breadcrumb: Mint an NFT
 lang: en
 published: 2021-04-22
 ---

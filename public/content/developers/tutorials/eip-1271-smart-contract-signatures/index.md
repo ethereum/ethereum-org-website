@@ -5,6 +5,7 @@ author: Nathan H. Leung
 lang: en
 tags: ["eip-1271", "smart contracts", "verifying", "signing"]
 skill: intermediate
+breadcrumb: EIP-1271 signatures
 published: 2023-01-12
 ---
 

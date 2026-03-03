@@ -4,6 +4,7 @@ description: This tutorial teaches the reader how to use IPFS to store the user 
 author: Ori Pomerantz
 tags: ["ipfs", "dapps", "frontend"]
 skill: beginner
+breadcrumb: IPFS for dapp UIs
 lang: en
 published: 2024-06-29
 ---

@@ -5,6 +5,7 @@ author: Markus Waas
 lang: en
 tags: ["solidity", "smart contracts", "storage"]
 skill: intermediate
+breadcrumb: Downsizing contracts
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

@@ -4,6 +4,7 @@ description: How does the Uniswap-v2 contract work? Why is it written that way?
 author: Ori Pomerantz
 tags: ["solidity", "dapps"]
 skill: intermediate
+breadcrumb: Uniswap v2 walkthrough
 published: 2021-05-01
 lang: en
 ---
