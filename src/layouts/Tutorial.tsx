@@ -113,7 +113,13 @@ export const TutorialLayout = ({
         className="min-w-0 max-w-screen-lg px-8 lg:py-8"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <Breadcrumbs slug={frontmatter.breadcrumb || slug} startDepth={1} />
+        <Breadcrumbs
+          slug={[
+            ...slug.split("/").slice(0, -1),
+            frontmatter.breadcrumb || slug.split("/").slice(-1),
+          ].join("/")}
+          startDepth={1}
+        />
         <Heading1>{frontmatter.title}</Heading1>
         <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
         <TableOfContents
