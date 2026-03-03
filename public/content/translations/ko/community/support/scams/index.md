@@ -1,6 +1,6 @@
 ---
-title: 사기 관련 도움 및 신고
-description: 사기를 당했을 경우 대처 방법, 남은 자산 보호 방법, 사기 신고처에 대한 안내입니다.
+title: "사기 관련 도움 및 신고"
+description: "사기를 당했을 경우 대처 방법, 남은 자산 보호 방법, 사기 신고처에 대한 안내입니다."
 lang: ko
 ---
 
@@ -14,7 +14,6 @@ lang: ko
 <AlertDescription>
 
 **누구도 블록체인 거래를 되돌릴 수 없습니다.** 수수료를 받고 자금을 복구해 줄 수 있다고 주장하며 접근하는 사람이 있다면, 이는 거의 확실한 2차 사기입니다. 아래의 [복구 사기](#recovery-scams)를 참조하세요.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -98,7 +97,6 @@ eventName="clicked giveaway scam"
 **기억하세요.** 비탈릭을 비롯한 유명 인사들은 절대 ETH를 보내달라고 요청하지 않습니다.
 
 [일반적인 사기에 대한 자세한 정보](/security/#common-scams)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -117,7 +115,6 @@ eventName="clicked impersonation scam"
 - 실제 관리자는 절대로 먼저 DM을 보내지 않습니다.
 - 어떤 이유로든 누구에게도 시드 구문이나 개인 키를 절대 공유하지 마세요.
 - 요청하지 않은 메시지에 포함된 링크는 절대 클릭하지 마세요.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -133,7 +130,6 @@ eventName="clicked recovery scam"
 이들은 선불 수수료를 받고 도난당한 암호화폐를 추적하고 복구해 주겠다고 약속합니다. 돈을 지불하고 나면 그들은 사라집니다.
 
 **어떤 합법적인 서비스도 블록체인 거래를 되돌릴 수 없습니다.** 이를 약속하는 사람은 거짓말을 하고 있는 것입니다. 이는 가장 흔한 후속 사기 중 하나입니다.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -156,7 +152,6 @@ eventName="clicked phishing scam"
 <DocLink href="/guides/how-to-id-scam-tokens/">
   사기 토큰 식별 방법
 </DocLink>
-
 </ExpandableCard>
 
 <DocLink href="/security/">

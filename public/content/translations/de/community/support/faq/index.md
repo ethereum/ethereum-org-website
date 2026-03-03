@@ -1,6 +1,6 @@
 ---
-title: Häufig gestellte Fragen
-description: Häufige Fragen zu Ethereum rund um Wallets, Transaktionen, Staking und mehr.
+title: "Häufig gestellte Fragen"
+description: "Häufige Fragen zu Ethereum rund um Wallets, Transaktionen, Staking und mehr."
 lang: de
 ---
 
@@ -40,7 +40,6 @@ Wenn sich Ihr Konto bei einer zentralisierten Börse wie Coinbase, Binance oder 
 <AlertDescription>
 
 **Teilen Sie Ihre Seed-Phrase niemals mit jemandem**, der behauptet, Ihnen bei der Wiederherstellung Ihrer Wallet zu helfen. Dies ist eine der häufigsten Betrugsmaschen. Kein seriöser Dienst wird Sie jemals nach Ihrer Seed-Phrase fragen.
-
 </AlertDescription>
 </AlertContent>
 </Alert>

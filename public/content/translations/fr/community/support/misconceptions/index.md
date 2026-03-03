@@ -1,5 +1,5 @@
 ---
-title: Idées reçues sur Ethereum
+title: "Idées reçues sur Ethereum"
 description: Clarification des malentendus les plus courants sur le fonctionnement d'Ethereum.
 lang: fr
 ---

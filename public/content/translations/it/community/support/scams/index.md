@@ -14,7 +14,6 @@ Le truffe di criptovaluta prendono di mira persone di ogni livello di esperienza
 <AlertDescription>
 
 **Nessuno può annullare le transazioni blockchain.** Se qualcuno ti contatta sostenendo di poter recuperare i tuoi fondi a pagamento, è quasi certamente una seconda truffa. Vedi le [truffe di recupero](#recovery-scams) qui sotto.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -98,7 +97,6 @@ I truffatori creano falsi giveaway promettendo di moltiplicare i tuoi ETH o di d
 **Ricorda:** Vitalik e altre figure di spicco non ti chiederanno mai di inviare loro ETH.
 
 [Altre informazioni sulle truffe comuni](/security/#common-scams)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -117,7 +115,6 @@ I truffatori si spacciano per membri del team di Ethereum, moderatori o agenti d
 - I veri moderatori non ti invieranno mai per primi un messaggio diretto
 - Non condividere mai la tua frase seed o le tue chiavi private con nessuno, per nessun motivo
 - Non fare mai clic sui link inviati in messaggi non richiesti
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -133,7 +130,6 @@ Le truffe di recupero si rivolgono specificamente a persone che hanno già perso
 Promettono di rintracciare e recuperare le tue criptovalute rubate in cambio di una commissione anticipata. Dopo che paghi, scompaiono.
 
 **Nessun servizio legittimo può annullare le transazioni blockchain.** Chiunque lo prometta sta mentendo. Questa è una delle truffe successive più comuni.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -156,7 +152,6 @@ I siti di phishing sembrano identici alle app di portafoglio, agli exchange o al
 <DocLink href="/guides/how-to-id-scam-tokens/">
   Come identificare i token truffa
 </DocLink>
-
 </ExpandableCard>
 
 <DocLink href="/security/">

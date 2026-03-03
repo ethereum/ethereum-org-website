@@ -40,7 +40,6 @@ Se il tuo account si trova su un exchange centralizzato come Coinbase, Binance o
 <AlertDescription>
 
 **Non condividere mai la tua frase seed con nessuno** che affermi di aiutarti a recuperare il tuo portafoglio. Questa è una delle tattiche di truffa più comuni. Nessun servizio legittimo ti chiederà mai la tua frase seed.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -73,6 +72,6 @@ Per diventare un validatore, devi mettere in staking 32 ETH nel contratto di dep
 
 Maggiori informazioni sono disponibili sulle nostre [pagine sullo staking](/staking/) e sul [launchpad per lo staking](https://launchpad.ethereum.org/).
 
-## Come posso fare mining su Ethereum? Come posso minare Ethereum? {#mining-ethereum}
+## Come posso fare mining su Ethereum? {#mining-ethereum}
 
 Il mining su Ethereum non è più possibile. Il mining è stato disattivato quando Ethereum è passata da [proof-of-work](/glossary/#pow) a [proof-of-stake](/glossary/#pos) durante [La Fusione](/roadmap/merge/) a settembre 2022. Ora, invece dei miner, Ethereum ha i validatori. Chiunque può mettere ETH in [staking](/glossary/#staking) e ricevere ricompense per l'esecuzione del software del validatore per proteggere la rete.

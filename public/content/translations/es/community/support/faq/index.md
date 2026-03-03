@@ -1,6 +1,6 @@
 ---
-title: Preguntas más frecuentes
-description: Preguntas comunes sobre Ethereum acerca de billeteras, transacciones, staking y más.
+title: "Preguntas más frecuentes"
+description: "Preguntas comunes sobre Ethereum acerca de billeteras, transacciones, staking y más."
 lang: es
 ---
 
@@ -40,7 +40,6 @@ Si su cuenta está en un intercambio centralizado como Coinbase, Binance o Krake
 <AlertDescription>
 
 **Nunca comparta su frase semilla con nadie** que afirme ayudarle a recuperar su billetera. Esta es una de las tácticas de estafa más comunes. Ningún servicio legítimo le pedirá nunca su frase semilla.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -69,7 +68,7 @@ Los regalos de Ethereum son estafas diseñadas para robarle ETH. No se deje tent
 
 ## ¿Cómo hago staking de ETH? {#how-to-stake}
 
-Para convertirse en validador, debe apostar 32 ETH en el contrato de depósito de Ethereum y configurar un nodo de validación. También puede participar con menos ETH a través de pools de staking.
+Para convertirse en validador, debe hacer staking de 32 ETH en el contrato de depósito de Ethereum y configurar un nodo de validación. También puede participar con menos ETH a través de pools de staking.
 
 Hay más información disponible en nuestras [páginas de staking](/staking/) y en [el launchpad de staking](https://launchpad.ethereum.org/).
 

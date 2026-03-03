@@ -1,6 +1,6 @@
 ---
-title: 자주 묻는 질문
-description: 지갑, 트랜잭션, 스테이킹 등에 대한 이더리움 관련 일반적인 질문입니다.
+title: "자주 묻는 질문"
+description: "지갑, 트랜잭션, 스테이킹 등에 대한 이더리움 관련 일반적인 질문입니다."
 lang: ko
 ---
 
@@ -40,7 +40,6 @@ lang: ko
 <AlertDescription>
 
 지갑 복구를 도와주겠다고 주장하는 사람과 **절대 시드 문구를 공유하지 마세요**. 이는 가장 흔한 사기 수법 중 하나입니다. 정상적인 서비스는 절대 시드 문구를 요구하지 않습니다.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -61,7 +60,7 @@ lang: ko
 - [MetaMask에서 보류 중인 트랜잭션의 속도를 높이거나 취소하는 방법](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
 - [보류 중인 이더리움 트랜잭션을 취소하는 방법](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-## 이더리움 경품을 어떻게 수령하나요? {#giveaway-scam}사기 주의
+## 이더리움 경품을 어떻게 수령하나요? {#giveaway-scam}
 
 이더리움 경품은 사용자의 ETH를 훔치기 위해 계획된 사기입니다. 너무 좋은 조건처럼 보이는 제안에 현혹되지 마세요. 경품 지급 주소로 ETH를 보내도 경품을 받을 수 없으며 자금을 복구할 수도 없습니다.
 

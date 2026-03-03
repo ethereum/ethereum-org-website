@@ -1,6 +1,6 @@
 ---
-title: 詐欺に関するヘルプと報告
-description: 詐欺にあった場合の対処法、残りの資産を保護する方法、詐欺の報告先について説明します。
+title: "詐欺に関するヘルプと報告"
+description: "詐欺にあった場合の対処法、残りの資産を保護する方法、詐欺の報告先について説明します。"
 lang: ja
 ---
 
@@ -14,7 +14,6 @@ lang: ja
 <AlertDescription>
 
 **ブロックチェーンのトランザクションを元に戻すことは誰にもできません。** 手数料を支払えば資金を回収できると主張してあなたに連絡してくる人がいれば、それはほぼ間違いなく二次的な詐欺です。 以下の[リカバリー詐欺](#recovery-scams)をご覧ください。
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -98,7 +97,6 @@ eventName="clicked giveaway scam"
 **覚えておいてください:** ヴィタリックやその他の著名人が、あなたにETHを送るように頼むことは決してありません。
 
 [よくある詐欺の詳細](/security/#common-scams)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -117,7 +115,6 @@ eventName="clicked impersonation scam"
 - 本物のモデレーターが最初にDMを送ってくることはありません。
 - いかなる理由があっても、シードフレーズや秘密鍵を誰とも共有しないでください。
 - 未承諾のメッセージで送られてきたリンクは絶対にクリックしないでください。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -133,7 +130,6 @@ eventName="clicked recovery scam"
 彼らは、前払いの手数料で盗まれた暗号通貨を追跡・回収すると約束します。 あなたが支払った後、彼らは姿を消します。
 
 **正当なサービスでブロックチェーンのトランザクションを元に戻すことはできません。** これを約束する者は誰であれ、嘘をついています。 これは最も一般的な二次被害詐欺の一つです。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -156,7 +152,6 @@ eventName="clicked phishing scam"
 <DocLink href="/guides/how-to-id-scam-tokens/">
   詐欺トークンの見分け方
 </DocLink>
-
 </ExpandableCard>
 
 <DocLink href="/security/">

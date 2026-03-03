@@ -1,6 +1,6 @@
 ---
 title: Hilfe bei Betrug & Meldung
-description: Was Sie tun können, wenn Sie betrogen wurden, wie Sie Ihre verbleibenden Vermögenswerte sichern und wo Sie Betrug melden können.
+description: "Was Sie tun können, wenn Sie betrogen wurden, wie Sie Ihre verbleibenden Vermögenswerte sichern und wo Sie Betrug melden können."
 lang: de
 ---
 
@@ -14,7 +14,6 @@ Betrügereien mit Kryptowährungen zielen auf Menschen aller Erfahrungsstufen ab
 <AlertDescription>
 
 **Niemand kann Blockchain-Transaktionen rückgängig machen.** Wenn Sie jemand kontaktiert und behauptet, er könne Ihr Geld gegen eine Gebühr wiederbeschaffen, handelt es sich mit ziemlicher Sicherheit um einen zweiten Betrug. Siehe [Wiederherstellungsbetrug](#recovery-scams) unten.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -98,12 +97,11 @@ Betrüger erstellen gefälschte Giveaways, die versprechen, Ihre ETH zu vervielf
 **Denken Sie daran:** Vitalik und andere prominente Persönlichkeiten werden Sie niemals bitten, ihnen ETH zu schicken.
 
 [Mehr zu gängigen Betrugsmaschen](/security/#common-scams)
-
 </ExpandableCard>
 
 <ExpandableCard
 title="Identitätsdiebstahl und gefälschter Support"
-contentPreview="Niemand von Ethereum oder ethereum.org wird dich jemals zuerst kontaktieren."
+contentPreview="Niemand von Ethereum oder ethereum.org wird Sie jemals zuerst kontaktieren."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 
@@ -117,12 +115,11 @@ Betrüger geben sich auf Discord, Telegram und in den sozialen Medien als Mitgli
 - Echte Moderatoren werden Ihnen niemals zuerst eine Direktnachricht senden
 - Geben Sie Ihre Seed-Phrase oder Ihre privaten Schlüssel niemals und aus keinem Grund an Dritte weiter
 - Klicken Sie niemals auf Links, die in unaufgefordert zugesandten Nachrichten enthalten sind
-
 </ExpandableCard>
 
 <ExpandableCard
 title="Wiederherstellungsbetrug"
-contentPreview="Hüte dich nach einem Betrug vor falschen 'Krypto-Wiederherstellungsexperten'."
+contentPreview="Hüten Sie sich nach einem Betrug vor falschen 'Krypto-Wiederherstellungsexperten'."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 
@@ -133,12 +130,11 @@ Wiederherstellungsbetrügereien zielen speziell auf Personen ab, die bereits Gel
 Sie versprechen, Ihre gestohlene Kryptowährung gegen eine Vorauszahlung aufzuspüren und wiederzubeschaffen. Nachdem Sie bezahlt haben, verschwinden sie.
 
 **Kein seriöser Dienst kann Blockchain-Transaktionen rückgängig machen.** Jeder, der dies verspricht, lügt. Dies ist einer der häufigsten Folgebetrügereien.
-
 </ExpandableCard>
 
 <ExpandableCard
 title="Phishing-Websites und gefälschte Apps"
-contentPreview="Betrügerische Websites ahmen echte Wallets und Börsen nach, um deine Anmeldedaten zu stehlen."
+contentPreview="Betrügerische Websites ahmen echte Wallets und Börsen nach, um Ihre Anmeldedaten zu stehlen."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 
@@ -156,7 +152,6 @@ Phishing-Websites sehen identisch aus wie echte Wallet-Apps, Börsen oder DeFi-P
 <DocLink href="/guides/how-to-id-scam-tokens/">
   So erkennen Sie betrügerische Token
 </DocLink>
-
 </ExpandableCard>
 
 <DocLink href="/security/">

@@ -1,6 +1,6 @@
 ---
-title: Často kladené dotazy
-description: Běžné dotazy o Ethereu týkající se peněženek, transakcí, uzamykání a dalších věcí.
+title: "Často kladené dotazy"
+description: "Běžné dotazy o Ethereu týkající se peněženek, transakcí, uzamykání a dalších věcí."
 lang: cs
 ---
 
@@ -40,7 +40,6 @@ Pokud je váš účet na centralizované burze, jako je Coinbase, Binance nebo K
 <AlertDescription>
 
 **Nikdy nesdělujte svou bezpečnostní frázi nikomu**, kdo tvrdí, že vám pomáhá obnovit vaši peněženku. Jedná se o jednu z nejčastějších podvodných taktik. Žádná legitimní služba vás nikdy nepožádá o vaši bezpečnostní frázi.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -67,7 +66,7 @@ Ethereum giveaway jsou podvody navržené k tomu, aby vám ukradly ETH. Nenechte
 
 [Více o prevenci podvodů](/security/#common-scams)
 
-## Jak mám uzamknout ETH? Jak stakovat {#how-to-stake}
+## Jak stakovat ETH? {#how-to-stake}
 
 Chcete-li se stát validátorem, musíte zastakovat 32 ETH v Ethereum deposit contractu a nastavit validační síťový uzel. S menším množstvím ETH se můžete také zúčastnit prostřednictvím stakingových poolů.
 

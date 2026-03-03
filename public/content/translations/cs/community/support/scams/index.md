@@ -1,6 +1,6 @@
 ---
-title: Pomoc s podvody a jejich nahlášení
-description: Co dělat, pokud jste se stali obětí podvodu, jak zabezpečit zbývající aktiva a kde podvod nahlásit.
+title: "Pomoc s podvody a jejich nahlášení"
+description: "Co dělat, pokud jste se stali obětí podvodu, jak zabezpečit zbývající aktiva a kde podvod nahlásit."
 lang: cs
 ---
 
@@ -14,7 +14,6 @@ Podvody s kryptoměnami se zaměřují na lidi všech úrovní zkušeností, vč
 <AlertDescription>
 
 **Nikdo nemůže zvrátit blockchainové transakce.** Pokud vás někdo kontaktuje s tvrzením, že vám za poplatek může obnovit vaše prostředky, jedná se téměř jistě o druhý podvod. Viz [podvody s obnovou](#recovery-scams) níže.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -98,7 +97,6 @@ Podvodníci vytvářejí falešné dárky slibující, že znásobí vaše ETH, 
 **Pamatujte:** Vitalik a další prominentní osobnosti vás nikdy nepožádají o zaslání ETH.
 
 [Více o běžných podvodech](/security/#common-scams)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -117,7 +115,6 @@ Podvodníci se na Discordu, Telegramu a sociálních sítích vydávají za čle
 - Skuteční moderátoři vám nikdy nepošlou přímou zprávu jako první
 - Nikdy s nikým a z žádného důvodu nesdílejte svou bezpečnostní frázi nebo soukromé klíče
 - Nikdy neklikejte na odkazy zaslané v nevyžádaných zprávách
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -133,7 +130,6 @@ Podvody s obnovou se zaměřují konkrétně na lidi, kteří již o prostředky
 Slibují, že vystopují a obnoví vaše ukradené kryptoměny za poplatek předem. Poté, co zaplatíte, zmizí.
 
 **Žádná legitimní služba nemůže zvrátit blockchainové transakce.** Každý, kdo to slibuje, lže. Jedná se o jeden z nejčastějších následných podvodů.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -156,7 +152,6 @@ Phishingové stránky vypadají identicky jako skutečné aplikace peněženek, 
 <DocLink href="/guides/how-to-id-scam-tokens/">
   Jak rozpoznat podvodné tokeny
 </DocLink>
-
 </ExpandableCard>
 
 <DocLink href="/security/">

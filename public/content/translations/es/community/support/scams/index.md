@@ -1,6 +1,6 @@
 ---
 title: Ayuda y denuncias de estafas
-description: Qué hacer si ha sido víctima de una estafa, cómo proteger sus activos restantes y dónde denunciar el fraude.
+description: "Qué hacer si ha sido víctima de una estafa, cómo proteger sus activos restantes y dónde denunciar el fraude."
 lang: es
 ---
 
@@ -14,7 +14,6 @@ Las estafas de criptomonedas se dirigen a personas de todos los niveles de exper
 <AlertDescription>
 
 **Nadie puede revertir las transacciones de la cadena de bloques.** Si alguien se pone en contacto con usted afirmando que puede recuperar sus fondos a cambio de una comisión, es casi seguro que se trata de una segunda estafa. Vea [estafas de recuperación](#recovery-scams) a continuación.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -98,12 +97,11 @@ Los estafadores crean sorteos falsos que prometen multiplicar su ETH o darle tó
 **Recuerde:** Vitalik y otras figuras prominentes nunca le pedirán que les envíe ETH.
 
 [Más sobre estafas comunes](/security/#common-scams)
-
 </ExpandableCard>
 
 <ExpandableCard
 title="Suplantación de identidad y soporte falso"
-contentPreview="Nadie de Ethereum o ethereum.org te contactará primero."
+contentPreview="Nadie de Ethereum o ethereum.org le contactará primero."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 
@@ -117,12 +115,11 @@ Los estafadores se hacen pasar por miembros del equipo de Ethereum, moderadores 
 - Los moderadores reales nunca le enviarán un MD primero.
 - Nunca comparta su frase semilla o claves privadas con nadie, por ningún motivo.
 - Nunca haga clic en enlaces enviados en mensajes no solicitados.
-
 </ExpandableCard>
 
 <ExpandableCard
 title="Estafas de recuperación"
-contentPreview="Después de ser estafado, ten cuidado con los falsos 'expertos en recuperación de criptomonedas'."
+contentPreview="Después de ser estafado, tenga cuidado con los falsos 'expertos en recuperación de criptomonedas'."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 
@@ -133,12 +130,11 @@ Las estafas de recuperación se dirigen específicamente a personas que ya han p
 Prometen rastrear y recuperar su criptomoneda robada a cambio de una tarifa inicial. Después de que paga, desaparecen.
 
 **Ningún servicio legítimo puede revertir las transacciones de la cadena de bloques.** Cualquiera que prometa esto está mintiendo. Esta es una de las estafas de seguimiento más comunes.
-
 </ExpandableCard>
 
 <ExpandableCard
 title="Sitios web de phishing y aplicaciones falsas"
-contentPreview="Los sitios de estafa imitan billeteras e intercambios reales para robar tus credenciales."
+contentPreview="Los sitios de estafa imitan billeteras e intercambios reales para robar sus credenciales."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 
@@ -156,7 +152,6 @@ Los sitios de phishing tienen un aspecto idéntico al de las aplicaciones de bil
 <DocLink href="/guides/how-to-id-scam-tokens/">
   Cómo detectar los tókenes de estafa
 </DocLink>
-
 </ExpandableCard>
 
 <DocLink href="/security/">

@@ -14,7 +14,6 @@ Cryptocurrency scams target people of all experience levels, including professio
 <AlertDescription>
 
 **No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#recovery-scams) below.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -98,7 +97,6 @@ Scammers create fake giveaways promising to multiply your ETH or give you free t
 **Remember:** Vitalik and other prominent figures will never ask you to send them ETH.
 
 [More on common scams](/security/#common-scams)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -117,7 +115,6 @@ Scammers impersonate Ethereum team members, moderators, or support agents on Dis
 - Real moderators will never DM you first
 - Never share your seed phrase or private keys with anyone, for any reason
 - Never click links sent in unsolicited messages
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -133,7 +130,6 @@ Recovery scams specifically target people who have already lost funds. Scammers 
 They promise to trace and recover your stolen crypto for an upfront fee. After you pay, they disappear.
 
 **No legitimate service can reverse blockchain transactions.** Anyone promising this is lying. This is one of the most common follow-up scams.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -156,7 +152,6 @@ Phishing sites look identical to real wallet apps, exchanges, or DeFi platforms.
 <DocLink href="/guides/how-to-id-scam-tokens/">
   How to identify scam tokens
 </DocLink>
-
 </ExpandableCard>
 
 <DocLink href="/security/">

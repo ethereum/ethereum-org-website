@@ -1,6 +1,6 @@
 ---
-title: Conceptos erróneos comunes sobre Ethereum
-description: Aclarando los malentendidos más comunes sobre cómo funciona Ethereum.
+title: "Conceptos erróneos comunes sobre Ethereum"
+description: "Aclarando los malentendidos más comunes sobre cómo funciona Ethereum."
 lang: es
 ---
 

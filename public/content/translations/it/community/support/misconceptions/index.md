@@ -1,6 +1,6 @@
 ---
 title: Idee sbagliate comuni su Ethereum
-description: Chiarire le incomprensioni più comuni su come funziona Ethereum.
+description: "Chiarire le incomprensioni più comuni su come funziona Ethereum."
 lang: it
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Aide et signalement des arnaques
-description: Que faire si vous avez été victime d'une arnaque, comment sécuriser vos actifs restants et où signaler la fraude.
+description: "Que faire si vous avez été victime d'une arnaque, comment sécuriser vos actifs restants et où signaler la fraude."
 lang: fr
 ---
 
@@ -14,7 +14,6 @@ Les arnaques aux cryptomonnaies ciblent des personnes de tous niveaux d'expérie
 <AlertDescription>
 
 **Personne ne peut annuler les transactions sur la blockchain.** Si quelqu'un vous contacte en prétendant pouvoir récupérer vos fonds moyennant des frais, il s'agit presque certainement d'une deuxième arnaque. Voir les [arnaques à la récupération](#recovery-scams) ci-dessous.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -98,7 +97,6 @@ Les arnaqueurs créent de faux cadeaux promettant de multiplier vos ETH ou de vo
 **Rappelez-vous :** Vitalik et d'autres personnalités ne vous demanderont jamais de leur envoyer des ETH.
 
 [En savoir plus sur les arnaques courantes](/security/#common-scams)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -117,7 +115,6 @@ Les arnaqueurs se font passer pour des membres de l'équipe Ethereum, des modér
 - Les vrais modérateurs ne vous enverront jamais de message privé en premier
 - Ne partagez jamais votre phrase de récupération ou vos clés privées avec qui que ce soit, pour quelque raison que ce soit.
 - Ne cliquez jamais sur les liens envoyés dans des messages non sollicités.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -133,7 +130,6 @@ Les arnaques à la récupération ciblent spécifiquement les personnes qui ont 
 Ils promettent de tracer et de récupérer vos cryptomonnaies volées contre des frais initiaux. Après que vous ayez payé, ils disparaissent.
 
 **Aucun service légitime ne peut annuler les transactions de la blockchain.** Quiconque promet cela ment. C'est l'une des arnaques de suivi les plus courantes.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -156,7 +152,6 @@ Les sites d'hameçonnage ressemblent à de vraies applications de portefeuille, 
 <DocLink href="/guides/how-to-id-scam-tokens/">
   Comment identifier les jetons frauduleux
 </DocLink>
-
 </ExpandableCard>
 
 <DocLink href="/security/">

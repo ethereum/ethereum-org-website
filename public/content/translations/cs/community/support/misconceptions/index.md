@@ -1,6 +1,6 @@
 ---
-title: Běžné mylné představy o Ethereu
-description: Vysvětlení nejčastějších nedorozumění o tom, jak Ethereum funguje.
+title: "Běžné mylné představy o Ethereu"
+description: "Vysvětlení nejčastějších nedorozumění o tom, jak Ethereum funguje."
 lang: cs
 ---
 

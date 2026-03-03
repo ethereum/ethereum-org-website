@@ -1,10 +1,10 @@
 ---
-title: 常见问题
+title: "常见问题"
 description: Common Ethereum questions about wallets, transactions, staking, and more.
 lang: zh
 ---
 
-# 常见问题{#faq}
+# 常见问题 {#faq}
 
 ## I sent crypto to the wrong address {#wrong-wallet}
 
@@ -40,7 +40,6 @@ If your account is on a centralized exchange like Coinbase, Binance, or Kraken, 
 <AlertDescription>
 
 **Never share your seed phrase with anyone** claiming to help you recover your wallet. This is one of the most common scam tactics. No legitimate service will ever ask for your seed phrase.
-
 </AlertDescription>
 </AlertContent>
 </Alert>

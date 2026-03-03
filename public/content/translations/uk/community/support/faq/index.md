@@ -1,5 +1,5 @@
 ---
-title: Часті питання
+title: "Часті питання"
 description: Common Ethereum questions about wallets, transactions, staking, and more.
 lang: uk
 ---
@@ -40,7 +40,6 @@ If your account is on a centralized exchange like Coinbase, Binance, or Kraken, 
 <AlertDescription>
 
 **Never share your seed phrase with anyone** claiming to help you recover your wallet. This is one of the most common scam tactics. No legitimate service will ever ask for your seed phrase.
-
 </AlertDescription>
 </AlertContent>
 </Alert>

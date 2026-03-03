@@ -40,7 +40,6 @@ Jika akun Anda ada di bursa terpusat seperti Coinbase, Binance, atau Kraken, hub
 <AlertDescription>
 
 **Jangan pernah membagikan frase benih Anda kepada siapa pun** yang mengaku membantu Anda memulihkan dompet Anda. Ini adalah salah satu taktik penipuan yang paling umum. Tidak ada layanan sah yang akan pernah meminta frase benih Anda.
-
 </AlertDescription>
 </AlertContent>
 </Alert>

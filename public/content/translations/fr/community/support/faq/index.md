@@ -1,6 +1,6 @@
 ---
-title: Questions fréquemment posées
-description: Questions fréquentes sur Ethereum concernant les portefeuilles, les transactions, la mise en jeu et plus encore.
+title: "Questions fréquemment posées"
+description: "Questions fréquentes sur Ethereum concernant les portefeuilles, les transactions, la mise en jeu et plus encore."
 lang: fr
 ---
 
@@ -40,7 +40,6 @@ Si votre compte se trouve sur un échange centralisé comme Coinbase, Binance ou
 <AlertDescription>
 
 **Ne partagez jamais votre phrase de récupération avec quiconque** prétendant vous aider à récupérer votre portefeuille. C'est l'une des tactiques d'escroquerie les plus courantes. Aucun service légitime ne vous demandera jamais votre phrase de récupération.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
