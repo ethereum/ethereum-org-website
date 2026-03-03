@@ -148,16 +148,29 @@ test.describe("English Comparison Fixes", () => {
       expect(fixCount).toBe(1)
     })
 
-    test("returns unchanged when tag counts mismatch", () => {
-      const english = ["---", 'tags: ["solidity"]', "---"].join("\n")
+    test("fixes brand tags even when tag counts differ", () => {
+      const english = [
+        "---",
+        'tags: ["solidity", "smart contracts", "erc-721"]',
+        "---",
+      ].join("\n")
       const translated = [
         "---",
-        'tags: ["\u30BD\u30EA\u30C7\u30A3\u30C6\u30A3", "extra"]',
+        'tags: ["solidez", "smart contracts"]',
         "---",
       ].join("\n")
       const { content, fixCount } = fixBrandTags(translated, english)
-      expect(content).toBe(translated)
-      expect(fixCount).toBe(0)
+      expect(content).toContain('"Solidity"')
+      expect(content).not.toContain('"solidez"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes brand tags when translation has fewer tags", () => {
+      const english = ["---", 'tags: ["solidity", "dapps"]', "---"].join("\n")
+      const translated = ["---", 'tags: ["solidez"]', "---"].join("\n")
+      const { content, fixCount } = fixBrandTags(translated, english)
+      expect(content).toContain('"Solidity"')
+      expect(fixCount).toBe(1)
     })
 
     test("returns unchanged when no frontmatter", () => {
