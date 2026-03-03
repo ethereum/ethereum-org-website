@@ -644,7 +644,7 @@ Obtenha o ID da solicitação e exclua o nonce de `nonces` para garantir que ele
   try {
 ```
 
-Como há muitas maneiras pelas quais a assinatura pode ser inválida, envolvemos isso em um `try... bloco `catch` para capturar quaisquer erros lançados.
+Como há muitas maneiras pelas quais a assinatura pode ser inválida, envolvemos isso em um bloco `try ... catch` para capturar quaisquer erros lançados.
 
 ```typescript
     const validSignature = await verifyMessage({
@@ -809,37 +809,43 @@ Isto é necessário porque GraphQL diferencia maiúsculas e minúsculas.
 "0xBAD060A7", "0xBad060A7", and "0xbad060a7" são valores diferentes.
 ```
 
+```typescript
+        take: 1
 ```
-    take: 1 Independentemente de quantos atestados encontrarmos, queremos apenas o primeiro.       ) {
-    data
-    id
-    attester
-  }
-}` Os campos que queremos receber.
-```
+
+Independentemente de quantos atestados encontrarmos, queremos apenas o primeiro.
 
 ```typescript
-`attester`: O endereço que enviou o atestado.
+      ) {
+        data
+        id
+        attester
+      }
+    }`
 ```
 
-Normalmente, isso é usado para decidir se confia no atestado ou não.
+Os campos que queremos receber.
+
+- `attester`: O endereço que enviou o atestado. Normalmente, isso é usado para decidir se confia no atestado ou não.
+- `id`: O ID do atestado. Você pode usar este valor para [ler o atestado on-chain](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64) para verificar se a informação da consulta GraphQL está correta.
+- `data`: Os dados do esquema (neste caso, o endereço de e-mail).
 
 ```typescript
-`id`: O ID do atestado.
+  const queryResult = await graphqlClient.request(query)
+
+  if (queryResult.attestations.length == 0)
+    return "no_address@available.is"
 ```
 
-Você pode usar este valor para [ler o atestado on-chain](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64) para verificar se a informação da consulta GraphQL está correta.
+Se não houver atestado, retorne um valor que seja obviamente incorreto, mas que pareça válido para o provedor de serviços.
 
-- `data`: Os dados do esquema (neste caso, o endereço de e-mail).   const queryResult = await graphqlClient.request(query)if (queryResult.attestations.length == 0)
-  return "no_address@available.is"
-- Se não houver atestado, retorne um valor que seja obviamente incorreto, mas que pareça válido para o provedor de serviços.   const attestationDataFields = graphqlEncoder.decodeData(queryResult.attestations[0].data)
+```typescript
+  const attestationDataFields = graphqlEncoder.decodeData(queryResult.attestations[0].data)
   return attestationDataFields[0].value.value
-  }
-- Se houver um valor, use `decodeData` para decodificar os dados.
-
-```typescript
-Não precisamos dos metadados que ele fornece, apenas do valor em si.
+}
 ```
+
+Se houver um valor, use `decodeData` para decodificar os dados. Não precisamos dos metadados que ele fornece, apenas do valor em si.
 
 ```typescript
 const loginResponse = await idp.createLoginResponse(

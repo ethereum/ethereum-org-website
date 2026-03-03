@@ -15,11 +15,11 @@ Nós Ethereum precisam se identificar com algumas informações básicas para se
 
 O formato original do endereço de nó Ethereum era o 'multiaddr' (abreviação de 'multi-endereços'). O Multiaddr é um formato universal desenhado para redes peer-to-peer. Os endereços são representados como pares chave-valor com chaves e valores separados por uma barra. Por exemplo, o multiaddr para um nó com endereço IPv4 `192.168.22.27` escutando a porta TCP `33000` tem a seguinte aparência:
 
-/ip4/192.168.22.27/tcp/33000
+`/ip4/192.168.22.27/tcp/33000`
 
 Para um nó Ethereum, o multiaddr contém o node-ID (um hash de sua chave pública):
 
-/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br
+`/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
 ## Enode {#enode}
 
@@ -27,7 +27,7 @@ Um enode é uma maneira de identificar um nó Ethereum usando um formato de ende
 
 No exemplo a seguir, a URL do nó descreve um nó com endereço IP `10.3.58.6`, porta TCP `30303` e porta de descoberta UDP `30301`.
 
-enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301
+`enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301`
 
 ## Registros de Nós Ethereum (ENRs) {#enr}
 

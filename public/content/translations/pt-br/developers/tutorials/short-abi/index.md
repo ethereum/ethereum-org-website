@@ -428,7 +428,7 @@ Uma vez que `proxy` tem um valor real (diferente de zero), esse valor não pode 
     modifier onlyProxy {
 ```
 
-Esta é uma [`função `modifier`](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), que modifica a forma como outras funções funcionam.
+Esta é uma [função `modifier`](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), que modifica a forma como outras funções funcionam.
 
 ```solidity
       require(msg.sender == proxy);

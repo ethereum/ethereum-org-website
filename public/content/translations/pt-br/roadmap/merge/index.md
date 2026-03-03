@@ -66,11 +66,11 @@ As principais ações incluem:
 
 1. Execute ao mesmo tempo um cliente de consenso e um cliente de execução; pontos de extremidade de terceiros para obter dados de execução não funcionam mais desde A Fusão.
 2. Autentique os clientes de execução e de consenso com um segredo JWT compartilhado para que eles possam se comunicar com segurança.
-3. Defina um endereço de "destinatário das taxas" para receber dicas sobre suas taxas de transação ganhas / MEV.
+3. Defina um endereço de `destinatário das taxas` para receber dicas sobre suas taxas de transação ganhas / MEV.
 
 Não completar os dois primeiros itens acima fará com que seu nó seja visto como "offline" até que ambas as camadas sejam sincronizadas e autenticadas.
 
-Não definir um "destinatário de taxa" ainda permitirá que seu validador se comporte como de costume, mas você perderá comissões de taxas não queimadas e qualquer MEV que você teria ganhado em blocos que seu validador propõe.
+Não definir um `destinatário de taxa` ainda permitirá que seu validador se comporte como de costume, mas você perderá comissões de taxas não queimadas e qualquer MEV que você teria ganhado em blocos que seu validador propõe.
 </ExpandableCard>
 
 <ExpandableCard
