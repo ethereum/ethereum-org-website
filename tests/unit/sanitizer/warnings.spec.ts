@@ -14,6 +14,7 @@ const {
   fixTranslatedHrefs,
   detectCrossScriptContamination,
   warnExposedMdxTags,
+  warnTranslatedInlineCode,
 } = _testOnly
 
 test.describe("Warning Functions", () => {
@@ -295,6 +296,63 @@ test.describe("Warning Functions", () => {
       ].join("\n")
       const warnings = warnExposedMdxTags(content)
       expect(warnings).toHaveLength(0)
+    })
+  })
+
+  test.describe("warnTranslatedInlineCode", () => {
+    test("warns when translation has fewer inline code spans than English", () => {
+      const english = [
+        "We use `deployContract` method from `Waffle` to deploy.",
+        "Pass `wallet`, the compiled json file.",
+      ].join("\n")
+      const translated = [
+        "Usamos o `deployContract` metodo de `Waffle` para publicar.",
+        "Passar a carteira `, o arquivo json compilado.",
+      ].join("\n")
+      const warnings = warnTranslatedInlineCode(translated, english)
+      expect(warnings.length).toBeGreaterThan(0)
+      expect(warnings[0]).toContain("inline code")
+    })
+
+    test("no warning when inline code counts match", () => {
+      const english = "Use `deployContract` from `Waffle` with `wallet`."
+      const translated = "Use `deployContract` de `Waffle` com `wallet`."
+      const warnings = warnTranslatedInlineCode(translated, english)
+      expect(warnings).toHaveLength(0)
+    })
+
+    test("no warning when English has no inline code", () => {
+      const english = "This is plain text without code."
+      const translated = "Este e texto simples sem codigo."
+      const warnings = warnTranslatedInlineCode(translated, english)
+      expect(warnings).toHaveLength(0)
+    })
+
+    test("ignores code spans inside fenced code blocks", () => {
+      const english = [
+        "```",
+        "const x = `template`",
+        "```",
+        "Use `wallet` here.",
+      ].join("\n")
+      const translated = [
+        "```",
+        "const x = `template`",
+        "```",
+        "Use `wallet` aqui.",
+      ].join("\n")
+      const warnings = warnTranslatedInlineCode(translated, english)
+      expect(warnings).toHaveLength(0)
+    })
+
+    test("warns on orphaned backtick even when count diff is small", () => {
+      // Many code spans match, but one line has a stray backtick
+      const spans = Array.from({ length: 20 }, (_, i) => `\`code${i}\``)
+      const english = spans.join(" text ") + " and `wallet` here."
+      const translated = spans.join(" text ") + " e a carteira `, aqui."
+      const warnings = warnTranslatedInlineCode(translated, english)
+      const orphanWarning = warnings.find((w) => w.includes("Orphaned"))
+      expect(orphanWarning).toBeDefined()
     })
   })
 })
