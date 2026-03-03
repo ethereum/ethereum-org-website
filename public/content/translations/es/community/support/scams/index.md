@@ -103,7 +103,7 @@ Los estafadores crean sorteos falsos que prometen multiplicar su ETH o darle tó
 
 <ExpandableCard
 title="Suplantación de identidad y soporte falso"
-contentPreview="Nadie de Ethereum o ethereum.org se pondrá en contacto con usted primero."
+contentPreview="Nadie de Ethereum o ethereum.org te contactará primero."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 
@@ -122,7 +122,7 @@ Los estafadores se hacen pasar por miembros del equipo de Ethereum, moderadores 
 
 <ExpandableCard
 title="Estafas de recuperación"
-contentPreview="Después de ser estafado, tenga cuidado con los falsos 'expertos en recuperación de criptomonedas'."
+contentPreview="Después de ser estafado, ten cuidado con los falsos 'expertos en recuperación de criptomonedas'."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 
@@ -138,7 +138,7 @@ Prometen rastrear y recuperar su criptomoneda robada a cambio de una tarifa inic
 
 <ExpandableCard
 title="Sitios web de phishing y aplicaciones falsas"
-contentPreview="Los sitios de estafa imitan billeteras e intercambios reales para robar sus credenciales."
+contentPreview="Los sitios de estafa imitan billeteras e intercambios reales para robar tus credenciales."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 
