@@ -2065,6 +2065,73 @@ function fixItalicAdjacentNonLatin(content: string): {
 }
 
 /**
+ * Warn when the translation has significantly fewer inline code spans than
+ * English, or when backtick spans cross line boundaries (indicating broken
+ * inline code where Crowdin translated the content inside backticks).
+ *
+ * Example:
+ *   EN: "pass `wallet`, the compiled json"
+ *   PT: "passar a carteira `, o arquivo json"
+ *
+ * Two checks:
+ * 1. Count comparison: warns when 3+ spans fewer or 20%+ drop.
+ * 2. Multi-line backtick spans: a single backtick that opens on one line
+ *    and closes on another is almost always a broken inline code span.
+ */
+function warnTranslatedInlineCode(
+  translated: string,
+  english: string
+): string[] {
+  const warnings: string[] = []
+  const fencePattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+
+  function countInlineCodeSpans(content: string): number {
+    const parts = content.split(fencePattern)
+    let count = 0
+    for (let i = 0; i < parts.length; i++) {
+      if (i % 2 === 1) continue
+      const spans = parts[i].match(/`[^`]+`/g)
+      if (spans) count += spans.length
+    }
+    return count
+  }
+
+  // Check 1: count comparison
+  const englishCount = countInlineCodeSpans(english)
+  const translatedCount = countInlineCodeSpans(translated)
+
+  if (englishCount > 0) {
+    const diff = englishCount - translatedCount
+    const pctDrop = diff / englishCount
+
+    if (diff >= 3 || (diff >= 1 && pctDrop >= 0.2)) {
+      warnings.push(
+        `Inline code span count: English has ${englishCount}, translation has ${translatedCount} (${diff} fewer) -- may indicate translated or broken inline code`
+      )
+    }
+  }
+
+  // Check 2: detect multi-line backtick spans in prose (broken inline code)
+  const parts = translated.split(fencePattern)
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+    const lines = parts[i].split("\n")
+    for (let j = 0; j < lines.length; j++) {
+      // Count backticks on this line (outside double/triple backticks)
+      const stripped = lines[j].replace(/``[^`]*``/g, "")
+      const backtickCount = (stripped.match(/`/g) || []).length
+      if (backtickCount % 2 === 1) {
+        warnings.push(
+          `Orphaned backtick on line: "${lines[j].trim().substring(0, 80)}..." -- likely broken inline code span`
+        )
+      }
+    }
+  }
+
+  return warnings
+}
+
+/**
  * Warn about bare MDX-meaningful tags outside backticks.
  * Detects <tag> or </> patterns that should be inside inline code
  * but got exposed by Crowdin splitting backtick spans.
@@ -2441,6 +2508,10 @@ function processMarkdownFile(
       englishMd
     )
     issues.push(...catastrophicDriftWarnings)
+
+    // Warn on translated inline code (broken backtick spans)
+    const inlineCodeWarnings = warnTranslatedInlineCode(content, englishMd)
+    issues.push(...inlineCodeWarnings)
 
     // Detect cross-script contamination
     if (locale) {
@@ -2854,6 +2925,7 @@ export const _testOnly = {
   fixDuplicateFrontmatterAuthor,
   fixBrokenBracketInLinks,
   warnExposedMdxTags,
+  warnTranslatedInlineCode,
   warnCodeFenceContentDrift,
   warnCatastrophicCodeFenceDrift,
   detectCrossScriptContamination,
