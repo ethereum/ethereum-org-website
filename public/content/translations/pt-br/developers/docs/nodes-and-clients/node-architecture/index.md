@@ -10,7 +10,7 @@ Quando o Ethereum estava usando [prova de trabalho](/developers/docs/consensus-m
 
 O diagrama abaixo mostra a relação entre os dois clientes Ethereum. Os dois clientes se conectam às suas respectivas redes ponto a ponto (P2P). As redes P2P separadas são necessárias à medida que os clientes de execução espalham transações em sua rede P2P, permitindo que eles gerenciem seu pool de transações local, enquanto os clientes de consenso distribuem blocos em sua rede P2P, permitindo consenso e crescimento da cadeia.
 
-![](node-architecture-text-background.png)
+![Diagrama da arquitetura do nó Ethereum mostrando camadas de execução e consenso](node-architecture-text-background.png)
 
 Para que essa estrutura de dois clientes funcione, os clientes de consenso devem ser capazes de passar pacotes de transações para o cliente de execução. Executar transações localmente é como o cliente valida que as transações não violam nenhuma regra do Ethereum e que a atualização proposta para o estado do Ethereum está correta. Da mesma forma, quando o nó é selecionado para ser um produtor de bloco, o cliente de consenso deve ser capaz de solicitar pacotes de transações ao Geth para incluir no novo bloco e executá-los para atualizar o estado global. Essa comunicação entre clientes é tratada por uma conexão RPC local usando a [API engine](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 

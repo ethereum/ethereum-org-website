@@ -10,7 +10,7 @@ Lorsque Ethereum utilisait la [preuve de travail](/developers/docs/consensus-mec
 
 Le diagramme ci-dessous montre la relation entre les deux clients Ethereum. Les deux clients se connectent à leurs propres réseaux peer-to-peer (P2P) respectifs. Des réseaux P2P séparés sont nécessaires car les clients d'exécution propagent les transactions sur leur réseau P2P, leur permettant de gérer leur pool de transactions local, tandis que les clients de consensus propagent les blocs sur leur réseau P2P, permettant le consensus et l'accroissement de la chaîne.
 
-![](node-architecture-text-background.png)
+![Schéma de l'architecture des nœuds Ethereum montrant les couches d'exécution et de consensus](node-architecture-text-background.png)
 
 _Il existe plusieurs options pour le client d’exécution, notamment Erigon, Nethermind et Besu_.
 

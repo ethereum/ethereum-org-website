@@ -10,7 +10,7 @@ Když Ethereum používalo [důkaz prací](/developers/docs/consensus-mechanisms
 
 Níže uvedený diagram znázorňuje vztah mezi dvěma klienty sítě Ethereum. Oba klienti se připojují ke svým vlastním sítím peer-to-peer (P2P). Jsou zapotřebí oddělené P2P sítě, protože exekuční klienti si přes svou P2P síť vyměňují transakce, což jim umožňuje spravovat jejich lokální transakční pool, zatímco konsensuální klienti si přes svou P2P síť vyměňují bloky, což umožňuje konsensus a růst řetězce.
 
-![](node-architecture-text-background.png)
+![Diagram architektury uzlu Ethereum zobrazující prováděcí a konsensuální vrstvy](node-architecture-text-background.png)
 
 _Pro exekučního klienta existuje několik možností, včetně Erigon, Nethermind a Besu_.
 
