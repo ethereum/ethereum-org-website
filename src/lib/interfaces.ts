@@ -96,6 +96,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   published: string
   address?: string
   hideEditButton?: boolean
+  breadcrumb?: string
 }
 
 export interface MdPageContent {
