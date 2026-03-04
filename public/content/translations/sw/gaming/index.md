@@ -35,13 +35,7 @@ Michezo iliyo kwenye mnyororo kikamilifu ni michezo ambapo mbinu za msingi, na m
 
 Wasanidi programu wanachunguza njia mpya za kufanya michezo ishirikishe zaidi na kwenda zaidi ya mbinu rahisi za zawadi ili kuimarisha uchezaji unaotegemea ujuzi.
 
-<OnchainGamingProductList list="game" />
-
-## Cheza-ili-upate (P2E) {#play-to-earn-p2e}
-
-Kwa michezo ya Cheza-ili-upate (P2E), unaweza kupata mali za ndani ya mchezo zenye thamani ya ulimwengu halisi. Tofauti na mifumo ya awali ya P2E iliyotegemea zawadi zisizo endelevu, michezo mipya inazingatia thamani ya muda mrefu. Kwa mfano, [Wolf Game](https://gam3s.gg/wolf-game/) inachanganya uchezaji wa kimkakati na umiliki halisi wa mali za kidijitali. Wachezaji hudhibiti kondoo na mbwa mwitu pepe, wakipata sarafu ya ndani ya mchezo WOOL, ambayo inaweza kubadilishwa au kuuzwa.
-
-<OnchainGamingProductList list="p2e" />
+<GamingAppsGrid apps={gamingApps} />
 
 ## Ushirikiano & uchezaji wa minyororo-tofauti {#interoperability-and-cross-chain-play}
 

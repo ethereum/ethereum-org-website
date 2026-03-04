@@ -35,13 +35,7 @@ Các trò chơi hoàn toàn trên chuỗi là các trò chơi mà cơ chế cơ 
 
 Các nhà phát triển đang khám phá những cách mới để làm cho trò chơi hấp dẫn hơn và vượt ra ngoài cơ chế phần thưởng đơn giản để làm sâu sắc thêm lối chơi dựa trên kỹ năng.
 
-<OnchainGamingProductList list="game" />
-
-## Chơi để kiếm tiền (P2E) {#play-to-earn-p2e}
-
-Với các trò chơi Chơi để kiếm tiền (P2E), bạn có thể kiếm được các tài sản trong trò chơi có giá trị trong thế giới thực. Không giống như các mô hình P2E ban đầu dựa vào các phần thưởng không bền vững, các trò chơi mới hơn tập trung vào giá trị lâu dài. Ví dụ, [Wolf Game](https://gam3s.gg/wolf-game/) kết hợp lối chơi chiến lược với quyền sở hữu tài sản kỹ thuật số thực. Người chơi quản lý cừu và sói ảo, kiếm được tiền tệ trong trò chơi là WOOL, có thể được giao dịch hoặc bán.
-
-<OnchainGamingProductList list="p2e" />
+<GamingAppsGrid apps={gamingApps} />
 
 ## Khả năng tương tác & chơi chuỗi chéo {#interoperability-and-cross-chain-play}
 

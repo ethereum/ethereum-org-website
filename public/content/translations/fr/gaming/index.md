@@ -35,13 +35,7 @@ Les jeux entièrement en chaîne sont des jeux où les mécanismes fondamentaux,
 
 Les développeurs explorent de nouvelles façons de rendre les jeux plus captivants et de dépasser les simples mécanismes de récompense pour approfondir le gameplay basé sur les compétences.
 
-<OnchainGamingProductList list="game" />
-
-## Play-to-Earn (P2E) {#play-to-earn-p2e}
-
-Avec les jeux Play-to-Earn (P2E), vous pouvez gagner des actifs dans le jeu ayant une valeur dans le monde réel. Contrairement aux premiers modèles P2E qui reposaient sur des récompenses non durables, les jeux plus récents se concentrent sur la valeur à long terme. Par exemple, [Wolf Game](https://gam3s.gg/wolf-game/) combine un gameplay stratégique avec une véritable propriété d'actifs numériques. Les joueurs gèrent des moutons et des loups virtuels, gagnant la monnaie du jeu, le WOOL, qui peut être échangé ou vendu.
-
-<OnchainGamingProductList list="p2e" />
+<GamingAppsGrid apps={gamingApps} />
 
 ## Interopérabilité et jeu inter-chaînes {#interoperability-and-cross-chain-play}
 

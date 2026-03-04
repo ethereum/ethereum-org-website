@@ -35,13 +35,7 @@ buttons:
 
 デベロッパーは、ゲームをより魅力的にし、単純な報酬メカニクスを超えて、スキルベースのゲームプレイを深化させる新しい方法を模索しています。
 
-<OnchainGamingProductList list="game" />
-
-## プレイして稼ぐ (P2E) {#play-to-earn-p2e}
-
-プレイして稼ぐ (P2E) ゲームでは、現実世界で価値を持つゲーム内アセットを獲得できます。 持続不可能な報酬に依存していた初期のP2Eモデルとは異なり、新しいゲームは長期的な価値に焦点を当てています。 例えば、[Wolf Game](https://gam3s.gg/wolf-game/)は、戦略的なゲームプレイと真のデジタルアセット所有権を組み合わせています。 プレイヤーは仮想の羊と狼を管理し、取引や売却が可能なゲーム内通貨WOOLを獲得します。
-
-<OnchainGamingProductList list="p2e" />
+<GamingAppsGrid apps={gamingApps} />
 
 ## 相互運用性とクロスチェーンプレイ {#interoperability-and-cross-chain-play}
 

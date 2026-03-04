@@ -35,13 +35,7 @@ Hry zcela na blockchainu jsou hry, kde základní mechanismy, a často celý her
 
 Vývojáři zkoumají nové způsoby, jak učinit hry poutavějšími, a překročit jednoduché mechanismy odměn, aby prohloubili hratelnost založenou na dovednostech.
 
-<OnchainGamingProductList list="game" />
-
-## Play-to-earn (P2E) {#play-to-earn-p2e}
-
-S hrami typu Play-to-Earn (P2E) můžete získat herní aktiva se skutečnou hodnotou. Na rozdíl od prvních P2E modelů, které se spoléhaly na neudržitelné odměny, se novější hry zaměřují na dlouhodobou hodnotu. Například [Wolf Game](https://gam3s.gg/wolf-game/) kombinuje strategickou hratelnost se skutečným vlastnictvím digitálních aktiv. Hráči spravují virtuální ovce a vlky a získávají herní měnu WOOL, se kterou lze obchodovat nebo ji prodat.
-
-<OnchainGamingProductList list="p2e" />
+<GamingAppsGrid apps={gamingApps} />
 
 ## Interoperabilita a cross-chain hraní {#interoperability-and-cross-chain-play}
 

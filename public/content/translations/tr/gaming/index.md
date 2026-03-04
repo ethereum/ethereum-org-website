@@ -35,13 +35,7 @@ Tamamen zincir üstü oyunlar, temel mekaniklerin ve genellikle tüm oyun dünya
 
 Geliştiriciler, oyunları daha ilgi çekici hale getirmek için yeni yollar araştırıyor ve beceri tabanlı oynanışı derinleştirmek için basit ödül mekaniklerinin ötesine geçiyor.
 
-<OnchainGamingProductList list="game" />
-
-## Kazanmak için oyna (P2E) {#play-to-earn-p2e}
-
-Kazanmak için oyna (P2E) oyunları ile gerçek dünya değeri olan oyun içi varlıklar kazanabilirsiniz. Sürdürülemez ödüllere dayanan ilk P2E modellerinin aksine, daha yeni oyunlar uzun vadeli değere odaklanır. Örneğin, [Wolf Game](https://gam3s.gg/wolf-game/) stratejik oynanışı gerçek dijital varlık sahipliği ile birleştirir. Oyuncular sanal koyunları ve kurtları yöneterek takas edilebilen veya satılabilen oyun içi para birimi WOOL'u kazanırlar.
-
-<OnchainGamingProductList list="p2e" />
+<GamingAppsGrid apps={gamingApps} />
 
 ## Birlikte çalışabilirlik ve zincirler arası oyun {#interoperability-and-cross-chain-play}
 

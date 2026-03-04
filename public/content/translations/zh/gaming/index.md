@@ -35,13 +35,7 @@ buttons:
 
 开发者正在探索新的方法，让游戏更具吸引力，超越简单的奖励机制，深化基于技能的游戏玩法。
 
-<OnchainGamingProductList list="game" />
-
-## 边玩边赚 (P2E) {#play-to-earn-p2e}
-
-通过边玩边赚 (P2E) 游戏，你可以赚取具有现实世界价值的游戏内资产。 与依赖不可持续奖励的早期 P2E 模式不同，新游戏更注重长期价值。 例如，[Wolf Game](https://gam3s.gg/wolf-game/) 将策略性游戏玩法与真实的数字资产所有权相结合。 玩家管理虚拟的绵羊和狼，赚取游戏内货币 WOOL，WOOL 可以交易或出售。
-
-<OnchainGamingProductList list="p2e" />
+<GamingAppsGrid apps={gamingApps} />
 
 ## 互操作性和跨链游戏 {#interoperability-and-cross-chain-play}
 

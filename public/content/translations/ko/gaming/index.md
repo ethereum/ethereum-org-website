@@ -35,13 +35,7 @@ buttons:
 
 개발자들은 게임을 더 매력적으로 만들고 단순한 보상 메커니즘을 넘어 기술 기반 게임 플레이를 심화시키기 위한 새로운 방법을 모색하고 있습니다.
 
-<OnchainGamingProductList list="game" />
-
-## 플레이 투 언(Play-to-earn, P2E) {#play-to-earn-p2e}
-
-P2E(Play-to-Earn) 게임을 통해 실제 가치가 있는 게임 내 자산을 획득할 수 있습니다. 지속 불가능한 보상에 의존했던 초기 P2E 모델과 달리, 최신 게임은 장기적인 가치에 중점을 둡니다. 예를 들어, [Wolf Game](https://gam3s.gg/wolf-game/)은 전략적인 게임 플레이와 실제 디지털 자산 소유권을 결합합니다. 플레이어는 가상의 양과 늑대를 관리하며, 거래하거나 판매할 수 있는 게임 내 통화인 WOOL을 획득합니다.
-
-<OnchainGamingProductList list="p2e" />
+<GamingAppsGrid apps={gamingApps} />
 
 ## 상호 운용성 및 크로스 체인 플레이 {#interoperability-and-cross-chain-play}
 
