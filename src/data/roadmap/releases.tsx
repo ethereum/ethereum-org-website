@@ -5,6 +5,7 @@ import GuidesHubHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.png"
 import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import FusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
+import GlamsterdamImage from "@/public/images/roadmap/roadmap-glamsterdam.png"
 import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
 
 type TranslationFunction = (key: string) => string
@@ -18,6 +19,7 @@ interface BaseRelease {
   image: StaticImageData
   releaseName: string
   content: React.ReactNode | ((t: TranslationFunction) => React.ReactNode)
+  displayDate?: string
   href?: string
   forkcast_href?: string
 }
@@ -173,21 +175,41 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     forkcast_href: "https://forkcast.org/upgrade/fusaka",
   },
   {
-    image: GuidesHubHeroImage,
+    image: GlamsterdamImage,
     releaseName: "Glamsterdam",
     plannedReleaseYear: "2026",
+    displayDate: "H1 2026",
     content: (
       <div>
-        <p className="font-bold">
-          {t("page-roadmap-glamsterdam-discussed-title")}
-        </p>
+        <p className="font-bold">{t("page-roadmap-glamsterdam-epbs-title")}</p>
         <ul>
-          <li>{t("page-roadmap-glamsterdam-discussed-item-1")}</li>
-          <li>{t("page-roadmap-glamsterdam-discussed-item-2")}</li>
+          <li>{t("page-roadmap-glamsterdam-epbs-item-1")}</li>
+          <li>{t("page-roadmap-glamsterdam-epbs-item-2")}</li>
+        </ul>
+        <p className="font-bold">{t("page-roadmap-glamsterdam-bal-title")}</p>
+        <ul>
+          <li>{t("page-roadmap-glamsterdam-bal-item-1")}</li>
+          <li>{t("page-roadmap-glamsterdam-bal-item-2")}</li>
+          <li>{t("page-roadmap-glamsterdam-bal-item-3")}</li>
         </ul>
       </div>
     ),
     forkcast_href: "https://forkcast.org/upgrade/glamsterdam",
+  },
+  {
+    image: GuidesHubHeroImage,
+    releaseName: "Hegotá",
+    plannedReleaseYear: "2026",
+    displayDate: "2026",
+    content: (
+      <div>
+        <p className="font-bold">{t("page-roadmap-hegota-discussed-title")}</p>
+        <ul>
+          <li>{t("page-roadmap-hegota-discussed-item-1")}</li>
+        </ul>
+      </div>
+    ),
+    forkcast_href: "https://forkcast.org/upgrade/hegota",
   },
 ]
 
