@@ -102,7 +102,6 @@ summaryPoint3: "它以开放科学运动为基础。"
 - [OceanDAO：由 DAO 治理的、面向数据相关科学的资金](https://oceanprotocol.com/)
 - [Opscientia：开放的去中心化科学工作流程](https://opsci.io/research/)
 - [Bio.xyz：为你的生物技术 DAO 或 DeSci 项目获得资金](https://www.bio.xyz/)
-- [Fleming Protocol：促进协作性生物医学发现的开源数据经济](http://flemingprotocol.io/)
 - [主动推理研究所](https://www.activeinference.org/)
 - [IdeaMarkets：实现去中心化科学信誉](https://ideamarket.io/)
 - [DeSci 实验室](https://www.desci.com/)

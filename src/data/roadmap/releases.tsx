@@ -190,11 +190,3 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     forkcast_href: "https://forkcast.org/upgrade/glamsterdam",
   },
 ]
-
-// Legacy export for backward compatibility - uses hardcoded English strings
-export const releasesData: Release[] = getReleasesData((key: string) => {
-  // This is a fallback that returns the key itself if translations aren't available
-  // In practice, this should not be used in the actual app
-  console.warn(`Translation key ${key} used without translation function`)
-  return key
-})

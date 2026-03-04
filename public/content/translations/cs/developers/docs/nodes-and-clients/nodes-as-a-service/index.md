@@ -272,7 +272,6 @@ Zde je seznam některých nejoblíbenějších poskytovatelů uzlů sítě Ether
     - Začněte zdarma
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Dokumentace](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Funkce
     - Přístup k více než 50 blockchainovým uzlům
     - Bezplatný klíč API
@@ -283,11 +282,10 @@ Zde je seznam některých nejoblíbenějších poskytovatelů uzlů sítě Ether
     - Sdílené, archivní, záložní a dedikované uzly
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Dokumentace](https://docs.pokt.network/home/)
+  - [Dokumentace](https://docs.pokt.network/)
   - Funkce
     - Decentralizovaný RPC protokol a tržiště
     - 1 milion požadavků denně v rámci bezplatné úrovně (na koncový bod, max. 2)
-    - [Veřejné koncové body](https://docs.pokt.network/developers/public-endpoints)
     - Program Pre-Stake+ (pokud potřebujete více než 1 milion požadavků denně)
     - Podpora více než 15 blockchainů
     - Více než 6400 uzlů vydělávajících POKT za obsluhu aplikací

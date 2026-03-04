@@ -34,10 +34,10 @@ You can find some useful guides and tools for ethereum.org translators, as well 
 
 To keep up-to-date with the latest Translation Program progress, you can follow the [Ethereum Foundation blog](https://blog.ethereum.org/):
 
-- [October 2021 milestones update](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [December 2020 milestones update](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [July 2020 milestones update](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [August 2019 Translation Program launch](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [October 2021 milestones update](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [December 2020 milestones update](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [July 2020 milestones update](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [August 2019 Translation Program launch](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Office hours for translators {#office-hours}
 

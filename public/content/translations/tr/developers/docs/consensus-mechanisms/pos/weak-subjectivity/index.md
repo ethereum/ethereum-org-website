@@ -33,7 +33,7 @@ Son olarak, diğer düğümlerden kontrol noktaları talep edilebilir; belki de 
 ## Ek Okumalar {#further-reading}
 
 - [Eth2'de zayıf öznellik](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
-- [Vitalik: Zayıf öznelliği sevmeyi nasıl öğrendim](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
+- [Vitalik: Zayıf öznelliği sevmeyi nasıl öğrendim](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)
 - [Zayıf öznellik (Teku belgeleri)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
-- [Aşama-0 Zayıf öznellik kılavuzu](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
+- [Aşama-0 Zayıf öznellik kılavuzu](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/weak-subjectivity.md)
 - [Ethereum 2.0'da zayıf öznellik analizi](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

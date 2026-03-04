@@ -35,7 +35,7 @@ incomplete: true
 ## இடைநிலை கட்டுரைகள் {#intermediate-articles}
 
 - [web3.py-இன் நண்பர்கள்: Ape-க்கு அறிமுகம்](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [பைத்தான் நிரலர்களுக்கான Dapp உருவாக்கம்](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [பைத்தான் நிரலர்களுக்கான Dapp உருவாக்கம்](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [ஒரு பைத்தான் Ethereum இடைமுகத்தை உருவாக்குதல்: பகுதி 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [பைத்தானில் Ethereum ஸ்மார்ட் ஒப்பந்தங்கள்: ஒரு விரிவான (போன்ற) வழிகாட்டி](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -87,7 +87,7 @@ incomplete: true
 - [Curve](https://www.curve.finance/) மற்றும் [Curve ஸ்மார்ட் ஒப்பந்தங்கள் களஞ்சியம்](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) மற்றும் [Brownie கருவித்தொகுப்பைப் பயன்படுத்தும் ஸ்மார்ட் ஒப்பந்தங்கள்](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) [தங்களது ஒப்படைப்பு ஒப்பந்தங்களை நிர்வகிப்பதிலும் வரிசைப்படுத்துவதிலும் பைத்தானைப் பயன்படுத்துகிறது](https://github.com/sushiswap/sushi-vesting-protocols)
-- [Alpha Finance](https://alphafinance.io/), ஆல்ஃபா ஹோமோரா புகழ் பெற்றது, [ஸ்மார்ட் ஒப்பந்தங்களை சோதிக்கவும் வரிசைப்படுத்தவும் Brownie-ஐப் பயன்படுத்துகிறது](https://github.com/AlphaFinanceLab/alpha-staking-contract)
+- [Alpha Venture DAO](https://alphaventuredao.io/), ஆல்ஃபா ஹோமோரா புகழ் பெற்றது, [ஸ்மார்ட் ஒப்பந்தங்களை சோதிக்கவும் வரிசைப்படுத்தவும் Brownie-ஐப் பயன்படுத்துகிறது](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## பைத்தான் சமூகக் கலந்துரையாடல் {#python-community-contributors}
 

@@ -272,7 +272,6 @@ sidebarDepth: 2
     - Почніть безкоштовно
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Документація](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Особливості
     - Доступ до більш, ніж 50 сервісів блокчейну
     - Безкоштовний ключ API
@@ -283,11 +282,10 @@ sidebarDepth: 2
     - Спільні, архівні, резервні та виділені вузли
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Документація](https://docs.pokt.network/home/)
+  - [Документація](https://docs.pokt.network/)
   - Особливості
     - Децентралізований протокол RPC і Ринок
     - 1 мільйон безкоштовних запитів (максимум 2, до кінцевої точки)
-    - [Публічні кінцеві точки](https://docs.pokt.network/developers/public-endpoints)
     - Додаток Pre-Stake+ (якщо вам необхідно мати більше ніж 1 мільйон запитів на день)
     - Підтримування більше 15 Blockchains
     - Більше 6400 сервісів, які заробляють POKT для обслуговування додатків

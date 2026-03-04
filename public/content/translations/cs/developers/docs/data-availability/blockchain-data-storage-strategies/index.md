@@ -29,7 +29,7 @@ Obecně se bezpečnost informací skládá ze tří atributů:
 
 - _Integrita_, informace jsou správné, nemohou je měnit neoprávněné subjekty ani neoprávněnými způsoby (například přenos [tokenů ERC-20](https://eips.ethereum.org/EIPS/eip-20#events) bez události `Transfer`). Na blockchainu každý uzel ověřuje každou změnu stavu, což zajišťuje integritu.
 
-- _Dostupnost_, informace jsou dostupné jakémukoli oprávněnému subjektu. Na blockchainu se toho obvykle dosahuje tak, že jsou informace dostupné na každém [plném uzlu](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
+- _Dostupnost_, informace jsou dostupné jakémukoli oprávněnému subjektu. Na blockchainu se toho obvykle dosahuje tak, že jsou informace dostupné na každém [plném uzlu](https://ethereum.org/developers/docs/nodes-and-clients/#full-node).
 
 Všechna zde uvedená řešení mají vynikající integritu, protože haše jsou zveřejňovány na L1. Mají však různé záruky dostupnosti.
 
@@ -39,7 +39,7 @@ Měli byste dobře rozumět [základům blockchainu](/developers/docs/intro-to-e
 
 ## Bloby EIP-4844 {#eip-4844-blobs}
 
-Počínaje [hardforkem Dencun](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md) obsahuje blockchain Etherea [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), který do Etherea přidává datové bloby s omezenou životností (původně asi [18 dní](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). Cena těchto blobů se stanovuje odděleně od [exekučního paliva](/developers/docs/gas), i když se používá podobný mechanismus. Jsou levným způsobem, jak zveřejnit dočasná data.
+Počínaje [hardforkem Dencun](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md) obsahuje blockchain Etherea [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), který do Etherea přidává datové bloby s omezenou životností (původně asi [18 dní](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration)). Cena těchto blobů se stanovuje odděleně od [exekučního paliva](/developers/docs/gas), i když se používá podobný mechanismus. Jsou levným způsobem, jak zveřejnit dočasná data.
 
 Hlavním případem použití blobů EIP-4844 je zveřejňování transakcí rollupy. [Optimistické rollupy](/developers/docs/scaling/optimistic-rollups) musí zveřejňovat transakce na svých blockchainech. Tyto transakce musí být dostupné komukoli během [období pro napadení](https://docs.optimism.io/connect/resources/glossary#challenge-period), aby [validátoři](https://docs.optimism.io/connect/resources/glossary#validator) mohli opravit chybu, pokud [sekvencer](https://docs.optimism.io/connect/resources/glossary#sequencer) rollupu zveřejní nesprávný kořen stavu.
 
@@ -110,7 +110,7 @@ Tato tabulka shrnuje různé možnosti, jejich výhody a nevýhody.
 
 | Typ úložiště                 | Zdroj dat                    | Záruka dostupnosti                                                                                                                                | Dostupnost na řetězci                                     | Další omezení                                                  |
 | ---------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------- |
-| Bloby EIP-4844               | Mimo řetězec                 | Záruka Etherea po dobu [~18 dnů](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | Je dostupný pouze haš                                     |                                                                |
+| Bloby EIP-4844               | Mimo řetězec                 | Záruka Etherea po dobu [~18 dnů](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Je dostupný pouze haš                                     |                                                                |
 | Calldata                     | Mimo řetězec                 | Záruka Etherea navždy (součást blockchainu)                                                                                    | Dostupné pouze při zápisu do kontraktu a v dané transakci |                                                                |
 | Mimo řetězec s mechanismy L1 | Mimo řetězec                 | Záruka "jednoho poctivého ověřovatele" během období pro napadení                                                                                  | Pouze haš                                                 | Zaručeno mechanismem napadení, pouze během období pro napadení |
 | Kód kontraktu                | Na řetězci nebo mimo řetězec | Záruka Etherea navždy (součást blockchainu)                                                                                    | Ano                                                       | Zapsáno na "náhodnou" adresu, nesmí začínat `0xEF`             |

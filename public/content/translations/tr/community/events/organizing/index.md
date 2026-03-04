@@ -218,4 +218,3 @@ Twitter alanı:
 Makaleler:
 
 - [ETHKL'yi İnşa Etmek, Danny H. tarafından](https://sekto.tech/ethkl24)
-- [POKT Etkinlikler El Kitabı](https://docs.pokt.network/community/pokt-events-playbook)

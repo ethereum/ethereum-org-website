@@ -122,8 +122,6 @@ Kabla ya kuingia kwa undani kwenye mifumo, tunapendekeza kwanza usome utangulizi
 
 **Catapulta -** **_Zana ya kupeleka mikataba-erevu ya minyororo mingi, fanya uthibitishaji kiotomatiki katika wachunguzi wa bloku, fuatilia mikataba-erevu iliyopelekwa na ushiriki ripoti za upelekaji, plug-n-play kwa miradi ya Foundry na Hardhat._**
 
-- [Tovuti](https://catapulta.sh/)
-- [Nyaraka](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
 
 **GoldRush (inayoendeshwa na Covalent) -** **_GoldRush hutoa seti kamili zaidi ya API ya data ya mnyororo wa bloku kwa wasanidi programu, wachambuzi, na biashara. Iwe unajenga dashibodi ya DeFi, mkoba, roboti ya biashara, wakala wa AI au jukwaa la kufuata sheria, API za data hutoa ufikiaji wa haraka, sahihi, na rafiki kwa msanidi programu kwa data muhimu ya onchain unayohitaji_**

@@ -51,7 +51,7 @@ Jeśli uważasz, że społeczność powinna zostać dodana lub usunięta na pods
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - prowadzone przez społeczność wskazówki, edukacja, wsparcie i zasoby dla obecnych i potencjalnych stakerów</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - wpadnij, aby porozmawiać z zespołem i osobami ze społeczności o tworzeniu i projektowaniu strony ethereum.org</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - społeczność twórców web3, w której spotykają się budowniczy, osobistości z branży i entuzjaści Ethereum. Jesteśmy pasjonatami rozwoju, projektowania i kultury web3. Buduj z nami.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - czat dotyczący programowania w Solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.element.io/#/room/#solidity:matrix.org">Solidity Matrix</Link> - czat dotyczący programowania w Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - czat dotyczący programowania w Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- forum pytań i odpowiedzi</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- zdecentralizowane forum pytań i odpowiedzi</i></SocialListItem>

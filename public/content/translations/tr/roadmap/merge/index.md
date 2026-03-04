@@ -105,7 +105,7 @@ Birleşim, mutabakata değişikliklerle beraber geldi, bu değişiklikler şunla
   <li><em>güvenli baş</em> ve <em>kesinleştirilmiş bloklar</em> konsepti</li>
 </ul>
 
-Daha fazla bilgi için, Tim Beiko tarafından yazılmış <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Birleşim Ethereum'un Uygulama Katmanını Nasıl Etkiler</a> üzerine blog gönderisine bakın.
+Daha fazla bilgi için, Tim Beiko tarafından yazılmış <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Birleşim Ethereum'un Uygulama Katmanını Nasıl Etkiler</a> üzerine blog gönderisine bakın.
 </ExpandableCard>
 
 ## Birleşim ve enerji tüketimi {#merge-and-energy}
@@ -188,7 +188,7 @@ Karışıklığı önlemek için topluluk şu şartları güncelledi:
 
 Bu terminoloji güncellemeleri yalnızca adlandırma alışkanlıklarını değiştirir; bu, Ethereum'un hedeflerini veya yol haritasını değiştirmez.
 
-['Eth2' yeniden adlandırması hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+['Eth2' yeniden adlandırması hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Yükseltmeler arasındaki ilişki {#relationship-between-upgrades}
 

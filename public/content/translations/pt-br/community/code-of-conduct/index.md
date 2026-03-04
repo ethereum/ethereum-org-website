@@ -1,10 +1,10 @@
 ---
-title: Código de Conduta
-description: As normas básicas que buscamos nos espaços do ethereum.org.
+title: "Código de Conduta"
+description: "As normas básicas que buscamos nos espaços do ethereum.org."
 lang: pt-br
 ---
 
-# Código de Conduta {#conduct-intro}
+# Código de conduta {#code-of-conduct}
 
 ## Missão {#mission}
 
@@ -23,13 +23,13 @@ A comunidade ethereum.org trabalha para ser:
 
 ## O que não somos {#what-we-are-not}
 
-- O site Ethereum Foundation
+- O site da Ethereum Foundation
 - Uma plataforma para promover investimentos ou gerar lucros de qualquer tipo
 - Uma plataforma para elevar ou endossar projetos ou organizações individuais
 - Uma DEX, CEX, ou qualquer outra forma de plataforma financeira
 - Uma plataforma que oferece recomendações financeiras ou jurídicas de qualquer tipo
 
-## Código de Conduta {#code-of-conduct}
+## Código de conduta {#code-of-conduct}
 
 ### Compromisso {#pledge}
 
@@ -37,9 +37,9 @@ A participação aberta é fundamental para o ethos do ethereum.org. Somos um si
 
 ### Escopo {#scope}
 
-Este Código de Conduta se aplica a todos os espaços do ethereum.org (como GitHub, Discord, Figma Crowdin, Twitter e outras plataformas online) e também se aplica quando a comunidade é representada em espaços públicos reais, como em encontros, conferências e eventos.
+Este Código de Conduta se aplica a todos os espaços do ethereum.org (como GitHub, Discord, Figma, Crowdin, X (antigo Twitter) e outras plataformas on-line), e também se aplica quando a comunidade é representada em espaços públicos do mundo real, como em encontros, conferências e eventos.
 
-### As nossas normas {#our-standards}
+### Nossos padrões {#our-standards}
 
 Exemplos de comportamentos que colaboram para criar um ambiente positivo incluem:
 
@@ -48,7 +48,7 @@ Exemplos de comportamentos que colaboram para criar um ambiente positivo incluem
 - Aceitar e/ou oferecer educadamente críticas construtivas, com empatia
 - Agir com calma e profissionalismo ao resolver conflitos ou desentendimentos
 - Demonstrar empatia e tolerância a outros membros da comunidade
-- Incentivar e ampliar novas opiniões na comunidade
+- Incentivar e ampliar novas vozes na comunidade
 
 Exemplos de comportamento inaceitável por parte dos participantes incluem:
 

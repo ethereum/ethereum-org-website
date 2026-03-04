@@ -275,4 +275,4 @@ Matematický zápis je přesný a umožnil Yellow Paperu specifikovat každý de
 - Programátoři rozumí počítačovému kódu.
   Matematickému zápisu rozumět mohou, ale nemusí.
 
-Možná z těchto důvodů jsou novější [specifikace konsensuální vrstvy](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md) napsány v Pythonu. Existují [specifikace exekuční vrstvy v Pythonu](https://ethereum.github.io/execution-specs), ale nejsou úplné. Dokud nebude celý Yellow Paper přeložen do Pythonu nebo podobného jazyka, bude Yellow Paper nadále sloužit a je užitečné umět ho číst.
+Možná z těchto důvodů jsou novější [specifikace konsensuální vrstvy](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) napsány v Pythonu. Existují [specifikace exekuční vrstvy v Pythonu](https://ethereum.github.io/execution-specs), ale nejsou úplné. Dokud nebude celý Yellow Paper přeložen do Pythonu nebo podobného jazyka, bude Yellow Paper nadále sloužit a je užitečné umět ho číst.
