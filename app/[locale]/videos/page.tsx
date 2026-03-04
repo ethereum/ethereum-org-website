@@ -9,10 +9,16 @@ import {
 import Breadcrumbs from "@/components/Breadcrumbs"
 import SimpleHero from "@/components/Hero/SimpleHero"
 import I18nProvider from "@/components/I18nProvider"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import VideoCard from "@/components/Videos/VideoCard"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 
-import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getVideos } from "@/lib/utils/videos"
@@ -34,7 +40,7 @@ const VideoGalleryPage = async ({ params }: { params: { locale: string } }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <MainArticle className="px-8 py-4">
+      <MainArticle className="space-y-12">
         {/* Hero Section */}
         <SimpleHero
           breadcrumbs={<Breadcrumbs slug="videos" />}
@@ -43,14 +49,36 @@ const VideoGalleryPage = async ({ params }: { params: { locale: string } }) => {
         />
 
         {/* Video Grid */}
-        <div
-          className={cn(
-            "mt-12 grid gap-8",
-            "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-          )}
-        >
+        <div className="grid grid-cols-fill-3 gap-12">
           {videos.map((video) => (
-            <VideoCard key={video.slug} video={video} />
+            <Card key={video.slug} href={`/videos/${video.slug}/`}>
+              <CardBanner className="aspect-video h-auto">
+                <Image
+                  src={
+                    video.thumbnailUrl ||
+                    `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`
+                  }
+                  alt={video.title}
+                  width={480}
+                  height={270}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  loading="lazy"
+                />
+              </CardBanner>
+              <CardContent>
+                <CardTitle className="text-lg">{video.title}</CardTitle>
+                <CardParagraph
+                  variant="light"
+                  size="sm"
+                  className="line-clamp-2"
+                >
+                  {video.description}
+                </CardParagraph>
+                <CardParagraph variant="light" size="sm">
+                  {video.duration}
+                </CardParagraph>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </MainArticle>
