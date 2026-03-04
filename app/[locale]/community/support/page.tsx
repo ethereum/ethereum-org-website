@@ -41,7 +41,11 @@ export default async function Page({ params }: { params: PageParams }) {
             <p className="text-lg">
               {t("page-community-support-hero-subtitle-1")}
             </p>
-            <p>{t("page-community-support-hero-subtitle-2")}</p>
+            <p>
+              {t.rich("page-community-support-hero-subtitle-2", {
+                a: (chunks) => <Link href="/">{chunks}</Link>,
+              })}
+            </p>
           </div>
         }
       />
