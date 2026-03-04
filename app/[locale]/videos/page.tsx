@@ -18,6 +18,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Section } from "@/components/ui/section"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -49,7 +50,11 @@ const VideoGalleryPage = async ({ params }: { params: { locale: string } }) => {
         />
 
         {/* Video Grid */}
-        <div className="grid grid-cols-fill-3 gap-12">
+        <Section
+          id="videos"
+          className="grid grid-cols-fill-3 gap-8 px-4 md:gap-12 md:px-8"
+        >
+          <h2 className="sr-only">{t("page-videos-videos-section-header")}</h2>
           {videos.map((video) => (
             <Card key={video.slug} href={`/videos/${video.slug}/`}>
               <CardBanner className="aspect-video h-auto">
@@ -80,7 +85,7 @@ const VideoGalleryPage = async ({ params }: { params: { locale: string } }) => {
               </CardContent>
             </Card>
           ))}
-        </div>
+        </Section>
       </MainArticle>
     </I18nProvider>
   )
