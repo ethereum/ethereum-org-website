@@ -10,7 +10,7 @@ Als Ethereum noch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) ve
 
 Das folgende Diagramm zeigt die Verbindung zwischen zwei Ethereum-Clients. Die beiden Clients verbinden sich mit ihren eigenen Peer-to-Peer(P2P)-Netzwerken. Es werden separate P2P-Netzwerke benötigt, da der Ausführungsclient Transaktionen über ihr P2P Netzwerk kommuniziert, wodurch sie ihren lokalen Transaktionspool verwalten können. Konsensclients können dabei Blöcke über ihr eigenes P2P-Netzwerk kommunizieren, was Konsens und Wachstum der Blockchain ermöglicht.
 
-![](node-architecture-text-background.png)
+![Diagramm der Ethereum-Knotenarchitektur mit Darstellung der Ausführungs- und Konsensebenen](node-architecture-text-background.png)
 
 _Für den Execution Client stehen verschiedene Optionen zur Wahl, einschließlich Erigon, Nethermind und Besu_.
 

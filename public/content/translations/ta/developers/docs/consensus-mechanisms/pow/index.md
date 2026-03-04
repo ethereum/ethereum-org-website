@@ -101,7 +101,7 @@ lang: ta
 ## மேலும் வாசிக்க {#further-reading}
 
 - [பெரும்பான்மைத் தாக்குதல்](https://en.bitcoin.it/wiki/Majority_attack)
-- [தீர்வு இறுதிநிலை பற்றி](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [தீர்வு இறுதிநிலை பற்றி](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### காணொளிகள் {#videos}
 

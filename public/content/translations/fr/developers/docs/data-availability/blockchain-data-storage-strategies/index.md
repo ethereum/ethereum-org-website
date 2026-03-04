@@ -1,6 +1,6 @@
 ---
-title: Stratégies de stockage des données de la Blockchain
-description: Il existe plusieurs façons de stocker des données en utilisant la blockchain. Cet article comparera les différentes stratégies, leurs coûts et avantages, ainsi que les conditions requises pour les utiliser en toute sécurité.
+title: "Stratégies de stockage des données de la Blockchain"
+description: "Il existe plusieurs façons de stocker des données en utilisant la blockchain. Cet article comparera les différentes stratégies, leurs coûts et avantages, ainsi que les conditions requises pour les utiliser en toute sécurité."
 lang: fr
 ---
 
@@ -10,13 +10,13 @@ Il existe de multiples façons de stocker des informations, soit directement sur
 - Données d'appel
 - Hors chaîne avec des mécanismes de couche de niveau 1
 - "Code" de contrat
-- Évènements
+- Événements
 - Stockage EVM
 
 Le choix de la méthode à utiliser repose sur plusieurs critères :
 
 - La source de l'information. Les informations dans calldata ne peuvent pas provenir directement de la blockchain elle-même.
-- La destination de l'information. Le calldata n'est disponible que dans la transaction qu'il initie. Les événements ne sont pas accessibles sur la chaine.
+- La destination de l'information. Le calldata n'est disponible que dans la transaction qui l'inclut. Les événements ne sont pas accessibles sur la chaine.
 - Quel niveau de complexité est acceptable ? Les ordinateurs qui exécutent un nœud complet peuvent effectuer plus de traitement qu'un client léger dans une application fonctionnant dans un navigateur.
 - Est-il nécessaire de faciliter l'accès aux informations depuis chaque nœud ?
 - Les exigences en matière de sécurité.
@@ -27,9 +27,9 @@ En général, la sécurité de l'information se compose de trois attributs :
 
 - _Confidentialité_, les entités non autorisées n'ont pas le droit de lire les informations. Cela est important dans de nombreux cas, mais pas ici. _Il n'y a pas de secret sur la blockchain_. Les blockchains fonctionnent parce que n'importe qui peut vérifier les transitions d'état, de sorte qu'il est impossible de les utiliser pour stocker directement des secrets. Il existe des moyens de stocker des informations confidentielles sur la blockchain, mais ils reposent tous sur un composant hors blockchain pour stocker au moins une clé.
 
-- _Intégrité_, les informations sont correctes, elles ne peuvent pas être modifiées par des entités non autorisées, ou de manière non autorisée (par exemple, en transférant des [jetons ERC-20] (https://eips.ethereum.org/EIPS/eip-20#events) sans un événement `Transfer`). Sur la blockchain, chaque nœud vérifie chaque changement d'état, ce qui garantit l'intégrité.
+- _Intégrité_, les informations sont correctes, elles ne peuvent pas être modifiées par des entités non autorisées, ou de manière non autorisée (par exemple, en transférant des [jetons ERC-20](https://eips.ethereum.org/EIPS/eip-20#events) sans un événement `Transfer`). Sur la blockchain, chaque nœud vérifie chaque changement d'état, ce qui garantit l'intégrité.
 
-- _Disponibilité_, l'information est accessible à toute entité autorisée. Sur la blockchain, cela est généralement réalisé en rendant l'information disponible sur chaque [nœud complet](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
+- _Disponibilité_, l'information est accessible à toute entité autorisée. Sur la blockchain, cela est généralement réalisé en rendant l'information disponible sur chaque [nœud complet](https://ethereum.org/developers/docs/nodes-and-clients/#full-node).
 
 Les différentes solutions présentées ici offrent toutes une excellente intégrité, car les hachages sont publiés sur la couche de niveau 1. Cependant, elles ont des garanties de disponibilité différentes.
 
@@ -39,7 +39,7 @@ Vous devez avoir une bonne compréhension des [fondamentaux de la blockchain](/d
 
 ## Blobs EIP-4844 {#eip-4844-blobs}
 
-Depuis la [hardfork Dencun](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md), la blockchain Ethereum inclut [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), qui ajoute à Ethereum des blobs de données dotés d'une durée de vie limitée (initialement d'environ [18 jours](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). Ces blobs sont tarifés séparément du gaz d'[exécution](/developers/docs/gas), bien qu'utilisant un mécanisme similaire. Ils constituent un moyen économique de publier des données temporaires.
+Depuis la [hardfork Dencun](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md), la blockchain Ethereum inclut [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), qui ajoute à Ethereum des blobs de données dotés d'une durée de vie limitée (initialement d'environ [18 jours](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration)). Ces blobs sont tarifés séparément du gaz d'[exécution](/developers/docs/gas), bien qu'utilisant un mécanisme similaire. Ils constituent un moyen économique de publier des données temporaires.
 
 L'utilisation principale des blobs EIP-4844 est la publication par les rollups de leurs transactions. [Les rollups](/developers/docs/scaling/optimistic-rollups) optimistes doivent publier les transactions sur leurs blockchains. Ces transactions doivent être accessibles à tout le monde pendant la [période de contestation](https://docs.optimism.io/connect/resources/glossary#challenge-period), afin de permettre aux [validateurs](https://docs.optimism.io/connect/resources/glossary#validator) de corriger l'erreur si le [séquenceur](https://docs.optimism.io/connect/resources/glossary#sequencer) du rollup publie une racine d'état incorrecte.
 
@@ -110,9 +110,9 @@ Ce tableau résume les différentes options, leurs avantages et inconvénients.
 
 | Type de stockage                                      | Source des données        | Garantie de disponibilité                                                                                                                               | Disponibilité sur la chaîne                                                  | Limitations supplémentaires                                                            |
 | ----------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Blobs EIP-4844                                        | Hors chaîne               | Garantie sur Ethereum pour [~18 jours](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | Seul le hachage est disponible                                               |                                                                                        |
+| Blobs EIP-4844                                        | Hors chaîne               | Garantie sur Ethereum pour [~18 jours](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Seul le hachage est disponible                                               |                                                                                        |
 | Données d'appel                                       | Hors chaîne               | Garantie perpétuelle sur Ethereum (fait partie de la blockchain)                                                                     | Disponible uniquement si écrit dans un contrat, et lors de cette transaction |                                                                                        |
 | Hors chaîne avec des mécanismes de couche de niveau 1 | Hors chaîne               | Garantie d'un "vérificateur honnête" pendant la période de contestation                                                                                 | Hachage uniquement                                                           | Garanti par le mécanisme de contestation, seulement pendant la période de contestation |
 | Code contrat                                          | Sur chaîne ou hors chaîne | Garantie perpétuelle sur Ethereum (fait partie de la blockchain)                                                                     | Oui                                                                          | Écrit à une adresse "aléatoire", ne peut pas commencer par `0xEF`                      |
-| Évènements                                            | Sur la chaîne             | Garantie perpétuelle sur Ethereum (fait partie de la blockchain)                                                                     | Non                                                                          |                                                                                        |
+| Événements                                            | Sur la chaîne             | Garantie perpétuelle sur Ethereum (fait partie de la blockchain)                                                                     | Non                                                                          |                                                                                        |
 | Stockage                                              | Sur la chaîne             | Garantie perpétuelle sur Ethereum (fait partie de la blockchain et de l'état actuel jusqu'à écrasement)                              | Oui                                                                          |                                                                                        |

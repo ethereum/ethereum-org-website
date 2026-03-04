@@ -10,7 +10,7 @@ Kiedy Ethereum korzystało z [proof-of-work](/developers/docs/consensus-mechanis
 
 Poniższy diagram pokazuje relację między tymi dwoma klientami Ethereum. Oba klienty łączą się z własną siecią peer-to-peer (P2P). Oddzielnie sieci P2P są potrzebne, ponieważ klienty wykonawcze plotkują transakcje po swojej sieci P2P co pozwala im na zarządzanie lokalną pulą transakcji, podczas gdy klienty konsensusu plotkują bloki po swojej sieci P2P co z kolei pozwala konsensus i rozrost łańcucha.
 
-![](node-architecture-text-background.png)
+![Schemat architektury węzła Ethereum przedstawiający warstwy wykonania i konsensusu](node-architecture-text-background.png)
 
 _Istnieje kilka opcji dla klienta wykonawczego, w tym Erigon, Nethermind i Besu_.
 

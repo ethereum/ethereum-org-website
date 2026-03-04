@@ -117,35 +117,35 @@ sudo systemctl start grafana-server
 Wenn Grafana läuft, sollte es unter `localhost:3000` erreichbar sein.
 Verwenden Sie Ihren bevorzugten Browser, um auf diesen Pfad zuzugreifen, und melden Sie sich dann mit den Standard-Anmeldeinformationen an (Benutzer: `admin` und Passwort: `admin`). Wenn Sie dazu aufgefordert werden, ändern Sie das Standardpasswort und speichern Sie es.
 
-![](./grafana1.png)
+![Screenshot des Grafana-Dashboards für die Geth-Überwachung (Panel 1)](./grafana1.png)
 
 Sie werden zur Grafana-Startseite weitergeleitet. Richten Sie zunächst Ihre Quelldaten ein. Klicken Sie auf das Konfigurationssymbol in der linken Leiste und wählen Sie "Datenquellen" aus.
 
-![](./grafana2.png)
+![Screenshot des Grafana-Dashboards für die Geth-Überwachung (Panel 2)](./grafana2.png)
 
 Es sind noch keine Datenquellen erstellt worden. Klicken Sie auf "Datenquelle hinzufügen", um eine zu definieren.
 
-![](./grafana3.png)
+![Screenshot des Grafana-Dashboards für die Geth-Überwachung (Panel 3)](./grafana3.png)
 
 Wählen Sie für dieses Setup "InfluxDB" aus und fahren Sie fort.
 
-![](./grafana4.png)
+![Screenshot des Grafana-Dashboards für die Geth-Überwachung (Panel 4)](./grafana4.png)
 
 Die Konfiguration der Datenquelle ist ziemlich einfach, wenn Sie die Tools auf demselben Rechner ausführen. Sie müssen die InfluxDB-Adresse und die Details für den Zugriff auf die Datenbank festlegen. Beachten Sie die Abbildung unten.
 
-![](./grafana5.png)
+![Screenshot des Grafana-Dashboards für die Geth-Überwachung (Panel 5)](./grafana5.png)
 
 Wenn alles vollständig ist und InfluxDB erreichbar ist, klicken Sie auf "Speichern und testen" und warten Sie, bis die Bestätigung erscheint.
 
-![](./grafana6.png)
+![Screenshot des Grafana-Dashboards für die Geth-Überwachung (Panel 6)](./grafana6.png)
 
 Grafana ist jetzt so eingerichtet, dass es Daten aus InfluxDB lesen kann. Jetzt müssen Sie ein Dashboard erstellen, das sie interpretiert und anzeigt. Dashboard-Eigenschaften sind in JSON-Dateien kodiert, die von jedermann erstellt und einfach importiert werden können. Klicken Sie in der linken Leiste auf "Erstellen und Importieren".
 
-![](./grafana7.png)
+![Screenshot des Grafana-Dashboards für die Geth-Überwachung (Panel 7)](./grafana7.png)
 
 Für ein Geth-Überwachungs-Dashboard kopieren Sie die ID von [diesem Dashboard](https://grafana.com/grafana/dashboards/13877/) und fügen Sie sie auf der "Importseite" in Grafana ein. Nach dem Speichern des Dashboards sollte es so aussehen:
 
-![](./grafana8.png)
+![Screenshot des Grafana-Dashboards für die Geth-Überwachung (Panel 8)](./grafana8.png)
 
 Sie können Ihre Dashboards ändern. Jedes Panel kann bearbeitet, verschoben, entfernt oder hinzugefügt werden. Sie können Ihre Konfigurationen ändern. Es liegt ganz bei Ihnen! Um mehr darüber zu erfahren, wie Dashboards funktionieren, lesen Sie die [Dokumentation von Grafana](https://grafana.com/docs/grafana/latest/dashboards/).
 Sie könnten auch an [Alerting](https://grafana.com/docs/grafana/latest/alerting/) interessiert sein. Damit können Sie Warnmeldungen für den Fall einrichten, dass Metriken bestimmte Werte erreichen. Verschiedene Kommunikationskanäle werden unterstützt.

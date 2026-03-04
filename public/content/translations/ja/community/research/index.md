@@ -1,6 +1,6 @@
 ---
-title: イーサリアムのアクティブな研究分野
-description: さまざまなオープンリサーチの分野を探求し、参加方法を学ぶ。
+title: "イーサリアムのアクティブな研究分野"
+description: "さまざまなオープンリサーチの分野を探求し、参加方法を学ぶ。"
 lang: ja
 ---
 
@@ -18,7 +18,7 @@ lang: ja
 
 2022年5月に[DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) が発行したこのレポートは、イーサリアムのロードマップの良い概要を提供しています。
 
-## 資金提供の源{#sources-of-funding}
+## 資金提供の源 {#sources-of-funding}
 
 イーサリアムの研究に参加して報酬を得ることができます！ たとえば、[イーサリアム・ファウンデーション](/foundation/) は最近、[学術助成金の資金調達ラウンド](https://esp.ethereum.foundation/academic-grants) を実施しました。 現在の資金提供機会や今後の機会については、[イーサリアムの助成金ページ](/community/grants/) で情報を見つけることができます。
 
@@ -57,7 +57,7 @@ lang: ja
 
 - ライトクライアントサポートの構築
 - ガスリミットの研究
-- 新しいデータ構造の組み込み (例：バークルツリー)
+- 新しいデータ構造の組み込み(例：Verkleトライ)。
 
 #### バックグラウンドリーディング {#background-reading-1}
 
@@ -83,7 +83,7 @@ lang: ja
 1. コンセンサスクライアント：ブロックチェーンのヘッドを追跡し、ブロックを伝播し、コンセンサスロジックを処理します。
 2. 実行クライアント：イーサリアム仮想マシンをサポートし、トランザクションやスマートコントラクトを実行します。
 
-ノードやクライアントの詳細については、[ノードとクライアントのページ](/developers/docs/nodes-and-clients/) で確認でき、すべての現行クライアント実装のリストもご覧いただけます。 また、イーサリアムの全てのアップグレード履歴は[履歴ページ](/ethereum-forks/) で確認可能です。
+ノードとクライアント、および現在のすべてのクライアント実装のリストについて詳しくは、[ノードとクライアントページ](/developers/docs/nodes-and-clients/)をご覧ください。 また、イーサリアムの全てのアップグレード履歴は[履歴ページ](/ethereum-forks/) で確認可能です。
 
 ### 実行クライアント {#execution-clients}
 
@@ -111,7 +111,7 @@ lang: ja
 #### 最近の研究 {#recent-research-2}
 
 - [シーケンサーに対するArbitrumのフェアオーダリング](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch レイヤー2](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.chレイヤー2](https://ethresear.ch/c/layer-2/32)
 - [ロールアップ中心のロードマップ](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ lang: ja
 
 - [ウォレットの概要](/wallets/)
 - [ウォレットセキュリティの概要](/security/)
-- [ethresear.ch セキュリティ](https://ethresear.ch/tag/security)
+- [Ethresear.chセキュリティ](https://ethresear.ch/tag/security)
 - [EIP-2938 アカウント抽象化](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 アカウント抽象化](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -358,7 +358,7 @@ lang: ja
 
 ### オラクル {#oracles}
 
-オラクルは、パーミッションレスで分散化された方法でオフチェーンデータをブロックチェーンにインポートします。 このデータをオンチェーンに取り込むことで、dappsは現実世界の資産価格の変動、オフチェーンアプリのイベント、さらには天候の変化などの現実世界の現象に反応できるようになります。
+オラクルは、オフチェーンデータをパーミッションレスかつ分散型の方法でブロックチェーンにインポートします。 このデータをオンチェーンに取得することで、dAppsが現実世界の資産の価格変動、オフチェーンアプリのイベント、さらには天候の変化など、現実世界の現象に反応できるようになります。
 
 #### バックグラウンドリーディング {#background-reading-18}
 
@@ -377,11 +377,11 @@ lang: ja
 
 - [Wormholeの脆弱性報告書](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [イーサリアムコントラクトのハッキング事後分析リスト](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### 最近の研究 {#recent-research-19}
 
-- [ethresear.chのアプリケーション](https://ethresear.ch/c/applications/18)
+- [Ethresear.chアプリケーション](https://ethresear.ch/c/applications/18)
 
 ### テクノロジースタック {#technology-stack}
 

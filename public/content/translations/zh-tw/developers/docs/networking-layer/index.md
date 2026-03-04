@@ -97,7 +97,7 @@ Whisper 是一個旨在實現安全的點對點資訊傳輸，而不需要向區
 
 ### 探索 {#consensus-discovery}
 
-與執行用戶端類似，共識用戶端也透過 UDP 使用 [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) 來尋找對等點。 discv5 的共識層實作與執行用戶端的實作不同之處僅在於：它包含一個將 discv5 連接到 [libP2P](https://libp2p.io/) 堆疊的適配器，並棄用了 DevP2P。 執行層的 RLPx 工作階段被棄用，代之以 libP2P 的噪音安全通道握手。
+與執行用戶端類似，共識用戶端也透過 UDP 使用 [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) 來尋找對等點。 discv5 的共識層實作與執行用戶端的實作不同之處僅在於：它包含一個將 discv5 連接到 [libP2P](https://libp2p.io/) 堆疊的適配器，並棄用了 DevP2P。 執行層的 RLPx 工作階段被棄用，代之以 libP2P 的噪音安全通道握手。
 
 ### ENR {#consensus-enr}
 
@@ -109,7 +109,7 @@ libP2P 堆疊支持發現之後的所有通訊。 用戶端可以根據其以太
 
 ### 傳播 {#gossip}
 
-廣播域包括必須在整個網路中快速傳播的所有資訊。 這包括信標區區塊、證據、證明、退出和罰沒。 這是使用 libP2P gossipsub v1 傳輸的，並且依賴於在每個節點本機儲存的各種中繼資料，包括接收和傳輸的廣播承載的上限。 關於傳播網域的詳細資訊，請參閱[此處](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub)。
+廣播域包括必須在整個網路中快速傳播的所有資訊。 這包括信標區區塊、證據、證明、退出和罰沒。 這是使用 libP2P gossipsub v1 傳輸的，並且依賴於在每個節點本機儲存的各種中繼資料，包括接收和傳輸的廣播承載的上限。 關於傳播網域的詳細資訊，請參閱[此處](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub)。
 
 ### 請求-回應 {#request-response}
 
@@ -146,8 +146,8 @@ SSZ 代表簡單序列化。 它使用固定位移，能夠簡單地解碼編碼
 
 一旦區塊被足夠多的驗證者證明后，就會被新增到鏈頭，經過合理化並最終確定。
 
-![](cons_client_net_layer.png)
-![](exe_client_net_layer.png)
+![以太坊共識客戶端網路層圖](cons_client_net_layer.png)
+![以太坊執行客戶端網路層圖](exe_client_net_layer.png)
 
 共識和執行用戶端的網路層示意圖，來源：[ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
@@ -155,7 +155,7 @@ SSZ 代表簡單序列化。 它使用固定位移，能夠簡單地解碼編碼
 
 [DevP2P](https://github.com/ethereum/devp2p)
 [LibP2p](https://github.com/libp2p/specs)
-[共識層網路規格](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)
+[共識層網路規格](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure)
 [kademlia 到 discv5](https://vac.dev/kademlia-to-discv5)
 [kademlia 論文](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [以太坊點對點網路介紹](https://p2p.paris/en/talks/intro-ethereum-networking/)

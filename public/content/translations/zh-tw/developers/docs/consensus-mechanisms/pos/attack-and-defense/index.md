@@ -92,7 +92,7 @@ lang: zh-tw
 
 #### 長程攻擊 {#long-range-attacks}
 
-還有種針對權益證明區塊鏈的攻擊，涉及了參與創世區塊的驗證者，他們與誠實的驗證者一起維護區塊鏈的單獨分叉，並在很久以後的某個適當時機，最終說服誠實的驗證者集合切換到該分叉。 此類型的攻擊在以太坊上不可能發生，因為最終確定性組件會在固定時間間隔（「檢查點」）確認所有驗證者都同意誠實鏈的狀態。 這個簡單的機制抵禦了遠程攻擊者，因為以太坊用戶端不會重組已最終確定的區塊。 加入網路的心節點會尋找一個可信的最近狀態哈希 (一個「[弱主觀性](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)檢查點」)，並將其作爲一個僞創世區塊以在此之上構建區塊。 這會在剛加入網路的新節點開始驗證自身資訊前，為它們建立「信任閘道」。
+還有種針對權益證明區塊鏈的攻擊，涉及了參與創世區塊的驗證者，他們與誠實的驗證者一起維護區塊鏈的單獨分叉，並在很久以後的某個適當時機，最終說服誠實的驗證者集合切換到該分叉。 此類型的攻擊在以太坊上不可能發生，因為最終確定性組件會在固定時間間隔（「檢查點」）確認所有驗證者都同意誠實鏈的狀態。 這個簡單的機制抵禦了遠程攻擊者，因為以太坊用戶端不會重組已最終確定的區塊。 加入網路的心節點會尋找一個可信的最近狀態哈希 (一個「[弱主觀性](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)檢查點」)，並將其作爲一個僞創世區塊以在此之上構建區塊。 這會在剛加入網路的新節點開始驗證自身資訊前，為它們建立「信任閘道」。
 
 #### 拒絕服務 {#denial-of-service}
 
@@ -158,7 +158,7 @@ lang: zh-tw
 ## 延伸閱讀 {#further-reading}
 
 - [本頁面的完整版](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik 談結算最終確定性](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik 談結算最終確定性](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [LMD GHOST 論文](https://arxiv.org/abs/2003.03052)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
 - [Gasper 論文](https://arxiv.org/pdf/2003.03052.pdf)
