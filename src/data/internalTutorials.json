@@ -1,5 +1,6 @@
 [
   "a-developers-guide-to-ethereum-part-one",
+  "ai-trading-agent",
   "all-you-can-cache",
   "app-plasma",
   "calling-a-smart-contract-from-javascript",
@@ -12,6 +13,7 @@
   "erc20-annotated-code",
   "erc20-with-safety-rails",
   "ethereum-for-web2-auth",
+  "gasless",
   "getting-started-with-ethereum-development-using-alchemy",
   "guide-to-smart-contract-security-tools",
   "hello-world-smart-contract",

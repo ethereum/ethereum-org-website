@@ -275,6 +275,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
               <div>
                 <Link
                   href="https://docs.scaffoldeth.io/llms-full.txt"
+                  className="block"
                   customEventOptions={{
                     eventCategory: "mid_boxes",
                     eventAction: "click",
@@ -282,6 +283,17 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                   }}
                 >
                   Scaffold-ETH 2 <code>llms-full.txt</code>
+                </Link>
+                <Link
+                  href="https://ethskills.com/"
+                  className="block"
+                  customEventOptions={{
+                    eventCategory: "mid_boxes",
+                    eventAction: "click",
+                    eventName: "ethskills",
+                  }}
+                >
+                  ethskills.com - {t("page-developers-ethskills-label")}
                 </Link>
               </div>
             </Card>

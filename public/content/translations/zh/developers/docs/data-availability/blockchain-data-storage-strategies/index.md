@@ -1,6 +1,6 @@
 ---
-title: 区块链数据存储策略
-description: 有几种使用区块链储存数据的方式。 本文将比较不同的策略、它们的费用和权衡，以及安全使用策略的要求。
+title: "区块链数据存储策略"
+description: "有几种使用区块链储存数据的方式。 本文将比较不同的策略、它们的费用和权衡，以及安全使用策略的要求。"
 lang: zh
 ---
 
@@ -10,13 +10,13 @@ lang: zh
 - 调用数据
 - 具有一层网络机制的链下
 - 合约“代码”
-- 事件
+- 活动
 - 以太坊虚拟机存储
 
 使用方法的选择基于几个标准：
 
 - 信息来源。 调用数据中的信息不能直接来自区块链本身。
-- 信息目的地。 Calldata 仅在其发起的交易中可用。 链上完全无法访问事件。
+- 信息目的地。 Calldata 仅在包含它的交易中可用。 链上完全无法访问事件。
 - 能够接受多少麻烦？ 相比在浏览器内运行的应用程序中的轻客户端，运行全节点的计算机能够执行更多处理。
 - 是否有必要使来自每个节点的信息易于访问？
 - 安全要求。
@@ -29,7 +29,7 @@ lang: zh
 
 - _完整性_，使信息保持正确，并且无法被未授权的实体或以未授权的方式改变（例如，在缺少 'Transfer' 事件的情况下转移 [ERC-20 代币](https://eips.ethereum.org/EIPS/eip-20#events)）。 在区块链上，每个节点都会验证每个状态更改，从而确保了完整性。
 
-- _可用性_，使信息可供任何已获授权的实体使用。 在区块链上，这常常通过使信息对每个[全节点](https://ethereum.org/developers/docs/nodes-and-clients#full-node)可用来实现。
+- _可用性_，使信息可供任何已获授权的实体使用。 在区块链上，这常常通过使信息对每个[全节点](https://ethereum.org/developers/docs/nodes-and-clients/#full-node)可用来实现。
 
 这里的不同解决方案全都具有出色的完整性，因为哈希被发布在一层网络上。 但是，它们的可用性保证确实有所不同。
 
@@ -39,7 +39,7 @@ lang: zh
 
 ## EIP-4844 二进制大对象 {#eip-4844-blobs}
 
-从 [Dencun 硬分叉](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md)开始，以太坊区块链包含了 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，这为以太坊数据二进制大对象增加了有限的生命期（最初约为 [18 天](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)）。 这些二进制大对象与[执行燃料](/developers/docs/gas)分开定价，尽管它们使用类似的机制。 它们是一种发布临时数据的低成本方式。
+从 [Dencun 硬分叉](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md)开始，以太坊区块链包含了 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，这为以太坊数据二进制大对象增加了有限的生命期（最初约为 [18 天](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration)）。 这些二进制大对象与[执行燃料](/developers/docs/gas)分开定价，尽管它们使用类似的机制。 它们是一种发布临时数据的低成本方式。
 
 EIP-4844 二进制大对象的主要使用案例是供卷叠发布其交易。 [乐观卷叠](/developers/docs/scaling/optimistic-rollups)需要在其区块链上发布交易。 那些交易必须在[质询期](https://docs.optimism.io/connect/resources/glossary#challenge-period)内对所有人可用，以便在卷叠[排序者](https://docs.optimism.io/connect/resources/glossary#sequencer)发布错误的状态根时，[验证者](https://docs.optimism.io/connect/resources/glossary#validator)能够修复错误。
 
@@ -63,7 +63,7 @@ EIP-4844 二进制大对象的主要使用案例是供卷叠发布其交易。 [
 
 这是将数据永久放在区块链上最便宜的方法。 每个字节的费用为 4 执行燃料（如果字节为 0） 或 16 执行燃料（如果字节为任意其他值）。 如果数据经过压缩（这是标准做法），则每个字节的值几乎相等，所以每个字节的平均费用约为 15.95 燃料。
 
-撰写本文时的价格为 12 Gwei/燃料（2300 美元/以太币），这意味着每个字节的费用约为 45 美分。 由于这是 EIP-4844 之前最便宜的方法，卷叠使用此方法来储存交易信息，这些交易信息必须在[缺陷质询期](https://docs.optimism.io/stack/protocol/overview#fault-proofs)内可用，但无需直接在链上访问。
+撰写本文时的价格为 12 Gwei/燃料（2300 美元/以太币），这意味着每千字节的费用约为 45 美分。 由于这是 EIP-4844 之前最便宜的方法，卷叠使用此方法来储存交易信息，这些交易信息必须在[缺陷质询期](https://docs.optimism.io/stack/protocol/overview#fault-proofs)内可用，但无需直接在链上访问。
 
 在以下地址可以查看一些知名卷叠发布的交易。
 
@@ -110,9 +110,9 @@ EIP-4844 二进制大对象的主要使用案例是供卷叠发布其交易。 [
 
 | 存储类型            | 数据来源  | 可用性保证                                                                                                          | 链上可用性          | 其他限制                     |
 | --------------- | ----- | -------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------ |
-| EIP-4844 二进制大对象 | 链下    | 由以太坊保证 [18 天](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | 仅哈希可用          |                          |
+| EIP-4844 二进制大对象 | 链下    | 由以太坊保证 [18 天](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | 仅哈希可用          |                          |
 | 调用数据            | 链下    | 由以太坊永久保证（区块链的一部分）                                                                                              | 只有被写入合约时于该交易可用 |                          |
 | 具有一层网络机制的链下     | 链下    | 在质询期内由“一名诚实的验证者”保证                                                                                             | 仅哈希可用          | 仅在质询期内由质询机制提供保证          |
 | 合约代码            | 链上或链下 | 由以太坊永久保证（区块链的一部分）                                                                                              | 是              | 写入到一个不以 `0xEF` 开头的“随机”地址 |
-| 事件              | 链上    | 由以太坊永久保证（区块链的一部分）                                                                                              | 否              |                          |
+| 活动              | 链上    | 由以太坊永久保证（区块链的一部分）                                                                                              | 否              |                          |
 | 存储              | 链上    | 由以太坊永久保证（区块链的一部分，并保持当前状态直至被覆盖）                                                                                 | 是              |                          |

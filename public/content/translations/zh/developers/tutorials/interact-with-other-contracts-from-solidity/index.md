@@ -1,14 +1,8 @@
 ---
-title: 通过solidity与其他合约进行交互
-description: 如何对已经存在的合约进行智能合约的部署，并与其进行交互
+title: "通过 Solidity 与其他合约交互"
+description: "如何从现有合约部署智能合约并与之交互"
 author: "jdourlens"
-tags:
-  - "智能合约"
-  - "solidity"
-  - "remix"
-  - "工厂"
-  - "部署"
-  - "可组合性"
+tags: [ "智能合同", "Solidity", "remix", "部署", "可组合性" ]
 skill: advanced
 lang: zh
 published: 2020-04-05
@@ -17,9 +11,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-在之前的教程中，我们学习到了关于 [如何部署您的第一个智能合约](/developers/tutorials/deploying-your-first-smart-contract/)的内容。在此基础上，还进一步学习了一些特性，比如[使用修饰符控制访问权限](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/)、[Solidity 中的错误处理等](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/)。 在本教程中，我们将学习如何基于一个已有的合约进行智能合约的部署，并与其交互。
+在之前的教程中，我们学习了很多知识，例如[如何部署你的第一个智能合约](/developers/tutorials/deploying-your-first-smart-contract/)，以及如何为它添加一些功能，例如[使用修饰符控制访问](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/)或 [Solidity 中的错误处理](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/)。 在本教程中，我们将学习如何从现有合约部署智能合约并与之交互。
 
-我们将会通过创建工厂的方式编写一个允许任何人拥有自己的`Counter`智能合约的合约，这个合约的名称将为`CounterFactory`。 首先，我们给大家展示一下初始`Counter`智能合约的代码。
+我们将创建一个合约，为 `Counter` 智能合约创建一个工厂，使其支持任何人拥有自己的 `Counter` 智能合约，该工厂的名称为 `CounterFactory`。 首先，这是我们初始 `Counter` 智能合约的代码：
 
 ```solidity
 pragma solidity 0.5.17;
@@ -32,12 +26,12 @@ contract Counter {
 
 
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "You're not the owner of the contract");
+        require(caller == _owner, "你不是此合约的所有者");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "You need to use the factory");
+        require(msg.sender == _factory, "你需要使用工厂");
         _;
     }
 
@@ -57,19 +51,19 @@ contract Counter {
 }
 ```
 
-注意，我们稍微修改了合约代码，来记录工厂的地址和合约所有者的地址。 当您从另一个合约来调用这个合约的代码的时，msg.sender 将引用合约工厂的地址。 这是**要理解的一个要点**，因为使用合约来与其他合约进行交互是一种常见做法。 因此，在复杂的情况下，您需要特别注意谁是发送者。
+请注意，我们对合约代码进行了轻微修改，以跟踪工厂地址和合约所有者地址。 当你从另一个合约调用一个合约代码时，msg.sender 将引用我们合约工厂的地址。 由于使用一个合约与其他合约交互是一种常见做法，因此**理解这一点非常重要**。 因此，在复杂情况下，你应该注意发送者是谁。
 
-为此，我们也添加了修饰符`onlyFactory`，以确保改变状态的函数只能由将传递原始调用者作为参数的工厂调用。
+为此，我们还添加了一个 `onlyFactory` 修饰符，以确保更改状态的函数只能由将原始调用者作为参数传递的工厂调用。
 
-在我们将管理所有其他 Counters 的新`CounterFactory`中，我们会添加一个映射，该映射会将所有者关联到其 counter 合约地址：
+在我们将管理所有其他计数器的新 `CounterFactory` 内部，我们将添加一个映射，它会将所有者与其计数器合约的地址关联起来：
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-在以太坊中，映射等同于 javascript 中的对象，它们允许将类型 A 的值映射到类型 B 的值。在本例中，我们将所有者的地址与 Counter 的实例进行映射。
+在以太坊中，映射等同于 Javascript 中的对象，它们可以将类型 A 的键映射到类型 B 的值。在本例中，我们将所有者的地址与其 Counter 实例进行映射。
 
-为某人实例化一个新的 Counter 的代码将类似于如下：
+为某人实例化一个新的 Counter 将如下所示：
 
 ```solidity
   function createCounter() public {
@@ -78,9 +72,9 @@ mapping(address => Counter) _counters;
   }
 ```
 
-首先，我们会检查一下此人是否已经拥有了一个 counter。 如果他未拥有 counter，我们会将他的地址传给`Counter`构造函数来实例化一个新的 counter，并将新创建的实例分配至映射。
+我们首先检查此人是否已拥有计数器。 如果他没有计数器，我们会通过将其地址传递给 `Counter` 构造函数来实例化一个新的计数器，并将新创建的实例分配给映射。
 
-获取一个特定 Counter 的计数的代码将类似于如下：
+获取特定 Counter 的计数将如下所示：
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
@@ -93,9 +87,9 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-第一个函数会检查对于某个给定的地址 Counter 合约是否存在，然后从实例中调用`getCount`方法。 第二个函数`getMyCount`只是将 msg.sender 直接传递到`getCount`函数的方法。
+第一个函数检查给定地址的 Counter 合约是否存在，然后从实例中调用 `getCount` 方法。 第二个函数 `getMyCount` 只是一个将 msg.sender 直接传递给 `getCount` 函数的快捷方式。
 
-`increment`函数非常相似，但是会将原始交易发送者传递到`Counter`合约。
+`increment` 函数非常类似，但是它将原始交易发送者传递给 `Counter` 合约：
 
 ```solidity
 function increment() public {
@@ -104,11 +98,11 @@ function increment() public {
   }
 ```
 
-注意，如果被调用次数过多，counter 可能会遇到溢出的问题。 您应尽可能多地使用[SafeMath 库](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)来防止出现这种可能的情况。
+请注意，如果调用次数过多，我们的计数器可能会成为溢出的受害者。 你应该尽可能使用 [SafeMath 库](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)来防止这种情况的发生。
 
-要部署合约，您需要同时提供`CounterFactory`和`Counter`的代码。 针对 Remix 中的示例进行部署时，您需要选择 CounterFactory。
+要部署我们的合约，你需要同时提供 `CounterFactory` 和 `Counter` 的代码。 例如，在 Remix 中部署时，你需要选择 CounterFactory。
 
-下面是完整的代码：
+以下是完整代码：
 
 ```solidity
 pragma solidity 0.5.17;
@@ -121,12 +115,12 @@ contract Counter {
 
 
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "You're not the owner of the contract");
+        require(caller == _owner, "你不是此合约的所有者");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "You need to use the factory");
+        require(msg.sender == _factory, "你需要使用工厂");
         _;
     }
 
@@ -171,8 +165,8 @@ contract CounterFactory {
 }
 ```
 
-编译完成后，您将在 Remix 的部署部分选择要部署的工厂。
+编译后，在 Remix 部署部分，你将选择要部署的工厂：
 
-![选择要在Remix中部署的工厂。](./counterfactory-deploy.png)
+![在 Remix 中选择要部署的工厂](./counterfactory-deploy.png)
 
-然后，您可以运行工厂合约并且观察值的变化情况。 如果希望通过其他地址来调用智能合约，您需要在 Remix 的帐户选择中更改地址。
+然后，你可以使用你的合约工厂并检查值的变化。 如果你想从不同的地址调用智能合约，则需要在 Remix 的帐户选择中更改地址。

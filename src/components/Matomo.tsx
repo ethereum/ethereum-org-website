@@ -4,28 +4,34 @@ import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import { init, push } from "@socialgouv/matomo-next"
 
-import { IS_PREVIEW_DEPLOY } from "@/lib/utils/env"
+// Module-level flag to prevent double initialization in React Strict Mode
+let matomoInitialized = false
 
 export default function Matomo() {
   const pathname = usePathname()
 
-  const [inited, setInited] = useState(false)
   const [previousPath, setPreviousPath] = useState("")
 
   useEffect(() => {
-    if (!IS_PREVIEW_DEPLOY && !inited) {
+    if (!matomoInitialized) {
       init({
         url: process.env.NEXT_PUBLIC_MATOMO_URL!,
         siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID!,
       })
 
+      // Use sendBeacon API for reliable tracking during page navigation
+      // Without this, click events on internal links are lost due to race
+      // conditions with Next.js client-side routing
+      // See: https://matomo.org/faq/how-to/faq_33087/
+      push(["alwaysUseSendBeacon"])
+
       console.log(
         "[Matomo] initialized with URL:",
         process.env.NEXT_PUBLIC_MATOMO_URL
       )
-      setInited(true)
+      matomoInitialized = true
     }
-  }, [inited])
+  }, [])
 
   /**
    * The @socialgouv/matomo-next does not work with next 13

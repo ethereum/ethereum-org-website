@@ -35,6 +35,8 @@ export function ABTestTracker({ assignment }: ABTestTrackerProps) {
         variation: assignment.variant,
       },
     ] as [string, Record<string, string>])
+    // Set custom dimension for segment queries (e.g., dimension1==Original)
+    push(["setCustomDimension", 1, assignment.variant])
   }, [assignment])
 
   return null // This component doesn't render anything

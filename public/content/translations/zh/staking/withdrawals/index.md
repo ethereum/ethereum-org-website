@@ -1,10 +1,10 @@
 ---
-title: 质押提款
-description: 本页面概述质押推送提款是什么，它们如何工作，质押人需要做什么才能获得奖励
+title: "质押提款"
+description: "本页面概述质押推送提款是什么，它们如何工作，质押人需要做什么才能获得奖励"
 lang: zh
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: 犀牛莱斯利与她的质押奖励
+alt: "犀牛莱斯利与她的质押奖励"
 sidebarDepth: 2
 summaryPoints:
   - 上海/卡佩拉升级实现了以太坊上的质押提款功能。
@@ -131,7 +131,7 @@ summaryPoints:
 
 正如你所看到的，随着网络上的验证者数量增加，完成该过程的速度也会变慢。 错过的时隙数增加可能成比例减慢提款速度，但这通常代表了可能的结果中较慢的情况。
 
-## 常见问题 {#faq}
+## 常见问题{#faq}
 
 <ExpandableCard
 title="提供提款地址后，我能将其更改为其他提款地址吗？"

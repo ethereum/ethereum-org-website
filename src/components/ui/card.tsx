@@ -52,7 +52,7 @@ CardHeader.displayName = "CardHeader"
 const cardBannerVariants = cva(
   cn(
     "overflow-hidden rounded-2xl",
-    "[&_img]:size-full [&_img]:object-cover [&_img]:duration-200",
+    "[&_img]:size-full [&_img]:duration-200",
     "group-hover/link:[&_img]:scale-110 group-hover/link:[&_img]:duration-200 group-focus/link:[&_img]:scale-110 group-focus/link:[&_img]:duration-200"
   ),
   {
@@ -71,26 +71,65 @@ const cardBannerVariants = cva(
       },
       size: {
         full: "h-48 w-full self-stretch",
-        thumbnail: "size-16",
+        thumbnail: "size-16 shrink-0",
+      },
+      fit: {
+        cover: "[&_img]:object-cover",
+        contain: "relative [&_img]:object-contain",
       },
     },
     defaultVariants: {
       background: "body",
       size: "full",
+      fit: "cover",
     },
   }
 )
 
-const CardBanner = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof cardBannerVariants>
->(({ className, background, size, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(cardBannerVariants({ background, size }), className)}
-    {...props}
-  />
-))
+type CardBannerProps = React.HTMLAttributes<HTMLDivElement> &
+  VariantProps<typeof cardBannerVariants>
+
+const CardBanner = React.forwardRef<HTMLDivElement, CardBannerProps>(
+  ({ className, background, size, fit, children, ...props }, ref) => {
+    // When fit="contain", auto-generate blurred background from single child image
+    const renderContent = () => {
+      if (fit === "contain" && React.Children.count(children) === 1) {
+        const child = React.Children.only(children)
+        if (React.isValidElement<{ className?: string }>(child)) {
+          // Blurred background
+          const blurredBg = React.cloneElement(child, {
+            className: cn(
+              child.props.className,
+              "absolute inset-0 -z-10 scale-110 !object-cover blur-xl"
+            ),
+            "aria-hidden": true,
+          } as React.HTMLAttributes<HTMLElement>)
+          // Sharp foreground
+          const sharpFg = React.cloneElement(child, {
+            className: cn(child.props.className, "!object-contain"),
+          })
+          return (
+            <>
+              {blurredBg}
+              {sharpFg}
+            </>
+          )
+        }
+      }
+      return children
+    }
+
+    return (
+      <div
+        ref={ref}
+        className={cn(cardBannerVariants({ background, size, fit }), className)}
+        {...props}
+      >
+        {renderContent()}
+      </div>
+    )
+  }
+)
 CardBanner.displayName = "CardBanner"
 
 const titleVariants = cva(

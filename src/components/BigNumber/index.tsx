@@ -118,9 +118,18 @@ const BigNumber = async ({
           </div>
         </>
       ) : (
-        <span className="pt-4 text-md text-body-medium">
-          {t("loading-error-refresh")}
-        </span>
+        <>
+          <div
+            data-label="value"
+            className={valueVariants({ variant })}
+            aria-label={t("loading-error-refresh")}
+          >
+            —
+          </div>
+          <div className={childrenVariants({ variant })}>
+            <span>{children}</span>
+          </div>
+        </>
       )}
     </div>
   )

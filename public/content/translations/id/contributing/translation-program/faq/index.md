@@ -104,7 +104,7 @@ Kami menyarankan agar Anda membiarkan nama merek, perusahaan, dan personel tidak
 
 Untuk memastikan tingkat kualitas dan konsistensi tertentu dalam penerjemahan kami, kami bekerja dengan [Acolad](https://www.acolad.com/), salah satu penyedia layanan bahasa terbesar di dunia. Acolad memiliki 20.000 ahli bahasa profesional, yang memungkinkan mereka untuk menyediakan peninjau ahli untuk setiap bahasa dan jenis konten yang kami perlukan.
 
-Proses peninjauannya sederhana; setelah beberapa [ember konten](/contributing/translation-program/content-buckets) telah diterjemahkan 100%, kami meminta peninjauan untuk bagian tersebut. Proses pengulasan terjadi secara langsung di Crowdin. Setelah pengulasan selesai, kami memperbarui situs web dengan konten yang diterjemahkan.
+Proses peninjauannya sederhana; setelah beberapa [ember konten](/contributing/translation-program/) telah diterjemahkan 100%, kami meminta peninjauan untuk bagian tersebut. Proses pengulasan terjadi secara langsung di Crowdin. Setelah pengulasan selesai, kami memperbarui situs web dengan konten yang diterjemahkan.
 
 ## Bagaimana cara saya menambahkan konten dalam bahasa saya? {#adding-foreign-language-content}
 

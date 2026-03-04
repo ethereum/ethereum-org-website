@@ -13,6 +13,7 @@ import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import Translation from "@/components/Translation"
 import { ButtonLink, ButtonLinkProps } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
@@ -188,7 +189,7 @@ const CommunityPage = () => {
                 {t("page-community-get-involved-title")}
               </H2>
               <Subtitle>
-                {t("page-community-get-involved-description")}
+                <Translation id="page-community:page-community-get-involved-description" />
               </Subtitle>
             </div>
             <ImageContainer>

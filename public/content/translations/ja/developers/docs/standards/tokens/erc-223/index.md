@@ -1,6 +1,6 @@
 ---
-title: ERC-223 トークン規格
-description: ERC-223 ファンジブルトークン規格の概要、その仕組み、およびERC-20との比較。
+title: "ERC-223 トークン規格"
+description: "ERC-223 ファンジブルトークン規格の概要、その仕組み、およびERC-20との比較。"
 lang: ja
 ---
 
@@ -18,7 +18,7 @@ ERC-223は、ERC-20のいくつかの制限を解決し、トークンコント�
 - 誤って送信されたトークンの拒否：ユーザーがトークンを受け取るべきではないコントラクトにERC-223トークンを送信した場合、そのコントラクトはトランザクションを拒否し、トークンの損失を防ぐことができます。
 - 転送時のメタデータ：ERC-223トークンはメタデータを含めることができ、トークントランザクションに任意の情報を添付することが可能です。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 - [アカウント](/developers/docs/accounts)
 - [スマートコントラクト](/developers/docs/smart-contracts/)
@@ -128,7 +128,7 @@ contract RecipientContract is IERC223Recipient {
     {
         // この関数内で理解するべき重要な点：
         // msg.senderは、受け取っているトークンのアドレスです。
-        // msg.valueは常に0です。なぜなら、通常トークンコントラクトはEtherを保有したり送信したりしないためです。
+        // msg.valueは常に0です。なぜなら、通常トークンコントラクトはetherを保有したり送信したりしないためです。
         // _from      はトークン転送の送信者です。
         // _value     は預け入れられたトークンの量です。
         require(msg.sender == tokenA);
@@ -177,7 +177,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-`RecipientContract` がERC-223トークンを受け取ると、そのコントラクトはトークントランザクションの `_data` パラメータにエンコードされた関数を実行します。これはイーサのトランザクションが関数呼び出しをトランザクションの `data` としてエンコードするのと同じです。 詳細については [dataフィールド](/developers/docs/transactions/#the-data-field) を参照してください。
+`RecipientContract`がERC-223トークンを受け取ると、そのコントラクトは、トークン取引の`_data`ラメーターとしてエンコードされた関数を実行します。これは、イーサリアムの取引が、取引の`data`として関数呼び出しをエンコードするのと全く同じです。 詳細については [dataフィールド](/developers/docs/transactions/#the-data-field) を参照してください。
 
 上記の例では、ERC-223トークンは `transfer(address,uin256,bytes calldata _data)` 関数を使用して `RecipientContract` のアドレスに転送される必要があります。 dataパラメータが `0xc2985578` （ `foo()` 関数のシグネチャ）である場合、トークンデポジットが完了した後にfoo()関数が呼び出され、Foo()イベントが発行されます。
 
@@ -191,7 +191,7 @@ ERC-223は、ERC-20規格で見られるいくつかの問題に対処してい�
 - 後方互換性：ERC-223はERC-20と後方互換性がないため、既存のERC-20コントラクトやツールは、修正なしではERC-223トークンと連携できません。
 - ガス代：ERC-223の転送には追加のチェックや機能が含まれるため、ERC-20トランザクションに比べてガス代が高くなる可能性があります。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [EIP-223: ERC-223トークン規格](https://eips.ethereum.org/EIPS/eip-223)
 - [初期のERC-223提案](https://github.com/ethereum/eips/issues/223)

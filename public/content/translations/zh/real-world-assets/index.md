@@ -1,16 +1,16 @@
 ---
-title: 现实世界资产（RWA）
-metaTitle: 什么是 RWA？ ｜现实世界资产的优势和用途
-description: 以太坊上的现实世界资产概述
+title: "现实世界资产（RWA）"
+metaTitle: "什么是 RWA？ ｜现实世界资产的优势和用途"
+description: "以太坊上的现实世界资产概述"
 lang: zh
 template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
-alt: 男人和狗在玩耍。
+alt: "男人和狗在玩耍。"
 sidebarDepth: 2
-summaryPoint1: 将有价值的商品转化为数字代币的方法。
-summaryPoint2: 你现在可以拥有现实物品或资产的一部分，而不必购买整个资产或物品。
-summaryPoint3: 连接传统金融和区块链生态系统。
+summaryPoint1: "将有价值的商品转化为数字代币的方法。"
+summaryPoint2: "你现在可以拥有现实物品或资产的一部分，而不必购买整个资产或物品。"
+summaryPoint3: "连接传统金融和区块链生态系统。"
 ---
 
 现实世界资产 (RWA) 是代表现有财富形式的代币，例如房地产、黄金、股票、艺术品、机械或收藏品。 将这些物品代币化并转换为数字形式，从而允许它们在多个所有者之间被分配，并使其更易于交易。
@@ -24,6 +24,17 @@ summaryPoint3: 连接传统金融和区块链生态系统。
 每个代币可以被分割成更小的份额。 例如，Tether Gold 代币可以分割成最小至 0.000001 的单位。
 
 RWA 代币没有任何内在价值。 它们反映的是所代表的物品的价值，因此代币的价值会随着物品的价值而变化。
+
+## RWA 有哪些优势？ {#rwas-benefits}
+
+<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+  <Card title="部分所有权" emoji=":house_buildings:" description="RWA 让投资更普及。如果你因资金不足而无法投资某些资产，现在可以作为部分所有者参与其中。"/>
+  <Card title="投资多元化" emoji="🛒" description="你可以投资多种类型的资产，从而实现投资组合的多样化，而且无需像对冲基金那样投入巨额资金。" />
+  <Card title="全球机遇" emoji="🌏" description="RWA 消除了投资的地域障碍。你可以购买世界任何地方的资产代币。" />
+  <Card title="提高资产流动性" emoji="🖼️" description="许多资产缺乏流动性。它们虽然有价值，但这并不等同于拥有可以消费的现金。通过将资产代币化，所有者可以将其部分或全部转化为可使用的价值。"/>
+  <Card title="全球市场" emoji="💰" description="希望将资产变现的持有者可以接触到更广泛的投资者群体，而不仅仅是那些通常有能力购买土地、股权、艺术品或传统金融工具的人。" />
+  <Card title="跳过中间商" emoji="👩‍💻" description="代币在智能合约上运行，这意味着代币可以点对点交易，无需中介机构及其相关费用。" />
+</CardGrid>
 
 ## RWA 如何运作？ {#how-rwas-work}
 
