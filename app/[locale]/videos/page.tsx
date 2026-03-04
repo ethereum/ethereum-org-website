@@ -6,17 +6,10 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import SimpleHero from "@/components/Hero/SimpleHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 import VideoCard from "@/components/Videos/VideoCard"
 
 import { cn } from "@/lib/utils/cn"
@@ -44,21 +37,7 @@ const VideoGalleryPage = async ({ params }: { params: { locale: string } }) => {
       <MainArticle className="px-8 py-4">
         {/* Hero Section */}
         <SimpleHero
-          breadcrumbs={
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/">ETHEREUM.ORG</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
-                  /
-                </BreadcrumbSeparator>
-                <BreadcrumbItem>
-                  <BreadcrumbPage>VIDEOS</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          }
+          breadcrumbs={<Breadcrumbs slug="videos" />}
           title={t("page-videos-hero-title")}
           subtitle={t("page-videos-hero-description")}
         />
