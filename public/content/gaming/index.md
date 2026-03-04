@@ -1,70 +1,102 @@
 ---
-title: Onchain Gaming
+title: Gaming on Ethereum
 lang: en
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Game rules and state can be enforced by blockchain, not a studio’s servers
-summaryPoint2: Anyone can build mods, bots, or entirely new games that plug into the same onchain data
-summaryPoint3: Purpose‑built L2s, like Redstone, and frameworks, like MUD, cut costs enough to support real‑time gameplay
+summaryPoint1: Game rules and state can be enforced by the Ethereum blockchain, not a studio's servers, representing a key benefit of onchain games
+summaryPoint2: Anyone can build mods, bots, or entirely new games that plug into the same open onchain data
+summaryPoint3: Evolving UX improvements have improved gameplay and expanded the onchain gaming landscape, including purpose-built L2s for real-time gameplay and game development frameworks for easy development
 buttons:
   - content: Learn more
-    toId: how-gaming-on-ethereum-works
-  - content: Explore apps
-    toId: popular-games-built-on-ethereum
+    toId: gaming-on-ethereum
+  - content: Explore games
+    toId: games
     isSecondary: false
 ---
 
-## How gaming on Ethereum works {#how-gaming-on-ethereum-works}
+## Gaming on Ethereum {#gaming-on-ethereum}
 
-Gaming on Ethereum comes in various forms, from games that integrate blockchain for specific features to those where the entire game world lives onchain. Many games utilize Ethereum to manage in-game assets as NFTs (Non-Fungible Tokens). This allows players to truly own unique digital items, which can be openly traded, sold, or gifted outside the confines of a single game developer's ecosystem. While these assets offer new forms of player agency, the core game logic often remains on centralized servers.
+Gaming on Ethereum comes in various forms, from games that use the blockchain for specific features to those where the entire game world lives onchain. The Ethereum blockchain can be used with games in various capacities. Games can store their currencies as transferable tokens or other in-game assets (characters, equipment, pets, etc.) in the form of [NFTs (non-fungible tokens)](/nft/). Games can also utilize smart contracts to host their logic, rules, and state onchain. Such games are commonly referred to as "fully onchain games."
 
-Entirely onchain games are games where the fundamental mechanics, and often the entire game world, are directly governed by smart contracts on the Ethereum blockchain (or its Layer 2s). This ensures unparalleled transparency. No central servers, no intermediaries—just transparent, player‑driven experiences and economies. 
+The Ethereum ecosystem also includes [Layer 2 blockchains (L2s)](/layer-2/learn/) that inherit the security guarantees of Ethereum mainnet while extending Ethereum's scale and supporting specialized use cases. L2 networks can provide additional benefits for onchain games and their communities, because L2s can offer faster confirmation times, higher processing volume, and lower fees, making gameplay faster and more accessible.
 
-- Players own their assets as NFTs.
-- Items can be freely traded, gifted, or sold.
-- Blockchain ensures assets remain accessible forever.
+## Features of onchain games {#features-of-onchain-games}
 
-## The current state of gaming {#the-current-state-of-gaming}
+1. **Secure way of exchanging digital goods**
 
-- **Frequent Game Shutdowns:** In 2023 alone, [60+ games were shut down](https://tech4gamers.com/game-studios-shut-down-2023/), and 11 game studios closed entirely, leaving players with nothing to show for their in‑game investments. Onchain games, with their logic and assets on a decentralized network, can persist as long as the blockchain exists, offering a higher degree of permanence.
-- **Frustration Over Locked Assets:** [51% of gamers feel frustrated](https://www.starknet.io/blog/blockchain-gaming/) that they can’t gift or re‑sell in‑game items they buy, and 23% are annoyed by how difficult it is to recover money from in‑game purchases. Players invest significant time and money into acquiring in-game items, only to find they don't truly own them. Ethereum's NFT standard provides verifiable digital ownership, ensuring players control their assets.
-- **High Spending with No Return:** [Gamers spend an average of \$6,425](https://www.starknet.io/blog/blockchain-gaming/) on virtual items over their lifetime, with \$8.74 spent per month or \$104 per year. Onchain ownership transforms that spending from a sunk cost into an investment in a digital asset that can be sold, traded, or gifted, much like a physical collectible. 
+   Tradable in-game assets can be exchanged between players for other in-game assets or tokens on that chain. Games in the past commonly faced the challenge of facilitating fair trade between players, especially for scarce and valuable items. 3rd-party marketplaces and peer-to-peer trading often led to players being misled or scammed out of their prized possessions. Because onchain assets follow an established data structure, they can be easily integrated with existing marketplaces, giving players peace of mind when exchanging them. Advancements in AMMs also let players instantly trade certain items without having to wait for a counterparty (buyer/seller) to finalize their trade.
 
-## Popular games built on Ethereum {#popular-games-built-on-ethereum}
+2. **Transparent asset origin**
 
-Developers are exploring new ways to make games more engaging and go beyond simple reward mechanics to deepen, skill‑based gameplay.
+   Fakes and copies of originals can be a considerable problem when valuing physical items, especially if the person isn't very familiar with the common details to distinguish a real thing from a fake one. Onchain assets always have a complete record history of who (which wallet) owned them and their origin address, so even if a perfect copy of the data exists onchain, it's clearly distinguished from the original, based on its smart contract of origin.
 
-<OnchainGamingProductList list="game" />
+3. **Transparent logic**
 
-## Play-to-earn (P2E) {#play-to-earn-p2e}
+   Fully onchain games use smart contracts for their functionality. This means that anyone can review and verify the game's logic, ensuring it runs according to how developers intended it to. This logic transparency also allows other developers to create new smart contracts that can expand the game or be integrated with some of its features.
 
-With Play‑to‑Earn (P2E) games, you can earn in-game assets with real-world value. Unlike early P2E models that relied on unsustainable rewards, newer games focus on long‑term value. For example, [Wolf Game](https://gam3s.gg/wolf-game/) combines strategic gameplay with real digital asset ownership. Players manage virtual sheep and wolves, earning the in‑game currency WOOL, which can be traded or sold.
+4. **Provable achievements**
 
-<OnchainGamingProductList list="p2e" />
+   In fully onchain games, every player action is recorded on the blockchain. This makes it very easy to check and verify if a player made the actions required for a certain milestone/achievement. Due to the immutable nature of blockchains, those achievement records will remain intact as long as the chain keeps running, and can be verified by any party (not just developers, as it's commonly seen in traditional gaming).
 
-## Interoperability & cross‑chain play {#interoperability-and-cross-chain-play}
+5. **Forever games**
 
-One of Ethereum's most powerful features for gaming is its native support for interoperability and composability. Traditional games operate in "walled-gardens," locking in-game assets and progress to a single title. In-game assets, and even core game logic, built on Ethereum can potentially interact across different applications and chains—without sacrificing security. While this is still a developing ecosystem, some Ethereum-based game networks are already interoperable and allow in‑game items (NFTs) to be used across multiple games.
+   Players invest a lot of time and effort into building their in-game reputation and characters, but that progress can easily be lost if the developers decide to shut down the servers, especially if it's an online game. Since fully onchain games store their logic and state onchain, players can still interact with the game's smart contracts, even if the main developer of the game ceases development. Such games can still be played and continue to receive updates from their communities because their logic still runs on the blockchain.
 
-For instance, in Illuvium, [players can collect creatures called Illuvials](https://gam3s.gg/news/illuvium-three-web3-games/), which are NFTs. These Illuvials can be used across various games within the Illuvium universe. An Illuvial captured in Illuvium Overworld can also be used in Illuvium Arena for battles.
+## How games integrate blockchains {#how-games-integrate-blockchains}
 
-Another example is Galaxy Fight Club. In this game, [players can use different NFT collections](https://gam3s.gg/galaxy-fight-club/) to participate in battles, meaning NFTs from various projects can be used within the game.
+Game developers can decide to incorporate different features of Ethereum into their games. Just because they exist doesn't mean that every game needs to utilize all of them, since there exist alternative solutions with their own pros and cons.
 
-## Scalability & gas fee improvements {#scalability-and-gas-fee-improvements}
+### Sign(-in) with Ethereum {#sign-in-with-ethereum}
 
-An old critique of onchain gaming was that blockchains are too complex and slow to provide gamers with the experience they expect. But as Ethereum has matured, solutions to significantly reduce the cost and enhance the performance of onchain gaming have emerged, making interactive and fast-paced experiences viable. 
+Players can use their onchain accounts to sign into the game. These are usually facilitated through signing transactions with a player's web3 wallet. EVM is a commonly used standard on many running chains, so a player can use the same account on any EVM chain that the wallet supports (note: some web3 wallets require a manual RPC import, especially for newer blockchains, before they can be used to do anything on that chain).
 
-These advancements are primarily achieved through:
+### Fungible tokens {#fungible-tokens}
 
-- **Gas-less Transactions:** Some platforms and protocols, including those leveraging Immutable X, offer the ability to conduct transactions like trading or minting NFTs without fees for the user, further streamlining the player experience.
-- **Scaling Solutions:** Ethereum L2s like Arbitrum, zkSync and Starknet are actively fostering ecosystems for onchain games due to their high throughput and low costs.
-- **[MUD ecosystem](https://mud.dev/):** MUD optimizes Ethereum-based application development toolkits for onchain game development, providing more efficient state management for complex game logic.
+Just like Ether, fungible in-game resources and currencies can be stored onchain as fungible tokens that can be sent between addresses and used in smart contracts.
 
-## Get started with Ethereum gaming {#get-started-with-ethereum-gaming}
+### Non-fungible tokens {#non-fungible-tokens}
 
-Getting into Ethereum gaming is easier than you might think. With just a few steps, you can start playing and enjoying your progress:
+Non-fungible tokens (NFTs) can represent game elements such as characters, items, land, or even save states. With dynamic metadata, NFTs can evolve in response to in-game events, allowing assets to carry history over time. For example, Beast NFTs in Loot Survivor permanently record when a specific player defeats a unique creature, embedding that outcome into the asset itself. This kind of design points toward games where assets are persistent, stateful, and potentially usable across multiple onchain experiences, rather than static collectibles.
 
-1. **Set up a Crypto Wallet:** You'll need a wallet to manage your digital assets and interact with decentralized applications. [Choose a Wallet](/wallets/find-wallet/)
-2. **Fund Your Wallet:** Acquire some Ether (ETH) or tokens relevant to the Layer 2 network you plan to use.
-3. **Explore Games:** Discover games on platforms like [Orden](https://orden.gg/),  [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games), [OpenSea](https://opensea.io/), and [PlayToEarn.net](https://playtoearn.com/blockchaingames).
+### Smart contracts {#smart-contracts}
+
+Fully onchain games use smart contracts to create transparent and immutable game logic. In such cases, the blockchain serves as the game's backend, replacing the need to host its logic and data storage on a centralized server. (Note: not all web3 games are fully onchain games. As mentioned before, it depends on a case by case basis how much of the game's data and logic is stored onchain, on another DA or on a classic server.)
+
+## Ethereum's gaming ecosystem overview {#ethereums-gaming-ecosystem-overview}
+
+- **Layer 2s:** With cheaper fees and short transaction times, layer 2s became a common place for games to launch on. Top layer 2s with games include: Ronin, Starknet, Immutable, Base, Abstract
+- **Infrastructure:** To make developing onchain games easier, there exists a number of tool stacks that can be used with your own project: Cartridge, Dojo, Proof of Play, Thirdweb
+- **Gaming guilds:** Players who want to be a part of a gaming community can join gaming guilds to strategize and collaborate with other players in the guild. Notable ones include: YGG, WASD, LegacyGG, Gaming Grid, OLAGG, etc.
+- **Games:** Ethereum games come in different shapes and sizes, spanning everything from _Realms: Eternum's_ real-time strategy, to _Axie: Atia's Legacy_ MMO, _Fableborn's_ action RPG, and even gamified DeFi platforms like _Ponziland_. With new games launching regularly across different chains, there's always something fresh to explore.
+
+## Games {#games}
+
+<GamingAppsGrid apps={gamingApps} />
+
+## Evolution of player UX improvements {#evolution-of-player-ux-improvements}
+
+### Interoperability and cross-chain play {#interoperability-and-cross-chain-play}
+
+Advancements in cross-chain interactions and bridging allow players to access games on Ethereum as seamlessly as ever. Games can be deployed across multiple blockchains, and one game's onchain assets can be integrated by another game. In the past, players were usually required to bridge their funds to another chain before they could start using them in-game. Nowadays, games commonly integrate token bridges to other chains to make player onboarding easier.
+
+### Scalability and gas fee improvements {#scalability-and-gas-fee-improvements}
+
+In 2017, the craze around Crypto Kitties dramatically increased gas fees for all users of the chain. Since then, numerous Ethereum Improvement Proposals have been successfully launched, increasing mainnet's bandwidth and significantly reducing average transaction fees. Layer 2s further expanded available throughput, reducing transaction fees to cents or even lower.
+
+### Social logins {#social-logins}
+
+Ethereum login (EVM account) is one of the most common authentication methods, which can be used across all EVM chains. Some non-EVM chains also use it as an option for creating an account. However, if a new player doesn't have one and wants to easily create one, account abstraction allows them to sign in with their social account.
+
+### Paymaster and session keys {#paymaster-and-session-keys}
+
+Paying gas fees to send transactions onchain or interact with smart contracts can be a significant friction to many new players. Paymaster accounts can be funded by the player or subsidized by the game. Session keys allow the player to remain logged into the game for the full duration of their session, requiring them to sign only the first message of their session, with subsequent messages signed in the background.
+
+There are contrasting philosophies around these mechanics. A leading example is Initia's Kamigotchi, which treats player-paid gas as direct revenue. In contrast, the Realms.World game ecosystem, currently comprising 4+ live fully onchain games on Starknet, takes the opposite approach. All games in the ecosystem use the Cartridge Paymaster, enabling players to interact with games at zero gas cost. Where Kamigotchi embraces gas fees as part of the economic design, Realms.World games view gas costs primarily as an obstacle to player experience.
+
+## Get started with gaming on Ethereum {#get-started-with-gaming-on-ethereum}
+
+1. **Find a fun game to play** - Browse the games listed above or explore platforms like [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), and [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
+2. **Set up your crypto wallet** - You'll need a wallet to manage your digital assets and interact with decentralized applications. [Choose a Wallet](/wallets/find-wallet/)
+3. **Fund your wallet** - Acquire some Ether (ETH) or tokens relevant to the Layer 2 network you plan to use.
+4. **Play** - Start playing and enjoy true ownership of your in-game progress.
