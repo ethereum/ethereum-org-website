@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { AppData, GHIssue, SlugPageParams } from "@/lib/types"
+import type { GHIssue, SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
@@ -21,7 +21,6 @@ import { getGFIs } from "@/data-layer"
 import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
-import { getAppsData } from "@/lib/data"
 import { getPageData } from "@/lib/md/data"
 import { getMdMetadata } from "@/lib/md/metadata"
 
@@ -44,17 +43,7 @@ export default async function Page({ params }: { params: SlugPageParams }) {
     console.warn("Failed to fetch GFIs for slug page:", error)
   }
 
-  // Fetch gaming apps data for the /gaming page
-  let gamingApps: AppData[] = []
   const slug = slugArray.join("/")
-  if (slug === "gaming") {
-    try {
-      const appsData = await getAppsData()
-      gamingApps = appsData?.["Gaming"] ?? []
-    } catch (error) {
-      console.warn("Failed to fetch gaming apps:", error)
-    }
-  }
 
   const {
     content,
@@ -73,7 +62,6 @@ export default async function Page({ params }: { params: SlugPageParams }) {
     componentsMapping,
     scope: {
       gfissues,
-      gamingApps,
     },
   })
 
