@@ -2140,9 +2140,9 @@ function warnTranslatedInlineCode(
 function warnExposedMdxTags(content: string): string[] {
   const warnings: string[] = []
 
-  // Known safe MDX components and HTML tags
+  // Known safe HTML elements (PascalCase MDX components are handled above)
   const safePattern =
-    /^\/?(ExpandableCard|InfoBanner|Card|Emoji|EmojiCard|Button|ButtonLink|Alert|AlertEmoji|AlertContent|AlertDescription|UpgradeStatus|MergeArticleList|MergeInfographic|QuizWidget|GlossaryDefinition|GlossaryTooltip|SocialListItem|Callout|YouTube|NetworkUpgradeSummary|a|em|strong|code|li|ul|ol|p|br|div|span|img|h[1-6]|table|tr|td|th|thead|tbody|blockquote|pre|hr|sup|sub|details|summary)\b/
+    /^\/?(a|em|strong|b|i|u|mark|cite|code|li|ul|ol|p|br|div|span|img|h[1-6]|table|tr|td|th|thead|tbody|blockquote|pre|hr|sup|sub|details|summary|abbr|del|ins|kbd|s|small|var|wbr|figcaption|figure|section|article|aside|footer|header|main|nav|dl|dt|dd)\b/
 
   const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
   const parts = content.split(codeBlockPattern)
@@ -2162,6 +2162,9 @@ function warnExposedMdxTags(content: string): string[] {
       )
       for (const m of tagMatches) {
         const tagName = m[1] || "" // empty for </>
+        // PascalCase tags are MDX components (e.g., DocLink, ExpandableCard)
+        // — they never break compilation, so skip them unconditionally
+        if (tagName && /^[A-Z]/.test(tagName)) continue
         if (tagName && safePattern.test(tagName)) continue
         // This is a bare tag outside backticks — likely exposed by Crowdin
         warnings.push(
