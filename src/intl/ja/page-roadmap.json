@@ -102,7 +102,7 @@
   "page-roadmap-glamsterdam-bal-title": "ブロックレベルアクセスリスト",
   "page-roadmap-glamsterdam-bal-item-1": "個々のトランザクションではなく、ブロックレベルで必須アクセスリストを導入します。",
   "page-roadmap-glamsterdam-bal-item-2": "依存関係を事前にマッピングすることで、同期、並列実行、並列ディスク読み取りを高速化します。",
-  "page-roadmap-glamsterdam-bal-item-3": "ステートフルなアプリのガス代を削減し、ガス代の予測可能性を向上させます",
+  "page-roadmap-glamsterdam-bal-item-3": "ステート集約型のアプリのガス代を削減し、ガス代の予測可能性を向上させます",
   "page-roadmap-hegota-discussed-title": "ヘゴタで計画中",
   "page-roadmap-hegota-discussed-item-1": "現在、提案について議論中です。"
 }

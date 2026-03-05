@@ -102,7 +102,7 @@
   "page-roadmap-glamsterdam-bal-title": "Seznamy přístupů na úrovni bloků",
   "page-roadmap-glamsterdam-bal-item-1": "Zavádí povinné seznamy přístupu na úrovni bloků, nikoli pro jednotlivé transakce.",
   "page-roadmap-glamsterdam-bal-item-2": "Předem mapuje závislosti pro rychlejší synchronizaci, paralelní spouštění a paralelní čtení z disku.",
-  "page-roadmap-glamsterdam-bal-item-3": "Snižuje poplatky za plyn pro aplikace s vysokou státní podporou a zlepšuje předvídatelnost nákladů na plyn.",
+  "page-roadmap-glamsterdam-bal-item-3": "Snižuje poplatky za plyn pro aplikace s vysokými nároky na stav a zlepšuje předvídatelnost nákladů na plyn.",
   "page-roadmap-hegota-discussed-title": "Plánováno pro Hegotá",
   "page-roadmap-hegota-discussed-item-1": "Návrhy jsou v současné době předmětem diskuse."
 }
