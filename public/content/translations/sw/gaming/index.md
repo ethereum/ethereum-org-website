@@ -35,7 +35,7 @@ Michezo iliyo kwenye mnyororo kikamilifu ni michezo ambapo mbinu za msingi, na m
 
 Wasanidi programu wanachunguza njia mpya za kufanya michezo ishirikishe zaidi na kwenda zaidi ya mbinu rahisi za zawadi ili kuimarisha uchezaji unaotegemea ujuzi.
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## Ushirikiano & uchezaji wa minyororo-tofauti {#interoperability-and-cross-chain-play}
 

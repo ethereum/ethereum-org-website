@@ -35,7 +35,7 @@ buttons:
 
 개발자들은 게임을 더 매력적으로 만들고 단순한 보상 메커니즘을 넘어 기술 기반 게임 플레이를 심화시키기 위한 새로운 방법을 모색하고 있습니다.
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## 상호 운용성 및 크로스 체인 플레이 {#interoperability-and-cross-chain-play}
 

@@ -35,7 +35,7 @@ Los juegos completamente en cadena son aquellos donde las mecánicas fundamental
 
 Los desarrolladores están explorando nuevas formas de hacer los juegos más atractivos e ir más allá de simples mecánicas de recompensas, profundizando en la jugabilidad basada en habilidades.
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## Interoperabilidad y juego entre cadenas {#interoperability-and-cross-chain-play}
 

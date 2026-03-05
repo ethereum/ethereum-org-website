@@ -35,7 +35,7 @@ buttons:
 
 デベロッパーは、ゲームをより魅力的にし、単純な報酬メカニクスを超えて、スキルベースのゲームプレイを深化させる新しい方法を模索しています。
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## 相互運用性とクロスチェーンプレイ {#interoperability-and-cross-chain-play}
 

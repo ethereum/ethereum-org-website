@@ -35,7 +35,7 @@ Hry zcela na blockchainu jsou hry, kde základní mechanismy, a často celý her
 
 Vývojáři zkoumají nové způsoby, jak učinit hry poutavějšími, a překročit jednoduché mechanismy odměn, aby prohloubili hratelnost založenou na dovednostech.
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## Interoperabilita a cross-chain hraní {#interoperability-and-cross-chain-play}
 

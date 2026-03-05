@@ -35,7 +35,7 @@ buttons:
 
 ڈیولپرز گیمز کو مزید دلچسپ بنانے اور سادہ انعامی میکانکس سے آگے بڑھ کر مہارت پر مبنی گیم پلے کو گہرا کرنے کے لیے نئے طریقے تلاش کر رہے ہیں۔
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## باہمی عمل اور کراس چین پلے {#interoperability-and-cross-chain-play}
 

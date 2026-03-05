@@ -35,7 +35,7 @@ Tamamen zincir üstü oyunlar, temel mekaniklerin ve genellikle tüm oyun dünya
 
 Geliştiriciler, oyunları daha ilgi çekici hale getirmek için yeni yollar araştırıyor ve beceri tabanlı oynanışı derinleştirmek için basit ödül mekaniklerinin ötesine geçiyor.
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## Birlikte çalışabilirlik ve zincirler arası oyun {#interoperability-and-cross-chain-play}
 

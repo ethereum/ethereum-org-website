@@ -35,7 +35,7 @@ Les jeux entièrement en chaîne sont des jeux où les mécanismes fondamentaux,
 
 Les développeurs explorent de nouvelles façons de rendre les jeux plus captivants et de dépasser les simples mécanismes de récompense pour approfondir le gameplay basé sur les compétences.
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## Interopérabilité et jeu inter-chaînes {#interoperability-and-cross-chain-play}
 

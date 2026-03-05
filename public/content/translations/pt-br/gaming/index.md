@@ -35,7 +35,7 @@ Jogos totalmente em cadeia são jogos onde as mecânicas fundamentais, e muitas 
 
 Os desenvolvedores estão explorando novas maneiras de tornar os jogos mais envolventes e ir além da mecânica de recompensa simples para aprofundar a jogabilidade baseada em habilidades.
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## Interoperabilidade e jogo cross-chain {#interoperability-and-cross-chain-play}
 

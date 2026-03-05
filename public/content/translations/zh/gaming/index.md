@@ -35,7 +35,7 @@ buttons:
 
 开发者正在探索新的方法，让游戏更具吸引力，超越简单的奖励机制，深化基于技能的游戏玩法。
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## 互操作性和跨链游戏 {#interoperability-and-cross-chain-play}
 

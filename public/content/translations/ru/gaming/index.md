@@ -35,7 +35,7 @@ buttons:
 
 Разработчики изучают новые способы сделать игры более увлекательными и выйти за рамки простых механик вознаграждения, чтобы углубить игровой процесс, основанный на навыках.
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## Интероперабельность и кросс-чейн игра {#interoperability-and-cross-chain-play}
 

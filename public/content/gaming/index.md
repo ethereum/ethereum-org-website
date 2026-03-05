@@ -72,7 +72,7 @@ Fully onchain games use smart contracts to create transparent and immutable game
 
 ## Games {#games}
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## Evolution of player UX improvements {#evolution-of-player-ux-improvements}
 

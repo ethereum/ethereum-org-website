@@ -35,7 +35,7 @@ buttons:
 
 Розробники досліджують нові способи зробити ігри більш захопливими й вийти за межі простої механіки винагород, щоб поглибити ігровий процес, заснований на навичках.
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## Сумісність і міжланцюгова гра {#interoperability-and-cross-chain-play}
 

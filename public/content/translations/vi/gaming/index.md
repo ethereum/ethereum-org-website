@@ -35,7 +35,7 @@ Các trò chơi hoàn toàn trên chuỗi là các trò chơi mà cơ chế cơ 
 
 Các nhà phát triển đang khám phá những cách mới để làm cho trò chơi hấp dẫn hơn và vượt ra ngoài cơ chế phần thưởng đơn giản để làm sâu sắc thêm lối chơi dựa trên kỹ năng.
 
-<GamingAppsGrid apps={gamingApps} />
+<CategoryAppsGrid category="gaming" />
 
 ## Khả năng tương tác & chơi chuỗi chéo {#interoperability-and-cross-chain-play}
 
