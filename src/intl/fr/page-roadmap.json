@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "Prise en charge des enclaves sécurisées sur les appareils mobiles pour améliorer l'expérience utilisateur",
   "page-roadmap-fusaka-additional-item-2": "Améliorations du marché des frais blob",
   "page-roadmap-fusaka-additional-item-3": "Améliorations supplémentaires de l'efficacité du validateur et des performances du réseau",
-  "page-roadmap-glamsterdam-discussed-title": "Prévu pour Glamsterdam",
-  "page-roadmap-glamsterdam-discussed-item-1": "Séparation consacrée entre le proposant et le constructeur (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "Listes d'accès au niveau du bloc (BALs)"
-}
+  "page-roadmap-glamsterdam-epbs-title": "Séparation native entre le proposant et le constructeur",
+  "page-roadmap-glamsterdam-epbs-item-1": "Sépare l'accord de bloc du traitement, ce qui aide la couche 1 à s'adapter en permettant aux validateurs de traiter plus de données.",
+  "page-roadmap-glamsterdam-epbs-item-2": "Intègre nativement des constructeurs, permettant ainsi aux validateurs d'externaliser en toute sécurité l'assemblage des blocs sans avoir à faire confiance à un logiciel externe.",
+  "page-roadmap-glamsterdam-bal-title": "Listes d'accès au niveau du bloc",
+  "page-roadmap-glamsterdam-bal-item-1": "Introduit des listes d'accès obligatoires au niveau des blocs, plutôt que pour des transactions individuelles.",
+  "page-roadmap-glamsterdam-bal-item-2": "Mappez les dépendances à l'avance pour des synchronisations plus rapides, une exécution parallèle et des lectures de disque parallèles.",
+  "page-roadmap-glamsterdam-bal-item-3": "Réduit les frais de gaz pour les applications à forte intensité d'état et améliore la prévisibilité des coûts de gaz.",
+  "page-roadmap-hegota-discussed-title": "Prévu pour Hegotá",
+  "page-roadmap-hegota-discussed-item-1": "Les propositions sont actuellement en discussion."
+}\n

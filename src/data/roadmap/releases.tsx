@@ -200,7 +200,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     image: GuidesHubHeroImage,
     releaseName: "Hegotá",
     plannedReleaseYear: "2026",
-    displayDate: "2026",
+    displayDate: "H2 2026",
     content: (
       <div>
         <p className="font-bold">{t("page-roadmap-hegota-discussed-title")}</p>

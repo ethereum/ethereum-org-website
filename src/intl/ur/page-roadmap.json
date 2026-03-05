@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "UX کو بہتر بنانے کے لیے موبائل آلات پر محفوظ انکلیوز کے لیے سپورٹ",
   "page-roadmap-fusaka-additional-item-2": "بلاب فیس مارکیٹ میں بہتری",
   "page-roadmap-fusaka-additional-item-3": "ویلیڈیٹر کی کارکردگی اور نیٹ ورک کی کارکردگی میں مزید بہتری",
-  "page-roadmap-glamsterdam-discussed-title": "گلیم سٹرڈیم کے لیے شیڈول",
-  "page-roadmap-glamsterdam-discussed-item-1": "اینشرائنڈ پروپوزر-بلڈر سیپریشن (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "بلاک-لیول ایکسیس لسٹس (BALs)"
-}
+  "page-roadmap-glamsterdam-epbs-title": "پروپوزر اور بلڈر کے درمیان مقامی علیحدگی",
+  "page-roadmap-glamsterdam-epbs-item-1": "بلاک کے معاہدے کو پروسیسنگ سے الگ کرتا ہے، جس سے ویلیڈیٹرز کو مزید ڈیٹا پر کارروائی کرنے کی اجازت دے کر L1 کو پیمانے میں مدد ملتی ہے۔",
+  "page-roadmap-glamsterdam-epbs-item-2": "بلڈرز کو مقامی طور پر مربوط کرتا ہے تاکہ توثیق کنندگان بیرونی سافٹ ویئر پر بھروسہ کیے بغیر بلاک اسمبلی کو محفوظ طریقے سے آؤٹ سورس کر سکیں۔",
+  "page-roadmap-glamsterdam-bal-title": "بلاک لیول رسائی کی فہرستیں",
+  "page-roadmap-glamsterdam-bal-item-1": "انفرادی لین دین کے بجائے بلاک کی سطح پر لازمی رسائی کی فہرستوں کا تعارف کراتا ہے۔",
+  "page-roadmap-glamsterdam-bal-item-2": "تیز مطابقت، متوازی عمل درآمد، اور متوازی ڈسک ریڈز کے لیے پہلے سے انحصار کا نقشہ بناتا ہے۔",
+  "page-roadmap-glamsterdam-bal-item-3": "ریاست کے بھاری ایپس کے لیے گیس کو کم کرتا ہے اور گیس کی لاگت کی پیش گوئی کو بہتر بناتا ہے۔",
+  "page-roadmap-hegota-discussed-title": "ہیگوٹا کے لیے منصوبہ بندی کی گئی",
+  "page-roadmap-hegota-discussed-item-1": "تجاویز اس وقت زیر غور ہیں۔"
+}\n

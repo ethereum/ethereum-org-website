@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "UXを改善するためのモバイルデバイス上のセキュアエンクレーブのサポート",
   "page-roadmap-fusaka-additional-item-2": "Blob手数料マーケットの改善",
   "page-roadmap-fusaka-additional-item-3": "バリデーター効率とネットワークパフォーマンスのさらなる改善",
-  "page-roadmap-glamsterdam-discussed-title": "Glamsterdamで議論予定",
-  "page-roadmap-glamsterdam-discussed-item-1": "Enshrined提案者・ビルダー分離 (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "ブロックレベル・アクセスリスト (BALs)"
-}
+  "page-roadmap-glamsterdam-epbs-title": "プロトコルレベルでの提案者とビルダーの分離",
+  "page-roadmap-glamsterdam-epbs-item-1": "ブロックの合意形成と処理を分離することで、バリデーターがより多くのデータを処理できるようになり、L1のスケーラビリティ向上に貢献します。",
+  "page-roadmap-glamsterdam-epbs-item-2": "ビルダーをネイティブに統合することで、バリデーターは外部ソフトウェアを信頼することなく、安全にブロックの組み立てを外部委託できます。",
+  "page-roadmap-glamsterdam-bal-title": "ブロックレベルアクセスリスト",
+  "page-roadmap-glamsterdam-bal-item-1": "個々のトランザクションではなく、ブロックレベルで必須アクセスリストを導入します。",
+  "page-roadmap-glamsterdam-bal-item-2": "依存関係を事前にマッピングすることで、同期、並列実行、並列ディスク読み取りを高速化します。",
+  "page-roadmap-glamsterdam-bal-item-3": "ステートフルなアプリのガス代を削減し、ガス代の予測可能性を向上させます",
+  "page-roadmap-hegota-discussed-title": "ヘゴタで計画中",
+  "page-roadmap-hegota-discussed-item-1": "現在、提案について議論中です。"
+}\n

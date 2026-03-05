@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "Kullanıcı deneyimini iyileştirmek için mobil cihazlarda güvenli yerleşim bölgeleri desteği",
   "page-roadmap-fusaka-additional-item-2": "Blob ücret piyasası iyileştirmeleri",
   "page-roadmap-fusaka-additional-item-3": "Doğrulayıcı verimliliğinde ve ağ performansında daha fazla iyileştirme",
-  "page-roadmap-glamsterdam-discussed-title": "Glamsterdam için planlandı",
-  "page-roadmap-glamsterdam-discussed-item-1": "Resmi Teklifçi-Oluşturucu Ayrımı (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "Blok Düzeyinde Erişim Listeleri (BAL'ler)"
-}
+  "page-roadmap-glamsterdam-epbs-title": "Protokol düzeyinde önerici ve geliştirici ayrımı",
+  "page-roadmap-glamsterdam-epbs-item-1": "Blok anlaşmasını işlemden ayırarak doğrulayıcıların daha fazla veri işlemesine olanak tanır ve L1'in ölçeklenmesine yardımcı olur.",
+  "page-roadmap-glamsterdam-epbs-item-2": "Doğrulayıcıların harici yazılımlara güvenmeden blok oluşturmayı güvenli bir şekilde dış kaynaklardan temin edebilmesi için yerel olarak geliştiricileri entegre eder.",
+  "page-roadmap-glamsterdam-bal-title": "Blok düzeyinde erişim listeleri",
+  "page-roadmap-glamsterdam-bal-item-1": "Bireysel işlemler yerine blok düzeyinde zorunlu erişim listeleri sunar",
+  "page-roadmap-glamsterdam-bal-item-2": "Daha hızlı eşitlemeler, paralel yürütme ve paralel disk okumaları için bağımlılıkları önceden eşler",
+  "page-roadmap-glamsterdam-bal-item-3": "Durum bilgisi yoğun uygulamalar için gaz maliyetini düşürür ve gaz maliyeti öngörülebilirliğini artırır.",
+  "page-roadmap-hegota-discussed-title": "Hegotá için planlandı",
+  "page-roadmap-hegota-discussed-item-1": "Teklifler şu anda görüşülüyor"
+}\n

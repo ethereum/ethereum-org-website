@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "Підтримка безпечних анклавів на мобільних пристроях для покращення UX",
   "page-roadmap-fusaka-additional-item-2": "Покращення ринку комісій за блоби",
   "page-roadmap-fusaka-additional-item-3": "Подальші покращення ефективності валідаторів і продуктивності мережі",
-  "page-roadmap-glamsterdam-discussed-title": "Заплановано на Glamsterdam",
-  "page-roadmap-glamsterdam-discussed-item-1": "Закріплене розділення пропонента та конструктора (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "Списки доступу на рівні блоків (BAL)"
-}
+  "page-roadmap-glamsterdam-epbs-title": "Нативне розділення ролей пропонента та розробника",
+  "page-roadmap-glamsterdam-epbs-item-1": "Розділяє угоду про блоки та обробку, допомагаючи L1 масштабуватися, дозволяючи валідаторам обробляти більше даних.",
+  "page-roadmap-glamsterdam-epbs-item-2": "Нативна інтеграція з розробниками дозволяє валідаторам безпечно передавати складання блоків на аутсорсинг, не довіряючи зовнішньому програмному забезпеченню.",
+  "page-roadmap-glamsterdam-bal-title": "Списки контролю доступу на рівні блоків",
+  "page-roadmap-glamsterdam-bal-item-1": "Впроваджує обов'язкові списки доступу на рівні блоків, а не для окремих транзакцій.",
+  "page-roadmap-glamsterdam-bal-item-2": "Заздалегідь визначає залежності для швидшої синхронізації, паралельного виконання та паралельного зчитування з диска.",
+  "page-roadmap-glamsterdam-bal-item-3": "Знижує витрати газу для додатків, що інтенсивно використовують стан, і покращує передбачуваність витрат газу.",
+  "page-roadmap-hegota-discussed-title": "Заплановано для Hegotá",
+  "page-roadmap-hegota-discussed-item-1": "Пропозиції наразі обговорюються"
+}\n

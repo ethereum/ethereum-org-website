@@ -95,7 +95,13 @@
   "page-roadmap-fusaka-additional-item-1": "在移动设备上支持安全隔离区，以提升用户体验",
   "page-roadmap-fusaka-additional-item-2": "Blob 费用市场改进",
   "page-roadmap-fusaka-additional-item-3": "进一步提升验证器效率和网络性能",
-  "page-roadmap-glamsterdam-discussed-title": "为 Glamsterdam 安排的议题",
-  "page-roadmap-glamsterdam-discussed-item-1": "原生提议者-构建者分离 (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "区块级访问列表 (BAL)"
-}
+  "page-roadmap-glamsterdam-epbs-title": "原生的提议者与构建者分离",
+  "page-roadmap-glamsterdam-epbs-item-1": "将区块协议与处理分离，允许验证者处理更多数据，从而帮助 L1 扩展。",
+  "page-roadmap-glamsterdam-epbs-item-2": "原生集成构建者，因此验证者可以安全地将区块组装外包，而无需信任外部软件。",
+  "page-roadmap-glamsterdam-bal-title": "块级访问列表",
+  "page-roadmap-glamsterdam-bal-item-1": "在区块层面引入强制性访问列表，而不是针对单个交易。",
+  "page-roadmap-glamsterdam-bal-item-2": "预先映射依赖项，以实现更快的同步、并行执行和并行磁盘读取。",
+  "page-roadmap-glamsterdam-bal-item-3": "降低状态密集型应用的 Gas 消耗，并提高 Gas 成本的可预测性。",
+  "page-roadmap-hegota-discussed-title": "为 Hegotá 规划的",
+  "page-roadmap-hegota-discussed-item-1": "目前正在讨论各项提案。"
+}\n

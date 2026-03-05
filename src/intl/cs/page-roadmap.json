@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "Podpora bezpečných enkláv na mobilních zařízeních pro zlepšení UX",
   "page-roadmap-fusaka-additional-item-2": "Vylepšení trhu s poplatky za bloby",
   "page-roadmap-fusaka-additional-item-3": "Další vylepšení efektivity validátorů a výkonu sítě",
-  "page-roadmap-glamsterdam-discussed-title": "Plánováno pro Glamsterdam",
-  "page-roadmap-glamsterdam-discussed-item-1": "Enshrined Proposer-Builder Separation (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "Block-level Access Lists (BALs)"
-}
+  "page-roadmap-glamsterdam-epbs-title": "Nativní oddělení navrhovatele a tvůrce",
+  "page-roadmap-glamsterdam-epbs-item-1": "Odděluje dohodu o blocích od zpracování, což pomáhá škálovat L1 tím, že umožňuje validátorům zpracovávat více dat.",
+  "page-roadmap-glamsterdam-epbs-item-2": "Nativně integruje sestavovatele, takže validátoři mohou bezpečně zadávat sestavování bloků externím subjektům, aniž by museli důvěřovat externímu softwaru.",
+  "page-roadmap-glamsterdam-bal-title": "Seznamy přístupů na úrovni bloků",
+  "page-roadmap-glamsterdam-bal-item-1": "Zavádí povinné seznamy přístupu na úrovni bloků, nikoli pro jednotlivé transakce.",
+  "page-roadmap-glamsterdam-bal-item-2": "Předem mapuje závislosti pro rychlejší synchronizaci, paralelní spouštění a paralelní čtení z disku.",
+  "page-roadmap-glamsterdam-bal-item-3": "Snižuje poplatky za plyn pro aplikace s vysokou státní podporou a zlepšuje předvídatelnost nákladů na plyn.",
+  "page-roadmap-hegota-discussed-title": "Plánováno pro Hegotá",
+  "page-roadmap-hegota-discussed-item-1": "Návrhy jsou v současné době předmětem diskuse."
+}\n
