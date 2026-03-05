@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server"
 
 import type { AppData } from "@/lib/types"
+import { AppCategoryEnum } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import InlineLink from "@/components/ui/Link"
@@ -9,22 +10,9 @@ import { slugify } from "@/lib/utils/url"
 
 import { getAppsData } from "@/lib/data"
 
-const CATEGORY_KEY_MAP: Record<string, string> = {
-  gaming: "Gaming",
-  defi: "DeFi",
-  collectibles: "Collectibles",
-  social: "Social",
-  bridge: "Bridge",
-  productivity: "Productivity",
-  privacy: "Privacy",
-  dao: "DAO",
-}
-
-function getSubcategoryKey(tag: string): string {
-  return `subcategory-${tag
-    .toLowerCase()
-    .replace(/\s*&\s*/g, "-")
-    .replace(/\s+/g, "-")}`
+function getCategoryEnum(category: string): AppCategoryEnum | undefined {
+  const slug = category.toLowerCase()
+  return Object.values(AppCategoryEnum).find((val) => slugify(val) === slug)
 }
 
 interface CategoryAppsGridProps {
@@ -32,9 +20,9 @@ interface CategoryAppsGridProps {
 }
 
 const CategoryAppsGrid = async ({ category }: CategoryAppsGridProps) => {
-  const categoryKey = CATEGORY_KEY_MAP[category.toLowerCase()]
+  const categoryEnum = getCategoryEnum(category)
 
-  if (!categoryKey) {
+  if (!categoryEnum) {
     console.warn(`Unknown app category: ${category}`)
     return null
   }
@@ -42,7 +30,7 @@ const CategoryAppsGrid = async ({ category }: CategoryAppsGridProps) => {
   let apps: AppData[] = []
   try {
     const appsData = await getAppsData()
-    apps = (appsData?.[categoryKey] ?? []) as AppData[]
+    apps = (appsData?.[categoryEnum] ?? []) as AppData[]
   } catch (error) {
     console.warn(`Failed to fetch ${category} apps:`, error)
   }
@@ -66,7 +54,7 @@ const CategoryAppsGrid = async ({ category }: CategoryAppsGridProps) => {
     translatedApps = apps.map((app) => ({
       ...app,
       subCategory: app.subCategory.map((tag) => {
-        const key = getSubcategoryKey(tag)
+        const key = `subcategory-${slugify(tag)}`
         return t.has(key) ? t(key) : tag
       }),
     })) as AppData[]

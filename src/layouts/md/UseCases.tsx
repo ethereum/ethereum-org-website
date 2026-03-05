@@ -6,7 +6,6 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
 import CategoryAppsGrid from "@/components/Content/apps/CategoryAppsGrid"
-import GamingAppsGrid from "@/components/Content/gaming/GamingAppsGrid"
 import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
 import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import TabbedSection from "@/components/Content/restaking/RestakingTab"
@@ -32,7 +31,6 @@ export const useCasesComponents = {
   AiAgentProductLists,
   BuildYourOwnAIAgent,
   CategoryAppsGrid,
-  GamingAppsGrid,
   RestakingList,
   TabbedSection,
   PredictionMarketLists,
