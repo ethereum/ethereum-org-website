@@ -17,9 +17,10 @@ function getCategoryEnum(category: string): AppCategoryEnum | undefined {
 
 interface CategoryAppsGridProps {
   category: string
+  limit?: number
 }
 
-const CategoryAppsGrid = async ({ category }: CategoryAppsGridProps) => {
+const CategoryAppsGrid = async ({ category, limit }: CategoryAppsGridProps) => {
   const categoryEnum = getCategoryEnum(category)
 
   if (!categoryEnum) {
@@ -64,7 +65,7 @@ const CategoryAppsGrid = async ({ category }: CategoryAppsGridProps) => {
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {translatedApps.map((app) => (
+      {translatedApps.slice(0, limit).map((app) => (
         <AppCard
           key={app.name}
           name={app.name}
