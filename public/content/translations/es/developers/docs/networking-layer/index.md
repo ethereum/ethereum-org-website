@@ -146,7 +146,7 @@ A continuación se muestra un resumen del flujo de control, con la pila de red r
 
 Una vez que el bloque ha sido certificado por suficientes validadores, se añade a la cabeza de la cadena, se justifica y finalmente se finaliza.
 
-![](cons_client_net_layer.png)\n![](exe_client_net_layer.png)
+![Diagrama de la capa de red del cliente de consenso de Ethereum](cons_client_net_layer.png)\n![Diagrama de la capa de red del cliente de ejecución de Ethereum](exe_client_net_layer.png)
 
 Esquema de la capa de red para los clientes de consenso y de ejecución, de [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 

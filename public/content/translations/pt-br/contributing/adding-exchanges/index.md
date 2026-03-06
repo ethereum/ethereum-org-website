@@ -1,10 +1,10 @@
 ---
-title: Adicionar câmbios
-description: A política que usamos ao adicionar câmbios ao ethereum.org
+title: "Adicionar câmbios"
+description: "A política que usamos ao adicionar câmbios ao ethereum.org"
 lang: pt-br
 ---
 
-# Adicionar câmbios ao Ethereum {#adding-ethereum-exchanges}
+# Adicionando corretoras Ethereum {#adding-ethereum-exchanges}
 
 Qualquer pessoa pode sugerir novos câmbios no ethereum.org.
 
@@ -16,7 +16,7 @@ Esta página permite ao usuário inserir onde mora e ver quais câmbios pode usa
 
 Devido a esse contexto, precisaremos de algumas informações específicas quando você sugerir um câmbio.
 
-**NOTA:** Se você quiser adicionar um câmbio descentralizado, confira nossa [política para adicionar carteiras e dapps](/contributing/adding-products/).
+**OBSERVAÇÃO:** Se você quiser listar uma corretora descentralizada, dê uma olhada em nossa [política para listar carteiras e dapps](/contributing/adding-products/).
 
 ## Do que precisamos {#what-we-need}
 
@@ -25,16 +25,16 @@ Devido a esse contexto, precisaremos de algumas informações específicas quand
 - Prova de que a agência de câmbio é uma empresa comercial legítima
 - Qualquer informação adicional que você tenha: podem ser informações sobre a empresa, como anos de operação, apoio financeiro, etc.
 
-Precisamos dessas informações para poder [ajudar usuários a encontrar uma agência de câmbio que possam usar](/get-eth/#country-picker).
+Precisamos dessas informações para que possamos, com precisão, [ajudar os usuários a encontrar uma corretora que possam usar](/get-eth/#country-picker).
 
 E para que o ethereum.org possa confiar na legitimidade e segurança dos serviços fornecidos pela agência de câmbio.
 
 ---
 
-## Adicionar sua agência de câmbio {#add-exchange}
+## Adicione sua corretora {#add-exchange}
 
 Se você deseja adicionar uma agência de câmbio no ethereum.org, crie um tíquete no GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-  Criar tíquete
+Abrir chamado
 </ButtonLink>

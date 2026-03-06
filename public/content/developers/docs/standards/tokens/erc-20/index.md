@@ -195,4 +195,3 @@ Some alternative standards have come out of this issue such as [ERC-223](/develo
 - [ERC-20 with Safety Rails](/developers/tutorials/erc20-with-safety-rails/) _– How to add safeguards to ERC-20 tokens to help users avoid common mistakes._
 - [Sending Tokens Using ethers.js](/developers/tutorials/send-token-ethersjs/) _– A beginner-friendly guide to transferring ERC-20 tokens using ethers.js._
 - [Some tricks used by scam tokens and how to detect them](/developers/tutorials/scam-token-tricks/) _– A deep-dive into scam ERC-20 token patterns and how to identify them._
-- [Testing ERC-20 tokens with Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/) _– How to write and run tests for ERC-20 smart contracts using Waffle._

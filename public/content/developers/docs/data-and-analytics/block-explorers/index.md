@@ -11,6 +11,14 @@ Block explorers are your portal to Ethereum's data. You can use them to see real
 
 You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [an intro to Ethereum](/developers/docs/intro-to-ethereum/).
 
+## Open source tools {#open-source-tools}
+
+- [3xpl](https://3xpl.com/ethereum) - An ad-free Ethereum explorer that allows downloading its datasets (open-core: core modules are open source)
+- [Beaconcha.in](https://beaconcha.in/)
+- [Blockscout](https://eth.blockscout.com/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
+- [Otterscan](https://otterscan.io/)
+
 ## Services {#services}
 
 - [Blockchair](https://blockchair.com/ethereum) - Private Ethereum explorer. Also for sorting and filtering (mempool) data. Available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi
@@ -22,14 +30,6 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-
-## Open source tools {#open-source-tools}
-
-- [3xpl](https://3xpl.com/ethereum) - An ad-free Ethereum explorer that allows downloading its datasets (open-core: core modules are open source)
-- [Beaconcha.in](https://beaconcha.in/)
-- [Blockscout](https://eth.blockscout.com/)
-- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
-- [Otterscan](https://otterscan.io/)
 
 ## Data {#data}
 
