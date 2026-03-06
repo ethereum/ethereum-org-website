@@ -40,6 +40,7 @@
 | 29 | Broken markdown link: `}` instead of `]` | pt-br #17122 | `[Mais em staking withdrawals}(/staking/withdrawals/)` -- Crowdin replaces closing `]` with `}`, breaking the link | High -- breaks navigation |
 | 30 | TNF ticker transposition for NFT | pt-br #17122 | `TNF` instead of `NFT` -- 37 occurrences across pt-br files; pt-br uses `NFT` (356 occurrences) confirming TNF is a Crowdin error | Medium -- wrong acronym |
 | 31 | Translated inline code content with orphaned backticks | pt-br #17122 | EN: `` pass `wallet`, the compiled `` -> PT: `passar a carteira \`, o arquivo` -- Crowdin translates content inside backticks, breaking the code span and leaving orphaned backticks | High -- broken inline code, stray backtick in prose |
+| 32 | False-positive "Exposed MDX tag" for PascalCase components | PR #17702 | `<DocLink href="...">` flagged as exposed tag -- 384 false warnings across 72 files; DocLink is registered MDX component in MdComponents | Low -- false warning, no build impact |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
@@ -71,7 +72,7 @@ These patterns are covered by existing fix functions and should have regression 
 - **Missing link parentheses** (`fixMissingLinkParentheses`) — `[text]https://url` → `[text](https://url)` (ko PR #17166)
 - **Missing closing `</em>`** (`fixMissingClosingEmTag`) — `<em>text.</li>` → `<em>text.</em></li>` (ko PR #17166)
 - **Image path `./` corruption** (`fixImagePathDotSlash`) — `](/.file.png)` → `](./file.png)` (ko PR #17166)
-- **Exposed MDX tags warning** (`warnExposedMdxTags`) — bare `<tag>` or `</>` outside backticks (ko PR #17166)
+- **Exposed MDX tags warning** (`warnExposedMdxTags`) — bare `<tag>` or `</>` outside backticks (ko PR #17166); PascalCase tags (`<DocLink>`, etc.) are automatically treated as safe MDX components and skipped (PR #17702)
 - **Inner quotes in JSX attributes** (`fixInnerQuotesInJsxAttributes`) — `title="text: "inner""` → `title="text: &quot;inner&quot;"` (ko PR #17166)
 - **Orphan tag idempotency** (`removeOrphanedClosingTags`) — fenced-only split + inline-stripped counting prevents false orphan detection when `<em>` spans inline code (ko PR #17166)
 - **Tilde strikethrough escape** (`escapeTildeStrikethrough`) — `100만~200만` → `100만\~200만` prevents remark-gfm `<del>` (ko PR #17166)

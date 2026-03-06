@@ -297,6 +297,28 @@ test.describe("Warning Functions", () => {
       const warnings = warnExposedMdxTags(content)
       expect(warnings).toHaveLength(0)
     })
+
+    test("no warning on DocLink (registered MDX component)", () => {
+      const content = [
+        '<DocLink href="/guides/how-to-use-a-wallet/">',
+        "  How to use a wallet",
+        "</DocLink>",
+      ].join("\n")
+      const warnings = warnExposedMdxTags(content)
+      expect(warnings).toHaveLength(0)
+    })
+
+    test("no warning on any PascalCase tag (future-proof)", () => {
+      const content = '<FutureComponent prop="value">content</FutureComponent>'
+      const warnings = warnExposedMdxTags(content)
+      expect(warnings).toHaveLength(0)
+    })
+
+    test("still warns on lowercase non-HTML tags outside backticks", () => {
+      const content = "The <contract>.<method>() pattern"
+      const warnings = warnExposedMdxTags(content)
+      expect(warnings.length).toBeGreaterThan(0)
+    })
   })
 
   test.describe("warnTranslatedInlineCode", () => {
