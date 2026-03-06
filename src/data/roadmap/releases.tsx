@@ -179,6 +179,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     releaseName: "Glamsterdam",
     plannedReleaseYear: "2026",
     displayDate: "H1 2026",
+    href: "/roadmap/glamsterdam/",
     content: (
       <div>
         <p className="font-bold">{t("page-roadmap-glamsterdam-epbs-title")}</p>
