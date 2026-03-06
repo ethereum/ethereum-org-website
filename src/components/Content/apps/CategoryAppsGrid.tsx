@@ -61,9 +61,8 @@ const CategoryAppsGrid = async ({
     // Translation lookup failed; render raw tags
   }
 
-  const displayApps = translatedApps.slice(0, limit)
-
   if (hideFilter) {
+    const displayApps = translatedApps.slice(0, limit)
     return (
       <div className={cn("grid grid-cols-fill-4 gap-6 md:gap-12", className)}>
         {displayApps.map((app) => (
@@ -82,7 +81,7 @@ const CategoryAppsGrid = async ({
 
   return (
     <div className={className}>
-      <FilterableCategoryAppsGrid apps={displayApps} />
+      <FilterableCategoryAppsGrid apps={translatedApps} limit={limit} />
     </div>
   )
 }

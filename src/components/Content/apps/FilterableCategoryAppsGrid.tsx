@@ -1,16 +1,28 @@
 "use client"
 
 import { useMemo, useState } from "react"
+import { useTranslations } from "next-intl"
 
 import type { AppData } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import FilterBar from "@/components/FilterBar"
+import { Button } from "@/components/ui/buttons/Button"
 
 import { slugify } from "@/lib/utils/url"
 
-const FilterableCategoryAppsGrid = ({ apps }: { apps: AppData[] }) => {
+type FilterableCategoryAppsGridProps = {
+  apps: AppData[]
+  limit?: number
+}
+
+const FilterableCategoryAppsGrid = ({
+  apps,
+  limit,
+}: FilterableCategoryAppsGridProps) => {
+  const t = useTranslations("common")
   const [filterBy, setFilterBy] = useState<string>()
+  const [expanded, setExpanded] = useState(false)
 
   const subCategories = useMemo(
     () => [...new Set(apps.flatMap((app) => app.subCategory))],
@@ -26,6 +38,10 @@ const FilterableCategoryAppsGrid = ({ apps }: { apps: AppData[] }) => {
     [apps, filterBy]
   )
 
+  const isLimited =
+    !filterBy && !expanded && limit && limit < filteredApps.length
+  const displayApps = isLimited ? filteredApps.slice(0, limit) : filteredApps
+
   const getSubCategoryCount = (subCategory: string) =>
     apps.filter((app) => app.subCategory.includes(subCategory)).length
 
@@ -40,7 +56,7 @@ const FilterableCategoryAppsGrid = ({ apps }: { apps: AppData[] }) => {
         items={filterItems}
         value={filterBy}
         onValueChange={setFilterBy}
-        count={filteredApps.length}
+        count={displayApps.length}
         totalCount={apps.length}
         matomoEvent={{
           eventCategory: "content_apps_grid",
@@ -49,7 +65,7 @@ const FilterableCategoryAppsGrid = ({ apps }: { apps: AppData[] }) => {
         }}
       />
       <div className="grid grid-cols-fill-4 gap-6 md:gap-12">
-        {filteredApps.map((app) => (
+        {displayApps.map((app) => (
           <AppCard
             key={app.name}
             name={app.name}
@@ -60,6 +76,15 @@ const FilterableCategoryAppsGrid = ({ apps }: { apps: AppData[] }) => {
           />
         ))}
       </div>
+      {!filterBy && limit && limit < filteredApps.length && (
+        <Button
+          variant="outline"
+          className="self-center"
+          onClick={() => setExpanded((prev) => !prev)}
+        >
+          {expanded ? t("show-less") : t("show-all")}
+        </Button>
+      )}
     </div>
   )
 }
