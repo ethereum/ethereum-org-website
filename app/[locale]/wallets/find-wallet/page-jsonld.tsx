@@ -38,7 +38,7 @@ export default async function FindWalletPageJsonLD({
     if (wallet.linux) os.push("Linux")
     if (wallet.windows) os.push("Windows")
     if (wallet.macOS) os.push("macOS")
-    if (wallet.chromium) os.push("Chrome OS")
+    if (wallet.chromium) os.push("Chromium (Extension)")
     if (wallet.firefox) os.push("Firefox")
     if (wallet.hardware) os.push("Hardware")
     return os
