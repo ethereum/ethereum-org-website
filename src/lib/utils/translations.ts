@@ -92,6 +92,7 @@ const GLOSSARY_TOOLTIP_PREFIXES: string[] = [
   "/eth/",
   "/wallets/",
   "/gas/",
+  "/roadmap/",
 ]
 
 const QUIZZES_PREFIXES: string[] = [
