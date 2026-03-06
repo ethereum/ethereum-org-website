@@ -4,8 +4,8 @@ import type { AppData } from "@/lib/types"
 import { AppCategoryEnum } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
-import InlineLink from "@/components/ui/Link"
 
+import { cn } from "@/lib/utils/cn"
 import { slugify } from "@/lib/utils/url"
 
 import { getAppsData } from "@/lib/data"
@@ -18,9 +18,14 @@ function getCategoryEnum(category: string): AppCategoryEnum | undefined {
 interface CategoryAppsGridProps {
   category: string
   limit?: number
+  className?: string
 }
 
-const CategoryAppsGrid = async ({ category, limit }: CategoryAppsGridProps) => {
+const CategoryAppsGrid = async ({
+  category,
+  limit,
+  className,
+}: CategoryAppsGridProps) => {
   const categoryEnum = getCategoryEnum(category)
 
   if (!categoryEnum) {
@@ -36,17 +41,7 @@ const CategoryAppsGrid = async ({ category, limit }: CategoryAppsGridProps) => {
     console.warn(`Failed to fetch ${category} apps:`, error)
   }
 
-  if (!apps || apps.length === 0) {
-    return (
-      <p className="text-body text-body-medium">
-        Apps are currently being loaded. In the meantime,{" "}
-        <InlineLink href={`/apps/categories/${category.toLowerCase()}`}>
-          browse all {category.toLowerCase()} apps
-        </InlineLink>
-        .
-      </p>
-    )
-  }
+  if (!apps || apps.length === 0) return null
 
   // Translate subcategory tags, falling back to the raw string
   let translatedApps = apps
@@ -64,7 +59,7 @@ const CategoryAppsGrid = async ({ category, limit }: CategoryAppsGridProps) => {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className={cn("grid grid-cols-fill-4 gap-6 md:gap-12", className)}>
       {translatedApps.slice(0, limit).map((app) => (
         <AppCard
           key={app.name}
