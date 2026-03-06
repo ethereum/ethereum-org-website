@@ -22,8 +22,10 @@ function getBlobs() {
     throw new Error("Missing SITE_ID or NETLIFY_BLOBS_TOKEN")
   }
 
+  const storeName = process.env.BLOB_STORE_NAME || "data-layer"
+
   blobStore = getStore({
-    name: "data-layer",
+    name: storeName,
     siteID,
     token,
   } as Parameters<typeof getStore>[0])
