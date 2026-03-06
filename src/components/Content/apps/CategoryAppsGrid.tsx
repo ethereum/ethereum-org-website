@@ -4,6 +4,7 @@ import type { AppData } from "@/lib/types"
 import { AppCategoryEnum } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
+import FilterableCategoryAppsGrid from "@/components/Content/apps/FilterableCategoryAppsGrid"
 
 import { cn } from "@/lib/utils/cn"
 import { slugify } from "@/lib/utils/url"
@@ -18,12 +19,14 @@ function getCategoryEnum(category: string): AppCategoryEnum | undefined {
 interface CategoryAppsGridProps {
   category: string
   limit?: number
+  hideFilter?: boolean
   className?: string
 }
 
 const CategoryAppsGrid = async ({
   category,
   limit,
+  hideFilter,
   className,
 }: CategoryAppsGridProps) => {
   const categoryEnum = getCategoryEnum(category)
@@ -58,18 +61,28 @@ const CategoryAppsGrid = async ({
     // Translation lookup failed; render raw tags
   }
 
+  const displayApps = translatedApps.slice(0, limit)
+
+  if (hideFilter) {
+    return (
+      <div className={cn("grid grid-cols-fill-4 gap-6 md:gap-12", className)}>
+        {displayApps.map((app) => (
+          <AppCard
+            key={app.name}
+            name={app.name}
+            description={app.description}
+            thumbnail={app.image}
+            tags={app.subCategory}
+            href={`/apps/${slugify(app.name)}`}
+          />
+        ))}
+      </div>
+    )
+  }
+
   return (
-    <div className={cn("grid grid-cols-fill-4 gap-6 md:gap-12", className)}>
-      {translatedApps.slice(0, limit).map((app) => (
-        <AppCard
-          key={app.name}
-          name={app.name}
-          description={app.description}
-          thumbnail={app.image}
-          tags={app.subCategory}
-          href={`/apps/${slugify(app.name)}`}
-        />
-      ))}
+    <div className={className}>
+      <FilterableCategoryAppsGrid apps={displayApps} />
     </div>
   )
 }
