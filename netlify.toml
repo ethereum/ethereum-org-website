@@ -63,8 +63,8 @@
   [context.staging.headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
-# Set NEXT_PUBLIC_SITE_URL per branch so canonical URLs and noindex
-# meta tags resolve correctly at build time.
+# Override SITE_URL for named branches with custom subdomains so canonical
+# URLs and OG metadata use the custom domain instead of *.netlify.app.
 [context.dev.environment]
   NEXT_PUBLIC_SITE_URL = "https://dev.ethereum.org"
 
