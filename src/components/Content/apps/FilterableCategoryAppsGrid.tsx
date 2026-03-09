@@ -9,6 +9,7 @@ import AppCard from "@/components/AppCard"
 import FilterBar from "@/components/FilterBar"
 import { Button } from "@/components/ui/buttons/Button"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { slugify } from "@/lib/utils/url"
 
 type FilterableCategoryAppsGridProps = {
@@ -73,6 +74,11 @@ const FilterableCategoryAppsGrid = ({
             thumbnail={app.image}
             tags={app.subCategory}
             href={`/apps/${slugify(app.name)}`}
+            customEventOptions={{
+              eventCategory: "content_apps_grid",
+              eventAction: "app_card_click",
+              eventName: app.name,
+            }}
           />
         ))}
       </div>
@@ -80,7 +86,14 @@ const FilterableCategoryAppsGrid = ({
         <Button
           variant="outline"
           className="self-center"
-          onClick={() => setExpanded((prev) => !prev)}
+          onClick={() => {
+            trackCustomEvent({
+              eventCategory: "content_apps_grid",
+              eventAction: !expanded ? "show_all" : "show_less",
+              eventName: "show_more_less_toggle",
+            })
+            setExpanded((prev) => !prev)
+          }}
         >
           {expanded ? t("show-less") : t("show-all")}
         </Button>
