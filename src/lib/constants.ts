@@ -32,12 +32,8 @@ export const SITE_URL =
   process.env.URL || // Primary site URL
   "https://ethereum.org"
 
-export let IS_PRODUCTION_DEPLOY = false
-try {
-  IS_PRODUCTION_DEPLOY = new URL(SITE_URL).hostname === "ethereum.org"
-} catch {
-  // Invalid SITE_URL
-}
+export const IS_PRODUCTION_DEPLOY =
+  process.env.NEXT_PUBLIC_CONTEXT === "production"
 export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
 export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
 export const GITHUB_REPO_URL =
