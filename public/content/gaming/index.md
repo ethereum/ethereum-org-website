@@ -21,6 +21,17 @@ Gaming on Ethereum comes in various forms, from games that use the blockchain fo
 
 The Ethereum ecosystem also includes [Layer 2 blockchains (L2s)](/layer-2/learn/) that inherit the security guarantees of Ethereum mainnet while extending Ethereum's scale and supporting specialized use cases. L2 networks can provide additional benefits for onchain games and their communities, because L2s can offer faster confirmation times, higher processing volume, and lower fees, making gameplay faster and more accessible.
 
+## Ethereum's gaming ecosystem overview {#ethereums-gaming-ecosystem-overview}
+
+- **Layer 2s:** With cheaper fees and short transaction times, layer 2s became a common place for games to launch on. Top layer 2s with games include: Ronin, Starknet, Immutable, Base, Abstract
+- **Infrastructure:** To make developing onchain games easier, there exists a number of tool stacks that can be used with your own project: Cartridge, Dojo, Proof of Play, Thirdweb
+- **Gaming guilds:** Players who want to be a part of a gaming community can join gaming guilds to strategize and collaborate with other players in the guild. Notable ones include: YGG, WASD, LegacyGG, Gaming Grid, OLAGG, etc.
+- **Games:** Ethereum games come in different shapes and sizes, spanning everything from _Realms: Eternum's_ real-time strategy, to _Axie: Atia's Legacy_ MMO, _Fableborn's_ action RPG, and even gamified DeFi platforms like _Ponziland_. With new games launching regularly across different chains, there's always something fresh to explore.
+
+## Games to try {#games}
+
+<CategoryAppsGrid category="gaming" />
+
 ## Features of onchain games {#features-of-onchain-games}
 
 1. **Secure way of exchanging digital goods**
@@ -62,17 +73,6 @@ Non-fungible tokens (NFTs) can represent game elements such as characters, items
 ### Smart contracts {#smart-contracts}
 
 Fully onchain games use smart contracts to create transparent and immutable game logic. In such cases, the blockchain serves as the game's backend, replacing the need to host its logic and data storage on a centralized server. (Note: not all web3 games are fully onchain games. As mentioned before, it depends on a case by case basis how much of the game's data and logic is stored onchain, on another DA or on a classic server.)
-
-## Ethereum's gaming ecosystem overview {#ethereums-gaming-ecosystem-overview}
-
-- **Layer 2s:** With cheaper fees and short transaction times, layer 2s became a common place for games to launch on. Top layer 2s with games include: Ronin, Starknet, Immutable, Base, Abstract
-- **Infrastructure:** To make developing onchain games easier, there exists a number of tool stacks that can be used with your own project: Cartridge, Dojo, Proof of Play, Thirdweb
-- **Gaming guilds:** Players who want to be a part of a gaming community can join gaming guilds to strategize and collaborate with other players in the guild. Notable ones include: YGG, WASD, LegacyGG, Gaming Grid, OLAGG, etc.
-- **Games:** Ethereum games come in different shapes and sizes, spanning everything from _Realms: Eternum's_ real-time strategy, to _Axie: Atia's Legacy_ MMO, _Fableborn's_ action RPG, and even gamified DeFi platforms like _Ponziland_. With new games launching regularly across different chains, there's always something fresh to explore.
-
-## Games {#games}
-
-<CategoryAppsGrid category="gaming" />
 
 ## Evolution of player UX improvements {#evolution-of-player-ux-improvements}
 
