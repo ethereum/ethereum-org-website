@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { AppData } from "@/lib/types"
+import type { AppCategory, AppData } from "@/lib/types"
 import { AppCategoryEnum } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
@@ -16,16 +16,26 @@ function getCategoryEnum(category: string): AppCategoryEnum | undefined {
   return Object.values(AppCategoryEnum).find((val) => slugify(val) === slug)
 }
 
+/**
+ * Props for the CategoryAppsGrid component.
+ */
 interface CategoryAppsGridProps {
-  category: string
-  limit?: number
+  /** The app category slug (e.g. "defi", "gaming"). Derived from AppCategoryEnum values. */
+  category: Lowercase<AppCategory>
+  /**
+   * Maximum number of apps to display. Defaults to 9.
+   * Pass `Infinity` (or `"Infinity"`) to show all apps without a limit.
+   * Accepts a number or a numeric string (e.g. from MDX props).
+   */
+  limit?: number | string
+  /** When true, renders a static grid without the subcategory filter UI. */
   hideFilter?: boolean
   className?: string
 }
 
 const CategoryAppsGrid = async ({
   category,
-  limit,
+  limit = 9,
   hideFilter,
   className,
 }: CategoryAppsGridProps) => {
@@ -62,10 +72,9 @@ const CategoryAppsGrid = async ({
   }
 
   if (hideFilter) {
-    const displayApps = translatedApps.slice(0, limit)
     return (
       <div className={cn("grid grid-cols-fill-4 gap-6 md:gap-12", className)}>
-        {displayApps.map((app) => (
+        {translatedApps.slice(0, +limit).map((app) => (
           <AppCard
             key={app.name}
             name={app.name}
@@ -81,7 +90,7 @@ const CategoryAppsGrid = async ({
 
   return (
     <div className={className}>
-      <FilterableCategoryAppsGrid apps={translatedApps} limit={limit} />
+      <FilterableCategoryAppsGrid apps={translatedApps} limit={+limit} />
     </div>
   )
 }
