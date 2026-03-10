@@ -71,7 +71,7 @@ ePBS reduces dependencies on extra third-party software and allows Ethereum to s
 
 **Resources**: [EIP-7732 technical specification](https://eips.ethereum.org/EIPS/eip-7732)
 
-### Headliner proposal: Block-level access lists (BALs) {#bals}
+### Headliner proposal: Block-Level Access Lists (BALs) {#bals}
 
 - Eliminates sequential processing bottlenecks by providing an upfront map of all transaction dependencies, setting the stage for validators to process many transactions in parallel instead of one by one
 - Allows nodes to update their records by reading the final results without needing to replay every transaction (executionless sync), making it much faster to sync a node to the network
@@ -79,7 +79,7 @@ ePBS reduces dependencies on extra third-party software and allows Ethereum to s
 
 Today’s Ethereum is like a single-lane road; because the network doesn’t know what data a transaction will need or change (like which accounts a transaction will touch) until a transaction has been run, validators must process transactions one by one in a strict, sequential line. If they tried to process the transactions all at once, without knowing these dependencies, two transactions might accidentally try to change the exact same data at the same time, causing errors.
 
-**Block-level access lists (BALs, or EIP-7928)** are like a map that’s included in every block, telling the network which parts of the database will be accessed before the work begins. BALs require every block to include the hash of every account change that the transactions will touch, along with the final results of those changes (the hash record of all state accesses and post-execution values).
+**Block-Level Access Lists (BALs, or EIP-7928)** are like a map that’s included in every block, telling the network which parts of the database will be accessed before the work begins. BALs require every block to include the hash of every account change that the transactions will touch, along with the final results of those changes (the hash record of all state accesses and post-execution values).
 
 Because they give instant visibility into which transactions don’t overlap, BALs allow nodes to perform parallel disk reads, fetching information for many transactions simultaneously. The network can safely group unrelated transactions and process them in parallel.
 
@@ -87,9 +87,9 @@ Because the BAL includes the final results of transactions (the post-execution v
 
 The parallel disk reads enabled by BALs will be a significant step toward a future where Ethereum can process many transactions at once, significantly increasing the network’s speed.
 
-#### eth/71 block access list exchange {#bale}
+#### eth/71 Block Access List Exchange {#bale}
 
-Block access list exchange (eth/71 or EIP-8159) is the direct networking companion to block-level access lists. While BALs unlock parallel execution, eth/71 upgrades the peer-to-peer protocol to allow nodes to actually share these lists over the network. Implementing the block access list exchange will enable faster syncing and allow nodes to perform executionless state updates.
+Block Access List Exchange (eth/71 or EIP-8159) is the direct networking companion to block-level access lists. While BALs unlock parallel execution, eth/71 upgrades the peer-to-peer protocol to allow nodes to actually share these lists over the network. Implementing the block access list exchange will enable faster syncing and allow nodes to perform executionless state updates.
 
 **Resources**:
 
@@ -186,7 +186,7 @@ Ethereum’s Glamsterdam upgrade aims to improve the user experience, enhance da
 - Lowers the base fee for transactions, reducing the overall cost of a simple native ETH payment
 - Makes smaller transfers more affordable, boosting Ethereum's viability as a routine medium of exchange
 
-All Ethereum transactions have a flat base gas fee today, regardless of how simple or complex it is to process. **Reduce intrinsic transaction gas (or EIP-2780)** proposes reducing that base fee to make a standard ETH transfer between existing accounts up to 71% cheaper.
+All Ethereum transactions have a flat base gas fee today, regardless of how simple or complex it is to process. **Reduce intrinsic transaction gas (or EIP-2780)** proposes reducing that base fee to make a standard ETH transfer between existing accounts up to **71% cheaper**.
 
 Reduce intrinsic transaction gas works by breaking down the transaction fee to reflect only the basic, essential work the computers running the network actually do, like verifying a digital signature and updating a balance. Because a basic ETH payment doesn't execute complex code or carry extra data, this proposal would reduce its fee to match its lightweight footprint.
 
@@ -196,7 +196,7 @@ Together, the EIP-2780 aims to make everyday transfers between existing accounts
 
 **Resources**: [EIP-2780 technical specification](https://eips.ethereum.org/EIPS/eip-2780)
 
-### Deterministic factory predeploy {#deterministic-factory-predeploy}
+### Deterministic Factory Predeploy {#deterministic-factory-predeploy}
 
 - Gives developers a native way to deploy applications and smart contract wallets to the exact same address across multiple chains
 - Allows users to have the same smart wallet address on multiple Layer 2 (L2) networks, reducing cognitive load, reducing confusion, and reducing the risk of accidental loss of funds
@@ -204,9 +204,9 @@ Together, the EIP-2780 aims to make everyday transfers between existing accounts
 
 If a user has a smart contract wallet today with accounts across multiple Ethereum Virtual Machine (EVM)-compatible chains, they often end up with a completely different address on different networks. This is not only confusing, but can lead to accidental loss of funds.
 
-**Deterministic factory predeploy (or EIP-7997)** gives developers a native, built-in way to deploy their decentralized applications and smart contract wallets to the exact same address across multiple EVM chains, including Ethereum Mainnet, Layer 2 (L2) networks, and more. If adopted, it would allow user to have the exact same address on every participating chain, significantly reducing cognitive load and the potential for user error.
+**Deterministic Factory Predeploy (or EIP-7997)** gives developers a native, built-in way to deploy their decentralized applications and smart contract wallets to the exact same address across multiple EVM chains, including Ethereum Mainnet, layer 2 (L2) networks, and more. If adopted, it would allow user to have the exact same address on every participating chain, significantly reducing cognitive load and the potential for user error.
 
-Deterministic factory predeploy works by permanently placing a minimal, specialized factory program at an identical location (specifically, address 0x12) on every participating EVM-compatible chain. Its goal is to provide a universal, standard factory contract that can be adopted by any EVM-compatible network; as long as an EVM chain participates and adopts this standard, developers will be able to use it to deploy their smart contracts to the exact same address on that network.
+Deterministic Factory Predeploy works by permanently placing a minimal, specialized factory program at an identical location (specifically, address 0x12) on every participating EVM-compatible chain. Its goal is to provide a universal, standard factory contract that can be adopted by any EVM-compatible network; as long as an EVM chain participates and adopts this standard, developers will be able to use it to deploy their smart contracts to the exact same address on that network.
 
 This standardization simplifies building and managing cross-chain applications for developers and the broader ecosystem. Developers no longer have to build custom, chain-specific code to link their software together across different networks, instead using this universal factory to generate the exact same address for their application everywhere. In addition, block explorers, tracking services, and wallets can more easily identify and link these applications and accounts across various chains, creating a more unified and seamless multi-chain environment for all Ethereum-based participants.
 
@@ -248,7 +248,7 @@ This change would prevent network sync failures during periods of heavy activity
 ### How can ETH be converted after the Glamsterdam hard fork? {#how-can-eth-be-converted-after-the-hardfork}
 
 - **No Action Required for Your ETH**: There is no need to convert or upgrade your ETH following the Glamsterdam upgrade. Your account balances will remain the same, and the ETH you currently hold will remain accessible in its existing form after the hard fork.
-- **Beware of Scams!** <Emoji text="⚠️" /> **anyone instructing you to "upgrade" your ETH is trying to scam you.** There is nothing you need to do in relation to this upgrade. Your assets will stay completely unaffected. Remember, staying informed is the best defense against scams.
+- **Beware of scams!** <Emoji text="⚠️" /> **anyone instructing you to "upgrade" your ETH is trying to scam you.** There is nothing you need to do in relation to this upgrade. Your assets will stay completely unaffected. Remember, staying informed is the best defense against scams.
 
 [More on recognizing and avoiding scams](/security/)
 
@@ -266,11 +266,11 @@ As with every network upgrade, make sure to update your clients to latest versio
 
 To validate your setup before Glamsterdam gets activated on Mainnet, you can run a validator on testnets. Testnet forks are also announced in the mailing list and blog.
 
-### What improvements will Glamsterdam include for L1 Scaling? {#what-improvements-will-glamsterdam-include-for-l1-scaling}
+### What improvements will Glamsterdam include for L1 scaling? {#what-improvements-will-glamsterdam-include-for-l1-scaling}
 
 The headline feature is ePBS (EIP-7732), which separates the heavy task of validating network transactions from the task of reaching consensus. This expands the data propagation window from 2 seconds to roughly 9 seconds, unblocking Ethereum's ability to safely handle much higher transaction throughput and accommodate more data blobs for Layer 2 networks.
 
-### Will Glamsterdam lower fees on Ethereum (Layer 1)? {#will-glamsterdam-lower-fees-on-ethereum-layer-1}
+### Will Glamsterdam lower fees on Ethereum (layer 1)? {#will-glamsterdam-lower-fees-on-ethereum-layer-1}
 
 Yes, Glamsterdam will most likely reduce fees for everyday users! Reduce intrinsic transaction gas (or EIP-2780) reduces the base fee for sending ETH, making ETH much cheaper to use for everyday payments.
 
@@ -280,7 +280,7 @@ In addition, for long-term sustainability, Glamsterdam introduces Block-Level Ac
 
 Existing contracts will continue to function normally after Glamsterdam. Developers will likely get several new tools and should review their gas usage:
 
-- Increase maximium contract size (or EIP-7954)allows developers to deploy larger applications, raising the maximum contract size limit from roughly 24KiB to 32KiB.
+- Increase maximum contract size (or EIP-7954) allows developers to deploy larger applications, raising the maximum contract size limit from roughly 24KiB to 32KiB.
 - Deterministic factory predeploy (or EIP-7997) introduces a universal, built-in factory contract. It allows developers to deploy their applications and smart contract wallets to the exact same address across all participating EVM chains.
 - If your app relies on complex tracing to find ETH transfers, ETH transfers and burns emit a log (or EIP-7708) will allow you to switch to using logs for more simple and reliable accounting.
 - State creation gas cost increase (or EIP-8037) and state-access gas cost update (or EIP-8038) introduce new sustainability models that will change certain contract deployment costs, as creating new accounts or permanent storage will have a dynamically-adjusting fee.
@@ -289,5 +289,5 @@ Existing contracts will continue to function normally after Glamsterdam. Develop
 
 Multiple EIPs under consideration for Glamsterdam address the performance cliff of state growth:
 
-- State creation gas cost increase (or EIP-8037) introduces a dymanic pricing model to target a state database growth rate of 100 GiB/year, ensuring standard physical hardware can continue running the network efficiently.
+- State creation gas cost increase (or EIP-8037) introduces a dynamic pricing model to target a state database growth rate of 100 GiB/year, ensuring standard physical hardware can continue running the network efficiently.
 - eth/70 partial block receipt lists (or EIP-7975) allows nodes to request paginated block receipts, which breaks data-heavy block receipt lists into smaller chunks to prevent crashes and syncs as Ethereum scales.
