@@ -41,28 +41,6 @@
 [functions]
   included_files = ["i18n.config.json", "src/intl/**/*", "src/data-layer/mocks/**/*"]
 
-# SEO: Prevent search engines from indexing non-production deploys
-# X-Robots-Tag HTTP header for branch deploys, deploy previews, and named branches
-[[context.branch-deploy.headers]]
-  for = "/*"
-  [context.branch-deploy.headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[context.deploy-preview.headers]]
-  for = "/*"
-  [context.deploy-preview.headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[context.dev.headers]]
-  for = "/*"
-  [context.dev.headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[context.staging.headers]]
-  for = "/*"
-  [context.staging.headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
 # Override SITE_URL for named branches with custom subdomains so canonical
 # URLs and OG metadata use the custom domain instead of *.netlify.app.
 [context.dev.environment]
