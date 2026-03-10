@@ -132,7 +132,6 @@ Abaixo estão alguns projetos que podem ajudar você a instalar e controlar clie
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - A maneira mais rápida e fácil de configurar um nó completo. Ferramenta de configuração linear e gerenciamento de nó TUI. Gratuito. Código aberto. Bons públicos para Ethereum por solistas. Apoio de ARM64 e AMD64.
 - [eth-docker](https://eth-docker.net/) - Configuração automatizada usando Docker focada em staking fácil e seguro, requer conhecimento básico de terminal e Docker, recomendado para usuários um pouco mais avançados.
 - [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) - Iniciador para instalar clientes em um servidor remoto via conexão SSH com um guia de configuração da GUI, centro de controle e muitos outros recursos.
-- [NiceNode](https://www.nicenode.xyz/) - Iniciador com uma experiência de usuário simples para executar um nó em seu computador. Basta escolher os clientes e iniciá-los em alguns cliques. Ainda em desenvolvimento.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Ferramenta de configuração de nó que gera automaticamente uma configuração do Docker usando o assistente da CLI. Escrito em Go pela Nethermind.
 
 ### Configuração manual de clientes {#manual-setup}
