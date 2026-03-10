@@ -59,7 +59,11 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   return (
     <>
-      <FindWalletPageJsonLD locale={locale} contributors={contributors} />
+      <FindWalletPageJsonLD
+        locale={locale}
+        contributors={contributors}
+        wallets={walletsData}
+      />
 
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="relative flex flex-col">

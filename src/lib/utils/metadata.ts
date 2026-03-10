@@ -1,7 +1,11 @@
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 
-import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
+import {
+  DEFAULT_OG_IMAGE,
+  IS_PRODUCTION_DEPLOY,
+  SITE_URL,
+} from "@/lib/constants"
 
 import { getTranslatedLocales } from "../i18n/translationRegistry"
 
@@ -9,6 +13,7 @@ import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
 import { routing } from "@/i18n/routing"
+
 /**
  * List of default og images for different sections
  */
@@ -136,7 +141,7 @@ export const getMetadata = async ({
     },
   }
 
-  if (SITE_URL !== "https://ethereum.org") {
+  if (!IS_PRODUCTION_DEPLOY) {
     return { ...base, robots: { index: false, follow: false } }
   }
 

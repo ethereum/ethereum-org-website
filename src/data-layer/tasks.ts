@@ -6,6 +6,7 @@
  * Hourly tasks run every hour.
  */
 
+import * as Sentry from "@sentry/nextjs"
 import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
 import { fetchDeveloperTools } from "./fetchers/developer-tools"
@@ -148,8 +149,13 @@ export const hourlyTask = schedules.task({
   run: () => Promise.all(hourlyFetchTasks.map((t) => t.trigger())),
 })
 
-// ─── Global failure handler → Discord ───
+// ─── Global failure handler → Sentry + Discord ───
 tasks.onFailure(async ({ ctx, error }) => {
+  Sentry.captureException(error, {
+    tags: { module: "data-layer" },
+    extra: { taskId: ctx.task.id },
+  })
+
   const webhookUrl = process.env.DISCORD_WEBHOOK_URL
   if (!webhookUrl) return
 
