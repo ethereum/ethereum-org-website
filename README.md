@@ -10,3 +10,13 @@ This repository is dedicated to translating and maintaining the Thai (th) langua
 [ ] Regular content updates to stay in sync with the main English repository.
 ⚖️ License
 This project is licensed under the MIT License.
+### 🌐 Farcaster Verification
+
+This file confirms my Farcaster profile ownership.
+
+- **Farcaster:** @pump482930
+- **Handle:** pump482930.eth (ถ้ามี)
+- **Role:** Web3 Developer | Ethereum.org Contributor | Security Researcher
+
+---
+*Verified via Farcaster: https://farcaster.xyz/pump482930*
