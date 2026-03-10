@@ -91,7 +91,7 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
 
   return (
     <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
-      <WindowBox title={title} Svg={AngleBrackets}>
+      <WindowBox title={title} svg={<AngleBrackets />}>
         {/* Desktop */}
         {codeExamples.map(({ title, description, eventName }, idx) => (
           <button

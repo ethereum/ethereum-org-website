@@ -240,7 +240,7 @@ Nenazývejte jej `process.env` ani `.env-custom` ani nijak jinak.
 - Postupujte podle [těchto pokynů](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) a exportujte svůj privátní klíč
 - Níže naleznete postup, jak získat URL pro HTTP API Alchemy
 
-![](./get-alchemy-api-key.gif)
+![Animovaný návod, jak získat klíč Alchemy API](./get-alchemy-api-key.gif)
 
 Váš soubor `.env` by měl vypadat takto:
 
@@ -359,17 +359,17 @@ Kontrakt nasazen na adresu: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 Pokud přejdeme na [Goerli Etherscan](https://goerli.etherscan.io) a vyhledáme adresu našeho kontraktu, měli bychom vidět, že byl úspěšně nasazen. Transakce bude vypadat nějak takto:
 
-![](./etherscan-contract.png)
+![Snímek obrazovky nasazené chytré smlouvy na Etherscan](./etherscan-contract.png)
 
 Adresa `From` by se měla shodovat s adresou vašeho účtu MetaMask a v adrese `To` bude uvedeno **Vytvoření kontraktu**. Pokud klikneme na transakci, uvidíme v poli `To` adresu našeho kontraktu.
 
-![](./etherscan-transaction.png)
+![Snímek obrazovky transakce na Etherscan](./etherscan-transaction.png)
 
 Výborně! Právě jste nasadili chytrý kontrakt do testovací sítě Ethereum.
 
 Abyste pochopili, co se děje pod pokličkou, přejděte na kartu Průzkumník v našem [řídicím panelu Alchemy](https://dashboard.alchemy.com/explorer). Pokud máte více aplikací Alchemy, nezapomeňte filtrovat podle aplikace a vybrat **Hello World**.
 
-![](./hello-world-explorer.png)
+![Snímek obrazovky chytré smlouvy Hello World v průzkumníku bloků](./hello-world-explorer.png)
 
 Zde uvidíte několik metod JSON-RPC, které pro nás Hardhat/Ethers vytvořil pod pokličkou, když jsme volali funkci `.deploy()`. Dvě důležité metody jsou zde [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), což je požadavek na zapsání našeho kontraktu do chainu Goerli, a [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), což je požadavek na přečtení informací o naší transakci na základě daného haše. Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [náš tutoriál o odesílání transakcí pomocí Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 

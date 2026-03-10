@@ -30,7 +30,6 @@ These resources compile and organize various grant opportunities across the Ethe
 
 These general platforms offer broad coverage of grants across the entire Web3 space and are useful starting points for anyone looking for funding:
 
-- [Blockchain Grants](https://www.blockchaingrants.org/) - _Directory of blockchain and crypto grants_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Directory of all the web3 grant programs, updated on weekly basis
 
 ### For developers and builders {#for-developers-and-builders}
@@ -41,7 +40,6 @@ These general platforms offer broad coverage of grants across the entire Web3 sp
 
 ### For DeFi projects and financial applications {#for-defi-projects}
 
-- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _DeFi Llama's grant program directory_
 - [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _Comprehensive list of crypto and Web3 grants_
 - [Uniswap Foundation Grants](https://www.uniswapfoundation.org/build) - _Unichain and Uniswap v4 grants and support for DeFi builders_
 

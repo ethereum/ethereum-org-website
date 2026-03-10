@@ -49,7 +49,9 @@ test.describe("Integration Tests", () => {
       expect(result.content).toContain("ETH")
       expect(result.content).toContain("**bold**")
       // Should note that translations segment is missing
-      expect(result.issues.some((i) => i.includes("No translations segment"))).toBe(true)
+      expect(
+        result.issues.some((i) => i.includes("No translations segment"))
+      ).toBe(true)
     })
   })
 

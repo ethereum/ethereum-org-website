@@ -17,7 +17,7 @@ export const isMailto = (href: string): boolean => href.includes("mailto:")
 export const isExternal = (href: string): boolean =>
   href.includes("http") ||
   isMailto(href) ||
-  href.includes("ipfs") ||
+  href.includes("ipfs://") ||
   isDiscordInvite(href)
 
 export const isGlossary = (href: string): boolean =>

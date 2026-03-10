@@ -146,8 +146,8 @@ SSZ 代表簡單序列化。 它使用固定位移，能夠簡單地解碼編碼
 
 一旦區塊被足夠多的驗證者證明后，就會被新增到鏈頭，經過合理化並最終確定。
 
-![](cons_client_net_layer.png)
-![](exe_client_net_layer.png)
+![以太坊共識客戶端網路層圖](cons_client_net_layer.png)
+![以太坊執行客戶端網路層圖](exe_client_net_layer.png)
 
 共識和執行用戶端的網路層示意圖，來源：[ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
