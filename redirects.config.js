@@ -129,7 +129,11 @@ module.exports = [
     "/developers/docs/scaling/#layer-2-scaling",
   ],
   ["/developers/docs/account-abstraction", "/roadmap/account-abstraction/"],
-  ["/developers/docs/accounts/abstraction", "/roadmap/account-abstraction/"],
+  [
+    "/developers/docs/accounts/abstraction",
+    "/roadmap/account-abstraction/",
+    false, // Selectively applying temporary for possible future route usage
+  ],
   ["/developers/docs/rollups", "/developers/docs/scaling/#rollups"],
   ["/roadmap/future-proofing/:path+", "/roadmap/future-proofing/"],
   ["/eth2/what-is-eth2", "/roadmap/"],
