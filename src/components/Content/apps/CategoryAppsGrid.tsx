@@ -7,6 +7,8 @@ import AppCard from "@/components/AppCard"
 import FilterableCategoryAppsGrid from "@/components/Content/apps/FilterableCategoryAppsGrid"
 
 import { cn } from "@/lib/utils/cn"
+import { getDayOfYear } from "@/lib/utils/date"
+import { seededShuffle } from "@/lib/utils/random"
 import { slugify } from "@/lib/utils/url"
 
 import { getAppsData } from "@/lib/data"
@@ -14,6 +16,20 @@ import { getAppsData } from "@/lib/data"
 function getCategoryEnum(category: string): AppCategoryEnum | undefined {
   const slug = category.toLowerCase()
   return Object.values(AppCategoryEnum).find((val) => slugify(val) === slug)
+}
+
+/**
+ * Sort apps for daily-rotating display.
+ * Highlighted apps surface first; both groups are shuffled with a seed
+ * derived from the current date, so the order is stable for all users
+ * on a given day but rotates each day.
+ */
+function getDailySortedApps(apps: AppData[]): AppData[] {
+  const today = new Date()
+  const seed = today.getFullYear() * 1000 + getDayOfYear(today)
+  const highlighted = apps.filter((app) => app.highlight)
+  const rest = apps.filter((app) => !app.highlight)
+  return [...seededShuffle(highlighted, seed), ...seededShuffle(rest, seed)]
 }
 
 /**
@@ -71,10 +87,12 @@ const CategoryAppsGrid = async ({
     // Translation lookup failed; render raw tags
   }
 
+  const sortedApps = getDailySortedApps(translatedApps)
+
   if (hideFilter) {
     return (
       <div className={cn("grid grid-cols-fill-4 gap-6 md:gap-12", className)}>
-        {translatedApps.slice(0, +limit).map((app) => (
+        {sortedApps.slice(0, +limit).map((app) => (
           <AppCard
             key={app.name}
             name={app.name}
@@ -90,7 +108,7 @@ const CategoryAppsGrid = async ({
 
   return (
     <div className={className}>
-      <FilterableCategoryAppsGrid apps={translatedApps} limit={+limit} />
+      <FilterableCategoryAppsGrid apps={sortedApps} limit={+limit} />
     </div>
   )
 }
