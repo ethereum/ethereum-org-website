@@ -36,6 +36,7 @@ import { screens } from "@/lib/utils/screen"
 
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper/lazy"
+import { EthSkillsTerminal } from "./_components/EthSkillsTerminal"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
@@ -221,6 +222,47 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             <WhyGrid />
           </Section>
 
+          <Section id="ethskills" className="space-y-8 py-10 md:py-16">
+            <div className="flex flex-col items-center gap-6 text-center">
+              <div className="w-full overflow-x-auto text-center">
+                <pre
+                  className="inline-block whitespace-pre text-start font-['Courier_New'] text-[clamp(0.3rem,_calc((100vw_-_4rem)_/_44),_1rem)] leading-[1.15] tracking-[0.5px] text-[#ffb000]"
+                  aria-label="ETHSKILLS"
+                >{` ███████╗████████╗██╗  ██╗███████╗██╗  ██╗██╗██╗     ██╗     ███████╗
+ ██╔════╝╚══██╔══╝██║  ██║██╔════╝██║ ██╔╝██║██║     ██║     ██╔════╝
+ █████╗     ██║   ███████║███████╗█████╔╝ ██║██║     ██║     ███████╗
+ ██╔══╝     ██║   ██╔══██║╚════██║██╔═██╗ ██║██║     ██║     ╚════██║
+ ███████╗   ██║   ██║  ██║███████║██║  ██╗██║███████╗███████╗███████║
+ ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝`}</pre>
+              </div>
+
+              <div className="max-w-xl space-y-2">
+                <h2 className="text-2xl font-bold md:text-3xl">
+                  Build onchain with agents
+                </h2>
+                <p className="text-body-medium">
+                  Structured Ethereum knowledge for the agentic stack. Give your
+                  AI agent the context it needs to read state, send
+                  transactions, and coordinate with protocols&mdash;without
+                  leaving the model&apos;s context window.
+                </p>
+              </div>
+
+              <EthSkillsTerminal />
+
+              <ButtonLink
+                href="https://ethskills.com/"
+                customEventOptions={{
+                  eventCategory: "ethskills",
+                  eventAction: "click",
+                  eventName: "ethskills-section-cta",
+                }}
+              >
+                Build with ethskills
+              </ButtonLink>
+            </div>
+          </Section>
+
           <Section
             id="resources"
             className={cn(
@@ -283,17 +325,6 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                   }}
                 >
                   Scaffold-ETH 2 <code>llms-full.txt</code>
-                </Link>
-                <Link
-                  href="https://ethskills.com/"
-                  className="block"
-                  customEventOptions={{
-                    eventCategory: "mid_boxes",
-                    eventAction: "click",
-                    eventName: "ethskills",
-                  }}
-                >
-                  ethskills.com - {t("page-developers-ethskills-label")}
                 </Link>
               </div>
             </Card>
