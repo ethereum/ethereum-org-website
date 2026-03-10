@@ -20,9 +20,9 @@ The Glamsterdam upgrade is only a single step in Ethereum's long-term developmen
 
 Following the progress made in the [Fusaka](/roadmap/fusaka/) upgrade, Glamsterdam focuses on scaling the L1 by reorganizing how the network processes transactions and manages its growing database, fundamentally updating how Ethereum creates and verifies blocks.
 
-While Fusaka focused on foundational refinements, Glamsterdam advances the "Scale L1" and "Scale Blobs" objectives by enshrining the separation of duties between different network participants, and introducing more efficient ways to handle data to prepare the <GlossaryTooltip termKey="state">state</GlossaryTooltip> for high-throughput parallelization.
+While Fusaka focused on foundational refinements, Glamsterdam advances the "Scale L1" and "Scale Blobs" objectives by enshrining the separation of duties between different network participants, and introducing more efficient ways to handle data to prepare the [state](/glossary/#state) for high-throughput parallelization.
 
-These improvements ensure Ethereum remains fast, affordable, and decentralized as it handles more activity, while keeping hardware requirements manageable for people running <GlossaryTooltip termKey="node">nodes</GlossaryTooltip> at home.
+These improvements ensure Ethereum remains fast, affordable, and decentralized as it handles more activity, while keeping hardware requirements manageable for people running [nodes](/glossary/#node) at home.
 
 <YouTube id="GgKveVMLnoo" />
 
@@ -58,7 +58,7 @@ Meaningful L1 scaling requires moving away from off-protocol trust assumptions a
 
 Currently, the process of proposing and building blocks includes a hand-off between block proposers and block builders. The relationship between proposers and builders isn’t part of the core Ethereum protocol, so it relies on closed-source, third-party software (relays), as well as off-protocol trust between entities.
 
-The out-of-protocol relationship between proposers and builders also creates a ‘hot path’ during block validation that forces <GlossaryTooltip termKey="validator">validators</GlossaryTooltip> to rush through transaction broadcasting and execution in a tight 2-second window, limiting how much data the network can handle.
+The out-of-protocol relationship between proposers and builders also creates a ‘hot path’ during block validation that forces [validators](/glossary/#validator) to rush through transaction broadcasting and execution in a tight 2-second window, limiting how much data the network can handle.
 
 **Enshrined proposer-builder separation (ePBS, or EIP-7732)** formally separates the job of the proposer (who chooses the block) from the builder (who assembles the transactions), ‘enshrining’ this process directly into the Ethereum protocol to remove off-protocol trust. It also introduces the Payload Timeliness Committee (PTC) and a dual-deadline logic, with validators attesting to timeliness and data availability separately to maximize throughput.
 
@@ -66,7 +66,7 @@ The out-of-protocol relationship between proposers and builders also creates a �
 
 Separating the proposer and builder roles at the protocol level expands the propagation window (or the time available to spread data across the network) from 2 seconds to about 9 seconds.
 
-ePBS reduces dependencies on extra third-party software and allows Ethereum to safely process much larger amounts of data (like more blobs for <GlossaryTooltip termKey="layer-2">Layer 2s</GlossaryTooltip>) without stressing the network.
+ePBS reduces dependencies on extra third-party software and allows Ethereum to safely process much larger amounts of data (like more blobs for [Layer 2s](/glossary/#layer-2)) without stressing the network.
 
 **Resources**: [EIP-7732 technical specification](https://eips.ethereum.org/EIPS/eip-7732)
 
@@ -105,7 +105,7 @@ As the Ethereum network grows faster, it’s important to ensure that the cost o
 - Automatically adjusts these data-creation fees based on the network's overall capacity, targeting a safe and predictable growth rate so standard physical hardware can continue running the network
 - Separates the accounting for these specific fees to a new reservoir, removing old transaction limits and allowing developers to deploy larger, more complex applications
 
-Adding new accounts, tokens, and <GlossaryTooltip termKey="smart-contract">smart contracts</GlossaryTooltip> creates permanent data (known as "state") that every computer running the network must store indefinitely. The current fees to add or read this data are inconsistent and don’t necessarily reflect the actual, long-term storage burden they place on the network's hardware.
+Adding new accounts, tokens, and [smart contracts](/glossary/#smart-contract) creates permanent data (known as "state") that every computer running the network must store indefinitely. The current fees to add or read this data are inconsistent and don’t necessarily reflect the actual, long-term storage burden they place on the network's hardware.
 
 Some actions that create state on Ethereum, like creating new accounts or deploying large smart contracts, have been relatively low-cost compared to the permanent storage space they take up on the network’s nodes, for example, contract deployment is significantly cheaper per byte than creating storage slots.
 
