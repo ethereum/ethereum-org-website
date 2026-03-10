@@ -43,6 +43,7 @@ RLP encoding is defined as follows:
 - If the total payload of a list is more than 55 bytes long, the RLP encoding consists of a single byte with value **0xf7** plus the length in bytes of the length of the payload in binary form, followed by the length of the payload, followed by the concatenation of the RLP encodings of the items. The range of the first byte is thus `[0xf8, 0xff]` (dec. `[248, 255]`).
 
 In succinct form:
+
 | Range       | Byte 1     | Byte 2     | Byte 3     | Byte 4     | Byte 5     | Byte 6     | Byte 7 | Meaning                                   |
 | ----------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ------ | ----------------------------------------- |
 | `0x00-0x7f` | `0ppppppp` |            |            |            |            |            |        | single byte string                        |
@@ -51,9 +52,9 @@ In succinct form:
 | `0xc0-0xf7` | `11nnnnnn` | `pppppppp` | `...`      |            |            |            |        | short list (0-55 bytes)                   |
 | `0xf8-0xff` | `11111NNN` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `pppppppp` | `...`  | long list, N bytes of len, then payload   |
 
-  - `p` = payload 
-  - `n` = len (number of payload bytes)
-  - `N` = len-of-len (number of `n` bytes that follow)
+- `p` = payload
+- `n` = len (number of payload bytes)
+- `N` = len-of-len (number of `n` bytes that follow)
 
 In code, this is:
 
