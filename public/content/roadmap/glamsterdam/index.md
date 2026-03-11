@@ -71,7 +71,7 @@ To address the "hot path" bottleneck, ePBS also introduces the Payload Timelines
 
 Separating the proposer and builder roles at the protocol level expands the propagation window (or the time available to spread data across the network) from 2 seconds to about 9 seconds.
 
-By replacing off-protocol middleware and relays with in-protocol mechanics, ePBS reduces trust dependencies and allows Ethereum to safely process much larger amounts of data (like more blobs for [Layer 2s](/glossary/#layer-2)) without stressing the network.
+By replacing off-protocol middleware and relays with in-protocol mechanics, ePBS reduces trust dependencies and allows Ethereum to safely process much larger amounts of data (like more blobs for [layer 2s](/glossary/#layer-2)) without stressing the network.
 
 **Resources**: [EIP-7732 technical specification](https://eips.ethereum.org/EIPS/eip-7732)
 
@@ -129,6 +129,7 @@ Pricing data storage more accurately and predictably will help Ethereum safely i
 ### State-access gas cost update {#state-access-gas-cost-update}
 
 - Increases the gas costs for when applications read or update information permanently stored on Ethereum (state-access opcodes) to accurately match the compute work these commands require
+- Strengthens network resilience by preventing denial-of-service attacks that exploit artificially cheap data-reading operations
 
 As Ethereum’s state has grown, the act of searching for and reading old data ("state access") has become heavier and slower for nodes to process. The fees for these actions have remained the same even though it is now slightly more expensive to look up information (in terms of compute power).
 
@@ -136,7 +137,7 @@ As a result, some specific commands are currently underpriced relative to the wo
 
 **State-access gas cost update (or EIP-8038)** increases the gas constants for state-access opcodes, like looking up account and contract data, to align with modern hardware performance and state size.
 
-Aligning the cost of state-access also helps make Ethereum more resilient. Because these heavy data-reading actions are artificially cheap, a malicious attacker could spam the network with thousands of complex data requests in a single block before hitting the network's fee limit, potentially causing the network to stall or crash (a Denial-of-Service attack). Even without malicious intent, developers are not economically encouraged to build efficient applications if reading network data is too cheap.
+Aligning the cost of state-access also helps make Ethereum more resilient. Because these heavy data-reading actions are artificially cheap, a malicious attacker could spam the network with thousands of complex data requests in a single block before hitting the network's fee limit, potentially causing the network to stall or crash (a denial-of-service attack). Even without malicious intent, developers are not economically encouraged to build efficient applications if reading network data is too cheap.
 
 By pricing state-access actions more accurately Ethereum can be more resilient against accidental or intentional slowdowns, while aligning network costs with hardware load proves a more sustainable foundation for future gas limit increases.
 
@@ -203,7 +204,7 @@ Together, the EIP-2780 aims to make everyday transfers between existing accounts
 ### Deterministic Factory Predeploy {#deterministic-factory-predeploy}
 
 - Gives developers a native way to deploy applications and smart contract wallets to the exact same address across multiple chains
-- Allows users to have the same smart wallet address on multiple Layer 2 (L2) networks, reducing cognitive load, reducing confusion, and reducing the risk of accidental loss of funds
+- Allows users to have the same smart wallet address on multiple layer 2 (L2) networks, reducing cognitive load, reducing confusion, and reducing the risk of accidental loss of funds
 - Replaces the workarounds developers currently use to achieve this parity, making it easier and more secure to build multi-chain wallets and apps
 
 If a user has a smart contract wallet today with accounts across multiple Ethereum Virtual Machine (EVM)-compatible chains, they often end up with a completely different address on different networks. This is not only confusing, but can lead to accidental loss of funds.
@@ -272,7 +273,7 @@ To validate your setup before Glamsterdam gets activated on Mainnet, you can run
 
 ### What improvements will Glamsterdam include for L1 scaling? {#what-improvements-will-glamsterdam-include-for-l1-scaling}
 
-The headline feature is ePBS (EIP-7732), which separates the heavy task of validating network transactions from the task of reaching consensus. This expands the data propagation window from 2 seconds to roughly 9 seconds, unblocking Ethereum's ability to safely handle much higher transaction throughput and accommodate more data blobs for Layer 2 networks.
+The headline feature is ePBS (EIP-7732), which separates the heavy task of validating network transactions from the task of reaching consensus. This expands the data propagation window from 2 seconds to roughly 9 seconds, unblocking Ethereum's ability to safely handle much higher transaction throughput and accommodate more data blobs for layer 2 networks.
 
 ### Will Glamsterdam lower fees on Ethereum (layer 1)? {#will-glamsterdam-lower-fees-on-ethereum-layer-1}
 
