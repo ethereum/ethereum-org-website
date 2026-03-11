@@ -51,23 +51,27 @@ In short, Glamsterdam will introduce structural changes to ensure that as the ne
 
 Meaningful L1 scaling requires moving away from off-protocol trust assumptions and serial execution constraints. Glamsterdam addresses this by enshrining separation of certain block-building duties and introducing new data structures that allow the network to prepare for parallel processing.
 
-### Headliner proposal: Enshrined proposer-builder separation (ePBS) {#epbs}
+### Headliner proposal: Enshrined Proposer-Builder Separation (ePBS) {#epbs}
 
-- Removes off-protocol trust assumptions and reliance on closed-source relays
-- Enables L1 scaling by allowing much larger payloads through extended propagation windows
-- Introduces trustless builder payments and encrypted transactions to anonymous builders
+- Removes off-protocol trust assumptions and reliance on third-party relays
+- Supports L1 scaling by allowing much larger payloads through extended propagation windows
+- Introduces trustless builder payments directly into the protocol 
 
-Currently, the process of proposing and building blocks includes a hand-off between block proposers and block builders. The relationship between proposers and builders isn’t part of the core Ethereum protocol, so it relies on closed-source, third-party software (relays), as well as off-protocol trust between entities.
+Currently, the process of proposing and building blocks includes a hand-off between block proposers and block builders. The relationship between proposers and builders isn’t part of the core Ethereum protocol, so it relies on trusted third-party middleware, software (relays), and off-protocol trust between entities.
 
-The out-of-protocol relationship between proposers and builders also creates a ‘hot path’ during block validation that forces [validators](/glossary/#validator) to rush through transaction broadcasting and execution in a tight 2-second window, limiting how much data the network can handle.
+The out-of-protocol relationship between proposers and builders also creates a "hot path" during block validation that forces [validators](/glossary/#validator) to rush through transaction broadcasting and execution in a tight 2-second window, limiting how much data the network can handle.
 
-**Enshrined proposer-builder separation (ePBS, or EIP-7732)** formally separates the job of the proposer (who chooses the block) from the builder (who assembles the transactions), ‘enshrining’ this process directly into the Ethereum protocol to remove off-protocol trust. It also introduces the Payload Timeliness Committee (PTC) and a dual-deadline logic, with validators attesting to timeliness and data availability separately to maximize throughput.
+**Enshrined Proposer-Builder Separation (ePBS, or EIP-7732)** formally separates the job of the proposer (who selects the consensus block) from the builder (who assembles the execution payload), enshrining this hand-off directly into the protocol. 
+
+Building the trustless exchange of a block payload for payment directly into the protocol removes the need for third-party middleware (like MEV-Boost). However, builders and proposers might still choose to use off-protocol relays or middleware for complex features that are not yet part of the core protocol. 
+
+To address the "hot path" bottleneck, ePBS also introduces the Payload Timeliness Committee (PTC) and a dual-deadline logic, allowing validators to attest to the consensus block and the execution payload timeliness separately to maximize throughput.
 
 <YouTube id="u8XvkTrjITs" />
 
 Separating the proposer and builder roles at the protocol level expands the propagation window (or the time available to spread data across the network) from 2 seconds to about 9 seconds.
 
-ePBS reduces dependencies on extra third-party software and allows Ethereum to safely process much larger amounts of data (like more blobs for [Layer 2s](/glossary/#layer-2)) without stressing the network.
+By replacing off-protocol middleware and relays with in-protocol mechanics, ePBS reduces trust dependencies and allows Ethereum to safely process much larger amounts of data (like more blobs for [Layer 2s](/glossary/#layer-2)) without stressing the network.
 
 **Resources**: [EIP-7732 technical specification](https://eips.ethereum.org/EIPS/eip-7732)
 
