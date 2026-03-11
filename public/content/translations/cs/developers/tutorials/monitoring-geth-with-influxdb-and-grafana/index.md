@@ -117,35 +117,35 @@ sudo systemctl start grafana-server
 Když máte Grafanu spuštěnou, měla by být dostupná na `localhost:3000`.
 Použijte preferovaný prohlížeč pro přístup k této cestě, poté se přihlaste s výchozími přihlašovacími údaji (uživatel: `admin` a heslo: `admin`). Po zobrazení výzvy změňte výchozí heslo a uložte.
 
-![](./grafana1.png)
+![Snímek obrazovky řídicího panelu Grafana pro monitorování Geth (panel 1)](./grafana1.png)
 
 Budete přesměrováni na domovskou stránku Grafany. Nejprve nastavte svá zdrojová data. Klikněte na ikonu konfigurace v levém panelu a vyberte „Zdroje dat“.
 
-![](./grafana2.png)
+![Snímek obrazovky řídicího panelu Grafana pro monitorování Geth (panel 2)](./grafana2.png)
 
 Zatím nejsou vytvořeny žádné zdroje dat, klikněte na „Přidat zdroj dat“ pro definování jednoho.
 
-![](./grafana3.png)
+![Snímek obrazovky řídicího panelu Grafana pro monitorování Geth (panel 3)](./grafana3.png)
 
 Pro toto nastavení vyberte „InfluxDB“ a pokračujte.
 
-![](./grafana4.png)
+![Snímek obrazovky řídicího panelu Grafana pro monitorování Geth (panel 4)](./grafana4.png)
 
 Konfigurace zdroje dat je poměrně jednoduchá, pokud spouštíte nástroje na stejném stroji. Musíte nastavit adresu InfluxDB a podrobnosti pro přístup k databázi. Viz obrázek níže.
 
-![](./grafana5.png)
+![Snímek obrazovky řídicího panelu Grafana pro monitorování Geth (panel 5)](./grafana5.png)
 
 Pokud je vše kompletní a InfluxDB je dostupná, klikněte na „Uložit a testovat“ a počkejte, až se zobrazí potvrzení.
 
-![](./grafana6.png)
+![Snímek obrazovky řídicího panelu Grafana pro monitorování Geth (panel 6)](./grafana6.png)
 
 Grafana je nyní nastavena ke čtení dat z InfluxDB. Nyní musíte vytvořit panel, který je bude interpretovat a zobrazovat. Vlastnosti panelů jsou kódovány v souborech JSON, které může kdokoli vytvořit a snadno importovat. V levém panelu klikněte na „Vytvořit a importovat“.
 
-![](./grafana7.png)
+![Snímek obrazovky řídicího panelu Grafana pro monitorování Geth (panel 7)](./grafana7.png)
 
 Pro monitorovací panel Geth zkopírujte ID [tohoto panelu](https://grafana.com/grafana/dashboards/13877/) a vložte jej na stránku „Importovat“ v Grafaně. Po uložení panelu by měl vypadat takto:
 
-![](./grafana8.png)
+![Snímek obrazovky řídicího panelu Grafana pro monitorování Geth (panel 8)](./grafana8.png)
 
 Své panely můžete upravovat. Každý panel lze upravovat, přesouvat, odstraňovat nebo přidávat. Můžete měnit své konfigurace. Je to na vás! Chcete-li se dozvědět více o tom, jak panely fungují, podívejte se do [dokumentace Grafany](https://grafana.com/docs/grafana/latest/dashboards/).
 Mohlo by vás také zajímat [Upozorňování](https://grafana.com/docs/grafana/latest/alerting/). To vám umožní nastavit upozornění pro případy, kdy metriky dosáhnou určitých hodnot. Jsou podporovány různé komunikační kanály.

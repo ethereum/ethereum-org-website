@@ -35,9 +35,18 @@ module.exports = (phase, { defaultConfig }) => {
     ...defaultConfig,
     reactStrictMode: true,
     env: {
-      // Context is used to determine the environment for Sentry
+      // Netlify build-time vars inlined so they're available at SSR runtime.
       // ref. https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
       NEXT_PUBLIC_CONTEXT: process.env.CONTEXT,
+      // Resolve site URL once at build time. NEXT_PUBLIC_SITE_URL (set in
+      // netlify.toml for dev/staging) takes precedence, then Netlify's
+      // deploy-specific URLs, falling back to the production domain.
+      NEXT_PUBLIC_SITE_URL:
+        process.env.NEXT_PUBLIC_SITE_URL ||
+        process.env.DEPLOY_PRIME_URL ||
+        process.env.DEPLOY_URL ||
+        process.env.URL ||
+        "https://ethereum.org",
     },
     webpack: (config) => {
       config.module.rules.push({
@@ -98,6 +107,11 @@ module.exports = (phase, { defaultConfig }) => {
         },
         { protocol: "https", hostname: "pvvrtckedmrkyzfxubkk.supabase.co" },
         { protocol: "https", hostname: "avatars.githubusercontent.com" },
+        { protocol: "https", hostname: "avatars0.githubusercontent.com" },
+        { protocol: "https", hostname: "avatars1.githubusercontent.com" },
+        { protocol: "https", hostname: "avatars2.githubusercontent.com" },
+        { protocol: "https", hostname: "avatars3.githubusercontent.com" },
+        { protocol: "https", hostname: "avatars4.githubusercontent.com" },
         { protocol: "https", hostname: "opengraph.githubassets.com" },
         { protocol: "https", hostname: "github.com" },
         { protocol: "https", hostname: "coin-images.coingecko.com" },

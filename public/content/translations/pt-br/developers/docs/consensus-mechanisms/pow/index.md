@@ -1,27 +1,27 @@
 ---
 title: Prova de trabalho (PoW)
-description: Uma explicação do protocolo de consenso de prova de trabalho e seu papel no Ethereum.
+description: "Uma explicação do protocolo de consenso de prova de trabalho e seu papel no Ethereum."
 lang: pt-br
 ---
 
-A rede Ethereum começou usando um mecanismo de consenso que envolvia **[Prova de trabalho (PoW)](/developers/docs/consensus-mechanisms/pow)**. Isso permitiu que os nós da rede Ethereum concordassem com o estado de todas as informações registradas na cadeia de blocos Ethereum e impediu certos tipos de ataques econômicos. No entanto, o Ethereum desativou a prova de trabalho em 2022 e começou a usar a [prova de participação](/developers/docs/consensus-mechanisms/pos).
+A rede Ethereum começou usando um mecanismo de consenso que envolvia a **[prova de trabalho (PoW)](/developers/docs/consensus-mechanisms/pow)**. Isso permitiu que os nós da rede Ethereum concordassem com o estado de todas as informações registradas na cadeia de blocos Ethereum e impediu certos tipos de ataques econômicos. No entanto, o Ethereum desativou a prova de trabalho em 2022 e passou a usar a [prova de participação](/developers/docs/consensus-mechanisms/pos).
 
 <Alert variant="update">
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-    A prova de trabalho agora está obsoleta. O Ethereum não usa mais a prova de trabalho como parte de seu mecanismo de consenso. Em vez disso, ele usa a prova de participação. Leia mais sobre [prova de participação](/developers/docs/consensus-mechanisms/pos/) e [participação](/staking/).
+    A prova de trabalho agora está obsoleta. O Ethereum não usa mais a prova de trabalho como parte de seu mecanismo de consenso. Em vez disso, ele usa a prova de participação. Leia mais em [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e [staking](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Pré-requisitos {#prerequisites}
 
-Para entender melhor esta página, recomendamos ler primeiro sobre [ transações ](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
+Para entender melhor esta página, recomendamos que você leia primeiro sobre [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [mecanismo de consenso](/developers/docs/consensus-mechanisms/).
 
 ## O que é prova de trabalho (PoW)? {#what-is-pow}
 
-O consenso de Nakamoto, que utiliza prova de trabalho, é o mecanismo que uma vez permitiu que a rede descentralizada Ethereum chegasse a um consenso (ou seja, todos os nós concordam) em coisas como saldos de contas e a ordem das transações. Isso impediu os usuários de "gastar duas vezes" suas moedas e garantiu que a cadeia Ethereum se tornasse tremendamente difícil de atacar ou manipular. Essas propriedades de segurança agora vêm da prova de participação usando o mecanismo de consenso conhecido como [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
+O consenso de Nakamoto, que utiliza a prova de trabalho, é o mecanismo que permitiu que a rede descentralizada do Ethereum chegasse a um consenso (isto é, que todos os nós concordassem) sobre questões como saldos de contas e a ordem das transações. Isso impediu os usuários de "gastar duas vezes" suas moedas e garantiu que a cadeia Ethereum se tornasse tremendamente difícil de atacar ou manipular. Essas propriedades de segurança agora vêm da prova de participação, usando o mecanismo de consenso conhecido como [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
 ## Prova de trabalho e mineração {#pow-and-mining}
 
@@ -39,7 +39,7 @@ As transações Ethereum são processadas em blocos. Na agora obsoleta prova de 
 
 Esses dados de bloco estavam diretamente relacionados à prova de trabalho.
 
-### O trabalho em prova-de-trabalho {#the-work}
+### O trabalho na prova de trabalho {#the-work}
 
 O protocolo de prova de trabalho, Ethash, exigia que os mineradores passassem por uma intensa corrida de tentativa e erro para encontrar o nonce para um bloco. Apenas blocos com um nonce válido podem ser adicionados à cadeia.
 
@@ -57,31 +57,31 @@ O objetivo da prova de trabalho era estender a cadeia. A cadeia mais longa era m
 
 Para criar consistentemente blocos maliciosos, ainda que válidos, um minerador mal-intencionado precisaria de mais de 51% do poder de mineração da rede para superar todos os demais. Essa quantidade de "trabalho" requer muito poder de computação caro e a energia gasta pode até ter superado os ganhos obtidos em um ataque.
 
-### Aspectos econômicos da prova de trabalho {#economics}
+### Economia da prova de trabalho {#economics}
 
 A prova de trabalho também foi responsável por emitir novas moedas no sistema e incentivar os mineradores a fazer o trabalho.
 
-Desde a [atualização de Constantinopla](/ethereum-forks/#constantinople), os mineradores que criaram com sucesso um bloco foram recompensados com dois ETH recém-cunhados e parte das taxas de transação. Os blocos Omner também compensaram 1,75 ETH. Os blocos Ommer eram blocos válidos criados por um minerador praticamente ao mesmo tempo que outro minerador criava o bloco canônico, o que foi determinado em última instância por qual cadeia foi construída em cima da primeira. Os blocos Ommer geralmente aconteciam devido à latência da rede.
+Desde a [atualização Constantinople](/ethereum-forks/#constantinople), os mineradores que criaram blocos com sucesso foram recompensados com dois ETH recém-cunhados e parte das taxas de transação. Os blocos Omner também compensaram 1,75 ETH. Os blocos Ommer eram blocos válidos criados por um minerador praticamente ao mesmo tempo que outro minerador criava o bloco canônico, o que foi determinado em última instância por qual cadeia foi construída em cima da primeira. Os blocos Ommer geralmente aconteciam devido à latência da rede.
 
-## Finalidade {#finality}
+## Finality {#finality}
 
 Uma transação tem "finalidade" no Ethereum quando ela faz parte de um bloco que não pode mudar.
 
 Como os mineradores trabalhavam de maneira descentralizada, dois blocos válidos poderiam ser minerados ao mesmo tempo. Isso cria uma bifurcação temporária. Por fim, uma dessas cadeias se tornou a cadeia aceita depois que os blocos subsequentes foram minerados e adicionados a ela, tornando-a mais longa.
 
-Para complicar ainda mais, as transações rejeitadas na bifurcação temporária podem não ter sido incluídas na cadeia aceita. Ou seja, isso poderia ser revertido. Portanto, a finalização se refere ao tempo que você deve esperar antes de considerar uma transação irreversível. Na prova de trabalho Ethereum anterior, quanto mais blocos foram extraídos em cima de um bloco `N` específico, maior a confiança de que as transações em `N` foram bem-sucedidas e não seriam revertidas. Agora, com a prova de participação, a finalização é uma propriedade explícita, e não probabilística, de um bloco.
+Para complicar ainda mais, as transações rejeitadas na bifurcação temporária podem não ter sido incluídas na cadeia aceita. Ou seja, isso poderia ser revertido. Portanto, "finalidade" se refere ao tempo que você deve esperar antes de considerar uma transação irreversível. No Ethereum com prova de trabalho anterior, quanto mais blocos fossem minerados sobre um bloco `N` específico, maior a confiança de que as transações em `N` foram bem-sucedidas e não seriam revertidas. Agora, com a prova de participação, a finalização é uma propriedade explícita, e não probabilística, de um bloco.
 
-## Uso de energia na prova de trabalho {#energy}
+## Uso de energia da prova de trabalho {#energy}
 
-Uma importante crítica à prova de trabalho é a quantidade de energia necessária para manter a rede segura. Para manter a segurança e a descentralização, o Ethereum na prova de trabalho consumia grandes quantidades de energia. Pouco antes de mudar para a prova de participação, os mineradores do Ethereum consumiam coletivamente cerca de 70 TWh/ano (aproximadamente o mesmo que a República Tcheca, de acordo com [digiconomist](https://digiconomist.net/) em 18 de julho de 2022).
+Uma importante crítica à prova de trabalho é a quantidade de energia necessária para manter a rede segura. Para manter a segurança e a descentralização, o Ethereum na prova de trabalho consumia grandes quantidades de energia. Pouco antes da mudança para a prova de participação, os mineradores do Ethereum consumiam coletivamente cerca de 70 TWh/ano (aproximadamente o mesmo que a República Tcheca - de acordo com o [digiconomist](https://digiconomist.net/) em 18 de julho de 2022).
 
 ## Prós e contras {#pros-and-cons}
 
-| Prós                                                                                                                                                                                                                                                        | Contras                                                                                                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| A prova de trabalho é neutra. Você não precisa de ETH para começar, e as recompensas por bloco permitem que você vá de 0 ETH a um saldo positivo. Na [prova de participação](/developers/docs/consensus-mechanisms/pos/), você precisa de ETH para começar. | A prova de trabalho consome tanta energia que é prejudicial ao meio ambiente.                                                                                                        |
-| A prova de trabalho é um mecanismo de consenso testado que manteve o Bitcoin e o Ethereum seguros e descentralizados por muitos anos.                                                                                                                       | Se você quer minerar, você precisa de equipamento especializado, e isso é um grande investimento para começar.                                                                       |
-| Comparada com a prova de participação, é relativamente fácil de implementar.                                                                                                                                                                                | Devido ao aumento necessário do cálculo de mineração, as pools de mineração poderiam potencialmente dominar o mercado de mineração, levando à centralização e a riscos de segurança. |
+| Prós                                                                                                                                                                                                                                                                                                           | Contras                                                                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A prova de trabalho é neutra. Você não precisa de ETH para começar, e as recompensas por bloco permitem que você vá de 0 ETH a um saldo positivo. Com a [prova de participação](/developers/docs/consensus-mechanisms/pos/), você precisa de ETH para começar. | A prova de trabalho consome tanta energia que é prejudicial ao meio ambiente.                                                                                                        |
+| A prova de trabalho é um mecanismo de consenso testado que manteve o Bitcoin e o Ethereum seguros e descentralizados por muitos anos.                                                                                                                                                          | Se você quer minerar, você precisa de equipamento especializado, e isso é um grande investimento para começar.                                                                       |
+| Comparada com a prova de participação, é relativamente fácil de implementar.                                                                                                                                                                                                                   | Devido ao aumento necessário do cálculo de mineração, as pools de mineração poderiam potencialmente dominar o mercado de mineração, levando à centralização e a riscos de segurança. |
 
 ## Comparação com a prova de participação {#compared-to-pos}
 
@@ -92,7 +92,7 @@ Em termos gerais, a prova de participação tem o mesmo objetivo final que a pro
 - Os validadores não competem para criar blocos, em vez disso, eles são escolhidos aleatoriamente por um algoritmo.
 - A finalidade é clara: em certos pontos de controle, se 2/3 dos validadores concordam com o estado do bloco então ele é considerado finalizado. Os validadores devem apostar todas as suas fichas nisso, assim, caso tentem conspirar, irão perder toda a aposta.
 
-[Mais sobre prova de participação](/developers/docs/consensus-mechanisms/pos/)
+[Mais sobre a prova de participação](/developers/docs/consensus-mechanisms/pos/)
 
 ## Você é o tipo de pessoa que aprende mais com recursos visuais? {#visual-learner}
 
@@ -100,8 +100,8 @@ Em termos gerais, a prova de participação tem o mesmo objetivo final que a pro
 
 ## Leitura adicional {#further-reading}
 
-- [Ataque majoritário](https://en.bitcoin.it/wiki/Majority_attack)
-- [Finalidade do acordo](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Ataque de maioria](https://en.bitcoin.it/wiki/Majority_attack)
+- [Sobre a finalidade da liquidação](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
 ### Vídeos {#videos}
 

@@ -37,7 +37,7 @@ Remix 整合開發環境提供一個全面的開發環境，用於透過 Solidit
 - [Solidity 語言入口網站](https://soliditylang.org/)
 - [Solidity 範例](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter 聊天室](https://gitter.im/ethereum/solidity)橋接到 [Solidity Matrix 聊天室](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Solidity Matrix 聊天室](https://gitter.im/ethereum/solidity)橋接到 [Solidity Matrix 聊天室](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [快捷手冊](https://reference.auditless.com/cheatsheet)
 - [Solidity 部落格](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)

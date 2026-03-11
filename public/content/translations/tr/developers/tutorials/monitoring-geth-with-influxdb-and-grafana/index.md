@@ -117,35 +117,35 @@ sudo systemctl start grafana-server
 Grafana'yı çalıştırdığınızda, `localhost:3000` adresinden erişilebilir olmalıdır.
 Bu yola erişmek için tercih ettiğiniz tarayıcıyı kullanın, ardından varsayılan kimlik bilgileriyle (kullanıcı: `admin` ve şifre: `admin`) oturum açın. İstendiğinde, varsayılan şifreyi değiştirin ve kaydedin.
 
-![](./grafana1.png)
+![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 1)](./grafana1.png)
 
 Grafana ana sayfasına yönlendirileceksiniz. Öncelikle, kaynak verilerinizi ayarlayın. Sol çubuktaki yapılandırma simgesine tıklayın ve "Data sources" (Veri kaynakları) seçeneğini seçin.
 
-![](./grafana2.png)
+![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 2)](./grafana2.png)
 
 Henüz oluşturulmuş veri kaynağı yok, birini tanımlamak için "Add data source" (Veri kaynağı ekle) seçeneğine tıklayın.
 
-![](./grafana3.png)
+![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 3)](./grafana3.png)
 
 Bu kurulum için "InfluxDB"yi seçin ve devam edin.
 
-![](./grafana4.png)
+![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 4)](./grafana4.png)
 
 Araçları aynı makinede çalıştırıyorsanız, veri kaynağı yapılandırması oldukça basittir. Veritabanına erişmek için InfluxDB adresini ve ayrıntılarını ayarlamanız gerekir. Aşağıdaki resme başvurun.
 
-![](./grafana5.png)
+![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 5)](./grafana5.png)
 
 Her şey tamamlandıysa ve InfluxDB erişilebilir durumdaysa, "Save and test" (Kaydet ve test et) seçeneğine tıklayın ve onayın görünmesini bekleyin.
 
-![](./grafana6.png)
+![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 6)](./grafana6.png)
 
 Grafana artık InfluxDB'den veri okumak üzere ayarlanmıştır. Şimdi, onu yorumlayacak ve gösterecek bir gösterge paneli oluşturmanız gerekiyor. Gösterge paneli özellikleri, herkes tarafından oluşturulabilen ve kolayca içe aktarılabilen JSON dosyalarında kodlanmıştır. Sol çubukta, "Create and Import" (Oluştur ve İçe Aktar) seçeneğine tıklayın.
 
-![](./grafana7.png)
+![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 7)](./grafana7.png)
 
 Bir Geth izleme gösterge paneli için [bu gösterge panelinin](https://grafana.com/grafana/dashboards/13877/) kimliğini kopyalayın ve Grafana'daki "Import page" (İçe Aktarma sayfası) bölümüne yapıştırın. Gösterge panelini kaydettikten sonra şöyle görünmelidir:
 
-![](./grafana8.png)
+![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 8)](./grafana8.png)
 
 Gösterge panellerinizi değiştirebilirsiniz. Her panel düzenlenebilir, taşınabilir, kaldırılabilir veya eklenebilir. Yapılandırmalarınızı değiştirebilirsiniz. Size kalmış! Gösterge panellerinin nasıl çalıştığı hakkında daha fazla bilgi edinmek için [Grafana'nın dökümantasyonuna](https://grafana.com/docs/grafana/latest/dashboards/) başvurun.
 [Uyarılar](https://grafana.com/docs/grafana/latest/alerting/) da ilginizi çekebilir. Bu, ölçümler belirli değerlere ulaştığında uyarı bildirimleri ayarlamanıza olanak tanır. Çeşitli iletişim kanalları desteklenir.

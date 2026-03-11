@@ -102,7 +102,6 @@ Web3 має потенціал розірвати цю несправну мод
 - [OceanDAO: фінансування науки, пов’язаної з даними, під управлінням DAO](https://oceanprotocol.com/)
 - [Opscientia: відкриті робочі процеси децентралізованої науки](https://opsci.io/research/)
 - [Bio.xyz: отримайте фінансування для свого біотех-DAO або проєкту DeSci](https://www.bio.xyz/)
-- [Fleming Protocol: економіка даних із відкритим кодом, що стимулює спільні біомедичні відкриття](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: забезпечення децентралізованої наукової достовірності](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

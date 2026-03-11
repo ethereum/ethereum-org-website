@@ -62,13 +62,13 @@ Spowoduje to uzyskanie tych samych informacji, co na stronie transakcji Ethersca
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Zrzut ekranu przedstawiający widok eksploratora transakcji Etherscan](./etherscan_view.png)
 
 [Strona kontraktu EF na Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Zrzut ekranu przedstawiający pulpit nawigacyjny zapytań Dune Analytics](./dune_view.png)
 
 Pulpit nawigacyjny można znaleźć [tutaj](https://dune.com/paulapivat/Learn-Ethereum). Kliknij tabelę, aby zobaczyć zapytanie (zobacz również powyżej).
 
@@ -146,7 +146,7 @@ ORDER BY block_time DESC`
 
 Oto wynik SQL w Dune:
 
-![](./list_of_txn.png)
+![Zrzut ekranu przedstawiający listę transakcji Ethereum](./list_of_txn.png)
 
 Ten pojedynczy blok dodany do łańcucha zmienia stan Wirtualnej Maszyny Ethereum ([EVM](/developers/docs/evm/)). Jednocześnie weryfikowane są dziesiątki, a czasem setki transakcji. W tym konkretnym przypadku uwzględniono 222 transakcje.
 
@@ -165,7 +165,7 @@ FROM temp_table
 
 Dla bloku 12396854, z 222 wszystkich transakcji, 204 zostały pomyślnie zweryfikowane:
 
-![](./successful_txn.png)
+![Zrzut ekranu przedstawiający udaną transakcję Ethereum](./successful_txn.png)
 
 Żądania transakcji pojawiają się dziesiątki razy na sekundę, ale bloki są zatwierdzane mniej więcej raz na 15 sekund ([źródło](/developers/docs/blocks/)).
 
@@ -173,11 +173,11 @@ Aby zobaczyć, że jeden blok jest produkowany mniej więcej co 15 sekund, może
 
 Wykres dla bloków Ethereum produkowanych dziennie (2016 – obecnie) to:
 
-![](./daily_blocks.png)
+![Wykres przedstawiający dzienną produkcję bloku Ethereum](./daily_blocks.png)
 
 Średnia liczba produkowanych dziennie bloków w tym okresie wynosi ~5874:
 
-![](./avg_daily_blocks.png)
+![Wykres przedstawiający dzienną produkcję bloku Ethereum](./avg_daily_blocks.png)
 
 Zapytania są następujące:
 
@@ -214,7 +214,7 @@ Bloki mają ograniczony rozmiar. Maksymalny rozmiar bloku jest dynamiczny i zmie
 
 Jednym ze sposobów konceptualizacji limitu gazu w bloku jest myślenie o nim jako o **podaży** dostępnej przestrzeni blokowej, w której można grupować transakcje. Limit gazu w bloku można odpytywać i wizualizować od 2016 roku do dnia dzisiejszego:
 
-![](./avg_gas_limit.png)
+![Wykres przedstawiający średni limit gazu Ethereum w czasie](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -227,7 +227,7 @@ OFFSET 1
 
 Następnie jest rzeczywisty gaz zużywany codziennie do opłacenia obliczeń wykonanych w łańcuchu Ethereum (tj. wysyłanie transakcji, wywoływanie inteligentnego kontraktu, mintowanie NFT). To jest **popyt** na dostępną przestrzeń blokową Ethereum:
 
-![](./daily_gas_used.png)
+![Wykres pokazujący dzienne zużycie gazu Ethereum](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -246,7 +246,7 @@ Dlatego możemy rozumieć ceny gazu jako funkcję popytu na przestrzeń blokową
 
 Wreszcie, możemy chcieć odpytać o średnie dzienne ceny gazu dla łańcucha Ethereum, jednak spowoduje to szczególnie długi czas zapytania, więc przefiltrujemy nasze zapytanie do średniej ilości gazu płaconego za transakcję przez Fundację Ethereum.
 
-![](./ef_daily_gas.png)
+![Wykres przedstawiający dzienne zużycie gazu przez Fundację Ethereum](./ef_daily_gas.png)
 
 Możemy zobaczyć ceny gazu zapłacone za wszystkie transakcje dokonane na adres Fundacji Ethereum na przestrzeni lat. Oto zapytanie:
 

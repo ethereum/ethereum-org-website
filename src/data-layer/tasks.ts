@@ -5,6 +5,7 @@
  * Hourly tasks run every hour.
  */
 
+import * as Sentry from "@sentry/nextjs"
 import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
 import { fetchDeveloperTools } from "./fetchers/developer-tools"
@@ -30,6 +31,7 @@ import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
+import { fetchTranslationGlossary } from "./fetchers/fetchTranslationGlossary"
 import { set } from "./storage"
 
 export const KEYS = {
@@ -56,6 +58,7 @@ export const KEYS = {
   TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
   STABLECOINS_DATA: "fetch-stablecoins-data",
   ACCOUNT_HOLDERS: "fetch-account-holders",
+  TRANSLATION_GLOSSARY: "fetch-translation-glossary",
 } as const
 
 // Task definition: storage key + fetch function
@@ -77,6 +80,7 @@ const DAILY: TaskDef[] = [
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
   [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
+  [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
 ]
 
 const HOURLY: TaskDef[] = [
@@ -129,8 +133,13 @@ export const hourlyTask = schedules.task({
   run: () => Promise.all(hourlyFetchTasks.map((t) => t.trigger())),
 })
 
-// ─── Global failure handler → Discord ───
+// ─── Global failure handler → Sentry + Discord ───
 tasks.onFailure(async ({ ctx, error }) => {
+  Sentry.captureException(error, {
+    tags: { module: "data-layer" },
+    extra: { taskId: ctx.task.id },
+  })
+
   const webhookUrl = process.env.DISCORD_WEBHOOK_URL
   if (!webhookUrl) return
 

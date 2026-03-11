@@ -218,4 +218,3 @@ Ethereum कार्यक्रम आयोजित करण्यासा
 लेख:
 
 - [Building ETHKL, डॅनी एच. द्वारे](https://sekto.tech/ethkl24)
-- [POKT इव्हेंट्स प्लेबुक](https://docs.pokt.network/community/pokt-events-playbook)

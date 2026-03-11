@@ -51,7 +51,7 @@ lang: uk
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> — керівництво, навчання, підтримка та ресурси для існуючих і потенційних стейкерів, керовані спільнотою</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Команда вебсайту Ethereum.org</Link> — завітайте та поспілкуйтеся про веб-розробку та дизайн ethereum.org з командою та членами спільноти</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> — спільнота творців Web3, де спілкуються розробники, лідери індустрії та ентузіасти Ethereum. Ми зацікавлені в розробці, дизайні та культурі Web3. Створюйте з нами.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> — чат для розробки на Solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.element.io/#/room/#solidity:matrix.org">Solidity Matrix</Link> — чат для розробки на Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — чат для розробки на Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>— форум запитань і відповідей</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Форум спільноти Peera</Link> <i>— децентралізований форум запитань і відповідей</i></SocialListItem>

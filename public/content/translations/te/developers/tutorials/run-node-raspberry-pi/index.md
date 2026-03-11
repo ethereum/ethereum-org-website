@@ -70,7 +70,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # Hash should output: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Rock 5B మరియు Odroid M1 బోర్డుల కోసం ఇమేజ్‌లు Ethereum-on-Arm [డౌన్‌లోడ్‌ల పేజీ](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html)లో అందుబాటులో ఉన్నాయని గమనించండి.
+Rock 5B మరియు Odroid M1 బోర్డుల కోసం ఇమేజ్‌లు Ethereum-on-Arm [డౌన్‌లోడ్‌ల పేజీ](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)లో అందుబాటులో ఉన్నాయని గమనించండి.
 
 ## మైక్రోSDని ఫ్లాష్ చేయడం {#flashing-the-microsd}
 
@@ -164,7 +164,7 @@ sudo systemctl start lighthouse-validator
 
 ## మరిన్ని వివరాలు {#more-details}
 
-ఈ పేజీ రాస్ప్బెర్రీ పై ఉపయోగించి Geth-Lighthouse నోడ్ మరియు వ్యాలిడేటర్‌ను ఎలా సెటప్ చేయాలో ఒక అవలోకనాన్ని ఇచ్చింది. [Ethereum-on-Arm వెబ్‌సైట్](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html)లో మరింత వివరణాత్మక సూచనలు అందుబాటులో ఉన్నాయి.
+ఈ పేజీ రాస్ప్బెర్రీ పై ఉపయోగించి Geth-Lighthouse నోడ్ మరియు వ్యాలిడేటర్‌ను ఎలా సెటప్ చేయాలో ఒక అవలోకనాన్ని ఇచ్చింది. [Ethereum-on-Arm వెబ్‌సైట్](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)లో మరింత వివరణాత్మక సూచనలు అందుబాటులో ఉన్నాయి.
 
 ## అభిప్రాయం అభినందనీయం {#feedback-appreciated}
 
@@ -183,7 +183,7 @@ sudo systemctl start lighthouse-validator
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

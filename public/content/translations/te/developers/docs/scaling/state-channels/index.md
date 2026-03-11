@@ -255,7 +255,7 @@ Ethereum వంటి పబ్లిక్ బ్లాక్‌చెయిన
 
 - [Ethereum యొక్క లేయర్ 2 స్కేలింగ్ పరిష్కారాలను అర్థం చేసుకోవడం: స్టేట్ ఛానెల్స్, ప్లాస్మా మరియు ట్రూబిట్](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– జోష్ స్టార్క్, ఫిబ్రవరి 12 2018_
 - [స్టేట్ ఛానెల్స్ - ఒక వివరణ](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - జెఫ్ కోల్మన్_
-- [స్టేట్ ఛానెల్స్ యొక్క ప్రాథమికాలు](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [స్టేట్ ఛానెల్స్ యొక్క ప్రాథమికాలు](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [బ్లాక్‌చెయిన్ స్టేట్ ఛానెల్స్: ఎ స్టేట్ ఆఫ్ ది ఆర్ట్](https://ieeexplore.ieee.org/document/9627997)
 
 _మీకు సహాయపడిన కమ్యూనిటీ వనరు గురించి తెలుసా? ఈ పేజీని సవరించి, దాన్ని జోడించండి!_

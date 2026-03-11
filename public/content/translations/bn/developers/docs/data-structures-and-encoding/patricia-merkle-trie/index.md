@@ -262,5 +262,5 @@ else:
 ## আরও পড়ুন {#further-reading}
 
 - [মডিফায়েড মার্কল প্যাট্রিসিয়া ট্রাই — ইথেরিয়াম কীভাবে একটি স্টেট সংরক্ষণ করে](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [ইথেরিয়ামে মার্কলিং](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [ইথেরিয়ামে মার্কলিং](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [ইথেরিয়াম ট্রাই বোঝা](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
