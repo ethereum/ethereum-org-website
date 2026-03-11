@@ -226,6 +226,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             <div className="flex flex-col items-center gap-6">
               <div className="flex w-full overflow-x-auto md:justify-center">
                 <pre
+                  dir="ltr"
                   className="inline-block text-start font-['Courier_New',_Courier,_monospace] text-[clamp(0.3rem,_calc((100vw_-_4rem)_/_48),_1rem)] leading-tight tracking-[0.25px] text-amber-700 dark:text-[#ffb000]"
                   aria-label="ETHSKILLS"
                 >{` ███████╗████████╗██╗  ██╗███████╗██╗  ██╗██╗██╗     ██╗     ███████╗
