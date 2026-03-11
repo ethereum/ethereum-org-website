@@ -9,7 +9,6 @@ import {
 
 import { getTranslatedLocales } from "../i18n/translationRegistry"
 
-import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
 import { routing } from "@/i18n/routing"
@@ -90,10 +89,7 @@ export const getMetadata = async ({
   // Only include hreflang alternates if the current page is translated
   // Untranslated pages should not have hreflang tags
   const localesForHreflang = isCurrentPageTranslated
-    ? routing.locales.filter(
-        (loc) =>
-          finalTranslatedLocales.includes(loc) && isLocaleValidISO639_1(loc)
-      )
+    ? routing.locales.filter((loc) => finalTranslatedLocales.includes(loc))
     : []
 
   const base: Metadata = {
