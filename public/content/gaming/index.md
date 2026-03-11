@@ -6,7 +6,7 @@ image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: Game rules and state can be enforced by the Ethereum blockchain, not a studio's servers, representing a key benefit of onchain games
 summaryPoint2: Anyone can build mods, bots, or entirely new games that plug into the same open onchain data
-summaryPoint3: Evolving UX improvements have improved gameplay and expanded the onchain gaming landscape, including purpose-built L2s for real-time gameplay and game development frameworks for easy development
+summaryPoint3: Purpose-built L2s enable real-time gameplay with lower fees, while game development frameworks make building onchain games more accessible than ever
 buttons:
   - content: Learn more
     toId: gaming-on-ethereum
@@ -19,11 +19,11 @@ buttons:
 
 Gaming on Ethereum comes in various forms, from games that use the blockchain for specific features to those where the entire game world lives onchain. The Ethereum blockchain can be used with games in various capacities. Games can store their currencies as transferable tokens or other in-game assets (characters, equipment, pets, etc.) in the form of [NFTs (non-fungible tokens)](/nft/). Games can also utilize smart contracts to host their logic, rules, and state onchain. Such games are commonly referred to as "fully onchain games."
 
-The Ethereum ecosystem also includes [Layer 2 blockchains (L2s)](/layer-2/learn/) that inherit the security guarantees of Ethereum mainnet while extending Ethereum's scale and supporting specialized use cases. L2 networks can provide additional benefits for onchain games and their communities, because L2s can offer faster confirmation times, higher processing volume, and lower fees, making gameplay faster and more accessible.
+The Ethereum ecosystem also includes [layer 2 blockchains (L2s)](/layer-2/learn/) that inherit the security guarantees of Ethereum mainnet while extending Ethereum's scale and supporting specialized use cases. L2 networks can provide additional benefits for onchain games and their communities, because L2s can offer faster confirmation times, higher processing volume, and lower fees, making gameplay faster and more accessible.
 
 ## Ethereum's gaming ecosystem overview {#ethereums-gaming-ecosystem-overview}
 
-- **Layer 2s:** With cheaper fees and short transaction times, L2s became a common place for games to launch on. Top layer 2s with games include: Starknet, Immutable, Base, and Abstract
+- **Layer 2s:** With cheaper fees and short transaction times, L2s became a common place for games to launch on. Top layer 2s with games include: Starknet, Immutable, Base, and Abstract.
 - **Infrastructure:** To make developing onchain games easier, a number of tool stacks exist that can be used with your own project, including: Cartridge, Dojo, Proof of Play, and Thirdweb.
 - **Gaming guilds:** Players who want to be a part of a gaming community can join gaming guilds to strategize and collaborate with other players in the guild. Notable guilds include: YGG, WASD, LegacyGG, Gaming Grid, OLAGG, and more.
 - **Games:** Ethereum games come in different shapes and sizes, spanning everything from _Realms: Eternum's_ real-time strategy, to _Axie: Atia's Legacy_ MMO, _Fableborn's_ action RPG, and even gamified DeFi platforms like _Ponziland_. With new games launching regularly across different chains, there's always something fresh to explore.
@@ -82,7 +82,7 @@ Advancements in cross-chain interactions and bridging allow players to access ga
 
 ### Scalability and gas fee improvements {#scalability-and-gas-fee-improvements}
 
-In 2017, the craze around Crypto Kitties dramatically increased gas fees for all users transacting on Ethereum. Since then, numerous Ethereum Improvement Proposals have been successfully deployed in network upgrades, increasing Ethereum Mainnet's bandwidth and significantly reducing average transaction fees. Layer 2s further expand available throughput, reducing transaction fees to cents or even lower. Lower fees and higher throughput have expanded the gaming use cases that can be built on Ethereum, supporting high-volume actions and in-game microtransactions that don't price out everyday players.
+In 2017, the craze around CryptoKitties dramatically increased gas fees for all users transacting on Ethereum. Since then, numerous Ethereum Improvement Proposals have been successfully deployed in network upgrades, increasing Ethereum Mainnet's bandwidth and significantly reducing average transaction fees. Layer 2s further expand available throughput, reducing transaction fees to cents or even lower. Lower fees and higher throughput have expanded the gaming use cases that can be built on Ethereum, supporting high-volume actions and in-game microtransactions that don't price out everyday players.
 
 ### Social logins {#social-logins}
 
@@ -98,5 +98,5 @@ There are contrasting philosophies around these mechanics. A leading example is 
 
 1. **Find a fun game to play** - Browse the games listed above or explore platforms like [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), and [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
 2. **Set up your crypto wallet** - You'll need a wallet to manage your digital in-game assets and (in some cases) to log into games. [Choose a wallet here](/wallets/find-wallet/).
-3. **Fund your wallet** - Acquire some Ether (ETH) or tokens relevant to the Layer 2 network you plan to use.
+3. **Fund your wallet** - Acquire some Ether (ETH) or tokens relevant to the layer 2 network you plan to use.
 4. **Play** - Start playing and enjoy true ownership of your in-game progress.
