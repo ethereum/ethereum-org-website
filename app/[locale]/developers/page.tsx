@@ -237,22 +237,19 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
               </div>
 
               <div className="max-w-xl space-y-2 md:text-center">
-                <h2>Build onchain with agents</h2>
+                <h2>{t("page-developers-ethskills-title")}</h2>
                 <p className="text-body-medium">
-                  Structured Ethereum knowledge for the agentic stack. Give your
-                  AI agent the context it needs to read state, send
-                  transactions, and coordinate with protocols, without leaving
-                  the model&apos;s context window.
+                  {t("page-developers-ethskills-desc")}
                 </p>
               </div>
 
               <TerminalTypewriter
                 messages={[
-                  "launch a coin for my community",
-                  "build a fan club that pays me when people join",
-                  "let my art earn royalties every time it resells",
-                  "create a DAO and let my fans vote on what I build",
-                  "set up a vault that grows my ETH while I sleep",
+                  t("page-developers-ethskills-msg-1"),
+                  t("page-developers-ethskills-msg-2"),
+                  t("page-developers-ethskills-msg-3"),
+                  t("page-developers-ethskills-msg-4"),
+                  t("page-developers-ethskills-msg-5"),
                 ]}
               />
 
@@ -265,7 +262,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                   eventName: "ethskills-section-cta",
                 }}
               >
-                Build with ethskills
+                {t("page-developers-ethskills-cta", { ethskills: "ethskills" })}
               </ButtonLink>
             </div>
           </Section>
