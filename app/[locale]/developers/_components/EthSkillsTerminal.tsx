@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 
+import { cn } from "@/lib/utils/cn"
+
 const COMMANDS = [
   "launch a coin for my community",
   "build a fan club that pays me when people join",
@@ -58,26 +60,24 @@ export function EthSkillsTerminal() {
     <div className="w-full max-w-2xl">
       <div className="rounded-lg border border-white/10 bg-zinc-950 px-5 py-4">
         <div className="mb-3 flex items-center gap-1.5">
-          <span className="size-3 rounded-full bg-red-500/70" />
-          <span className="size-3 rounded-full bg-yellow-400/70" />
-          <span className="size-3 rounded-full bg-green-500/70" />
+          <span className="size-3 rounded-full bg-red-500/90" />
+          <span className="size-3 rounded-full bg-yellow-400/90" />
+          <span className="size-3 rounded-full bg-green-500/90" />
         </div>
-        <div
-          className="flex items-center overflow-hidden"
-          style={{
-            fontFamily: "'Courier New', Courier, monospace",
-            fontSize: "0.875rem",
-          }}
-        >
-          <span className="shrink-0 select-none text-green-400">
+        <div className="flex items-center overflow-hidden font-['Courier_New',_Courier,_monospace] text-sm">
+          <span className="shrink-0 select-none self-start text-green-400">
             {"$\u00a0"}
           </span>
-          <span className="text-amber-100">{text}</span>
-          <span
-            className="text-amber-100"
-            style={{ opacity: cursorOn ? 1 : 0 }}
-          >
-            {"█"}
+          <span className="text-start text-amber-100">
+            {text}
+            <span
+              className={cn(
+                "text-amber-100",
+                cursorOn ? "opacity-100" : "opacity-0"
+              )}
+            >
+              {"█"}
+            </span>
           </span>
         </div>
       </div>

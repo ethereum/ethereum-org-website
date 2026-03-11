@@ -223,10 +223,10 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
           </Section>
 
           <Section id="ethskills" className="space-y-8 py-10 md:py-16">
-            <div className="flex flex-col items-center gap-6 text-center">
-              <div className="w-full overflow-x-auto text-center">
+            <div className="flex flex-col items-center gap-6">
+              <div className="flex w-full overflow-x-auto md:justify-center">
                 <pre
-                  className="inline-block whitespace-pre text-start font-['Courier_New'] text-[clamp(0.3rem,_calc((100vw_-_4rem)_/_44),_1rem)] leading-[1.15] tracking-[0.5px] text-[#ffb000]"
+                  className="inline-block text-start font-['Courier_New',_Courier,_monospace] text-[clamp(0.3rem,_calc((100vw_-_4rem)_/_48),_1rem)] leading-tight tracking-[0.25px] text-[#b06000] dark:text-[#ffb000]"
                   aria-label="ETHSKILLS"
                 >{` ███████╗████████╗██╗  ██╗███████╗██╗  ██╗██╗██╗     ██╗     ███████╗
  ██╔════╝╚══██╔══╝██║  ██║██╔════╝██║ ██╔╝██║██║     ██║     ██╔════╝
@@ -236,10 +236,8 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
  ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝`}</pre>
               </div>
 
-              <div className="max-w-xl space-y-2">
-                <h2 className="text-2xl font-bold md:text-3xl">
-                  Build onchain with agents
-                </h2>
+              <div className="max-w-xl space-y-2 md:text-center">
+                <h2>Build onchain with agents</h2>
                 <p className="text-body-medium">
                   Structured Ethereum knowledge for the agentic stack. Give your
                   AI agent the context it needs to read state, send
