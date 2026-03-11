@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import { TerminalTypewriter } from "../terminal-typewriter"
 
 const meta = {
-  title: "Atoms / Media & Icons / TerminalTypewriter",
+  title: "Molecules / Display Content / TerminalTypewriter",
   component: TerminalTypewriter,
   decorators: [
     (Story) => (

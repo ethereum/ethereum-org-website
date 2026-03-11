@@ -58,16 +58,16 @@ export function TerminalTypewriter({
 
   return (
     <div className={cn("w-full max-w-2xl", className)}>
-      <div className="dark rounded-lg border bg-background-highlight px-5 py-4">
+      <div
+        dir="ltr"
+        className="dark rounded-lg border bg-background-highlight px-5 py-4"
+      >
         <div className="mb-3 flex items-center gap-1.5">
           <span className="size-3 rounded-full bg-red-500/90" />
           <span className="size-3 rounded-full bg-yellow-400/90" />
           <span className="size-3 rounded-full bg-green-500/90" />
         </div>
-        <div
-          dir="ltr"
-          className="flex items-center overflow-hidden font-['Courier_New',_Courier,_monospace] text-sm"
-        >
+        <div className="flex items-center overflow-hidden font-['Courier_New',_Courier,_monospace] text-sm">
           <span className="shrink-0 select-none self-start text-green-400">
             {"$\u00a0"}
           </span>
