@@ -222,50 +222,51 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             <WhyGrid />
           </Section>
 
-          <Section id="ethskills" className="space-y-8 py-10 md:py-16">
-            <div className="flex flex-col items-center gap-6">
-              <div className="flex w-full overflow-x-auto md:justify-center">
-                <pre
-                  dir="ltr"
-                  className="inline-block text-start font-['Courier_New',_Courier,_monospace] text-[clamp(0.3rem,_calc((100vw_-_4rem)_/_48),_1rem)] leading-tight tracking-[0.25px] text-amber-700 dark:text-[#ffb000]"
-                  aria-label="ETHSKILLS"
-                >{` ███████╗████████╗██╗  ██╗███████╗██╗  ██╗██╗██╗     ██╗     ███████╗
+          <Section
+            id="ethskills"
+            className="flex flex-col gap-8 py-10 sm:items-center md:py-16"
+          >
+            <div className="flex w-full overflow-x-auto md:justify-center">
+              <pre
+                dir="ltr"
+                className="inline-block text-start font-['Courier_New',_Courier,_monospace] text-[clamp(0.3rem,_calc((100vw_-_4rem)_/_48),_1rem)] leading-tight tracking-[0.25px] text-amber-700 dark:text-[#ffb000]"
+                aria-label="ETHSKILLS"
+              >{` ███████╗████████╗██╗  ██╗███████╗██╗  ██╗██╗██╗     ██╗     ███████╗
  ██╔════╝╚══██╔══╝██║  ██║██╔════╝██║ ██╔╝██║██║     ██║     ██╔════╝
  █████╗     ██║   ███████║███████╗█████╔╝ ██║██║     ██║     ███████╗
  ██╔══╝     ██║   ██╔══██║╚════██║██╔═██╗ ██║██║     ██║     ╚════██║
  ███████╗   ██║   ██║  ██║███████║██║  ██╗██║███████╗███████╗███████║
  ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝`}</pre>
-              </div>
-
-              <div className="max-w-xl space-y-2 md:text-center">
-                <h2>{t("page-developers-ethskills-title")}</h2>
-                <p className="text-body-medium">
-                  {t("page-developers-ethskills-desc")}
-                </p>
-              </div>
-
-              <TerminalTypewriter
-                messages={[
-                  t("page-developers-ethskills-msg-1"),
-                  t("page-developers-ethskills-msg-2"),
-                  t("page-developers-ethskills-msg-3"),
-                  t("page-developers-ethskills-msg-4"),
-                  t("page-developers-ethskills-msg-5"),
-                ]}
-              />
-
-              <ButtonLink
-                href="https://ethskills.com/"
-                size="lg"
-                customEventOptions={{
-                  eventCategory: "ethskills",
-                  eventAction: "click",
-                  eventName: "ethskills-section-cta",
-                }}
-              >
-                {t("page-developers-ethskills-cta", { ethskills: "ethskills" })}
-              </ButtonLink>
             </div>
+
+            <div className="max-w-xl space-y-2 md:text-center">
+              <h2>{t("page-developers-ethskills-title")}</h2>
+              <p className="text-body-medium">
+                {t("page-developers-ethskills-desc")}
+              </p>
+            </div>
+
+            <TerminalTypewriter
+              messages={[
+                t("page-developers-ethskills-msg-1"),
+                t("page-developers-ethskills-msg-2"),
+                t("page-developers-ethskills-msg-3"),
+                t("page-developers-ethskills-msg-4"),
+                t("page-developers-ethskills-msg-5"),
+              ]}
+            />
+
+            <ButtonLink
+              href="https://ethskills.com/"
+              size="lg"
+              customEventOptions={{
+                eventCategory: "ethskills",
+                eventAction: "click",
+                eventName: "ethskills-section-cta",
+              }}
+            >
+              {t("page-developers-ethskills-cta", { ethskills: "ethskills" })}
+            </ButtonLink>
           </Section>
 
           <Section
