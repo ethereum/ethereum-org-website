@@ -1,11 +1,11 @@
 import { useTranslations } from "next-intl"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { TerminalTypewriter } from "../terminal-typewriter"
+import { TerminalTypewriter as TerminalTypewriterComponent } from "../terminal-typewriter"
 
 const meta = {
   title: "Molecules / Display Content / TerminalTypewriter",
-  component: TerminalTypewriter,
+  component: TerminalTypewriterComponent,
   decorators: [
     (Story) => (
       <div className="w-[42rem]">
@@ -13,16 +13,16 @@ const meta = {
       </div>
     ),
   ],
-} satisfies Meta<typeof TerminalTypewriter>
+} satisfies Meta<typeof TerminalTypewriterComponent>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
-const EthSkillsTerminal = () => {
+const TerminalTypewriter = () => {
   const t = useTranslations("page-developers-index")
   return (
-    <TerminalTypewriter
+    <TerminalTypewriterComponent
       messages={[
         t("page-developers-ethskills-msg-1"),
         t("page-developers-ethskills-msg-2"),
@@ -35,5 +35,8 @@ const EthSkillsTerminal = () => {
 }
 
 export const Default: Story = {
-  render: () => <EthSkillsTerminal />,
+  args: {
+    messages: [],
+  },
+  render: () => <TerminalTypewriter />,
 }
