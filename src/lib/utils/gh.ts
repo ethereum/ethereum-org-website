@@ -147,6 +147,122 @@ async function fetchWithRateLimit(filepath: string): Promise<Commit[]> {
   return json
 }
 
+/** Email addresses (or substrings) that identify AI agent co-authors */
+const EXCLUDED_EMAILS = [
+  "noreply@anthropic.com",
+  "copilot@github.com",
+  "49699333+dependabot[bot]@users.noreply.github.com",
+  "actions@github.com",
+  "github-actions[bot]@users.noreply.github.com",
+  "noreply@github.com",
+]
+
+/** GitHub logins (exact match) that should be excluded */
+const EXCLUDED_LOGINS = [
+  "dependabot[bot]",
+  "github-actions[bot]",
+  "allcontributors[bot]",
+  "netlify[bot]",
+  "crowdin-bot",
+  "eth-bot",
+  "ethereumoptimism-bot",
+  "coderabbitai[bot]",
+]
+
+/** Name patterns (case-insensitive substring match) for AI agent co-authors */
+const EXCLUDED_NAME_PATTERNS = [
+  "claude",
+  "copilot",
+  "gpt",
+  "chatgpt",
+  "openai",
+  "cursor",
+  "codeium",
+  "tabnine",
+  "amazon q",
+  "cody",
+  "gemini",
+  "coderabbit",
+]
+
+/**
+ * Extract GitHub login from a noreply email address.
+ * Handles both formats:
+ *   - "username@users.noreply.github.com"
+ *   - "12345678+username@users.noreply.github.com"
+ * Returns null for non-noreply emails.
+ */
+const extractLoginFromNoreplyEmail = (email: string): string | null => {
+  const match = email.match(/^(?:\d+\+)?([^@]+)@users\.noreply\.github\.com$/)
+  return match ? match[1] : null
+}
+
+/**
+ * Parse co-author trailers from a commit message.
+ * Matches lines like: "Co-authored-by: Name <email>"
+ * Returns FileContributor entries for any co-authors with resolvable
+ * GitHub logins (via noreply email addresses).
+ */
+const parseCoAuthors = (
+  message: string,
+  commitDate: string
+): FileContributor[] => {
+  const coAuthorPattern = /^co-authored-by:\s*(.+?)\s*<([^>]+)>/gim
+  const coAuthors: FileContributor[] = []
+  let match
+
+  while ((match = coAuthorPattern.exec(message)) !== null) {
+    const name = match[1].trim()
+    const email = match[2].trim()
+
+    // Skip excluded emails
+    if (
+      EXCLUDED_EMAILS.some((excluded) =>
+        email.toLowerCase().includes(excluded.toLowerCase())
+      )
+    ) {
+      continue
+    }
+
+    // Skip excluded name patterns (catches AI agents)
+    if (
+      EXCLUDED_NAME_PATTERNS.some((pattern) =>
+        name.toLowerCase().includes(pattern.toLowerCase())
+      )
+    ) {
+      continue
+    }
+
+    // Resolve GitHub login from noreply email
+    const login = extractLoginFromNoreplyEmail(email)
+    if (!login) continue
+
+    // Skip excluded logins
+    if (
+      EXCLUDED_LOGINS.some(
+        (excluded) => excluded.toLowerCase() === login.toLowerCase()
+      )
+    ) {
+      continue
+    }
+
+    coAuthors.push({
+      login,
+      avatar_url: `https://avatars.githubusercontent.com/${login}`,
+      html_url: `https://github.com/${login}`,
+      date: commitDate,
+    })
+  }
+
+  return coAuthors
+}
+
+/** Check if a primary commit author should be excluded */
+const isExcludedContributor = (login: string): boolean =>
+  EXCLUDED_LOGINS.some(
+    (excluded) => excluded.toLowerCase() === login.toLowerCase()
+  )
+
 // Fetch commit history and save it to a JSON file
 export const fetchAndCacheGitHubContributors = async (
   filepath: string,
@@ -163,13 +279,20 @@ export const fetchAndCacheGitHubContributors = async (
       filepath.replace(CONTENT_DIR, OLD_CONTENT_DIR)
     )) || []
 
-  // Transform commitHistory
+  // Transform commitHistory: include both primary authors and co-authors
   const contributors = [...history, ...legacyHistory]
     .filter(({ author }) => !!author)
-    .map((contribution) => {
+    .flatMap((contribution) => {
       const { login, avatar_url, html_url } = contribution.author
       const { date } = contribution.commit.author
-      return { login, avatar_url, html_url, date }
+
+      const primary: FileContributor[] = isExcludedContributor(login)
+        ? []
+        : [{ login, avatar_url, html_url, date }]
+
+      const coAuthors = parseCoAuthors(contribution.commit.message, date)
+
+      return [...primary, ...coAuthors]
     })
 
   // Remove duplicates from same login
