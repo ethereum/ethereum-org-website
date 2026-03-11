@@ -27,6 +27,7 @@ import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
+import { TerminalTypewriter } from "@/components/ui/terminal-typewriter"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -36,7 +37,6 @@ import { screens } from "@/lib/utils/screen"
 
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper/lazy"
-import { EthSkillsTerminal } from "./_components/EthSkillsTerminal"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
@@ -246,7 +246,15 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                 </p>
               </div>
 
-              <EthSkillsTerminal />
+              <TerminalTypewriter
+                messages={[
+                  "launch a coin for my community",
+                  "build a fan club that pays me when people join",
+                  "let my art earn royalties every time it resells",
+                  "create a DAO and let my fans vote on what I build",
+                  "set up a vault that grows my ETH while I sleep",
+                ]}
+              />
 
               <ButtonLink
                 href="https://ethskills.com/"

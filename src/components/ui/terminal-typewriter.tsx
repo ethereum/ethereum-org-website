@@ -4,14 +4,6 @@ import { useEffect, useState } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
-const COMMANDS = [
-  "launch a coin for my community",
-  "build a fan club that pays me when people join",
-  "let my art earn royalties every time it resells",
-  "create a DAO and let my fans vote on what I build",
-  "set up a vault that grows my ETH while I sleep",
-]
-
 const TYPING_MS = 60
 const DELETE_MS = 28
 const PAUSE_MS = 2000
@@ -19,8 +11,16 @@ const NEXT_MS = 350
 
 type Phase = "typing" | "paused" | "deleting"
 
-export function EthSkillsTerminal() {
-  const [cmdIdx, setCmdIdx] = useState(0)
+interface TerminalTypewriterProps {
+  messages: string[]
+  className?: string
+}
+
+export function TerminalTypewriter({
+  messages,
+  className,
+}: TerminalTypewriterProps) {
+  const [msgIdx, setMsgIdx] = useState(0)
   const [text, setText] = useState("")
   const [phase, setPhase] = useState<Phase>("typing")
   const [cursorOn, setCursorOn] = useState(true)
@@ -31,12 +31,12 @@ export function EthSkillsTerminal() {
   }, [])
 
   useEffect(() => {
-    const cmd = COMMANDS[cmdIdx]
+    const msg = messages[msgIdx]
     let id: ReturnType<typeof setTimeout>
 
     if (phase === "typing") {
-      if (text.length < cmd.length) {
-        id = setTimeout(() => setText(cmd.slice(0, text.length + 1)), TYPING_MS)
+      if (text.length < msg.length) {
+        id = setTimeout(() => setText(msg.slice(0, text.length + 1)), TYPING_MS)
       } else {
         id = setTimeout(() => setPhase("paused"), 50)
       }
@@ -47,17 +47,17 @@ export function EthSkillsTerminal() {
         id = setTimeout(() => setText((t) => t.slice(0, -1)), DELETE_MS)
       } else {
         id = setTimeout(() => {
-          setCmdIdx((i) => (i + 1) % COMMANDS.length)
+          setMsgIdx((i) => (i + 1) % messages.length)
           setPhase("typing")
         }, NEXT_MS)
       }
     }
 
     return () => clearTimeout(id)
-  }, [text, phase, cmdIdx])
+  }, [text, phase, msgIdx, messages])
 
   return (
-    <div className="w-full max-w-2xl">
+    <div className={cn("w-full max-w-2xl", className)}>
       <div className="dark rounded-lg border bg-background-highlight px-5 py-4">
         <div className="mb-3 flex items-center gap-1.5">
           <span className="size-3 rounded-full bg-red-500/90" />
