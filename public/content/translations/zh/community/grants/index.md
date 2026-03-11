@@ -20,6 +20,7 @@ lang: zh
 这些计划通过向大量项目提供资助来支持庞大的以太坊生态系统。 其中包括可扩容性、社区建设、安全、隐私等解决方案。 这些资助并非专门针对任何一个以太坊平台，如果不确定，可以从这里开始。
 
 - [EF 生态系统支持计划](https://esp.ethereum.foundation) - _为有利于以太坊的开源项目提供资金，尤其侧重于通用工具、基础设施、研究和公共物品_
+- [ESP 资助项目浏览器](https://esp.ethereum.foundation/funded-projects) - _可搜索的目录，收录了生态系统支持计划资助的 1,000 多个项目_
 - [学术资助](https://esp.ethereum.foundation/academic-grants) - _为支持以太坊相关学术工作而设的资助_
 
 ## 资助列表聚合器和平台 {#grant-list-aggregators}
