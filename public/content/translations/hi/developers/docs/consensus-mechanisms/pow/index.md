@@ -101,7 +101,7 @@ lang: hi
 ## अग्रिम पठन {#further-reading}
 
 - [बहुमत हमला](https://en.bitcoin.it/wiki/Majority_attack)
-- [निपटान की अंतिम स्थिति पर](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [निपटान की अंतिम स्थिति पर](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### वीडियो {#videos}
 

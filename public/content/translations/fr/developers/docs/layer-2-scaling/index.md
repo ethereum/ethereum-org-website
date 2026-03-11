@@ -1,6 +1,6 @@
 ---
-title: Évolutivité vers la couche 2
-description: Introduction aux différentes options d'évolutivité actuellement en cours de développement par la communauté Ethereum.
+title: "Évolutivité vers la couche 2"
+description: "Introduction aux différentes options d'évolutivité actuellement en cours de développement par la communauté Ethereum."
 lang: fr
 incomplete: true
 sidebarDepth: 3
@@ -223,7 +223,7 @@ Combine les meilleures parties des multiples technologies de couche 2, et peut o
 
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _- Josh Stark, 12 février 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _- Jeff Coleman, 6 novembre 2015 _
-- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Basics of State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 
 **Canaux de paiement**
 

@@ -2,14 +2,14 @@ import type { MetadataRoute } from "next"
 
 import { getFullUrl, slugify } from "@/lib/utils/url"
 
+import { appsCategories } from "@/data/apps/categories"
+
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
 
-import { appsCategories } from "@/data/apps/categories"
 import { DEV_TOOL_CATEGORIES } from "./[locale]/developers/tools/constants"
 
-import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
-
 import { getAppsData } from "@/lib/data"
+import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
 
 // Slugs that canonicalize elsewhere and should not appear in the sitemap
 const EXCLUDED_SLUGS = ["/developers/tutorials/ipfs-decentralized-ui/"]
@@ -17,17 +17,25 @@ const EXCLUDED_SLUGS = ["/developers/tutorials/ipfs-decentralized-ui/"]
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = await getAllPagesWithTranslations()
 
-  const entries: MetadataRoute.Sitemap = [
-    {
-      url: `${SITE_URL}/`,
-      changeFrequency: "daily",
-      priority: 1.0,
-      lastModified: new Date(),
-    },
-  ]
+  const entries: MetadataRoute.Sitemap = []
+  const seenUrls = new Set<string>()
 
   for (const { slug, translatedLocales } of pages) {
     const normalizedSlug = slug.startsWith("/") ? slug : `/${slug}`
+    const alternates =
+      translatedLocales.length > 0
+        ? {
+            languages: {
+              "x-default": getFullUrl(DEFAULT_LOCALE, normalizedSlug),
+              ...Object.fromEntries(
+                translatedLocales.map((locale) => [
+                  locale,
+                  getFullUrl(locale, normalizedSlug),
+                ])
+              ),
+            },
+          }
+        : undefined
 
     // Skip excluded slugs
     if (EXCLUDED_SLUGS.includes(normalizedSlug)) continue
@@ -35,22 +43,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const locale of translatedLocales) {
       const url = getFullUrl(locale, normalizedSlug)
 
-      // Drop the `/en` root entry to avoid duplicating `/`
-      // This happens when slug is "/" and locale is default
-      if (
-        locale === DEFAULT_LOCALE &&
-        (normalizedSlug === "/" || normalizedSlug === "")
-      ) {
+      if (seenUrls.has(url)) {
         continue
       }
 
-      const isDefaultLocale = locale === DEFAULT_LOCALE
+      seenUrls.add(url)
 
       entries.push({
         url,
-        changeFrequency: isDefaultLocale ? "weekly" : "monthly",
-        priority: isDefaultLocale ? 0.7 : 0.5,
-        lastModified: new Date(),
+        alternates,
       })
     }
   }

@@ -1,5 +1,7 @@
 {
   "table-active": "সক্রিয়",
   "table-filters": "ফিল্টার",
-  "table-showing": "দেখাচ্ছে"
+  "table-showing": "দেখাচ্ছে",
+  "table-reset-filters": "রিসেট",
+  "table-what-are-you-looking-for": "আপনি কি খুঁজছেন?"
 }

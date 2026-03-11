@@ -13,6 +13,7 @@
   "erc20-annotated-code",
   "erc20-with-safety-rails",
   "ethereum-for-web2-auth",
+  "gasless",
   "getting-started-with-ethereum-development-using-alchemy",
   "guide-to-smart-contract-security-tools",
   "hello-world-smart-contract",
@@ -53,6 +54,5 @@
   "understand-the-erc-20-token-smart-contract",
   "uniswap-v2-annotated-code",
   "using-websockets",
-  "waffle-test-simple-smart-contract",
   "yellow-paper-evm"
 ]
