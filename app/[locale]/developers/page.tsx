@@ -226,7 +226,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             <div className="flex flex-col items-center gap-6">
               <div className="flex w-full overflow-x-auto md:justify-center">
                 <pre
-                  className="inline-block text-start font-['Courier_New',_Courier,_monospace] text-[clamp(0.3rem,_calc((100vw_-_4rem)_/_48),_1rem)] leading-tight tracking-[0.25px] text-[#b06000] dark:text-[#ffb000]"
+                  className="inline-block text-start font-['Courier_New',_Courier,_monospace] text-[clamp(0.3rem,_calc((100vw_-_4rem)_/_48),_1rem)] leading-tight tracking-[0.25px] text-amber-700 dark:text-[#ffb000]"
                   aria-label="ETHSKILLS"
                 >{` ███████╗████████╗██╗  ██╗███████╗██╗  ██╗██╗██╗     ██╗     ███████╗
  ██╔════╝╚══██╔══╝██║  ██║██╔════╝██║ ██╔╝██║██║     ██║     ██╔════╝
@@ -241,8 +241,8 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                 <p className="text-body-medium">
                   Structured Ethereum knowledge for the agentic stack. Give your
                   AI agent the context it needs to read state, send
-                  transactions, and coordinate with protocols&mdash;without
-                  leaving the model&apos;s context window.
+                  transactions, and coordinate with protocols, without leaving
+                  the model&apos;s context window.
                 </p>
               </div>
 
@@ -250,6 +250,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
 
               <ButtonLink
                 href="https://ethskills.com/"
+                size="lg"
                 customEventOptions={{
                   eventCategory: "ethskills",
                   eventAction: "click",

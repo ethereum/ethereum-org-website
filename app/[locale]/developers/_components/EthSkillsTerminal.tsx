@@ -58,7 +58,7 @@ export function EthSkillsTerminal() {
 
   return (
     <div className="w-full max-w-2xl">
-      <div className="rounded-lg border border-white/10 bg-zinc-950 px-5 py-4">
+      <div className="dark rounded-lg border bg-background-highlight px-5 py-4">
         <div className="mb-3 flex items-center gap-1.5">
           <span className="size-3 rounded-full bg-red-500/90" />
           <span className="size-3 rounded-full bg-yellow-400/90" />
@@ -68,7 +68,7 @@ export function EthSkillsTerminal() {
           <span className="shrink-0 select-none self-start text-green-400">
             {"$\u00a0"}
           </span>
-          <span className="text-start text-amber-100">
+          <span className="text-start text-amber-100 max-sm:h-[2lh]">
             {text}
             <span
               className={cn(
