@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Erfahren Sie mehr über das Glamsterdam Protokoll -Upgrade.
+description: "Erfahren Sie mehr über das Glamsterdam Protokoll -Upgrade."
 lang: de
 ---
 # Glamsterdam {#glamsterdam}
@@ -20,13 +20,12 @@ Das bevorstehende Glamsterdam-Upgrade [von Ethereum](/) soll den Weg für die n�
 
 Nach den Fortschritten bei der [Fusaka](/roadmap/fusaka/) -Aktualisierung konzentriert sich Glamsterdam auf die Skalierung der L1, indem es die Art und Weise, wie das Netzwerk Transaktionen verarbeitet und seine wachsende Datenbank verwaltet, neu organisiert und die Art und Weise, wie Ethereum Blöcke erstellt und verifiziert, grundlegend aktualisiert.
 
-Während sich Fusaka auf grundlegende Verfeinerungen konzentrierte, fördert Glamsterdam die Ziele „Scale L1“ und „Scale Blobs“, indem es die Trennung der Aufgaben zwischen verschiedenen Netzwerk festschreibt und effizientere Methoden zur Datenverarbeitung einführt, um den <GlossaryTooltip termKey="state">Zustand</GlossaryTooltip> für eine hochdurchsatzfähige Parallelisierung vorzubereiten. 
+Während sich Fusaka auf grundlegende Verfeinerungen konzentrierte, fördert Glamsterdam die Ziele „Scale L1“ und „Scale Blobs“, indem es die Trennung der Aufgaben zwischen verschiedenen Netzwerk festschreibt und effizientere Methoden zur Datenverarbeitung einführt, um den [Zustand](/glossary/#state) für eine hochdurchsatzfähige Parallelisierung vorzubereiten. 
 
-Diese Verbesserungen stellen sicher, dass Ethereum schnell, erschwinglich und dezentralisiert bleibt, während es mehr Aktivität verarbeitet und gleichzeitig die Hardwareanforderungen für Personen, die <GlossaryTooltip termKey="node">Knoten</GlossaryTooltip> zu Hause betreiben, überschaubar bleiben.
+Diese Verbesserungen stellen sicher, dass Ethereum schnell, erschwinglich und dezentralisiert bleibt, während es mehr Aktivität verarbeitet und gleichzeitig die Hardwareanforderungen für Personen, die [Knoten](/glossary/#node) zu Hause betreiben, überschaubar bleiben.
 
 <YouTube id="GgKveVMLnoo" />
 
-***
 ## Verbesserungen für Glamsterdam in Betracht gezogen {#improvements-in-glamsterdam}
 
 <Alert variant="info">
@@ -59,7 +58,7 @@ Eine sinnvolle L1- Skalierung erfordert die Abkehr von Off-Protocol-Vertrauensan
 
 Derzeit umfasst der Prozess des Vorschlagens und Erstellens von Blöcke eine Übergabe zwischen Block und Block Buildern. Die Beziehung zwischen Vorschlagenden und Buildern ist nicht Teil des Ethereum- Protokoll, daher ist sie auf proprietäre Drittanbieter-Software (Relays) sowie auf vertrauenswürdige Beziehungen zwischen Entitäten außerhalb des Protokolls angewiesen. 
 
-Die außerprotokollarische Beziehung zwischen Proposern und Buildern erzeugt auch einen „Hot Path“ während der Block, der <GlossaryTooltip termKey="validator">die Validatoren</GlossaryTooltip> zwingt, die Transaktion und -ausführung in einem engen 2-Sekunden-Fenster zu beschleunigen, was die Datenmenge begrenzt, die das Netzwerk verarbeiten kann.
+Die außerprotokollarische Beziehung zwischen Proposern und Buildern erzeugt auch einen „Hot Path“ während der Block, der [die Validatoren](/glossary/#validator) zwingt, die Transaktion und -ausführung in einem engen 2-Sekunden-Fenster zu beschleunigen, was die Datenmenge begrenzt, die das Netzwerk verarbeiten kann.
 
 **Die verankerte Trennung von Proposer und Builder (ePBS oder EIP-7732)** trennt formell die Aufgabe des Proposers (der den Block auswählt) von der des Builders (der die Transaktionen zusammenstellt) und „verankert“ diesen Prozess direkt im Ethereum- Protokoll, um vertrauensloses Handeln außerhalb des Protokolls zu eliminieren. Sie führt auch das Payload Timeliness Committee (PTC) und eine Dual-Deadline-Logik ein, wobei Validatoren die Aktualität und Datenverfügbarkeit separat bescheinigen, um den Durchsatz zu maximieren. 
 
@@ -67,14 +66,14 @@ Die außerprotokollarische Beziehung zwischen Proposern und Buildern erzeugt auc
 
 Die Trennung der Rollen von Vorschlagenden und Erbauer auf Protokoll erweitert das Ausbreitungsfenster (oder die Zeit, die für die Verbreitung von Daten im Netzwerk zur Verfügung steht) von 2 Sekunden auf etwa 9 Sekunden. 
 
-ePBS reduziert die Abhängigkeit von zusätzlicher Drittanbietersoftware und ermöglicht es Ethereum, viel größere Datenmengen (wie mehr Blobs für <GlossaryTooltip termKey="layer-2">Ebene-2-Lösungen</GlossaryTooltip> ) sicher zu verarbeiten, ohne das Netzwerk zu belasten.
+ePBS reduziert die Abhängigkeit von zusätzlicher Drittanbietersoftware und ermöglicht es Ethereum, viel größere Datenmengen (wie mehr Blobs für [Ebene-2-Lösungen](/glossary/#layer-2) ) sicher zu verarbeiten, ohne das Netzwerk zu belasten.
 
 **Ressourcen**: [Technische Spezifikation von EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
 ### Vorschlag für ein Hauptthema: Zugriffslisten auf Blockebene (BALs) {#bals}
 
 - Eliminiert Engpässe bei der sequenziellen Verarbeitung, indem eine Vorauswahl aller Transaktion bereitgestellt wird, die die Grundlage dafür bildet, dass Validatoren viele Transaktionen parallel statt einzeln verarbeiten können.
-- LLM translation failed.
+- Ermöglicht es den Knoten, ihre Aufzeichnungen durch Lesen der Endergebnisse zu aktualisieren, ohne jede Transaktion erneut abspielen zu müssen (ausführungslose Synchronisierung), was die Synchronisierung eines Knotens mit dem Netzwerk erheblich beschleunigt.
 - Eliminiert das Rätselraten und ermöglicht es den Validatoren, alle notwendigen Daten auf einmal vorzuladen, anstatt sie Schritt für Schritt zu entdecken, was die Validierung erheblich beschleunigt. 
 
 Das heutige Ethereum ist wie eine einspurige Straße. Da das Netzwerk nicht weiß, welche Daten eine Transaktion benötigen oder ändern wird (z. B. welche Konten eine Transaktion berühren wird), bis eine Transaktion ausgeführt wurde, müssen Validatoren Transaktionen einzeln in einer strengen, sequenziellen Reihenfolge verarbeiten. Wenn sie versuchen würden, die Transaktionen alle auf einmal zu verarbeiten, ohne diese Abhängigkeiten zu kennen, könnten zwei Transaktionen versehentlich versuchen, genau dieselben Daten gleichzeitig zu ändern, was zu Fehlern führen würde.
@@ -105,7 +104,7 @@ Da das Ethereum- Netzwerk immer schneller wächst, ist es wichtig sicherzustelle
 - Passt diese Gebühren für die Datenerstellung automatisch an die Gesamtkapazität des Netzwerks an und zielt auf eine sichere und vorhersehbare Wachstumsrate ab, damit Standard-Hardware das Netzwerk weiterhin betreiben kann.
 - Trennt die Abrechnung für diese spezifischen Gebühren in ein neues Reservoir, hebt alte Transaktion auf und ermöglicht Entwicklern die Bereitstellung größerer, komplexerer Anwendungen.
 
-Das Hinzufügen neuer Konten, Token und <GlossaryTooltip termKey="smart-contract">Smart Contracts</GlossaryTooltip> erzeugt permanente Daten (bekannt als „Zustand“), die jeder Computer, auf dem das Netzwerk läuft, auf unbestimmte Zeit speichern muss. Die aktuellen Gebühren für das Hinzufügen oder Lesen dieser Daten sind inkonsistent und spiegeln nicht unbedingt die tatsächliche, langfristige Speicherlast wider, die sie auf die Hardware des Netzwerks ausüben.
+Das Hinzufügen neuer Konten, Token und [Smart Contracts](/glossary/#smart-contract) erzeugt permanente Daten (bekannt als „Zustand“), die jeder Computer, auf dem das Netzwerk läuft, auf unbestimmte Zeit speichern muss. Die aktuellen Gebühren für das Hinzufügen oder Lesen dieser Daten sind inkonsistent und spiegeln nicht unbedingt die tatsächliche, langfristige Speicherlast wider, die sie auf die Hardware des Netzwerks ausüben.
 
 Einige Aktionen, die einen Zustand auf Ethereum erzeugen, wie das Erstellen neuer Konten oder das Bereitstellen großer Smart Contracts, waren im Vergleich zu dem permanenten Speicherplatz, den sie auf den Knoten des Netzwerks einnehmen, relativ kostengünstig. Beispielsweise ist die Bereitstellung von Verträgen pro Byte deutlich billiger als das Erstellen von Speicherplätzen. 
 
@@ -121,7 +120,7 @@ Eine genauere und vorhersehbarere Preisgestaltung für die Datenspeicherung wird
 
 **Ressourcen**: [Technische Spezifikation EIP-8037](https://eips.ethereum.org/EIPS/eip-8037)
 
-### Aktualisierung der Gas für den staatlichen Zugang {#state-access-gas-cost-update}
+### Aktualisierung der Gaskosten für den Zustandszugriff {#state-access-gas-cost-update}
 
 - Erhöht die Gas für Anwendungen, die Informationen lesen oder aktualisieren, die dauerhaft auf Ethereum gespeichert sind (State-Access-Opcodes), um die Rechenarbeit, die diese Befehle erfordern, genau abzugleichen.
 
@@ -255,7 +254,7 @@ Diese Änderung würde Netzwerk Synchronisationsfehler während Zeiten hoher Akt
 
 Ja, das Glamsterdam-Upgrade erfordert Updates sowohl für [Ausführungs-Clients als auch für Konsens-Clients](/developers/docs/nodes-and-clients/). Da dieses Upgrade die Enshrined Proposer-Builder Separation (ePBS) einführt, müssen Blockchain-Knoten sicherstellen, dass ihre Clients aktualisiert werden, um die neuen Methoden zu handhaben, mit denen Blöcke erstellt, validiert und vom Netzwerk bestätigt werden. 
 
-Alle wichtigen Ethereum-Clients werden Versionen veröffentlichen, die den als hohe Priorität markierten Hard Fork unterstützen. Sie können sich darüber auf dem Laufenden halten, wann diese Versionen in den Github-Repos der Anwendung, ihren [Discord-Kanälen](https://ethstaker.org/support), dem [EthStaker Discord](https://dsc.gg/ethstaker) oder durch Abonnieren des Ethereum-Blogs für Protokoll Updates verfügbar sein werden. 
+Alle wichtigen Ethereum-Clients werden Versionen veröffentlichen, die den als hohe Priorität markierten Hard Fork unterstützen. Sie können sich darüber auf dem Laufenden halten, wann diese Versionen in den GitHub-Repos der Anwendung, ihren [Discord-Kanälen](https://ethstaker.org/support), dem [EthStaker Discord](https://dsc.gg/ethstaker) oder durch Abonnieren des Ethereum-Blogs für Protokoll Updates verfügbar sein werden. 
 
 Um die Synchronisierung mit dem Ethereum- Netzwerk nach dem Upgrade aufrechtzuerhalten, müssen die Blockchain-Knoten sicherstellen, dass sie eine unterstützte Anwendung Version ausführen. Beachten Sie, dass die Informationen zu Anwendung Releases zeitkritisch sind und Benutzer die neuesten Updates für die aktuellsten Details konsultieren sollten.
 

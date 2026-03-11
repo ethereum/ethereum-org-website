@@ -256,7 +256,7 @@ This change would prevent network sync failures during periods of heavy activity
 
 Yes, the Glamsterdam upgrade requires updates to both [execution clients and consensus clients](/developers/docs/nodes-and-clients/). Because this upgrade introduces Enshrined Proposer-Builder Separation (ePBS), node operators will need to ensure their clients are updated to handle the new ways blocks are built, validated, and attested to by the network.
 
-All main Ethereum clients will release versions supporting the hard fork marked as high priority. You can keep up with when these releases will be available in client Github repos, their [Discord channels](https://ethstaker.org/support), the [EthStaker Discord](https://dsc.gg/ethstaker), or by subscribing to the Ethereum blog for protocol updates.
+All main Ethereum clients will release versions supporting the hard fork marked as high priority. You can keep up with when these releases will be available in client GitHub repos, their [Discord channels](https://ethstaker.org/support), the [EthStaker Discord](https://dsc.gg/ethstaker), or by subscribing to the Ethereum blog for protocol updates.
 
 To maintain synchronization with the Ethereum network post-upgrade, node operators must ensure they are running a supported client version. Note that the information about client releases is time-sensitive, and users should refer to the latest updates for the most current details.
 

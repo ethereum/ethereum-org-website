@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Más información sobre la actualización del protocolo Glamsterdam
+description: "Más información sobre la actualización del protocolo Glamsterdam"
 lang: es
 ---
 # Glamsterdam {#glamsterdam}
@@ -20,13 +20,12 @@ La próxima actualización [de Ethereum,](/) Glamsterdam, está diseñada para a
 
 Tras el progreso realizado en la actualización [de Fusaka](/roadmap/fusaka/), Glamsterdam se centra en escalabilidad la L1 reorganizando la forma en que la red procesa las transacciones y gestiona su creciente base de datos, actualizando fundamentalmente la forma en que Ethereum crea y verifica los bloques.
 
-Mientras que Fusaka se centró en mejoras fundamentales, Glamsterdam avanza en los objetivos de "Scale L1" y "Scale Blobs" al consagrar la separación de funciones entre los diferentes participantes de la red e introducir formas más eficientes de gestionar los datos para preparar el <GlossaryTooltip termKey="state">estado</GlossaryTooltip> para la paralelización de alto rendimiento. 
+Mientras que Fusaka se centró en mejoras fundamentales, Glamsterdam avanza en los objetivos de "Scale L1" y "Scale Blobs" al consagrar la separación de funciones entre los diferentes participantes de la red e introducir formas más eficientes de gestionar los datos para preparar el [estado](/glossary/#state) para la paralelización de alto rendimiento. 
 
-Estas mejoras garantizan que Ethereum siga siendo rápido, asequible y descentralizado a medida que gestiona más actividad, al tiempo que mantiene los requisitos de hardware manejables para las personas que ejecutan <GlossaryTooltip termKey="node">nodos</GlossaryTooltip> en casa.
+Estas mejoras garantizan que Ethereum siga siendo rápido, asequible y descentralizado a medida que gestiona más actividad, al tiempo que mantiene los requisitos de hardware manejables para las personas que ejecutan [nodos](/glossary/#node) en casa.
 
 <YouTube id="GgKveVMLnoo" />
 
-***
 ## Mejoras consideradas para Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
@@ -59,7 +58,7 @@ Una escalabilidad significativa de L1 requiere alejarse de las suposiciones de c
 
 Actualmente, el proceso de propuesta y construcción de bloques incluye un traspaso entre los bloque y los constructores de bloque. La relación entre proponentes y constructores no forma parte del protocolo central de Ethereum, por lo que depende de software de terceros de código cerrado (relés), así como de la confianza fuera del protocolo entre entidades. 
 
-La relación fuera de protocolo entre los proponentes y los constructores también crea una "ruta crítica" durante la validación de bloque que obliga a <GlossaryTooltip termKey="validator">los validadores</GlossaryTooltip> a apresurar la difusión y ejecución de transacción en una estrecha ventana de 2 segundos, lo que limita la cantidad de datos que la red puede manejar.
+La relación fuera de protocolo entre los proponentes y los constructores también crea una "ruta crítica" durante la validación de bloque que obliga a [los validadores](/glossary/#validator) a apresurar la difusión y ejecución de transacción en una estrecha ventana de 2 segundos, lo que limita la cantidad de datos que la red puede manejar.
 
 **La separación integrada entre proponente y constructor (ePBS o EIP-7732)** separa formalmente el trabajo del proponente (que elige el bloque) del constructor (que ensambla las transacciones), "integrando" este proceso directamente en el protocolo de Ethereum para eliminar la confianza fuera del protocolo. También introduce el Comité de Oportunidad de Carga Útil (PTC) y una lógica de doble plazo, con validadores que atestiguan la oportunidad y la disponibilidad de datos por separado para maximizar el rendimiento. 
 
@@ -67,7 +66,7 @@ La relación fuera de protocolo entre los proponentes y los constructores tambi�
 
 La separación de las funciones de proponente y constructor a nivel de protocolo amplía la ventana de propagación (o el tiempo disponible para difundir datos a través de la red) de 2 segundos a aproximadamente 9 segundos. 
 
-ePBS reduce la dependencia de software adicional de terceros y permite que Ethereum procese de forma segura cantidades mucho mayores de datos (como más blobs para <GlossaryTooltip termKey="layer-2">las capas 2</GlossaryTooltip>) sin sobrecargar la red.
+ePBS reduce la dependencia de software adicional de terceros y permite que Ethereum procese de forma segura cantidades mucho mayores de datos (como más blobs para [las capas 2](/glossary/#layer-2)) sin sobrecargar la red.
 
 **Recursos**: [Especificación técnica EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
@@ -105,7 +104,7 @@ A medida que la red de Ethereum crece más rápido, es importante asegurarse de 
 - Ajusta automáticamente estas tarifas de creación de datos en función de la capacidad general de la red, con el objetivo de lograr una tasa de crecimiento segura y predecible para que el hardware físico estándar pueda seguir ejecutando la red.
 - Separa la contabilidad de estas tarifas específicas en un nuevo depósito, eliminando los antiguos límites de transacción y permitiendo a los desarrolladores implementar aplicaciones más grandes y complejas.
 
-La adición de nuevas cuentas, tokens y <GlossaryTooltip termKey="smart-contract">contratos inteligentes</GlossaryTooltip> crea datos permanentes (conocidos como "estado") que cada ordenador que ejecuta la red debe almacenar indefinidamente. Las tarifas actuales para añadir o leer estos datos son inconsistentes y no reflejan necesariamente la carga real de almacenamiento a largo plazo que imponen al hardware de la red.
+La adición de nuevas cuentas, tokens y [contratos inteligentes](/glossary/#smart-contract) crea datos permanentes (conocidos como "estado") que cada ordenador que ejecuta la red debe almacenar indefinidamente. Las tarifas actuales para añadir o leer estos datos son inconsistentes y no reflejan necesariamente la carga real de almacenamiento a largo plazo que imponen al hardware de la red.
 
 Algunas acciones que crean estado en Ethereum, como la creación de nuevas cuentas o la implementación de grandes contratos inteligentes, han tenido un costo relativamente bajo en comparación con el espacio de almacenamiento permanente que ocupan en los nodos de la red; por ejemplo, la implementación de contratos es significativamente más barata por byte que la creación de espacios de almacenamiento. 
 

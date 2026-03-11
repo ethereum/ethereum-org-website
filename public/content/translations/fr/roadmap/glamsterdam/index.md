@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: En savoir plus sur la mise à niveau du protocole Glamsterdam
+description: "En savoir plus sur la mise à niveau du protocole Glamsterdam"
 lang: fr
 ---
 # Glamsterdam {#glamsterdam}
@@ -20,13 +20,12 @@ La prochaine mise à niveau [d'Ethereum,](/) Glamsterdam, est conçue pour ouvri
 
 Suite aux progrès réalisés dans la mise à niveau [de Fusaka](/roadmap/fusaka/), Glamsterdam se concentre sur la mise à l'échelle de la L1 en réorganisant la façon dont le réseau traite les transactions et gère sa base de données croissante, en mettant à jour fondamentalement la façon dont Ethereum crée et vérifie les blocs.
 
-Alors que Fusaka s'est concentré sur des améliorations fondamentales, Glamsterdam fait progresser les objectifs « Scale L1 » et « Scale Blobs » en consacrant la séparation des tâches entre les différents participants au réseau et en introduisant des moyens plus efficaces de gérer les données afin de préparer l' <GlossaryTooltip termKey="state">état</GlossaryTooltip> à une parallélisation à haut débit. 
+Alors que Fusaka s'est concentré sur des améliorations fondamentales, Glamsterdam fait progresser les objectifs « Scale L1 » et « Scale Blobs » en consacrant la séparation des tâches entre les différents participants au réseau et en introduisant des moyens plus efficaces de gérer les données afin de préparer l' [état](/glossary/#state) à une parallélisation à haut débit. 
 
-Ces améliorations garantissent qu'Ethereum reste rapide, abordable et décentralisé à mesure qu'il gère davantage d'activité, tout en maintenant des exigences matérielles gérables pour les personnes qui exécutent <GlossaryTooltip termKey="node">des nœuds</GlossaryTooltip> à domicile.
+Ces améliorations garantissent qu'Ethereum reste rapide, abordable et décentralisé à mesure qu'il gère davantage d'activité, tout en maintenant des exigences matérielles gérables pour les personnes qui exécutent [des nœuds](/glossary/#node) à domicile.
 
 <YouTube id="GgKveVMLnoo" />
 
-***
 ## Améliorations envisagées pour Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
@@ -59,7 +58,7 @@ Une mise à l'échelle L1 significative nécessite de s'éloigner des hypothèse
 
 Actuellement, le processus de proposition et de construction de blocs comprend un transfert entre les bloc et les constructeurs de bloc. La relation entre les proposeurs et les constructeurs ne fait pas partie du protocole Ethereum de base, elle repose donc sur des logiciels tiers à code fermé (relais), ainsi que sur une confiance hors protocole entre les entités. 
 
-La relation hors protocole entre les proposants et les constructeurs crée également un « chemin critique » pendant la validation des bloc, ce qui oblige <GlossaryTooltip termKey="validator">les validateurs</GlossaryTooltip> à diffuser et à exécuter les transaction rapidement dans une fenêtre de 2 secondes, limitant ainsi la quantité de données que le réseau peut traiter.
+La relation hors protocole entre les proposants et les constructeurs crée également un « chemin critique » pendant la validation des bloc, ce qui oblige [les validateurs](/glossary/#validator) à diffuser et à exécuter les transaction rapidement dans une fenêtre de 2 secondes, limitant ainsi la quantité de données que le réseau peut traiter.
 
 **La séparation proposant-constructeur (ePBS, ou EIP-7732)**, inscrite dans le protocole, sépare formellement le rôle du proposant (qui choisit le bloc) de celui du constructeur (qui assemble les transactions), « inscrivant » ce processus directement dans le protocole Ethereum afin de supprimer la confiance hors protocole. Elle introduit également le Payload Timeliness Committee (PTC) et une logique à double échéance, les validateurs attestant de la ponctualité et de la disponibilité des données séparément afin de maximiser le débit. 
 
@@ -67,7 +66,7 @@ La relation hors protocole entre les proposants et les constructeurs crée égal
 
 La séparation des rôles de proposant et de constructeur au niveau du protocole élargit la fenêtre de propagation (ou le temps disponible pour diffuser des données sur le réseau) de 2 secondes à environ 9 secondes. 
 
-ePBS réduit la dépendance à l'égard de logiciels tiers supplémentaires et permet à Ethereum de traiter en toute sécurité des quantités beaucoup plus importantes de données (comme plus de blobs pour <GlossaryTooltip termKey="layer-2">les couches 2</GlossaryTooltip> ) sans surcharger le réseau.
+ePBS réduit la dépendance à l'égard de logiciels tiers supplémentaires et permet à Ethereum de traiter en toute sécurité des quantités beaucoup plus importantes de données (comme plus de blobs pour [les couches 2](/glossary/#layer-2) ) sans surcharger le réseau.
 
 **Ressources**: [Spécification technique EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
@@ -105,7 +104,7 @@ L'échange de listes d'accès aux blocs (eth/71 ou EIP-8159) est le complément 
 - Ajuste automatiquement ces frais de création de données en fonction de la capacité globale du réseau, en ciblant un taux de croissance sûr et prévisible afin que le matériel physique standard puisse continuer à faire fonctionner le réseau.
 - Sépare la comptabilisation de ces frais spécifiques dans un nouveau réservoir, supprimant les anciennes limites de transaction et permettant aux développeurs de déployer des applications plus grandes et plus complexes.
 
-L'ajout de nouveaux comptes, jetons et <GlossaryTooltip termKey="smart-contract">contrats intelligents</GlossaryTooltip> crée des données permanentes (appelées «état») que chaque ordinateur exécutant le réseau doit stocker indéfiniment. Les frais actuels pour ajouter ou lire ces données sont incohérents et ne reflètent pas nécessairement la charge de stockage réelle et à long terme qu'ils imposent au matériel du réseau.
+L'ajout de nouveaux comptes, jetons et [contrats intelligents](/glossary/#smart-contract) crée des données permanentes (appelées «état») que chaque ordinateur exécutant le réseau doit stocker indéfiniment. Les frais actuels pour ajouter ou lire ces données sont incohérents et ne reflètent pas nécessairement la charge de stockage réelle et à long terme qu'ils imposent au matériel du réseau.
 
 Certaines actions qui créent un état sur Ethereum, comme la création de nouveaux comptes ou le déploiement de contrats intelligents volumineux, ont été relativement peu coûteuses par rapport à l'espace de stockage permanent qu'elles occupent sur les nœuds du réseau. Par exemple, le déploiement de contrats est nettement moins cher par octet que la création d'emplacements de stockage. 
 
@@ -255,7 +254,7 @@ Ce changement empêcherait les échecs de synchronisation du réseau pendant les
 
 Oui, la mise à niveau Glamsterdam nécessite des mises à jour [des clients d'exécution et des clients de consensus](/developers/docs/nodes-and-clients/). Étant donné que cette mise à niveau introduit la séparation intégrée des proposeurs-constructeurs (ePBS), les opérateurs de nœud devront s'assurer que leurs clients sont mis à jour pour gérer les nouvelles façons dont les blocs sont construits, validés et attestés par le réseau. 
 
-Tous les principaux clients Ethereum publieront des versions prenant en charge le fourche dure, marqué comme étant de haute priorité. Vous pouvez suivre la disponibilité de ces versions dans les dépôts Github des client, leurs [canaux Discord](https://ethstaker.org/support), le [Discord d'EthStaker](https://dsc.gg/ethstaker), ou en vous abonnant au blog Ethereum pour les mises à jour du protocole. 
+Tous les principaux clients Ethereum publieront des versions prenant en charge le fourche dure, marqué comme étant de haute priorité. Vous pouvez suivre la disponibilité de ces versions dans les dépôts GitHub des client, leurs [canaux Discord](https://ethstaker.org/support), le [Discord d'EthStaker](https://dsc.gg/ethstaker), ou en vous abonnant au blog Ethereum pour les mises à jour du protocole. 
 
 Pour maintenir la synchronisation avec le réseau Ethereum après la mise à niveau, les opérateurs de nœud doivent s'assurer qu'ils exécutent une version de client prise en charge. Notez que les informations sur les versions des client sont sensibles au facteur temps et que les utilisateurs doivent se référer aux dernières mises à jour pour obtenir les détails les plus récents.
 

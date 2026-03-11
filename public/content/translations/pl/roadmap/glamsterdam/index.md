@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Dowiedz się więcej o aktualizacji protokół Glamsterdam
+description: "Dowiedz się więcej o aktualizacji protokół Glamsterdam"
 lang: pl
 ---
 # Glamsterdam {#glamsterdam}
@@ -20,13 +20,12 @@ Nadchodząca aktualizacja [Ethereum](/) o nazwie Glamsterdam ma na celu przygoto
 
 Po postępach poczynionych w ramach aktualizacji [Fusaka](/roadmap/fusaka/), Glamsterdam skupia się na skalowanie L1 poprzez reorganizację sposobu, w jaki sieć przetwarza transakcje i zarządza swoją rosnącą bazą danych, fundamentalnie aktualizując sposób, w jaki Ethereum tworzy i weryfikuje bloki.
 
-Podczas gdy Fusaka skupiała się na podstawowych udoskonaleniach, Glamsterdam realizuje cele „Scale L1” i „Scale Blobs”, ustanawiając podział obowiązków między różnymi uczestnikami sieć i wprowadzając bardziej wydajne sposoby obsługi danych w celu przygotowania <GlossaryTooltip termKey="state">stan</GlossaryTooltip> do wysokowydajnej paralelizacji. 
+Podczas gdy Fusaka skupiała się na podstawowych udoskonaleniach, Glamsterdam realizuje cele „Scale L1” i „Scale Blobs”, ustanawiając podział obowiązków między różnymi uczestnikami sieć i wprowadzając bardziej wydajne sposoby obsługi danych w celu przygotowania [stan](/glossary/#state) do wysokowydajnej paralelizacji. 
 
-Te ulepszenia zapewniają, że Ethereum pozostaje szybki, przystępny cenowo i zdecentralizowany w miarę obsługi większej liczby działań, przy jednoczesnym utrzymaniu rozsądnych wymagań sprzętowych dla osób uruchamiających <GlossaryTooltip termKey="node">węzły</GlossaryTooltip> w domu.
+Te ulepszenia zapewniają, że Ethereum pozostaje szybki, przystępny cenowo i zdecentralizowany w miarę obsługi większej liczby działań, przy jednoczesnym utrzymaniu rozsądnych wymagań sprzętowych dla osób uruchamiających [węzły](/glossary/#node) w domu.
 
 <YouTube id="GgKveVMLnoo" />
 
-***
 ## Rozważane ulepszenia dla Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
@@ -59,7 +58,7 @@ Znaczące skalowanie L1 wymaga odejścia od założeń zaufania poza protokołem
 
 Obecnie proces proponowania i tworzenia bloki obejmuje przekazywanie zadań między podmiotami proponującymi blok a podmiotami je tworzącymi. Relacja między podmiotami proponującymi a tworzącymi blok nie jest częścią podstawowego protokół Ethereum, więc opiera się na oprogramowaniu innych firm o zamkniętym kodzie źródłowym (przekaźnikach), a także na zaufaniu między podmiotami poza protokołem. 
 
-Pozaprotokołowe relacje między proponentami bloku a builderami tworzą również „gorącą ścieżkę” podczas walidacji blok, która zmusza <GlossaryTooltip termKey="validator">walidatorzy</GlossaryTooltip> do szybkiego nadawania i wykonywania transakcja w ścisłym 2-sekundowym oknie, ograniczając ilość danych, jaką sieć może obsłużyć.
+Pozaprotokołowe relacje między proponentami bloku a builderami tworzą również „gorącą ścieżkę” podczas walidacji blok, która zmusza [walidatorzy](/glossary/#validator) do szybkiego nadawania i wykonywania transakcja w ścisłym 2-sekundowym oknie, ograniczając ilość danych, jaką sieć może obsłużyć.
 
 **Ustanowienie rozdzielenia ról proponent bloku-builder (ePBS lub EIP-7732)** formalnie rozdziela zadanie proponenta bloku (który wybiera blok) od zadania buildera (który składa transakcje), „wpisując” ten proces bezpośrednio do protokół Ethereum, aby wyeliminować zaufanie poza protokołem. Wprowadza również Payload Timeliness Committee (PTC) i logikę podwójnego terminu, przy czym walidatorzy poświadczają terminowość i dostępność danych oddzielnie, aby zmaksymalizować przepustowość. 
 
@@ -67,7 +66,7 @@ Pozaprotokołowe relacje między proponentami bloku a builderami tworzą równie
 
 Oddzielenie ról proponującego i konstruktora na poziomie protokół rozszerza okno propagacji (lub czas dostępny do rozpowszechniania danych w sieć) z 2 sekund do około 9 sekund. 
 
-ePBS zmniejsza zależność od dodatkowego oprogramowania innych firm i pozwala Ethereum bezpiecznie przetwarzać znacznie większe ilości danych (takie jak więcej blobów dla <GlossaryTooltip termKey="layer-2">warstwy 2</GlossaryTooltip> ) bez obciążania sieć.
+ePBS zmniejsza zależność od dodatkowego oprogramowania innych firm i pozwala Ethereum bezpiecznie przetwarzać znacznie większe ilości danych (takie jak więcej blobów dla [warstwy 2](/glossary/#layer-2) ) bez obciążania sieć.
 
 **Zasoby**: [Specyfikacja techniczna EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
@@ -105,7 +104,7 @@ W miarę szybszego rozwoju sieć Ethereum ważne jest, aby upewnić się, że ko
 - Automatycznie dostosowuje te opłaty za tworzenie danych w oparciu o ogólną wydajność sieci, dążąc do bezpiecznego i przewidywalnego tempa wzrostu, aby standardowy sprzęt fizyczny mógł nadal obsługiwać sieć.
 - Oddziela rozliczanie tych konkretnych opłat do nowego zasobu, usuwając stare limity transakcja i umożliwiając programistom wdrażanie większych, bardziej złożonych aplikacji.
 
-Dodawanie nowych kont, tokenów i <GlossaryTooltip termKey="smart-contract">inteligentnych kontraktów</GlossaryTooltip> tworzy trwałe dane (znane jako „stan”), które każdy komputer działający w sieć musi przechowywać bezterminowo. Obecne opłaty za dodawanie lub odczytywanie tych danych są niespójne i niekoniecznie odzwierciedlają rzeczywiste, długoterminowe obciążenie pamięci, jakie nakładają na sprzęt sieciowy.
+Dodawanie nowych kont, tokenów i [inteligentnych kontraktów](/glossary/#smart-contract) tworzy trwałe dane (znane jako „stan”), które każdy komputer działający w sieć musi przechowywać bezterminowo. Obecne opłaty za dodawanie lub odczytywanie tych danych są niespójne i niekoniecznie odzwierciedlają rzeczywiste, długoterminowe obciążenie pamięci, jakie nakładają na sprzęt sieciowy.
 
 Niektóre działania, które tworzą stan w sieci Ethereum, takie jak tworzenie nowych kont lub wdrażanie dużych inteligentnych kontraktów, były stosunkowo tanie w porównaniu do trwałego miejsca do przechowywania, które zajmują w węzłach sieci. Na przykład wdrożenie kontraktu jest znacznie tańsze za bajt niż tworzenie miejsc do przechowywania. 
 

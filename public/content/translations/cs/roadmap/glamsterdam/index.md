@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Zjistěte více o upgradu protokol Glamsterdam
+description: "Zjistěte více o upgradu protokol Glamsterdam"
 lang: cs
 ---
 # Glamsterdam {#glamsterdam}
@@ -20,13 +20,12 @@ Nadcházející upgrade [sítě Ethereum](/) s názvem Glamsterdam má připravi
 
 Po pokroku dosaženém při upgradu [Fusaka](/roadmap/fusaka/) se Glamsterdam zaměřuje na škálování L1 reorganizací způsobu, jakým síť zpracovává transakce a spravuje svou rostoucí databázi, a zásadně aktualizuje způsob, jakým Ethereum vytváří a ověřuje bloky.
 
-Zatímco se Fusaka zaměřila na základní vylepšení, Glamsterdam posouvá cíle „Scale L1“ a „Scale Blobs“ tím, že zakotvuje oddělení povinností mezi různými účastníky síť a zavádí efektivnější způsoby zpracování dat, aby se <GlossaryTooltip termKey="state">stav</GlossaryTooltip> připravil na vysoce výkonnou paralelizaci. 
+Zatímco se Fusaka zaměřila na základní vylepšení, Glamsterdam posouvá cíle „Scale L1“ a „Scale Blobs“ tím, že zakotvuje oddělení povinností mezi různými účastníky síť a zavádí efektivnější způsoby zpracování dat, aby se [stav](/glossary/#state) připravil na vysoce výkonnou paralelizaci. 
 
-Tato vylepšení zajišťují, že Ethereum zůstane rychlé, cenově dostupné a decentralizované i při zpracování většího objemu aktivit, přičemž hardwarové požadavky zůstanou zvládnutelné pro lidi, kteří provozují <GlossaryTooltip termKey="node">uzly</GlossaryTooltip> doma.
+Tato vylepšení zajišťují, že Ethereum zůstane rychlé, cenově dostupné a decentralizované i při zpracování většího objemu aktivit, přičemž hardwarové požadavky zůstanou zvládnutelné pro lidi, kteří provozují [uzly](/glossary/#node) doma.
 
 <YouTube id="GgKveVMLnoo" />
 
-***
 ## Zvažují se vylepšení pro Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
@@ -59,7 +58,7 @@ Smysluplné škálování L1 vyžaduje odklon od předpokladů důvěry mimo pro
 
 V současné době proces navrhování a sestavování bloky zahrnuje předání mezi blok a sestavovateli blok. Vztah mezi navrhovateli a sestavovateli není součástí základního protokol Etherea, takže se spoléhá na proprietární software třetích stran (relé) a také na mimoprotokolovou důvěru mezi entitami. 
 
-Mimořádný vztah mezi navrhovateli a tvůrci bloků také vytváří „horkou cestu“ během ověřování blok, která nutí <GlossaryTooltip termKey="validator">validátoři</GlossaryTooltip> k rychlému vysílání a provádění transakce v úzkém dvousekundovém okně, což omezuje množství dat, které síť dokáže zpracovat.
+Mimořádný vztah mezi navrhovateli a tvůrci bloků také vytváří „horkou cestu“ během ověřování blok, která nutí [validátoři](/glossary/#validator) k rychlému vysílání a provádění transakce v úzkém dvousekundovém okně, což omezuje množství dat, které síť dokáže zpracovat.
 
 **Zavedení oddělení navrhovatele a sestavovatele (ePBS neboli EIP-7732)** formálně odděluje práci navrhovatele (který vybírá blok) od sestavovatele (který sestavuje transakce), čímž se tento proces „zakotvuje“ přímo do protokol Ethereum, aby se odstranila nutnost důvěry mimo protokol. Zavádí také Výbor pro včasnost dat (PTC) a logiku dvojitého termínu, přičemž validátoři potvrzují včasnost a dostupnost dat samostatně, aby se maximalizoval výkon. 
 
@@ -67,7 +66,7 @@ Mimořádný vztah mezi navrhovateli a tvůrci bloků také vytváří „horkou
 
 Oddělení rolí navrhovatele a tvůrce na úrovni protokol rozšiřuje okno šíření (neboli čas dostupný pro šíření dat po síť) z 2 sekund na přibližně 9 sekund. 
 
-ePBS snižuje závislost na dodatečném softwaru třetích stran a umožňuje Ethereu bezpečně zpracovávat mnohem větší množství dat (například více blobů pro <GlossaryTooltip termKey="layer-2">vrstvu 2</GlossaryTooltip> ), aniž by to zatěžovalo síť.
+ePBS snižuje závislost na dodatečném softwaru třetích stran a umožňuje Ethereu bezpečně zpracovávat mnohem větší množství dat (například více blobů pro [vrstvu 2](/glossary/#layer-2) ), aniž by to zatěžovalo síť.
 
 **Zdroje**: [Technická specifikace EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
@@ -105,7 +104,7 @@ Vzhledem k tomu, že síť Ethereum roste stále rychleji, je důležité zajist
 - Automaticky upravuje tyto poplatky za vytváření dat na základě celkové kapacity sítě a zaměřuje se na bezpečnou a předvídatelnou míru růstu, aby standardní fyzický hardware mohl nadále provozovat síť.
 - Odděluje účtování těchto specifických poplatků do nového úložiště, odstraňuje staré transakce limity a umožňuje vývojářům nasazovat větší a složitější aplikace.
 
-Přidávání nových účtů, tokenů a <GlossaryTooltip termKey="smart-contract">chytrých kontraktů</GlossaryTooltip> vytváří trvalá data (známá jako „stav“), která musí každý počítač spouštějící síť ukládat na dobu neurčitou. Současné poplatky za přidání nebo čtení těchto dat jsou nekonzistentní a nemusí nutně odrážet skutečnou, dlouhodobou zátěž, kterou kladou na hardware sítě.
+Přidávání nových účtů, tokenů a [chytrých kontraktů](/glossary/#smart-contract) vytváří trvalá data (známá jako „stav“), která musí každý počítač spouštějící síť ukládat na dobu neurčitou. Současné poplatky za přidání nebo čtení těchto dat jsou nekonzistentní a nemusí nutně odrážet skutečnou, dlouhodobou zátěž, kterou kladou na hardware sítě.
 
 Některé akce, které vytvářejí stav na Ethereu, jako je vytváření nových účtů nebo nasazování velkých chytrých kontraktů, byly relativně levné ve srovnání s trvalým úložným prostorem, který zabírají na uzlech sítě. Například nasazení kontraktu je výrazně levnější na bajt než vytvoření úložných slotů. 
 
@@ -255,7 +254,7 @@ Tato změna by zabránila selhání síť synchronizace v obdobích vysoké akti
 
 Ano, upgrade Glamsterdam vyžaduje aktualizace [exekučních klientů i konsensuálních klientů](/developers/docs/nodes-and-clients/). Jelikož tento upgrade zavádí Enshrined Proposer-Builder Separation (ePBS), operátoři síťový uzel budou muset zajistit, aby jejich klienty byly aktualizovány tak, aby zvládaly nové způsoby sestavování, ověřování a potvrzování bloky síť. 
 
-Všichni hlavní klienti Etherea vydají verze podporující velké rozvětvení označený jako vysoká priorita. O tom, kdy budou tyto verze k dispozici, se můžete dozvědět v repozitářích klientů na Githubu, na jejich [kanálech Discord](https://ethstaker.org/support), na [Discordu EthStaker](https://dsc.gg/ethstaker) nebo se můžete přihlásit k odběru blogu Etherea pro aktualizace protokol. 
+Všichni hlavní klienti Etherea vydají verze podporující velké rozvětvení označený jako vysoká priorita. O tom, kdy budou tyto verze k dispozici, se můžete dozvědět v repozitářích klientů na GitHubu, na jejich [kanálech Discord](https://ethstaker.org/support), na [Discordu EthStaker](https://dsc.gg/ethstaker) nebo se můžete přihlásit k odběru blogu Etherea pro aktualizace protokol. 
 
 Pro udržení synchronizace se síť Ethereum po upgradu musí provozovatelé síťový uzel zajistit, že používají podporovanou verzi klient. Upozorňujeme, že informace o vydáních klient jsou časově citlivé a uživatelé by se měli pro nejaktuálnější podrobnosti řídit nejnovějšími aktualizacemi.
 
