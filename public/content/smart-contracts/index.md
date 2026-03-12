@@ -63,7 +63,11 @@ Smart contracts also protect your privacy. Since Ethereum is a pseudonymous netw
 
 ## Visible terms {#visible-terms}
 
-Finally, like traditional contracts, you can check what's in a smart contract before you sign it (or otherwise interact with it). A smart contract's transparency guarantees that anyone can scrutinize it.
+Finally, like traditional contracts, you can check what's in a smart contract before you sign it. Unlike a traditional contract, a smart contract's onchain transparency allows anyone to scrutinize and review it before interacting with it. 
+
+However, while anyone can view a smart contract's terms, the raw transaction data is designed to be interpreted by applications and wallets, not humans. Because this data is so difficult to read, users often face a major security risk called "blind signing," or approving a transaction that interacts with a smart contract without actually understanding what it will do. 
+
+The Ethereum ecosystem is transitioning to **[Clear Signing](https://clearsigning.org/)** standards (specifically [ERC-7730](https://eips.ethereum.org/EIPS/eip-7730)). Clear Signing translates opaque smart contract data into plain, human-readable transaction descriptions, ensuring anyone can understand a contract's true intent before they sign.
 
 ## Smart contract use cases {#use-cases}
 
