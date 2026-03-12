@@ -400,9 +400,7 @@ export const useCentralizedExchanges = () => {
             description,
             link: exchanges[exchange].url,
             image: exchanges[exchange].image,
-            alt: t("page-community-events:item-logo", {
-              item: exchanges[exchange].name,
-            }),
+            alt: "", // Decorative icon with text label, keep alt blank
           }
         })
     )
