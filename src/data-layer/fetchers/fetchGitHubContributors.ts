@@ -11,6 +11,122 @@ const BATCH_DELAY_MS = 50 // Small delay between batches to avoid rate limiting
 
 const APP_PAGES_PREFIX = "app/[locale]/"
 
+/** Email addresses (or substrings) that identify AI agent co-authors */
+const EXCLUDED_EMAILS = [
+  "noreply@anthropic.com",
+  "copilot@github.com",
+  "49699333+dependabot[bot]@users.noreply.github.com",
+  "actions@github.com",
+  "github-actions[bot]@users.noreply.github.com",
+  "noreply@github.com",
+]
+
+/** GitHub logins (exact match) that should be excluded */
+const EXCLUDED_LOGINS = [
+  "dependabot[bot]",
+  "github-actions[bot]",
+  "allcontributors[bot]",
+  "netlify[bot]",
+  "crowdin-bot",
+  "eth-bot",
+  "ethereumoptimism-bot",
+  "coderabbitai[bot]",
+]
+
+/** Name patterns (case-insensitive substring match) for AI agent co-authors */
+const EXCLUDED_NAME_PATTERNS = [
+  "claude",
+  "copilot",
+  "gpt",
+  "chatgpt",
+  "openai",
+  "cursor",
+  "codeium",
+  "tabnine",
+  "amazon q",
+  "cody",
+  "gemini",
+  "coderabbit",
+]
+
+/**
+ * Extract GitHub login from a noreply email address.
+ * Handles both formats:
+ *   - "username@users.noreply.github.com"
+ *   - "12345678+username@users.noreply.github.com"
+ * Returns null for non-noreply emails.
+ */
+const extractLoginFromNoreplyEmail = (email: string): string | null => {
+  const match = email.match(/^(?:\d+\+)?([^@]+)@users\.noreply\.github\.com$/)
+  return match ? match[1] : null
+}
+
+/**
+ * Parse co-author trailers from a commit message.
+ * Matches lines like: "Co-authored-by: Name <email>"
+ * Returns FileContributor entries for any co-authors with resolvable
+ * GitHub logins (via noreply email addresses).
+ */
+const parseCoAuthors = (
+  message: string,
+  commitDate: string
+): FileContributor[] => {
+  const coAuthorPattern = /^co-authored-by:\s*(.+?)\s*<([^>]+)>/gim
+  const coAuthors: FileContributor[] = []
+  let match
+
+  while ((match = coAuthorPattern.exec(message)) !== null) {
+    const name = match[1].trim()
+    const email = match[2].trim()
+
+    // Skip excluded emails
+    if (
+      EXCLUDED_EMAILS.some((excluded) =>
+        email.toLowerCase().includes(excluded.toLowerCase())
+      )
+    ) {
+      continue
+    }
+
+    // Skip excluded name patterns (catches AI agents)
+    if (
+      EXCLUDED_NAME_PATTERNS.some((pattern) =>
+        name.toLowerCase().includes(pattern.toLowerCase())
+      )
+    ) {
+      continue
+    }
+
+    // Resolve GitHub login from noreply email
+    const login = extractLoginFromNoreplyEmail(email)
+    if (!login) continue
+
+    // Skip excluded logins
+    if (
+      EXCLUDED_LOGINS.some(
+        (excluded) => excluded.toLowerCase() === login.toLowerCase()
+      )
+    ) {
+      continue
+    }
+
+    coAuthors.push({
+      login,
+      avatar_url: `https://avatars.githubusercontent.com/${login}`,
+      html_url: `https://github.com/${login}`,
+      date: commitDate,
+    })
+  }
+
+  return coAuthors
+}
+
+/** Check if a primary commit author should be excluded */
+const isExcludedContributor = (login: string): boolean =>
+  EXCLUDED_LOGINS.some(
+    (excluded) => excluded.toLowerCase() === login.toLowerCase()
+  )
+
 /**
  * Generate all historical paths for an app page.
  * Used to aggregate git history across directory structure migrations.
@@ -119,16 +235,29 @@ async function fetchCommitsForPath(
   // When a commit author email isn't linked to a GitHub account, the API
   // returns `author: null`. We still include these commits so their date
   // is captured, using the git commit author name as a fallback identity.
-  const contributors = commits.map(
+  // Also parses co-author trailers and filters out bots/AI agents.
+  const contributors = commits.flatMap(
     (commit: {
       author?: { login: string; avatar_url: string; html_url: string } | null
-      commit: { author: { name: string; date: string } }
-    }) => ({
-      login: commit.author?.login ?? commit.commit.author.name,
-      avatar_url: commit.author?.avatar_url ?? "",
-      html_url: commit.author?.html_url ?? "",
-      date: commit.commit.author.date,
-    })
+      commit: { author: { name: string; date: string }; message: string }
+    }) => {
+      const login = commit.author?.login ?? commit.commit.author.name
+      const date = commit.commit.author.date
+
+      const primary: FileContributor[] =
+        isExcludedContributor(login)
+          ? []
+          : [{
+              login,
+              avatar_url: commit.author?.avatar_url ?? "",
+              html_url: commit.author?.html_url ?? "",
+              date,
+            }]
+
+      const coAuthors = parseCoAuthors(commit.commit.message, date)
+
+      return [...primary, ...coAuthors]
+    }
   )
 
   // Remove duplicates by login (keep first = most recent)
