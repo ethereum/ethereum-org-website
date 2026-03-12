@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Tìm hiểu về bản nâng cấp giao thức Glamsterdam
+description: "Tìm hiểu về bản nâng cấp giao thức Glamsterdam"
 lang: vi
 ---
 
@@ -34,7 +34,10 @@ Những cải tiến này đảm bảo Ethereum vẫn nhanh, giá cả phải ch
 <AlertDescription>
 Lưu ý: Bài viết này hiện đang nêu bật một số EIP được xem xét đưa vào Glamsterdam. Để biết các cập nhật trạng thái mới nhất, hãy xem [bản nâng cấp Glamsterdam trên Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Nếu bạn muốn thêm một EIP đang được xem xét cho Glamsterdam nhưng chưa được thêm vào trang này, hãy [tìm hiểu cách đóng góp cho ethereum.org tại đây](/contributing/). </AlertDescription> </AlertContent> </Alert>
+Nếu bạn muốn thêm một EIP đang được xem xét cho Glamsterdam nhưng chưa được thêm vào trang này, hãy [tìm hiểu cách đóng góp cho ethereum.org tại đây](/contributing/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Bản nâng cấp Glamsterdam tập trung vào ba mục tiêu chính:
 

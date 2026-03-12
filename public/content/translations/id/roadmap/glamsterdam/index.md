@@ -34,7 +34,10 @@ Peningkatan ini memastikan Ethereum tetap cepat, terjangkau, dan terdesentralisa
 <AlertDescription>
 Catatan: Artikel ini saat ini menyoroti pilihan EIP yang sedang dipertimbangkan untuk disertakan dalam Glamsterdam. Untuk pembaruan status terbaru, lihat [peningkatan Glamsterdam di Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Jika Anda ingin menambahkan EIP yang sedang dipertimbangkan untuk Glamsterdam, tetapi belum ditambahkan ke halaman ini, [pelajari cara berkontribusi ke ethereum.org di sini](/contributing/). </AlertDescription> </AlertContent> </Alert>
+Jika Anda ingin menambahkan EIP yang sedang dipertimbangkan untuk Glamsterdam, tetapi belum ditambahkan ke halaman ini, [pelajari cara berkontribusi ke ethereum.org di sini](/contributing/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Peningkatan Glamsterdam berpusat pada tiga tujuan utama:
 

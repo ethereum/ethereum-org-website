@@ -34,7 +34,10 @@ Essas melhorias garantem que o Ethereum permaneça rápido, acessível e descent
 <AlertDescription>
 Observação: este artigo destaca atualmente uma seleção de EIPs que estão sendo consideradas para inclusão na Glamsterdam. Para as atualizações de status mais recentes, veja a [melhoria Glamsterdam no Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Se você quiser adicionar uma EIP que esteja sob consideração para a Glamsterdam, mas que ainda não foi adicionada a esta página, [saiba como contribuir para ethereum.org aqui](/contributing/). </AlertDescription> </AlertContent> </Alert>
+Se você quiser adicionar uma EIP que esteja sob consideração para a Glamsterdam, mas que ainda não foi adicionada a esta página, [saiba como contribuir para ethereum.org aqui](/contributing/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 A melhoria Glamsterdam se concentra em três objetivos principais:
 

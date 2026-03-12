@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Scopri di più sull'aggiornamento del protocollo Glamsterdam
+description: "Scopri di più sull'aggiornamento del protocollo Glamsterdam"
 lang: it
 ---
 
@@ -34,7 +34,10 @@ Questi miglioramenti assicurano che Ethereum rimanga veloce, accessibile e decen
 <AlertDescription>
 Nota: questo articolo attualmente evidenzia una selezione di EIP in fase di valutazione per l'inclusione in Glamsterdam. Per gli ultimi aggiornamenti sullo stato, consulta [l'aggiornamento Glamsterdam su Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Se vuoi aggiungere un EIP in fase di valutazione per Glamsterdam, ma che non è stato ancora aggiunto a questa pagina, [scopri come contribuire a ethereum.org qui](/contributing/). </AlertDescription> </AlertContent> </Alert>
+Se vuoi aggiungere un EIP in fase di valutazione per Glamsterdam, ma che non è stato ancora aggiunto a questa pagina, [scopri come contribuire a ethereum.org qui](/contributing/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 L'aggiornamento Glamsterdam si concentra su tre obiettivi principali:
 

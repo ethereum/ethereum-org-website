@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Glamsterdam प्रोटोकॉल अपग्रेड के बारे में जानें
+description: "Glamsterdam प्रोटोकॉल अपग्रेड के बारे में जानें"
 lang: hi
 ---
 
@@ -34,7 +34,10 @@ Glamsterdam अपग्रेड Ethereum के दीर्घकालिक
 <AlertDescription>
 ध्यान दें: यह लेख वर्तमान में Glamsterdam में शामिल करने के लिए विचाराधीन EIPs के चयन पर प्रकाश डालता है। नवीनतम स्थिति अपडेट के लिए, [Forkcast पर Glamsterdam अपग्रेड](https://forkcast.org/upgrade/glamsterdam) देखें।
 
-यदि आप Glamsterdam के लिए विचाराधीन एक EIP जोड़ना चाहते हैं, लेकिन अभी तक इस पृष्ठ पर नहीं जोड़ा गया है, तो [यहां ethereum.org में योगदान करने का तरीका जानें](/contributing/)। </AlertDescription> </AlertContent> </Alert>
+यदि आप Glamsterdam के लिए विचाराधीन एक EIP जोड़ना चाहते हैं, लेकिन अभी तक इस पृष्ठ पर नहीं जोड़ा गया है, तो [यहां ethereum.org में योगदान करने का तरीका जानें](/contributing/)।
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Glamsterdam अपग्रेड तीन मुख्य लक्ष्यों पर केंद्रित है:
 
