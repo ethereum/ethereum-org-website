@@ -123,6 +123,7 @@ Dokładniejsze i bardziej przewidywalne wycenianie przechowywania danych pomoże
 ### Aktualizacja kosztów gaz w ramach programu State-Access {#state-access-gas-cost-update}
 
 - Zwiększa koszty gaz dla aplikacji odczytujących lub aktualizujących informacje trwale przechowywane w Ethereum (kody operacji dostępu do stanu), aby dokładnie odpowiadały pracy obliczeniowej wymaganej przez te polecenia.
+- Wzmacnia odporność sieci poprzez zapobieganie atakom typu odmowa usługi, które wykorzystują sztucznie zaniżone koszty operacji odczytu danych
 
 W miarę jak stan Ethereum rósł, wyszukiwanie i odczytywanie starych danych („dostęp do stan ”) stawało się coraz bardziej obciążające i wolniejsze dla węzłów. Opłaty za te działania pozostały takie same, mimo że wyszukiwanie informacji jest teraz nieco droższe (pod względem mocy obliczeniowej). 
 

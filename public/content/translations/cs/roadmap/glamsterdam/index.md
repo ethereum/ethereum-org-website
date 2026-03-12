@@ -123,6 +123,7 @@ Přesnější a předvídatelnější stanovení cen za ukládání dat pomůže
 ### Aktualizace nákladů na palivo pro státní přístup {#state-access-gas-cost-update}
 
 - Zvyšuje náklady na palivo pro případ, kdy aplikace čtou nebo aktualizují informace trvale uložené v Ethereu (operační kódy pro přístup ke stavu), aby přesně odpovídaly výpočetní práci, kterou tyto příkazy vyžadují.
+- Posiluje odolnost sítě předcházením útokům typu odepření služby, které zneužívají uměle zlevněné operace čtení dat
 
 S tím, jak se stav Etherea rozrůstal, se proces vyhledávání a čtení starých dat („přístup ke stav “) stal pro uzly náročnějším a pomalejším. Poplatky za tyto akce zůstaly stejné, i když je nyní vyhledávání informací (z hlediska výpočetního výkonu) o něco dražší. 
 
@@ -130,7 +131,7 @@ V důsledku toho jsou některé specifické příkazy v současné době podhodn
 
 **Aktualizace nákladů na palivo pro přístup ke stavu (nebo EIP-8038)** zvyšuje konstanty palivo pro operační kódy přístupu ke stavu, jako je vyhledávání dat účet a smluv, aby se přizpůsobily výkonu moderního hardwaru a velikosti stav. 
 
-Sjednocení nákladů na přístup ke stavu také pomáhá zvýšit odolnost Etherea. Protože jsou tyto náročné operace čtení dat uměle levné, mohl by škodlivý útočník zaplavit síť tisíci složitých datových požadavků v jednom blok, než dosáhne limitu poplatků sítě, což by potenciálně mohlo způsobit zastavení nebo zhroucení síť (útok typu „Denial-of-Service“). I bez zlého úmyslu nejsou vývojáři ekonomicky motivováni k vytváření efektivních aplikací, pokud je čtení síť dat příliš levné.
+Sjednocení nákladů na přístup ke stavu také pomáhá zvýšit odolnost Etherea. Protože jsou tyto náročné operace čtení dat uměle levné, mohl by škodlivý útočník zaplavit síť tisíci složitých datových požadavků v jednom blok, než dosáhne limitu poplatků sítě, což by potenciálně mohlo způsobit zastavení nebo zhroucení síť (útok typu „denial-of-service”). I bez zlého úmyslu nejsou vývojáři ekonomicky motivováni k vytváření efektivních aplikací, pokud je čtení síť dat příliš levné.
 
 Přesnějším oceňováním akcí vyžadujících přístup ke stavu může být Ethereum odolnější vůči náhodným nebo úmyslným zpomalením, zatímco sladění nákladů síť s hardwarovým zatížením se ukazuje jako udržitelnější základ pro budoucí zvyšování limit transakčních poplatků.
 

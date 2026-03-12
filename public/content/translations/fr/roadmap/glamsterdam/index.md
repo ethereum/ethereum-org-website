@@ -123,6 +123,7 @@ Une tarification du stockage des données plus précise et prévisible aidera Et
 ### Mise à jour du coût du gas d'accès à l'État {#state-access-gas-cost-update}
 
 - Augmente les coûts de gas pour les applications qui lisent ou mettent à jour des informations stockées de manière permanente sur Ethereum (opcodes d'accès à l'état) afin de correspondre précisément au travail de calcul requis par ces commandes.
+- Renforce la résilience du réseau en empêchant les attaques par déni de service qui exploitent des opérations de lecture de données artificiellement peu coûteuses
 
 À mesure que état d'Ethereum s'est développé, l'acte de recherche et de lecture d'anciennes données (« accès à état ») est devenu plus lourd et plus lent à traiter pour les nœuds. Les frais pour ces actions sont restés les mêmes, même s'il est maintenant légèrement plus coûteux de rechercher des informations (en termes de puissance de calcul). 
 

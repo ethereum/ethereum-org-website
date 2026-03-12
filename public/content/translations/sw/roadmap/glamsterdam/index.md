@@ -66,7 +66,7 @@ Uhusiano usiofuata itifaki kati ya wapendekezaji na wajenzi pia huunda 'njia ya 
 
 Kutenganisha majukumu ya mpendekezaji na mjenzi katika ngazi ya itifaki huongeza muda wa uenezaji (au muda unaopatikana wa kusambaza data kwenye mtandao) kutoka sekunde 2 hadi takriban sekunde 9. 
 
-ePBS hupunguza utegemezi wa programu za ziada za wahusika wengine na huruhusu Ethereum kusindika kwa usalama kiasi kikubwa zaidi cha data (kama vile blobu zaidi kwa [Safu ya 2](/glossary/#layer-2) ) bila kuathiri mtandao.
+ePBS hupunguza utegemezi wa programu za ziada za wahusika wengine na huruhusu Ethereum kusindika kwa usalama kiasi kikubwa zaidi cha data (kama vile blobu zaidi kwa [safu ya 2](/glossary/#layer-2) ) bila kuathiri mtandao.
 
 **Rasilimali**: [Maelezo ya kiufundi ya EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
@@ -123,6 +123,7 @@ Kuhifadhi data kwa usahihi na utabiri zaidi kutasaidia Ethereum kuongeza kasi na
 ### Sasisho la gharama ya gesi ya ufikiaji wa hali {#state-access-gas-cost-update}
 
 - Huongeza gharama za gesi kwa programu zinazosoma au kusasisha taarifa zilizohifadhiwa kabisa kwenye Ethereum (misimbo ya uendeshaji wa ufikiaji wa hali) ili zilingane kwa usahihi na kazi ya hesabu ambayo amri hizi zinahitaji.
+- Huimarisha uthabiti wa mtandao kwa kuzuia mashambulizi ya kunyimwa huduma ambayo hutumia vibaya shughuli za usomaji wa data za bei nafuu isivyo asilia
 
 Kadri hali ya Ethereum inavyokua, kitendo cha kutafuta na kusoma data ya zamani ("ufikiaji hali ") kimekuwa kizito na polepole zaidi kwa nodi kusindika. Ada za vitendo hivi zimebaki vile vile ingawa sasa ni ghali kidogo kutafuta taarifa (kwa upande wa nguvu ya kompyuta). 
 
@@ -130,7 +131,7 @@ Kwa hivyo, baadhi ya amri maalum kwa sasa zina bei ya chini ukilinganisha na kaz
 
 **Sasisho la gharama ya gesi ya ufikiaji wa hali (au EIP-8038)** huongeza viwango vya gesi kwa misimbo ya uendeshaji ya ufikiaji wa hali, kama vile kutafuta data ya akaunti na mkataba, ili kuendana na utendaji wa kisasa wa vifaa na ukubwa hali. 
 
-Kuweka sawa gharama ya ufikiaji wa data ya mtandao pia husaidia kuifanya Ethereum kuwa imara zaidi. Kwa sababu vitendo hivi vya kusoma data nyingi ni vya bei rahisi bandia, mshambuliaji mbaya anaweza kujaza mtandao na maelfu ya maombi tata ya data katika kitalu kimoja kabla ya kufikia kikomo cha ada ya mtandao, na hivyo kusababisha mtandao kusimama au kuanguka (shambulio la Kukataa Huduma). Hata bila nia mbaya, watengenezaji hawahimizwi kiuchumi kujenga programu zenye ufanisi ikiwa kusoma data ya mtandao ni rahisi sana.
+Kuweka sawa gharama ya ufikiaji wa data ya mtandao pia husaidia kuifanya Ethereum kuwa imara zaidi. Kwa sababu vitendo hivi vya kusoma data nyingi ni vya bei rahisi bandia, mshambuliaji mbaya anaweza kujaza mtandao na maelfu ya maombi tata ya data katika kitalu kimoja kabla ya kufikia kikomo cha ada ya mtandao, na hivyo kusababisha mtandao kusimama au kuanguka (shambulio la kukataa huduma). Hata bila nia mbaya, watengenezaji hawahimizwi kiuchumi kujenga programu zenye ufanisi ikiwa kusoma data ya mtandao ni rahisi sana.
 
 Kwa kuweka bei sahihi zaidi kwa vitendo vinavyohitaji ufikiaji wa hali ya mtandao, Ethereum inaweza kuwa imara zaidi dhidi ya kupungua kwa kasi kwa bahati mbaya au kwa makusudi, huku kuoanisha gharama za mtandao na mzigo wa vifaa kunathibitisha kuwa msingi endelevu zaidi kwa ongezeko la kikomo cha gesi katika siku zijazo.
 
@@ -197,12 +198,12 @@ Kwa pamoja, EIP-2780 inalenga kufanya uhamisho wa kila siku kati ya akaunti zili
 ### Usambazaji wa kiwanda uliowekwa mapema {#deterministic-factory-predeploy}
 
 - Hu wapa watengenezaji njia asilia ya kusambaza programu na pochi za mkataba mahiri kwenye anwani moja katika minyororo mingi.
-- Huwapa watumiaji uwezo wa kuwa na anwani moja mkoba mahiri kwenye mitandao mingi ya Safu ya 2 (L2), na hivyo kupunguza mzigo wa utambuzi, kupunguza mkanganyiko, na kupunguza hatari ya kupoteza fedha kwa bahati mbaya. 
+- Huwapa watumiaji uwezo wa kuwa na anwani moja mkoba mahiri kwenye mitandao mingi ya safu ya 2 (L2), na hivyo kupunguza mzigo wa utambuzi, kupunguza mkanganyiko, na kupunguza hatari ya kupoteza fedha kwa bahati mbaya. 
 - Inachukua nafasi ya njia mbadala ambazo watengenezaji hutumia sasa ili kufikia usawa huu, na kuifanya iwe rahisi na salama zaidi kutengeneza pochi na programu za minyororo mingi.
 
 Ikiwa mtumiaji ana mkoba mkataba mahiri leo yenye akaunti katika minyororo mingi inayooana na Mashine ya Kielektroniki ya Ethereum (EVM), mara nyingi huishia na anwani tofauti kabisa kwenye mitandao tofauti. Hali hii siyo tu kwamba inachanganya, bali inaweza kusababisha kupotea kwa fedha kwa bahati mbaya. 
 
-**Usambazaji wa kiwanda unaotabirika (au EIP-7997)** huwapa watengenezaji njia asilia, iliyojengewa ndani ya kusambaza programu zao mfumo mtawanyo na pochi za mkataba mahiri kwenye anwani ile ile katika minyororo mingi ya EVM, ikijumuisha Mtandao Mkuu wa Ethereum, mitandao ya Safu ya 2 (L2), na zaidi. Ikipitishwa, itawaruhusu watumiaji kuwa na anwani ile ile kwenye kila mnyororo unaoshiriki, na hivyo kupunguza kwa kiasi kikubwa mzigo wa utambuzi na uwezekano wa makosa ya mtumiaji.
+**Usambazaji wa kiwanda unaotabirika (au EIP-7997)** huwapa watengenezaji njia asilia, iliyojengewa ndani ya kusambaza programu zao mfumo mtawanyo na pochi za mkataba mahiri kwenye anwani ile ile katika minyororo mingi ya EVM, ikijumuisha Mtandao Mkuu wa Ethereum, mitandao ya safu ya 2 (L2), na zaidi. Ikipitishwa, itawaruhusu watumiaji kuwa na anwani ile ile kwenye kila mnyororo unaoshiriki, na hivyo kupunguza kwa kiasi kikubwa mzigo wa utambuzi na uwezekano wa makosa ya mtumiaji.
 
 Utekelezaji wa kiwanda cha awali cha Deterministic hufanya kazi kwa kuweka kabisa programu ndogo na maalum ya kiwanda katika eneo maalum (hasa, anwani 0x12) kwenye kila mnyororo unaooana na EVM. Lengo lake ni kutoa mkataba wa kiwanda cha kawaida na cha ulimwengu wote ambacho kinaweza kutumiwa na mtandao wowote unaooana na EVM; mradi tu mnyororo wa EVM unashiriki na kupitisha kiwango hiki, watengenezaji wataweza kukitumia kutekeleza mikataba yao mahiri kwenye anwani ile ile kwenye mtandao huo. 
 
@@ -266,7 +267,7 @@ Ili kuthibitisha usanidi wako kabla ya Glamsterdam kuwashwa kwenye Mainnet, unaw
 
 ### Ni maboresho gani ambayo Glamsterdam itajumuisha kwa L1 Scaling? {#what-improvements-will-glamsterdam-include-for-l1-scaling}
 
-Kipengele kikuu ni ePBS (EIP-7732), ambayo hutenganisha kazi nzito ya kuthibitisha miamala mtandao na kazi ya kufikia makubaliano. Hii hupanua muda wa kueneza data kutoka sekunde 2 hadi takriban sekunde 9, na hivyo kuwezesha Ethereum kushughulikia muamala mingi zaidi kwa usalama na kupokea data zaidi kwa mitandao ya Safu ya 2.
+Kipengele kikuu ni ePBS (EIP-7732), ambayo hutenganisha kazi nzito ya kuthibitisha miamala mtandao na kazi ya kufikia makubaliano. Hii hupanua muda wa kueneza data kutoka sekunde 2 hadi takriban sekunde 9, na hivyo kuwezesha Ethereum kushughulikia muamala mingi zaidi kwa usalama na kupokea data zaidi kwa mitandao ya safu ya 2.
 
 ### Je, Glamsterdam itapunguza ada kwenye Ethereum (Layo ya 1)? {#will-glamsterdam-lower-fees-on-ethereum-layer-1}
 

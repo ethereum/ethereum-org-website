@@ -123,6 +123,7 @@ Almacenar datos de forma más precisa y predecible ayudará a Ethereum a aumenta
 ### Actualización del costo del gas de acceso estatal {#state-access-gas-cost-update}
 
 - Aumenta los costes de gas para cuando las aplicaciones leen o actualizan información almacenada permanentemente en Ethereum (códigos de operación de acceso al estado) para que coincidan con precisión con el trabajo de cálculo que requieren estos comandos.
+- Fortalece la resiliencia de la red al prevenir ataques de denegación de servicio que explotan operaciones de lectura de datos artificialmente baratas
 
 A medida que el estado de Ethereum ha crecido, el acto de buscar y leer datos antiguos («acceso al estado ») se ha vuelto más pesado y lento de procesar para los nodos. Las tarifas para estas acciones se han mantenido iguales, aunque ahora es un poco más caro buscar información (en términos de potencia de cálculo). 
 
@@ -266,7 +267,7 @@ Para validar tu configuración antes de que Glamsterdam se active en la red prin
 
 ### ¿Qué mejoras incluirá Glamsterdam para el escalado de L1? {#what-improvements-will-glamsterdam-include-for-l1-scaling}
 
-La característica principal es ePBS (EIP-7732), que separa la pesada tarea de validar las transacciones de la red de la tarea de alcanzar el consenso. Esto amplía la ventana de propagación de datos de 2 segundos a aproximadamente 9 segundos, desbloqueando la capacidad de Ethereum para manejar de forma segura un rendimiento de transacción mucho mayor y acomodar más fragmentos de datos para las redes de Capa 2.
+La característica principal es ePBS (EIP-7732), que separa la pesada tarea de validar las transacciones de la red de la tarea de alcanzar el consenso. Esto amplía la ventana de propagación de datos de 2 segundos a aproximadamente 9 segundos, desbloqueando la capacidad de Ethereum para manejar de forma segura un rendimiento de transacción mucho mayor y acomodar más fragmentos de datos para las redes de capa 2.
 
 ### ¿Reducirá Glamsterdam las tarifas de Ethereum (capa 1)? {#will-glamsterdam-lower-fees-on-ethereum-layer-1}
 

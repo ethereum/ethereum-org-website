@@ -123,6 +123,7 @@ Eine genauere und vorhersehbarere Preisgestaltung für die Datenspeicherung wird
 ### Aktualisierung der Gaskosten für den Zustandszugriff {#state-access-gas-cost-update}
 
 - Erhöht die Gas für Anwendungen, die Informationen lesen oder aktualisieren, die dauerhaft auf Ethereum gespeichert sind (State-Access-Opcodes), um die Rechenarbeit, die diese Befehle erfordern, genau abzugleichen.
+- Stärkt die Netzwerkresilienz durch die Verhinderung von Denial-of-Service-Angriffen, die künstlich vergünstigte Datenleseoperationen ausnutzen
 
 Da der Zustand von Ethereum gewachsen ist, ist das Suchen und Lesen alter Daten („Zustandszugriff“) für Knoten schwerer und langsamer geworden. Die Gebühren für diese Aktionen sind gleich geblieben, obwohl es jetzt etwas teurer ist, Informationen nachzuschlagen (in Bezug auf die Rechenleistung). 
 
@@ -130,7 +131,7 @@ Infolgedessen sind einige spezifische Befehle derzeit im Verhältnis zu der Arbe
 
 **Die Aktualisierung der Gas für den Staatszugriff (oder EIP-8038)** erhöht die Gas für Opcodes mit Staatszugriff, wie z. B. das Nachschlagen von Konto und Vertragsdaten, um sie an die Leistung moderner Hardware und die Staatsgröße anzupassen. 
 
-Die Angleichung der Kosten für den Staatszugriff trägt auch dazu bei, Ethereum widerstandsfähiger zu machen. Da diese rechenintensiven Datenlesevorgänge künstlich billig sind, könnte ein böswilliger Angreifer das Netzwerk mit Tausenden von komplexen Datenanfragen in einem einzigen Block spammen, bevor er das Gebührenlimit des Netzwerks erreicht, was möglicherweise dazu führen könnte, dass das Netzwerk ins Stocken gerät oder abstürzt (ein Denial-of-Service-Angriff). Selbst ohne böswillige Absicht werden Entwickler nicht wirtschaftlich dazu ermutigt, effiziente Anwendungen zu entwickeln, wenn das Lesen von Netzwerk zu billig ist.
+Die Angleichung der Kosten für den Staatszugriff trägt auch dazu bei, Ethereum widerstandsfähiger zu machen. Da diese rechenintensiven Datenlesevorgänge künstlich billig sind, könnte ein böswilliger Angreifer das Netzwerk mit Tausenden von komplexen Datenanfragen in einem einzigen Block spammen, bevor er das Gebührenlimit des Netzwerks erreicht, was möglicherweise dazu führen könnte, dass das Netzwerk ins Stocken gerät oder abstürzt (ein denial-of-service-Angriff). Selbst ohne böswillige Absicht werden Entwickler nicht wirtschaftlich dazu ermutigt, effiziente Anwendungen zu entwickeln, wenn das Lesen von Netzwerk zu billig ist.
 
 Durch eine genauere Preisgestaltung von Aktionen mit staatlichem Zugriff kann Ethereum widerstandsfähiger gegen versehentliche oder absichtliche Verlangsamungen werden, während die Angleichung der Netzwerk an die Hardwarelast eine nachhaltigere Grundlage für zukünftige Gaslimit Erhöhungen darstellt.
 
