@@ -115,20 +115,21 @@ async function fetchCommitsForPath(
     return []
   }
 
-  // Transform to FileContributor format and deduplicate
-  const contributors = commits
-    .filter((commit: { author?: unknown }) => !!commit.author)
-    .map(
-      (commit: {
-        author: { login: string; avatar_url: string; html_url: string }
-        commit: { author: { date: string } }
-      }) => ({
-        login: commit.author.login,
-        avatar_url: commit.author.avatar_url,
-        html_url: commit.author.html_url,
-        date: commit.commit.author.date,
-      })
-    )
+  // Transform to FileContributor format and deduplicate.
+  // When a commit author email isn't linked to a GitHub account, the API
+  // returns `author: null`. We still include these commits so their date
+  // is captured, using the git commit author name as a fallback identity.
+  const contributors = commits.map(
+    (commit: {
+      author?: { login: string; avatar_url: string; html_url: string } | null
+      commit: { author: { name: string; date: string } }
+    }) => ({
+      login: commit.author?.login ?? commit.commit.author.name,
+      avatar_url: commit.author?.avatar_url ?? "",
+      html_url: commit.author?.html_url ?? "",
+      date: commit.commit.author.date,
+    })
+  )
 
   // Remove duplicates by login (keep first = most recent)
   const seen = new Set<string>()
