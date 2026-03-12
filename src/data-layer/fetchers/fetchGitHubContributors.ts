@@ -11,6 +11,39 @@ const BATCH_DELAY_MS = 50 // Small delay between batches to avoid rate limiting
 
 const APP_PAGES_PREFIX = "app/[locale]/"
 
+interface AllContributorsEntry {
+  login: string
+  name: string
+  avatar_url: string
+}
+
+type NameLookup = Map<string, AllContributorsEntry>
+
+/**
+ * Fetch .all-contributorsrc from GitHub and build a case-insensitive
+ * name -> entry lookup map for resolving co-authors by display name.
+ */
+async function fetchNameLookup(): Promise<NameLookup> {
+  const url =
+    "https://raw.githubusercontent.com/ethereum/ethereum-org-website/master/.all-contributorsrc"
+  const response = await fetch(url)
+
+  if (!response.ok) {
+    console.warn("Failed to fetch .all-contributorsrc:", response.status)
+    return new Map()
+  }
+
+  const data = await response.json()
+  const entries: AllContributorsEntry[] = data.contributors || []
+  const lookup: NameLookup = new Map()
+
+  for (const entry of entries) {
+    lookup.set(entry.name.toLowerCase(), entry)
+  }
+
+  return lookup
+}
+
 /** Email addresses (or substrings) that identify AI agent co-authors */
 const EXCLUDED_EMAILS = [
   "noreply@anthropic.com",
@@ -64,12 +97,17 @@ const extractLoginFromNoreplyEmail = (email: string): string | null => {
 /**
  * Parse co-author trailers from a commit message.
  * Matches lines like: "Co-authored-by: Name <email>"
- * Returns FileContributor entries for any co-authors with resolvable
- * GitHub logins (via noreply email addresses).
+ *
+ * Resolution chain for each co-author:
+ * 1. Filter out bots/AI agents by email and name patterns
+ * 2. Extract login from GitHub noreply email if applicable
+ * 3. Match display name against .all-contributorsrc entries
+ * 4. Fall back to trailer name (no avatar/profile link)
  */
 const parseCoAuthors = (
   message: string,
-  commitDate: string
+  commitDate: string,
+  nameLookup: NameLookup
 ): FileContributor[] => {
   const coAuthorPattern = /^co-authored-by:\s*(.+?)\s*<([^>]+)>/gim
   const coAuthors: FileContributor[] = []
@@ -97,23 +135,39 @@ const parseCoAuthors = (
       continue
     }
 
-    // Resolve GitHub login from noreply email
-    const login = extractLoginFromNoreplyEmail(email)
-    if (!login) continue
-
-    // Skip excluded logins
-    if (
-      EXCLUDED_LOGINS.some(
-        (excluded) => excluded.toLowerCase() === login.toLowerCase()
-      )
-    ) {
+    // 1. Try noreply email -> GitHub login
+    const noreplyLogin = extractLoginFromNoreplyEmail(email)
+    if (noreplyLogin) {
+      if (!isExcludedContributor(noreplyLogin)) {
+        coAuthors.push({
+          login: noreplyLogin,
+          avatar_url: `https://avatars.githubusercontent.com/${noreplyLogin}`,
+          html_url: `https://github.com/${noreplyLogin}`,
+          date: commitDate,
+        })
+      }
       continue
     }
 
+    // 2. Try name match in .all-contributorsrc
+    const entry = nameLookup.get(name.toLowerCase())
+    if (entry) {
+      if (!isExcludedContributor(entry.login)) {
+        coAuthors.push({
+          login: entry.login,
+          avatar_url: entry.avatar_url,
+          html_url: `https://github.com/${entry.login}`,
+          date: commitDate,
+        })
+      }
+      continue
+    }
+
+    // 3. Last resort: use trailer name, no avatar or profile link
     coAuthors.push({
-      login,
-      avatar_url: `https://avatars.githubusercontent.com/${login}`,
-      html_url: `https://github.com/${login}`,
+      login: name,
+      avatar_url: "",
+      html_url: "",
       date: commitDate,
     })
   }
@@ -189,7 +243,8 @@ async function parallelBatch<T, R>(
  */
 async function fetchCommitsForPath(
   filepath: string,
-  token: string
+  token: string,
+  nameLookup: NameLookup
 ): Promise<FileContributor[]> {
   const url = new URL(`${GITHUB_API_BASE}/commits`)
   url.searchParams.set("path", filepath)
@@ -212,7 +267,7 @@ async function fetchCommitsForPath(
       const waitTime = +resetTime - Math.floor(Date.now() / 1000)
       console.log(`Rate limit exceeded, waiting ${waitTime}s...`)
       await delay(waitTime * 1000)
-      return fetchCommitsForPath(filepath, token) // Retry
+      return fetchCommitsForPath(filepath, token, nameLookup) // Retry
     }
   }
 
@@ -254,7 +309,7 @@ async function fetchCommitsForPath(
               date,
             }]
 
-      const coAuthors = parseCoAuthors(commit.commit.message, date)
+      const coAuthors = parseCoAuthors(commit.commit.message, date, nameLookup)
 
       return [...primary, ...coAuthors]
     }
@@ -274,10 +329,11 @@ async function fetchCommitsForPath(
  */
 async function fetchContributorsForPaths(
   paths: string[],
-  token: string
+  token: string,
+  nameLookup: NameLookup
 ): Promise<FileContributor[]> {
   const results = await parallelBatch(paths, (path) =>
-    fetchCommitsForPath(path, token)
+    fetchCommitsForPath(path, token, nameLookup)
   )
 
   const allContributors = results.flat()
@@ -386,6 +442,10 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
   console.log("Starting GitHub contributors fetch...")
   const startTime = Date.now()
 
+  // Build name lookup from .all-contributorsrc for co-author resolution
+  const nameLookup = await fetchNameLookup()
+  console.log(`Loaded ${nameLookup.size} entries from .all-contributorsrc`)
+
   const result: GitHubContributorsData = {
     content: {},
     appPages: {},
@@ -417,7 +477,7 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
   const contentResults = await parallelBatch(
     contentPathPairs,
     async ({ slug, paths }) => {
-      const contributors = await fetchContributorsForPaths(paths, token)
+      const contributors = await fetchContributorsForPaths(paths, token, nameLookup)
       return { slug, contributors }
     }
   )
@@ -449,7 +509,7 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
   const appPageResults = await parallelBatch(
     appPagePathPairs,
     async ({ pagePath, paths }) => {
-      const contributors = await fetchContributorsForPaths(paths, token)
+      const contributors = await fetchContributorsForPaths(paths, token, nameLookup)
       return { pagePath, contributors }
     }
   )
