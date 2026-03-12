@@ -239,7 +239,7 @@ async function discoverPathsFromTree(token: string): Promise<{
 
 /**
  * Fetch GitHub contributors data for all content files and app pages.
- * This runs as a scheduled task (daily) and stores results in Netlify Blobs.
+ * This runs as a scheduled task (weekly) and stores results in Netlify Blobs.
  *
  * Optimizations:
  * - Uses git/trees API to list all content files in ONE request

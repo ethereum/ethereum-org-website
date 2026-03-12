@@ -23,9 +23,7 @@ export const getMarkdownFileContributorInfo = async (
   const contributorsData = await getStaticGitHubContributors()
   const gitHubContributors = contributorsData?.content[slug] ?? []
 
-  // Use contributor date from data-layer, fallback to current date for new/missing content
-  const lastUpdatedDate =
-    gitHubContributors[0]?.date || new Date().toISOString()
+  const lastUpdatedDate = gitHubContributors[0]?.date
 
   const crowdinContributors = convertToFileContributorFromCrowdin(
     getCrowdinContributors(mdPath, locale as Lang)

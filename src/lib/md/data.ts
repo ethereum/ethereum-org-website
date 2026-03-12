@@ -25,7 +25,7 @@ interface PageData {
   content: React.ReactNode
   frontmatter: Frontmatter
   tocItems: ToCItem[]
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp?: string
   contributors: FileContributor[]
   isTranslated: boolean
   timeToRead: ReadTimeResults
@@ -76,11 +76,10 @@ export async function getPageData({
       frontmatter.lang as string
     )
 
-  // Format timestamp
-  const lastEditLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastUpdatedDate
-  )
+  // Format timestamp (undefined when contributor data is missing)
+  const lastEditLocaleTimestamp = lastUpdatedDate
+    ? getLocaleTimestamp(locale as Lang, lastUpdatedDate)
+    : undefined
 
   const timeToRead = readingTime(markdown)
 
