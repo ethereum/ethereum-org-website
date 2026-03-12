@@ -1,12 +1,12 @@
 ---
-title: Hraní her na Ethereu
+title: "Hraní her na Ethereu"
 lang: cs
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Pravidla hry a její stav může vynucovat blockchain Etherea, nikoli servery studia, což je klíčová výhoda her na blockchainu.
-summaryPoint2: Kdokoli může vytvářet mody, boty nebo zcela nové hry, které se napojí na stejná otevřená data na blockchainu.
-summaryPoint3: Účelové L2 umožňují hraní v reálném čase s nižšími poplatky, zatímco frameworky pro vývoj her zpřístupňují vytváření her na blockchainu více než kdy jindy.
+summaryPoint1: "Pravidla hry a její stav může vynucovat blockchain Etherea, nikoli servery studia, což je klíčová výhoda her na blockchainu."
+summaryPoint2: "Kdokoli může vytvářet mody, boty nebo zcela nové hry, které se napojí na stejná otevřená data na blockchainu."
+summaryPoint3: "Účelové L2 umožňují hraní v reálném čase s nižšími poplatky, zatímco frameworky pro vývoj her zpřístupňují vytváření her na blockchainu více než kdy jindy."
 buttons:
   - content: Další informace
     toId: gaming-on-ethereum

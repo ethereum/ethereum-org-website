@@ -6,7 +6,7 @@ image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: Las reglas del juego y el estado pueden ser aplicados por la cadena de bloques de Ethereum, no por los servidores de un estudio, lo que representa un beneficio clave de los juegos en cadena
 summaryPoint2: Cualquiera puede crear mods, bots o juegos completamente nuevos que se conectan a los mismos datos abiertos en cadena
-summaryPoint3: Las L2 especialmente diseñadas permiten jugar en tiempo real con tarifas más bajas, mientras que los marcos de desarrollo de juegos hacen que crear juegos en cadena sea más accesible que nunca
+summaryPoint3: "Las L2 especialmente diseñadas permiten jugar en tiempo real con tarifas más bajas, mientras que los marcos de desarrollo de juegos hacen que crear juegos en cadena sea más accesible que nunca"
 buttons:
   - content: Más información
     toId: gaming-on-ethereum

@@ -1,12 +1,12 @@
 ---
-title: 以太坊游戏
+title: "以太坊游戏"
 lang: zh
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: 游戏规则和状态可由以太坊区块链（而非工作室的服务器）强制执行，这是链上游戏的一大关键优势
-summaryPoint2: 任何人都可以构建模组、机器人或全新的游戏，接入相同的开放链上数据
-summaryPoint3: 专用二层网络 (L2) 能以更低的费用实现实时游戏，而游戏开发框架让构建链上游戏比以往任何时候都更容易
+summaryPoint1: "游戏规则和状态可由以太坊区块链（而非工作室的服务器）强制执行，这是链上游戏的一大关键优势"
+summaryPoint2: "任何人都可以构建模组、机器人或全新的游戏，接入相同的开放链上数据"
+summaryPoint3: "专用二层网络 (L2) 能以更低的费用实现实时游戏，而游戏开发框架让构建链上游戏比以往任何时候都更容易"
 buttons:
   - content: 了解更多
     toId: gaming-on-ethereum

@@ -4,9 +4,9 @@ lang: pl
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Zasady gry i jej stan mogą być egzekwowane przez blockchain Ethereum, a nie serwery studia, co stanowi kluczową korzyść gier na łańcuchu
-summaryPoint2: Każdy może tworzyć mody, boty lub całkowicie nowe gry, które podłączają się do tych samych otwartych danych na łańcuchu
-summaryPoint3: Specjalnie stworzone warstwy 2 umożliwiają rozgrywkę w czasie rzeczywistym z niższymi opłatami, podczas gdy frameworki do tworzenia gier sprawiają, że tworzenie gier na łańcuchu jest bardziej dostępne niż kiedykolwiek wcześniej
+summaryPoint1: "Zasady gry i jej stan mogą być egzekwowane przez blockchain Ethereum, a nie serwery studia, co stanowi kluczową korzyść gier na łańcuchu"
+summaryPoint2: "Każdy może tworzyć mody, boty lub całkowicie nowe gry, które podłączają się do tych samych otwartych danych na łańcuchu"
+summaryPoint3: "Specjalnie stworzone warstwy 2 umożliwiają rozgrywkę w czasie rzeczywistym z niższymi opłatami, podczas gdy frameworki do tworzenia gier sprawiają, że tworzenie gier na łańcuchu jest bardziej dostępne niż kiedykolwiek wcześniej"
 buttons:
   - content: Dowiedz się więcej
     toId: gaming-on-ethereum

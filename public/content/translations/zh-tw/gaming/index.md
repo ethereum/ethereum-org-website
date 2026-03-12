@@ -1,12 +1,12 @@
 ---
-title: 以太坊遊戲
+title: "以太坊遊戲"
 lang: zh-tw
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: 遊戲規則與狀態可由以太坊區塊鏈強制執行，而非工作室的伺服器，這是鏈上遊戲的一大關鍵優勢
-summaryPoint2: 任何人都可以建立模組、機器人，或可連接至相同開放鏈上資料的全新遊戲
-summaryPoint3: 專用二層網路能以更低的費用實現即時遊戲體驗，而遊戲開發框架讓建立鏈上遊戲比以往任何時候都更容易
+summaryPoint1: "遊戲規則與狀態可由以太坊區塊鏈強制執行，而非工作室的伺服器，這是鏈上遊戲的一大關鍵優勢"
+summaryPoint2: "任何人都可以建立模組、機器人，或可連接至相同開放鏈上資料的全新遊戲"
+summaryPoint3: "專用二層網路能以更低的費用實現即時遊戲體驗，而遊戲開發框架讓建立鏈上遊戲比以往任何時候都更容易"
 buttons:
   - content: 瞭解更多
     toId: gaming-on-ethereum

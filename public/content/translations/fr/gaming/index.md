@@ -4,9 +4,9 @@ lang: fr
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Les règles du jeu et l'état peuvent être appliqués par la blockchain Ethereum, et non par les serveurs d'un studio, ce qui représente un avantage clé des jeux sur chaîne
-summaryPoint2: N'importe qui peut créer des mods, des bots ou des jeux entièrement nouveaux qui se branchent sur les mêmes données ouvertes sur chaîne
-summaryPoint3: Les L2 spécialement conçus permettent un jeu en temps réel avec des frais moins élevés, tandis que les cadres de développement de jeux rendent la création de jeux sur chaîne plus accessible que jamais
+summaryPoint1: "Les règles du jeu et l'état peuvent être appliqués par la blockchain Ethereum, et non par les serveurs d'un studio, ce qui représente un avantage clé des jeux sur chaîne"
+summaryPoint2: "N'importe qui peut créer des mods, des bots ou des jeux entièrement nouveaux qui se branchent sur les mêmes données ouvertes sur chaîne"
+summaryPoint3: "Les L2 spécialement conçus permettent un jeu en temps réel avec des frais moins élevés, tandis que les cadres de développement de jeux rendent la création de jeux sur chaîne plus accessible que jamais"
 buttons:
   - content: En savoir plus
     toId: jeux-sur-ethereum

@@ -1,12 +1,12 @@
 ---
-title: 이더리움 게임
+title: "이더리움 게임"
 lang: ko
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: 게임 규칙과 상태는 스튜디오의 서버가 아닌 이더리움 블록체인으로 적용 가능하며, 이는 온체인 게임의 핵심 이점입니다.
-summaryPoint2: 누구나 동일한 개방형 온체인 데이터에 연결하여 모드, 봇 또는 완전히 새로운 게임을 만들 수 있습니다.
-summaryPoint3: 특수 목적용 레이어2는 더 낮은 수수료로 실시간 게임 플레이를 지원하며, 게임 개발 프레임워크는 그 어느 때보다 온체인 게임 구축에 대한 접근성을 높여줍니다.
+summaryPoint1: "게임 규칙과 상태는 스튜디오의 서버가 아닌 이더리움 블록체인으로 적용 가능하며, 이는 온체인 게임의 핵심 이점입니다."
+summaryPoint2: "누구나 동일한 개방형 온체인 데이터에 연결하여 모드, 봇 또는 완전히 새로운 게임을 만들 수 있습니다."
+summaryPoint3: "특수 목적용 레이어2는 더 낮은 수수료로 실시간 게임 플레이를 지원하며, 게임 개발 프레임워크는 그 어느 때보다 온체인 게임 구축에 대한 접근성을 높여줍니다."
 buttons:
   - content: 자세히 알아보기
     toId: gaming-on-ethereum
@@ -26,7 +26,7 @@ buttons:
 - **레이어2:** 더 저렴한 수수료와 짧은 트랜잭션 시간 덕분에 레이어2는 게임을 출시하는 일반적인 장소가 되었습니다. 게임을 지원하는 주요 레이어2는 Starknet, Immutable, Base, Abstract 등이 있습니다.
 - **인프라:** 온체인 게임 개발을 더 쉽게 하기 위해 Cartridge, Dojo, Proof of Play, Thirdweb 등 자신의 프로젝트에 사용할 수 있는 여러 도구 스택이 있습니다.
 - **게임 길드:** 게임 커뮤니티의 일원이 되고 싶은 플레이어는 게임 길드에 가입하여 길드의 다른 플레이어와 전략을 짜고 협력할 수 있습니다. 주요 길드로는 YGG, WASD, LegacyGG, Gaming Grid, OLAGG 등이 있습니다.
-- **게임:** 이더리움 게임은 _Realms: Eternum_의 실시간 전략부터 _Axie: Atia's Legacy_ MMO, _Fableborn_의 액션 RPG, 심지어 _Ponziland_와 같은 게임화된 디파이 플랫폼에 이르기까지 다양한 형태와 규모로 제공됩니다. 다양한 체인에서 정기적으로 새로운 게임이 출시되므로 항상 새로운 것을 탐색할 수 있습니다.
+- **게임:** 이더리움 게임은 <em>Realms: Eternum</em>의 실시간 전략부터 _Axie: Atia's Legacy_ MMO, <em>Fableborn</em>의 액션 RPG, 심지어 <em>Ponziland</em>와 같은 게임화된 디파이 플랫폼에 이르기까지 다양한 형태와 규모로 제공됩니다. 다양한 체인에서 정기적으로 새로운 게임이 출시되므로 항상 새로운 것을 탐색할 수 있습니다.
 
 ## 플레이해볼 만한 게임 {#games}
 

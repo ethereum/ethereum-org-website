@@ -4,9 +4,9 @@ lang: pt-br
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: As regras do jogo e o estado podem ser aplicados pelo blockchain da Ethereum, e não pelos servidores de um estúdio, representando um benefício fundamental dos jogos onchain
+summaryPoint1: "As regras do jogo e o estado podem ser aplicados pelo blockchain da Ethereum, e não pelos servidores de um estúdio, representando um benefício fundamental dos jogos onchain"
 summaryPoint2: Qualquer pessoa pode criar mods, bots ou jogos totalmente novos que se conectam aos mesmos dados onchain abertos
-summaryPoint3: L2s desenvolvidas para fins específicos permitem jogabilidade em tempo real com taxas mais baixas, enquanto as estruturas de desenvolvimento de jogos tornam a criação de jogos onchain mais acessível do que nunca
+summaryPoint3: "L2s desenvolvidas para fins específicos permitem jogabilidade em tempo real com taxas mais baixas, enquanto as estruturas de desenvolvimento de jogos tornam a criação de jogos onchain mais acessível do que nunca"
 buttons:
   - content: Saiba mais
     toId: jogos-no-ethereum

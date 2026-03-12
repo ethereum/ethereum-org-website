@@ -4,9 +4,9 @@ lang: tr
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Oyun kuralları ve durumu, bir stüdyonun sunucuları tarafından değil, Ethereum blokzinciri tarafından uygulanabilir; bu da zincir üstü oyunların önemli bir faydasını temsil eder
-summaryPoint2: Herkes aynı açık zincir üstü verilere bağlanan modlar, botlar veya tamamen yeni oyunlar oluşturabilir.
-summaryPoint3: Amaca yönelik oluşturulmuş K2'ler, daha düşük ücretlerle gerçek zamanlı oynanışa olanak tanırken, oyun geliştirme çerçeveleri zincir üstü oyunlar oluşturmayı her zamankinden daha erişilebilir hâle getirir.
+summaryPoint1: "Oyun kuralları ve durumu, bir stüdyonun sunucuları tarafından değil, Ethereum blokzinciri tarafından uygulanabilir; bu da zincir üstü oyunların önemli bir faydasını temsil eder"
+summaryPoint2: "Herkes aynı açık zincir üstü verilere bağlanan modlar, botlar veya tamamen yeni oyunlar oluşturabilir."
+summaryPoint3: "Amaca yönelik oluşturulmuş K2'ler, daha düşük ücretlerle gerçek zamanlı oynanışa olanak tanırken, oyun geliştirme çerçeveleri zincir üstü oyunlar oluşturmayı her zamankinden daha erişilebilir hâle getirir."
 buttons:
   - content: Daha fazla bilgi edin
     toId: gaming-on-ethereum
