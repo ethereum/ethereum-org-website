@@ -4,7 +4,7 @@
   "page-roadmap-meta-description": "이더리움의 더 나은 확장성, 보안 및 지속가능성을 위한 경로",
   "page-roadmap-banner-notification": "이더리움의 개발은 커뮤니티 주도적이고 변경이 가능합니다.",
   "page-roadmap-changes-coming-title": "이더리움에는 어떤 변화가 올까요?",
-  "page-roadmap-changes-coming-description": ".",
+  "page-roadmap-changes-coming-description": "<a href=\"/\">이더리움</a>은 이미 강력한 플랫폼이지만, 여전히 개선되고 있습니다. 야심 찬 개선 사항들을 통해 현재의 이더리움을 완전한 확장성과 최대의 복원력을 갖춘 플랫폼으로 업그레이드할 것입니다.",
   "page-roadmap-cheaper-transactions-title": "더 저렴한 거래 비용",
   "page-roadmap-cheaper-transactions-description": "롤업은 너무 비싸고 중앙 집중식 구성 요소에 의존하기 때문에 사용자가 운영자를 너무 많이 신뢰하게 됩니다. 로드맵에는 이 두 가지 문제에 대한 수정 사항이 포함되어 있습니다.",
   "page-roadmap-cheaper-transactions-button": "수수료 인하에 대한 자세한 내용",
@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "UX 개선을 위해 모바일 장치의 보안 영역 지원",
   "page-roadmap-fusaka-additional-item-2": "블롭 수수료 시장 개선",
   "page-roadmap-fusaka-additional-item-3": "검증자 효율성 및 네트워크 성능 추가 개선",
-  "page-roadmap-glamsterdam-discussed-title": "Glamsterdam에 예정",
-  "page-roadmap-glamsterdam-discussed-item-1": "규약 내장형 제안자-빌더 분리(ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "블록 수준 액세스 목록(BAL)"
+  "page-roadmap-glamsterdam-epbs-title": "프로토콜에 내장된 제안자-생성자 분리",
+  "page-roadmap-glamsterdam-epbs-item-1": "블록 합의와 처리를 분리하여 검증자가 더 많은 데이터를 처리할 수 있도록 함으로써 L1 확장을 돕습니다.",
+  "page-roadmap-glamsterdam-epbs-item-2": "빌더를 기본적으로 통합하여 검증자가 외부 소프트웨어를 신뢰하지 않고도 블록 생성을 안전하게 아웃소싱할 수 있도록 합니다.",
+  "page-roadmap-glamsterdam-bal-title": "블록 수준 액세스 목록",
+  "page-roadmap-glamsterdam-bal-item-1": "개별 트랜잭션이 아닌 블록 수준에서 필수 액세스 목록을 도입합니다.",
+  "page-roadmap-glamsterdam-bal-item-2": "더 빠른 동기화, 병렬 실행, 병렬 디스크 읽기를 위해 종속성을 미리 매핑합니다.",
+  "page-roadmap-glamsterdam-bal-item-3": "상태 집약적인 앱의 가스비를 낮추고 가스 비용 예측 가능성을 향상시킵니다.",
+  "page-roadmap-hegota-discussed-title": "헤고타에서 계획됨",
+  "page-roadmap-hegota-discussed-item-1": "현재 제안들이 논의 중입니다."
 }
