@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "Bunu e-posta adresiniz gibi düşünün, ancak posta yerine ETH alabilir. ETH'yi bir borsadan cüzdanınıza aktarmak istiyorsanız, hedef olarak adresinizi kullanın. Göndermeden önce her zaman iki kez kontrol ettiğinizden emin olun!",
   "page-get-eth-your-address-wallet-link": "Cüzdanları kontrol edin",
   "listing-policy-raise-issue-link": "Sorun bildir",
-  "page-find-wallet-last-updated": "Son güncelleme"
+  "page-find-wallet-last-updated": "Son güncelleme",
+  "listing-policy-disclaimer": "Bu sayfada listelenen tüm ürünler resmi bir onay değildir ve yalnızca bilgilendirme amaçlıdır. Bir ürün eklemek veya politika hakkında geri bildirimde bulunmak isterseniz, GitHub'da bir sorun oluşturun."
 }

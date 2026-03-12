@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
@@ -141,11 +141,9 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
 
   const hackathons = (await getHackathons()).slice(0, 5)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "developers",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

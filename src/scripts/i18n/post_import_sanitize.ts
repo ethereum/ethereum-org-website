@@ -2333,6 +2333,10 @@ function processMarkdownFile(
   }
 
   applyFix(
+    () => stripLlmArtifactTokens(content),
+    (n) => `Stripped ${n} LLM artifact token(s) (<bos>, <eos>, etc.)`
+  )
+  applyFix(
     () => fixDuplicateFrontmatterAuthor(content),
     (n) => `Fixed ${n} duplicate author frontmatter lines`
   )
@@ -2886,6 +2890,33 @@ function fixBrokenBracketInLinks(content: string): {
   return { content: parts.join(""), fixCount }
 }
 
+/**
+ * Strips LLM artifact tokens (<bos>, <eos>, <s>, </s>, <pad>, <unk>, <mask>)
+ * that leak from machine translation pipelines into prose content.
+ * These tokens are never valid in markdown/MDX and will break the MDX parser
+ * since they look like unrecognized JSX components.
+ */
+function stripLlmArtifactTokens(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+  const tokenPattern = /<\/?(?:bos|eos|s|pad|unk|mask)>/gi
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+    parts[i] = parts[i].replace(tokenPattern, () => {
+      fixCount++
+      return ""
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
 /** @internal Exposed for unit testing only. Not part of the public API. */
 export const _testOnly = {
   // Standalone fixes
@@ -2928,6 +2959,7 @@ export const _testOnly = {
   fixItalicAdjacentNonLatin,
   fixDuplicateFrontmatterAuthor,
   fixBrokenBracketInLinks,
+  stripLlmArtifactTokens,
   warnExposedMdxTags,
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,

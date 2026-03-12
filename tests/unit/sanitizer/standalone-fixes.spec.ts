@@ -37,6 +37,7 @@ const {
   fixItalicAdjacentNonLatin,
   fixDuplicateFrontmatterAuthor,
   fixBrokenBracketInLinks,
+  stripLlmArtifactTokens,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -1333,6 +1334,71 @@ author: Ori Pomerantz
         `[Mais em staking withdrawals](/staking/withdrawals/)`
       )
       expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("stripLlmArtifactTokens", () => {
+    test("strips <bos> token mid-word (Marathi)", () => {
+      const input = "कृ<bos>ितपणे स्वस्त आहेत"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe("कृितपणे स्वस्त आहेत")
+      expect(fixCount).toBe(1)
+    })
+
+    test("strips <eos> token", () => {
+      const input = "some text<eos> more text"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe("some text more text")
+      expect(fixCount).toBe(1)
+    })
+
+    test("strips <s> and </s> tokens", () => {
+      const input = "<s>beginning of text</s>"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe("beginning of text")
+      expect(fixCount).toBe(2)
+    })
+
+    test("strips <pad> and <unk> and <mask> tokens", () => {
+      const input = "word<pad>word<unk>word<mask>word"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe("wordwordwordword")
+      expect(fixCount).toBe(3)
+    })
+
+    test("strips multiple tokens in one string", () => {
+      const input = "text<bos> with <eos>multiple<pad> tokens"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe("text with multiple tokens")
+      expect(fixCount).toBe(3)
+    })
+
+    test("leaves content unchanged when no tokens present", () => {
+      const input = "This is normal **markdown** with [links](/path)"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not strip tokens inside code blocks", () => {
+      const input = "```\n<bos>token inside code\n```"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not strip tokens inside inline code", () => {
+      const input = "the `<bos>` token is used for..."
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not strip valid HTML tags like <b> or <strong>", () => {
+      const input = "<b>bold</b> and <strong>strong</strong>"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 })

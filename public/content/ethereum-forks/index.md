@@ -25,43 +25,51 @@ The software that underlies Ethereum is composed of two halves, known as the [ex
 
 **Execution upgrade naming**
 
-Since 2021, upgrades to the **execution layer** are named according to the city names of [previous Devcon locations](https://devcon.org/en/past-events/) in chronological order:
+Since 2021, upgrades to the **execution layer** are named according to the city names of [previous Devcon and Devconnect locations](https://devcon.org/en/past-events/) in chronological order:
 
-| Upgrade Name | Devcon Year | Devcon Number | Upgrade Date |
-| ------------ | ----------- | ------------- | ------------ |
-| Berlin       | 2014        | 0             | Apr 15, 2021 |
-| London       | 2015        | I             | Aug 5, 2021  |
-| Shanghai     | 2016        | II            | Apr 12, 2023 |
-| Cancun       | 2017        | III           | Mar 13, 2024 |
-| **Prague**   | 2018        | IV            | TBD - Next   |
-| _Osaka_      | 2019        | V             | TBD          |
-| _Bogota_     | 2022        | VI            | TBD          |
-| _Bangkok_    | 2024        | VII           | TBD          |
+| Upgrade Name   | Devcon(nect) Year | Devcon Number | Upgrade Date |
+| -------------- | ----------------- | ------------- | ------------ |
+| Berlin         | 2014              | 0             | Apr 15, 2021 |
+| London         | 2015              | I             | Aug 5, 2021  |
+| Shanghai       | 2016              | II            | Apr 12, 2023 |
+| Cancun         | 2017              | III           | Mar 13, 2024 |
+| Prague         | 2018              | IV            | May 7, 2025  |
+| Osaka          | 2019              | V             | Dec 3, 2025  |
+| **Amsterdam**  | 2022              | Devconnect    | TBD - Next   |
+| _Bogotá_       | 2022              | VI            | TBD          |
+| _Istanbul_     | 2023              | Devconnect    | TBD          |
+| _Bangkok_      | 2024              | VII           | TBD          |
+| _Buenos Aires_ | 2025              | Devconnect    | TBD          |
+| _Mumbai_       | 2026              | VIII          | TBD          |
 
 **Consensus upgrade naming**
 
 Since the launch of the [Beacon Chain](/glossary/#beacon-chain), upgrades to the **consensus layer** are named after celestial stars beginning with letters that proceed in alphabetical order:
 
-| Upgrade Name                                                  | Upgrade Date |
-| ------------------------------------------------------------- | ------------ |
-| Beacon Chain genesis                                          | Dec 1, 2020  |
-| [Altair](https://en.wikipedia.org/wiki/Altair)                | Oct 27, 2021 |
-| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)          | Sep 6, 2022  |
-| [Capella](https://en.wikipedia.org/wiki/Capella)              | Apr 12, 2023 |
-| [Deneb](https://en.wikipedia.org/wiki/Deneb)                  | Mar 13, 2024 |
-| [**Electra**](<https://en.wikipedia.org/wiki/Electra_(star)>) | TBD - Next   |
-| [_Fulu_](<https://en.wikipedia.org/wiki/Fulu_(star)>)         | TBD          |
+| Upgrade Name                                              | Upgrade Date |
+| --------------------------------------------------------- | ------------ |
+| Beacon Chain genesis                                      | Dec 1, 2020  |
+| [Altair](https://en.wikipedia.org/wiki/Altair)            | Oct 27, 2021 |
+| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)      | Sep 6, 2022  |
+| [Capella](https://en.wikipedia.org/wiki/Capella)          | Apr 12, 2023 |
+| [Deneb](https://en.wikipedia.org/wiki/Deneb)              | Mar 13, 2024 |
+| [Electra](<https://en.wikipedia.org/wiki/Electra_(star)>) | May 7, 2025  |
+| [Fulu](<https://en.wikipedia.org/wiki/Fulu_(star)>)       | Dec 3, 2025  |
+| [**Gloas**](https://en.wikipedia.org/wiki/WASP-13)        | TBD - Next   |
+| [_Heka_](https://en.wikipedia.org/wiki/Meissa)            | TBD          |
 
 **Combined naming**
 
-The execution and consensus upgrades were initially rolled out at different times, but after [The Merge](/roadmap/merge/) in 2022 these have been deployed simultaneously. As-such, colloquial terms have emerged to simplify references to these upgrades using a single conjoined term. This began with the _Shanghai-Capella_ upgrade, commonly referred to as "**Shapella**", and is continued with the _Cancun-Deneb_ (**Dencun**), and the _Prague-Electra_ (**Pectra**) upgrades.
+The execution and consensus upgrades were initially rolled out at different times, but after [The Merge](/roadmap/merge/) in 2022 these have been deployed simultaneously. As-such, colloquial terms have emerged to simplify references to these upgrades using a single conjoined term. This began with the _Shanghai-Capella_ upgrade, commonly referred to as "**Shapella**", and is continued with subsequent upgrades.
 
-| Execution Upgrade | Consensus Upgrade | Short Name |
-| ----------------- | ----------------- | ---------- |
-| Shanghai          | Capella           | "Shapella" |
-| Cancun            | Deneb             | "Dencun"   |
-| Prague            | Electra           | "Pectra"   |
-| Osaka             | Fulu              | "Fusaka"   |
+| Execution Upgrade | Consensus Upgrade | Short Name    |
+| ----------------- | ----------------- | ------------- |
+| Shanghai          | Capella           | "Shapella"    |
+| Cancun            | Deneb             | "Dencun"      |
+| Prague            | Electra           | "Pectra"      |
+| Osaka             | Fulu              | "Fusaka"      |
+| Amsterdam         | Gloas             | "Glamsterdam" |
+| Bogotá            | Heka              | "Hekotá"      |
 
 </ExpandableCard>
 
