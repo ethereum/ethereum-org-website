@@ -67,11 +67,15 @@ export function TerminalTypewriter({
           <span className="size-3 rounded-full bg-yellow-400/90" />
           <span className="size-3 rounded-full bg-green-500/90" />
         </div>
-        <div className="flex items-center overflow-hidden font-['Courier_New',_Courier,_monospace] text-sm">
+        <div className="flex items-center overflow-hidden font-mono text-sm">
           <span className="shrink-0 select-none self-start text-green-400">
             {"$\u00a0"}
           </span>
-          <span dir="auto" className="text-start text-amber-100 max-sm:h-[2lh]">
+          <span
+            dir="auto"
+            data-label="cli"
+            className="text-start text-amber-100 max-sm:h-[2lh]"
+          >
             {text}
             <span
               className={cn(
