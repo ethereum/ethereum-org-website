@@ -1,64 +1,102 @@
 ---
-title: "Zincir Üstü Oyun"
+title: Ethereum'da Oyun
 lang: tr
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: "Oyun kuralları ve durumu, bir stüdyonun sunucuları tarafından değil, blokzincir tarafından uygulanabilir"
-summaryPoint2: "Herkes aynı zincir üstü veriye bağlanan modlar, botlar veya tamamen yeni oyunlar oluşturabilir"
-summaryPoint3: "Redstone gibi amaca özel oluşturulmuş L2'ler ve MUD gibi çerçeveler, gerçek zamanlı oynanışı destekleyecek kadar maliyetleri düşürür"
+summaryPoint1: Oyun kuralları ve durumu, bir stüdyonun sunucuları tarafından değil, Ethereum blokzinciri tarafından uygulanabilir; bu da zincir üstü oyunların önemli bir faydasını temsil eder
+summaryPoint2: Herkes aynı açık zincir üstü verilere bağlanan modlar, botlar veya tamamen yeni oyunlar oluşturabilir.
+summaryPoint3: Amaca yönelik oluşturulmuş K2'ler, daha düşük ücretlerle gerçek zamanlı oynanışa olanak tanırken, oyun geliştirme çerçeveleri zincir üstü oyunlar oluşturmayı her zamankinden daha erişilebilir hâle getirir.
 buttons:
   - content: Daha fazla bilgi edin
-    toId: how-gaming-on-ethereum-works
-  - content: Uygulamaları keşfedin
-    toId: popular-games-built-on-ethereum
+    toId: gaming-on-ethereum
+  - content: Oyunları keşfet
+    toId: games
     isSecondary: false
 ---
 
-## Ethereum'da oyun oynamak nasıl çalışır? {#how-gaming-on-ethereum-works}
+## Ethereum'da Oyun {#gaming-on-ethereum}
 
-Ethereum'daki oyunlar, belirli özellikler için blokzinciri entegre eden oyunlardan tüm oyun dünyasının zincir üstünde yaşadığı oyunlara kadar çeşitli biçimlerde gelir. Birçok oyun, oyun içi varlıkları NFT'ler (Değiştirilemez Jetonlar) olarak yönetmek için Ethereum'u kullanır. Bu, oyuncuların tek bir oyun geliştiricisinin ekosisteminin sınırları dışında açıkça takas edilebilen, satılabilen veya hediye edilebilen benzersiz dijital öğelere gerçekten sahip olmalarını sağlar. Bu varlıklar oyunculara yeni temsil biçimleri sunarken, temel oyun mantığı genellikle merkezi sunucularda kalır.
+Ethereum'da oyun oynamak, blokzinciri belirli özellikler için kullanan oyunlardan tüm oyun dünyasının zincir üstünde yaşadığı oyunlara kadar çeşitli biçimlerde olabilir. Ethereum blokzinciri, oyunlarla çeşitli kapasitelerde kullanılabilir. Oyunlar, para birimlerini aktarılabilir jetonlar veya diğer oyun içi varlıklar (karakterler, ekipmanlar, evcil hayvanlar vb.) olarak depolayabilir. [NFT'ler (eşsiz jetonlar)](/nft/) şeklinde. Oyunlar ayrıca mantıklarını, kurallarını ve durumlarını zincir üstünde barındırmak için akıllı sözleşmeleri kullanabilirler. Bu tür oyunlar genellikle "tamamen zincir üstü oyunlar" olarak anılır.
 
-Tamamen zincir üstü oyunlar, temel mekaniklerin ve genellikle tüm oyun dünyasının doğrudan Ethereum blokzincirindeki (veya Katman 2'lerindeki) akıllı sözleşmeler tarafından yönetildiği oyunlardır. Bu, benzersiz bir şeffaflık sağlar. Merkezi sunucular yok, aracılar yok; yalnızca şeffaf, oyuncu odaklı deneyimler ve ekonomiler.
+Ethereum ekosistemi aynı zamanda Ethereum ana ağının güvenlik garantilerini devralırken Ethereum'un ölçeğini genişleten ve özel kullanım durumlarını destekleyen [katman 2 blokzincirlerini (K2'ler)](/layer-2/learn/) de içerir. K2 ağları, zincir üstü oyunlar ve toplulukları için ek faydalar sağlayabilir çünkü K2'ler daha hızlı onay süreleri, daha yüksek işlem hacmi ve daha düşük ücretler sunarak oyunu daha hızlı ve daha erişilebilir hâle getirir.
 
-- Oyuncular varlıklarına NFT olarak sahiptir.
-- Öğeler serbestçe takas edilebilir, hediye edilebilir veya satılabilir.
-- Blokzincir, varlıkların sonsuza kadar erişilebilir kalmasını sağlar.
+## Ethereum'un oyun ekosistemine genel bakış {#ethereums-gaming-ecosystem-overview}
 
-## Oyun oynamanın mevcut durumu {#the-current-state-of-gaming}
+- **Katman 2'ler:** Daha ucuz ücretler ve kısa işlem süreleri sayesinde K2'ler, oyunların piyasaya sürülmesi için yaygın bir yer hâline geldi. Oyunların bulunduğu en iyi katman 2'ler arasında şunlar yer alır: Starknet, Immutable, Base ve Abstract.
+- **Altyapı:** Zincir üstü oyun geliştirmeyi kolaylaştırmak için kendi projenizle kullanılabilecek bir dizi araç yığını bulunmaktadır. Bunlar arasında şunlar yer alır: Cartridge, Dojo, Proof of Play ve Thirdweb.
+- **Oyun loncaları:** Bir oyun topluluğunun parçası olmak isteyen oyuncular, loncadaki diğer oyuncularla strateji oluşturmak ve işbirliği yapmak için oyun loncalarına katılabilir. Önemli loncalar şunları içerir: YGG, WASD, LegacyGG, Gaming Grid, OLAGG ve daha fazlası.
+- **Oyunlar:** Ethereum oyunları, _Realms: Eternum'un_ gerçek zamanlı stratejisinden _Axie: Atia's Legacy_ MMO'suna, _Fableborn'un_ aksiyon RPG'sine ve hatta _Ponziland_ gibi oyunlaştırılmış DeFi platformlarına kadar farklı şekil ve boyutlarda gelir. Farklı zincirlerde düzenli olarak piyasaya sürülen yeni oyunlarla birlikte, her zaman keşfedilecek yeni bir şeyler vardır.
 
-- **Sık Oyun Kapanışları:** Yalnızca 2023'te [60'tan fazla oyun kapatıldı](https://tech4gamers.com/game-studios-shut-down-2023/) ve 11 oyun stüdyosu tamamen kapandı, bu da oyuncuların oyun içi yatırımları için gösterecek hiçbir şeyleri kalmamasına neden oldu. Zincir üstü oyunlar, mantıkları ve varlıkları merkeziyetsiz bir ağda olduğu için, blokzincir var olduğu sürece varlığını sürdürebilir ve daha yüksek bir kalıcılık derecesi sunar.
-- **Kilitli Varlıklar Nedeniyle Hayal Kırıklığı:** [Oyuncuların %51'i](https://www.starknet.io/blog/blockchain-gaming/), satın aldıkları oyun içi öğeleri hediye edemedikleri veya yeniden satamadıkları için hayal kırıklığına uğradıklarını ve %23'ü oyun içi satın alımlardan para kurtarmanın ne kadar zor olduğundan rahatsız olduklarını belirtiyor. Oyuncular, oyun içi öğeleri edinmek için önemli miktarda zaman ve para yatırırlar, ancak sonunda onlara gerçekten sahip olmadıklarını görürler. Ethereum'un NFT standardı, doğrulanabilir dijital mülkiyet sağlayarak oyuncuların varlıklarını kontrol etmelerini sağlar.
-- **Geri Dönüşü Olmayan Yüksek Harcama:** [Oyuncular yaşamları boyunca sanal öğelere ortalama 6.425 \$ harcıyor](https://www.starknet.io/blog/blockchain-gaming/), bu da ayda 8,74 \$ veya yılda 104 \$ harcandığı anlamına geliyor. Zincir üstü sahiplik, bu harcamayı batık bir maliyetten, tıpkı fiziksel bir koleksiyon parçası gibi satılabilen, takas edilebilen veya hediye edilebilen bir dijital varlığa yapılan bir yatırıma dönüştürür.
-
-## Ethereum üzerinde oluşturulmuş popüler oyunlar {#popular-games-built-on-ethereum}
-
-Geliştiriciler, oyunları daha ilgi çekici hale getirmek için yeni yollar araştırıyor ve beceri tabanlı oynanışı derinleştirmek için basit ödül mekaniklerinin ötesine geçiyor.
+## Denenecek oyunlar {#games}
 
 <CategoryAppsGrid category="gaming" />
 
-## Birlikte çalışabilirlik ve zincirler arası oyun {#interoperability-and-cross-chain-play}
+## Zincir üstü oyunların özellikleri {#features-of-onchain-games}
 
-Ethereum'un oyun oynamak için en güçlü özelliklerinden biri, birlikte çalışabilirlik ve birleştirilebilirlik için yerel desteğidir. Geleneksel oyunlar, oyun içi varlıkları ve ilerlemeyi tek bir oyuna kilitleyerek "kapalı bahçelerde" çalışır. Ethereum üzerinde oluşturulmuş oyun içi varlıklar ve hatta temel oyun mantığı, güvenlikten ödün vermeden farklı uygulamalar ve zincirler arasında potansiyel olarak etkileşime girebilir. Bu hâlâ gelişmekte olan bir ekosistem olsa da, bazı Ethereum tabanlı oyun ağları hâlihazırda birlikte çalışabilir durumdadır ve oyun içi öğelerin (NFT'lerin) birden fazla oyunda kullanılmasına izin verir.
+1. **Dijital ürünleri takas etmenin güvenli yolu**
 
-Örneğin, Illuvium'da [oyuncular Illuvials adı verilen yaratıkları toplayabilirler](https://gam3s.gg/news/illuvium-three-web3-games/), bunlar NFT'lerdir. Bu Illuvial'lar, Illuvium evrenindeki çeşitli oyunlarda kullanılabilir. Illuvium Overworld'de yakalanan bir Illuvial, Illuvium Arena'da savaşlar için de kullanılabilir.
+   Takas edilebilir oyun içi varlıklar, o zincirdeki diğer oyun içi varlıklar veya jetonlar karşılığında oyuncular arasında takas edilebilir. Geçmişte oyunlar, özellikle nadir ve değerli eşyalar için oyuncular arasında adil ticareti kolaylaştırma zorluğuyla sık sık karşılaşıyordu. Üçüncü taraf pazar yerleri ve eşler arası ticaret, çoğu zaman oyuncuların yanıltılmasına veya değerli eşyalarının dolandırılarak ellerinden alınmasına neden oluyordu. Zincir üstü varlıklar yerleşik bir veri yapısını takip ettiğinden, mevcut pazar yerleriyle kolayca entegre edilebilirler, bu da oyunculara onları takas ederken gönül rahatlığı verir. AMM'lerdeki gelişmeler, oyuncuların belirli öğeleri, takaslarını tamamlamak için bir karşı tarafı (alıcı/satıcı) beklemek zorunda kalmadan anında takas etmelerine de olanak tanır.
 
-Bir başka örnek de Galaxy Fight Club'dır. Bu oyunda, [oyuncular savaşlara katılmak için farklı NFT koleksiyonlarını kullanabilirler](https://gam3s.gg/galaxy-fight-club/), bu da çeşitli projelerden NFT'lerin oyun içinde kullanılabileceği anlamına gelir.
+2. **Şeffaf varlık kökeni**
 
-## Ölçeklenebilirlik ve gaz ücreti iyileştirmeleri {#scalability-and-gas-fee-improvements}
+   Orijinallerin sahteleri ve kopyaları, özellikle kişi gerçek bir öğeyi sahtesinden nasıl ayırt edeceğine çok aşina değilse, öğeleri değerlendirirken önemli bir sorun olabilir. Zincir üstü varlıkların her zaman onlara kimin (hangi cüzdanın) sahip olduğuna ve köken adreslerine dair tam bir kayıt geçmişi vardır. Öğenin zincir üstünde mükemmel bir kopyası olsa bile, kökenindeki akıllı sözleşmeye dayanarak orijinalinden açıkça ayırt edilir, bu da dolandırıcılık riskini azaltır.
 
-Zincir üstü oyunlara yönelik eski bir eleştiri, blokzincirlerin oyunculara bekledikleri deneyimi sunmak için çok karmaşık ve yavaş olduğuydu. Ancak Ethereum olgunlaştıkça, zincir üstü oyunların maliyetini önemli ölçüde azaltan ve performansını artıran çözümler ortaya çıktı ve etkileşimli ve hızlı tempolu deneyimleri uygulanabilir hale getirdi.
+3. **Şeffaf mantık**
 
-Bu ilerlemeler öncelikle şunlar aracılığıyla elde edilir:
+   Tamamen zincir üstü oyunlar, işlevsellikleri için akıllı sözleşmeler kullanır. Bu, herkesin oyunun mantığını inceleyebileceği ve doğrulayabileceği anlamına gelir, böylece oyunun geliştiricilerin amaçladığı şekilde çalıştığından emin olunur. Bu mantık şeffaflığı aynı zamanda diğer geliştiricilerin oyunu genişletebilen veya bazı özellikleriyle entegre edilebilen yeni akıllı sözleşmeler oluşturmasına da olanak tanır.
 
-- **Gazsız İşlemler:** Immutable X'ten yararlananlar da dahil olmak üzere bazı platformlar ve protokoller, kullanıcı için ücretsiz olarak NFT takas etme veya basma gibi işlemler yapma olanağı sunarak oyuncu deneyimini daha da kolaylaştırır.
-- **Ölçeklendirme Çözümleri:** Arbitrum, zkSync ve Starknet gibi Ethereum L2'leri, yüksek işlem hacimleri ve düşük maliyetleri nedeniyle zincir üstü oyunlar için aktif olarak ekosistemleri teşvik etmektedir.
-- **[MUD ekosistemi](https://mud.dev/):** MUD, zincir üstü oyun geliştirme için Ethereum tabanlı uygulama geliştirme araç takımlarını optimize ederek karmaşık oyun mantığı için daha verimli durum yönetimi sağlar.
+4. **Kanıtlanabilir başarılar**
 
-## Ethereum oyunlarına başlayın {#get-started-with-ethereum-gaming}
+   Tamamen zincir üstü oyunlarda, her oyuncu eylemi blokzincirine kaydedilir. Bu, bir oyuncunun belirli bir dönüm noktası/başarı için gerekli eylemleri yapıp yapmadığını kontrol etmeyi ve doğrulamayı çok kolaylaştırır. Blokzincirlerinin değişmez doğası nedeniyle, bu başarı kayıtları zincir çalışmaya devam ettiği sürece bozulmadan kalır ve herhangi bir tarafça doğrulanabilir (geleneksel oyunlarda yaygın olarak görüldüğü gibi sadece geliştiriciler tarafından değil).
 
-Ethereum oyunlarına girmek sandığınızdan daha kolay. Sadece birkaç adımla oynamaya başlayabilir ve ilerlemenizin tadını çıkarabilirsiniz:
+5. **Sonsuz oyunlar**
 
-1. **Bir Kripto Cüzdanı kurun:** Dijital varlıklarınızı yönetmek ve merkeziyetsiz uygulamalarla etkileşim kurmak için bir cüzdana ihtiyacınız olacak. [Bir Cüzdan Seçin](/wallets/find-wallet/)
-2. **Cüzdanınıza Para Yatırın:** Kullanmayı planladığınız Katman 2 ağıyla ilgili bir miktar Ether (ETH) veya jeton edinin.
-3. **Oyunları Keşfedin:** [Orden](https://orden.gg/), [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games), [OpenSea](https://opensea.io/) ve [PlayToEarn.net](https://playtoearn.com/blockchaingames) gibi platformlarda oyunları keşfedin.
+   Oyuncular, oyun içi itibarlarını ve karakterlerini oluşturmak için çok zaman ve çaba harcarlar ancak geliştiriciler sunucuları kapatmaya karar verirse (özellikle de çevrimiçi bir oyunsa) bu ilerleme kolayca kaybedilebilir. Tamamen zincir üstü oyunlar mantıklarını ve durumlarını zincir üstünde depoladığından, oyunun ana geliştiricisi geliştirmeyi durdursa bile oyuncular oyunun akıllı sözleşmeleriyle etkileşime devam edebilir. Bu tür oyunlar hâlâ oynanabilir ve topluluklarından güncellemeler almaya devam edebilir çünkü mantıkları hâlâ blokzincirinde çalışır.
+
+## Oyunlar blokzincirleri nasıl entegre eder? {#how-games-integrate-blockchains}
+
+Oyun geliştiricileri, farklı Ethereum özelliklerini oyunlarına dahil etmeye karar verebilir. Özelliklerin var olması, Ethereum üzerine kurulu her oyunun hepsini kullanması gerektiği anlamına gelmez, çünkü geliştiricilerin bunun yerine kullanabileceği (kendi artıları ve eksileriyle) alternatif çözümler mevcuttur.
+
+### Ethereum ile Oturum Açma {#sign-in-with-ethereum}
+
+Oyuncular, oyuna giriş yapmak için zincir üstü hesaplarını kullanabilirler. Bu genellikle bir oyuncunun web3 cüzdanıyla bir işlemin imzalanmasıyla kolaylaştırılır. Oyuncular daha sonra aynı cüzdanı kullanarak giriş yaptıkları tüm oyunlarda oyun içi varlıklarını tutabilir ve oyuncu itibarlarını tek bir hesapta taşıyabilir. Ethereum'un [EVM'si](/developers/docs/evm/) birçok blokzincirinde yaygın olarak kullanılan bir standarttır, bu nedenle bir oyuncu genellikle cüzdanın desteklediği herhangi bir EVM uyumlu blokzincirindeki oyunlara giriş yapmak için aynı hesabı kullanabilir (not: bazı web3 cüzdanları, o zincirde herhangi bir şey yapmak için kullanılmadan önce, özellikle daha yeni blokzincirler için manuel bir RPC içe aktarımı gerektirir).
+
+### Değiştirilebilir jetonlar {#fungible-tokens}
+
+Tıpkı Ether gibi, değiştirilebilir oyun içi kaynaklar ve para birimleri de zincir üstünde değiştirilebilir jetonlar olarak saklanabilir. Jetonlar daha sonra adresler arasında gönderilebilir ve akıllı sözleşmelerde kullanılabilir, bu da oyuncuların açık pazarlarda oyun içi kaynakları ve para birimlerini takas etmelerine veya hediye etmelerine olanak tanır.
+
+### Eşsiz jetonlar {#non-fungible-tokens}
+
+Eşsiz jetonlar (NFT'ler); karakterler, eşyalar, arazi ve hatta kayıt durumları gibi benzersiz oyun öğelerini temsil edebilir. Dinamik meta verilerle, NFT'ler oyun içi olaylara yanıt olarak gelişebilir, bu da varlıkların zaman içinde geçmişi taşımasına olanak tanır. Örneğin, Loot Survivor'daki Canavar NFT'leri, belirli bir oyuncu benzersiz bir yaratığı yendiğinde bunu kalıcı olarak kaydeder ve bu sonucu NFT varlığının kendisine gömer. Bu tür bir tasarım, varlıkların statik koleksiyon parçaları olmaktan ziyade kalıcı, durum bilgisine sahip ve potansiyel olarak birden fazla zincir üstü deneyimde kullanılabilir olduğu oyunlara işaret eder.
+
+### Akıllı sözleşmeler {#smart-contracts}
+
+Tamamen zincir üstü oyunlar, şeffaf ve değişmez oyun mantığı oluşturmak için akıllı sözleşmeleri kullanır. Bu gibi durumlarda blokzincir, oyunun mantığını ve veri depolamasını merkezi bir sunucuda barındırma ihtiyacını ortadan kaldırarak oyunun arka ucu olarak hizmet eder. (Not: Tüm web3 oyunları tamamen zincir üstü oyunlar değildir. Daha önce de belirtildiği gibi, oyunun verilerinin ve mantığının ne kadarının zincir üstünde, ne kadarının başka bir veri kullanılabilirliği katmanında veya klasik bir sunucuda saklandığı duruma göre değişir.)
+
+## Oyuncu kullanıcı deneyimi iyileştirmelerinin evrimi {#evolution-of-player-ux-improvements}
+
+### Birlikte çalışabilirlik ve zincirler arası oyun {#interoperability-and-cross-chain-play}
+
+Zincirler arası etkileşimlerdeki ve köprülemedeki ilerlemeler, oyuncuların Ethereum'daki oyunlara her zamankinden daha sorunsuz bir şekilde erişmesine olanak tanır. Oyunlar birden fazla blokzincirinde dağıtılabilir ve bir oyunun zincir üstü varlıkları başka bir oyun tarafından entegre edilebilir. Geçmişte, oyuncuların fonlarını oyun içinde kullanmaya başlamadan önce genellikle başka bir zincire köprülemeleri gerekiyordu. Günümüzde oyunlar, oyuncu katılımını kolaylaştırmak için genellikle diğer zincirlere jeton köprüleri entegre eder.
+
+### Ölçeklenebilirlik ve gaz ücreti iyileştirmeleri {#scalability-and-gas-fee-improvements}
+
+2017'de, CryptoKitties çılgınlığı Ethereum'da işlem yapan tüm kullanıcılar için gaz ücretlerini önemli ölçüde artırdı. O zamandan beri, çok sayıda Ethereum İyileştirme Önerisi ağ yükseltmelerinde başarıyla dağıtılmış, Ethereum Ana Ağı'nın bant genişliği artırılmış ve ortalama işlem ücretleri önemli ölçüde azaltılmıştır. Katman 2'ler, işlem ücretlerini sentlere hatta daha da altına düşürerek mevcut işlem hacmini daha da genişletir. Daha düşük ücretler ve daha yüksek işlem hacmi, Ethereum üzerine inşa edilebilecek oyun kullanım durumlarını genişleterek sıradan oyuncuları dışarıda bırakmayan yüksek hacimli eylemleri ve oyun içi mikro işlemleri desteklemiştir.
+
+### Sosyal girişler {#social-logins}
+
+Tüm EVM uyumlu blokzincirlerinde kullanılabilen zincir üstü bir Ethereum hesabıyla oturum açma, en yaygın kimlik doğrulama yöntemlerinden biridir. Bazı EVM dışı zincirler de bunu bir hesap oluşturma seçeneği olarak kullanır. Ancak, yeni bir oyuncunun mevcut bir Ethereum hesabı yoksa ve bir oyuna giriş yapmak için kolayca bir hesap oluşturmak istiyorsa, [hesap soyutlama](/roadmap/account-abstraction/) sosyal hesaplarıyla oturum açmalarına ve arka planda bir Ethereum hesabı oluşturmalarına olanak tanır.
+
+### Ödeme yöneticisi ve oturum anahtarları {#paymaster-and-session-keys}
+
+Zincir üstünde işlem göndermek veya akıllı sözleşmelerle etkileşim kurmak için gaz ücreti ödemek, birçok yeni oyuncu için önemli bir zorluk olabilir. Ödeme yöneticisi hesapları oyuncu tarafından finanse edilebilir veya oyun tarafından sübvanse edilebilir. Oturum anahtarları, oyuncunun oturum süresi boyunca oyunda oturumunun açık kalmasına olanak tanır ve yalnızca oturumunun ilk mesajını imzalamasını gerektirir, sonraki mesajlar ise arka planda imzalanır.
+
+Bu mekanikler etrafında zıt felsefeler bulunmaktadır. Bunun önde gelen bir örneği, oyuncu tarafından ödenen gazı doğrudan gelir olarak ele alan Initia'nın Kamigotchi'sidir. Buna karşılık, Starknet'te 4'ten fazla canlı, tamamen zincir üstü oyun içeren Realms.World oyun ekosistemi tam tersi bir yaklaşım benimsiyor. Ekosistemdeki tüm oyunlar, oyuncuların oyunlarla sıfır gaz maliyetiyle etkileşime girmesine olanak tanıyan Cartridge Paymaster'ı kullanır. Kamigotchi gaz ücretlerini ekonomik tasarımın bir parçası olarak benimserken, Realms.World oyunları gaz maliyetlerini öncelikle oyuncu deneyimine bir engel olarak görmektedir.
+
+## Ethereum'da oyun oynamaya başlayın {#get-started-with-gaming-on-ethereum}
+
+1. **Oynamak için eğlenceli bir oyun bulun** - Yukarıda listelenen oyunlara göz atın veya [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) ve [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games) gibi platformları keşfedin.
+2. **Kripto cüzdanınızı kurun** - Dijital oyun içi varlıklarınızı yönetmek ve (bazı durumlarda) oyunlara giriş yapmak için bir cüzdana ihtiyacınız olacak. [Buradan bir cüzdan seçin](/wallets/find-wallet/).
+3. **Cüzdanınıza para yatırın** - Kullanmayı planladığınız katman 2 ağıyla ilgili bir miktar Ether (ETH) veya jeton edinin.
+4. **Oynayın** - Oynamaya başlayın ve oyun içi ilerlemenizin gerçek sahipliğinin tadını çıkarın.
