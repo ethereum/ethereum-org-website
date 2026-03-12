@@ -1,28 +1,23 @@
 import { getDayOfYear, getWeekNumber } from "@/lib/utils/date"
 
+import {
+  DEV_TOOL_CATEGORY_SLUG_LIST,
+  DEV_TOOL_CATEGORY_SLUGS,
+  type DeveloperToolCategorySlug,
+} from "@/data/developerTools"
+
 // Import the base DeveloperTool type from tool code (type-only import)
 // This is acceptable as it's a shared data contract, not a presentation dependency
 import type { DeveloperTool } from "../../../../app/[locale]/developers/tools/types"
 
 // Re-export for convenience
 export type { DeveloperTool }
+export type { DeveloperToolCategorySlug } from "@/data/developerTools"
+export { DEV_TOOL_CATEGORY_SLUG_LIST, DEV_TOOL_CATEGORY_SLUGS }
 
 // =============================================================================
 // Types
 // =============================================================================
-
-/**
- * Category slug type derived from the category mapping.
- * These are URL-friendly identifiers for developer tool categories.
- */
-export type DeveloperToolCategorySlug =
-  | "interoperability"
-  | "transactions"
-  | "analytics"
-  | "education"
-  | "sdks"
-  | "contracts"
-  | "security"
 
 /**
  * Tools grouped by category slug.
@@ -61,36 +56,6 @@ export interface DeveloperToolsDataEnvelope {
 // =============================================================================
 // Constants
 // =============================================================================
-
-/**
- * Maps human-readable category names to URL-friendly slugs.
- * This is the data-layer copy of the constant - no UI dependencies.
- */
-export const DEV_TOOL_CATEGORY_SLUGS: Record<
-  string,
-  DeveloperToolCategorySlug
-> = {
-  "Cross-Chain & Interoperability": "interoperability",
-  "Transaction & Wallet Infrastructure": "transactions",
-  "Data, Analytics & Tracing": "analytics",
-  "Education & Community Resources": "education",
-  "Client Libraries & SDKs (Front-End)": "sdks",
-  "Smart Contract Development & Toolchains": "contracts",
-  "Security, Testing & Formal Verification": "security",
-}
-
-/**
- * List of all category slugs for iteration.
- */
-export const DEV_TOOL_CATEGORY_SLUG_LIST: DeveloperToolCategorySlug[] = [
-  "interoperability",
-  "transactions",
-  "analytics",
-  "education",
-  "sdks",
-  "contracts",
-  "security",
-]
 
 // Number of top tools to show in highlights section
 const HIGHLIGHTS_PER_CATEGORY = 9

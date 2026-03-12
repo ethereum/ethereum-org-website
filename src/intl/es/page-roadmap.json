@@ -95,7 +95,13 @@
   "page-roadmap-fusaka-additional-item-1": "Soporte para enclaves seguros en dispositivos móviles para mejorar la experiencia del usuario",
   "page-roadmap-fusaka-additional-item-2": "Mejoras del mercado de comisiones de blobs",
   "page-roadmap-fusaka-additional-item-3": "Más mejoras en la eficiencia de los validadores y de la red",
-  "page-roadmap-glamsterdam-discussed-title": "Programado para Glamsterdam.",
-  "page-roadmap-glamsterdam-discussed-item-1": "Separación de proponente y constructor integrada (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "Listas de acceso a nivel de bloque (BALs)"
+  "page-roadmap-glamsterdam-epbs-title": "Separación a nivel de protocolo entre proponente y constructor",
+  "page-roadmap-glamsterdam-epbs-item-1": "Separa el acuerdo de bloques del procesamiento, lo que ayuda a L1 a escalar al permitir que los validadores procesen más datos.",
+  "page-roadmap-glamsterdam-epbs-item-2": "Integra de forma nativa a los constructores para que los validadores puedan subcontratar el ensamblaje de bloques de forma segura sin tener que confiar en software externo.",
+  "page-roadmap-glamsterdam-bal-title": "Listas de acceso a nivel de bloque",
+  "page-roadmap-glamsterdam-bal-item-1": "Introduce listas de acceso obligatorias a nivel de bloque, en lugar de para transacciones individuales.",
+  "page-roadmap-glamsterdam-bal-item-2": "Mapea las dependencias de antemano para sincronizaciones más rápidas, ejecución en paralelo y lecturas de disco en paralelo.",
+  "page-roadmap-glamsterdam-bal-item-3": "Reduce el gas para las aplicaciones con uso intensivo de estado y mejora la previsibilidad del coste del gas.",
+  "page-roadmap-hegota-discussed-title": "Planeado para Hegotá",
+  "page-roadmap-hegota-discussed-item-1": "Las propuestas se encuentran actualmente en fase de debate."
 }

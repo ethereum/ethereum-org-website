@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-You can also use a [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) system that requires users to withdraw funds from the smart contracts, instead of a "push payments" system that sends funds to accounts. This removes the possibility of inadvertently triggering code at unknown addresses (and can also prevent certain denial-of-service attacks).
+You can also use a [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment) system that requires users to withdraw funds from the smart contracts, instead of a "push payments" system that sends funds to accounts. This removes the possibility of inadvertently triggering code at unknown addresses (and can also prevent certain denial-of-service attacks).
 
 #### Integer underflows and overflows {#integer-underflows-and-overflows}
 

@@ -240,7 +240,7 @@ npm install dotenv --save
 - 秘密鍵をエクスポートするための[これらの手順](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)に従ってください
 - HTTP Alchemy API URLを取得するには、以下を参照してください
 
-![](./get-alchemy-api-key.gif)
+![Alchemy API キーを取得するためのアニメーション ウォークスルー](./get-alchemy-api-key.gif)
 
 `.env`は次のようになります:
 

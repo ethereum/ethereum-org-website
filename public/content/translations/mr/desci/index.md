@@ -102,7 +102,6 @@ Web3 पॅटर्नचा वापर करून वैज्ञानि
 - [OceanDAO: डेटा-संबंधित विज्ञानासाठी DAO-शासित निधीपुरवठा](https://oceanprotocol.com/)
 - [Opscientia: खुले विकेंद्रित विज्ञान वर्कफ्लो](https://opsci.io/research/)
 - [Bio.xyz: तुमच्या बायोटेक DAO किंवा desci प्रोजेक्टसाठी निधी मिळवा](https://www.bio.xyz/)
-- [Fleming Protocol: ओपन-सोर्स डेटा इकॉनॉमी जी सहयोगी बायोमेडिकल शोधाला चालना देते](http.flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: विकेंद्रित वैज्ञानिक विश्वासार्हता सक्षम करणे](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

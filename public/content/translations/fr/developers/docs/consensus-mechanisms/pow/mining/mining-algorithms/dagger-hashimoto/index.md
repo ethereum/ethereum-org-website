@@ -1,29 +1,29 @@
 ---
 title: Dagger-Hashimoto
-description: Un regard détaillé sur l'algorithme Dagger-Hashimoto.
+description: "Un regard détaillé sur l'algorithme Dagger-Hashimoto."
 lang: fr
 ---
 
-Dagger-Hashimoto représentait l'implémentation et la spécification originales de recherche pour l'algorithme de minage d'Ethereum. Dagger-Hashimoto a été remplacé par [Ethash](#ethash). Le minage a été complètement arrêté avec [La Fusion](/roadmap/merge/) du 15 septembre 2022. Depuis lors, Ethereum a été sécurisé en utilisant à la place un mécanisme de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos). Cette page a un intérêt historique - l'information fournie n'est plus pertinente depuis La Fusion Ethereum.
+Dagger-Hashimoto représentait l'implémentation et la spécification originales de recherche pour l'algorithme de minage d'Ethereum. Dagger-Hashimoto a été remplacé par [Ethash](#ethash). Le minage a été complètement arrêté lors de [La Fusion](/roadmap/merge/) le 15 septembre 2022. Depuis lors, Ethereum est sécurisé par un mécanisme de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos). Cette page a un intérêt historique - l'information fournie n'est plus pertinente depuis La Fusion Ethereum.
 
 ## Prérequis {#prerequisites}
 
-Pour mieux comprendre cette page, nous vous recommandons de lire d'abord le [consensus de preuve de travail](/developers/docs/consensus-mechanisms/pow), [le minage](/developers/docs/consensus-mechanisms/pow/mining), et [les algorithmes de minage](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
+Pour mieux comprendre cette page, nous vous recommandons de vous informer d'abord sur le [consensus de preuve de travail](/developers/docs/consensus-mechanisms/pow), le [minage](/developers/docs/consensus-mechanisms/pow/mining) et les [algorithmes de minage](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto vise à satisfaire deux objectifs :
 
-1.  **Résistance aux ASIC** : l'avantage de créer du matériel spécialisé pour l'algorithme devrait être aussi faible que possible
-2.  **Vérification possible par les clients allégés** : un bloc doit être vérifié efficacement par un client allégé.
+1. **Résistance aux ASIC** : l'avantage de la création de matériel spécialisé pour l'algorithme doit être aussi minime que possible.
+2. **Vérifiabilité par un client léger** : un bloc doit pouvoir être vérifié efficacement par un client léger.
 
 Avec une modification supplémentaire, et si cela vous intéresse, nous vous spécifierons également comment réaliser un troisième objectif mais au prix d'une complexité supplémentaire :
 
-**Le stockage de chaîne complète** : le minage doit nécessiter un stockage de l'état de la blockchain complète (en raison de la structure irrégulière de la tentative d'état d'Ethereum, nous nous attendons à ce qu'un certain raccourcissement soit possible, en particulier pour certains contrats souvent utilisés tout en minimisant ceci).
+**Stockage de la chaîne complète** : le minage doit nécessiter le stockage de l'état complet de la blockchain (en raison de la structure irrégulière du trie d'état d'Ethereum, nous prévoyons qu'un certain élagage sera possible, en particulier pour certains contrats souvent utilisés, mais nous voulons minimiser cela).
 
-## Génération DAG {#dag-generation}
+## Génération du DAG {#dag-generation}
 
-Le code de l'algorithme sera défini ci-dessous en Python. Premièrement, nous donnons un `encode_int` pour le marquage des entiers non signés de précision spécifiés aux chaînes de caractères. L'inverse est également donné :
+Le code de l'algorithme sera défini ci-dessous en Python. Tout d'abord, nous donnons `encode_int` pour la sérialisation d'entiers non signés de précision spécifiée en chaînes de caractères. L'inverse est également donné :
 
 ```python
 NUM_BITS = 512
@@ -45,7 +45,7 @@ def decode_int(s):
     return x
 ```
 
-Nous supposons maintenant que `sha3` est une fonction qui prend un entier et donne un entier, et `dbl_sha3` est une fonction double-sha3 ; si vous convertissez ce code de référence dans une utilisation d'implémentation :
+Nous supposons ensuite que `sha3` est une fonction qui prend un entier et renvoie un entier, et que `dbl_sha3` est une fonction double-sha3 ; si vous convertissez ce code de référence en une implémentation, utilisez :
 
 ```python
 from pyethereum import utils
@@ -82,9 +82,9 @@ params = {
 }
 ```
 
-Dans ce cas `P` est une prime choisie telle que `log₂(P)` soit juste un peu en deçà de 512, qui correspond aux 512 bits que nous utilisons pour représenter nos nombres. Notez que seule la dernière moitié du DAG doit être stockée, ainsi le besoin de mémoire commence de fait à 1 Go et augmente de 441 Mo par an.
+`P` dans ce cas est un nombre premier choisi de telle sorte que `log₂(P)` soit juste légèrement inférieur à 512, ce qui correspond aux 512 bits que nous avons utilisés pour représenter nos nombres. Notez que seule la dernière moitié du DAG doit être stockée, ainsi le besoin de mémoire commence de fait à 1 Go et augmente de 441 Mo par an.
 
-### Construction graphique Dagger {#dagger-graph-building}
+### Construction du graphe Dagger {#dagger-graph-building}
 
 La construction graphique Dagger primitive est définie comme suit :
 
@@ -101,11 +101,11 @@ def produce_dag(params, seed, length):
     return o
 ```
 
-Essentiellement, cela commence par un graphique en tant que nœud unique, `sha3(seed)`, puis, à partir de ce stade, comment l'ajout séquentiel sur d'autres nœuds basés sur des nœuds précédents aléatoires. Lorsqu'un nouveau nœud est créé, la puissance modulaire de la graine est calculée pour sélectionner aléatoirement des indices inférieurs à `i` (en utilisant `x % i` ci-dessus), et les valeurs des noeuds au regard de ces indices sont utilisées dans un calcul pour générer une nouvelle valeur pour `x`, qui est ensuite alimentée par une fonction de preuve de travail sommaire (basée sur XOR) pour finalement générer la valeur du graphique à l'indice `i`. La raison d'être de cette conception particulière est de forcer l'accès séquentiel du DAG ; la valeur suivante du DAG qui sera accessible ne peut pas être déterminée tant que la valeur courante n'est pas connue. Enfin, l’exponentiation modulaire permet de hacher le résultat.
+Essentiellement, il initialise un graphe comme un nœud unique, `sha3(seed)`, et à partir de là, commence à ajouter séquentiellement d'autres nœuds en se basant sur des nœuds précédents aléatoires. Lorsqu'un nouveau nœud est créé, une puissance modulaire de la graine est calculée pour sélectionner de manière aléatoire certains indices inférieurs à `i` (en utilisant `x % i` ci-dessus), et les valeurs des nœuds à ces indices sont utilisées dans un calcul pour générer une nouvelle valeur pour `x`, qui est ensuite transmise à une petite fonction de preuve de travail (basée sur XOR) pour finalement générer la valeur du graphe à l'indice `i`. La raison d'être de cette conception particulière est de forcer l'accès séquentiel du DAG ; la valeur suivante du DAG qui sera accessible ne peut pas être déterminée tant que la valeur courante n'est pas connue. Enfin, l’exponentiation modulaire permet de hacher le résultat.
 
 Cet algorithme repose sur plusieurs résultats de la théorie des nombres. Consultez l'annexe ci-dessous à des fins de discussion.
 
-## Évaluation du client allégé {#light-client-evaluation}
+## Évaluation par le client léger {#light-client-evaluation}
 
 La construction du graphique ci-dessus vise à permettre à chaque nœud du graphique d'être reconstruit en calculant une sous-arborescence d'un petit nombre de nœuds et en ne nécessitant qu'une petite quantité de mémoire auxiliaire. Notez qu'avec k=1, la sous-arborescence n'est qu'une chaîne de valeurs allant jusqu'au premier élément du DAG.
 
@@ -131,11 +131,11 @@ def quick_calc(params, seed, p):
     return quick_calc_cached(p)
 ```
 
-Il s'agit essentiellement d'une réécriture de l'algorithme ci-dessus qui supprime la boucle de calcul des valeurs pour l'ensemble du DAG et remplace la précédente recherche du nœud par un appel récursif ou une recherche de cache. Notez que pour `k=1` le cache n'est pas nécessaire, bien qu'une optimisation supplémentaire calcule au préalable en fait les premiers milliers de valeurs du DAG et conserve cela en tant que cache statique pour les calculs ; voir l'annexe pour une implémentation de code de cette fonction.
+Il s'agit essentiellement d'une réécriture de l'algorithme ci-dessus qui supprime la boucle de calcul des valeurs pour l'ensemble du DAG et remplace la précédente recherche du nœud par un appel récursif ou une recherche de cache. Notez que pour `k=1`, le cache est inutile, bien qu'une optimisation supplémentaire précalcule les quelques milliers de premières valeurs du DAG et les conserve comme un cache statique pour les calculs ; voir l'annexe pour une implémentation de code de ceci.
 
 ## Double tampon de DAG {#double-buffer}
 
-Dans un client complet, un [_double tampon_](https://wikipedia.org/wiki/Multiple_buffering) de 2 DAG produit par la formule ci-dessus est utilisé. L'idée est que les DAG produisent tous les nombres de blocs `epochtime` selon les paramètres ci-dessus. Au lieu d'utiliser le dernier DAG produit, le client utilise le précédent. L'avantage est qu'il permet aux DAG d'être remplacés au fil du temps sans avoir besoin d'incorporer une étape où les mineurs devraient soudainement recalculer toutes les données. Sinon, il existe un risque de ralentissement brutal et temporaire du traitement en chaîne à intervalles réguliers et d'augmentation spectaculaire de la centralisation. Ainsi, il existe un risque d'attaques de 51% au cours de ces quelques minutes avant que toutes les données ne soient recalculées.
+Dans un client complet, un [_double tampon_](https://wikipedia.org/wiki/Multiple_buffering) de 2 DAG produits par la formule ci-dessus est utilisé. L'idée est que les DAG sont produits tous les `epochtime` blocs, conformément aux paramètres ci-dessus. Au lieu d'utiliser le dernier DAG produit, le client utilise le précédent. L'avantage est qu'il permet aux DAG d'être remplacés au fil du temps sans avoir besoin d'incorporer une étape où les mineurs devraient soudainement recalculer toutes les données. Sinon, il existe un risque de ralentissement brutal et temporaire du traitement en chaîne à intervalles réguliers et d'augmentation spectaculaire de la centralisation. Ainsi, il existe un risque d'attaques de 51% au cours de ces quelques minutes avant que toutes les données ne soient recalculées.
 
 L'algorithme utilisé pour générer l'ensemble des DAG utilisés pour calculer le travail d'un bloc est le suivant :
 
@@ -164,7 +164,7 @@ def get_daggerset(params, block):
     dagsz = get_dagsize(params, block)
     seedset = get_seedset(params, block)
     if seedset["front_hash"] <= 0:
-        # No back buffer is possible, just make front buffer
+        # Aucun tampon arrière n'est possible, il suffit de créer un tampon avant
         return {"front": {"dag": produce_dag(params, seedset["front_hash"], dagsz),
                           "block_number": 0}}
     else:
@@ -254,56 +254,52 @@ Notez également que Dagger-Hashimoto impose des exigences supplémentaires à l
 - Pour que la vérification de deux couches fonctionne, un en-tête de bloc doit avoir à la fois la valeur nonce et la valeur moyenne pré-sha3
 - Quelque part, un en-tête de bloc doit stocker la sha3 de l'actuel ensemble de données
 
-## Complément d'information {#further-reading}
+## En savoir plus {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Annexe {#appendix}
 
-Comme mentionné ci-dessus, le RNG utilisé pour la génération de DAG repose sur des résultats tirés de la théorie des nombres. Premièrement, nous fournissons l'assurance que le RNG Lehmer qui est la base de la variable `picker` dispose d'une période longue. Deuxièmement, nous montrons que `pow(x,3,P)` ne fera pas correspondre `x` à `1` ou `P-1` fourni `x ∈ [2,P-2]` pour commencer. Enfin, nous montrons que `pow(x,3,P)` a un faible taux de collision lorsqu'il est traité comme une fonction de hachage.
+Comme mentionné ci-dessus, le RNG utilisé pour la génération de DAG repose sur des résultats tirés de la théorie des nombres. Premièrement, nous donnons l'assurance que le générateur de nombres aléatoires (RNG) de Lehmer, qui est à la base de la variable `picker`, a une longue période. Deuxièmement, nous montrons que `pow(x,3,P)` ne fera pas correspondre `x` à `1` ou `P-1`, à condition que `x ∈ [2,P-2]` au départ. Enfin, nous montrons que `pow(x,3,P)` a un faible taux de collision lorsqu'il est traité comme une fonction de hachage.
 
-### Générateur de nombre aléatoire Lehmer {#lehmer-random-number}
+### Générateur de nombres aléatoires de Lehmer {#lehmer-random-number}
 
-Alors que la fonction `produce_dag` n'a pas besoin de produire des nombres aléatoires impartiaux, une menace potentielle est que `seed**i % P` prenne uniquement une poignée de valeurs. Cela pourrait être un avantage pour les mineurs qui reconnaissent le modèle par rapport à ceux qui ne le font pas.
+Bien que la fonction `produce_dag` n'ait pas besoin de produire des nombres aléatoires non biaisés, une menace potentielle est que `seed**i % P` ne prenne qu'une poignée de valeurs. Cela pourrait être un avantage pour les mineurs qui reconnaissent le modèle par rapport à ceux qui ne le font pas.
 
-Pour éviter cela, un résultat de la théorie du nombre est exercé. Un [_Safe Prime_](https://en.wikipedia.org/wiki/Safe_prime) est défini comme un premier `P` tel que `(P-1)/2` est également un nombre premier. L'_ordre_ d'un membre `x` du [groupe multiplicateur](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` est défini pour être le minimum `m` tel que <pre>xᵐ mod P ≡ 1</pre>
-Compte tenu de ces définitions, nous avons :
+Pour éviter cela, un résultat de la théorie du nombre est exercé. Un [_nombre premier sûr_](https://en.wikipedia.org/wiki/Safe_prime) est défini comme un nombre premier `P` tel que `(P-1)/2` est aussi un nombre premier. L'_ordre_ d'un membre `x` du [groupe multiplicatif](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` est défini comme le `m` minimal tel que <pre>xᵐ mod P ≡ 1</pre>
+Compte tenu de ces définitions, nous avons :
 
-> Observation 1. Laisser `x` être un membre du groupe multiplicateur `ℤ/Pℤ` pour un nombre premier sûr `P`. Si `x mod P ≠ 1 mod P` et `x mod P ≠ P-1 mod P`, alors l'ordre de `x` est soit `P-1` soit `(P-1)/2`.
+> Observation 1. Soit `x` un membre du groupe multiplicatif `ℤ/Pℤ` pour un nombre premier sûr `P`. Si `x mod P ≠ 1 mod P` et `x mod P ≠ P-1 mod P`, alors l'ordre de `x` est soit `P-1` soit `(P-1)/2`.
 
-_Preuve_. Puisque `P` est un nombre premier sécurisé, puis par \[Lagrange's Theorem\]\[lagrange\] nous trouvons que l'ordre de `x` est soit `1`, `2`, `(P-1)/2`, soit `P-1`.
+_Preuve_. Puisque `P` est un nombre premier sûr, alors d'après le [théorème de Lagrange][lagrange], nous avons que l'ordre de `x` est soit `1`, `2`, `(P-1)/2`, ou `P-1`.
 
-L'ordre de `x` ne peut pas être `1`, puisque suivant le petit théorème de Fermat, nous avons :
+L'ordre de `x` ne peut pas être `1`, car d'après le petit théorème de Fermat, nous avons :
 
 <pre>x<sup>P-1</sup> mod P ≡ 1</pre>
 
-C'est pourquoi `x` doit être une identité multiplicative de `ℤ/nℤ`, ce qui est unique. Puisque nous supposons que `x ≠ 1` par hypothèse, ce n'est pas possible.
+Par conséquent, `x` doit être une identité multiplicative de `ℤ/nℤ`, qui est unique. Puisque nous avons supposé que `x ≠ 1`, ceci n'est pas possible.
 
-L'ordre de `x` ne peut pas être `2` sauf si `x = P-1`, car cela violerait le principe que `P` soit un nombre premier.
+L'ordre de `x` ne peut pas être `2` à moins que `x = P-1`, car cela violerait le fait que `P` est un nombre premier.
 
-À partir de la proposition ci-dessus, nous pouvons reconnaître que l'itération `(picker * init) % P` aura une longueur de cycle d'au moins `(P-1)/2`. Ceci est dû au fait que nous avons sélectionné `P` pour être un nombre premier sûr approximativement égal à une puissance supérieure de deux, et `init` est dans l'intervalle `[2,2**256+1]`. Compte tenu de la magnitude de `P`, nous ne devrions jamais nous attendre à un cycle d'exponentiation modulaire.
+D'après la proposition ci-dessus, nous pouvons reconnaître que l'itération de `(picker * init) % P` aura une longueur de cycle d'au moins `(P-1)/2`. C'est parce que nous avons sélectionné `P` pour être un nombre premier sûr approximativement égal à une puissance supérieure de deux, et `init` se trouve dans l'intervalle `[2,2**256+1]`. Étant donné la magnitude de `P`, nous ne devrions jamais nous attendre à un cycle provenant de l'exponentiation modulaire.
 
-Lorsque nous assignons la première cellule dans le DAG (la variable étiquetée `init`), nous calculons `pow(sha3(seed) + 2, 3, P)`. À première vue, cela ne garantit pas que le résultat n'est ni `1` ni `P-1`. Cependant, puisque `P-1` est un nombre premier sûr, nous émettons l'hypothèse supplémentaire suivante, qui est un corollaire de l'observation 1 :
+Lorsque nous attribuons la première cellule dans le DAG (la variable étiquetée `init`), nous calculons `pow(sha3(seed) + 2, 3, P)`. À première vue, cela ne garantit pas que le résultat n'est ni `1` ni `P-1`. Cependant, puisque `P-1` est un nombre premier sûr, nous avons l'assurance supplémentaire suivante, qui est un corollaire de l'Observation 1 :
 
-> Observation 2. Laissons `x` être membre du groupe multiplicateur `ℤ/Pℤ` pour un nombre premier sûr `P`, et laissons `w` être un nombre naturel. Si `x mod P ≠ 1 mod P` et `x mod P ≠ P-1 mod P`, tout comme `w mod P ≠ P-1 mod P` et `w mod P ≠ 0 mod P`, alors `xʷ mod P ≠ 1 mod P` et `xʷ mod P ≠ P-1 mod P`
+> Observation 2. Soit `x` un membre du groupe multiplicatif `ℤ/Pℤ` pour un nombre premier sûr `P`, et soit `w` un nombre naturel. Si `x mod P ≠ 1 mod P` et `x mod P ≠ P-1 mod P`, ainsi que `w mod P ≠ P-1 mod P` et `w mod P ≠ 0 mod P`, alors `xʷ mod P ≠ 1 mod P` et `xʷ mod P ≠ P-1 mod P`
 
-### Exponentiation modulaire comme fonction de hachage {#modular-exponentiation}
+### Exponentiation modulaire en tant que fonction de hachage {#modular-exponentiation}
 
-Pour certaines valeurs de `P` et `w`, la fonction `pow(x, w, P)` peut présenter de nombreuses collisions. Par exemple, `pow(x,9,19)` ne prend que les valeurs `{1,18}`.
+Pour certaines valeurs de `P` et `w`, la fonction `pow(x, w, P)` peut avoir de nombreuses collisions. Par exemple, `pow(x,9,19)` ne prend que les valeurs `{1,18}`.
 
-Étant donné que `P` est un nombre premier, alors un `w` approprié pour une fonction de hachage d'exponentiation modulaire peut être choisi en utilisant le résultat suivant :
+Étant donné que `P` est un nombre premier, un `w` approprié pour une fonction de hachage par exponentiation modulaire peut être choisi en utilisant le résultat suivant :
 
-> Observation 3. Laissez `P` être un nombre premier ; `w` et `P-1` sont relativement premiers si et seulement si pour tous les `a` et `b` en `ℤ/Pℤ` :
-> 
-> <center>
->   `aʷ mod P ≡ bʷ mod P` si et seulement si `a mod P ≡ b mod P`
-> </center>
+> Observation 3. Soit `P` un nombre premier ; `w` et `P-1` sont premiers entre eux si et seulement si pour tous les `a` et `b` dans `ℤ/Pℤ` :<center>`aʷ mod P ≡ bʷ mod P` si et seulement si `a mod P ≡ b mod P`</center>
 
-Ainsi, étant donné que `P` est un nombre premier et que `w` est relativement premier à `P-1`, nous avons `|{pow(x, w, P) : x ∈ ℤ}| = P`, ce qui implique que la fonction de hachage a le taux de collision minimal possible.
+Ainsi, étant donné que `P` est un nombre premier et que `w` est premier avec `P-1`, nous avons `|{pow(x, w, P) : x ∈ ℤ}| = P`, ce qui implique que la fonction de hachage a le taux de collision le plus bas possible.
 
-Dans le cas spécial ou `P` est un nombre premier sûr comme nous l'avons sélectionné, alors `P-1` n'aura que les facteurs 1, 2, `(P-1)/2` et `P-1`. Puisque `P` > 7, nous savons que 3 est relativement premier à `P-1`, donc `w=3` satisfait la proposition ci-dessus.
+Dans le cas particulier où `P` est un nombre premier sûr comme nous l'avons sélectionné, `P-1` n'a alors que les facteurs 1, 2, `(P-1)/2` et `P-1`. Puisque `P` > 7, nous savons que 3 est premier avec `P-1`, donc `w=3` satisfait la proposition ci-dessus.
 
-## Algorithme d'évaluation basé sur un cache plus efficace {#cache-based-evaluation}
+## Algorithme d'évaluation plus efficace basé sur le cache {#cache-based-evaluation}
 
 ```python
 def quick_calc(params, seed, p):

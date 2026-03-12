@@ -105,7 +105,7 @@ async function Page({ params }: { params: PageParams }) {
       .map(({ id, ...rest }) => {
         const coinMarketData = stablecoinsData.find((coin) => coin.id === id)
         if (!coinMarketData) {
-          console.warn("CoinGecko stablecoin data not found:", id)
+          // CoinGecko data may not include all configured stablecoins
           return null
         }
         return { ...coinMarketData, ...rest }

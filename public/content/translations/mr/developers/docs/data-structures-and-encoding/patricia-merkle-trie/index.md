@@ -262,5 +262,5 @@ else:
 ## अधिक वाचन {#further-reading}
 
 - [सुधारित मर्केल पॅट्रिशिया ट्राई — Ethereum स्टेट कसे सेव्ह करते](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Ethereum मधील मर्कलिंग](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [Ethereum मधील मर्कलिंग](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [Ethereum ट्राई समजून घेणे](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

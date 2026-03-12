@@ -107,9 +107,9 @@ export const TutorialLayout = ({
   const absoluteEditPath = getEditPath(slug)
 
   return (
-    <div className="flex w-full gap-8 border-b bg-background p-8 lg:mx-auto lg:bg-background-highlight lg:shadow">
+    <div className="flex w-full gap-8">
       <MainArticle
-        className="min-w-0 max-w-[1000px] rounded bg-background p-0 lg:p-16 lg:shadow"
+        className="min-w-0 max-w-screen-lg px-8 lg:py-8"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <Heading1>{frontmatter.title}</Heading1>
@@ -131,7 +131,7 @@ export const TutorialLayout = ({
       </MainArticle>
       {tocItems && (
         <TableOfContents
-          className="pt-8"
+          className="pt-16"
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
           editPath={absoluteEditPath}

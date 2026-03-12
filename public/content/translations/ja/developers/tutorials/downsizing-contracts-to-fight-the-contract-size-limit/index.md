@@ -12,7 +12,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## なぜ制限があるのですか？ {#why-is-there-a-limit}
 
-2016年11月22日の[Spurious Dragonハードフォーク](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)で、[EIP-170](https://eips.ethereum.org/EIPS/eip-170)が導入され、24.576kbのスマートコントラクトサイズ制限が追加されました。 Solidityデベロッパーにとって、これはコントラクトに機能をどんどん追加していくうちに、ある時点でサイズ制限に達し、デプロイした際に以下のエラーが表示されてしまうということを意味します。
+2016年11月22日の[Spurious Dragonハードフォーク](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)で、[EIP-170](https://eips.ethereum.org/EIPS/eip-170)が導入され、24.576kbのスマートコントラクトサイズ制限が追加されました。 Solidityデベロッパーにとって、これはコントラクトに機能をどんどん追加していくうちに、ある時点でサイズ制限に達し、デプロイした際に以下のエラーが表示されてしまうということを意味します。
 
 `Warning: Contract code size exceeds 24576 bytes (Spurious Dragonで導入された制限)。 このコントラクトはメインネットではデプロイできない可能性があります。 オプティマイザを有効にする(低い\"runs\"値で！)、revert文字列をオフにする、またはライブラリを使用することを検討してください。`
 

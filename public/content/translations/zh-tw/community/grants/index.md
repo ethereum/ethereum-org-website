@@ -20,6 +20,7 @@ lang: zh-tw
 這些計劃通過向各種專案提供資助來支援開放的以太坊生態系統。 其中包括可擴展性、社群建設、安全性、隱私等方面的解決方案。 這些贈款並不專門針對任何一個以太坊平台，如果你不確定，可以從這裡開始。
 
 - [EF 生態系統支援計畫](https://esp.ethereum.foundation) - _為有益於以太坊的開源專案提供資金，特別是通用工具、基礎設施、研究與公共財_
+- [ESP 資助專案瀏覽器](https://esp.ethereum.foundation/funded-projects) - _可搜尋的目錄，收錄了生態系統支援計畫資助的 1,000 多個專案_
 - [學術補助金](https://esp.ethereum.foundation/academic-grants) - _支持以太坊相關學術研究的補助金_
 
 ## 補助金清單彙總器與平台 {#grant-list-aggregators}
@@ -30,7 +31,6 @@ lang: zh-tw
 
 這些平臺涵蓋了對整個 Web3 領域的廣泛資助資訊，對於任何尋求資金的人來説都是有用的起點：
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks 彙整了所有補助金、提案徵求 (RFP) 和漏洞賞金的綜合目錄。_
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _區塊鏈和加密貨幣補助金目錄_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - 所有 Web3 補助金計畫的目錄，每週更新
 

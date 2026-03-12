@@ -15,7 +15,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 
 ### Key Dependencies
 
-- **next-intl 3.26+** - Internationalization (i18n) with 60+ languages
+- **next-intl 3.26+** - Internationalization (i18n) with 25 languages
 - **next-mdx-remote 5.0+** - MDX content processing
 - **Framer Motion 10.13+** - Animations and transitions
 - **Radix UI** - Accessible component primitives
@@ -43,7 +43,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
   - **data/** - Static data and configurations
   - **hooks/** - Custom React hooks
   - **i18n/** - Internationalization config
-  - **intl/** - Translation files (60+ languages)
+  - **intl/** - Translation files (25 languages)
   - **layouts/** - Page layout components
   - **lib/** - Utility functions and types
     - **constants.ts** - App constants
@@ -115,8 +115,8 @@ pnpm events-import         # Import community events
 
 ### Internationalization
 
-- **60+ languages** supported via Crowdin
-- **RTL support** for Arabic, Hebrew, etc.
+- **25 languages** supported via Crowdin (canonical list: `i18n.config.json`)
+- **RTL support** for Arabic, Urdu
 - Translation files (JSON format) in `src/intl/[locale]/`
 - Content translations managed through Crowdin platform
 

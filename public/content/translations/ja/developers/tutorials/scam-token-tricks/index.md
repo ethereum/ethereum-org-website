@@ -241,7 +241,7 @@ ERC-20コントラクトは、許容量のために[an `approve` function](/deve
 
 #### `mount`関数 {#the-mount-function}
 
-[標準](https://eips.ethereum.org/EIPS/eip-20)には明記されていませんが、一般的に新しいトークンを作成する関数は[`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)と呼ばれます。
+[標準](https://eips.ethereum.org/EIPS/eip-20)には明記されていませんが、一般的に新しいトークンを作成する関数は[`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)と呼ばれます。
 
 `wARB`のコンストラクタを見ると、ミント関数が何らかの理由で`mount`に改名されており、効率化のために全額を一度にではなく、初期供給の5分の1で5回呼び出されていることがわかります。
 

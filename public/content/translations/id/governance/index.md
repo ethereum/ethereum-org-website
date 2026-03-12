@@ -168,7 +168,7 @@ Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum pada 15 September 
 - [Bergabunglah dengan discord Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Menjalankan sebuah simpul](/developers/docs/nodes-and-clients/run-a-node/)
 - [Berkontribusilah terhadap pengembangan klien](/developers/docs/nodes-and-clients/#execution-clients)
-- [Program Magang Pengembang Inti](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Program Magang Pengembang Inti](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Bacaan lebih lanjut {#further-reading}
 
@@ -177,6 +177,6 @@ Tata kelola di Ethereum tidaklah didefinisikan dengan kaku. Berbagai peserta kom
 - [Catatan tentang Tata Kelola Rantai Blok](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Bagaimana cara kerja Pemerintahan Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Bagaimana cara kerja pemerintahan Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Apa yang dimaksud dengan pengembang inti Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Apa yang dimaksud dengan pengembang inti Ethereum?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Tata Kelola, Bagian 2: Plutokrasi Masih Buruk](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Bergerak melampaui tata kelola pemungutan suara koin](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

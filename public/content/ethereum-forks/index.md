@@ -25,43 +25,51 @@ The software that underlies Ethereum is composed of two halves, known as the [ex
 
 **Execution upgrade naming**
 
-Since 2021, upgrades to the **execution layer** are named according to the city names of [previous Devcon locations](https://devcon.org/en/past-events/) in chronological order:
+Since 2021, upgrades to the **execution layer** are named according to the city names of [previous Devcon and Devconnect locations](https://devcon.org/en/past-events/) in chronological order:
 
-| Upgrade Name | Devcon Year | Devcon Number | Upgrade Date |
-| ------------ | ----------- | ------------- | ------------ |
-| Berlin       | 2014        | 0             | Apr 15, 2021 |
-| London       | 2015        | I             | Aug 5, 2021  |
-| Shanghai     | 2016        | II            | Apr 12, 2023 |
-| Cancun       | 2017        | III           | Mar 13, 2024 |
-| **Prague**   | 2018        | IV            | TBD - Next   |
-| _Osaka_      | 2019        | V             | TBD          |
-| _Bogota_     | 2022        | VI            | TBD          |
-| _Bangkok_    | 2024        | VII           | TBD          |
+| Upgrade Name   | Devcon(nect) Year | Devcon Number | Upgrade Date |
+| -------------- | ----------------- | ------------- | ------------ |
+| Berlin         | 2014              | 0             | Apr 15, 2021 |
+| London         | 2015              | I             | Aug 5, 2021  |
+| Shanghai       | 2016              | II            | Apr 12, 2023 |
+| Cancun         | 2017              | III           | Mar 13, 2024 |
+| Prague         | 2018              | IV            | May 7, 2025  |
+| Osaka          | 2019              | V             | Dec 3, 2025  |
+| **Amsterdam**  | 2022              | Devconnect    | TBD - Next   |
+| _Bogotá_       | 2022              | VI            | TBD          |
+| _Istanbul_     | 2023              | Devconnect    | TBD          |
+| _Bangkok_      | 2024              | VII           | TBD          |
+| _Buenos Aires_ | 2025              | Devconnect    | TBD          |
+| _Mumbai_       | 2026              | VIII          | TBD          |
 
 **Consensus upgrade naming**
 
 Since the launch of the [Beacon Chain](/glossary/#beacon-chain), upgrades to the **consensus layer** are named after celestial stars beginning with letters that proceed in alphabetical order:
 
-| Upgrade Name                                                  | Upgrade Date |
-| ------------------------------------------------------------- | ------------ |
-| Beacon Chain genesis                                          | Dec 1, 2020  |
-| [Altair](https://en.wikipedia.org/wiki/Altair)                | Oct 27, 2021 |
-| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)          | Sep 6, 2022  |
-| [Capella](https://en.wikipedia.org/wiki/Capella)              | Apr 12, 2023 |
-| [Deneb](https://en.wikipedia.org/wiki/Deneb)                  | Mar 13, 2024 |
-| [**Electra**](<https://en.wikipedia.org/wiki/Electra_(star)>) | TBD - Next   |
-| [_Fulu_](<https://en.wikipedia.org/wiki/Fulu_(star)>)         | TBD          |
+| Upgrade Name                                              | Upgrade Date |
+| --------------------------------------------------------- | ------------ |
+| Beacon Chain genesis                                      | Dec 1, 2020  |
+| [Altair](https://en.wikipedia.org/wiki/Altair)            | Oct 27, 2021 |
+| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)      | Sep 6, 2022  |
+| [Capella](https://en.wikipedia.org/wiki/Capella)          | Apr 12, 2023 |
+| [Deneb](https://en.wikipedia.org/wiki/Deneb)              | Mar 13, 2024 |
+| [Electra](<https://en.wikipedia.org/wiki/Electra_(star)>) | May 7, 2025  |
+| [Fulu](<https://en.wikipedia.org/wiki/Fulu_(star)>)       | Dec 3, 2025  |
+| [**Gloas**](https://en.wikipedia.org/wiki/WASP-13)        | TBD - Next   |
+| [_Heka_](https://en.wikipedia.org/wiki/Meissa)            | TBD          |
 
 **Combined naming**
 
-The execution and consensus upgrades were initially rolled out at different times, but after [The Merge](/roadmap/merge/) in 2022 these have been deployed simultaneously. As-such, colloquial terms have emerged to simplify references to these upgrades using a single conjoined term. This began with the _Shanghai-Capella_ upgrade, commonly referred to as "**Shapella**", and is continued with the _Cancun-Deneb_ (**Dencun**), and the _Prague-Electra_ (**Pectra**) upgrades.
+The execution and consensus upgrades were initially rolled out at different times, but after [The Merge](/roadmap/merge/) in 2022 these have been deployed simultaneously. As-such, colloquial terms have emerged to simplify references to these upgrades using a single conjoined term. This began with the _Shanghai-Capella_ upgrade, commonly referred to as "**Shapella**", and is continued with subsequent upgrades.
 
-| Execution Upgrade | Consensus Upgrade | Short Name |
-| ----------------- | ----------------- | ---------- |
-| Shanghai          | Capella           | "Shapella" |
-| Cancun            | Deneb             | "Dencun"   |
-| Prague            | Electra           | "Pectra"   |
-| Osaka             | Fulu              | "Fusaka"   |
+| Execution Upgrade | Consensus Upgrade | Short Name    |
+| ----------------- | ----------------- | ------------- |
+| Shanghai          | Capella           | "Shapella"    |
+| Cancun            | Deneb             | "Dencun"      |
+| Prague            | Electra           | "Pectra"      |
+| Osaka             | Fulu              | "Fusaka"      |
+| Amsterdam         | Gloas             | "Glamsterdam" |
+| Bogotá            | Heka              | "Hekotá"      |
 
 </ExpandableCard>
 
@@ -121,7 +129,7 @@ Protocol efficiency and security improvements:
 
 - [Pectra.wtf](https://pectra.wtf)
 - [How Pectra will enhance the staking experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Read the Electra upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Read the Electra upgrade specifications](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Prague-Electra ("Pectra") FAQ](/roadmap/pectra/)
 
 <Divider />
@@ -176,7 +184,7 @@ EIP-7514 brings a tightening to the issuance of ETH by capping the "churn" rate 
 
 </ExpandableCard>
 
-- [Read the Deneb upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Read the Deneb upgrade specifications](https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/)
 - [Cancun-Deneb ("Dencun") FAQ](/roadmap/dencun/)
 
 <Divider />
@@ -214,7 +222,7 @@ This consensus layer upgrade brought the ability for stakers who did not provide
 The upgrade also provided automatic account sweeping functionality, which continuously processes validator accounts for any available rewards payments or full withdrawals.
 
 - [More on staking withdrawals](/staking/withdrawals/).
-- [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/tree/master/specs/capella/)
 
 <Divider />
 
@@ -249,7 +257,7 @@ The Paris upgrade was triggered by the proof-of-work blockchain passing a [termi
 
 The Bellatrix upgrade was the second scheduled upgrade for the [Beacon Chain](/roadmap/beacon-chain), preparing the chain for [The Merge](/roadmap/merge/). It brings validator penalties to their full values for inactivity and slashable offenses. Bellatrix also includes an update to the fork choice rules to prepare the chain for The Merge and the transition from the last proof-of-work block to the first proof-of-stake block. This includes making consensus clients aware of the [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000.
 
-- [Read the Bellatrix upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Read the Bellatrix upgrade specification](https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix)
 
 ---
 
@@ -261,7 +269,7 @@ The Bellatrix upgrade was the second scheduled upgrade for the [Beacon Chain](/r
 
 The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#difficulty-bomb) by three months. This is the only change introduced in this upgrade, and is similar in nature to the [Arrow Glacier](#arrow-glacier) and [Muir Glacier](#muir-glacier) upgrades. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
 
-- [EF Blog - Gray Glacier Upgrade Announcement](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+- [EF Blog - Gray Glacier Upgrade Announcement](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement)
 
 <ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
 
@@ -283,7 +291,7 @@ The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#di
 
 The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#difficulty-bomb) by several months. This is the only change introduced in this upgrade, and is similar in nature to the [Muir Glacier](#muir-glacier) upgrade. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
 
-- [EF Blog - Arrow Glacier Upgrade Announcement](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [EF Blog - Arrow Glacier Upgrade Announcement](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement)
 - [Ethereum Cat Herders - Ethereum Arrow Glacier Upgrade](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
 <ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
@@ -304,7 +312,7 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 
 The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/roadmap/beacon-chain). It added support for "sync committees"—enabling light clients, and increased validator inactivity and slashing penalties as development progressed towards The Merge.
 
-- [Read the Altair upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Read the Altair upgrade specification](https://github.com/ethereum/consensus-specs/tree/master/specs/altair)
 
 #### <Emoji text=":tada:" size={1} className="me-2" />Fun fact! {#altair-fun-fact}
 
@@ -337,7 +345,7 @@ The implementation of [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) in the
 This video explains EIP-1559 and the benefits it brings: [EIP-1559 Explained](https://www.youtube.com/watch?v=MGemhK9t44Q)
 
 - [Are you a dapp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
-- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
@@ -362,7 +370,7 @@ This video explains EIP-1559 and the benefits it brings: [EIP-1559 Explained](ht
 
 The Berlin upgrade optimized gas cost for certain EVM actions, and increases support for multiple transaction types.
 
-- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
@@ -388,7 +396,7 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 
 The [Beacon Chain](/roadmap/beacon-chain/) needed 16384 deposits of 32 staked ETH to ship securely. This happened on November 27, and the Beacon Chain started producing blocks on December 1, 2020.
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21)
 
 <DocLink href="/roadmap/beacon-chain/">
   The Beacon Chain
@@ -404,7 +412,7 @@ The [Beacon Chain](/roadmap/beacon-chain/) needed 16384 deposits of 32 staked ET
 
 The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [Mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/roadmap/beacon-chain/), an important [Ethereum upgrade](/roadmap/).
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19)
 
 <DocLink href="/staking/">
   Staking
@@ -420,7 +428,7 @@ The staking deposit contract introduced [staking](/glossary/#staking) to the Eth
 
 The Muir Glacier fork introduced a delay to the [difficulty bomb](/glossary/#difficulty-bomb). Increases in block difficulty of the [proof-of-work](/developers/docs/consensus-mechanisms/pow/) consensus mechanism threatened to degrade the usability of Ethereum by increasing wait times for sending transactions and using dapps.
 
-- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
@@ -449,7 +457,7 @@ The Istanbul fork:
 - Enabled Ethereum and Zcash to interoperate.
 - Allowed contracts to introduce more creative functions.
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement)
 
 <ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
 
@@ -479,7 +487,7 @@ The Constantinople fork:
 - Optimised the [gas](/glossary/#gas) cost of certain actions in the [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Added the ability to interact with addresses that haven't been created yet.
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement)
 
 <ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
 
@@ -509,7 +517,7 @@ The Byzantium fork:
 - Added ability to make non-state-changing calls to other contracts.
 - Added certain cryptography methods to allow for [layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement)
 
 <ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
 
@@ -543,7 +551,7 @@ The Spurious Dragon fork was the second response to the denial of service (DoS) 
 - enabling “debloat” of the blockchain state.
 - adding replay attack protection.
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)
 
 <ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
 
@@ -568,7 +576,7 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 
 - addressing urgent network health issues concerning underpriced operation codes.
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork)
 
 <ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
 
@@ -593,7 +601,7 @@ This course of action was voted on by the Ethereum community. Any ETH holder was
 
 Some miners refused to fork because the DAO incident wasn't a defect in the protocol. They went on to form [Ethereum Classic](https://ethereumclassic.org/).
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/07/20/hard-fork-completed)
 
 ---
 
@@ -605,7 +613,7 @@ Some miners refused to fork because the DAO incident wasn't a defect in the prot
 
 The Homestead fork that looked to the future. It included several protocol changes and a networking change that gave Ethereum the ability to do further network upgrades.
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/02/29/homestead-release)
 
 <ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
 
@@ -629,8 +637,8 @@ The Homestead fork that looked to the future. It included several protocol chang
 
 The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [block](/glossary/#block) and set the default gas price to 51 [gwei](/glossary/#gwei). This allowed for transactions – transactions require 21,000 gas. The [difficulty bomb](/glossary/#difficulty-bomb) was introduced to ensure a future hard-fork to [proof-of-stake](/glossary/#pos).
 
-- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
-- [Read the Ethereum Protocol Update 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/08/04/the-thawing-frontier)
+- [Read the Ethereum Protocol Update 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1)
 
 ---
 
@@ -642,7 +650,7 @@ The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [bloc
 
 Frontier was a live, but barebone implementation of the Ethereum project. It followed the successful Olympic testing phase. It was intended for technical users, specifically developers. [Blocks](/glossary/#block) had a [gas](/glossary/#gas) limit of 5,000. This ‘thawing’ period enabled miners to start their operations and for early adopters to install their clients without having to ‘rush’.
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare)
 
 <Divider />
 
@@ -654,7 +662,7 @@ Frontier was a live, but barebone implementation of the Ethereum project. It fol
 
 Ether officially went on sale for 42 days. You could buy it with BTC.
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale)
 
 ---
 

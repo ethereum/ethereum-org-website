@@ -20,6 +20,7 @@ lang: ja
 これらのプログラムは、広範囲のプロジェクトに助成金を提供し、イーサリアムエコシステムを幅広くサポートするものです。 拡張性、コミュニティ構築、セキュリティ、プライバシーなどのソリューションが対象となり、 どれか1つのイーサリアムプラットフォームに固有の助成プログラムではありません。 不明な場合は、まずはこちらから始めてみてください。
 
 - [EFエコシステム・サポート・プログラム](https://esp.ethereum.foundation) - _イーサリアムに貢献するオープンソースプロジェクトへの資金提供。特にユニバーサルツール、インフラ、研究、公共財に重点を置いています_
+- [ESPグラント・エクスプローラー](https://esp.ethereum.foundation/funded-projects) - _エコシステム・サポート・プログラムが支援した1,000以上のプロジェクトを検索できるディレクトリ_
 - [学術助成金](https://esp.ethereum.foundation/academic-grants) - _イーサリアム関連の学術研究を支援する助成金_
 
 ## 助成金リストのアグリゲーターとプラットフォーム {#grant-list-aggregators}
@@ -30,7 +31,6 @@ lang: ja
 
 これらの一般的なプラットフォームは、Web3空間全体の助成金を幅広くカバーしており、資金調達先を探している人にとって有用な出発点となります:
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworksは、すべての助成金、RFP、バグ報奨金の包括的なディレクトリをまとめています。_
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _ブロックチェーンと暗号資産の助成金ディレクトリ_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - すべてのWeb3助成金プログラムのディレクトリ、毎週更新
 
