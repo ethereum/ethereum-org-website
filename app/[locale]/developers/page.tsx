@@ -37,6 +37,7 @@ import { screens } from "@/lib/utils/screen"
 
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper/lazy"
+import EthSkills from "./_components/ethskills.svg"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
@@ -226,17 +227,15 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             id="ethskills"
             className="flex flex-col gap-8 py-10 sm:items-center md:py-16"
           >
-            <div className="flex w-full overflow-x-auto md:justify-center">
-              <pre
-                dir="ltr"
-                className="inline-block text-start font-['Courier_New',_Courier,_monospace] text-[clamp(0.3rem,_calc((100vw_-_4rem)_/_48),_1rem)] leading-tight tracking-[0.25px] text-amber-700 dark:text-[#ffb000]"
+            <div
+              dir="ltr"
+              className="w-full overflow-x-auto text-amber-700 md:text-center dark:text-[#ffb000]"
+            >
+              <EthSkills
+                role="img"
                 aria-label="ETHSKILLS"
-              >{` ███████╗████████╗██╗  ██╗███████╗██╗  ██╗██╗██╗     ██╗     ███████╗
- ██╔════╝╚══██╔══╝██║  ██║██╔════╝██║ ██╔╝██║██║     ██║     ██╔════╝
- █████╗     ██║   ███████║███████╗█████╔╝ ██║██║     ██║     ███████╗
- ██╔══╝     ██║   ██╔══██║╚════██║██╔═██╗ ██║██║     ██║     ╚════██║
- ███████╗   ██║   ██║  ██║███████║██║  ██╗██║███████╗███████╗███████║
- ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝`}</pre>
+                className="inline-block h-auto max-h-16 w-full max-w-2xl"
+              />
             </div>
 
             <div className="max-w-xl space-y-2 md:text-center">
