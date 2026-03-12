@@ -15,6 +15,7 @@ Questo elenco è curato dalla nostra comunità. Se c'è qualcosa di mancante o i
 Questi programmi supportano il grande ecosistema di Ethereum offrendo sovvenzioni per un'ampia gamma di progetti, tra cui soluzioni per la scalabilità, la costruzione di community, la sicurezza, la privacy e molto altro. Queste sovvenzioni non sono specifiche per una data piattaforma Ethereum, e sono un buon punto di partenza per chi è ancora in fase esplorativa.
 
 - [Programma di supporto per l'ecosistema EF](https://esp.ethereum.foundation) - _Finanziamento di progetti open source a favore di Ethereum, con particolare interesse agli strumenti universali, alle infrastrutture, alla ricerca e ai beni pubblici_
+- [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Directory consultabile di oltre 1.000 progetti supportati dall'Ecosystem Support Program_
 - [Moloch DAO](https://www.molochdao.com/): _Privacy, ridimensionamento del livello 2, sicurezza del client e molto altro_
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Foglio di calcolo di Google delle organizzazioni che offrono sovvenzioni_
 - [Sovvenzioni accademiche](https://esp.ethereum.foundation/academic-grants) - _Sovvenzioni per sostenere il lavoro accademico correlato a Ethereum_
