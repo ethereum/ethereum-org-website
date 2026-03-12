@@ -101,7 +101,6 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
 export default async function Page({ params }: { params: PageParams }) {
   const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-get-eth" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const tokenSwaps: CardListCardProps[] = [
     {
@@ -250,7 +249,7 @@ export default async function Page({ params }: { params: PageParams }) {
             <Stack className="gap-16">
               <p>
                 <em>
-                  {tCommon("listing-policy-disclaimer")}{" "}
+                  {t("listing-policy-disclaimer")}{" "}
                   <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                     {t("listing-policy-raise-issue-link")}
                   </InlineLink>
