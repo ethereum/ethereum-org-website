@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
@@ -57,13 +57,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/wallets")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "wallets",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("wallets", locale as Lang)
 
   const heroContent = {
     title: t("page-wallets-title"),

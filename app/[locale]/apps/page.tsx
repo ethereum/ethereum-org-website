@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { CommitHistory, Lang, PageParams } from "@/lib/types"
+import { Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -67,11 +67,9 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "apps",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
