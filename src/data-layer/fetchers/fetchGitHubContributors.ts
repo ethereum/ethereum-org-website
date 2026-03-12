@@ -299,12 +299,16 @@ async function fetchCommitsForPath(
       const login = commit.author?.login ?? commit.commit.author.name
       const date = commit.commit.author.date
 
+      // Use username-based avatar URL instead of the API's /u/{id}?v=4
+      // format which causes redirect loops with Next.js image optimization
       const primary: FileContributor[] =
         isExcludedContributor(login)
           ? []
           : [{
               login,
-              avatar_url: commit.author?.avatar_url ?? "",
+              avatar_url: commit.author
+                ? `https://avatars.githubusercontent.com/${commit.author.login}`
+                : "",
               html_url: commit.author?.html_url ?? "",
               date,
             }]
