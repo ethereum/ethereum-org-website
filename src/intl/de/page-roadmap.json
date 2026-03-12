@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "Unterstützung für sichere Enklaven auf mobilen Geräten zur Verbesserung der UX",
   "page-roadmap-fusaka-additional-item-2": "Verbesserungen am Blob-Gebührenmarkt",
   "page-roadmap-fusaka-additional-item-3": "Weitere Verbesserungen der Validator-Effizienz und der Netzwerkleistung",
-  "page-roadmap-glamsterdam-discussed-title": "Geplant für Glamsterdam",
-  "page-roadmap-glamsterdam-discussed-item-1": "Verankerte Proposer-Builder-Trennung (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "Zugriffslisten auf Blockebene (BALs)"
+  "page-roadmap-glamsterdam-epbs-title": "Native Trennung von Proposer und Builder",
+  "page-roadmap-glamsterdam-epbs-item-1": "Trennt die Blockvereinbarung von der Verarbeitung, wodurch L1 skaliert werden kann, indem Validatoren mehr Daten verarbeiten können.",
+  "page-roadmap-glamsterdam-epbs-item-2": "Integriert nativ Builder, sodass Validatoren die Blockerstellung sicher auslagern können, ohne externer Software zu vertrauen.",
+  "page-roadmap-glamsterdam-bal-title": "Zugriffslisten auf Blockebene",
+  "page-roadmap-glamsterdam-bal-item-1": "Führt obligatorische Zugriffslisten auf Blockebene anstelle von einzelnen Transaktionen ein.",
+  "page-roadmap-glamsterdam-bal-item-2": "Ordnet Abhängigkeiten im Voraus zu, um schnellere Synchronisierungen, parallele Ausführung und parallele Festplattenlesevorgänge zu ermöglichen.",
+  "page-roadmap-glamsterdam-bal-item-3": "Senkt die Gasgebühren für stark zustandsbehaftete Anwendungen und verbessert die Vorhersehbarkeit der Gaskosten.",
+  "page-roadmap-hegota-discussed-title": "Geplant für Hegotá",
+  "page-roadmap-hegota-discussed-item-1": "Vorschläge werden derzeit diskutiert."
 }
