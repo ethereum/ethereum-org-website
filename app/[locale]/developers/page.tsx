@@ -37,7 +37,6 @@ import { screens } from "@/lib/utils/screen"
 
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper/lazy"
-import EthSkills from "./_components/ethskills.svg"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
@@ -227,16 +226,12 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             id="ethskills"
             className="flex flex-col gap-8 py-10 sm:items-center md:py-16"
           >
-            <div
-              dir="ltr"
-              className="w-full overflow-x-auto text-amber-700 md:text-center dark:text-[#ffb000]"
-            >
-              <EthSkills
-                role="img"
-                aria-label="ETHSKILLS"
-                className="inline-block h-auto max-h-16 w-full max-w-2xl"
-              />
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/developers/ethskills.svg"
+              alt="ETHSKILLS"
+              className="h-auto max-h-24 w-full max-w-2xl object-contain"
+            />
 
             <div className="max-w-xl space-y-2 md:text-center">
               <h2>{t("page-developers-ethskills-title")}</h2>
