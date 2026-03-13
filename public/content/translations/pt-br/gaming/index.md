@@ -96,7 +96,7 @@ Existem filosofias contrastantes em torno dessas mecânicas. Um exemplo importan
 
 ## Comece a jogar no Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Encontre um jogo divertido para jogar** - Navegue pelos jogos listados acima ou explore plataformas como [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) e [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Configure sua carteira de criptomoedas** - Você precisará de uma carteira para gerenciar seus ativos digitais do jogo e (em alguns casos) para fazer login nos jogos. [Escolha uma carteira aqui](/wallets/find-wallet/).
-3. **Deposite fundos em sua carteira** - Adquira um pouco de Ether (ETH) ou tokens relevantes para a rede de camada 2 que você planeja usar.
-4. **Jogue** - Comece a jogar e aproveite a verdadeira propriedade do seu progresso no jogo.
+1. **Encontre um jogo divertido para jogar** - Navegue pelos jogos listados acima ou explore plataformas como [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) e [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Configure sua carteira de criptomoedas** - Você precisará de uma carteira para gerenciar seus ativos digitais do jogo e (em alguns casos) para fazer login nos jogos. [Escolha uma carteira aqui](/wallets/find-wallet/)
+3. **Deposite fundos em sua carteira** - Adquira um pouco de Ether (ETH) ou tokens relevantes para a rede de camada 2 que você planeja usar
+4. **Jogue** - Comece a jogar e aproveite a verdadeira propriedade do seu progresso no jogo

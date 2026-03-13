@@ -96,7 +96,7 @@ Istnieją kontrastujące filozofie wokół tych mechanik. Głównym przykładem 
 
 ## Zacznij przygodę z grami na Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Znajdź fajną grę** – Przeglądaj gry wymienione powyżej lub eksploruj platformy takie jak [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) i [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Skonfiguruj swój portfel krypto** – Będziesz potrzebować portfela do zarządzania swoimi cyfrowymi aktywami w grze i (w niektórych przypadkach) do logowania się do gier. [Wybierz portfel tutaj](/wallets/find-wallet/).
-3. **Zasil swój portfel** – Zdobądź trochę Etheru (ETH) lub tokenów odpowiednich dla sieci warstwy 2, z której planujesz korzystać.
-4. **Graj** – Zacznij grać i ciesz się prawdziwą własnością swoich postępów w grze.
+1. **Znajdź fajną grę** – Przeglądaj gry wymienione powyżej lub eksploruj platformy takie jak [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) i [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Skonfiguruj swój portfel krypto** – Będziesz potrzebować portfela do zarządzania swoimi cyfrowymi aktywami w grze i (w niektórych przypadkach) do logowania się do gier. [Wybierz portfel tutaj](/wallets/find-wallet/)
+3. **Zasil swój portfel** – Zdobądź trochę Etheru (ETH) lub tokenów odpowiednich dla sieci warstwy 2, z której planujesz korzystać
+4. **Graj** – Zacznij grać i ciesz się prawdziwą własnością swoich postępów w grze

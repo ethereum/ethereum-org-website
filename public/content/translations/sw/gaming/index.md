@@ -96,7 +96,7 @@ Kuna falsafa zinazokinzana kuhusu mifumo hii. Mfano mkuu ni Kamigotchi ya Initia
 
 ## Anza na michezo kwenye Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Tafuta mchezo wa kufurahisha wa kucheza** - Vinjari michezo iliyoorodheshwa hapo juu au chunguza majukwaa kama [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), na [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Weka mkoba wako wa sarafu ya kidijitali** - Utahitaji mkoba ili kudhibiti rasilimali zako za kidijitali za ndani ya mchezo na (katika baadhi ya matukio) kuingia kwenye michezo. [Chagua mkoba hapa](/wallets/find-wallet/).
-3. **Weka fedha kwenye mkoba wako** - Pata Ether (ETH) au tokeni zinazohusiana na mtandao wa safu ya 2 unaopanga kutumia.
-4. **Cheza** - Anza kucheza na ufurahie umiliki halisi wa maendeleo yako ya ndani ya mchezo.
+1. **Tafuta mchezo wa kufurahisha wa kucheza** - Vinjari michezo iliyoorodheshwa hapo juu au chunguza majukwaa kama [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), na [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Weka mkoba wako wa sarafu ya kidijitali** - Utahitaji mkoba ili kudhibiti rasilimali zako za kidijitali za ndani ya mchezo na (katika baadhi ya matukio) kuingia kwenye michezo. [Chagua mkoba hapa](/wallets/find-wallet/)
+3. **Weka fedha kwenye mkoba wako** - Pata Ether (ETH) au tokeni zinazohusiana na mtandao wa safu ya 2 unaopanga kutumia
+4. **Cheza** - Anza kucheza na ufurahie umiliki halisi wa maendeleo yako ya ndani ya mchezo

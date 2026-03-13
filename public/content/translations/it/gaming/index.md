@@ -96,7 +96,7 @@ Ci sono filosofie contrastanti riguardo a queste meccaniche. Un esempio lampante
 
 ## Inizia a giocare su Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Trova un gioco divertente** - Sfoglia i giochi elencati sopra o esplora piattaforme come [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) e [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Configura il tuo portafoglio di criptovalute** - Avrai bisogno di un portafoglio per gestire i tuoi asset digitali di gioco e (in alcuni casi) per accedere ai giochi. [Scegli un portafoglio qui](/wallets/find-wallet/).
-3. **Ricarica il tuo portafoglio** - Acquista un po' di Ether (ETH) o i token pertinenti per la rete di livello 2 che intendi utilizzare.
-4. **Gioca** - Inizia a giocare e goditi la vera proprietà dei tuoi progressi nel gioco.
+1. **Trova un gioco divertente** - Sfoglia i giochi elencati sopra o esplora piattaforme come [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) e [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Configura il tuo portafoglio di criptovalute** - Avrai bisogno di un portafoglio per gestire i tuoi asset digitali di gioco e (in alcuni casi) per accedere ai giochi. [Scegli un portafoglio qui](/wallets/find-wallet/)
+3. **Ricarica il tuo portafoglio** - Acquista un po' di Ether (ETH) o i token pertinenti per la rete di livello 2 che intendi utilizzare
+4. **Gioca** - Inizia a giocare e goditi la vera proprietà dei tuoi progressi nel gioco

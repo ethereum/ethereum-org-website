@@ -96,7 +96,7 @@ Kolem těchto mechanik existují protichůdné filozofie. Hlavním příkladem j
 
 ## Začněte s hraním na Ethereu {#get-started-with-gaming-on-ethereum}
 
-1. **Najděte si zábavnou hru** – Projděte si hry uvedené výše nebo prozkoumejte platformy jako [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) a [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Nastavte si svou krypto peněženku** – Budete potřebovat peněženku pro správu svých digitálních herních aktiv a (v některých případech) pro přihlášení do her. [Zde si vyberte peněženku](/wallets/find-wallet/).
-3. **Financujte svou peněženku** – Pořiďte si nějaké ethery (ETH) nebo tokeny relevantní pro síť druhé vrstvy, kterou plánujete používat.
-4. **Hrajte** – Začněte hrát a užívejte si skutečné vlastnictví svého herního pokroku.
+1. **Najděte si zábavnou hru** – Projděte si hry uvedené výše nebo prozkoumejte platformy jako [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) a [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Nastavte si svou krypto peněženku** – Budete potřebovat peněženku pro správu svých digitálních herních aktiv a (v některých případech) pro přihlášení do her. [Zde si vyberte peněženku](/wallets/find-wallet/)
+3. **Financujte svou peněženku** – Pořiďte si nějaké ethery (ETH) nebo tokeny relevantní pro síť druhé vrstvy, kterou plánujete používat
+4. **Hrajte** – Začněte hrát a užívejte si skutečné vlastnictví svého herního pokroku

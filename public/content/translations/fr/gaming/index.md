@@ -96,7 +96,7 @@ Il existe des philosophies contrastées autour de ces mécanismes. Un exemple de
 
 ## Commencez à jouer sur Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Trouvez un jeu amusant à jouer** - Parcourez les jeux listés ci-dessus ou explorez des plateformes comme [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) et [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Configurez votre portefeuille crypto** - Vous aurez besoin d'un portefeuille pour gérer vos actifs numériques en jeu et (dans certains cas) pour vous connecter aux jeux. [Choisissez un portefeuille ici](/wallets/find-wallet/).
-3. **Alimentez votre portefeuille** - Acquérez de l'Ether (ETH) ou des jetons pertinents pour le réseau de couche 2 que vous prévoyez d'utiliser.
-4. **Jouez** - Commencez à jouer et profitez de la véritable propriété de votre progression dans le jeu.
+1. **Trouvez un jeu amusant à jouer** - Parcourez les jeux listés ci-dessus ou explorez des plateformes comme [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) et [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Configurez votre portefeuille crypto** - Vous aurez besoin d'un portefeuille pour gérer vos actifs numériques en jeu et (dans certains cas) pour vous connecter aux jeux. [Choisissez un portefeuille ici](/wallets/find-wallet/)
+3. **Alimentez votre portefeuille** - Acquérez de l'Ether (ETH) ou des jetons pertinents pour le réseau de couche 2 que vous prévoyez d'utiliser
+4. **Jouez** - Commencez à jouer et profitez de la véritable propriété de votre progression dans le jeu

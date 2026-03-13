@@ -96,7 +96,7 @@ Es gibt gegensätzliche Philosophien zu diesen Mechanismen. Ein führendes Beisp
 
 ## Erste Schritte beim Spielen auf Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Finde ein unterhaltsames Spiel** - Durchsuche die oben aufgeführten Spiele oder erkunde Plattformen wie [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) und [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Richte deine Krypto-Wallet ein** - Du benötigst eine Wallet, um deine digitalen Ingame-Assets zu verwalten und dich (in einigen Fällen) bei Spielen anzumelden. [Wähle hier eine Wallet aus](/wallets/find-wallet/).
-3. **Fülle deine Wallet auf** - Erwerbe einige Ether (ETH) oder Token, die für das Ebene-2-Netzwerk relevant sind, das du verwenden möchtest.
-4. **Spielen** - Fange an zu spielen und genieße das wahre Eigentum an deinem Spielfortschritt.
+1. **Finde ein unterhaltsames Spiel** - Durchsuche die oben aufgeführten Spiele oder erkunde Plattformen wie [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) und [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Richte deine Krypto-Wallet ein** - Du benötigst eine Wallet, um deine digitalen Ingame-Assets zu verwalten und dich (in einigen Fällen) bei Spielen anzumelden. [Wähle hier eine Wallet aus](/wallets/find-wallet/)
+3. **Fülle deine Wallet auf** - Erwerbe einige Ether (ETH) oder Token, die für das Ebene-2-Netzwerk relevant sind, das du verwenden möchtest
+4. **Spielen** - Fange an zu spielen und genieße das wahre Eigentum an deinem Spielfortschritt

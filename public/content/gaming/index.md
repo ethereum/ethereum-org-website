@@ -96,7 +96,7 @@ There are contrasting philosophies around these mechanics. A leading example is 
 
 ## Get started with gaming on Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Find a fun game to play** - Browse the games listed above or explore platforms like [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), and [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Set up your crypto wallet** - You'll need a wallet to manage your digital in-game assets and (in some cases) to log into games. [Choose a wallet here](/wallets/find-wallet/).
-3. **Fund your wallet** - Acquire some Ether (ETH) or tokens relevant to the layer 2 network you plan to use.
-4. **Play** - Start playing and enjoy true ownership of your in-game progress.
+1. **Find a fun game to play** - Browse the games listed above or explore platforms like [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), and [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Set up your crypto wallet** - You'll need a wallet to manage your digital in-game assets and (in some cases) to log into games. [Choose a wallet here](/wallets/find-wallet/)
+3. **Fund your wallet** - Acquire some Ether (ETH) or tokens relevant to the layer 2 network you plan to use
+4. **Play** - Start playing and enjoy true ownership of your in-game progress

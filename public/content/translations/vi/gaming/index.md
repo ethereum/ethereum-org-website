@@ -96,7 +96,7 @@ Có những triết lý trái ngược nhau xung quanh các cơ chế này. Mộ
 
 ## Bắt đầu chơi game trên Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Tìm một trò chơi thú vị để chơi** - Duyệt qua các trò chơi được liệt kê ở trên hoặc khám phá các nền tảng như [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) và [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Thiết lập ví tiền mã hóa của bạn** - Bạn sẽ cần một chiếc ví để quản lý tài sản kỹ thuật số trong trò chơi của mình và (trong một số trường hợp) để đăng nhập vào trò chơi. [Chọn ví tại đây](/wallets/find-wallet/).
-3. **Nạp tiền vào ví của bạn** - Mua một ít Ether (ETH) hoặc các token liên quan đến mạng lưới lớp 2 mà bạn dự định sử dụng.
-4. **Chơi** - Bắt đầu chơi và tận hưởng quyền sở hữu thực sự đối với tiến trình trong trò chơi của bạn.
+1. **Tìm một trò chơi thú vị để chơi** - Duyệt qua các trò chơi được liệt kê ở trên hoặc khám phá các nền tảng như [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) và [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Thiết lập ví tiền mã hóa của bạn** - Bạn sẽ cần một chiếc ví để quản lý tài sản kỹ thuật số trong trò chơi của mình và (trong một số trường hợp) để đăng nhập vào trò chơi. [Chọn ví tại đây](/wallets/find-wallet/)
+3. **Nạp tiền vào ví của bạn** - Mua một ít Ether (ETH) hoặc các token liên quan đến mạng lưới lớp 2 mà bạn dự định sử dụng
+4. **Chơi** - Bắt đầu chơi và tận hưởng quyền sở hữu thực sự đối với tiến trình trong trò chơi của bạn

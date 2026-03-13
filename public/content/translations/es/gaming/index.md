@@ -96,7 +96,7 @@ Existen filosofías contrapuestas en torno a estas mecánicas. Un ejemplo destac
 
 ## Comenzar a jugar en Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Busque un juego divertido para jugar** - Explore los juegos mencionados anteriormente o explore plataformas como [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) y [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Configure su billetera de criptomonedas** - Necesitará una billetera para gestionar sus activos digitales del juego y (en algunos casos) para iniciar sesión en los juegos. [Elija una billetera aquí](/wallets/find-wallet/).
-3. **Fondee su billetera** - Adquiera algo de ether (ETH) o los tokens relevantes para la red de capa 2 que planea usar.
-4. **Juegue** - Comience a jugar y disfrute de la verdadera propiedad de su progreso en el juego.
+1. **Busque un juego divertido para jugar** - Explore los juegos mencionados anteriormente o explore plataformas como [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) y [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Configure su billetera de criptomonedas** - Necesitará una billetera para gestionar sus activos digitales del juego y (en algunos casos) para iniciar sesión en los juegos. [Elija una billetera aquí](/wallets/find-wallet/)
+3. **Fondee su billetera** - Adquiera algo de ether (ETH) o los tokens relevantes para la red de capa 2 que planea usar
+4. **Juegue** - Comience a jugar y disfrute de la verdadera propiedad de su progreso en el juego

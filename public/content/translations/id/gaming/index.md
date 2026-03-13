@@ -96,7 +96,7 @@ Ada filosofi yang kontras seputar mekanisme ini. Contoh utamanya adalah Kamigotc
 
 ## Mulai bermain game di Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Temukan game yang seru untuk dimainkan** - Jelajahi game yang tercantum di atas atau jelajahi platform seperti [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), dan [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
-2. **Siapkan dompet kripto Anda** - Anda akan memerlukan dompet untuk mengelola aset digital dalam game Anda dan (dalam beberapa kasus) untuk masuk ke game. [Pilih dompet di sini](/wallets/find-wallet/).
-3. **Danai dompet Anda** - Dapatkan beberapa Ether (ETH) atau token yang relevan dengan jaringan layer 2 yang Anda rencanakan untuk digunakan.
-4. **Mainkan** - Mulai bermain dan nikmati kepemilikan sejati atas kemajuan dalam game Anda.
+1. **Temukan game yang seru untuk dimainkan** - Jelajahi game yang tercantum di atas atau jelajahi platform seperti [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), dan [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Siapkan dompet kripto Anda** - Anda akan memerlukan dompet untuk mengelola aset digital dalam game Anda dan (dalam beberapa kasus) untuk masuk ke game. [Pilih dompet di sini](/wallets/find-wallet/)
+3. **Danai dompet Anda** - Dapatkan beberapa Ether (ETH) atau token yang relevan dengan jaringan layer 2 yang Anda rencanakan untuk digunakan
+4. **Mainkan** - Mulai bermain dan nikmati kepemilikan sejati atas kemajuan dalam game Anda
