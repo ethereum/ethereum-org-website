@@ -67,7 +67,7 @@ Wbudowanie bezdowierzenialnej wymiany ładunku bloku za płatność bezpośredni
 
 Aby rozwiązać problem wąskiego gardła „gorącej ścieżki”, ePBS wprowadza również Payload Timeliness Committee (PTC) i logikę podwójnego terminu, pozwalając walidatorom poświadczać blok konsensusu i terminowość ładunku wykonawczego oddzielnie, aby zmaksymalizować przepustowość.
 
-<YouTube id=”u8XvkTrjITs” />
+<YouTube id="u8XvkTrjITs" />
 
 Oddzielenie ról proponującego i konstruktora na poziomie protokołu rozszerza okno propagacji (lub czas dostępny do rozpowszechniania danych w sieci) z 2 sekund do około 9 sekund.
 

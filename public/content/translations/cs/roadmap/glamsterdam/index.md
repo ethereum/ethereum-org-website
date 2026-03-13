@@ -67,7 +67,7 @@ Zabudování bezdůvěrové výměny payloadu bloku za platbu přímo do protoko
 
 Pro řešení úzkého hrdla „horké cesty” zavádí ePBS také Výbor pro včasnost payloadu (PTC) a logiku dvojitého termínu, která umožňuje validátorům potvrzovat konsenzuální blok a včasnost exekučního payloadu samostatně, aby se maximalizoval výkon.
 
-<YouTube id=”u8XvkTrjITs” />
+<YouTube id="u8XvkTrjITs" />
 
 Oddělení rolí navrhovatele a tvůrce na úrovni protokolu rozšiřuje okno šíření (neboli čas dostupný pro šíření dat po síti) z 2 sekund na přibližně 9 sekund.
 

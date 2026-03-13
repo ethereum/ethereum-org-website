@@ -67,7 +67,7 @@ Der vertrauenslose Austausch einer Block-Nutzlast gegen Zahlung direkt im Protok
 
 Um den „Hot Path”-Engpass zu beheben, führt ePBS auch das Payload Timeliness Committee (PTC) und eine Dual-Deadline-Logik ein, die es Validatoren ermöglicht, den Konsensblock und die Pünktlichkeit der Ausführungsnutzlast separat zu attestieren, um den Durchsatz zu maximieren.
 
-<YouTube id=”u8XvkTrjITs” />
+<YouTube id="u8XvkTrjITs" />
 
 Die Trennung der Rollen von Proposer und Builder auf Protokollebene erweitert das Ausbreitungsfenster (oder die Zeit, die für die Verbreitung von Daten im Netzwerk zur Verfügung steht) von 2 Sekunden auf etwa 9 Sekunden.
 
