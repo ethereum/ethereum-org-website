@@ -11,6 +11,176 @@ const BATCH_DELAY_MS = 50 // Small delay between batches to avoid rate limiting
 
 const APP_PAGES_PREFIX = "app/[locale]/"
 
+interface AllContributorsEntry {
+  login: string
+  name: string
+  avatar_url: string
+}
+
+type NameLookup = Map<string, AllContributorsEntry>
+
+/**
+ * Fetch .all-contributorsrc from GitHub and build a case-insensitive
+ * name -> entry lookup map for resolving co-authors by display name.
+ */
+async function fetchNameLookup(): Promise<NameLookup> {
+  const url =
+    "https://raw.githubusercontent.com/ethereum/ethereum-org-website/master/.all-contributorsrc"
+  const response = await fetch(url)
+
+  if (!response.ok) {
+    console.warn("Failed to fetch .all-contributorsrc:", response.status)
+    return new Map()
+  }
+
+  const data = await response.json()
+  const entries: AllContributorsEntry[] = data.contributors || []
+  const lookup: NameLookup = new Map()
+
+  for (const entry of entries) {
+    lookup.set(entry.name.toLowerCase(), entry)
+  }
+
+  return lookup
+}
+
+/** Email addresses (or substrings) that identify AI agent co-authors */
+const EXCLUDED_EMAILS = [
+  "noreply@anthropic.com",
+  "copilot@github.com",
+  "49699333+dependabot[bot]@users.noreply.github.com",
+  "actions@github.com",
+  "github-actions[bot]@users.noreply.github.com",
+  "noreply@github.com",
+]
+
+/** GitHub logins (exact match) that should be excluded */
+const EXCLUDED_LOGINS = [
+  "dependabot[bot]",
+  "github-actions[bot]",
+  "allcontributors[bot]",
+  "netlify[bot]",
+  "crowdin-bot",
+  "eth-bot",
+  "ethereumoptimism-bot",
+  "coderabbitai[bot]",
+]
+
+/** Name patterns (case-insensitive substring match) for AI agent co-authors */
+const EXCLUDED_NAME_PATTERNS = [
+  "claude",
+  "copilot",
+  "gpt",
+  "chatgpt",
+  "openai",
+  "cursor",
+  "codeium",
+  "tabnine",
+  "amazon q",
+  "cody",
+  "gemini",
+  "coderabbit",
+]
+
+/**
+ * Extract GitHub login from a noreply email address.
+ * Handles both formats:
+ *   - "username@users.noreply.github.com"
+ *   - "12345678+username@users.noreply.github.com"
+ * Returns null for non-noreply emails.
+ */
+const extractLoginFromNoreplyEmail = (email: string): string | null => {
+  const match = email.match(/^(?:\d+\+)?([^@]+)@users\.noreply\.github\.com$/)
+  return match ? match[1] : null
+}
+
+/**
+ * Parse co-author trailers from a commit message.
+ * Matches lines like: "Co-authored-by: Name <email>"
+ *
+ * Resolution chain for each co-author:
+ * 1. Filter out bots/AI agents by email and name patterns
+ * 2. Extract login from GitHub noreply email if applicable
+ * 3. Match display name against .all-contributorsrc entries
+ * 4. Fall back to trailer name (no avatar/profile link)
+ */
+const parseCoAuthors = (
+  message: string,
+  commitDate: string,
+  nameLookup: NameLookup
+): FileContributor[] => {
+  const coAuthorPattern = /^co-authored-by:\s*(.+?)\s*<([^>]+)>/gim
+  const coAuthors: FileContributor[] = []
+  let match
+
+  while ((match = coAuthorPattern.exec(message)) !== null) {
+    const name = match[1].trim()
+    const email = match[2].trim()
+
+    // Skip excluded emails
+    if (
+      EXCLUDED_EMAILS.some((excluded) =>
+        email.toLowerCase().includes(excluded.toLowerCase())
+      )
+    ) {
+      continue
+    }
+
+    // Skip excluded name patterns (catches AI agents)
+    if (
+      EXCLUDED_NAME_PATTERNS.some((pattern) =>
+        name.toLowerCase().includes(pattern.toLowerCase())
+      )
+    ) {
+      continue
+    }
+
+    // 1. Try noreply email -> GitHub login
+    const noreplyLogin = extractLoginFromNoreplyEmail(email)
+    if (noreplyLogin) {
+      if (!isExcludedContributor(noreplyLogin)) {
+        coAuthors.push({
+          login: noreplyLogin,
+          avatar_url: `https://avatars.githubusercontent.com/${noreplyLogin}`,
+          html_url: `https://github.com/${noreplyLogin}`,
+          date: commitDate,
+        })
+      }
+      continue
+    }
+
+    // 2. Try name match in .all-contributorsrc
+    const entry = nameLookup.get(name.toLowerCase())
+    if (entry) {
+      if (!isExcludedContributor(entry.login)) {
+        coAuthors.push({
+          login: entry.login,
+          avatar_url: entry.avatar_url,
+          html_url: `https://github.com/${entry.login}`,
+          date: commitDate,
+        })
+      }
+      continue
+    }
+
+    // 3. Last resort: use trailer name, no avatar or profile link
+    coAuthors.push({
+      login: name,
+      avatar_url: "",
+      html_url: "",
+      date: commitDate,
+    })
+  }
+
+  return coAuthors
+}
+
+/** Check if a primary commit author should be excluded */
+const isExcludedContributor = (login: string): boolean =>
+  EXCLUDED_LOGINS.some(
+    (excluded) => excluded.toLowerCase() === login.toLowerCase()
+  )
+
 /**
  * Generate all historical paths for an app page.
  * Used to aggregate git history across directory structure migrations.
@@ -73,7 +243,8 @@ async function parallelBatch<T, R>(
  */
 async function fetchCommitsForPath(
   filepath: string,
-  token: string
+  token: string,
+  nameLookup: NameLookup
 ): Promise<FileContributor[]> {
   const url = new URL(`${GITHUB_API_BASE}/commits`)
   url.searchParams.set("path", filepath)
@@ -96,7 +267,7 @@ async function fetchCommitsForPath(
       const waitTime = +resetTime - Math.floor(Date.now() / 1000)
       console.log(`Rate limit exceeded, waiting ${waitTime}s...`)
       await delay(waitTime * 1000)
-      return fetchCommitsForPath(filepath, token) // Retry
+      return fetchCommitsForPath(filepath, token, nameLookup) // Retry
     }
   }
 
@@ -119,16 +290,33 @@ async function fetchCommitsForPath(
   // When a commit author email isn't linked to a GitHub account, the API
   // returns `author: null`. We still include these commits so their date
   // is captured, using the git commit author name as a fallback identity.
-  const contributors = commits.map(
+  // Also parses co-author trailers and filters out bots/AI agents.
+  const contributors = commits.flatMap(
     (commit: {
       author?: { login: string; avatar_url: string; html_url: string } | null
-      commit: { author: { name: string; date: string } }
-    }) => ({
-      login: commit.author?.login ?? commit.commit.author.name,
-      avatar_url: commit.author?.avatar_url ?? "",
-      html_url: commit.author?.html_url ?? "",
-      date: commit.commit.author.date,
-    })
+      commit: { author: { name: string; date: string }; message: string }
+    }) => {
+      const login = commit.author?.login ?? commit.commit.author.name
+      const date = commit.commit.author.date
+
+      // Use username-based avatar URL instead of the API's /u/{id}?v=4
+      // format which causes redirect loops with Next.js image optimization
+      const primary: FileContributor[] =
+        isExcludedContributor(login)
+          ? []
+          : [{
+              login,
+              avatar_url: commit.author
+                ? `https://avatars.githubusercontent.com/${commit.author.login}`
+                : "",
+              html_url: commit.author?.html_url ?? "",
+              date,
+            }]
+
+      const coAuthors = parseCoAuthors(commit.commit.message, date, nameLookup)
+
+      return [...primary, ...coAuthors]
+    }
   )
 
   // Remove duplicates by login (keep first = most recent)
@@ -145,10 +333,11 @@ async function fetchCommitsForPath(
  */
 async function fetchContributorsForPaths(
   paths: string[],
-  token: string
+  token: string,
+  nameLookup: NameLookup
 ): Promise<FileContributor[]> {
   const results = await parallelBatch(paths, (path) =>
-    fetchCommitsForPath(path, token)
+    fetchCommitsForPath(path, token, nameLookup)
   )
 
   const allContributors = results.flat()
@@ -257,6 +446,10 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
   console.log("Starting GitHub contributors fetch...")
   const startTime = Date.now()
 
+  // Build name lookup from .all-contributorsrc for co-author resolution
+  const nameLookup = await fetchNameLookup()
+  console.log(`Loaded ${nameLookup.size} entries from .all-contributorsrc`)
+
   const result: GitHubContributorsData = {
     content: {},
     appPages: {},
@@ -288,7 +481,7 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
   const contentResults = await parallelBatch(
     contentPathPairs,
     async ({ slug, paths }) => {
-      const contributors = await fetchContributorsForPaths(paths, token)
+      const contributors = await fetchContributorsForPaths(paths, token, nameLookup)
       return { slug, contributors }
     }
   )
@@ -320,7 +513,7 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
   const appPageResults = await parallelBatch(
     appPagePathPairs,
     async ({ pagePath, paths }) => {
-      const contributors = await fetchContributorsForPaths(paths, token)
+      const contributors = await fetchContributorsForPaths(paths, token, nameLookup)
       return { pagePath, contributors }
     }
   )

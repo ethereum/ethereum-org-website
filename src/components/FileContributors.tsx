@@ -13,7 +13,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { Avatar } from "./ui/avatar"
+import { Avatar, AvatarBase, AvatarFallback } from "./ui/avatar"
 import Modal from "./ui/dialog-modal"
 import { LinkBox, LinkOverlay } from "./ui/link-box"
 
@@ -29,20 +29,45 @@ const ContributorAvatar = ({
   contributor,
   label,
   className,
-}: ContributorProps & { label?: string; className?: string }) => (
-  <Avatar
-    src={contributor.avatar_url}
-    name={contributor.login}
-    href={
-      contributor.html_url.includes("crowdin.com")
-        ? contributor.html_url
-        : "https://github.com/" + contributor.login
-    }
-    // `size-10` is not part of the "size" variants
-    className={cn("size-10", className)}
-    label={label}
-  />
-)
+}: ContributorProps & { label?: string; className?: string }) => {
+  const hasProfile = !!contributor.html_url
+
+  // Contributors without a profile (no GitHub account)
+  if (!hasProfile) {
+    const initials = contributor.login
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .slice(0, 2)
+      .toUpperCase()
+
+    return (
+      <Flex className="items-center gap-1">
+        <AvatarBase className={cn("size-10", className)}>
+          <AvatarFallback>{initials}</AvatarFallback>
+        </AvatarBase>
+        {label && (
+          <span className="inline-flex items-center p-1 text-sm">{label}</span>
+        )}
+      </Flex>
+    )
+  }
+
+  return (
+    <Avatar
+      src={contributor.avatar_url}
+      name={contributor.login}
+      href={
+        contributor.html_url.includes("crowdin.com")
+          ? contributor.html_url
+          : "https://github.com/" + contributor.login
+      }
+      // `size-10` is not part of the "size" variants
+      className={cn("size-10", className)}
+      label={label}
+    />
+  )
+}
 
 const ContributorAvatarGroup = ({
   contributors,
@@ -75,19 +100,22 @@ const ContributorAvatarGroup = ({
 }
 
 type ContributorProps = { contributor: FileContributor }
-const Contributor = ({ contributor }: ContributorProps) => (
-  <ListItem className="flex items-center p-2">
-    <ContributorAvatar
-      contributor={contributor}
-      label={"@" + contributor.login}
-    />
-    {contributor.html_url.includes("crowdin.com") && (
-      <p className="ms-5 text-body-medium">
-        <Translation id="translator" />
-      </p>
-    )}
-  </ListItem>
-)
+const Contributor = ({ contributor }: ContributorProps) => {
+  const hasProfile = !!contributor.html_url
+  return (
+    <ListItem className="flex items-center p-2">
+      <ContributorAvatar
+        contributor={contributor}
+        label={hasProfile ? "@" + contributor.login : contributor.login}
+      />
+      {contributor.html_url.includes("crowdin.com") && (
+        <p className="ms-5 text-body-medium">
+          <Translation id="translator" />
+        </p>
+      )}
+    </ListItem>
+  )
+}
 
 type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 export type FileContributorsProps = FlexProps & {
