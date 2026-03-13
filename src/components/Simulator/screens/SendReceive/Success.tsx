@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
 import { Check } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 
 import { Flex, VStack } from "@/components/ui/flex"
 import { Spinner } from "@/components/ui/spinner"

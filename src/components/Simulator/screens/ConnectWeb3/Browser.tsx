@@ -1,6 +1,6 @@
 import React, { type HTMLAttributes, useEffect, useState } from "react"
-import { motion } from "framer-motion"
 import { MoreHorizontal, Search, Triangle } from "lucide-react"
+import { motion } from "motion/react"
 
 import { Flex, HStack } from "@/components/ui/flex"
 
