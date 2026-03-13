@@ -5,11 +5,11 @@ lang: uk
 ---
 # Глемстердам {#glamsterdam}
 
-**Glamsterdam — це майбутнє оновлення Ethereum, заплановане на першу половину 2026 року**
-
-
 <Alert variant="update">
 <AlertContent>
+<AlertTitle>
+Glamsterdam — це майбутнє оновлення Ethereum, заплановане на першу половину 2026 року
+</AlertTitle>
 <AlertDescription>
 Оновлення Glamsterdam — це лише один крок у довгострокових цілях розвитку Ethereum. Дізнайтеся більше про [дорожню карту протоколу](/roadmap/) та [попередні оновлення](/ethereum-forks/).
 </AlertDescription>

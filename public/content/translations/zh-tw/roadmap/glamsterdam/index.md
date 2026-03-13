@@ -5,11 +5,11 @@ lang: zh-tw
 ---
 # 時尚阿姆斯特丹 {#glamsterdam}
 
-**Glamsterdam 是以太坊預計在 2026 年上半年進行的升級**
-
-
 <Alert variant="update">
 <AlertContent>
+<AlertTitle>
+Glamsterdam 是以太坊預計在 2026 年上半年進行的升級
+</AlertTitle>
 <AlertDescription>
 Glamsterdam 的升級只是以太坊長期發展目標中的其中一步。進一步瞭解[協議開發藍圖](/roadmap/)和[之前的升級](/ethereum-forks/)。
 </AlertDescription>

@@ -5,11 +5,12 @@ lang: cs
 ---
 # Glamsterdam {#glamsterdam}
 
-**Glamsterdam je nadcházející upgrade Etherea plánovaný na první pololetí roku 2026**
-
 
 <Alert variant="update">
 <AlertContent>
+<AlertTitle>
+Glamsterdam je nadcházející upgrade Etherea plánovaný na první pololetí roku 2026
+</AlertTitle>
 <AlertDescription>
 Aktualizace Glamsterdam je jen jedním z kroků v rámci dlouhodobých vývojových cílů Etherea. Zjistěte více o [plán vylepšení protokol](/roadmap/) a [předchozích aktualizacích](/ethereum-forks/).
 </AlertDescription>

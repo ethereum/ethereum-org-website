@@ -5,11 +5,11 @@ lang: zh
 ---
 # 魅力阿姆斯特丹 {#glamsterdam}
 
-**Glamsterdam 是计划于 2026 年上半年进行的一次以太坊升级**
-
-
 <Alert variant="update">
 <AlertContent>
+<AlertTitle>
+Glamsterdam 是计划于 2026 年上半年进行的一次以太坊升级
+</AlertTitle>
 <AlertDescription>
 Glamsterdam 升级只是以太坊长期发展目标中的一步。了解有关[协议路线图](/roadmap/)和[先前升级的](/ethereum-forks/)更多信息。
 </AlertDescription>

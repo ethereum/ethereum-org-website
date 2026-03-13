@@ -5,11 +5,12 @@ lang: sw
 ---
 # Glamsterdam {#glamsterdam}
 
-**Glamsterdam ni sasisho lijalo la Ethereum lililopangwa kwa nusu ya kwanza ya 2026**
-
 
 <Alert variant="update">
 <AlertContent>
+<AlertTitle>
+Glamsterdam ni sasisho lijalo la Ethereum lililopangwa kwa nusu ya kwanza ya 2026
+</AlertTitle>
 <AlertDescription>
 Uboreshaji wa Glamsterdam ni hatua moja tu katika malengo ya maendeleo ya muda mrefu ya Ethereum. Jifunze zaidi kuhusu [mpango wa utekelezaji itifaki](/roadmap/) na [maboresho ya awali](/ethereum-forks/).
 </AlertDescription>

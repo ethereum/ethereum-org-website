@@ -5,11 +5,11 @@ lang: ja
 ---
 # グラムステルダム {#glamsterdam}
 
-**Glamsterdamは、2026年上半期に予定されているイーサリアムのアップグレードです。**
-
-
 <Alert variant="update">
 <AlertContent>
+<AlertTitle>
+Glamsterdamは、2026年上半期に予定されているイーサリアムのアップグレードです。
+</AlertTitle>
 <AlertDescription>
 Glamsterdamのアップグレードは、イーサリアムの長期的な開発目標における単なる一歩に過ぎません。[プロトコルのロードマップ](/roadmap/)と[過去のアップグレード](/ethereum-forks/)について、さらに詳しくご覧ください。
 </AlertDescription>

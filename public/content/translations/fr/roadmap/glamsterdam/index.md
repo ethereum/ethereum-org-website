@@ -5,11 +5,12 @@ lang: fr
 ---
 # Glamsterdam {#glamsterdam}
 
-**Glamsterdam est une prochaine mise à niveau d'Ethereum prévue pour le premier semestre 2026**
-
 
 <Alert variant="update">
 <AlertContent>
+<AlertTitle>
+Glamsterdam est une prochaine mise à niveau d'Ethereum prévue pour le premier semestre 2026
+</AlertTitle>
 <AlertDescription>
 La mise à niveau Glamsterdam n'est qu'une étape dans les objectifs de développement à long terme d'Ethereum. Apprenez-en davantage sur [la feuille de route du protocole](/roadmap/) et [les mises à niveau précédentes](/ethereum-forks/).
 </AlertDescription>

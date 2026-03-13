@@ -5,11 +5,12 @@ lang: es
 ---
 # Glamsterdam {#glamsterdam}
 
-**Glamsterdam es una próxima actualización de Ethereum prevista para el primer semestre de 2026**
-
 
 <Alert variant="update">
 <AlertContent>
+<AlertTitle>
+Glamsterdam es una próxima actualización de Ethereum prevista para el primer semestre de 2026
+</AlertTitle>
 <AlertDescription>
 La actualización Glamsterdam es solo un paso en los objetivos de desarrollo a largo plazo de Ethereum. Obtenga más información sobre [la hoja de ruta del protocolo](/roadmap/) y [las actualizaciones anteriores](/ethereum-forks/).
 </AlertDescription>

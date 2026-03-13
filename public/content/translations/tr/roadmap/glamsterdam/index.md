@@ -5,11 +5,12 @@ lang: tr
 ---
 # Glamsterdam {#glamsterdam}
 
-**Glamsterdam, 2026'nın ilk yarısı için planlanan bir Ethereum yükseltmesidir.**
-
 
 <Alert variant="update">
 <AlertContent>
+<AlertTitle>
+Glamsterdam, 2026'nın ilk yarısı için planlanan bir Ethereum yükseltmesidir.
+</AlertTitle>
 <AlertDescription>
 Glamsterdam yükseltmesi, Ethereum'un uzun vadeli geliştirme hedeflerinde yalnızca tek bir adımdır. [Protokol yol haritası](/roadmap/) ve [önceki yükseltmeler](/ethereum-forks/) hakkında daha fazla bilgi edinin.
 </AlertDescription>
