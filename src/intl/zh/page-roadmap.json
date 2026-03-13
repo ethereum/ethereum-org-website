@@ -55,6 +55,7 @@
   "page-roadmap-release-status-dev": "开发中的客户端",
   "page-roadmap-release-main-features": "主要特性",
   "page-roadmap-release-learn-more": "了解更多",
+  "page-roadmap-release-forkcast": "追踪变更",
   "page-roadmap-paris-pos-title": "向权益证明机制过渡",
   "page-roadmap-paris-pos-item-1": "用基于质押的共识机制取代了高能耗挖矿机制",
   "page-roadmap-paris-pos-item-2": "将以太坊的能耗降低了约99.95%",
