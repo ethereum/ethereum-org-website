@@ -31,6 +31,8 @@ export function TerminalTypewriter({
   }, [])
 
   useEffect(() => {
+    if (messages.length === 0) return
+
     const msg = messages[msgIdx]
     let id: ReturnType<typeof setTimeout>
 
@@ -55,6 +57,8 @@ export function TerminalTypewriter({
 
     return () => clearTimeout(id)
   }, [text, phase, msgIdx, messages])
+
+  if (messages.length === 0) return null
 
   return (
     <div className={cn("w-full max-w-2xl", className)}>
