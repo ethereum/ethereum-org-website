@@ -42,6 +42,7 @@
 | 31 | Translated inline code content with orphaned backticks | pt-br #17122 | EN: `` pass `wallet`, the compiled `` -> PT: `passar a carteira \`, o arquivo` -- Crowdin translates content inside backticks, breaking the code span and leaving orphaned backticks | High -- broken inline code, stray backtick in prose |
 | 32 | False-positive "Exposed MDX tag" for PascalCase components | PR #17702 | `<DocLink href="...">` flagged as exposed tag -- 384 false warnings across 72 files; DocLink is registered MDX component in MdComponents | Low -- false warning, no build impact |
 | 33 | LLM artifact tokens exposed in MDX | PR #17730 (mr) | `कृ<bos>ितपणे` -- `<bos>` (beginning-of-sequence) token from machine translation leaks into prose; MDX parser treats it as unrecognized JSX component; other tokens: `<eos>`, `<s>`, `</s>`, `<pad>`, `<unk>`, `<mask>` | Critical -- breaks MDX compilation |
+| 34 | Smart/curly quotes in JSX attribute values | PR #17770 (cs,de,pl,zh) | `<YouTube id=\u201Du8XvkTrjITs\u201D />` -- Crowdin or LLM replaces straight `"` with smart quotes (U+201C/U+201D/U+201E) inside JSX component attribute values; MDX parser expects `"` or `'` to delimit attributes | Critical -- breaks MDX compilation |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 

@@ -5,18 +5,19 @@ lang: cs
 ---
 # Glamsterdam {#glamsterdam}
 
-**Glamsterdam je nadcházející upgrade Etherea plánovaný na první pololetí roku 2026**
-
 
 <Alert variant="update">
 <AlertContent>
+<AlertTitle>
+Glamsterdam je nadcházející upgrade Etherea plánovaný na první pololetí roku 2026
+</AlertTitle>
 <AlertDescription>
 Aktualizace Glamsterdam je jen jedním z kroků v rámci dlouhodobých vývojových cílů Etherea. Zjistěte více o [plán vylepšení protokol](/roadmap/) a [předchozích aktualizacích](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Nadcházející upgrade [sítě Ethereum](/) s názvem Glamsterdam má připravit cestu pro další generaci škálování. Glamsterdam je název vzniklý spojením „Amsterdam“ (upgrade exekuční vrstva, pojmenovaný podle předchozího místa konání Devconnect) a „Glaas“ (upgrade konsensuální vrstva, pojmenovaný podle hvězdy).
+Nadcházející upgrade [sítě Ethereum](/) s názvem Glamsterdam má připravit cestu pro další generaci škálování. Glamsterdam je název vzniklý spojením „Amsterdam“ (upgrade exekuční vrstva, pojmenovaný podle předchozího místa konání Devconnect) a „Gloas” (upgrade konsensuální vrstva, pojmenovaný podle hvězdy).
 
 Po pokroku dosaženém při upgradu [Fusaka](/roadmap/fusaka/) se Glamsterdam zaměřuje na škálování L1 reorganizací způsobu, jakým síť zpracovává transakce a spravuje svou rostoucí databázi, a zásadně aktualizuje způsob, jakým Ethereum vytváří a ověřuje bloky.
 
@@ -52,21 +53,25 @@ Smysluplné škálování L1 vyžaduje odklon od předpokladů důvěry mimo pro
 
 ### Hlavní návrh: Zavedení oddělení navrhovatele a sestavovatele (ePBS) {#epbs}
 
-- Odstraňuje předpoklady důvěry mimo protokol a závislost na uzavřených relé.
-- Umožňuje škálování L1 tím, že umožňuje mnohem větší datové zatížení prostřednictvím rozšířených oken šíření.
-- Zavádí bezdůvěrové platby pro tvůrce a šifrované transakce pro anonymní tvůrce.
+- Odstraňuje předpoklady důvěry mimo protokol a závislost na relé třetích stran
+- Umožňuje škálování L1 tím, že umožňuje mnohem větší datové zatížení prostřednictvím rozšířených oken šíření
+- Zavádí bezdůvěrové platby pro tvůrce přímo do protokolu
 
-V současné době proces navrhování a sestavování bloky zahrnuje předání mezi blok a sestavovateli blok. Vztah mezi navrhovateli a sestavovateli není součástí základního protokol Etherea, takže se spoléhá na proprietární software třetích stran (relé) a také na mimoprotokolovou důvěru mezi entitami. 
+V současné době proces navrhování a sestavování bloků zahrnuje předání mezi navrhovateli bloků a sestavovateli bloků. Vztah mezi navrhovateli a sestavovateli není součástí základního protokolu Etherea, takže se spoléhá na důvěryhodný middleware třetích stran, software (relé) a mimoprotokolovou důvěru mezi entitami.
 
-Mimořádný vztah mezi navrhovateli a tvůrci bloků také vytváří „horkou cestu“ během ověřování blok, která nutí [validátoři](/glossary/#validator) k rychlému vysílání a provádění transakce v úzkém dvousekundovém okně, což omezuje množství dat, které síť dokáže zpracovat.
+Mimoprotokolový vztah mezi navrhovateli a tvůrci bloků také vytváří „horkou cestu” během ověřování bloků, která nutí [validátory](/glossary/#validator) k rychlému vysílání a provádění transakcí v úzkém dvousekundovém okně, což omezuje množství dat, které síť dokáže zpracovat.
 
-**Zavedení oddělení navrhovatele a sestavovatele (ePBS neboli EIP-7732)** formálně odděluje práci navrhovatele (který vybírá blok) od sestavovatele (který sestavuje transakce), čímž se tento proces „zakotvuje“ přímo do protokol Ethereum, aby se odstranila nutnost důvěry mimo protokol. Zavádí také Výbor pro včasnost dat (PTC) a logiku dvojitého termínu, přičemž validátoři potvrzují včasnost a dostupnost dat samostatně, aby se maximalizoval výkon. 
+**Zavedení oddělení navrhovatele a sestavovatele (ePBS neboli EIP-7732)** formálně odděluje práci navrhovatele (který vybírá konsenzuální blok) od sestavovatele (který sestavuje exekuční payload), čímž se tento proces zakotvuje přímo do protokolu.
+
+Zabudování bezdůvěrové výměny payloadu bloku za platbu přímo do protokolu odstraňuje potřebu middlewaru třetích stran (jako je MEV-Boost). Tvůrci a navrhovatelé však mohou nadále používat mimoprotokolové relé nebo middleware pro složité funkce, které ještě nejsou součástí základního protokolu.
+
+Pro řešení úzkého hrdla „horké cesty” zavádí ePBS také Výbor pro včasnost payloadu (PTC) a logiku dvojitého termínu, která umožňuje validátorům potvrzovat konsenzuální blok a včasnost exekučního payloadu samostatně, aby se maximalizoval výkon.
 
 <YouTube id="u8XvkTrjITs" />
 
-Oddělení rolí navrhovatele a tvůrce na úrovni protokol rozšiřuje okno šíření (neboli čas dostupný pro šíření dat po síť) z 2 sekund na přibližně 9 sekund. 
+Oddělení rolí navrhovatele a tvůrce na úrovni protokolu rozšiřuje okno šíření (neboli čas dostupný pro šíření dat po síti) z 2 sekund na přibližně 9 sekund.
 
-ePBS snižuje závislost na dodatečném softwaru třetích stran a umožňuje Ethereu bezpečně zpracovávat mnohem větší množství dat (například více blobů pro [vrstvu 2](/glossary/#layer-2) ), aniž by to zatěžovalo síť.
+Nahrazením mimoprotokolového middlewaru a relé mechanismy zabudovanými do protokolu ePBS snižuje závislosti na důvěře a umožňuje Ethereu bezpečně zpracovávat mnohem větší množství dat (například více blobů pro [vrstvu 2](/glossary/#layer-2)) bez zatěžování sítě.
 
 **Zdroje**: [Technická specifikace EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
@@ -108,7 +113,7 @@ Přidávání nových účtů, tokenů a [chytrých kontraktů](/glossary/#smart
 
 Některé akce, které vytvářejí stav na Ethereu, jako je vytváření nových účtů nebo nasazování velkých chytrých kontraktů, byly relativně levné ve srovnání s trvalým úložným prostorem, který zabírají na uzlech sítě. Například nasazení kontraktu je výrazně levnější na bajt než vytvoření úložných slotů. 
 
-Bez úprav by se stav Etherea mohl zvětšovat o téměř 200 GiB ročně, pokud se síť rozšíří na limit transakčních poplatků, což by nakonec předčilo běžný hardware. 
+Bez úprav by se stav Etherea mohl zvětšovat o téměř 200 GiB ročně, pokud se síť rozšíří na limit paliva 100M, což by nakonec předčilo běžný hardware. 
 
 **Zvýšení nákladů na palivo při vytváření stavu (nebo EIP-8037)** harmonizuje náklady tím, že je váže na skutečnou velikost vytvářených dat, a aktualizuje poplatky tak, aby byly úměrné množství trvalých dat, která operace vytváří nebo ke kterým přistupuje. 
 
