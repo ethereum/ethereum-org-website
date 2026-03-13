@@ -522,24 +522,6 @@ export type CommonHeroProps<
   className?: string
 }
 
-// Learning Tools
-
-export interface LearningTool {
-  name: string
-  description: string
-  url: string
-  image: StaticImageData
-  alt: string
-  background: string
-  subjects: Array<string>
-  locales?: Array<Lang>
-  priceType?: string
-}
-
-export interface LearningToolsCardGridProps {
-  products: Array<LearningTool>
-}
-
 // Staking stats data fetching
 type Data<T> = {
   data: T

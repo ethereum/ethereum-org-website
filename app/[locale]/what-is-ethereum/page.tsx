@@ -1053,7 +1053,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               </div>
             </Section>
 
-            <Section id="further-readon" className="space-y-8">
+            <Section id="further-reading" className="space-y-8">
               <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
                 {t("page-what-is-ethereum-further-reading-title")}
               </h2>
