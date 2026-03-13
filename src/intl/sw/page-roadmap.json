@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "Usaidizi kwa secure enclaves kwenye vifaa vya mkononi ili kuboresha UX",
   "page-roadmap-fusaka-additional-item-2": "Maboresho ya soko la ada za Blob",
   "page-roadmap-fusaka-additional-item-3": "Maboresho zaidi kwa ufanisi wa mthibitishaji na utendaji wa mtandao",
-  "page-roadmap-glamsterdam-discussed-title": "Imepangwa kwa Glamsterdam",
-  "page-roadmap-glamsterdam-discussed-item-1": "Enshrined Proposer-Builder Separation (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "Block-level Access Lists (BALs)"
+  "page-roadmap-glamsterdam-epbs-title": "Utengano wa asili wa mpendekezaji na wajenzi",
+  "page-roadmap-glamsterdam-epbs-item-1": "Hutenganisha makubaliano ya vitalu kutoka kwa usindikaji, na kusaidia L1 kupanuka kwa kuruhusu vidhibiti kusindika data zaidi.",
+  "page-roadmap-glamsterdam-epbs-item-2": "Huunganisha wajenzi asilia ili wathibitishaji waweze kukabidhi uundaji wa vizuizi kwa usalama bila kuamini programu za nje.",
+  "page-roadmap-glamsterdam-bal-title": "Orodha za ufikiaji wa kiwango cha kitalu",
+  "page-roadmap-glamsterdam-bal-item-1": "Inatambulisha orodha za lazima za ufikiaji katika kiwango cha kizuizi, badala ya miamala ya mtu binafsi.",
+  "page-roadmap-glamsterdam-bal-item-2": "Huorodhesha utegemezi mapema kwa ajili ya ulandanishi wa haraka, utekelezaji sambamba, na usomaji sambamba wa diski.",
+  "page-roadmap-glamsterdam-bal-item-3": "Hupunguza gesi kwa programu zinazotumia sana hali na huboresha utabiri wa gharama ya gesi.",
+  "page-roadmap-hegota-discussed-title": "Imepangwa kwa ajili ya Hegotá",
+  "page-roadmap-hegota-discussed-item-1": "Mapendekezo kwa sasa yanajadiliwa"
 }

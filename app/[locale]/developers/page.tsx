@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
@@ -27,6 +27,7 @@ import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
+import { TerminalTypewriter } from "@/components/ui/terminal-typewriter"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -141,11 +142,9 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
 
   const hackathons = (await getHackathons()).slice(0, 5)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "developers",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -222,6 +221,47 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
           </Section>
 
           <Section
+            id="ethskills"
+            className="flex flex-col gap-8 py-10 sm:items-center md:py-16"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/developers/ethskills.svg"
+              alt="ETHSKILLS"
+              className="h-auto max-h-24 w-full max-w-2xl object-contain"
+            />
+
+            <div className="max-w-xl space-y-2 md:text-center">
+              <h2>{t("page-developers-ethskills-title")}</h2>
+              <p className="text-body-medium">
+                {t("page-developers-ethskills-desc")}
+              </p>
+            </div>
+
+            <TerminalTypewriter
+              messages={[
+                t("page-developers-ethskills-msg-1"),
+                t("page-developers-ethskills-msg-2"),
+                t("page-developers-ethskills-msg-3"),
+                t("page-developers-ethskills-msg-4"),
+                t("page-developers-ethskills-msg-5"),
+              ]}
+            />
+
+            <ButtonLink
+              href="https://ethskills.com/"
+              size="lg"
+              customEventOptions={{
+                eventCategory: "ethskills",
+                eventAction: "click",
+                eventName: "ethskills-section-cta",
+              }}
+            >
+              {t("page-developers-ethskills-cta", { ethskills: "ethskills" })}
+            </ButtonLink>
+          </Section>
+
+          <Section
             id="resources"
             className={cn(
               "grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8",
@@ -283,17 +323,6 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                   }}
                 >
                   Scaffold-ETH 2 <code>llms-full.txt</code>
-                </Link>
-                <Link
-                  href="https://ethskills.com/"
-                  className="block"
-                  customEventOptions={{
-                    eventCategory: "mid_boxes",
-                    eventAction: "click",
-                    eventName: "ethskills",
-                  }}
-                >
-                  ethskills.com - {t("page-developers-ethskills-label")}
                 </Link>
               </div>
             </Card>

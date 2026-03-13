@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "UX सुधारण्यासाठी मोबाइल डिव्हाइसेसवर सुरक्षित एन्क्लेव्हसाठी सपोर्ट",
   "page-roadmap-fusaka-additional-item-2": "ब्लॉब फी मार्केट सुधारणा",
   "page-roadmap-fusaka-additional-item-3": "व्हॅलिडेटर कार्यक्षमता आणि नेटवर्क कामगिरीमध्ये पुढील सुधारणा",
-  "page-roadmap-glamsterdam-discussed-title": "ग्लॅमस्टरडॅमसाठी शेड्यूल केलेले",
-  "page-roadmap-glamsterdam-discussed-item-1": "एन्श्राइन्ड प्रपोझर-बिल्डर सेपरेशन (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "ब्लॉक-स्तरीय ॲक्सेस लिस्ट (BALs)"
+  "page-roadmap-glamsterdam-epbs-title": "प्रस्तावक आणि बिल्डर यांच्यातील विभक्तता",
+  "page-roadmap-glamsterdam-epbs-item-1": "ब्लॉक करार प्रक्रिया वेगळी करते, व्हॅलिडेटर्सना अधिक डेटा प्रक्रिया करण्यास अनुमती देऊन L1 ला स्केल करण्यास मदत करते.",
+  "page-roadmap-glamsterdam-epbs-item-2": "बिल्डर्सना मूळतः एकत्रित करते जेणेकरून व्हॅलिडेटर्स बाह्य सॉफ्टवेअरवर विश्वास न ठेवता ब्लॉक असेंब्ली सुरक्षितपणे आउटसोर्स करू शकतील.",
+  "page-roadmap-glamsterdam-bal-title": "ब्लॉक-स्तरीय प्रवेश यादी",
+  "page-roadmap-glamsterdam-bal-item-1": "वैयक्तिक व्यवहारांसाठी ऐवजी ब्लॉक स्तरावर अनिवार्य प्रवेश सूची सादर करते.",
+  "page-roadmap-glamsterdam-bal-item-2": "जलद सिंक, समांतर अंमलबजावणी आणि समांतर डिस्क वाचनासाठी अवलंबित्वे आगाऊ मॅप करते.",
+  "page-roadmap-glamsterdam-bal-item-3": "स्टेट-हेवी अ‍ॅप्ससाठी गॅस कमी करते आणि गॅस खर्चाची अंदाजक्षमता सुधारते.",
+  "page-roadmap-hegota-discussed-title": "हेगोता साठी नियोजित",
+  "page-roadmap-hegota-discussed-item-1": "प्रस्ताव सध्या चर्चेत आहेत."
 }

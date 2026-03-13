@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "Ifikirie hii kama anuani yako ya barua pepe, lakini badala ya barua inaweza kupokea ETH. Kama unataka kuhamisha ETH kutoka kwenye soko la mabadilishano kwenda kwenye pochi yako, tumia anuani yako ya umma. Hakikisha unaikagua mara mbili mbili kabla ya kutuma!",
   "page-get-eth-your-address-wallet-link": "Anagalia pochi",
   "listing-policy-raise-issue-link": "Ongeza suala",
-  "page-find-wallet-last-updated": "Usasisho wa mwisho"
+  "page-find-wallet-last-updated": "Usasisho wa mwisho",
+  "listing-policy-disclaimer": "Bidhaa zote zilizo zilizoorodheshwa kwenye ukurasa huu sio uthibitisho rasmi, na zinatolewea kwa kusidi la chanzo cha taarifa tu. kama unataka kuongeza bidhaa ama kutuma maoni juu ya sera ongea suala kwenye Github."
 }
