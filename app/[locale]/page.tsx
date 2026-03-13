@@ -732,7 +732,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                     <SectionContent className="flex flex-col gap-4">
                       <div className="flex flex-col items-center text-center">
                         <SectionTag>Apps of the week</SectionTag>
-                        <SectionHeader>Discover apps on Ethereum</SectionHeader>
+                        <SectionHeader>Discover apps on ethereum</SectionHeader>
                         <p className="text-lg">
                           Start exploring Ethereum today
                         </p>

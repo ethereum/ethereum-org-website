@@ -31,8 +31,8 @@ type HomeHero2026Props = ClassNameProp & {
 
 const directButtonCTAs = [
   {
-    label: "Learn Ethereum",
-    description: "What is Ethereum?",
+    label: "Learn ethereum",
+    description: "What is ethereum?",
     href: "/what-is-ethereum/",
     Svg: EthGlyphIcon,
     className: "text-accent-a hover:text-accent-a-hover",
@@ -48,7 +48,7 @@ const directButtonCTAs = [
   },
   {
     label: "Get ETH",
-    description: "The currency of Ethereum",
+    description: "The currency of ethereum",
     href: "/get-eth/",
     Svg: EthTokenIcon,
     className: "text-accent-b hover:text-accent-b-hover",
@@ -56,7 +56,7 @@ const directButtonCTAs = [
   },
   {
     label: "Try apps",
-    description: "See what Ethereum can do",
+    description: "See what ethereum can do",
     href: "/dapps/",
     Svg: TryAppsIcon,
     className: "text-accent-c hover:text-accent-c-hover",
