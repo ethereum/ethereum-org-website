@@ -12,6 +12,7 @@
   "comp-withdrawal-credentials-error": "ஓ! சரிபார்ப்பான் குறியீட்டு எண்ணை இருமுறை சரிபார்த்து மீண்டும் முயற்சிக்கவும்.",
   "comp-withdrawal-credentials-upgraded-1": "சரிபார்ப்பான் குறியீடு {validatorIndex} வெகுமதிகளைப் பெறத் தயாராக உள்ளது!",
   "comp-withdrawal-credentials-upgraded-2": "செயல்படுத்தும் முகவரியுடன் இணைக்கப்பட்ட திரும்பப் பெறும் நற்சான்றிதழ்கள்:",
+  "comp-withdrawal-credentials-max-eb": "அதிகபட்ச பயனுள்ள இருப்பு:",
   "comp-withdrawal-credentials-not-upgraded-1": "இந்த {network} சரிபார்ப்பான் மேம்படுத்தப்பட வேண்டும்.",
   "comp-withdrawal-credentials-not-upgraded-2": "மேம்படுத்துவது எப்படி என்பதற்கான வழிமுறைகளை தற்போது <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">ஸ்டேக்கிங் லான்ச்பேடில்</a> காணலாம்",
   "comp-withdrawal-credentials-verify": "{network} இல் சரிபார்க்கவும்",

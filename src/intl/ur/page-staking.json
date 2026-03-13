@@ -12,6 +12,7 @@
   "comp-withdrawal-credentials-error": "Oops! ویلڈیٹر انڈیکس نمبر دوبارہ چیک کریں اور دوبارہ کوشش کریں۔",
   "comp-withdrawal-credentials-upgraded-1": "ویلڈیٹر انڈیکس {validatorIndex} ریوارڈز وصول کرنا شروع کرنے کے لیے تیار ہے!",
   "comp-withdrawal-credentials-upgraded-2": "واپسی کے اسناد ایکزیکیوشن ایڈریس سے منسلک ہیں:",
+  "comp-withdrawal-credentials-max-eb": "زیادہ سے زیادہ مؤثر بیلنس:",
   "comp-withdrawal-credentials-not-upgraded-1": "اس {network} ویلیڈیٹر کو اپ گریڈ کرنے کی ضرورت ہے۔",
   "comp-withdrawal-credentials-not-upgraded-2": "اپ گریڈ کرنے کی ہدایات اس وقت <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">اسٹیکنگ لانچ پیڈ</a> پر دستیاب ہیں۔",
   "comp-withdrawal-credentials-verify": "{network} پر تصدیق کریں",

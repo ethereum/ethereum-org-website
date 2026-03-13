@@ -12,6 +12,7 @@
   "comp-withdrawal-credentials-error": "糟糕！請核查驗證者索引號後再重試。",
   "comp-withdrawal-credentials-upgraded-1": "驗證者索引 {validatorIndex} 已準備好開始收取獎勵！",
   "comp-withdrawal-credentials-upgraded-2": "鏈接至執行地址的提款憑證：",
+  "comp-withdrawal-credentials-max-eb": "最大有效餘額：",
   "comp-withdrawal-credentials-not-upgraded-1": "此 {network} 驗證程式需要升級。",
   "comp-withdrawal-credentials-not-upgraded-2": "程式升級說明現已發佈於<a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">質押啟動面板</a>",
   "comp-withdrawal-credentials-verify": "在 {network} 上驗證",

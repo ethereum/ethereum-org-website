@@ -12,6 +12,7 @@
   "comp-withdrawal-credentials-error": "Hay aksi! Doğrulayıcı dizin numarasını kontrol edip tekrar deneyin.",
   "comp-withdrawal-credentials-upgraded-1": "Doğrulayıcı indeksi {validatorIndex} ödül almaya başlamak için hazır!",
   "comp-withdrawal-credentials-upgraded-2": "Yürütme adresine bağlı para çekme kimlik bilgileri:",
+  "comp-withdrawal-credentials-max-eb": "Maksimum etkin bakiye:",
   "comp-withdrawal-credentials-not-upgraded-1": "Bu {network} doğrulayıcısının yükseltilmesi gerekiyor.",
   "comp-withdrawal-credentials-not-upgraded-2": "Nasıl yükseltileceği üzerine talimatlar mevcut olarak <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Hisseleme Başlama Noktası</a>'nda bulunabilir",
   "comp-withdrawal-credentials-verify": "{network} üzerinde doğrula",

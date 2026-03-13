@@ -12,6 +12,7 @@
   "comp-withdrawal-credentials-error": "ఊప్స్! వాలిడేటర్ ఇండెక్స్ నంబర్‌ను ఒకటికి రెండుసార్లు తనిఖీ చేసి, మళ్లీ ప్రయత్నించండి.",
   "comp-withdrawal-credentials-upgraded-1": "వాలిడేటర్ సూచిక {validatorIndex} రివార్డ్‌లను స్వీకరించడం ప్రారంభించడానికి సిద్ధంగా ఉంది!",
   "comp-withdrawal-credentials-upgraded-2": "ఉపసంహరణ ఆధారాలు ఎక్సేక్యూషన్ చిరునామాకు లింక్ చేయబడ్డాయి:",
+  "comp-withdrawal-credentials-max-eb": "గరిష్ట ప్రభావవంతమైన బ్యాలెన్స్:",
   "comp-withdrawal-credentials-not-upgraded-1": "ఈ {network} వాలిడేటర్‌ను అప్‌గ్రేడ్ చేయాలి.",
   "comp-withdrawal-credentials-not-upgraded-2": "అప్‌గ్రేడ్ చేయడం ఎలాగో సూచనలను ప్రస్తుతం ఇక్కడ <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">స్టేకింగ్ లాంచ్‌ప్యాడ్</a>లో కనుగొనవచ్చు",
   "comp-withdrawal-credentials-verify": "{network}పై ధృవీకరించండి",

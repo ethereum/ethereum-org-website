@@ -12,6 +12,7 @@
   "comp-withdrawal-credentials-error": "バリデータのインデックス番号を再確認して、再試行してください。",
   "comp-withdrawal-credentials-upgraded-1": "バリデータインデックス {validatorIndex} は、報酬を受け取り始める準備ができました！",
   "comp-withdrawal-credentials-upgraded-2": "実行アドレスにリンクされている引き出し資格情報:",
+  "comp-withdrawal-credentials-max-eb": "最大有効残高:",
   "comp-withdrawal-credentials-not-upgraded-1": "この{network}バリデータをアップグレードする必要があります。",
   "comp-withdrawal-credentials-not-upgraded-2": "アップグレード方法については、 <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">ステーキング・ローンチパッド</a> で確認できます。",
   "comp-withdrawal-credentials-verify": "{network}で認証",
