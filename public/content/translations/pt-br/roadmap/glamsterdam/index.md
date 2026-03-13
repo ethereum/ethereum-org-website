@@ -255,7 +255,7 @@ Essa mudança evitaria falhas de sincronização da rede durante períodos de at
 - **Nenhuma ação necessária para seu ETH**: Não há necessidade de converter ou atualizar seu ETH após a melhoria Glamsterdam. Seu saldo de conta irá permanecer o mesmo e o ETH que você tem atualmente continuará acessível na sua forma existente depois do hard fork.
 - **Cuidado com os golpes!** <Emoji text="⚠️" /> **qualquer pessoa que o instrua a "atualizar" seu ETH está tentando enganá-lo.** Não há nada que você precise fazer em relação a esta melhoria. Seus ativos não serão afetados de forma nenhuma. Lembre-se: estar informado é a melhor defesa contra golpes.
 
-[Mais sobre como reconhecer e evitar golpes](/segurança/)
+[Mais sobre como reconhecer e evitar golpes](/security/)
 
 ### A melhoria Glamsterdam afeta todos os nós e validadores do Ethereum? {#does-the-glamsterdam-upgrade-affect-all-ethereum-nodes-and-validators}
 
