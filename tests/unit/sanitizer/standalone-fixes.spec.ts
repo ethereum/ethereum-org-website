@@ -167,6 +167,44 @@ test.describe("Standalone Fixes", () => {
       expect(content).toBe("This is **bold text** here")
       expect(fixCount).toBe(1)
     })
+
+    test("uses <strong> when bold is followed by Korean characters", () => {
+      const input =
+        "\\*\\*명문화된 제안자-빌더 분리(ePBS 또는 EIP-7732)\\*\\*는 제안자의 작업과"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe(
+        "<strong>명문화된 제안자-빌더 분리(ePBS 또는 EIP-7732)</strong>는 제안자의 작업과"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("uses <strong> when bold is preceded and followed by CJK characters", () => {
+      const input = "关于\\*\\*共识机制\\*\\*的讨论"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe("关于<strong>共识机制</strong>的讨论")
+      expect(fixCount).toBe(1)
+    })
+
+    test("uses ** when bold is followed by whitespace (Arabic with space)", () => {
+      const input = "\\*\\*الترقية\\*\\* ستكون"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe("**الترقية** ستكون")
+      expect(fixCount).toBe(1)
+    })
+
+    test("uses <em> when italic is followed by Korean characters", () => {
+      const input = "\\*이탈릭\\*은 텍스트"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe("<em>이탈릭</em>은 텍스트")
+      expect(fixCount).toBe(1)
+    })
+
+    test("uses ** when bold is followed by ASCII punctuation", () => {
+      const input = "\\*\\*bold text\\*\\*. More text"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe("**bold text**. More text")
+      expect(fixCount).toBe(1)
+    })
   })
 
   test.describe("fixAsciiGuillemets", () => {
