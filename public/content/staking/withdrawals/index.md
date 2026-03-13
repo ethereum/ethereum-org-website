@@ -50,12 +50,12 @@ Providing a withdrawal address is a required step for any validator account befo
 <AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
-  <strong>Each validator account can only be assigned a single withdrawal address, one time.</strong> Once an address is chosen and submitted to the consensus layer, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
+**Each validator account can only be assigned a single withdrawal address, one time.** Once an address is chosen and submitted to the consensus layer, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-There is <strong>no threat to your funds in the meantime</strong> for not providing this, assuming your mnemonic/seed phrase has remained safe offline, and has not been compromised in any way. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
+There is **no threat to your funds in the meantime** for not providing this, assuming your mnemonic/seed phrase has remained safe offline, and has not been compromised in any way. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
 
 ## Compounding validators {#compounding-validators}
 
@@ -72,7 +72,7 @@ With compounding enabled:
 <AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
-  <strong>Converting from Type 1 to Type 2 withdrawal credentials is irreversible.</strong> Use the <a href="https://launchpad.ethereum.org/validator-actions">Staking Launchpad</a> as the official tool for this conversion. For more details on the conversion process, risks, and consolidation, see the <a href="/roadmap/pectra/maxeb/">MaxEB deep-dive</a>.
+**Converting from Type 1 to Type 2 withdrawal credentials is irreversible.** Use the [Staking Launchpad](https://launchpad.ethereum.org/validator-actions) as the official tool for this conversion. For more details on the conversion process, risks, and consolidation, see the [MaxEB deep-dive](/roadmap/pectra/maxeb/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -117,8 +117,10 @@ When a validator is scheduled to propose the next block, it is required to build
 <AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
-Think about an analogue clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached.<br/><br/>
-Now instead of 1 through 12, imagine the clock has 0 through N <em>(the total number of validator accounts that have ever been registered on the consensus layer, over 500,000 as of Jan 2023).</em><br/><br/>
+Think about an analogue clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached.
+
+Now instead of 1 through 12, imagine the clock has 0 through N _(the total number of validator accounts that have ever been registered on the consensus layer, over 500,000 as of Jan 2023)._
+
 The hand on the clock points to the next validator that needs to be checked for eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts. When the last validator is reached, the cycle continues back at the beginning.
 </AlertDescription>
 </AlertContent>
@@ -193,7 +195,7 @@ eventName="read more">
 
 If you are part of a [staking pool](/staking/pools/) or hold staking tokens, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
 
-In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a <a href="https://rated.network/">smaller provider</a>. Or, if you've accumulated enough ETH you could [stake from home](/staking/solo/).
+In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a [smaller provider](https://rated.network/). Or, if you've accumulated enough ETH you could [stake from home](/staking/solo/).
 
 </ExpandableCard>
 
@@ -215,7 +217,7 @@ eventName="read more">
 
 No, if your validator is still active on the network, a full withdrawal will not happen automatically. This requires manually initiating a voluntary exit.
 
-Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawn during the next <a href="#validator-sweeping">validator sweep</a>.
+Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will _then_ be withdrawn during the next <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "FAQ happen automatically (sweep)", eventName: "click" }}>validator sweep</a>.
 
 </ExpandableCard>
 
@@ -234,9 +236,9 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Validator operators are recommended to visit the <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> page where you'll find more details about how to prepare your validator for withdrawals, timing of events, and more details about how withdrawals function.
+Validator operators are recommended to visit the [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals/) page where you'll find more details about how to prepare your validator for withdrawals, timing of events, and more details about how withdrawals function.
 
-To try out your setup on a testnet first, visit the <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> to get started.
+To try out your setup on a testnet first, visit the [Hoodi Testnet Staking Launchpad](https://hoodi.launchpad.ethereum.org) to get started.
 
 </ExpandableCard>
 
@@ -265,7 +267,7 @@ title="How do I convert to a compounding validator?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
-You can convert from Type 1 to Type 2 withdrawal credentials using the <a href="https://launchpad.ethereum.org/validator-actions">Staking Launchpad</a>. This operation is **irreversible** — once you convert, you cannot go back to Type 1 credentials.
+You can convert from Type 1 to Type 2 withdrawal credentials using the [Staking Launchpad](https://launchpad.ethereum.org/validator-actions). This operation is **irreversible** — once you convert, you cannot go back to Type 1 credentials.
 
 After converting, you can also **consolidate** multiple validators into one, combining their balances into a single compounding validator. For a full walkthrough of the conversion process, risks, and consolidation tooling, see the [MaxEB deep-dive](/roadmap/pectra/maxeb/).
 </ExpandableCard>
