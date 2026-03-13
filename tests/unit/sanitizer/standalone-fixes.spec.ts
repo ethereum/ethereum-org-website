@@ -38,6 +38,7 @@ const {
   fixDuplicateFrontmatterAuthor,
   fixBrokenBracketInLinks,
   stripLlmArtifactTokens,
+  fixSmartQuotesInJsxAttributes,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -1435,6 +1436,61 @@ author: Ori Pomerantz
     test("does not strip valid HTML tags like <b> or <strong>", () => {
       const input = "<b>bold</b> and <strong>strong</strong>"
       const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixSmartQuotesInJsxAttributes", () => {
+    test("fixes smart right double quotes in YouTube tag", () => {
+      const input = "<YouTube id=\u201Du8XvkTrjITs\u201D />"
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe('<YouTube id="u8XvkTrjITs" />')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes smart left/right double quotes in Emoji tag", () => {
+      const input = "<Emoji text=\u201C\u2B50\u201D />"
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe('<Emoji text="\u2B50" />')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes German low-9 opening quote in Alert variant", () => {
+      const input = "<Alert variant=\u201Eupdate\u201C>"
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe('<Alert variant="update">')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes multiple tags in same content", () => {
+      const input =
+        "<YouTube id=\u201DGgKveVMLnoo\u201D />\n\nSome text\n\n<YouTube id=\u201Du8XvkTrjITs\u201D />"
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe(
+        '<YouTube id="GgKveVMLnoo" />\n\nSome text\n\n<YouTube id="u8XvkTrjITs" />'
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves straight quotes untouched", () => {
+      const input = '<YouTube id="u8XvkTrjITs" />'
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves smart quotes in prose untouched", () => {
+      const input =
+        'This is a \u201Cquoted\u201D word next to <YouTube id="abc" />'
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n<YouTube id=\u201Dabc\u201D />\n```"
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })

@@ -2478,6 +2478,10 @@ function processMarkdownFile(
     (n) => `Stripped ${n} LLM artifact token(s) (<bos>, <eos>, etc.)`
   )
   applyFix(
+    () => fixSmartQuotesInJsxAttributes(content),
+    (n) => `Fixed smart quotes in ${n} JSX tag attribute(s)`
+  )
+  applyFix(
     () => fixDuplicateFrontmatterAuthor(content),
     (n) => `Fixed ${n} duplicate author frontmatter lines`
   )
@@ -3064,6 +3068,42 @@ function stripLlmArtifactTokens(content: string): {
   return { content: parts.join(""), fixCount }
 }
 
+/**
+ * Replace smart/curly quotes used as JSX attribute value delimiters with
+ * straight ASCII double quotes. Crowdin and LLMs occasionally convert the
+ * straight `"` inside `<Component attr="value" />` to typographic variants
+ * (U+201C, U+201D, U+201E, U+201F), which breaks MDX compilation.
+ *
+ * Only touches quotes that appear inside `<Tag ...>` or `<Tag ... />` — smart
+ * quotes in regular prose are left alone.
+ */
+function fixSmartQuotesInJsxAttributes(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  // Match JSX/HTML tags (self-closing or opening) that contain smart quotes
+  const smartQuoteChars = /[\u201C\u201D\u201E\u201F]/
+  const tagPattern = /<[A-Za-z][^>]*[\u201C\u201D\u201E\u201F][^>]*\/?>/g
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+    if (!smartQuoteChars.test(parts[i])) continue // Fast bail
+
+    parts[i] = parts[i].replace(tagPattern, (tag) => {
+      const fixed = tag.replace(/[\u201C\u201D\u201E\u201F]/g, '"')
+      if (fixed !== tag) fixCount++
+      return fixed
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
 /** @internal Exposed for unit testing only. Not part of the public API. */
 export const _testOnly = {
   // Standalone fixes
@@ -3108,6 +3148,7 @@ export const _testOnly = {
   fixDuplicateFrontmatterAuthor,
   fixBrokenBracketInLinks,
   stripLlmArtifactTokens,
+  fixSmartQuotesInJsxAttributes,
   warnExposedMdxTags,
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,
