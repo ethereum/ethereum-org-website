@@ -3,8 +3,6 @@
 import { useMemo, useState } from "react"
 import { useTranslations } from "next-intl"
 
-import type { AppData } from "@/lib/types"
-
 import AppCard from "@/components/AppCard"
 import FilterBar from "@/components/FilterBar"
 import { Button } from "@/components/ui/buttons/Button"
@@ -12,8 +10,16 @@ import { Button } from "@/components/ui/buttons/Button"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { slugify } from "@/lib/utils/url"
 
+/** Only the fields needed for rendering -- keeps RSC payload small. */
+type AppCardData = {
+  name: string
+  description: string
+  image: string
+  subCategory: string[]
+}
+
 type FilterableCategoryAppsGridProps = {
-  apps: AppData[]
+  apps: AppCardData[]
   limit?: number
 }
 

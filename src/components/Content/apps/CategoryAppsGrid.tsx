@@ -106,9 +106,17 @@ const CategoryAppsGrid = async ({
     )
   }
 
+  // Project only the fields used by the client component to reduce RSC payload
+  const clientApps = sortedApps.map(({ name, description, image, subCategory }) => ({
+    name,
+    description,
+    image,
+    subCategory,
+  }))
+
   return (
     <div className={className}>
-      <FilterableCategoryAppsGrid apps={sortedApps} limit={+limit} />
+      <FilterableCategoryAppsGrid apps={clientApps} limit={+limit} />
     </div>
   )
 }
