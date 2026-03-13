@@ -64,7 +64,7 @@ const TruncatedText = ({
         }}
         className="relative z-10 mt-1 h-auto p-0 text-sm no-underline"
       >
-        {t(`show-${isExpanded ? "less" : "more"}`)}
+        {isExpanded ? t("show-less") : t("show-more")}
       </Button>
     </div>
   )
