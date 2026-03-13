@@ -15,6 +15,7 @@
     "build-storybook": "storybook build",
     "build-storybook:chromatic": "storybook build --test",
     "chromatic": "chromatic --project-token fee8e66c9916",
+    "lowercase-ethereum": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/lowercase-ethereum.ts",
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
     "update-tutorials": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/update-tutorials-list.ts",
     "prepare": "husky",
