@@ -23,13 +23,6 @@ export function TerminalTypewriter({
   const [msgIdx, setMsgIdx] = useState(0)
   const [text, setText] = useState("")
   const [phase, setPhase] = useState<Phase>("typing")
-  const [cursorOn, setCursorOn] = useState(true)
-
-  useEffect(() => {
-    const id = setInterval(() => setCursorOn((v) => !v), 530)
-    return () => clearInterval(id)
-  }, [])
-
   useEffect(() => {
     if (messages.length === 0) return
 
@@ -81,14 +74,7 @@ export function TerminalTypewriter({
             className="text-start text-amber-100 max-sm:h-[2lh]"
           >
             {text}
-            <span
-              className={cn(
-                "text-amber-100",
-                cursorOn ? "opacity-100" : "opacity-0"
-              )}
-            >
-              {"█"}
-            </span>
+            <span className="animate-blink text-amber-100">{"█"}</span>
           </span>
         </div>
       </div>
