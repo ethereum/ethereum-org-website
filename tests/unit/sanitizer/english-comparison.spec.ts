@@ -12,6 +12,7 @@ const {
   fixBrandTags,
   fixProtectedBrandNames,
   syncProtectedFrontmatterFields,
+  syncButtonsFrontmatterFields,
   restoreBlankLinesFromEnglish,
   collapseInlineHtmlFromEnglish,
   fixMergedClosingTags,
@@ -255,6 +256,124 @@ test.describe("English Comparison Fixes", () => {
       )
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("syncButtonsFrontmatterFields", () => {
+    test("restores translated toId values from English", () => {
+      const english = [
+        "---",
+        "title: Gaming on Ethereum",
+        "buttons:",
+        "  - content: Learn more",
+        "    toId: gaming-on-ethereum",
+        "  - content: Explore games",
+        "    toId: games",
+        "    isSecondary: false",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "title: Jeux sur Ethereum",
+        "buttons:",
+        "  - content: En savoir plus",
+        "    toId: jeux-sur-ethereum",
+        "  - content: Explorer les jeux",
+        "    toId: jeux",
+        "    isSecondary: false",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncButtonsFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toContain("toId: gaming-on-ethereum")
+      expect(content).toContain("toId: games")
+      expect(content).toContain("content: En savoir plus")
+      expect(content).toContain("content: Explorer les jeux")
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves correct toId values unchanged", () => {
+      const english = [
+        "---",
+        "buttons:",
+        "  - content: Learn more",
+        "    toId: gaming-on-ethereum",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "buttons:",
+        "  - content: Mehr erfahren",
+        "    toId: gaming-on-ethereum",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncButtonsFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles files without buttons array", () => {
+      const english = "---\ntitle: Test\n---"
+      const translated = "---\ntitle: Test\n---"
+      const { content, fixCount } = syncButtonsFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("syncs isSecondary when translated", () => {
+      const english = [
+        "---",
+        "buttons:",
+        "  - content: Learn more",
+        "    toId: intro",
+        "    isSecondary: false",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "buttons:",
+        "  - content: Apprendre",
+        "    toId: intro",
+        "    isSecondary: vrai",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncButtonsFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toContain("isSecondary: false")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles quoted toId values", () => {
+      const english = [
+        "---",
+        "buttons:",
+        "  - content: Learn",
+        "    toId: games",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "buttons:",
+        '  - content: "\u0456\u0433\u0440\u0438"',
+        '    toId: "\u0456\u0433\u0440\u0438"',
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncButtonsFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toContain("toId: games")
+      expect(fixCount).toBe(1)
     })
   })
 

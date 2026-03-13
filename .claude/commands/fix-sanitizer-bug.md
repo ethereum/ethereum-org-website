@@ -244,10 +244,27 @@ If a test fails:
 - New test fails → fix the implementation, not the test
 - Existing test fails → your fix has a regression, investigate the interaction
 
-### Step 2: Run sanitizer against real files
+### Step 2: Run sanitizer against ONLY the affected files
+
+**CRITICAL: NEVER run the sanitizer against an entire language. It processes thousands of files and will hang for 30+ minutes. Always scope to the specific files from the PR.**
+
+Determine which files to test from the PR context (e.g., `gaming/index.md`). Then run the sanitizer with `TARGET_FILES` to scope it to just those files:
 
 ```bash
-TARGET_LANGUAGES={LANGUAGE} npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/post_import_sanitize.ts
+# If TARGET_FILES env var is supported:
+TARGET_FILES="public/content/translations/{LANGUAGE}/{PAGE_PATH}" \
+  npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/post_import_sanitize.ts
+
+# If not, write a quick inline node script that calls processMarkdownFile directly:
+node -e '
+const { _testOnly } = require("./src/scripts/i18n/post_import_sanitize");
+const fs = require("fs");
+const file = "public/content/translations/{LANGUAGE}/{PAGE_PATH}";
+const content = fs.readFileSync(file, "utf8");
+const result = _testOnly.processMarkdownFile(file, content);
+console.log(result.issues.join("\n"));
+if (result.fixed) fs.writeFileSync(file, result.content);
+'
 ```
 
 Check the output for:
@@ -258,7 +275,7 @@ Check the output for:
 ### Step 3: Inspect the actual changes
 
 ```bash
-git diff public/content/translations/{LANGUAGE}/
+git diff public/content/translations/{LANGUAGE}/{PAGE_PATH}
 ```
 
 Verify:
@@ -278,12 +295,23 @@ NEXT_PUBLIC_BUILD_LOCALES=en,{LANGUAGE} pnpm build
 
 **NOTE:** This step requires `dangerouslyDisableSandbox: true` and significant RAM. Only use when the fix could affect MDX compilation.
 
-### Step 5: Cross-language spot check
+### Step 5: Cross-language spot check on the SAME file only
 
-Run the sanitizer against 2-3 other languages to check for false positives:
+Test the same page in 2-3 other languages to check for false positives. **NEVER run across all files for a language.**
 
 ```bash
-TARGET_LANGUAGES=es,tr,ja npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/post_import_sanitize.ts
+# Test the same page path in a few other languages
+for lang in es tr ja; do
+  node -e "
+    const { _testOnly } = require('./src/scripts/i18n/post_import_sanitize');
+    const fs = require('fs');
+    const file = 'public/content/translations/$lang/{PAGE_PATH}';
+    if (!fs.existsSync(file)) { console.log('$lang: file not found, skipping'); process.exit(0); }
+    const content = fs.readFileSync(file, 'utf8');
+    const result = _testOnly.processMarkdownFile(file, content);
+    console.log('$lang:', result.issues.length ? result.issues.join('; ') : 'clean');
+  "
+done
 ```
 
 Check that your fix doesn't trigger unexpectedly in other languages.

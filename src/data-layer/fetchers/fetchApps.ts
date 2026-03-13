@@ -1,5 +1,7 @@
 import { AppCategoryEnum, AppData } from "@/lib/types"
 
+import { uploadToS3 } from "@/data-layer/s3"
+
 export const FETCH_APPS_TASK_ID = "fetch-apps"
 
 /**
@@ -129,7 +131,7 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
       .filter((app: AppData) => app.name && app.url) // Filter out apps without name or URL
       .filter((app: AppData) => app.ready === "true")
 
-    result[sheetName] = apps
+    result[sheetName] = await uploadAppImages(apps)
     console.log(`Processed ${apps.length} apps from ${sheetName}`)
   }
 
@@ -143,6 +145,21 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
   )
 
   return result
+}
+
+async function uploadAppImages(apps: AppData[]): Promise<AppData[]> {
+  return Promise.all(
+    apps.map(async (app) => {
+      const image = app.image
+        ? ((await uploadToS3(app.image, "apps/logos")) ?? "")
+        : app.image
+      const bannerImage = app.bannerImage
+        ? ((await uploadToS3(app.bannerImage, "apps/banners")) ?? "")
+        : app.bannerImage
+
+      return { ...app, image, bannerImage }
+    })
+  )
 }
 
 // Helper function to map sheet names to AppCategoryEnum

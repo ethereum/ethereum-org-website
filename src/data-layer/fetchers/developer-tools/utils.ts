@@ -1,4 +1,5 @@
 import { getDayOfYear, getWeekNumber } from "@/lib/utils/date"
+import { seededShuffle } from "@/lib/utils/random"
 
 import {
   DEV_TOOL_CATEGORY_SLUG_LIST,
@@ -65,39 +66,6 @@ const PREVIEWS_PER_CATEGORY = 5
 // =============================================================================
 // Seeded Randomization Utilities
 // =============================================================================
-
-/**
- * Seeded random number generator for deterministic randomization.
- * Uses Linear Congruential Generator algorithm.
- *
- * Why not Math.random() or timestamp?
- * - Math.random(): Non-deterministic, every user sees different highlights
- * - Timestamp: Different on every page load, causes jarring UX
- * - Seeded: Same seed = same "random" sequence = consistent highlights for all users
- */
-function seededRandom(seed: number) {
-  let value = seed
-  return () => {
-    value = (value * 9301 + 49297) % 233280
-    return value / 233280
-  }
-}
-
-/**
- * Shuffle array using Fisher-Yates algorithm with seeded randomization.
- * Ensures deterministic shuffle: same seed always produces same order.
- */
-function seededShuffle<T>(array: T[], seed: number): T[] {
-  const shuffled = [...array]
-  const random = seededRandom(seed)
-
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(random() * (i + 1))
-    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
-  }
-
-  return shuffled
-}
 
 /**
  * Get maximum star count across all repos for an tool.
