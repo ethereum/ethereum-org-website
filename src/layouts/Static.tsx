@@ -116,7 +116,7 @@ export const StaticLayout = ({
             <Stack className="gap-8">
               <Breadcrumbs slug={slug} />
 
-              {!slug.includes("/whitepaper") && (
+              {!slug.includes("/whitepaper") && lastEditLocaleTimestamp && (
                 <p
                   className="text-body-medium"
                   dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}

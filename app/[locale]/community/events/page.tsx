@@ -8,12 +8,7 @@ import {
 } from "lucide-react"
 import { getMessages, getTranslations } from "next-intl/server"
 
-import type {
-  CommitHistory,
-  Lang,
-  PageParams,
-  SectionNavDetails,
-} from "@/lib/types"
+import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
 import ContentHero from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -63,11 +58,9 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "community/events",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   const events = mapEventTranslations(_events, t)

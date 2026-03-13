@@ -14058,6 +14058,33 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "jgresham",
+      "name": "Johns Gresham",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3721291?v=4",
+      "profile": "http://jgresham.xyz",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Dragoon0x",
+      "name": "Dragoon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/255907778?v=4",
+      "profile": "https://github.com/Dragoon0x",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "0xMushow",
+      "name": "0xMushow",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105550256?v=4",
+      "profile": "https://mushow.uk/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,

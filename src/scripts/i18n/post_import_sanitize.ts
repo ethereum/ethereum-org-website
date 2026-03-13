@@ -397,27 +397,41 @@ function fixEscapedBoldAndItalic(content: string): {
       // Skip table rows — \*\* may be intentional (e.g., 2\*\*256)
       if (lines[j].trimStart().startsWith("|")) continue
 
-      // Fix escaped bold first: \*\*text\*\* → **text**
+      // Fix escaped bold first: \*\*text\*\* → **text** or <strong>text</strong>
       // Require word-boundary context: opening \*\* must be preceded by
-      // whitespace or start-of-line (not operands like `)` or `>` or word
-      // chars) to avoid stripping literal \*\* in math (e.g., 2\*\*10).
+      // whitespace, start-of-line, or non-ASCII chars (CJK/Korean/Arabic
+      // don't use spaces between words). Avoids stripping literal \*\* in
+      // math (e.g., 2\*\*10) where operands are ASCII digits/variables.
+      //
+      // When the closing ** is followed by a non-ASCII character, CommonMark
+      // may fail to recognize the right-flanking delimiter run (specifically
+      // when the inner text ends with punctuation like ')' and is followed
+      // by a non-ASCII letter like Korean particles). Use <strong> tags in
+      // these cases to guarantee correct rendering.
       lines[j] = lines[j].replace(
-        /(?<=\s|^)\\\*\\\*(.+?)\\\*\\\*(?=\s|$|[.,;:!?\])>])/gm,
-        (_, inner) => {
+        /(?<=\s|^|[\u0080-\uFFFF])\\\*\\\*(.+?)\\\*\\\*(?=\s|$|[.,;:!?\])>]|[\u0080-\uFFFF])/gm,
+        (fullMatch, inner, offset) => {
           fixCount++
+          const nextChar = lines[j][offset + fullMatch.length]
+          if (nextChar && nextChar.charCodeAt(0) > 127) {
+            return `<strong>${inner}</strong>`
+          }
           return `**${inner}**`
         }
       )
 
-      // Fix escaped italic: \*text\* → *text*
+      // Fix escaped italic: \*text\* → *text* or <em>text</em>
       // Runs after bold fix, so remaining \* pairs are italic.
-      // Same word-boundary guard: \* used as multiplication (e.g.,
-      // result\*i + other\*value) has operands directly adjacent,
-      // while italic \*text\* has whitespace/line-boundary outside.
+      // Same word-boundary guard plus non-ASCII awareness.
+      // Same <em> fallback for non-ASCII followers as bold above.
       lines[j] = lines[j].replace(
-        /(?<=\s|^)\\\*(.+?)\\\*(?=\s|$|[.,;:!?\])>])/gm,
-        (_, inner) => {
+        /(?<=\s|^|[\u0080-\uFFFF])\\\*(.+?)\\\*(?=\s|$|[.,;:!?\])>]|[\u0080-\uFFFF])/gm,
+        (fullMatch, inner, offset) => {
           fixCount++
+          const nextChar = lines[j][offset + fullMatch.length]
+          if (nextChar && nextChar.charCodeAt(0) > 127) {
+            return `<em>${inner}</em>`
+          }
           return `*${inner}*`
         }
       )
@@ -740,6 +754,133 @@ function fixTranslatedHrefs(
     fixes: [],
     warnings: allWarnings,
   }
+}
+
+/**
+ * Fix markdown links where square brackets around the link text are missing.
+ * Requires English source to identify which hrefs should be links.
+ *
+ * Handles two Crowdin corruption patterns:
+ * 1. text(/path/) — brackets missing, parens present
+ * 2. text/path/  — both brackets and parens missing
+ *
+ * Uses English markdown links as the source of truth: for each English
+ * [text](href), checks if the translation has that href in a proper
+ * markdown link. If not, searches for the naked href and wraps the
+ * preceding text in brackets (and adds parens if missing).
+ */
+function fixMissingLinkBrackets(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  // Extract all markdown links from English
+  const englishLinkRe = /\[([^\]]+)\]\(([^)]+)\)/g
+  const englishHrefs: string[] = []
+  let linkMatch
+  while ((linkMatch = englishLinkRe.exec(englishContent))) {
+    englishHrefs.push(linkMatch[2])
+  }
+
+  if (englishHrefs.length === 0) {
+    return { content: translatedContent, fixCount: 0 }
+  }
+
+  // Split to preserve code blocks
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = translatedContent.split(codeBlockPattern)
+  let fixCount = 0
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    for (const href of englishHrefs) {
+      // Only process internal hrefs with at least one path segment —
+      // external URLs and bare "/" are too prone to false positives
+      if (!href.startsWith("/") || href === "/") continue
+
+      // Skip if translation already has this href in a proper link
+      if (parts[i].includes(`](${href})`)) continue
+
+      const escapedHref = escapeRegex(href)
+
+      // Pattern 1: text(/href/) — brackets missing, parens present
+      // Find (/href/) NOT preceded by ]
+      const parenPattern = new RegExp(`(?<!\\])\\(${escapedHref}\\)`, "g")
+      let pMatch
+      while ((pMatch = parenPattern.exec(parts[i]))) {
+        const parenPos = pMatch.index
+        // Walk backwards to find link text start
+        const textStart = findLinkTextStart(parts[i], parenPos)
+        const linkText = parts[i].substring(textStart, parenPos).trim()
+        // Safety: skip if link text contains ]( — already has a link inside
+        if (linkText.length > 0 && !linkText.includes("](")) {
+          const before = parts[i].substring(0, textStart)
+          const after = parts[i].substring(parenPos + pMatch[0].length)
+          parts[i] = `${before}[${linkText}](${href})${after}`
+          fixCount++
+          break // Re-scan after mutation
+        }
+      }
+
+      // Pattern 2: text/href/ — both brackets and parens missing
+      if (parts[i].includes(`](${href})`)) continue // Check again after pattern 1
+
+      const barePattern = new RegExp(`(?<!\\()${escapedHref}(?!\\))`, "g")
+      let bMatch
+      while ((bMatch = barePattern.exec(parts[i]))) {
+        const hrefPos = bMatch.index
+        // Verify this isn't inside an already-formed link
+        const precedingChars = parts[i].substring(
+          Math.max(0, hrefPos - 2),
+          hrefPos
+        )
+        if (precedingChars.includes("](")) continue
+
+        const textStart = findLinkTextStart(parts[i], hrefPos)
+        const linkText = parts[i].substring(textStart, hrefPos).trim()
+        // Safety: skip if link text contains ]( — already has a link inside
+        if (linkText.length > 0 && !linkText.includes("](")) {
+          const before = parts[i].substring(0, textStart)
+          const after = parts[i].substring(hrefPos + bMatch[0].length)
+          parts[i] = `${before}[${linkText}](${href})${after}`
+          fixCount++
+          break // Re-scan after mutation
+        }
+      }
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Walk backwards from a position to find where link text starts.
+ * Stops at: start of line, list marker (- / * / 1.), or sentence boundary.
+ */
+function findLinkTextStart(text: string, pos: number): number {
+  let textStart = pos
+  for (let k = pos - 1; k >= 0; k--) {
+    const ch = text[k]
+    if (ch === "\n") {
+      textStart = k + 1
+      // Skip past list markers
+      const lineContent = text.substring(k + 1, pos)
+      const listMatch = lineContent.match(/^(\s*[-*+]\s+|\s*\d+\.\s+)/)
+      if (listMatch) {
+        textStart = k + 1 + listMatch[0].length
+      }
+      break
+    }
+    if (k === 0) {
+      textStart = 0
+      const lineContent = text.substring(0, pos)
+      const listMatch = lineContent.match(/^(\s*[-*+]\s+|\s*\d+\.\s+)/)
+      if (listMatch) {
+        textStart = listMatch[0].length
+      }
+    }
+  }
+  return textStart
 }
 
 /**
@@ -2333,6 +2474,14 @@ function processMarkdownFile(
   }
 
   applyFix(
+    () => stripLlmArtifactTokens(content),
+    (n) => `Stripped ${n} LLM artifact token(s) (<bos>, <eos>, etc.)`
+  )
+  applyFix(
+    () => fixSmartQuotesInJsxAttributes(content),
+    (n) => `Fixed smart quotes in ${n} JSX tag attribute(s)`
+  )
+  applyFix(
     () => fixDuplicateFrontmatterAuthor(content),
     (n) => `Fixed ${n} duplicate author frontmatter lines`
   )
@@ -2498,6 +2647,12 @@ function processMarkdownFile(
     }
     content = hrefResult.content
     issues.push(...hrefResult.warnings)
+
+    // Fix missing link brackets (needs English source for link identification)
+    applyFix(
+      () => fixMissingLinkBrackets(content, englishMd),
+      (n) => `Fixed ${n} missing link brackets`
+    )
 
     // Warn on punctuation-only headings (dropped translation text)
     const punctuationHeadingWarnings = warnPunctuationOnlyHeadings(content)
@@ -2886,6 +3041,69 @@ function fixBrokenBracketInLinks(content: string): {
   return { content: parts.join(""), fixCount }
 }
 
+/**
+ * Strips LLM artifact tokens (<bos>, <eos>, <s>, </s>, <pad>, <unk>, <mask>)
+ * that leak from machine translation pipelines into prose content.
+ * These tokens are never valid in markdown/MDX and will break the MDX parser
+ * since they look like unrecognized JSX components.
+ */
+function stripLlmArtifactTokens(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+  const tokenPattern = /<\/?(?:bos|eos|s|pad|unk|mask)>/gi
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+    parts[i] = parts[i].replace(tokenPattern, () => {
+      fixCount++
+      return ""
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Replace smart/curly quotes used as JSX attribute value delimiters with
+ * straight ASCII double quotes. Crowdin and LLMs occasionally convert the
+ * straight `"` inside `<Component attr="value" />` to typographic variants
+ * (U+201C, U+201D, U+201E, U+201F), which breaks MDX compilation.
+ *
+ * Only touches quotes that appear inside `<Tag ...>` or `<Tag ... />` — smart
+ * quotes in regular prose are left alone.
+ */
+function fixSmartQuotesInJsxAttributes(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  // Match JSX/HTML tags (self-closing or opening) that contain smart quotes
+  const smartQuoteChars = /[\u201C\u201D\u201E\u201F]/
+  const tagPattern = /<[A-Za-z][^>]*[\u201C\u201D\u201E\u201F][^>]*\/?>/g
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+    if (!smartQuoteChars.test(parts[i])) continue // Fast bail
+
+    parts[i] = parts[i].replace(tagPattern, (tag) => {
+      const fixed = tag.replace(/[\u201C\u201D\u201E\u201F]/g, '"')
+      if (fixed !== tag) fixCount++
+      return fixed
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
 /** @internal Exposed for unit testing only. Not part of the public API. */
 export const _testOnly = {
   // Standalone fixes
@@ -2904,6 +3122,7 @@ export const _testOnly = {
   // English-comparison fixes
   syncHeaderIdsWithEnglish,
   fixTranslatedHrefs,
+  fixMissingLinkBrackets,
   fixBrandTags,
   fixProtectedBrandNames,
   syncProtectedFrontmatterFields,
@@ -2928,6 +3147,8 @@ export const _testOnly = {
   fixItalicAdjacentNonLatin,
   fixDuplicateFrontmatterAuthor,
   fixBrokenBracketInLinks,
+  stripLlmArtifactTokens,
+  fixSmartQuotesInJsxAttributes,
   warnExposedMdxTags,
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,

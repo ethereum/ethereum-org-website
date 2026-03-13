@@ -1,6 +1,8 @@
 import { existsSync } from "fs"
 import { join } from "path"
 
+import { DEV_TOOL_CATEGORY_SLUG_LIST } from "@/data/developerTools"
+
 import {
   DEFAULT_LOCALE,
   LOCALES_CODES,
@@ -84,13 +86,25 @@ type PageWithTranslations = {
   type: "md" | "intl"
 }
 
+function getDynamicIntlPagePaths(): string[] {
+  // discoverStaticPages() excludes dynamic segments, so add known
+  // generateStaticParams() routes that should be present in sitemap output.
+  return DEV_TOOL_CATEGORY_SLUG_LIST.map(
+    (categorySlug) => `/developers/tools/${categorySlug}/`
+  )
+}
+
 export async function getAllPagesWithTranslations(): Promise<
   PageWithTranslations[]
 > {
   const pages: PageWithTranslations[] = []
 
   const mdSlugs = await getPostSlugs("/")
-  const intlPaths = getStaticPagePaths()
+  const intlPaths = [
+    ...getStaticPagePaths(),
+    ...getDynamicIntlPagePaths(),
+  ]
+  const uniqueIntlPaths = Array.from(new Set(intlPaths))
 
   for (const slug of mdSlugs) {
     const translatedLocales = await getTranslatedLocales(slug)
@@ -101,7 +115,7 @@ export async function getAllPagesWithTranslations(): Promise<
     })
   }
 
-  for (const path of intlPaths) {
+  for (const path of uniqueIntlPaths) {
     const translatedLocales = await getTranslatedLocales(path)
     pages.push({
       slug: path,

@@ -132,7 +132,6 @@ sidebarDepth: 2
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - 풀 노드를 설정하는 가장 빠르고 쉬운 방법입니다. 원라이너 설정 도구 및 노드 관리 TUI. 무료입니다. 오픈 소스. 단독 스테이커에 의한 이더리움을 위한 공공재입니다. ARM64 및 AMD64 지원.
 - [eth-docker](https://eth-docker.net/) - 쉽고 안전한 스테이킹에 중점을 둔 Docker를 사용한 자동 설정으로, 기본적인 터미널 및 Docker 지식이 필요하며, 약간 더 고급 사용자에게 권장됩니다.
 - [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) - GUI 설정 가이드, 제어 센터 및 기타 여러 기능과 함께 SSH 연결을 통해 원격 서버에 클라이언트를 설치하기 위한 런처입니다.
-- [NiceNode](https://www.nicenode.xyz/) - 컴퓨터에서 노드를 실행하기 위한 간단한 사용자 경험을 제공하는 런처입니다. 클라이언트를 선택하고 몇 번의 클릭만으로 시작하세요. 아직 개발 중입니다.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - CLI 마법사를 사용하여 Docker 구성을 자동으로 생성하는 노드 설정 도구입니다. Nethermind에서 Go로 작성되었습니다.
 
 ### 수동 클라이언트 설정 {#manual-setup}

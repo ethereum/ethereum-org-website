@@ -139,6 +139,8 @@
   "staking-definition": "Uložení množství <a href=\"/glossary/#ether\">etheru</a> (váš podíl) za účelem stát se validátorem a zabezpečit <a href=\"/glossary/#network\">síť</a>. Validátor kontroluje <a href=\"/glossary/#transaction\">transakce</a> a navrhuje <a href=\"/glossary/#block\">bloky</a> v rámci konsensuálního modelu <a href=\"/glossary/#pos\">proof-of-stake</a>. Uzamčení vám poskytuje ekonomickou motivaci jednat v nejlepším zájmu sítě. Dostanete odměny za plnění svých povinností <a href=\"/glossary/#validator\">validátora</a>, ale ztratíte různé množství ETH, pokud tak neučiníte. <a href=\"/staking/\">Více o uzamčení Etherea</a>.",
   "staking-pool-term": "Pool pro uzamčení",
   "staking-pool-definition": "Kombinované ETH více než jednoho stakera Etherea, použité k dosažení 32 ETH potřebných k aktivaci sady klíčů validátoru. Provozovatel uzlu používá tyto klíče k účasti na konsensu a <a href=\"/glossary/#block-reward\">odměny za blok</a> jsou rozděleny mezi přispívající stakery. Pooly pro uzamčení nebo delegování uzamčení nejsou nativní pro protokol Etherea, ale komunita vytvořila mnoho řešení. <a href=\"/staking/pools/\">Více o sdruženém uzamčení</a>.",
+  "state-term": "Stav",
+  "state-definition": "Snímek všech zůstatků a dat v určitém okamžiku na blockchainu, který obvykle odkazuje na stav u konkrétního bloku.",
   "sybil-attack-term": "Útok Sybil",
   "sybil-attack-definition": "Sybil útoky jsou útoky, kde se jednotlivci snaží přelstít systém, aby si myslel, že jsou více lidmi, aby zvyšili svůj vliv.",
   "terminal-total-difficulty-term": "Konečná celková obtížnost (TTD)",
