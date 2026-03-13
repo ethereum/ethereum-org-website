@@ -11,7 +11,7 @@ buttons:
   - content: Mehr erfahren
     toId: gaming-on-ethereum
   - content: Spiele erkunden
-    toId: spiele
+    toId: games
     isSecondary: false
 ---
 

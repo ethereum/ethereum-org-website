@@ -9,9 +9,9 @@ summaryPoint2: Qualquer pessoa pode criar mods, bots ou jogos totalmente novos q
 summaryPoint3: "L2s desenvolvidas para fins específicos permitem jogabilidade em tempo real com taxas mais baixas, enquanto as estruturas de desenvolvimento de jogos tornam a criação de jogos onchain mais acessível do que nunca"
 buttons:
   - content: Saiba mais
-    toId: jogos-no-ethereum
+    toId: gaming-on-ethereum
   - content: Explorar jogos
-    toId: jogos
+    toId: games
     isSecondary: false
 ---
 

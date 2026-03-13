@@ -9,9 +9,9 @@ summaryPoint2: "Bất kỳ ai cũng có thể xây dựng các bản mod, bot ho
 summaryPoint3: "Các Lớp 2 được xây dựng chuyên dụng cho phép chơi game theo thời gian thực với mức phí thấp hơn, trong khi các khung phát triển trò chơi giúp việc xây dựng các trò chơi trên chuỗi dễ tiếp cận hơn bao giờ hết"
 buttons:
   - content: Tìm hiểu thêm
-    toId: "chơi-game-trên-ethereum"
+    toId: gaming-on-ethereum
   - content: Khám phá các trò chơi
-    toId: "trò chơi"
+    toId: games
     isSecondary: false
 ---
 

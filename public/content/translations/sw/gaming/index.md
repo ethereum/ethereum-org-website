@@ -9,9 +9,9 @@ summaryPoint2: Mtu yeyote anaweza kuunda mods, boti, au michezo mipya kabisa ina
 summaryPoint3: Safu za 2 zilizoundwa maalum huwezesha uchezaji wa wakati halisi na ada za chini, huku mifumo ya uundaji wa michezo ikifanya uundaji wa michezo ya ndani ya mnyororo kupatikana zaidi kuliko hapo awali
 buttons:
   - content: Pata maelezo zaidi
-    toId: michezo-kwenye-ethereum
+    toId: gaming-on-ethereum
   - content: Chunguza michezo
-    toId: michezo
+    toId: games
     isSecondary: false
 ---
 

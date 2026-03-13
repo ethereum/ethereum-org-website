@@ -11,7 +11,7 @@ buttons:
   - content: Дізнайтеся більше
     toId: gaming-on-ethereum
   - content: Ознайомитися з іграми
-    toId: "ігри"
+    toId: games
     isSecondary: false
 ---
 

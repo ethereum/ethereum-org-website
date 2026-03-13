@@ -9,9 +9,9 @@ summaryPoint2: "N'importe qui peut créer des mods, des bots ou des jeux entièr
 summaryPoint3: "Les L2 spécialement conçus permettent un jeu en temps réel avec des frais moins élevés, tandis que les cadres de développement de jeux rendent la création de jeux sur chaîne plus accessible que jamais"
 buttons:
   - content: En savoir plus
-    toId: jeux-sur-ethereum
+    toId: gaming-on-ethereum
   - content: Explorer les jeux
-    toId: jeux
+    toId: games
     isSecondary: false
 ---
 

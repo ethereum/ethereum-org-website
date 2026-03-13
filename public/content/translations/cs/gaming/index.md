@@ -11,7 +11,7 @@ buttons:
   - content: Další informace
     toId: gaming-on-ethereum
   - content: Prozkoumat hry
-    toId: hry
+    toId: games
     isSecondary: false
 ---
 

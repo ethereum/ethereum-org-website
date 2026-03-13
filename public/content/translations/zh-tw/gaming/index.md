@@ -23,10 +23,10 @@ buttons:
 
 ## 以太坊遊戲生態系統概覽 {#ethereums-gaming-ecosystem-overview}
 
-- \*\*二層網路：\*\*由於費用較低且交易時間短，二層網路成為了遊戲發行的常見平台。 擁有遊戲的頂級二層網路包括：Starknet、Immutable、Base 和 Abstract。
-- \*\*基礎設施：\*\*為簡化鏈上遊戲的開發，現有多種工具堆疊可供您在自己的專案中使用，包括：Cartridge、Dojo、Proof of Play 和 Thirdweb。
-- \*\*遊戲公會：\*\*希望成為遊戲社群一份子的玩家可以加入遊戲公會，與公會中的其他玩家一起制定策略和協作。 著名的公會包括：YGG、WASD、LegacyGG、Gaming Grid、OLAGG 等。
-- \*\*遊戲：\*\*以太坊遊戲的類型與規模各不相同，從 _Realms: Eternum_ 的即時策略遊戲、_Axie: Atia's Legacy_ 的大型多人線上遊戲、_Fableborn_ 的動作角色扮演遊戲，到 _Ponziland_ 等遊戲化的 DeFi 平台，應有盡有。 隨著新遊戲在不同鏈上定期推出，總有新鮮事物等您探索。
+- **二層網路：**由於費用較低且交易時間短，二層網路成為了遊戲發行的常見平台。 擁有遊戲的頂級二層網路包括：Starknet、Immutable、Base 和 Abstract。
+- **基礎設施：**為簡化鏈上遊戲的開發，現有多種工具堆疊可供您在自己的專案中使用，包括：Cartridge、Dojo、Proof of Play 和 Thirdweb。
+- **遊戲公會：**希望成為遊戲社群一份子的玩家可以加入遊戲公會，與公會中的其他玩家一起制定策略和協作。 著名的公會包括：YGG、WASD、LegacyGG、Gaming Grid、OLAGG 等。
+- **遊戲：**以太坊遊戲的類型與規模各不相同，從 _Realms: Eternum_ 的即時策略遊戲、_Axie: Atia's Legacy_ 的大型多人線上遊戲、_Fableborn_ 的動作角色扮演遊戲，到 _Ponziland_ 等遊戲化的 DeFi 平台，應有盡有。 隨著新遊戲在不同鏈上定期推出，總有新鮮事物等您探索。
 
 ## 試玩遊戲 {#games}
 
