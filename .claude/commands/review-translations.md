@@ -160,6 +160,23 @@ This keeps your current branch clean while allowing full access to PR content.
   - Markdown: `.worktrees/pr-{PR_NUMBER}/public/content/` (English originals)
   - JSON: `.worktrees/pr-{PR_NUMBER}/src/intl/en/` (English namespace files)
 
+## MANDATORY: Fetch Ethereum Glossary FIRST
+
+**Before reviewing ANY translation, you MUST fetch the official Ethereum glossary for the language(s) being reviewed.** This is non-negotiable. The glossary contains community-approved translations for key terms.
+
+```bash
+# Fetch full glossary (all languages):
+curl -s "https://ethereum.org/api/glossary/"
+
+# Fetch glossary for a specific language (optional lang param, one at a time):
+curl -s "https://ethereum.org/api/glossary/?lang=fr"
+curl -s "https://ethereum.org/api/glossary/?lang=ja"
+```
+
+The glossary returns approved translations per language. Use these as the authority for how technical terms SHOULD be translated. Flag any deviations as warnings with "Glossary mismatch" in the issue column.
+
+**If you skip the glossary, the entire review is invalid.**
+
 ## Review Checklist
 
 ### 1. Brand Names (CRITICAL - Must Fix)
@@ -171,12 +188,15 @@ These MUST remain in English - flag ANY translation:
 
 For each file, search for these terms and verify they appear exactly as listed.
 
-### 2. Technical Terms (HIGH - Should Review)
-These should use accepted local term OR remain English:
+### 2. Technical Terms vs Glossary (HIGH - Should Review)
+Cross-reference EVERY technical term against the glossary you fetched above.
+These should use the glossary-approved local term OR remain English:
 - Rollups, Layer 2/L2, Mainnet, Testnet, Sidechain, Beacon Chain
 - Gas, Wei, Gwei, ETH (NEVER translate units)
 - Staking, Slashing, Attestation, Validator
 - Smart Contract, DApp, DeFi, NFT
+
+Flag any deviation from glossary-approved terms as "Glossary mismatch" warnings.
 
 ### 3. Tone/Register Consistency (MEDIUM)
 Check if formal/informal address is consistent throughout:

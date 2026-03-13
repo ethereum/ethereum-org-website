@@ -166,6 +166,26 @@ test.describe("Standalone Fixes", () => {
       expect(content).toBe("This is **bold text** here")
       expect(fixCount).toBe(1)
     })
+
+    test("fixes escaped bold followed by CJK characters (no space)", () => {
+      const input =
+        "- \\*\\*\u4E8C\u5C64\u7DB2\u8DEF\uFF1A\\*\\*\u7531\u65BC\u8CBB\u7528\u8F03\u4F4E"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe(
+        "- **\u4E8C\u5C64\u7DB2\u8DEF\uFF1A**\u7531\u65BC\u8CBB\u7528\u8F03\u4F4E"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes escaped bold followed by Hangul characters", () => {
+      const input =
+        "\\*\\*\uC2A4\uB9C8\uD2B8 \uACC4\uC57D\\*\\*\uC744 \uC0AC\uC6A9"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe(
+        "**\uC2A4\uB9C8\uD2B8 \uACC4\uC57D**\uC744 \uC0AC\uC6A9"
+      )
+      expect(fixCount).toBe(1)
+    })
   })
 
   test.describe("fixAsciiGuillemets", () => {
