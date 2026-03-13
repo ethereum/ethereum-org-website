@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "Stellen Sie es sich wie Ihre E-Mail-Adresse vor, aber anstatt E-Mails kann man ETH empfangen. Wenn Sie ETH von einer Börse zu Ihrer Wallet überweisen wollen, benutzen Sie Ihre Adresse als Ziel. Überprüfen Sie Ihre Angaben vor dem Abschicken immer zweimal!",
   "page-get-eth-your-address-wallet-link": "Schauen Sie sich Wallets an",
   "listing-policy-raise-issue-link": "Thema erstellen",
-  "page-find-wallet-last-updated": "Zuletzt aktualisiert"
+  "page-find-wallet-last-updated": "Zuletzt aktualisiert",
+  "listing-policy-disclaimer": "Alle auf dieser Seite aufgelisteten Produkte sind nicht offiziell empfohlen, sondern lediglich zu Informationszwecken zur Verfügung gestellt. Falls Sie ein Produkt listen oder Feedback zur Regelung geben möchten, erstellen Sie ein Thema auf GitHub."
 }

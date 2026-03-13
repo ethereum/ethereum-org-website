@@ -132,7 +132,6 @@ Voici quelques projets qui peuvent vous aider à installer et à contrôler vos 
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - Le moyen le plus rapide et le plus simple de configurer un nœud complet. Outil d’installation en une ligne et interface TUI de gestion de nœuds. Gratuit. Open Source. Biens publics pour Ethereum, fournis par les validateurs indépendants. Prise en charge de ARM64 et AMD64.
 - [eth-docker](https://eth-docker.net/) - Configuration automatisée à l'aide de Docker, axée sur la facilité et la sécurité de la mise en jeu, qui nécessite des connaissances de base du terminal et de Docker, et est recommandée pour les utilisateurs un peu plus avancés.
 - [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) - Lanceur pour installer des clients sur un serveur distant via une connexion SSH avec un guide de configuration GUI, un centre de contrôle et de nombreuses autres fonctionnalités.
-- [NiceNode](https://www.nicenode.xyz/) - Lanceur avec une expérience utilisateur simple pour exécuter un nœud sur votre ordinateur. Il vous suffit de choisir vos clients et de les démarrer en quelques clics. Toujours en développement.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Outil de configuration de nœud qui génère automatiquement une configuration Docker à l'aide d'un assistant CLI. Écrit en Go par Nethermind.
 
 ### Configuration manuelle des clients {#manual-setup}

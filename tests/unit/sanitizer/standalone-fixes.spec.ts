@@ -37,6 +37,8 @@ const {
   fixItalicAdjacentNonLatin,
   fixDuplicateFrontmatterAuthor,
   fixBrokenBracketInLinks,
+  stripLlmArtifactTokens,
+  fixSmartQuotesInJsxAttributes,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -167,23 +169,41 @@ test.describe("Standalone Fixes", () => {
       expect(fixCount).toBe(1)
     })
 
-    test("fixes escaped bold followed by CJK characters (no space)", () => {
+    test("uses <strong> when bold is followed by Korean characters", () => {
       const input =
-        "- \\*\\*\u4E8C\u5C64\u7DB2\u8DEF\uFF1A\\*\\*\u7531\u65BC\u8CBB\u7528\u8F03\u4F4E"
+        "\\*\\*명문화된 제안자-빌더 분리(ePBS 또는 EIP-7732)\\*\\*는 제안자의 작업과"
       const { content, fixCount } = fixEscapedBoldAndItalic(input)
       expect(content).toBe(
-        "- **\u4E8C\u5C64\u7DB2\u8DEF\uFF1A**\u7531\u65BC\u8CBB\u7528\u8F03\u4F4E"
+        "<strong>명문화된 제안자-빌더 분리(ePBS 또는 EIP-7732)</strong>는 제안자의 작업과"
       )
       expect(fixCount).toBe(1)
     })
 
-    test("fixes escaped bold followed by Hangul characters", () => {
-      const input =
-        "\\*\\*\uC2A4\uB9C8\uD2B8 \uACC4\uC57D\\*\\*\uC744 \uC0AC\uC6A9"
+    test("uses <strong> when bold is preceded and followed by CJK characters", () => {
+      const input = "关于\\*\\*共识机制\\*\\*的讨论"
       const { content, fixCount } = fixEscapedBoldAndItalic(input)
-      expect(content).toBe(
-        "**\uC2A4\uB9C8\uD2B8 \uACC4\uC57D**\uC744 \uC0AC\uC6A9"
-      )
+      expect(content).toBe("关于<strong>共识机制</strong>的讨论")
+      expect(fixCount).toBe(1)
+    })
+
+    test("uses ** when bold is followed by whitespace (Arabic with space)", () => {
+      const input = "\\*\\*الترقية\\*\\* ستكون"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe("**الترقية** ستكون")
+      expect(fixCount).toBe(1)
+    })
+
+    test("uses <em> when italic is followed by Korean characters", () => {
+      const input = "\\*이탈릭\\*은 텍스트"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe("<em>이탈릭</em>은 텍스트")
+      expect(fixCount).toBe(1)
+    })
+
+    test("uses ** when bold is followed by ASCII punctuation", () => {
+      const input = "\\*\\*bold text\\*\\*. More text"
+      const { content, fixCount } = fixEscapedBoldAndItalic(input)
+      expect(content).toBe("**bold text**. More text")
       expect(fixCount).toBe(1)
     })
   })
@@ -1353,6 +1373,126 @@ author: Ori Pomerantz
         `[Mais em staking withdrawals](/staking/withdrawals/)`
       )
       expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("stripLlmArtifactTokens", () => {
+    test("strips <bos> token mid-word (Marathi)", () => {
+      const input = "कृ<bos>ितपणे स्वस्त आहेत"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe("कृितपणे स्वस्त आहेत")
+      expect(fixCount).toBe(1)
+    })
+
+    test("strips <eos> token", () => {
+      const input = "some text<eos> more text"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe("some text more text")
+      expect(fixCount).toBe(1)
+    })
+
+    test("strips <s> and </s> tokens", () => {
+      const input = "<s>beginning of text</s>"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe("beginning of text")
+      expect(fixCount).toBe(2)
+    })
+
+    test("strips <pad> and <unk> and <mask> tokens", () => {
+      const input = "word<pad>word<unk>word<mask>word"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe("wordwordwordword")
+      expect(fixCount).toBe(3)
+    })
+
+    test("strips multiple tokens in one string", () => {
+      const input = "text<bos> with <eos>multiple<pad> tokens"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe("text with multiple tokens")
+      expect(fixCount).toBe(3)
+    })
+
+    test("leaves content unchanged when no tokens present", () => {
+      const input = "This is normal **markdown** with [links](/path)"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not strip tokens inside code blocks", () => {
+      const input = "```\n<bos>token inside code\n```"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not strip tokens inside inline code", () => {
+      const input = "the `<bos>` token is used for..."
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not strip valid HTML tags like <b> or <strong>", () => {
+      const input = "<b>bold</b> and <strong>strong</strong>"
+      const { content, fixCount } = stripLlmArtifactTokens(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixSmartQuotesInJsxAttributes", () => {
+    test("fixes smart right double quotes in YouTube tag", () => {
+      const input = "<YouTube id=\u201Du8XvkTrjITs\u201D />"
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe('<YouTube id="u8XvkTrjITs" />')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes smart left/right double quotes in Emoji tag", () => {
+      const input = "<Emoji text=\u201C\u2B50\u201D />"
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe('<Emoji text="\u2B50" />')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes German low-9 opening quote in Alert variant", () => {
+      const input = "<Alert variant=\u201Eupdate\u201C>"
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe('<Alert variant="update">')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes multiple tags in same content", () => {
+      const input =
+        "<YouTube id=\u201DGgKveVMLnoo\u201D />\n\nSome text\n\n<YouTube id=\u201Du8XvkTrjITs\u201D />"
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe(
+        '<YouTube id="GgKveVMLnoo" />\n\nSome text\n\n<YouTube id="u8XvkTrjITs" />'
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves straight quotes untouched", () => {
+      const input = '<YouTube id="u8XvkTrjITs" />'
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves smart quotes in prose untouched", () => {
+      const input =
+        'This is a \u201Cquoted\u201D word next to <YouTube id="abc" />'
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n<YouTube id=\u201Dabc\u201D />\n```"
+      const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 })

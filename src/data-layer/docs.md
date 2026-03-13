@@ -88,6 +88,7 @@ Always handle `null` returns with fallback values.
 **Production:**
 - `SITE_ID` - Netlify site ID (auto-provided)
 - `NETLIFY_BLOBS_TOKEN` - Netlify Blobs access token
+- `BLOB_STORE_NAME` - Blob store name (default: `data-layer`). Use `data-layer-dev` for dev environments.
 - `TRIGGER_PROJECT_ID` - Trigger.dev project ID
 
 **S3 Image Storage:**

@@ -1,3 +1,7 @@
+// ⚠️ IMPORTANT: When modifying exchange data below, update this date to the current timestamp.
+// This replaced a dynamic `git log` call — there is no automated mechanism to keep it in sync.
+export const exchangesByCountryLastUpdated = "2025-10-21T13:11:58-07:00"
+
 const exchangesByCountry = {
   // Afghanistan
   AF: [

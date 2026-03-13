@@ -20,6 +20,7 @@ const {
   repairUnclosedBackticks,
   restoreDroppedBackslashEscapes,
   fixCollapsedComponentLineBreaks,
+  fixMissingLinkBrackets,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -611,6 +612,88 @@ test.describe("English Comparison Fixes", () => {
       )
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixMissingLinkBrackets", () => {
+    test("adds missing brackets when parens are present (ar pattern)", () => {
+      const english = "- [Ethereum roadmap](/roadmap/)"
+      const translated = "- إيثريوم خارطة الطريق(/roadmap/)"
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe("- [إيثريوم خارطة الطريق](/roadmap/)")
+      expect(fixCount).toBe(1)
+    })
+
+    test("adds missing brackets and parens when both are missing (ko pattern)", () => {
+      const english = "[More on recognizing and avoiding scams](/security/)"
+      const translated = "사기 인식과 예방에 대해 더 알아보기/security/"
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe("[사기 인식과 예방에 대해 더 알아보기](/security/)")
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips already-correct links", () => {
+      const english = "- [Ethereum roadmap](/roadmap/)"
+      const translated = "- [إيثريوم خارطة الطريق](/roadmap/)"
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple broken links in same content", () => {
+      const english = [
+        "- [Ethereum roadmap](/roadmap/)",
+        "- [Security tips](/security/)",
+      ].join("\n")
+      const translated = [
+        "- إيثريوم خارطة الطريق(/roadmap/)",
+        "- نصائح الأمان(/security/)",
+      ].join("\n")
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe(
+        [
+          "- [إيثريوم خارطة الطريق](/roadmap/)",
+          "- [نصائح الأمان](/security/)",
+        ].join("\n")
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("does not fix when href is not an English link", () => {
+      const english = "Visit the (/roadmap/) page for details"
+      const translated = "قم بزيارة (/roadmap/) الصفحة"
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      // No English markdown link for /roadmap/, so no fix
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const english =
+        "- [Ethereum roadmap](/roadmap/)\n```\ntext(/roadmap/)\n```"
+      const translated = "- [ترجمة](/roadmap/)\n```\ntext(/roadmap/)\n```"
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not corrupt external URLs (regression)", () => {
+      const english = [
+        "**Resources**: [EIP-8037 spec](https://eips.ethereum.org/EIPS/eip-8037)",
+        "- [Ethereum roadmap](/roadmap/)",
+      ].join("\n")
+      const translated = [
+        "**المصادر**: [المواصفات الفنية لـ EIP-8037](https://eips.ethereum.org/EIPS/eip-8037)",
+        "- إيثريوم خارطة الطريق(/roadmap/)",
+      ].join("\n")
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe(
+        [
+          "**المصادر**: [المواصفات الفنية لـ EIP-8037](https://eips.ethereum.org/EIPS/eip-8037)",
+          "- [إيثريوم خارطة الطريق](/roadmap/)",
+        ].join("\n")
+      )
+      expect(fixCount).toBe(1)
     })
   })
 })
