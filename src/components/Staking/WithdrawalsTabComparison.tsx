@@ -7,7 +7,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { Strong } from "../IntlStringElements"
 import { ButtonLink } from "../ui/buttons/Button"
+import InlineLink from "../ui/Link"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -51,8 +53,21 @@ const WithdrawalsTabComparison = () => {
             <Translation id="page-staking:comp-withdrawal-comparison-current-li-2" />
           </ListItem>
         </UnorderedList>
-        <p className="font-bold">
-          <Translation id="page-staking:comp-withdrawal-comparison-current-p" />
+        <p>
+          {t.rich("page-staking.comp-withdrawal-comparison-current-p", {
+            strong: Strong,
+            // Intentionally kept in English to match Beaconcha.in destination
+            depositsTab: '"Deposits"',
+            withdrawalAddressLabel: '"Withdrawal Address"',
+            beaconchain: (chunks) => (
+              <InlineLink href="https://beaconcha.in">{chunks}</InlineLink>
+            ),
+            prefix: (chunks) => (
+              <span className="font-mono font-bold text-warning-border dark:text-warning">
+                {chunks}
+              </span>
+            ),
+          })}
         </p>
 
         <WithdrawalCredentials />
