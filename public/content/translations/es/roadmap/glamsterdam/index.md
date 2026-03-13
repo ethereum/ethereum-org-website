@@ -53,21 +53,25 @@ Una escalabilidad significativa de L1 requiere alejarse de las suposiciones de c
 
 ### Propuesta principal: Separación integrada entre proponente y constructor (ePBS) {#epbs}
 
-- Elimina las suposiciones de confianza fuera del protocolo y la dependencia de los relés de código cerrado.
-- Permite el escalabilidad de nivel 1 al permitir cargas útiles mucho mayores a través de ventanas de propagación extendidas.
-- Introduce pagos sin intermediarios para constructores y transacciones cifradas para constructores anónimos.
+- Elimina las suposiciones de confianza fuera del protocolo y la dependencia de relés de terceros
+- Permite la escalabilidad de L1 al permitir cargas útiles mucho mayores a través de ventanas de propagación extendidas
+- Introduce pagos de constructores sin necesidad de confianza directamente en el protocolo
 
-Actualmente, el proceso de propuesta y construcción de bloques incluye un traspaso entre los bloque y los constructores de bloque. La relación entre proponentes y constructores no forma parte del protocolo central de Ethereum, por lo que depende de software de terceros de código cerrado (relés), así como de la confianza fuera del protocolo entre entidades. 
+Actualmente, el proceso de propuesta y construcción de bloques incluye un traspaso entre los proponentes de bloques y los constructores de bloques. La relación entre proponentes y constructores no forma parte del protocolo central de Ethereum, por lo que depende de middleware de terceros de confianza, software (relés) y confianza fuera del protocolo entre entidades.
 
-La relación fuera de protocolo entre los proponentes y los constructores también crea una "ruta crítica" durante la validación de bloque que obliga a [los validadores](/glossary/#validator) a apresurar la difusión y ejecución de transacción en una estrecha ventana de 2 segundos, lo que limita la cantidad de datos que la red puede manejar.
+La relación fuera de protocolo entre los proponentes y los constructores también crea una "ruta crítica" durante la validación de bloques que obliga a [los validadores](/glossary/#validator) a apresurar la difusión y ejecución de transacciones en una estrecha ventana de 2 segundos, lo que limita la cantidad de datos que la red puede manejar.
 
-**La separación integrada entre proponente y constructor (ePBS o EIP-7732)** separa formalmente el trabajo del proponente (que elige el bloque) del constructor (que ensambla las transacciones), "integrando" este proceso directamente en el protocolo de Ethereum para eliminar la confianza fuera del protocolo. También introduce el Comité de Oportunidad de Carga Útil (PTC) y una lógica de doble plazo, con validadores que atestiguan la oportunidad y la disponibilidad de datos por separado para maximizar el rendimiento. 
+**La separación integrada entre proponente y constructor (ePBS o EIP-7732)** separa formalmente el trabajo del proponente (que selecciona el bloque de consenso) del constructor (que ensambla la carga útil de ejecución), integrando este traspaso directamente en el protocolo.
+
+Integrar el intercambio sin confianza de una carga útil de bloque por pago directamente en el protocolo elimina la necesidad de middleware de terceros (como MEV-Boost). Sin embargo, los constructores y proponentes podrían seguir eligiendo usar relés o middleware fuera del protocolo para funciones complejas que aún no son parte del protocolo central.
+
+Para abordar el cuello de botella de la "ruta crítica", ePBS también introduce el Comité de Puntualidad de Carga Útil (PTC) y una lógica de doble plazo, permitiendo a los validadores atestiguar el bloque de consenso y la puntualidad de la carga útil de ejecución por separado para maximizar el rendimiento.
 
 <YouTube id="u8XvkTrjITs" />
 
-La separación de las funciones de proponente y constructor a nivel de protocolo amplía la ventana de propagación (o el tiempo disponible para difundir datos a través de la red) de 2 segundos a aproximadamente 9 segundos. 
+La separación de las funciones de proponente y constructor a nivel de protocolo amplía la ventana de propagación (o el tiempo disponible para difundir datos a través de la red) de 2 segundos a aproximadamente 9 segundos.
 
-ePBS reduce la dependencia de software adicional de terceros y permite que Ethereum procese de forma segura cantidades mucho mayores de datos (como más blobs para [las capas 2](/glossary/#layer-2)) sin sobrecargar la red.
+Al reemplazar middleware y relés fuera del protocolo con mecanismos dentro del protocolo, ePBS reduce las dependencias de confianza y permite que Ethereum procese de forma segura cantidades mucho mayores de datos (como más blobs para [las capas 2](/glossary/#layer-2)) sin sobrecargar la red.
 
 **Recursos**: [Especificación técnica EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 

@@ -53,21 +53,25 @@ Eine sinnvolle L1- Skalierung erfordert die Abkehr von Off-Protocol-Vertrauensan
 
 ### Vorschlag für das Hauptthema: Verankerte Trennung von Vorschlagenden und Erbauer (ePBS) {#epbs}
 
-- Beseitigt vertrauensbasierte Annahmen, die nicht dem Protokoll entsprechen, und die Abhängigkeit von geschlossenen Relay-Systemen.
-- Ermöglicht L1 Skalierung durch wesentlich größere Nutzlasten über erweiterte Ausbreitungsfenster.
-- Führt vertrauenslose Zahlungen an Erbauer und verschlüsselte Transaktionen für anonyme Erbauer ein.
+- Beseitigt vertrauensbasierte Annahmen außerhalb des Protokolls und die Abhängigkeit von Drittanbieter-Relays
+- Ermöglicht L1-Skalierung durch wesentlich größere Nutzlasten über erweiterte Ausbreitungsfenster
+- Führt vertrauenslose Builder-Zahlungen direkt in das Protokoll ein
 
-Derzeit umfasst der Prozess des Vorschlagens und Erstellens von Blöcke eine Übergabe zwischen Block und Block Buildern. Die Beziehung zwischen Vorschlagenden und Buildern ist nicht Teil des Ethereum- Protokoll, daher ist sie auf proprietäre Drittanbieter-Software (Relays) sowie auf vertrauenswürdige Beziehungen zwischen Entitäten außerhalb des Protokolls angewiesen. 
+Derzeit umfasst der Prozess des Vorschlagens und Erstellens von Blöcken eine Übergabe zwischen Block-Proposern und Block-Buildern. Die Beziehung zwischen Proposern und Buildern ist nicht Teil des Ethereum-Kernprotokolls, daher ist sie auf vertrauenswürdige Drittanbieter-Middleware, Software (Relays) und außerprotokollarisches Vertrauen zwischen Entitäten angewiesen.
 
-Die außerprotokollarische Beziehung zwischen Proposern und Buildern erzeugt auch einen „Hot Path“ während der Block, der [die Validatoren](/glossary/#validator) zwingt, die Transaktion und -ausführung in einem engen 2-Sekunden-Fenster zu beschleunigen, was die Datenmenge begrenzt, die das Netzwerk verarbeiten kann.
+Die außerprotokollarische Beziehung zwischen Proposern und Buildern erzeugt auch einen „Hot Path” während der Blockvalidierung, der [die Validatoren](/glossary/#validator) zwingt, die Transaktionsübertragung und -ausführung in einem engen 2-Sekunden-Fenster zu beschleunigen, was die Datenmenge begrenzt, die das Netzwerk verarbeiten kann.
 
-**Die verankerte Trennung von Proposer und Builder (ePBS oder EIP-7732)** trennt formell die Aufgabe des Proposers (der den Block auswählt) von der des Builders (der die Transaktionen zusammenstellt) und „verankert“ diesen Prozess direkt im Ethereum- Protokoll, um vertrauensloses Handeln außerhalb des Protokolls zu eliminieren. Sie führt auch das Payload Timeliness Committee (PTC) und eine Dual-Deadline-Logik ein, wobei Validatoren die Aktualität und Datenverfügbarkeit separat bescheinigen, um den Durchsatz zu maximieren. 
+**Die verankerte Trennung von Proposer und Builder (ePBS oder EIP-7732)** trennt formell die Aufgabe des Proposers (der den Konsensblock auswählt) von der des Builders (der die Ausführungsnutzlast zusammenstellt) und verankert diese Übergabe direkt im Protokoll.
 
-<YouTube id="u8XvkTrjITs" />
+Der vertrauenslose Austausch einer Block-Nutzlast gegen Zahlung direkt im Protokoll beseitigt die Notwendigkeit für Drittanbieter-Middleware (wie MEV-Boost). Allerdings könnten Builder und Proposer weiterhin außerprotokollarische Relays oder Middleware für komplexe Funktionen nutzen, die noch nicht Teil des Kernprotokolls sind.
 
-Die Trennung der Rollen von Vorschlagenden und Erbauer auf Protokoll erweitert das Ausbreitungsfenster (oder die Zeit, die für die Verbreitung von Daten im Netzwerk zur Verfügung steht) von 2 Sekunden auf etwa 9 Sekunden. 
+Um den „Hot Path”-Engpass zu beheben, führt ePBS auch das Payload Timeliness Committee (PTC) und eine Dual-Deadline-Logik ein, die es Validatoren ermöglicht, den Konsensblock und die Pünktlichkeit der Ausführungsnutzlast separat zu attestieren, um den Durchsatz zu maximieren.
 
-ePBS reduziert die Abhängigkeit von zusätzlicher Drittanbietersoftware und ermöglicht es Ethereum, viel größere Datenmengen (wie mehr Blobs für [Ebene-2-Lösungen](/glossary/#layer-2) ) sicher zu verarbeiten, ohne das Netzwerk zu belasten.
+<YouTube id=”u8XvkTrjITs” />
+
+Die Trennung der Rollen von Proposer und Builder auf Protokollebene erweitert das Ausbreitungsfenster (oder die Zeit, die für die Verbreitung von Daten im Netzwerk zur Verfügung steht) von 2 Sekunden auf etwa 9 Sekunden.
+
+Durch den Ersatz von außerprotokollarischer Middleware und Relays durch protokollinterne Mechanismen reduziert ePBS Vertrauensabhängigkeiten und ermöglicht es Ethereum, viel größere Datenmengen (wie mehr Blobs für [Ebene-2-Lösungen](/glossary/#layer-2)) sicher zu verarbeiten, ohne das Netzwerk zu belasten.
 
 **Ressourcen**: [Technische Spezifikation von EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
@@ -208,7 +212,7 @@ Wenn ein Nutzer heute eine Smart Contract Wallet mit Konten auf mehreren EVM-kom
 
 Das deterministische Factory-Predeploy funktioniert, indem es ein minimales, spezialisiertes Factory-Programm an einer identischen Stelle (genauer gesagt, Adresse 0x12) auf jeder teilnehmenden EVM-kompatiblen Chain dauerhaft platziert. Sein Ziel ist es, einen universellen, standardmäßigen Factory-Vertrag bereitzustellen, der von jedem EVM-kompatiblen Netzwerk übernommen werden kann. Solange eine EVM-Chain an diesem Standard teilnimmt und ihn übernimmt, können Entwickler ihn verwenden, um ihre Smart Contracts an genau derselben Adresse in diesem Netzwerk bereitzustellen. 
 
-Diese Standardisierung vereinfacht Entwicklern und dem gesamten Ökosystem das Erstellen und Verwalten von Cross-Chain-Anwendungen. Entwickler müssen keinen benutzerdefinierten, ketten­spezifischen Code mehr erstellen, um ihre Software über verschiedene Netzwerke hinweg zu verknüpfen. Stattdessen verwenden sie diese universelle Factory, um überall exakt diesel be Adresse se für ihre Anwendung zu generieren. Darüber hinaus könn en Block k-Explorer, Tracking-Dienste und Wallets diese Anwendungen und Konten über verschiedene Chains hinweg leichter identifizieren und verknüpfen, wodurch eine einheitlichere und nahtlosere Multi-Chain-Umgebung für alle Ethereum-basierten Teilnehmer entsteh 
+Diese Standardisierung vereinfacht Entwicklern und dem gesamten Ökosystem das Erstellen und Verwalten von Cross-Chain-Anwendungen. Entwickler müssen keinen benutzerdefinierten, kettenspezifischen Code mehr erstellen, um ihre Software über verschiedene Netzwerke hinweg zu verknüpfen. Stattdessen verwenden sie diese universelle Factory, um überall exakt dieselbe Adresse für ihre Anwendung zu generieren. Darüber hinaus können Block-Explorer, Tracking-Dienste und Wallets diese Anwendungen und Konten über verschiedene Chains hinweg leichter identifizieren und verknüpfen, wodurch eine einheitlichere und nahtlosere Multi-Chain-Umgebung für alle Ethereum-basierten Teilnehmer entsteht.
 
 **Ressourcen**: [Technische Spezifikation von EIP-7997](https://eips.ethereum.org/EIPS/eip-7997)
 

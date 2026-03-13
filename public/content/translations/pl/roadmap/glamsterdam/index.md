@@ -53,21 +53,25 @@ Znaczące skalowanie L1 wymaga odejścia od założeń zaufania poza protokołem
 
 ### Propozycja główna: Ustanowienie rozdzielenia ról proponent bloku-builder (ePBS) {#epbs}
 
-- Eliminuje założenia dotyczące zaufania spoza protokołu i poleganie na przekaźnikach o zamkniętym kodzie źródłowym
-- Umożliwia skalowanie L1, pozwalając na przesyłanie znacznie większych ładunków dzięki rozszerzonym oknom propagacji.
-- Wprowadza płatności dla anonimowych twórców bez pośredników i szyfrowane transakcje.
+- Eliminuje założenia dotyczące zaufania spoza protokołu i poleganie na przekaźnikach zewnętrznych
+- Umożliwia skalowanie L1, pozwalając na przesyłanie znacznie większych ładunków dzięki rozszerzonym oknom propagacji
+- Wprowadza bezpośrednie, bezdowierzeniale płatności dla builderów do protokołu
 
-Obecnie proces proponowania i tworzenia bloki obejmuje przekazywanie zadań między podmiotami proponującymi blok a podmiotami je tworzącymi. Relacja między podmiotami proponującymi a tworzącymi blok nie jest częścią podstawowego protokół Ethereum, więc opiera się na oprogramowaniu innych firm o zamkniętym kodzie źródłowym (przekaźnikach), a także na zaufaniu między podmiotami poza protokołem. 
+Obecnie proces proponowania i tworzenia bloków obejmuje przekazywanie zadań między podmiotami proponującymi bloki a podmiotami je tworzącymi. Relacja między podmiotami proponującymi a tworzącymi bloki nie jest częścią podstawowego protokołu Ethereum, więc opiera się na zaufanym oprogramowaniu pośredniczącym innych firm (przekaźnikach) oraz na zaufaniu między podmiotami poza protokołem.
 
-Pozaprotokołowe relacje między proponentami bloku a builderami tworzą również „gorącą ścieżkę” podczas walidacji blok, która zmusza [walidatorzy](/glossary/#validator) do szybkiego nadawania i wykonywania transakcja w ścisłym 2-sekundowym oknie, ograniczając ilość danych, jaką sieć może obsłużyć.
+Pozaprotokołowe relacje między proponentami bloków a builderami tworzą również „gorącą ścieżkę” podczas walidacji bloków, która zmusza [walidatorów](/glossary/#validator) do szybkiego nadawania i wykonywania transakcji w ścisłym 2-sekundowym oknie, ograniczając ilość danych, jaką sieć może obsłużyć.
 
-**Ustanowienie rozdzielenia ról proponent bloku-builder (ePBS lub EIP-7732)** formalnie rozdziela zadanie proponenta bloku (który wybiera blok) od zadania buildera (który składa transakcje), „wpisując” ten proces bezpośrednio do protokół Ethereum, aby wyeliminować zaufanie poza protokołem. Wprowadza również Payload Timeliness Committee (PTC) i logikę podwójnego terminu, przy czym walidatorzy poświadczają terminowość i dostępność danych oddzielnie, aby zmaksymalizować przepustowość. 
+**Ustanowienie rozdzielenia ról proponent-builder (ePBS lub EIP-7732)** formalnie rozdziela zadanie proponenta (który wybiera blok konsensusu) od zadania buildera (który składa ładunek wykonawczy), wpisując ten proces bezpośrednio w protokół.
 
-<YouTube id="u8XvkTrjITs" />
+Wbudowanie bezdowierzenialnej wymiany ładunku bloku za płatność bezpośrednio w protokole eliminuje potrzebę korzystania z oprogramowania pośredniczącego innych firm (takiego jak MEV-Boost). Jednakże builderzy i proponenci mogą nadal korzystać z przekaźników lub oprogramowania pośredniczącego spoza protokołu w celu obsługi złożonych funkcji, które nie są jeszcze częścią podstawowego protokołu.
 
-Oddzielenie ról proponującego i konstruktora na poziomie protokół rozszerza okno propagacji (lub czas dostępny do rozpowszechniania danych w sieć) z 2 sekund do około 9 sekund. 
+Aby rozwiązać problem wąskiego gardła „gorącej ścieżki”, ePBS wprowadza również Payload Timeliness Committee (PTC) i logikę podwójnego terminu, pozwalając walidatorom poświadczać blok konsensusu i terminowość ładunku wykonawczego oddzielnie, aby zmaksymalizować przepustowość.
 
-ePBS zmniejsza zależność od dodatkowego oprogramowania innych firm i pozwala Ethereum bezpiecznie przetwarzać znacznie większe ilości danych (takie jak więcej blobów dla [warstwy 2](/glossary/#layer-2) ) bez obciążania sieć.
+<YouTube id=”u8XvkTrjITs” />
+
+Oddzielenie ról proponującego i konstruktora na poziomie protokołu rozszerza okno propagacji (lub czas dostępny do rozpowszechniania danych w sieci) z 2 sekund do około 9 sekund.
+
+Zastąpienie oprogramowania pośredniczącego i przekaźników spoza protokołu mechanizmami wbudowanymi w protokół pozwala ePBS zmniejszyć zależności od zaufania i umożliwia Ethereum bezpiecznie przetwarzać znacznie większe ilości danych (takie jak więcej blobów dla [warstw 2](/glossary/#layer-2)) bez obciążania sieci.
 
 **Zasoby**: [Specyfikacja techniczna EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
@@ -109,7 +113,7 @@ Dodawanie nowych kont, tokenów i [inteligentnych kontraktów](/glossary/#smart-
 
 Niektóre działania, które tworzą stan w sieci Ethereum, takie jak tworzenie nowych kont lub wdrażanie dużych inteligentnych kontraktów, były stosunkowo tanie w porównaniu do trwałego miejsca do przechowywania, które zajmują w węzłach sieci. Na przykład wdrożenie kontraktu jest znacznie tańsze za bajt niż tworzenie miejsc do przechowywania. 
 
-Bez dostosowania stan Ethereum mógłby wzrosnąć o prawie 200 GiB rocznie, jeśli sieć skalowałaby się do limit gazu, ostatecznie przewyższając możliwości typowego sprzętu. 
+Bez dostosowania stan Ethereum mógłby wzrosnąć o prawie 200 GiB rocznie, jeśli sieć skalowałaby się do limitu 100M gazu, ostatecznie przewyższając możliwości typowego sprzętu. 
 
 **Zwiększenie kosztów gaz przy tworzeniu stanu (lub EIP-8037)** harmonizuje koszty, wiążąc je z rzeczywistym rozmiarem tworzonych danych, aktualizując opłaty tak, aby były proporcjonalne do ilości trwałych danych, które operacja tworzy lub do których uzyskuje dostęp. 
 

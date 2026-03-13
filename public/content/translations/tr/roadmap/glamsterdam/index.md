@@ -53,21 +53,25 @@ Anlamlı bir L1 ölçeklendirme, protokol dışı güven varsayımlarından ve s
 
 ### Ana teklif: Kurumsallaşmış teklif sahibi-oluşturucu ayrımı (ePBS) {#epbs}
 
-- Protokol dışı güven varsayımlarını ve kapalı kaynaklı aktarıcılara olan bağımlılığı ortadan kaldırır
-- Genişletilmiş yayılma pencereleri aracılığıyla çok daha büyük yüklerin aktarılmasına olanak tanıyarak L1 ölçeklendirme mümkün kılar.
-- Güven gerektirmeyen inşaatçı ödemelerini ve şifreli işlemler anonim inşaatçılara sunar
+- Protokol dışı güven varsayımlarını ve üçüncü taraf aktarıcılara olan bağımlılığı ortadan kaldırır
+- Genişletilmiş yayılma pencereleri aracılığıyla çok daha büyük yüklerin aktarılmasına olanak tanıyarak L1 ölçeklendirmeyi mümkün kılar
+- Güven gerektirmeyen oluşturucu ödemelerini doğrudan protokole dahil eder
 
-Şu anda bloklar önerme ve oluşturma süreci, blok önerenler ile blok oluşturucular arasında bir devir teslimi içerir. Önerenler ve oluşturucular arasındaki ilişki, temel Ethereum protokolünün bir parçası değildir, bu nedenle kapalı kaynaklı, üçüncü taraf yazılımlara (röleler) ve varlıklar arasındaki protokol dışı güvene dayanır. 
+Şu anda bloklar önerme ve oluşturma süreci, blok önerenler ile blok oluşturucular arasında bir devir teslimi içerir. Önerenler ve oluşturucular arasındaki ilişki, temel Ethereum protokolünün bir parçası değildir, bu nedenle güvenilir üçüncü taraf ara yazılımına, yazılımlara (röleler) ve varlıklar arasındaki protokol dışı güvene dayanır.
 
-Teklif sahipleri ve oluşturucular arasındaki protokol dışı ilişki, blok doğrulama sırasında bir 'kısa yol' da oluşturur; bu da [doğrulayıcılar](/glossary/#validator) 2 saniyelik dar bir pencerede işlem yayınlama ve yürütme konusunda acele etmeye zorlayarak ağ işleyebileceği veri miktarını sınırlar.
+Teklif sahipleri ve oluşturucular arasındaki protokol dışı ilişki, blok doğrulama sırasında bir 'kısa yol' da oluşturur; bu da [doğrulayıcıları](/glossary/#validator) 2 saniyelik dar bir pencerede işlem yayınlama ve yürütme konusunda acele etmeye zorlayarak ağın işleyebileceği veri miktarını sınırlar.
 
-**Kurumsallaştırılmış teklif-oluşturucu ayrımı (ePBS veya EIP-7732)**, teklif verenin ( blok seçen) işini oluşturucudan ( işlemler birleştiren) resmi olarak ayırarak bu süreci doğrudan Ethereum protokolüne 'kurumsallaştırır' ve böylece protokol dışı güveni ortadan kaldırır. Ayrıca, Yük Zamanındalık Komitesi'ni (PTC) ve ikili son teslim tarihi mantığını tanıtarak doğrulayıcılar verimini en üst düzeye çıkarmak için zamanındalık ve veri kullanılabilirliğine ayrı ayrı onay vermesini sağlar. 
+**Kurumsallaştırılmış teklif sahibi-oluşturucu ayrımı (ePBS veya EIP-7732)**, teklif verenin (mutabakat bloğunu seçen) işini oluşturucudan (yürütme yükünü birleştiren) resmi olarak ayırarak bu devir teslimi doğrudan protokole dahil eder.
+
+Bir blok yükünün ödeme karşılığında güven gerektirmeyen şekilde değişimini doğrudan protokole dahil etmek, üçüncü taraf ara yazılım ihtiyacını (MEV-Boost gibi) ortadan kaldırır. Ancak, oluşturucular ve teklif sahipleri henüz temel protokolün parçası olmayan karmaşık özellikler için protokol dışı röleleri veya ara yazılımları kullanmayı tercih edebilirler.
+
+'Kısa yol' darboğazını gidermek için ePBS ayrıca Yük Zamanındalık Komitesi'ni (PTC) ve ikili son tarih mantığını tanıtarak doğrulayıcıların mutabakat bloğuna ve yürütme yükü zamanındalığına ayrı ayrı onay vermesini sağlayarak verimi en üst düzeye çıkarır.
 
 <YouTube id="u8XvkTrjITs" />
 
-Protokol düzeyinde önerici ve oluşturucu rollerini ayırmak, yayılma penceresini (veya verileri ağ genelinde yaymak için mevcut süreyi) 2 saniyeden yaklaşık 9 saniyeye çıkarır. 
+Protokol düzeyinde önerici ve oluşturucu rollerini ayırmak, yayılma penceresini (veya verileri ağ genelinde yaymak için mevcut süreyi) 2 saniyeden yaklaşık 9 saniyeye çıkarır.
 
-ePBS, ek üçüncü taraf yazılımlara olan bağımlılığı azaltır ve Ethereum'un ağ zorlamadan çok daha büyük miktarda veriyi ( [katman 2'ler](/glossary/#layer-2) için daha fazla blob gibi) güvenli bir şekilde işlemesini sağlar.
+Protokol dışı ara yazılımı ve röleleri protokol içi mekanizmalarla değiştirerek, ePBS güven bağımlılıklarını azaltır ve Ethereum'un ağı zorlamadan çok daha büyük miktarda veriyi ([katman 2'ler](/glossary/#layer-2) için daha fazla blob gibi) güvenli bir şekilde işlemesini sağlar.
 
 **Kaynaklar**: [EIP-7732 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-7732)
 

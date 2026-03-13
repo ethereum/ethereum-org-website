@@ -53,21 +53,25 @@ Une mise à l'échelle L1 significative nécessite de s'éloigner des hypothèse
 
 ### Proposition principale: Séparation intégrée entre le proposant et le constructeur (ePBS) {#epbs}
 
-- Supprime les hypothèses de confiance hors protocole et la dépendance à l'égard des relais à code source fermé.
-- Permet la mise à l'échelle L1 en autorisant des charges utiles beaucoup plus importantes grâce à des fenêtres de propagation étendues.
-- Introduit les paiements aux constructeurs sans tiers de confiance et les transactions chiffrées pour les constructeurs anonymes.
+- Supprime les hypothèses de confiance hors protocole et la dépendance aux relais tiers
+- Permet la mise à l'échelle L1 en autorisant des charges utiles beaucoup plus importantes grâce à des fenêtres de propagation étendues
+- Introduit les paiements de constructeurs sans tiers de confiance directement dans le protocole
 
-Actuellement, le processus de proposition et de construction de blocs comprend un transfert entre les bloc et les constructeurs de bloc. La relation entre les proposeurs et les constructeurs ne fait pas partie du protocole Ethereum de base, elle repose donc sur des logiciels tiers à code fermé (relais), ainsi que sur une confiance hors protocole entre les entités. 
+Actuellement, le processus de proposition et de construction de blocs comprend un transfert entre les proposeurs de blocs et les constructeurs de blocs. La relation entre les proposeurs et les constructeurs ne fait pas partie du protocole Ethereum de base, elle repose donc sur un middleware tiers de confiance, des logiciels (relais) et une confiance hors protocole entre les entités.
 
-La relation hors protocole entre les proposants et les constructeurs crée également un « chemin critique » pendant la validation des bloc, ce qui oblige [les validateurs](/glossary/#validator) à diffuser et à exécuter les transaction rapidement dans une fenêtre de 2 secondes, limitant ainsi la quantité de données que le réseau peut traiter.
+La relation hors protocole entre les proposants et les constructeurs crée également un « chemin critique » pendant la validation des blocs, ce qui oblige [les validateurs](/glossary/#validator) à diffuser et à exécuter les transactions rapidement dans une fenêtre de 2 secondes, limitant ainsi la quantité de données que le réseau peut traiter.
 
-**La séparation proposant-constructeur (ePBS, ou EIP-7732)**, inscrite dans le protocole, sépare formellement le rôle du proposant (qui choisit le bloc) de celui du constructeur (qui assemble les transactions), « inscrivant » ce processus directement dans le protocole Ethereum afin de supprimer la confiance hors protocole. Elle introduit également le Payload Timeliness Committee (PTC) et une logique à double échéance, les validateurs attestant de la ponctualité et de la disponibilité des données séparément afin de maximiser le débit. 
+**La séparation proposant-constructeur intégrée au protocole (ePBS, ou EIP-7732)** sépare formellement le rôle du proposant (qui sélectionne le bloc de consensus) de celui du constructeur (qui assemble la charge utile d'exécution), inscrivant ce transfert directement dans le protocole.
+
+L'intégration de l'échange sans confiance d'une charge utile de bloc contre un paiement directement dans le protocole supprime le besoin de middleware tiers (comme MEV-Boost). Cependant, les constructeurs et les proposants peuvent toujours choisir d'utiliser des relais ou un middleware hors protocole pour des fonctionnalités complexes qui ne font pas encore partie du protocole de base.
+
+Pour résoudre le goulot d'étranglement du « chemin critique », ePBS introduit également le Payload Timeliness Committee (PTC) et une logique à double échéance, permettant aux validateurs d'attester le bloc de consensus et la ponctualité de la charge utile d'exécution séparément afin de maximiser le débit.
 
 <YouTube id="u8XvkTrjITs" />
 
-La séparation des rôles de proposant et de constructeur au niveau du protocole élargit la fenêtre de propagation (ou le temps disponible pour diffuser des données sur le réseau) de 2 secondes à environ 9 secondes. 
+La séparation des rôles de proposant et de constructeur au niveau du protocole élargit la fenêtre de propagation (ou le temps disponible pour diffuser des données sur le réseau) de 2 secondes à environ 9 secondes.
 
-ePBS réduit la dépendance à l'égard de logiciels tiers supplémentaires et permet à Ethereum de traiter en toute sécurité des quantités beaucoup plus importantes de données (comme plus de blobs pour [les couches 2](/glossary/#layer-2) ) sans surcharger le réseau.
+En remplaçant le middleware et les relais hors protocole par des mécanismes intégrés au protocole, ePBS réduit les dépendances de confiance et permet à Ethereum de traiter en toute sécurité des quantités beaucoup plus importantes de données (comme plus de blobs pour [les couches 2](/glossary/#layer-2)) sans surcharger le réseau.
 
 **Ressources**: [Spécification technique EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 

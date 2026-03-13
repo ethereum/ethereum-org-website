@@ -53,21 +53,25 @@ uboreshaji wa uwezo L1 wenye maana unahitaji kuachana na dhana za uaminifu zisiz
 
 ### Pendekezo kuu: Kutenganishwa kwa mpendekezaji na mjenzi (ePBS) {#epbs}
 
-- Huondoa dhana za uaminifu zisizoendana na itifaki na utegemezi wa vipitishio vya chanzo kilichofungwa.
-- Huwezesha uboreshaji wa uwezo L1 kwa kuruhusu mizigo mikubwa zaidi kupitia madirisha ya uenezaji yaliyopanuliwa.
-- Inatambulisha malipo ya wajenzi yasiyohitaji uaminifu na miamala iliyosimbwa kwa njia fiche kwa wajenzi wasiojulikana.
+- Huondoa dhana za uaminifu zisizo za itifaki na utegemezi wa vipitishio vya wahusika wengine
+- Huwezesha uboreshaji wa uwezo L1 kwa kuruhusu mizigo mikubwa zaidi kupitia madirisha ya uenezaji yaliyopanuliwa
+- Inaanzisha malipo ya wajenzi yasiyohitaji uaminifu moja kwa moja kwenye itifaki
 
-Hivi sasa, mchakato wa kupendekeza na kujenga bloku unahusisha uhamishaji kati ya wapendekezaji wa kitalu na wajenzi wa kitalu. Uhusiano kati ya wapendekezaji na wajenzi si sehemu ya itifaki kuu ya Ethereum, kwa hivyo inategemea programu ya chanzo iliyofungwa, ya watu wengine (viunganishi), pamoja na uaminifu nje ya itifaki kati ya vyombo. 
+Hivi sasa, mchakato wa kupendekeza na kujenga bloku unahusisha uhamishaji kati ya wapendekezaji wa kitalu na wajenzi wa kitalu. Uhusiano kati ya wapendekezaji na wajenzi si sehemu ya itifaki kuu ya Ethereum, kwa hivyo inategemea programu ya kati ya wahusika wengine inayoaminika, (viunganishi), pamoja na uaminifu nje ya itifaki kati ya vyombo.
 
 Uhusiano usiofuata itifaki kati ya wapendekezaji na wajenzi pia huunda 'njia ya haraka' wakati wa uthibitishaji wa kitalu ambayo huwalazimisha [wathibitishaji](/glossary/#validator) kukimbilia katika utangazaji na utekelezaji wa muamala ndani ya dirisha fupi la sekunde 2, na hivyo kupunguza kiwango cha data ambacho mtandao unaweza kushughulikia.
 
-**Utengano wa mpendekezaji-mjenzi ulioimarishwa (ePBS, au EIP-7732)** unatenganisha rasmi kazi ya mpendekezaji (ambaye huchagua kitalu) na mjenzi (ambaye hukusanya miamala), na 'kuimarisha' mchakato huu moja kwa moja kwenye itifaki ya Ethereum ili kuondoa uaminifu nje ya itifaki. Pia inaanzisha Kamati ya Ufaikishaji wa Malipo (PTC) na mantiki ya muda uliowekwa mara mbili, huku wathibitishaji wakithibitisha ufaikishaji na upatikanaji wa data kando ili kuongeza kiwango cha juu cha utendaji. 
+**Utengano wa mpendekezaji-mjenzi ulioimarishwa (ePBS, au EIP-7732)** unatenganisha rasmi kazi ya mpendekezaji (ambaye huchagua kitalu cha makubaliano) na mjenzi (ambaye hukusanya mzigo wa utekelezaji), na kuimarisha mchakato huu moja kwa moja kwenye itifaki.
+
+Kujenga ubadilishanaji usio na uaminifu wa mzigo wa kitalu kwa malipo moja kwa moja kwenye itifaki huondoa haja ya programu za kati za wahusika wengine (kama MEV-Boost). Hata hivyo, wajenzi na wapendekezaji wanaweza bado kuchagua kutumia viunganishi au programu za kati nje ya itifaki kwa vipengele changamano ambavyo bado si sehemu ya itifaki kuu.
+
+Ili kushughulikia tatizo la 'njia ya haraka', ePBS pia inaanzisha Kamati ya Ufaikishaji wa Mzigo (PTC) na mantiki ya muda uliowekwa mara mbili, ikiruhusu wathibitishaji kuthibitisha kitalu cha makubaliano na ufaikishaji wa mzigo wa utekelezaji kando ili kuongeza kiwango cha juu cha utendaji.
 
 <YouTube id="u8XvkTrjITs" />
 
-Kutenganisha majukumu ya mpendekezaji na mjenzi katika ngazi ya itifaki huongeza muda wa uenezaji (au muda unaopatikana wa kusambaza data kwenye mtandao) kutoka sekunde 2 hadi takriban sekunde 9. 
+Kutenganisha majukumu ya mpendekezaji na mjenzi katika ngazi ya itifaki huongeza muda wa uenezaji (au muda unaopatikana wa kusambaza data kwenye mtandao) kutoka sekunde 2 hadi takriban sekunde 9.
 
-ePBS hupunguza utegemezi wa programu za ziada za wahusika wengine na huruhusu Ethereum kusindika kwa usalama kiasi kikubwa zaidi cha data (kama vile blobu zaidi kwa [safu ya 2](/glossary/#layer-2) ) bila kuathiri mtandao.
+Kwa kubadilisha programu za kati na viunganishi nje ya itifaki na mitambo ya ndani ya itifaki, ePBS hupunguza utegemezi wa uaminifu na kuruhusu Ethereum kusindika kwa usalama kiasi kikubwa zaidi cha data (kama vile blobu zaidi kwa [safu ya 2](/glossary/#layer-2)) bila kuathiri mtandao.
 
 **Rasilimali**: [Maelezo ya kiufundi ya EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
