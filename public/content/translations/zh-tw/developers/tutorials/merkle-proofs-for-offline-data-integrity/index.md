@@ -4,6 +4,7 @@ description: "為儲存在鏈下的資料確保其鏈上完整性"
 author: Ori Pomerantz
 tags: [ "storage" ]
 skill: advanced
+breadcrumb: "Merkle證明"
 lang: zh-tw
 published: 2021-12-30
 ---

@@ -4,6 +4,7 @@ description: "TypeScript, React, Vite ve Wagmi gibi modern bileşenleri kullanar
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "ön uç" ]
 skill: beginner
+breadcrumb: "WAGMI ile UI"
 published: 2023-11-01
 lang: tr
 sidebarDepth: 3

@@ -10,6 +10,7 @@ tags:
     "nasazování"
   ]
 skill: beginner
+breadcrumb: "První kontrakt"
 lang: cs
 published: 2020-04-03
 source: EthereumDev

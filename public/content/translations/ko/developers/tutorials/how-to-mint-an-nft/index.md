@@ -4,6 +4,7 @@ description: "이 튜토리얼에서는 스마트 계약과 Web3를 사용하여
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "스마트 계약" ]
 skill: beginner
+breadcrumb: "NFT 민팅"
 lang: ko
 published: 2021-04-22
 ---

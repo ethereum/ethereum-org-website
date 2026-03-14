@@ -4,6 +4,7 @@ description: "Jak funguje standardní přemostění pro Optimism? Proč to fungu
 author: Ori Pomerantz
 tags: [ "solidity", "přemostění", "vrstva 2" ]
 skill: intermediate
+breadcrumb: "Optimism bridge"
 published: 2022-03-30
 lang: cs
 ---

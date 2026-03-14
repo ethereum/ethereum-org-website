@@ -5,6 +5,7 @@ author: "EthereumOnArm"
 tags: [ "クライアント", "実行レイヤー", "コンセンサスレイヤー", "ノード" ]
 lang: ja
 skill: intermediate
+breadcrumb: "Raspberry Piノード"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

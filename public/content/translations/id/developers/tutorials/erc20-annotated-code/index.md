@@ -7,6 +7,7 @@ tags:
   - "solidity"
   - "erc-20"
 skill: beginner
+breadcrumb: "Panduan ERC-20"
 published: 2021-03-09
 ---
 

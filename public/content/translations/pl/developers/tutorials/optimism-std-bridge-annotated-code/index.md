@@ -4,6 +4,7 @@ description: "Jak działa standardowy most dla Optimism? Dlaczego działa w ten 
 author: Ori Pomerantz
 tags: [ "solidity", "most", "warstwa 2" ]
 skill: intermediate
+breadcrumb: "Most Optimism"
 published: 2022-03-30
 lang: pl
 ---

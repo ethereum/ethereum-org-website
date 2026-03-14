@@ -5,6 +5,7 @@ author: "Tellor"
 lang: uk
 tags: [ "мова програмування", "Смарт-контракти", "оракули" ]
 skill: beginner
+breadcrumb: "Оракул Tellor"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

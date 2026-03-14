@@ -7,6 +7,7 @@ tags:
   - "ponte"
   - "livello 2"
 skill: intermediate
+breadcrumb: "Ponte Optimism"
 published: 2022-03-30
 lang: it
 ---

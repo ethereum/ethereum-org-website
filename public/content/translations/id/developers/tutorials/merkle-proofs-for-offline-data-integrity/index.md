@@ -7,6 +7,7 @@ tags:
   - "integritas"
   - "penyimpanan"
 skill: advanced
+breadcrumb: "Bukti Merkle"
 lang: id
 published: 2021-12-30
 ---

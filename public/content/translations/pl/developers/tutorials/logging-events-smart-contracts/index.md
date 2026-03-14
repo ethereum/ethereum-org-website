@@ -4,6 +4,7 @@ description: "Wprowadzenie do zdarzeń w inteligentnych kontraktach i sposobów 
 author: "jdourlens"
 tags: [ "smart kontrakty", "remix", "solidity", "zdarzenia" ]
 skill: intermediate
+breadcrumb: "Logowanie zdarzeń"
 lang: pl
 published: 2020-04-03
 source: EthereumDev

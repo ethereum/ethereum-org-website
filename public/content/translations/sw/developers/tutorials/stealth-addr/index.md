@@ -11,6 +11,7 @@ tags:
     "wasm"
   ]
 skill: intermediate
+breadcrumb: "Anwani za siri"
 published: 2025-11-30
 lang: sw
 sidebarDepth: 3

@@ -5,6 +5,7 @@ author: "Tellor"
 lang: zh
 tags: [ "Solidity", "智能合同", "预言机" ]
 skill: beginner
+breadcrumb: "Tellor预言机"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

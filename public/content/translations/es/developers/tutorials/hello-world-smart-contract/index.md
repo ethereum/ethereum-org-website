@@ -11,6 +11,7 @@ tags:
     "implementación"
   ]
 skill: beginner
+breadcrumb: "Contrato Hello World"
 lang: es
 published: 2021-03-31
 ---

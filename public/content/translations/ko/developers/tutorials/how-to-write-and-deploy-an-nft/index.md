@@ -4,6 +4,7 @@ description: "이 튜토리얼은 NFT 시리즈의 1부이며, 이더리움과 I
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "스마트 컨트랙트" ]
 skill: beginner
+breadcrumb: "NFT 작성 및 배포"
 lang: ko
 published: 2021-04-22
 ---

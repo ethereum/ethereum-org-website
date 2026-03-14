@@ -5,6 +5,7 @@ author: Markus Waas
 lang: ja
 tags: [ "Solidity", "スマートコントラクト", "ストレージ" ]
 skill: intermediate
+breadcrumb: "コントラクト縮小"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

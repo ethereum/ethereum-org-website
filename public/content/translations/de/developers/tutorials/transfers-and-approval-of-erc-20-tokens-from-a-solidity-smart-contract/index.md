@@ -9,6 +9,7 @@ tags:
   - "Erste Schritte"
   - "Erc-20"
 skill: intermediate
+breadcrumb: "ERC-20-Transfers"
 lang: de
 published: 2020-04-07
 source: EthereumDev

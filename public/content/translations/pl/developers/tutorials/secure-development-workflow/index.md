@@ -4,6 +4,7 @@ description: "Sugerowany przepływ pracy do pisania bezpiecznych inteligentnych 
 author: "Trailofbits"
 tags: [ "smart kontrakty", "bezpieczeństwo", "solidity" ]
 skill: intermediate
+breadcrumb: "Lista bezpieczeństwa"
 lang: pl
 published: 2020-09-07
 source: Building secure contracts

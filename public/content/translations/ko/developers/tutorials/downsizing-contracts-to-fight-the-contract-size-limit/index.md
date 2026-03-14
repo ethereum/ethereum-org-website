@@ -5,6 +5,7 @@ author: Markus Waas
 lang: ko
 tags: [ "Solidity", "스마트 계약", "저장 공간" ]
 skill: intermediate
+breadcrumb: "컨트랙트 축소"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

@@ -4,6 +4,7 @@ description: "TypeScript、React、Vite、Wagmiといった最新のコンポー
 author: Ori Pomerantz
 tags: [ "TypeScript", "react", "vite", "wagmi", "フロントエンド" ]
 skill: beginner
+breadcrumb: "WAGMI UI"
 published: 2023-11-01
 lang: ja
 sidebarDepth: 3

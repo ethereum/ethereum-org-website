@@ -12,6 +12,7 @@ tags:
     "mud"
   ]
 skill: advanced
+breadcrumb: "ZK тайное состояние"
 lang: ru
 published: 2025-03-15
 ---

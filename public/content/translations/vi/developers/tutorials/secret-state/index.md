@@ -12,6 +12,7 @@ tags:
     "mud"
   ]
 skill: advanced
+breadcrumb: "Trạng thái bí mật ZK"
 lang: vi
 published: 2025-03-15
 ---

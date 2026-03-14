@@ -9,6 +9,7 @@ tags:
     "Solidity"
   ]
 skill: beginner
+breadcrumb: "பணப்பையில் NFT"
 lang: ta
 published: 2021-04-22
 ---

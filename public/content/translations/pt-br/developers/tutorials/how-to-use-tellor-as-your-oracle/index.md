@@ -5,6 +5,7 @@ author: "Tellor"
 lang: pt-br
 tags: [ "Solidity", "smart contracts", "oráculos" ]
 skill: beginner
+breadcrumb: "Oracle Tellor"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

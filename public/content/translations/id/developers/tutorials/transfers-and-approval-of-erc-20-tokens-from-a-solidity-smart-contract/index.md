@@ -9,6 +9,7 @@ tags:
   - "memulai"
   - "erc-20"
 skill: intermediate
+breadcrumb: "Transfer ERC-20"
 lang: id
 published: 2020-04-07
 source: EthereumDev

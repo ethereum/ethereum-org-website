@@ -4,6 +4,7 @@ description: "Explicación de la parte del Yellow Paper, las especificaciones fo
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: es
 published: 2022-05-15
 ---

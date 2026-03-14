@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: sw
 tags: [ "safu ya 2" ]
 skill: intermediate
+breadcrumb: "ABI fupi"
 published: 2022-04-01
 ---
 

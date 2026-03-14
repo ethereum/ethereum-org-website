@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: ta
 tags: [ "ஏஜென்ட்", "சேவையகம்", "ஆஃப்செயின்" ]
 skill: beginner
+breadcrumb: "சர்வர் கூறுகள்"
 published: 2024-07-15
 ---
 

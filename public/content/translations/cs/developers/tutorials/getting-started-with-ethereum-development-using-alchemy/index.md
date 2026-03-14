@@ -11,6 +11,7 @@ tags:
     "alchemy"
   ]
 skill: beginner
+breadcrumb: "Jak začít"
 lang: cs
 published: 2020-10-30
 source: Medium

@@ -4,6 +4,7 @@ description: "分散型のクラシファイドボード（掲示板）に、ト
 author: "Alberto Cuesta Cañada"
 tags: [ "スマートコントラクト", "ERC-721", "Solidity", "トークン" ]
 skill: intermediate
+breadcrumb: "ERC-721マーケット"
 lang: ja
 published: 2020-03-19
 source: Hackernoon

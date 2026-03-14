@@ -8,6 +8,7 @@ tags:
   - "solidity"
   - "aksi"
 skill: intermediate
+breadcrumb: "Pencatatan event"
 lang: id
 published: 2020-04-03
 source: EthereumDev

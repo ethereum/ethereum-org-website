@@ -4,6 +4,7 @@ description: "Después de leer este tutorial, un desarrollador será capaz de in
 author: Ori Pomerantz
 tags: [ "web 2.0", "autenticación", "eas" ]
 skill: beginner
+breadcrumb: "Ethereum para auth web2"
 lang: es
 published: 2025-04-30
 ---

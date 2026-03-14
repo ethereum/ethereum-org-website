@@ -5,6 +5,7 @@ author: "Tellor"
 lang: pl
 tags: [ "solidity", "smart kontrakty", "wyrocznie" ]
 skill: beginner
+breadcrumb: "Wyrocznia Tellor"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

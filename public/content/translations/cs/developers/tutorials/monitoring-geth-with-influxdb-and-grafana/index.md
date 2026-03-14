@@ -4,6 +4,7 @@ description: "Nastavte si monitorování pro svůj Geth uzel pomocí InfluxDB a 
 author: "Mario Havel"
 tags: [ "klienti", "uzly" ]
 skill: intermediate
+breadcrumb: "Monitoring Geth"
 lang: cs
 published: 2021-01-13
 ---

@@ -12,6 +12,7 @@ tags:
     "mud"
   ]
 skill: advanced
+breadcrumb: "Etat secret ZK"
 lang: fr
 published: 2025-03-15
 ---

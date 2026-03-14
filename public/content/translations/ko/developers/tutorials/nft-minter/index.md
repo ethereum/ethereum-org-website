@@ -12,6 +12,7 @@ tags:
     "Pinata"
   ]
 skill: intermediate
+breadcrumb: "NFT 민터 dapp"
 lang: ko
 published: 2021-10-06
 ---

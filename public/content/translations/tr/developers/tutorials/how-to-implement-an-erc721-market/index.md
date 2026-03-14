@@ -10,6 +10,7 @@ tags:
     "token'lar"
   ]
 skill: intermediate
+breadcrumb: "ERC-721 pazarı"
 lang: tr
 published: 2020-03-19
 source: Hackernoon

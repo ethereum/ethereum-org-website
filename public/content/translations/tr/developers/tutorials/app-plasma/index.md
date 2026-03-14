@@ -4,6 +4,7 @@ description: "Bu öğreticide, para yatırma işlemleri için yarı gizli bir ba
 author: Ori Pomerantz
 tags: [ "sıfır bilgi", "sunucu", "zincir dışında", "gizlilik" ]
 skill: advanced
+breadcrumb: "Uygulamaya özel Plasma"
 lang: tr
 published: 2025-10-15
 ---

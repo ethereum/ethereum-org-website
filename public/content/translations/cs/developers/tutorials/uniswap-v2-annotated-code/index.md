@@ -4,6 +4,7 @@ description: "Jak funguje kontrakt Uniswap v2? Proč je napsán tak, jak je?"
 author: Ori Pomerantz
 tags: [ "solidity" ]
 skill: intermediate
+breadcrumb: "Uniswap v2 průvodce"
 published: 2021-05-01
 lang: cs
 ---

@@ -5,6 +5,7 @@ author: "Tellor"
 lang: cs
 tags: [ "solidity", "smart kontrakt účty", "orákula" ]
 skill: beginner
+breadcrumb: "Tellor oracle"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

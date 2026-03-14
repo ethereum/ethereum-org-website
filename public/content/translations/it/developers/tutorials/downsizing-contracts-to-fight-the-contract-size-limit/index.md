@@ -8,6 +8,7 @@ tags:
   - "contratti intelligenti"
   - "archiviazione"
 skill: intermediate
+breadcrumb: "Ridurre i contratti"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

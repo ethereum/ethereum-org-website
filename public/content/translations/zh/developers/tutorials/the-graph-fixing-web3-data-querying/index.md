@@ -5,6 +5,7 @@ author: Markus Waas
 lang: zh
 tags: [ "Solidity", "智能合同", "查询中", "the graph", "react" ]
 skill: intermediate
+breadcrumb: "The Graph"
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph

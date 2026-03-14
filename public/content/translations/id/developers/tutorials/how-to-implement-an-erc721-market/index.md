@@ -8,6 +8,7 @@ tags:
   - "solidity"
   - "token"
 skill: intermediate
+breadcrumb: "Pasar ERC-721"
 lang: id
 published: 2020-03-19
 source: Hackernoon

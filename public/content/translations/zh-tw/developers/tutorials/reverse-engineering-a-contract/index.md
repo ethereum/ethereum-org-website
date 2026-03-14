@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: zh-tw
 tags: [ "evm", "opcodes" ]
 skill: advanced
+breadcrumb: "逆向工程"
 published: 2021-12-30
 ---
 

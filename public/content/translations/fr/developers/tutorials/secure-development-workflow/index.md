@@ -4,6 +4,7 @@ description: "Un flux de travail suggéré pour la rédaction de contrats intell
 author: "Trailofbits"
 tags: [ "contrats intelligents", "sécurité", "Solidity" ]
 skill: intermediate
+breadcrumb: "Liste de securite"
 lang: fr
 published: 2020-09-07
 source: Building secure contracts

@@ -9,6 +9,7 @@ tags:
   - "token yang tidak dapat dipertukarkan"
   - "Solidity"
 skill: beginner
+breadcrumb: "Lihat NFT di dompet"
 lang: id
 published: 2021-04-22
 ---

@@ -5,6 +5,7 @@ author: Nathan H. Leung
 lang: vi
 tags: [ "eip-1271", "hợp đồng thông minh", "xác minh", "ký" ]
 skill: intermediate
+breadcrumb: "Chữ ký EIP-1271"
 published: 2023-01-12
 ---
 

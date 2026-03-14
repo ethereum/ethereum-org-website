@@ -13,6 +13,7 @@ tags:
     "테스트"
   ]
 skill: intermediate
+breadcrumb: "멀티 클라이언트 테스트넷"
 lang: ko
 published: 2023-04-11
 ---

@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: ur-in
 tags: [ "evm", "opcodes" ]
 skill: advanced
+breadcrumb: "Reverse engineering"
 published: 2021-12-30
 ---
 

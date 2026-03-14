@@ -4,6 +4,7 @@ description: Introductory tutorial on writing and deploying a simple smart contr
 author: "elanh"
 tags: ["solidity", "hardhat", "alchemy", "smart contracts", "deploying"]
 skill: beginner
+breadcrumb: Hello World contract
 lang: en
 published: 2021-03-31
 ---

@@ -4,6 +4,7 @@ description: "Configure o monitoramento para seu nó Geth usando InfluxDB e Graf
 author: "Mario Havel"
 tags: [ "clientes", "nós" ]
 skill: intermediate
+breadcrumb: "Monitorar Geth"
 lang: pt-br
 published: 2021-01-13
 ---

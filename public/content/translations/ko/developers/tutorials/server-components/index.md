@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: ko
 tags: [ "에이전트", "서버", "오프체인" ]
 skill: beginner
+breadcrumb: "Server 컴포넌트"
 published: 2024-07-15
 ---
 

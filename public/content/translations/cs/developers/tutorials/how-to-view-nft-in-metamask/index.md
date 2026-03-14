@@ -4,6 +4,7 @@ description: "Tento návod popisuje, jak si zobrazit stávající NFT v peněže
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
+breadcrumb: "NFT v peněžence"
 lang: cs
 published: 2021-04-22
 ---

@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: zh
 tags: [ "Solidity", "智能合同", "安全性。" ]
 skill: intermediate
+breadcrumb: "安全工具"
 published: 2020-09-07
 source: "构建安全的合约"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

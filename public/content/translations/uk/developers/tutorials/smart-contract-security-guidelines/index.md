@@ -4,6 +4,7 @@ description: "Перелік правил безпеки при створенн
 author: "Trailofbits"
 tags: [ "мова програмування", "Смарт-контракти", "захист" ]
 skill: intermediate
+breadcrumb: "Правила безпеки"
 lang: uk
 published: 2020-09-06
 source: Building secure contracts

@@ -9,6 +9,7 @@ tags:
   - "memulai"
   - "erc-20"
 skill: beginner
+breadcrumb: "Dasar token ERC-20"
 lang: id
 published: 2020-04-05
 source: EthereumDev

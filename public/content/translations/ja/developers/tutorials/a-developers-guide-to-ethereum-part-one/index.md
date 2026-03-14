@@ -5,6 +5,7 @@ author: Marc Garreau
 lang: ja
 tags: [ "Python", "web3.py" ]
 skill: beginner
+breadcrumb: "Python Ethereum"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

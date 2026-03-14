@@ -4,6 +4,7 @@ description: "Apprenez à mettre en place et à configurer la bibliothèque web3
 author: "jdourlens"
 tags: [ "web3.js", "JavaScript" ]
 skill: beginner
+breadcrumb: "Configurer web3.js"
 lang: fr
 published: 2020-04-11
 source: EthereumDev

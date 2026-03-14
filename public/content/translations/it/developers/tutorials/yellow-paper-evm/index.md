@@ -5,6 +5,7 @@ author: "qbzzt"
 tags:
   - "evm"
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: it
 published: 2022-05-15
 ---

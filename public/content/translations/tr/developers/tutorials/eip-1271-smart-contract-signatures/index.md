@@ -11,6 +11,7 @@ tags:
     "imzalama"
   ]
 skill: intermediate
+breadcrumb: "EIP-1271 imzaları"
 published: 2023-01-12
 ---
 

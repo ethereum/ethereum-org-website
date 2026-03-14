@@ -4,6 +4,7 @@ description: "Як працює стандартний міст для Optimism?
 author: Ori Pomerantz
 tags: [ "мова програмування", "міст", "рівень 2" ]
 skill: intermediate
+breadcrumb: "Міст Optimism"
 published: 2022-03-30
 lang: uk
 ---

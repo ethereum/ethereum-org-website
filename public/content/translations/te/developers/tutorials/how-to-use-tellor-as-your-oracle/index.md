@@ -5,6 +5,7 @@ author: "Tellor"
 lang: te
 tags: [ "దృఢత్వం", "స్మార్ట్ కాంట్రాక్టులు", "ఒరాకిల్స్" ]
 skill: beginner
+breadcrumb: "Tellor oracle"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

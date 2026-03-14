@@ -5,6 +5,7 @@ author: Markus Waas
 lang: zh
 tags: [ "Solidity", "智能合同", "存储" ]
 skill: intermediate
+breadcrumb: "缩减合约"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

@@ -4,6 +4,7 @@ description: "सुरक्षित smart contracts लिहिण्या�
 author: "Trailofbits"
 tags: [ "स्मार्ट कॉन्ट्रॅक्ट", "सुरक्षा", "सॉलिडिटी" ]
 skill: intermediate
+breadcrumb: "सुरक्षा चेकलिस्ट"
 lang: mr
 published: 2020-09-07
 source: Building secure contracts

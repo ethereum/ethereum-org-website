@@ -4,6 +4,7 @@ description: Wie man einen Smart Contract von einem bestehenden Contract aus ber
 author: "jdourlens"
 tags: ["smart contracts", "solidity", "remix", "deploying", "composability"]
 skill: advanced
+breadcrumb: "Vertragsinteraktionen"
 lang: de
 published: 2020-04-05
 source: EthereumDev

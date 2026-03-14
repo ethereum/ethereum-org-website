@@ -5,6 +5,7 @@ author: Trailofbits
 lang: zh
 tags: [ "Solidity", "智能合同", "安全性。", "测试", "形式化验证" ]
 skill: advanced
+breadcrumb: "Manticore"
 published: 2020-01-13
 source: "构建安全的合约"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

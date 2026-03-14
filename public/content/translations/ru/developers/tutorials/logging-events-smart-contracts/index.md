@@ -4,6 +4,7 @@ description: "Введение в события умных контрактов
 author: "jdourlens"
 tags: [ "Умные контракты", "Remix", "Solidity", "события" ]
 skill: intermediate
+breadcrumb: "Логирование событий"
 lang: ru
 published: 2020-04-03
 source: EthereumDev

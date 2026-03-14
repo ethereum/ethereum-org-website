@@ -4,6 +4,7 @@ description: Utangulizi wa matukio ya mkataba-erevu na jinsi unavyoweza kuyatumi
 author: "jdourlens"
 tags: ["smart contracts", "remix", "solidity", "events"]
 skill: intermediate
+breadcrumb: "Kurekodi matukio"
 lang: sw
 published: 2020-04-03
 source: EthereumDev

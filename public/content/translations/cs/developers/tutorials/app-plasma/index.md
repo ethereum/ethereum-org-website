@@ -4,6 +4,7 @@ description: "V tomto návodu vytvoříme polotajnou banku pro vklady. Banka je 
 author: Ori Pomerantz
 tags: [ "nulová znalost", "server", "offchain", "soukromí" ]
 skill: advanced
+breadcrumb: "Plasma pro aplikace"
 lang: cs
 published: 2025-10-15
 ---

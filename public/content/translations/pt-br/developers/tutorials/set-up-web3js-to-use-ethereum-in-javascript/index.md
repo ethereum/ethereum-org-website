@@ -4,6 +4,7 @@ description: "Aprenda como instalar e configurar a biblioteca web3.js para inter
 author: "jdourlens"
 tags: [ "web3.js", "JavaScript" ]
 skill: beginner
+breadcrumb: "Configurar web3.js"
 lang: pt-br
 published: 2020-04-11
 source: EthereumDev

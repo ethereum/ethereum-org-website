@@ -4,6 +4,7 @@ description: "在本教程中，我们将构建一个用于存款的半保密银
 author: Ori Pomerantz
 tags: [ "零知识", "服务器", "链下", "隐私" ]
 skill: advanced
+breadcrumb: "App Plasma"
 lang: zh
 published: 2025-10-15
 ---

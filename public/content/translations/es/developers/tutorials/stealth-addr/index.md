@@ -11,6 +11,7 @@ tags:
     "wasm"
   ]
 skill: intermediate
+breadcrumb: "Direcciones ocultas"
 published: 2025-11-30
 lang: es
 sidebarDepth: 3

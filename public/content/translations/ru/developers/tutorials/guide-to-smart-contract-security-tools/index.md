@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: ru
 tags: [ "Solidity", "Умные контракты", "безопасность" ]
 skill: intermediate
+breadcrumb: "Инструменты безопасности"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

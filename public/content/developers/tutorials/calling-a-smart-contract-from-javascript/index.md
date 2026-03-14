@@ -4,6 +4,7 @@ description: How to call a smart contract function from JavaScript using a Dai t
 author: jdourlens
 tags: ["transactions", "frontend", "JavaScript", "web3.js"]
 skill: beginner
+breadcrumb: Call contracts from JS
 lang: en
 published: 2020-04-19
 source: EthereumDev

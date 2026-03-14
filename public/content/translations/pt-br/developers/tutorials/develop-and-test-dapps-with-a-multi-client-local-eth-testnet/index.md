@@ -13,6 +13,7 @@ tags:
     "testando"
   ]
 skill: intermediate
+breadcrumb: "Testnet multicliente"
 lang: pt-br
 published: 2023-04-11
 ---

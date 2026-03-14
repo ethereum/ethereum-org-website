@@ -4,6 +4,7 @@ description: "Hướng dẫn thân thiện với người mới bắt đầu v�
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "TOKEN" ]
 skill: beginner
+breadcrumb: "Gửi token"
 lang: vi
 published: 2021-04-06
 ---

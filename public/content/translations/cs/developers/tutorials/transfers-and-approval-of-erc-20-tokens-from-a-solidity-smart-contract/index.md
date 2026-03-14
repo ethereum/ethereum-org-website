@@ -4,6 +4,7 @@ description: "Vytvořte chytrý kontrakt DEX, který spravuje převody a schvál
 author: "jdourlens"
 tags: [ "smart kontrakt účty", "tokeny", "solidity", "erc-20" ]
 skill: intermediate
+breadcrumb: "ERC-20 převody"
 lang: cs
 published: 2020-04-07
 source: EthereumDev

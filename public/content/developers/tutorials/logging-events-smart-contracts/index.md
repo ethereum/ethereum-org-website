@@ -4,6 +4,7 @@ description: An introduction to smart contract events and how you can use them t
 author: "jdourlens"
 tags: ["smart contracts", "remix", "solidity", "events"]
 skill: intermediate
+breadcrumb: Event logging
 lang: en
 published: 2020-04-03
 source: EthereumDev

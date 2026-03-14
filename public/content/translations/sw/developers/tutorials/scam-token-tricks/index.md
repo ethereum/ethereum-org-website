@@ -4,6 +4,7 @@ description: Katika mafunzo haya tunachambua tokeni ya ulaghai ili kuona baadhi 
 author: Ori Pomerantz
 tags: ["scam", "solidity", "erc-20", "javascript", "typescript"]
 skill: intermediate
+breadcrumb: "Hila za tokeni za ulaghai"
 published: 2023-09-15
 lang: sw
 ---

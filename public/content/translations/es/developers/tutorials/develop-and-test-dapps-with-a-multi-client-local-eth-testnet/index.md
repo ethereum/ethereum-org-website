@@ -13,6 +13,7 @@ tags:
     "pruebas"
   ]
 skill: intermediate
+breadcrumb: "Testnet multicliente"
 lang: es
 published: 2023-04-11
 ---

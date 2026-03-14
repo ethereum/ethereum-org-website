@@ -9,6 +9,7 @@ tags:
   - "query"
   - "alchemy"
 skill: beginner
+breadcrumb: "Primi passi"
 lang: it
 published: 2020-10-30
 source: Medio

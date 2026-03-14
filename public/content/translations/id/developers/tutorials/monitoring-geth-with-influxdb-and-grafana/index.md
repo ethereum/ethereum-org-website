@@ -6,6 +6,7 @@ tags:
   - "klien"
   - "node"
 skill: intermediate
+breadcrumb: "Monitoring Geth"
 lang: id
 published: 2021-01-13
 ---

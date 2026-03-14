@@ -4,6 +4,7 @@ description: "在链上确保主要存储在链下的数据的数据完整性"
 author: Ori Pomerantz
 tags: [ "存储" ]
 skill: advanced
+breadcrumb: "Merkle证明"
 lang: zh
 published: 2021-12-30
 ---

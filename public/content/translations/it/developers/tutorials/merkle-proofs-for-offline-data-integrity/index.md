@@ -5,6 +5,7 @@ author: Ori Pomerantz
 tags:
   - "archiviazione"
 skill: advanced
+breadcrumb: "Prove Merkle"
 lang: it
 published: 2021-12-30
 ---

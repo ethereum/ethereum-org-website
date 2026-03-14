@@ -10,6 +10,7 @@ tags:
   - "test"
   - "verifica formale"
 skill: advanced
+breadcrumb: "Manticore"
 published: 2020-01-13
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

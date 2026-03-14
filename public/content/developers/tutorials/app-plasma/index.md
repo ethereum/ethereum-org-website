@@ -4,6 +4,7 @@ description: In this tutorial, we build a semi-secret bank for deposits. The ban
 author: Ori Pomerantz
 tags: ["zero-knowledge", "server", "offchain", "privacy"]
 skill: advanced
+breadcrumb: App-specific Plasma
 lang: en
 published: 2025-10-15
 ---

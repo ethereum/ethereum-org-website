@@ -10,6 +10,7 @@ tags:
   - "menyebarkan"
   - "komposabilitas"
 skill: advanced
+breadcrumb: "Interaksi kontrak"
 lang: id
 published: 2020-04-05
 source: EthereumDev

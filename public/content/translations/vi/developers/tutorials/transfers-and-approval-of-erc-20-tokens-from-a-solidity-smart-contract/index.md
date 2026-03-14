@@ -4,6 +4,7 @@ description: "Xây dựng một hợp đồng thông minh của sàn giao dịch
 author: "jdourlens"
 tags: [ "hợp đồng thông minh", "tokens", "Solidity", "erc-20" ]
 skill: intermediate
+breadcrumb: "Chuyển ERC-20"
 lang: vi
 published: 2020-04-07
 source: EthereumDev

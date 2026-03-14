@@ -4,6 +4,7 @@ description: "Посібник для початківців із надсила
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "ТОКЕНИ" ]
 skill: beginner
+breadcrumb: "Відправка токенів"
 lang: uk
 published: 2021-04-06
 ---

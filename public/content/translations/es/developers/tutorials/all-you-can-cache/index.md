@@ -4,6 +4,7 @@ description: "Aprenda a crear y usar un contrato de almacenamiento en caché par
 author: Ori Pomerantz
 tags: [ "capa 2", "almacenamiento en caché", "almacenamiento" ]
 skill: intermediate
+breadcrumb: "Cache para rollups"
 published: 2022-09-15
 lang: es
 ---

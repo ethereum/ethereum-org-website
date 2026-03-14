@@ -4,6 +4,7 @@ description: Kuelewa sehemu ya Karatasi ya Njano, vigezo rasmi vya Ethereum, amb
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: sw
 published: 2022-05-15
 ---

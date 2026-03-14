@@ -5,6 +5,7 @@ author: "Tellor"
 lang: ta
 tags: [ "திட்பம்", "ஸ்மார்ட் ஒப்பந்தங்கள்", "ஆரக்கிள்கள்" ]
 skill: beginner
+breadcrumb: "Tellor oracle"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

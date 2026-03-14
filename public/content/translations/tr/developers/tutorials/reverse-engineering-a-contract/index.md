@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: tr
 tags: [ "evm", "opcodes" ]
 skill: advanced
+breadcrumb: "Tersine mühendislik"
 published: 2021-12-30
 ---
 

@@ -5,6 +5,7 @@ author: Ori Pomerantz
 tags:
   - "solidity"
 skill: intermediate
+breadcrumb: "Panduan Uniswap v2"
 published: 2021-05-01
 lang: id
 ---

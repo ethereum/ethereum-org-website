@@ -6,6 +6,7 @@ lang: it
 tags:
   - "livello 2"
 skill: intermediate
+breadcrumb: "ABI corti"
 published: 2022-04-01
 ---
 

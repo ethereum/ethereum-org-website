@@ -4,6 +4,7 @@ description: "Sử dụng các thành phần hiện đại như TypeScript, Reac
 author: Ori Pomerantz
 tags: [ "TypeScript", "react", "vite", "wagmi", "frontend" ]
 skill: beginner
+breadcrumb: "UI với WAGMI"
 published: 2023-11-01
 lang: vi
 sidebarDepth: 3

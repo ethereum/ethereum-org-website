@@ -4,6 +4,7 @@ description: "Uma introdução à implantação do seu primeiro contrato intelig
 author: "jdourlens"
 tags: [ "smart contracts", "Remix", "Solidity", "implantação" ]
 skill: beginner
+breadcrumb: "Primeiro contrato"
 lang: pt-br
 published: 2020-04-03
 source: EthereumDev

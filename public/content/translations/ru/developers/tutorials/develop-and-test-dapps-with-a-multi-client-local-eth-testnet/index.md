@@ -13,6 +13,7 @@ tags:
     "тестирование"
   ]
 skill: intermediate
+breadcrumb: "Мультиклиентский testnet"
 lang: ru
 published: 2023-04-11
 ---

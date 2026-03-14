@@ -4,6 +4,7 @@ description: "Akıllı sözleşme olaylarına giriş ve bunları veri kaydetmek 
 author: "jdourlens"
 tags: [ "akıllı kontratlar", "remix", "solidity", "olaylar" ]
 skill: intermediate
+breadcrumb: "Olay kaydı"
 lang: tr
 published: 2020-04-03
 source: EthereumDev

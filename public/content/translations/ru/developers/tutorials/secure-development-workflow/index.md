@@ -4,6 +4,7 @@ description: "Рекомендуемый рабочий процесс для н
 author: "Trailofbits"
 tags: [ "смарт-контракты", "безопасность", "Solidity" ]
 skill: intermediate
+breadcrumb: "Чек-лист безопасности"
 lang: ru
 published: 2020-09-07
 source: Building secure contracts

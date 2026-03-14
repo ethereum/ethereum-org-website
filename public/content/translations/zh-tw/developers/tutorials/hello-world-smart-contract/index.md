@@ -4,6 +4,7 @@ description: "在以太坊上撰寫和部署簡單智能合約的入門教學。
 author: "elanh"
 tags: [ "solidity", "hardhat", "alchemy", "smart contracts", "deploying" ]
 skill: beginner
+breadcrumb: "Hello World合約"
 lang: zh-tw
 published: 2021-03-31
 ---

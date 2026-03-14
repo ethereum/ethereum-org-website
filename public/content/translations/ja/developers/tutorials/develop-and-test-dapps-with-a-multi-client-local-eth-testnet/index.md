@@ -13,6 +13,7 @@ tags:
     "テスト"
   ]
 skill: intermediate
+breadcrumb: "マルチクライアントテストネット"
 lang: ja
 published: 2023-04-11
 ---

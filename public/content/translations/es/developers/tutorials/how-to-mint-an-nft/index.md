@@ -10,6 +10,7 @@ tags:
     "contratos Inteligentes"
   ]
 skill: beginner
+breadcrumb: "Acunar un NFT"
 lang: es
 published: 2021-04-22
 ---

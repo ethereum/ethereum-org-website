@@ -4,6 +4,7 @@ description: "Giới thiệu về các sự kiện của hợp đồng thông mi
 author: "jdourlens"
 tags: [ "hợp đồng thông minh", "Remix", "Solidity", "sự kiện" ]
 skill: intermediate
+breadcrumb: "Ghi nhật sự kiện"
 lang: vi
 published: 2020-04-03
 source: EthereumDev

@@ -4,6 +4,7 @@ description: "Thiết lập giám sát cho nút Geth của bạn bằng InfluxDB
 author: "Mario Havel"
 tags: [ "máy khách", "nút" ]
 skill: intermediate
+breadcrumb: "Giám sát Geth"
 lang: vi
 published: 2021-01-13
 ---

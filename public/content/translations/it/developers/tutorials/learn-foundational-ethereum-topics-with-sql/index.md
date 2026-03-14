@@ -7,6 +7,7 @@ tags:
   - "Interrogazioni"
   - "Transazioni"
 skill: beginner
+breadcrumb: "Ethereum con SQL"
 lang: it
 published: 2021-05-11
 source: paulapivat.com

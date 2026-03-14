@@ -4,6 +4,7 @@ description: Learn how to set up and configure web3.js library to interact with 
 author: "jdourlens"
 tags: ["web3.js", "javascript"]
 skill: beginner
+breadcrumb: web3.js setup
 lang: en
 published: 2020-04-11
 source: EthereumDev

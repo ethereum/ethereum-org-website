@@ -4,6 +4,7 @@ description: "یلو پیپر کے اس حصے کو سمجھنا، جو Ethereum
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: ur-in
 published: 2022-05-15
 ---

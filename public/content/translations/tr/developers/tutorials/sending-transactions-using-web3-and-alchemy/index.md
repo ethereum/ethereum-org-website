@@ -4,6 +4,7 @@ description: "Bu, Web3 kullanarak Ethereum işlemleri göndermek için başlang�
 author: "Elan Halpern"
 tags: [ "işlemler", "web3.js", "alchemy" ]
 skill: beginner
+breadcrumb: "İşlem gönderme"
 lang: tr
 published: 2020-11-04
 source: Alchemy docs

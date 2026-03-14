@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: ko
 tags: [ "레이어 2" ]
 skill: intermediate
+breadcrumb: "짧은 ABI"
 published: 2022-04-01
 ---
 

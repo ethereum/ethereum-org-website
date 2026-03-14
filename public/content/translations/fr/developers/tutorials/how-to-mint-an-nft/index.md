@@ -10,6 +10,7 @@ tags:
     "contrats intelligents"
   ]
 skill: beginner
+breadcrumb: "Frapper un NFT"
 lang: fr
 published: 2021-04-22
 ---

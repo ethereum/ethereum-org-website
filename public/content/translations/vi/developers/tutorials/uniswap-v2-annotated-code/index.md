@@ -4,6 +4,7 @@ description: "Hợp đồng Uniswap-v2 hoạt động như thế nào? Tại sao
 author: Ori Pomerantz
 tags: [ "solidity" ]
 skill: intermediate
+breadcrumb: "Hướng dẫn Uniswap v2"
 published: 2021-05-01
 lang: vi
 ---

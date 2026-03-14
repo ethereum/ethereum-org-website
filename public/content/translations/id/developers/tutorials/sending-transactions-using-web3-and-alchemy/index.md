@@ -7,6 +7,7 @@ tags:
   - "web3.js"
   - "alchemy"
 skill: beginner
+breadcrumb: "Kirim transaksi"
 lang: id
 published: 2020-11-04
 source: Dokumen Alchemy

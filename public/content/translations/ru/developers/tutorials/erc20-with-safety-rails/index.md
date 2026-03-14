@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: ru
 tags: [ "erc-20" ]
 skill: beginner
+breadcrumb: "Безопасность ERC-20"
 published: 2022-08-15
 ---
 

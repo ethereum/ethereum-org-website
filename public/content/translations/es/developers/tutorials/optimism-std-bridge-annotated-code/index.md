@@ -4,6 +4,7 @@ description: "¿Cómo funciona el puente estándar para Optimism? ¿Por qué fun
 author: Ori Pomerantz
 tags: [ "Solidity", "puente", "capa 2" ]
 skill: intermediate
+breadcrumb: "Puente Optimism"
 published: 2022-03-30
 lang: es
 ---

@@ -10,6 +10,7 @@ tags:
     "tókenes"
   ]
 skill: intermediate
+breadcrumb: "Mercado ERC-721"
 lang: es
 published: 2020-03-19
 source: Hackernoon

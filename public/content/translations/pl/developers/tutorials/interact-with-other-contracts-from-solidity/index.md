@@ -11,6 +11,7 @@ tags:
     "kompozycyjność"
   ]
 skill: advanced
+breadcrumb: "Interakcje kontraktów"
 lang: pl
 published: 2020-04-05
 source: EthereumDev

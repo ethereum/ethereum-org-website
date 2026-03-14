@@ -5,6 +5,7 @@ author: "Tellor"
 lang: fr
 tags: [ "Solidity", "contrats intelligents", "oracles" ]
 skill: beginner
+breadcrumb: "Oracle Tellor"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

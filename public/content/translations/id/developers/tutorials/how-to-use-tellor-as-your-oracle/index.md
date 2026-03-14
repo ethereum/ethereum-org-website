@@ -9,6 +9,7 @@ tags:
   - "feed harga"
   - "oracle"
 skill: beginner
+breadcrumb: "Tellor oracle"
 published: 2021-06-29
 source: Dokumen Tellor
 sourceUrl: https://docs.tellor.io/tellor/

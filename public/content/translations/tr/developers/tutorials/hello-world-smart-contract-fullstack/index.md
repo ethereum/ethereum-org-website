@@ -14,6 +14,7 @@ tags:
     "işlemler"
   ]
 skill: beginner
+breadcrumb: "Hello World fullstack"
 lang: tr
 published: 2021-10-25
 ---

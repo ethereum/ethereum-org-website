@@ -4,6 +4,7 @@ description: "如何販售代幣化物件於去中央化訊息版."
 author: "Alberto Cuesta Cañada"
 tags: [ "smart contracts", "erc-721", "solidity", "tokens" ]
 skill: intermediate
+breadcrumb: "ERC-721市場"
 lang: zh-tw
 published: 2020-03-19
 source: Hackernoon

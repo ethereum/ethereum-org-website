@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: ur-in
 tags: [ "لیئر 2" ]
 skill: intermediate
+breadcrumb: "مختصر ABI"
 published: 2022-04-01
 ---
 

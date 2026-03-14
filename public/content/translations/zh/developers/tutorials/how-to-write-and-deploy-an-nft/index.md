@@ -4,6 +4,7 @@ description: "本教程是关于非同质化代币的系列教程的第一部分
 author: "苏米-穆德吉尔"
 tags: [ "ERC-721", "Alchemy", "Solidity", "智能合同" ]
 skill: beginner
+breadcrumb: "编写和部署NFT"
 lang: zh
 published: 2021-04-22
 ---

@@ -4,6 +4,7 @@ description: "了解如何设置和配置 web3.js 库，以便从 JavaScript 应
 author: "jdourlens"
 tags: [ "web3.js", "javascript" ]
 skill: beginner
+breadcrumb: "web3.js设置"
 lang: zh
 published: 2020-04-11
 source: EthereumDev

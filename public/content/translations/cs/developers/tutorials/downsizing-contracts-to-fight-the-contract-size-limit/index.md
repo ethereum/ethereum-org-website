@@ -5,6 +5,7 @@ author: Markus Waas
 lang: cs
 tags: [ "solidity", "smart kontrakt účty", "úložiště" ]
 skill: intermediate
+breadcrumb: "Zmenšení kontraktu"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

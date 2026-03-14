@@ -5,6 +5,7 @@ author: "EthereumOnArm"
 tags: [ "clients", "execution layer", "consensus layer", "nodes" ]
 lang: zh-tw
 skill: intermediate
+breadcrumb: "Raspberry Pi節點"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

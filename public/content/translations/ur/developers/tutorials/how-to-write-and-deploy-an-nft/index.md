@@ -4,6 +4,7 @@ description: "یہ ٹیوٹوریل NFTs پر ایک سیریز کا حصہ 1 ہ
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "اسمارٹ معاہدات" ]
 skill: beginner
+breadcrumb: "NFT لکھیں اور تعینات کریں"
 lang: ur-in
 published: 2021-04-22
 ---

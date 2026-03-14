@@ -5,6 +5,7 @@ author: "Tellor"
 lang: ur-in
 tags: [ "solidity", "اسمارٹ معاہدات", "اوریکلز" ]
 skill: beginner
+breadcrumb: "Tellor oracle"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

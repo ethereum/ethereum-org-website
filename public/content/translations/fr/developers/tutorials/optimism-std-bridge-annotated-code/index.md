@@ -4,6 +4,7 @@ description: "Comment fonctionne le pont standard d'Optimism ? Pourquoi fonction
 author: Ori Pomerantz
 tags: [ "Solidity", "pont", "couche 2" ]
 skill: intermediate
+breadcrumb: "Pont Optimism"
 published: 2022-03-30
 lang: fr
 ---

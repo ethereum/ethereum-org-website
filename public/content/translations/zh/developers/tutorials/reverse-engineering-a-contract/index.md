@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: zh
 tags: [ "evm", "操作码" ]
 skill: advanced
+breadcrumb: "逆向工程"
 published: 2021-12-30
 ---
 

@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: ur-in
 tags: [ "solidity", "اسمارٹ معاہدات", "سیکورٹی", "tokens" ]
 skill: intermediate
+breadcrumb: "ٹوکن انضمام"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

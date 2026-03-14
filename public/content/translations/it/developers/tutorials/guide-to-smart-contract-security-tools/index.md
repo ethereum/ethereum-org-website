@@ -8,6 +8,7 @@ tags:
   - "contratti intelligenti"
   - "sicurezza"
 skill: intermediate
+breadcrumb: "Strumenti di sicurezza"
 published: 2020-09-07
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
