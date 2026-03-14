@@ -97,7 +97,7 @@ module.exports = (phase, { defaultConfig }) => {
 
       return config
     },
-    trailingSlash: true,
+    // trailingSlash: true,
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
       remotePatterns: [
@@ -130,6 +130,33 @@ module.exports = (phase, { defaultConfig }) => {
         { protocol: "https", hostname: "ethwingman.com" },
         { protocol: "https", hostname: "eth-mcp.dev" },
       ],
+    },
+    async rewrites() {
+      // Build locale regex from config (excluding 'en' which has its own rule)
+      const nonEnLocales = i18nConfigJson
+        .map(({ code }) => code)
+        .filter((code) => code !== "en")
+        .join("|")
+
+      return [
+        // Markdown endpoints for AI agents: /{locale}/{slug}.md → raw markdown
+        // English: /en/about.md → /content/about/index.md
+        {
+          source: "/en/:slug*.md",
+          destination: "/content/:slug*/index.md",
+        },
+        // Other locales (constrained to valid locale codes): /es/about.md → /content/translations/es/about/index.md
+        {
+          source: `/:locale(${nonEnLocales})/:slug*.md`,
+          destination: "/content/translations/:locale/:slug*/index.md",
+        },
+        // Fallback for English content without locale prefix: /about.md → /content/about/index.md
+        // Excludes paths that start with valid locales using negative lookahead
+        {
+          source: `/:slug((?!en/|${nonEnLocales.replace(/\|/g, "/|")}/)[^/]+.*)*.md`,
+          destination: "/content/:slug*/index.md",
+        },
+      ]
     },
     async headers() {
       return [
