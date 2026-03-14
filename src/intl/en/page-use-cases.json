@@ -1,0 +1,19 @@
+{
+  "title": "Ethereum Use Cases",
+  "subtitle": "Explore the many ways Ethereum is being used to transform industries and create new possibilities",
+  "meta-title": "Ethereum Use Cases | Discover What You Can Build",
+  "meta-description": "Explore the diverse use cases of Ethereum, from decentralized finance and NFTs to DAOs, identity solutions, and emerging technologies like AI agents.",
+  "explore-title": "Explore Use Cases",
+  "explore-description": "Discover how Ethereum enables new forms of finance, ownership, governance, identity, and more. Click on any use case to learn more.",
+  "search-placeholder": "Search use cases...",
+  "filter-all": "All",
+  "results-count": "{count, plural, =0 {No use cases found} =1 {1 use case} other {# use cases}}",
+  "no-results": "No use cases match your search",
+  "no-results-hint": "Try adjusting your search or filter criteria",
+  "modal-problem": "Problem",
+  "modal-ideas": "Ideas",
+  "modal-projects": "Projects",
+  "modal-resources": "Resources",
+  "modal-explore": "Explore on UseCaseLab",
+  "modal-close": "Close"
+}
