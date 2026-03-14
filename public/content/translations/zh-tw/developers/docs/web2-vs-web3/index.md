@@ -1,6 +1,6 @@
 ---
-title: Web2 vs Web3
-description:
+title: "Web2 與 Web3"
+description: "比較中心化 Web2 服務與建立在以太坊區塊鏈技術上的去中心化 Web3 應用程式。"
 lang: zh-tw
 ---
 
@@ -8,7 +8,7 @@ Web2 指的是目前我們大多人熟知的網際網路。 網際網路由各�
 
 正在找尋找更適合初學者的資源？ 請參閱我們的 [web3 簡介](/web3/)。
 
-## Web3 優點 {#web3-benefits}
+## Web3 的優點 {#web3-benefits}
 
 很多 Web3 開發者選擇建立去中心化應用程式，是因為以太坊固有的去中心化優點：
 
@@ -17,7 +17,7 @@ Web2 指的是目前我們大多人熟知的網際網路。 網際網路由各�
 - 支付是透過原生代幣以太幣建立的。
 - 以太坊是圖靈完備的，這表示你可以在上面寫許多程式。
 
-## 實務對比 {#practical-comparisons}
+## 實際比較 {#practical-comparisons}
 
 | Web2                      | Web3                                    |
 | ------------------------- | --------------------------------------- |
@@ -52,11 +52,11 @@ Web3 目前的一些限制：
 
 注意，這些概況可能並不適用於每個網路。 此外實際當中，網路的中心化與去中心化程度是一個範圍；沒有任何一個網路是完全中心化或完全去中心化的。
 
-## 衍生閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
 - [什麼是 Web3？](/web3/) - _ethereum.org_
 - [Web 3.0 應用程式的架構](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
-- [去中心化的意義](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _2017 年 2 月 6日 - Vitalik Buterin_
-- [去中心化的重要性](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _2018 年 2 月 18 日 - Chris Dixon_
-- [什麼是 Web 3.0？它為什麼重要？](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _2019 年 12 月 31 日 - Max Mersch 和 Richard Muirhead_
-- [為何我們需要 Web 3.0](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab) _2018 年 9 月 12 日 - Gavin Wood_
+- [去中心化的意義](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _2017 年 2 月 6 日 - Vitalik Buterin_
+- [為什麼去中心化很重要](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) _2018 年 2 月 18 日 - Chris Dixon_
+- [什麼是 Web 3.0，以及它為何重要](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _2019 年 12 月 31 日 - Max Mersch 和 Richard Muirhead_
+- [為什麼我們需要 Web 3.0](https://gavofyork.medium.com/why-we-need-web-3-0-5da4f2bf95ab) _2018 年 9 月 12 日 - Gavin Wood_
