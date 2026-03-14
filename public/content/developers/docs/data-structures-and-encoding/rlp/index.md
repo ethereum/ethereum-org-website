@@ -44,13 +44,13 @@ RLP encoding is defined as follows:
 
 In succinct form:
 
-| Range       | Byte 1     | Byte 2     | Byte 3     | Byte 4     | Byte 5     | Byte 6     | Byte 7 | Meaning                                   |
-| ----------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ------ | ----------------------------------------- |
-| `0x00-0x7f` | `0ppppppp` |            |            |            |            |            |        | single byte string                        |
-| `0x80-0xb7` | `10nnnnnn` | `pppppppp` | `...`      |            |            |            |        | short string (0-55 bytes)                 |
-| `0xb8-0xbf` | `10111NNN` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `pppppppp` | `...`  | long string, N+1 bytes of len, then payload |
-| `0xc0-0xf7` | `11nnnnnn` | `pppppppp` | `...`      |            |            |            |        | short list (0-55 bytes)                   |
-| `0xf8-0xff` | `11111NNN` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `pppppppp` | `...`  | long list, N+1 bytes of len, then payload |
+| Range       | Byte 1     | Byte 2     | ...        | Byte 9                | Byte 10    | Meaning                                   |
+| ----------- | ---------- | ---------- | ---------- | --------------------- | ---------- | ----------------------------------------- |
+| `0x00-0x7f` | `0ppppppp` |            |            |                       |            | single byte string                        |
+| `0x80-0xb7` | `10nnnnnn` | `pppppppp` | `...`      |                       |            | short string (0-55 bytes)                 |
+| `0xb8-0xbf` | `10111NNN` | `nnnnnnnn` | `...`      | `nnnnnnnn`/`pppppppp` | `pppppppp` | long string, N+1 bytes for len, then payload |
+| `0xc0-0xf7` | `11nnnnnn` | `pppppppp` | `...`      |                       |            | short list (0-55 bytes)                   |
+| `0xf8-0xff` | `11111NNN` | `nnnnnnnn` | `...`      | `nnnnnnnn`/`pppppppp` | `pppppppp` | long list, N+1 bytes for len, then payload |
 
 - `p` = payload
 - `n` = len (number of payload bytes)
