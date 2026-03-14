@@ -1,8 +1,7 @@
 "use client"
 
-import { type AbstractIntlMessages } from "next-intl"
+import { type AbstractIntlMessages, NextIntlClientProvider } from "next-intl"
 
-import I18nProvider from "@/components/I18nProvider"
 import ThemeProvider from "@/components/ThemeProvider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 
@@ -18,12 +17,20 @@ export default function Providers({
   messages: AbstractIntlMessages
 }) {
   return (
-    <I18nProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider
+      locale={locale}
+      messages={messages}
+      onError={() => {}}
+      getMessageFallback={({ key }) => {
+        const keyOnly = key.split(".").pop()
+        return keyOnly || key
+      }}
+    >
       <ThemeProvider>
         <FeedbackWidgetProvider>
           <TooltipProvider>{children}</TooltipProvider>
         </FeedbackWidgetProvider>
       </ThemeProvider>
-    </I18nProvider>
+    </NextIntlClientProvider>
   )
 }
