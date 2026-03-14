@@ -54,7 +54,7 @@ In succinct form:
 
 - `p` = payload
 - `n` = len (number of payload bytes)
-- `N` = len-of-len (number of `n` bytes that follow)
+- `N` = len-of-len offset (N+1 `n` bytes follow)
 
 In code, this is:
 
