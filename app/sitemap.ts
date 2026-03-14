@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
 
 import { getFullUrl } from "@/lib/utils/url"
+import { getVideos } from "@/lib/utils/videos"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -43,6 +44,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         alternates,
       })
     }
+  }
+
+  // Add video landing pages (dynamic routes not discovered by getAllPagesWithTranslations)
+  const videos = await getVideos()
+  for (const video of videos) {
+    const url = getFullUrl(DEFAULT_LOCALE, `/videos/${video.slug}/`)
+    entries.push({
+      url,
+      changeFrequency: "monthly",
+      priority: 0.6,
+      lastModified: new Date(),
+    })
   }
 
   return entries

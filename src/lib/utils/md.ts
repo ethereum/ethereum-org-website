@@ -37,6 +37,8 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
       if (stats.isDirectory()) {
         // Skip nested translations directory
         if (fileOrDir === "translations") continue
+        // Skip videos directory — video pages have their own dedicated route
+        if (fileOrDir === "videos") continue
         // If it is a directory, recursively call the `getPostSlugs` function with the
         // directory path and the files array
         const nestedDir = join(dir, fileOrDir)
