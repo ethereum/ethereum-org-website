@@ -1,6 +1,6 @@
 {
   "page-upgrades-get-involved-btn-1": "查看用戶端",
-  "page-upgrades-get-involved-btn-2": "更多權益質押相關資訊",
+  "page-upgrades-get-involved-btn-2": "更多質押相關訊息",
   "page-upgrades-get-involved-btn-3": "尋找錯誤",
   "page-upgrades-get-involved-bug": "錯誤可能包括：",
   "page-upgrades-get-involved-bug-hunting": "前往偵錯",
@@ -42,6 +42,6 @@
   "page-upgrades-get-involved-written-nim": "用 Nim 編寫",
   "page-upgrades-get-involved-written-rust": "用 Rust 編寫",
   "page-upgrades-get-involved": "參與以太坊升級",
-  "page-upgrades-get-involved-2": "加入我們",
+  "page-upgrades-get-involved-2": "參與",
   "page-upgrades-bug-bounty-leaderboard-points": "積分"
 }

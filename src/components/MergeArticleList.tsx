@@ -54,7 +54,7 @@ const MergeArticleList = () => {
       description: t(
         "page-upgrades-index:page-upgrade-article-author-ethereum-foundation"
       ),
-      link: "https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix",
+      link: "https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix",
     },
     {
       title: t(

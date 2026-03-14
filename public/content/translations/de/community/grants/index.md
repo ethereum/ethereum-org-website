@@ -15,10 +15,10 @@ Diese Liste wird von unserer Community verwaltet. Wenn Informationen fehlen oder
 Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem sie Finanzierungen für zahlreiche Projekte bereitstellen. Dazu gehören unter anderem Lösungen zu Skalierbarkeit, Community-Aufbau, Sicherheit und Privatsphäre. Diese Fördermaßnahmen sind nicht spezifisch für eine bestimmte Ethereum-Plattform und sind ein guter Ausgangspunkt, wenn Sie unsicher sind.
 
 - [EF-Ökosystem Unterstützungsprogramm](https://esp.ethereum.foundation) - _Finanzierung von Open-Source-Projekten, die Ethereum zugutekommen, mit besonderem Fokus auf universelle Werkzeuge, Infrastruktur, Forschung und öffentliche Güter_
+- [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Durchsuchbares Verzeichnis von über 1.000 Projekten, die vom Ecosystem Support Program unterstützt werden_
 - [Moloch DAO](https://www.molochdao.com/) – _Datenschutz, Layer-2-Skalierung, Client-Sicherheit und mehr_
 - [DAO-Zuschüsse](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _Google-Tabelle der Organisationen, die Zuschüsse anbieten_
 - [Akademische Stipendien](https://esp.ethereum.foundation/academic-grants) – _Stipendien zur Untstützung akademischer Arbeiten in Bezug auf Ethereum_
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks hat ein umfassendes Verzeichnis aller Zuschüsse, Ausschreibungen und Bug-Bounties zusammengestellt._
 
 ## Projektspezifisch {#project-specific}
 
@@ -26,14 +26,13 @@ Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklun
 
 - [Aave-Zuschussprogramm](https://aavegrants.org/) – _[Aave](https://aave.com/) Grants DAO_
 - [Balancer](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/)-Ökosystemfonds_
-- [Chainlink-Förderprogramm](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) Gemeinschaftsförderungen_
 - [Decentraland-Zuschussprogramm](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/)-DAO-Metaverse_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/)-Finanzökosystem_
 - [MetaMask-Programm](https://metamaskgrants.org/) – _Mitarbeitergeleitete DAO für[MetaMask](https://metamask.io/)-Zuschüsse_
 - [SKALE-Network-Förderprogramm](https://skale.space/developers#grants) – _[SKALE-Network](https://skale.space/)-Ökosystem_
-- [Swarm Foundation-Förderprogramm](https://my.ethswarm.org) – _[Swarm Foundation](https://www.ethswarm.org/)-Ökosystem_
+- [Swarm Foundation-Förderprogramm](https://www.ethswarm.org/grants) – _[Swarm Foundation](https://www.ethswarm.org/)-Ökosystem_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/)-Ökosystem_
-- [Uniswap-Förderprogramm](https://www.uniswapfoundation.org/approach) – _[Uniswap](https://uniswap.org/)-Community_
+- [Uniswap-Förderprogramm](https://www.uniswapfoundation.org/grants) – _[Uniswap](https://uniswap.org/)-Community_
 
 ## Quadratische Finanzierung {#quadratic-funding}
 

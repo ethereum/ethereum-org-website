@@ -1,7 +1,7 @@
 import { Landmark, SquareCode, User } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { Lang, ToCItem } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
@@ -40,13 +40,8 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
     namespace: "page-what-is-ether",
   })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "what-is-ether",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("what-is-ether", locale as Lang)
 
   const heroProps: ContentHeroProps = {
     breadcrumbs: {

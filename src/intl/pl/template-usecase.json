@@ -1,13 +1,20 @@
 {
+  "template-usecase-dropdown-ai-agents": "Agenci AI",
   "template-usecase-dropdown-defi": "Zdecentralizowane finanse (DeFi)",
   "template-usecase-dropdown-nft": "Tokeny niewymienialne (NFT)",
   "template-usecase-dropdown-dao": "Zdecentralizowane autonomiczne organizacje (DAO)",
+  "template-usecase-dropdown-apps": "Aplikacje Ethereum",
+  "template-usecase-dropdown-payments": "Płatności Ethereum",
+  "template-usecase-dropdown-prediction-markets": "Rynki prognostyczne",
   "template-usecase-dropdown-social-networks": "Zdecentralizowane sieci społecznościowe",
+  "template-usecase-dropdown-restaking": "Restaking",
   "template-usecase-dropdown-identity": "Zdecentralizowana tożsamość",
   "template-usecase-dropdown-desci": "Zdecentralizowana nauka (DeSci)",
   "template-usecase-dropdown-refi": "Finanse regeneracyjne (ReFi)",
   "template-usecase-dropdown": "Przykłady użycia Ethereum",
   "template-usecase-banner": "Zastosowania Ethereum stale się rozwijają i ewoluują. Dodaj wszelkie informacje, które Twoim zdaniem sprawią, że wszystko będzie jaśniejsze lub bardziej aktualne.",
   "template-usecase-edit-link": "Edytuj stronę",
-  "template-usecase-dropdown-aria": "Rozwijane menu przykładów użycia"
+  "template-usecase-dropdown-aria": "Rozwijane menu przykładów użycia",
+  "template-usecase-dropdown-onchain-gaming": "Gry na łańcuchu",
+  "template-usecase-dropdown-rwa": "Aktywa ze świata rzeczywistego (AŚR)"
 }

@@ -1,6 +1,6 @@
 ---
-title: Canaux d'état
-description: Une introduction aux canaux d'état et canaux de paiement en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum.
+title: "Canaux d'état"
+description: "Une introduction aux canaux d'état et canaux de paiement en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum."
 lang: fr
 sidebarDepth: 3
 ---
@@ -255,7 +255,7 @@ Plusieurs projets fournissent des implémentations de canaux d'état que vous po
 
 - [Comprendre les solutions de mise à l'échelle de la couche 2 d'Ethereum : State Channels, Plasma, et Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 Fev 2018_
 - [Canaux d'état - une explication](https://www.jeffcoleman.ca/state-channels/) _– Jeff Coleman, 6 Nov 2015_
-- [Les bases des canaux d'état](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Les bases des canaux d'état](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [Les canaux d'état de la blockchain : situation actuelle](https://ieeexplore.ieee.org/document/9627997)
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

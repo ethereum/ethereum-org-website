@@ -1,6 +1,7 @@
 {
   "table-active": "ativo",
   "table-filters": "Filtros",
-  "table-showing": "Exibindo ",
-  "table-reset-filters": "Redefinir filtros"
+  "table-showing": "Exibindo",
+  "table-reset-filters": "Redefinir",
+  "table-what-are-you-looking-for": "O que você está procurando?"
 }

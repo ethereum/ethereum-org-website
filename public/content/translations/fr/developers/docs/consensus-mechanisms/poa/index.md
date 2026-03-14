@@ -1,10 +1,10 @@
 ---
-title: Preuve d'autorité (PoA)
-description: Explication du protocole de consensus « preuve d'autorité » et de son rôle dans l'écosystème blockchain.
+title: "Preuve d'autorité (PoA)"
+description: "Explication du protocole de consensus « preuve d'autorité » et de son rôle dans l'écosystème blockchain."
 lang: fr
 ---
 
-La **Preuve d'autorité (PoA)** est un algorithme de consensus basé sur la réputation qui est une version modifiée de la [preuve d'enjeu] (/developers/docs/consensus-mechanisms/pos/). Il est principalement utilisé par des chaînes privées, des réseaux de test et des réseaux de développement locaux. Le PoA est un algorithme de consensus basé sur la réputation qui nécessite de faire confiance à un ensemble de signataires autorisés pour produire des blocs, plutôt que de se baser sur un mécanisme d'enjeu comme le PoS.
+La **Preuve d'autorité (PoA)** est un algorithme de consensus basé sur la réputation qui est une version modifiée de la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). Il est principalement utilisé par des chaînes privées, des réseaux de test et des réseaux de développement locaux. Le PoA est un algorithme de consensus basé sur la réputation qui nécessite de faire confiance à un ensemble de signataires autorisés pour produire des blocs, plutôt que de se baser sur un mécanisme d'enjeu comme le PoS.
 
 ## Prérequis {#prerequisites}
 
@@ -12,9 +12,9 @@ Pour mieux comprendre cette page, nous vous recommandons d'abord d'en lire plus 
 
 ## Qu'est-ce que la Preuve d'autorité (PoA) ? {#what-is-poa}
 
-La Preuve d'autorité est une version modifiée de la **[Preuve d'enjeu] (/developers/docs/consensus-mechanisms/pos/) (PoS)** qui est un algorithme de consensus basé sur la réputation plutôt que sur un mécanisme basé sur l'enjeu avec le PoS. Le terme a été introduit pour la première fois en 2017 par Gavin Wood, et cet algorithme de consensus est principalement utilisé par des chaînes privées, des réseaux de test et des réseaux de développement locaux, car il surmonte le besoin de ressources de haute qualité comme le PoW, et résout les problèmes de scalabilité avec le PoS en ayant un petit sous-ensemble de nœuds stockant la blockchain et produisant des blocs.
+La Preuve d'autorité est une version modifiée de la **[Preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) (PoS)** qui est un algorithme de consensus basé sur la réputation plutôt que sur un mécanisme basé sur l'enjeu avec le PoS. Le terme a été introduit pour la première fois en 2017 par Gavin Wood, et cet algorithme de consensus est principalement utilisé par des chaînes privées, des réseaux de test et des réseaux de développement locaux, car il surmonte le besoin de ressources de haute qualité comme le PoW, et résout les problèmes de scalabilité avec le PoS en ayant un petit sous-ensemble de nœuds stockant la blockchain et produisant des blocs.
 
-La Preuve d'autorité nécessite de faire confiance à un ensemble de signataires autorisés qui sont définis dans le [bloc de genèse] (/glossary/#genesis-block). Dans la plupart des implémentations actuelles, tous les signataires autorisés conservent un pouvoir et des privilèges égaux lorsqu'il s'agit de déterminer le consensus de la chaîne. L'idée derrière l'enjeu sur la réputation est que chaque validateur autorisé est bien connu de tous grâce à des éléments tels que la vérification de l'identité des clients (KYC) ou parce qu'il fait partie d'une organisation bien connue qui est le seul validateur. Ainsi, si un validateur commet une erreur, son identité est connue.
+La Preuve d'autorité nécessite de faire confiance à un ensemble de signataires autorisés qui sont définis dans le [bloc de genèse](/glossary/#genesis-block). Dans la plupart des implémentations actuelles, tous les signataires autorisés conservent un pouvoir et des privilèges égaux lorsqu'il s'agit de déterminer le consensus de la chaîne. L'idée derrière l'enjeu sur la réputation est que chaque validateur autorisé est bien connu de tous grâce à des éléments tels que la vérification de l'identité des clients (KYC) ou parce qu'il fait partie d'une organisation bien connue qui est le seul validateur. Ainsi, si un validateur commet une erreur, son identité est connue.
 
 Il existe plusieurs implémentations de PoA, mais l'implémentation standard d'Ethereum est **clique**, qui implémente [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique est agréable à utiliser par les développeurs et facilite l'implémentation de normes, prenant en charge tous les types de synchronisation de clients. D'autres implémentations incluent [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) and [Aura](https://openethereum.github.io/Chain-specification).
 
@@ -77,3 +77,4 @@ Regardez une explication en vidéo de la preuve d'autorité :
 
 - [Preuve de travail](/developers/docs/consensus-mechanisms/pow/)
 - [Preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
+

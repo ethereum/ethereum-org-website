@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "Import dowolnego tokena ERC-20 do użycia w portfelu",
   "page-find-wallet-buy-crypto": "Zakup kryptowalut",
   "page-find-wallet-buy-crypto-desc": "Kup kryptowaluty za walutę fiducjarną bezpośrednio w portfelu \n * Uwaga: możliwość zakupu kryptowalut zależy od regionu",
-  "page-find-wallet-sell-for-fiat": "Sprzedaj za walutę fiducjarną",
+  "page-find-wallet-sell-for-fiat": "Sprzedaj za gotówkę",
   "page-find-wallet-sell-for-fiat-desc": "Sprzedaj kryptowaluty za walutę fiducjarną bezpośrednio w portfelu \n * Uwaga: możliwość wypłaty środków zależy od regionu",
   "page-find-wallet-multisig": "Multisig",
   "page-find-wallet-multisig-desc": "Portfele wymagające wielu podpisów do autoryzacji transakcji",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Linki",
   "page-find-wallet-empty-results-title": "Brak wyników",
   "page-find-wallet-empty-results-desc": "Nie ma portfeli spełniających Twoje kryteria, spróbuj usunąć niektóre filtry.",
-  "page-find-wallet-see-wallets": "Zobacz portfele"
+  "page-find-wallet-privacy": "Prywatność",
+  "page-find-wallet-privacy-desc": "Portfele, które obsługują wbudowane transakcje prywatne",
+  "page-find-wallet-see-wallets": "Zobacz portfele",
+  "page-find-wallet-search-languages": "Wyszukaj języki..."
 }

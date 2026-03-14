@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "Pensez à cela comme votre adresse e-mail, mais au lieu du courrier, il peut recevoir de l'ETH. Si vous souhaitez transférer des ETH depuis un échange vers votre portefeuille, utilisez votre adresse comme destination. Assurez-vous de toujours la vérifier à deux reprises avant d'envoyer !",
   "page-get-eth-your-address-wallet-link": "Découvrez les portefeuilles",
   "listing-policy-raise-issue-link": "Soulever un problème",
-  "page-find-wallet-last-updated": "Dernière mise à jour"
+  "page-find-wallet-last-updated": "Dernière mise à jour",
+  "listing-policy-disclaimer": "Tous les produits répertoriés sur cette page ne constituent pas des recommandations officielles et sont fournis à titre informatif uniquement. Si vous souhaitez ajouter un produit ou faire part de vos commentaires sur la politique, ouvrez un ticket sur GitHub."
 }

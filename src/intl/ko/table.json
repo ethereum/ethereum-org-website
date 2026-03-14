@@ -1,6 +1,7 @@
 {
   "table-active": "활성",
   "table-filters": "필터",
-  "table-showing": "표시 ",
-  "table-reset-filters": "필터 초기화"
+  "table-showing": "표시",
+  "table-reset-filters": "재설정",
+  "table-what-are-you-looking-for": "무엇을 찾고 계신가요?"
 }

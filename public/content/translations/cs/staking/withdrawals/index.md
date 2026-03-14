@@ -1,10 +1,10 @@
 ---
-title: Uzamčení výběrů
-description: Stránka shrnující, co jsou výběry push, jak fungují a co musí stakeři udělat, aby získali své odměny
+title: "Uzamčení výběrů"
+description: "Stránka shrnující, co jsou výběry push, jak fungují a co musí stakeři udělat, aby získali své odměny"
 lang: cs
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Nosorožec Leslie se svými vkladovými odměnami
+alt: "Nosorožec Leslie se svými vkladovými odměnami"
 sidebarDepth: 2
 summaryPoints:
   - Upgrade Shanghai/Capella umožnil výběry sázek na Ethereum
@@ -13,15 +13,11 @@ summaryPoints:
   - Validátoři, kteří zcela ukončí vklady, obdrží zbývající zůstatek
 ---
 
-<UpgradeStatus dateKey="page-staking-withdrawals-when">
-Výběry vkladů byly povoleny při upgradu Shanghai/Capella, ke kterému došlo 12. dubna 2023.&nbsp;<a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>Další informace o Šanghaji/Capelle</a>
-</UpgradeStatus>
+**Výběry ze stakování** se rozumí převody ETH z účtu validátoru na konsensuální vrstvě Etherea (Beacon Chain) na exekuční vrstvu, kde s nimi lze provádět transakce.
 
-**Výběry vkladů** označují převody ETH z účtu validátoru na konsensuální vrstvě Etherea (Beacon Chain) do realizační vrstvy, kde s nimi lze provádět transakce.
+**Výplaty odměny za přebytečný zůstatek** nad 32 ETH budou automaticky a pravidelně zasílány na adresu pro výběr propojenou s každým validátorem, jakmile ji uživatel poskytne. Uživatelé mohou také **úplně ukončit stakování**, čímž si odemknou celý zůstatek validátora.
 
-**Výplaty odměny za přebytečný zůstatek** nad 32 ETH budou automaticky a pravidelně zasílány na adresu pro výběr propojenou s každým validátorem, jakmile ji poskytne uživatel. Uživatelé mohou také **úplně ukončit vklady** a odemknout tak svůj plný zůstatek na validátoru.
-
-## Vložení odměn {#staking-rewards}
+## Odměny ze stakování {#staking-rewards}
 
 Platby odměn se automaticky zpracovávají pro aktivní účty validátorů s maximálním efektivním zůstatkem 32 ETH.
 
@@ -47,14 +43,14 @@ Poskytnutí adresy pro výběr je povinným krokem pro jakýkoli účet validát
 <AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
-  <strong>Každému účtu validátoru lze přiřadit pouze jednu adresu pro výběr, a to jednou.</strong> Jakmile je adresa vybrána a odeslána do konsensuální vrstvy, nelze to vrátit zpět ani znovu změnit. Před odesláním znovu zkontrolujte vlastnictví a správnost poskytnuté adresy.
+<strong>Každému účtu validátora lze přiřadit pouze jednu adresu pro výběr, a to pouze jednou.</strong> Jakmile je adresa vybrána a odeslána na konsensuální vrstvu, nelze to vrátit zpět ani změnit. Před odesláním znovu zkontrolujte vlastnictví a správnost poskytnuté adresy.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 Pokud adresu mezitím neposkytnete, <strong>nehrozí vašim finančním prostředkům žádné ohrožení</strong>, za předpokladu, že vaše mnemotechnická pomůcka nebo fráze zůstala v bezpečí offline a nebyla žádným způsobem kompromitována. Nepřidání přihlašovacích údajů pro výběr jednoduše ponechá ETH uzamčené v účtu validátoru tak, jak bylo, dokud nebyla poskytnuta adresa pro výběr.
 
-## Úplné ukončení stakingu {#exiting-staking-entirely}
+## Úplné ukončení stakování {#exiting-staking-entirely}
 
 Před převedením _jakýchkoli_ prostředků ze zůstatku účtu validátoru je vyžadováno zadání adresy pro výběr.
 
@@ -62,11 +58,11 @@ Uživatelé, kteří chtějí zcela ukončit vklady a vybrat zpět svůj celý z
 
 Proces odchodu validátoru z vkládání trvá různě dlouhou dobu v závislosti na tom, kolik dalších současně odchází. Po dokončení tento účet již nebude odpovědný za plnění povinností sítě validátorů, nebude mít nárok na odměny a nebude již „v sázce“ jejich ETH. V tomto okamžiku bude účet označen jako plně „výběrný“.
 
-Jakmile je účet označen jako „výběrný“ a byly poskytnuty přihlašovací údaje pro výběr, uživatel nemusí kromě čekání dělat nic jiného. Navrhovatelé bloků automaticky a nepřetržitě odstraňují způsobilé vyřazené prostředky a zůstatek na vašem účtu bude převeden v plné výši (známé také jako „úplný výběr“) během příští <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>kontroly</a>.
+Jakmile je účet označen jako „výběrný“ a byly poskytnuty přihlašovací údaje pro výběr, uživatel nemusí kromě čekání dělat nic jiného. Navrhovatelé bloků automaticky a nepřetržitě procházejí účty kvůli prostředkům od ukončených validátorů, které jsou způsobilé k výběru. Váš zůstatek bude převeden v plné výši (známo jako „úplný výběr“) během dalšího <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>procházení</a>.
 
-## Kdy jsou povoleny výběry vkladů? {#when}
+## Kdy byly povoleny výběry ze stakování? {#when}
 
-Výběry vkladů jsou živé! Funkce výběru byla povolena v rámci upgradu Shanghai/Capella, ke kterému došlo 12. dubna 2023.
+Funkce výběru byla povolena v rámci upgradu Shanghai/Capella, ke kterému došlo **12. dubna 2023**.
 
 Upgrade Shanghai/Capella umožnil získat dříve vložené ETH zpět na běžné účty Ethereum. Tím se uzavřela smyčka v nasazování likvidity a Ethereum se o krok přiblížilo na jeho cestě k vybudování udržitelného, ​​škálovatelného a bezpečného decentralizovaného ekosystému.
 
@@ -77,13 +73,13 @@ Upgrade Shanghai/Capella umožnil získat dříve vložené ETH zpět na běžn�
 
 O tom, zda má daný validátor nárok na výběr či nikoli, rozhoduje stav samotného účtu validátoru. K určení, zda má být u účtu zahájen výběr či nikoli, není v žádném okamžiku potřeba žádný uživatelský vstup – celý proces probíhá automaticky konsensuální vrstvou v nepřetržité smyčce.
 
-### Učíte se spíše vizuálně? {#visual-learner}
+### Učíte se spíše vizuálně? Vizuální výuka {#visual-learner}
 
 Podívejte se na toto vysvětlení výběrů z vkladů Ethereum od Finematics:
 
 <YouTube id="RwwU3P9n3uo" />
 
-### Kontrola validátorů {#validator-sweeping}
+### „Procházení“ validátorů {#validator-sweeping}
 
 Když je naplánováno, že validátor navrhne další blok, je nutné sestavit frontu pro výběr až 16 způsobilých výběrů. To se provádí tak, že se původně začne s indexem validátoru 0, určí se, zda pro tento účet existuje způsobilý výběr podle pravidel protokolu, a pokud ano, přidá se do fronty. Validátor nastavený tak, aby navrhoval následující blok, bude pokračovat tam, kde skončil poslední, přičemž postupuje v pořadí neomezeně dlouho.
 
@@ -91,9 +87,9 @@ Když je naplánováno, že validátor navrhne další blok, je nutné sestavit 
 <AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
-Představte si analogové hodiny. Ručička na hodinách ukazuje na hodinu, postupuje jedním směrem, nepřeskakuje žádné hodiny a nakonec se po dosažení posledního čísla opět přetočí na začátek.<br/><br/>
-Nyní si místo 1 až 12 představte, že hodiny mají 0 až N <em>(celkový počet účtů validátorů, které kdy byly zaregistrovány na vrstvě konsensu, přes 500 000 k lednu 2023).</em><br/> <br/>
-Ručička na hodinách ukazuje na další validátor, u kterého je třeba zkontrolovat oprávněné výběry. Začíná na 0 a postupuje stále dokola, aniž by přeskakovala jakýkoli účet. Když je dosaženo posledního validátoru, cyklus pokračuje zpět na začátek.
+Představte si analogové hodiny. Ručička na hodinách ukazuje na hodinu, postupuje jedním směrem, nepřeskakuje žádné hodiny a nakonec se po dosažení posledního čísla opět vrátí na začátek.<br/><br/>
+A teď si představte, že místo čísel 1 až 12 mají hodiny čísla od 0 do N <em>(celkový počet účtů validátorů, které kdy byly zaregistrovány na konsensuální vrstvě, k lednu 2023 více než 500 000).</em><br/><br/>
+Ručička na hodinách ukazuje na dalšího validátora, kterého je třeba zkontrolovat kvůli způsobilým výběrům. Začíná na 0 a postupuje stále dokola, aniž by přeskakovala jakýkoli účet. Když je dosaženo posledního validátoru, cyklus pokračuje zpět na začátek.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -103,19 +99,19 @@ Ručička na hodinách ukazuje na další validátor, u kterého je třeba zkont
 Zatímco navrhovatel prochází validátory ohledně možných výběrů, každý kontrolovaný validátor je hodnocen na základě krátké série otázek, aby se určilo, zda by měl být spuštěn výběr, a pokud ano, jaké množství ETH by mělo být odebráno.
 
 1. **Byla zadána adresa pro výběr?** Pokud nebyla zadána žádná adresa pro výběr, účet bude přeskočen a výběr nebude zahájen.
-2. **Je validátor ukončen a lze jej vybrat?** Pokud validátor zcela skončil a my jsme dosáhli epochy, kdy je jejich účet považován za „výběrný“, dojde k úplnému výběru. Tím se celý zbývající zůstatek převede na adresu pro výběr.
-3. **Je efektivní zůstatek maximálních 32?** Pokud má účet přihlašovací údaje k výběru, není úplně ukončen a čekají odměny ve vyšším počtu než 32, bude zpracován částečný výběr, který převede pouze odměny nad 32 na adresu výběru uživatele.
+2. **Je validátor ukončen a je u něj možné provést výběr?** Pokud validátor zcela ukončil činnost a dosáhli jsme epochy, kdy je jeho účet považován za „způsobilý k výběru“, bude zpracován úplný výběr. Tím se celý zbývající zůstatek převede na adresu pro výběr.
+3. **Je efektivní zůstatek na maximu 32?** Pokud má účet pověření k výběru, není plně ukončen a čekají na něj odměny nad 32 ETH, bude zpracován částečný výběr, který převede pouze odměny nad 32 ETH na adresu pro výběr uživatele.
 
 Operátoři validátoru v průběhu životního cyklu validátoru provádějí pouze dvě akce, které přímo ovlivňují tento tok:
 
 - Poskytněte přihlašovací údaje pro výběr, abyste umožnili jakoukoli formu výběru.
 - Opusťte síť, což způsobí úplný výběr.
 
-### Bez paliva {#gas-free}
+### Bez gasu {#gas-free}
 
-Tento přístup k výběrům vkladů zabraňuje tomu, aby satkeři museli ručně odeslat transakci požadující výběr konkrétní částky ETH. To znamená, že **není vyžadováno žádné palivo (transakční poplatek)** a výběry také nesoutěží o stávající blokový prostor prováděcí vrstvy.
+Tento přístup k výběrům vkladů zabraňuje tomu, aby stakeři museli ručně odeslat transakci požadující výběr konkrétní částky ETH. To znamená, že **není vyžadován žádný gas (transakční poplatek)**, a výběry také nesoutěží o stávající blokový prostor exekuční vrstvy.
 
-### Jak často dostanu odměny za vklady? {#how-soon}
+### Jak často dostanu odměny za vklady? Jak brzy? {#how-soon}
 
 Maximální počet výběrů, které je možné zpracovat v jednom bloku. Při tomto tempu lze zpracovat 115 200 výběrů validátorů za den (za předpokladu, že nejsou žádné vynechané sloty). Jak je uvedeno výše, validátoři bez způsobilých výběrů budou přeskočeni, čímž se zkrátí čas na dokončení kontroly.
 
@@ -123,13 +119,13 @@ Po rozšíření tohoto výpočtu můžeme odhadnout dobu, kterou bude trvat zpr
 
 <TableContainer>
 
-| Počet výběrů | Čas na dokončení |
-| :--------------------: | :---------------: |
-| 400 000 | 3,5 dne |
-| 500 000 | 4,3 dne |
-| 600 000 | 5,2 dne |
-| 700 000 | 6,1 dne |
-| 800 000 | 7,0 dnů |
+| Počet výběrů | Doba do dokončení |
+| :----------: | :---------------: |
+|    400 000   |      3,5 dne      |
+|    500 000   |      4,3 dne      |
+|    600 000   |      5,2 dne      |
+|    700 000   |      6,1 dne      |
+|    800 000   |       7 dní       |
 
 </TableContainer>
 
@@ -138,19 +134,19 @@ Jak vidíte, toto se zpomaluje, protože je v síti více validátorů. Nárůst
 ## Často kladené dotazy {#faq}
 
 <ExpandableCard
-title="Mohu zadanou adresu pro výběr změnit na alternativní adresu pro výběr?"
+title="Když zadám adresu pro výběr, mohu ji změnit na jinou?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-Ne, proces poskytnutí přihlašovacích údajů pro výběr je jednorázový proces a nelze jej po odeslání změnit.
+Ne, proces poskytnutí pověření k výběru je jednorázový a po odeslání jej nelze změnit.
 </ExpandableCard>
 
 <ExpandableCard
-title="Proč lze adresu pro výběr nastavit pouze jednou?"
+title="Proč můžu adresu pro výběr nastavit jen jednou?"
 eventCategory="FAQ"
 eventAction="Why can a withdrawal address only be set once?"
 eventName="read more">
-Nastavením adresy pro stažení prováděcí vrstvy byly přihlašovací údaje pro tento validátor trvale změněny. To znamená, že staré přihlašovací údaje již nebudou fungovat a nové přihlašovací údaje budou přesměrovány na účet prováděcí vrstvy.
+Nastavením adresy pro výběr na exekuční vrstvě se trvale změní pověření k výběru pro daného validátora. To znamená, že staré přihlašovací údaje již nebudou fungovat a nové přihlašovací údaje budou přesměrovány na účet prováděcí vrstvy.
 
 Adresy pro výběr mohou být buď chytrý kontrakt (řízený svým kódem), nebo externě vlastněný účet (EOA, řízený svým privátním klíčem). V současné době tyto účty nemají žádný způsob, jak předat zprávu zpět do konsensuální vrstvy, která by signalizovala změnu pověření validátoru, a přidání této funkce by přidalo zbytečné složitosti protokolu.
 
@@ -158,15 +154,14 @@ Jako alternativu ke změně adresy pro výběr u konkrétního validátoru se u�
 </ExpandableCard>
 
 <ExpandableCard
-title="Co když se účastním vkladových tokenů nebo sdružených vkladů"
+title="Co když stakuji pomocí tokenů nebo v stakingovém poolu?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Pokud jste součástí [vkladového fondu](/staking/pools/) nebo držíte vkladové tokeny, měli byste se u svého poskytovatele informovat o tom, jak se nakládá s výběry vkladů, protože každá služba funguje jinak.
+Pokud jste součástí [stakingového poolu](/staking/pools/) nebo držíte tokeny pro stakování, měli byste se u svého poskytovatele informovat, jakým způsobem jsou řešeny výběry ze stakování, protože každá služba funguje jinak.
 
-Obecně by uživatelé měli mít možnost získat zpět své základní vložené ETH nebo změnit poskytovatele vkladů, kterého využívají. Pokud je konkrétní fond příliš velký, lze prostředky opustit, uplatnit a znovu vložit u <a href="https://rated.network/">menšího poskytovatele</a>. Nebo, pokud jste nashromáždili dostatek ETH, můžete [vložit z domova](/staking/solo/).
-
+Obecně by uživatelé měli mít možnost získat zpět své základní vložené ETH nebo změnit poskytovatele vkladů, kterého využívají. Pokud je konkrétní fond příliš velký, lze prostředky opustit, uplatnit a znovu vložit u <a href="https://rated.network/">menšího poskytovatele</a>. Nebo, pokud jste nashromáždili dostatek ETH, můžete [stakovat z domova](/staking/solo/).
 </ExpandableCard>
 
 <ExpandableCard
@@ -186,42 +181,40 @@ eventName="read more">
 Ne, pokud je váš validátor stále aktivní v síti, k úplnému výběru nedojde automaticky. To vyžaduje ruční spuštění dobrovolného ukončení.
 
 Jakmile validátor dokončí proces ukončení a za předpokladu, že účet má přihlašovací údaje k výběru, bude zbývající zůstatek <em>pak</em> vybrán během příští <a href="#validator-sweeping">kontroly validátorem</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Mohu vybrat vlastní částku?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
-Výběry jsou navrženy tak, aby byly spouštěny automaticky a převáděly jakékoli ETH, které aktivně nepřispívají ke vkladu. To zahrnuje úplné zůstatky účtů, které dokončily proces ukončení.
+Výběry jsou navrženy tak, aby byly prováděny automaticky a převáděly jakékoli ETH, které aktivně nepřispívá ke stakování. To zahrnuje úplné zůstatky účtů, které dokončily proces ukončení.
 
 Není možné ručně vyžádat určité množství ETH k výběru.
 </ExpandableCard>
 
 <ExpandableCard
-title="Provozuji validátor. Kde najdu více informací o povolení výběrů?"
+title="Provozuji validátora. Kde najdu více informací o povolení výběrů?"
 eventCategory="FAQ"
-eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
+eventAction="I operate a validator. Kde najdu více informací o povolení výběrů?"
 eventName="read more">
 
 Provozovatelům validátorů doporučujeme navštívit stránku <a href="https://launchpad.ethereum.org/withdrawals/">Výběry z vkladového spouštěcího panelu</a>, kde najdete další podrobnosti o přípravě validátoru na výběry, načasování událostí a další podrobnosti o fungování výběrů.
 
-Chcete-li své nastavení nejprve vyzkoušet na testovací síti, navštivte <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> a začněte.
-
+Chcete-li své nastavení nejprve vyzkoušet na testnetu, navštivte <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> a začněte.
 </ExpandableCard>
 
 <ExpandableCard
-title="Mohu znovu aktivovat svůj validátor po ukončení vložením více ETH?"
+title="Mohu znovu aktivovat svého validátora po jeho ukončení vložením dalšího ETH?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
 Ne. Jakmile validátor skončí a vybere se jeho celý zůstatek, veškeré dodatečné prostředky vložené na tomto validátoru budou automaticky převedeny na adresu pro výběr během příští kontroly validátoru. Chcete-li znovu vložit ETH, musí být aktivován nový validátor.
 </ExpandableCard>
 
-## Další informace {#further-reading}
+## Další čtení {#further-reading}
 
-- [Výběry z vkladového spouštěcího panelu](https://launchpad.ethereum.org/withdrawals)
-- [EIP-4895: Řetězová vazba výběru jako operace](https://eips.ethereum.org/EIPS/eip-4895)
-- [PEEPanEIP #94: Výběr vložených ETH (testování) s Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Výběry pomocí řetězové vazby jako operace s Alexem Stokesem](https://www.youtube.com/watch?v=CcL9RJBljUs)
-- [Porozumění efektivnímu zůstatku validátoru](https://www.attestant.io/posts/understanding-validator-effective-balance/)
+- [Výběry na Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
+- [EIP-4895: Beacon Chain – odesílané výběry jako operace](https://eips.ethereum.org/EIPS/eip-4895)
+- [PEEPanEIP #94: Výběr stakovaného ETH (testování) s Potuzem a Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
+- [PEEPanEIP#68: EIP-4895: Beacon Chain – odesílané výběry jako operace s Alexem Stokesem](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [Vysvětlení efektivního zůstatku validátora](https://www.attestant.io/posts/understanding-validator-effective-balance/)

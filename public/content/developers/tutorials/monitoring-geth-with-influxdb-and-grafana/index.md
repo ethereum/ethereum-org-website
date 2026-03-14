@@ -117,35 +117,35 @@ sudo systemctl start grafana-server
 When you've got Grafana running, it should be reachable at `localhost:3000`.
 Use your preferred browser to access this path, then login with the default credentials (user: `admin` and password: `admin`). When prompted, change the default password and save.
 
-![](./grafana1.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 1)](./grafana1.png)
 
 You will be redirected to the Grafana home page. First, set up your source data. Click on the configuration icon in the left bar and select "Data sources".
 
-![](./grafana2.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 2)](./grafana2.png)
 
 There aren't any data sources created yet, click on "Add data source" to define one.
 
-![](./grafana3.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 3)](./grafana3.png)
 
 For this setup, select "InfluxDB" and proceed.
 
-![](./grafana4.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 4)](./grafana4.png)
 
 Data source configuration is pretty straight forward if you are running tools on the same machine. You need to set the InfluxDB address and details for accessing the database. Refer to the picture below.
 
-![](./grafana5.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 5)](./grafana5.png)
 
 If everything is complete and InfluxDB is reachable, click on "Save and test" and wait for the confirmation to pop up.
 
-![](./grafana6.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 6)](./grafana6.png)
 
 Grafana is now set up to read data from InfluxDB. Now you need to create a dashboard which will interpret and display it. Dashboards properties are encoded in JSON files which can be created by anybody and easily imported. On the left bar, click on "Create and Import".
 
-![](./grafana7.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 7)](./grafana7.png)
 
 For a Geth monitoring dashboard, copy the ID of [this dashboard](https://grafana.com/grafana/dashboards/13877/) and paste it in the "Import page" in Grafana. After saving the dashboard, it should look like this:
 
-![](./grafana8.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 8)](./grafana8.png)
 
 You can modify your dashboards. Each panel can be edited, moved, removed or added. You can change your configurations. It's up to you! To learn more about how dashboards work, refer to [Grafana's documentation](https://grafana.com/docs/grafana/latest/dashboards/).
 You might also be interested in [Alerting](https://grafana.com/docs/grafana/latest/alerting/). This lets you set up alert notifications for when metrics reach certain values. Various communication channels are supported.

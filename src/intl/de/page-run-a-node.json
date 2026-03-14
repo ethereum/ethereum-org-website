@@ -111,6 +111,7 @@
   "page-run-a-node-sovereignty-1": "Eine Ethereum-Wallet macht es möglich, Ihre digitalen Vermögenswerte vollständig zu verwahren und zu kontrollieren, indem Sie die privaten Schlüssel zu ihren Adressen besitzen. Jedoch geben Ihnen diese Schlüssel keinen Aufschluss über den aktuellen Stand der Blockchain, wie z. B. Ihr Wallet-Guthaben.",
   "page-run-a-node-sovereignty-2": "Standardmäßig greifen Ethereum-Wallets auf einen Knotenpunkt eines Drittanbieters wie Infura oder Alchemy zu, wenn sie ihren Kontostand abfragen. Wenn Sie Ihren eigenen Knotenpunkt betreiben, haben Sie Ihre eigene Kopie der Ethereum-Blockchain.",
   "page-run-a-node-title": "Einen Knotenpunkt betreiben",
+  "page-run-a-node-meta-title": "Wie man einen Ethereum-Knoten betreibt",
   "page-run-a-node-voice-your-choice-title": "Geben Sie Ihre Entscheidung bekannt",
   "page-run-a-node-voice-your-choice-preview": "Geben Sie im Falle einer Netzwerkspaltung nicht die Kontrolle auf.",
   "page-run-a-node-voice-your-choice-1": "Im Falle einer Netzwerkspaltung (Chain Fork), bei der zwei Ketten mit zwei verschiedenen Regelwerken entstehen, garantiert der Betrieb Ihres eigenen Knotenpunktes, dass Sie wählen können, welches Regelwerk Sie unterstützen. Es liegt an Ihnen, ob Sie auf neue Regeln umsteigen und die vorgeschlagenen Änderungen unterstützen oder nicht.",

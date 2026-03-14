@@ -92,5 +92,5 @@ Jeder Branch ist durch einen `/` separiert, deshalb bedeutet `m/2`, dass Sie mit
 
 ## Weiterführende Informationen {#further-reading}
 
-- [Blogbeitrag der Ethereum Foundation von Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
+- [Blogbeitrag der Ethereum Foundation von Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys)
 - [Schlüsselerzeugung EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)

@@ -84,9 +84,11 @@ export const UpgradeLayout = ({
           </List>
         </div>
 
-        <p className="border-t pt-4 italic">
-          {t("common:page-last-updated")}: {lastEditLocaleTimestamp}
-        </p>
+        {lastEditLocaleTimestamp && (
+          <p className="border-t pt-4 italic">
+            {t("common:page-last-updated")}: {lastEditLocaleTimestamp}
+          </p>
+        )}
       </>
     ),
   }

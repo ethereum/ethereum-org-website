@@ -1,33 +1,33 @@
 ---
-title: Ajout de la Couche 2
+title: "Ajouter des réseaux de couche 2"
 description: La politique que nous appliquons pour ajouter une couche de niveau 2 sur ethereum.org
 lang: fr
 ---
 
-# Ajouter une Couche de niveau 2 {#adding-layer-2}
+# Ajout de couches 2 {#adding-layer-2}
 
 Nous voulons nous assurer que nous listons les meilleures ressources possibles afin que les utilisateurs puissent naviguer en toute confiance et sécurité dans l'espace des Couches de niveau 2.
 
-Toute personne est libre de suggérer l'ajout d'une Couche de niveau 2 sur ethereum.org. S'il existe une couche de niveau 2 que nous avons manquée, **[merci de bien vouloir la suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml) !**
+Toute personne est libre de suggérer l'ajout d'une Couche de niveau 2 sur ethereum.org. S'il y a une couche 2 que nous avons manquée, **[veuillez la suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml) !**
 
 Nous listons actuellement les L2s sur les pages suivantes :
 
-- [Rollups optimisés](/developers/docs/scaling/optimistic-rollups/)
-- [rollups ZK](/developers/docs/scaling/zk-rollups/)
+- [Rollups optimistes](/developers/docs/scaling/optimistic-rollups/)
+- [Rollups ZK](/developers/docs/scaling/zk-rollups/)
 - [Couche 2](/layer-2/)
 
 La Couche de niveau 2 est un paradigme relativement nouveau et excitant pour Ethereum. Nous avons tenté de créer un cadre équitable pour pouvoir s'afficher sur ethereum.org, mais les critères de sélection dans la liste changeront et évolueront au fil du temps.
 
-## Le cadre décisionnel {#decision-framework}
+## Le cadre de décision {#decision-framework}
 
 ### Critères d'inclusion : les incontournables {#criteria-for-inclusion-the-must-haves}
 
 **Liste sur L2BEAT**
 
 - Pour être pris en compte, ce projet doit être listé sur [L2BEAT](https://l2beat.com). L2BEAT fournit une évaluation solide des risques pour les projets de Couche 2 sur lesquels nous nous appuyons pour évaluer ces projets. **Si le projet n'est pas mis en vedette sur L2BEAT, nous ne le listerons pas en tant que Couche de niveau 2 sur ethereum.org.**
-- [Apprenez comment ajouter votre projet de Couche de niveau 2 sur L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- [Découvrez comment ajouter votre projet L2 à L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
-**Open Source**
+**Open source**
 
 - Votre code doit être accessible et vous devez accepter les PR de la communauté dans son ensemble.
 
@@ -38,13 +38,13 @@ Nous considérons actuellement les solutions suivantes comme les solutions de Co
 - Rollup optimisé
 - Rollup ZK
 
-_Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'évolutivité qui n'utilisent pas Ethereum pour la disponibilité ou la sécurité des données._
+_Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'évolutivité qui n'utilisent pas Ethereum pour la disponibilité des données ou la sécurité._
 
 **Ethereum pour la disponibilité des données**
 
-- La disponibilité des données est un facteur important de différenciation entre les autres solutions de mise à l'échelle et de couche 2. Un projet **doit** utiliser le réseau principal Ethereum pour que la disponibilité des données soit prise en compte pour l'inscription.
+- La disponibilité des données est un facteur important de différenciation entre les autres solutions de mise à l'échelle et de couche 2. Un projet **doit** utiliser le réseau principal Ethereum pour la disponibilité des données afin d'être pris en compte pour le référencement.
 
-**Passerelles**
+**Ponts**
 
 - Comment les utilisateurs peuvent-ils basculer sur une Couche de niveau 2 ?
 
@@ -70,7 +70,7 @@ _Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'�
 
 - Les projets listés nécessitent un explorateur de blocs pour permettre aux utilisateurs de naviguer facilement dans la chaîne.
 
-### Autres critères : c'est toujours un plus de les avoir {#nice-to-haves}
+### Autres critères : les plus {#nice-to-haves}
 
 **Support d'échange pour le projet**
 
@@ -78,7 +78,7 @@ _Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'�
 
 **Liens vers des dApps dans l'écosystème de la Couche 2**
 
-- Nous voulons être en mesure de fournir des informations sur ce que les utilisateurs peuvent s'attendre à pouvoir faire sur cette Couche 2. (ex. : https://portal.arbitrum.io/, https://www.optimism.io/apps)
+- Nous voulons être en mesure de fournir des informations sur ce que les utilisateurs peuvent s'attendre à pouvoir faire sur cette Couche 2. (par ex. : https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Listes de contrat de jetons**
 
@@ -88,10 +88,10 @@ _Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'�
 
 - Est-ce que des portefeuilles prennent en charge nativement la Couche de niveau 2 ?
 
-## Ajoutez votre Couche de niveau 2 {#add-exchange}
+## Ajoutez votre couche 2 {#add-exchange}
 
 Si vous souhaitez ajouter une Couche 2 sur ethereum.org, créez un ticket sur GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
-  Créez un ticket
+Créer un ticket
 </ButtonLink>

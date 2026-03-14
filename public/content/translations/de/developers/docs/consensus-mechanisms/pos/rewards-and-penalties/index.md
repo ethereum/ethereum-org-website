@@ -60,7 +60,7 @@ Bisher haben wir uns nur mit Validatoren beschäftigt, die sich benehmenden. Was
 
 Die Strafen für das Verpassen der Ziel- und Quellstimmen entsprechen den Belohnungen, die der Attestierer erhalten hätte, wenn er sie eingereicht hätte. Das bedeutet, dass die Belohnung ihrem Guthaben nicht hinzugefügt wird, sondern der gleiche Wert von ihrem Guthaben abgezogen wird. Es gibt keine Strafe für das Verpassen der Spitzenabstimmung („Head Vote“) (d. h. für Spitzenabstimmungen gibt es nur Belohnungen, niemals Strafen). Es gibt keine mit der `inclusion_delay` verbundene Strafe – die Belohnung wird einfach nicht zum Guthaben des Validatoren hinzugefügt. Es gibt auch keine Strafe für das Versäumnis, einen Block vorzuschlagen.
 
-Lesen Sie mehr zu Belohnungen und Strafen in den [Konsensspezifikationen](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Belohnungen und Strafen wurden im Bellatrix-Upgrade angepasst – sehen Sie zu, wie Danny Ryan und Vitalik dies in einem [Peep an EIP-Video](https://www.youtube.com/watch?v=iaAEGs1DMgQ) diskutieren.
+Lesen Sie mehr zu Belohnungen und Strafen in den [Konsensspezifikationen](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md). Belohnungen und Strafen wurden im Bellatrix-Upgrade angepasst – sehen Sie zu, wie Danny Ryan und Vitalik dies in einem [Peep an EIP-Video](https://www.youtube.com/watch?v=iaAEGs1DMgQ) diskutieren.
 
 ## Slashing {#slashing}
 

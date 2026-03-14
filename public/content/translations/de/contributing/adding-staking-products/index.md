@@ -119,7 +119,7 @@ Für [Staking-as-a-Service-Listings](/staking/saas/) (d. h. delegierter Node-Bet
 
 #### Staking-Pool {#staking-pool}
 
-Für [Staking-Services im Pool](/Staking/pools/):
+Für [Staking-Services im Pool](/staking/pools/):
 
 **Wie hoch ist die Mindest-ETH, die für einen Einsatz erforderlich ist?**
 
@@ -165,7 +165,7 @@ Für [Staking-Services im Pool](/Staking/pools/):
 
 Die [Kriterien für die Aufnahme](#criteria-for-inclusion) werden verwendet, um eine kumulative Punktzahl für jedes Produkt oder jeden Service zu berechnen. Das dient dazu, Produkte, die bestimmte objektive Kriterien erfüllen, zu sortieren und zu präsentieren. Je mehr Kriterien belegt werden, desto höher fällt die Bewertung eines Produkts aus. Gleichstände werden dabei nach dem Zufallsprinzip gewertet.
 
-Die Codelogik und die Gewichtungen für diese Kriterien sind derzeit in [dieser JavaScript-Komponente](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) in unserem Repo enthalten.
+Die Codelogik und die Gewichtungen für diese Kriterien sind derzeit in [dieser JavaScript-Komponente](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) in unserem Repo enthalten.
 
 ## Ihr Produkt oder Ihren Service hinzufügen {#add-product}
 

@@ -1,13 +1,20 @@
 {
+  "template-usecase-dropdown-ai-agents": "AI 에이전트",
   "template-usecase-dropdown-defi": "탈중앙화 금융(DeFi)",
   "template-usecase-dropdown-nft": "대체 불가능 토큰(NFT)",
   "template-usecase-dropdown-dao": "탈중앙화 자율 조직(DAO)",
+  "template-usecase-dropdown-apps": "이더리움 애플리케이션",
+  "template-usecase-dropdown-payments": "이더리움 결제",
+  "template-usecase-dropdown-prediction-markets": "예측 시장",
   "template-usecase-dropdown-social-networks": "탈중앙화 소셜 네트워크",
+  "template-usecase-dropdown-restaking": "리스테이킹",
   "template-usecase-dropdown-identity": "탈중앙화 신원 증명",
   "template-usecase-dropdown-desci": "탈중앙화 과학(DeSci)",
   "template-usecase-dropdown-refi": "재생금융(ReFi)",
   "template-usecase-dropdown": "이더리움 이용 사례",
   "template-usecase-banner": "이더리움의 사용법은 항상 발전하며 진화하고 있습니다. 더 명확하게 다듬을 수 있거나 더 최신 정보가 있다면 알려주십시오.",
   "template-usecase-edit-link": "페이지 수정",
-  "template-usecase-dropdown-aria": "이용 사례 드롭다운 메뉴"
+  "template-usecase-dropdown-aria": "이용 사례 드롭다운 메뉴",
+  "template-usecase-dropdown-onchain-gaming": "온체인 게이밍",
+  "template-usecase-dropdown-rwa": "실물 자산 (RWA)"
 }

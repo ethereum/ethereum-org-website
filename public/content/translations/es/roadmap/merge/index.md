@@ -105,7 +105,7 @@ La Fusión vino con cambios en el consenso, que también incluye cambios relacio
   <li>concepto de <em>cabeza segura</em> y <em>bloques finalizados</em></li>
 </ul>
 
-Para obtener más información, eche un vistazo a esta publicación en el blog de Tim Beiko sobre <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Cómo afecta La Fusión a la capa de aplicación de Ethereum</a>.
+Para obtener más información, eche un vistazo a esta publicación en el blog de Tim Beiko sobre <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Cómo afecta La Fusión a la capa de aplicación de Ethereum</a>.
 </ExpandableCard>
 
 ## La Fusión y el consumo de energía {#merge-and-energy}
@@ -188,7 +188,7 @@ Para evitar mayor confusión, la comunidad ha actualizado estos términos:
 
 Estas actualizaciones de terminología solo cambian la nomenclatura, no alteran los objetivos ni el itinerario de Ethereum.
 
-[Obtenga más información sobre el cambio de nombre de 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Obtenga más información sobre el cambio de nombre de 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Relación entre actualizaciones {#relationship-between-upgrades}
 

@@ -114,8 +114,6 @@ Antes de profundizar en los frameworks, recomendamos leer primero nuestra introd
 
 **Catapulta -** **_Herramienta de despliegue de smart contracts en múltiples cadenas, automatiza verificaciones en exploradores de bloques, mantiene el seguimiento de los smart contracts desplegados y permite compartir informes de despliegue, plug-n-play para proyectos de Foundry y Hardhat._**
 
-- [Sitio web](https://catapulta.sh/)
-- [Documentación](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
 
 **GoldRush (impulsado por Covalent) -** **_GoldRush ofrece el conjunto más completo de API de datos de la cadena de bloques para desarrolladores, analistas y empresas. Tanto si está creando un panel de DeFi, una billetera, un bot de trading, un agente de IA o una plataforma de cumplimiento, las API de datos proporcionan un acceso rápido, preciso y fácil para los desarrolladores a los datos en cadena esenciales que necesita_**

@@ -65,7 +65,7 @@ Beberapa proyek menyediakan implementasi kanal state yang dapat Anda integrasika
 
 - [Memahami Solusi Penskalaan Lapisan 2 Ethereum: Kanal State, Plasma, dan Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 2 Feb 2018_
 - [Kanal State - sebuah penjelasan](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
-- [Dasar-Dasar Kanal State](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Dasar-Dasar Kanal State](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 
 **Kanal pembayaran**
 

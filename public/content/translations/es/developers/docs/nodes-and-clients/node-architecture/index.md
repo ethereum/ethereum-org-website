@@ -10,7 +10,7 @@ Cuando Ethereum utilizaba la [prueba de trabajo](/developers/docs/consensus-mech
 
 El siguiente diagrama muestra la relación entre los dos clientes Ethereum. Los dos clientes se conectan a sus respectivas redes entre pares (P2P). Se necesitan redes P2P separadas, ya que los clientes de ejecución envían transacciones con protocolo de intercambio de información (o Gossip) a través de su red P2P, lo que les permite administrar su reserva de transacciones local, mientras que los clientes de consenso envían por Gossip bloques de su red P2P, lo que permite el consenso y el crecimiento de la cadena.
 
-![](node-architecture-text-background.png)
+![Diagrama de la arquitectura del nodo Ethereum que muestra las capas de ejecución y consenso.](node-architecture-text-background.png)
 
 _Hay varias opciones para el cliente de ejecución, incluyendo Erigon, Nethermind y Besu_.
 

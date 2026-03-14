@@ -39,7 +39,7 @@ The Web 2.0 period began in 2004 with the emergence of social media platforms. I
 
 ## Web 3.0: Read-Write-Own {#web3}
 
-The premise of 'Web 3.0' was coined by [Ethereum](/what-is-ethereum/) co-founder Gavin Wood shortly after Ethereum launched in 2014. Gavin put into words a solution for a problem that many early crypto adopters felt: the Web required too much trust. That is, most of the Web that people know and use today relies on trusting a handful of private companies to act in the public's best interests.
+The premise of 'Web 3.0' was coined by [Ethereum](/) co-founder Gavin Wood shortly after Ethereum launched in 2014. Gavin put into words a solution for a problem that many early crypto adopters felt: the Web required too much trust. That is, most of the Web that people know and use today relies on trusting a handful of private companies to act in the public's best interests.
 
 ![Decentralized node architecture, representing Web3](./web3.png)
 

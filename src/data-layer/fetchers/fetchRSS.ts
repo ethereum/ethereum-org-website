@@ -84,6 +84,8 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
             const dateB = new Date(b.pubDate[0])
             return dateB.getTime() - dateA.getTime()
           })
+          // Keep only latest 3 items (frontend only uses 1 per source)
+          .slice(0, 3)
           // Map to RSSItem object
           .map((item) => {
             const getImgSrc = () => {
@@ -125,6 +127,8 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
             const dateB = new Date(b.updated[0])
             return dateB.getTime() - dateA.getTime()
           })
+          // Keep only latest 3 items (frontend only uses 1 per source)
+          .slice(0, 3)
           // Map to RSSItem object
           .map((entry) => {
             const getString = (el?: AtomElement[]): string => {

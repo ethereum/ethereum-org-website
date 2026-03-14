@@ -60,7 +60,7 @@ Finora abbiamo considerato validatori che si comportano in modo impeccabile, ma 
 
 Le sanzioni per la mancanza di voti sull'origine e sulla destinazione equivalgono alle ricompense che l'attestatore avrebbe ricevuto se li avesse inviati. Ciò significa che, invece di aggiungere la ricompensa al loro saldo, si vedono rimuovere un valore equivalente dal proprio saldo. Non è presente alcuna sanzione per il mancato voto sulla testa (ossia, i voti di testa sono solo ricompensati, mai sanzionati). Non esiste alcuna sanzione associata all'`inclusion_delay`; la ricompensa, semplicemente, non sarà aggiunta al saldo del validatore. Inoltre, non esiste alcuna sanzione per la mancata proposizione di un blocco.
 
-Leggi di più sulle ricompense e le sanzioni nelle [specifiche del consenso](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Ricompense e sanzioni sono state adeguate nell'aggiornamento di Bellatrix; guarda Danny Ryan e Vitalik discuterne in questo [Video Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
+Leggi di più sulle ricompense e le sanzioni nelle [specifiche del consenso](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md). Ricompense e sanzioni sono state adeguate nell'aggiornamento di Bellatrix; guarda Danny Ryan e Vitalik discuterne in questo [Video Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
 ## Taglio {#slashing}
 

@@ -165,7 +165,7 @@ lang: zh
 
 上述[纳入标准](#criteria-for-inclusion)将用于计算每个产品或服务的累积评分。 这些分数会用来分类和展示满足某些客观标准的产品。 提供证据的标准越多，产品的排序就越高，并且在加载时会随机排列。
 
-这些标准的逻辑代码和权重目前包含在我们代码库的[这个 JavaScript 组件](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350)中。
+这些标准的逻辑代码和权重目前包含在我们代码库的[这个 JavaScript 组件](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350)中。
 
 ## 添加你的产品或服务 {#add-product}
 

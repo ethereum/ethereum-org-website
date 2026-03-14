@@ -259,5 +259,5 @@ Maggiori informazioni a riguardo si possono trovare nella documentazione [EIP 27
 ## Letture consigliate {#further-reading}
 
 - [Albero di Patricia Merkle Modificato - Come Ethereum risparmia uno stato](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- ["Merkling" su Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- ["Merkling" su Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [Comprendere l'albero di Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

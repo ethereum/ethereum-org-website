@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "Anggap ini seperti alamat email Anda, tetapi bukan surat, alamat ini dapat menerima ETH. Jika Anda ingin menukar ETH dari bursa ke dompet, gunakan alamat Anda sebagai tujuan. Pastikan untuk selalu memeriksa ulang sebelum Anda mengirim!",
   "page-get-eth-your-address-wallet-link": "Periksa dompet",
   "listing-policy-raise-issue-link": "Angkat masalah",
-  "page-find-wallet-last-updated": "Terakhir diperbarui"
+  "page-find-wallet-last-updated": "Terakhir diperbarui",
+  "listing-policy-disclaimer": "Semua produk yang tercantum di halaman ini bukan merupakan dukungan resmi dan hanya disediakan untuk tujuan informasi. Jika Anda ingin menambahkan produk atau memberikan masukan tentang kebijakan ini, silakan ajukan issue di GitHub."
 }

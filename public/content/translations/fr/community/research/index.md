@@ -1,6 +1,6 @@
 ---
 title: Les domaines de recherche actifs d'Ethereum
-description: Explorez les différents domaines de la recherche ouverte et apprenez comment y participer.
+description: "Explorez les différents domaines de la recherche ouverte et apprenez comment y participer."
 lang: fr
 ---
 
@@ -39,7 +39,7 @@ Outre des recherches prospectives, certaines refontes fondamentales du protocole
 
 #### Lecture de fond {#background-reading}
 
-- [Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
+- Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
 - [Article Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Explication Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Article Gasper](https://arxiv.org/abs/2003.03052)
@@ -57,7 +57,7 @@ La couche d'exécution est chargée d'exécuter les transactions, d'exécuter la
 
 - développement d'un support client léger ;
 - Recherche sur les limites de gaz ;
-- et incorporation de nouvelles structures de données (exemple : Verkle Tries).
+- et en incorporant de nouvelles structures de données (p. ex., les arbres de Verkle).
 
 #### Lecture de fond {#background-reading-1}
 
@@ -83,14 +83,14 @@ Un nœud Ethereum est nécessaire pour faire fonctionner deux logiciels :
 1. un client de consensus chargé de suivre la tête de la blockchain, de propager les blocs et de gérer la logique de consensus
 2. un client d'exécution permettant de prendre en charge la machine virtuelle Ethereum et d'exécuter des transactions et des contrats intelligents
 
-Voir la [page des nœuds et des clients] (/developers/docs/nodes-and-clients/) pour plus de détails sur les nœuds et les clients et pour une liste de toutes les implémentations clients actuelles. Vous pouvez également consulter l'historique de toutes les mises à jour d'Ethereum sur la [page Historique](/ethereum-forks/).
+Voir la [page des nœuds et des clients](/developers/docs/nodes-and-clients/) pour plus de détails sur les nœuds et les clients et pour une liste de toutes les implémentations clients actuelles. Vous pouvez également consulter l'historique de toutes les mises à jour d'Ethereum sur la [page Historique](/ethereum-forks/).
 
 ### Clients d'exécution {#execution-clients}
 
 - [Spécification du client d'exécution](https://github.com/ethereum/execution-specs)
 - [Spécification de l'API d'exécution](https://github.com/ethereum/execution-apis)
 
-### Clients de consensus {#consensus-clients}
+### Clients de consensus {#consensus-clients}
 
 - [Spécification du client de consensus](https://github.com/ethereum/consensus-specs)
 - [Spécification de l'API de la chaîne phare](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
@@ -266,7 +266,7 @@ Les validateurs utilisent l'actif natif d'Ethereum (l'ether) comme collatéral c
 
 ### Mise en jeu libre et ses dérivés {#liquid-staking-and-derivatives}
 
-La mise en jeu libre permet aux utilisateurs possédant moins de 32 ETH de recevoir des rendements de mise en jeu en échangeant de l'ether contre un jeton représentant de l'ether mis en jeu susceptible d'être utilisé dans la DeFi. Cependant, les incitations et la dynamique du marché associées à la mise en jeu libre sont encore en phase de découverte, tout comme son effet sur la sécurité d'Ethereum (par exemple, les risques de centralisation).
+La mise en jeu libre permet aux utilisateurs possédant moins de 32 ETH de recevoir des rendements de mise en jeu en échangeant de l'ether contre un jeton représentant de l'ether mis en jeu susceptible d'être utilisé dans la DeFi. Cependant, les incitations et la dynamique du marché associées à la mise en jeu liquide sont encore en cours de découverte, ainsi que son effet sur la sécurité d'Ethereum (p. ex., les risques de centralisation).
 
 #### Lectures de référence {#background-reading-12}
 
@@ -377,7 +377,7 @@ Les piratages sur Ethereum exploitent généralement des vulnérabilités dans d
 
 - [Rapport sur l'attaque de Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Liste des post-mortems des piratages de contrats Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Recherche récente {#recent-research-19}
 

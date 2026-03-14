@@ -105,7 +105,6 @@ type DocsLayoutProps = Pick<
   | "contributors"
   | "contentNotTranslated"
 > &
-  Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> &
   ChildOnlyProp & {
     frontmatter: DocsFrontmatter
   }

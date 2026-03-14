@@ -1,4 +1,22 @@
 {
+  "comp-tutorial-metadata-minute-read": "1분의 읽기 소요시간",
+  "page-tutorial-listing-policy-intro": "튜토리얼을 제출하기 전에 <a href=\"/contributing/content-resources/\">게재 정책을 읽어주세요</a>.",
+  "comp-tutorial-metadata-tip-author": "팁 작성자",
+  "page-tutorial-create-an-issue": "이슈 생성",
+  "page-tutorial-create-an-issue-desc": "튜토리얼의 개요를 포함하여 이슈 템플릿을 작성하세요.",
+  "page-tutorial-raise-issue-btn": "문제(issue) 제기",
+  "page-tutorial-read-time": "분",
+  "page-tutorial-submit-btn": "튜토리얼 제출",
+  "page-tutorial-subtitle": "선별된 커뮤니트 튜토리얼 목록에 오신 것을 환영합니다.",
+  "page-tutorial-tags-error": "선택한 모든 태그에 해당하는 튜토리얼이 아직 없습니다",
+  "page-tutorial-title": "이더리움 개발 튜토리얼",
+  "page-tutorials-meta-description": "심사를 거친(vetted) 이더리움 커뮤니티의 튜토리얼들을 주제(topic) 별로 찾아보고(browse) 필터(filter) 해 보세요.",
+  "page-tutorial-external-link": "외부 링크",
+  "page-tutorials-meta-title": "이더리움 개발 튜토리얼",
+  "page-tutorial-beginner": "초보자",
+  "page-tutorial-intermediate": "중급",
+  "page-tutorial-advanced": "심화 주제",
   "page-find-wallet-try-removing": "한 개 또는 두 개의 기능을 제거해 보세요.",
-  "page-find-wallet-clear": "필터 지우기"
+  "page-find-wallet-clear": "필터 지우기",
+  "page-tutorials-env-banner": "<code>.env</code>를 커밋하지 마세요! <code>.env</code> 파일을 다른 사람과 공유하거나 노출하면 비밀 정보가 유출될 수 있으니 절대 공유하거나 노출하지 않도록 주의하세요. 버전 관리를 사용하고 있다면 <code>.env</code>를 <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> 파일에 추가하세요."
 }

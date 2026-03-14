@@ -1,7 +1,7 @@
-import { redirect } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -15,7 +15,11 @@ import CategoryToolsGrid from "../_components/CategoryToolsGrid"
 import HighlightsSection from "../_components/HighlightsSection"
 import ToolModalContents from "../_components/ToolModalContents"
 import ToolModalWrapper from "../_components/ToolModalWrapper"
-import { DEV_TOOL_CATEGORIES, DEV_TOOL_CATEGORY_SLUGS } from "../constants"
+import {
+  DEV_TOOL_CATEGORIES,
+  DEV_TOOL_CATEGORY_SLUGS,
+  VALID_CATEGORY_SLUGS,
+} from "../constants"
 import type { DeveloperToolCategorySlug, DeveloperToolTag } from "../types"
 
 import DevelopersToolsCategoryJsonLD from "./page-jsonld"
@@ -33,6 +37,11 @@ const Page = async ({
   const { toolId } = searchParams
 
   setRequestLocale(locale)
+
+  if (!VALID_CATEGORY_SLUGS.has(category)) {
+    notFound()
+  }
+
   const t = await getTranslations({
     locale,
     namespace: "page-developers-tools",
@@ -72,11 +81,9 @@ const Page = async ({
     .filter(Boolean)
 
   // Get contributor info for JSON-LD
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     `developers/tools/${category}`,
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -143,14 +150,17 @@ export async function generateStaticParams() {
   return DEV_TOOL_CATEGORIES.map(({ slug }) => ({ category: slug }))
 }
 
-export const dynamicParams = false
-
 export async function generateMetadata({
   params,
 }: {
   params: { locale: string; category: string }
 }) {
   const { locale, category } = params
+
+  if (!VALID_CATEGORY_SLUGS.has(category as DeveloperToolCategorySlug)) {
+    notFound()
+  }
+
   const t = await getTranslations({
     locale,
     namespace: "page-developers-tools",

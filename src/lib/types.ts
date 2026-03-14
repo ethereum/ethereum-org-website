@@ -427,8 +427,18 @@ export type FileContributor = {
   date: string
 }
 
-type FilePath = string
-export type CommitHistory = Record<FilePath, FileContributor[]>
+/**
+ * GitHub contributors data stored in the data-layer.
+ * Keyed by file path, contains list of contributors for each file.
+ */
+export type GitHubContributorsData = {
+  /** Content files: slug (e.g., "eth", "wallets/find-wallet") → contributors */
+  content: Record<string, FileContributor[]>
+  /** App pages: pagePath (e.g., "staking", "developers") → contributors */
+  appPages: Record<string, FileContributor[]>
+  /** ISO timestamp when data was generated */
+  generatedAt: string
+}
 
 /**
  * Table of contents
@@ -512,24 +522,6 @@ export type CommonHeroProps<
   className?: string
 }
 
-// Learning Tools
-
-export interface LearningTool {
-  name: string
-  description: string
-  url: string
-  image: StaticImageData
-  alt: string
-  background: string
-  subjects: Array<string>
-  locales?: Array<Lang>
-  priceType?: string
-}
-
-export interface LearningToolsCardGridProps {
-  products: Array<LearningTool>
-}
-
 // Staking stats data fetching
 type Data<T> = {
   data: T
@@ -588,8 +580,8 @@ export type EtherscanTxCountResponse = {
 }
 
 export type DefiLlamaTVLResponse = {
-  date: string
-  totalLiquidityUSD: number
+  date: number
+  tvl: number
 }[]
 
 export type MetricReturnData = ValueOrError<number>
@@ -1112,7 +1104,7 @@ export type EventCardProps = {
 
 export type PageWithContributorsProps = {
   contributors: FileContributor[]
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp?: string
   locale?: Lang
 }
 

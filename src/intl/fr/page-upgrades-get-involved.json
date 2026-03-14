@@ -8,12 +8,12 @@
   "page-upgrades-get-involved-bug-li": "problèmes de non-conformité de spécification",
   "page-upgrades-get-involved-bug-li-2": "bogues empêchant la finalité",
   "page-upgrades-get-involved-bug-li-3": "vecteurs de déni de service (DOS)",
-  "page-upgrades-get-involved-bug-li-4": "Et plus encore...",
+  "page-upgrades-get-involved-bug-li-4": "et plus encore...",
   "page-upgrades-get-involved-desc-1": "Exécuter un logiciel client signifie que vous serez un participant actif dans Ethereum. Votre client vous aidera à garder une trace des transactions et à vérifier les nouveaux blocs.",
   "page-upgrades-get-involved-desc-2": "Si vous avez des ETH, vous pouvez les mettre en jeu pour devenir un validateur et aider à sécuriser le réseau. En tant que validateur, vous pouvez gagner des récompenses en ETH.",
   "page-upgrades-get-involved-desc-3": "Rejoignez la communauté des testeurs ! Aidez à tester les mises à niveau d'Ethereum avant qu'elles ne soient publiées, trouvez des bogues et gagnez des récompenses.",
   "page-upgrades-get-involved-ethresearch-1": "Fragmentation",
-  "page-upgrades-get-involved-ethresearch-2": "La Fusion",
+  "page-upgrades-get-involved-ethresearch-2": "La fusion",
   "page-upgrades-get-involved-ethresearch-3": "Execution fragmentée",
   "page-upgrades-get-involved-ethresearch-4": "Tous les sujets de recherche",
   "page-upgrades-get-involved-how": "Comment voulez-vous vous impliquer ?",
@@ -42,6 +42,6 @@
   "page-upgrades-get-involved-written-nim": "Écrit en Nim",
   "page-upgrades-get-involved-written-rust": "Écrit en Rust",
   "page-upgrades-get-involved": "Participez à la mise à niveau d'Ethereum",
-  "page-upgrades-get-involved-2": "S’engager",
+  "page-upgrades-get-involved-2": "S'impliquer",
   "page-upgrades-bug-bounty-leaderboard-points": "points"
 }

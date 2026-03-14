@@ -60,7 +60,7 @@ Hasta ahora hemos considerado validadores con un comportamiento ejemplar, pero �
 
 Las penalizaciones por no alcanzar el objetivo y los votos de la fuente son iguales a las recompensas que el certificador habría recibido si las hubiera presentado. Esto significa que en lugar de tener la recompensa añadida a su saldo, tienen un valor igual eliminado de su saldo. No hay penalización por omitir el voto de cabeza (es decir, los votos de cabeza solo se recompensan, nunca se penalizan). No hay ninguna penalización asociada con el `inclusion_delay`; la recompensa simplemente no se añadirá al saldo del validador. Tampoco hay penalización por fallar en proponer un bloque.
 
-Lea más sobre recompensas y penalizaciones en las [especificaciones de consenso](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Las recompensas y penalizaciones se ajustaron en la actualización Bellatrix. Vea a Danny Ryan y a Vitalik discutir esto en este [vídeo de «Peep an EIP»](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
+Lea más sobre recompensas y penalizaciones en las [especificaciones de consenso](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md). Las recompensas y penalizaciones se ajustaron en la actualización Bellatrix. Vea a Danny Ryan y a Vitalik discutir esto en este [vídeo de «Peep an EIP»](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
 ## Slashing {#slashing}
 

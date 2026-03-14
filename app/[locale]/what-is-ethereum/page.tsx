@@ -8,7 +8,7 @@ import {
 } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams, ToCItem } from "@/lib/types"
+import type { Lang, PageParams, ToCItem } from "@/lib/types"
 
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -35,6 +35,8 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 import WhatIsEthereumPageJsonLD from "./page-jsonld"
 
 import contributionBanner from "@/public/images/doge-computer.png"
@@ -53,13 +55,8 @@ const Page = async ({ params }: { params: PageParams }) => {
     namespace: "page-what-is-ethereum",
   })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "what-is-ethereum",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("what-is-ethereum", locale as Lang)
 
   const tocItems: ToCItem[] = [
     { title: t("page-what-is-ethereum-toc-ethereum"), url: "#ethereum" },
@@ -130,6 +127,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <p>
                 {t.rich("page-what-is-ethereum-ethereum-intro-1", {
                   strong: Strong,
+                  a: (chunks) => <Link href="/">{chunks}</Link>,
                 })}
               </p>
               <p>
@@ -788,7 +786,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                       })}
                     </p>
                   </div>
-                  <ButtonLink href="/enterprise/">
+                  <ButtonLink href={ENTERPRISE_ETHEREUM_URL}>
                     {t("page-what-is-ethereum-start-business-cta")}
                   </ButtonLink>
                 </CardContent>
@@ -1055,7 +1053,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               </div>
             </Section>
 
-            <Section id="further-readon" className="space-y-8">
+            <Section id="further-reading" className="space-y-8">
               <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
                 {t("page-what-is-ethereum-further-reading-title")}
               </h2>

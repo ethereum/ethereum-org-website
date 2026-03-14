@@ -4,7 +4,7 @@ description: An overview of Ethereum's networks and where to get testnet ether (
 lang: en
 ---
 
-Ethereum networks are groups of connected computers that communicate using the Ethereum protocol. There is only one Ethereum Mainnet, but independent networks conforming to the same protocol rules can be created for testing and development purposes. There are many independent "networks" that conform to the protocol without interacting with each other. You can even start one locally on your own computer for testing your smart contracts and web3 apps.
+[Ethereum](/) networks are groups of connected computers that communicate using the Ethereum protocol. There is only one Ethereum Mainnet, but independent networks conforming to the same protocol rules can be created for testing and development purposes. There are many independent "networks" that conform to the protocol without interacting with each other. You can even start one locally on your own computer for testing your smart contracts and web3 apps.
 
 Your Ethereum account will work across the different networks, but your account balance and transaction history won't carry over from the main Ethereum network. For testing purposes, it's useful to know which networks are available and how to get testnet ETH to play around with. In general, for security considerations, it's not recommended to reuse mainnet accounts on testnets or vice versa.
 
@@ -114,7 +114,7 @@ Ephemery is a unique kind of testnet that fully resets every month. The executio
 The Holesky testnet is deprecated as of September 2025. Staking operators and infrastructure providers should use Hoodi for validator testing instead.
 
 - [Holesky Testnet Shutdown Announcement](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF Blog, 1-September-2025_
-- [Holesky and Hoodi Testnet Updates](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) - _EF Blog, 18-March-2025_
+- [Holesky and Hoodi Testnet Updates](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _EF Blog, 18-March-2025_
 
 ### Layer 2 testnets {#layer-2-testnets}
 
@@ -158,7 +158,7 @@ A testnet for [Starknet](https://www.starknet.io).
 
 ##### Resources
 
-- [Starkscan](https://sepolia.starkscan.co/)
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### Faucets
 

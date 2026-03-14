@@ -5,7 +5,7 @@ description: Learn about Ethereum gas fees, how they're calculated, and their ro
 lang: en
 ---
 
-Gas is essential to the Ethereum network. It is the fuel that allows it to operate, in the same way that a car needs gasoline to run.
+Gas is essential to the [Ethereum](/) network. It is the fuel that allows it to operate, in the same way that a car needs gasoline to run.
 
 ## Prerequisites {#prerequisites}
 

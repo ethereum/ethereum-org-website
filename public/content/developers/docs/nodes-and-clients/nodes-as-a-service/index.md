@@ -272,7 +272,6 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Get started for free
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Docs](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Features
     - Access to 50+ blockchain nodes
     - Free API Key
@@ -283,11 +282,10 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Shared, archive, backup and dedicated nodes
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Docs](https://docs.pokt.network/home/)
+  - [Docs](https://docs.pokt.network/)
   - Features
     - Decentralized RPC Protocol and Marketplace
     - 1M Requests Per Day Free Tier (per endpoint, max 2)
-    - [Public Endpoints](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ Program (if you need more than 1M requests per day)
     - 15+ Blockchains Supported
     - 6400+ Nodes earning POKT for serving applications

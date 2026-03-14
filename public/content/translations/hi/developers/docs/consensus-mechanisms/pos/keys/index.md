@@ -94,7 +94,7 @@ m/44'/60'/0'/0`
 
 ## आगे की रीडिंग {#further-reading}
 
-- [कार्ल बीखुइजेन द्वारा एथेरियम फाउंडेशन ब्लॉग पोस्ट](https://blog.ethereum.org/2020/05/21/keys/)
+- [कार्ल बीखुइजेन द्वारा एथेरियम फाउंडेशन ब्लॉग पोस्ट](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 BLS12-381 कुंजी जनरेशन](https://eips.ethereum.org/EIPS/eip-2333)
 - [EIP-7002: निष्पादन परत द्वारा ट्रिगर की गई निकासी](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [बड़े पैमाने पर कुंजी प्रबंधन](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

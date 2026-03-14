@@ -1,12 +1,13 @@
 ---
 title: Como usar uma carteira
+metaTitle: Como usar o Ethreum Wallets| Passo a passo
 description: Uma guia explicando como enviar, receber tokens e conectar-se aos projetos da web3.
 lang: pt-br
 ---
 
 # Como usar uma carteira
 
-Aprenda como operar todas as funções básicas de uma carteira. Se você ainda não tem uma conta, confira o nosso guia [Como criar uma conta Ethereum](/guides/how-to-create-an-ethereum-account/).
+Aprenda como operar todas as funções básicas de uma carteira. Se você ainda não tem uma conta, confira nosso [Como criar uma conta Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Abra sua conta
 
@@ -38,8 +39,7 @@ Deseja enviar ETH para outra carteira?
 3. Insira o endereço de recebimento ou digitalize um código QR com a sua câmera para que você não precise escrever o endereço manualmente.
 4. Clique no botão “Enviar” em sua carteira (ou uma alternativa com palavras semelhantes).
 
-![Enviar campo para endereço cripto](./send.png)
-<br/>
+![Campo de envio para endereço de criptomoeda](./send.png) <br/>
 
 5. Muitos ativos, como DAI e USDC, existem em várias redes. Ao transferir tokens de criptomoedas, certifique-se de que o destinatário está usando a mesma rede que você, já que isso não pode ser alterado.
 6. Certifique-se de que sua carteira tenha ETH suficiente para cobrir a taxa de transação, que varia dependendo das condições da rede. A maioria das carteiras adicionará automaticamente a taxa sugerida para a transação. Em seguida, você pode confirmar.
@@ -51,13 +51,13 @@ Seu endereço será o mesmo em todos os projetos do Ethereum. Você não precisa
 
 1. Visite o website do projeto.
 2. Se a página inicial do projeto for apenas uma descrição estática do projeto, você deve poder clicar em um botão “Abrir o App” no menu que irá navegar para o aplicativo web real.
-3. Quando estiver no aplicativo, clique em “Conectar”
+3. Quando estiver no aplicativo, clique em “Conectar”.
 
 ![Botão que permite ao usuário se conectar ao site com uma carteira](./connect1.png)
 
 4. Selecione sua carteira da lista de opções fornecidas. Se você não conseguir ver sua carteira, ela pode estar escondida na a opção “WalletConnect”.
 
-![Selecionando de uma lista de carteiras com as quais se conectar](./connect2.png)
+![Selecionando em uma lista de carteiras para conectar](./connect2.png)
 
 5. Confirme o pedido de assinatura na sua carteira para estabelecer a conexão. **A assinatura desta mensagem não dever exigir o gasto de nenhum ETH**.
 6. É isso! Comece a usar o app. Você pode encontrar alguns projetos interessantes em nossa [página de dApps](/apps/#explore). <br />

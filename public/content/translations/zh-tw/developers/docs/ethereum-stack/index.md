@@ -1,6 +1,6 @@
 ---
-title: 以太坊堆疊簡介
-description: 演練以太坊堆疊的不同層以及它們如何組合在一起。
+title: "以太坊堆疊簡介"
+description: "演練以太坊堆疊的不同層以及它們如何組合在一起。"
 lang: zh-tw
 ---
 
@@ -8,54 +8,54 @@ lang: zh-tw
 
 然而，以太坊的核心元件有助於為軟體應用程式如何與以太坊區塊鏈互動提供思維模型。 理解堆疊的各層將幫助瞭解將以太坊整合到軟體專案中的不同方式。
 
-## 等級 1：以太坊虛擬機器 {#ethereum-virtual-machine}
+## 第 1 層：以太坊虛擬機 {#ethereum-virtual-machine}
 
-[以太坊虛擬機器](/developers/docs/evm/)是以太坊上智慧型合約的執行階段環境。 以太坊區塊鏈上的所有智慧型合約和狀態變更均由[交易](/developers/docs/transactions/)執行。 以太坊虛擬機器負責處理以太坊網路上的所有交易。
+[以太坊虛擬機 (EVM)](/developers/docs/evm/) 是以太坊上智慧型合約的執行環境。 以太坊區塊鏈上的所有智慧型合約和狀態變更都是透過[交易](/developers/docs/transactions/)執行的。 以太坊虛擬機器負責處理以太坊網路上的所有交易。
 
 與任何虛擬機器一樣，以太坊虛擬機器在執行程式碼和執行機器（以太坊節點）之間建立了一個抽象層。 目前，以太坊虛擬機器運行在分佈於全球的數千個節點上。
 
-在後台，以太坊虛擬機器使用一組操作碼指令來執行特定任務。 這些（140 個獨特的）操作碼讓以太坊虛擬機器是**圖靈完備**的，這表示只要提供足夠資源，以太坊虛擬機器就可以進行任何運算。
+在後台，以太坊虛擬機器使用一組操作碼指令來執行特定任務。 這 140 個獨特的操作碼讓 EVM [圖靈完備](https://en.wikipedia.org/wiki/Turing_completeness)，這表示只要有足夠的資源，EVM 就能計算幾乎任何東西。
 
 作為去中心化應用程式開發者，不需要瞭解太多關於以太坊虛擬機器的知識，只需要瞭解其存在以及能夠可靠地為以太坊上的所有應用程式提供無停機的支援。
 
-## 等級 2：智慧型合約 {#smart-contracts}
+## 第 2 層：智慧型合約 {#smart-contracts}
 
-[智慧型合約](/developers/docs/smart-contracts/)為在以太坊區塊鏈上運行的可執行程式。
+[智慧型合約](/developers/docs/smart-contracts/) 是在以太坊區塊鏈上運行的可執行程式。
 
-智慧型合約使用特定[程式語言](/developers/docs/smart-contracts/languages/)來編譯至以太坊虛擬機器位元組碼（稱為操作碼的低階機器指令）。
+智慧型合約是使用特定的[程式語言](/developers/docs/smart-contracts/languages/)撰寫的，可編譯成 EVM 位元組碼 (稱為操作碼的低階機器指令)。
 
-智慧型合約不僅充當開源程式庫，而且本質上是始終運行且無法關閉的開放應用程式介面服務。 智慧型合約提供使用者和應用程式（[去中心化應用程式](/developers/docs/dapps/)）無需許可即可與之互動的公共功能。 任何應用程式都可以與已部署的智慧型合約整合以構成功能，例如新增[資料饋送](/developers/docs/oracles/)或支援代幣兌換。 此外，任何人都可以將新的智慧型合約部署到以太坊，以新增自訂功能來滿足其應用程式的需求。
+智慧型合約不僅充當開源程式庫，而且本質上是始終運行且無法關閉的開放應用程式介面服務。 智慧型合約提供公開函式，使用者和應用程式 ([去中心化應用程式](/developers/docs/dapps/)) 無需許可即可與之互動。 任何應用程式都可以與已部署的智慧型合約整合，以組合出新功能，例如新增[資料饋送](/developers/docs/oracles/)或支援代幣交換。 此外，任何人都可以將新的智慧型合約部署到以太坊，以新增自訂功能來滿足其應用程式的需求。
 
 作為去中心化應用程式開發者，只有當你想在以太坊區塊鏈上新增自訂功能時，才需要編寫智慧型合約。 你可能會發現，只需與現有智慧型合約整合即可實現專案的大部分或全部需求，例如，如果想支援穩定幣支付或實現代幣的去中心化交易。
 
-## 等級 3：以太坊節點 {#ethereum-nodes}
+## 第 3 層：以太坊節點 {#ethereum-nodes}
 
-為了使應用程式能夠與以太坊區塊鏈互動，必須連結至[以太坊節點](/developers/docs/nodes-and-clients/)。 連結至節點可讓你讀取區塊鏈資料和/或將交易傳送到網路。
+應用程式若要與以太坊區塊鏈互動，就必須連接到[以太坊節點](/developers/docs/nodes-and-clients/)。 連結至節點可讓你讀取區塊鏈資料和/或將交易傳送到網路。
 
 以太坊節點是運行軟體的電腦 - 以太坊用戶端。 用戶端是以太坊的實作，會驗證每個區塊中的所有交易，保持網路安全和資料準確。 **以太坊節點就是以太坊區塊鏈**。 以太坊節點共同存儲以太坊區塊鏈的狀態，並就交易達成共識以改變區塊鏈狀態。
 
-透過將你的應用程式連結到以太坊節點（透過 [JSON-RPC 應用程式介面](/developers/docs/apis/json-rpc/)），應用程式能夠從區塊鏈讀取資料（例如使用者帳戶餘額）並向網路廣播新交易（例如在使用者帳戶之間轉移以太幣或執行智慧型合約的功能）。
+將應用程式連接到以太坊節點 (透過 [JSON-RPC API](/developers/docs/apis/json-rpc/)) 後，應用程式便能夠從區塊鏈讀取資料 (例如使用者帳戶餘額)，也能向網路廣播新交易 (例如在使用者帳戶之間轉移 ETH 或執行智慧型合約的函式)。
 
-## 等級 4：以太坊用戶端應用程式介面 {#ethereum-client-apis}
+## 第 4 層：以太坊用戶端 API {#ethereum-client-apis}
 
 許多便利的程式庫（由以太坊的開源社群建立和維護）允許你的應用程式連結到以太坊區塊鏈並與之通訊。
 
-如果你的面向使用者的應用程式是網路應用程式，可以選擇直接在前端透過 `npm install` 安裝 [JavaScript API](/developers/docs/apis/javascript/)。 或者，你可能會選擇使用 [Python](/developers/docs/programming-languages/python/) 或 [Java](/developers/docs/programming-languages/java/) 應用程式介面在伺服器端實作此功能。
+如果你的使用者導向應用程式是網頁應用程式，你可以選擇直接在前端用 `npm install` 安裝 [JavaScript API](/developers/docs/apis/javascript/)。 或者，你也可以選擇在伺服器端，使用 [Python](/developers/docs/programming-languages/python/) 或 [Java](/developers/docs/programming-languages/java/) API 來實作此功能。
 
-雖然這些應用程式介面不是堆疊的必要組成部分，但顯著降低了與以太坊節點直接互動的複雜度。 這些應用程式介面還提供公用程式功能（例如將 ETH 轉換為 Gwei），使得開發者可以花更少的時間處理複雜的以太坊用戶端，將更多的時間專注於應用程式的特定功能。
+雖然這些應用程式介面不是堆疊的必要組成部分，但顯著降低了與以太坊節點直接互動的複雜度。 它們也提供工具函式 (例如，將 ETH 轉換為 Gwei)，因此開發人員可以花更少的時間處理以太坊用戶端的複雜細節，而將更多時間專注在應用程式的特定功能上。
 
-## 等級 5：終端使用者應用程式 {#end-user-applications}
+## 第 5 層：終端使用者應用程式 {#end-user-applications}
 
 堆疊的頂層是面向使用者的應用程式。 它們是目前經常使用和建立的標準​​應用程式：主要是 Web 和行動應用程式。
 
 開發這些使用者介面的方式基本上保持不變。 通常，使用者不需要知道他們正在使用的應用程式是使用區塊鏈建立的。
 
-## 準備好選擇你的堆疊了嗎？ {#ready-to-choose-your-stack}
+## 準備好選擇你的堆疊了嗎？ 準備好選擇你的技術堆疊了嗎？ {#ready-to-choose-your-stack}
 
-請查看我們的指南，瞭解如何為你的以太坊應用程式[設定本地開發環境](/developers/local-environment/)。
+請參閱我們的指南，為你的以太坊應用程式[設定本機開發環境](/developers/local-environment/)。
 
-## 衍生閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
 - [Web 3.0 應用程式的架構](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 
-_認識社區或社團資源能幫助大家學習更多? 歡迎自由編輯或添加於本頁!!_
+_知道一個曾經幫助你學習更多社區或社團資源? 歡迎在本頁自由編輯或添加內容！_

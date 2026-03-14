@@ -124,4 +124,4 @@ _以太坊Pectra升级：质押者需要了解的内容 — Blockdaemon_
 - [Pectra.wtf 信息页面](https://pectra.wtf)
 - [Pectra 如何提升质押者体验](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 信息页面](https://eip7702.io/)
-- [Pectra 开发者测试网络](https://github.com/ethereum/pm/blob/master/Pectra/pectra-pm.md)
+- [Pectra 开发者测试网络](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

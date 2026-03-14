@@ -19,7 +19,7 @@ lang: zh
 有几个网站允许你查看与你钱包地址关联的智能合约，并进行撤销。 访问以下网站并连接到你的钱包：
 
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (以太坊)
-- [Blockscout](https://eth.blockscout.com/apps/revokescout) (以太坊)
+- [Blockscout](https://eth.blockscout.com/essential-dapps/revoke) (以太坊)
 - [Revoke](https://revoke.cash/) (多个网络)
 - [Unrekt](https://app.unrekt.net/) (多个网络)
 - [EverRevoke](https://everrise.com/everrevoke/) (多个网络)

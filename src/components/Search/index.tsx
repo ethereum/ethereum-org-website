@@ -7,6 +7,8 @@ import { type DocSearchHit, useDocSearchKeyboardEvents } from "@docsearch/react"
 import * as Portal from "@radix-ui/react-portal"
 import { Slot } from "@radix-ui/react-slot"
 
+import { ErrorBoundary } from "@/components/ui/error-boundary"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import { sanitizeHitUrl } from "@/lib/utils/url"
@@ -134,7 +136,33 @@ const Search = ({ asChild = false, children }: SearchProps) => {
         </>
       )}
       <Portal.Root>
-        {isOpen && <SearchModal {...searchModalProps} />}
+        {isOpen && (
+          <ErrorBoundary
+            fallback={() => (
+              <div className="fixed inset-0 z-modal flex items-center justify-center bg-black/50">
+                <div className="mx-4 flex flex-col items-center gap-4 rounded-lg bg-background p-8 text-center shadow-lg">
+                  <p className="text-body-medium">{t("loading-error")}</p>
+                  <div className="flex gap-3">
+                    <button
+                      className="rounded-md bg-primary px-4 py-2 text-sm text-white hover:bg-primary-hover"
+                      onClick={() => window.location.reload()}
+                    >
+                      {t("refresh")}
+                    </button>
+                    <button
+                      className="rounded-md border border-body-light px-4 py-2 text-sm text-body hover:bg-background-highlight"
+                      onClick={onClose}
+                    >
+                      {t("close")}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          >
+            <SearchModal {...searchModalProps} />
+          </ErrorBoundary>
+        )}
       </Portal.Root>
     </>
   )

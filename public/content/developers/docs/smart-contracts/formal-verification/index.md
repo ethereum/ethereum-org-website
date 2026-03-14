@@ -163,7 +163,7 @@ An execution trace that results in an integer overflow would need to satisfy the
 
 Formal verification is used to assess the correctness of safety-critical systems whose failure can have devastating consequences, such as death, injury, or financial ruin. Smart contracts are high-value applications controlling enormous amounts of value, and simple errors in design can lead to [irrecoverable losses for users](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/). Formally verifying a contract before deployment, however, can increase guarantees that it will perform as expected once running on the blockchain.
 
-Reliability is a highly desired quality in any smart contract, especially because code deployed in the Ethereum Virtual Machine (EVM) is typically immutable. With post-launch upgrades not readily accessible, the need to guarantee reliability of contracts makes formal verification necessary. Formal verification is able to detect tricky issues, such as integer underflows and overflow, re-entrancy, and poor gas optimizations, which may slip past auditors and testers.
+Reliability is a highly desired quality in any smart contract, especially because code deployed in the [Ethereum](/) Virtual Machine (EVM) is typically immutable. With post-launch upgrades not readily accessible, the need to guarantee reliability of contracts makes formal verification necessary. Formal verification is able to detect tricky issues, such as integer underflows and overflow, re-entrancy, and poor gas optimizations, which may slip past auditors and testers.
 
 #### Prove functional correctness {#prove-functional-correctness}
 

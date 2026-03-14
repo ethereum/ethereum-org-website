@@ -223,7 +223,7 @@ Combinan las mejores partes de las tecnologías múltiples de capa 2 y pueden of
 
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– 12 de febrero de 2018, Josh Stark_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/), _6 de noviembre de 2015, Jeff Coleman_
-- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Basics of State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 
 **Canales de pago**
 

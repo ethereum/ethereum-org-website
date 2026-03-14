@@ -36,13 +36,13 @@
   "page-find-wallet-token-importing-desc": "Cüzdanda kullanmak için herhangi bir ERC-20 jetonunu içe aktarın",
   "page-find-wallet-buy-crypto": "Kripto al",
   "page-find-wallet-buy-crypto-desc": "Doğrudan cüzdandan emirle kripto para satın al \n *Not: Kripto para satın almak bölgeye özgü olabilir",
-  "page-find-wallet-sell-for-fiat": "Emir karşılığında sat",
+  "page-find-wallet-sell-for-fiat": "Nakit karşılığında sat",
   "page-find-wallet-sell-for-fiat-desc": "Doğrudan cüzdandan emirle kripto para sat\n *Not: Kripto para çekmek bölgeye özgü olabilir",
   "page-find-wallet-multisig": "Çoklu imza",
   "page-find-wallet-multisig-desc": "Bir işlemi yetkilendirmek için birden fazla imza gerektiren cüzdanlar",
   "page-find-wallet-social-recovery": "Sosyal kurtarma",
   "page-find-wallet-social-recovery-desc": "Vasilerin akıllı sözleşme cüzdanları için imzalama anahtarını değiştirmesine izin veren cüzdanlar",
-  "page-find-wallet-languages-supported": "Dil Desteği",
+  "page-find-wallet-languages-supported": "Dil desteği",
   "page-find-wallet-languages-search-language": "Dil ara",
   "page-find-wallet-popular-languages": "En popüler",
   "page-find-wallet-features": "Özellikler",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Bağlantılar",
   "page-find-wallet-empty-results-title": "Sonuç yok",
   "page-find-wallet-empty-results-desc": "Kriterlerinize uygun cüzdan bulunamadı, filtrelerden bazılarını kaldırmayı deneyin.",
-  "page-find-wallet-see-wallets": "Cüzdanları görüntüleyin"
+  "page-find-wallet-privacy": "Gizlilik",
+  "page-find-wallet-privacy-desc": "Dahili özel işlemleri destekleyen cüzdanlar",
+  "page-find-wallet-see-wallets": "Cüzdanları görüntüleyin",
+  "page-find-wallet-search-languages": "Dil ara..."
 }

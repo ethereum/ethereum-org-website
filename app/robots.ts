@@ -1,18 +1,9 @@
 import type { MetadataRoute } from "next"
 
-import { SITE_URL } from "@/lib/constants"
+import { IS_PRODUCTION_DEPLOY, SITE_URL } from "@/lib/constants"
 
 export default function robots(): MetadataRoute.Robots {
-  let hostname = ""
-  try {
-    hostname = new URL(SITE_URL).hostname
-  } catch (error) {
-    console.error("Error getting hostname", error)
-  }
-
-  const isProduction = hostname === "ethereum.org"
-
-  if (!isProduction) {
+  if (!IS_PRODUCTION_DEPLOY) {
     return {
       rules: [{ userAgent: "*", disallow: "/" }],
       sitemap: [],

@@ -1,6 +1,6 @@
 ---
-title: Sécurité
-description: Considérations de sécurité pour les développeurs Ethereum
+title: "Sécurité"
+description: "Considérations de sécurité pour les développeurs Ethereum"
 lang: fr
 ---
 

@@ -34,10 +34,10 @@ description: "对 ethereum.org 翻译人员有用的资源"
 
 要及时了解翻译计划的最新进展，可以关注 [以太坊基金会博客](https://blog.ethereum.org/)：
 
-- [2021 年 10 月里程碑更新](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [2020 年 12 月里程碑更新](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [2020 年 7 月里程碑更新](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [2019 年 8 月翻译计划启动](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [2021 年 10 月里程碑更新](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [2020 年 12 月里程碑更新](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [2020 年 7 月里程碑更新](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [2019 年 8 月翻译计划启动](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## 翻译人员官方互动时间 {#office-hours}
 

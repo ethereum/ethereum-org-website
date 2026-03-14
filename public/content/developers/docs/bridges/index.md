@@ -23,7 +23,7 @@ Blockchains have unique strengths, weaknesses, and approaches to building applic
 For developers, bridges enable the following:
 
 - the transfer of any data, information, and assets across chains.
-- unlocking new features and use cases for protocols as bridges expand the design space for what protocols can offer. For example, a protocol for yield farming originally deployed on Ethereum Mainnet can offer liquidity pools across all EVM-compatible chains.
+- unlocking new features and use cases for protocols as bridges expand the design space for what protocols can offer. For example, a protocol for yield farming originally deployed on [Ethereum](/) Mainnet can offer liquidity pools across all EVM-compatible chains.
 - the opportunity to leverage the strengths of different blockchains. For example, developers can benefit from the lower fees offered by the different L2 solutions by deploying their dapps across rollups, and sidechains and users can bridge across them.
 - collaboration among developers from various blockchain ecosystems to build new products.
 - attracting users and communities from various ecosystems to their dapps.

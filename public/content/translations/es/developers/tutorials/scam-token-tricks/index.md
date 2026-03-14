@@ -241,7 +241,7 @@ Estos problemas de calidad del código no _demuestran_ que este código sea un f
 
 #### La función `mount` {#the-mount-function}
 
-Si bien no se especifica en [el estándar](https://eips.ethereum.org/EIPS/eip-20), en términos generales, la función que crea nuevos tokens se llama [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
+Si bien no se especifica en [el estándar](https://eips.ethereum.org/EIPS/eip-20), en términos generales, la función que crea nuevos tokens se llama [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 
 Si miramos en el constructor de `wARB`, vemos que la función de acuñación ha sido renombrada a `mount` por alguna razón, y se la llama cinco veces con una quinta parte del suministro inicial, en lugar de una vez por la cantidad total por eficiencia.
 

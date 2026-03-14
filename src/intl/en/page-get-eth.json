@@ -9,7 +9,7 @@
   "page-get-eth-cex-desc": "Exchanges are businesses that let you buy crypto using traditional currencies. They have custody over any ETH you buy until you send it to a wallet you control.",
   "page-get-eth-checkout-dapps-btn": "Check out dapps",
   "page-get-eth-community-safety": "Community posts on security",
-  "page-get-eth-description": "Ethereum isn't controlled by any single organization - it is decentralized.",
+  "page-get-eth-description": "<a href=\"/\">Ethereum</a> isn't controlled by any single organization - it is decentralized.",
   "page-get-eth-dex": "Decentralized exchanges (DEXs)",
   "page-get-eth-dex-desc": "If you want more control, buy ETH using <a href=\"/glossary/#smart-contract\">smart contracts</a>. With a DEX you can trade digital assets without ever giving control of your funds to a centralized company.",
   "page-get-eth-peers": "Receive ETH from your peers",
@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "Think of this like your email address, but instead of mail it can receive ETH. If you want to transfer ETH from an exchange to your wallet, use your address as the destination. Be sure to always double check before you send!",
   "page-get-eth-your-address-wallet-link": "Check out wallets",
   "listing-policy-raise-issue-link": "Raise issue",
-  "page-find-wallet-last-updated": "Last updated"
+  "page-find-wallet-last-updated": "Last updated",
+  "listing-policy-disclaimer": "All products listed on this page are not official endorsements, and are provided for informational purposes only. If you want to add a product or provide feedback on the policy raise an issue in GitHub."
 }

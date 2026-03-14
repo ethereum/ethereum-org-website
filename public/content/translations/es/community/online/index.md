@@ -51,7 +51,7 @@ Si considera que debería añadirse o eliminarse una comunidad en función de es
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - orientación, educación, soporte y recursos gestionados por la comunidad para quienes hacen o desean hacer staking</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Equipo de ethereum.org</Link> - únete y charla sobre desarrollo web y diseño de ethereum.org con el equipo y miembros de la comunidad</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - comunidad de creadores web3 donde constructores, líderes de la industria y entusiastas de Ethereum interactúan. Nos apasiona la cultura, el diseño y el desarrollo de la Web 3.0. Ven a construir con nosotros.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - chat para el desarrollo en Solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.element.io/#/room/#solidity:matrix.org">Solidity Matrix</Link> - chat para el desarrollo en Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat para desarrollo en Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- foro de preguntas y respuestas</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- foro descentralizado de preguntas y respuestas</i></SocialListItem>

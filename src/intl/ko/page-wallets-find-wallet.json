@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "지갑에서 사용할 ERC-20 토큰 가져오기",
   "page-find-wallet-buy-crypto": "암호화폐 구매",
   "page-find-wallet-buy-crypto-desc": "지갑에서 직접 법정 화폐로 암호화폐 구매 \n *참고: 암호화폐 구매는 지역별로 다를 수 있음",
-  "page-find-wallet-sell-for-fiat": "법정 화폐에 대해 판매",
+  "page-find-wallet-sell-for-fiat": "현금으로 판매",
   "page-find-wallet-sell-for-fiat-desc": "지갑에서 직접 법정 화폐로 암호화폐 판매\n *참고: 암호화폐 인출은 지역별로 다를 수 있음",
   "page-find-wallet-multisig": "다중서명",
   "page-find-wallet-multisig-desc": "거래를 승인하기 위해 다중 서명이 필요한 지갑",
@@ -48,7 +48,7 @@
   "page-find-wallet-features": "기능",
   "page-find-wallet-security": "보안",
   "page-find-wallet-smart-contract": "스마트 계약",
-  "page-find-wallet-advanced": "고급",
+  "page-find-wallet-advanced": "심화 주제",
   "page-find-wallet-check-out": "확인",
   "page-find-wallet-info-updated-on": "업데이트된 정보",
   "page-find-wallet-showing-all-wallets": "모든 지갑 표시",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "링크",
   "page-find-wallet-empty-results-title": "결과 없음",
   "page-find-wallet-empty-results-desc": "조건과 일치하는 지갑이 없는 경우 일부 필터를 제거해 보세요.",
-  "page-find-wallet-see-wallets": "지갑 보기"
+  "page-find-wallet-privacy": "개인정보 보호",
+  "page-find-wallet-privacy-desc": "내장된 비공개 거래를 지원하는 지갑",
+  "page-find-wallet-see-wallets": "지갑 보기",
+  "page-find-wallet-search-languages": "언어 검색..."
 }

@@ -1,85 +1,106 @@
 ---
 title: "コールデータを最適化するための簡潔なABI"
-description: オプティミスティック・ロールアップのためのスマートコントラクトの最適化
+description: "オプティミスティック・ロールアップのためのスマートコントラクトの最適化"
 author: Ori Pomerantz
 lang: ja
-tags:
-  - "レイヤー2"
+tags: [ "レイヤー2" ]
 skill: intermediate
 published: 2022-04-01
 ---
 
 ## はじめに {#introduction}
 
-この記事では、[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups)とは何か、オプティミスティック・ロールアップにおけるトランザクションコスト、および、様々なコスト構造に応じてイーサリアム・メインネット上の様々な事項をいかに最適化すべきかについて学びます。 さらに、この最適化の実装方法についても紹介します。
+この記事では、[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups)やそのトランザクションコスト、そしてその異なるコスト構造が、Ethereumメインネットとは異なるものの最適化をどのように要求するかについて学びます。
+また、この最適化を実装する方法についても学びます。
 
-### 開示情報 {#full-disclosure}
+### 完全な情報開示 {#full-disclosure}
 
-筆者は、[Optimism](https://www.optimism.io/)のフルタイム従業員であり、この記事に含まれる実例はすべてOptimismで実行されます。 ただし、紹介するテクニックは他のロールアップでも問題なく実行できます。
+筆者は[Optimism](https://www.optimism.io/)のフルタイム従業員であるため、この記事の例はOptimismで実行されます。
+ただし、ここで説明するテクニックは、他のロールアップでも同様に機能するはずです。
 
 ### 用語 {#terminology}
 
-ロールアップの議論において、「レイヤー1」は、イーサリアムネットワークの本番環境であるメインネットを指します。 「レイヤー2」(L2)という用語は、ロールアップまたはセキュリティのためにL1に依存しているが、そのほとんどをオフチェーンで処理する他のシステムに使用されます。
+ロールアップについて議論する際、「レイヤー1」(L1) という用語は、本番のEthereumネットワークであるメインネットを指すために使用されます。
+「レイヤー2」(L2) という用語は、ロールアップ、またはセキュリティをL1に依存しつつ、処理のほとんどをオフチェーンで行うその他のシステムに使用されます。
 
-## L2上のトランザクションコストをさらに引き下げる方法 {#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## L2トランザクションのコストをさらに削減するには {#how-can-we-further-reduce-the-cost-of-L2-transactions}
 
-[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups)では、すべてのユーザーが過去のトランザクションを参照し、現在の状態が正しいことを検証できるように、過去のすべてのトランザクション記録を保存する必要があります。 イーサリアムメインネットにデータを書き込む最も安価な方法は、コールデータとして書き込む方法です。 [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-)と[Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups)はいずれも、コールデータのソリューションを採用しています。
+[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups)は、誰もがそれらを参照して現在の状態が正しいことを検証できるように、すべての過去のトランザクションの記録を保存する必要があります。
+Ethereumメインネットにデータを取り込む最も安価な方法は、コールデータとして書き込むことです。
+このソリューションは、[Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-)と[Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups)の両方で採用されました。
 
 ### L2トランザクションのコスト {#cost-of-l2-transactions}
 
-L2トランザクションのコストは、以下の2つの要素で構成されます：
+L2トランザクションのコストは、2つの要素で構成されています。
 
-1. L2上の処理コスト。通常、非常に安価です。
-2. L1上のストレージコスト。これは、メインネットのガス代と連動します。
+1. L2処理。通常は極めて安価です。
+2. L1ストレージ。メインネットのガス代に連動します。
 
-この記事の執筆時点のOptimismで、L2ガス代は、0.001[Gwei](/developers/docs/gas/#pre-london)です。 一方、L1のガス代は約40Gweiです。 リアルタイムの価格は[こちら](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)で確認できます。
+これを書いている時点では、OptimismでのL2のガス代は0.001 [Gwei](/developers/docs/gas/#pre-london)です。
+一方、L1のガス代は、約40 gweiです。
+[現在の価格はこちらで確認できます](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)。
 
-1バイトのコールデータのコストは、4ガス (0バイトの場合) または16ガス (それ以外) のいずれかです。 EVMで最も費用が高い操作のひとつは、ストレージへの書き込みです。 L2上で32バイトのワードを書き込む場合、最大コストは22100ガスです。 現在のレートでは、22.1 gweiになります。 したがって、1つのコールデータをゼロバイトに節約できれば、約200バイトをストレージに書き込むことができ、まだお釣りが来ます。
+コールデータの1バイトは、それがゼロの場合は4ガス、その他の値の場合は16ガスのコストがかかります。
+EVMで最も高価な操作の1つは、ストレージへの書き込みです。
+L2でストレージに32バイトのワードを書き込む最大コストは22100ガスです。 現在、これは22.1 gweiです。
+したがって、コールデータのゼロ値のバイトを1つでも節約できれば、ストレージに約200バイトを書き込んでも、まだ利益が出ます。
 
 ### ABI {#the-abi}
 
-大多数のトランザクションは、外部所有アカウントからコントラクトにアクセスします。 ほとんどのコントラクトはSolidityで書かれており、データフィールドは[アプリケーション・バイナリ・インターフェイス（ABI） ](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding)で解釈されます。
+大多数のトランザクションは、外部所有アカウントからコントラクトにアクセスします。
+ほとんどのコントラクトはSolidityで書かれており、[アプリケーションバイナリインターフェース(ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding)に従ってデータフィールドを解釈します。
 
-ただしABIは、1バイトのコールデータがほぼ4回の算術演算のコストと同じになるL1を念頭に置いて設計されていますが、L2では、1バイトのコールデータのコストで算術演算を1000回以上実行することができます。 例えば、[このERC-20の送信トランザクション](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998)を見てみましょう。 コールデータは、以下のように分割されます：
+しかし、ABIはL1向けに設計されており、そこではコールデータの1バイトのコストが約4回の算術演算に相当しますが、L2では1バイトのコストが1000回以上の算術演算に相当します。
+コールデータは次のように分割されます。
 
 | セクション   | 長さ |   バイト | 浪費バイト | 浪費ガス | 必須バイト | 必須ガス |
-| ------- | --:| -----:| -----:| ----:| -----:| ----:|
-| 関数セレクタ  |  4 |   0～3 |     3 |   48 |     1 |   16 |
-| ゼロ値     | 12 |  4～15 |    12 |   48 |     0 |    0 |
-| 送信先アドレス | 20 | 16～35 |     0 |    0 |    20 |  320 |
-| 金額      | 32 | 36～67 |    17 |   64 |    15 |  240 |
+| ------- | -: | ----: | ----: | ---: | ----: | ---: |
+| 関数セレクタ  |  4 |   0-3 |     3 |   48 |     1 |   16 |
+| ゼロ      | 12 |  4-15 |    12 |   48 |     0 |    0 |
+| 送信先アドレス | 20 | 16-35 |     0 |    0 |    20 |  320 |
+| 金額      | 32 | 36-67 |    17 |   64 |    15 |  240 |
 | 合計      | 68 |       |       |  160 |       |  576 |
 
-説明：
+説明:
 
-- **関数セレクター**: このコントラクトに含まれる関数は256未満であるため、1バイトで区別できます。 これらのバイトは通常0バイトではないので、[16ガス](https://eips.ethereum.org/EIPS/eip-2028)がかかります。
-- **0バイト **：これらのバイトは常にゼロです。と言うのも、20バイトのアドレスを保持するためには32バイトのワードを必要としないからです。 0バイトのコストは、4ガスです（[イエローペーパー](https://ethereum.github.io/yellowpaper/paper.pdf)の27ページにあるAppendix Gで、`G`<sub>`txdatazero`</sub>の値について確認してください）。
-- **金額**：このコントラクトの`decimals`が18（通常値）であり、送信できるトークンの上限が10<sup>18</sup>だとすると、金額の上限は10<sup>36</sup>になります。 256<sup>15</sup> &gt; 10<sup>36</sup>のため、必要なバイト数は15になります。
+- **関数セレクタ**：このコントラクトには256未満の関数しかないため、1バイトで区別できます。
+  これらのバイトは通常ゼロ以外であるため、[16ガスのコストがかかります](https://eips.ethereum.org/EIPS/eip-2028)。
+- **ゼロ**：20バイトのアドレスを保持するのに32バイトのワードは必要ないため、これらのバイトは常にゼロです。
+  ゼロを保持するバイトのコストは4ガスです([イエローペーパー](https://ethereum.github.io/yellowpaper/paper.pdf)の付録G、
+  27ページの `G`<sub>`txdatazero`</sub> の値参照)。
+- **金額**：このコントラクトで `decimals` が18 (通常値) であり、送金するトークンの最大量が10<sup>18</sup>であると仮定すると、最大量は10<sup>36</sup>になります。
+  256<sup>15</sup> > 10<sup>36</sup>なので、15バイトで十分です。
 
-通常、L1上で160ガスを浪費するのは無視できる範囲です。 1件のトランザクションには最低でも[21,000ガス](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed)が必要であるため、追加の0.8%はほとんど問題になりません。 しかし、L2では問題になります。 L2におけるほぼすべてのコストは、L1への書き込みで発生します。 トランザクションのコールデータに加えて、トランザクションのヘッダー（送信先アドレス、署名など）で109バイトが必要になります。 従って、L2おける総コストは`109*16+576+160=2480`となり、浪費分が全体の6.5%に達するのです。
+L1上での160ガスの浪費は、通常は無視できます。 トランザクションには少なくとも[21,000ガス](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed)がかかるため、0.8%の追加は問題になりません。
+しかし、L2では事情が異なります。 トランザクションのコストのほぼ全体が、L1への書き込みによるものです。
+トランザクションのコールデータに加えて、109バイトのトランザクションヘッダー (送信先アドレス、署名など) があります。
+したがって、総コストは `109*16+576+160=2480` となり、その約6.5%を浪費していることになります。
 
-## 送信先を限定しない場合のコスト削減方法 {#reducing-costs-when-you-dont-control-the-destination}
+## 送信先を制御できない場合のコスト削減 {#reducing-costs-when-you-dont-control-the-destination}
 
-送信先のコントラクトを制御できない場合でも、[こちら](https://github.com/qbzzt/ethereum.org-20220330-shortABI)のようなソリューションを活用できます。 関連するファイルを確認しておきましょう。
+送信先コントラクトを制御できない場合でも、[こちら](https://github.com/qbzzt/ethereum.org-20220330-shortABI)のようなソリューションを利用できます。
+関連ファイルを見ていきましょう。
 
 ### Token.sol {#token-sol}
 
-[これ](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol)は、送信先のコントラクトです。 標準的なERC-20コントラクトですが、機能が1つ追加されています。 `faucet`関数により、すべてのユーザーがトークンを取得できるようになっています。 本番環境のERC-20コントラクトでは使えませんが、テスト環境では有益でしょう。
+[こちらが送信先コントラクトです](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol)。
+これは標準的なERC-20コントラクトですが、1つ機能が追加されています。
+この `faucet` 関数により、どのユーザーも使用するためのトークンを取得できます。
+これにより、本番のERC-20コントラクトは役に立たなくなりますが、ERC-20がテストを容易にするためだけに存在する場合、作業が楽になります。
 
 ```solidity
     /**
-     * @dev Gives the caller 1000 tokens to play with
+     * @dev 呼び出し元に試用のための1000トークンを与えます
      */
     function faucet() external {
         _mint(msg.sender, 1000);
     }   // function faucet
 ```
 
-[こちら](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8)で、このコントラクトのデプロイ実例を確認できます。
-
 ### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
-[これ](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol)は、より短いコールデータでトランザクションを呼び出すことが想定されているコントラクトです。 一行ずつ見ていきましょう。
+[これは、トランザクションがより短いコールデータで呼び出すことになっているコントラクトです](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol)。
+一行ずつ見ていきましょう。
 
 ```solidity
 //SPDX-License-Identifier: Unlicense
@@ -89,7 +110,7 @@ pragma solidity ^0.8.0;
 import { OrisUselessToken } from "./Token.sol";
 ```
 
-呼び出し方法を知るには、トークン関数が必要です。
+それを呼び出す方法を知るには、トークン関数が必要です。
 
 ```solidity
 contract CalldataInterpreter {
@@ -100,10 +121,9 @@ contract CalldataInterpreter {
 私たちがプロキシとなるトークンのアドレスです。
 
 ```solidity
-
     /**
-     * @dev Specify the token address
-     * @param tokenAddr_ ERC-20 contract address
+     * @dev トークンアドレスを指定します
+     * @param tokenAddr_ ERC-20コントラクトアドレス
      */
     constructor(
         address tokenAddr_
@@ -131,7 +151,9 @@ contract CalldataInterpreter {
             "calldataVal trying to read beyond calldatasize");
 ```
 
-32バイト（256ビット）を持つ1つのワードをメモリにロードして、必要なフィールドに含まれない部分のバイトを削除します。 このアルゴリズムは、32バイト以上の値に対しては機能せず、コールデータの末尾を越えたデータを読むこともできません。 L1では、ガスを節約するためにこれらのテストを省略すべきかもしれませんが、L2のガス代はとても安価なので、あらゆるサニティチェックを実行することができます。
+単一の32バイト (256ビット) ワードをメモリにロードし、目的のフィールドの一部でないバイトを削除します。
+このアルゴリズムは、32バイトより長い値には機能せず、もちろんコールデータの末尾を超えて読み取ることはできません。
+L1ではガスを節約するためにこれらのテストをスキップする必要があるかもしれませんが、L2ではガスが非常に安いため、考えられるあらゆるサニティチェックが可能です。
 
 ```solidity
         assembly {
@@ -139,16 +161,18 @@ contract CalldataInterpreter {
         }
 ```
 
-`fallback()`への呼び出しからデータをコピーしてもよいのですが（以下を参照） 、EVMのアセンブリ言語である[Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html)を使用する方が楽でしょう。
+`fallback()`への呼び出しからデータをコピーすることもできましたが (下記参照)、EVMのアセンブリ言語である[Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html)を使用する方が簡単です。
 
-ここでは、[CALLDATALOADのオペコード](https://www.evm.codes/#35)を使用して、`startByte`から `startByte+31`までのバイトをスタックへ読み込みます。 一般に、Yulのオペコードの構文は`<opcode name>(<first stack value, if any>,<second stack value, if any>...`となります。
+ここでは、[CALLDATALOADオペコード](https://www.evm.codes/#35)を使用して、`startByte`から`startByte+31`までのバイトをスタックに読み込みます。
+一般に、Yulでのオペコードの構文は`<opcode name>(<first stack value, if any>,<second stack value, if any>...)`です。
 
 ```solidity
 
         _retVal = _retVal >> (256-length*8);
 ```
 
-このフィールドに含まれるのは最も重要な`length`のバイトだけなので、[右シフトクリック](https://en.wikipedia.org/wiki/Logical_shift)で他の値を削除します。 この方法は、値をフィールドの右側に移動するという追加の利点があるので、256<sup>x</sup>を掛けた値ではなく、値そのものになります。
+最上位の `length` バイトのみがフィールドの一部であるため、[右シフト](https://en.wikipedia.org/wiki/Logical_shift)して他の値を取り除きます。
+これには、値をフィールドの右側に移動させるという追加の利点があり、値自体が256<sup>something</sup>を掛けたものではなく、値そのものになります。
 
 ```solidity
 
@@ -159,7 +183,8 @@ contract CalldataInterpreter {
     fallback() external {
 ```
 
-Solidityコントラクトへの呼び出しがどの関数の署名とも一致しない場合、 [`fallback()`関数](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function)を呼び出します（存在する場合）。 `CalldataInterpreter`の場合、他の`external`または`public`の関数がないため、すべての呼び出しがここに到達します。
+Solidityコントラクトへの呼び出しがどの関数シグネチャとも一致しない場合、[`fallback()`関数](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function)を呼び出します (存在する場合)。
+`CalldataInterpreter`の場合、他の`external`や`public`関数がないため、_どんな_呼び出しもここに到達します。
 
 ```solidity
         uint _func;
@@ -167,23 +192,27 @@ Solidityコントラクトへの呼び出しがどの関数の署名とも一致
         _func = calldataVal(0, 1);
 ```
 
-この関数を返すコールデータの最初の1バイトを読み取ります。 ここで関数が取得できないのには、2つの理由があります：
+コールデータの最初のバイトを読み取ります。これにより関数がわかります。
+ここで関数が利用できない理由は2つあります。
 
-1. `pure`または`view`の関数の場合。これらの関数は状態を変更しないため、ガスが発生しません（オフチェーンで呼び出す場合）。 ですから、ガス代を節約する必要がありません。
-2. [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties)に依存した関数。 `msg.sender`の値は、呼び出し元のアドレスではなく、`CalldataInterpreter`のアドレスになります。
+1. `pure`または`view`の関数は状態を変更せず、ガス代もかかりません (オフチェーンで呼び出された場合)。
+   これらのガス代を削減しようとしても意味がありません。
+2. [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties)に依存する関数。
+   `msg.sender`の値は、呼び出し元ではなく`CalldataInterpreter`のアドレスになります。
 
-残念ながら、[ERC-20の仕様](https://eips.ethereum.org/EIPS/eip-20)を確認すると、残りの関数は`transfer`のみです。 つまり、呼び出し可能な関数は、`transfer` （`transferFrom`を呼び出す）と、`faucet` （呼び出し元のアドレスにトークンを送信する）になります。
+残念ながら、[ERC-20の仕様](https://eips.ethereum.org/EIPS/eip-20)を見ると、残っている関数は`transfer`のみです。
+これにより、残る関数は`transfer` (`transferFrom`を呼び出せるため)と`faucet` (`transferFrom`を呼び出せるため)の2つだけになります。
 
 ```solidity
 
-        // Call the state changing methods of token using
-        // information from the calldata
+        // コールデータの情報を使用して
+        // トークンの状態変更メソッドを呼び出します
 
         // faucet
         if (_func == 1) {
 ```
 
-次は、パラメータを持たない`faucet()`を呼び出すコードです。
+パラメータのない`faucet()`の呼び出しです。
 
 ```solidity
             token.faucet();
@@ -192,46 +221,49 @@ Solidityコントラクトへの呼び出しがどの関数の署名とも一致
         }
 ```
 
-`token.faucet()`を呼び出すと、トークンを取得します。 しかし、プロキシのコントラクトにおいてトークンは**必要ありません**。 トークンが必要なのは、外部所有アカウント（EOA）あるいは呼び出し元のコントラクトです。 ですから、所有するトークンをすべて呼び出し元アドレスに送信します。
+`token.faucet()`を呼び出すと、トークンを取得します。 しかし、プロキシコントラクトとして、私たちはトークンを**必要**としません。
+私たちを呼び出したEOA (外部所有アカウント) やコントラクトは、それを必要とします。
+したがって、所有するすべてのトークンを、私たちを呼び出した誰にでも送金します。
 
 ```solidity
-        // transfer (assume we have an allowance for it)
+        // transfer (そのためのアローワンスがあると仮定します)
         if (_func == 2) {
 ```
 
-トークンを送信する場合、送信先アドレスと金額という2つのパラメータが必要です。
+トークンを送金するには、送信先アドレスと金額の2つのパラメータが必要です。
 
 ```solidity
             token.transferFrom(
                 msg.sender,
 ```
 
-送信できるトークンは、呼び出し元が所有するトークンのみです。
+呼び出し元が所有するトークンの送金のみを許可します
 
 ```solidity
                 address(uint160(calldataVal(1, 20))),
 ```
 
-送信先アドレスは、#1のバイトから始まります（#0のバイトは、関数が使用します）。 アドレスの長さは、20バイトです。
+送信先アドレスはバイト#1から始まります (バイト#0は関数です)。
+アドレスとして、その長さは20バイトです。
 
 ```solidity
                 calldataVal(21, 2)
 ```
 
-このコントラクトでは、送信可能なトークンの最大数が2バイト以内（65536未満）に収まると想定します。
+この特定のコントラクトでは、誰もが送金したいと思うトークンの最大数は2バイト (65536未満) に収まると想定します。
 
 ```solidity
             );
         }
 ```
 
-1件の送信につき、35バイトのコールデータが発生します。
+全体として、1回の送金には35バイトのコールデータが必要です。
 
 | セクション   | 長さ |   バイト |
-| ------- | --:| -----:|
+| ------- | -: | ----: |
 | 関数セレクタ  |  1 |     0 |
-| 送信先アドレス | 32 |  1～32 |
-| 金額      |  2 | 33～34 |
+| 送信先アドレス | 32 |  1-32 |
+| 金額      |  2 | 33-34 |
 
 ```solidity
     }   // fallback
@@ -241,7 +273,8 @@ Solidityコントラクトへの呼び出しがどの関数の署名とも一致
 
 ### test.js {#test-js}
 
-[このJavaScriptによる単体テスト](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js)では、このメカニズムを使用する方法（および、メカニズムが適切に動作していることをを確認する方法）を示します。 ここでは、[Chai](https://www.chaijs.com/)および[Ethers](https://docs.ethers.io/v5/)についてよく理解しているという前提に基づき、特にコントラクトに関連する部分のみを説明します。
+[このJavaScriptユニットテスト](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js)は、このメカニズムの使用方法 (およびそれが正しく機能することを確認する方法) を示しています。
+[chai](https://www.chaijs.com/)と[ethers](https://docs.ethers.io/v5/)を理解していることを前提とし、コントラクトに特に関連する部分のみを説明します。
 
 ```js
 const { expect } = require("chai");
@@ -264,21 +297,24 @@ describe("CalldataInterpreter", function () {
 まず、両方のコントラクトをデプロイします。
 
 ```javascript
-    // Get tokens to play with
+    // 試用のためのトークンを取得
     const faucetTx = {
 ```
 
-ここではABIを使用しないため、トランザクションを作成するために通常用いる高度な関数（`token.faucet()`など）を使用できません。 その代わりに、トランザクションをマニュアルで作成し、送信する必要があります。
+通常使用する高レベルの関数 (例： `token.faucet()`) は、ABIに従っていないため、トランザクションの作成には使用できません。
+代わりに、自分でトランザクションを作成してから送信する必要があります。
 
 ```javascript
       to: cdi.address,
       data: "0x01"
 ```
 
-トランザクションには、次の2つのパラメータが必要です：
+トランザクションには、次の2つのパラメータが必要です。
 
-1. `to`：送信先のアドレスです。 これは、コールデータのインタープリタのアドレスです。
-2. `data`：送信するコールデータです。 フォーセットを呼び出す場合、データは1バイト（`0x01`）です。
+1. `to`、送信先アドレスです。
+   これは、コールデータのインタープリタコントラクトです。
+2. `data`、送信するコールデータです。
+   フォーセットを呼び出す場合、データは1バイトの`0x01`です。
 
 ```javascript
 
@@ -286,26 +322,27 @@ describe("CalldataInterpreter", function () {
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-すでに送信先（`faucetTx.to`）を指定しており、トランザクションに対して署名を得る必要があるため、[署名者の`sendTransaction`メソッド](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction)を呼び出します。
+送信先 (`faucetTx.to`) をすでに指定しており、トランザクションに署名が必要なため、[署名者の `sendTransaction` メソッド](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction)を呼び出します。
 
 ```javascript
-// Check the faucet provides the tokens correctly
+// フォーセットがトークンを正しく提供することを確認
 expect(await token.balanceOf(signer.address)).to.equal(1000)
 ```
 
-ここでは、残高を確認します。 `view`関数ではガスを節約する必要がないので、単純に実行します。
+ここで残高を確認します。
+`view`関数ではガスを節約する必要がないので、通常どおり実行します。
 
 ```javascript
-// Give the CDI an allowance (approvals cannot be proxied)
+// CDIにアローワンスを与える (承認はプロキシできません)
 const approveTX = await token.approve(cdi.address, 10000)
 await approveTX.wait()
 expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
 ```
 
-コールデータのインタープリタが送信できるように、アローワンスを設定します。
+コールデータのインタープリタに送金できるようにアローワンスを与えます。
 
 ```javascript
-// Transfer tokens
+// トークンを送金
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -313,53 +350,50 @@ const transferTx = {
 }
 ```
 
-送信トランザクションを作成します。 最初のバイトは「0x02」で、次に送信先アドレスを置き、最後に金額（10進法で256である0x0100）を置きます。
+送金トランザクションを作成します。 最初のバイトは「0x02」で、次に送信先アドレス、最後に金額 (0x0100、10進数で256) が続きます。
 
 ```javascript
     await (await signer.sendTransaction(transferTx)).wait()
 
-    // Check that we have 256 tokens less
+    // 256トークン少なくなっていることを確認
     expect (await token.balanceOf(signer.address)).to.equal(1000-256)
 
-    // And that our destination got them
+    // そして、送信先がそれらを受け取ったことを確認
     expect (await token.balanceOf(destAddr)).to.equal(256)
   })    // it
 })      // describe
 ```
 
-### 例 {#example}
+## 送信先コントラクトを制御できる場合のコスト削減 {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
-これらのファイルにつき、自ら実行せず、どのように動作するのか確認したい場合は、以下のリンクにアクセスしてください：
+送信先コントラクトを制御できる場合、コールデータのインタープリタを信頼するため、`msg.sender`チェックをバイパスする関数を作成できます。
+[`control-contract`ブランチで、これがどのように機能するかの例をこちらで確認できます](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract)。
 
-1. アドレス[`0x950c753c0edbde44a74d3793db738a318e9c8ce8`](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8)に対する[ `OrisUselessToken`](https://kovan-optimistic.etherscan.io/tx/1410744)のデプロイメント。
-2. アドレス[`0x16617fea670aefe3b9051096c0eb4aeb4b3a5f55`](https://kovan-optimistic.etherscan.io/address/0x16617fea670aefe3b9051096c0eb4aeb4b3a5f55)に対する[`CalldataInterpreter`](https://kovan-optimistic.etherscan.io/tx/1410745)のデプロイメント。
-3. [`faucet()`](https://kovan-optimistic.etherscan.io/tx/1410746)の呼び出し。
-4. [`OrisUselessToken.approve()`](https://kovan-optimistic.etherscan.io/tx/1410747)の呼び出し。 処理が`msg.sender`に依存しているため、この呼び出しは、直接トークンコントラクトで行う必要があります。
-5. [`transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748)の呼び出し。
-
-## 送信先コントラクトを制限する場合にコストを削減する方法 {#reducing-the-cost-when-you-do-control-the-destination-contract}
-
-送信先コントラクトを制限できる場合、コールデータのインタープリタが信頼されるため、`msg.sender`チェックを省略する関数を作成することができます。 [`control-contract`のブランチから、動作例を確認できます](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract)。
-
-コントラクトが外部のトランザクションのみに応答する場合、1つのコントラクトのみで対応することができます。 しかし、この方法では[コンポーザビリティ](/developers/docs/smart-contracts/composability/)が失われます。 通常のERC-20の呼び出しに応答するコントラクトと、短いコールデータを持つトランザクションに応答するコントラクトを共に用意する方が優れた方法だと言えます。
+コントラクトが外部トランザクションにのみ応答する場合、1つのコントラクトだけで済みます。
+しかし、それでは[構成可能性](/developers/docs/smart-contracts/composability/)が損なわれます。
+通常のERC-20の呼び出しに応答するコントラクトと、短いコールデータを持つトランザクションに応答する別のコントラクトを持つ方がはるかに優れています。
 
 ### Token.sol {#token-sol-2}
 
-この例では、`Token.sol`を修正します。 これにより、このプロキシだけが呼び出せる一連の関数を設定することができます。 以下は、追加の関数です：
+この例では、`Token.sol`を修正できます。
+これにより、プロキシだけが呼び出せる多数の関数を持つことができます。
+新しい部分は次のとおりです。
 
 ```solidity
-    // The only address allowed to specify the CalldataInterpreter address
+    // CalldataInterpreterアドレスを指定できる唯一のアドレス
     address owner;
 
-    // The CalldataInterpreter address
+    // CalldataInterpreterアドレス
     address proxy = address(0);
 ```
 
-ERC-20コントラクトは、許可されたプロキシの身元を知る必要があります。 しかし、この時点では値が不明なため、コンストラクタで変数を設定できません。 プロキシは、コンストラクタにおいてトークンのアドレスを要求するため、まずこのコントラクトのインスタンスが実行されます。
+ERC-20コントラクトは、承認されたプロキシのIDを知る必要があります。
+しかし、まだ値がわからないため、コンストラクタでこの変数を設定することはできません。
+このコントラクトは、プロキシがコンストラクタでトークンのアドレスを期待するため、最初にインスタンス化されます。
 
 ```solidity
     /**
-     * @dev Calls the ERC20 constructor.
+     * @dev ERC20コンストラクタを呼び出します。
      */
     constructor(
     ) ERC20("Oris useless token-2", "OUT-2") {
@@ -367,12 +401,12 @@ ERC-20コントラクトは、許可されたプロキシの身元を知る必�
     }
 ```
 
-作成者（`オーナー`と呼ぶ）のアドレスは、プロキシを設定することが許可された唯一のアドレスであるため、ここに保存されます。
+作成者 (「owner」と呼ばれる) のアドレスは、プロキシを設定できる唯一のアドレスであるため、ここに保存されます。
 
 ```solidity
     /**
-     * @dev set the address for the proxy (the CalldataInterpreter).
-     * Can only be called once by the owner
+     * @dev プロキシ (CalldataInterpreter) のアドレスを設定します。
+     * オーナーが1回だけ呼び出し可能
      */
     function setProxy(address _proxy) external {
         require(msg.sender == owner, "Can only be called by owner");
@@ -382,32 +416,35 @@ ERC-20コントラクトは、許可されたプロキシの身元を知る必�
     }    // function setProxy
 ```
 
-プロキシは特権アクセスを持つため、セキュリティチェックが省略されます。 このプロキシが信頼できることを確認するには、`オーナー`に対し、1回のみこの関数を呼び出すことを許可します。 `proxy`が （ゼロではない）実際の値を持つと同時に、この値は変更不可となるため、オーナーが悪意のユーザーになった場合やそのニーモニックが明らかになった場合でも、安全性が維持されます。
+プロキシはセキュリティチェックをバイパスできるため、特権アクセスを持ちます。
+プロキシを信頼できることを確認するために、`owner`だけがこの関数を1回だけ呼び出せるようにします。
+一度 `proxy` が実際の値 (ゼロではない) を持つと、その値は変更できないため、オーナーが悪意を持ったり、そのニーモニックが漏洩したりしても、安全です。
 
 ```solidity
     /**
-     * @dev Some functions may only be called by the proxy.
+     * @dev 一部の関数はプロキシによってのみ呼び出し可能です。
      */
     modifier onlyProxy {
 ```
 
-これは、他の関数の動作を修正する[`modifier`関数](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm)です。
+これは[`modifier`関数](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm)であり、他の関数の動作を変更します。
 
 ```solidity
       require(msg.sender == proxy);
 ```
 
-まず、呼び出し元がプロキシであり、その他のユーザーではないことを確認します。 プロキシ以外から呼び出された場合は、 `revert`します。
+まず、プロキシによって呼び出され、他の誰にも呼び出されていないことを確認します。
+そうでなければ、`revert`します。
 
 ```solidity
       _;
     }
 ```
 
-プロキシからの呼び出しであれば、修正する関数を実行します。
+もしそうなら、修正する関数を実行します。
 
 ```solidity
-   /* Functions that allow the proxy to actually proxy for accounts */
+   /* プロキシが実際にアカウントのプロキシとして機能できるようにする関数 */
 
     function transferProxy(address from, address to, uint256 amount)
         public virtual onlyProxy() returns (bool)
@@ -436,17 +473,18 @@ ERC-20コントラクトは、許可されたプロキシの身元を知る必�
     }
 ```
 
-以下は、トークンを送信する／アローワンスを承認するエンティティから直接メッセージを受信する際に通常必要となる3つの操作です。 ここでは、以下の特徴を持つプロキシバージョンを使います：
+これらは通常、トークンを送金したり、アローワンスを承認したりするエンティティから直接メッセージが送信される必要がある3つの操作です。
+ここでは、これらの操作のプロキシバージョンがあります。
 
-1. `onlyProxy()`で修正されており、他のユーザーが管理権限を持たない。
-2. 追加のパラメータとして、通常`msg.sender`であるアドレスを取得する。
+1. `onlyProxy()`によって変更されているため、他の誰もそれらを制御することはできません。
+2. 通常`msg.sender`であるアドレスを、追加パラメータとして取得します。
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
-コールデータのインタープリタは、送信先を限定しない場合とほぼ同一ですが、プロキシの関数では`msg.sender`パラメータを受け取るため、`transfer`のアローワンスが必要ない点が異なります。
+コールデータのインタープリタは、プロキシされた関数が`msg.sender`パラメータを受け取り、`transfer`にアローワンスが不要である点を除いて、上記のインタープリタとほぼ同じです。
 
 ```solidity
-        // transfer (no need for allowance)
+        // transfer (アローワンスは不要)
         if (_func == 2) {
             token.transferProxy(
                 msg.sender,
@@ -477,7 +515,7 @@ ERC-20コントラクトは、許可されたプロキシの身元を知る必�
 
 ### Test.js {#test-js-2}
 
-送信先を限定しない場合とは、いくつかの点が異なります。
+以前のテストコードとこのコードにはいくつかの変更点があります。
 
 ```js
 const Cdi = await ethers.getContractFactory("CalldataInterpreter")
@@ -486,21 +524,22 @@ await cdi.deployed()
 await token.setProxy(cdi.address)
 ```
 
-ERC-20コントラクトに対し、どのプロキシを信頼するかを伝える必要があります。
+ERC-20コントラクトに、どのプロキシを信頼するかを伝える必要があります。
 
 ```js
 console.log("CalldataInterpreter addr:", cdi.address)
 
-// Need two signers to verify allowances
+// アローワンスを確認するには2つの署名者が必要
 const signers = await ethers.getSigners()
 const signer = signers[0]
 const poorSigner = signers[1]
 ```
 
-`approve()`と`transferFrom()`を確認するには、第2の署名者が必要です。 第2の署名者は、トークンを受け取らないため（もちろん、ETHを所有する必要はあります）に`poorSigner`と呼びます。
+`approve()`と`transferFrom()`を確認するには、2人目の署名者が必要です。
+これは私たちのトークンを一切受け取らないため、`poorSigner`と呼びます (もちろん、ETHは持っている必要があります)。
 
 ```js
-// Transfer tokens
+// トークンを送金
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -509,10 +548,10 @@ const transferTx = {
 await (await signer.sendTransaction(transferTx)).wait()
 ```
 
-ERC-20コントラクトは、プロキシ (`cdi`) を信頼するため、送信をリレーするためのアローワンスは必要ありません。
+ERC-20コントラクトはプロキシ (`cdi`) を信頼するため、送金を中継するためのアローワンスは必要ありません。
 
 ```js
-// approval and transferFrom
+// 承認とtransferFrom
 const approveTx = {
   to: cdi.address,
   data: "0x03" + poorSigner.address.slice(2, 42) + "00FF",
@@ -527,28 +566,19 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Check the approve / transferFrom combo was done correctly
+// approve / transferFrom の組み合わせが正しく行われたことを確認
 expect(await token.balanceOf(destAddr2)).to.equal(255)
- 
-No key
-Text
-XPath: /pre[38]/code
 ```
 
-新たに追加した2つの関数をテストします。 `transferFromTx`のアドレスには、アローワンスの提供元と受領者という2つパラメータが要求される点に注意してください。
+2つの新しい関数をテストします。
+`transferFromTx`には、アローワンスの提供者と受領者の2つのアドレスパラメータが必要であることに注意してください。
 
-### 実例 {#example-2}
+## 結論 {#conclusion}
 
-これらのファイルにつき、自ら実行せず、どのように動作するのか確認したい場合は、以下のリンクにアクセスしてください：
+[Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)と[Arbitrum](https://developer.offchainlabs.com/docs/special_features)はどちらも、L1に書き込まれるコールデータのサイズ、ひいてはトランザクションのコストを削減する方法を模索しています。
+しかし、汎用的なソリューションを探しているインフラプロバイダーとして、私たちの能力には限界があります。
+dapp開発者であるあなたは、アプリケーション固有の知識を持っているため、汎用的なソリューションよりもはるかに優れた方法でコールデータを最適化できます。
+この記事が、あなたのニーズに合った理想的なソリューションを見つけるのに役立つことを願っています。
 
-1. [`0xb47c1f550d8af70b339970c673bbdb2594011696`](https://kovan-optimistic.etherscan.io/address/0xb47c1f550d8af70b339970c673bbdb2594011696)のアドレスに対する[`OrisUselessToken-2`のデプロイメント](https://kovan-optimistic.etherscan.io/tx/1475397)。
-2. [`0x0dccfd03e3aaba2f8c4ea4008487fd0380815892`](https://kovan-optimistic.etherscan.io/address/0x0dccfd03e3aaba2f8c4ea4008487fd0380815892)のアドレスに対する[ `CalldataInterpreter`のデプロイメント](https://kovan-optimistic.etherscan.io/tx/1475400)。
-3. [`setProxy()`の呼び出し](https://kovan-optimistic.etherscan.io/tx/1475402)。
-4. [`faucet()`の呼び出し](https://kovan-optimistic.etherscan.io/tx/1475409)。
-5. [`transferProxy()`の呼び出し](https://kovan-optimistic.etherscan.io/tx/1475416)。
-6. [`approveProxy()`の呼び出し](https://kovan-optimistic.etherscan.io/tx/1475419)。
-7. [`transferFromProxy()`の呼び出し](https://kovan-optimistic.etherscan.io/tx/1475421)。 この呼び出しは、他のアドレスとは異なるアドレスからのものであることに注意してください (`signer`の代わりに`poorSigner`) 。
+[私の他の作品はこちらでご覧いただけます](https://cryptodocguy.pro/).
 
-## まとめ {#conclusion}
-
-[Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)と[Arbitrum](https://developer.offchainlabs.com/docs/special_features)はどちらも、L1に書き込まれるコールデータのサイズを削減し、トランザクションコストを抑える方法を提供することを目指しています。 インフラプロバイダーが汎用性が高いソリューションを追求する一方で、デベロッパの能力には限界があります。 Dappのデベロッパーは、開発するアプリケーションについて具体的な知識を持つため、汎用性のソリューションよりも効率的にコールデータの最適化を実現できるのです。 この記事が、皆さんのニーズに合わせた理想的なソリューションを見出す上で役立つことを願っています。

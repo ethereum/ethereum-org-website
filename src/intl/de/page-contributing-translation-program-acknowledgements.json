@@ -28,15 +28,15 @@
   "page-contributing-translation-program-acknowledgements-translator": "Übersetzer:in",
   "page-contributing-translation-program-acknowledgements-language": "Sprache",
   "page-contributing-translation-program-acknowledgements-total-words": "Wörter gesamt",
-  "page-contributing-translation-program-acknowledgements-oats-title": "POAPs",
-  "page-contributing-translation-program-acknowledgements-1": "Alle unsere Übersetzerinnen und Übersetzer haben Anspruch auf ein POAP (Proof of Attendance Protocol) – ein Non Fungible Token, der ihre Teilnahme am Übersetzungprogramm von ethereum.org belegt.",
-  "page-contributing-translation-program-acknowledgements-2": "Wir stellen verschiedene POAPs für Übersetzerinnen und Übersetzer zur Verfügung, die auf ihrer Tätigkeit basieren",
-  "page-contributing-translation-program-acknowledgements-3": "Wenn Sie zu den Übersetzungsarbeiten in Crowdin beigetragen haben, wartet ein POAP auf Sie.",
+  "page-contributing-translation-program-acknowledgements-oats-title": "OATs",
+  "page-contributing-translation-program-acknowledgements-1": "Mitwirkende am Übersetzungsprogramm haben Anspruch auf verschiedene OTAs (Organ Agreement Tokens) – nicht fungible Token, die ihre Teilnahme am Übersetzungsprogramm von ethereum.org belegen.",
+  "page-contributing-translation-program-acknowledgements-2": "Wir bieten Übersetzern je nach ihrer Tätigkeit eine Reihe verschiedener OTAs an.",
+  "page-contributing-translation-program-acknowledgements-3": "Wenn Sie zu den Übersetzungsarbeiten in Crowdin beigetragen haben, wartet ein OAT auf Sie!",
   "page-contributing-translation-program-acknowledgements-how-to-claim-title": "So beanspruchen Sie den NFT",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1": "Mitmachen",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord": "Discord-Server",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "Fügen Sie einen Link zu Ihrem Crowdin-Konto in den #🥇 | poaps Kanal hinzu.",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "Warten Sie darauf, dass ein Mitglied unseres Teams Ihnen einen Link zu Ihrem POAP schickt.",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "Beanspruchen Sie Ihr POAP",
-  "page-contributing-translation-program-acknowledgements-4": "Sie sollten nur selbst verwahrte Wallets verwenden, um POAPs zu beanspruchen. Verwenden Sie keine Konten von Handelsplätzen oder andere Konten, für die Sie die privaten Schlüssel nicht besitzen, da Sie dann keinen Zugriff auf Ihre POAPs haben und sie nicht verwalten können."
+  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "Fügen Sie einen Link zu Ihrem Crowdin-Konto in den Kanal #🥇pro-von-Kontributionenn ein.",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "Warten Sie, bis Ihnen ein Mitglied unseres Teams die erforderlichen Rollen zugewiesen hat, um Ihre OTAs zu beanspruchen.",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "Fordern Sie Ihre OTAs an!",
+  "page-contributing-translation-program-acknowledgements-4": "Sie sollten nur Wallets in Eigenverwahrung verwenden, um die OTAs zu beanspruchen. Verwenden Sie keine Börsenkonten oder andere Konten, für die Sie nicht die privaten Schlüssel besitzen, da Sie damit nicht auf Ihre OTAs zugreifen und diese verwalten können."
 }

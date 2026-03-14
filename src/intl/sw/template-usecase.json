@@ -1,13 +1,20 @@
 {
+  "template-usecase-dropdown-ai-agents": "Wakala za AI",
   "template-usecase-dropdown-defi": "Fedha zilizogatuliwa (DeFi)",
   "template-usecase-dropdown-nft": "Ishara zisizokuvu(NFTs)",
-  "template-usecase-dropdown-dao": "Mashirika huru yasiyotawaliwa(DAOs)",
+  "template-usecase-dropdown-dao": "Mashirika huru yaliogatuliwa (DAOs)",
+  "template-usecase-dropdown-apps": "Aplikesheni za Ethereum",
+  "template-usecase-dropdown-payments": "Malipo ya Ethereum",
+  "template-usecase-dropdown-prediction-markets": "Masoko ya utabiri",
   "template-usecase-dropdown-social-networks": "Mitandao ya kijamiii iliogatuliwa",
+  "template-usecase-dropdown-restaking": "Kuweka Dhamana Tena",
   "template-usecase-dropdown-identity": "Utambulisho uliogatuliwa",
   "template-usecase-dropdown-desci": "Sayansi iliogatuliwa (DeSci)",
   "template-usecase-dropdown-refi": "Uzalishaji upya wa fedha (ReFi)",
   "template-usecase-dropdown": "Kesi za jinsi ya kutumia Ethereum",
   "template-usecase-banner": "Matumizi ya Ethereum yanaendelea kubadilika kila wakati. Ongeza maelezo yoyote unayofikiri yatafanya mambo kuwa wazi zaidi au kusasishwa zaidi.",
   "template-usecase-edit-link": "Hariri ukurasa",
-  "template-usecase-dropdown-aria": "Orodha ya kesi za matumizi ya  "
+  "template-usecase-dropdown-aria": "Orodha ya kesi za matumizi ya  ",
+  "template-usecase-dropdown-onchain-gaming": "Michezo ya Kwenye Mnyororo",
+  "template-usecase-dropdown-rwa": "Mali halisi za dunia (RWAs)"
 }

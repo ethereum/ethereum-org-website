@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
@@ -131,11 +131,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     },
   }
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "layer-2/networks",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

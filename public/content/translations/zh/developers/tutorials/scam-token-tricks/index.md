@@ -241,7 +241,7 @@ ERC-20 合约应该有一个用于授权的 [`approve` 函数](/developers/tutor
 
 #### `mount` 函数 {#the-mount-function}
 
-虽然[标准](https://eips.ethereum.org/EIPS/eip-20)中没有规定，但一般来说，创建新代币的函数被称为 [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)。
+虽然[标准](https://eips.ethereum.org/EIPS/eip-20)中没有规定，但一般来说，创建新代币的函数被称为 [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)。
 
 如果我们查看 `wARB` 的构造函数，我们会发现 mint 函数由于某种原因被重命名为 `mount`，并且被调用五次，每次使用初始供应量的五分之一，而不是为了效率一次性处理全部数量。
 

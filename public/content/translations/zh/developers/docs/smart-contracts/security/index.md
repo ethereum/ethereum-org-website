@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-你也可以使用[拉取支付](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment)系统，该系统要求用户从智能合约中提取资金，而不是将资金发送到账户的“推送支付”系统。 这样就消除了意外触发未知地址中代码的可能性（还可以防止某些拒绝服务攻击）。
+你也可以使用[拉取支付](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment)系统，该系统要求用户从智能合约中提取资金，而不是将资金发送到账户的“推送支付”系统。 这样就消除了意外触发未知地址中代码的可能性（还可以防止某些拒绝服务攻击）。
 
 #### 整数下溢和上溢 {#integer-underflows-and-overflows}
 

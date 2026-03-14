@@ -15,7 +15,7 @@ Identity underpins virtually every aspect of your life today. Using online servi
 
 However, traditional identity management systems have long relied on centralized intermediaries who issue, hold, and control your identifiers and [attestations](/glossary/#attestation). This means you cannot control your identity-related information or decide who has access to personally identifiable information (PII) and how much access these parties have.
 
-To solve these problems, we have decentralized identity systems built on public blockchains like Ethereum. Decentralized identity allows individuals to manage their identity-related information. With decentralized identity solutions, _you_ can create identifiers and claim and hold your attestations without relying on central authorities, like service providers or governments.
+To solve these problems, we have decentralized identity systems built on public blockchains like [Ethereum](/). Decentralized identity allows individuals to manage their identity-related information. With decentralized identity solutions, _you_ can create identifiers and claim and hold your attestations without relying on central authorities, like service providers or governments.
 
 ## What is identity? {#what-is-identity}
 

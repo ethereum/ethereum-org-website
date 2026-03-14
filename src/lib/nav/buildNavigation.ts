@@ -1,5 +1,7 @@
 import type { NavSections } from "@/components/Nav/types"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 type TranslateFn = (key: string) => string
 
 export const buildNavigation = (t: TranslateFn): NavSections => {
@@ -366,7 +368,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("enterprise"),
               description: t("nav-enterprise-description"),
-              href: "/enterprise/",
+              href: ENTERPRISE_ETHEREUM_URL,
             },
             {
               label: t("founders"),

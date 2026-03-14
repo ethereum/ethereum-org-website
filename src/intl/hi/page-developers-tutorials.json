@@ -13,10 +13,16 @@
   "page-tutorials-meta-description": "जांचे गए इथेरियम समुदाय ट्यूटोरियल को विषय द्वारा ब्राउज़ करें और फ़िल्टर करें।",
   "page-tutorial-external-link": "बाहरी",
   "page-tutorials-meta-title": "इथेरियम डेवलपमेंट ट्यूटोरियल",
+  "page-tutorials-available": "उपलब्ध ट्यूटोरियल",
   "page-tutorial-beginner": "शुरआती",
   "page-tutorial-intermediate": "माध्यमिक",
   "page-tutorial-advanced": "उन्नत",
   "page-find-wallet-try-removing": "एक या दो सुविधा हटाने की कोशिश करें",
   "page-find-wallet-clear": "फ़िल्टर साफ़ करें",
-  "page-tutorials-env-banner": "\"<code>.env</code> न करें कमिट! कृपया सुनिश्चित करें कि आप कभी भी अपने <code>.env</code> फ़ाइल को किसी के साथ साझा या प्रकट नहीं करते हैं, क्योंकि ऐसा करके आप अपने रहस्यों को खतरे में डाल रहे हैं। यदि आप संस्करण नियंत्रण का उपयोग कर रहे हैं, तो अपने <code>.env</code> को <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> फ़ाइल में जोड़ें।\""
+  "page-tutorials-env-banner": "\"<code>.env</code> न करें कमिट! कृपया सुनिश्चित करें कि आप कभी भी अपने <code>.env</code> फ़ाइल को किसी के साथ साझा या प्रकट नहीं करते हैं, क्योंकि ऐसा करके आप अपने रहस्यों को खतरे में डाल रहे हैं। यदि आप संस्करण नियंत्रण का उपयोग कर रहे हैं, तो अपने <code>.env</code> को <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> फ़ाइल में जोड़ें।\"",
+  "page-tutorial-all": "सभी",
+  "page-tutorial-topics": "विषय",
+  "page-tutorial-search-placeholder": "ट्यूटोरियल खोजें...",
+  "page-tutorial-filtering-by": "इसके द्वारा फ़िल्टर करें:",
+  "page-tutorial-more-tags": "+{count} और"
 }

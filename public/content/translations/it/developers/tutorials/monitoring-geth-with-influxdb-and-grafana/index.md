@@ -114,34 +114,34 @@ sudo systemctl start grafana-server
 
 Quando Grafana è in esecuzione, dovrebbe esser raggiungibile a `localhost:3000`. Usa il tuo browser preferito per accedere a questo percorso, poi accedi con le credenziali predefinite (utente: `admin` e password: `admin`). Quando richiesto, modifica la password predefinita e salva.
 
-![](./grafana1.png)
+![Screenshot della dashboard di Grafana per il monitoraggio dei Geth (pannello 1)](./grafana1.png)
 
 Sarai reindirizzato alla pagina home di Grafana. Per prima cosa, configura i tuoi dati sorgente. Clicca sull'icona di configurazione nella barra a sinistra e seleziona "Sorgenti dati".
 
-![](./grafana2.png)
+![Screenshot della dashboard di Grafana per il monitoraggio dei Geth (pannello 2)](./grafana2.png)
 
 Se non sono ancora state create sorgenti di dati, clicca su "Aggiungi sorgente di dati" per definirne una.
 
-![](./grafana3.png)
+![Screenshot della dashboard di Grafana per il monitoraggio dei Geth (pannello 3)](./grafana3.png)
 
 Per questa configurazione, seleziona "InfluxDB" e procedi.
 
-![](./grafana4.png)
+![Screenshot della dashboard di Grafana per il monitoraggio dei Geth (pannello 4)](./grafana4.png)
 
 La configurazione della sorgente di dati è abbastanza semplice se esegui gli strumenti sulla stessa macchina. Devi impostare l'indirizzo di InfluxDB e i dettagli per accedere al database. Fai riferimento alla seguente immagine.
 
-![](./grafana5.png)
+![Screenshot della dashboard di Grafana per il monitoraggio dei Geth (pannello 5)](./grafana5.png)
 
 Se tutto è completo e InfluxDB è raggiungibile, clicca su "Salva e prova" e attendi che compaia la conferma.
 
-![](./grafana6.png)
+![Screenshot della dashboard di Grafana per il monitoraggio dei Geth (pannello 6)](./grafana6.png)
 
 Grafana è ora configurato per leggere i dati da InfluxDB. Ora devi creare una dashboard che li interpreterà e mostrerà. Le proprietà dei pannelli di controllo sono codificate nei file JSON, che possono essere creati da chiunque e sono facilmente importabili. Sulla barra sinistra, clicca su "Crea e Importa".
 
-![](./grafana7.png)
+![Screenshot della dashboard di Grafana per il monitoraggio dei Geth (pannello 7)](./grafana7.png)
 
 Per una dashboard di monitoraggio di Geth, copia l'ID di [questa dashboard](https://grafana.com/grafana/dashboards/13877/) e incollalo nella "Pagina d'importazione" su Grafana. Dopo aver salvato la dashboard, dovrebbe somigliare a questo:
 
-![](./grafana8.png)
+![Screenshot della dashboard di Grafana per il monitoraggio dei Geth (pannello 8)](./grafana8.png)
 
 Puoi modificare i tuoi pannelli di controllo. Ogni pannello può essere modificato, spostato, rimosso o aggiunto. Puoi modificare le tue configurazioni. Sta a te! Per saperne di più su come funzionano i pannelli di controllo, fai riferimento alla [documentazione di Grafana](https://grafana.com/docs/grafana/latest/dashboards/). Potresti esser anche interessato agli [avvisi](https://grafana.com/docs/grafana/latest/alerting/), che ti consentono di configurare delle notifiche di avviso per quando le metriche raggiungono certi valori. Sono supportati diversi canali di comunicazione.

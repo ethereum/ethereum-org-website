@@ -1,0 +1,21 @@
+{
+  "adoption-chart-artists-label": "Sanatçılar",
+  "adoption-chart-column-now-label": "Şimdi",
+  "adoption-chart-companies-label": "Şirketler",
+  "adoption-chart-developers-label": "Geliştiriciler",
+  "adoption-chart-gamers-label": "Oyuncular",
+  "adoption-chart-investors-label": "Yatırımcılar",
+  "adoption-chart-musicians-label": "Müzisyenler",
+  "adoption-chart-refugees-label": "Mülteciler",
+  "adoption-chart-writers-label": "Yazarlar",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "ABD'de oyun oynamak",
+  "energy-consumption-chart-global-data-centers-label": "Küresel veri merkezleri",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-gold-mining-cbeci-label": "Altın madenciliği",
+  "energy-consumption-chart-legend": "TWh/yıl cinsinden Yıllık Enerji Tüketimi"
+}

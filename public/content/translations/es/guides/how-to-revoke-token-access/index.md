@@ -19,7 +19,7 @@ Las únicas protecciones son abstenerse de utilizar nuevos proyectos no probados
 Existen varios sitios web que le permiten ver y revocar contratos inteligentes conectados a su dirección. Visite el sitio web y conecte su cartera:
 
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Blockscout](https://eth.blockscout.com/essential-dapps/revoke) (Ethereum)
 - [Revoke](https://revoke.cash/) (múltiples redes)
 - [Unrekt](https://app.unrekt.net/) (múltiples redes)
 - [EverRevoke](https://everrise.com/everrevoke/) (múltiples redes)

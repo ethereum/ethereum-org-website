@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
@@ -57,13 +57,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/wallets")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "wallets",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("wallets", locale as Lang)
 
   const heroContent = {
     title: t("page-wallets-title"),
@@ -223,7 +218,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           <div className="mb-0 flex flex-col justify-between p-8 lg:flex-row">
             <div className="me-0 flex-[0_1_50%] lg:me-8 lg:mt-0 lg:max-w-full">
               <p className="mb-[1.45rem] text-md leading-base">
-                {t("page-wallets-description")}
+                <Translation id="page-wallets:page-wallets-description" />
               </p>
               <p className="mb-[1.45rem] text-md leading-base">
                 {t("page-wallets-desc-2")}

@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-Ethereum nodes have to identify themselves with some basic information to connect to peers. To ensure any potential peer can interpret this information, it is relayed in one of three standardized formats that any Ethereum node can understand: multiaddr, enode, or Ethereum Node Records (ENRs). ENRs are the current standard for Ethereum network addresses.
+[Ethereum](/) nodes have to identify themselves with some basic information to connect to peers. To ensure any potential peer can interpret this information, it is relayed in one of three standardized formats that any Ethereum node can understand: multiaddr, enode, or Ethereum Node Records (ENRs). ENRs are the current standard for Ethereum network addresses.
 
 ## Prerequisites {#prerequisites}
 
@@ -31,7 +31,7 @@ In the following example, the node URL describes a node with IP address `10.3.58
 
 ## Ethereum Node Records (ENRs) {#enr}
 
-Ethereum Node Records (ENRs) are a standardized format for network addresses on Ethereum. They supersede multiaddr's and enodes. These are especially useful because they allow greater informational exchange between nodes. The ENR contains a signature, sequence number and fields detailing the identity scheme used to generate and validate signatures. The ENR can also be populated with arbitrary data organized as key-value pairs. These key-value pairs contain the node's IP address and information about the sub-protocols the node is able to use. Consensus clients use a [specific ENR structure](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) to identify boot nodes and also include an `eth2` field containing information about the current Ethereum fork and the attestation gossip subnet (this connects the node to a particular set of peers whose attestations are aggregated together).
+Ethereum Node Records (ENRs) are a standardized format for network addresses on Ethereum. They supersede multiaddr's and enodes. These are especially useful because they allow greater informational exchange between nodes. The ENR contains a signature, sequence number and fields detailing the identity scheme used to generate and validate signatures. The ENR can also be populated with arbitrary data organized as key-value pairs. These key-value pairs contain the node's IP address and information about the sub-protocols the node is able to use. Consensus clients use a [specific ENR structure](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure) to identify boot nodes and also include an `eth2` field containing information about the current Ethereum fork and the attestation gossip subnet (this connects the node to a particular set of peers whose attestations are aggregated together).
 
 ## Further Reading {#further-reading}
 

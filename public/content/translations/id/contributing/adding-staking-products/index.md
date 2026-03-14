@@ -165,7 +165,7 @@ Untuk [layanan taruhan terkelompok](/staking/pools/):
 
 Kriteria [untuk inklusi](#criteria-for-inclusion) di atas digunakan untuk menghitung skor kumulatif untuk setiap produk atau layanan. Ini digunakan sebagai cara untuk mengurutkan dan menampilkan produk yang memenuhi kriteria objektif tertentu. Semakin banyak kriteria yang dibuktikan, semakin tinggi peringkat suatu produk, dengan ikatan diacak saat pemuatan.
 
-Logika kode dan bobot untuk kriteria ini saat ini terdapat dalam [komponen JavaScript ini](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) di repositori kami.
+Logika kode dan bobot untuk kriteria ini saat ini terdapat dalam [komponen JavaScript ini](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) di repositori kami.
 
 ## Tambahkan produk atau layanan Anda {#add-product}
 

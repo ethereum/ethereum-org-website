@@ -168,7 +168,7 @@ DAO हैक पर और देखें:
 - [एथेरियम आर एंड डी डिस्कॉर्ड से जुड़ें](https://discord.gg/mncqtgVSVw)
 - [एक नोड चलाएं](/developers/docs/nodes-and-clients/run-a-node/)
 - [क्लाइंट विकास में योगदान करें](/developers/docs/nodes-and-clients/#execution-clients)
-- [कोर डेवलपर अप्रेंटिसशिप प्रोग्राम](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [कोर डेवलपर शिक्षुता प्रोग्राम](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## आगे की रीडिंग {#further-reading}
 
@@ -177,7 +177,7 @@ DAO हैक पर और देखें:
 - [ब्लॉकचेन शासन पर नोट्स](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _विटालिक ब्यूटिरिन_
 - [एथेरियम शासन कैसे काम करता है?](https://cryptotesters.com/blog/ethereum-governance) – _क्रिप्टोटेस्टर्स_
 - [एथेरियम शासन कैसे काम करता है](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _माइका ज़ोल्टू_
-- [एथेरियम कोर डेवलपर क्या है?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _हडसन जेमिसन_
+- [एथेरियम कोर डेवलपर क्या है?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _हडसन जेमिसन_
 - [शासन, भाग 2: प्लूटोक्रेसी अभी भी खराब है](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _विटालिक ब्यूटिरिन_
 - [कॉइन वोटिंग शासन से आगे बढ़ना](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _विटालिक ब्यूटिरिन_
 - [ब्लॉकचेन शासन को समझना](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 रिसर्च_

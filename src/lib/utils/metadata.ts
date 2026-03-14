@@ -1,14 +1,18 @@
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 
-import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
+import {
+  DEFAULT_OG_IMAGE,
+  IS_PRODUCTION_DEPLOY,
+  SITE_URL,
+} from "@/lib/constants"
 
 import { getTranslatedLocales } from "../i18n/translationRegistry"
 
-import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
 import { routing } from "@/i18n/routing"
+
 /**
  * List of default og images for different sections
  */
@@ -85,10 +89,7 @@ export const getMetadata = async ({
   // Only include hreflang alternates if the current page is translated
   // Untranslated pages should not have hreflang tags
   const localesForHreflang = isCurrentPageTranslated
-    ? routing.locales.filter(
-        (loc) =>
-          finalTranslatedLocales.includes(loc) && isLocaleValidISO639_1(loc)
-      )
+    ? routing.locales.filter((loc) => finalTranslatedLocales.includes(loc))
     : []
 
   const base: Metadata = {
@@ -136,12 +137,16 @@ export const getMetadata = async ({
     },
   }
 
+  if (!IS_PRODUCTION_DEPLOY) {
+    return { ...base, robots: { index: false, follow: false } }
+  }
+
   if (noIndex) {
     return { ...base, robots: { index: false } }
   }
 
   if (!isCurrentPageTranslated) {
-    return { ...base, robots: { index: true, follow: true } }
+    return { ...base, robots: { index: false, follow: true } }
   }
 
   return base

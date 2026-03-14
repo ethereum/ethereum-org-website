@@ -1,6 +1,6 @@
 ---
-title: Mutabakat mekanizmaları
-description: Dağıtılmış sistemlerde bulunan mutabakat protokolleri ve bu protokollerin Ethereum'daki rolü hakkında açıklama.
+title: "Mutabakat mekanizmaları"
+description: "Dağıtılmış sistemlerde bulunan mutabakat protokolleri ve bu protokollerin Ethereum'daki rolü hakkında açıklama."
 lang: tr
 ---
 
@@ -8,7 +8,7 @@ Fikir birliği katmanı terimi çoğunlukla "hisse ispatı", "iş ispatı" veya 
 
 ## Ön Koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamak için önce [Ethereum'a Giriş](/developers/docs/intro-to-ethereum/) metnimizi okumanızı öneririz.
+Bu sayfayı daha iyi anlamak için önce [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) metnimizi okumanızı öneririz.
 
 ## Mutabakat nedir? {#what-is-consensus}
 
@@ -36,7 +36,7 @@ Bitcoin gibi Ethereum da bir zamanlar **iş ispatı (PoW)** tabanlı bir mutabak
 
 #### Blok oluşturma {#pow-block-creation}
 
-Madenciler, işlenmiş işlemlerle dolu yeni bloklar oluşturabilmek için birbirleri ile rekabet eder. Kazanan, yeni bloku ağın geri kalanıyla paylaşır ve bir miktar yeni basılmış ETH elde eder. Bu yarışı matematiksel bulmacayı en hızlı çözen bilgisayar kazanır. Bu çözüm, bir önceki blok ile şimdiki blok arasında kriptografik bir bağlantı oluşturur. "İş ispatı" ile kastedilen iş de bu bulmacanın çözülmesidir. Kurallı zincir daha sonrasında blok kümelerini çıkarmak için yapılan iş miktarına göre çalışan bir çatal seçim kuralı ile belirlenir.
+Madenciler, işlenmiş işlemlerle dolu yeni bloklar oluşturabilmek için birbirleri ile rekabet eder. Kazanan, yeni bloku ağın geri kalanıyla paylaşır ve bir miktar yeni basılmış ETH elde eder. Bu yarışı matematiksel bulmacayı en hızlı çözen bilgisayar kazanır. Bu çözüm, bir önceki blok ile şimdiki blok arasında kriptografik bir bağlantı oluşturur. "İş kanıtı" ile kastedilen iş de bu problemin çözülmesidir. Kurallı zincir daha sonrasında blok kümelerini çıkarmak için yapılan iş miktarına göre çalışan bir çatal seçim kuralı ile belirlenir.
 
 #### Güvenlik {#pow-security}
 
@@ -56,11 +56,11 @@ Doğrulayıcılar blokları oluşturur. Her bir yuvada bir doğrulayıcı rastge
 
 Hisse ispatı sistemi kripto ekonomik olarak güvenlidir çünkü ağa saldıranın zinciri ele geçirebilmesi için çok ciddi miktarda ETH yakması gerekir. Sistem dürüst hareket eden paydaşları teşvikle ödüllendirirken kötü niyetli hareketleri cezalandırarak bundan uzaklaştırır.
 
-[İş ispatı](/developers/docs/consensus-mechanisms/pos/) hakkında daha fazlası
+[Hisse ispatı](/developers/docs/consensus-mechanisms/pos/) hakkında daha fazlası
 
 ### Görsel bir rehber {#types-of-consensus-video}
 
-Ethereum üzerinde kullanılan farklı mutabakat mekanizması türleri hakkında daha fazlasını izleyin:
+Ethereum üzerinde kullanılan farklı konsensus mekanizma türleri hakkında daha fazlasını izleyin:
 
 <YouTube id="ojxfbN78WFQ" />
 
@@ -68,25 +68,25 @@ Ethereum üzerinde kullanılan farklı mutabakat mekanizması türleri hakkında
 
 İş ispatı ve hisse ispatı tek başlarına bir mutabakat protokolü değildir, ancak çoğunlukla daha basit olduğu için bu şekilde adlandırılırlar. Aslında bunlar Sybil direnç mekanizmaları ve blok yazarı seçicileridir; son blokun yazarının kim olduğuna karar vermenin bir yoludurlar. Bir diğer önemli bileşen, aynı konumda birden fazla blokun bulunduğu senaryolarda düğümlerin zincirin başında tek bir doğru bloku seçmesini sağlayan zincir seçimi (çatal seçimi olarak da bilinir) algoritmasıdır.
 
-**Sybil direnci**, bir protokolün Sybil saldırısına ne kadar dayanıklı olduğunu ölçer. Bu tip bir saldırıya karşı direnç, merkeziyetsiz bir blok zincir için önemlidir ve madencilerle doğrulayıcıların ortaya konulan kaynaklar neticesinde eşit şekilde ödüllendirilmesini sağlar. İş ispatı ve hisse ispatı kullanıcıların fazla enerji tüketmesini veya yüksek teminatlar ortaya koymasını sağlayarak buna karşı koruma sağlar. Bu korumalar Sybil saldırılarına karşı ekonomik bir caydırıcıdır.
+**Sybil direnci**, bir protokolün Sybil saldırısına ne kadar dayanıklı olduğunu ölçer. Bu tip bir saldırıya karşı direnç, merkeziyetsiz bir blok zincir için önemlidir ve madencilerle doğrulayıcıların ortaya konulan kaynaklar neticesinde eşit şekilde ödüllendirilmesini sağlar. İş kanıtı ve hisse kanıtı kullanıcıların fazla enerji tüketmesini veya yüksek teminatlar ortaya koymasını sağlayarak buna karşı koruma sağlar. Bu korumalar, Sybil saldırılarına karşı ekonomik olarak caydırıcıdır.
 
-Bir **zincir seçim kuralı** hangi zincirin "doğru" zincir olduğuna karar verilmesinde kullanılır. Bitcoin şu anda "en uzun zincir" kuralını kullanmaktadır, bu da hangi blok zinciri en uzun ise düğümlerin o zinciri geçerli kabul edeceği ve içinde çalışacağı anlamına gelir. İş ispatı zincirleri kapsamında en uzun zincir, zincirin toplam birikmiş iş ispatı zorluğuna göre belirlenir. Ethereum da bir zamanlar en uzun zincir kuralını kullanıyordu, ancak Ethereum artık hisse ispatı kullandığı için zincirin "ağırlık" ölçümünü yapan yeni bir çatal seçim algoritması kullanıyor. Ağırlık, doğrulayıcıların hisselenmiş Ether bakiyeleri ile birikmiş oylarının toplamıdır.
+Bir **zincir seçim kuralı**, hangi zincirin "doğru" zincir olduğuna karar vermek için kullanılır. Bitcoin şu anda "en uzun zincir" kuralını kullanmaktadır, bu da hangi blok zinciri en uzun ise düğümlerin o zinciri geçerli kabul edeceği ve içinde çalışacağı anlamına gelir. İş kanıtı zincirleri için, en uzun zincir zincirin toplam birikmiş iş kanıtı zorluğuna göre belirlenir. Ethereum da bir zamanlar en uzun zincir kuralını kullanıyordu, ancak Ethereum artık hisse ispatı kullandığı için zincirin "ağırlık" ölçümünü yapan yeni bir çatal seçim algoritması kullanıyor. Ağırlık, doğrulayıcıların hisselenmiş Ether bakiyeleri ile birikmiş oylarının toplamıdır.
 
-Ethereum, [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) olarak bilinen ve [Casper FFG hisse ispatını](https://arxiv.org/abs/1710.09437) [GHOST çatal seçimi kuralıyla](https://arxiv.org/abs/2003.03052) birleştiren bir mutabakat mekanizması kullanıyor.
+Ethereum, [Casper FFG hisse ispatını](https://arxiv.org/abs/1710.09437) [GHOST çatal seçim kuralı](https://arxiv.org/abs/2003.03052) ile birleştiren ve [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) olarak bilinen bir mutabakat mekanizması kullanır.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-- [Blok Zinciri Mutabakat Algoritması nedir?](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
-- [Nakamoto Mutabakatı nedir? Tam Başlangıç Rehberi](https://blockonomi.com/nakamoto-consensus/)
-- [Casper nasıl çalışır?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
-- [İş İspatı Blok Zincirlerinin Güvenliği ve Performansı Hakkında](https://eprint.iacr.org/2016/555.pdf)
+- [Blokzincir Mutabakat Algoritması Nedir?](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
+- [Nakamoto Mutabakatı nedir? Yeni Başlayanlar İçin Kapsamlı Rehber](https://blockonomi.com/nakamoto-consensus/)
+- [Casper Nasıl Çalışır?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
+- [İş İspatı Blokzincirlerinin Güvenliği ve Performansı Üzerine](https://eprint.iacr.org/2016/555.pdf)
 - [Bizans hatası](https://en.wikipedia.org/wiki/Byzantine_fault)
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
-## İlgili konular {#related-topics}
+## Alakalı başlıklar {#related-topics}
 
 - [İş ispatı](/developers/docs/consensus-mechanisms/pow/)
 - [Madencilik](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Hisse ispatı](/developers/docs/consensus-mechanisms/pos/)
-- [Yetki kanıtı](/developers/docs/consensus-mechanisms/poa/)
+- [Otorite İspatı](/developers/docs/consensus-mechanisms/poa/)

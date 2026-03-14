@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 
-import { IS_PREVIEW_DEPLOY, IS_PROD } from "@/lib/utils/env"
+import { IS_PROD } from "@/lib/utils/env"
 
 import type { ABTestConfig, MatomoExperiment } from "@/lib/ab-testing/types"
 
@@ -33,8 +33,9 @@ const getPreviewConfig = () => ({
 
 export async function GET() {
   // Preview mode: Show menu with original default
-  if (!IS_PROD || IS_PREVIEW_DEPLOY)
+  if (!IS_PROD) {
     return NextResponse.json(getPreviewConfig())
+  }
 
   try {
     const matomoUrl = process.env.NEXT_PUBLIC_MATOMO_URL
