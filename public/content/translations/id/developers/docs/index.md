@@ -1,16 +1,16 @@
 ---
 title: Dokumentasi pengembangan Ethereum
-description: Mengenalkan dokumentasi pengembang ethereum.org.
+description: Memperkenalkan dokumentasi pengembang ethereum.org.
 lang: id
 ---
 
-Dokumentasi ini didesain untuk menolong Anda membangun dengan Ethereum. Dokumen ini membahas Ethereum sebagai sebuah konsep, menjelaskan tumpukan teknologi Ethereum, dan mendokumentasikan topik tingkat lanjut untuk aplikasi dan kasus penggunaan yang lebih rumit.
+Dokumentasi ini dirancang untuk membantu Anda membangun menggunakan Ethereum. Dokumentasi ini membahas Ethereum sebagai konsep, menjelaskan tumpukan teknologi Ethereum, serta mendokumentasikan topik lanjutan untuk aplikasi dan kasus penggunaan yang lebih kompleks.
 
-Ini adalah upaya komunitas sumber terbuka, jadi jangan sungkan untuk mengusulkan topik baru, menambahkan konten, dan menyediakan contoh kapan pun Anda anggap akan membantu. Semua dokumentasi dapat diedit melalui GitHub – jika Anda tidak yakin caranya, [ikuti instruksi ini](https://github.com/ethereum/ethereum-org-website/tree/dev/docs/editing-markdown.md).
+Ini adalah upaya komunitas bersifat sumber terbuka, jadi jangan ragu untuk menyarankan topik baru, menambahkan konten, dan memberikan contoh di mana pun menurut Anda itu bermanfaat. Semua dokumentasi dapat diedit melalui GitHub – jika Anda tidak yakin caranya, [ikuti petunjuk ini](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md).
 
 ## Modul pengembangan {#development-modules}
 
-Jika ini adalah upaya pertama Anda dalam pengembangan Ethereum, kami sarankan agar memulai dari awal dan perlahan-lahan berpindah halaman seperti sebuah buku.
+Jika ini adalah percobaan pertama Anda dalam pengembangan Ethereum, kami menyarankan untuk memulai dari awal dan mempelajarinya secara berurutan seperti membaca sebuah buku.
 
 ### Topik dasar {#foundational-topics}
 
@@ -20,6 +20,6 @@ Jika ini adalah upaya pertama Anda dalam pengembangan Ethereum, kami sarankan ag
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 
-### Tingkat Lanjut {#advanced}
+### Lanjutan {#advanced}
 
 <DeveloperDocsLinks headerId="advanced" />
