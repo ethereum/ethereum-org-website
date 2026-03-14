@@ -50,7 +50,7 @@ In succinct form:
 | `0x80-0xb7` | `10nnnnnn` | `pppppppp` | `...`      |            |            |            |        | short string (0-55 bytes)                 |
 | `0xb8-0xbf` | `10111NNN` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `pppppppp` | `...`  | long string, N+1 bytes of len, then payload |
 | `0xc0-0xf7` | `11nnnnnn` | `pppppppp` | `...`      |            |            |            |        | short list (0-55 bytes)                   |
-| `0xf8-0xff` | `11111NNN` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `pppppppp` | `...`  | long list, N bytes of len, then payload   |
+| `0xf8-0xff` | `11111NNN` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `nnnnnnnn` | `pppppppp` | `...`  | long list, N+1 bytes of len, then payload |
 
 - `p` = payload
 - `n` = len (number of payload bytes)
