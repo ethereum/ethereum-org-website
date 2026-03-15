@@ -1,0 +1,21 @@
+{
+  "adoption-chart-artists-label": "कलाकार",
+  "adoption-chart-column-now-label": "अभी",
+  "adoption-chart-companies-label": "कंपनियां",
+  "adoption-chart-developers-label": "डेवलपर",
+  "adoption-chart-gamers-label": "खिलाड़ी",
+  "adoption-chart-investors-label": "निवेशक",
+  "adoption-chart-musicians-label": "संगीतकार",
+  "adoption-chart-refugees-label": "शरणार्थी",
+  "adoption-chart-writers-label": "लेखक",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "अमेरिका में गेमिंग",
+  "energy-consumption-chart-global-data-centers-label": "वैश्विक डेटा केंद्र",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-gold-mining-cbeci-label": "गोल्ड माइनिंग",
+  "energy-consumption-chart-legend": "TWh/वर्ष में वार्षिक उर्जा खपत"
+}

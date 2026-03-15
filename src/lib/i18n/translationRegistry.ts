@@ -100,10 +100,7 @@ export async function getAllPagesWithTranslations(): Promise<
   const pages: PageWithTranslations[] = []
 
   const mdSlugs = await getPostSlugs("/")
-  const intlPaths = [
-    ...getStaticPagePaths(),
-    ...getDynamicIntlPagePaths(),
-  ]
+  const intlPaths = [...getStaticPagePaths(), ...getDynamicIntlPagePaths()]
   const uniqueIntlPaths = Array.from(new Set(intlPaths))
 
   for (const slug of mdSlugs) {
