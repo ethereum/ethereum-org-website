@@ -1,5 +1,4 @@
 import { pick } from "lodash"
-import dynamic from "next/dynamic"
 import {
   getMessages,
   getTranslations,
@@ -38,7 +37,6 @@ import {
 import { Divider } from "@/components/ui/divider"
 import { Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
-import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -47,6 +45,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import CentralizedExchanges from "./_components/CentralizedExchangesLazy"
 import GetEthPageJsonLD from "./page-jsonld"
 
 import uniswap from "@/public/images/dapps/uni.png"
@@ -54,26 +53,6 @@ import dapps from "@/public/images/doge-computer.png"
 import bancor from "@/public/images/exchanges/bancor.png"
 import hero from "@/public/images/get-eth.png"
 import wallet from "@/public/images/wallet.png"
-
-const CentralizedExchanges = dynamic(
-  () => import("@/components/CentralizedExchanges").then((mod) => mod.default),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="mb-6 flex w-full max-w-screen-sm flex-col items-center gap-y-10">
-        <div className="flex w-full justify-between rounded border p-3">
-          <Skeleton className="h-5 w-60" />
-          <Skeleton className="aspect-square" />
-        </div>
-        <Skeleton className="mt-6 size-20 rounded-3xl" />
-        <div className="flex w-full max-w-screen-sm flex-col items-center gap-2">
-          <Skeleton className="h-5 w-full" />
-          <Skeleton className="h-5 w-1/2" />
-        </div>
-      </div>
-    ),
-  }
-)
 
 type CardProps = {
   children: ReactNode

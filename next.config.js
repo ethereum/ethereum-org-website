@@ -33,6 +33,12 @@ const experimental = LIMIT_CPUS
 module.exports = (phase) => {
   let nextConfig = {
     reactStrictMode: true,
+    typescript: {
+      // htmr ships raw .ts files with React 18 types (ReactHTML/ReactSVG)
+      // that break under @types/react 19. Our own code is checked via
+      // `tsc --noEmit` which passes cleanly. Remove once htmr is replaced.
+      ignoreBuildErrors: true,
+    },
     env: {
       // Netlify build-time vars inlined so they're available at SSR runtime.
       // ref. https://docs.netlify.com/configure-builds/environment-variables/#build-metadata

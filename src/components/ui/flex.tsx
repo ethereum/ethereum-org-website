@@ -52,12 +52,15 @@ const Stack = forwardRef<FlexElement, StackProps>(
         isValidElement(child)
       )
 
-      const sep = cloneElement(separator, {
-        className: cn(
-          separator.props.className,
-          "size-auto border self-stretch"
-        ),
-      })
+      const sep = cloneElement(
+        separator as ReactElement<{ className?: string }>,
+        {
+          className: cn(
+            (separator as ReactElement<{ className?: string }>).props.className,
+            "size-auto border self-stretch"
+          ),
+        }
+      )
 
       return validChildren.map((child, index) => {
         const key = typeof child.key !== "undefined" ? child.key : index

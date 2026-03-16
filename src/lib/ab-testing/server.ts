@@ -25,9 +25,7 @@ export const getABTestAssignment = async (
   if (!testConfig || !testConfig.enabled) return null
 
   // Create deterministic assignment using enhanced fingerprint
-  const headers =
-    await /* @next-codemod-error The APIs under 'next/headers' are async now, need to be manually awaited. */
-    import("next/headers").then((m) => m.headers())
+  const headers = await import("next/headers").then((m) => m.headers())
 
   // Get IP and user agent (primary identifier)
   // x-forwarded-for contains: "client_ip, proxy1, proxy2, ..." - extract only client IP
