@@ -13,6 +13,10 @@ The [Ethereum Foundation](http://ethereum.foundation/) (EF) is a non-profit orga
 
 The EF is not a company, or even a traditional non-profit. It does not control or lead Ethereum, nor is it the only organization that funds critical development of Ethereum-related technologies. The EF is one part of a much larger [ecosystem](/community/).
 
+## EF Mandate {#ef-mandate}
+
+The [EF Mandate](/foundation/mandate/) defines the Foundation's purpose, principles, and commitments to the Ethereum ecosystem. Published onchain, it enshrines the EF's dedication to **censorship resistance, open source, privacy, and security (CROPS)** as non-negotiable priorities.
+
 ## What the EF does {#what-the-ef-does}
 
 - **Protocol development** – Supporting teams working on Ethereum's core protocol, including client development, research, upgrades, and the [bug bounty program](/bug-bounty/)
