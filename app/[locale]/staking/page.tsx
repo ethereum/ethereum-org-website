@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { CommitHistory, Lang, PageParams, StakingStatsData } from "@/lib/types"
+import { Lang, PageParams, StakingStatsData } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
@@ -46,13 +46,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "staking",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("staking", locale as Lang)
 
   return (
     <I18nProvider locale={locale} messages={messages}>

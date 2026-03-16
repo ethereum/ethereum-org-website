@@ -327,7 +327,7 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
           href="/"
           className="text-lg font-bold no-underline hover:text-primary"
         >
-          Ethereum.org
+          ethereum.org
         </BaseLink>
       </div>
 

@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
@@ -67,11 +67,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ...blobStats,
   })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "resources",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

@@ -88,6 +88,8 @@
   "stablecoin-term": "Stablecoin",
   "staking-term": "Penaruhan",
   "staking-pool-term": "Pool penaruhan",
+  "state-term": "Keadaan",
+  "state-definition": "Cuplikan dari semua saldo dan data pada titik waktu tertentu di blockchain, biasanya merujuk pada kondisi pada blok tertentu.",
   "sybil-attack-term": "Serangan Sybil",
   "sybil-attack-definition": "Serangan Sybil mengacu pada individu manusia yang menipu suatu sistem untuk berpikir bahwa mereka adalah beberapa orang untuk meningkatkan pengaruhnya.",
   "terminal-total-difficulty-term": "Tingkat kesulitan total terminal (TTD)",

@@ -139,6 +139,8 @@
   "staking-definition": "Wpłać określoną ilość <a href=\"/glossary/#ether\">etheru</a> (swojego udziału), aby zostać walidatorem i zabezpieczyć <a href=\"/glossary/#network\">sieć</a>. Walidator sprawdza <a href=\"/glossary/#transaction\">transakcje</a> i proponuje <a href=\"/glossary/#block\">bloki</a> w ramach modelu konsensusu <a href=\"/glossary/#pos\">proof-of-stake</a>. Staking daje Ci ekonomiczną zachętę do działania w najlepszym interesie sieci. Otrzymasz nagrody za wykonywanie swoich obowiązków <a href=\"/glossary/#validator\">walidatora</a>, ale stracisz różne ilości ETH, jeśli tego nie zrobisz. <a href=\"/staking/\">Więcej o stakingu Ethereum</a>.",
   "staking-pool-term": "Pula stakingu",
   "staking-pool-definition": "Łączna wartość ETH więcej niż jednego stakera Ethereum, służąca do osiągnięcia 32 ETH wymaganych do aktywacji zestawu kluczy walidatora. Operator węzła używa tych kluczy do udziału w konsensusie, a <a href=\"/glossary/#block-reward\">nagrody za bloki</a> są dzielone między uczestniczących stakerów. Pule stakingowe i delegowanie stakingu nie są natywne dla protokołu Ethereum, ale wiele rozwiązań zostało stworzonych przez społeczność. <a href=\"/staking/pools/\">Więcej o poolingu</a>.",
+  "state-term": "Stan",
+  "state-definition": "Migawka wszystkich sald i danych w danym momencie na blockchainie, zwykle odnosząca się do warunków w określonym bloku.",
   "sybil-attack-term": "Ataki typu Sybil",
   "sybil-attack-definition": "Ataki typu Sybil polegają na tym, że pojedynczy człowiek oszukuje system, aby ten mylnie uznał, że jest wieloma osobami, w celu zwiększenia swoich wpływów.",
   "terminal-total-difficulty-term": "Łączna trudność końcowa (TTD)",

@@ -144,7 +144,6 @@ module.exports = [
   [
     "/developers/docs/consensus-mechanisms/proof-of-stake",
     "/developers/docs/consensus-mechanisms/pos/",
-    false,
   ],
   ["/zero-knowledge", "/zero-knowledge-proofs/"],
   [
@@ -156,7 +155,6 @@ module.exports = [
   [
     "/developers/docs/consensus-mechanisms/pos/slashing",
     "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/",
-    false,
   ],
   ["/wallets/security", "/security/"],
   ["/developers/docs/sharding", "/developers/docs/data-availability/"],

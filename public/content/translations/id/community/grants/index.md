@@ -15,6 +15,7 @@ Daftar ini dikurasi oleh komunitas kami. Jika ada yang kurang atau salah, mohon 
 Program-program ini mendukung ekosistem Ethereum yang luas dengan menawarkan hibah untuk cakupan proyek yang luas. Mencakup solusi untuk skalabilitas, membangun komunitas, keamanan, privasi, dan lainnya. Hibah ini tidak spesifik untuk satu platform Ethereum dan merupakan tempat yang baik untuk memulai jika Anda tidak yakin.
 
 - [Program Dukungan Ekosistem EF](https://esp.ethereum.foundation) - _Mendanai proyek sumber terbuka yang menguntungkan Ethereum, dengan fokus khusus pada alat universal, infrastruktur, penelitian, dan barang publik_
+- [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Direktori 1.000+ proyek yang dapat dicari yang didukung oleh Program Dukungan Ekosistem_
 - [RFP Ethereum](https://github.com/ethereum/requests-for-proposals) - _Permintaan Proposal oleh Yayasan Ethereum untuk pekerjaan dan proyek di ekosistem Ethereum_
   Hibah mulai dari $1K - $8K USD.
 - [Moloch DAO](https://www.molochdao.com/) - _Privasi, penskalaan lapisan 2, keamanan klien, dan lainnya_

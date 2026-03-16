@@ -6,12 +6,7 @@ import {
 } from "next-intl/server"
 import type { ReactNode } from "react"
 
-import type {
-  ChildOnlyProp,
-  CommitHistory,
-  Lang,
-  PageParams,
-} from "@/lib/types"
+import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -40,10 +35,11 @@ import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getLastGitCommitDateByPath } from "@/lib/utils/gh"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { exchangesByCountryLastUpdated } from "@/data/exchangesByCountry"
 
 import CentralizedExchanges from "./_components/CentralizedExchangesLazy"
 import GetEthPageJsonLD from "./page-jsonld"
@@ -81,7 +77,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-get-eth" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const tokenSwaps: CardListCardProps[] = [
     {
@@ -111,10 +106,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
     },
   ]
 
-  const lastDataUpdateDate = getLastGitCommitDateByPath(
-    "src/data/exchangesByCountry.ts"
-  )
-
   setRequestLocale(locale)
 
   // Get i18n messages
@@ -122,13 +113,8 @@ export default async function Page(props: { params: Promise<PageParams> }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/get-eth")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "get-eth",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("get-eth", locale as Lang)
 
   return (
     <>
@@ -230,7 +216,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             <Stack className="gap-16">
               <p>
                 <em>
-                  {tCommon("listing-policy-disclaimer")}{" "}
+                  {t("listing-policy-disclaimer")}{" "}
                   <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                     {t("listing-policy-raise-issue-link")}
                   </InlineLink>
@@ -263,7 +249,9 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </p>
 
                 {/* CLIENT SIDE */}
-                <CentralizedExchanges lastDataUpdateDate={lastDataUpdateDate} />
+                <CentralizedExchanges
+                  lastDataUpdateDate={exchangesByCountryLastUpdated}
+                />
               </div>
             </div>
 

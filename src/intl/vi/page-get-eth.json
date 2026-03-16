@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "Địa chỉ này tương tự như địa chỉ email của bạn, nhưng nó có thể nhận ETH thay vì email. Sử dụng địa chỉ của bạn làm điểm đến nếu bạn muốn chuyển ETH từ sàn giao dịch sang ví của mình. Đảm bảo luôn kiểm tra kỹ trước khi gửi!",
   "page-get-eth-your-address-wallet-link": "Kiểm tra ví",
   "listing-policy-raise-issue-link": "Báo cáo vấn đề",
-  "page-find-wallet-last-updated": "Cập nhật mới nhất"
+  "page-find-wallet-last-updated": "Cập nhật mới nhất",
+  "listing-policy-disclaimer": "Tất cả sản phẩm trên trang này đều không được thẩm định chính thức và chỉ được cung cấp vì mục đích thông tin. Nếu bạn muốn thêm sản phẩm hoặc phản hồi về chính sách, hãy tạo phiếu sự cố trên GitHub."
 }

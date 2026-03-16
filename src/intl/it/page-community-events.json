@@ -99,5 +99,6 @@
   "page-events-meetups-events-subtitle": "Cerca i prossimi hackathon, raduni della community e conferenze nell'ecosistema di Ethereum.",
   "page-events-cta-title": "Stai organizzando un evento?",
   "page-events-cta-body": "Questa è una lista non esaustiva gestita dalla nostra community. Conosci un evento Ethereum imminente da aggiungere a questa lista?",
-  "page-events-cta-button": "Invia un evento"
+  "page-events-cta-button": "Invia un evento",
+  "item-logo": "Logo di {item}"
 }

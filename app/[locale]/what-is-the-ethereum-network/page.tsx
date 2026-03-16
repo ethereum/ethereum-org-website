@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { Lang, ToCItem } from "@/lib/types"
 
 import CommentCard from "@/components/CommentCard"
 import DocLink from "@/components/DocLink"
@@ -34,12 +34,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     namespace: "page-what-is-the-ethereum-network",
   })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo(
       "what-is-the-ethereum-network",
-      locale as Lang,
-      commitHistoryCache
+      locale as Lang
     )
 
   const heroProps: ContentHeroProps = {

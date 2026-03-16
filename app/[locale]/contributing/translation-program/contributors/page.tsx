@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
@@ -22,11 +22,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   setRequestLocale(locale)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "contributing/translation-program/contributors",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   // Get i18n messages

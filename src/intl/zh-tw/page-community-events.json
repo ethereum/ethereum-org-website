@@ -98,5 +98,6 @@
   "page-events-meetups-events-subtitle": "搜尋以太坊生態系統周邊即將舉行的黑客松、社群集會與會議。",
   "page-events-cta-title": "要主辦活動嗎？",
   "page-events-cta-body": "這份清單由我們的社群維護，並未詳盡列出所有項目。知道有任何即將舉行的以太坊活動可以新增至此清單嗎？",
-  "page-events-cta-button": "提交活動"
+  "page-events-cta-button": "提交活動",
+  "item-logo": "{item} 標誌"
 }

@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "在行動裝置上支援安全隔離區，以提升使用者體驗",
   "page-roadmap-fusaka-additional-item-2": "Blob費市場的改善",
   "page-roadmap-fusaka-additional-item-3": "驗證效率與網路效能提升的進一步改善",
-  "page-roadmap-glamsterdam-discussed-title": "為 Glamsterdam 排定的項目",
-  "page-roadmap-glamsterdam-discussed-item-1": "協議內建的提議者-建構者分離 (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "區塊層級的存取清單 (BALs)"
+  "page-roadmap-glamsterdam-epbs-title": "原生的提案者與建構者分離",
+  "page-roadmap-glamsterdam-epbs-item-1": "將區塊協議與處理分離，讓驗證者可以處理更多資料，進而幫助 L1 擴展。",
+  "page-roadmap-glamsterdam-epbs-item-2": "內建整合了區塊建構者，讓驗證者可以安全地將區塊組裝外包出去，而無需信任外部軟體。",
+  "page-roadmap-glamsterdam-bal-title": "區塊層級的存取控制清單",
+  "page-roadmap-glamsterdam-bal-item-1": "在區塊層級引入強制性存取清單，而不是針對個別交易。",
+  "page-roadmap-glamsterdam-bal-item-2": "預先建立依賴關係圖，以加快同步、平行執行和平行磁碟讀取的速度。",
+  "page-roadmap-glamsterdam-bal-item-3": "降低對狀態管理較多的應用程式的Gas消耗，並提高Gas成本的可預測性。",
+  "page-roadmap-hegota-discussed-title": "為Hegotá而規劃",
+  "page-roadmap-hegota-discussed-item-1": "目前正在討論這些提案。"
 }

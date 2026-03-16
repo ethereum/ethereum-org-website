@@ -20,6 +20,7 @@ Elle est supervisée par notre communauté. S'il y a quelque chose manquant ou i
 Ces programmes soutiennent le vaste écosystème Ethereum en offrant des subventions à un large éventail de projets. Il s'agit notamment de solutions pour l'évolutivité, la création de communautés, la sécurité, la confidentialité, etc. Ces subventions ne sont pas spécifiques à une seule plateforme Ethereum et constituent un bon point de départ si vous n'êtes pas sûr.
 
 - [Programme de soutien de l'écosystème EF](https://esp.ethereum.foundation) - _Financement de projets open source qui bénéficient à Ethereum, avec un intérêt particulier pour les outils universels, l'infrastructure, la recherche et les biens publics_
+- [Explorateur de subventions ESP](https://esp.ethereum.foundation/funded-projects) - _Répertoire consultable de plus de 1 000 projets soutenus par l'Ecosystem Support Program_
 - [Subventions universitaires](https://esp.ethereum.foundation/academic-grants) - _Subventions pour soutenir les travaux universitaires liés à Ethereum_
 
 ## Agrégateurs et plateformes de listes de subventions {#grant-list-aggregators}

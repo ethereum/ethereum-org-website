@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
@@ -411,11 +411,9 @@ async function Page(props: { params: Promise<PageParams> }) {
     },
   ]
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "stablecoins",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

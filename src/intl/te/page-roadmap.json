@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "UXని మెరుగుపరచడానికి మొబైల్ పరికరాల్లో సురక్షిత ఎన్‌క్లేవ్‌లకు మద్దతు",
   "page-roadmap-fusaka-additional-item-2": "బ్లాబ్ రుసుము మార్కెట్ మెరుగుదలలు",
   "page-roadmap-fusaka-additional-item-3": "వాలిడేటర్ సామర్థ్యం మరియు నెట్‌వర్క్ పనితీరుకు మరిన్ని మెరుగుదలలు",
-  "page-roadmap-glamsterdam-discussed-title": "గ్లామ్‌స్టర్‌డామ్ కోసం షెడ్యూల్ చేయబడింది",
-  "page-roadmap-glamsterdam-discussed-item-1": "ఎన్‌ష్రైన్డ్ ప్రపోజర్-బిల్డర్ సెపరేషన్ (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "బ్లాక్-స్థాయి యాక్సెస్ జాబితాలు (BALs)"
+  "page-roadmap-glamsterdam-epbs-title": "ప్రతిపాదకుడు మరియు బిల్డర్ విభజన",
+  "page-roadmap-glamsterdam-epbs-item-1": "బ్లాక్ ఒప్పందాన్ని ప్రాసెసింగ్ నుండి వేరు చేస్తుంది, ధృవీకరణదారులు ఎక్కువ డేటాను ప్రాసెస్ చేయడానికి అనుమతించడం ద్వారా L1 స్కేల్‌కు సహాయపడుతుంది.",
+  "page-roadmap-glamsterdam-epbs-item-2": "బిల్డర్‌లను స్థానికంగా అనుసంధానిస్తుంది, తద్వారా ధృవీకరణదారులు బాహ్య సాఫ్ట్‌వేర్‌ను విశ్వసించకుండా బ్లాక్ అసెంబ్లీని సురక్షితంగా అవుట్‌సోర్స్ చేయవచ్చు.",
+  "page-roadmap-glamsterdam-bal-title": "బ్లాక్-స్థాయి యాక్సెస్ జాబితాలు",
+  "page-roadmap-glamsterdam-bal-item-1": "వ్యక్తిగత లావాదేవీలకు కాకుండా, బ్లాక్ స్థాయిలో తప్పనిసరి యాక్సెస్ జాబితాలను పరిచయం చేస్తుంది.",
+  "page-roadmap-glamsterdam-bal-item-2": "వేగవంతమైన సమకాలీకరణలు, సమాంతర అమలు మరియు సమాంతర డిస్క్ రీడ్‌ల కోసం ముందస్తుగా డిపెండెన్సీలను మ్యాప్ చేస్తుంది.",
+  "page-roadmap-glamsterdam-bal-item-3": "స్టేట్-హెవీ అప్లికేషన్‌ల కోసం గ్యాస్‌ను తగ్గిస్తుంది మరియు గ్యాస్ ఖర్చు అంచనాను మెరుగుపరుస్తుంది.",
+  "page-roadmap-hegota-discussed-title": "హెగోటా కోసం ప్రణాళిక చేయబడింది",
+  "page-roadmap-hegota-discussed-item-1": "ప్రస్తుతం ప్రతిపాదనలు చర్చలో ఉన్నాయి"
 }

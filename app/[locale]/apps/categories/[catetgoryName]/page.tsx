@@ -8,7 +8,6 @@ import {
 
 import {
   AppCategoryEnum,
-  type CommitHistory,
   type Lang,
   type PageParams,
   type SectionNavDetails,
@@ -103,11 +102,9 @@ const Page = async (props: {
     })
   )
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "apps/categories/[catetgoryName]",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

@@ -8,7 +8,7 @@ import {
 } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams, ToCItem } from "@/lib/types"
+import type { Lang, PageParams, ToCItem } from "@/lib/types"
 
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -56,13 +56,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     namespace: "page-what-is-ethereum",
   })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "what-is-ethereum",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("what-is-ethereum", locale as Lang)
 
   const tocItems: ToCItem[] = [
     { title: t("page-what-is-ethereum-toc-ethereum"), url: "#ethereum" },
@@ -1059,7 +1054,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </div>
             </Section>
 
-            <Section id="further-readon" className="space-y-8">
+            <Section id="further-reading" className="space-y-8">
               <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
                 {t("page-what-is-ethereum-further-reading-title")}
               </h2>

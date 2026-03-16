@@ -99,5 +99,6 @@
   "page-events-meetups-events-subtitle": "Cari hackathon, pertemuan komunitas, dan konferensi yang akan datang di sekitar ekosistem Ethereum.",
   "page-events-cta-title": "Menyelenggarakan sebuah aksi?",
   "page-events-cta-body": "Ini adalah daftar yang tidak lengkap yang dikelola oleh komunitas kami. Tahu tentang aksi Ethereum yang akan datang untuk ditambahkan ke daftar ini?",
-  "page-events-cta-button": "Kirim aksi"
+  "page-events-cta-button": "Kirim aksi",
+  "item-logo": "Logo {item}"
 }

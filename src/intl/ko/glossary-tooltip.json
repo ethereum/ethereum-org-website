@@ -139,6 +139,8 @@
   "staking-definition": "검증자가 되어 <a href=\"/glossary/#network\">네트워크</a>를 보호하려면 일정량의 <a href=\"/glossary/#ether\">이더</a>(지분)를 스테이킹해야 합니다. 검증자는 <a href=\"/glossary/#pos\">지분 증명</a> 합의 모델(consensus model)에 따라 <a href=\"/glossary/#transaction\">트랜잭션</a>을 검증하고 <a href=\"/glossary/#block\">블록</a>을 생성합니다. 스테이킹을 통해 전체 네트워크의 최선의 이익을 위해 행동하도록 경제적 인센티브를 제공합니다. <a href=\"/glossary/#validator\">검증자</a>가 임무를 성공적으로 수행하면 보상을 받지만, 그렇지 못할 경우 이더를 잃을 수 있습니다. <a href=\"/staking/\">이더리움 스테이킹에 대해 더 자세히 알아보세요.</a>",
   "staking-pool-term": "스테이킹 풀",
   "staking-pool-definition": "하나 이상의 이더리움 스테이커의 ETH를 합친 것으로, 검증자 키 세트를 활성화하는 데 필요한 32 ETH에 도달하는 데 사용됩니다. 노드 운영자는 이러한 키를 사용하여 합의에 참여하고, <a href=\"/glossary/#block-reward\">블록 보상</a>은 기여한 스테이커들에게 분배됩니다. 스테이킹 풀 또는 위임 스테이킹은 이더리움 프로토콜에 내장되어 있지 않지만, 커뮤니티에 의해 많은 솔루션이 구축되었습니다. <a href=\"/staking/pools/\">풀 스테이킹에 대해 더 알아보기</a>.",
+  "state-term": "상태",
+  "state-definition": "블록체인 상의 특정 시점에서의 모든 잔액 및 데이터의 스냅샷으로, 일반적으로 특정 블록에서의 조건을 나타냅니다.",
   "sybil-attack-term": "시빌 공격",
   "sybil-attack-definition": "시빌(Sybil) 공격은 개인이 자신의 영향력을 늘리기 위해 여러 사람인 것처럼 시스템을 속이는 행위를 말합니다.",
   "terminal-total-difficulty-term": "최종 총 난이도(TTD)",

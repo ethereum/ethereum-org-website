@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "Pomyśl o tym jak o swoim adresie e-mail, ale zamiast poczty, możesz za jego pomocą otrzymywać ETH. Jeśli chcesz przesłać ETH z giełdy do swojego portfela, użyj swojego adresu jako miejsca docelowego. Pamiętaj, aby zawsze dokładnie sprawdzić przed wysłaniem!",
   "page-get-eth-your-address-wallet-link": "Sprawdź portfele",
   "listing-policy-raise-issue-link": "Zgłoś problem",
-  "page-find-wallet-last-updated": "Ostatnia aktualizacja"
+  "page-find-wallet-last-updated": "Ostatnia aktualizacja",
+  "listing-policy-disclaimer": "Żadne produkty wymienione na tej stronie nie są oficjalnymi rekomendacjami i służą jedynie celom informacyjnym. Jeśli chcesz dodać produkt lub podzielić się opinią na temat tej polityki, zgłoś problem w GitHub."
 }

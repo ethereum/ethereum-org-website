@@ -59,7 +59,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
       ? [
           {
             fullPath: "/",
-            text: "Ethereum.org",
+            text: "ethereum.org",
           },
         ]
       : []),

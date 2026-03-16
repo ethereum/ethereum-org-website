@@ -2,7 +2,7 @@ import { HTMLAttributes, ReactNode } from "react"
 import { getTranslations } from "next-intl/server"
 
 import type { ChildOnlyProp, PageParams, ToCItem } from "@/lib/types"
-import type { CommitHistory, Lang } from "@/lib/types"
+import type { Lang } from "@/lib/types"
 
 import OriginalCard, {
   type CardProps as OriginalCardProps,
@@ -120,9 +120,8 @@ export default async function Page(props: { params: Promise<PageParams> }) {
   const t = await getTranslations({ locale, namespace: "page-learn" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo("learn", locale as Lang, commitHistoryCache)
+    await getAppPageContributorInfo("learn", locale as Lang)
 
   const tocItems = [
     {

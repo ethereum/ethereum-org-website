@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
@@ -27,11 +27,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/roadmap")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "roadmap",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "これはあなたのメールアドレスのようなものと考えてください。しかし、メールの代わりにETHを受け取ることができます。取引所からウォレットへETHを送金したい場合は、送金先としてあなたのアドレスを使用してください。送る前に必ず再確認しておきましょう！",
   "page-get-eth-your-address-wallet-link": "ウォレットをチェックする",
   "listing-policy-raise-issue-link": "問題を報告する",
-  "page-find-wallet-last-updated": "最終更新日"
+  "page-find-wallet-last-updated": "最終更新日",
+  "listing-policy-disclaimer": "このページに掲載されている全てのプロダクトは、公式に推奨するものではなく、情報提供のみを目的としています。プロダクトの追加やポリシーに関するフィードバックをご希望の場合は、GitHubで問題を提起してください。"
 }

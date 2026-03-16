@@ -4,7 +4,7 @@
   "page-roadmap-meta-description": "O caminho para mais escalabilidade, segurança e sustentabilidade no Ethereum.",
   "page-roadmap-banner-notification": "O desenvolvimento do Ethereum é conduzido pela comunidade e sujeito a mudanças.",
   "page-roadmap-changes-coming-title": "Quais serão as próximas alterações no Ethereum?",
-  "page-roadmap-changes-coming-description": "O Ethereum já é uma plataforma poderosa, mas ainda está sendo aprimorado. Um conjunto ambicioso de melhorias aprimorará o Ethereum de sua forma atual em uma plataforma totalmente escalável e com máxima resiliência.",
+  "page-roadmap-changes-coming-description": "<a href=\"/\">Ethereum</a> já é uma plataforma poderosa, mas ainda está sendo aprimorado. Um conjunto ambicioso de melhorias atualizará o Ethereum de sua forma atual para uma plataforma totalmente escalável e com máxima resiliência.",
   "page-roadmap-cheaper-transactions-title": "Transações mais baratas",
   "page-roadmap-cheaper-transactions-description": "Rollups são muito caros e dependem de componentes centralizados, fazendo com que os usuários confiem demais em seus operadores. O roadmap inclui correções para ambos os problemas.",
   "page-roadmap-cheaper-transactions-button": "Mais sobre redução de taxas",
@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "Suporte para enclaves seguros em dispositivos móveis para melhorar a UX",
   "page-roadmap-fusaka-additional-item-2": "Melhorias no mercado de taxas de blob",
   "page-roadmap-fusaka-additional-item-3": "Mais melhorias na eficiência do validador e no desempenho da rede",
-  "page-roadmap-glamsterdam-discussed-title": "Agendado para Glamsterdam",
-  "page-roadmap-glamsterdam-discussed-item-1": "Separação proponente-construtor consagrada (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "Listas de acesso em nível de bloco (BALs)"
+  "page-roadmap-glamsterdam-epbs-title": "Separação consagrada entre proponente e construtor",
+  "page-roadmap-glamsterdam-epbs-item-1": "Separa o consenso sobre o bloco do seu processamento, ajudando a L1 a escalar, permitindo que os validadores processem mais dados",
+  "page-roadmap-glamsterdam-epbs-item-2": "Integra nativamente os construtores para que os validadores possam terceirizar com segurança a montagem de blocos sem precisar confiar em software externo",
+  "page-roadmap-glamsterdam-bal-title": "Listas de acesso no nível do bloco",
+  "page-roadmap-glamsterdam-bal-item-1": "Introduz listas de acesso obrigatórias no nível do bloco, em vez de para transações individuais",
+  "page-roadmap-glamsterdam-bal-item-2": "Mapeia dependências antecipadamente para sincronizações mais rápidas, execução paralela e leituras de disco paralelas",
+  "page-roadmap-glamsterdam-bal-item-3": "Reduz o gas para aplicativos com uso intensivo de estado e melhora a previsibilidade do custo do gas",
+  "page-roadmap-hegota-discussed-title": "Planejado para Hegotá",
+  "page-roadmap-hegota-discussed-item-1": "Propostas estão atualmente em discussão"
 }
