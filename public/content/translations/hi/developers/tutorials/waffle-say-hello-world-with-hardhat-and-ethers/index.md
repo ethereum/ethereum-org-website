@@ -1,6 +1,6 @@
 ---
-title: "Hardhat और Ethers के साथ Waffle का हैलो वर्ल्ड ट्यूटोरियल"
-description: "Hardhat और ethers.js के साथ अपना पहला Waffle प्रोजेक्ट बनाएं"
+title: "हार्डहैट और Ethers के साथ वॉफल का हैलो वर्ल्ड ट्यूटोरियल"
+description: "हार्डहैट और ethers.js के साथ अपना पहला वॉफल प्रोजेक्ट बनाएं"
 author: "MiZiet"
 tags:
   [

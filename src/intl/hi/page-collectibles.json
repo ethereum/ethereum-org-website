@@ -14,7 +14,7 @@
   "page-collectibles-code-content-gitpoap-1pr": "पीआर मर्ज किया गया बैज",
   "page-collectibles-code-content-gitpoap-desc": "आपका पीआर मर्ज होने के बाद स्वचालित रूप से दावा करने योग्य।",
   "page-collectibles-code-content-gitpoap-title": "GitPOAP",
-  "page-collectibles-code-content-instructions-1": "हमारे <a href=\"https://github.com/ethereum/ethereum-org-website\">GitHub रिपॉजिटरी</a> पर जाएं",
+  "page-collectibles-code-content-instructions-1": "हमारे <a href=\"https://github.com/ethereum/ethereum-org-website\">गिटहब रिपॉजिटरी</a> पर जाएं",
   "page-collectibles-code-content-instructions-2": "काम करने के लिए एक मुद्दा चुनें",
   "page-collectibles-code-content-instructions-3": "एक सुधार या बेहतरी कमिट करें",
   "page-collectibles-code-content-title": "कोड और सामग्री",
@@ -60,7 +60,7 @@
   "page-collectibles-translations-50000": "50,000 शब्द बैज",
   "page-collectibles-translations-badge-desc": "किसी भी भाषा में।",
   "page-collectibles-translations-desc": "अधिकांश यूज़र अंग्रेजी नहीं बोलते हैं, इसलिए हमारे लेखों को अन्य भाषाओं में अनुवाद करने में मदद करना महत्वपूर्ण है, अनुवाद के अनुभव की कोई आवश्यकता नहीं है।",
-  "page-collectibles-translations-instructions-1": "<a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a> पर रजिस्टर करें",
+  "page-collectibles-translations-instructions-1": "<a href=\"https://crowdin.com/project/ethereum-org\">क्राउडिन</a> पर रजिस्टर करें",
   "page-collectibles-translations-instructions-2": "भाषा चुनें",
   "page-collectibles-translations-instructions-3": "अनुवाद शुरू करें",
   "page-collectibles-translations-title": "अनुवाद"

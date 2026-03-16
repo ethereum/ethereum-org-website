@@ -57,7 +57,7 @@ lang: hi
 
 ### सहायक मार्गदर्शिकाएँ
 
-- [MetaMask पर लंबित लेनदेन को कैसे तेज करें या रद्द करें](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
+- [मेटामास्क पर लंबित लेनदेन को कैसे तेज करें या रद्द करें](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
 - [लंबित एथेरियम लेन-देन कैसे रद्द करें](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
 ## मैं अपने एथेरियम गिवअवे का दावा कैसे कर सकता हूं? {#giveaway-scam}

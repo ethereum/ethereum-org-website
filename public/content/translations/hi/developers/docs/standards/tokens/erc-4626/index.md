@@ -224,4 +224,4 @@ event Withdraw(
 ## आगे की रीडिंग {#further-reading}
 
 - [EIP-4626: टोकनाइज़्ड वॉल्ट मानक](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub रेपो](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [ERC-4626: गिटहब रेपो](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

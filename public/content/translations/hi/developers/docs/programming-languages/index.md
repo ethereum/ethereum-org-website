@@ -15,7 +15,7 @@ lang: hi
 
 - [डार्ट डेवलपर्स के लिए एथेरियम](/developers/docs/programming-languages/dart/)
 - [डेल्फी डेवलपर्स के लिए एथेरियम](/developers/docs/programming-languages/delphi/)
-- [.NET डेवलपर्स के लिए एथेरियम](/developers/docs/programming-languages/dot-net/)
+- [डॉट नेट डेवलपर्स के लिए एथेरियम](/developers/docs/programming-languages/dot-net/)
 - [एलिक्सिर डेवलपर्स के लिए एथेरियम](/developers/docs/programming-languages/elixir/)
 - [गो डेवलपर्स के लिए एथेरियम](/developers/docs/programming-languages/golang/)
 - [जावा डेवलपर्स के लिए एथेरियम](/developers/docs/programming-languages/java/)

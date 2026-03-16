@@ -8,7 +8,7 @@ lang: hi
 
 ## पूर्वापेक्षाएं {#prerequisites}
 
-पहले सुनिश्चित करें कि आपने [स्मार्ट अनुबंधों](/developers/docs/smart-contracts/) के बारे में पढ़ा है। यह दस्तावेज़ मानता है कि आप JavaScript या Python जैसी प्रोग्रामिंग भाषाओं से पहले से ही परिचित हैं।
+पहले सुनिश्चित करें कि आपने [स्मार्ट अनुबंधों](/developers/docs/smart-contracts/) के बारे में पढ़ा है। यह दस्तावेज़ मानता है कि आप जावास्क्रिप्ट या पायथन जैसी प्रोग्रामिंग भाषाओं से पहले से ही परिचित हैं।
 
 ## डेटा {#data}
 
@@ -31,9 +31,9 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-यदि आपने पहले से ही ऑब्जेक्ट-ओरिएंटेड भाषाओं को प्रोग्राम किया है, तो आप संभवतः अधिकांश प्रकारों से परिचित होंगे। हालांकि, यदि आप Ethereum विकास में नए हैं तो `address` आपके लिए नया होना चाहिए।
+यदि आपने पहले से ही ऑब्जेक्ट-ओरिएंटेड भाषाओं को प्रोग्राम किया है, तो आप संभवतः अधिकांश प्रकारों से परिचित होंगे। हालांकि, यदि आप एथेरियम विकास में नए हैं तो `address` आपके लिए नया होना चाहिए।
 
-एक `address` प्रकार एक Ethereum पता रख सकता है जो 20 बाइट्स या 160 बिट्स के बराबर होता है। यह हेक्साडेसिमल नोटेशन में अग्रणी 0x के साथ लौटता है।
+एक `address` प्रकार एक एथेरियम पता रख सकता है जो 20 बाइट्स या 160 बिट्स के बराबर होता है। यह हेक्साडेसिमल नोटेशन में अग्रणी 0x के साथ लौटता है।
 
 अन्य प्रकारों में शामिल हैं:
 
@@ -49,14 +49,14 @@ storedData: int128
 
 अधिक स्पष्टीकरण के लिए, दस्तावेज़ों पर एक नज़र डालें:
 
-- [Vyper प्रकार देखें](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
-- [Solidity प्रकार देखें](https://docs.soliditylang.org/en/latest/types.html#value-types)
+- [वाइपर प्रकार देखें](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [सॉलिडिटी प्रकार देखें](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### मेमोरी {#memory}
 
 मान जो केवल अनुबंध फंक्शन के निष्पादन के जीवनकाल के लिए संग्रहित होते हैं, उन्हें मेमोरी वेरिएबल्स कहा जाता है। चूंकि ये ब्लॉकचेन पर स्थायी रूप से संग्रहित नहीं होते हैं, इसलिए इनका उपयोग करना बहुत सस्ता होता है।
 
-[Solidity डॉक्स](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) में EVM डेटा (स्टोरेज, मेमोरी और स्टैक) कैसे संग्रहीत करता है, इसके बारे में अधिक जानें।
+[सॉलिडिटी डॉक्स](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) में EVM डेटा (स्टोरेज, मेमोरी और स्टैक) कैसे संग्रहीत करता है, इसके बारे में अधिक जानें।
 
 ### पर्यावरण वैरिएबल {#environment-variables}
 
@@ -162,8 +162,8 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 
 आपके अनुबंध पर आपके द्वारा परिभाषित वेरिएबल्स और फंक्शंस के अलावा, कुछ विशेष बिल्ट-इन फंक्शंस हैं। सबसे स्पष्ट उदाहरण है:
 
-- `address.send()` – Solidity
-- `send(address)` – Vyper
+- `address.send()` – सॉलिडिटी
+- `send(address)` – वाइपर
 
 ये अनुबंधों को ETH को अन्य खातों में भेजने की अनुमति देते हैं।
 
@@ -207,7 +207,7 @@ contract ExampleDapp {
 
 ## एनोटेट किए गए उदाहरण {#annotated-examples}
 
-ये Solidity में लिखे गए कुछ उदाहरण हैं। यदि आप कोड के साथ खेलना चाहते हैं, तो आप [Remix](http://remix.ethereum.org) में उनके साथ इंटरैक्ट कर सकते हैं।
+ये सॉलिडिटी में लिखे गए कुछ उदाहरण हैं। यदि आप कोड के साथ खेलना चाहते हैं, तो आप [रीमिक्स](http://remix.ethereum.org) में उनके साथ इंटरैक्ट कर सकते हैं।
 
 ### हैलो वर्ल्ड {#hello-world}
 
@@ -640,10 +640,10 @@ contract CryptoPizza is IERC721, ERC165 {
 
 ## आगे की रीडिंग {#further-reading}
 
-स्मार्ट अनुबंधों के अधिक संपूर्ण अवलोकन के लिए Solidity और Vyper के प्रलेखन देखें:
+स्मार्ट अनुबंधों के अधिक संपूर्ण अवलोकन के लिए सॉलिडिटी और वाइपर के प्रलेखन देखें:
 
-- [Solidity](https://docs.soliditylang.org/)
-- [Vyper](https://docs.vyperlang.org/en/stable/)
+- [सॉलिडिटी](https://docs.soliditylang.org/)
+- [वाइपर](https://docs.vyperlang.org/en/stable/)
 
 ## संबंधित विषय {#related-topics}
 
@@ -654,4 +654,4 @@ contract CryptoPizza is IERC721, ERC165 {
 
 - [अनुबंध आकार सीमा से लड़ने के लिए अनुबंधों का आकार छोटा करना](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- आपके स्मार्ट अनुबंध के आकार को कम करने के लिए कुछ व्यावहारिक सुझाव।_
 - [इवेंट्स के साथ स्मार्ट अनुबंधों से डेटा लॉगिंग](/developers/tutorials/logging-events-smart-contracts/) _– स्मार्ट अनुबंध इवेंट्स का परिचय और आप डेटा लॉग करने के लिए उनका उपयोग कैसे कर सकते हैं।_
-- [Solidity से अन्य अनुबंधों के साथ इंटरैक्ट करें](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– मौजूदा अनुबंध से स्मार्ट अनुबंध कैसे परिनियोजित करें और इसके साथ इंटरैक्ट करें।_
+- [सॉलिडिटी से अन्य अनुबंधों के साथ इंटरैक्ट करें](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– मौजूदा अनुबंध से स्मार्ट अनुबंध कैसे परिनियोजित करें और इसके साथ इंटरैक्ट करें।_

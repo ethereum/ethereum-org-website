@@ -33,7 +33,7 @@ lang: hi
 
 ## अपना एक्सचेंज जोड़ें {#add-exchange}
 
-यदि आप ethereum.org पर एक एक्सचेंज जोड़ना चाहते हैं, तो GitHub पर एक मुद्दा बनाएं।
+यदि आप ethereum.org पर एक एक्सचेंज जोड़ना चाहते हैं, तो गिटहब पर एक मुद्दा बनाएं।
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   मुद्दा बनाएँ

@@ -1,17 +1,17 @@
 ---
 title: "स्मार्ट अनुबंध की भाषाएँ"
-description: "अवलोकन और दो मुख्य स्मार्ट अनुबंध भाषाओं – Solidity और Vyper की तुलना।"
+description: "अवलोकन और दो मुख्य स्मार्ट अनुबंध भाषाओं – सॉलिडिटी और वाइपर की तुलना।"
 lang: hi
 ---
 
-एथेरियम के बारे में एक बड़ा पहलू यह है कि स्मार्ट अनुबंध को अपेक्षाकृत डेवलपर के अनुकूल भाषाओं का उपयोग करके प्रोग्राम किया जा सकता है। अगर आप Python या किसी [कर्ली-ब्रैकेट भाषा](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) के अनुभवी हैं, तो आप परिचित सिंटैक्स वाली भाषा ढूंढ सकते हैं।
+एथेरियम के बारे में एक बड़ा पहलू यह है कि स्मार्ट अनुबंध को अपेक्षाकृत डेवलपर के अनुकूल भाषाओं का उपयोग करके प्रोग्राम किया जा सकता है। अगर आप पायथन या किसी [कर्ली-ब्रैकेट भाषा](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) के अनुभवी हैं, तो आप परिचित सिंटैक्स वाली भाषा ढूंढ सकते हैं।
 
 दो सबसे सक्रिय और अनुरक्षित भाषाएं हैं:
 
-- Solidity
-- Vyper
+- सॉलिडिटी
+- वाइपर
 
-रीमिक्स IDE Solidity और Vyper दोनों में अनुबंध बनाने और परीक्षण करने के लिए एक व्यापक विकास परिवेश प्रदान करता है। [कोडिंग शुरू करने के लिए इन-ब्राउज़र Remix IDE आज़माएं](https://remix.ethereum.org)।
+रीमिक्स IDE सॉलिडिटी और वाइपर दोनों में अनुबंध बनाने और परीक्षण करने के लिए एक व्यापक विकास परिवेश प्रदान करता है। [कोडिंग शुरू करने के लिए इन-ब्राउज़र रीमिक्स IDE आज़माएं](https://remix.ethereum.org)।
 
 अधिक अनुभवी डेवलपर भी Yul का उपयोग करना चाह सकते हैं, जो [एथेरियम वर्चुअल मशीन](/developers/docs/evm/) के लिए एक मध्यवर्ती भाषा है, या Yul+, जो Yul का एक एक्सटेंशन है।
 
@@ -19,12 +19,12 @@ lang: hi
 
 ## पूर्वापेक्षाएं {#prerequisites}
 
-प्रोग्रामिंग भाषाओं, विशेष रूप से JavaScript या Python का पिछला ज्ञान, आपको स्मार्ट अनुबंध भाषाओं में अंतर की समझ बनाने में मदद कर सकता है। हम यह भी अनुशंसा करते हैं कि आप भाषा की तुलना में बहुत अधिक गहराई में जाने से पहले स्मार्ट अनुबंधों को एक अवधारणा के रूप में समझ लें। [स्मार्ट अनुबंध का परिचय](/developers/docs/smart-contracts/)।
+प्रोग्रामिंग भाषाओं, विशेष रूप से जावास्क्रिप्ट या पायथन का पिछला ज्ञान, आपको स्मार्ट अनुबंध भाषाओं में अंतर की समझ बनाने में मदद कर सकता है। हम यह भी अनुशंसा करते हैं कि आप भाषा की तुलना में बहुत अधिक गहराई में जाने से पहले स्मार्ट अनुबंधों को एक अवधारणा के रूप में समझ लें। [स्मार्ट अनुबंध का परिचय](/developers/docs/smart-contracts/)।
 
-## Solidity {#solidity}
+## सॉलिडिटी {#solidity}
 
 - स्मार्ट अनुबंधों को लागू करने के लिए ऑब्जेक्ट-ओरिएंटेड, उच्च-स्तरीय भाषा।
-- कर्ली-ब्रैकेट भाषा जो C++ से सबसे अधिक गहराई से प्रभावित हुई है।
+- कर्ली-ब्रैकेट भाषा जो सी++ से सबसे अधिक गहराई से प्रभावित हुई है।
 - स्टैटिक रूप से टाइप किया गया (वेरिएबल का प्रकार संकलन समय पर जाना जाता है)।
 - समर्थन करता है:
   - विरासत (आप अन्य अनुबंधों का विस्तार कर सकते हैं)।
@@ -34,13 +34,13 @@ lang: hi
 ### महत्वपूर्ण लिंक {#important-links}
 
 - [प्रलेखन](https://docs.soliditylang.org/en/latest/)
-- [Solidity भाषा पोर्टल](https://soliditylang.org/)
-- [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
-- [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter चैटरूम](https://gitter.im/ethereum/solidity) जो [Solidity Matrix चैटरूम](https://matrix.to/#/#ethereum_solidity:gitter.im) से जुड़ा है
+- [सॉलिडिटी भाषा पोर्टल](https://soliditylang.org/)
+- [सॉलिडिटी by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+- [गिटहब](https://github.com/ethereum/solidity/)
+- [सॉलिडिटी Gitter चैटरूम](https://gitter.im/ethereum/solidity) जो [सॉलिडिटी Matrix चैटरूम](https://matrix.to/#/#ethereum_solidity:gitter.im) से जुड़ा है
 - [चीट शीट](https://reference.auditless.com/cheatsheet)
-- [Solidity ब्लॉग](https://blog.soliditylang.org/)
-- [Solidity ट्विटर](https://twitter.com/solidity_lang)
+- [सॉलिडिटी ब्लॉग](https://blog.soliditylang.org/)
+- [सॉलिडिटी ट्विटर](https://twitter.com/solidity_lang)
 
 ### उदाहरण अनुबंध {#example-contract}
 
@@ -83,15 +83,15 @@ contract Coin {
 }
 ```
 
-इस उदाहरण से आपको यह पता चल जाना चाहिए कि Solidity अनुबंध वाक्यविन्यास कैसा है। फ़ंक्शंस और वेरिएबल्स के अधिक विस्तृत विवरण के लिए, [डॉक्स देखें](https://docs.soliditylang.org/en/latest/contracts.html)।
+इस उदाहरण से आपको यह पता चल जाना चाहिए कि सॉलिडिटी अनुबंध वाक्यविन्यास कैसा है। फ़ंक्शंस और वेरिएबल्स के अधिक विस्तृत विवरण के लिए, [डॉक्स देखें](https://docs.soliditylang.org/en/latest/contracts.html)।
 
-## Vyper {#vyper}
+## वाइपर {#vyper}
 
 - Pythonic प्रोग्रामिंग भाषा
 - मजबूत टाइपिंग
 - छोटा और समझने योग्य कंपाइलर कोड
 - कुशल बाइटकोड जेनरेशन
-- अनुबंधों को अधिक सुरक्षित और ऑडिट करना आसान बनाने के उद्देश्य से Solidity की तुलना में जानबूझकर कम विशेषताएं दी गई हैं। Vyper इनका समर्थन नहीं करता है:
+- अनुबंधों को अधिक सुरक्षित और ऑडिट करना आसान बनाने के उद्देश्य से सॉलिडिटी की तुलना में जानबूझकर कम विशेषताएं दी गई हैं। वाइपर इनका समर्थन नहीं करता है:
   - संशोधक
   - इनहेरिटेंस
   - इनलाइन असेंबली
@@ -101,21 +101,21 @@ contract Coin {
   - अनंत-लंबाई के लूप
   - बाइनरी निश्चित बिंदु
 
-अधिक जानकारी के लिए, [Vyper तर्क पढ़ें](https://vyper.readthedocs.io/en/latest/index.html)।
+अधिक जानकारी के लिए, [वाइपर तर्क पढ़ें](https://vyper.readthedocs.io/en/latest/index.html)।
 
 ### महत्वपूर्ण लिंक {#important-links-1}
 
 - [प्रलेखन](https://vyper.readthedocs.io)
-- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
-- [More Vyper by Example](https://vyper-by-example.org/)
-- [GitHub](https://github.com/vyperlang/vyper)
-- [Vyper कम्युनिटी डिस्कॉर्ड चैट](https://discord.gg/SdvKC79cJk)
+- [वाइपर by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [More वाइपर by Example](https://vyper-by-example.org/)
+- [गिटहब](https://github.com/vyperlang/vyper)
+- [वाइपर कम्युनिटी डिस्कॉर्ड चैट](https://discord.gg/SdvKC79cJk)
 - [चीट शीट](https://reference.auditless.com/cheatsheet)
-- [Vyper के लिए स्मार्ट अनुबंध डेवलपमेंट फ्रेमवर्क और उपकरण](/developers/docs/programming-languages/python/)
-- [VyperPunk - Vyper स्मार्ट अनुबंधों को सुरक्षित करना और हैक करना सीखें](https://github.com/SupremacyTeam/VyperPunk)
-- [डेवलपमेंट के लिए Vyper हब](https://github.com/zcor/vyper-dev)
-- [Vyper ग्रेटेस्ट हिट्स स्मार्ट अनुबंध उदाहरण](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [बहुत बढ़िया Vyper क्यूरेटेड संसाधन](https://github.com/spadebuilders/awesome-vyper)
+- [वाइपर के लिए स्मार्ट अनुबंध डेवलपमेंट फ्रेमवर्क और उपकरण](/developers/docs/programming-languages/python/)
+- [VyperPunk - वाइपर स्मार्ट अनुबंधों को सुरक्षित करना और हैक करना सीखें](https://github.com/SupremacyTeam/VyperPunk)
+- [डेवलपमेंट के लिए वाइपर हब](https://github.com/zcor/vyper-dev)
+- [वाइपर ग्रेटेस्ट हिट्स स्मार्ट अनुबंध उदाहरण](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [बहुत बढ़िया वाइपर क्यूरेटेड संसाधन](https://github.com/spadebuilders/awesome-vyper)
 
 ### उदाहरण {#example}
 
@@ -222,16 +222,16 @@ def endAuction():
     send(self.beneficiary, self.highestBid)
 ```
 
-इस उदाहरण से आपको यह पता चल जाना चाहिए कि Vyper अनुबंध वाक्यविन्यास कैसा है। फ़ंक्शंस और वेरिएबल्स के अधिक विस्तृत विवरण के लिए, [डॉक्स देखें](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)।
+इस उदाहरण से आपको यह पता चल जाना चाहिए कि वाइपर अनुबंध वाक्यविन्यास कैसा है। फ़ंक्शंस और वेरिएबल्स के अधिक विस्तृत विवरण के लिए, [डॉक्स देखें](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)।
 
 ## Yul और Yul+ {#yul}
 
-यदि आप एथेरियम के लिए नए हैं और अभी तक स्मार्ट अनुबंध भाषाओं के साथ कोई कोडिंग नहीं की है, तो हम अनुशंसा करते हैं कि आप Solidity या Vyper के साथ शुरुआत करें। स्मार्ट अनुबंध सुरक्षा सर्वोत्तम प्रथाओं और EVM के साथ काम करने की बारीकियों से परिचित होने के बाद ही Yul या Yul+ को देखें।
+यदि आप एथेरियम के लिए नए हैं और अभी तक स्मार्ट अनुबंध भाषाओं के साथ कोई कोडिंग नहीं की है, तो हम अनुशंसा करते हैं कि आप सॉलिडिटी या वाइपर के साथ शुरुआत करें। स्मार्ट अनुबंध सुरक्षा सर्वोत्तम प्रथाओं और EVM के साथ काम करने की बारीकियों से परिचित होने के बाद ही Yul या Yul+ को देखें।
 
 **Yul**
 
 - एथेरियम के लिए मध्यवर्ती भाषा।
-- यह [EVM](/developers/docs/evm) और [Ewasm](https://github.com/ewasm), एक Ethereum फ्लेवर्ड WebAssembly, का समर्थन करता है और इसे दोनों प्लेटफॉर्मों के लिए एक प्रयोग करने योग्य सामान्य भाजक के रूप में डिज़ाइन किया गया है।
+- यह [EVM](/developers/docs/evm) और [Ewasm](https://github.com/ewasm), एक एथेरियम फ्लेवर्ड WebAssembly, का समर्थन करता है और इसे दोनों प्लेटफॉर्मों के लिए एक प्रयोग करने योग्य सामान्य भाजक के रूप में डिज़ाइन किया गया है।
 - उच्च-स्तरीय अनुकूलन चरणों के लिए अच्छा लक्ष्य जो EVM और Ewasm दोनों प्लेटफार्मों को समान रूप से लाभान्वित कर सकता है।
 
 **Yul+**
@@ -274,13 +274,13 @@ def endAuction():
 ## Fe {#fe}
 
 - एथेरियम वर्चुअल मशीन (EVM) के लिए स्टैटिक रूप से टाइप की गई भाषा।
-- Python और Rust से प्रेरित।
+- पायथन और रस्ट से प्रेरित।
 - सीखने में आसान होने का लक्ष्य है -- यहां तक कि उन डेवलपर्स के लिए भी जो एथेरियम पारिस्थितिकी इकोसिस्टम में नए हैं।
 - Fe का विकास अभी भी अपने शुरुआती चरण में है, जनवरी 2021 में भाषा की अल्फा रिलीज़ हुई थी।
 
 ### महत्वपूर्ण लिंक {#important-links-3}
 
-- [GitHub](https://github.com/ethereum/fe)
+- [गिटहब](https://github.com/ethereum/fe)
 - [Fe घोषणा](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021 रोडमैप](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe डिस्कॉर्ड चैट](https://discord.com/invite/ywpkAXFjZH)
@@ -315,17 +315,17 @@ contract GuestBook:
 
 यदि आपने अभी तक किसी भी भाषा को आजमाया नहीं है, तो यहां कुछ बातें दी गई हैं जिन पर आपको विचार करना चाहिए:
 
-### Solidity के बारे में क्या अच्छा है? {#solidity-advantages}
+### सॉलिडिटी के बारे में क्या अच्छा है? {#solidity-advantages}
 
 - यदि आप एक नौसिखिया हैं, तो कई ट्यूटोरियल और सीखने के उपकरण उपलब्ध हैं। [कोडिंग द्वारा सीखें](/developers/learning-tools/) सेक्शन में इसके बारे में और देखें।
 - अच्छा डेवलपर टूलींग उपलब्ध है।
-- Solidity में एक बड़ा डिवेलपर समुदाय है, जिसका अर्थ है कि आपको अपने प्रश्नों के उत्तर बहुत जल्दी मिल जाएंगे।
+- सॉलिडिटी में एक बड़ा डिवेलपर समुदाय है, जिसका अर्थ है कि आपको अपने प्रश्नों के उत्तर बहुत जल्दी मिल जाएंगे।
 
-### Vyper के बारे में क्या बढ़िया है? {#vyper-advatages}
+### वाइपर के बारे में क्या बढ़िया है? {#vyper-advatages}
 
-- Python डेवलपर के लिए आरंभ करने का शानदार तरीका जो स्मार्ट अनुबंध लिखना चाहते हैं।
-- Vyper में कम विशेषताएं हैं जो विचारों के त्वरित प्रोटोटाइप के लिए इसे शानदार बनाती हैं।
-- Vyper का उद्देश्य ऑडिट करना आसान और अधिकतम मानव-पठनीय होना है।
+- पायथन डेवलपर के लिए आरंभ करने का शानदार तरीका जो स्मार्ट अनुबंध लिखना चाहते हैं।
+- वाइपर में कम विशेषताएं हैं जो विचारों के त्वरित प्रोटोटाइप के लिए इसे शानदार बनाती हैं।
+- वाइपर का उद्देश्य ऑडिट करना आसान और अधिकतम मानव-पठनीय होना है।
 
 ### Yul और Yul+ के बारे में क्या बढ़िया है? {#yul-advantages}
 
@@ -338,5 +338,5 @@ contract GuestBook:
 
 ## आगे की रीडिंग {#further-reading}
 
-- [OpenZeppelin द्वारा Solidity अनुबंध लाइब्रेरी](https://docs.openzeppelin.com/contracts/5.x/)
-- [Solidity by Example](https://solidity-by-example.org)
+- [ओपनज़ेपेलिन द्वारा सॉलिडिटी अनुबंध लाइब्रेरी](https://docs.openzeppelin.com/contracts/5.x/)
+- [सॉलिडिटी by Example](https://solidity-by-example.org)

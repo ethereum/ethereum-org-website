@@ -13,7 +13,7 @@ incomplete: true
 
 - [EIP का परिचय](/eips/)
 - [EIPs की सूची](https://eips.ethereum.org/)
-- [EIP GitHub रेपो](https://github.com/ethereum/EIPs)
+- [EIP गिटहब रेपो](https://github.com/ethereum/EIPs)
 - [EIP चर्चा बोर्ड](https://ethereum-magicians.org/c/eips)
 - [एथेरियम शासन का परिचय](/governance/)
 - [एथेरियम शासन अवलोकन](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 मार्च, 2019 - बोरिस मान_

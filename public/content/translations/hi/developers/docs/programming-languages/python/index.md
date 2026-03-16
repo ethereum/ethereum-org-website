@@ -29,7 +29,7 @@ incomplete: true
 - [पुरस्कार-योग्य: एक इथेरियम पायथन हैकथॉन गाइड](https://snakecharmers.ethereum.org/prize-worthy/)
 - [वाइपर के साथ स्मार्ट अनुबंधों का परिचय](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [पायथन फ्लास्क का उपयोग करके इथेरियम अनुबंध कैसे विकसित करें?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
-- [Web3.py का परिचय · पायथन डेवलपर्स के लिए इथेरियम](https://www.dappuniversity.com/articles/web3-py-intro)
+- [वेब3.पीवाई का परिचय · पायथन डेवलपर्स के लिए इथेरियम](https://www.dappuniversity.com/articles/web3-py-intro)
 - [पायथन और web3.py का उपयोग करके स्मार्ट अनुबंध फ़ंक्शन को कैसे कॉल करें](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## मध्यवर्ती लेख {#intermediate-articles}
@@ -44,21 +44,21 @@ incomplete: true
 - [web3.py पैटर्न: रीयल-टाइम इवेंट सब्सक्रिप्शन](https://snakecharmers.ethereum.org/subscriptions/)
 - [web3.py पैटर्न: WebSocketProvider](https://snakecharmers.ethereum.org/websocketprovider/)
 - [पायथन का उपयोग करके इथेरियम स्मार्ट अनुबंध को कंपाइल करना, डिप्लॉय करना और कॉल करना](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Slither के साथ सॉलिडिटी स्मार्ट अनुबंधों का विश्लेषण करें](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
+- [स्लिदर के साथ सॉलिडिटी स्मार्ट अनुबंधों का विश्लेषण करें](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 - [ब्लॉकचेन फिनटेक ट्यूटोरियल: पायथन के साथ ऋण देना और उधार लेना](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
 
 ## संग्रहीत लेख
 
 - [पायथन और ब्राउनी के साथ अपना खुद का ERC20 टोकन डिप्लॉय करें](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [स्मार्ट अनुबंधों को डिप्लॉय करने के लिए ब्राउनी और पायथन का उपयोग करना](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
-- [ब्राउनी के साथ OpenSea पर NFT बनाना](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
+- [ब्राउनी के साथ OpenSea पर एनएफटी बनाना](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
 ## पायथन परियोजनाएं और उपकरण {#python-projects-and-tools}
 
 ### सक्रिय: {#active}
 
-- [Web3.py](https://github.com/ethereum/web3.py) - _इथेरियम के साथ इंटरैक्ट करने के लिए पायथन लाइब्रेरी_
-- [Vyper](https://github.com/ethereum/vyper/) - _EVM के लिए पायथनिक स्मार्ट अनुबंध भाषा_
+- [वेब3.पीवाई](https://github.com/ethereum/web3.py) - _इथेरियम के साथ इंटरैक्ट करने के लिए पायथन लाइब्रेरी_
+- [वाइपर](https://github.com/ethereum/vyper/) - _EVM के लिए पायथनिक स्मार्ट अनुबंध भाषा_
 - [Ape](https://github.com/ApeWorX/ape) - _पायथनिस्ट, डेटा वैज्ञानिकों और सुरक्षा पेशेवरों के लिए स्मार्ट अनुबंध विकास उपकरण_
 - [py-evm](https://github.com/ethereum/py-evm) - _इथेरियम वर्चुअल मशीन का कार्यान्वयन_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _इथेरियम-आधारित अनुप्रयोगों के परीक्षण के लिए उपकरण_
@@ -66,7 +66,7 @@ incomplete: true
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x समर्थन के साथ solc सॉलिडिटी कंपाइलर के लिए पायथन रैपर_
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker अनुबंधों के लिए पायथन API_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _पायथन के लिए इथेरियम से साइन इन करें (siwe)_
-- [इथेरियम एकीकरण के लिए Web3 DeFi](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, Uniswap और अन्य लोकप्रिय परियोजनाओं के लिए तैयार एकीकरण के साथ एक पायथन पैकेज_
+- [इथेरियम एकीकरण के लिए वेब3 डीफाई](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, यूनिस्वैप और अन्य लोकप्रिय परियोजनाओं के लिए तैयार एकीकरण के साथ एक पायथन पैकेज_
 - [Wake](https://getwake.io) - _अनुबंध परीक्षण, फ़ज़िंग, डिप्लॉयमेंट, भेद्यता स्कैनिंग और कोड नेविगेशन के लिए ऑल-इन-वन पायथन फ्रेमवर्क (भाषा सर्वर - [सॉलिडिटी के लिए उपकरण](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 
 ### संग्रहीत / अब रखरखाव नहीं किया जाता: {#archived--no-longer-maintained}
@@ -91,9 +91,9 @@ incomplete: true
 
 ## पायथन समुदाय चर्चा {#python-community-contributors}
 
-- Web3.py और अन्य पायथन फ्रेमवर्क पर चर्चा के लिए [इथेरियम पायथन समुदाय डिस्कॉर्ड](https://discord.gg/9zk7snTfWe)
-- Vyper स्मार्ट अनुबंध प्रोग्रामिंग पर चर्चा के लिए [Vyper डिस्कॉर्ड](https://discord.gg/SdvKC79cJk)
+- वेब3.पीवाई और अन्य पायथन फ्रेमवर्क पर चर्चा के लिए [इथेरियम पायथन समुदाय डिस्कॉर्ड](https://discord.gg/9zk7snTfWe)
+- वाइपर स्मार्ट अनुबंध प्रोग्रामिंग पर चर्चा के लिए [वाइपर डिस्कॉर्ड](https://discord.gg/SdvKC79cJk)
 
 ## अन्य एकत्रित सूचियाँ {#other-aggregated-lists}
 
-Vyper विकी में [Vyper के लिए संसाधनों की एक अविश्वसनीय सूची](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources) है
+वाइपर विकी में [वाइपर के लिए संसाधनों की एक अविश्वसनीय सूची](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources) है

@@ -201,4 +201,4 @@ interface ERC1363Spender {
 ## आगे की रीडिंग {#further-reading}
 
 - [ERC-1363: देय टोकन मानक](https://eips.ethereum.org/EIPS/eip-1363)
-- [ERC-1363: GitHub रेपो](https://github.com/vittominacori/erc1363-payable-token)
+- [ERC-1363: गिटहब रेपो](https://github.com/vittominacori/erc1363-payable-token)

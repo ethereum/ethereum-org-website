@@ -19,7 +19,7 @@ lang: hi
 
 गैस शुल्क **किसी ऑपरेशन को करने के लिए उपयोग की जाने वाली गैस की मात्रा है, जिसे प्रति यूनिट गैस की लागत से गुणा किया जाता है**। शुल्क का भुगतान इस बात की परवाह किए बिना किया जाता है कि लेनदेन सफल होता है या विफल होता है।
 
-![EVM संचालन में गैस की आवश्यकता कहाँ होती है, यह दिखाने वाला एक चित्र](./gas.png)\n_चित्र [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) से अनुकूलित है_
+![EVM संचालन में गैस की आवश्यकता कहाँ होती है, यह दिखाने वाला एक चित्र](./gas.png)\n_चित्र [एथेरियम EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) से अनुकूलित है_
 
 गैस शुल्क का भुगतान एथेरियम की मूल मुद्रा, ईथर (ETH) में करना होगा। गैस की कीमतें आमतौर पर ग्वेई में उद्धृत की जाती हैं, जो ETH का एक संप्रदाय है। हर ग्वेई एक ETH (0.000000001 ETH या 10<sup>-9</sup> ETH) के एक अरबवें हिस्से के बराबर है।
 
@@ -104,7 +104,7 @@ lang: hi
 
 हालांकि एक लेनदेन में एक सीमा शामिल होती है, लेनदेन में उपयोग नहीं की गई कोई भी गैस उपयोगकर्ता को वापस कर दी जाती है (उदा., `अधिकतम शुल्क - (आधार शुल्क + टिप)` वापस कर दिया जाता है)।
 
-![अप्रयुक्त गैस कैसे वापस की जाती है, यह दिखाने वाला चित्र](../transactions/gas-tx.png)\n_चित्र [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) से अनुकूलित है_
+![अप्रयुक्त गैस कैसे वापस की जाती है, यह दिखाने वाला चित्र](../transactions/gas-tx.png)\n_चित्र [एथेरियम EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) से अनुकूलित है_
 
 ## गैस की सीमा क्या है? {#what-is-gas-limit}
 
@@ -128,11 +128,11 @@ lang: hi
 
 अगर आप गैस की कीमतों की निगरानी करना चाहते हैं, तो आप अपने ETH को कम में भेज सकते हैं, आप कई अलग-अलग उपकरणों का उपयोग कर सकते हैं, जैसे:
 
-- [Etherscan](https://etherscan.io/gastracker) _लेनदेन गैस मूल्य अनुमानक_
+- [ईथरस्कैन](https://etherscan.io/gastracker) _लेनदेन गैस मूल्य अनुमानक_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _ओपन सोर्स लेनदेन गैस मूल्य अनुमानक_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _लेनदेन शुल्क कम करने और पैसे बचाने के लिए एथेरियम और L2 गैस की कीमतों की निगरानी और उन्हें ट्रैक करें_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _गैस का अनुमान लगाने वाला Chrome एक्सटेंशन जो टाइप 0 लीगेसी लेनदेन और टाइप 2 EIP-1559 लेनदेन दोनों का समर्थन करता है।_
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Mainnet, Arbitrum, और Polygon पर विभिन्न प्रकार के लेनदेन के लिए अपनी स्थानीय मुद्रा में गैस शुल्क की गणना करें।_
+- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Mainnet, आर्बिट्रम, और पॉलीगॉन पर विभिन्न प्रकार के लेनदेन के लिए अपनी स्थानीय मुद्रा में गैस शुल्क की गणना करें।_
 
 ## संबंधित उपकरण {#related-tools}
 

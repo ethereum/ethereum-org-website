@@ -67,7 +67,7 @@ template: translatathon
 
 - [EthStaker डिपॉजिट CLI](https://crowdin.com/project/ethstaker-deposit-cli)
 
-- [Eth Docker डॉक्स](https://crowdin.com/project/eth-docker-docs)
+- [Eth डॉकर डॉक्स](https://crowdin.com/project/eth-docker-docs)
 
 - [रीमिक्स IDE प्रलेखन](https://crowdin.com/project/remix-translation)
 

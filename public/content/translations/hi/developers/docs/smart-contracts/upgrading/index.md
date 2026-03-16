@@ -72,11 +72,11 @@ lang: hi
 
 प्रॉक्सी पैटर्न का उपयोग करने के लिए **delegatecall** फ़ंक्शन की समझ होना आवश्यक है। मूल रूप से, `delegatecall` एक ऑपकोड है जो एक अनुबंध को दूसरे अनुबंध को कॉल करने की अनुमति देता है, जबकि वास्तविक कोड निष्पादन कॉलिंग अनुबंध के संदर्भ में होता है। प्रॉक्सी पैटर्न में `delegatecall` का उपयोग करने का एक निहितार्थ यह है कि प्रॉक्सी अनुबंध अपने स्टोरेज में पढ़ता और लिखता है और लॉजिक अनुबंध पर संग्रहीत लॉजिक को ऐसे निष्पादित करता है जैसे किसी आंतरिक फ़ंक्शन को कॉल कर रहा हो।
 
-[Solidity डॉक्यूमेंटेशन](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries) से:
+[सॉलिडिटी डॉक्यूमेंटेशन](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries) से:
 
 > _संदेश कॉल का एक विशेष प्रकार मौजूद है, जिसका नाम **delegatecall** है जो एक संदेश कॉल के समान है, सिवाय इस तथ्य के कि टारगेट पते पर कोड को कॉलिंग अनुबंध के संदर्भ में (यानी, पते पर) निष्पादित किया जाता है और `msg.sender` और `msg.value` अपने मान नहीं बदलते हैं।_ _इसका मतलब है कि एक अनुबंध रनटाइम पर एक अलग पते से कोड को गतिशील रूप से लोड कर सकता है। _स्टोरेज, वर्तमान पता और बैलेंस अभी भी कॉलिंग अनुबंध को संदर्भित करते हैं, केवल कोड को कॉल किए गए पते से लिया जाता है।_
 
-प्रॉक्सी अनुबंध `delegatecall` को तब इनवोक करता है जब भी कोई यूज़र किसी फ़ंक्शन को कॉल करता है क्योंकि इसमें एक `fallback` फ़ंक्शन बनाया गया है। Solidity प्रोग्रामिंग में [fallback function](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) तब निष्पादित होता है जब कोई फ़ंक्शन कॉल किसी अनुबंध में निर्दिष्ट फ़ंक्शन से मेल नहीं खाता है।
+प्रॉक्सी अनुबंध `delegatecall` को तब इनवोक करता है जब भी कोई यूज़र किसी फ़ंक्शन को कॉल करता है क्योंकि इसमें एक `fallback` फ़ंक्शन बनाया गया है। सॉलिडिटी प्रोग्रामिंग में [fallback function](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) तब निष्पादित होता है जब कोई फ़ंक्शन कॉल किसी अनुबंध में निर्दिष्ट फ़ंक्शन से मेल नहीं खाता है।
 
 प्रॉक्सी पैटर्न को काम करने के लिए एक कस्टम फ़ॉलबैक फ़ंक्शन लिखने की आवश्यकता होती है जो निर्दिष्ट करता है कि प्रॉक्सी अनुबंध को फ़ंक्शन कॉल को कैसे प्रबंधित करना चाहिए, यह समर्थन नहीं करता है। इस मामले में प्रॉक्सी के फ़ॉलबैक फ़ंक्शन को एक delegatecall शुरू करने और वर्तमान तर्क अनुबंध कार्यान्वयन के लिए उपयोगकर्ता के अनुरोध को फिर से रूट करने के लिए प्रोग्राम किया गया है।
 
@@ -134,7 +134,7 @@ lang: hi
 
 2. स्मार्ट अनुबंधों को अपग्रेड करना एक जटिल गतिविधि है और कमजोरियों की शुरुआत को रोकने के लिए उच्च स्तर के परिश्रम की आवश्यकता होती है।
 
-3. अपग्रेड को लागू करने की प्रक्रिया को विकेन्द्रीकृत करके विश्वास मान्यताओं को कम करें। संभावित रणनीतियों में अपग्रेड को नियंत्रित करने के लिए [मल्टी-सिग वॉलेट अनुबंध](/developers/docs/smart-contracts/#multisig) का उपयोग करना, या अपग्रेड को मंजूरी देने के लिए [DAO के सदस्यों](/dao/) से वोटिंग की आवश्यकता शामिल है।
+3. अपग्रेड को लागू करने की प्रक्रिया को विकेन्द्रीकृत करके विश्वास मान्यताओं को कम करें। संभावित रणनीतियों में अपग्रेड को नियंत्रित करने के लिए [मल्टी-सिग वॉलेट अनुबंध](/developers/docs/smart-contracts/#multisig) का उपयोग करना, या अपग्रेड को मंजूरी देने के लिए [डाओ के सदस्यों](/dao/) से वोटिंग की आवश्यकता शामिल है।
 
 4. अनुबंधों को अपग्रेड करने में शामिल लागतों से अवगत रहें। उदाहरण के लिए, अनुबंध माइग्रेशन के दौरान एक पुराने अनुबंध से एक नए अनुबंध में राज्य (जैसे, उपयोगकर्ता शेष) की प्रतिलिपि बनाने के लिए एक से अधिक लेनदेन की आवश्यकता हो सकती है, जिसका अर्थ है अधिक गैस शुल्क।
 
@@ -144,22 +144,22 @@ lang: hi
 
 ## संसाधन {#resources}
 
-**OpenZeppelin अपग्रेड प्लगइन्स - _अपग्रेड करने योग्य स्मार्ट अनुबंधों को डिप्लॉय करने और सुरक्षित करने के लिए टूल्स का एक सूट।_**
+**ओपनज़ेपेलिन अपग्रेड प्लगइन्स - _अपग्रेड करने योग्य स्मार्ट अनुबंधों को डिप्लॉय करने और सुरक्षित करने के लिए टूल्स का एक सूट।_**
 
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
+- [गिटहब](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [डॉक्यूमेंटेशन](https://docs.openzeppelin.com/upgrades)
 
 ## ट्यूटोरियल {#tutorials}
 
-- [अपने स्मार्ट अनुबंधों को अपग्रेड करना | YouTube ट्यूटोरियल](https://www.youtube.com/watch?v=bdXJmWajZRY) - पैट्रिक कोलिन्स द्वारा
-- [Ethereum स्मार्ट अनुबंध माइग्रेशन ट्यूटोरियल](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) - ऑस्टिन ग्रिफिथ द्वारा
+- [अपने स्मार्ट अनुबंधों को अपग्रेड करना | यूट्यूब ट्यूटोरियल](https://www.youtube.com/watch?v=bdXJmWajZRY) - पैट्रिक कोलिन्स द्वारा
+- [एथेरियम स्मार्ट अनुबंध माइग्रेशन ट्यूटोरियल](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) - ऑस्टिन ग्रिफिथ द्वारा
 - [स्मार्ट अनुबंधों को अपग्रेड करने के लिए UUPS प्रॉक्सी पैटर्न का उपयोग करना](https://blog.logrocket.com/author/praneshas/) - प्रणेश ए.एस द्वारा
-- [Web3 ट्यूटोरियल: OpenZeppelin का उपयोग करके अपग्रेड करने योग्य स्मार्ट अनुबंध (प्रॉक्सी) लिखें](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) - fangjun.eth द्वारा
+- [वेब3 ट्यूटोरियल: ओपनज़ेपेलिन का उपयोग करके अपग्रेड करने योग्य स्मार्ट अनुबंध (प्रॉक्सी) लिखें](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) - fangjun.eth द्वारा
 
 ## आगे की रीडिंग {#further-reading}
 
 - [स्मार्ट अनुबंध अपग्रेड की स्थिति](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) - सैंटियागो पैलाडिनो द्वारा
-- [एक Solidity स्मार्ट अनुबंध को अपग्रेड करने के कई तरीके](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool ब्लॉग
-- [जानें: स्मार्ट अनुबंधों को अपग्रेड करना](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin Docs
-- [Solidity अनुबंधों की अपग्रेडेबिलिटी के लिए प्रॉक्सी पैटर्न: पारदर्शी बनाम UUPS प्रॉक्सी](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) - नवीन साहू द्वारा
+- [एक सॉलिडिटी स्मार्ट अनुबंध को अपग्रेड करने के कई तरीके](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool ब्लॉग
+- [जानें: स्मार्ट अनुबंधों को अपग्रेड करना](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - ओपनज़ेपेलिन Docs
+- [सॉलिडिटी अनुबंधों की अपग्रेडेबिलिटी के लिए प्रॉक्सी पैटर्न: पारदर्शी बनाम UUPS प्रॉक्सी](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) - नवीन साहू द्वारा
 - [डायमंड अपग्रेड कैसे काम करते हैं](https://dev.to/mudgen/how-diamond-upgrades-work-417j) - निक मज द्वारा

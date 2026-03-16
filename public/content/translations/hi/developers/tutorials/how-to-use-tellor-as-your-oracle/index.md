@@ -1,7 +1,7 @@
 ---
 title: "अपने ओरेकल के रूप में टेलर को कैसे सेट अप करें"
 description: "अपने प्रोटोकॉल में टेलर ओरेकल को एकीकृत करने के साथ शुरू करने के लिए एक गाइड"
-author: "Tellor"
+author: "टेलर"
 lang: hi
 tags: [ "Solidity", "स्मार्ट अनुबंध", "ओरेकल्स" ]
 skill: beginner
@@ -76,6 +76,6 @@ function setBtcPrice() public {
 
 अनुबंध पतों की पूरी सूची के लिए [यहां](https://docs.tellor.io/tellor/the-basics/contracts-reference) देखें।
 
-उपयोग में आसानी के लिए, UsingTellor रेपो आसान एकीकरण के लिए [Tellor Playground](https://github.com/tellor-io/TellorPlayground) अनुबंध के एक संस्करण के साथ आता है। सहायक फ़ंक्शंस की सूची के लिए [यहां](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) देखें।
+उपयोग में आसानी के लिए, UsingTellor रेपो आसान एकीकरण के लिए [टेलर Playground](https://github.com/tellor-io/TellorPlayground) अनुबंध के एक संस्करण के साथ आता है। सहायक फ़ंक्शंस की सूची के लिए [यहां](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) देखें।
 
 टेलर ओरेकल के अधिक मजबूत कार्यान्वयन के लिए, उपलब्ध फ़ंक्शंस की पूरी सूची [यहां](https://github.com/tellor-io/usingtellor/blob/master/README.md) देखें।

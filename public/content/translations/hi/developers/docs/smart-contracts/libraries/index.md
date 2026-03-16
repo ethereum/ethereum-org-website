@@ -20,7 +20,7 @@ lang: hi
 
 स्मार्ट अनुबंध लाइब्रेरी आमतौर पर इन व्यवहारों के पुन: प्रयोज्य कार्यान्वयन को सॉलिडिटी में [लाइब्रेरी](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) या [इनहेरिटेंस](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) के माध्यम से प्रदान करती हैं।
 
-एक उदाहरण के रूप में, निम्नलिखित [OpenZeppelin कॉन्ट्रैक्ट्स लाइब्रेरी](https://github.com/OpenZeppelin/openzeppelin-contracts) से [`Ownable` अनुबंध](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) का एक सरलीकृत संस्करण है, जो एक पते को एक अनुबंध के मालिक के रूप में नामित करता है, और केवल उस मालिक तक पहुंच को एक विधि तक सीमित करने के लिए एक संशोधक प्रदान करता है।
+एक उदाहरण के रूप में, निम्नलिखित [ओपनज़ेपेलिन कॉन्ट्रैक्ट्स लाइब्रेरी](https://github.com/OpenZeppelin/openzeppelin-contracts) से [`Ownable` अनुबंध](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) का एक सरलीकृत संस्करण है, जो एक पते को एक अनुबंध के मालिक के रूप में नामित करता है, और केवल उस मालिक तक पहुंच को एक विधि तक सीमित करने के लिए एक संशोधक प्रदान करता है।
 
 ```solidity
 contract Ownable {
@@ -56,7 +56,7 @@ contract MyContract is Ownable {
 
 [कम्पोज़ेबिलिटी और इंटरऑपरेटेबिलिटी](/developers/docs/smart-contracts/composability/) को सुविधाजनक बनाने के लिए, एथेरियम समुदाय ने **ERCs** के रूप में कई मानकों को परिभाषित किया है। आप उनके बारे में [मानक](/developers/docs/standards/) अनुभाग में और अधिक पढ़ सकते हैं।
 
-अपने अनुबंधों के हिस्से के रूप में एक ERC को शामिल करते समय, अपने स्वयं के रोल आउट करने की कोशिश करने के बजाय मानक कार्यान्वयनों की तलाश करना एक अच्छा विचार है। कई स्मार्ट अनुबंध लाइब्रेरी में सबसे लोकप्रिय ERC के लिए कार्यान्वयन शामिल हैं। उदाहरण के लिए, सर्वव्यापी [ERC20 फंजिबल टोकन मानक](/developers/tutorials/understand-the-erc-20-token-smart-contract/) [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) और [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20) में पाया जा सकता है। इसके अतिरिक्त, कुछ ERC स्वयं ERC के हिस्से के रूप में विहित कार्यान्वयन भी प्रदान करते हैं।
+अपने अनुबंधों के हिस्से के रूप में एक ERC को शामिल करते समय, अपने स्वयं के रोल आउट करने की कोशिश करने के बजाय मानक कार्यान्वयनों की तलाश करना एक अच्छा विचार है। कई स्मार्ट अनुबंध लाइब्रेरी में सबसे लोकप्रिय ERC के लिए कार्यान्वयन शामिल हैं। उदाहरण के लिए, सर्वव्यापी [ERC20 फंजिबल टोकन मानक](/developers/tutorials/understand-the-erc-20-token-smart-contract/) [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) और [ओपनज़ेपेलिन](https://docs.openzeppelin.com/contracts/3.x/erc20) में पाया जा सकता है। इसके अतिरिक्त, कुछ ERC स्वयं ERC के हिस्से के रूप में विहित कार्यान्वयन भी प्रदान करते हैं।
 
 यह उल्लेखनीय है कि कुछ ERC स्टैंडअलोन नहीं हैं, बल्कि अन्य ERC के अतिरिक्त हैं। उदाहरण के लिए, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) अपनी उपयोगिता में सुधार करने के लिए ERC20 में एक एक्सटेंशन जोड़ता है।
 
@@ -73,7 +73,7 @@ contract MyNFT is ERC721 {
 }
 ```
 
-आपके द्वारा उपयोग की जाने वाली विधि के बावजूद, लाइब्रेरी शामिल करते समय, हमेशा [भाषा](/developers/docs/smart-contracts/languages/) संस्करण पर नज़र रखें। उदाहरण के लिए, यदि आप Solidity 0.5 में अपने अनुबंध लिख रहे हैं तो आप Solidity 0.6 के लिए लाइब्रेरी का उपयोग नहीं कर सकते।
+आपके द्वारा उपयोग की जाने वाली विधि के बावजूद, लाइब्रेरी शामिल करते समय, हमेशा [भाषा](/developers/docs/smart-contracts/languages/) संस्करण पर नज़र रखें। उदाहरण के लिए, यदि आप सॉलिडिटी 0.5 में अपने अनुबंध लिख रहे हैं तो आप सॉलिडिटी 0.6 के लिए लाइब्रेरी का उपयोग नहीं कर सकते।
 
 ## कब उपयोग करें {#when-to-use}
 
@@ -87,25 +87,25 @@ contract MyNFT is ERC721 {
 
 ## संबंधित उपकरण {#related-tools}
 
-**OpenZeppelin कॉन्ट्रैक्ट्स -** **_सुरक्षित स्मार्ट अनुबंध विकास के लिए सबसे लोकप्रिय लाइब्रेरी।_**
+**ओपनज़ेपेलिन कॉन्ट्रैक्ट्स -** **_सुरक्षित स्मार्ट अनुबंध विकास के लिए सबसे लोकप्रिय लाइब्रेरी।_**
 
 - [प्रलेखन](https://docs.openzeppelin.com/contracts/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [गिटहब](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [कम्युनिटी फोरम](https://forum.openzeppelin.com/c/general/16)
 
 **DappSys -** **_स्मार्ट-कॉन्ट्रैक्ट्स के लिए सुरक्षित, सरल, लचीले बिल्डिंग-ब्लॉक।_**
 
 - [प्रलेखन](https://dappsys.readthedocs.io/)
-- [GitHub](https://github.com/dapphub/dappsys)
+- [गिटहब](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_वास्तविक दुनिया के लिए पूर्ण-विशेषताओं वाले वितरित एप्लिकेशन बनाने में आपकी मदद करने के लिए अनुबंधों, लाइब्रेरियों और उदाहरणों वाला एक सॉलिडिटी प्रोजेक्ट।_**
 
-- [GitHub](https://github.com/HQ20/contracts)
+- [गिटहब](https://github.com/HQ20/contracts)
 
-**thirdweb Solidity SDK -** **_कस्टम स्मार्ट अनुबंधों को कुशलतापूर्वक बनाने के लिए आवश्यक उपकरण प्रदान करता है_**
+**thirdweb सॉलिडिटी SDK -** **_कस्टम स्मार्ट अनुबंधों को कुशलतापूर्वक बनाने के लिए आवश्यक उपकरण प्रदान करता है_**
 
 - [प्रलेखन](https://portal.thirdweb.com/contracts/build/overview)
-- [GitHub](https://github.com/thirdweb-dev/contracts)
+- [गिटहब](https://github.com/thirdweb-dev/contracts)
 
 ## संबंधित ट्यूटोरियल {#related-tutorials}
 

@@ -1,5 +1,5 @@
 ---
-title: "Solidity से अन्य अनुबंधों के साथ इंटरैक्ट करें"
+title: "सॉलिडिटी से अन्य अनुबंधों के साथ इंटरैक्ट करें"
 description: "मौजूदा अनुबंध से एक स्मार्ट अनुबंध को कैसे परिनियोजित करें और इसके साथ इंटरैक्ट करें"
 author: "jdourlens"
 tags:
@@ -18,7 +18,7 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-पिछले ट्यूटोरियल में हमने बहुत कुछ सीखा [अपना पहला स्मार्ट अनुबंध कैसे परिनियोजित करें](/developers/tutorials/deploying-your-first-smart-contract/) और इसमें कुछ सुविधाएँ जोड़ें जैसे [मॉडिफ़ायर के साथ एक्सेस नियंत्रित करें](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) या [Solidity में त्रुटि संभालना](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/)। इस ट्यूटोरियल में हम सीखेंगे कि किसी मौजूदा अनुबंध से स्मार्ट अनुबंध कैसे परिनियोजित करें और उसके साथ कैसे इंटरैक्ट करें।
+पिछले ट्यूटोरियल में हमने बहुत कुछ सीखा [अपना पहला स्मार्ट अनुबंध कैसे परिनियोजित करें](/developers/tutorials/deploying-your-first-smart-contract/) और इसमें कुछ सुविधाएँ जोड़ें जैसे [मॉडिफ़ायर के साथ एक्सेस नियंत्रित करें](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) या [सॉलिडिटी में त्रुटि संभालना](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/)। इस ट्यूटोरियल में हम सीखेंगे कि किसी मौजूदा अनुबंध से स्मार्ट अनुबंध कैसे परिनियोजित करें और उसके साथ कैसे इंटरैक्ट करें।
 
 हम एक अनुबंध बनाएंगे जो किसी को भी इसके लिए एक फ़ैक्टरी बनाकर अपना `Counter` स्मार्ट अनुबंध रखने में सक्षम बनाता है, इसका नाम `CounterFactory` होगा। सबसे पहले, यहाँ हमारे शुरुआती `Counter` स्मार्ट अनुबंध का कोड है:
 

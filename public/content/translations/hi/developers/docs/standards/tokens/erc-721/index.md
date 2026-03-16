@@ -14,7 +14,7 @@ lang: hi
 
 **ERC-721 क्या है?**
 
-ERC-721 NFT के लिए एक मानक पेश करता है, दूसरे शब्दों में, इस प्रकार का टोकन अद्वितीय है और इसका अलग-अलग मूल्य हो सकता है
+ERC-721 एनएफटी के लिए एक मानक पेश करता है, दूसरे शब्दों में, इस प्रकार का टोकन अद्वितीय है और इसका अलग-अलग मूल्य हो सकता है
 उसी स्मार्ट कॉन्ट्रैक्ट से एक और टोकन की तुलना में, शायद इसकी उम्र, दुर्लभता या इसके दृश्य की तरह कुछ और भी।
 रुको, दृश्य?
 
@@ -69,9 +69,9 @@ From [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 हमें किसी भी ERC-721 टोकन के लिए एक इंटरफ़ेस बनाने के लिए कॉन्ट्रैक्ट एप्लिकेशन बाइनरी इंटरफ़ेस (ABI) की आवश्यकता है। जैसा आप कर सकते हैं
 नीचे देखें कि हम इसे कम घर्षण उदाहरण बनाने के लिए एक सरलीकृत एबीआई का उपयोग करेंगे।
 
-#### Web3.py उदाहरण {#web3py-example}
+#### वेब3.पीवाई उदाहरण {#web3py-example}
 
-सबसे पहले, सुनिश्चित करें कि आपने [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python लाइब्रेरी इंस्टॉल कर ली है:
+सबसे पहले, सुनिश्चित करें कि आपने [वेब3.पीवाई](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) पायथन लाइब्रेरी इंस्टॉल कर ली है:
 
 ```
 pip install web3
@@ -238,12 +238,12 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## लोकप्रिय एनएफ़टी {#popular-nfts}
 
-- [Etherscan NFT Tracker](https://etherscan.io/nft-top-contracts) हस्तांतरण की मात्रा के आधार पर एथेरियम पर शीर्ष एनएफ़टी को सूचीबद्ध करता है।
+- [ईथरस्कैन एनएफटी Tracker](https://etherscan.io/nft-top-contracts) हस्तांतरण की मात्रा के आधार पर एथेरियम पर शीर्ष एनएफ़टी को सूचीबद्ध करता है।
 - [CryptoKitties](https://www.cryptokitties.co/) एक ऐसा गेम है जो प्रजनन योग्य, संग्रहणीय और बहुत ही मनमोहक
   प्राणियों के इर्द-गिर्द केंद्रित है जिन्हें हम CryptoKitties कहते हैं।
 - [Sorare](https://sorare.com/) एक वैश्विक फंतासी फुटबॉल गेम है जहाँ आप सीमित संस्करण संग्रहणीय वस्तुएं एकत्र कर सकते हैं,
   अपनी टीमों का प्रबंधन कर सकते हैं और पुरस्कार अर्जित करने के लिए प्रतिस्पर्धा कर सकते हैं।
-- [एथेरियम नेम सर्विस (ENS)](https://ens.domains/) सरल, मानव-पठनीय नामों का उपयोग करके ब्लॉकचेन पर और उससे बाहर दोनों संसाधनों को संबोधित करने का एक सुरक्षित और विकेन्द्रीकृत तरीका प्रदान करता है।
+- [एथेरियम नेम सर्विस (ईएनएस)](https://ens.domains/) सरल, मानव-पठनीय नामों का उपयोग करके ब्लॉकचेन पर और उससे बाहर दोनों संसाधनों को संबोधित करने का एक सुरक्षित और विकेन्द्रीकृत तरीका प्रदान करता है।
 - [POAP](https://poap.xyz) उन लोगों को मुफ्त एनएफ़टी देता है जो इवेंट में भाग लेते हैं या विशिष्ट कार्यों को पूरा करते हैं। पीओएपी बनाने और वितरित करने के लिए स्वतंत्र हैं।
 - [Unstoppable Domains](https://unstoppabledomains.com/) एक सैन फ्रांसिस्को-आधारित कंपनी है जो
   ब्लॉकचेन पर डोमेन बना रही है। ब्लॉकचेन डोमेन क्रिप्टोकरेंसी पतों को मानव-पठनीय नामों से बदल देते हैं और इसका उपयोग
@@ -254,6 +254,6 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 ## आगे की रीडिंग {#further-reading}
 
 - [EIP-721: ERC-721 अपूरणीय टोकन मानक](https://eips.ethereum.org/EIPS/eip-721)
-- [OpenZeppelin - ERC-721 डॉक्स](https://docs.openzeppelin.com/contracts/3.x/erc721)
-- [OpenZeppelin - ERC-721 कार्यान्वयन](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
-- [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
+- [ओपनज़ेपेलिन - ERC-721 डॉक्स](https://docs.openzeppelin.com/contracts/3.x/erc721)
+- [ओपनज़ेपेलिन - ERC-721 कार्यान्वयन](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
+- [अल्केमी एनएफटी API](https://www.alchemy.com/docs/reference/nft-api-quickstart)

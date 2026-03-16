@@ -28,21 +28,21 @@ lang: hi
 
 **ध्यान दें**: अधिकांश [डेवलपमेंट फ्रेमवर्क](/developers/docs/frameworks/) में एक अंतर्निहित डेवलपमेंट नेटवर्क शामिल होता है। हमारा सुझाव है कि आप [अपने स्थानीय डेवलपमेंट परिवेश को सेट करने](/developers/local-environment/) के लिए एक फ्रेमवर्क से शुरुआत करें।
 
-### Hardhat नेटवर्क {#hardhat-network}
+### हार्डहैट नेटवर्क {#hardhat-network}
 
 विकास के लिए डिज़ाइन किया गया एक स्थानीय एथेरियम नेटवर्क। यह आपको अपने अनुबंधों को तैनात करने, अपने परीक्षण चलाने और अपने कोड को डीबग करने की अनुमति देता है।
 
-Hardhat Network Hardhat के साथ बिल्ट-इन आता है, जो पेशेवरों के लिए एक Ethereum डेवलपमेंट एनवायरनमेंट है।
+हार्डहैट Network हार्डहैट के साथ बिल्ट-इन आता है, जो पेशेवरों के लिए एक एथेरियम डेवलपमेंट एनवायरनमेंट है।
 
 - [वेबसाइट](https://hardhat.org/)
-- [GitHub](https://github.com/NomicFoundation/hardhat)
+- [गिटहब](https://github.com/NomicFoundation/hardhat)
 
 ### स्थानीय बीकन चेन्स {#local-beacon-chains}
 
 कुछ आम सहमति ग्राहकों के पास परीक्षण उद्देश्यों के लिए स्थानीय बीकन श्रृंखलाओं को कताई के लिए अंतर्निहित उपकरण हैं। लाइटहाउस, निंबस और लॉडस्टार के लिए निर्देश उपलब्ध हैं:
 
-- [Lodestar का उपयोग करके स्थानीय टेस्टनेट](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
-- [Lighthouse का उपयोग करके स्थानीय टेस्टनेट](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [लोडस्टार का उपयोग करके स्थानीय टेस्टनेट](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
+- [लाइटहाउस का उपयोग करके स्थानीय टेस्टनेट](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 
 ### सार्वजनिक एथेरियम टेस्ट-चेन {#public-beacon-testchains}
 
@@ -58,7 +58,7 @@ Hardhat Network Hardhat के साथ बिल्ट-इन आता है
 
 - [एथेरियम नेटवर्क पैकेज](https://github.com/kurtosis-tech/ethereum-package)
 - [वेबसाइट](https://www.kurtosis.com/)
-- [GitHub](https://github.com/kurtosis-tech/kurtosis)
+- [गिटहब](https://github.com/kurtosis-tech/kurtosis)
 - [प्रलेखन](https://docs.kurtosis.com/)
 
 ## आगे की रीडिंग {#further-reading}

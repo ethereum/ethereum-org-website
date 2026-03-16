@@ -10,7 +10,7 @@ lang: hi
 
 यदि आप [एक स्थानीय विकास वातावरण स्थापित करने](/developers/local-environment/) से पहले कोड के साथ छेड़छाड़ करना चाहते हैं, तो ये वेब ऐप एथेरियम स्मार्ट अनुबंध विकास के लिए कस्टम-निर्मित हैं।
 
-**[Remix](https://remix.ethereum.org/)** - **_अंतर्निहित स्थैतिक विश्लेषण, और एक परीक्षण ब्लॉकचेन वर्चुअल मशीन के साथ वेब-आधारित IDE_**
+**[रीमिक्स](https://remix.ethereum.org/)** - **_अंतर्निहित स्थैतिक विश्लेषण, और एक परीक्षण ब्लॉकचेन वर्चुअल मशीन के साथ वेब-आधारित IDE_**
 
 - [डॉक्स](https://remix-ide.readthedocs.io/en/latest/#)
 - [Gitter](https://gitter.im/ethereum/remix)
@@ -20,11 +20,11 @@ lang: hi
 - [डॉक्स](https://chainide.gitbook.io/chainide-english-1/)
 - [सहायता फ़ोरम](https://forum.chainide.com/)
 
-**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_हॉट रीलोडिंग, त्रुटि जाँच और प्रथम श्रेणी के टेस्टनेट समर्थन के साथ एथेरियम के लिए एक अनुकूलन योग्य विकास वातावरण_**
+**[Replit (सॉलिडिटी Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_हॉट रीलोडिंग, त्रुटि जाँच और प्रथम श्रेणी के टेस्टनेट समर्थन के साथ एथेरियम के लिए एक अनुकूलन योग्य विकास वातावरण_**
 
 - [डॉक्स](https://docs.replit.com/)
 
-**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_एक तेज़ प्रोटोटाइपिंग वातावरण जहाँ आप Solidity और JavaScript का उपयोग करके ब्राउज़र में स्मार्ट अनुबंध लिख, निष्पादित और डीबग कर सकते हैं_**
+**[टेंडरली Sandbox](https://sandbox.tenderly.co/)** - **_एक तेज़ प्रोटोटाइपिंग वातावरण जहाँ आप सॉलिडिटी और जावास्क्रिप्ट का उपयोग करके ब्राउज़र में स्मार्ट अनुबंध लिख, निष्पादित और डीबग कर सकते हैं_**
 
 **[EthFiddle](https://ethfiddle.com/)** - **_वेब-आधारित IDE जो आपको अपना स्मार्ट अनुबंध लिखने, संकलित करने और डीबग करने की सुविधा देता है_**
 
@@ -38,27 +38,27 @@ lang: hi
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [कोड नमूने](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
-- [GitHub](https://github.com/microsoft/vscode)
+- [गिटहब](https://github.com/microsoft/vscode)
 
 **JetBrains IDEs (IntelliJ IDEA, आदि)** -\*\* **_सॉफ्टवेयर डेवलपर्स और टीमों के लिए आवश्यक उपकरण_**
 
 - [JetBrains](https://www.jetbrains.com/)
-- [GitHub](https://github.com/JetBrains)
-- [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
+- [गिटहब](https://github.com/JetBrains)
+- [IntelliJ सॉलिडिटी](https://github.com/intellij-solidity/intellij-solidity/)
 
-**Remix Desktop -** **_अपने स्थानीय मशीन पर Remix IDE का अनुभव करें_**
+**रीमिक्स Desktop -** **_अपने स्थानीय मशीन पर रीमिक्स IDE का अनुभव करें_**
 
 - [डाउनलोड करें](https://github.com/ethereum/remix-desktop/releases)
-- [GitHub](https://github.com/ethereum/remix-desktop)
+- [गिटहब](https://github.com/ethereum/remix-desktop)
 
 ## प्लगइन्स और एक्सटेंशन {#plugins-extensions}
 
-- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Visual Studio Code के लिए एथेरियम Solidity भाषा
-- [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Hardhat टीम द्वारा Solidity और Hardhat समर्थन
-- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - prettier का उपयोग कर कोड फ़ॉर्मेटर
+- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Visual Studio Code के लिए एथेरियम सॉलिडिटी भाषा
+- [सॉलिडिटी + हार्डहैट for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - हार्डहैट टीम द्वारा सॉलिडिटी और हार्डहैट समर्थन
+- [Prettier सॉलिडिटी](https://github.com/prettier-solidity/prettier-plugin-solidity) - prettier का उपयोग कर कोड फ़ॉर्मेटर
 
 ## आगे की रीडिंग {#further-reading}
 
-- [एथेरियम IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy की एथेरियम IDEs की सूची_
+- [एथेरियम IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- अल्केमी की एथेरियम IDEs की सूची_
 
 _क्या आप किसी सामुदायिक संसाधन के बारे में जानते हैं जिसने आपकी मदद की हो? इस पृष्ठ को संपादित करें और इसे जोड़ें!_

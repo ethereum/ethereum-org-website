@@ -1,7 +1,7 @@
 ---
 title: "ethers.js का उपयोग करके टोकन भेजना"
 description: "ethers.js का उपयोग करके टोकन भेजने के लिए शुरुआती लोगों के लिए अनुकूल गाइड।"
-author: Kim YongJun
+author: किम योंग-जुन
 tags: [ "ETHERS.JS", "ERC-20", "टोकन" ]
 skill: beginner
 lang: hi
@@ -61,7 +61,7 @@ ethers.js(5.0) शामिल करें
 
 ### 1. नेटवर्क से कनेक्ट करें (टेस्टनेट) {#connect-to-network}
 
-#### प्रोवाइडर सेट करें (Infura) {#set-provider}
+#### प्रोवाइडर सेट करें (इन्फ्यूरा) {#set-provider}
 
 Ropsten टेस्टनेट से कनेक्ट करें
 

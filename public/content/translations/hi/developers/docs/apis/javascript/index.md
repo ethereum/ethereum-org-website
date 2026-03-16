@@ -1,6 +1,6 @@
 ---
-title: "JavaScript एपीआई पुस्तकालयों"
-description: "JavaScript क्लाइंट लाइब्रेरी का परिचय जो आपको अपने एप्लिकेशन से ब्लॉकचेन के साथ इंटरैक्ट करने देता है।"
+title: "जावास्क्रिप्ट एपीआई पुस्तकालयों"
+description: "जावास्क्रिप्ट क्लाइंट लाइब्रेरी का परिचय जो आपको अपने एप्लिकेशन से ब्लॉकचेन के साथ इंटरैक्ट करने देता है।"
 lang: hi
 ---
 
@@ -18,15 +18,15 @@ lang: hi
 
 ## पुस्तकालय का उपयोग क्यों करें? {#why-use-a-library}
 
-ये पुस्तकालय एथेरियम नोड के साथ सीधे बातचीत करने की जटिलता को दूर करते हैं। वे यूटिलिटी फ़ंक्शन भी प्रदान करते हैं (जैसे, ETH को Gwei में बदलना) ताकि एक डेवलपर के रूप में आप Ethereum क्लाइंट की जटिलताओं से निपटने में कम समय बिता सकें और अपने एप्लिकेशन की अनूठी कार्यक्षमता पर अधिक समय केंद्रित कर सकें।
+ये पुस्तकालय एथेरियम नोड के साथ सीधे बातचीत करने की जटिलता को दूर करते हैं। वे यूटिलिटी फ़ंक्शन भी प्रदान करते हैं (जैसे, ETH को Gwei में बदलना) ताकि एक डेवलपर के रूप में आप एथेरियम क्लाइंट की जटिलताओं से निपटने में कम समय बिता सकें और अपने एप्लिकेशन की अनूठी कार्यक्षमता पर अधिक समय केंद्रित कर सकें।
 
 ## लाइब्रेरी सुविधाएँ {#library-features}
 
 ### एथेरियम नोड्स से कनेक्ट करें {#connect-to-ethereum-nodes}
 
-प्रदाताओं का उपयोग करके, ये पुस्तकालय आपको एथेरियम से जुड़ने और इसके डेटा को पढ़ने की अनुमति देते हैं, चाहे वह JSON-RPC, INFURA, ETHERSCAN, कीमिया या MetaMask पर हो।
+प्रदाताओं का उपयोग करके, ये पुस्तकालय आपको एथेरियम से जुड़ने और इसके डेटा को पढ़ने की अनुमति देते हैं, चाहे वह JSON-RPC, INFURA, ETHERSCAN, कीमिया या मेटामास्क पर हो।
 
-> **चेतावनी:** Web3.js को 4 मार्च, 2025 को संग्रहीत किया गया था। [घोषणा पढ़ें](https://blog.chainsafe.io/web3-js-sunset/)। नई परियोजनाओं के लिए [ethers.js](https://ethers.org) या [viem](https://viem.sh) जैसी वैकल्पिक लाइब्रेरी का उपयोग करने पर विचार करें।
+> **चेतावनी:** वेब3.जेएस को 4 मार्च, 2025 को संग्रहीत किया गया था। [घोषणा पढ़ें](https://blog.chainsafe.io/web3-js-sunset/)। नई परियोजनाओं के लिए [ethers.js](https://ethers.org) या [viem](https://viem.sh) जैसी वैकल्पिक लाइब्रेरी का उपयोग करने पर विचार करें।
 
 **ईथर उदाहरण**
 
@@ -239,39 +239,39 @@ ethers.utils.formatEther(balance)
 
 ## उपलब्ध लाइब्रेरीज़ {#available-libraries}
 
-**Web3.js -** **_एथेरियम जावास्क्रिप्ट एपीआई._**
+**वेब3.जेएस -** **_एथेरियम जावास्क्रिप्ट एपीआई._**
 
 - [प्रलेखन](https://docs.web3js.org)
-- [GitHub](https://github.com/ethereum/web3.js)
+- [गिटहब](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_जावास्क्रिप्ट और टाइपस्क्रिप्ट में पूर्ण एथेरियम वॉलेट कार्यान्वयन और उपयोगिताएँ।_**
+**ईथर्स.जेएस -** **_जावास्क्रिप्ट और टाइपस्क्रिप्ट में पूर्ण एथेरियम वॉलेट कार्यान्वयन और उपयोगिताएँ।_**
 
-- [Ethers.js होम](https://ethers.org/)
+- [ईथर्स.जेएस होम](https://ethers.org/)
 - [प्रलेखन](https://docs.ethers.io)
-- [GitHub](https://github.com/ethers-io/ethers.js)
+- [गिटहब](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_एथेरियम और IPFS डेटा को इंडेक्स करने और GraphQL का उपयोग करके इसे क्वेरी करने के लिए एक प्रोटोकॉल।_**
+**द ग्राफ -** **_एथेरियम और आईपीएफएस डेटा को इंडेक्स करने और GraphQL का उपयोग करके इसे क्वेरी करने के लिए एक प्रोटोकॉल।_**
 
-- [The Graph](https://thegraph.com)
+- [द ग्राफ](https://thegraph.com)
 - [ग्राफ एक्सप्लोरर](https://thegraph.com/explorer)
 - [प्रलेखन](https://thegraph.com/docs)
-- [GitHub](https://github.com/graphprotocol)
-- [Discord](https://thegraph.com/discord)
+- [गिटहब](https://github.com/graphprotocol)
+- [डिस्कॉर्ड](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_उन्नत एपीआई के साथ Ethers.js के चारों ओर रैपर।_**
+**अल्केमी SDK -** **_उन्नत एपीआई के साथ ईथर्स.जेएस के चारों ओर रैपर।_**
 
 - [प्रलेखन](https://www.alchemy.com/docs)
-- [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
+- [गिटहब](https://github.com/alchemyplatform/alchemy-sdk-js)
 
 **viem -** **_एथेरियम के लिए टाइपस्क्रिप्ट इंटरफ़ेस।_**
 
 - [प्रलेखन](https://viem.sh)
-- [GitHub](https://github.com/wagmi-dev/viem)
+- [गिटहब](https://github.com/wagmi-dev/viem)
 
 **Drift -** **_अंतर्निहित कैशिंग, हुक और परीक्षण मॉक्स के साथ टाइपस्क्रिप्ट मेटा-लाइब्रेरी।_**
 
 - [प्रलेखन](https://ryangoree.github.io/drift/)
-- [GitHub](https://github.com/ryangoree/drift/)
+- [गिटहब](https://github.com/ryangoree/drift/)
 
 ## आगे की रीडिंग {#further-reading}
 
@@ -284,6 +284,6 @@ _क्या आप किसी सामुदायिक संसाधन
 
 ## संबंधित ट्यूटोरियल {#related-tutorials}
 
-- [जावास्क्रिप्ट में Ethereum ब्लॉकचेन का उपयोग करने के लिए Web3js सेट अप करें](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– अपने प्रोजेक्ट में web3.js को सेट अप करने के निर्देश।_
+- [जावास्क्रिप्ट में एथेरियम ब्लॉकचेन का उपयोग करने के लिए Web3js सेट अप करें](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– अपने प्रोजेक्ट में web3.js को सेट अप करने के निर्देश।_
 - [जावास्क्रिप्ट से स्मार्ट अनुबंध को कॉल करना](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI टोकन का उपयोग करके, देखें कि जावास्क्रिप्ट का उपयोग करके अनुबंध फ़ंक्शन को कैसे कॉल किया जाए।_
-- [web3 और Alchemy का उपयोग करके लेनदेन भेजना](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– बैकएंड से लेनदेन भेजने के लिए चरण-दर-चरण पूर्वाभ्यास।_
+- [web3 और अल्केमी का उपयोग करके लेनदेन भेजना](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– बैकएंड से लेनदेन भेजने के लिए चरण-दर-चरण पूर्वाभ्यास।_

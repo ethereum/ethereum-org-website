@@ -1,5 +1,5 @@
 ---
-title: "Rust डेवलपर्स के लिए एथेरियम"
+title: "रस्ट डेवलपर्स के लिए एथेरियम"
 description: "रस्ट आधारित प्रोग्राम भाषा परियोजनाओं और टूलिंग का उपयोग करके एथेरियम के लिए विकसित करना सीखें"
 lang: hi
 incomplete: true
@@ -22,9 +22,9 @@ incomplete: true
 
 ## शुरुआती लेख {#beginner-articles}
 
-- [The Rust Ethereum Client](https://openethereum.github.io/) \* **ध्यान दें कि OpenEthereum को [पदावनत कर दिया गया है](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) और अब इसे बनाए नहीं रखा जा रहा है।** इसका उपयोग सावधानी से करें और बेहतर होगा कि किसी अन्य क्लाइंट कार्यान्वयन पर स्विच करें।
+- [The रस्ट एथेरियम Client](https://openethereum.github.io/) \* **ध्यान दें कि OpenEthereum को [पदावनत कर दिया गया है](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) और अब इसे बनाए नहीं रखा जा रहा है।** इसका उपयोग सावधानी से करें और बेहतर होगा कि किसी अन्य क्लाइंट कार्यान्वयन पर स्विच करें।
 - [रस्ट का उपयोग करके एथेरियम को लेनदेन भेजना](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
-- [Kovan के लिए Rust Wasm में अनुबंध कैसे लिखें, इस पर एक चरण-दर-चरण ट्यूटोरियल](https://github.com/paritytech/pwasm-tutorial)
+- [Kovan के लिए रस्ट Wasm में अनुबंध कैसे लिखें, इस पर एक चरण-दर-चरण ट्यूटोरियल](https://github.com/paritytech/pwasm-tutorial)
 
 ## मध्यवर्ती लेख {#intermediate-articles}
 
@@ -32,34 +32,34 @@ incomplete: true
 
 - [एथेरियम-जैसे नेटवर्क के साथ इंटरैक्ट करने के लिए pwasm_ethereum एक्सटर्न लाइब्रेरी](https://github.com/openethereum/pwasm-ethereum)
 
-- [JavaScript और Rust का उपयोग करके एक विकेंद्रीकृत चैट बनाएं](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
+- [जावास्क्रिप्ट और रस्ट का उपयोग करके एक विकेंद्रीकृत चैट बनाएं](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 
-- [Vue.js और Rust का उपयोग करके एक विकेंद्रीकृत टूडू ऐप बनाएं](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Vue.js और रस्ट का उपयोग करके एक विकेंद्रीकृत टूडू ऐप बनाएं](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 
-- [Rust में एक ब्लॉकचेन बनाएं](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
+- [रस्ट में एक ब्लॉकचेन बनाएं](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## रस्ट परियोजनाएं और उपकरण {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _एथेरियम-जैसे नेटवर्क के साथ इंटरैक्ट करने के लिए एक्सटर्न का संग्रह_
-- [Lighthouse](https://github.com/sigp/lighthouse) - _तेज एथेरियम सहमति परत क्लाइंट_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly के एक नियतात्मक सबसेट का उपयोग करके एथेरियम स्मार्ट अनुबंध निष्पादन परत का प्रस्तावित नया स्वरूप_
+- [लाइटहाउस](https://github.com/sigp/lighthouse) - _तेज एथेरियम सहमति परत क्लाइंट_
+- [एथेरियम WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly के एक नियतात्मक सबसेट का उपयोग करके एथेरियम स्मार्ट अनुबंध निष्पादन परत का प्रस्तावित नया स्वरूप_
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API संदर्भ_
 - [Solaris](https://github.com/paritytech/sol-rs) - _नेटिव Parity क्लाइंट EVM का उपयोग करके सॉलिडिटी स्मार्ट अनुबंध यूनिट परीक्षण हार्नेस।_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _रस्ट एथेरियम वर्चुअल मशीन कार्यान्वयन_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust में Wavelet स्मार्ट अनुबंध_
-- [Foundry](https://github.com/foundry-rs/foundry) - _एथेरियम एप्लिकेशन विकास के लिए टूलकिट_
+- [फाउंड्री](https://github.com/foundry-rs/foundry) - _एथेरियम एप्लिकेशन विकास के लिए टूलकिट_
 - [Alloy](https://alloy.rs) - _एथेरियम और अन्य EVM-आधारित श्रृंखलाओं के साथ इंटरैक्ट करने के लिए उच्च-प्रदर्शन, अच्छी तरह से परीक्षित और प्रलेखित लाइब्रेरीज़।_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _एथेरियम लाइब्रेरी और वॉलेट कार्यान्वयन_
 - [SewUp](https://github.com/second-state/SewUp) - _एक लाइब्रेरी जो आपको रस्ट के साथ अपना एथेरियम वेबअसेंबली अनुबंध बनाने में मदद करती है, ठीक वैसे ही जैसे एक सामान्य बैकएंड में विकसित किया जाता है_
 - [Substreams](https://github.com/streamingfast/substreams) - _समानांतर ब्लॉकचेन डेटा अनुक्रमण तकनीक_
-- [Reth](https://github.com/paradigmxyz/reth) Reth (रस्ट एथेरियम का संक्षिप्त रूप) एक नया एथेरियम फुल-नोड कार्यान्वयन है
-- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rust में लिखे गए एथेरियम इकोसिस्टम में परियोजनाओं का एक क्यूरेटेड संग्रह_
+- [रेथ](https://github.com/paradigmxyz/reth) रेथ (रस्ट एथेरियम का संक्षिप्त रूप) एक नया एथेरियम फुल-नोड कार्यान्वयन है
+- [Awesome एथेरियम रस्ट](https://github.com/Vid201/awesome-ethereum-rust) - _Rust में लिखे गए एथेरियम इकोसिस्टम में परियोजनाओं का एक क्यूरेटेड संग्रह_
 
 अधिक संसाधनों की तलाश है? [ethereum.org/developers.](/developers/) देखें।
 
 ## रस्ट समुदाय के योगदानकर्ता {#rust-community-contributors}
 
-- [Ethereum WebAssembly](https://gitter.im/ewasm/Lobby)
+- [एथेरियम WebAssembly](https://gitter.im/ewasm/Lobby)
 - [Oasis Gitter](https://gitter.im/Oasis-official/Lobby)
 - [Parity Gitter](https://gitter.im/paritytech/parity)
 - [Enigma](https://discord.gg/SJK32GY)

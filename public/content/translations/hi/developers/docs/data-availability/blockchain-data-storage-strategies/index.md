@@ -53,8 +53,8 @@ EIP-4844 पर पोस्टिंग लिखने पर प्रति 
 
 | रोल-अप                               | मेलबॉक्स पता                                                                                                            |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://blobscan.com/address/0xFF00000000000000000000000000000000000010) |
-| [Arbitrum](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://blobscan.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
+| [ऑप्टिमिज़्म](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://blobscan.com/address/0xFF00000000000000000000000000000000000010) |
+| [आर्बिट्रम](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://blobscan.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
 | [Base](https://base.org/)            | [`0xFF00000000000000000000000000000000008453`](https://blobscan.com/address/0xFF00000000000000000000000000000000008453) |
 
 ## Calldata {#calldata}
@@ -69,8 +69,8 @@ EIP-4844 पर पोस्टिंग लिखने पर प्रति 
 
 | रोल-अप                               | मेलबॉक्स पता                                                                                                                  |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000000010) |
-| [Arbitrum](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://eth.blockscout.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
+| [ऑप्टिमिज़्म](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000000010) |
+| [आर्बिट्रम](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://eth.blockscout.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
 | [Base](https://base.org/)            | [`0xFF00000000000000000000000000000000008453`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000008453) |
 
 ## L1 तंत्र के साथ ऑफचेन {#offchain-with-l1-mechs}

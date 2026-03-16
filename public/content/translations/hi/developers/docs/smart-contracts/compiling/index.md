@@ -43,7 +43,7 @@ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x
 
 ABI एक JSON फ़ाइल है जो परिनियोजित अनुबंध और इसके स्मार्ट अनुबंध फंक्शंस का वर्णन करती है। यह web2 और web3 के बीच की खाई को पाटने में मदद करता है
 
-एक [JavaScript क्लाइंट लाइब्रेरी](/developers/docs/apis/javascript/) **ABI** को पढ़ेगी, ताकि आप अपने वेब ऐप के इंटरफ़ेस में अपने स्मार्ट अनुबंध को कॉल कर सकें।
+एक [जावास्क्रिप्ट क्लाइंट लाइब्रेरी](/developers/docs/apis/javascript/) **ABI** को पढ़ेगी, ताकि आप अपने वेब ऐप के इंटरफ़ेस में अपने स्मार्ट अनुबंध को कॉल कर सकें।
 
 नीचे ERC-20 टोकन अनुबंध के लिए ABI है। ERC-20 एक टोकन है जिसे आप एथेरियम पर ट्रेड कर सकते हैं।
 
@@ -278,5 +278,5 @@ ABI एक JSON फ़ाइल है जो परिनियोजित अ
 
 ## संबंधित विषय {#related-topics}
 
-- [JavaScript क्लाइंट लाइब्रेरियाँ](/developers/docs/apis/javascript/)
+- [जावास्क्रिप्ट क्लाइंट लाइब्रेरियाँ](/developers/docs/apis/javascript/)
 - [एथेरियम वर्चुअल मशीन](/developers/docs/evm/)

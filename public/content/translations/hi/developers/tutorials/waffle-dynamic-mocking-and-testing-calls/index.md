@@ -1,7 +1,7 @@
 ---
-title: "Waffle: डायनामिक मॉकिंग और अनुबंध कॉल का परीक्षण"
-description: "डायनामिक मॉकिंग और अनुबंध कॉल के परीक्षण के लिए उन्नत Waffle ट्यूटोरियल"
-author: "Daniel Izdebski"
+title: "वॉफल: डायनामिक मॉकिंग और अनुबंध कॉल का परीक्षण"
+description: "डायनामिक मॉकिंग और अनुबंध कॉल के परीक्षण के लिए उन्नत वॉफल ट्यूटोरियल"
+author: "डैनियल इज़डेब्स्की"
 tags:
   [
     "Waffle",
@@ -112,7 +112,7 @@ contract AmIRichAlready {
 }
 ```
 
-अब हम Waffle के साथ अनुबंध बनाने के लिए तैयार हैं:
+अब हम वॉफल के साथ अनुबंध बनाने के लिए तैयार हैं:
 
 ```bash
 npx waffle
@@ -297,4 +297,4 @@ it("जांचता है कि क्या अनुबंध ने ERC2
 
 ट्यूटोरियल जिनमें आपकी रुचि भी हो सकती है:
 
-- [Waffle के साथ स्मार्ट अनुबंधों का परीक्षण](/developers/tutorials/waffle-test-simple-smart-contract/)
+- [वॉफल के साथ स्मार्ट अनुबंधों का परीक्षण](/developers/tutorials/waffle-test-simple-smart-contract/)

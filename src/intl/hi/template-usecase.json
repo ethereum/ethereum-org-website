@@ -1,8 +1,8 @@
 {
   "template-usecase-dropdown-ai-agents": "एआई एजेंट",
-  "template-usecase-dropdown-defi": "विकेंद्रीकृत वित्त (DeFi)",
-  "template-usecase-dropdown-nft": "अपूरणीय टोकन (NFT)",
-  "template-usecase-dropdown-dao": "विकेन्द्रीकृत स्वायत्त संगठन (DAO)",
+  "template-usecase-dropdown-defi": "विकेंद्रीकृत वित्त (डीफाई)",
+  "template-usecase-dropdown-nft": "अपूरणीय टोकन (एनएफटी)",
+  "template-usecase-dropdown-dao": "विकेन्द्रीकृत स्वायत्त संगठन (डाओ)",
   "template-usecase-dropdown-apps": "एथेरियम एप्लिकेशन",
   "template-usecase-dropdown-payments": "एथेरियम भुगतान",
   "template-usecase-dropdown-prediction-markets": "भविष्यवाणी बाज़ार",

@@ -1,7 +1,7 @@
 ---
 title: "स्थानीय, मल्टी-क्लाइंट टेस्टनेट पर डैप को कैसे विकसित और परीक्षण करें"
 description: "यह गाइड आपको डैप को डिप्लॉय और टेस्ट करने के लिए टेस्टनेट का उपयोग करने से पहले एक मल्टी-क्लाइंट स्थानीय एथेरियम टेस्टनेट को कैसे इंस्टेंटियेट और कॉन्फ़िगर करना है, इसके बारे में बताएगा।"
-author: "Tedi Mitiku"
+author: "टेडी मितिकु"
 tags:
   [
     "क्लाइंट्स",
@@ -31,7 +31,7 @@ published: 2023-04-11
 
 [Kurtosis](https://www.kurtosis.com/) एक कंपोज़ेबल बिल्ड सिस्टम है जिसे मल्टी-कंटेनर परीक्षण वातावरण को कॉन्फ़िगर करने के लिए डिज़ाइन किया गया है। यह विशेष रूप से डेवलपर्स को पुनरुत्पादनीय वातावरण बनाने में सक्षम बनाता है जिसके लिए डायनामिक सेटअप लॉजिक की आवश्यकता होती है, जैसे कि ब्लॉकचेन टेस्टनेट।
 
-इस गाइड में, Kurtosis eth-network-package [`geth`](https://geth.ethereum.org/) निष्पादन परत (EL) क्लाइंट, साथ ही [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/), और [`lodestar`](https://lodestar.chainsafe.io/) सहमति परत (CL) क्लाइंट के समर्थन के साथ एक स्थानीय एथेरियम टेस्टनेट को स्पिन करता है। यह पैकेज हार्डहैट नेटवर्क, गनाश और एनविल जैसे फ्रेमवर्क में नेटवर्क के लिए एक कॉन्फ़िगर करने योग्य और कंपोज़ेबल विकल्प के रूप में कार्य करता है। Kurtosis डेवलपर्स को उनके द्वारा उपयोग किए जाने वाले टेस्टनेट पर अधिक नियंत्रण और लचीलापन प्रदान करता है, जो एक प्रमुख कारण है कि [Ethereum फाउंडेशन ने मर्ज का परीक्षण करने के लिए Kurtosis का उपयोग किया](https://www.kurtosis.com/blog/testing-the-ethereum-merge) और नेटवर्क अपग्रेड के परीक्षण के लिए इसका उपयोग करना जारी रखता है।
+इस गाइड में, Kurtosis eth-network-package [`geth`](https://geth.ethereum.org/) निष्पादन परत (EL) क्लाइंट, साथ ही [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/), और [`lodestar`](https://lodestar.chainsafe.io/) सहमति परत (CL) क्लाइंट के समर्थन के साथ एक स्थानीय एथेरियम टेस्टनेट को स्पिन करता है। यह पैकेज हार्डहैट नेटवर्क, गनाश और एनविल जैसे फ्रेमवर्क में नेटवर्क के लिए एक कॉन्फ़िगर करने योग्य और कंपोज़ेबल विकल्प के रूप में कार्य करता है। Kurtosis डेवलपर्स को उनके द्वारा उपयोग किए जाने वाले टेस्टनेट पर अधिक नियंत्रण और लचीलापन प्रदान करता है, जो एक प्रमुख कारण है कि [एथेरियम फाउंडेशन ने मर्ज का परीक्षण करने के लिए Kurtosis का उपयोग किया](https://www.kurtosis.com/blog/testing-the-ethereum-merge) और नेटवर्क अपग्रेड के परीक्षण के लिए इसका उपयोग करना जारी रखता है।
 
 ## Kurtosis को सेट करना {#setting-up-kurtosis}
 
@@ -39,7 +39,7 @@ published: 2023-04-11
 
 - अपनी स्थानीय मशीन पर [डॉकर इंजन को इंस्टॉल और शुरू किया](https://docs.kurtosis.com/install/#i-install--start-docker)
 - [Kurtosis CLI को इंस्टॉल किया](https://docs.kurtosis.com/install#ii-install-the-cli) (या यदि आपके पास पहले से ही CLI इंस्टॉल है तो इसे नवीनतम रिलीज़ में अपग्रेड किया गया)
-- [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable), और [npx](https://www.npmjs.com/package/npx) इंस्टॉल किया (आपके dApp परिवेश के लिए)
+- [नोड.जेएस](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable), और [npx](https://www.npmjs.com/package/npx) इंस्टॉल किया (आपके dApp परिवेश के लिए)
 
 ## एक स्थानीय एथेरियम टेस्टनेट को इंस्टेंटियेट करना {#instantiate-testnet}
 
@@ -95,7 +95,7 @@ d7b802f623e8   el-client-0                                    engine-rpc: 8551/t
 
 ### समीक्षा {#review-instantiate-testnet}
 
-इस अनुभाग में, आपने एक कमांड निष्पादित किया जिसने Kurtosis को Kurtosis [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/) के भीतर एक स्थानीय एथेरियम टेस्टनेट को स्पिन करने के लिए [`eth-network-package` जो कि GitHub पर रिमोटली होस्टेड है](https://github.com/kurtosis-tech/eth-network-package) का उपयोग करने का निर्देश दिया। अपने एन्क्लेव के अंदर, आपको "फ़ाइल कलाकृतियाँ" और "उपयोगकर्ता सेवाएँ" दोनों मिलेंगी।
+इस अनुभाग में, आपने एक कमांड निष्पादित किया जिसने Kurtosis को Kurtosis [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/) के भीतर एक स्थानीय एथेरियम टेस्टनेट को स्पिन करने के लिए [`eth-network-package` जो कि गिटहब पर रिमोटली होस्टेड है](https://github.com/kurtosis-tech/eth-network-package) का उपयोग करने का निर्देश दिया। अपने एन्क्लेव के अंदर, आपको "फ़ाइल कलाकृतियाँ" और "उपयोगकर्ता सेवाएँ" दोनों मिलेंगी।
 
 आपके एन्क्लेव में [फ़ाइल कलाकृतियाँ](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) में EL और CL क्लाइंट को बूटस्ट्रैप करने के लिए उत्पन्न और उपयोग किए गए सभी डेटा शामिल हैं। डेटा इस [डॉकर छवि](https://github.com/ethpandaops/ethereum-genesis-generator) से निर्मित `prelaunch-data-generator` सेवा का उपयोग करके बनाया गया था
 
@@ -357,12 +357,12 @@ ad6f401126fa   el-client-2                                    engine-rpc: 8551/t
 
 और बस इतना ही! इस संक्षिप्त गाइड को संक्षेप में बताने के लिए, आपने:
 
-- Kurtosis का उपयोग करके Docker पर एक स्थानीय एथेरियम टेस्टनेट बनाया
+- Kurtosis का उपयोग करके डॉकर पर एक स्थानीय एथेरियम टेस्टनेट बनाया
 - अपने स्थानीय dApp विकास परिवेश को स्थानीय एथेरियम नेटवर्क से जोड़ा
 - एक dApp को डिप्लॉय किया और स्थानीय एथेरियम नेटवर्क पर उसके खिलाफ एक सरल परीक्षण चलाया
 - अंतर्निहित एथेरियम नेटवर्क को 3 नोड्स के लिए कॉन्फ़िगर किया
 
-हम आपसे यह सुनना पसंद करेंगे कि आपके लिए क्या अच्छा रहा, क्या सुधार किया जा सकता है, या आपके किसी भी प्रश्न का उत्तर देने के लिए। [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) के माध्यम से या [हमें ईमेल करें](mailto:feedback@kurtosistech.com) के माध्यम से संपर्क करने में संकोच न करें!
+हम आपसे यह सुनना पसंद करेंगे कि आपके लिए क्या अच्छा रहा, क्या सुधार किया जा सकता है, या आपके किसी भी प्रश्न का उत्तर देने के लिए। [गिटहब](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) के माध्यम से या [हमें ईमेल करें](mailto:feedback@kurtosistech.com) के माध्यम से संपर्क करने में संकोच न करें!
 
 ### अन्य उदाहरण और गाइड {#other-examples-guides}
 

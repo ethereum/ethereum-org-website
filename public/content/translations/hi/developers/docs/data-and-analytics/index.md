@@ -20,7 +20,7 @@ lang: hi
 
 कई [ब्लॉक खोजकर्ता](/developers/docs/data-and-analytics/block-explorers/) [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) गेटवे प्रदान करते हैं जो डेवलपर्स को ब्लॉक, लेनदेन, सत्यापनकर्ताओं, खातों और अन्य ऑनचेन गतिविधि पर रीयल-टाइम डेटा में दृश्यता प्रदान करेंगे।
 
-फिर डेवलपर अपने उपयोगकर्ताओं को [ब्लॉकचेन](/glossary/#blockchain) के साथ अद्वितीय अंतर्दृष्टि और इंटरैक्शन देने के लिए इस डेटा को संसाधित और रूपांतरित कर सकते हैं। उदाहरण के लिए, [Etherscan](https://etherscan.io) और [Blockscout](https://eth.blockscout.com) प्रत्येक 12s स्लॉट के लिए निष्पादन और सहमति डेटा प्रदान करते हैं।
+फिर डेवलपर अपने उपयोगकर्ताओं को [ब्लॉकचेन](/glossary/#blockchain) के साथ अद्वितीय अंतर्दृष्टि और इंटरैक्शन देने के लिए इस डेटा को संसाधित और रूपांतरित कर सकते हैं। उदाहरण के लिए, [ईथरस्कैन](https://etherscan.io) और [Blockscout](https://eth.blockscout.com) प्रत्येक 12s स्लॉट के लिए निष्पादन और सहमति डेटा प्रदान करते हैं।
 
 ## द ग्राफ़ {#the-graph}
 

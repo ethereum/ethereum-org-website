@@ -22,8 +22,8 @@ incomplete: false
 
 ## शुरुआती लेख {#beginner-articles}
 
-- [Ethereum खातों को आखिरकार समझना](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
-- [अंततः MetaMask के साथ Rails यूज़र्स को प्रमाणित करना](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
+- [एथेरियम खातों को आखिरकार समझना](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
+- [अंततः मेटामास्क के साथ Rails यूज़र्स को प्रमाणित करना](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
 - [रूबी का उपयोग करके एथेरियम नेटवर्क से कैसे कनेक्ट करें](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [रूबी में एक नया एथेरियम पता कैसे जनरेट करें](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
@@ -38,12 +38,12 @@ incomplete: false
 
 - [eth.rb](https://github.com/q9f/eth.rb) - _एथेरियम खातों, संदेशों और लेन-देन को संभालने के लिए रूबी लाइब्रेरी और RPC-क्लाइंट_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _एथेरियम द्वारा उपयोग किया जाने वाला केकक (SHA3) हैश_
-- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Sign-In with Ethereum का रूबी कार्यान्वयन_
+- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Sign-In with एथेरियम का रूबी कार्यान्वयन_
 - [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _Rails जेम जो SIWE लोकल साइन इन रूट्स जोड़ता है_
-- [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _कस्टम कंट्रोलर के साथ Ruby on Rails का उपयोग करते हुए SIWE उदाहरण_
-- [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _Sign In With Ethereum (SIWE) के लिए OmniAuth रणनीति_
+- [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _कस्टम कंट्रोलर के साथ रूबी on Rails का उपयोग करते हुए SIWE उदाहरण_
+- [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _Sign In With एथेरियम (SIWE) के लिए OmniAuth रणनीति_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _NFT स्वामित्व के माध्यम से प्रमाणित करने के लिए OmniAuth रणनीति_
-- [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Ethereum on Rails टेम्प्लेट जो MetaMask को Ruby on Rails से कनेक्ट करने की अनुमति देता है_
+- [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Ethereum on Rails टेम्प्लेट जो मेटामास्क को रूबी on Rails से कनेक्ट करने की अनुमति देता है_
 
 ### संग्रहीत / अब रखरखाव नहीं किया जाता {#archived--no-longer-maintained}
 
@@ -57,4 +57,4 @@ incomplete: false
 
 ## रूबी समुदाय के योगदानकर्ता {#ruby-community-contributors}
 
-[Ethereum Ruby Telegram group](https://t.me/ruby_eth) तेजी से बढ़ते समुदाय का मेजबान है और उपरोक्त किसी भी परियोजना और संबंधित विषयों पर चर्चा के लिए समर्पित संसाधन है।
+[एथेरियम रूबी टेलीग्राम group](https://t.me/ruby_eth) तेजी से बढ़ते समुदाय का मेजबान है और उपरोक्त किसी भी परियोजना और संबंधित विषयों पर चर्चा के लिए समर्पित संसाधन है।

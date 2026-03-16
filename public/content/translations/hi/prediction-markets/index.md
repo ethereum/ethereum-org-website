@@ -81,6 +81,6 @@ buttons:
 
 ## आगे की रीडिंग {#further-reading}
 
-पूर्वानुमान बाजार से इंफो फाइनेंस तक(https://vitalik.eth.limo/general/2024/11/09/infofinance.html) - Vitalik Buterin  
+पूर्वानुमान बाजार से इंफो फाइनेंस तक(https://vitalik.eth.limo/general/2024/11/09/infofinance.html) - विटालिक ब्यूटेरिन  
 एथेरियम पर विकेंद्रीकृत प्रेडिक्शन मार्केट डेवलपमेंट(https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)  
 ऑगुर परियोजना श्वेतपत्र(https://github.com/AugurProject/whitepaper)

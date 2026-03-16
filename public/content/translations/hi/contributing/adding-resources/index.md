@@ -46,7 +46,7 @@ lang: hi
 
 ## अपना संसाधन जोड़ें {#add-your-resource}
 
-यदि आप ethereum.org पर कोई संसाधन जोड़ना चाहते हैं और यह मानदंडों को पूरा करता है, तो GitHub पर एक इश्यू बनाएं।
+यदि आप ethereum.org पर कोई संसाधन जोड़ना चाहते हैं और यह मानदंडों को पूरा करता है, तो गिटहब पर एक इश्यू बनाएं।
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=resource+📚&template=suggest_resource.yaml">
   मुद्दा बनाएँ

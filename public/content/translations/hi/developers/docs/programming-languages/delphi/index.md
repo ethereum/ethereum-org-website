@@ -48,7 +48,7 @@ incomplete: true
 
 ## उन्नत उपयोग पैटर्न {#advanced-use-patterns}
 
-- [डेल्फी और एथेरियम नेम सर्विस (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
+- [डेल्फी और एथेरियम नेम सर्विस (ईएनएस)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [क्विकनोड, एथेरियम और डेल्फी](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 - [डेल्फी और एथेरियम डार्क फ़ॉरेस्ट](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
 - [डेल्फी में एक टोकन को दूसरे से स्वैप करना](https://svanas.medium.com/swap-one-token-for-another-in-delphi-bcb999c47f7)

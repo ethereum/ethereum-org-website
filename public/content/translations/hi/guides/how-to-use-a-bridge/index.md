@@ -21,8 +21,8 @@ lang: hi
 
 कुछ लोकप्रिय लेयर 2s हैं:
 
-- [Arbitrum ब्रिज](https://portal.arbitrum.io/bridge?l2ChainId=42161)
-- [Optimism ब्रिज](https://app.optimism.io/bridge/deposit)
+- [आर्बिट्रम ब्रिज](https://portal.arbitrum.io/bridge?l2ChainId=42161)
+- [ऑप्टिमिज़्म ब्रिज](https://app.optimism.io/bridge/deposit)
 - [Boba नेटवर्क ब्रिज](https://hub.boba.network/)
 
 ## 3. अपने वॉलेट से ब्रिज से जुड़ें

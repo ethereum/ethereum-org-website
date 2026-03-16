@@ -25,7 +25,7 @@ description: "Ethereum.org पर सामग्री संसाधनों
 
 ## अपना सामग्री संसाधन जोड़ें {#add-your-content-resource}
 
-यदि आप ethereum.org पर एक सामग्री संसाधन जोड़ना चाहते हैं और यह मानदंडों को पूरा करता है, तो GitHub पर एक मुद्दा बनाएं।
+यदि आप ethereum.org पर एक सामग्री संसाधन जोड़ना चाहते हैं और यह मानदंडों को पूरा करता है, तो गिटहब पर एक मुद्दा बनाएं।
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   मुद्दा बनाएँ

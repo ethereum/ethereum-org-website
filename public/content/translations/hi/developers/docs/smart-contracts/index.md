@@ -28,7 +28,7 @@ lang: hi
 
 इस तर्क को वेंडिंग मशीन में प्रोग्राम किया जाता है।
 
-स्मार्ट अनुबंध, एक वेंडिंग मशीन की तरह इसमें तर्क प्रोग्राम किया गया है। यहां एक सरल उदाहरण दिया गया है कि यदि यह वेंडिंग मशीन Solidity में लिखा गया स्मार्ट अनुबंध होता तो यह कैसा दिखता:
+स्मार्ट अनुबंध, एक वेंडिंग मशीन की तरह इसमें तर्क प्रोग्राम किया गया है। यहां एक सरल उदाहरण दिया गया है कि यदि यह वेंडिंग मशीन सॉलिडिटी में लिखा गया स्मार्ट अनुबंध होता तो यह कैसा दिखता:
 
 ```solidity
 pragma solidity 0.8.7;
@@ -71,8 +71,8 @@ contract VendingMachine {
 
 एथेरियम में स्मार्ट अनुबंध लिखने के लिए डेवलपर के अनुकूल भाषाएं हैं:
 
-- Solidity
-- Vyper
+- सॉलिडिटी
+- वाइपर
 
 [भाषाओं के बारे में और जानें](/developers/docs/smart-contracts/languages/)
 
@@ -98,15 +98,15 @@ contract VendingMachine {
 
 ## स्मार्ट अनुबंध संसाधन {#smart-contract-resources}
 
-**OpenZeppelin Contracts -** **_सुरक्षित स्मार्ट अनुबंध विकास के लिए लाइब्रेरी।_**
+**ओपनज़ेपेलिन Contracts -** **_सुरक्षित स्मार्ट अनुबंध विकास के लिए लाइब्रेरी।_**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [गिटहब](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [कम्युनिटी फोरम](https://forum.openzeppelin.com/c/general/16)
 
 ## आगे की रीडिंग {#further-reading}
 
 - [Coinbase: स्मार्ट अनुबंध क्या है?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
-- [Chainlink: स्मार्ट अनुबंध क्या है?](https://chain.link/education/smart-contracts)
+- [चेनलिंक: स्मार्ट अनुबंध क्या है?](https://chain.link/education/smart-contracts)
 - [वीडियो: सरलता से समझाया गया - स्मार्ट अनुबंध](https://youtu.be/ZE2HxTmxfrI)
-- [Cyfrin Updraft: Web3 सीखने और ऑडिटिंग प्लेटफ़ॉर्म](https://updraft.cyfrin.io)
+- [Cyfrin Updraft: वेब3 सीखने और ऑडिटिंग प्लेटफ़ॉर्म](https://updraft.cyfrin.io)

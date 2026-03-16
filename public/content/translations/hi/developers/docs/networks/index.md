@@ -43,21 +43,21 @@ lang: hi
 ##### संसाधन
 
 - [वेबसाइट](https://sepolia.dev/)
-- [GitHub](https://github.com/eth-clients/sepolia)
+- [गिटहब](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
-- [Etherscan](https://sepolia.etherscan.io)
+- [ईथरस्कैन](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### फोसेट
 
-- [Alchemy सेपोलिया फोसेट](https://www.alchemy.com/faucets/ethereum-sepolia)
+- [अल्केमी सेपोलिया फोसेट](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform सेपोलिया फोसेट](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack सेपोलिया फोसेट](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Ethereum इकोसिस्टम फोसेट](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [एथेरियम इकोसिस्टम फोसेट](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 - [ethfaucet.com सेपोलिया फोसेट](https://ethfaucet.com/networks/ethereum)
-- [Google Cloud Web3 सेपोलिया फोसेट](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
+- [Google Cloud वेब3 सेपोलिया फोसेट](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
-- [Infura सेपोलिया फोसेट](https://www.infura.io/faucet)
+- [इन्फ्यूरा सेपोलिया फोसेट](https://www.infura.io/faucet)
 - [PoW फोसेट](https://sepolia-faucet.pk910.de/)
 - [QuickNode सेपोलिया फोसेट](https://faucet.quicknode.com/ethereum/sepolia)
 
@@ -72,11 +72,11 @@ lang: hi
 ##### संसाधन
 
 - [वेबसाइट](https://hoodi.ethpandaops.io/)
-- [GitHub](https://github.com/eth-clients/hoodi)
+- [गिटहब](https://github.com/eth-clients/hoodi)
 - [एक्सप्लोरर](https://explorer.hoodi.ethpandaops.io/)
 - [चेकपॉइंट सिंक](https://checkpoint-sync.hoodi.ethpandaops.io/)
 - [Otterscan](https://hoodi.otterscan.io/)
-- [Etherscan](https://hoodi.etherscan.io/)
+- [ईथरस्कैन](https://hoodi.etherscan.io/)
 
 ##### फोसेट
 
@@ -126,13 +126,13 @@ Holesky टेस्टनेट सितंबर 2025 तक पदावन�
 
 ##### संसाधन
 
-- [Etherscan](https://sepolia.arbiscan.io/)
+- [ईथरस्कैन](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
 ##### फोसेट
 
-- [Alchemy आर्बिट्रम सेपोलिया फोसेट](https://www.alchemy.com/faucets/arbitrum-sepolia)
-- [Chainlink आर्बिट्रम सेपोलिया फोसेट](https://faucets.chain.link/arbitrum-sepolia)
+- [अल्केमी आर्बिट्रम सेपोलिया फोसेट](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [चेनलिंक आर्बिट्रम सेपोलिया फोसेट](https://faucets.chain.link/arbitrum-sepolia)
 - [ethfaucet.com आर्बिट्रम सेपोलिया फोसेट](https://ethfaucet.com/networks/arbitrum)
 - [QuickNode आर्बिट्रम सेपोलिया फोसेट](https://faucet.quicknode.com/arbitrum/sepolia)
 
@@ -142,19 +142,19 @@ Holesky टेस्टनेट सितंबर 2025 तक पदावन�
 
 ##### संसाधन
 
-- [Etherscan](https://sepolia-optimistic.etherscan.io/)
+- [ईथरस्कैन](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
 ##### फोसेट
 
-- [Alchemy फोसेट](https://www.alchemy.com/faucets/optimism-sepolia)
-- [Chainlink फोसेट](https://faucets.chain.link/optimism-sepolia)
+- [अल्केमी फोसेट](https://www.alchemy.com/faucets/optimism-sepolia)
+- [चेनलिंक फोसेट](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com ऑप्टिमिज्म सेपोलिया फोसेट](https://ethfaucet.com/networks/optimism)
 - [टेस्टनेट फोसेट](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### Starknet सेपोलिया {#starknet-sepolia}
+#### स्टार्कनेट सेपोलिया {#starknet-sepolia}
 
-[Starknet](https://www.starknet.io) के लिए एक टेस्टनेट।
+[स्टार्कनेट](https://www.starknet.io) के लिए एक टेस्टनेट।
 
 ##### संसाधन
 
@@ -162,9 +162,9 @@ Holesky टेस्टनेट सितंबर 2025 तक पदावन�
 
 ##### फोसेट
 
-- [Alchemy फोसेट](https://www.alchemy.com/faucets/starknet-sepolia)
-- [Blast Starknet सेपोलिया फोसेट](https://blastapi.io/faucets/starknet-sepolia-eth)
-- [Starknet फोसेट](https://starknet-faucet.vercel.app/)
+- [अल्केमी फोसेट](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Blast स्टार्कनेट सेपोलिया फोसेट](https://blastapi.io/faucets/starknet-sepolia-eth)
+- [स्टार्कनेट फोसेट](https://starknet-faucet.vercel.app/)
 
 ## निजी नेटवर्क {#private-networks}
 
@@ -208,7 +208,7 @@ Holesky टेस्टनेट सितंबर 2025 तक पदावन�
 ## संबंधित उपकरण {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _वॉलेट और प्रदाताओं को उपयुक्त चेन आईडी और नेटवर्क आईडी से जोड़ने के लिए EVM नेटवर्क की सूची_
-- [EVM-आधारित चेन](https://github.com/ethereum-lists/chains) _चेन मेटाडेटा का GitHub रेपो जो Chainlist को शक्ति प्रदान करता है_
+- [EVM-आधारित चेन](https://github.com/ethereum-lists/chains) _चेन मेटाडेटा का गिटहब रेपो जो Chainlist को शक्ति प्रदान करता है_
 
 ## आगे की रीडिंग {#further-reading}
 

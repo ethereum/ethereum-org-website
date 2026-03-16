@@ -38,7 +38,7 @@ lang: hi
 
 एथेरियम पर लेनदेन कभी-कभी अटक सकता है यदि आपने नेटवर्क की मांग के कारण आवश्यकता से कम लेनदेन शुल्क जमा किया है। कई वॉलेट लेनदेन को संसाधित करने की अनुमति देने के लिए उच्च लेनदेन शुल्क के साथ एक ही लेनदेन को फिर से सबमिट करने का विकल्प प्रदान करते हैं। वैकल्पिक रूप से, आप अपने स्वयं के पते पर लेनदेन भेजकर और लंबित लेनदेन के समान नॉन्स गैर-उपयोग करके लंबित लेनदेन को रद्द कर सकते हैं।
 
-[MetaMask पर किसी लंबित लेन-देन को कैसे तेज़ करें या रद्द करें](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
+[मेटामास्क पर किसी लंबित लेन-देन को कैसे तेज़ करें या रद्द करें](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
 
 [लंबित एथेरियम लेन-देन कैसे रद्द करें](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
@@ -54,10 +54,10 @@ lang: hi
 
 निर्माण कठिन हो सकता है। यहां अनुभवी एथेरियम डिवेलपर के साथ कुछ विकास केंद्रित स्थान दिए गए हैं जिन्हें मदद करने में प्रसन्नता होगी।
 
-- [Alchemy University](https://university.alchemy.com/#starter_code)
+- [अल्केमी University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs डिस्कॉर्ड](https://discord.com/invite/5W5tVb3)
-- [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [Web3 University](https://www.web3.university/)
+- [एथेरियम StackExchange](https://ethereum.stackexchange.com/)
+- [वेब3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 
 आप हमारे [एथेरियम डेवलपर संसाधन](/developers/) अनुभाग में डॉक्यूमेंटेशन और डेवलपमेंट गाइड भी पा सकते हैं।
@@ -68,12 +68,12 @@ lang: hi
 
 यहां कुछ लोकप्रिय उदाहरण दिए गए हैं:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [सॉलिडिटी](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
-- [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Alchemy](http://alchemy.com/discord)
-- [Tenderly](https://discord.gg/fBvDJYR)
+- [हार्डहैट](https://discord.gg/xtrMGhmbfZ)
+- [अल्केमी](http://alchemy.com/discord)
+- [टेंडरली](https://discord.gg/fBvDJYR)
 
 ## एक नोड चलाना {#node-support}
 
@@ -86,19 +86,19 @@ lang: hi
 
 ### निष्पादन क्लाइंट {#execution-clients}
 
-- [Geth](https://discord.gg/FqDzupGyYf)
-- [Nethermind](https://discord.gg/YJx3pm8z5C)
-- [Besu](https://discord.gg/p8djYngzKN)
-- [Erigon](https://github.com/ledgerwatch/erigon/issues)
-- [Reth](https://github.com/paradigmxyz/reth/discussions)
+- [गेथ](https://discord.gg/FqDzupGyYf)
+- [नेदरमाइंड](https://discord.gg/YJx3pm8z5C)
+- [बेसु](https://discord.gg/p8djYngzKN)
+- [एरिगॉन](https://github.com/ledgerwatch/erigon/issues)
+- [रेथ](https://github.com/paradigmxyz/reth/discussions)
 
 ### सहमति क्लाइंट {#consensus-clients}
 
 - [प्रिज़्म](https://discord.gg/prysmaticlabs)
-- [Nimbus](https://discord.gg/nSmEH3qgFv)
-- [Lighthouse](https://discord.gg/cyAszAh)
-- [Teku](https://discord.gg/7hPv2T6)
-- [Lodestar](https://discord.gg/aMxzVcr)
+- [निंबस](https://discord.gg/nSmEH3qgFv)
+- [लाइटहाउस](https://discord.gg/cyAszAh)
+- [टेकु](https://discord.gg/7hPv2T6)
+- [लोडस्टार](https://discord.gg/aMxzVcr)
 - [Grandine](https://discord.gg/H9XCdUSyZd)
 
 आप [यहां एक नोड चलाना भी सीख सकते हैं](/developers/docs/nodes-and-clients/run-a-node/)।

@@ -121,4 +121,4 @@ _क्या आप किसी सामुदायिक संसाधन
 
 ## संबंधित ट्यूटोरियल {#related-tutorials}
 
-- [एथेरियम के लिए एक डिवेलपर की गाइड, भाग 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Python और web3.py का उपयोग करके एथेरियम का एक बहुत ही शुरुआती-अनुकूल अन्वेषण_
+- [एथेरियम के लिए एक डिवेलपर की गाइड, भाग 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– पायथन और web3.py का उपयोग करके एथेरियम का एक बहुत ही शुरुआती-अनुकूल अन्वेषण_
