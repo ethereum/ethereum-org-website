@@ -30,12 +30,12 @@ const STATS_API = `${COLLECTIBLES_BASE_URL}/api/stats`
 
 // Data fetching
 async function fetchBadges() {
-  const res = await fetch(BADGES_API)
+  const res = await fetch(BADGES_API, { cache: "force-cache" })
   if (!res.ok) throw new Error("Failed to fetch badges")
   return res.json()
 }
 async function fetchStats() {
-  const res = await fetch(STATS_API)
+  const res = await fetch(STATS_API, { cache: "force-cache" })
   if (!res.ok) throw new Error("Failed to fetch stats")
   return res.json()
 }
