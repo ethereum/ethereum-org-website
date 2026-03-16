@@ -22,7 +22,7 @@ import {
 } from "@/components/HighlightCard"
 import { Image } from "@/components/Image"
 import { Emphasis, Strong } from "@/components/IntlStringElements"
-import ListenToPlayer from "@/components/ListenToPlayer/server"
+import ListenToPlayer from "@/components/ListenToPlayer/lazy"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
