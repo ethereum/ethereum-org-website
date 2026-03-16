@@ -1,7 +1,7 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-02-21 (seeded from Turkish PR #17182 review)
+> Last updated: 2026-03-16 (updated with Gemini-confirmed transliteration policy from Hindi PR #17101)
 
 ## Issue Categories
 
@@ -30,11 +30,24 @@ localization practice -- phonetic rendering, not semantic translation.
 | East Asian | ja (Katakana), ko, zh, zh-tw | Transliterate/phonetic characters |
 | Latin | de, es, fr, it, cs, pl, pt-br, sw, vi, id | Keep English |
 
-**Exceptions that ALWAYS stay in English regardless of script:**
+**Exceptions that ALWAYS stay in Latin script regardless of target script:**
 - Frontmatter `tags` arrays (machine-readable, used for filtering)
 - Ticker symbols: ETH, BTC, ERC, EIP, BLS
-- URL paths (hrefs)
-- Code identifiers inside code fences
+- Token standards: ERC-20, EIP-1559, JSON-RPC
+- URL paths (hrefs), domain names, email addresses
+- Code identifiers inside code fences (`msg.sender`, variable names, etc.)
+- Domain names: `ethereum.org`, `etherscan.io`, etc. (see Section 12)
+
+**Numerals:** Use Western Arabic numerals (1, 2, 3) in all non-Latin scripts.
+Devanagari numerals (e.g., Hindi: ०, १, २) are NOT used in modern tech writing
+and would make the site look archaic. This is confirmed by Hindi tech media
+standards (NDTV, Hindi Wikipedia, etc.).
+
+**Rationale (confirmed by Gemini, 2026-03-16):** Mainstream Hindi tech media
+(NDTV India, Aaj Tak, Hindi Wikipedia) strongly prefer uniform Devanagari script
+for articles. Frequent script-switching (Latin mixed into Devanagari prose)
+breaks the reader's visual flow. Hindi Wikipedia strictly transliterates foreign
+words into Devanagari. This approach applies to all non-Latin-script languages.
 
 **Author names:** The `author` frontmatter field renders to readers. For
 non-Latin scripts, transliterated author names are correct (e.g.,
@@ -162,6 +175,23 @@ Code fences contain a mix of functional code and comments. Only **functional cod
 **Example (CORRECT):** `// Veřejná proměnná typu unsigned int` inside a Solidity code block in Czech — this is a comment explaining the code and benefits from translation.
 
 **Example (MUST fix):** `bytes("záznam již zapsán")` — this is a string literal inside Solidity that affects runtime behavior.
+
+### 12. Transliterated Domain Names (CRITICAL -- security risk)
+
+Domain names (e.g., `ethereum.org`) must ALWAYS stay in Latin script, even in
+non-Latin-script languages. Transliterating a domain name (e.g.,
+`एथेरियम.org`) creates a string that is NOT a valid URL and could be exploited
+as a scam vector (IDN homograph attack surface).
+
+**Known examples (found in Hindi Crowdin import):**
+- `एथेरियम.org` in `contributing/adding-staking-products/index.md` (3 occurrences)
+- `एथेरियम.org` in `src/intl/hi/page-index.json` (1 occurrence)
+
+**Rule:** The sanitizer and transliteration scripts must protect domain patterns
+(`word.org`, `word.io`, `word.com`, etc.) before applying any transliteration.
+If a human translator has transliterated a domain name, it must be reverted.
+
+**Pattern:** `[a-zA-Z0-9][\w.-]*\.(org|com|io|net|dev|xyz|eth|fm|tv|co)`
 
 ## Per-Language Notes
 
