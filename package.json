@@ -69,7 +69,7 @@
     "ethereum-blockies-base64": "^1.0.2",
     "gray-matter": "^4.0.3",
     "howler": "^2.2.4",
-    "htmr": "^1.0.2",
+    "html-react-parser": "^5.2.17",
     "humanize-duration": "^3.33.1",
     "lodash": "^4.17.23",
     "lucide-react": "^0.516.0",
