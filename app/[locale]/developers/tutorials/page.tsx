@@ -19,7 +19,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import TutorialSubmitModal from "./_components/modal"
-import TutorialsList from "./_components/tutorials-lazy"
+import TutorialsList from "./_components/TutorialsLazy"
 import TutorialsPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/doge-computer.png"

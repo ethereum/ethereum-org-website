@@ -109,8 +109,9 @@ const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
   return b.score - a.score
 }
 
-export default async function Page({ params }: { params: Promise<Params> }) {
-  const { locale } = await params
+export default async function Page(props: { params: Promise<Params> }) {
+  const params = await props.params
+  const { locale } = params
 
   const t = await getTranslations({ namespace: "page-bug-bounty" })
   const tCommon = await getTranslations({ namespace: "common" })

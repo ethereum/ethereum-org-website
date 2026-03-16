@@ -1,5 +1,5 @@
 import { Info } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { EventItem, PageParams } from "@/lib/types"
 
@@ -25,6 +25,7 @@ const Page = async (props: {
   const searchParams = await props.searchParams
   const params = await props.params
   const { locale } = params
+  setRequestLocale(locale)
   const { q } = searchParams
 
   const _events = (await getEventsData()) ?? []

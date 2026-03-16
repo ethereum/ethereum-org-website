@@ -96,8 +96,8 @@ import EventFallback from "@/public/images/events/event-placeholder.png"
 // Force dynamic rendering to read headers for A/B testing
 export const dynamic = "force-dynamic"
 
-const Page = async (props0: { params: Promise<PageParams> }) => {
-  const params = await props0.params
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   if (!LOCALES_CODES.includes(locale)) return notFound()

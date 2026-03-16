@@ -1,5 +1,5 @@
 import { Landmark, SquareCode, User } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -36,6 +36,7 @@ import infrastructureTransparent from "@/public/images/infrastructure_transparen
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
   const { locale } = params
+  setRequestLocale(locale)
 
   const t = await getTranslations({
     namespace: "page-what-is-ether",

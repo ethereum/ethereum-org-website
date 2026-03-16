@@ -19,8 +19,9 @@ import TranslatathonLeaderboardJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/heroes/translatathon-hero.png"
 
-const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
-  const { locale } = await params
+const Page = async (props: { params: Promise<{ locale: string }> }) => {
+  const params = await props.params
+  const { locale } = params
 
   setRequestLocale(locale)
 

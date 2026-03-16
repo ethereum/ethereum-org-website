@@ -1,11 +1,11 @@
 "use client"
 
-import nextDynamic from "next/dynamic"
+import dynamic from "next/dynamic"
 
 import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
 import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 
-export const BentoCardSwiper = nextDynamic(
+export const BentoCardSwiper = dynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
   {
     ssr: false,
@@ -18,7 +18,7 @@ export const BentoCardSwiper = nextDynamic(
   }
 )
 
-export const RecentPostsSwiper = nextDynamic(
+export const RecentPostsSwiper = dynamic(
   () => import("@/components/Homepage/RecentPostsSwiper"),
   {
     ssr: false,
@@ -31,7 +31,7 @@ export const RecentPostsSwiper = nextDynamic(
   }
 )
 
-export const ValuesMarquee = nextDynamic(
+export const ValuesMarquee = dynamic(
   () => import("@/components/Homepage/ValuesMarquee"),
   {
     ssr: false,
