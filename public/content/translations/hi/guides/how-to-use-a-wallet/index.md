@@ -67,7 +67,7 @@ lang: hi
 <AlertContent className="justify-between flex-row items-center">
   <div>
 और अधिक सीखना चाहते है?
-  </div>
+</div>
   <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>

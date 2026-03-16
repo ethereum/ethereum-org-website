@@ -1,8 +1,8 @@
 ---
 title: "Uniswap-v2 कॉन्ट्रैक्ट वॉक-थ्रू"
 description: "Uniswap-v2 कॉन्ट्रैक्ट कैसे काम करता है? यह इस तरह क्यों लिखा गया है?"
-author: "ओरी पोमेरेन्ट्ज़"
-tags: [ "सोलिडीटी" ]
+author: Ori Pomerantz
+tags: [ "Solidity" ]
 skill: intermediate
 published: 2021-05-01
 lang: hi

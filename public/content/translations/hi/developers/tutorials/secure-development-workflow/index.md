@@ -2,11 +2,11 @@
 title: "स्मार्ट अनुबंध सुरक्षा जांचसूची"
 description: "सुरक्षित स्मार्ट अनुबंध लिखने के लिए एक सुझाया गया कार्यप्रवाह"
 author: "Trailofbits"
-tags: [ "स्मार्ट अनुबंध", "सुरक्षा", "सोलिडीटी" ]
+tags: [ "स्मार्ट अनुबंध", "सुरक्षा", "Solidity" ]
 skill: intermediate
 lang: hi
 published: 2020-09-07
-source: "सुरक्षित अनुबंध बनाना"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

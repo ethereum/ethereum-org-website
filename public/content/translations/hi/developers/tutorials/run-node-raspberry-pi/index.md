@@ -6,7 +6,7 @@ tags: [ "क्लाइंट्स", "निष्पादन परत", "�
 lang: hi
 skill: intermediate
 published: 2022-06-10
-source: "ARM पर एथेरियम"
+source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

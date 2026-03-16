@@ -1,13 +1,13 @@
 ---
 title: "Web3 का उपयोग करके लेन-देन भेजना"
 description: "यह Web3 का उपयोग करके एथेरियम लेन-देन भेजने के लिए एक शुरुआती अनुकूल मार्गदर्शिका है। एथेरियम ब्लॉकचेन पर लेन-देन भेजने के लिए तीन मुख्य चरण हैं: बनाना, हस्ताक्षर करना और प्रसारित करना। हम तीनों पर गौर करेंगे।"
-author: "एलन हैल्पर्न"
-tags: [ "लेनदेन", "web3.js", "एल्केमी" ]
+author: "Elan Halpern"
+tags: [ "लेनदेन", "web3.js", "Alchemy" ]
 skill: beginner
 lang: hi
 published: 2020-11-04
-source: "Alchemy दस्तावेज़"
-sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
+source: Alchemy docs
+sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
 यह Web3 का उपयोग करके एथेरियम लेन-देन भेजने के लिए एक शुरुआती अनुकूल मार्गदर्शिका है। एथेरियम ब्लॉकचेन पर लेन-देन भेजने के लिए तीन मुख्य चरण हैं: बनाना, हस्ताक्षर करना और प्रसारित करना। हम तीनों पर गौर करेंगे, उम्मीद है कि आपके मन में उठने वाले सभी सवालों का जवाब मिल जाएगा! इस ट्यूटोरियल में, हम अपने लेन-देन को एथेरियम श्रृंखला पर भेजने के लिए [Alchemy](https://www.alchemy.com/) का उपयोग करेंगे। आप [यहां एक मुफ्त Alchemy खाता बना सकते हैं](https://auth.alchemyapi.io/signup)।

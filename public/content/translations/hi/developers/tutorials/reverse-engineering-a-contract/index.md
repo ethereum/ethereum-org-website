@@ -1,7 +1,7 @@
 ---
 title: "एक कॉन्ट्रैक्ट की रिवर्स इंजीनियरिंग"
 description: "जब आपके पास सोर्स कोड न हो तो किसी कॉन्ट्रैक्ट को कैसे समझें"
-author: "ओरी पोमेरेन्ट्ज़"
+author: Ori Pomerantz
 lang: hi
 tags: [ "evm", "ऑपकोड" ]
 skill: advanced

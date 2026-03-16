@@ -67,6 +67,7 @@ buttons:
 <p className="mt-0"><strong>जानना अच्छा है</strong></p>
 <p className="mt-2">एआई एजेंट और संबंधित उपकरण अभी भी शुरुआती विकास में हैं और बहुत प्रयोगात्मक हैं—सावधानी से उपयोग करें।</p>
 </AlertContent>
+
 </Alert>
 
 ## चैट कमांड का उपयोग करके अपने वॉलेट को नियंत्रित करें {#control-your-wallet-using-chat-commands}

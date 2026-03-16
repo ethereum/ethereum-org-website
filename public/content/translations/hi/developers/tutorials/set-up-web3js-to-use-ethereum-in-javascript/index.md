@@ -2,7 +2,7 @@
 title: "जावास्क्रिप्ट में एथेरियम ब्लॉकचेन का उपयोग करने के लिए web3.js सेट अप करें"
 description: "जावास्क्रिप्ट एप्लिकेशन से एथेरियम ब्लॉकचेन के साथ इंटरैक्ट करने के लिए web3.js लाइब्रेरी को सेट अप और कॉन्फ़िगर करना सीखें।"
 author: "jdourlens"
-tags: [ "web3.js", "javascript" ]
+tags: [ "web3.js", "JavaScript" ]
 skill: beginner
 lang: hi
 published: 2020-04-11

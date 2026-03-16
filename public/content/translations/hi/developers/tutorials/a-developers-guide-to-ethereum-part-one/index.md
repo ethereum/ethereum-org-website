@@ -1,12 +1,12 @@
 ---
 title: "एक पाइथन डेवलपर के लिए एथेरियम का परिचय, भाग 1"
 description: "एथेरियम डेवलपमेंट का एक परिचय, विशेष रूप से उन लोगों के लिए उपयोगी है जिन्हें पाइथन प्रोग्रामिंग भाषा का ज्ञान है"
-author: "मार्क गैरेउ"
+author: Marc Garreau
 lang: hi
-tags: [ "python", "web3.py" ]
+tags: [ "Python", "web3.py" ]
 skill: beginner
 published: 2020-09-08
-source: "स्नेक चार्मर्स"
+source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---
 

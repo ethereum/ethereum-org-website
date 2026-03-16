@@ -123,24 +123,32 @@ contract Coin {
 # खुली नीलामी
 
 # नीलामी पैरामीटर
+
 # लाभार्थी सबसे ऊंची बोली लगाने वाले से पैसे प्राप्त करता है
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # नीलामी की वर्तमान स्थिति
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # अंत में सही पर सेट करें, किसी भी बदलाव को अस्वीकार करता है
+
 ended: public(bool)
 
 # रिफंड की गई बोलियों पर नज़र रखें ताकि हम निकासी पैटर्न का पालन कर सकें
+
 pendingReturns: public(HashMap[address, uint256])
 
 # `_bidding_time` के साथ एक साधारण नीलामी बनाएं
+
 # बोली लगाने के समय के सेकंड
+
 # लाभार्थी पता `_beneficiary` की ओर से।
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # भेजे गए मूल्य के साथ नीलामी पर बोली लगाएं
+
 # इस लेन-देन के साथ।
+
 # मूल्य केवल तभी वापस किया जाएगा जब
+
 # नीलामी नहीं जीती जाती है।
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # पहले से रिफंड की गई बोली वापस लें। निकासी पैटर्न है
+
 # सुरक्षा समस्या से बचने के लिए यहां उपयोग किया जाता है। अगर रिफंड सीधे थे
+
 # बोली() के हिस्से के रूप में भेजा गया, एक दुर्भावनापूर्ण बोली अनुबंध ब्लॉक कर सकता है
+
 # उन रिफंड और इस प्रकार नई उच्च बोलियों को आने से रोकें।
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # नीलामी समाप्त करें और उच्चतम बोली भेजें
+
 # लाभार्थी को।
+
 @external
 def endAuction():
     # यह उन कार्यों को संरचित करने के लिए एक अच्छा दिशानिर्देश है जो बातचीत करते हैं

@@ -5,9 +5,9 @@ author: "Markus Waas"
 tags:
   [
     "frontend",
-    "javascript",
+    "JavaScript",
     "ethers.js",
-    "द ग्राफ़",
+    "The Graph",
     "defi"
   ]
 skill: beginner

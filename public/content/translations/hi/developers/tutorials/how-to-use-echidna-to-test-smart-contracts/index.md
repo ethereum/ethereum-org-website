@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: hi
 tags:
   [
-    "सोलिडीटी",
+    "Solidity",
     "स्मार्ट अनुबंध",
     "सुरक्षा",
     "परिक्षण",
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: "सुरक्षित अनुबंध बनाना"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

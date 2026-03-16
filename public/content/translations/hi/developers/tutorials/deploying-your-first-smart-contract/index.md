@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "स्मार्ट अनुबंध",
-    "remix",
-    "सोलिडीटी",
+    "Remix",
+    "Solidity",
     "परिनियोजित करना"
   ]
 skill: beginner

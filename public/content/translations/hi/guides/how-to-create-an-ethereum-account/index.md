@@ -44,7 +44,7 @@ lang: hi
 <AlertContent className="flex-row justify-between items-center">
   <div>
 <b>वॉलेट इंस्टॉल है?</b><br/>इसका उपयोग करना सीखें।
-  </div>
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     वॉलेट का उपयोग कैसे करें
   </ButtonLink>

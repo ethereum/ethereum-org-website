@@ -3,10 +3,10 @@ title: "स्मार्ट अनुबंध सुरक्षा उपक
 description: "तीन विभिन्न परीक्षण और प्रोग्राम विश्लेषण तकनीकों का एक अवलोकन"
 author: "Trailofbits"
 lang: hi
-tags: [ "सोलिडीटी", "स्मार्ट अनुबंध", "सुरक्षा" ]
+tags: [ "Solidity", "स्मार्ट अनुबंध", "सुरक्षा" ]
 skill: intermediate
 published: 2020-09-07
-source: "सुरक्षित अनुबंध बनाना"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

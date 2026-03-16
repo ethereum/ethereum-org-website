@@ -54,7 +54,7 @@ sidebarDepth: 2
 - [**Alchemy**](https://alchemy.com/)
   - [डॉक्स](https://www.alchemy.com/docs/)
   - विशेषताएँ
-    - प्रति माह 300M कंप्यूट इकाइयों के साथ सबसे बड़ा फ़्री टियर (~30M getLatestBlock अनुरोध)
+    - प्रति माह 300M कंप्यूट इकाइयों के साथ सबसे बड़ा फ़्री टियर (\~30M getLatestBlock अनुरोध)
     - Polygon, Starknet, Optimism, Arbitrum के लिए मल्टीचैन सपोर्ट
     - सबसे बड़े एथेरियम dapps और DeFi लेनदेन की मात्रा का ~70% पॉवरिंग
     - Alchemy अलर्ट के माध्यम से रीयल-टाइम वेबहुक अलर्ट

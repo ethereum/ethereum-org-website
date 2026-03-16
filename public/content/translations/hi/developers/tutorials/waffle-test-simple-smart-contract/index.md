@@ -2,7 +2,7 @@
 title: "Waffle लाइब्रेरी के साथ सरल स्मार्ट अनुबंध का परीक्षण"
 description: "शुरुआती लोगों के लिए ट्यूटोरियल"
 author: Ewa Kowalska
-tags: [ "स्मार्ट अनुबंध", "सोलिडीटी", "Waffle", "परिक्षण" ]
+tags: [ "स्मार्ट अनुबंध", "Solidity", "Waffle", "परिक्षण" ]
 skill: beginner
 lang: hi
 published: 2021-02-26

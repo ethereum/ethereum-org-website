@@ -1,14 +1,14 @@
 ---
-title: "हार्डहैट और ईथर के साथ वफ़ल का हैलो वर्ल्ड ट्यूटोरियल"
-description: "हार्डहैट और ethers.js के साथ अपना पहला वफ़ल प्रोजेक्ट बनाएं"
+title: "Hardhat और Ethers के साथ Waffle का हैलो वर्ल्ड ट्यूटोरियल"
+description: "Hardhat और ethers.js के साथ अपना पहला Waffle प्रोजेक्ट बनाएं"
 author: "MiZiet"
 tags:
   [
-    "वफ़ल",
+    "Waffle",
     "स्मार्ट अनुबंध",
-    "सोलिडीटी",
+    "Solidity",
     "परिक्षण",
-    "हार्डहैट",
+    "Hardhat",
     "ethers.js"
   ]
 skill: beginner

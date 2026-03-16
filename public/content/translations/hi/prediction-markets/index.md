@@ -56,7 +56,9 @@ buttons:
   <p className="mt-0"><strong>जोखिमों के प्रति सतर्क रहें</strong></p>
   <p className="mt-2">केवल उतना ही दांव लगाएं जितना आप खो सकते हैं, और संभावित व्यसनी व्यवहारों के प्रति जागरूक रहें।</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## चुनौतियां और जोखिम {#challenges-and-risks}

@@ -4,9 +4,9 @@ description: "डायनामिक मॉकिंग और अनुबं
 author: "Daniel Izdebski"
 tags:
   [
-    "वफ़ल",
+    "Waffle",
     "स्मार्ट अनुबंध",
-    "सोलिडीटी",
+    "Solidity",
     "परिक्षण",
     "मॉक करना"
   ]

@@ -4,9 +4,9 @@ description: "इस ट्यूटोरियल में, आप एक NFT
 author: "smudgil"
 tags:
   [
-    "सोलिडीटी",
+    "Solidity",
     "NFT",
-    "एल्केमी",
+    "Alchemy",
     "स्मार्ट अनुबंध",
     "frontend",
     "Pinata"

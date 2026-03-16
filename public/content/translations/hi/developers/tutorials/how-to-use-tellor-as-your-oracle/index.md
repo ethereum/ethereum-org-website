@@ -3,10 +3,10 @@ title: "अपने ओरेकल के रूप में टेलर क
 description: "अपने प्रोटोकॉल में टेलर ओरेकल को एकीकृत करने के साथ शुरू करने के लिए एक गाइड"
 author: "Tellor"
 lang: hi
-tags: [ "सोलिडीटी", "स्मार्ट अनुबंध", "ओरेकल्स" ]
+tags: [ "Solidity", "स्मार्ट अनुबंध", "ओरेकल्स" ]
 skill: beginner
 published: 2021-06-29
-source: "टेलर डॉक्स"
+source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 

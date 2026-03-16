@@ -1,7 +1,7 @@
 ---
 title: "सेफ्टी रेल्स के साथ ERC-20"
 description: "लोगों को मूर्खतापूर्ण गलतियों से बचने में कैसे मदद करें"
-author: "ओरी पोमेरेन्ट्ज़"
+author: Ori Pomerantz
 lang: hi
 tags: [ "erc-20" ]
 skill: beginner

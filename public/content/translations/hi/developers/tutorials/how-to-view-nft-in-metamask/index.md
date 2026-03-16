@@ -1,8 +1,8 @@
 ---
 title: "अपने वॉलेट में अपना NFT कैसे देखें (NFT ट्यूटोरियल श्रृंखला का भाग 3/3)"
 description: "यह ट्यूटोरियल बताता है कि MetaMask पर मौजूदा NFT को कैसे देखें!"
-author: "सुमी मुदगिल"
-tags: [ "ERC-721", "एल्केमी", "Solidity" ]
+author: "Sumi Mudgil"
+tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
 lang: hi
 published: 2021-04-22

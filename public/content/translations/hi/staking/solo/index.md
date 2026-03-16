@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> स्लैशिंग और सत्यापनकर्ता के जीवनचक्र के बारे में अधिक जानकारी</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />
