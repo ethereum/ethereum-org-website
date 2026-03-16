@@ -1,3 +1,24 @@
+# Hi ⚡ I'm Phonlawat | Software Developer & Web3 Contributor
+
+Passionate Developer from Surin, Thailand 🇹🇭 focused on **Web3 Infrastructure**, **Smart Contract Security**, and **AI-driven solutions**.
+
+### 🛠 What I’m Working On
+- 🌍 **Advanced Multi-language Translator:** Python-based tool for seamless global communication.
+- ⛓️ **Universal Wealth Protocol:** Building next-gen DeFi on Base & Arbitrum.
+- 🛡️ **Security Research:** Bug bounty hunter at HackerOne (Focus on Private Key Security).
+
+### 🏆 Achievements
+- 💎 **2025 Ethereum.org Contributor** (GitPOAP holder)
+- 🦈 **GitHub Pull Shark** - Active collaborator in global open-source projects.
+- 🏗️ Involved in **Base & Arbitrum** ecosystems.
+
+### 💻 Tech Stack
+- **Languages:** Python, Solidity, JavaScript
+- **Tools:** Cursor AI, GitHub Copilot, Vercel, Firebase
+- **Web3:** Ethereum, Base, Arbitrum, Farcaster Frames
+
+---
+📫 **How to reach me:** [https://x.com/KhsLak58447]
 🇹🇭 Ethereum.org Thai Localization Project
 This repository is dedicated to translating and maintaining the Thai (th) language support for the ethereum.org website. Our mission is to make Ethereum resources accessible to the Thai community.
 🚀 Current Milestone
