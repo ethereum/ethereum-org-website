@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import createMiddleware from "next-intl/middleware"
 
-import { routing } from "./src/i18n/routing.config"
+import { routing } from "./src/i18n/routing"
 import { DEFAULT_LOCALE } from "./src/lib/constants"
 import { getFirstSegment } from "./src/lib/utils/url"
 

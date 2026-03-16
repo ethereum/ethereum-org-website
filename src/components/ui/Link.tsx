@@ -14,8 +14,8 @@ import * as url from "@/lib/utils/url"
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
-import { Link as I18nLink } from "@/i18n/routing"
-import { usePathname } from "@/i18n/routing"
+import { Link as I18nLink } from "@/i18n/navigation"
+import { usePathname } from "@/i18n/navigation"
 
 export const ExternalLinkIcon = () => {
   const { twFlipForRtl } = useRtlFlip()

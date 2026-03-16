@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils/cn"
 import allTimeData from "@/data/translation-reports/alltime/alltime-data.json"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 const Content = ({ ...props }: BaseHTMLAttributes<HTMLHeadingElement>) => (
   <MainArticle className="w-full px-10 py-4" {...props} />

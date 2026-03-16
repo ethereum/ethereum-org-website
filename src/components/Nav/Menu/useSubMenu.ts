@@ -2,7 +2,7 @@ import type { MotionProps } from "motion/react"
 import { useLocale } from "next-intl"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 export const useSubMenu = () => {
   const pathname = usePathname()

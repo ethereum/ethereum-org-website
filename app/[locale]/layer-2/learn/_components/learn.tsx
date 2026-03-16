@@ -13,7 +13,7 @@ import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import useTranslation from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 import Callout2Image from "@/public/images/layer-2/learn-hero.png"
 import heroImg from "@/public/images/layer-2/learn-hero.png"
 import OptimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"

@@ -1,11 +1,11 @@
-import { createNavigation } from "next-intl/navigation"
+import { defineRouting } from "next-intl/routing"
 
-import { routing } from "./routing.config"
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
-// Re-export routing config for convenience
-export { routing }
-
-// Lightweight wrappers around Next.js' navigation APIs
-// that will consider the routing configuration
-export const { Link, redirect, usePathname, useRouter, getPathname } =
-  createNavigation(routing)
+export const routing = defineRouting({
+  locales: LOCALES_CODES,
+  defaultLocale: DEFAULT_LOCALE,
+  localePrefix: "as-needed",
+  alternateLinks: false,
+  localeDetection: false,
+})

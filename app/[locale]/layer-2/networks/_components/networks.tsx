@@ -8,7 +8,7 @@ import NetworkMaturity from "@/components/NetworkMaturity"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import useTranslation from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 import heroImg from "@/public/images/heroes/layer-2-hub-hero.png"
 import Callout2Image from "@/public/images/layer-2/layer-2-walking.png"
 import Callout1Image from "@/public/images/man-and-dog-playing.png"
