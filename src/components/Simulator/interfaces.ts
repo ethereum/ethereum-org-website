@@ -1,5 +1,5 @@
 import { LucideIcon } from "lucide-react"
-import type { ReactElement } from "react"
+import type { JSX, ReactElement } from "react"
 
 import { PhoneScreenProps } from "@/lib/types"
 
@@ -13,7 +13,7 @@ export interface SimulatorPathSummary {
 
 export interface SimulatorExplanation {
   header: string
-  description: ReactElement | null
+  description: ReactElement<unknown> | null
 }
 
 export interface SimulatorNav {

@@ -41,7 +41,7 @@ const Center = forwardRef<FlexElement, FlexProps>(
 
 Center.displayName = "Center"
 
-type StackProps = FlexProps & { separator?: ReactElement }
+type StackProps = FlexProps & { separator?: ReactElement<unknown> }
 
 const Stack = forwardRef<FlexElement, StackProps>(
   ({ className, separator, children, asChild, ...props }, ref) => {

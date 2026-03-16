@@ -68,7 +68,7 @@ const ContentHero = (props: ContentHeroProps) => {
                 if (!button) return
                 // If it's a React element, render it directly
                 if (typeof button === "object" && "type" in button) {
-                  return <div key={idx}>{button as ReactElement}</div>
+                  return <div key={idx}>{button as ReactElement<unknown>}</div>
                 }
                 // Otherwise, render as button props
                 return <CallToAction key={idx} index={idx} {...button} />

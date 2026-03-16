@@ -221,8 +221,8 @@ const Codeblock = ({
   const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
 
   let langClass: string
-  if (React.isValidElement(children)) {
-    langClass = children?.props?.className
+  if (React.isValidElement<{ className?: string }>(children)) {
+    langClass = children?.props?.className || ""
   } else {
     langClass = codeLanguage || ""
   }

@@ -18,13 +18,12 @@ import { mapEventTranslations, sanitize } from "../utils"
 
 import { getEventsData } from "@/lib/data"
 
-const Page = async ({
-  params,
-  searchParams,
-}: {
-  params: PageParams
-  searchParams: { q?: string }
+const Page = async (props: {
+  params: Promise<PageParams>
+  searchParams: Promise<{ q?: string }>
 }) => {
+  const searchParams = await props.searchParams
+  const params = await props.params
   const { locale } = params
   const { q } = searchParams
 
@@ -138,11 +137,10 @@ const Page = async ({
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
   const t = await getTranslations({
     locale,

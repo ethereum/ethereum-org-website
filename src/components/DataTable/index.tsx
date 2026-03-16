@@ -1,4 +1,4 @@
-import { FC, Fragment, useEffect, useRef, useState } from "react"
+import React, { Fragment, useEffect, useRef, useState } from "react"
 import {
   ColumnDef,
   flexRender,
@@ -21,8 +21,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 type DataTableProps<TData, TValue> = TableProps & {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  subComponent?: FC<TData>
-  noResultsComponent?: FC
+  subComponent?: (props: TData, idx: number) => React.ReactNode
+  noResultsComponent?: (props: Record<string, never>) => React.ReactNode
   allDataLength: number
   setMobileFiltersOpen?: (open: boolean) => void
   activeFiltersCount: number

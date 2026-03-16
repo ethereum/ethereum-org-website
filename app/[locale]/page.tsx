@@ -134,7 +134,8 @@ const ValuesMarquee = nextDynamic(
   }
 )
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props0: { params: Promise<PageParams> }) => {
+  const params = await props0.params
   const { locale } = params
 
   if (!LOCALES_CODES.includes(locale)) return notFound()
@@ -1092,11 +1093,10 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
   try {

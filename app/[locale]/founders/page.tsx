@@ -40,7 +40,8 @@ import FoundersPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/upgrades/merge.png"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-founders" })
 
@@ -454,11 +455,10 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
   const t = await getTranslations({

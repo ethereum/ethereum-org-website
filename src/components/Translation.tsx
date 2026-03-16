@@ -26,7 +26,8 @@ const Translation = ({ id, ns, values, transform = {} }: TranslationProps) => {
 
   // Use `htmr` to parse html content in the translation text
   return htmr(translatedText, {
-    transform: { ...defaultTransform, ...transform },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    transform: { ...defaultTransform, ...transform } as any,
   })
 }
 

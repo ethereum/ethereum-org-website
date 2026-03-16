@@ -221,7 +221,7 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
 
     const validChildren = React.Children.toArray(children).filter((child) =>
       React.isValidElement(child)
-    ) as React.ReactElement[]
+    ) as React.ReactElement<unknown>[]
 
     /**
      * The visible avatars from max

@@ -124,6 +124,7 @@ async function fetchWithRateLimit(filepath: string): Promise<Commit[]> {
 
   const response = await fetch(url.href, {
     headers: { Authorization: `token ${gitHubToken}` },
+    next: { revalidate: 3600 },
   })
 
   if (

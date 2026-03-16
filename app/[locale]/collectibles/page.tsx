@@ -40,7 +40,8 @@ async function fetchStats() {
   return res.json()
 }
 
-export default async function Page({ params }: { params: PageParams }) {
+export default async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-collectibles" })
   setRequestLocale(locale)
@@ -148,11 +149,10 @@ export default async function Page({ params }: { params: PageParams }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-collectibles" })
   return await getMetadata({
