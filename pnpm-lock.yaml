@@ -242,8 +242,8 @@ importers:
         specifier: ^0.24.1
         version: 0.24.1
       '@netlify/plugin-nextjs':
-        specifier: ^5.15.5
-        version: 5.15.5
+        specifier: ^5.15.9
+        version: 5.15.9
       '@next/bundle-analyzer':
         specifier: ^15.5.12
         version: 15.5.12(bufferutil@4.0.9)(utf-8-validate@5.0.10)
@@ -2208,8 +2208,8 @@ packages:
     resolution: {integrity: sha512-7EWbS+puDub800IQ9MUVcLrWwCNPyK/u1Rs08f0Y+O4dBGVkuTm/RyaLoU58PPLuNCfPHXebfIYFZxN+/CtZeA==}
     engines: {node: ^18.14.0 || >=20.6.1}
 
-  '@netlify/plugin-nextjs@5.15.5':
-    resolution: {integrity: sha512-Lvix59vHCEfvopILvdfIK2EPe/CrLH5qrIdwYnJbxpp/SSVgklsHpBrfNM9ADTr310r+WJRDz11NcDyHu3iT9w==}
+  '@netlify/plugin-nextjs@5.15.9':
+    resolution: {integrity: sha512-4kJvV+wrt4/ncehfaOXfhv1FYKCv9EFjq6/tgXXYSlqPDcbsuTXR0DTz9IvyZ/CpPRadRD/zzIqD9wXgCmA2lg==}
     engines: {node: '>=18.0.0'}
 
   '@netlify/runtime-utils@2.2.1':
@@ -12701,7 +12701,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@netlify/plugin-nextjs@5.15.5': {}
+  '@netlify/plugin-nextjs@5.15.9': {}
 
   '@netlify/runtime-utils@2.2.1': {}
 
