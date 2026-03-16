@@ -49,7 +49,7 @@ import rain from "@/public/images/exchanges/rain.png"
 import shakepay from "@/public/images/exchanges/shakepay.png"
 import wazirx from "@/public/images/exchanges/wazirx.png"
 import zebpay from "@/public/images/exchanges/zebpay.png"
-import zkp2p from "@/public/images/exchanges/zkp2p.png"
+import peer from "@/public/images/exchanges/peer.png"
 
 type ExchangeKey =
   | "binance"
@@ -83,7 +83,7 @@ type ExchangeKey =
   | "shakepay"
   | "wazirx"
   | "zebpay"
-  | "zkp2p"
+  | "peer"
 
 type ExchangeDetail = {
   name: string
@@ -319,10 +319,10 @@ const exchanges: ExchangeDetails = {
     image: zebpay,
     usaExceptions: [],
   },
-  zkp2p: {
-    name: "ZKP2P",
-    url: "https://zkp2p.xyz",
-    image: zkp2p,
+  peer: {
+    name: "Peer",
+    url: "https://peer.xyz",
+    image: peer,
     usaExceptions: [],
   },
 }
