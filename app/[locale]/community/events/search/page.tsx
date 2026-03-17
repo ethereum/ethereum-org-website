@@ -18,6 +18,14 @@ import { mapEventTranslations, sanitize } from "../utils"
 
 import { getEventsData } from "@/lib/data"
 
+const safeDecodeURIComponent = (str: string) => {
+  try {
+    return decodeURIComponent(str)
+  } catch {
+    return str
+  }
+}
+
 const Page = async ({
   params,
   searchParams,
@@ -56,7 +64,7 @@ const Page = async ({
   })()
 
   const title = q
-    ? t("page-events-search-hero-title-q", { q: decodeURIComponent(q) })
+    ? t("page-events-search-hero-title-q", { q: safeDecodeURIComponent(q) })
     : t("page-events-search-hero-title")
 
   const Results = () => {
@@ -117,7 +125,7 @@ const Page = async ({
             <Input
               type="search"
               name="q"
-              defaultValue={q ? decodeURIComponent(q) : ""}
+              defaultValue={q ? safeDecodeURIComponent(q) : ""}
               placeholder={t("page-events-search-placeholder")}
               aria-describedby="input-instruction"
               className="w-full"
