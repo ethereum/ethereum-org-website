@@ -106,8 +106,20 @@ const COMMON_SPELLING_MISTAKES = [
 const CASE_SENSITIVE_SPELLING_MISTAKES = ["Metamask", "Github"]
 
 /**
+ * Locales that use non-Latin scripts and require transliteration of brand names.
+ * For these languages, brand names should be transliterated into the target script,
+ * NOT kept in Latin. The sanitizer should NOT revert transliterated brands to English.
+ * Must stay in sync with src/scripts/i18n/transliterate.ts SUPPORTED_LANGS.
+ */
+const TRANSLITERATION_LOCALES = new Set([
+  "hi", "mr", "bn", "ta", "te", "ar", "ur", "ru", "uk", "ja", "ko", "zh", "zh-tw",
+])
+
+/**
  * Brand names that should NEVER be translated in ANY language.
  * These are proper nouns - programming languages, companies, products.
+ * For Latin-script languages: must stay in English.
+ * For non-Latin-script languages: must be TRANSLITERATED (phonetic), not translated.
  */
 const PROTECTED_BRAND_NAMES = [
   // Programming languages
@@ -519,36 +531,47 @@ function fixBrandTags(
  */
 function fixProtectedBrandNames(
   translatedContent: string,
-  englishContent: string
+  englishContent: string,
+  locale?: string
 ): { content: string; fixCount: number; warnings: string[] } {
   const warnings: string[] = []
   let content = translatedContent
   let fixCount = 0
+  const isTranslitLang = locale ? TRANSLITERATION_LOCALES.has(locale) : false
 
   // Auto-fix: Restore brand-name tags to English (leaves concept tags translated)
-  const brandTagsResult = fixBrandTags(content, englishContent)
-  content = brandTagsResult.content
-  fixCount += brandTagsResult.fixCount
-  if (brandTagsResult.fixCount > 0) {
-    warnings.push(
-      `Restored ${brandTagsResult.fixCount} brand-name tag(s) to English`
-    )
+  // SKIP for non-Latin locales -- brand names should be transliterated, not reverted
+  if (!isTranslitLang) {
+    const brandTagsResult = fixBrandTags(content, englishContent)
+    content = brandTagsResult.content
+    fixCount += brandTagsResult.fixCount
+    if (brandTagsResult.fixCount > 0) {
+      warnings.push(
+        `Restored ${brandTagsResult.fixCount} brand-name tag(s) to English`
+      )
+    }
   }
 
   // Warn: Brand names with count mismatches in body content
-  for (const brand of PROTECTED_BRAND_NAMES) {
-    const brandRegex = new RegExp(`\\b${escapeRegex(brand)}\\b`, "g")
-    const inEnglish = englishContent.match(brandRegex)
+  // SKIP for non-Latin locales -- brands are transliterated, won't match Latin regex
+  if (isTranslitLang) {
+    // For transliteration languages, brand count mismatches are expected
+    // (brands appear in native script, not Latin). No warnings needed.
+  } else {
+    for (const brand of PROTECTED_BRAND_NAMES) {
+      const brandRegex = new RegExp(`\\b${escapeRegex(brand)}\\b`, "g")
+      const inEnglish = englishContent.match(brandRegex)
 
-    if (inEnglish && inEnglish.length > 0) {
-      const inTranslation = content.match(brandRegex)
-      const englishCount = inEnglish.length
-      const translationCount = inTranslation?.length ?? 0
+      if (inEnglish && inEnglish.length > 0) {
+        const inTranslation = content.match(brandRegex)
+        const englishCount = inEnglish.length
+        const translationCount = inTranslation?.length ?? 0
 
-      if (translationCount < englishCount) {
-        warnings.push(
-          `Protected brand "${brand}" appears ${englishCount}x in English but ${translationCount}x in translation - may have been mistranslated`
-        )
+        if (translationCount < englishCount) {
+          warnings.push(
+            `Protected brand "${brand}" appears ${englishCount}x in English but ${translationCount}x in translation - may have been mistranslated`
+          )
+        }
       }
     }
   }
@@ -3041,7 +3064,7 @@ function processMarkdownFile(
     )
 
     // Fix and check protected brand names
-    const brandResult = fixProtectedBrandNames(content, englishMd)
+    const brandResult = fixProtectedBrandNames(content, englishMd, locale)
     if (brandResult.content !== content) {
       issues.push(`Fixed ${brandResult.fixCount} brand name issues`)
     }
