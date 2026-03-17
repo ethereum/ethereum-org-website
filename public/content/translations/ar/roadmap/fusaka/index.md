@@ -290,7 +290,7 @@ EIP-7935 ينسق فرق عملاء طبقة التنفيذ لرفع الحد ا
 
 ## قراءة إضافية {#further-reading}
 
-- إيثريوم خارطة الطريق(/roadmap/)
+- [إيثريوم خارطة الطريق](/roadmap/)
 - [Forkcast: Fusaka](https://forkcast.org/upgrade/fusaka)
 - [Fusaka Meta EIP](https://eips.ethereum.org/EIPS/eip-7607)
 - [إعلان مدونة شبكة اختبار فوساكا](https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement)

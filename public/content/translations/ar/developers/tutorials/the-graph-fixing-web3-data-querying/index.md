@@ -5,7 +5,7 @@ author: Markus Waas
 lang: ar
 tags:
   [
-    "الصلابة",
+    "Solidity",
     "العقود الذكيه ",
     "استفسار",
     "the graph",

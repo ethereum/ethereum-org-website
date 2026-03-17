@@ -143,7 +143,7 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>معاملات شارد بلووب (تجزئة دانكشاردينج الأولية)</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5656">EIP-5656</a> - <em><code>MCOPY</code> - تعليمات نسخ الذاكرة</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> فقط في نفس المعاملة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - رمز تشغيل <em><code>BLOBBBASEFEE</code></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - رمز تشغيل <em><code>BLOBBBASEFEE</code></em></li>
 </ul>
 </ExpandableCard>
 
@@ -379,7 +379,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink href="/roadmap/beacon-chain/">
+[<DocLink href="](/roadmap/beacon-chain)/">
   سلسلة المنارة
 </DocLink>
 

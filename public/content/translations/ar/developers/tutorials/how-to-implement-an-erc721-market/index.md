@@ -2,7 +2,7 @@
 title: How to implement an ERC-721 market
 description: How to put tokenized items for sale on a decentralized classifieds board
 author: "Alberto Cuesta Cañada"
-tags: [ "العقود الذكيه ", "erc-721", "solidity", "tokens" ]
+tags: [ "العقود الذكيه ", "erc-721", "Solidity", "tokens" ]
 skill: intermediate
 lang: ar
 published: 2020-03-19

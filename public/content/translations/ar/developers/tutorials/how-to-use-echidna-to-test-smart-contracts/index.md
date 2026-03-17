@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: ar
 tags:
   [
-    "الصلابة",
+    "Solidity",
     "العقود الذكيه ",
     "الأمن",
     "الاختبار",

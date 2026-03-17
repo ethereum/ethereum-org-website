@@ -3,7 +3,7 @@ title: "تقليص حجم العقود لمواجهة الحد الأقصى لح
 description: "ما الذي يمكنك فعله لمنع عقودك الذكية من أن تصبح كبيرة جدًا؟"
 author: Markus Waas
 lang: ar
-tags: [ "الصلابة", "العقود الذكيه ", "التخزين" ]
+tags: [ "Solidity", "العقود الذكيه ", "التخزين" ]
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com

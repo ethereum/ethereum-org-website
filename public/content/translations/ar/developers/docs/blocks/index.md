@@ -150,4 +150,4 @@ _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ 
 
 - [المعاملات](/developers/docs/transactions/)
 - [الغاز](/developers/docs/gas/)
-- إثبات الحصة(/developers/docs/consensus-mechanisms/pos)
+- [إثبات الحصة](/developers/docs/consensus-mechanisms/pos)

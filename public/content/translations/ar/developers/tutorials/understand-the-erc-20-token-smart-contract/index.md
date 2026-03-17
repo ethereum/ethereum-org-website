@@ -2,7 +2,7 @@
 title: "فهم العقد الذكي لرمز ERC-20"
 description: "تعلم كيفية تنفيذ معيار الرمز ERC-20 مع مثال وشرح كامل للعقد الذكي بلغة سوليديتي."
 author: "jdourlens"
-tags: [ "العقود الذكيه ", "tokens", "الصلابة", "erc-20" ]
+tags: [ "العقود الذكيه ", "tokens", "Solidity", "erc-20" ]
 skill: beginner
 lang: ar
 published: 2020-04-05

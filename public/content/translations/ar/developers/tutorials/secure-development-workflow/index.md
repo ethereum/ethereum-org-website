@@ -2,7 +2,7 @@
 title: Smart contract security checklist
 description: A suggested workflow for writing secure smart contracts
 author: "Trailofbits"
-tags: [ "العقود الذكيه ", "الأمن", "solidity" ]
+tags: [ "العقود الذكيه ", "الأمن", "Solidity" ]
 skill: intermediate
 lang: ar
 published: 2020-09-07

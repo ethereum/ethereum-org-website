@@ -4,7 +4,7 @@ description: "باستخدام المكونات الحديثة مثل TypeScript
 author: Ori Pomerantz
 tags:
   [
-    "typescript",
+    "TypeScript",
     "react",
     "vite",
     "wagmi",

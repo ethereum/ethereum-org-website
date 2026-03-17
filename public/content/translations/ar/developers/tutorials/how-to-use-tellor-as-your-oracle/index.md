@@ -3,7 +3,7 @@ title: "كيفية إعداد Tellor كأوراكل خاص بك"
 description: "دليل للبدء في دمج أوراكل Tellor في بروتوكولك"
 author: "Tellor"
 lang: ar
-tags: [ "الصلابة", "العقود الذكيه ", "الأوراكل" ]
+tags: [ "Solidity", "العقود الذكيه ", "الأوراكل" ]
 skill: beginner
 published: 2021-06-29
 source: Tellor Docs

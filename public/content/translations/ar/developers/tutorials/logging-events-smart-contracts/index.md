@@ -2,7 +2,7 @@
 title: "تسجيل البيانات من العقود الذكية مع الأحداث"
 description: "مقدمة لأحداث العقد الذكي وكيف يمكنك استخدامها لتسجيل البيانات"
 author: "jdourlens"
-tags: [ "العقود الذكيه ", "remix", "الصلابة", "أحداث" ]
+tags: [ "العقود الذكيه ", "Remix", "Solidity", "أحداث" ]
 skill: intermediate
 lang: ar
 published: 2020-04-03

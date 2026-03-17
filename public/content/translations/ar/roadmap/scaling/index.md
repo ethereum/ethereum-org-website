@@ -15,9 +15,9 @@ template: roadmap
   تكاليف المعاملات
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>تعد عمليات التجميع اليوم أرخص <strong>~5-20x</strong> من طبقة Ethereum 1</li>
-    <li>ستعمل عمليات تجميع ZK قريبًا على خفض الرسوم بمقدار <strong>~40-100x</strong></li>
-    <li>ستوفر التغييرات القادمة على Ethereum <strong>~100-1000x</strong> أخرى من التوسع</li>
+    <li>تعد عمليات التجميع اليوم أرخص <strong>\~5-20x</strong> من طبقة Ethereum 1</li>
+    <li>ستعمل عمليات تجميع ZK قريبًا على خفض الرسوم بمقدار <strong>\~40-100x</strong></li>
+    <li>ستوفر التغييرات القادمة على Ethereum <strong>\~100-1000x</strong> أخرى من التوسع</li>
     <li style={{ marginBottom: 0 }}>يجب أن يستفيد المستخدمون من المعاملات <strong>التي تقل تكلفتها عن 0.001 دولار</strong></li>
   </ul>
 </AlertContent>

@@ -8,9 +8,9 @@ summaryPoint1: "خذ المال لتعطيك خبر صحيحة"
 summaryPoint2: "تنبأت عالية الجودة حول الأحداث المستقبلية"
 buttons:
   - content: معرفة المزيد
-    toId: "كيف تعمل أسواق التنبؤات"
+    toId: how-prediction-markets-work
   - content: استكشاف التطبيقات
-    toId: "ابحث عن سوق للتوقعات"
+    toId: find-a-prediction-market
     isSecondary: false
 ---
 

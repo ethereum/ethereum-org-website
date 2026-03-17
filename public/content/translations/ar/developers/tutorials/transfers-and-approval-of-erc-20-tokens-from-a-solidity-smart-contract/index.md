@@ -2,7 +2,7 @@
 title: "تحويلات رموز ERC-20 والموافقة عليها من عقد سوليديتي ذكي"
 description: "بناء عقد ذكي لمنصة تداول لامركزية (DEX) يتعامل مع تحويلات رموز ERC-20 والموافقات عليها باستخدام سوليديتي."
 author: "jdourlens"
-tags: [ "العقود الذكيه ", "tokens", "الصلابة", "erc-20" ]
+tags: [ "العقود الذكيه ", "tokens", "Solidity", "erc-20" ]
 skill: intermediate
 lang: ar
 published: 2020-04-07

@@ -4,9 +4,9 @@ description: "درس تعليمي تمهيدي حول كتابة ونشر عقد
 author: "elanh"
 tags:
   [
-    "الصلابة",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "العقود الذكيه ",
     "نشر"
   ]

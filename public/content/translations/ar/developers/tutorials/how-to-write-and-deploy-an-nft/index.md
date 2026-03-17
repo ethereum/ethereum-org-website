@@ -6,7 +6,7 @@ tags:
   [
     "ERC-721ERC-721",
     "Alchemy",
-    "لغة برمجة Solidity",
+    "Solidity",
     "العقود الذكيه "
   ]
 skill: beginner

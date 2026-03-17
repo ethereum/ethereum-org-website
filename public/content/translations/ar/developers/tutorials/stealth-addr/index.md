@@ -7,7 +7,7 @@ tags:
     "عنوان التخفي",
     "الخصوصية",
     "علم التشفير",
-    "rust",
+    "Rust",
     "wasm"
   ]
 skill: intermediate

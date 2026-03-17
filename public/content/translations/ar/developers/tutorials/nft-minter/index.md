@@ -4,9 +4,9 @@ description: "In this tutorial, you’ll build an NFT minter and learn how to cr
 author: "smudgil"
 tags:
   [
-    "الصلابة",
+    "Solidity",
     "رمز غير القابل للاستبدال",
-    "alchemy",
+    "Alchemy",
     "العقود الذكيه ",
     "واجهة التطبيق",
     "Pinata"

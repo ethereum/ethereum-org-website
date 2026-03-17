@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "العقود الذكيه ",
-    "الصلابة",
-    "remix",
+    "Solidity",
+    "Remix",
     "نشر",
     "قابلية التركيب"
   ]

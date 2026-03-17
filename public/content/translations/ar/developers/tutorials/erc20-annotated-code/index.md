@@ -3,7 +3,7 @@ title: "جولة تفصيلية لعقد ERC-20"
 description: "ماذا يوجد في عقد OpenZeppelin ERC-20 ولماذا هو موجود؟"
 author: Ori Pomerantz
 lang: ar
-tags: [ "الصلابة", "erc-20" ]
+tags: [ "Solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---
@@ -249,7 +249,7 @@ import "../../math/SafeMath.sol";
   باستخدام البلوك تشين. لاحظ أن هذا إصدار قديم، إذا كنت ترغب في التكامل مع OpenGSN،
   [استخدم هذا البرنامج التعليمي](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [مكتبة SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)، التي تمنع
-  تجاوزات/تدفقات حسابية لإصدارات Solidity **<0.8.0**. في Solidity ≥0.8.0، تعود العمليات الحسابية تلقائيًا
+  تجاوزات/تدفقات حسابية لإصدارات Solidity **&lt;0.8.0**. في Solidity ≥0.8.0، تعود العمليات الحسابية تلقائيًا
   عند التجاوز/التدفق، مما يجعل SafeMath غير ضروري. يستخدم هذا العقد SafeMath للتوافق مع الإصدارات الأقدم من
   المجمع.
 

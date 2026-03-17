@@ -3,7 +3,7 @@ title: "إرشادات تفصيلية لعقد ERC-721 الخاص بـ Vyper"
 description: "عقد ERC-721 الخاص بـ Ryuya Nakamura وكيفية عمله"
 author: Ori Pomerantz
 lang: ar
-tags: [ "vyper", "erc-721", "python" ]
+tags: [ "Vyper", "erc-721", "Python" ]
 skill: beginner
 published: 2021-04-01
 ---

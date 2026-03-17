@@ -3,7 +3,7 @@ title: "قائمة التحقق لدمج الرموز المميزة"
 description: "قائمة تحقق بالأشياء التي يجب مراعاتها عند التفاعل مع الرموز المميزة."
 author: "Trailofbits"
 lang: ar
-tags: [ "الصلابة", "العقود الذكيه ", "الأمن", "tokens" ]
+tags: [ "Solidity", "العقود الذكيه ", "الأمن", "tokens" ]
 skill: intermediate
 published: 2020-08-13
 source: Building secure contracts

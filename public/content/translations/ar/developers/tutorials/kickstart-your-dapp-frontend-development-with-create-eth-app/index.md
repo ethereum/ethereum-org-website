@@ -5,7 +5,7 @@ author: "Markus Waas"
 tags:
   [
     "واجهة التطبيق",
-    "جافا سكريبت",
+    "JavaScript",
     "ethers.js",
     "the graph",
     "defi"

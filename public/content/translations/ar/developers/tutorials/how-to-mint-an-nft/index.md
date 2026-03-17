@@ -5,8 +5,8 @@ author: "Sumi Mudgil"
 tags:
   [
     "ERC-721ERC-721",
-    "alchemy",
-    "الصلابة",
+    "Alchemy",
+    "Solidity",
     "العقود الذكيه "
   ]
 skill: beginner

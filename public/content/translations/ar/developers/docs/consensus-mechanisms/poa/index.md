@@ -16,7 +16,7 @@ lang: ar
 
 يتطلب إثبات السلطة الثقة في مجموعة من الموقّعين المعتمدين الذين تم تحديدهم في [كتلة الجينيس](/glossary/#genesis-block). في معظم التطبيقات الحالية، يحتفظ جميع الموقّعين المخوّلين بنفس القوة والامتيازات عند تحديد توافق السلسلة. الفكرة وراء تبني السمعة هي أن كل مُصادق مخول معروف للجميع من خلال أمور مثل معرفة عميلك (KYC)، أو من خلال وجود منظمة معروفة تكون هي المُصادق الوحيد - بهذه الطريقة إذا قام المُصادق بأي خطأ، فإن هويته تكون معروفة.
 
-هناك تطبيقات متعددة لنظام إثبات السلطة، لكن التطبيق القياسي في إيثريوم هو \*\*\*\*، الذي ينفذ [EIP-225](https://eips.ethereum.org/EIPS/eip-225). كليك هو معيار سهل التطبيق ومناسب للمطورين، يدعم جميع أنواع مزامنة العملاء. تشمل التطبيقات الأخرى [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) و [Aura](https://openethereum.github.io/Chain-specification).
+هناك تطبيقات متعددة لنظام إثبات السلطة، لكن التطبيق القياسي في إيثريوم هو <em>\*\*</em>، الذي ينفذ [EIP-225](https://eips.ethereum.org/EIPS/eip-225). كليك هو معيار سهل التطبيق ومناسب للمطورين، يدعم جميع أنواع مزامنة العملاء. تشمل التطبيقات الأخرى [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) و [Aura](https://openethereum.github.io/Chain-specification).
 
 ## كيف يعمل {#how-it-works}
 
@@ -76,5 +76,5 @@ lang: ar
 ## المواضيع ذات الصلة {#related-topics}
 
 - [إثبات العمل](/developers/docs/consensus-mechanisms/pow/)
-- إثبات الحصة(/developers/docs/consensus-mechanisms/pos/)
+- [إثبات الحصة](/developers/docs/consensus-mechanisms/pos/)
 

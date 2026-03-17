@@ -5,10 +5,10 @@ author: Ori Pomerantz
 tags:
   [
     "احتيال",
-    "solidity",
+    "Solidity",
     "erc-20",
-    "جافا سكريبت",
-    "typescript"
+    "JavaScript",
+    "TypeScript"
   ]
 skill: intermediate
 published: 2023-09-15

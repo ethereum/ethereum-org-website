@@ -3,7 +3,7 @@ title: "دليل لأدوات أمن العقود الذكية"
 description: "نظرة عامة على ثلاث تقنيات مختلفة للاختبار وتحليل البرامج"
 author: "Trailofbits"
 lang: ar
-tags: [ "الصلابة", "العقود الذكيه ", "الأمن" ]
+tags: [ "Solidity", "العقود الذكيه ", "الأمن" ]
 skill: intermediate
 published: 2020-09-07
 source: Building secure contracts

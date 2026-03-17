@@ -2,7 +2,7 @@
 title: "نشر أول عقد ذكي لك"
 description: "مقدمة لنشر أول عقد ذكي لك على شبكة اختبار Ethereum"
 author: "jdourlens"
-tags: [ "العقود الذكيه ", "remix", "الصلابة", "نشر" ]
+tags: [ "العقود الذكيه ", "Remix", "Solidity", "نشر" ]
 skill: beginner
 lang: ar
 published: 2020-04-03

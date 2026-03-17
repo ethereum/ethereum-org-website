@@ -3,7 +3,7 @@ title: "استخدام مقابس الويب"
 description: "دليل في استخدام مقابس الويب و الكيمياء لعمل طلبات JSON-RPC و الاشتراك في الأحداث."
 author: "Elan Halpern"
 lang: ar
-tags: [ "alchemy", "مقابس الويب", "استفسار", "جافا سكريبت" ]
+tags: [ "Alchemy", "مقابس الويب", "استفسار", "JavaScript" ]
 skill: beginner
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
