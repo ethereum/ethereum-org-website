@@ -186,7 +186,7 @@ module.exports = (phase) => {
     ...nextConfig,
     experimental: {
       ...experimental,
-      clientTraceMetadata: ["sentry-trace", "baggage"],
+      // Restore client-side Router Cache (Next 15 defaults to 0s for dynamic pages)
       staleTimes: { dynamic: 30, static: 180 },
     },
   }
