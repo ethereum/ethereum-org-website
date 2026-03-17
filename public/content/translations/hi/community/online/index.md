@@ -46,17 +46,17 @@ lang: hi
 ## चैट रूम {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link href="https://discord.com/invite/Nz6rtfJ8Cu">एथेरियम Cat Herders</Link> - एथेरियम विकास के लिए परियोजना प्रबंधन सहायता प्रदान करने पर केंद्रित समुदाय</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">एथेरियम Hackers</Link> - ETHGlobal द्वारा संचालित डिस्कॉर्ड चैट: दुनिया भर के एथेरियम हैकर्स के लिए एक ऑनलाइन समुदाय</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">एथेरियम Hackers</Link> - ईथग्लोबल द्वारा संचालित डिस्कॉर्ड चैट: दुनिया भर के एथेरियम हैकर्स के लिए एक ऑनलाइन समुदाय</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - एथेरियम विकास पर केंद्रित डिस्कॉर्ड समुदाय</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker डिस्कॉर्ड</Link> - मौजूदा और संभावित स्टेकर के लिए समुदाय-संचालित मार्गदर्शन, शिक्षा, सहायता और संसाधन</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">ईथस्टेकर डिस्कॉर्ड</Link> - मौजूदा और संभावित स्टेकर के लिए समुदाय-संचालित मार्गदर्शन, शिक्षा, सहायता और संसाधन</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org वेबसाइट टीम</Link> - आएं और टीम तथा समुदाय के लोगों के साथ ethereum.org वेब डेवलपमेंट और डिज़ाइन पर चैट करें</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos डिस्कॉर्ड</Link> - वेब3 क्रिएटर्स समुदाय जहां बिल्डर्स, उद्योग के प्रमुख व्यक्ति और एथेरियम उत्साही मिलते हैं। हम web3 विकास, डिज़ाइन और संस्कृति के बारे में भावुक हैं। आओ हमारे साथ निर्माण करें।</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">सॉलिडिटी Gitter</Link> - सॉलिडिटी विकास के लिए चैट (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">सॉलिडिटी गिटर</Link> - सॉलिडिटी विकास के लिए चैट (गिटर)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">सॉलिडिटी Matrix</Link> - सॉलिडिटी विकास के लिए चैट (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">एथेरियम Stack Exchange</Link> <i>- प्रश्न और उत्तर फ़ोरम</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- विकेंद्रीकृत प्रश्न और उत्तर फ़ोरम</i></SocialListItem>
 
-## यूट्यूब और X (पहले Twitter) {#youtube-and-twitter}
+## यूट्यूब और X (पहले ट्विटर) {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">एथेरियम फाउंडेशन</Link> - एथेरियम फाउंडेशन से नवीनतम जानकारी से अपडेट रहें</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - समुदाय के लिए मुख्य एथेरियम खाता</SocialListItem>

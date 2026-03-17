@@ -144,7 +144,7 @@ function auctionEnd() external {
 - **[रीमिक्स के साथ यूनिट टेस्ट चलाना](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[Ape के साथ यूनिट टेस्ट चलाना](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[हार्डहैट के साथ यूनिट टेस्ट चलाना](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
-- **[Wake के साथ यूनिट टेस्ट चलाना](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
+- **[वेक के साथ यूनिट टेस्ट चलाना](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### एकीकरण परीक्षण {#integration-testing-for-smart-contracts}
 
@@ -265,7 +265,7 @@ function auctionEnd() external {
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _एथेरियम वर्चुअल मशीन को लक्षित करने वाले स्मार्ट अनुबंधों के लिए पायथन-आधारित विकास और परीक्षण ढांचा।_
 
-- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _यूनिट परीक्षण और फ़ज़िंग के लिए पायथन-आधारित ढांचा जिसमें मजबूत डिबगिंग क्षमताएं और क्रॉस-चेन परीक्षण समर्थन है, जो सर्वश्रेष्ठ यूज़र अनुभव और प्रदर्शन के लिए pytest और Anvil का उपयोग करता है।_
+- **[वेक](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _यूनिट परीक्षण और फ़ज़िंग के लिए पायथन-आधारित ढांचा जिसमें मजबूत डिबगिंग क्षमताएं और क्रॉस-चेन परीक्षण समर्थन है, जो सर्वश्रेष्ठ यूज़र अनुभव और प्रदर्शन के लिए pytest और Anvil का उपयोग करता है।_
 
 ### गुण-आधारित परीक्षण उपकरण {#property-based-testing-tools}
 
@@ -277,7 +277,7 @@ function auctionEnd() external {
 
 - **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rust-आधारित स्टेटिक एनालाइज़र विशेष रूप से वेब3 स्मार्ट अनुबंध सुरक्षा और विकास के लिए डिज़ाइन किया गया है।_
 
-- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _भेद्यता और कोड गुणवत्ता डिटेक्टरों के साथ पायथन-आधारित स्टेटिक विश्लेषण ढांचा, कोड से उपयोगी जानकारी निकालने के लिए प्रिंटर और कस्टम सबमॉड्यूल लिखने के लिए समर्थन।_
+- **[वेक](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _भेद्यता और कोड गुणवत्ता डिटेक्टरों के साथ पायथन-आधारित स्टेटिक विश्लेषण ढांचा, कोड से उपयोगी जानकारी निकालने के लिए प्रिंटर और कस्टम सबमॉड्यूल लिखने के लिए समर्थन।_
 
 - **[Slippy](https://github.com/fvictorio/slippy)** - _Solidity के लिए एक सरल और शक्तिशाली लिंटर।_
 
@@ -291,7 +291,7 @@ function auctionEnd() external {
 
 - **[मिथ्रिल](https://github.com/ConsenSys/mythril-classic)** - _टेंट विश्लेषण, कॉन्कोलिक विश्लेषण और नियंत्रण प्रवाह जांच का उपयोग करके अनुबंध कमजोरियों का पता लगाने के लिए EVM बाइटकोड मूल्यांकन उपकरण।_
 
-- **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble एक विनिर्देशन भाषा और रनटाइम सत्यापन उपकरण है जो आपको गुणों के साथ स्मार्ट अनुबंधों को एनोटेट करने की अनुमति देता है जो आपको Diligence Fuzzing या मिथएक्स जैसे उपकरणों के साथ अनुबंधों का स्वचालित रूप से परीक्षण करने की अनुमति देता है।_
+- **[Diligence स्क्रिबल](https://consensys.net/diligence/scribble/)** - _Scribble एक विनिर्देशन भाषा और रनटाइम सत्यापन उपकरण है जो आपको गुणों के साथ स्मार्ट अनुबंधों को एनोटेट करने की अनुमति देता है जो आपको Diligence Fuzzing या मिथएक्स जैसे उपकरणों के साथ अनुबंधों का स्वचालित रूप से परीक्षण करने की अनुमति देता है।_
 
 ## संबंधित ट्यूटोरियल {#related-tutorials}
 

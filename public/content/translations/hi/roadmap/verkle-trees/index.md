@@ -55,7 +55,7 @@ summaryPoints:
 - [PEEPanEIP पर डैनक्रेड फीस्ट वर्कल ट्रीज़ समझाते हुए](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [हम सब के लिए वर्कल ट्रीज़](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
 - [एक वर्कल प्रूफ़ की संरचना](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
-- [ETHGlobal में गुइलाउम बैलेट वर्कल ट्रीज़ समझाते हुए](https://www.youtube.com/watch?v=f7bEtX3Z57o)
+- [ईथग्लोबल में गुइलाउम बैलेट वर्कल ट्रीज़ समझाते हुए](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["कैसे वर्कल ट्रीज़ एथेरियम को लीन और मीन बनाते हैं" डेवकॉन 6 में गुइलाउम बैलेट द्वारा](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [ETHDenver 2020 से स्टेटलेस क्लाइंट्स पर पाइपर मेरियम](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [ज़ीरो-नॉलेज पॉडकास्ट पर डैनक्रेड फीस्ट वर्कल ट्रीज़ और स्टेटलेसनेस की व्याख्या करते हुए](https://zeroknowledge.fm/podcast/202/)

@@ -46,7 +46,7 @@ published: 2024-07-15
    npm install
    ```
 
-3. Holesky टेस्टनेट पर ETH वाले खाते की निजी चाबी को निर्दिष्ट करने के लिए `.env` को संपादित करें। यदि आपके पास Holesky पर ETH नहीं है, तो आप [इस फोसेट का उपयोग](https://holesky-faucet.pk910.de/) कर सकते हैं।
+3. होलस्की टेस्टनेट पर ETH वाले खाते की निजी चाबी को निर्दिष्ट करने के लिए `.env` को संपादित करें। यदि आपके पास होलस्की पर ETH नहीं है, तो आप [इस फोसेट का उपयोग](https://holesky-faucet.pk910.de/) कर सकते हैं।
 
    ```sh filename=".env" copy
    PRIVATE_KEY=0x <private key goes here>
@@ -92,7 +92,7 @@ import { privateKeyToAccount } from "viem/accounts"
 import { holesky } from "viem/chains"
 ```
 
-वीएम में ब्लॉकचेन का उपयोग करने के लिए आपको इसकी परिभाषा आयात करनी होगी। इस मामले में, हम [Holesky](https://github.com/eth-clients/holesky) टेस्ट ब्लॉकचेन से कनेक्ट करना चाहते हैं।
+वीएम में ब्लॉकचेन का उपयोग करने के लिए आपको इसकी परिभाषा आयात करनी होगी। इस मामले में, हम [होलस्की](https://github.com/eth-clients/holesky) टेस्ट ब्लॉकचेन से कनेक्ट करना चाहते हैं।
 
 ```typescript
 // इस तरह हम .env में परिभाषाओं को process.env में जोड़ते हैं।

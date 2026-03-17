@@ -19,7 +19,7 @@ lang: hi
 कई वेबसाइटें आपको आपके पते से जुड़े स्मार्ट अनुबंधों को देखने और रद्द करने की सुविधा देती हैं। वेबसाइट पर जाएं और अपना वॉलेट कनेक्ट करें:
 
 - [ईथरस्कैन](https://etherscan.io/tokenapprovalchecker) (एथेरियम)
-- [Blockscout](https://eth.blockscout.com/apps/revokescout) (एथेरियम)
+- [ब्लॉकस्काउट](https://eth.blockscout.com/apps/revokescout) (एथेरियम)
 - [Revoke](https://revoke.cash/) (कई नेटवर्क)
 - [Unrekt](https://app.unrekt.net/) (कई नेटवर्क)
 - [EverRevoke](https://everrise.com/everrevoke/) (कई नेटवर्क)

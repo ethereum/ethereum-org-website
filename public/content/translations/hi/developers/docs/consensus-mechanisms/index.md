@@ -72,13 +72,13 @@ lang: hi
 
 एक **श्रृंखला चयन नियम** का उपयोग यह तय करने के लिए किया जाता है कि कौन सी श्रृंखला "सही" श्रृंखला है। बिटकॉइन "सबसे लंबी श्रृंखला" नियम का उपयोग करता है, जिसका अर्थ है कि जो भी ब्लॉकचेन सबसे लंबा होगा वह बाकी नोड्स वैध के रूप में स्वीकार करेगा और साथ काम करेगा। 'काम का सबूत' चेन के लिए, सबसे लंबी चेन की कुल संचयी 'काम का सबूत' कठिनाई से निर्धारित होती है। एथेरियम सबसे लंबी चेन नियम का भी उपयोग करता था; हालांकि अब, जब एथेरियम 'हिस्सेदारी का सबूत' पर चलता है, तो उसने एक अपडेटेड कांटा-विकल्प एल्गोरिथम को अपनाया जो चेन के 'भार' को मापता है। वजन सत्यापनकर्ता वोटों का संचित योग है, जो सत्यापनकर्ता स्टेक-ईथर बैलेंस द्वारा भारित है।
 
-एथेरियम [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) नामक एक आम सहमति तंत्र का उपयोग करता है जो [Casper FFG proof-of-stake](https://arxiv.org/abs/1710.09437) को [GHOST fork-choice rule](https://arxiv.org/abs/2003.03052) के साथ जोड़ता है।
+एथेरियम [गैस्पर](/developers/docs/consensus-mechanisms/pos/gasper/) नामक एक आम सहमति तंत्र का उपयोग करता है जो [कैस्पर FFG proof-of-stake](https://arxiv.org/abs/1710.09437) को [GHOST fork-choice rule](https://arxiv.org/abs/2003.03052) के साथ जोड़ता है।
 
 ## आगे की रीडिंग {#further-reading}
 
 - [ब्लॉकचेन सहमति एल्गोरिथम क्या है?](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
 - [नाकामोतो सहमति क्या है? शुरुआती लोगों के लिए संपूर्ण गाइड](https://blockonomi.com/nakamoto-consensus/)
-- [Casper कैसे काम करता है?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
+- [कैस्पर कैसे काम करता है?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [काम का सबूत ब्लॉकचेन की सुरक्षा और प्रदर्शन पर](https://eprint.iacr.org/2016/555.pdf)
 - [बाइजेंटाइन फॉल्ट](https://en.wikipedia.org/wiki/Byzantine_fault)
 

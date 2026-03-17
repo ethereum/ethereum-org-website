@@ -39,7 +39,7 @@ lang: hi
 
 ## EIP-4844 blobs {#eip-4844-blobs}
 
-[Dencun hardfork](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md) से शुरू एथेरियम ब्लॉकचेन में [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) शामिल है, जो सीमित जीवनकाल के साथ एथेरियम डेटा ब्लॉब्स में जोड़ता है (शुरुआत में लगभग [18 दिन](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). इन ब्लॉब्स की कीमत [निष्पादन गैस](/developers/docs/gas) से अलग है, हालांकि एक समान तंत्र का उपयोग करते हुए। वे अस्थायी डेटा पोस्ट करने का एक सस्ता तरीका हैं।
+[डैनकुन hardfork](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md) से शुरू एथेरियम ब्लॉकचेन में [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) शामिल है, जो सीमित जीवनकाल के साथ एथेरियम डेटा ब्लॉब्स में जोड़ता है (शुरुआत में लगभग [18 दिन](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). इन ब्लॉब्स की कीमत [निष्पादन गैस](/developers/docs/gas) से अलग है, हालांकि एक समान तंत्र का उपयोग करते हुए। वे अस्थायी डेटा पोस्ट करने का एक सस्ता तरीका हैं।
 
 EIP-4844 ब्लॉब्स के लिए मुख्य उपयोग का मामला रोलअप के लिए उनके लेनदेन को प्रकाशित करने के लिए है। [आशावादी रोलअप](/developers/docs/scaling/optimistic-rollups) को अपने ब्लॉकचेन पर लेनदेन प्रकाशित करने की आवश्यकता है। उन लेन-देन को [चुनौती अवधि](https://docs.optimism.io/connect/resources/glossary#challenge-period) के दौरान किसी के लिए भी उपलब्ध होना चाहिए ताकि [सत्यापनकर्ता](https://docs.optimism.io/connect/resources/glossary#validator) को गलती को ठीक करने में सक्षम किया जा सके यदि रोलअप का [सीक्वेंसर](https://docs.optimism.io/connect/resources/glossary#sequencer) गलत स्टेट रूट पोस्ट करता है।
 

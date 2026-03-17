@@ -62,7 +62,7 @@ data={[
 { name: "टेकु", value: 13.86},
 { name: "निंबस", value: 8.74},
 { name: "लोडस्टार", value: 2.67 },
-{ name: "Grandine", value: 1.04 },
+{ name: "ग्रैंडाइन", value: 1.04 },
 { name: "अन्य", value: 0.07 }
 ]}
 />
@@ -98,7 +98,7 @@ data={[
 - [टेकु](https://consensys.io/teku)
 - [लोडस्टार](https://github.com/ChainSafe/lodestar)
 - [प्रिज़्म](https://prysm.offchainlabs.com/docs/)
-- [Grandine](https://docs.grandine.io/)
+- [ग्रैंडाइन](https://docs.grandine.io/)
 
 तकनीकी यूज़र अल्पसंख्यक क्लाइंट के लिए अधिक ट्यूटोरियल और प्रलेखन लिखकर और अपने नोड-ऑपरेटिंग साथियों को प्रमुख क्लाइंट से दूर माइग्रेट करने के लिए प्रोत्साहित करके इस प्रक्रिया को तेज करने में मदद कर सकते हैं। अल्पसंख्यक सहमति क्लाइंट पर स्विच करने के लिए गाइड [clientdiversity.org](https://clientdiversity.org/) पर उपलब्ध हैं।
 

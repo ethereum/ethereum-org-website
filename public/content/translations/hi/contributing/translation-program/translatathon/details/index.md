@@ -65,7 +65,7 @@ template: translatathon
 
 - [Ethereum.org डेवलपर ट्यूटोरियल](https://crowdin.com/project/33388446abbe9d7aa21e42e49bba7f97)
 
-- [EthStaker डिपॉजिट CLI](https://crowdin.com/project/ethstaker-deposit-cli)
+- [ईथस्टेकर डिपॉजिट CLI](https://crowdin.com/project/ethstaker-deposit-cli)
 
 - [Eth डॉकर डॉक्स](https://crowdin.com/project/eth-docker-docs)
 

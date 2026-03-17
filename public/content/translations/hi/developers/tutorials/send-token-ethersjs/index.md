@@ -63,7 +63,7 @@ ethers.js(5.0) शामिल करें
 
 #### प्रोवाइडर सेट करें (इन्फ्यूरा) {#set-provider}
 
-Ropsten टेस्टनेट से कनेक्ट करें
+रोपस्टेन टेस्टनेट से कनेक्ट करें
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")

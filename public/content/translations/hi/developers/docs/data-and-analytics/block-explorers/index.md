@@ -17,7 +17,7 @@ sidebarDepth: 3
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_स्पेनिश, फ्रेंच, इतालवी, डच, पुर्तगाली, रूसी, चीनी और फारसी में भी उपलब्ध है_
-- [Blockscout](https://eth.blockscout.com/)
+- [ब्लॉकस्काउट](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru ब्लॉक खोजकर्ता](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
@@ -28,7 +28,7 @@ sidebarDepth: 3
 
 ## ओपन सोर्स उपकरण {#open-source-tools}
 
-- [Otterscan](https://otterscan.io/)
+- [ऑटरस्कैन](https://otterscan.io/)
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## डेटा {#data}

@@ -44,8 +44,8 @@ incomplete: true
 ## उन्नत उपयोग पैटर्न {#advanced-use-patterns}
 
 - [GETH सिम्युलेटेड बैकएंड](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
-- [एथेरियम और Quorum का उपयोग करके ब्लॉकचेन-एज़-अ-सर्विस ऐप्स](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
-- [एथेरियम ब्लॉकचेन अनुप्रयोगों में वितरित भंडारण आईपीएफएस और Swarm](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
+- [एथेरियम और कोरम का उपयोग करके ब्लॉकचेन-एज़-अ-सर्विस ऐप्स](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
+- [एथेरियम ब्लॉकचेन अनुप्रयोगों में वितरित भंडारण आईपीएफएस और स्वार्म](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [मोबाइल क्लाइंट: लाइब्रेरी और इनप्रोक एथेरियम नोड्स](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [देशी डैप्स: एथेरियम अनुबंधों के लिए Go बाइंडिंग](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
@@ -55,7 +55,7 @@ incomplete: true
 - [Go एथेरियम कोड विश्लेषण](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go एथेरियम स्रोत कोड की समीक्षा और विश्लेषण_
 - [एरिगॉन](https://github.com/ledgerwatch/erigon) - _Go एथेरियम का तेज़ व्युत्पन्न, जो संग्रह नोड्स पर केंद्रित है_
 - [Golem](https://github.com/golemfactory/golem) - _Golem कंप्यूटिंग शक्ति के लिए एक वैश्विक बाज़ार बना रहा है_
-- [Quorum](https://github.com/jpmorganchase/quorum) - _डेटा गोपनीयता का समर्थन करने वाला एथेरियम का एक अनुमति प्राप्त कार्यान्वयन_
+- [कोरम](https://github.com/jpmorganchase/quorum) - _डेटा गोपनीयता का समर्थन करने वाला एथेरियम का एक अनुमति प्राप्त कार्यान्वयन_
 - [प्रिज़्म](https://github.com/prysmaticlabs/prysm) - _Ethereum 'सेरेनिटी' 2.0 Go कार्यान्वयन_
 - [Eth Tweet](https://github.com/yep/eth-tweet) - _विकेंद्रीकृत ट्विटर: एथेरियम ब्लॉकचेन पर चलने वाली एक माइक्रोब्लॉगिंग सेवा_
 - [Plasma MVP गोलंग](https://github.com/kyokan/plasma) — _न्यूनतम व्यवहार्य प्लाज्मा विनिर्देश का गोलंग कार्यान्वयन और विस्तार_
@@ -74,9 +74,9 @@ incomplete: true
 - [गेथ Gist](https://gitter.im/ethereum/go-ethereum)
 - [Gophers Slack](https://invite.slack.golangbridge.org/) - [#ethereum चैनल](https://gophers.slack.com/messages/C9HP1S9V2)
 - [StackExchange - एथेरियम](https://ethereum.stackexchange.com/)
-- [Multi गेथ Gitter](https://gitter.im/ethoxy/multi-geth)
-- [एथेरियम Gitter](https://gitter.im/ethereum/home)
-- [गेथ लाइट क्लाइंट Gitter](https://gitter.im/ethereum/light-client)
+- [Multi गेथ गिटर](https://gitter.im/ethoxy/multi-geth)
+- [एथेरियम गिटर](https://gitter.im/ethereum/home)
+- [गेथ लाइट क्लाइंट गिटर](https://gitter.im/ethereum/light-client)
 
 ## अन्य एकत्रित सूचियाँ {#other-aggregated-lists}
 

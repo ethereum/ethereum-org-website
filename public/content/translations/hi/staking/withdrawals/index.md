@@ -200,7 +200,7 @@ eventName="read more">
 
 सत्यापनकर्ता ऑपरेटर को <a href="https://launchpad.ethereum.org/withdrawals/">स्टेकिंग लांच पैड विड्रॉल</a> पृष्ठ पर जाने की सलाह दी जाती है, जहां आपको विड्रॉल के लिए अपने सत्यापनकर्ता को तैयार करने, इवेंट्स का समय और विड्रॉल के कार्य के बारे में अधिक जानकारी मिलेगी।
 
-पहले एक टेस्टनेट पर अपने सेटअप को आज़माने के लिए, आरंभ करने के लिए <a href="https://hoodi.launchpad.ethereum.org">Hoodi टेस्टनेट स्टेकिंग लॉन्चपैड</a> पर जाएं।
+पहले एक टेस्टनेट पर अपने सेटअप को आज़माने के लिए, आरंभ करने के लिए <a href="https://hoodi.launchpad.ethereum.org">हूडी टेस्टनेट स्टेकिंग लॉन्चपैड</a> पर जाएं।
 </ExpandableCard>
 
 <ExpandableCard
@@ -215,6 +215,6 @@ eventName="read more">
 
 - [स्टेकिंग लॉन्चपैड निकासी](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: संचालन के रूप में बीकन चेन पुश निकासी](https://eips.ethereum.org/EIPS/eip-4895)
-- [PEEPanEIP #94: स्टेक किया गया ETH निकालना (परीक्षण) Potuz और Hsiao-Wei Wang के साथ](https://www.youtube.com/watch?v=G8UstwmGtyE)
+- [PEEPanEIP #94: स्टेक किया गया ETH निकालना (परीक्षण) Potuz और Hsiao-वेई वांग के साथ](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: एलेक्स स्टोक्स के साथ संचालन के रूप में बीकन चेन पुश निकासी](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [सत्यापनकर्ता के प्रभावी शेष को समझना](https://www.attestant.io/posts/understanding-validator-effective-balance/)

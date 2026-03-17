@@ -13,7 +13,7 @@ lang: hi
 **[रीमिक्स](https://remix.ethereum.org/)** - **_अंतर्निहित स्थैतिक विश्लेषण, और एक परीक्षण ब्लॉकचेन वर्चुअल मशीन के साथ वेब-आधारित IDE_**
 
 - [डॉक्स](https://remix-ide.readthedocs.io/en/latest/#)
-- [Gitter](https://gitter.im/ethereum/remix)
+- [गिटर](https://gitter.im/ethereum/remix)
 
 **[ChainIDE](https://chainide.com/)** - **_एक क्लाउड-आधारित मल्टी-चेन IDE_**
 
@@ -28,7 +28,7 @@ lang: hi
 
 **[EthFiddle](https://ethfiddle.com/)** - **_वेब-आधारित IDE जो आपको अपना स्मार्ट अनुबंध लिखने, संकलित करने और डीबग करने की सुविधा देता है_**
 
-- [Gitter](https://gitter.im/loomnetwork/ethfiddle)
+- [गिटर](https://gitter.im/loomnetwork/ethfiddle)
 
 ## डेस्कटॉप IDEs {#desktop-ides}
 

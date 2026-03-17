@@ -153,4 +153,4 @@ node index.js
 
 निश्चित नहीं हैं कि आगे क्या करें? हमारे [हैलो वर्ल्ड स्मार्ट कॉन्ट्रैक्ट गाइड](https://www.alchemy.com/docs/hello-world-smart-contract) में अपना पहला स्मार्ट अनुबंध डिप्लॉय करने का प्रयास करें और कुछ सॉलिडिटी प्रोग्रामिंग के साथ अपने हाथ गंदे करें, या [डैशबोर्ड डेमो ऐप](https://docs.alchemyapi.io/tutorials/demo-app) के साथ अपने डैशबोर्ड ज्ञान का परीक्षण करें!
 
-_[अल्केमी के साथ निःशुल्क साइन अप करें](https://auth.alchemy.com/), हमारे [प्रलेखन](https://www.alchemy.com/docs/) देखें, और नवीनतम समाचारों के लिए, हमें [Twitter](https://twitter.com/AlchemyPlatform) पर फॉलो करें।_
+_[अल्केमी के साथ निःशुल्क साइन अप करें](https://auth.alchemy.com/), हमारे [प्रलेखन](https://www.alchemy.com/docs/) देखें, और नवीनतम समाचारों के लिए, हमें [ट्विटर](https://twitter.com/AlchemyPlatform) पर फॉलो करें।_

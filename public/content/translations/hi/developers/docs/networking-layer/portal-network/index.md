@@ -74,7 +74,7 @@ JSON-RPC API भी लाइट क्लाइंट डेटा अनुर
 पोर्टल नेटवर्क क्लाइंट्स हैं:
 
 - [Trin](https://github.com/ethereum/trin): रस्ट में लिखा गया
-- [Fluffy](https://fluffy.guide): Nim में लिखा गया
+- [Fluffy](https://fluffy.guide): निम में लिखा गया
 - [Ultralight](https://github.com/ethereumjs/ultralight): Typescript में लिखा गया
 - [Shisui](https://github.com/zen-eth/shisui): Go में लिखा गया
 

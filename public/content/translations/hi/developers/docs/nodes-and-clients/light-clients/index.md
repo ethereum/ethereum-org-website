@@ -45,7 +45,7 @@ lang: hi
 - [लोडस्टार](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): टाइपस्क्रिप्ट में सहमति लाइट क्लाइंट
 - [Helios](https://github.com/a16z/helios): रस्ट में संयुक्त निष्पादन और सहमति लाइट क्लाइंट
 - [गेथ](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go में निष्पादन क्लाइंट के लिए लाइट मोड (विकास में)
-- [निंबस](https://nimbus.guide/el-light-client.html): Nim में सहमति लाइट क्लाइंट
+- [निंबस](https://nimbus.guide/el-light-client.html): निम में सहमति लाइट क्लाइंट
 
 हमारी जानकारी के अनुसार इनमें से कोई भी अभी तक उत्पादन के लिए तैयार नहीं माना जाता है।
 

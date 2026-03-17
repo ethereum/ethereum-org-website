@@ -42,9 +42,9 @@ incomplete: true
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _एथेरियम-जैसे नेटवर्क के साथ इंटरैक्ट करने के लिए एक्सटर्न का संग्रह_
 - [लाइटहाउस](https://github.com/sigp/lighthouse) - _तेज एथेरियम सहमति परत क्लाइंट_
-- [एथेरियम WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly के एक नियतात्मक सबसेट का उपयोग करके एथेरियम स्मार्ट अनुबंध निष्पादन परत का प्रस्तावित नया स्वरूप_
+- [एथेरियम वेबअसेंबली](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly के एक नियतात्मक सबसेट का उपयोग करके एथेरियम स्मार्ट अनुबंध निष्पादन परत का प्रस्तावित नया स्वरूप_
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API संदर्भ_
-- [Solaris](https://github.com/paritytech/sol-rs) - _नेटिव Parity क्लाइंट EVM का उपयोग करके सॉलिडिटी स्मार्ट अनुबंध यूनिट परीक्षण हार्नेस।_
+- [Solaris](https://github.com/paritytech/sol-rs) - _नेटिव पैरिटी क्लाइंट EVM का उपयोग करके सॉलिडिटी स्मार्ट अनुबंध यूनिट परीक्षण हार्नेस।_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _रस्ट एथेरियम वर्चुअल मशीन कार्यान्वयन_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust में Wavelet स्मार्ट अनुबंध_
 - [फाउंड्री](https://github.com/foundry-rs/foundry) - _एथेरियम एप्लिकेशन विकास के लिए टूलकिट_
@@ -59,7 +59,7 @@ incomplete: true
 
 ## रस्ट समुदाय के योगदानकर्ता {#rust-community-contributors}
 
-- [एथेरियम WebAssembly](https://gitter.im/ewasm/Lobby)
-- [Oasis Gitter](https://gitter.im/Oasis-official/Lobby)
-- [Parity Gitter](https://gitter.im/paritytech/parity)
+- [एथेरियम वेबअसेंबली](https://gitter.im/ewasm/Lobby)
+- [Oasis गिटर](https://gitter.im/Oasis-official/Lobby)
+- [पैरिटी गिटर](https://gitter.im/paritytech/parity)
 - [Enigma](https://discord.gg/SJK32GY)

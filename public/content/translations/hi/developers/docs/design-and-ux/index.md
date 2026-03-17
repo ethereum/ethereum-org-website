@@ -54,14 +54,14 @@ lang: hi
 ## वेब3 डिज़ाइन केस स्टडीज़ {#design-case-studies}
 
 - [Deep Work Studio](https://www.deepwork.studio/case-studies)
-- [OpenSea पर एक एनएफटी बेचना](https://builtformars.com/case-studies/opensea)
+- [ओपनसी पर एक एनएफटी बेचना](https://builtformars.com/case-studies/opensea)
 - [वॉलेट UX टियरडाउन: वॉलेट को कैसे बदलना होगा](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (वीडियो, 20 मिनट)
 
 ## डिज़ाइन बाउंटीज़ {#bounties}
 
 - [Dework](https://app.dework.xyz/bounties)
 - [Buildbox हैकथॉन](https://app.buidlbox.io/)
-- [ETHGlobal हैकथॉन](https://ethglobal.com/)
+- [ईथग्लोबल हैकथॉन](https://ethglobal.com/)
 
 ## डिज़ाइन डीएओ और समुदाय {#design-daos-and-communities}
 
@@ -74,11 +74,11 @@ lang: hi
 
 ## डिज़ाइन सिस्टम और अन्य डिज़ाइन संसाधन {#design-systems-and-resources}
 
-- [ऑप्टिमिज़्म डिज़ाइन](https://www.figma.com/@optimism) (Figma)
-- [Ethereum.org डिज़ाइन सिस्टम](https://www.figma.com/@ethdotorg) (Figma)
-- [Finity, पॉलीगॉन द्वारा एक डिज़ाइन सिस्टम](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
-- [Kleros डिज़ाइन सिस्टम](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)
-- [Safe डिज़ाइन सिस्टम](https://www.figma.com/community/file/1337417127407098506/safe-design-system) (Figma)
+- [ऑप्टिमिज़्म डिज़ाइन](https://www.figma.com/@optimism) (फिगमा)
+- [Ethereum.org डिज़ाइन सिस्टम](https://www.figma.com/@ethdotorg) (फिगमा)
+- [Finity, पॉलीगॉन द्वारा एक डिज़ाइन सिस्टम](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (फिगमा)
+- [Kleros डिज़ाइन सिस्टम](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (फिगमा)
+- [Safe डिज़ाइन सिस्टम](https://www.figma.com/community/file/1337417127407098506/safe-design-system) (फिगमा)
 - [ईएनएस डिज़ाइन सिस्टम](https://thorin.ens.domains/)
 - [Mirror डिज़ाइन सिस्टम](https://degen-xyz.vercel.app/)
 

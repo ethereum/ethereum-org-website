@@ -11,7 +11,7 @@
   "page-about-link-2": "गिटहब",
   "page-about-link-3": "गिटहब पर जारी कार्यों की पूरी सूची देखें",
   "page-about-link-4": "हमारे डिस्कॉर्ड सर्वर से जुड़ें",
-  "page-about-link-5": "Twitter पर हमसे संपर्क करें",
+  "page-about-link-5": "ट्विटर पर हमसे संपर्क करें",
   "page-about-link-6": "गिटहब पर कार्यान्वित कार्यों की पूरी सूची देखें",
   "page-about-link-7": "गिटहब पर एक समस्या बनाएँ",
   "page-about-p-1": "ethereum.org के लॉन्च के बाद से, हम इस बारे में पारदर्शी होने का प्रयास करते हैं कि हम कैसे काम करते हैं। यह हमारे मूल मूल्यों में से एक है क्योंकि हमारा मानना है कि एथेरियम की सफलता के लिए पारदर्शिता महत्वपूर्ण है।",
@@ -27,9 +27,9 @@
   "energy-consumption-chart-airbnb-label": "AirBnB",
   "energy-consumption-gold-mining-cbeci-label": "गोल्ड माइनिंग",
   "energy-consumption-chart-btc-pow-label": "BTC PoW",
-  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-netflix-label": "नेटफ्लिक्स",
   "energy-consumption-chart-eth-pow-label": "ETH PoW",
   "energy-consumption-chart-gaming-us-label": "अमेरिका में गेमिंग",
-  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-chart-paypal-label": "पेपैल",
   "energy-consumption-chart-eth-pos-label": "ETH PoS"
 }

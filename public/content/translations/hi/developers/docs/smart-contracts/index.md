@@ -106,7 +106,7 @@ contract VendingMachine {
 
 ## आगे की रीडिंग {#further-reading}
 
-- [Coinbase: स्मार्ट अनुबंध क्या है?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [कॉइनबेस: स्मार्ट अनुबंध क्या है?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [चेनलिंक: स्मार्ट अनुबंध क्या है?](https://chain.link/education/smart-contracts)
 - [वीडियो: सरलता से समझाया गया - स्मार्ट अनुबंध](https://youtu.be/ZE2HxTmxfrI)
-- [Cyfrin Updraft: वेब3 सीखने और ऑडिटिंग प्लेटफ़ॉर्म](https://updraft.cyfrin.io)
+- [साइफ्रिन अपड्राफ्ट: वेब3 सीखने और ऑडिटिंग प्लेटफ़ॉर्म](https://updraft.cyfrin.io)

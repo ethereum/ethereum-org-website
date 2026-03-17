@@ -1,6 +1,6 @@
 ---
 title: "आपके अनुबंध के लिए एक यूज़र इंटरफ़ेस बनाना"
-description: "टाइपस्क्रिप्ट, रिएक्ट, Vite और वैग्मी जैसे आधुनिक घटकों का उपयोग करके, हम एक आधुनिक, लेकिन न्यूनतम, यूज़र इंटरफ़ेस पर जाएँगे और सीखेंगे कि वॉलेट को यूज़र इंटरफ़ेस से कैसे कनेक्ट करें, जानकारी पढ़ने के लिए स्मार्ट अनुबंध को कॉल करें, स्मार्ट अनुबंध में लेनदेन भेजें, और परिवर्तनों की पहचान करने के लिए स्मार्ट अनुबंध से इवेंट्स की निगरानी करें।"
+description: "टाइपस्क्रिप्ट, रिएक्ट, वीट और वैग्मी जैसे आधुनिक घटकों का उपयोग करके, हम एक आधुनिक, लेकिन न्यूनतम, यूज़र इंटरफ़ेस पर जाएँगे और सीखेंगे कि वॉलेट को यूज़र इंटरफ़ेस से कैसे कनेक्ट करें, जानकारी पढ़ने के लिए स्मार्ट अनुबंध को कॉल करें, स्मार्ट अनुबंध में लेनदेन भेजें, और परिवर्तनों की पहचान करने के लिए स्मार्ट अनुबंध से इवेंट्स की निगरानी करें।"
 author: ओरी पोमेरेंट्ज़
 tags: [ "TypeScript", "react", "vite", "wagmi", "frontend" ]
 skill: beginner
@@ -15,7 +15,7 @@ sidebarDepth: 3
 
 ## यह क्यों महत्वपूर्ण है {#why-important}
 
-सिद्धांत रूप में, आप लोगों को अपने अनुबंधों के साथ इंटरैक्ट करने के लिए [ईथरस्कैन](https://holesky.etherscan.io/address/0x432d810484add7454ddb3b5311f0ac2e95cecea8#writeContract) या [Blockscout](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=write_contract) का उपयोग करा सकते हैं। यह अनुभवी Ethereans के लिए बहुत अच्छा होगा। लेकिन हम [एक और अरब लोगों](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion) की सेवा करने की कोशिश कर रहे हैं। यह एक बेहतरीन यूज़र अनुभव के बिना नहीं होगा, और एक अनुकूल यूज़र इंटरफ़ेस इसका एक बड़ा हिस्सा है।
+सिद्धांत रूप में, आप लोगों को अपने अनुबंधों के साथ इंटरैक्ट करने के लिए [ईथरस्कैन](https://holesky.etherscan.io/address/0x432d810484add7454ddb3b5311f0ac2e95cecea8#writeContract) या [ब्लॉकस्काउट](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=write_contract) का उपयोग करा सकते हैं। यह अनुभवी Ethereans के लिए बहुत अच्छा होगा। लेकिन हम [एक और अरब लोगों](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion) की सेवा करने की कोशिश कर रहे हैं। यह एक बेहतरीन यूज़र अनुभव के बिना नहीं होगा, और एक अनुकूल यूज़र इंटरफ़ेस इसका एक बड़ा हिस्सा है।
 
 ## Greeter एप्लिकेशन {#greeter-app}
 
@@ -23,7 +23,7 @@ sidebarDepth: 3
 
 ### इंस्टॉलेशन {#installation}
 
-1. यदि आवश्यक हो, तो अपने वॉलेट में [Holesky ब्लॉकचेन](https://chainlist.org/?search=holesky&testnets=true) जोड़ें और [टेस्ट ETH](https://www.holeskyfaucet.io/) प्राप्त करें।
+1. यदि आवश्यक हो, तो अपने वॉलेट में [होलस्की ब्लॉकचेन](https://chainlist.org/?search=holesky&testnets=true) जोड़ें और [टेस्ट ETH](https://www.holeskyfaucet.io/) प्राप्त करें।
 
 2. github रिपॉजिटरी को क्लोन करें।
 
@@ -221,9 +221,9 @@ const contractAddrs: AddressPerBlockchainType = {
 }
 ```
 
-दो समर्थित नेटवर्कों पर अनुबंध का पता: [Holesky](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contact_code) और [Sepolia](https://eth-sepolia.blockscout.com/address/0x7143d5c190F048C8d19fe325b748b081903E3BF0?tab=contact_code)।
+दो समर्थित नेटवर्कों पर अनुबंध का पता: [होलस्की](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contact_code) और [सेपोलिया](https://eth-sepolia.blockscout.com/address/0x7143d5c190F048C8d19fe325b748b081903E3BF0?tab=contact_code)।
 
-नोट: वास्तव में एक तीसरी परिभाषा है, Redstone Holesky के लिए, इसे नीचे समझाया जाएगा।
+नोट: वास्तव में एक तीसरी परिभाषा है, Redstone होलस्की के लिए, इसे नीचे समझाया जाएगा।
 
 ```tsx
 type ShowObjectAttrsType = {
@@ -457,7 +457,7 @@ export { Greeter }
 
 अंत में, WAGMI से संबंधित विभिन्न परिभाषाएँ `src/wagmi.ts` में हैं। मैं यहां सब कुछ समझाने नहीं जा रहा हूं, क्योंकि इसका अधिकांश हिस्सा बॉयलरप्लेट है जिसे आपको बदलने की संभावना नहीं है।
 
-यहां का कोड [github पर](https://github.com/qbzzt/20230801-modern-ui/blob/main/src/wagmi.ts) जैसा बिल्कुल नहीं है क्योंकि बाद में लेख में हम एक और चेन ([Redstone Holesky](https://redstone.xyz/docs/network-info)) जोड़ते हैं।
+यहां का कोड [github पर](https://github.com/qbzzt/20230801-modern-ui/blob/main/src/wagmi.ts) जैसा बिल्कुल नहीं है क्योंकि बाद में लेख में हम एक और चेन ([Redstone होलस्की](https://redstone.xyz/docs/network-info)) जोड़ते हैं।
 
 ```ts
 import { getDefaultWallets } from '@rainbow-me/rainbowkit'
@@ -501,7 +501,7 @@ export { chains }
 
 ### एक और ब्लॉकचेन जोड़ना {#add-blockchain}
 
-इन दिनों बहुत सारे [L2 स्केलिंग समाधान](/layer-2/) हैं, और आप कुछ ऐसे का समर्थन करना चाह सकते हैं जिन्हें viem अभी तक समर्थन नहीं करता है। ऐसा करने के लिए, आप `src/wagmi.ts` को संशोधित करते हैं। ये निर्देश बताते हैं कि [Redstone Holesky](https://redstone.xyz/docs/network-info) कैसे जोड़ा जाए।
+इन दिनों बहुत सारे [L2 स्केलिंग समाधान](/layer-2/) हैं, और आप कुछ ऐसे का समर्थन करना चाह सकते हैं जिन्हें viem अभी तक समर्थन नहीं करता है। ऐसा करने के लिए, आप `src/wagmi.ts` को संशोधित करते हैं। ये निर्देश बताते हैं कि [Redstone होलस्की](https://redstone.xyz/docs/network-info) कैसे जोड़ा जाए।
 
 1. viem से `defineChain` प्रकार आयात करें।
 
@@ -514,7 +514,7 @@ export { chains }
    ```ts
    const redstoneHolesky = defineChain({
       id: 17_001,
-      name: 'Redstone Holesky',
+      name: 'Redstone होलस्की',
       network: 'redstone-holesky',
       nativeCurrency: {
         decimals: 18,
@@ -550,13 +550,13 @@ export { chains }
 
     ```ts
     const contractAddrs : AddressPerBlockchainType = {
-      // Holesky
+      // होलस्की
       17000: '0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8',
     
-      // Redstone Holesky
+      // Redstone होलस्की
       17001: '0x4919517f82a1B89a32392E1BF72ec827ba9986D3',
     
-      // Sepolia
+      // सेपोलिया
       11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
     }
     ```
@@ -575,7 +575,7 @@ export { chains }
 
 3. **रिएक्ट** फ्रेमवर्क चुनें।
 
-4. **Vite** वैरिएंट चुनें।
+4. **वीट** वैरिएंट चुनें।
 
 5. आप [Rainbow kit](https://www.rainbowkit.com/docs/installation#manual-setup) जोड़ सकते हैं।
 

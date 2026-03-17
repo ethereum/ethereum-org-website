@@ -46,13 +46,13 @@ lang: hi
 - [प्रलेखन](https://docs.apeworx.io/ape/stable/)
 - [गिटहब](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_JVM पर ब्लॉकचेन एप्लिकेशन विकसित करने का एक प्लेटफॉर्म।_**
+**वेब3जे -** **_JVM पर ब्लॉकचेन एप्लिकेशन विकसित करने का एक प्लेटफॉर्म।_**
 
 - [होमपेज](https://www.web3labs.com/web3j-sdk)
 - [प्रलेखन](https://docs.web3j.io)
 - [गिटहब](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_EVM-आधारित ब्लॉकचेन के लिए एसिंक, उच्च-प्रदर्शन Kotlin/जावा/Android लाइब्रेरी।_**
+**ethers-kt -** **_EVM-आधारित ब्लॉकचेन के लिए एसिंक, उच्च-प्रदर्शन Kotlin/जावा/एंड्रॉयड लाइब्रेरी।_**
 
 - [गिटहब](https://github.com/Kr1ptal/ethers-kt)
 - [उदाहरण](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -94,7 +94,7 @@ lang: hi
 - [प्रलेखन](https://portal.thirdweb.com/sdk/)
 - [गिटहब](https://github.com/thirdweb-dev/)
 
-**Chainstack -** **_वेब3 (एथेरियम और अन्य) डेवलपमेंट प्लेटफॉर्म।_**
+**चैनस्टैक -** **_वेब3 (एथेरियम और अन्य) डेवलपमेंट प्लेटफॉर्म।_**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [गिटहब](https://github.com/chainstack)
@@ -132,7 +132,7 @@ lang: hi
 - [गिटहब](https://github.com/covalenthq)
 - [डिस्कॉर्ड](https://www.covalenthq.com/discord/)
 
-**Wake -** **_अनुबंधों के परीक्षण, फ़ज़िंग, परिनियोजन, भेद्यता स्कैनिंग और कोड नेविगेशन के लिए ऑल-इन-वन पायथन फ्रेमवर्क।_**
+**वेक -** **_अनुबंधों के परीक्षण, फ़ज़िंग, परिनियोजन, भेद्यता स्कैनिंग और कोड नेविगेशन के लिए ऑल-इन-वन पायथन फ्रेमवर्क।_**
 
 - [होमपेज](https://getwake.io/)
 - [प्रलेखन](https://ackeeblockchain.com/wake/docs/latest/)

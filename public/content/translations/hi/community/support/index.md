@@ -79,8 +79,8 @@ lang: hi
 
 यदि आप एक नोड या सत्यापनकर्ता चला रहे हैं, तो यहां कुछ समुदाय हैं जो आरंभ करने में आपकी सहायता करने के लिए समर्पित हैं।
 
-- [EthStaker डिस्कॉर्ड](https://discord.gg/ethstaker)
-- [EthStaker रेडिट](https://www.reddit.com/r/ethstaker)
+- [ईथस्टेकर डिस्कॉर्ड](https://discord.gg/ethstaker)
+- [ईथस्टेकर रेडिट](https://www.reddit.com/r/ethstaker)
 
 एथेरियम क्लाइंट बनाने वाली अधिकांश टीमों के पास समर्पित, सार्वजनिक-सामना करने वाले स्थान भी हैं जहां आप समर्थन प्राप्त कर सकते हैं और प्रश्न पूछ सकते हैं।
 
@@ -99,6 +99,6 @@ lang: hi
 - [लाइटहाउस](https://discord.gg/cyAszAh)
 - [टेकु](https://discord.gg/7hPv2T6)
 - [लोडस्टार](https://discord.gg/aMxzVcr)
-- [Grandine](https://discord.gg/H9XCdUSyZd)
+- [ग्रैंडाइन](https://discord.gg/H9XCdUSyZd)
 
 आप [यहां एक नोड चलाना भी सीख सकते हैं](/developers/docs/nodes-and-clients/run-a-node/)।

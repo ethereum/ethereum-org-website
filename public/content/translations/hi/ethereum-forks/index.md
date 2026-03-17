@@ -116,7 +116,7 @@ sidebarDepth: 1
 </ul>
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
+- [पेक्ट्रा.wtf](https://pectra.wtf)
 - [पेक्ट्रा स्टेकिंग अनुभव को कैसे बढ़ाएगा](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [इलेक्ट्रा अपग्रेड स्पेसिफिकेशन्स पढ़ें](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
 - [प्राग-इलेक्ट्रा ("पेक्ट्रा") FAQ](/roadmap/pectra/)

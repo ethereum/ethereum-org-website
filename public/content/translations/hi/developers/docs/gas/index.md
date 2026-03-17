@@ -25,7 +25,7 @@ lang: hi
 
 उदाहरण के लिए, यह कहने के बजाय कि आपकी गैस की कीमत 0.000000001 ईथर है, आप कह सकते हैं कि आपकी गैस की कीमत 1 ग्वेई है।
 
-'ग्वेई' शब्द 'giga-wei' का छोटा रूप है, जिसका अर्थ है 'बिलियन वेई'। एक ग्वेई एक अरब वेई के बराबर है। Wei स्वयं ([b-money](https://www.investopedia.com/terms/b/bmoney.asp) के निर्माता [Wei Dai](https://wikipedia.org/wiki/Wei_Dai) के नाम पर) ETH की सबसे छोटी इकाई है।
+'ग्वेई' शब्द 'giga-wei' का छोटा रूप है, जिसका अर्थ है 'बिलियन वेई'। एक ग्वेई एक अरब वेई के बराबर है। Wei स्वयं ([b-money](https://www.investopedia.com/terms/b/bmoney.asp) के निर्माता [वेई दाई](https://wikipedia.org/wiki/Wei_Dai) के नाम पर) ETH की सबसे छोटी इकाई है।
 
 ## गैस शुल्क की गणना कैसे की जाती है? {#how-are-gas-fees-calculated}
 
@@ -129,9 +129,9 @@ lang: hi
 अगर आप गैस की कीमतों की निगरानी करना चाहते हैं, तो आप अपने ETH को कम में भेज सकते हैं, आप कई अलग-अलग उपकरणों का उपयोग कर सकते हैं, जैसे:
 
 - [ईथरस्कैन](https://etherscan.io/gastracker) _लेनदेन गैस मूल्य अनुमानक_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _ओपन सोर्स लेनदेन गैस मूल्य अनुमानक_
+- [ब्लॉकस्काउट](https://eth.blockscout.com/gas-tracker) _ओपन सोर्स लेनदेन गैस मूल्य अनुमानक_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _लेनदेन शुल्क कम करने और पैसे बचाने के लिए एथेरियम और L2 गैस की कीमतों की निगरानी और उन्हें ट्रैक करें_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _गैस का अनुमान लगाने वाला Chrome एक्सटेंशन जो टाइप 0 लीगेसी लेनदेन और टाइप 2 EIP-1559 लेनदेन दोनों का समर्थन करता है।_
+- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _गैस का अनुमान लगाने वाला क्रोम एक्सटेंशन जो टाइप 0 लीगेसी लेनदेन और टाइप 2 EIP-1559 लेनदेन दोनों का समर्थन करता है।_
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Mainnet, आर्बिट्रम, और पॉलीगॉन पर विभिन्न प्रकार के लेनदेन के लिए अपनी स्थानीय मुद्रा में गैस शुल्क की गणना करें।_
 
 ## संबंधित उपकरण {#related-tools}

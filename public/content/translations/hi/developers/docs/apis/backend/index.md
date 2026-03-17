@@ -35,7 +35,7 @@ lang: hi
 - [प्रलेखन](https://docs.allthatnode.com)
 - [डिस्कॉर्ड](https://discord.gg/GmcdVEUbJM)
 
-**Blast by Bware Labs -** **_Ethereum मेननेट और टेस्टनेट के लिए विकेंद्रीकृत APIs।_**
+**ब्लास्ट by Bware Labs -** **_Ethereum मेननेट और टेस्टनेट के लिए विकेंद्रीकृत APIs।_**
 
 - [blastapi.io](https://blastapi.io/)
 - [प्रलेखन](https://docs.blastapi.io)
@@ -56,7 +56,7 @@ lang: hi
 
 - [प्रलेखन](https://docs.etherscan.io/)
 
-**Blockscout - ओपन सोर्स ब्लॉक एक्सप्लोरर**
+**ब्लॉकस्काउट - ओपन सोर्स ब्लॉक एक्सप्लोरर**
 
 - [प्रलेखन](https://docs.blockscout.com/)
 
@@ -81,7 +81,7 @@ lang: hi
 - [NOWNodes.io](https://nownodes.io/)
 - [प्रलेखन](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_एक सेवा के रूप में ब्लॉकचेन इंफ्रास्ट्रक्चर।_**
+**क्विकनोड -** **_एक सेवा के रूप में ब्लॉकचेन इंफ्रास्ट्रक्चर।_**
 
 - [quicknode.com](https://quicknode.com)
 - [प्रलेखन](https://www.quicknode.com/docs/welcome)
@@ -102,13 +102,13 @@ lang: hi
 
 ### डेवलपमेंट उपकरण {#development-tools}
 
-**ethers-kt -** **_EVM-आधारित ब्लॉकचेन के लिए एसिंक, उच्च-प्रदर्शन Kotlin/जावा/Android लाइब्रेरी।_**
+**ethers-kt -** **_EVM-आधारित ब्लॉकचेन के लिए एसिंक, उच्च-प्रदर्शन Kotlin/जावा/एंड्रॉयड लाइब्रेरी।_**
 
 - [गिटहब](https://github.com/Kr1ptal/ethers-kt)
 - [उदाहरण](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [डिस्कॉर्ड](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_ब्लॉकचेन के लिए एक ओपन सोर्स डॉट नेट इंटीग्रेशन लाइब्रेरी।_**
+**नैथेरियम -** **_ब्लॉकचेन के लिए एक ओपन सोर्स डॉट नेट इंटीग्रेशन लाइब्रेरी।_**
 
 - [गिटहब](https://github.com/Nethereum/Nethereum)
 - [प्रलेखन](http://docs.nethereum.com/en/latest/)
@@ -127,11 +127,11 @@ lang: hi
 - [प्रलेखन](https://docs.tatum.io/)
 - [डिस्कॉर्ड](https://discord.gg/EDmW3kjTC9)
 
-**web3j -** **_Ethereum के लिए एक जावा/Android/Kotlin/Scala इंटीग्रेशन लाइब्रेरी।_**
+**web3j -** **_Ethereum के लिए एक जावा/एंड्रॉयड/Kotlin/Scala इंटीग्रेशन लाइब्रेरी।_**
 
 - [गिटहब](https://github.com/web3j/web3j)
 - [डॉक्स](https://docs.web3j.io/)
-- [Gitter](https://gitter.im/web3j/web3j)
+- [गिटर](https://gitter.im/web3j/web3j)
 
 ### ब्लॉकचेन सेवाएं {#blockchain-services}
 
@@ -146,7 +146,7 @@ lang: hi
 - [प्रलेखन](https://docs.chainbase.com/)
 - [डिस्कॉर्ड](https://discord.gg/Wx6qpqz4AF)
 
-**Chainstack -** **_एक सेवा के रूप में इलास्टिक और समर्पित एथेरियम नोड्स।_**
+**चैनस्टैक -** **_एक सेवा के रूप में इलास्टिक और समर्पित एथेरियम नोड्स।_**
 
 - [chainstack.com](https://chainstack.com)
 - [प्रलेखन](https://docs.chainstack.com/)

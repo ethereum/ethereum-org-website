@@ -51,7 +51,7 @@ incomplete: true
 
 - [पायथन और ब्राउनी के साथ अपना खुद का ERC20 टोकन डिप्लॉय करें](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [स्मार्ट अनुबंधों को डिप्लॉय करने के लिए ब्राउनी और पायथन का उपयोग करना](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
-- [ब्राउनी के साथ OpenSea पर एनएफटी बनाना](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
+- [ब्राउनी के साथ ओपनसी पर एनएफटी बनाना](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
 ## पायथन परियोजनाएं और उपकरण {#python-projects-and-tools}
 
@@ -67,7 +67,7 @@ incomplete: true
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker अनुबंधों के लिए पायथन API_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _पायथन के लिए इथेरियम से साइन इन करें (siwe)_
 - [इथेरियम एकीकरण के लिए वेब3 डीफाई](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, यूनिस्वैप और अन्य लोकप्रिय परियोजनाओं के लिए तैयार एकीकरण के साथ एक पायथन पैकेज_
-- [Wake](https://getwake.io) - _अनुबंध परीक्षण, फ़ज़िंग, डिप्लॉयमेंट, भेद्यता स्कैनिंग और कोड नेविगेशन के लिए ऑल-इन-वन पायथन फ्रेमवर्क (भाषा सर्वर - [सॉलिडिटी के लिए उपकरण](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [वेक](https://getwake.io) - _अनुबंध परीक्षण, फ़ज़िंग, डिप्लॉयमेंट, भेद्यता स्कैनिंग और कोड नेविगेशन के लिए ऑल-इन-वन पायथन फ्रेमवर्क (भाषा सर्वर - [सॉलिडिटी के लिए उपकरण](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 
 ### संग्रहीत / अब रखरखाव नहीं किया जाता: {#archived--no-longer-maintained}
 

@@ -13,7 +13,7 @@ lang: hi
 ## डेवलपर्स <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) पर एथेरियम के बारे में जानें और आज़माएँ
-- अपने नज़दीकी किसी [ETHGlobal](http://ethglobal.co/) हैकाथॉन में भाग लें!
+- अपने नज़दीकी किसी [ईथग्लोबल](http://ethglobal.co/) हैकाथॉन में भाग लें!
 - अपनी विशेषज्ञता के क्षेत्र या अपनी पसंद की प्रोग्रामिंग भाषा से संबंधित [परियोजनाएँ देखें](/developers/docs/programming-languages/)
 - [सहमति और निष्पादन परत कॉल्स](https://www.youtube.com/@EthereumProtocol/streams) देखें या उनमें भाग लें
 - [इकोसिस्टम सहायता कार्यक्रम की इच्छा-सूची](https://esp.ethereum.foundation/wishlist/) - टूलिंग, दस्तावेज़ीकरण और बुनियादी ढाँचे के क्षेत्र जहाँ एथेरियम इकोसिस्टम सहायता कार्यक्रम सक्रिय रूप से अनुदान आवेदनों की मांग कर रहा है
@@ -109,7 +109,7 @@ lang: hi
 - [क्रिप्टोकरेंसी जॉब्स](https://cryptocurrencyjobs.co/ethereum/)
 - [कंसेंसिस में करियर](https://consensys.net/careers/)
 - [क्रिप्टो जॉब्स लिस्ट](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless जॉब्स बोर्ड](https://pallet.xyz/list/bankless/jobs)
+- [बैंकलेस जॉब्स बोर्ड](https://pallet.xyz/list/bankless/jobs)
 - [वेब3 जॉब्स](https://web3.career)
 - [वेब3 Army](https://web3army.xyz/)
 - [क्रिप्टो वैली जॉब्स](https://cryptovalley.jobs/)
@@ -126,7 +126,7 @@ lang: hi
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _कानूनी इंजीनियरिंग_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _प्री-सीड क्रिप्टो प्रोजेक्ट्स के लिए वेंचर_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _डिजिफिजिकल अपैरल ब्रांड्स_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Ethereum डेवलपमेंट को फंड करने पर केंद्रित समुदाय_
+- [मोलोचडीएओ](https://molochdao.com) [@मोलोचडीएओ](https://twitter.com/MolochDAO) - _Ethereum डेवलपमेंट को फंड करने पर केंद्रित समुदाय_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3 बिल्डरों का कलेक्टिव_
 
 कृपया जब भी और जैसे भी आप ethereum.org में योगदान करें, ethereum.org की [आचार संहिता](/community/code-of-conduct) का पालन करना याद रखें!

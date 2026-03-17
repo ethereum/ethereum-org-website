@@ -17,7 +17,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-पिछली बार हमने [सॉलिडिटी की बड़ी तस्वीर](https://soliditydeveloper.com/solidity-overview-2020) को देखा और पहले ही [create-eth-app](https://github.com/PaulRBerg/create-eth-app) का उल्लेख किया था। अब आप जानेंगे कि इसका उपयोग कैसे करें, कौन सी सुविधाएँ एकीकृत हैं और इस पर विस्तार करने के लिए अतिरिक्त विचार। [Sablier](http://sablier.com/) के संस्थापक पॉल रेज़वान बर्ग द्वारा शुरू किया गया यह ऐप, आपके फ्रंटएंड डेवलपमेंट की शुरूआत करेगा और चुनने के लिए कई वैकल्पिक एकीकरणों के साथ आता है।
+पिछली बार हमने [सॉलिडिटी की बड़ी तस्वीर](https://soliditydeveloper.com/solidity-overview-2020) को देखा और पहले ही [create-eth-app](https://github.com/PaulRBerg/create-eth-app) का उल्लेख किया था। अब आप जानेंगे कि इसका उपयोग कैसे करें, कौन सी सुविधाएँ एकीकृत हैं और इस पर विस्तार करने के लिए अतिरिक्त विचार। [सेबलिएर](http://sablier.com/) के संस्थापक पॉल रेज़वान बर्ग द्वारा शुरू किया गया यह ऐप, आपके फ्रंटएंड डेवलपमेंट की शुरूआत करेगा और चुनने के लिए कई वैकल्पिक एकीकरणों के साथ आता है।
 
 ## इंस्टॉलेशन {#installation}
 
@@ -56,7 +56,7 @@ yarn react-app:start
 
 ### द ग्राफ़ {#the-graph}
 
-[GraphQL](https://graphql.org/) [रेस्टफुल API](https://restfulapi.net/) की तुलना में डेटा को संभालने का एक वैकल्पिक तरीका है। रेस्टफुल Apis पर उनके कई फायदे हैं, विशेष रूप से विकेंद्रीकृत ब्लॉकचेन डेटा के लिए। यदि आप इसके पीछे के तर्क में रुचि रखते हैं, तो [GraphQL विल पावर द डिसेंट्रलाइज्ड वेब](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a) पर एक नज़र डालें।
+[ग्राफक्यूएल](https://graphql.org/) [रेस्टफुल API](https://restfulapi.net/) की तुलना में डेटा को संभालने का एक वैकल्पिक तरीका है। रेस्टफुल Apis पर उनके कई फायदे हैं, विशेष रूप से विकेंद्रीकृत ब्लॉकचेन डेटा के लिए। यदि आप इसके पीछे के तर्क में रुचि रखते हैं, तो [ग्राफक्यूएल विल पावर द डिसेंट्रलाइज्ड वेब](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a) पर एक नज़र डालें।
 
 आमतौर पर आप सीधे अपने स्मार्ट अनुबंध से डेटा प्राप्त करेंगे। नवीनतम ट्रेड का समय पढ़ना चाहते हैं? बस `MyContract.methods.latestTradeTime().call()` को कॉल करें जो आपके डैप में एथेरियम नोड से डेटा प्राप्त करता है। लेकिन क्या होगा यदि आपको सैकड़ों अलग-अलग डेटा बिंदुओं की आवश्यकता है? इसके परिणामस्वरूप नोड में सैकड़ों डेटा फ़ेच होंगे, हर बार [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) की आवश्यकता होती है जिससे आपका डैप धीमा और अक्षम हो जाता है। एक समाधान आपके अनुबंध के अंदर एक फ़ेचर कॉल फ़ंक्शन हो सकता है जो एक साथ कई डेटा लौटाता है। हालांकि यह हमेशा आदर्श नहीं होता है।
 
@@ -88,7 +88,7 @@ React.useEffect(() => {
 
 ट्रेड किए गए टोकन जो आपको ब्याज अर्जित करते हैं, _aTokens_ कहलाते हैं।
 
-जब आप _create-eth-app_ के साथ आवे को एकीकृत करना चुनते हैं, तो आपको एक [सबग्राफ एकीकरण](https://docs.aave.com/developers/getting-started/using-graphql) मिलेगा। आवे द ग्राफ़ का उपयोग करता है और पहले से ही आपको [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) और [मेननेट](https://thegraph.com/explorer/subgraph/aave/protocol) पर [रॉ](https://thegraph.com/explorer/subgraph/aave/protocol-raw) या [स्वरूपित](https://thegraph.com/explorer/subgraph/aave/protocol) रूप में कई उपयोग के लिए तैयार सबग्राफ प्रदान करता है।
+जब आप _create-eth-app_ के साथ आवे को एकीकृत करना चुनते हैं, तो आपको एक [सबग्राफ एकीकरण](https://docs.aave.com/developers/getting-started/using-graphql) मिलेगा। आवे द ग्राफ़ का उपयोग करता है और पहले से ही आपको [रोपस्टेन](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) और [मेननेट](https://thegraph.com/explorer/subgraph/aave/protocol) पर [रॉ](https://thegraph.com/explorer/subgraph/aave/protocol-raw) या [स्वरूपित](https://thegraph.com/explorer/subgraph/aave/protocol) रूप में कई उपयोग के लिए तैयार सबग्राफ प्रदान करता है।
 
 ![आवे फ्लैश लोन मीम – "हाँ, अगर मैं अपना फ्लैश लोन 1 ट्रांज़ैक्शन से ज़्यादा समय तक रख पाता, तो बहुत अच्छा होता"](./flashloan-meme.png)
 
@@ -102,10 +102,10 @@ React.useEffect(() => {
 
 दुर्भाग्य से, इस लेखन के समय एकीकरण केवल यूनिस्वैप v1 के लिए है, न कि [अभी-अभी जारी किए गए v2](https://uniswap.org/blog/uniswap-v2/) के लिए।
 
-### Sablier {#sablier}
+### सेबलिएर {#sablier}
 
-[Sablier](https://sablier.com/) यूज़र को धन भुगतान स्ट्रीमिंग करने की अनुमति देता है। एक ही payday के बजाय, प्रारंभिक सेटअप के बाद बिना किसी और प्रशासन के आपको वास्तव में लगातार अपना पैसा मिलता है। एकीकरण में इसका [अपना सबग्राफ](https://thegraph.com/explorer/subgraph/sablierhq/sablier) शामिल है।
+[सेबलिएर](https://sablier.com/) यूज़र को धन भुगतान स्ट्रीमिंग करने की अनुमति देता है। एक ही payday के बजाय, प्रारंभिक सेटअप के बाद बिना किसी और प्रशासन के आपको वास्तव में लगातार अपना पैसा मिलता है। एकीकरण में इसका [अपना सबग्राफ](https://thegraph.com/explorer/subgraph/sablierhq/sablier) शामिल है।
 
 ## आगे क्या है? {#whats-next}
 
-यदि आपके पास _create-eth-app_ के बारे में प्रश्न हैं, तो [Sablier समुदाय सर्वर](https://discord.gg/bsS8T47) पर जाएं, जहां आप _create-eth-app_ के लेखकों से संपर्क कर सकते हैं। कुछ पहले अगले कदमों के रूप में आप चाहें तो [Material UI](https://mui.com/material-ui/) जैसे UI फ्रेमवर्क को एकीकृत करें, वास्तव में आवश्यक डेटा के लिए GraphQL क्वेरी लिखें और डिप्लॉयमेंट सेटअप करें।
+यदि आपके पास _create-eth-app_ के बारे में प्रश्न हैं, तो [सेबलिएर समुदाय सर्वर](https://discord.gg/bsS8T47) पर जाएं, जहां आप _create-eth-app_ के लेखकों से संपर्क कर सकते हैं। कुछ पहले अगले कदमों के रूप में आप चाहें तो [Material UI](https://mui.com/material-ui/) जैसे UI फ्रेमवर्क को एकीकृत करें, वास्तव में आवश्यक डेटा के लिए ग्राफक्यूएल क्वेरी लिखें और डिप्लॉयमेंट सेटअप करें।

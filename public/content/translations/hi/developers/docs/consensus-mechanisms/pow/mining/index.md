@@ -75,7 +75,7 @@ lang: hi
 
 ## माइनिंग एल्गोरिथम {#mining-algorithm}
 
-एथेरियम मेननेट ने केवल एक माइनिंग एल्गोरिथम का उपयोग किया - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/)। Ethash एक मूल R&D एल्गोरिथम का उत्तराधिकारी था जिसे ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) के नाम से जाना जाता है।
+एथेरियम मेननेट ने केवल एक माइनिंग एल्गोरिथम का उपयोग किया - ['ईथैश'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/)। ईथैश एक मूल R&D एल्गोरिथम का उत्तराधिकारी था जिसे ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) के नाम से जाना जाता है।
 
 [माइनिंग एल्गोरिथम पर अधिक जानकारी](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/)।
 

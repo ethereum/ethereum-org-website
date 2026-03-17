@@ -20,7 +20,7 @@ lang: hi
 कुछ लोकप्रिय एक्सचेंज हैं:
 
 - [यूनिस्वैप](https://app.uniswap.org/#/swap)
-- [Sushiswap](https://www.sushi.com/swap)
+- [सुशीस्वैप](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://www.curve.finance/dex/ethereum/swap/)
 

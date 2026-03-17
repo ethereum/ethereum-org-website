@@ -22,16 +22,16 @@ incomplete: true
 
 ## एथेरियम क्लाइंट्स के साथ काम करना {#working-with-ethereum-clients}
 
-[Web3J](https://github.com/web3j/web3j) और Hyperledger बेसु का उपयोग करना सीखें, जो दो प्रमुख जावा एथेरियम क्लाइंट्स हैं
+[Web3J](https://github.com/web3j/web3j) और हाइपरलेजर बेसु का उपयोग करना सीखें, जो दो प्रमुख जावा एथेरियम क्लाइंट्स हैं
 
 - [जावा, Eclipse और Web3J के साथ एक एथेरियम क्लाइंट से कनेक्ट करना](https://kauri.io/article/b9eb647c47a546bc95693acc0be72546/connecting-to-an-ethereum-client-with-java-eclipse-and-web3j)
-- [जावा और Web3j के साथ एक एथेरियम खाते को मैनेज करना](https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j)
+- [जावा और वेब3जे के साथ एक एथेरियम खाते को मैनेज करना](https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j)
 - [अपने स्मार्ट कॉन्ट्रैक्ट से एक जावा रैपर जेनरेट करना](https://kauri.io/article/84475132317d4d6a84a2c42eb9348e4b/generate-a-java-wrapper-from-your-smart-contract)
 - [एक एथेरियम स्मार्ट कॉन्ट्रैक्ट के साथ इंटरैक्ट करना](https://kauri.io/article/14dc434d11ef4ee18bf7d57f079e246e/interacting-with-an-ethereum-smart-contract-in-java)
 - [एथेरियम स्मार्ट कॉन्ट्रैक्ट इवेंट्स के लिए लिसन करना](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [लिनक्स के साथ बेसु (Pantheon), जावा एथेरियम क्लाइंट का उपयोग करना](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
-- [जावा इंटीग्रेशन टेस्ट में Hyperledger बेसु (Pantheon) नोड को रन करना](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [Web3j चीट शीट](https://kauri.io/web3j-cheat-sheet-\(java-ethereum\)/5dfa1ea941ac3d0001ce1d90/c)
+- [जावा इंटीग्रेशन टेस्ट में हाइपरलेजर बेसु (Pantheon) नोड को रन करना](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
+- [वेब3जे चीट शीट](https://kauri.io/web3j-cheat-sheet-\(java-ethereum\)/5dfa1ea941ac3d0001ce1d90/c)
 
 [ethers-kt](https://github.com/Kr1ptal/ethers-kt) का उपयोग करना सीखें, जो EVM-आधारित ब्लॉकचेन के साथ इंटरैक्ट करने के लिए एक एसिंक, उच्च-प्रदर्शन वाली कोटलिन लाइब्रेरी है। जेवीएम और एंड्रॉइड प्लेटफॉर्म को लक्षित करना।
 
@@ -42,8 +42,8 @@ incomplete: true
 ## मध्यवर्ती लेख {#intermediate-articles}
 
 - [आईपीएफएस के साथ एक जावा एप्लिकेशन में स्टोरेज मैनेज करना](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
-- [Web3j के साथ जावा में ERC20 टोकन मैनेज करना](https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j)
-- [Web3j ट्रांजैक्शन मैनेजर्स](https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers)
+- [वेब3जे के साथ जावा में ERC20 टोकन मैनेज करना](https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j)
+- [वेब3जे ट्रांजैक्शन मैनेजर्स](https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers)
 
 ## उन्नत उपयोग पैटर्न {#advanced-use-patterns}
 

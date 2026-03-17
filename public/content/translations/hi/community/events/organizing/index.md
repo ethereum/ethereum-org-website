@@ -211,7 +211,7 @@ X.com आपके सोशल मीडिया प्रचार की र
 
 - [ETHWarsaw केस स्टडी, आउट ऑफ ऑर्डिनरी द्वारा](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
-Twitter स्पेस:
+ट्विटर स्पेस:
 
 - [ETH कम्युनिटी AMA](https://x.com/NapulETH/status/1905732699094151623)
 

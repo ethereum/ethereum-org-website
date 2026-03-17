@@ -131,7 +131,7 @@ L1 ब्लॉकचेन और L2 [स्केलिंग](/developers/doc
 - [रोलअप इंटरऑपरेबिलिटी समाधानों की स्थिति](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 जून, 2024 – एलेक्स हुक
 - [सुरक्षित क्रॉस-चेन इंटरऑपरेबिलिटी के लिए साझा सुरक्षा का उपयोग: लैग्रेंज स्टेट कमेटियां और उससे आगे](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 जून, 2024 – इमैनुएल अवोसिका
 
-इसके अतिरिक्त, यहां [James Prestwich](https://twitter.com/_prestwich) की कुछ व्यावहारिक प्रस्तुतियां हैं जो ब्रिजेज़ की गहरी समझ विकसित करने में मदद कर सकती हैं:
+इसके अतिरिक्त, यहां [जेम्स प्रेस्टविच](https://twitter.com/_prestwich) की कुछ व्यावहारिक प्रस्तुतियां हैं जो ब्रिजेज़ की गहरी समझ विकसित करने में मदद कर सकती हैं:
 
 - [ब्रिजेज़ बनाना, दीवारों वाले बगीचे नहीं](https://youtu.be/ZQJWMiX4hT0)
 - [ब्रिजेज़ को समझना](https://youtu.be/b0mC-ZqN8Oo)

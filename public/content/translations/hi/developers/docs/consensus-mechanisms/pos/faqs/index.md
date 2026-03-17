@@ -60,7 +60,7 @@ lang: hi
 
 कैस्पर और LMD_GHOST के संयोजन को गैस्पर के रूप में जाना जाता है।
 
-[Gasper पर अधिक जानकारी](/developers/docs/consensus-mechanisms/pos/gasper/)
+[गैस्पर पर अधिक जानकारी](/developers/docs/consensus-mechanisms/pos/gasper/)
 
 ## स्लैशिंग क्या है? {#what-is-slashing}
 
