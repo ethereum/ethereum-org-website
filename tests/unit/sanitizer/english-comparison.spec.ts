@@ -21,6 +21,7 @@ const {
   restoreDroppedBackslashEscapes,
   fixCollapsedComponentLineBreaks,
   fixMissingLinkBrackets,
+  restoreStrippedAbbreviations,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -694,6 +695,68 @@ test.describe("English Comparison Fixes", () => {
         ].join("\n")
       )
       expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("restoreStrippedAbbreviations", () => {
+    test("restores RWA abbreviation in title", () => {
+      const translated =
+        '---\ntitle: "الأصول الحقيقية ()"\n---\nContent here.'
+      const english =
+        '---\ntitle: "Real-world assets (RWA)"\n---\nContent here.'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toContain('"الأصول الحقيقية (RWA)"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("restores PoA abbreviation in title", () => {
+      const translated =
+        '---\ntitle: "إثبات السلطة ()"\n---\nContent.'
+      const english =
+        '---\ntitle: "Proof-of-authority (PoA)"\n---\nContent.'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toContain('"إثبات السلطة (PoA)"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves content unchanged when no empty parens", () => {
+      const translated = '---\ntitle: "Normal title"\n---\nContent.'
+      const english = '---\ntitle: "Normal title"\n---\nContent.'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not restore non-ASCII abbreviations", () => {
+      const translated = '---\ntitle: "Test ()"\n---'
+      const english = '---\ntitle: "Test (テスト)"\n---'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple empty parens", () => {
+      const translated = '---\ntitle: "() and ()"\n---'
+      const english = '---\ntitle: "(ABC) and (DEF)"\n---'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toContain("(ABC)")
+      expect(content).toContain("(DEF)")
+      expect(fixCount).toBe(2)
     })
   })
 })

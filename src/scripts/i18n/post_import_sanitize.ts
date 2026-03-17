@@ -177,6 +177,168 @@ const TICKER_CORRECTIONS: Record<string, string> = {
 }
 
 /**
+ * Known Crowdin boilerplate strings that get injected mid-content.
+ * These are legitimate as standalone paragraphs in translation-program pages,
+ * but are artifacts when embedded within other sentences.
+ */
+const CROWDIN_BOILERPLATE = [
+  "نشكرك على مشاركتك في برنامج الترجمة ethereum.org",
+  "Thank you for your participation in the ethereum.org Translation Program",
+]
+
+/**
+ * Strip Crowdin boilerplate strings when injected mid-paragraph.
+ * Only strips when preceded by ". " (sentence boundary) on the same line.
+ * Preserves standalone occurrences (legitimate content in translation-program pages).
+ * Skips code blocks.
+ */
+function stripCrowdinBoilerplate(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    for (const bp of CROWDIN_BOILERPLATE) {
+      const escaped = bp.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+      // Match: ". boilerplate[.!] " — embedded after a sentence-ending period
+      // Use [ \t]+ to avoid crossing line boundaries (standalone lines are legitimate)
+      const re = new RegExp(`\\.[ \\t]+${escaped}[.!]?[ \\t]*`, "g")
+      parts[i] = parts[i].replace(re, (match) => {
+        fixCount++
+        return ". "
+      })
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Known garbled transliterations of brand names from Crowdin.
+ * Maps the garbled form to the correct Latin-script brand name.
+ */
+const BRAND_GARBLE_CORRECTIONS: Record<string, string> = {
+  يجتبه: "GitHub",
+  الصلابة: "Solidity",
+}
+
+/**
+ * Fix known garbled transliterations of brand names.
+ * Replaces consistent Crowdin artifacts with the correct brand name.
+ * Skips code blocks.
+ */
+function fixKnownBrandGarbles(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    for (const [garble, correct] of Object.entries(BRAND_GARBLE_CORRECTIONS)) {
+      const escaped = garble.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+      const re = new RegExp(escaped, "g")
+      parts[i] = parts[i].replace(re, () => {
+        fixCount++
+        return correct
+      })
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix duplicated tag/JSON values where a string is concatenated with itself.
+ * E.g. "ERC-721ERC-721" -> "ERC-721".
+ * Only operates on quoted string values (double quotes) to avoid false positives.
+ * The repeated unit must be at least 2 characters.
+ * Skips code blocks.
+ */
+function fixDuplicatedTagValues(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match quoted strings where the value is exactly doubled
+    parts[i] = parts[i].replace(/"([^"]{2,})\1"/g, (_match, half) => {
+      fixCount++
+      return `"${half}"`
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Restore abbreviations stripped from parentheses in frontmatter.
+ * When English has "(RWA)" but translation has "()", restore the abbreviation.
+ * Only restores ASCII/Latin abbreviations (not translated text).
+ * Only operates within the frontmatter section.
+ */
+function restoreStrippedAbbreviations(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+  const fmRe = /^---\n([\s\S]*?)\n---/
+  const transFmMatch = translatedContent.match(fmRe)
+  const engFmMatch = englishContent.match(fmRe)
+
+  if (!transFmMatch || !engFmMatch)
+    return { content: translatedContent, fixCount: 0 }
+
+  // Only process frontmatter portion
+  let transFm = transFmMatch[1]
+  const engFm = engFmMatch[1]
+
+  // Find all "(ABBREV)" patterns in English frontmatter
+  const abbrevsInEnglish: string[] = []
+  const abbrevRe = /\(([A-Za-z][A-Za-z0-9-]{0,10})\)/g
+  let m
+  while ((m = abbrevRe.exec(engFm)) !== null) {
+    abbrevsInEnglish.push(m[1])
+  }
+
+  if (abbrevsInEnglish.length === 0)
+    return { content: translatedContent, fixCount: 0 }
+
+  // For each abbreviation found in English, check if translation has "()"
+  let abbrevIdx = 0
+  transFm = transFm.replace(/\(\)/g, () => {
+    if (abbrevIdx < abbrevsInEnglish.length) {
+      const abbrev = abbrevsInEnglish[abbrevIdx]
+      abbrevIdx++
+      fixCount++
+      return `(${abbrev})`
+    }
+    return "()"
+  })
+
+  if (fixCount === 0) return { content: translatedContent, fixCount: 0 }
+
+  const content = translatedContent.replace(fmRe, `---\n${transFm}\n---`)
+  return { content, fixCount }
+}
+
+/**
  * Fix ticker symbol transpositions.
  * Only matches whole words (word boundaries) to avoid false positives.
  * Skips code blocks (fenced and inline) where these forms may be valid.
@@ -2651,6 +2813,18 @@ function processMarkdownFile(
     (n) => `Stripped ${n} LLM artifact token(s) (<bos>, <eos>, etc.)`
   )
   applyFix(
+    () => stripCrowdinBoilerplate(content),
+    (n) => `Stripped ${n} Crowdin boilerplate injection(s)`
+  )
+  applyFix(
+    () => fixKnownBrandGarbles(content),
+    (n) => `Fixed ${n} known brand name garble(s)`
+  )
+  applyFix(
+    () => fixDuplicatedTagValues(content),
+    (n) => `Fixed ${n} duplicated tag value(s)`
+  )
+  applyFix(
     () => fixSmartQuotesInJsxAttributes(content),
     (n) => `Fixed smart quotes in ${n} JSX tag attribute(s)`
   )
@@ -2824,6 +2998,15 @@ function processMarkdownFile(
     content = brandResult.content
     issues.push(...brandResult.warnings)
 
+    // Restore abbreviations stripped from parentheses
+    const abbrevResult = restoreStrippedAbbreviations(content, englishMd)
+    if (abbrevResult.content !== content) {
+      issues.push(
+        `Restored ${abbrevResult.fixCount} stripped abbreviation(s) in frontmatter`
+      )
+    }
+    content = abbrevResult.content
+
     // Fix translated hrefs using set comparison
     const hrefResult = fixTranslatedHrefs(content, englishMd)
     if (hrefResult.content !== content) {
@@ -2936,6 +3119,20 @@ function processJsonFile(
     .replace(/^\uFEFF/, "")
     .replace(/[""]/g, '"')
     .replace(/['']/g, "'")
+
+  // Fix known brand garbles in JSON values
+  const garbleResult = fixKnownBrandGarbles(content)
+  if (garbleResult.fixCount > 0) {
+    content = garbleResult.content
+    issues.push(`Fixed ${garbleResult.fixCount} known brand name garble(s)`)
+  }
+
+  // Fix duplicated tag values in JSON
+  const dupResult = fixDuplicatedTagValues(content)
+  if (dupResult.fixCount > 0) {
+    content = dupResult.content
+    issues.push(`Fixed ${dupResult.fixCount} duplicated tag value(s)`)
+  }
 
   // Try parsing to validate JSON
   try {
@@ -3338,6 +3535,10 @@ export const _testOnly = {
   fixBrokenBracketInLinks,
   stripLlmArtifactTokens,
   fixSmartQuotesInJsxAttributes,
+  stripCrowdinBoilerplate,
+  fixDuplicatedTagValues,
+  fixKnownBrandGarbles,
+  restoreStrippedAbbreviations,
   warnExposedMdxTags,
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,
