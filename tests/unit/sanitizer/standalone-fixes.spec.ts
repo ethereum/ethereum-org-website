@@ -39,6 +39,9 @@ const {
   fixBrokenBracketInLinks,
   stripLlmArtifactTokens,
   fixSmartQuotesInJsxAttributes,
+  stripCrowdinBoilerplate,
+  fixDuplicatedTagValues,
+  fixKnownBrandGarbles,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -1491,6 +1494,163 @@ author: Ori Pomerantz
     test("skips code blocks", () => {
       const input = "```\n<YouTube id=\u201Dabc\u201D />\n```"
       const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("stripCrowdinBoilerplate", () => {
+    test("strips Arabic boilerplate injected mid-paragraph", () => {
+      const input =
+        "المعاملات هي تعليمات من الحسابات موقعة بشكل مشفّر. نشكرك على مشاركتك في برنامج الترجمة ethereum.org. أبسط معاملة هي نقل ETH من حساب إلى آخر."
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe(
+        "المعاملات هي تعليمات من الحسابات موقعة بشكل مشفّر. أبسط معاملة هي نقل ETH من حساب إلى آخر."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("strips English boilerplate injected mid-paragraph", () => {
+      const input =
+        "Some content here. Thank you for your participation in the ethereum.org Translation Program. More content follows."
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe("Some content here. More content follows.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("preserves boilerplate when standalone paragraph", () => {
+      const input =
+        "نشكرك على مشاركتك في برنامج الترجمة ethereum.org!"
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("preserves boilerplate as standalone line in multi-line content", () => {
+      const input =
+        "Some previous paragraph.\n\nنشكرك على مشاركتك في برنامج الترجمة ethereum.org!\n"
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input =
+        "```\nSome text. نشكرك على مشاركتك في برنامج الترجمة ethereum.org. More.\n```"
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles no boilerplate", () => {
+      const input = "Normal content without any boilerplate text."
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixDuplicatedTagValues", () => {
+    test("deduplicates ERC-721ERC-721 in frontmatter tags", () => {
+      const input = 'tags: ["ERC-721ERC-721", "Alchemy", "Solidity"]'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe('tags: ["ERC-721", "Alchemy", "Solidity"]')
+      expect(fixCount).toBe(1)
+    })
+
+    test("deduplicates in JSON values", () => {
+      const input = '  "erc-721-term": "ERC-721ERC-721",'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe('  "erc-721-term": "ERC-721",')
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple duplicated values", () => {
+      const input = 'tags: ["ERC-721ERC-721", "ERC-20ERC-20"]'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe('tags: ["ERC-721", "ERC-20"]')
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves non-duplicated values unchanged", () => {
+      const input = 'tags: ["ERC-721", "Alchemy"]'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not match odd-length strings", () => {
+      const input = '"abc"'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not false-positive on legitimate repeated content", () => {
+      // "aa" is a valid 2-char string where first half equals second half
+      // but we should only match when the repeated unit is at least 2 chars
+      const input = '"testtest"'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe('"test"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips code blocks", () => {
+      const input = '```\n"ERC-721ERC-721"\n```'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixKnownBrandGarbles", () => {
+    test("fixes GitHub garble in Arabic markdown link", () => {
+      const input = "- [يجتبه](https://github.com/alchemyplatform)"
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe(
+        "- [GitHub](https://github.com/alchemyplatform)"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes multiple GitHub garbles in one file", () => {
+      const input =
+        "- [يجتبه](https://github.com/foo)\n- [يجتبه](https://github.com/bar)"
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe(
+        "- [GitHub](https://github.com/foo)\n- [GitHub](https://github.com/bar)"
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("fixes Solidity garble in frontmatter tags", () => {
+      const input = 'tags: ["الصلابة", "Waffle", "الاختبار"]'
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe('tags: ["Solidity", "Waffle", "الاختبار"]')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes Solidity garble in prose", () => {
+      const input =
+        "يمكنك كتابة العقود الذكية باستخدام الصلابة"
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe(
+        "يمكنك كتابة العقود الذكية باستخدام Solidity"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct brand names unchanged", () => {
+      const input =
+        '- [GitHub](https://github.com/foo)\ntags: ["Solidity"]'
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\nيجتبه\n```"
+      const { content, fixCount } = fixKnownBrandGarbles(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })

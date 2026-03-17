@@ -43,6 +43,11 @@
 | 32 | False-positive "Exposed MDX tag" for PascalCase components | PR #17702 | `<DocLink href="...">` flagged as exposed tag -- 384 false warnings across 72 files; DocLink is registered MDX component in MdComponents | Low -- false warning, no build impact |
 | 33 | LLM artifact tokens exposed in MDX | PR #17730 (mr) | `कृ<bos>ितपणे` -- `<bos>` (beginning-of-sequence) token from machine translation leaks into prose; MDX parser treats it as unrecognized JSX component; other tokens: `<eos>`, `<s>`, `</s>`, `<pad>`, `<unk>`, `<mask>` | Critical -- breaks MDX compilation |
 | 34 | Smart/curly quotes in JSX attribute values | PR #17770 (cs,de,pl,zh) | `<YouTube id=\u201Du8XvkTrjITs\u201D />` -- Crowdin or LLM replaces straight `"` with smart quotes (U+201C/U+201D/U+201E) inside JSX component attribute values; MDX parser expects `"` or `'` to delimit attributes | Critical -- breaks MDX compilation |
+| 35 | Crowdin boilerplate injected mid-paragraph | ar #17105 | `...مشفّر. نشكرك على مشاركتك في برنامج الترجمة ethereum.org. أبسط معاملة...` -- Crowdin thank-you message injected between sentences in transactions/index.md; legitimate as standalone line in translation-program pages | Medium -- garbled content |
+| 36 | Duplicated tag values (concatenated with self) | ar #17105 | `"ERC-721ERC-721"` in frontmatter tags and JSON glossary -- Crowdin concatenates the tag value with itself; found in 5 files (3 MD + 2 JSON) | Medium -- wrong tag value |
+| 37 | Brand name garbled as Arabic transliteration "يجتبه" | ar #17105 | `[يجتبه](https://github.com/...)` -- "GitHub" consistently garbled across 15 files, 82 occurrences; appears to be Crowdin TM artifact | High -- wrong brand name, user-visible |
+| 38 | Brand name "Solidity" literally translated as "الصلابة" | ar #17105 | `tags: ["الصلابة", "Waffle"]` -- programming language name translated as its literal meaning "hardness"; found in 3 Waffle tutorial files | Medium -- wrong brand name in tags |
+| 39 | Abbreviation stripped from parentheses in frontmatter | ar #17105 | `title: "الأصول الحقيقية ()"` -- English has `(RWA)` but Crowdin strips the Latin abbreviation leaving empty parens; also found for `(PoA)` | Medium -- missing abbreviation |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
