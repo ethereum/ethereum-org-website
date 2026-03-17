@@ -242,6 +242,10 @@ module.exports = withSentryConfig(module.exports, {
   project: "ethorg",
   silent: true,
   widenClientFileUpload: true,
-  disableLogger: true,
+  webpack: {
+    treeshake: {
+      removeDebugLogging: true,
+    },
+  },
   automaticVercelMonitors: true,
 })
