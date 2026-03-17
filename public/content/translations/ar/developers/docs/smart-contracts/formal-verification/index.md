@@ -215,7 +215,7 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **Act**: __يسمح Act بتحديد تحديثات التخزين، والشروط المسبقة/اللاحقة وثوابت العقد. تحتوي مجموعة أدواتها أيضًا على واجهات خلفية للإثبات قادرة على إثبات العديد من الخصائص عبر Coq، أو محللات SMT، أو hevm.__
 
-- [يجتبه](https://github.com/ethereum/act)
+- [غيت هاب](https://github.com/ethereum/act)
 - [التوثيق](https://github.com/argotorg/act)
 
 **Scribble** - __يقوم Scribble بتحويل التعليقات التوضيحية للكود في لغة مواصفات Scribble إلى تأكيدات ملموسة تتحقق من المواصفات.__
@@ -224,7 +224,7 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **Dafny** - __Dafny هي لغة برمجة جاهزة للتحقق تعتمد على التعليقات التوضيحية عالية المستوى للاستدلال على صحة الكود وإثباتها.__
 
-- [يجتبه](https://github.com/dafny-lang/dafny)
+- [غيت هاب](https://github.com/dafny-lang/dafny)
 
 ### مدققات البرامج للتحقق من الصحة {#program-verifiers}
 
@@ -235,43 +235,43 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **Solidity SMTChecker** - __SMTChecker الخاص بـ Solidity هو مدقق نموذج مدمج يعتمد على SMT (نظريات قابلية الإرضاء المعيارية) وحل Horn. يؤكد ما إذا كان الكود المصدري للعقد يتطابق مع المواصفات أثناء التجميع ويتحقق بشكل ثابت من انتهاكات خصائص السلامة.__
 
-- [يجتبه](https://github.com/ethereum/solidity)
+- [غيت هاب](https://github.com/ethereum/solidity)
 
 **solc-verify** - __solc-verify هو إصدار موسع من مُصرِّف Solidity يمكنه إجراء تحقق رسمي تلقائي على كود Solidity باستخدام التعليقات التوضيحية والتحقق البرنامجي النمطي.__
 
-- [يجتبه](https://github.com/SRI-CSL/solidity)
+- [غيت هاب](https://github.com/SRI-CSL/solidity)
 
 **KEVM** - __KEVM هي دلالات رسمية لآلة إيثريوم الافتراضية (EVM) مكتوبة في إطار عمل K. KEVM قابل للتنفيذ ويمكنه إثبات بعض التأكيدات المتعلقة بالخصائص باستخدام منطق الوصول.__
 
-- [يجتبه](https://github.com/runtimeverification/evm-semantics)
+- [غيت هاب](https://github.com/runtimeverification/evm-semantics)
 - [التوثيق](https://jellopaper.org/)
 
 ### الأطر المنطقية لإثبات النظريات {#theorem-provers}
 
 **Isabelle** - _Isabelle/HOL هو مساعد إثبات يسمح بالتعبير عن الصيغ الرياضية بلغة رسمية ويوفر أدوات لإثبات تلك الصيغ. التطبيق الرئيسي هو إضفاء الطابع الرسمي على البراهين الرياضية، والتحقق الرسمي على وجه الخصوص، والذي يتضمن إثبات صحة أجهزة الكمبيوتر أو برامجه وإثبات خصائص لغات وبروتوكولات الكمبيوتر._
 
-- [يجتبه](https://github.com/isabelle-prover)
+- [غيت هاب](https://github.com/isabelle-prover)
 - [التوثيق](https://isabelle.in.tum.de/documentation.html)
 
 **Rocq** - _Rocq هو أداة إثبات نظرية تفاعلية تتيح لك تعريف البرامج باستخدام النظريات وتوليد أدلة صحة يتم فحصها آليًا بشكل تفاعلي._
 
-- [يجتبه](https://github.com/rocq-prover/rocq)
+- [غيت هاب](https://github.com/rocq-prover/rocq)
 - [التوثيق](https://rocq-prover.org/docs)
 
 ### أدوات تعتمد على التنفيذ الرمزي للكشف عن الأنماط الضعيفة في العقود الذكية {#symbolic-execution-tools}
 
 **Manticore** - __أداة لتحليل كود البايت الخاص بـ EVM استنادًا إلى التنفيذ الرمزي_._
 
-- [يجتبه](https://github.com/trailofbits/manticore)
+- [غيت هاب](https://github.com/trailofbits/manticore)
 - [التوثيق](https://github.com/trailofbits/manticore/wiki)
 
 **hevm** - __hevm هو محرك تنفيذ رمزي ومدقق تكافؤ لكود البايت الخاص بـ EVM.__
 
-- [يجتبه](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [غيت هاب](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
 **Mythril** - _أداة تنفيذ رمزية للكشف عن الثغرات الأمنية في عقود إيثريوم الذكية_
 
-- [يجتبه](https://github.com/ConsenSys/mythril-classic)
+- [غيت هاب](https://github.com/ConsenSys/mythril-classic)
 - [التوثيق](https://mythril-classic.readthedocs.io/en/develop/)
 
 ## قراءة إضافية {#further-reading}

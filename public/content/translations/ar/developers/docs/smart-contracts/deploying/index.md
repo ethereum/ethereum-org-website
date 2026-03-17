@@ -39,14 +39,14 @@ lang: ar
 
 - [tenderly.co](https://tenderly.co/)
 - [التوثيق](https://docs.tenderly.co/)
-- [يجتبه](https://github.com/Tenderly)
+- [غيت هاب](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
 **Hardhat - _بيئة تطوير لتجميع برامج الإيثريوم الخاصة بك ونشرها واختبارها وتصحيحها._**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
 - [توثيق حول نشر عقودك](https://hardhat.org/docs/tutorial/deploying)
-- [يجتبه](https://github.com/nomiclabs/hardhat)
+- [غيت هاب](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
 **thirdweb - _انشر أي عقد بسهولة إلى أي سلسلة متوافقة مع آلة الإيثريوم الافتراضية (EVM)، باستخدام أمر واحد._**

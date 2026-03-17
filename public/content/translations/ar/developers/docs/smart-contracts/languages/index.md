@@ -36,7 +36,7 @@ lang: ar
 - [التوثيق](https://docs.soliditylang.org/en/latest/)
 - [بوابة لغة Solidity](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
-- [يجتبه](https://github.com/ethereum/solidity/)
+- [غيت هاب](https://github.com/ethereum/solidity/)
 - [غرفة محادثة Solidity على Gitter](https://gitter.im/ethereum/solidity) مرتبطة بـ [غرفة محادثة Solidity على Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [ورقة الغش](https://reference.auditless.com/cheatsheet)
 - [مدونة Solidity](https://blog.soliditylang.org/)
@@ -108,7 +108,7 @@ contract Coin {
 - [التوثيق](https://vyper.readthedocs.io)
 - [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
 - [More Vyper by Example](https://vyper-by-example.org/)
-- [يجتبه](https://github.com/vyperlang/vyper)
+- [غيت هاب](https://github.com/vyperlang/vyper)
 - [محادثة مجتمع Vyper على Discord](https://discord.gg/SdvKC79cJk)
 - [ورقة الغش](https://reference.auditless.com/cheatsheet)
 - [أطر وأدوات تطوير العقود الذكية للغة Vyper](/developers/docs/programming-languages/python/)
@@ -278,7 +278,7 @@ def endAuction():
 
 ### روابط مهمة {#important-links-3}
 
-- [يجتبه](https://github.com/ethereum/fe)
+- [غيت هاب](https://github.com/ethereum/fe)
 - [إعلان لغة Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [خارطة طريق Fe لعام 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [محادثة Fe على Discord](https://discord.com/invite/ywpkAXFjZH)

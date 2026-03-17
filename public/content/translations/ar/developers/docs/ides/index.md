@@ -38,18 +38,18 @@ lang: ar
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [عينات الأكواد البرمجية](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
-- [يجتبه](https://github.com/microsoft/vscode)
+- [غيت هاب](https://github.com/microsoft/vscode)
 
 **JetBrains IDEs (IntelliJ IDEA, etc.) -** **_Essential tools for software developers and teams_**
 
 - [JetBrains](https://www.jetbrains.com/)
-- [يجتبه](https://github.com/JetBrains)
+- [غيت هاب](https://github.com/JetBrains)
 - [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
 
 **Remix Desktop -** **_جرِّب Remix IDE على جهازك المحلي_**
 
 - [تنزيل](https://github.com/ethereum/remix-desktop/releases)
-- [يجتبه](https://github.com/ethereum/remix-desktop)
+- [غيت هاب](https://github.com/ethereum/remix-desktop)
 
 ## المكونات الإضافية والملحقات {#plugins-extensions}
 
