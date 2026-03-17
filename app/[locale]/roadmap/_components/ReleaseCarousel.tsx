@@ -105,7 +105,7 @@ const ReleaseCarousel = () => {
       }).format(new Date(Number(release.plannedReleaseYear), 0, 1))
 
     if ("releaseDate" in release && release.releaseDate)
-      return formatDate(release.releaseDate)
+      return formatDate(release.releaseDate, locale, { timeZone: "UTC" })
 
     return ""
   }

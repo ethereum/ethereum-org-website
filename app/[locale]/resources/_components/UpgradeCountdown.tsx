@@ -106,7 +106,7 @@ const UpgradeCountdown = () => {
         ) : (
           <div className="rounded-full bg-success px-2 py-1 text-xs font-normal uppercase text-success-light">
             Live Since{" "}
-            {new Intl.DateTimeFormat(locale, {}).format(new Date(upgradeDate))}
+            {new Intl.DateTimeFormat(locale, { timeZone: "UTC" }).format(new Date(upgradeDate))}
           </div>
         )}
       </div>
