@@ -1913,6 +1913,101 @@ function fixJunkAfterHeadingAnchors(content: string): {
 }
 
 /**
+ * Fix non-ASCII characters inside heading anchor IDs.
+ * MDX heading IDs ({#some-id}) must be ASCII or acorn parsing breaks.
+ * This can happen when transliteration scripts or Crowdin replace
+ * English words inside anchor IDs with native-script equivalents.
+ *
+ * Example: {#Communities-and-डीएओज़} → strips non-ASCII segments
+ *
+ * This is a safety net; the transliterate script also protects {#...}.
+ */
+function fixNonAsciiHeadingIds(
+  content: string,
+  englishContent?: string
+): { content: string; fixCount: number; fixes: string[] } {
+  let fixCount = 0
+  const fixes: string[] = []
+
+  // Build a map of English heading IDs by position for restoration
+  const englishIds: string[] = []
+  if (englishContent) {
+    const idPattern = /^#{1,6}\s+.*?\{#([\w-]+)\}/gm
+    let m
+    while ((m = idPattern.exec(englishContent)) !== null) {
+      englishIds.push(m[1])
+    }
+  }
+
+  let translatedIdx = 0
+  // eslint-disable-next-line no-control-regex
+  content = content.replace(
+    /^(#{1,6}\s+.*?)\{#([^}]+)\}/gm,
+    (match, prefix, id) => {
+      const currentIdx = translatedIdx++
+      // Check if the ID contains non-ASCII characters
+      // eslint-disable-next-line no-control-regex
+      if (/[^\x00-\x7F]/.test(id)) {
+        // Prefer English source ID if available
+        if (englishIds[currentIdx]) {
+          fixCount++
+          fixes.push(`{#${id}} -> {#${englishIds[currentIdx]}}`)
+          return `${prefix}{#${englishIds[currentIdx]}}`
+        }
+        // Fallback: strip non-ASCII segments and clean up
+        const asciiOnly = id
+          .replace(/[^\u0020-\u007E]+/g, "")
+          .replace(/-{2,}/g, "-")
+          .replace(/^-|-$/g, "")
+        if (asciiOnly) {
+          fixCount++
+          fixes.push(`{#${id}} -> {#${asciiOnly}}`)
+          return `${prefix}{#${asciiOnly}}`
+        }
+      }
+      return match
+    }
+  )
+
+  return { content, fixCount, fixes }
+}
+
+/**
+ * Fix Crowdin JSX/markdown hybrid mangling.
+ * Crowdin sometimes converts JSX components with href attributes into
+ * a broken hybrid of markdown link syntax and JSX:
+ *   [<ButtonLink href="](/path)">  (broken)
+ *   <ButtonLink href="/path">      (correct)
+ *
+ * This happens with any JSX component that has an href attribute.
+ */
+function fixJsxMarkdownHybrids(content: string): {
+  content: string
+  fixCount: number
+  fixes: string[]
+} {
+  let fixCount = 0
+  const fixes: string[] = []
+
+  // Pattern: [<ComponentName href="](url-path)optional-tail">
+  // Captures: component name, any pre-href attrs, the split URL parts
+  content = content.replace(
+    /\[<([A-Z]\w+)(\s+[^>]*)?\s+href="?\]\(([^)]+)\)([^"]*)"?\s*>/g,
+    (_, component, preAttrs, urlPart, urlTail) => {
+      const href = urlPart + (urlTail || "")
+      const attrs = preAttrs ? preAttrs.trim() + " " : ""
+      fixCount++
+      fixes.push(
+        `[<${component} href="](${urlPart})${urlTail}"> -> <${component} ${attrs}href="${href}">`
+      )
+      return `<${component} ${attrs}href="${href}">`
+    }
+  )
+
+  return { content, fixCount, fixes }
+}
+
+/**
  * Unwrap markdown links that Crowdin wrapped in backticks.
  * Pattern: `[text](url)` → [text](url)
  * Only matches when the backtick content is a complete markdown link.
@@ -2508,6 +2603,14 @@ function processMarkdownFile(
   applyFix(
     () => fixJunkAfterHeadingAnchors(content),
     (n) => `Removed ${n} junk text fragments after heading anchors`
+  )
+  applyFix(
+    () => fixNonAsciiHeadingIds(content, englishMd),
+    (n) => `Fixed ${n} non-ASCII heading anchor IDs`
+  )
+  applyFix(
+    () => fixJsxMarkdownHybrids(content),
+    (n) => `Fixed ${n} Crowdin JSX/markdown hybrid manglings`
   )
   applyFix(
     () => fixMissingClosingEmTag(content),
@@ -3137,6 +3240,8 @@ export const _testOnly = {
   warnPunctuationOnlyHeadings,
   fixBackslashBeforeClosingTag,
   fixJunkAfterHeadingAnchors,
+  fixNonAsciiHeadingIds,
+  fixJsxMarkdownHybrids,
   fixBacktickWrappedLinks,
   fixMissingLinkParentheses,
   fixMissingClosingEmTag,

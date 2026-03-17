@@ -169,8 +169,10 @@ module.exports = (phase, { defaultConfig }) => {
       return [
         // Whitepaper PDF redirect (no locale prefix)
         {
-          source: "/669c9e2e2027310b6b3cdce6e1c52962/Ethereum_Whitepaper_-_Buterin_2014.pdf",
-          destination: "/content/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf",
+          source:
+            "/669c9e2e2027310b6b3cdce6e1c52962/Ethereum_Whitepaper_-_Buterin_2014.pdf",
+          destination:
+            "/content/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf",
           permanent: true,
         },
         // All primary redirects
