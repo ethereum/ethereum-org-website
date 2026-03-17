@@ -51,28 +51,28 @@ lang: ar
 
 **Scaffold-ETH _- قم بالتجربة بسرعة مع Solidity باستخدام واجهة أمامية تتكيف مع عقدك الذكي._**
 
-- [يجتبه](https://github.com/scaffold-eth/scaffold-eth-2)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [مثال على تطبيق لامركزي](https://punkwallet.io/)
 
 **Create Eth App _- أنشئ تطبيقات مدعومة من إيثريوم بأمر واحد._**
 
-- [يجتبه](https://github.com/paulrberg/create-eth-app)
+- [GitHub](https://github.com/paulrberg/create-eth-app)
 
 **One Click Dapp _- أداة برمجيات حرة ومفتوحة المصدر لتوليد واجهات أمامية للتطبيقات اللامركزية من [واجهة التطبيق الثنائية](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [يجتبه](https://github.com/oneclickdapp/oneclickdapp-v1)
+- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow _- أداة برمجيات حرة ومفتوحة المصدر لمطوري إيثريوم لاختبار عُقدهم، وإنشاء وتصحيح استدعاءات RPC من المتصفح._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
-- [يجتبه](https://github.com/abunsen/etherflow)
+- [GitHub](https://github.com/abunsen/etherflow)
 
 **thirdweb _- حزم تطوير البرمجيات (SDKs) بكل لغة، والعقود الذكية، والأدوات، والبنية التحتية لتطوير ويب3._**
 
 - [الصفحة الرئيسية](https://thirdweb.com/)
 - [التوثيق](https://portal.thirdweb.com/)
-- [يجتبه](https://github.com/thirdweb-dev/)
+- [GitHub](https://github.com/thirdweb-dev/)
 
 **Crossmint _- منصة تطوير ويب3 على مستوى المؤسسات لنشر العقود الذكية، وتمكين الدفع ببطاقات الائتمان والدفع عبر السلاسل، واستخدام واجهات برمجة التطبيقات لإنشاء الرموز غير القابلة للاستبدال (NFTs) وتوزيعها وبيعها وتخزينها وتحريرها._**
 

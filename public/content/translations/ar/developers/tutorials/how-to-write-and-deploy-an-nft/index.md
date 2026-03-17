@@ -4,7 +4,7 @@ description: This tutorial is Part 1 of a series on NFTs that will take you step
 author: "Sumi Mudgil"
 tags:
   [
-    "ERC-721ERC-721",
+    "ERC-721",
     "Alchemy",
     "Solidity",
     "العقود الذكيه "

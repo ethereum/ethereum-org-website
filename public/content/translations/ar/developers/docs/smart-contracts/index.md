@@ -101,7 +101,7 @@ contract VendingMachine {
 **عقود OpenZeppelin -** **_مكتبة لتطوير عقود ذكية آمنة._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
-- [يجتبه](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [منتدى المجتمع](https://forum.openzeppelin.com/c/general/16)
 
 ## قراءة إضافية {#further-reading}

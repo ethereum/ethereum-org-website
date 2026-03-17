@@ -43,7 +43,7 @@ lang: ar
 ##### الموارد
 
 - [الموقع الإلكتروني](https://sepolia.dev/)
-- [يجتبه](https://github.com/eth-clients/sepolia)
+- [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
@@ -72,7 +72,7 @@ Hoodi هي شبكة اختبار للتحقق من الصحة والمشاركة
 ##### الموارد
 
 - [الموقع الإلكتروني](https://hoodi.ethpandaops.io/)
-- [يجتبه](https://github.com/eth-clients/hoodi)
+- [GitHub](https://github.com/eth-clients/hoodi)
 - [المستكشف](https://explorer.hoodi.ethpandaops.io/)
 - [مزامنة نقطة التحقق](https://checkpoint-sync.hoodi.ethpandaops.io/)
 - [Otterscan](https://hoodi.otterscan.io/)

@@ -140,25 +140,25 @@ Proof-of-stake based:
 
 - [Ipfs.io](https://ipfs.io/)
 - [التوثيق](https://docs.ipfs.io/)
-- [يجتبه](https://github.com/ipfs/ipfs)
+- [GitHub](https://github.com/ipfs/ipfs)
 
 **Storj DCS - _تخزين سحابي لامركزي للكائنات، آمن وخاص ومتوافق مع S3 للمطورين._**
 
 - [Storj.io](https://storj.io/)
 - [التوثيق](https://docs.storj.io/)
-- [يجتبه](https://github.com/storj/storj)
+- [GitHub](https://github.com/storj/storj)
 
 **Sia - _تستخدم التشفير لإنشاء سوق تخزين سحابي غير موثوق، مما يسمح للمشترين والبائعين بالتعامل مباشرة._**
 
 - [Skynet.net](https://sia.tech/)
 - [التوثيق](https://docs.sia.tech/)
-- [يجتبه](https://github.com/SiaFoundation/)
+- [GitHub](https://github.com/SiaFoundation/)
 
 **Filecoin - _تم إنشاء Filecoin من قبل نفس الفريق الذي يقف وراء IPFS. إنها طبقة حوافز فوق مبادئ IPFS._**
 
 - [Filecoin.io](https://filecoin.io/)
 - [التوثيق](https://docs.filecoin.io/)
-- [يجتبه](https://github.com/filecoin-project/)
+- [GitHub](https://github.com/filecoin-project/)
 
 **Arweave - _Arweave هي منصة تخزين لامركزي (dStorage) لتخزين البيانات._**
 
@@ -170,61 +170,61 @@ Proof-of-stake based:
 
 - [zus.network](https://zus.network/)
 - [التوثيق](https://docs.zus.network/zus-docs/)
-- [يجتبه](https://github.com/0chain/)
+- [GitHub](https://github.com/0chain/)
 
 **Crust Network - _Crust هي منصة تخزين لامركزي (dStorage) مبنية على IPFS._**
 
 - [Crust.network](https://crust.network)
 - [التوثيق](https://wiki.crust.network)
-- [يجتبه](https://github.com/crustio)
+- [GitHub](https://github.com/crustio)
 
 **Swarm - _منصة تخزين موزعة وخدمة توزيع محتوى لحزمة web3 الخاصة بإيثريوم._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
 - [التوثيق](https://docs.ethswarm.org/)
-- [يجتبه](https://github.com/ethersphere/)
+- [GitHub](https://github.com/ethersphere/)
 
 **OrbitDB - _قاعدة بيانات لامركزية من نظير إلى نظير (peer to peer) مبنية على IPFS._**
 
 - [OrbitDB.org](https://orbitdb.org/)
 - [التوثيق](https://github.com/orbitdb/field-manual/)
-- [يجتبه](https://github.com/orbitdb/orbit-db/)
+- [GitHub](https://github.com/orbitdb/orbit-db/)
 
 **Aleph.im - _مشروع سحابي لامركزي (قاعدة بيانات، تخزين ملفات، حوسبة، و DID). مزيج فريد من نوعه بين تكنولوجيا الند للند على السلسلة وخارجها. متوافق مع IPFS وعدة سلاسل._**
 
 - [Aleph.im](https://aleph.cloud/)
 - [التوثيق](https://docs.aleph.cloud/)
-- [يجتبه](https://github.com/aleph-im/)
+- [GitHub](https://github.com/aleph-im/)
 
 **Ceramic - _تخزين قاعدة بيانات IPFS يتحكم فيه المستخدم، للتطبيقات الغنية بالبيانات والجذابة._**
 
 - [Ceramic.network](https://ceramic.network/)
 - [التوثيق](https://developers.ceramic.network/)
-- [يجتبه](https://github.com/ceramicnetwork/js-ceramic/)
+- [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
 **Filebase - _تخزين لامركزي متوافق مع S3 وخدمة تثبيت IPFS متكررة جغرافيًا. يتم تثبيت جميع الملفات التي يتم تحميلها إلى IPFS عبر Filebase تلقائيًا في البنية التحتية لـ Filebase مع 3 نسخ مكررة في جميع أنحاء العالم._**
 
 - [Filebase.com](https://filebase.com/)
 - [التوثيق](https://docs.filebase.com/)
-- [يجتبه](https://github.com/filebase)
+- [GitHub](https://github.com/filebase)
 
 **4EVERLAND - _منصة حوسبة سحابية للويب 3.0 (Web 3.0) تدمج الإمكانيات الأساسية للتخزين والحوسبة والشبكات، وهي متوافقة مع S3 وتوفر تخزينًا متزامنًا للبيانات على شبكات التخزين اللامركزية مثل IPFS وArweave._**
 
 - [4everland.org](https://www.4everland.org/)
 - [التوثيق](https://docs.4everland.org/)
-- [يجتبه](https://github.com/4everland)
+- [GitHub](https://github.com/4everland)
 
 **Kaleido - _منصة بلوك تشين كخدمة (blockchain-as-a-service) مع عقد IPFS تعمل بنقرة زر_**
 
 - [Kaleido](https://kaleido.io/)
 - [التوثيق](https://docs.kaleido.io/kaleido-services/ipfs/)
-- [يجتبه](https://github.com/kaleido-io)
+- [GitHub](https://github.com/kaleido-io)
 
 **Spheron Network - _Spheron هي منصة كخدمة (PaaS) مصممة للتطبيقات اللامركزية (dApps) التي تسعى لإطلاق تطبيقاتها على بنية تحتية لامركزية بأفضل أداء. وهي توفر الحوسبة، والتخزين اللامركزي، وشبكة توصيل المحتوى (CDN)، واستضافة الويب بشكل جاهز._**
 
 - [spheron.network](https://spheron.network/)
 - [التوثيق](https://docs.spheron.network/)
-- [يجتبه](https://github.com/spheronFdn)
+- [GitHub](https://github.com/spheronFdn)
 
 ## قراءة إضافية {#further-reading}
 

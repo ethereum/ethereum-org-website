@@ -2,7 +2,7 @@
 title: "كيفية استعراض NFT خاصتك في محفظتك (الجزء 3/3 من سلسلة دروس NFT)"
 description: "هذا الدرس يشرح كيفية عرض NFT الموجود على محفظة MetaMask!"
 author: "Sumi Mudgil"
-tags: [ "ERC-721ERC-721", "Alchemy", "Solidity" ]
+tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
 lang: ar
 published: 2021-04-22
