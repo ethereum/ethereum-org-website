@@ -1430,6 +1430,87 @@ function syncProtectedFrontmatterFields(
 }
 
 /**
+ * Sync non-translatable fields (toId, isSecondary) in the buttons frontmatter
+ * array from the English source. The 'content' field is translatable and preserved.
+ * Addresses the gap noted in syncProtectedFrontmatterFields (line 1217 comment).
+ */
+function syncButtonsFrontmatterFields(
+  translatedMd: string,
+  englishMd: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  const frontmatterRe = /^---\n([\s\S]*?)\n---/
+  const transMatch = translatedMd.match(frontmatterRe)
+  const engMatch = englishMd.match(frontmatterRe)
+
+  if (!transMatch || !engMatch) return { content: translatedMd, fixCount }
+
+  const transFm = transMatch[1]
+  const engFm = engMatch[1]
+
+  const protectedButtonFields = ["toId", "isSecondary"]
+
+  // Collect English values for each protected field (in order of appearance)
+  const engValuesMap: Record<string, string[]> = {}
+  for (const field of protectedButtonFields) {
+    engValuesMap[field] = []
+    const re = new RegExp(`^\\s+${field}:\\s*(.+)$`, "gm")
+    let m: RegExpExecArray | null
+    while ((m = re.exec(engFm)) !== null) {
+      engValuesMap[field].push(m[1].trim())
+    }
+  }
+
+  // Track occurrence index per field
+  const fieldIdx: Record<string, number> = {}
+  for (const field of protectedButtonFields) {
+    fieldIdx[field] = 0
+  }
+
+  // Process translated frontmatter line by line
+  const lines = transFm.split("\n")
+  for (let i = 0; i < lines.length; i++) {
+    for (const field of protectedButtonFields) {
+      const lineRe = new RegExp(`^(\\s+${field}:\\s*)(.+)$`)
+      const lineMatch = lines[i].match(lineRe)
+      if (!lineMatch) continue
+
+      const idx = fieldIdx[field]
+      const engValues = engValuesMap[field]
+      if (idx >= engValues.length) break
+
+      const transValue = lineMatch[2].trim()
+      const engValue = engValues[idx]
+
+      // Strip quotes for comparison
+      const cleanTrans = transValue.replace(/^["']|["']$/g, "")
+      const cleanEng = engValue.replace(/^["']|["']$/g, "")
+
+      if (cleanTrans !== cleanEng) {
+        lines[i] = `${lineMatch[1]}${engValue}`
+        fixCount++
+      }
+
+      fieldIdx[field]++
+    }
+  }
+
+  if (fixCount > 0) {
+    const newFm = lines.join("\n")
+    return {
+      content: translatedMd.replace(
+        frontmatterRe,
+        `---\n${newFm}\n---`
+      ),
+      fixCount,
+    }
+  }
+
+  return { content: translatedMd, fixCount }
+}
+
+/**
  * Fix ASCII guillemets (<< and >>) to proper Unicode guillemets (« and »).
  * Prevents MDX parsing errors from malformed angle bracket sequences.
  * IMPORTANT: Skips code blocks where << and >> are valid bit-shift operators.
@@ -2602,6 +2683,10 @@ function processMarkdownFile(
       (n) => `Synced ${n} protected frontmatter fields from English`
     )
     applyFix(
+      () => syncButtonsFrontmatterFields(content, englishMd!),
+      (n) => `Synced ${n} buttons frontmatter fields (toId/isSecondary) from English`
+    )
+    applyFix(
       () => collapseInlineHtmlFromEnglish(content, englishMd!),
       (n) => `Collapsed ${n} inline HTML tags to match English`
     )
@@ -3126,6 +3211,7 @@ export const _testOnly = {
   fixBrandTags,
   fixProtectedBrandNames,
   syncProtectedFrontmatterFields,
+  syncButtonsFrontmatterFields,
   restoreBlankLinesFromEnglish,
   collapseInlineHtmlFromEnglish,
   fixMergedClosingTags,
