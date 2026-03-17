@@ -1,15 +1,17 @@
 #!/usr/bin/env npx tsx
 /**
- * Transliterate English proper nouns in Hindi translation files.
+ * Transliterate English proper nouns in non-Latin-script translation files.
  *
- * Reads the lookup table from .claude/translation-review/transliterations/hi.json
+ * Reads the lookup table from .claude/translation-review/transliterations/{lang}.json
  * and replaces English brand names, person names, and technical terms with their
- * Devanagari transliterations in body text.
+ * native-script transliterations in body text.
  *
  * Usage:
- *   npx tsx src/scripts/i18n/transliterate-hindi.ts           # dry-run (default)
- *   npx tsx src/scripts/i18n/transliterate-hindi.ts --apply    # write changes
- *   npx tsx src/scripts/i18n/transliterate-hindi.ts --verbose  # show every replacement
+ *   npx tsx src/scripts/i18n/transliterate.ts --lang=hi           # dry-run (default)
+ *   npx tsx src/scripts/i18n/transliterate.ts --lang=hi --apply    # write changes
+ *   npx tsx src/scripts/i18n/transliterate.ts --lang=hi --verbose  # show every replacement
+ *
+ * Supported languages: hi, mr, bn, ta, te, ar, ur, ru, uk, ja, ko, zh, zh-tw
  *
  * Protected zones (no replacements):
  *   - Code fences (```...```)
@@ -33,16 +35,43 @@ const APPLY = process.argv.includes("--apply")
 const VERBOSE = process.argv.includes("--verbose")
 const DRY_RUN = !APPLY
 
+const LANG_ARG = process.argv.find((a) => a.startsWith("--lang="))
+const LANG = LANG_ARG?.split("=")[1]
+
+const SUPPORTED_LANGS = [
+  "hi",
+  "mr",
+  "bn",
+  "ta",
+  "te",
+  "ar",
+  "ur",
+  "ru",
+  "uk",
+  "ja",
+  "ko",
+  "zh",
+  "zh-tw",
+]
+
+if (!LANG || !SUPPORTED_LANGS.includes(LANG)) {
+  console.error(
+    `Usage: npx tsx src/scripts/i18n/transliterate.ts --lang=<code> [--apply] [--verbose]\n` +
+      `Supported: ${SUPPORTED_LANGS.join(", ")}`
+  )
+  process.exit(1)
+}
+
 if (DRY_RUN) {
-  console.log("[transliterate] DRY RUN mode -- pass --apply to write changes\n")
+  console.log(`[transliterate] DRY RUN mode -- pass --apply to write changes\n`)
 }
 
 // ===== Configuration =====
 
 const ROOT = process.cwd()
-const HI_JSON_PATH = path.join(
+const TRANSLIT_JSON_PATH = path.join(
   ROOT,
-  ".claude/translation-review/transliterations/hi.json"
+  `.claude/translation-review/transliterations/${LANG}.json`
 )
 
 // Terms too ambiguous for automated word-boundary replacement.
@@ -73,10 +102,12 @@ interface TranslitFile {
   _alternatives?: Record<string, string[]>
 }
 
-const hiJson: TranslitFile = JSON.parse(fs.readFileSync(HI_JSON_PATH, "utf8"))
+const langJson: TranslitFile = JSON.parse(
+  fs.readFileSync(TRANSLIT_JSON_PATH, "utf8")
+)
 
 const translit: Map<string, string> = new Map()
-for (const [eng, entry] of Object.entries(hiJson.transliterations)) {
+for (const [eng, entry] of Object.entries(langJson.transliterations)) {
   translit.set(eng, entry.text)
 }
 
@@ -432,19 +463,28 @@ function processJsonFile(filePath: string): FileResult {
 // ===== Main =====
 
 function main() {
-  console.log(`[transliterate] Loading ${translit.size} terms from hi.json`)
+  console.log(
+    `[transliterate] Language: ${LANG} (${langJson._meta?.language_name || LANG})`
+  )
+  console.log(
+    `[transliterate] Loading ${translit.size} terms from ${LANG}.json`
+  )
   console.log(
     `[transliterate] ${safeTerms.length} safe terms, ${AMBIGUOUS_TERMS.size} skipped as ambiguous\n`
   )
   console.log(`Ambiguous (skipped): ${[...AMBIGUOUS_TERMS].join(", ")}\n`)
 
-  // Find all Hindi files using node:fs globSync
-  const mdFiles = fs
-    .globSync("public/content/translations/hi/**/*.md", { cwd: ROOT })
-    .map((f) => path.join(ROOT, f))
-  const jsonFiles = fs
-    .globSync("src/intl/hi/**/*.json", { cwd: ROOT })
-    .map((f) => path.join(ROOT, f))
+  // Find all translation files for the target language (Node 22+)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const fsAny = fs as any
+  const mdFiles = (
+    fsAny.globSync(`public/content/translations/${LANG}/**/*.md`, {
+      cwd: ROOT,
+    }) as string[]
+  ).map((f: string) => path.join(ROOT, f))
+  const jsonFiles = (
+    fsAny.globSync(`src/intl/${LANG}/**/*.json`, { cwd: ROOT }) as string[]
+  ).map((f: string) => path.join(ROOT, f))
 
   console.log(
     `[transliterate] Found ${mdFiles.length} .md files, ${jsonFiles.length} .json files\n`
