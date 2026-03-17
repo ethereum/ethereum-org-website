@@ -1604,7 +1604,7 @@ author: Ori Pomerantz
   })
 
   test.describe("fixKnownBrandGarbles", () => {
-    test("fixes GitHub garble in Arabic markdown link", () => {
+    test("fixes GitHub garble to Latin without locale (fallback)", () => {
       const input = "- [يجتبه](https://github.com/alchemyplatform)"
       const { content, fixCount } = fixKnownBrandGarbles(input)
       expect(content).toBe(
@@ -1613,29 +1613,40 @@ author: Ori Pomerantz
       expect(fixCount).toBe(1)
     })
 
-    test("fixes multiple GitHub garbles in one file", () => {
+    test("fixes GitHub garble to Arabic transliteration with ar locale", () => {
+      const input = "- [يجتبه](https://github.com/alchemyplatform)"
+      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      expect(content).toBe(
+        "- [غيت هاب](https://github.com/alchemyplatform)"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes multiple GitHub garbles with locale", () => {
       const input =
         "- [يجتبه](https://github.com/foo)\n- [يجتبه](https://github.com/bar)"
-      const { content, fixCount } = fixKnownBrandGarbles(input)
+      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
       expect(content).toBe(
-        "- [GitHub](https://github.com/foo)\n- [GitHub](https://github.com/bar)"
+        "- [غيت هاب](https://github.com/foo)\n- [غيت هاب](https://github.com/bar)"
       )
       expect(fixCount).toBe(2)
     })
 
-    test("fixes Solidity garble in frontmatter tags", () => {
+    test("fixes Solidity garble to Arabic transliteration in tags", () => {
       const input = 'tags: ["الصلابة", "Waffle", "الاختبار"]'
-      const { content, fixCount } = fixKnownBrandGarbles(input)
-      expect(content).toBe('tags: ["Solidity", "Waffle", "الاختبار"]')
+      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      expect(content).toBe(
+        'tags: ["سوليديتي", "Waffle", "الاختبار"]'
+      )
       expect(fixCount).toBe(1)
     })
 
-    test("fixes Solidity garble in prose", () => {
+    test("fixes Solidity garble to Arabic transliteration in prose", () => {
       const input =
         "يمكنك كتابة العقود الذكية باستخدام الصلابة"
-      const { content, fixCount } = fixKnownBrandGarbles(input)
+      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
       expect(content).toBe(
-        "يمكنك كتابة العقود الذكية باستخدام Solidity"
+        "يمكنك كتابة العقود الذكية باستخدام سوليديتي"
       )
       expect(fixCount).toBe(1)
     })
@@ -1650,7 +1661,7 @@ author: Ori Pomerantz
 
     test("skips code blocks", () => {
       const input = "```\nيجتبه\n```"
-      const { content, fixCount } = fixKnownBrandGarbles(input)
+      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })

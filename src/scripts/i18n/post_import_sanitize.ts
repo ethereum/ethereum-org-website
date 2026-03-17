@@ -221,7 +221,14 @@ function stripCrowdinBoilerplate(content: string): {
 
 /**
  * Known garbled transliterations of brand names from Crowdin.
- * Maps the garbled form to the correct Latin-script brand name.
+ * Maps the garbled form to the correct brand name.
+ *
+ * For non-Latin-script languages (ar, hi, etc.), the correct form is the
+ * proper transliteration into the target script, loaded from the
+ * transliteration bank at .claude/translation-review/transliterations/{locale}.json.
+ *
+ * The static map below provides fallback Latin-script corrections.
+ * At runtime, loadTransliterationCorrections() merges these with the bank.
  */
 const BRAND_GARBLE_CORRECTIONS: Record<string, string> = {
   يجتبه: "GitHub",
@@ -229,15 +236,58 @@ const BRAND_GARBLE_CORRECTIONS: Record<string, string> = {
 }
 
 /**
+ * Load transliteration bank for a locale and build a garble->correct map.
+ * Returns the static BRAND_GARBLE_CORRECTIONS with correct forms overridden
+ * by the transliteration bank when available.
+ */
+function loadBrandGarbleCorrections(locale?: string): Record<string, string> {
+  if (!locale) return BRAND_GARBLE_CORRECTIONS
+
+  const bankPath = path.join(
+    __dirname,
+    "../../../.claude/translation-review/transliterations",
+    `${locale}.json`
+  )
+
+  let bank: Record<string, { text: string }> = {}
+  try {
+    if (fs.existsSync(bankPath)) {
+      const raw = JSON.parse(fs.readFileSync(bankPath, "utf8"))
+      bank = raw.transliterations || {}
+    }
+  } catch {
+    // Fall back to static map
+  }
+
+  const corrections = { ...BRAND_GARBLE_CORRECTIONS }
+
+  // Override with transliteration bank values where available
+  for (const [garble, latinBrand] of Object.entries(BRAND_GARBLE_CORRECTIONS)) {
+    const entry = bank[latinBrand]
+    if (entry?.text) {
+      corrections[garble] = entry.text
+    }
+  }
+
+  return corrections
+}
+
+/**
  * Fix known garbled transliterations of brand names.
- * Replaces consistent Crowdin artifacts with the correct brand name.
+ * Replaces consistent Crowdin artifacts with the correct form:
+ * - For non-Latin locales: proper transliteration from the bank
+ * - Fallback: Latin brand name
  * Skips code blocks.
  */
-function fixKnownBrandGarbles(content: string): {
+function fixKnownBrandGarbles(
+  content: string,
+  locale?: string
+): {
   content: string
   fixCount: number
 } {
   let fixCount = 0
+  const corrections = loadBrandGarbleCorrections(locale)
 
   const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
   const parts = content.split(codeBlockPattern)
@@ -245,7 +295,7 @@ function fixKnownBrandGarbles(content: string): {
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
 
-    for (const [garble, correct] of Object.entries(BRAND_GARBLE_CORRECTIONS)) {
+    for (const [garble, correct] of Object.entries(corrections)) {
       const escaped = garble.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
       const re = new RegExp(escaped, "g")
       parts[i] = parts[i].replace(re, () => {
@@ -2817,7 +2867,7 @@ function processMarkdownFile(
     (n) => `Stripped ${n} Crowdin boilerplate injection(s)`
   )
   applyFix(
-    () => fixKnownBrandGarbles(content),
+    () => fixKnownBrandGarbles(content, locale),
     (n) => `Fixed ${n} known brand name garble(s)`
   )
   applyFix(
@@ -3120,8 +3170,16 @@ function processJsonFile(
     .replace(/[""]/g, '"')
     .replace(/['']/g, "'")
 
+  // Extract locale from JSON path (e.g., src/intl/ar/page-about.json -> ar)
+  const jsonParts = jsonPath.split(path.sep)
+  const intlIdx = jsonParts.lastIndexOf("intl")
+  const jsonLocale =
+    intlIdx !== -1 && intlIdx + 1 < jsonParts.length
+      ? jsonParts[intlIdx + 1]
+      : ""
+
   // Fix known brand garbles in JSON values
-  const garbleResult = fixKnownBrandGarbles(content)
+  const garbleResult = fixKnownBrandGarbles(content, jsonLocale)
   if (garbleResult.fixCount > 0) {
     content = garbleResult.content
     issues.push(`Fixed ${garbleResult.fixCount} known brand name garble(s)`)
