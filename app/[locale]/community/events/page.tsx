@@ -148,7 +148,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           />
         </StickyContainer>
 
-        <MainArticle className="space-y-20 px-4 py-10 md:px-8">
+        <MainArticle className="space-y-20 overflow-x-clip px-4 py-10 md:px-8">
           {/* Major blockchain conferences */}
           <Section id="highlights">
             <h2 className="mb-6 font-bold">
