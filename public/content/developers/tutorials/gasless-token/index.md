@@ -172,29 +172,36 @@ This is the main function of `UserProxy`. It gets `target` and `data`, as well a
                 )
             )
         );
-    ```
+```
 
-    The digest also includes the nonce, but we do not need to receive it from the transaction, we already know the right value. A signature with the wrong nonce will be rejected.
+The digest also includes the nonce, but we do not need to receive it from the transaction, we already know the right value. A signature with the wrong nonce will be rejected (usually `ecrecover` will return with the wrong signer address).
 
-    ```solidity
+```solidity
 
-        // Recover signer
-        address signer = ecrecover(digest, v, r, s);
-        require(signer == OWNER, "Signature invalid or not by owner");
-    ```
+    // Recover signer
+    address signer = ecrecover(digest, v, r, s);
+    require(signer == OWNER, "Signature invalid or not by owner");
+```
 
-    If the signature is invalid, `ecrecover` will return a different address and it will not be accepted.
+If the signature is invalid, `ecrecover` will return a different address and it will not be accepted.
 
-    ```solidity
-        (bool success, bytes memory returnData) = target.call(data);
-        require(success, "Call failed");
+```solidity
+    (bool success, bytes memory returnData) = target.call(data);
+    require(success, "Call failed");
+```
 
-        emit CallResult(target, returnData);
+Call the contract the user told us to call, and revert if not successful.
 
-        nonce++; // Increment nonce to prevent replay
+```solidity
+    emit CallResult(target, returnData);
 
-        return returnData;
-    }
+    nonce++; // Increment nonce to prevent replay
+
+    return returnData;
+}
+```
+
+If successful, emit a log event and increment the nonce.
 
 ```solidity
     function directAccessPayable(address target, uint value, bytes calldata data) 
@@ -358,7 +365,6 @@ Report back the transaction hash. This lets the UI display for the user a URL to
 
 Again, if there is a problem, report it.
 
-
 ```js
   // Let Vite handle everything else
   const vite = await createViteServer({
@@ -452,7 +458,7 @@ The proxy's token balance.
   const [ newProxyAddr, setNewProxyAddr ] = useState("")
 ```
 
-This field is used when the user sets the proxy address manually. 
+This field is used when the user sets the proxy address manually. Having the ability to set the proxy address manually lets the user use an existing proxy instead of creating a new one each time (and losing all tokens owned by the old proxy).
 
 ```js
   const [ txHash, setTxHash ] = useState(null)
@@ -466,7 +472,7 @@ The hash of the last transaction, used to show a link to the explorer so the use
   const [ transferTo, setTransferTo ] = useState("")
 ```
 
-These fields are all used to send token transfer commands to an ERC-20 contract. This may be `FaucetToken`, but it does not have to be. It's the same function called, specified in the ERC-20 standard.
+These fields are all used to send token transfer commands to an ERC-20 contract. This may be `FaucetToken`, but it does not have to be. The [`transfer`](https://ethereum.org/developers/tutorials/erc20-annotated-code/#transfer-tokens) function is part of tbe ERC-20 standard.
 
 ```js
   const balance = useReadContract({
@@ -479,7 +485,7 @@ These fields are all used to send token transfer commands to an ERC-20 contract.
   })
 ```
 
-Read the two token balances we are interested in.
+Read the two token balances we are interested in, how much the user owns and how much the proxy owns.
 
 ```js
   const nonce = useReadContract({
@@ -490,6 +496,9 @@ Read the two token balances we are interested in.
   })
 ```  
 
+To prevent replay attacks (for example, a seller replaying the transaction giving them money), we use a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). We need to know the current value to add it to the data we sign.
+
+```js
   useEffect(() => {
     if (balance?.status === "success")
       setBalanceAmount(balance.data / 10n**18n)
@@ -503,7 +512,11 @@ Read the two token balances we are interested in.
     else
       setProxyBalanceAmount("Loading...")  
   }, [proxyBalance])
+```
 
+Use [`useEffect`](https://react.dev/reference/react/useEffect) to update the balance displayed to the user when the information read from the blockchain changes.
+
+```js
   useEffect(() => {
     setTransferToken(faucetAddr)
   }, [faucetAddr])
@@ -511,12 +524,20 @@ Read the two token balances we are interested in.
   useEffect(() => {
     setTransferTo(account.address)
   }, [account.address])
+```
 
+The default is to transfer `FaucetToken` tokens to the user's own account. Here we set these values when we receive them from Viem.
+
+```js
   const proxyAddressChange = (evt) => setNewProxyAddr(evt.target.value)
   const transferTokenChange = (evt) => setTransferToken(evt.target.value)  
   const transferToChange = (evt) => setTransferTo(evt.target.value)  
-  const transferAmountChange = (evt) => setTransferAmount(evt.target.value)  
+  const transferAmountChange = (evt) => setTransferAmount(evt.target.value)
+```
 
+Even handlers for when the text fields change. 
+
+```js
   const deployUserProxy = async () => {
     try {
       const response = await fetch("/server/deploy", {
@@ -524,14 +545,24 @@ Read the two token balances we are interested in.
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ownerAddress: account.address })
       })
+
       const data = await response.json()
       setProxyAddr(data.contractAddress)
     } catch (err) {
       console.error("Error:", err)
     }
   }
+```
 
+Ask the server to deploy a proxy for this user. 
+
+```js
   const signMessage = async(proxyAddr, calldata) => {
+```
+
+Sign a message before sending it to the server to send to `UserProxy` on the blockchain. This is explained [here](/developers/tutorials/gasless/#ui-changes).
+
+```js
     const domain = {
         name: "UserProxy",
         version: "1",
@@ -564,8 +595,16 @@ Read the two token balances we are interested in.
 
     return {v, r, s}
   }
+```
 
+
+```js
   const messageUserProxy = async (proxy, target, data, v, r, s) => {
+```
+
+Send a signed message to `UserProxy`, which will verify the signature and then send it to the `target`.
+
+```js
     try {
       const response = await fetch("/server/message", {
         method: "POST",
@@ -582,14 +621,20 @@ Read the two token balances we are interested in.
       console.error("Error:", err)
     }
   }
+```  
 
+```js
   const faucetSimulation = useSimulateContract({
     address: faucetAddr,
     abi: Erc20.abi,
     functionName: 'faucet',
     account: account.address
   })
+```
 
+Simulate calling the `faucet` function. We only enable the faucet button if this is successful.
+
+```js
   const proxyFaucet = async () => {
     const calldata = encodeFunctionData({
       abi: Erc20.abi,
@@ -600,7 +645,16 @@ Read the two token balances we are interested in.
     const {v, r, s} = await signMessage(proxyAddr, calldata)
     messageUserProxy(proxyAddr, faucetAddr, calldata, v, r, s)
   }
+```
 
+To call the a function through the server and `UserProxy`, we follow three steps:
+
+1. Create the calldata to sign and send using [`encodeFunctionData`](https://v1.viem.sh/docs/contract/encodeFunctionData.html).
+
+2. Sign the call data. 
+
+
+```js
   const proxyTransfer = async () => {
     const calldata = encodeFunctionData({
       abi: Erc20.abi,
