@@ -322,7 +322,11 @@ function processMarkdownFile(filePath: string): FileResult {
     phCounter = 0
     phMap = new Map()
 
-    // 0. Protect domain names (e.g., "ethereum.org", "Etherscan.io")
+    // 0. Protect MDX heading IDs: {#some-anchor-id}
+    // These must stay ASCII or MDX/acorn parsing breaks
+    modified = modified.replace(/\{#[^}]+\}/g, (m) => ph(m))
+
+    // 0b. Protect domain names (e.g., "ethereum.org", "Etherscan.io")
     // These must NEVER be transliterated -- they are functional URLs/brands
     modified = modified.replace(
       /[a-zA-Z0-9][\w.-]*\.(org|com|io|net|dev|xyz|eth|fm|tv|co)\b/gi,

@@ -63,7 +63,7 @@ summaryPoint3: "एक मिनट के भीतर भुगतान"
   <div>
 आज ही एक वॉलेट ऐप के साथ अपना एथेरियम खाता बनाएं।
 </div>
-[<ButtonLink href="](/wallets/)find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     शुरू करें
   </ButtonLink>
 </AlertContent>
