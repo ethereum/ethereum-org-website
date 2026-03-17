@@ -112,7 +112,7 @@ export const getTutorialsData = async (
         const frontmatter = data as Frontmatter
 
         return {
-          href: `/${locale}/developers/tutorials/${slug}`,
+          href: `/developers/tutorials/${slug}`,
           title: frontmatter.title,
           description: frontmatter.description,
           author: frontmatter.author || "",

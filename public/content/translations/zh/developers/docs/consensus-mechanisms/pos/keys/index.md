@@ -94,7 +94,7 @@ master_key / purpose / coin_type / account / change / address_index
 
 ## 扩展阅读{#further-reading}
 
-- [Carl Beekhuizen 撰写的以太坊基金会博客文章](https://blog.ethereum.org/2020/05/21/keys/)
+- [Carl Beekhuizen 撰写的以太坊基金会博客文章](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 BLS12-381 密钥生成](https://eips.ethereum.org/EIPS/eip-2333)
 - [EIP-7002：执行层触发的退出](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [大规模密钥管理](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

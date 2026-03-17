@@ -1,5 +1,5 @@
 {
-  "page-gas-meta-title": "Ethereum'daki gaz ücretleri: Nasıl çalışır?",
+  "page-gas-meta-title": "Ethereum ücretleri: Gaz nedir ve nasıl daha az ödenir?",
   "page-gas-meta-description": "Ethereum'da gaz hakkında bilgi edinin: Çalışma şekli ve daha düşük gaz ücreti ödeme yöntemleri",
   "page-gas-hero-title": "Gaz ücretleri",
   "page-gas-hero-header": "Ağ ücretleri",
@@ -56,7 +56,7 @@
   "page-gas-faq-question-1-a-2": "Sürecin detaylı açıklamasını <a href=\"/developers/docs/gas/\">gaz geliştirici belgeleri</a> içinde bulabilirsiniz.",
   "page-gas-faq-question-2-q": "ETH'de gaz ödemem gerekiyor mu?",
   "page-gas-faq-question-2-a-1": "Evet. Ethereum'daki tüm gaz ücretleri, yerel ETH para biriminde ödenmelidir.",
-  "page-gas-faq-question-2-a-2": "ETH hakkında daha fazlası",
+  "page-gas-faq-question-2-a-2": "ETH hakkında daha fazla bilgi",
   "page-gas-faq-question-3-q": "Gwei nedir?",
   "page-gas-faq-question-3-a-1": "Çoğu cüzdanlarda ve gaz izleyicilerinde gaz ücretlerini \"gwei\" cinsinden görebilirsiniz.",
   "page-gas-faq-question-3-a-2": "Gwei, tıpkı kuruş ile lirada olduğu gibi ETH'nin daha küçük birimidir ancak bir ETH bir milyar gwei'dir. Gwei, çok küçük miktarlarda ETH söz konusu olduğunda işe yarar.",

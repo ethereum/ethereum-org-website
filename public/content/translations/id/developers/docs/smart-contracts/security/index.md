@@ -351,7 +351,7 @@ contract MutexPattern {
 }
 ```
 
-Anda juga dapat menggunakan sistem [pembayaran tarik](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) yang mengharuskan pengguna menarik dana dari kontrak pintar, sebagai pengganti sistem "pembayaran dorong" yang mengirim dana ke akun. Hal ini menghilangkan kemungkinan secara tidak sengaja memicu kode pada alamat yang tidak dikenal (dan juga dapat mencegah beberapa serangan denial-of-service atau penolakan layanan).
+Anda juga dapat menggunakan sistem [pembayaran tarik](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment) yang mengharuskan pengguna menarik dana dari kontrak pintar, sebagai pengganti sistem "pembayaran dorong" yang mengirim dana ke akun. Hal ini menghilangkan kemungkinan secara tidak sengaja memicu kode pada alamat yang tidak dikenal (dan juga dapat mencegah beberapa serangan denial-of-service atau penolakan layanan).
 
 #### Underflow dan overflow bilangan bulat {#integer-underflows-and-overflows}
 

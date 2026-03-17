@@ -10,7 +10,7 @@ summaryPoints:
 
 # Account abstraction {#account-abstraction}
 
-Most existing users interact with Ethereum using **[externally owned accounts (EOAs)](/glossary/#eoa)**. This limits how users can interact with Ethereum. For example, it makes it difficult to do batches of transactions and requires users to always keep an ETH balance to pay transaction fees.
+Most existing users interact with [Ethereum](/) using **[externally owned accounts (EOAs)](/glossary/#eoa)**. This limits how users can interact with Ethereum. For example, it makes it difficult to do batches of transactions and requires users to always keep an ETH balance to pay transaction fees.
 
 Account abstraction is a way to solve these problems by allowing users to flexibly program more security and better user experiences into their accounts. This can happen by [upgrading EOAs](https://eips.ethereum.org/EIPS/eip-7702) (EIP-7702) so they can be controlled by smart contracts. There is also another path involving adding a [second, separate transaction system](https://eips.ethereum.org/EIPS/eip-4337) (EIP-4337) to run in parallel to the existing protocol. Regardless of the route, the outcome is access to Ethereum via smart contract wallets, either natively supported as part of the existing protocol or via an add-on transaction network.
 

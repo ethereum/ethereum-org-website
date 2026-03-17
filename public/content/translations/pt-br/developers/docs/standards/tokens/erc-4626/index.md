@@ -1,6 +1,6 @@
 ---
-title: Padrão de cofre tokenizado ERC-4626
-description: Um padrão para os cofres de rendimento.
+title: "Padrão de cofre tokenizado ERC-4626"
+description: "Um padrão para os cofres de rendimento."
 lang: pt-br
 ---
 
@@ -14,20 +14,36 @@ Mercados de empréstimo, agregadores e tokens intrinsecamente de rendimento ajud
 
 O ERC-4626 nos cofres de rendimento reduzirá o esforço de integração e desbloqueará o acesso a rendimentos em várias aplicações, com pouco esforço especializado dos desenvolvedores, criando padrões de implementação mais consistentes e robustos.
 
-O token ERC-4626 é descrito em mais detalhes em [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
+O token ERC-4626 é descrito por completo em [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
+
+**Extensão assíncrona de cofre (ERC-7540)**
+
+O ERC-4626 é otimizado para depósitos e resgates atômicos até um limite. Se o limite for atingido, nenhum novo depósito ou resgate poderá ser enviado. Essa limitação não funciona bem para qualquer sistema de contrato inteligente com ações assíncronas ou atrasos como pré-requisito para interagir com o Cofre (por exemplo, protocolos de ativos do mundo real, protocolos de empréstimos subcolateralizados, protocolos de empréstimos cross-chain, tokens de staking líquido ou módulos de segurança de seguro).
+
+O ERC-7540 amplia a utilidade dos cofres ERC-4626 para casos de uso assíncronos. A interface de Cofre existente (`deposit`/`withdraw`/`mint`/`redeem`) é totalmente utilizada para reivindicar Solicitações assíncronas.
+
+A extensão ERC-7540 é descrita por completo em [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+
+**Extensão de cofre multiativo (ERC-7575)**
+
+Um caso de uso ausente que não é suportado pelo ERC-4626 são cofres que possuem múltiplos ativos ou pontos de entrada, como tokens de provedor de liquidez (LP tokens). Esses casos geralmente são difíceis de manejar ou não compatíveis devido ao requisito de que o ERC-4626 seja, por si só, um ERC-20.
+
+O ERC-7575 adiciona suporte a cofres com múltiplos ativos ao externalizar a implementação do token ERC-20 da implementação do ERC-4626.
+
+A extensão ERC-7575 é descrita por completo em [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
 
 ## Pré-requisitos {#prerequisites}
 
-Para entender melhor esta página, recomendamos que você leia primeiro sobre [padrões de tokens](/developers/docs/standards/tokens/) e [ERC-20](/developers/docs/standards/tokens/erc-20/).
+Para entender melhor esta página, recomendamos que você leia primeiro sobre [padrões de token](/developers/docs/standards/tokens/) e [ERC-20](/developers/docs/standards/tokens/erc-20/).
 
-## Funções e características do ERC-4626: {#body}
+## Funções e recursos do ERC-4626: {#body}
 
 ### Métodos {#methods}
 
 #### asset {#asset}
 
 ```solidity
-function asset() public view returns (address)
+function asset() public view returns (address assetTokenAddress)
 ```
 
 Esta função retorna o endereço do token subjacente usado para o cofre para contabilidade, depósito, retirada.
@@ -46,7 +62,7 @@ Esta função retorna a quantidade total de ativos subjacentes mantidos pelo cof
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-Esta função retorna a quantidade de `shares` que seriam intercambiadas pelo cofre pela quantidade de `assets` fornecidos.
+Esta função retorna a quantidade de `shares` que seriam trocadas pelo cofre pela quantidade de `assets` fornecida.
 
 #### convertToAssets {#convertoassets}
 
@@ -54,92 +70,92 @@ Esta função retorna a quantidade de `shares` que seriam intercambiadas pelo co
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-Esta função retorna a quantidade de `assets` que seriam intercambiadas pelo cofre pela quantidade de `shares` fornecidos.
+Esta função retorna a quantidade de `assets` que seriam trocados pelo cofre pela quantidade de `shares` fornecida.
 
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address receiver) public view returns (uint256)
+function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-Esta função retorna a quantidade máxima de ativos subjacentes que podem ser depositados em um único [`deposit`](#deposit) chamado pelo `receiver`.
+Esta função retorna a quantidade máxima de ativos subjacentes que podem ser depositados em uma única chamada de [`deposit`](#deposit), com as shares mintadas para o `receiver`.
 
 #### previewDeposit {#previewdeposit}
 
 ```solidity
-function previewDeposit(uint256 assets) public view returns (uint256)
+function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
 Esta função permite aos usuários simular os efeitos de seu depósito no bloco atual.
 
-#### depositar {#deposit}
+#### deposit {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-Esta função deposita `assets` de tokens subjacentes no cofre e concede a propriedade de `shares` para o `receiver`.
+Esta função deposita `assets` de tokens subjacentes no cofre e concede a propriedade de `shares` ao `receiver`.
 
 #### maxMint {#maxmint}
 
 ```solidity
-function maxMint(address receiver) public view returns (uint256)
+function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-Esta função retorna a quantidade máxima de ativos subjacentes que podem ser mintados em um único [`mint`](#mint) chamado pelo `receiver`.
+Esta função retorna a quantidade máxima de shares que podem ser mintadas em uma única chamada de [`mint`](#mint), com as shares mintadas para o `receiver`.
 
 #### previewMint {#previewmint}
 
 ```solidity
-function previewMint(uint256 shares) public view returns (uint256)
+function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
 Esta função permite aos usuários simular os efeitos de seu mint no bloco atual.
 
-#### cunhar {#mint}
+#### mint {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-Esta função minta exatamente `shares` no cofre para o `receiver` depositando `assets` dos tokens subjacentes.
+Esta função minta exatamente `shares` de cofre para o `receiver`, depositando `assets` de tokens subjacentes.
 
 #### maxWithdraw {#maxwithdraw}
 
 ```solidity
-function maxWithdraw(address owner) public view returns (uint256)
+function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-Esta função retorna a quantidade máxima de ativos subjacentes que podem ser retirados do saldo do `owner` com uma única chamada [`withdraw`](#withdraw).
+Esta função retorna a quantidade máxima de ativos subjacentes que podem ser sacados do saldo do `owner` com uma única chamada de [`withdraw`](#withdraw).
 
 #### previewWithdraw {#previewwithdraw}
 
 ```solidity
-function previewWithdraw(uint256 assets) public view returns (uint256)
+function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
 Esta função permite aos usuários simular os efeitos da sua retirada no bloco atual.
 
-#### sacar {#withdraw}
+#### withdraw {#withdraw}
 
 ```solidity
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Esta função queima `shares` do `owner` e envia exatamente tokens `assets` do cofre para o `receiver`.
+Esta função queima `shares` do `owner` e envia exatamente `assets` de token do cofre para o `receiver`.
 
 #### maxRedeem {#maxredeem}
 
 ```solidity
-function maxRedeem(address owner) public view returns (uint256)
+function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-Essa função retorna a quantidade máxima de ações que podem ser resgatadas do saldo do `owner` com uma chamada de [`redeem`](#redeem).
+Esta função retorna a quantidade máxima de shares que podem ser resgatadas do saldo do `owner` por meio de uma chamada de [`redeem`](#redeem).
 
 #### previewRedeem {#previewredeem}
 
 ```solidity
-function previewRedeem(uint256 shares) public view returns (uint256)
+function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
 Essa função permite aos usuários simular os efeitos de seu resgate no bloco atual.
@@ -150,7 +166,7 @@ Essa função permite aos usuários simular os efeitos de seu resgate no bloco a
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-Essa função resgata um número específico de `shares` do `owner` e envia `assets` do token subjacente do cofre para o `receiver`.
+Esta função resgata um número específico de `shares` do `owner` e envia `assets` do token subjacente do cofre para o `receiver`.
 
 #### totalSupply {#totalsupply}
 
@@ -166,13 +182,17 @@ Retorna o número total de shares não resgatadas do cofre em circulação.
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-Retorna a quantidade total de shares do cofre que o `owner` tem atualmente.
+Retorna a quantidade total de shares do cofre que o `owner` possui atualmente.
+
+### Mapa da interface {#mapOfTheInterface}
+
+![Mapa da interface ERC-4626](./map-of-erc-4626.png)
 
 ### Eventos {#events}
 
 #### Evento de depósito
 
-**PRECISA** ser emitido quando os tokens são depositados no cofre por meio dos métodos [`mint`](#mint) e [`deposit`](#deposit)
+**DEVE** ser emitido quando tokens são depositados no cofre através dos métodos [`mint`](#mint) e [`deposit`](#deposit).
 
 ```solidity
 event Deposit(
@@ -183,11 +203,11 @@ event Deposit(
 )
 ```
 
-Em que `sender` é o usuário que trocou `assets` por `shares` e transferiu aquelas `shares` para o `owner`.
+Onde `sender` é o usuário que trocou `assets` por `shares` e transferiu essas `shares` para o `owner`.
 
 #### Evento de retirada
 
-**PRECISA** ser emitido quando as shares são retiradas do cofre por um depositante nos métodos de [`redeem`](#redeem) ou [`withdraw`](#withdraw).
+**DEVE** ser emitido quando shares são sacadas do cofre por um depositante nos métodos [`redeem`](#redeem) ou [`withdraw`](#withdraw).
 
 ```solidity
 event Withdraw(
@@ -195,13 +215,13 @@ event Withdraw(
     address indexed receiver,
     address indexed owner,
     uint256 assets,
-    uint256 share
+    uint256 shares
 )
 ```
 
-Em que `sender` é o usuário que acionou a retirada e trocou `shares`, de propriedade do `owner`, por `assets`. `receiver` é o usuário que recebeu os `assets ` retirados.
+Onde `sender` é o usuário que acionou o saque e trocou `shares`, de propriedade do `owner`, por `assets`. `receiver` é o usuário que recebeu os `assets` sacados.
 
 ## Leitura adicional {#further-reading}
 
-- [EIP-4626: Padrão do cofre tokenizado](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub Repo](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [EIP-4626: Padrão de Cofre Tokenizado](https://eips.ethereum.org/EIPS/eip-4626)
+- [ERC-4626: Repositório no GitHub](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

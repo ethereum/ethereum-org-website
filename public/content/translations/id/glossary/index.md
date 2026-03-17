@@ -326,7 +326,7 @@ Seorang validator mengirimkan dua pesan yang saling bertentangan. Salah satu con
 
 ### Eth1 {#eth1}
 
-'Eth1' adalah istilah yang merujuk pada Jaringan Utama Ethereum, rantai blok bukti kerja yang telah ada. Istilah ini sudah tidak dipakai dan digantikan dengan 'lapisan eksekusi'. [Pelajari selengkapnya mengenai perubahan nama tersebut](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+'Eth1' adalah istilah yang merujuk pada Jaringan Utama Ethereum, rantai blok bukti kerja yang telah ada. Istilah ini sudah tidak dipakai dan digantikan dengan 'lapisan eksekusi'. [Pelajari selengkapnya mengenai perubahan nama tersebut](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming).
 
 <DocLink href="/roadmap/">
   Selengkapnya tentang peningkatan Ethereum
@@ -334,7 +334,7 @@ Seorang validator mengirimkan dua pesan yang saling bertentangan. Salah satu con
 
 ### Eth2 {#eth2}
 
-'Eth2' adalah istilah yang merujuk pada sebuah set peningkatan protokol Ethereum, termasuk transisi Ethereum ke bukti taruhan. Istilah ini sudah tidak dipakai dan digantikan dengan 'lapisan konsensus'. [Pelajari selengkapnya mengenai perubahan nama tersebut](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+'Eth2' adalah istilah yang merujuk pada sebuah set peningkatan protokol Ethereum, termasuk transisi Ethereum ke bukti taruhan. Istilah ini sudah tidak dipakai dan digantikan dengan 'lapisan konsensus'. [Pelajari selengkapnya mengenai perubahan nama tersebut](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming).
 
 <DocLink href="/roadmap/">
   Selengkapnya tentang peningkatan Ethereum

@@ -34,10 +34,10 @@ Puede encontrar algunas guías y herramientas útiles para los traductores de et
 
 Para estar al día de los últimos avances del Programa de Traducción, puede seguir el [blog de la Fundación Ethereum](https://blog.ethereum.org/):
 
-- [Actualización de hitos de octubre de 2021](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Actualización de hitos de diciembre de 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Actualización de hitos de julio de 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Lanzamiento del Programa de Traducción en agosto de 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Actualización de hitos de octubre de 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Actualización de hitos de diciembre de 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Actualización de hitos de julio de 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Lanzamiento del Programa de Traducción en agosto de 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Horario de consulta para traductores {#office-hours}
 

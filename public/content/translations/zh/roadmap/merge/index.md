@@ -105,7 +105,7 @@ id="developers">
   <li><em>安全头部区块</em> 和<em>最终确定区块</em>的概念</li>
 </ul>
 
-有关详细信息，请查看 Tim Beiko 的博客文章<a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">“合并对以太坊的应用程序层有何影响”</a>。
+有关详细信息，请查看 Tim Beiko 的博客文章<a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">“合并对以太坊的应用程序层有何影响”</a>。
 </ExpandableCard>
 
 ## 合并与能源消耗 {#merge-and-energy}
@@ -189,7 +189,7 @@ contentPreview="错误。 出于安全原因，验证者的退出受到速率限
 
 这些术语的更新仅会改变命名约定；不会改变以太坊的目标及路线图。
 
-[了解更多关于“Eth2”重命名的信息](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[了解更多关于“Eth2”重命名的信息](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## 升级之间的关系 {#relationship-between-upgrades}
 

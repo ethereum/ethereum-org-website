@@ -1,3 +1,5 @@
+import { uploadToS3 } from "@/data-layer/s3"
+
 import { fetchBuidlGuidl } from "./fetchBuidlGuidl"
 import { fetchGitHub } from "./fetchGitHub"
 import { fetchNpmJs } from "./fetchNpmJs"
@@ -15,6 +17,23 @@ import {
 
 // Re-export types for consumers
 export type { DeveloperToolsDataEnvelope } from "./utils"
+
+async function uploadToolImages(
+  tools: DeveloperTool[]
+): Promise<DeveloperTool[]> {
+  return Promise.all(
+    tools.map(async (tool) => {
+      const thumbnail_url = tool.thumbnail_url
+        ? ((await uploadToS3(tool.thumbnail_url, "tools/thumbnails")) ?? "")
+        : tool.thumbnail_url
+      const banner_url = tool.banner_url
+        ? ((await uploadToS3(tool.banner_url, "tools/banners")) ?? "")
+        : tool.banner_url
+
+      return { ...tool, thumbnail_url, banner_url }
+    })
+  )
+}
 
 /**
  * Fetches and enriches developer tools data.
@@ -41,10 +60,14 @@ export async function fetchDeveloperTools(): Promise<DeveloperToolsDataEnvelope>
   console.log("Enriched with GitHub data")
 
   // Step 3: Enrich with npm data (download counts)
-  const enrichedData = await fetchNpmJs(withGitHub)
+  const withNpm = await fetchNpmJs(withGitHub)
   console.log("Enriched with npm data")
 
-  // Step 4: Build lookup map
+  // Step 4: Upload images to S3
+  const enrichedData = await uploadToolImages(withNpm)
+  console.log("Uploaded tool images to S3")
+
+  // Step 5: Build lookup map
   const toolsById: Record<string, DeveloperTool> = Object.fromEntries(
     enrichedData.map((tool) => [tool.id, tool])
   )
@@ -52,7 +75,7 @@ export async function fetchDeveloperTools(): Promise<DeveloperToolsDataEnvelope>
     `Built toolsById lookup with ${Object.keys(toolsById).length} tools`
   )
 
-  // Step 5: Compute randomized selections
+  // Step 6: Compute randomized selections
   const highlightsByCategory = getHighlightsByCategory(enrichedData)
   const mainPageHighlights = getMainPageHighlights(highlightsByCategory)
   const dataByCategory = transformDeveloperToolsData(enrichedData)

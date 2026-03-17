@@ -1,6 +1,6 @@
 ---
-title: ethers.jsを使用したトークンの送信
-description: ethers.jsを使用してトークンを送信するための初心者向けのガイド
+title: "ethers.jsを使用したトークンの送信"
+description: "ethers.jsを使用してトークンを送信するための初心者向けのガイド"
 author: Kim YongJun
 tags:
   - "ETHERS.JS"

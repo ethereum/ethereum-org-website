@@ -106,7 +106,7 @@ Połączenie nastąpiło wraz ze zmianami w konsensusie, które obejmują równi
   <li>koncepcja <em>bezpiecznej głowy</em> i <em>sfinalizowanych bloków</em></li>
 </ul>
 
-Aby uzyskać więcej informacji, zapoznaj się z tym wpisem na blogu autorstwa Tima Beiko <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/"> Wpływ połączenia na warstwę aplikacji Ethereum </a>.
+Aby uzyskać więcej informacji, zapoznaj się z tym wpisem na blogu autorstwa Tima Beiko <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer"> Wpływ połączenia na warstwę aplikacji Ethereum </a>.
 
 </ExpandableCard>
 
@@ -116,7 +116,7 @@ Połączenie oznaczało koniec stosowania mechanizmu proof-of-work na platformie
 
 ## Połączenie i skalowanie {#merge-and-scaling}
 
-Połączenie stwarza również miejsce dla dalszych uaktualnień skalowalności, które nie są możliwe w ramach mechanizmu proof-of-work, co przybliży Ethereum o krok do osiągnięcia pełnej skali, bezpieczeństwa i zrównoważenia ekologicznego, o których mowa w [wizji Ethereum](/roadmap/vision/).
+Połączenie stwarza również miejsce dla dalszych uaktualnień skalowalności, które nie są możliwe w ramach mechanizmu proof-of-work, co przybliży Ethereum o krok do osiągnięcia pełnej skali, bezpieczeństwa i zrównoważenia ekologicznego, o których mowa w [wizji Ethereum](/roadmap/).
 
 ## Błędne przekonania o Połączeniu {#misconceptions}
 
@@ -194,7 +194,7 @@ Aby ograniczyć zamieszanie, społeczność zaktualizowała te warunki:
 
 Ta terminologia aktualizuje tylko konwencje nazewnictwa; nie zmienia celów ani planu działania Ethereum.
 
-[Dowiedz się więcej o zmianie nazwy „Eth2”](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Dowiedz się więcej o zmianie nazwy „Eth2”](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Relacje między uaktualnieniami {#relationship-between-upgrades}
 
@@ -218,7 +218,7 @@ Można też dowiedzieć się więcej o tym, [Co się dzieje po Połączeniu](htt
 
 ### Połączenie i sharding {#merge-and-data-sharding}
 
-Pierwotnie planowano prace nad shardingiem przed Połączeniem, aby rozwiązać problem skalowalności. Jednak wraz z rozwojem [rozwiązań skalujących warstwę 2](/warstwa-2/) priorytet przesunął się na zamianę mechanizmu proof-of-work na proof-of-stake.
+Pierwotnie planowano prace nad shardingiem przed Połączeniem, aby rozwiązać problem skalowalności. Jednak wraz z rozwojem [rozwiązań skalujących warstwę 2](/layer-2/) priorytet przesunął się na zamianę mechanizmu proof-of-work na proof-of-stake.
 
 Plany dotyczące shardingu szybko ewoluują, ale ze względu na rozwój i sukces technologii warstwy 2 do skalowania wykonania transakcji plany shardingu przesunęły się w kierunku znalezienia optymalnego sposobu rozłożenia ciężaru przechowywania skompresowanych calldata z kontraktów pakietów zbiorczych, co pozwala na wykładniczy wzrost przepustowości sieci. Nie byłoby to możliwe bez wcześniejszego przejścia na proof-of-stake.
 

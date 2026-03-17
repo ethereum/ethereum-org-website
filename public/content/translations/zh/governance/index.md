@@ -168,7 +168,7 @@ DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/lear
 - [加入以太坊研发 Discord](https://discord.gg/mncqtgVSVw)
 - [运行一个节点](/developers/docs/nodes-and-clients/run-a-node/)
 - [为客户端开发做贡献](/developers/docs/nodes-and-clients/#execution-clients)
-- [核心开发者学徒计划](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [核心开发者学徒计划](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## 扩展阅读{#further-reading}
 
@@ -177,7 +177,7 @@ DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/lear
 - [关于区块链治理的笔记](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [以太坊治理如何运作？](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [以太坊治理如何运作](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [什么是以太坊核心开发者？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [什么是以太坊核心开发者？](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [治理，第 2 部分：财阀统治依然糟糕](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [超越代币投票治理](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
 - [理解区块链治理](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_

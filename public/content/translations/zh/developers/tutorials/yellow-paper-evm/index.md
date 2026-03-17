@@ -275,4 +275,4 @@ _α_ 是我们压回的值的数量。 在这种情况下是一个，即和。
 - 程序员理解计算机代码。
   他们可能理解也可能不理解数学符号。
 
-也许是出于这些原因，较新的[共识层规范](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md)是用 Python 编写的。 [Python 中有执行层规范](https://ethereum.github.io/execution-specs)，但它们并不完整。 除非并且直到整个黄皮书也被翻译成 Python 或类似的语言，否则黄皮书将继续使用，能够阅读它是有帮助的。
+也许是出于这些原因，较新的[共识层规范](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md)是用 Python 编写的。 [Python 中有执行层规范](https://ethereum.github.io/execution-specs)，但它们并不完整。 除非并且直到整个黄皮书也被翻译成 Python 或类似的语言，否则黄皮书将继续使用，能够阅读它是有帮助的。

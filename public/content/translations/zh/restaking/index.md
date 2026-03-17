@@ -19,7 +19,7 @@ buttons:
 
 以太坊网络全年无休地保护着价值数十亿美元的资产。 如何实现？
 
-世界各地的人们将[以太币 (ETH)](/eth/) 锁定（或“质押”）在智能合约中，以运行处理以太坊交易和保护以太坊网络的软件。 作为回报，他们会获得更多 ETH 作为奖励。
+世界各地的人们将[以太币 (ETH)](/what-is-ether/) 锁定（或“质押”）在智能合约中，以运行处理以太坊交易和保护以太坊网络的软件。 作为回报，他们会获得更多 ETH 作为奖励。
 
 再质押是一项为[质押者](/staking/)打造的技术，可将这种安全性扩展到其他服务、应用程序或网络。 作为回报，他们可以获得额外的再质押奖励。 但是，他们也让已质押的 ETH 面临更大的风险。
 
@@ -178,7 +178,7 @@ buttons:
 
 ## 扩展阅读{#further-reading}
 
-1. [ethereum.org - ETH 质押指南](https://ethereum.org/en/staking/)
+1. [ethereum.org - ETH 质押指南](/staking/)
 2. [Ledger Academy - 以太坊再质押是什么？](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer：去中心化以太坊再质押协议详解](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin - 不要让以太坊的共识超载](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

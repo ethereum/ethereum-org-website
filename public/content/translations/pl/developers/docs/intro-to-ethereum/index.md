@@ -1,6 +1,6 @@
 ---
-title: Wprowadzenie do Ethereum
-description: Wprowadzenie programisty aplikacji zdecentralizowanych do podstawowych pojęć Ethereum.
+title: "Wstęp techniczny do Ethereum"
+description: "Wprowadzenie programisty aplikacji zdecentralizowanych do podstawowych pojęć Ethereum."
 lang: pl
 ---
 
@@ -8,15 +8,15 @@ lang: pl
 
 Blockchain to publiczna baza danych, która jest aktualizowana i udostępniana na wielu komputerach w sieci.
 
-„Blok” odnosi się do faktu, że dane i stan są przechowywane w sekwencyjnych partiach lub „blokach”. Jeśli wysyłasz ETH do kogoś innego, dane transakcji muszą zostać dodane do bloku, aby mogły być skuteczne.
+„Blok” odnosi się do faktu, że dane i stan są przechowywane w sekwencyjnych partiach lub „blokach”. Jeśli wysyłasz ETH do kogoś innego, dane transakcji muszą zostać dodane do bloku, aby zakończyła się ona powodzeniem.
 
 „Chain” odnosi się do faktu, że każdy blok kryptograficznie odwołuje się do swojego rodzica (nadrzędnego elementu). Innymi słowy, bloki są łączone w łańcuchy. Dane w bloku nie mogą ulec zmianie bez zmiany wszystkich kolejnych bloków, co wymagałoby konsensusu całej sieci.
 
 Każdy komputer w sieci musi zgodzić się na każdy nowy blok i łańcuch jako całość. Te komputery nazywane są „węzłami”. Węzły zapewniają, że każda osoba wchodząca w interakcję z blockchainem ma te same dane. Aby osiągnąć to rozproszone porozumienie, blockchainy potrzebują mechanizmu konsensusu.
 
-Ethereum wykorzystuje [mechanizm konsensusu oparty na proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Każdy, kto chce dodać nowe bloki do łańcucha, musi stakować ETH — natywną walutę Ethereum — jako zabezpieczenie i uruchomić oprogramowanie walidatora. Te „walidatory” mogą być następnie losowo wybierane do proponowania bloków, które inne walidatory sprawdzają i dodają do blockchainu. Istnieje system nagród i kar, który silnie motywuje uczestników do bycia uczciwymi i dostępnymi online tak długo, jak to możliwe.
+Ethereum używa [mechanizmu konsensusu opartego na proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Każdy, kto chce dodać nowe bloki do łańcucha, musi stakować ETH — natywną walutę Ethereum — jako zabezpieczenie i uruchomić oprogramowanie walidatora. Te „walidatory” mogą być następnie losowo wybierane do proponowania bloków, które inne walidatory sprawdzają i dodają do blockchainu. Istnieje system nagród i kar, który silnie motywuje uczestników do bycia uczciwymi i dostępnymi online tak długo, jak to możliwe.
 
-Jeśli chcesz zobaczyć, jak dane blockchainu są hashowane, a następnie dołączane do historii odniesień bloków, koniecznie sprawdź [to demo](https://andersbrownworth.com/blockchain/blockchain) Andersa Brownwortha i obejrzyj jego film poniżej.
+Jeśli chcesz zobaczyć, jak dane blockchaina są haszowane, a następnie dołączane do historii odwołań do bloków, koniecznie sprawdź [to demo](https://andersbrownworth.com/blockchain/blockchain) autorstwa Andersa Brownwortha i obejrzyj towarzyszący mu film poniżej.
 
 Zobacz, jak Anders wyjaśnia hashe w blockchainach:
 
@@ -34,7 +34,7 @@ Mechanizmy kryptograficzne gwarantują, że po zweryfikowaniu transakcji jako po
 
 ## Czym jest ether? {#what-is-ether}
 
-**Ether (ETH)** jest natywną kryptowalutą Ethereum. Celem ETH jest umożliwienie rynku obliczeń. Taki rynek stanowi ekonomiczną zachętę dla uczestników do weryfikowania i wykonywania żądań transakcji oraz dostarczania zasobów obliczeniowych do sieci.
+**Ether (ETH)** to natywna kryptowaluta Ethereum. Celem ETH jest umożliwienie rynku obliczeń. Taki rynek stanowi ekonomiczną zachętę dla uczestników do weryfikowania i wykonywania żądań transakcji oraz dostarczania zasobów obliczeniowych do sieci.
 
 Każdy uczestnik, który wysyła żądanie transakcji, musi również zaoferować pewną ilość ETH do sieci jako nagrodę. Sieć spali część tej nagrody, a resztę przyzna temu, kto ostatecznie wykona pracę polegającą na weryfikacji transakcji, wykonaniu jej, zatwierdzeniu jej w blockchainie i rozesłaniu jej do sieci.
 
@@ -44,7 +44,7 @@ ETH jest również wykorzystywane do zapewnienia bezpieczeństwa kryptoekonomicz
 
 ## Czym są inteligentne kontrakty? {#what-are-smart-contracts}
 
-W praktyce uczestnicy nie piszą nowego kodu za każdym razem, gdy chcą zażądać obliczeń na EVM. Jest raczej tak, że programiści aplikacji przesyłają programy (fragmenty kodu wielokrotnego użytku) do stanu EVM, a użytkownicy wysyłają żądania wykonania tych fragmentów kodu z różnymi parametrami. Programy przesyłane do sieci i wykonywane przez nią nazywamy inteligentnymi kontraktami.
+W praktyce uczestnicy nie piszą nowego kodu za każdym razem, gdy chcą zażądać obliczeń na EVM. Jest raczej tak, że programiści aplikacji przesyłają programy (fragmenty kodu wielokrotnego użytku) do stanu EVM, a użytkownicy wysyłają żądania wykonania tych fragmentów kodu z różnymi parametrami. Programy przesyłane do sieci i przez nią wykonywane nazywamy "inteligentnymi kontraktami".
 
 Na bardzo podstawowym poziomie można myśleć o inteligentnym kontrakcie jak o swego rodzaju automacie: skrypcie, który po wywołaniu z określonymi parametrami wykonuje pewne czynności lub obliczenia, jeśli spełnione są określone warunki. Na przykład, prosty inteligentny kontrakt sprzedawcy może utworzyć i przypisać własność cyfrowego zasobu, jeśli wywołujący wyśle ETH do określonego odbiorcy.
 
@@ -60,11 +60,11 @@ Sekwencja wszystkich bloków, które zostały zatwierdzone w sieci Ethereum w hi
 
 ### ETH {#eth}
 
-**Ether (ETH)** jest natywną kryptowalutą Ethereum. Użytkownicy płacą ETH innym użytkownikom, aby ich żądania wykonania kodu zostały spełnione.
+**Ether (ETH)** to natywna kryptowaluta Ethereum. Użytkownicy płacą ETH innym użytkownikom, aby ich żądania wykonania kodu zostały spełnione.
 
-[Więcej na temat ETH](/developers/docs/intro-to-ether/)
+[Więcej o ETH](/developers/docs/intro-to-ether/)
 
-### Maszyna Wirtualna Ethereum (EVM) {#evm}
+### EVM {#evm}
 
 Maszyna wirtualna Ethereum to globalny komputer wirtualny, którego stan przechowuje i akceptuje każdy uczestnik sieci Ethereum. Każdy uczestnik może zażądać wykonania dowolnego kodu na EVM; wykonanie kodu zmienia stan EVM.
 
@@ -100,17 +100,25 @@ Wolumen transakcji jest bardzo wysoki, więc transakcje są „zatwierdzane” w
 
 ### Inteligentne kontrakty {#smart-contracts}
 
-Fragment kodu wielokrotnego użytku (program), który programista umieszcza w stanie EVM. Każdy może zażądać wykonania kodu inteligentnego kontraktu składając żądanie transakcji. Ponieważ programiści mogą pisać dowolne aplikacje wykonywalne w EVM (gry, rynki, instrumenty finansowe itp.) poprzez publikowanie inteligentnych kontraktów, są one często określane jako [dapps lub zdecentralizowane aplikacje](/developers/docs/dapps/).
+Fragment kodu wielokrotnego użytku (program), który programista umieszcza w stanie EVM. Każdy może zażądać wykonania kodu inteligentnego kontraktu składając żądanie transakcji. Ponieważ programiści mogą pisać dowolne aplikacje wykonywalne w EVM (gry, rynki, instrumenty finansowe itp.) poprzez publikowanie inteligentnych kontraktów, są one często nazywane także [dapkami lub aplikacjami zdecentralizowanymi](/developers/docs/dapps/).
 
-[Więcej na temat inteligentnych kontraktów](/developers/docs/smart-contracts/)
+[Więcej o inteligentnych kontraktach](/developers/docs/smart-contracts/)
 
 ## Dalsza lektura {#further-reading}
 
-- [Dokumentacja Ethereum](/whitepaper/)
-- [Jak w ogóle działa Ethereum?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) — _Preethi Kasireddy_ (**Chociaż** ten zasób jest nadal wartościowy, należy pamiętać, że pochodzi on sprzed czasu [Połączenia](/roadmap/merge) i dlatego nadal odnosi się do mechanizmu proof-of-work Ethereum — Ethereum jest obecnie zabezpieczone za pomocą [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
+- [Biała księga Ethereum](/whitepaper/)
+- [Jak w ogóle działa Ethereum?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) – _Preethi Kasireddy_ (**UWAGA:** ten zasób jest wciąż wartościowy, ale należy pamiętać, że pochodzi on sprzed [Połączenia](/roadmap/merge) i w związku z tym nadal odnosi się do mechanizmu proof-of-work Ethereum – Ethereum jest obecnie zabezpieczone za pomocą [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
 
-_Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
+### Jesteś raczej wzrokowcem? Dla wzrokowców {#visual-learner}
+
+Ta seria filmów oferuje dogłębne omówienie podstawowych zagadnień:
+
+<YouTube id="j78ZcIIpi0Q"/>
+
+[Playlista: podstawy Ethereum](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
+
+_Znasz jakieś zasoby społeczności, które Ci pomogły? Edytuj tę stronę i dodaj je!_
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Przewodnik programisty po Ethereum, część 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _ — bardzo przyjazne dla początkujących odkrywanie Ethereum przy użyciu Pythona i web3.py_
+- [Przewodnik programisty po Ethereum, część 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Bardzo przyjazne dla początkujących odkrywanie Ethereum przy użyciu Pythona i web3.py_

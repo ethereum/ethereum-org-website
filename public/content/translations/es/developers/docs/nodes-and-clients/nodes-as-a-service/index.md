@@ -272,7 +272,6 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Comience gratis
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Documentación](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Funciones
     - Acceso a más de 50 nodos de la cadena de bloques
     - Clave API gratuita
@@ -283,11 +282,10 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Copias de seguridad, archivos, documentos compartidos y nodos dedicados
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Documentación](https://docs.pokt.network/home/)
+  - [Documentación](https://docs.pokt.network/)
   - Funciones
     - Protocolo RPC descentralizado y mercado
     - 1 millón de solicitudes por día en la categoría gratuita (por terminal, máx. 2)
-    - [Puntos de conexión públicos](https://docs.pokt.network/developers/public-endpoints)
     - Programa Pre-Stake+ (si necesita más de 1 millón de solicitudes por día)
     - Compatibilidad con más de 15 cadenas de bloques
     - Más de 6.400 nodos que generan Pocket Network (POKT) por alojar aplicaciones

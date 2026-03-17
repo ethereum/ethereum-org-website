@@ -1,10 +1,10 @@
 ---
-title: 翻訳方法
+title: "翻訳方法"
 lang: ja
-description: ethereum.orgの翻訳でCrowdinを使う手順
+description: "ethereum.orgの翻訳でCrowdinを使う手順"
 ---
 
-# 翻訳方法 {#how-to-translate}
+# 翻訳の方法 {#how-to-translate}
 
 ## ビジュアルガイド {#visual-guide}
 
@@ -12,9 +12,9 @@ description: ethereum.orgの翻訳でCrowdinを使う手順
 
 <YouTube id="Ii7bYhanLs4" />
 
-## 文書によるガイド {#written-guide}
+## 文章ガイド {#written-guide}
 
-### Crowdinにあるプロジェクトに参加する {#join-project}
+### Crowdinのプロジェクトに参加する {#join-project}
 
 お持ちのCrowdinアカウントでログインします。無い場合はサインアップする必要があります。 サインアップに必要なのは、Eメールとパスワードだけです。
 
@@ -22,35 +22,34 @@ description: ethereum.orgの翻訳でCrowdinを使う手順
   プロジェクトに参加
 </ButtonLink>
 
-### 翻訳する言語を開く {#open-language}
+### 言語を選択する {#open-language}
 
-Crowdinへログインすると、プロジェクトの説明と翻訳可能な言語のリストが表示されます。 各言語には、その言語における翻訳可能な単語の総数、どの程度の翻訳が完了し承認されているかに関する概要の情報も含まれています。
+Crowdinへログインすると、プロジェクトの説明と翻訳可能な言語のリストが表示されます。
+各言語には、その言語における翻訳可能な単語の総数、どの程度の翻訳が完了し承認されているかに関する概要の情報も含まれています。
 
 翻訳したい言語を開き、翻訳が可能になっているファイルのリストを確認してください。
 
-![Crowdinにある言語のリスト](./list-of-languages.png)
+![Crowdinの言語リスト](./list-of-languages.png)
 
 ### 作業するドキュメントを見つける {#find-document}
 
 ウェブサイトのコンテンツは、多数のドキュメントとコンテンツバケットに分割されています。 各ドキュメントの進捗状況は右側で確認できます。翻訳の進捗が100％未満の場合は、ぜひご協力ください!
 
-あなたの言語が表示されてない場合は、 [イシューを作成する](https://github.com/ethereum/ethereum-org-website/issues/new/choose)か、[Discord](https://discord.gg/ethereum-org) で問い合わせてください。
+あなたの言語が表示されてない場合は、 [issueを立てる](https://github.com/ethereum/ethereum-org-website/issues/new/choose)か、[Discord](https://discord.gg/ethereum-org)で質問してください
 
-![Crowdinにある翻訳されたファイルと未翻訳のファイル](./crowdin-files.png)
+![Crowdin内の翻訳済みファイルと未翻訳ファイル](./crowdin-files.png)
 
-コンテンツバケットに関する注意事項: Crowdinでは、「コンテンツバケット」を使用して、最初に最優先コンテンツをリリースします。 例えば、[フィリピン語](https://crowdin.com/project/ethereum-org/fil#)など言語をチェックアウトすると、コンテンツバケットのフォルダが表示されます ("1. Homepage"、"2. Essentials"、"3. Exploring"など) 。
+コンテンツバケットに関する注意事項: Crowdinでは、「コンテンツバケット」を使用して、最初に最優先コンテンツをリリースします。 例えば[フィリピン語](https://crowdin.com/project/ethereum-org/fil#)のような言語をチェックすると、コンテンツバケット（「1.）用のフォルダが表示されます。 Homepage"、"2. Essentials"、"3. Exploring"など) 。
 
 最も影響度のあるページを最初に翻訳するために、この数字順 (1 → 2 → 3 → ⋯) で翻訳することを推奨します。
 
-[ethereum.orgのコンテンツ一覧について詳しくはこちらをご覧ください。](/contributing/translation-program/content-buckets/)
-
-### 翻訳 {#translate}
+### 翻訳する {#translate}
 
 翻訳したいファイルを選択すると、オンラインエディターが開きます。 Crowdinを使ったことがない方は、このクイックガイドで基本的なことを確認してください。
 
 ![Crowdinオンラインエディター](./online-editor.png)
 
-**_1 - 左サイドバー_**
+**_1 – 左サイドバー_**
 
 - Untranslated (赤) - まだ翻訳されていないテキスト。 これらは、翻訳が必要な文字列です。
 - Translated (緑) - 翻訳されているが、まだレビューされていないテキスト。 別の翻訳を提案したり、エディタの「+」と「-」ボタンを使って、既存の翻訳への投票が自由にできます。
@@ -58,23 +57,24 @@ Crowdinへログインすると、プロジェクトの説明と翻訳可能な�
 
 また、上部のボタンを使って、特定の文字列を検索したり、ステータスでフィルタリングしたり、表示を変更したりすることができます。
 
-**_2 - エディターエリア_**
+**_2 – エディターエリア_**
 
-メインの翻訳エリア - 原文が上部に表示され、追加でコンテキストやスクリーンショットがある場合はそれらも表示されます。 新しい翻訳を提案するには、「Enter translation here」の欄に翻訳を入力し、[Save]をクリックします。
+メインの翻訳エリア - 原文が上部に表示され、追加でコンテキストやスクリーンショットがある場合はそれらも表示されます。
+新しい翻訳を提案するには、「Enter translation here」の欄に翻訳を入力し、[Save]をクリックします。
 
 また、このセクションでは、文字列の既存の翻訳や他の言語への翻訳のほか、翻訳メモリの一致や機械翻訳の候補も見つけることができます。
 
-**_3 - 右サイドバー_**
+**_3 – 右サイドバー_**
 
 ここには、コメントや翻訳メモリのエントリ、用語集のエントリがあります。 デフォルトの表示では、コメントが表示され、翻訳者がコミュニケーションを取ったり、問題を提起したり、間違った翻訳を報告したりすることができます。
 
 また、上部のボタンで、既存の翻訳を検索できる「翻訳メモリ」や、重要な用語の説明や標準的な翻訳を収録した「用語集」に切り替えることができます。
 
-さらに詳しく知りたいですか？ [Crowdinオンラインエディターの使用方法に関するドキュメント](https://support.crowdin.com/online-editor/)をご参照ください。
+さらに詳しく知りたいですか？ [Crowdinオンラインエディターの使用に関するドキュメント](https://support.crowdin.com/online-editor/)をお気軽にご確認ください
 
 ### レビュープロセス {#review-process}
 
-翻訳が完了(コンテンツバケットの全ファイルが100％と表示)したら、プロの翻訳サービスがコンテンツをレビューします。またレビューの際は、編集する場合もあります。 レビューが完了(レビューの進捗率が100％)したら、ウェブサイトに追加されます。
+翻訳が完了すると(つまり、コンテンツバケットのすべてのファイルが100%と表示されると)、プロの翻訳サービスがコンテンツをレビュー(および必要に応じて編集)します。 レビューが完了したら(つまり、レビューの進捗が100%になったら)、ウェブサイトに追加します。
 
 <Alert variant="update">
 <AlertEmoji text=":warning:"/>
@@ -85,7 +85,7 @@ Crowdinへログインすると、プロジェクトの説明と翻訳可能な�
 
 ### お問い合わせ {#get-in-touch}
 
-何かご質問がある場合や、 私たちのチームや他の翻訳者とコラボレーションしたい場合は、 [ethereum.orgのDiscordサーバー](https://discord.gg/ethereum-org)の#translationチャネルに投稿してください。
+何かご質問がある場合や、 私たちのチームや他の翻訳者とコラボレーションしたい場合は、 [ethereum.org Discordサーバー](https://discord.gg/ethereum-org)の#translationsチャンネルに投稿してください。
 
 または、translations@ethereum.orgまでご連絡ください
 

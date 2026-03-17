@@ -8,6 +8,7 @@ import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
@@ -98,7 +99,7 @@ const Layer2Hub = ({
               <h2>{t("page-layer-2-powered-by-ethereum-title")}</h2>
               <p>
                 <strong>
-                  {t("page-layer-2-powered-by-ethereum-description-1")}{" "}
+                  <Translation id="page-layer-2:page-layer-2-powered-by-ethereum-description-1" />{" "}
                 </strong>
                 {t("page-layer-2-powered-by-ethereum-description-2")}
               </p>

@@ -69,6 +69,7 @@ import { polishRSSList } from "@/lib/utils/rss"
 import {
   BLOGS_WITHOUT_FEED,
   DEFAULT_LOCALE,
+  ENTERPRISE_ETHEREUM_URL,
   GITHUB_REPO_URL,
   LOCALES_CODES,
   RSS_DISPLAY_COUNT,
@@ -210,7 +211,7 @@ const Page = async ({ params }: { params: PageParams }) => {
       href: "/wallets/find-wallet/",
       Svg: PickWalletIcon,
       className: "text-primary hover:text-primary-hover",
-      eventName: "find wallet",
+      eventName: "find_wallet",
     },
     {
       label: t("page-index-cta-get-eth-label"),
@@ -218,7 +219,7 @@ const Page = async ({ params }: { params: PageParams }) => {
       href: "/get-eth/",
       Svg: EthTokenIcon,
       className: "text-accent-a hover:text-accent-a-hover",
-      eventName: "get eth",
+      eventName: "get_eth",
     },
     {
       label: t("page-index-cta-dapps-label"),
@@ -229,7 +230,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         "text-accent-c hover:text-accent-c-hover",
         isRtl && "[&_svg]:-scale-x-100"
       ),
-      eventName: "dapps",
+      eventName: "try_apps",
     },
     {
       label: t("page-index-cta-build-apps-label"),
@@ -237,7 +238,7 @@ const Page = async ({ params }: { params: PageParams }) => {
       href: "/developers/",
       Svg: BuildAppsIcon,
       className: "text-accent-b hover:text-accent-b-hover",
-      eventName: "build apps",
+      eventName: "start_building",
     },
   ]
 
@@ -465,7 +466,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                     label={label}
                     customEventOptions={{
                       eventCategory,
-                      eventAction: "Top 4 CTAs",
+                      eventAction: "cta_click",
                       eventName: subHeroCTAs[idx].eventName,
                     }}
                     {...props}
@@ -695,7 +696,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                 <div className="mt-12 flex flex-wrap gap-6 py-8">
                   <ButtonLink
                     size="lg"
-                    href="https://institutions.ethereum.org/"
+                    href={ENTERPRISE_ETHEREUM_URL}
                     customEventOptions={{
                       eventCategory: eventCategory,
                       eventAction: "ethereum_activity",

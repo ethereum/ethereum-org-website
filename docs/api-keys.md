@@ -1,6 +1,23 @@
 # APIs we use in our website
 
-1. Add personal GitHub API token (free)
+## Environment File Structure
+
+This project uses two separate `.env.local` files:
+
+| File | Purpose |
+|------|---------|
+| `.env.local` (root) | Main Next.js app (Algolia, Etherscan, Matomo, etc.) |
+| `src/data-layer/.env.local` | Data-layer module and Trigger.dev tasks (CoinGecko, Beaconcha.in, Dune, S3, etc.) |
+
+Some variables like `GITHUB_TOKEN_READ_ONLY` and Sentry config are shared and should be set in both files.
+
+See `src/data-layer/.env.example` for all data-layer specific variables.
+
+---
+
+## Main App API Keys
+
+### 1. Add personal GitHub API token (free)
 
 We recommend setting this up when running the project locally, as we use the GitHub API to fetch repository data for many projects & files.
 
@@ -14,7 +31,7 @@ We recommend setting this up when running the project locally, as we use the Git
 GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
 ```
 
-2. Add Etherscan API token (free)
+### 2. Add Etherscan API token (free)
 
 > - [Create an account](https://etherscan.io/) on Etherscan
 > - Navigate to your Account Settings page

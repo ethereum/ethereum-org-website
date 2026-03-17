@@ -168,7 +168,7 @@ Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 sett
 - [Unisciti al Discord R&D di Ethereum](https://discord.gg/mncqtgVSVw)
 - [Esegui un nodo](/developers/docs/nodes-and-clients/run-a-node/)
 - [Contribuisci allo sviluppo del client](/developers/docs/nodes-and-clients/#execution-clients)
-- [Programma di apprendistato per sviluppatori core](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Programma di apprendistato per sviluppatori core](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Lettura consigliate {#further-reading}
 
@@ -177,6 +177,6 @@ La governance in Ethereum non è definita rigidamente. I vari partecipanti della
 - [Note sulla Governance della Blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Come funziona la governance di Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotester_
 - [Come funziona la governance di Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Cos'è uno sviluppatore core di Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Cos'è uno sviluppatore core di Ethereum?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Governance, Parte 2: La plutocrazia non va ancora beene](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Andando oltre la governance di voto con moneta](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

@@ -67,7 +67,7 @@ Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan nod
 
 **Perangkat Python -** **_Berbagai macam pustaka untuk interaksi Ethereum dengan Python._**
 
-- [py.ethereum.org](http://python.ethereum.org/)
+- [py.ethereum.org](https://snakecharmers.ethereum.org)
 - [GitHub web3.py](https://github.com/ethereum/web3.py)
 - [Obrolan web3.py](https://gitter.im/ethereum/web3.py)
 

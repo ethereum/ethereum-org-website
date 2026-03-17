@@ -51,7 +51,7 @@ Kama unazungumza lugha zaidi ya moja na ungependa kutusaidia kufikia watu wengi 
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - maudhui yanayodumisha jamii, yakieleza juu ya Ethereum, DeFi, NFT, maarifa yanayohusiana na Web3
 - [123ETH](https://123eth.org/) - Lango la ikolojia ya Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - kozi za bure juu ya sarafu ya kripto na programu zake
-- [Karatasi Nyeupe](https://github.com/ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - Toleo la kichina la Karatasi Nyeupe
+- [Karatasi Nyeupe](https://ethereum.org/whitepaper//[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - Toleo la kichina la Karatasi Nyeupe
 
 **Ikolojia ya Ethereum**
 

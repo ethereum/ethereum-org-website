@@ -14,7 +14,7 @@ To better understand this page, we recommend you first read our [introduction to
 
 By consensus, we mean that a general agreement has been reached. Consider a group of people going to the cinema. If there is no disagreement on a proposed choice of film, then a consensus is achieved. If there is disagreement, the group must have the means to decide which film to see. In extreme cases, the group will eventually split.
 
-In regard to the Ethereum blockchain, the process is formalized, and reaching consensus means that at least 66% of the nodes on the network agree on the global state of the network.
+In regard to the [Ethereum](/) blockchain, the process is formalized, and reaching consensus means that at least 66% of the nodes on the network agree on the global state of the network.
 
 ## What is a consensus mechanism? {#what-is-a-consensus-mechanism}
 

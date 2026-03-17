@@ -259,7 +259,6 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Inizia gratuitamente
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Documenti](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Caratteristiche
     - Accesso a oltre 50 nodi della blockchain
     - Chiave API gratuita
@@ -270,11 +269,10 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Nodi condivisi, di archivio, di backup e dedicati
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Docs](https://docs.pokt.network/home/)
+  - [Docs](https://docs.pokt.network/)
   - Caratteristiche
     - Protocollo RPC e mercato decentralizzati
     - Livello con 1 milione di richieste giornaliere gratuite (per endpoint, max. 2)
-    - [Endpoint pubblici](https://docs.pokt.network/developers/public-endpoints)
     - Programma Pre-Stake+ (se servono più di 1 milione di richieste al giorno)
     - Più di 15 blockchain supportate
     - Più di 6.400 nodi che guadagnano POKT a servizio delle applicazioni

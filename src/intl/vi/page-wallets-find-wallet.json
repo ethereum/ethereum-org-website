@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "Nhập được bất kì token ERC-20 nào để sử dụng trong ví",
   "page-find-wallet-buy-crypto": "Mua tiền điện tử",
   "page-find-wallet-buy-crypto-desc": "Hỗ trợ mua tiền điện tử trực tiếp bằng tiền pháp định trong ví \n *Lưu ý: việc mua bán tiền điện tử phụ thuộc vào chế tài pháp lý từng khu vực cụ thể",
-  "page-find-wallet-sell-for-fiat": "Bán lấy tiền pháp định",
+  "page-find-wallet-sell-for-fiat": "Bán lấy tiền mặt",
   "page-find-wallet-sell-for-fiat-desc": "Hỗ trợ bán tiền điện tử trực tiếp ra tiền pháp định trong ví \n *Lưu ý: việc rút tiền điện tử phụ thuộc vào chế tài pháp lý từng khu vực cụ thể",
   "page-find-wallet-multisig": "Đa chữ ký",
   "page-find-wallet-multisig-desc": "Ví yêu cầu nhiều chữ ký để xác nhận giao dịch",
@@ -65,7 +65,7 @@
   "page-find-wallet-new-to-crypto-desc": "Người dùng lần đầu đang tìm ví phù hợp cho người mới bắt đầu.",
   "page-find-wallet-nfts-title": "Các NFT",
   "page-find-wallet-nfts-desc": "Ví tập trung vào hỗ trợ NFT.",
-  "page-find-wallet-hodler-title": "Dài hạn",
+  "page-find-wallet-hodler-title": "Phần cứng",
   "page-find-wallet-hodler-desc": "Giữ token thụ động với ví phần cứng.",
   "page-find-wallet-finance-title": "Tài chính",
   "page-find-wallet-finance-desc": "Ví tập trung vào việc sử dụng thường xuyên các ứng dụng DeFi.",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Đường dẫn",
   "page-find-wallet-empty-results-title": "Không kết quả",
   "page-find-wallet-empty-results-desc": "Không có ví nào phù hợp với tiêu chí của bạn, hãy thử xóa một số bộ lọc.",
-  "page-find-wallet-see-wallets": "Xem ví"
+  "page-find-wallet-privacy": "Bảo mật",
+  "page-find-wallet-privacy-desc": "Các ví hỗ trợ các giao dịch riêng tư tích hợp sẵn",
+  "page-find-wallet-see-wallets": "Xem ví",
+  "page-find-wallet-search-languages": "Tìm kiếm ngôn ngữ..."
 }

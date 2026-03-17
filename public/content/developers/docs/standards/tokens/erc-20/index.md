@@ -8,7 +8,7 @@ lang: en
 
 **What is a Token?**
 
-Tokens can represent virtually anything in Ethereum:
+Tokens can represent virtually anything in [Ethereum](/):
 
 - reputation points in an online platform
 - skills of a character in a game
@@ -188,3 +188,10 @@ Some alternative standards have come out of this issue such as [ERC-223](/develo
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenized vaults](/developers/docs/standards/tokens/erc-4626)
+
+## Tutorials: Build with ERC-20 on Ethereum {#tutorials}
+
+- [ERC-20 Contract Walk-Through](/developers/tutorials/erc20-annotated-code/) _– A line-by-line annotated walkthrough of the OpenZeppelin ERC-20 contract implementation._
+- [ERC-20 with Safety Rails](/developers/tutorials/erc20-with-safety-rails/) _– How to add safeguards to ERC-20 tokens to help users avoid common mistakes._
+- [Sending Tokens Using ethers.js](/developers/tutorials/send-token-ethersjs/) _– A beginner-friendly guide to transferring ERC-20 tokens using ethers.js._
+- [Some tricks used by scam tokens and how to detect them](/developers/tutorials/scam-token-tricks/) _– A deep-dive into scam ERC-20 token patterns and how to identify them._

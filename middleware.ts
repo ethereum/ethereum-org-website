@@ -46,6 +46,7 @@ const DEPRECATED_LOCALES = new Set([
   "no",
   "pt",
   "ro",
+  "se",
   "sk",
   "sl",
   "sn",

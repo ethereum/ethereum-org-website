@@ -7,7 +7,7 @@ export const FETCH_TOTAL_VALUE_LOCKED_TASK_ID = "fetch-total-value-locked"
  * Returns the latest total liquidity USD value for Ethereum.
  */
 export async function fetchTotalValueLocked(): Promise<MetricReturnData> {
-  const url = "https://api.llama.fi/charts/Ethereum"
+  const url = "https://api.llama.fi/v2/historicalChainTvl/Ethereum"
 
   console.log("Starting total value locked data fetch from DefiLlama")
 
@@ -26,7 +26,7 @@ export async function fetchTotalValueLocked(): Promise<MetricReturnData> {
   }
 
   // Today's value at end of array
-  const value = json[json.length - 1].totalLiquidityUSD
+  const value = json[json.length - 1].tvl
   const timestamp = Date.now()
 
   console.log("Successfully fetched total value locked data", {

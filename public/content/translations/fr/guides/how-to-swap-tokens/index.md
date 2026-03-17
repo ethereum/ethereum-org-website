@@ -1,6 +1,6 @@
 ---
-title: Comment échanger des jetons
-description: Un guide pour échanger des jetons sur Ethereum.
+title: "Comment échanger des jetons"
+description: "Un guide pour échanger des jetons sur Ethereum."
 lang: fr
 ---
 
@@ -10,9 +10,9 @@ Fatigué de chercher un échange de cryptomonnaies qui répertorie tous vos jeto
 
 Un échange de jetons implique l'échange de deux actifs différents qui existent sur le réseau Ethereum, par exemple l'échange d'ETH contre du DAI (un jeton [ERC-20](/glossary/#erc-20)). Le processus est à la fois très rapide et peu coûteux. Vous aurez besoin d'un portefeuille de cryptomonnaies pour échanger des jetons.
 
-**Prérequis :**
+**Prérequis :**
 
-- avoir un [portefeuille crypto](/glossary/#wallet) ; si ce n’est pas le cas, vous pouvez suivre ce guide pour découvrir [comment créer un compte Ethereum](/guides/how-to-create-an-ethereum-account/)
+- avoir un [portefeuille crypto](/glossary/#wallet) ; si ce n'est pas le cas, vous pouvez suivre ce guide sur [comment créer un compte Ethereum](/guides/how-to-create-an-ethereum-account/)
 - ajouter des fonds à votre portefeuille
 
 ## 1. Connectez votre portefeuille à l'échange décentralisé (DEX) de votre choix
@@ -24,30 +24,30 @@ Parmi les échanges décentralisés les plus connus :
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
-Intéressant ? Apprenez-en plus sur ce qu'est la [finance décentralisée (DeFi)](/defi/) et comment ce nouveau type d'échange fonctionne.
+Intéressant ? Apprenez-en davantage sur ce qu'est la [finance décentralisée (DeFi)](/defi/) et sur le fonctionnement de ces nouveaux types d'échanges.
 
 ## 2. Sélectionnez la paire de jetons que vous souhaitez échanger
 
-Par exemple, ETH et DAI. Assurez-vous d'avoir des fonds dans l'un des deux jetons. ![Interface commune pour les échanges](./swap1.png)
+Par exemple, ETH et DAI. Assurez-vous d'avoir des fonds dans l'un des deux jetons.
+![Interface commune pour l'échange](./swap1.png)
 
 ## 3. Entrez le nombre de jetons que vous voulez échanger et cliquez sur échanger
 
 L'échange va calculer automatiquement le nombre de jetons que vous obtiendrez.
 
-![Interface commune pour les échanges](./swap2.png)
+![Interface commune pour l'échange](./swap2.png)
 
 ## 4. Confirmez la transaction
 
 Vérifiez les détails de la transaction. Vérifiez le taux de change et tous les frais annexes pour éviter les mauvaises surprises.
 
-![Interface commune pour examiner la transaction](./swap3.png)
+![Interface commune pour l'examen de la transaction](./swap3.png)
 
 ## 5. Attendez que la transaction soit traitée
 
 Vous pouvez vérifier la progression de la transaction sur n'importe quel explorateur de blockchain. Cette procédure ne devrait pas prendre plus de 10 minutes.
 
-Vous recevez automatiquement les jetons échangés dans votre portefeuille lorsque la transaction est finalisée.
-<br />
+Vous recevez automatiquement les jetons échangés dans votre portefeuille lorsque la transaction est finalisée. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

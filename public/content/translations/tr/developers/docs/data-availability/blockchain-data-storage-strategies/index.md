@@ -1,6 +1,6 @@
 ---
 title: Blokzincir Veri Depolama Stratejileri
-description: Blokzincir kullanarak veri dopalamanın birçok yolu vardır. Bu makalede farklı stratejiler, bu stratejilerin maliyetleri, artıları ve eksileri ve bu stratejileri güvenli bir şekilde kullanmak için gerekenler karşılaştırılacaktır.
+description: "Blokzincir kullanarak veri dopalamanın birçok yolu vardır. Bu makalede farklı stratejiler, bu stratejilerin maliyetleri, artıları ve eksileri ve bu stratejileri güvenli bir şekilde kullanmak için gerekenler karşılaştırılacaktır."
 lang: tr
 ---
 
@@ -10,13 +10,13 @@ Blokzincirde ya da blokzincir tarafından güvence altına alınan bir şekilde 
 - Calldata
 - L1 mekanizmalarıyla zincir dışında
 - Sözleşme "kodu"
-- Olaylar
+- Etkinlikler
 - EVM depolaması
 
 Hangi yöntemin kullanılacağı çeşitli ölçütlere bağlıdır:
 
 - Bilginin kaynağı. Calldata'daki bilgi direkt olarak blokzincirin kendisinden gelemez.
-- Bilginin varış noktası. Calldata yalnızca başlattığı işlemde kullanılabilir. Olaylar zincir üstünde hiçbir zaman erişilebilir değildir.
+- Bilginin varış noktası. Calldata yalnızca onu içeren işlemde kullanılabilir. Olaylar zincir üstünde hiçbir zaman erişilebilir değildir.
 - Ne kadar zorluğa katlanılabilir? Tam ölçekli bir düğüm çalıştıran bilgisayarlar, tarayıcıda çalışan bir uygulamada hafif bir istemciden daha fazla işlem gerçekleştirebilir.
 - Bilgiye her düğümden kolayca ulaşılabilmesi gerekli midir?
 - Güvenlik gereklilikleri.
@@ -29,7 +29,7 @@ Bilgi güvenliği genel olarak üç özellikten oluşur:
 
 - _Bütünlük_, bilgi doğrudur, yetkisiz kişiler tarafından, ya da yetkisiz yollarla değiştirilemez (örneğin bir `Transfer` olayı olmadan [ERC-20 jetonlarını](https://eips.ethereum.org/EIPS/eip-20#events) transfer etmek gibi). Blokzincirde her düğüm her durum değişikliğini doğrular, bu da bütünlüğü sağlar.
 
-- _Erişilebilirlik_, bilgiye yetkisi olan herkes tarafından erişilebilir. Blokzincirde bu genellikle her [tam düğümde](https://ethereum.org/developers/docs/nodes-and-clients#full-node) bilginin mevcut olmasıyla sağlanır.
+- _Erişilebilirlik_, bilgiye yetkisi olan herkes tarafından erişilebilir. Blokzincirde bu genellikle her [tam düğümde](https://ethereum.org/developers/docs/nodes-and-clients/#full-node) bilginin mevcut olmasıyla sağlanır.
 
 Karmalar L1'e gönderildiği için buradaki farklı çözümlerin hepsi mükemmel bütünlüğe sahiptir. Fakat bunların farklı kullanılabilirlik garantileri vardır.
 
@@ -39,7 +39,7 @@ Karmalar L1'e gönderildiği için buradaki farklı çözümlerin hepsi mükemme
 
 ## EIP-4844 blob'ları {#eip-4844-blobs}
 
-[Dencun sert çatallanmasından](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md) itibaren Ethereum blokzinciri, Ethereum veri blob'larına sınırlı bir kullanım ömrü (başlangıçta yaklaşık [18 gün](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)) ekleyen [EIP-4844'ü](https://eips.ethereum.org/EIPS/eip-4844) içerir. Bu blob'lar, benzer bir mekanizma kullanmalarına rağmen [yürütüm gazından](/developers/docs/gas) ayrı olarak fiyatlandırılır. Blob'lar geçici veri göndermenin ucuz bir yoludur.
+[Dencun sert çatallanmasından](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md) itibaren Ethereum blokzinciri, Ethereum veri blob'larına sınırlı bir kullanım ömrü (başlangıçta yaklaşık [18 gün](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration)) ekleyen [EIP-4844'ü](https://eips.ethereum.org/EIPS/eip-4844) içerir. Bu blob'lar, benzer bir mekanizma kullanmalarına rağmen [yürütüm gazından](/developers/docs/gas) ayrı olarak fiyatlandırılır. Blob'lar geçici veri göndermenin ucuz bir yoludur.
 
 EIP-4844 blob'larının temel kullanım alanı, toplamaların işlemlerini yayınlamasıdır. [İyimser toplamaların](/developers/docs/scaling/optimistic-rollups) işlemleri kendi blokzincirlerinde yayımlaması gerekir. Bu işlemler, toplamanın [sıralayıcısının](https://docs.optimism.io/connect/resources/glossary#challenge-period) hatalı bir durum kökü göndermesi halinde [doğrulayıcıların](https://docs.optimism.io/connect/resources/glossary#validator) hatayı düzeltmelerini mümkün kılmak için [itiraz süresi](https://docs.optimism.io/connect/resources/glossary#challenge-period) boyunca herkese açık olmalıdır.
 
@@ -110,9 +110,9 @@ Bu tabloda farklı seçenekler, bu seçenekleri avantajları ve dezavantajları 
 
 | Depolama türü                      | Veri kaynağı                        | Kullanılabilirlik garantisi                                                                                                                             | Zincir üstünde kullanılabilirlik                                | Ek sınırlamalar                                                       |
 | ---------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------- |
-| EIP-4844 blob'ları                 | Zincir dışında                      | [~18 gün](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) süresince Ethereum garantili | Sadece karma kullanılabilir                                     |                                                                       |
+| EIP-4844 blob'ları                 | Zincir dışında                      | [~18 gün](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) süresince Ethereum garantili | Sadece karma kullanılabilir                                     |                                                                       |
 | Calldata                           | Zincir dışında                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Sadece bir sözleşmeye yazıldıysa ve o işlemdeyse kullanılabilir |                                                                       |
 | L1 mekanizmalarıyla zincir dışında | Zincir dışında                      | İtiraz dönemi boyunca "bir dürüst doğrulayıcı" garantisi                                                                                                | Sadece karma                                                    | Sadece itiraz döneminde, itiraz mekanizması tarafından garanti edilir |
 | Sözleşme kodu                      | Zincir üstünde ya da zincir dışında | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Evet                                                            | "Rastgele" bir adrese yazılır, `0xEF` ile başlayamaz                  |
-| Olaylar                            | Zincir üstünde                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Hayır                                                           |                                                                       |
+| Etkinlikler                        | Zincir üstünde                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Hayır                                                           |                                                                       |
 | Depolama                           | Zincir üstünde                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası ve üzerine yazılana kadar mevcut durum)                                          | Evet                                                            |                                                                       |

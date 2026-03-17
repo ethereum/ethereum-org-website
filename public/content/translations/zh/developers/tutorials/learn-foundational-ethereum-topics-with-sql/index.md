@@ -62,13 +62,13 @@ FROM temp_table
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Etherscan 交易浏览器视图的屏幕截图](./etherscan_view.png)
 
 [Blockscout 上的 EF 合约页面。](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Dune Analytics 查询仪表板的屏幕截图](./dune_view.png)
 
 你可以在[此处](https://dune.com/paulapivat/Learn-Ethereum)找到看板。 点击表格查看查询（另请参阅上文）。
 
@@ -146,7 +146,7 @@ ORDER BY block_time DESC`
 
 下面是 Dune 上的 SQL 输出：
 
-![](./list_of_txn.png)
+![以太坊交易列表截图](./list_of_txn.png)
 
 这个被添加到链上的区块，改变了以太坊虚拟机 ([EVM](/developers/docs/evm/)) 的状态。 有时几十笔、甚至几百笔交易会同时得到验证。 在这个特定的案例中，包含了 222 笔交易。
 
@@ -165,7 +165,7 @@ FROM temp_table
 
 对于区块 12396854，在 222 笔总交易中，有 204 笔成功验证：
 
-![](./successful_txn.png)
+![以太坊交易成功的截图](./successful_txn.png)
 
 交易请求每秒发生数十次，但区块大约每 15 秒提交一次（[来源](/developers/docs/blocks/)）。
 
@@ -177,7 +177,7 @@ FROM temp_table
 
 这段时间内每天生产的平均区块数量大约 5,874 个：
 
-![](./avg_daily_blocks.png)
+![显示平均每日以太坊区块的图表](./avg_daily_blocks.png)
 
 查询如下：
 
@@ -214,7 +214,7 @@ FROM temp_table
 
 理解区块燃料限制的一种方法是，将其看作是可用于批量处理交易的区块空间的**供应**。 可以查询并可视化从 2016 年至今的区块燃料限制：
 
-![](./avg_gas_limit.png)
+![显示一段时间内以太坊平均 Gas 限制的图表](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -227,7 +227,7 @@ OFFSET 1
 
 然后是每日实际使用的燃料，用于支付在以太坊链上完成的计算（即发送交易、调用智能合约、铸造 NFT）。 这是对以太坊可用区块空间的**需求**：
 
-![](./daily_gas_used.png)
+![显示每日以太坊 Gas 使用量的图表](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -246,7 +246,7 @@ OFFSET 1
 
 最后，我们可能想查询以太坊链的日均燃料价格，但这样做会导致查询时间特别长，所以我们将筛选查询，只查询以太坊基金会为每笔交易支付的平均燃料量。
 
-![](./ef_daily_gas.png)
+![显示以太坊基金会每日 Gas 使用量的图表](./ef_daily_gas.png)
 
 我们可以看到多年来，向以太坊基金会地址发起的交易所支付的燃料价格。 查询如下：
 

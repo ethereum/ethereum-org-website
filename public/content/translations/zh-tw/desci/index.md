@@ -101,7 +101,6 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [OceanDAO：管理資料相關科學資金的去中心化自治組織](https://oceanprotocol.com/)
 - [Opscientia：開放的去中心化科研工作流程](https://opsci.io/research/)
 - [Bio.xyz：為你的生物技術去中心化自治組織或去中心化科研專案募資](https://www.bio.xyz/)
-- [Fleming Protocol：推動協作生物醫學發現的開源式資料經濟](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets：實現去中心化的科學可信度](https://ideamarket.io/)
 - [去中心化科研實驗室](https://www.desci.com/)

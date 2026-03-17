@@ -8,7 +8,7 @@ Maximal extractable value (MEV) refers to the maximum value that can be extracte
 
 ## Maximal extractable value {#maximal-extractable-value}
 
-Maximal extractable value was first applied in the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, since the transition to proof-of-stake via [The Merge](/roadmap/merge) validators have been responsible for these roles, and mining is no longer part of the Ethereum protocol. The value extraction methods still exist, though, so the term "Maximal extractable value" is now used instead.
+Maximal extractable value was first applied in the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, since the transition to proof-of-stake via [The Merge](/roadmap/merge) validators have been responsible for these roles, and mining is no longer part of the [Ethereum](/) protocol. The value extraction methods still exist, though, so the term "Maximal extractable value" is now used instead.
 
 ## Prerequisites {#prerequisites}
 
@@ -164,7 +164,7 @@ Similarly, validators don’t have to trust builders not to withhold block bodie
 
 While proposer-builder separation promises to reduce the effects of MEV extraction, implementing it requires changes to the consensus protocol. Specifically, the [fork choice](/developers/docs/consensus-mechanisms/pos/#fork-choice) rule on the Beacon Chain would need to be updated. The [Builder API](https://github.com/ethereum/builder-specs) is a temporary solution aimed at providing a working implementation of proposer-builder separation, albeit with higher trust assumptions.
 
-The Builder API is a modified version of the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) used by consensus layer clients to request execution payloads from execution layer clients. As outlined in the [honest validator specification](https://github.com/ethereum/consensus-specs/blob/dev/specs/bellatrix/validator.md), validators selected for block proposing duties request a transaction bundle from a connected execution client, which they include in the proposed Beacon Chain block.
+The Builder API is a modified version of the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) used by consensus layer clients to request execution payloads from execution layer clients. As outlined in the [honest validator specification](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/validator.md), validators selected for block proposing duties request a transaction bundle from a connected execution client, which they include in the proposed Beacon Chain block.
 
 The Builder API also acts as a middleware between validators and execution-layer clients; but it is different because it allows validators on the Beacon Chain to source blocks from external entities (instead of building a block locally using an execution client).
 
@@ -180,7 +180,7 @@ Below is an overview of how the Builder API works:
 
 5. A validator using the Builder API is still expected to build a block locally in case the block builder fails to respond promptly, so they don't miss out on block proposal rewards. However, validator cannot create another block using either the now-revealed transactions or another set, as it would amount to _equivocation_ (signing two blocks within the same slot), which is a slashable offense.
 
-An example implementation of the Builder API is [MEV Boost](https://github.com/flashbots/mev-boost), an improvement on the [Flashbots auction mechanism](https://docs.flashbots.net/Flashbots-auction/overview) designed to curb the negative externalities of MEV on Ethereum. Flashbots auction allows validators in proof-of-stake to outsource the work of building profitable blocks to specialized parties called **searchers**.
+An example implementation of the Builder API is [MEV Boost](https://github.com/flashbots/mev-boost), an improvement on the [Flashbots auction mechanism](https://docs.flashbots.net/flashbots-auction/overview) designed to curb the negative externalities of MEV on Ethereum. Flashbots auction allows validators in proof-of-stake to outsource the work of building profitable blocks to specialized parties called **searchers**.
 ![A diagram showing the MEV flow in detail](./mev.png)
 
 Searchers look for lucrative MEV opportunities and send transaction bundles to block proposers along with a [sealed-price bid](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) for inclusion in the block. The validator running mev-geth, a forked version of the go-ethereum (Geth) client only has to choose the bundle with the most profit and include it as part of the new block. To protect block proposers (validators) from spam and invalid transactions, transaction bundles pass through **relayers** for validation before getting to the proposer.

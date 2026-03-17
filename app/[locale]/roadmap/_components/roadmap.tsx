@@ -122,7 +122,7 @@ const RoadmapPage = () => {
           <div className="flex w-full flex-col gap-8 px-8 py-4">
             <h2 className="m-0">{t("page-roadmap-changes-coming-title")}</h2>
             <p className="max-w-screen-md text-lg">
-              {t("page-roadmap-changes-coming-description")}
+              <Translation id="page-roadmap:page-roadmap-changes-coming-description" />
             </p>
             <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
               {changesComingItems.map((item) => (

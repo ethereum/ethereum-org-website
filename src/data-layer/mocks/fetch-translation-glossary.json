@@ -1,0 +1,92 @@
+[
+  {
+    "string_term": "blockchain",
+    "translation_text": "cadena de bloques",
+    "language_code": "es",
+    "total_votes": 42
+  },
+  {
+    "string_term": "wallet",
+    "translation_text": "billetera",
+    "language_code": "es",
+    "total_votes": 38
+  },
+  {
+    "string_term": "smart contract",
+    "translation_text": "contrato inteligente",
+    "language_code": "es",
+    "total_votes": 35
+  },
+  {
+    "string_term": "gas",
+    "translation_text": "gas",
+    "language_code": "es",
+    "total_votes": 30
+  },
+  {
+    "string_term": "staking",
+    "translation_text": "staking",
+    "language_code": "es",
+    "total_votes": 28
+  },
+  {
+    "string_term": "blockchain",
+    "translation_text": "blockchain",
+    "language_code": "fr",
+    "total_votes": 40
+  },
+  {
+    "string_term": "wallet",
+    "translation_text": "portefeuille",
+    "language_code": "fr",
+    "total_votes": 36
+  },
+  {
+    "string_term": "smart contract",
+    "translation_text": "contrat intelligent",
+    "language_code": "fr",
+    "total_votes": 33
+  },
+  {
+    "string_term": "gas",
+    "translation_text": "gaz",
+    "language_code": "fr",
+    "total_votes": 25
+  },
+  {
+    "string_term": "staking",
+    "translation_text": "staking",
+    "language_code": "fr",
+    "total_votes": 27
+  },
+  {
+    "string_term": "blockchain",
+    "translation_text": "Blockchain",
+    "language_code": "de",
+    "total_votes": 39
+  },
+  {
+    "string_term": "wallet",
+    "translation_text": "Brieftasche",
+    "language_code": "de",
+    "total_votes": 34
+  },
+  {
+    "string_term": "smart contract",
+    "translation_text": "Smart Contract",
+    "language_code": "de",
+    "total_votes": 31
+  },
+  {
+    "string_term": "gas",
+    "translation_text": "Gas",
+    "language_code": "de",
+    "total_votes": 29
+  },
+  {
+    "string_term": "staking",
+    "translation_text": "Staking",
+    "language_code": "de",
+    "total_votes": 26
+  }
+]

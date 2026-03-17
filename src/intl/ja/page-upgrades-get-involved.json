@@ -1,6 +1,6 @@
 {
   "page-upgrades-get-involved-btn-1": "クライアントを見る",
-  "page-upgrades-get-involved-btn-2": "ステークの詳細",
+  "page-upgrades-get-involved-btn-2": "ステーキングの詳細",
   "page-upgrades-get-involved-btn-3": "バグを検出する",
   "page-upgrades-get-involved-bug": "バグには、以下のようなものがあります:",
   "page-upgrades-get-involved-bug-hunting": "バグハンティングをする",
@@ -8,7 +8,7 @@
   "page-upgrades-get-involved-bug-li": "仕様の不適合問題",
   "page-upgrades-get-involved-bug-li-2": "ファイナリティ・ブレイクバグ",
   "page-upgrades-get-involved-bug-li-3": "サービス拒否(DOS)ベクトル",
-  "page-upgrades-get-involved-bug-li-4": "等々。",
+  "page-upgrades-get-involved-bug-li-4": "など...",
   "page-upgrades-get-involved-desc-1": "クライアントを実行することは、イーサリアムへの積極的な参加者であることを意味します。クライアントは、トランザクションの追跡と新しいブロックの確認を行います。",
   "page-upgrades-get-involved-desc-2": "ETHをお持ちの場合は、ETHをステーキングしてバリデータになることができます。バリデータは、ネットワークのセキュリティ確保に貢献し、ETH報酬を得ることができます。",
   "page-upgrades-get-involved-desc-3": "コミュニティのテストにご参加ください。イーサリアムのアップグレードのリリース前テストに協力し、バグを見つけ、報酬を得ましょう。",
@@ -34,7 +34,7 @@
   "page-upgrades-get-involved-subtitle": "イーサリアムと今後のアップグレード関連の取り組みに協力する方法は、次のとおりです。",
   "page-upgrades-get-involved-title-1": "クライアントを実行する",
   "page-upgrades-get-involved-title-2": "ETHのステーキング",
-  "page-upgrades-get-involved-title-3": "バグを検出する",
+  "page-upgrades-get-involved-title-3": "バグの検出",
   "page-upgrades-get-involved-written-c-sharp": "言語: C#",
   "page-upgrades-get-involved-written-go": "言語: Go",
   "page-upgrades-get-involved-written-java": "言語: Java",
@@ -42,6 +42,6 @@
   "page-upgrades-get-involved-written-nim": "言語: Nim",
   "page-upgrades-get-involved-written-rust": "言語: Rust",
   "page-upgrades-get-involved": "イーサリアムのアップグレードへの参加",
-  "page-upgrades-get-involved-2": "参加しましょう",
+  "page-upgrades-get-involved-2": "参加",
   "page-upgrades-bug-bounty-leaderboard-points": "ポイント"
 }

@@ -42,7 +42,7 @@ Una nota sulle categorie di contenuti: usiamo le "categorie di contenuti" in Cro
 
 Ti invitiamo a tradurre in questo ordine numerico (1 → 2 → 3 → ⋯) per garantire che le pagine ad impatto più alto siano tradotte prima.
 
-[Scopri di più sulle categorie di contenuti di ethereum.org](/contributing/translation-program/content-buckets/)
+[Scopri di più sulle categorie di contenuti di ethereum.org](/contributing/translation-program/)
 
 ### Traduci {#translate}
 

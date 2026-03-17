@@ -1,7 +1,7 @@
 ---
 title: Misyon ve vizyon
 lang: tr
-description: ethereum.org Tercüme Programının misyonu ve vizyonu
+description: "ethereum.org Tercüme Programının misyonu ve vizyonu"
 ---
 
 # Misyon ve vizyon {#mission-and-vision}

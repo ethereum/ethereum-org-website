@@ -114,8 +114,6 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 
 **Catapulta –** **_ein Tool für die Bereitstellung von Multi-Chain-Smart-Contracts, das die Verifizierung in Block-Explorern automatisiert, bereitgestellte Smart Contracts verfolgt und Bereitstellungsberichte teilt; Plug-and-Play für Foundry- und Hardhat-Projekte._**
 
-- [Website](https://catapulta.sh/)
-- [Dokumentation](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
 
 **Covalent –** **_erweiterte Blockchain-APIs für über 200 Ketten._**

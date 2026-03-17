@@ -1,6 +1,6 @@
 ---
-title: Ürün ekleme
-description: Ethereum.org'a merkeziyetsiz uygulamalar eklerken kullandığımız politika
+title: "Ürün ekleme"
+description: "Ethereum.org'a merkeziyetsiz uygulamalar eklerken kullandığımız politika"
 lang: tr
 ---
 
@@ -17,11 +17,11 @@ Merkeziyetsiz uygulamalar şu anda aşağıdakilerde listeleniyor:
 
 Yeni eklemeleri memnuniyetle karşılasak da, mevcut cüzdanları ve merkeziyetsiz uygulamaları kullanıcılarımız için oluşturmaya çalıştığımız bir deneyime dayanarak seçtik. Bunlar, bazı tasarım ilkelerimize temel almaktadır:
 
-- _İlham Verici_: ethereum.org üzerindeki herhangi bir şey kullanıcılara yeni bir şey sunmalı
-- _İyi bir hikâye_: listelenen şey bir "Aklıma bir fikir geldi!" anı yaşatmalı
-- _Güvenilir_: Kullanıcılara yönelik riski en aza indirmek için her şey meşru işletmeler/projeler olmalıdır
+- _İlham verici_: ethereum.org'daki herhangi bir şey kullanıcılara yeni bir şey sunmalıdır.
+- _İyi bir hikâye_: listelenen şey, bir "vay canına" anı yaşatmalıdır.
+- _Güvenilir_: Kullanıcılara yönelik riski en aza indirmek için her şeyin meşru işletmeler/projeler olması gerekir.
 
-Genel olarak **ethereum.org, yeni kullanıcılar için "kesintisiz ilk katılım deneyimi" sağlamak istiyor**. Bu nedenle, aşağıdakilere dayalı olarak merkeziyetsiz uygulamalar ekliyoruz:
+Genel olarak **ethereum.org, yeni kullanıcılara "sorunsuz bir başlangıç deneyimi" sunmayı amaçlar**. Bu nedenle, aşağıdakilere dayalı olarak merkeziyetsiz uygulamalar ekliyoruz:
 
 - kullanım kolaylığı
 - diğer ürünlerle birlikte çalışabilirlik
@@ -34,26 +34,26 @@ Genel olarak **ethereum.org, yeni kullanıcılar için "kesintisiz ilk katılım
 
 ### Dahil edilme kriterleri: olmazsa olmazlar {#criteria-for-inclusion-the-must-haves}
 
-- **Güvenlik testi yapılmış bir ürün** – ister denetim yoluyla, ister dahili güvenlik ekibiyle veya başka bir yöntemle olsun, ürününüzün güvenliği güvenilir bir şekilde test edilmelidir. Bu, kullanıcılarımıza yönelik riski azaltır ve güvenliği ciddiye aldığınızı gösterir.
-- **6 ayı aşkın süredir "kullanımda" olan bir ürün**: Bu, güvenliğin bir başka göstergesidir. 6 ay, kritik hataların ve açıkların bulunması için iyi bir zaman dilimidir.
-- **Aktif bir ekip tarafından üzerinde çalışılıyor**: Bu, kaliteyi korumaya ve bir kullanıcı sorgularıyla ilgili destek almasını sağlamaya yardımcı olur.
-- **Dürüst ve doğru listeleme bilgileri**: Projelerden önerilen tüm listelemelerin dürüst ve doğru bilgilerle gelmesi beklenir. Ürününüzü "açık kaynak" değilken öyleymiş gibi duyurmak gibi listeleme bilgilerini tahrif eden ürünler kaldırılacaktır.
+- **Güvenlik testi yapılmış ürün** – denetim, şirket içi güvenlik ekibi veya başka bir yöntemle olsun, ürününüzün güvenliği güvenilir bir şekilde test edilmelidir. Bu, kullanıcılarımıza yönelik riski azaltır ve güvenliği ciddiye aldığınızı gösterir.
+- **6 ayı aşkın süredir "yayında" olan bir ürün** – bu, güvenliğin başka bir göstergesidir. 6 ay, kritik hataların ve açıkların bulunması için iyi bir zaman dilimidir.
+- **Aktif bir ekip tarafından geliştirilmesi** – bu, kaliteyi sağlamaya ve bir kullanıcının soruları için destek almasına yardımcı olur.
+- **Dürüst ve doğru listeleme bilgileri** - Projelerden önerilen listelemelerin dürüst ve doğru bilgiler içermesi beklenir. Ürününüzü "açık kaynak" değilken öyleymiş gibi duyurmak gibi listeleme bilgilerini tahrif eden ürünler kaldırılacaktır.
 
-### Sıralama için kriter: olursa iyi olacak şeyler {#criteria-for-ranking-the-nice-to-haves}
+### Sıralama kriterleri: olması iyi olanlar {#criteria-for-ranking-the-nice-to-haves}
 
 Merkeziyetsiz uygulamanız aşağıdaki kriterler nedeniyle ethereum.org'da diğerleri kadar belirgin bir şekilde listelenmemiş olabilir.
 
-**Merkeziyetsiz Uygulamalar**
+**Merkeziyetsiz uygulamalar**
 
-- **Listelenen cüzdanların çoğu ile erişilebilmesi** – merkeziyetsiz uygulamalar, ethereum.org'da listelenen cüzdanların çoğuyla çalışmalıdır.
-- **Kullanıcıların bunu kendileri deneyebilmeleri –** bireysel bir kullanıcı, merkeziyetsiz uygulamanızı kullanabilmeli ve somut bir şey elde edebilmelidir.
-- **Başlangıç** – ürününüz, kullanıcılara yardımcı olmak ve onları eğitmek için iyi tasarlanmış bir başlangıç deneyimine sahip olmalıdır. Alternatif olarak, makaleler veya videolar gibi nasıl yapılır içeriğinin kanıtına da sahip olabilir.
-- **Gözetimsiz** – kullanıcılar kendi fonlarını kontrol eder. Ürününüz kaybolursa, kullanıcılar yine de fonlarına erişebilir ve bunları taşıyabilir.
-- **Küresel olarak erişilebilir** – ürününüz, belirli kişilerin hizmetinize erişmesini engelleyen coğrafi kısıtlamalara veya KYC koşullarına sahip değildir.
-- **Açık kaynak** – kodunuz erişilebilir olmalıdır ve daha geniş topluluktan PR'leri kabul etmelisiniz.
-- **Topluluk** – kullanıcıların yardım almak veya yeni özellikler önermek için ekibinizle etkileşime geçebileceği özel bir topluluğunuzun, belki bir Discord'unuzun olması.
+- **Listelenen cüzdanların çoğu aracılığıyla erişilebilmesi** – merkeziyetsiz uygulamalar, ethereum.org'da listelenen cüzdanların çoğuyla çalışmalıdır.
+- **Kullanıcıların kendi başlarına deneyebilmesi –** Bireysel bir kullanıcı, merkeziyetsiz uygulamanızı kullanabilmeli ve somut bir şey elde edebilmelidir.
+- **Başlangıç –** ürününüz, kullanıcılara yardımcı olmak ve onları eğitmek için iyi tasarlanmış bir başlangıç deneyimine sahip olmalıdır. Alternatif olarak, makaleler veya videolar gibi nasıl yapılır içeriğinin kanıtına da sahip olabilir.
+- **Gözetimsiz** – kullanıcılar fonlarını kendileri kontrol eder. Ürününüz kaybolursa, kullanıcılar yine de fonlarına erişebilir ve bunları taşıyabilir.
+- **Küresel olarak erişilebilir** – ürününüz, belirli kişilerin hizmetinize erişmesini engelleyen coğrafi sınırlamalara veya KYC gereksinimlerine sahip olmamalıdır.
+- **Açık kaynak** – kodunuz erişilebilir olmalı ve daha geniş topluluktan gelen PR'leri kabul etmelisiniz.
+- **Topluluk** – kullanıcıların yardım almak veya yeni özellikler önermek için ekibinizle etkileşime girebileceği, belki bir Discord sunucusu gibi, özel bir topluluğunuzun olması.
 
-## Uygulamada kriterler {#criteria-in-practice}
+## Uygulamadaki kriterler {#criteria-in-practice}
 
 Ne kadar çok kriteri karşılarsanız, ürününüzün ethereum.org'a girme olasılığı o kadar artar.
 
@@ -68,15 +68,15 @@ Bu kararı etkileyecek diğer şeyler:
 
 Bu, ethereum.org'un sorumlu olduğu bir tasarım kararıdır.
 
-Ancak içiniz rahat olsun, **daha fazla merkeziyetsiz uygulama sıralaması yapan başka web sitelerine bağlantılar verilecektir**
+Ancak içiniz rahat olsun, **daha fazla merkeziyetsiz uygulamaları sıralayan diğer web sitelerine bağlantılar olacaktır**
 
-### Ürün Siparişi {#product-ordering}
+### Ürün Sıralaması {#product-ordering}
 
 Ürünler, örneğin alfabetik olarak, aksi belirtilmedikçe, sayfaya en yakın zamanda eklenenden en eski eklenene doğru gösterilecektir. Diğer bir deyişle, en yeni ürünler listenin en altına eklenir.
 
 ### Kullanım koşulları {#terms-of-use}
 
-Ayrıca lütfen [kullanım koşullarımıza](/terms-of-use/) başvurun. Ethereum.org'daki bilgiler, yalnızca genel bilgi amaçlı verilmektedir.
+Lütfen [kullanım koşullarımıza](/terms-of-use/) da göz atın. Ethereum.org'daki bilgiler, yalnızca genel bilgi amaçlı verilmektedir.
 
 ## Bakım {#maintenance}
 
@@ -85,7 +85,7 @@ Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gide
 - listelenen tüm merkeziyetsiz uygulamaların kriterlerimizi hala karşıladığından emin olmak
 - şu anda listelenenlerden daha fazla sayıda kriterimizi karşılayan önerilmiş ürünler olmadığını doğrulamak
 
-Kontrol edip bize bildirerek bu konuda yardımcı olabilirsiniz. [Bir konu oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) veya [website@ethereum.org](mailto:website@ethereum.org) adresine bir e-posta gönderin
+Kontrol edip bize bildirerek bu konuda yardımcı olabilirsiniz. [Bir konu oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) veya [website@ethereum.org](mailto:website@ethereum.org) adresine e-posta gönderin
 
 _Ayrıca, topluluğun tercihlerini belirtebilmesi ve önerebileceğimiz en iyi ürünleri öne çıkarabilmesi için oylama seçeneklerini de araştırıyoruz._
 
@@ -93,8 +93,8 @@ _Ayrıca, topluluğun tercihlerini belirtebilmesi ve önerebileceğimiz en iyi �
 
 ## Ürününüzü ekleyin {#add-your-product}
 
-Ethereum.org'a bir merkeziyetsiz uygulama eklemek istiyorsanız ve bu uygulama kriterleri karşılıyorsa GitHub'da bir konu oluşturun.
+ethereum.org'a bir merkeziyetsiz uygulama eklemek isterseniz ve bu uygulama kriterleri karşılıyorsa lütfen bize bildirin.
 
 <ButtonLink href="https://submitapp.paperform.co/">
-  Bir konu oluştur
+  Bir uygulama önerin
 </ButtonLink>

@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "వాలెట్లో ఉపయోగించడం కొరకు ఏదైనా ERC-20 టోకెన్‌ను ఇంపోర్ట్ చేయండి",
   "page-find-wallet-buy-crypto": "క్రిప్టో కొనండి",
   "page-find-wallet-buy-crypto-desc": "నేరుగా వాలెట్‌లో ఫియట్‌తో క్రిప్టోను కొనుగోలు చేయండి\n *గమనిక: క్రిప్టో కొనుగోలు ప్రాంతం నిర్దిష్టంగా ఉండవచ్చు",
-  "page-find-wallet-sell-for-fiat": "ఫియట్‌కి అమ్మండి",
+  "page-find-wallet-sell-for-fiat": "నగదు కోసం అమ్మండి",
   "page-find-wallet-sell-for-fiat-desc": "నేరుగా వాలెట్‌లో క్రిప్టోను ఫియట్‌కి విక్రయించండి\n *గమనిక: క్రిప్టోను ఉపసంహరించుకోవడం అనేది ప్రాంతం నిర్దిష్టంగా ఉండవచ్చు",
   "page-find-wallet-multisig": "మల్టీసిగ్",
   "page-find-wallet-multisig-desc": "లావాదేవీని ఆమోదించడం కొరకు బహుళ సంతకాలు అవసరమయ్యే వాలెట్లు",
@@ -65,7 +65,7 @@
   "page-find-wallet-new-to-crypto-desc": "మొదటిసారి వినియోగదారు బిగినర్ వాలెట్ కోసం చూస్తున్నారు.",
   "page-find-wallet-nfts-title": "NFTలు",
   "page-find-wallet-nfts-desc": "NFT మద్దతుపై దృష్టి కేంద్రీకరించే వాలెట్లు.",
-  "page-find-wallet-hodler-title": "ఇనుప సామానులు",
+  "page-find-wallet-hodler-title": "హార్డ్‌వేర్",
   "page-find-wallet-hodler-desc": "హార్డ్‌వేర్ వాలెట్‌లతో నిష్క్రియ టోకెన్ హోల్డింగ్.",
   "page-find-wallet-finance-title": "ఫైనాన్స్",
   "page-find-wallet-finance-desc": "DeFi యాప్‌లను తరచుగా ఉపయోగించడంపై వాలెట్‌లు దృష్టి సారిస్తున్నాయి.",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "లింకులు",
   "page-find-wallet-empty-results-title": "ఫలితాలు లేవు",
   "page-find-wallet-empty-results-desc": "మీ ప్రమాణాలకు సరిపోలే వాలెట్‌లు ఏవీ లేవు, కొన్ని ఫిల్టర్‌లను తొలగించి ప్రయత్నించండి.",
-  "page-find-wallet-see-wallets": "వాలెట్‌లను చూడండి"
+  "page-find-wallet-privacy": "గోప్యత",
+  "page-find-wallet-privacy-desc": "అంతర్నిర్మిత ప్రైవేట్ లావాదేవీలను సపోర్ట్ చేసే వాలెట్లు",
+  "page-find-wallet-see-wallets": "వాలెట్‌లను చూడండి",
+  "page-find-wallet-search-languages": "భాషలను వెతకండి..."
 }

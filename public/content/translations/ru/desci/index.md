@@ -1,15 +1,15 @@
 ---
-title: Децентрализованная наука (DeSci)
-description: Обзор о децентрализованной науке на основе Ethereum
+title: "Децентрализованная наука (DeSci)"
+description: "Обзор о децентрализованной науке на основе Ethereum"
 lang: ru
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Глобальная открытая альтернатива существующей научной системе.
-summaryPoint2: Технология, позволяющая ученым привлекать финансирование, проводить эксперименты, делиться данными, распределять идеи и т. д.
-summaryPoint3: Основан на движении за открытую науку.
+summaryPoint1: "Глобальная открытая альтернатива существующей научной системе."
+summaryPoint2: "Технология, позволяющая ученым привлекать финансирование, проводить эксперименты, делиться данными, распределять идеи и т. д."
+summaryPoint3: "Основан на движении за открытую науку."
 ---
 
 ## Что такое децентрализованная наука (DeSci)? {#what-is-desci}
@@ -101,7 +101,6 @@ Web3 обладает потенциалом, который позволит р
 - [OceanDAO: финансирование науки, связанной с данными, под управлением DAO](https://oceanprotocol.com/)
 - [Opscientia: открытые децентрализованные научные рабочие процессы](https://opsci.io/research/)
 - [Bio.xyz: получите финансирование для своего биотехнологического проекта DAO или desci](https://www.bio.xyz/)
-- [Fleming Protocol: экономика данных с открытым исходным кодом, способствующая совместным биомедицинским открытиям](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: обеспечение децентрализованного научного доверия](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

@@ -1,32 +1,32 @@
+import { readFile } from "fs/promises"
+import path from "path"
+
 import { DEFAULT_LOCALE } from "../constants"
 
 export const importMd = async (locale: string, slug: string) => {
-  let markdown = ""
+  const contentPath = path.join(process.cwd(), "public/content")
 
   if (locale === DEFAULT_LOCALE) {
-    markdown = (await import(`../../../public/content/${slug}/index.md`))
-      .default
-  } else {
-    try {
-      markdown = (
-        await import(
-          `../../../public/content/translations/${locale}/${slug}/index.md`
-        )
-      ).default
-    } catch (error) {
-      const markdown = (
-        await import(`../../../public/content/${slug}/index.md`)
-      ).default
-
-      return {
-        markdown,
-        isTranslated: false,
-      }
-    }
+    const filePath = path.join(contentPath, slug, "index.md")
+    const markdown = await readFile(filePath, "utf-8")
+    return { markdown, isTranslated: true }
   }
 
-  return {
-    markdown,
-    isTranslated: true,
+  // Try translated version first
+  const translatedPath = path.join(
+    contentPath,
+    "translations",
+    locale,
+    slug,
+    "index.md"
+  )
+  try {
+    const markdown = await readFile(translatedPath, "utf-8")
+    return { markdown, isTranslated: true }
+  } catch {
+    // Fall back to English
+    const defaultPath = path.join(contentPath, slug, "index.md")
+    const markdown = await readFile(defaultPath, "utf-8")
+    return { markdown, isTranslated: false }
   }
 }

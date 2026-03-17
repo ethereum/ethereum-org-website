@@ -6,7 +6,7 @@ lang: pt-br
 
 # Adicionando recursos de design {#adding-design-resources}
 
-Qualquer pessoa pode sugerir novos materiais de design para a página de [Design e UX na web3](/developers/docs/design-and-ux/).
+Qualquer pessoa pode sugerir novos materiais de design para a [página de Design e UX na web3](/developers/docs/design-and-ux/).
 
 Esteja ciente de que o foco desta página é fornecer valor ao usuário para candidatos a designers web3. A seção de design não está lá para anunciar seus serviços, produtos ou plataformas.
 
@@ -56,7 +56,7 @@ a. O objetivo principal do artigo deve ser compartilhar informações em vez de 
 
 a. Os benefícios de se tornar um membro devem ser apresentados em destaque.
 
-**Exemplos**: receber comentários sobre o trabalho, acessar oportunidades de trabalho ou recompensas, compartilhar conhecimentos de design e pesquisa.
+**Exemplos**: receber feedback sobre o trabalho, acessar oportunidades de emprego ou recompensas, compartilhar insights de design e pesquisa.
 
 3. Comunicação ativa e vibrante no Discord
 

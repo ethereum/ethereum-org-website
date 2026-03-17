@@ -90,7 +90,7 @@ Primero, hablemos de GraphQL, diseñado e implementado originalmente por Faceboo
 
 ![API de GraphQL frente a API REST](./graphql.jpg)
 
-![](./graphql-query.gif)
+![Demostración animada de una consulta GraphQL en el patio de juegos Graph](./graphql-query.gif)
 
 Las dos imágenes capturan muy bien la esencia de GraphQL. Con la consulta de la derecha podemos definir exactamente qué datos queremos, así que ahí recibimos todo en una única solicitud y nada más que exactamente lo que necesitamos. Un servidor de GraphQL se encarga de obtener todos los datos necesarios, por lo que es increíblemente fácil de usar para el consumidor del frontend. [Esta es una buena explicación](https://www.apollographql.com/blog/graphql-explained) de cómo gestiona exactamente el servidor una consulta, por si le interesa.
 

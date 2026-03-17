@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "이는 이메일 주소와 같은 것이지만, 메일 대신 ETH를 받을 수 있는 것이라고 생각해 보십시오. 거래소에서 지갑으로 ETH를 보내고 싶으시면 귀하의 주소를 도착지로 사용합니다. 보내기 전에 두 번 체크하는 거 잊지 마세요!",
   "page-get-eth-your-address-wallet-link": "지갑 확인하기",
   "listing-policy-raise-issue-link": "문제 제기",
-  "page-find-wallet-last-updated": "마지막 업데이트"
+  "page-find-wallet-last-updated": "마지막 업데이트",
+  "listing-policy-disclaimer": "이 페이지에 명시된 모든 제품은 공식적으로 보증되지 않으며 정보 제공 용도로만 제공됩니다. 제품을 추가하거나 정책에 대한 피드백을 제공하려면 GitHub에 이슈를 올려 주세요."
 }

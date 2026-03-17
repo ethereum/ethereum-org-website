@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { Lang, ToCItem } from "@/lib/types"
 
 import CommentCard from "@/components/CommentCard"
 import FileContributors from "@/components/FileContributors"
@@ -30,12 +30,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     namespace: "page-ethereum-history-founder-and-ownership",
   })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo(
       "ethereum-history-founder-and-ownership",
-      locale as Lang,
-      commitHistoryCache
+      locale as Lang
     )
 
   const tocItems: ToCItem[] = [

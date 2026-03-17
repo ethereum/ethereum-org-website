@@ -13,7 +13,7 @@ description: 對 ethereum.org 譯者有用的資源
 - [翻譯風格指南](/contributing/translation-program/translators-guide/) _ — 給 ethereum.org 譯者的說明和小提示_
 - [翻譯常見問題](/contributing/translation-program/faq/)_ — 有關 ethereum.org 翻譯計劃的常見問題和答案_
 - [Crowdin 線上編輯器指南](https://support.crowdin.com/online-editor/)_ — 使用 Crowdin 線上編輯器和 Crowdin 的一些進階功能的深度指南_
-- [內容門類](/contributing/translation-program/content-buckets/)_ — ethereum.org 每個內容門類包含哪些頁面_
+- [內容門類](/contributing/translation-program/)_ — ethereum.org 每個內容門類包含哪些頁面_
 
 ## 工具 {#tools}
 
@@ -30,10 +30,10 @@ description: 對 ethereum.org 譯者有用的資源
 
 要瞭解翻譯計劃的最新進展，你可以追蹤[以太坊基金會部落格](https://blog.ethereum.org/)：
 
-- [2021 年 10 月里程碑更新](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [2020 年 12 月里程碑更新](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [2020 年 7 月里程碑更新](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [2019 年 8 月翻譯計劃啟動](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [2021 年 10 月里程碑更新](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [2020 年 12 月里程碑更新](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [2020 年 7 月里程碑更新](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [2019 年 8 月翻譯計劃啟動](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## 譯者辦公時間 {#office-hours}
 

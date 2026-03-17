@@ -93,7 +93,7 @@ Hay distintas actualizaciones posibles futuras de la regla de elección de bifur
 
 #### Ataques de alto alcance {#long-range-attacks}
 
-Existe también una clase de ataque específico para las cadenas de bloques de prueba de participación dirigido a un validador que participó en el bloque inicial, manteniendo una bifurcación separada de la cadena de bloques junto con la honesta, en el que se logra finalmente que el validador honesto cambié a ella en algún momento oportuno mucho más adelante. Este tipo de ataque no puede producirse en Ethereum, debido al dispositivo de finalidad que garantiza que todos los validadores estén de acuerdo en el estado de la cadena honesta a intervalos regulares («puntos de control»). Este simple mecanismo neutraliza a los atacantes de largo alcance, porque los clientes de Ethereum simplemente no reorganizan los bloques finalizados. Los nuevos nodos que se unen a la red lo hacen encontrando un hash de estado reciente de confianza (un “[punto de referencia de debilidad subjetiva](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)”) y usándolo como un bloque pseudo-origen sobre el cual construir. Esto crea una «pasarela de confianza» para que un nuevo nodo entre en la red antes de que pueda comenzar a verificar la información por sí mismo.
+Existe también una clase de ataque específico para las cadenas de bloques de prueba de participación dirigido a un validador que participó en el bloque inicial, manteniendo una bifurcación separada de la cadena de bloques junto con la honesta, en el que se logra finalmente que el validador honesto cambié a ella en algún momento oportuno mucho más adelante. Este tipo de ataque no puede producirse en Ethereum, debido al dispositivo de finalidad que garantiza que todos los validadores estén de acuerdo en el estado de la cadena honesta a intervalos regulares («puntos de control»). Este simple mecanismo neutraliza a los atacantes de largo alcance, porque los clientes de Ethereum simplemente no reorganizan los bloques finalizados. Los nuevos nodos que se unen a la red lo hacen encontrando un hash de estado reciente de confianza (un “[punto de referencia de debilidad subjetiva](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)”) y usándolo como un bloque pseudo-origen sobre el cual construir. Esto crea una «pasarela de confianza» para que un nuevo nodo entre en la red antes de que pueda comenzar a verificar la información por sí mismo.
 
 #### Negación del servicio {#denial-of-service}
 
@@ -158,7 +158,7 @@ Los ataques del 34 %, el 51 % o el 66 % probablemente requerirían coordinación
 ## Lecturas recomendadas {#further-reading}
 
 - [Versiones más detalladas en esta página](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik sobre la finalidad de la liquidación](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik sobre la finalidad de la liquidación](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [Documento LMD GHOST](https://arxiv.org/abs/2003.03052)
 - [Documento Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Documento de Gasper](https://arxiv.org/pdf/2003.03052.pdf)

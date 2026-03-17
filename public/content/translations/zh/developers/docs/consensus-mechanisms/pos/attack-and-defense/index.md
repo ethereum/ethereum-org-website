@@ -92,7 +92,7 @@ LMD-GHOST 分叉选择算法的最新消息驱动 (LMD) 部分减轻了雪崩攻
 
 #### 长程攻击 {#long-range-attacks}
 
-还有一种针对权益证明区块链的攻击。在这种攻击中，参与创世区块的验证者会维护一条与诚实链并行的独立分叉，并最终在很久之后的某个合适时机说服诚实的验证者切换到这条分叉链。 此类型的攻击在以太坊不可能发生，因为最终确定性工具保证所有的验证者定期（“检查点”）同意诚实链的状态。 这种简单机制可以抵御长程攻击者，因为以太坊客户端不会重组最终确定的区块。 加入网络的新节点会寻找一个可信的最近状态哈希 (一个“[主观性弱](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)的检查点”)，并将其作为一个伪创世块，在此基础上构建区块。 这会为进入网络的新节点创建一个“信任网关”，然后节点才能开始为自身验证信息。
+还有一种针对权益证明区块链的攻击。在这种攻击中，参与创世区块的验证者会维护一条与诚实链并行的独立分叉，并最终在很久之后的某个合适时机说服诚实的验证者切换到这条分叉链。 此类型的攻击在以太坊不可能发生，因为最终确定性工具保证所有的验证者定期（“检查点”）同意诚实链的状态。 这种简单机制可以抵御长程攻击者，因为以太坊客户端不会重组最终确定的区块。 加入网络的新节点会寻找一个可信的最近状态哈希 (一个“[主观性弱](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)的检查点”)，并将其作为一个伪创世块，在此基础上构建区块。 这会为进入网络的新节点创建一个“信任网关”，然后节点才能开始为自身验证信息。
 
 #### 拒绝服务 {#denial-of-service}
 
@@ -157,7 +157,7 @@ LMD-GHOST 分叉选择算法的最新消息驱动 (LMD) 部分减轻了雪崩攻
 ## 扩展阅读 {#further-reading}
 
 - [本页面的详细版本](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik 谈结算最终确定性](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik 谈结算最终确定性](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [LMD GHOST 论文](https://arxiv.org/abs/2003.03052)
 - [Casper-FFG 论文](https://arxiv.org/abs/1710.09437)
 - [Gasper 论文](https://arxiv.org/pdf/2003.03052.pdf)

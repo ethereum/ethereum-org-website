@@ -50,7 +50,7 @@ Las aplicaciones funcionan mediante contratos inteligentes - bits de código que
 
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
-![](./developers-eth-blocks.png)
+![Ilustración de la construcción del bloque desarrollador de Ethereum](./developers-eth-blocks.png)
 </div>
 
 ## Las aplicaciones de Ethereum son como piezas de lego {#how-does-it-work}

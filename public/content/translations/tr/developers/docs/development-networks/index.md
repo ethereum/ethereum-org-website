@@ -1,6 +1,6 @@
 ---
-title: Geliştirme Ağları
-description: Geliştirme ağlarına ve Ethereum uygulamaları oluşturmaya yardımcı mevcut araçlara genel bakış.
+title: "Geliştirme Ağları"
+description: "Geliştirme ağlarına ve Ethereum uygulamaları oluşturmaya yardımcı mevcut araçlara genel bakış."
 lang: tr
 ---
 
@@ -8,7 +8,7 @@ Akıllı sözleşmelerle bir Ethereum uygulaması geliştirirken, onu dağıtmad
 
 Web geliştirme için bilgisayarınızda yerel bir sunucu çalıştırmaya benzer şekilde, bir geliştirici ağı kullanarak dapp'inizi test etmek için yerel bir blok zinciri örneği oluşturabilirsiniz. Bu Ethereum geliştirme ağları, genel bir test ağından çok daha hızlı yinelemeye izin veren özellikler sunar (örneğin, bir test ağı musluğundan ETH almakla uğraşmanıza gerek yoktur).
 
-## Ön koşullar {#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 Geliştirme ağlarına dalmadan önce [Ethereum yığınının temellerini](/developers/docs/ethereum-stack/) ve [Ethereum ağlarını](/developers/docs/networks/) anlamalısınız.
 
@@ -18,15 +18,15 @@ Geliştirme ağları, özünde yerel geliştirme için özel olarak tasarlanmı�
 
 **Neden standart bir Ethereum düğümünü yerel olarak çalıştırmıyoruz ki?**
 
-Siz [bir düğüm](/developers/docs/nodes-and-clients/#running-your-own-node) _çalıştırabilirsiniz_, ancak geliştirme ağları özellikle geliştirme amacıyla özel olarak tasarlandığı için, genellikle şunlar gibi kullanışlı özelliklerle sahip olurlar:
+Bir [düğüm](/developers/docs/nodes-and-clients/#running-your-own-node) _çalıştırabilirsiniz_ ancak geliştirme ağları geliştirme için özel olarak oluşturulduğundan, genellikle aşağıdakiler gibi kullanışlı özelliklerle birlikte gelirler:
 
-- Yerel blok zincirinizi deterministik olarak verilerle tohumlama (ör. ETH bakiyeli hesaplar)
+- Yerel blokzincirinizi deterministik olarak verilerle tohumlama (ör. ETH bakiyeli hesaplar)
 - Aldığı her işlemle anlık ve sırasıyla, herhangi bir gecikme olmaksızın blok üretme
 - Gelişmiş hata ayıklama ve kaydetme işlevi
 
 ## Mevcut araçlar {#available-projects}
 
-**Not**: Çoğu [geliştirme çerçevesi](/developers/docs/frameworks/) yerleşik bir geliştirme ağı içerir. [Yerel geliştirme ortamınızı kurmak](/developers/local-environment/) için bir çerçeve ile başlamanızı öneririz.
+**Not**: Çoğu [geliştirme çerçevesi](/developers/docs/frameworks/) yerleşik bir geliştirme ağı içerir. Bir çerçeveyle [yerel geliştirme ortamınızı kurmanızı](/developers/local-environment/) öneririz.
 
 ### Hardhat Ağı {#hardhat-network}
 
@@ -35,22 +35,20 @@ Geliştirme için tasarlanmış yerel bir Ethereum ağı. Sözleşmelerinizi da�
 Hardhat Network, profesyoneller için bir Ethereum geliştirme ortamı olan Hardhat ile yerleşik olarak gelir.
 
 - [Web sitesi](https://hardhat.org/)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [GitHub](https://github.com/NomicFoundation/hardhat)
 
 ### Yerel İşaret Zincirleri {#local-beacon-chains}
 
 Bazı fikir birliği istemcileri, test amacıyla yerel işaret zincirleri oluşturmak için yerleşik araçlara sahiptir. Lighthouse, Nimbus ve Lodestar için talimatlar mevcuttur:
 
-- [Lodestar kullanan yerel test ağı](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
-- [Lighthouse kullanan yerel test ağı](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [Lodestar kullanarak yerel test ağı](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
+- [Lighthouse kullanarak yerel test ağı](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 
-### Herkese açık Ethereum Test zincileri {#public-beacon-testchains}
+### Halka Açık Ethereum Test Zincirleri {#public-beacon-testchains}
 
-Ayrıca Ethereum'un halka açık iki test uygulaması da bulunmaktadır: Sepolia ve Hoodi. Sepolia, hızlı senkronizasyon için kapalı bir doğrulayıcı kümesiyle uygulama geliştirme için önerilen standart test ağıdır. Hoodi, açık bir doğrulayıcı kümesi kullanan ve potansiyel olarak herkesin doğrulama yapmasına izin veren, doğrulama ve hisseleme için bir test ağıdır.
+Ayrıca Ethereum'un sürdürülen iki halka açık test uygulaması bulunmaktadır: Sepolia ve Hoodi. Uzun vadeli desteğe sahip ve önerilen test ağı Hoodi'dir ve herkes bu ağda doğrulama yapmakta serbesttir. Sepolia izinli bir doğrulayıcı seti kullanır, bu da bu test ağında yeni doğrulayıcılara genel erişim olmadığı anlamına gelir.
 
-- [Hoodi Hisseleme Başlama Noktası](https://hoodi.launchpad.ethereum.org/en/)
-- [Sepolia Web sitesi](https://sepolia.dev/)
-- [Hoodi Web sitesi](https://hoodi.ethpandaops.io/)
+- [Hoodi Hisseleme Başlama Noktası](https://hoodi.launchpad.ethereum.org/)
 
 ### Kurtosis Ethereum Paketi {#kurtosis}
 
@@ -63,11 +61,11 @@ Ethereum Kurtosis paketi, Docker veya Kubernetes üzerinde parametrelendirilebil
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Dokümanlar](https://docs.kurtosis.com/)
 
-## daha fazla okuma {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
-## İlgili konular {#related-topics}
+## Alakalı başlıklar {#related-topics}
 
-- [Geliştirici çerçeveleri](/developers/docs/frameworks/)
-- [Yerel bir geliştirme ortamı oluşturun](/developers/local-environment/)
+- [Geliştirme çerçeveleri](/developers/docs/frameworks/)
+- [Yerel bir geliştirme ortamı kurun](/developers/local-environment/)

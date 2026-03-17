@@ -11,31 +11,34 @@ import {
 
 import { TagProps } from "@/components/ui/tag"
 
-import type { DeveloperToolCategorySlug } from "./types"
+import {
+  DEV_TOOL_CATEGORY_SLUG_LIST,
+  DEV_TOOL_CATEGORY_SLUGS,
+  type DeveloperToolCategorySlug,
+} from "@/data/developerTools"
 
-export const DEV_TOOL_CATEGORY_SLUGS: Record<
-  string,
-  DeveloperToolCategorySlug
+const DEV_TOOL_CATEGORY_VISUALS: Record<
+  DeveloperToolCategorySlug,
+  { Icon: LucideIcon; tag: TagProps["status"] }
 > = {
-  "Cross-Chain & Interoperability": "interoperability",
-  "Transaction & Wallet Infrastructure": "transactions",
-  "Data, Analytics & Tracing": "analytics",
-  "Education & Community Resources": "education",
-  "Client Libraries & SDKs (Front-End)": "sdks",
-  "Smart Contract Development & Toolchains": "contracts",
-  "Security, Testing & Formal Verification": "security",
+  interoperability: { Icon: SendToBack, tag: "accent-a" },
+  transactions: { Icon: ArrowLeftRight, tag: "accent-b" },
+  analytics: { Icon: ChartSpline, tag: "accent-c" },
+  education: { Icon: GraduationCap, tag: "primary" },
+  sdks: { Icon: Package, tag: "tag-green" },
+  contracts: { Icon: CodeXml, tag: "tag-yellow" },
+  security: { Icon: Shield, tag: "tag-red" },
 }
 
-export const DEV_TOOL_CATEGORIES = [
-  { slug: "interoperability", Icon: SendToBack, tag: "accent-a" },
-  { slug: "transactions", Icon: ArrowLeftRight, tag: "accent-b" },
-  { slug: "analytics", Icon: ChartSpline, tag: "accent-c" },
-  { slug: "education", Icon: GraduationCap, tag: "primary" },
-  { slug: "sdks", Icon: Package, tag: "tag-green" },
-  { slug: "contracts", Icon: CodeXml, tag: "tag-yellow" },
-  { slug: "security", Icon: Shield, tag: "tag-red" },
-] as const satisfies {
-  slug: string
+export { DEV_TOOL_CATEGORY_SLUGS }
+
+export const DEV_TOOL_CATEGORIES: {
+  slug: DeveloperToolCategorySlug
   Icon: LucideIcon
   tag: TagProps["status"]
-}[]
+}[] = DEV_TOOL_CATEGORY_SLUG_LIST.map((slug) => ({
+  slug,
+  ...DEV_TOOL_CATEGORY_VISUALS[slug],
+}))
+
+export const VALID_CATEGORY_SLUGS = new Set(DEV_TOOL_CATEGORY_SLUG_LIST)

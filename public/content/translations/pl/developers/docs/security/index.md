@@ -1,6 +1,6 @@
 ---
 title: Ochrona
-description: Kwestie bezpieczeństwa dla deweloperów Ethereum
+description: "Kwestie bezpieczeństwa dla deweloperów Ethereum"
 lang: pl
 ---
 

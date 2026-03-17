@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { ChainName, CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { ChainName, Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import ChainImages from "@/components/ChainImages"
@@ -131,11 +131,9 @@ const Page = async ({
     return new Date(app.dateOfLaunch).getFullYear()
   }
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "apps/[application]",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -146,6 +144,12 @@ const Page = async ({
           <div className="flex flex-col gap-10 px-4 md:px-10">
             <Breadcrumb>
               <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  /
+                </BreadcrumbSeparator>
                 <BreadcrumbItem>
                   <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
                 </BreadcrumbItem>

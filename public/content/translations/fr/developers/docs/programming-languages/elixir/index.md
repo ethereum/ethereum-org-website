@@ -1,13 +1,13 @@
 ---
-title: Ethereum pour les Développeurs Elixir
-description: Apprendre à développer sur Ethereum en utilisant des projets et des outils basés sur Elixir.
+title: "Ethereum pour les Développeurs Elixir"
+description: "Apprendre à développer sur Ethereum en utilisant des projets et des outils basés sur Elixir."
 lang: fr
 incomplete: false
 ---
 
 <FeaturedText>Apprendre à développer sur Ethereum en utilisant des projets et des outils basés sur Elixir.</FeaturedText>
 
-Utilisez Ethereum pour créer des applications décentralisées (ou "DApps") qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces dApps sont dignes de confiance, c'est-à-dire qu'une fois déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
+Utilisez Ethereum pour créer des applications décentralisées (ou « dApps ») qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces dApps sont dignes de confiance, c'est-à-dire qu'une fois déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
 
 ## Premiers pas avec les contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
 

@@ -1,13 +1,20 @@
 {
+  "template-usecase-dropdown-ai-agents": "ИИ-агенты",
   "template-usecase-dropdown-defi": "Децентрализованные финансы (DeFi)",
   "template-usecase-dropdown-nft": "Невзаимозаменяемые токены (NFT)",
   "template-usecase-dropdown-dao": "Децентрализованные автономные организации (DAO)",
+  "template-usecase-dropdown-apps": "Ethereum приложения",
+  "template-usecase-dropdown-payments": "Ethereum платежи",
+  "template-usecase-dropdown-prediction-markets": "Рынки прогнозов",
   "template-usecase-dropdown-social-networks": "Децентрализованные социальные сети",
+  "template-usecase-dropdown-restaking": "Рестейкинг",
   "template-usecase-dropdown-identity": "Децентрализованная идентичность",
   "template-usecase-dropdown-desci": "Децентрализованная наука (DeSci)",
   "template-usecase-dropdown-refi": "Регенеративные финансы (ReFi)",
   "template-usecase-dropdown": "Варианты использования Ethereum",
   "template-usecase-banner": "Способы использования Ethereum постоянно развиваются. Добавьте любую информацию, которая, по вашему мнению, сделает вещи более понятными или актуальными.",
   "template-usecase-edit-link": "Редактировать страницу",
-  "template-usecase-dropdown-aria": "Выпадающее меню с вариантами использования"
+  "template-usecase-dropdown-aria": "Выпадающее меню с вариантами использования",
+  "template-usecase-dropdown-onchain-gaming": "Он-чейн игры",
+  "template-usecase-dropdown-rwa": "Реальные активы (RWA)"
 }

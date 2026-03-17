@@ -1,6 +1,6 @@
 ---
 title: Atualizando contratos inteligentes
-description: Uma visão geral dos padrões de atualização de contratos inteligentes no Ethereum
+description: "Uma visão geral dos padrões de atualização de contratos inteligentes no Ethereum"
 lang: pt-br
 ---
 
@@ -12,7 +12,7 @@ Entretanto, mais pesquisas sobre melhoria de contratos inteligentes tem levado �
 
 ## Pré-requisitos {#prerequisites}
 
-Você deve ter um bom entendimento de [contratos inteligentes](/developers/docs/smart-contracts/), [anatomia de contratos inteligentes](/developers/docs/smart-contracts/anatomy/), e a [Máquina Virtual Ethereum (EVM)](/developers/docs/evm/). Este guia também presume que os leitores entendam de programação de contratos inteligentes.
+Você deve ter um bom entendimento de [contratos inteligentes](/developers/docs/smart-contracts/), [anatomia de contratos inteligentes](/developers/docs/smart-contracts/anatomy/) e da [Máquina Virtual Ethereum (EVM)](/developers/docs/evm/). Este guia também presume que os leitores entendam de programação de contratos inteligentes.
 
 ## O que é uma atualização de contrato inteligente? {#what-is-a-smart-contract-upgrade}
 
@@ -42,7 +42,7 @@ O último passo na migração do contrato é convencer usuários a mudar para o 
 
 Migração de contrato é uma medida relativamente direta e segura para atualização de contratos inteligentes sem quebrar interações de usuários. Entretanto, migrar manualmente o storage do usuário e saldos para o novo contrato é demorado e pode incorrer em altos gastos com gas.
 
-[Mais sobre migração de contrato.](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
+[Mais sobre a migração de contratos.](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
 
 ### Mecanismo de atualização 2: Separação de dados {#data-separation}
 
@@ -66,17 +66,17 @@ Isto é o que acontece em um padrão proxy:
 
 1. Usuários interagem com o contrato de proxy, que armazena dados, mas não mantém a lógica de negócio.
 
-2. O contrato proxy armazena os endereços do contrato lógico e delega todas as chamadas de função para o contrato lógico (que mantém a lógica de negócio) usando a função `delegatecall`.
+2. O contrato proxy armazena o endereço do contrato de lógica e delega todas as chamadas de função para o contrato de lógica (que contém a lógica de negócios) usando a função `delegatecall`.
 
 3. Depois de a chamada ser direcionada para o contrato lógico, os dados retornados do contrato lógico é recuperado e retornado ao usuário.
 
-Usar padrões de proxy requer um entendimento da função **delegatecall**. Basicamente, `delegatecall` é um opcode que permite um contrato chamar outro contrato, enquanto a execução real do código acontece no contexto do contrato chamado. Uma implicação de usar `delegatecall` em padrões proxy é que o contrato proxy lê e escreve no seu storage e executa lógica armazenada no contrato lógico como se chamando uma função interna.
+Usar os padrões de proxy requer um entendimento da função **delegatecall**. Basicamente, `delegatecall` é um opcode que permite que um contrato chame outro contrato, enquanto a execução real do código acontece no contexto do contrato chamador. Uma implicação de usar `delegatecall` em padrões de proxy é que o contrato de proxy lê e escreve em seu armazenamento e executa a lógica armazenada no contrato de lógica como se estivesse chamando uma função interna.
 
-Da [Documentação Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries):
+Da [documentação do Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries):
 
-> _Existe uma variante especial de chamada de mensagem, chamada **delegatecall** que é idêntica à chamada de mensagem, exceto pelo fato de que o código no endereço alvo é executado no contexto (ou seja, no endereço) do contrato chamador e `msg.sender` e `msg.value` não mudam seus valores._ _Isto significa que um contrato pode dinamicamente carregar código de um endereço diferente em tempo de execução. Storage, endereço atual e saldo ainda se referem ao contrado chamador, somente o código é pego do endereço chamado._
+> _Existe uma variante especial de uma chamada de mensagem, chamada **delegatecall**, que é idêntica a uma chamada de mensagem, exceto pelo fato de que o código no endereço de destino é executado no contexto (ou seja, no endereço) do contrato chamador e os valores de `msg.sender` e `msg.value` não se alteram._ _Isso significa que um contrato pode carregar código dinamicamente de um endereço diferente em tempo de execução._ Storage, endereço atual e saldo ainda se referem ao contrado chamador, somente o código é pego do endereço chamado._
 
-O contrato proxy sabe invocar `delegatecall` sempre quando um usuário chama a função, porque ele tem uma funçaõ `fallback` construída dentro dele. Em programação Solidity a [função fallback](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) é executada quando uma chamada de função não encontra funções especificadas em um contrato.
+O contrato proxy sabe que deve invocar o `delegatecall` sempre que um usuário chamar uma função, pois ele tem uma função `fallback` incorporada. Na programação em Solidity, a [função de fallback](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) é executada quando uma chamada de função não corresponde às funções especificadas em um contrato.
 
 Fazer o padrão proxy trabalhar requer escrever uma função fallback customizada que especifique como o contrato proxy deve manipular chamadas de função que ele não suporta. Neste caso, a função de fallback do proxy é programada para iniciar um delegatecall and re-rotear a requisição do usuário para a implementação atual do contrato lógico.
 
@@ -84,29 +84,29 @@ O contrato proxy é imutável por padrão, mas novos contratos lógicos com lóg
 
 Ao apontar o contrato proxy para um novo contrato lógico, o código executado quando os usuários chamam a função do contrato proxy é alterado. Isso nos permite atualizar a lógica do contrato sem pedir para os usuários interagirem com o novo contrato.
 
-Padrões proxy são um método popular para atualização de contratos inteligentes porque eles eliminam as dificuldades associadas com migração de contrato. No entanto, os padrões de proxy são mais complicados de usar e podem introduzir falhas críticas, como [conflitos do seletor de funções](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357), se usado indevidamente.
+Padrões proxy são um método popular para atualização de contratos inteligentes porque eles eliminam as dificuldades associadas com migração de contrato. No entanto, os padrões de proxy são mais complicados de usar e podem introduzir falhas críticas, como [conflitos de seletor de função](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357), se usados incorretamente.
 
 [Mais sobre padrões de proxy](https://blog.openzeppelin.com/proxy-patterns/).
 
 ### Mecanismo de atualização 4: Padrão de estratégia {#strategy-pattern}
 
-Esta técnica é influenciada pelo [padrão de estratégia](https://en.wikipedia.org/wiki/Strategy_pattern), que encoraja criar programas de software que fazem interface com outros programas para implementar recursos específicos. Aplicar padrão de estratégia para desenvolvimento Ethereum significaria construir um contrato inteligente que chama funções de outros contratos.
+Essa técnica é influenciada pelo [padrão de estratégia](https://en.wikipedia.org/wiki/Strategy_pattern), que incentiva a criação de programas de software que fazem interface com outros programas para implementar recursos específicos. Aplicar padrão de estratégia para desenvolvimento Ethereum significaria construir um contrato inteligente que chama funções de outros contratos.
 
 O contrato principal neste caso contém o núcleo da lógica de negócio, mas faz interface com outros contratos inteligentes ("contratos satélites") para executar certas funções. Este contrato principal também armazena o endereço para cada contrato satélite e pode alternar entre diferentes implementações de contrato satélite.
 
-Você pode construir um novo contrato satélite e configurar o contrato principal com o novo endereço. Isto permite você mudar _estratégias_ (ou seja, implementar nova lógica) para um contrato inteligente.
+Você pode construir um novo contrato satélite e configurar o contrato principal com o novo endereço. Isso permite que você altere _estratégias_ (ou seja, implementar nova lógica) para um contrato inteligente.
 
 Apesar de similar ao padrão de proxy discutido anteriormente, o padrão de estratégia é diferente porque o contrato principal, com o qual usuários interagem, mantém a lógica de negócios. Usar este padrão te dá a oportunidade de introduzir mudanças limitadas a um contrato inteligente sem afetar a infraestrutura principal.
 
 A principal desvantagem é que este padrão é mais útil para implantar atualizações menores. Além disso, se o contrato for comprometido (por exemplo, via um hack), você não pode usar este método de atualização.
 
-### Mecanismo de atualização 5: Padrão Diamante {#diamond-pattern}
+### Mecanismo de atualização 5: Padrão diamante {#diamond-pattern}
 
 O padrão diamante pode ser considerado uma melhoria do padrão proxy. Padrões diamante diferem dos padrões proxy porque o contrato proxy diamante pode delegar chamadas de função para mais de um contrato lógico.
 
-Os contratos lógicos no padrão diamante são conhecidos como _facets_. Para fazer o padrão diamante funcionar, você precisa criar um mapeamento no contrato proxy que mapeie [funções seletoras](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector) para endereços facet diferentes.
+Os contratos de lógica no padrão diamante são conhecidos como _facets_. Para que o padrão diamante funcione, você precisa criar um mapeamento no contrato proxy que mapeia [seletores de função](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector) para diferentes endereços de facet.
 
-Quando um usuário faz uma chamada de função, o contrato proxy checa o mapeamento para encontrar o facet responsável por executar aquela função. Então ele invoca `delegatecall` (usando a função fallback) e redireciona a chamada para o devido contrato lógico.
+Quando um usuário faz uma chamada de função, o contrato proxy checa o mapeamento para encontrar o facet responsável por executar aquela função. Em seguida, ele invoca o `delegatecall` (usando a função de fallback) e redireciona a chamada para o contrato de lógica apropriado.
 
 O padrão de atualização diamante tem algumas desvantagens sobre os padrões tradicionais de atualização proxy:
 
@@ -114,27 +114,27 @@ O padrão de atualização diamante tem algumas desvantagens sobre os padrões t
 
 2. Todos os contratos inteligentes (incluindo contratos lógicos usados nos padrões proxy) tem 24KB de limite de tamanho, o que pode ser uma limitação - especialmente para contratos complexos que requerem mais funções. O padrão diamante facilita resolver este problema dividindo funções por múltiplos contratos lógicos.
 
-3. Padrões proxy adotam uma abordagem de pegar todos para controle de acesso. Uma entidade com acesso a funções de atualização pode mudar o contrato _inteiro_. Mas o padrão diamante habilita uma abordagem de permissões modulares, onde você pode restringir entidades para atualizar certas funções dentro de um contrato inteligente.
+3. Padrões proxy adotam uma abordagem de pegar todos para controle de acesso. Uma entidade com acesso às funções de atualização pode alterar o contrato _inteiro_. Mas o padrão diamante habilita uma abordagem de permissões modulares, onde você pode restringir entidades para atualizar certas funções dentro de um contrato inteligente.
 
-[Mais sobre padrão diamante](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w).
+[Mais sobre o padrão diamante](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w).
 
 ## Prós e contras da atualização de contratos inteligentes {#pros-and-cons-of-upgrading-smart-contracts}
 
-| Prós                                                                                                                                           | Contras                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Prós                                                                                                                                                           | Contras                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Uma atualização de contrato inteligente pode tornar mais fácil corrigir vulnerabilidades descobertas na fase pós-implantação.                  | A atualização de contratos inteligentes nega a ideia de imutabilidade do código, o qual tem implicações sobre descentralização e segurança.                                                |
 | Os desenvolvedores podem usar atualizações lógicas para adicionar novas funcionalidades para aplicações descentralizadas.                      | Os usuários devem confiar nos desenvolvedores para não modificar contratos inteligentes de forma arbitrária.                                                                               |
 | As atualizações de contratos inteligentes podem melhorar a segurança para os usuários finais, pois os bugs podem ser corrigidos rapidamente.   | A funcionalidade de atualização de programação em contratos inteligentes adiciona outra camada de complexidade e aumenta a possibilidade de falhas críticas.                               |
 | As atualizações de contrato dá aos desenvolvedores mais liberdade para experimentar diferentes recursos e melhorar os dapps ao longo do tempo. | A oportunidade para atualizar contratos inteligentes pode encorajar os desenvolvedores a lançar projetos mais rapidamente sem fazer a devida diligência durante a fase de desenvolvimento. |
-|                                                                                                                                                | O controle de acesso inseguro ou a centralização em contratos inteligentes podem tornar mais fácil por atores maliciosos a execução de atualizações não autorizadas.                       |
+|                                                                                                                                                                | O controle de acesso inseguro ou a centralização em contratos inteligentes podem tornar mais fácil por atores maliciosos a execução de atualizações não autorizadas.                       |
 
-## Considerações para atualizar contratos inteligentes {#considerations-for-upgrading-smart-contracts}
+## Considerações sobre a atualização de contratos inteligentes {#considerations-for-upgrading-smart-contracts}
 
 1. Use mecanismos seguros de controle/autorização de acesso para evitar atualizações não autorizadas de contratos inteligentes, especialmente ao usar padrões de proxy, padrões de estratégia ou separação de dados. Um exemplo é restringir o acesso à função de atualização, de modo que apenas o proprietário do contrato possa chamá-lo.
 
 2. A atualização de contratos inteligentes é uma atividade complexa e requer um alto nível de diligência para impedir a introdução de vulnerabilidades.
 
-3. Reduza as suposições de confiança ao descentralizar o processo de implementação de atualizações. As estratégias possíveis incluem usar um [contrato de carteira multi-sig](/developers/docs/smart-contracts/#multisig), para controlar atualizações ou exigir [membros de um DAO](/dao/) para votar na aprovação da atualização.
+3. Reduza as suposições de confiança ao descentralizar o processo de implementação de atualizações. As estratégias possíveis incluem o uso de um [contrato de carteira multi-sig](/developers/docs/smart-contracts/#multisig) para controlar as atualizações, ou exigir que [membros de uma DAO](/dao/) votem na aprovação da atualização.
 
 4. Esteja ciente dos custos envolvidos na atualização de contratos. Por uma razão que, ao copiar o estado (por exemplo, saldos do usuário) de um contrato antigo para um novo contrato durante a migração do contrato pode exigir mais do que uma transação, o que significa mais taxas de gás.
 
@@ -142,24 +142,24 @@ O padrão de atualização diamante tem algumas desvantagens sobre os padrões t
 
 Os bloqueios de tempo dão aos usuários algum tempo para sair do sistema, se eles discordarem de uma mudança proposta (por exemplo, atualização lógica ou novos esquemas de taxas). Sem bloqueios de tempo, os usuários precisam confiar nos desenvolvedores para não implementar alterações arbitrárias em um contrato inteligente sem aviso prévio. A desvantagem aqui é que os bloqueios de tempo restringem a capacidade de corrigir vulnerabilidades rapidamente.
 
-## Recursos {#resources}
+## Documentos {#resources}
 
-**Plugins de atualização do OpenZeppelin - _Um conjunto de ferramentas para implantar e proteger contratos inteligentes atualizáveis._**
+**Plugins de atualização da OpenZeppelin - _Um conjunto de ferramentas para implantar e proteger contratos inteligentes atualizáveis._**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [Documentação](https://docs.openzeppelin.com/upgrades)
 
 ## Tutoriais {#tutorials}
 
-- [Atualizando seus contratos inteligentes | Tutorial do YouTube](https://www.youtube.com/watch?v=bdXJmWajZRY) por Patrick Collins
-- [Tutorial de migração de contrtos inteligentes Ethereum](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) por Austin Griffith
+- [Atualizando seus Contratos Inteligentes | Tutorial do YouTube](https://www.youtube.com/watch?v=bdXJmWajZRY) por Patrick Collins
+- [Tutorial de Migração de Contrato Inteligente do Ethereum](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) por Austin Griffith
 - [Usando o padrão de proxy UUPS para atualizar contratos inteligentes](https://blog.logrocket.com/author/praneshas/) por Pranesh A.S
-- [Tutorial Web3: Escreva o contrato inteligente atualizável (proxy) usando OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) por fangjun.eth
+- [Tutorial Web3: Escreva um contrato inteligente atualizável (proxy) usando OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) por fangjun.eth
 
 ## Leitura adicional {#further-reading}
 
-- [O estado das atualizações de contratos inteligentes](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) por Santiago Palladino
-- [Várias maneiras de atualizar um contrato inteligente Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Blog do Crypto Market Pool
-- [Aprenda: Atualizando contratos inteligentes](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - Documentos do OpenZeppelin
-- [Padrões de proxy para capacidade de atualização de contratos Solidity: Proxies Transparentes vs UUPS](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) por Naveen Sahu
-- [Como funcionam as atualizações por diamantes](https://dev.to/mudgen/how-diamond-upgrades-work-417j) de Nick Mudge
+- [O Estado das Atualizações de Contratos Inteligentes](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) por Santiago Palladino
+- [Várias maneiras de atualizar um contrato inteligente Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - blog da Crypto Market Pool
+- [Aprenda: Atualizando Contratos Inteligentes](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - Documentação da OpenZeppelin
+- [Padrões de Proxy para Atualização de Contratos Solidity: Proxies Transparentes vs. UUPS](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) por Naveen Sahu
+- [Como Funcionam as Atualizações Diamante](https://dev.to/mudgen/how-diamond-upgrades-work-417j) por Nick Mudge

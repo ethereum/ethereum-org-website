@@ -37,7 +37,7 @@ lang: zh
 
 交易在分布式网络中具有“最终确定性”是指，该交易是区块的一部分，而且除非销毁大量以太币，否则便无法改变。 在权益证明以太坊上，通过“检查点”区块来管理最终确定性。 每个时段中的第一个区块是检查点。 验证者为其认为有效的“检查点对”投票。 如果一对检查点获得了质押以太币总数中三分之二以上的投票，那么这对检查点将被升级。 这两个（目标）中较新的一个会变成“合理”状态。 较旧的一个检查点已经是合理状态，因为它是上一个时段中的“目标”。 现在，这个检查点会升级为“最终确定”状态。 升级检查点的过程由 **[Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437)** 处理。 Casper-FFG 是用于共识的区块最终性工具。 一旦区块被最终敲定，若没有对大多数质押者进行罚没，该区块就无法回滚或更改，这使得攻击在经济上不可行。
 
-要回滚最终确定的区块，攻击者将承担至少相当于质押以太币总数三分之一的损失。 [以太坊基金会的这篇博文](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)中解释了具体原因。 因为最终确定性需要获得三分之二多数投票，攻击者可以用质押以太币总数的三分之一投票来阻止网络实现最终确定性。 有一种机制可以防御这种情况：[怠速泄露 (inactivity leak)](https://eth2book.info/bellatrix/part2/incentives/inactivity)。 当链超过四个时段无法最终确定时，这项机制会触发。 怠惰惩罚逐渐消耗与其投票与大多数投票相反的验证者的质押以太币，使得大多数验证者重新获得三分之二多数投票并最终确定链。
+要回滚最终确定的区块，攻击者将承担至少相当于质押以太币总数三分之一的损失。 [以太坊基金会的这篇博文](https://blog.ethereum.org/2016/05/09/on-settlement-finality)中解释了具体原因。 因为最终确定性需要获得三分之二多数投票，攻击者可以用质押以太币总数的三分之一投票来阻止网络实现最终确定性。 有一种机制可以防御这种情况：[怠速泄露 (inactivity leak)](https://eth2book.info/bellatrix/part2/incentives/inactivity)。 当链超过四个时段无法最终确定时，这项机制会触发。 怠惰惩罚逐渐消耗与其投票与大多数投票相反的验证者的质押以太币，使得大多数验证者重新获得三分之二多数投票并最终确定链。
 
 ## 加密经济安全 {#crypto-economic-security}
 
@@ -88,7 +88,7 @@ lang: zh
 - [什么是权益证明](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [什么是权益证明及其重要性](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
 - [为何选择权益证明 (2020 年 11 月)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
-- [权益证明：我如何学会爱上弱主观性](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
+- [权益证明：我如何学会爱上弱主观性](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity) _Vitalik Buterin_
 - [权益证明以太坊的攻击与防御](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [权益证明设计理念](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 - [视频：Vitalik Buterin 向 Lex Fridman 解释权益证明](https://www.youtube.com/watch?v=3yrqBG-7EVE)

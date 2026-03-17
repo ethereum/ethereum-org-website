@@ -36,7 +36,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 ## Articulos para usuarios familiarizados {#intermediate-articles}
 
 - [Amigos de web3.py: introducción a Ape](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [Desarrollo de dapps para programadores de Python](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [Desarrollo de dapps para programadores de Python](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [Creación de una interfaz de Python para Ethereum: parte 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Contratos inteligentes de Ethereum en Python: una guía (más o menos) completa](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -88,7 +88,7 @@ Los siguientes proyectos basados en Ethereum utilizan las herramientas mencionad
 - [Curve](https://www.curve.finance/) y el [repositorio de contratos inteligentes de Curve](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) y los [contratos inteligentes que usan el conjunto de herramientas de Brownie](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) utiliza [Python para administrar e implementar sus contratos de adjudicación](https://github.com/sushiswap/sushi-vesting-protocols)
-- [Alpha Finance](https://alphafinance.io/), famoso por Alpha Homora, utiliza [Brownie para probar e implementar contratos inteligentes](https://github.com/AlphaFinanceLab/alpha-staking-contract)
+- [Alpha Venture DAO](https://alphaventuredao.io/), famoso por Alpha Homora, utiliza [Brownie para probar e implementar contratos inteligentes](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## Discusión de la comunidad de Python {#python-community-contributors}
 

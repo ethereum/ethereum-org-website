@@ -114,8 +114,6 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 
 **Catapulta -** **_Strumento di distribuzione di contratti intelligenti multi-catena, automatizza le verifiche negli esploratori dei blocchi, tiene traccia dei contratti intelligenti distribuiti e condivide i rapporti di distribuzione; pronto all'uso per i progetti di Foundry e Hardhat._**
 
-- [Sito Web](https://catapulta.sh/)
-- [Documentazione](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
 
 **Covalent -** **_API della blockchain arricchite per oltre 200 catene._**

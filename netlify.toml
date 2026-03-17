@@ -40,3 +40,11 @@
 
 [functions]
   included_files = ["i18n.config.json", "src/intl/**/*", "src/data-layer/mocks/**/*"]
+
+# Override SITE_URL for named branches with custom subdomains so canonical
+# URLs and OG metadata use the custom domain instead of *.netlify.app.
+[context.dev.environment]
+  NEXT_PUBLIC_SITE_URL = "https://dev.ethereum.org"
+
+[context.staging.environment]
+  NEXT_PUBLIC_SITE_URL = "https://staging.ethereum.org"

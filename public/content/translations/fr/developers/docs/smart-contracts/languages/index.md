@@ -1,25 +1,25 @@
 ---
 title: Les langages des contrats intelligents
-description: 'Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper'
+description: "Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper"
 lang: fr
 ---
 
-Un aspect important d'Ethereum est que les contrats intelligents peuvent être programmés en utilisant des langages relativement conviviaux pour les développeurs. Si vous maitrisez Python ou n'importe quel [langage d'accolades](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), vous pouvez trouver un langage avec une syntaxe qui vous sera familière.
+Un aspect important d'Ethereum est que les contrats intelligents peuvent être programmés en utilisant des langages relativement conviviaux pour les développeurs. Si vous avez de l'expérience avec Python ou tout [langage à accolades](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), vous pouvez trouver un langage avec une syntaxe familière.
 
 Les deux langages les plus actifs et les plus suivis sont :
 
-- Solidity
+- solidity
 - Vyper
 
 L'IDE Remix fournit un environnement de développement complet pour créer et tester des contrats dans Solidity et Vyper. [Essayez l'IDE Remix dans le navigateur](https://remix.ethereum.org) pour commencer à coder.
 
-Des développeurs plus expérimentés peuvent choisir d'utiliser Yul, un langage intermédiaire pour la [machine virtuelle Ethereum (EVM)](/developers/docs/evm/), ou Yul+, une extension de Yul.
+Les développeurs plus expérimentés peuvent également utiliser Yul, un langage intermédiaire pour la [machine virtuelle Ethereum](/developers/docs/evm/), ou Yul+, une extension de Yul.
 
 Si vous êtes curieux et que vous aimez aider à tester de nouveaux langages encore en cours de développement, vous pouvez essayer Fe, un nouveau langage pour contrat intelligent qui en est encore à ses balbutiements.
 
 ## Prérequis {#prerequisites}
 
-La connaissance de langages de programmation comme JavaScript ou Python peut vous aider à comprendre les différences entre les langages de contrats intelligents. Nous vous conseillons également d'avoir compris le concept des contrats intelligents avant de vous plonger dans les comparaisons entre les différents langages. Lire la page [Introduction aux contrats intelligents](/developers/docs/smart-contracts/)
+La connaissance de langages de programmation comme JavaScript ou Python peut vous aider à comprendre les différences entre les langages de contrats intelligents. Nous vous conseillons également d'avoir compris le concept des contrats intelligents avant de vous plonger dans les comparaisons entre les différents langages. [Introduction aux contrats intelligents](/developers/docs/smart-contracts/).
 
 ## Solidity {#solidity}
 
@@ -34,13 +34,13 @@ La connaissance de langages de programmation comme JavaScript ou Python peut vou
 ### Liens importants {#important-links}
 
 - [Documentation](https://docs.soliditylang.org/en/latest/)
-- [Portail Solidity](https://soliditylang.org/)
+- [Portail du langage Solidity](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Salle de chat Gitter Solidity](https://gitter.im/ethereum/solidity) reliée à [Salle de chat Matrix Solidity](https://matrix.to/#/#ethereum_solidity:gitter.im)
-- [Cheat Sheet](https://reference.auditless.com/cheatsheet)
+- [Salon de discussion Gitter de Solidity](https://gitter.im/ethereum/solidity) ponté vers le [salon de discussion Matrix de Solidity](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Aide-mémoire](https://reference.auditless.com/cheatsheet)
 - [Blog Solidity](https://blog.soliditylang.org/)
-- [Twitter Solidity](https://twitter.com/solidity_lang)
+- [Twitter de Solidity](https://twitter.com/solidity_lang)
 
 ### Exemple de contrat {#example-contract}
 
@@ -49,33 +49,33 @@ La connaissance de langages de programmation comme JavaScript ou Python peut vou
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // The keyword "public" makes variables
-    // accessible from other contracts
+    // Le mot-clé « public » rend les variables
+    // accessibles depuis d'autres contrats
     address public minter;
     mapping (address => uint) public balances;
 
-    // Events allow clients to react to specific
-    // contract changes you declare
+    // Les événements permettent aux clients de réagir aux modifications spécifiques
+    // du contrat que vous déclarez
     event Sent(address from, address to, uint amount);
 
-    // Constructor code is only run when the contract
-    // is created
+    // Le code du constructeur n'est exécuté que lors de la création
+    // du contrat
     constructor() {
         minter = msg.sender;
     }
 
-    // Sends an amount of newly created coins to an address
-    // Can only be called by the contract creator
+    // Envoie un montant de pièces nouvellement créées à une adresse
+    // Ne peut être appelé que par le créateur du contrat
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
         balances[receiver] += amount;
     }
 
-    // Sends an amount of existing coins
-    // from any caller to an address
+    // Envoie un montant de pièces existantes
+    // depuis n'importe quel appelant vers une adresse
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "Insufficient balance.");
+        require(amount <= balances[msg.sender], "Solde insuffisant.");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -101,103 +101,121 @@ Cet exemple devrait vous donner une idée de la syntaxe d'un contrat Solidity. P
   - Boucles infinies
   - Points fixes binaires
 
-Pour plus d'informations, [lisez cette page Vyper](https://vyper.readthedocs.io/en/latest/index.html).
+Pour plus d'informations, [lisez la raison d'être de Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Liens importants {#important-links-1}
 
 - [Documentation](https://vyper.readthedocs.io)
-- [Vyper par exemple](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
-- [Plus de Vyper par exemple](https://vyper-by-example.org/)
+- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [More Vyper by Example](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Discussion Discord pour la Communauté Vyper](https://discord.gg/SdvKC79cJk)
-- [Cheat Sheet](https://reference.auditless.com/cheatsheet)
-- [Cadres et outils de développement des Contrats intelligents pour Vyper](/developers/docs/programming-languages/python/)
-- [VyperPunk - apprendre à sécuriser et à pirater les contrats intelligents Vyper](https://github.com/SupremacyTeam/VyperPunk)
+- [Chat Discord de la communauté Vyper](https://discord.gg/SdvKC79cJk)
+- [Aide-mémoire](https://reference.auditless.com/cheatsheet)
+- [Cadres de développement et outils pour les contrats intelligents pour Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk – apprenez à sécuriser et à pirater les contrats intelligents Vyper](https://github.com/SupremacyTeam/VyperPunk)
 - [Hub Vyper pour le développement](https://github.com/zcor/vyper-dev)
-- [Exemples des meilleurs contrats intelligents pour Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Des ressources géniales liées à Vyper](https://github.com/spadebuilders/awesome-vyper)
+- [Exemples de contrats intelligents Vyper greatest hits](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Awesome Vyper – ressources sélectionnées](https://github.com/spadebuilders/awesome-vyper)
 
 ### Exemple {#example}
 
 ```python
-# Open Auction
+# Enchère ouverte
 
-# Auction params
-# Beneficiary receives money from the highest bidder
+# Paramètres de l'enchère
+
+# Le bénéficiaire reçoit l'argent du plus offrant
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
-# Current state of auction
+# État actuel de l'enchère
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Set to true at the end, disallows any change
+# Mis à « true » à la fin, interdit toute modification
+
 ended: public(bool)
 
-# Keep track of refunded bids so we can follow the withdraw pattern
+# Suivi des enchères remboursées afin que nous puissions suivre le modèle de retrait
+
 pendingReturns: public(HashMap[address, uint256])
 
-# Create a simple auction with `_bidding_time`
-# seconds bidding time on behalf of the
-# beneficiary address `_beneficiary`.
+# Crée une enchère simple avec un temps d'enchère de `_bidding_time`
+
+# secondes pour le compte de
+
+# l'adresse du bénéficiaire `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Bid on the auction with the value sent
-# together with this transaction.
-# The value will only be refunded if the
-# auction is not won.
+# Enchérir sur l'enchère avec la valeur envoyée
+
+# avec cette transaction.
+
+# La valeur ne sera remboursée que si
+
+# l'enchère n'est pas remportée.
+
 @external
 @payable
 def bid():
-    # Check if bidding period is over.
+    # Vérifie si la période d'enchères est terminée.
     assert block.timestamp < self.auctionEnd
-    # Check if bid is high enough
+    # Vérifie si l'enchère est suffisamment élevée
     assert msg.value > self.highestBid
-    # Track the refund for the previous high bidder
+    # Suivi du remboursement de l'enchérisseur le plus élevé précédent
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # Track new high bid
+    # Suivi de la nouvelle enchère la plus élevée
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Withdraw a previously refunded bid. The withdraw pattern is
-# used here to avoid a security issue. If refunds were directly
-# sent as part of bid(), a malicious bidding contract could block
-# those refunds and thus block new higher bids from coming in.
+# Retirer une enchère précédemment remboursée. Le modèle de retrait est
+
+# utilisé ici pour éviter un problème de sécurité. Si les remboursements étaient directement
+
+# envoyés dans le cadre de bid(), un contrat d'enchères malveillant pourrait bloquer
+
+# ces remboursements et ainsi empêcher l'arrivée de nouvelles enchères plus élevées.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# End the auction and send the highest bid
-# to the beneficiary.
+# Met fin à l'enchère et envoie l'enchère la plus élevée
+
+# au bénéficiaire.
+
 @external
 def endAuction():
-    # It is a good guideline to structure functions that interact
-    # with other contracts (i.e., they call functions or send ether)
-    # into three phases:
-    # 1. checking conditions
-    # 2. performing actions (potentially changing conditions)
-    # 3. interacting with other contracts
-    # If these phases are mixed up, the other contract could call
-    # back into the current contract and modify the state or cause
-    # effects (ether payout) to be performed multiple times.
-    # If functions called internally include interaction with external
-    # contracts, they also have to be considered interaction with
-    # external contracts.
+    # Il est recommandé de structurer les fonctions qui interagissent
+    # avec d'autres contrats (c'est-à-dire qu'elles appellent des fonctions ou envoient de l'ether)
+    # en trois phases :
+    # 1. vérification des conditions
+    # 2. exécution d'actions (pouvant modifier les conditions)
+    # 3. interaction avec d'autres contrats
+    # Si ces phases sont mélangées, l'autre contrat pourrait rappeler
+    # le contrat actuel et modifier l'état ou provoquer
+    # des effets (paiement d'ether) à effectuer plusieurs fois.
+    # Si les fonctions appelées en interne incluent une interaction avec des contrats
+    # externes, elles doivent également être considérées comme une interaction avec des
+    # contrats externes.
 
     # 1. Conditions
-    # Check if auction endtime has been reached
+    # Vérifie si l'heure de fin de l'enchère a été atteinte
     assert block.timestamp >= self.auctionEnd
-    # Check if this function has already been called
+    # Vérifie si cette fonction a déjà été appelée
     assert not self.ended
 
-    # 2. Effects
+    # 2. Effets
     self.ended = True
 
     # 3. Interaction
@@ -213,24 +231,24 @@ Si vous débutez avec Ethereum et que vous n'avez pas encore jamais codé avec d
 **Yul**
 
 - Langage intermédiaire pour Ethereum
-- Prends en charge l'[EVM](/developers/docs/evm) et l'[Ewasm](https://github.com/ewasm), un assemblage Web au petit goût d'Ethereum conçu pour être un dénominateur commun utilisable sur les deux plateformes.
-- Excellente cible pour les phases d'optimisation de haut niveau qui peuvent bénéficier à la fois aux plateformes EVM et eWASM.
+- Prend en charge l'[EVM](/developers/docs/evm) et l'[Ewasm](https://github.com/ewasm), un WebAssembly aux couleurs d'Ethereum, et est conçu pour être un dénominateur commun utilisable des deux plateformes.
+- Bonne cible pour les étapes d'optimisation de haut niveau qui peuvent bénéficier de la même manière aux plateformes EVM et Ewasm.
 
 **Yul+**
 
 - Extension de Yul de bas niveau très efficace
-- Initialement conçue pour un contrat de [rollup optimiste](/developers/docs/scaling/optimistic-rollups/).
+- Initialement conçu pour un contrat de [rollup optimiste](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ peut être considéré comme une proposition de mise à niveau expérimentale de Yul, qui y ajoute de nouvelles fonctionnalités
 
 ### Liens importants {#important-links-2}
 
-- [Documentation Yul](https://docs.soliditylang.org/en/latest/yul.html)
-- [Documentation Yul+](https://github.com/fuellabs/yulp)
+- [Documentation de Yul](https://docs.soliditylang.org/en/latest/yul.html)
+- [Documentation de Yul+](https://github.com/fuellabs/yulp)
 - [Article d'introduction à Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Exemple de contrat {#example-contract-2}
 
-Cet exemple simple implémente une fonction puissance. Il peut être compilé en utilisant `solc --strict-assembly --bin input.yul` et devrait être stocké dans le fichier input.yul.
+Cet exemple simple implémente une fonction puissance. Il peut être compilé en utilisant `solc --strict-assembly --bin input.yul`. et devrait être stocké dans le fichier input.yul.
 
 ```
 {
@@ -251,7 +269,7 @@ Cet exemple simple implémente une fonction puissance. Il peut être compilé en
 }
 ```
 
-Si vous avez déjà une bonne expérience en développement de contrats intelligents, vous trouverez ici une [implémentation complète ERC20 dans Yul](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Si vous avez déjà une bonne expérience des contrats intelligents, une implémentation complète d'ERC20 dans Yul peut être trouvée [ici](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Fe {#fe}
 
@@ -264,9 +282,9 @@ Si vous avez déjà une bonne expérience en développement de contrats intellig
 
 - [GitHub](https://github.com/ethereum/fe)
 - [Annonce de Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
-- [Feuille de route 2021 pour Fe](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
-- [Chat de discussion Fe](https://discord.com/invite/ywpkAXFjZH)
-- [Twitter Fe](https://twitter.com/official_fe)
+- [Feuille de route 2021 de Fe](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [Chat Discord de Fe](https://discord.com/invite/ywpkAXFjZH)
+- [Twitter de Fe](https://twitter.com/official_fe)
 
 ### Exemple de contrat {#example-contract-3}
 
@@ -297,28 +315,28 @@ Comme pour tout autre langage de programmation, il s'agit surtout de choisir le 
 
 Voici quelques éléments à considérer si vous n'en avez encore essayé :
 
-### Quels sont les avantages de Solidity ? {#solidity-advantages}
+### Quels sont les avantages de Solidity ? Avantages de Solidity {#solidity-advantages}
 
-- Si vous débutez, il existe de nombreux tutoriels et outils d'apprentissage. Pour plus d'infos, consultez la page [Apprendre en codant](/developers/learning-tools/).
+- Si vous débutez, il existe de nombreux tutoriels et outils d'apprentissage. Pour en savoir plus, consultez la section [Apprendre en codant](/developers/learning-tools/).
 - De bons outils de développement sont disponibles.
 - Solidity dispose d'une importante communauté de développeurs, ce qui signifie que vous obtiendrez probablement des réponses à vos questions très rapidement.
 
-### Quels sont les avantages de Vyper ? {#vyper-advatages}
+### Quels sont les avantages de Vyper ? Avantages de Vyper {#vyper-advatages}
 
 - Excellent moyen de commencer pour les développeurs Python qui veulent rédiger des contrats intelligents.
 - Vyper dispose d'un nombre plus restreint de fonctionnalités, ce qui en fait un langage idéal pour un prototypage rapide des idées.
 - Il est conçu de façon à être facile à contrôler et extrêmement lisible pour l'être humain.
 
-### Quels sont les avantages de Yul et Yul+ ? {#yul-advantages}
+### Quels sont les avantages de Yul et Yul+ ? Avantages de Yul {#yul-advantages}
 
 - Language simple et fonctionnel de bas niveau.
 - Permet de se rapprocher au plus près de l'EVM brute, ce qui peut aider à optimiser l'utilisation du gaz de vos contrats.
 
-## Comparaison des langages {#language-comparisons}
+## Comparaisons des langages {#language-comparisons}
 
-Pour des comparaisons de la syntaxe de base, du cycle de vie des contrats, des interfaces, des opérateurs, des structures de données, des fonctions, du flux de contrôle, et plus encore, consultez la page Auditless [ Solidity & Vyper Cheat Sheet](https://reference.auditless.com/cheatsheet/)
+Pour des comparaisons de la syntaxe de base, du cycle de vie du contrat, des interfaces, des opérateurs, des structures de données, des fonctions, du flux de contrôle et plus encore, consultez cet [aide-mémoire d'Auditless](https://reference.auditless.com/cheatsheet/)
 
-## Complément d'information {#further-reading}
+## En savoir plus {#further-reading}
 
 - [Bibliothèque de contrats Solidity par OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

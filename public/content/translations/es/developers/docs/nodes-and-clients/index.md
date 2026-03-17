@@ -294,7 +294,7 @@ El modo de cliente ligero descarga todos los encabezados de los bloques, datos d
 
 La sincronización óptima es una estrategia de sincronización después de La Fusión diseñada para ser compatible opt-in y backwards permitiendo que los nodos de ejecución se sincronicen a través de métodos establecidos. El motor de ejecución puede importar bloques de baliza de forma _optimista_ sin verificarlos por completo, encontrar la cabecera más reciente y luego comenzar a sincronizar la cadena con los métodos anteriores. Seguidamente, una vez que el cliente de ejecución se haya actualizado, informará al cliente de consenso de la validez de las transacciones en la cadena de baliza.
 
-[Más información sobre la sincronización optimista](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[Más información sobre la sincronización optimista](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### Sincronización desde punto de control {#checkpoint-sync}
 

@@ -101,7 +101,7 @@ Ad alto livello, il Proof of Stake ha lo stesso obiettivo del Proof of Work: per
 ## Letture consigliate {#further-reading}
 
 - [Majority attack](https://en.bitcoin.it/wiki/Majority_attack)
-- [On settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [On settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Video {#videos}
 

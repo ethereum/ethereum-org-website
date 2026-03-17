@@ -81,7 +81,7 @@ Questa è comunque una semplificazione: gli interi e gli zeri negli schemi di cu
 
 Quindi i valori reali per i tipi di lunghezza variabile sono memorizzati in uno heap alla fine dell'oggetto serializzato, con i propri offset memorizzati nelle posizioni corrette nell'elenco di campi ordinato.
 
-Esistono anche dei casi speciali che richiedono un trattamento specifico, come il tipo `BitList` che richiede che sia aggiunto un limite di lunghezza durante la serializzazione, e poi eliminato durante la deserializzazione. I dettagli completi sono disponibili nella [specifica SSZ](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md).
+Esistono anche dei casi speciali che richiedono un trattamento specifico, come il tipo `BitList` che richiede che sia aggiunto un limite di lunghezza durante la serializzazione, e poi eliminato durante la deserializzazione. I dettagli completi sono disponibili nella [specifica SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
 ### Deserializzazione {#deserialization}
 
@@ -126,7 +126,7 @@ Questa rappresentazione produce un indice del nodo per ogni dato nell'albero di 
 
 ## Prove multiple {#multiproofs}
 
-Fornire l'elenco di indici generalizzati rappresentanti un elemento specifico ci consente di verificarlo rispetto all'hash albero-radice. Questa radice è la nostra versione accettata della realtà. Ogni dato che ci è fornito è verificabile rispetto a quella realtà inserendolo al posto giusto nell'albero di Merkle (determinato dal suo indice generalizzato) e osservando che la radice rimane costante. Ci sono delle funzioni nelle specifiche, [qui](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs), che mostrano come calcolare la serie minima di nodi necessari a verificare i contenuti di una serie particolare di indici generalizzati.
+Fornire l'elenco di indici generalizzati rappresentanti un elemento specifico ci consente di verificarlo rispetto all'hash albero-radice. Questa radice è la nostra versione accettata della realtà. Ogni dato che ci è fornito è verificabile rispetto a quella realtà inserendolo al posto giusto nell'albero di Merkle (determinato dal suo indice generalizzato) e osservando che la radice rimane costante. Ci sono delle funzioni nelle specifiche, [qui](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs), che mostrano come calcolare la serie minima di nodi necessari a verificare i contenuti di una serie particolare di indici generalizzati.
 
 Ad esempio, per verificare i dati nell'indice 9 nell'albero seguente, abbiamo bisogno dell'hash dei dati agli indici 8, 9, 5, 3, 1. L'hash di (8,9) dovrebbe equivalere all'hash (4), il cui hash con 5 produce 2, il cui hash con 3 produce la radice dell'albero 1. Se venissero forniti dei dati errati per 9, la radice cambierebbe: lo rileveremmo e renderemmo impossibile verificare il ramo.
 

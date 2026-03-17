@@ -16,7 +16,7 @@ Rising interest in cryptocurrency brings with it growing risk from scammers and 
 
 ### Level up your knowledge {#level-up-your-knowledge}
 
-Misunderstandings about how crypto works can lead to costly mistakes. For example, if someone pretends to be a customer service agent who can return lost ETH in exchange for your private keys, they are preying on people not understanding that Ethereum is a decentralized network lacking this kind of functionality. Educating yourself on how Ethereum works is a worthwhile investment.
+Misunderstandings about how crypto works can lead to costly mistakes. For example, if someone pretends to be a customer service agent who can return lost ETH in exchange for your private keys, they are preying on people not understanding that [Ethereum](/) is a decentralized network lacking this kind of functionality. Educating yourself on how Ethereum works is a worthwhile investment.
 
 <DocLink href="/what-is-ethereum/">
   What is Ethereum?
@@ -29,11 +29,11 @@ Misunderstandings about how crypto works can lead to costly mistakes. For exampl
 
 ## Wallet security {#wallet-security}
 
-### Don't give out your private keys {#protect-private-keys}
+### Never share your recovery phrase {#protect-private-keys}
 
-**Never, for any reason, share your private keys!**
+**Never, for any reason, share your recovery phrase or private keys!**
 
-The private key to your wallet is a password to your Ethereum wallet. It is the only thing stopping someone who knows your wallet address from draining your account of all of its assets!
+Your recovery phrase (also called secret recovery phrase or seed phrase) is the master key to your wallet. Anyone who has it can access all of your accounts and drain every asset. Private keys work the same way for individual accounts. No legitimate service, support agent, or website will ever ask you for these.
 
 <DocLink href="/wallets/">
   What's an Ethereum wallet?

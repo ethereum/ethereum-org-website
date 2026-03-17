@@ -89,7 +89,7 @@ Na wysokim poziomie proof of stake ma ten sam cel co proof of work: pomoc w osi�
 ## Dalsza lektura {#further-reading}
 
 - [Atak większościowy](https://en.bitcoin.it/wiki/Majority_attack)
-- [O nieodwołalności rozliczenia](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [O nieodwołalności rozliczenia](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ## Tematy powiązane {#related-topics}
 

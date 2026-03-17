@@ -1,6 +1,6 @@
 ---
-title: Bonnes pratiques de conception en matière d'échange décentralisé (DEX)
-description: Un guide expliquant les décisions UX/UI pour l'échange de jetons.
+title: "Bonnes pratiques de conception en matière d'échange décentralisé (DEX)"
+description: "Un guide expliquant les décisions UX/UI pour l'échange de jetons."
 lang: fr
 ---
 
@@ -167,7 +167,7 @@ Au final, cela ne fait probablement pas une grande différence en termes de conv
 
 Il a été intéressant de voir la mode changer avec le temps. Uniswap avait initialement placé le jeton à gauche, mais l'a ensuite déplacé à droite. Sushiswap a également fait ce changement lors d'une mise à jour de son design. La plupart des protocoles, mais pas tous, ont suivi cette tendance.
 
-Les conventions en matière financière font que l'on place traditionnellement le symbole monétaire avant le chiffre, par exemple, $50, €50, £50, mais nous disons 50 dollars, 50 euros, 50 livres.
+Les conventions financières placent traditionnellement le symbole de la devise avant le nombre (par exemple, 50 $, 50 €, 50 £), mais nous _disons_ 50 dollars, 50 euros, 50 livres.
 
 Pour l'utilisateur de base, en particulier quelqu'un qui lit de gauche à droite, de haut en bas, un jeton à droite semble probablement plus naturel.
 
@@ -205,7 +205,7 @@ Le bouton peut également être **associé à l'action** qui doit être effectu�
 
 ![Message d'erreur affiché dans le principal appel à l'action](./17.png)
 
-### Construisez le vôtre avec ce fichier Figma {#build-your-own-with-this-figma-file}
+## Construisez le vôtre avec ce fichier Figma {#build-your-own-with-this-figma-file}
 
 Grâce au travail acharné de plusieurs protocoles, la conception des DEX s'est beaucoup améliorée. Nous savons de quelles informations l'utilisateur a besoin, de quelle manière nous devons les présenter et comment rendre le flux aussi fluide que possible.
 Nous espérons que cet article vous offrira un aperçu solide des principes UX.

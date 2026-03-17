@@ -1,6 +1,6 @@
 ---
-title: Aktywne obszary badań nad Ethereum
-description: Odkryj różne obszary otwartych badań i dowiedz się, jak się w nie zaangażować.
+title: "Aktywne obszary badań nad Ethereum"
+description: "Odkryj różne obszary otwartych badań i dowiedz się, jak się w nie zaangażować."
 lang: pl
 ---
 
@@ -57,7 +57,7 @@ Warstwa wykonawcza związana jest z wykonywaniem transakcji, uruchamianiem [wirt
 
 - budowanie wsparcia lekkich klientów;
 - badanie limitów gazu;
-- oraz włączanie nowych struktur danych (np. drzewa Verkle).
+- oraz włączanie nowych struktur danych (np. drzew Verkle).
 
 #### Podstawowe informacje {#background-reading-1}
 
@@ -83,7 +83,7 @@ Węzeł Ethereum wymaga uruchomienia dwóch elementów oprogramowania:
 1. klienta konsensusu do śledzenia początku blockchainu, plotkowania bloków i obsługi logiki konsensusu
 2. klienta wykonawczego do obsługi maszyny wirtualnej Ethereum oraz wykonywania transakcji i inteligentnych kontraktów
 
-Więcej szczegółów na temat węzłów i klientów oraz lista wszystkich aktualnych implementacji klientów znajduje się na [strona węzłów i klientów](/developers/docs/nodes-and-clients/). Historię wszystkich uaktualnień Ethereum możesz również znaleźć na [stronie historii](/ethereum-forks/).
+Więcej szczegółów na temat węzłów i klientów oraz listę wszystkich aktualnych implementacji klientów znajdziesz na [stronie o węzłach i klientach](/developers/docs/nodes-and-clients/). Historię wszystkich uaktualnień Ethereum możesz również znaleźć na [stronie historii](/ethereum-forks/).
 
 ### Klienty wykonawcze {#execution-clients}
 
@@ -220,7 +220,7 @@ Aby wprowadzić więcej osób do Ethereum, ekosystem musi poprawić UX/UI. Będz
 
 ### Ekonomia {#economics}
 
-Badania ekonomiczne w Ethereum zasadniczo opierają się na dwóch podejściach: walidacji bezpieczeństwa mechanizmów opartych na zachętach ekonomicznych („mikroekonomia”) i analizie przepływów wartości między protokołami, aplikacjami i użytkownikami („makroekonomia”). Istnieją złożone czynniki krypto-ekonomiczne związane z natywnym aktywem Ethereum (ethereum) i tokenami zbudowanymi na nim (na przykład NFT i tokeny ERC20).
+Badania ekonomiczne w Ethereum zasadniczo opierają się na dwóch podejściach: walidacji bezpieczeństwa mechanizmów opartych na zachętach ekonomicznych („mikroekonomia”) i analizie przepływów wartości między protokołami, aplikacjami i użytkownikami („makroekonomia”). Istnieją złożone czynniki krypto-ekonomiczne związane z natywnym aktywem Ethereum (etherem) i tokenami zbudowanymi na nim (na przykład NFT i tokeny ERC20).
 
 #### Podstawowe informacje {#background-reading-9}
 
@@ -358,7 +358,7 @@ Narzędzia dla programistów Ethereum szybko się poprawiają. W tym obszarze wy
 
 ### Wyrocznie {#oracles}
 
-Wyrocznie importują dane spoza łańcucha do blockchainu w sposób zdecentralizowany i niewymagający uprawnień. Uzyskanie tych danych w łańcuchu umożliwia zdecentralizowanym aplikacjom reagowanie na zjawiska w świecie rzeczywistym, takie jak wahania cen aktywów w świecie rzeczywistym, wydarzenia w aplikacjach poza łańcuchem, a nawet zmiany pogody.
+Wyrocznie importują dane spoza łańcucha do blockchainu w sposób zdecentralizowany i niewymagający uprawnień. Uzyskanie tych danych w łańcuchu umożliwia dapkom reagowanie na zjawiska w świecie rzeczywistym, takie jak wahania cen aktywów w świecie rzeczywistym, wydarzenia w aplikacjach poza łańcuchem, a nawet zmiany pogody.
 
 #### Podstawowe informacje {#background-reading-18}
 
@@ -377,7 +377,7 @@ Włamania na Ethereum zazwyczaj wykorzystują luki w poszczególnych aplikacjach
 
 - [Raport o exploicie Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Lista przypadków włamań na kontrakty w Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Wiadomości Rekt](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Wiadomości Rekt](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Ostatnie badania {#recent-research-19}
 

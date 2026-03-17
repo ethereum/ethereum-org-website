@@ -42,7 +42,7 @@ Catatan tentang ember konten: kami menggunakan 'ember konten' di dalam Crowdin u
 
 Kami mendorong Anda untuk menerjemahkan dalam urutan numerik ini (1 → 2 → 3 → ⋯) untuk memastikan halaman dengan dampak tertinggi diterjemahkan terlebih dahulu.
 
-[Pelajari selengkapnya tentang ember konten ethereum.org](/contributing/translation-program/content-buckets/)
+[Pelajari selengkapnya tentang ember konten ethereum.org](/contributing/translation-program/)
 
 ### Menerjemahkan {#translate}
 

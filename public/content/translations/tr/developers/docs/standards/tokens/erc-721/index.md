@@ -1,6 +1,6 @@
 ---
-title: ERC-721 Değiştirilemez Token Standardı
-description:
+title: "ERC-721 Değiştirilemeyen Token Standardı"
+description: "Ethereum'daki benzersiz dijital varlıkları temsil eden, eşsiz jetonlar (NFT'ler) için standart olan ERC-721 hakkında bilgi edinin."
 lang: tr
 ---
 
@@ -12,25 +12,29 @@ Bir Değiştirilemez Token (NFT), bir şeyi veya bir kimseyi eşsiz bir yolla ta
 
 **ERC-721 nedir?**
 
-ERC-721, NFT için bir standart getirir, başka bir deyişle, bu Token türü benzersizdir ve örneğin yaşı, nadirliği ve hatta görseli gibi başka bir şey nedeniyle aynı Akıllı Sözleşmedeki başka bir Token'dan farklı değere sahip olabilir. Görsel mi?
+ERC-721, NFT için bir standart getirir, başka bir deyişle, bu Token türü benzersizdir ve örneğin yaşı, nadirliği ve hatta görseli gibi başka bir şey nedeniyle aynı Akıllı Sözleşmedeki başka bir Token'dan farklı değere sahip olabilir.
+Görsel mi?
 
-Evet! Tüm NFT'ler `tokenId` denilen bir `uint256` değişkenine sahiptir, yani herhangi bir ERC-721 sözleşmesi için, `sözleşme adresi, uint256 tokenId` çifti küresel olarak eşsiz olmalıdır. Bununla birlikte, bir dapp girdi olarak `tokenId` kullanan ve çıktı olarak da zombiler, silahlar, yetenekler ya da muhteşem kedicikler gibi havalı bir şeyin görüntüsünü veren bir "dönüştürücüye" sahip olabilir!
+Evet! Tüm NFT'ler `tokenId` adlı bir `uint256` değişkenine sahiptir, bu nedenle herhangi bir ERC-721 Sözleşmesi için,
+`sözleşme adresi, uint256 tokenId` çifti küresel olarak eşsiz olmalıdır. Bununla birlikte, bir dapp girdi olarak `tokenId` kullanan ve çıktı olarak da zombiler, silahlar, yetenekler ya da muhteşem kedicikler gibi havalı bir şeyin görüntüsünü veren bir
+"dönüştürücüye" sahip olabilir!
 
 ## Ön Koşullar {#prerequisites}
 
 - [Hesaplar](/developers/docs/accounts/)
 - [Akıllı Sözleşmeler](/developers/docs/smart-contracts/)
-- [Token standartları](/developers/docs/standards/tokens/)
+- [Jeton standartları](/developers/docs/standards/tokens/)
 
-## Şablon {#body}
+## Gövde {#body}
 
 William Entriken, Dieter Shirley, Jacob Evans ve Nastassia Sachs tarafından Ocak 2018'de önerilen ERC-721 (Ethereum Yorum Talebi 721), Akıllı Sözleşmeler içindeki token'lar için bir API uygulayan bir Değiştirilebilir Token Standardıdır.
 
-Token'ları bir hesaptan diğerine aktarmak, bir hesabın mevcut token bakiyesini almak, belirli bir token'ın sahibini almak ve ayrıca ağda mevcut olan token'ın toplam arzını almak gibi işlevler sağlar. Bunların yanı sıra, bir hesaptan bir miktar token'ın üçüncü taraf bir hesap tarafından taşınabileceğini onaylamak gibi başka işlevleri de vardır.
+Token'ları bir hesaptan diğerine aktarmak, bir hesabın mevcut token bakiyesini almak, belirli bir token'ın sahibini almak ve ayrıca ağda mevcut olan token'ın toplam arzını almak gibi işlevler sağlar.
+Bunların yanı sıra, bir hesaptan bir miktar token'ın üçüncü taraf bir hesap tarafından taşınabileceğini onaylamak gibi başka işlevleri de vardır.
 
 Bir Akıllı Sözleşme aşağıdaki yöntemleri ve olayları uygularsa, ERC-721 Değiştirilemez Token Sözleşmesi olarak adlandırılabilir ve dağıtıldıktan sonra, Ethereum üzerinde oluşturulan token'ları takip etmekten sorumlu olur.
 
-[EIP-721](https://eips.ethereum.org/EIPS/eip-721)'den:
+[EIP-721'den](https://eips.ethereum.org/EIPS/eip-721):
 
 ### Yöntemler {#methods}
 
@@ -56,11 +60,12 @@ Bir Akıllı Sözleşme aşağıdaki yöntemleri ve olayları uygularsa, ERC-721
 
 ### Örnekler {#web3py-example}
 
-Ethereum'daki herhangi bir ERC-721 Token Sözleşmesini incelememizi basitleştirmek için bir Standart'ın ne kadar önemli olduğunu görelim. Herhangi bir ERC-721 token'a arayüz oluşturmak için sadece sözleşmenin Uygulama İkili Arayüzü'ne (ABI) ihtiyacımız var. Aşağıda görebileceğiniz gibi az sürtünmeli bir örnek olması için basitleştirilmiş bir ABI kullanacağız.
+Ethereum'daki herhangi bir ERC-721 Token Sözleşmesini incelememizi basitleştirmek için bir Standart'ın ne kadar önemli olduğunu görelim.
+Herhangi bir ERC-721 token'a arayüz oluşturmak için sadece sözleşmenin Uygulama İkili Arayüzü'ne (ABI) ihtiyacımız var. Aşağıda görebileceğiniz gibi az sürtünmeli bir örnek olması için basitleştirilmiş bir ABI kullanacağız.
 
 #### Web3.py Örneği {#web3py-example}
 
-İlk olarak, [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python kütüphanesini kurduğunuzdan emin olun:
+Öncelikle, [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python kütüphanesini yüklediğinizden emin olun:
 
 ```
 pip install web3
@@ -73,12 +78,12 @@ from web3._utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Sözleşmesi
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Satış Müzayedesi
 
-# This is a simplified Contract Application Binary Interface (ABI) of an ERC-721 NFT Contract.
-# It will expose only the methods: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
+# Bu, bir ERC-721 NFT Sözleşmesinin basitleştirilmiş bir Sözleşme Uygulama İkili Arayüzüdür (ABI).
+# Yalnızca şu yöntemleri kullanıma sunacaktır: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
@@ -136,7 +141,7 @@ print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 pregnant_kitties = ck_contract.functions.pregnantKitties().call()
 print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
-# Using the Transfer Event ABI to get info about transferred Kitties.
+# Aktarılan Kedicikler hakkında bilgi almak için Transfer Olayı ABI'sini kullanma.
 tx_event_abi = {
     'anonymous': False,
     'inputs': [
@@ -147,7 +152,7 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# We need the event's signature to filter the logs
+# Günlükleri filtrelemek için olayın imzasına ihtiyacımız var
 event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.get_logs({
@@ -156,25 +161,25 @@ logs = w3.eth.get_logs({
     "topics": [event_signature]
 })
 
-# Notes:
-#   - Increase the number of blocks up from 120 if no Transfer event is returned.
-#   - If you didn't find any Transfer event you can also try to get a tokenId at:
+# Notlar:
+#   - Herhangi bir Transfer olayı döndürülmezse blok sayısını 120'den yukarı artırın.
+#   - Herhangi bir Transfer olayı bulamadıysanız, şuradan bir tokenId almayı da deneyebilirsiniz:
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-#       Click to expand the event's logs and copy its "tokenId" argument
+#       Etkinliğin günlüklerini genişletmek için tıklayın ve "tokenId" bağımsız değişkenini kopyalayın
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
 if recent_tx:
-    kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
+    kitty_id = recent_tx[0]['tokenId'] # Yukarıdaki bağlantıdan "tokenId"yi buraya yapıştırın
     is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
     print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
 CryptoKitties Sözleşmesi, Standart olanlar dışında bazı ilginç Olaylara sahiptir.
 
-Hadi ikisine bakalım, `Pregnant` ve `Birth`.
+İkisini kontrol edelim, `Pregnant` ve `Birth`.
 
 ```python
-# Using the Pregnant and Birth Events ABI to get info about new Kitties.
+# Yeni Kedicikler hakkında bilgi almak için Pregnant ve Birth Olayları ABI'sini kullanma.
 ck_extra_events_abi = [
     {
         'anonymous': False,
@@ -198,13 +203,13 @@ ck_extra_events_abi = [
         'type': 'event'
     }]
 
-# We need the event's signature to filter the logs
+# Günlükleri filtrelemek için olayın imzasına ihtiyacımız var
 ck_event_signatures = [
     w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
     w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
-# Here is a Pregnant Event:
+# İşte bir Pregnant Olayı:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
 pregnant_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,
@@ -214,7 +219,7 @@ pregnant_logs = w3.eth.get_logs({
 
 recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
-# Here is a Birth Event:
+# İşte bir Birth Olayı:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
 birth_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,
@@ -227,18 +232,24 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## Popüler NFT'ler {#popular-nfts}
 
-- [Etherscan NFT Tracker](https://etherscan.io/tokens-nft), aktarım hacmine göre Ethereum üzerindeki en yüksek NFT'leri sıralar.
-- [CryptoKitties](https://www.cryptokitties.co/) yetiştirilebilen, toplanabilen ve aşırı şirin olan CryptoKitties dediğimiz yaratıklar çevresinde gelişen bir oyundur.
-- [Sorare](https://sorare.com/), sınırlı sayılı koleksiyon parçaları toplayabileceğiniz, takımlarınızı yönetebileceğiniz ve ödüller kazanmak için rekabet edebileceğiniz küresel bir fantezi futbol oyunudur.
-- [Ethereum İsim Hizmeti (ENS)](https://ens.domains/); basit, insanlar tarafından okunabilir isimler kullanarak hem blok zinciri üstünde hem de dışında kaynakları yönetmenin güvenli ve merkeziyetsiz bir yolunu sunar.
-- [POAP](https://poap.xyz), etkinliklere katılan veya belirli eylemleri tamamlayan kişilere ücretsiz NFT'ler sunar. POAP'ler oluşturmak ve dağıtmak ücretsizdir.
-- [Unstoppable Domains](https://unstoppabledomains.com/), blok zincirleri üzerinde alan adları inşa eden San-Francisco merkezli bir şirkettir. Blok zinciri alan adları, kripto para adreslerini insanlar tarafından okunabilir adlarla değiştirir ve sansüre dayanıklı web sitelerini etkinleştirmek için kullanılabilir.
-- [Gods Unchained Cards](https://godsunchained.com/), oyun içi varlıklara gerçek sahiplik getirmek için NFT'leri kullanan Ethereum blok zinciri üzerindeki bir Kart Ticareti Oyunudur.
-- [Bored Ape Yacht Club](https://boredapeyachtclub.com), kanıtlanabilir derecede ender bir sanat eseri olmasının yanı sıra, kulübe üyelik simgesi olarak hareket eden ve topluluk çabalarının sonucu olarak zamanla artan üye avantajları ve faydaları sağlayan 10.000 benzersiz NFT'den oluşan bir koleksiyondur.
+- [Etherscan NFT Tracker](https://etherscan.io/nft-top-contracts) Ethereum'daki en iyi NFT'leri transfer hacmine göre listeler.
+- [CryptoKitties](https://www.cryptokitties.co/), CryptoKitties adını verdiğimiz, yetiştirilebilir, koleksiyonluk ve çok sevimli
+  yaratıklar etrafında şekillenen bir oyundur.
+- [Sorare](https://sorare.com/), sınırlı sayıda üretilmiş koleksiyon ürünleri toplayabildiğiniz, takımlarınızı yönetebildiğiniz ve ödül kazanmak için rekabet edebildiğiniz
+  küresel bir fantezi futbol oyunudur.
+- [Ethereum İsim Servisi (ENS)](https://ens.domains/), basit ve insan tarafından okunabilir isimler kullanarak hem
+  blokzincir üzerindeki hem de dışındaki kaynakları adreslemek için güvenli ve merkeziyetsiz bir yol sunar.
+- [POAP](https://poap.xyz), etkinliklere katılan veya belirli eylemleri tamamlayan kişilere ücretsiz NFT'ler dağıtır. POAP'ler oluşturmak ve dağıtmak ücretsizdir.
+- [Unstoppable Domains](https://unstoppabledomains.com/), San Francisco merkezli, blokzincirler üzerinde
+  alan adları oluşturan bir şirkettir. Blokzincir alan adları, kripto para adreslerini insanlar tarafından okunabilir adlarla değiştirir ve sansüre dayanıklı web sitelerini etkinleştirmek
+  için kullanılabilir.
+- [Gods Unchained Cards](https://godsunchained.com/), oyun içi varlıklara gerçek mülkiyet kazandırmak için NFT'leri kullanan,
+  Ethereum blokzinciri üzerindeki bir Takas Kartı Oyunu'dur (TCG).
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com), kanıtlanabilir derecede nadir bir sanat eseri olmasının yanı sıra kulüp için bir üyelik jetonu görevi gören ve topluluk çabaları sonucunda zamanla artan üye ayrıcalıkları ve avantajları sağlayan 10.000 benzersiz NFT'den oluşan bir koleksiyondur.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-- [EIP-721: ERC-721 Değiştirilemez Token Standardı](https://eips.ethereum.org/EIPS/eip-721)
+- [EIP-721: ERC-721 Eşsiz Jeton Standardı](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 Belgeleri](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - ERC-721 Uygulaması](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
-- [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [Alchemy NFT API'si](https://www.alchemy.com/docs/reference/nft-api-quickstart)

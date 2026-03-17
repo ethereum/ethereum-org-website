@@ -104,7 +104,7 @@ Wir empfehlen, Namen von Marken, Unternehmen und Personen nicht zu übersetzen, 
 
 Um ein bestimmtes Niveau und Konsistenz in unseren Überstzungen zu gewährleisten, arbeiten wir mit [Acolad](https://www.acolad.com/), einem der weltweit größten Übersetzungsdienstleister, zusammen. Acolad arbeitet mit mehr als 20.000 professionellen Sprachexperten zusammen. Das bedeutet, dass sie für jede Sprache und jede Art von Inhalten, die wir benötigen, professionelle Prüfer bereitstellen können.
 
-Der Überprüfungsprozess ist unkompliziert. Sobald ein bestimmtes [Inhaltsgebiet](/contributing/translation-program/content-buckets) vollständig übersetzt ist, beauftragen wir die eine die Überprüfung dieser Inhalte. Der Überprüfungsprozess erfolgt direkt in Crowdin. Sobald die Überprüfung abgeschlossen ist aktualisieren wir die Website mit dem übersezten Inhalt.
+Der Überprüfungsprozess ist unkompliziert. Sobald ein bestimmtes [Inhaltsgebiet](/contributing/translation-program/) vollständig übersetzt ist, beauftragen wir die eine die Überprüfung dieser Inhalte. Der Überprüfungsprozess erfolgt direkt in Crowdin. Sobald die Überprüfung abgeschlossen ist aktualisieren wir die Website mit dem übersezten Inhalt.
 
 ## Wie kann ich Inhalte in meiner Sprache hinzufügen? {#adding-foreign-language-content}
 

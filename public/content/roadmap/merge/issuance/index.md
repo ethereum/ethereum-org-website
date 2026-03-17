@@ -6,7 +6,7 @@ lang: en
 
 # How The Merge impacted ETH supply {#how-the-merge-impacts-ETH-supply}
 
-The Merge represented the Ethereum network's transition from proof-of-work to proof-of-stake which occurred in September 2022. The way ETH was issued underwent changes at time of that transition. Previously, new ETH was issued from two sources: the execution layer (i.e., Mainnet) and the consensus layer (i.e., Beacon Chain). Since The Merge, issuance on the execution layer is now zero. Let's break this down.
+The Merge represented the [Ethereum](/) network's transition from proof-of-work to proof-of-stake which occurred in September 2022. The way ETH was issued underwent changes at time of that transition. Previously, new ETH was issued from two sources: the execution layer (i.e., Mainnet) and the consensus layer (i.e., Beacon Chain). Since The Merge, issuance on the execution layer is now zero. Let's break this down.
 
 ## Components of ETH issuance {#components-of-eth-issuance}
 
@@ -86,7 +86,7 @@ As more validators withdraw, the maximum number of exiting validators will gradu
 
 ### Post-merge inflation breakdown {#post-merge-inflation-breakdown}
 
-- Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
+- [Total ETH supply](/eth/supply/): **~120,520,000 ETH** (at time of The Merge in September 2022)
 - Execution layer issuance: **0**
 - Consensus layer issuance: Same as above, **~0.52%** annualized issuance rate (with 14 million total ETH staked)
 

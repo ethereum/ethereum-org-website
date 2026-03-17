@@ -1,6 +1,6 @@
 ---
 title: 7 heuristiques pour la conception d'interfaces Web3
-description: Principes pour améliorer la convivialité du Web3
+description: "Principes pour améliorer la convivialité du Web3"
 lang: fr
 ---
 

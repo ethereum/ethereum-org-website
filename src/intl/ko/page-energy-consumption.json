@@ -1,0 +1,21 @@
+{
+  "adoption-chart-artists-label": "아티스트",
+  "adoption-chart-column-now-label": "현재",
+  "adoption-chart-companies-label": "기업",
+  "adoption-chart-developers-label": "개발자",
+  "adoption-chart-gamers-label": "게이머",
+  "adoption-chart-investors-label": "투자자",
+  "adoption-chart-musicians-label": "뮤지션",
+  "adoption-chart-refugees-label": "피난민",
+  "adoption-chart-writers-label": "작가",
+  "energy-consumption-chart-airbnb-label": "에어비앤비",
+  "energy-consumption-chart-btc-pow-label": "BTC 작업 증명",
+  "energy-consumption-chart-eth-pos-label": "ETH 지분 증명",
+  "energy-consumption-chart-eth-pow-label": "ETH 작업 증명",
+  "energy-consumption-chart-gaming-us-label": "미국 내의 게이밍",
+  "energy-consumption-chart-global-data-centers-label": "세계 데이터 센터",
+  "energy-consumption-chart-netflix-label": "넷플릭스",
+  "energy-consumption-chart-paypal-label": "페이팔",
+  "energy-consumption-gold-mining-cbeci-label": "금 채굴",
+  "energy-consumption-chart-legend": "연간 에너지 소비량(TWh/년)"
+}

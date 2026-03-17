@@ -1,0 +1,21 @@
+{
+  "adoption-chart-artists-label": "Художники",
+  "adoption-chart-column-now-label": "Зараз",
+  "adoption-chart-companies-label": "Компанії",
+  "adoption-chart-developers-label": "Розробникам",
+  "adoption-chart-gamers-label": "Любителі ігор",
+  "adoption-chart-investors-label": "Інвестори",
+  "adoption-chart-musicians-label": "Музиканти",
+  "adoption-chart-refugees-label": "Біженці",
+  "adoption-chart-writers-label": "Письменники",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "Ігри в США",
+  "energy-consumption-chart-global-data-centers-label": "Глобальні центри обробки даних",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-gold-mining-cbeci-label": "Золотодобування",
+  "energy-consumption-chart-legend": "Річне споживання енергії в ТВт·год/рік"
+}

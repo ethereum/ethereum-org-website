@@ -64,7 +64,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # Hash should output: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Note that images for Rock 5B and Odroid M1 boards are available at the Ethereum-on-Arm [downloads page](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html).
+Note that images for Rock 5B and Odroid M1 boards are available at the Ethereum-on-Arm [downloads page](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/).
 
 ## Flashing the MicroSD {#flashing-the-microsd}
 
@@ -158,7 +158,7 @@ Congratulations, you now have a full Ethereum node and validator running on a Ra
 
 ## More details {#more-details}
 
-This page gave an overview of how to set up a Geth-Lighthouse node and validator using Raspberry Pi. More detailed instructions are available on the [Ethereum-on-Arm website](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html).
+This page gave an overview of how to set up a Geth-Lighthouse node and validator using Raspberry Pi. More detailed instructions are available on the [Ethereum-on-Arm website](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/).
 
 ## Feedback appreciated {#feedback-appreciated}
 
@@ -177,7 +177,7 @@ Please dig into the details in this tutorial, try running on testnets, check out
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

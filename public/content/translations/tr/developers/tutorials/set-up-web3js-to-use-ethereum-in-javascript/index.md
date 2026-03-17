@@ -1,10 +1,8 @@
 ---
-title: JavaScript'te Ethereum blok zincirini kullanmak için web3.js'yi kurun
-description: Solidity dilini kullanarak bir token'la etkileşmek için bir akıllı sözleşme nasıl kullanılır
+title: "JavaScript'te Ethereum blok zincirini kullanmak için web3.js'yi kurun"
+description: "JavaScript uygulamalarından Ethereum blokzinciri ile etkileşim kurmak için web3.js kütüphanesini nasıl kurup yapılandıracağınızı öğrenin."
 author: "jdourlens"
-tags:
-  - "web3.js"
-  - "javascript"
+tags: [ "web3.js", "javascript" ]
 skill: beginner
 lang: tr
 published: 2020-04-11
@@ -13,7 +11,7 @@ sourceUrl: https://ethereumdev.io/setup-web3js-to-use-the-ethereum-blockchain-in
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Bu öğreticide, Ethereum blok zinciri ile etkileşime geçmek için [web3.js](https://web3js.readthedocs.io/) ile nasıl başlayacağımızı göreceğiz. Web3.js, blok zincirinden veri okumak veya işlem yapmak ve hatta akıllı sözleşmeleri dağıtmak için hem ön uçlarda hem de arka uçlarda kullanılabilir.
+Bu öğreticide, Ethereum blokzinciri ile etkileşime geçmek için [web3.js](https://web3js.readthedocs.io/) ile nasıl başlayacağımızı göreceğiz. Web3.js, blokzincirden veri okumak veya işlem yapmak ve hatta akıllı sözleşmeleri dağıtmak için hem ön uçlarda hem de arka uçlarda kullanılabilir.
 
 İlk adım, projenize web3.js'yi dahil etmektir. Bir web sayfasında kullanmak için, JSDeliver gibi bir CDN kullanarak kütüphaneyi doğrudan içe aktarabilirsiniz.
 
@@ -33,13 +31,13 @@ Ardından Web3.js'yi bir Node.js komut dosyasına veya Browserify ön uç projes
 const Web3 = require("web3")
 ```
 
-Şimdi projeye kütüphaneyi dahil ettiğimize göre, onu başlatmamız gerekiyor. Projenizin blok zinciri ile iletişim kurabilmesi gerekiyor. Çoğu Ethereum kütüphanesi bir [düğüm](/developers/docs/nodes-and-clients/) ile RPC çağrıları aracılığıyla iletişim kurar. Web3 sağlayıcımızı başlatmak için, sağlayıcının URL'sini yapıcı olarak geçen bir Web3 örneğini başlatacağız. Eğer bir düğümünüz veya [bilgisayarınızda çalışan bir ganache örneği](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/) varsa şu şekilde gözükecektir:
+Artık kütüphaneyi projeye dahil ettiğimize göre onu başlatmamız gerekiyor. Projenizin blokzinciri ile iletişim kurabilmesi gerekiyor. Çoğu Ethereum kütüphanesi, RPC çağrıları aracılığıyla bir [düğüm](/developers/docs/nodes-and-clients/) ile iletişim kurar. Web3 sağlayıcımızı başlatmak için, kurucuya sağlayıcının URL'sini vererek bir Web3 örneği oluşturacağız. Bilgisayarınızda çalışan bir düğümünüz veya [ganache örneğiniz](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/) varsa, şuna benzer görünecektir:
 
 ```js
 const web3 = new Web3("http://localhost:8545")
 ```
 
-Barındırılan bir düğüme doğrudan erişmek isterseniz, bununla ilgili seçenekleri [bir hizmet olarak düğümler](/developers/docs/nodes-and-clients/nodes-as-a-service) içinde bulabilirsiniz.
+Barındırılan bir düğüme doğrudan erişmek isterseniz, [hizmet olarak düğümler](/developers/docs/nodes-and-clients/nodes-as-a-service) sayfasında seçenekleri bulabilirsiniz.
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
@@ -56,7 +54,7 @@ web3.eth.getBlockNumber(function (error, result) {
 })
 ```
 
-Bu programı çalıştırırsanız, sadece en son blok numarasını yazdıracaktır: blok zincirinin tepesi. Kodunuzda iç içe geri aramaları önlemek için `await/async` fonksiyon çağrılarını da kullanabilirsiniz:
+Bu programı çalıştırırsanız, en son blok numarasını yazdıracaktır: blokzincirinin en üstünü. Kodunuzda iç içe geri aramaları önlemek için `await/async` fonksiyon çağrılarını da kullanabilirsiniz:
 
 ```js
 async function getBlockNumber() {
@@ -68,27 +66,27 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-Web3 örneğinde kullanılabilen tüm fonksiyonları, [resmi web3.js belgelerinde](https://docs.web3js.org/) görebilirsiniz.
+Web3 örneğinde kullanılabilen tüm fonksiyonları [resmi web3.js belgelerinde](https://docs.web3js.org/) görebilirsiniz.
 
-Web3 kütüphanelerinin çoğu eşzamansızdır çünkü arka planda kütüphane, sonucu geri gönderen düğüme JSON RPC çağrıları yapar.
+Çoğu Web3 kütüphanesi eşzamansızdır çünkü arka planda kütüphane, sonucu geri gönderen düğüme JSON-RPC çağrıları yapar.
 
 <Divider />
 
-Tarayıcıda çalışıyorsanız, bazı cüzdanlar doğrudan bir Web3 örneği enjekte eder ve özellikle işlem yapmak için kullanıcının Ethereum adresiyle etkileşim kurmayı planlıyorsanız, mümkün olduğunda onu kullanmaya çalışmalısınız.
+Tarayıcıda çalışıyorsanız, bazı cüzdanlar doğrudan bir Web3 örneği enjekte eder ve özellikle işlem yapmak için kullanıcının Ethereum adresiyle etkileşim kurmayı planlıyorsanız, mümkün olduğunca kullanmaya çalışmalısınız.
 
-İşte bir MetaMask cüzdanının mevcut olup olmadığını tespit etmek ve varsa onu etkinleştirmeye çalışmak için bir parçacık. Daha sonra, kullanıcının bakiyesini okumanıza ve Ethereum blok zincirinde yapmak istediğiniz işlemleri doğrulamalarına olanak tanır:
+Bir MetaMask cüzdanının mevcut olup olmadığını tespit etmek ve varsa etkinleştirmeye çalışmak için gereken kod parçacığı aşağıdadır. Bu, daha sonra kullanıcının bakiyesini okumanıza ve Ethereum blokzincirinde yapmalarını istediğiniz işlemleri doğrulamalarına olanak tanır:
 
 ```js
 if (window.ethereum != null) {
   state.web3 = new Web3(window.ethereum)
   try {
-    // Request account access if needed
+    // Gerekirse hesap erişimi isteyin
     await window.ethereum.enable()
-    // Accounts now exposed
+    // Hesaplar artık kullanıma açık
   } catch (error) {
-    // User denied account access...
+    // Kullanıcı hesap erişimini reddetti...
   }
 }
 ```
 
-[Ethers.js](https://docs.ethers.io/) gibi web3.js alternatifleri de mevcuttur ve sıklıkla kullanılır. Bir sonraki öğreticide, [blok zincirindeki yeni gelen blokları kolayca nasıl dinleyeceğinizi ve neler içerdiklerini görmeyi öğreneceğiz](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).
+[Ethers.js](https://docs.ethers.io/) gibi web3.js alternatifleri de mevcuttur ve yaygın olarak kullanılmaktadır. Bir sonraki öğreticide, [blokzincirine gelen yeni blokları kolayca nasıl dinleyeceğimizi ve ne içerdiklerini nasıl göreceğimizi](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/) göreceğiz.

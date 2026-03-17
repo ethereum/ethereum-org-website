@@ -15,7 +15,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## Perché c'è un limite? {#why-is-there-a-limit}
 
-Il [22 Novembre 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/), la diramazione permanente Spurious Dragon ha introdotto [EIP-170](https://eips.ethereum.org/EIPS/eip-170), che ha aggiunto un limite di dimensioni per gli smart contract di 24.576 kb. Per gli sviluppatori in Solidity, significa che quando si aggiungono più funzionalità al contratto, a un certo punto si raggiunge il limite e, in fase di implementazione, si vedrà l'errore:
+Il [22 Novembre 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon), la diramazione permanente Spurious Dragon ha introdotto [EIP-170](https://eips.ethereum.org/EIPS/eip-170), che ha aggiunto un limite di dimensioni per gli smart contract di 24.576 kb. Per gli sviluppatori in Solidity, significa che quando si aggiungono più funzionalità al contratto, a un certo punto si raggiunge il limite e, in fase di implementazione, si vedrà l'errore:
 
 `Attenzione: La dimensione del codice del contratto eccede i 24576 byte (un limite introdotto in Spurious Dragon). This contract may not be deployable on Mainnet. Considera di abilitare l'ottimizzatore (con un valore di "esecuzioni" basso!), disattivare le stringhe di ripristino o usare le librerie.`
 

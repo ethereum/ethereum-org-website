@@ -4,7 +4,7 @@ description: An introduction to the Ethereum client APIs that let you interact w
 lang: en
 ---
 
-In order for a software application to interact with the Ethereum blockchain (i.e., read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
+In order for a software application to interact with the [Ethereum](/) blockchain (i.e., read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
 
 For this purpose, every Ethereum client implements the [JSON-RPC](/developers/docs/apis/json-rpc/) specification, so there is a uniform set of [methods](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
 
@@ -186,6 +186,14 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Watchdata](https://watchdata.io/)
 - [Documentation](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
+
+**Codex -** **_Real-time, enriched blockchain data API across dozens of chains._**
+
+- [codex.io](https://www.codex.io/)
+- [Documentation](https://docs.codex.io)
+- [Explorer](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [Discord](https://discord.com/invite/mFpUhT3vAq)
 
 **Covalent -** **_Enriched blockchain APIs for 200+ Chains._**
 

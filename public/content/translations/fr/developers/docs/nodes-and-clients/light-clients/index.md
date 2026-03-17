@@ -1,6 +1,6 @@
 ---
-title: Clients légers
-description: Introduction aux clients légers Ethereum.
+title: "Clients légers"
+description: "Introduction aux clients légers Ethereum."
 lang: fr
 ---
 
@@ -12,7 +12,7 @@ Un nœud léger est un nœud exécutant un logiciel client léger. Au lieu de co
 
 ## Comment fonctionnent les clients légers ? {#how-do-light-clients-work}
 
-Lorsque Ethereum a commencé à utiliser un mécanisme de consensus basé sur la preuve d'enjeu, une nouvelle infrastructure a été introduite spécifiquement pour prendre en charge les clients légers. Le système fonctionne en sélectionnant au hasard un sous-ensemble de 512 validateurs tous les 1,1 jour pour agir en tant que **comité de synchronisation**. Le comité de synchronisation signe l'en-tête des blocs récents. Chaque en-tête de bloc contient la signature agrégée des validateurs du comité de synchronisation et un « champ de bits » qui indique les validateurs qui ont signé et ceux qui n'ont pas signé. Chaque en-tête comprend également une liste de validateurs censés participer à la signature du bloc suivant. Cela signifie qu'un client léger peut rapidement voir que le comité de synchronisation a approuvé les données qu'il reçoit, et il peut également vérifier que le comité de synchronisation est le bon en comparant les données qu'il reçoit à celles qu'on lui a dit d'attendre dans le bloc précédent. De cette façon, le client léger peut continuer à mettre à jour sa connaissance du dernier bloc Ethereum sans télécharger le bloc lui-même, mais seulement l'en-tête contenant des informations sommaires.
+Lorsque Ethereum a commencé à utiliser un mécanisme de consensus basé sur la preuve d'enjeu, une nouvelle infrastructure a été introduite spécifiquement pour prendre en charge les clients légers. Le système fonctionne en sélectionnant au hasard un sous-ensemble de 512 validateurs tous les 1,1 jours pour agir en tant que **comité de synchronisation**. Le comité de synchronisation signe l'en-tête des blocs récents. Chaque en-tête de bloc contient la signature agrégée des validateurs du comité de synchronisation et un "champ de bits" qui indique quels validateurs ont signé et lesquels ne l'ont pas fait. Chaque en-tête comprend également une liste de validateurs censés participer à la signature du bloc suivant. Cela signifie qu'un client léger peut rapidement voir que le comité de synchronisation a approuvé les données qu'il reçoit, et il peut également vérifier que le comité de synchronisation est le bon en comparant les données qu'il reçoit à celles qu'on lui a dit d'attendre dans le bloc précédent. De cette façon, le client léger peut continuer à mettre à jour sa connaissance du dernier bloc Ethereum sans télécharger le bloc lui-même, mais seulement l'en-tête contenant des informations sommaires.
 
 Au niveau de la couche d'exécution, il n'existe pas de spécification unique pour un client d'exécution léger. La portée d'un client d'exécution légère peut varier d'un « mode léger » d'un client d'exécution complète qui dispose de toutes les fonctionnalités EVM et réseau d'un nœud complet, mais qui vérifie uniquement les en-têtes de blocs, sans télécharger les données associées, ou il peut s'agir d'un client plus simple qui s'appuie fortement sur la transmission de demandes à un fournisseur RPC pour interagir avec Ethereum.
 
@@ -32,7 +32,7 @@ L'avantage principal des clients légers est de permettre à un plus grand nombr
 
 La possibilité d'exécuter des nœuds Ethereum sur des appareils dotés d'une capacité de stockage, d'une mémoire et d'une puissance de traitement très faibles est l'un des principaux domaines d'innovation rendus possibles par les clients légers. Alors qu'aujourd'hui les nœuds Ethereum nécessitent beaucoup de ressources informatiques, les clients légers pourraient être intégrés dans des navigateurs, fonctionner sur des téléphones portables et peut-être même sur des appareils plus petits tels que des montres intelligentes. Cela signifie que les portefeuilles Ethereum avec des clients intégrés pourraient fonctionner sur un téléphone portable. Les portefeuilles mobiles pourraient donc être beaucoup plus décentralisés, car ils n'auraient pas à faire confiance à des fournisseurs de données centralisés pour leurs données.
 
-L'activation des dispositifs de **l'internet des objets (IoT)** est une extension de ce principe. Un client léger pourrait être utilisé pour rapidement prouver la propriété d'un solde de jetons ou encore d'un NFT, avec toutes les garanties de sécurité fournies par les comités de synchronisation, déclenchant une action sur un réseau IoT. Imaginez un [service de location de vélos](https://youtu.be/ZHNrAXf3RDE?t=929) qui utilise une application avec un client léger embarqué pour vérifier rapidement que vous possédez bien le NFT du service de location, et si c'est le cas, débloque un vélo sur lequel vous pourriez filer !
+Une extension de ceci est la prise en charge des appareils de l'**internet des objets (IoT)**. Un client léger pourrait être utilisé pour rapidement prouver la propriété d'un solde de jetons ou encore d'un NFT, avec toutes les garanties de sécurité fournies par les comités de synchronisation, déclenchant une action sur un réseau IoT. Imaginez un [service de location de vélos](https://youtu.be/ZHNrAXf3RDE?t=929) qui utilise une application avec un client léger intégré pour vérifier rapidement que vous possédez bien le NFT du service de location et, si c'est le cas, déverrouiller un vélo pour que vous puissiez l'utiliser !
 
 Les rollups Ethereum bénéficieraient également des clients légers. L'un des grands problèmes pour les rollups a été les attaques ciblant les ponts qui permettent le transfert de fonds d'Ethereum vers un rollup. Une vulnérabilité concerne les oracles que les rollups utilisent pour détecter qu'un utilisateur a effectué un dépôt dans le pont. Si un oracle fournit de mauvaises données, il pourrait tromper le rollup en lui faisant croire qu'il y a eu un dépôt sur le pont et libérer incorrectement des fonds. Un client léger intégré dans le rollup pourrait être utilisé pour se protéger contre les oracles corrompus car le dépôt dans le pont pourrait venir avec une preuve qui peut être vérifiée par le rollup avant de libérer des jetons. Le même concept pourrait également être appliqué à d'autres ponts interchaînes.
 
@@ -43,19 +43,19 @@ Les clients légers pourraient également être utilisés pour mettre les portef
 Il existe plusieurs clients légers en développement, notamment des clients légers d'exécution, de consensus et des clients légers combinant exécution et consensus. Voici les implémentations de clients légers que nous connaissons au moment de la rédaction de cette page :
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client) : client léger de consensus en TypeScript
-- [Helios](https://github.com/a16z/helios) : client léger combinant les tâches d'exécution et de consensus en Rust
+- [Helios](https://github.com/a16z/helios) : client léger combiné d'exécution et de consensus en Rust
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light) : mode léger pour le client d'exécution (en développement) en Go
 - [Nimbus](https://nimbus.guide/el-light-client.html) : client léger de consensus en Nim
 
 À notre connaissance, aucun de ces clients n'est encore considéré comme prêt pour être utilisé.
 
-Il y a aussi beaucoup de travail en cours pour améliorer l'accès des clients légers aux données Ethereum. Actuellement, les clients légers s'appuient sur des demandes RPC vers des nœuds complets en utilisant un modèle client/serveur, mais à l'avenir, les données pourraient être demandées de manière plus décentralisée en utilisant un réseau dédié tel que le [Réseau Portal](https://www.ethportal.net/) qui pourrait fournir les données aux clients légers en utilisant un protocole de bavardage pair à pair.
+Il y a aussi beaucoup de travail en cours pour améliorer l'accès des clients légers aux données Ethereum. Actuellement, les clients légers s'appuient sur des requêtes RPC vers des nœuds complets en utilisant un modèle client/serveur, mais à l'avenir, les données pourraient être demandées de manière plus décentralisée en utilisant un réseau dédié tel que le [Réseau Portal](https://www.ethportal.net/) qui pourrait servir les données aux clients légers en utilisant un protocole de bavardage pair-à-pair.
 
-D'autres éléments de la [feuille de route](/roadmap/) tels que les [arbres Verkle](/roadmap/verkle-trees/) et l'[absence d'état](/roadmap/statelessness/) apporteront finalement les garanties de sécurité des clients légers équivalentes à celles des clients complets.
+D'autres éléments de la [feuille de route](/roadmap/) tels que les [arbres Verkle](/roadmap/verkle-trees/) et l'[absence d'état](/roadmap/statelessness/) finiront par rendre les garanties de sécurité des clients légers égales à celles des clients complets.
 
-## Complément d'information {#further-reading}
+## En savoir plus {#further-reading}
 
-- [Zsolt Felföldi sur les clients légers Geth](https://www.youtube.com/watch?v=EPZeFXau-RE)
-- [Etan Kissling sur le réseau des clients légers](https://www.youtube.com/watch?v=85MeiMA4dD8)
+- [Zsolt Felfodhi sur les clients légers Geth](https://www.youtube.com/watch?v=EPZeFXau-RE)
+- [Etan Kissling sur la mise en réseau des clients légers](https://www.youtube.com/watch?v=85MeiMA4dD8)
 - [Etan Kissling sur les clients légers après La Fusion](https://www.youtube.com/watch?v=ZHNrAXf3RDE)
-- [Piper Merriam : Le chemin sinueux vers les clients légers opérationnels](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)
+- [Piper Merriam : Le chemin sinueux vers des clients légers fonctionnels](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)

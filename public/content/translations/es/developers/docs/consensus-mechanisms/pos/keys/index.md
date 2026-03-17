@@ -94,7 +94,7 @@ Cada rama está separada por una `/` de modo que `m/2` significa comenzar con la
 
 ## Lecturas adicionales {#further-reading}
 
-- [Publicación del blog de la Fundación Ethereum por Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
+- [Publicación del blog de la Fundación Ethereum por Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys)
 - [Generación de claves EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)
 - [EIP-7002: Salidas activadas por la capa de ejecución](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [Gestión de claves a escala](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

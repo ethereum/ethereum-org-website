@@ -116,6 +116,7 @@
   "docs-nav-transactions": "Transactions",
   "docs-nav-transactions-description": "Transferts et autres actions qui modifient l'état d'Ethereum",
   "docs-nav-upgrading-smart-contracts": "Mise à jour des contrats intelligents",
+  "docs-nav-naming-smart-contracts": "Nommer les contrats intelligents",
   "docs-nav-verifying-smart-contracts": "Vérification des contrats intelligents",
   "docs-nav-web2-vs-web3": "Web2 vs Web3",
   "docs-nav-web2-vs-web3-description": "Les différences fondamentales que les applications basées sur la blockchain fournissent",

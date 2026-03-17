@@ -1,17 +1,14 @@
 /**
- * Supabase glossary client for fetching community-approved translations
+ * Glossary client for fetching community-approved translations
  *
- * Fetches from the `top_translations` view which contains the highest-voted
- * translation for each term/language pair.
+ * Fetches from the /api/glossary endpoint, which serves data from
+ * the Supabase `top_translations` view via the data layer.
  */
 
-/** Glossary entry from Supabase top_translations view */
-export interface GlossaryEntry {
-  string_term: string
-  translation_text: string
-  language_code: string
-  total_votes: number
-}
+const GLOSSARY_URL = "https://ethereum.org/api/glossary"
+
+import type { GlossaryEntry } from "@/data-layer/fetchers/fetchTranslationGlossary"
+export type { GlossaryEntry }
 
 /** Glossary grouped by language code */
 export type GlossaryByLanguage = Map<string, Map<string, string>>
@@ -20,33 +17,14 @@ export type GlossaryByLanguage = Map<string, Map<string, string>>
 export type Tone = "informal" | "formal"
 
 /**
- * Fetch all glossary entries from Supabase
+ * Fetch all glossary entries from the glossary API
  */
 export async function fetchGlossaryEntries(): Promise<GlossaryEntry[]> {
-  const supabaseUrl = process.env.SUPABASE_URL
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY
-
-  if (!supabaseUrl || !supabaseKey) {
-    console.warn(
-      "[GLOSSARY] Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY, skipping glossary fetch"
-    )
-    return []
-  }
-
-  const url = `${supabaseUrl}/rest/v1/top_translations?select=string_term,translation_text,language_code,total_votes`
-
   try {
-    const response = await fetch(url, {
-      headers: {
-        apikey: supabaseKey,
-        Authorization: `Bearer ${supabaseKey}`,
-        "Content-Type": "application/json",
-      },
-    })
+    const response = await fetch(GLOSSARY_URL)
 
     if (!response.ok) {
-      const text = await response.text().catch(() => "")
-      throw new Error(`Supabase API error (${response.status}): ${text}`)
+      throw new Error(`Glossary API error (${response.status})`)
     }
 
     const entries: GlossaryEntry[] = await response.json()

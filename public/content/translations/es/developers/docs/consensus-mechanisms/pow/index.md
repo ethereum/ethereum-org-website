@@ -101,7 +101,7 @@ A un alto nivel, la prueba de participación tiene el mismo objetivo final que l
 ## Lecturas recomendadas {#further-reading}
 
 - [Ataque de mayoría](https://en.bitcoin.it/wiki/Majority_attack)
-- [Sobre la finalidad de la liquidación](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Sobre la finalidad de la liquidación](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Videos {#videos}
 

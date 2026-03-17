@@ -165,7 +165,7 @@ Per i [servizi di staking in pool](/staking/pools/):
 
 I [criteri di inclusione](#criteria-for-inclusion) di cui sopra vengono utilizzati per calcolare un punteggio cumulativo per ciascun prodotto o servizio. Questo viene utilizzato come mezzo per selezionare e mostrare prodotti che soddisfano determinati criteri oggettivi. Più criteri sono disponibili con le relative prove, più il prodotto sarà in cima all'elenco, mentre i pareggi saranno randomizzati al caricamento.
 
-La logica del codice e le ponderazioni per questi criteri sono attualmente contenute in [questo componente JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) nel nostro repository.
+La logica del codice e le ponderazioni per questi criteri sono attualmente contenute in [questo componente JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) nel nostro repository.
 
 ## Aggiungi il tuo prodotto o servizio {#add-product}
 

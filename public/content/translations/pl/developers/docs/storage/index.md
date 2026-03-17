@@ -18,7 +18,7 @@ W przeciwieństwie do centralnie zlokalizowanego serwera obsługiwanego przez je
 
 **Swarm —** **<em x-id="4">platforma rozproszonej pamięci masowej i usługa dystrybucji treści dla stosu web3 Ethereum.</em>**
 
-- [Swarm](https://ethersphere.github.io/swarm-home/)
+- [Swarm](https://docs.ethswarm.org//)
 - [GitHub](https://github.com/ethersphere/swarm)
 
 **OrbitDB —** **<em x-id="4">zdecentralizowana baza danych peer-to-peer oparta na IPFS.</em>**

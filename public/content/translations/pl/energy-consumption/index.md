@@ -82,6 +82,5 @@ Natywne platformy Web3 do finansowania dóbr publicznych, takie jak [Gitcoin](ht
 
 ## Powiązane tematy {#related-topics}
 
-- [Wizja Ethereum](/roadmap/vision/)
 - [Łańcuch śledzący](/roadmap/beacon-chain)
 - [Połączenie](/roadmap/merge/)
