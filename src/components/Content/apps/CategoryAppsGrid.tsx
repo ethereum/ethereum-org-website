@@ -11,7 +11,7 @@ import { getDayOfYear } from "@/lib/utils/date"
 import { seededShuffle } from "@/lib/utils/random"
 import { slugify } from "@/lib/utils/url"
 
-import { getAppsData } from "@/lib/data"
+import { getStaticAppsData } from "@/lib/data"
 
 function getCategoryEnum(category: string): AppCategoryEnum | undefined {
   const slug = category.toLowerCase()
@@ -64,7 +64,7 @@ const CategoryAppsGrid = async ({
 
   let apps: AppData[] = []
   try {
-    const appsData = await getAppsData()
+    const appsData = await getStaticAppsData()
     apps = (appsData?.[categoryEnum] ?? []) as AppData[]
   } catch (error) {
     console.warn(`Failed to fetch ${category} apps:`, error)
@@ -107,12 +107,14 @@ const CategoryAppsGrid = async ({
   }
 
   // Project only the fields used by the client component to reduce RSC payload
-  const clientApps = sortedApps.map(({ name, description, image, subCategory }) => ({
-    name,
-    description,
-    image,
-    subCategory,
-  }))
+  const clientApps = sortedApps.map(
+    ({ name, description, image, subCategory }) => ({
+      name,
+      description,
+      image,
+      subCategory,
+    })
+  )
 
   return (
     <div className={className}>
