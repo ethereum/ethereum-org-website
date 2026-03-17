@@ -90,22 +90,22 @@ contract MyNFT is ERC721 {
 **عقود OpenZeppelin -** **_المكتبة الأكثر شيوعًا لتطوير العقود الذكية الآمنة._**
 
 - [توثيق](https://docs.openzeppelin.com/contracts/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [يجتبه](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [منتدى المجتمع](https://forum.openzeppelin.com/c/general/16)
 
 **DappSys -** **_لبنات بناء آمنة وبسيطة ومرنة للعقود الذكية._**
 
 - [توثيق](https://dappsys.readthedocs.io/)
-- [GitHub](https://github.com/dapphub/dappsys)
+- [يجتبه](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_مشروع Solidity مع العقود والمكتبات والأمثلة لمساعدتك في بناء تطبيقات موزعة كاملة الميزات للعالم الحقيقي._**
 
-- [GitHub](https://github.com/HQ20/contracts)
+- [يجتبه](https://github.com/HQ20/contracts)
 
 **thirdweb Solidity SDK -** **_يوفر الأدوات اللازمة لبناء عقود ذكية مخصصة بكفاءة_**
 
 - [توثيق](https://portal.thirdweb.com/contracts/build/overview)
-- [GitHub](https://github.com/thirdweb-dev/contracts)
+- [يجتبه](https://github.com/thirdweb-dev/contracts)
 
 ## دروس تعليمية ذات صلة {#related-tutorials}
 

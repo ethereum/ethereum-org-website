@@ -146,7 +146,7 @@ lang: ar
 
 **ملحقات تطوير OpenZeppelin - _مجموعة من الأدوات لنشر وتأمين العقود الذكية القابلة للتطوير._**
 
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
+- [يجتبه](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [التوثيق](https://docs.openzeppelin.com/upgrades)
 
 ## دروس تعليمية {#tutorials}

@@ -242,36 +242,36 @@ ethers.utils.formatEther(balance)
 **Web3.js -** **_واجهة برمجة تطبيقات Ethereum JavaScript._**
 
 - [التوثيق](https://docs.web3js.org)
-- [GitHub](https://github.com/ethereum/web3.js)
+- [يجتبه](https://github.com/ethereum/web3.js)
 
 **Ethers.js -** **_تنفيذ محفظة Ethereum بالكامل مع الأدوات المساعدة باستخدام JavaScript و TypeScript._**
 
 - [الصفحة الرئيسية لـ Ethers.js](https://ethers.org/)
 - [التوثيق](https://docs.ethers.io)
-- [GitHub](https://github.com/ethers-io/ethers.js)
+- [يجتبه](https://github.com/ethers-io/ethers.js)
 
 **The Graph -** **_بروتوكول لفهرسة بيانات Ethereum و IPFS والاستعلام عنها باستخدام GraphQL._**
 
 - [The Graph](https://thegraph.com)
 - [مستكشف Graph](https://thegraph.com/explorer)
 - [التوثيق](https://thegraph.com/docs)
-- [GitHub](https://github.com/graphprotocol)
+- [يجتبه](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
 **Alchemy SDK -** **_غلاف حول Ethers.js مع واجهات برمجة تطبيقات محسّنة._**
 
 - [التوثيق](https://www.alchemy.com/docs)
-- [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
+- [يجتبه](https://github.com/alchemyplatform/alchemy-sdk-js)
 
 **viem -** **_واجهة TypeScript لـ Ethereum._**
 
 - [التوثيق](https://viem.sh)
-- [GitHub](https://github.com/wagmi-dev/viem)
+- [يجتبه](https://github.com/wagmi-dev/viem)
 
 **Drift -** **_مكتبة تعريفية بلغة TypeScript مع تخزين مؤقت مدمج وخطافات ومحاكاة اختبار._**
 
 - [التوثيق](https://ryangoree.github.io/drift/)
-- [GitHub](https://github.com/ryangoree/drift/)
+- [يجتبه](https://github.com/ryangoree/drift/)
 
 ## قراءة إضافية {#further-reading}
 

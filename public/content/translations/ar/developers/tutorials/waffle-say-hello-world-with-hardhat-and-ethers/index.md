@@ -6,7 +6,7 @@ tags:
   [
     "waffle",
     "العقود الذكيه ",
-    "Solidity",
+    "الصلابة",
     "الاختبار",
     "hardhat",
     "ethers.js"

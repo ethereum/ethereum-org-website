@@ -26,7 +26,7 @@ lang: ar
 
 - [alchemy.com](https://www.alchemy.com/)
 - [التوثيق](https://www.alchemy.com/docs/)
-- [GitHub](https://github.com/alchemyplatform)
+- [يجتبه](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
 **All That Node -** **_العقدة كخدمة._**
@@ -45,7 +45,7 @@ lang: ar
 
 - [blockpi.io](https://blockpi.io/)
 - [التوثيق](https://docs.blockpi.io/)
-- [GitHub](https://github.com/BlockPILabs)
+- [يجتبه](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
 **بوابة Ethereum على Cloudflare.**
@@ -69,7 +69,7 @@ lang: ar
 
 - [infura.io](https://infura.io)
 - [التوثيق](https://docs.infura.io/api)
-- [GitHub](https://github.com/INFURA)
+- [يجتبه](https://github.com/INFURA)
 
 **Node RPC - _موفر EVM JSON-RPC فعال من حيث التكلفة_**
 
@@ -91,12 +91,12 @@ lang: ar
 
 - [rivet.cloud](https://rivet.cloud)
 - [التوثيق](https://rivet.cloud/docs/)
-- [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
+- [يجتبه](https://github.com/openrelayxyz/ethercattle-deployment)
 
 **Zmok -** **_عقد إيثريوم موجهة نحو السرعة كواجهة برمجة تطبيقات JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
-- [GitHub](https://github.com/zmok-io)
+- [يجتبه](https://github.com/zmok-io)
 - [التوثيق](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
@@ -104,13 +104,13 @@ lang: ar
 
 **ethers-kt -** **_مكتبة Kotlin/Java/Android غير متزامنة وعالية الأداء لسلاسل الكتل القائمة على EVM._**
 
-- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [يجتبه](https://github.com/Kr1ptal/ethers-kt)
 - [أمثلة](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
 **Nethereum -** **_مكتبة تكامل .NET مفتوحة المصدر لسلسلة الكتل._**
 
-- [GitHub](https://github.com/Nethereum/Nethereum)
+- [يجتبه](https://github.com/Nethereum/Nethereum)
 - [التوثيق](http://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
@@ -123,13 +123,13 @@ lang: ar
 **Tatum -** **_منصة تطوير البلوكتشين المثالية._**
 
 - [Tatum](https://tatum.io/)
-- [GitHub](https://github.com/tatumio/)
+- [يجتبه](https://github.com/tatumio/)
 - [التوثيق](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
 **web3j -** **_مكتبة تكامل Java/Android/Kotlin/Scala مع إيثريوم._**
 
-- [GitHub](https://github.com/web3j/web3j)
+- [يجتبه](https://github.com/web3j/web3j)
 - [الوثائق](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
@@ -166,7 +166,7 @@ lang: ar
 
 - [moralis.io](https://moralis.io)
 - [التوثيق](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
+- [يجتبه](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [المنتدى](https://forum.moralis.io/)
 
@@ -174,14 +174,14 @@ lang: ar
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [التوثيق](https://docs.nftport.xyz/)
-- [GitHub](https://github.com/nftport/)
+- [يجتبه](https://github.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
 **Tokenview -** **_منصة واجهات برمجة التطبيقات العامة متعددة العملات المشفرة لسلسلة الكتل._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [التوثيق](https://services.tokenview.io/docs?type=api)
-- [GitHub](https://github.com/Tokenview)
+- [يجتبه](https://github.com/Tokenview)
 
 **Watchdata -** **_توفير وصول بسيط وموثوق عبر واجهة برمجة التطبيقات (API) إلى بلوكتشين إيثريوم._**
 
@@ -193,7 +193,7 @@ lang: ar
 
 - [covalenthq.com](https://www.covalenthq.com/)
 - [التوثيق](https://www.covalenthq.com/docs/api/)
-- [GitHub](https://github.com/covalenthq)
+- [يجتبه](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
 ## قراءة إضافية {#further-reading}

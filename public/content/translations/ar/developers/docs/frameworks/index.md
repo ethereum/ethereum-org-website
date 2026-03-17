@@ -32,33 +32,33 @@ lang: ar
 **Hardhat -** **_بيئة تطوير Ethereum للمحترفين._**
 
 - [hardhat.org](https://hardhat.org)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [يجتبه](https://github.com/nomiclabs/hardhat)
 
 **Ape -** **_أداة تطوير العقود الذكية لخبراء Python وعلماء البيانات ومحترفي الأمن._**
 
 - [الوثائق](https://docs.apeworx.io/ape/stable/)
-- [GitHub](https://github.com/ApeWorX/ape)
+- [يجتبه](https://github.com/ApeWorX/ape)
 
 **Web3j -** **_منصة لتطوير تطبيقات البلوكتشين على JVM._**
 
 - [الصفحة الرئيسية](https://www.web3labs.com/web3j-sdk)
 - [الوثائق](https://docs.web3j.io)
-- [GitHub](https://github.com/web3j/web3j)
+- [يجتبه](https://github.com/web3j/web3j)
 
 **ethers-kt -** **_مكتبة Kotlin/Java/Android غير متزامنة وعالية الأداء لسلاسل الكتل القائمة على EVM._**
 
-- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [يجتبه](https://github.com/Kr1ptal/ethers-kt)
 - [أمثلة](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
 **Create Eth App -** **_أنشئ تطبيقات مدعومة من Ethereum بأمر واحد._** يضم مجموعة واسعة من أطر واجهات المستخدم ونماذج DeFi التي يمكن الاختيار منها._\*\*
 
-- [GitHub](https://github.com/paulrberg/create-eth-app)
+- [يجتبه](https://github.com/paulrberg/create-eth-app)
 - [قوالب](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
 **Scaffold-Eth -** **_مكونات وخطافات Ethers.js + Hardhat + React لـ web3: كل ما تحتاجه للبدء في بناء تطبيقات لامركزية مدعومة بالعقود الذكية._**
 
-- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
+- [يجتبه](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_منصة تطوير Web3 تمكن مطوري البلوكتشين من بناء العقود الذكية واختبارها وتصحيحها ومراقبتها وتشغيلها وتحسين تجربة مستخدم dApp._**
 
@@ -73,24 +73,24 @@ lang: ar
 **Alchemy -** **_منصة تطوير Ethereum._**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [GitHub](https://github.com/alchemyplatform)
+- [يجتبه](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
 **NodeReal -** **_منصة تطوير Ethereum._**
 
 - [Nodereal.io](https://nodereal.io/)
-- [GitHub](https://github.com/node-real)
+- [يجتبه](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
 **thirdweb SDK -** **_ابنِ تطبيقات web3 التي يمكنها التفاعل مع عقودك الذكية باستخدام مجموعات SDK وCLI القوية الخاصة بنا._**
 
 - [الوثائق](https://portal.thirdweb.com/sdk/)
-- [GitHub](https://github.com/thirdweb-dev/)
+- [يجتبه](https://github.com/thirdweb-dev/)
 
 **Chainstack -** **_منصة تطوير Web3 (Ethereum وغيرها)._**
 
 - [chainstack.com](https://www.chainstack.com/)
-- [GitHub](https://github.com/chainstack)
+- [يجتبه](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
 **Crossmint -** **_منصة تطوير web3 على مستوى المؤسسات، تتيح لك بناء تطبيقات NFT على جميع سلاسل EVM الرئيسية (وغيرها)._**
@@ -102,13 +102,13 @@ lang: ar
 **Brownie -** **_بيئة تطوير وإطار اختبار قائم على Python._**
 
 - [الوثائق](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/eth-brownie/brownie)
+- [يجتبه](https://github.com/eth-brownie/brownie)
 - **براوني غير محتفظ بالصيانة حاليًا**
 
 **OpenZeppelin SDK -** **_مجموعة أدوات العقود الذكية النهائية: مجموعة من الأدوات لمساعدتك في تطوير العقود الذكية وتجميعها وترقيتها ونشرها والتفاعل معها._**
 
 - [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [يجتبه](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [منتدى المجتمع](https://forum.openzeppelin.com/c/support/17)
 - **انتهى تطوير SDK OpenZeppelin**
 
@@ -122,21 +122,21 @@ lang: ar
 
 - [موقع الويب](https://goldrush.dev/)
 - [الوثائق](https://goldrush.dev/docs/chains/ethereum)
-- [GitHub](https://github.com/covalenthq)
+- [يجتبه](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
 **Wake -** **_إطار عمل Python شامل لاختبار العقود، والاختبار الضبابي، والنشر، ومسح الثغرات الأمنية، والتنقل في التعليمات البرمجية._**
 
 - [الصفحة الرئيسية](https://getwake.io/)
 - [الوثائق](https://ackeeblockchain.com/wake/docs/latest/)
-- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [يجتبه](https://github.com/Ackee-Blockchain/wake)
 - [ملحق VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
 **Veramo -** **_إطار عمل مفتوح المصدر، ونمطي، وغير محدد يسهل على مطوري التطبيقات اللامركزية بناء هويات لامركزية وبيانات اعتماد قابلة للتحقق في تطبيقاتهم._**
 
 - [الصفحة الرئيسية](https://veramo.io/)
 - [الوثائق](https://veramo.io/docs/basics/introduction)
-- [GitHub](https://github.com/uport-project/veramo)
+- [يجتبه](https://github.com/uport-project/veramo)
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [حزمة NPM](https://www.npmjs.com/package/@veramo/core)
 
