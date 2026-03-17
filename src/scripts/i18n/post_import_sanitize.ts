@@ -540,16 +540,15 @@ function fixProtectedBrandNames(
   const isTranslitLang = locale ? TRANSLITERATION_LOCALES.has(locale) : false
 
   // Auto-fix: Restore brand-name tags to English (leaves concept tags translated)
-  // SKIP for non-Latin locales -- brand names should be transliterated, not reverted
-  if (!isTranslitLang) {
-    const brandTagsResult = fixBrandTags(content, englishContent)
-    content = brandTagsResult.content
-    fixCount += brandTagsResult.fixCount
-    if (brandTagsResult.fixCount > 0) {
-      warnings.push(
-        `Restored ${brandTagsResult.fixCount} brand-name tag(s) to English`
-      )
-    }
+  // Runs for ALL locales: brand tags are UI filter chips that stay Latin even in
+  // non-Latin scripts (per Gemini guidance: developers scan for brand names visually)
+  const brandTagsResult = fixBrandTags(content, englishContent)
+  content = brandTagsResult.content
+  fixCount += brandTagsResult.fixCount
+  if (brandTagsResult.fixCount > 0) {
+    warnings.push(
+      `Restored ${brandTagsResult.fixCount} brand-name tag(s) to English`
+    )
   }
 
   // Warn: Brand names with count mismatches in body content
