@@ -5,145 +5,961 @@
     "script": "Katakana",
     "generated": "2026-03-16",
     "generator": "Gemini",
-    "version": 1
+    "version": 2
   },
   "transliterations": {
-    "Ori Pomerantz": { "text": "オリ・ポメランツ", "source": "gemini" },
-    "Elan Halpern": { "text": "エラン・ハルパーン", "source": "gemini" },
-    "Marc Garreau": { "text": "マーク・ガロー", "source": "gemini" },
-    "Nathan H. Leung": { "text": "ネイサン・H・リョン", "source": "gemini" },
-    "Paul Apivat": { "text": "ポール・アピヴァット", "source": "gemini" },
-    "Alberto Cuesta Canada": { "text": "アルベルト・クエスタ・カナダ", "source": "gemini" },
-    "Sumi Mudgil": { "text": "スミ・ムドギル", "source": "gemini" },
-    "Mario Havel": { "text": "マリオ・ハベル", "source": "gemini" },
-    "Markus Waas": { "text": "マルクス・ワース", "source": "gemini" },
-    "Ewa Kowalska": { "text": "エヴァ・コワルスカ", "source": "gemini" },
-    "Kim YongJun": { "text": "キム・ヨンジュン", "source": "gemini" },
-    "Daniel Izdebski": { "text": "ダニエル・イズデブスキ", "source": "gemini" },
-    "Tedi Mitiku": { "text": "テディ・ミティク", "source": "gemini" },
-    "Vitalik Buterin": { "text": "ヴィタリック・ブテリン", "source": "gemini" },
-    "Gavin Wood": { "text": "ギャビン・ウッド", "source": "gemini" },
-    "Joseph Lubin": { "text": "ジョセフ・ルービン", "source": "gemini" },
-    "Tim Beiko": { "text": "ティム・ベイコ", "source": "gemini" },
-    "Peter Szilagyi": { "text": "ピーター・シラギ", "source": "gemini" },
-    "Jeffrey Wilcke": { "text": "ジェフリー・ウィルケ", "source": "gemini" },
-    "Mihai Alisie": { "text": "ミハイ・アリシエ", "source": "gemini" },
-    "Anthony Di Iorio": { "text": "アンソニー・ディ・イオリオ", "source": "gemini" },
-    "Amir Chetrit": { "text": "アミール・チェトリット", "source": "gemini" },
-    "Charles Hoskinson": { "text": "チャールズ・ホスキンソン", "source": "gemini" },
-    "Albert Einstein": { "text": "アルベルト・アインシュタイン", "source": "gemini" },
-    "Solidity": { "text": "ソリディティ", "source": "gemini" },
-    "Vyper": { "text": "ヴァイパー", "source": "gemini" },
-    "Rust": { "text": "ラスト", "source": "gemini" },
-    "JavaScript": { "text": "ジャバスクリプト", "source": "gemini" },
-    "TypeScript": { "text": "タイプスクリプト", "source": "gemini" },
-    "Python": { "text": "パイソン", "source": "gemini" },
-    "Go": { "text": "ゴー", "source": "gemini" },
-    "Golang": { "text": "ゴーラング", "source": "gemini" },
-    "Java": { "text": "ジャバ", "source": "gemini" },
-    "Ruby": { "text": "ルビー", "source": "gemini" },
-    "Elixir": { "text": "エリクサー", "source": "gemini" },
-    "Dart": { "text": "ダート", "source": "gemini" },
-    "Delphi": { "text": "デルファイ", "source": "gemini" },
-    "C++": { "text": "シープラスプラス", "source": "gemini" },
-    ".NET": { "text": "ドットネット", "source": "gemini" },
-    "Hardhat": { "text": "ハードハット", "source": "gemini" },
-    "Foundry": { "text": "ファウンドリー", "source": "gemini" },
-    "Remix": { "text": "リミックス", "source": "gemini" },
-    "Truffle": { "text": "トリュフ", "source": "gemini" },
-    "Waffle": { "text": "ワッフル", "source": "gemini" },
-    "Brownie": { "text": "ブラウニー", "source": "gemini" },
-    "Scaffold-ETH": { "text": "スキャフォールド・イーサ", "source": "gemini" },
-    "Wagmi": { "text": "ワグミ", "source": "gemini" },
-    "Ethers.js": { "text": "イーサーズ・ジェイエス", "source": "gemini" },
-    "Web3.js": { "text": "ウェブスリー・ジェイエス", "source": "gemini" },
-    "Web3.py": { "text": "ウェブスリー・パイ", "source": "gemini" },
-    "Viem": { "text": "ヴィエム", "source": "gemini" },
-    "React": { "text": "リアクト", "source": "gemini" },
-    "Next.js": { "text": "ネクスト・ジェイエス", "source": "gemini" },
-    "Node.js": { "text": "ノード・ジェイエス", "source": "gemini" },
-    "RainbowKit": { "text": "レインボーキット", "source": "gemini" },
-    "WalletConnect": { "text": "ウォレットコネクト", "source": "gemini" },
-    "Geth": { "text": "ゲス", "source": "gemini" },
-    "Prysm": { "text": "プリズム", "source": "gemini" },
-    "Lighthouse": { "text": "ライトハウス", "source": "gemini" },
-    "Teku": { "text": "テクー", "source": "gemini" },
-    "Nimbus": { "text": "ニンバス", "source": "gemini" },
-    "Lodestar": { "text": "ロードスター", "source": "gemini" },
-    "Besu": { "text": "ベス", "source": "gemini" },
-    "Nethermind": { "text": "ネザーマインド", "source": "gemini" },
-    "Erigon": { "text": "エリゴン", "source": "gemini" },
-    "Reth": { "text": "レス", "source": "gemini" },
-    "IPFS": { "text": "アイピーエフエス", "source": "gemini" },
-    "Filecoin": { "text": "ファイルコイン", "source": "gemini" },
-    "Arweave": { "text": "アーウィーブ", "source": "gemini" },
-    "Ethereum Foundation": { "text": "イーサリアム財団", "source": "gemini" },
-    "ConsenSys": { "text": "コンセンシス", "source": "gemini" },
-    "Alchemy": { "text": "アルケミー", "source": "gemini" },
-    "Infura": { "text": "インフラ", "source": "gemini" },
-    "Chainlink": { "text": "チェーンリンク", "source": "gemini" },
-    "OpenZeppelin": { "text": "オープンゼペリン", "source": "gemini" },
-    "Gnosis": { "text": "グノーシス", "source": "gemini" },
-    "Flashbots": { "text": "フラッシュボッツ", "source": "gemini" },
-    "Trail of Bits": { "text": "トレイル・オブ・ビッツ", "source": "gemini" },
-    "Tellor": { "text": "テラー", "source": "gemini" },
-    "EigenLayer": { "text": "アイゲンレイヤー", "source": "gemini" },
-    "Moralis": { "text": "モラリス", "source": "gemini" },
-    "Gitcoin": { "text": "ギットコイン", "source": "gemini" },
-    "Dune Analytics": { "text": "デューン・アナリティクス", "source": "gemini" },
-    "CoinGecko": { "text": "コインゲッコー", "source": "gemini" },
-    "Uniswap": { "text": "ユニスワップ", "source": "gemini" },
-    "Aave": { "text": "アーベ", "source": "gemini" },
-    "MakerDAO": { "text": "メイカーダオ", "source": "gemini" },
-    "Compound": { "text": "コンパウンド", "source": "gemini" },
-    "Lido": { "text": "リド", "source": "gemini" },
-    "Rocket Pool": { "text": "ロケットプール", "source": "gemini" },
-    "ENS": { "text": "イーエヌエス", "source": "gemini" },
-    "The Graph": { "text": "ザ・グラフ", "source": "gemini" },
-    "Curve": { "text": "カーブ", "source": "gemini" },
-    "Balancer": { "text": "バランサー", "source": "gemini" },
-    "Farcaster": { "text": "ファーキャスター", "source": "gemini" },
-    "Lens Protocol": { "text": "レンズ・プロトコル", "source": "gemini" },
-    "Snapshot": { "text": "スナップショット", "source": "gemini" },
-    "Aragon": { "text": "アラゴン", "source": "gemini" },
-    "Optimism": { "text": "オプティミズム", "source": "gemini" },
-    "Arbitrum": { "text": "アービトラム", "source": "gemini" },
-    "Polygon": { "text": "ポリゴン", "source": "gemini" },
-    "zkSync": { "text": "ジーケーシンク", "source": "gemini" },
-    "Starknet": { "text": "スタークネット", "source": "gemini" },
-    "Base": { "text": "ベース", "source": "gemini" },
-    "Scroll": { "text": "スクロール", "source": "gemini" },
-    "Linea": { "text": "リネア", "source": "gemini" },
-    "Taiko": { "text": "タイコ", "source": "gemini" },
-    "Slither": { "text": "スリザー", "source": "gemini" },
-    "Manticore": { "text": "マンティコア", "source": "gemini" },
-    "Echidna": { "text": "エキドナ", "source": "gemini" },
-    "MythX": { "text": "ミスエックス", "source": "gemini" },
-    "Mythril": { "text": "ミスリル", "source": "gemini" },
-    "Certora": { "text": "セルトラ", "source": "gemini" },
-    "MetaMask": { "text": "メタマスク", "source": "gemini" },
-    "Etherscan": { "text": "イーサスキャン", "source": "gemini" },
-    "GitHub": { "text": "ギットハブ", "source": "gemini" },
-    "Discord": { "text": "ディスコード", "source": "gemini" },
-    "Reddit": { "text": "レディット", "source": "gemini" },
-    "Telegram": { "text": "テレグラム", "source": "gemini" },
-    "YouTube": { "text": "ユーチューブ", "source": "gemini" },
-    "Crowdin": { "text": "クラウディン", "source": "gemini" },
-    "Docker": { "text": "ドッカー", "source": "gemini" },
-    "Linux": { "text": "リナックス", "source": "gemini" },
-    "Raspberry Pi": { "text": "ラズベリーパイ", "source": "gemini" },
-    "InfluxDB": { "text": "インフラックスディービー", "source": "gemini" },
-    "Grafana": { "text": "グラファナ", "source": "gemini" },
-    "Tenderly": { "text": "テンダーリー", "source": "gemini" },
-    "Ethereum": { "text": "イーサリアム", "source": "gemini" },
-    "Bitcoin": { "text": "ビットコイン", "source": "gemini" },
-    "Beacon Chain": { "text": "ビーコンチェーン", "source": "gemini" },
-    "The Merge": { "text": "ザ・マージ", "source": "gemini" },
-    "Web3": { "text": "ウェブスリー", "source": "gemini" },
-    "DeFi": { "text": "ディーファイ", "source": "gemini" },
-    "NFT": { "text": "エヌエフティー", "source": "gemini" },
-    "DApp": { "text": "ダップ", "source": "gemini" },
-    "DAO": { "text": "ダオ", "source": "gemini" }
+    "Ori Pomerantz": {
+      "text": "オリ・ポメランツ",
+      "source": "gemini"
+    },
+    "Elan Halpern": {
+      "text": "エラン・ハルパーン",
+      "source": "gemini"
+    },
+    "Marc Garreau": {
+      "text": "マーク・ガロー",
+      "source": "gemini"
+    },
+    "Nathan H. Leung": {
+      "text": "ネイサン・H・リョン",
+      "source": "gemini"
+    },
+    "Paul Apivat": {
+      "text": "ポール・アピヴァット",
+      "source": "gemini"
+    },
+    "Alberto Cuesta Canada": {
+      "text": "アルベルト・クエスタ・カナダ",
+      "source": "gemini"
+    },
+    "Sumi Mudgil": {
+      "text": "スミ・ムドギル",
+      "source": "gemini"
+    },
+    "Mario Havel": {
+      "text": "マリオ・ハベル",
+      "source": "gemini"
+    },
+    "Markus Waas": {
+      "text": "マルクス・ワース",
+      "source": "gemini"
+    },
+    "Ewa Kowalska": {
+      "text": "エヴァ・コワルスカ",
+      "source": "gemini"
+    },
+    "Kim YongJun": {
+      "text": "キム・ヨンジュン",
+      "source": "gemini"
+    },
+    "Daniel Izdebski": {
+      "text": "ダニエル・イズデブスキ",
+      "source": "gemini"
+    },
+    "Tedi Mitiku": {
+      "text": "テディ・ミティク",
+      "source": "gemini"
+    },
+    "Vitalik Buterin": {
+      "text": "ヴィタリック・ブテリン",
+      "source": "gemini"
+    },
+    "Gavin Wood": {
+      "text": "ギャビン・ウッド",
+      "source": "gemini"
+    },
+    "Joseph Lubin": {
+      "text": "ジョセフ・ルービン",
+      "source": "gemini"
+    },
+    "Tim Beiko": {
+      "text": "ティム・ベイコ",
+      "source": "gemini"
+    },
+    "Peter Szilagyi": {
+      "text": "ピーター・シラギ",
+      "source": "gemini"
+    },
+    "Jeffrey Wilcke": {
+      "text": "ジェフリー・ウィルケ",
+      "source": "gemini"
+    },
+    "Mihai Alisie": {
+      "text": "ミハイ・アリシエ",
+      "source": "gemini"
+    },
+    "Anthony Di Iorio": {
+      "text": "アンソニー・ディ・イオリオ",
+      "source": "gemini"
+    },
+    "Amir Chetrit": {
+      "text": "アミール・チェトリット",
+      "source": "gemini"
+    },
+    "Charles Hoskinson": {
+      "text": "チャールズ・ホスキンソン",
+      "source": "gemini"
+    },
+    "Albert Einstein": {
+      "text": "アルベルト・アインシュタイン",
+      "source": "gemini"
+    },
+    "Solidity": {
+      "text": "ソリディティ",
+      "source": "gemini"
+    },
+    "Vyper": {
+      "text": "ヴァイパー",
+      "source": "gemini"
+    },
+    "Rust": {
+      "text": "ラスト",
+      "source": "gemini"
+    },
+    "JavaScript": {
+      "text": "ジャバスクリプト",
+      "source": "gemini"
+    },
+    "TypeScript": {
+      "text": "タイプスクリプト",
+      "source": "gemini"
+    },
+    "Python": {
+      "text": "パイソン",
+      "source": "gemini"
+    },
+    "Go": {
+      "text": "ゴー",
+      "source": "gemini"
+    },
+    "Golang": {
+      "text": "ゴーラング",
+      "source": "gemini"
+    },
+    "Java": {
+      "text": "ジャバ",
+      "source": "gemini"
+    },
+    "Ruby": {
+      "text": "ルビー",
+      "source": "gemini"
+    },
+    "Elixir": {
+      "text": "エリクサー",
+      "source": "gemini"
+    },
+    "Dart": {
+      "text": "ダート",
+      "source": "gemini"
+    },
+    "Delphi": {
+      "text": "デルファイ",
+      "source": "gemini"
+    },
+    "C++": {
+      "text": "シープラスプラス",
+      "source": "gemini"
+    },
+    ".NET": {
+      "text": "ドットネット",
+      "source": "gemini"
+    },
+    "Hardhat": {
+      "text": "ハードハット",
+      "source": "gemini"
+    },
+    "Foundry": {
+      "text": "ファウンドリー",
+      "source": "gemini"
+    },
+    "Remix": {
+      "text": "リミックス",
+      "source": "gemini"
+    },
+    "Truffle": {
+      "text": "トリュフ",
+      "source": "gemini"
+    },
+    "Waffle": {
+      "text": "ワッフル",
+      "source": "gemini"
+    },
+    "Brownie": {
+      "text": "ブラウニー",
+      "source": "gemini"
+    },
+    "Scaffold-ETH": {
+      "text": "スキャフォールド・イーサ",
+      "source": "gemini"
+    },
+    "Wagmi": {
+      "text": "ワグミ",
+      "source": "gemini"
+    },
+    "Ethers.js": {
+      "text": "イーサーズ・ジェイエス",
+      "source": "gemini"
+    },
+    "Web3.js": {
+      "text": "ウェブスリー・ジェイエス",
+      "source": "gemini"
+    },
+    "Web3.py": {
+      "text": "ウェブスリー・パイ",
+      "source": "gemini"
+    },
+    "Viem": {
+      "text": "ヴィエム",
+      "source": "gemini"
+    },
+    "React": {
+      "text": "リアクト",
+      "source": "gemini"
+    },
+    "Next.js": {
+      "text": "ネクスト・ジェイエス",
+      "source": "gemini"
+    },
+    "Node.js": {
+      "text": "ノード・ジェイエス",
+      "source": "gemini"
+    },
+    "RainbowKit": {
+      "text": "レインボーキット",
+      "source": "gemini"
+    },
+    "WalletConnect": {
+      "text": "ウォレットコネクト",
+      "source": "gemini"
+    },
+    "Geth": {
+      "text": "ゲス",
+      "source": "gemini"
+    },
+    "Prysm": {
+      "text": "プリズム",
+      "source": "gemini"
+    },
+    "Lighthouse": {
+      "text": "ライトハウス",
+      "source": "gemini"
+    },
+    "Teku": {
+      "text": "テクー",
+      "source": "gemini"
+    },
+    "Nimbus": {
+      "text": "ニンバス",
+      "source": "gemini"
+    },
+    "Lodestar": {
+      "text": "ロードスター",
+      "source": "gemini"
+    },
+    "Besu": {
+      "text": "ベス",
+      "source": "gemini"
+    },
+    "Nethermind": {
+      "text": "ネザーマインド",
+      "source": "gemini"
+    },
+    "Erigon": {
+      "text": "エリゴン",
+      "source": "gemini"
+    },
+    "Reth": {
+      "text": "レス",
+      "source": "gemini"
+    },
+    "IPFS": {
+      "text": "アイピーエフエス",
+      "source": "gemini"
+    },
+    "Filecoin": {
+      "text": "ファイルコイン",
+      "source": "gemini"
+    },
+    "Arweave": {
+      "text": "アーウィーブ",
+      "source": "gemini"
+    },
+    "Ethereum Foundation": {
+      "text": "イーサリアム財団",
+      "source": "gemini"
+    },
+    "ConsenSys": {
+      "text": "コンセンシス",
+      "source": "gemini"
+    },
+    "Alchemy": {
+      "text": "アルケミー",
+      "source": "gemini"
+    },
+    "Infura": {
+      "text": "インフラ",
+      "source": "gemini"
+    },
+    "Chainlink": {
+      "text": "チェーンリンク",
+      "source": "gemini"
+    },
+    "OpenZeppelin": {
+      "text": "オープンゼペリン",
+      "source": "gemini"
+    },
+    "Gnosis": {
+      "text": "グノーシス",
+      "source": "gemini"
+    },
+    "Flashbots": {
+      "text": "フラッシュボッツ",
+      "source": "gemini"
+    },
+    "Trail of Bits": {
+      "text": "トレイル・オブ・ビッツ",
+      "source": "gemini"
+    },
+    "Tellor": {
+      "text": "テラー",
+      "source": "gemini"
+    },
+    "EigenLayer": {
+      "text": "アイゲンレイヤー",
+      "source": "gemini"
+    },
+    "Moralis": {
+      "text": "モラリス",
+      "source": "gemini"
+    },
+    "Gitcoin": {
+      "text": "ギットコイン",
+      "source": "gemini"
+    },
+    "Dune Analytics": {
+      "text": "デューン・アナリティクス",
+      "source": "gemini"
+    },
+    "CoinGecko": {
+      "text": "コインゲッコー",
+      "source": "gemini"
+    },
+    "Uniswap": {
+      "text": "ユニスワップ",
+      "source": "gemini"
+    },
+    "Aave": {
+      "text": "アーベ",
+      "source": "gemini"
+    },
+    "MakerDAO": {
+      "text": "メイカーダオ",
+      "source": "gemini"
+    },
+    "Compound": {
+      "text": "コンパウンド",
+      "source": "gemini"
+    },
+    "Lido": {
+      "text": "リド",
+      "source": "gemini"
+    },
+    "Rocket Pool": {
+      "text": "ロケットプール",
+      "source": "gemini"
+    },
+    "ENS": {
+      "text": "イーエヌエス",
+      "source": "gemini"
+    },
+    "The Graph": {
+      "text": "ザ・グラフ",
+      "source": "gemini"
+    },
+    "Curve": {
+      "text": "カーブ",
+      "source": "gemini"
+    },
+    "Balancer": {
+      "text": "バランサー",
+      "source": "gemini"
+    },
+    "Farcaster": {
+      "text": "ファーキャスター",
+      "source": "gemini"
+    },
+    "Lens Protocol": {
+      "text": "レンズ・プロトコル",
+      "source": "gemini"
+    },
+    "Snapshot": {
+      "text": "スナップショット",
+      "source": "gemini"
+    },
+    "Aragon": {
+      "text": "アラゴン",
+      "source": "gemini"
+    },
+    "Optimism": {
+      "text": "オプティミズム",
+      "source": "gemini"
+    },
+    "Arbitrum": {
+      "text": "アービトラム",
+      "source": "gemini"
+    },
+    "Polygon": {
+      "text": "ポリゴン",
+      "source": "gemini"
+    },
+    "zkSync": {
+      "text": "ジーケーシンク",
+      "source": "gemini"
+    },
+    "Starknet": {
+      "text": "スタークネット",
+      "source": "gemini"
+    },
+    "Base": {
+      "text": "ベース",
+      "source": "gemini"
+    },
+    "Scroll": {
+      "text": "スクロール",
+      "source": "gemini"
+    },
+    "Linea": {
+      "text": "リネア",
+      "source": "gemini"
+    },
+    "Taiko": {
+      "text": "タイコ",
+      "source": "gemini"
+    },
+    "Slither": {
+      "text": "スリザー",
+      "source": "gemini"
+    },
+    "Manticore": {
+      "text": "マンティコア",
+      "source": "gemini"
+    },
+    "Echidna": {
+      "text": "エキドナ",
+      "source": "gemini"
+    },
+    "MythX": {
+      "text": "ミスエックス",
+      "source": "gemini"
+    },
+    "Mythril": {
+      "text": "ミスリル",
+      "source": "gemini"
+    },
+    "Certora": {
+      "text": "セルトラ",
+      "source": "gemini"
+    },
+    "MetaMask": {
+      "text": "メタマスク",
+      "source": "gemini"
+    },
+    "Etherscan": {
+      "text": "イーサスキャン",
+      "source": "gemini"
+    },
+    "GitHub": {
+      "text": "ギットハブ",
+      "source": "gemini"
+    },
+    "Discord": {
+      "text": "ディスコード",
+      "source": "gemini"
+    },
+    "Reddit": {
+      "text": "レディット",
+      "source": "gemini"
+    },
+    "Telegram": {
+      "text": "テレグラム",
+      "source": "gemini"
+    },
+    "YouTube": {
+      "text": "ユーチューブ",
+      "source": "gemini"
+    },
+    "Crowdin": {
+      "text": "クラウディン",
+      "source": "gemini"
+    },
+    "Docker": {
+      "text": "ドッカー",
+      "source": "gemini"
+    },
+    "Linux": {
+      "text": "リナックス",
+      "source": "gemini"
+    },
+    "Raspberry Pi": {
+      "text": "ラズベリーパイ",
+      "source": "gemini"
+    },
+    "InfluxDB": {
+      "text": "インフラックスディービー",
+      "source": "gemini"
+    },
+    "Grafana": {
+      "text": "グラファナ",
+      "source": "gemini"
+    },
+    "Tenderly": {
+      "text": "テンダーリー",
+      "source": "gemini"
+    },
+    "Ethereum": {
+      "text": "イーサリアム",
+      "source": "gemini"
+    },
+    "Bitcoin": {
+      "text": "ビットコイン",
+      "source": "gemini"
+    },
+    "Beacon Chain": {
+      "text": "ビーコンチェーン",
+      "source": "gemini"
+    },
+    "The Merge": {
+      "text": "ザ・マージ",
+      "source": "gemini"
+    },
+    "Web3": {
+      "text": "ウェブスリー",
+      "source": "gemini"
+    },
+    "DeFi": {
+      "text": "ディーファイ",
+      "source": "gemini"
+    },
+    "NFT": {
+      "text": "エヌエフティー",
+      "source": "gemini"
+    },
+    "DApp": {
+      "text": "ダップ",
+      "source": "gemini"
+    },
+    "DAO": {
+      "text": "ダオ",
+      "source": "gemini"
+    },
+    "Glamsterdam": {
+      "text": "グラムステルダム",
+      "source": "gemini"
+    },
+    "PeerDAS": {
+      "text": "ピアディーエーエス",
+      "source": "gemini"
+    },
+    "Dencun": {
+      "text": "デンクン",
+      "source": "gemini"
+    },
+    "Pectra": {
+      "text": "ペクトラ",
+      "source": "gemini"
+    },
+    "Gasper": {
+      "text": "ガスパー",
+      "source": "gemini"
+    },
+    "Ethash": {
+      "text": "イーサッシュ",
+      "source": "gemini"
+    },
+    "Casper": {
+      "text": "キャスパー",
+      "source": "gemini"
+    },
+    "Goerli": {
+      "text": "ゲールリ",
+      "source": "gemini"
+    },
+    "Sepolia": {
+      "text": "セポリア",
+      "source": "gemini"
+    },
+    "Holesky": {
+      "text": "ホレスキー",
+      "source": "gemini"
+    },
+    "Ropsten": {
+      "text": "ロプステン",
+      "source": "gemini"
+    },
+    "Hoodi": {
+      "text": "フーディ",
+      "source": "gemini"
+    },
+    "Noir": {
+      "text": "ノワール",
+      "source": "gemini"
+    },
+    "zkEVM": {
+      "text": "ズィーケーイーヴィーエム",
+      "source": "gemini"
+    },
+    "Zokrates": {
+      "text": "ゾクラテス",
+      "source": "gemini"
+    },
+    "Blockscout": {
+      "text": "ブロックスカウト",
+      "source": "gemini"
+    },
+    "Kurtosis": {
+      "text": "クルトシス",
+      "source": "gemini"
+    },
+    "Nethereum": {
+      "text": "ネセリウム",
+      "source": "gemini"
+    },
+    "Yul": {
+      "text": "ユル",
+      "source": "gemini"
+    },
+    "Pinata": {
+      "text": "ピニャータ",
+      "source": "gemini"
+    },
+    "DAppNode": {
+      "text": "ダップノード",
+      "source": "gemini"
+    },
+    "Vite": {
+      "text": "ヴィート",
+      "source": "gemini"
+    },
+    "GraphQL": {
+      "text": "グラフキューエル",
+      "source": "gemini"
+    },
+    "Sourcify": {
+      "text": "ソーシファイ",
+      "source": "gemini"
+    },
+    "EthereumJS": {
+      "text": "イーサリアムジェーエス",
+      "source": "gemini"
+    },
+    "Web3j": {
+      "text": "ウェブスリージェー",
+      "source": "gemini"
+    },
+    "Otterscan": {
+      "text": "オッタースキャン",
+      "source": "gemini"
+    },
+    "SubQuery": {
+      "text": "サブクエリ",
+      "source": "gemini"
+    },
+    "GitPOAP": {
+      "text": "ギットポープ",
+      "source": "gemini"
+    },
+    "Crytic": {
+      "text": "クリティック",
+      "source": "gemini"
+    },
+    "Wake": {
+      "text": "ウェイク",
+      "source": "gemini"
+    },
+    "Scribble": {
+      "text": "スクリブル",
+      "source": "gemini"
+    },
+    "OpenGSN": {
+      "text": "オープンジーエスエヌ",
+      "source": "gemini"
+    },
+    "Sablier": {
+      "text": "サブリエ",
+      "source": "gemini"
+    },
+    "Chainstack": {
+      "text": "チェーンスタック",
+      "source": "gemini"
+    },
+    "QuickNode": {
+      "text": "クイックノード",
+      "source": "gemini"
+    },
+    "NatSpec": {
+      "text": "ナットスペック",
+      "source": "gemini"
+    },
+    "WebAssembly": {
+      "text": "ウェブアセンブリ",
+      "source": "gemini"
+    },
+    "Blast": {
+      "text": "ブラスト",
+      "source": "gemini"
+    },
+    "Sushiswap": {
+      "text": "スシスワップ",
+      "source": "gemini"
+    },
+    "Namecoin": {
+      "text": "ネームコイン",
+      "source": "gemini"
+    },
+    "Twitter": {
+      "text": "ツイッター",
+      "source": "gemini"
+    },
+    "PayPal": {
+      "text": "ペイパル",
+      "source": "gemini"
+    },
+    "OpenSea": {
+      "text": "オープンシー",
+      "source": "gemini"
+    },
+    "Figma": {
+      "text": "フィグマ",
+      "source": "gemini"
+    },
+    "Binance": {
+      "text": "バイナンス",
+      "source": "gemini"
+    },
+    "VSCode": {
+      "text": "ブイエスコード",
+      "source": "gemini"
+    },
+    "Coinbase": {
+      "text": "コインベース",
+      "source": "gemini"
+    },
+    "EVERLAND": {
+      "text": "エバーランド",
+      "source": "gemini"
+    },
+    "Gitter": {
+      "text": "ギッター",
+      "source": "gemini"
+    },
+    "Filebase": {
+      "text": "ファイルベース",
+      "source": "gemini"
+    },
+    "Windows": {
+      "text": "ウィンドウズ",
+      "source": "gemini"
+    },
+    "macOS": {
+      "text": "マックオーエス",
+      "source": "gemini"
+    },
+    "Android": {
+      "text": "アンドロイド",
+      "source": "gemini"
+    },
+    "iOS": {
+      "text": "アイオーエス",
+      "source": "gemini"
+    },
+    "Chrome": {
+      "text": "クローム",
+      "source": "gemini"
+    },
+    "Netflix": {
+      "text": "ネットフリックス",
+      "source": "gemini"
+    },
+    "Facebook": {
+      "text": "フェイスブック",
+      "source": "gemini"
+    },
+    "Microsoft": {
+      "text": "マイクロソフト",
+      "source": "gemini"
+    },
+    "Parity": {
+      "text": "パリティ",
+      "source": "gemini"
+    },
+    "Hyperledger": {
+      "text": "ハイパーレジャー",
+      "source": "gemini"
+    },
+    "Kaleido": {
+      "text": "カレイド",
+      "source": "gemini"
+    },
+    "EthStaker": {
+      "text": "イーサステイカー",
+      "source": "gemini"
+    },
+    "ETHGlobal": {
+      "text": "イーサグローバル",
+      "source": "gemini"
+    },
+    "PoolTogether": {
+      "text": "プールトゥギャザー",
+      "source": "gemini"
+    },
+    "MolochDAO": {
+      "text": "モロックダオ",
+      "source": "gemini"
+    },
+    "Bankless": {
+      "text": "バンクレス",
+      "source": "gemini"
+    },
+    "MyCrypto": {
+      "text": "マイクリプト",
+      "source": "gemini"
+    },
+    "CryptoKitties": {
+      "text": "クリプトキティーズ",
+      "source": "gemini"
+    },
+    "QuarkID": {
+      "text": "クォークアイディー",
+      "source": "gemini"
+    },
+    "L2BEAT": {
+      "text": "エルツービート",
+      "source": "gemini"
+    },
+    "Ethereum Cat Herders": {
+      "text": "イーサリアム・キャット・ハーダーズ",
+      "source": "gemini"
+    },
+    "Ethereum Magicians": {
+      "text": "イーサリアム・マジシャンズ",
+      "source": "gemini"
+    },
+    "Grandine": {
+      "text": "グランディネ",
+      "source": "gemini"
+    },
+    "Nim": {
+      "text": "ニム",
+      "source": "gemini"
+    },
+    "Tornado Cash": {
+      "text": "トルネード・キャッシュ",
+      "source": "gemini"
+    },
+    "Swarm": {
+      "text": "スウォーム",
+      "source": "gemini"
+    },
+    "Quorum": {
+      "text": "クォーラム",
+      "source": "gemini"
+    },
+    "Cyfrin Updraft": {
+      "text": "サイフリン・アップドラフト",
+      "source": "gemini"
+    },
+    "Microsoft Learn": {
+      "text": "マイクロソフト・ラーン",
+      "source": "gemini"
+    },
+    "Omer Greismen": {
+      "text": "オマー・グライスマン",
+      "source": "gemini"
+    },
+    "Gal Weizman": {
+      "text": "ギャル・ワイズマン",
+      "source": "gemini"
+    },
+    "Shy Datika": {
+      "text": "シャイ・ダティカ",
+      "source": "gemini"
+    },
+    "Roy Confino": {
+      "text": "ロイ・コンフィノ",
+      "source": "gemini"
+    },
+    "Idan Ofrat": {
+      "text": "イダン・オフラット",
+      "source": "gemini"
+    },
+    "Dror Aviely": {
+      "text": "ドロール・アヴィエリ",
+      "source": "gemini"
+    },
+    "Nir Rozin": {
+      "text": "ニル・ロジン",
+      "source": "gemini"
+    },
+    "Adan Kedem": {
+      "text": "アダン・ケデム",
+      "source": "gemini"
+    },
+    "Uri Kolodny": {
+      "text": "ウリ・コロドニー",
+      "source": "gemini"
+    },
+    "Ben Samocha": {
+      "text": "ベン・サモチャ",
+      "source": "gemini"
+    },
+    "Alon Muroch": {
+      "text": "アロン・ムロック",
+      "source": "gemini"
+    },
+    "Zhen Xiao": {
+      "text": "ジェン・シャオ",
+      "source": "gemini"
+    },
+    "James Prestwich": {
+      "text": "ジェームズ・プレストウィッチ",
+      "source": "gemini"
+    },
+    "Max Mersch": {
+      "text": "マックス・メルシュ",
+      "source": "gemini"
+    },
+    "Udi Wertheimer": {
+      "text": "ウディ・ワートハイマー",
+      "source": "gemini"
+    },
+    "Eilon Aviv": {
+      "text": "エイロン・アヴィヴ",
+      "source": "gemini"
+    },
+    "Wei Dai": {
+      "text": "ウェイ・ダイ",
+      "source": "gemini"
+    },
+    "Wei Wang": {
+      "text": "ウェイ・ワン",
+      "source": "gemini"
+    },
+    "Refik Anadol": {
+      "text": "レフィーク・アナドール",
+      "source": "gemini"
+    },
+    "NFTs": {
+      "text": "エヌエフティーズ",
+      "source": "gemini"
+    },
+    "DAOs": {
+      "text": "ダオス",
+      "source": "gemini"
+    },
+    "DApps": {
+      "text": "ダップス",
+      "source": "gemini"
+    }
   },
   "_alternatives": {
     "Aave": [
