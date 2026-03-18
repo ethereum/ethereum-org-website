@@ -1,6 +1,6 @@
 ---
 title: ERC-20 Token Standard
-description: "تعرف على ERC-20، وهو المعيار الخاص بالرموز القابلة للاستبدال على Ethereum والذي يتيح تطبيقات الرموز القابلة للتشغيل المتبادل."
+description: "تعرف على ERC-20، وهو المعيار الخاص بالرموز القابلة للاستبدال على إيثريوم والذي يتيح تطبيقات الرموز القابلة للتشغيل المتبادل."
 lang: ar
 ---
 
@@ -8,7 +8,7 @@ lang: ar
 
 **ما هو الرمز المميز؟**
 
-يمكن أن تمثل الرموز أي شيء تقريبًا في Ethereum:
+يمكن أن تمثل الرموز أي شيء تقريبًا في إيثريوم:
 
 - نقاط السمعة في منصة عبر الإنترنت
 - مهارات شخصية في اللعبة
@@ -40,7 +40,7 @@ lang: ar
 - الحصول على العرض الإجمالي المتاح للعملة على الشبكة
 - الموافقة على ما إذا كان يمكن إنفاق عملات لحساب معين من قبل حساب من طرف ثالث
 
-إذا نفذ العقد الذكي الأساليب والأحداث التالية، فيمكن تسميته بعقد رمز ERC-20، وبمجرد نشره، سيكون مسؤولاً عن تتبع الرموز التي تم إنشاؤها على Ethereum.
+إذا نفذ العقد الذكي الأساليب والأحداث التالية، فيمكن تسميته بعقد رمز ERC-20، وبمجرد نشره، سيكون مسؤولاً عن تتبع الرموز التي تم إنشاؤها على إيثريوم.
 
 من [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
@@ -67,12 +67,12 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### أمثلة {#web3py-example}
 
-Let's see how a Standard is so important to make things simple for us to inspect any ERC-20 Token Contract on Ethereum.
+Let's see how a Standard is so important to make things simple for us to inspect any ERC-20 Token Contract on إيثريوم.
 We just need the Contract Application Binary Interface (ABI) to create an interface to any ERC-20 Token. كما ترى أدناه، سنستخدم واجهة برمجة تطبيقات (ABI) مبسطة، لجعلها مثالاً منخفض الاحتكاك.
 
-#### مثال Web3.py {#web3py-example}
+#### مثال ويب3.باي {#web3py-example}
 
-أولاً، تأكد من تثبيت مكتبة [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) الخاصة بلغة Python:
+أولاً، تأكد من تثبيت مكتبة [ويب3.باي](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) الخاصة بلغة بايثون:
 
 ```
 pip install web3
@@ -165,7 +165,7 @@ print("Addr Balance:", addr_balance)
 على الرغم من أنه من غير الممكن منع هذه المشكلة تمامًا باستخدام ERC-20، إلا أن هناك طرقًا تسمح بتقليل احتمالية فقدان الرموز بشكل كبير للمستخدم النهائي:
 
 - المشكلة الأكثر شيوعًا هي عندما يرسل المستخدم الرموز المميزة إلى عنوان عقد الرمز المميز نفسه (على سبيل المثال، إيداع USDT إلى عنوان عقد الرمز المميز USDT). يوصى بتقييد دالة `transfer(..)` لإبطال محاولات التحويل هذه. فكر في إضافة التحقق `require(_to != address(this));` ضمن تنفيذ دالة `transfer(..)`.
-- بشكل عام، دالة `transfer(..)` ليست مصممة لإيداع الرموز المميزة في العقود. `approve(..) ويُستخدم نمط `transferFrom(..)`لإيداع الرموز المميزة بمعيار ERC-20 في العقود بدلاً من ذلك. من الممكن تقييد دالة التحويل لمنع إيداع الرموز المميزة في أي عقود باستخدامها، ولكن هذا قد يكسر التوافق مع العقود التي تفترض أنه يمكن إيداع الرموز المميزة في العقود باستخدام دالة`trasnfer(..)` (مثل مجمعات سيولة Uniswap).
+- بشكل عام، دالة `transfer(..)` ليست مصممة لإيداع الرموز المميزة في العقود. `approve(..) ويُستخدم نمط `transferFrom(..)`لإيداع الرموز المميزة بمعيار ERC-20 في العقود بدلاً من ذلك. من الممكن تقييد دالة التحويل لمنع إيداع الرموز المميزة في أي عقود باستخدامها، ولكن هذا قد يكسر التوافق مع العقود التي تفترض أنه يمكن إيداع الرموز المميزة في العقود باستخدام دالة`trasnfer(..)` (مثل مجمعات سيولة يوني سواب).
 - افترض دائمًا أن رموز ERC-20 يمكن أن تظهر في عقدك حتى لو لم يكن من المفترض أن يتلقى عقدك أيًا منها على الإطلاق. لا توجد طريقة لمنع أو رفض الإيداعات العرضية من جانب المستلمين يوصى بتنفيذ وظيفة تسمح باستخراج رموز ERC-20 المودعة عن طريق الخطأ.
 - فكر في استخدام معايير رمزية بديلة
 
@@ -174,9 +174,9 @@ print("Addr Balance:", addr_balance)
 ## قراءة إضافية {#further-reading}
 
 - [EIP-20: معيار توكن ERC-20](https://eips.ethereum.org/EIPS/eip-20)
-- [OpenZeppelin - الرموز المميزة](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
-- [OpenZeppelin - تنفيذ ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [Alchemy - دليل رموز Solidity ERC20 المميزة](https://www.alchemy.com/overviews/erc20-solidity)
+- [أوبن زبلين - الرموز المميزة](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
+- [أوبن زبلين - تنفيذ ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [ألكيمي - دليل رموز سوليديتي ERC20 المميزة](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## معايير الرموز المميزة الأخرى القابلة للاستبدال {#fungible-token-standards}
 

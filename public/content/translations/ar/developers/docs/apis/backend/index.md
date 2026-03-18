@@ -1,6 +1,6 @@
 ---
 title: "المكتبات الخلفية لواجهة برمجة التطبيقات"
-description: "مقدمة إلى واجهات برمجة التطبيقات العميلة لـEthereum، التي تسمح لك بالتفاعل مع سلسلة الكتل من التطبيق الخاص بك."
+description: "مقدمة إلى واجهات برمجة التطبيقات العميلة لـإيثريوم، التي تسمح لك بالتفاعل مع سلسلة الكتل من التطبيق الخاص بك."
 lang: ar
 ---
 
@@ -8,7 +8,7 @@ lang: ar
 
 لهذا الغرض، يقوم كل عميل لإيثريوم بتطبيق مواصفات [JSON-RPC](/developers/docs/apis/json-rpc/)، لذلك توجد مجموعة موحدة من [الطرق](/developers/docs/apis/json-rpc/#json-rpc-methods) التي يمكن للتطبيقات الاعتماد عليها.
 
-إذا كنت تريد استخدام لغة برمجة محددة للاتصال بعقدة إيثيريوم، هناك العديد من مكتبات الراحة في النظام البيئي التي تجعل هذا أسهل بكثير. مع هذه المكتبات، بوسع المطورين كتابة طرق ذكية من سطر واحد لتهيئة طلبات JSON RPC (في الخلفية) التي تتفاعل مع Ethereum.
+إذا كنت تريد استخدام لغة برمجة محددة للاتصال بعقدة إيثيريوم، هناك العديد من مكتبات الراحة في النظام البيئي التي تجعل هذا أسهل بكثير. مع هذه المكتبات، بوسع المطورين كتابة طرق ذكية من سطر واحد لتهيئة طلبات JSON RPC (في الخلفية) التي تتفاعل مع إيثريوم.
 
 ## المتطلبات الأساسية {#prerequisites}
 
@@ -16,47 +16,47 @@ lang: ar
 
 ## ما نفع المكتبة؟ {#why-use-a-library}
 
-تخفف هذه المكتبات إلى حد كبير من تعقيد التفاعل المباشر مع عقدة Ethereum. كما أنها توفر وظائف مساعِدة (كتحويل ETH إلى Gwei) تتيح لك كمطوّر قضاء وقت أقل في التعامل مع تعقيدات عملاء إيثريوم والتركيز لوقت أطول على وظيفة تطبيقك الفريدة.
+تخفف هذه المكتبات إلى حد كبير من تعقيد التفاعل المباشر مع عقدة إيثريوم. كما أنها توفر وظائف مساعِدة (كتحويل ETH إلى Gwei) تتيح لك كمطوّر قضاء وقت أقل في التعامل مع تعقيدات عملاء إيثريوم والتركيز لوقت أطول على وظيفة تطبيقك الفريدة.
 
 ## المكتبات المتاحة {#available-libraries}
 
 ### البنية التحتية وخدمات العقد {#infrastructure-and-node-services}
 
-**Alchemy -** **_منصة تطوير Ethereum._**
+**ألكيمي -** **_منصة تطوير إيثريوم._**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [التوثيق](https://www.alchemy.com/docs/)
 - [غيت هاب](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/alchemyplatform)
+- [ديسكورد](https://discord.com/invite/alchemyplatform)
 
 **All That Node -** **_العقدة كخدمة._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [التوثيق](https://docs.allthatnode.com)
-- [Discord](https://discord.gg/GmcdVEUbJM)
+- [ديسكورد](https://discord.gg/GmcdVEUbJM)
 
-**Blast by Bware Labs -** **_واجهات برمجة التطبيقات اللامركزية لشبكة إيثريوم الرئيسية وشبكات الاختبار._**
+**بلاست by Bware Labs -** **_واجهات برمجة التطبيقات اللامركزية لشبكة إيثريوم الرئيسية وشبكات الاختبار._**
 
 - [blastapi.io](https://blastapi.io/)
 - [التوثيق](https://docs.blastapi.io)
-- [Discord](https://discord.gg/SaRqmRUjjQ)
+- [ديسكورد](https://discord.gg/SaRqmRUjjQ)
 
 **BlockPi -** **_توفير خدمات RPC أكثر كفاءة وسرعة_**
 
 - [blockpi.io](https://blockpi.io/)
 - [التوثيق](https://docs.blockpi.io/)
 - [غيت هاب](https://github.com/BlockPILabs)
-- [Discord](https://discord.com/invite/xTvGVrGVZv)
+- [ديسكورد](https://discord.com/invite/xTvGVrGVZv)
 
-**بوابة Ethereum على Cloudflare.**
+**بوابة إيثريوم على Cloudflare.**
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - مستكشف الكتل وواجهات برمجة التطبيقات للمعاملات**
+**إيثرسكان - مستكشف الكتل وواجهات برمجة التطبيقات للمعاملات**
 
 - [التوثيق](https://docs.etherscan.io/)
 
-**Blockscout - مستكشف الكتل مفتوح المصدر**
+**بلوك سكوت - مستكشف الكتل مفتوح المصدر**
 
 - [التوثيق](https://docs.blockscout.com/)
 
@@ -65,7 +65,7 @@ lang: ar
 - [GetBlock.io](https://getblock.io/)
 - [التوثيق](https://docs.getblock.io/)
 
-**Infura -** **_واجهة برمجة تطبيقات إيثريوم كخدمة._**
+**إنفيورا -** **_واجهة برمجة تطبيقات إيثريوم كخدمة._**
 
 - [infura.io](https://infura.io)
 - [التوثيق](https://docs.infura.io/api)
@@ -81,11 +81,11 @@ lang: ar
 - [NOWNodes.io](https://nownodes.io/)
 - [التوثيق](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_البنية التحتية لسلسلة الكتل كخدمة._**
+**كويك نود -** **_البنية التحتية لسلسلة الكتل كخدمة._**
 
 - [quicknode.com](https://quicknode.com)
 - [التوثيق](https://www.quicknode.com/docs/welcome)
-- [Discord](https://discord.gg/quicknode)
+- [ديسكورد](https://discord.gg/quicknode)
 
 **Rivet -** **_واجهات برمجة تطبيقات إيثريوم وإيثريوم كلاسيك كخدمة مدعومة ببرمجيات مفتوحة المصدر._**
 
@@ -98,26 +98,26 @@ lang: ar
 - [zmok.io](https://zmok.io/)
 - [غيت هاب](https://github.com/zmok-io)
 - [التوثيق](https://docs.zmok.io/)
-- [Discord](https://discord.gg/fAHeh3ka6s)
+- [ديسكورد](https://discord.gg/fAHeh3ka6s)
 
 ### أدوات التطوير {#development-tools}
 
-**ethers-kt -** **_مكتبة Kotlin/Java/Android غير متزامنة وعالية الأداء لسلاسل الكتل القائمة على EVM._**
+**ethers-kt -** **_مكتبة Kotlin/جافا/أندرويد غير متزامنة وعالية الأداء لسلاسل الكتل القائمة على EVM._**
 
 - [غيت هاب](https://github.com/Kr1ptal/ethers-kt)
 - [أمثلة](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
-- [Discord](https://discord.gg/rx35NzQGSb)
+- [ديسكورد](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_مكتبة تكامل .NET مفتوحة المصدر لسلسلة الكتل._**
+**نيثيريوم -** **_مكتبة تكامل دوت نت مفتوحة المصدر لسلسلة الكتل._**
 
 - [غيت هاب](https://github.com/Nethereum/Nethereum)
 - [التوثيق](http://docs.nethereum.com/en/latest/)
-- [Discord](https://discord.com/invite/jQPrR58FxX)
+- [ديسكورد](https://discord.com/invite/jQPrR58FxX)
 
-**أدوات Python -** **_مجموعة متنوعة من المكتبات للتفاعل مع إيثريوم عبر Python._**
+**أدوات بايثون -** **_مجموعة متنوعة من المكتبات للتفاعل مع إيثريوم عبر بايثون._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [web3.py GitHub](https://github.com/ethereum/web3.py)
+- [web3.py غيت هاب](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
 **Tatum -** **_منصة تطوير البلوكتشين المثالية._**
@@ -125,13 +125,13 @@ lang: ar
 - [Tatum](https://tatum.io/)
 - [غيت هاب](https://github.com/tatumio/)
 - [التوثيق](https://docs.tatum.io/)
-- [Discord](https://discord.gg/EDmW3kjTC9)
+- [ديسكورد](https://discord.gg/EDmW3kjTC9)
 
-**web3j -** **_مكتبة تكامل Java/Android/Kotlin/Scala مع إيثريوم._**
+**web3j -** **_مكتبة تكامل جافا/أندرويد/Kotlin/Scala مع إيثريوم._**
 
 - [غيت هاب](https://github.com/web3j/web3j)
 - [الوثائق](https://docs.web3j.io/)
-- [Gitter](https://gitter.im/web3j/web3j)
+- [جيتر](https://gitter.im/web3j/web3j)
 
 ### خدمات البلوكتشين {#blockchain-services}
 
@@ -144,30 +144,30 @@ lang: ar
 
 - [chainbase.com](https://chainbase.com/)
 - [التوثيق](https://docs.chainbase.com/)
-- [Discord](https://discord.gg/Wx6qpqz4AF)
+- [ديسكورد](https://discord.gg/Wx6qpqz4AF)
 
-**Chainstack -** **_عقد إيثريوم مرنة ومخصصة كخدمة._**
+**تشين ستاك -** **_عقد إيثريوم مرنة ومخصصة كخدمة._**
 
 - [chainstack.com](https://chainstack.com)
 - [التوثيق](https://docs.chainstack.com/)
 - [مرجع واجهة برمجة تطبيقات (API) إيثريوم](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Cloud Node -** **_واجهة برمجة تطبيقات البنية التحتية لسلسلة الكتل._**
+**كوين بيز Cloud Node -** **_واجهة برمجة تطبيقات البنية التحتية لسلسلة الكتل._**
 
-- [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
+- [كوين بيز Cloud Node](https://www.coinbase.com/developer-platform)
 - [التوثيق](https://docs.cdp.coinbase.com/)
 
-**DataHub بواسطة Figment -** **_خدمات API Web3 مع شبكة إيثريوم الرئيسية وشبكات الاختبار._**
+**DataHub بواسطة Figment -** **_خدمات API ويب3 مع شبكة إيثريوم الرئيسية وشبكات الاختبار._**
 
 - [DataHub](https://www.figment.io/)
 - [التوثيق](https://docs.figment.io/)
 
-**Moralis -** **_موفر واجهة برمجة تطبيقات EVM على مستوى المؤسسات._**
+**موراليس -** **_موفر واجهة برمجة تطبيقات EVM على مستوى المؤسسات._**
 
 - [moralis.io](https://moralis.io)
 - [التوثيق](https://docs.moralis.io/)
 - [غيت هاب](https://github.com/MoralisWeb3)
-- [Discord](https://moralis.io/joindiscord/)
+- [ديسكورد](https://moralis.io/joindiscord/)
 - [المنتدى](https://forum.moralis.io/)
 
 **NFTPort -** **_واجهات برمجة تطبيقات بيانات إيثريوم والسك._**
@@ -175,7 +175,7 @@ lang: ar
 - [nftport.xyz](https://www.nftport.xyz/)
 - [التوثيق](https://docs.nftport.xyz/)
 - [غيت هاب](https://github.com/nftport/)
-- [Discord](https://discord.com/invite/K8nNrEgqhE)
+- [ديسكورد](https://discord.com/invite/K8nNrEgqhE)
 
 **Tokenview -** **_منصة واجهات برمجة التطبيقات العامة متعددة العملات المشفرة لسلسلة الكتل._**
 
@@ -187,14 +187,14 @@ lang: ar
 
 - [Watchdata](https://watchdata.io/)
 - [التوثيق](https://docs.watchdata.io/)
-- [Discord](https://discord.com/invite/TZRJbZ6bdn)
+- [ديسكورد](https://discord.com/invite/TZRJbZ6bdn)
 
 **Covalent -** **_واجهات برمجة تطبيقات بلوكتشين مُثرَاة لأكثر من 200 سلسلة._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
 - [التوثيق](https://www.covalenthq.com/docs/api/)
 - [غيت هاب](https://github.com/covalenthq)
-- [Discord](https://www.covalenthq.com/discord/)
+- [ديسكورد](https://www.covalenthq.com/discord/)
 
 ## قراءة إضافية {#further-reading}
 
@@ -207,5 +207,5 @@ _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ 
 
 ## دروس تعليمية ذات صلة {#related-tutorials}
 
-- [إعداد Web3js لاستخدام سلسلة كتل الإيثريوم في JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– تعليمات لإعداد web3.js في مشروعك._
-- [استدعاء عقد ذكي من JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– باستخدام رمز DAI، تعرّف على كيفية استدعاء وظيفة العقود بواسطة JavaScript._
+- [إعداد Web3js لاستخدام سلسلة كتل الإيثريوم في جافا سكريبت](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– تعليمات لإعداد web3.js في مشروعك._
+- [استدعاء عقد ذكي من جافا سكريبت](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– باستخدام رمز DAI، تعرّف على كيفية استدعاء وظيفة العقود بواسطة جافا سكريبت._

@@ -5,7 +5,7 @@ description: "تعرف على رسوم غاز الإيثريوم، وكيفية 
 lang: ar
 ---
 
-الغاز ضروري لشبكة Ethereum. فهو الوقود الذي يسمح لـ Ethereum بالعمل، بالطريقة نفسها التي تحتاج بها السيارة إلى البنزين لتعمل.
+الغاز ضروري لشبكة إيثريوم. فهو الوقود الذي يسمح لـ إيثريوم بالعمل، بالطريقة نفسها التي تحتاج بها السيارة إلى البنزين لتعمل.
 
 ## المتطلبات الأساسية {#prerequisites}
 
@@ -13,14 +13,14 @@ lang: ar
 
 ## ما هو الغاز؟ {#what-is-gas}
 
-يشير مصطلح الغاز إلى الوحدة التي تقيس مقدار الجهد الحسابي المطلوب لتنفيذ عمليات محددة على شبكة Ethereum.
+يشير مصطلح الغاز إلى الوحدة التي تقيس مقدار الجهد الحسابي المطلوب لتنفيذ عمليات محددة على شبكة إيثريوم.
 
 نظرًا لأن كل معاملة على إيثريوم تتطلب موارد حسابية لتنفيذها، يتعين دفع ثمن تلك الموارد لضمان عدم تعرض إيثريوم للبريد العشوائي وعدم تعثره في حلَقات حسابية لانهائية. يتم دفع ثمن الحوسبة في شكل رسوم غاز.
 
 رسوم الغاز هي **مقدار الغاز المستخدم لإجراء عملية معينة، مضروبًا في تكلفة الغاز لكل وحدة**. تُدفع الرسوم النظر عما إذا كانت المعاملة ناجحة أم فاشلة.
 
 ![رسم بياني يوضح مكان الحاجة إلى الغاز في عمليات آلة إيثريوم الافتراضية](./gas.png)
-_رسم بياني مقتبس من [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+_رسم بياني مقتبس من [إيثريوم EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 يجب دفع رسوم الغاز بالعملة الأصلية للإيثيريوم، وهي الإيثار (ETH). عادةً ما يتم تسعير أسعار الغاز بوحدات الجوي، وهي وحدة من الإيثيريوم. كل وحدة منا لــ تعادل واحد من مليار ETH (0.000000001 ETH أو 10<sup>-9</sup> ETH).
 
@@ -101,12 +101,12 @@ _رسم بياني مقتبس من [Ethereum EVM illustrated](https://takenobu-h
 
 ## ما سبب وجود الرسوم على الغاز ؟ {#why-do-gas-fees-exist}
 
-باختصار، تساعد رسوم الغاز في الحفاظ على أمن شبكة Ethereum. من خلال فرض رسم على كل عملية حسابية تُنفذ على الشبكة، نمنع الجهات السيئة من إزعاج الشبكة. من أجل تجنب الحلَقات اللانهائية العرضية أو العدائية أو أي هدر آخر في العمليات الحاسوبية في الكود، يُطلب من كل معاملة تحديد حد لعدد خطوات التنفيذ البرمجية التي يمكن أن تستخدمها. والوحدة الأساسية للعملية الحسابية هي "الغاز".
+باختصار، تساعد رسوم الغاز في الحفاظ على أمن شبكة إيثريوم. من خلال فرض رسم على كل عملية حسابية تُنفذ على الشبكة، نمنع الجهات السيئة من إزعاج الشبكة. من أجل تجنب الحلَقات اللانهائية العرضية أو العدائية أو أي هدر آخر في العمليات الحاسوبية في الكود، يُطلب من كل معاملة تحديد حد لعدد خطوات التنفيذ البرمجية التي يمكن أن تستخدمها. والوحدة الأساسية للعملية الحسابية هي "الغاز".
 
 على الرغم من أن المعاملة تتضمن حدًا، إلا أن أي غاز غير مستخدم في المعاملة يتم إرجاعه إلى المستخدم (على سبيل المثال، يتم إرجاع `الحد الأقصى للرسوم - (الرسوم الأساسية + الإكرامية)`).
 
 ![رسم بياني يوضح كيفية استرداد الغاز غير المستخدم](../transactions/gas-tx.png)
-_رسم بياني مقتبس من [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+_رسم بياني مقتبس من [إيثريوم EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## ما هو حد الغاز؟ {#what-is-gas-limit}
 
@@ -130,11 +130,11 @@ _رسم بياني مقتبس من [Ethereum EVM illustrated](https://takenobu-h
 
 إذا كنت ترغب في مراقبة أسعار الغاز، حتى تتمكن من إرسال الإيثيريوم الخاص بك بتكلفة أقل، يمكنك استخدام العديد من الأدوات المختلفة مثل:
 
-- [Etherscan](https://etherscan.io/gastracker) _أداة تقدير سعر غاز المعاملات_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _أداة تقدير سعر غاز المعاملات مفتوحة المصدر_
+- [إيثرسكان](https://etherscan.io/gastracker) _أداة تقدير سعر غاز المعاملات_
+- [بلوك سكوت](https://eth.blockscout.com/gas-tracker) _أداة تقدير سعر غاز المعاملات مفتوحة المصدر_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _راقب وتتبع أسعار غاز إيثريوم والطبقة الثانية (L2) لتقليل رسوم المعاملات وتوفير المال_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _إضافة Chrome لتقدير الغاز تدعم كلاً من المعاملات القديمة من النوع 0 ومعاملات EIP-1559 من النوع 2._
-- [حاسبة رسوم الغاز من Cryptoneur](https://www.cryptoneur.xyz/gas-fees-calculator) _احسب رسوم الغاز بعملتك المحلية لأنواع المعاملات المختلفة على الشبكة الرئيسية (Mainnet) وArbitrum وPolygon._
+- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _إضافة كروم لتقدير الغاز تدعم كلاً من المعاملات القديمة من النوع 0 ومعاملات EIP-1559 من النوع 2._
+- [حاسبة رسوم الغاز من Cryptoneur](https://www.cryptoneur.xyz/gas-fees-calculator) _احسب رسوم الغاز بعملتك المحلية لأنواع المعاملات المختلفة على الشبكة الرئيسية (Mainnet) وأربيتروم وبوليغون._
 
 ## أدوات ذات صلة {#related-tools}
 
@@ -147,5 +147,5 @@ _رسم بياني مقتبس من [Ethereum EVM illustrated](https://takenobu-h
 - [تقليل استهلاك الغاز في عقودك الذكية](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [استراتيجيات تحسين الغاز للمطورين](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [مستندات EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [مصادر Tim Beiko حول EIP-1559](https://hackmd.io/@timbeiko/1559-resources)
+- [مصادر تيم بيكو حول EIP-1559](https://hackmd.io/@timbeiko/1559-resources)
 - [EIP-1559: فصل الآليات عن الميمات](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

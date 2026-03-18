@@ -1,10 +1,10 @@
 ---
 title: "واجهة برمجة تطبيقات JSON-RPC"
-description: "بروتوكول استدعاء إجراء عن بعد (RPC) خفيف الوزن وعديم الجنسية لعملاء Ethereum."
+description: "بروتوكول استدعاء إجراء عن بعد (RPC) خفيف الوزن وعديم الجنسية لعملاء إيثريوم."
 lang: ar
 ---
 
-لكي يتفاعل تطبيق برمجي مع blockchain Ethereum - إما عن طريق قراءة بيانات blockchain أو إرسال المعاملات إلى الشبكة - فيجب أن يتصل بعقدة Ethereum.
+لكي يتفاعل تطبيق برمجي مع blockchain إيثريوم - إما عن طريق قراءة بيانات blockchain أو إرسال المعاملات إلى الشبكة - فيجب أن يتصل بعقدة إيثريوم.
 
 لهذا الغرض، يقوم كل [عميل إيثريوم](/developers/docs/nodes-and-clients/#execution-clients) بتنفيذ [مواصفات JSON-RPC](https://github.com/ethereum/execution-apis)، لذلك هناك مجموعة موحدة من الطرق التي يمكن للتطبيقات الاعتماد عليها بغض النظر عن العقدة أو تنفيذ العميل المحدد.
 
@@ -12,21 +12,21 @@ lang: ar
 
 ## تنفيذات العميل {#client-implementations}
 
-يمكن لكل عميل Ethereum استخدام لغات برمجة مختلفة عند تنفيذ مواصفات JSON-RPC. راجع [وثائق العميل](/developers/docs/nodes-and-clients/#execution-clients) الفردية لمزيد من التفاصيل المتعلقة بلغات البرمجة المحددة. نوصيك بالتحقق من وثائق كل عميل للحصول على أحدث معلومات دعم واجهة برمجة التطبيقات.
+يمكن لكل عميل إيثريوم استخدام لغات برمجة مختلفة عند تنفيذ مواصفات JSON-RPC. راجع [وثائق العميل](/developers/docs/nodes-and-clients/#execution-clients) الفردية لمزيد من التفاصيل المتعلقة بلغات البرمجة المحددة. نوصيك بالتحقق من وثائق كل عميل للحصول على أحدث معلومات دعم واجهة برمجة التطبيقات.
 
 ## المكتبات المساعدة {#convenience-libraries}
 
-على الرغم من أنه يمكنك اختيار التفاعل مباشرة مع عملاء Ethereum عبر واجهة برمجة التطبيقات JSON-RPC، فغالبًا ما توجد خيارات أسهل لمطوري dapp. توجد العديد من مكتبات [JavaScript](/developers/docs/apis/javascript/#available-libraries) و[واجهات برمجة تطبيقات الواجهة الخلفية](/developers/docs/apis/backend/#available-libraries) لتوفير أغلفة فوق واجهة برمجة تطبيقات JSON-RPC. باستخدام هذه المكتبات، يمكن للمطورين كتابة طرق بديهية من سطر واحد بلغة البرمجة التي يختارونها لتهيئة طلبات JSON-RPC (تحت الغطاء) التي تتفاعل مع Ethereum.
+على الرغم من أنه يمكنك اختيار التفاعل مباشرة مع عملاء إيثريوم عبر واجهة برمجة التطبيقات JSON-RPC، فغالبًا ما توجد خيارات أسهل لمطوري dapp. توجد العديد من مكتبات [جافا سكريبت](/developers/docs/apis/javascript/#available-libraries) و[واجهات برمجة تطبيقات الواجهة الخلفية](/developers/docs/apis/backend/#available-libraries) لتوفير أغلفة فوق واجهة برمجة تطبيقات JSON-RPC. باستخدام هذه المكتبات، يمكن للمطورين كتابة طرق بديهية من سطر واحد بلغة البرمجة التي يختارونها لتهيئة طلبات JSON-RPC (تحت الغطاء) التي تتفاعل مع إيثريوم.
 
 ## واجهات برمجة تطبيقات عميل الإجماع {#consensus-clients}
 
-تتعامل هذه الصفحة بشكل أساسي مع واجهة برمجة التطبيقات JSON-RPC التي يستخدمها عملاء تنفيذ Ethereum. ومع ذلك، يتمتع عملاء الإجماع أيضًا بواجهة برمجة تطبيقات RPC تسمح للمستخدمين بالاستعلام عن معلومات حول العقدة، وطلب كتل Beacon، وحالة Beacon، وغيرها من المعلومات المتعلقة بالإجماع مباشرة من العقدة. تم توثيق واجهة برمجة التطبيقات هذه على [صفحة الويب الخاصة بواجهة برمجة تطبيقات Beacon](https://ethereum.github.io/beacon-APIs/#/).
+تتعامل هذه الصفحة بشكل أساسي مع واجهة برمجة التطبيقات JSON-RPC التي يستخدمها عملاء تنفيذ إيثريوم. ومع ذلك، يتمتع عملاء الإجماع أيضًا بواجهة برمجة تطبيقات RPC تسمح للمستخدمين بالاستعلام عن معلومات حول العقدة، وطلب كتل Beacon، وحالة Beacon، وغيرها من المعلومات المتعلقة بالإجماع مباشرة من العقدة. تم توثيق واجهة برمجة التطبيقات هذه على [صفحة الويب الخاصة بواجهة برمجة تطبيقات Beacon](https://ethereum.github.io/beacon-APIs/#/).
 
-تُستخدم أيضًا واجهة برمجة التطبيقات الداخلية للاتصال بين العملاء داخل العقدة - أي أنها تمكن عميل الإجماع وعميل التنفيذ من تبادل البيانات. يُطلق على هذا اسم 'واجهة برمجة تطبيقات المحرك' والمواصفات متاحة على [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+تُستخدم أيضًا واجهة برمجة التطبيقات الداخلية للاتصال بين العملاء داخل العقدة - أي أنها تمكن عميل الإجماع وعميل التنفيذ من تبادل البيانات. يُطلق على هذا اسم 'واجهة برمجة تطبيقات المحرك' والمواصفات متاحة على [غيت هاب](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## مواصفات عميل التنفيذ {#spec}
 
-[اقرأ مواصفات واجهة برمجة تطبيقات JSON-RPC الكاملة على GitHub](https://github.com/ethereum/execution-apis). تم توثيق واجهة برمجة التطبيقات هذه على [صفحة الويب الخاصة بواجهة برمجة تطبيقات التنفيذ](https://ethereum.github.io/execution-apis/) وتتضمن مفتشًا لتجربة جميع الطرق المتاحة.
+[اقرأ مواصفات واجهة برمجة تطبيقات JSON-RPC الكاملة على غيت هاب](https://github.com/ethereum/execution-apis). تم توثيق واجهة برمجة التطبيقات هذه على [صفحة الويب الخاصة بواجهة برمجة تطبيقات التنفيذ](https://ethereum.github.io/execution-apis/) وتتضمن مفتشًا لتجربة جميع الطرق المتاحة.
 
 ## الأعراف {#conventions}
 
@@ -68,7 +68,7 @@ lang: ar
 - [eth_getStorageAt](#eth_getstorageat)
 - [eth_call](#eth_call)
 
-عند تقديم طلبات الاستعلام عن حالة Ethereum، تحدد معلمة الكتلة المقدمة ارتفاع الكتلة.
+عند تقديم طلبات الاستعلام عن حالة إيثريوم، تحدد معلمة الكتلة المقدمة ارتفاع الكتلة.
 
 الخيارات التالية ممكنة لمعلمة الكتلة:
 
@@ -81,7 +81,7 @@ lang: ar
 
 ## أمثلة
 
-في هذه الصفحة، نقدم أمثلة لكيفية استخدام نقاط النهاية الفردية لواجهة برمجة تطبيقات JSON_RPC باستخدام أداة سطر الأوامر، [curl](https://curl.se). يمكن العثور على أمثلة نقاط النهاية الفردية هذه أدناه في قسم [أمثلة Curl](#curl-examples). في أسفل الصفحة، نقدم أيضًا [مثالًا شاملاً](#usage-example) لتجميع ونشر عقد ذكي باستخدام عقدة Geth وواجهة برمجة تطبيقات JSON_RPC وcurl.
+في هذه الصفحة، نقدم أمثلة لكيفية استخدام نقاط النهاية الفردية لواجهة برمجة تطبيقات JSON_RPC باستخدام أداة سطر الأوامر، [curl](https://curl.se). يمكن العثور على أمثلة نقاط النهاية الفردية هذه أدناه في قسم [أمثلة Curl](#curl-examples). في أسفل الصفحة، نقدم أيضًا [مثالًا شاملاً](#usage-example) لتجميع ونشر عقد ذكي باستخدام عقدة غيث وواجهة برمجة تطبيقات JSON_RPC وcurl.
 
 ## أمثلة Curl {#curl-examples}
 
@@ -207,8 +207,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 القائمة الكاملة لمعرفات الشبكة الحالية متاحة على [chainlist.org](https://chainlist.org). بعض الأشياء الشائعة هي:
 
 - `1`: شبكة إيثريوم الرئيسية
-- `11155111`: شبكة الاختبار Sepolia
-- `560048` : شبكة الاختبار Hoodi
+- `11155111`: شبكة الاختبار سيبوليا
+- `560048` : شبكة الاختبار هودي
 
 **مثال**
 
@@ -275,7 +275,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 
 ### eth_protocolVersion {#eth_protocolversion}
 
-إرجاع إصدار بروتوكول Ethereum الحالي. لاحظ أن هذه الطريقة [غير متاحة في Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
+إرجاع إصدار بروتوكول إيثريوم الحالي. لاحظ أن هذه الطريقة [غير متاحة في غيث](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
 
 **المعاملات**
 
@@ -320,7 +320,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 - `currentBlock`: `QUANTITY` - الكتلة الحالية، مثل eth_blockNumber
 - `highestBlock`: `QUANTITY` - أعلى كتلة مقدرة
 
-ومع ذلك، قد يقدم العملاء الأفراد أيضًا بيانات إضافية. على سبيل المثال، يقوم Geth بإرجاع ما يلي:
+ومع ذلك، قد يقدم العملاء الأفراد أيضًا بيانات إضافية. على سبيل المثال، يقوم غيث بإرجاع ما يلي:
 
 ```json
 {
@@ -506,7 +506,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 
 ### eth_gasPrice {#eth_gasprice}
 
-يقوم بإرجاع تقدير للسعر الحالي للغاز بالوي. على سبيل المثال، يقوم عميل Besu بفحص آخر 100 كتلة ويعيد متوسط ​​سعر وحدة الغاز بشكل افتراضي.
+يقوم بإرجاع تقدير للسعر الحالي للغاز بالوي. على سبيل المثال، يقوم عميل بيسو بفحص آخر 100 كتلة ويعيد متوسط ​​سعر وحدة الغاز بشكل افتراضي.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
   جرب نقطة النهاية في ساحة اللعب
@@ -911,7 +911,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 
 تحسب طريقة التوقيع توقيعًا خاصًا بإيثريوم باستخدام: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
-By adding a prefix to the message makes the calculated signature recognizable as an Ethereum specific signature. يمنع هذا إساءة الاستخدام حيث يمكن لتطبيق لامركزي ضار توقيع بيانات عشوائية (مثل معاملة) واستخدام التوقيع لانتحال شخصية الضحية.
+By adding a prefix to the message makes the calculated signature recognizable as an إيثريوم specific signature. يمنع هذا إساءة الاستخدام حيث يمكن لتطبيق لامركزي ضار توقيع بيانات عشوائية (مثل معاملة) واستخدام التوقيع لانتحال شخصية الضحية.
 
 Note: the address to sign with must be unlocked.
 
@@ -1754,7 +1754,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics"
 
 This section includes a demonstration of how to deploy a contract using only the RPC interface. هناك طرق بديلة لنشر العقود حيث يتم تجريد هذا التعقيد بعيدًا - على سبيل المثال، استخدام المكتبات المبنية فوق واجهة RPC مثل [web3.js](https://web3js.readthedocs.io/) و[web3.py](https://github.com/ethereum/web3.py). These abstractions are generally easier to understand and less error-prone, but it is still helpful to understand what is happening under the hood.
 
-فيما يلي عقد ذكي مباشر يسمى `Multiply7` سيتم نشره باستخدام واجهة JSON-RPC إلى عقدة إيثريوم. This tutorial assumes the reader is already running a Geth node. مزيد من المعلومات حول العقد والعملاء متاحة [هنا](/developers/docs/nodes-and-clients/run-a-node). يرجى الرجوع إلى وثائق [العميل](/developers/docs/nodes-and-clients/) الفردية لمعرفة كيفية بدء HTTP JSON-RPC للعملاء غير Geth. معظم العملاء يقدمون الخدمة افتراضيًا على `localhost:8545`.
+فيما يلي عقد ذكي مباشر يسمى `Multiply7` سيتم نشره باستخدام واجهة JSON-RPC إلى عقدة إيثريوم. This tutorial assumes the reader is already running a غيث node. مزيد من المعلومات حول العقد والعملاء متاحة [هنا](/developers/docs/nodes-and-clients/run-a-node). يرجى الرجوع إلى وثائق [العميل](/developers/docs/nodes-and-clients/) الفردية لمعرفة كيفية بدء HTTP JSON-RPC للعملاء غير غيث. معظم العملاء يقدمون الخدمة افتراضيًا على `localhost:8545`.
 
 ```javascript
 contract Multiply7 {
@@ -1766,7 +1766,7 @@ contract Multiply7 {
 }
 ```
 
-The first thing to do is make sure the HTTP RPC interface is enabled. هذا يعني أننا نوفر Geth مع علامة `--http` عند بدء التشغيل. In this example we use the Geth node on a private development chain. Using this approach we don't need ether on the real network.
+The first thing to do is make sure the HTTP RPC interface is enabled. هذا يعني أننا نوفر غيث مع علامة `--http` عند بدء التشغيل. In this example we use the غيث node on a private development chain. Using this approach we don't need ether on the real network.
 
 ```bash
 geth --http --dev console 2>>geth.log
@@ -1784,14 +1784,14 @@ curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635
 {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
-Because numbers are hex encoded, the balance is returned in wei as a hex string. If we want to have the balance in ether as a number we can use web3 from the Geth console.
+Because numbers are hex encoded, the balance is returned in wei as a hex string. If we want to have the balance in ether as a number we can use web3 from the غيث console.
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-Now that there is some ether on our private development chain, we can deploy the contract. The first step is to compile the Multiply7 contract to byte code that can be sent to the EVM. لتثبيت solc، مترجم Solidity، اتبع [وثائق Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (قد ترغب في استخدام إصدار أقدم من `solc` ليتوافق مع [إصدار المترجم المستخدم في مثالنا](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
+Now that there is some ether on our private development chain, we can deploy the contract. The first step is to compile the Multiply7 contract to byte code that can be sent to the EVM. لتثبيت solc، مترجم سوليديتي، اتبع [وثائق سوليديتي](https://docs.soliditylang.org/en/latest/installing-solidity.html). (قد ترغب في استخدام إصدار أقدم من `solc` ليتوافق مع [إصدار المترجم المستخدم في مثالنا](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
 
 الخطوة التالية هي تجميع عقد Multiply7 إلى كود بايت يمكن إرساله إلى آلة إيثريوم الافتراضية.
 
@@ -1892,6 +1892,6 @@ This was just a brief introduction into some of the most common tasks, demonstra
 
 - [مواصفات JSON-RPC](http://www.jsonrpc.org/specification)
 - [العقد والعملاء](/developers/docs/nodes-and-clients/)
-- [واجهات برمجة تطبيقات JavaScript](/developers/docs/apis/javascript/)
+- [واجهات برمجة تطبيقات جافا سكريبت](/developers/docs/apis/javascript/)
 - [واجهات برمجة تطبيقات الواجهة الخلفية](/developers/docs/apis/backend/)
 - [عملاء التنفيذ](/developers/docs/nodes-and-clients/#execution-clients)

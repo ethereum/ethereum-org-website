@@ -33,7 +33,7 @@ lang: ar
 
 ## أضف منصة التداول الخاصة بك {#add-exchange}
 
-إذا أردت إضافة منصة للتداول إلى ethereum.org, أنشأ مشكلة على موقع GitHub.
+إذا أردت إضافة منصة للتداول إلى ethereum.org, أنشأ مشكلة على موقع غيت هاب.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
 أنشئ قضية

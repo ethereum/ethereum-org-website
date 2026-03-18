@@ -1,6 +1,6 @@
 ---
-title: "استدعاء عقد ذكي من JavaScript"
-description: "كيفية استدعاء دالة عقد ذكي من JavaScript باستخدام مثال لرمز Dai"
+title: "استدعاء عقد ذكي من جافا سكريبت"
+description: "كيفية استدعاء دالة عقد ذكي من جافا سكريبت باستخدام مثال لرمز Dai"
 author: jdourlens
 tags: [ "المعاملات", "واجهة التطبيق", "JavaScript", "web3.js" ]
 skill: beginner
@@ -11,7 +11,7 @@ sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-في هذا البرنامج التعليمي، سنرى كيفية استدعاء دالة [عقد ذكي](/developers/docs/smart-contracts/) من JavaScript. أولاً، قراءة حالة العقد الذكي (على سبيل المثال، رصيد حامل ERC20)، ثم سنقوم بتعديل حالة البلوكتشين عن طريق إجراء تحويل للرمز المميز. يجب أن تكون على دراية مسبقًا بـ [إعداد بيئة JS للتفاعل مع البلوكتشين](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/).
+في هذا البرنامج التعليمي، سنرى كيفية استدعاء دالة [عقد ذكي](/developers/docs/smart-contracts/) من جافا سكريبت. أولاً، قراءة حالة العقد الذكي (على سبيل المثال، رصيد حامل ERC20)، ثم سنقوم بتعديل حالة البلوكتشين عن طريق إجراء تحويل للرمز المميز. يجب أن تكون على دراية مسبقًا بـ [إعداد بيئة JS للتفاعل مع البلوكتشين](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/).
 
 في هذا المثال سنتعامل مع رمز DAI، بغرض الاختبار، سنقوم بعمل انقسام للبلوكتشين باستخدام ganache-cli وسنفتح عنوانًا يحتوي بالفعل على الكثير من DAI:
 
@@ -108,7 +108,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 })
 ```
 
-تذكر أن DAI ERC20 له 18 منزلة عشرية، مما يعني أنك بحاجة إلى إزالة 18 صفرًا للحصول على المبلغ الصحيح. يتم إرجاع `uint256` كسلاسل نصية لأن JavaScript لا يتعامل مع القيم الرقمية الكبيرة. إذا لم تكن متأكدًا من [كيفية التعامل مع الأعداد الكبيرة في JS، فاطلع على برنامجنا التعليمي حول bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
+تذكر أن DAI ERC20 له 18 منزلة عشرية، مما يعني أنك بحاجة إلى إزالة 18 صفرًا للحصول على المبلغ الصحيح. يتم إرجاع `uint256` كسلاسل نصية لأن جافا سكريبت لا يتعامل مع القيم الرقمية الكبيرة. إذا لم تكن متأكدًا من [كيفية التعامل مع الأعداد الكبيرة في JS، فاطلع على برنامجنا التعليمي حول bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
 ## الإرسال: إرسال معاملة إلى دالة عقد ذكي {#send-sending-a-transaction-to-a-smart-contract-function}
 

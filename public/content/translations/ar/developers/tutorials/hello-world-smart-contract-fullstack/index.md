@@ -18,52 +18,52 @@ lang: ar
 published: 2021-10-25
 ---
 
-هذا الدليل مخصص لك إذا كنت جديدًا في تطوير البلوكتشين ولا تعرف من أين تبدأ أو كيفية نشر العقود الذكية والتفاعل معها. سوف نستعرض إنشاء ونشر عقد ذكي بسيط على شبكة اختبار Goerli باستخدام [MetaMask](https://metamask.io)، و[Solidity](https://docs.soliditylang.org/en/v0.8.0/)، و[Hardhat](https://hardhat.org)، و[Alchemy](https://alchemy.com/eth).
+هذا الدليل مخصص لك إذا كنت جديدًا في تطوير البلوكتشين ولا تعرف من أين تبدأ أو كيفية نشر العقود الذكية والتفاعل معها. سوف نستعرض إنشاء ونشر عقد ذكي بسيط على شبكة اختبار جيرلي باستخدام [ميتاماسك](https://metamask.io)، و[سوليديتي](https://docs.soliditylang.org/en/v0.8.0/)، و[هارد هات](https://hardhat.org)، و[ألكيمي](https://alchemy.com/eth).
 
-ستحتاج إلى حساب Alchemy لإكمال هذا الدرس التعليمي. [سجّل للحصول على حساب مجاني](https://www.alchemy.com/).
+ستحتاج إلى حساب ألكيمي لإكمال هذا الدرس التعليمي. [سجّل للحصول على حساب مجاني](https://www.alchemy.com/).
 
-إذا كانت لديك أسئلة في أي وقت، فلا تتردد في التواصل معنا في [Alchemy Discord](https://discord.gg/gWuC7zB)!
+إذا كانت لديك أسئلة في أي وقت، فلا تتردد في التواصل معنا في [ألكيمي ديسكورد](https://discord.gg/gWuC7zB)!
 
-## الجزء 1 - إنشاء ونشر عقدك الذكي باستخدام Hardhat {#part-1}
+## الجزء 1 - إنشاء ونشر عقدك الذكي باستخدام هارد هات {#part-1}
 
 ### الاتصال بشبكة إيثريوم {#connect-to-the-ethereum-network}
 
-هناك طرق عديدة لتقديم طلبات إلى سلسلة إيثريوم. للتبسيط، سنستخدم حسابًا مجانيًا على Alchemy، وهي منصة لمطوري البلوكتشين وواجهة برمجة تطبيقات (API) تسمح لنا بالتواصل مع سلسلة إيثريوم دون تشغيل عقدة بأنفسنا. تحتوي Alchemy أيضًا على أدوات للمطورين للمراقبة والتحليلات؛ وسنستفيد من هذه الأدوات في هذا الدرس التعليمي لفهم ما يحدث خلف الكواليس في نشر عقدنا الذكي.
+هناك طرق عديدة لتقديم طلبات إلى سلسلة إيثريوم. للتبسيط، سنستخدم حسابًا مجانيًا على ألكيمي، وهي منصة لمطوري البلوكتشين وواجهة برمجة تطبيقات (API) تسمح لنا بالتواصل مع سلسلة إيثريوم دون تشغيل عقدة بأنفسنا. تحتوي ألكيمي أيضًا على أدوات للمطورين للمراقبة والتحليلات؛ وسنستفيد من هذه الأدوات في هذا الدرس التعليمي لفهم ما يحدث خلف الكواليس في نشر عقدنا الذكي.
 
 ### إنشاء تطبيقك ومفتاح API الخاص بك {#create-your-app-and-api-key}
 
-بمجرد إنشاء حساب Alchemy، يمكنك إنشاء مفتاح API عن طريق إنشاء تطبيق. سيسمح لك هذا بتقديم طلبات إلى شبكة اختبار Goerli. إذا لم تكن على دراية بشبكات الاختبار، يمكنك [قراءة دليل Alchemy لاختيار شبكة](https://www.alchemy.com/docs/choosing-a-web3-network).
+بمجرد إنشاء حساب ألكيمي، يمكنك إنشاء مفتاح API عن طريق إنشاء تطبيق. سيسمح لك هذا بتقديم طلبات إلى شبكة اختبار جيرلي. إذا لم تكن على دراية بشبكات الاختبار، يمكنك [قراءة دليل ألكيمي لاختيار شبكة](https://www.alchemy.com/docs/choosing-a-web3-network).
 
-في لوحة تحكم Alchemy، ابحث عن القائمة المنسدلة **التطبيقات** في شريط التنقل وانقر على **إنشاء تطبيق**.
+في لوحة تحكم ألكيمي، ابحث عن القائمة المنسدلة **التطبيقات** في شريط التنقل وانقر على **إنشاء تطبيق**.
 
 ![إنشاء تطبيق Hello world](./hello-world-create-app.png)
 
-أطلق على تطبيقك اسم '_Hello World_' واكتب وصفًا قصيرًا. حدد **مرحلي** كبيئتك و **Goerli** كشبكتك.
+أطلق على تطبيقك اسم '_Hello World_' واكتب وصفًا قصيرًا. حدد **مرحلي** كبيئتك و **جيرلي** كشبكتك.
 
 ![عرض إنشاء تطبيق hello world](./create-app-view-hello-world.png)
 
-_ملاحظة: تأكد من تحديد **Goerli**، وإلا فلن ينجح هذا الدرس التعليمي._
+_ملاحظة: تأكد من تحديد **جيرلي**، وإلا فلن ينجح هذا الدرس التعليمي._
 
 انقر على **إنشاء تطبيق**. سيظهر تطبيقك في الجدول أدناه.
 
 ### إنشاء حساب إيثريوم {#create-an-ethereum-account}
 
-أنت بحاجة إلى حساب إيثريوم لإرسال واستقبال المعاملات. سنستخدم MetaMask، وهي محفظة افتراضية في المتصفح تتيح للمستخدمين إدارة عنوان حساب إيثريوم الخاص بهم.
+أنت بحاجة إلى حساب إيثريوم لإرسال واستقبال المعاملات. سنستخدم ميتاماسك، وهي محفظة افتراضية في المتصفح تتيح للمستخدمين إدارة عنوان حساب إيثريوم الخاص بهم.
 
-يمكنك تنزيل وإنشاء حساب MetaMask مجانًا [هنا](https://metamask.io/download). عندما تقوم بإنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى "شبكة اختبار Goerli" في الجزء العلوي الأيمن (حتى لا نتعامل بأموال حقيقية).
+يمكنك تنزيل وإنشاء حساب ميتاماسك مجانًا [هنا](https://metamask.io/download). عندما تقوم بإنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى "شبكة اختبار جيرلي" في الجزء العلوي الأيمن (حتى لا نتعامل بأموال حقيقية).
 
 ### الخطوة 4: إضافة إيثر من صنبور (Faucet) {#step-4-add-ether-from-a-faucet}
 
-لنشر عقدك الذكي على شبكة الاختبار، ستحتاج إلى بعض من عملات ETH المزيفة. للحصول على ETH على شبكة Goerli، انتقل إلى سبيل Goerli وأدخل عنوان حساب Goerli الخاص بك. لاحظ أن سُبُل Goerli قد تكون غير موثوقة بعض الشيء في الآونة الأخيرة - راجع [صفحة شبكات الاختبار](/developers/docs/networks/#goerli) للحصول على قائمة بالخيارات التي يمكنك تجربتها:
+لنشر عقدك الذكي على شبكة الاختبار، ستحتاج إلى بعض من عملات ETH المزيفة. للحصول على ETH على شبكة جيرلي، انتقل إلى سبيل جيرلي وأدخل عنوان حساب جيرلي الخاص بك. لاحظ أن سُبُل جيرلي قد تكون غير موثوقة بعض الشيء في الآونة الأخيرة - راجع [صفحة شبكات الاختبار](/developers/docs/networks/#goerli) للحصول على قائمة بالخيارات التي يمكنك تجربتها:
 
 _ملاحظة: بسبب ازدحام الشبكة، قد يستغرق هذا بعض الوقت._
 ``
 
 ### الخطوة 5: التحقق من رصيدك {#step-5-check-your-balance}
 
-للتأكد من وجود ETH في محفظتك، دعنا نُجرِ طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الملحن من Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. لمعرفة المزيد، راجع [الدرس التعليمي القصير من Alchemy حول كيفية استخدام أداة الملحن](https://youtu.be/r6sjRxBZJuU).
+للتأكد من وجود ETH في محفظتك، دعنا نُجرِ طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الملحن من ألكيمي](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. لمعرفة المزيد، راجع [الدرس التعليمي القصير من ألكيمي حول كيفية استخدام أداة الملحن](https://youtu.be/r6sjRxBZJuU).
 
-أدخل عنوان حساب MetaMask الخاص بك وانقر على **إرسال طلب**. سترى استجابة تشبه مقتطف الشفرة أدناه.
+أدخل عنوان حساب ميتاماسك الخاص بك وانقر على **إرسال طلب**. سترى استجابة تشبه مقتطف الشفرة أدناه.
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
@@ -84,7 +84,7 @@ cd hello-world
 
 الآن بعد أن أصبحنا داخل مجلد مشروعنا، سنستخدم `npm init` لتهيئة المشروع.
 
-> إذا لم يكن لديك npm مثبتًا بعد، فاتبع [هذه الإرشادات لتثبيت Node.js وnpm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> إذا لم يكن لديك npm مثبتًا بعد، فاتبع [هذه الإرشادات لتثبيت نود.جي إس وnpm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
 
 لغرض هذا الدرس التعليمي، لا يهم كيف تجيب على أسئلة التهيئة. إليك كيف فعلنا ذلك كمرجع:
 
@@ -116,9 +116,9 @@ cd hello-world
 
 وافق على package.json ونحن على استعداد للبدء!
 
-### الخطوة 7: تنزيل Hardhat {#step-7-download-hardhat}
+### الخطوة 7: تنزيل هارد هات {#step-7-download-hardhat}
 
-Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers when building smart contracts and dapps locally before deploying to the live chain.
+هارد هات is a development environment to compile, deploy, test, and debug your إيثريوم software. It helps developers when building smart contracts and dapps locally before deploying to the live chain.
 
 داخل مشروعنا `hello-world`، قم بتشغيل:
 
@@ -128,7 +128,7 @@ npm install --save-dev hardhat
 
 راجع هذه الصفحة لمزيد من التفاصيل حول [إرشادات التثبيت](https://hardhat.org/getting-started/#overview).
 
-### الخطوة 8: إنشاء مشروع Hardhat {#step-8-create-hardhat-project}
+### الخطوة 8: إنشاء مشروع هارد هات {#step-8-create-hardhat-project}
 
 داخل مجلد مشروع `hello-world`، قم بتشغيل:
 
@@ -174,7 +174,7 @@ mkdir scripts
 
 قد تسأل نفسك، متى سنكتب الكود؟ حان الوقت!
 
-افتح مشروع hello-world في محرر النصوص المفضل لديك. تُكتب العقود الذكية بشكل شائع بلغة Solidity، والتي سنستخدمها لكتابة عقدنا الذكي.‌
+افتح مشروع hello-world في محرر النصوص المفضل لديك. تُكتب العقود الذكية بشكل شائع بلغة سوليديتي، والتي سنستخدمها لكتابة عقدنا الذكي.‌
 
 1. انتقل إلى مجلد `contracts` وأنشئ ملفًا جديدًا باسم `HelloWorld.sol`
 2. أدناه هو عقد Hello World ذكي نموذجي سنستخدمه في هذا الدرس التعليمي. انسخ المحتويات أدناه إلى ملف `HelloWorld.sol`.
@@ -217,11 +217,11 @@ contract HelloWorld {
 
 هذا عقد ذكي أساسي يخزن رسالة عند الإنشاء. يمكن تحديثه عن طريق استدعاء دالة `update`.
 
-### الخطوة 11: ربط MetaMask وAlchemy بمشروعك {#step-11-connect-metamask-alchemy-to-your-project}
+### الخطوة 11: ربط ميتاماسك وألكيمي بمشروعك {#step-11-connect-metamask-alchemy-to-your-project}
 
-لقد أنشأنا محفظة MetaMask وحساب Alchemy وكتبنا عقدنا الذكي، والآن حان وقت ربط الثلاثة.
+لقد أنشأنا محفظة ميتاماسك وحساب ألكيمي وكتبنا عقدنا الذكي، والآن حان وقت ربط الثلاثة.
 
-كل معاملة تُرسل من محفظتك تتطلب توقيعًا باستخدام مفتاحك الخاص الفريد. لتزويد برنامجنا بهذا الإذن، يمكننا تخزين مفتاحنا الخاص بأمان في ملف بيئة. سنقوم أيضًا بتخزين مفتاح API لـ Alchemy هنا.
+كل معاملة تُرسل من محفظتك تتطلب توقيعًا باستخدام مفتاحك الخاص الفريد. لتزويد برنامجنا بهذا الإذن، يمكننا تخزين مفتاحنا الخاص بأمان في ملف بيئة. سنقوم أيضًا بتخزين مفتاح API لـ ألكيمي هنا.
 
 > لمعرفة المزيد حول إرسال المعاملات، راجع [هذا الدرس التعليمي](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) حول إرسال المعاملات باستخدام web3.
 
@@ -231,14 +231,14 @@ First, install the dotenv package in your project directory:
 npm install dotenv --save
 ```
 
-بعد ذلك، قم بإنشاء ملف `.env` في الدليل الجذر للمشروع. أضف مفتاح MetaMask الخاص بك وعنوان URL لـ HTTP Alchemy API إليه.
+بعد ذلك، قم بإنشاء ملف `.env` في الدليل الجذر للمشروع. أضف مفتاح ميتاماسك الخاص بك وعنوان URL لـ HTTP ألكيمي API إليه.
 
 يجب تسمية ملف البيئة الخاص بك `.env` وإلا فلن يتم التعرف عليه كملف بيئة.
 
 لا تسميه `process.env` أو `.env-custom` أو أي شيء آخر.
 
 - اتبع [هذه الإرشادات](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) لتصدير مفتاحك الخاص
-- انظر أدناه للحصول على عنوان URL لـ HTTP Alchemy API
+- انظر أدناه للحصول على عنوان URL لـ HTTP ألكيمي API
 
 ![](./get-alchemy-api-key.gif)
 
@@ -251,11 +251,11 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 لربط هذه الأشياء بالكود الخاص بنا، سنشير إلى هذه المتغيرات في ملف `hardhat.config.js` الخاص بنا في الخطوة 13.
 
-### الخطوة 12: تثبيت Ethers.js {#step-12-install-ethersjs}
+### الخطوة 12: تثبيت إيثرز.جي إس {#step-12-install-ethersjs}
 
-Ethers.js هي مكتبة تسهل التفاعل وإجراء الطلبات إلى إيثريوم عن طريق تغليف [طرق JSON-RPC القياسية](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) بأساليب أكثر سهولة للمستخدم.
+إيثرز.جي إس هي مكتبة تسهل التفاعل وإجراء الطلبات إلى إيثريوم عن طريق تغليف [طرق JSON-RPC القياسية](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) بأساليب أكثر سهولة للمستخدم.
 
-يسمح لنا Hardhat بدمج [المكونات الإضافية](https://hardhat.org/plugins/) للحصول على أدوات إضافية ووظائف موسعة. سنستفيد من [مكون Ethers الإضافي](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) لنشر العقد.
+يسمح لنا هارد هات بدمج [المكونات الإضافية](https://hardhat.org/plugins/) للحصول على أدوات إضافية ووظائف موسعة. سنستفيد من [مكون Ethers الإضافي](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) لنشر العقد.
 
 In your project directory type:
 
@@ -302,7 +302,7 @@ From the command line run:
 npx hardhat compile
 ```
 
-قد تحصل على تحذير حول `SPDX license identifier not provided in source file`، ولكن لا داعي للقلق بشأن ذلك — نأمل أن يبدو كل شيء آخر جيدًا! إذا لم يكن الأمر كذلك، يمكنك دائمًا إرسال رسالة في [Alchemy discord](https://discord.gg/u72VCg3).
+قد تحصل على تحذير حول `SPDX license identifier not provided in source file`، ولكن لا داعي للقلق بشأن ذلك — نأمل أن يبدو كل شيء آخر جيدًا! إذا لم يكن الأمر كذلك، يمكنك دائمًا إرسال رسالة في [ألكيمي discord](https://discord.gg/u72VCg3).
 
 ### الخطوة 15: كتابة سكريبت النشر الخاص بنا {#step-15-write-our-deploy-script}
 
@@ -327,7 +327,7 @@ main()
   })
 ```
 
-يقوم Hardhat بعمل رائع في شرح ما يفعله كل من هذه الأسطر من الكود في [درس العقود التعليمي](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)، وقد اعتمدنا شروحاتهم هنا.
+يقوم هارد هات بعمل رائع في شرح ما يفعله كل من هذه الأسطر من الكود في [درس العقود التعليمي](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)، وقد اعتمدنا شروحاتهم هنا.
 
 ```javascript
 const HelloWorld = await ethers.getContractFactory("HelloWorld")
@@ -357,29 +357,29 @@ You should then see something like:
 
 **يرجى حفظ هذا العنوان**. سوف نستخدمه لاحقًا في الدرس التعليمي.
 
-إذا انتقلنا إلى [Goerli etherscan](https://goerli.etherscan.io) وبحثنا عن عنوان عقدنا، فسنتمكن من رؤية أنه تم نشره بنجاح. The transaction will look something like this:
+إذا انتقلنا إلى [جيرلي etherscan](https://goerli.etherscan.io) وبحثنا عن عنوان عقدنا، فسنتمكن من رؤية أنه تم نشره بنجاح. The transaction will look something like this:
 
 ![](./etherscan-contract.png)
 
-يجب أن يتطابق عنوان `From` مع عنوان حساب MetaMask الخاص بك، وسيظهر في عنوان `To` عبارة **إنشاء عقد**. إذا نقرنا على المعاملة، فسنرى عنوان عقدنا في حقل `To`.
+يجب أن يتطابق عنوان `From` مع عنوان حساب ميتاماسك الخاص بك، وسيظهر في عنوان `To` عبارة **إنشاء عقد**. إذا نقرنا على المعاملة، فسنرى عنوان عقدنا في حقل `To`.
 
 ![](./etherscan-transaction.png)
 
 تهانينا! لقد نشرت للتو عقدًا ذكيًا على شبكة اختبار إيثريوم.
 
-لفهم ما يجري خلف الكواليس، دعنا ننتقل إلى علامة تبويب المستكشف في [لوحة تحكم Alchemy](https://dashboard.alchemy.com/explorer). إذا كان لديك العديد من تطبيقات Alchemy، فتأكد من التصفية حسب التطبيق وتحديد **Hello World**.
+لفهم ما يجري خلف الكواليس، دعنا ننتقل إلى علامة تبويب المستكشف في [لوحة تحكم ألكيمي](https://dashboard.alchemy.com/explorer). إذا كان لديك العديد من تطبيقات ألكيمي، فتأكد من التصفية حسب التطبيق وتحديد **Hello World**.
 
 ![](./hello-world-explorer.png)
 
-هنا سترى عددًا من طرق JSON-RPC التي أنشأتها Hardhat/Ethers لنا خلف الكواليس عندما استدعينا دالة `.deploy()`. هناك طريقتان مهمتان هنا هما [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction)، وهو طلب لكتابة عقدنا على سلسلة Goerli، و[`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash)، وهو طلب لقراءة معلومات حول معاملتنا بالنظر إلى التجزئة (الهاش). لمعرفة المزيد حول إرسال المعاملات، راجع [الدرس التعليمي الخاص بنا حول إرسال المعاملات باستخدام Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+هنا سترى عددًا من طرق JSON-RPC التي أنشأتها هارد هات/Ethers لنا خلف الكواليس عندما استدعينا دالة `.deploy()`. هناك طريقتان مهمتان هنا هما [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction)، وهو طلب لكتابة عقدنا على سلسلة جيرلي، و[`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash)، وهو طلب لقراءة معلومات حول معاملتنا بالنظر إلى التجزئة (الهاش). لمعرفة المزيد حول إرسال المعاملات، راجع [الدرس التعليمي الخاص بنا حول إرسال المعاملات باستخدام ويب3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 ## الجزء 2: التفاعل مع عقدك الذكي {#part-2-interact-with-your-smart-contract}
 
-الآن بعد أن نجحنا في نشر عقد ذكي على شبكة Goerli، دعنا نتعلم كيفية التفاعل معه.
+الآن بعد أن نجحنا في نشر عقد ذكي على شبكة جيرلي، دعنا نتعلم كيفية التفاعل معه.
 
 ### إنشاء ملف interact.js {#create-a-interactjs-file}
 
-هذا هو الملف الذي سنكتب فيه سكريبت التفاعل الخاص بنا. سنستخدم مكتبة Ethers.js التي قمت بتثبيتها مسبقًا في الجزء 1.
+هذا هو الملف الذي سنكتب فيه سكريبت التفاعل الخاص بنا. سنستخدم مكتبة إيثرز.جي إس التي قمت بتثبيتها مسبقًا في الجزء 1.
 
 داخل مجلد `scripts/`، قم بإنشاء ملف جديد باسم `interact.js` وأضف الكود التالي:
 
@@ -395,7 +395,7 @@ const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 
 سنستخدم متغيرات بيئة جديدة، لذلك نحتاج إلى تعريفها في ملف `.env` الذي [أنشأناه سابقًا](#step-11-connect-metamask-&-alchemy-to-your-project).
 
-سنحتاج إلى إضافة تعريف لـ `API_KEY` الخاص بـ Alchemy و`CONTRACT_ADDRESS` حيث تم نشر عقدك الذكي.
+سنحتاج إلى إضافة تعريف لـ `API_KEY` الخاص بـ ألكيمي و`CONTRACT_ADDRESS` حيث تم نشر عقدك الذكي.
 
 يجب أن يبدو ملف `.env` الخاص بك كالتالي:
 
@@ -410,7 +410,7 @@ CONTRACT_ADDRESS = "0x<your contract address>"
 
 ### احصل على واجهة التطبيق الثنائية (ABI) الخاصة بعقدك {#grab-your-contract-ABI}
 
-واجهة التطبيق الثنائية ([ABI](/glossary/#abi)) الخاصة بعقدنا هي الواجهة للتفاعل مع عقدنا الذكي. يقوم Hardhat تلقائيًا بإنشاء واجهة التطبيق الثنائية (ABI) وحفظها في `HelloWorld.json`. لاستخدام واجهة التطبيق الثنائية (ABI)، سنحتاج إلى تحليل المحتويات عن طريق إضافة الأسطر التالية من الكود إلى ملف `interact.js` الخاص بنا:
+واجهة التطبيق الثنائية ([ABI](/glossary/#abi)) الخاصة بعقدنا هي الواجهة للتفاعل مع عقدنا الذكي. يقوم هارد هات تلقائيًا بإنشاء واجهة التطبيق الثنائية (ABI) وحفظها في `HelloWorld.json`. لاستخدام واجهة التطبيق الثنائية (ABI)، سنحتاج إلى تحليل المحتويات عن طريق إضافة الأسطر التالية من الكود إلى ملف `interact.js` الخاص بنا:
 
 ```javascript
 // interact.js
@@ -431,11 +431,11 @@ npx hardhat run scripts/interact.js
 
 ### إنشاء مثيل من عقدك {#create-an-instance-of-your-contract}
 
-للتفاعل مع عقدنا، نحتاج إلى إنشاء مثيل للعقد في الكود الخاص بنا. للقيام بذلك باستخدام Ethers.js، سنحتاج إلى العمل مع ثلاثة مفاهيم:
+للتفاعل مع عقدنا، نحتاج إلى إنشاء مثيل للعقد في الكود الخاص بنا. للقيام بذلك باستخدام إيثرز.جي إس، سنحتاج إلى العمل مع ثلاثة مفاهيم:
 
 1. Provider - مزود عقدة يمنحك حق الوصول للقراءة والكتابة إلى البلوكتشين
 2. Signer - يمثل حساب إيثريوم يمكنه توقيع المعاملات
-3. Contract - كائن Ethers.js يمثل عقدًا محددًا منشورًا على السلسلة
+3. Contract - كائن إيثرز.جي إس يمثل عقدًا محددًا منشورًا على السلسلة
 
 سنستخدم واجهة التطبيق الثنائية (ABI) الخاصة بالعقد من الخطوة السابقة لإنشاء مثيل العقد الخاص بنا:
 
@@ -465,7 +465,7 @@ const helloWorldContract = new ethers.Contract(
 
 هل تتذكر عندما نشرنا عقدنا مع `initMessage = "Hello world!"`؟ سنقوم الآن بقراءة تلك الرسالة المخزنة في عقدنا الذكي وطباعتها على وحدة التحكم.
 
-في JavaScript، تُستخدم الدوال غير المتزامنة عند التفاعل مع الشبكات. لمعرفة المزيد عن الدوال غير المتزامنة، [اقرأ هذا المقال على Medium](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff).
+في جافا سكريبت، تُستخدم الدوال غير المتزامنة عند التفاعل مع الشبكات. لمعرفة المزيد عن الدوال غير المتزامنة، [اقرأ هذا المقال على Medium](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff).
 
 استخدم الكود أدناه لاستدعاء دالة `message` في عقدنا الذكي وقراءة الرسالة الأولية:
 
@@ -569,19 +569,19 @@ main()
 الرسالة الجديدة هي: هذه هي الرسالة الجديدة.
 ```
 
-أثناء تشغيل هذا السكريبت، قد تلاحظ أن خطوة `جارٍ تحديث الرسالة...` تستغرق بعض الوقت للتحميل قبل تحميل الرسالة الجديدة. هذا بسبب عملية التعدين؛ إذا كنت مهتمًا بتتبع المعاملات أثناء تعدينها، فقم بزيارة [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) لرؤية حالة المعاملة. إذا تم إسقاط المعاملة، فمن المفيد أيضًا التحقق من [Goerli Etherscan](https://goerli.etherscan.io) والبحث عن تجزئة (هاش) معاملتك.
+أثناء تشغيل هذا السكريبت، قد تلاحظ أن خطوة `جارٍ تحديث الرسالة...` تستغرق بعض الوقت للتحميل قبل تحميل الرسالة الجديدة. هذا بسبب عملية التعدين؛ إذا كنت مهتمًا بتتبع المعاملات أثناء تعدينها، فقم بزيارة [ألكيمي mempool](https://dashboard.alchemyapi.io/mempool) لرؤية حالة المعاملة. إذا تم إسقاط المعاملة، فمن المفيد أيضًا التحقق من [جيرلي إيثرسكان](https://goerli.etherscan.io) والبحث عن تجزئة (هاش) معاملتك.
 
-## الجزء 3: نشر عقدك الذكي على Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
+## الجزء 3: نشر عقدك الذكي على إيثرسكان {#part-3-publish-your-smart-contract-to-etherscan}
 
 لقد قمت بكل العمل الشاق لإحياء عقدك الذكي؛ الآن حان الوقت لمشاركته مع العالم!
 
-من خلال التحقق من عقدك الذكي على Etherscan، يمكن لأي شخص عرض الكود المصدري الخاص بك والتفاعل مع عقدك الذكي. هيا بنا نبدأ!
+من خلال التحقق من عقدك الذكي على إيثرسكان، يمكن لأي شخص عرض الكود المصدري الخاص بك والتفاعل مع عقدك الذكي. هيا بنا نبدأ!
 
-### الخطوة 1: إنشاء مفتاح API على حساب Etherscan الخاص بك {#step-1-generate-an-api-key-on-your-etherscan-account}
+### الخطوة 1: إنشاء مفتاح API على حساب إيثرسكان الخاص بك {#step-1-generate-an-api-key-on-your-etherscan-account}
 
-مفتاح API الخاص بـ Etherscan ضروري للتحقق من أنك تملك العقد الذكي الذي تحاول نشره.
+مفتاح API الخاص بـ إيثرسكان ضروري للتحقق من أنك تملك العقد الذكي الذي تحاول نشره.
 
-إذا لم يكن لديك حساب Etherscan بالفعل، [سجل للحصول على حساب](https://etherscan.io/register).
+إذا لم يكن لديك حساب إيثرسكان بالفعل، [سجل للحصول على حساب](https://etherscan.io/register).
 
 بمجرد تسجيل الدخول، ابحث عن اسم المستخدم الخاص بك في شريط التنقل، مرر فوقه وحدد زر **ملفي الشخصي**.
 
@@ -589,7 +589,7 @@ main()
 
 يجب أن يظهر مفتاح API الجديد الخاص بك في جدول مفاتيح API. انسخ مفتاح API إلى الحافظة.
 
-بعد ذلك، نحتاج إلى إضافة مفتاح API الخاص بـ Etherscan إلى ملف `.env` الخاص بنا.
+بعد ذلك، نحتاج إلى إضافة مفتاح API الخاص بـ إيثرسكان إلى ملف `.env` الخاص بنا.
 
 بعد إضافته، يجب أن يبدو ملف `.env` الخاص بك كالتالي:
 
@@ -601,17 +601,17 @@ CONTRACT_ADDRESS = "your-contract-address"
 ETHERSCAN_API_KEY = "your-etherscan-key"
 ```
 
-### العقود الذكية المنشورة بواسطة Hardhat {#hardhat-deployed-smart-contracts}
+### العقود الذكية المنشورة بواسطة هارد هات {#hardhat-deployed-smart-contracts}
 
 #### تثبيت hardhat-etherscan {#install-hardhat-etherscan}
 
-نشر عقدك على Etherscan باستخدام Hardhat أمر بسيط. ستحتاج أولاً إلى تثبيت المكون الإضافي `hardhat-etherscan` للبدء. سيقوم `hardhat-etherscan` تلقائيًا بالتحقق من الكود المصدري للعقد الذكي وواجهة التطبيق الثنائية (ABI) على Etherscan. لإضافة هذا، في دليل `hello-world` قم بتشغيل:
+نشر عقدك على إيثرسكان باستخدام هارد هات أمر بسيط. ستحتاج أولاً إلى تثبيت المكون الإضافي `hardhat-etherscan` للبدء. سيقوم `hardhat-etherscan` تلقائيًا بالتحقق من الكود المصدري للعقد الذكي وواجهة التطبيق الثنائية (ABI) على إيثرسكان. لإضافة هذا، في دليل `hello-world` قم بتشغيل:
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan
 ```
 
-بمجرد التثبيت، قم بتضمين العبارة التالية في الجزء العلوي من `hardhat.config.js` الخاص بك، وأضف خيارات تكوين Etherscan:
+بمجرد التثبيت، قم بتضمين العبارة التالية في الجزء العلوي من `hardhat.config.js` الخاص بك، وأضف خيارات تكوين إيثرسكان:
 
 ```javascript
 // hardhat.config.js
@@ -640,7 +640,7 @@ module.exports = {
 }
 ```
 
-#### التحقق من عقدك الذكي على Etherscan {#verify-your-smart-contract-on-etherscan}
+#### التحقق من عقدك الذكي على إيثرسكان {#verify-your-smart-contract-on-etherscan}
 
 تأكد من حفظ جميع الملفات وتكوين جميع متغيرات `.env` بشكل صحيح.
 
@@ -650,7 +650,7 @@ module.exports = {
 npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-تأكد من أن `DEPLOYED_CONTRACT_ADDRESS` هو عنوان عقدك الذكي المنشور على شبكة اختبار Goerli. أيضًا، يجب أن يكون الوسيط الأخير (`'Hello World!'`) هو نفس قيمة السلسلة المستخدمة [أثناء خطوة النشر في الجزء 1](#write-our-deploy-script).
+تأكد من أن `DEPLOYED_CONTRACT_ADDRESS` هو عنوان عقدك الذكي المنشور على شبكة اختبار جيرلي. أيضًا، يجب أن يكون الوسيط الأخير (`'Hello World!'`) هو نفس قيمة السلسلة المستخدمة [أثناء خطوة النشر في الجزء 1](#write-our-deploy-script).
 
 إذا سارت الأمور على ما يرام، سترى الرسالة التالية في الطرفية:
 
@@ -664,11 +664,11 @@ contracts/HelloWorld.sol:HelloWorld at 0xdeployed-contract-address
 https://goerli.etherscan.io/address/<contract-address>#contracts
 ```
 
-تهانينا! الكود المصدري لعقدك الذكي موجود على Etherscan!
+تهانينا! الكود المصدري لعقدك الذكي موجود على إيثرسكان!
 
-### تحقق من عقدك الذكي على Etherscan! {#check-out-your-smart-contract-on-etherscan}
+### تحقق من عقدك الذكي على إيثرسكان! {#check-out-your-smart-contract-on-etherscan}
 
-عندما تنتقل إلى الرابط الموجود في الطرفية، يجب أن تكون قادرًا على رؤية الكود المصدري لعقدك الذكي وواجهة التطبيق الثنائية (ABI) منشورة على Etherscan!
+عندما تنتقل إلى الرابط الموجود في الطرفية، يجب أن تكون قادرًا على رؤية الكود المصدري لعقدك الذكي وواجهة التطبيق الثنائية (ABI) منشورة على إيثرسكان!
 
 **يا للروعة - لقد فعلتها يا بطل! الآن يمكن لأي شخص استدعاء عقدك الذكي أو الكتابة إليه! لا يسعنا الانتظار لرؤية ما ستبنيه بعد ذلك!**
 
@@ -676,34 +676,34 @@ https://goerli.etherscan.io/address/<contract-address>#contracts
 
 بحلول نهاية هذا الدرس التعليمي، ستعرف كيفية:
 
-- توصيل محفظة MetaMask بتطبيقك اللامركزي
-- قراءة البيانات من عقدك الذكي باستخدام واجهة برمجة تطبيقات [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
-- توقيع معاملات إيثريوم باستخدام MetaMask
+- توصيل محفظة ميتاماسك بتطبيقك اللامركزي
+- قراءة البيانات من عقدك الذكي باستخدام واجهة برمجة تطبيقات [ألكيمي ويب3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- توقيع معاملات إيثريوم باستخدام ميتاماسك
 
-بالنسبة لهذا التطبيق اللامركزي، سنستخدم [React](https://react.dev/) كإطار عمل للواجهة الأمامية؛ ومع ذلك، من المهم ملاحظة أننا لن نقضي الكثير من الوقت في تحليل أساسياته، حيث سنركز في الغالب على جلب وظائف Web3 إلى مشروعنا.
+بالنسبة لهذا التطبيق اللامركزي، سنستخدم [رياكت](https://react.dev/) كإطار عمل للواجهة الأمامية؛ ومع ذلك، من المهم ملاحظة أننا لن نقضي الكثير من الوقت في تحليل أساسياته، حيث سنركز في الغالب على جلب وظائف ويب3 إلى مشروعنا.
 
-كمتطلب أساسي، يجب أن يكون لديك فهم على مستوى المبتدئين لـ React. إذا لم يكن الأمر كذلك، نوصي بإكمال [الدرس التعليمي الرسمي للمقدمة إلى React](https://react.dev/learn).
+كمتطلب أساسي، يجب أن يكون لديك فهم على مستوى المبتدئين لـ رياكت. إذا لم يكن الأمر كذلك، نوصي بإكمال [الدرس التعليمي الرسمي للمقدمة إلى رياكت](https://react.dev/learn).
 
 ### استنساخ ملفات البداية {#clone-the-starter-files}
 
-أولاً، انتقل إلى [مستودع GitHub hello-world-part-four](https://github.com/alchemyplatform/hello-world-part-four-tutorial) للحصول على الملفات المبدئية لهذا المشروع وانسخ هذا المستودع إلى جهازك المحلي.
+أولاً، انتقل إلى [مستودع غيت هاب hello-world-part-four](https://github.com/alchemyplatform/hello-world-part-four-tutorial) للحصول على الملفات المبدئية لهذا المشروع وانسخ هذا المستودع إلى جهازك المحلي.
 
 افتح المستودع المنسوخ محليًا. لاحظ أنه يحتوي على مجلدين: `starter-files` و `completed`.
 
-- `starter-files`- **سنعمل في هذا الدليل**، وسنقوم بتوصيل واجهة المستخدم بمحفظة إيثريوم الخاصة بك وبالعقد الذكي الذي نشرناه على Etherscan في [الجزء 3](#part-3).
+- `starter-files`- **سنعمل في هذا الدليل**، وسنقوم بتوصيل واجهة المستخدم بمحفظة إيثريوم الخاصة بك وبالعقد الذكي الذي نشرناه على إيثرسكان في [الجزء 3](#part-3).
 - يحتوي `completed` على الدرس التعليمي الكامل ويجب استخدامه فقط كمرجع إذا واجهتك مشكلة.
 
 بعد ذلك، افتح نسختك من `starter-files` في محرر الكود المفضل لديك، ثم انتقل إلى مجلد `src`.
 
-ستكون جميع الأكواد التي سنكتبها ضمن مجلد `src`. سنقوم بتحرير مكون `HelloWorld.js` وملفات جافا سكريبت `util/interact.js` لإعطاء مشروعنا وظائف Web3.
+ستكون جميع الأكواد التي سنكتبها ضمن مجلد `src`. سنقوم بتحرير مكون `HelloWorld.js` وملفات جافا سكريبت `util/interact.js` لإعطاء مشروعنا وظائف ويب3.
 
 ### تحقق من الملفات المبدئية {#check-out-the-starter-files}
 
 قبل أن نبدأ في البرمجة، دعنا نستكشف ما هو متاح لنا في الملفات المبدئية.
 
-#### تشغيل مشروع React الخاص بك {#get-your-react-project-running}
+#### تشغيل مشروع رياكت الخاص بك {#get-your-react-project-running}
 
-Let's start by running the React project in our browser. The beauty of React is that once we have our project running in our browser, any changes we save will be updated live in our browser.
+Let's start by running the رياكت project in our browser. The beauty of رياكت is that once we have our project running in our browser, any changes we save will be updated live in our browser.
 
 لتشغيل المشروع، انتقل إلى الدليل الجذر لمجلد `starter-files`، ثم قم بتشغيل `npm install` في الطرفية لتثبيت تبعيات المشروع:
 
@@ -724,9 +724,9 @@ npm start
 
 #### مكون `HelloWorld.js` {#the-helloworld-js-component}
 
-دعنا نعد إلى مجلد `src` في محررنا ونفتح ملف `HelloWorld.js`. It's super important that we understand everything in this file, as it is the primary React component we will be working on.
+دعنا نعد إلى مجلد `src` في محررنا ونفتح ملف `HelloWorld.js`. It's super important that we understand everything in this file, as it is the primary رياكت component we will be working on.
 
-في الجزء العلوي من هذا الملف، ستلاحظ أن لدينا العديد من عبارات الاستيراد الضرورية لتشغيل مشروعنا، بما في ذلك مكتبة React، وخطافات useEffect وuseState، وبعض العناصر من `./util/interact.js` (سنصفها بمزيد من التفصيل قريبًا!)، وشعار Alchemy.
+في الجزء العلوي من هذا الملف، ستلاحظ أن لدينا العديد من عبارات الاستيراد الضرورية لتشغيل مشروعنا، بما في ذلك مكتبة رياكت، وخطافات useEffect وuseState، وبعض العناصر من `./util/interact.js` (سنصفها بمزيد من التفصيل قريبًا!)، وشعار ألكيمي.
 
 ```javascript
 // HelloWorld.js
@@ -790,10 +790,10 @@ const onUpdatePressed = async () => {
 }
 ```
 
-- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html)- هو خطاف React يتم استدعاؤه بعد عرض مكونك. نظرًا لأنه يحتوي على خاصية مصفوفة فارغة `[]` تم تمريرها إليه (انظر السطر 4)، فسيتم استدعاؤه فقط عند العرض _الأول_ للمكون. هنا سنقوم بتحميل الرسالة الحالية المخزنة في عقدنا الذكي، واستدعاء مستمعي العقد الذكي والمحفظة، وتحديث واجهة المستخدم لتعكس ما إذا كانت المحفظة متصلة بالفعل.
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html)- هو خطاف رياكت يتم استدعاؤه بعد عرض مكونك. نظرًا لأنه يحتوي على خاصية مصفوفة فارغة `[]` تم تمريرها إليه (انظر السطر 4)، فسيتم استدعاؤه فقط عند العرض _الأول_ للمكون. هنا سنقوم بتحميل الرسالة الحالية المخزنة في عقدنا الذكي، واستدعاء مستمعي العقد الذكي والمحفظة، وتحديث واجهة المستخدم لتعكس ما إذا كانت المحفظة متصلة بالفعل.
 - `addSmartContractListener`- تقوم هذه الدالة بإعداد مستمع سيراقب حدث `UpdatedMessages` الخاص بعقد HelloWorld ويقوم بتحديث واجهة المستخدم عند تغيير الرسالة في عقدنا الذكي.
-- `addWalletListener`- تقوم هذه الدالة بإعداد مستمع يكتشف التغييرات في حالة محفظة MetaMask للمستخدم، مثل عندما يقوم المستخدم بقطع اتصال محفظته أو تبديل العناوين.
-- `connectWalletPressed`- سيتم استدعاء هذه الدالة لتوصيل محفظة MetaMask للمستخدم بتطبيقنا اللامركزي.
+- `addWalletListener`- تقوم هذه الدالة بإعداد مستمع يكتشف التغييرات في حالة محفظة ميتاماسك للمستخدم، مثل عندما يقوم المستخدم بقطع اتصال محفظته أو تبديل العناوين.
+- `connectWalletPressed`- سيتم استدعاء هذه الدالة لتوصيل محفظة ميتاماسك للمستخدم بتطبيقنا اللامركزي.
 - `onUpdatePressed` - سيتم استدعاء هذه الدالة عندما يرغب المستخدم في تحديث الرسالة المخزنة في العقد الذكي.
 
 Near the end of this file, we have the UI of our component.
@@ -849,7 +849,7 @@ return (
 
 أخيرًا، دعنا نتناول أين يتم إضافة مكون `HelloWorld.js` هذا.
 
-إذا انتقلت إلى ملف `App.js`، وهو المكون الرئيسي في React الذي يعمل كحاوية لجميع المكونات الأخرى، فسترى أن مكون `HelloWorld.js` الخاص بنا يتم إدخاله في السطر 7.
+إذا انتقلت إلى ملف `App.js`، وهو المكون الرئيسي في رياكت الذي يعمل كحاوية لجميع المكونات الأخرى، فسترى أن مكون `HelloWorld.js` الخاص بنا يتم إدخاله في السطر 7.
 
 أخيرًا وليس آخرًا، دعنا نتحقق من ملف آخر تم توفيره لك، وهو ملف `interact.js`.
 
@@ -879,10 +879,10 @@ export const updateMessage = async (message) => {}
 
 الدوال الأربع غير المنفذة بعد كائن `helloWorldContract` تقوم بما يلي:
 
-- `loadCurrentMessage` - تعالج هذه الدالة منطق تحميل الرسالة الحالية المخزنة في العقد الذكي. ستقوم بإجراء استدعاء _قراءة_ إلى عقد Hello World الذكي باستخدام واجهة برمجة تطبيقات [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
-- `connectWallet` - ستقوم هذه الدالة بتوصيل MetaMask الخاص بالمستخدم بتطبيقنا اللامركزي.
+- `loadCurrentMessage` - تعالج هذه الدالة منطق تحميل الرسالة الحالية المخزنة في العقد الذكي. ستقوم بإجراء استدعاء _قراءة_ إلى عقد Hello World الذكي باستخدام واجهة برمجة تطبيقات [ألكيمي ويب3](https://github.com/alchemyplatform/alchemy-web3).
+- `connectWallet` - ستقوم هذه الدالة بتوصيل ميتاماسك الخاص بالمستخدم بتطبيقنا اللامركزي.
 - `getCurrentWalletConnected` - ستتحقق هذه الدالة مما إذا كان حساب إيثريوم متصلاً بالفعل بتطبيقنا اللامركزي عند تحميل الصفحة وتقوم بتحديث واجهة المستخدم لدينا وفقًا لذلك.
-- `updateMessage` - ستقوم هذه الدالة بتحديث الرسالة المخزنة في العقد الذكي. ستقوم بإجراء استدعاء _كتابة_ إلى عقد Hello World الذكي، لذلك سيتعين على محفظة MetaMask الخاصة بالمستخدم توقيع معاملة إيثريوم لتحديث الرسالة.
+- `updateMessage` - ستقوم هذه الدالة بتحديث الرسالة المخزنة في العقد الذكي. ستقوم بإجراء استدعاء _كتابة_ إلى عقد Hello World الذكي، لذلك سيتعين على محفظة ميتاماسك الخاصة بالمستخدم توقيع معاملة إيثريوم لتحديث الرسالة.
 
 الآن بعد أن فهمنا ما نعمل به، دعنا نكتشف كيفية القراءة من عقدنا الذكي!
 
@@ -899,15 +899,15 @@ export const updateMessage = async (message) => {}
 
 #### إنشاء اتصال API بسلسلة إيثريوم {#establish-an-api-connection-to-the-ethereum-chain}
 
-هل تتذكر كيف استخدمنا في الجزء 2 من هذا الدرس التعليمي مفتاح [Alchemy Web3 الخاص بنا للقراءة من عقدنا الذكي](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)؟ ستحتاج أيضًا إلى مفتاح Alchemy Web3 في تطبيقك اللامركزي للقراءة من السلسلة.
+هل تتذكر كيف استخدمنا في الجزء 2 من هذا الدرس التعليمي مفتاح [ألكيمي ويب3 الخاص بنا للقراءة من عقدنا الذكي](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)؟ ستحتاج أيضًا إلى مفتاح ألكيمي ويب3 في تطبيقك اللامركزي للقراءة من السلسلة.
 
-إذا لم يكن لديك بالفعل، فقم أولاً بتثبيت [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) عن طريق الانتقال إلى الدليل الجذر لـ `starter-files` وتشغيل ما يلي في الطرفية:
+إذا لم يكن لديك بالفعل، فقم أولاً بتثبيت [ألكيمي ويب3](https://github.com/alchemyplatform/alchemy-web3) عن طريق الانتقال إلى الدليل الجذر لـ `starter-files` وتشغيل ما يلي في الطرفية:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) هو غلاف حول [Web3.js](https://docs.web3js.org/)، يوفر طرق API محسنة ومزايا أخرى حاسمة لجعل حياتك كمطور web3 أسهل. It is designed to require minimal configuration so you can start using it in your app right away!
+[ألكيمي ويب3](https://github.com/alchemyplatform/alchemy-web3) هو غلاف حول [ويب3.جي إس](https://docs.web3js.org/)، يوفر طرق API محسنة ومزايا أخرى حاسمة لجعل حياتك كمطور web3 أسهل. It is designed to require minimal configuration so you can start using it in your app right away!
 
 بعد ذلك، قم بتثبيت حزمة [dotenv](https://www.npmjs.com/package/dotenv) في دليل مشروعك، حتى يكون لدينا مكان آمن لتخزين مفتاح API الخاص بنا بعد جلبه.
 
@@ -917,13 +917,13 @@ npm install dotenv --save
 
 بالنسبة لتطبيقنا اللامركزي، **سنستخدم مفتاح API الخاص بـ Websockets** بدلاً من مفتاح API الخاص بـ HTTP، حيث سيسمح لنا بإعداد مستمع يكتشف متى تتغير الرسالة المخزنة في العقد الذكي.
 
-بمجرد حصولك على مفتاح API الخاص بك، قم بإنشاء ملف `.env` في الدليل الجذر الخاص بك وأضف عنوان URL الخاص بـ Alchemy Websockets إليه. بعد ذلك، يجب أن يبدو ملف `.env` الخاص بك كما يلي:
+بمجرد حصولك على مفتاح API الخاص بك، قم بإنشاء ملف `.env` في الدليل الجذر الخاص بك وأضف عنوان URL الخاص بـ ألكيمي Websockets إليه. بعد ذلك، يجب أن يبدو ملف `.env` الخاص بك كما يلي:
 
 ```javascript
 REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-الآن، نحن جاهزون لإعداد نقطة نهاية Alchemy Web3 في تطبيقنا اللامركزي! دعنا نعد إلى `interact.js` الخاص بنا، الموجود داخل مجلد `util` الخاص بنا ونضيف الكود التالي في الجزء العلوي من الملف:
+الآن، نحن جاهزون لإعداد نقطة نهاية ألكيمي ويب3 في تطبيقنا اللامركزي! دعنا نعد إلى `interact.js` الخاص بنا، الموجود داخل مجلد `util` الخاص بنا ونضيف الكود التالي في الجزء العلوي من الملف:
 
 ```javascript
 // interact.js
@@ -936,15 +936,15 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-أعلاه، قمنا أولاً باستيراد مفتاح Alchemy من ملف `.env` الخاص بنا ثم قمنا بتمرير `alchemyKey` الخاص بنا إلى `createAlchemyWeb3` لإنشاء نقطة نهاية Alchemy Web3 الخاصة بنا.
+أعلاه، قمنا أولاً باستيراد مفتاح ألكيمي من ملف `.env` الخاص بنا ثم قمنا بتمرير `alchemyKey` الخاص بنا إلى `createAlchemyWeb3` لإنشاء نقطة نهاية ألكيمي ويب3 الخاصة بنا.
 
 مع جاهزية نقطة النهاية هذه، حان الوقت لتحميل عقدنا الذكي!
 
 #### تحميل عقد Hello World الذكي الخاص بك {#loading-your-hello-world-smart-contract}
 
-لتحميل عقد Hello World الذكي الخاص بك، ستحتاج إلى عنوان العقد الخاص به وواجهة التطبيق الثنائية (ABI)، وكلاهما يمكن العثور عليهما على Etherscan إذا أكملت [الجزء 3 من هذا الدرس التعليمي.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
+لتحميل عقد Hello World الذكي الخاص بك، ستحتاج إلى عنوان العقد الخاص به وواجهة التطبيق الثنائية (ABI)، وكلاهما يمكن العثور عليهما على إيثرسكان إذا أكملت [الجزء 3 من هذا الدرس التعليمي.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
-#### كيفية الحصول على واجهة التطبيق الثنائية (ABI) الخاصة بعقدك من Etherscan {#how-to-get-your-contract-abi-from-etherscan}
+#### كيفية الحصول على واجهة التطبيق الثنائية (ABI) الخاصة بعقدك من إيثرسكان {#how-to-get-your-contract-abi-from-etherscan}
 
 إذا تخطيت الجزء 3 من هذا الدرس التعليمي، يمكنك استخدام عقد HelloWorld بالعنوان [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). يمكن العثور على واجهة التطبيق الثنائية (ABI) الخاصة به [هنا](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
 
@@ -952,7 +952,7 @@ const web3 = createAlchemyWeb3(alchemyKey)
 
 يجب تخزين contract-abi.json في مجلد src الخاص بك.
 
-مسلحين بعنوان عقدنا، وواجهة التطبيق الثنائية (ABI)، ونقطة نهاية Alchemy Web3، يمكننا استخدام [طريقة العقد](https://docs.web3js.org/api/web3-eth-contract/class/Contract) لتحميل مثيل من عقدنا الذكي. استورد واجهة التطبيق الثنائية (ABI) الخاصة بعقدك إلى ملف `interact.js` وأضف عنوان عقدك.
+مسلحين بعنوان عقدنا، وواجهة التطبيق الثنائية (ABI)، ونقطة نهاية ألكيمي ويب3، يمكننا استخدام [طريقة العقد](https://docs.web3js.org/api/web3-eth-contract/class/Contract) لتحميل مثيل من عقدنا الذكي. استورد واجهة التطبيق الثنائية (ABI) الخاصة بعقدك إلى ملف `interact.js` وأضف عنوان عقدك.
 
 ```javascript
 // interact.js
@@ -1110,25 +1110,25 @@ useEffect(async () => {
 
 الآن بعد أن أصبحنا قادرين على القراءة من عقدنا الذكي، سيكون من الرائع معرفة كيفية الكتابة إليه أيضًا! ومع ذلك، للكتابة إلى تطبيقنا اللامركزي، يجب أن تكون لدينا أولاً محفظة إيثريوم متصلة به.
 
-لذا، بعد ذلك، سنتناول إعداد محفظة إيثريوم الخاصة بنا (MetaMask) ثم توصيلها بتطبيقنا اللامركزي!
+لذا، بعد ذلك، سنتناول إعداد محفظة إيثريوم الخاصة بنا (ميتاماسك) ثم توصيلها بتطبيقنا اللامركزي!
 
 ### الخطوة 4: إعداد محفظة إيثريوم الخاصة بك {#step-4-set-up-your-ethereum-wallet}
 
-لكتابة أي شيء على سلسلة إيثريوم، يجب على المستخدمين توقيع المعاملات باستخدام المفاتيح الخاصة بمحافظهم الافتراضية. في هذا الدرس التعليمي، سنستخدم [MetaMask](https://metamask.io/)، وهي محفظة افتراضية في المتصفح تُستخدم لإدارة عنوان حساب إيثريوم الخاص بك، لأنها تجعل توقيع المعاملات هذا سهلاً للغاية للمستخدم النهائي.
+لكتابة أي شيء على سلسلة إيثريوم، يجب على المستخدمين توقيع المعاملات باستخدام المفاتيح الخاصة بمحافظهم الافتراضية. في هذا الدرس التعليمي، سنستخدم [ميتاماسك](https://metamask.io/)، وهي محفظة افتراضية في المتصفح تُستخدم لإدارة عنوان حساب إيثريوم الخاص بك، لأنها تجعل توقيع المعاملات هذا سهلاً للغاية للمستخدم النهائي.
 
 إذا كنت ترغب في فهم المزيد حول كيفية عمل المعاملات على إيثريوم، فراجع [هذه الصفحة](/developers/docs/transactions/) من مؤسسة إيثريوم.
 
-#### تنزيل MetaMask {#download-metamask}
+#### تنزيل ميتاماسك {#download-metamask}
 
-يمكنك تنزيل وإنشاء حساب MetaMask مجانًا [هنا](https://metamask.io/download). عندما تقوم بإنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى "شبكة اختبار Goerli" في الجزء العلوي الأيمن (حتى لا نتعامل بأموال حقيقية).
+يمكنك تنزيل وإنشاء حساب ميتاماسك مجانًا [هنا](https://metamask.io/download). عندما تقوم بإنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى "شبكة اختبار جيرلي" في الجزء العلوي الأيمن (حتى لا نتعامل بأموال حقيقية).
 
 #### إضافة الإيثر من سبيل {#add-ether-from-a-faucet}
 
-لتوقيع معاملة على بلوكتشين إيثريوم، سنحتاج إلى بعض من عملات الإيثر المزيفة. للحصول على إيثر، يمكنك الذهاب إلى [FaucETH](https://fauceth.komputing.org) وإدخال عنوان حساب Goerli الخاص بك، والنقر على "طلب الأموال"، ثم تحديد "Ethereum Testnet Goerli" في القائمة المنسدلة وأخيرًا النقر على زر "طلب الأموال" مرة أخرى. You should see Eth in your MetaMask account soon after!
+لتوقيع معاملة على بلوكتشين إيثريوم، سنحتاج إلى بعض من عملات الإيثر المزيفة. للحصول على إيثر، يمكنك الذهاب إلى [FaucETH](https://fauceth.komputing.org) وإدخال عنوان حساب جيرلي الخاص بك، والنقر على "طلب الأموال"، ثم تحديد "إيثريوم Testnet جيرلي" في القائمة المنسدلة وأخيرًا النقر على زر "طلب الأموال" مرة أخرى. You should see Eth in your ميتاماسك account soon after!
 
 #### تحقق من رصيدك {#check-your-balance}
 
-للتأكد مرة أخرى من وجود رصيدنا، لنجري طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الإنشاء من Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
+للتأكد مرة أخرى من وجود رصيدنا، لنجري طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الإنشاء من ألكيمي](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. After you input your ميتاماسك account address and click “Send Request”, you should see a response like this:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
@@ -1138,9 +1138,9 @@ useEffect(async () => {
 
 Phew! Our fake money is all there! 🤑
 
-### الخطوة 5: توصيل MetaMask بواجهة المستخدم الخاصة بك {#step-5-connect-metamask-to-your-UI}
+### الخطوة 5: توصيل ميتاماسك بواجهة المستخدم الخاصة بك {#step-5-connect-metamask-to-your-UI}
 
-Now that our MetaMask wallet is set up, let's connect our dapp to it!
+Now that our ميتاماسك wallet is set up, let's connect our dapp to it!
 
 #### دالة `connectWallet` {#the-connectWallet-function}
 
@@ -1190,13 +1190,13 @@ export const connectWallet = async () => {
 
 حسنًا، أولاً، يتحقق مما إذا كان `window.ethereum` ممكّنًا في متصفحك.
 
-`window.ethereum` هو واجهة برمجة تطبيقات (API) عالمية يتم إدراجها بواسطة MetaMask ومقدمي المحافظ الآخرين والتي تسمح لمواقع الويب بطلب حسابات إيثريوم الخاصة بالمستخدمين. في حالة الموافقة، يمكنه قراءة البيانات من البلوكتشين التي يتصل بها المستخدم، واقتراح أن يقوم المستخدم بتوقيع الرسائل والمعاملات . اطلع على [مستندات MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) لمزيد من المعلومات!
+`window.ethereum` هو واجهة برمجة تطبيقات (API) عالمية يتم إدراجها بواسطة ميتاماسك ومقدمي المحافظ الآخرين والتي تسمح لمواقع الويب بطلب حسابات إيثريوم الخاصة بالمستخدمين. في حالة الموافقة، يمكنه قراءة البيانات من البلوكتشين التي يتصل بها المستخدم، واقتراح أن يقوم المستخدم بتوقيع الرسائل والمعاملات . اطلع على [مستندات ميتاماسك](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) لمزيد من المعلومات!
 
-إذا كان `window.ethereum` _غير_ موجود، فهذا يعني أن MetaMask غير مثبت. ينتج عن هذا إرجاع كائن JSON، حيث يكون `address` المرجع سلسلة فارغة، وكائن `status` JSX يبلغ بأن المستخدم يجب أن يقوم بتثبيت MetaMask.
+إذا كان `window.ethereum` _غير_ موجود، فهذا يعني أن ميتاماسك غير مثبت. ينتج عن هذا إرجاع كائن JSON، حيث يكون `address` المرجع سلسلة فارغة، وكائن `status` JSX يبلغ بأن المستخدم يجب أن يقوم بتثبيت ميتاماسك.
 
 الآن إذا كان `window.ethereum` _موجودًا_، فهنا تصبح الأمور مثيرة للاهتمام.
 
-باستخدام حلقة try/catch، سنحاول الاتصال بـ MetaMask عن طريق استدعاء [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Calling this function will open up MetaMask in the browser, whereby the user will be prompted to connect their wallet to your dapp.
+باستخدام حلقة try/catch، سنحاول الاتصال بـ ميتاماسك عن طريق استدعاء [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Calling this function will open up ميتاماسك in the browser, whereby the user will be prompted to connect their wallet to your dapp.
 
 - إذا اختار المستخدم الاتصال، فإن `method: "eth_requestAccounts"` ستعيد مصفوفة تحتوي على جميع عناوين حسابات المستخدم المتصلة بالتطبيق اللامركزي. إجمالاً، ستعيد دالة `connectWallet` الخاصة بنا كائن JSON يحتوي على _أول_ `address` في هذه المصفوفة \(انظر السطر 9\) ورسالة `status` تحث المستخدم على كتابة رسالة إلى العقد الذكي.
 - إذا رفض المستخدم الاتصال، فسيحتوي كائن JSON على سلسلة فارغة لـ `address` المرجع ورسالة `status` تعكس أن المستخدم رفض الاتصال.
@@ -1225,11 +1225,11 @@ const connectWalletPressed = async () => {
 
 افتح متصفحك على صفحة [http://localhost:3000/](http://localhost:3000/)، واضغط على زر "توصيل المحفظة" في الجزء العلوي الأيمن من الصفحة.
 
-If you have MetaMask installed, you should be prompted to connect your wallet to your dapp. Accept the invitation to connect.
+If you have ميتاماسك installed, you should be prompted to connect your wallet to your dapp. Accept the invitation to connect.
 
 يجب أن ترى أن زر المحفظة يعكس الآن أن عنوانك متصل! يا سلام 🔥
 
-بعد ذلك، حاول تحديث الصفحة... هذا غريب. Our wallet button is prompting us to connect MetaMask, even though it is already connected...
+بعد ذلك، حاول تحديث الصفحة... هذا غريب. Our wallet button is prompting us to connect ميتاماسك, even though it is already connected...
 
 لكن لا تخف! يمكننا معالجة ذلك بسهولة (هل فهمت التورية؟) من خلال تنفيذ `getCurrentWalletConnected`، والذي سيتحقق مما إذا كان العنوان متصلاً بالفعل بتطبيقنا اللامركزي وتحديث واجهة المستخدم لدينا وفقًا لذلك!
 
@@ -1283,7 +1283,7 @@ export const getCurrentWalletConnected = async () => {
 
 هذا الكود _مشابه جدًا_ لدالة `connectWallet` التي كتبناها للتو في الخطوة السابقة.
 
-الفرق الرئيسي هو أنه بدلاً من استدعاء الطريقة `eth_requestAccounts`، التي تفتح MetaMask للمستخدم لربط محفظته، هنا نستدعي الطريقة `eth_accounts`، التي تعيد ببساطة مصفوفة تحتوي على عناوين MetaMask المتصلة حاليًا بتطبيقنا اللامركزي (dapp).
+الفرق الرئيسي هو أنه بدلاً من استدعاء الطريقة `eth_requestAccounts`، التي تفتح ميتاماسك للمستخدم لربط محفظته، هنا نستدعي الطريقة `eth_accounts`، التي تعيد ببساطة مصفوفة تحتوي على عناوين ميتاماسك المتصلة حاليًا بتطبيقنا اللامركزي (dapp).
 
 لرؤية هذه الدالة قيد التنفيذ، دعنا نستدعيها في دالة `useEffect` الخاصة بمكون `HelloWorld.js` الخاص بنا:
 
@@ -1342,9 +1342,9 @@ function addWalletListener() {
 
 أراهن أنك لست بحاجة إلى مساعدتنا لفهم ما يحدث هنا في هذه المرحلة، ولكن لأغراض الشمولية، دعنا نحلل الأمر بسرعة:
 
-- أولاً، تتحقق دالتنا مما إذا كان `window.ethereum` ممكّنًا (أي أن MetaMask مثبت).
-  - إذا لم يكن كذلك، فإننا ببساطة نضبط متغير الحالة `status` على سلسلة JSX التي تحث المستخدم على تثبيت MetaMask.
-  - إذا كان ممكّنًا، فإننا ننشئ المستمع `window.ethereum.on("accountsChanged")` في السطر 3 الذي يستمع لتغيرات الحالة في محفظة MetaMask، والتي تشمل عندما يربط المستخدم حسابًا إضافيًا بالتطبيق اللامركزي (dapp)، أو يبدل الحسابات، أو يفصل حسابًا. إذا كان هناك حساب واحد على الأقل متصل، يتم تحديث متغير الحالة `walletAddress` كأول حساب في مصفوفة `accounts` التي يعيدها المستمع. بخلاف ذلك، يتم تعيين `walletAddress` كسلسلة فارغة.
+- أولاً، تتحقق دالتنا مما إذا كان `window.ethereum` ممكّنًا (أي أن ميتاماسك مثبت).
+  - إذا لم يكن كذلك، فإننا ببساطة نضبط متغير الحالة `status` على سلسلة JSX التي تحث المستخدم على تثبيت ميتاماسك.
+  - إذا كان ممكّنًا، فإننا ننشئ المستمع `window.ethereum.on("accountsChanged")` في السطر 3 الذي يستمع لتغيرات الحالة في محفظة ميتاماسك، والتي تشمل عندما يربط المستخدم حسابًا إضافيًا بالتطبيق اللامركزي (dapp)، أو يبدل الحسابات، أو يفصل حسابًا. إذا كان هناك حساب واحد على الأقل متصل، يتم تحديث متغير الحالة `walletAddress` كأول حساب في مصفوفة `accounts` التي يعيدها المستمع. بخلاف ذلك، يتم تعيين `walletAddress` كسلسلة فارغة.
 
 أخيرًا وليس آخرًا، يجب أن نستدعيها في دالة `useEffect` الخاصة بنا:
 
@@ -1371,7 +1371,7 @@ useEffect(async () => {
 حسنًا يا رفاق، لقد وصلنا إلى المرحلة النهائية! في `updateMessage` من ملف `interact.js` الخاص بك، سنقوم بما يلي:
 
 1. تأكد من أن الرسالة التي نرغب في نشرها في عقدنا الذكي صالحة
-2. توقيع معاملتنا باستخدام MetaMask
+2. توقيع معاملتنا باستخدام ميتاماسك
 3. استدعاء هذه الدالة من مكون الواجهة الأمامية HelloWorld.js الخاص بنا
 
 لن يستغرق هذا وقتًا طويلاً؛ دعنا ننهي هذا التطبيق اللامركزي!
@@ -1380,7 +1380,7 @@ useEffect(async () => {
 
 بطبيعة الحال، من المنطقي أن يكون هناك نوع من معالجة أخطاء الإدخال في بداية الدالة.
 
-سنريد أن تعود دالتنا مبكرًا إذا لم يكن هناك امتداد MetaMask مثبت، أو لم تكن هناك محفظة متصلة (أي أن `address` الذي تم تمريره هو سلسلة فارغة)، أو كانت `message` سلسلة فارغة. دعنا نضيف معالجة الأخطاء التالية إلى `updateMessage`:
+سنريد أن تعود دالتنا مبكرًا إذا لم يكن هناك امتداد ميتاماسك مثبت، أو لم تكن هناك محفظة متصلة (أي أن `address` الذي تم تمريره هو سلسلة فارغة)، أو كانت `message` سلسلة فارغة. دعنا نضيف معالجة الأخطاء التالية إلى `updateMessage`:
 
 ```javascript
 // interact.js
@@ -1401,7 +1401,7 @@ export const updateMessage = async (address, message) => {
 }
 ```
 
-الآن بعد أن أصبحت لديها معالجة مناسبة لأخطاء الإدخال، حان الوقت لتوقيع المعاملة عبر MetaMask!
+الآن بعد أن أصبحت لديها معالجة مناسبة لأخطاء الإدخال، حان الوقت لتوقيع المعاملة عبر ميتاماسك!
 
 #### توقيع معاملتنا {#signing-our-transaction}
 
@@ -1448,11 +1448,11 @@ try {
 - `from` يحدد موقع المعاملة، وهو متغير `address` الذي مررناه إلى دالتنا
 - `data` تحتوي على استدعاء طريقة `update` الخاصة بعقد Hello World الذكي، وتتلقى متغير سلسلة `message` كمدخل
 
-بعد ذلك، نقوم باستدعاء await، `window.ethereum.request`، حيث نطلب من MetaMask توقيع المعاملة. لاحظ، في السطرين 11 و 12، أننا نحدد طريقة eth الخاصة بنا، `eth_sendTransaction` ونمرر `transactionParameters` الخاصة بنا.
+بعد ذلك، نقوم باستدعاء await، `window.ethereum.request`، حيث نطلب من ميتاماسك توقيع المعاملة. لاحظ، في السطرين 11 و 12، أننا نحدد طريقة eth الخاصة بنا، `eth_sendTransaction` ونمرر `transactionParameters` الخاصة بنا.
 
-At this point, MetaMask will open up in the browser, and prompt the user to sign or reject the transaction.
+At this point, ميتاماسك will open up in the browser, and prompt the user to sign or reject the transaction.
 
-- إذا كانت المعاملة ناجحة، فستعيد الدالة كائن JSON حيث تحث سلسلة `status` JSX المستخدم على التحقق من Etherscan لمزيد من المعلومات حول معاملتهم.
+- إذا كانت المعاملة ناجحة، فستعيد الدالة كائن JSON حيث تحث سلسلة `status` JSX المستخدم على التحقق من إيثرسكان لمزيد من المعلومات حول معاملتهم.
 - إذا فشلت المعاملة، فستعيد الدالة كائن JSON حيث تنقل سلسلة `status` رسالة الخطأ.
 
 بشكل عام، يجب أن تبدو دالة `updateMessage` الخاصة بنا كما يلي:
@@ -1531,10 +1531,10 @@ const onUpdatePressed = async () => {
 
 لقد وصلت إلى نهاية الدرس التعليمي! لتلخيص ذلك، تعلمت كيفية:
 
-- توصيل محفظة MetaMask بمشروع تطبيقك اللامركزي
-- قراءة البيانات من عقدك الذكي باستخدام واجهة برمجة تطبيقات [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
-- توقيع معاملات إيثريوم باستخدام MetaMask
+- توصيل محفظة ميتاماسك بمشروع تطبيقك اللامركزي
+- قراءة البيانات من عقدك الذكي باستخدام واجهة برمجة تطبيقات [ألكيمي ويب3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- توقيع معاملات إيثريوم باستخدام ميتاماسك
 
-أنت الآن مجهز بالكامل لتطبيق المهارات من هذا الدرس التعليمي لبناء مشروع تطبيق لامركزي مخصص خاص بك! كما هو الحال دائمًا، إذا كانت لديك أي أسئلة، فلا تتردد في التواصل معنا للحصول على المساعدة في [Alchemy Discord](https://discord.gg/gWuC7zB). 🧙‍♂️
+أنت الآن مجهز بالكامل لتطبيق المهارات من هذا الدرس التعليمي لبناء مشروع تطبيق لامركزي مخصص خاص بك! كما هو الحال دائمًا، إذا كانت لديك أي أسئلة، فلا تتردد في التواصل معنا للحصول على المساعدة في [ألكيمي ديسكورد](https://discord.gg/gWuC7zB). 🧙‍♂️
 
 بمجرد إكمال هذا الدرس التعليمي، أخبرنا كيف كانت تجربتك أو إذا كان لديك أي ملاحظات عن طريق الإشارة إلينا على تويتر [@alchemyplatform](https://twitter.com/AlchemyPlatform)!

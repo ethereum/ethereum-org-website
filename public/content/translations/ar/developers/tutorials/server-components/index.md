@@ -1,8 +1,8 @@
 ---
-title: "مكونات الخادم والوكلاء لتطبيقات Web3"
-description: "بعد قراءة هذا البرنامج التعليمي، ستتمكن من كتابة خوادم TypeScript التي تستمع إلى الأحداث على البلوكتشين وتستجيب وفقًا لذلك بمعاملاتها الخاصة. سيمكنك هذا من كتابة تطبيقات مركزية (لأن الخادم يمثل نقطة فشل)، ولكن يمكنها التفاعل مع كيانات Web3. يمكن أيضًا استخدام نفس الأساليب لكتابة وكيل يستجيب للأحداث على السلسلة دون تدخل بشري."
+title: "مكونات الخادم والوكلاء لتطبيقات ويب3"
+description: "بعد قراءة هذا البرنامج التعليمي، ستتمكن من كتابة خوادم تايب سكريبت التي تستمع إلى الأحداث على البلوكتشين وتستجيب وفقًا لذلك بمعاملاتها الخاصة. سيمكنك هذا من كتابة تطبيقات مركزية (لأن الخادم يمثل نقطة فشل)، ولكن يمكنها التفاعل مع كيانات ويب3. يمكن أيضًا استخدام نفس الأساليب لكتابة وكيل يستجيب للأحداث على السلسلة دون تدخل بشري."
 
-author: Ori Pomerantz
+author: "أوري بوميرانتز"
 lang: ar
 tags: [ "وكيل", "خادم", "خارج السلسلة" ]
 skill: beginner
@@ -29,7 +29,7 @@ published: 2024-07-15
 
 ## برنامج نموذجي {#sample-program}
 
-يمكنك رؤية خادم نموذجي [على github](https://github.com/qbzzt/20240715-server-component). يستمع هذا الخادم إلى الأحداث الواردة من [هذا العقد](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code)، وهو إصدار معدل من Greeter الخاص بـ Hardhat. عندما يتم تغيير التحية، يقوم بتغييرها مرة أخرى.
+يمكنك رؤية خادم نموذجي [على github](https://github.com/qbzzt/20240715-server-component). يستمع هذا الخادم إلى الأحداث الواردة من [هذا العقد](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code)، وهو إصدار معدل من Greeter الخاص بـ هارد هات. عندما يتم تغيير التحية، يقوم بتغييرها مرة أخرى.
 
 لتشغيله:
 
@@ -46,7 +46,7 @@ published: 2024-07-15
    npm install
    ```
 
-3. حرر `.env` لتحديد المفتاح الخاص لحساب يحتوي على ETH على شبكة اختبار Holesky. إذا لم يكن لديك ETH على Holesky، فيمكنك [استخدام هذا السبيل](https://holesky-faucet.pk910.de/).
+3. حرر `.env` لتحديد المفتاح الخاص لحساب يحتوي على ETH على شبكة اختبار هوليسكي. إذا لم يكن لديك ETH على هوليسكي، فيمكنك [استخدام هذا السبيل](https://holesky-faucet.pk910.de/).
 
    ```sh filename=".env" copy
    PRIVATE_KEY=0x <المفتاح الخاص يوضع هنا>
@@ -80,7 +80,7 @@ import {
 } from "viem"
 ```
 
-هذه هي كيانات [Viem](https://viem.sh/) التي نحتاجها، والوظائف ونوع [`العنوان`](https://viem.sh/docs/glossary/types#address). هذا الخادم مكتوب بلغة [TypeScript](https://www.typescriptlang.org/)، وهي امتداد لـ JavaScript يجعلها [مكتوبة بقوة](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
+هذه هي كيانات [فيم](https://viem.sh/) التي نحتاجها، والوظائف ونوع [`العنوان`](https://viem.sh/docs/glossary/types#address). هذا الخادم مكتوب بلغة [تايب سكريبت](https://www.typescriptlang.org/)، وهي امتداد لـ جافا سكريبت يجعلها [مكتوبة بقوة](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
@@ -92,7 +92,7 @@ import { privateKeyToAccount } from "viem/accounts"
 import { holesky } from "viem/chains"
 ```
 
-لاستخدام بلوكتشين في Viem، تحتاج إلى استيراد تعريفه. في هذه الحالة، نريد الاتصال ببلوكتشين اختبار [Holesky](https://github.com/eth-clients/holesky).
+لاستخدام بلوكتشين في فيم، تحتاج إلى استيراد تعريفه. في هذه الحالة، نريد الاتصال ببلوكتشين اختبار [هوليسكي](https://github.com/eth-clients/holesky).
 
 ```typescript
 // هكذا نضيف التعريفات الموجودة في .env إلى process.env.
@@ -137,7 +137,7 @@ const greeterABI = [
 
 لاستخدام عقد، نحتاج إلى عنوانه وواجهة التطبيق الثنائية [ABI](/glossary/#abi) الخاصة به. نحن نقدم كليهما هنا.
 
-في JavaScript (وبالتالي TypeScript) لا يمكنك تعيين قيمة جديدة لثابت، ولكن يمكنك _تعديل_ الكائن المخزن فيه. باستخدام اللاحقة `as const`، فإننا نخبر TypeScript بأن القائمة نفسها ثابتة ولا يمكن تغييرها.
+في جافا سكريبت (وبالتالي تايب سكريبت) لا يمكنك تعيين قيمة جديدة لثابت، ولكن يمكنك _تعديل_ الكائن المخزن فيه. باستخدام اللاحقة `as const`، فإننا نخبر تايب سكريبت بأن القائمة نفسها ثابتة ولا يمكن تغييرها.
 
 ```typescript
 const publicClient = createPublicClient({
@@ -146,13 +146,13 @@ const publicClient = createPublicClient({
 })
 ```
 
-أنشئ [عميلًا عامًا](https://viem.sh/docs/clients/public.html) من Viem. لا تحتوي العملاء العموميون على مفتاح خاص مرفق، وبالتالي لا يمكنهم إرسال معاملات. يمكنهم استدعاء [وظائف `العرض`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm)، وقراءة أرصدة الحسابات، وما إلى ذلك.
+أنشئ [عميلًا عامًا](https://viem.sh/docs/clients/public.html) من فيم. لا تحتوي العملاء العموميون على مفتاح خاص مرفق، وبالتالي لا يمكنهم إرسال معاملات. يمكنهم استدعاء [وظائف `العرض`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm)، وقراءة أرصدة الحسابات، وما إلى ذلك.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-متغيرات البيئة متاحة في [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). ومع ذلك، فإن TypeScript مكتوبة بقوة. يمكن أن يكون متغير البيئة أي سلسلة نصية، أو فارغًا، لذا فإن نوع متغير البيئة هو `string | undefined`. ومع ذلك، يتم تعريف المفتاح في Viem على أنه `0x${string}` (`0x` متبوعًا بسلسلة نصية). هنا نخبر TypeScript بأن متغير البيئة `PRIVATE_KEY` سيكون من هذا النوع. إذا لم يكن كذلك، فسنحصل على خطأ في وقت التشغيل.
+متغيرات البيئة متاحة في [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). ومع ذلك، فإن تايب سكريبت مكتوبة بقوة. يمكن أن يكون متغير البيئة أي سلسلة نصية، أو فارغًا، لذا فإن نوع متغير البيئة هو `string | undefined`. ومع ذلك، يتم تعريف المفتاح في فيم على أنه `0x${string}` (`0x` متبوعًا بسلسلة نصية). هنا نخبر تايب سكريبت بأن متغير البيئة `PRIVATE_KEY` سيكون من هذا النوع. إذا لم يكن كذلك، فسنحصل على خطأ في وقت التشغيل.
 
 تستخدم وظيفة [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) هذا المفتاح الخاص لإنشاء كائن حساب كامل.
 
@@ -184,7 +184,7 @@ console.log(`Current greeting:`, await greeter.read.greet())
 
 وظائف العقد المخصصة للقراءة فقط ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) و [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) متاحة ضمن `read`. في هذه الحالة، نستخدمها للوصول إلى وظيفة [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217)، التي تُرجع التحية.
 
-JavaScript هي أحادية الخيط، لذلك عندما نبدأ عملية طويلة الأمد، نحتاج إلى [تحديد أننا نفعل ذلك بشكل غير متزامن](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). يتطلب استدعاء البلوكتشين، حتى لعملية قراءة فقط، رحلة ذهابًا وإيابًا بين الكمبيوتر وعقدة بلوكتشين. هذا هو السبب في أننا نحدد هنا أن النص البرمجي يحتاج إلى `await` للنتيجة.
+جافا سكريبت هي أحادية الخيط، لذلك عندما نبدأ عملية طويلة الأمد، نحتاج إلى [تحديد أننا نفعل ذلك بشكل غير متزامن](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). يتطلب استدعاء البلوكتشين، حتى لعملية قراءة فقط، رحلة ذهابًا وإيابًا بين الكمبيوتر وعقدة بلوكتشين. هذا هو السبب في أننا نحدد هنا أن النص البرمجي يحتاج إلى `await` للنتيجة.
 
 إذا كنت مهتمًا بكيفية عمل ذلك، يمكنك [القراءة عنه هنا](https://www.w3schools.com/js/js_promise.asp)، ولكن من الناحية العملية كل ما تحتاج إلى معرفته هو أنك `تنتظر` النتائج إذا بدأت عملية تستغرق وقتًا طويلاً، وأن أي وظيفة تقوم بذلك يجب أن تُعلن على أنها `async`.
 
@@ -244,14 +244,14 @@ console.log(
 
 #### `package.json` {#package-json}
 
-[هذا الملف](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) يتحكم في تكوين [Node.js](https://nodejs.org/en). يشرح هذا المقال التعريفات المهمة فقط.
+[هذا الملف](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) يتحكم في تكوين [نود.جي إس](https://nodejs.org/en). يشرح هذا المقال التعريفات المهمة فقط.
 
 ```json
 {
   "main": "dist/index.js",
 ```
 
-يحدد هذا التعريف ملف JavaScript الذي سيتم تشغيله.
+يحدد هذا التعريف ملف جافا سكريبت الذي سيتم تشغيله.
 
 ```json
   "scripts": {
@@ -259,13 +259,13 @@ console.log(
   },
 ```
 
-البرامج النصية هي إجراءات تطبيق مختلفة. في هذه الحالة، الوحيد الذي لدينا هو `start`، الذي يجمع ثم يشغل الخادم. الأمر `tsc` هو جزء من حزمة `typescript` ويجمع TypeScript إلى JavaScript. إذا كنت تريد تشغيله يدويًا، فهو موجود في `node_modules/.bin`. الأمر الثاني يشغل الخادم.
+البرامج النصية هي إجراءات تطبيق مختلفة. في هذه الحالة، الوحيد الذي لدينا هو `start`، الذي يجمع ثم يشغل الخادم. الأمر `tsc` هو جزء من حزمة `typescript` ويجمع تايب سكريبت إلى جافا سكريبت. إذا كنت تريد تشغيله يدويًا، فهو موجود في `node_modules/.bin`. الأمر الثاني يشغل الخادم.
 
 ```json
   "type": "module",
 ```
 
-هناك أنواع متعددة من تطبيقات عقدة JavaScript. يتيح لنا نوع `الوحدة` الحصول على `await` في النص البرمجي ذي المستوى الأعلى، وهو أمر مهم عند القيام بعمليات بطيئة (وهناك غير متزامنة).
+هناك أنواع متعددة من تطبيقات عقدة جافا سكريبت. يتيح لنا نوع `الوحدة` الحصول على `await` في النص البرمجي ذي المستوى الأعلى، وهو أمر مهم عند القيام بعمليات بطيئة (وهناك غير متزامنة).
 
 ```json
   "devDependencies": {
@@ -274,7 +274,7 @@ console.log(
   },
 ```
 
-هذه حزم مطلوبة فقط للتطوير. هنا نحتاج إلى `typescript` ولأننا نستخدمه مع Node.js، فإننا نحصل أيضًا على أنواع متغيرات وكائنات العقدة، مثل `process`. يعني [تدوين `^<الإصدار>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) هذا الإصدار أو إصدارًا أعلى لا يحتوي على تغييرات جذرية. انظر [هنا](https://semver.org) لمزيد من المعلومات حول معنى أرقام الإصدارات.
+هذه حزم مطلوبة فقط للتطوير. هنا نحتاج إلى `typescript` ولأننا نستخدمه مع نود.جي إس، فإننا نحصل أيضًا على أنواع متغيرات وكائنات العقدة، مثل `process`. يعني [تدوين `^<الإصدار>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) هذا الإصدار أو إصدارًا أعلى لا يحتوي على تغييرات جذرية. انظر [هنا](https://semver.org) لمزيد من المعلومات حول معنى أرقام الإصدارات.
 
 ```json
   "dependencies": {

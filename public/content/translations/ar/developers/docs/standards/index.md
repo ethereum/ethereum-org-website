@@ -1,6 +1,6 @@
 ---
 title: "معايير تطوير إيثريوم"
-description: "تعرف على معايير Ethereum بما في ذلك EIPs ومعايير الرموز مثل ERC-20 وERC-721 واتفاقيات التطوير."
+description: "تعرف على معايير إيثريوم بما في ذلك EIPs ومعايير الرموز مثل ERC-20 وERC-721 واتفاقيات التطوير."
 lang: ar
 incomplete: true
 ---
@@ -13,7 +13,7 @@ incomplete: true
 
 - [مقدمة عن مقترحات تحسين إيثريوم (EIPs)](/eips/)
 - [قائمة مقترحات تحسين إيثريوم (EIPs)](https://eips.ethereum.org/)
-- [مستودع EIP على GitHub](https://github.com/ethereum/EIPs)
+- [مستودع EIP على غيت هاب](https://github.com/ethereum/EIPs)
 - [منتدى مناقشة EIP](https://ethereum-magicians.org/c/eips)
 - [مقدمة إلى حوكمة إيثريوم](/governance/)
 - [نظرة عامة على حوكمة إيثريوم](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 مارس 2019 - بوريس مان_

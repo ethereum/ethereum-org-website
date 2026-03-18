@@ -82,5 +82,5 @@ summaryPoints:
 ## قراءة إضافية {#further-reading}
 
 - [دليل إيثريوم لتجميد العملات](https://www.staking.directory/) - _Eridian and Spacesider_
-- [تجميد العملات مع Rocket Pool - نظرة عامة على تجميد العملات](https://docs.rocketpool.net/guides/staking/overview.html) - _وثائق RocketPool_
+- [تجميد العملات مع روكيت بول - نظرة عامة على تجميد العملات](https://docs.rocketpool.net/guides/staking/overview.html) - _وثائق RocketPool_
 - [تجميد إيثريوم مع Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _وثائق المساعدة من Lido_

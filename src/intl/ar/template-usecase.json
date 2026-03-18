@@ -1,8 +1,8 @@
 {
   "template-usecase-dropdown-ai-agents": "وكلاء الذكاء الاصطناعي",
-  "template-usecase-dropdown-defi": "التمويل اللامركزي (DeFi)",
-  "template-usecase-dropdown-nft": "الرموز المميزة غير القابلة للاستبدال (NFT)",
-  "template-usecase-dropdown-dao": "المنظمات المستقلة اللامركزية (DAOs)",
+  "template-usecase-dropdown-defi": "التمويل اللامركزي (دي فاي)",
+  "template-usecase-dropdown-nft": "الرموز المميزة غير القابلة للاستبدال (إن إف تي)",
+  "template-usecase-dropdown-dao": "المنظمات المستقلة اللامركزية (دي إيه أوز)",
   "template-usecase-dropdown-apps": "إيثريوم تطبيق",
   "template-usecase-dropdown-payments": "مدفوعات إيثريوم",
   "template-usecase-dropdown-prediction-markets": "سوق التنبؤات",

@@ -28,7 +28,7 @@ lang: ar
 
 تمت برمجة هذا المنطق ضمن ماكينة البيع الآلي.
 
-العقد الذكي، مثل ماكينة البيع الآلي، يحتوي على منطق مبرمج بداخله. وفيما يلي مثال بسيط عن مظهر ماكينة البيع الآلي إذا كانت عقدًا ذكيًا مكتوبًا بلغة Solidity:
+العقد الذكي، مثل ماكينة البيع الآلي، يحتوي على منطق مبرمج بداخله. وفيما يلي مثال بسيط عن مظهر ماكينة البيع الآلي إذا كانت عقدًا ذكيًا مكتوبًا بلغة سوليديتي:
 
 ```solidity
 pragma solidity 0.8.7;
@@ -71,8 +71,8 @@ contract VendingMachine {
 
 تمتلك الإيثريوم لغات برمجة ملائمة للمطورين لكتابة العقود الذكية:
 
-- لغة برمجة Solidity
-- لغة برمجة Vyper
+- لغة برمجة سوليديتي
+- لغة برمجة فايبر
 
 [المزيد عن اللغات](/developers/docs/smart-contracts/languages/)
 
@@ -80,7 +80,7 @@ contract VendingMachine {
 
 ## القابلية للتركيب {#composability}
 
-العقود الذكية هي عقود عامة على Ethereum ويمكن اعتبارها بمثابة واجهات برمجة تطبيقات مفتوحة. يعني ذلك أنه يمكنك استدعاء عقود ذكية أخرى داخل عقدك الذكي لتوسيع الإمكانات بشكل كبير. يمكن للعقود حتى أن تنشر عقودًا أخرى.
+العقود الذكية هي عقود عامة على إيثريوم ويمكن اعتبارها بمثابة واجهات برمجة تطبيقات مفتوحة. يعني ذلك أنه يمكنك استدعاء عقود ذكية أخرى داخل عقدك الذكي لتوسيع الإمكانات بشكل كبير. يمكن للعقود حتى أن تنشر عقودًا أخرى.
 
 اعرف المزيد عن [قابلية تركيب العقود الذكية](/developers/docs/smart-contracts/composability/).
 
@@ -98,7 +98,7 @@ contract VendingMachine {
 
 ## موارد العقود الذكية {#smart-contract-resources}
 
-**عقود OpenZeppelin -** **_مكتبة لتطوير عقود ذكية آمنة._**
+**عقود أوبن زبلين -** **_مكتبة لتطوير عقود ذكية آمنة._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [غيت هاب](https://github.com/OpenZeppelin/openzeppelin-contracts)
@@ -106,7 +106,7 @@ contract VendingMachine {
 
 ## قراءة إضافية {#further-reading}
 
-- [Coinbase: ما هو العقد الذكي؟](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
-- [Chainlink: ما هو العقد الذكي؟](https://chain.link/education/smart-contracts)
+- [كوين بيز: ما هو العقد الذكي؟](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [تشين لينك: ما هو العقد الذكي؟](https://chain.link/education/smart-contracts)
 - [فيديو: شرح مبسط - العقود الذكية](https://youtu.be/ZE2HxTmxfrI)
-- [Cyfrin Updraft: منصة لتعلم وتدقيق Web3](https://updraft.cyfrin.io)
+- [سيفرين أب درافت: منصة لتعلم وتدقيق ويب3](https://updraft.cyfrin.io)

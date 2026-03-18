@@ -1,6 +1,6 @@
 ---
-title: "كيفية استخدام Manticore لإيجاد الأخطاء في العقود الذكية"
-description: "كيفية استخدام Manticore لإيجاد الأخطاء في العقود الذكية بشكل تلقائي"
+title: "كيفية استخدام مانتيكور لإيجاد الأخطاء في العقود الذكية"
+description: "كيفية استخدام مانتيكور لإيجاد الأخطاء في العقود الذكية بشكل تلقائي"
 author: Trailofbits
 lang: ar
 tags:
@@ -17,13 +17,13 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
-الهدف من هذا الدرس التعليمي هو توضيح كيفية استخدام Manticore للعثور تلقائيًا على الأخطاء في العقود الذكية.
+الهدف من هذا الدرس التعليمي هو توضيح كيفية استخدام مانتيكور للعثور تلقائيًا على الأخطاء في العقود الذكية.
 
 ## التثبيت {#installation}
 
-يتطلب Manticore إصدار python 3.6 >=. يمكن تثبيته من خلال pip أو باستخدام docker.
+يتطلب مانتيكور إصدار python 3.6 >=. يمكن تثبيته من خلال pip أو باستخدام docker.
 
-### Manticore من خلال docker {#manticore-through-docker}
+### مانتيكور من خلال docker {#manticore-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -39,7 +39,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### Manticore من خلال pip {#manticore-through-pip}
+### مانتيكور من خلال pip {#manticore-through-pip}
 
 ```bash
 pip3 install --user manticore
@@ -89,7 +89,7 @@ function f(uint a){
 
 ### التحقق من الخصائص {#verifying-properties}
 
-يسمح Manticore بالتحكم الكامل في كل عمليات تنفيذ كل مسار. نتيجة لذلك، يسمح لك بإضافة قيود عشوائية على أي شيء تقريبًا. يسمح هذا التحكم بإنشاء خصائص على العقد.
+يسمح مانتيكور بالتحكم الكامل في كل عمليات تنفيذ كل مسار. نتيجة لذلك، يسمح لك بإضافة قيود عشوائية على أي شيء تقريبًا. يسمح هذا التحكم بإنشاء خصائص على العقد.
 
 خذ المثال التالي:
 
@@ -104,7 +104,7 @@ function unsafe_add(uint a, uint b) returns(uint c){
 
 - المسار 1: `c = a + b`
 
-باستخدام Manticore، يمكنك التحقق من تجاوز السعة، وإضافة قيود إلى مسند المسار:
+باستخدام مانتيكور، يمكنك التحقق من تجاوز السعة، وإضافة قيود إلى مسند المسار:
 
 - `c = a + b AND (c < a OR c < b)`
 
@@ -129,9 +129,9 @@ function safe_add(uint a, uint b) returns(uint c){
 
 وبالتالي، يعد التنفيذ الرمزي الديناميكي (DSE) أداة قوية، يمكنها التحقق من القيود العشوائية على النص البرمجي الخاص بك.
 
-## التشغيل تحت Manticore {#running-under-manticore}
+## التشغيل تحت مانتيكور {#running-under-manticore}
 
-سنرى كيف نستكشف عقدًا ذكيًا باستخدام واجهة برمجة تطبيقات Manticore. الهدف هو العقد الذكي التالي [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
+سنرى كيف نستكشف عقدًا ذكيًا باستخدام واجهة برمجة تطبيقات مانتيكور. الهدف هو العقد الذكي التالي [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -147,7 +147,7 @@ contract Simple {
 
 ### تشغيل استكشاف مستقل {#run-a-standalone-exploration}
 
-يمكنك تشغيل Manticore مباشرة على العقد الذكي بالأمر التالي (`project` يمكن أن يكون ملف Solidity، أو دليل مشروع):
+يمكنك تشغيل مانتيكور مباشرة على العقد الذكي بالأمر التالي (`project` يمكن أن يكون ملف سوليديتي، أو دليل مشروع):
 
 ```bash
 $ manticore project
@@ -168,15 +168,15 @@ $ manticore project
 ...
 ```
 
-بدون معلومات إضافية، سيستكشف Manticore العقد بمعاملات رمزية جديدة حتى يتوقف عن استكشاف مسارات جديدة في العقد. لا يقوم Manticore بتشغيل معاملات جديدة بعد معاملة فاشلة (على سبيل المثال: بعد revert).
+بدون معلومات إضافية، سيستكشف مانتيكور العقد بمعاملات رمزية جديدة حتى يتوقف عن استكشاف مسارات جديدة في العقد. لا يقوم مانتيكور بتشغيل معاملات جديدة بعد معاملة فاشلة (على سبيل المثال: بعد revert).
 
-سيقوم Manticore بإخراج المعلومات في دليل `mcore_*`. من بين أمور أخرى، ستجد في هذا الدليل:
+سيقوم مانتيكور بإخراج المعلومات في دليل `mcore_*`. من بين أمور أخرى، ستجد في هذا الدليل:
 
 - `global.summary`: التغطية وتحذيرات المترجم
 - `test_XXXXX.summary`: التغطية، آخر تعليمة، أرصدة الحسابات لكل حالة اختبار
 - `test_XXXXX.tx`: قائمة مفصلة بالمعاملات لكل حالة اختبار
 
-هنا يجد Manticore 7 حالات اختبار، والتي تتوافق مع (قد يتغير ترتيب أسماء الملفات):
+هنا يجد مانتيكور 7 حالات اختبار، والتي تتوافق مع (قد يتغير ترتيب أسماء الملفات):
 
 |                                                           |  المعاملة 0 |         المعاملة 1         | المعاملة 2                 | النتيجة |
 | :-------------------------------------------------------: | :---------: | :------------------------: | -------------------------- | :-----: |
@@ -190,13 +190,13 @@ $ manticore project
 
 _ملخص الاستكشاف: f(!=65) تشير إلى استدعاء الدالة f بأي قيمة مختلفة عن 65._
 
-كما تلاحظ، يقوم Manticore بإنشاء حالة اختبار فريدة لكل معاملة ناجحة أو تم التراجع عنها (reverted).
+كما تلاحظ، يقوم مانتيكور بإنشاء حالة اختبار فريدة لكل معاملة ناجحة أو تم التراجع عنها (reverted).
 
 استخدم علامة `--quick-mode` إذا كنت تريد استكشافًا سريعًا للنص البرمجي (فهي تعطل كاشفات الأخطاء، وحساب الغاز، ...)
 
 ### التعامل مع عقد ذكي من خلال واجهة برمجة التطبيقات (API) {#manipulate-a-smart-contract-through-the-api}
 
-يصف هذا القسم تفاصيل كيفية التعامل مع عقد ذكي من خلال واجهة برمجة تطبيقات Manticore Python. يمكنك إنشاء ملف جديد بامتداد python `*.py` وكتابة النص البرمجي اللازم عن طريق إضافة أوامر واجهة برمجة التطبيقات (API) (سيتم وصف أساسياتها أدناه) في هذا الملف ثم تشغيله بالأمر `$ python3 *.py`. يمكنك أيضًا تنفيذ الأوامر أدناه مباشرة في وحدة تحكم python، لتشغيل وحدة التحكم استخدم الأمر `$ python3`.
+يصف هذا القسم تفاصيل كيفية التعامل مع عقد ذكي من خلال واجهة برمجة تطبيقات مانتيكور بايثون. يمكنك إنشاء ملف جديد بامتداد python `*.py` وكتابة النص البرمجي اللازم عن طريق إضافة أوامر واجهة برمجة التطبيقات (API) (سيتم وصف أساسياتها أدناه) في هذا الملف ثم تشغيله بالأمر `$ python3 *.py`. يمكنك أيضًا تنفيذ الأوامر أدناه مباشرة في وحدة تحكم python، لتشغيل وحدة التحكم استخدم الأمر `$ python3`.
 
 ### إنشاء الحسابات {#creating-accounts}
 
@@ -214,7 +214,7 @@ m = ManticoreEVM()
 user_account = m.create_account(balance=1000)
 ```
 
-يمكن نشر عقد Solidity باستخدام [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
+يمكن نشر عقد سوليديتي باستخدام [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
 
 ```solidity
 source_code = '''
@@ -237,7 +237,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 ### تنفيذ المعاملات {#executing-transactions}
 
-يدعم Manticore نوعين من المعاملات:
+يدعم مانتيكور نوعين من المعاملات:
 
 - المعاملة الأولية (Raw transaction): يتم استكشاف جميع الدوال
 - المعاملة المسماة (Named transaction): يتم استكشاف دالة واحدة فقط
@@ -269,7 +269,7 @@ m.transaction(caller=user_account,
               value=symbolic_value)
 ```
 
-إذا كانت البيانات رمزية، فسيستكشف Manticore جميع دوال العقد أثناء تنفيذ المعاملة. سيكون من المفيد الاطلاع على شرح الدالة الاحتياطية (Fallback Function) في مقال [Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) لفهم كيفية عمل اختيار الدالة.
+إذا كانت البيانات رمزية، فسيستكشف مانتيكور جميع دوال العقد أثناء تنفيذ المعاملة. سيكون من المفيد الاطلاع على شرح الدالة الاحتياطية (Fallback Function) في مقال [Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) لفهم كيفية عمل اختيار الدالة.
 
 #### المعاملة المسماة {#named-transaction}
 
@@ -299,9 +299,9 @@ print("النتائج موجودة في {}".format(m.workspace))
 
 ### إنهاء الاستكشاف {#terminate-the-exploration}
 
-لإيقاف الاستكشاف، استخدم [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). لا ينبغي إرسال أي معاملات أخرى بمجرد استدعاء هذه الطريقة، ويقوم Manticore بإنشاء حالات اختبار لكل مسار تم استكشافه.
+لإيقاف الاستكشاف، استخدم [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). لا ينبغي إرسال أي معاملات أخرى بمجرد استدعاء هذه الطريقة، ويقوم مانتيكور بإنشاء حالات اختبار لكل مسار تم استكشافه.
 
-### ملخص: التشغيل تحت Manticore {#summary-running-under-manticore}
+### ملخص: التشغيل تحت مانتيكور {#summary-running-under-manticore}
 
 بجمع كل الخطوات السابقة معًا، نحصل على:
 

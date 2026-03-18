@@ -16,7 +16,7 @@ lang: ar
 - [تجميد العملات كخدمة](/staking/saas/)
 - [تجمعات تجميد العملات](/staking/pools/)
 
-يعمل إثبات الحصة على شبكة Beacon Chain منذ 1 ديسمبر 2020. على الرغم من أن تجميد العملات لا يزال جديدًا نسبيًا، فقد حاولنا إنشاء إطار عمل عادل وشفاف للنظر في الإدراج على موقع ethereum.org، إلا أن معايير الإدراج قد تتغير وتتطور مع مرور الوقت، وتبقى الكلمة النهائية لفريق موقع ethereum.org.
+يعمل إثبات الحصة على شبكة بيكون تشين منذ 1 ديسمبر 2020. على الرغم من أن تجميد العملات لا يزال جديدًا نسبيًا، فقد حاولنا إنشاء إطار عمل عادل وشفاف للنظر في الإدراج على موقع ethereum.org، إلا أن معايير الإدراج قد تتغير وتتطور مع مرور الوقت، وتبقى الكلمة النهائية لفريق موقع ethereum.org.
 
 ## إطار اتخاذ القرار {#the-decision-framework}
 
@@ -57,7 +57,7 @@ lang: ar
 
 **ما المنصات المدعومة؟**
 
-- أي، Linux، وmacOS، وWindows، وiOS، وAndroid
+- أي، لينكس، وماك أو إس، وويندوز، وآي أو إس، وأندرويد
 
 #### البرامج والعقود الذكية {#software-and-smart-contracts}
 
@@ -87,7 +87,7 @@ For any custom software or smart contracts involved:
 
 For software products related to node or client setup, management or migration:
 
-**ما هي عملاء طبقة الإجماع (أي، Lighthouse، وTeku، وNimbus، وPrysm، وGrandine) المدعومة؟**
+**ما هي عملاء طبقة الإجماع (أي، لايت هاوس، وتيكو، ونيمبوس، وبريزم، وجراندين) المدعومة؟**
 
 - Which clients are supported؟ Can the user choose؟
 - This is used to determine the products "multi-client" score.
@@ -114,7 +114,7 @@ For software products related to node or client setup, management or migration:
 **ما مدى تنوع العملاء في العُقد التي يتم تشغيلها؟**
 
 - ما النسبة المئوية لمفاتيح المصدّقين التي يتم تشغيلها بواسطة عميل أغلبية في طبقة الإجماع (CL)؟
-- As of last edit, Prysm is the consensus layer client being run by a majority of node operators, which is dangerous for the network. If any CL client is currently being used by over 33% of the network, we request data related to its usage.
+- As of last edit, بريزم is the consensus layer client being run by a majority of node operators, which is dangerous for the network. If any CL client is currently being used by over 33% of the network, we request data related to its usage.
 - This is used to determine the products "diverse clients" score.
 
 #### تجمع تجميد العملات {#staking-pool}
@@ -138,13 +138,13 @@ For software products related to node or client setup, management or migration:
 **هل يمكن للمستخدمين المشاركة كمشغلي عُقد؟**
 
 - What is required to run validator clients using the pooled funds؟
-- Does this require permission from an individual, company or DAO؟
+- Does this require permission from an individual, company or داو؟
 - This is used to determine the products "permissionless nodes" score.
 
 **ما هو مدى تنوع العملاء لدى مشغلي عُقد المجمع؟**
 
 - What percent of node operators are running a majority consensus layer (CL) client؟
-- As of last edit, Prysm is the consensus layer client being run by a majority of node operators, which is dangerous for the network. If any CL client is currently being used by over 33% of the network, we request data related to its usage.
+- As of last edit, بريزم is the consensus layer client being run by a majority of node operators, which is dangerous for the network. If any CL client is currently being used by over 33% of the network, we request data related to its usage.
 - This is used to determine the products "diverse clients" score.
 
 ### معايير أخرى: الميزات الإضافية {#other-criteria}
@@ -165,11 +165,11 @@ For software products related to node or client setup, management or migration:
 
 تُستخدم [معايير الإدراج](#criteria-for-inclusion) المذكورة أعلاه لحساب درجة تراكمية لكل منتج أو خدمة. This is used as a means of sorting and showcasing products that meet certain objective criteria. The more criteria that evidence is provided for, the higher a product will be sorted, with ties being randomized on load.
 
-يوجد المنطق البرمجي والأوزان لهذه المعايير حاليًا في [مكون JavaScript هذا](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) في مستودعنا.
+يوجد المنطق البرمجي والأوزان لهذه المعايير حاليًا في [مكون جافا سكريبت هذا](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) في مستودعنا.
 
 ## أضف منتجك أو خدمتك {#add-product}
 
-If you want to add a staking product or service to ethereum.org, create an issue on GitHub.
+If you want to add a staking product or service to ethereum.org, create an issue on غيت هاب.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
 أنشئ قضية

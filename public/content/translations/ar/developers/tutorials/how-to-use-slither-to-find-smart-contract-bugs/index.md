@@ -1,6 +1,6 @@
 ---
-title: "كيفية استخدام Slither للعثور على الأخطاء في العقود الذكية"
-description: "كيفية استخدام Slither للعثور تلقائيًا على الأخطاء في العقود الذكية"
+title: "كيفية استخدام سليذر للعثور على الأخطاء في العقود الذكية"
+description: "كيفية استخدام سليذر للعثور تلقائيًا على الأخطاء في العقود الذكية"
 author: Trailofbits
 lang: ar
 tags: [ "Solidity", "العقود الذكيه ", "الأمن", "الاختبار" ]
@@ -10,26 +10,26 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
-## كيفية استخدام Slither {#how-to-use-slither}
+## كيفية استخدام سليذر {#how-to-use-slither}
 
-الهدف من هذا الدرس التعليمي هو توضيح كيفية استخدام Slither للعثور تلقائيًا على الأخطاء في العقود الذكية.
+الهدف من هذا الدرس التعليمي هو توضيح كيفية استخدام سليذر للعثور تلقائيًا على الأخطاء في العقود الذكية.
 
 - [التثبيت](#installation)
 - [استخدام سطر الأوامر](#command-line)
 - [مقدمة في التحليل الثابت](#static-analysis): مقدمة موجزة في التحليل الثابت
-- [واجهة برمجة التطبيقات](#api-basics): وصف واجهة برمجة تطبيقات Python
+- [واجهة برمجة التطبيقات](#api-basics): وصف واجهة برمجة تطبيقات بايثون
 
 ## التثبيت {#installation}
 
-يتطلب Slither إصدار Python >= 3.6. يمكن تثبيته من خلال pip أو باستخدام docker.
+يتطلب سليذر إصدار بايثون >= 3.6. يمكن تثبيته من خلال pip أو باستخدام docker.
 
-Slither من خلال pip:
+سليذر من خلال pip:
 
 ```bash
 pip3 install --user slither-analyzer
 ```
 
-Slither من خلال docker:
+سليذر من خلال docker:
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -55,23 +55,23 @@ python3 script.py
 
 ### سطر الأوامر {#command-line}
 
-**سطر الأوامر مقابل البرامج النصية المعرفة من قبل المستخدم.** يأتي Slither مع مجموعة من أجهزة الكشف المحددة مسبقًا والتي تعثر على العديد من الأخطاء الشائعة. سيؤدي استدعاء Slither من سطر الأوامر إلى تشغيل جميع أجهزة الكشف، دون الحاجة إلى معرفة تفصيلية بالتحليل الثابت:
+**سطر الأوامر مقابل البرامج النصية المعرفة من قبل المستخدم.** يأتي سليذر مع مجموعة من أجهزة الكشف المحددة مسبقًا والتي تعثر على العديد من الأخطاء الشائعة. سيؤدي استدعاء سليذر من سطر الأوامر إلى تشغيل جميع أجهزة الكشف، دون الحاجة إلى معرفة تفصيلية بالتحليل الثابت:
 
 ```bash
 slither project_paths
 ```
 
-بالإضافة إلى أجهزة الكشف، يمتلك Slither إمكانيات مراجعة النص البرمجي من خلال [الطابعات](https://github.com/crytic/slither#printers) و[الأدوات](https://github.com/crytic/slither#tools) الخاصة به.
+بالإضافة إلى أجهزة الكشف، يمتلك سليذر إمكانيات مراجعة النص البرمجي من خلال [الطابعات](https://github.com/crytic/slither#printers) و[الأدوات](https://github.com/crytic/slither#tools) الخاصة به.
 
-استخدم [crytic.io](https://github.com/crytic) للوصول إلى أجهزة الكشف الخاصة وتكامل GitHub.
+استخدم [crytic.io](https://github.com/crytic) للوصول إلى أجهزة الكشف الخاصة وتكامل غيت هاب.
 
 ## التحليل الثابت {#static-analysis}
 
-تم وصف إمكانيات وتصميم إطار عمل التحليل الثابت Slither في منشورات المدونة ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/)، [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) و[ورقة أكاديمية](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
+تم وصف إمكانيات وتصميم إطار عمل التحليل الثابت سليذر في منشورات المدونة ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/)، [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) و[ورقة أكاديمية](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
 يوجد التحليل الثابت في أنواع مختلفة. من المرجح أنك تدرك أن المترجمات مثل [clang](https://clang-analyzer.llvm.org/) و[gcc](https://lwn.net/Articles/806099/) تعتمد على تقنيات البحث هذه، ولكنها تدعم أيضًا ([Infer](https://fbinfer.com/)، [CodeClimate](https://codeclimate.com/)، [FindBugs](http://findbugs.sourceforge.net/) والأدوات القائمة على الأساليب الرسمية مثل [Frama-C](https://frama-c.com/) و[Polyspace](https://www.mathworks.com/products/polyspace.html).
 
-لن نقوم بمراجعة شاملة لتقنيات التحليل الثابت والباحثين هنا. بدلاً من ذلك، سنركز على ما هو مطلوب لفهم كيفية عمل Slither حتى تتمكن من استخدامه بشكل أكثر فاعلية للعثور على الأخطاء وفهم النص البرمجي.
+لن نقوم بمراجعة شاملة لتقنيات التحليل الثابت والباحثين هنا. بدلاً من ذلك، سنركز على ما هو مطلوب لفهم كيفية عمل سليذر حتى تتمكن من استخدامه بشكل أكثر فاعلية للعثور على الأخطاء وفهم النص البرمجي.
 
 - [تمثيل النص البرمجي](#code-representation)
 - [تحليل النص البرمجي](#analysis)
@@ -100,9 +100,9 @@ function safeAdd(uint a, uint b) pure internal returns(uint){
 
 ![AST](./ast.png)
 
-يستخدم Slither شجرة بناء الجملة المجردة (AST) التي يتم تصديرها بواسطة solc.
+يستخدم سليذر شجرة بناء الجملة المجردة (AST) التي يتم تصديرها بواسطة solc.
 
-على الرغم من بساطة بنائها، فإن شجرة بناء الجملة المجردة (AST) هي بنية متداخلة. في بعض الأحيان، لا يكون هذا هو التحليل الأكثر وضوحًا. على سبيل المثال، لتحديد العمليات المستخدمة في التعبير `a + b <= a`، يجب عليك أولاً تحليل `<=` ثم `+`. النهج الشائع هو استخدام ما يسمى بنمط الزائر (visitor pattern)، والذي يتنقل عبر الشجرة بشكل متكرر. يحتوي Slither على زائر عام في [`ExpressionVisitor`](https://github.com/crytic/slither/blob/master/slither/visitors/expression/expression.py).
+على الرغم من بساطة بنائها، فإن شجرة بناء الجملة المجردة (AST) هي بنية متداخلة. في بعض الأحيان، لا يكون هذا هو التحليل الأكثر وضوحًا. على سبيل المثال، لتحديد العمليات المستخدمة في التعبير `a + b <= a`، يجب عليك أولاً تحليل `<=` ثم `+`. النهج الشائع هو استخدام ما يسمى بنمط الزائر (visitor pattern)، والذي يتنقل عبر الشجرة بشكل متكرر. يحتوي سليذر على زائر عام في [`ExpressionVisitor`](https://github.com/crytic/slither/blob/master/slither/visitors/expression/expression.py).
 
 يستخدم النص البرمجي التالي `ExpressionVisitor` للكشف عما إذا كان التعبير يحتوي على إضافة:
 
@@ -135,11 +135,11 @@ print(f'التعبير {expression} لديه إضافة: {visitor.result()}')
 
 ### التحليل {#analysis}
 
-أبسط أنواع التحليلات التي يمكنك إجراؤها باستخدام Slither هي التحليلات النحوية.
+أبسط أنواع التحليلات التي يمكنك إجراؤها باستخدام سليذر هي التحليلات النحوية.
 
 ### تحليل بناء الجملة {#syntax-analysis}
 
-يمكن لـ Slither التنقل عبر المكونات المختلفة للنص البرمجي وتمثيلها للعثور على التناقضات والعيوب باستخدام نهج يشبه مطابقة الأنماط.
+يمكن لـ سليذر التنقل عبر المكونات المختلفة للنص البرمجي وتمثيلها للعثور على التناقضات والعيوب باستخدام نهج يشبه مطابقة الأنماط.
 
 على سبيل المثال، تبحث أجهزة الكشف التالية عن المشكلات المتعلقة ببناء الجملة:
 
@@ -164,9 +164,9 @@ print(f'التعبير {expression} لديه إضافة: {visitor.result()}')
 variable_a = variable_b + 1;
 ```
 
-يأتي Slither مزودًا بإمكانيات [تبعية البيانات](https://github.com/crytic/slither/wiki/data-dependency) المضمنة، وذلك بفضل التمثيل الوسيط الخاص به (والذي تمت مناقشته في قسم لاحق).
+يأتي سليذر مزودًا بإمكانيات [تبعية البيانات](https://github.com/crytic/slither/wiki/data-dependency) المضمنة، وذلك بفضل التمثيل الوسيط الخاص به (والذي تمت مناقشته في قسم لاحق).
 
-يمكن العثور على مثال لاستخدام تبعية البيانات في [كاشف المساواة الصارمة الخطير](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities). هنا سيبحث Slither عن مقارنة المساواة الصارمة بقيمة خطيرة ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87))، وسيبلغ المستخدم أنه يجب عليه استخدام `>=` أو `<=` بدلاً من `==`، لمنع المهاجم من محاصرة العقد. من بين أمور أخرى، سيعتبر الكاشف القيمة المرجعة لاستدعاء `balanceOf(address)` خطيرة ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64))، وسيستخدم محرك تبعية البيانات لتتبع استخدامه.
+يمكن العثور على مثال لاستخدام تبعية البيانات في [كاشف المساواة الصارمة الخطير](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities). هنا سيبحث سليذر عن مقارنة المساواة الصارمة بقيمة خطيرة ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87))، وسيبلغ المستخدم أنه يجب عليه استخدام `>=` أو `<=` بدلاً من `==`، لمنع المهاجم من محاصرة العقد. من بين أمور أخرى، سيعتبر الكاشف القيمة المرجعة لاستدعاء `balanceOf(address)` خطيرة ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64))، وسيستخدم محرك تبعية البيانات لتتبع استخدامه.
 
 #### حساب النقطة الثابتة {#fixed-point-computation}
 
@@ -180,19 +180,19 @@ for(uint i; i < range; ++){
 
 سيحتاج تحليلك إلى معرفة متى يتوقف. هناك استراتيجيتان رئيسيتان هنا: (1) التكرار على كل عقدة عددًا محدودًا من المرات، (2) حساب ما يسمى بـ _نقطة ثابتة_ (fixpoint). النقطة الثابتة (fixpoint) تعني بشكل أساسي أن تحليل هذه العقدة لا يوفر أي معلومات ذات معنى.
 
-يمكن العثور على مثال لاستخدام النقطة الثابتة في كاشفات إعادة الدخول: يستكشف Slither العقد، ويبحث عن الاستدعاءات الخارجية والكتابة والقراءة إلى التخزين. بمجرد وصولها إلى نقطة ثابتة ([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131))، فإنها توقف الاستكشاف، وتحلل النتائج لمعرفة ما إذا كان هناك إعادة دخول، من خلال أنماط إعادة دخول مختلفة ([reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py)، [reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py)، [reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py)).
+يمكن العثور على مثال لاستخدام النقطة الثابتة في كاشفات إعادة الدخول: يستكشف سليذر العقد، ويبحث عن الاستدعاءات الخارجية والكتابة والقراءة إلى التخزين. بمجرد وصولها إلى نقطة ثابتة ([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131))، فإنها توقف الاستكشاف، وتحلل النتائج لمعرفة ما إذا كان هناك إعادة دخول، من خلال أنماط إعادة دخول مختلفة ([reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py)، [reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py)، [reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py)).
 
 تتطلب كتابة التحليلات باستخدام حساب النقطة الثابتة الفعال فهمًا جيدًا لكيفية نشر التحليل لمعلوماته.
 
 ### التمثيل الوسيط {#intermediate-representation}
 
-التمثيل الوسيط (IR) هو لغة يُقصد بها أن تكون أكثر قابلية للتحليل الثابت من اللغة الأصلية. يترجم Slither سوليديتي إلى التمثيل الوسيط الخاص به: [SlithIR](https://github.com/crytic/slither/wiki/SlithIR).
+التمثيل الوسيط (IR) هو لغة يُقصد بها أن تكون أكثر قابلية للتحليل الثابت من اللغة الأصلية. يترجم سليذر سوليديتي إلى التمثيل الوسيط الخاص به: [SlithIR](https://github.com/crytic/slither/wiki/SlithIR).
 
 فهم SlithIR ليس ضروريًا إذا كنت تريد فقط كتابة فحوصات أساسية. ومع ذلك، سيكون مفيداً إذا كنت تخطط لكتابة تحليلات دلالية متقدمة. ستساعدك طابعات [SlithIR](https://github.com/crytic/slither/wiki/Printer-documentation#slithir) و[SSA](https://github.com/crytic/slither/wiki/Printer-documentation#slithir-ssa) على فهم كيفية ترجمة النص البرمجي.
 
 ## أساسيات واجهة برمجة التطبيقات {#api-basics}
 
-يحتوي Slither على واجهة برمجة تطبيقات تتيح لك استكشاف السمات الأساسية للعقد ووظائفه.
+يحتوي سليذر على واجهة برمجة تطبيقات تتيح لك استكشاف السمات الأساسية للعقد ووظائفه.
 
 لتحميل قاعدة بيانات برمجية:
 

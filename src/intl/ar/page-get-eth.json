@@ -2,9 +2,9 @@
   "page-get-eth-article-keeping-crypto-safe": "أساسيات الحفاظ على سلامة العملات الرقمية الخاصة بك",
   "page-get-eth-article-protecting-yourself": "حماية نفسك والأموال الخاصة بك",
   "page-get-eth-article-store-digital-assets": "كيفية تخزين الأصول الرقمية على إيثريوم",
-  "page-get-eth-article-protecting-yourself-desc": "MyCrypto",
-  "page-get-eth-article-keeping-crypto-safe-desc": "Coinbase",
-  "page-get-eth-article-store-digital-assets-desc": "ConsenSys",
+  "page-get-eth-article-protecting-yourself-desc": "ماي كريبتو",
+  "page-get-eth-article-keeping-crypto-safe-desc": "كوين بيز",
+  "page-get-eth-article-store-digital-assets-desc": "كونسنسيس",
   "page-get-eth-cex": "منصات التبادل المركزية",
   "page-get-eth-cex-desc": "منصات التبادل عبارة عن أعمال تتيح لك شراء العملات الرقمية باستخدام العملات التقليدية. وتكون لديها الوصاية على أي عملة ETH تشتريها حتى ترسلها إلى محفظة تتحكم فيها.",
   "page-get-eth-checkout-dapps-btn": "اطلع على التطبيقات اللامركزية",
@@ -17,8 +17,8 @@
   "page-get-eth-staking": "مكافآت تجميد العملات",
   "page-get-eth-staking-desc": "إذا كان لديك بالفعل بعض ETH، فيمكنك كسب المزيد منها عن طريق تشغيل عقدة برنامج مدقق. يتم الدفع لك مقابل القيام بعملية التحقُّق هذه بعملة ETH.",
   "page-get-eth-earn": "اربح ETH",
-  "page-get-eth-earn-desc": "يمكنك ربح ETH من خلال العمل لدى المؤسسات اللامركزية ذاتية الحوكمة (DAOs) أو الشركات التي تدفع بالعملات الرقمية، والفوز بالمكافآت، والعثور على الأخطاء البرمجية والمزيد.",
-  "page-get-eth-daos-link-desc": "تعرَّف على المزيد عن المؤسسات اللامركزية ذاتية الحوكمة (DAOs)",
+  "page-get-eth-earn-desc": "يمكنك ربح ETH من خلال العمل لدى المؤسسات اللامركزية ذاتية الحوكمة (دي إيه أوز) أو الشركات التي تدفع بالعملات الرقمية، والفوز بالمكافآت، والعثور على الأخطاء البرمجية والمزيد.",
+  "page-get-eth-daos-link-desc": "تعرَّف على المزيد عن المؤسسات اللامركزية ذاتية الحوكمة (دي إيه أوز)",
   "page-get-eth-cex-link-desc": "اطّلِع على قائمة بمنصات التبادل",
   "page-get-eth-staking-link-desc": "تعرَّف على المزيد عن تجميد العملات",
   "page-get-eth-dexs": "منصات التبادل اللامركزية (DEXs)",
@@ -76,5 +76,5 @@
   "page-get-eth-your-address-wallet-link": "اطلع على المحافظ",
   "listing-policy-raise-issue-link": "طرح مشكلة",
   "page-find-wallet-last-updated": "آخر تحديث",
-  "listing-policy-disclaimer": "جميع المنتجات المدرجة في هذه الصفحة ليست مصادقة رسمية ولا تقدم إلا لأغراض إعلامية. إذا كنت ترغب في إضافة منتج أو تقديم ملاحظات بشأن السياسة، فاطرح مشكلة في GitHub."
+  "listing-policy-disclaimer": "جميع المنتجات المدرجة في هذه الصفحة ليست مصادقة رسمية ولا تقدم إلا لأغراض إعلامية. إذا كنت ترغب في إضافة منتج أو تقديم ملاحظات بشأن السياسة، فاطرح مشكلة في غيت هاب."
 }

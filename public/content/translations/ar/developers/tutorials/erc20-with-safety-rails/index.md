@@ -1,7 +1,7 @@
 ---
 title: "ERC-20 مع حواجز أمان"
 description: "كيفية مساعدة الناس على تجنب الأخطاء الساذجة"
-author: Ori Pomerantz
+author: "أوري بوميرانتز"
 lang: ar
 tags: [ "erc-20" ]
 skill: beginner
@@ -12,18 +12,18 @@ published: 2022-08-15
 
 من أروع الأشياء في إيثريوم أنه لا توجد سلطة مركزية يمكنها تعديل معاملاتك أو التراجع عنها. من أكبر المشاكل في إيثريوم أنه لا توجد سلطة مركزية لديها القدرة على التراجع عن أخطاء المستخدم أو المعاملات غير المشروعة. في هذه المقالة، ستتعلم بعض الأخطاء الشائعة التي يرتكبها المستخدمون مع رموز [ERC-20](/developers/docs/standards/tokens/erc-20/)، بالإضافة إلى كيفية إنشاء عقود ERC-20 تساعد المستخدمين على تجنب تلك الأخطاء، أو التي تمنح سلطة مركزية بعض الصلاحيات (على سبيل المثال، لتجميد الحسابات).
 
-لاحظ أنه بينما سنستخدم [عقد رمز OpenZeppelin ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)، فإن هذه المقالة لا تشرحه بتفصيل كبير. يمكنك العثور على هذه المعلومات [هنا](/developers/tutorials/erc20-annotated-code).
+لاحظ أنه بينما سنستخدم [عقد رمز أوبن زبلين ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)، فإن هذه المقالة لا تشرحه بتفصيل كبير. يمكنك العثور على هذه المعلومات [هنا](/developers/tutorials/erc20-annotated-code).
 
 إذا كنت تريد رؤية الكود المصدري الكامل:
 
-1. افتح [Remix IDE](https://remix.ethereum.org/).
+1. افتح [ريميكس IDE](https://remix.ethereum.org/).
 2. انقر على أيقونة استنساخ github (![clone github icon](icon-clone.png)).
 3. استنسخ مستودع github `https://github.com/qbzzt/20220815-erc20-safety-rails`.
 4. افتح **contracts > erc20-safety-rails.sol**.
 
 ## إنشاء عقد ERC-20 {#creating-an-erc-20-contract}
 
-قبل أن نتمكن من إضافة وظيفة حواجز الأمان، نحتاج إلى عقد ERC-20. في هذه المقالة، سنستخدم [معالج عقود OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/wizard). افتحه في متصفح آخر واتبع هذه التعليمات:
+قبل أن نتمكن من إضافة وظيفة حواجز الأمان، نحتاج إلى عقد ERC-20. في هذه المقالة، سنستخدم [معالج عقود أوبن زبلين](https://docs.openzeppelin.com/contracts/5.x/wizard). افتحه في متصفح آخر واتبع هذه التعليمات:
 
 1. حدد **ERC20**.
 
@@ -38,11 +38,11 @@ published: 2022-08-15
    | التحكم في الوصول | Ownable                                                                          |
    | قابلية الترقية   | لا شيء                                                                           |
 
-3. مرر لأعلى وانقر على **افتح في Remix** (لـ Remix) أو **تنزيل** لاستخدام بيئة مختلفة. سأفترض أنك تستخدم Remix، إذا كنت تستخدم شيئًا آخر، فقم فقط بإجراء التغييرات المناسبة.
+3. مرر لأعلى وانقر على **افتح في ريميكس** (لـ ريميكس) أو **تنزيل** لاستخدام بيئة مختلفة. سأفترض أنك تستخدم ريميكس، إذا كنت تستخدم شيئًا آخر، فقم فقط بإجراء التغييرات المناسبة.
 
 4. لدينا الآن عقد ERC-20 يعمل بشكل كامل. يمكنك توسيع `.deps` > `npm` لرؤية الكود المستورد.
 
-5. قم بتجميع العقد ونشره والتفاعل معه لترى أنه يعمل كعقد ERC-20. إذا كنت بحاجة إلى تعلم كيفية استخدام Remix، [استخدم تعليمات الاستخدام هذه](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
+5. قم بتجميع العقد ونشره والتفاعل معه لترى أنه يعمل كعقد ERC-20. إذا كنت بحاجة إلى تعلم كيفية استخدام ريميكس، [استخدم تعليمات الاستخدام هذه](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
 
 ## الأخطاء الشائعة {#common-mistakes}
 
@@ -50,13 +50,13 @@ published: 2022-08-15
 
 يرسل المستخدمون أحيانًا الرموز إلى عنوان خاطئ. على الرغم من أننا لا نستطيع قراءة أفكارهم لمعرفة ما كانوا ينوون فعله، إلا أن هناك نوعين من الأخطاء يحدثان كثيرًا ويسهل اكتشافهما:
 
-1. إرسال الرموز إلى عنوان العقد نفسه. على سبيل المثال، تمكن [رمز OP الخاص بـ Optimism](https://optimism.mirror.xyz/qvd0WfuLKnePm1Gxb9dpGchPf5uDz5NSMEFdgirDS4c) من تجميع [أكثر من 120,000](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000042) رمز OP في أقل من شهرين. يمثل هذا قدرًا كبيرًا من الثروة التي يُفترض أن الناس قد فقدوها.
+1. إرسال الرموز إلى عنوان العقد نفسه. على سبيل المثال، تمكن [رمز OP الخاص بـ أوبتيميزم](https://optimism.mirror.xyz/qvd0WfuLKnePm1Gxb9dpGchPf5uDz5NSMEFdgirDS4c) من تجميع [أكثر من 120,000](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000042) رمز OP في أقل من شهرين. يمثل هذا قدرًا كبيرًا من الثروة التي يُفترض أن الناس قد فقدوها.
 
 2. إرسال الرموز إلى عنوان فارغ، وهو عنوان لا يتوافق مع [حساب ذي ملكية خارجية](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs) أو [عقد ذكي](/developers/docs/smart-contracts). على الرغم من أنه ليس لدي إحصائيات حول مدى تكرار حدوث ذلك، إلا أن [حادثة واحدة كان من الممكن أن تكلف 20,000,000 رمز](https://gov.optimism.io/t/message-to-optimism-community-from-wintermute/2595).
 
 ### منع التحويلات {#preventing-transfers}
 
-يتضمن عقد OpenZeppelin ERC-20 [خطافًا، `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368)، يتم استدعاؤه قبل تحويل الرمز. بشكل افتراضي، لا يقوم هذا الخطاف بأي شيء، ولكن يمكننا ربط وظائفنا الخاصة به، مثل عمليات التحقق التي تعود إلى الحالة السابقة إذا كانت هناك مشكلة.
+يتضمن عقد أوبن زبلين ERC-20 [خطافًا، `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368)، يتم استدعاؤه قبل تحويل الرمز. بشكل افتراضي، لا يقوم هذا الخطاف بأي شيء، ولكن يمكننا ربط وظائفنا الخاصة به، مثل عمليات التحقق التي تعود إلى الحالة السابقة إذا كانت هناك مشكلة.
 
 لاستخدام الخطاف، أضف هذه الدالة بعد الدالة البانية:
 
@@ -96,7 +96,7 @@ published: 2022-08-15
 - لا يمكن أن يساوي عنوان `to` `address(this)`، وهو عنوان عقد ERC-20 نفسه.
 - لا يمكن أن يكون عنوان `to` فارغًا، يجب أن يكون إما:
   - حساب مملوك خارجيًا (EOA). لا يمكننا التحقق مما إذا كان العنوان حسابًا مملوكًا خارجيًا (EOA) مباشرةً، ولكن يمكننا التحقق من رصيد ETH للعنوان. دائمًا ما يكون لدى الحسابات المملوكة خارجيًا (EOAs) رصيد، حتى لو لم تعد تُستخدم - فمن الصعب تصفيتها حتى آخر wei.
-  - عقد ذكي. اختبار ما إذا كان العنوان عقدًا ذكيًا هو أمر أصعب قليلاً. هناك رمز تشغيلي يتحقق من طول الكود الخارجي، يسمى [`EXTCODESIZE`](https://www.evm.codes/#3b)، لكنه غير متاح مباشرة في Solidity. علينا استخدام [Yul](https://docs.soliditylang.org/en/v0.8.15/yul.html)، وهي لغة تجميع EVM، لذلك. هناك قيم أخرى يمكننا استخدامها من Solidity ([`<address>.code` و `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types))، لكنها تكلف أكثر.
+  - عقد ذكي. اختبار ما إذا كان العنوان عقدًا ذكيًا هو أمر أصعب قليلاً. هناك رمز تشغيلي يتحقق من طول الكود الخارجي، يسمى [`EXTCODESIZE`](https://www.evm.codes/#3b)، لكنه غير متاح مباشرة في سوليديتي. علينا استخدام [يول](https://docs.soliditylang.org/en/v0.8.15/yul.html)، وهي لغة تجميع EVM، لذلك. هناك قيم أخرى يمكننا استخدامها من سوليديتي ([`<address>.code` و `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types))، لكنها تكلف أكثر.
 
 دعنا نمر على الكود الجديد سطرًا بسطر:
 
@@ -113,7 +113,7 @@ published: 2022-08-15
         }
 ```
 
-هذه هي الطريقة التي نتحقق بها مما إذا كان العنوان عقدًا. لا يمكننا تلقي المخرجات مباشرة من Yul، لذلك بدلاً من ذلك نحدد متغيرًا للاحتفاظ بالنتيجة (`isToContract` في هذه الحالة). الطريقة التي تعمل بها Yul هي أن كل رمز تشغيلي يعتبر دالة. لذلك أولاً نستدعي [`EXTCODESIZE`](https://www.evm.codes/#3b) للحصول على حجم العقد، ثم نستخدم [`GT`](https://www.evm.codes/#11) للتحقق من أنه ليس صفرًا (نحن نتعامل مع أعداد صحيحة غير سالبة، لذلك بالطبع لا يمكن أن يكون سالبًا). ثم نكتب النتيجة إلى `isToContract`.
+هذه هي الطريقة التي نتحقق بها مما إذا كان العنوان عقدًا. لا يمكننا تلقي المخرجات مباشرة من يول، لذلك بدلاً من ذلك نحدد متغيرًا للاحتفاظ بالنتيجة (`isToContract` في هذه الحالة). الطريقة التي تعمل بها يول هي أن كل رمز تشغيلي يعتبر دالة. لذلك أولاً نستدعي [`EXTCODESIZE`](https://www.evm.codes/#3b) للحصول على حجم العقد، ثم نستخدم [`GT`](https://www.evm.codes/#11) للتحقق من أنه ليس صفرًا (نحن نتعامل مع أعداد صحيحة غير سالبة، لذلك بالطبع لا يمكن أن يكون سالبًا). ثم نكتب النتيجة إلى `isToContract`.
 
 ```solidity
         require(to.balance != 0 || isToContract, "لا يمكن إرسال الرموز إلى عنوان فارغ");
@@ -132,7 +132,7 @@ published: 2022-08-15
 
    من الممكن أيضًا أن يرسل الأشخاص رموز ERC-20 شرعية إلى عقدنا عن طريق الخطأ، وهو سبب آخر للرغبة في وجود طريقة لإخراجها.
 
-يوفر OpenZeppelin آليتين لتمكين الوصول الإداري:
+يوفر أوبن زبلين آليتين لتمكين الوصول الإداري:
 
 - عقود [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) لها مالك واحد. الدوال التي تحتوي على [معدِّل](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` لا يمكن استدعاؤها إلا من قبل ذلك المالك. يمكن للمالكين نقل الملكية إلى شخص آخر أو التنازل عنها تمامًا. عادة ما تكون حقوق جميع الحسابات الأخرى متطابقة.
 - عقود [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) لديها [التحكم في الوصول المستند إلى الأدوار (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
@@ -200,7 +200,7 @@ published: 2022-08-15
         IERC20 token = IERC20(erc20);
 ```
 
-هذه هي الصيغة لإنشاء كائن لعقد عندما نتلقى العنوان. يمكننا القيام بذلك لأن لدينا تعريف لرموز ERC20 كجزء من الكود المصدري (انظر السطر 4)، وهذا الملف يتضمن [تعريف IERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)، وهي واجهة لعقد OpenZeppelin ERC-20.
+هذه هي الصيغة لإنشاء كائن لعقد عندما نتلقى العنوان. يمكننا القيام بذلك لأن لدينا تعريف لرموز ERC20 كجزء من الكود المصدري (انظر السطر 4)، وهذا الملف يتضمن [تعريف IERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)، وهي واجهة لعقد أوبن زبلين ERC-20.
 
 ```solidity
         uint balance = token.balanceOf(address(this));

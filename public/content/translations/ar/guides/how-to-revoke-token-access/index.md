@@ -18,8 +18,8 @@ lang: ar
 
 تتيح العديد من المواقع عرض العقود الذكية المرتبطة بعنوانك وإلغاء الوصول إليها. قم بزيارة الموقع وربط محفظتك:
 
-- [Etherscan](https://etherscan.io/tokenapprovalchecker) (إيثريوم)
-- [Blockscout](https://eth.blockscout.com/apps/revokescout) (إيثريوم)
+- [إيثرسكان](https://etherscan.io/tokenapprovalchecker) (إيثريوم)
+- [بلوك سكوت](https://eth.blockscout.com/apps/revokescout) (إيثريوم)
 - [Revoke](https://revoke.cash/) (شبكات متعددة)
 - [Unrekt](https://app.unrekt.net/) (شبكات متعددة)
 - [EverRevoke](https://everrise.com/everrevoke/) (شبكات متعددة)

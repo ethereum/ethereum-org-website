@@ -19,12 +19,12 @@ lang: ar
 
 بعض التبادلات الشائعة هي:
 
-- [Uniswap](https://app.uniswap.org/#/swap)
-- [Sushiswap](https://www.sushi.com/swap)
+- [يوني سواب](https://app.uniswap.org/#/swap)
+- [سوشي سواب](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
-هل أنت مهتم؟ تعرف على المزيد حول [التمويل اللامركزي (DeFi)](/defi/) وكيفية عمل هذه الأنواع الجديدة من منصات التبادل.
+هل أنت مهتم؟ تعرف على المزيد حول [التمويل اللامركزي (دي فاي)](/defi/) وكيفية عمل هذه الأنواع الجديدة من منصات التبادل.
 
 ## ٢. أختر فردين من الرموز المميزة التي ترغب في تبادلها
 

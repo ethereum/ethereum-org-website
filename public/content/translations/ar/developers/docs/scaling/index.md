@@ -1,13 +1,13 @@
 ---
 title: "التوسع"
-description: "مقدمة لخيارات التوسع المختلفة التي يتم تطويرها حاليًا بواسطة مجتمع Ethereum."
+description: "مقدمة لخيارات التوسع المختلفة التي يتم تطويرها حاليًا بواسطة مجتمع إيثريوم."
 lang: ar
 sidebarDepth: 3
 ---
 
 ## نظرة عامة على التوسع {#scaling-overview}
 
-مع تزايد عدد الأشخاص الذين يستخدمون Ethereum، وصلت blockchain إلى حدود معينة من القدرة. وقد أدى هذا إلى ارتفاع تكلفة استخدام الشبكة، مما أدى إلى خلق الحاجة إلى "حلول قابلة للتوسع". هناك حلول متعددة يتم البحث عنها واختبارها وتنفيذها والتي تتخذ طرقًا مختلفة لتحقيق أهداف مماثلة.
+مع تزايد عدد الأشخاص الذين يستخدمون إيثريوم، وصلت blockchain إلى حدود معينة من القدرة. وقد أدى هذا إلى ارتفاع تكلفة استخدام الشبكة، مما أدى إلى خلق الحاجة إلى "حلول قابلة للتوسع". هناك حلول متعددة يتم البحث عنها واختبارها وتنفيذها والتي تتخذ طرقًا مختلفة لتحقيق أهداف مماثلة.
 
 الهدف الرئيسي من قابلية التوسع هو زيادة سرعة المعاملات (إنهاء أسرع) وإنتاجية المعاملات (عدد أكبر من المعاملات في الثانية) دون التضحية باللامركزية أو الأمان. على بلوكتشين إيثريوم الطبقة الأولى، يؤدي الطلب المرتفع إلى معاملات أبطأ وأسعار [غاز](/developers/docs/gas/) غير قابلة للتطبيق. إن زيادة سعة الشبكة من حيث السرعة والإنتاجية أمر أساسي للتبني الشامل والهادف لإيثريوم.
 
@@ -21,21 +21,21 @@ sidebarDepth: 3
 
 ## التوسع على السلسلة {#onchain-scaling}
 
-يتطلب التوسع على السلسلة إجراء تغييرات على بروتوكول إيثريوم (أي الطبقة الأولى من [الشبكة الرئيسية Mainnet](/glossary/#mainnet)). لفترة طويلة، كان من المتوقع أن يؤدي تجزئة blockchain إلى توسيع نطاق Ethereum. كان هذا سيتضمن تقسيم blockchain إلى أجزاء منفصلة (شظايا) ليتم التحقق منها بواسطة مجموعات فرعية من المحققين. ومع ذلك، فقد أصبح التوسع من خلال عمليات التجميع في الطبقة 2 هو تقنية التوسع الأساسية. ويتم دعم ذلك من خلال إضافة شكل جديد أرخص من البيانات المرفقة بكتل Ethereum والتي تم تصميمها خصيصًا لجعل التجميعات رخيصة للمستخدمين.
+يتطلب التوسع على السلسلة إجراء تغييرات على بروتوكول إيثريوم (أي الطبقة الأولى من [الشبكة الرئيسية Mainnet](/glossary/#mainnet)). لفترة طويلة، كان من المتوقع أن يؤدي تجزئة blockchain إلى توسيع نطاق إيثريوم. كان هذا سيتضمن تقسيم blockchain إلى أجزاء منفصلة (شظايا) ليتم التحقق منها بواسطة مجموعات فرعية من المحققين. ومع ذلك، فقد أصبح التوسع من خلال عمليات التجميع في الطبقة 2 هو تقنية التوسع الأساسية. ويتم دعم ذلك من خلال إضافة شكل جديد أرخص من البيانات المرفقة بكتل إيثريوم والتي تم تصميمها خصيصًا لجعل التجميعات رخيصة للمستخدمين.
 
 ### مشاركة {#sharding}
 
-التجزئة هي عملية تقسيم قاعدة البيانات. ستكون مجموعات فرعية من المحققين مسؤولة عن الشظايا الفردية بدلاً من متابعة كل Ethereum. كانت التجزئة على [خارطة طريق](/roadmap/) إيثريوم لفترة طويلة، وكان من المفترض في وقت من الأوقات أن يتم إطلاقها قبل الدمج إلى إثبات الحصة. ومع ذلك، فإن التطور السريع [لرول أب الطبقة الثانية](#layer-2-scaling) واختراع [Danksharding](/roadmap/danksharding) (إضافة نقاط بيانات (blobs) الرول أب إلى كتل إيثريوم التي يمكن التحقق منها بكفاءة عالية من قبل المدققين) قد دفع مجتمع إيثريوم إلى تفضيل التوسع الذي يركز على الرول أب بدلاً من التوسع عن طريق التجزئة. سيساعد هذا أيضًا في الحفاظ على منطق إجماع Ethereum بشكل أبسط.
+التجزئة هي عملية تقسيم قاعدة البيانات. ستكون مجموعات فرعية من المحققين مسؤولة عن الشظايا الفردية بدلاً من متابعة كل إيثريوم. كانت التجزئة على [خارطة طريق](/roadmap/) إيثريوم لفترة طويلة، وكان من المفترض في وقت من الأوقات أن يتم إطلاقها قبل الدمج إلى إثبات الحصة. ومع ذلك، فإن التطور السريع [لرول أب الطبقة الثانية](#layer-2-scaling) واختراع [Danksharding](/roadmap/danksharding) (إضافة نقاط بيانات (blobs) الرول أب إلى كتل إيثريوم التي يمكن التحقق منها بكفاءة عالية من قبل المدققين) قد دفع مجتمع إيثريوم إلى تفضيل التوسع الذي يركز على الرول أب بدلاً من التوسع عن طريق التجزئة. سيساعد هذا أيضًا في الحفاظ على منطق إجماع إيثريوم بشكل أبسط.
 
 ## التوسع خارج السلسلة {#offchain-scaling}
 
-يتم تنفيذ حلول Offchain بشكل منفصل عن الشبكة الرئيسية للطبقة 1 - ولا تتطلب أي تغييرات على بروتوكول Ethereum الحالي. بعض الحلول، المعروفة باسم حلول "الطبقة الثانية"، تستمد أمانها مباشرة من إجماع إيثريوم في الطبقة الأولى، مثل [الرول أب التفاؤلي](/developers/docs/scaling/optimistic-rollups/)، أو [رول أب المعرفة الصفرية](/developers/docs/scaling/zk-rollups/) أو [قنوات الحالة](/developers/docs/scaling/state-channels/). تتضمن الحلول الأخرى إنشاء سلاسل جديدة بأشكال مختلفة تستمد أمانها بشكل منفصل عن الشبكة الرئيسية، مثل [السلاسل الجانبية](#sidechains)، أو [validiums](#validium)، أو [سلاسل البلازما](#plasma). تتواصل هذه الحلول مع الشبكة الرئيسية ولكنها تستمد أمانها بشكل مختلف لتحقيق مجموعة متنوعة من الأهداف.
+يتم تنفيذ حلول Offchain بشكل منفصل عن الشبكة الرئيسية للطبقة 1 - ولا تتطلب أي تغييرات على بروتوكول إيثريوم الحالي. بعض الحلول، المعروفة باسم حلول "الطبقة الثانية"، تستمد أمانها مباشرة من إجماع إيثريوم في الطبقة الأولى، مثل [الرول أب التفاؤلي](/developers/docs/scaling/optimistic-rollups/)، أو [رول أب المعرفة الصفرية](/developers/docs/scaling/zk-rollups/) أو [قنوات الحالة](/developers/docs/scaling/state-channels/). تتضمن الحلول الأخرى إنشاء سلاسل جديدة بأشكال مختلفة تستمد أمانها بشكل منفصل عن الشبكة الرئيسية، مثل [السلاسل الجانبية](#sidechains)، أو [validiums](#validium)، أو [سلاسل البلازما](#plasma). تتواصل هذه الحلول مع الشبكة الرئيسية ولكنها تستمد أمانها بشكل مختلف لتحقيق مجموعة متنوعة من الأهداف.
 
 ### توسع الطبقة الثانية {#layer-2-scaling}
 
-تستمد هذه الفئة من حلول offchain أمانها من الشبكة الرئيسية Ethereum.
+تستمد هذه الفئة من حلول offchain أمانها من الشبكة الرئيسية إيثريوم.
 
-Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the Ethereum Mainnet (layer 1) while taking advantage of the robust decentralized security model of Mainnet. Transaction speed suffers when the network is busy, making the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
+Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the إيثريوم Mainnet (layer 1) while taking advantage of the robust decentralized security model of Mainnet. Transaction speed suffers when the network is busy, making the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using إيثريوم very expensive.
 
 Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the individuals, businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to Mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 (Mainnet). بالنسبة لبعض الحلول، تقوم طبقة 2 بعد ذلك بتجميعها في مجموعات قبل تثبيتها في الطبقة 1، وبعد ذلك يتم تأمينها بواسطة الطبقة 1 ولا يمكن تغييرها. The details of how this is done vary significantly between different layer 2 technologies and implementations.
 
@@ -43,16 +43,16 @@ A specific layer 2 instance may be open and shared by many applications, or may 
 
 #### لماذا هناك حاجة للطبقة 2؟ {#why-is-layer-2-needed}
 
-- إن زيادة عدد المعاملات في الثانية الواحدة تعمل على تحسين تجربة المستخدم بشكل كبير، وتقلل من ازدحام الشبكة على الشبكة الرئيسية Ethereum.
-- يتم تجميع المعاملات في معاملة واحدة على الشبكة الرئيسية Ethereum، مما يقلل من رسوم الغاز للمستخدمين ويجعل Ethereum أكثر شمولاً وسهولة في الوصول إليها للأشخاص في كل مكان.
-- لا ينبغي لأي تحديثات تتعلق بإمكانية التوسع أن تكون على حساب اللامركزية أو الأمان - حيث يتم بناء الطبقة 2 فوق Ethereum.
+- إن زيادة عدد المعاملات في الثانية الواحدة تعمل على تحسين تجربة المستخدم بشكل كبير، وتقلل من ازدحام الشبكة على الشبكة الرئيسية إيثريوم.
+- يتم تجميع المعاملات في معاملة واحدة على الشبكة الرئيسية إيثريوم، مما يقلل من رسوم الغاز للمستخدمين ويجعل إيثريوم أكثر شمولاً وسهولة في الوصول إليها للأشخاص في كل مكان.
+- لا ينبغي لأي تحديثات تتعلق بإمكانية التوسع أن تكون على حساب اللامركزية أو الأمان - حيث يتم بناء الطبقة 2 فوق إيثريوم.
 - توجد شبكات من الطبقة 2 مخصصة للتطبيقات والتي توفر مجموعة خاصة بها من الكفاءات عند العمل مع الأصول على نطاق واسع.
 
 [المزيد عن الطبقة الثانية](/layer-2/).
 
 #### الرول أب {#rollups}
 
-Rollups perform transaction execution outside layer 1 and then the data is posted to layer 1 where consensus is reached. As transaction data is included in layer 1 blocks, this allows rollups to be secured by native Ethereum security.
+Rollups perform transaction execution outside layer 1 and then the data is posted to layer 1 where consensus is reached. As transaction data is included in layer 1 blocks, this allows rollups to be secured by native إيثريوم security.
 
 There are two types of rollups with different security models:
 
@@ -79,7 +79,7 @@ There are two types of rollups with different security models:
 
 ### فاليديوم {#validium}
 
-A Validium chain uses validity proofs like zero-knowledge rollups but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per Validium chain and multiple chains can be run in parallel.
+A Validium chain uses validity proofs like zero-knowledge rollups but data is not stored on the main layer 1 إيثريوم chain. This can lead to 10k transactions per second per Validium chain and multiple chains can be run in parallel.
 
 تعرّف على المزيد حول [فاليديوم](/developers/docs/scaling/validium/).
 
@@ -87,7 +87,7 @@ A Validium chain uses validity proofs like zero-knowledge rollups but data is no
 
 - يمكن أن تساعد الحلول المتعددة في تقليل الازدحام العام في أي جزء من الشبكة ومنع نقاط الفشل الفردية أيضًا.
 - الكل أكبر من مجموع أجزائه. يمكن أن توجد حلول مختلفة تعمل بتناغم، مما يسمح بتأثير كبير على سرعة المعاملات والإنتاجية في المستقبل.
-- لا تتطلب جميع الحلول استخدام خوارزمية إجماع Ethereum بشكل مباشر، ويمكن أن توفر البدائل فوائد قد يكون من الصعب الحصول عليها بخلاف ذلك.
+- لا تتطلب جميع الحلول استخدام خوارزمية إجماع إيثريوم بشكل مباشر، ويمكن أن توفر البدائل فوائد قد يكون من الصعب الحصول عليها بخلاف ذلك.
 
 ## أتريد المزيد من المعلومات المرئية؟ {#visual-learner}
 

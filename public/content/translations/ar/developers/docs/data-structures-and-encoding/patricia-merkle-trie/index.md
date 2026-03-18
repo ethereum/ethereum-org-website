@@ -192,7 +192,7 @@ sidebarDepth: 2
 
 ## الأشجار التفرعية في إيثريوم {#tries-in-ethereum}
 
-تستخدم جميع محاولات merkle في طبقة تنفيذ Ethereum Merkle Patricia Trie.
+تستخدم جميع محاولات merkle في طبقة تنفيذ إيثريوم Merkle Patricia Trie.
 
 من رأس الكتلة يوجد 3 جذور من 3 من هذه المحاولات.
 
@@ -221,7 +221,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-في وحدة التحكم Geth، يمكن حساب ذلك على النحو التالي:
+في وحدة التحكم غيث، يمكن حساب ذلك على النحو التالي:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -262,5 +262,5 @@ else:
 ## قراءة إضافية {#further-reading}
 
 - [شجرة ميركل باتريشيا التفرعية المعدلة — كيف يحفظ إيثريوم الحالة](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [استخدام أشجار ميركل في إيثريوم (Merkling in Ethereum)](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [استخدام أشجار ميركل في إيثريوم (Merkling in إيثريوم)](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
 - [فهم الشجرة التفرعية لإيثريوم](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

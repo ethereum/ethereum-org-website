@@ -1,6 +1,6 @@
 ---
 title: "الكتل"
-description: "نظرة عامة على الكتل في سلسلة كتل Ethereum - بنية بياناتها وسبب الحاجة إليها وكيفية إنشائها."
+description: "نظرة عامة على الكتل في سلسلة كتل إيثريوم - بنية بياناتها وسبب الحاجة إليها وكيفية إنشائها."
 lang: ar
 ---
 
@@ -12,18 +12,18 @@ lang: ar
 
 ## ما نفع الكُتل؟ {#why-blocks}
 
-للتأكد من أن جميع المشاركين على شبكة Ethereum يحافظون على حالة متزامنة ويوافقون على التاريخ الدقيق للمعاملات ، نقوم بدفع المعاملات إلى كتل. هذا يعني أن العشرات (أو المئات) من المعاملات يتم الالتزام بها والاتفاق عليها ومزامنتها كلها مرة واحدة.
+للتأكد من أن جميع المشاركين على شبكة إيثريوم يحافظون على حالة متزامنة ويوافقون على التاريخ الدقيق للمعاملات ، نقوم بدفع المعاملات إلى كتل. هذا يعني أن العشرات (أو المئات) من المعاملات يتم الالتزام بها والاتفاق عليها ومزامنتها كلها مرة واحدة.
 
 ![رسم تخطيطي يوضح المعاملة في كتلة تسبب تغييرات في الحالة](./tx-block.png)
-_الرسم البياني مقتبس من [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+_الرسم البياني مقتبس من [إيثريوم EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-من خلال تباعد الالتزامات ، نمنح جميع المشاركين في الشبكة وقتًا كافيًا للتوصل إلى إجماع: على الرغم من أن طلبات المعاملات تحدث عشرات المرات في الثانية ، يتم إنشاء الكتل والالتزام بها على Ethereum مرة واحدة كل اثنتي عشرة ثانية.
+من خلال تباعد الالتزامات ، نمنح جميع المشاركين في الشبكة وقتًا كافيًا للتوصل إلى إجماع: على الرغم من أن طلبات المعاملات تحدث عشرات المرات في الثانية ، يتم إنشاء الكتل والالتزام بها على إيثريوم مرة واحدة كل اثنتي عشرة ثانية.
 
 ## كيف تعمل الكتل {#how-blocks-work}
 
 للحفاظ على سجل المعاملة، يتم ترتيب الكتل بدقة شديدة (بحيث تحتوي كل كتلة جديدة يتم إنشاؤها على إشارة مرجعية إلى كتلتها الأصلية)، وكذلك الأمر بالنسبة للمعاملات التي تتم داخل الكتل. وباستثناء الحالات النادرة، يكون جميع المشاركين في الشبكة، في أي وقت كان، متفقين على عدد الكتل وسجلها بالضبط، ويعملون على تجميع دفعة طلبات المعاملات النشطة الراهنة إلى الكتلة التالية.
 
-مجرد تجميع الكتلة بواسطة مدقق تم اختياره عشوائيًا على الشبكة ، يتم نشرها إلى بقية الشبكة ؛ تضيف جميع العقد هذه الكتلة إلى نهاية blockchain الخاصة بها ، ويتم تحديد مدقق جديد لإنشاء الكتلة التالية. يتم تحديد عملية تجميع الكتل الدقيقة وعملية الالتزام / الإجماع حاليًا من خلال بروتوكول "إثبات الحصة" الخاص بـ Ethereum.
+مجرد تجميع الكتلة بواسطة مدقق تم اختياره عشوائيًا على الشبكة ، يتم نشرها إلى بقية الشبكة ؛ تضيف جميع العقد هذه الكتلة إلى نهاية blockchain الخاصة بها ، ويتم تحديد مدقق جديد لإنشاء الكتلة التالية. يتم تحديد عملية تجميع الكتل الدقيقة وعملية الالتزام / الإجماع حاليًا من خلال بروتوكول "إثبات الحصة" الخاص بـ إيثريوم.
 
 ## بروتوكول إثبات الحصة {#proof-of-stake-protocol}
 
@@ -134,7 +134,7 @@ _الرسم البياني مقتبس من [Ethereum EVM illustrated](https://ta
 
 ## وقت الكتلة {#block-time}
 
-Block time refers to the time separating blocks. In Ethereum, time is divided up into twelve second units called 'slots'. In each slot a single validator is selected to propose a block. Assuming all validators are online and fully functional there will be a block in every slot, meaning the block time is 12s. However, occasionally validators might be offline when called to propose a block, meaning slots can sometimes go empty.
+Block time refers to the time separating blocks. In إيثريوم, time is divided up into twelve second units called 'slots'. In each slot a single validator is selected to propose a block. Assuming all validators are online and fully functional there will be a block in every slot, meaning the block time is 12s. However, occasionally validators might be offline when called to propose a block, meaning slots can sometimes go empty.
 
 This implementation differs from proof-of-work based systems where block times are probabilistic and tuned by the protocol's target mining difficulty. إن [متوسط وقت الكتلة](https://etherscan.io/chart/blocktime) الخاص بإيثريوم هو مثال مثالي على ذلك، حيث يمكن استنتاج الانتقال من إثبات العمل إلى إثبات الحصة بوضوح بناءً على ثبات وقت الكتلة الجديد البالغ 12 ثانية.
 

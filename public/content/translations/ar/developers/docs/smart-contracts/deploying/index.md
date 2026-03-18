@@ -1,6 +1,6 @@
 ---
 title: "توزيع العقود الذكيه"
-description: "تعرف على كيفية نشر العقود الذكية على شبكات Ethereum، بما في ذلك المتطلبات الأساسية والأدوات وخطوات النشر"
+description: "تعرف على كيفية نشر العقود الذكية على شبكات إيثريوم، بما في ذلك المتطلبات الأساسية والأدوات وخطوات النشر"
 lang: ar
 ---
 
@@ -27,33 +27,33 @@ lang: ar
 
 ### خطوات نشر عقد ذكي {#steps-to-deploy}
 
-ستعتمد الخطوات المحددة المتضمنة على إطار التطوير المعني. على سبيل المثال، يمكنك الاطلاع على [توثيق Hardhat حول نشر عقودك](https://hardhat.org/docs/tutorial/deploying) أو [توثيق Foundry حول نشر عقد ذكي والتحقق منه](https://book.getfoundry.sh/forge/deploying). بمجرد نشره، سيكون لعقدك عنوان إيثريوم مثل [الحسابات](/developers/docs/accounts/) الأخرى ويمكن التحقق منه باستخدام [أدوات التحقق من الكود المصدري](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+ستعتمد الخطوات المحددة المتضمنة على إطار التطوير المعني. على سبيل المثال، يمكنك الاطلاع على [توثيق هارد هات حول نشر عقودك](https://hardhat.org/docs/tutorial/deploying) أو [توثيق فاوندري حول نشر عقد ذكي والتحقق منه](https://book.getfoundry.sh/forge/deploying). بمجرد نشره، سيكون لعقدك عنوان إيثريوم مثل [الحسابات](/developers/docs/accounts/) الأخرى ويمكن التحقق منه باستخدام [أدوات التحقق من الكود المصدري](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## أدوات ذات صلة {#related-tools}
 
-**Remix - _يسمح Remix IDE بتطوير ونشر وإدارة العقود الذكية لبلوكتشينات شبيهة بالإيثريوم._**
+**ريميكس - _يسمح ريميكس IDE بتطوير ونشر وإدارة العقود الذكية لبلوكتشينات شبيهة بالإيثريوم._**
 
-- [Remix](https://remix.ethereum.org)
+- [ريميكس](https://remix.ethereum.org)
 
-**Tenderly - _منصة تطوير Web3 التي توفر تصحيح الأخطاء، والقابلية للمراقبة، وكتل بناء البنية التحتية لتطوير العقود الذكية واختبارها ومراقبتها وتشغيلها._**
+**تيندرلي - _منصة تطوير ويب3 التي توفر تصحيح الأخطاء، والقابلية للمراقبة، وكتل بناء البنية التحتية لتطوير العقود الذكية واختبارها ومراقبتها وتشغيلها._**
 
 - [tenderly.co](https://tenderly.co/)
 - [التوثيق](https://docs.tenderly.co/)
 - [غيت هاب](https://github.com/Tenderly)
-- [Discord](https://discord.gg/eCWjuvt)
+- [ديسكورد](https://discord.gg/eCWjuvt)
 
-**Hardhat - _بيئة تطوير لتجميع برامج الإيثريوم الخاصة بك ونشرها واختبارها وتصحيحها._**
+**هارد هات - _بيئة تطوير لتجميع برامج الإيثريوم الخاصة بك ونشرها واختبارها وتصحيحها._**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
 - [توثيق حول نشر عقودك](https://hardhat.org/docs/tutorial/deploying)
 - [غيت هاب](https://github.com/nomiclabs/hardhat)
-- [Discord](https://discord.com/invite/TETZs2KK4k)
+- [ديسكورد](https://discord.com/invite/TETZs2KK4k)
 
 **thirdweb - _انشر أي عقد بسهولة إلى أي سلسلة متوافقة مع آلة الإيثريوم الافتراضية (EVM)، باستخدام أمر واحد._**
 
 - [التوثيق](https://portal.thirdweb.com/deploy/)
 
-**Crossmint - _منصة تطوير web3 على مستوى المؤسسات لنشر العقود الذكية، وتمكين الدفع ببطاقات الائتمان والمدفوعات عبر السلاسل، واستخدام واجهات برمجة التطبيقات (APIs) لإنشاء وتوزيع وبيع وتخزين وتعديل الرموز غير القابلة للاستبدال (NFTs)._**
+**Crossmint - _منصة تطوير web3 على مستوى المؤسسات لنشر العقود الذكية، وتمكين الدفع ببطاقات الائتمان والمدفوعات عبر السلاسل، واستخدام واجهات برمجة التطبيقات (APIs) لإنشاء وتوزيع وبيع وتخزين وتعديل الرموز غير القابلة للاستبدال (إن إف تيز)._**
 
 - [crossmint.com](https://www.crossmint.com)
 - [التوثيق](https://docs.crossmint.com)
@@ -70,7 +70,7 @@ lang: ar
 ## قراءة إضافية {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [نشر عقودك باستخدام Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
+- [نشر عقودك باستخدام هارد هات](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
 

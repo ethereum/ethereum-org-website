@@ -1,7 +1,7 @@
 ---
 title: "بناء واجهة مستخدم للعقد الخاص بك"
-description: "باستخدام المكونات الحديثة مثل TypeScript وReact وVite وWagmi، سوف نتناول واجهة مستخدم حديثة، ولكنها بسيطة، ونتعلم كيفية توصيل محفظة بواجهة المستخدم، واستدعاء عقد ذكي لقراءة المعلومات، وإرسال معاملة إلى عقد ذكي، ومراقبة الأحداث من عقد ذكي لتحديد التغييرات."
-author: Ori Pomerantz
+description: "باستخدام المكونات الحديثة مثل تايب سكريبت ورياكت وفيت وواغمي، سوف نتناول واجهة مستخدم حديثة، ولكنها بسيطة، ونتعلم كيفية توصيل محفظة بواجهة المستخدم، واستدعاء عقد ذكي لقراءة المعلومات، وإرسال معاملة إلى عقد ذكي، ومراقبة الأحداث من عقد ذكي لتحديد التغييرات."
+author: "أوري بوميرانتز"
 tags:
   [
     "TypeScript",
@@ -16,13 +16,13 @@ lang: ar
 sidebarDepth: 3
 ---
 
-لقد وجدت ميزة نحتاجها في نظام إيثريوم البيئي. لقد كتبت العقود الذكية لتنفيذها، وربما حتى بعض النصوص البرمجية ذات الصلة التي تعمل خارج السلسلة. هذا رائع! للأسف، بدون واجهة مستخدم لن يكون لديك أي مستخدمين، وفي آخر مرة كتبت فيها موقعًا على شبكة الإنترنت استخدم الناس أجهزة مودم الطلب الهاتفي وكانت JavaScript جديدة.
+لقد وجدت ميزة نحتاجها في نظام إيثريوم البيئي. لقد كتبت العقود الذكية لتنفيذها، وربما حتى بعض النصوص البرمجية ذات الصلة التي تعمل خارج السلسلة. هذا رائع! للأسف، بدون واجهة مستخدم لن يكون لديك أي مستخدمين، وفي آخر مرة كتبت فيها موقعًا على شبكة الإنترنت استخدم الناس أجهزة مودم الطلب الهاتفي وكانت جافا سكريبت جديدة.
 
-هذا المقال لك. أفترض أنك تعرف البرمجة، وربما القليل من JavaScript وHTML، ولكن مهاراتك في واجهة المستخدم قديمة وغير محدّثة. معًا سوف نتناول تطبيقًا حديثًا وبسيطًا حتى ترى كيف يتم ذلك في هذه الأيام.
+هذا المقال لك. أفترض أنك تعرف البرمجة، وربما القليل من جافا سكريبت وHTML، ولكن مهاراتك في واجهة المستخدم قديمة وغير محدّثة. معًا سوف نتناول تطبيقًا حديثًا وبسيطًا حتى ترى كيف يتم ذلك في هذه الأيام.
 
 ## لماذا هذا مهم {#why-important}
 
-نظريًا، يمكنك فقط جعل الناس يستخدمون [Etherscan](https://holesky.etherscan.io/address/0x432d810484add7454ddb3b5311f0ac2e95cecea8#writeContract) أو [Blockscout](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=write_contract) للتفاعل مع عقودك. سيكون ذلك رائعًا بالنسبة لمستخدمي إيثريوم ذوي الخبرة. لكننا نحاول خدمة [مليار شخص آخر](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion). لن يحدث هذا بدون تجربة مستخدم رائعة، وواجهة المستخدم السهلة هي جزء كبير من ذلك.
+نظريًا، يمكنك فقط جعل الناس يستخدمون [إيثرسكان](https://holesky.etherscan.io/address/0x432d810484add7454ddb3b5311f0ac2e95cecea8#writeContract) أو [بلوك سكوت](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=write_contract) للتفاعل مع عقودك. سيكون ذلك رائعًا بالنسبة لمستخدمي إيثريوم ذوي الخبرة. لكننا نحاول خدمة [مليار شخص آخر](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion). لن يحدث هذا بدون تجربة مستخدم رائعة، وواجهة المستخدم السهلة هي جزء كبير من ذلك.
 
 ## تطبيق Greeter {#greeter-app}
 
@@ -30,9 +30,9 @@ sidebarDepth: 3
 
 ### التثبيت {#installation}
 
-1. إذا لزم الأمر، أضف [بلوكتشين Holesky](https://chainlist.org/?search=holesky&testnets=true) إلى محفظتك و[احصل على ETH تجريبي](https://www.holeskyfaucet.io/).
+1. إذا لزم الأمر، أضف [بلوكتشين هوليسكي](https://chainlist.org/?search=holesky&testnets=true) إلى محفظتك و[احصل على ETH تجريبي](https://www.holeskyfaucet.io/).
 
-2. استنسخ مستودع GitHub.
+2. استنسخ مستودع غيت هاب.
 
    ```sh
    git clone https://github.com/qbzzt/20230801-modern-ui.git
@@ -53,7 +53,7 @@ sidebarDepth: 3
 
 5. تصفح عنوان URL الذي يعرضه التطبيق. في معظم الحالات، هو [http://localhost:5173/](http://localhost:5173/).
 
-6. يمكنك رؤية النص البرمجي المصدر للعقد، وهو نسخة معدلة قليلاً من Greeter الخاص بـ Hardhat، [على مستكشف بلوكتشين](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contract).
+6. يمكنك رؤية النص البرمجي المصدر للعقد، وهو نسخة معدلة قليلاً من Greeter الخاص بـ هارد هات، [على مستكشف بلوكتشين](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contract).
 
 ### استعراض الملفات {#file-walk-through}
 
@@ -67,7 +67,7 @@ sidebarDepth: 3
 
 #### `src/main.tsx` {#main-tsx}
 
-يخبرنا امتداد الملف أن هذا الملف هو [مكون React](https://www.w3schools.com/react/react_components.asp) مكتوب بـ [TypeScript](https://www.typescriptlang.org/)، وهو امتداد لـ JavaScript يدعم [التحقق من النوع](https://en.wikipedia.org/wiki/Type_system#Type_checking). يتم تجميع TypeScript إلى JavaScript، لذا يمكننا استخدامه للتنفيذ من جانب العميل.
+يخبرنا امتداد الملف أن هذا الملف هو [مكون رياكت](https://www.w3schools.com/react/react_components.asp) مكتوب بـ [تايب سكريبت](https://www.typescriptlang.org/)، وهو امتداد لـ جافا سكريبت يدعم [التحقق من النوع](https://en.wikipedia.org/wiki/Type_system#Type_checking). يتم تجميع تايب سكريبت إلى جافا سكريبت، لذا يمكننا استخدامه للتنفيذ من جانب العميل.
 
 ```tsx
 import '@rainbow-me/rainbowkit/styles.css'
@@ -84,25 +84,25 @@ import { chains, config } from './wagmi'
 import { App } from './App'
 ```
 
-استيراد مكون React الذي ينفذ التطبيق (انظر أدناه).
+استيراد مكون رياكت الذي ينفذ التطبيق (انظر أدناه).
 
 ```tsx
 ReactDOM.createRoot(document.getElementById('root')!).render(
 ```
 
-إنشاء مكون React الجذري. المعلمة إلى `render` هي [JSX](https://www.w3schools.com/react/react_jsx.asp)، وهي لغة امتداد تستخدم كلاً من HTML و JavaScript/TypeScript. تخبر علامة التعجب هنا مكون TypeScript: \"أنت لا تعرف أن `document.getElementById('root')` ستكون معلمة صالحة لـ `ReactDOM.createRoot`، ولكن لا تقلق - أنا المبرمج وأنا أقول لك إنها ستكون كذلك\".
+إنشاء مكون رياكت الجذري. المعلمة إلى `render` هي [JSX](https://www.w3schools.com/react/react_jsx.asp)، وهي لغة امتداد تستخدم كلاً من HTML و جافا سكريبت/تايب سكريبت. تخبر علامة التعجب هنا مكون تايب سكريبت: \"أنت لا تعرف أن `document.getElementById('root')` ستكون معلمة صالحة لـ `ReactDOM.createRoot`، ولكن لا تقلق - أنا المبرمج وأنا أقول لك إنها ستكون كذلك\".
 
 ```tsx
   <React.StrictMode>
 ```
 
-سيتم وضع التطبيق داخل [مكون `React.StrictMode`](https://react.dev/reference/react/StrictMode). يخبر هذا المكون مكتبة React بإدراج فحوصات تصحيح أخطاء إضافية، وهو أمر مفيد أثناء التطوير.
+سيتم وضع التطبيق داخل [مكون `React.StrictMode`](https://react.dev/reference/react/StrictMode). يخبر هذا المكون مكتبة رياكت بإدراج فحوصات تصحيح أخطاء إضافية، وهو أمر مفيد أثناء التطوير.
 
 ```tsx
     <WagmiConfig config={config}>
 ```
 
-التطبيق موجود أيضًا داخل [مكون `WagmiConfig`](https://wagmi.sh/react/api/WagmiProvider). [مكتبة wagmi (we are going to make it)](https://wagmi.sh/) تربط تعريفات واجهة مستخدم React مع [مكتبة viem](https://viem.sh/) لكتابة تطبيق إيثريوم لامركزي.
+التطبيق موجود أيضًا داخل [مكون `WagmiConfig`](https://wagmi.sh/react/api/WagmiProvider). [مكتبة wagmi (we are going to make it)](https://wagmi.sh/) تربط تعريفات واجهة مستخدم رياكت مع [مكتبة viem](https://viem.sh/) لكتابة تطبيق إيثريوم لامركزي.
 
 ```tsx
       <RainbowKitProvider chains={chains}>
@@ -114,7 +114,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <App />
 ```
 
-الآن يمكننا الحصول على مكون للتطبيق، والذي ينفذ واجهة المستخدم بالفعل. تخبر `/>` في نهاية المكون React أن هذا المكون لا يحتوي على أي تعريفات بداخله، وفقًا لمعيار XML.
+الآن يمكننا الحصول على مكون للتطبيق، والذي ينفذ واجهة المستخدم بالفعل. تخبر `/>` في نهاية المكون رياكت أن هذا المكون لا يحتوي على أي تعريفات بداخله، وفقًا لمعيار XML.
 
 ```tsx
       </RainbowKitProvider>
@@ -135,7 +135,7 @@ import { Greeter } from './components/Greeter'
 export function App() {
 ```
 
-هذه هي الطريقة القياسية لإنشاء مكون React - تحديد دالة يتم استدعاؤها في كل مرة تحتاج فيها إلى عرضها. عادةً ما تحتوي هذه الدالة على بعض النصوص البرمجية لـ TypeScript أو JavaScript في الأعلى، متبوعة بعبارة `return` التي تُرجع النص البرمجي JSX.
+هذه هي الطريقة القياسية لإنشاء مكون رياكت - تحديد دالة يتم استدعاؤها في كل مرة تحتاج فيها إلى عرضها. عادةً ما تحتوي هذه الدالة على بعض النصوص البرمجية لـ تايب سكريبت أو جافا سكريبت في الأعلى، متبوعة بعبارة `return` التي تُرجع النص البرمجي JSX.
 
 ```tsx
   const { isConnected } = useAccount()
@@ -143,29 +143,29 @@ export function App() {
 
 هنا نستخدم [`useAccount`](https://wagmi.sh/react/api/hooks/useAccount) للتحقق مما إذا كنا متصلين ببلوكتشين من خلال محفظة أم لا.
 
-حسب الاصطلاح، في React، الدوال التي تسمى `use...` هي [hooks](https://www.w3schools.com/react/react_hooks.asp) التي تُرجع نوعًا من البيانات. عند استخدام مثل هذه الخطافات (hooks)، لا يحصل المكون الخاص بك على البيانات فحسب، بل عند تغيير هذه البيانات، يتم إعادة عرض المكون بالمعلومات المحدثة.
+حسب الاصطلاح، في رياكت، الدوال التي تسمى `use...` هي [hooks](https://www.w3schools.com/react/react_hooks.asp) التي تُرجع نوعًا من البيانات. عند استخدام مثل هذه الخطافات (hooks)، لا يحصل المكون الخاص بك على البيانات فحسب، بل عند تغيير هذه البيانات، يتم إعادة عرض المكون بالمعلومات المحدثة.
 
 ```tsx
   return (
     <>
 ```
 
-يجب أن تُرجع JSX لمكون React مكونًا واحدًا. عندما يكون لدينا مكونات متعددة وليس لدينا أي شيء يغلفها \"بشكل طبيعي\" نستخدم مكونًا فارغًا (`<> ...` </>`) لتحويلها إلى مكون واحد.
+يجب أن تُرجع JSX لمكون رياكت مكونًا واحدًا. عندما يكون لدينا مكونات متعددة وليس لدينا أي شيء يغلفها \"بشكل طبيعي\" نستخدم مكونًا فارغًا (`<> ...` </>`) لتحويلها إلى مكون واحد.
 
 ```tsx
       <h1>Greeter</h1>
       <ConnectButton />
 ```
 
-نحصل على [مكون `ConnectButton`](https://www.rainbowkit.com/docs/connect-button) من RainbowKit. عندما لا نكون متصلين، فإنه يعطينا زر `Connect Wallet` الذي يفتح نافذة تشرح المحافظ وتتيح لك اختيار المحفظة التي تستخدمها. عندما نكون متصلين، فإنه يعرض البلوكتشين الذي نستخدمه، وعنوان حسابنا، ورصيدنا من ETH. يمكننا استخدام هذه الشاشات لتبديل الشبكة أو لقطع الاتصال.
+نحصل على [مكون `ConnectButton`](https://www.rainbowkit.com/docs/connect-button) من رينبو كيت. عندما لا نكون متصلين، فإنه يعطينا زر `Connect Wallet` الذي يفتح نافذة تشرح المحافظ وتتيح لك اختيار المحفظة التي تستخدمها. عندما نكون متصلين، فإنه يعرض البلوكتشين الذي نستخدمه، وعنوان حسابنا، ورصيدنا من ETH. يمكننا استخدام هذه الشاشات لتبديل الشبكة أو لقطع الاتصال.
 
 ```tsx
       {isConnected && (
 ```
 
-عندما نحتاج إلى إدراج JavaScript فعلي (أو TypeScript الذي سيتم تجميعه إلى JavaScript) في JSX، فإننا نستخدم الأقواس المعقوفة (`{}`).
+عندما نحتاج إلى إدراج جافا سكريبت فعلي (أو تايب سكريبت الذي سيتم تجميعه إلى جافا سكريبت) في JSX، فإننا نستخدم الأقواس المعقوفة (`{}`).
 
-الصيغة `a && b` هي اختصار لـ [`a ?` `b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). أي، إذا كانت `a` صحيحة، فسيتم تقييمها إلى `b` وإلا فسيتم تقييمها إلى `a` (والتي يمكن أن تكون `false` أو `0`، إلخ). هذه طريقة سهلة لإخبار React بأنه يجب عرض مكون فقط إذا تم استيفاء شرط معين.
+الصيغة `a && b` هي اختصار لـ [`a ?` `b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). أي، إذا كانت `a` صحيحة، فسيتم تقييمها إلى `b` وإلا فسيتم تقييمها إلى `a` (والتي يمكن أن تكون `false` أو `0`، إلخ). هذه طريقة سهلة لإخبار رياكت بأنه يجب عرض مكون فقط إذا تم استيفاء شرط معين.
 
 في هذه الحالة، نريد فقط أن نظهر للمستخدم `Greeter` إذا كان المستخدم متصلاً ببلوكتشين.
 
@@ -197,7 +197,7 @@ import {  useNetwork,
 import { AddressType } from 'abitype'
 ```
 
-توفر لنا [مكتبة `abitype`](https://abitype.dev/) تعريفات TypeScript لأنواع بيانات إيثريوم المختلفة، مثل [`AddressType`](https://abitype.dev/config#addresstype).
+توفر لنا [مكتبة `abitype`](https://abitype.dev/) تعريفات تايب سكريبت لأنواع بيانات إيثريوم المختلفة، مثل [`AddressType`](https://abitype.dev/config#addresstype).
 
 ```tsx
 let greeterABI = [
@@ -208,7 +208,7 @@ let greeterABI = [
 ```
 
 واجهة التطبيق الثنائية (ABI) لعقد `Greeter`.
-إذا كنت تقوم بتطوير العقود وواجهة المستخدم في نفس الوقت، فعادةً ما تضعها في نفس المستودع وتستخدم واجهة التطبيق الثنائية (ABI) التي تم إنشاؤها بواسطة مترجم Solidity كملف في تطبيقك. ومع ذلك، هذا ليس ضروريًا هنا لأن العقد قد تم تطويره بالفعل ولن يتغير.
+إذا كنت تقوم بتطوير العقود وواجهة المستخدم في نفس الوقت، فعادةً ما تضعها في نفس المستودع وتستخدم واجهة التطبيق الثنائية (ABI) التي تم إنشاؤها بواسطة مترجم سوليديتي كملف في تطبيقك. ومع ذلك، هذا ليس ضروريًا هنا لأن العقد قد تم تطويره بالفعل ولن يتغير.
 
 ```tsx
 type AddressPerBlockchainType = {
@@ -216,7 +216,7 @@ type AddressPerBlockchainType = {
 }
 ```
 
-TypeScript لغة ذات أنواع قوية. نستخدم هذا التعريف لتحديد العنوان الذي يتم فيه نشر عقد `Greeter` على سلاسل مختلفة. المفتاح هو رقم (chainId)، والقيمة هي `AddressType` (عنوان).
+تايب سكريبت لغة ذات أنواع قوية. نستخدم هذا التعريف لتحديد العنوان الذي يتم فيه نشر عقد `Greeter` على سلاسل مختلفة. المفتاح هو رقم (chainId)، والقيمة هي `AddressType` (عنوان).
 
 ```tsx
 const contractAddrs: AddressPerBlockchainType = {
@@ -228,9 +228,9 @@ const contractAddrs: AddressPerBlockchainType = {
 }
 ```
 
-عنوان العقد على الشبكتين المدعومتين: [Holesky](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contact_code) و [Sepolia](https://eth-sepolia.blockscout.com/address/0x7143d5c190F048C8d19fe325b748b081903E3BF0?tab=contact_code).
+عنوان العقد على الشبكتين المدعومتين: [هوليسكي](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contact_code) و [سيبوليا](https://eth-sepolia.blockscout.com/address/0x7143d5c190F048C8d19fe325b748b081903E3BF0?tab=contact_code).
 
-ملاحظة: يوجد بالفعل تعريف ثالث، لـ Redstone Holesky، سيتم شرحه أدناه.
+ملاحظة: يوجد بالفعل تعريف ثالث، لـ Redstone هوليسكي، سيتم شرحه أدناه.
 
 ```tsx
 type ShowObjectAttrsType = {
@@ -287,7 +287,7 @@ const Greeter = () => {
   const [ newGreeting, setNewGreeting ] = useState("")
 ```
 
-[خطاف `useState`](https://www.w3schools.com/react/react_usestate.asp) في React يتيح لنا تحديد متغير حالة، والذي تستمر قيمته من عرض للمكون إلى آخر. القيمة الأولية هي المعلمة، وفي هذه الحالة السلسلة الفارغة.
+[خطاف `useState`](https://www.w3schools.com/react/react_usestate.asp) في رياكت يتيح لنا تحديد متغير حالة، والذي تستمر قيمته من عرض للمكون إلى آخر. القيمة الأولية هي المعلمة، وفي هذه الحالة السلسلة الفارغة.
 
 يُرجع خطاف `useState` قائمة بقيمتين:
 
@@ -432,14 +432,14 @@ const ShowObject = (attrs: ShowObjectAttrsType ) => {
           {funs.map((f, i) =>
 ```
 
-ضمن JSX، يتم تفسير الكود داخل الأقواس المعقوفة `{}` على أنه JavaScript. بعد ذلك، يتم تفسير الكود الموجود داخل الأقواس العادية `()` مرة أخرى على أنه JSX.
+ضمن JSX، يتم تفسير الكود داخل الأقواس المعقوفة `{}` على أنه جافا سكريبت. بعد ذلك، يتم تفسير الكود الموجود داخل الأقواس العادية `()` مرة أخرى على أنه JSX.
 
 ```tsx
            (<li key={i}>{f}</li>)
                 )}
 ```
 
-يتطلب React أن يكون للعلامات في [شجرة DOM](https://www.w3schools.com/js/js_htmldom.asp) معرّفات مميزة. هذا يعني أن العناصر الفرعية لنفس العلامة (في هذه الحالة، [القائمة غير المرتبة](https://www.w3schools.com/tags/tag_ul.asp)) تحتاج إلى سمات `key` مختلفة.
+يتطلب رياكت أن يكون للعلامات في [شجرة DOM](https://www.w3schools.com/js/js_htmldom.asp) معرّفات مميزة. هذا يعني أن العناصر الفرعية لنفس العلامة (في هذه الحالة، [القائمة غير المرتبة](https://www.w3schools.com/tags/tag_ul.asp)) تحتاج إلى سمات `key` مختلفة.
 
 ```tsx
           </ul>
@@ -464,7 +464,7 @@ export { Greeter }
 
 أخيرًا، توجد تعريفات مختلفة متعلقة بـ WAGMI في `src/wagmi.ts`. لن أشرح كل شيء هنا، لأن معظمه عبارة عن قالب جاهز من غير المرجح أن تحتاج إلى تغييره.
 
-النص البرمجي هنا ليس تمامًا مثل [الموجود على github](https://github.com/qbzzt/20230801-modern-ui/blob/main/src/wagmi.ts) لأنه في وقت لاحق من المقالة نضيف سلسلة أخرى ([Redstone Holesky](https://redstone.xyz/docs/network-info)).
+النص البرمجي هنا ليس تمامًا مثل [الموجود على github](https://github.com/qbzzt/20230801-modern-ui/blob/main/src/wagmi.ts) لأنه في وقت لاحق من المقالة نضيف سلسلة أخرى ([Redstone هوليسكي](https://redstone.xyz/docs/network-info)).
 
 ```ts
 import { getDefaultWallets } from '@rainbow-me/rainbowkit'
@@ -480,7 +480,7 @@ import { publicProvider } from 'wagmi/providers/public'
 const walletConnectProjectId = 'c96e690bb92b6311e8e9b2a6a22df575'
 ```
 
-لتتمكن من استخدام [WalletConnect](https://walletconnect.com/)، تحتاج إلى معرف مشروع لتطبيقك. يمكنك الحصول عليه [على cloud.walletconnect.com](https://cloud.walletconnect.com/sign-in).
+لتتمكن من استخدام [واليت كونكت](https://walletconnect.com/)، تحتاج إلى معرف مشروع لتطبيقك. يمكنك الحصول عليه [على cloud.walletconnect.com](https://cloud.walletconnect.com/sign-in).
 
 ```ts
 const { chains, publicClient, webSocketPublicClient } = configureChains(
@@ -508,7 +508,7 @@ export { chains }
 
 ### إضافة بلوكتشين آخر {#add-blockchain}
 
-في هذه الأيام، هناك الكثير من [حلول توسيع الطبقة الثانية](/layer-2/)، وقد ترغب في دعم بعضها الذي لا يدعمه viem بعد. للقيام بذلك، قم بتعديل `src/wagmi.ts`. تشرح هذه التعليمات كيفية إضافة [Redstone Holesky](https://redstone.xyz/docs/network-info).
+في هذه الأيام، هناك الكثير من [حلول توسيع الطبقة الثانية](/layer-2/)، وقد ترغب في دعم بعضها الذي لا يدعمه viem بعد. للقيام بذلك، قم بتعديل `src/wagmi.ts`. تشرح هذه التعليمات كيفية إضافة [Redstone هوليسكي](https://redstone.xyz/docs/network-info).
 
 1. استورد نوع `defineChain` من viem.
 
@@ -521,7 +521,7 @@ export { chains }
    ```ts
    const redstoneHolesky = defineChain({
       id: 17_001,
-      name: 'Redstone Holesky',
+      name: 'Redstone هوليسكي',
       network: 'redstone-holesky',
       nativeCurrency: {
         decimals: 18,
@@ -557,13 +557,13 @@ export { chains }
 
     ```ts
     const contractAddrs : AddressPerBlockchainType = {
-      // Holesky
+      // هوليسكي
       17000: '0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8',
     
-      // Redstone Holesky
+      // Redstone هوليسكي
       17001: '0x4919517f82a1B89a32392E1BF72ec827ba9986D3',
     
-      // Sepolia
+      // سيبوليا
       11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
     }
     ```
@@ -580,9 +580,9 @@ export { chains }
 
 2. قم بتسمية التطبيق.
 
-3. حدد إطار عمل **React**.
+3. حدد إطار عمل **رياكت**.
 
-4. حدد متغير **Vite**.
+4. حدد متغير **فيت**.
 
 5. يمكنك [إضافة Rainbow kit](https://www.rainbowkit.com/docs/installation#manual-setup).
 

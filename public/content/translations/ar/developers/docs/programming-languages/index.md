@@ -1,6 +1,6 @@
 ---
 title: "لغات البرمجة"
-description: "اكتشف موارد تطوير Ethereum لمختلف لغات البرمجة بما في ذلك JavaScript وPython وGo وRust والمزيد."
+description: "اكتشف موارد تطوير إيثريوم لمختلف لغات البرمجة بما في ذلك جافا سكريبت وبايثون وGo وراست والمزيد."
 lang: ar
 ---
 
@@ -14,15 +14,15 @@ lang: ar
 حدد لغة البرمجة المفضلة لديك للعثور على المشاريع والموارد والمجتمعات الافتراضية:
 
 - [إيثريوم لمطوري Dart](/developers/docs/programming-languages/dart/)
-- [إيثريوم لمطوري Delphi](/developers/docs/programming-languages/delphi/)
-- [إيثريوم لمطوري .NET](/developers/docs/programming-languages/dot-net/)
-- [إيثريوم لمطوري Elixir](/developers/docs/programming-languages/elixir/)
+- [إيثريوم لمطوري دلفي](/developers/docs/programming-languages/delphi/)
+- [إيثريوم لمطوري دوت نت](/developers/docs/programming-languages/dot-net/)
+- [إيثريوم لمطوري إليكسير](/developers/docs/programming-languages/elixir/)
 - [إيثريوم لمطوري Go](/developers/docs/programming-languages/golang/)
-- [إيثريوم لمطوري Java](/developers/docs/programming-languages/java/)
-- [إيثريوم لمطوري JavaScript](/developers/docs/programming-languages/javascript/)
-- [إيثريوم لمطوري Python](/developers/docs/programming-languages/python/)
-- [إيثريوم لمطوري Ruby](/developers/docs/programming-languages/ruby/)
-- [إيثريوم لمطوري Rust](/developers/docs/programming-languages/rust/)
+- [إيثريوم لمطوري جافا](/developers/docs/programming-languages/java/)
+- [إيثريوم لمطوري جافا سكريبت](/developers/docs/programming-languages/javascript/)
+- [إيثريوم لمطوري بايثون](/developers/docs/programming-languages/python/)
+- [إيثريوم لمطوري روبي](/developers/docs/programming-languages/ruby/)
+- [إيثريوم لمطوري راست](/developers/docs/programming-languages/rust/)
 
 ### ماذا لو لم يتم دعم لغتي؟ {#other-lang}
 

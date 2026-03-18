@@ -7,7 +7,7 @@ incomplete: false
 
 تعلّم كيفية التطوير على إيثريوم باستخدام مشاريع وأدوات قائمة على إ ليكسر</FeaturedText>
 
-استخدم إثيريوم لإنشاء تطبيقات لامركزية (أو "dapp") تستخدم فوائد العملات المشفرة وتكنولوجيا سلسلة الكتل. يمكن أن تكون هذه التطبيقات اللامركزية غير موثوقة، مما يعني أنه بمجرد نشرها على Ethereum، فستعمل دائمًا كما هو مبرمج. يمكن أن تكون هذه التطبيقات اللامركزية غير موثوقة، مما يعني أنه بمجرد نشرها على Ethereum، فستعمل دائمًا كما هو مبرمج. كما أنها قد تكون لامركزية، بمعنى عدم وجود كيان أو شخص واحد يتحكم فيها ويكاد يكون من المستحيل مراقبتها.
+استخدم إثيريوم لإنشاء تطبيقات لامركزية (أو "dapp") تستخدم فوائد العملات المشفرة وتكنولوجيا سلسلة الكتل. يمكن أن تكون هذه التطبيقات اللامركزية غير موثوقة، مما يعني أنه بمجرد نشرها على إيثريوم، فستعمل دائمًا كما هو مبرمج. يمكن أن تكون هذه التطبيقات اللامركزية غير موثوقة، مما يعني أنه بمجرد نشرها على إيثريوم، فستعمل دائمًا كما هو مبرمج. كما أنها قد تكون لامركزية، بمعنى عدم وجود كيان أو شخص واحد يتحكم فيها ويكاد يكون من المستحيل مراقبتها.
 
 ## بدء العمل مع العقود الذكية ولغة سوليديتي
 
@@ -23,7 +23,7 @@ incomplete: false
 ## مقالات للمبتدئين{#beginner-articles}
 
 - [أخيرًا فهم حسابات إيثيريوم](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
-- [Ethers - مكتبة Ethereum Web3 من الدرجة الأولى لـ](https://medium.com/@alisinabh/announcing-ethers-a-first-class-ethereum-web3-library-for-elixir-1d64e9409122)
+- [Ethers - مكتبة إيثريوم ويب3 من الدرجة الأولى لـ](https://medium.com/@alisinabh/announcing-ethers-a-first-class-ethereum-web3-library-for-elixir-1d64e9409122)
 
 ## المقالات الوسيطة {#intermediate-articles}
 
@@ -36,7 +36,7 @@ incomplete: false
 
 - [block_keys](https://github.com/ExWeb3/block_keys) - _تنفيذ BIP32 و BIP44 في (تسلسل هرمي متعدد الحسابات لمحافظ حتمية)_
 - [ethereumex](https://github.com/mana-ethereum/ethereumex) - _عميل JSON-RPC بلغة لسلسلة الكتل الخاصة بإيثريوم_
-- [](https://github.com/ExWeb3/elixir_ethers) - _مكتبة شاملة لـ Web3 للتفاعل مع العقود الذكية على إيثيريوم باستخدام إليكسير_
+- [](https://github.com/ExWeb3/elixir_ethers) - _مكتبة شاملة لـ ويب3 للتفاعل مع العقود الذكية على إيثيريوم باستخدام إليكسير_
 - [ethers_kms](https://github.com/ExWeb3/elixir_ethers_kms) - _مكتبة موقعة KMS لـ Ethers (توقيع المعاملات باستخدام AWS KMS) _
 - [ex_abi](https://github.com/poanetwork/ex_abi) - _تنفيذ محلل/فك تشفير/ترميز ABI في إلكسير_
 - [ex_keccak](https://github.com/ExWeb3/ex_keccak) - _مكتبة لحساب تجزئات SHA3-256 باستخدام حزمة -المكتوبة بلغة Rust_

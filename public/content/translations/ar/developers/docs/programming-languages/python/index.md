@@ -1,6 +1,6 @@
 ---
-title: "إثيروم لمطوري Python"
-description: "تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Python"
+title: "إثيروم لمطوري بايثون"
+description: "تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على بايثون"
 lang: ar
 incomplete: true
 ---
@@ -11,7 +11,7 @@ incomplete: true
 
 ## بدء العمل مع العقود الذكية ولغة سوليديتي
 
-**اخط خطواتك الأولي لدمج Python مع إثيريوم**
+**اخط خطواتك الأولي لدمج بايثون مع إثيريوم**
 
 هل تحتاج مفاهيم أساسيه أولاً؟ تحقق من [ethereum.org/learn](/learn/) أو [ethereum.org/developers](/developers/).
 
@@ -19,7 +19,7 @@ incomplete: true
 - [فهم العقود الذكية](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [اكتب أول عقد ذكي الخاص بك](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [تعلم كيفية تجميع ونشر](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
-- [تقرير حالة Python في بلوكتشين لعام 2023](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
+- [تقرير حالة بايثون في بلوكتشين لعام 2023](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 
 ## مقالات للمبتدئين{#beginner-articles}
 
@@ -27,10 +27,10 @@ incomplete: true
 - [جولة في النظام البيئي لإيثريوم بلغة بايثون](https://snakecharmers.ethereum.org/python-ecosystem/)
 - [دليل المطور (بايثون) إلى إيثريوم](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
 - [جدير بالجائزة: دليل هاكاثون إيثريوم بلغة بايثون](https://snakecharmers.ethereum.org/prize-worthy/)
-- [مقدمة عن العقود الذكية باستخدام Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
-- [كيفية تطوير عقد إيثريوم باستخدام Python Flask؟](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
-- [مقدمة عن Web3.py · إيثريوم لمطوري بايثون](https://www.dappuniversity.com/articles/web3-py-intro)
-- [كيفية استدعاء دالة عقد ذكي باستخدام Python وweb3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
+- [مقدمة عن العقود الذكية باستخدام فايبر](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
+- [كيفية تطوير عقد إيثريوم باستخدام بايثون Flask؟](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
+- [مقدمة عن ويب3.باي · إيثريوم لمطوري بايثون](https://www.dappuniversity.com/articles/web3-py-intro)
+- [كيفية استدعاء دالة عقد ذكي باستخدام بايثون وweb3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## المقالات الوسيطة {#intermediate-articles}
 
@@ -44,21 +44,21 @@ incomplete: true
 - [أنماط web3.py: اشتراكات الأحداث في الوقت الفعلي](https://snakecharmers.ethereum.org/subscriptions/)
 - [أنماط web3.py: WebSocketProvider](https://snakecharmers.ethereum.org/websocketprovider/)
 - [تجميع ونشر واستدعاء عقد إيثريوم الذكي باستخدام بايثون](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [تحليل عقود Solidity الذكية باستخدام Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
+- [تحليل عقود سوليديتي الذكية باستخدام سليذر](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 - [برنامج تعليمي عن التكنولوجيا المالية للبلوكتشين: الإقراض والاقتراض باستخدام بايثون](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
 
 ## المقالات المؤرشفة
 
 - [نشر رمز ERC20 الخاص بك باستخدام بايثون وBrownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [استخدام Brownie وبايثون لنشر العقود الذكية](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
-- [إنشاء الرموز غير القابلة للاستبدال على OpenSea باستخدام Brownie](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
+- [إنشاء الرموز غير القابلة للاستبدال على أوبن سي باستخدام Brownie](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
 ## مشاريع وأدوات بايثون {#python-projects-and-tools}
 
 ### نشط: {#active}
 
-- [Web3.py](https://github.com/ethereum/web3.py) - _مكتبة بايثون للتفاعل مع إيثريوم_
-- [Vyper](https://github.com/ethereum/vyper/) - _لغة عقود ذكية بأسلوب بايثون لآلة إيثريوم الافتراضية_
+- [ويب3.باي](https://github.com/ethereum/web3.py) - _مكتبة بايثون للتفاعل مع إيثريوم_
+- [فايبر](https://github.com/ethereum/vyper/) - _لغة عقود ذكية بأسلوب بايثون لآلة إيثريوم الافتراضية_
 - [Ape](https://github.com/ApeWorX/ape) - _أداة تطوير العقود الذكية لمبرمجي بايثون، وعلماء البيانات، ومحترفي الأمن_
 - [py-evm](https://github.com/ethereum/py-evm) - _تطبيق لآلة إيثريوم الافتراضية_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _أدوات لاختبار التطبيقات القائمة على إيثريوم_
@@ -66,8 +66,8 @@ incomplete: true
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _غلاف بايثون حول مُصرِّف solc solidity مع دعم الإصدار 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) - _واجهة برمجة تطبيقات بايثون لعقود Maker_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _تسجيل الدخول باستخدام إيثريوم (siwe) لبايثون_
-- [Web3 DeFi لتكاملات إيثريوم](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _حزمة بايثون مع تكاملات جاهزة لـ ERC-20 و Uniswap وغيرها من المشاريع الشائعة_
-- [Wake](https://getwake.io) - _إطار عمل بايثون شامل لاختبار العقود، واختبار فازينغ، والنشر، ومسح الثغرات، والتنقل في التعليمات البرمجية (خادم اللغة - [أدوات لـ Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [ويب3 دي فاي لتكاملات إيثريوم](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _حزمة بايثون مع تكاملات جاهزة لـ ERC-20 و يوني سواب وغيرها من المشاريع الشائعة_
+- [ويك](https://getwake.io) - _إطار عمل بايثون شامل لاختبار العقود، واختبار فازينغ، والنشر، ومسح الثغرات، والتنقل في التعليمات البرمجية (خادم اللغة - [أدوات لـ سوليديتي](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 
 ### مؤرشفة / لم تعد قيد الصيانة: {#archived--no-longer-maintained}
 
@@ -81,7 +81,7 @@ incomplete: true
 
 ## المشاريع التي تستخدم أدوات بايثون {#projects-using-python-tooling}
 
-<a href="https://github.com/ethereum/pydevp2p">pydevp2p</a> - <em x-id="4">تنفيذ حزمة Ethereum P2P</em> تعتبر مستودعات المصدر المفتوح ذات الصلة بمثابة مرجع جيد للكود النموذجي وأفضل الممارسات.
+<a href="https://github.com/ethereum/pydevp2p">pydevp2p</a> - <em x-id="4">تنفيذ حزمة إيثريوم P2P</em> تعتبر مستودعات المصدر المفتوح ذات الصلة بمثابة مرجع جيد للكود النموذجي وأفضل الممارسات.
 
 - [Yearn Finance](https://yearn.finance/) و [مستودع عقود Yearn Vault](https://github.com/yearn/yearn-vaults)
 - [Curve](https://www.curve.finance/) و [مستودع عقود Curve الذكية](https://github.com/curvefi/curve-contract)
@@ -91,9 +91,9 @@ incomplete: true
 
 ## مناقشة مجتمع بايثون {#python-community-contributors}
 
-- [ديسكورد مجتمع إيثريوم بايثون](https://discord.gg/9zk7snTfWe) لمناقشة Web3.py وإطارات عمل بايثون الأخرى
-- [ديسكورد Vyper](https://discord.gg/SdvKC79cJk) لمناقشة برمجة عقود Vyper الذكية
+- [ديسكورد مجتمع إيثريوم بايثون](https://discord.gg/9zk7snTfWe) لمناقشة ويب3.باي وإطارات عمل بايثون الأخرى
+- [ديسكورد فايبر](https://discord.gg/SdvKC79cJk) لمناقشة برمجة عقود فايبر الذكية
 
 ## قوائم مجمعة أخرى {#other-aggregated-lists}
 
-يحتوي ويكي Vyper على [قائمة مذهلة من الموارد لـ Vyper](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources)
+يحتوي ويكي فايبر على [قائمة مذهلة من الموارد لـ فايبر](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources)

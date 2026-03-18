@@ -16,11 +16,11 @@ description: "معلومات حول برنامَج تَرْجَمَة إيثير
 
 1. كل ما تحتاجه هو الدخول على حسابك في كراودن أو إنشاء حساب جديد.
 2. اختر اللغة التي تريد المساهمة فيها.
-3. قبل البدء، يرجى الاطلاع على دليل [كيفية الترجمة](/contributing/translation-program/how-to-translate/) لمعرفة كيفية استخدام Crowdin، و[دليل أسلوب الترجمة](/contributing/translation-program/translators-guide/) للحصول على نصائح وأفضل الممارسات.
+3. قبل البدء، يرجى الاطلاع على دليل [كيفية الترجمة](/contributing/translation-program/how-to-translate/) لمعرفة كيفية استخدام كراودين، و[دليل أسلوب الترجمة](/contributing/translation-program/translators-guide/) للحصول على نصائح وأفضل الممارسات.
 4. لن تتم الموافقة على التَّرْجَمَةً الآلية.
 5. تتم مراجعة كل الترجمات قبل إضافتها إلى الموقع, لذلك سيكون هنالك تأخير قصير قبل أن ينشر عملك على الموقع.
 
-_انضم إلى [خادم Discord لموقع ethereum.org](https://discord.gg/ethereum-org) للتعاون في الترجمات، وطرح الأسئلة، ومشاركة الملاحظات والأفكار، أو الانضمام إلى مجموعة ترجمة._
+_انضم إلى [خادم ديسكورد لموقع ethereum.org](https://discord.gg/ethereum-org) للتعاون في الترجمات، وطرح الأسئلة، ومشاركة الملاحظات والأفكار، أو الانضمام إلى مجموعة ترجمة._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   ابدأ الترجمة
@@ -77,7 +77,7 @@ _انضم إلى [خادم Discord لموقع ethereum.org](https://discord.gg/e
 
 ## تواصل معنا {#get-in-touch}
 
-هل لديك أي أسئلة؟ أم تريد التعاون مع فريقنا و المترجمين الآخرين؟ يرجى النشر في قناة #translations على [خادم Discord لموقع ethereum.org](https://discord.gg/ethereum-org)
+هل لديك أي أسئلة؟ أم تريد التعاون مع فريقنا و المترجمين الآخرين؟ يرجى النشر في قناة #translations على [خادم ديسكورد لموقع ethereum.org](https://discord.gg/ethereum-org)
 
 يمكنك أيضا التواصل معنا على translations@ethereum.org
 

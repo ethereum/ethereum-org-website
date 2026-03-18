@@ -210,4 +210,4 @@ interface ERC1363Spender {
 ## قراءة إضافية {#further-reading}
 
 - [ERC-1363: معيار الرمز القابل للدفع](https://eips.ethereum.org/EIPS/eip-1363)
-- [ERC-1363: مستودع GitHub](https://github.com/vittominacori/erc1363-payable-token)
+- [ERC-1363: مستودع غيت هاب](https://github.com/vittominacori/erc1363-payable-token)

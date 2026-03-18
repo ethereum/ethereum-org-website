@@ -16,9 +16,9 @@ lang: ar
 
 نحن في بعض الأحيان نحتاج إلى المساعدة في اختبار أفكارنا الخام. هذه طريقة رائعة للمساهمة دون أي معرفة تقنية.
 
-1. سيقوم فريق التصميم بمشاركة تصميم وهمي على [Discord](https://discord.com/invite/ethereum-org) وعلى [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. سيقوم فريق التصميم بمشاركة تصميم وهمي على [ديسكورد](https://discord.com/invite/ethereum-org) وعلى [غيت هاب](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. سيتم إرشادك خلال التصميمات لتقديم تعليقاتك عبر وظيفة التعليقات.
-3. سيتم مشاركة النتيجة في مشكلة GitHub ثم إغلاقها بواسطة الفريق.
+3. سيتم مشاركة النتيجة في مشكلة غيت هاب ثم إغلاقها بواسطة الفريق.
 
 ### <Emoji text=":two:" size={1} /> &nbsp;شارك في أبحاث الاستطلاع {#answer-surveys}
 
@@ -38,33 +38,33 @@ ethereum.org هو موقع ويب سريع النمو يحتوي على العد
 
 ### <Emoji text=":four:" size={1} /> &nbsp;اقترح تغييرات في التصميم {#propose-design-changes}
 
-إذا كنت تشعر بالراحة في مواجهة تحديات التصميم، يمكنك زيارة لوحة المشكلات الخاصة بنا على GitHub والتصفية حسب [المشكلات المتعلقة بالتصميم](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+إذا كنت تشعر بالراحة في مواجهة تحديات التصميم، يمكنك زيارة لوحة المشكلات الخاصة بنا على غيت هاب والتصفية حسب [المشكلات المتعلقة بالتصميم](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 
-1. تصفح موقعنا الإلكتروني وانتبه إلى تصميمه أو انتقل إلى مستودع GitHub الخاص بنا وراجع المشكلات التي تحمل علامة [”التصميم مطلوب“](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. تصفح موقعنا الإلكتروني وانتبه إلى تصميمه أو انتقل إلى مستودع غيت هاب الخاص بنا وراجع المشكلات التي تحمل علامة [”التصميم مطلوب“](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. فكر في الحل وقم بتصميمه. (من الأفضل استخدام [نظام التصميم](https://www.figma.com/community/file/1134414495420383395) الخاص بنا).
-3. اقترح الحل في مشكلة GitHub المقابلة أو [أنشئ مشكلة جديدة.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)
+3. اقترح الحل في مشكلة غيت هاب المقابلة أو [أنشئ مشكلة جديدة.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)
 4. انتظر حتى يقوم فريق التصميم بالمراجعة.
 
 ### <Emoji text=":five:" size={1} /> &nbsp;بناء نظام التصميم معًا {#Contribute-to-design-system}
 
 يجعل نظام التصميم الخاص بنا تصميم ethereum.org أمرًا ممتعًا وسهلاً. إذا كنت مصممًا ذو خبرة، فيمكنك مساعدتنا في إعداد العديد من المكونات لموقع الويب.
 
-1. اختر مشكلة للعمل عليها من [لوحة نظام التصميم](https://github.com/ethereum/ethereum-org-website/labels/design%20system) على GitHub أو أنشئ مشكلة جديدة.
+1. اختر مشكلة للعمل عليها من [لوحة نظام التصميم](https://github.com/ethereum/ethereum-org-website/labels/design%20system) على غيت هاب أو أنشئ مشكلة جديدة.
 2. اطلب تعيين المشكلة المحددة إليك.
-3. ابدأ بتصميم المكون المطلوب في Figma.
-4. قم بمشاركته مع فريق التصميم على GitHub عندما تحتاج إلى المراجعة أو التوجيه.
+3. ابدأ بتصميم المكون المطلوب في فيجما.
+4. قم بمشاركته مع فريق التصميم على غيت هاب عندما تحتاج إلى المراجعة أو التوجيه.
 5. سوف يقوم فريق التصميم بالمراجعة.
 6. سيقوم فريق التصميم بدمج التغييرات في الملف الرئيسي ونشر الملف للمجتمع.
 
 ### <Emoji text=":six:" size={1} /> &nbsp;كتابة محتوى متعلق بالتصميم على الموقع الإلكتروني {#write-design-articles}
 
-يعتبر مجتمع مطوري Ethereum قويًا، لكن مجتمع التصميم يتخلف قليلاً. إذا كنت مصممًا لديك معرفة بـ web3، فيرجى التفكير في مشاركة ما تعلمته مع المجتمع الأكبر حتى نتمكن جميعًا من النمو والتحسن معًا؛ لدينا [صفحة حول التصميم لإيثريوم](/developers/docs/design-and-ux/) يمكنك المساهمة فيها. يمكنك أيضًا الاطلاع على [سياسات الإدراج](/contributing/design/adding-design-resources) الخاصة بنا.
+يعتبر مجتمع مطوري إيثريوم قويًا، لكن مجتمع التصميم يتخلف قليلاً. إذا كنت مصممًا لديك معرفة بـ web3، فيرجى التفكير في مشاركة ما تعلمته مع المجتمع الأكبر حتى نتمكن جميعًا من النمو والتحسن معًا؛ لدينا [صفحة حول التصميم لإيثريوم](/developers/docs/design-and-ux/) يمكنك المساهمة فيها. يمكنك أيضًا الاطلاع على [سياسات الإدراج](/contributing/design/adding-design-resources) الخاصة بنا.
 
 1. فكر في مواضيع التصميم التي يجب تغطيتها على ethereum.org والتي ستكون مفيدة للمصممين في هذا المجال.
-2. انتقل إلى مستودع GitHub الخاص بنا و[اطرح مشكلة](https://github.com/ethereum/ethereum-org-website/issues/new) لاقتراح موضوع (لا تكتب المحتوى بعد).
+2. انتقل إلى مستودع غيت هاب الخاص بنا و[اطرح مشكلة](https://github.com/ethereum/ethereum-org-website/issues/new) لاقتراح موضوع (لا تكتب المحتوى بعد).
 3. انتظر موافقة فريق التصميم.
 4. بمجرد الموافقة، اكتب المحتوى.
-5. قم بإرساله في العدد المقابل على GitHub.
+5. قم بإرساله في العدد المقابل على غيت هاب.
 
 ### <Emoji text=":seven:" size={1} /> &nbsp;رسم رسوم توضيحية جديدة {#prepare-illustrations}
 
@@ -72,6 +72,6 @@ ethereum.org هو موقع ويب سريع النمو يحتوي على العد
 
 1. قم بزيارة موقعنا الإلكتروني وشاهد الصفحات التي يمكن إضافة بعض الرسوم البيانية التوضيحية الجديدة إليها.
 2. تأكد من أن نمط الرسم التوضيحي يتوافق مع [أصولنا](/assets/).
-3. انتقل إلى مستودع GitHub الخاص بنا و[اطرح مشكلة](https://github.com/ethereum/ethereum-org-website/issues/new) لاقتراح الرسم التوضيحي.
+3. انتقل إلى مستودع غيت هاب الخاص بنا و[اطرح مشكلة](https://github.com/ethereum/ethereum-org-website/issues/new) لاقتراح الرسم التوضيحي.
 4. سوف يقوم فريق التصميم بمراجعته.
 5. نقوم بإنشاء مشكلة جديدة لطلب من المطور تنفيذ الصورة الجديدة.

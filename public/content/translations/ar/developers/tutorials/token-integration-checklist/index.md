@@ -12,15 +12,15 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 اتبع قائمة التحقق هذه عند التفاعل مع الرموز المميزة العشوائية. تأكد من فهم المخاطر المرتبطة بكل عنصر، وتبرير أي استثناءات لهذه القواعد.
 
-للراحة، يمكن تشغيل جميع أدوات [Slither](https://github.com/crytic/slither#tools) المساعدة مباشرة على عنوان رمزي، مثل:
+للراحة، يمكن تشغيل جميع أدوات [سليذر](https://github.com/crytic/slither#tools) المساعدة مباشرة على عنوان رمزي، مثل:
 
-[دليل استخدام Slither التعليمي](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+[دليل استخدام سليذر التعليمي](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 ```bash
 slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken
 ```
 
-لاتباع قائمة التحقق هذه، ستحتاج إلى الحصول على هذا الإخراج من Slither للرمز المميز:
+لاتباع قائمة التحقق هذه، ستحتاج إلى الحصول على هذا الإخراج من سليذر للرمز المميز:
 
 ```bash
 - slither-check-erc [target] [contractName] [اختياري: --erc ERC_NUMBER]
@@ -37,7 +37,7 @@ slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken
 
 ## التوافق مع ERC {#erc-conformity}
 
-يتضمن Slither أداة مساعدة، [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance)، التي تراجع توافق الرمز المميز مع العديد من معايير ERC ذات الصلة. استخدم slither-check-erc للمراجعة ما يلي:
+يتضمن سليذر أداة مساعدة، [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance)، التي تراجع توافق الرمز المميز مع العديد من معايير ERC ذات الصلة. استخدم slither-check-erc للمراجعة ما يلي:
 
 - **دالتا Transfer و transferFrom تُرجعان قيمة منطقية (boolean).** العديد من الرموز المميزة لا تُرجع قيمة منطقية في هاتين الدالتين. ونتيجة لذلك، قد تفشل استدعاءاتهما في العقد.
 - **دوال name و decimals و symbol موجودة إذا تم استخدامها.** هذه الدوال اختيارية في معيار ERC20 وقد لا تكون موجودة.
@@ -45,9 +45,9 @@ slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken
 - **يخفف الرمز المميز من [حالة التسابق المعروفة في ERC20](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729).** يحتوي معيار ERC20 على حالة تسابق معروفة يجب التخفيف منها لمنع المهاجمين من سرقة الرموز المميزة.
 - **الرمز المميز ليس رمزًا مميزًا من نوع ERC777 وليس له استدعاء دالة خارجي في transfer و transferFrom.** يمكن أن تؤدي الاستدعاءات الخارجية في دوال التحويل إلى عمليات إعادة الدخول.
 
-يتضمن Slither أداة مساعدة، [slither-prop](https://github.com/crytic/slither/wiki/Property-generation)، التي تنشئ اختبارات وحدة وخصائص أمان يمكنها اكتشاف العديد من عيوب ERC الشائعة. استخدم slither-prop لمراجعة ما يلي:
+يتضمن سليذر أداة مساعدة، [slither-prop](https://github.com/crytic/slither/wiki/Property-generation)، التي تنشئ اختبارات وحدة وخصائص أمان يمكنها اكتشاف العديد من عيوب ERC الشائعة. استخدم slither-prop لمراجعة ما يلي:
 
-- **يجتاز العقد جميع اختبارات الوحدة وخصائص الأمان من slither-prop.** قم بتشغيل اختبارات الوحدة التي تم إنشاؤها، ثم تحقق من الخصائص باستخدام [Echidna](https://github.com/crytic/echidna) و [Manticore](https://manticore.readthedocs.io/en/latest/verifier.html).
+- **يجتاز العقد جميع اختبارات الوحدة وخصائص الأمان من slither-prop.** قم بتشغيل اختبارات الوحدة التي تم إنشاؤها، ثم تحقق من الخصائص باستخدام [إيكيدنا](https://github.com/crytic/echidna) و [مانتيكور](https://manticore.readthedocs.io/en/latest/verifier.html).
 
 أخيرًا، هناك خصائص معينة يصعب تحديدها تلقائيًا. راجع هذه الشروط يدويًا:
 
@@ -56,15 +56,15 @@ slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken
 
 ## تكوين العقد {#contract-composition}
 
-- **يتجنب العقد التعقيد غير الضروري.** يجب أن يكون الرمز المميز عقدًا بسيطًا؛ فالرمز المميز الذي يحتوي على نص برمجي معقد يتطلب مستوى أعلى من المراجعة. استخدم [طابعة الملخص البشري (human-summary printer)](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) من Slither لتحديد النص البرمجي المعقد.
+- **يتجنب العقد التعقيد غير الضروري.** يجب أن يكون الرمز المميز عقدًا بسيطًا؛ فالرمز المميز الذي يحتوي على نص برمجي معقد يتطلب مستوى أعلى من المراجعة. استخدم [طابعة الملخص البشري (human-summary printer)](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) من سليذر لتحديد النص البرمجي المعقد.
 - **يستخدم العقد SafeMath.** تتطلب العقود التي لا تستخدم SafeMath مستوى أعلى من المراجعة. افحص العقد يدويًا للتحقق من استخدام SafeMath.
-- **يحتوي العقد على عدد قليل فقط من الدوال غير المتعلقة بالرموز المميزة.** تزيد الدوال غير المتعلقة بالرموز المميزة من احتمالية وجود مشكلة في العقد. استخدم [طابعة ملخص العقد (contract-summary printer)](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) من Slither لمراجعة النص البرمجي المستخدم في العقد بشكل عام.
+- **يحتوي العقد على عدد قليل فقط من الدوال غير المتعلقة بالرموز المميزة.** تزيد الدوال غير المتعلقة بالرموز المميزة من احتمالية وجود مشكلة في العقد. استخدم [طابعة ملخص العقد (contract-summary printer)](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) من سليذر لمراجعة النص البرمجي المستخدم في العقد بشكل عام.
 - **للرمز المميز عنوان واحد فقط.** يمكن للرموز المميزة ذات نقاط الدخول المتعددة لتحديثات الرصيد أن تعطل مسك الدفاتر الداخلي بناءً على العنوان (على سبيل المثال، قد لا يعكس `balances[token_address][msg.sender]` الرصيد الفعلي).
 
 ## امتيازات المالك {#owner-privileges}
 
-- **الرمز المميز غير قابل للترقية.** قد تغير العقود القابلة للترقية قواعدها بمرور الوقت. استخدم [طابعة الملخص البشري (human-summary printer)](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) من Slither لتحديد ما إذا كان العقد قابلاً للترقية.
-- **للمالك إمكانيات سك محدودة.** يمكن للمالكين الخبثاء أو المخترَقين إساءة استخدام إمكانيات السك. استخدم [طابعة الملخص البشري (human-summary printer)](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) من Slither لمراجعة إمكانيات السك، وفكر في مراجعة النص البرمجي يدويًا.
+- **الرمز المميز غير قابل للترقية.** قد تغير العقود القابلة للترقية قواعدها بمرور الوقت. استخدم [طابعة الملخص البشري (human-summary printer)](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) من سليذر لتحديد ما إذا كان العقد قابلاً للترقية.
+- **للمالك إمكانيات سك محدودة.** يمكن للمالكين الخبثاء أو المخترَقين إساءة استخدام إمكانيات السك. استخدم [طابعة الملخص البشري (human-summary printer)](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) من سليذر لمراجعة إمكانيات السك، وفكر في مراجعة النص البرمجي يدويًا.
 - **الرمز المميز غير قابل للإيقاف المؤقت.** يمكن للمالكين الخبثاء أو المخترَقين احتجاز العقود التي تعتمد على الرموز المميزة القابلة للإيقاف المؤقت. حدد النص البرمجي القابل للإيقاف المؤقت يدويًا.
 - **لا يمكن للمالك إدراج العقد في القائمة السوداء.** يمكن للمالكين الخبثاء أو المخترَقين احتجاز العقود التي تعتمد على الرموز المميزة التي تحتوي على قائمة سوداء. حدد ميزات القائمة السوداء يدويًا.
 - **الفريق الذي يقف وراء الرمز المميز معروف ويمكن تحميله المسؤولية عن أي إساءة استخدام.** يجب أن تتطلب العقود التي لديها فرق تطوير مجهولة، أو التي تقع في ملاذات قانونية، مستوى أعلى من المراجعة.

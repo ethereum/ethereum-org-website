@@ -21,8 +21,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 يمكن كتابة التوثيق على مستويات مختلفة، ويجب تحديثه أثناء تنفيذ العقود:
 
 - **وصف بسيط باللغة الإنجليزية للنظام**، يصف ما تفعله العقود وأي افتراضات بشأن قاعدة التعليمات البرمجية.
-- **المخططات والرسوم البيانية المعمارية**، بما في ذلك تفاعلات العقود وآلة الحالة للنظام. يمكن أن تساعد [طابعات Slither](https://github.com/crytic/slither/wiki/Printer-documentation) في إنشاء هذه المخططات.
-- **توثيق شامل للتعليمات البرمجية**، يمكن استخدام [تنسيق Natspec](https://docs.soliditylang.org/en/develop/natspec-format.html) لـ Solidity.
+- **المخططات والرسوم البيانية المعمارية**، بما في ذلك تفاعلات العقود وآلة الحالة للنظام. يمكن أن تساعد [طابعات سليذر](https://github.com/crytic/slither/wiki/Printer-documentation) في إنشاء هذه المخططات.
+- **توثيق شامل للتعليمات البرمجية**، يمكن استخدام [تنسيق Natspec](https://docs.soliditylang.org/en/develop/natspec-format.html) لـ سوليديتي.
 
 ### الحوسبة على السلسلة مقابل الحوسبة خارج السلسلة {#onchain-vs-offchain-computation}
 
@@ -53,7 +53,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 ### الوراثة {#inheritance}
 
 - **اجعل الوراثة قابلة للإدارة.** يجب استخدام الوراثة لتقسيم المنطق، ولكن يجب أن يهدف مشروعك إلى تقليل عمق وعرض شجرة الوراثة.
-- **استخدم [طابعة الوراثة](https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph) الخاصة بـ Slither للتحقق من التسلسل الهرمي للعقود.** ستساعدك طابعة الوراثة في مراجعة حجم التسلسل الهرمي.
+- **استخدم [طابعة الوراثة](https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph) الخاصة بـ سليذر للتحقق من التسلسل الهرمي للعقود.** ستساعدك طابعة الوراثة في مراجعة حجم التسلسل الهرمي.
 
 ### الأحداث {#events}
 
@@ -62,23 +62,23 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 ### تجنب المزالق المعروفة {#avoid-known-pitfalls}
 
 - **كن على دراية بأكثر المشكلات الأمنية شيوعًا.** هناك العديد من الموارد المتاحة على الإنترنت للتعرف على المشكلات الشائعة، مثل [Ethernaut CTF](https://ethernaut.openzeppelin.com/) و[Capture the Ether](https://capturetheether.com/) و[Not so smart contracts](https://github.com/crytic/not-so-smart-contracts/).
-- **كن على دراية بأقسام التحذيرات في [توثيق Solidity](https://docs.soliditylang.org/en/latest/).** ستُعلِمك أقسام التحذيرات بالسلوك غير الواضح للغة.
+- **كن على دراية بأقسام التحذيرات في [توثيق سوليديتي](https://docs.soliditylang.org/en/latest/).** ستُعلِمك أقسام التحذيرات بالسلوك غير الواضح للغة.
 
 ### التبعيات {#dependencies}
 
-- **استخدم مكتبات مجرَّبة جيدًا.** سيقلل استيراد التعليمات البرمجية من المكتبات المجربة جيدًا من احتمالية كتابة تعليمات برمجية معيبة. إذا كنت تريد كتابة عقد ERC20، فاستخدم [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
+- **استخدم مكتبات مجرَّبة جيدًا.** سيقلل استيراد التعليمات البرمجية من المكتبات المجربة جيدًا من احتمالية كتابة تعليمات برمجية معيبة. إذا كنت تريد كتابة عقد ERC20، فاستخدم [أوبن زبلين](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
 - **استخدم مدير تبعيات؛ وتجنب نسخ ولصق التعليمات البرمجية.** إذا كنت تعتمد على مصدر خارجي، فيجب عليك إبقاؤه محدثًا مع المصدر الأصلي.
 
 ### الاختبار والتحقق {#testing-and-verification}
 
 - **اكتب اختبارات وحدة شاملة.** تعد مجموعة الاختبارات الشاملة أمرًا بالغ الأهمية لبناء برمجيات عالية الجودة.
-- **اكتب عمليات فحص وخصائص مخصصة لـ [Slither](https://github.com/crytic/slither) و[Echidna](https://github.com/crytic/echidna) و[Manticore](https://github.com/trailofbits/manticore).** ستساعد الأدوات الآلية في ضمان أمان عقدك. قم بمراجعة بقية هذا الدليل لمعرفة كيفية كتابة الشيكات والخصائص الفعالة.
-- **استخدم [crytic.io](https://crytic.io/).** يتكامل Crytic مع GitHub، ويوفر الوصول إلى كاشفات Slither الخاصة، ويجري عمليات فحص الخصائص المخصصة من Echidna.
+- **اكتب عمليات فحص وخصائص مخصصة لـ [سليذر](https://github.com/crytic/slither) و[إيكيدنا](https://github.com/crytic/echidna) و[مانتيكور](https://github.com/trailofbits/manticore).** ستساعد الأدوات الآلية في ضمان أمان عقدك. قم بمراجعة بقية هذا الدليل لمعرفة كيفية كتابة الشيكات والخصائص الفعالة.
+- **استخدم [crytic.io](https://crytic.io/).** يتكامل كريتيك مع غيت هاب، ويوفر الوصول إلى كاشفات سليذر الخاصة، ويجري عمليات فحص الخصائص المخصصة من إيكيدنا.
 
-### Solidity {#solidity}
+### سوليديتي {#solidity}
 
-- **فضِّل Solidity 0.5 على 0.4 و 0.6.** في رأينا، يُعد Solidity 0.5 أكثر أمانًا ويتمتع بممارسات مدمجة أفضل من 0.4. لقد أثبت Solidity 0.6 أنه غير مستقر للغاية بالنسبة للإنتاج ويحتاج إلى وقت حتى ينضج.
-- **استخدم إصدارًا مستقرًا للتجميع؛ استخدم أحدث إصدار للتحقق من التحذيرات.** تحقق من أن تعليماتك البرمجية لا تحتوي على أي مشكلات مبلغ عنها في أحدث إصدار للمترجم. ومع ذلك، يتمتع Solidity بدورة إصدار سريعة ولديه تاريخ من أخطاء المترجم، لذلك لا نوصي بأحدث إصدار للنشر (راجع [توصية إصدار solc من Slither](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33)).
+- **فضِّل سوليديتي 0.5 على 0.4 و 0.6.** في رأينا، يُعد سوليديتي 0.5 أكثر أمانًا ويتمتع بممارسات مدمجة أفضل من 0.4. لقد أثبت سوليديتي 0.6 أنه غير مستقر للغاية بالنسبة للإنتاج ويحتاج إلى وقت حتى ينضج.
+- **استخدم إصدارًا مستقرًا للتجميع؛ استخدم أحدث إصدار للتحقق من التحذيرات.** تحقق من أن تعليماتك البرمجية لا تحتوي على أي مشكلات مبلغ عنها في أحدث إصدار للمترجم. ومع ذلك، يتمتع سوليديتي بدورة إصدار سريعة ولديه تاريخ من أخطاء المترجم، لذلك لا نوصي بأحدث إصدار للنشر (راجع [توصية إصدار solc من سليذر](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33)).
 - **لا تستخدم التجميع المضمن.** يتطلب التجميع خبرة في آلة إيثريوم الافتراضية (EVM). لا تكتب تعليمات برمجية لـ EVM إذا لم تكن قد _أتقنت_ الورقة الصفراء.
 
 ## إرشادات النشر {#deployment-guidelines}

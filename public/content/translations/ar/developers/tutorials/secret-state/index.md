@@ -1,7 +1,7 @@
 ---
 title: "استخدام المعرفة الصفرية لحالة سرية"
 description: "الألعاب على السلسلة محدودة لأنه لا يمكنها الاحتفاظ بأي معلومات مخفية. بعد قراءة هذا البرنامج التعليمي، سيتمكن القارئ من الجمع بين إثباتات المعرفة الصفرية ومكونات الخادم لإنشاء ألعاب يمكن التحقق منها ذات حالة سرية، ومكون خارج السلسلة. سيتم إثبات التقنية للقيام بذلك عن طريق إنشاء لعبة كاسحة ألغام."
-author: Ori Pomerantz
+author: "أوري بوميرانتز"
 tags:
   [
     "خادم",
@@ -24,13 +24,13 @@ _There are no secrets on the blockchain_. كل شيء يُنشر على البل
 
 | أدوات                                         | الغرض                                |                    تم التحقق من الإصدار |
 | --------------------------------------------- | ------------------------------------ | --------------------------------------: |
-| [Zokrates](https://zokrates.github.io/)       | إثباتات المعرفة الصفرية والتحقق منها |   1.1.9 |
+| [زوكراتيس](https://zokrates.github.io/)       | إثباتات المعرفة الصفرية والتحقق منها |   1.1.9 |
 | [Typescript](https://www.typescriptlang.org/) | لغة برمجة لكل من الخادم والعميل      |   5.4.2 |
 | [Node](https://nodejs.org/en)                 | تشغيل الخادم                         | 20.18.2 |
-| [Viem](https://viem.sh/)                      | التواصل مع البلوك تشين               |  2.9.20 |
+| [فيم](https://viem.sh/)                      | التواصل مع البلوك تشين               |  2.9.20 |
 | [MUD](https://mud.dev/)                       | إدارة البيانات على السلسلة           |  2.0.12 |
-| [React](https://react.dev/)                   | واجهة مستخدم العميل                  |  18.2.0 |
-| [Vite](https://vitejs.dev/)                   | تقديم النص البرمجي للعميل            |   4.2.1 |
+| [رياكت](https://react.dev/)                   | واجهة مستخدم العميل                  |  18.2.0 |
+| [فيت](https://vitejs.dev/)                   | تقديم النص البرمجي للعميل            |   4.2.1 |
 
 ## مثال كاسحة الألغام {#minesweeper}
 
@@ -42,7 +42,7 @@ _There are no secrets on the blockchain_. كل شيء يُنشر على البل
 
 لتشغيل مثال كاسحة الألغام:
 
-1. تأكد من [تثبيت المتطلبات الأساسية](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites) و [Foundry](https://book.getfoundry.sh/getting-started/installation) و [`git`](https://git-scm.com/downloads) و [`pnpm`](https://git-scm.com/downloads) و [`mprocs`](https://github.com/pvolok/mprocs).
+1. تأكد من [تثبيت المتطلبات الأساسية](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites) و [فاوندري](https://book.getfoundry.sh/getting-started/installation) و [`git`](https://git-scm.com/downloads) و [`pnpm`](https://git-scm.com/downloads) و [`mprocs`](https://github.com/pvolok/mprocs).
 
 2. استنسخ المستودع.
 
@@ -58,7 +58,7 @@ _There are no secrets on the blockchain_. كل شيء يُنشر على البل
    npm install -g mprocs
    ```
 
-   إذا تم تثبيت Foundry كجزء من `pnpm install`، فأنت بحاجة إلى إعادة تشغيل واجهة سطر الأوامر.
+   إذا تم تثبيت فاوندري كجزء من `pnpm install`، فأنت بحاجة إلى إعادة تشغيل واجهة سطر الأوامر.
 
 4. تجميع العقود
 
@@ -157,7 +157,7 @@ _There are no secrets on the blockchain_. كل شيء يُنشر على البل
 
    - [Anvil](https://book.getfoundry.sh/anvil/)، الذي يشغل بلوك تشين محلي
    - [العقود](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts)، التي تجمع (إذا لزم الأمر) وتنشر العقود لـ MUD
-   - [العميل](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client)، الذي يشغل [Vite](https://vitejs.dev/) لخدمة واجهة المستخدم والنص البرمجي للعميل لمتصفحات الويب.
+   - [العميل](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client)، الذي يشغل [فيت](https://vitejs.dev/) لخدمة واجهة المستخدم والنص البرمجي للعميل لمتصفحات الويب.
    - [الخادم](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server)، الذي يقوم بإجراءات الخادم
 
 2. تنشر حزمة `contracts` عقود MUD ثم تشغل [البرنامج النصي `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). يحدد هذا البرنامج النصي التكوين. يحدد النص البرمجي من github [حقل ألغام بحجم 10x5 مع ثمانية ألغام فيه](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
@@ -176,7 +176,7 @@ _There are no secrets on the blockchain_. كل شيء يُنشر على البل
 
 هذا ما يحدث عندما يطلب اللاعب لعبة جديدة.
 
-1. إذا لم تكن هناك لعبة قيد التقدم لهذا اللاعب، أو كانت هناك لعبة ولكن بمعرّف لعبة صفري، يعرض العميل [زر لعبة جديدة](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175). عندما يضغط المستخدم على هذا الزر، [يشغل React وظيفة `newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L96).
+1. إذا لم تكن هناك لعبة قيد التقدم لهذا اللاعب، أو كانت هناك لعبة ولكن بمعرّف لعبة صفري، يعرض العميل [زر لعبة جديدة](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175). عندما يضغط المستخدم على هذا الزر، [يشغل رياكت وظيفة `newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L96).
 
 2. [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L43-L46) هو استدعاء `System`. في MUD، يتم توجيه جميع المكالمات من خلال عقد `World`، وفي معظم الحالات تستدعي `<namespace>__<function name>`. في هذه الحالة، يكون الاستدعاء إلى `app__newGame`، والذي يقوم MUD بعد ذلك بتوجيهه إلى [`newGame` في `GameSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L16-L22).
 
@@ -184,7 +184,7 @@ _There are no secrets on the blockchain_. كل شيء يُنشر على البل
 
 4. يكتشف الخادم التغيير في `PendingGame` و[يشغل الوظيفة المشتركة](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71). تستدعي هذه الوظيفة [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L110-L114)، والتي بدورها تستدعي [`createGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L116-L144).
 
-5. أول شيء تفعله `createGame` هو [إنشاء خريطة عشوائية بالعدد المناسب من الألغام](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L120-L135). بعد ذلك، يستدعي [`makeMapBorders`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L147-L166) لإنشاء خريطة بحدود فارغة، وهو أمر ضروري لـ Zokrates. أخيرًا، تستدعي `createGame` [`calculateMapHash`](#calculateMapHash)، للحصول على تجزئة (هاش) الخريطة، والتي تُستخدم كمعرّف للعبة.
+5. أول شيء تفعله `createGame` هو [إنشاء خريطة عشوائية بالعدد المناسب من الألغام](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L120-L135). بعد ذلك، يستدعي [`makeMapBorders`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L147-L166) لإنشاء خريطة بحدود فارغة، وهو أمر ضروري لـ زوكراتيس. أخيرًا، تستدعي `createGame` [`calculateMapHash`](#calculateMapHash)، للحصول على تجزئة (هاش) الخريطة، والتي تُستخدم كمعرّف للعبة.
 
 6. تضيف وظيفة `newGame` اللعبة الجديدة إلى `gamesInProgress`.
 
@@ -220,13 +220,13 @@ _There are no secrets on the blockchain_. كل شيء يُنشر على البل
 
 7. يلتقط العميل التحديثات تلقائيًا و[يحدّث الخريطة المعروضة للاعب](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190)، وإذا كان ذلك ممكنًا يخبر اللاعب إذا كان فوزًا أو خسارة.
 
-## استخدام Zokrates {#using-zokrates}
+## استخدام زوكراتيس {#using-zokrates}
 
 في التدفقات الموضحة أعلاه، تخطينا أجزاء المعرفة الصفرية، وتعاملنا معها كصندوق أسود. الآن دعنا نفتحه ونرى كيف تمت كتابة هذا النص البرمجي.
 
 ### تجزئة الخريطة {#hashing-map}
 
-يمكننا استخدام [هذا النص البرمجي لجافا سكريبت](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-onchain/tree/solutions/exercise) لتطبيق [Poseidon](https://www.poseidon-hash.info)، وهي دالة التجزئة (هاش) في Zokrates التي نستخدمها. ومع ذلك، في حين أن هذا سيكون أسرع، إلا أنه سيكون أكثر تعقيدًا من مجرد استخدام دالة التجزئة (هاش) في Zokrates للقيام بذلك. هذا برنامج تعليمي، وبالتالي تم تحسين النص البرمجي من أجل البساطة، وليس من أجل الأداء. لذلك، نحتاج إلى برنامجين مختلفين من Zokrates، أحدهما لحساب التجزئة (هاش) لخريطة (`hash`) والآخر لإنشاء إثبات المعرفة الصفرية لنتيجة الحفر في موقع على الخريطة (`dig`).
+يمكننا استخدام [هذا النص البرمجي لجافا سكريبت](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-onchain/tree/solutions/exercise) لتطبيق [Poseidon](https://www.poseidon-hash.info)، وهي دالة التجزئة (هاش) في زوكراتيس التي نستخدمها. ومع ذلك، في حين أن هذا سيكون أسرع، إلا أنه سيكون أكثر تعقيدًا من مجرد استخدام دالة التجزئة (هاش) في زوكراتيس للقيام بذلك. هذا برنامج تعليمي، وبالتالي تم تحسين النص البرمجي من أجل البساطة، وليس من أجل الأداء. لذلك، نحتاج إلى برنامجين مختلفين من زوكراتيس، أحدهما لحساب التجزئة (هاش) لخريطة (`hash`) والآخر لإنشاء إثبات المعرفة الصفرية لنتيجة الحفر في موقع على الخريطة (`dig`).
 
 ### دالة التجزئة {#hash-function}
 
@@ -237,9 +237,9 @@ import "hashes/poseidon/poseidon.zok" as poseidon;
 import "utils/pack/bool/pack128.zok" as pack128;
 ```
 
-يستورد هذان السطران وظيفتين من [مكتبة Zokrates القياسية](https://zokrates.github.io/toolbox/stdlib.html). [الوظيفة الأولى](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/hashes/poseidon/poseidon.zok) هي [تجزئة (هاش) Poseidon](https://www.poseidon-hash.info/). يأخذ مصفوفة من عناصر [`field`](https://zokrates.github.io/language/types.html#field) ويعيد `field`.
+يستورد هذان السطران وظيفتين من [مكتبة زوكراتيس القياسية](https://zokrates.github.io/toolbox/stdlib.html). [الوظيفة الأولى](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/hashes/poseidon/poseidon.zok) هي [تجزئة (هاش) Poseidon](https://www.poseidon-hash.info/). يأخذ مصفوفة من عناصر [`field`](https://zokrates.github.io/language/types.html#field) ويعيد `field`.
 
-عادة ما يكون عنصر الحقل في Zokrates أقل من 256 بت، ولكن ليس بكثير. لتبسيط النص البرمجي، نقصر الخريطة على 512 بت، ونجزئ مصفوفة من أربعة حقول، وفي كل حقل نستخدم 128 بت فقط. [تقوم وظيفة `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) بتغيير مصفوفة من 128 بت إلى `field` لهذا الغرض.
+عادة ما يكون عنصر الحقل في زوكراتيس أقل من 256 بت، ولكن ليس بكثير. لتبسيط النص البرمجي، نقصر الخريطة على 512 بت، ونجزئ مصفوفة من أربعة حقول، وفي كل حقل نستخدم 128 بت فقط. [تقوم وظيفة `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) بتغيير مصفوفة من 128 بت إلى `field` لهذا الغرض.
 
 ```
         def hashMap(bool[${width+2}][${height+2}] map) -> field {
@@ -247,7 +247,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 
 يبدأ هذا السطر تعريف دالة. `hashMap` يحصل على معلمة واحدة تسمى `map`، وهي مصفوفة `bool`(ean) ثنائية الأبعاد. حجم الخريطة هو `width+2` في `height+2` لأسباب [موضحة أدناه](#why-map-border).
 
-يمكننا استخدام `${width+2}` و`${height+2}` لأن برامج Zokrates مخزنة في هذا التطبيق كـ[سلاسل قوالب](https://www.w3schools.com/js/js_string_templates.asp). يتم تقييم النص البرمجي بين `${` و`}` بواسطة JavaScript، وبهذه الطريقة يمكن استخدام البرنامج لأحجام خرائط مختلفة. تحتوي معلمة الخريطة على حد بعرض موقع واحد حولها بدون أي قنابل، وهو السبب الذي يجعلنا بحاجة إلى إضافة اثنين إلى العرض والارتفاع.
+يمكننا استخدام `${width+2}` و`${height+2}` لأن برامج زوكراتيس مخزنة في هذا التطبيق كـ[سلاسل قوالب](https://www.w3schools.com/js/js_string_templates.asp). يتم تقييم النص البرمجي بين `${` و`}` بواسطة جافا سكريبت، وبهذه الطريقة يمكن استخدام البرنامج لأحجام خرائط مختلفة. تحتوي معلمة الخريطة على حد بعرض موقع واحد حولها بدون أي قنابل، وهو السبب الذي يجعلنا بحاجة إلى إضافة اثنين إلى العرض والارتفاع.
 
 القيمة المرتجعة هي `field` يحتوي على التجزئة (الهاش).
 
@@ -255,9 +255,9 @@ import "utils/pack/bool/pack128.zok" as pack128;
    bool[512] mut map1d = [false; 512];
 ```
 
-الخريطة ثنائية الأبعاد. ومع ذلك، لا تعمل وظيفة `pack128` مع المصفوفات ثنائية الأبعاد. لذلك نقوم أولاً بتسوية الخريطة إلى مصفوفة بحجم 512 بايت، باستخدام `map1d`. بشكل افتراضي، متغيرات Zokrates هي ثوابت، لكننا نحتاج إلى تعيين قيم لهذه المصفوفة في حلقة، لذلك نعرّفها على أنها [`mut`](https://zokrates.github.io/language/variables.html#mutability).
+الخريطة ثنائية الأبعاد. ومع ذلك، لا تعمل وظيفة `pack128` مع المصفوفات ثنائية الأبعاد. لذلك نقوم أولاً بتسوية الخريطة إلى مصفوفة بحجم 512 بايت، باستخدام `map1d`. بشكل افتراضي، متغيرات زوكراتيس هي ثوابت، لكننا نحتاج إلى تعيين قيم لهذه المصفوفة في حلقة، لذلك نعرّفها على أنها [`mut`](https://zokrates.github.io/language/variables.html#mutability).
 
-نحتاج إلى تهيئة المصفوفة لأن Zokrates لا يحتوي على `undefined`. يعني التعبير `[false; 512]` [مصفوفة من 512 قيمة `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
+نحتاج إلى تهيئة المصفوفة لأن زوكراتيس لا يحتوي على `undefined`. يعني التعبير `[false; 512]` [مصفوفة من 512 قيمة `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
    u32 mut counter = 0;
@@ -269,7 +269,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
    for u32 x in 0..${width+2} {
 ```
 
-هذه هي طريقة الإعلان عن حلقة [`for`](https://zokrates.github.io/language/control_flow.html#for-loops) في Zokrates. يجب أن يكون لحلقة `for` في Zokrates حدود ثابتة، لأنه بينما يبدو أنها حلقة، فإن المجمع يقوم فعليًا "بفكها". التعبير `${width+2}` هو ثابت وقت التجميع لأن `width` يتم تعيينه بواسطة النص البرمجي TypeScript قبل أن يستدعي المجمع.
+هذه هي طريقة الإعلان عن حلقة [`for`](https://zokrates.github.io/language/control_flow.html#for-loops) في زوكراتيس. يجب أن يكون لحلقة `for` في زوكراتيس حدود ثابتة، لأنه بينما يبدو أنها حلقة، فإن المجمع يقوم فعليًا "بفكها". التعبير `${width+2}` هو ثابت وقت التجميع لأن `width` يتم تعيينه بواسطة النص البرمجي تايب سكريبت قبل أن يستدعي المجمع.
 
 ```
       for u32 y in 0..${height+2} {
@@ -290,7 +290,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
     ];
 ```
 
-يُنشئ `pack128` مصفوفة من أربع قيم `field` من `map1d`. في Zokrates `array[a..b]` تعني شريحة المصفوفة التي تبدأ من `a` وتنتهي عند `b-1`.
+يُنشئ `pack128` مصفوفة من أربع قيم `field` من `map1d`. في زوكراتيس `array[a..b]` تعني شريحة المصفوفة التي تبدأ من `a` وتنتهي عند `b-1`.
 
 ```
     return poseidon(hashMe);
@@ -301,7 +301,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 
 ### برنامج التجزئة {#hash-program}
 
-يحتاج الخادم إلى استدعاء `hashMap` مباشرة لإنشاء معرّفات اللعبة. ومع ذلك، يمكن لـ Zokrates فقط استدعاء وظيفة `main` في برنامج للبدء، لذلك نقوم بإنشاء برنامج بوظيفة `main` تستدعي دالة التجزئة (هاش).
+يحتاج الخادم إلى استدعاء `hashMap` مباشرة لإنشاء معرّفات اللعبة. ومع ذلك، يمكن لـ زوكراتيس فقط استدعاء وظيفة `main` في برنامج للبدء، لذلك نقوم بإنشاء برنامج بوظيفة `main` تستدعي دالة التجزئة (هاش).
 
 ```
 ${hashFragment}
@@ -328,7 +328,7 @@ def map2mineCount(bool[${width+2}][${height+2}] map, u32 x, u32 y) -> u8 {
 
 تستخدم إثباتات المعرفة الصفرية [الدوائر الحسابية](https://medium.com/web3studio/simple-explanations-of-arithmetic-circuits-and-zero-knowledge-proofs-806e59a79785)، والتي ليس لها مكافئ سهل لعبارة `if`. بدلاً من ذلك، يستخدمون ما يعادل [المعامل الشرطي](https://en.wikipedia.org/wiki/Ternary_conditional_operator). إذا كان `a` يمكن أن يكون صفرًا أو واحدًا، يمكنك حساب `if a { b } else { c }` على النحو التالي `ab+(1-a)c`.
 
-لهذا السبب، تقوم عبارة `if` في Zokrates دائمًا بتقييم كلا الفرعين. على سبيل المثال، إذا كان لديك هذا النص البرمجي:
+لهذا السبب، تقوم عبارة `if` في زوكراتيس دائمًا بتقييم كلا الفرعين. على سبيل المثال، إذا كان لديك هذا النص البرمجي:
 
 ```
 bool[5] arr = [false; 5];
@@ -338,13 +338,13 @@ return if index>4 { 0 } else { arr[index] }
 
 سيحدث خطأ، لأنه يحتاج إلى حساب `arr[10]`، على الرغم من أن هذه القيمة سيتم ضربها لاحقًا بصفر.
 
-هذا هو السبب الذي يجعلنا بحاجة إلى حد بعرض موقع واحد حول الخريطة. نحتاج إلى حساب العدد الإجمالي للألغام حول موقع ما، وهذا يعني أننا بحاجة إلى رؤية الموقع في الصف العلوي والسفلي، إلى اليسار وإلى اليمين، من الموقع الذي نحفر فيه. مما يعني أن تلك المواقع يجب أن تكون موجودة في مصفوفة الخريطة التي يتم توفيرها لـ Zokrates.
+هذا هو السبب الذي يجعلنا بحاجة إلى حد بعرض موقع واحد حول الخريطة. نحتاج إلى حساب العدد الإجمالي للألغام حول موقع ما، وهذا يعني أننا بحاجة إلى رؤية الموقع في الصف العلوي والسفلي، إلى اليسار وإلى اليمين، من الموقع الذي نحفر فيه. مما يعني أن تلك المواقع يجب أن تكون موجودة في مصفوفة الخريطة التي يتم توفيرها لـ زوكراتيس.
 
 ```
 def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8) {
 ```
 
-بشكل افتراضي، تتضمن براهين Zokrates مدخلاتها. لا فائدة من معرفة وجود خمسة ألغام حول بقعة ما ما لم تكن تعرف بالفعل أي بقعة هي (ولا يمكنك فقط مطابقتها مع طلبك، لأن المثبت يمكنه استخدام قيم مختلفة وعدم إخبارك بذلك). ومع ذلك، نحن بحاجة إلى الحفاظ على سرية الخريطة، مع توفيرها لـ Zokrates. الحل هو استخدام معلمة `private`، وهي معلمة _لا_ يكشفها الإثبات.
+بشكل افتراضي، تتضمن براهين زوكراتيس مدخلاتها. لا فائدة من معرفة وجود خمسة ألغام حول بقعة ما ما لم تكن تعرف بالفعل أي بقعة هي (ولا يمكنك فقط مطابقتها مع طلبك، لأن المثبت يمكنه استخدام قيم مختلفة وعدم إخبارك بذلك). ومع ذلك، نحن بحاجة إلى الحفاظ على سرية الخريطة، مع توفيرها لـ زوكراتيس. الحل هو استخدام معلمة `private`، وهي معلمة _لا_ يكشفها الإثبات.
 
 يفتح هذا طريقًا آخر لسوء الاستخدام. يمكن للمثبت استخدام الإحداثيات الصحيحة، ولكن إنشاء خريطة بها أي عدد من الألغام حول الموقع، وربما في الموقع نفسه. لمنع هذا سوء الاستخدام، نجعل إثبات المعرفة الصفرية يتضمن تجزئة (هاش) الخريطة، وهو معرّف اللعبة.
 
@@ -371,29 +371,29 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 
 إذا لم يصب اللاعب لغمًا، أضف أعداد الألغام للمنطقة المحيطة بالموقع وأعد ذلك.
 
-### استخدام Zokrates من TypeScript {#using-zokrates-from-typescript}
+### استخدام زوكراتيس من تايب سكريبت {#using-zokrates-from-typescript}
 
-لدى Zokrates واجهة سطر أوامر، ولكن في هذا البرنامج نستخدمه في [النص البرمجي TypeScript](https://zokrates.github.io/toolbox/zokrates_js.html).
+لدى زوكراتيس واجهة سطر أوامر، ولكن في هذا البرنامج نستخدمه في [النص البرمجي تايب سكريبت](https://zokrates.github.io/toolbox/zokrates_js.html).
 
-المكتبة التي تحتوي على تعريفات Zokrates تسمى [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts).
+المكتبة التي تحتوي على تعريفات زوكراتيس تسمى [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts).
 
 ```typescript
 import { initialize as zokratesInitialize } from "zokrates-js"
 ```
 
-استيراد [روابط JavaScript لـ Zokrates](https://zokrates.github.io/toolbox/zokrates_js.html). نحتاج فقط إلى وظيفة [`initialize`](https://zokrates.github.io/toolbox/zokrates_js.html#initialize) لأنها تعيد وعدًا يتم حله إلى جميع تعريفات Zokrates.
+استيراد [روابط جافا سكريبت لـ زوكراتيس](https://zokrates.github.io/toolbox/zokrates_js.html). نحتاج فقط إلى وظيفة [`initialize`](https://zokrates.github.io/toolbox/zokrates_js.html#initialize) لأنها تعيد وعدًا يتم حله إلى جميع تعريفات زوكراتيس.
 
 ```typescript
 export const zkFunctions = async (width: number, height: number) : Promise<any> => {
 ```
 
-على غرار Zokrates نفسه، نقوم أيضًا بتصدير وظيفة واحدة فقط، وهي أيضًا [غير متزامنة](https://www.w3schools.com/js/js_async.asp). عندما تعود في النهاية، فإنها توفر العديد من الوظائف كما سنرى أدناه.
+على غرار زوكراتيس نفسه، نقوم أيضًا بتصدير وظيفة واحدة فقط، وهي أيضًا [غير متزامنة](https://www.w3schools.com/js/js_async.asp). عندما تعود في النهاية، فإنها توفر العديد من الوظائف كما سنرى أدناه.
 
 ```typescript
 const zokrates = await zokratesInitialize()
 ```
 
-تهيئة Zokrates، احصل على كل ما نحتاجه من المكتبة.
+تهيئة زوكراتيس، احصل على كل ما نحتاجه من المكتبة.
 
 ```typescript
 const hashFragment = `
@@ -420,7 +420,7 @@ const digProgram = `
     `
 ```
 
-بعد ذلك لدينا دالة التجزئة (هاش) وبرنامجان من Zokrates رأيناهما أعلاه.
+بعد ذلك لدينا دالة التجزئة (هاش) وبرنامجان من زوكراتيس رأيناهما أعلاه.
 
 ```typescript
 const digCompiled = zokrates.compile(digProgram)
@@ -440,7 +440,7 @@ const proverKey = keySetupResults.pk
 
 على نظام إنتاج، قد نستخدم [حفل إعداد](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony) أكثر تعقيدًا، ولكن هذا جيد بما يكفي للعرض التوضيحي. لا توجد مشكلة في أن يعرف المستخدمون مفتاح الإثبات - فلا يزالون لا يستطيعون استخدامه لإثبات الأشياء ما لم تكن صحيحة. نظرًا لأننا نحدد الإنتروبيا (المعلمة الثانية، `""`)، ستكون النتائج دائمًا هي نفسها.
 
-**ملاحظة:** تجميع برامج Zokrates وإنشاء المفاتيح هي عمليات بطيئة. لا حاجة لتكرارها في كل مرة، فقط عند تغيير حجم الخريطة. على نظام إنتاج، ستفعل ذلك مرة واحدة، ثم تخزن المخرجات. السبب الوحيد الذي يجعلني لا أفعل ذلك هنا هو من أجل البساطة.
+**ملاحظة:** تجميع برامج زوكراتيس وإنشاء المفاتيح هي عمليات بطيئة. لا حاجة لتكرارها في كل مرة، فقط عند تغيير حجم الخريطة. على نظام إنتاج، ستفعل ذلك مرة واحدة، ثم تخزن المخرجات. السبب الوحيد الذي يجعلني لا أفعل ذلك هنا هو من أجل البساطة.
 
 #### `calculateMapHash` {#calculateMapHash}
 
@@ -455,7 +455,7 @@ const calculateMapHash = function (hashMe: boolean[][]): string {
 }
 ```
 
-تقوم وظيفة [`computeWitness`](https://zokrates.github.io/toolbox/zokrates_js.html#computewitnessartifacts-args-options) بتشغيل برنامج Zokrates بالفعل. يعيد بنية ذات حقلين: `output`، وهو مخرج البرنامج كسلسلة JSON، و`witness`، وهو المعلومات اللازمة لإنشاء إثبات المعرفة الصفرية للنتيجة. هنا نحتاج فقط إلى المخرجات.
+تقوم وظيفة [`computeWitness`](https://zokrates.github.io/toolbox/zokrates_js.html#computewitnessartifacts-args-options) بتشغيل برنامج زوكراتيس بالفعل. يعيد بنية ذات حقلين: `output`، وهو مخرج البرنامج كسلسلة JSON، و`witness`، وهو المعلومات اللازمة لإنشاء إثبات المعرفة الصفرية للنتيجة. هنا نحتاج فقط إلى المخرجات.
 
 المخرج عبارة عن سلسلة نصية بالشكل `"31337"`، وهو رقم عشري محاط بعلامات اقتباس. لكن المخرجات التي نحتاجها لـ `viem` هي رقم سداسي عشري بالشكل `0x60A7`. لذا نستخدم `.slice(1,-1)` لإزالة علامات الاقتباس ثم `BigInt` لتشغيل السلسلة المتبقية، وهي رقم عشري، إلى [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). `.toString(16)` يحول هذا `BigInt` إلى سلسلة سداسية عشرية، و`"0x"+` يضيف علامة الأرقام السداسية العشرية.
 
@@ -472,7 +472,7 @@ const calculateMapHash = function (hashMe: boolean[][]): string {
             throw new Error("Trying to dig outside the map")
 ```
 
-من الصعب التحقق مما إذا كان الفهرس خارج الحدود في Zokrates، لذلك نقوم بذلك هنا.
+من الصعب التحقق مما إذا كان الفهرس خارج الحدود في زوكراتيس، لذلك نقوم بذلك هنا.
 
 ```typescript
 const runResults = zokrates.computeWitness(digCompiled, [map, `${x}`, `${y}`])
@@ -550,7 +550,7 @@ const solidityVerifier = `
 
 ### إساءات استخدام المعرفة الصفرية {#zero-knowledge-abuses}
 
-الرياضيات للتحقق من Zokrates خارج نطاق هذا البرنامج التعليمي (وقدراتي). ومع ذلك، يمكننا إجراء فحوصات مختلفة على النص البرمجي للمعرفة الصفرية للتحقق من أنه إذا لم يتم بشكل صحيح فإنه يفشل. ستتطلب كل هذه الاختبارات منا تغيير [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts) وإعادة تشغيل التطبيق بأكمله. لا يكفي إعادة تشغيل عملية الخادم، لأن ذلك يضع التطبيق في حالة مستحيلة (لدى اللاعب لعبة قيد التقدم، ولكن اللعبة لم تعد متاحة للخادم).
+الرياضيات للتحقق من زوكراتيس خارج نطاق هذا البرنامج التعليمي (وقدراتي). ومع ذلك، يمكننا إجراء فحوصات مختلفة على النص البرمجي للمعرفة الصفرية للتحقق من أنه إذا لم يتم بشكل صحيح فإنه يفشل. ستتطلب كل هذه الاختبارات منا تغيير [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts) وإعادة تشغيل التطبيق بأكمله. لا يكفي إعادة تشغيل عملية الخادم، لأن ذلك يضع التطبيق في حالة مستحيلة (لدى اللاعب لعبة قيد التقدم، ولكن اللعبة لم تعد متاحة للخادم).
 
 #### إجابة خاطئة {#wrong-answer}
 
@@ -603,13 +603,13 @@ proof.proof = {
         vk.beta = Pairing.G2Point([uint256(0x2cebd0fbd21aca01910581537b21ae4fed46bc0e524c055059aa164ba0a6b62b), uint256(0x18fd4a7bc386cf03a95af7163d5359165acc4e7961cb46519e6d9ee4a1e2b7e9)], [uint256(0x11449dee0199ef6d8eebfe43b548e875c69e7ce37705ee9a00c81fe52f11a009), uint256(0x066d0c83b32800d3f335bb9e8ed5e2924cf00e77e6ec28178592eac9898e1a00)]);
 ```
 
-الحل، على الأقل حتى يقوم مستكشفو الكتل بإضافة التحقق من Zokrates إلى واجهات المستخدم الخاصة بهم، هو أن يقوم مطورو التطبيق بإتاحة برامج Zokrates، وأن يقوم بعض المستخدمين على الأقل بتجميعها بأنفسهم باستخدام مفتاح التحقق المناسب.
+الحل، على الأقل حتى يقوم مستكشفو الكتل بإضافة التحقق من زوكراتيس إلى واجهات المستخدم الخاصة بهم، هو أن يقوم مطورو التطبيق بإتاحة برامج زوكراتيس، وأن يقوم بعض المستخدمين على الأقل بتجميعها بأنفسهم باستخدام مفتاح التحقق المناسب.
 
 للقيام بذلك:
 
-1. [تثبيت Zokrates](https://zokrates.github.io/gettingstarted.html).
+1. [تثبيت زوكراتيس](https://zokrates.github.io/gettingstarted.html).
 
-2. أنشئ ملفًا، `dig.zok`، مع برنامج Zokrates. يفترض النص البرمجي أدناه أنك احتفظت بحجم الخريطة الأصلي، 10x5.
+2. أنشئ ملفًا، `dig.zok`، مع برنامج زوكراتيس. يفترض النص البرمجي أدناه أنك احتفظت بحجم الخريطة الأصلي، 10x5.
 
    ```zokrates
     import "utils/pack/bool/pack128.zok" as pack128;
@@ -653,14 +653,14 @@ proof.proof = {
     }
    ```
 
-3. قم بتجميع النص البرمجي Zokrates وإنشاء مفتاح التحقق. يجب إنشاء مفتاح التحقق بنفس الإنتروبيا المستخدمة في الخادم الأصلي، [في هذه الحالة سلسلة فارغة](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L67).
+3. قم بتجميع النص البرمجي زوكراتيس وإنشاء مفتاح التحقق. يجب إنشاء مفتاح التحقق بنفس الإنتروبيا المستخدمة في الخادم الأصلي، [في هذه الحالة سلسلة فارغة](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L67).
 
    ```sh copy
    zokrates compile --input dig.zok
    zokrates setup -e ""
    ```
 
-4. أنشئ مدقق Solidity بنفسك، وتحقق من أنه متطابق وظيفيًا مع المدقق الموجود على البلوك تشين (يضيف الخادم تعليقًا، لكن هذا ليس مهمًا).
+4. أنشئ مدقق سوليديتي بنفسك، وتحقق من أنه متطابق وظيفيًا مع المدقق الموجود على البلوك تشين (يضيف الخادم تعليقًا، لكن هذا ليس مهمًا).
 
    ```sh copy
    zokrates export-verifier
@@ -679,17 +679,17 @@ proof.proof = {
 
 كتعليق تعليمي، احتاج هذا المقال إلى لعبة قصيرة سهلة الفهم، لكن هذه التقنية أكثر فائدة للألعاب الأطول.
 
-### لماذا Zokrates؟ {#why-zokrates}
+### لماذا زوكراتيس؟ {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) ليست مكتبة المعرفة الصفرية الوحيدة المتاحة، لكنها تشبه لغة برمجة عادية [حتمية](https://en.wikipedia.org/wiki/Imperative_programming) وتدعم المتغيرات المنطقية.
+[زوكراتيس](https://zokrates.github.io/) ليست مكتبة المعرفة الصفرية الوحيدة المتاحة، لكنها تشبه لغة برمجة عادية [حتمية](https://en.wikipedia.org/wiki/Imperative_programming) وتدعم المتغيرات المنطقية.
 
 لتطبيقك، مع متطلبات مختلفة، قد تفضل استخدام [Circum](https://docs.circom.io/getting-started/installation/) أو [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
 
-### متى يتم تجميع Zokrates {#when-compile-zokrates}
+### متى يتم تجميع زوكراتيس {#when-compile-zokrates}
 
-في هذا البرنامج، نقوم بتجميع برامج Zokrates [في كل مرة يبدأ فيها الخادم](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L60-L61). من الواضح أن هذا إهدار للموارد، لكن هذا برنامج تعليمي، تم تحسينه من أجل البساطة.
+في هذا البرنامج، نقوم بتجميع برامج زوكراتيس [في كل مرة يبدأ فيها الخادم](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L60-L61). من الواضح أن هذا إهدار للموارد، لكن هذا برنامج تعليمي، تم تحسينه من أجل البساطة.
 
-إذا كنت أكتب تطبيقًا على مستوى الإنتاج، فسأتحقق مما إذا كان لدي ملف به برامج Zokrates المجمعة بحجم حقل الألغام هذا، وإذا كان الأمر كذلك، استخدمه. الشيء نفسه ينطبق على نشر عقد مدقق على السلسلة.
+إذا كنت أكتب تطبيقًا على مستوى الإنتاج، فسأتحقق مما إذا كان لدي ملف به برامج زوكراتيس المجمعة بحجم حقل الألغام هذا، وإذا كان الأمر كذلك، استخدمه. الشيء نفسه ينطبق على نشر عقد مدقق على السلسلة.
 
 ### إنشاء مفاتيح المدقق والمثبت {#key-creation}
 
@@ -705,18 +705,18 @@ proof.proof = {
 
 أيضًا، في حين أن هذه اللعبة فردية، فإن الكثير من ألعاب البلوك تشين متعددة اللاعبين. التحقق على السلسلة يعني أنك تتحقق فقط من إثبات المعرفة الصفرية مرة واحدة. القيام بذلك في العميل سيتطلب من كل عميل التحقق بشكل مستقل.
 
-### تسوية الخريطة في TypeScript أو Zokrates؟ {#where-flatten}
+### تسوية الخريطة في تايب سكريبت أو زوكراتيس؟ {#where-flatten}
 
-بشكل عام، عندما يمكن إجراء المعالجة إما في TypeScript أو Zokrates، فمن الأفضل القيام بها في TypeScript، وهو أسرع بكثير، ولا يتطلب إثباتات المعرفة الصفرية. هذا هو السبب، على سبيل المثال، أننا لا نوفر لـ Zokrates التجزئة (الهاش) ونجعله يتحقق من صحتها. يجب أن يتم التجزئة داخل Zokrates، ولكن يمكن أن تتم المطابقة بين التجزئة المرتجعة والتجزئة على السلسلة خارجه.
+بشكل عام، عندما يمكن إجراء المعالجة إما في تايب سكريبت أو زوكراتيس، فمن الأفضل القيام بها في تايب سكريبت، وهو أسرع بكثير، ولا يتطلب إثباتات المعرفة الصفرية. هذا هو السبب، على سبيل المثال، أننا لا نوفر لـ زوكراتيس التجزئة (الهاش) ونجعله يتحقق من صحتها. يجب أن يتم التجزئة داخل زوكراتيس، ولكن يمكن أن تتم المطابقة بين التجزئة المرتجعة والتجزئة على السلسلة خارجه.
 
-ومع ذلك، ما زلنا [نسوّي الخريطة في Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20)، بينما كان بإمكاننا القيام بذلك في TypeScript. السبب هو أن الخيارات الأخرى، في رأيي، أسوأ.
+ومع ذلك، ما زلنا [نسوّي الخريطة في زوكراتيس](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20)، بينما كان بإمكاننا القيام بذلك في تايب سكريبت. السبب هو أن الخيارات الأخرى، في رأيي، أسوأ.
 
-- توفير مصفوفة أحادية البعد من القيم المنطقية للنص البرمجي Zokrates، واستخدام تعبير مثل `x*(height+2)
+- توفير مصفوفة أحادية البعد من القيم المنطقية للنص البرمجي زوكراتيس، واستخدام تعبير مثل `x*(height+2)
   +y` للحصول على الخريطة ثنائية الأبعاد. هذا من شأنه أن يجعل [النص البرمجي](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) أكثر تعقيدًا إلى حد ما، لذلك قررت أن مكاسب الأداء لا تستحق العناء في برنامج تعليمي.
 
-- أرسل إلى Zokrates كلاً من المصفوفة أحادية البعد والمصفوفة ثنائية الأبعاد. ومع ذلك، هذا الحل لا يكسبنا أي شيء. سيتعين على النص البرمجي Zokrates التحقق من أن المصفوفة أحادية البعد التي تم تزويدها بها هي بالفعل التمثيل الصحيح للمصفوفة ثنائية الأبعاد. لذلك لن يكون هناك أي مكسب في الأداء.
+- أرسل إلى زوكراتيس كلاً من المصفوفة أحادية البعد والمصفوفة ثنائية الأبعاد. ومع ذلك، هذا الحل لا يكسبنا أي شيء. سيتعين على النص البرمجي زوكراتيس التحقق من أن المصفوفة أحادية البعد التي تم تزويدها بها هي بالفعل التمثيل الصحيح للمصفوفة ثنائية الأبعاد. لذلك لن يكون هناك أي مكسب في الأداء.
 
-- تسوية المصفوفة ثنائية الأبعاد في Zokrates. هذا هو أبسط خيار، لذلك اخترته.
+- تسوية المصفوفة ثنائية الأبعاد في زوكراتيس. هذا هو أبسط خيار، لذلك اخترته.
 
 ### أين تخزن الخرائط {#where-store-maps}
 
@@ -736,6 +736,6 @@ proof.proof = {
 
 ### شكر وتقدير {#acknowledgements}
 
-- قرأ ألفارو ألونسو مسودة من هذا المقال وأوضح بعض سوء فهمي حول Zokrates.
+- قرأ ألفارو ألونسو مسودة من هذا المقال وأوضح بعض سوء فهمي حول زوكراتيس.
 
 أي أخطاء متبقية هي مسؤوليتي.

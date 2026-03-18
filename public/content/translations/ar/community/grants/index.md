@@ -28,7 +28,7 @@ lang: ar
 
 ### لجميع الباحثين عن المنح: أدلة شاملة {#comprehensive-directories}
 
-توفر هذه المنصات العامة تغطية واسعة للمنح عبر مساحة Web3 بأكملها عدّ نقاط انطلاق مفيدة لأي شخص يبحث عن تمويل:
+توفر هذه المنصات العامة تغطية واسعة للمنح عبر مساحة ويب3 بأكملها عدّ نقاط انطلاق مفيدة لأي شخص يبحث عن تمويل:
 
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _قامت Blockworks بتجميع دليل شامل لجميع المنح وطلبات تقديم العروض (RFPs) ومكافآت الأخطاء._
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _دليل منح البلوكتشين والعملات الرقمية_
@@ -37,27 +37,27 @@ lang: ar
 ### للمطورين والبناة {#for-developers-and-builders}
 
 - [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _قاعدة بيانات Airtable عامة لبرامج المنح_
-- [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _جدول بيانات جوجل لفرص منح الويب 3_
-- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO و[The Arbitrum Foundation](https://arbitrum.foundation/)
+- [ويب3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _جدول بيانات جوجل لفرص منح الويب 3_
+- [أربيتروم Grants](https://arbitrum.foundation/grants) — أربيتروم داو و[The أربيتروم Foundation](https://arbitrum.foundation/)
 
 ### لمشاريع التمويل اللامركزي والتطبيقات المالية {#for-defi-projects}
 
-- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _دليل برنامج المنح الخاص بـ DeFi Llama_
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _دليل برنامج المنح الخاص بـ دي فاي Llama_
 - [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _قائمة شاملة لمنح العملات الرقمية والويب 3_
-- [Uniswap Foundation Grants](https://www.uniswapfoundation.org/build) - _منح Unichain و Uniswap v4 ودعم بُناة التمويل اللامركزي_
+- [يوني سواب Foundation Grants](https://www.uniswapfoundation.org/build) - _منح Unichain و يوني سواب v4 ودعم بُناة التمويل اللامركزي_
 
-### للمساهمين في المنظمات المستقلة اللامركزية (DAO) ومبتكري الحوكمة {#for-dao-contributors}
+### للمساهمين في المنظمات المستقلة اللامركزية (داو) ومبتكري الحوكمة {#for-dao-contributors}
 
 موارد للمشاريع المدفوعة من المجتمع وتجارب الحكومة:
 
-- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _جدول بيانات جوجل للمنظمات التي تقدم منحًا_
+- [داو Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _جدول بيانات جوجل للمنظمات التي تقدم منحًا_
 - [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _خريطة شاملة لمنح الويب 3_
 
 ### المنافع العامة والتأثير {#public-goods-and-impact}
 
 تركز هذه البرامج على تمويل المشاريع التي تفيد المجتمع بشكل أوسع، والبضائع العامة، ومبادرات التأثير. يشمل ذلك مقدمي المنح، بالإضافة إلى منصات التبرع التي تستخدم آليات تخصيص التمويل على السلسلة بما في ذلك [التمويل التربيعي](/defi/#quadratic-funding):
 
-- [Gitcoin](https://www.gitcoin.co/program) - _تستخدم Gitcoin Grants آليات متعددة لتخصيص رأس المال لتمويل المشاريع مفتوحة المصدر والمنافع العامة في النظام البيئي لإيثريوم_
+- [جيت كوين](https://www.gitcoin.co/program) - _تستخدم جيت كوين Grants آليات متعددة لتخصيص رأس المال لتمويل المشاريع مفتوحة المصدر والمنافع العامة في النظام البيئي لإيثريوم_
 - [Octant](https://octant.app/home) - _نظام بيئي لتمويل المنافع العامة يوازن بين الصالح العام والتمكين المالي الفردي_
 - [Giveth](https://giveth.io/) - _منصة تبرعات بالعملات الرقمية تتيح التبرعات المباشرة للمشاريع الخيرية بدون رسوم إضافية_
 - [Artizen](https://artizen.fund/) - _مساعدة المبدعين في الحصول على تمويل مطابق للمشاريع الجديدة في طليعة الفن والعلوم والتكنولوجيا والثقافة_

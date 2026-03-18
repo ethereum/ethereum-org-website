@@ -65,5 +65,5 @@ class BeaconBlockBody(Container):
 - [مقدمة عن الكتل](/developers/docs/blocks/)
 - مقدمة لإثبات الحصة
 - [مواصفات إجماع إيثريوم](https://github.com/ethereum/consensus-specs)
-- [مقدمة إلى Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
+- [مقدمة إلى جاسبر](/developers/docs/consensus-mechanisms/pos/gasper/)
 - [ترقية إيثريوم](https://eth2book.info/)

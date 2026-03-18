@@ -24,7 +24,7 @@ lang: ar
 - [الرصيد المجمّع](#batch_balance): الحصول على أرصدة أصول متعددة في استدعاء واحد.
 - [الموافقة المجمّعة](#batch_approval): الموافقة على جميع الرموز لعنوان ما.
 - [الخطافات](#receive_hook): خطاف استلام الرموز.
-- [دعم NFT](#nft_support): إذا كان المعروض 1 فقط، يتم التعامل معه على أنه NFT.
+- [دعم إن إف تي](#nft_support): إذا كان المعروض 1 فقط، يتم التعامل معه على أنه إن إف تي.
 - [قواعد التحويل الآمن](#safe_transfer_rule): مجموعة من القواعد للتحويل الآمن.
 
 ### التحويلات المجمّعة {#batch-transfers}
@@ -121,9 +121,9 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 عندما يقوم العقد المستلم بإرجاع هذه القيمة، يُفترض أن العقد يقبل التحويل ويعرف كيفية التعامل مع رموز ERC-1155. رائع، لا مزيد من الرموز العالقة في العقد!
 
-### دعم NFT ‏ {#nft-support}
+### دعم إن إف تي ‏ {#nft-support}
 
-عندما يكون العرض واحدًا فقط، يكون الرمز في الأساس رمزًا غير قابل للاستبدال (NFT). وكما هو معيار ERC-721، يمكنك تحديد عنوان URL للبيانات الوصفية. يمكن للعملاء قراءة عنوان URL وتعديله، انظر [هنا](https://eips.ethereum.org/EIPS/eip-1155#metadata).
+عندما يكون العرض واحدًا فقط، يكون الرمز في الأساس رمزًا غير قابل للاستبدال (إن إف تي). وكما هو معيار ERC-721، يمكنك تحديد عنوان URL للبيانات الوصفية. يمكن للعملاء قراءة عنوان URL وتعديله، انظر [هنا](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 
 ### قاعدة التحويل الآمن {#safe-transfer-rule}
 
@@ -142,5 +142,5 @@ _ملاحظة_: جميع الدوال المجمّعة بما في ذلك الخ
 
 - [EIP-1155: معيار الرموز المتعددة](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: وثائق Openzeppelin](https://docs.openzeppelin.com/contracts/5.x/erc1155)
-- [ERC-1155: مستودع GitHub](https://github.com/enjin/erc-1155)
-- [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
+- [ERC-1155: مستودع غيت هاب](https://github.com/enjin/erc-1155)
+- [ألكيمي إن إف تي API](https://www.alchemy.com/docs/reference/nft-api-quickstart)

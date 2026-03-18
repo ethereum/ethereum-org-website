@@ -224,4 +224,4 @@ event Withdraw(
 ## قراءة إضافية {#further-reading}
 
 - [EIP-4626: معيار المخزن المرمز](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: مستودع GitHub](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [ERC-4626: مستودع غيت هاب](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

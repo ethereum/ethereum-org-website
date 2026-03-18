@@ -23,4 +23,4 @@ description: "متطلباتنا لإضافة مصطلحات جديدة لمسر
 
 ## أضف مصطلحك {#how-decisions-about-the-site-are-made}
 
-إذا كنت تريد إضافة مصطلح إلى مسرد ethereum.org ويستوفي هذا المصطلح المعايير، [فأنشئ مسألة على GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).
+إذا كنت تريد إضافة مصطلح إلى مسرد ethereum.org ويستوفي هذا المصطلح المعايير، [فأنشئ مسألة على غيت هاب](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).

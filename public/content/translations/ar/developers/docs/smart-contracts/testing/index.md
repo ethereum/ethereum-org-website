@@ -1,16 +1,16 @@
 ---
 title: "اختبار العقود الذكية"
-description: An overview of techniques and considerations for testing Ethereum smart contracts.
+description: "An overview of techniques and considerations for testing إيثريوم smart contracts."
 lang: ar
 ---
 
-تعتبر سلاسل الكتل العامة مثل Ethereum غير قابلة للتغيير، مما يجعل من الصعب تغيير كود العقود الذكية بعد النشر. توجد [أنماط ترقية العقود](/developers/docs/smart-contracts/upgrading/) لإجراء "ترقيات افتراضية"، ولكن من الصعب تنفيذها وتتطلب إجماعًا اجتماعيًا. علاوة على ذلك، لا يمكن للترقية إصلاح الخطأ إلا _بعد_ اكتشافه—إذا اكتشف المهاجم الثغرة الأمنية أولاً، فسيكون عقدك الذكي معرضًا لخطر الاستغلال.
+تعتبر سلاسل الكتل العامة مثل إيثريوم غير قابلة للتغيير، مما يجعل من الصعب تغيير كود العقود الذكية بعد النشر. توجد [أنماط ترقية العقود](/developers/docs/smart-contracts/upgrading/) لإجراء "ترقيات افتراضية"، ولكن من الصعب تنفيذها وتتطلب إجماعًا اجتماعيًا. علاوة على ذلك، لا يمكن للترقية إصلاح الخطأ إلا _بعد_ اكتشافه—إذا اكتشف المهاجم الثغرة الأمنية أولاً، فسيكون عقدك الذكي معرضًا لخطر الاستغلال.
 
 لهذه الأسباب، يُعد اختبار العقود الذكية قبل [نشرها](/developers/docs/smart-contracts/deploying/) على الشبكة الرئيسية (Mainnet) متطلبًا أدنى لـ[الأمان](/developers/docs/smart-contracts/security/). هناك العديد من التقنيات لاختبار العقود وتقييم صحة التعليمات البرمجية؛ ما تختاره يعتمد على احتياجاتك. ومع ذلك، فإن مجموعة الاختبار المكونة من أدوات وأساليب مختلفة تعتبر مثالية لالتقاط العيوب الأمنية البسيطة والكبيرة في كود العقد.
 
 ## المتطلبات الأساسية {#prerequisites}
 
-تشرح هذه الصفحة كيفية اختبار العقود الذكية قبل نشرها على شبكة Ethereum. يفترض أنك على دراية بـ[العقود الذكية](/developers/docs/smart-contracts/).
+تشرح هذه الصفحة كيفية اختبار العقود الذكية قبل نشرها على شبكة إيثريوم. يفترض أنك على دراية بـ[العقود الذكية](/developers/docs/smart-contracts/).
 
 ## What is smart contract testing؟ ما هو اختبار العقود الذكية؟ {#what-is-smart-contract-testing}
 
@@ -157,15 +157,15 @@ wamae dhalika, fa'iina tasjil taghtiat alkud alealiat yamnah dmanan bi'ana jamie
 
 إن جودة الأدوات المستخدمة في تشغيل اختبارات الوحدة لعقودك الذكية أمر بالغ الأهمية. إطار عمل الاختبار المثالي هو الإطار الذي يتم صيانته بانتظام؛ ويوفر ميزات مفيدة (على سبيل المثال، إمكانيات التسجيل وإعداد التقارير)؛ ويجب استخدامه وفحصه على نطاق واسع من قبل مطورين آخرين.
 
-تأتي أطر اختبار الوحدات الخاصة بعقود Solidity الذكية بلغات مختلفة (معظمها JavaScript وPython وRust). راجع بعض الأدلة أدناه للحصول على معلومات حول كيفية بدء تشغيل اختبارات الوحدة باستخدام أطر الاختبار المختلفة:
+تأتي أطر اختبار الوحدات الخاصة بعقود سوليديتي الذكية بلغات مختلفة (معظمها جافا سكريبت وبايثون وراست). راجع بعض الأدلة أدناه للحصول على معلومات حول كيفية بدء تشغيل اختبارات الوحدة باستخدام أطر الاختبار المختلفة:
 
 - **[تشغيل اختبارات الوحدة باستخدام Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)**
-- **[تشغيل اختبارات الوحدة باستخدام Foundry](https://book.getfoundry.sh/forge/writing-tests)**
-- **[تشغيل اختبارات الوحدة باستخدام Waffle](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)**
-- **[تشغيل اختبارات الوحدة باستخدام Remix](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
+- **[تشغيل اختبارات الوحدة باستخدام فاوندري](https://book.getfoundry.sh/forge/writing-tests)**
+- **[تشغيل اختبارات الوحدة باستخدام وافل](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)**
+- **[تشغيل اختبارات الوحدة باستخدام ريميكس](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[تشغيل اختبارات الوحدة باستخدام Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
-- **[تشغيل اختبارات الوحدة باستخدام Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
-- **[تشغيل اختبارات الوحدة باستخدام Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
+- **[تشغيل اختبارات الوحدة باستخدام هارد هات](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[تشغيل اختبارات الوحدة باستخدام ويك](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### الاختبار التكاملي {#integration-testing-for-smart-contracts}
 
@@ -174,9 +174,9 @@ fi hin 'ana aikhtibar alwahdat yusahih 'akhta' wazayif aleaqd bishakl maezulin, 
 yumkin liakhtibar altakamul aktishaf almushkilat alnaashiat ean mukalamat aleuqud almutabadalat 'aw altafaeulat bayn alwazayif almukhtalifat fi nafs aleaqd aldhakii على سبيل المثال، يمكن أن تساعد اختبارات التكامل في التحقق مما إذا كانت أمور مثل [الوراثة](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) وحقن التبعية تعمل بشكل صحيح.
 
 يعد اختبار التكامل مفيدًا إذا كان عقدك يعتمد على بنية معيارية أو يتفاعل مع عقود أخرى على السلسلة أثناء التنفيذ.
-yueadu akhtibar altakamul mfydan 'iidha kan eaqduk yaetamid ealaa binyat mieyariat 'aw yatafaeal mae euqud 'ukhraa ealaa alsilsilat 'athna' altanfidhi. إحدى طرق تشغيل اختبارات التكامل هي [عمل انقسام للبلوكتشين](/glossary/#fork) عند ارتفاع معين (باستخدام أداة مثل [Forge](https://book.getfoundry.sh/forge/fork-testing) أو [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)) ومحاكاة التفاعلات بين عقدك والعقود المنشورة.
+yueadu akhtibar altakamul mfydan 'iidha kan eaqduk yaetamid ealaa binyat mieyariat 'aw yatafaeal mae euqud 'ukhraa ealaa alsilsilat 'athna' altanfidhi. إحدى طرق تشغيل اختبارات التكامل هي [عمل انقسام للبلوكتشين](/glossary/#fork) عند ارتفاع معين (باستخدام أداة مثل [Forge](https://book.getfoundry.sh/forge/fork-testing) أو [هارد هات](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)) ومحاكاة التفاعلات بين عقدك والعقود المنشورة.
 
-ستتصرف سلسلة الكتل المتشعبة بشكل مشابه لشبكة Mainnet وستحتوي على حسابات بحالات وأرصدة مرتبطة بها. لكنها تعمل فقط كبيئة تطوير محلية محمية، مما يعني أنك لن تحتاج إلى ETH حقيقي للمعاملات، على سبيل المثال، ولن تؤثر تغييراتك على بروتوكول Ethereum الحقيقي.
+ستتصرف سلسلة الكتل المتشعبة بشكل مشابه لشبكة Mainnet وستحتوي على حسابات بحالات وأرصدة مرتبطة بها. لكنها تعمل فقط كبيئة تطوير محلية محمية، مما يعني أنك لن تحتاج إلى ETH حقيقي للمعاملات، على سبيل المثال، ولن تؤثر تغييراتك على بروتوكول إيثريوم الحقيقي.
 
 ### الاختبار القائم على الخصائص {#property-based-testing-for-smart-contracts}
 
@@ -212,14 +212,14 @@ yueadu akhtibar altakamul mfydan 'iidha kan eaqduk yaetamid ealaa binyat mieyari
 
 بمجرد تكوينه بشكل صحيح، ستقوم أداة اختبار الخصائص بتنفيذ وظائف العقود الذكية الخاصة بك باستخدام مدخلات تم إنشاؤها عشوائيًا. إذا كان هناك أي انتهاكات للتأكيدات، فيجب عليك الحصول على تقرير يحتوي على بيانات إدخال محددة تنتهك العقار قيد التقييم. راجع بعض الأدلة أدناه للبدء في تشغيل الاختبار القائم على الخاصية باستخدام أدوات مختلفة:
 
-- **[التحليل الثابت للعقود الذكية باستخدام Slither](https://github.com/crytic/slither)**
-- **[التحليل الثابت للعقود الذكية باستخدام Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
+- **[التحليل الثابت للعقود الذكية باستخدام سليذر](https://github.com/crytic/slither)**
+- **[التحليل الثابت للعقود الذكية باستخدام ويك](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[الاختبار القائم على الخصائص باستخدام Brownie](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
-- **[اختبار Fuzzing للعقود باستخدام Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**
-- **[اختبار Fuzzing للعقود باستخدام Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
-- **[اختبار Fuzzing للعقود باستخدام Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
-- **[التنفيذ الرمزي للعقود الذكية باستخدام Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[التنفيذ الرمزي للعقود الذكية باستخدام Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[اختبار Fuzzing للعقود باستخدام فاوندري](https://book.getfoundry.sh/forge/fuzz-testing)**
+- **[اختبار Fuzzing للعقود باستخدام إيكيدنا](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[اختبار Fuzzing للعقود باستخدام ويك](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
+- **[التنفيذ الرمزي للعقود الذكية باستخدام مانتيكور](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
+- **[التنفيذ الرمزي للعقود الذكية باستخدام ميثريل](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
 ## الاختبار اليدوي للعقود الذكية {#manual-testing-for-smart-contracts}
 
@@ -227,7 +227,7 @@ yueadu akhtibar altakamul mfydan 'iidha kan eaqduk yaetamid ealaa binyat mieyari
 
 ### اختبار العقود على بلوكتشين محلي {#testing-on-local-blockchain}
 
-على الرغم من أن الاختبار الآلي الذي يتم إجراؤه في بيئة تطوير محلية يمكن أن يوفر معلومات تصحيح أخطاء مفيدة، إلا أنك سترغب في معرفة كيفية تصرف عقدك الذكي في بيئة الإنتاج. ومع ذلك، فإن النشر على سلسلة Ethereum الرئيسية يتكبد رسومًا للغاز - ناهيك عن أنك أو مستخدميك قد تخسرون أموالاً حقيقية إذا كان عقدك الذكي لا يزال يحتوي على أخطاء.
+على الرغم من أن الاختبار الآلي الذي يتم إجراؤه في بيئة تطوير محلية يمكن أن يوفر معلومات تصحيح أخطاء مفيدة، إلا أنك سترغب في معرفة كيفية تصرف عقدك الذكي في بيئة الإنتاج. ومع ذلك، فإن النشر على سلسلة إيثريوم الرئيسية يتكبد رسومًا للغاز - ناهيك عن أنك أو مستخدميك قد تخسرون أموالاً حقيقية إذا كان عقدك الذكي لا يزال يحتوي على أخطاء.
 
 يعد اختبار عقدك على بلوكتشين محلي (المعروف أيضًا باسم [شبكة التطوير](/developers/docs/development-networks/)) بديلاً موصى به للاختبار على الشبكة الرئيسية. سلسلة الكتل المحلية عبارة عن نسخة من سلسلة كتل الإيثريوم تعمل محليًا على جهاز الكمبيوتر الخاص بك والتي تحاكي سلوك طبقة تنفيذ الإيثريوم. وبالتالي، يمكنك برمجة المعاملات للتفاعل مع العقد دون تكبد تكاليف إضافية كبيرة.
 
@@ -237,16 +237,16 @@ yueadu akhtibar altakamul mfydan 'iidha kan eaqduk yaetamid ealaa binyat mieyari
 
 ### اختبار العقود على شبكات الاختبار {#testing-contracts-on-testnets}
 
-تعمل شبكة الاختبار أو testnet تمامًا مثل شبكة Ethereum Mainnet، إلا أنها تستخدم الأثير (ETH) بدون قيمة حقيقية في العالم الحقيقي.
-taemal shabakat aliakhtibar 'aw testnet tmaman mithl shabakat Ethereum Mainnet, 'iilaa 'anaha tastakhdim al'athir (ETH) bidun qimat haqiqiat fi alealam alhaqiqii إن نشر عقدك على [شبكة الاختبار](/developers/docs/networks/#ethereum-testnets) يعني أن أي شخص يمكنه التفاعل معه (على سبيل المثال، عبر الواجهة الأمامية للتطبيق اللامركزي) دون تعريض الأموال للخطر.
+تعمل شبكة الاختبار أو testnet تمامًا مثل شبكة إيثريوم Mainnet، إلا أنها تستخدم الأثير (ETH) بدون قيمة حقيقية في العالم الحقيقي.
+taemal shabakat aliakhtibar 'aw testnet tmaman mithl shabakat إيثريوم Mainnet, 'iilaa 'anaha tastakhdim al'athir (ETH) bidun qimat haqiqiat fi alealam alhaqiqii إن نشر عقدك على [شبكة الاختبار](/developers/docs/networks/#ethereum-testnets) يعني أن أي شخص يمكنه التفاعل معه (على سبيل المثال، عبر الواجهة الأمامية للتطبيق اللامركزي) دون تعريض الأموال للخطر.
 
 يُعد هذا الشكل من الاختبار اليدوي مفيدًا لتقييم التدفق الشامل لتطبيقك من وجهة نظر المستخدم
 yued hadha alshakl min aliakhtibar alyadawii mfydan litaqyim altadafuq alshaamil litatbiqik min wijhat nazar almustakhdam هنا، يمكن لمختبري النسخة التجريبية أيضًا إجراء عمليات تجريبية والإبلاغ عن أي مشكلات تتعلق بمنطق أعمال العقد والوظائف العامة.
 huna, yumkin limukhtabiri alnuskhat altajribiat aydan 'iijra' eamaliaat tajribiat wal'iiblagh ean 'ayi mushkilat tataealaq bimantiq 'aemal aleaqd walwazayif aleamati.
 
-يعد النشر على شبكة اختبار بعد الاختبار على blockchain محلي أمرًا مثاليًا نظرًا لأن الأول أقرب إلى سلوك Ethereum Virtual Machine.
-yueadu alnashr ealaa shabakat akhtibar baed aliakhtibar ealaa blockchain mahaliyin amran mthalyan nzran li'ana al'awal 'aqrab 'iilaa suluk Ethereum Virtual Machine. لذلك، من الشائع بالنسبة للعديد من مشاريع Ethereum الأصلية نشر تطبيقات لامركزية على شبكات الاختبار لتقييم عملية العقود الذكية في ظل ظروف العالم الحقيقي.
-lidhalika, min alshaayie bialnisbat lileadid min masharie Ethereum al'asliat nashr tatbiqat lamarkaziat ealaa shabakat alaikhtibar litaqyim eamaliat aleuqud aldhakiat fi zili zuruf alealam alhaqiqii.
+يعد النشر على شبكة اختبار بعد الاختبار على blockchain محلي أمرًا مثاليًا نظرًا لأن الأول أقرب إلى سلوك إيثريوم Virtual Machine.
+yueadu alnashr ealaa shabakat akhtibar baed aliakhtibar ealaa blockchain mahaliyin amran mthalyan nzran li'ana al'awal 'aqrab 'iilaa suluk إيثريوم Virtual Machine. لذلك، من الشائع بالنسبة للعديد من مشاريع إيثريوم الأصلية نشر تطبيقات لامركزية على شبكات الاختبار لتقييم عملية العقود الذكية في ظل ظروف العالم الحقيقي.
+lidhalika, min alshaayie bialnisbat lileadid min masharie إيثريوم al'asliat nashr tatbiqat lamarkaziat ealaa shabakat alaikhtibar litaqyim eamaliat aleuqud aldhakiat fi zili zuruf alealam alhaqiqii.
 
 [المزيد عن شبكات اختبار إيثريوم.](/developers/docs/development-networks/#public-beacon-testchains)
 
@@ -284,62 +284,62 @@ wamae dhalika, fa'iina tiqniaat altahaquq alrasmiat taqae ealaa tayf yaetamid ea
 
 ### أدوات اختبار الوحدة {#unit-testing-tools}
 
-- **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - _أداة تغطية الكود للعقود الذكية المكتوبة بلغة Solidity._
+- **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - _أداة تغطية الكود للعقود الذكية المكتوبة بلغة سوليديتي._
 
-- **[Waffle](https://ethereum-waffle.readthedocs.io/en/latest/)** - _إطار عمل لتطوير واختبار العقود الذكية المتقدمة (يعتمد على ethers.js)_.
+- **[وافل](https://ethereum-waffle.readthedocs.io/en/latest/)** - _إطار عمل لتطوير واختبار العقود الذكية المتقدمة (يعتمد على ethers.js)_.
 
-- **[Remix Tests](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)** - _أداة لاختبار عقود Solidity الذكية._ Works underneath Remix IDE "Solidity Unit Testing" plugin which is used to write and run test cases for a contract._
+- **[ريميكس Tests](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)** - _أداة لاختبار عقود سوليديتي الذكية._ Works underneath ريميكس IDE "سوليديتي Unit Testing" plugin which is used to write and run test cases for a contract._
 
-- **[OpenZeppelin Test Helpers](https://github.com/OpenZeppelin/openzeppelin-test-helpers)** - _مكتبة تأكيد لاختبار عقود إيثريوم الذكية._ Make sure your contracts behave as expected!_
+- **[أوبن زبلين Test Helpers](https://github.com/OpenZeppelin/openzeppelin-test-helpers)** - _مكتبة تأكيد لاختبار عقود إيثريوم الذكية._ Make sure your contracts behave as expected!_
 
 - **[إطار عمل اختبار الوحدات Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _يستخدم Brownie إطار Pytest، وهو إطار عمل اختبار غني بالميزات يتيح لك كتابة اختبارات صغيرة بأقل قدر من التعليمات البرمجية، ويتوسع بشكل جيد للمشاريع الكبيرة، كما أنه قابل للتوسع بدرجة كبيرة._
 
-- **[اختبارات Foundry](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _تقدم Foundry إطار Forge، وهو إطار عمل سريع ومرن لاختبار Ethereum قادر على تنفيذ اختبارات وحدات بسيطة، وفحوصات تحسين الغاز، وfuzzing العقود._
+- **[اختبارات فاوندري](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _تقدم فاوندري إطار Forge، وهو إطار عمل سريع ومرن لاختبار إيثريوم قادر على تنفيذ اختبارات وحدات بسيطة، وفحوصات تحسين الغاز، وfuzzing العقود._
 
-- **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _إطار عمل لاختبار العقود الذكية يعتمد على ethers.js وMocha وChai._
+- **[هارد هات Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _إطار عمل لاختبار العقود الذكية يعتمد على ethers.js وMocha وChai._
 
-- **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _إطار عمل للتطوير والاختبار قائم على Python للعقود الذكية التي تستهدف آلة إيثريوم الافتراضية._
+- **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _إطار عمل للتطوير والاختبار قائم على بايثون للعقود الذكية التي تستهدف آلة إيثريوم الافتراضية._
 
-- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _إطار عمل قائم على بايثون لاختبار الوحدات وfuzzing مع إمكانيات تصحيح أخطاء قوية ودعم اختبار عبر السلسلة، باستخدام pytest وAnvil للحصول على أفضل تجربة مستخدم وأداء._
+- **[ويك](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _إطار عمل قائم على بايثون لاختبار الوحدات وfuzzing مع إمكانيات تصحيح أخطاء قوية ودعم اختبار عبر السلسلة، باستخدام pytest وAnvil للحصول على أفضل تجربة مستخدم وأداء._
 
 ### أدوات الاختبار القائم على الخصائص {#property-based-testing-tools}
 
 #### أدوات التحليل الثابت {#static-analysis-tools}
 
-- **[Slither](https://github.com/crytic/slither)** - _إطار عمل تحليل ثابت قائم على Python بلغة Solidity للبحث عن الثغرات الأمنية، وتحسين فهم الكود، وكتابة تحليلات مخصصة للعقود الذكية._
+- **[سليذر](https://github.com/crytic/slither)** - _إطار عمل تحليل ثابت قائم على بايثون بلغة سوليديتي للبحث عن الثغرات الأمنية، وتحسين فهم الكود، وكتابة تحليلات مخصصة للعقود الذكية._
 
-- **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _أداة Linter لتطبيق أفضل ممارسات الأسلوب والأمان للغة برمجة العقود الذكية Solidity._
+- **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _أداة Linter لتطبيق أفضل ممارسات الأسلوب والأمان للغة برمجة العقود الذكية سوليديتي._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _محلل ثابت قائم على Rust مصمم خصيصًا لأمان وتطوير عقود Web3 الذكية._
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _محلل ثابت قائم على راست مصمم خصيصًا لأمان وتطوير عقود ويب3 الذكية._
 
-- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _إطار عمل تحليل ثابت قائم على بايثون مع كاشفات للثغرات الأمنية وجودة الكود، وطابعات لاستخراج المعلومات المفيدة من الكود ودعم لكتابة وحدات فرعية مخصصة._
+- **[ويك](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _إطار عمل تحليل ثابت قائم على بايثون مع كاشفات للثغرات الأمنية وجودة الكود، وطابعات لاستخراج المعلومات المفيدة من الكود ودعم لكتابة وحدات فرعية مخصصة._
 
-- **[Slippy](https://github.com/fvictorio/slippy)** - _أداة تدقيق (linter) بسيطة وقوية للغة Solidity._
+- **[Slippy](https://github.com/fvictorio/slippy)** - _أداة تدقيق (linter) بسيطة وقوية للغة سوليديتي._
 
 #### أدوات التحليل الديناميكي {#dynamic-analysis-tools}
 
-- **[Echidna](https://github.com/crytic/echidna/)** - _أداة fuzzing سريعة للعقود للكشف عن الثغرات الأمنية في العقود الذكية من خلال الاختبار القائم على الخصائص._
+- **[إيكيدنا](https://github.com/crytic/echidna/)** - _أداة fuzzing سريعة للعقود للكشف عن الثغرات الأمنية في العقود الذكية من خلال الاختبار القائم على الخصائص._
 
 - **[Diligence Fuzzing](https://consensys.net/diligence/fuzzing/)** - _أداة Fuzzing آلية مفيدة للكشف عن انتهاكات الخصائص في كود العقد الذكي._
 
-- **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _إطار عمل تنفيذ رمزي ديناميكي لتحليل الكود الثنائي (bytecode) لآلة إيثريوم الافتراضية (EVM)._
+- **[مانتيكور](https://manticore.readthedocs.io/en/latest/index.html)** - _إطار عمل تنفيذ رمزي ديناميكي لتحليل الكود الثنائي (bytecode) لآلة إيثريوم الافتراضية (EVM)._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _أداة تقييم الكود الثنائي (bytecode) لآلة الإيثريوم الافتراضية (EVM) للكشف عن ثغرات العقود باستخدام تحليل التلوث، والتحليل التوافقي، وفحص تدفق التحكم._
+- **[ميثريل](https://github.com/ConsenSys/mythril-classic)** - _أداة تقييم الكود الثنائي (bytecode) لآلة الإيثريوم الافتراضية (EVM) للكشف عن ثغرات العقود باستخدام تحليل التلوث، والتحليل التوافقي، وفحص تدفق التحكم._
 
-- **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble هي لغة مواصفات وأداة للتحقق من وقت التشغيل تتيح لك إضافة تعليقات توضيحية على العقود الذكية بخصائص تسمح لك باختبار العقود تلقائيًا باستخدام أدوات مثل Diligence Fuzzing أو MythX._
+- **[Diligence سكربل](https://consensys.net/diligence/scribble/)** - _Scribble هي لغة مواصفات وأداة للتحقق من وقت التشغيل تتيح لك إضافة تعليقات توضيحية على العقود الذكية بخصائص تسمح لك باختبار العقود تلقائيًا باستخدام أدوات مثل Diligence Fuzzing أو ميث إكس._
 
 ## دروس تعليمية ذات صلة {#related-tutorials}
 
 - [نظرة عامة ومقارنة لمنتجات الاختبار المختلفة](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
-- [كيفية استخدام Echidna لاختبار العقود الذكية](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [كيفية استخدام Manticore للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [كيفية استخدام Slither للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [كيفية محاكاة عقود Solidity للاختبار](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [كيفية تشغيل اختبارات الوحدة في Solidity باستخدام Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
+- [كيفية استخدام إيكيدنا لاختبار العقود الذكية](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
+- [كيفية استخدام مانتيكور للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [كيفية استخدام سليذر للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [كيفية محاكاة عقود سوليديتي للاختبار](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
+- [كيفية تشغيل اختبارات الوحدة في سوليديتي باستخدام فاوندري](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## قراءة إضافية {#further-reading}
 
 - [دليل متعمق لاختبار عقود إيثريوم الذكية](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
 - [كيفية اختبار عقود إيثريوم الذكية](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
-- [دليل MolochDAO لاختبار الوحدة للمطورين](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
+- [دليل مولوك دي إيه أو لاختبار الوحدة للمطورين](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
 - [كيف تختبر العقود الذكية كالمحترفين](https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001)

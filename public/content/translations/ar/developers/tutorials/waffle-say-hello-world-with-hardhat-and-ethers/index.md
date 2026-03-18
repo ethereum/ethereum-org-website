@@ -1,6 +1,6 @@
 ---
-title: "درس Waffle التعليمي لـ hello world باستخدام hardhat و ethers"
-description: "أنشئ أول مشروع Waffle لك باستخدام hardhat و ethers.js"
+title: "درس وافل التعليمي لـ hello world باستخدام hardhat و ethers"
+description: "أنشئ أول مشروع وافل لك باستخدام hardhat و ethers.js"
 author: "MiZiet"
 tags:
   [
@@ -16,7 +16,7 @@ lang: ar
 published: 2020-10-16
 ---
 
-في هذا الدرس التعليمي لـ [Waffle](https://ethereum-waffle.readthedocs.io)، سنتعلم كيفية إعداد مشروع عقد ذكي بسيط من نوع "Hello world"، باستخدام [hardhat](https://hardhat.org/) و[ethers.js](https://docs.ethers.io/v5/). ثم سنتعلم كيفية إضافة وظيفة جديدة إلى عقدنا الذكي وكيفية اختباره باستخدام Waffle.
+في هذا الدرس التعليمي لـ [وافل](https://ethereum-waffle.readthedocs.io)، سنتعلم كيفية إعداد مشروع عقد ذكي بسيط من نوع "Hello world"، باستخدام [hardhat](https://hardhat.org/) و[ethers.js](https://docs.ethers.io/v5/). ثم سنتعلم كيفية إضافة وظيفة جديدة إلى عقدنا الذكي وكيفية اختباره باستخدام وافل.
 
 لنبدأ بإنشاء مشروع جديد:
 
@@ -83,7 +83,7 @@ MyWaffleProject
 
 ### الآن دعونا نتحدث عن بعض هذه الملفات: {#now-lets-talk}
 
-- Greeter.sol - عقدنا الذكي المكتوب بلغة Solidity؛
+- Greeter.sol - عقدنا الذكي المكتوب بلغة سوليديتي؛
 
 ```solidity
 contract Greeter {
@@ -130,7 +130,7 @@ describe("Greeter", function () {
 
 ### تتكون الخطوة التالية من تجميع عقدنا وتشغيل الاختبارات: {#compiling-and-testing}
 
-تستخدم اختبارات Waffle إطار عمل Mocha (إطار عمل للاختبار) مع Chai (مكتبة تأكيد). كل ما عليك فعله هو تشغيل `npx hardhat test` والانتظار حتى تظهر الرسالة التالية.
+تستخدم اختبارات وافل إطار عمل Mocha (إطار عمل للاختبار) مع Chai (مكتبة تأكيد). كل ما عليك فعله هو تشغيل `npx hardhat test` والانتظار حتى تظهر الرسالة التالية.
 
 ```bash
 ✓ يجب أن يعيد التحية الجديدة بمجرد تغييرها
@@ -141,7 +141,7 @@ describe("Greeter", function () {
 تخيل موقفًا يضيف فيه شخص ما سلسلة فارغة كتحية. لن تكون تحية حارة، أليس كذلك؟  
 دعنا نتأكد من أن هذا لا يحدث:
 
-نريد استخدام `revert` من Solidity عندما يمرر شخص ما سلسلة فارغة. الشيء الجيد هو أنه يمكننا بسهولة اختبار هذه الوظيفة باستخدام مُطابِق chai الخاص بـ Waffle وهو `to.be.revertedWith()`.
+نريد استخدام `revert` من سوليديتي عندما يمرر شخص ما سلسلة فارغة. الشيء الجيد هو أنه يمكننا بسهولة اختبار هذه الوظيفة باستخدام مُطابِق chai الخاص بـ وافل وهو `to.be.revertedWith()`.
 
 ```js
 it("يجب أن يتم التراجع عند تمرير سلسلة فارغة", async () => {
@@ -199,6 +199,6 @@ greeting = _greeting;
 
 ### الخلاصة {#conclusion}
 
-لقد أنشأنا مشروعًا بسيطًا باستخدام Waffle و Hardhat و ethers.js. لقد تعلمنا كيفية إعداد مشروع وإضافة اختبار وتطبيق وظيفة جديدة.
+لقد أنشأنا مشروعًا بسيطًا باستخدام وافل و هارد هات و ethers.js. لقد تعلمنا كيفية إعداد مشروع وإضافة اختبار وتطبيق وظيفة جديدة.
 
-لمزيد من مُطابِقات chai الرائعة لاختبار عقودك الذكية، تحقق من [وثائق Waffle الرسمية](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).
+لمزيد من مُطابِقات chai الرائعة لاختبار عقودك الذكية، تحقق من [وثائق وافل الرسمية](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).

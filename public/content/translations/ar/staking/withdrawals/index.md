@@ -200,7 +200,7 @@ eventName="read more">
 
 يُنصح مشغلي المحققين بزيارة صفحة <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> حيث ستجد المزيد من التفاصيل حول كيفية إعداد المحقق الخاص بك للسحب، وتوقيت الأحداث، والمزيد من التفاصيل حول كيفية عمل عمليات السحب.
 
-لتجربة إعدادك على شبكة الاختبار أولاً، تفضل بزيارة <a href="https://hoodi.launchpad.ethereum.org">منصة تشغيل تجميد العملات على شبكة الاختبار Hoodi</a> للبدء.
+لتجربة إعدادك على شبكة الاختبار أولاً، تفضل بزيارة <a href="https://hoodi.launchpad.ethereum.org">منصة تشغيل تجميد العملات على شبكة الاختبار هودي</a> للبدء.
 </ExpandableCard>
 
 <ExpandableCard
@@ -215,6 +215,6 @@ eventName="read more">
 
 - [عمليات سحب منصة تشغيل تجميد العملات](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: عمليات سحب الدفع من سلسلة المنارة كعمليات](https://eips.ethereum.org/EIPS/eip-4895)
-- [PEEPanEIP #94: سحب ETH المُجمَّد (اختبار) مع Potuz وHsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
+- [PEEPanEIP #94: سحب ETH المُجمَّد (اختبار) مع Potuz وHsiao-واي وانج](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: عمليات سحب الدفع من سلسلة المنارة كعمليات مع Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [فهم الرصيد الفعلي للمدقق](https://www.attestant.io/posts/understanding-validator-effective-balance/)

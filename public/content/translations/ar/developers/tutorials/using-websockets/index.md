@@ -1,7 +1,7 @@
 ---
 title: "استخدام مقابس الويب"
 description: "دليل في استخدام مقابس الويب و الكيمياء لعمل طلبات JSON-RPC و الاشتراك في الأحداث."
-author: "Elan Halpern"
+author: "إيلان هالبرن"
 lang: ar
 tags: [ "Alchemy", "مقابس الويب", "استفسار", "JavaScript" ]
 skill: beginner
@@ -10,7 +10,7 @@ sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-webso
 published: 2020-12-01
 ---
 
-This is an entry level guide to using WebSockets and Alchemy to make requests to the Ethereum blockchain.
+This is an entry level guide to using WebSockets and ألكيمي to make requests to the إيثريوم blockchain.
 
 ## WebSockets مقابل HTTP {#websockets-vs-http}
 
@@ -18,13 +18,13 @@ Unlike HTTP, with WebSockets, you don't need to continuously make requests when 
 
 As with any network connection, you should not assume that a WebSocket will remain open forever without interruption, but correctly handling dropped connections and reconnection by hand can be challenging to get right. Another downside of WebSockets is that you do not get HTTP status codes in the response, but only the error message.
 
-يضيف [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) تلقائيًا معالجة حالات فشل WebSocket وإعادة المحاولة دون الحاجة إلى أي تكوين.
+يضيف [ألكيمي ويب3](https://docs.alchemy.com/reference/api-overview) تلقائيًا معالجة حالات فشل WebSocket وإعادة المحاولة دون الحاجة إلى أي تكوين.
 
 ## جربها {#try-it-out}
 
 أسهل طريقة لاختبار WebSockets هي تثبيت أداة سطر أوامر لإنشاء طلبات WebSocket مثل [wscat](https://github.com/websockets/wscat). Using wscat, you can send requests as follows:
 
-_ملاحظة: إذا كان لديك حساب Alchemy، يمكنك استبدال `demo` بمفتاح API الخاص بك. [سجل للحصول على حساب Alchemy مجاني هنا!](https://auth.alchemy.com/signup)_
+_ملاحظة: إذا كان لديك حساب ألكيمي، يمكنك استبدال `demo` بمفتاح API الخاص بك. [سجل للحصول على حساب ألكيمي مجاني هنا!](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -39,13 +39,13 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 To begin, open a WebSocket using the WebSocket URL for your app. يمكنك العثور على عنوان URL لـ WebSocket الخاص بتطبيقك عن طريق فتح صفحة التطبيق في [لوحة التحكم الخاصة بك](https://dashboard.alchemy.com/) والنقر على "عرض المفتاح". Note that your app's URL for WebSockets is different from its URL for HTTP requests, but both can be found by clicking "View Key".
 
-![أين تجد عنوان URL الخاص بـ WebSocket في لوحة التحكم الخاصة بـ Alchemy](./use-websockets.gif)
+![أين تجد عنوان URL الخاص بـ WebSocket في لوحة التحكم الخاصة بـ ألكيمي](./use-websockets.gif)
 
-يمكن استخدام أي من واجهات برمجة التطبيقات المدرجة في [مرجع واجهة برمجة تطبيقات Alchemy](https://www.alchemy.com/docs/reference/api-overview) عبر WebSocket. To do so, use the same payload that would be sent as the body of a HTTP POST request, but instead send that payload through the WebSocket.
+يمكن استخدام أي من واجهات برمجة التطبيقات المدرجة في [مرجع واجهة برمجة تطبيقات ألكيمي](https://www.alchemy.com/docs/reference/api-overview) عبر WebSocket. To do so, use the same payload that would be sent as the body of a HTTP POST request, but instead send that payload through the WebSocket.
 
-## باستخدام Web3 {#with-web3}
+## باستخدام ويب3 {#with-web3}
 
-Transitioning to WebSockets while using a client library like Web3 is simple. Simply pass the WebSocket URL instead of the HTTP one when instantiating your Web3 client. على سبيل المثال:
+Transitioning to WebSockets while using a client library like ويب3 is simple. Simply pass the WebSocket URL instead of the HTTP one when instantiating your ويب3 client. على سبيل المثال:
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -86,7 +86,7 @@ While the subscription is active, you will receive events which are objects with
 
 1. `alchemy_newFullPendingTransactions`
 
-Returns the transaction information for all transactions that are added to the pending state. يشترك هذا النوع من الاشتراك في المعاملات المعلقة، على غرار استدعاء Web3 القياسي `web3.eth.subscribe("pendingTransactions")`، لكنه يختلف في أنه يصدر _معلومات المعاملة الكاملة_ بدلاً من مجرد هاشات المعاملات.
+Returns the transaction information for all transactions that are added to the pending state. يشترك هذا النوع من الاشتراك في المعاملات المعلقة، على غرار استدعاء ويب3 القياسي `web3.eth.subscribe("pendingTransactions")`، لكنه يختلف في أنه يصدر _معلومات المعاملة الكاملة_ بدلاً من مجرد هاشات المعاملات.
 
 مثال:
 
@@ -242,4 +242,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[سجل في Alchemy](https://auth.alchemy.com) مجانًا، واطلع على [وثائقنا](https://www.alchemy.com/docs/)، وللحصول على آخر الأخبار، تابعنا على [Twitter](https://x.com/AlchemyPlatform).
+[سجل في ألكيمي](https://auth.alchemy.com) مجانًا، واطلع على [وثائقنا](https://www.alchemy.com/docs/)، وللحصول على آخر الأخبار، تابعنا على [تويتر](https://x.com/AlchemyPlatform).

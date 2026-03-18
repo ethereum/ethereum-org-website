@@ -21,7 +21,7 @@ lang: ar
 
 ### قائم على البلوك تشين {#blockchain-based}
 
-لكي تستمر قطعة من البيانات إلى الأبد، نحتاج إلى استخدام آلية الاستمرار. على سبيل المثال، على Ethereum، آلية الاستمرار هي أنه يجب أخذ السلسلة بأكملها في الاعتبار عند تشغيل عقدة. تتم إضافة قطع جديدة من البيانات إلى نهاية السلسلة، وتستمر في النمو - مما يتطلب من كل عقدة تكرار جميع البيانات المضمنة.
+لكي تستمر قطعة من البيانات إلى الأبد، نحتاج إلى استخدام آلية الاستمرار. على سبيل المثال، على إيثريوم، آلية الاستمرار هي أنه يجب أخذ السلسلة بأكملها في الاعتبار عند تشغيل عقدة. تتم إضافة قطع جديدة من البيانات إلى نهاية السلسلة، وتستمر في النمو - مما يتطلب من كل عقدة تكرار جميع البيانات المضمنة.
 
 يُعرف هذا باسم الاستمرارية **القائمة على البلوك تشين**.
 
@@ -32,7 +32,7 @@ lang: ar
 المنصات ذات الاستمرارية القائمة على تقنية البلوك تشين:
 
 - إثيريوم
-- [Arweave](https://www.arweave.org/)
+- [آرويف](https://www.arweave.org/)
 
 ### قائم على العقد {#contract-based}
 
@@ -47,30 +47,30 @@ bihadhih altariqati, lan tahtaj alsilsilat bi'akmaliha 'iilaa altawasue liliahti
 المنصات ذات الاستمرارية القائمة على العقد:
 alminasaat dhat alastimrariat alqayimat ealaa aleaqdi:
 
-- [Filecoin](https://docs.filecoin.io/basics/what-is-filecoin)
+- [فايل كوين](https://docs.filecoin.io/basics/what-is-filecoin)
 - [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
 - [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
-- [Swarm](https://www.ethswarm.org/)
+- [سوارم](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
 
 ### اعتبارات إضافية {#additional-consideration}
 
-IPFS هو نظام موزع لتخزين الملفات ومواقع الويب والتطبيقات والبيانات والوصول إليها.
-IPFS hu nizam muazae litakhzin almilafaat wamawaqie alwib waltatbiqat walbayanat walwusul 'iilayha. لا يحتوي هذا النظام على مخطط حوافز مدمج، ولكن يمكن استخدامه بدلاً من ذلك مع أي من حلول الحوافز القائمة على العقود المذكورة أعلاه لتحقيق استمرارية أطول أمدًا.
-la yahtawi hadha alnizam ealaa mukhatat hawafiz mudmaji, walakin yumkin aistikhdamuh bdlaan min dhalik mae 'ayin min hulul alhawafiz alqayimat ealaa aleuqud almadhkurat 'aelah litahqiq aistimrariat 'atwal amdan. هناك طريقة أخرى للحفاظ على البيانات على IPFS وهي العمل مع خدمة التثبيت، والتي سوف تقوم "بتثبيت" بياناتك نيابةً عنك.
-hunak tariqat 'ukhraa lilhifaz ealaa albayanat ealaa IPFS wahi aleamal mae khidmat altathbiti, walati sawf taqum "btathbiat" bayanatik nyabtan eanka. يمكنك أيضًا تشغيل عقدة IPFS الخاصة بك والمساهمة في الشبكة للحفاظ على بياناتك و/أو بيانات الآخرين مجانًا!
-yumkinuk aydan tashghil euqdat IPFS alkhasat bik walmusahamat fi alshabakat lilhifaz ealaa bayanatik wa/'aw bayanat alakharin mjanan!
+آي بي إف إس هو نظام موزع لتخزين الملفات ومواقع الويب والتطبيقات والبيانات والوصول إليها.
+آي بي إف إس hu nizam muazae litakhzin almilafaat wamawaqie alwib waltatbiqat walbayanat walwusul 'iilayha. لا يحتوي هذا النظام على مخطط حوافز مدمج، ولكن يمكن استخدامه بدلاً من ذلك مع أي من حلول الحوافز القائمة على العقود المذكورة أعلاه لتحقيق استمرارية أطول أمدًا.
+la yahtawi hadha alnizam ealaa mukhatat hawafiz mudmaji, walakin yumkin aistikhdamuh bdlaan min dhalik mae 'ayin min hulul alhawafiz alqayimat ealaa aleuqud almadhkurat 'aelah litahqiq aistimrariat 'atwal amdan. هناك طريقة أخرى للحفاظ على البيانات على آي بي إف إس وهي العمل مع خدمة التثبيت، والتي سوف تقوم "بتثبيت" بياناتك نيابةً عنك.
+hunak tariqat 'ukhraa lilhifaz ealaa albayanat ealaa آي بي إف إس wahi aleamal mae khidmat altathbiti, walati sawf taqum "btathbiat" bayanatik nyabtan eanka. يمكنك أيضًا تشغيل عقدة آي بي إف إس الخاصة بك والمساهمة في الشبكة للحفاظ على بياناتك و/أو بيانات الآخرين مجانًا!
+yumkinuk aydan tashghil euqdat آي بي إف إس alkhasat bik walmusahamat fi alshabakat lilhifaz ealaa bayanatik wa/'aw bayanat alakharin mjanan!
 
-- [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
-- [Pinata](https://www.pinata.cloud/) _(خدمة تثبيت IPFS)_
-- [web3.storage](https://web3.storage/) _(خدمة تثبيت IPFS/Filecoin)_
-- [Infura](https://infura.io/product/ipfs) _(خدمة تثبيت IPFS)_
-- [IPFS Scan](https://ipfs-scan.io) _(مستكشف تثبيت IPFS)_
-- [4EVERLAND](https://www.4everland.org/)_ (خدمة تثبيت IPFS)_
-- [Filebase](https://filebase.com) _(خدمة تثبيت IPFS)_
-- [Spheron Network](https://spheron.network/) _(خدمة تثبيت IPFS/Filecoin)_
+- [آي بي إف إس](https://docs.ipfs.io/concepts/what-is-ipfs/)
+- [بينياتا](https://www.pinata.cloud/) _(خدمة تثبيت آي بي إف إس)_
+- [web3.storage](https://web3.storage/) _(خدمة تثبيت آي بي إف إس/فايل كوين)_
+- [إنفيورا](https://infura.io/product/ipfs) _(خدمة تثبيت آي بي إف إس)_
+- [آي بي إف إس Scan](https://ipfs-scan.io) _(مستكشف تثبيت آي بي إف إس)_
+- [4EVERLAND](https://www.4everland.org/)_ (خدمة تثبيت آي بي إف إس)_
+- [فايل بيز](https://filebase.com) _(خدمة تثبيت آي بي إف إس)_
+- [Spheron Network](https://spheron.network/) _(خدمة تثبيت آي بي إف إس/فايل كوين)_
 
 SWARM هي تقنية تخزين وتوزيع بيانات لامركزية مع نظام حوافز تخزين وسعر إيجار تخزين.
 
@@ -80,7 +80,7 @@ SWARM هي تقنية تخزين وتوزيع بيانات لامركزية مع
 
 ### آلية التحدي {#challenge-mechanism}
 
-إحدى الطرق الأكثر شيوعًا للتأكد من الاحتفاظ بالبيانات هي استخدام نوع ما من التحدي التشفيري الذي يتم إصداره للعقد للتأكد من أنها لا تزال تحتفظ بالبيانات. أحد الطرق البسيطة هو النظر إلى إثبات الوصول الخاص بـ Arweave. إنهم يصدرون تحديًا للعقد لمعرفة ما إذا كانت لديهم البيانات في كل من الكتلة الأحدث وكتلة عشوائية في الماضي. إذا لم تتمكن العقدة من التوصل إلى الإجابة، فسيتم معاقبتها.
+إحدى الطرق الأكثر شيوعًا للتأكد من الاحتفاظ بالبيانات هي استخدام نوع ما من التحدي التشفيري الذي يتم إصداره للعقد للتأكد من أنها لا تزال تحتفظ بالبيانات. أحد الطرق البسيطة هو النظر إلى إثبات الوصول الخاص بـ آرويف. إنهم يصدرون تحديًا للعقد لمعرفة ما إذا كانت لديهم البيانات في كل من الكتلة الأحدث وكتلة عشوائية في الماضي. إذا لم تتمكن العقدة من التوصل إلى الإجابة، فسيتم معاقبتها.
 
 أنواع dStorage مع آلية التحدي:
 
@@ -136,7 +136,7 @@ Proof-of-stake based:
 
 ## أدوات ذات صلة {#related-tools}
 
-**IPFS - _نظام الملفات بين الكواكب (InterPlanetary File System) هو نظام لا مركزي لتخزين الملفات والإشارة إليها مخصص لإيثريوم._**
+**آي بي إف إس - _نظام الملفات بين الكواكب (InterPlanetary File System) هو نظام لا مركزي لتخزين الملفات والإشارة إليها مخصص لإيثريوم._**
 
 - [Ipfs.io](https://ipfs.io/)
 - [التوثيق](https://docs.ipfs.io/)
@@ -154,17 +154,17 @@ Proof-of-stake based:
 - [التوثيق](https://docs.sia.tech/)
 - [غيت هاب](https://github.com/SiaFoundation/)
 
-**Filecoin - _تم إنشاء Filecoin من قبل نفس الفريق الذي يقف وراء IPFS. إنها طبقة حوافز فوق مبادئ IPFS._**
+**فايل كوين - _تم إنشاء فايل كوين من قبل نفس الفريق الذي يقف وراء آي بي إف إس. إنها طبقة حوافز فوق مبادئ آي بي إف إس._**
 
 - [Filecoin.io](https://filecoin.io/)
 - [التوثيق](https://docs.filecoin.io/)
 - [غيت هاب](https://github.com/filecoin-project/)
 
-**Arweave - _Arweave هي منصة تخزين لامركزي (dStorage) لتخزين البيانات._**
+**آرويف - _Arweave هي منصة تخزين لامركزي (dStorage) لتخزين البيانات._**
 
 - [Arweave.org](https://www.arweave.org/)
 - [التوثيق](https://docs.arweave.org/info/)
-- [Arweave](https://github.com/ArweaveTeam/arweave/)
+- [آرويف](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs هي منصة تخزين لامركزي (dStorage) قائمة على إثبات الحصة مع التقسيم (sharding) والـ blobbers._**
 
@@ -172,51 +172,51 @@ Proof-of-stake based:
 - [التوثيق](https://docs.zus.network/zus-docs/)
 - [غيت هاب](https://github.com/0chain/)
 
-**Crust Network - _Crust هي منصة تخزين لامركزي (dStorage) مبنية على IPFS._**
+**Crust Network - _Crust هي منصة تخزين لامركزي (dStorage) مبنية على آي بي إف إس._**
 
 - [Crust.network](https://crust.network)
 - [التوثيق](https://wiki.crust.network)
 - [غيت هاب](https://github.com/crustio)
 
-**Swarm - _منصة تخزين موزعة وخدمة توزيع محتوى لحزمة web3 الخاصة بإيثريوم._**
+**سوارم - _منصة تخزين موزعة وخدمة توزيع محتوى لحزمة web3 الخاصة بإيثريوم._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
 - [التوثيق](https://docs.ethswarm.org/)
 - [غيت هاب](https://github.com/ethersphere/)
 
-**OrbitDB - _قاعدة بيانات لامركزية من نظير إلى نظير (peer to peer) مبنية على IPFS._**
+**OrbitDB - _قاعدة بيانات لامركزية من نظير إلى نظير (peer to peer) مبنية على آي بي إف إس._**
 
 - [OrbitDB.org](https://orbitdb.org/)
 - [التوثيق](https://github.com/orbitdb/field-manual/)
 - [غيت هاب](https://github.com/orbitdb/orbit-db/)
 
-**Aleph.im - _مشروع سحابي لامركزي (قاعدة بيانات، تخزين ملفات، حوسبة، و DID). مزيج فريد من نوعه بين تكنولوجيا الند للند على السلسلة وخارجها. متوافق مع IPFS وعدة سلاسل._**
+**Aleph.im - _مشروع سحابي لامركزي (قاعدة بيانات، تخزين ملفات، حوسبة، و DID). مزيج فريد من نوعه بين تكنولوجيا الند للند على السلسلة وخارجها. متوافق مع آي بي إف إس وعدة سلاسل._**
 
 - [Aleph.im](https://aleph.cloud/)
 - [التوثيق](https://docs.aleph.cloud/)
 - [غيت هاب](https://github.com/aleph-im/)
 
-**Ceramic - _تخزين قاعدة بيانات IPFS يتحكم فيه المستخدم، للتطبيقات الغنية بالبيانات والجذابة._**
+**Ceramic - _تخزين قاعدة بيانات آي بي إف إس يتحكم فيه المستخدم، للتطبيقات الغنية بالبيانات والجذابة._**
 
 - [Ceramic.network](https://ceramic.network/)
 - [التوثيق](https://developers.ceramic.network/)
 - [غيت هاب](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase - _تخزين لامركزي متوافق مع S3 وخدمة تثبيت IPFS متكررة جغرافيًا. يتم تثبيت جميع الملفات التي يتم تحميلها إلى IPFS عبر Filebase تلقائيًا في البنية التحتية لـ Filebase مع 3 نسخ مكررة في جميع أنحاء العالم._**
+**فايل بيز - _تخزين لامركزي متوافق مع S3 وخدمة تثبيت آي بي إف إس متكررة جغرافيًا. يتم تثبيت جميع الملفات التي يتم تحميلها إلى آي بي إف إس عبر فايل بيز تلقائيًا في البنية التحتية لـ فايل بيز مع 3 نسخ مكررة في جميع أنحاء العالم._**
 
 - [Filebase.com](https://filebase.com/)
 - [التوثيق](https://docs.filebase.com/)
 - [غيت هاب](https://github.com/filebase)
 
-**4EVERLAND - _منصة حوسبة سحابية للويب 3.0 (Web 3.0) تدمج الإمكانيات الأساسية للتخزين والحوسبة والشبكات، وهي متوافقة مع S3 وتوفر تخزينًا متزامنًا للبيانات على شبكات التخزين اللامركزية مثل IPFS وArweave._**
+**4EVERLAND - _منصة حوسبة سحابية للويب 3.0 (Web 3.0) تدمج الإمكانيات الأساسية للتخزين والحوسبة والشبكات، وهي متوافقة مع S3 وتوفر تخزينًا متزامنًا للبيانات على شبكات التخزين اللامركزية مثل آي بي إف إس وآرويف._**
 
 - [4everland.org](https://www.4everland.org/)
 - [التوثيق](https://docs.4everland.org/)
 - [غيت هاب](https://github.com/4everland)
 
-**Kaleido - _منصة بلوك تشين كخدمة (blockchain-as-a-service) مع عقد IPFS تعمل بنقرة زر_**
+**كاليدو - _منصة بلوك تشين كخدمة (blockchain-as-a-service) مع عقد آي بي إف إس تعمل بنقرة زر_**
 
-- [Kaleido](https://kaleido.io/)
+- [كاليدو](https://kaleido.io/)
 - [التوثيق](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [غيت هاب](https://github.com/kaleido-io)
 

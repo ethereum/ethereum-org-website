@@ -4,11 +4,11 @@ description: "نظرة متعمقة على تشريح جهة الاتصال ال
 lang: ar
 ---
 
-العقد الذكي هو برنامج يتم تشغيله على عنوان على Ethereum. إنها تتكون من البيانات والوظائف التي يمكن تنفيذها عند تلقي المعاملة. فيما يلي نظرة عامة على العناصر التي يشكلها العقد الذكي.
+العقد الذكي هو برنامج يتم تشغيله على عنوان على إيثريوم. إنها تتكون من البيانات والوظائف التي يمكن تنفيذها عند تلقي المعاملة. فيما يلي نظرة عامة على العناصر التي يشكلها العقد الذكي.
 
 ## المتطلبات الأساسية {#prerequisites}
 
-تأكد من أنك قرأت عن [العقود الذكية](/developers/docs/smart-contracts/) أولاً. يفترض هذا المستند أنك على دراية بلغات البرمجة مثل JavaScript أو Python.
+تأكد من أنك قرأت عن [العقود الذكية](/developers/docs/smart-contracts/) أولاً. يفترض هذا المستند أنك على دراية بلغات البرمجة مثل جافا سكريبت أو بايثون.
 
 ## البيانات {#data}
 
@@ -49,7 +49,7 @@ storedData: int128
 
 لمزيد من التوضيح، نلقي نظرة على المستندات:
 
-- [اطلع على أنواع Vyper](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [اطلع على أنواع فايبر](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
 - [اطلع على أنواع سوليديتي](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### الذاكرة {#memory}
@@ -163,7 +163,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 بالإضافة إلى المتغيرات والوظائف التي تحددها في عقدك، هناك بعض الوظائف الخاصة المضمنة. الأمثلة الأكثر وضوحا هي :
 
 - `address.send()` – سوليديتي
-- `send(address)` – Vyper
+- `send(address)` – فايبر
 
 تسمح هذه العقود بإرسال ETH إلى حسابات أخرى.
 
@@ -207,7 +207,7 @@ contract ExampleDapp {
 
 ## أمثلة مشروحة {#annotated-examples}
 
-هذه بعض الأمثلة الصلبة المكتوبة . إذا كنت ترغب في تجربة النص البرمجي، يمكنك التفاعل معه في [Remix](http://remix.ethereum.org).
+هذه بعض الأمثلة الصلبة المكتوبة . إذا كنت ترغب في تجربة النص البرمجي، يمكنك التفاعل معه في [ريميكس](http://remix.ethereum.org).
 
 ### Hello world {#hello-world}
 
@@ -641,10 +641,10 @@ contract CryptoPizza is IERC721, ERC165 {
 
 ## قراءة إضافية {#further-reading}
 
-تحقق من وثائق Solidity وVyper للحصول على نظرة عامة أكثر شمولاً حول العقود الذكية:
+تحقق من وثائق سوليديتي وفايبر للحصول على نظرة عامة أكثر شمولاً حول العقود الذكية:
 
 - [سوليديتي](https://docs.soliditylang.org/)
-- [Vyper](https://docs.vyperlang.org/en/stable/)
+- [فايبر](https://docs.vyperlang.org/en/stable/)
 
 ## المواضيع ذات الصلة {#related-topics}
 

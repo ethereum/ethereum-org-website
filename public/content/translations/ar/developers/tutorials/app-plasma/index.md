@@ -1,7 +1,7 @@
 ---
 title: "كتابة Plasma خاصة بالتطبيق تحافظ على الخصوصية"
 description: "في هذا البرنامج التعليمي، سنبني بنكًا شبه سري للإيداعات. البنك هو مكون مركزي؛ فهو يعرف رصيد كل مستخدم. ولكن، لا يتم تخزين هذه المعلومات على السلسلة. بدلًا من ذلك، ينشر البنك تجزئة (هاش) للحالة. في كل مرة تحدث فيها معاملة، ينشر البنك التجزئة (الهاش) الجديدة، بالإضافة إلى إثبات المعرفة الصفرية بأنه يمتلك معاملة موقعة تُغيِّر حالة التجزئة (الهاش) إلى الحالة الجديدة. بعد قراءة هذا البرنامج التعليمي، لن تفهم فقط كيفية استخدام إثباتات المعرفة الصفرية، بل ستفهم أيضًا سبب استخدامها وكيفية القيام بذلك بأمان."
-author: Ori Pomerantz
+author: "أوري بوميرانتز"
 tags: [ "المعرفة الصفرية", "خادم", "خارج السلسلة", "الخصوصية" ]
 skill: advanced
 lang: ar
@@ -97,15 +97,15 @@ published: 2025-10-15
 
 ### أدوات {#tools}
 
-بالنسبة لرمز العميل، سوف نستخدم [Vite](https://vite.dev/) و [React](https://react.dev/) و [Viem](https://viem.sh/) و [Wagmi](https://wagmi.sh/). هذه أدوات قياسية في الصناعة؛ إذا لم تكن على دراية بها، يمكنك استخدام [هذا البرنامج التعليمي](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
+بالنسبة لرمز العميل، سوف نستخدم [فيت](https://vite.dev/) و [رياكت](https://react.dev/) و [فيم](https://viem.sh/) و [واغمي](https://wagmi.sh/). هذه أدوات قياسية في الصناعة؛ إذا لم تكن على دراية بها، يمكنك استخدام [هذا البرنامج التعليمي](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
-غالبية الخادم مكتوبة بلغة JavaScript باستخدام [Node](https://nodejs.org/en). جزء المعرفة الصفرية مكتوب بلغة [Noir](https://noir-lang.org/). نحن بحاجة إلى الإصدار `1.0.0-beta.10`، لذا بعد [تثبيت Noir حسب التعليمات](https://noir-lang.org/docs/getting_started/quick_start)، قم بتشغيل:
+غالبية الخادم مكتوبة بلغة جافا سكريبت باستخدام [Node](https://nodejs.org/en). جزء المعرفة الصفرية مكتوب بلغة [نوار](https://noir-lang.org/). نحن بحاجة إلى الإصدار `1.0.0-beta.10`، لذا بعد [تثبيت نوار حسب التعليمات](https://noir-lang.org/docs/getting_started/quick_start)، قم بتشغيل:
 
 ```
 noirup -v 1.0.0-beta.10
 ```
 
-البلوكتشين الذي نستخدمه هو `anvil`، وهو بلوكتشين اختبار محلي وهو جزء من [Foundry](https://getfoundry.sh/introduction/installation).
+البلوكتشين الذي نستخدمه هو `anvil`، وهو بلوكتشين اختبار محلي وهو جزء من [فاوندري](https://getfoundry.sh/introduction/installation).
 
 ## التنفيذ {#implementation}
 
@@ -117,7 +117,7 @@ noirup -v 1.0.0-beta.10
 
 لرؤيته أثناء العمل:
 
-1. تأكد من تثبيت [Node](https://nodejs.org/en/download) و [Noir](https://noir-lang.org/install). يفضل تثبيتها على نظام UNIX مثل macOS أو Linux أو [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. تأكد من تثبيت [Node](https://nodejs.org/en/download) و [نوار](https://noir-lang.org/install). يفضل تثبيتها على نظام UNIX مثل ماك أو إس أو لينكس أو [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 2. قم بتنزيل رمز المرحلة 1 وابدأ خادم الويب لخدمة رمز العميل.
 
@@ -129,7 +129,7 @@ noirup -v 1.0.0-beta.10
    npm run dev
    ```
 
-   السبب الذي يجعلك تحتاج إلى خادم ويب هنا هو أنه لمنع أنواع معينة من الاحتيال، لا تقبل العديد من المحافظ (مثل MetaMask) الملفات التي يتم تقديمها مباشرة من القرص
+   السبب الذي يجعلك تحتاج إلى خادم ويب هنا هو أنه لمنع أنواع معينة من الاحتيال، لا تقبل العديد من المحافظ (مثل ميتاماسك) الملفات التي يتم تقديمها مباشرة من القرص
 
 3. افتح متصفحًا به محفظة.
 
@@ -166,13 +166,13 @@ noirup -v 1.0.0-beta.10
 
 #### `server/noir/Prover.toml` {#server-noir-prover-toml}
 
-يعرض [هذا الملف](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml) تنسيق المعلومات الذي تتوقعه Noir.
+يعرض [هذا الملف](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml) تنسيق المعلومات الذي تتوقعه نوار.
 
 ```toml
 message="إرسال 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0                             "
 ```
 
-الرسالة بصيغة نصية، مما يسهل على المستخدم فهمها (وهو أمر ضروري عند التوقيع) وعلى رمز Noir تحليلها. يُذكر المبلغ بوحدة Finney لتمكين التحويلات الكسرية من ناحية، وليكون سهل القراءة من ناحية أخرى. الرقم الأخير هو [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
+الرسالة بصيغة نصية، مما يسهل على المستخدم فهمها (وهو أمر ضروري عند التوقيع) وعلى رمز نوار تحليلها. يُذكر المبلغ بوحدة Finney لتمكين التحويلات الكسرية من ناحية، وليكون سهل القراءة من ناحية أخرى. الرقم الأخير هو [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
 
 يبلغ طول السلسلة 100 حرف. لا تتعامل إثباتات المعرفة الصفرية بشكل جيد مع البيانات متغيرة الحجم، لذلك غالبًا ما يكون من الضروري حشو البيانات.
 
@@ -208,7 +208,7 @@ nonce=0
 export default attrs =>  {
 ```
 
-تنشئ هذه الدالة مكون `Transfer` React، الذي يمكن للملفات الأخرى استيراده.
+تنشئ هذه الدالة مكون `Transfer` رياكت، الذي يمكن للملفات الأخرى استيراده.
 
 ```tsx
   const accounts = [
@@ -229,7 +229,7 @@ export default attrs =>  {
   })
 ```
 
-تتيح لنا [خطافات Wagmi](https://wagmi.sh/react/api/hooks) هذه الوصول إلى مكتبة [viem](https://viem.sh/) والمحفظة.
+تتيح لنا [خطافات واغمي](https://wagmi.sh/react/api/hooks) هذه الوصول إلى مكتبة [viem](https://viem.sh/) والمحفظة.
 
 ```tsx
   const message = `send ${toAccount} ${ethAmount*1000} finney (milliEth) ${nonce}`.padEnd(100, " ")
@@ -256,7 +256,7 @@ export default attrs =>  {
     const hash = hashMessage(message)
 ```
 
-احصل على تجزئة (هاش) الرسالة. من المفيد توفيره للمستخدم لتصحيح الأخطاء (في رمز Noir).
+احصل على تجزئة (هاش) الرسالة. من المفيد توفيره للمستخدم لتصحيح الأخطاء (في رمز نوار).
 
 ```tsx
     const pubKey = await recoverPublicKey({
@@ -265,7 +265,7 @@ export default attrs =>  {
     })
 ```
 
-[احصل على المفتاح العام](https://viem.sh/docs/utilities/recoverPublicKey). هذا مطلوب لدالة [Noir `ecrecover`](https://github.com/colinnielsen/ecrecover-noir).
+[احصل على المفتاح العام](https://viem.sh/docs/utilities/recoverPublicKey). هذا مطلوب لدالة [نوار `ecrecover`](https://github.com/colinnielsen/ecrecover-noir).
 
 ```tsx
     setSignature(signature)
@@ -288,9 +288,9 @@ pubKeyX=${hexToArray(pubKey.slice(4,4+2*32))}
 pubKeyY=${hexToArray(pubKey.slice(4+2*32))}
 ```
 
-يزودنا Viem بالمفتاح العام كسلسلة سداسية عشرية مكونة من 65 بايت. البايت الأول هو `0x04`، وهو علامة إصدار. يتبع ذلك 32 بايت لـ `x` من المفتاح العام ثم 32 بايت لـ `y` من المفتاح العام.
+يزودنا فيم بالمفتاح العام كسلسلة سداسية عشرية مكونة من 65 بايت. البايت الأول هو `0x04`، وهو علامة إصدار. يتبع ذلك 32 بايت لـ `x` من المفتاح العام ثم 32 بايت لـ `y` من المفتاح العام.
 
-ومع ذلك، تتوقع Noir الحصول على هذه المعلومات كمصفوفتي بايت، واحدة لـ `x` والأخرى لـ `y`. من الأسهل تحليلها هنا على العميل بدلاً من أن تكون جزءًا من إثبات المعرفة الصفرية.
+ومع ذلك، تتوقع نوار الحصول على هذه المعلومات كمصفوفتي بايت، واحدة لـ `x` والأخرى لـ `y`. من الأسهل تحليلها هنا على العميل بدلاً من أن تكون جزءًا من إثبات المعرفة الصفرية.
 
 لاحظ أن هذه ممارسة جيدة في المعرفة الصفرية بشكل عام. الرمز داخل إثبات المعرفة الصفرية مكلف، لذا فإن أي معالجة يمكن إجراؤها خارج إثبات المعرفة الصفرية _يجب_ أن تتم خارج إثبات المعرفة الصفرية.
 
@@ -298,7 +298,7 @@ pubKeyY=${hexToArray(pubKey.slice(4+2*32))}
 signature=${hexToArray(signature.slice(2,-2))}
 ```
 
-يتم توفير التوقيع أيضًا كسلسلة سداسية عشرية مكونة من 65 بايت. ومع ذلك، فإن البايت الأخير ضروري فقط لاستعادة المفتاح العام. نظرًا لأنه سيتم بالفعل توفير المفتاح العام لرمز Noir، فلن نحتاج إليه للتحقق من التوقيع، ولا يتطلبه رمز Noir.
+يتم توفير التوقيع أيضًا كسلسلة سداسية عشرية مكونة من 65 بايت. ومع ذلك، فإن البايت الأخير ضروري فقط لاستعادة المفتاح العام. نظرًا لأنه سيتم بالفعل توفير المفتاح العام لرمز نوار، فلن نحتاج إليه للتحقق من التوقيع، ولا يتطلبه رمز نوار.
 
 ```tsx
 ${accounts.map(accountInProverToml).reduce((a,b) => a+b, "")}
@@ -326,7 +326,7 @@ ${accounts.map(accountInProverToml).reduce((a,b) => a+b, "")}
 use std::hash::pedersen_hash;
 ```
 
-يتم توفير [تجزئة (هاش) Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) مع [مكتبة Noir القياسية](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). تستخدم إثباتات المعرفة الصفرية دالة التجزئة (الهاش) هذه بشكل شائع. من الأسهل بكثير حسابها داخل [الدوائر الحسابية](https://rareskills.io/post/arithmetic-circuit) مقارنة بدوال التجزئة (الهاش) القياسية.
+يتم توفير [تجزئة (هاش) Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) مع [مكتبة نوار القياسية](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). تستخدم إثباتات المعرفة الصفرية دالة التجزئة (الهاش) هذه بشكل شائع. من الأسهل بكثير حسابها داخل [الدوائر الحسابية](https://rareskills.io/post/arithmetic-circuit) مقارنة بدوال التجزئة (الهاش) القياسية.
 
 ```
 use keccak256::keccak256;
@@ -339,7 +339,7 @@ use dep::ecrecover;
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
-لغة Noir مستوحاة من [Rust](https://www.rust-lang.org/). المتغيرات، بشكل افتراضي، هي ثوابت. هذه هي الطريقة التي نعرّف بها ثوابت التكوين العامة. على وجه التحديد، `ACCOUNT_NUMBER` هو عدد الحسابات التي نخزنها.
+لغة نوار مستوحاة من [راست](https://www.rust-lang.org/). المتغيرات، بشكل افتراضي، هي ثوابت. هذه هي الطريقة التي نعرّف بها ثوابت التكوين العامة. على وجه التحديد، `ACCOUNT_NUMBER` هو عدد الحسابات التي نخزنها.
 
 أنواع البيانات المسماة `u<number>` هي ذلك العدد من البتات، غير الموقعة. الأنواع المدعومة الوحيدة هي `u8` و`u16` و`u32` و`u64` و`u128`.
 
@@ -403,7 +403,7 @@ fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 }
 ```
 
-في لغة Noir، لا يمكن للدوال إرجاع قيمة إلا في النهاية (لا يوجد إرجاع مبكر). لتحديد القيمة المرجعة، تقوم بتقييمها مباشرة قبل القوس الختامي للدالة.
+في لغة نوار، لا يمكن للدوال إرجاع قيمة إلا في النهاية (لا يوجد إرجاع مبكر). لتحديد القيمة المرجعة، تقوم بتقييمها مباشرة قبل القوس الختامي للدالة.
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
@@ -415,13 +415,13 @@ fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-هذه هي طريقة تحديد متغير قابل للتغيير، أي _ليس_ ثابتًا. يجب أن تحتوي المتغيرات في Noir دائمًا على قيمة، لذلك نقوم بتهيئة هذا المتغير إلى كل الأصفار.
+هذه هي طريقة تحديد متغير قابل للتغيير، أي _ليس_ ثابتًا. يجب أن تحتوي المتغيرات في نوار دائمًا على قيمة، لذلك نقوم بتهيئة هذا المتغير إلى كل الأصفار.
 
 ```
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-هذه حلقة `for`. لاحظ أن الحدود هي ثوابت. يجب أن تكون حدود حلقات Noir معروفة في وقت الترجمة. والسبب هو أن الدوائر الحسابية لا تدعم التحكم في التدفق. عند معالجة حلقة `for`، يضع المترجم ببساطة الرمز الموجود بداخلها عدة مرات، مرة لكل تكرار.
+هذه حلقة `for`. لاحظ أن الحدود هي ثوابت. يجب أن تكون حدود حلقات نوار معروفة في وقت الترجمة. والسبب هو أن الدوائر الحسابية لا تدعم التحكم في التدفق. عند معالجة حلقة `for`، يضع المترجم ببساطة الرمز الموجود بداخلها عدة مرات، مرة لكل تكرار.
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -484,7 +484,7 @@ fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> 
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-لا يمكننا الوصول إلى عناصر الهيكل داخل سلسلة تنسيق في Noir، لذلك نقوم بإنشاء نسخة قابلة للاستخدام.
+لا يمكننا الوصول إلى عناصر الهيكل داخل سلسلة تنسيق في نوار، لذلك نقوم بإنشاء نسخة قابلة للاستخدام.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -588,7 +588,7 @@ fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 }
 ```
 
-إرجاع [tuple](https://noir-lang.org/docs/noir/concepts/data_types/tuples) هو طريقة Noir لإرجاع قيم متعددة من دالة.
+إرجاع [tuple](https://noir-lang.org/docs/noir/concepts/data_types/tuples) هو طريقة نوار لإرجاع قيم متعددة من دالة.
 
 ```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
@@ -731,7 +731,7 @@ fn signatureToAddressAndHash(
         ecrecover::ecrecover(pubKeyX, pubKeyY, signature, hash), 
 ```
 
-هذا مشابه لـ [`ecrecover` في Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions)، مع اختلافين مهمين:
+هذا مشابه لـ [`ecrecover` في سوليديتي](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions)، مع اختلافين مهمين:
 
 - إذا لم يكن التوقيع صالحًا، يفشل استدعاء `assert` ويتم إحباط البرنامج.
 - في حين يمكن استعادة المفتاح العام من التوقيع والتجزئة (الهاش)، فهذه معالجة يمكن إجراؤها خارجيًا وبالتالي لا تستحق القيام بها داخل إثبات المعرفة الصفرية. إذا حاول شخص ما خداعنا هنا، فسيفشل التحقق من التوقيع.
@@ -791,7 +791,7 @@ fn main(
 
 لرؤيته أثناء العمل:
 
-1. أوقف Vite إذا كان قيد التشغيل.
+1. أوقف فيت إذا كان قيد التشغيل.
 
 2. قم بتنزيل الفرع الذي يتضمن الخادم وتأكد من أن لديك جميع الوحدات النمطية اللازمة.
 
@@ -803,7 +803,7 @@ fn main(
    npm install
    ```
 
-   ليست هناك حاجة لترجمة رمز Noir، فهو نفس الرمز الذي استخدمته للمرحلة 1.
+   ليست هناك حاجة لترجمة رمز نوار، فهو نفس الرمز الذي استخدمته للمرحلة 1.
 
 3. ابدأ الخادم.
 
@@ -811,7 +811,7 @@ fn main(
    npm run start
    ```
 
-4. في نافذة سطر أوامر منفصلة، قم بتشغيل Vite لخدمة رمز المتصفح.
+4. في نافذة سطر أوامر منفصلة، قم بتشغيل فيت لخدمة رمز المتصفح.
 
    ```sh
    cd client
@@ -862,20 +862,20 @@ fn main(
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
-يحتوي [هذا الملف](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) على عملية الخادم، ويتفاعل مع رمز Noir في [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). فيما يلي شرح للأجزاء المثيرة للاهتمام.
+يحتوي [هذا الملف](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) على عملية الخادم، ويتفاعل مع رمز نوار في [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). فيما يلي شرح للأجزاء المثيرة للاهتمام.
 
 ```js
 import { Noir } from '@noir-lang/noir_js'
 ```
 
-تتفاعل مكتبة [noir.js](https://www.npmjs.com/package/@noir-lang/noir_js) بين رمز JavaScript ورمز Noir.
+تتفاعل مكتبة [noir.js](https://www.npmjs.com/package/@noir-lang/noir_js) بين رمز جافا سكريبت ورمز نوار.
 
 ```js
 const circuit = JSON.parse(await fs.readFile("./noir/target/zkBank.json"))
 const noir = new Noir(circuit)
 ```
 
-قم بتحميل الدائرة الحسابية - برنامج Noir المترجم الذي أنشأناه في المرحلة السابقة - واستعد لتنفيذه.
+قم بتحميل الدائرة الحسابية - برنامج نوار المترجم الذي أنشأناه في المرحلة السابقة - واستعد لتنفيذه.
 
 ```js
 // We only provide account information in return to a signed request
@@ -902,7 +902,7 @@ const processMessage = async (message, signature) => {
     })
 ```
 
-الآن بعد أن قمنا بتشغيل JavaScript على الخادم، يمكننا استرداد المفتاح العام هناك بدلاً من العميل.
+الآن بعد أن قمنا بتشغيل جافا سكريبت على الخادم، يمكننا استرداد المفتاح العام هناك بدلاً من العميل.
 
 ```js
     let noirResult
@@ -916,7 +916,7 @@ const processMessage = async (message, signature) => {
         })
 ```
 
-`noir.execute` يقوم بتشغيل برنامج Noir. المعلمات تعادل تلك المتوفرة في [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). لاحظ أنه يتم توفير القيم الطويلة كمصفوفة من السلاسل السداسية العشرية (`["0x60", "0xA7"]`)، وليس كقيمة سداسية عشرية واحدة (`0x60A7`)، بالطريقة التي يفعلها Viem.
+`noir.execute` يقوم بتشغيل برنامج نوار. المعلمات تعادل تلك المتوفرة في [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). لاحظ أنه يتم توفير القيم الطويلة كمصفوفة من السلاسل السداسية العشرية (`["0x60", "0xA7"]`)، وليس كقيمة سداسية عشرية واحدة (`0x60A7`)، بالطريقة التي يفعلها فيم.
 
 ```js
     } catch (err) {
@@ -933,7 +933,7 @@ const processMessage = async (message, signature) => {
     Accounts[toAccountNumber].balance += amount
 ```
 
-قم بتطبيق المعاملة. لقد فعلنا ذلك بالفعل في رمز Noir، ولكن من الأسهل القيام به مرة أخرى هنا بدلاً من استخراج النتيجة من هناك.
+قم بتطبيق المعاملة. لقد فعلنا ذلك بالفعل في رمز نوار، ولكن من الأسهل القيام به مرة أخرى هنا بدلاً من استخراج النتيجة من هناك.
 
 ```js
 let Accounts = [
@@ -962,7 +962,7 @@ let Accounts = [
 
 3. قم بتشغيل `anvil` في نافذة سطر أوامر منفصلة.
 
-4. قم بإنشاء مفتاح التحقق ومحقق Solidity، ثم انسخ رمز المحقق إلى مشروع Solidity.
+4. قم بإنشاء مفتاح التحقق ومحقق سوليديتي، ثم انسخ رمز المحقق إلى مشروع سوليديتي.
 
    ```sh
    cd noir
@@ -1042,9 +1042,9 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-نحتاج إلى استخدام [حزمة Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) لإنشاء الإثبات الفعلي لإرساله على السلسلة. يمكننا استخدام هذه الحزمة إما عن طريق تشغيل واجهة سطر الأوامر (`bb`) أو عن طريق استخدام [مكتبة JavaScript، `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). مكتبة JavaScript أبطأ بكثير من تشغيل الرمز محليًا، لذلك نستخدم [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) هنا لاستخدام سطر الأوامر.
+نحتاج إلى استخدام [حزمة Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) لإنشاء الإثبات الفعلي لإرساله على السلسلة. يمكننا استخدام هذه الحزمة إما عن طريق تشغيل واجهة سطر الأوامر (`bb`) أو عن طريق استخدام [مكتبة جافا سكريبت، `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). مكتبة جافا سكريبت أبطأ بكثير من تشغيل الرمز محليًا، لذلك نستخدم [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) هنا لاستخدام سطر الأوامر.
 
-لاحظ أنه إذا قررت استخدام `bb.js`، فأنت بحاجة إلى استخدام إصدار متوافق مع إصدار Noir الذي تستخدمه. في وقت كتابة هذا التقرير، يستخدم الإصدار الحالي من Noir (1.0.0-beta.11) إصدار `bb.js` رقم 0.87.
+لاحظ أنه إذا قررت استخدام `bb.js`، فأنت بحاجة إلى استخدام إصدار متوافق مع إصدار نوار الذي تستخدمه. في وقت كتابة هذا التقرير، يستخدم الإصدار الحالي من نوار (1.0.0-beta.11) إصدار `bb.js` رقم 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
@@ -1085,7 +1085,7 @@ const generateProof = async (witness, fileID) => {
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-الإثبات هو مصفوفة JSON من قيم `Field`، يتم تمثيل كل منها بقيمة سداسية عشرية. ومع ذلك، نحتاج إلى إرسالها في المعاملة كقيمة `bytes` واحدة، والتي يمثلها Viem بسلسلة سداسية عشرية كبيرة. هنا نغير التنسيق عن طريق ربط جميع القيم، وإزالة كل `0x`، ثم إضافة واحدة في النهاية.
+الإثبات هو مصفوفة JSON من قيم `Field`، يتم تمثيل كل منها بقيمة سداسية عشرية. ومع ذلك، نحتاج إلى إرسالها في المعاملة كقيمة `bytes` واحدة، والتي يمثلها فيم بسلسلة سداسية عشرية كبيرة. هنا نغير التنسيق عن طريق ربط جميع القيم، وإزالة كل `0x`، ثم إضافة واحدة في النهاية.
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1105,7 +1105,7 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-يجب أن تكون الحقول العامة مصفوفة من قيم 32 بايت. ولكن، بما أننا احتجنا إلى تقسيم تجزئة (هاش) المعاملة بين قيمتي `Field`، فإنها تظهر كقيمة 16 بايت. هنا نضيف أصفارًا حتى يفهم Viem أنها في الواقع 32 بايت.
+يجب أن تكون الحقول العامة مصفوفة من قيم 32 بايت. ولكن، بما أننا احتجنا إلى تقسيم تجزئة (هاش) المعاملة بين قيمتي `Field`، فإنها تظهر كقيمة 16 بايت. هنا نضيف أصفارًا حتى يفهم فيم أنها في الواقع 32 بايت.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
@@ -1214,7 +1214,7 @@ contract ZkBank {
 
 إحدى الطرق التي يمكن بها للخادم انتهاك النزاهة هي توفير معلومات خاطئة عند [طلب البيانات](https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291).
 
-لحل هذه المشكلة، يمكننا كتابة برنامج Noir ثانٍ يتلقى الحسابات كمدخل خاص والعنوان الذي تُطلب معلومات عنه كمدخل عام. الناتج هو الرصيد والـ nonce لهذا العنوان، وتجزئة (هاش) الحسابات.
+لحل هذه المشكلة، يمكننا كتابة برنامج نوار ثانٍ يتلقى الحسابات كمدخل خاص والعنوان الذي تُطلب معلومات عنه كمدخل عام. الناتج هو الرصيد والـ nonce لهذا العنوان، وتجزئة (هاش) الحسابات.
 
 بالطبع، لا يمكن التحقق من هذا الإثبات على السلسلة، لأننا لا نريد نشر nonces والأرصدة على السلسلة. ومع ذلك، يمكن التحقق منه بواسطة رمز العميل الذي يعمل في المتصفح.
 
@@ -1234,13 +1234,13 @@ contract ZkBank {
 
 في التنفيذ الواقعي، من المحتمل أن يكون هناك نوع من دافع الربح للحفاظ على تشغيل الخادم. يمكننا تعزيز هذا الحافز من خلال جعل الخادم ينشر سند توافر يمكن لأي شخص حرقه إذا لم تتم معالجة معاملة قسرية خلال فترة معينة.
 
-### رمز Noir سيئ {#bad-noir-code}
+### رمز نوار سيئ {#bad-noir-code}
 
 عادة، لجعل الناس يثقون في عقد ذكي، نقوم بتحميل الرمز المصدري إلى [مستكشف كتل](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). ولكن، في حالة إثباتات المعرفة الصفرية، هذا غير كافٍ.
 
-يحتوي `Verifier.sol` على مفتاح التحقق، وهو دالة لبرنامج Noir. ولكن، هذا المفتاح لا يخبرنا بما كان عليه برنامج Noir. للحصول على حل موثوق به فعليًا، تحتاج إلى تحميل برنامج Noir (والإصدار الذي أنشأه). خلاف ذلك، قد تعكس إثباتات المعرفة الصفرية برنامجًا مختلفًا، برنامجًا به باب خلفي.
+يحتوي `Verifier.sol` على مفتاح التحقق، وهو دالة لبرنامج نوار. ولكن، هذا المفتاح لا يخبرنا بما كان عليه برنامج نوار. للحصول على حل موثوق به فعليًا، تحتاج إلى تحميل برنامج نوار (والإصدار الذي أنشأه). خلاف ذلك، قد تعكس إثباتات المعرفة الصفرية برنامجًا مختلفًا، برنامجًا به باب خلفي.
 
-حتى يبدأ مستكشفو الكتل في السماح لنا بتحميل برامج Noir والتحقق منها، يجب عليك القيام بذلك بنفسك (ويفضل أن يكون ذلك على [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). بعد ذلك، سيتمكن المستخدمون المتطورون من تنزيل الرمز المصدري، وتجميعه بأنفسهم، وإنشاء `Verifier.sol`، والتحقق من أنه مطابق للرمز الموجود على السلسلة.
+حتى يبدأ مستكشفو الكتل في السماح لنا بتحميل برامج نوار والتحقق منها، يجب عليك القيام بذلك بنفسك (ويفضل أن يكون ذلك على [آي بي إف إس](/developers/tutorials/ipfs-decentralized-ui/)). بعد ذلك، سيتمكن المستخدمون المتطورون من تنزيل الرمز المصدري، وتجميعه بأنفسهم، وإنشاء `Verifier.sol`، والتحقق من أنه مطابق للرمز الموجود على السلسلة.
 
 ## الخلاصة {#conclusion}
 
@@ -1250,6 +1250,6 @@ contract ZkBank {
 
 ## شكر وتقدير {#acknowledgements}
 
-- قرأ Josh Crites مسودة هذا المقال وساعدني في حل مشكلة شائكة في Noir.
+- قرأ Josh Crites مسودة هذا المقال وساعدني في حل مشكلة شائكة في نوار.
 
 أي أخطاء متبقية هي مسؤوليتي.

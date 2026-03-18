@@ -494,12 +494,12 @@ lang: ar
 
 ## المصادر {#sources}
 
-_مقدم جزئيًا من [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) من تأليف [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) بموجب ترخيص CC-BY-SA_
+_مقدم جزئيًا من [Mastering إيثريوم](https://github.com/ethereumbook/ethereumbook) من تأليف [Andreas M. Antonopoulos, غافين وود](https://aantonop.com/books/mastering-ethereum) بموجب ترخيص CC-BY-SA_
 
 <Divider />
 
 ## ساهم في هذه الصفحة {#contribute-to-this-page}
 
-Did we miss something؟ Is something incorrect؟ Help us improve by contributing to this glossary on GitHub!
+Did we miss something؟ Is something incorrect؟ Help us improve by contributing to this glossary on غيت هاب!
 
 [اعرف المزيد حول كيفية المساهمة](/contributing/adding-glossary-terms)

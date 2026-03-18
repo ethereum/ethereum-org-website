@@ -6,27 +6,27 @@ template: translatathon
 
 ![](./participate.png)
 
-مسابقة Translatathon مفتوحة ويمكن لأي شخص المشاركة عن طريق ملء استمارة الطلب والانضمام إلى المشروع في Crowdin.
+مسابقة Translatathon مفتوحة ويمكن لأي شخص المشاركة عن طريق ملء استمارة الطلب والانضمام إلى المشروع في كراودين.
 
-يجمع المترجمون النقاط من خلال اقتراح ترجمات للسلاسل غير المترجمة بلغتهم في محرر Crowdin خلال فترة الترجمة.
+يجمع المترجمون النقاط من خلال اقتراح ترجمات للسلاسل غير المترجمة بلغتهم في محرر كراودين خلال فترة الترجمة.
 
 يتم تحديد النتيجة النهائية لكل مشارك من خلال موقعه في لوحة المتصدرين بناءً على عدد الكلمات التي ترجمها خلال فترة الترجمة وأي نقاط إضافية محتملة جمعها.
 
 ## البدء {#getting-started}
 
-تتم عملية الترجمة في مشروع ethereum.org في Crowdin ويقترح المترجمون ترجماتهم للسلاسل غير المترجمة، والتي تتكون من كل محتوى موقع ethereum.org تقريبًا.
+تتم عملية الترجمة في مشروع ethereum.org في كراودين ويقترح المترجمون ترجماتهم للسلاسل غير المترجمة، والتي تتكون من كل محتوى موقع ethereum.org تقريبًا.
 
 يتم اقتراح الترجمات مباشرة في المحرر عبر الإنترنت، لذلك ليست هناك حاجة لتنزيل أو تحميل أي ملفات أو مخرجات. يتم تتبع كل كلمة مترجمة وحسابها.
 
 **1) انضم إلى المشروع**
 
-- لبدء المساهمة، انضم إلى [مشروع ethereum.org في Crowdin](https://crowdin.com/project/ethereum-org)
+- لبدء المساهمة، انضم إلى [مشروع ethereum.org في كراودين](https://crowdin.com/project/ethereum-org)
 - ستحتاج إلى تسجيل الدخول أو إنشاء حساب - كل ما هو مطلوب هو عنوان بريد إلكتروني وكلمة مرور
 
 **2) اختر لغتك**
 
 - ابحث عن لغتك في قائمة اللغات المستهدفة وافتحها بالنقر فوق اسمها أو علمها
-- إذا كنت ترغب في الترجمة إلى لغة غير متوفرة، فتواصل مع [فريق Ethereum.org](https://crowdin.com/profile/ethdotorg) على Crowdin أو أرسل إلينا بريدًا إلكترونيًا إلى translations@ethereum.org وسنضيف لغات مستهدفة إضافية حسب الطلب
+- إذا كنت ترغب في الترجمة إلى لغة غير متوفرة، فتواصل مع [فريق Ethereum.org](https://crowdin.com/profile/ethdotorg) على كراودين أو أرسل إلينا بريدًا إلكترونيًا إلى translations@ethereum.org وسنضيف لغات مستهدفة إضافية حسب الطلب
 
 **3) افتح ملفًا غير مترجم**
 
@@ -39,13 +39,13 @@ template: translatathon
 - كل سلسلة لها مؤشر حالة يوضح ما إذا كانت _مترجمة_ أو _غير مترجمة_ أو _معتمدة_. إذا كان للسلسلة المصدر ترجمة مقترحة بلغتك بالفعل، فلا داعي لترجمتها
 - يمكنك أيضًا تصفية السلاسل في المحرر لإظهار _غير المترجمة أولاً_ أو _غير المترجمة فقط_
 
-للحصول على دليل مفصل للتنقل في محرر Crowdin واستخدامه، نوصي جميع المشاركين في مسابقة Translatathon بقراءة دليلنا [كيفية الترجمة](/contributing/translation-program/how-to-translate/).
+للحصول على دليل مفصل للتنقل في محرر كراودين واستخدامه، نوصي جميع المشاركين في مسابقة Translatathon بقراءة دليلنا [كيفية الترجمة](/contributing/translation-program/how-to-translate/).
 
 يمكنك أيضًا العثور على بعض النصائح وأفضل الممارسات من خلال الاطلاع على [دليل أسلوب الترجمة](/contributing/translation-program/translators-guide/) الخاص بنا.
 
 **كيفية عمل النقاط**
 
-سيكسب كل مشارك في مسابقة Translatathon نقاطًا في نتيجته النهائية عن طريق ترجمة المحتوى في مشروع ethereum.org في Crowdin والمشاريع الأخرى المؤهلة (القائمة الكاملة للمشاريع المؤهلة متاحة أدناه).
+سيكسب كل مشارك في مسابقة Translatathon نقاطًا في نتيجته النهائية عن طريق ترجمة المحتوى في مشروع ethereum.org في كراودين والمشاريع الأخرى المؤهلة (القائمة الكاملة للمشاريع المؤهلة متاحة أدناه).
 
 النتيجة بسيطة: **كلمة واحدة مترجمة = نقطة واحدة**
 
@@ -65,13 +65,13 @@ template: translatathon
 
 - [برامج تعليمية لمطوري Ethereum.org](https://crowdin.com/project/33388446abbe9d7aa21e42e49bba7f97)
 
-- [واجهة سطر أوامر إيداع EthStaker](https://crowdin.com/project/ethstaker-deposit-cli)
+- [واجهة سطر أوامر إيداع إيث ستيكر](https://crowdin.com/project/ethstaker-deposit-cli)
 
-- [مستندات Eth Docker](https://crowdin.com/project/eth-docker-docs)
+- [مستندات Eth دوكر](https://crowdin.com/project/eth-docker-docs)
 
-- [وثائق Remix IDE](https://crowdin.com/project/remix-translation)
+- [وثائق ريميكس IDE](https://crowdin.com/project/remix-translation)
 
-- [Remix LearnEth](https://crowdin.com/project/remix-learneth)
+- [ريميكس LearnEth](https://crowdin.com/project/remix-learneth)
 
 - [web3.py](https://crowdin.com/project/web3py)
 

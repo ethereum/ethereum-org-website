@@ -1,24 +1,24 @@
 ---
-title: "شرح تفصيلي لعقد جسر Optimism القياسي"
-description: "كيف يعمل الجسر القياسي لـ Optimism؟ لماذا يعمل بهذه الطريقة؟"
-author: Ori Pomerantz
+title: "شرح تفصيلي لعقد جسر أوبتيميزم القياسي"
+description: "كيف يعمل الجسر القياسي لـ أوبتيميزم؟ لماذا يعمل بهذه الطريقة؟"
+author: "أوري بوميرانتز"
 tags: [ "Solidity", "جسر", "الطبقة الثانية" ]
 skill: intermediate
 published: 2022-03-30
 lang: ar
 ---
 
-[Optimism](https://www.optimism.io/) هو [رول أب تفاؤلي](/developers/docs/scaling/optimistic-rollups/).
+[أوبتيميزم](https://www.optimism.io/) هو [رول أب تفاؤلي](/developers/docs/scaling/optimistic-rollups/).
 يمكن لعمليات الرول أب التفاؤلية معالجة المعاملات بسعر أقل بكثير من شبكة إيثريوم الرئيسية (المعروفة أيضًا باسم الطبقة 1 أو L1) لأن المعاملات تتم معالجتها فقط بواسطة عدد قليل من العُقد، بدلاً من كل عقدة على الشبكة.
 في الوقت نفسه، تُكتب جميع البيانات على L1 حتى يمكن إثبات كل شيء وإعادة بنائه مع جميع ضمانات السلامة والتوافر الخاصة بالشبكة الرئيسية.
 
-لاستخدام أصول L1 على Optimism (أو أي L2 آخر)، يجب [نقل الأصول عبر جسر](/bridges/#prerequisites).
+لاستخدام أصول L1 على أوبتيميزم (أو أي L2 آخر)، يجب [نقل الأصول عبر جسر](/bridges/#prerequisites).
 إحدى طرق تحقيق ذلك هي أن يقوم المستخدمون بقفل الأصول (عملات ETH و[رموز ERC-20](/developers/docs/standards/tokens/erc-20/) هي الأكثر شيوعًا) على L1، والحصول على أصول معادلة لاستخدامها على L2.
 في النهاية، قد يرغب من ينتهي به المطاف بهذه الأصول في إعادتها عبر الجسر إلى L1.
 عند القيام بذلك، يتم حرق الأصول على L2 ثم إعادتها إلى المستخدم على L1.
 
-هذه هي الطريقة التي يعمل بها [جسر Optimism القياسي](https://docs.optimism.io/app-developers/bridging/standard-bridge).
-في هذه المقالة، نستعرض الكود المصدري لهذا الجسر لنرى كيف يعمل وندرسه كمثال لكود Solidity مكتوب جيدًا.
+هذه هي الطريقة التي يعمل بها [جسر أوبتيميزم القياسي](https://docs.optimism.io/app-developers/bridging/standard-bridge).
+في هذه المقالة، نستعرض الكود المصدري لهذا الجسر لنرى كيف يعمل وندرسه كمثال لكود سوليديتي مكتوب جيدًا.
 
 ## تدفقات التحكم {#control-flows}
 
@@ -76,13 +76,13 @@ lang: ar
 // SPDX-License-Identifier: MIT
 ```
 
-[يتم إصدار معظم كود Optimism بموجب رخصة MIT](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
+[يتم إصدار معظم كود أوبتيميزم بموجب رخصة MIT](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;
 ```
 
-في وقت كتابة هذا التقرير، أحدث إصدار من Solidity هو 0.8.12.
+في وقت كتابة هذا التقرير، أحدث إصدار من سوليديتي هو 0.8.12.
 حتى يتم إصدار الإصدار 0.9.0، لا نعرف ما إذا كان هذا الكود متوافقًا معه أم لا.
 
 ```solidity
@@ -97,7 +97,7 @@ interface IL1ERC20Bridge {
     event ERC20DepositInitiated(
 ```
 
-في مصطلحات جسر Optimism، يعني _الإيداع_ النقل من L1 إلى L2، ويعني _السحب_ النقل من L2 إلى L1.
+في مصطلحات جسر أوبتيميزم، يعني _الإيداع_ النقل من L1 إلى L2، ويعني _السحب_ النقل من L2 إلى L1.
 
 ```solidity
         address indexed _l1Token,
@@ -106,7 +106,7 @@ interface IL1ERC20Bridge {
 
 في معظم الحالات، لا يكون عنوان ERC-20 على L1 هو نفسه عنوان ERC-20 المكافئ على L2.
 [يمكنك رؤية قائمة عناوين الرموز هنا](https://static.optimism.io/optimism.tokenlist.json).
-العنوان ذو `chainId` 1 موجود على L1 (الشبكة الرئيسية) والعنوان ذو `chainId` 10 موجود على L2 (Optimism).
+العنوان ذو `chainId` 1 موجود على L1 (الشبكة الرئيسية) والعنوان ذو `chainId` 10 موجود على L2 (أوبتيميزم).
 قيمتا `chainId` الأخريان هما لشبكة اختبار Kovan (42) وشبكة اختبار Optimistic Kovan (69).
 
 ```solidity
@@ -227,7 +227,7 @@ interface IL1ERC20Bridge {
 }
 ```
 
-عمليات السحب (والرسائل الأخرى من L2 إلى L1) في Optimism هي عملية من خطوتين:
+عمليات السحب (والرسائل الأخرى من L2 إلى L1) في أوبتيميزم هي عملية من خطوتين:
 
 1. معاملة بدء على L2.
 2. معاملة إنهاء أو مطالبة على L1.
@@ -377,7 +377,7 @@ contract CrossDomainEnabled {
     modifier onlyFromCrossDomainAccount(address _sourceDomainAccount) {
 ```
 
-يمكن الوصول إلى المراسلة عبر النطاقات من قبل أي عقد على البلوكشين حيث يتم تشغيلها (إما شبكة إيثريوم الرئيسية أو Optimism).
+يمكن الوصول إلى المراسلة عبر النطاقات من قبل أي عقد على البلوكشين حيث يتم تشغيلها (إما شبكة إيثريوم الرئيسية أو أوبتيميزم).
 لكننا نحتاج إلى أن يثق الجسر على كل جانب _فقط_ برسائل معينة إذا كانت تأتي من الجسر على الجانب الآخر.
 
 ```solidity
@@ -446,7 +446,7 @@ contract CrossDomainEnabled {
         // slither-disable-next-line reentrancy-events, reentrancy-benign
 ```
 
-[Slither](https://github.com/crytic/slither) هو محلل ثابت يقوم Optimism بتشغيله على كل عقد للبحث عن الثغرات والمشاكل المحتملة الأخرى.
+[سليذر](https://github.com/crytic/slither) هو محلل ثابت يقوم أوبتيميزم بتشغيله على كل عقد للبحث عن الثغرات والمشاكل المحتملة الأخرى.
 في هذه الحالة، يثير السطر التالي ثغرتين أمنيتين:
 
 1. [ثغرات إعادة الدخول (Reentrancy)](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
@@ -458,7 +458,7 @@ contract CrossDomainEnabled {
 }
 ```
 
-في هذه الحالة، لا نقلق بشأن إعادة الدخول، فنحن نعلم أن `getCrossDomainMessenger()` يعيد عنوانًا جديرًا بالثقة، حتى لو لم يكن لدى Slither طريقة لمعرفة ذلك.
+في هذه الحالة، لا نقلق بشأن إعادة الدخول، فنحن نعلم أن `getCrossDomainMessenger()` يعيد عنوانًا جديرًا بالثقة، حتى لو لم يكن لدى سليذر طريقة لمعرفة ذلك.
 
 ### عقد جسر L1 {#the-l1-bridge-contract}
 
@@ -469,8 +469,8 @@ contract CrossDomainEnabled {
 pragma solidity ^0.8.9;
 ```
 
-يمكن أن تكون الواجهات جزءًا من عقود أخرى، لذا يجب أن تدعم مجموعة واسعة من إصدارات Solidity.
-لكن الجسر نفسه هو عقدنا، ويمكننا أن نكون صارمين بشأن إصدار Solidity الذي يستخدمه.
+يمكن أن تكون الواجهات جزءًا من عقود أخرى، لذا يجب أن تدعم مجموعة واسعة من إصدارات سوليديتي.
+لكن الجسر نفسه هو عقدنا، ويمكننا أن نكون صارمين بشأن إصدار سوليديتي الذي يستخدمه.
 
 ```solidity
 /* Interface Imports */
@@ -510,7 +510,7 @@ import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployA
 import { Address } from "@openzeppelin/contracts/utils/Address.sol";
 ```
 
-[أدوات العنوان من OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol). يُستخدم للتمييز بين عناوين العقود وتلك التي تنتمي إلى حسابات مملوكة خارجيًا (EOA).
+[أدوات العنوان من أوبن زبلين](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol). يُستخدم للتمييز بين عناوين العقود وتلك التي تنتمي إلى حسابات مملوكة خارجيًا (EOA).
 
 لاحظ أن هذا ليس حلاً مثاليًا، لأنه لا توجد طريقة للتمييز بين الاستدعاءات المباشرة والاستدعاءات التي تتم من مُنشئ العقد، ولكن على الأقل يتيح لنا هذا تحديد ومنع بعض أخطاء المستخدم الشائعة.
 
@@ -523,7 +523,7 @@ import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.s
 1. Revert (التراجع)
 2. إرجاع `false` (خطأ)
 
-إن التعامل مع كلتا الحالتين سيجعل الكود الخاص بنا أكثر تعقيدًا، لذلك بدلاً من ذلك نستخدم [`SafeERC20` من OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol)، والذي يضمن [أن تؤدي جميع حالات الفشل إلى تراجع](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
+إن التعامل مع كلتا الحالتين سيجعل الكود الخاص بنا أكثر تعقيدًا، لذلك بدلاً من ذلك نستخدم [`SafeERC20` من أوبن زبلين](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol)، والذي يضمن [أن تؤدي جميع حالات الفشل إلى تراجع](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
 
 ```solidity
 /**
@@ -591,7 +591,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     // slither-disable-next-line external-function
 ```
 
-يحدد [اختبار Slither](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external) الوظائف التي لا يتم استدعاؤها من كود العقد وبالتالي يمكن إعلانها `external` بدلاً من `public`.
+يحدد [اختبار سليذر](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external) الوظائف التي لا يتم استدعاؤها من كود العقد وبالتالي يمكن إعلانها `external` بدلاً من `public`.
 يمكن أن تكون تكلفة الغاز للوظائف `external` أقل، لأنه يمكن تزويدها بالمعلمات في calldata.
 يجب أن تكون الوظائف المعلنة `public` قابلة للوصول من داخل العقد.
 لا يمكن للعقود تعديل calldata الخاصة بها، لذا يجب أن تكون المعلمات في الذاكرة.
@@ -637,7 +637,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     }
 ```
 
-هذا هو السبب في أننا بحاجة إلى أدوات `Address` من OpenZeppelin.
+هذا هو السبب في أننا بحاجة إلى أدوات `Address` من أوبن زبلين.
 
 ```solidity
     /**
@@ -698,9 +698,9 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 ```
 
 طريقة عمل الرسائل عبر النطاقات هي أنه يتم استدعاء عقد الوجهة مع الرسالة كـ calldata الخاصة به.
-تقوم عقود Solidity دائمًا بتفسير calldata الخاصة بها وفقًا
+تقوم عقود سوليديتي دائمًا بتفسير calldata الخاصة بها وفقًا
 [لمواصفات ABI](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html).
-تقوم وظيفة Solidity [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions) بإنشاء تلك calldata.
+تقوم وظيفة سوليديتي [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions) بإنشاء تلك calldata.
 
 ```solidity
             IL2ERC20Bridge.finalizeDeposit.selector,
@@ -718,7 +718,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 | Parameter                       | Value                                                                                    | المعنى                                                                                                                                           |
 | ------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | \_l1Token | address(0)                                                            | قيمة خاصة لتمثيل ETH (والذي ليس رمز ERC-20) على L1                                                                            |
-| \_l2Token | Lib_PredeployAddresses.OVM_ETH | عقد L2 الذي يدير ETH على Optimism، `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` (هذا العقد للاستخدام الداخلي لـ Optimism فقط) |
+| \_l2Token | Lib_PredeployAddresses.OVM_ETH | عقد L2 الذي يدير ETH على أوبتيميزم، `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` (هذا العقد للاستخدام الداخلي لـ أوبتيميزم فقط) |
 | \_from    | \_from                                                             | العنوان على L1 الذي يرسل ETH                                                                                                                     |
 | \_to      | \_to                                                               | العنوان على L2 الذي يستقبل ETH                                                                                                                   |
 | المبلغ                          | msg.value                                                                | كمية الـ wei المرسلة (والتي تم إرسالها بالفعل إلى الجسر)                                                                      |
@@ -938,7 +938,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 ## رموز ERC-20 على L2 {#erc-20-tokens-on-l2}
 
 لكي يتناسب رمز ERC-20 مع الجسر القياسي، يجب أن يسمح للجسر القياسي، و _فقط_ الجسر القياسي، بسك الرمز.
-هذا ضروري لأن الجسور تحتاج إلى التأكد من أن عدد الرموز المتداولة على Optimism يساوي عدد الرموز المقفلة داخل عقد جسر L1.
+هذا ضروري لأن الجسور تحتاج إلى التأكد من أن عدد الرموز المتداولة على أوبتيميزم يساوي عدد الرموز المقفلة داخل عقد جسر L1.
 إذا كان هناك عدد كبير جدًا من الرموز على L2، فلن يتمكن بعض المستخدمين من إعادة أصولهم إلى L1 عبر الجسر.
 بدلاً من جسر موثوق به، سنعيد إنشاء [الخدمات المصرفية الاحتياطية الجزئية](https://www.investopedia.com/terms/f/fractionalreservebanking.asp) بشكل أساسي.
 إذا كان هناك عدد كبير جدًا من الرموز على L1، فستبقى بعض هذه الرموز مقفلة داخل عقد الجسر إلى الأبد لأنه لا توجد طريقة لإطلاقها دون حرق رموز L2.
@@ -999,8 +999,8 @@ pragma solidity ^0.8.9;
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-[عقد ERC-20 من OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
-لا تؤمن Optimism بإعادة اختراع العجلة، خاصة عندما تكون العجلة مدققة جيدًا وتحتاج إلى أن تكون جديرة بالثقة بما يكفي لحمل الأصول.
+[عقد ERC-20 من أوبن زبلين](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
+لا تؤمن أوبتيميزم بإعادة اختراع العجلة، خاصة عندما تكون العجلة مدققة جيدًا وتحتاج إلى أن تكون جديرة بالثقة بما يكفي لحمل الأصول.
 
 ```solidity
 import "./IL2StandardERC20.sol";
@@ -1077,12 +1077,12 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 
 يُسمح فقط لجسر L2 بسك وحرق الأصول.
 
-`_mint` و `_burn` مُعرَّفتان فعليًا في [عقد ERC-20 من OpenZeppelin](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
+`_mint` و `_burn` مُعرَّفتان فعليًا في [عقد ERC-20 من أوبن زبلين](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 هذا العقد لا يكشفهما خارجيًا، لأن شروط سك وحرق الرموز متنوعة مثل عدد طرق استخدام ERC-20.
 
 ## كود جسر L2 {#l2-bridge-code}
 
-هذا هو الكود الذي يشغل الجسر على Optimism.
+هذا هو الكود الذي يشغل الجسر على أوبتيميزم.
 [مصدر هذا العقد موجود هنا](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol).
 
 ```solidity
@@ -1101,7 +1101,7 @@ import { IL2ERC20Bridge } from "./IL2ERC20Bridge.sol";
 1. على L1، تبدأ الإيداعات وتنهي عمليات السحب.
    هنا تبدأ عمليات السحب وتنهي الإيداعات.
 2. على L1، من الضروري التمييز بين ETH ورموز ERC-20.
-   على L2، يمكننا استخدام نفس الوظائف لكليهما لأنه داخليًا تتم معالجة أرصدة ETH على Optimism كرمز ERC-20 بالعنوان [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://explorer.optimism.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000).
+   على L2، يمكننا استخدام نفس الوظائف لكليهما لأنه داخليًا تتم معالجة أرصدة ETH على أوبتيميزم كرمز ERC-20 بالعنوان [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://explorer.optimism.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000).
 
 ```solidity
 /* Library Imports */
@@ -1350,6 +1350,6 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
 تعمل هذه الجسور عادةً من خلال امتلاك أصول على L1، والتي توفرها على الفور مقابل رسوم رمزية (غالبًا ما تكون أقل من تكلفة الغاز للسحب عبر الجسر القياسي).
 عندما يتوقع الجسر (أو الأشخاص الذين يديرونه) نقصًا في أصول L1، فإنه ينقل أصولًا كافية من L2. بما أن هذه عمليات سحب كبيرة جدًا، يتم إطفاء تكلفة السحب على مبلغ كبير وتكون نسبة مئوية أصغر بكثير.
 
-نأمل أن تكون هذه المقالة قد ساعدتك على فهم المزيد حول كيفية عمل الطبقة 2، وكيفية كتابة كود Solidity واضح وآمن.
+نأمل أن تكون هذه المقالة قد ساعدتك على فهم المزيد حول كيفية عمل الطبقة 2، وكيفية كتابة كود سوليديتي واضح وآمن.
 
 [انظر هنا لمزيد من أعمالي](https://cryptodocguy.pro/).

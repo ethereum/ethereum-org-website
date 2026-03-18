@@ -10,7 +10,7 @@ source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 ---
 
-In this article, I’m going to show you how to code Craigslist for the Ethereum blockchain.
+In this article, I’m going to show you how to code Craigslist for the إيثريوم blockchain.
 
 Before Gumtree, Ebay and Craigslist, classified boards were mostly made of cork or paper. There were classifieds boards in school corridors, newspapers, streetlights, storefronts.
 
@@ -53,7 +53,7 @@ struct Trade {
 
 So there is someone posting the advert. An item for sale. A price for the item. The status of the trade which can be open, executed or cancelled.
 
-All these trades will be kept in a mapping. Because everything in Solidity seems to be a mapping. Also because it is convenient.
+All these trades will be kept in a mapping. Because everything in سوليديتي seems to be a mapping. Also because it is convenient.
 
 ```solidity
 mapping(uint256 => Trade) public trades;

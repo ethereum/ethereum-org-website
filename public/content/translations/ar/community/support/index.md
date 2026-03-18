@@ -1,6 +1,6 @@
 ---
 title: "دعم إيثريوم"
-description: "احصل على الدعم في النظام الاقتصادي Ethereum."
+description: "احصل على الدعم في النظام الاقتصادي إيثريوم."
 lang: ar
 ---
 
@@ -8,7 +8,7 @@ lang: ar
 
 ## دعم إيثريوم الرسمي {#official-support}
 
-هل تبحث عن دعم Ethereum الرسمي؟ أول شيء يجب أن تعرفه هو أن الإيثريوم لا مركزي. وهذا يعني أنه لا توجد منظمة مركزية أو كيان أو شخص يمتلك إيثريوم، ولهذا السبب، لا توجد قنوات دعم رسمية.
+هل تبحث عن دعم إيثريوم الرسمي؟ أول شيء يجب أن تعرفه هو أن الإيثريوم لا مركزي. وهذا يعني أنه لا توجد منظمة مركزية أو كيان أو شخص يمتلك إيثريوم، ولهذا السبب، لا توجد قنوات دعم رسمية.
 
 فهم الطبيعة اللامركزية لإيثريوم أمر حيوي لأن **أي شخص يدعي أنه دعم رسمي لإيثريوم من المحتمل أن يحاول خداعك!** أفضل حماية ضد المحتالين هي تثقيف نفسك وأخذ الأمان على محمل الجد.
 
@@ -20,13 +20,13 @@ lang: ar
   تعلّم أساسيات إيثريوم
 </DocLink>
 
-على الرغم من نقص الدعم الرسمي، فإن العديد من المجموعات والمجتمعات والمشاريع عبر نظام إيثريوم البيئي سعداء بتقديم المساعدة، ويمكنك العثور على الكثير من المعلومات والموارد المفيدة في هذه الصفحة. لا تزال لديك أسئلة؟ انضم إلى [Discord الخاص بـ ethereum.org](https://discord.gg/ethereum-org)، وسنحاول مساعدتك.
+على الرغم من نقص الدعم الرسمي، فإن العديد من المجموعات والمجتمعات والمشاريع عبر نظام إيثريوم البيئي سعداء بتقديم المساعدة، ويمكنك العثور على الكثير من المعلومات والموارد المفيدة في هذه الصفحة. لا تزال لديك أسئلة؟ انضم إلى [ديسكورد الخاص بـ ethereum.org](https://discord.gg/ethereum-org)، وسنحاول مساعدتك.
 
 ## الأسئلة الشائعة {#faq}
 
 ### لقد أرسلت ETH إلى المحفظة الخاطئة {#wrong-wallet}
 
-المعاملة المرسلة على Ethereum لا رجعة فيها. لسوء الحظ، إذا قمت بإرسال ETH إلى المحفظة الخاطئة، فلا توجد طريقة لاسترداد هذه الأموال. لا تملك أي منظمة مركزية أو كيان أو شخص واحد الإيثيريوم، مما يعني أنه لا يمكن لأحد ظهر المعاملات. لذلك، من الضروري دائمًا التحقق جيدًا من معاملاتك قبل إرسالها.
+المعاملة المرسلة على إيثريوم لا رجعة فيها. لسوء الحظ، إذا قمت بإرسال ETH إلى المحفظة الخاطئة، فلا توجد طريقة لاسترداد هذه الأموال. لا تملك أي منظمة مركزية أو كيان أو شخص واحد الإيثيريوم، مما يعني أنه لا يمكن لأحد ظهر المعاملات. لذلك، من الضروري دائمًا التحقق جيدًا من معاملاتك قبل إرسالها.
 
 ### كيف يمكنني المطالبة بمسابقتي لإيثريوم؟ {#giveaway-scam}
 
@@ -36,9 +36,9 @@ lang: ar
 
 ### معاملتي عالقة {#stuck-transaction}
 
-يمكن أن تتعطل المعاملات على Ethereum في بعض الأحيان إذا دفعت رسوم معاملة أقل مما هو مطلوب بسبب طلب الشبكة. توفر العديد من المحافظ خيارًا لإعادة إرسال نفس المعاملة مع رسوم معاملة أعلى للسماح بمعالجة المعاملة. وبدلاً من ذلك، يمكنك إلغاء معاملة معلقة عن طريق إرسال معاملة إلى عنوانك الخاص واستخدام نفس رَقْم المعاملة المعلقة.
+يمكن أن تتعطل المعاملات على إيثريوم في بعض الأحيان إذا دفعت رسوم معاملة أقل مما هو مطلوب بسبب طلب الشبكة. توفر العديد من المحافظ خيارًا لإعادة إرسال نفس المعاملة مع رسوم معاملة أعلى للسماح بمعالجة المعاملة. وبدلاً من ذلك، يمكنك إلغاء معاملة معلقة عن طريق إرسال معاملة إلى عنوانك الخاص واستخدام نفس رَقْم المعاملة المعلقة.
 
-[كيفية تسريع أو إلغاء معاملة معلقة على MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
+[كيفية تسريع أو إلغاء معاملة معلقة على ميتاماسك](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
 
 [كيفية إلغاء معاملات إيثريوم المعلقة](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
@@ -48,16 +48,16 @@ lang: ar
 
 ### كيف يمكنني أن أصبح مسؤولاً/أدير أداة التحقق من الصحة؟ كيفية تجميد العملات {#how-to-stake}
 
-لكي تصبح مدققًا، يجب عليك مشاركة 32 ETH في عقد إيداع Ethereum وإعداد عقدة مدقق. تتوفر المزيد من المعلومات على [صفحات تجميد العملات](/staking) وعلى [منصة إطلاق تجميد العملات](https://launchpad.ethereum.org/).
+لكي تصبح مدققًا، يجب عليك مشاركة 32 ETH في عقد إيداع إيثريوم وإعداد عقدة مدقق. تتوفر المزيد من المعلومات على [صفحات تجميد العملات](/staking) وعلى [منصة إطلاق تجميد العملات](https://launchpad.ethereum.org/).
 
 ## بناء التطبيقات اللامركزية {#building-support}
 
-يمكن أن يكون البناء صعبًا. فيما يلي بعض المساحات التي تركز على التطوير مع مطوري Ethereum ذوي الخبرة الذين يسعدهم تقديم المساعدة.
+يمكن أن يكون البناء صعبًا. فيما يلي بعض المساحات التي تركز على التطوير مع مطوري إيثريوم ذوي الخبرة الذين يسعدهم تقديم المساعدة.
 
-- [جامعة Alchemy](https://university.alchemy.com/#starter_code)
+- [جامعة ألكيمي](https://university.alchemy.com/#starter_code)
 - [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
 - [إيثريوم StackExchange](https://ethereum.stackexchange.com/)
-- [جامعة Web3](https://www.web3.university/)
+- [جامعة ويب3](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 
 يمكنك أيضًا العثور على الوثائق وأدلة التطوير في قسم [موارد مطوري إيثريوم](/developers/) الخاص بنا.
@@ -71,34 +71,34 @@ lang: ar
 - [سوليديتي](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
-- [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Alchemy](http://alchemy.com/discord)
-- [Tenderly](https://discord.gg/fBvDJYR)
+- [هارد هات](https://discord.gg/xtrMGhmbfZ)
+- [ألكيمي](http://alchemy.com/discord)
+- [تيندرلي](https://discord.gg/fBvDJYR)
 
 ## تشغيل عقدة {#node-support}
 
 إذا كنت تشغيل عقدة أو أداة التحقق من الصحة، فإليك بعض المجتمعات المخصصة لمساعدتك على البدء.
 
-- [EthStaker discord](https://discord.gg/ethstaker)
-- [EthStaker reddit](https://www.reddit.com/r/ethstaker)
+- [إيث ستيكر discord](https://discord.gg/ethstaker)
+- [إيث ستيكر reddit](https://www.reddit.com/r/ethstaker)
 
-تمتلك معظم الأفرقة التي تبني عملاء Ethereum أيضًا مساحات مخصصة مواجهة للعامة حيث يمكنك الحصول على الدعم وطرح الأسئلة.
+تمتلك معظم الأفرقة التي تبني عملاء إيثريوم أيضًا مساحات مخصصة مواجهة للعامة حيث يمكنك الحصول على الدعم وطرح الأسئلة.
 
 ### عملاء التنفيذ {#execution-clients}
 
-- [Geth](https://discord.gg/FqDzupGyYf)
-- [Nethermind](https://discord.gg/YJx3pm8z5C)
-- [Besu](https://discord.gg/p8djYngzKN)
-- [Erigon](https://github.com/ledgerwatch/erigon/issues)
-- [Reth](https://github.com/paradigmxyz/reth/discussions)
+- [غيث](https://discord.gg/FqDzupGyYf)
+- [نيذرمايند](https://discord.gg/YJx3pm8z5C)
+- [بيسو](https://discord.gg/p8djYngzKN)
+- [إريغون](https://github.com/ledgerwatch/erigon/issues)
+- [ريث](https://github.com/paradigmxyz/reth/discussions)
 
 ### عملاء الإجماع {#consensus-clients}
 
 - [بريسم](https://discord.gg/prysmaticlabs)
-- [Nimbus](https://discord.gg/nSmEH3qgFv)
-- [Lighthouse](https://discord.gg/cyAszAh)
-- [Teku](https://discord.gg/7hPv2T6)
-- [Lodestar](https://discord.gg/aMxzVcr)
-- [Grandine](https://discord.gg/H9XCdUSyZd)
+- [نيمبوس](https://discord.gg/nSmEH3qgFv)
+- [لايت هاوس](https://discord.gg/cyAszAh)
+- [تيكو](https://discord.gg/7hPv2T6)
+- [لودستار](https://discord.gg/aMxzVcr)
+- [جراندين](https://discord.gg/H9XCdUSyZd)
 
 يمكنك أيضًا [تعلُّم كيفية تشغيل عقدة من هنا](/developers/docs/nodes-and-clients/run-a-node/).

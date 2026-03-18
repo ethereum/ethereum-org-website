@@ -1,6 +1,6 @@
 ---
 title: "مكتبة العقود الذكية "
-description: "اكتشف مكتبات العقود الذكية القابلة لإعادة الاستخدام وكتل البناء لتسريع مشاريع تطوير Ethereum الخاصة بك."
+description: "اكتشف مكتبات العقود الذكية القابلة لإعادة الاستخدام وكتل البناء لتسريع مشاريع تطوير إيثريوم الخاصة بك."
 lang: ar
 ---
 
@@ -18,9 +18,9 @@ lang: ar
 
 عند كتابة العقود الذكية، هناك فرصة جيدة أن تجد نفسك تكتب أنماطًا مشابهة مرارًا وتكرارًا، مثل تعيين عنوان _admin_ لتنفيذ عمليات محمية في العقد، أو إضافة زر _إيقاف_ للطوارئ في حالة وجود مشكلة غير متوقعة.
 
-عادة ما توفر مكتبات العقود الذكية تطبيقات قابلة لإعادة الاستخدام لهذه السلوكيات [كمكتبات](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) أو عبر [الوراثة](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) في Solidity.
+عادة ما توفر مكتبات العقود الذكية تطبيقات قابلة لإعادة الاستخدام لهذه السلوكيات [كمكتبات](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) أو عبر [الوراثة](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) في سوليديتي.
 
-على سبيل المثال، إليك نسخة مبسطة من [عقد `Ownable`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) من [مكتبة عقود OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts)، الذي يعيِّن عنواناً كمالك للعقد، ويوفر معدِّلاً لتقييد الوصول إلى طريقة لذلك المالك فقط.
+على سبيل المثال، إليك نسخة مبسطة من [عقد `Ownable`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) من [مكتبة عقود أوبن زبلين](https://github.com/OpenZeppelin/openzeppelin-contracts)، الذي يعيِّن عنواناً كمالك للعقد، ويوفر معدِّلاً لتقييد الوصول إلى طريقة لذلك المالك فقط.
 
 ```solidity
 contract Ownable {
@@ -56,13 +56,13 @@ contract MyContract is Ownable {
 
 لتسهيل [القابلية للتركيب والتشغيل البيني](/developers/docs/smart-contracts/composability/)، حدد مجتمع إيثريوم العديد من المعايير في شكل **ERCs**. يمكنك قراءة المزيد عنها في قسم [المعايير](/developers/docs/standards/).
 
-عند تضمين ERC كجزء من عقودك، فمن الجيد البحث عن تطبيقات قياسية بدلاً من محاولة طرح تطبيقاتك الخاصة. تتضمن العديد من مكتبات العقود الذكية تطبيقات لـ ERCs الأكثر شيوعًا. على سبيل المثال، يمكن العثور على [معيار الرمز القابل للاستبدال ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) واسع الانتشار في [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md) و[DappSys](https://github.com/dapphub/ds-token/) و[OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). بالإضافة إلى ذلك، توفر بعض مراكز ERC أيضًا تطبيقات أساسية كجزء من ERC نفسها.
+عند تضمين ERC كجزء من عقودك، فمن الجيد البحث عن تطبيقات قياسية بدلاً من محاولة طرح تطبيقاتك الخاصة. تتضمن العديد من مكتبات العقود الذكية تطبيقات لـ ERCs الأكثر شيوعًا. على سبيل المثال، يمكن العثور على [معيار الرمز القابل للاستبدال ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) واسع الانتشار في [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md) و[DappSys](https://github.com/dapphub/ds-token/) و[أوبن زبلين](https://docs.openzeppelin.com/contracts/3.x/erc20). بالإضافة إلى ذلك، توفر بعض مراكز ERC أيضًا تطبيقات أساسية كجزء من ERC نفسها.
 
 ومن الجدير بالذكر أن بعض مراكز ERC ليست قائمة بذاتها، ولكنها إضافات إلى مراكز ERC أخرى. على سبيل المثال، يضيف [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) امتدادًا إلى ERC20 لتحسين قابليته للاستخدام.
 
 ## كيفية إضافة مكتبة {#how-to}
 
-قم دائمًا بالرجوع إلى وثائق المكتبة التي تقوم بتضمينها للحصول على تعليمات محددة حول كيفية تضمينها في مشروعك. يتم تجميع العديد من مكتبات عقود Solidity باستخدام `npm`، لذا يمكنك فقط `npm install`. ستبحث معظم أدوات [تجميع](/developers/docs/smart-contracts/compiling/) العقود في `node_modules` الخاص بك عن مكتبات العقود الذكية، لذا يمكنك القيام بما يلي:
+قم دائمًا بالرجوع إلى وثائق المكتبة التي تقوم بتضمينها للحصول على تعليمات محددة حول كيفية تضمينها في مشروعك. يتم تجميع العديد من مكتبات عقود سوليديتي باستخدام `npm`، لذا يمكنك فقط `npm install`. ستبحث معظم أدوات [تجميع](/developers/docs/smart-contracts/compiling/) العقود في `node_modules` الخاص بك عن مكتبات العقود الذكية، لذا يمكنك القيام بما يلي:
 
 ```solidity
 // سيؤدي هذا إلى تحميل مكتبة @openzeppelin/contracts من node_modules الخاصة بك
@@ -73,7 +73,7 @@ contract MyNFT is ERC721 {
 }
 ```
 
-بغض النظر عن الطريقة التي تستخدمها، عند تضمين مكتبة، راقب دائمًا إصدار [اللغة](/developers/docs/smart-contracts/languages/). على سبيل المثال، لا يمكنك استخدام مكتبة لـ Solidity 0.6 إذا كنت تكتب عقودك في Solidity 0.5.
+بغض النظر عن الطريقة التي تستخدمها، عند تضمين مكتبة، راقب دائمًا إصدار [اللغة](/developers/docs/smart-contracts/languages/). على سبيل المثال، لا يمكنك استخدام مكتبة لـ سوليديتي 0.6 إذا كنت تكتب عقودك في سوليديتي 0.5.
 
 ## متى يجب الاستخدام {#when-to-use}
 
@@ -87,7 +87,7 @@ contract MyNFT is ERC721 {
 
 ## أدوات ذات صلة {#related-tools}
 
-**عقود OpenZeppelin -** **_المكتبة الأكثر شيوعًا لتطوير العقود الذكية الآمنة._**
+**عقود أوبن زبلين -** **_المكتبة الأكثر شيوعًا لتطوير العقود الذكية الآمنة._**
 
 - [توثيق](https://docs.openzeppelin.com/contracts/)
 - [غيت هاب](https://github.com/OpenZeppelin/openzeppelin-contracts)
@@ -98,11 +98,11 @@ contract MyNFT is ERC721 {
 - [توثيق](https://dappsys.readthedocs.io/)
 - [غيت هاب](https://github.com/dapphub/dappsys)
 
-**HQ20 -** **_مشروع Solidity مع العقود والمكتبات والأمثلة لمساعدتك في بناء تطبيقات موزعة كاملة الميزات للعالم الحقيقي._**
+**HQ20 -** **_مشروع سوليديتي مع العقود والمكتبات والأمثلة لمساعدتك في بناء تطبيقات موزعة كاملة الميزات للعالم الحقيقي._**
 
 - [غيت هاب](https://github.com/HQ20/contracts)
 
-**thirdweb Solidity SDK -** **_يوفر الأدوات اللازمة لبناء عقود ذكية مخصصة بكفاءة_**
+**thirdweb سوليديتي SDK -** **_يوفر الأدوات اللازمة لبناء عقود ذكية مخصصة بكفاءة_**
 
 - [توثيق](https://portal.thirdweb.com/contracts/build/overview)
 - [غيت هاب](https://github.com/thirdweb-dev/contracts)

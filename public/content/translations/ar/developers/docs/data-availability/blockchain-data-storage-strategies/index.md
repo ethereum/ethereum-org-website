@@ -39,12 +39,12 @@ lang: ar
 
 ## EIP-4844 النقط {#eip-4844-blobs}
 
-بدءًا من [شوكة Dencun الصلبة](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md)، تتضمن سلسلة كتل الإيثيريوم [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)، والتي تُضاف إلى كتل بيانات الإيثيريوم ذات عمر محدود (في البداية حوالي [18 يومًا](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)).
+بدءًا من [شوكة دينكون الصلبة](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md)، تتضمن سلسلة كتل الإيثيريوم [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)، والتي تُضاف إلى كتل بيانات الإيثيريوم ذات عمر محدود (في البداية حوالي [18 يومًا](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)).
 يتم تسعير هذه الكتل بشكل منفصل عن [غاز التنفيذ](/developers/docs/gas)، على الرغم من استخدام آلية مماثلة. إنها طريقة رخيصة لنشر البيانات المؤقتة.
 
 حالة الاستخدام الرئيسية لكتل ​​EIP-4844 هي أن تقوم التجميعات بنشر معاملاتها. تحتاج [التراكمات المتفائلة](/developers/docs/scaling/optimistic-rollups) إلى نشر المعاملات على سلاسل الكتل الخاصة بها. يجب أن تكون هذه المعاملات متاحة لأي شخص خلال [فترة التحدي](https://docs.optimism.io/connect/resources/glossary#challenge-period) لتمكين [المحققين](https://docs.optimism.io/connect/resources/glossary#validator) من إصلاح الخطأ إذا قام [sequencer](https://docs.optimism.io/connect/resources/glossary#sequencer) الخاص بالتجميع بنشر جذر حالة غير صحيح.
 
-ومع ذلك، بمجرد مرور فترة التحدي واستكمال جذر الحالة، فإن الغرض المتبقي لمعرفة هذه المعاملات هو تكرار الحالة الحالية للسلسلة. تتوفر هذه الحالة أيضًا من عقد السلسلة، مع الحاجة إلى قدر أقل كثيرًا من المعالجة. لذا يجب أن تظل معلومات المعاملات محفوظة في عدد قليل من الأماكن، مثل [مستكشفات الكتل](/developers/docs/data-and-analytics/block-explorers)، ولكن ليست هناك حاجة إلى الدفع مقابل مستوى مقاومة الرقابة الذي توفره Ethereum.
+ومع ذلك، بمجرد مرور فترة التحدي واستكمال جذر الحالة، فإن الغرض المتبقي لمعرفة هذه المعاملات هو تكرار الحالة الحالية للسلسلة. تتوفر هذه الحالة أيضًا من عقد السلسلة، مع الحاجة إلى قدر أقل كثيرًا من المعالجة. لذا يجب أن تظل معلومات المعاملات محفوظة في عدد قليل من الأماكن، مثل [مستكشفات الكتل](/developers/docs/data-and-analytics/block-explorers)، ولكن ليست هناك حاجة إلى الدفع مقابل مستوى مقاومة الرقابة الذي توفره إيثريوم.
 
 تنشر [عمليات التجميع بدون معرفة](/developers/docs/scaling/zk-rollups/#data-availability) أيضًا بيانات المعاملات الخاصة بها لتمكين العقد الأخرى من تكرار الحالة الحالية والتحقق من أدلة الصلاحية، ولكن مرة أخرى يعد هذا متطلبًا قصير المدى.
 
@@ -103,7 +103,7 @@ lang: ar
 
 تتمتع العقود الذكية بالقدرة على الوصول إلى [التخزين المستمر](https://docs.alchemy.com/docs/smart-contract-storage-layout#what-is-storage-memory). ومع ذلك، فهو مكلف للغاية. إن كتابة كلمة مكونة من 32 بايت في فتحة تخزين فارغة مسبقًا قد يكلف 22100 غازًا (https://www.evm.codes/#55?fork=cancun). بسعر 12 جيجاوي/غاز و2300 دولار/إيثريوم، يعادل هذا حوالي 61 سنتًا لكل عملية كتابة، أو 19.5 دولارًا لكل كيلوبايت.
 
-هذا هو الشكل الأكثر تكلفة للتخزين في Ethereum.
+هذا هو الشكل الأكثر تكلفة للتخزين في إيثريوم.
 
 ## ملخص {#summary}
 

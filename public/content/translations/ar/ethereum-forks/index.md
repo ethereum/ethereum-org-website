@@ -11,11 +11,11 @@ sidebarDepth: 1
 
 <ExpandableCard title="ما هي الانقسامات؟" contentPreview="تغييرات في قواعد بروتوكول إيثريوم تتضمن غالبًا ترقيات فنية مخططًا لها.">
 
-الانقسامات "Forks" هي عندما يلزم إجراء ترقيات أو تغييرات تقنية رئيسية على الشبكة - تنبع عادةً من [اقتراحات تحسين Ethereum (EIPs)](/eips/) وتغيير "قواعد" البروتوكول.
+الانقسامات "Forks" هي عندما يلزم إجراء ترقيات أو تغييرات تقنية رئيسية على الشبكة - تنبع عادةً من [اقتراحات تحسين إيثريوم (EIPs)](/eips/) وتغيير "قواعد" البروتوكول.
 
 وعندما تكون هناك حاجة إلى تحسينات في البرمجيات التقليدية الخاضعة للرقابة المركزية، ستكتفي الشركة بنشر نسخة جديدة للمستخدم النهائي. تعمل سلاسل الكتل"البلوكتشين" بشكل مختلف لأنه لا توجد ملكية مركزية. [عملاء إيثيريوم](/developers/docs/nodes-and-clients/) يجب أن يحدّثوا برامجياتهم لتنفيذ قواعد الشوكات الجديدة. يجب على صانعوا بلوك بلس (عمال المناجم في عالم إثبات العمل, المصححون في عالم إثبات الحصة) والعقد إنشاء كتل برمجية والتحقق من صحة القواعد الجديدة. [المزيد عن آليات الإجماع](/developers/docs/consensus-mechanisms/)
 
-قد تؤدي هذه التغييرات في القواعد إلى انقسام مؤقت في الشبكة. يمكن إنتاج كتل جديدة وفقاً للقواعد الجديدة أو القديمة. عادةً ما يتم الإتفاق على التَفَرُّعات في وقت مبكر بحيث يعتمد العملاء التغيرات في الوحدة و يصبح التَفَرُّع مع التحديثات السلسلة الرئيسية. ومع ذلك، في حالات نادرة، يمكن أن تؤدي الخلافات حول الشوكات إلى انقسام الشبكة بشكل دائم - وأبرزها إنشاء Ethereum Classic مع <a href="#dao-fork">شوكة DAO</a>.
+قد تؤدي هذه التغييرات في القواعد إلى انقسام مؤقت في الشبكة. يمكن إنتاج كتل جديدة وفقاً للقواعد الجديدة أو القديمة. عادةً ما يتم الإتفاق على التَفَرُّعات في وقت مبكر بحيث يعتمد العملاء التغيرات في الوحدة و يصبح التَفَرُّع مع التحديثات السلسلة الرئيسية. ومع ذلك، في حالات نادرة، يمكن أن تؤدي الخلافات حول الشوكات إلى انقسام الشبكة بشكل دائم - وأبرزها إنشاء إيثريوم Classic مع <a href="#dao-fork">شوكة داو</a>.
 </ExpandableCard>
 
 <ExpandableCard title="لماذا تحمل بعض الترقيات أسماء متعددة؟" contentPreview="أسماء الترقيات تتبع نمطًا معينًا">
@@ -58,8 +58,8 @@ sidebarDepth: 1
 | ترقية التنفيذ | ترقية الإجماع | الاسم المختصر |
 | ------------- | ------------- | ------------- |
 | Shanghai      | Capella       | "Shapella"    |
-| Cancun        | Deneb         | "Dencun"      |
-| Prague        | Electra       | "Pectra"      |
+| Cancun        | Deneb         | "دينكون"      |
+| Prague        | Electra       | "بيكترا"      |
 | Osaka         | Fulu          | "Fusaka"      |
 </ExpandableCard>
 
@@ -77,15 +77,15 @@ sidebarDepth: 1
 
 [المزيد عن Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra ("Pectra") {#pectra}
+### Prague-Electra ("بيكترا") {#pectra}
 
 <NetworkUpgradeSummary name="pectra" />
 
-تضمنت ترقية Prague-Electra ("Pectra") العديد من التحسينات على بروتوكول Ethereum بهدف تحسين تجربة جميع المستخدمين وشبكات الطبقة 2 والمشاركين ومشغلي العقد.
+تضمنت ترقية Prague-Electra ("بيكترا") العديد من التحسينات على بروتوكول إيثريوم بهدف تحسين تجربة جميع المستخدمين وشبكات الطبقة 2 والمشاركين ومشغلي العقد.
 
 حصل التخزين على ترقية مع حسابات التحقق المركبة، وتحسين التحكم في الأموال المخزنة باستخدام عنوان سحب التنفيذ. أدى EIP-7251 إلى زيادة الحد الأقصى للرصيد الفعال لمحقق واحد إلى 2048، مما أدى إلى تحسين كفاءة رأس المال للمساهمين. مكّن EIP-7002 حساب التنفيذ من تشغيل إجراءات التحقق بشكل آمن، بما في ذلك الخروج أو سحب أجزاء من الأموال، مما أدى إلى تحسين تجربة المشاركين في ETH، مع المساعدة في تعزيز المساءلة لمشغلي العقد.
 
-ركزت أجزاء أخرى من الترقية على تحسين تجربة المستخدمين العاديين. جلب EIP-7702 القدرة لحساب عادي ليس عقدًا ذكيًا ([EOA](/glossary/#eoa)) على تنفيذ نص برمجي مشابه لعقد ذكي. أدى هذا إلى فتح وظائف جديدة غير محدودة لحسابات Ethereum التقليدية، مثل تجميع المعاملات، ورعاية الغاز، والمصادقة البديلة، وضوابط الإنفاق القابلة للبرمجة، وآليات استرداد الحساب والمزيد.
+ركزت أجزاء أخرى من الترقية على تحسين تجربة المستخدمين العاديين. جلب EIP-7702 القدرة لحساب عادي ليس عقدًا ذكيًا ([EOA](/glossary/#eoa)) على تنفيذ نص برمجي مشابه لعقد ذكي. أدى هذا إلى فتح وظائف جديدة غير محدودة لحسابات إيثريوم التقليدية، مثل تجميع المعاملات، ورعاية الغاز، والمصادقة البديلة، وضوابط الإنفاق القابلة للبرمجة، وآليات استرداد الحساب والمزيد.
 
 <ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Pectra" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
@@ -116,16 +116,16 @@ sidebarDepth: 1
 </ul>
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
-- [كيف ستعزز ترقية Pectra تجربة تجميد العملات](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [بيكترا.wtf](https://pectra.wtf)
+- [كيف ستعزز ترقية بيكترا تجربة تجميد العملات](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [اقرأ مواصفات ترقية Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
-- [الأسئلة الشائعة حول Prague-Electra ("Pectra")](/roadmap/pectra/)
+- [الأسئلة الشائعة حول Prague-Electra ("بيكترا")](/roadmap/pectra/)
 
 <Divider />
 
 ## 2024 {#2024}
 
-### Cancun-Deneb ("Dencun") {#dencun}
+### Cancun-Deneb ("دينكون") {#dencun}
 
 <NetworkUpgradeSummary name="dencun" />
 
@@ -172,7 +172,7 @@ sidebarDepth: 1
 </ExpandableCard>
 
 - [اقرأ مواصفات ترقية Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
-- [الأسئلة الشائعة حول Cancun-Deneb ("Dencun")](/roadmap/dencun/)
+- [الأسئلة الشائعة حول Cancun-Deneb ("دينكون")](/roadmap/dencun/)
 
 <Divider />
 
@@ -184,7 +184,7 @@ sidebarDepth: 1
 
 #### ملخص Shanghai {#shanghai-summary}
 
-أدى ترقية شنغهاي إلى جلب عمليات سحب الرهان إلى طبقة التنفيذ. بالتزامن مع ترقية Capella، مكّن هذا الكتل من قبول عمليات السحب، مما يسمح للمشاركين بسحب ETH الخاص بهم من Beacon Chain إلى طبقة التنفيذ.
+أدى ترقية شنغهاي إلى جلب عمليات سحب الرهان إلى طبقة التنفيذ. بالتزامن مع ترقية Capella، مكّن هذا الكتل من قبول عمليات السحب، مما يسمح للمشاركين بسحب ETH الخاص بهم من بيكون تشين إلى طبقة التنفيذ.
 
 <ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Shanghai" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
@@ -192,7 +192,7 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>يبدأ تدفئة عنوان <code>COINBASE</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3855">EIP-3855</a> – <em>تعليمات PUSH0 جديدة</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3860">EIP-3860</a> – <em>رمز بدء الحد والعداد</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – عمليات سحب من Beacon Chain كعمليات</li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – عمليات سحب من بيكون تشين كعمليات</li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>إهمال <code>SELFDESTRUCT</code></em></li>
 </ul>
 </ExpandableCard>
@@ -201,7 +201,7 @@ sidebarDepth: 1
 
 #### ملخص Capella {#capella-summary}
 
-كان ترقية Capella هي الترقية الرئيسية الثالثة لطبقة الإجماع (Beacon Chain) ومكنت من سحب المراهنة. حدث Capella بشكل متزامن مع ترقية طبقة التنفيذ، شنغهاي، وتمكين وظيفة سحب الرهان.
+كان ترقية Capella هي الترقية الرئيسية الثالثة لطبقة الإجماع (بيكون تشين) ومكنت من سحب المراهنة. حدث Capella بشكل متزامن مع ترقية طبقة التنفيذ، شنغهاي، وتمكين وظيفة سحب الرهان.
 
 أدى ترقية طبقة الإجماع هذه إلى تمكين المشاركين الذين لم يقدموا بيانات اعتماد السحب مع إيداعهم الأولي من القيام بذلك، وبالتالي تمكين عمليات السحب.
 
@@ -276,7 +276,7 @@ sidebarDepth: 1
 أدت ترقية شبكة Arrow Glacier إلى تأجيل [قنبلة الصعوبة](/glossary/#difficulty-bomb) لعدة أشهر. هذا هو التغيير الوحيد الذي تم إدخاله في هذه الترقية، وهو مشابه في طبيعته لترقية [Muir Glacier](#muir-glacier). تم إجراء تغييرات مماثلة على ترقيات شبكة [Byzantium](#byzantium) و [Constantinople](#constantinople) و [London](#london).
 
 - [مدونة EF - إعلان ترقية Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
-- [Ethereum Cat Herders - ترقية Arrow Glacier لإيثريوم](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
+- [إيثيريوم كات هيردرز - ترقية Arrow Glacier لإيثريوم](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
 <ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Arrow Glacier" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
@@ -315,7 +315,7 @@ sidebarDepth: 1
 
 #### ما هو ترقية لندن / EIP-1559؟ {#eip-1559}
 
-Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at full capacity. As a result, users often had to wait for demand to reduce to get included in a block, which led to a poor user experience. The London Upgrade introduced variable-sized blocks to Ethereum.
+Before the London Upgrade, إيثريوم had fixed-sized blocks. In times of high network demand, these blocks operated at full capacity. As a result, users often had to wait for demand to reduce to get included in a block, which led to a poor user experience. The London Upgrade introduced variable-sized blocks to إيثريوم.
 
 تغيرت طريقة حساب رسوم المعاملات على شبكة إيثريوم مع [ترقية London](/ethereum-forks/#london) في أغسطس 2021. قبل ترقية London، كانت الرسوم تُحسب دون فصل رسوم `base` و`priority`، على النحو التالي:
 
@@ -329,7 +329,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 - [هل أنت مطور تطبيقات لامركزية؟ تأكد من ترقية مكتباتك وأدواتك.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
-- [اقرأ شرح Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
+- [اقرأ شرح إيثريوم Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية London" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
@@ -353,7 +353,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 أدى تحديث برلين إلى تحسين تكلفة الغاز لبعض إجراءات EVM، وزيادة الدعم لأنواع المعاملات المتعددة.
 
 - [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
-- [اقرأ شرح Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
+- [اقرأ شرح إيثريوم Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Berlin" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
@@ -410,7 +410,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 أدى انقسام Muir Glacier إلى تأخير [قنبلة الصعوبة](/glossary/#difficulty-bomb). هددت الزيادات في صعوبة الكتلة لآلية إجماع [إثبات العمل](/developers/docs/consensus-mechanisms/pow/) بتقليل قابلية استخدام إيثريوم عن طريق زيادة أوقات الانتظار لإرسال المعاملات واستخدام التطبيقات اللامركزية.
 
 - [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
-- [اقرأ شرح Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
+- [اقرأ شرح إيثريوم Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Muir Glacier" contentPreview="التحسينات الرسمية المُضمّنة في هذا الانقسام.">
 
@@ -434,7 +434,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 - حسّن تكلفة [الغاز](/glossary/#gas) لإجراءات معينة في [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - تحسين القدرة على مقاومة هجوم رفض الخدمة.
 - جعل حلول [توسيع الطبقة الثانية](/developers/docs/scaling/#layer-2-scaling) المستندة إلى SNARKs وSTARKs أكثر أداءً.
-- تمكين Ethereum و Zcash من التفاعل.
+- تمكين إيثريوم و Zcash من التفاعل.
 - سمح للعقود بتقديم المزيد من الوظائف الإبداعية.
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
@@ -442,7 +442,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 <ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Istanbul" contentPreview="التحسينات الرسمية المُضمّنة في هذا الانقسام.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>السماح لعملة Ethereum بالعمل مع العملات التي تحافظ على الخصوصية مثل Zcash.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>السماح لعملة إيثريوم بالعمل مع العملات التي تحافظ على الخصوصية مثل Zcash.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>تشفير أقل تكلفة لتحسين تكاليف الغاز.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>يحمي الإيثيريوم من هجمات الإعادة عن طريق إضافة <code>CHAINID</code> [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>تحسين أسعار الغاز بناءً على الاستهلاك.</em></li>
@@ -558,23 +558,23 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>يزيد من تكاليف الغاز للرموز التشغيلية التي يمكن استخدامها في هجمات البريد العشوائي.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>يقلل حجم الحالة عن طريق إزالة عدد كبير من الحسابات الفارغة التي تم وضعها في الحالة بتكلفة منخفضة للغاية بسبب العيوب في الإصدارات السابقة من بروتوكول Ethereum.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>يقلل حجم الحالة عن طريق إزالة عدد كبير من الحسابات الفارغة التي تم وضعها في الحالة بتكلفة منخفضة للغاية بسبب العيوب في الإصدارات السابقة من بروتوكول إيثريوم.</em></li>
 </ul>
 </ExpandableCard>
 
 ---
 
-### انقسام DAO {#dao-fork}
+### انقسام داو {#dao-fork}
 
 <NetworkUpgradeSummary name="daoFork" />
 
 #### ملخص {#dao-fork-summary}
 
-كان انقسام DAO استجابة لـ [هجوم DAO عام 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) حيث تم استنزاف عقد [DAO](/glossary/#dao) غير آمن لأكثر من 3.6 مليون ETH في عملية اختراق. نقل الانقسام الأموال من العقد المعيب إلى [عقد جديد](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) بوظيفة واحدة: السحب. أي شخص فقد أموالاً يمكنه سحب 1 ETH مقابل كل 100 رمز DAO في محفظته.
+كان انقسام داو استجابة لـ [هجوم داو عام 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) حيث تم استنزاف عقد [داو](/glossary/#dao) غير آمن لأكثر من 3.6 مليون ETH في عملية اختراق. نقل الانقسام الأموال من العقد المعيب إلى [عقد جديد](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) بوظيفة واحدة: السحب. أي شخص فقد أموالاً يمكنه سحب 1 ETH مقابل كل 100 رمز داو في محفظته.
 
 تم التصويت على هذا الإجراء من قبل مجتمع إيثريوم. كان بإمكان أي حامل لعملة ETH التصويت عبر معاملة على [منصة تصويت](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). حصل قرار إجراء التفرُّع على %85 من الأصوات.
 
-رفض بعض عمال المناجم التفرع لأن حادثة DAO لم تكن عيبًا في البروتوكول. لقد قاموا بتشكيل [إيثريوم كلاسيك](https://ethereumclassic.org/).
+رفض بعض عمال المناجم التفرع لأن حادثة داو لم تكن عيبًا في البروتوكول. لقد قاموا بتشكيل [إيثريوم كلاسيك](https://ethereumclassic.org/).
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
 
@@ -586,7 +586,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 #### ملخص {#homestead-summary}
 
-شوكة المزرعة التي تتطلع إلى المستقبل. وقد تضمنت العديد من التغييرات في البروتوكول وتغييرًا في الشبكة أعطى Ethereum القدرة على إجراء المزيد من ترقيات الشبكة.
+شوكة المزرعة التي تتطلع إلى المستقبل. وقد تضمنت العديد من التغييرات في البروتوكول وتغييرًا في الشبكة أعطى إيثريوم القدرة على إجراء المزيد من ترقيات الشبكة.
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
@@ -622,7 +622,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 #### ملخص {#frontier-summary}
 
-كانت Frontier عبارة عن تنفيذ حي، ولكن بسيط، لمشروع Ethereum. وجاء ذلك بعد مرحلة الاختبار الأولمبية الناجحة. كان مخصصًا للمستخدمين الفنيين، والمطورين على وجه التحديد. كان [للكتل](/glossary/#block) [حد غاز](/glossary/#gas) يبلغ 5,000. لقد أتاحت فترة "الذوبان" هذه للمعدنين بدء عملياتهم وللمستخدمين الأوائل تثبيت عملائهم دون الحاجة إلى "التسرع".
+كانت Frontier عبارة عن تنفيذ حي، ولكن بسيط، لمشروع إيثريوم. وجاء ذلك بعد مرحلة الاختبار الأولمبية الناجحة. كان مخصصًا للمستخدمين الفنيين، والمطورين على وجه التحديد. كان [للكتل](/glossary/#block) [حد غاز](/glossary/#gas) يبلغ 5,000. لقد أتاحت فترة "الذوبان" هذه للمعدنين بدء عملياتهم وللمستخدمين الأوائل تثبيت عملائهم دون الحاجة إلى "التسرع".
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

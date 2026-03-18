@@ -1,7 +1,7 @@
 ---
 title: Merkle proofs for offline data integrity
 description: "ضمان سلامة البيانات على السلسلة للبيانات المخزنة، في الغالب، خارج السلسلة"
-author: Ori Pomerantz
+author: "أوري بوميرانتز"
 tags: [ "التخزين" ]
 skill: advanced
 lang: ar
@@ -10,7 +10,7 @@ published: 2021-12-30
 
 ## مقدمة {#introduction}
 
-Ideally we'd like to store everything in Ethereum storage, which is stored across thousands of computers and has
+Ideally we'd like to store everything in إيثريوم storage, which is stored across thousands of computers and has
 extremely high availability (the data cannot be censored) and integrity (the data cannot be modified in an
 unauthorized manner), but storing a 32-byte word typically costs 20,000 gas. As I'm writing this, that cost is
 equivalent to $6.60. At 21 cents per byte this is too expensive for many uses.
@@ -38,7 +38,7 @@ The solution is to repeatedly hash different subsets of the data, so for the dat
 
 ### النص البرمجي خارج السلسلة {#offchain-code}
 
-في هذه المقالة، نستخدم JavaScript للحسابات خارج السلسلة. معظم التطبيقات اللامركزية لديها مكونها خارج السلسلة في JavaScript.
+في هذه المقالة، نستخدم جافا سكريبت للحسابات خارج السلسلة. معظم التطبيقات اللامركزية لديها مكونها خارج السلسلة في جافا سكريبت.
 
 #### إنشاء جذر ميركل {#creating-the-merkle-root}
 
@@ -76,7 +76,7 @@ const hash = (x) =>
   BigInt(ethers.utils.keccak256("0x" + x.toString(16).padStart(64, 0)))
 ```
 
-تتوقع دالة التجزئة (هاش) في ethers الحصول على سلسلة JavaScript برقم ست عشري، مثل `0x60A7`، وتستجيب بسلسلة أخرى بنفس البنية. ولكن، بالنسبة لبقية النص البرمجي، من الأسهل استخدام `BigInt`، لذلك نقوم بالتحويل إلى سلسلة ست عشرية والعودة مرة أخرى.
+تتوقع دالة التجزئة (هاش) في ethers الحصول على سلسلة جافا سكريبت برقم ست عشري، مثل `0x60A7`، وتستجيب بسلسلة أخرى بنفس البنية. ولكن، بالنسبة لبقية النص البرمجي، من الأسهل استخدام `BigInt`، لذلك نقوم بالتحويل إلى سلسلة ست عشرية والعودة مرة أخرى.
 
 ```javascript
 // تجزئة (هاش) متماثلة لزوج حتى لا نهتم إذا تم عكس الترتيب.
@@ -181,7 +181,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 ```
 
-لقد كتبت هذا باستخدام [بيئة تطوير Hardhat](https://hardhat.org/)، والتي تتيح لنا الحصول على [إخراج وحدة التحكم من سوليديتي](https://hardhat.org/docs/cookbook/debug-logs) أثناء التطوير.
+لقد كتبت هذا باستخدام [بيئة تطوير هارد هات](https://hardhat.org/)، والتي تتيح لنا الحصول على [إخراج وحدة التحكم من سوليديتي](https://hardhat.org/docs/cookbook/debug-logs) أثناء التطوير.
 
 ```solidity
 
@@ -212,7 +212,7 @@ Set and get functions for the Merkle root. يُعد السماح للجميع ب
     }
 ```
 
-This function generates a pair hash. إنها مجرد ترجمة سوليديتي للنص البرمجي JavaScript لـ `hash` و`pairHash`.
+This function generates a pair hash. إنها مجرد ترجمة سوليديتي للنص البرمجي جافا سكريبت لـ `hash` و`pairHash`.
 
 **ملاحظة:** هذه حالة أخرى من حالات التحسين لسهولة القراءة. بناءً على [تعريف الدالة](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm)، قد يكون من الممكن تخزين البيانات كقيمة [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) وتجنب التحويلات.
 
@@ -239,12 +239,12 @@ This function generates a pair hash. إنها مجرد ترجمة سوليديت
 
 لا تعمل إثباتات ميركل بشكل جيد مع [تكديس المعاملات](/developers/docs/scaling/#rollups). The reason is that rollups write all the transaction data on L1, but process on L2. The cost to send a Merkle proof with a transaction averages to 638 gas per layer (currently a byte in call data costs 16 gas if it isn't zero, and 4 if it is zero). If we have 1024 words of data, a Merkle proof requires ten layers, or a total of 6380 gas.
 
-بالنظر على سبيل المثال إلى [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)، تبلغ تكلفة كتابة غاز L1 حوالي 100 غوي وتبلغ تكلفة غاز L2 0.001 غوي (وهو السعر العادي، ويمكن أن يرتفع مع الازدحام). So for the cost of one L1 gas we can spend a hundred thousand gas on L2 processing. Assuming we don't overwrite storage, this means that we can write about five words to storage on L2 for the price of one L1 gas. لإثبات ميركل واحد، يمكننا كتابة الكلمات البالغ عددها 1024 كلمة بالكامل في التخزين (بافتراض أنه يمكن حسابها على السلسلة في البداية، بدلاً من توفيرها في معاملة) ولا يزال لدينا معظم الغاز المتبقي.
+بالنظر على سبيل المثال إلى [أوبتيميزم](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)، تبلغ تكلفة كتابة غاز L1 حوالي 100 غوي وتبلغ تكلفة غاز L2 0.001 غوي (وهو السعر العادي، ويمكن أن يرتفع مع الازدحام). So for the cost of one L1 gas we can spend a hundred thousand gas on L2 processing. Assuming we don't overwrite storage, this means that we can write about five words to storage on L2 for the price of one L1 gas. لإثبات ميركل واحد، يمكننا كتابة الكلمات البالغ عددها 1024 كلمة بالكامل في التخزين (بافتراض أنه يمكن حسابها على السلسلة في البداية، بدلاً من توفيرها في معاملة) ولا يزال لدينا معظم الغاز المتبقي.
 
 ## الخلاصة {#conclusion}
 
 In real life you might never implement Merkle trees on your own. There are well known and audited libraries you can use and generally speaking it is best not to implement cryptographic primitives on your own. But I hope that now you understand Merkle proofs better and can decide when they are worth using.
 
-لاحظ أنه بينما تحافظ إثباتات ميركل على _السلامة_، فإنها لا تحافظ على _التوفر_. Knowing that nobody else can take your assets is small consolation if the data storage decides to disallow access and you can't construct a Merkle tree to access them either. So Merkle trees are best used with some kind of decentralized storage, such as IPFS.
+لاحظ أنه بينما تحافظ إثباتات ميركل على _السلامة_، فإنها لا تحافظ على _التوفر_. Knowing that nobody else can take your assets is small consolation if the data storage decides to disallow access and you can't construct a Merkle tree to access them either. So Merkle trees are best used with some kind of decentralized storage, such as آي بي إف إس.
 
 [انظر هنا لمزيد من أعمالي](https://cryptodocguy.pro/).

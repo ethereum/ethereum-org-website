@@ -1,7 +1,7 @@
 ---
 title: "واجهات تطبيقات ثنائية قصيرة لتحسين بيانات الاستدعاء"
 description: "تحسين العقود الذكية من أجل الرول أب التفاؤلي"
-author: Ori Pomerantz
+author: "أوري بوميرانتز"
 lang: ar
 tags: [ "الطبقة الثانية" ]
 skill: intermediate
@@ -15,7 +15,7 @@ published: 2022-04-01
 
 ### إفصاح كامل {#full-disclosure}
 
-أنا موظف بدوام كامل في [Optimism](https://www.optimism.io/)، لذا فإن الأمثلة في هذا المقال سيتم تشغيلها على Optimism.
+أنا موظف بدوام كامل في [أوبتيميزم](https://www.optimism.io/)، لذا فإن الأمثلة في هذا المقال سيتم تشغيلها على أوبتيميزم.
 ومع ذلك، يجب أن تعمل التقنية الموضحة هنا بشكل جيد مع حلول الرول أب الأخرى.
 
 ### المصطلحات {#terminology}
@@ -27,7 +27,7 @@ published: 2022-04-01
 
 يجب على [الرول أب التفاؤلي](/developers/docs/scaling/optimistic-rollups) الاحتفاظ بسجل لكل معاملة تاريخية حتى يتمكن أي شخص من مراجعتها والتحقق من صحة الحالة الحالية.
 أرخص طريقة لإدخال البيانات إلى شبكة إيثريوم الرئيسية هي كتابتها كبيانات استدعاء.
-تم اختيار هذا الحل من قبل كل من [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) و[Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+تم اختيار هذا الحل من قبل كل من [أوبتيميزم](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) و[أربيتروم](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
 ### تكلفة معاملات الطبقة الثانية L2 {#cost-of-l2-transactions}
 
@@ -36,7 +36,7 @@ published: 2022-04-01
 1. معالجة الطبقة الثانية L2، والتي عادة ما تكون رخيصة للغاية
 2. تخزين الطبقة الأولى L1، وهو مرتبط بتكاليف غاز الشبكة الرئيسية
 
-في وقت كتابة هذا التقرير، تبلغ تكلفة غاز الطبقة الثانية L2 على Optimism 0.001 [Gwei](/developers/docs/gas/#pre-london).
+في وقت كتابة هذا التقرير، تبلغ تكلفة غاز الطبقة الثانية L2 على أوبتيميزم 0.001 [Gwei](/developers/docs/gas/#pre-london).
 من ناحية أخرى، تبلغ تكلفة غاز الطبقة الأولى L1 حوالي 40 غوي.
 [يمكنك رؤية الأسعار الحالية هنا](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
@@ -48,7 +48,7 @@ published: 2022-04-01
 ### واجهة التطبيق الثنائية (ABI) {#the-abi}
 
 تتم الغالبية العظمى من المعاملات من خلال حساب مملوك خارجيًا.
-تتم كتابة معظم العقود بلغة Solidity وتفسر حقل بياناتها وفقًا لـ [واجهة التطبيق الثنائية (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+تتم كتابة معظم العقود بلغة سوليديتي وتفسر حقل بياناتها وفقًا لـ [واجهة التطبيق الثنائية (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
 ومع ذلك، تم تصميم واجهة التطبيق الثنائية (ABI) للطبقة الأولى L1، حيث يكلف بايت من بيانات الاستدعاء نفس تكلفة أربع عمليات حسابية تقريبًا، وليس للطبقة الثانية L2 حيث يكلف بايت من بيانات الاستدعاء أكثر من ألف عملية حسابية.
 يتم تقسيم بيانات الاستدعاء على النحو التالي:
@@ -159,10 +159,10 @@ contract CalldataInterpreter {
         }
 ```
 
-كان بإمكاننا نسخ البيانات من الاستدعاء إلى `fallback()` (انظر أدناه)، ولكن من الأسهل استخدام [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html)، لغة التجميع الخاصة بآلة إيثريوم الافتراضية (EVM).
+كان بإمكاننا نسخ البيانات من الاستدعاء إلى `fallback()` (انظر أدناه)، ولكن من الأسهل استخدام [يول](https://docs.soliditylang.org/en/v0.8.12/yul.html)، لغة التجميع الخاصة بآلة إيثريوم الافتراضية (EVM).
 
 هنا نستخدم [رمز التشغيل CALLDATALOAD](https://www.evm.codes/#35) لقراءة البايتات من `startByte` إلى `startByte+31` في المكدس.
-بشكل عام، صيغة رمز التشغيل في Yul هي `<اسم رمز التشغيل>(<قيمة المكدس الأولى، إن وجدت>، <قيمة المكدس الثانية، إن وجدت>...)`.
+بشكل عام، صيغة رمز التشغيل في يول هي `<اسم رمز التشغيل>(<قيمة المكدس الأولى، إن وجدت>، <قيمة المكدس الثانية، إن وجدت>...)`.
 
 ```solidity
         _retVal = _retVal >> (256-length*8);
@@ -179,7 +179,7 @@ contract CalldataInterpreter {
     fallback() external {
 ```
 
-عندما لا يتطابق استدعاء عقد Solidity مع أي من توقيعات الوظائف، فإنه يستدعي [وظيفة `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (بافتراض وجود واحدة).
+عندما لا يتطابق استدعاء عقد سوليديتي مع أي من توقيعات الوظائف، فإنه يستدعي [وظيفة `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (بافتراض وجود واحدة).
 في حالة `CalldataInterpreter`، يصل _أي_ استدعاء إلى هنا لأنه لا توجد وظائف `external` أو `public` أخرى.
 
 ```solidity
@@ -268,7 +268,7 @@ contract CalldataInterpreter {
 
 ### test.js {#test-js}
 
-[يوضح لنا اختبار الوحدة هذا بلغة JavaScript](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) كيفية استخدام هذه الآلية (وكيفية التحقق من أنها تعمل بشكل صحيح).
+[يوضح لنا اختبار الوحدة هذا بلغة جافا سكريبت](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) كيفية استخدام هذه الآلية (وكيفية التحقق من أنها تعمل بشكل صحيح).
 سأفترض أنك تفهم [chai](https://www.chaijs.com/) و[ethers](https://docs.ethers.io/v5/) وسأشرح فقط الأجزاء التي تنطبق بشكل خاص على العقد.
 
 ```js
@@ -569,7 +569,7 @@ expect(await token.balanceOf(destAddr2)).to.equal(255)
 
 ## الخلاصة {#conclusion}
 
-يبحث كل من [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) و[Arbitrum](https://developer.offchainlabs.com/docs/special_features) عن طرق لتقليل حجم بيانات الاستدعاء المكتوبة على L1 وبالتالي تكلفة المعاملات.
+يبحث كل من [أوبتيميزم](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) و[أربيتروم](https://developer.offchainlabs.com/docs/special_features) عن طرق لتقليل حجم بيانات الاستدعاء المكتوبة على L1 وبالتالي تكلفة المعاملات.
 ومع ذلك، كمقدمي خدمات البنية التحتية الذين يبحثون عن حلول عامة، فإن قدراتنا محدودة.
 كمطور للتطبيقات اللامركزية، لديك معرفة خاصة بالتطبيق، مما يتيح لك تحسين بيانات الاستدعاء بشكل أفضل بكثير مما يمكننا القيام به في حل عام.
 نأمل أن يساعدك هذا المقال في العثور على الحل الأمثل لاحتياجاتك.

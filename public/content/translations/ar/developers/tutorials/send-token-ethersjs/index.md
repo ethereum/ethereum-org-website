@@ -1,7 +1,7 @@
 ---
 title: "إرسال الرموز باستخدام ethers.js"
 description: "دليل سهل للمبتدئين لإرسال الرموز باستخدام ethers.js."
-author: Kim YongJun
+author: "كيم يونغ جون"
 tags: [ "ETHERS.JS", "ايه آر سي-20", "الرموز" ]
 skill: beginner
 lang: ar
@@ -61,9 +61,9 @@ ES3(UMD) in the Browser
 
 ### ١. الاتصال بالشبكة (شبكة الاختبار) {#connect-to-network}
 
-#### تعيين الموفر (Infura) {#set-provider}
+#### تعيين الموفر (إنفيورا) {#set-provider}
 
-الاتصال بشبكة الاختبار Ropsten
+الاتصال بشبكة الاختبار روبستين
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")

@@ -1,7 +1,7 @@
 ---
 title: "اصنع وكيل تداول الذكاء الاصطناعي الخاص بك على الإيثريوم"
 description: "في هذا البرنامج التعليمي، ستتعلم كيفية إنشاء وكيل تداول بسيط للذكاء الاصطناعي. يقرأ هذا الوكيل المعلومات من سلسلة الكتل (blockchain)، ويطلب من LLM توصية بناءً على تلك المعلومات، وينفذ الصفقة التي يوصي بها LLM، ثم ينتظر ويكرر."
-author: Ori Pomerantz
+author: أوري بوميرانتز
 tags: [ "الذكاء الاصطناعي", "تداول", "وكيل", "python" ]
 skill: intermediate
 published: 2026-02-13
@@ -17,7 +17,7 @@ sidebarDepth: 3
 4. التداول بناءً على التوصية
 5. انتظر وكرر
 
-يوضح هذا الوكيل كيفية قراءة المعلومات وترجمتها إلى استعلام ينتج عنه إجابة قابلة للاستخدام واستخدام تلك الإجابة. كل هذه خطوات مطلوبة لوكيل الذكاء الاصطناعي. يتم تنفيذ هذا الوكيل بلغة بايثون Python لأنها اللغة الأكثر شيوعًا المستخدمة في الذكاء الاصطناعي.
+يوضح هذا الوكيل كيفية قراءة المعلومات وترجمتها إلى استعلام ينتج عنه إجابة قابلة للاستخدام واستخدام تلك الإجابة. كل هذه خطوات مطلوبة لوكيل الذكاء الاصطناعي. يتم تنفيذ هذا الوكيل بلغة بايثون بايثون لأنها اللغة الأكثر شيوعًا المستخدمة في الذكاء الاصطناعي.
 
 ## لماذا نفعل هذا؟ {#why-do-this}
 
@@ -25,19 +25,19 @@ sidebarDepth: 3
 
 ## الأدوات {#tools}
 
-يستخدم هذا البرنامج التعليمي [Python](https://www.python.org/) و[مكتبة Web3](https://web3py.readthedocs.io/en/stable/) و[Uniswap v3](https://github.com/Uniswap/v3-periphery) للحصول على عروض الأسعار والتداول.
+يستخدم هذا البرنامج التعليمي [بايثون](https://www.python.org/) و[مكتبة ويب3](https://web3py.readthedocs.io/en/stable/) و[يوني سواب v3](https://github.com/Uniswap/v3-periphery) للحصول على عروض الأسعار والتداول.
 
-### لماذا لغة Python؟ {#python}
+### لماذا لغة بايثون؟ {#python}
 
-اللغة الأكثر استخدامًا في الذكاء الاصطناعي هي [Python](https://www.python.org/)، لذلك نستخدمها هنا. لا تقلق إذا كنت لا تعرف لغة بايثون Python. اللغة واضحة جدًا، وسأشرح بالضبط ما تفعله.
+اللغة الأكثر استخدامًا في الذكاء الاصطناعي هي [بايثون](https://www.python.org/)، لذلك نستخدمها هنا. لا تقلق إذا كنت لا تعرف لغة بايثون بايثون. اللغة واضحة جدًا، وسأشرح بالضبط ما تفعله.
 
-تُعد [مكتبة Web3](https://web3py.readthedocs.io/en/stable/) هي واجهة برمجة تطبيقات Ethereum API الأكثر شيوعًا في لغة Python. إنه سهل الاستخدام إلى حد ما.
+تُعد [مكتبة ويب3](https://web3py.readthedocs.io/en/stable/) هي واجهة برمجة تطبيقات إيثريوم API الأكثر شيوعًا في لغة بايثون. إنه سهل الاستخدام إلى حد ما.
 
 ### التداول على سلسلة الكتل (blockchain) {#trading-on-blockchain}
 
-هناك [العديد من منصات التداول الموزعة (DEX)](/apps/categories/defi/) التي تتيح لك تداول الرموز المميزة على Ethereum. ومع ذلك، فإنها تميل إلى أن تكون لها أسعار صرف متشابهة بسبب [المراجحة](/developers/docs/smart-contracts/composability/#better-user-experience).
+هناك [العديد من منصات التداول الموزعة (DEX)](/apps/categories/defi/) التي تتيح لك تداول الرموز المميزة على إيثريوم. ومع ذلك، فإنها تميل إلى أن تكون لها أسعار صرف متشابهة بسبب [المراجحة](/developers/docs/smart-contracts/composability/#better-user-experience).
 
-تعتبر [Uniswap](https://app.uniswap.org/) منصة تداول لامركزية مستخدمة على نطاق واسع ويمكننا استخدامها لكل من عروض الأسعار (لرؤية القيم النسبية للرموز المميزة) والصفقات.
+تعتبر [يوني سواب](https://app.uniswap.org/) منصة تداول لامركزية مستخدمة على نطاق واسع ويمكننا استخدامها لكل من عروض الأسعار (لرؤية القيم النسبية للرموز المميزة) والصفقات.
 
 ### OpenAI {#openai}
 
@@ -45,15 +45,15 @@ sidebarDepth: 3
 
 ## التطوير، خطوة بخطوة {#step-by-step}
 
-لتبسيط التطوير، ننتقل على مراحل. كل خطوة هي فرع في GitHub.
+لتبسيط التطوير، ننتقل على مراحل. كل خطوة هي فرع في غيت هاب.
 
 ### البدء {#getting-started}
 
-هناك خطوات للبدء في استخدام UNIX أو Linux (بما في ذلك [WSL](https://learn.microsoft.com/en-us/windows/wsl/install))
+هناك خطوات للبدء في استخدام UNIX أو لينكس (بما في ذلك [WSL](https://learn.microsoft.com/en-us/windows/wsl/install))
 
-1. إذا لم يكن لديك بالفعل، فقم بتنزيل وتثبيت [Python](https://www.python.org/downloads/).
+1. إذا لم يكن لديك بالفعل، فقم بتنزيل وتثبيت [بايثون](https://www.python.org/downloads/).
 
-2. استنسخ مستودع GitHub.
+2. استنسخ مستودع غيت هاب.
 
    ```sh
    git clone https://github.com/qbzzt/260215-ai-agent.git -b 01-getting-started
@@ -78,12 +78,12 @@ sidebarDepth: 3
    source .venv/bin/activate
    ```
 
-6. للتحقق من أن Python وWeb3 يعملان بشكل صحيح، قم بتشغيل `python3` وزوده بهذا البرنامج. يمكنك إدخاله في الموجه `>>>`؛ ليست هناك حاجة لإنشاء ملف.
+6. للتحقق من أن بايثون وويب3 يعملان بشكل صحيح، قم بتشغيل `python3` وزوده بهذا البرنامج. يمكنك إدخاله في الموجه `>>>`؛ ليست هناك حاجة لإنشاء ملف.
 
    ```python
-   from web3 import Web3
+   from web3 import ويب3
    MAINNET_URL = "https://eth.drpc.org"
-   w3 = Web3(Web3.HTTPProvider(MAINNET_URL))
+   w3 = ويب3(ويب3.HTTPProvider(MAINNET_URL))
    w3.eth.block_number
    quit()
    ```
@@ -119,7 +119,7 @@ import sys
 print = functools.partial(print, flush=True)
 ```
 
-يستبدل `print` في لغة Python بإصدار يقوم دائمًا بتفريغ الإخراج على الفور. هذا مفيد في نص برمجي طويل الأمد لأننا لا نريد انتظار تحديثات الحالة أو إخراج تصحيح الأخطاء.
+يستبدل `print` في لغة بايثون بإصدار يقوم دائمًا بتفريغ الإخراج على الفور. هذا مفيد في نص برمجي طويل الأمد لأننا لا نريد انتظار تحديثات الحالة أو إخراج تصحيح الأخطاء.
 
 ```python
 MAINNET_URL = "https://eth.drpc.org"
@@ -134,7 +134,7 @@ HOUR_BLOCKS = MINUTE_BLOCKS * 60
 DAY_BLOCKS = HOUR_BLOCKS * 24
 ```
 
-تحدث كتلة الشبكة الرئيسية لـ Ethereum عادةً كل اثنتي عشرة ثانية، لذا فهذه هي عدد الكتل التي نتوقع حدوثها في فترة زمنية. لاحظ أن هذا ليس رقمًا دقيقًا. عندما يكون [مقدم الكتلة](/developers/docs/consensus-mechanisms/pos/block-proposal/) معطلاً، يتم تخطي تلك الكتلة، ويكون وقت الكتلة التالية 24 ثانية. إذا أردنا الحصول على الكتلة الدقيقة للطابع الزمني، فسنستخدم [البحث الثنائي](https://en.wikipedia.org/wiki/Binary_search). ومع ذلك، هذا قريب بما فيه الكفاية لأغراضنا. التنبؤ بالمستقبل ليس علمًا دقيقًا.
+تحدث كتلة الشبكة الرئيسية لـ إيثريوم عادةً كل اثنتي عشرة ثانية، لذا فهذه هي عدد الكتل التي نتوقع حدوثها في فترة زمنية. لاحظ أن هذا ليس رقمًا دقيقًا. عندما يكون [مقدم الكتلة](/developers/docs/consensus-mechanisms/pos/block-proposal/) معطلاً، يتم تخطي تلك الكتلة، ويكون وقت الكتلة التالية 24 ثانية. إذا أردنا الحصول على الكتلة الدقيقة للطابع الزمني، فسنستخدم [البحث الثنائي](https://en.wikipedia.org/wiki/Binary_search). ومع ذلك، هذا قريب بما فيه الكفاية لأغراضنا. التنبؤ بالمستقبل ليس علمًا دقيقًا.
 
 ```python
 CYCLE_BLOCKS = DAY_BLOCKS
@@ -147,7 +147,7 @@ CYCLE_BLOCKS = DAY_BLOCKS
 WETHUSDC_ADDRESS = Web3.to_checksum_address("0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640")
 ```
 
-تؤخذ قيم عروض الأسعار من مجمع Uniswap 3 USDC/WETH على العنوان [`0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640`](https://eth.blockscout.com/address/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640?tab=read_write_contract). هذا العنوان موجود بالفعل في شكل المجموع الاختباري، ولكن من الأفضل استخدام [`Web3.to_checksum_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_checksum_address) لجعل الكود قابلاً لإعادة الاستخدام.
+تؤخذ قيم عروض الأسعار من مجمع يوني سواب 3 USDC/WETH على العنوان [`0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640`](https://eth.blockscout.com/address/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640?tab=read_write_contract). هذا العنوان موجود بالفعل في شكل المجموع الاختباري، ولكن من الأفضل استخدام [`Web3.to_checksum_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_checksum_address) لجعل الكود قابلاً لإعادة الاستخدام.
 
 ```python
 POOL_ABI = [
@@ -168,7 +168,7 @@ ERC20_ABI = [
 w3 = Web3(Web3.HTTPProvider(MAINNET_URL))
 ```
 
-قم ببدء مكتبة [`Web3`](https://web3py.readthedocs.io/en/stable/quickstart.html#remote-providers) واتصل بعقدة Ethereum.
+قم ببدء مكتبة [`Web3`](https://web3py.readthedocs.io/en/stable/quickstart.html#remote-providers) واتصل بعقدة إيثريوم.
 
 ```python
 @dataclass(frozen=True)
@@ -179,9 +179,9 @@ class ERC20Token:
     contract: Contract
 ```
 
-هذه إحدى طرق إنشاء فئة بيانات في لغة Python. يُستخدم نوع البيانات [`Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) للاتصال بالعقد. لاحظ `(frozen=True)`. في لغة بايثون Python، تُعرَّف [القيم المنطقية booleans](https://en.wikipedia.org/wiki/Boolean_data_type) على أنها `True` أو `False`، بأحرف كبيرة. فئة البيانات هذه `frozen`، مما يعني أنه لا يمكن تعديل الحقول.
+هذه إحدى طرق إنشاء فئة بيانات في لغة بايثون. يُستخدم نوع البيانات [`Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) للاتصال بالعقد. لاحظ `(frozen=True)`. في لغة بايثون بايثون، تُعرَّف [القيم المنطقية booleans](https://en.wikipedia.org/wiki/Boolean_data_type) على أنها `True` أو `False`، بأحرف كبيرة. فئة البيانات هذه `frozen`، مما يعني أنه لا يمكن تعديل الحقول.
 
-لاحظ المسافة البادئة. على عكس [اللغات المشتقة من C](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages)، تستخدم لغة Python المسافة البادئة للإشارة إلى الكتل. يعرف مفسر Python أن التعريف التالي ليس جزءًا من فئة البيانات هذه لأنه لا يبدأ بنفس المسافة البادئة لحقول فئة البيانات.
+لاحظ المسافة البادئة. على عكس [اللغات المشتقة من C](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages)، تستخدم لغة بايثون المسافة البادئة للإشارة إلى الكتل. يعرف مفسر بايثون أن التعريف التالي ليس جزءًا من فئة البيانات هذه لأنه لا يبدأ بنفس المسافة البادئة لحقول فئة البيانات.
 
 ```python
 @dataclass(frozen=True)
@@ -200,7 +200,7 @@ class PoolInfo:
     def get_price(self, block: int) -> Decimal:
 ```
 
-هذه هي طريقة تعريف دالة في Python. التعريف بمسافة بادئة لإظهار أنه لا يزال جزءًا من `PoolInfo`.
+هذه هي طريقة تعريف دالة في بايثون. التعريف بمسافة بادئة لإظهار أنه لا يزال جزءًا من `PoolInfo`.
 
 في دالة تعد جزءًا من فئة بيانات، يكون المعامل الأول دائمًا هو `self`، وهو مثيل فئة البيانات الذي تم استدعاؤه هنا. هنا يوجد معلمة أخرى، رقم الكتلة.
 
@@ -214,7 +214,7 @@ class PoolInfo:
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-بناء الجملة لاستدعاء دالة على آلة الإيثريوم الافتراضية EVM من Web3 هو كالتالي: `<contract object>.functions.<function name>().call(<parameters>)`. يمكن أن تكون المعلمات هي معلمات دالة آلة الإيثريوم الافتراضية EVM (إن وجدت؛ هنا لا توجد) أو [معلمات مسماة](https://en.wikipedia.org/wiki/Named_parameter) لتعديل سلوك سلسلة الكتل (blockchain). هنا نستخدم واحدًا، `block_identifier`، لتحديد [رقم الكتلة](/developers/docs/apis/json-rpc/#default-block) الذي نرغب في التشغيل فيه.
+بناء الجملة لاستدعاء دالة على آلة الإيثريوم الافتراضية EVM من ويب3 هو كالتالي: `<contract object>.functions.<function name>().call(<parameters>)`. يمكن أن تكون المعلمات هي معلمات دالة آلة الإيثريوم الافتراضية EVM (إن وجدت؛ هنا لا توجد) أو [معلمات مسماة](https://en.wikipedia.org/wiki/Named_parameter) لتعديل سلوك سلسلة الكتل (blockchain). هنا نستخدم واحدًا، `block_identifier`، لتحديد [رقم الكتلة](/developers/docs/apis/json-rpc/#default-block) الذي نرغب في التشغيل فيه.
 
 النتيجة هي [هذه البنية، في شكل مصفوفة](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). القيمة الأولى هي دالة لسعر الصرف بين الرمزين.
 
@@ -222,7 +222,7 @@ class PoolInfo:
         raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2
 ```
 
-لتقليل الحسابات على السلسلة، لا يقوم Uniswap v3 بتخزين عامل الصرف الفعلي بل جذره التربيعي. نظرًا لأن آلة إيثريوم الافتراضية (EVM) لا تدعم حسابات النقطة العائمة أو الكسور، فبدلاً من القيمة الفعلية، تكون الاستجابة <math><msqrt><mi>price</mi></msqrt><mo>&#x22C5</mo><msup><mn>2</mn><mn>96</mn></msup></math>
+لتقليل الحسابات على السلسلة، لا يقوم يوني سواب v3 بتخزين عامل الصرف الفعلي بل جذره التربيعي. نظرًا لأن آلة إيثريوم الافتراضية (EVM) لا تدعم حسابات النقطة العائمة أو الكسور، فبدلاً من القيمة الفعلية، تكون الاستجابة <math><msqrt><mi>price</mi></msqrt><mo>&#x22C5</mo><msup><mn>2</mn><mn>96</mn></msup></math>
 
 ```python
          # (token1 لكل token0)
@@ -257,7 +257,7 @@ def read_token(address: str) -> ERC20Token:
     )
 ```
 
-تأخذ هذه الدالة عنوانًا وتعيد معلومات حول عقد الرمز المميز في ذلك العنوان. لإنشاء [عقد Web3 `Contract` جديد](https://web3py.readthedocs.io/en/stable/web3.contract.html)، نوفر العنوان وواجهة التطبيق الثنائية ABI لـ `w3.eth.contract`.
+تأخذ هذه الدالة عنوانًا وتعيد معلومات حول عقد الرمز المميز في ذلك العنوان. لإنشاء [عقد ويب3 `Contract` جديد](https://web3py.readthedocs.io/en/stable/web3.contract.html)، نوفر العنوان وواجهة التطبيق الثنائية ABI لـ `w3.eth.contract`.
 
 ```python
 def read_pool(address: str) -> PoolInfo:
@@ -310,14 +310,14 @@ def get_quote(pool: PoolInfo, block_number: int = None) -> Quote:
 def get_quotes(pool: PoolInfo, start_block: int, end_block: int, step: int) -> list[Quote]:
 ```
 
-في لغة Python، يمكنك تعريف [قائمة](https://docs.python.org/3/library/stdtypes.html#typesseq-list) لا يمكن أن تحتوي إلا على نوع معين باستخدام `list[<type>]`.
+في لغة بايثون، يمكنك تعريف [قائمة](https://docs.python.org/3/library/stdtypes.html#typesseq-list) لا يمكن أن تحتوي إلا على نوع معين باستخدام `list[<type>]`.
 
 ```python
     quotes = []
     for block in range(start_block, end_block + 1, step):
 ```
 
-في Python، تتكرر [حلقة `for`](https://docs.python.org/3/tutorial/controlflow.html#for-statements) عادةً على قائمة. تأتي قائمة أرقام الكتل التي يتم البحث عن عروض الأسعار فيها من [`range`](https://docs.python.org/3/library/stdtypes.html#range).
+في بايثون، تتكرر [حلقة `for`](https://docs.python.org/3/tutorial/controlflow.html#for-statements) عادةً على قائمة. تأتي قائمة أرقام الكتل التي يتم البحث عن عروض الأسعار فيها من [`range`](https://docs.python.org/3/library/stdtypes.html#range).
 
 ```python
         quote = get_quote(pool, block)
@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 لمعرفة ما إذا كان المجمع بحاجة إلى عكسه، نحصل على ذلك كمدخل إلى `read_pool`. أيضًا، يجب إعداد رمز الأصل بشكل صحيح.
 
-إن البناء `<a> if <b> else <c>` هو المكافئ في لغة Python لـ[المشغل الشرطي الثلاثي](https://en.wikipedia.org/wiki/Ternary_conditional_operator)، والذي سيكون في لغة مشتقة من C `<b> ? <a> : <c>`.
+إن البناء `<a> if <b> else <c>` هو المكافئ في لغة بايثون لـ[المشغل الشرطي الثلاثي](https://en.wikipedia.org/wiki/Ternary_conditional_operator)، والذي سيكون في لغة مشتقة من C `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:
@@ -460,7 +460,7 @@ def make_prompt(quotes: list[list[Quote]], expected_time: str, asset: str) -> st
     return f"""
 ```
 
-في Python، تُكتب [السلاسل النصية الحرفية متعددة الأسطر](https://www.w3schools.com/python/gloss_python_multi_line_strings.asp) على النحو التالي: `"""` .... `"""`.
+في بايثون، تُكتب [السلاسل النصية الحرفية متعددة الأسطر](https://www.w3schools.com/python/gloss_python_multi_line_strings.asp) على النحو التالي: `"""` .... `"""`.
 
 ```python
 Given these quotes:
@@ -697,7 +697,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 
 فيما يلي خطوات إنشاء انقسام محلي وتمكين التداول.
 
-1. قم بتثبيت [Foundry](https://getfoundry.sh/introduction/installation)
+1. قم بتثبيت [فاوندري](https://getfoundry.sh/introduction/installation)
 
 2. ابدأ [`anvil`](https://getfoundry.sh/anvil/overview)
 
@@ -705,7 +705,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   يستمع `anvil` على عنوان URL الافتراضي لـ Foundry، http://localhost:8545، لذلك لا نحتاج إلى تحديد عنوان URL لأمر `cast` الذي نستخدمه لمعالجة سلسلة الكتل (blockchain).
+   يستمع `anvil` على عنوان URL الافتراضي لـ فاوندري، http://localhost:8545، لذلك لا نحتاج إلى تحديد عنوان URL لأمر `cast` الذي نستخدمه لمعالجة سلسلة الكتل (blockchain).
 
 3. عند التشغيل في `anvil`، هناك عشرة حسابات اختبار تحتوي على ETH—قم بتعيين متغيرات البيئة للحساب الأول
 
@@ -714,9 +714,9 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. هذه هي العقود التي نحتاج إلى استخدامها. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) هو عقد Uniswap v3 الذي نستخدمه للتداول الفعلي. يمكننا التداول مباشرة من خلال المجمع، ولكن هذا أسهل بكثير.
+4. هذه هي العقود التي نحتاج إلى استخدامها. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) هو عقد يوني سواب v3 الذي نستخدمه للتداول الفعلي. يمكننا التداول مباشرة من خلال المجمع، ولكن هذا أسهل بكثير.
 
-   المتغيران السفليان هما مسارات Uniswap v3 المطلوبة للتبديل بين WETH وUSDC.
+   المتغيران السفليان هما مسارات يوني سواب v3 المطلوبة للتبديل بين WETH وUSDC.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -831,7 +831,7 @@ swap_router = w3.eth.contract(
 )
 ```
 
-تعريفات Web3 للحساب `account` ([https://web3py.readthedocs.io/en/stable/web3.eth.account.html](https://web3py.readthedocs.io/en/stable/web3.eth.account.html)) وعقد `SwapRouter`.
+تعريفات ويب3 للحساب `account` ([https://web3py.readthedocs.io/en/stable/web3.eth.account.html](https://web3py.readthedocs.io/en/stable/web3.eth.account.html)) وعقد `SwapRouter`.
 
 ```python
 def txn_params() -> dict:
@@ -857,7 +857,7 @@ def approve_token(contract: Contract, amount: int):
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
 ```
 
-هذه هي الطريقة التي نرسل بها معاملة في Web3. أولاً نستخدم كائن `Contract` ([https://web3py.readthedocs.io/en/stable/web3.contract.html](https://web3py.readthedocs.io/en/stable/web3.contract.html)) لبناء المعاملة. ثم نستخدم `web3.eth.account.sign_transaction` ([https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction)) لتوقيع المعاملة، باستخدام `PRIVATE_KEY`. أخيرًا، نستخدم `w3.eth.send_raw_transaction` ([https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction)) لإرسال المعاملة.
+هذه هي الطريقة التي نرسل بها معاملة في ويب3. أولاً نستخدم كائن `Contract` ([https://web3py.readthedocs.io/en/stable/web3.contract.html](https://web3py.readthedocs.io/en/stable/web3.contract.html)) لبناء المعاملة. ثم نستخدم `web3.eth.account.sign_transaction` ([https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction)) لتوقيع المعاملة، باستخدام `PRIVATE_KEY`. أخيرًا، نستخدم `w3.eth.send_raw_transaction` ([https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction)) لإرسال المعاملة.
 
 ```python
     print(f"Approve transaction sent: {tx_hash.hex()}")
@@ -965,7 +965,7 @@ balances()
 
 ### من بوت الذكاء الاصطناعي إلى وكيل الذكاء الاصطناعي {#bot-to-agent}
 
-يمكنك تقديم حجة جيدة بأن هذا [بوت ذكاء اصطناعي، وليس وكيل ذكاء اصطناعي](/ai-agents/#ai-agents-vs-ai-bots). إنه يطبق استراتيجية بسيطة نسبيًا تعتمد على معلومات محددة مسبقًا. يمكننا تمكين التحسين الذاتي، على سبيل المثال، من خلال توفير قائمة بمجمعات Uniswap v3 وأحدث قيمها والسؤال عن المجموعة التي لديها أفضل قيمة تنبؤية.
+يمكنك تقديم حجة جيدة بأن هذا [بوت ذكاء اصطناعي، وليس وكيل ذكاء اصطناعي](/ai-agents/#ai-agents-vs-ai-bots). إنه يطبق استراتيجية بسيطة نسبيًا تعتمد على معلومات محددة مسبقًا. يمكننا تمكين التحسين الذاتي، على سبيل المثال، من خلال توفير قائمة بمجمعات يوني سواب v3 وأحدث قيمها والسؤال عن المجموعة التي لديها أفضل قيمة تنبؤية.
 
 ### الحماية من الانزلاق {#slippage-protection}
 

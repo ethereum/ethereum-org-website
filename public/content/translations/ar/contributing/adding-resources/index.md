@@ -46,7 +46,7 @@ lang: ar
 
 ## أضف مصدرك {#add-your-resource}
 
-إذا كنت ترغب في إضافة مورد إلى ethereum.org وتوافقت مع المعايير، إنشاء قضية على GitHub.
+إذا كنت ترغب في إضافة مورد إلى ethereum.org وتوافقت مع المعايير، إنشاء قضية على غيت هاب.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=resource+📚&template=suggest_resource.yaml">
 أنشئ قضية

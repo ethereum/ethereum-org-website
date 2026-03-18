@@ -1,7 +1,7 @@
 ---
-title: How to mock Solidity smart contracts for testing
+title: "How to mock سوليديتي smart contracts for testing"
 description: Why you should make fun of your contracts when testing
-author: Markus Waas
+author: "ماركوس واس"
 lang: ar
 tags: [ "Solidity", "العقود الذكيه ", "الاختبار", "mocking" ]
 skill: intermediate
@@ -20,7 +20,7 @@ You could write complex test setup logic every time that brings in the contract 
 
 ## مثال: PrivateERC20 {#example-private-erc20}
 
-We use an example ERC-20 contract that has an initial private time. The owner can manage private users and only those will be allowed to receive tokens at the beginning. Once a certain time has passed, everyone will be allowed to use the tokens. إذا كنت مهتمًا، فنحن نستخدم خطاف [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) من عقود OpenZeppelin الجديدة الإصدار 3.
+We use an example ERC-20 contract that has an initial private time. The owner can manage private users and only those will be allowed to receive tokens at the beginning. Once a certain time has passed, everyone will be allowed to use the tokens. إذا كنت مهتمًا، فنحن نستخدم خطاف [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) من عقود أوبن زبلين الجديدة الإصدار 3.
 
 ```solidity
 pragma solidity ^0.6.0;

@@ -69,7 +69,7 @@ lang: ar
 
 يمكن للعقود الذكية تنفيذ أي إجراء بشكل أساسي يمكن للبرامج الحاسوبية تنفيذه.
 
-ويمكنها إجراء العمليات الحسابية، وإنشاء العملات، وتخزين البيانات، وصكّ [NFTs](/glossary/#nft)، وإرسال الاتصالات، وحتى إنشاء الرسومات. وفيما يلي بعض الأمثلة الواقعية الشائعة:
+ويمكنها إجراء العمليات الحسابية، وإنشاء العملات، وتخزين البيانات، وصكّ [إن إف تيز](/glossary/#nft)، وإرسال الاتصالات، وحتى إنشاء الرسومات. وفيما يلي بعض الأمثلة الواقعية الشائعة:
 
 - [العملات المستقرة](/stablecoins/)
 - [إنشاء الأصول الرقمية الفريدة وتوزيعها](/nft/)
@@ -83,7 +83,7 @@ lang: ar
 - [كيف ستغير العقود الذكية العالم](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [العقود الذكية للمطورين](/developers/docs/smart-contracts/)
 - [تعلم كتابة العقود الذكية](/developers/learning-tools/)
-- [Mastering Ethereum - ما هو العقد الذكي؟](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Mastering إيثريوم - ما هو العقد الذكي؟](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
 
 <Divider />
 
