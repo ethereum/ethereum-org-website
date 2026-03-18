@@ -14085,6 +14085,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "samlaf",
+      "name": "Samuel Laferriere",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9342524?v=4",
+      "profile": "http://samlaf.github.io/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
