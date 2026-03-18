@@ -42,6 +42,8 @@ const {
   stripCrowdinBoilerplate,
   fixDuplicatedTagValues,
   fixKnownBrandGarbles,
+  fixMissingOpeningSup,
+  fixSplitBoldMarkers,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -1662,6 +1664,111 @@ author: Ori Pomerantz
     test("skips code blocks", () => {
       const input = "```\nيجتبه\n```"
       const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixMissingOpeningSup", () => {
+    test("restores missing <sup> before footnote link with </sup>", () => {
+      const input = "أرقام[fn3](#notes)</sup>، مع وجود"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toBe(
+        "أرقام<sup>[fn3](#notes)</sup>، مع وجود"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("restores missing <sup> before numbered footnote", () => {
+      const input = "مرجع[1](#notes)</sup> هنا"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toBe("مرجع<sup>[1](#notes)</sup> هنا")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple missing openers", () => {
+      const input =
+        "أول[fn1](#notes)</sup> وثاني[fn2](#notes)</sup>"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toContain("<sup>[fn1](#notes)</sup>")
+      expect(content).toContain("<sup>[fn2](#notes)</sup>")
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves already-correct <sup> pairs unchanged", () => {
+      const input = "أرقام<sup>[fn3](#notes)</sup>، مع وجود"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not add <sup> when </sup> has matching opener", () => {
+      const input = "قيمة <sup>256</sup> عالية"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n[fn1](#notes)</sup>\n```"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixSplitBoldMarkers", () => {
+    test("fixes premature bold close with escaped end marker", () => {
+      const input =
+        "**اعتبارًا من التاريخ، فُقِد ما لا يقل عن 83 دولارًا.** لاحظ أن التنفيذ عرضة لهذه المشكلة.\\*\\*"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe(
+        "**اعتبارًا من التاريخ، فُقِد ما لا يقل عن 83 دولارًا. لاحظ أن التنفيذ عرضة لهذه المشكلة.**"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes real ERC-20 reception issue paragraph", () => {
+      const input =
+        '**اعتبارًا من <span dir="ltr">20/06/2024</span>، فُقِد ما لا يقل عن 83,656,418 دولارًا من الرموز المميزة بمعيار ERC-20 بسبب هذه المشكلة.** لاحظ أن التنفيذ الخالص لمعيار ERC-20 عرضة لهذه المشكلة ما لم تنفذ مجموعة من القيود الإضافية على المعيار كما هو موضح أدناه.\\*\\*'
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toContain("كما هو موضح أدناه.**")
+      expect(content).not.toContain("\\*\\*")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct bold unchanged", () => {
+      const input = "**هذا النص بخط عريض بالكامل.**"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves escaped bold that is fully escaped (not split)", () => {
+      const input = "\\*\\*نص مهرب بالكامل\\*\\*"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles split bold ending with period before escaped markers", () => {
+      const input =
+        "**الحلول الممكنة.** يمكن اقتراح.\\*\\*"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe("**الحلول الممكنة. يمكن اقتراح.**")
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n**text.** more.\\*\\*\n```"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not match when escaped markers are on a different line", () => {
+      const input = "**text.** end of line\n\\*\\* start of next"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
