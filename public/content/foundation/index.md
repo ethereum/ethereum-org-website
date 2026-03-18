@@ -15,7 +15,9 @@ The EF is not a company, or even a traditional non-profit. It does not control o
 
 ## EF Mandate {#ef-mandate}
 
-The [EF Mandate](/foundation/mandate/) defines the Foundation's purpose, principles, and commitments to the Ethereum ecosystem. Published onchain, it enshrines the EF's dedication to **censorship resistance, open source, privacy, and security (CROPS)** as non-negotiable priorities.
+The EF Mandate defines the Foundation's purpose, principles, and commitments to the Ethereum ecosystem. Published onchain, it enshrines the EF's dedication to **censorship resistance, open source, privacy, and security (CROPS)** as non-negotiable priorities.
+
+[Read the Ethereum Foundation Mandate](/foundation/mandate/)
 
 ## What the EF does {#what-the-ef-does}
 
