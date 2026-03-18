@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       target_path:
-        description: "File or directory path to translate (e.g., public/content/developers/index.md or public/content/developers or blank for all files)"
+        description: "Path(s) to translate (comma-separated, e.g., public/content/developers/index.md,src/intl/en/page-roadmap.json). Single directory or blank for all files."
         required: false
         type: string
       exclude_path:
