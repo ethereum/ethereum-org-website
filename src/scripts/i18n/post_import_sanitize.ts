@@ -1704,17 +1704,21 @@ function normalizeFrontmatterDates(content: string): {
  */
 function syncProtectedFrontmatterFields(
   translatedMd: string,
-  englishMd: string
+  englishMd: string,
+  locale?: string
 ): { content: string; fixCount: number } {
   // Fields that should never be translated - sync from English canonical
   // Note: 'buttons' array needs special handling (content translatable, toId/isSecondary not)
   // Note: 'lang' must NOT be protected - it must remain as target language code
+  // Note: 'author' is excluded for non-Latin locales -- author names render to readers
+  //   and should be transliterated for reading flow
+  const isTranslitLang = locale ? TRANSLITERATION_LOCALES.has(locale) : false
   const protectedFields = [
     "template",
     "sidebar",
     "sidebarDepth",
     "published",
-    "author",
+    ...(isTranslitLang ? [] : ["author"]),
     "source",
     "sourceUrl",
     "address",
@@ -3293,7 +3297,7 @@ function processMarkdownFile(
   // Normalize inline components and restore blank lines from English source
   if (englishMd) {
     applyFix(
-      () => syncProtectedFrontmatterFields(content, englishMd!),
+      () => syncProtectedFrontmatterFields(content, englishMd!, locale),
       (n) => `Synced ${n} protected frontmatter fields from English`
     )
     applyFix(
