@@ -364,4 +364,4 @@ You should then see something like:
 
 هذا كل شيء للجزء الأول من هذا الدرس التعليمي، في الجزء الثاني سوف [نتفاعل فعليًا مع عقدنا الذكي](https://www.alchemy.com/docs/interacting-with-a-smart-contract) عن طريق تحديث رسالتنا الأولية، وفي الجزء الثالث سنقوم [بنشر عقدنا الذكي على إيثرسكان](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) حتى يعرف الجميع كيفية التفاعل معه.
 
-**هل تريد معرفة المزيد عن ألكيمي؟** تحقق من [موقعنا الإلكتروني](https://www.alchemy.com/eth). هل تريد ألا يفوتك أي تحديث؟ اشترك في نشرتنا الإخبارية [هنا](https://www.alchemy.com/newsletter)! تأكد أيضًا من الانضمام إلى [ديسكورد](https://discord.gg/u72VCg3) الخاص بنا.\*\*.
+**هل تريد معرفة المزيد عن ألكيمي؟ تحقق من [موقعنا الإلكتروني](https://www.alchemy.com/eth). هل تريد ألا يفوتك أي تحديث؟ اشترك في نشرتنا الإخبارية [هنا](https://www.alchemy.com/newsletter)! تأكد أيضًا من الانضمام إلى [ديسكورد](https://discord.gg/u72VCg3) الخاص بنا.**.
