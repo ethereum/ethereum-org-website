@@ -1,6 +1,6 @@
 ---
 title: Ethereum Foundation Mandate
-description: The Ethereum Foundation Mandate in text form
+description: Explore the official Ethereum Foundation Mandate, defining the Foundation's purpose, principles, and commitments to the Ethereum ecosystem.
 hideEditButton: true
 sidebarDepth: 1
 lang: en
