@@ -12,7 +12,7 @@ import { delay } from "../workflows/utils"
 
 import { buildTranslationPrompt } from "./prompt-builder"
 
-const GEMINI_MODEL = "gemini-2.5-pro"
+const GEMINI_MODELS = ["gemini-3.1-pro-preview", "gemini-3.1-pro"]
 const MAX_RETRIES = 3
 const RETRY_DELAY_MS = 5000
 
@@ -65,67 +65,99 @@ export async function translateFile(
   })
 
   const client = getGeminiClient()
-  const model = client.getGenerativeModel({ model: GEMINI_MODEL })
+
+  // Allow env override, otherwise try models in preference order
+  const modelsToTry = process.env.GEMINI_MODEL
+    ? [process.env.GEMINI_MODEL]
+    : GEMINI_MODELS
 
   let lastError: Error | null = null
 
-  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    try {
-      const result = await model.generateContent(prompt)
-      const response = result.response
-      let text = response.text()
+  for (const modelId of modelsToTry) {
+    const model = client.getGenerativeModel({ model: modelId })
+    let modelFailed = false
 
-      // Strip markdown code block wrapping if Gemini added it
-      text = stripCodeBlockWrapping(text, fileType)
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+      try {
+        const result = await model.generateContent(prompt)
+        const response = result.response
+        let text = response.text()
 
-      // Validate structural integrity
-      const validation = validateOutput(text, fileContent, fileType)
-      if (!validation.valid) {
+        // Strip markdown code block wrapping if Gemini added it
+        text = stripCodeBlockWrapping(text, fileType)
+
+        // Validate structural integrity
+        const validation = validateOutput(text, fileContent, fileType)
+        if (!validation.valid) {
+          if (attempt < MAX_RETRIES) {
+            console.warn(
+              `[WARN] ${filePath} attempt ${attempt} (${modelId}): ${validation.error}. Retrying...`
+            )
+            await delay(RETRY_DELAY_MS * attempt)
+            continue
+          }
+          throw new Error(
+            `Output validation failed after ${MAX_RETRIES} attempts: ${validation.error}`
+          )
+        }
+
+        const usage = response.usageMetadata
+        return {
+          translatedContent: text,
+          tokensUsed: {
+            input: usage?.promptTokenCount || 0,
+            output: usage?.candidatesTokenCount || 0,
+          },
+        }
+      } catch (error) {
+        lastError = error instanceof Error ? error : new Error(String(error))
+
+        // Model not found / deprecated -- fall back to next model
+        if (
+          lastError.message.includes("404") ||
+          lastError.message.includes("not found") ||
+          lastError.message.includes("deprecated")
+        ) {
+          console.warn(
+            `[WARN] Model ${modelId} unavailable: ${lastError.message}. Trying next model...`
+          )
+          modelFailed = true
+          break
+        }
+
+        // Rate limit -- back off and retry
+        if (
+          lastError.message.includes("429") ||
+          lastError.message.includes("RESOURCE_EXHAUSTED")
+        ) {
+          const backoff = RETRY_DELAY_MS * Math.pow(2, attempt)
+          console.warn(
+            `[WARN] Rate limited on ${filePath} (${modelId}). Waiting ${backoff / 1000}s...`
+          )
+          await delay(backoff)
+          continue
+        }
+
+        // Other transient errors
         if (attempt < MAX_RETRIES) {
           console.warn(
-            `[WARN] ${filePath} attempt ${attempt}: ${validation.error}. Retrying...`
+            `[WARN] ${filePath} attempt ${attempt} (${modelId}) failed: ${lastError.message}. Retrying...`
           )
           await delay(RETRY_DELAY_MS * attempt)
           continue
         }
-        throw new Error(
-          `Output validation failed after ${MAX_RETRIES} attempts: ${validation.error}`
-        )
-      }
-
-      const usage = response.usageMetadata
-      return {
-        translatedContent: text,
-        tokensUsed: {
-          input: usage?.promptTokenCount || 0,
-          output: usage?.candidatesTokenCount || 0,
-        },
-      }
-    } catch (error) {
-      lastError = error instanceof Error ? error : new Error(String(error))
-
-      // Rate limit -- back off and retry
-      if (
-        lastError.message.includes("429") ||
-        lastError.message.includes("RESOURCE_EXHAUSTED")
-      ) {
-        const backoff = RETRY_DELAY_MS * Math.pow(2, attempt)
-        console.warn(
-          `[WARN] Rate limited on ${filePath}. Waiting ${backoff / 1000}s...`
-        )
-        await delay(backoff)
-        continue
-      }
-
-      // Other transient errors
-      if (attempt < MAX_RETRIES) {
-        console.warn(
-          `[WARN] ${filePath} attempt ${attempt} failed: ${lastError.message}. Retrying...`
-        )
-        await delay(RETRY_DELAY_MS * attempt)
-        continue
       }
     }
+
+    if (!modelFailed) break // Success or exhausted retries on working model
+  }
+
+  // If all models were unavailable, fail loudly
+  if (modelsToTry.every((id) => lastError?.message.includes("404") || lastError?.message.includes("not found"))) {
+    throw new Error(
+      `All Gemini models unavailable (${modelsToTry.join(", ")}). ` +
+      `Update GEMINI_MODELS in gemini-translate.ts or set GEMINI_MODEL env var.`
+    )
   }
 
   throw lastError || new Error(`Translation failed for ${filePath}`)
