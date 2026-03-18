@@ -3,7 +3,6 @@
  * For each language: translate all files, validate, batch commit.
  */
 
-import { config } from "../../config"
 import { translateFile } from "../ai/gemini-translate"
 import {
   initProgress,
@@ -47,11 +46,13 @@ export async function geminiTranslateFiles(
 ): Promise<{
   branch: string
   stats: Record<string, TranslationStats>
+  committedFiles: CommitFile[]
 }> {
   const { englishFiles, glossary, targetLanguages } = context
   const concurrency = Number(process.env.GEMINI_CONCURRENCY) || 3
   const progress = initProgress(runId, targetLanguages)
   const allStats: Record<string, TranslationStats> = {}
+  const allCommittedFiles: CommitFile[] = []
 
   for (const language of targetLanguages) {
     logSection(`Translating: ${language}`)
@@ -66,7 +67,7 @@ export async function geminiTranslateFiles(
       `[translate] ${language}: ${englishFiles.length} files, ${glossaryTerms.size} glossary terms, concurrency ${concurrency}`
     )
 
-    const stats = await translateLanguage(
+    const { stats, files } = await translateLanguage(
       englishFiles,
       language,
       glossaryTerms,
@@ -76,6 +77,7 @@ export async function geminiTranslateFiles(
     )
 
     allStats[language] = stats
+    allCommittedFiles.push(...files)
     markLanguageCompleted(progress, language)
 
     console.log(
@@ -86,7 +88,7 @@ export async function geminiTranslateFiles(
     )
   }
 
-  return { branch: branchName, stats: allStats }
+  return { branch: branchName, stats: allStats, committedFiles: allCommittedFiles }
 }
 
 /**
@@ -99,7 +101,7 @@ async function translateLanguage(
   branchName: string,
   concurrency: number,
   progress: TranslationProgress
-): Promise<TranslationStats> {
+): Promise<{ stats: TranslationStats; files: CommitFile[] }> {
   const limiter = createRateLimiter(concurrency)
   const stats: TranslationStats = {
     filesTranslated: 0,
@@ -169,5 +171,5 @@ async function translateLanguage(
     )
   }
 
-  return stats
+  return { stats, files: translatedFiles }
 }

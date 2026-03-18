@@ -74,35 +74,41 @@ async function main() {
   await postCreateBranchFrom(branchName, baseBranch.object.sha)
 
   // Phase 2: Translate files
-  const { stats } = await geminiTranslateFiles(context, branchName, runId)
-
-  // Collect all committed files for downstream phases
-  // (sanitizer and PR creation expect CommittedFile format)
-  const committedFiles = Object.entries(stats).flatMap(([lang, s]) =>
-    Array(s.filesTranslated)
-      .fill(null)
-      .map((_, i) => ({
-        path: `translated-${lang}-${i}`, // placeholder -- sanitizer reads from branch
-        content: "",
-        language: lang,
-      }))
+  const { stats, committedFiles } = await geminiTranslateFiles(
+    context,
+    branchName,
+    runId
   )
 
   // Phase 3: Post-import sanitization
-  logSection("Post-Import Sanitization")
-  console.log(
-    "[main] Running sanitizer on translated files..."
+  const sanitizerInput = committedFiles.map((f) => ({
+    path: f.path,
+    content: f.content,
+  }))
+  const sanitizeResult = await runPostImportSanitization(
+    sanitizerInput,
+    branchName
   )
-  // The sanitizer reads files from the branch and fixes in place
-  // For now, we'll note this needs integration with the branch-based sanitizer
-  // TODO: Integrate runPostImportSanitization with the Gemini workflow
 
-  // Phase 4: Transliteration
-  logSection("Transliteration")
-  console.log(
-    "[main] Transliteration runs as part of the sanitizer for non-Latin locales"
-  )
-  // TODO: Invoke transliterate.ts per non-Latin language on the committed files
+  // Phase 4: JSX attribute translation (reuse existing Gemini JSX flow)
+  if (isGeminiAvailable()) {
+    const languagePairsForJsx = context.targetLanguages.map((code) => ({
+      crowdinId: code,
+      internalLanguageCode: code,
+    }))
+    try {
+      await runJsxTranslation(
+        sanitizerInput,
+        languagePairsForJsx,
+        branchName,
+        context.glossary
+      )
+    } catch (error) {
+      console.warn(
+        `[main] JSX translation failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
+      )
+    }
+  }
 
   // Phase 5: Create PR
   const skipPr = ["1", "true", "yes", "on"].includes(
@@ -112,7 +118,6 @@ async function main() {
   if (!skipPr) {
     logSection("Creating Pull Request")
 
-    // Build summary
     const totalFiles = Object.values(stats).reduce(
       (sum, s) => sum + s.filesTranslated,
       0
@@ -123,20 +128,21 @@ async function main() {
     )
     const languages = Object.keys(stats)
 
-    console.log(`[main] Total: ${totalFiles} files, ${totalTokens} tokens`)
-    console.log(`[main] Languages: ${languages.join(", ")}`)
+    const languagePairs = languages.map((code) => ({
+      crowdinId: code,
+      internalLanguageCode: code,
+    }))
 
-    // TODO: Create PR using createTranslationPR with adapted parameters
-    console.log(`[main] PR creation pending integration`)
+    await createTranslationPR(
+      branchName,
+      sanitizerInput,
+      sanitizeResult.changedFiles,
+      languagePairs
+    )
   }
 
   // Cleanup progress manifest on success
-  const progress = {
-    runId,
-    startedAt: "",
-    languages: {},
-  }
-  cleanupProgress(progress)
+  cleanupProgress({ runId, startedAt: "", languages: {} })
 
   logSection("Complete")
   console.log("[main] Gemini direct translation pipeline finished.")
