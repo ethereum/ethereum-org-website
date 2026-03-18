@@ -138,10 +138,6 @@ export const filterRealLocales = (locales: string[] | undefined) => {
   return locales?.filter((locale) => locale !== FAKE_LOCALE) || []
 }
 
-export const isLocaleValidISO639_1 = (locale: string) => {
-  return i18nConfig.find((language) => language.code === locale)?.validISO639_1
-}
-
 export const isLang = (lang: string) => {
   return i18nConfig.map((language) => language.code).includes(lang)
 }

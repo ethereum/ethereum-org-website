@@ -4,224 +4,174 @@
     "crowdinCode": "en",
     "name": "English",
     "localName": "English",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "ar",
     "crowdinCode": "ar",
     "name": "Arabic",
     "localName": "العربية",
-    "langDir": "rtl",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "rtl"
   },
   {
     "code": "bn",
     "crowdinCode": "bn",
     "name": "Bengali",
     "localName": "বাংলা",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "cs",
     "crowdinCode": "cs",
     "name": "Czech",
     "localName": "Čeština",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "de",
     "crowdinCode": "de",
     "name": "German",
     "localName": "Deutsch",
-    "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "es",
     "crowdinCode": "es-EM",
     "name": "Spanish",
     "localName": "Español",
-    "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "fr",
     "crowdinCode": "fr",
     "name": "French",
     "localName": "Français",
-    "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "hi",
     "crowdinCode": "hi",
     "name": "Hindi",
     "localName": "हिन्दी",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "id",
     "crowdinCode": "id",
     "name": "Indonesian",
     "localName": "Bahasa Indonesia",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "it",
     "crowdinCode": "it",
     "name": "Italian",
     "localName": "Italiano",
-    "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "ja",
     "crowdinCode": "ja",
     "name": "Japanese",
     "localName": "日本語",
-    "langDir": "ltr",
-    "dateFormat": "YYYY/MM/DD",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "ko",
     "crowdinCode": "ko",
     "name": "Korean",
     "localName": "한국어",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "mr",
     "crowdinCode": "mr",
     "name": "Marathi",
     "localName": "मराठी",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "pl",
     "crowdinCode": "pl",
     "name": "Polish",
     "localName": "Polski",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "pt-br",
     "crowdinCode": "pt-BR",
     "name": "Portuguese (Brazilian)",
     "localName": "Português",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "ru",
     "crowdinCode": "ru",
     "name": "Russian",
     "localName": "Pусский",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "sw",
     "crowdinCode": "sw",
     "name": "Swahili",
     "localName": "Kiswahili",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "ta",
     "crowdinCode": "ta",
     "name": "Tamil",
     "localName": "தமிழ்",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "te",
     "crowdinCode": "te",
     "name": "Telugu",
     "localName": "తెలుగు",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "tr",
     "crowdinCode": "tr",
     "name": "Turkish",
     "localName": "Türkçe",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "uk",
     "crowdinCode": "uk",
     "name": "Ukrainian",
     "localName": "Українська",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "ur",
     "crowdinCode": "ur-IN",
     "name": "Urdu",
     "localName": "اردو",
-    "langDir": "rtl",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "rtl"
   },
   {
     "code": "vi",
     "crowdinCode": "vi",
     "name": "Vietnamese",
     "localName": "Tiếng Việt",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "zh-tw",
     "crowdinCode": "zh-TW",
     "name": "Chinese Traditional",
     "localName": "繁體中文",
-    "langDir": "ltr",
-    "dateFormat": "YYYY-MM-DD",
-    "validISO639_1": true
+    "langDir": "ltr"
   },
   {
     "code": "zh",
     "crowdinCode": "zh-CN",
     "name": "Chinese Simplified",
     "localName": "简体中文",
-    "langDir": "ltr",
-    "dateFormat": "YYYY-MM-DD",
-    "validISO639_1": true
+    "langDir": "ltr"
   }
 ]

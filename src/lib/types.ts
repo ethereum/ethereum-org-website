@@ -166,7 +166,6 @@ export type I18nLocale = {
   name: string
   localName: string
   langDir: Direction
-  dateFormat: string
   /**
    * @property forceLocalName - Optional flag to indicate that the local name should be used instead of the fallback from `Intl.DisplayName`.
    *   Fallback used when locale language name matches English name.
