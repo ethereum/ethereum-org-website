@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
@@ -122,6 +122,7 @@ const WhyGrid = () => {
 }
 const DevelopersPage = async ({ params }: { params: PageParams }) => {
   const { locale } = params
+  setRequestLocale(locale)
   const t = await getTranslations({
     locale,
     namespace: "page-developers-index",
