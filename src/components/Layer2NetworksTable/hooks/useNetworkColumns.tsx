@@ -82,13 +82,10 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
                   {row.original.txCosts ? (
                     <>
                       $
-                      {(row.original.txCosts || 0).toLocaleString(
-                        meta.locale as Lang,
-                        {
-                          minimumFractionDigits: 2,
-                          maximumFractionDigits: 3,
-                        }
-                      )}
+                      {numberFormat(meta.locale as Lang, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 3,
+                      }).format(row.original.txCosts || 0)}
                     </>
                   ) : (
                     <p>-</p>
@@ -173,10 +170,10 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
           {row.original.txCosts ? (
             <p>
               $
-              {row.original.txCosts.toLocaleString(meta.locale as Lang, {
+              {numberFormat(meta.locale as Lang, {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 3,
-              })}
+              }).format(row.original.txCosts)}
             </p>
           ) : (
             <p>-</p>

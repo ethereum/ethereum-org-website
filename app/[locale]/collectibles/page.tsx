@@ -15,6 +15,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CollectiblesPage from "./_components/Collectibles/lazy"
@@ -110,7 +111,9 @@ export default async function Page({ params }: { params: PageParams }) {
               {/* Minted */}
               <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-8 text-accent-a max-md:col-span-2 xl:col-span-2 xl:p-6">
                 <div className="text-4xl font-bold md:text-6xl">
-                  {stats.collectorsCount?.toLocaleString(locale) ?? "-"}
+                  {stats.collectorsCount
+                    ? numberFormat(locale).format(stats.collectorsCount)
+                    : "-"}
                 </div>
                 <div className="text-center font-bold">
                   {t("page-collectibles-stats-minted")}
@@ -119,7 +122,9 @@ export default async function Page({ params }: { params: PageParams }) {
               {/* Collectors */}
               <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-b/20 bg-gradient-to-b from-accent-b/5 to-accent-b/15 p-6 text-accent-b">
                 <div className="text-4xl font-bold md:text-6xl">
-                  {stats.uniqueAddressesCount?.toLocaleString(locale) ?? "-"}
+                  {stats.uniqueAddressesCount
+                    ? numberFormat(locale).format(stats.uniqueAddressesCount)
+                    : "-"}
                 </div>
                 <div className="text-center font-bold">
                   {t("page-collectibles-stats-collectors")}
@@ -128,7 +133,9 @@ export default async function Page({ params }: { params: PageParams }) {
               {/* Unique Badges */}
               <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 to-accent-c/15 p-6 text-accent-c">
                 <div className="text-4xl font-bold md:text-6xl">
-                  {stats.collectiblesCount?.toLocaleString(locale) ?? "-"}
+                  {stats.collectiblesCount
+                    ? numberFormat(locale).format(stats.collectiblesCount)
+                    : "-"}
                 </div>
                 <div className="text-center font-bold">
                   {t("page-collectibles-stats-unique-badges")}
