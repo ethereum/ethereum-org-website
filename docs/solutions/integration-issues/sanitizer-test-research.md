@@ -48,6 +48,9 @@
 | 37 | Brand name garbled as Arabic transliteration "يجتبه" | ar #17105 | `[يجتبه](https://github.com/...)` -- "GitHub" consistently garbled across 15 files, 82 occurrences; appears to be Crowdin TM artifact | High -- wrong brand name, user-visible |
 | 38 | Brand name "Solidity" literally translated as "الصلابة" | ar #17105 | `tags: ["الصلابة", "Waffle"]` -- programming language name translated as its literal meaning "hardness"; found in 3 Waffle tutorial files | Medium -- wrong brand name in tags |
 | 39 | Abbreviation stripped from parentheses in frontmatter | ar #17105 | `title: "الأصول الحقيقية ()"` -- English has `(RWA)` but Crowdin strips the Latin abbreviation leaving empty parens; also found for `(PoA)` | Medium -- missing abbreviation |
+| 40 | Base digit merged into `<sup>` exponent tag | ar #17105 | EN: `2<sup>256</sup>` -> AR: `<sup>2256</sup>` -- Crowdin absorbs the base number into the superscript, making exponent unreadable. Detectable by comparing `<sup>` contents against English. | High -- wrong math rendering |
+| 41 | Missing opening `<sup>` on footnote links | ar #17105 | EN: `<sup>[fn3](#notes)</sup>` -> AR: `[fn3](#notes)</sup>` -- Crowdin drops the opening `<sup>` tag, leaving an orphaned `</sup>`. Detectable by finding `</sup>` without matching `<sup>`. | High -- broken markup |
+| 42 | Split bold with escaped closing markers | ar #17105 | EN: `**full paragraph bold.**` -> AR: `**first sentence.** rest of text.\*\*` -- Crowdin splits a bold block by closing `**` mid-paragraph, then appends escaped `\*\*` at the end. The escaped markers render as literal asterisks. Fix: compare bold spans against English; detect `\*\*` preceded by an earlier premature `**` close. | High -- broken formatting, visible asterisks |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 

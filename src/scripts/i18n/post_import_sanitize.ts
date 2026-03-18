@@ -321,6 +321,124 @@ function fixKnownBrandGarbles(
 }
 
 /**
+ * Fix missing opening <sup> tags before footnote links.
+ * Crowdin sometimes drops the opening <sup> tag, leaving an orphaned </sup>.
+ * Pattern: `[fnN](#anchor)</sup>` without a preceding `<sup>`.
+ * Fix: insert `<sup>` before the `[`.
+ * Skips code blocks.
+ */
+function fixMissingOpeningSup(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match: [linktext](#anchor)</sup> NOT preceded by <sup>
+    // Use negative lookbehind for <sup>
+    parts[i] = parts[i].replace(
+      /(?<!<sup>)(\[[^\]]+\]\([^)]+\)<\/sup>)/g,
+      (match, group) => {
+        fixCount++
+        return `<sup>${group}`
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix base digits merged into <sup> exponent tags by Crowdin.
+ * English: `2<sup>256</sup>` -> Crowdin merges to: `<sup>2256</sup>`
+ * Fix: extract the base digit(s) from inside <sup> using English as reference.
+ *
+ * Strategy: For each <sup>DIGITS</sup> in translation, check if English has
+ * N<sup>M</sup> where NM equals DIGITS. If so, split accordingly.
+ * Skips code blocks.
+ */
+function fixMergedSupDigits(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  // Extract all N<sup>M</sup> patterns from English (base + exponent)
+  const engSupRe = /(\d+)<sup>(\d+)<\/sup>/g
+  const engExponents: Array<{ base: string; exp: string; merged: string }> = []
+  let m
+  while ((m = engSupRe.exec(englishContent)) !== null) {
+    engExponents.push({ base: m[1], exp: m[2], merged: m[1] + m[2] })
+  }
+
+  if (engExponents.length === 0)
+    return { content: translatedContent, fixCount: 0 }
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = translatedContent.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Find <sup>DIGITS</sup> where DIGITS matches a merged base+exp from English
+    parts[i] = parts[i].replace(/<sup>(\d+)<\/sup>/g, (match, digits) => {
+      const eng = engExponents.find((e) => e.merged === digits)
+      if (eng) {
+        fixCount++
+        return `${eng.base}<sup>${eng.exp}</sup>`
+      }
+      return match
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix split bold markers where Crowdin prematurely closes ** mid-paragraph
+ * and escapes the real closing marker as \*\*.
+ *
+ * Pattern: `**text1.** text2.\*\*` -> `**text1. text2.**`
+ *
+ * On a single line: opening ** ... premature ** close ... escaped \*\* at end.
+ * Fix: remove the premature close, unescape the end marker.
+ * Skips code blocks. Only operates within single lines (no cross-line spans).
+ */
+function fixSplitBoldMarkers(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    const lines = parts[i].split("\n")
+    for (let j = 0; j < lines.length; j++) {
+      // Match: **text1.** text2.\*\* on the same line
+      // Opening ** at start/after whitespace, premature ** close, then escaped \*\* at end
+      const re =
+        /(\*\*)((?:(?!\*\*).)+?)(\*\*)((?:(?!\\\*\\\*).)+?)\\\*\\\*/g
+      lines[j] = lines[j].replace(re, (_match, open, inner1, _premClose, inner2) => {
+        fixCount++
+        return `${open}${inner1}${inner2}**`
+      })
+    }
+    parts[i] = lines.join("\n")
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Fix duplicated tag/JSON values where a string is concatenated with itself.
  * E.g. "ERC-721ERC-721" -> "ERC-721".
  * Only operates on quoted string values (double quotes) to avoid false positives.
@@ -1956,6 +2074,148 @@ const CROSS_SCRIPT_DETECTORS: Record<
   },
 }
 
+/** RTL locales that need BiDi protection checks. */
+const RTL_LOCALES = new Set(["ar", "ur"])
+
+/**
+ * Split pattern for RTL BiDi fixes. Skips:
+ * - Fenced code blocks (```...```, ~~~...~~~)
+ * - Inline code (`...`)
+ * - Markdown link URLs: ](url)
+ * - Bare URLs: https://... or http://...
+ * - HTML attributes: attr="value"
+ * - Already-wrapped spans: <span dir="ltr">...</span>
+ */
+const RTL_SKIP_PATTERN =
+  /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`|\]\([^)]+\)|https?:\/\/[^\s<>)]+|<span dir="ltr">[\s\S]*?<\/span>|\w+="[^"]*")/g
+
+/**
+ * Wrap bare numeric dates in RTL files with <span dir="ltr"> to prevent
+ * BiDi flipping. Dates like "2026-03-15" or "03/15/2026" visually flip
+ * in RTL text because hyphens/slashes are BiDi-neutral characters.
+ *
+ * Skips: code blocks, inline code, markdown link URLs, bare URLs,
+ * HTML attributes, already-wrapped spans, and frontmatter.
+ */
+function fixBareRtlDates(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (!RTL_LOCALES.has(locale)) return { content, fixCount: 0 }
+  let fixCount = 0
+
+  // Split out frontmatter to avoid touching date-like strings in YAML
+  const fmRe = /^(---\n[\s\S]*?\n---\n)/
+  const fmMatch = content.match(fmRe)
+  const frontmatter = fmMatch ? fmMatch[1] : ""
+  let body = fmMatch ? content.slice(frontmatter.length) : content
+
+  const parts = body.split(RTL_SKIP_PATTERN)
+
+  // Date patterns: YYYY-MM-DD, YYYY/MM/DD, DD/MM/YYYY, MM/DD/YYYY
+  const dateRe =
+    /\d{4}[-/]\d{1,2}[-/]\d{1,2}|\d{1,2}[-/]\d{1,2}[-/]\d{4}/g
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip protected zones
+
+    parts[i] = parts[i].replace(dateRe, (match) => {
+      fixCount++
+      return `<span dir="ltr">${match}</span>`
+    })
+  }
+
+  body = parts.join("")
+  return { content: frontmatter + body, fixCount }
+}
+
+/**
+ * Wrap bare math equations in RTL files with <span dir="ltr"> to prevent
+ * BiDi flipping. Equations like "1150 - 187 = 963" visually flip because
+ * operators (=, -, +, *, /) are BiDi-neutral.
+ *
+ * Only matches patterns with digits on BOTH sides of operators to avoid
+ * false positives with markdown syntax (* for bold/italic, - for lists,
+ * / in paths).
+ *
+ * Skips: code blocks, inline code, markdown link URLs, bare URLs,
+ * HTML attributes, already-wrapped spans, and frontmatter.
+ */
+function fixBareRtlEquations(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (!RTL_LOCALES.has(locale)) return { content, fixCount: 0 }
+  let fixCount = 0
+
+  // Split out frontmatter
+  const fmRe = /^(---\n[\s\S]*?\n---\n)/
+  const fmMatch = content.match(fmRe)
+  const frontmatter = fmMatch ? fmMatch[1] : ""
+  let body = fmMatch ? content.slice(frontmatter.length) : content
+
+  const parts = body.split(RTL_SKIP_PATTERN)
+
+  // Match: num (op num)+ = num (op num)* -- full equation chains
+  // e.g. 20+10*0.907=29.07, 0-1=2^256-1, 112+32=256
+  // Requires digits flanking all operators to avoid markdown syntax false positives.
+  // Operators: +, -, ^, raw * and /, markdown-escaped \* and \/
+  const OP = "(?:[-+^]|\\\\?[*/])"
+  const NUM = "\\d+(?:\\.\\d+)?"
+  const eqRe = new RegExp(
+    `${NUM}(?:\\s*${OP}\\s*${NUM})+\\s*=\\s*${NUM}(?:\\s*${OP}\\s*${NUM})*`,
+    "g"
+  )
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip protected zones
+
+    parts[i] = parts[i].replace(eqRe, (match) => {
+      fixCount++
+      return `<span dir="ltr">${match}</span>`
+    })
+  }
+
+  body = parts.join("")
+  return { content: frontmatter + body, fixCount }
+}
+
+/**
+ * Warn about translated technical numerals in any locale.
+ * Technical identifiers like ERC-20, EIP-1559, Web3 must keep Western Arabic
+ * numerals. Detects Arabic-Indic (٠-٩) or Extended Arabic-Indic (۰-۹) digits
+ * in these contexts.
+ */
+function warnTranslatedTechnicalNumerals(content: string): string[] {
+  const warnings: string[] = []
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  // Arabic-Indic digits: ٠١٢٣٤٥٦٧٨٩
+  // Extended Arabic-Indic digits: ۰۱۲۳۴۵۶۷۸۹
+  const nativeDigit = /[\u0660-\u0669\u06F0-\u06F9]/
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Check for ERC/EIP with native digits
+    const techRe = /(?:ERC|EIP|Web|Layer\s*|L)[\u0660-\u0669\u06F0-\u06F9-]+/g
+    const matches = parts[i].match(techRe)
+    if (matches) {
+      for (const m of matches) {
+        if (nativeDigit.test(m)) {
+          warnings.push(
+            `Translated technical numeral "${m}" -- must use Western Arabic digits (e.g., ERC-20, not ERC-٢٠)`
+          )
+        }
+      }
+    }
+  }
+
+  return warnings
+}
+
 /**
  * Detect cross-script contamination in translated content.
  * Returns warnings for unexpected Unicode characters based on the file's locale.
@@ -2889,6 +3149,14 @@ function processMarkdownFile(
     (n) => `Stripped ${n} Crowdin boilerplate injection(s)`
   )
   applyFix(
+    () => fixMissingOpeningSup(content),
+    (n) => `Restored ${n} missing opening <sup> tag(s)`
+  )
+  applyFix(
+    () => fixSplitBoldMarkers(content),
+    (n) => `Fixed ${n} split bold marker(s) (premature close + escaped end)`
+  )
+  applyFix(
     () => fixKnownBrandGarbles(content, locale),
     (n) => `Fixed ${n} known brand name garble(s)`
   )
@@ -3079,6 +3347,15 @@ function processMarkdownFile(
     }
     content = abbrevResult.content
 
+    // Fix base digits merged into <sup> tags by Crowdin
+    const supResult = fixMergedSupDigits(content, englishMd)
+    if (supResult.content !== content) {
+      issues.push(
+        `Fixed ${supResult.fixCount} merged digit(s) in <sup> exponent tag(s)`
+      )
+    }
+    content = supResult.content
+
     // Fix translated hrefs using set comparison
     const hrefResult = fixTranslatedHrefs(content, englishMd)
     if (hrefResult.content !== content) {
@@ -3117,6 +3394,26 @@ function processMarkdownFile(
     if (locale) {
       const scriptWarnings = detectCrossScriptContamination(content, locale)
       issues.push(...scriptWarnings)
+
+      // RTL-specific BiDi fixes: wrap bare dates and equations in <span dir="ltr">
+      const dateResult = fixBareRtlDates(content, locale)
+      if (dateResult.fixCount > 0) {
+        content = dateResult.content
+        issues.push(
+          `Wrapped ${dateResult.fixCount} bare numeric date(s) in <span dir="ltr"> for RTL`
+        )
+      }
+      const eqResult = fixBareRtlEquations(content, locale)
+      if (eqResult.fixCount > 0) {
+        content = eqResult.content
+        issues.push(
+          `Wrapped ${eqResult.fixCount} bare math equation(s) in <span dir="ltr"> for RTL`
+        )
+      }
+
+      // Technical numeral warnings (all locales)
+      const numeralWarnings = warnTranslatedTechnicalNumerals(content)
+      issues.push(...numeralWarnings)
     }
 
     // Detect untranslated content
@@ -3619,7 +3916,13 @@ export const _testOnly = {
   fixDuplicatedTagValues,
   fixKnownBrandGarbles,
   restoreStrippedAbbreviations,
+  fixMergedSupDigits,
+  fixMissingOpeningSup,
+  fixSplitBoldMarkers,
   warnExposedMdxTags,
+  fixBareRtlDates,
+  fixBareRtlEquations,
+  warnTranslatedTechnicalNumerals,
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,
   warnCatastrophicCodeFenceDrift,

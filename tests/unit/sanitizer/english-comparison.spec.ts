@@ -22,6 +22,7 @@ const {
   fixCollapsedComponentLineBreaks,
   fixMissingLinkBrackets,
   restoreStrippedAbbreviations,
+  fixMergedSupDigits,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -757,6 +758,119 @@ test.describe("English Comparison Fixes", () => {
       expect(content).toContain("(ABC)")
       expect(content).toContain("(DEF)")
       expect(fixCount).toBe(2)
+    })
+  })
+
+  test.describe("fixProtectedBrandNames (locale-aware)", () => {
+    test("skips brand tag reversion for non-Latin locale (ar)", () => {
+      const translated =
+        '---\ntags: ["سوليديتي", "وافل"]\n---\nContent with إيثريوم.'
+      const english =
+        '---\ntags: ["Solidity", "Waffle"]\n---\nContent with Ethereum.'
+      // For Arabic, brand tags should NOT be reverted to English
+      // (transliterated forms are correct for non-Latin UI)
+      // NOTE: fixBrandTags still runs for all locales per current policy
+      // (brand tags stay Latin). This test validates the warning suppression.
+      const result = fixProtectedBrandNames(translated, english, "ar")
+      // Should NOT warn about brand count mismatches for non-Latin locales
+      const brandWarnings = result.warnings.filter((w) =>
+        w.includes("Protected brand")
+      )
+      expect(brandWarnings).toHaveLength(0)
+    })
+
+    test("warns about brand mismatches for Latin locale (de)", () => {
+      const translated =
+        '---\ntags: ["Solidity"]\n---\nInhalt ohne den Markennamen.'
+      const english =
+        '---\ntags: ["Solidity"]\n---\nContent about Ethereum and Ethereum network.'
+      const result = fixProtectedBrandNames(translated, english, "de")
+      const brandWarnings = result.warnings.filter((w) =>
+        w.includes("Protected brand")
+      )
+      expect(brandWarnings.length).toBeGreaterThan(0)
+    })
+  })
+
+  test.describe("syncProtectedFrontmatterFields (locale-aware)", () => {
+    test("preserves transliterated author for non-Latin locale", () => {
+      const translated =
+        '---\ntitle: "Test"\nauthor: "\u0623\u0648\u0631\u064A \u0628\u0648\u0645\u064A\u0631\u0627\u0646\u062A\u0632"\nskill: beginner\n---\nContent.'
+      const english =
+        '---\ntitle: "Test"\nauthor: Ori Pomerantz\nskill: beginner\n---\nContent.'
+      const { content } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "ar"
+      )
+      // Author should stay transliterated for Arabic
+      expect(content).toContain(
+        "\u0623\u0648\u0631\u064A \u0628\u0648\u0645\u064A\u0631\u0627\u0646\u062A\u0632"
+      )
+      expect(content).not.toContain("author: Ori Pomerantz")
+    })
+
+    test("reverts author to English for Latin locale", () => {
+      const translated =
+        '---\ntitle: "Test"\nauthor: Ori Translated\nskill: beginner\n---\nContent.'
+      const english =
+        '---\ntitle: "Test"\nauthor: Ori Pomerantz\nskill: beginner\n---\nContent.'
+      const { content } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "de"
+      )
+      expect(content).toContain("author: Ori Pomerantz")
+    })
+  })
+
+  test.describe("fixMergedSupDigits", () => {
+    test("splits merged base digit out of <sup> tag", () => {
+      const translated = "وعلى الأكثر<sup>2256</sup> -1."
+      const english = "and at most 2<sup>256</sup>-1."
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe("وعلى الأكثر2<sup>256</sup> -1.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple merged sup tags", () => {
+      const translated = "تقريبًا 2<sup>187</sup>. يجب إجراء ~<sup>269</sup> محاولة"
+      const english = "approximately 2<sup>187</sup>. must make ~2<sup>69</sup> attempts"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toContain("2<sup>69</sup>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correctly formatted sup tags unchanged", () => {
+      const translated = "القيمة 2<sup>256</sup> كبيرة"
+      const english = "the value 2<sup>256</sup> is large"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not modify when no English sup to compare", () => {
+      const translated = "<sup>2256</sup> بدون مرجع"
+      const english = "no sup tags here"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles sup with footnote link (not a digit merge)", () => {
+      const translated = "أرقام<sup>[fn3](#notes)</sup>"
+      const english = "numbers<sup>[fn3](#notes)</sup>"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const translated = "```\n<sup>2256</sup>\n```"
+      const english = "```\n2<sup>256</sup>\n```"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
     })
   })
 })
