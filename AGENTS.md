@@ -153,7 +153,7 @@ pnpm events-import         # Import community events
 6. **Consider i18n** - All user-facing text should be translatable (use `getTranslations` and `getLocale`)
 7. **Mobile-first** - Design for mobile, enhance for desktop
 8. **Accessibility** - Use Radix primitives, semantic HTML
-9. **Use `numberFormat()`** - Always use the wrapper in `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`. Same API, but enforces correct numbering systems for Urdu and Arabic locales.
+9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `dateTimeFormat()` from `src/lib/utils/date.ts` instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
 
 ### Component Development
 

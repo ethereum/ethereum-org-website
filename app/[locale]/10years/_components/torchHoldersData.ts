@@ -1,3 +1,5 @@
+import { dateTimeFormat } from "@/lib/utils/date"
+
 /**
  * Pre-computed static torch holders data
  * This data is final and will not be updated (the torch has been burned)
@@ -229,13 +231,13 @@ export const extractTwitterHandle = (twitterUrl: string): string | null => {
 
 export const formatTorchDate = (timestamp: number): string => {
   const date = new Date(timestamp * 1000)
-  const month = date.toLocaleDateString("en-US", { month: "long" })
+  const month = dateTimeFormat("en-US", { month: "long" }).format(date)
   const day = date.getDate().toString().padStart(2, "0")
-  const time = date.toLocaleTimeString("en-US", {
+  const time = dateTimeFormat("en-US", {
     hour: "numeric",
     minute: "2-digit",
     hour12: true,
-  })
+  }).format(date)
 
   return `${month} ${day}, ${time}`
 }

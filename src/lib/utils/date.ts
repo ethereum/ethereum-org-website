@@ -1,4 +1,35 @@
 import { DEFAULT_LOCALE } from "../constants"
+import type { Lang } from "../types"
+
+/**
+ * A wrapper for Intl.DateTimeFormat that enforces Web3 date standards.
+ * - Forces the Gregorian calendar universally.
+ * - Arabic ('ar') and standard locales default to Western numerals (1, 2, 3).
+ * - Urdu ('ur') defaults to Extended Arabic numerals (۱, ۲, ۳).
+ */
+export function dateTimeFormat(
+  locale: string,
+  options?: Intl.DateTimeFormatOptions
+): Intl.DateTimeFormat {
+  let numberingSystem = options?.numberingSystem
+
+  if (!numberingSystem) {
+    if (locale === "ur") {
+      numberingSystem = "arabext" // Native Urdu numerals
+    } else {
+      numberingSystem = "latn" // Western numerals for Arabic, Indic, etc.
+    }
+  }
+
+  const finalOptions: Intl.DateTimeFormatOptions = {
+    // ALWAYS force Gregorian for tech/Web3 consistency
+    calendar: "gregory",
+    ...options,
+    ...(numberingSystem && { numberingSystem }),
+  }
+
+  return new Intl.DateTimeFormat(locale, finalOptions)
+}
 
 export const dateToString = (published: Date | string) =>
   new globalThis.Date(published).toISOString().split("T")[0]
@@ -27,12 +58,12 @@ export const formatDate = (
   if (/^\d{4}$/.test(date)) {
     return date
   }
-  return new Date(date).toLocaleDateString(locale, {
+  return dateTimeFormat(locale, {
     month: "long",
     day: "numeric",
     year: "numeric",
     ...options,
-  })
+  }).format(new Date(date))
 }
 
 export const isDateReached = (date: string) => {
@@ -47,19 +78,24 @@ export const formatDateRange = (
   locale: string = DEFAULT_LOCALE,
   options?: Intl.DateTimeFormatOptions
 ) =>
-  new Intl.DateTimeFormat(locale, {
+  dateTimeFormat(locale, {
     month: "short",
     day: "numeric",
     ...options,
   }).formatRange(new Date(start), new Date(end || start))
 
 export const getLocaleYear = (
-  locale: Intl.LocalesArgument = "en-US",
+  locale: string = "en-US",
   date?: ConstructorParameters<DateConstructor>[0]
 ) =>
-  new Intl.DateTimeFormat(locale, { year: "numeric" }).format(
+  dateTimeFormat(locale, { year: "numeric" }).format(
     date ? new Date(date) : new Date()
   )
+
+export const getLocaleFormattedDate = (locale: Lang, date: string) => {
+  const walletLastUpdatedDate = new Date(date)
+  return dateTimeFormat(locale).format(walletLastUpdatedDate)
+}
 
 /**
  * Get ISO week number for a given date

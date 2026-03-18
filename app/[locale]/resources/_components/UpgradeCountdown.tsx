@@ -8,6 +8,8 @@ import type { NetworkUpgradeDetails } from "@/lib/types"
 
 import { BaseLink } from "@/components/ui/Link"
 
+import { dateTimeFormat } from "@/lib/utils/date"
+
 import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
 
 const getLatestNetworkUpgradeDate = () => {
@@ -105,8 +107,7 @@ const UpgradeCountdown = () => {
           scalingUpgradeCountdown
         ) : (
           <div className="rounded-full bg-success px-2 py-1 text-xs font-normal uppercase text-success-light">
-            Live Since{" "}
-            {new Intl.DateTimeFormat(locale, {}).format(new Date(upgradeDate))}
+            Live Since {dateTimeFormat(locale).format(new Date(upgradeDate))}
           </div>
         )}
       </div>

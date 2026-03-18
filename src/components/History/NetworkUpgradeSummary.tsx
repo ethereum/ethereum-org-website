@@ -5,6 +5,7 @@ import { useLocale } from "next-intl"
 
 import { Flex, Stack } from "@/components/ui/flex"
 
+import { dateTimeFormat } from "@/lib/utils/date"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
@@ -36,7 +37,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
   // calculate date format only on the client side to avoid hydration issues
   useEffect(() => {
     const date = new Date(dateTimeAsString as string)
-    const formattedDate = date.toLocaleString(locale, {
+    const formattedDate = dateTimeFormat(locale, {
       timeZone: "UTC",
       month: "short",
       day: "numeric",
@@ -44,7 +45,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
       hour: "numeric",
       minute: "numeric",
       second: "numeric",
-    })
+    }).format(date)
     setFormattedUTC(`${formattedDate} +UTC`)
   }, [dateTimeAsString, locale])
 
