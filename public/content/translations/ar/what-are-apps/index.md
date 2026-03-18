@@ -22,9 +22,9 @@ summary: التطبيقات على إيثيريوم مجانية وعالمية 
 تعمل تطبيقات الإيثيريوم على تنفيذ منطقها على بلوك تشين الإيثيريوم بدلاً من الخوادم المركزية. لهذا السبب غالبًا ما يطلقون عليها التطبيقات اللامركزية أو اختصارًا دباس.
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="أكثر خصوصية" emoji=":detective:" description="كل ما تحتاجه هو محفظة إيثريوم لاستخدام أي تطبيق لامركزي. بياناتك الشخصية غير مطلوبة. هذا هو الإنترنت كما يجب أن يكون."/>
+  <Card title="متاحة عالميًا" emoji="🌍" description="لا تخضع التطبيقات اللامركزية لقواعد المناطق أو متاجر التطبيقات. يعتمد وصولك إليها على وجود اتصال بالإنترنت، لا على مكان إقامتك." />
+  <Card title="خدمات أرخص" emoji=":handshake:" description="التطبيقات اللامركزية تعمل بنظام الند للند. عدم وجود وسطاء لأخذ حصة يعني خدمات أرخص." />
 </CardGrid>
 
 ## لماذا هذا مهم{#why-does-this-matter}
@@ -69,14 +69,14 @@ summary: التطبيقات على إيثيريوم مجانية وعالمية 
 
 ## الأسئلة الشائعة {#الأسئلة الشائعة}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="ماذا يعني اختصار Dapp؟" visible>
   <p>تعني التطبيقات اللامركزية. تلك هي تطبيقات مبنية على شبكات البلوكشين مثل إيثيريوم. تسمى لامركزية لأن الشبكة الأساسية لامركزية.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="هل أشتري العملات من تطبيق لامركزي؟" visible>
   <p>بعض التطبيقات تتيح لك التداول أو شراء الرموز المشفرة، لكن ليس كل التطبيقات مخصصة لذلك. إذا كنت تبحث عن شراء رموزك الأولى، قم بزيارة [احصل على ETH](/get-eth).</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="ما هي أفضل محفظة عملات رقمية؟" visible>
   <p>محفظة التشفير تتيح لك الاحتفاظ بالرموز الخاصة بك وإدارة حساب Ethereum الخاص بك. هناك العديد من المحافظ الرائعة، كل منها يخدم غرضًا مختلفًا. للتعرف على المحفظة الأفضل بالنسبة لك، تفضل بزيارة [قائمة المحافظ](/wallets/find-wallet).</p>
 </ExpandableCard>
