@@ -348,6 +348,7 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
     plugin(function ({ matchVariant }) {
       // The :not() pseudo-class. `i.e. not-[:checked]`
       matchVariant(
