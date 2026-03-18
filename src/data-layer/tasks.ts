@@ -7,7 +7,7 @@
  */
 
 import * as Sentry from "@sentry/nextjs"
-import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
+import { logger, schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
 import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
@@ -110,10 +110,13 @@ function createDataTask([key, fetchFn]: TaskDef) {
       maxTimeoutInMs: 30000,
       randomize: true,
     },
+    catchError: async ({ error }) => {
+      logger.error(`[${key}] failed`, { error })
+    },
     run: async () => {
       const data = await fetchFn()
       await set(key, data)
-      console.log(`✓ ${key}`)
+      logger.info(`✓ ${key}`)
       return { key }
     },
   })
