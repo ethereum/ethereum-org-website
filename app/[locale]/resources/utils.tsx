@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic"
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -80,11 +80,16 @@ const UpgradeCountdownFigure = dynamic(
 )
 
 export const getResources = async ({
+  locale,
   txCostsMedianUsd,
   totalBlobs,
   avgBlobFee,
+}: {
+  locale: string
+  txCostsMedianUsd: { value: number } | { error: string }
+  totalBlobs: string
+  avgBlobFee: number
 }): Promise<DashboardSection[]> => {
-  const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "page-resources" })
   const localeForNumberFormat = getLocaleForNumberFormat(locale as Lang)
 

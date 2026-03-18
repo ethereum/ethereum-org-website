@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -31,6 +31,7 @@ const EVENT_CATEGORY = "dashboard"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
+  setRequestLocale(locale)
 
   const t = await getTranslations({ locale, namespace: "page-resources" })
 
@@ -62,6 +63,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   }
 
   const resourceSections = await getResources({
+    locale,
     txCostsMedianUsd,
     ...blobStats,
   })
