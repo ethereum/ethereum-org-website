@@ -3,6 +3,7 @@ import React from "react"
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { ETH_TRANSFER_FEE } from "../../constants"
 import { getMaxFractionDigitsUsd } from "../../utils"
@@ -19,9 +20,9 @@ export const SendSummary = ({
   recipient,
 }: SendSummaryProps) => {
   const formatEth = (amount: number): string =>
-    new Intl.NumberFormat("en", { maximumFractionDigits: 5 }).format(amount)
+    numberFormat("en", { maximumFractionDigits: 5 }).format(amount)
 
-  const formatChosenAmount = new Intl.NumberFormat("en", {
+  const formatChosenAmount = numberFormat("en", {
     style: "currency",
     currency: "USD",
     notation: "compact",
@@ -63,7 +64,7 @@ export const SendSummary = ({
         <div>
           <p>Network fees</p>
           <p className="font-bold">
-            {Intl.NumberFormat("en", {
+            {numberFormat("en", {
               maximumFractionDigits: getMaxFractionDigitsUsd(usdFee),
               style: "currency",
               currency: "USD",
@@ -71,7 +72,7 @@ export const SendSummary = ({
             }).format(usdFee)}
             <span className="ms-2 text-xs font-normal text-body-medium">
               (
-              {Intl.NumberFormat("en", {
+              {numberFormat("en", {
                 maximumFractionDigits: 6,
               }).format(ETH_TRANSFER_FEE)}{" "}
               ETH)

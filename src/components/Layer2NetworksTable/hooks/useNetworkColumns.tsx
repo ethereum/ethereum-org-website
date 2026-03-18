@@ -16,6 +16,7 @@ import { TableCell, TableHead } from "@/components/ui/table"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { numberFormat } from "@/lib/utils/numbers"
 
 export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
   {
@@ -99,7 +100,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
                   <Translation id="page-layer-2-networks:page-layer-2-networks-market-share" />
                 </p>
                 <p>
-                  {new Intl.NumberFormat(meta.locale as Lang, {
+                  {numberFormat(meta.locale as Lang, {
                     style: "currency",
                     currency: "USD",
                     notation: "compact",
@@ -224,7 +225,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
           )}
         >
           <p>
-            {new Intl.NumberFormat(meta.locale as Lang, {
+            {numberFormat(meta.locale as Lang, {
               style: "currency",
               currency: "USD",
               notation: "compact",

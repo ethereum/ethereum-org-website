@@ -3,7 +3,7 @@ import { useLocale } from "next-intl"
 import { HStack, VStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
-import { numberToPercent } from "@/lib/utils/numberToPercent"
+import { numberToPercent } from "@/lib/utils/numbers"
 import { screens } from "@/lib/utils/screen"
 
 import { useMediaQuery } from "@/hooks/useMediaQuery"

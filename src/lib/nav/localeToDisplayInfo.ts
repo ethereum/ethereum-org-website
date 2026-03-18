@@ -11,6 +11,8 @@ import progressDataJson from "@/data/translationProgress.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import { numberFormat } from "../utils/numbers"
+
 const progressData = progressDataJson satisfies ProjectProgressData[]
 
 const getProgressInfo = (
@@ -18,12 +20,12 @@ const getProgressInfo = (
   approvalProgress: number,
   wordsApproved: number
 ) => {
-  const percentage = new Intl.NumberFormat(locale, {
+  const percentage = numberFormat(locale, {
     style: "percent",
   }).format(approvalProgress / 100)
   const progress =
     approvalProgress === 0 ? "<" + percentage.replace("0", "1") : percentage
-  const words = new Intl.NumberFormat(locale).format(wordsApproved)
+  const words = numberFormat(locale).format(wordsApproved)
   return { progress, words }
 }
 

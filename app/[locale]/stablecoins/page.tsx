@@ -33,6 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { stablecoins } from "./data"
@@ -117,7 +118,7 @@ async function Page({ params }: { params: PageParams }) {
       .sort((a, b) => b.market_cap - a.market_cap)
       .map(({ market_cap, ...rest }) => ({
         ...rest,
-        marketCap: new Intl.NumberFormat("en-US", {
+        marketCap: numberFormat(locale, {
           style: "currency",
           currency: "USD",
           minimumFractionDigits: 0,

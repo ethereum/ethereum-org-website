@@ -1,12 +1,12 @@
 import { Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
-import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
+import type { ChildOnlyProp, StakingStatsData } from "@/lib/types"
 
 import Tooltip from "@/components/Tooltip"
 import { Flex, VStack } from "@/components/ui/flex"
 
-import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import InlineLink from "../ui/Link"
 
@@ -43,16 +43,12 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
   const locale = useLocale()
   const { t } = useTranslation("page-staking")
 
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale! as Lang)
-
   // Helper functions
   const formatInteger = (amount: number): string =>
-    amount
-      ? new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
-      : "—"
+    amount ? numberFormat(locale).format(amount) : "—"
 
   const formatPercentage = (amount: number): string =>
-    new Intl.NumberFormat(localeForStatsBoxNumbers, {
+    numberFormat(locale, {
       style: "percent",
       minimumSignificantDigits: 2,
       maximumSignificantDigits: 2,

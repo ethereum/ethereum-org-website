@@ -3,11 +3,9 @@
 import { useEffect, useState } from "react"
 import { useLocale } from "next-intl"
 
-import type { Lang } from "@/lib/types"
-
 import { Flex, Stack } from "@/components/ui/flex"
 
-import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
 
@@ -23,7 +21,6 @@ type NetworkUpgradeSummaryProps = {
 const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
   const [formattedUTC, setFormattedUTC] = useState("")
   const locale = useLocale()
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)
   const { t } = useTranslation("page-history")
 
   const {
@@ -57,7 +54,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
         <Emoji className="me-2 text-sm" text=":bricks:" />
         {t(translationKey)}:{" "}
         <InlineLink href={`${explorerUrl}${number}`}>
-          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
+          {numberFormat(locale).format(number)}
         </InlineLink>
       </Flex>
     )
@@ -93,7 +90,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
         <Flex>
           <Emoji className="me-2 text-sm" text=":money_bag:" />
           {t("page-history:page-history-eth-price")}:{" "}
-          {new Intl.NumberFormat(localeForStatsBoxNumbers, {
+          {numberFormat(locale, {
             style: "currency",
             currency: "USD",
           }).format(ethPriceInUSD)}

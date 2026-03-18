@@ -7,6 +7,7 @@ import { useIntersectionObserver } from "usehooks-ts"
 import { Section, SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 type KPISectionProps = {
   accountHolders: number | null
@@ -133,7 +134,7 @@ function formatNumber(value: number): string {
     return `${Math.round(value / 1_000_000)}M`
   }
   if (value >= 1_000) {
-    return new Intl.NumberFormat("en-US").format(value)
+    return numberFormat("en-US").format(value)
   }
   return value.toString()
 }

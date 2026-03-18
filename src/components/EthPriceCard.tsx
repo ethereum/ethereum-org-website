@@ -10,6 +10,7 @@ import Tooltip from "@/components/Tooltip"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { Flex } from "./ui/flex"
 
@@ -70,7 +71,7 @@ const EthPriceCard = ({
   const hasData = "data" in state
 
   const formatPrice = (price: string) =>
-    new Intl.NumberFormat(locale, {
+    numberFormat(locale, {
       style: "currency",
       currency: "USD",
       minimumFractionDigits: 2,
@@ -78,7 +79,7 @@ const EthPriceCard = ({
     }).format(+price)
 
   const formatPercentage = (amount: number): string =>
-    new Intl.NumberFormat(locale, {
+    numberFormat(locale, {
       style: "percent",
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,

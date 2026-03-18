@@ -142,11 +142,6 @@ export const isLocaleValidISO639_1 = (locale: string) => {
   return i18nConfig.find((language) => language.code === locale)?.validISO639_1
 }
 
-// Returns the locale to use for number formatting
-// Note: Previously had special case for Farsi (fa) to use Hindu-Arabic numerals,
-// but Farsi is no longer in the active locale set
-export const getLocaleForNumberFormat = (locale: Lang): Lang => locale
-
 export const isLang = (lang: string) => {
   return i18nConfig.map((language) => language.code).includes(lang)
 }

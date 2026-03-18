@@ -2,6 +2,8 @@ import React from "react"
 
 import { Flex } from "@/components/ui/flex"
 
+import { numberFormat } from "@/lib/utils/numbers"
+
 import { getMaxFractionDigitsUsd } from "../utils"
 
 import { AddressPill } from "./AddressPill"
@@ -14,7 +16,7 @@ export const WalletBalance = ({ usdAmount = 0 }: WalletBalanceProps) => (
   <div className="z-[1]">
     <p className="mb-2 text-center text-body-medium md:mb-4">Your total</p>
     <p className="text-center text-3xl font-bold !leading-base md:text-5xl">
-      {Intl.NumberFormat("en-US", {
+      {numberFormat("en-US", {
         style: "currency",
         currency: "USD",
         notation: "compact",

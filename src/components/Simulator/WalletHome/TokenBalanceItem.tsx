@@ -1,5 +1,7 @@
 import { Flex } from "@/components/ui/flex"
 
+import { numberFormat } from "@/lib/utils/numbers"
+
 import { getMaxFractionDigitsUsd } from "../utils"
 
 import { TokenBalance } from "./interfaces"
@@ -10,13 +12,13 @@ type TokenBalanceItemProps = {
 export const TokenBalanceItem = ({ item }: TokenBalanceItemProps) => {
   const { name, ticker, amount, usdConversion, Icon } = item
   const usdAmount = amount * usdConversion
-  const usdValue = Intl.NumberFormat("en-US", {
+  const usdValue = numberFormat("en-US", {
     style: "currency",
     currency: "USD",
     notation: "compact",
     maximumFractionDigits: getMaxFractionDigitsUsd(usdAmount),
   }).format(usdAmount)
-  const tokenAmount = Intl.NumberFormat("en", {
+  const tokenAmount = numberFormat("en", {
     maximumFractionDigits: 5,
   }).format(amount)
   return (

@@ -10,6 +10,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { formatDate, getValidDate } from "@/lib/utils/date"
+import { numberFormat } from "@/lib/utils/numbers"
 import { isExternal } from "@/lib/utils/url"
 
 import { DEV_TOOL_CATEGORY_SLUGS } from "../constants"
@@ -125,7 +126,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
                           className="text-sm"
                           title={t("page-developers-tools-stats-stargazers")}
                         >
-                          ({new Intl.NumberFormat(locale).format(stargazers)}
+                          ({numberFormat(locale).format(stargazers)}
                         </span>
                         <Star className="-mx-[0.5ch] !size-3" />
                         <span className="text-sm">)</span>
@@ -139,7 +140,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
                           title={t("page-developers-tools-stats-downloads")}
                         >
                           (
-                          {new Intl.NumberFormat(locale, {
+                          {numberFormat(locale, {
                             notation: "compact",
                           }).format(downloads)}
                         </span>

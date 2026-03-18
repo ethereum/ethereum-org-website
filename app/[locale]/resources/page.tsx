@@ -17,6 +17,7 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
@@ -55,7 +56,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Extract blob stats directly (getBlobscanStats returns BlobscanStats, not wrapped in MetricReturnData)
   const blobStats = {
     avgBlobFee: blobscanOverallStats.avgBlobFee,
-    totalBlobs: new Intl.NumberFormat(undefined, {
+    totalBlobs: numberFormat(locale, {
       notation: "compact",
       maximumFractionDigits: 1,
     }).format(blobscanOverallStats.totalBlobs),
