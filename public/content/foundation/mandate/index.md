@@ -8,8 +8,9 @@ lang: en
 
 # The Ethereum Foundation Mandate {#mandate}
 
-- [Graphical PDF version](https://ethereum.foundation/ef-mandate.pdf)
-- [Canonically signed onchain source (via Blockscout explorer)](https://eth.blockscout.com/tx/0x5dd574df963a1df1f064791e0f6ff41ec972cdbba12293b7e1ece582052ba855) - Select "View details", under _Raw input_ selecting _UTF-8_
+This mandate was originally published by the Ethereum Foundation on 13-March-2026. Read the [original mandate here](https://ethereum.foundation/ef-mandate.pdf) in its fully-designed format.
+
+This document was placed onchain and signed by the Foundation, [visible on the Blockscout block explorer](https://eth.blockscout.com/tx/0x5dd574df963a1df1f064791e0f6ff41ec972cdbba12293b7e1ece582052ba855) (select "View details", under _Raw input_ with _UTF-8_).
 
 ## I. ETHEREUM {#i-ethereum}
 
