@@ -46,6 +46,30 @@ export const getAllEnglishFiles = async (): Promise<
     debugLog(`Runtime path exclusions: ${excludePath}`)
   }
 
+  // Multi-file mode: comma-separated paths each fetched individually
+  if (config.targetPaths.length > 1) {
+    const allFiles: GitHubQueryResponseItem[] = []
+    for (const singlePath of config.targetPaths) {
+      if (isPathExcluded(singlePath, allExcludedPaths)) {
+        console.log(`[INFO] Path ${singlePath} is in excluded paths, skipping`)
+        continue
+      }
+      if (isFilePath(singlePath)) {
+        console.log(`[INFO] Fetching file: ${singlePath}`)
+        const files = await fetchSingleFile(singlePath)
+        allFiles.push(...files)
+      } else {
+        console.log(
+          `[WARN] Multi-path mode only supports files, skipping directory: ${singlePath}`
+        )
+      }
+    }
+    console.log(
+      `[INFO] Multi-file mode: ${allFiles.length} files from ${config.targetPaths.length} paths`
+    )
+    return allFiles
+  }
+
   // Determine if targetPath is a file or directory
   if (targetPath) {
     if (isPathExcluded(targetPath, allExcludedPaths)) {

@@ -62,7 +62,12 @@ const targetLanguages: string[] =
 
 const baseBranch = process.env.BASE_BRANCH || "dev"
 
-const targetPath = process.env.TARGET_PATH || ""
+const targetPathRaw = process.env.TARGET_PATH || ""
+// Support comma-separated list of files/directories
+const targetPath = targetPathRaw
+const targetPaths = targetPathRaw
+  ? targetPathRaw.split(",").map((p) => p.trim()).filter(Boolean)
+  : []
 const excludePath = process.env.EXCLUDE_PATH?.trim() || ""
 
 // Skip awaiting pre-translation completion (exit early with ID for manual resume)
@@ -131,6 +136,7 @@ export const config = {
     : i18nConfig.map(({ code }) => code).filter((code) => code !== "en"),
   baseBranch,
   targetPath,
+  targetPaths,
   excludePath,
   skipAwait,
   pretranslateTimeoutMs,
