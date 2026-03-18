@@ -160,6 +160,18 @@
     }
   }
 
+  /* Apply Urdu numerals to ordered lists when the locale is ur */
+  :lang(ur) ol {
+    list-style-type: urdu;
+  }
+
+  /* Fallback for older browsers that don't support urdu counter style */
+  @supports not (list-style-type: urdu) {
+    :lang(ur) ol {
+      list-style-type: persian;
+    }
+  }
+
   li {
     margin-bottom: calc(1.45rem / 2);
 
