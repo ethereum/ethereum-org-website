@@ -81,7 +81,10 @@ export async function translateFile(
   const modelNotFound = new Set<string>()
 
   for (const modelId of modelsToTry) {
-    const model = client.getGenerativeModel({ model: modelId })
+    const model = client.getGenerativeModel({
+      model: modelId,
+      generationConfig: { temperature: 0 },
+    })
     let modelFailed = false
 
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
@@ -167,7 +170,7 @@ export async function translateFile(
   if (modelNotFound.size === modelsToTry.length) {
     throw new Error(
       `All Gemini models unavailable (${[...modelNotFound].join(", ")}). ` +
-      `Update GEMINI_MODELS in gemini-translate.ts or set GEMINI_MODEL env var.`
+        `Update GEMINI_MODELS in gemini-translate.ts or set GEMINI_MODEL env var.`
     )
   }
 
@@ -197,4 +200,3 @@ function stripCodeBlockWrapping(
 
   return text
 }
-
