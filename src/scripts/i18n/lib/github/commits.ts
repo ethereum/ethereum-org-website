@@ -10,6 +10,159 @@ export interface BatchFile {
   content: Buffer
 }
 
+interface TreeItem {
+  path: string
+  mode: string
+  type: string
+  sha: string
+}
+
+/**
+ * Incrementally commits files to a branch, amending each time.
+ *
+ * Each call to commitFile() creates a blob, builds a tree from the
+ * base tree + ALL accumulated blobs, and creates a commit with the
+ * same parent (the branch state before any translations). This
+ * produces a single growing commit per language.
+ *
+ * Concurrent calls are serialized via an internal queue so the
+ * GitHub API calls don't race.
+ */
+export class IncrementalCommitter {
+  private baseCommitSha = ""
+  private baseTreeSha = ""
+  private accumulatedItems: TreeItem[] = []
+  private queue: Promise<void> = Promise.resolve()
+  private baseUrl = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}`
+
+  constructor(
+    private branch: string,
+    private message: string
+  ) {}
+
+  /** Snapshot the current branch state as the amend base. */
+  async init(): Promise<void> {
+    const refRes = await fetchWithRetry(
+      `${this.baseUrl}/git/ref/heads/${this.branch}`,
+      { headers: gitHubBearerHeaders }
+    )
+    if (!refRes.ok) {
+      const body = await refRes.text().catch(() => "")
+      throw new Error(
+        `IncrementalCommitter init ref (${refRes.status}): ${body}`
+      )
+    }
+    const refData: { object: { sha: string } } = await refRes.json()
+    this.baseCommitSha = refData.object.sha
+
+    const commitRes = await fetchWithRetry(
+      `${this.baseUrl}/git/commits/${this.baseCommitSha}`,
+      { headers: gitHubBearerHeaders }
+    )
+    if (!commitRes.ok) {
+      const body = await commitRes.text().catch(() => "")
+      throw new Error(
+        `IncrementalCommitter init commit (${commitRes.status}): ${body}`
+      )
+    }
+    const commitData: { tree: { sha: string } } = await commitRes.json()
+    this.baseTreeSha = commitData.tree.sha
+  }
+
+  /**
+   * Queue a file to be committed. Serializes the GitHub API calls
+   * so concurrent translations don't race on the branch ref.
+   */
+  commitFile(path: string, content: string): Promise<void> {
+    const result = this.queue.then(() => this._doCommit(path, content))
+    // Chain continues even if a commit fails
+    this.queue = result.then(
+      () => {},
+      () => {}
+    )
+    return result
+  }
+
+  get fileCount(): number {
+    return this.accumulatedItems.length
+  }
+
+  private async _doCommit(path: string, content: string): Promise<void> {
+    // 1. Create blob
+    const blobRes = await fetchWithRetry(`${this.baseUrl}/git/blobs`, {
+      method: "POST",
+      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        content: Buffer.from(content, "utf8").toString("base64"),
+        encoding: "base64",
+      }),
+    })
+    if (!blobRes.ok) {
+      const body = await blobRes.text().catch(() => "")
+      throw new Error(
+        `Failed to create blob for ${path} (${blobRes.status}): ${body}`
+      )
+    }
+    const blobData: { sha: string } = await blobRes.json()
+
+    this.accumulatedItems.push({
+      path,
+      mode: "100644",
+      type: "blob",
+      sha: blobData.sha,
+    })
+
+    // 2. Create tree from base + ALL accumulated blobs
+    const treeRes = await fetchWithRetry(`${this.baseUrl}/git/trees`, {
+      method: "POST",
+      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        base_tree: this.baseTreeSha,
+        tree: this.accumulatedItems,
+      }),
+    })
+    if (!treeRes.ok) {
+      const body = await treeRes.text().catch(() => "")
+      throw new Error(`Failed to create tree (${treeRes.status}): ${body}`)
+    }
+    const treeData: { sha: string } = await treeRes.json()
+
+    // 3. Create commit with base parent (amend pattern)
+    const commitRes = await fetchWithRetry(`${this.baseUrl}/git/commits`, {
+      method: "POST",
+      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: this.message,
+        tree: treeData.sha,
+        parents: [this.baseCommitSha],
+      }),
+    })
+    if (!commitRes.ok) {
+      const body = await commitRes.text().catch(() => "")
+      throw new Error(`Failed to create commit (${commitRes.status}): ${body}`)
+    }
+    const commitData: { sha: string } = await commitRes.json()
+
+    // 4. Force-update branch ref to the amended commit
+    const updateRes = await fetchWithRetry(
+      `${this.baseUrl}/git/refs/heads/${this.branch}`,
+      {
+        method: "PATCH",
+        headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+        body: JSON.stringify({ sha: commitData.sha, force: true }),
+      }
+    )
+    if (!updateRes.ok) {
+      const body = await updateRes.text().catch(() => "")
+      throw new Error(`Failed to update ref (${updateRes.status}): ${body}`)
+    }
+
+    debugLog(
+      `IncrementalCommitter: ${this.accumulatedItems.length} files committed (latest: ${path})`
+    )
+  }
+}
+
 /**
  * Commit multiple files in a single commit using GitHub's Git Data API.
  * This avoids creating one commit per file.

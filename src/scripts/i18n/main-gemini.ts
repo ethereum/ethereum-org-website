@@ -71,8 +71,8 @@ async function main() {
   const baseBranch = await getBranchObject(config.baseBranch)
   await createBranchFromSha(branchName, baseBranch.sha)
 
-  // Phase 2: Translate files
-  const { stats, committedFiles } = await geminiTranslateFiles(
+  // Phase 2: Translate files (committed incrementally as they complete)
+  const { stats, committedFiles, failedFiles } = await geminiTranslateFiles(
     context,
     branchName,
     runId
@@ -140,6 +140,15 @@ async function main() {
     console.log(
       `  ${lang}: ${s.filesTranslated} translated, ${s.filesFailed} failed, ${s.totalInputTokens + s.totalOutputTokens} tokens`
     )
+  }
+
+  if (failedFiles.length > 0) {
+    console.warn(
+      `\n[main] ${failedFiles.length} file(s) could not be translated:`
+    )
+    for (const f of failedFiles) {
+      console.warn(`  - ${f}`)
+    }
   }
 }
 

@@ -62,8 +62,14 @@ export const getAllEnglishFiles = async (): Promise<
       }
       if (isFilePath(singlePath)) {
         console.log(`[INFO] Fetching file: ${singlePath}`)
-        const files = await fetchSingleFile(singlePath)
-        allFiles.push(...files)
+        try {
+          const files = await fetchSingleFile(singlePath)
+          allFiles.push(...files)
+        } catch (error) {
+          console.warn(
+            `[WARN] Could not fetch ${singlePath}, skipping: ${error instanceof Error ? error.message : String(error)}`
+          )
+        }
       } else {
         console.log(
           `[WARN] Multi-path mode only supports files, skipping directory: ${singlePath}`

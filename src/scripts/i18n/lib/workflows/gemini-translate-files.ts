@@ -1,6 +1,9 @@
 /**
  * Orchestrate file translation per language.
- * For each language: translate all files, validate, batch commit.
+ *
+ * Each successful translation is committed immediately (amend pattern:
+ * one growing commit per language). Failed files are skipped, not fatal.
+ * The pipeline only throws if ALL files for ALL languages fail.
  */
 
 import { translateFile } from "../ai/gemini-translate"
@@ -14,11 +17,7 @@ import {
   type TranslationProgress,
 } from "../ai/progress-tracker"
 import { createRateLimiter } from "../ai/rate-limiter"
-import {
-  batchCommitFiles,
-  type BatchFile,
-  getDestinationFromPath,
-} from "../github/commits"
+import { getDestinationFromPath, IncrementalCommitter } from "../github/commits"
 import { getGlossaryForLanguage } from "../supabase/glossary"
 
 import type { GeminiWorkflowContext } from "./gemini-initialize"
@@ -39,7 +38,8 @@ interface TranslationStats {
 
 /**
  * Translate all files for all target languages.
- * Returns the branch name and per-language stats.
+ * Files are committed as they complete (no work lost on partial failure).
+ * Throws only if zero files were translated across all languages.
  */
 export async function geminiTranslateFiles(
   context: GeminiWorkflowContext,
@@ -49,12 +49,14 @@ export async function geminiTranslateFiles(
   branch: string
   stats: Record<string, TranslationStats>
   committedFiles: CommitFile[]
+  failedFiles: string[]
 }> {
   const { englishFiles, glossary, targetLanguages } = context
   const concurrency = Number(process.env.GEMINI_CONCURRENCY) || 3
   const progress = initProgress(runId, targetLanguages)
   const allStats: Record<string, TranslationStats> = {}
   const allCommittedFiles: CommitFile[] = []
+  const allFailedFiles: string[] = []
 
   for (const language of targetLanguages) {
     logSection(`Translating: ${language}`)
@@ -69,7 +71,7 @@ export async function geminiTranslateFiles(
       `[translate] ${language}: ${englishFiles.length} files, ${glossaryTerms.size} glossary terms, concurrency ${concurrency}`
     )
 
-    const { stats, files } = await translateLanguage(
+    const { stats, files, failedFiles } = await translateLanguage(
       englishFiles,
       language,
       glossaryTerms,
@@ -80,7 +82,11 @@ export async function geminiTranslateFiles(
 
     allStats[language] = stats
     allCommittedFiles.push(...files)
-    markLanguageCompleted(progress, language)
+    allFailedFiles.push(...failedFiles.map((f) => `${language}:${f}`))
+
+    if (stats.filesTranslated > 0) {
+      markLanguageCompleted(progress, language)
+    }
 
     console.log(
       `[translate] ${language} done: ${stats.filesTranslated} translated, ${stats.filesSkipped} skipped, ${stats.filesFailed} failed`
@@ -90,15 +96,35 @@ export async function geminiTranslateFiles(
     )
   }
 
+  // Fail if nothing was translated at all
+  const totalTranslated = Object.values(allStats).reduce(
+    (sum, s) => sum + s.filesTranslated,
+    0
+  )
+  if (totalTranslated === 0 && allFailedFiles.length > 0) {
+    throw new Error(
+      `All translations failed. Failed files:\n${allFailedFiles.map((f) => `  - ${f}`).join("\n")}`
+    )
+  }
+
+  if (allFailedFiles.length > 0) {
+    console.warn(
+      `[translate] ${allFailedFiles.length} file(s) failed (${totalTranslated} succeeded):\n${allFailedFiles.map((f) => `  - ${f}`).join("\n")}`
+    )
+  }
+
   return {
     branch: branchName,
     stats: allStats,
     committedFiles: allCommittedFiles,
+    failedFiles: allFailedFiles,
   }
 }
 
 /**
  * Translate all files for a single language.
+ * Each success is committed immediately via IncrementalCommitter.
+ * Failures are logged and skipped.
  */
 async function translateLanguage(
   englishFiles: GeminiWorkflowContext["englishFiles"],
@@ -107,7 +133,11 @@ async function translateLanguage(
   branchName: string,
   concurrency: number,
   progress: TranslationProgress
-): Promise<{ stats: TranslationStats; files: CommitFile[] }> {
+): Promise<{
+  stats: TranslationStats
+  files: CommitFile[]
+  failedFiles: string[]
+}> {
   const limiter = createRateLimiter(concurrency)
   const stats: TranslationStats = {
     filesTranslated: 0,
@@ -118,6 +148,14 @@ async function translateLanguage(
   }
 
   const translatedFiles: CommitFile[] = []
+  const failedFiles: string[] = []
+
+  // Incremental committer: one amending commit per language
+  const committer = new IncrementalCommitter(
+    branchName,
+    `i18n(${language}): Gemini direct translation`
+  )
+  await committer.init()
 
   // Process files with bounded concurrency
   const tasks = englishFiles.map((file) => async () => {
@@ -138,6 +176,10 @@ async function translateLanguage(
       })
 
       const destPath = getDestinationFromPath(file.path, language)
+
+      // Commit immediately -- serialized internally by the committer
+      await committer.commitFile(destPath, result.translatedContent)
+
       translatedFiles.push({
         path: destPath,
         content: result.translatedContent,
@@ -149,10 +191,11 @@ async function translateLanguage(
       markFileCompleted(progress, language, file.path)
 
       console.log(
-        `  [${language}] ${file.path} -> ${destPath} (${result.tokensUsed.input + result.tokensUsed.output} tokens)`
+        `  [${language}] ${file.path} -> ${destPath} (${result.tokensUsed.input + result.tokensUsed.output} tokens) [committed]`
       )
     } catch (error) {
       stats.filesFailed++
+      failedFiles.push(file.path)
       markFileFailed(progress, language, file.path)
       console.error(
         `  [${language}] FAILED ${file.path}: ${error instanceof Error ? error.message : String(error)}`
@@ -165,21 +208,11 @@ async function translateLanguage(
   // Execute all tasks (concurrency handled by limiter)
   await Promise.all(tasks.map((task) => task()))
 
-  // Batch commit all translated files for this language
-  if (translatedFiles.length > 0) {
+  if (committer.fileCount > 0) {
     console.log(
-      `[translate] Committing ${translatedFiles.length} files for ${language}...`
-    )
-    const batchFiles: BatchFile[] = translatedFiles.map((f) => ({
-      path: f.path,
-      content: Buffer.from(f.content, "utf8"),
-    }))
-    await batchCommitFiles(
-      batchFiles,
-      branchName,
-      `i18n(${language}): Gemini direct translation\n\n${translatedFiles.length} files translated via Gemini (direct)`
+      `[translate] ${language}: ${committer.fileCount} files committed to branch`
     )
   }
 
-  return { stats, files: translatedFiles }
+  return { stats, files: translatedFiles, failedFiles }
 }
