@@ -26,12 +26,9 @@ const safeDecodeURIComponent = (str: string) => {
   }
 }
 
-const Page = async ({
-  params,
-  searchParams,
-}: {
-  params: PageParams
-  searchParams: { q?: string }
+const Page = async (props: {
+  params: Promise<PageParams>
+  searchParams: Promise<{ q?: string }>
 }) => {
   const searchParams = await props.searchParams
   const params = await props.params
