@@ -1,8 +1,8 @@
 ---
-title: How to implement an ERC-721 market
-description: How to put tokenized items for sale on a decentralized classifieds board
+title: كيفية تنفيذ سوق ERC-721
+description: كيفية عرض العناصر المرمزة للبيع على لوحة إعلانات مبوبة لامركزية
 author: "Alberto Cuesta Cañada"
-tags: [ "العقود الذكيه ", "erc-721", "Solidity", "tokens" ]
+tags: ["العقود الذكية", "erc-721", "solidity", "الرموز"]
 skill: intermediate
 lang: ar
 published: 2020-03-19
@@ -10,62 +10,62 @@ source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 ---
 
-In this article, I’m going to show you how to code Craigslist for the إيثريوم blockchain.
+في هذا المقال، سأوضح لك كيفية برمجة منصة مثل Craigslist على البلوك تشين الخاص بإيثريوم.
 
-Before Gumtree, Ebay and Craigslist, classified boards were mostly made of cork or paper. There were classifieds boards in school corridors, newspapers, streetlights, storefronts.
+قبل ظهور Gumtree وEbay وCraigslist، كانت لوحات الإعلانات المبوبة تُصنع في الغالب من الفلين أو الورق. كانت هناك لوحات إعلانات مبوبة في ممرات المدارس، والصحف، وأعمدة إنارة الشوارع، وواجهات المتاجر.
 
-All that changed with the internet. The number of people that could see a specific classified board multiplied by many orders of magnitude. With that, the markets they represent became much more efficient and scaled to global size. Ebay is a massive business which traces its origins to these physical classifieds boards.
+تغير كل ذلك مع ظهور الإنترنت. تضاعف عدد الأشخاص الذين يمكنهم رؤية لوحة إعلانات مبوبة معينة بشكل كبير. ومع ذلك، أصبحت الأسواق التي تمثلها أكثر كفاءة وتوسعت إلى حجم عالمي. تُعد Ebay شركة ضخمة تعود أصولها إلى لوحات الإعلانات المبوبة المادية هذه.
 
-With blockchain these markets are set to change once more, let me show you how.
+مع البلوك تشين، من المقرر أن تتغير هذه الأسواق مرة أخرى، دعني أوضح لك كيف.
 
 ## تحقيق الدخل {#monetization}
 
-The business model of a public blockchain classifieds board will need to be different from that of Ebay and company.
+سيحتاج نموذج العمل الخاص بلوحة الإعلانات المبوبة على البلوك تشين العام إلى أن يكون مختلفًا عن نموذج Ebay والشركات المشابهة.
 
-أولاً، هناك [جانب اللامركزية](/developers/docs/web2-vs-web3/). Existing platforms need to maintain their own servers. A decentralized platform is maintained by its users, so the cost of running the core platform drops to zero for the platform owner.
+أولاً، هناك [زاوية اللامركزية](/developers/docs/web2-vs-web3/). تحتاج المنصات الحالية إلى صيانة خوادمها الخاصة. بينما يتم صيانة المنصة اللامركزية بواسطة مستخدميها، لذا تنخفض تكلفة تشغيل المنصة الأساسية إلى الصفر بالنسبة لمالك المنصة.
 
-Then there is the front end, the website or interface that gives access to the platform. Here there are many options. The platform owners can restrict access and force everyone to use their interface, charging a fee. يمكن لمالكي المنصة أيضًا أن يقرروا فتح الوصول (القوة للشعب!) والسماح لأي شخص ببناء واجهات للمنصة. Or the owners could decide any approach in the middle of those extremes.
+ثم هناك الواجهة الأمامية، أي الموقع الإلكتروني أو الواجهة التي تتيح الوصول إلى المنصة. هنا توجد العديد من الخيارات. يمكن لمالكي المنصة تقييد الوصول وإجبار الجميع على استخدام واجهتهم، مع فرض رسوم. يمكن لمالكي المنصة أيضًا أن يقرروا فتح الوصول (السلطة للشعب!) والسماح لأي شخص ببناء واجهات للمنصة. أو يمكن للمالكين اتخاذ أي نهج وسط بين هذين النقيضين.
 
-_Business leaders with more vision than I will know how to monetize this. All I see is that this is different from the status quo and probably profitable._
+_سيعرف قادة الأعمال الذين يتمتعون برؤية أوسع مني كيفية تحقيق الدخل من هذا. كل ما أراه هو أن هذا يختلف عن الوضع الراهن ومن المحتمل أن يكون مربحًا._
 
-Furthermore, there is the automation and payments angle. يمكن [ترميز](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) بعض الأشياء بفعالية كبيرة وتداولها في لوحة إعلانات مبوبة. Tokenized assets are easily transferred in a blockchain. Highly complex payment methods can be easily implemented in a blockchain.
+علاوة على ذلك، هناك زاوية الأتمتة والمدفوعات. يمكن [ترميز بعض الأشياء بفعالية كبيرة](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) وتداولها في لوحة إعلانات مبوبة. يتم نقل الأصول المرمزة بسهولة في البلوك تشين. يمكن تنفيذ طرق الدفع المعقدة للغاية بسهولة في البلوك تشين.
 
-I’m just smelling a business opportunity here. A classifieds board with no running costs can easily be implemented, with complex payment paths included in each transaction. I’m sure someone will come up with an idea about what to use this for.
+أنا فقط أشم رائحة فرصة عمل هنا. يمكن بسهولة تنفيذ لوحة إعلانات مبوبة بدون تكاليف تشغيل، مع تضمين مسارات دفع معقدة في كل معاملة. أنا متأكد من أن شخصًا ما سيتوصل إلى فكرة حول كيفية استخدام هذا.
 
-I’m just happy building it. Let’s have a look at the code.
+أنا سعيد فقط ببنائها. دعونا نلقي نظرة على الكود.
 
 ## التنفيذ {#implementation}
 
-منذ بعض الوقت، بدأنا [مستودعًا مفتوح المصدر](https://github.com/HQ20/contracts?ref=hackernoon.com) يتضمن أمثلة على تطبيقات حالات الأعمال وغيرها من المزايا، يُرجى إلقاء نظرة.
+منذ بعض الوقت بدأنا [مستودعًا مفتوح المصدر](https://github.com/HQ20/contracts?ref=hackernoon.com) يحتوي على أمثلة تنفيذية لحالات الاستخدام وأشياء أخرى مفيدة، يرجى إلقاء نظرة.
 
-إن النص البرمجي [للوحة إعلانات إيثريوم المبوبة](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) موجود هناك، يرجى استخدامه واستغلاله إلى أقصى حد. Just be aware that the code hasn’t been audited and you need to do your own due diligence before letting money go into it.
+الكود الخاص بـ [لوحة إعلانات إيثريوم المبوبة](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) موجود هناك، يرجى استخدامه وتجربته. فقط كن على علم بأن الكود لم يتم تدقيقه وتحتاج إلى بذل العناية الواجبة بنفسك قبل وضع الأموال فيه.
 
-The basics of the board are not complex. All the adverts in the board will be just a struct with a few fields:
+أساسيات اللوحة ليست معقدة. ستكون جميع الإعلانات في اللوحة مجرد بنية (struct) تحتوي على بضعة حقول:
 
 ```solidity
 struct Trade {
   address poster;
   uint256 item;
   uint256 price;
-  bytes32 status; // مفتوحة، منفذة، ملغاة
+  bytes32 status; // Open, Executed, Cancelled // مفتوح، منفذ، ملغى
 }
 ```
 
-So there is someone posting the advert. An item for sale. A price for the item. The status of the trade which can be open, executed or cancelled.
+إذن هناك شخص ينشر الإعلان. عنصر للبيع. سعر للعنصر. حالة التداول التي يمكن أن تكون مفتوحة (open)، أو منفذة (executed)، أو ملغاة (cancelled).
 
-All these trades will be kept in a mapping. Because everything in سوليديتي seems to be a mapping. Also because it is convenient.
+سيتم الاحتفاظ بجميع هذه التداولات في تخطيط (mapping). لأن كل شيء في Solidity يبدو وكأنه تخطيط. وأيضًا لأنه مريح.
 
 ```solidity
 mapping(uint256 => Trade) public trades;
 ```
 
-Using a mapping just means that we have to come up with an id for each advert before posting it, and we will need to know the id of an advert before we can operate on it. There are multiple ways of dealing with this either in the smart contract or in the front-end. Please ask if you need some pointers.
+استخدام التخطيط يعني فقط أنه يتعين علينا ابتكار معرف (id) لكل إعلان قبل نشره، وسنحتاج إلى معرفة معرف الإعلان قبل أن نتمكن من العمل عليه. هناك طرق متعددة للتعامل مع هذا إما في العقد الذكي أو في الواجهة الأمامية. يرجى السؤال إذا كنت بحاجة إلى بعض الإرشادات.
 
-Next comes the question of what are those items we deal with, and what is this currency that is used to pay for the transaction.
+بعد ذلك يأتي السؤال حول ماهية تلك العناصر التي نتعامل معها، وما هي هذه العملة المستخدمة لدفع رسوم المعاملة.
 
-بالنسبة للعناصر، سنطلب فقط أن تطبق واجهة [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com)، وهي في الحقيقة مجرد طريقة لتمثيل عناصر العالم الحقيقي في بلوكتشين، على الرغم من أنها [تعمل بشكل أفضل مع الأصول الرقمية](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). We are going to specify our own ERC721 contract in the constructor, meaning that any assets in our classifieds board need to have been tokenized beforehand.
+بالنسبة للعناصر، سنطلب فقط أن تنفذ واجهة [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com)، والتي هي في الحقيقة مجرد طريقة لتمثيل عناصر العالم الحقيقي في البلوك تشين، على الرغم من أنها [تعمل بشكل أفضل مع الأصول الرقمية](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). سنقوم بتحديد عقد ERC721 الخاص بنا في دالة البناء (constructor)، مما يعني أن أي أصول في لوحة الإعلانات المبوبة الخاصة بنا يجب أن تكون قد تم ترميزها مسبقًا.
 
-For the payments, we are going to do something similar. تُعرّف معظم مشاريع البلوكتشين عملتها الرقمية الخاصة بها من نوع [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Some others prefer to use a mainstream one like DAI. In this classifieds board, you just need to decide on construction what your currency will be. Easy.
+بالنسبة للمدفوعات، سنفعل شيئًا مشابهًا. تحدد معظم مشاريع البلوك تشين العملة الرقمية [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) الخاصة بها. يفضل البعض الآخر استخدام عملة سائدة مثل DAI. في لوحة الإعلانات المبوبة هذه، تحتاج فقط إلى تحديد عملتك عند الإنشاء. سهل جداً.
 
 ```solidity
 constructor (
@@ -77,9 +77,9 @@ constructor (
 }
 ```
 
-We are getting there. We’ve got adverts, items for trade and a currency for payments. To make an advert means to put an item in escrow to show both that you have it and that you haven’t posted it twice, possibly in a different board.
+لقد اقتربنا. لدينا إعلانات، وعناصر للتداول، وعملة للمدفوعات. إنشاء إعلان يعني وضع عنصر في حساب ضمان (escrow) لإظهار أنك تمتلكه وأنك لم تقم بنشره مرتين، ربما في لوحة مختلفة.
 
-The code below does exactly that. Puts the item in escrow, creates the advert, does some housekeeping.
+الكود أدناه يفعل ذلك بالضبط. يضع العنصر في حساب الضمان، وينشئ الإعلان، ويقوم ببعض مهام التنظيم.
 
 ```solidity
 function openTrade(uint256 _item, uint256 _price)
@@ -97,14 +97,14 @@ function openTrade(uint256 _item, uint256 _price)
 }
 ```
 
-To accept the trade means to choose an advert (trade), pay the price, receive the item. The code below retrieves a trade. Checks it’s available. Pays the item. Retrieves the item. Updates the advert.
+قبول التداول يعني اختيار إعلان (تداول)، ودفع السعر، واستلام العنصر. الكود أدناه يسترجع التداول. يتحقق من توفره. يدفع ثمن العنصر. يسترجع العنصر. ويقوم بتحديث الإعلان.
 
 ```solidity
 function executeTrade(uint256 _trade)
   public
 {
   Trade memory trade = trades[_trade];
-  require(trade.status == "Open", "التجارة ليست مفتوحة.");
+  require(trade.status == "Open", "Trade is not Open.");
   currencyToken.transferFrom(msg.sender, trade.poster, trade.price);
   itemToken.transferFrom(address(this), msg.sender, trade.item);
   trades[_trade].status = "Executed";
@@ -112,9 +112,9 @@ function executeTrade(uint256 _trade)
 }
 ```
 
-Finally, we have an option for sellers to back out of a trade before a buyer accepts it. In some models, adverts would instead be live for a period of time before they expire. Your choice, depending on the design of your market.
+أخيرًا، لدينا خيار للبائعين للتراجع عن التداول قبل أن يقبله المشتري. في بعض النماذج، تكون الإعلانات نشطة لفترة من الوقت قبل أن تنتهي صلاحيتها. الخيار لك، اعتمادًا على تصميم السوق الخاص بك.
 
-The code is very similar to that used to execute a trade, only that there is no currency changing hands and the item goes back to the advert poster.
+الكود مشابه جدًا لذلك المستخدم لتنفيذ التداول، باستثناء أنه لا توجد عملة يتم تبادلها ويعود العنصر إلى ناشر الإعلان.
 
 ```solidity
 function cancelTrade(uint256 _trade)
@@ -123,23 +123,23 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "لا يمكن إلغاء التجارة إلا من قبل الناشر."
+    "Trade can be cancelled only by poster."
   );
-  require(trade.status == "Open", "التجارة ليست مفتوحة.");
+  require(trade.status == "Open", "Trade is not Open.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
   trades[_trade].status = "Cancelled";
   emit TradeStatusChange(_trade, "Cancelled");
 }
 ```
 
-That’s it. You made it to the end of the implementation. It is quite surprising how compact some business concepts are when expressed in code, and this is one of those cases. تحقق من العقد الكامل [في مستودعنا](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
+هذا كل شيء. لقد وصلت إلى نهاية التنفيذ. من المدهش حقًا مدى إيجاز بعض مفاهيم الأعمال عند التعبير عنها في الكود، وهذه إحدى تلك الحالات. تحقق من العقد الكامل [في مستودعنا](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
-## الخلاصة {#conclusion}
+## الخاتمة {#conclusion}
 
-Classifieds boards are a common market configuration that scaled massively with the internet, becoming a hugely popular business model with a few monopolistic winners.
+لوحات الإعلانات المبوبة هي تكوين سوق شائع توسع بشكل هائل مع الإنترنت، ليصبح نموذج عمل شائعًا للغاية مع عدد قليل من الفائزين المحتكرين.
 
-Classifieds boards also happen to be an easy tool to replicate in a blockchain environment, with very specific features that will make a challenge to the existing giants possible.
+تصادف أيضًا أن تكون لوحات الإعلانات المبوبة أداة سهلة التكرار في بيئة البلوك تشين، مع ميزات محددة للغاية ستجعل تحدي العمالقة الحاليين ممكنًا.
 
-In this article, I made an attempt to bridge the business reality of a classifieds board business with the technological implementation. This knowledge should help you to create a vision and a roadmap for implementation if you have the right skills.
+في هذا المقال، قمت بمحاولة لسد الفجوة بين واقع الأعمال الخاص بلوحة الإعلانات المبوبة والتنفيذ التكنولوجي. يجب أن تساعدك هذه المعرفة على إنشاء رؤية وخريطة طريق للتنفيذ إذا كانت لديك المهارات المناسبة.
 
-كما هو الحال دائمًا، إذا كنت بصدد بناء أي شيء ممتع وترحب ببعض النصائح، فيُرجى [مراسلتي](https://albertocuesta.es/)! I’m always happy to help.
+كما هو الحال دائمًا، إذا كنت بصدد بناء أي شيء ممتع وترحب ببعض النصائح، يرجى [مراسلتي](https://albertocuesta.es/)! يسعدني دائمًا المساعدة.

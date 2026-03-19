@@ -1,112 +1,108 @@
 ---
-title: Merkle proofs for offline data integrity
-description: "ضمان سلامة البيانات على السلسلة للبيانات المخزنة، في الغالب، خارج السلسلة"
-author: "أوري بوميرانتز"
-tags: [ "التخزين" ]
+title: إثباتات ميركل لسلامة البيانات خارج السلسلة
+description: ضمان سلامة البيانات على السلسلة للبيانات المخزنة، في الغالب، خارج السلسلة
+author: أوري بوميرانتس
+tags: ["التخزين"]
 skill: advanced
 lang: ar
 published: 2021-12-30
 ---
 
-## مقدمة {#introduction}
+## المقدمة {#introduction}
 
-Ideally we'd like to store everything in إيثريوم storage, which is stored across thousands of computers and has
-extremely high availability (the data cannot be censored) and integrity (the data cannot be modified in an
-unauthorized manner), but storing a 32-byte word typically costs 20,000 gas. As I'm writing this, that cost is
-equivalent to $6.60. At 21 cents per byte this is too expensive for many uses.
+من الناحية المثالية، نود تخزين كل شيء في تخزين إيثريوم، والذي يتم تخزينه عبر آلاف أجهزة الكمبيوتر ويتمتع بتوافر عالٍ للغاية (لا يمكن فرض رقابة على البيانات) وسلامة (لا يمكن تعديل البيانات بطريقة غير مصرح بها)، ولكن تخزين كلمة بحجم 32 بايت يكلف عادةً 20,000 من الغاز. أثناء كتابتي لهذا، تعادل هذه التكلفة 6.60 دولار. بسعر 21 سنتًا لكل بايت، يعد هذا مكلفًا للغاية للعديد من الاستخدامات.
 
-لحل هذه المشكلة، طوّر نظام إيثريوم البيئي [العديد من الطرق البديلة لتخزين البيانات بطريقة لامركزية](/developers/docs/storage/). Usually they involve a tradeoff between availability
-and price. However, integrity is usually assured.
+لحل هذه المشكلة، طور نظام إيثريوم البيئي [العديد من الطرق البديلة لتخزين البيانات بطريقة لامركزية](/developers/docs/storage/). عادة ما تنطوي على مقايضة بين التوافر والسعر. ومع ذلك، عادة ما تكون السلامة مضمونة.
 
-في هذا المقال، ستتعلم **كيف** تضمن سلامة البيانات دون تخزين البيانات على البلوكتشين، باستخدام [إثباتات ميركل](https://computersciencewiki.org/index.php/Merkle_proof).
+في هذه المقالة، ستتعلم **كيفية** ضمان سلامة البيانات دون تخزين البيانات على البلوك تشين، باستخدام [إثباتات ميركل](https://computersciencewiki.org/index.php/Merkle_proof).
 
-## How does it work؟ {#how-does-it-work}
+## كيف تعمل؟ {#how-does-it-work}
 
-من الناحية النظرية، يمكننا فقط تخزين التجزئة (هاش) للبيانات على السلسلة، وإرسال جميع البيانات في المعاملات التي تتطلب ذلك. However, this is still too expensive. A byte of data to a transaction costs about 16 gas, currently about half a cent, or about $5 per kilobyte. At $5000 per megabyte, this is still too expensive for many uses, even without the added cost of hashing the data.
+نظريًا، يمكننا فقط تخزين التجزئة (هاش) للبيانات على السلسلة، وإرسال جميع البيانات في المعاملات التي تتطلب ذلك. ومع ذلك، لا يزال هذا مكلفًا للغاية. يكلف بايت من البيانات لمعاملة حوالي 16 من الغاز، حاليًا حوالي نصف سنت، أو حوالي 5 دولارات لكل كيلوبايت. بسعر 5000 دولار لكل ميغابايت، لا يزال هذا مكلفًا للغاية للعديد من الاستخدامات، حتى بدون التكلفة الإضافية لإجراء التجزئة (هاش) للبيانات.
 
-The solution is to repeatedly hash different subsets of the data, so for the data that you don't need to send you can just send a hash. You do this using a Merkle tree, a tree data structure where each node is a hash of the nodes below it:
+الحل هو إجراء التجزئة (هاش) بشكل متكرر لمجموعات فرعية مختلفة من البيانات، لذلك بالنسبة للبيانات التي لا تحتاج إلى إرسالها، يمكنك فقط إرسال التجزئة (هاش). يمكنك القيام بذلك باستخدام شجرة ميركل (Merkle tree)، وهي بنية بيانات شجرية حيث تكون كل عقدة عبارة عن التجزئة (هاش) للعقد الموجودة أسفلها:
 
 ![شجرة ميركل](tree.png)
 
-التجزئة (هاش) الجذرية هي الجزء الوحيد الذي يجب تخزينه على السلسلة. To prove a certain value, you provide all the hashes that need to be combined with it to obtain the root. على سبيل المثال، لإثبات `C`، فإنك تقدم `D` و `H(A-B)` و `H(E-H)`.
+تجزئة الجذر هي الجزء الوحيد الذي يجب تخزينه على السلسلة. لإثبات قيمة معينة، فإنك توفر جميع التجزئات التي يجب دمجها معها للحصول على الجذر. على سبيل المثال، لإثبات `C`، فإنك توفر `D` و `H(A-B)` و `H(E-H)`.
 
 ![إثبات قيمة C](proof-c.png)
 
 ## التنفيذ {#implementation}
 
-[يتم توفير النص البرمجي النموذجي هنا](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
+[يتم توفير نموذج التعليمات البرمجية هنا](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### النص البرمجي خارج السلسلة {#offchain-code}
+### التعليمات البرمجية خارج السلسلة {#offchain-code}
 
-في هذه المقالة، نستخدم جافا سكريبت للحسابات خارج السلسلة. معظم التطبيقات اللامركزية لديها مكونها خارج السلسلة في جافا سكريبت.
+في هذه المقالة نستخدم JavaScript للحسابات خارج السلسلة. تحتوي معظم التطبيقات اللامركزية على مكونها خارج السلسلة مكتوبًا بلغة JavaScript.
 
 #### إنشاء جذر ميركل {#creating-the-merkle-root}
 
-First we need to provide the Merkle root to the chain.
+أولاً، نحتاج إلى توفير جذر ميركل للسلسلة.
 
 ```javascript
 const ethers = require("ethers")
 ```
 
-[نحن نستخدم دالة التجزئة (هاش) من حزمة ethers](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
+[نستخدم دالة التجزئة (هاش) من حزمة ethers](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
 
 ```javascript
-// البيانات الأولية التي يجب علينا التحقق من سلامتها. أول بايتين هما
-// معرف مستخدم، وآخر بايتين هما مقدار الرموز التي
-// يملكها المستخدم في الوقت الحالي.
+// The raw data whose integrity we have to verify. The first two bytes a // البيانات الخام التي يجب علينا التحقق من سلامتها. أول بايتين
+// are a user identifier, and the last two bytes the amount of tokens the // هما معرّف مستخدم، وآخر بايتين هما كمية الرموز التي
+// user owns at present. // يملكها المستخدم في الوقت الحالي.
 const dataArray = [
   0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
   0xface0070, 0xbad00080, 0x060d0091,
 ]
 ```
 
-Encoding each entry into a single 256-bit integer results in less readable code than using JSON, for example. However, this means significantly less processing to retrieve the data in the contract, so much lower gas costs. [يمكنك قراءة JSON على السلسلة](https://github.com/chrisdotn/jsmnSol)، إنها مجرد فكرة سيئة إذا كان بالإمكان تجنبها.
+يؤدي تشفير كل إدخال في عدد صحيح واحد بحجم 256 بت إلى تعليمات برمجية أقل قابلية للقراءة مقارنة باستخدام JSON، على سبيل المثال. ومع ذلك، فإن هذا يعني معالجة أقل بكثير لاسترداد البيانات في العقد، وبالتالي تكاليف غاز أقل بكثير. [يمكنك قراءة JSON على السلسلة](https://github.com/chrisdotn/jsmnSol)، إنها مجرد فكرة سيئة إذا كان من الممكن تجنبها.
 
 ```javascript
-// مصفوفة قيم التجزئة (هاش)، بصيغة BigInts
+// The array of hash values, as BigInts // مصفوفة قيم التجزئة (هاش)، كأعداد صحيحة كبيرة (BigInts)
 const hashArray = dataArray
 ```
 
-In this case our data is 256-bit values to begin with, so no processing is needed. If we use a more complicated data structure, such as strings, we need to make sure we hash the data first to get an array of hashes. Note that this is also because we don't care if users know other users' information. Otherwise we would have had to hash so user 1 won't know the value for user 0, user 2 won't know the value for user 3, etc.
+في هذه الحالة، بياناتنا عبارة عن قيم بحجم 256 بت في البداية، لذلك لا حاجة إلى معالجة. إذا استخدمنا بنية بيانات أكثر تعقيدًا، مثل السلاسل النصية، فنحن بحاجة إلى التأكد من إجراء التجزئة (هاش) للبيانات أولاً للحصول على مصفوفة من التجزئات. لاحظ أن هذا يرجع أيضًا إلى أننا لا نهتم إذا كان المستخدمون يعرفون معلومات المستخدمين الآخرين. وإلا لكان علينا إجراء التجزئة (هاش) حتى لا يعرف المستخدم 1 قيمة المستخدم 0، ولن يعرف المستخدم 2 قيمة المستخدم 3، وما إلى ذلك.
 
 ```javascript
-// التحويل بين السلسلة التي تتوقعها دالة التجزئة (هاش) و
-// BigInt الذي نستخدمه في كل مكان آخر.
+// Convert between the string the hash function expects and the // التحويل بين السلسلة النصية التي تتوقعها دالة التجزئة (هاش) و
+// BigInt we use everywhere else. // العدد الصحيح الكبير (BigInt) الذي نستخدمه في كل مكان آخر.
 const hash = (x) =>
   BigInt(ethers.utils.keccak256("0x" + x.toString(16).padStart(64, 0)))
 ```
 
-تتوقع دالة التجزئة (هاش) في ethers الحصول على سلسلة جافا سكريبت برقم ست عشري، مثل `0x60A7`، وتستجيب بسلسلة أخرى بنفس البنية. ولكن، بالنسبة لبقية النص البرمجي، من الأسهل استخدام `BigInt`، لذلك نقوم بالتحويل إلى سلسلة ست عشرية والعودة مرة أخرى.
+تتوقع دالة التجزئة (هاش) في ethers الحصول على سلسلة JavaScript برقم سداسي عشري، مثل `0x60A7`، وتستجيب بسلسلة أخرى بنفس البنية. ومع ذلك، بالنسبة لبقية التعليمات البرمجية، من الأسهل استخدام `BigInt`، لذلك نقوم بالتحويل إلى سلسلة سداسية عشرية والعودة مرة أخرى.
 
 ```javascript
-// تجزئة (هاش) متماثلة لزوج حتى لا نهتم إذا تم عكس الترتيب.
+// Symmetrical hash of a pair so we won't care if the order is reversed. // التجزئة (هاش) المتماثلة لزوج حتى لا نهتم إذا تم عكس الترتيب.
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
-هذه الدالة متماثلة (تجزئة أ [xor](https://en.wikipedia.org/wiki/Exclusive_or) ب). This means that when we check the Merkle proof we don't need to worry about whether to put the value from the proof before or after the calculated value. يتم التحقق من إثبات ميركل على السلسلة، لذا كلما قل ما نحتاج إلى القيام به هناك كان ذلك أفضل.
+هذه الدالة متماثلة (التجزئة لـ a [xor](https://en.wikipedia.org/wiki/Exclusive_or) b). هذا يعني أنه عندما نتحقق من إثبات ميركل، لا داعي للقلق بشأن ما إذا كنا سنضع القيمة من الإثبات قبل أو بعد القيمة المحسوبة. يتم التحقق من إثبات ميركل على السلسلة، لذلك كلما قل ما نحتاج إلى القيام به هناك كان ذلك أفضل.
 
-Warning:
-Cryptography is harder than it looks.
-تضمن الإصدار الأولي من هذه المقالة دالة التجزئة (هاش) `hash(a^b)`.
-كانت تلك فكرة **سيئة** لأنها كانت تعني أنه إذا كنت تعرف القيم المشروعة لـ `a` و `b`، فيمكنك استخدام `b' = a^b^a'` لإثبات أي قيمة `a'` مرغوبة.
-باستخدام هذه الدالة، سيتعين عليك حساب `b'` بحيث تكون `hash(a') ^ hash(b')` مساوية لقيمة معروفة (الفرع التالي في الطريق إلى الجذر)، وهو أمر أصعب بكثير.
+تحذير:
+علم التشفير أصعب مما يبدو.
+الإصدار الأولي من هذه المقالة كان يحتوي على دالة التجزئة <span dir="ltr">`hash(a^b)`</span>.
+كانت تلك فكرة **سيئة** لأنها تعني أنه إذا كنت تعرف القيم المشروعة لـ `a` و `b`، فيمكنك استخدام <span dir="ltr">`b' = a^b^a'`</span> لإثبات أي قيمة `a'` مطلوبة.
+باستخدام هذه الدالة، سيتعين عليك حساب `b'` بحيث تكون <span dir="ltr">`hash(a') ^ hash(b')`</span> مساوية لقيمة معروفة (الفرع التالي في الطريق إلى الجذر)، وهو أمر أصعب بكثير.
 
 ```javascript
-// القيمة التي تشير إلى أن فرعًا معينًا فارغ، وليس له
-// قيمة
+// The value to denote that a certain branch is empty, doesn't // القيمة التي تشير إلى أن فرعًا معينًا فارغ، ولا
+// have a value // يحتوي على قيمة
 const empty = 0n
 ```
 
-When the number of values is not an integer power of two we need to handle empty branches. The way this program does it is to put zero as a place holder.
+عندما لا يكون عدد القيم قوة صحيحة للرقم اثنين، نحتاج إلى التعامل مع الفروع الفارغة. الطريقة التي يقوم بها هذا البرنامج هي وضع الصفر كعنصر نائب.
 
 ![شجرة ميركل مع فروع مفقودة](merkle-empty-hash.png)
 
 ```javascript
-// حساب مستوى واحد لأعلى في شجرة مصفوفة التجزئة (هاش) عن طريق أخذ تجزئة (هاش)
-// كل زوج بالتسلسل
+// Calculate one level up the tree of a hash array by taking the hash of // حساب مستوى واحد لأعلى في شجرة مصفوفة التجزئة (هاش) عن طريق أخذ التجزئة (هاش) لـ
+// each pair in sequence // كل زوج بالتسلسل
 const oneLevelUp = (inputArray) => {
   var result = []
-  var inp = [...inputArray] // لتجنب الكتابة فوق المدخلات // أضف قيمة فارغة إذا لزم الأمر (نحتاج إلى أن تكون جميع الأوراق // مزدوجة)
+  var inp = [...inputArray] // To avoid over writing the input // Add an empty value if necessary (we need all the leaves to be // paired) // لتجنب الكتابة فوق المدخلات // أضف قيمة فارغة إذا لزم الأمر (نحتاج إلى أن تكون جميع الأوراق // مزدوجة)
 
   if (inp.length % 2 === 1) inp.push(empty)
 
@@ -114,16 +110,16 @@ const oneLevelUp = (inputArray) => {
     result.push(pairHash(inp[i], inp[i + 1]))
 
   return result
-} // oneLevelUp
+} // oneLevelUp // oneLevelUp
 ```
 
-This function "climbs" one level in the Merkle tree by hashing the pairs of values at the current layer. لاحظ أن هذا ليس التنفيذ الأكثر كفاءة، كان بإمكاننا تجنب نسخ المدخلات وإضافة `hashEmpty` فقط عند الاقتضاء في الحلقة، ولكن هذا النص البرمجي محسن لسهولة القراءة.
+هذه الدالة "تتسلق" مستوى واحدًا في شجرة ميركل عن طريق إجراء التجزئة (هاش) لأزواج القيم في الطبقة الحالية. لاحظ أن هذا ليس التنفيذ الأكثر كفاءة، كان بإمكاننا تجنب نسخ الإدخال وإضافة `hashEmpty` فقط عند الاقتضاء في الحلقة، ولكن تم تحسين هذه التعليمات البرمجية لسهولة القراءة.
 
 ```javascript
 const getMerkleRoot = (inputArray) => {
   var result
 
-  result = [...inputArray] // تسلق الشجرة حتى لا يتبقى سوى قيمة واحدة، وهي // الجذر. // // إذا كانت الطبقة تحتوي على عدد فردي من الإدخالات، فإن // النص البرمجي في oneLevelUp يضيف قيمة فارغة، لذلك إذا كان لدينا على سبيل المثال، // 10 أوراق، فسيكون لدينا 5 فروع في الطبقة الثانية، و3 // فروع في الطبقة الثالثة، و2 في الرابعة، والجذر هو الخامس
+  result = [...inputArray] // Climb up the tree until there is only one value, that is the // root. // // If a layer has an odd number of entries the // code in oneLevelUp adds an empty value, so if we have, for example, // 10 leaves we'll have 5 branches in the second layer, 3 // branches in the third, 2 in the fourth and the root is the fifth // تسلق الشجرة حتى تتبقى قيمة واحدة فقط، وهي // الجذر. // // إذا كانت الطبقة تحتوي على عدد فردي من المدخلات، فإن // الكود في oneLevelUp يضيف قيمة فارغة، لذلك إذا كان لدينا، على سبيل المثال، // 10 أوراق، فسيكون لدينا 5 فروع في الطبقة الثانية، و 3 // فروع في الثالثة، و 2 في الرابعة، والجذر هو الخامس
 
   while (result.length > 1) result = oneLevelUp(result)
 
@@ -131,57 +127,57 @@ const getMerkleRoot = (inputArray) => {
 }
 ```
 
-To get the root, climb until there is only one value left.
+للحصول على الجذر، استمر في التسلق حتى تتبقى قيمة واحدة فقط.
 
 #### إنشاء إثبات ميركل {#creating-a-merkle-proof}
 
-A Merkle proof is the values to hash together with the value being proved to get back the Merkle root. The value to prove is often available from other data, so I prefer to provide it separately rather than as part of the code.
+إثبات ميركل هو القيم التي يتم إجراء التجزئة (هاش) لها مع القيمة التي يتم إثباتها لاستعادة جذر ميركل. غالبًا ما تكون القيمة المراد إثباتها متاحة من بيانات أخرى، لذلك أفضل توفيرها بشكل منفصل بدلاً من أن تكون جزءًا من التعليمات البرمجية.
 
 ```javascript
-// يتكون إثبات ميركل من قيمة قائمة الإدخالات
-// التي سيتم تجزئتها. ولأننا نستخدم دالة تجزئة (هاش) متماثلة، فإننا لا
-// نحتاج إلى موقع العنصر للتحقق من الإثبات، بل فقط لإنشائه
+// A merkle proof consists of the value of the list of entries to // يتكون إثبات ميركل من قيمة قائمة المدخلات التي سيتم
+// hash with. Because we use a symmetrical hash function, we don't // إجراء التجزئة (هاش) معها. لأننا نستخدم دالة تجزئة (هاش) متماثلة، فإننا لا
+// need the item's location to verify the proof, only to create it // نحتاج إلى موقع العنصر للتحقق من الإثبات، بل لإنشائه فقط
 const getMerkleProof = (inputArray, n) => {
     var result = [], currentLayer = [...inputArray], currentN = n
 
-    // حتى نصل إلى القمة
+    // Until we reach the top // حتى نصل إلى القمة
     while (currentLayer.length > 1) {
-        // لا توجد طبقات ذات طول فردي
+        // No odd length layers // لا توجد طبقات بطول فردي
         if (currentLayer.length % 2)
             currentLayer.push(empty)
 
         result.push(currentN % 2
-               // إذا كان currentN فرديًا، أضف القيمة التي تسبقه إلى الإثبات
+               // If currentN is odd, add with the value before it to the proof // إذا كان currentN فرديًا، أضفه مع القيمة التي قبله إلى الإثبات
             ? currentLayer[currentN-1]
-               // إذا كان زوجيًا، أضف القيمة التي تليه
+               // If it is even, add the value after it // إذا كان زوجيًا، أضف القيمة التي بعده
             : currentLayer[currentN+1])
 
 ```
 
-نحن نجزئ `(v[0],v[1])`، `(v[2],v[3])`، إلخ. So for even values we need the next one, for odd values the previous one.
+نقوم بإجراء التجزئة (هاش) لـ `(v[0],v[1])`، `(v[2],v[3])`، إلخ. لذلك بالنسبة للقيم الزوجية نحتاج إلى القيمة التالية، وبالنسبة للقيم الفردية نحتاج إلى القيمة السابقة.
 
 ```javascript
-        // الانتقال إلى الطبقة التالية لأعلى
+        // Move to the next layer up // الانتقال إلى الطبقة التالية لأعلى
         currentN = Math.floor(currentN/2)
         currentLayer = oneLevelUp(currentLayer)
-    }   // طالما أن currentLayer.length > 1
+    }   // while currentLayer.length > 1 // طالما currentLayer.length > 1
 
     return result
-}   // getMerkleProof
+}   // getMerkleProof // getMerkleProof
 ```
 
-### النص البرمجي على السلسلة {#onchain-code}
+### التعليمات البرمجية على السلسلة {#onchain-code}
 
-Finally we have the code that checks the proof. النص البرمجي على السلسلة مكتوب بلغة [سوليديتي](https://docs.soliditylang.org/en/v0.8.11/). Optimization is a lot more important here because gas is relatively expensive.
+أخيرًا لدينا التعليمات البرمجية التي تتحقق من الإثبات. تمت كتابة التعليمات البرمجية على السلسلة بلغة [Solidity](https://docs.soliditylang.org/en/v0.8.11/). التحسين هنا أكثر أهمية بكثير لأن الغاز مكلف نسبيًا.
 
 ```solidity
-//SPDX-License-Identifier: Public Domain
+//SPDX-License-Identifier: Public Domain // SPDX-License-Identifier: Public Domain
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 ```
 
-لقد كتبت هذا باستخدام [بيئة تطوير هارد هات](https://hardhat.org/)، والتي تتيح لنا الحصول على [إخراج وحدة التحكم من سوليديتي](https://hardhat.org/docs/cookbook/debug-logs) أثناء التطوير.
+لقد كتبت هذا باستخدام [بيئة تطوير Hardhat](https://hardhat.org/)، والتي تتيح لنا الحصول على [مخرجات وحدة التحكم من Solidity](https://hardhat.org/docs/cookbook/debug-logs) أثناء التطوير.
 
 ```solidity
 
@@ -192,15 +188,15 @@ contract MerkleProof {
       return merkleRoot;
     }
 
-    // غير آمن للغاية، في النص البرمجي الإنتاجي يجب أن يكون الوصول
-    // إلى هذه الدالة محدودًا للغاية، ربما
-    // لمالك
+    // Extremely insecure, in production code access to // غير آمن للغاية، في كود الإنتاج يجب أن يكون الوصول إلى
+    // this function MUST BE strictly limited, probably to an // هذه الدالة مقيدًا بشدة، وربما يقتصر على
+    // owner // المالك
     function setRoot(uint _merkleRoot) external {
       merkleRoot = _merkleRoot;
-    }   // setRoot
+    }   // setRoot // setRoot
 ```
 
-Set and get functions for the Merkle root. يُعد السماح للجميع بتحديث جذر ميركل _فكرة سيئة للغاية_ في نظام إنتاجي. I do it here for the sake of simplicity for sample code. **لا تفعل ذلك على نظام تكون فيه سلامة البيانات مهمة بالفعل**.
+دوال التعيين (Set) والاسترجاع (Get) لجذر ميركل. السماح للجميع بتحديث جذر ميركل هو _فكرة سيئة للغاية_ في نظام الإنتاج. أقوم بذلك هنا من أجل التبسيط لنموذج التعليمات البرمجية. **لا تفعل ذلك في نظام تهم فيه سلامة البيانات بالفعل**.
 
 ```solidity
     function hash(uint _a) internal pure returns(uint) {
@@ -212,12 +208,12 @@ Set and get functions for the Merkle root. يُعد السماح للجميع ب
     }
 ```
 
-This function generates a pair hash. إنها مجرد ترجمة سوليديتي للنص البرمجي جافا سكريبت لـ `hash` و`pairHash`.
+تُنشئ هذه الدالة تجزئة زوجية. إنها مجرد ترجمة Solidity لتعليمات JavaScript البرمجية لـ `hash` و `pairHash`.
 
 **ملاحظة:** هذه حالة أخرى من حالات التحسين لسهولة القراءة. بناءً على [تعريف الدالة](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm)، قد يكون من الممكن تخزين البيانات كقيمة [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) وتجنب التحويلات.
 
 ```solidity
-    // التحقق من إثبات ميركل
+    // Verify a Merkle proof // التحقق من إثبات ميركل
     function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
       uint temp = _value;
@@ -230,21 +226,21 @@ This function generates a pair hash. إنها مجرد ترجمة سوليديت
       return temp == merkleRoot;
     }
 
-}  // MarkleProof
+}  // MarkleProof // MarkleProof
 ```
 
-في الترميز الرياضي، يبدو التحقق من إثبات ميركل كما يلي: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. This code implements it.
+في التدوين الرياضي، يبدو التحقق من إثبات ميركل هكذا: <span dir="ltr">`H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`</span>. هذه التعليمات البرمجية تنفذ ذلك.
 
-## إثباتات ميركل وتكديس المعاملات لا يختلطان {#merkle-proofs-and-rollups}
+## إثباتات ميركل والرول أب لا يختلطان {#merkle-proofs-and-rollups}
 
-لا تعمل إثباتات ميركل بشكل جيد مع [تكديس المعاملات](/developers/docs/scaling/#rollups). The reason is that rollups write all the transaction data on L1, but process on L2. The cost to send a Merkle proof with a transaction averages to 638 gas per layer (currently a byte in call data costs 16 gas if it isn't zero, and 4 if it is zero). If we have 1024 words of data, a Merkle proof requires ten layers, or a total of 6380 gas.
+لا تعمل إثباتات ميركل بشكل جيد مع [الرول أب](/developers/docs/scaling/#rollups). السبب هو أن الرول أب يكتب جميع بيانات المعاملات على الطبقة الأولى (L1)، ولكنه يعالجها على الطبقة الثانية (L2). يبلغ متوسط تكلفة إرسال إثبات ميركل مع معاملة 638 من الغاز لكل طبقة (حاليًا يكلف البايت في بيانات الاستدعاء 16 من الغاز إذا لم يكن صفرًا، و 4 إذا كان صفرًا). إذا كان لدينا 1024 كلمة من البيانات، فإن إثبات ميركل يتطلب عشر طبقات، أو إجمالي 6380 من الغاز.
 
-بالنظر على سبيل المثال إلى [أوبتيميزم](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)، تبلغ تكلفة كتابة غاز L1 حوالي 100 غوي وتبلغ تكلفة غاز L2 0.001 غوي (وهو السعر العادي، ويمكن أن يرتفع مع الازدحام). So for the cost of one L1 gas we can spend a hundred thousand gas on L2 processing. Assuming we don't overwrite storage, this means that we can write about five words to storage on L2 for the price of one L1 gas. لإثبات ميركل واحد، يمكننا كتابة الكلمات البالغ عددها 1024 كلمة بالكامل في التخزين (بافتراض أنه يمكن حسابها على السلسلة في البداية، بدلاً من توفيرها في معاملة) ولا يزال لدينا معظم الغاز المتبقي.
+بالنظر على سبيل المثال إلى [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)، تكلف كتابة غاز الطبقة الأولى (L1) حوالي 100 gwei وتكلف غاز الطبقة الثانية (L2) 0.001 gwei (هذا هو السعر العادي، ويمكن أن يرتفع مع الازدحام). لذلك مقابل تكلفة غاز واحد من الطبقة الأولى (L1)، يمكننا إنفاق مائة ألف غاز على معالجة الطبقة الثانية (L2). بافتراض أننا لا نستبدل التخزين، فهذا يعني أنه يمكننا كتابة حوالي خمس كلمات في التخزين على الطبقة الثانية (L2) بسعر غاز واحد من الطبقة الأولى (L1). بالنسبة لإثبات ميركل واحد، يمكننا كتابة 1024 كلمة بالكامل في التخزين (بافتراض أنه يمكن حسابها على السلسلة في البداية، بدلاً من توفيرها في معاملة) ولا يزال يتبقى لدينا معظم الغاز.
 
-## الخلاصة {#conclusion}
+## الخاتمة {#conclusion}
 
-In real life you might never implement Merkle trees on your own. There are well known and audited libraries you can use and generally speaking it is best not to implement cryptographic primitives on your own. But I hope that now you understand Merkle proofs better and can decide when they are worth using.
+في الحياة الواقعية، قد لا تقوم أبدًا بتنفيذ أشجار ميركل بنفسك. هناك مكتبات معروفة ومدققة يمكنك استخدامها، وبشكل عام من الأفضل عدم تنفيذ الأساسيات التشفيرية بنفسك. لكنني آمل أن تفهم الآن إثباتات ميركل بشكل أفضل ويمكنك أن تقرر متى تستحق الاستخدام.
 
-لاحظ أنه بينما تحافظ إثباتات ميركل على _السلامة_، فإنها لا تحافظ على _التوفر_. Knowing that nobody else can take your assets is small consolation if the data storage decides to disallow access and you can't construct a Merkle tree to access them either. So Merkle trees are best used with some kind of decentralized storage, such as آي بي إف إس.
+لاحظ أنه بينما تحافظ إثباتات ميركل على _السلامة_، فإنها لا تحافظ على _التوافر_. إن معرفة أنه لا يمكن لأي شخص آخر أخذ أصولك هو عزاء بسيط إذا قرر تخزين البيانات عدم السماح بالوصول ولا يمكنك بناء شجرة ميركل للوصول إليها أيضًا. لذلك من الأفضل استخدام أشجار ميركل مع نوع من التخزين اللامركزي، مثل IPFS.
 
-[انظر هنا لمزيد من أعمالي](https://cryptodocguy.pro/).
+[انظر هنا للمزيد من أعمالي](https://cryptodocguy.pro/).

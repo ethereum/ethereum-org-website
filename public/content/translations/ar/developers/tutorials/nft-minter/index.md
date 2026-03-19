@@ -1,105 +1,97 @@
 ---
-title: "إن إف تي Minter Tutorial"
-description: "In this tutorial, you’ll build an إن إف تي minter and learn how to create a full stack dapp by connecting your smart contract to a رياكت frontend using ميتاماسك and ويب3 tools."
+title: دليل تعليمي لأداة سك الرموز غير القابلة للاستبدال (NFT Minter)
+description: في هذا الدليل التعليمي، ستقوم ببناء أداة لسك الرموز غير القابلة للاستبدال (NFT) وتتعلم كيفية إنشاء تطبيق لامركزي (dapp) متكامل من خلال ربط عقدك الذكي بواجهة أمامية مبنية بـ React باستخدام MetaMask وأدوات Web3.
 author: "smudgil"
-tags:
-  [
-    "Solidity",
-    "رمز غير القابل للاستبدال",
-    "Alchemy",
-    "العقود الذكيه ",
-    "واجهة التطبيق",
-    "Pinata"
-  ]
+tags: ["Solidity", "NFT", "Alchemy", "العقود الذكية", "الواجهة الأمامية", "Pinata", "ERC-721"]
 skill: intermediate
 lang: ar
 published: 2021-10-06
 ---
 
-One of the greatest challenges for developers coming from a Web2 background is figuring out how to connect your smart contract to a frontend project and interact with it.
+أحد أكبر التحديات التي تواجه المطورين القادمين من خلفية Web2 هو معرفة كيفية ربط العقد الذكي بمشروع واجهة أمامية والتفاعل معه.
 
-By building an إن إف تي minter — a simple UI where you can input a link to your digital asset, a title, and a description — you'll learn how to:
+من خلال بناء أداة سك الرموز غير القابلة للاستبدال (NFT minter) — وهي واجهة مستخدم بسيطة حيث يمكنك إدخال رابط لأصلك الرقمي، وعنوان، ووصف — ستتعلم كيفية:
 
-- Connect to ميتاماسك via your frontend project
-- Call smart contract methods from your frontend
-- Sign transactions using ميتاماسك
+- الاتصال بـ MetaMask عبر مشروع الواجهة الأمامية الخاص بك
+- استدعاء دوال العقد الذكي من الواجهة الأمامية
+- توقيع المعاملات باستخدام MetaMask
 
-في هذا الدرس التعليمي، سوف نستخدم [رياكت](https://react.dev/) كإطار عمل للواجهة الأمامية. Because this tutorial is primarily focused on ويب3 development, we won't be spending much time breaking down رياكت fundamentals. Instead, we'll be focusing on bringing functionality to our project.
+في هذا الدليل التعليمي، سنستخدم [React](https://react.dev/) كإطار عمل للواجهة الأمامية. نظرًا لأن هذا الدليل يركز بشكل أساسي على تطوير Web3، فلن نقضي الكثير من الوقت في تفصيل أساسيات React. بدلاً من ذلك، سنركز على إضافة الوظائف إلى مشروعنا.
 
-As a prerequisite, you should have a beginner-level understanding of رياكت—know how components, props, useState/useEffect, and basic function calling works. إذا لم تكن قد سمعت بأي من هذه المصطلحات من قبل، فقد ترغب في الاطلاع على هذا [الدرس التعليمي التمهيدي لـ رياكت](https://react.dev/learn/tutorial-tic-tac-toe). للمتعلمين البصريين، نوصي بشدة بسلسلة الفيديوهات الممتازة هذه [Full Modern رياكت Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) من Net Ninja.
+كمتطلب أساسي، يجب أن يكون لديك فهم بمستوى مبتدئ لـ React—أن تعرف كيف تعمل المكونات (components)، والخصائص (props)، و useState/useEffect، واستدعاء الدوال الأساسية. إذا لم تسمع بأي من هذه المصطلحات من قبل، فقد ترغب في الاطلاع على [دليل مقدمة إلى React](https://react.dev/learn/tutorial-tic-tac-toe). بالنسبة للمتعلمين البصريين، نوصي بشدة بسلسلة مقاطع الفيديو الممتازة [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) بواسطة Net Ninja.
 
-And if you haven't already, you'll definitely need an ألكيمي account to complete this tutorial as well as build anything on the blockchain. سجل للحصول على حساب مجاني [هنا](https://alchemy.com/).
+وإذا لم تكن قد فعلت ذلك بالفعل، فستحتاج بالتأكيد إلى حساب Alchemy لإكمال هذا الدليل التعليمي بالإضافة إلى بناء أي شيء على البلوك تشين. قم بالتسجيل للحصول على حساب مجاني [هنا](https://alchemy.com/).
 
-Without further ado, let's get started!
+بدون مزيد من التأخير، دعونا نبدأ!
 
-## إنشاء الرموز غير القابلة للاستبدال 101 {#making-nfts-101}
+## أساسيات إنشاء رموز NFT {#making-nfts-101}
 
-Before we even start looking at any code, it's important to understand how making an إن إف تي works. It involves two steps:
+قبل أن نبدأ في النظر إلى أي كود، من المهم فهم كيفية عمل إنشاء رمز NFT. يتضمن ذلك خطوتين:
 
-### نشر عقد ذكي لرمز غير قابل للاستبدال (إن إف تي) على بلوكتشين إيثريوم {#publish-nft}
+### نشر عقد ذكي لـ NFT على البلوك تشين الخاص بإيثريوم {#publish-nft}
 
-The biggest difference between the two إن إف تي smart contract standards is that ERC-1155 is a multi-token standard and includes batch functionality, whereas with the ERC-721 is a single-token standard and therefore only supports transferring one token at a time.
+أكبر اختلاف بين معياري العقود الذكية لـ NFT هو أن ERC-1155 هو معيار متعدد الرموز ويتضمن وظيفة الدفعات (batch functionality)، بينما ERC-721 هو معيار لرمز واحد وبالتالي يدعم فقط نقل رمز واحد في كل مرة.
 
-### استدعاء دالة الصك {#minting-function}
+### استدعاء دالة السك {#minting-function}
 
-عادةً، تتطلب دالة الصك هذه تمرير متغيرين كمعلمات: الأول هو `recipient` (المستلم)، والذي يحدد العنوان الذي سيتلقى الرمز غير القابل للاستبدال (إن إف تي) المصكوك حديثًا، والثاني هو `tokenURI` الخاص بالرمز، وهو سلسلة نصية تؤدي إلى مستند JSON يصف البيانات الوصفية للرمز.
+عادةً، تتطلب دالة السك هذه تمرير متغيرين كمعلمات (parameters)، الأول هو `recipient`، والذي يحدد العنوان الذي سيتلقى رمز NFT الذي تم سكه حديثًا، والثاني هو `tokenURI` الخاص بـ NFT، وهو سلسلة نصية (string) تشير إلى مستند JSON يصف البيانات الوصفية (metadata) لرمز NFT.
 
-An إن إف تي's metadata is really what brings it to life, allowing it to have properties, such as a name, description, image (or different digital asset), and other attributes. إليك [مثال على tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)، والذي يحتوي على البيانات الوصفية لرمز غير قابل للاستبدال (إن إف تي).
+البيانات الوصفية لرمز NFT هي ما يجعله حيًا حقًا، حيث تسمح له بامتلاك خصائص، مثل الاسم، والوصف، والصورة (أو أصل رقمي مختلف)، وسمات أخرى. إليك [مثال على tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)، والذي يحتوي على البيانات الوصفية لرمز NFT.
 
-In this tutorial, we're going to focus on part 2, calling an existing إن إف تي's smart contract minting function using our رياكت UI.
+في هذا الدليل التعليمي، سنركز على الجزء الثاني، وهو استدعاء دالة السك لعقد ذكي موجود لـ NFT باستخدام واجهة مستخدم React الخاصة بنا.
 
-[إليك رابط](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) لعقد ERC-721 الذكي للرموز غير القابلة للاستبدال (إن إف تي) الذي سنقوم باستدعائه في هذا الدرس التعليمي. إذا كنت ترغب في تعلم كيفية إنشائه، فإننا نوصي بشدة بالاطلاع على درسنا التعليمي الآخر، ["كيفية إنشاء رمز غير قابل للاستبدال (إن إف تي)"](https://www.alchemy.com/docs/how-to-create-an-nft).
+[إليك رابط](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) للعقد الذكي ERC-721 NFT الذي سنقوم باستدعائه في هذا الدليل التعليمي. إذا كنت ترغب في معرفة كيف قمنا بإنشائه، نوصي بشدة بالاطلاع على دليلنا التعليمي الآخر، ["كيفية إنشاء NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
 
-Cool, now that we understand how making an إن إف تي works, let's clone our starter files!
+رائع، الآن بعد أن فهمنا كيفية عمل إنشاء NFT، دعونا نستنسخ ملفات البداية الخاصة بنا!
 
 ## استنساخ ملفات البداية {#clone-the-starter-files}
 
-أولاً، انتقل إلى [مستودع nft-minter-tutorial على غيت هاب](https://github.com/alchemyplatform/nft-minter-tutorial) للحصول على ملفات البداية لهذا المشروع. Clone this repository into your local environment.
+أولاً، انتقل إلى [مستودع GitHub الخاص بـ nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial) للحصول على ملفات البداية لهذا المشروع. قم باستنساخ هذا المستودع في بيئتك المحلية.
 
-عند فتح مستودع `nft-minter-tutorial` المستنسخ، ستلاحظ أنه يحتوي على مجلدين: `minter-starter-files` و `nft-minter`.
+عندما تفتح مستودع `nft-minter-tutorial` المستنسخ هذا، ستلاحظ أنه يحتوي على مجلدين: `minter-starter-files` و `nft-minter`.
 
-- يحتوي `minter-starter-files` على ملفات البداية (بشكل أساسي واجهة مستخدم رياكت) لهذا المشروع. في هذا الدرس التعليمي، **سنعمل في هذا المجلد**، حيث ستتعلم كيفية إضفاء الحيوية على واجهة المستخدم هذه عن طريق ربطها بمحفظة إيثريوم الخاصة بك وبعقد ذكي لرمز غير قابل للاستبدال (إن إف تي).
-- يحتوي `nft-minter` على الدرس التعليمي الكامل وهو موجود كـ **مرجع** لك **إذا واجهت صعوبة.**
+- يحتوي `minter-starter-files` على ملفات البداية (بشكل أساسي واجهة مستخدم React) لهذا المشروع. في هذا الدليل التعليمي، **سنعمل في هذا الدليل**، حيث ستتعلم كيفية إحياء واجهة المستخدم هذه عن طريق ربطها بمحفظة إيثريوم الخاصة بك وعقد ذكي لـ NFT.
+- يحتوي `nft-minter` على الدليل التعليمي المكتمل بالكامل وهو موجود كـ **مرجع** لك **إذا واجهت أي صعوبة.**
 
-بعد ذلك، افتح نسختك من `minter-starter-files` في محرر الأكواد الخاص بك، ثم انتقل إلى مجلد `src` الخاص بك.
+بعد ذلك، افتح نسختك من `minter-starter-files` في محرر الأكواد الخاص بك، ثم انتقل إلى مجلد `src`.
 
-ستكون جميع الأكواد التي سنكتبها ضمن مجلد `src`. سنقوم بتحرير مكون `Minter.js` وكتابة ملفات جافا سكريبت إضافية لمنح مشروعنا وظائف ويب3.
+جميع الأكواد التي سنكتبها ستكون داخل مجلد `src`. سنقوم بتعديل المكون `Minter.js` وكتابة ملفات JavaScript إضافية لمنح مشروعنا وظائف Web3.
 
-## الخطوة 2: تحقق من ملفات البداية الخاصة بنا {#step-2-check-out-our-starter-files}
+## الخطوة 2: التحقق من ملفات البداية {#step-2-check-out-our-starter-files}
 
-Before we start coding, it's important to check out what's already provided for us in the starter files.
+قبل أن نبدأ في كتابة الأكواد، من المهم التحقق مما تم توفيره لنا بالفعل في ملفات البداية.
 
-### تشغيل مشروع رياكت الخاص بك {#get-your-react-project-running}
+### تشغيل مشروع React الخاص بك {#get-your-react-project-running}
 
-Let's start by running the رياكت project in our browser. The beauty of رياكت is that once we have our project running in our browser, any changes we save will be updated live in our browser.
+دعونا نبدأ بتشغيل مشروع React في متصفحنا. جمال React هو أنه بمجرد تشغيل مشروعنا في المتصفح، سيتم تحديث أي تغييرات نحفظها مباشرة في المتصفح.
 
-لتشغيل المشروع، انتقل إلى المجلد الجذر لمجلد `minter-starter-files`، وقم بتشغيل `npm install` في الطرفية (terminal) لتثبيت تبعيات المشروع:
+لتشغيل المشروع، انتقل إلى الدليل الجذري لمجلد `minter-starter-files`، وقم بتشغيل `npm install` في الطرفية (terminal) لتثبيت تبعيات المشروع:
 
 ```bash
 cd minter-starter-files
 npm install
 ```
 
-بمجرد الانتهاء من تثبيتها، قم بتشغيل `npm start` في الطرفية الخاصة بك:
+بمجرد الانتهاء من التثبيت، قم بتشغيل `npm start` في الطرفية:
 
 ```bash
 npm start
 ```
 
-Doing so should open http://localhost:3000/ in your browser, where you'll see the frontend for our project. It should consist of 3 fields: a place to input a link to your إن إف تي's asset, enter the name of your إن إف تي, and provide a description.
+القيام بذلك يجب أن يفتح http://localhost:3000/ في متصفحك، حيث سترى الواجهة الأمامية لمشروعنا. يجب أن تتكون من 3 حقول: مكان لإدخال رابط لأصل NFT الخاص بك، وإدخال اسم NFT الخاص بك، وتقديم وصف.
 
-If you try clicking "Connect Wallet" or "Mint إن إف تي" buttons, you'll notice they don't work—that's because we still need to program their functionality! :\)
+إذا حاولت النقر على زري "Connect Wallet" أو "Mint NFT"، ستلاحظ أنهما لا يعملان—وذلك لأننا لا نزال بحاجة إلى برمجة وظائفهما! :\)
 
-### مكون Minter.js {#minter-js}
+### المكون Minter.js {#minter-js}
 
 **ملاحظة:** تأكد من أنك في مجلد `minter-starter-files` وليس في مجلد `nft-minter`!
 
-لنعد إلى مجلد `src` في محررنا ونفتح ملف `Minter.js`. It's super important that we understand everything in this file, as it is the primary رياكت component we will be working on.
+دعونا نعود إلى مجلد `src` في محررنا ونفتح ملف `Minter.js`. من المهم جدًا أن نفهم كل شيء في هذا الملف، لأنه مكون React الأساسي الذي سنعمل عليه.
 
-At the top of our this file, we have our state variables that we will update after specific events.
+في الجزء العلوي من هذا الملف، لدينا متغيرات الحالة (state variables) التي سنقوم بتحديثها بعد أحداث معينة.
 
 ```javascript
-//متغيرات الحالة
+//State variables // متغيرات الحالة
 const [walletAddress, setWallet] = useState("")
 const [status, setStatus] = useState("")
 const [name, setName] = useState("")
@@ -107,135 +99,135 @@ const [description, setDescription] = useState("")
 const [url, setURL] = useState("")
 ```
 
-Never heard of رياكت state variables or state hooks؟ اطلع على [هذه](https://legacy.reactjs.org/docs/hooks-state.html) المستندات.
+لم تسمع أبدًا عن متغيرات الحالة في React أو خطافات الحالة (state hooks)؟ تحقق من [هذه](https://legacy.reactjs.org/docs/hooks-state.html) المستندات.
 
-Here's what each of the variables represent:
+إليك ما يمثله كل من المتغيرات:
 
 - `walletAddress` - سلسلة نصية تخزن عنوان محفظة المستخدم
 - `status` - سلسلة نصية تحتوي على رسالة لعرضها في أسفل واجهة المستخدم
-- `name` - سلسلة نصية تخزن اسم الرمز غير القابل للاستبدال (إن إف تي)
-- `description` - سلسلة نصية تخزن وصف الرمز غير القابل للاستبدال (إن إف تي)
-- `url` - سلسلة نصية هي رابط للأصل الرقمي للرمز غير القابل للاستبدال (إن إف تي)
+- `name` - سلسلة نصية تخزن اسم NFT
+- `description` - سلسلة نصية تخزن وصف NFT
+- `url` - سلسلة نصية تمثل رابطًا للأصل الرقمي لـ NFT
 
-بعد متغيرات الحالة، سترى ثلاث دوال غير منفذة: `useEffect` و `connectWalletPressed` و `onMintPressed`. ستلاحظ أن كل هذه الدوال هي `async`، وذلك لأننا سنجري استدعاءات API غير متزامنة فيها! Their names are eponymous with their functionalities:
+بعد متغيرات الحالة، سترى ثلاث دوال غير منفذة: `useEffect`، و `connectWalletPressed`، و `onMintPressed`. ستلاحظ أن جميع هذه الدوال هي `async`، وذلك لأننا سنجري استدعاءات API غير متزامنة بداخلها! أسماؤها تدل على وظائفها:
 
 ```javascript
 useEffect(async () => {
-  //TODO: تنفيذ
+  //TODO: implement // للقيام به: التنفيذ
 }, [])
 
 const connectWalletPressed = async () => {
-  //TODO: تنفيذ
+  //TODO: implement // للقيام به: التنفيذ
 }
 
 const onMintPressed = async () => {
-  //TODO: تنفيذ
+  //TODO: implement // للقيام به: التنفيذ
 }
 ```
 
-- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html) - هذا خطاف (hook) في رياكت يتم استدعاؤه بعد عرض المكون الخاص بك. نظرًا لأنه تم تمرير مصفوفة فارغة `[]` كخاصية (prop) إليه (انظر السطر 3)، فسيتم استدعاؤه فقط عند العرض _الأول_ للمكون. Here we'll call our wallet listener and another wallet function to update our UI to reflect whether a wallet is already connected.
-- `connectWalletPressed` - سيتم استدعاء هذه الدالة لربط محفظة ميتاماسك الخاصة بالمستخدم بتطبيقنا اللامركزي (dapp).
-- `onMintPressed` - سيتم استدعاء هذه الدالة لصك الرمز غير القابل للاستبدال (إن إف تي) الخاص بالمستخدم.
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html) - هذا خطاف React يتم استدعاؤه بعد تصيير (render) المكون الخاص بك. نظرًا لأنه يتم تمرير مصفوفة فارغة `[]` إليه (انظر السطر 3)، فسيتم استدعاؤه فقط في التصيير _الأول_ للمكون. هنا سنستدعي مستمع المحفظة (wallet listener) ودالة محفظة أخرى لتحديث واجهة المستخدم الخاصة بنا لتعكس ما إذا كانت المحفظة متصلة بالفعل.
+- `connectWalletPressed` - سيتم استدعاء هذه الدالة لربط محفظة MetaMask الخاصة بالمستخدم بالتطبيق اللامركزي (dapp) الخاص بنا.
+- `onMintPressed` - سيتم استدعاء هذه الدالة لسك رمز NFT الخاص بالمستخدم.
 
-Near the end of this file, we have the UI of our component. إذا فحصت هذا الكود بعناية، ستلاحظ أننا نحدّث متغيرات الحالة `url` و `name` و `description` عندما يتغير الإدخال في حقول النص المقابلة لها.
+بالقرب من نهاية هذا الملف، لدينا واجهة المستخدم الخاصة بمكوننا. إذا قمت بفحص هذا الكود بعناية، ستلاحظ أننا نقوم بتحديث متغيرات الحالة `url`، و `name`، و `description` عندما يتغير الإدخال في الحقول النصية المقابلة لها.
 
 سترى أيضًا أنه يتم استدعاء `connectWalletPressed` و `onMintPressed` عند النقر على الأزرار ذات المعرفات `mintButton` و `walletButton` على التوالي.
 
 ```javascript
-//واجهة المستخدم الخاصة بمكوننا
+//the UI of our component // واجهة المستخدم للمكون الخاص بنا
 return (
   <div className="Minter">
     <button id="walletButton" onClick={connectWalletPressed}>
       {walletAddress.length > 0 ? (
-        "متصل: " +
+        "Connected: " +
         String(walletAddress).substring(0, 6) +
         "..." +
         String(walletAddress).substring(38)
       ) : (
-        <span>ربط المحفظة</span>
+        <span>Connect Wallet</span>
       )}
     </button>
 
     <br></br>
-    <h1 id="title">🧙‍♂️ صائك الرموز غير القابلة للاستبدال من Alchemy</h1>
+    <h1 id="title">🧙‍♂️ Alchemy NFT Minter</h1>
     <p>
-      ببساطة، أضف رابط الأصل والاسم والوصف، ثم اضغط على "صك".
+      Simply add your asset's link, name, and description, then press "Mint."
     </p>
     <form>
-      <h2>🖼 رابط الأصل: </h2>
+      <h2>🖼 Link to asset: </h2>
       <input
         type="text"
-        placeholder="مثال: https://gateway.pinata.cloud/ipfs/<hash>"
+        placeholder="e.g., https://gateway.pinata.cloud/ipfs/<hash>"
         onChange={(event) => setURL(event.target.value)}
       />
-      <h2>🤔 الاسم: </h2>
+      <h2>🤔 Name: </h2>
       <input
         type="text"
-        placeholder="مثال: أول رمز غير قابل للاستبدال لي!"
+        placeholder="e.g., My first NFT!"
         onChange={(event) => setName(event.target.value)}
       />
-      <h2>✍️ الوصف: </h2>
+      <h2>✍️ Description: </h2>
       <input
         type="text"
-        placeholder="مثال: أروع حتى من cryptokitties ;)"
+        placeholder="e.g., Even cooler than cryptokitties ;)"
         onChange={(event) => setDescription(event.target.value)}
       />
     </form>
     <button id="mintButton" onClick={onMintPressed}>
-      صك الرمز غير القابل للاستبدال
+      Mint NFT
     </button>
     <p id="status">{status}</p>
-</div>
+  </div>
 )
 ```
 
-Finally, let's address where is this Minter component added.
+أخيرًا، دعونا نتناول أين يتم إضافة مكون Minter هذا.
 
-إذا انتقلت إلى ملف `App.js`، وهو المكون الرئيسي في رياكت الذي يعمل كحاوية لجميع المكونات الأخرى، فسترى أن مكون Minter الخاص بنا قد تم إدراجه في السطر 7.
+إذا ذهبت إلى ملف `App.js`، وهو المكون الرئيسي في React الذي يعمل كحاوية لجميع المكونات الأخرى، سترى أن مكون Minter الخاص بنا يتم حقنه في السطر 7.
 
-**في هذا الدرس التعليمي، سنقوم فقط بتحرير ملف `Minter.js` وإضافة ملفات في مجلد `src` الخاص بنا.**
+**في هذا الدليل التعليمي، سنقوم فقط بتعديل ملف `Minter.js` وإضافة ملفات في مجلد `src` الخاص بنا.**
 
-Now that we understand what we're working with, let's set up our إيثريوم wallet!
+الآن بعد أن فهمنا ما نعمل عليه، دعونا نعد محفظة إيثريوم الخاصة بنا!
 
 ## إعداد محفظة إيثريوم الخاصة بك {#set-up-your-ethereum-wallet}
 
-For users to be able to interact with your smart contract they will need to connect their إيثريوم wallet to your dapp.
+لكي يتمكن المستخدمون من التفاعل مع عقدك الذكي، سيحتاجون إلى ربط محفظة إيثريوم الخاصة بهم بتطبيقك اللامركزي.
 
-### تنزيل ميتاماسك {#download-metamask}
+### تنزيل MetaMask {#download-metamask}
 
-For this tutorial, we’ll use ميتاماسك, a virtual wallet in the browser used to manage your إيثريوم account address. إذا كنت تريد أن تفهم المزيد عن كيفية عمل المعاملات على إيثريوم، فاطلع على [هذه الصفحة](/developers/docs/transactions/).
+في هذا الدليل التعليمي، سنستخدم MetaMask، وهي محفظة افتراضية في المتصفح تُستخدم لإدارة عنوان حساب إيثريوم الخاص بك. إذا كنت ترغب في فهم المزيد حول كيفية عمل المعاملات على إيثريوم، تحقق من [هذه الصفحة](/developers/docs/transactions/).
 
-يمكنك تنزيل وإنشاء حساب ميتاماسك مجانًا [هنا](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to the “روبستين Test Network” in the upper right \(so that we’re not dealing with real money\).
+يمكنك تنزيل وإنشاء حساب MetaMask مجانًا [هنا](https://metamask.io/download). عند إنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى "شبكة الاختبار Ropsten" (Ropsten Test Network) في الجزء العلوي الأيمن (حتى لا نتعامل بأموال حقيقية).
 
-### إضافة إيثر من صنبور (Faucet) {#add-ether-from-faucet}
+### إضافة إيثر من صنبور {#add-ether-from-faucet}
 
-In order to mint our إن إف تيز (or sign any transactions on the إيثريوم blockchain), we’ll need some fake Eth. للحصول على ETH، يمكنك الذهاب إلى [صنبور روبستين](https://faucet.ropsten.be/) وإدخال عنوان حساب روبستين الخاص بك، ثم النقر فوق “Send روبستين Eth.” You should see Eth in your ميتاماسك account soon after!
+من أجل سك رموز NFT الخاصة بنا (أو توقيع أي معاملات على البلوك تشين الخاص بإيثريوم)، سنحتاج إلى بعض عملات ETH الوهمية. للحصول على ETH، يمكنك الذهاب إلى [صنبور Ropsten](https://faucet.ropsten.be/) وإدخال عنوان حساب Ropsten الخاص بك، ثم النقر على "Send Ropsten Eth". يجب أن ترى ETH في حساب MetaMask الخاص بك بعد فترة وجيزة!
 
-### تحقق من رصيدك {#check-your-balance}
+### التحقق من رصيدك {#check-your-balance}
 
-للتأكد مرة أخرى من وجود رصيدنا، لنجري طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الإنشاء من ألكيمي](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. After you input your ميتاماسك account address and click “Send Request”, you should see a response like this:
+للتأكد من وجود رصيدنا، دعونا نجري طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الملحن الخاصة بـ Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). سيعيد هذا مقدار ETH في محفظتنا. بعد إدخال عنوان حساب MetaMask الخاص بك والنقر على "Send Request"، يجب أن ترى استجابة مثل هذه:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**ملاحظة:** هذه النتيجة بوحدة wei وليست eth. Wei is used as the smallest denomination of ether. The conversion from wei to eth is: 1 eth = 10¹⁸ wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10¹⁸ which equals 1 eth.
+**ملاحظة:** هذه النتيجة بوحدة wei وليس eth. تُستخدم wei كأصغر فئة من الإيثر. التحويل من wei إلى eth هو: <span dir="ltr">1 eth = 10¹⁸ wei</span>. لذا إذا قمنا بتحويل 0xde0b6b3a7640000 إلى النظام العشري نحصل على <span dir="ltr">1*10¹⁸</span> والذي يساوي 1 eth.
 
-Phew! Our fake money is all there! <Emoji text=":money_mouth_face:" size={1} />
+يا للعجب! أموالنا الوهمية كلها موجودة! <Emoji text=":money_mouth_face:" size={1} />
 
-## ربط ميتاماسك بواجهة المستخدم الخاصة بك {#connect-metamask-to-your-UI}
+## ربط MetaMask بواجهة المستخدم الخاصة بك {#connect-metamask-to-your-UI}
 
-Now that our ميتاماسك wallet is set up, let's connect our dapp to it!
+الآن بعد إعداد محفظة MetaMask الخاصة بنا، دعونا نربط تطبيقنا اللامركزي بها!
 
-لأننا نريد الالتزام بنموذج [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)، سننشئ ملفًا منفصلاً يحتوي على دوالنا لإدارة المنطق والبيانات وقواعد تطبيقنا اللامركزي (dapp)، ثم نمرر هذه الدوال إلى الواجهة الأمامية (مكون Minter.js الخاص بنا).
+لأننا نريد الالتزام بنموذج [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)، سنقوم بإنشاء ملف منفصل يحتوي على دوالنا لإدارة المنطق، والبيانات، وقواعد تطبيقنا اللامركزي، ثم تمرير تلك الدوال إلى الواجهة الأمامية (مكون Minter.js الخاص بنا).
 
-### الدالة `connectWallet` {#connect-wallet-function}
+### الدالة connectWallet {#connect-wallet-function}
 
-للقيام بذلك، لننشئ مجلدًا جديدًا يسمى `utils` في دليل `src` الخاص بك ونضف ملفًا يسمى `interact.js` بداخله، والذي سيحتوي على جميع دوال التفاعل مع المحفظة والعقد الذكي.
+للقيام بذلك، دعونا ننشئ مجلدًا جديدًا يسمى `utils` في دليل `src` الخاص بك ونضيف ملفًا يسمى `interact.js` بداخله، والذي سيحتوي على جميع دوال التفاعل مع المحفظة والعقد الذكي.
 
-في ملف `interact.js` الخاص بنا، سنكتب دالة `connectWallet`، والتي سنستوردها ونستدعيها بعد ذلك في مكون `Minter.js` الخاص بنا.
+في ملف `interact.js` الخاص بنا، سنكتب دالة `connectWallet`، والتي سنقوم بعد ذلك باستيرادها واستدعائها في مكون `Minter.js` الخاص بنا.
 
-في ملف `interact.js` الخاص بك، أضف ما يلي
+في ملف `interact.js` الخاص بك، أضف ما يلي:
 
 ```javascript
 export const connectWallet = async () => {
@@ -245,7 +237,7 @@ export const connectWallet = async () => {
         method: "eth_requestAccounts",
       })
       const obj = {
-        status: "👆🏽 اكتب رسالة في حقل النص أعلاه.",
+        status: "👆🏽 Write a message in the text-field above.",
         address: addressArray[0],
       }
       return obj
@@ -263,7 +255,8 @@ export const connectWallet = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              يجب عليك تثبيت MetaMask، وهي محفظة إيثريوم افتراضية، في متصفحك.
+              You must install MetaMask, a virtual Ethereum wallet, in your
+              browser.
             </a>
           </p>
         </span>
@@ -273,28 +266,28 @@ export const connectWallet = async () => {
 }
 ```
 
-Let's breakdown what this code does:
+دعونا نفصل ما يفعله هذا الكود:
 
 أولاً، تتحقق دالتنا مما إذا كان `window.ethereum` ممكّنًا في متصفحك.
 
-`window.ethereum` هو واجهة برمجة تطبيقات (API) عالمية يتم إدراجها بواسطة ميتاماسك ومقدمي المحافظ الآخرين والتي تسمح لمواقع الويب بطلب حسابات إيثريوم الخاصة بالمستخدمين. If approved, it can read data from the blockchains the user is connected to, and suggest that the user sign messages and transactions. اطلع على [مستندات ميتاماسك](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) لمزيد من المعلومات!
+`window.ethereum` هي واجهة برمجة تطبيقات (API) عالمية يتم حقنها بواسطة MetaMask وموفري المحافظ الآخرين والتي تسمح لمواقع الويب بطلب حسابات إيثريوم الخاصة بالمستخدمين. إذا تمت الموافقة، يمكنها قراءة البيانات من شبكات البلوك تشين التي يتصل بها المستخدم، واقتراح أن يقوم المستخدم بتوقيع الرسائل والمعاملات. تحقق من [مستندات MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) لمزيد من المعلومات!
 
-إذا كان `window.ethereum` _غير_ موجود، فهذا يعني أن ميتاماسك غير مثبت. ينتج عن هذا إرجاع كائن JSON، حيث يكون `address` المرجع سلسلة فارغة، وكائن `status` JSX يبلغ بأن المستخدم يجب أن يقوم بتثبيت ميتاماسك.
+إذا كان `window.ethereum` _غير_ موجود، فهذا يعني أن MetaMask غير مثبت. ينتج عن هذا إرجاع كائن JSON، حيث يكون `address` المُرجع عبارة عن سلسلة نصية فارغة، وينقل كائن JSX `status` رسالة تفيد بأنه يجب على المستخدم تثبيت MetaMask.
 
 **معظم الدوال التي نكتبها ستعيد كائنات JSON يمكننا استخدامها لتحديث متغيرات الحالة وواجهة المستخدم الخاصة بنا.**
 
 الآن إذا كان `window.ethereum` _موجودًا_، فهنا تصبح الأمور مثيرة للاهتمام.
 
-باستخدام حلقة try/catch، سنحاول الاتصال بـ ميتاماسك عن طريق استدعاء [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Calling this function will open up ميتاماسك in the browser, whereby the user will be prompted to connect their wallet to your dapp.
+باستخدام حلقة try/catch، سنحاول الاتصال بـ MetaMask عن طريق استدعاء [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). سيؤدي استدعاء هذه الدالة إلى فتح MetaMask في المتصفح، حيث سيُطلب من المستخدم ربط محفظته بتطبيقك اللامركزي.
 
-- إذا اختار المستخدم الاتصال، فإن `method: "eth_requestAccounts"` سيعيد مصفوفة تحتوي على جميع عناوين حسابات المستخدم المتصلة بالتطبيق اللامركزي (dapp). إجمالاً، ستعيد دالة `connectWallet` الخاصة بنا كائن JSON يحتوي على _أول_ `address` في هذه المصفوفة \(انظر السطر 9\) ورسالة `status` تحث المستخدم على كتابة رسالة إلى العقد الذكي.
-- إذا رفض المستخدم الاتصال، فسيحتوي كائن JSON على سلسلة فارغة لـ `address` المرجع ورسالة `status` تعكس أن المستخدم رفض الاتصال.
+- إذا اختار المستخدم الاتصال، فإن `method: "eth_requestAccounts"` ستعيد مصفوفة تحتوي على جميع عناوين حسابات المستخدم المتصلة بالتطبيق اللامركزي. إجمالاً، ستعيد دالة `connectWallet` الخاصة بنا كائن JSON يحتوي على `address` _الأول_ في هذه المصفوفة (انظر السطر 9) ورسالة `status` تطالب المستخدم بكتابة رسالة إلى العقد الذكي.
+- إذا رفض المستخدم الاتصال، فسيحتوي كائن JSON على سلسلة نصية فارغة لـ `address` المُرجع ورسالة `status` تعكس أن المستخدم رفض الاتصال.
 
-### إضافة دالة connectWallet إلى مكون واجهة المستخدم Minter.js الخاص بك {#add-connect-wallet}
+### إضافة الدالة connectWallet إلى مكون واجهة المستخدم Minter.js {#add-connect-wallet}
 
-الآن بعد أن كتبنا دالة `connectWallet` هذه، لنربطها بمكون `Minter.js` الخاص بنا.
+الآن بعد أن كتبنا دالة `connectWallet` هذه، دعونا نربطها بمكون `Minter.js` الخاص بنا.
 
-أولاً، سيتعين علينا استيراد دالتنا إلى ملف `Minter.js` الخاص بنا عن طريق إضافة `import { connectWallet } from "./utils/interact.js";` إلى أعلى ملف `Minter.js`. يجب أن تبدو الأسطر الـ 11 الأولى من ملف `Minter.js` الآن كما يلي:
+أولاً، سيتعين علينا استيراد دالتنا إلى ملف `Minter.js` الخاص بنا عن طريق إضافة `import { connectWallet } from "./utils/interact.js";` إلى الجزء العلوي من ملف `Minter.js`. يجب أن تبدو الأسطر الـ 11 الأولى من `Minter.js` الآن هكذا:
 
 ```javascript
 import { useEffect, useState } from "react";
@@ -302,7 +295,7 @@ import { connectWallet } from "./utils/interact.js";
 
 const Minter = (props) => {
 
-  //متغيرات الحالة
+  //State variables // متغيرات الحالة
   const [walletAddress, setWallet] = useState("");
   const [status, setStatus] = useState("");
   const [name, setName] = useState("");
@@ -310,7 +303,7 @@ const Minter = (props) => {
   const [url, setURL] = useState("");
 ```
 
-بعد ذلك، داخل دالة `connectWalletPressed` الخاصة بنا، سنستدعي دالة `connectWallet` المستوردة، كما يلي:
+ثم، داخل دالة `connectWalletPressed` الخاصة بنا، سنستدعي دالة `connectWallet` المستوردة، هكذا:
 
 ```javascript
 const connectWalletPressed = async () => {
@@ -320,21 +313,21 @@ const connectWalletPressed = async () => {
 }
 ```
 
-لاحظ كيف يتم تجريد معظم وظائفنا بعيدًا عن مكون `Minter.js` الخاص بنا من ملف `interact.js`؟ This is so we comply with the M-V-C paradigm!
+هل تلاحظ كيف يتم تجريد معظم وظائفنا بعيدًا عن مكون `Minter.js` الخاص بنا من ملف `interact.js`؟ هذا لكي نتوافق مع نموذج M-V-C!
 
-في `connectWalletPressed`، نقوم ببساطة بإجراء استدعاء await لدالة `connectWallet` المستوردة، وباستخدام استجابتها، نقوم بتحديث متغيري `status` و `walletAddress` عبر خطافات الحالة الخاصة بهما.
+في `connectWalletPressed`، نقوم ببساطة بإجراء استدعاء await لدالة `connectWallet` المستوردة، وباستخدام استجابتها، نقوم بتحديث متغيرات `status` و `walletAddress` الخاصة بنا عبر خطافات الحالة الخاصة بها.
 
-الآن، لنحفظ كلا الملفين `Minter.js` و `interact.js` ونختبر واجهة المستخدم الخاصة بنا حتى الآن.
+الآن، دعونا نحفظ كلا الملفين `Minter.js` و `interact.js` ونختبر واجهة المستخدم الخاصة بنا حتى الآن.
 
-Open your browser on localhost:3000, and press the "Connect Wallet" button on the top right of the page.
+افتح متصفحك على localhost:3000، واضغط على زر "Connect Wallet" في أعلى يمين الصفحة.
 
-If you have ميتاماسك installed, you should be prompted to connect your wallet to your dapp. Accept the invitation to connect.
+إذا كان لديك MetaMask مثبتًا، فسيُطلب منك ربط محفظتك بتطبيقك اللامركزي. اقبل دعوة الاتصال.
 
-You should see that the wallet button now reflects that your address is connected.
+يجب أن ترى أن زر المحفظة يعكس الآن أن عنوانك متصل.
 
-بعد ذلك، حاول تحديث الصفحة... هذا غريب. Our wallet button is prompting us to connect ميتاماسك, even though it is already connected...
+بعد ذلك، حاول تحديث الصفحة... هذا غريب. يطالبنا زر المحفظة الخاص بنا بربط MetaMask، على الرغم من أنه متصل بالفعل...
 
-Don't worry though! يمكننا إصلاح ذلك بسهولة عن طريق تنفيذ دالة تسمى `getCurrentWalletConnected`، والتي ستتحقق مما إذا كان هناك عنوان متصل بالفعل بتطبيقنا اللامركزي (dapp) وتحديث واجهة المستخدم الخاصة بنا وفقًا لذلك!
+لا تقلق مع ذلك! يمكننا إصلاح ذلك بسهولة عن طريق تنفيذ دالة تسمى `getCurrentWalletConnected`، والتي ستتحقق مما إذا كان العنوان متصلاً بالفعل بتطبيقنا اللامركزي وتحديث واجهة المستخدم الخاصة بنا وفقًا لذلك!
 
 ### الدالة getCurrentWalletConnected {#get-current-wallet}
 
@@ -350,12 +343,12 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 اكتب رسالة في حقل النص أعلاه.",
+          status: "👆🏽 Write a message in the text-field above.",
         }
       } else {
         return {
           address: "",
-          status: "🦊 اتصل بـ MetaMask باستخدام الزر العلوي الأيمن.",
+          status: "🦊 Connect to MetaMask using the top right button.",
         }
       }
     } catch (err) {
@@ -372,7 +365,8 @@ export const getCurrentWalletConnected = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              يجب عليك تثبيت MetaMask، وهي محفظة إيثريوم افتراضية، في متصفحك.
+              You must install MetaMask, a virtual Ethereum wallet, in your
+              browser.
             </a>
           </p>
         </span>
@@ -382,23 +376,23 @@ export const getCurrentWalletConnected = async () => {
 }
 ```
 
-هذا الكود _مشابه جدًا_ لدالة `connectWallet` التي كتبناها للتو.
+هذا الكود مشابه _جدًا_ لدالة `connectWallet` التي كتبناها للتو في وقت سابق.
 
-الفرق الرئيسي هو أنه بدلاً من استدعاء الطريقة `eth_requestAccounts`، التي تفتح ميتاماسك للمستخدم لربط محفظته، هنا نستدعي الطريقة `eth_accounts`، التي تعيد ببساطة مصفوفة تحتوي على عناوين ميتاماسك المتصلة حاليًا بتطبيقنا اللامركزي (dapp).
+الفرق الرئيسي هو أنه بدلاً من استدعاء الطريقة `eth_requestAccounts`، والتي تفتح MetaMask للمستخدم لربط محفظته، هنا نستدعي الطريقة `eth_accounts`، والتي تعيد ببساطة مصفوفة تحتوي على عناوين MetaMask المتصلة حاليًا بتطبيقنا اللامركزي.
 
-لرؤية هذه الدالة أثناء عملها، لندعوها في دالة `useEffect` لمكون `Minter.js` الخاص بنا.
+لرؤية هذه الدالة قيد العمل، دعونا نستدعيها في دالة `useEffect` لمكون `Minter.js` الخاص بنا.
 
-كما فعلنا مع `connectWallet`، يجب علينا استيراد هذه الدالة من ملف `interact.js` إلى ملف `Minter.js` الخاص بنا كما يلي:
+كما فعلنا مع `connectWallet`، يجب علينا استيراد هذه الدالة من ملف `interact.js` الخاص بنا إلى ملف `Minter.js` الخاص بنا هكذا:
 
 ```javascript
 import { useEffect, useState } from "react"
 import {
   connectWallet,
-  getCurrentWalletConnected, //استيراد هنا
+  getCurrentWalletConnected, //import here // الاستيراد هنا
 } from "./utils/interact.js"
 ```
 
-الآن، ببساطة نستدعيها في دالة `useEffect` الخاصة بنا:
+الآن، نقوم ببساطة باستدعائها في دالة `useEffect` الخاصة بنا:
 
 ```javascript
 useEffect(async () => {
@@ -408,13 +402,13 @@ useEffect(async () => {
 }, [])
 ```
 
-لاحظ أننا نستخدم استجابة استدعائنا لـ `getCurrentWalletConnected` لتحديث متغيرات الحالة `walletAddress` و `status`.
+لاحظ، أننا نستخدم استجابة استدعائنا لـ `getCurrentWalletConnected` لتحديث متغيرات الحالة `walletAddress` و `status` الخاصة بنا.
 
-Once you've added this code, try refreshing our browser window. The button should say that you're connected, and show a preview of your connected wallet's address - even after you refresh!
+بمجرد إضافة هذا الكود، حاول تحديث نافذة المتصفح. يجب أن يقول الزر أنك متصل، ويعرض معاينة لعنوان محفظتك المتصلة - حتى بعد التحديث!
 
 ### تنفيذ addWalletListener {#implement-add-wallet-listener}
 
-The final step in our dapp wallet setup is implementing the wallet listener so our UI updates when our wallet's state changes, such as when the user disconnects or switches accounts.
+الخطوة الأخيرة في إعداد محفظة التطبيق اللامركزي الخاص بنا هي تنفيذ مستمع المحفظة (wallet listener) بحيث يتم تحديث واجهة المستخدم الخاصة بنا عندما تتغير حالة محفظتنا، مثل عندما يقوم المستخدم بقطع الاتصال أو تبديل الحسابات.
 
 في ملف `Minter.js` الخاص بك، أضف دالة `addWalletListener` تبدو كالتالي:
 
@@ -424,10 +418,10 @@ function addWalletListener() {
     window.ethereum.on("accountsChanged", (accounts) => {
       if (accounts.length > 0) {
         setWallet(accounts[0])
-        setStatus("👆🏽 اكتب رسالة في حقل النص أعلاه.")
+        setStatus("👆🏽 Write a message in the text-field above.")
       } else {
         setWallet("")
-        setStatus("🦊 اتصل بـ MetaMask باستخدام الزر العلوي الأيمن.")
+        setStatus("🦊 Connect to MetaMask using the top right button.")
       }
     })
   } else {
@@ -435,7 +429,7 @@ function addWalletListener() {
       <p>
         {" "}
         🦊 <a target="_blank" href={`https://metamask.io/download`}>
-          يجب عليك تثبيت MetaMask، وهي محفظة إيثريوم افتراضية، في متصفحك.
+          You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
     )
@@ -443,13 +437,13 @@ function addWalletListener() {
 }
 ```
 
-Let's quickly break down what's happening here:
+دعونا نفصل بسرعة ما يحدث هنا:
 
-- أولاً، تتحقق دالتنا مما إذا كان `window.ethereum` ممكّنًا (أي أن ميتاماسك مثبت).
-  - إذا لم يكن كذلك، فإننا ببساطة نضبط متغير الحالة `status` على سلسلة JSX التي تحث المستخدم على تثبيت ميتاماسك.
-  - إذا كان ممكّنًا، فإننا ننشئ المستمع `window.ethereum.on("accountsChanged")` في السطر 3 الذي يستمع لتغيرات الحالة في محفظة ميتاماسك، والتي تشمل عندما يربط المستخدم حسابًا إضافيًا بالتطبيق اللامركزي (dapp)، أو يبدل الحسابات، أو يفصل حسابًا. إذا كان هناك حساب واحد على الأقل متصل، يتم تحديث متغير الحالة `walletAddress` كأول حساب في مصفوفة `accounts` التي يعيدها المستمع. بخلاف ذلك، يتم تعيين `walletAddress` كسلسلة فارغة.
+- أولاً، تتحقق دالتنا مما إذا كان `window.ethereum` ممكّنًا (أي أن MetaMask مثبت).
+  - إذا لم يكن كذلك، نقوم ببساطة بتعيين متغير الحالة `status` الخاص بنا إلى سلسلة JSX تطالب المستخدم بتثبيت MetaMask.
+  - إذا كان ممكّنًا، نقوم بإعداد المستمع `window.ethereum.on("accountsChanged")` في السطر 3 والذي يستمع لتغييرات الحالة في محفظة MetaMask، والتي تشمل عندما يقوم المستخدم بربط حساب إضافي بالتطبيق اللامركزي، أو تبديل الحسابات، أو قطع اتصال حساب. إذا كان هناك حساب واحد على الأقل متصل، يتم تحديث متغير الحالة `walletAddress` كأول حساب في مصفوفة `accounts` التي يعيدها المستمع. بخلاف ذلك، يتم تعيين `walletAddress` كسلسلة نصية فارغة.
 
-أخيرًا، يجب أن نستدعيها في دالة `useEffect` الخاصة بنا:
+أخيرًا، يجب علينا استدعاؤها في دالة `useEffect` الخاصة بنا:
 
 ```javascript
 useEffect(async () => {
@@ -461,66 +455,66 @@ useEffect(async () => {
 }, [])
 ```
 
-And voila! We've completed programming all of our wallet functionality! Now that our wallet is set up, let's figure out how to mint our إن إف تي!
+وها نحن ذا! لقد أكملنا برمجة جميع وظائف محفظتنا! الآن بعد إعداد محفظتنا، دعونا نكتشف كيفية سك رمز NFT الخاص بنا!
 
-## أساسيات البيانات الوصفية للرموز غير القابلة للاستبدال (إن إف تي) {#nft-metadata-101}
+## أساسيات البيانات الوصفية لـ NFT {#nft-metadata-101}
 
-So remember the إن إف تي metadata we just talked about in Step 0 of this tutorial—it brings an إن إف تي to life, allowing it to have properties, such as a digital asset, name, description, and other attributes.
+لذا تذكر البيانات الوصفية لـ NFT التي تحدثنا عنها للتو في الخطوة 0 من هذا الدليل التعليمي—إنها تجعل رمز NFT حيًا، مما يسمح له بامتلاك خصائص، مثل أصل رقمي، واسم، ووصف، وسمات أخرى.
 
-سنحتاج إلى تكوين هذه البيانات الوصفية ككائن JSON وتخزينها، حتى نتمكن من تمريرها كمعلمة `tokenURI` عند استدعاء دالة `mintNFT` في عقدنا الذكي.
+سنحتاج إلى تكوين هذه البيانات الوصفية ككائن JSON وتخزينها، حتى نتمكن من تمريرها كمعلمة `tokenURI` عند استدعاء دالة `mintNFT` الخاصة بعقدنا الذكي.
 
-The text in the "Link to Asset", "Name", "Description" fields will comprise the different properties of our إن إف تي's metadata. We'll format this metadata as a JSON object, but there are a couple options for where we can store this JSON object:
+سيتألف النص الموجود في حقول "Link to Asset" و "Name" و "Description" من الخصائص المختلفة للبيانات الوصفية لرمز NFT الخاص بنا. سنقوم بتنسيق هذه البيانات الوصفية ككائن JSON، ولكن هناك خياران لمكان تخزين كائن JSON هذا:
 
-- We could store it on the إيثريوم blockchain; however, doing so would be very expensive.
-- We could store it on a centralized server, like AWS or Firebase. But that would defeat our decentralization ethos.
-- We could use آي بي إف إس, a decentralized protocol and peer-to-peer network for storing and sharing data in a distributed file system. As this protocol is decentralized and free, it is our best option!
+- يمكننا تخزينه على البلوك تشين الخاص بإيثريوم؛ ومع ذلك، فإن القيام بذلك سيكون مكلفًا للغاية.
+- يمكننا تخزينه على خادم مركزي، مثل AWS أو Firebase. لكن ذلك سيتعارض مع روح اللامركزية لدينا.
+- يمكننا استخدام IPFS، وهو بروتوكول لامركزي وشبكة نظير إلى نظير (peer-to-peer) لتخزين ومشاركة البيانات في نظام ملفات موزع. نظرًا لأن هذا البروتوكول لامركزي ومجاني، فهو خيارنا الأفضل!
 
-لتخزين بياناتنا الوصفية على آي بي إف إس، سنستخدم [بينياتا](https://pinata.cloud/)، وهي واجهة برمجة تطبيقات (API) ومجموعة أدوات آي بي إف إس ملائمة. In the next step, we'll explain exactly how to do this!
+لتخزين بياناتنا الوصفية على IPFS، سنستخدم [Pinata](https://pinata.cloud/)، وهي واجهة برمجة تطبيقات (API) ومجموعة أدوات IPFS مريحة. في الخطوة التالية، سنشرح بالضبط كيفية القيام بذلك!
 
-## استخدام بينياتا لتثبيت بياناتك الوصفية على آي بي إف إس {#use-pinata-to-pin-your-metadata-to-IPFS}
+## استخدام Pinata لتثبيت بياناتك الوصفية على IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
 
-إذا لم يكن لديك حساب [بينياتا](https://pinata.cloud/)، فقم بالتسجيل للحصول على حساب مجاني [هنا](https://app.pinata.cloud/auth/signup) وأكمل خطوات التحقق من بريدك الإلكتروني وحسابك.
+إذا لم يكن لديك حساب [Pinata](https://pinata.cloud/)، فقم بالتسجيل للحصول على حساب مجاني [هنا](https://app.pinata.cloud/auth/signup) وأكمل الخطوات للتحقق من بريدك الإلكتروني وحسابك.
 
-### إنشاء مفتاح API الخاص بـ بينياتا {#create-pinata-api-key}
+### إنشاء مفتاح API الخاص بـ Pinata {#create-pinata-api-key}
 
-انتقل إلى صفحة [https://pinata.cloud/keys](https://pinata.cloud/keys)، ثم حدد زر "New Key" في الأعلى، وقم بتمكين أداة Admin، وقم بتسمية مفتاحك.
+انتقل إلى صفحة [https://pinata.cloud/keys](https://pinata.cloud/keys)، ثم حدد زر "New Key" في الأعلى، وقم بتعيين أداة المسؤول (Admin widget) كممكّنة، وقم بتسمية مفتاحك.
 
-You'll then be shown a popup with your API info. Make sure to put this somewhere safe.
+ستظهر لك بعد ذلك نافذة منبثقة تحتوي على معلومات API الخاصة بك. تأكد من وضع هذا في مكان آمن.
 
-Now that our key is set up, let's add it to our project so we can use it.
+الآن بعد إعداد مفتاحنا، دعونا نضيفه إلى مشروعنا حتى نتمكن من استخدامه.
 
 ### إنشاء ملف .env {#create-a-env}
 
-We can safely store our بينياتا key and secret in an environment file. لِنقم بتثبيت حزمة [dotenv](https://www.npmjs.com/package/dotenv) في دليل مشروعك.
+يمكننا تخزين مفتاح Pinata والسر الخاص بنا بأمان في ملف بيئة. دعونا نثبت [حزمة dotenv](https://www.npmjs.com/package/dotenv) في دليل مشروعك.
 
-افتح علامة تبويب جديدة في الطرفية (terminal) الخاصة بك (منفصلة عن تلك التي تشغل المضيف المحلي) وتأكد من أنك في مجلد `minter-starter-files`، ثم قم بتشغيل الأمر التالي في الطرفية:
+افتح علامة تبويب جديدة في الطرفية الخاصة بك (منفصلة عن تلك التي تقوم بتشغيل المضيف المحلي) وتأكد من أنك في مجلد `minter-starter-files`، ثم قم بتشغيل الأمر التالي في الطرفية:
 
 ```text
 npm install dotenv --save
 ```
 
-بعد ذلك، أنشئ ملف `.env` في الدليل الجذر لملف `minter-starter-files` عن طريق إدخال ما يلي في سطر الأوامر:
+بعد ذلك، قم بإنشاء ملف `.env` في الدليل الجذري لـ `minter-starter-files` عن طريق إدخال ما يلي في سطر الأوامر الخاص بك:
 
 ```javascript
 vim.env
 ```
 
-سيؤدي هذا إلى فتح ملف `.env` في vim (محرر نصوص). To save it hit "esc" + ":" + "q" on your keyboard in that order.
+سيؤدي هذا إلى فتح ملف `.env` الخاص بك في vim (محرر نصوص). لحفظه، اضغط على "esc" + ":" + "q" على لوحة المفاتيح بهذا الترتيب.
 
-بعد ذلك، في في إس كود، انتقل إلى ملف `.env` وأضف مفتاح بينياتا API وسر API الخاص بك إليه، كما يلي:
+بعد ذلك، في VSCode، انتقل إلى ملف `.env` الخاص بك وأضف مفتاح API الخاص بـ Pinata وسر API إليه، هكذا:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-api-key>
 REACT_APP_PINATA_SECRET = <pinata-api-secret>
 ```
 
-Save the file, and then you're ready to start writing the function to upload your JSON metadata to آي بي إف إس!
+احفظ الملف، وبعد ذلك ستكون جاهزًا للبدء في كتابة الدالة لتحميل بيانات JSON الوصفية الخاصة بك إلى IPFS!
 
 ### تنفيذ pinJSONToIPFS {#pin-json-to-ipfs}
 
-لحسن حظنا، لدى بينياتا [واجهة برمجة تطبيقات (API) مخصصة لتحميل بيانات JSON إلى آي بي إف إس](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) ومثال جافا سكريبت ملائم مع axios يمكننا استخدامه، مع بعض التعديلات الطفيفة.
+لحسن الحظ بالنسبة لنا، تمتلك Pinata [واجهة برمجة تطبيقات (API) مخصصة لتحميل بيانات JSON إلى IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) ومثال JavaScript مريح مع axios يمكننا استخدامه، مع بعض التعديلات الطفيفة.
 
-في مجلد `utils`، لننشئ ملفًا آخر يسمى `pinata.js` ثم نستورد سر ومفتاح بينياتا من ملف .env كما يلي:
+في مجلد `utils` الخاص بك، دعونا ننشئ ملفًا آخر يسمى `pinata.js` ثم نستورد سر ومفتاح Pinata الخاصين بنا من ملف .env هكذا:
 
 ```javascript
 require("dotenv").config()
@@ -528,7 +522,7 @@ const key = process.env.REACT_APP_PINATA_KEY
 const secret = process.env.REACT_APP_PINATA_SECRET
 ```
 
-بعد ذلك، الصق الكود الإضافي من الأسفل في ملف `pinata.js` الخاص بك. Don't worry, we'll break down what everything means!
+بعد ذلك، الصق الكود الإضافي من الأسفل في ملف `pinata.js` الخاص بك. لا تقلق، سنفصل ما يعنيه كل شيء!
 
 ```javascript
 require("dotenv").config()
@@ -539,7 +533,7 @@ const axios = require("axios")
 
 export const pinJSONToIPFS = async (JSONBody) => {
   const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`
-  //making axios POST request to Pinata ⬇️
+  //making axios POST request to Pinata ⬇️ // إجراء طلب POST عبر axios إلى Pinata ⬇️
   return axios
     .post(url, JSONBody, {
       headers: {
@@ -564,63 +558,63 @@ export const pinJSONToIPFS = async (JSONBody) => {
 }
 ```
 
-So what does this code do exactly؟
+إذن ماذا يفعل هذا الكود بالضبط؟
 
-أولاً، يستورد [axios](https://www.npmjs.com/package/axios)، وهو عميل HTTP قائم على الوعود (promise based) للمتصفح وnode.js، والذي سنستخدمه لتقديم طلب إلى بينياتا.
+أولاً، يقوم باستيراد [axios](https://www.npmjs.com/package/axios)، وهو عميل HTTP قائم على الوعود (promise based) للمتصفح و node.js، والذي سنستخدمه لإجراء طلب إلى Pinata.
 
-ثم لدينا دالتنا غير المتزامنة `pinJSONToIPFS`، والتي تأخذ `JSONBody` كمدخل لها ومفتاح وسر بينياتا API في رأسها (header)، كل ذلك لتقديم طلب POST إلى واجهة برمجة تطبيقات `pinJSONToIPFS` الخاصة بهم.
+ثم لدينا دالتنا غير المتزامنة `pinJSONToIPFS`، والتي تأخذ `JSONBody` كمدخل لها ومفتاح وسر Pinata api في ترويستها (header)، كل ذلك لإجراء طلب POST إلى واجهة برمجة تطبيقات `pinJSONToIPFS` الخاصة بهم.
 
-- إذا نجح طلب POST هذا، فإن دالتنا تعيد كائن JSON بقيمة منطقية `success` صحيحة و `pinataUrl` حيث تم تثبيت بياناتنا الوصفية. سنستخدم `pinataUrl` المُرجع هذا كمدخل `tokenURI` لدالة الصك في عقدنا الذكي.
-- إذا فشل طلب POST هذا، فإن دالتنا تعيد كائن JSON بقيمة منطقية `success` خاطئة وسلسلة `message` تنقل خطأنا.
+- إذا نجح طلب POST هذا، فإن دالتنا تعيد كائن JSON مع القيمة المنطقية `success` كـ true و `pinataUrl` حيث تم تثبيت بياناتنا الوصفية. سنستخدم `pinataUrl` المُرجع هذا كمدخل `tokenURI` لدالة السك الخاصة بعقدنا الذكي.
+- إذا فشل طلب POST هذا، فإن دالتنا تعيد كائن JSON مع القيمة المنطقية `success` كـ false وسلسلة نصية `message` تنقل خطأنا.
 
 كما هو الحال مع أنواع الإرجاع لدالة `connectWallet` الخاصة بنا، فإننا نعيد كائنات JSON حتى نتمكن من استخدام معلماتها لتحديث متغيرات الحالة وواجهة المستخدم الخاصة بنا.
 
-## تحميل عقدك الذكي {#load-your-smart-contract}
+## تحميل العقد الذكي الخاص بك {#load-your-smart-contract}
 
-الآن بعد أن أصبح لدينا طريقة لتحميل البيانات الوصفية لرموزنا غير القابلة للاستبدال إلى آي بي إف إس عبر دالة `pinJSONToIPFS` الخاصة بنا، سنحتاج إلى طريقة لتحميل مثيل من عقدنا الذكي حتى نتمكن من استدعاء دالة `mintNFT` الخاصة به.
+الآن بعد أن أصبح لدينا طريقة لتحميل البيانات الوصفية لـ NFT الخاصة بنا إلى IPFS عبر دالة `pinJSONToIPFS` الخاصة بنا، سنحتاج إلى طريقة لتحميل مثيل (instance) لعقدنا الذكي حتى نتمكن من استدعاء دالة `mintNFT` الخاصة به.
 
-كما ذكرنا سابقًا، في هذا الدرس التعليمي، سنستخدم [هذا العقد الذكي الحالي للرموز غير القابلة للاستبدال (إن إف تي)](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)؛ ومع ذلك، إذا كنت ترغب في معرفة كيف صنعناه، أو صنع واحد بنفسك، فإننا نوصي بشدة بالاطلاع على درسنا التعليمي الآخر، ["كيفية إنشاء رمز غير قابل للاستبدال (إن إف تي)"](https://www.alchemy.com/docs/how-to-create-an-nft).
+كما ذكرنا سابقًا، في هذا الدليل التعليمي سنستخدم [هذا العقد الذكي الموجود لـ NFT](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)؛ ومع ذلك، إذا كنت ترغب في معرفة كيف قمنا بإنشائه، أو إنشاء واحد بنفسك، نوصي بشدة بالاطلاع على دليلنا التعليمي الآخر، ["كيفية إنشاء NFT."](https://www.alchemy.com/docs/how-to-create-an-nft).
 
-### واجهة التطبيق الثنائية للعقد (ABI) {#contract-abi}
+### واجهة التطبيق الثنائية (ABI) للعقد {#contract-abi}
 
-إذا فحصت ملفاتنا عن كثب، ستلاحظ أنه في دليل `src` الخاص بنا، يوجد ملف `contract-abi.json`. An ABI is necessary for specifying which function a contract will invoke as well ensuring that the function will return data in the format you're expecting.
+إذا قمت بفحص ملفاتنا عن كثب، ستلاحظ أنه في دليل `src` الخاص بنا، يوجد ملف `contract-abi.json`. تعد واجهة التطبيق الثنائية (ABI) ضرورية لتحديد الدالة التي سيستدعيها العقد بالإضافة إلى ضمان أن الدالة ستعيد البيانات بالتنسيق الذي تتوقعه.
 
-We're also going to need an ألكيمي API key and the ألكيمي ويب3 API to connect to the إيثريوم blockchain and load our smart contract.
+سنحتاج أيضًا إلى مفتاح Alchemy API و Alchemy Web3 API للاتصال بالبلوك تشين الخاص بإيثريوم وتحميل عقدنا الذكي.
 
-### إنشاء مفتاح ألكيمي API الخاص بك {#create-alchemy-api}
+### إنشاء مفتاح Alchemy API الخاص بك {#create-alchemy-api}
 
-إذا لم يكن لديك حساب ألكيمي بالفعل، [سجل مجانًا هنا.](https://alchemy.com/?a=eth-org-nft-minter)
+إذا لم يكن لديك حساب Alchemy بالفعل، [قم بالتسجيل مجانًا هنا.](https://alchemy.com/?a=eth-org-nft-minter)
 
-Once you’ve created an ألكيمي account, you can generate an API key by creating an app. This will allow us to make requests to the روبستين test network.
+بمجرد إنشاء حساب Alchemy، يمكنك إنشاء مفتاح API عن طريق إنشاء تطبيق. سيسمح لنا هذا بإجراء طلبات إلى شبكة الاختبار Ropsten.
 
-Navigate to the “Create App” page in your ألكيمي Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”.
+انتقل إلى صفحة "Create App" في لوحة تحكم Alchemy الخاصة بك عن طريق التمرير فوق "Apps" في شريط التنقل والنقر على "Create App".
 
-Name your app we chose "My First إن إف تي!", offer a short description, select “Staging” for the Environment used for your app bookkeeping, and choose “روبستين” for your network.
+قم بتسمية تطبيقك، لقد اخترنا "My First NFT!"، وقدم وصفًا قصيرًا، وحدد "Staging" للبيئة المستخدمة لمسك دفاتر تطبيقك، واختر "Ropsten" لشبكتك.
 
-Click “Create app” and that’s it! Your app should appear in the table below.
+انقر على "Create app" وهذا كل شيء! يجب أن يظهر تطبيقك في الجدول أدناه.
 
-Awesome so now that we've created our HTTP ألكيمي API URL, copy it to your clipboard...
+رائع، الآن بعد أن أنشأنا عنوان URL الخاص بـ HTTP Alchemy API، انسخه إلى الحافظة الخاصة بك...
 
-…ثم لنضفه إلى ملف `.env` الخاص بنا. Altogether, your .env file should look like this:
+…ثم دعونا نضيفه إلى ملف `.env` الخاص بنا. إجمالاً، يجب أن يبدو ملف .env الخاص بك هكذا:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key> // eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 ```
 
-الآن بعد أن أصبح لدينا واجهة التطبيق الثنائية للعقد ومفتاح ألكيمي API، أصبحنا جاهزين لتحميل عقدنا الذكي باستخدام [ألكيمي ويب3](https://github.com/alchemyplatform/alchemy-web3).
+الآن بعد أن أصبح لدينا ABI الخاص بعقدنا ومفتاح Alchemy API الخاص بنا، نحن مستعدون لتحميل عقدنا الذكي باستخدام [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
 
-### إعداد نقطة نهاية وعقد ألكيمي ويب3 الخاص بك {#setup-alchemy-endpoint}
+### إعداد نقطة نهاية Alchemy Web3 والعقد الخاص بك {#setup-alchemy-endpoint}
 
-أولاً، إذا لم يكن لديك بالفعل، فستحتاج إلى تثبيت [ألكيمي ويب3](https://github.com/alchemyplatform/alchemy-web3) عن طريق الانتقال إلى الدليل الرئيسي: `nft-minter-tutorial` في الطرفية:
+أولاً، إذا لم يكن لديك بالفعل، فستحتاج إلى تثبيت [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) عن طريق الانتقال إلى الدليل الرئيسي: `nft-minter-tutorial` في الطرفية:
 
 ```text
 cd ..
 npm install @alch/alchemy-web3
 ```
 
-بعد ذلك لنعد إلى ملف `interact.js`. At the top of the file, add the following code to import your ألكيمي key from your .env file and set up your ألكيمي ويب3 endpoint:
+بعد ذلك دعونا نعود إلى ملف `interact.js` الخاص بنا. في الجزء العلوي من الملف، أضف الكود التالي لاستيراد مفتاح Alchemy الخاص بك من ملف .env الخاص بك وإعداد نقطة نهاية Alchemy Web3 الخاصة بك:
 
 ```javascript
 require("dotenv").config()
@@ -629,9 +623,9 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 ```
 
-[ألكيمي ويب3](https://github.com/alchemyplatform/alchemy-web3) هو غلاف حول [ويب3.جي إس](https://docs.web3js.org/)، يوفر طرق API محسنة ومزايا أخرى حاسمة لجعل حياتك كمطور web3 أسهل. It is designed to require minimal configuration so you can start using it in your app right away!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) هو غلاف (wrapper) حول [Web3.js](https://docs.web3js.org/)، يوفر طرق API محسنة وفوائد حاسمة أخرى لجعل حياتك كمطور web3 أسهل. تم تصميمه ليتطلب الحد الأدنى من التكوين حتى تتمكن من البدء في استخدامه في تطبيقك على الفور!
 
-Next, let's add our contract ABI and contract address to our file.
+بعد ذلك، دعونا نضيف ABI الخاص بعقدنا وعنوان العقد إلى ملفنا.
 
 ```javascript
 require("dotenv").config()
@@ -643,15 +637,15 @@ const contractABI = require("../contract-abi.json")
 const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
 ```
 
-Once we have both of those, we're ready to start coding our mint function!
+بمجرد أن نحصل على كليهما، نكون مستعدين للبدء في كتابة كود دالة السك الخاصة بنا!
 
-## تنفيذ دالة mintNFT {#implement-the-mintnft-function}
+## تنفيذ الدالة mintNFT {#implement-the-mintnft-function}
 
-داخل ملف `interact.js`، لنعرّف دالتنا، `mintNFT`، والتي ستقوم، كما يوحي اسمها، بصك رموزنا غير القابلة للاستبدال.
+داخل ملف `interact.js` الخاص بك، دعونا نحدد دالتنا، `mintNFT`، والتي ستقوم بسك رمز NFT الخاص بنا كما يوحي اسمها.
 
-Because we will be making numerous asynchronous calls \(to بينياتا to pin our metadata to آي بي إف إس, ألكيمي ويب3 to load our smart contract, and ميتاماسك to sign our transactions\), our function will also be asynchronous.
+لأننا سنجري العديد من الاستدعاءات غير المتزامنة (إلى Pinata لتثبيت بياناتنا الوصفية على IPFS، و Alchemy Web3 لتحميل عقدنا الذكي، و MetaMask لتوقيع معاملاتنا)، ستكون دالتنا أيضًا غير متزامنة.
 
-ستكون المدخلات الثلاثة لدالتنا هي `url` لأصلنا الرقمي، و `name`، و `description`. أضف توقيع الدالة التالي أسفل دالة `connectWallet`:
+المدخلات الثلاثة لدالتنا ستكون `url` الخاص بأصلنا الرقمي، و `name`، و `description`. أضف توقيع الدالة التالي أسفل دالة `connectWallet`:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {}
@@ -659,87 +653,87 @@ export const mintNFT = async (url, name, description) => {}
 
 ### معالجة أخطاء الإدخال {#input-error-handling}
 
-Naturally, it makes sense to have some sort of input error handling at the start of the function, so we exit this function if our input parameters aren't correct. Inside our function, let's add the following code:
+بطبيعة الحال، من المنطقي أن يكون لدينا نوع من معالجة أخطاء الإدخال في بداية الدالة، لذلك نخرج من هذه الدالة إذا لم تكن معلمات الإدخال الخاصة بنا صحيحة. داخل دالتنا، دعونا نضيف الكود التالي:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //معالجة الأخطاء
+  //error handling // معالجة الأخطاء
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗يرجى التأكد من اكتمال جميع الحقول قبل الصك.",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 }
 ```
 
-بشكل أساسي، إذا كان أي من معلمات الإدخال سلسلة فارغة، فإننا نعيد كائن JSON حيث تكون القيمة المنطقية `success` خاطئة، وسلسلة `status` تنقل أنه يجب إكمال جميع الحقول في واجهة المستخدم الخاصة بنا.
+بشكل أساسي، إذا كان أي من معلمات الإدخال عبارة عن سلسلة نصية فارغة، فإننا نعيد كائن JSON حيث تكون القيمة المنطقية `success` هي false، وتنقل السلسلة النصية `status` أنه يجب إكمال جميع الحقول في واجهة المستخدم الخاصة بنا.
 
-### تحميل البيانات الوصفية إلى آي بي إف إس {#upload-metadata-to-ipfs}
+### تحميل البيانات الوصفية إلى IPFS {#upload-metadata-to-ipfs}
 
-بمجرد أن نعرف أن بياناتنا الوصفية منسقة بشكل صحيح، فإن الخطوة التالية هي تغليفها في كائن JSON وتحميلها إلى آي بي إف إس عبر `pinJSONToIPFS` التي كتبناها!
+بمجرد أن نعرف أن بياناتنا الوصفية منسقة بشكل صحيح، فإن الخطوة التالية هي تغليفها في كائن JSON وتحميلها إلى IPFS عبر `pinJSONToIPFS` التي كتبناها!
 
-للقيام بذلك، نحتاج أولاً إلى استيراد دالة `pinJSONToIPFS` إلى ملف `interact.js`. في أعلى ملف `interact.js`، لنضف:
+للقيام بذلك، نحتاج أولاً إلى استيراد دالة `pinJSONToIPFS` إلى ملف `interact.js` الخاص بنا. في الجزء العلوي من `interact.js`، دعونا نضيف:
 
 ```javascript
 import { pinJSONToIPFS } from "./pinata.js"
 ```
 
-تذكر أن `pinJSONToIPFS` يأخذ جسم JSON. لذلك قبل أن نجري استدعاءً لها، سنحتاج إلى تنسيق معلمات `url` و `name` و `description` في كائن JSON.
+تذكر أن `pinJSONToIPFS` تأخذ جسم JSON. لذا قبل أن نجري استدعاءً لها، سنحتاج إلى تنسيق معلمات `url`، و `name`، و `description` الخاصة بنا في كائن JSON.
 
-لِنحدّث كودنا لإنشاء كائن JSON يسمى `metadata` ثم نقوم باستدعاء `pinJSONToIPFS` مع هذه المعلمة `metadata`:
+دعونا نحدث الكود الخاص بنا لإنشاء كائن JSON يسمى `metadata` ثم نجري استدعاءً لـ `pinJSONToIPFS` باستخدام معلمة `metadata` هذه:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //معالجة الأخطاء
+  //error handling // معالجة الأخطاء
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗يرجى التأكد من اكتمال جميع الحقول قبل الصك.",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 
-  //إنشاء البيانات الوصفية
+  //make metadata // إنشاء البيانات الوصفية
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //إجراء استدعاء pinata
+  //make pinata call // إجراء طلب Pinata
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "😢 حدث خطأ ما أثناء تحميل tokenURI الخاص بك.",
+      status: "😢 Something went wrong while uploading your tokenURI.",
     }
   }
   const tokenURI = pinataResponse.pinataUrl
 }
 ```
 
-لاحظ أننا نخزن استجابة استدعائنا لـ `pinJSONToIPFS(metadata)` في كائن `pinataResponse`. Then, we parse this object for any errors.
+لاحظ، أننا نخزن استجابة استدعائنا لـ `pinJSONToIPFS(metadata)` في كائن `pinataResponse`. ثم، نقوم بتحليل هذا الكائن بحثًا عن أي أخطاء.
 
-إذا كان هناك خطأ، فإننا نعيد كائن JSON حيث تكون القيمة المنطقية `success` خاطئة وسلسلة `status` الخاصة بنا تنقل أن استدعاءنا قد فشل. بخلاف ذلك، نستخرج `pinataURL` من `pinataResponse` ونخزنه كمتغير `tokenURI`.
+إذا كان هناك خطأ، فإننا نعيد كائن JSON حيث تكون القيمة المنطقية `success` هي false وتنقل السلسلة النصية `status` الخاصة بنا أن استدعاءنا فشل. بخلاف ذلك، نستخرج `pinataURL` من `pinataResponse` ونخزنه كمتغير `tokenURI` الخاص بنا.
 
-Now it's time to load our smart contract using the ألكيمي ويب3 API that we initialized at the top of our file. أضف سطر الكود التالي إلى أسفل دالة `mintNFT` لتعيين العقد في المتغير العام `window.contract`:
+الآن حان الوقت لتحميل عقدنا الذكي باستخدام Alchemy Web3 API الذي قمنا بتهيئته في الجزء العلوي من ملفنا. أضف سطر الكود التالي إلى أسفل دالة `mintNFT` لتعيين العقد في المتغير العالمي `window.contract`:
 
 ```javascript
 window.contract = await new web3.eth.Contract(contractABI, contractAddress)
 ```
 
-آخر شيء يجب إضافته في دالة `mintNFT` هو معاملة إيثريوم الخاصة بنا:
+آخر شيء يجب إضافته في دالة `mintNFT` الخاصة بنا هو معاملة إيثريوم الخاصة بنا:
 
 ```javascript
-//إعداد معاملة إيثريوم الخاصة بك
+//set up your Ethereum transaction // إعداد معاملة إيثريوم الخاصة بك
 const transactionParameters = {
-  to: contractAddress, // مطلوب باستثناء أثناء نشر العقود.
-  from: window.ethereum.selectedAddress, // يجب أن يتطابق مع العنوان النشط للمستخدم.
+  to: contractAddress, // Required except during contract publications. // مطلوب باستثناء أوقات نشر العقد.
+  from: window.ethereum.selectedAddress, // must match user's active address. // يجب أن يتطابق مع عنوان المستخدم النشط.
   data: window.contract.methods
     .mintNFT(window.ethereum.selectedAddress, tokenURI)
-    .encodeABI(), //إجراء استدعاء لعقد NFT الذكي
+    .encodeABI(), //make call to NFT smart contract // إجراء استدعاء للعقد الذكي لـ NFT
 }
 
-//توقيع المعاملة عبر MetaMask
+//sign the transaction via MetaMask // توقيع المعاملة عبر MetaMask
 try {
   const txHash = await window.ethereum.request({
     method: "eth_sendTransaction",
@@ -748,68 +742,68 @@ try {
   return {
     success: true,
     status:
-      "✅ تحقق من معاملتك على Etherscan: https://ropsten.etherscan.io/tx/" +
+      "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
   return {
     success: false,
-    status: "😥 حدث خطأ ما: " + error.message,
+    status: "😥 Something went wrong: " + error.message,
   }
 }
 ```
 
-If you're already familiar with إيثريوم transactions, you'll notice that the structure is pretty similar to what you've seen.
+إذا كنت معتادًا بالفعل على معاملات إيثريوم، فستلاحظ أن الهيكل مشابه جدًا لما رأيته.
 
-- First, we set up our transactions parameters.
+- أولاً، نقوم بإعداد معلمات المعاملات الخاصة بنا.
   - `to` يحدد عنوان المستلم (عقدنا الذكي)
-  - `from` يحدد موقع المعاملة (عنوان المستخدم المتصل بـ ميتاماسك: `window.ethereum.selectedAddress`)
-  - `data` يحتوي على استدعاء طريقة `mintNFT` في عقدنا الذكي، والتي تتلقى `tokenURI` وعنوان محفظة المستخدم، `window.ethereum.selectedAddress`، كمدخلات
-- بعد ذلك، نقوم بإجراء استدعاء await، `window.ethereum.request`، حيث نطلب من ميتاماسك توقيع المعاملة. لاحظ، في هذا الطلب، أننا نحدد طريقة eth الخاصة بنا (eth_SentTransaction) ونمرر `transactionParameters`. At this point, ميتاماسك will open up in the browser, and prompt the user to sign or reject the transaction.
-  - إذا نجحت المعاملة، ستعيد الدالة كائن JSON حيث يتم تعيين القيمة المنطقية `success` إلى true وسلسلة `status` تحث المستخدم على التحقق من إيثرسكان لمزيد من المعلومات حول معاملته.
-  - إذا فشلت المعاملة، ستعيد الدالة كائن JSON حيث يتم تعيين القيمة المنطقية `success` إلى false، وسلسلة `status` تنقل رسالة الخطأ.
+  - `from` يحدد موقع المعاملة (عنوان المستخدم المتصل بـ MetaMask: `window.ethereum.selectedAddress`)
+  - `data` يحتوي على استدعاء لطريقة `mintNFT` الخاصة بعقدنا الذكي، والتي تتلقى `tokenURI` الخاص بنا وعنوان محفظة المستخدم، `window.ethereum.selectedAddress`، كمدخلات
+- ثم، نجري استدعاء await، `window.ethereum.request`، حيث نطلب من MetaMask توقيع المعاملة. لاحظ، في هذا الطلب، أننا نحدد طريقة eth الخاصة بنا (eth_SentTransaction) ونمرر `transactionParameters` الخاصة بنا. في هذه المرحلة، سيتم فتح MetaMask في المتصفح، ويطالب المستخدم بتوقيع المعاملة أو رفضها.
+  - إذا نجحت المعاملة، ستعيد الدالة كائن JSON حيث يتم تعيين القيمة المنطقية `success` إلى true وتطالب السلسلة النصية `status` المستخدم بالتحقق من Etherscan لمزيد من المعلومات حول معاملته.
+  - إذا فشلت المعاملة، ستعيد الدالة كائن JSON حيث يتم تعيين القيمة المنطقية `success` إلى false، وتنقل السلسلة النصية `status` رسالة الخطأ.
 
-بشكل عام، يجب أن تبدو دالة `mintNFT` الخاصة بنا كما يلي:
+إجمالاً، يجب أن تبدو دالة `mintNFT` الخاصة بنا هكذا:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //معالجة الأخطاء
+  //error handling // معالجة الأخطاء
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗يرجى التأكد من اكتمال جميع الحقول قبل الصك.",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 
-  //إنشاء البيانات الوصفية
+  //make metadata // إنشاء البيانات الوصفية
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //طلب تثبيت pinata
+  //pinata pin request // طلب تثبيت Pinata
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "😢 حدث خطأ ما أثناء تحميل tokenURI الخاص بك.",
+      status: "😢 Something went wrong while uploading your tokenURI.",
     }
   }
   const tokenURI = pinataResponse.pinataUrl
 
-  //تحميل العقد الذكي
-  window.contract = await new web3.eth.Contract(contractABI, contractAddress) //loadContract();
+  //load smart contract // تحميل العقد الذكي
+  window.contract = await new web3.eth.Contract(contractABI, contractAddress) //loadContract(); // loadContract();
 
-  //إعداد معاملة إيثريوم الخاصة بك
+  //set up your Ethereum transaction // إعداد معاملة إيثريوم الخاصة بك
   const transactionParameters = {
-    to: contractAddress, // مطلوب باستثناء أثناء نشر العقود.
-    from: window.ethereum.selectedAddress, // يجب أن يتطابق مع العنوان النشط للمستخدم.
+    to: contractAddress, // Required except during contract publications. // مطلوب باستثناء أوقات نشر العقد.
+    from: window.ethereum.selectedAddress, // must match user's active address. // يجب أن يتطابق مع عنوان المستخدم النشط.
     data: window.contract.methods
       .mintNFT(window.ethereum.selectedAddress, tokenURI)
-      .encodeABI(), //إجراء استدعاء لعقد NFT الذكي
+      .encodeABI(), //make call to NFT smart contract // إجراء استدعاء للعقد الذكي لـ NFT
   }
 
-  //توقيع المعاملة عبر MetaMask
+  //sign transaction via MetaMask // توقيع المعاملة عبر MetaMask
   try {
     const txHash = await window.ethereum.request({
       method: "eth_sendTransaction",
@@ -818,23 +812,23 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ تحقق من معاملتك على Etherscan: https://ropsten.etherscan.io/tx/" +
+        "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {
     return {
       success: false,
-      status: "😥 حدث خطأ ما: " + error.message,
+      status: "😥 Something went wrong: " + error.message,
     }
   }
 }
 ```
 
-That's one giant function! الآن، نحتاج فقط إلى ربط دالة `mintNFT` بمكون `Minter.js`...
+هذه دالة عملاقة واحدة! الآن، نحتاج فقط إلى ربط دالة `mintNFT` الخاصة بنا بمكون `Minter.js` الخاص بنا...
 
-## ربط mintNFT بواجهة Minter.js الأمامية {#connect-our-frontend}
+## ربط mintNFT بالواجهة الأمامية Minter.js الخاصة بنا {#connect-our-frontend}
 
-افتح ملف `Minter.js` الخاص بك وحدّث سطر `import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` في الأعلى ليصبح:
+افتح ملف `Minter.js` الخاص بك وقم بتحديث سطر `import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` في الأعلى ليكون:
 
 ```javascript
 import {
@@ -844,7 +838,7 @@ import {
 } from "./utils/interact.js"
 ```
 
-أخيرًا، قم بتنفيذ دالة `onMintPressed` لإجراء استدعاء await لدالة `mintNFT` المستوردة وتحديث متغير الحالة `status` ليعكس ما إذا كانت معاملتنا قد نجحت أم فشلت:
+أخيرًا، قم بتنفيذ دالة `onMintPressed` لإجراء استدعاء await لدالة `mintNFT` المستوردة وتحديث متغير الحالة `status` ليعكس ما إذا كانت معاملتنا قد نجحت أو فشلت:
 
 ```javascript
 const onMintPressed = async () => {
@@ -853,22 +847,22 @@ const onMintPressed = async () => {
 }
 ```
 
-## نشر الرمز غير القابل للاستبدال الخاص بك على موقع ويب مباشر {#deploy-your-NFT}
+## نشر NFT الخاص بك على موقع ويب مباشر {#deploy-your-NFT}
 
-Ready to take your project live for users to interact with؟ اطلع على [هذا الدرس التعليمي](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) لنشر Minter الخاص بك على موقع ويب مباشر.
+هل أنت مستعد لجعل مشروعك مباشرًا ليتفاعل معه المستخدمون؟ تحقق من [هذا الدليل التعليمي](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) لنشر أداة السك (Minter) الخاصة بك على موقع ويب مباشر.
 
-One last step...
+خطوة أخيرة...
 
-## اغزو عالم البلوكتشين {#take-the-blockchain-world-by-storm}
+## اكتساح عالم البلوك تشين {#take-the-blockchain-world-by-storm}
 
-Just kidding, you made it to the end of the tutorial!
+أمزح فقط، لقد وصلت إلى نهاية الدليل التعليمي!
 
-To recap, by building an إن إف تي minter, you successfully learned how to:
+للتلخيص، من خلال بناء أداة سك NFT، لقد تعلمت بنجاح كيفية:
 
-- Connect to ميتاماسك via your frontend project
-- Call smart contract methods from your frontend
-- Sign transactions using ميتاماسك
+- الاتصال بـ MetaMask عبر مشروع الواجهة الأمامية الخاص بك
+- استدعاء دوال العقد الذكي من الواجهة الأمامية
+- توقيع المعاملات باستخدام MetaMask
 
-من المفترض أنك ترغب في أن تكون قادرًا على عرض الرموز غير القابلة للاستبدال (إن إف تيز) المصكوكة عبر تطبيقك اللامركزي في محفظتك - لذا تأكد من مراجعة درسنا التعليمي السريع [كيفية عرض الرمز غير القابل للاستبدال في محفظتك](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)!
+من المفترض أنك ترغب في أن تكون قادرًا على التباهي برموز NFT التي تم سكها عبر تطبيقك اللامركزي في محفظتك — لذا تأكد من الاطلاع على دليلنا التعليمي السريع [كيفية عرض NFT الخاص بك في محفظتك](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)!
 
-وكما هو الحال دائمًا، إذا كان لديك أي أسئلة، فنحن هنا للمساعدة في [ألكيمي ديسكورد](https://discord.gg/gWuC7zB). We can't wait to see how you apply the concepts from this tutorial to your future projects!
+وكما هو الحال دائمًا، إذا كان لديك أي أسئلة، فنحن هنا للمساعدة في [Alchemy Discord](https://discord.gg/gWuC7zB). لا يسعنا الانتظار لرؤية كيف تطبق المفاهيم من هذا الدليل التعليمي على مشاريعك المستقبلية!

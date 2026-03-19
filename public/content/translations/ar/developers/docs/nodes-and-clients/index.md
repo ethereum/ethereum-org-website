@@ -1,319 +1,319 @@
 ---
-title: " العقد والعملاء"
-description: "نظرة عامة على عقد إيثريوم وبرامج العميل، بالإضافة إلى كيفية إعداد العقدة ولماذا يجب عليك القيام بذلك."
+title: العقد والعملاء
+description: نظرة عامة على عقد إيثريوم وبرامج العملاء، بالإضافة إلى كيفية إعداد عقدة ولماذا يجب عليك القيام بذلك.
 lang: ar
 sidebarDepth: 2
 ---
 
-الإيثريوم عبارة عن شبكة موزعة من أجهزة الكمبيوتر (المعروفة باسم العقد) تقوم بتشغيل برامج يمكنها التحقق من الكتل وبيانات المعاملات. يجب تشغيل البرنامج على جهاز الكمبيوتر الخاص بك لتحويله إلى عقدة إيثريوم. هناك قطعتان منفصلتان من البرامج (المعروفتان باسم "العملاء") مطلوبتان لتشكيل عقدة.
+[إيثريوم](/) هي شبكة موزعة من أجهزة الكمبيوتر (تُعرف باسم العقد) التي تُشغّل برامج يمكنها التحقق من الكتل وبيانات المعاملات. يجب تشغيل البرنامج على جهاز الكمبيوتر الخاص بك لتحويله إلى عقدة إيثريوم. هناك برنامجان منفصلان (يُعرفان باسم "العملاء") مطلوبان لتكوين عقدة.
 
 ## المتطلبات الأساسية {#prerequisites}
 
-يجب أن تفهم مفهوم شبكة نظير إلى نظير و[أساسيات EVM](/developers/docs/evm/) قبل التعمق أكثر وتشغيل المثيل الخاص بك من عميل إيثريوم. ألقِ نظرة على [مقدمة عن إيثريوم](/developers/docs/intro-to-ethereum/).
+يجب أن تفهم مفهوم شبكة الند للند (peer-to-peer) و[أساسيات آلة إيثريوم الافتراضية (EVM)](/developers/docs/evm/) قبل التعمق أكثر وتشغيل نسختك الخاصة من عميل إيثريوم. ألقِ نظرة على [مقدمة إلى إيثريوم](/developers/docs/intro-to-ethereum/).
 
-إذا كنت جديدًا في موضوع العُقد، فنحن نوصي أولاً بالاطلاع على مقدمتنا سهلة الاستخدام حول [تشغيل عقدة إيثريوم](/run-a-node).
+إذا كنت جديدًا في موضوع العقد، نوصي بالاطلاع أولاً على مقدمتنا المبسطة حول [تشغيل عقدة إيثريوم](/run-a-node).
 
 ## ما هي العقد والعملاء؟ {#what-are-nodes-and-clients}
 
-A "node" is any instance of إيثريوم client software that is connected to other computers also running إيثريوم software, forming a network. A client is an implementation of إيثريوم that verifies data against the protocol rules and keeps the network secure. يتعين على العقدة تشغيل عميلين: عميل الإجماع وعميل التنفيذ.
+"العقدة" هي أي نسخة من برنامج عميل إيثريوم متصلة بأجهزة كمبيوتر أخرى تُشغّل أيضًا برنامج إيثريوم، مما يشكل شبكة. العميل هو تطبيق لإيثريوم يتحقق من البيانات وفقًا لقواعد البروتوكول ويحافظ على أمان الشبكة. يجب أن تُشغّل العقدة عميلين: عميل الإجماع وعميل التنفيذ.
 
-- يستمع عميل التنفيذ (المعروف أيضًا باسم محرك التنفيذ أو عميل EL أو عميل Eth1 سابقًا) إلى المعاملات الجديدة التي يتم بثها في الشبكة، وينفذها في EVM، ويحمل أحدث حالة وقاعدة بيانات لجميع بيانات إيثريوم الحالية.
-- The consensus client (also known as the Beacon Node, CL client or formerly the Eth2 client) implements the proof-of-stake consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client. هناك أيضًا برنامج ثالث يُعرف باسم "المحقق" والذي يمكن إضافته إلى عميل الإجماع، مما يسمح للعقدة بالمشاركة في تأمين الشبكة.
+- يستمع عميل التنفيذ (المعروف أيضًا باسم محرك التنفيذ، أو عميل طبقة التنفيذ (EL)، أو سابقًا عميل Eth1) إلى المعاملات الجديدة التي يتم بثها في الشبكة، وينفذها في آلة إيثريوم الافتراضية (EVM)، ويحتفظ بأحدث حالة وقاعدة بيانات لجميع بيانات إيثريوم الحالية.
+- يُنفّذ عميل الإجماع (المعروف أيضًا باسم عقدة المنارة، أو عميل طبقة الإجماع (CL)، أو سابقًا عميل Eth2) خوارزمية إجماع إثبات الحصة، والتي تُمكّن الشبكة من التوصل إلى اتفاق بناءً على البيانات التي تم التحقق من صحتها من عميل التنفيذ. هناك أيضًا برنامج ثالث، يُعرف باسم "المُدقِّق" يمكن إضافته إلى عميل الإجماع، مما يسمح للعقدة بالمشاركة في تأمين الشبكة.
 
-يتعاون هؤلاء العملاء معًا لتتبع رأس سلسلة إيثريوم والسماح للمستخدمين بالتفاعل مع شبكة إيثريوم. يُطلق على التصميم المعياري الذي يحتوي على قطع متعددة من البرامج التي تعمل معًا اسم [التعقيد المُغلف](https://vitalik.eth.limo/general/2022/02/28/complexity.html). لقد سهّل هذا النهج تنفيذ [الدمج (ذا ميرج)](/roadmap/merge) بسلاسة، ويجعل برامج العميل أسهل في الصيانة والتطوير، ويتيح إعادة استخدام العملاء الفرديين، على سبيل المثال، في [النظام البيئي للطبقة الثانية](/layer-2/).
+يعمل هؤلاء العملاء معًا لتتبع رأس سلسلة إيثريوم والسماح للمستخدمين بالتفاعل مع شبكة إيثريوم. يُطلق على التصميم المعياري الذي يتضمن برامج متعددة تعمل معًا اسم [التعقيد المغلف (encapsulated complexity)](https://vitalik.eth.limo/general/2022/02/28/complexity.html). جعل هذا النهج من السهل تنفيذ [الدمج](/roadmap/merge) بسلاسة، ويجعل صيانة برامج العملاء وتطويرها أسهل، ويُمكّن من إعادة استخدام العملاء الفرديين، على سبيل المثال، في [نظام الطبقة الثانية البيئي](/layer-2/).
 
-![عملاء التنفيذ والإجماع المقترنون](./eth1eth2client.png)
-رسم تخطيطي مبسط لعميل تنفيذ وإجماع مقترن.
+![Coupled execution and consensus clients](./eth1eth2client.png)
+مخطط مبسط لعميل تنفيذ وعميل إجماع مقترنين.
 
 ### تنوع العملاء {#client-diversity}
 
-يوجد كل من [عملاء التنفيذ](/developers/docs/nodes-and-clients/#execution-clients) و[عملاء الإجماع](/developers/docs/nodes-and-clients/#consensus-clients) في مجموعة متنوعة من لغات البرمجة التي طورتها فرق مختلفة.
+يتوفر كل من [عملاء التنفيذ](/developers/docs/nodes-and-clients/#execution-clients) و[عملاء الإجماع](/developers/docs/nodes-and-clients/#consensus-clients) بمجموعة متنوعة من لغات البرمجة التي طورتها فرق مختلفة.
 
-Multiple client implementations can make the network stronger by reducing its dependency on a single codebase. The ideal goal is to achieve diversity without any client dominating the network, thereby eliminating a potential single point of failure.
-The variety of languages also invites a broader developer community and allows them to create integrations in their preferred language.
+يمكن أن تجعل تطبيقات العملاء المتعددة الشبكة أقوى من خلال تقليل اعتمادها على قاعدة برمجية واحدة. الهدف المثالي هو تحقيق التنوع دون أن يهيمن أي عميل على الشبكة، وبالتالي القضاء على نقطة الفشل الفردية المحتملة.
+كما يدعو تنوع اللغات مجتمع مطورين أوسع ويسمح لهم بإنشاء عمليات دمج بلغتهم المفضلة.
 
 تعرف على المزيد حول [تنوع العملاء](/developers/docs/nodes-and-clients/client-diversity/).
 
-What these implementations have in common is they all follow a single specification. Specifications dictate how the إيثريوم network and blockchain functions. Every technical detail is defined and specifications can be found as:
+ما تشترك فيه هذه التطبيقات هو أنها تتبع جميعها مواصفات واحدة. تُملي المواصفات كيفية عمل شبكة إيثريوم والبلوك تشين. يتم تحديد كل التفاصيل الفنية ويمكن العثور على المواصفات على النحو التالي:
 
-- في الأصل، [ورقة إيثريوم الصفراء](https://ethereum.github.io/yellowpaper/paper.pdf)
+- في الأصل، [الورقة الصفراء لإيثريوم (Ethereum Yellow Paper)](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [مواصفات التنفيذ](https://github.com/ethereum/execution-specs/)
 - [مواصفات الإجماع](https://github.com/ethereum/consensus-specs)
-- [مقترحات تحسين إيثريوم (EIPs)](https://eips.ethereum.org/) مطبقة في مختلف [ترقيات الشبكة](/ethereum-forks/)
+- [مقترحات تحسين إيثريوم (EIPs)](https://eips.ethereum.org/) المُنفذة في مختلف [ترقيات الشبكة](/ethereum-forks/)
 
-### تتبع العُقد في الشبكة {#network-overview}
+### تتبع العقد في الشبكة {#network-overview}
 
-Multiple trackers offer a real-time overview of nodes in the إيثريوم network. Note that due to the nature of decentralized networks, these crawlers can only provide a limited view of the network and might report different results.
+تقدم العديد من أدوات التتبع نظرة عامة في الوقت الفعلي على العقد في شبكة إيثريوم. لاحظ أنه نظرًا لطبيعة الشبكات اللامركزية، لا يمكن لهذه الزواحف (crawlers) توفير سوى رؤية محدودة للشبكة وقد تُبلغ عن نتائج مختلفة.
 
-- [خريطة العقد](https://etherscan.io/nodetracker) بواسطة إيثرسكان
+- [خريطة العقد](https://etherscan.io/nodetracker) بواسطة Etherscan
 - [Ethernodes](https://ethernodes.org/) بواسطة Bitfly
-- [Nodewatch](https://www.nodewatch.io/) بواسطة Chainsafe، يزحف إلى عُقد الإجماع
+- [Nodewatch](https://www.nodewatch.io/) بواسطة Chainsafe، للزحف إلى عقد الإجماع
 - [Monitoreth](https://monitoreth.io/) - بواسطة MigaLabs، أداة مراقبة شبكة موزعة
-- [تقارير أسبوعية عن صحة الشبكة](https://probelab.io) - بواسطة ProbeLab، باستخدام [زاحف Nebula](https://github.com/dennis-tra/nebula) وأدوات أخرى
+- [تقارير صحة الشبكة الأسبوعية](https://probelab.io) - بواسطة ProbeLab، باستخدام [زاحف Nebula](https://github.com/dennis-tra/nebula) وأدوات أخرى
 
-## أنواع العُقد {#node-types}
+## أنواع العقد {#node-types}
 
-إذا كنت ترغب في [تشغيل عقدتك الخاصة](/developers/docs/nodes-and-clients/run-a-node/)، فيجب أن تفهم أن هناك أنواعًا مختلفة من العقد التي تستهلك البيانات بشكل مختلف. In fact, clients can run three different types of nodes: light, full and archive. There are also options of different sync strategies which enable faster synchronization time. Synchronization refers to how quickly it can get the most up-to-date information on إيثريوم's state.
+إذا كنت ترغب في [تشغيل عقدتك الخاصة](/developers/docs/nodes-and-clients/run-a-node/)، يجب أن تفهم أن هناك أنواعًا مختلفة من العقد التي تستهلك البيانات بشكل مختلف. في الواقع، يمكن للعملاء تشغيل ثلاثة أنواع مختلفة من العقد: الخفيفة (light)، والكاملة (full)، والأرشيفية (archive). هناك أيضًا خيارات لاستراتيجيات مزامنة مختلفة تتيح وقت مزامنة أسرع. تشير المزامنة إلى مدى سرعة الحصول على أحدث المعلومات حول حالة إيثريوم.
 
-### عقدة كاملة {#full-node}
+### العقدة الكاملة {#full-node}
 
-تقوم العقد الكاملة بالتحقق من صحة blockchain كتلة تلو الأخرى، بما في ذلك تنزيل بيانات جسم الكتلة والحالة لكل كتلة والتحقق منها. هناك فئات مختلفة من العقد الكاملة - بعضها يبدأ من كتلة التكوين ويتحقق من كل كتلة على حدة في تاريخ blockchain بأكمله. يبدأ الآخرون عملية التحقق الخاصة بهم عند كتلة أحدث يثقون في صلاحيتها (على سبيل المثال، 'مزامنة snap' الخاصة بـ غيث). بغض النظر عن مكان بدء التحقق، تحتفظ العقد الكاملة فقط بنسخة محلية من البيانات الحديثة نسبيًا (عادةً أحدث 128 كتلة)، مما يسمح بحذف البيانات الأقدم لتوفير مساحة القرص. يمكن تجديد البيانات القديمة عند الحاجة إليها.
+تقوم العقد الكاملة بالتحقق من البلوك تشين كتلة بكتلة، بما في ذلك تنزيل والتحقق من جسم الكتلة وبيانات الحالة لكل كتلة. هناك فئات مختلفة من العقدة الكاملة - يبدأ بعضها من كتلة التكوين (genesis block) ويتحقق من كل كتلة في التاريخ الكامل للبلوك تشين. يبدأ البعض الآخر التحقق من كتلة أحدث يثقون في صحتها (على سبيل المثال، 'snap sync' الخاص بـ Geth). بغض النظر عن مكان بدء التحقق، تحتفظ العقد الكاملة فقط بنسخة محلية من البيانات الحديثة نسبيًا (عادةً أحدث 128 كتلة)، مما يسمح بحذف البيانات القديمة لتوفير مساحة القرص. يمكن إعادة إنشاء البيانات القديمة عند الحاجة إليها.
 
-- يخزن بيانات blockchain الكاملة (على الرغم من أن هذا يتم تقليمه بشكل دوري حتى لا تخزن العقدة الكاملة جميع بيانات الحالة حتى التكوين)
-- يشارك في التحقق من صحة الكتلة، ويتحقق من جميع الكتل والحالات.
-- يمكن استرداد جميع الحالات من التخزين المحلي أو إعادة إنشائها من "اللقطات" بواسطة عقدة كاملة.
-- يخدم الشبكة ويوفر البيانات عند الطلب.
+- تُخزن بيانات البلوك تشين الكاملة (على الرغم من أنه يتم تقليمها بشكل دوري بحيث لا تُخزن العقدة الكاملة جميع بيانات الحالة وصولاً إلى التكوين)
+- تشارك في التحقق من الكتل، وتتحقق من جميع الكتل والحالات.
+- يمكن استرداد جميع الحالات إما من التخزين المحلي أو إعادة إنشائها من 'اللقطات' (snapshots) بواسطة عقدة كاملة.
+- تخدم الشبكة وتوفر البيانات عند الطلب.
 
-### عقدة الأرشيف {#archive-node}
+### العقدة الأرشيفية {#archive-node}
 
-عقد الأرشيف هي عقد كاملة تتحقق من كل كتلة من التكوين ولا تحذف أبدًا أيًا من البيانات التي تم تنزيلها.
+العقد الأرشيفية هي عقد كاملة تتحقق من كل كتلة منذ التكوين ولا تحذف أبدًا أيًا من البيانات التي تم تنزيلها.
 
-- يقوم بتخزين كل شيء موجود في العقدة الكاملة ويقوم ببناء أرشيف للحالات التاريخية. من الضروري أن تقوم بذلك إذا كنت تريد الاستعلام عن شيء مثل رصيد الحساب في الكتلة رقم 4,000,000، أو ببساطة اختبار مجموعة المعاملات الخاصة بك بشكل موثوق دون التحقق من صحتها باستخدام التتبع.
-- تمثل هذه البيانات وحدات تيرابايت، مما يجعل عقد الأرشيف أقل جاذبية للمستخدمين العاديين ولكن يمكن أن تكون مفيدة للخدمات مثل مستكشفات الكتل وبائعي المحافظ وتحليلات السلسلة.
+- تُخزن كل ما يتم الاحتفاظ به في العقدة الكاملة وتبني أرشيفًا للحالات التاريخية. هناك حاجة إليها إذا كنت ترغب في الاستعلام عن شيء مثل رصيد حساب عند الكتلة رقم 4,000,000، أو ببساطة وموثوقية اختبار مجموعة المعاملات الخاصة بك دون التحقق منها باستخدام التتبع.
+- تمثل هذه البيانات وحدات من التيرابايت، مما يجعل العقد الأرشيفية أقل جاذبية للمستخدمين العاديين ولكن يمكن أن تكون مفيدة لخدمات مثل مستعرضات الكتل، وموردي المحافظ، وتحليلات السلسلة.
 
-Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical states but the full node is able to build them on demand.
+ستؤدي مزامنة العملاء في أي وضع بخلاف الأرشيف إلى بيانات بلوك تشين مقلمة (pruned). هذا يعني أنه لا يوجد أرشيف لجميع الحالات التاريخية ولكن العقدة الكاملة قادرة على بنائها عند الطلب.
 
-تعرف على المزيد حول [عقد الأرشيف](/developers/docs/nodes-and-clients/archive-nodes).
+تعرف على المزيد حول [العقد الأرشيفية](/developers/docs/nodes-and-clients/archive-nodes).
 
-### عقدة خفيفة {#light-node}
+### العقدة الخفيفة {#light-node}
 
-بدلاً من تنزيل كل كتلة، تقوم العقد الخفيفة بتنزيل رؤوس الكتل فقط. تحتوي هذه العناوين على معلومات موجزة حول محتويات الكتل. يتم طلب أي معلومات أخرى تتطلبها عقدة الضوء من عقدة كاملة. يمكن بعد ذلك لعقدة الضوء التحقق بشكل مستقل من البيانات التي تتلقاها مقابل جذور الحالة في رؤوس الكتلة. تتيح العقد الخفيفة للمستخدمين المشاركة في شبكة إيثريوم دون الحاجة إلى أجهزة قوية أو نطاق ترددي عالي مطلوب لتشغيل العقد الكاملة. في نهاية المطاف، قد يتم تشغيل العقد الخفيفة على الهواتف المحمولة أو الأجهزة المضمنة. لا تشارك العقد الخفيفة في الإجماع (أي أنها لا يمكن أن تكون مدققين)، ولكن يمكنها الوصول إلى بلوكتشين إيثريوم بنفس الوظائف وضمانات الأمان التي تتمتع بها العقدة الكاملة.
+بدلاً من تنزيل كل كتلة، تقوم العقد الخفيفة بتنزيل رؤوس الكتل (block headers) فقط. تحتوي هذه الرؤوس على معلومات موجزة حول محتويات الكتل. يتم طلب أي معلومات أخرى تتطلبها العقدة الخفيفة من عقدة كاملة. يمكن للعقدة الخفيفة بعد ذلك التحقق بشكل مستقل من البيانات التي تتلقاها مقابل جذور الحالة (state roots) في رؤوس الكتل. تُمكّن العقد الخفيفة المستخدمين من المشاركة في شبكة إيثريوم دون الحاجة إلى أجهزة قوية أو نطاق ترددي عالٍ مطلوب لتشغيل العقد الكاملة. في النهاية، قد تعمل العقد الخفيفة على الهواتف المحمولة أو الأجهزة المدمجة. لا تشارك العقد الخفيفة في الإجماع (أي لا يمكن أن تكون مُدقِّقين)، ولكن يمكنها الوصول إلى البلوك تشين الخاص بإيثريوم بنفس الوظائف وضمانات الأمان مثل العقدة الكاملة.
 
-Light clients are an area of active development for إيثريوم and we expect to see new light clients for the consensus layer and execution layer soon.
-هناك أيضًا مسارات محتملة لتوفير بيانات العميل الخفيف عبر [شبكة النميمة](https://www.ethportal.net/). This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
+يُعد العملاء الخفيفون مجالًا للتطوير النشط لإيثريوم ونتوقع رؤية عملاء خفيفين جدد لطبقة الإجماع وطبقة التنفيذ قريبًا.
+هناك أيضًا مسارات محتملة لتوفير بيانات العميل الخفيف عبر [شبكة القيل والقال (gossip network)](https://www.ethportal.net/). هذا مفيد لأن شبكة القيل والقال يمكن أن تدعم شبكة من العقد الخفيفة دون الحاجة إلى عقد كاملة لخدمة الطلبات.
 
-إيثريوم does not support a large population of light nodes yet, but light node support is an area expected to develop rapidly in the near future. بشكل خاص، يركز العملاء مثل [نيمبوس](https://nimbus.team/) و[Helios](https://github.com/a16z/helios) و[LodeStar](https://lodestar.chainsafe.io/) حاليًا بشكل كبير على العقد الخفيفة.
+لا تدعم إيثريوم عددًا كبيرًا من العقد الخفيفة حتى الآن، ولكن دعم العقدة الخفيفة هو مجال يُتوقع أن يتطور بسرعة في المستقبل القريب. على وجه الخصوص، يركز عملاء مثل [Nimbus](https://nimbus.team/)، و[Helios](https://github.com/a16z/helios)، و[LodeStar](https://lodestar.chainsafe.io/) حاليًا بشكل كبير على العقد الخفيفة.
 
 ## لماذا يجب علي تشغيل عقدة إيثريوم؟ {#why-should-i-run-an-ethereum-node}
 
-Running a node allows you to directly, trustlessly and privately use إيثريوم while supporting the network by keeping it more robust and decentralized.
+يتيح لك تشغيل عقدة استخدام إيثريوم بشكل مباشر، وبدون الحاجة للثقة (trustlessly)، وبشكل خاص مع دعم الشبكة من خلال الحفاظ عليها أكثر قوة ولامركزية.
 
-### فوائد لك {#benefits-to-you}
+### الفوائد التي تعود عليك {#benefits-to-you}
 
-Running your own node enables you to use إيثريوم in a private, self-sufficient and trustless manner. You don't need to trust the network because you can verify the data yourself with your client. "Don't trust, verify" is a popular blockchain mantra.
+يُمكّنك تشغيل عقدتك الخاصة من استخدام إيثريوم بطريقة خاصة ومكتفية ذاتيًا وبدون الحاجة للثقة. لا تحتاج إلى الوثوق بالشبكة لأنه يمكنك التحقق من البيانات بنفسك باستخدام عميلك. "لا تثق، بل تحقق" هو شعار شائع في البلوك تشين.
 
-- تقوم العقدة الخاصة بك بالتحقق من جميع المعاملات والكتل وفقًا لقواعد الإجماع بنفسها. وهذا يعني أنه لا يتعين عليك الاعتماد على أي عقد أخرى في الشبكة أو الثقة بها بشكل كامل.
-- يمكنك استخدام محفظة إيثريوم مع العقدة الخاصة بك. يمكنك استخدام التطبيقات اللامركزية بشكل أكثر أمانًا وخصوصية لأنك لن تضطر إلى تسريب عناوينك وأرصدتك إلى الوسطاء. يمكن التحقق من كل شيء مع العميل الخاص بك. تقدم [ميتاماسك](https://metamask.io) و [Frame](https://frame.sh/) و[العديد من المحافظ الأخرى](/wallets/find-wallet/) إمكانية استيراد RPC، مما يسمح لها باستخدام عقدتك.
-- يمكنك تشغيل واستضافة خدمات أخرى تعتمد على البيانات من إيثريوم. على سبيل المثال، قد يكون هذا محقق بيكون تشين، أو برنامجًا مثل الطبقة 2، أو البنية الأساسية، أو مستكشفات الكتل، أو معالجات الدفع، وما إلى ذلك.
-- يمكنك توفير [نقاط نهاية RPC](/developers/docs/apis/json-rpc/) المخصصة الخاصة بك. يمكنك أيضًا تقديم نقاط النهاية هذه علنًا للمجتمع لمساعدتهم على تجنب مقدمي الخدمات المركزيين الكبار.
-- يمكنك الاتصال بعقدتك باستخدام **الاتصالات بين العمليات (IPC)** أو إعادة كتابة العقدة لتحميل برنامجك كمكون إضافي. وهذا يمنح زمن انتقال منخفضًا، مما يساعد كثيرًا، على سبيل المثال، عند معالجة الكثير من البيانات باستخدام مكتبات web3 أو عندما تحتاج إلى استبدال معاملاتك بأسرع ما يمكن (أي، الاستباق).
-- يمكنك المراهنة بشكل مباشر على ETH لتأمين الشبكة وكسب المكافآت. راجع [التخزين الفردي](/staking/solo/) للبدء.
+- تتحقق عقدتك من جميع المعاملات والكتل مقابل قواعد الإجماع بنفسها. هذا يعني أنك لست مضطرًا للاعتماد على أي عقد أخرى في الشبكة أو الوثوق بها تمامًا.
+- يمكنك استخدام محفظة إيثريوم مع عقدتك الخاصة. يمكنك استخدام التطبيقات اللامركزية بشكل أكثر أمانًا وخصوصية لأنك لن تضطر إلى تسريب عناوينك وأرصدتك للوسطاء. يمكن التحقق من كل شيء باستخدام عميلك الخاص. تقدم [MetaMask](https://metamask.io)، و[Frame](https://frame.sh/)، و[العديد من المحافظ الأخرى](/wallets/find-wallet/) استيراد RPC، مما يسمح لها باستخدام عقدتك.
+- يمكنك تشغيل واستضافة خدمات أخرى تعتمد على بيانات من إيثريوم بنفسك. على سبيل المثال، قد يكون هذا مُدقِّق سلسلة المنارة (Beacon Chain)، أو برامج مثل الطبقة الثانية، أو البنية التحتية، أو مستعرضات الكتل، أو معالجات الدفع، إلخ.
+- يمكنك توفير [نقاط نهاية RPC](/developers/docs/apis/json-rpc/) المخصصة الخاصة بك. يمكنك حتى تقديم نقاط النهاية هذه علنًا للمجتمع لمساعدتهم على تجنب مقدمي الخدمات المركزيين الكبار.
+- يمكنك الاتصال بعقدتك باستخدام **الاتصالات بين العمليات (IPC)** أو إعادة كتابة العقدة لتحميل برنامجك كمكون إضافي (plugin). يمنح هذا زمن انتقال منخفض، مما يساعد كثيرًا، على سبيل المثال، عند معالجة الكثير من البيانات باستخدام مكتبات ويب 3 أو عندما تحتاج إلى استبدال معاملاتك بأسرع ما يمكن (أي التشغيل الاستباقي أو frontrunning).
+- يمكنك تحصيص ETH مباشرة لتأمين الشبكة وكسب المكافآت. راجع [التحصيص الفردي](/staking/solo/) للبدء.
 
-![كيفية الوصول إلى إيثريوم عبر تطبيقك وعقدك](./nodes.png)
+![How you access Ethereum via your application and nodes](./nodes.png)
 
 ### فوائد الشبكة {#network-benefits}
 
-A diverse set of nodes is important for إيثريوم’s health, security and operational resiliency.
+تُعد المجموعة المتنوعة من العقد مهمة لصحة إيثريوم وأمانها ومرونتها التشغيلية.
 
-- تطبق العقد الكاملة قواعد الإجماع حتى لا يتم خداعها لقبول الكتل التي لا تتبعها. يؤدي هذا إلى توفير أمان إضافي في الشبكة لأنه إذا كانت جميع العقد عبارة عن عقد خفيفة، والتي لا تقوم بالتحقق الكامل، فقد يقوم المحققون بمهاجمة الشبكة.
-- في حالة وقوع هجوم يتغلب على دفاعات التشفير الاقتصادي لآلية [إثبات الحصة](/developers/docs/consensus-mechanisms/pos/#what-is-pos)، يمكن إجراء استرداد اجتماعي بواسطة العقد الكاملة التي تختار اتباع السلسلة النزيهة.
-- إن زيادة عدد العقد في الشبكة يؤدي إلى إنشاء شبكة أكثر تنوعًا وقوة، وهو الهدف النهائي المتمثل في اللامركزية، والذي يتيح نظامًا مقاومًا للرقابة وموثوقًا به.
-- توفر العقد الكاملة إمكانية الوصول إلى بيانات blockchain للعملاء خفيفي الوزن الذين يعتمدون عليها. لا تخزن العقد الخفيفة سلسلة الكتل بأكملها، بل تتحقق من البيانات عبر [جذور الحالة في ترويسات الكتل](/developers/docs/blocks/#block-anatomy). توفر العقد الكاملة إمكانية الوصول إلى بيانات blockchain للعملاء خفيفي الوزن الذين يعتمدون عليها.
+- تفرض العقد الكاملة قواعد الإجماع بحيث لا يمكن خداعها لقبول الكتل التي لا تتبعها. يوفر هذا أمانًا إضافيًا في الشبكة لأنه إذا كانت جميع العقد عبارة عن عقد خفيفة، والتي لا تقوم بالتحقق الكامل، فقد يهاجم المُدقِّقون الشبكة.
+- في حالة حدوث هجوم يتغلب على الدفاعات الاقتصادية المشفرة لـ [إثبات الحصة](/developers/docs/consensus-mechanisms/pos/#what-is-pos)، يمكن إجراء استرداد اجتماعي بواسطة العقد الكاملة التي تختار اتباع السلسلة الصادقة.
+- يؤدي وجود المزيد من العقد في الشبكة إلى شبكة أكثر تنوعًا وقوة، وهو الهدف النهائي للامركزية، مما يتيح نظامًا مقاومًا للرقابة وموثوقًا.
+- توفر العقد الكاملة الوصول إلى بيانات البلوك تشين للعملاء الخفيفين الذين يعتمدون عليها. لا تُخزن العقد الخفيفة البلوك تشين بالكامل، بل تتحقق من البيانات عبر [جذور الحالة في رؤوس الكتل](/developers/docs/blocks/#block-anatomy). يمكنهم طلب المزيد من المعلومات من العقد الكاملة إذا احتاجوا إليها.
 
-إذا قمت بتشغيل عقدة كاملة، فإن شبكة إيثريوم بأكملها تستفيد منها، حتى لو لم تقم بتشغيل محقق.
+إذا قمت بتشغيل عقدة كاملة، فإن شبكة إيثريوم بأكملها تستفيد منها، حتى لو لم تقم بتشغيل مُدقِّق.
 
 ## تشغيل عقدتك الخاصة {#running-your-own-node}
 
-Interested in running your own إيثريوم client؟
+هل أنت مهتم بتشغيل عميل إيثريوم الخاص بك؟
 
-للحصول على مقدمة سهلة للمبتدئين، تفضل بزيارة صفحتنا [تشغيل عقدة](/run-a-node) لمعرفة المزيد.
+للحصول على مقدمة مناسبة للمبتدئين، قم بزيارة صفحة [تشغيل عقدة](/run-a-node) لمعرفة المزيد.
 
-إذا كنت مستخدمًا تقنيًا أكثر، فتعمق في مزيد من التفاصيل والخيارات حول كيفية [تشغيل عقدتك الخاصة](/developers/docs/nodes-and-clients/run-a-node/).
+إذا كنت مستخدمًا تقنيًا أكثر، فتعمق في المزيد من التفاصيل والخيارات حول كيفية [إنشاء عقدتك الخاصة](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## البدائل {#alternatives}
 
-Setting up your own node can cost you time and resources but you don’t always need to run your own instance. في هذه الحالة، يمكنك استخدام موفر واجهة برمجة التطبيقات التابع لجهة خارجية. للحصول على نظرة عامة حول استخدام هذه الخدمات، تحقق من [العُقد كخدمة](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+قد يكلفك إعداد عقدتك الخاصة وقتًا وموارد ولكنك لا تحتاج دائمًا إلى تشغيل نسختك الخاصة. في هذه الحالة، يمكنك استخدام مزود واجهة برمجة تطبيقات (API) تابع لجهة خارجية. للحصول على نظرة عامة حول استخدام هذه الخدمات، تحقق من [العقد كخدمة](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-إذا قام شخص ما بتشغيل عقدة إيثريوم باستخدام واجهة برمجة تطبيقات عامة في مجتمعك، فيمكنك توجيه محافظك إلى عقدة مجتمعية عبر RPC مخصص والحصول على المزيد من الخصوصية مقارنةً ببعض الجهات الخارجية الموثوقة العشوائية.
+إذا قام شخص ما بتشغيل عقدة إيثريوم باستخدام واجهة برمجة تطبيقات عامة في مجتمعك، فيمكنك توجيه محافظك إلى عقدة مجتمعية عبر RPC مخصص والحصول على خصوصية أكبر من استخدام جهة خارجية موثوقة عشوائية.
 
-On the other hand, if you run a client, you can share it with your friends who might need it.
+من ناحية أخرى، إذا قمت بتشغيل عميل، فيمكنك مشاركته مع أصدقائك الذين قد يحتاجون إليه.
 
 ## عملاء التنفيذ {#execution-clients}
 
-The إيثريوم community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'إيثريوم clients'), developed by different teams using different programming languages. وهذا يجعل الشبكة أقوى وأكثر [تنوعًا](/developers/docs/nodes-and-clients/client-diversity/). The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
+يحتفظ مجتمع إيثريوم بالعديد من عملاء التنفيذ مفتوحي المصدر (المعروفين سابقًا باسم 'عملاء Eth1'، أو فقط 'عملاء إيثريوم')، والتي طورتها فرق مختلفة باستخدام لغات برمجة مختلفة. هذا يجعل الشبكة أقوى وأكثر [تنوعًا](/developers/docs/nodes-and-clients/client-diversity/). الهدف المثالي هو تحقيق التنوع دون أن يهيمن أي عميل لتقليل أي نقاط فشل فردية.
 
-This table summarizes the different clients. جميعها تجتاز [اختبارات العميل](https://github.com/ethereum/tests) ويتم صيانتها بنشاط لتبقى محدثة بترقيات الشبكة.
+يلخص هذا الجدول العملاء المختلفين. جميعهم يجتازون [اختبارات العملاء](https://github.com/ethereum/tests) ويتم صيانتهم بنشاط للبقاء على اطلاع دائم بترقيات الشبكة.
 
-| عميل                                                                                          | اللغة                        | أنظمة التشغيل            | الشبكات                         | استراتيجيات المزامنة                                                         | تشذيب النظام      |
-| --------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------ | ------------------------------- | ---------------------------------------------------------------------------- | ----------------- |
-| [غيث](https://geth.ethereum.org/)                                                            | Go                           | لينكس، ويندوز، ماك أو إس | الشبكة الرئيسية، سيبوليا، هودي | [Snap](#snap-sync)، [كامل](#full-sync)                                       | الأرشيف، مُقَلَّم |
-| [نيذرمايند](https://www.nethermind.io/)                                                      | سي شارب، .نت | لينكس، ويندوز، ماك أو إس | الشبكة الرئيسية، سيبوليا، هودي | [Snap](#snap-sync) (بدون تقديم)، سريع، [كامل](#full-sync) | الأرشيف، مُقَلَّم |
-| [بيسو](https://besu.hyperledger.org/en/stable/)                                               | جافا                         | لينكس، ويندوز، ماك أو إس | الشبكة الرئيسية، سيبوليا، هودي | [Snap](#snap-sync)، [سريع](#fast-sync)، [كامل](#full-sync)                   | الأرشيف، مُقَلَّم |
-| [إريغون](https://github.com/ledgerwatch/erigon)                                               | Go                           | لينكس، ويندوز، ماك أو إس | الشبكة الرئيسية، سيبوليا، هودي | [كامل](#full-sync)                                                           | الأرشيف، مُقَلَّم |
-| [ريث](https://reth.rs/)                                                                      | راست                         | لينكس، ويندوز، ماك أو إس | الشبكة الرئيسية، سيبوليا، هودي | [كامل](#full-sync)                                                           | الأرشيف، مُقَلَّم |
-| [إيثيريوم جي إس](https://github.com/ethereumjs/ethereumjs-monorepo) _(تجريبي)_ | تايب سكريبت                  | لينكس، ويندوز، ماك أو إس | سيبوليا، هودي                  | [كامل](#full-sync)                                                           | مشذب              |
+| العميل | اللغة | أنظمة التشغيل | الشبكات | استراتيجيات المزامنة | تقليم الحالة |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | -------------------------------------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/) | Go | Linux, Windows, macOS | الشبكة الرئيسية، Sepolia، Hoodi | [Snap](#snap-sync)، [Full](#full-sync) | أرشيفية، مقلمة |
+| [Nethermind](https://www.nethermind.io/) | C#, .NET | Linux, Windows, macOS | الشبكة الرئيسية، Sepolia، Hoodi | [Snap](#snap-sync) (بدون خدمة)، Fast، [Full](#full-sync) | أرشيفية، مقلمة |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java | Linux, Windows, macOS | الشبكة الرئيسية، Sepolia، Hoodi | [Snap](#snap-sync)، [Fast](#fast-sync)، [Full](#full-sync) | أرشيفية، مقلمة |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go | Linux, Windows, macOS | الشبكة الرئيسية، Sepolia، Hoodi | [Full](#full-sync) | أرشيفية، مقلمة |
+| [Reth](https://reth.rs/) | Rust | Linux, Windows, macOS | الشبكة الرئيسية، Sepolia، Hoodi | [Full](#full-sync) | أرشيفية، مقلمة |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(تجريبي)_ | TypeScript | Linux, Windows, macOS | Sepolia، Hoodi | [Full](#full-sync) | مقلمة |
 
-لمعرفة المزيد عن الشبكات المدعومة، اقرأ عن [شبكات إيثريوم](/developers/docs/networks/).
+لمزيد من المعلومات حول الشبكات المدعومة، اقرأ عن [شبكات إيثريوم](/developers/docs/networks/).
 
-Each client has unique use cases and advantages, so you should choose one based on your own preferences. Diversity allows implementations to be focused on different features and user audiences. You may want to choose a client based on features, support, programming language, or licences.
+لكل عميل حالات استخدام ومزايا فريدة، لذا يجب عليك اختيار واحد بناءً على تفضيلاتك الخاصة. يسمح التنوع للتطبيقات بالتركيز على ميزات وجماهير مستخدمين مختلفة. قد ترغب في اختيار عميل بناءً على الميزات أو الدعم أو لغة البرمجة أو التراخيص.
 
-### بيسو {#besu}
+### Besu {#besu}
 
-هايبر ليدجر بيسو is an enterprise-grade إيثريوم client for public and permissioned networks. It runs all of the إيثريوم Mainnet features, from tracing to جراف كيو إل, has extensive monitoring and is supported by كونسنسيس, both in open community channels and through commercial SLAs for enterprises. It is written in جافا and is Apache 2.0 licensed.
+Hyperledger Besu هو عميل إيثريوم على مستوى المؤسسات للشبكات العامة والمصرح بها. يقوم بتشغيل جميع ميزات الشبكة الرئيسية لإيثريوم، من التتبع إلى GraphQL، ويحتوي على مراقبة واسعة النطاق ومدعوم من ConsenSys، سواء في قنوات المجتمع المفتوحة أو من خلال اتفاقيات مستوى الخدمة (SLAs) التجارية للمؤسسات. تمت كتابته بلغة Java ومرخص بموجب Apache 2.0.
 
-[توثيق](https://besu.hyperledger.org/en/stable/) بيسو الشامل سيرشدك خلال جميع التفاصيل حول ميزاته وإعداداته.
+سترشدك [وثائق](https://besu.hyperledger.org/en/stable/) Besu الشاملة عبر جميع التفاصيل حول ميزاته وإعداداته.
 
-### إريغون {#erigon}
+### Erigon {#erigon}
 
-إريغون, formerly known as Turbo‐غيث, started as a fork of Go إيثريوم oriented toward speed and disk‐space efficiency. إريغون is a completely re-architected implementation of إيثريوم, currently written in Go but with implementations in other languages under development. إريغون's goal is to provide a faster, more modular, and more optimized implementation of إيثريوم. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
+بدأ Erigon، المعروف سابقًا باسم Turbo-Geth، كانقسام (fork) من Go Ethereum موجه نحو السرعة وكفاءة مساحة القرص. Erigon هو تطبيق مُعاد هيكلته بالكامل لإيثريوم، مكتوب حاليًا بلغة Go ولكن مع تطبيقات بلغات أخرى قيد التطوير. هدف Erigon هو توفير تطبيق أسرع وأكثر نمطية وأكثر تحسينًا لإيثريوم. يمكنه إجراء مزامنة عقدة أرشيفية كاملة باستخدام حوالي 2 تيرابايت من مساحة القرص، في أقل من 3 أيام.
 
-### Go إيثريوم {#geth}
+### Go Ethereum {#geth}
 
-Go إيثريوم (غيث for short) is one of the original implementations of the إيثريوم protocol. Currently, it is the most widespread client with the biggest user base and variety of tooling for users and developers. It is written in Go, fully open source and licensed under the GNU LGPL v3.
+يُعد Go Ethereum (اختصارًا Geth) أحد التطبيقات الأصلية لبروتوكول إيثريوم. حاليًا، هو العميل الأكثر انتشارًا مع أكبر قاعدة مستخدمين ومجموعة متنوعة من الأدوات للمستخدمين والمطورين. تمت كتابته بلغة Go، وهو مفتوح المصدر بالكامل ومرخص بموجب GNU LGPL v3.
 
-تعرف على المزيد حول غيث في [توثيقه](https://geth.ethereum.org/docs/).
+تعرف على المزيد حول Geth في [وثائقه](https://geth.ethereum.org/docs).
 
-### نيذرمايند {#nethermind}
+### Nethermind {#nethermind}
 
-نيذرمايند is an إيثريوم implementation created with the C# دوت نت tech stack, licensed with LGPL-3.0, running on all major platforms including ARM. It offers great performance with:
+Nethermind هو تطبيق إيثريوم تم إنشاؤه باستخدام حزمة تقنيات C# .NET، ومرخص بموجب LGPL-3.0، ويعمل على جميع المنصات الرئيسية بما في ذلك ARM. يقدم أداءً رائعًا مع:
 
 - آلة افتراضية مُحسّنة
-- وصول الدولة
-- الشبكات والميزات الغنية مثل لوحات معلومات Prometheus/غرافانا، ودعم تسجيل المؤسسة seq، وتتبع JSON-RPC، وإضافات التحليلات.
+- الوصول إلى الحالة
+- الشبكات والميزات الغنية مثل لوحات معلومات Prometheus/Grafana، ودعم تسجيل المؤسسات seq، وتتبع JSON-RPC، والمكونات الإضافية للتحليلات.
 
-لدى نيذرمايند أيضًا [توثيق مفصل](https://docs.nethermind.io)، ودعم قوي للمطورين، ومجتمع عبر الإنترنت ودعم متاح على مدار الساعة طوال أيام الأسبوع للمستخدمين المتميزين.
+يحتوي Nethermind أيضًا على [وثائق مفصلة](https://docs.nethermind.io)، ودعم قوي للمطورين، ومجتمع عبر الإنترنت، ودعم على مدار الساعة طوال أيام الأسبوع متاح للمستخدمين المتميزين.
 
-### ريث {#reth}
+### Reth {#reth}
 
-ريث (اختصار لـ راست إيثريوم) هو تنفيذ عقدة إيثريوم كاملة يركز على كونه سهل الاستخدام، ومتعدد الوحدات، وسريعًا وفعالًا. تم بناء ريث في الأصل وتطويره بواسطة Paradigm، وهو مرخص بموجب تراخيص Apache وMIT.
+Reth (اختصار لـ Rust Ethereum) هو تطبيق عقدة كاملة لإيثريوم يركز على أن يكون سهل الاستخدام، وعالي النمطية، وسريعًا، وفعالًا. تم بناء Reth في الأصل ودفعه للأمام بواسطة Paradigm، وهو مرخص بموجب تراخيص Apache و MIT.
 
-ريث جاهز للإنتاج ومناسب للاستخدام في البيئات المهمة مثل التخزين أو الخدمات عالية التشغيل. يؤدي أداءً جيدًا في حالات الاستخدام التي تتطلب أداءً عاليًا بهوامش كبيرة مثل RPC وMEV والفهرسة والمحاكاة وأنشطة P2P.
+Reth جاهز للإنتاج، ومناسب للاستخدام في البيئات الحرجة للمهام مثل التحصيص أو الخدمات ذات وقت التشغيل العالي. يؤدي أداءً جيدًا في حالات الاستخدام التي تتطلب أداءً عاليًا بهوامش كبيرة مثل RPC، وأقصى قيمة قابلة للاستخراج (MEV)، والفهرسة، والمحاكاة، وأنشطة الند للند (P2P).
 
-تعرف على المزيد من خلال الاطلاع على [كتاب ريث](https://reth.rs/)، أو [مستودع ريث على غيت هاب](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
+تعرف على المزيد من خلال التحقق من [كتاب Reth](https://reth.rs/)، أو [مستودع Reth على GitHub](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
 ### قيد التطوير {#execution-in-development}
 
-لا تزال هذه العملاء في مراحل مبكرة من التطوير ولا يوصى باستخدامها في الإنتاج بعد.
+لا يزال هؤلاء العملاء في مراحل مبكرة من التطوير ولا يُنصح باستخدامهم في الإنتاج بعد.
 
-#### إيثيريوم جي إس {#ethereumjs}
+#### EthereumJS {#ethereumjs}
 
-تم كتابة إيثيريوم جي إس Execution Client (إيثيريوم جي إس) بلغة تايب سكريبت ويتكون من عدد من الحزم، بما في ذلك أساسيات إيثريوم الأساسية التي تمثلها فئات Block وTransaction وMerkle-Patricia Trie ومكونات العميل الأساسية بما في ذلك تنفيذ إيثريوم Virtual Machine (EVM)، وفئة blockchain، ومكدس الشبكات DevP2P.
+تمت كتابة عميل تنفيذ EthereumJS (EthereumJS) بلغة TypeScript ويتكون من عدد من الحزم، بما في ذلك أساسيات إيثريوم الأساسية الممثلة بفئات الكتلة (Block)، والمعاملة (Transaction)، و Merkle-Patricia Trie ومكونات العميل الأساسية بما في ذلك تطبيق لآلة إيثريوم الافتراضية (EVM)، وفئة البلوك تشين، وحزمة شبكات DevP2P.
 
-تعرف على المزيد حوله من خلال قراءة [توثيقه](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
+تعرف على المزيد حوله من خلال قراءة [وثائقه](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
 
 ## عملاء الإجماع {#consensus-clients}
 
-هناك العديد من عملاء الإجماع (المعروفين سابقًا باسم عملاء 'Eth2') لدعم [ترقيات الإجماع](/roadmap/beacon-chain/). هم مسؤولون عن كل المنطق المتعلق بالإجماع بما في ذلك خوارزمية اختيار الانقسام، ومعالجة المصادقات وإدارة مكافآت وعقوبات [إثبات الحصة](/developers/docs/consensus-mechanisms/pos).
+هناك العديد من عملاء الإجماع (المعروفين سابقًا باسم عملاء 'Eth2') لدعم [ترقيات الإجماع](/roadmap/beacon-chain/). وهم مسؤولون عن جميع المنطق المتعلق بالإجماع بما في ذلك خوارزمية اختيار الانقسام (fork-choice)، ومعالجة الإقرارات (attestations) وإدارة مكافآت وعقوبات [إثبات الحصة](/developers/docs/consensus-mechanisms/pos).
 
-| عميل                                                          | اللغة       | أنظمة التشغيل            | الشبكات                                                |
-| ------------------------------------------------------------- | ----------- | ------------------------ | ------------------------------------------------------ |
-| [لايت هاوس](https://lighthouse.sigmaprime.io/)               | راست        | لينكس، ويندوز، ماك أو إس | سلسلة المنارة، هودي، Pyrmont، سيبوليا، وغيرها         |
-| [لودستار](https://lodestar.chainsafe.io/)                    | تايب سكريبت | لينكس، ويندوز، ماك أو إس | سلسلة المنارة، هودي، سيبوليا، وغيرها                  |
-| [نيمبوس](https://nimbus.team/)                                | نيم         | لينكس، ويندوز، ماك أو إس | سلسلة المنارة، هودي، سيبوليا، وغيرها                  |
-| [بريزم](https://prysm.offchainlabs.com/docs/)                 | Go          | لينكس، ويندوز، ماك أو إس | سلسلة المنارة، غنوسيس، هودي، Pyrmont، سيبوليا، وغيرها |
-| [تيكو](https://consensys.net/knowledge-base/ethereum-2/teku/) | جافا        | لينكس، ويندوز، ماك أو إس | سلسلة المنارة، غنوسيس، هودي، سيبوليا، وغيرها          |
-| [جراندين](https://docs.grandine.io/)                         | راست        | لينكس، ويندوز، ماك أو إس | سلسلة المنارة، هودي، سيبوليا، وغيرها                  |
+| العميل | اللغة | أنظمة التشغيل | الشبكات |
+| ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/) | Rust | Linux, Windows, macOS | سلسلة المنارة، Hoodi، Pyrmont، Sepolia، والمزيد |
+| [Lodestar](https://lodestar.chainsafe.io/) | TypeScript | Linux, Windows, macOS | سلسلة المنارة، Hoodi، Sepolia، والمزيد |
+| [Nimbus](https://nimbus.team/) | Nim | Linux, Windows, macOS | سلسلة المنارة، Hoodi، Sepolia، والمزيد |
+| [Prysm](https://prysm.offchainlabs.com/docs/) | Go | Linux, Windows, macOS | سلسلة المنارة، Gnosis، Hoodi، Pyrmont، Sepolia، والمزيد |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java | Linux, Windows, macOS | سلسلة المنارة، Gnosis، Hoodi، Sepolia، والمزيد |
+| [Grandine](https://docs.grandine.io/) | Rust | Linux, Windows, macOS | سلسلة المنارة، Hoodi، Sepolia، والمزيد |
 
-### لايت هاوس {#lighthouse}
+### Lighthouse {#lighthouse}
 
-لايت هاوس is a consensus client implementation written in راست under the Apache-2.0 license. It is maintained by Sigma Prime and has been stable and production-ready since بيكون تشين genesis. It is relied upon by various enterprises, staking pools and individuals. It aims to be secure, performant and interoperable in a wide range of environments, from desktop PCs to sophisticated automated deployments.
+Lighthouse هو تطبيق لعميل الإجماع مكتوب بلغة Rust بموجب ترخيص Apache-2.0. تتم صيانته بواسطة Sigma Prime وكان مستقرًا وجاهزًا للإنتاج منذ تكوين سلسلة المنارة. تعتمد عليه العديد من المؤسسات ومجمعات التحصيص والأفراد. يهدف إلى أن يكون آمنًا وعالي الأداء وقابلًا للتشغيل البيني في مجموعة واسعة من البيئات، من أجهزة الكمبيوتر المكتبية إلى عمليات النشر الآلية المعقدة.
 
-يمكن العثور على التوثيق في [كتاب لايت هاوس](https://lighthouse-book.sigmaprime.io/)
+يمكن العثور على الوثائق في [كتاب Lighthouse](https://lighthouse-book.sigmaprime.io/)
 
-### لودستار {#lodestar}
+### Lodestar {#lodestar}
 
-لودستار is a production-ready consensus client implementation written in Typescript under the LGPL-3.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. لودستار consists of a beacon node and validator client powered by جافا سكريبت implementations of إيثريوم protocols. لودستار aims to improve إيثريوم usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
+Lodestar هو تطبيق لعميل الإجماع جاهز للإنتاج مكتوب بلغة Typescript بموجب ترخيص LGPL-3.0. تتم صيانته بواسطة ChainSafe Systems وهو أحدث عملاء الإجماع للمُحصّصين الفرديين والمطورين والباحثين. يتكون Lodestar من عقدة منارة وعميل مُدقِّق مدعوم بتطبيقات JavaScript لبروتوكولات إيثريوم. يهدف Lodestar إلى تحسين قابلية استخدام إيثريوم مع العملاء الخفيفين، وتوسيع إمكانية الوصول إلى مجموعة أكبر من المطورين والمساهمة بشكل أكبر في تنوع النظام البيئي.
 
-يمكن العثور على مزيد من المعلومات على [موقع لودستار](https://lodestar.chainsafe.io/)
+يمكن العثور على مزيد من المعلومات على [موقع Lodestar](https://lodestar.chainsafe.io/)
 
-### نيمبوس {#nimbus}
+### Nimbus {#nimbus}
 
-نيمبوس is a consensus client implementation written in نيم under the Apache-2.0 license. It is a production-ready client in use by solo-stakers and staking pools. نيمبوس is designed for resource efficiency, making it easy to run on resource-restricted devices and enterprise infrastructure with equal ease, without compromising stability or reward performance. A lighter resource footprint means the client has a greater margin of safety when the network is under stress.
+Nimbus هو تطبيق لعميل الإجماع مكتوب بلغة Nim بموجب ترخيص Apache-2.0. إنه عميل جاهز للإنتاج قيد الاستخدام من قبل المُحصّصين الفرديين ومجمعات التحصيص. تم تصميم Nimbus لكفاءة الموارد، مما يجعل من السهل تشغيله على الأجهزة المقيدة الموارد والبنية التحتية للمؤسسات بنفس السهولة، دون المساس بالاستقرار أو أداء المكافآت. تعني البصمة الأخف للموارد أن العميل لديه هامش أمان أكبر عندما تكون الشبكة تحت الضغط.
 
-تعرف على المزيد في [وثائق نيمبوس](https://nimbus.guide/)
+تعرف على المزيد في [وثائق Nimbus](https://nimbus.guide/)
 
-### بريزم {#prysm}
+### Prysm {#prysm}
 
-بريزم is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
+Prysm هو عميل إجماع كامل الميزات ومفتوح المصدر مكتوب بلغة Go بموجب ترخيص GPL-3.0. يتميز بواجهة مستخدم اختيارية لتطبيق الويب ويعطي الأولوية لتجربة المستخدم والوثائق وقابلية التكوين لكل من مستخدمي التحصيص في المنزل والمؤسسات.
 
-تفضل بزيارة [وثائق بريزم](https://prysm.offchainlabs.com/docs/) لمعرفة المزيد.
+قم بزيارة [وثائق Prysm](https://prysm.offchainlabs.com/docs/) لمعرفة المزيد.
 
-### تيكو {#teku}
+### Teku {#teku}
 
-تيكو is one of the original بيكون تشين genesis clients. Alongside the usual goals (security, robustness, stability, usability, performance), تيكو specifically aims to comply fully with all the various consensus client standards.
+Teku هو أحد عملاء تكوين سلسلة المنارة الأصليين. إلى جانب الأهداف المعتادة (الأمان، والمتانة، والاستقرار، وقابلية الاستخدام، والأداء)، يهدف Teku تحديدًا إلى الامتثال الكامل لجميع معايير عملاء الإجماع المختلفة.
 
-تيكو offers very flexible deployment options. The beacon node and validator client can be run together as a single process, which is extremely convenient for solo stakers, or nodes can be run separately for sophisticated staking operations. بالإضافة إلى ذلك، فإن تيكو قابل للتشغيل البيني بشكل كامل مع [Web3Signer](https://github.com/ConsenSys/web3signer/) لأمان مفتاح التوقيع والحماية من القطع.
+يقدم Teku خيارات نشر مرنة للغاية. يمكن تشغيل عقدة المنارة وعميل المُدقِّق معًا كعملية واحدة، وهو أمر مريح للغاية للمُحصّصين الفرديين، أو يمكن تشغيل العقد بشكل منفصل لعمليات التحصيص المعقدة. بالإضافة إلى ذلك، فإن Teku قابل للتشغيل البيني بالكامل مع [Web3Signer](https://github.com/ConsenSys/web3signer/) لأمان مفتاح التوقيع وحماية العقوبة (slashing).
 
-تيكو is written in جافا and is Apache 2.0 licensed. It is developed by the Protocols team at كونسنسيس that is also responsible for بيسو and Web3Signer. تعرف على المزيد في [وثائق تيكو](https://docs.teku.consensys.net/en/latest/).
+تمت كتابة Teku بلغة Java ومرخص بموجب Apache 2.0. تم تطويره بواسطة فريق البروتوكولات في ConsenSys المسؤول أيضًا عن Besu و Web3Signer. تعرف على المزيد في [وثائق Teku](https://docs.teku.consensys.net/en/latest/).
 
-### جراندين {#grandine}
+### Grandine {#grandine}
 
-جراندين هو تنفيذ عميل إجماعي، مكتوب بلغة راست بموجب ترخيص GPL-3.0. يتم صيانته بواسطة فريق جراندين Core وهو سريع وعالي الأداء وخفيف الوزن. إنه يناسب مجموعة واسعة من المشاركين من المشاركين الفرديين الذين يعملون على أجهزة ذات موارد منخفضة مثل راسبيري باي إلى المشاركين المؤسسيين الكبار الذين يديرون عشرات الآلاف من المحققين.
+Grandine هو تطبيق لعميل الإجماع، مكتوب بلغة Rust بموجب ترخيص GPL-3.0. تتم صيانته بواسطة فريق Grandine الأساسي وهو سريع وعالي الأداء وخفيف الوزن. يناسب مجموعة واسعة من المُحصّصين من المُحصّصين الفرديين الذين يعملون على أجهزة منخفضة الموارد مثل Raspberry Pi إلى المُحصّصين المؤسسيين الكبار الذين يديرون عشرات الآلاف من المُدقِّقين.
 
-يمكن العثور على التوثيق في [كتاب جراندين](https://docs.grandine.io/)
+يمكن العثور على الوثائق في [كتاب Grandine](https://docs.grandine.io/)
 
 ## أوضاع المزامنة {#sync-modes}
 
-To follow and verify current data in the network, the إيثريوم client needs to sync with the latest network state. This is done by downloading data from peers, cryptographically verifying their integrity, and building a local blockchain database.
+لمتابعة البيانات الحالية في الشبكة والتحقق منها، يحتاج عميل إيثريوم إلى المزامنة مع أحدث حالة للشبكة. يتم ذلك عن طريق تنزيل البيانات من الأقران، والتحقق من سلامتها تشفيريًا، وبناء قاعدة بيانات بلوك تشين محلية.
 
-Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
+تمثل أوضاع المزامنة نُهجًا مختلفة لهذه العملية مع مقايضات مختلفة. يختلف العملاء أيضًا في تنفيذهم لخوارزميات المزامنة. ارجع دائمًا إلى الوثائق الرسمية للعميل الذي اخترته للحصول على تفاصيل حول التنفيذ.
 
 ### أوضاع مزامنة طبقة التنفيذ {#execution-layer-sync-modes}
 
-يمكن تشغيل طبقة التنفيذ في أوضاع مختلفة لتناسب حالات الاستخدام المختلفة، من إعادة تنفيذ حالة العالم الخاصة بسلسلة الكتل إلى المزامنة فقط مع طرف السلسلة من نقطة تفتيش موثوقة.
+قد يتم تشغيل طبقة التنفيذ في أوضاع مختلفة لتناسب حالات الاستخدام المختلفة، من إعادة تنفيذ حالة العالم للبلوك تشين إلى المزامنة فقط مع طرف السلسلة من نقطة تفتيش موثوقة.
 
-#### مزامنة كاملة {#full-sync}
+#### المزامنة الكاملة (Full sync) {#full-sync}
 
-تقوم المزامنة الكاملة بتنزيل جميع الكتل (بما في ذلك الرؤوس وأجسام الكتل) وتجديد حالة blockchain بشكل تدريجي عن طريق تنفيذ كل كتلة من التكوين.
+تقوم المزامنة الكاملة بتنزيل جميع الكتل (بما في ذلك الرؤوس وأجسام الكتل) وتعيد إنشاء حالة البلوك تشين بشكل تدريجي عن طريق تنفيذ كل كتلة منذ التكوين.
 
-- Minimizes trust and offers the highest security by verifying every transaction.
-- With an increasing number of transactions, it can take days to weeks to process all transactions.
+- تقلل من الثقة وتقدم أعلى مستوى من الأمان من خلال التحقق من كل معاملة.
+- مع تزايد عدد المعاملات، قد يستغرق الأمر من أيام إلى أسابيع لمعالجة جميع المعاملات.
 
-تقوم [عقد الأرشيف](#archive-node) بإجراء مزامنة كاملة لإنشاء (والاحتفاظ) بسجل كامل لتغييرات الحالة التي أجرتها كل معاملة في كل كتلة.
+تقوم [العقد الأرشيفية](#archive-node) بإجراء مزامنة كاملة لبناء (والاحتفاظ) بسجل كامل لتغييرات الحالة التي أجرتها كل معاملة في كل كتلة.
 
-#### مزامنة سريعة {#fast-sync}
+#### المزامنة السريعة (Fast sync) {#fast-sync}
 
-مثل المزامنة الكاملة، تقوم المزامنة السريعة بتنزيل كافة الكتل (بما في ذلك الرؤوس والمعاملات والإيصالات). ومع ذلك، بدلاً من إعادة معالجة المعاملات التاريخية، تعتمد المزامنة السريعة على الإيصالات حتى تصل إلى رأس حديث، عندما تتحول إلى استيراد ومعالجة الكتل لتوفير عقدة كاملة.
+مثل المزامنة الكاملة، تقوم المزامنة السريعة بتنزيل جميع الكتل (بما في ذلك الرؤوس والمعاملات والإيصالات). ومع ذلك، بدلاً من إعادة معالجة المعاملات التاريخية، تعتمد المزامنة السريعة على الإيصالات حتى تصل إلى رأس حديث، وعندها تتحول إلى استيراد ومعالجة الكتل لتوفير عقدة كاملة.
 
-- استراتيجية المزامنة السريعة.
-- يقلل من الطلب على المعالجة لصالح استخدام النطاق الترددي.
+- استراتيجية مزامنة سريعة.
+- تقلل من الطلب على المعالجة لصالح استخدام النطاق الترددي.
 
 #### مزامنة Snap {#snap-sync}
 
-تتحقق عمليات المزامنة السريعة أيضًا من السلسلة كتلة تلو الأخرى. ومع ذلك، بدلاً من البدء في كتلة التكوين، تبدأ عملية المزامنة السريعة عند نقطة تفتيش "موثوقة" أحدث معروفة بأنها جزء من blockchain الحقيقي. تقوم العقدة بحفظ نقاط التفتيش الدورية أثناء حذف البيانات الأقدم من عمر معين. يتم استخدام هذه اللقطات لتجديد بيانات الحالة حسب الحاجة، بدلاً من تخزينها إلى الأبد.
+تتحقق مزامنة Snap أيضًا من السلسلة كتلة بكتلة. ومع ذلك، بدلاً من البدء من كتلة التكوين، تبدأ مزامنة Snap عند نقطة تفتيش 'موثوقة' أحدث يُعرف أنها جزء من البلوك تشين الحقيقي. تحفظ العقدة نقاط تفتيش دورية مع حذف البيانات الأقدم من عمر معين. تُستخدم هذه اللقطات لإعادة إنشاء بيانات الحالة حسب الحاجة، بدلاً من تخزينها إلى الأبد.
 
-- أسرع استراتيجية للمزامنة، وهي الافتراضية حاليًا في شبكة إيثريوم الرئيسية.
-- Saves a lot of disk usage and network bandwidth without sacrificing security.
+- أسرع استراتيجية مزامنة، وهي الافتراضية حاليًا في الشبكة الرئيسية لإيثريوم.
+- توفر الكثير من استخدام القرص وعرض النطاق الترددي للشبكة دون التضحية بالأمان.
 
-[المزيد عن مزامنة Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
+[المزيد حول مزامنة snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
 
-#### مزامنة خفيفة {#light-sync}
+#### المزامنة الخفيفة (Light sync) {#light-sync}
 
-Light client mode downloads all block headers, block data, and verifies some randomly. Only syncs tip of the chain from the trusted checkpoint.
+يقوم وضع العميل الخفيف بتنزيل جميع رؤوس الكتل وبيانات الكتل ويتحقق من بعضها بشكل عشوائي. يزامن فقط طرف السلسلة من نقطة التفتيش الموثوقة.
 
-- Gets only the latest state while relying on trust in developers and consensus mechanism.
-- Client ready to use with current network state in a few minutes.
+- يحصل فقط على أحدث حالة مع الاعتماد على الثقة في المطورين وآلية الإجماع.
+- العميل جاهز للاستخدام مع حالة الشبكة الحالية في بضع دقائق.
 
-**ملاحظة** لا تعمل المزامنة الخفيفة بعد مع إيثريوم إثبات الحصة - يجب شحن إصدارات جديدة من المزامنة الخفيفة قريبًا!
+**ملاحظة** لا تعمل المزامنة الخفيفة حتى الآن مع إيثريوم إثبات الحصة - يجب أن يتم إصدار إصدارات جديدة من المزامنة الخفيفة قريبًا!
 
-[المزيد عن العملاء الخفيفين](/developers/docs/nodes-and-clients/light-clients/)
+[المزيد حول العملاء الخفيفين](/developers/docs/nodes-and-clients/light-clients/)
 
 ### أوضاع مزامنة طبقة الإجماع {#consensus-layer-sync-modes}
 
-#### مزامنة تفاؤلية {#optimistic-sync}
+#### المزامنة المتفائلة (Optimistic sync) {#optimistic-sync}
 
-Optimistic sync is a post-merge synchronization strategy designed to be opt-in and backwards compatible, allowing execution nodes to sync via established methods. يمكن لمحرك التنفيذ استيراد كتل المنارة _بتفاؤل_ دون التحقق منها بالكامل، والعثور على أحدث رأس، ثم بدء مزامنة السلسلة بالطرق المذكورة أعلاه. Then, after the execution client has caught up, it will inform the consensus client of the validity of the transactions in the بيكون تشين.
+المزامنة المتفائلة هي استراتيجية مزامنة ما بعد الدمج مصممة لتكون اختيارية ومتوافقة مع الإصدارات السابقة، مما يسمح لعقد التنفيذ بالمزامنة عبر الطرق المعمول بها. يمكن لمحرك التنفيذ استيراد كتل المنارة _بتفاؤل_ دون التحقق منها بالكامل، والعثور على أحدث رأس، ثم البدء في مزامنة السلسلة بالطرق المذكورة أعلاه. بعد ذلك، بعد أن يلحق عميل التنفيذ بالركب، سيُبلغ عميل الإجماع بصلاحية المعاملات في سلسلة المنارة.
 
-[المزيد عن المزامنة التفاؤلية](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[المزيد حول المزامنة المتفائلة](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
-#### مزامنة نقطة التفتيش {#checkpoint-sync}
+#### مزامنة نقطة التفتيش (Checkpoint sync) {#checkpoint-sync}
 
-تعمل مزامنة نقطة التفتيش، المعروفة أيضًا باسم مزامنة الذاتية الضعيفة، على إنشاء تجربة مستخدم متفوقة لمزامنة عقدة Beacon. يعتمد هذا على افتراضات [الذاتية الضعيفة](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) والتي تتيح مزامنة سلسلة المنارة من نقطة تفتيش ذاتية ضعيفة حديثة بدلاً من نقطة الأصل. تجعل عمليات مزامنة نقاط التفتيش وقت المزامنة الأولي أسرع بشكل كبير مع افتراضات ثقة مماثلة للمزامنة من [نقطة الأصل](/glossary/#genesis-block).
+تُنشئ مزامنة نقطة التفتيش، والمعروفة أيضًا باسم مزامنة الذاتية الضعيفة (weak subjectivity sync)، تجربة مستخدم فائقة لمزامنة عقدة المنارة. تعتمد على افتراضات [الذاتية الضعيفة](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) التي تُمكّن من مزامنة سلسلة المنارة من نقطة تفتيش ذاتية ضعيفة حديثة بدلاً من التكوين. تجعل مزامنة نقطة التفتيش وقت المزامنة الأولي أسرع بكثير مع افتراضات ثقة مماثلة للمزامنة من [التكوين](/glossary/#genesis-block).
 
-In practice, this means your node connects to a remote service to download recent finalized states and continues verifying data from that point. إن الطرف الثالث الذي يقدم البيانات هو الطرف الموثوق به ويجب اختياره بعناية.
+من الناحية العملية، هذا يعني أن عقدتك تتصل بخدمة عن بُعد لتنزيل الحالات النهائية الحديثة وتستمر في التحقق من البيانات من تلك النقطة. الطرف الثالث الذي يوفر البيانات موثوق به ويجب اختياره بعناية.
 
-المزيد عن [مزامنة نقطة التفتيش](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
+المزيد حول [مزامنة نقطة التفتيش](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
-## قراءة إضافية {#further-reading}
+## قراءات إضافية {#further-reading}
 
-- [إيثريوم 101 - الجزء 2 - فهم العقد](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _- Wil Barnes، 13 فبراير 2019_
-- [تشغيل عقد إيثريوم كاملة: دليل لأصحاب الدوافع الضعيفة](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– جاستن لورو، 7 نوفمبر 2019_
+- [إيثريوم 101 - الجزء 2 - فهم العقد](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– ويل بارنز، 13 فبراير 2019_
+- [تشغيل عقد إيثريوم الكاملة: دليل للمتحمسين بالكاد](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– جاستن ليروكس، 7 نوفمبر 2019_
 
-## المواضيع ذات الصلة {#related-topics}
+## مواضيع ذات صلة {#related-topics}
 
 - [الكتل](/developers/docs/blocks/)
 - [الشبكات](/developers/docs/networks/)
 
-## دروس تعليمية ذات صلة {#related-tutorials}
+## برامج تعليمية ذات صلة {#related-tutorials}
 
-- [حوّل جهاز راسبيري باي 4 الخاص بك إلى عقدة مدقق بمجرد وميض بطاقة MicroSD - دليل التثبيت](/developers/tutorials/run-node-raspberry-pi/) _– قم بوميض جهاز راسبيري باي 4 الخاص بك، وقم بتوصيل كابل إيثرنت، وتوصيل قرص SSD وتشغيل الجهاز لتحويل راسبيري باي 4 إلى عقدة إيثريوم كاملة تشغل طبقة التنفيذ (الشبكة الرئيسية) و/أو طبقة الإجماع (سلسلة المنارة / المدقق)._
+- [حوّل جهاز Raspberry Pi 4 الخاص بك إلى عقدة مُدقِّق بمجرد تفليش بطاقة MicroSD – دليل التثبيت](/developers/tutorials/run-node-raspberry-pi/) _– قم بتفليش جهاز Raspberry Pi 4 الخاص بك، وقم بتوصيل كابل إيثرنت، وقم بتوصيل قرص SSD وقم بتشغيل الجهاز لتحويل Raspberry Pi 4 إلى عقدة إيثريوم كاملة تُشغّل طبقة التنفيذ (الشبكة الرئيسية) و / أو طبقة الإجماع (سلسلة المنارة / المُدقِّق)._
