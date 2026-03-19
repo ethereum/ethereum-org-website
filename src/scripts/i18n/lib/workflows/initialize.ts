@@ -11,12 +11,28 @@ import { logSection } from "./utils"
  * Initialize workflow: validate config, log settings, fetch Crowdin state
  */
 export async function initializeWorkflow(): Promise<WorkflowContext> {
-  const { targetPath } = config
+  const { targetPath, targetPaths } = config
 
   logSection("Crowdin AI Translation Import")
   console.log(`Target languages: ${config.allCrowdinCodes.join(", ")}`)
 
-  if (targetPath) {
+  if (targetPaths.length > 1) {
+    console.log(
+      `Mode: Multi-file (${targetPaths.length} files)`
+    )
+    for (const p of targetPaths) {
+      console.log(`  - ${p}`)
+    }
+    // Validate each path
+    try {
+      for (const p of targetPaths) {
+        validateTargetPath(p)
+      }
+    } catch (e) {
+      console.error(e instanceof Error ? e.message : String(e))
+      process.exit(1)
+    }
+  } else if (targetPath) {
     const isFile = targetPath.endsWith(".md") || targetPath.endsWith(".json")
     console.log(`Mode: ${isFile ? "Single file" : "Directory"} (${targetPath})`)
 

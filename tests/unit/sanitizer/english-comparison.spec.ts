@@ -21,6 +21,9 @@ const {
   restoreDroppedBackslashEscapes,
   fixCollapsedComponentLineBreaks,
   fixMissingLinkBrackets,
+  restoreStrippedAbbreviations,
+  fixMergedSupDigits,
+  fixCrowdinNumberedTags,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -694,6 +697,243 @@ test.describe("English Comparison Fixes", () => {
         ].join("\n")
       )
       expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("restoreStrippedAbbreviations", () => {
+    test("restores RWA abbreviation in title", () => {
+      const translated =
+        '---\ntitle: "الأصول الحقيقية ()"\n---\nContent here.'
+      const english =
+        '---\ntitle: "Real-world assets (RWA)"\n---\nContent here.'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toContain('"الأصول الحقيقية (RWA)"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("restores PoA abbreviation in title", () => {
+      const translated =
+        '---\ntitle: "إثبات السلطة ()"\n---\nContent.'
+      const english =
+        '---\ntitle: "Proof-of-authority (PoA)"\n---\nContent.'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toContain('"إثبات السلطة (PoA)"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves content unchanged when no empty parens", () => {
+      const translated = '---\ntitle: "Normal title"\n---\nContent.'
+      const english = '---\ntitle: "Normal title"\n---\nContent.'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not restore non-ASCII abbreviations", () => {
+      const translated = '---\ntitle: "Test ()"\n---'
+      const english = '---\ntitle: "Test (テスト)"\n---'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple empty parens", () => {
+      const translated = '---\ntitle: "() and ()"\n---'
+      const english = '---\ntitle: "(ABC) and (DEF)"\n---'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toContain("(ABC)")
+      expect(content).toContain("(DEF)")
+      expect(fixCount).toBe(2)
+    })
+  })
+
+  test.describe("fixProtectedBrandNames (locale-aware)", () => {
+    test("skips brand tag reversion for non-Latin locale (ar)", () => {
+      const translated =
+        '---\ntags: ["سوليديتي", "وافل"]\n---\nContent with إيثريوم.'
+      const english =
+        '---\ntags: ["Solidity", "Waffle"]\n---\nContent with Ethereum.'
+      // For Arabic, brand tags should NOT be reverted to English
+      // (transliterated forms are correct for non-Latin UI)
+      // NOTE: fixBrandTags still runs for all locales per current policy
+      // (brand tags stay Latin). This test validates the warning suppression.
+      const result = fixProtectedBrandNames(translated, english, "ar")
+      // Should NOT warn about brand count mismatches for non-Latin locales
+      const brandWarnings = result.warnings.filter((w) =>
+        w.includes("Protected brand")
+      )
+      expect(brandWarnings).toHaveLength(0)
+    })
+
+    test("warns about brand mismatches for Latin locale (de)", () => {
+      const translated =
+        '---\ntags: ["Solidity"]\n---\nInhalt ohne den Markennamen.'
+      const english =
+        '---\ntags: ["Solidity"]\n---\nContent about Ethereum and Ethereum network.'
+      const result = fixProtectedBrandNames(translated, english, "de")
+      const brandWarnings = result.warnings.filter((w) =>
+        w.includes("Protected brand")
+      )
+      expect(brandWarnings.length).toBeGreaterThan(0)
+    })
+  })
+
+  test.describe("syncProtectedFrontmatterFields (locale-aware)", () => {
+    test("preserves transliterated author for non-Latin locale", () => {
+      const translated =
+        '---\ntitle: "Test"\nauthor: "\u0623\u0648\u0631\u064A \u0628\u0648\u0645\u064A\u0631\u0627\u0646\u062A\u0632"\nskill: beginner\n---\nContent.'
+      const english =
+        '---\ntitle: "Test"\nauthor: Ori Pomerantz\nskill: beginner\n---\nContent.'
+      const { content } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "ar"
+      )
+      // Author should stay transliterated for Arabic
+      expect(content).toContain(
+        "\u0623\u0648\u0631\u064A \u0628\u0648\u0645\u064A\u0631\u0627\u0646\u062A\u0632"
+      )
+      expect(content).not.toContain("author: Ori Pomerantz")
+    })
+
+    test("reverts author to English for Latin locale", () => {
+      const translated =
+        '---\ntitle: "Test"\nauthor: Ori Translated\nskill: beginner\n---\nContent.'
+      const english =
+        '---\ntitle: "Test"\nauthor: Ori Pomerantz\nskill: beginner\n---\nContent.'
+      const { content } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "de"
+      )
+      expect(content).toContain("author: Ori Pomerantz")
+    })
+  })
+
+  test.describe("fixMergedSupDigits", () => {
+    test("splits merged base digit out of <sup> tag", () => {
+      const translated = "وعلى الأكثر<sup>2256</sup> -1."
+      const english = "and at most 2<sup>256</sup>-1."
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe("وعلى الأكثر2<sup>256</sup> -1.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple merged sup tags", () => {
+      const translated = "تقريبًا 2<sup>187</sup>. يجب إجراء ~<sup>269</sup> محاولة"
+      const english = "approximately 2<sup>187</sup>. must make ~2<sup>69</sup> attempts"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toContain("2<sup>69</sup>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correctly formatted sup tags unchanged", () => {
+      const translated = "القيمة 2<sup>256</sup> كبيرة"
+      const english = "the value 2<sup>256</sup> is large"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not modify when no English sup to compare", () => {
+      const translated = "<sup>2256</sup> بدون مرجع"
+      const english = "no sup tags here"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles sup with footnote link (not a digit merge)", () => {
+      const translated = "أرقام<sup>[fn3](#notes)</sup>"
+      const english = "numbers<sup>[fn3](#notes)</sup>"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const translated = "```\n<sup>2256</sup>\n```"
+      const english = "```\n2<sup>256</sup>\n```"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixCrowdinNumberedTags", () => {
+    test("replaces </0>text<0> with <strong>text</strong>", () => {
+      const translated = '</0>الظهور الأول لونا كضيفة<0>'
+      const english = "<strong>Luna's first appearance as a podcast guest</strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe("<strong>الظهور الأول لونا كضيفة</strong>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles HTML-escaped opening tag &lt;0>", () => {
+      const translated = '</0>من الجيد أن نعلم&lt;0>'
+      const english = "<strong>Good to know</strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe("<strong>من الجيد أن نعلم</strong>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles inverted tags inside JSX paragraph", () => {
+      const translated =
+        '<p className="mt-0"></0>من الجيد أن نعلم&lt;0></p>'
+      const english =
+        '<p className="mt-0"><strong>Good to know</strong></p>'
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(
+        '<p className="mt-0"><strong>من الجيد أن نعلم</strong></p>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple different numbered tags", () => {
+      const translated = '<0>نص عريض<1>و مائل</1></0>'
+      const english = "<strong>bold text<em>and italic</em></strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe("<strong>نص عريض<em>و مائل</em></strong>")
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves content unchanged when no numbered tags", () => {
+      const translated = "<strong>نص عريض</strong>"
+      const english = "<strong>bold text</strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("no change when no English tags to map from", () => {
+      const translated = "</0>text<0>"
+      const english = "plain text no tags"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const translated = "```\n</0>text<0>\n```"
+      const english = "```\n<strong>text</strong>\n```"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
     })
   })
 })
