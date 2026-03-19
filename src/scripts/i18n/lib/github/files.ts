@@ -179,10 +179,13 @@ export const getAllEnglishFiles = async (): Promise<
 async function fetchSingleFile(
   filePath: string
 ): Promise<GitHubQueryResponseItem[]> {
-  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${filePath}?ref=${config.baseBranch}`
+  const url = new URL(
+    `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${filePath}`
+  )
+  url.searchParams.set("ref", config.baseBranch)
 
   try {
-    const res = await fetchWithRetry(url, {
+    const res = await fetchWithRetry(url.toString(), {
       headers: gitHubBearerHeaders,
     })
 
