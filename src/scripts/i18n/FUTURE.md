@@ -1,4 +1,4 @@
-# Gemini Direct Translation Pipeline -- Future Features
+# Gemini Translation Pipeline -- Future Features
 
 > **Maintenance:** Remove or update entries here as they are implemented. Do not let this file accumulate stale items.
 
@@ -91,7 +91,7 @@
 
 **Proposed solution:**
 - GitHub Action that watches for merges to dev affecting `public/content/` or `src/intl/en/`
-- Automatically triggers the Gemini direct translation workflow for changed files
+- Automatically triggers the Gemini translation workflow for changed files
 - Could be scoped to specific languages or all languages depending on the change
 - Should respect a cooldown/batch window to avoid triggering on every small merge
 

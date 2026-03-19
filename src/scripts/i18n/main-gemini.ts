@@ -1,5 +1,5 @@
 /**
- * Main entry point for Gemini direct translation pipeline.
+ * Main entry point for Gemini translation pipeline.
  *
  * Replaces Crowdin as the translation intermediary. Sends whole files
  * to Gemini with site-specific context, then runs sanitizer +
@@ -35,7 +35,7 @@ import { logSection } from "./lib/workflows/utils"
 import { config } from "./config"
 
 async function main() {
-  logSection("Gemini Direct Translation Pipeline")
+  logSection("Gemini Translation Pipeline")
 
   // Preflight checks
   if (!isGeminiAvailable()) {
@@ -133,7 +133,7 @@ async function main() {
   cleanupProgress({ runId, startedAt: "", languages: {} })
 
   logSection("Complete")
-  console.log("[main] Gemini direct translation pipeline finished.")
+  console.log("[main] Gemini translation pipeline finished.")
 
   // Print summary
   for (const [lang, s] of Object.entries(stats)) {

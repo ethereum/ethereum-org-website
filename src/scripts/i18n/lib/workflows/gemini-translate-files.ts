@@ -153,7 +153,7 @@ async function translateLanguage(
   // Incremental committer: one amending commit per language
   const committer = new IncrementalCommitter(
     branchName,
-    `i18n(${language}): Gemini direct translation`
+    `i18n(${language}): Gemini translation`
   )
   await committer.init()
 

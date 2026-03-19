@@ -64,8 +64,14 @@ export const getBranchObject = async (
  * Generate a branch name based on current timestamp
  */
 export const createBranchName = (suffix?: string) => {
-  const ts = new Date().toISOString().replace(/\..*$/, "").replace(/[:]/g, "-")
-  return "i18n/import/" + ts + (suffix ? `-${suffix}` : "")
+  const now = new Date()
+  const mm = String(now.getUTCMonth() + 1).padStart(2, "0")
+  const dd = String(now.getUTCDate()).padStart(2, "0")
+  const hh = String(now.getUTCHours()).padStart(2, "0")
+  const min = String(now.getUTCMinutes()).padStart(2, "0")
+  const ts = `${mm}-${dd}T${hh}${min}`
+  const label = suffix || "multi"
+  return `i18n/${label}-${ts}`
 }
 
 /**

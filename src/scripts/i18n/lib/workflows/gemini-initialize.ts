@@ -1,5 +1,5 @@
 /**
- * Initialize the Gemini direct translation workflow.
+ * Initialize the Gemini translation workflow.
  * No Crowdin -- just fetch English files, glossary, and config.
  */
 
@@ -51,7 +51,7 @@ async function downloadFileContent(filePath: string): Promise<string> {
  * Initialize the workflow context.
  */
 export async function geminiInitialize(): Promise<GeminiWorkflowContext> {
-  logSection("Gemini Direct Translation - Initialize")
+  logSection("Gemini Translation - Initialize")
 
   // Fetch English file list
   console.log("[init] Fetching English source files...")

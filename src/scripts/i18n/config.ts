@@ -31,11 +31,11 @@ export const gitHubBearerHeaders = {
   Accept: "application/vnd.github.v3+json",
 }
 
-// Crowdin API configuration (optional -- not needed for Gemini direct pipeline)
+// Crowdin API configuration (optional -- not needed for Gemini pipeline)
 const crowdinApiKey = process.env.I18N_CROWDIN_API_KEY || ""
 if (!crowdinApiKey && !process.env.GEMINI_API_KEY) {
   console.error(
-    "[ERROR] Missing API key. Set I18N_CROWDIN_API_KEY (Crowdin pipeline) or GEMINI_API_KEY (Gemini direct pipeline)"
+    "[ERROR] Missing API key. Set I18N_CROWDIN_API_KEY (Crowdin pipeline) or GEMINI_API_KEY (Gemini pipeline)"
   )
   throw new Error("No API key found (I18N_CROWDIN_API_KEY or GEMINI_API_KEY)")
 }
@@ -67,7 +67,10 @@ const targetPathRaw = process.env.TARGET_PATH || ""
 // Support comma-separated list of files/directories
 const targetPath = targetPathRaw
 const targetPaths = targetPathRaw
-  ? targetPathRaw.split(",").map((p) => p.trim()).filter(Boolean)
+  ? targetPathRaw
+      .split(",")
+      .map((p) => p.trim())
+      .filter(Boolean)
   : []
 const excludePath = process.env.EXCLUDE_PATH?.trim() || ""
 

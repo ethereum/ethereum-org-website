@@ -1,4 +1,4 @@
-name: Import Gemini Direct Translations
+name: Gemini Translations
 
 on:
   workflow_dispatch:
@@ -56,7 +56,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run Gemini direct translation
+      - name: Run Gemini translation
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main-gemini.ts
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -69,3 +69,4 @@ jobs:
           SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
           VERBOSE: ${{ github.event.inputs.verbose }}
           GITHUB_REPOSITORY: ${{ github.repository }}
+          TRANSLATION_PIPELINE: Gemini
