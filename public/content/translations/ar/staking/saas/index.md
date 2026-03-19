@@ -1,5 +1,5 @@
 ---
-title: "تجميد العملات كخدمة"
+title: "التحصيص كخدمة"
 description: "تعرف على التخزين كخدمة"
 lang: ar
 template: staking
@@ -91,5 +91,5 @@ summaryPoints:
 
 ## قراءة إضافية {#further-reading}
 
-- [دليل إيثريوم لتجميد العملات](https://www.staking.directory/) - _Eridian and Spacesider_
+- [دليل إيثريوم لالتحصيص](https://www.staking.directory/) - _Eridian and Spacesider_
 - [تقييم خدمات التخزين](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

@@ -117,7 +117,7 @@ sidebarDepth: 1
 </ExpandableCard>
 
 - [بيكترا.wtf](https://pectra.wtf)
-- [كيف ستعزز ترقية بيكترا تجربة تجميد العملات](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [كيف ستعزز ترقية بيكترا تجربة التحصيص](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [اقرأ مواصفات ترقية Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
 - [الأسئلة الشائعة حول Prague-Electra ("بيكترا")](/roadmap/pectra/)
 

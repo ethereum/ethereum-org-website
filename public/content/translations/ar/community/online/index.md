@@ -38,7 +38,7 @@ lang: ar
 <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - الجانب المالي من إيثريوم، بما في ذلك دي فاي</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - يركز على تطوير إيثريوم</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> - الاتجاهات وتحليل السوق</SocialListItem>
-<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> - نرحب بجميع المهتمين بتجميد العملات على إيثريوم</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> - نرحب بجميع المهتمين بالتحصيص على إيثريوم</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum-magicians.org">Fellowship of إيثيريوم ماجيشنز</Link> - مجتمع يركز على المعايير التقنية في إيثريوم</SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link href="https://ethereum.stackexchange.com">إيثريوم Stackexchange</Link> - نقاش ومساعدة لمطوري إيثريوم</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethresear.ch">إيثريوم Research</Link> - لوحة الرسائل الأكثر تأثيرًا لأبحاث الاقتصاد المشفر</SocialListItem>
@@ -48,7 +48,7 @@ lang: ar
 <SocialListItem socialIcon="discord"><Link href="https://discord.com/invite/Nz6rtfJ8Cu">إيثيريوم كات هيردرز</Link> - مجتمع يركز على تقديم دعم إدارة المشاريع لتطوير إيثريوم</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">إيثريوم Hackers</Link> - دردشة ديسكورد يديرها إي تي إتش جلوبال: مجتمع عبر الإنترنت لمخترقي إيثريوم في جميع أنحاء العالم</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - مجتمع ديسكورد يركز على تطوير إيثريوم</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">إيث ستيكر ديسكورد</Link> - إرشادات وتعليم ودعم وموارد يديرها المجتمع للمشاركين الحاليين والمحتملين في تجميد العملات</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">إيث ستيكر ديسكورد</Link> - إرشادات وتعليم ودعم وموارد يديرها المجتمع للمشاركين الحاليين والمحتملين في التحصيص</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - توقف ودردش حول تطوير وتصميم الويب لموقع ethereum.org مع الفريق وأشخاص من المجتمع</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos ديسكورد</Link> - مجتمع منشئي الويب 3 حيث يتواجد البناؤون والشخصيات البارزة في الصناعة وعشاق إيثريوم. We're passionate about web3 development, design, and culture. تعال وابنِ معنا.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">سوليديتي جيتر</Link> - دردشة لتطوير سوليديتي (جيتر)</SocialListItem>
