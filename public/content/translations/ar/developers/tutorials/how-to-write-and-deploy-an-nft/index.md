@@ -1,106 +1,94 @@
 ---
-title: "كيفية كتابة ونشر إن إف تي (الجزء 1/3 من سلسلة دروس إن إف تي التعليمية)"
-description: "This tutorial is Part 1 of a series on إن إف تيز that will take you step by step on how to write and deploy a Non Fungible Token (ERC-721 token) smart contract using إيثريوم and Inter Planetary File System (آي بي إف إس)."
-author: "سومي مودجيل"
-tags:
-  [
-    "ERC-721",
-    "Alchemy",
-    "Solidity",
-    "العقود الذكيه "
-  ]
+title: "كيفية كتابة ونشر رمز غير قابل للاستبدال (الجزء 1/3 من سلسلة دروس الرموز غير القابلة للاستبدال)"
+description: "هذا الدرس هو الجزء الأول من سلسلة حول الرموز غير القابلة للاستبدال (NFTs) والتي ستأخذك خطوة بخطوة حول كيفية كتابة ونشر عقد ذكي لرمز غير قابل للاستبدال (رمز ERC-721) باستخدام إيثريوم ونظام ملفات الكواكب البينية (IPFS)."
+author: "Sumi Mudgil"
+tags: ["ERC-721", "Alchemy", "Solidity", "عقود ذكية"]
 skill: beginner
 lang: ar
 published: 2021-04-22
 ---
 
-With إن إف تيز bringing blockchain into the public eye, now is an excellent opportunity to understand the hype yourself by publishing your own إن إف تي contract (ERC-721 Token) on the إيثريوم blockchain!
+مع جلب الرموز غير القابلة للاستبدال (NFTs) لتقنية البلوك تشين إلى أنظار الجمهور، أصبحت الآن فرصة ممتازة لفهم هذه الضجة بنفسك من خلال نشر عقد الرمز غير القابل للاستبدال الخاص بك (رمز ERC-721) على شبكة البلوك تشين لإيثريوم!
 
-تفخر ألكيمي بشدة بدعم أكبر الأسماء في مجال إن إف تي، بما في ذلك Makersplace (الذي سجل مؤخرًا رقمًا قياسيًا في بيع الأعمال الفنية الرقمية في Christie's مقابل 69 مليون دولار)، وDapper Labs (مبتكرو NBA Top Shot وCrypto Kitties)، وأوبن سي (أكبر سوق إن إف تي في العالم)، وZora، وSuper Rare، وNFTfi، وFoundation، وEnjin، وOrigin Protocol، وImmutable، وغيرها الكثير.
+تفخر Alchemy بشدة بتشغيل أكبر الأسماء في مجال الرموز غير القابلة للاستبدال، بما في ذلك Makersplace (التي سجلت مؤخرًا رقمًا قياسيًا في مبيعات الأعمال الفنية الرقمية في Christie’s مقابل 69 مليون دولار)، و Dapper Labs (مبتكري NBA Top Shot و Crypto Kitties)، و OpenSea (أكبر سوق للرموز غير القابلة للاستبدال في العالم)، و Zora، و Super Rare، و NFTfi، و Foundation، و Enjin، و Origin Protocol، و Immutable، والمزيد.
 
-في هذا الدرس التعليمي، سوف نستعرض عملية إنشاء ونشر عقد ذكي ERC-721 على شبكة اختبار سيبوليا باستخدام [ميتاماسك](https://metamask.io/)، و[سوليديتي](https://docs.soliditylang.org/en/v0.8.0/)، و[هارد هات](https://hardhat.org/)، و[بينياتا](https://pinata.cloud/) و[ألكيمي](https://alchemy.com/signup/eth) (لا تقلق إذا لم تفهم أيًا من هذا بعد — سنشرحه!).
+في هذا الدرس، سنستعرض كيفية إنشاء ونشر عقد ذكي من نوع ERC-721 على شبكة الاختبار Sepolia باستخدام [MetaMask](https://metamask.io/)، و [Solidity](https://docs.soliditylang.org/en/v0.8.0/)، و [Hardhat](https://hardhat.org/)، و [Pinata](https://pinata.cloud/)، و [Alchemy](https://alchemy.com/signup/eth) (لا تقلق إذا كنت لا تفهم ما يعنيه أي من هذا حتى الآن — سنشرح ذلك!).
 
-In Part 2 of this tutorial we’ll go through how we can use our smart contract to mint an إن إف تي, and in Part 3 we’ll explain how to view your إن إف تي on ميتاماسك.
+في الجزء الثاني من هذا الدرس، سنستعرض كيف يمكننا استخدام عقدنا الذكي من أجل السك او انشاء رمز غير قابل للاستبدال، وفي الجزء الثالث سنشرح كيفية عرض الرمز غير القابل للاستبدال الخاص بك على MetaMask.
 
-وبالطبع، إذا كانت لديك أي أسئلة في أي وقت، فلا تتردد في التواصل معنا على [ألكيمي ديسكورد](https://discord.gg/gWuC7zB) أو زيارة [مستندات واجهة برمجة تطبيقات إن إف تي الخاصة بـ ألكيمي](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+وبالطبع، إذا كانت لديك أسئلة في أي وقت، فلا تتردد في التواصل عبر [Alchemy Discord](https://discord.gg/gWuC7zB) أو زيارة [مستندات واجهة برمجة تطبيقات الرموز غير القابلة للاستبدال الخاصة بـ Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
 
 ## الخطوة 1: الاتصال بشبكة إيثريوم {#connect-to-ethereum}
 
-هناك عدة طرق لتقديم الطلبات إلى بلوكتشين إيثريوم، ولكن لتسهيل الأمور، سنستخدم حسابًا مجانيًا على [ألكيمي](https://alchemy.com/signup/eth)، وهي منصة مطوري بلوكتشين وواجهة برمجة تطبيقات تسمح لنا بالتواصل مع سلسلة إيثريوم دون الحاجة إلى تشغيل عُقدنا الخاصة.
+هناك العديد من الطرق لإجراء طلبات إلى البلوك تشين لإيثريوم، ولكن لتسهيل الأمور، سنستخدم حسابًا مجانيًا على [Alchemy](https://alchemy.com/signup/eth)، وهي منصة لمطوري البلوك تشين وواجهة برمجة تطبيقات (API) تتيح لنا التواصل مع سلسلة إيثريوم دون الحاجة إلى تشغيل عقدة خاصة بنا.
 
-In this tutorial, we’ll also take advantage of ألكيمي’s developer tools for monitoring and analytics to understand what’s going on under the hood in our smart contract deployment. إذا لم يكن لديك حساب ألكيمي بالفعل، يمكنك التسجيل مجانًا [هنا](https://alchemy.com/signup/eth).
+في هذا الدرس، سنستفيد أيضًا من أدوات المطورين الخاصة بـ Alchemy للمراقبة والتحليلات لفهم ما يحدث خلف الكواليس في نشر عقدنا الذكي. إذا لم يكن لديك حساب Alchemy بالفعل، يمكنك التسجيل مجانًا [هنا](https://alchemy.com/signup/eth).
 
-## الخطوة 2: إنشاء تطبيقك (ومفتاح API) {#make-api-key}
+## الخطوة 2: إنشاء تطبيقك (ومفتاح واجهة برمجة التطبيقات) {#make-api-key}
 
-Once you’ve created an ألكيمي account, you can generate an API key by creating an app. سيسمح لنا هذا بتقديم طلبات إلى شبكة اختبار سيبوليا. اطلع على [هذا الدليل](https://docs.alchemyapi.io/guides/choosing-a-network) إذا كنت مهتمًا بمعرفة المزيد عن شبكات الاختبار.
+بمجرد إنشاء حساب Alchemy، يمكنك إنشاء مفتاح واجهة برمجة تطبيقات (API) عن طريق إنشاء تطبيق. سيسمح لنا ذلك بإجراء طلبات إلى شبكة الاختبار Sepolia. تحقق من [هذا الدليل](https://docs.alchemyapi.io/guides/choosing-a-network) إذا كنت مهتمًا بمعرفة المزيد عن شبكات الاختبار.
 
-1. Navigate to the “Create App” page in your ألكيمي Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”
+1. انتقل إلى صفحة "Create App" (إنشاء تطبيق) في لوحة تحكم Alchemy الخاصة بك عن طريق التمرير فوق "Apps" (التطبيقات) في شريط التنقل والنقر على "Create App"
 
-![أنشئ تطبيقك](./create-your-app.png)
+![Create your app](./create-your-app.png)
 
-2. قم بتسمية تطبيقك (اخترنا "أول إن إف تي لي!")، وقدم وصفًا موجزًا، وحدد "إيثريوم" للسلسلة، واختر "سيبوليا" لشبكتك. Since the merge the other testnets have been deprecated.
+2. قم بتسمية تطبيقك (اخترنا "My First NFT!")، وقدم وصفًا قصيرًا، وحدد "Ethereum" للسلسلة (Chain)، واختر "Sepolia" لشبكتك. منذ الدمج، تم إيقاف شبكات الاختبار الأخرى.
 
-![قم بتكوين ونشر تطبيقك](./alchemy-explorer-sepolia.png)
+![Configure and publish your app](./alchemy-explorer-sepolia.png)
 
-3. Click “Create app” and that’s it! Your app should appear in the table below.
+3. انقر على "Create app" (إنشاء تطبيق) وهذا كل شيء! يجب أن يظهر تطبيقك في الجدول أدناه.
 
 ## الخطوة 3: إنشاء حساب إيثريوم (عنوان) {#create-eth-address}
 
-We need an إيثريوم account to send and receive transactions. For this tutorial, we’ll use ميتاماسك, a virtual wallet in the browser used to manage your إيثريوم account address. إذا كنت ترغب في فهم المزيد حول كيفية عمل المعاملات على إيثريوم، فراجع [هذه الصفحة](/developers/docs/transactions/) من مؤسسة إيثريوم.
+نحتاج إلى حساب إيثريوم لإرسال واستقبال المعاملات. في هذا الدرس، سنستخدم MetaMask، وهي محفظة افتراضية في المتصفح تُستخدم لإدارة عنوان حساب إيثريوم الخاص بك. إذا كنت ترغب في فهم المزيد حول كيفية عمل المعاملات على إيثريوم، فتحقق من [هذه الصفحة](/developers/docs/transactions/) من مؤسسة إيثريوم.
 
-يمكنك تنزيل وإنشاء حساب ميتاماسك مجانًا [هنا](https://metamask.io/download). عند إنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى "شبكة اختبار سيبوليا" في أعلى اليمين (حتى لا نتعامل بأموال حقيقية).
+يمكنك تنزيل وإنشاء حساب MetaMask مجانًا [هنا](https://metamask.io/download). عند إنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى "Sepolia Test Network" (شبكة الاختبار Sepolia) في أعلى اليمين (حتى لا نتعامل بأموال حقيقية).
 
-![تعيين سيبوليا كشبكتك](./metamask-goerli.png)
+![Set Sepolia as your network](./metamask-goerli.png)
 
-## الخطوة 4: إضافة إيثر من صنبور (Faucet) {#step-4-add-ether-from-a-faucet}
+## الخطوة 4: إضافة إيثر من صنبور {#step-4-add-ether-from-a-faucet}
 
-In order to deploy our smart contract to the test network, we’ll need some fake ETH. للحصول على ETH، يمكنك الانتقال إلى [صنبور سيبوليا](https://sepoliafaucet.com/) الذي تستضيفه ألكيمي، وتسجيل الدخول وإدخال عنوان حسابك، والنقر على "أرسل لي ETH". You should see ETH in your ميتاماسك account soon after!
+من أجل نشر عقدنا الذكي على شبكة الاختبار، سنحتاج إلى بعض من ETH الوهمي. للحصول على ETH، يمكنك الذهاب إلى [صنبور Sepolia](https://sepoliafaucet.com/) المستضاف بواسطة Alchemy، وتسجيل الدخول وإدخال عنوان حسابك، ثم النقر على "Send Me ETH" (أرسل لي ETH). يجب أن ترى ETH في حساب MetaMask الخاص بك بعد فترة وجيزة!
 
 ## الخطوة 5: التحقق من رصيدك {#check-balance}
 
-للتأكد مرة أخرى من وجود رصيدنا، دعنا نُجرِ طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الإنشاء الخاصة بـ ألكيمي](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your ميتاماسك account address and click “Send Request”, you should see a response like this:
+للتحقق مرة أخرى من وجود رصيدنا، دعنا نُجري طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الملحن الخاصة بـ Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). سيؤدي هذا إلى إرجاع كمية ETH في محفظتنا. بعد إدخال عنوان حساب MetaMask الخاص بك والنقر على "Send Request" (إرسال الطلب)، يجب أن ترى استجابة مثل هذه:
 
-    ```
-    {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
-    ```
+    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-> **ملاحظة** هذه النتيجة بوحدة wei وليس ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is 1 eth = 10<sup>18</sup> wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10<sup>18</sup> wei, which equals 1 ETH.
+> **ملاحظة** هذه النتيجة بوحدة wei، وليس ETH. تُستخدم wei كأصغر فئة من الإيثر. التحويل من wei إلى ETH هو <span dir="ltr">1 eth = 10<sup>18</sup> wei</span>. لذا إذا قمنا بتحويل 0xde0b6b3a7640000 إلى النظام العشري نحصل على <span dir="ltr">1\*10<sup>18</sup> wei</span>، وهو ما يساوي 1 ETH.
 
-Phew! Our fake money is all there.
+رائع! أموالنا الوهمية كلها موجودة.
 
 ## الخطوة 6: تهيئة مشروعنا {#initialize-project}
 
-First, we’ll need to create a folder for our project. Navigate to your command line and type:
+أولاً، سنحتاج إلى إنشاء مجلد لمشروعنا. انتقل إلى سطر الأوامر واكتب:
 
-    ```
     mkdir my-nft
     cd my-nft
-    ```
 
-Now that we’re inside our project folder, we’ll use npm init to initialize the project. إذا لم يكن لديك npm مثبتًا بالفعل، فاتبع [هذه الإرشادات](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (سنحتاج أيضًا إلى [نود.جي إس](https://nodejs.org/en/download/)، لذا قم بتنزيله أيضًا!).
+الآن ونحن داخل مجلد مشروعنا، سنستخدم npm init لتهيئة المشروع. إذا لم يكن لديك npm مثبتًا بالفعل، فاتبع [هذه التعليمات](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (سنحتاج أيضًا إلى [Node.js](https://nodejs.org/en/download/)، لذا قم بتنزيله أيضًا!).
 
-    ```
     npm init
-    ```
 
-It doesn’t really matter how you answer the installation questions; here is how we did it for reference:
+لا يهم حقًا كيف تجيب على أسئلة التثبيت؛ إليك كيف فعلنا ذلك كمرجع:
 
 ```json
     package name: (my-nft)
     version: (1.0.0)
-    description: أول NFT لي!
+    description: My first NFT!
     entry point: (index.js)
     test command:
     git repository:
     keywords:
     author:
     license: (ISC)
-    على وشك الكتابة إلى /Users/thesuperb1/Desktop/my-nft/package.json:
+    About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
 
     {
       "name": "my-nft",
       "version": "1.0.0",
-      "description": "أول NFT لي!",
+      "description": "My first NFT!",
       "main": "index.js",
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -110,31 +98,26 @@ It doesn’t really matter how you answer the installation questions; here is ho
     }
 ```
 
-Approve the package.json, and we’re good to go!
+وافق على package.json، ونحن جاهزون للبدء!
 
-## الخطوة 7: تثبيت [هارد هات](https://hardhat.org/getting-started/#overview) {#install-hardhat}
+## الخطوة 7: تثبيت [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-هارد هات is a development environment to compile, deploy, test, and debug your إيثريوم software. It helps developers when building smart contracts and dapps locally before deploying to the live chain.
+Hardhat هي بيئة تطوير لتجميع ونشر واختبار وتصحيح أخطاء برمجيات إيثريوم الخاصة بك. إنها تساعد المطورين عند بناء عقود ذكية والتطبيقات اللامركزية محليًا قبل نشرها على السلسلة الحية.
 
-Inside our my-nft project run:
+داخل مشروع my-nft الخاص بنا، قم بتشغيل:
 
-    ```
     npm install --save-dev hardhat
-    ```
 
-راجع هذه الصفحة لمزيد من التفاصيل حول [إرشادات التثبيت](https://hardhat.org/getting-started/#overview).
+تحقق من هذه الصفحة لمزيد من التفاصيل حول [تعليمات التثبيت](https://hardhat.org/getting-started/#overview).
 
-## الخطوة 8: إنشاء مشروع هارد هات {#create-hardhat-project}
+## الخطوة 8: إنشاء مشروع Hardhat {#create-hardhat-project}
 
-Inside our project folder run:
+داخل مجلد مشروعنا، قم بتشغيل:
 
-    ```
     npx hardhat
-    ```
 
-You should then see a welcome message and option to select what you want to do. Select “create an empty hardhat.config.js”:
+يجب أن ترى بعد ذلك رسالة ترحيب وخيارًا لتحديد ما تريد القيام به. حدد "create an empty hardhat.config.js":
 
-    ```
     888    888                      888 888               888
     888    888                      888 888               888
     888    888                      888 888               888
@@ -143,41 +126,38 @@ You should then see a welcome message and option to select what you want to do. 
     888    888 .d888888 888    888  888 888  888 .d888888 888
     888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
     888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-    👷 مرحبًا بك في هارد هات v2.0.11 👷‍
-    ? ماذا تريد أن تفعل؟ ...
-    إنشاء مشروع نموذجي
-    ❯ إنشاء ملف hardhat.config.js فارغ
-    إنهاء
-    ```
+    👷 Welcome to Hardhat v2.0.11 👷‍
+    ? What do you want to do? …
+    Create a sample project
+    ❯ Create an empty hardhat.config.js
+    Quit
 
-This will generate a hardhat.config.js file for us which is where we’ll specify all of the set up for our project (on step 13).
+سيؤدي هذا إلى إنشاء ملف hardhat.config.js لنا والذي سنحدد فيه جميع إعدادات مشروعنا (في الخطوة 13).
 
 ## الخطوة 9: إضافة مجلدات المشروع {#add-project-folders}
 
-To keep our project organized, we’ll create two new folders. Navigate to the root directory of your project in your command line and type:
+للحفاظ على تنظيم مشروعنا، سنقوم بإنشاء مجلدين جديدين. انتقل إلى الدليل الجذر لمشروعك في سطر الأوامر واكتب:
 
-    ```
     mkdir contracts
     mkdir scripts
-    ```
 
-- contracts/ is where we’ll keep our إن إف تي smart contract code
+- contracts/ هو المكان الذي سنحتفظ فيه بكود العقد الذكي للرمز غير القابل للاستبدال الخاص بنا
 
-- scripts/ is where we’ll keep scripts to deploy and interact with our smart contract
+- scripts/ هو المكان الذي سنحتفظ فيه بالبرامج النصية لنشر والتفاعل مع عقدنا الذكي
 
 ## الخطوة 10: كتابة عقدنا {#write-contract}
 
-الآن بعد أن تم إعداد بيئتنا، ننتقل إلى أشياء أكثر إثارة: _كتابة كود العقد الذكي الخاص بنا!_
+الآن بعد إعداد بيئتنا، ننتقل إلى أشياء أكثر إثارة: _كتابة كود عقدنا الذكي!_
 
-افتح مشروع my-nft في محرر النصوص المفضل لديك (نحن نحب [في إس كود](https://code.visualstudio.com/)). Smart contracts are written in a language called سوليديتي which is what we will use to write our MyNFT.sol smart contract.‌
+افتح مشروع my-nft في محرر النصوص المفضل لديك (نحن نفضل [VSCode](https://code.visualstudio.com/)). تُكتب العقود الذكية بلغة تسمى Solidity وهي ما سنستخدمه لكتابة العقد الذكي MyNFT.sol الخاص بنا.‌
 
-1. انتقِل إلى مجلد `contracts` وأنشئ ملفًا جديدًا باسم MyNFT.sol
+1. انتقل إلى مجلد `contracts` وأنشئ ملفًا جديدًا يسمى MyNFT.sol
 
-2. يوجد أدناه كود عقد إن إف تي الذكي الخاص بنا، والذي استندنا فيه إلى تطبيق ERC-721 الخاص بمكتبة [أوبن زبلين](https://docs.openzeppelin.com/contracts/3.x/erc721). Copy and paste the contents below into your MyNFT.sol file.
+2. يوجد أدناه كود العقد الذكي للرمز غير القابل للاستبدال الخاص بنا، والذي استندنا فيه إلى تنفيذ ERC-721 من مكتبة [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721). انسخ والصق المحتويات أدناه في ملف MyNFT.sol الخاص بك.
 
    ```solidity
-   //عقد يستند إلى [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
-   // SPDX-License-Identifier: MIT
+   //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721) // عقد مبني على [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
+   // SPDX-License-Identifier: MIT // SPDX-License-Identifier: MIT
    pragma solidity ^0.8.0;
 
    import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -189,7 +169,7 @@ To keep our project organized, we’ll create two new folders. Navigate to the r
        using Counters for Counters.Counter;
        Counters.Counter private _tokenIds;
 
-       constructor() ERC721("MyNFT", "إن إف تي") {}
+       constructor() ERC721("MyNFT", "NFT") {}
 
        function mintNFT(address recipient, string memory tokenURI)
            public onlyOwner
@@ -204,86 +184,82 @@ To keep our project organized, we’ll create two new folders. Navigate to the r
            return newItemId;
        }
    }
-   ```
+```
 
-3. لأننا نرث فئات من مكتبة عقود أوبن زبلين، قم بتشغيل `npm install @openzeppelin/contracts^4.0.0` في سطر الأوامر لتثبيت المكتبة في مجلدنا.
+3. نظرًا لأننا نرث فئات من مكتبة عقود OpenZeppelin، قم بتشغيل `npm install @openzeppelin/contracts^4.0.0` في سطر الأوامر لتثبيت المكتبة في مجلدنا.
 
-إذن، ماذا يفعل هذا الكود بالضبط؟ Let’s break it down, line-by-line.
+إذن، ماذا يفعل هذا الكود _بالتحديد_؟ دعنا نقسمه، سطرًا بسطر.
 
-في الجزء العلوي من عقدنا الذكي، نستورد ثلاث فئات من عقود [أوبن زبلين](https://openzeppelin.com/) الذكية:
+في الجزء العلوي من عقدنا الذكي، نقوم باستيراد ثلاث فئات عقود ذكية من [OpenZeppelin](https://openzeppelin.com/):
 
-- @openzeppelin/contracts/token/ERC721/ERC721.sol contains the implementation of the ERC-721 standard, which our إن إف تي smart contract will inherit. (To be a valid إن إف تي, your smart contract must implement all the methods of the ERC-721 standard.) لمعرفة المزيد حول دوال ERC-721 الموروثة، تحقق من تعريف الواجهة [هنا](https://eips.ethereum.org/EIPS/eip-721).
+- يحتوي @openzeppelin/contracts/token/ERC721/ERC721.sol على تنفيذ معيار ERC-721، والذي سيرثه العقد الذكي للرمز غير القابل للاستبدال الخاص بنا. (لكي يكون رمزًا غير قابل للاستبدال صالحًا، يجب أن ينفذ عقدك الذكي جميع طرق معيار ERC-721.) لمعرفة المزيد حول وظائف ERC-721 الموروثة، تحقق من تعريف الواجهة [هنا](https://eips.ethereum.org/EIPS/eip-721).
 
-- @openzeppelin/contracts/utils/Counters.sol provides counters that can only be incremented or decremented by one. Our smart contract uses a counter to keep track of the total number of إن إف تيز minted and set the unique ID on our new إن إف تي. (Each إن إف تي minted using a smart contract must be assigned a unique ID—here our unique ID is just determined by the total number of إن إف تيز in existence. For example, the first إن إف تي we mint with our smart contract has an ID of "1," our second إن إف تي has an ID of "2," etc.)
+- يوفر @openzeppelin/contracts/utils/Counters.sol عدادات لا يمكن زيادتها أو إنقاصها إلا بمقدار واحد. يستخدم عقدنا الذكي عدادًا لتتبع العدد الإجمالي للرموز غير القابلة للاستبدال التي تم سكها وتعيين المعرف الفريد على الرمز غير القابل للاستبدال الجديد الخاص بنا. (يجب تعيين معرف فريد لكل رمز غير قابل للاستبدال يتم سكه باستخدام عقد ذكي — هنا يتم تحديد المعرف الفريد الخاص بنا فقط من خلال العدد الإجمالي للرموز غير القابلة للاستبدال الموجودة. على سبيل المثال، الرمز غير القابل للاستبدال الأول الذي نقوم بسكه باستخدام عقدنا الذكي له معرف "1"، والرمز الثاني له معرف "2"، وما إلى ذلك.)
 
-- يقوم @openzeppelin/contracts/access/Ownable.sol بإعداد [التحكم في الوصول](https://docs.openzeppelin.com/contracts/3.x/access-control) على عقدنا الذكي، بحيث يمكن لمالك العقد الذكي فقط (أنت) سك رموز إن إف تي. (Note, including access control is entirely a preference. If you'd like anyone to be able to mint an إن إف تي using your smart contract, remove the word Ownable on line 10 and onlyOwner on line 17.)
+- يقوم @openzeppelin/contracts/access/Ownable.sol بإعداد [التحكم في الوصول](https://docs.openzeppelin.com/contracts/3.x/access-control) على عقدنا الذكي، بحيث يمكن لمالك العقد الذكي (أنت) فقط السك او انشاء رموز غير قابلة للاستبدال. (ملاحظة، تضمين التحكم في الوصول هو تفضيل بالكامل. إذا كنت ترغب في أن يتمكن أي شخص من السك او انشاء رمز غير قابل للاستبدال باستخدام عقدك الذكي، فقم بإزالة كلمة Ownable في السطر 10 و onlyOwner في السطر 17.)
 
-For this tutorial, we’ll use ميتاماسك, a virtual wallet in the browser used to manage your إيثريوم account address! هذا بفضل عقود أوبن زبلين الموروثة، والتي تنفذ معظم الطرق التي نحتاجها لإنشاء إن إف تي، مثل `ownerOf` التي تُرجع مالك إن إف تي، و `transferFrom`، التي تنقل ملكية إن إف تي من حساب إلى آخر.
+بعد عبارات الاستيراد الخاصة بنا، لدينا العقد الذكي المخصص للرمز غير القابل للاستبدال، وهو قصير بشكل مدهش — فهو يحتوي فقط على عداد، ومنشئ (constructor)، ووظيفة واحدة! هذا بفضل عقود OpenZeppelin الموروثة، والتي تنفذ معظم الطرق التي نحتاجها لإنشاء رمز غير قابل للاستبدال، مثل `ownerOf` التي تُرجع مالك الرمز غير القابل للاستبدال، و `transferFrom`، التي تنقل ملكية الرمز غير القابل للاستبدال من حساب إلى آخر.
 
-In our ERC-721 constructor, you’ll notice we pass 2 strings, “MyNFT” and “إن إف تي.” The first variable is the smart contract’s name, and the second is its symbol. You can name each of these variables whatever you wish!
+في منشئ ERC-721 الخاص بنا، ستلاحظ أننا نمرر سلسلتين نصيتين، "MyNFT" و "NFT". المتغير الأول هو اسم العقد الذكي، والثاني هو رمزه. يمكنك تسمية كل من هذه المتغيرات بأي اسم تريده!
 
-أخيرًا، لدينا وظيفتنا `mintNFT(address recipient, string memory tokenURI)` التي تسمح لنا بسك إن إف تي! You'll notice this function takes in two variables:
+أخيرًا، لدينا وظيفتنا `mintNFT(address recipient, string memory tokenURI)` التي تتيح لنا السك او انشاء رمز غير قابل للاستبدال! ستلاحظ أن هذه الوظيفة تأخذ متغيرين:
 
-- `address recipient` يحدد العنوان الذي سيتلقى إن إف تي الذي تم سكه حديثًا
+- يحدد `address recipient` العنوان الذي سيتلقى الرمز غير القابل للاستبدال المسكوك حديثًا
 
-- `string memory tokenURI` هي سلسلة نصية يجب أن تؤدي إلى مستند JSON يصف البيانات الوصفية لـ إن إف تي. An إن إف تي's metadata is really what brings it to life, allowing it to have configurable properties, such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
+- `string memory tokenURI` هي سلسلة نصية يجب أن تشير إلى مستند JSON يصف البيانات الوصفية للرمز غير القابل للاستبدال. البيانات الوصفية للرمز غير القابل للاستبدال هي حقًا ما يجعله ينبض بالحياة، مما يسمح له بامتلاك خصائص قابلة للتكوين، مثل الاسم والوصف والصورة والسمات الأخرى. في الجزء الثاني من هذا الدرس، سنصف كيفية تكوين هذه البيانات الوصفية.
 
-تستدعي `mintNFT` بعض الطرق من مكتبة ERC-721 الموروثة، وتُرجع في النهاية رقمًا يمثل معرّف إن إف تي الذي تم سكه حديثًا.
+تستدعي `mintNFT` بعض الطرق من مكتبة ERC-721 الموروثة، وتُرجع في النهاية رقمًا يمثل معرف الرمز غير القابل للاستبدال المسكوك حديثًا.
 
-## الخطوة 11: ربط ميتاماسك و ألكيمي بمشروعك {#connect-metamask-and-alchemy}
+## الخطوة 11: ربط MetaMask و Alchemy بمشروعك {#connect-metamask-and-alchemy}
 
-Now that we’ve created a ميتاماسك wallet, ألكيمي account, and written our smart contract, it’s time to connect the three.
+الآن بعد أن أنشأنا محفظة MetaMask، وحساب Alchemy، وكتبنا عقدنا الذكي، حان الوقت لربط الثلاثة معًا.
 
-Every transaction sent from your virtual wallet requires a signature using your unique private key. To provide our program with this permission, we can safely store our private key (and ألكيمي API key) in an environment file.
+تتطلب كل معاملة يتم إرسالها من محفظتك الافتراضية توقيعًا باستخدام المفتاح الخاص الفريد الخاص بك. لتزويد برنامجنا بهذا الإذن، يمكننا تخزين المفتاح الخاص بنا (ومفتاح واجهة برمجة تطبيقات Alchemy) بأمان في ملف بيئة.
 
-لمعرفة المزيد حول إرسال المعاملات، راجع [هذا الدرس التعليمي](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) حول إرسال المعاملات باستخدام web3.
+لمعرفة المزيد حول إرسال المعاملات، تحقق من [هذا الدرس](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) حول إرسال المعاملات باستخدام ويب 3.
 
-First, install the dotenv package in your project directory:
+أولاً، قم بتثبيت حزمة dotenv في دليل مشروعك:
 
-    ```
     npm install dotenv --save
-    ```
 
-بعد ذلك، قم بإنشاء ملف `.env` في الدليل الجذر لمشروعنا، وأضف مفتاح ميتاماسك الخاص بك وعنوان URL لواجهة برمجة تطبيقات ألكيمي HTTP إليه.
+ثم، أنشئ ملف `.env` في الدليل الجذر لمشروعنا، وأضف المفتاح الخاص لـ MetaMask وعنوان URL لواجهة برمجة تطبيقات HTTP الخاصة بـ Alchemy إليه.
 
-- اتبع [هذه الإرشادات](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) لتصدير مفتاحك الخاص من ميتاماسك
+- اتبع [هذه التعليمات](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) لتصدير المفتاح الخاص بك من MetaMask
 
-- See below to get HTTP ألكيمي API URL and copy it to your clipboard
+- انظر أدناه للحصول على عنوان URL لواجهة برمجة تطبيقات HTTP الخاصة بـ Alchemy وانسخه إلى الحافظة الخاصة بك
 
-![انسخ عنوان URL لواجهة برمجة تطبيقات ألكيمي](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
 
-يجب أن يبدو ملف `.env` الخاص بك الآن كما يلي:
+يجب أن يبدو ملف `.env` الخاص بك الآن هكذا:
 
-    ```
     API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
-    ```
 
-To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file in step 13.
+لربط هذه المتغيرات فعليًا بالكود الخاص بنا، سنشير إليها في ملف hardhat.config.js الخاص بنا في الخطوة 13.
 
 <EnvWarningBanner />
 
-## الخطوة 12: تثبيت إيثرز.جي إس {#install-ethers}
+## الخطوة 12: تثبيت Ethers.js {#install-ethers}
 
-إيثرز.جي إس هي مكتبة تسهل التفاعل وتقديم الطلبات إلى إيثريوم عن طريق تغليف [طرق JSON-RPC القياسية](/developers/docs/apis/json-rpc/) بطرق أكثر سهولة في الاستخدام.
+Ethers.js هي مكتبة تسهل التفاعل وإجراء الطلبات إلى إيثريوم عن طريق تغليف [طرق JSON-RPC القياسية](/developers/docs/apis/json-rpc/) بطرق أكثر سهولة في الاستخدام.
 
-يجعل هارد هات من السهل جدًا دمج [الإضافات (Plugins)](https://hardhat.org/plugins/) للحصول على أدوات إضافية ووظائف موسعة. سنستفيد من [ملحق Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) لنشر العقد ([إيثرز.جي إس](https://github.com/ethers-io/ethers.js/) لديه بعض طرق نشر العقود النظيفة للغاية).
+يجعل Hardhat من السهل جدًا دمج [الإضافات (Plugins)](https://hardhat.org/plugins/) للحصول على أدوات إضافية ووظائف موسعة. سنستفيد من [إضافة Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) لنشر العقود (تحتوي [Ethers.js](https://github.com/ethers-io/ethers.js/) على بعض طرق نشر العقود النظيفة جدًا).
 
-In your project directory type:
+في دليل مشروعك اكتب:
 
-    ```
     npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0
-    ```
 
-We’ll also require ethers in our hardhat.config.js in the next step.
+سنحتاج أيضًا إلى ethers في ملف hardhat.config.js الخاص بنا في الخطوة التالية.
 
 ## الخطوة 13: تحديث hardhat.config.js {#update-hardhat-config}
 
-We’ve added several dependencies and plugins so far, now we need to update hardhat.config.js so that our project knows about all of them.
+لقد أضفنا العديد من التبعيات والإضافات حتى الآن، والآن نحتاج إلى تحديث hardhat.config.js حتى يتعرف مشروعنا عليها جميعًا.
 
-Update your hardhat.config.js to look like this:
+قم بتحديث hardhat.config.js الخاص بك ليبدو هكذا:
 
 ```js
+    /* *
+    * @type import('hardhat/config').HardhatUserConfig */
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -305,30 +281,28 @@ Update your hardhat.config.js to look like this:
 
 ## الخطوة 14: تجميع عقدنا {#compile-contract}
 
-To make sure everything is working so far, let’s compile our contract. The compile task is one of the built-in hardhat tasks.
+للتأكد من أن كل شيء يعمل حتى الآن، دعنا نقوم بتجميع عقدنا. مهمة التجميع (compile) هي إحدى مهام hardhat المدمجة.
 
-From the command line run:
+من سطر الأوامر قم بتشغيل:
 
-    ```
     npx hardhat compile
-    ```
 
-You might get a warning about SPDX license identifier not provided in source file , but no need to worry about that — hopefully everything else looks good! إذا لم يكن الأمر كذلك، يمكنك دائمًا إرسال رسالة في [ألكيمي discord](https://discord.gg/u72VCg3).
+قد تتلقى تحذيرًا بشأن عدم توفير معرف ترخيص SPDX في الملف المصدر، ولكن لا داعي للقلق بشأن ذلك — نأمل أن يبدو كل شيء آخر جيدًا! إذا لم يكن الأمر كذلك، يمكنك دائمًا المراسلة في [Alchemy discord](https://discord.gg/u72VCg3).
 
-## الخطوة 15: كتابة نص النشر الخاص بنا {#write-deploy}
+## الخطوة 15: كتابة البرنامج النصي للنشر {#write-deploy}
 
-Now that our contract is written and our configuration file is good to go, it’s time to write our contract deploy script.
+الآن بعد أن تمت كتابة عقدنا وملف التكوين الخاص بنا جاهز للعمل، حان الوقت لكتابة البرنامج النصي لنشر العقد.
 
-انتقل إلى مجلد `scripts/` وأنشئ ملفًا جديدًا باسم `deploy.js`، وأضف المحتويات التالية إليه:
+انتقل إلى مجلد `scripts/` وأنشئ ملفًا جديدًا يسمى `deploy.js`، وأضف المحتويات التالية إليه:
 
 ```js
 async function main() {
   const MyNFT = await ethers.getContractFactory("MyNFT")
 
-  // بدء النشر، وإرجاع وعد يتم حله إلى كائن عقد
+  // Start deployment, returning a promise that resolves to a contract object // بدء النشر، وإرجاع وعد يحل إلى كائن عقد
   const myNFT = await MyNFT.deploy()
   await myNFT.deployed()
-  console.log("تم نشر العقد على العنوان:", myNFT.address)
+  console.log("Contract deployed to address:", myNFT.address)
 }
 
 main()
@@ -339,48 +313,40 @@ main()
   })
 ```
 
-يقوم هارد هات بعمل رائع في شرح ما يفعله كل من هذه الأسطر من الكود في [درس العقود التعليمي](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)، وقد اعتمدنا شروحاتهم هنا.
+يقوم Hardhat بعمل رائع في شرح ما يفعله كل سطر من أسطر الكود هذه في [درس العقود](https://hardhat.org/tutorial/testing-contracts.html#writing-tests) الخاص بهم، وقد اعتمدنا شروحاتهم هنا.
 
-    ```
     const MyNFT = await ethers.getContractFactory("MyNFT");
-    ```
 
-A ContractFactory in ethers.js is an abstraction used to deploy new smart contracts, so MyNFT here is a factory for instances of our إن إف تي contract. When using the hardhat-ethers plugin ContractFactory and Contract instances are connected to the first signer by default.
+`ContractFactory` في ethers.js هو تجريد يُستخدم لنشر عقود ذكية جديدة، لذا فإن MyNFT هنا هو مصنع لمثيلات عقد الرمز غير القابل للاستبدال الخاص بنا. عند استخدام إضافة hardhat-ethers، يتم توصيل مثيلات ContractFactory و Contract بالموقّع الأول افتراضيًا.
 
-    ```
     const myNFT = await MyNFT.deploy();
-    ```
 
-Calling deploy() on a ContractFactory will start the deployment, and return a Promise that resolves to a Contract. This is the object that has a method for each of our smart contract functions.
+سيؤدي استدعاء deploy() على ContractFactory إلى بدء النشر، وإرجاع وعد (Promise) يُحل إلى عقد (Contract). هذا هو الكائن الذي يحتوي على طريقة لكل وظيفة من وظائف العقد الذكي الخاص بنا.
 
 ## الخطوة 16: نشر عقدنا {#deploy-contract}
 
-We’re finally ready to deploy our smart contract! Navigate back to the root of your project directory, and in the command line run:
+نحن مستعدون أخيرًا لنشر عقدنا الذكي! ارجع إلى الدليل الجذر لمشروعك، وفي سطر الأوامر قم بتشغيل:
 
-    ```
     npx hardhat --network sepolia run scripts/deploy.js
-    ```
 
-You should then see something like:
+يجب أن ترى بعد ذلك شيئًا مثل:
 
-    ```
     Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
-    ```
 
-إذا انتقلنا إلى [سيبوليا etherscan](https://sepolia.etherscan.io/) وبحثنا عن عنوان عقدنا، فسنتمكن من رؤية أنه تم نشره بنجاح. If you can't see it immediately, please wait a while as it can take some time. The transaction will look something like this:
+إذا ذهبنا إلى [Sepolia etherscan](https://sepolia.etherscan.io/) وبحثنا عن عنوان العقد الخاص بنا، يجب أن نكون قادرين على رؤية أنه قد تم نشره بنجاح. إذا لم تتمكن من رؤيته على الفور، يرجى الانتظار لفترة حيث قد يستغرق الأمر بعض الوقت. ستبدو المعاملة هكذا تقريبًا:
 
-![عرض عنوان معاملتك على إيثرسكان](./etherscan-sepoila-contract-creation.png)
+![View your transaction address on Etherscan](./etherscan-sepoila-contract-creation.png)
 
-The From address should match your ميتاماسك account address and the To address will say “Contract Creation”. If we click into the transaction, we’ll see our contract address in the To field:
+يجب أن يتطابق عنوان "From" (من) مع عنوان حساب MetaMask الخاص بك وسيشير عنوان "To" (إلى) إلى "Contract Creation" (إنشاء عقد). إذا نقرنا على المعاملة، فسنرى عنوان العقد الخاص بنا في حقل "To":
 
-![عرض عنوان عقدك على إيثرسكان](./etherscan-sepolia-tx-details.png)
+![View your contract address on Etherscan](./etherscan-sepolia-tx-details.png)
 
-Yasssss! You just deployed your إن إف تي smart contract to the إيثريوم (testnet) chain!
+رائع! لقد قمت للتو بنشر العقد الذكي للرمز غير القابل للاستبدال الخاص بك على سلسلة إيثريوم (شبكة الاختبار)!
 
-لفهم ما يحدث "تحت الغطاء"، دعنا ننتقل إلى علامة التبويب "المستكشف" (Explorer) في [لوحة تحكم ألكيمي](https://dashboard.alchemyapi.io/explorer). If you have multiple ألكيمي apps make sure to filter by app and select “MyNFT”.
+لفهم ما يحدث خلف الكواليس، دعنا ننتقل إلى علامة التبويب Explorer (المستكشف) في [لوحة تحكم Alchemy](https://dashboard.alchemyapi.io/explorer) الخاصة بنا. إذا كان لديك تطبيقات Alchemy متعددة، فتأكد من التصفية حسب التطبيق وحدد "MyNFT".
 
-![عرض المكالمات التي تم إجراؤها "تحت الغطاء" باستخدام لوحة تحكم مستكشف ألكيمي](./alchemy-explorer-goerli.png)
+![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 
-Here you’ll see a handful of JSON-RPC calls that هارد هات/Ethers made under the hood for us when we called the .deploy() function. هناك اثنان من الأمور الهامة التي يجب الإشارة إليها هنا هما [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)، وهو طلب كتابة عقدنا الذكي بالفعل على سلسلة سيبوليا، و[eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) وهو طلب لقراءة معلومات حول معاملتنا بالنظر إلى التجزئة (هاش) (نمط نموذجي عند إرسال المعاملات). لمعرفة المزيد حول إرسال المعاملات، راجع هذا الدرس التعليمي حول [إرسال المعاملات باستخدام ويب3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+هنا سترى مجموعة من طلبات JSON-RPC التي أجراها Hardhat/Ethers خلف الكواليس لنا عندما استدعينا وظيفة .deploy(). هناك طلبان مهمان يجب الإشارة إليهما هنا وهما [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)، وهو الطلب لكتابة عقدنا الذكي فعليًا على سلسلة Sepolia، و [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) وهو طلب لقراءة معلومات حول معاملتنا بناءً على التجزئة (هاش) (نمط نموذجي عند إرسال المعاملات). لمعرفة المزيد حول إرسال المعاملات، تحقق من هذا الدرس حول [إرسال المعاملات باستخدام ويب 3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
-That’s all for Part 1 of this tutorial. في [الجزء الثاني، سنتفاعل فعليًا مع عقدنا الذكي عن طريق سك إن إف تي](/developers/tutorials/how-to-mint-an-nft/)، وفي [الجزء الثالث سنوضح لك كيفية عرض إن إف تي الخاص بك في محفظة إيثريوم الخاصة بك](/developers/tutorials/how-to-view-nft-in-metamask/)!
+هذا كل شيء بالنسبة للجزء الأول من هذا الدرس. في [الجزء الثاني، سنتفاعل فعليًا مع عقدنا الذكي من خلال السك او انشاء رمز غير قابل للاستبدال](/developers/tutorials/how-to-mint-an-nft/)، وفي [الجزء الثالث سنوضح لك كيفية عرض الرمز غير القابل للاستبدال الخاص بك في محفظة إيثريوم الخاصة بك](/developers/tutorials/how-to-view-nft-in-metamask/)!
