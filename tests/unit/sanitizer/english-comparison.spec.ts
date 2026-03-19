@@ -23,6 +23,7 @@ const {
   fixMissingLinkBrackets,
   restoreStrippedAbbreviations,
   fixMergedSupDigits,
+  fixCrowdinNumberedTags,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -869,6 +870,68 @@ test.describe("English Comparison Fixes", () => {
       const translated = "```\n<sup>2256</sup>\n```"
       const english = "```\n2<sup>256</sup>\n```"
       const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixCrowdinNumberedTags", () => {
+    test("replaces </0>text<0> with <strong>text</strong>", () => {
+      const translated = '</0>الظهور الأول لونا كضيفة<0>'
+      const english = "<strong>Luna's first appearance as a podcast guest</strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe("<strong>الظهور الأول لونا كضيفة</strong>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles HTML-escaped opening tag &lt;0>", () => {
+      const translated = '</0>من الجيد أن نعلم&lt;0>'
+      const english = "<strong>Good to know</strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe("<strong>من الجيد أن نعلم</strong>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles inverted tags inside JSX paragraph", () => {
+      const translated =
+        '<p className="mt-0"></0>من الجيد أن نعلم&lt;0></p>'
+      const english =
+        '<p className="mt-0"><strong>Good to know</strong></p>'
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(
+        '<p className="mt-0"><strong>من الجيد أن نعلم</strong></p>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple different numbered tags", () => {
+      const translated = '<0>نص عريض<1>و مائل</1></0>'
+      const english = "<strong>bold text<em>and italic</em></strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe("<strong>نص عريض<em>و مائل</em></strong>")
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves content unchanged when no numbered tags", () => {
+      const translated = "<strong>نص عريض</strong>"
+      const english = "<strong>bold text</strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("no change when no English tags to map from", () => {
+      const translated = "</0>text<0>"
+      const english = "plain text no tags"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const translated = "```\n</0>text<0>\n```"
+      const english = "```\n<strong>text</strong>\n```"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
     })

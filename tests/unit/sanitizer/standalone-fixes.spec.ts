@@ -44,6 +44,7 @@ const {
   fixKnownBrandGarbles,
   fixMissingOpeningSup,
   fixSplitBoldMarkers,
+  fixKnownWrongCompounds,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -1769,6 +1770,64 @@ author: Ori Pomerantz
     test("does not match when escaped markers are on a different line", () => {
       const input = "**text.** end of line\n\\*\\* start of next"
       const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixKnownWrongCompounds", () => {
+    test("fixes state-channel compound terms", () => {
+      const input = "تعتمد قنوات الدولة على بيانات الدولة"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("تعتمد قنوات الحالة على بيانات الحالة")
+      expect(fixCount).toBe(2)
+    })
+
+    test("fixes governmental channels variant", () => {
+      const input = "القنوات الحكومية تعمل بشكل جيد"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("قنوات الحالة تعمل بشكل جيد")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes statelessness as nationality", () => {
+      const input = "انعدام الجنسية يقلل من التخزين"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("انعدام الحالة يقلل من التخزين")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes state update with wrong term", () => {
+      const input = "تحديث الولاية يتطلب توقيع"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("تحديث الحالة يتطلب توقيع")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes ether as altruism", () => {
+      const input = "الرمز الأصلي، الإيثار (ETH)."
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("الرمز الأصلي، الإيثر (ETH).")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes liquid staking as liquid mortgage", () => {
+      const input = "الرهن العقاري السائل ومشتقاته"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("التحصيص السائل ومشتقاته")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct terms unchanged", () => {
+      const input = "قنوات الحالة تعتمد على إثبات الحصة"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\nقنوات الدولة\n```"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
