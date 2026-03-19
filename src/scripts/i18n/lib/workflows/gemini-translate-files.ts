@@ -19,9 +19,10 @@ import {
   type BatchFile,
   getDestinationFromPath,
 } from "../github/commits"
-import { getGlossaryForLanguage, type GlossaryByLanguage } from "../supabase/glossary"
-import { logSection } from "./utils"
+import { getGlossaryForLanguage } from "../supabase/glossary"
+
 import type { GeminiWorkflowContext } from "./gemini-initialize"
+import { logSection } from "./utils"
 
 interface CommitFile {
   path: string
@@ -89,7 +90,11 @@ export async function geminiTranslateFiles(
     )
   }
 
-  return { branch: branchName, stats: allStats, committedFiles: allCommittedFiles }
+  return {
+    branch: branchName,
+    stats: allStats,
+    committedFiles: allCommittedFiles,
+  }
 }
 
 /**

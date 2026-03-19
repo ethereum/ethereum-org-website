@@ -10,11 +10,7 @@
  * transliteration norms, etc. better than any regex.
  */
 
-import {
-  type LanguageGroup,
-  getLanguageGroup,
-  getSiteSpecificNotes,
-} from "./language-groups"
+import { getLanguageGroup, getSiteSpecificNotes } from "./language-groups"
 
 interface PromptOptions {
   filePath: string

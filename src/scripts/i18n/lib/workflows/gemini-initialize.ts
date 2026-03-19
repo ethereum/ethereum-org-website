@@ -8,10 +8,11 @@ import { createRateLimiter } from "../ai/rate-limiter"
 import { getAllEnglishFiles } from "../github/files"
 import {
   fetchGlossaryEntries,
-  groupGlossaryByLanguage,
   type GlossaryByLanguage,
+  groupGlossaryByLanguage,
 } from "../supabase/glossary"
 import { fetchWithRetry } from "../utils/fetch"
+
 import { logSection } from "./utils"
 
 export interface GeminiWorkflowContext {

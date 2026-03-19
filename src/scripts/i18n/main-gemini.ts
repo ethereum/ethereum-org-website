@@ -19,20 +19,20 @@
  *   SKIP_PR_CREATION        - Skip PR creation (default: false)
  */
 
-import { config } from "./config"
-import { cleanupProgress } from "./lib/ai/progress-tracker"
 import { isGeminiAvailable } from "./lib/ai/gemini"
+import { cleanupProgress } from "./lib/ai/progress-tracker"
 import {
   createBranchName,
-  postCreateBranchFrom,
   getBranchObject,
+  postCreateBranchFrom,
 } from "./lib/github/branches"
 import { geminiInitialize } from "./lib/workflows/gemini-initialize"
 import { geminiTranslateFiles } from "./lib/workflows/gemini-translate-files"
-import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { runJsxTranslation } from "./lib/workflows/jsx-translation"
 import { createTranslationPR } from "./lib/workflows/pr-creation"
+import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
+import { config } from "./config"
 
 async function main() {
   logSection("Gemini Direct Translation Pipeline")
@@ -57,12 +57,11 @@ async function main() {
   }
 
   // Generate run ID and branch name
-  const runId =
-    process.env.RESUME_RUN_ID ||
-    `gemini-${Date.now().toString(36)}`
-  const branchSuffix = context.targetLanguages.length === 1
-    ? context.targetLanguages[0]
-    : "translations"
+  const runId = process.env.RESUME_RUN_ID || `gemini-${Date.now().toString(36)}`
+  const branchSuffix =
+    context.targetLanguages.length === 1
+      ? context.targetLanguages[0]
+      : "translations"
   const branchName = createBranchName(branchSuffix)
 
   console.log(`[main] Run ID: ${runId}`)
@@ -70,7 +69,7 @@ async function main() {
 
   // Create branch from base
   const baseBranch = await getBranchObject(config.baseBranch)
-  await postCreateBranchFrom(branchName, baseBranch.object.sha)
+  await postCreateBranchFrom(branchName, baseBranch.sha)
 
   // Phase 2: Translate files
   const { stats, committedFiles } = await geminiTranslateFiles(
@@ -117,17 +116,7 @@ async function main() {
   if (!skipPr) {
     logSection("Creating Pull Request")
 
-    const totalFiles = Object.values(stats).reduce(
-      (sum, s) => sum + s.filesTranslated,
-      0
-    )
-    const totalTokens = Object.values(stats).reduce(
-      (sum, s) => sum + s.totalInputTokens + s.totalOutputTokens,
-      0
-    )
-    const languages = Object.keys(stats)
-
-    const languagePairs = languages.map((code) => ({
+    const languagePairs = Object.keys(stats).map((code) => ({
       crowdinId: code,
       internalLanguageCode: code,
     }))
