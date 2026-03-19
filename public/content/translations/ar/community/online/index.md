@@ -54,7 +54,7 @@ lang: ar
 <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">سوليديتي جيتر</Link> - دردشة لتطوير سوليديتي (جيتر)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">سوليديتي Matrix</Link> - دردشة لتطوير سوليديتي (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">إيثريوم Stack Exchange</Link> <i>- منتدى للأسئلة والأجوبة</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- منتدى لامركزي للأسئلة والأجوبة</i>
+<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- منتدى لامركزي للأسئلة والأجوبة</i></SocialListItem>
 
 ## يوتيوب و X (تويتر سابقًا) {#youtube-and-twitter}
 
