@@ -815,7 +815,7 @@ const ethereumAddressToEmail = async ethAddr => {
         }
 ```
 
-المصادقات التي نريدها هي تلك الموجودة في مخططنا، حيث يكون المستلم هو `getAddress(ethAddr)`. تتأكد دالة [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) من أن عنواننا يحتوي على [المجموع الاختباري](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md) الصحيح. هذا ضروري لأن جراف كيو إل حساس لحالة الأحرف. `\
+المصادقات التي نريدها هي تلك الموجودة في مخططنا، حيث يكون المستلم هو `getAddress(ethAddr)`. تتأكد دالة [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) من أن عنواننا يحتوي على [المجموع الاختباري](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md) الصحيح. هذا ضروري لأن جراف كيو إل حساس لحالة الأحرف.
 
 ```typescript
         take: 1
