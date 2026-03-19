@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
 import { Info, X } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 

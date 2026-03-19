@@ -504,7 +504,10 @@ export type CommonHeroProps<
    * The hero can render no buttons or up to and no more than two.
    * Can accept either button prop objects or React elements directly.
    */
-  buttons?: [HeroButtonProps | ReactElement, (HeroButtonProps | ReactElement)?]
+  buttons?: [
+    HeroButtonProps | ReactElement<unknown>,
+    (HeroButtonProps | ReactElement<unknown>)?,
+  ]
   /**
    * The primary title of the page
    */
@@ -858,7 +861,7 @@ type FilterInput = (
   itemIndex: number,
   state: FilterInputState,
   updateFilterState: UpdateFilterState
-) => ReactElement
+) => ReactElement<unknown>
 
 type FilterOptionItem = {
   filterKey: string
@@ -875,7 +878,7 @@ type FilterOptionInput = (
   optionIndex: number,
   state: FilterInputState,
   updateFilterState: UpdateFilterState
-) => ReactElement
+) => ReactElement<unknown>
 
 type UpdateFilterState = (
   filterIndex: number,

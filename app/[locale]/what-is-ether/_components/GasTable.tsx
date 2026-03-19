@@ -20,10 +20,12 @@ const GasTable = async () => {
   const etherscanApiKey = process.env.ETHERSCAN_API_KEY
 
   const gwei = await fetch(
-    `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle&apikey=${etherscanApiKey}`
+    `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle&apikey=${etherscanApiKey}`,
+    { cache: "force-cache" }
   ).then((res) => res.json())
   const ethPrice = await fetch(
-    `https://api.etherscan.io/v2/api?chainid=1&module=stats&action=ethprice&apikey=${etherscanApiKey}`
+    `https://api.etherscan.io/v2/api?chainid=1&module=stats&action=ethprice&apikey=${etherscanApiKey}`,
+    { cache: "force-cache" }
   ).then((res) => res.json())
 
   // Calculate transaction costs in USD

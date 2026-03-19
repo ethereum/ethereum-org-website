@@ -1,5 +1,5 @@
 import isChromatic from "chromatic/isChromatic"
-import { MotionGlobalConfig } from "framer-motion"
+import { MotionGlobalConfig } from "motion/react"
 import { IBM_Plex_Mono, Inter } from "next/font/google"
 import type { Preview } from "@storybook/react"
 

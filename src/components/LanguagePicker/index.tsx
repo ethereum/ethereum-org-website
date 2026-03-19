@@ -12,7 +12,7 @@ import LanguagePickerFooter from "./LanguagePickerFooter"
 import LanguagePickerMenu from "./LanguagePickerMenu"
 import { useLanguagePicker } from "./useLanguagePicker"
 
-import { usePathname, useRouter } from "@/i18n/routing"
+import { usePathname, useRouter } from "@/i18n/navigation"
 
 type LanguagePickerProps = {
   className?: string

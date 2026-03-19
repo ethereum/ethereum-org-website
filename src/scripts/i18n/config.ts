@@ -67,7 +67,10 @@ const targetPathRaw = process.env.TARGET_PATH || ""
 // Support comma-separated list of files/directories
 const targetPath = targetPathRaw
 const targetPaths = targetPathRaw
-  ? targetPathRaw.split(",").map((p) => p.trim()).filter(Boolean)
+  ? targetPathRaw
+      .split(",")
+      .map((p) => p.trim())
+      .filter(Boolean)
   : []
 const excludePath = process.env.EXCLUDE_PATH?.trim() || ""
 

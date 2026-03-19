@@ -1,5 +1,5 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 import { OrderedList } from "@/components/ui/list"
 
@@ -33,7 +33,10 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
 
   const splitIndex = Math.floor(words.length / 2)
 
-  const wordMapping = (word: string, index: number): React.ReactElement => {
+  const wordMapping = (
+    word: string,
+    index: number
+  ): React.ReactElement<unknown> => {
     const initialWordDisplay = typeof wordsSelected === "undefined"
     const variant: WordStyleVariantProps["variant"] = initialWordDisplay
       ? "initial"

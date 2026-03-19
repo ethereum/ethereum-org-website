@@ -33,7 +33,7 @@ import InlineLink from "@/components/ui/Link"
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
 import useTranslation from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 import consensys from "@/public/images/projects/consensys.png"
 import blockscout from "@/public/images/resources/blockscout.webp"
 import ef from "@/public/images/staking/ef-blog-logo.png"

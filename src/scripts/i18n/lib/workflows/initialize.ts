@@ -17,9 +17,7 @@ export async function initializeWorkflow(): Promise<WorkflowContext> {
   console.log(`Target languages: ${config.allCrowdinCodes.join(", ")}`)
 
   if (targetPaths.length > 1) {
-    console.log(
-      `Mode: Multi-file (${targetPaths.length} files)`
-    )
+    console.log(`Mode: Multi-file (${targetPaths.length} files)`)
     for (const p of targetPaths) {
       console.log(`  - ${p}`)
     }

@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
 import { ChevronRight } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"

@@ -1,10 +1,10 @@
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 import { Flex } from "@/components/ui/flex"
 
 import { EthGlyphIcon } from "../../icons"
 
-const MotionFlex = motion(Flex)
+const MotionFlex = motion.create(Flex)
 
 export const WelcomeScreen = () => (
   <MotionFlex

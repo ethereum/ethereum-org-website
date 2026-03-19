@@ -167,7 +167,7 @@ export async function translateFile(
   if (modelNotFound.size === modelsToTry.length) {
     throw new Error(
       `All Gemini models unavailable (${[...modelNotFound].join(", ")}). ` +
-      `Update GEMINI_MODELS in gemini-translate.ts or set GEMINI_MODEL env var.`
+        `Update GEMINI_MODELS in gemini-translate.ts or set GEMINI_MODEL env var.`
     )
   }
 
@@ -197,4 +197,3 @@ function stripCodeBlockWrapping(
 
   return text
 }
-
