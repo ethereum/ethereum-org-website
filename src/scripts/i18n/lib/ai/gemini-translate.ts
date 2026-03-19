@@ -5,7 +5,7 @@
  * Gemini handles the linguistics; we handle the guardrails.
  */
 
-import { GoogleGenerativeAI } from "@google/generative-ai"
+import { GoogleGenAI } from "@google/genai"
 
 import i18nConfig from "../../../../../i18n.config.json"
 import { delay } from "../workflows/utils"
@@ -39,12 +39,12 @@ const LANGUAGE_NAMES: Record<string, string> = Object.fromEntries(
   ])
 )
 
-function getGeminiClient(): GoogleGenerativeAI {
+function getGeminiClient(): GoogleGenAI {
   const apiKey = process.env.GEMINI_API_KEY
   if (!apiKey) {
     throw new Error("GEMINI_API_KEY environment variable is not set")
   }
-  return new GoogleGenerativeAI(apiKey)
+  return new GoogleGenAI({ apiKey })
 }
 
 export interface TranslateFileOptions {
@@ -310,20 +310,19 @@ async function callGeminiRaw(
   const modelNotFound = new Set<string>()
 
   for (const modelId of modelsToTry) {
-    const model = client.getGenerativeModel({
-      model: modelId,
-      generationConfig: { temperature: 0 },
-    })
     let modelFailed = false
 
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       try {
-        const result = await model.generateContent(prompt)
-        const response = result.response
+        const response = await client.models.generateContent({
+          model: modelId,
+          contents: prompt,
+          config: { temperature: 0 },
+        })
         const usage = response.usageMetadata
 
         return {
-          text: response.text(),
+          text: response.text ?? "",
           tokensUsed: {
             input: usage?.promptTokenCount || 0,
             output: usage?.candidatesTokenCount || 0,
