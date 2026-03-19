@@ -1,5 +1,5 @@
 /**
- * Build translation prompts for Gemini direct translation.
+ * Build translation prompts for Gemini translation.
  *
  * Philosophy: Gemini is the language expert. We provide:
  * 1. Site-specific context (glossary, conventions)

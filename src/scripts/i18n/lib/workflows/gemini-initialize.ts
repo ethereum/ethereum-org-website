@@ -1,5 +1,5 @@
 /**
- * Initialize the Gemini direct translation workflow.
+ * Initialize the Gemini translation workflow.
  * No Crowdin -- just fetch English files, glossary, and config.
  */
 
@@ -29,8 +29,11 @@ export interface GeminiWorkflowContext {
  * Download file content from GitHub.
  */
 async function downloadFileContent(filePath: string): Promise<string> {
-  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${filePath}?ref=${config.baseBranch}`
-  const res = await fetchWithRetry(url, {
+  const url = new URL(
+    `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${filePath}`
+  )
+  url.searchParams.set("ref", config.baseBranch)
+  const res = await fetchWithRetry(url.toString(), {
     headers: {
       Authorization: `Bearer ${process.env.I18N_GITHUB_API_KEY}`,
       Accept: "application/vnd.github.v3.raw",
@@ -48,7 +51,7 @@ async function downloadFileContent(filePath: string): Promise<string> {
  * Initialize the workflow context.
  */
 export async function geminiInitialize(): Promise<GeminiWorkflowContext> {
-  logSection("Gemini Direct Translation - Initialize")
+  logSection("Gemini Translation - Initialize")
 
   // Fetch English file list
   console.log("[init] Fetching English source files...")
