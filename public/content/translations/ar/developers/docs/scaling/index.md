@@ -59,9 +59,9 @@ There are two types of rollups with different security models:
 - **الرول أب التفاؤلي**: يفترض أن المعاملات صالحة بشكل افتراضي ويجري الحساب فقط، عبر [**إثبات الاحتيال**](/glossary/#fraud-proof)، في حالة وجود تحدٍ. [المزيد عن الرول أب التفاؤلي](/developers/docs/scaling/optimistic-rollups/).
 - **رول أب المعرفة الصفرية**: يجري الحساب خارج السلسلة ويقدم [**إثبات الصلاحية**](/glossary/#validity-proof) إلى السلسلة. [المزيد عن رول أب المعرفة الصفرية](/developers/docs/scaling/zk-rollups/).
 
-#### قنوات الدولة {#channels}
+#### قنوات الحالة {#channels}
 
-تستخدم القنوات الحكومية عقودًا متعددة التوقيع لتمكين المشاركين من إجراء المعاملات بسرعة وحرية خارج السلسلة، ثم تسوية النهاية مع الشبكة الرئيسية. This minimizes network congestion, fees, and delays. The two types of channels are currently state channels and payment channels.
+تستخدم قنوات الحالة عقودًا متعددة التوقيع لتمكين المشاركين من إجراء المعاملات بسرعة وحرية خارج السلسلة، ثم تسوية النهاية مع الشبكة الرئيسية. This minimizes network congestion, fees, and delays. The two types of channels are currently state channels and payment channels.
 
 تعرّف على المزيد حول [قنوات الحالة](/developers/docs/scaling/state-channels/).
 

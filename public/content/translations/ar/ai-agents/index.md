@@ -51,7 +51,7 @@ buttons:
 
 <AiAgentProductLists list="ai-agents" />
 
-</0>الظهور الأول لونا كضيفة &lt;0>
+<strong>الظهور الأول لونا كضيفة </strong>
 
 <YouTube id="ZCsOMxnIruA" />
 
@@ -64,7 +64,7 @@ buttons:
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"></0>من الجيد أن نعلم&lt;0></p>
+<p className="mt-0"><strong>من الجيد أن نعلم</strong></p>
 <p className="mt-2">لا تزال الوكلاء الذكية والأدوات ذات الصلة في مرحلة التطوير المبكرة وتجريبية للغاية - استخدمها بحذر.</p>
 </AlertContent>
 
