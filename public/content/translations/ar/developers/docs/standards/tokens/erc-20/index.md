@@ -67,7 +67,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### أمثلة {#web3py-example}
 
-Let's see how a Standard is so important to make things simple for us to inspect any ERC-20 Token Contract on إيثريوم.
+دعونا نرى كيف أن المعيار مهم جداً لجعل الأمور بسيطة بالنسبة لنا لفحص أي عقد توكن ERC-20 على Ethereum.
 We just need the Contract Application Binary Interface (ABI) to create an interface to any ERC-20 Token. كما ترى أدناه، سنستخدم واجهة برمجة تطبيقات (ABI) مبسطة، لجعلها مثالاً منخفض الاحتكاك.
 
 #### مثال ويب3.باي {#web3py-example}

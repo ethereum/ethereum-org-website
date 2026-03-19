@@ -60,7 +60,7 @@ lang: ar
 
 ### أمثلة {#web3py-example}
 
-Let's see how a Standard is so important to make things simple for us to inspect any ERC-721 Token Contract on إيثريوم.
+دعونا نرى كيف أن المعيار مهم جداً لجعل الأمور بسيطة بالنسبة لنا لفحص أي عقد توكن ERC-721 على Ethereum.
 We just need the Contract Application Binary Interface (ABI) to create an interface to any ERC-721 Token. كما ترى أدناه، سنستخدم واجهة برمجة تطبيقات (ABI) مبسطة، لجعلها مثالاً منخفض الاحتكاك.
 
 #### مثال ويب3.باي {#web3py-example}

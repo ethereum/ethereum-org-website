@@ -14,13 +14,13 @@ sourceUrl: https://soliditydeveloper.com/mocking-contracts
 
 ## اختبار الوحدات للعقود باستخدام الكائنات الوهمية {#unit-testing-contracts-with-mocks}
 
-Mocking a contract essentially means creating a second version of that contract which behaves very similar to the original one, but in a way that can be easily controlled by the developer. غالبًا ما ينتهي بك الأمر بعقود معقدة حيث تريد فقط [اختبار أجزاء صغيرة من العقد](/developers/docs/smart-contracts/testing/). The problem is what if testing this small part requires a very specific contract state that is difficult to end up in؟
+يعني محاكاة (Mocking) العقد بشكل أساسي إنشاء نسخة ثانية من ذلك العقد تتصرف بشكل مشابه جداً للأصلي، ولكن بطريقة يمكن للمطور التحكم فيها بسهولة. غالباً ما ينتهي بك الأمر بعقود معقدة حيث تريد فقط [اختبار أجزاء صغيرة من العقد](/developers/docs/smart-contracts/testing/). المشكلة هي ماذا لو كان اختبار هذا الجزء الصغير يتطلب حالة عقد محددة للغاية يصعب الوصول إليها؟
 
-You could write complex test setup logic every time that brings in the contract in the required state or you write a mock. Mocking a contract is easy with inheritance. Simply create a second mock contract that inherits from the original one. Now you can override functions to your mock. Let us see it with an example.
+يمكنك كتابة منطق إعداد اختبار معقد في كل مرة يجلب العقد في الحالة المطلوبة أو يمكنك كتابة Mock. محاكاة العقد سهلة باستخدام الوراثة (Inheritance). ببساطة أنشئ عقد Mock ثانياً يرث من العقد الأصلي. يمكنك الآن تجاوز الوظائف (Override) في الـ Mock الخاص بك. دعنا نرى ذلك من خلال مثال.
 
 ## مثال: PrivateERC20 {#example-private-erc20}
 
-We use an example ERC-20 contract that has an initial private time. The owner can manage private users and only those will be allowed to receive tokens at the beginning. Once a certain time has passed, everyone will be allowed to use the tokens. إذا كنت مهتمًا، فنحن نستخدم خطاف [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) من عقود أوبن زبلين الجديدة الإصدار 3.
+نحن نستخدم مثال لعقد ERC-20 له فترة خصوصية أولية. يمكن للمالك إدارة المستخدمين الخاصين والذين سيُسمح لهم فقط بتلقي التوكنات في البداية. بمجرد مرور وقت معين، سيُسمح للجميع باستخدام التوكنات. إذا كنت مهتماً، فنحن نستخدم Hook الـ [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) من عقود OpenZeppelin الجديدة الإصدار 3.
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -81,7 +81,7 @@ contract PrivateERC20Mock is PrivateERC20 {
 }
 ```
 
-You will get one of the following error messages:
+ستتلقى إحدى رسائل الخطأ التالية:
 
 - `PrivateERC20Mock.sol: TypeError: Overriding function is missing "override" specifier.`
 - `PrivateERC20.sol: TypeError: Trying to override non-virtual function. Did you forget to add "virtual"?.`
@@ -92,11 +92,11 @@ You will get one of the following error messages:
 
 ## محاكاة العديد من العقود {#mocking-many-contracts}
 
-It can become messy if you have to create another contract for every single mock. إذا كان هذا يزعجك، فيمكنك إلقاء نظرة على مكتبة [MockContract](https://github.com/gnosis/mock-contract). إنها تسمح لك بتجاوز وتغيير سلوكيات العقود بسرعة. However, it works only for mocking calls to another contract, so it would not work for our example.
+يمكن أن يصبح الأمر فوضوياً إذا اضطررت لإنشاء عقد آخر لكل Mock مفرد. إذا كان هذا يزعجك، فيمكنك إلقاء نظرة على مكتبة [MockContract](https://github.com/gnosis/mock-contract). إنها تسمح لك بتجاوز وتغيير سلوكيات العقود بسرعة. ومع ذلك، فهي تعمل فقط لمحاكاة الاستدعاءات لعقد آخر، لذا لن تعمل في مثالنا.
 
 ## يمكن أن تكون المحاكاة أكثر قوة {#mocking-can-be-even-more-powerful}
 
 The powers of mocking do not end there.
 
 - Adding functions: Not only overriding a specific function is useful, but also just adding additional functions. من الأمثلة الجيدة للرموز وجود دالة `mint` إضافية للسماح لأي مستخدم بالحصول على رموز جديدة مجانًا.
-- Usage in testnets: When you deploy and test your contracts on testnets together with your dapp, consider using a mocked version. Avoid overriding functions unless you really have to. You want to test the real logic after all. But adding for example a reset function can be useful that simply resets the contract state to the beginning, no new deployment required. Obviously you would not want to have that in a Mainnet contract.
+- الاستخدام في شبكات الاختبار (Testnets): عندما تنشر وتختبر عقودك على شبكات الاختبار مع تطبيقك اللامركزي، فكر في استخدام نسخة Mock. تجنب تجاوز الوظائف ما لم تضطر حقاً لذلك. فأنت تريد اختبار المنطق الحقيقي في النهاية. ولكن إضافة دالة إعادة تعيين (Reset) مثلاً يمكن أن يكون مفيداً بحيث يعيد تعيين حالة العقد ببساطة إلى البداية، دون الحاجة إلى نشر جديد. من الواضح أنك لن ترغب في وجود ذلك في عقد على الشبكة الرئيسية (Mainnet).

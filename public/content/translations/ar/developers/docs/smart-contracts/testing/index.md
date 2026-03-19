@@ -18,7 +18,7 @@ lang: ar
 
 على الرغم من اختلاف الأساليب، فإن معظم طرق الاختبار تتطلب تنفيذ عقد ذكي مع عينة صغيرة من البيانات التي من المتوقع التعامل معها. إذا أنتج العقد نتائج صحيحة لبيانات العينة، فمن المفترض أن يعمل بشكل صحيح. توفر معظم أدوات الاختبار موارد لكتابة وتنفيذ [حالات الاختبار](https://en.m.wikipedia.org/wiki/Test_case) للتحقق مما إذا كان تنفيذ العقد يطابق النتائج المتوقعة.
 
-### Why is it important to test smart contracts؟ أهمية اختبار العقود الذكية {#importance-of-testing-smart-contracts}
+### لماذا يعد اختبار العقود الذكية مهماً؟ {#importance-of-testing-smart-contracts}
 
 نظرًا لأن العقود الذكية غالبًا ما تدير أصولًا مالية عالية القيمة، فإن الأخطاء البرمجية البسيطة يمكن أن تؤدي، وغالبًا ما تؤدي، إلى [خسائر فادحة للمستخدمين](https://rekt.news/leaderboard/). ومع ذلك، يمكن أن يساعدك الاختبار الصارم في اكتشاف العيوب والمشكلات في كود العقد الذكي مبكرًا وإصلاحها قبل الإطلاق على الشبكة الرئيسية.
 
@@ -41,7 +41,7 @@ lang: ar
 يمكن أن يتم إجراء الاختبار اليدوي بواسطة فرد واحد وفقًا لخطة اختبار مكتوبة تغطي سيناريوهات اختبار مختلفة. يمكنك أيضًا أن يكون لديك عدة أفراد أو مجموعات تتفاعل مع عقد ذكي خلال فترة زمنية محددة كجزء من الاختبار اليدوي. سيقوم المختبرون بمقارنة السلوك الفعلي للعقد مع السلوك المتوقع، واعتبار أي اختلاف بمثابة خطأ.
 
 يتطلب الاختبار اليدوي الفعال موارد كبيرة (مهارة ووقت ومال وجهد)، ومن الممكن - بسبب الخطأ البشري - تفويت بعض الأخطاء أثناء تنفيذ الاختبارات. ولكن الاختبار اليدوي قد يكون مفيدًا أيضًا - على سبيل المثال، قد يستخدم المختبر البشري (مثل المدقق) الحدس لاكتشاف الحالات الحدسية التي قد تفوتها أداة الاختبار الآلية.
-walakina alaikhtibar alyadawia qad yakun mfydan aydan - ealaa sabil almithali, qad yustakhdim almukhtabar albashariu (mathal almudaqiqi) alhads liaiktishaf alhalat alhadsiat alati qad tafawatha 'adat aliakhtibar alaliti.
+ولكن الاختبار اليدوي قد يكون مفيداً أيضاً - على سبيل المثال، قد يستخدم المختبر البشري (مثل المدقق) الحدس لاكتشاف الحالات الحدية التي قد تفوتها أداة اختبار آلية.
 
 ## الاختبار الآلي للعقود الذكية {#automated-testing-for-smart-contracts}
 
@@ -49,12 +49,12 @@ walakina alaikhtibar alyadawia qad yakun mfydan aydan - ealaa sabil almithali, q
 
 يقوم اختبار الوحدة بتقييم وظائف العقد بشكل منفصل ويتحقق من عمل كل مكون بشكل صحيح.
 yaqum akhtibar alwahdat bitaqyim wazayif aleaqd bishakl munfasil wayatahaqaq min eamal kuli mukawan bishakl sahihin. يجب أن تكون اختبارات الوحدة الجيدة بسيطة وسريعة التشغيل وتوفر فكرة واضحة عما حدث خطأً إذا فشلت الاختبارات.
-yajib 'an takun akhtibarat alwahdat aljayidat basitat wasarieat altashghil watawafur fikratan wadihatan eamaa hadath khtaan 'iidha fashilat alaikhtibaratu.
+يجب أن تكون اختبارات الوحدة الجيدة بسيطة وسريعة التشغيل وتوفر فكرة واضحة عما حدث بشكل خاطئ إذا فشلت الاختبارات.
 
 تُعد اختبارات الوحدة مفيدة للتحقق من أن الوظائف تعيد القيم المتوقعة وأن تخزين العقد يتم تحديثه بشكل صحيح بعد تنفيذ الوظيفة.
 tued akhtibarat alwahdat mufidatan liltahaquq min 'ana alwazayif tueid alqiam almutawaqaeat wa'ana takhzin aleaqd yatimu tahdithuh bishakl sahih baed tanfidh alwazifati. علاوة على ذلك، فإن تشغيل اختبارات الوحدة بعد إجراء تغييرات على قاعدة بيانات العقود يضمن عدم إدخال أخطاء في المنطق الجديد.
-eilawatan ealaa dhalika, fa'iina tashghil akhtibarat alwahdat baed 'iijra' taghyirat ealaa qaeidat bayanat aleuqud yadman eadam 'iidkhal 'akhta' fi almantiq aljadidi. فيما يلي بعض الإرشادات لتشغيل اختبارات الوحدة الفعالة:
-fima yali baed al'iirshadat litashghil akhtibarat alwahdat alfaeaalati:
+علاوة على ذلك، فإن تشغيل اختبارات الوحدة بعد إجراء تغييرات على قاعدة بيانات العقود يضمن عدم إدخال أخطاء في المنطق الجديد. فيما يلي بعض الإرشادات لتشغيل اختبارات الوحدة الفعالة:
+فيما يلي بعض الإرشادات لتشغيل اختبارات الوحدة الفعالة:
 
 #### إرشادات لاختبار الوحدات في العقود الذكية {#unit-testing-guidelines}
 
@@ -129,20 +129,20 @@ yusaeid fahm sayr aleamal altashghilii lileuqud aydan fi kitabat aikhtibarat alw
 من المهم توثيق أي افتراضات حول تنفيذ العقد وكتابة اختبارات الوحدة للتحقق من صحة تلك الافتراضات.
 min almuhimi tawthiq 'ayi aiftiradat hawl tanfidh aleaqd wakitabat aikhtibarat alwahdat liltahaquq min sihat tilk alaiftiradati. إلى جانب توفير الحماية ضد التنفيذ غير المتوقع، فإن اختبار التأكيدات يجبرك على التفكير في العمليات التي قد تؤدي إلى كسر نموذج أمان العقود الذكية.
 'iilaa janib tawfir alhimayat dida altanfidh ghayr almutawaqae, fa'iina aikhtibar altaakidat yujbiruk ealaa altafkir fi aleamaliaat alati qad tuadiy 'iilaa kasr namudhaj 'aman aleuqud aldhakiati. إحدى النصائح المفيدة هي أن تذهب إلى ما هو أبعد من "اختبارات المستخدم السعيد" وتكتب اختبارات سلبية تتحقق مما إذا كانت الوظيفة تفشل في حالة المدخلات الخاطئة.
-'iihdaa alnasayih almufidat hi 'an tadhhab 'iilaa ma hu 'abead min "aikhtibarat almustakhdam alsaeida" wataktub aikhtibarat salbiat tatahaqaq mimaa 'iidha kanat alwazifat tafshal fi halat almadkhalat alkhatiati.
+إحدى النصائح المفيدة هي الذهاب إلى أبعد من "اختبارات المستخدم السعيدة" وكتابة اختبارات سلبية تتحقق مما إذا كانت الوظيفة تفشل في حالة المدخلات الخاطئة.
 
 تتيح لك العديد من أطر اختبار الوحدات إنشاء تأكيدات - عبارات بسيطة تنص على ما يمكن للعقد فعله وما لا يمكنه فعله - وتشغيل الاختبارات لمعرفة ما إذا كانت هذه التأكيدات صالحة أثناء التنفيذ.
 tutih lak aleadid min 'utur akhtibar alwahadat 'iinsha' takidat - eibarat basitat tanusu ealaa ma yumkin lileaqd fieluh wama la yumkinuh fieluh - watashghil aliaikhtibarat limaerifat ma 'iidha kanat hadhih altaakidat salihat 'athna' altanfidhi. يمكن للمطور الذي يعمل على عقد المزاد الموصوف سابقًا أن يقدم التأكيدات التالية حول سلوكه قبل تشغيل الاختبارات السلبية:
-yumkin lilmutawir aladhi yaemal ealaa eaqd almazad almwsuf sabqan 'an yuqadim altaakidat altaaliat hawl sulukih qabl tashghil alaikhtibarat alsalbiiti:
+يمكن للمطور الذي يعمل على عقد المزاد الموصوف سابقاً تقديم التأكيدات التالية حول سلوكه قبل تشغيل الاختبارات السلبية:
 
 - لا يمكن للمستخدمين تقديم عروض عندما يكون المزاد قد انتهى أو لم يبدأ بعد.
-  la yumkin lilmustakhdimin taqdim eurud eindama yakun almazad qad aintahaa 'aw lam yabda biedu.
+  لا يمكن للمستخدمين تقديم عطاءات عندما يكون المزاد قد انتهى أو لم يبدأ بعد.
 
 - يتم إلغاء عقد المزاد إذا كان العرض أقل من الحد المقبول.
-  yatimu 'iilgha' eaqd almazad 'iidha kan aleard 'aqala min alhadi almaqbuli.
+  يتم إلغاء عقد المزاد إذا كان العطاء أقل من الحد الأدنى المقبول.
 
 - يتم إضافة أموال المستخدمين الذين فشلوا في الفوز بالعطاء إلى رصيدهم
-  yatimu 'iidafat 'amwal almustakhdimin aladhin fashiluu fi alfawz bialeata' 'iilaa rasidihim
+  تتم إضافة أموال المستخدمين الذين فشلوا في الفوز بالعطاء إلى رصيدهم
 
 **ملاحظة**: هناك طريقة أخرى لاختبار الافتراضات وهي كتابة اختبارات تؤدي إلى تشغيل [مُعدِّلات الوظائف](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) في العقد، وخاصةً عبارات `require` و`assert` و`if…else`.
 
@@ -151,7 +151,7 @@ yumkin lilmutawir aladhi yaemal ealaa eaqd almazad almwsuf sabqan 'an yuqadim al
 [تغطية الكود](https://en.m.wikipedia.org/wiki/Code_coverage) هي مقياس اختبار يتتبع عدد الفروع والأسطر والعبارات في الكود الخاص بك التي يتم تنفيذها أثناء الاختبارات. يجب أن تتمتع الاختبارات بتغطية جيدة للكود لتقليل مخاطر الثغرات الأمنية غير المختبرة.
 yajib 'an tatamatae aliakhtibarat bitaghtiat jayidat lilkud litaqlil makhatir althagharat al'amniat ghayr almukhtabarati. بدون تغطية كافية، قد تفترض خطأً أن عقدك آمن لأن جميع الاختبارات تنجح، بينما لا تزال الثغرات الأمنية موجودة في مسارات التعليمات البرمجية غير المختبرة.
 bidun taghtiat kafiatin, qad taftarid khtaan 'ana eaqdak aman li'ana jamie alaikhtibarat tanjahu, baynama la tazal althagharat al'amniat mawjudat fi masarat altaelimat albarmajiat ghayr almukhtabarati. ومع ذلك، فإن تسجيل تغطية الكود العالية يمنح ضمانًا بأن جميع البيانات/الوظائف في العقد الذكي تم اختبارها بشكل كافٍ للتأكد من صحتها.
-wamae dhalika, fa'iina tasjil taghtiat alkud alealiat yamnah dmanan bi'ana jamie albayanati/alwazayif fi aleaqd aldhakii tama aikhtibaruha bishakl kaf lilta'akud min sihatiha.
+ومع ذلك، فإن تسجيل تغطية الكود العالية يمنح ضماناً بأن جميع البيانات/الوظائف في العقد الذكي قد تم اختبارها بشكل كافٍ للتأكد من صحتها.
 
 ##### 4. استخدم أطر اختبار متطورة&#xA;aistakhdim 'utur akhtibar mutatawira
 
@@ -216,8 +216,8 @@ yueadu akhtibar altakamul mfydan 'iidha kan eaqduk yaetamid ealaa binyat mieyari
 - **[التحليل الثابت للعقود الذكية باستخدام ويك](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[الاختبار القائم على الخصائص باستخدام Brownie](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[اختبار Fuzzing للعقود باستخدام فاوندري](https://book.getfoundry.sh/forge/fuzz-testing)**
-- **[اختبار Fuzzing للعقود باستخدام إيكيدنا](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
-- **[اختبار Fuzzing للعقود باستخدام ويك](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
+- **[اختبار Fuzzing للعقود باستخدام Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[اختبار Fuzzing للعقود باستخدام Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[التنفيذ الرمزي للعقود الذكية باستخدام مانتيكور](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[التنفيذ الرمزي للعقود الذكية باستخدام ميثريل](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -242,11 +242,11 @@ taemal shabakat aliakhtibar 'aw testnet tmaman mithl shabakat إيثريوم Mai
 
 يُعد هذا الشكل من الاختبار اليدوي مفيدًا لتقييم التدفق الشامل لتطبيقك من وجهة نظر المستخدم
 yued hadha alshakl min aliakhtibar alyadawii mfydan litaqyim altadafuq alshaamil litatbiqik min wijhat nazar almustakhdam هنا، يمكن لمختبري النسخة التجريبية أيضًا إجراء عمليات تجريبية والإبلاغ عن أي مشكلات تتعلق بمنطق أعمال العقد والوظائف العامة.
-huna, yumkin limukhtabiri alnuskhat altajribiat aydan 'iijra' eamaliaat tajribiat wal'iiblagh ean 'ayi mushkilat tataealaq bimantiq 'aemal aleaqd walwazayif aleamati.
+هنا، يمكن لمختبري النسخة التجريبية أيضاً إجراء عمليات تجريبية والإبلاغ عن أي مشكلات تتعلق بمنطق أعمال العقد والوظائف العامة.
 
 يعد النشر على شبكة اختبار بعد الاختبار على blockchain محلي أمرًا مثاليًا نظرًا لأن الأول أقرب إلى سلوك إيثريوم Virtual Machine.
 yueadu alnashr ealaa shabakat akhtibar baed aliakhtibar ealaa blockchain mahaliyin amran mthalyan nzran li'ana al'awal 'aqrab 'iilaa suluk إيثريوم Virtual Machine. لذلك، من الشائع بالنسبة للعديد من مشاريع إيثريوم الأصلية نشر تطبيقات لامركزية على شبكات الاختبار لتقييم عملية العقود الذكية في ظل ظروف العالم الحقيقي.
-lidhalika, min alshaayie bialnisbat lileadid min masharie إيثريوم al'asliat nashr tatbiqat lamarkaziat ealaa shabakat alaikhtibar litaqyim eamaliat aleuqud aldhakiat fi zili zuruf alealam alhaqiqii.
+لذلك، من الشائع بالنسبة للعديد من مشاريع Ethereum الأصلية نشر تطبيقات لامركزية على شبكات الاختبار لتقييم عمليات العقود الذكية في ظل ظروف العالم الحقيقي.
 
 [المزيد عن شبكات اختبار إيثريوم.](/developers/docs/development-networks/#public-beacon-testchains)
 
@@ -256,15 +256,15 @@ While testing helps confirm that a contract returns the expected results for som
 
 التحقق الرسمي هو نهج لتقييم صحة البرنامج من خلال التحقق مما إذا كان النموذج الرسمي للبرنامج يتطابق مع المواصفات الرسمية.
 altahaquq alrasmiu hu nahj litaqyim sihat albarnamaj min khilal altahaquq mimaa 'iidha kan alnamudhaj alrasmiu lilbarnamaj yatatabaq mae almuasafat alrasmiati. النموذج الرسمي هو تمثيل رياضي مجرد لبرنامج، في حين أن المواصفات الرسمية تحدد خصائص البرنامج (أي التأكيدات المنطقية حول تنفيذ البرنامج).
-alnamudhaj alrasmiu hu tamthil riadiun mujarad libarnamaji, fi hin 'ana almuasafat alrasmiat tuhadid khasayis albarnamaj ('aya altaakidat almantiqiat hawl tanfidh albarnamaji).
+النموذج الرسمي هو تمثيل رياضي مجرد لبرنامج، في حين تحدد المواصفات الرسمية خصائص البرنامج (أي التأكيدات المنطقية حول تنفيذ البرنامج).
 
 نظرًا لأن الخصائص مكتوبة بمصطلحات رياضية، فمن الممكن التحقق من أن النموذج الرسمي (الرياضي) للنظام يلبي المواصفات باستخدام قواعد الاستدلال المنطقي.
-nzran li'ana alkhasayis maktubat bimustalahat riadiatin, famin almumkin altahaquq min 'ana alnamudhaj alrasmia (alriyadi) lilnizam yulabiy almuasafat biastikhdam qawaeid aliastidlal almantiqii. وبالتالي، يُقال إن أدوات التحقق الرسمية تُنتج "دليلاً رياضياً" على صحة النظام.
-wabialtaali, yuqal 'iina 'adawat altahaquq alrasmiat tuntj "dlylaan ryadyaan" ealaa sihat alnizami.
+نظراً لأن الخصائص مكتوبة بمصطلحات رياضية، فمن الممكن التحقق من أن النموذج الرسمي (الرياضي) للنظام يلبي المواصفات باستخدام قواعد الاستدلال المنطقي. وبالتالي، يُقال إن أدوات التحقق الرسمية تُنتج "دليلاً رياضياً" على صحة النظام.
+وبالتالي، يُقال إن أدوات التحقق الرسمية تُنتج "دليلاً رياضياً" على صحة النظام.
 
 على عكس الاختبار، يمكن استخدام التحقق الرسمي للتأكد من أن تنفيذ العقود الذكية يلبي مواصفات رسمية لـ_جميع_ عمليات التنفيذ (أي أنه لا يحتوي على أخطاء) دون الحاجة إلى تنفيذه باستخدام بيانات العينة. لا يؤدي هذا إلى تقليل الوقت المستغرق في تشغيل العشرات من اختبارات الوحدة فحسب، بل إنه أيضًا أكثر فعالية في اكتشاف الثغرات الأمنية المخفية.
-la yuadiy hadha 'iilaa taqlil alwaqt almustaghraq fi tashghil aleasharat min aikhtibarat alwahdat fahusbu, bal 'iinah aydan 'akthar faeaaliatan fi aiktishaf althagharat al'amniat almakhfiati. ومع ذلك، فإن تقنيات التحقق الرسمية تقع على طيف يعتمد على صعوبة تنفيذها ومدى فائدتها.
-wamae dhalika, fa'iina tiqniaat altahaquq alrasmiat taqae ealaa tayf yaetamid ealaa sueubat tanfidhiha wamadaa fayidatiha.
+لا يؤدي هذا إلى تقليل الوقت المستغرق في تشغيل العشرات من اختبارات الوحدة فحسب، بل إنه أيضاً أكثر فاعلية في اكتشاف الثغرات الأمنية المخفية. ومع ذلك، فإن تقنيات التحقق الرسمية تقع على طيف يعتمد على صعوبة تنفيذها ومدى فائدتها.
+ومع ذلك، فإن تقنيات التحقق الرسمية تقع على طيف يعتمد على صعوبة تنفيذها ومدى فائدتها.
 
 [المزيد عن التحقق الرسمي للعقود الذكية.](/developers/docs/smart-contracts/formal-verification)
 
@@ -288,7 +288,7 @@ wamae dhalika, fa'iina tiqniaat altahaquq alrasmiat taqae ealaa tayf yaetamid ea
 
 - **[وافل](https://ethereum-waffle.readthedocs.io/en/latest/)** - _إطار عمل لتطوير واختبار العقود الذكية المتقدمة (يعتمد على ethers.js)_.
 
-- **[ريميكس Tests](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)** - _أداة لاختبار عقود سوليديتي الذكية._ Works underneath ريميكس IDE "سوليديتي Unit Testing" plugin which is used to write and run test cases for a contract._
+- **[اختبارات Remix](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)** - _أداة لاختبار عقود Solidity الذكية. تعمل تحت المكون الإضافي لـ Remix IDE "Solidity Unit Testing" والذي يُستخدم لكتابة وتشغيل حالات الاختبار للعقد._
 
 - **[أوبن زبلين Test Helpers](https://github.com/OpenZeppelin/openzeppelin-test-helpers)** - _مكتبة تأكيد لاختبار عقود إيثريوم الذكية._ Make sure your contracts behave as expected!_
 

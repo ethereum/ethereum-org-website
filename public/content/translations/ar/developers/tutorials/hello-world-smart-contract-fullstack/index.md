@@ -118,7 +118,7 @@ cd hello-world
 
 ### الخطوة 7: تنزيل هارد هات {#step-7-download-hardhat}
 
-هارد هات is a development environment to compile, deploy, test, and debug your إيثريوم software. It helps developers when building smart contracts and dapps locally before deploying to the live chain.
+يعتبر Hardhat بيئة تطوير لترجمة (Compile) ونشر واختبار وتصحيح أخطاء برامج Ethereum الخاصة بك. فهو يساعد المطورين عند بناء العقود الذكية والتطبيقات اللامركزية (DApps) محلياً قبل النشر على الشبكة الحية.
 
 داخل مشروعنا `hello-world`، قم بتشغيل:
 
@@ -136,7 +136,7 @@ npm install --save-dev hardhat
 npx hardhat
 ```
 
-You should then see a welcome message and option to select what you want to do. Select “create an empty hardhat.config.js”:
+يجب أن ترى بعد ذلك رسالة ترحيب وخياراً لاختيار ما تريد القيام به. اختر "create an empty hardhat.config.js":
 
 ```
 888    888                      888 888               888
@@ -225,7 +225,7 @@ contract HelloWorld {
 
 > لمعرفة المزيد حول إرسال المعاملات، راجع [هذا الدرس التعليمي](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) حول إرسال المعاملات باستخدام web3.
 
-First, install the dotenv package in your project directory:
+أولاً، قم بتثبيت حزمة dotenv في مجلد مشروعك:
 
 ```
 npm install dotenv --save
@@ -294,7 +294,7 @@ module.exports = {
 
 ### الخطوة 14: تجميع عقدنا {#step-14-compile-our-contract}
 
-To make sure everything is working so far, let’s compile our contract. مهمة `compile` هي إحدى مهام hardhat المضمنة.
+للتأكد من أن كل شيء يعمل حتى الآن، لنقم بترجمة العقد الخاص بنا. مهمة `compile` هي إحدى مهام Hardhat المضمنة.
 
 From the command line run:
 
@@ -306,7 +306,7 @@ npx hardhat compile
 
 ### الخطوة 15: كتابة سكريبت النشر الخاص بنا {#step-15-write-our-deploy-script}
 
-Now that our contract is written and our configuration file is good to go, it’s time to write our contract deploy script.
+الآن بعد أن تمت كتابة العقد الخاص بنا وأصبح ملف التكوين جاهزاً، حان الوقت لكتابة سكربت نشر العقد.
 
 انتقل إلى مجلد `scripts/` وأنشئ ملفًا جديدًا باسم `deploy.js`، مع إضافة المحتويات التالية إليه:
 
@@ -703,7 +703,7 @@ https://goerli.etherscan.io/address/<contract-address>#contracts
 
 #### تشغيل مشروع رياكت الخاص بك {#get-your-react-project-running}
 
-Let's start by running the رياكت project in our browser. The beauty of رياكت is that once we have our project running in our browser, any changes we save will be updated live in our browser.
+لنبدأ بتشغيل مشروع React في المتصفح. جمال React هو أنه بمجرد تشغيل مشروعنا في المتصفح، سيتم تحديث أي تغييرات نحفظها مباشرة في المتصفح.
 
 لتشغيل المشروع، انتقل إلى الدليل الجذر لمجلد `starter-files`، ثم قم بتشغيل `npm install` في الطرفية لتثبيت تبعيات المشروع:
 
@@ -724,7 +724,7 @@ npm start
 
 #### مكون `HelloWorld.js` {#the-helloworld-js-component}
 
-دعنا نعد إلى مجلد `src` في محررنا ونفتح ملف `HelloWorld.js`. It's super important that we understand everything in this file, as it is the primary رياكت component we will be working on.
+دعنا نعد إلى مجلد `src` في محررنا ونفتح ملف `HelloWorld.js`. من المهم جداً أن نفهم كل شيء في هذا الملف، لأنه مكون React الأساسي الذي سنعمل عليه.
 
 في الجزء العلوي من هذا الملف، ستلاحظ أن لدينا العديد من عبارات الاستيراد الضرورية لتشغيل مشروعنا، بما في ذلك مكتبة رياكت، وخطافات useEffect وuseState، وبعض العناصر من `./util/interact.js` (سنصفها بمزيد من التفصيل قريبًا!)، وشعار ألكيمي.
 
@@ -796,7 +796,7 @@ const onUpdatePressed = async () => {
 - `connectWalletPressed`- سيتم استدعاء هذه الدالة لتوصيل محفظة ميتاماسك للمستخدم بتطبيقنا اللامركزي.
 - `onUpdatePressed` - سيتم استدعاء هذه الدالة عندما يرغب المستخدم في تحديث الرسالة المخزنة في العقد الذكي.
 
-Near the end of this file, we have the UI of our component.
+بالقرب من نهاية هذا الملف، لدينا واجهة المستخدم (UI) الخاصة بمكوننا.
 
 ```javascript
 // HelloWorld.js
@@ -1128,19 +1128,19 @@ useEffect(async () => {
 
 #### تحقق من رصيدك {#check-your-balance}
 
-للتأكد مرة أخرى من وجود رصيدنا، لنجري طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الإنشاء من ألكيمي](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. After you input your ميتاماسك account address and click “Send Request”, you should see a response like this:
+للتأكد مرة أخرى من وجود رصيدنا، لنجري طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الإنشاء من Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). سيعيد هذا كمية ETH في محفظتنا. بعد إدخال عنوان حساب MetaMask الخاص بك والنقر على "Send Request"، يجب أن ترى استجابة مثل هذه:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**ملاحظة:** هذه النتيجة بوحدة wei وليست eth. Wei is used as the smallest denomination of ether. The conversion from wei to eth is: 1 eth = 10¹⁸ wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10¹⁸ which equals 1 eth.
+**ملاحظة:** هذه النتيجة بوحدة wei وليست ETH. تُستخدم wei كأصغر وحدة لـ ether. التحويل من wei إلى ETH هو: 1 ETH = 10¹⁸ wei. لذا إذا قمنا بتحويل 0xde0b6b3a7640000 إلى النظام العشري فسنحصل على 1\*10¹⁸ وهو ما يعادل 1 ETH.
 
 Phew! Our fake money is all there! 🤑
 
 ### الخطوة 5: توصيل ميتاماسك بواجهة المستخدم الخاصة بك {#step-5-connect-metamask-to-your-UI}
 
-Now that our ميتاماسك wallet is set up, let's connect our dapp to it!
+الآن بعد أن تم إعداد محفظة MetaMask الخاصة بنا، لنقم بتوصيل تطبيقنا اللامركزي (DApp) بها!
 
 #### دالة `connectWallet` {#the-connectWallet-function}
 
@@ -1196,7 +1196,7 @@ export const connectWallet = async () => {
 
 الآن إذا كان `window.ethereum` _موجودًا_، فهنا تصبح الأمور مثيرة للاهتمام.
 
-باستخدام حلقة try/catch، سنحاول الاتصال بـ ميتاماسك عن طريق استدعاء [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Calling this function will open up ميتاماسك in the browser, whereby the user will be prompted to connect their wallet to your dapp.
+باستخدام حلقة try/catch، سنحاول الاتصال بـ MetaMask عن طريق استدعاء [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). سيؤدي استدعاء هذه الدالة إلى فتح MetaMask في المتصفح، حيث سيُطلب من المستخدم توصيل محفظته بتطبيقك اللامركزي.
 
 - إذا اختار المستخدم الاتصال، فإن `method: "eth_requestAccounts"` ستعيد مصفوفة تحتوي على جميع عناوين حسابات المستخدم المتصلة بالتطبيق اللامركزي. إجمالاً، ستعيد دالة `connectWallet` الخاصة بنا كائن JSON يحتوي على _أول_ `address` في هذه المصفوفة \(انظر السطر 9\) ورسالة `status` تحث المستخدم على كتابة رسالة إلى العقد الذكي.
 - إذا رفض المستخدم الاتصال، فسيحتوي كائن JSON على سلسلة فارغة لـ `address` المرجع ورسالة `status` تعكس أن المستخدم رفض الاتصال.
@@ -1225,7 +1225,7 @@ const connectWalletPressed = async () => {
 
 افتح متصفحك على صفحة [http://localhost:3000/](http://localhost:3000/)، واضغط على زر "توصيل المحفظة" في الجزء العلوي الأيمن من الصفحة.
 
-If you have ميتاماسك installed, you should be prompted to connect your wallet to your dapp. Accept the invitation to connect.
+إذا كان لديك MetaMask مثبتاً، فيجب أن يُطلب منك توصيل محفظتك بتطبيقك اللامركزي. اقبل الدعوة للاتصال.
 
 يجب أن ترى أن زر المحفظة يعكس الآن أن عنوانك متصل! يا سلام 🔥
 
@@ -1305,11 +1305,11 @@ useEffect(async () => {
 
 الآن بعد أن أضفت هذا الكود، دعنا نحاول تحديث نافذة متصفحنا.
 
-جميل! The button should say that you're connected, and show a preview of your connected wallet's address - even after you refresh!
+جميل! يجب أن يظهر الزر أنك متصل، ويعرض معاينة لعنوان محفظتك المتصلة - حتى بعد تحديث الصفحة!
 
 #### تنفيذ `addWalletListener` {#implement-addwalletlistener}
 
-The final step in our dapp wallet setup is implementing the wallet listener so our UI updates when our wallet's state changes, such as when the user disconnects or switches accounts.
+الخطوة الأخيرة في إعداد محفظة تطبيقنا اللامركزي هي تنفيذ مصغي المحفظة (Wallet Listener) بحيث يتم تحديث واجهة المستخدم الخاصة بنا عند تغير حالة المحفظة، مثل قيام المستخدم بقطع الاتصال أو تبديل الحسابات.
 
 في ملف `HelloWorld.js` الخاص بك، قم بتعديل دالة `addWalletListener` الخاصة بك على النحو التالي:
 
@@ -1450,7 +1450,7 @@ try {
 
 بعد ذلك، نقوم باستدعاء await، `window.ethereum.request`، حيث نطلب من ميتاماسك توقيع المعاملة. لاحظ، في السطرين 11 و 12، أننا نحدد طريقة eth الخاصة بنا، `eth_sendTransaction` ونمرر `transactionParameters` الخاصة بنا.
 
-At this point, ميتاماسك will open up in the browser, and prompt the user to sign or reject the transaction.
+في هذه المرحلة، سيفتح MetaMask في المتصفح، ويطلب من المستخدم التوقيع على المعاملة أو رفضها.
 
 - إذا كانت المعاملة ناجحة، فستعيد الدالة كائن JSON حيث تحث سلسلة `status` JSX المستخدم على التحقق من إيثرسكان لمزيد من المعلومات حول معاملتهم.
 - إذا فشلت المعاملة، فستعيد الدالة كائن JSON حيث تنقل سلسلة `status` رسالة الخطأ.

@@ -391,7 +391,7 @@ teku --network mainnet \
 
 ### إضافة المدققين {#adding-validators}
 
-A consensus client serves as a Beacon Node for validators to connect. Each consensus client has its own validator software described in detail in its respective documentation.
+يعمل عميل Consensus بمثابة Beacon Node لتتصل بها الـ Validators. لكل عميل Consensus برنامج Validator خاص به مشروح بالتفصيل في وثائقه المرجعية.
 
 يتيح لك تشغيل المدقق الخاص بك [تجميد العملات الفردي](/staking/solo/)، وهي الطريقة الأكثر تأثيرًا وغير القائمة على الثقة لدعم شبكة إيثريوم. However, this requires a deposit of 32 ETH. لتشغيل مدقق على عقدتك الخاصة بمبلغ أصغر، قد يثير اهتمامك مجمع لامركزي مع مشغلي عُقد لا يحتاجون إلى إذن، مثل [روكيت بول](https://rocketpool.net/node-operators).
 
@@ -415,13 +415,13 @@ Different clients have different implementations of the RPC endpoints. But there
 
 المنفذ الافتراضي لـ JSON-RPC لعميل التنفيذ هو `8545` ولكن يمكنك تعديل منافذ نقاط النهاية المحلية في التكوين. By default, the RPC interface is only reachable on the localhost of your computer. لجعله قابلاً للوصول عن بُعد، قد ترغب في عرضه للعامة عن طريق تغيير العنوان إلى `0.0.0.0`. This will make it reachable over local network and public IP addresses. In most cases you'll also need to set up port forwarding on your router.
 
-Approach exposing ports to the internet with caution as this will let anyone on the internet control your node. Malicious actors could access your node to bring down your system or steal your funds if you're using your client as a wallet.
+تعامل بحذر مع فتح المنافذ (Ports) للإنترنت، لأن ذلك سيسمح لأي شخص على الإنترنت بالتحكم في الـ Node الخاصة بك. يمكن للجهات الخبيثة الوصول إلى الـ Node لإسقاط نظامك أو سرقة أموالك إذا كنت تستخدم العميل كـ Wallet.
 
 A way around this is to prevent potentially harmful RPC methods from being modifiable. على سبيل المثال، مع غيث، يمكنك الإعلان عن طرق قابلة للتعديل باستخدام علامة: `--http.api web3,eth,txpool`.
 
 Access to the RPC interface can be extended through the development of edge layer APIs or web server applications, like Nginx, and connecting them to your client's local address and port. يمكن أن يتيح الاستفادة من طبقة وسيطة أيضًا للمطورين القدرة على إعداد شهادة لاتصالات `https` الآمنة بواجهة RPC.
 
-Setting up a web server, a proxy, or external facing Rest API is not the only way to provide access to the RPC endpoint of your node. هناك طريقة أخرى للحفاظ على الخصوصية لإعداد نقطة نهاية يمكن الوصول إليها بشكل عام وهي استضافة العقدة على خدمة onion الخاصة بك على [Tor](https://www.torproject.org/). This will let you reach the RPC outside your local network without a static public IP address or opened ports. However, using this configuration may only allow the RPC endpoint to be accessible via the Tor network which is not supported by all the applications and might result in connection issues.
+إن إعداد خادم ويب، أو Proxy، أو Rest API خارجي ليس الطريقة الوحيدة لتوفير الوصول إلى RPC endpoint الخاص بالـ Node. هناك طريقة أخرى للحفاظ على الخصوصية لإعداد نقطة نهاية يمكن الوصول إليها بشكل عام وهي استضافة الـ Node على خدمة onion الخاصة بك على [Tor](https://www.torproject.org/). سيسمح لك هذا بالوصول إلى RPC خارج شبكتك المحلية دون عنوان IP عام ثابت أو منافذ مفتوحة. ومع ذلك، قد يؤدي استخدام هذا التكوين فقط إلى جعل RPC endpoint متاحاً عبر شبكة Tor، وهو أمر غير مدعوم من قبل جميع التطبيقات وقد يؤدي إلى مشكلات في الاتصال.
 
 للقيام بذلك، عليك إنشاء [خدمة onion](https://community.torproject.org/onion-services/) الخاصة بك. اطلع على [التوثيق](https://community.torproject.org/onion-services/setup/) حول إعداد خدمة onion لاستضافة خدمتك الخاصة. You can point it to a web server with proxy to the RPC port or just directly to the RPC.
 
@@ -429,15 +429,15 @@ Lastly, and one of the most popular ways to provide access to internal networks 
 
 ### تشغيل العقدة {#operating-the-node}
 
-You should regularly monitor your node to make sure it's running properly. You may need to do occasional maintenance.
+يجب عليك مراقبة الـ Node بانتظام للتأكد من أنها تعمل بشكل صحيح. قد تحتاج إلى إجراء صيانة من حين لآخر.
 
 #### إبقاء العقدة متصلة بالإنترنت {#keeping-node-online}
 
-Your node doesn't have to be online all the time, but you should keep it online as much as possible to keep it in sync with the network. You can shut it down to restart it, but keep in mind that:
+ليس من الضروري أن تكون الـ Node متصلة بالإنترنت طوال الوقت، ولكن يجب عليك إبقاؤها متصلة قدر الإمكان لمواصلة المزامنة (Sync) مع الشبكة. يمكنك إيقاف تشغيلها لإعادة تشغيلها، ولكن ضع في اعتبارك ما يلي:
 
-- Shutting down can take a few minutes if the recent state is still being written on disk.
-- Forced shut downs can damage the database requiring you to resync the entire node.
-- Your client will go out of sync with the network and will need to resync when you restart it. While the node can begin syncing from were it was last shutdown, the process can take time depending on how long it has been offline.
+- قد يستغرق إيقاف التشغيل بضع دقائق إذا كانت الحالة الأخيرة لا تزال تُكتب على القرص.
+- يمكن أن تؤدي عمليات إيقاف التشغيل القسري إلى تلف قاعدة البيانات، مما يتطلب منك إعادة مزامنة (Resync) الـ Node بالكامل.
+- سيفقد العميل المزامنة مع الشبكة وسيحتاج إلى إعادة مزامنة عند إعادة تشغيله. بينما يمكن للـ Node أن تبدأ المزامنة من حيث توقفت عند آخر إيقاف تشغيل، إلا أن العملية قد تستغرق وقتاً اعتماداً على مدة بقائها غير متصلة بالإنترنت.
 
 _لا ينطبق هذا على عُقد مدقق طبقة الإجماع._ سيؤثر إيقاف تشغيل عقدتك على جميع الخدمات التي تعتمد عليها. إذا كنت تشغل عقدة لأغراض _تجميد العملات_ فيجب أن تحاول تقليل وقت التوقف عن العمل قدر الإمكان.
 
@@ -451,7 +451,7 @@ Consider creating a service to run your clients automatically on startup. على
 
 > قبل تحديثات الشبكة الهامة، تنشر EF منشورًا على [مدونتها](https://blog.ethereum.org). يمكنك [الاشتراك في هذه الإعلانات](https://blog.ethereum.org/category/protocol#subscribe) لتلقي إشعار على بريدك عندما تحتاج عقدتك إلى تحديث.
 
-Updating clients is very simple. Each client has specific instructions in their documentation, but the process is generally just to download the latest version and restart the client with the new executable. The client should pick up where it left off, but with the updates applied.
+تحديث العملاء بسيط للغاية. لكل عميل تعليمات محددة في وثائقه، ولكن العملية بشكل عام تتمثل في تنزيل أحدث إصدار وإعادة تشغيل العميل باستخدام الملف التنفيذي الجديد. يجب أن يستأنف العميل العمل من حيث توقف، ولكن مع تطبيق التحديثات.
 
 لكل تطبيق من العملاء نسخه من سلسلة قابلة للقراءة من البشر مستخدمة في بروتوكول النظير ولكن يمكن الوصول إليها أيضا من خط الأوامر. يتيح سلسلة الإصدار هذه للمستخدمين التحقق من أنهم يقومون بتشغيل الإصدار الصحيح ويسمح لمستكشفي الكتل وغيرها من الأدوات التحليلية المعنيه بتقدير توزيع عملاء معينين على الشبكة. الرجاء الرجوع إلى وثائق العميل الفردي للحصول على مزيد من المعلومات عن سلاسل الإصدار.
 

@@ -315,11 +315,11 @@ sidebarDepth: 1
 
 #### ما هو ترقية لندن / EIP-1559؟ {#eip-1559}
 
-Before the London Upgrade, إيثريوم had fixed-sized blocks. In times of high network demand, these blocks operated at full capacity. As a result, users often had to wait for demand to reduce to get included in a block, which led to a poor user experience. The London Upgrade introduced variable-sized blocks to إيثريوم.
+قبل ترقية London، كان لـ Ethereum كتل (Blocks) ثابتة الحجم. في أوقات الطلب المرتفع على الشبكة، كانت هذه الكتل تعمل بكامل طاقتها. ونتيجة لذلك، كان على المستخدمين غالباً الانتظار حتى ينخفض الطلب ليتم تضمينهم في كتلة، مما أدى إلى تجربة مستخدم سيئة. قدمت ترقية London كتلًا متغيرة الحجم لـ Ethereum.
 
 تغيرت طريقة حساب رسوم المعاملات على شبكة إيثريوم مع [ترقية London](/ethereum-forks/#london) في أغسطس 2021. قبل ترقية London، كانت الرسوم تُحسب دون فصل رسوم `base` و`priority`، على النحو التالي:
 
-Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,000 units, and the gas price is 200 gwei.
+لنقل أن Alice كان عليها دفع 1 ETH لـ Bob. في المعاملة، حد الغاز (Gas Limit) هو 21,000 وحدة، وسعر الغاز هو 200 gwei.
 
 كانت الرسوم الإجمالية ستكون: `وحدات الغاز (الحد) * سعر الغاز لكل وحدة` أي `21,000 * 200 = 4,200,000 gwei` أو 0.0042 ETH
 
@@ -464,7 +464,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 - خفض مكافآت [تعدين](/developers/docs/consensus-mechanisms/pow/mining/) الكتل من 3 إلى 2 ETH.
 - ضمن أن البلوكتشين لم يتجمد قبل [تنفيذ إثبات الحصة](#beacon-chain-genesis).
 - حسّن تكلفة [الغاز](/glossary/#gas) لإجراءات معينة في [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
-- Added the ability to interact with addresses that haven't been created yet.
+- إضافة القدرة على التفاعل مع العناوين التي لم يتم إنشاؤها بعد.
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
