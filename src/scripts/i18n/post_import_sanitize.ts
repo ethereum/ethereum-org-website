@@ -400,6 +400,77 @@ function fixMergedSupDigits(
 }
 
 /**
+ * Fix Crowdin numbered tag placeholders (<0>, </0>, <1>, etc.)
+ * Crowdin replaces HTML tags with numbered placeholders during translation,
+ * but sometimes fails to restore them. Tags may be inverted (closer first)
+ * and/or HTML-escaped (&lt;0> instead of <0>).
+ *
+ * Strategy: Build a map from numbered tags to actual HTML tags by parsing
+ * the English source. Then replace all numbered tags in the translation.
+ * Handles inverted order and HTML-escaped variants.
+ */
+function fixCrowdinNumberedTags(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  // Build tag map from English: find HTML tags and assign numbers by order
+  // Crowdin assigns <0> to the first tag pair, <1> to the second, etc.
+  const tagPairRe = /<(strong|em|b|i|u|s|mark|code|span[^>]*)>/g
+  const tagMap = new Map<string, { open: string; close: string }>()
+  let tagIndex = 0
+  let m
+  const seen = new Set<string>()
+
+  while ((m = tagPairRe.exec(englishContent)) !== null) {
+    const tagName = m[1].split(/\s/)[0] // Get just the tag name without attrs
+    const fullOpen = m[0]
+    if (!seen.has(tagName)) {
+      seen.add(tagName)
+      tagMap.set(String(tagIndex), {
+        open: fullOpen,
+        close: `</${tagName}>`,
+      })
+      tagIndex++
+    }
+  }
+
+  if (tagMap.size === 0) return { content: translatedContent, fixCount: 0 }
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = translatedContent.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    for (const [num, tags] of tagMap) {
+      // Replace </N>text<N> (inverted) or </N>text&lt;N> (inverted + escaped)
+      const invertedRe = new RegExp(
+        `</${num}>([\\s\\S]*?)(?:&lt;${num}>|<${num}>)`,
+        "g"
+      )
+      parts[i] = parts[i].replace(invertedRe, (_match, inner) => {
+        fixCount++
+        return `${tags.open}${inner}${tags.close}`
+      })
+
+      // Replace <N>text</N> (correct order but numbered)
+      const normalRe = new RegExp(
+        `(?:&lt;${num}>|<${num}>)([\\s\\S]*?)</${num}>`,
+        "g"
+      )
+      parts[i] = parts[i].replace(normalRe, (_match, inner) => {
+        fixCount++
+        return `${tags.open}${inner}${tags.close}`
+      })
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Fix split bold markers where Crowdin prematurely closes ** mid-paragraph
  * and escapes the real closing marker as \*\*.
  *
@@ -433,6 +504,68 @@ function fixSplitBoldMarkers(content: string): {
       })
     }
     parts[i] = lines.join("\n")
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Known wrong Arabic compound terms found in Crowdin translations.
+ * Maps wrong compound -> correct compound.
+ * These are always wrong in the Ethereum docs context -- "الدولة" means
+ * "nation-state" but "state" in CS/blockchain means "حالة" (condition).
+ */
+const KNOWN_WRONG_COMPOUNDS: Record<string, string> = {
+  // State polysemy: political state -> computational state
+  "قنوات الدولة": "قنوات الحالة",
+  "قناة الدولة": "قناة الحالة",
+  "بيانات الدولة": "بيانات الحالة",
+  "التزامات الدولة": "التزامات الحالة",
+  "جذور الدولة": "جذور الحالة",
+  "تحديثات الدولة": "تحديثات الحالة",
+  "تحولات الدولة": "تحولات الحالة",
+  "تحديث الولاية": "تحديث الحالة",
+  "القنوات الحكومية": "قنوات الحالة",
+  "التحديثات الحكومية": "تحديثات الحالة",
+  "القناة الحكومية": "قناة الحالة",
+  "للقنوات الحكومية": "لقنوات الحالة",
+  "انعدام الجنسية": "انعدام الحالة",
+  "عديمة الجنسية": "عديمة الحالة",
+  "عديمي الجنسية": "عديمي الحالة",
+  "انتهاء صلاحية الدولة": "انتهاء صلاحية الحالة",
+  "مسؤولية الدولة": "مسؤولية الحالة",
+  // Ether as altruism
+  "الإيثار": "الإيثر",
+  // Liquid staking as liquid mortgage
+  "الرهن العقاري السائل": "التحصيص السائل",
+}
+
+/**
+ * Fix known wrong Arabic compound terms.
+ * These are always-wrong translations where Crowdin/MT picks the wrong
+ * meaning of an ambiguous English word (e.g., "state" as nation-state).
+ * Skips code blocks.
+ */
+function fixKnownWrongCompounds(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    for (const [wrong, correct] of Object.entries(KNOWN_WRONG_COMPOUNDS)) {
+      const escaped = wrong.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+      const re = new RegExp(escaped, "g")
+      parts[i] = parts[i].replace(re, () => {
+        fixCount++
+        return correct
+      })
+    }
   }
 
   return { content: parts.join(""), fixCount }
@@ -3161,6 +3294,10 @@ function processMarkdownFile(
     (n) => `Fixed ${n} split bold marker(s) (premature close + escaped end)`
   )
   applyFix(
+    () => fixKnownWrongCompounds(content),
+    (n) => `Fixed ${n} known wrong compound term(s)`
+  )
+  applyFix(
     () => fixKnownBrandGarbles(content, locale),
     (n) => `Fixed ${n} known brand name garble(s)`
   )
@@ -3360,6 +3497,15 @@ function processMarkdownFile(
     }
     content = supResult.content
 
+    // Fix Crowdin numbered tag placeholders (<0>, </0>, etc.)
+    const tagResult = fixCrowdinNumberedTags(content, englishMd)
+    if (tagResult.content !== content) {
+      issues.push(
+        `Fixed ${tagResult.fixCount} Crowdin numbered tag placeholder(s)`
+      )
+    }
+    content = tagResult.content
+
     // Fix translated hrefs using set comparison
     const hrefResult = fixTranslatedHrefs(content, englishMd)
     if (hrefResult.content !== content) {
@@ -3513,6 +3659,15 @@ function processJsonFile(
   if (dupResult.fixCount > 0) {
     content = dupResult.content
     issues.push(`Fixed ${dupResult.fixCount} duplicated tag value(s)`)
+  }
+
+  // Fix known wrong compound terms in JSON values
+  const compoundResult = fixKnownWrongCompounds(content)
+  if (compoundResult.fixCount > 0) {
+    content = compoundResult.content
+    issues.push(
+      `Fixed ${compoundResult.fixCount} known wrong compound term(s)`
+    )
   }
 
   // Try parsing to validate JSON
@@ -3921,8 +4076,10 @@ export const _testOnly = {
   fixKnownBrandGarbles,
   restoreStrippedAbbreviations,
   fixMergedSupDigits,
+  fixCrowdinNumberedTags,
   fixMissingOpeningSup,
   fixSplitBoldMarkers,
+  fixKnownWrongCompounds,
   warnExposedMdxTags,
   fixBareRtlDates,
   fixBareRtlEquations,
