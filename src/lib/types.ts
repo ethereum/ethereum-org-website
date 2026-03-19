@@ -402,6 +402,7 @@ export type Commit = {
       email: string
       date: string
     }
+    message: string
   }
   author: {
     avatar_url: string

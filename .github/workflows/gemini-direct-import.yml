@@ -1,0 +1,71 @@
+name: Import Gemini Direct Translations
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_path:
+        description: "Path(s) to translate (comma-separated files, single directory, or blank for all)"
+        required: false
+        type: string
+      target_languages:
+        description: "Comma-separated language codes (blank for all locales)"
+        required: false
+        type: string
+      base_branch:
+        description: "Base branch to create PR against"
+        required: false
+        default: "dev"
+        type: string
+      concurrency:
+        description: "Max parallel Gemini requests per language"
+        required: false
+        default: "3"
+        type: string
+      resume_run_id:
+        description: "Resume an interrupted run by its ID"
+        required: false
+        type: string
+      skip_pr:
+        description: "Skip PR creation?"
+        required: false
+        default: false
+        type: boolean
+      verbose:
+        description: "Enable verbose logging?"
+        required: false
+        default: "false"
+        type: boolean
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run Gemini direct translation
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main-gemini.ts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
+          TARGET_PATH: ${{ github.event.inputs.target_path }}
+          TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
+          BASE_BRANCH: ${{ github.event.inputs.base_branch }}
+          GEMINI_CONCURRENCY: ${{ github.event.inputs.concurrency }}
+          RESUME_RUN_ID: ${{ github.event.inputs.resume_run_id }}
+          SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
+          VERBOSE: ${{ github.event.inputs.verbose }}
+          GITHUB_REPOSITORY: ${{ github.repository }}

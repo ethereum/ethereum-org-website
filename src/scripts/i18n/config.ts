@@ -31,17 +31,18 @@ export const gitHubBearerHeaders = {
   Accept: "application/vnd.github.v3+json",
 }
 
-// Crowdin API configuration
+// Crowdin API configuration (optional -- not needed for Gemini direct pipeline)
 const crowdinApiKey = process.env.I18N_CROWDIN_API_KEY || ""
-if (!crowdinApiKey) {
-  console.error("[ERROR] Missing I18N_CROWDIN_API_KEY environment variable")
+if (!crowdinApiKey && !process.env.GEMINI_API_KEY) {
   console.error(
-    "[ERROR] Please set I18N_CROWDIN_API_KEY in your .env.local file"
+    "[ERROR] Missing API key. Set I18N_CROWDIN_API_KEY (Crowdin pipeline) or GEMINI_API_KEY (Gemini direct pipeline)"
   )
-  throw new Error("No Crowdin API Key found (I18N_CROWDIN_API_KEY)")
+  throw new Error("No API key found (I18N_CROWDIN_API_KEY or GEMINI_API_KEY)")
 }
 
-export const crowdinBearerHeaders = { Authorization: `Bearer ${crowdinApiKey}` }
+export const crowdinBearerHeaders = crowdinApiKey
+  ? { Authorization: `Bearer ${crowdinApiKey}` }
+  : { Authorization: "" }
 
 // Parse environment variables with defaults
 // Accept internal codes (e.g., "es") and convert to Crowdin codes (e.g., "es-EM")
@@ -62,7 +63,15 @@ const targetLanguages: string[] =
 
 const baseBranch = process.env.BASE_BRANCH || "dev"
 
-const targetPath = process.env.TARGET_PATH || ""
+const targetPathRaw = process.env.TARGET_PATH || ""
+// Support comma-separated list of files/directories
+const targetPath = targetPathRaw
+const targetPaths = targetPathRaw
+  ? targetPathRaw
+      .split(",")
+      .map((p) => p.trim())
+      .filter(Boolean)
+  : []
 const excludePath = process.env.EXCLUDE_PATH?.trim() || ""
 
 // Skip awaiting pre-translation completion (exit early with ID for manual resume)
@@ -131,6 +140,7 @@ export const config = {
     : i18nConfig.map(({ code }) => code).filter((code) => code !== "en"),
   baseBranch,
   targetPath,
+  targetPaths,
   excludePath,
   skipAwait,
   pretranslateTimeoutMs,

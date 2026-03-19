@@ -15,6 +15,9 @@ const {
   detectCrossScriptContamination,
   warnExposedMdxTags,
   warnTranslatedInlineCode,
+  fixBareRtlDates,
+  fixBareRtlEquations,
+  warnTranslatedTechnicalNumerals,
 } = _testOnly
 
 test.describe("Warning Functions", () => {
@@ -375,6 +378,326 @@ test.describe("Warning Functions", () => {
       const warnings = warnTranslatedInlineCode(translated, english)
       const orphanWarning = warnings.find((w) => w.includes("Orphaned"))
       expect(orphanWarning).toBeDefined()
+    })
+  })
+
+  test.describe("fixBareRtlDates", () => {
+    test("wraps bare YYYY-MM-DD date in Arabic file", () => {
+      const input = "تم الإطلاق في 2026-03-15 على الشبكة"
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      expect(content).toBe(
+        'تم الإطلاق في <span dir="ltr">2026-03-15</span> على الشبكة'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps bare DD/MM/YYYY date", () => {
+      const input = "التاريخ هو 15/03/2026 للإطلاق"
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      expect(content).toBe(
+        'التاريخ هو <span dir="ltr">15/03/2026</span> للإطلاق'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips date already in backticks", () => {
+      const input = "تم الإطلاق في `2026-03-15` على الشبكة"
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips date already in dir=ltr span", () => {
+      const input = 'تم الإطلاق في <span dir="ltr">2026-03-15</span> على الشبكة'
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("no change for non-RTL locale", () => {
+      const input = "Date: 2026-03-15"
+      const { content, fixCount } = fixBareRtlDates(input, "de")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n2026-03-15\n```"
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips dates inside markdown link URLs", () => {
+      const input = "[link](/blog/2026-03-15/post) تاريخ"
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips dates at end of full URLs in markdown links", () => {
+      const input =
+        "(https://www.reuters.com/technology/crypto-payment-ban-looms-2021-04-28/)"
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips dates in bare https URLs", () => {
+      const input = "https://example.com/post/2026-03-15 هو الرابط"
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips dates inside HTML attributes", () => {
+      const input = '<time datetime="2026-03-15">مارس</time>'
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips already-wrapped dates (idempotent)", () => {
+      const input = 'تم في <span dir="ltr">2026-03-15</span> الإطلاق'
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips frontmatter dates", () => {
+      const input =
+        '---\npublished: 2026-03-15\ntitle: "test"\n---\nContent with 2026-03-15 here.'
+      const { content, fixCount } = fixBareRtlDates(input, "ar")
+      // Only the body date should be wrapped, not the frontmatter one
+      expect(content).toContain("published: 2026-03-15")
+      expect(content).toContain('<span dir="ltr">2026-03-15</span> here')
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixBareRtlEquations", () => {
+    // === Basic patterns ===
+    test("wraps simple subtraction equation", () => {
+      const input = "الحساب هو 1150 - 187 = 963 في المجموع"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toBe(
+        'الحساب هو <span dir="ltr">1150 - 187 = 963</span> في المجموع'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps addition equation", () => {
+      const input = "المجموع 5+3 = 8 دائما"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain('<span dir="ltr">5+3 = 8</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps division equation", () => {
+      const input = "النتيجة 114.632 / 120 = 0.955 تقريبا"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain('<span dir="ltr">114.632 / 120 = 0.955</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps multiplication equation with raw *", () => {
+      const input = "القيمة 3*4 = 12 هنا"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain('<span dir="ltr">3*4 = 12</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    // === Escaped markdown operators ===
+    test("wraps equation with escaped asterisk (\\*)", () => {
+      const input = "تأكد من أن المرسل لديه 2000 \\* 0.001 = 2 إيثر"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain('<span dir="ltr">2000 \\* 0.001 = 2</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps equation with escaped slash (\\/)", () => {
+      const input = "الناتج 10 \\/ 2 = 5 بالتأكيد"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain('<span dir="ltr">10 \\/ 2 = 5</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    // === Exponentiation ===
+    test("wraps equation with ^ exponentiation after equals", () => {
+      const input = "_0-1=2^256-1_"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toBe('_<span dir="ltr">0-1=2^256-1</span>_')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps equation with ^ before equals", () => {
+      const input = "القيمة 2^8-1=255 هي الحد الأقصى"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain('<span dir="ltr">2^8-1=255</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    // === Multi-term chains ===
+    test("wraps full multi-term equation before equals", () => {
+      const input = "القيمة هي 20+10\\*0.907 = 29.07 في المجموع"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain('<span dir="ltr">20+10\\*0.907 = 29.07</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps three-term addition chain", () => {
+      const input = "أصغر ما يمكنها الحصول عليه هو 6+4+2=12 ثم تقوم"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain('<span dir="ltr">6+4+2=12</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps Uniswap cumulative price chain", () => {
+      const input = "| 29.07+70\\*0.890 = 91.37 |"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain(
+        '<span dir="ltr">29.07+70\\*0.890 = 91.37</span>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps long Uniswap chain with 4-digit decimals", () => {
+      const input = "| 99.63+40\\*1.1018 = 143.702 |"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain(
+        '<span dir="ltr">99.63+40\\*1.1018 = 143.702</span>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps equation with operators after equals", () => {
+      const input = "النتيجة 143.702 - 29.07 = 114.632 هي الفرق"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain(
+        '<span dir="ltr">143.702 - 29.07 = 114.632</span>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    // === Multiple equations ===
+    test("wraps multiple equations in same paragraph", () => {
+      const input =
+        "الغاز هو 2000 \\* 0.001 = 2 إيثر والباقي 963 \\* 0.001 = 0.963 إيثر"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(fixCount).toBe(2)
+      expect(content).toContain('<span dir="ltr">2000 \\* 0.001 = 2</span>')
+      expect(content).toContain('<span dir="ltr">963 \\* 0.001 = 0.963</span>')
+    })
+
+    // === Equation at start/end of line ===
+    test("wraps equation at start of line", () => {
+      const input = "112+32=256 هو المجموع"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toBe('<span dir="ltr">112+32=256</span> هو المجموع')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps equation at end of line", () => {
+      const input = "المجموع هو 112+32=256"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toBe('المجموع هو <span dir="ltr">112+32=256</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps equation inside parentheses", () => {
+      const input = "تتضمن جميعها (112+32=256)"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain('(<span dir="ltr">112+32=256</span>)')
+      expect(fixCount).toBe(1)
+    })
+
+    // === Skip zones ===
+    test("skips equation in backticks", () => {
+      const input = "الحساب هو `1150 - 187 = 963` في المجموع"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips equation in fenced code block", () => {
+      const input = "```\n1150 - 187 = 963\n```"
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips frontmatter but wraps body", () => {
+      const input = "---\nvalue: 5+3 = 8\n---\nContent 5+3 = 8 here."
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toContain("value: 5+3 = 8")
+      expect(content).toContain('<span dir="ltr">5+3 = 8</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips already-wrapped equations (idempotent)", () => {
+      const input = 'النتيجة <span dir="ltr">1150 - 187 = 963</span> صحيحة'
+      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    // === Non-RTL locale ===
+    test("no change for non-RTL locale", () => {
+      const input = "1150 - 187 = 963"
+      const { content, fixCount } = fixBareRtlEquations(input, "de")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    // === False positive guards ===
+    test("does not match markdown bold syntax", () => {
+      const input = "**نص عريض** = 10"
+      const { fixCount } = fixBareRtlEquations(input, "ar")
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not match list items", () => {
+      const input = "- عنصر في القائمة = مهم"
+      const { fixCount } = fixBareRtlEquations(input, "ar")
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not match version strings", () => {
+      const input = "الإصدار v1.2.3 متاح"
+      const { fixCount } = fixBareRtlEquations(input, "ar")
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("warnTranslatedTechnicalNumerals", () => {
+    test("warns on ERC with Arabic-Indic digits", () => {
+      const warnings = warnTranslatedTechnicalNumerals(
+        "معيار ERC-\u0662\u0660 للرموز"
+      )
+      expect(warnings.length).toBe(1)
+      expect(warnings[0]).toContain("ERC")
+    })
+
+    test("warns on EIP with Extended Arabic-Indic digits", () => {
+      const warnings = warnTranslatedTechnicalNumerals(
+        "ترقية EIP-\u06F1\u06F5\u06F5\u06F9"
+      )
+      expect(warnings.length).toBe(1)
+      expect(warnings[0]).toContain("EIP")
+    })
+
+    test("no warning on correct Western digits", () => {
+      const warnings = warnTranslatedTechnicalNumerals(
+        "معيار ERC-20 و EIP-1559"
+      )
+      expect(warnings).toHaveLength(0)
+    })
+
+    test("skips code blocks", () => {
+      const warnings = warnTranslatedTechnicalNumerals(
+        "```\nERC-\u0662\u0660\n```"
+      )
+      expect(warnings).toHaveLength(0)
     })
   })
 })

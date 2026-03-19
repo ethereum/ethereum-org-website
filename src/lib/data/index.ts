@@ -35,6 +35,20 @@ export const getAppsData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+/**
+ * Static-cached version of getAppsData -- no revalidation.
+ * Use this in components embedded in MDX pages rendered by the catch-all
+ * [...slug] route. A finite revalidate value opts the page into ISR, which
+ * fails on Netlify because public/content/ files are not available in the
+ * serverless runtime. Data refreshes only on deploy.
+ * See: docs/solutions/integration-issues/netlify-isr-404-async-server-components.md
+ */
+export const getStaticAppsData = createCachedGetter(
+  dataLayer.getAppsData,
+  ["apps-data-static"],
+  false
+)
+
 export const getGrowThePieData = createCachedGetter(
   dataLayer.getGrowThePieData,
   ["grow-the-pie-data"],

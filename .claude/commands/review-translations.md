@@ -331,6 +331,23 @@ The community has voted on these translations for key Ethereum terms. Use these 
 - Review the entire current content of each file
 - Compare against English source files from the worktree
 
+## MANDATORY: Fetch Ethereum Glossary FIRST
+
+**Before reviewing ANY translation, you MUST fetch the official Ethereum glossary for the language(s) being reviewed.** This is non-negotiable. The glossary contains community-approved translations for key terms.
+
+```bash
+# Fetch full glossary (all languages):
+curl -s "https://ethereum.org/api/glossary/"
+
+# Fetch glossary for a specific language (optional lang param, one at a time):
+curl -s "https://ethereum.org/api/glossary/?lang=fr"
+curl -s "https://ethereum.org/api/glossary/?lang=ja"
+```
+
+The glossary returns approved translations per language. Use these as the authority for how technical terms SHOULD be translated. Flag any deviations as warnings with "Glossary mismatch" in the issue column.
+
+**If you skip the glossary, the entire review is invalid.**
+
 ## Review Checklist
 
 **If agent role is "structural":**
@@ -373,7 +390,7 @@ Tutorial frontmatter tags contain a mix of brand names and concept/category term
 The EthGlossary is the **authoritative source** for Ethereum term translations. Deviations are not warnings — they are critical issues that must be corrected.
 
 Cross-check translations of ALL key Ethereum terms against the glossary provided above.
-**Any term where the translation deviates from the top-voted community glossary entry is a critical issue.** Report it with the current (wrong) translation and the expected (glossary) translation so Phase 5 can auto-fix it.
+**Any term where the translation deviates from the community glossary entry is a critical issue.** Report it with the current (wrong) translation and the expected (glossary) translation so Phase 5 can auto-fix it.
 
 Pay special attention to high-risk terms:
 - proof-of-stake / proof-of-work (semantic inversions are a known failure mode)
@@ -381,6 +398,7 @@ Pay special attention to high-risk terms:
 - client (must be computing term, not "customer")
 - validator / miner (must not be swapped)
 - gas, block, node, fork, shard, beacon chain, staking, smart contract
+- Wei, Gwei, ETH (NEVER translate units)
 
 **Do not flag glossary deviations as warnings. They are critical.**
 
@@ -399,6 +417,8 @@ Spot-check translations for meaning preservation:
 ### 2. Untranslated Content (HIGH)
 Flag any substantial paragraphs that appear to still be in English.
 This is a known issue — some pages were only partially translated.
+
+Flag any deviation from glossary-approved terms as "Glossary mismatch" warnings.
 
 ### 3. Tone/Register Consistency (MEDIUM)
 Check if formal/informal address is consistent throughout:
