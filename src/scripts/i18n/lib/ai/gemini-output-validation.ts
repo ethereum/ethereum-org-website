@@ -97,8 +97,8 @@ function validateCommon(translated: string): ValidationResult {
     return { valid: false, error: "Empty output" }
   }
 
-  // Gemini refusal patterns
-  const refusals = [
+  // Gemini refusal patterns -- check first line
+  const startRefusals = [
     /^I cannot/i,
     /^I'm sorry/i,
     /^As an AI/i,
@@ -107,9 +107,32 @@ function validateCommon(translated: string): ValidationResult {
     /^I'm unable/i,
   ]
   const firstLine = translated.trim().split("\n")[0]
-  for (const re of refusals) {
+  for (const re of startRefusals) {
     if (re.test(firstLine)) {
       return { valid: false, error: `Gemini refusal: "${firstLine.slice(0, 60)}"` }
+    }
+  }
+
+  // Mid-content refusal scan -- check full output for refusals embedded in translation
+  const midRefusals = [
+    /\nI cannot translate/i,
+    /\nI'm sorry,? (?:but )?I/i,
+    /\nAs an AI,? I/i,
+    /\nI'm unable to translate/i,
+    /\nI cannot provide/i,
+    /\nThis (?:section|content) (?:cannot|could not) be translated/i,
+  ]
+  for (const re of midRefusals) {
+    const match = re.exec(translated)
+    if (match) {
+      const snippet = translated.slice(
+        Math.max(0, match.index),
+        match.index + 80
+      )
+      return {
+        valid: false,
+        error: `Mid-content refusal detected: "${snippet.trim()}"`,
+      }
     }
   }
 

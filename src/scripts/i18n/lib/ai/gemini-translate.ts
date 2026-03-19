@@ -1,5 +1,5 @@
 /**
- * Core file translation via Gemini 3.1 Pro.
+ * Core file translation via Gemini (direct, no Crowdin).
  *
  * Sends whole files (no segmentation) with site-specific context.
  * Gemini handles the linguistics; we handle the guardrails.
@@ -10,6 +10,11 @@ import { GoogleGenerativeAI } from "@google/generative-ai"
 import i18nConfig from "../../../../../i18n.config.json"
 import { delay } from "../workflows/utils"
 
+import {
+  validateTranslatedJson,
+  validateTranslatedMarkdown,
+  type ValidationResult,
+} from "./gemini-output-validation"
 import { buildTranslationPrompt } from "./prompt-builder"
 
 const GEMINI_MODELS = ["gemini-3.1-pro-preview", "gemini-3.1-pro"]
@@ -73,6 +78,8 @@ export async function translateFile(
 
   let lastError: Error | null = null
 
+  const modelNotFound = new Set<string>()
+
   for (const modelId of modelsToTry) {
     const model = client.getGenerativeModel({ model: modelId })
     let modelFailed = false
@@ -87,7 +94,10 @@ export async function translateFile(
         text = stripCodeBlockWrapping(text, fileType)
 
         // Validate structural integrity
-        const validation = validateOutput(text, fileContent, fileType)
+        const validation: ValidationResult =
+          fileType === "json"
+            ? validateTranslatedJson(text, fileContent)
+            : validateTranslatedMarkdown(text, fileContent)
         if (!validation.valid) {
           if (attempt < MAX_RETRIES) {
             console.warn(
@@ -121,6 +131,7 @@ export async function translateFile(
           console.warn(
             `[WARN] Model ${modelId} unavailable: ${lastError.message}. Trying next model...`
           )
+          modelNotFound.add(modelId)
           modelFailed = true
           break
         }
@@ -152,10 +163,10 @@ export async function translateFile(
     if (!modelFailed) break // Success or exhausted retries on working model
   }
 
-  // If all models were unavailable, fail loudly
-  if (modelsToTry.every((id) => lastError?.message.includes("404") || lastError?.message.includes("not found"))) {
+  // If all models were unavailable, fail loudly with specific guidance
+  if (modelNotFound.size === modelsToTry.length) {
     throw new Error(
-      `All Gemini models unavailable (${modelsToTry.join(", ")}). ` +
+      `All Gemini models unavailable (${[...modelNotFound].join(", ")}). ` +
       `Update GEMINI_MODELS in gemini-translate.ts or set GEMINI_MODEL env var.`
     )
   }
@@ -187,67 +198,3 @@ function stripCodeBlockWrapping(
   return text
 }
 
-/**
- * Basic structural validation of translated output.
- */
-function validateOutput(
-  translated: string,
-  english: string,
-  fileType: "markdown" | "json"
-): { valid: boolean; error?: string } {
-  // Check for empty output
-  if (!translated.trim()) {
-    return { valid: false, error: "Empty output" }
-  }
-
-  // Check for Gemini refusal
-  const refusalPatterns = [
-    /^I cannot/i,
-    /^I'm sorry/i,
-    /^As an AI/i,
-    /^I apologize/i,
-    /^Sorry,/i,
-  ]
-  for (const re of refusalPatterns) {
-    if (re.test(translated.trim())) {
-      return { valid: false, error: "Gemini refused to translate" }
-    }
-  }
-
-  if (fileType === "json") {
-    try {
-      const parsedTranslated = JSON.parse(translated)
-      const parsedEnglish = JSON.parse(english)
-
-      // Keys must match
-      const translatedKeys = Object.keys(parsedTranslated).sort()
-      const englishKeys = Object.keys(parsedEnglish).sort()
-
-      if (translatedKeys.length !== englishKeys.length) {
-        return {
-          valid: false,
-          error: `Key count mismatch: ${translatedKeys.length} vs ${englishKeys.length} expected`,
-        }
-      }
-    } catch {
-      return { valid: false, error: "Invalid JSON output" }
-    }
-  }
-
-  if (fileType === "markdown") {
-    // Check frontmatter exists if English has it
-    if (english.startsWith("---") && !translated.startsWith("---")) {
-      return { valid: false, error: "Missing frontmatter in output" }
-    }
-
-    // Check output isn't dramatically shorter (> 50% shrinkage is suspicious)
-    if (translated.length < english.length * 0.3) {
-      return {
-        valid: false,
-        error: `Output suspiciously short (${translated.length} vs ${english.length} chars)`,
-      }
-    }
-  }
-
-  return { valid: true }
-}

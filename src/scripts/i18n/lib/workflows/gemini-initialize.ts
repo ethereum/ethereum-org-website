@@ -4,6 +4,7 @@
  */
 
 import { config } from "../../config"
+import { createRateLimiter } from "../ai/rate-limiter"
 import { getAllEnglishFiles } from "../github/files"
 import {
   fetchGlossaryEntries,
@@ -53,21 +54,30 @@ export async function geminiInitialize(): Promise<GeminiWorkflowContext> {
   const fileList = await getAllEnglishFiles()
   console.log(`[init] Found ${fileList.length} English files`)
 
-  // Download file contents
+  // Download file contents with bounded concurrency
   console.log("[init] Downloading file contents...")
   const englishFiles: GeminiWorkflowContext["englishFiles"] = []
+  const downloadLimiter = createRateLimiter(10, 100)
 
-  for (const file of fileList) {
-    try {
-      const content = await downloadFileContent(file.path)
-      const type = file.path.endsWith(".json") ? "json" : "markdown"
-      englishFiles.push({ path: file.path, content, type })
-    } catch (error) {
-      console.warn(
-        `[init] Failed to download ${file.path}: ${error instanceof Error ? error.message : String(error)}`
-      )
-    }
-  }
+  await Promise.all(
+    fileList.map(async (file) => {
+      await downloadLimiter.acquire()
+      try {
+        const content = await downloadFileContent(file.path)
+        const type = file.path.endsWith(".json") ? "json" : "markdown"
+        englishFiles.push({ path: file.path, content, type })
+      } catch (error) {
+        console.warn(
+          `[init] Failed to download ${file.path}: ${error instanceof Error ? error.message : String(error)}`
+        )
+      } finally {
+        downloadLimiter.release()
+      }
+    })
+  )
+
+  // Sort by path for deterministic ordering (concurrent download completes out of order)
+  englishFiles.sort((a, b) => a.path.localeCompare(b.path))
 
   console.log(`[init] Downloaded ${englishFiles.length} files`)
 

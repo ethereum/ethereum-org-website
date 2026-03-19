@@ -17,7 +17,6 @@
  *   RESUME_RUN_ID           - Resume an interrupted run by ID
  *   BASE_BRANCH             - GitHub base branch (default: dev)
  *   SKIP_PR_CREATION        - Skip PR creation (default: false)
- *   SPLIT_PRS               - One PR per language (default: false)
  */
 
 import { config } from "./config"

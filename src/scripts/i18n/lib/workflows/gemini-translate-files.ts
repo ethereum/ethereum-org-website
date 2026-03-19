@@ -16,6 +16,7 @@ import {
 import { createRateLimiter } from "../ai/rate-limiter"
 import {
   batchCommitFiles,
+  type BatchFile,
   getDestinationFromPath,
 } from "../github/commits"
 import { getGlossaryForLanguage, type GlossaryByLanguage } from "../supabase/glossary"
@@ -164,10 +165,14 @@ async function translateLanguage(
     console.log(
       `[translate] Committing ${translatedFiles.length} files for ${language}...`
     )
+    const batchFiles: BatchFile[] = translatedFiles.map((f) => ({
+      path: f.path,
+      content: Buffer.from(f.content, "utf8"),
+    }))
     await batchCommitFiles(
-      translatedFiles,
+      batchFiles,
       branchName,
-      `i18n(${language}): Gemini direct translation\n\n${translatedFiles.length} files translated via Gemini 3.1 Pro`
+      `i18n(${language}): Gemini direct translation\n\n${translatedFiles.length} files translated via Gemini (direct)`
     )
   }
 

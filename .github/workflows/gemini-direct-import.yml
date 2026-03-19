@@ -25,11 +25,6 @@ on:
         description: "Resume an interrupted run by its ID"
         required: false
         type: string
-      split_prs:
-        description: "Create one PR per language?"
-        required: false
-        default: false
-        type: boolean
       skip_pr:
         description: "Skip PR creation?"
         required: false
@@ -72,6 +67,5 @@ jobs:
           GEMINI_CONCURRENCY: ${{ github.event.inputs.concurrency }}
           RESUME_RUN_ID: ${{ github.event.inputs.resume_run_id }}
           SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
-          SPLIT_PRS: ${{ github.event.inputs.split_prs }}
           VERBOSE: ${{ github.event.inputs.verbose }}
           GITHUB_REPOSITORY: ${{ github.repository }}
