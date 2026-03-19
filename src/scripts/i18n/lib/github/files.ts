@@ -1,6 +1,11 @@
 // GitHub file operations
 
-import { config, doNotTranslatePaths, gitHubBearerHeaders } from "../../config"
+import {
+  config,
+  doNotTranslatePaths,
+  gitHubBearerHeaders,
+  validateTargetPath,
+} from "../../config"
 import type {
   ContentType,
   GitHubCrowdinFileMetadata,
@@ -50,6 +55,7 @@ export const getAllEnglishFiles = async (): Promise<
   if (config.targetPaths.length > 1) {
     const allFiles: GitHubQueryResponseItem[] = []
     for (const singlePath of config.targetPaths) {
+      validateTargetPath(singlePath)
       if (isPathExcluded(singlePath, allExcludedPaths)) {
         console.log(`[INFO] Path ${singlePath} is in excluded paths, skipping`)
         continue
@@ -72,6 +78,7 @@ export const getAllEnglishFiles = async (): Promise<
 
   // Determine if targetPath is a file or directory
   if (targetPath) {
+    validateTargetPath(targetPath)
     if (isPathExcluded(targetPath, allExcludedPaths)) {
       console.log(`[INFO] Path ${targetPath} is in excluded paths, skipping`)
       return []

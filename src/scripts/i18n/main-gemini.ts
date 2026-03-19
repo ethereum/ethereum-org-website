@@ -22,9 +22,9 @@
 import { isGeminiAvailable } from "./lib/ai/gemini"
 import { cleanupProgress } from "./lib/ai/progress-tracker"
 import {
+  createBranchFromSha,
   createBranchName,
   getBranchObject,
-  postCreateBranchFrom,
 } from "./lib/github/branches"
 import { geminiInitialize } from "./lib/workflows/gemini-initialize"
 import { geminiTranslateFiles } from "./lib/workflows/gemini-translate-files"
@@ -69,7 +69,7 @@ async function main() {
 
   // Create branch from base
   const baseBranch = await getBranchObject(config.baseBranch)
-  await postCreateBranchFrom(branchName, baseBranch.sha)
+  await createBranchFromSha(branchName, baseBranch.sha)
 
   // Phase 2: Translate files
   const { stats, committedFiles } = await geminiTranslateFiles(

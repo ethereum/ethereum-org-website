@@ -6,6 +6,33 @@ import { fetchWithRetry } from "../utils/fetch"
 import { debugLog } from "../workflows/utils"
 
 /**
+ * Create a new branch on GitHub from a known SHA.
+ * Use this when you already have the base SHA (e.g., from getBranchObject).
+ */
+export const createBranchFromSha = async (
+  branchName: string,
+  sha: string
+): Promise<void> => {
+  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/git/refs`
+
+  debugLog(`Creating branch "${branchName}" from SHA ${sha}`)
+
+  const res = await fetchWithRetry(url, {
+    method: "POST",
+    headers: {
+      ...gitHubBearerHeaders,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ ref: `refs/heads/${branchName}`, sha }),
+  })
+
+  if (!res.ok) {
+    const body = await res.text().catch(() => "")
+    throw new Error(`GitHub createBranch (${res.status}): ${body}`)
+  }
+}
+
+/**
  * Retrieves the Git object for a branch from the GitHub API
  *
  * @param branch - The branch name to look up (e.g., "main" or "dev")
