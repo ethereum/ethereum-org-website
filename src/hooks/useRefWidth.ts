@@ -5,7 +5,7 @@ import { type RefObject, useCallback, useEffect, useState } from "react"
 import { useEventListener } from "./useEventListener"
 
 export const useRefWidth = (
-  ref: RefObject<HTMLElement>,
+  ref: RefObject<HTMLElement | null>,
   padding: number = 0
 ): number => {
   const [width, setWidth] = useState(0)

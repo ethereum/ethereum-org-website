@@ -1,15 +1,23 @@
-import htmr, { type HtmrOptions } from "htmr"
+import parse, {
+  type DOMNode,
+  domToReact,
+  Element,
+  type HTMLReactParserOptions,
+} from "html-react-parser"
 import type { TranslationValues } from "next-intl"
+import type { ComponentType } from "react"
 
 import TooltipLink from "./TooltipLink"
 
 import useTranslation from "@/hooks/useTranslation"
 
+type TransformMap = Record<string, ComponentType<Record<string, unknown>>>
+
 type TranslationProps = {
   id: string
   ns?: string
   values?: TranslationValues
-  transform?: HtmrOptions["transform"]
+  transform?: TransformMap
 }
 
 // Renders the translation string for the given translation key `id`. It
@@ -18,16 +26,27 @@ const Translation = ({ id, ns, values, transform = {} }: TranslationProps) => {
   const { t } = useTranslation(ns)
   const translatedText = t(id, values)
 
-  // Custom components mapping to be used by `htmr` when parsing the translation
-  // text
-  const defaultTransform = {
+  // Custom components mapping used when parsing the translation text
+  const defaultTransform: TransformMap = {
     a: TooltipLink,
   }
 
-  // Use `htmr` to parse html content in the translation text
-  return htmr(translatedText, {
-    transform: { ...defaultTransform, ...transform },
-  })
+  const allTransforms: TransformMap = { ...defaultTransform, ...transform }
+
+  const options: HTMLReactParserOptions = {
+    replace: (domNode: DOMNode) => {
+      if (domNode instanceof Element && domNode.name in allTransforms) {
+        const Component = allTransforms[domNode.name]
+        return (
+          <Component {...domNode.attribs}>
+            {domToReact(domNode.children as DOMNode[], options)}
+          </Component>
+        )
+      }
+    },
+  }
+
+  return <>{parse(translatedText, options)}</>
 }
 
 export default Translation

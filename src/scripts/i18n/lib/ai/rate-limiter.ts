@@ -22,7 +22,10 @@ export function createRateLimiter(
             active++
             // Stagger requests with minimum floor to prevent burst
             const minDelay = Math.max(delayBetweenMs * 0.25, 100)
-            setTimeout(resolve, minDelay + delayBetweenMs * 0.75 * Math.random())
+            setTimeout(
+              resolve,
+              minDelay + delayBetweenMs * 0.75 * Math.random()
+            )
           } else {
             queue.push(tryRun)
           }

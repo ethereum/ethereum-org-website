@@ -31,6 +31,8 @@ const getPreviewConfig = () => ({
   },
 })
 
+export const revalidate = 3600
+
 export async function GET() {
   // Preview mode: Show menu with original default
   if (!IS_PROD) {

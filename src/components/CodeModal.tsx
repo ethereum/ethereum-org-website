@@ -16,15 +16,16 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 type CodeModalProps = {
   title: string
-  children?: ReactElement
+  children?: ReactElement<unknown>
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
 }
 
 const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
   const { t } = useTranslation()
-  const codeSnippet = (Children.toArray(children)[0] as ReactElement).props
-    .children
+  const codeSnippet = (
+    Children.toArray(children)[0] as ReactElement<{ children: string }>
+  ).props.children
 
   const { onCopy, hasCopied } = useClipboard()
 

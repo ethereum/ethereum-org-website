@@ -301,17 +301,18 @@ async function fetchCommitsForPath(
 
       // Use username-based avatar URL instead of the API's /u/{id}?v=4
       // format which causes redirect loops with Next.js image optimization
-      const primary: FileContributor[] =
-        isExcludedContributor(login)
-          ? []
-          : [{
+      const primary: FileContributor[] = isExcludedContributor(login)
+        ? []
+        : [
+            {
               login,
               avatar_url: commit.author
                 ? `https://avatars.githubusercontent.com/${commit.author.login}`
                 : "",
               html_url: commit.author?.html_url ?? "",
               date,
-            }]
+            },
+          ]
 
       const coAuthors = parseCoAuthors(commit.commit.message, date, nameLookup)
 
@@ -481,7 +482,11 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
   const contentResults = await parallelBatch(
     contentPathPairs,
     async ({ slug, paths }) => {
-      const contributors = await fetchContributorsForPaths(paths, token, nameLookup)
+      const contributors = await fetchContributorsForPaths(
+        paths,
+        token,
+        nameLookup
+      )
       return { slug, contributors }
     }
   )
@@ -513,7 +518,11 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
   const appPageResults = await parallelBatch(
     appPagePathPairs,
     async ({ pagePath, paths }) => {
-      const contributors = await fetchContributorsForPaths(paths, token, nameLookup)
+      const contributors = await fetchContributorsForPaths(
+        paths,
+        token,
+        nameLookup
+      )
       return { pagePath, contributors }
     }
   )

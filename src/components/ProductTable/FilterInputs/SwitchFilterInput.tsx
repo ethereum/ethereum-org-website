@@ -7,7 +7,7 @@ import Switch from "@/components/ui/switch"
 interface SwitchFilterInputProps {
   Icon?: React.FC<React.SVGProps<SVGElement>>
   label: string
-  description?: string | ReactElement
+  description?: string | ReactElement<unknown>
   filterIndex: number
   itemIndex: number
   inputState: FilterInputState

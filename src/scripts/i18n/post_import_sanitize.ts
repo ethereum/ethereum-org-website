@@ -462,7 +462,7 @@ function fixCrowdinNumberedTags(
         `</${num}>([\\s\\S]*?)(?:&lt;${num}>|<${num}>)`,
         "g"
       )
-      parts[i] = parts[i].replace(invertedRe, (_match, inner) => {
+      parts[i] = parts[i].replace(invertedRe, (_, inner) => {
         fixCount++
         return `${tags.open}${inner}${tags.close}`
       })
@@ -472,7 +472,7 @@ function fixCrowdinNumberedTags(
         `(?:&lt;${num}>|<${num}>)([\\s\\S]*?)</${num}>`,
         "g"
       )
-      parts[i] = parts[i].replace(normalRe, (_match, inner) => {
+      parts[i] = parts[i].replace(normalRe, (_, inner) => {
         fixCount++
         return `${tags.open}${inner}${tags.close}`
       })
@@ -546,7 +546,7 @@ const KNOWN_WRONG_COMPOUNDS: Record<string, string> = {
   "انتهاء صلاحية الدولة": "انتهاء صلاحية الحالة",
   "مسؤولية الدولة": "مسؤولية الحالة",
   // Ether as altruism
-  "الإيثار": "الإيثر",
+  الإيثار: "الإيثر",
   // Liquid staking as liquid mortgage
   "الرهن العقاري السائل": "التحصيص السائل",
 }
@@ -3675,9 +3675,7 @@ function processJsonFile(
   const compoundResult = fixKnownWrongCompounds(content)
   if (compoundResult.fixCount > 0) {
     content = compoundResult.content
-    issues.push(
-      `Fixed ${compoundResult.fixCount} known wrong compound term(s)`
-    )
+    issues.push(`Fixed ${compoundResult.fixCount} known wrong compound term(s)`)
   }
 
   // Try parsing to validate JSON

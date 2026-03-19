@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { type JSX, useEffect, useState } from "react"
 import { AlertTriangle, Info, type LucideIcon } from "lucide-react"
 
 import { Flex } from "@/components/ui/flex"

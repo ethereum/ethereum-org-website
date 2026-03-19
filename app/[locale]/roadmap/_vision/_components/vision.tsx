@@ -24,7 +24,7 @@ import { List, ListItem } from "@/components/ui/list"
 import { cn } from "@/lib/utils/cn"
 
 import useTranslation from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 import oldship from "@/public/images/upgrades/oldship.png"
 
 /**
