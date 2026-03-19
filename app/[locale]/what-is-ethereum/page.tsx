@@ -22,7 +22,7 @@ import {
 } from "@/components/HighlightCard"
 import { Image } from "@/components/Image"
 import { Emphasis, Strong } from "@/components/IntlStringElements"
-import ListenToPlayer from "@/components/ListenToPlayer/server"
+import ListenToPlayer from "@/components/ListenToPlayer/lazy"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -48,7 +48,8 @@ import etherBanner from "@/public/images/impact_transparent.png"
 import whenWhoBanner from "@/public/images/translatathon/walking.png"
 import heroImg from "@/public/images/what-is-ethereum.png"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
   const t = await getTranslations({
     locale,
@@ -1089,11 +1090,10 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
   const t = await getTranslations({

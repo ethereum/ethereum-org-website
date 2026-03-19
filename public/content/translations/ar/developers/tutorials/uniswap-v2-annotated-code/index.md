@@ -2,7 +2,7 @@
 title: "جولة تفصيلية في عقد Uniswap-v2"
 description: "كيف يعمل عقد Uniswap-v2؟ ولماذا كُتب بهذه الطريقة؟"
 author: Ori Pomerantz
-tags: ["solidity", "التطبيقات اللامركزية"]
+tags: ["Solidity", "التطبيقات اللامركزية"]
 skill: intermediate
 published: 2021-05-01
 lang: ar

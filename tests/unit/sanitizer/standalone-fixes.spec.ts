@@ -1522,8 +1522,7 @@ author: Ori Pomerantz
     })
 
     test("preserves boilerplate when standalone paragraph", () => {
-      const input =
-        "نشكرك على مشاركتك في برنامج الترجمة ethereum.org!"
+      const input = "نشكرك على مشاركتك في برنامج الترجمة ethereum.org!"
       const { content, fixCount } = stripCrowdinBoilerplate(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -1610,18 +1609,14 @@ author: Ori Pomerantz
     test("fixes GitHub garble to Latin without locale (fallback)", () => {
       const input = "- [يجتبه](https://github.com/alchemyplatform)"
       const { content, fixCount } = fixKnownBrandGarbles(input)
-      expect(content).toBe(
-        "- [GitHub](https://github.com/alchemyplatform)"
-      )
+      expect(content).toBe("- [GitHub](https://github.com/alchemyplatform)")
       expect(fixCount).toBe(1)
     })
 
     test("fixes GitHub garble to Arabic transliteration with ar locale", () => {
       const input = "- [يجتبه](https://github.com/alchemyplatform)"
       const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
-      expect(content).toBe(
-        "- [غيت هاب](https://github.com/alchemyplatform)"
-      )
+      expect(content).toBe("- [غيت هاب](https://github.com/alchemyplatform)")
       expect(fixCount).toBe(1)
     })
 
@@ -1638,25 +1633,19 @@ author: Ori Pomerantz
     test("fixes Solidity garble to Arabic transliteration in tags", () => {
       const input = 'tags: ["الصلابة", "Waffle", "الاختبار"]'
       const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
-      expect(content).toBe(
-        'tags: ["سوليديتي", "Waffle", "الاختبار"]'
-      )
+      expect(content).toBe('tags: ["سوليديتي", "Waffle", "الاختبار"]')
       expect(fixCount).toBe(1)
     })
 
     test("fixes Solidity garble to Arabic transliteration in prose", () => {
-      const input =
-        "يمكنك كتابة العقود الذكية باستخدام الصلابة"
+      const input = "يمكنك كتابة العقود الذكية باستخدام الصلابة"
       const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
-      expect(content).toBe(
-        "يمكنك كتابة العقود الذكية باستخدام سوليديتي"
-      )
+      expect(content).toBe("يمكنك كتابة العقود الذكية باستخدام سوليديتي")
       expect(fixCount).toBe(1)
     })
 
     test("leaves correct brand names unchanged", () => {
-      const input =
-        '- [GitHub](https://github.com/foo)\ntags: ["Solidity"]'
+      const input = '- [GitHub](https://github.com/foo)\ntags: ["Solidity"]'
       const { content, fixCount } = fixKnownBrandGarbles(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -1674,9 +1663,7 @@ author: Ori Pomerantz
     test("restores missing <sup> before footnote link with </sup>", () => {
       const input = "أرقام[fn3](#notes)</sup>، مع وجود"
       const { content, fixCount } = fixMissingOpeningSup(input)
-      expect(content).toBe(
-        "أرقام<sup>[fn3](#notes)</sup>، مع وجود"
-      )
+      expect(content).toBe("أرقام<sup>[fn3](#notes)</sup>، مع وجود")
       expect(fixCount).toBe(1)
     })
 
@@ -1688,8 +1675,7 @@ author: Ori Pomerantz
     })
 
     test("handles multiple missing openers", () => {
-      const input =
-        "أول[fn1](#notes)</sup> وثاني[fn2](#notes)</sup>"
+      const input = "أول[fn1](#notes)</sup> وثاني[fn2](#notes)</sup>"
       const { content, fixCount } = fixMissingOpeningSup(input)
       expect(content).toContain("<sup>[fn1](#notes)</sup>")
       expect(content).toContain("<sup>[fn2](#notes)</sup>")
@@ -1753,8 +1739,7 @@ author: Ori Pomerantz
     })
 
     test("handles split bold ending with period before escaped markers", () => {
-      const input =
-        "**الحلول الممكنة.** يمكن اقتراح.\\*\\*"
+      const input = "**الحلول الممكنة.** يمكن اقتراح.\\*\\*"
       const { content, fixCount } = fixSplitBoldMarkers(input)
       expect(content).toBe("**الحلول الممكنة. يمكن اقتراح.**")
       expect(fixCount).toBe(1)

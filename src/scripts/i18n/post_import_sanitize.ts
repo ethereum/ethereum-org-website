@@ -112,7 +112,19 @@ const CASE_SENSITIVE_SPELLING_MISTAKES = ["Metamask", "Github"]
  * Must stay in sync with src/scripts/i18n/transliterate.ts SUPPORTED_LANGS.
  */
 const TRANSLITERATION_LOCALES = new Set([
-  "hi", "mr", "bn", "ta", "te", "ar", "ur", "ru", "uk", "ja", "ko", "zh", "zh-tw",
+  "hi",
+  "mr",
+  "bn",
+  "ta",
+  "te",
+  "ar",
+  "ur",
+  "ru",
+  "uk",
+  "ja",
+  "ko",
+  "zh",
+  "zh-tw",
 ])
 
 /**
@@ -221,7 +233,7 @@ function stripCrowdinBoilerplate(content: string): {
       // Match: ". boilerplate[.!] " — embedded after a sentence-ending period
       // Use [ \t]+ to avoid crossing line boundaries (standalone lines are legitimate)
       const re = new RegExp(`\\.[ \\t]+${escaped}[.!]?[ \\t]*`, "g")
-      parts[i] = parts[i].replace(re, (match) => {
+      parts[i] = parts[i].replace(re, () => {
         fixCount++
         return ". "
       })
@@ -343,7 +355,7 @@ function fixMissingOpeningSup(content: string): {
     // Use negative lookbehind for <sup>
     parts[i] = parts[i].replace(
       /(?<!<sup>)(\[[^\]]+\]\([^)]+\)<\/sup>)/g,
-      (match, group) => {
+      (_, group) => {
         fixCount++
         return `<sup>${group}`
       }
@@ -450,7 +462,7 @@ function fixCrowdinNumberedTags(
         `</${num}>([\\s\\S]*?)(?:&lt;${num}>|<${num}>)`,
         "g"
       )
-      parts[i] = parts[i].replace(invertedRe, (_match, inner) => {
+      parts[i] = parts[i].replace(invertedRe, (_, inner) => {
         fixCount++
         return `${tags.open}${inner}${tags.close}`
       })
@@ -460,7 +472,7 @@ function fixCrowdinNumberedTags(
         `(?:&lt;${num}>|<${num}>)([\\s\\S]*?)</${num}>`,
         "g"
       )
-      parts[i] = parts[i].replace(normalRe, (_match, inner) => {
+      parts[i] = parts[i].replace(normalRe, (_, inner) => {
         fixCount++
         return `${tags.open}${inner}${tags.close}`
       })
@@ -496,9 +508,8 @@ function fixSplitBoldMarkers(content: string): {
     for (let j = 0; j < lines.length; j++) {
       // Match: **text1.** text2.\*\* on the same line
       // Opening ** at start/after whitespace, premature ** close, then escaped \*\* at end
-      const re =
-        /(\*\*)((?:(?!\*\*).)+?)(\*\*)((?:(?!\\\*\\\*).)+?)\\\*\\\*/g
-      lines[j] = lines[j].replace(re, (_match, open, inner1, _premClose, inner2) => {
+      const re = /(\*\*)((?:(?!\*\*).)+?)\*\*((?:(?!\\\*\\\*).)+?)\\\*\\\*/g
+      lines[j] = lines[j].replace(re, (_, open, inner1, inner2) => {
         fixCount++
         return `${open}${inner1}${inner2}**`
       })
@@ -535,7 +546,7 @@ const KNOWN_WRONG_COMPOUNDS: Record<string, string> = {
   "انتهاء صلاحية الدولة": "انتهاء صلاحية الحالة",
   "مسؤولية الدولة": "مسؤولية الحالة",
   // Ether as altruism
-  "الإيثار": "الإيثر",
+  الإيثار: "الإيثر",
   // Liquid staking as liquid mortgage
   "الرهن العقاري السائل": "التحصيص السائل",
 }
@@ -591,7 +602,7 @@ function fixDuplicatedTagValues(content: string): {
     if (i % 2 === 1) continue // Skip code blocks
 
     // Match quoted strings where the value is exactly doubled
-    parts[i] = parts[i].replace(/"([^"]{2,})\1"/g, (_match, half) => {
+    parts[i] = parts[i].replace(/"([^"]{2,})\1"/g, (_, half) => {
       fixCount++
       return `"${half}"`
     })
@@ -2250,8 +2261,7 @@ function fixBareRtlDates(
   const parts = body.split(RTL_SKIP_PATTERN)
 
   // Date patterns: YYYY-MM-DD, YYYY/MM/DD, DD/MM/YYYY, MM/DD/YYYY
-  const dateRe =
-    /\d{4}[-/]\d{1,2}[-/]\d{1,2}|\d{1,2}[-/]\d{1,2}[-/]\d{4}/g
+  const dateRe = /\d{4}[-/]\d{1,2}[-/]\d{1,2}|\d{1,2}[-/]\d{1,2}[-/]\d{4}/g
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip protected zones
@@ -3665,9 +3675,7 @@ function processJsonFile(
   const compoundResult = fixKnownWrongCompounds(content)
   if (compoundResult.fixCount > 0) {
     content = compoundResult.content
-    issues.push(
-      `Fixed ${compoundResult.fixCount} known wrong compound term(s)`
-    )
+    issues.push(`Fixed ${compoundResult.fixCount} known wrong compound term(s)`)
   }
 
   // Try parsing to validate JSON

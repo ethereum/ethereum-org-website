@@ -16,7 +16,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import CommunityPage from "./_components/community"
 import CommunityJsonLD from "./page-jsonld"
 
-export default async function Page({ params }: { params: PageParams }) {
+export default async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
@@ -41,11 +42,10 @@ export default async function Page({ params }: { params: PageParams }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-community" })

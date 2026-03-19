@@ -2,7 +2,7 @@
 title: "كيفية تنفيذ سوق ERC-721"
 description: "كيفية عرض العناصر المرمزة للبيع على لوحة إعلانات مبوبة لامركزية"
 author: "Alberto Cuesta Cañada"
-tags: ["العقود الذكية", "erc-721", "solidity", "الرموز"]
+tags: ["العقود الذكية", "erc-721", "Solidity", "الرموز"]
 skill: intermediate
 lang: ar
 published: 2020-03-19

@@ -1,6 +1,7 @@
 import { existsSync } from "fs"
 import { join } from "path"
 
+import { appsCategories } from "@/data/apps/categories"
 import { DEV_TOOL_CATEGORY_SLUG_LIST } from "@/data/developerTools"
 
 import {
@@ -12,9 +13,11 @@ import {
 import { getPostSlugs } from "../utils/md"
 import { getStaticPagePaths } from "../utils/staticPages"
 import { getPrimaryNamespaceForPath } from "../utils/translations"
-import { addSlashes } from "../utils/url"
+import { addSlashes, slugify } from "../utils/url"
 
 import { areNamespacesTranslated } from "./translationStatus"
+
+import { getAppsData } from "@/lib/data"
 
 async function isMdPageTranslated(
   locale: string,
@@ -86,12 +89,27 @@ type PageWithTranslations = {
   type: "md" | "intl"
 }
 
-function getDynamicIntlPagePaths(): string[] {
+async function getDynamicIntlPagePaths(): Promise<string[]> {
   // discoverStaticPages() excludes dynamic segments, so add known
   // generateStaticParams() routes that should be present in sitemap output.
-  return DEV_TOOL_CATEGORY_SLUG_LIST.map(
+  const devToolPaths = DEV_TOOL_CATEGORY_SLUG_LIST.map(
     (categorySlug) => `/developers/tools/${categorySlug}/`
   )
+
+  // App category pages
+  const appCategoryPaths = Object.values(appsCategories).map(
+    (category) => `/apps/categories/${category.slug}/`
+  )
+
+  // Individual app pages
+  const appsData = await getAppsData()
+  const appPaths = appsData
+    ? Object.values(appsData)
+        .flat()
+        .map((app) => `/apps/${slugify(app.name)}/`)
+    : []
+
+  return [...devToolPaths, ...appCategoryPaths, ...appPaths]
 }
 
 export async function getAllPagesWithTranslations(): Promise<
@@ -100,7 +118,10 @@ export async function getAllPagesWithTranslations(): Promise<
   const pages: PageWithTranslations[] = []
 
   const mdSlugs = await getPostSlugs("/")
-  const intlPaths = [...getStaticPagePaths(), ...getDynamicIntlPagePaths()]
+  const intlPaths = [
+    ...getStaticPagePaths(),
+    ...(await getDynamicIntlPagePaths()),
+  ]
   const uniqueIntlPaths = Array.from(new Set(intlPaths))
 
   for (const slug of mdSlugs) {

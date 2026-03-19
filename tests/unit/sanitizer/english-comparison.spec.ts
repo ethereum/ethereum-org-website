@@ -702,8 +702,7 @@ test.describe("English Comparison Fixes", () => {
 
   test.describe("restoreStrippedAbbreviations", () => {
     test("restores RWA abbreviation in title", () => {
-      const translated =
-        '---\ntitle: "الأصول الحقيقية ()"\n---\nContent here.'
+      const translated = '---\ntitle: "الأصول الحقيقية ()"\n---\nContent here.'
       const english =
         '---\ntitle: "Real-world assets (RWA)"\n---\nContent here.'
       const { content, fixCount } = restoreStrippedAbbreviations(
@@ -715,10 +714,8 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("restores PoA abbreviation in title", () => {
-      const translated =
-        '---\ntitle: "إثبات السلطة ()"\n---\nContent.'
-      const english =
-        '---\ntitle: "Proof-of-authority (PoA)"\n---\nContent.'
+      const translated = '---\ntitle: "إثبات السلطة ()"\n---\nContent.'
+      const english = '---\ntitle: "Proof-of-authority (PoA)"\n---\nContent.'
       const { content, fixCount } = restoreStrippedAbbreviations(
         translated,
         english
@@ -835,8 +832,10 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("handles multiple merged sup tags", () => {
-      const translated = "تقريبًا 2<sup>187</sup>. يجب إجراء ~<sup>269</sup> محاولة"
-      const english = "approximately 2<sup>187</sup>. must make ~2<sup>69</sup> attempts"
+      const translated =
+        "تقريبًا 2<sup>187</sup>. يجب إجراء ~<sup>269</sup> محاولة"
+      const english =
+        "approximately 2<sup>187</sup>. must make ~2<sup>69</sup> attempts"
       const { content, fixCount } = fixMergedSupDigits(translated, english)
       expect(content).toContain("2<sup>69</sup>")
       expect(fixCount).toBe(1)
@@ -877,15 +876,16 @@ test.describe("English Comparison Fixes", () => {
 
   test.describe("fixCrowdinNumberedTags", () => {
     test("replaces </0>text<0> with <strong>text</strong>", () => {
-      const translated = '</0>الظهور الأول لونا كضيفة<0>'
-      const english = "<strong>Luna's first appearance as a podcast guest</strong>"
+      const translated = "</0>الظهور الأول لونا كضيفة<0>"
+      const english =
+        "<strong>Luna's first appearance as a podcast guest</strong>"
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe("<strong>الظهور الأول لونا كضيفة</strong>")
       expect(fixCount).toBe(1)
     })
 
     test("handles HTML-escaped opening tag &lt;0>", () => {
-      const translated = '</0>من الجيد أن نعلم&lt;0>'
+      const translated = "</0>من الجيد أن نعلم&lt;0>"
       const english = "<strong>Good to know</strong>"
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe("<strong>من الجيد أن نعلم</strong>")
@@ -893,10 +893,8 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("handles inverted tags inside JSX paragraph", () => {
-      const translated =
-        '<p className="mt-0"></0>من الجيد أن نعلم&lt;0></p>'
-      const english =
-        '<p className="mt-0"><strong>Good to know</strong></p>'
+      const translated = '<p className="mt-0"></0>من الجيد أن نعلم&lt;0></p>'
+      const english = '<p className="mt-0"><strong>Good to know</strong></p>'
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe(
         '<p className="mt-0"><strong>من الجيد أن نعلم</strong></p>'
@@ -905,7 +903,7 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("handles multiple different numbered tags", () => {
-      const translated = '<0>نص عريض<1>و مائل</1></0>'
+      const translated = "<0>نص عريض<1>و مائل</1></0>"
       const english = "<strong>bold text<em>and italic</em></strong>"
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe("<strong>نص عريض<em>و مائل</em></strong>")
