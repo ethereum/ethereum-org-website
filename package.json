@@ -74,7 +74,7 @@
     "lodash": "^4.17.23",
     "lucide-react": "^0.516.0",
     "motion": "^12.36.0",
-    "next": "^15.5.12",
+    "next": "^15.5.14",
     "next-intl": "^3.26.3",
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.3.0",
