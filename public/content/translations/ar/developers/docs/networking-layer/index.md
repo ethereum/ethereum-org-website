@@ -1,6 +1,6 @@
 ---
-title: طبقة الشبكات
-description: مقدمة عن طبقة الشبكات في إيثريوم.
+title: "طبقة الشبكات"
+description: "مقدمة عن طبقة الشبكات في إيثريوم."
 lang: ar
 sidebarDepth: 2
 ---

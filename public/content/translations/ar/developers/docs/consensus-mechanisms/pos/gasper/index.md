@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: شرح لآلية إثبات الحصة Gasper.
+description: "شرح لآلية إثبات الحصة Gasper."
 lang: ar
 ---
 

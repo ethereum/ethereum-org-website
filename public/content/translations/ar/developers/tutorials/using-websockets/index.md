@@ -1,11 +1,11 @@
 ---
-title: استخدام WebSockets
-description: دليل لاستخدام WebSockets و Alchemy لإجراء طلبات JSON-RPC والاشتراك في الأحداث.
+title: "استخدام WebSockets"
+description: "دليل لاستخدام WebSockets و Alchemy لإجراء طلبات JSON-RPC والاشتراك في الأحداث."
 author: "Elan Halpern"
 lang: ar
 tags: ["alchemy", "websockets", "الاستعلام", "javascript"]
-skill: مبتدئ
-source: مستندات Alchemy
+skill: "مبتدئ"
+source: "مستندات Alchemy"
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---

@@ -1,6 +1,6 @@
 ---
-title: كيف يمكنني المشاركة؟
-description: كيفية المشاركة في مجتمع إيثريوم.
+title: "كيف يمكنني المشاركة؟"
+description: "كيفية المشاركة في مجتمع إيثريوم."
 lang: ar
 ---
 
@@ -36,7 +36,7 @@ lang: ar
   - شارك في [حوكمة EIP](https://github.com/ethereum-cat-herders/EIPIP)
     - انضم إلى [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
   - [المزيد حول EIPs](/eips/)
-- [Challenges.ethereum.org](https://challenges.ethereum.org/) - سلسلة من مكافآت الأبحاث عالية القيمة، حيث يمكنك كسب أكثر من <span dir="ltr">>$100,000</span> دولار أمريكي
+- [Challenges.ethereum.org](https://challenges.ethereum.org/) - سلسلة من مكافآت الأبحاث عالية القيمة، حيث يمكنك كسب أكثر من <span dir="ltr"»$100,000</span> دولار أمريكي
 - [Ethresear.ch](https://ethresear.ch) - المنتدى الأساسي لأبحاث إيثريوم، والمنتدى الأكثر تأثيرًا في العالم للاقتصاد المشفر
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - سلسلة أسئلة وأجوبة مستمرة مع الباحثين. مع فتح كل جزء تالٍ، يمكن لأي شخص طرح الأسئلة.
 - [قائمة أمنيات برنامج دعم النظام البيئي](https://esp.ethereum.foundation/wishlist/) - مجالات البحث التي يسعى فيها برنامج دعم النظام البيئي لإيثريوم بنشاط للحصول على طلبات المنح

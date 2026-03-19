@@ -1,12 +1,12 @@
 ---
-title: قائمة التحقق من أمان العقود الذكية
-description: سير عمل مقترح لكتابة عقود ذكية آمنة
+title: "قائمة التحقق من أمان العقود الذكية"
+description: "سير عمل مقترح لكتابة عقود ذكية آمنة"
 author: "Trailofbits"
 tags: ["العقود الذكية", "الأمان", "Solidity"]
 skill: intermediate
 lang: ar
 published: 2020-09-07
-source: بناء عقود آمنة
+source: "بناء عقود آمنة"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: تنظيم حدث إيثريوم
-description: كيفية تنظيم حدث إيثريوم
+title: "تنظيم حدث إيثريوم"
+description: "كيفية تنظيم حدث إيثريوم"
 lang: ar
 hideEditButton: true
 ---
