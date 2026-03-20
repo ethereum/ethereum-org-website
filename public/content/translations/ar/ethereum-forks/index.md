@@ -379,7 +379,7 @@ sidebarDepth: 1
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-[<DocLink href="](/roadmap/beacon-chain)/">
+<DocLink href="/roadmap/beacon-chain/">
   سلسلة المنارة
 </DocLink>
 
