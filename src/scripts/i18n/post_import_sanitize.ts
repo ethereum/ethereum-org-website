@@ -2149,6 +2149,40 @@ function fixMissingComponentClosingTags(content: string): {
 }
 
 /**
+ * Fix DocLink components mangled into markdown link syntax by Crowdin/Gemini.
+ *
+ * Pattern: `[<DocLink href="](/actual/path)/">` -> `<DocLink href="/actual/path/">`
+ *
+ * Crowdin treats `<DocLink href="...">` as a markdown link, wrapping the
+ * component tag in `[...]()` syntax and moving the href into the parentheses.
+ */
+function fixMangledDocLinks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    // Match: [<DocLink href="](path)/">  or  [<DocLink href="](path)">
+    parts[i] = parts[i].replace(
+      /\[<DocLink\s+href="\]\(([^)]+)\)\/?">?/g,
+      (_, path) => {
+        fixCount++
+        const normalizedPath = path.endsWith("/") ? path : path + "/"
+        return `<DocLink href="${normalizedPath}">`
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Wrap frontmatter string values containing non-ASCII characters in double quotes.
  * Prevents YAML parsing issues with accented characters.
  */
@@ -3510,6 +3544,10 @@ function processMarkdownFile(
     () => fixMissingComponentClosingTags(content),
     (n) => `Fixed ${n} missing component closing tag(s)`
   )
+  applyFix(
+    () => fixMangledDocLinks(content),
+    (n) => `Fixed ${n} mangled DocLink component(s)`
+  )
 
   // Fix escaped backticks (\`) to regular backticks (`)
   {
@@ -3641,6 +3679,17 @@ function processMarkdownFile(
     applyFix(
       () => fixMissingLinkBrackets(content, englishMd),
       (n) => `Fixed ${n} missing link brackets`
+    )
+
+    // Re-run JSX hybrid fix AFTER fixMissingLinkBrackets, which can
+    // re-introduce [<Component href="](path)"> by wrapping bare JSX hrefs
+    applyFix(
+      () => fixJsxMarkdownHybrids(content),
+      (n) => `Fixed ${n} Crowdin JSX/markdown hybrid manglings`
+    )
+    applyFix(
+      () => fixMangledDocLinks(content),
+      (n) => `Fixed ${n} mangled DocLink component(s)`
     )
 
     // Warn on punctuation-only headings (dropped translation text)
@@ -4151,6 +4200,7 @@ export const _testOnly = {
   fixAsciiGuillemets,
   fixGuillemetsInHtmlTags,
   fixMissingComponentClosingTags,
+  fixMangledDocLinks,
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
   escapeMdxAngleBrackets,

@@ -47,6 +47,7 @@ const {
   fixKnownWrongCompounds,
   fixGuillemetsInHtmlTags,
   fixMissingComponentClosingTags,
+  fixMangledDocLinks,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -2010,6 +2011,59 @@ author: Ori Pomerantz
       const { content, fixCount } = fixMissingComponentClosingTags(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixMangledDocLinks", () => {
+    test("fixes DocLink mangled into markdown link syntax", () => {
+      const input = '[<DocLink href="](/roadmap/beacon-chain)/">'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe('<DocLink href="/roadmap/beacon-chain/">')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes DocLink with different paths", () => {
+      const input = '[<DocLink href="](/developers/docs/evm)/">'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe('<DocLink href="/developers/docs/evm/">')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes DocLink without trailing slash in mangled version", () => {
+      const input = '[<DocLink href="](/roadmap/merge)/">'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe('<DocLink href="/roadmap/merge/">')
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct DocLink unchanged", () => {
+      const input = '<DocLink href="/roadmap/beacon-chain/">'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves regular markdown links unchanged", () => {
+      const input = '[some text](https://example.com)'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = '```\n[<DocLink href="](/roadmap)/">\n```'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple mangled DocLinks", () => {
+      const input =
+        '[<DocLink href="](/roadmap/beacon-chain)/">text</DocLink>\n[<DocLink href="](/roadmap/merge)/">text</DocLink>'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toContain('<DocLink href="/roadmap/beacon-chain/">')
+      expect(content).toContain('<DocLink href="/roadmap/merge/">')
+      expect(fixCount).toBe(2)
     })
   })
 })
