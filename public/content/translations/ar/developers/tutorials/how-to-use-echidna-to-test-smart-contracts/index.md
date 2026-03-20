@@ -547,7 +547,6 @@ echidna_magic_values: فشلت!💥
   تسلسل الاستدعاء:
     magic(42,129,333,0)
 
-
 Unique instructions: 142
 Unique codehashes: 1
 Seed: -7293830866560616537

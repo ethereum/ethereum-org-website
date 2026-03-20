@@ -680,8 +680,6 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
         _safeTransfer(_token1, to, IERC20(_token1).balanceOf(address(this)).sub(reserve1));
     }
 
-
-
     // force reserves to match balances // إجبار الاحتياطيات على مطابقة الأرصدة
     function sync() external lock {
         _update(IERC20(token0).balanceOf(address(this)), IERC20(token1).balanceOf(address(this)), reserve0, reserve1);
@@ -1236,7 +1234,6 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         (amountA, amountB) = removeLiquidity(tokenA, tokenB, liquidity, amountAMin, amountBMin, to, deadline);
     }
 
-
     function removeLiquidityETHWithPermit(
         address token,
         uint liquidity,
@@ -1285,7 +1282,6 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 يمكن استخدام هذه الدالة للرموز التي لها رسوم تحويل أو تخزين. عندما يكون للرمز مثل هذه الرسوم، لا يمكننا الاعتماد على دالة `removeLiquidity` لإخبارنا بمقدار الرمز الذي نستردّه، لذلك نحتاج إلى السحب أولاً ثم الحصول على الرصيد.
 
 ```solidity
-
 
     function removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(
         address token,
@@ -1449,7 +1445,6 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         _swap(amounts, path, to);
     }
 
-
     function swapTokensForExactETH(uint amountOut, uint amountInMax, address[] calldata path, address to, uint deadline)
         external
         virtual
@@ -1468,8 +1463,6 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         TransferHelper.safeTransferETH(to, amounts[amounts.length - 1]);
     }
 
-
-
     function swapExactTokensForETH(uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline)
         external
         virtual
@@ -1487,7 +1480,6 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         IWETH(WETH).withdraw(amounts[amounts.length - 1]);
         TransferHelper.safeTransferETH(to, amounts[amounts.length - 1]);
     }
-
 
     function swapETHForExactTokens(uint amountOut, address[] calldata path, address to, uint deadline)
         external
@@ -1544,7 +1536,6 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         }
     }
 
-
     function swapExactTokensForTokensSupportingFeeOnTransferTokens(
         uint amountIn,
         uint amountOutMin,
@@ -1562,7 +1553,6 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
             'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT'
         );
     }
-
 
     function swapExactETHForTokensSupportingFeeOnTransferTokens(
         uint amountOutMin,
@@ -1587,7 +1577,6 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
             'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT'
         );
     }
-
 
     function swapExactTokensForETHSupportingFeeOnTransferTokens(
         uint amountIn,
@@ -1914,7 +1903,6 @@ library TransferHelper {
 من أجل التوافق مع الإصدارات السابقة للرموز التي تم إنشاؤها قبل معيار ERC-20، يمكن أن يفشل استدعاء ERC-20 إما عن طريق التراجع (وفي هذه الحالة تكون `success` هي `false`) أو من خلال كونه ناجحًا وإرجاع قيمة `false` (وفي هذه الحالة توجد بيانات مخرجات، وإذا قمت بفك تشفيرها كقيمة منطقية ستحصل على `false`).
 
 ```solidity
-
 
     function safeTransfer(
         address token,

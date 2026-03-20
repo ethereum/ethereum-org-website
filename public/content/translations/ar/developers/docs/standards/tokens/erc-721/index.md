@@ -75,7 +75,6 @@ pip install web3
 from web3 import Web3
 from web3._utils.events import get_event_data
 
-
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
 ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # عقد CryptoKitties

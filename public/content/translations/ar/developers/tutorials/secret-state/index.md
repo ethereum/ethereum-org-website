@@ -636,7 +636,6 @@ proof.proof = {
         return poseidon(hashMe);
     }
 
-
     // The number of mines in location (x,y)
     def map2mineCount(bool[12][7] map, u32 x, u32 y) -> u8 {
         return if map[x+1][y+1] { 1 } else { 0 };

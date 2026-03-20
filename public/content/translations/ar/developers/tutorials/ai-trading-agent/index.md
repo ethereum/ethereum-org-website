@@ -368,7 +368,6 @@ uv run agent.py
         .
         2026-02-01T17:50 33.46
 
-
 ماذا تتوقع أن تكون قيمة WETH/USDC في الوقت 2026-02-02T17:56؟
 
 قدم إجابتك كرقم واحد مقرب إلى منزلتين عشريتين،
@@ -902,7 +901,6 @@ def buy(quote: Quote):
     print(f"Buy transaction sent: {tx_hash.hex()}")
     w3.eth.wait_for_transaction_receipt(tx_hash)
     print("Buy transaction mined.")
-
 
 def sell():
     approve_token(wethusdc_pool.token1.contract,

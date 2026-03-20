@@ -30,7 +30,6 @@ interface IERC20 {
     function approve(address spender, uint256 amount) external returns (bool);
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 
-
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
@@ -111,11 +110,9 @@ interface IERC20 {
     function approve(address spender, uint256 amount) external returns (bool);
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 
-
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
-
 
 contract ERC20Basic is IERC20 {
 
@@ -123,13 +120,11 @@ contract ERC20Basic is IERC20 {
     string public constant symbol = "ERC";
     uint8 public constant decimals = 18;
 
-
     mapping(address => uint256) balances;
 
     mapping(address => mapping (address => uint256)) allowed;
 
     uint256 totalSupply_ = 10 ether;
-
 
    constructor() {
 	balances[msg.sender] = totalSupply_;

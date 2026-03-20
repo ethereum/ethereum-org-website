@@ -31,7 +31,6 @@ contract Counter {
     address private _owner;
     address private _factory;
 
-
      modifier onlyOwner(address caller) {
         require(caller == _owner, "أنت لست مالك العقد");
         _;
@@ -119,7 +118,6 @@ contract Counter {
     uint256 private _count;
     address private _owner;
     address private _factory;
-
 
      modifier onlyOwner(address caller) {
         require(caller == _owner, "أنت لست مالك العقد");

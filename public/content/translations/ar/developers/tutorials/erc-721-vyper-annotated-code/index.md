@@ -364,7 +364,6 @@ def _addTokenTo(_to: address, _tokenId: uint256):
     # تغيير تتبع العدد
     self.ownerToNFTokenCount[_to] += 1
 
-
 @internal
 def _removeTokenFrom(_from: address, _tokenId: uint256):
     """
@@ -529,7 +528,6 @@ def approve(_approved: address, _tokenId: uint256):
     # تعيين الموافقة
     self.idToApprovals[_tokenId] = _approved
     log Approval(owner, _approved, _tokenId)
-
 
 @external
 def setApprovalForAll(_operator: address, _approved: bool):

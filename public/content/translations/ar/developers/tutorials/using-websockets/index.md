@@ -227,7 +227,6 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
 
-
 ```
 
 **النتيجة**

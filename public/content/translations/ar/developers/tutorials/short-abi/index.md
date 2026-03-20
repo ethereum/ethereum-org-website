@@ -106,7 +106,6 @@ published: 2022-04-01
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-
 import { OrisUselessToken } from "./Token.sol";
 ```
 
@@ -174,7 +173,6 @@ contract CalldataInterpreter {
 ```solidity
         return _retVal;
     }
-
 
     fallback() external {
 ```

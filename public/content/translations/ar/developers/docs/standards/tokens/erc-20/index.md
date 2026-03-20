@@ -81,7 +81,6 @@ pip install web3
 ```python
 from web3 import Web3
 
-
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
 dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI

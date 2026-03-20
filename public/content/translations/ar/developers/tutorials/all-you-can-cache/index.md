@@ -39,7 +39,6 @@ lang: ar
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-
 contract Cache {
 
     bytes1 public constant INTO_CACHE = 0xFF;
@@ -152,7 +151,6 @@ contract Cache {
         return _retVal;
     } // _calldataVal
 
-
     // اقرأ معلمة واحدة من بيانات الاستدعاء، بدءًا من _fromByte
     function _readParam(uint _fromByte) internal
         returns (uint _nextByte, uint _parameterValue)
@@ -198,7 +196,6 @@ contract Cache {
         return (_fromByte+_extraBytes+1, cacheRead(_key));
 
     }  // _readParam
-
 
     // اقرأ n من المعلمات (تعرف الدوال عدد المعلمات التي تتوقعها)
     function _readParams(uint _paramNum) internal returns (uint[] memory) {
@@ -313,7 +310,6 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 
-
 // تحتاج إلى تشغيل `forge test -vv` لوحدة التحكم.
 import "forge-std/console.sol";
 ```
@@ -357,7 +353,6 @@ contract CacheTest is Test {
 ```solidity
         }
     }    // testCaching
-
 
     // خزن نفس القيمة مؤقتًا عدة مرات، وتأكد من بقاء المفتاح
     // كما هو
@@ -575,7 +570,6 @@ contract CacheTest is Test {
         .
         .
     }    // testEncodeValBig
-
 
     // اختبر ما يحدث مع مخزن مؤقت صغير بشكل مفرط، فنحصل على ارتداد
     function testShortCalldata() public {

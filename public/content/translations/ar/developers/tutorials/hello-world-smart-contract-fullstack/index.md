@@ -659,7 +659,6 @@ npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 contracts/HelloWorld.sol:HelloWorld at 0xdeployed-contract-address
 للتحقق على Etherscan. في انتظار نتيجة التحقق...
 
-
 تم التحقق من العقد HelloWorld بنجاح على Etherscan.
 https://goerli.etherscan.io/address/<contract-address>#contracts
 ```

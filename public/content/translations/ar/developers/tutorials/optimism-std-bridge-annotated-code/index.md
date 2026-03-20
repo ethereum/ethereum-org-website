@@ -915,7 +915,6 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
         emit ERC20WithdrawalFinalized(_l1Token, _l2Token, _from, _to, _amount, _data);
     }
 
-
     /*****************************
      * مؤقت - ترحيل ETH *
      *****************************/
@@ -1039,7 +1038,6 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
         require(msg.sender == l2Bridge, "Only L2 Bridge can mint and burn");
         _;
     }
-
 
     // slither-disable-next-line external-function
     function supportsInterface(bytes4 _interfaceId) public pure returns (bool) {
