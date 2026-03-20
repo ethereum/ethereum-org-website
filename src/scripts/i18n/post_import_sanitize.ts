@@ -2046,6 +2046,109 @@ function fixAsciiGuillemets(content: string): {
 }
 
 /**
+ * Fix Unicode guillemets (U+00AB, U+00BB) that replace < or > in HTML tags.
+ *
+ * Gemini/Crowdin sometimes substitutes the right guillemet for > when closing
+ * an HTML attribute (e.g., dir="ltr">> becomes dir="ltr">). Similarly, left
+ * guillemet can replace <.
+ *
+ * Only fixes guillemets adjacent to HTML tag syntax. Leaves legitimate
+ * guillemet quotation pairs (e.g., <<text>>) untouched.
+ */
+function fixGuillemetsInHtmlTags(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    // Process line by line for context
+    const lines = parts[i].split("\n")
+    for (let j = 0; j < lines.length; j++) {
+      // Match complete tag-like patterns with guillemets replacing < or >
+      // Pattern 1: «tagname attr="val"»  or «/tagname» (guillemets as < and >)
+      // Must contain tag-like syntax: attributes (=, quotes) or be a closing tag (/)
+      lines[j] = lines[j].replace(
+        /\u00AB(\/?[a-zA-Z][\w]*(?:\s[^>\u00BB]*)?)[>\u00BB]/g,
+        (match, inner) => {
+          // Closing tag: «/span» -- always valid
+          if (inner.startsWith("/")) {
+            fixCount++
+            return "<" + inner + ">"
+          }
+          // Opening tag with attributes: «span dir="ltr"» -- has = or quotes
+          if (/[="']/.test(inner)) {
+            fixCount++
+            return "<" + inner + ">"
+          }
+          // Simple tag: «br» «i» «b» -- only short lowercase names
+          if (/^[a-z]{1,4}$/.test(inner)) {
+            fixCount++
+            return "<" + inner + ">"
+          }
+          return match
+        }
+      )
+
+      // Pattern 2: <tagname ...» (right guillemet as >, left < is correct)
+      lines[j] = lines[j].replace(
+        /<([^<>]*)\u00BB/g,
+        (_, inner) => {
+          fixCount++
+          return "<" + inner + ">"
+        }
+      )
+    }
+    parts[i] = lines.join("\n")
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix missing closing tags on single-line MDX components.
+ *
+ * Crowdin/Gemini sometimes drops the closing tag on components that should
+ * be self-contained on a single line (e.g., <SocialListItem>).
+ */
+function fixMissingComponentClosingTags(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const singleLineComponents = ["SocialListItem"]
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    const lines = parts[i].split("\n")
+    for (let j = 0; j < lines.length; j++) {
+      for (const comp of singleLineComponents) {
+        const openPattern = new RegExp(`<${comp}\\s[^>]*>`)
+        const closePattern = new RegExp(`</${comp}>`)
+
+        if (openPattern.test(lines[j]) && !closePattern.test(lines[j])) {
+          lines[j] = lines[j].trimEnd() + `</${comp}>`
+          fixCount++
+        }
+      }
+    }
+    parts[i] = lines.join("\n")
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Wrap frontmatter string values containing non-ASCII characters in double quotes.
  * Prevents YAML parsing issues with accented characters.
  */
@@ -3399,6 +3502,14 @@ function processMarkdownFile(
     () => fixAsciiGuillemets(content),
     (n) => `Fixed ${n} ASCII guillemets (<< >>) to Unicode (« »)`
   )
+  applyFix(
+    () => fixGuillemetsInHtmlTags(content),
+    (n) => `Fixed ${n} guillemet(s) replacing < or > in HTML tags`
+  )
+  applyFix(
+    () => fixMissingComponentClosingTags(content),
+    (n) => `Fixed ${n} missing component closing tag(s)`
+  )
 
   // Fix escaped backticks (\`) to regular backticks (`)
   {
@@ -4038,6 +4149,8 @@ export const _testOnly = {
   fixBrokenMarkdownLinks,
   fixEscapedBoldAndItalic,
   fixAsciiGuillemets,
+  fixGuillemetsInHtmlTags,
+  fixMissingComponentClosingTags,
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
   escapeMdxAngleBrackets,

@@ -45,6 +45,8 @@ const {
   fixMissingOpeningSup,
   fixSplitBoldMarkers,
   fixKnownWrongCompounds,
+  fixGuillemetsInHtmlTags,
+  fixMissingComponentClosingTags,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -1813,6 +1815,199 @@ author: Ori Pomerantz
     test("skips code blocks", () => {
       const input = "```\nقنوات الدولة\n```"
       const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixGuillemetsInHtmlTags", () => {
+    test("fixes right guillemet replacing > after quoted attribute", () => {
+      const input =
+        '<span dir="ltr"\u00BB$100,000</span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe('<span dir="ltr">$100,000</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes right guillemet replacing > at end of self-closing tag", () => {
+      const input = '<br /\u00BB'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe("<br />")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes right guillemet replacing > in closing tag", () => {
+      const input = '</span\u00BB'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe("</span>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes left guillemet replacing < in opening tag", () => {
+      const input =
+        '\u00ABspan dir="ltr">$100,000</span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe('<span dir="ltr">$100,000</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes left guillemet replacing < in closing tag", () => {
+      const input = '<span dir="ltr">text\u00AB/span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe('<span dir="ltr">text</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes both guillemets in same tag", () => {
+      const input = '\u00ABspan dir="ltr"\u00BB$100</span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe('<span dir="ltr">$100</span>')
+      expect(fixCount).toBeGreaterThanOrEqual(1)
+    })
+
+    test("fixes multiple broken tags in same line", () => {
+      const input =
+        '<span dir="ltr"\u00BB$100</span\u00BB and <span dir="ltr"\u00BB$200</span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(
+        '<span dir="ltr">$100</span> and <span dir="ltr">$200</span>'
+      )
+      expect(fixCount).toBe(3)
+    })
+
+    test("fixes guillemet in i tag", () => {
+      const input = '<i\u00BBtext</i>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe("<i>text</i>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes guillemet in Link component", () => {
+      const input = '<Link href="https://example.com"\u00BBtext</Link>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe('<Link href="https://example.com">text</Link>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves legitimate guillemet pairs unchanged", () => {
+      const input =
+        "\u00ABThe knowledge complexity\u00BB"
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves Arabic quotation guillemets unchanged", () => {
+      const input = "قال \u00ABمرحبا\u00BB في الاجتماع"
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves correct HTML tags unchanged", () => {
+      const input = '<span dir="ltr">$100,000</span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input = '```\n<span dir="ltr"\u00BB$100</span>\n```'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips inline code", () => {
+      const input = 'Use `<span dir="ltr"\u00BB` for RTL'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixMissingComponentClosingTags", () => {
+    test("adds missing closing SocialListItem tag", () => {
+      const input =
+        '<SocialListItem socialIcon="webpage"><Link href="https://example.com">Text</Link> - description'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(
+        '<SocialListItem socialIcon="webpage"><Link href="https://example.com">Text</Link> - description</SocialListItem>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("adds missing closing tag with italic content", () => {
+      const input =
+        '<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Forum</Link> <i>- description</i>'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(
+        '<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Forum</Link> <i>- description</i></SocialListItem>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves properly closed tags unchanged", () => {
+      const input =
+        '<SocialListItem socialIcon="webpage"><Link href="https://example.com">Text</Link></SocialListItem>'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves properly closed tags with content after Link unchanged", () => {
+      const input =
+        '<SocialListItem socialIcon="webpage"><Link href="https://example.com">Text</Link> - desc</SocialListItem>'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple unclosed tags across lines", () => {
+      const input =
+        '<SocialListItem socialIcon="a">one\n<SocialListItem socialIcon="b">two'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toContain("one</SocialListItem>")
+      expect(content).toContain("two</SocialListItem>")
+      expect(fixCount).toBe(2)
+    })
+
+    test("does NOT fix ExpandableCard (multi-line component)", () => {
+      const input = '<ExpandableCard title="test">content here'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not double-close already closed tag", () => {
+      const input =
+        '<SocialListItem socialIcon="a">text</SocialListItem>\n<SocialListItem socialIcon="b">text</SocialListItem>'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles mixed closed and unclosed on consecutive lines", () => {
+      const input =
+        '<SocialListItem socialIcon="a">closed</SocialListItem>\n<SocialListItem socialIcon="b">unclosed'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toContain("closed</SocialListItem>")
+      expect(content).toContain("unclosed</SocialListItem>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input =
+        '```\n<SocialListItem socialIcon="a">unclosed\n```'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips inline code", () => {
+      const input =
+        'Use `<SocialListItem socialIcon="a">unclosed` as example'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
