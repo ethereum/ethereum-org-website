@@ -24,6 +24,7 @@ const {
   restoreStrippedAbbreviations,
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
+  removeStaleComponents,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -932,6 +933,57 @@ test.describe("English Comparison Fixes", () => {
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("removeStaleComponents", () => {
+    test("removes self-closing component not in English", () => {
+      const translated =
+        'Some text\n\n<ContributorsQuizBanner className="mt-16 mb-8" />\n\nMore text'
+      const english = "Some text\n\nMore text"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("ContributorsQuizBanner")
+      expect(content).toContain("Some text")
+      expect(content).toContain("More text")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves components that exist in English", () => {
+      const translated =
+        '<NetworkUpgradeSummary name="paris" />\n\nText'
+      const english =
+        '<NetworkUpgradeSummary name="paris" />\n\nText'
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("removes multiple stale components", () => {
+      const translated =
+        '<StaleOne />\nText\n<StaleTwo className="x" />'
+      const english = "Text"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("StaleOne")
+      expect(content).not.toContain("StaleTwo")
+      expect(fixCount).toBe(2)
+    })
+
+    test("does not remove components inside code blocks", () => {
+      const translated =
+        '```\n<ContributorsQuizBanner />\n```'
+      const english = "```\nsome code\n```"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).toContain("ContributorsQuizBanner")
+      expect(fixCount).toBe(0)
+    })
+
+    test("cleans up blank line left behind after removal", () => {
+      const translated =
+        'Before\n\n<StaleComponent />\n\nAfter'
+      const english = "Before\n\nAfter"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("\n\n\n")
+      expect(fixCount).toBe(1)
     })
   })
 })

@@ -421,6 +421,49 @@ function fixMergedSupDigits(
  * the English source. Then replace all numbered tags in the translation.
  * Handles inverted order and HTML-escaped variants.
  */
+/**
+ * Remove self-closing JSX components from translations that no longer
+ * exist in the English source. These are stale references to components
+ * that were removed from the English content but persist in translations.
+ *
+ * Only removes self-closing components (<ComponentName ... />) on their
+ * own line. Does not touch open/close component pairs.
+ */
+function removeStaleComponents(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = translatedContent.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    // Match self-closing JSX components on their own line
+    parts[i] = parts[i].replace(
+      /^[ \t]*<([A-Z][a-zA-Z]+)\b[^>]*\/>\s*$/gm,
+      (match, componentName) => {
+        // Check if this component exists anywhere in the English source
+        if (!englishContent.includes(componentName)) {
+          fixCount++
+          return ""
+        }
+        return match
+      }
+    )
+  }
+
+  let result = parts.join("")
+  // Clean up triple+ blank lines left by removal (only if we actually removed something)
+  if (fixCount > 0) {
+    result = result.replace(/\n{3,}/g, "\n\n")
+  }
+
+  return { content: result, fixCount }
+}
+
 function fixCrowdinNumberedTags(
   translatedContent: string,
   englishContent: string
@@ -3593,6 +3636,10 @@ function processMarkdownFile(
   // Normalize inline components and restore blank lines from English source
   if (englishMd) {
     applyFix(
+      () => removeStaleComponents(content, englishMd!),
+      (n) => `Removed ${n} stale component(s) not in English source`
+    )
+    applyFix(
       () => syncProtectedFrontmatterFields(content, englishMd!, locale),
       (n) => `Synced ${n} protected frontmatter fields from English`
     )
@@ -4201,6 +4248,7 @@ export const _testOnly = {
   fixGuillemetsInHtmlTags,
   fixMissingComponentClosingTags,
   fixMangledDocLinks,
+  removeStaleComponents,
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
   escapeMdxAngleBrackets,
