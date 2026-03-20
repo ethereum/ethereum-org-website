@@ -421,6 +421,49 @@ function fixMergedSupDigits(
  * the English source. Then replace all numbered tags in the translation.
  * Handles inverted order and HTML-escaped variants.
  */
+/**
+ * Remove self-closing JSX components from translations that no longer
+ * exist in the English source. These are stale references to components
+ * that were removed from the English content but persist in translations.
+ *
+ * Only removes self-closing components (<ComponentName ... />) on their
+ * own line. Does not touch open/close component pairs.
+ */
+function removeStaleComponents(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = translatedContent.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    // Match self-closing JSX components on their own line
+    parts[i] = parts[i].replace(
+      /^[ \t]*<([A-Z][a-zA-Z]+)\b[^>]*\/>\s*$/gm,
+      (match, componentName) => {
+        // Check if this component exists anywhere in the English source
+        if (!englishContent.includes(componentName)) {
+          fixCount++
+          return ""
+        }
+        return match
+      }
+    )
+  }
+
+  let result = parts.join("")
+  // Clean up triple+ blank lines left by removal (only if we actually removed something)
+  if (fixCount > 0) {
+    result = result.replace(/\n{3,}/g, "\n\n")
+  }
+
+  return { content: result, fixCount }
+}
+
 function fixCrowdinNumberedTags(
   translatedContent: string,
   englishContent: string
@@ -2046,6 +2089,143 @@ function fixAsciiGuillemets(content: string): {
 }
 
 /**
+ * Fix Unicode guillemets (U+00AB, U+00BB) that replace < or > in HTML tags.
+ *
+ * Gemini/Crowdin sometimes substitutes the right guillemet for > when closing
+ * an HTML attribute (e.g., dir="ltr">> becomes dir="ltr">). Similarly, left
+ * guillemet can replace <.
+ *
+ * Only fixes guillemets adjacent to HTML tag syntax. Leaves legitimate
+ * guillemet quotation pairs (e.g., <<text>>) untouched.
+ */
+function fixGuillemetsInHtmlTags(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    // Process line by line for context
+    const lines = parts[i].split("\n")
+    for (let j = 0; j < lines.length; j++) {
+      // Match complete tag-like patterns with guillemets replacing < or >
+      // Pattern 1: «tagname attr="val"»  or «/tagname» (guillemets as < and >)
+      // Must contain tag-like syntax: attributes (=, quotes) or be a closing tag (/)
+      lines[j] = lines[j].replace(
+        /\u00AB(\/?[a-zA-Z][\w]*(?:\s[^>\u00BB]*)?)[>\u00BB]/g,
+        (match, inner) => {
+          // Closing tag: «/span» -- always valid
+          if (inner.startsWith("/")) {
+            fixCount++
+            return "<" + inner + ">"
+          }
+          // Opening tag with attributes: «span dir="ltr"» -- has = or quotes
+          if (/[="']/.test(inner)) {
+            fixCount++
+            return "<" + inner + ">"
+          }
+          // Simple tag: «br» «i» «b» -- only short lowercase names
+          if (/^[a-z]{1,4}$/.test(inner)) {
+            fixCount++
+            return "<" + inner + ">"
+          }
+          return match
+        }
+      )
+
+      // Pattern 2: <tagname ...» (right guillemet as >, left < is correct)
+      lines[j] = lines[j].replace(
+        /<([^<>]*)\u00BB/g,
+        (_, inner) => {
+          fixCount++
+          return "<" + inner + ">"
+        }
+      )
+    }
+    parts[i] = lines.join("\n")
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix missing closing tags on single-line MDX components.
+ *
+ * Crowdin/Gemini sometimes drops the closing tag on components that should
+ * be self-contained on a single line (e.g., <SocialListItem>).
+ */
+function fixMissingComponentClosingTags(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const singleLineComponents = ["SocialListItem"]
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    const lines = parts[i].split("\n")
+    for (let j = 0; j < lines.length; j++) {
+      for (const comp of singleLineComponents) {
+        const openPattern = new RegExp(`<${comp}\\s[^>]*>`)
+        const closePattern = new RegExp(`</${comp}>`)
+
+        if (openPattern.test(lines[j]) && !closePattern.test(lines[j])) {
+          lines[j] = lines[j].trimEnd() + `</${comp}>`
+          fixCount++
+        }
+      }
+    }
+    parts[i] = lines.join("\n")
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix DocLink components mangled into markdown link syntax by Crowdin/Gemini.
+ *
+ * Pattern: `[<DocLink href="](/actual/path)/">` -> `<DocLink href="/actual/path/">`
+ *
+ * Crowdin treats `<DocLink href="...">` as a markdown link, wrapping the
+ * component tag in `[...]()` syntax and moving the href into the parentheses.
+ */
+function fixMangledDocLinks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    // Match: [<DocLink href="](path)/">  or  [<DocLink href="](path)">
+    parts[i] = parts[i].replace(
+      /\[<DocLink\s+href="\]\(([^)]+)\)\/?">?/g,
+      (_, path) => {
+        fixCount++
+        const normalizedPath = path.endsWith("/") ? path : path + "/"
+        return `<DocLink href="${normalizedPath}">`
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Wrap frontmatter string values containing non-ASCII characters in double quotes.
  * Prevents YAML parsing issues with accented characters.
  */
@@ -3399,6 +3579,18 @@ function processMarkdownFile(
     () => fixAsciiGuillemets(content),
     (n) => `Fixed ${n} ASCII guillemets (<< >>) to Unicode (« »)`
   )
+  applyFix(
+    () => fixGuillemetsInHtmlTags(content),
+    (n) => `Fixed ${n} guillemet(s) replacing < or > in HTML tags`
+  )
+  applyFix(
+    () => fixMissingComponentClosingTags(content),
+    (n) => `Fixed ${n} missing component closing tag(s)`
+  )
+  applyFix(
+    () => fixMangledDocLinks(content),
+    (n) => `Fixed ${n} mangled DocLink component(s)`
+  )
 
   // Fix escaped backticks (\`) to regular backticks (`)
   {
@@ -3443,6 +3635,10 @@ function processMarkdownFile(
 
   // Normalize inline components and restore blank lines from English source
   if (englishMd) {
+    applyFix(
+      () => removeStaleComponents(content, englishMd!),
+      (n) => `Removed ${n} stale component(s) not in English source`
+    )
     applyFix(
       () => syncProtectedFrontmatterFields(content, englishMd!, locale),
       (n) => `Synced ${n} protected frontmatter fields from English`
@@ -3530,6 +3726,17 @@ function processMarkdownFile(
     applyFix(
       () => fixMissingLinkBrackets(content, englishMd),
       (n) => `Fixed ${n} missing link brackets`
+    )
+
+    // Re-run JSX hybrid fix AFTER fixMissingLinkBrackets, which can
+    // re-introduce [<Component href="](path)"> by wrapping bare JSX hrefs
+    applyFix(
+      () => fixJsxMarkdownHybrids(content),
+      (n) => `Fixed ${n} Crowdin JSX/markdown hybrid manglings`
+    )
+    applyFix(
+      () => fixMangledDocLinks(content),
+      (n) => `Fixed ${n} mangled DocLink component(s)`
     )
 
     // Warn on punctuation-only headings (dropped translation text)
@@ -4038,6 +4245,10 @@ export const _testOnly = {
   fixBrokenMarkdownLinks,
   fixEscapedBoldAndItalic,
   fixAsciiGuillemets,
+  fixGuillemetsInHtmlTags,
+  fixMissingComponentClosingTags,
+  fixMangledDocLinks,
+  removeStaleComponents,
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
   escapeMdxAngleBrackets,
