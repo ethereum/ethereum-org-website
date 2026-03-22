@@ -68,7 +68,7 @@ export default function MyPage() {
 
 - Variants are matched by **array index**, not by name
 - Array order must match the exact order of variations in your Matomo experiment
-- JSX `key` props serve as array keys, and human-readable labels in the debug panel (parsed from kebab-case to Title Case)
+- JSX `key` props serve as array keys, and as human-readable labels in the debug panel (parsed from kebab-case to Title Case)
 
 ### 4. Experiment Activation
 
@@ -224,7 +224,7 @@ NEXT_PUBLIC_IS_PREVIEW_DEPLOY=false
 
 1. **Check environment variables**: Ensure all Matomo config is set
 2. **Verify API token**: Must have "experiments" permission in Matomo
-3. **Check cache**: API responses cached for 1 hour, use dev mode for real-time updates
+3. **Check cache**: API responses are cached for 1 hour, use dev mode for real-time updates
 4. **Fallback behavior**: When API fails, all tests show original variant (safe default)
 
 ## Debug Panel
