@@ -19,7 +19,7 @@ This way, we can provide a gasless way for an account to hold assets (tokens, et
 
 ### Why we can't just relay request {#why-no-tx-origin}
 
-GOON
+In ERC-20 and related standards, the account owner is [`msg.sender`](), the one that called the token contract, *not* the originator of the transaction ([`tx.origin`](https://docs.soliditylang.org/en/v0.8.35-pre.1/security-considerations.html#tx-origin)). 
 
 ## Seeing it in action {#in-action}
 
@@ -385,7 +385,7 @@ For everything else, use Vite, which handles serving the user interface for us.
 
 [This is the user interface code](https://github.com/qbzzt/260315-gasless-tokens/tree/main/server/src). Most of the code is nearly identical to the code documented in [this article](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/#file-walk-through), with the exception of [`Token.jsx`](https://github.com/qbzzt/260315-gasless-tokens/blob/main/server/src/Token.jsx).
 
-Parts of [`Token.jsx`] are similar to [`Greeter.jsx`](https://github.com/qbzzt/260301-gasless/blob/main/server/src/Greeter.jsx) in [this article](/developers/tutorials/gasless#ui-changes). Here are the new parts.
+Parts of [`Token.jsx`](https://github.com/qbzzt/260315-gasless-tokens/blob/main/server/src/Token.jsx) are similar to [`Greeter.jsx`](https://github.com/qbzzt/260301-gasless/blob/main/server/src/Greeter.jsx) in [this article](/developers/tutorials/gasless#ui-changes). Here are the new parts.
 
 ```js
 import {
@@ -562,41 +562,12 @@ Sign a message before sending it to the server to send to `UserProxy` on the blo
 
 ```js
     const domain = {
-        name: "UserProxy",
-        version: "1",
-        chainId,
-        verifyingContract: proxyAddr,
-    }
-
-    const types = {
-      SignedAccess: [
-        { name: "target", type: "address" },
-        { name: "data", type: "bytes" },          
-        { name: "nonce", type: "uint256" },
-      ],
-    }
-
-    const signature = await signTypedDataAsync({
-      domain,
-      types,
-      primaryType: "SignedAccess",
-      message: {
-         target: faucetAddr,
-         data: calldata,
-         nonce: nonce.data,
-      }
-    })
-
-    const r = `0x${signature.slice(2, 66)}`
-    const s = `0x${signature.slice(66, 130)}`
-    const v = parseInt(signature.slice(130, 132), 16)    
-
+      .
+      .
+      .
     return {v, r, s}
   }
-```
 
-
-```js
   const messageUserProxy = async (proxy, target, data, v, r, s) => {
 ```
 
@@ -783,15 +754,11 @@ export {Token}
 
 This is just React boilerplate.
 
-## What is missing {#what-is-missing}
-
-This is *not* production code, just a quick example to illustrate how such a system works. As such, it has problems of both usability (UX for user experience) and security.
-
-### Vulnerabilities {#vulnerabilities}
+## Vulnerabilities {#vulnerabilities}
 
 Our server is vulnerable to denial of service attacks. This attack is explained [in the previous article of the series](/developers/tutorials/gasless/#dos-on-server).
 
-Additionally, we are encouraging bad user behavior. THis is what we want the user the sign:
+Additionally, we are encouraging bad user behavior. This is what we want the user the sign:
 
 ![Screen capture with opaque calldata](./fig-1-opaque-calldata.png)
 
@@ -807,10 +774,6 @@ The solution is to have separate functions in `UserProxy` for commonly used func
 **Note:** While users can use any wallet they want, it is highly recommended that applications using EIP-712 encourage them to use a wallet that [shows the entire signature data](https://rabby.io/). Some wallets truncate the address, which is insecure. An attacker can create an address that has the same beginning and end characters, but is different in the middle.
 
 ![Screen capture with truncated addresses](./fig-3-truncated-addresses.png)
-
-### User experience {#UX}
-
-#### The opaque signature issue {#opaque-signature}
 
 ## Conclusion {#conclusion}
 
