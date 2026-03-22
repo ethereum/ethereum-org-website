@@ -146,7 +146,7 @@ Supports 3+ variants:
 ### Production
 
 1. Deploy your component with `ABTestWrapper`
-2. Monitor experiment in Matomo dashboard
+2. Monitor the experiment in the Matomo dashboard
 3. Adjust traffic allocation as needed
 4. Analyze results and implement winning variant
 
@@ -224,7 +224,7 @@ NEXT_PUBLIC_IS_PREVIEW_DEPLOY=false
 
 1. **Check environment variables**: Ensure all Matomo config is set
 2. **Verify API token**: Must have "experiments" permission in Matomo
-3. **Check cache**: API responses cached for 1 hour, use dev mode for real-time updates
+3. **Check cache**: API responses are cached for 1 hour, use dev mode for real-time updates
 4. **Fallback behavior**: When API fails, all tests show original variant (safe default)
 
 ## Debug Panel
