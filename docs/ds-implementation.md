@@ -59,7 +59,6 @@ If you are implementing:
 
 Each created or adapted component must include a corresponding Storybook story.
 
-* Follow the [Storybook integration guide](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/applying-storybook.md)
+* Follow the [Storybook integration guide](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/applying-storybook.md).
 * Follow the [proposed Storybook structure](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure)
-
 
