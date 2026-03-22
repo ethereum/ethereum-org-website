@@ -51,7 +51,7 @@ lang: bn
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker ডিসকর্ড</Link> - বর্তমান এবং সম্ভাব্য স্টেকারদের জন্য কমিউনিটি-চালিত নির্দেশিকা, শিক্ষা, সহায়তা এবং রিসোর্স</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org ওয়েবসাইট টিম</Link> - টিমের সাথে এবং কমিউনিটির লোকজনের সাথে ethereum.org ওয়েব ডেভেলপমেন্ট এবং ডিজাইন নিয়ে চ্যাট করতে আসুন</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">ম্যাটোস ডিসকর্ড</Link> - web3 নির্মাতাদের কমিউনিটি যেখানে বিল্ডার, শিল্প ব্যক্তিত্ব এবং ইথেরিয়াম উত্সাহীরা মিলিত হন। আমরা web3 ডেভেলপমেন্ট, ডিজাইন এবং সংস্কৃতি সম্পর্কে উত্সাহী। আমাদের সাথে নির্মাণ করতে আসুন।</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">সলিডিটি গিটার</Link> - সলিডিটি ডেভেলপমেন্টের জন্য চ্যাট (গিটার)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.element.io/#/room/#solidity:matrix.org">সলিডিটি গিটার</Link> - সলিডিটি ডেভেলপমেন্টের জন্য চ্যাট (গিটার)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">সলিডিটি ম্যাট্রিক্স</Link> - সলিডিটি ডেভেলপমেন্টের জন্য চ্যাট (ম্যাট্রিক্স)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">ইথেরিয়াম স্ট্যাক এক্সচেঞ্জ</Link> <i>- প্রশ্ন ও উত্তর ফোরাম</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">পীরা কমিউনিটি ফোরাম</Link> <i>- বিকেন্দ্রীভূত প্রশ্ন ও উত্তর ফোরাম</i></SocialListItem>

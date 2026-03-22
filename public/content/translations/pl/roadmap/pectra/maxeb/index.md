@@ -113,7 +113,7 @@ Aby przesłać `ConsolidationRequest`, **adres wypłat walidatora źródłowego*
 
 ### Co jest podpisywane? {#what-is-signed}
 
-Używany jest oddzielony domeną [główny element podpisu (signing root)](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#compute_signing_root) obiektu `ConsolidationRequest`.
+Używany jest oddzielony domeną [główny element podpisu (signing root)](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md#compute_signing_root) obiektu `ConsolidationRequest`.
 
 - **Domena:** `DOMAIN_CONSOLIDATION_REQUEST`
 - **Pola głównego elementu podpisu:**
@@ -197,7 +197,7 @@ Tak. Dopóki jest aktywny (nie wyszedł z sieci) i możesz podpisywać się jego
 
 ## Zasoby {#resources}
 
-- [Specyfikacje konsensusu Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md): To jest „najprawdziwsza” wersja, na której powinieneś/aś polegać. W razie wątpliwości przeczytaj specyfikacje
+- [Specyfikacje konsensusu Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md): To jest „najprawdziwsza” wersja, na której powinieneś/aś polegać. W razie wątpliwości przeczytaj specyfikacje
 - Nie każdy czuje się komfortowo, przeglądając kod, więc [ten maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) może pomóc w interpretacji specyfikacji. _Zastrzeżenie: Należy polegać na specyfikacjach, a nie na sztucznej inteligencji, ponieważ sztuczna inteligencja może błędnie interpretować informacje lub generować halucynacje._
 - [pectrified.com](https://pectrified.com/): Zobacz stan konsolidacji, depozytów i czasów oczekiwania w kolejce
 - [Ethereal](https://github.com/wealdtech/ethereal): Stworzone przez społeczność narzędzie CLI do zarządzania typowymi zadaniami walidatora

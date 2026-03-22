@@ -32,7 +32,7 @@ Stakowanie służy podobnym celom, co kiedyś [wydobywanie](/developers/docs/con
 
 Przejście na proof-of-stake sprawiło, że sieć Ethereum stała się znacznie bezpieczniejsza i zdecentralizowana w porównaniu z proof-of-work. Im więcej osób uczestniczy w sieci, tym bardziej staję się ona zdecentralizowana i lepiej zabezpieczona przed atakami.
 
-Stosowanie proof-of-stake jako mechanizmu konsensusu jest fundamentalnym elementem [bezpiecznego, przyjaznego dla środowiska i skalowalnego Ethereum, które mamy teraz](/roadmap/vision/).
+Stosowanie proof-of-stake jako mechanizmu konsensusu jest fundamentalnym elementem [bezpiecznego, przyjaznego dla środowiska i skalowalnego Ethereum, które mamy teraz](/roadmap/).
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>

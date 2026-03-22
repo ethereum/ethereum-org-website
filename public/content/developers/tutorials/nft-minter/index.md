@@ -2,7 +2,7 @@
 title: NFT Minter Tutorial
 description: In this tutorial, you’ll build an NFT minter and learn how to create a full stack dapp by connecting your smart contract to a React frontend using MetaMask and Web3 tools.
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata"]
+tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata", "erc-721"]
 skill: intermediate
 lang: en
 published: 2021-10-06

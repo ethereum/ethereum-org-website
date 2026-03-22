@@ -241,7 +241,7 @@ ERC-20 कॉन्ट्रॅक्ट्समध्ये परवानग
 
 #### `mount` फंक्शन {#the-mount-function}
 
-[मानकामध्ये](https://eips.ethereum.org/EIPS/eip-20) निर्दिष्ट नसले तरी, सामान्यतः नवीन टोकन्स तयार करणाऱ्या फंक्शनला [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) म्हणतात.
+[मानकामध्ये](https://eips.ethereum.org/EIPS/eip-20) निर्दिष्ट नसले तरी, सामान्यतः नवीन टोकन्स तयार करणाऱ्या फंक्शनला [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) म्हणतात.
 
 `wARB` कंस्ट्रक्टरमध्ये पाहिल्यास, आपल्याला दिसते की मिंट फंक्शनचे नाव काही कारणास्तव `mount` असे ठेवले आहे, आणि कार्यक्षमतेसाठी संपूर्ण रकमेसाठी एकदा कॉल करण्याऐवजी प्रारंभिक पुरवठ्याच्या पाचव्या भागासह पाच वेळा कॉल केले आहे.
 

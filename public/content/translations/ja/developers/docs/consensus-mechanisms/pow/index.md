@@ -101,7 +101,7 @@ lang: ja
 ## 参考リンク {#further-reading}
 
 - [マジョリティアタック(多数派攻撃)](https://en.bitcoin.it/wiki/Majority_attack)
-- [決済のファイナリティについて](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [決済のファイナリティについて](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### 動画 {#videos}
 

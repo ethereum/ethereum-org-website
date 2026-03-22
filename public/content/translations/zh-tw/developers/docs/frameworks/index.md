@@ -122,8 +122,6 @@ lang: zh-tw
 
 **Catapulta -** **_多鏈智慧合約部署工具，可在區塊瀏覽器中自動驗證、追蹤已部署的智慧合約並分享部署報告，為 Foundry 和 Hardhat 專案提供隨插即用功能。_**
 
-- [網站](https://catapulta.sh/)
-- [說明文件](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
 
 **GoldRush (由 Covalent 提供技術支援) -** **_GoldRush 為開發人員、分析師和企業提供最全面的區塊鏈資料 API 套件， 無論您是在建構 DeFi 儀表板、錢包、交易機器人、AI 代理程式還是合規平台，資料 API 都能提供快速、準確且對開發人員友善的存取方式，讓您取得所需的必要鏈上資料_**

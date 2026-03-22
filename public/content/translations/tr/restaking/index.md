@@ -19,7 +19,7 @@ buttons:
 
 Ethereum ağı, 7/24, 365 gün boyunca milyarlarca dolarlık değeri güvence altına alır. Nasıl?
 
-Dünyanın dört bir yanındaki insanlar, Ethereum işlemlerini yürüten ve Ethereum ağını güvence altına alan yazılımı çalıştırmak için akıllı sözleşmelerde [ether (ETH)](/eth/) kilitler (veya "hisseler"). Karşılığında daha fazla ETH ile ödüllendirilirler.
+Dünyanın dört bir yanındaki insanlar, Ethereum işlemlerini yürüten ve Ethereum ağını güvence altına alan yazılımı çalıştırmak için akıllı sözleşmelerde [ether (ETH)](/what-is-ether/) kilitler (veya "hisseler"). Karşılığında daha fazla ETH ile ödüllendirilirler.
 
 Yeniden hisseleme, [hisseleyenlerin](/staking/) bu güvenliği diğer hizmetlere, uygulamalara veya ağlara genişletmesi için oluşturulmuş bir teknolojidir. Karşılığında ek yeniden hisseleme ödülleri kazanırlar. Ancak, hisselenmiş ETH'lerini de daha fazla riske atarlar.
 
@@ -178,7 +178,7 @@ AVS'ler farklı oranlar sunsa da, eETH gibi Likit Yeniden Hisseleme Jetonları (
 
 ## Daha fazla kaynak {#further-reading}
 
-1. [ethereum.org - ETH hisseleme rehberi](https://ethereum.org/en/staking/)
+1. [ethereum.org - ETH hisseleme rehberi](/staking/)
 2. [Ledger Academy - Ethereum Yeniden Hisseleme Nedir?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer: Merkeziyetsiz Ethereum Yeniden Hisseleme Protokolü Açıklandı](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin - Ethereum'un mutabakatını aşırı yüklemeyin](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

@@ -272,7 +272,6 @@ sidebarDepth: 2
     - বিনামূল্যে শুরু করুন
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [ডক্স](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - বৈশিষ্ট্য
     - 50+ ব্লকচেইন নোডগুলিতে অ্যাক্সেস
     - বিনামূল্যে API কী
@@ -283,11 +282,10 @@ sidebarDepth: 2
     - শেয়ার্ড, আর্কাইভ, ব্যাকআপ এবং ডেডিকেটেড নোড
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [ডক্স](https://docs.pokt.network/home/)
+  - [ডক্স](https://docs.pokt.network/)
   - বৈশিষ্ট্য
     - বিকেন্দ্রীভূত RPC প্রোটোকল এবং মার্কেটপ্লেস
     - প্রতিদিন 1M অনুরোধ বিনামূল্যে স্তর (প্রতি এন্ডপয়েন্টে, সর্বোচ্চ 2)
-    - [পাবলিক এন্ডপয়েন্ট](https://docs.pokt.network/developers/public-endpoints)
     - প্রি-স্টেক+ প্রোগ্রাম (যদি আপনার প্রতিদিন 1M এর বেশি অনুরোধের প্রয়োজন হয়)
     - 15+ ব্লকচেইন সমর্থিত
     - 6400+ নোড অ্যাপ্লিকেশন পরিবেশন করার জন্য POKT আয় করছে

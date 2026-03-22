@@ -162,5 +162,5 @@ Validium-கள் அனைத்து பரிவர்த்தனைத்
 - [Validium மற்றும் அடுக்கு 2 இரண்டுக்கு இரண்டு — இதழ் எண். 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZK-ரோலப்கள் vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [விருப்பத்தேர்வு மற்றும் வளர்ந்து வரும் தரவு கிடைத்தல் நிறமாலை](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [ரோலப்கள், Validium-கள் மற்றும் விருப்பத்தேர்வுகள்: வெப்பமான எத்தேரியம் அளவிடுதல் தீர்வுகள் பற்றி அறிக](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
+- [ரோலப்கள், Validium-கள் மற்றும் விருப்பத்தேர்வுகள்: வெப்பமான எத்தேரியம் அளவிடுதல் தீர்வுகள் பற்றி அறிக](https://medium.com/coinmonks/rollups-vs-validiums-vs-volitions-d76300170f4a)
 - [ஈதரியம் ரோல்அப்களுக்கான நடைமுறை வழிகாட்டி](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

@@ -33,7 +33,7 @@ In addition to the benefits we outlined in our [intro to staking](/staking/), st
 
 ## What to consider {#what-to-consider}
 
-Pooled or delegated staking is not natively supported by the Ethereum protocol, but given the demand for users to stake less than 32 ETH a growing number of solutions have been built out to serve this demand.
+Pooled or delegated staking is not natively supported by the [Ethereum](/) protocol, but given the demand for users to stake less than 32 ETH a growing number of solutions have been built out to serve this demand.
 
 Each pool and the tools or smart contracts they use have been built out by different teams, and each comes with benefits and risks. Pools enable users to swap their ETH for a token representing staked ETH. The token is useful because it allows users to swap any amount of ETH to an equivalent amount of a yield-bearing token that generates a return from the staking rewards applied to the underlying staked ETH (and vice versa) on decentralized exchanges even though the actual ETH stays staked on the consensus layer. This means swaps back and forth from a yield-bearing staked-ETH product and "raw ETH" is quick, easy and not only available in multiples of 32 ETH.
 

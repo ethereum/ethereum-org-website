@@ -272,7 +272,6 @@ sidebarDepth: 2
     - 無料で開始
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [ドキュメント](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - 機能
     - 50以上のブロックチェーンノードへのアクセス
     - APIキー無料
@@ -283,11 +282,10 @@ sidebarDepth: 2
     - 共有、アーカイブ、バックアップ、専用ノード
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [ドキュメント](https://docs.pokt.network/home/)
+  - [ドキュメント](https://docs.pokt.network/)
   - 機能
     - 分散型RPCプロトコルとマーケットプレイス
     - 1日あたり100万件のリクエストができる無料ティア(エンドポイントあたり最大2件)
-    - [公開エンドポイント](https://docs.pokt.network/developers/public-endpoints)
     - プレステーク+プログラム(1日に100万件を超えるリクエストが必要な場合)
     - 15以上のブロックチェーン対応
     - アプリケーションへのサービスでPOKTを獲得する6400以上のノード

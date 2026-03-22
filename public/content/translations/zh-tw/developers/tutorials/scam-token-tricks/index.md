@@ -241,7 +241,7 @@ ERC-20 合約應該有一個用於授權的 [`approve` 函數](/developers/tutor
 
 #### `mount` 函數 {#the-mount-function}
 
-雖然在[標準](https://eips.ethereum.org/EIPS/eip-20)中沒有指定，但一般來說，創建新代幣的函數稱為[`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)。
+雖然在[標準](https://eips.ethereum.org/EIPS/eip-20)中沒有指定，但一般來說，創建新代幣的函數稱為[`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)。
 
 如果我們查看 `wARB` 的建構函式，我們會發現鑄幣函數由於某些原因被重新命名為 `mount`，並且為了效率，它被調用了五次，每次使用初始供應量的五分之一，而不是一次性處理全部金額。
 

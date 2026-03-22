@@ -102,7 +102,6 @@ Podívejte se na níže uvedené projekty a zapojte se do DeSci komunity.
 - [OceanDAO: Financování spravované DAO pro vědu související s daty](https://oceanprotocol.com/)
 - [Opscientia: Otevřené decentralizované vědecké pracovní postupy](https://opsci.io/research/)
 - [Bio.xyz: Získejte financování pro svůj biotechnologický projekt DAO nebo DeSci](https://www.bio.xyz/)
-- [Fleming Protocol: Open-source datová ekonomika, která pohání kolaborativní biomedicínské objevy](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: Umožnění decentralizované vědecké důvěryhodnosti](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

@@ -132,7 +132,6 @@ Aşağıda birkaç tıklamayla istemci kurmanıza ve yönetmenize yardımcı ola
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - Tam bir düğüm kurmanın en hızlı ve en kolay yolu. Tek satırlık kurulum aracı ve düğüm yönetimi TUI'si. Ücretsiz. Açık kaynak. Solo staker'lar tarafından Ethereum için kamu malları. ARM64 ve AMD64 desteği.
 - [eth-docker](https://eth-docker.net/) - Kolay ve güvenli staking'e odaklanan, Docker kullanan otomatik kurulum. Temel terminal ve Docker bilgisi gerektirir, biraz daha ileri düzey kullanıcılara tavsiye edilir.
 - [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) - Uzak bir sunucuya SSH bağlantısı aracılığıyla istemcileri kurmak için bir GUI kurulum kılavuzu, kontrol merkezi ve diğer birçok özelliğe sahip bir başlatıcı.
-- [NiceNode](https://www.nicenode.xyz/) - Bilgisayarınızda bir düğüm çalıştırmak için basit bir kullanıcı deneyimine sahip başlatıcı. Sadece istemciler seçin ve birkaç tıkta bunları başlatın. Hâlâ geliştirilmektedir.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - CLI sihirbazını kullanarak otomatik olarak bir Docker yapılandırması oluşturan düğüm kurulum aracı. Nethermind tarafından Go ile yazılmıştır.
 
 ### Manuel istemci kurulumu {#manual-setup}

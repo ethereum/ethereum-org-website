@@ -64,7 +64,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # Der Hash sollte Folgendes ausgeben: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Beachte, dass Images für Rock 5B- und Odroid M1-Platinen auf der Ethereum-on-Arm-[Download-Seite](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) verfügbar sind.
+Beachte, dass Images für Rock 5B- und Odroid M1-Platinen auf der Ethereum-on-Arm-[Download-Seite](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) verfügbar sind.
 
 ## Flashen der MicroSD {#flashing-the-microsd}
 
@@ -158,7 +158,7 @@ Herzlichen Glückwunsch, du hast jetzt einen vollständigen Ethereum-Node und Va
 
 ## Weitere Details {#more-details}
 
-Diese Seite gab einen Überblick darüber, wie man einen Geth-Lighthouse-Node und -Validator mit einem Raspberry Pi einrichtet. Detailliertere Anweisungen sind auf der [Ethereum-on-Arm-Webseite](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html) verfügbar.
+Diese Seite gab einen Überblick darüber, wie man einen Geth-Lighthouse-Node und -Validator mit einem Raspberry Pi einrichtet. Detailliertere Anweisungen sind auf der [Ethereum-on-Arm-Webseite](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) verfügbar.
 
 ## Feedback erwünscht {#feedback-appreciated}
 
@@ -177,7 +177,7 @@ Bitte vertiefe dich in die Details dieses Tutorials, probiere es auf Testnets au
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

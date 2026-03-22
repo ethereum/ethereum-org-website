@@ -92,7 +92,7 @@ Kuna maboresho mengine kadhaa ya baadaye yanayowezekana kwa sheria ya kuchagua m
 
 #### Mashambulizi ya masafa marefu {#long-range-attacks}
 
-Pia kuna aina ya shambulio mahususi kwa minyororo ya bloku ya uthibitisho wa hisa ambayo inahusisha mthibitishaji aliyeshiriki katika bloku ya mwanzo kudumisha mgawanyiko tofauti wa mnyororo wa bloku kando ya ule wa kweli, hatimaye kuwashawishi wathibitishaji waaminifu kuhamia kwake wakati fulani unaofaa baadaye sana. Aina hii ya shambulio haiwezekani kwenye Ethereum kwa sababu ya kifaa cha umwisho kinachohakikisha wathibitishaji wote wanakubaliana juu ya hali ya mnyororo wa kweli kwa vipindi vya kawaida (“vituo vya ukaguzi”). Utaratibu huu rahisi hupunguza nguvu za washambuliaji wa masafa marefu kwa sababu wateja wa Ethereum hawatapanga upya bloku zilizokamilishwa. Nodi mpya zinazojiunga na mtandao hufanya hivyo kwa kupata hashi ya hali ya hivi karibuni inayoaminika (kituo cha ukaguzi cha “[udhaifu wa kibinafsi](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)”) na kuitumia kama bloku bandia ya mwanzo ya kujenga juu yake. Hii inaunda 'lango la uaminifu' kwa nodi mpya inayoingia kwenye mtandao kabla ya kuanza kuthibitisha habari yenyewe.
+Pia kuna aina ya shambulio mahususi kwa minyororo ya bloku ya uthibitisho wa hisa ambayo inahusisha mthibitishaji aliyeshiriki katika bloku ya mwanzo kudumisha mgawanyiko tofauti wa mnyororo wa bloku kando ya ule wa kweli, hatimaye kuwashawishi wathibitishaji waaminifu kuhamia kwake wakati fulani unaofaa baadaye sana. Aina hii ya shambulio haiwezekani kwenye Ethereum kwa sababu ya kifaa cha umwisho kinachohakikisha wathibitishaji wote wanakubaliana juu ya hali ya mnyororo wa kweli kwa vipindi vya kawaida (“vituo vya ukaguzi”). Utaratibu huu rahisi hupunguza nguvu za washambuliaji wa masafa marefu kwa sababu wateja wa Ethereum hawatapanga upya bloku zilizokamilishwa. Nodi mpya zinazojiunga na mtandao hufanya hivyo kwa kupata hashi ya hali ya hivi karibuni inayoaminika (kituo cha ukaguzi cha “[udhaifu wa kibinafsi](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)”) na kuitumia kama bloku bandia ya mwanzo ya kujenga juu yake. Hii inaunda 'lango la uaminifu' kwa nodi mpya inayoingia kwenye mtandao kabla ya kuanza kuthibitisha habari yenyewe.
 
 #### Kukataliwa kwa Huduma {#denial-of-service}
 
@@ -157,7 +157,7 @@ Mashambulizi ya 34%, 51% au 66% huenda yakahitaji uratibu wa kijamii nje ya bend
 ## Masomo zaidi {#further-reading}
 
 - [Toleo la kina zaidi la ukurasa huu](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik kuhusu umwisho wa suluhu](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik kuhusu umwisho wa suluhu](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [Karatasi ya LMD GHOST](https://arxiv.org/abs/2003.03052)
 - Hati ya Utafiti ya Casper
 - [Karatasi ya Gasper](https://arxiv.org/pdf/2003.03052.pdf)

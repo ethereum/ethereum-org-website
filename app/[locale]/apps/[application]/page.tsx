@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { ChainName, CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { ChainName, Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import ChainImages from "@/components/ChainImages"
@@ -47,11 +47,10 @@ import AppsAppJsonLD from "./page-jsonld"
 
 import { getAppsData } from "@/lib/data"
 
-const Page = async ({
-  params,
-}: {
-  params: PageParams & { application: string }
+const Page = async (props: {
+  params: Promise<PageParams & { application: string }>
 }) => {
+  const params = await props.params
   const { locale, application } = params
   setRequestLocale(locale)
 
@@ -131,11 +130,9 @@ const Page = async ({
     return new Date(app.dateOfLaunch).getFullYear()
   }
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "apps/[application]",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -405,11 +402,10 @@ const Page = async ({
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string; application: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; application: string }>
 }) {
+  const params = await props.params
   const { locale, application } = params
 
   // Fetch apps data using the new data-layer function (already cached)

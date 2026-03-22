@@ -34,10 +34,10 @@ Unaweza kupata miongozo na zana muhimu kwa watafsiri wa ethereum.org, pamoja na 
 
 Ili kupata habari za hivi punde kuhusu maendeleo ya Mpango wa Utafsiri, unaweza kufuata [blogu ya Ethereum Foundation](https://blog.ethereum.org/):
 
-- [Sasisho la hatua muhimu za Oktoba 2021](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Sasisho la hatua muhimu za Desemba 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Sasisho la hatua muhimu za Julai 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Uzinduzi wa Mpango wa Utafsiri wa Agosti 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Sasisho la hatua muhimu za Oktoba 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Sasisho la hatua muhimu za Desemba 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Sasisho la hatua muhimu za Julai 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Uzinduzi wa Mpango wa Utafsiri wa Agosti 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Saa za kazi kwa watafsiri {#office-hours}
 

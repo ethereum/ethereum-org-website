@@ -90,7 +90,7 @@ Kwanza hebu tuzungumzie GraphQL, iliyobuniwa na kutekelezwa awali na Facebook. H
 
 ![GraphQL API dhidi ya REST API](./graphql.jpg)
 
-![](./graphql-query.gif)
+![Onyesho lililohuishwa la swali la GraphQL katika uwanja wa michezo wa Graph](./graphql-query.gif)
 
 Picha hizi mbili zinaonyesha kiini cha GraphQL. Kwa hoja ya kuulizia upande wa kulia tunaweza kufafanua hasa data tunayoitaka, kwa hivyo hapo tunapata kila kitu katika ombi moja na si zaidi ya kile tunachohitaji hasa. Seva ya GraphQL hushughulikia upataji wa data yote inayohitajika, kwa hivyo ni rahisi sana kwa upande wa mtumiaji wa frontend kutumia. [Haya ni maelezo mazuri](https://www.apollographql.com/blog/graphql-explained) ya jinsi seva inavyoshughulikia hoja ya kuulizia ikiwa una nia.
 

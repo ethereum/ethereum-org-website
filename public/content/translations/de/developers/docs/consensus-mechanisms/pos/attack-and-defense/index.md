@@ -89,7 +89,7 @@ Es gibt mehrere andere mögliche Upgrades für die Abspaltungs-Wahl-Regel, die i
 
 #### Langstreckenangriffe {#long-range-attacks}
 
-Es gibt auch eine Angriffsklasse, die spezifisch für Proof-of-Stake-Blockchains ist, bei der ein Validator, der am Genesis-Block beteiligt war, eine separate Abspaltung der Blockchain neben der ehrlichen aufrechterhält. Schließlich überzeugt dieser die Reihe ehrlicher Validator davon, viel später zu einem günstigen Zeitpunk zu dieser Abspaltung zu wechseln. Diese Art von Angriff ist bei Ethereum nicht möglich, da das Endgültigkeits-Gadget sicherstellt, dass sich alle Validatoren in regelmäßigen Abständen („Checkpoints“) über den Zustand der ehrlichen Chain einig sind. Dieser einfache Mechanismus neutralisiert Langstreckenangriffe, da Ethereum-Clients finalisierte Blöcke einfach nicht neu organisieren. Neue Nodes, die dem Netzwerk beitreten, tun dies, indem sie einen vertrauenswürdigen aktuellen Zustands-Hash finden (einen „[Checkpoint schwacher](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) Subjektivität“) und ihn als Pseudo-Genesis-Block verwenden, auf dem aufgebaut werden kann. Dadurch wird für einen neuen Node, der in das Netzwerk eintritt, ein „Vertrauens-Gateway“ geschaffen, bevor er damit beginnen kann, Informationen für sich selbst zu verifizieren.
+Es gibt auch eine Angriffsklasse, die spezifisch für Proof-of-Stake-Blockchains ist, bei der ein Validator, der am Genesis-Block beteiligt war, eine separate Abspaltung der Blockchain neben der ehrlichen aufrechterhält. Schließlich überzeugt dieser die Reihe ehrlicher Validator davon, viel später zu einem günstigen Zeitpunk zu dieser Abspaltung zu wechseln. Diese Art von Angriff ist bei Ethereum nicht möglich, da das Endgültigkeits-Gadget sicherstellt, dass sich alle Validatoren in regelmäßigen Abständen („Checkpoints“) über den Zustand der ehrlichen Chain einig sind. Dieser einfache Mechanismus neutralisiert Langstreckenangriffe, da Ethereum-Clients finalisierte Blöcke einfach nicht neu organisieren. Neue Nodes, die dem Netzwerk beitreten, tun dies, indem sie einen vertrauenswürdigen aktuellen Zustands-Hash finden (einen „[Checkpoint schwacher](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity) Subjektivität“) und ihn als Pseudo-Genesis-Block verwenden, auf dem aufgebaut werden kann. Dadurch wird für einen neuen Node, der in das Netzwerk eintritt, ein „Vertrauens-Gateway“ geschaffen, bevor er damit beginnen kann, Informationen für sich selbst zu verifizieren.
 
 #### Denial of Service {#denial-of-service}
 
@@ -154,7 +154,7 @@ Insgesamt ist das Risiko eines erfolgreichen Angriffs trotz dieser potenziellen 
 ## Weiterführende Informationen {#further-reading}
 
 - [Detailliertere Version dieser Seite](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik zur Abwicklungsendgültigkeit](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik zur Abwicklungsendgültigkeit](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [Artikel zu LMD GHOST](https://arxiv.org/abs/2003.03052)
 - [Artikel zu Casper-FGG](https://arxiv.org/abs/1710.09437)
 - [Artikel zu Gasper](https://arxiv.org/pdf/2003.03052.pdf)

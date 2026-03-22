@@ -262,5 +262,5 @@ else:
 ## 参考リンク {#further-reading}
 
 - [修正版マークル・パトリシア・トライ — イーサリアムはどのように状態を保存するか](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [イーサリアムにおけるマークル化](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [イーサリアムにおけるマークル化](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [イーサリアム・トライを理解する](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

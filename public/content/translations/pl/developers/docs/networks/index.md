@@ -114,7 +114,7 @@ Ephemery jest unikalną siecią testową, która resetuje się w pełni każdego
 Sieć testowa Holesky zostanie wycofana we wrześniu 2025 roku. Zamiast niego, stakerzy oraz dostawcy infrastruktury powinni używać Hoodi do testowania walidatorów.
 
 - [Ogłoszenie o wyłączeniu sieci testowej Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) – _blog EF, 1 września 2025_
-- [Aktualizacje sieci testowych Holesky i Hoodi](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) – _blog EF, 18 marca 2025_
+- [Aktualizacje sieci testowych Holesky i Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) – _blog EF, 18 marca 2025_
 
 ### Sieci testowe warstwy 2 {#layer-2-testnets}
 
@@ -158,7 +158,7 @@ Sieć testowa dla [Starknet](https://www.starknet.io).
 
 ##### Źródła
 
-- [Starkscan](https://sepolia.starkscan.co/)
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### Krany
 

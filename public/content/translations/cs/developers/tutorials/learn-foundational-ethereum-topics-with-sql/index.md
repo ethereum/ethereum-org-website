@@ -62,13 +62,13 @@ Tím získáte stejné informace, jaké jsou uvedeny na stránce transakcí na E
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Snímek obrazovky zobrazení průzkumníka transakcí Etherscan](./etherscan_view.png)
 
 [Stránka kontraktu EF na Blockscoutu.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Snímek obrazovky řídicího panelu dotazů Dune Analytics](./dune_view.png)
 
 Řídicí panel najdete [zde](https://dune.com/paulapivat/Learn-Ethereum). Kliknutím na tabulku zobrazíte dotaz (viz také výše).
 
@@ -146,7 +146,7 @@ ORDER BY block_time DESC`
 
 Zde je výstup SQL na Dune:
 
-![](./list_of_txn.png)
+![Snímek obrazovky se seznamem transakcí Ethereum](./list_of_txn.png)
 
 Tento jediný blok přidaný do řetězce mění stav Ethereum Virtual Machine ([EVM](/developers/docs/evm/)). Najednou se ověřují desítky, někdy i stovky transakcí. V tomto konkrétním případě bylo zahrnuto 222 transakcí.
 
@@ -165,7 +165,7 @@ FROM temp_table
 
 Pro blok 12396854 bylo z celkových 222 transakcí úspěšně ověřeno 204:
 
-![](./successful_txn.png)
+![Snímek obrazovky úspěšné transakce Ethereum](./successful_txn.png)
 
 Požadavky na transakce se objevují desítkykrát za sekundu, ale bloky jsou zapisovány přibližně jednou za 15 sekund ([zdroj](/developers/docs/blocks/)).
 
@@ -173,11 +173,11 @@ Abychom viděli, že se jeden blok vyprodukuje přibližně každých 15 sekund,
 
 Graf pro vyprodukované bloky Etherea za den (2016 - současnost) je:
 
-![](./daily_blocks.png)
+![Graf zobrazující denní produkci bloku Ethereum](./daily_blocks.png)
 
 Průměrný počet denně vyprodukovaných bloků za toto období je ~5 874:
 
-![](./avg_daily_blocks.png)
+![Graf zobrazující denní produkci bloku Ethereum](./avg_daily_blocks.png)
 
 Dotazy jsou:
 
@@ -214,7 +214,7 @@ Bloky mají omezenou velikost. Maximální velikost bloku je dynamická a liší
 
 Jeden ze způsobů, jak si představit palivový limit bloku, je vnímat ho jako **nabídku** dostupného prostoru v bloku, do kterého se dávkují transakce. Palivový limit bloku lze dotazovat a vizualizovat od roku 2016 do současnosti:
 
-![](./avg_gas_limit.png)
+![Graf zobrazující průměrný limit plynu Ethereum v průběhu času](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -227,7 +227,7 @@ OFFSET 1
 
 Dále je tu skutečné množství paliva použitého denně k placení za výpočty prováděné v řetězci Ethereum (tj. odeslání transakce, volání chytrého kontraktu, ražba NFT). Toto je **poptávka** po dostupném prostoru v bloku Etherea:
 
-![](./daily_gas_used.png)
+![Graf zobrazující denní spotřebu plynu Ethereum](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -246,7 +246,7 @@ Proto můžeme ceny paliva chápat jako funkci poptávky po prostoru v bloku Eth
 
 Nakonec bychom se mohli chtít dotázat na průměrné denní ceny paliva pro řetězec Ethereum, nicméně to by vedlo k obzvláště dlouhé době dotazu, takže náš dotaz omezíme na průměrné množství paliva zaplaceného za transakci Nadací Ethereum.
 
-![](./ef_daily_gas.png)
+![Graf ukazující denní spotřebu plynu nadace Ethereum](./ef_daily_gas.png)
 
 Můžeme vidět ceny paliva zaplacené za všechny transakce provedené na adresu Nadace Ethereum v průběhu let. Zde je dotaz:
 

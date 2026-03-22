@@ -262,5 +262,5 @@ else:
 ## مزید مطالعہ {#further-reading}
 
 - [موڈیفائیڈ مرکل پیٹریشیا ٹرائی — ایتھیریم اسٹیٹ کو کیسے بچاتا ہے](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [ایتھیریم میں مرکلنگ](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [ایتھیریم میں مرکلنگ](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [ایتھیریم ٹرائی کو سمجھنا](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

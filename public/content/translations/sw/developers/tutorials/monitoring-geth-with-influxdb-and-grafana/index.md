@@ -117,35 +117,35 @@ sudo systemctl start grafana-server
 Ukishafanikiwa kuendesha Grafana, inapaswa kupatikana kwenye `localhost:3000`.
 Tumia kivinjari chako unachopendelea kufikia njia hii, kisha ingia na vitambulisho vya chaguo-msingi (mtumiaji: `admin` na nenosiri: `admin`). Unapoombwa, badilisha nenosiri la chaguo-msingi na uhifadhi.
 
-![](./grafana1.png)
+![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 1)](./grafana1.png)
 
 Utaelekezwa kwenye ukurasa wa nyumbani wa Grafana. Kwanza, sanidi data yako chanzo. Bofya kwenye ikoni ya usanidi kwenye upau wa kushoto na uchague "Vyanzo vya data".
 
-![](./grafana2.png)
+![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 2)](./grafana2.png)
 
 Bado hakuna vyanzo vya data vilivyoundwa, bofya kwenye "Ongeza chanzo cha data" ili kufafanua kimoja.
 
-![](./grafana3.png)
+![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (jopo la 3)](./grafana3.png)
 
 Kwa usanidi huu, chagua "InfluxDB" na uendelee.
 
-![](./grafana4.png)
+![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 4)](./grafana4.png)
 
 Usanidi wa chanzo cha data ni rahisi sana ikiwa unaendesha zana kwenye mashine moja. Unahitaji kuweka anwani ya InfluxDB na maelezo ya kufikia hifadhidata. Rejelea picha hapa chini.
 
-![](./grafana5.png)
+![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 5)](./grafana5.png)
 
 Ikiwa kila kitu kimekamilika na InfluxDB inapatikana, bofya kwenye "Hifadhi na ujaribu" na usubiri uthibitisho utokee.
 
-![](./grafana6.png)
+![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 6)](./grafana6.png)
 
 Sasa Grafana imesanidiwa kusoma data kutoka InfluxDB. Sasa unahitaji kuunda dashibodi ambayo itatafsiri na kuionyesha. Sifa za dashibodi zimesimbwa katika faili za JSON ambazo zinaweza kuundwa na mtu yeyote na kuingizwa kwa urahisi. Kwenye upau wa kushoto, bofya kwenye "Unda na Ingiza".
 
-![](./grafana7.png)
+![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 7)](./grafana7.png)
 
 Kwa dashibodi ya ufuatiliaji ya Geth, nakili ID ya [dashibodi hii](https://grafana.com/grafana/dashboards/13877/) na uibandike kwenye "Ukurasa wa kuingiza" katika Grafana. Baada ya kuhifadhi dashibodi, inapaswa kuonekana kama hivi:
 
-![](./grafana8.png)
+![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (jopo la 8)](./grafana8.png)
 
 Unaweza kurekebisha dashibodi zako. Kila paneli inaweza kuhaririwa, kuhamishwa, kuondolewa au kuongezwa. Unaweza kubadilisha usanidi wako. Ni juu yako! Ili kujifunza zaidi kuhusu jinsi dashibodi zinavyofanya kazi, rejelea [nyaraka za Grafana](https://grafana.com/docs/grafana/latest/dashboards/).
 Unaweza pia kupendezwa na [Kuarifu](https://grafana.com/docs/grafana/latest/alerting/). Hii inakuwezesha kuweka arifa za tahadhari kwa wakati vipimo vinafikia thamani fulani. Njia mbalimbali za mawasiliano zinatumika.

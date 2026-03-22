@@ -102,7 +102,6 @@ DeSci topluluğuna katılın ve gelişmelerden haberdar olun!
 - [OceanDAO: Veri ile ilgili bilimler için DAO tarafından yönetilen fonlama](https://oceanprotocol.com/)
 - [Opscientia: açık merkeziyetsiz bilim iş akışları](https://opsci.io/research/)
 - [Bio.xyz: biyoteknoloji DAO'nuz veya desci projeniz için fon alın](https://www.bio.xyz/)
-- [Fleming Protokolü: iş birliğine dayalı biyomedikal keşifleri destekleyen açık kaynaklı veri ekonomisi](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: merkeziyetsiz bilimsel güvenilirliği etkinleştirme](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

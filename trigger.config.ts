@@ -36,18 +36,10 @@ export default defineConfig({
       debug: environment === "development",
       environment,
       enabled: environment === "production",
+      initialScope: { tags: { module: "data-layer" } },
       // Skip OpenTelemetry setup since Trigger.dev already initializes it
       // This prevents "Attempted duplicate registration of API" errors
       skipOpenTelemetrySetup: true,
     } as Parameters<typeof Sentry.init>[0])
-  },
-  // Automatically capture and report task failures to Sentry
-  onFailure: async ({ payload, error, ctx }) => {
-    Sentry.captureException(error, {
-      extra: {
-        payload,
-        ctx,
-      },
-    })
   },
 })

@@ -10,7 +10,7 @@ lang: zh
 
 以下图表显示了两种以太坊客户端之间的关系。 这两种客户端与其各自的点对点（对等）网络连接。 分离对等网络是有必要的，因为执行客户端通过它们的对等网络广播交易，确保它们能够管理自己的本地交易池，同时共识客户端通过它们的对等网络广播区块，保证共识和链增长。
 
-![](node-architecture-text-background.png)
+![显示执行层和共识层的以太坊节点架构图](node-architecture-text-background.png)
 
 _执行客户端有多种选择，包括 Erigon、Nethermind 和 Besu_。
 

@@ -117,35 +117,35 @@ sudo systemctl start grafana-server
 Gdy Grafana jest uruchomiona, powinna być dostępna pod adresem `localhost:3000`.
 Użyj preferowanej przeglądarki, aby uzyskać dostęp do tej ścieżki, a następnie zaloguj się przy użyciu domyślnych poświadczeń (użytkownik: `admin` i hasło: `admin`). Gdy pojawi się monit, zmień domyślne hasło i zapisz.
 
-![](./grafana1.png)
+![Zrzut ekranu panelu Grafana do monitorowania Geth (panel 1)](./grafana1.png)
 
 Zostaniesz przekierowany na stronę główną Grafany. Najpierw skonfiguruj dane źródłowe. Kliknij ikonę konfiguracji na lewym pasku i wybierz „Źródła danych”.
 
-![](./grafana2.png)
+![Zrzut ekranu panelu Grafana do monitorowania Geth (panel 2)](./grafana2.png)
 
 Nie ma jeszcze utworzonych żadnych źródeł danych, kliknij „Dodaj źródło danych”, aby zdefiniować jedno.
 
-![](./grafana3.png)
+![Zrzut ekranu dashboardu Grafana do monitorowania Geth (panel 3)](./grafana3.png)
 
 W tej konfiguracji wybierz „InfluxDB” i kontynuuj.
 
-![](./grafana4.png)
+![Zrzut ekranu dashboardu Grafana do monitorowania Geth (panel 4)](./grafana4.png)
 
 Konfiguracja źródła danych jest dość prosta, jeśli uruchamiasz narzędzia na tej samej maszynie. Musisz ustawić adres InfluxDB i szczegóły dostępu do bazy danych. Zapoznaj się z poniższym obrazkiem.
 
-![](./grafana5.png)
+![Zrzut ekranu dashboardu Grafana do monitorowania Geth (panel 5)](./grafana5.png)
 
 Jeśli wszystko jest gotowe, a InfluxDB jest osiągalny, kliknij „Zapisz i przetestuj” i poczekaj na pojawienie się potwierdzenia.
 
-![](./grafana6.png)
+![Zrzut ekranu dashboardu Grafana do monitorowania Geth (panel 6)](./grafana6.png)
 
 Grafana jest teraz skonfigurowana do odczytu danych z InfluxDB. Teraz musisz utworzyć pulpit nawigacyjny, który będzie go interpretował i wyświetlał. Właściwości pulpitów nawigacyjnych są zakodowane w plikach JSON, które mogą być tworzone przez każdego i łatwo importowane. Na lewym pasku kliknij „Utwórz i importuj”.
 
-![](./grafana7.png)
+![Zrzut ekranu dashboardu Grafana do monitorowania Geth (panel 7)](./grafana7.png)
 
 W przypadku pulpitu nawigacyjnego do monitorowania Geth skopiuj identyfikator [tego pulpitu](https://grafana.com/grafana/dashboards/13877/) i wklej go na stronie „Importuj” w Grafanie. Po zapisaniu pulpitu nawigacyjnego powinien on wyglądać tak:
 
-![](./grafana8.png)
+![Zrzut ekranu dashboardu Grafana do monitorowania Geth (panel 8)](./grafana8.png)
 
 Możesz modyfikować swoje pulpity nawigacyjne. Każdy panel można edytować, przesuwać, usuwać lub dodawać. Możesz zmieniać swoje konfiguracje. To zależy od Ciebie! Aby dowiedzieć się więcej o działaniu pulpitów nawigacyjnych, zapoznaj się z [dokumentacją Grafany](https://grafana.com/docs/grafana/latest/dashboards/).
 Może Cię również zainteresować [Alerting](https://grafana.com/docs/grafana/latest/alerting/). Umożliwia to skonfigurowanie powiadomień o alertach, gdy metryki osiągną określone wartości. Obsługiwane są różne kanały komunikacji.

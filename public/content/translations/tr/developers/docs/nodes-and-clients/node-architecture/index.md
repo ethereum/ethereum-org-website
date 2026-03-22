@@ -10,7 +10,7 @@ Ethereum [iş ispatı](/developers/docs/consensus-mechanisms/pow/) kullanırken,
 
 Aşağıdaki şema iki Ethereum istemcisi arasındaki ilişkiyi göstermekte. İki istemci kendilerine ait ilgili eşler arası (P2P) ağlarına bağlanır. Yürütüm istemcileri P2P ağı üzerinden işlem "dedikodu"su yaparken, ayrı P2P ağlarına ihtiyaç duyulur ve bu yerel işlem havuzlarını yönetmelerine olanak sağlar. Bu süreçte de fikir birliği istemcileri P2P ağı üzerinden blok dedikodularını yaparlar ve bu da mutabakatın ve zincir büyümesinin önünü açar.
 
-![](node-architecture-text-background.png)
+![Yürütme ve fikir birliği katmanlarını gösteren Ethereum düğüm mimarisi şeması](node-architecture-text-background.png)
 
 _Yürütüm istemcisi için Erigon, Nethermind ve Besu dahil olmak üzere çeşitli seçenekler vardır_.
 

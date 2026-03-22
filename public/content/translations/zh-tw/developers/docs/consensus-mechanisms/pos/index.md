@@ -37,7 +37,7 @@ lang: zh-tw
 
 交易在分佈式網路中具有「最終確定性」是指，該交易是區塊的一部分，而且除非銷毀大量以太幣，否則便無法變更。 在權益證明以太坊上，最終確定性是透過「檢查點」區塊來管理的。 每個時期中的第一個區塊便是檢查點。 驗證者為其認為有效的「檢查點對」投票。 如果一對檢查點獲得了質押以太幣總數中三分之二以上的投票，那麼這對檢查點將被升級。 這兩個（目標）中較新的一個會變成「合理化」狀態。 較舊的一個檢查點已經是合理化狀態，因為它是上一個時期中的「目標」。 現在，這個檢查點已升級為「最終確定」狀態。 升級檢查點的過程由 **[Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437)** 處理。 Casper-FFG 是一種用於共識的區塊最終性工具。 區塊一旦最終確認，除非大多數質押者遭到罰沒，否則無法還原或更改，這使其在經濟上不可行。
 
-要撤銷最終確定的區塊，攻擊者將承擔至少相當於質押以太幣總數三分之一的損失。 確切原因在這篇 [以太坊基金會部落格文章](https://blog.ethereum.org/2016/05/09/on-settlement-finality/) 中有說明。 由於最終確定性需要獲得三分之二的多數投票，攻擊者可以用質押以太幣總數的三分之一投票來阻止網路實現最終確定性。 有一種機制可以防禦這種情況：[閒置懲罰](https://eth2book.info/bellatrix/part2/incentives/inactivity)。 如果鏈未能在四個時期內最終確定，此機制就會啟動。 怠惰逐減懲罰會逐漸消耗驗證者投票反對大多數驗證者的質押以太幣，使大多數驗證者重新獲得三分之二多數投票，以最終確定鏈。
+要撤銷最終確定的區塊，攻擊者將承擔至少相當於質押以太幣總數三分之一的損失。 確切原因在這篇 [以太坊基金會部落格文章](https://blog.ethereum.org/2016/05/09/on-settlement-finality) 中有說明。 由於最終確定性需要獲得三分之二的多數投票，攻擊者可以用質押以太幣總數的三分之一投票來阻止網路實現最終確定性。 有一種機制可以防禦這種情況：[閒置懲罰](https://eth2book.info/bellatrix/part2/incentives/inactivity)。 如果鏈未能在四個時期內最終確定，此機制就會啟動。 怠惰逐減懲罰會逐漸消耗驗證者投票反對大多數驗證者的質押以太幣，使大多數驗證者重新獲得三分之二多數投票，以最終確定鏈。
 
 ## 加密經濟安全性 {#crypto-economic-security}
 
@@ -88,7 +88,7 @@ lang: zh-tw
 - [什麼是權益證明](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [權益證明是什麼及其重要性](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
 - [為什麼選擇權益證明 (2020 年 11 月)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
-- [權益證明：我如何學會愛上弱主觀性](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
+- [權益證明：我如何學會愛上弱主觀性](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity) _Vitalik Buterin_
 - [權益證明以太坊的攻擊與防禦](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [權益證明設計哲學](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 - [影片：Vitalik Buterin 向 Lex Fridman 解釋權益證明](https://www.youtube.com/watch?v=3yrqBG-7EVE)

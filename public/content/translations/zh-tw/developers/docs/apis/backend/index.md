@@ -74,7 +74,6 @@ lang: zh-tw
 **NOWNodes - _全節點和區塊瀏覽器。_**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [文件](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
 **QuickNode -** **_區塊鏈基礎設施即服務。_**
 
@@ -111,7 +110,7 @@ lang: zh-tw
 
 **Python Tooling -** **_透過 Python 進行以太坊互動的各種程式庫。_**
 
-- [py.ethereum.org](https://python.ethereum.org/)
+- [py.ethereum.org](https://snakecharmers.ethereum.org)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py 聊天室](https://gitter.im/ethereum/web3.py)
 

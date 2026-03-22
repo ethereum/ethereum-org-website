@@ -132,7 +132,6 @@ Im Folgenden finden Sie einige Projekte, mit denen Sie Clients mit wenigen Klick
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) – Schnellster und einfachster Weg, einen Full Node einzurichten. Einzeiliges Setup-Tool und Knotenverwaltung TUI. Kostenlos. Open Source. Öffentliche Güter für Ethereum durch Solo-Staker. ARM64- und AMD64-Unterstützung.
 - [eth-docker](https://eth-docker.net/) – Automatisierte Einrichtung mit Docker, die auf einfaches und sicheres Staking ausgerichtet ist, grundlegende Terminal- und Docker-Kenntnisse erfordert und für etwas fortgeschrittenere Benutzer empfohlen wird.
 - [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) – Launcher zur Installation von Clients auf einem Remote-Server über eine SSH-Verbindung mit einer GUI-Einrichtungsanleitung, einem Kontrollzentrum und vielen anderen Funktionen.
-- [NiceNode](https://www.nicenode.xyz/) – Ein Launcher mit einer unkomplizierten Benutzererfahrung, um einen Node auf Ihrem Computer zu betreiben. Wählen Sie einfach Clients aus und starten Sie sie mit ein paar Klicks. Noch in der Entwicklung.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) – Node-Setup-Tool, das automatisch eine Docker-Konfiguration mit einem CLI-Assistenten generiert. Geschrieben in Go von Nethermind.
 
 ### Manuelles Einrichten der Clients {#manual-setup}

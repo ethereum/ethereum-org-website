@@ -35,7 +35,7 @@ incomplete: true
 ## मध्यम स्तरावरील लेख {#intermediate-articles}
 
 - [web3.py चे मित्र: Ape ची ओळख](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [पायथॉन प्रोग्रामर्ससाठी Dapp विकास](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [पायथॉन प्रोग्रामर्ससाठी Dapp विकास](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [पायथॉन इथेरियम इंटरफेस तयार करणे: भाग 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [पायथॉनमधील इथेरियम स्मार्ट कॉन्ट्रॅक्ट्स: एक सर्वसमावेशक(अंदाजे) मार्गदर्शक](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -87,7 +87,7 @@ incomplete: true
 - [Curve](https://www.curve.finance/) आणि [Curve स्मार्ट कॉन्ट्रॅक्ट्स रिपॉझिटरी](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) आणि [Brownie टूलचेन वापरणारे स्मार्ट कॉन्ट्रॅक्ट्स](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) [त्यांच्या वेस्टिंग कॉन्ट्रॅक्ट्सच्या व्यवस्थापन आणि तैनातीमध्ये पायथॉन](https://github.com/sushiswap/sushi-vesting-protocols) वापरते
-- [Alpha Finance](https://alphafinance.io/), जे Alpha Homora मुळे प्रसिद्ध आहे, [स्मार्ट कॉन्ट्रॅक्ट्सची चाचणी आणि तैनातीसाठी Brownie](https://github.com/AlphaFinanceLab/alpha-staking-contract) वापरते
+- [Alpha Venture DAO](https://alphaventuredao.io/), जे Alpha Homora मुळे प्रसिद्ध आहे, [स्मार्ट कॉन्ट्रॅक्ट्सची चाचणी आणि तैनातीसाठी Brownie](https://github.com/AlphaFinanceLab/alpha-staking-contract) वापरते
 
 ## पायथॉन समुदाय चर्चा {#python-community-contributors}
 

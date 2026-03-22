@@ -102,7 +102,6 @@ Gundua miradi na ujiunge na jumuiya ya DeSci.
 - [OceanDAO: ufadhili unaosimamiwa na DAO kwa ajili ya sayansi inayohusiana na data](https://oceanprotocol.com/)
 - [Opscientia: mtiririko wa kazi wazi wa sayansi iliyogatuliwa](https://opsci.io/research/)
 - [Bio.xyz: pata ufadhili kwa mradi wako wa biotech DAO au desci](https://www.bio.xyz/)
-- [Fleming Protocol: uchumi wa data huria unaochochea ugunduzi wa ushirikiano wa kibayomedikali](http://flemingprotocol.io/)
 - [Taasisi ya Active Inference](https://www.activeinference.org/)
 - [IdeaMarkets: kuwezesha uaminifu wa kisayansi uliogatuliwa](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

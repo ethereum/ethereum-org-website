@@ -162,5 +162,5 @@ ZK-रोलअप्सप्रमाणे, व्हेलिडियम्
 - [व्हेलिडियम आणि लेअर 2 टू-बाय-टू — अंक क्र. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZK-रोलअप्स वि. व्हेलिडियम](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [व्होलिशन आणि उदयोन्मुख डेटा उपलब्धता स्पेक्ट्रम](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [रोलअप्स, व्हेलिडियम्स, आणि व्होलिशन्स: सर्वात लोकप्रिय इथेरियम स्केलिंग सोल्यूशन्सबद्दल जाणून घ्या](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
+- [रोलअप्स, व्हेलिडियम्स, आणि व्होलिशन्स: सर्वात लोकप्रिय इथेरियम स्केलिंग सोल्यूशन्सबद्दल जाणून घ्या](https://medium.com/coinmonks/rollups-vs-validiums-vs-volitions-d76300170f4a)
 - [इथेरियम रोलअप्ससाठी व्यावहारिक मार्गदर्शक](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

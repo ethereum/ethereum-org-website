@@ -255,7 +255,7 @@ Mehrere Projekte bieten Implementierungen von Zustandskanälen, die Sie in Ihre 
 
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12. Februar 2018_
 - [State Channels – eine Erklärung](https://www.jeffcoleman.ca/state-channels/) _6. Nov. 2015 – Jeff Coleman_
-- [Grundlagen von State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Grundlagen von State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [Blockchain State Channels: Ein Stand der Technik](https://ieeexplore.ieee.org/document/9627997)
 
 _Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

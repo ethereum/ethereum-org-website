@@ -402,6 +402,7 @@ export type Commit = {
       email: string
       date: string
     }
+    message: string
   }
   author: {
     avatar_url: string
@@ -427,8 +428,18 @@ export type FileContributor = {
   date: string
 }
 
-type FilePath = string
-export type CommitHistory = Record<FilePath, FileContributor[]>
+/**
+ * GitHub contributors data stored in the data-layer.
+ * Keyed by file path, contains list of contributors for each file.
+ */
+export type GitHubContributorsData = {
+  /** Content files: slug (e.g., "eth", "wallets/find-wallet") → contributors */
+  content: Record<string, FileContributor[]>
+  /** App pages: pagePath (e.g., "staking", "developers") → contributors */
+  appPages: Record<string, FileContributor[]>
+  /** ISO timestamp when data was generated */
+  generatedAt: string
+}
 
 /**
  * Table of contents
@@ -493,7 +504,10 @@ export type CommonHeroProps<
    * The hero can render no buttons or up to and no more than two.
    * Can accept either button prop objects or React elements directly.
    */
-  buttons?: [HeroButtonProps | ReactElement, (HeroButtonProps | ReactElement)?]
+  buttons?: [
+    HeroButtonProps | ReactElement<unknown>,
+    (HeroButtonProps | ReactElement<unknown>)?,
+  ]
   /**
    * The primary title of the page
    */
@@ -510,24 +524,6 @@ export type CommonHeroProps<
    * Optional CSS class name(s) to apply to the hero component root for styling and layout customization.
    */
   className?: string
-}
-
-// Learning Tools
-
-export interface LearningTool {
-  name: string
-  description: string
-  url: string
-  image: StaticImageData
-  alt: string
-  background: string
-  subjects: Array<string>
-  locales?: Array<Lang>
-  priceType?: string
-}
-
-export interface LearningToolsCardGridProps {
-  products: Array<LearningTool>
 }
 
 // Staking stats data fetching
@@ -588,8 +584,8 @@ export type EtherscanTxCountResponse = {
 }
 
 export type DefiLlamaTVLResponse = {
-  date: string
-  totalLiquidityUSD: number
+  date: number
+  tvl: number
 }[]
 
 export type MetricReturnData = ValueOrError<number>
@@ -865,7 +861,7 @@ type FilterInput = (
   itemIndex: number,
   state: FilterInputState,
   updateFilterState: UpdateFilterState
-) => ReactElement
+) => ReactElement<unknown>
 
 type FilterOptionItem = {
   filterKey: string
@@ -882,7 +878,7 @@ type FilterOptionInput = (
   optionIndex: number,
   state: FilterInputState,
   updateFilterState: UpdateFilterState
-) => ReactElement
+) => ReactElement<unknown>
 
 type UpdateFilterState = (
   filterIndex: number,
@@ -1112,7 +1108,7 @@ export type EventCardProps = {
 
 export type PageWithContributorsProps = {
   contributors: FileContributor[]
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp?: string
   locale?: Lang
 }
 

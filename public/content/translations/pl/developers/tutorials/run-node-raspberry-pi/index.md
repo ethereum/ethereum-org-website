@@ -70,7 +70,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # Wynikowy hasz powinien być: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Zwróć uwagę, że obrazy dla płyt Rock 5B i Odroid M1 są dostępne na stronie [pobierania](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) Ethereum-on-Arm.
+Zwróć uwagę, że obrazy dla płyt Rock 5B i Odroid M1 są dostępne na stronie [pobierania](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) Ethereum-on-Arm.
 
 ## Flashowanie MicroSD {#flashing-the-microsd}
 
@@ -164,7 +164,7 @@ Gratulacje, masz teraz pełny węzeł Ethereum i walidatora działającego na Ra
 
 ## Więcej szczegółów {#more-details}
 
-Ta strona zawiera przegląd sposobu konfiguracji węzła i walidatora Geth-Lighthouse przy użyciu Raspberry Pi. Bardziej szczegółowe instrukcje są dostępne na [stronie internetowej Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html).
+Ta strona zawiera przegląd sposobu konfiguracji węzła i walidatora Geth-Lighthouse przy użyciu Raspberry Pi. Bardziej szczegółowe instrukcje są dostępne na [stronie internetowej Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/).
 
 ## Twoja opinia jest mile widziana {#feedback-appreciated}
 
@@ -183,7 +183,7 @@ Zapoznaj się ze szczegółami tego samouczka, spróbuj uruchomić go na sieciac
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

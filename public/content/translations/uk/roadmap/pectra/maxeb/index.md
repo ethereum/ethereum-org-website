@@ -113,7 +113,7 @@ MaxEB дозволяє валідатору надсилати весь свій
 
 ### Що підписується? {#what-is-signed}
 
-Використовується відокремлений за доменом [корінь для підпису](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#compute_signing_root) об'єкта `ConsolidationRequest`.
+Використовується відокремлений за доменом [корінь для підпису](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md#compute_signing_root) об'єкта `ConsolidationRequest`.
 
 - **Домен:** `DOMAIN_CONSOLIDATION_REQUEST`
 - **Поля кореня для підпису:**
@@ -197,7 +197,7 @@ MaxEB дозволяє валідатору надсилати весь свій
 
 ## Ресурси {#resources}
 
-- [Специфікації консенсусу Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md): це «найправдивіша» версія, на яку ви повинні покладатися. Якщо є сумніви, читайте специфікації
+- [Специфікації консенсусу Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md): це «найправдивіша» версія, на яку ви повинні покладатися. Якщо є сумніви, читайте специфікації
 - Не всім зручно розбиратися в коді, тому [цей maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) може допомогти інтерпретувати специфікації. _Відмова від відповідальності: слід покладатися на специфікації як на істину, а не на ШІ, оскільки ШІ може неправильно інтерпретувати інформацію або вигадувати відповіді_
 - [pectrified.com](https://pectrified.com/): переглядайте стан консолідацій, депозитів і час очікування в черзі
 - [Ethereal](https://github.com/wealdtech/ethereal): створений спільнотою інструмент командного рядка (CLI) для керування поширеними завданнями валідатора

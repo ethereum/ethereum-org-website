@@ -255,7 +255,7 @@ Wiele projektów dostarcza implementacje kanałów uzyskiwania informacji, któr
 
 - [Zrozumieć rozwiązania skalujące warstwy 2 Ethereum: kanały stanu, Plasma i Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 lutego 2018_
 - [Kanały stanu — wyjaśnienie](https://www.jeffcoleman.ca/state-channels/) _6 listopada 2015 – Jeff Coleman_
-- [Podstawy kanałów stanu](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Podstawy kanałów stanu](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [Kanały stanu blockchain: stan wiedzy](https://ieeexplore.ieee.org/document/9627997)
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Edytuj tę stronę i dodaj je!_

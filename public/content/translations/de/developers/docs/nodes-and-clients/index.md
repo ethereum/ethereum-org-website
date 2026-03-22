@@ -294,7 +294,7 @@ Der Light-Client-Modus lädt alle Block-Header und Blockdaten herunter und prüf
 
 Die „optimistische“ Synchronisierung ist eine Synchronisierungsstrategie nach der Zusammenführung, die als Opt-in und rückwärtskompatibel konzipiert ist und es Ausführungsknoten ermöglicht, sich über etablierte Methoden zu synchronisieren. Die Ausführungs-Engine kann Beacon-Blöcke _optimistisch_ importieren, ohne sie vollständig zu verifizieren, den neuesten Head finden und dann mit der Synchronisierung der Chain mit den oben genannten Methoden beginnen. Nachdem der Ausführungsclient aufgeholt hat, informiert er den Konsensclient über die Gültigkeit der Transaktionen auf der Beacon Chain.
 
-[Mehr zur optimistischen Synchronisierung](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[Mehr zur optimistischen Synchronisierung](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### Checkpoint-Synchronisierung {#checkpoint-sync}
 

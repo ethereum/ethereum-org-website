@@ -272,7 +272,6 @@ Oto lista najbardziej popularnych dostawców węzłów Ethereum, jak chcesz, mo�
     - Zacznij za darmo
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Dokumentacja](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Funkcje
     - Dostęp do węzłów na ponad 50 blockchainach
     - Darmowy klucz API
@@ -283,11 +282,10 @@ Oto lista najbardziej popularnych dostawców węzłów Ethereum, jak chcesz, mo�
     - Węzły współdzielone, archiwalne, zapasowe i dedykowane
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Dokumentacja](https://docs.pokt.network/home/)
+  - [Dokumentacja](https://docs.pokt.network/)
   - Funkcje
     - Zdecentralizowany protokół RPC i rynek
     - 1M Zapytań Dziennie Za Darmo (na endpoint, maks 2)
-    - [Publiczne punkty końcowe](https://docs.pokt.network/developers/public-endpoints)
     - Program Pre-Stake+ (jeśli potrzebujesz więcej niż 1M zapytań dziennie)
     - 15+ Wspieranych Blockchainów
     - 6400+ Węzłów zarabiających POKT za serwowanie danych

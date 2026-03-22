@@ -62,13 +62,13 @@ FROM temp_table
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Знімок екрана перегляду транзакцій Etherscan](./etherscan_view.png)
 
 [Сторінка контракту EF на Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Знімок екрана панелі запитів Dune Analytics](./dune_view.png)
 
 Ви можете знайти інформаційну панель [тут](https://dune.com/paulapivat/Learn-Ethereum). Натисніть на таблицю, щоб переглянути запит (також див. вище).
 

@@ -19,7 +19,7 @@ buttons:
 
 La red de Ethereum protege miles de millones de dólares en valor las 24 horas del día, los 365 días del año. ¿Cómo?
 
-Personas de todo el mundo bloquean (o "hacen staking" de) [ether (ETH)](/eth/) en contratos inteligentes para ejecutar el software que procesa las transacciones de Ethereum y protege la red de Ethereum. A cambio, son recompensados con más ETH.
+Personas de todo el mundo bloquean (o "hacen staking" de) [ether (ETH)](/what-is-ether/) en contratos inteligentes para ejecutar el software que procesa las transacciones de Ethereum y protege la red de Ethereum. A cambio, son recompensados con más ETH.
 
 Restaking es una tecnología creada para que los [stakers](/staking/) extiendan esta seguridad a otros servicios, aplicaciones o redes. A cambio, obtienen recompensas adicionales de restaking. Sin embargo, también exponen su ETH en staking a un mayor riesgo.
 
@@ -178,7 +178,7 @@ Aunque los AVS ofrecen diferentes tasas, los Tokens Líquidos de Restaking (LRT)
 
 ## Lecturas adicionales {#further-reading}
 
-1. [ethereum.org - Guía de stake de ETH](https://ethereum.org/en/staking/)
+1. [ethereum.org - Guía de stake de ETH](/staking/)
 2. [Ledger Academy - ¿Qué es el restaking en Ethereum?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer: Protocolo de restaking descentralizado de Ethereum explicado](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin - No sobrecargues el consenso de Ethereum](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

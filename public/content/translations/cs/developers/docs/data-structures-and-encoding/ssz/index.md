@@ -81,7 +81,7 @@ Toto je stále zjednodušení - celá čísla a nuly ve schématech výše by ve
 
 Takže skutečné hodnoty pro typy s proměnlivou délkou jsou uloženy v zásobníku na konci serializovaného objektu, přičemž jejich offsety jsou uloženy na správných pozicích v uspořádaném seznamu polí.
 
-Existují také některé speciální případy, které vyžadují specifické zacházení, například typ `BitList`, který vyžaduje přidání délkového limitu během serializace a jeho odstranění během deserializace. Veškeré podrobnosti jsou k dispozici ve [specifikaci SSZ](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md).
+Existují také některé speciální případy, které vyžadují specifické zacházení, například typ `BitList`, který vyžaduje přidání délkového limitu během serializace a jeho odstranění během deserializace. Veškeré podrobnosti jsou k dispozici ve [specifikaci SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
 ### Deserializace {#deserialization}
 
@@ -126,7 +126,7 @@ Toto zobrazení poskytuje index uzlu pro každý datový prvek v Merkletree.
 
 ## Multiproofy {#multiproofs}
 
-Poskytnutí seznamu zobecněných indexů představujících konkrétní prvek nám umožňuje jej ověřit vůči hašovému kořenovému stromu. Tento kořen je naším přijatým zobrazením reality. Jakákoli data, která nám jsou poskytnuta, mohou být ověřena vůči této realitě vložením do správného místa v Merkle tree (určeného jeho zobecněným indexem) a pozorováním, zda kořen zůstává konstantní. Ve specifikaci [zde](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs) jsou funkce, které ukazují, jak vypočítat minimální sadu uzlů potřebnou k ověření obsahu konkrétní sady zobecněných indexů.
+Poskytnutí seznamu zobecněných indexů představujících konkrétní prvek nám umožňuje jej ověřit vůči hašovému kořenovému stromu. Tento kořen je naším přijatým zobrazením reality. Jakákoli data, která nám jsou poskytnuta, mohou být ověřena vůči této realitě vložením do správného místa v Merkle tree (určeného jeho zobecněným indexem) a pozorováním, zda kořen zůstává konstantní. Ve specifikaci [zde](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) jsou funkce, které ukazují, jak vypočítat minimální sadu uzlů potřebnou k ověření obsahu konkrétní sady zobecněných indexů.
 
 Například k ověření dat na indexu 9 v níže uvedeném stromu potřebujeme haš dat na indexech 8, 9, 5, 3, 1.
 Haš (8,9) by měl být roven haši (4), který se hašuje s 5 a vytváří 2, který se hašuje s 3 a vytváří kořen stromu 1. Pokud by byla poskytnuta nesprávná data pro 9, kořen by se změnil – to bychom zjistili a ověření větve by selhalo.

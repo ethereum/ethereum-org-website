@@ -1,7 +1,7 @@
 import { Landmark, SquareCode, User } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { Lang, ToCItem } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
@@ -33,20 +33,17 @@ import developersHubHero from "@/public/images/heroes/developers-hub-hero.png"
 import impactTransparent from "@/public/images/impact_transparent.png"
 import infrastructureTransparent from "@/public/images/infrastructure_transparent.png"
 
-const Page = async ({ params }: { params: { locale: Lang } }) => {
+const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
+  const params = await props.params
   const { locale } = params
+  setRequestLocale(locale)
 
   const t = await getTranslations({
     namespace: "page-what-is-ether",
   })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "what-is-ether",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("what-is-ether", locale as Lang)
 
   const heroProps: ContentHeroProps = {
     breadcrumbs: {

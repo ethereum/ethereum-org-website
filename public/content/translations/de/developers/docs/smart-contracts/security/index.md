@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Sie können auch ein [Pull-Payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment)-System verwenden, bei dem Nutzer Gelder von den Smart Contracts abheben müssen, anstatt eines „Push-Payments“-Systems, das Gelder an Konten sendet. Dies verhindert die Möglichkeit, unbeabsichtigt Code an unbekannten Adressen auszulösen (und kann auch bestimmte Denial-of-Service-Angriffe verhindern).
+Sie können auch ein [Pull-Payments](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment)-System verwenden, bei dem Nutzer Gelder von den Smart Contracts abheben müssen, anstatt eines „Push-Payments“-Systems, das Gelder an Konten sendet. Dies verhindert die Möglichkeit, unbeabsichtigt Code an unbekannten Adressen auszulösen (und kann auch bestimmte Denial-of-Service-Angriffe verhindern).
 
 #### Ganzzahl-Unterläufe und -Überläufe {#integer-underflows-and-overflows}
 

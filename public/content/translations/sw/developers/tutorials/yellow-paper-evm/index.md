@@ -275,4 +275,4 @@ Nukuu za kihisabati ni sahihi na imeruhusu Karatasi ya Njano kubainisha kila und
 - Waandaaji wa programu wanaelewa msimbo wa kompyuta.
   Wanaweza au wasielewe nukuu za kihisabati.
 
-Labda kwa sababu hizi, [vigezo vipya vya safu ya makubaliano](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md) vimeandikwa katika Python. Kuna [vigezo vya safu ya utekelezaji katika Python](https://ethereum.github.io/execution-specs), lakini havijakamilika. Hadi na isipokuwa Karatasi nzima ya Njano itafsiriwe pia kwa Python au lugha sawa, Karatasi ya Njano itaendelea kutumika, na ni muhimu kuweza kuisoma.
+Labda kwa sababu hizi, [vigezo vipya vya safu ya makubaliano](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) vimeandikwa katika Python. Kuna [vigezo vya safu ya utekelezaji katika Python](https://ethereum.github.io/execution-specs), lakini havijakamilika. Hadi na isipokuwa Karatasi nzima ya Njano itafsiriwe pia kwa Python au lugha sawa, Karatasi ya Njano itaendelea kutumika, na ni muhimu kuweza kuisoma.

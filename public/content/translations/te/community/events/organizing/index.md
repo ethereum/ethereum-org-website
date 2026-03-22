@@ -218,4 +218,3 @@ hideEditButton: true
 వ్యాసాలు:
 
 - [డాని హెచ్. ద్వారా ETHKL నిర్మించడం](https://sekto.tech/ethkl24)
-- [POKT ఈవెంట్స్ ప్లేబుక్](https://docs.pokt.network/community/pokt-events-playbook)

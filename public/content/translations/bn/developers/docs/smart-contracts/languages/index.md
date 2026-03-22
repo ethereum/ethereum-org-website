@@ -37,7 +37,7 @@ Remix IDE, Solidity এবং Vyper উভয় ক্ষেত্রেই ক
 - [Solidity ল্যাঙ্গুয়েজ পোর্টাল](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter চ্যাটরুম](https://gitter.im/ethereum/solidity) [Solidity Matrix চ্যাটরুম](https://matrix.to/#/#ethereum_solidity:gitter.im)-এর সাথে ব্রিজ করা
+- [Solidity Matrix চ্যাটরুম](https://gitter.im/ethereum/solidity) [Solidity Matrix চ্যাটরুম](https://matrix.to/#/#ethereum_solidity:gitter.im)-এর সাথে ব্রিজ করা
 - [চিট শিট](https://reference.auditless.com/cheatsheet)
 - [Solidity ব্লগ](https://blog.soliditylang.org/)
 - [Solidity টুইটার](https://twitter.com/solidity_lang)

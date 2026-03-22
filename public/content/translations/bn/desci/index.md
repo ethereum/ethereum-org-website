@@ -102,7 +102,6 @@ Web3 প্যাটার্ন ব্যবহার করে বৈজ্ঞ
 - [OceanDAO: ডেটা-সম্পর্কিত বিজ্ঞানের জন্য DAO দ্বারা পরিচালিত অর্থায়ন](https://oceanprotocol.com/)
 - [Opscientia: উন্মুক্ত বিকেন্দ্রীভূত বিজ্ঞান কর্মপ্রবাহ](https://opsci.io/research/)
 - [Bio.xyz: আপনার বায়োটেক DAO বা desci প্রকল্পের জন্য অর্থায়ন পান](https://www.bio.xyz/)
-- [Fleming Protocol: ওপেন-সোর্স ডেটা অর্থনীতি যা সহযোগিতামূলক বায়োমেডিকাল আবিষ্কারকে চালিত করে](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: বিকেন্দ্রীভূত বৈজ্ঞানিক বিশ্বাসযোগ্যতা সক্ষম করা](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

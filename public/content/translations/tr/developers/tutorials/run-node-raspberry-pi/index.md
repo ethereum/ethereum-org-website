@@ -70,7 +70,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # Karma çıktısı şu şekilde olmalıdır: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Rock 5B ve Odroid M1 kartları için imajların Ethereum-on-Arm [indirmeler sayfasında](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) mevcut olduğunu unutmayın.
+Rock 5B ve Odroid M1 kartları için imajların Ethereum-on-Arm [indirmeler sayfasında](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) mevcut olduğunu unutmayın.
 
 ## MicroSD'ye İmaj Yükleme {#flashing-the-microsd}
 
@@ -164,7 +164,7 @@ Tebrikler, artık Raspberry Pi üzerinde çalışan tam bir Ethereum düğümün
 
 ## Daha fazla ayrıntı {#more-details}
 
-Bu sayfa, Raspberry Pi kullanarak bir Geth-Lighthouse düğümü ve doğrulayıcısının nasıl kurulacağına dair genel bir bakış sunmuştur. Daha ayrıntılı talimatlar [Ethereum-on-Arm web sitesinde](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html) mevcuttur.
+Bu sayfa, Raspberry Pi kullanarak bir Geth-Lighthouse düğümü ve doğrulayıcısının nasıl kurulacağına dair genel bir bakış sunmuştur. Daha ayrıntılı talimatlar [Ethereum-on-Arm web sitesinde](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) mevcuttur.
 
 ## Geri bildirimleriniz bizim için değerli {#feedback-appreciated}
 
@@ -183,7 +183,7 @@ Lütfen bu eğiticinin ayrıntılarını inceleyin, test ağlarında çalıştı
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

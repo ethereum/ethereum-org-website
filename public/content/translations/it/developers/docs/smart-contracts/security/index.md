@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Puoi anche utilizzare un sistema di [pagamenti pull](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment), che richiede agli utenti di prelevare i fondi dai contratti intelligenti, invece di un sistema di "pagamenti push", che invia i fondi ai conti. Ciò rimuove la possibilità di innescare inavvertitamente il codice a indirizzi sconosciuti (e può anche impedire determinati attacchi denial-of-service).
+Puoi anche utilizzare un sistema di [pagamenti pull](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment), che richiede agli utenti di prelevare i fondi dai contratti intelligenti, invece di un sistema di "pagamenti push", che invia i fondi ai conti. Ciò rimuove la possibilità di innescare inavvertitamente il codice a indirizzi sconosciuti (e può anche impedire determinati attacchi denial-of-service).
 
 #### Sottoeccedenze e sovraflussi di interi {#integer-underflows-and-overflows}
 

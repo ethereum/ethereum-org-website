@@ -34,10 +34,10 @@ description: "ethereum.org অনুবাদকদের জন্য দরক
 
 সর্বশেষ অনুবাদ প্রোগ্রামের অগ্রগতি সম্পর্কে আপ-টু-ডেট থাকতে, আপনি [Ethereum ফাউন্ডেশন ব্লগ](https://blog.ethereum.org/) অনুসরণ করতে পারেন:
 
-- [অক্টোবর ২০২১ মাইলস্টোনস আপডেট](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [ডিসেম্বর ২০২০ মাইলস্টোনস আপডেট](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [জুলাই ২০২০ মাইলস্টোনস আপডেট](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [আগস্ট ২০১৯ অনুবাদ প্রোগ্রাম লঞ্চ](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [অক্টোবর ২০২১ মাইলস্টোনস আপডেট](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [ডিসেম্বর ২০২০ মাইলস্টোনস আপডেট](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [জুলাই ২০২০ মাইলস্টোনস আপডেট](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [আগস্ট ২০১৯ অনুবাদ প্রোগ্রাম লঞ্চ](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## অনুবাদকদের জন্য অফিস আওয়ার্স {#office-hours}
 

@@ -10,7 +10,7 @@ lang: zh-tw
 
 下圖顯示兩種以太坊用戶端的關係。 兩種用戶端與他們各自的點對點 (P2P) 網路相連。 執行用戶端透過其點對點網路廣播交易，來確保能夠管理自己的本機交易池，而共識用戶端透過其點對點網路廣播區塊，來確保共識和鏈增長，因此需要獨立的點對點網路。
 
-![](node-architecture-text-background.png)
+![顯示執行層和共識層的以太坊節點架構圖](node-architecture-text-background.png)
 
 _執行用戶端有多種選擇，包括 Erigon、Nethermind 和 Besu_。
 

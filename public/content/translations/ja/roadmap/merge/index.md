@@ -105,7 +105,7 @@ id="developers">
   <li><em>セーフヘッド</em>と<em>確定したブロック</em>のコンセプト</li>
 </ul>
 
-詳細については、Tim Beikoによるブログ投稿<a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">マージがイーサリアムのアプリケーションレイヤーに与える影響</a>をご覧ください。
+詳細については、Tim Beikoによるブログ投稿<a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">マージがイーサリアムのアプリケーションレイヤーに与える影響</a>をご覧ください。
 </ExpandableCard>
 
 ## マージとエネルギー消費 {#merge-and-energy}
@@ -188,7 +188,7 @@ contentPreview="誤り。 セキュリティ上の理由から、バリデータ
 
 これらの用語の変更は、単に名称を変更するだけのものであり、イーサリアムの目標やロードマップには影響を及ぼしません。
 
-[「Eth2」という名称の変更について詳しく学ぶ](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[「Eth2」という名称の変更について詳しく学ぶ](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## アップグレード間の関係 {#relationship-between-upgrades}
 

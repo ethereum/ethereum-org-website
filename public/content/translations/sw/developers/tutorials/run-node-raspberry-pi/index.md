@@ -64,7 +64,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # Hashi inapaswa kutoa: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Kumbuka kuwa picha za bodi za Rock 5B na Odroid M1 zinapatikana kwenye [ukurasa wa upakuaji](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) wa Ethereum-on-Arm.
+Kumbuka kuwa picha za bodi za Rock 5B na Odroid M1 zinapatikana kwenye [ukurasa wa upakuaji](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) wa Ethereum-on-Arm.
 
 ## Kuweka Picha ya Programu kwenye MicroSD {#flashing-the-microsd}
 
@@ -158,7 +158,7 @@ Hongera, sasa una nodi kamili ya Ethereum na mthibitishaji inayoendeshwa kwenye 
 
 ## Maelezo zaidi {#more-details}
 
-Ukurasa huu umetoa muhtasari wa jinsi ya kuweka nodi na mthibitishaji wa Geth-Lighthouse kwa kutumia Raspberry Pi. Maagizo ya kina zaidi yanapatikana kwenye [tovuti ya Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html).
+Ukurasa huu umetoa muhtasari wa jinsi ya kuweka nodi na mthibitishaji wa Geth-Lighthouse kwa kutumia Raspberry Pi. Maagizo ya kina zaidi yanapatikana kwenye [tovuti ya Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/).
 
 ## Maoni yanakaribishwa {#feedback-appreciated}
 
@@ -177,7 +177,7 @@ Tafadhali chunguza kwa kina maelezo katika mafunzo haya, jaribu kuendesha kwenye
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

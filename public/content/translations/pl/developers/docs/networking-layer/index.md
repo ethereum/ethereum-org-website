@@ -97,7 +97,7 @@ Klienty konsensusu uczestniczą w osobnej sieci peer-to-peer z inną specyfikacj
 
 ### Odkrywanie {#consensus-discovery}
 
-Podobnie jak klienci wykonawczy, klienci konsensusu używają protokołu [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) przez UDP do znajdowania peerów. Implementacja discv5 w warstwie konsensusu różni się od implementacji w klientach wykonawczych tylko tym, że zawiera adapter łączący discv5 ze stosem [libP2P](https://libp2p.io/), wycofując DevP2P. Sesje RLPx warstwy wykonawczej zostały porzucone na rzecz bezpiecznego kanału uścisku dłoni libP2P.
+Podobnie jak klienci wykonawczy, klienci konsensusu używają protokołu [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) przez UDP do znajdowania peerów. Implementacja discv5 w warstwie konsensusu różni się od implementacji w klientach wykonawczych tylko tym, że zawiera adapter łączący discv5 ze stosem [libP2P](https://libp2p.io/), wycofując DevP2P. Sesje RLPx warstwy wykonawczej zostały porzucone na rzecz bezpiecznego kanału uścisku dłoni libP2P.
 
 ### ENR-y {#consensus-enr}
 
@@ -109,7 +109,7 @@ Stos libP2P obsługuje całą komunikację po odkrywaniu. Klienty mogą wybiera�
 
 ### Gossip {#gossip}
 
-Domena plotkująca zawiera wszystkie informacje, które muszą zostać szybko rozprzestrzenione w sieci. Wlicza się w to bloki śledzące, dowody, poświadczenia, wyjścia oraz odcięcia. Wszystko to przesyłane jest przy użyciu gossipsub v1 od libP2P i opiera się na różnych metadanych przechowywanych lokalnie w każdym węźle, wliczając w to maksymalny rozmiar ładunku plotkującego do odebrania i przesłania. Szczegółowe informacje o domenie gossip są dostępne [tutaj](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+Domena plotkująca zawiera wszystkie informacje, które muszą zostać szybko rozprzestrzenione w sieci. Wlicza się w to bloki śledzące, dowody, poświadczenia, wyjścia oraz odcięcia. Wszystko to przesyłane jest przy użyciu gossipsub v1 od libP2P i opiera się na różnych metadanych przechowywanych lokalnie w każdym węźle, wliczając w to maksymalny rozmiar ładunku plotkującego do odebrania i przesłania. Szczegółowe informacje o domenie gossip są dostępne [tutaj](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Żądanie-odpowiedź {#request-response}
 
@@ -146,8 +146,8 @@ Poniżej przedstawiono podsumowanie przepływu, z odpowiednim stosem sieciowym w
 
 Po poświadczeniu bloku przez wystarczającą liczbę walidatorów zostaje on dodany na początek łańcucha, uzasadniony i ostatecznie sfinalizowany.
 
-![](cons_client_net_layer.png)
-![](exe_client_net_layer.png)
+![Schemat warstwy sieci klienta konsensusu Ethereum](cons_client_net_layer.png)
+![Schemat warstwy sieciowej klienta wykonawczego Ethereum](exe_client_net_layer.png)
 
 Schemat warstwy sieciowej dla klientów konsensusu i wykonawczych, z [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
@@ -155,7 +155,7 @@ Schemat warstwy sieciowej dla klientów konsensusu i wykonawczych, z [ethresear.
 
 [DevP2P](https://github.com/ethereum/devp2p)
 [LibP2p](https://github.com/libp2p/specs)
-[Specyfikacje sieciowe warstwy konsensusu](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)
+[Specyfikacje sieciowe warstwy konsensusu](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure)
 [kademlia do discv5](https://vac.dev/kademlia-to-discv5)
 [Artykuł o kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [Wprowadzenie do p2p Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/)

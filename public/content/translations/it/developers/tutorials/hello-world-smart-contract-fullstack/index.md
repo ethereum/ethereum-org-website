@@ -237,7 +237,7 @@ Non nominarlo `process.env` o `.env-custom` o in altro modo.
 - Segui [queste istruzioni](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) per esportare la tua chiave privata
 - Vedi sotto per ottenere l'URL dell'API di Alchemy HTTP
 
-![](./get-alchemy-api-key.gif)
+![Procedura dettagliata animata per ottenere una chiave API Alchemy](./get-alchemy-api-key.gif)
 
 Il tuo `.env` dovrebbe somigliare a questo:
 

@@ -276,5 +276,5 @@ else:
 ## மேலும் வாசிக்க {#further-reading}
 
 - [மாற்றியமைக்கப்பட்ட மெர்கிள் பேட்ரிசியா டிரை — எத்தீரியம் ஒரு நிலையை எவ்வாறு சேமிக்கிறது](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [எத்தீரியத்தில் மெர்கிளிங்](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [எத்தீரியத்தில் மெர்கிளிங்](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [எத்தீரியம் டிரையைப் புரிந்துகொள்ளுதல்](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

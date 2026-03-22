@@ -150,7 +150,7 @@
   "ethash-term": "Ethash",
   "ethash-definition": "একটি <a href=\"/glossary/#pow\">প্রুফ-অফ-ওয়ার্ক</a> অ্যালগরিদম যা Ethereum-এ <a href=\"/glossary/#pos\">প্রুফ-অফ-স্টেক</a>-এ স্থানান্তরিত হওয়ার আগে ব্যবহৃত হত। <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">আরও পড়ুন</a>",
   "ether-term": "ইথার",
-  "ether-definition": "Ethereum-এর স্থানীয় ক্রিপ্টোকারেন্সি, যা সাধারণত “ETH” নামে পরিচিত। এটি Ethereum ইকোসিস্টেম এবং অ্যাপ্লিকেশন ব্যবহার করার সময় লেনদেন ফি কভার করতে ব্যবহৃত হয়। <a href=\"/eth/\">ইথার সম্পর্কে আরও জানুন</a>।",
+  "ether-definition": "Ethereum-এর স্থানীয় ক্রিপ্টোকারেন্সি, যা সাধারণত “ETH” নামে পরিচিত। এটি Ethereum ইকোসিস্টেম এবং অ্যাপ্লিকেশন ব্যবহার করার সময় লেনদেন ফি কভার করতে ব্যবহৃত হয়। <a href=\"/what-is-ether/\">ইথার সম্পর্কে আরও জানুন</a>।",
   "events-term": "অনুষ্ঠানসমূহ",
   "events-definition": "<a href=\"/glossary/#evm\">EVM</a> লগিং সুবিধার ব্যবহার করতে দেয়। <a href=\"/glossary/#dapp\">ডিএ্যাপস</a> ইভেন্টের জন্য শুনতে পারে এবং ব্যবহারকারী ইন্টারফেসে JavaScript কলব্যাক ট্রিগার করতে সেগুলি ব্যবহার করতে পারে। <a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">ইভেন্ট এবং লগ সম্পর্কে আরও জানুন</a>",
   "evm-term": "ইথেরিয়াম ভার্চুয়াল মেশিন (EVM)",

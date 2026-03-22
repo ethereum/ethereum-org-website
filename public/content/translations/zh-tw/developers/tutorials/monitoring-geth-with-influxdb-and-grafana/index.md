@@ -117,35 +117,35 @@ sudo systemctl start grafana-server
 當 Grafana 執行後，應該可以在 `localhost:3000` 連線到它。
 使用您偏好的瀏覽器存取此路徑，然後使用預設憑證登入 (使用者：`admin`，密碼：`admin`)。 出現提示時，請變更預設密碼並儲存。
 
-![](./grafana1.png)
+![用於 Geth 監控的 Grafana 儀表板螢幕截圖（面板 1）](./grafana1.png)
 
 您將被重新導向到 Grafana 首頁。 首先，設定您的資料來源。 按一下左側欄的設定圖示，然後選取 "Data sources"。
 
-![](./grafana2.png)
+![用於 Geth 監控的 Grafana 儀表板螢幕截圖（面板 2）](./grafana2.png)
 
 目前尚未建立任何資料來源，請按一下 "Add data source" 來定義一個。
 
-![](./grafana3.png)
+![用於 Geth 監控的 Grafana 儀表板螢幕截圖（面板 3）](./grafana3.png)
 
 對於此設定，請選取 "InfluxDB" 並繼續。
 
-![](./grafana4.png)
+![用於 Geth 監控的 Grafana 儀表板螢幕截圖（面板 4）](./grafana4.png)
 
 如果您在同一台機器上執行工具，資料來源的設定非常直接。 您需要設定 InfluxDB 位址和存取資料庫的詳細資訊。 請參考下圖。
 
-![](./grafana5.png)
+![用於 Geth 監控的 Grafana 儀表板螢幕截圖（面板 5）](./grafana5.png)
 
 如果一切都已完成且 InfluxDB 可連線，請按一下 "Save and test"，然後等待確認訊息彈出。
 
-![](./grafana6.png)
+![用於 Geth 監控的 Grafana 儀表板螢幕截圖（面板 6）](./grafana6.png)
 
 Grafana 現在已設定為可從 InfluxDB 讀取資料。 現在您需要建立一個儀表板來解譯和顯示資料。 儀表板屬性被編碼在 JSON 檔案中，任何人都可以建立並輕鬆匯入這些檔案。 在左側欄上，按一下 "Create and Import"。
 
-![](./grafana7.png)
+![用於 Geth 監控的 Grafana 儀表板螢幕截圖（面板 7）](./grafana7.png)
 
 若要建立 Geth 監控儀表板，請複製[此儀表板](https://grafana.com/grafana/dashboards/13877/)的 ID，並將其貼到 Grafana 的 "Import page" 中。 儲存儀表板後，它應該看起來像這樣：
 
-![](./grafana8.png)
+![用於 Geth 監控的 Grafana 儀表板螢幕截圖（面板 8）](./grafana8.png)
 
 您可以修改您的儀表板。 每個面板都可以編輯、移動、移除或新增。 您可以變更您的設定。 一切由您決定！ 要了解更多關於儀表板的運作方式，請參考 [Grafana 的文件](https://grafana.com/docs/grafana/latest/dashboards/)。
 您可能也對[警示](https://grafana.com/docs/grafana/latest/alerting/)感興趣。 這可讓您設定當指標達到特定值時的警示通知。 支援多種通訊管道。

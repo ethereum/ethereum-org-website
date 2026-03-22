@@ -5,6 +5,7 @@ import type {
   CommunityPick,
   EventItem,
   GHIssue,
+  GitHubContributorsData,
   GithubRepoData,
   GrowThePieData,
   GrowThePieMasterData,
@@ -48,3 +49,4 @@ export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
 export const getDeveloperToolsData = () => get<DeveloperToolsDataEnvelope>(KEYS.DEVELOPER_TOOLS)
 export const getAccountHolders = () => get<MetricReturnData>(KEYS.ACCOUNT_HOLDERS)
 export const getTranslationGlossary = () => get<GlossaryEntry[]>(KEYS.TRANSLATION_GLOSSARY)
+export const getGitHubContributors = () => get<GitHubContributorsData>(KEYS.GITHUB_CONTRIBUTORS)

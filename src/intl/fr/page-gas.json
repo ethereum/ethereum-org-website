@@ -19,7 +19,7 @@
   "page-gas-how-do-i-pay-less-gas-card-1-description": "Tout comme les voyages en dehors des heures de pointe sont moins fréquentés et plus abordables, l'Ethereum est généralement moins cher à utiliser lorsque l'Amérique du Nord est endormie.",
   "page-gas-how-do-i-pay-less-gas-card-2-title": "Attendre la baisse du prix du gaz",
   "page-gas-how-do-i-pay-less-gas-card-2-description": "Les prix du gaz augmentent et diminuent toutes les douze secondes en fonction de l'encombrement d'Ethereum. Lorsque le prix du gaz est élevé, le fait d'attendre quelques minutes avant d'effectuer une transaction peut entraîner une baisse significative du prix à payer.",
-  "page-gas-how-do-i-pay-less-gas-card-3-title": "Utiliser la couche 2",
+  "page-gas-how-do-i-pay-less-gas-card-3-title": "Utilisez la couche 2",
   "page-gas-how-do-i-pay-less-gas-card-3-description": "Les couches de niveau 2 sont construites sur Ethereum, proposent des frais moins élevés et traitent davantage de transactions. Elles constituent un bon choix pour économiser des frais sur les transactions qui n'ont pas besoin d'être effectuées sur le réseau Ethereum principal.",
   "page-gas-try-layer-2": "Essayez la couche 2",
   "page-gas-what-causes-high-gas-fees-header": "Quelles sont les causes des frais de gaz élevés ?",
@@ -56,9 +56,9 @@
   "page-gas-faq-question-1-a-2": "Vous pouvez lire une description détaillée du processus dans <a href=\"/developers/docs/gas/\">la documentation destinée aux développeurs de gaz.</a>",
   "page-gas-faq-question-2-q": "Dois-je payer le gaz en ETH ?",
   "page-gas-faq-question-2-a-1": "Oui. Tous les frais de gaz sur Ethereum doivent être payés dans la devise native ETH.",
-  "page-gas-faq-question-2-a-2": "Plus d'infos sur ETH",
+  "page-gas-faq-question-2-a-2": "Autres informations sur ETH",
   "page-gas-faq-question-3-q": "Qu'est-ce que le gwei ?",
   "page-gas-faq-question-3-a-1": "Dans la plupart des portefeuilles ou des systèmes de suivi du gaz, les prix du gaz sont exprimés en 'gwei'.",
   "page-gas-faq-question-3-a-2": "Le Gwei est une unité plus petite de l'ETH, comme les centimes le sont pour les dollars, à la différence que 1 ETH équivaut à 1 milliard de Gwei. Le Gwei est utile lorsqu'il s'agit de très petites quantités d'ETH.",
-  "page-gas-use-layer-2": "Utiliser la couche 2"
+  "page-gas-use-layer-2": "Utilisez la couche 2"
 }

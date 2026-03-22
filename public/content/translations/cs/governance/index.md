@@ -168,7 +168,7 @@ Když se 15. září 2022 sloučil Beacon Chain s exekuční vrstvou Etherea, by
 - [Připojte se na Discord Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Provozujte uzel](/developers/docs/nodes-and-clients/run-a-node/)
 - [Přispějte k vývoji klientů](/developers/docs/nodes-and-clients/#execution-clients)
-- [Program pro učně kmenových vývojářů](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Program pro učně kmenových vývojářů](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Další čtení {#further-reading}
 
@@ -177,7 +177,7 @@ Správa Etherea není pevně definována. Různí členové komunity mají na ř
 - [Poznámky ke správě blockchainu](https://vitalik.eth.limo/general/2017/12/17/voting.html) – _Vitalik Buterin_
 - [Jak funguje správa Etherea?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Jak funguje správa Etherea](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Kdo je kmenový vývojář Etherea?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
+- [Kdo je kmenový vývojář Etherea?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
 - [Správa, část 2: Plutokracie je stále špatná](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
 - [Překonání správy hlasováním s mincemi](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_
 - [Pochopení správy blockchainu](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) – _Výzkum 2077_

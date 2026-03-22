@@ -70,7 +70,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # हॅश आउटपुट असे असावे: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-लक्षात घ्या की Rock 5B आणि Odroid M1 बोर्डसाठी इमेजेस Ethereum-on-Arm [डाउनलोड पेज](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) वर उपलब्ध आहेत.
+लक्षात घ्या की Rock 5B आणि Odroid M1 बोर्डसाठी इमेजेस Ethereum-on-Arm [डाउनलोड पेज](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) वर उपलब्ध आहेत.
 
 ## MicroSD फ्लॅश करणे {#flashing-the-microsd}
 
@@ -164,7 +164,7 @@ sudo systemctl start lighthouse-validator
 
 ## अधिक तपशील {#more-details}
 
-या पानावर Raspberry Pi वापरून Geth-Lighthouse नोड आणि व्हॅलिडेटर कसे सेट करावे याचा आढावा दिला आहे. अधिक तपशीलवार सूचना [Ethereum-on-Arm वेबसाइट](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html) वर उपलब्ध आहेत.
+या पानावर Raspberry Pi वापरून Geth-Lighthouse नोड आणि व्हॅलिडेटर कसे सेट करावे याचा आढावा दिला आहे. अधिक तपशीलवार सूचना [Ethereum-on-Arm वेबसाइट](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) वर उपलब्ध आहेत.
 
 ## अभिप्रायाचे कौतुक आहे {#feedback-appreciated}
 
@@ -183,7 +183,7 @@ sudo systemctl start lighthouse-validator
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

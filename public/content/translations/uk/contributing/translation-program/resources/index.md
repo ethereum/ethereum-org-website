@@ -34,10 +34,10 @@ description: "Корисні ресурси для перекладачів ethe
 
 Щоб бути в курсі прогресу Програми перекладів, ви можете стежити за [блогом Ethereum Foundation](https://blog.ethereum.org/):
 
-- [Оновлення щодо ключових етапів за жовтень 2021 року](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Оновлення щодо ключових етапів за грудень 2020 року](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Оновлення щодо ключових етапів за липень 2020 року](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Запуск Програми перекладів у серпні 2019 року](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Оновлення щодо ключових етапів за жовтень 2021 року](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Оновлення щодо ключових етапів за грудень 2020 року](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Оновлення щодо ключових етапів за липень 2020 року](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Запуск Програми перекладів у серпні 2019 року](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Консультаційні години для перекладачів {#office-hours}
 
