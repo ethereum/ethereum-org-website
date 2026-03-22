@@ -1,11 +1,11 @@
 ---
-title: "Sponsoring gas fees: How to cover transaction costs for your users"
+title: "Letting your gasless users hold tokens and call contracts"
 description: Using account abstraction we can create smart contract wallets that accept transactions that either were sent by a specific EOA, or which were signed by that EOA. These smart contracts can then own tokens, which are under the EOA's control.
 author: Ori Pomerantz
 tags: ["gasless", "erc-20", "account abstraction"]
 skill: intermediate
 lang: en
-published: 2026-03-15
+published: 2026-04-01
 ---
 
 ## Introduction {#introduction}
