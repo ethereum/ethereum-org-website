@@ -9,7 +9,7 @@ The current process for deployment involves a 2-day QA cycle to test a release c
 The typical workflow is as follows:
 
 1. A branch is created off of the `dev` branch, and pull requests for the branch are created into `dev`
-2. Pull requests are reviewed, and merged into `dev`
+2. Pull requests are reviewed and merged into `dev`
 3. On Tuesday, a pull request is created into the `staging` branch
    - At this point, the `staging` branch will be the release candidate. At this point, no new features are added into staging for the release, only release blocking bugfixes.
 4. During the next 2 days (Tuesday - Thursday) QA testing on the release candidate takes place
@@ -17,7 +17,7 @@ The typical workflow is as follows:
      - Release blocking: if a bug is considered blocking for the release, create an issue and triage for a pull request to fix before release
      - Non-release blocking: if a bug is not blocking a release, create an issue and triage normally
 5. If any release blocking bugfixes are merged into `staging`, bring those changes into `dev`
-6. When a release candidate is ready for release, merge into `master` and deploy to production on Thursday
+6. When a release candidate is ready for release, merge it into `master` and deploy to production on Thursday
 7. Create a tag for the new version in master
 8. Merge tag into `staging` and `dev`
 
@@ -44,7 +44,7 @@ feature 2             \ _ _  O
 In the event that a bug was found in `staging` during the QA cycle that blocks a release, the following steps will take place to address the bug:
 
 1. Create an issue in GitHub documenting the bug
-2. Triage issue to a developer
+2. Triage the issue to a developer
 3. Developer will create a branch off of `staging`
 4. Work on bugfix
 5. Create a pull request into `staging`
@@ -69,7 +69,7 @@ dev     O - - - - O - - O - O - - - O - - - - - O
 
 ## Hotfix process
 
-In the event that a hotfix is found in production and needs to be addressed before the next release
+In the event that a hotfix is found in production and needs to be addressed before the next release.
 
 1. Create an issue in GitHub documenting the bug
 2. Triage issue to a developer
@@ -99,4 +99,4 @@ dev     O - - O - - - - O
 
 The main idea behind the community QA process is to focus on the [current release changelog](https://github.com/ethereum/ethereum-org-website/releases) and check that new features or fixes applied are working as expected. During QA sessions, some notes could also be shared if we're looking for specific things to be tested.
 
-If you find any bug, please report it on the [#website-bugs](https://discord.com/channels/714888181740339261/727898649006309377) Discord channel.
+If you find any bugs, please report it on the [#website-bugs](https://discord.com/channels/714888181740339261/727898649006309377) Discord channel.
