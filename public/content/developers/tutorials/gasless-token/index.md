@@ -57,15 +57,13 @@ GOON
 
 10. Scroll down and click the link under *Last transaction:*. This will open the browser to show you the `faucet` transaction.
 
-11. In the *amount to transfer* enter a number between one and one thousand. Click **Transfer** to transfer the tokens to your own address. Before you click **Confirm** for the request, see that the data being signed is opaque. Users would have a hard time understanding what they are signing. Remember that, we will discuss it [below](#conclusion).
-
-    ![Screen capture with opaque calldata](./fig-1-opaque-calldata.png)
+11. In the *amount to transfer* enter a number between one and one thousand. Click **Transfer** to transfer the tokens to your own address. Before you click **Confirm** for the request, see that the data being signed is opaque. Users would have a hard time understanding what they are signing. Remember that, we will discuss it [below](#vulnerabilities).
 
 12. After the transaction is confirmed, wait to see the change in both *your balance* and *proxy balance*. Note that this will also take some time, because Sepolia has a block time of 12 seconds.
 
 ## How it works {#how-work}
 
-For a gasless experience we have to have a user interface for the user, a relayer to get messages from the user interface to the chain, and a smart contract that receives and verifies the messages.
+For a gasless experience we have to have a user interface for the user, a server to get messages from the user interface to the chain, and a smart contract that receives and verifies the messages.
 
 ### The wallet smart contract {#wallet-smart-contract}
 
@@ -183,7 +181,7 @@ The digest also includes the nonce, but we do not need to receive it from the tr
     require(signer == OWNER, "Signature invalid or not by owner");
 ```
 
-If the signature is invalid, `ecrecover` will return a different address and it will not be accepted.
+If the signature is invalid, `ecrecover` will usually return a different address and it will not be accepted.
 
 ```solidity
     (bool success, bytes memory returnData) = target.call(data);
@@ -330,7 +328,7 @@ If there's a problem, report it.
   app.post("/server/message", async (req, res) => {
 ```
 
-This is the code that handles messages from the user to the proxy. This is another point that is vulnerable to a denial of service. 
+This is the code that handles messages from the user to the `UserProxy` contract. This is another point that is vulnerable to a denial of service. 
 
 ```js
     try {
@@ -458,7 +456,7 @@ The proxy's token balance.
   const [ newProxyAddr, setNewProxyAddr ] = useState("")
 ```
 
-This field is used when the user sets the proxy address manually. Having the ability to set the proxy address manually lets the user use an existing proxy instead of creating a new one each time (and losing all tokens owned by the old proxy).
+This field is used when the user sets the proxy address manually. Having the ability to set the proxy address manually lets the user use an existing proxy instead of deploying a new one each time (and losing all tokens owned by the old proxy).
 
 ```js
   const [ txHash, setTxHash ] = useState(null)
@@ -621,7 +619,9 @@ Send a signed message to `UserProxy`, which will verify the signature and then s
       console.error("Error:", err)
     }
   }
-```  
+```
+
+Send a request to the server, and when you get the response get the transaction hash.
 
 ```js
   const faucetSimulation = useSimulateContract({
@@ -645,16 +645,7 @@ Simulate calling the `faucet` function. We only enable the faucet button if this
     const {v, r, s} = await signMessage(proxyAddr, calldata)
     messageUserProxy(proxyAddr, faucetAddr, calldata, v, r, s)
   }
-```
 
-To call the a function through the server and `UserProxy`, we follow three steps:
-
-1. Create the calldata to sign and send using [`encodeFunctionData`](https://v1.viem.sh/docs/contract/encodeFunctionData.html).
-
-2. Sign the call data. 
-
-
-```js
   const proxyTransfer = async () => {
     const calldata = encodeFunctionData({
       abi: Erc20.abi,
@@ -664,8 +655,19 @@ To call the a function through the server and `UserProxy`, we follow three steps
 
     const {v, r, s} = await signMessage(proxyAddr, calldata)
     messageUserProxy(proxyAddr, faucetAddr, calldata, v, r, s)
-  }  
+  }
+```
 
+To call the a function through the server and `UserProxy`, we follow three steps:
+
+1. Create the calldata to sign and send using [`encodeFunctionData`](https://v1.viem.sh/docs/contract/encodeFunctionData.html).
+
+2. Sign the message (target, calldata, and nonce).
+
+3. Send the message to the server.
+
+
+```js
   return (
     <>
       <div align="left">
@@ -683,10 +685,20 @@ To call the a function through the server and `UserProxy`, we follow three steps
          Request more tokens
          </button>
          <hr />
+```
+
+This portion of the component lets you use `FaucetToken` directly from the browser. Its main purpose is to facilitate debugging.
+
+```js
          <h4>UserProxy access <Address address={proxyAddr} /></h4>
          <button onClick={deployUserProxy}>
          Deploy UserProxy (slow process)
          </button>
+```
+
+Let the user deploy a new `UserProxy`.
+
+```js
          <br /><br />
          <input type="text" placeholder="Or enter existing proxy address" value={newProxyAddr} onChange={proxyAddressChange} />
          <br /><br />
@@ -696,18 +708,38 @@ To call the a function through the server and `UserProxy`, we follow three steps
          >
             Set proxy address
          </button>
+```
+
+Only let users click **Set proxy address** when they enter a legitimate address. Note that this does not ensure that the address is question is indeed a `UserProxy` contract. It is possible to add such a check, but it will be a lot slower (worse user experience) and not improve security (attackers can always use their own code for the user interface).
+
+```js
          <br /><br />
          { proxyAddr && (
+```
+
+Show the rest *only* if there is a legitimate proxy address.
+
+```js
             <>
                Proxy balance: {proxyBalanceAmount}
                <br />
                Proxy nonce: {nonce?.data?.toString() ?? "Loading..."}
+```
+
+The user does not need to know the nonce, this is just for debugging purposes.
+
+```js
                <br />
                <button disabled={!proxyAddr || proxyAddr === "Loading..." || nonce?.status !== 'success'} 
                   onClick={proxyFaucet}
                >
                   Request more tokens for proxy
                </button>
+```
+
+We can't simulate calling `faucet()` through the proxy. However, we can at least ensure we have a proxy and that proxy reported to us a nonce.
+
+```js
                <hr />
                <h4>Transfer tokens from proxy</h4>
                <ul>
@@ -722,6 +754,11 @@ To call the a function through the server and `UserProxy`, we follow three steps
                </button>               
             </>
          )}   
+```
+
+Let the user issue ERC-20 transfer transactions.
+
+```js
          <hr />
          { txHash && (
             <>
@@ -731,6 +768,11 @@ To call the a function through the server and `UserProxy`, we follow three steps
                </a>
             </>
          )}
+```
+
+If there is a last transaction hash, let the user click a link to see it in a block explorer.
+
+```js
       </div>
     </>
   )
@@ -738,6 +780,35 @@ To call the a function through the server and `UserProxy`, we follow three steps
 
 export {Token}
 ```
+
+This is just React boilerplate.
+
+## What is missing {#what-is-missing}
+
+This is *not* production code, just a quick example to illustrate how such a system works. As such, it has problems of both usability (UX for user experience) and security.
+
+### Vulnerabilities {#vulnerabilities}
+
+Our server is vulnerable to denial of service attacks. This attack is explained [in the previous article of the series](/developers/tutorials/gasless/#dos-on-server).
+
+Additionally, we are encouraging bad user behavior. THis is what we want the user the sign:
+
+![Screen capture with opaque calldata](./fig-1-opaque-calldata.png)
+
+*We* know that this is a legitimate ERC-20 transfer, for the token, amount, and destination address the user wants to transfer. But most users don't know how to interpret calldata, and have no idea what they are signing on. That is bad design, for two reasons:
+
+- Some users will not use us because they don't trust the data we tell them to sign.
+- Other users *will* trust us, and learn they should just sign calldata without understanding it. This means that if Adam Attacker manages to redirect them to his website, he can make them sign a transaction that gives him all the USDC (or DAI, or any other ERC-20) that the user owns. 
+
+The solution is to have separate functions in `UserProxy` for commonly used functions, such as transfer. Then users can sign something they understand.
+
+![Screen capture with transfer details](./fig-2-transparent-signature.png)
+
+**Note:** While users can use any wallet they want, it is highly recommended that applications using EIP-712 encourage them to use a wallet that [shows the entire signature data](https://rabby.io/). Some wallets truncate the address, which is insecure. An attacker can create an address that has the same beginning and end characters, but is different in the middle.
+
+![Screen capture with truncated addresses](./fig-3-truncated-addresses.png)
+
+### User experience {#UX}
 
 #### The opaque signature issue {#opaque-signature}
 
