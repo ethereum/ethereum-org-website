@@ -2,7 +2,7 @@
 
 ## Overview
 
-StorybookJS is a UI tool for isolating UI components to visually test its styles and states.
+StorybookJS is a UI tool for isolating UI components to visually test their styles and states.
 
 This is great for checking the various iterations of a component in a sandbox versus scouring all the pages in a large scale project it is used to verify that the component is rendering properly.
 
@@ -10,7 +10,7 @@ You can also render pages if you need that level of visual testing.
 
 Storybook also gives you a library of addons provided by the team and the community to enhance the testing, including UX testing, A11y compliance, etc.
 
-Check out [Intro to Storybook](https://storybook.js.org/tutorials/intro-to-storybook/) to get an in-depth look on the workflow.
+Check out [Intro to Storybook](https://storybook.js.org/tutorials/intro-to-storybook/) to get an in-depth look at the workflow.
 
 ## Spinning up the Storybook server
 
@@ -35,7 +35,7 @@ src/
         └── // Any other files as applicable (utils, child components, useHook, etc.)
 ```
 
-The initial structure of each story file will look something like this (in typescript):
+The initial structure of each story file will look something like this (in TypeScript):
 
 ```tsx
 import ComponentA from "."
@@ -96,7 +96,7 @@ export const Outline: Story = {
  * For practical purposes, if you are displaying different "variants",
  * they should be shown under one story, so they can be seen side-by-side in the GUI
  * for reviewers to easily compare.
- * This can also be done for various sizes or other like alterations
+ * This can also be done for various sizes or other similar alterations
  *
  * 🚨 If prop content is supplied directly to the component and the `args` prop is not used,
  * use `StoryObj` without a prop type. This is especially important when a story renders multiple versions
@@ -142,7 +142,7 @@ The dashboard where you view each story has a number of different addons availab
 
 ![Screenshot of Storybook Dashboard for Ethereum.org](https://github.com/ethereum/ethereum-org-website/assets/65234762/7dea7692-6a6d-4f1c-b7cb-db177bcab44d)
 
-Outlined below are each area going from left to right in the selections.
+Outlined below are the areas going from left to right in the selections.
 
 | Toolbar above the preview                | Panel below the preview                                                                                                                                                                                                                                                    |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -171,7 +171,7 @@ Depending on the component, we might look for more than just one snapshot per st
 
 You will currently find the setup of these modes in [the `./storybook/modes.ts` file](../.storybook/modes.ts)
 
-> Note: At this time we are only considering modes for viewport and languages. Color mode is not possible with the existing setup and is being investigated on making it available, should we want to use it.
+> Note: At this time we are only considering modes for viewport and languages. Color mode is not possible with the existing setup and is being investigated to make it available, should we want to use it.
 
 When using a mode at either the component level (all stories in a given file) or at the story level, they are supplied under the `chromatic` parameter.
 
@@ -198,7 +198,7 @@ const meta = {
 
 In this example, we are supplying all the combinations of the languages and viewports together in snapshots. These will only be viewed in chromatic and cannot be seen when viewing storybook locally.
 
-If needs to be only a couple of options, you can write them like this:
+If you need only a couple of options, you can write them like this:
 
 ```ts
 import { viewportModes, langViewportModes } from "../../../../.storybook/modes"
@@ -218,7 +218,7 @@ parameters: {
 
 There may be instances where we would like to save a story for visual testing in local development, but do not want to capture snapshots for regressions. In these cases, enable the `disableSnapshot` option.
 
-This can be applied at any level (project, component, story)
+This can be applied at any level (project, component, story).
 
 ```ts
 // At any level
