@@ -44,7 +44,7 @@ feature 2             \ _ _  O
 In the event that a bug was found in `staging` during the QA cycle that blocks a release, the following steps will take place to address the bug:
 
 1. Create an issue in GitHub documenting the bug
-2. Triage issue to a developer
+2. Triage the issue to a developer
 3. Developer will create a branch off of `staging`
 4. Work on bugfix
 5. Create a pull request into `staging`
@@ -69,7 +69,7 @@ dev     O - - - - O - - O - O - - - O - - - - - O
 
 ## Hotfix process
 
-In the event that a hotfix is found in production and needs to be addressed before the next release
+In the event that a hotfix is found in production and needs to be addressed before the next release.
 
 1. Create an issue in GitHub documenting the bug
 2. Triage issue to a developer
@@ -99,4 +99,4 @@ dev     O - - O - - - - O
 
 The main idea behind the community QA process is to focus on the [current release changelog](https://github.com/ethereum/ethereum-org-website/releases) and check that new features or fixes applied are working as expected. During QA sessions, some notes could also be shared if we're looking for specific things to be tested.
 
-If you find any bug, please report it on the [#website-bugs](https://discord.com/channels/714888181740339261/727898649006309377) Discord channel.
+If you find a bug, please report it on the [#website-bugs](https://discord.com/channels/714888181740339261/727898649006309377) Discord channel.
