@@ -20,7 +20,7 @@ We implemented Matomo using the [JavaScript tracking client](https://developer.m
 
 ## What to measure?
 
-Ideally, ask yourself what design decision/assumptions have been made on the page and should/could be validated by measured performance:
+Ideally, ask yourself what design decisions/assumptions have been made on the page and should/could be validated by measured performance:
 
 - clicks
 - downloads
@@ -29,7 +29,7 @@ Ideally, ask yourself what design decision/assumptions have been made on the pag
 - form fields abandoned
 - scroll behavior down a page
 
-This data can be later used to decide whether a feature is being used or is underperforming.
+This data can later be used to decide whether a feature is being used or is underperforming.
 
 It's helpful to ask yourself how the results of what we track and measure might influence our decision-making. For example, measuring something that won't help us make concrete product decisions is probably not worth tracking.
 
@@ -87,7 +87,7 @@ const handleEvent = (): void => {
 
 ## Hidden gem of tracking: Value
 
-Can be used to get more info on the UX.
+It can be used to get more info on the UX.
 
 Examples:
 
