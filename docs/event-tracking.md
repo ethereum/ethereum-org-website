@@ -29,7 +29,7 @@ Ideally, ask yourself what design decision/assumptions have been made on the pag
 - form fields abandoned
 - scroll behavior down a page
 
-This data can be later used to decide whether a feature is being used or is underperforming.
+This data can later be used to decide whether a feature is being used or is underperforming.
 
 It's helpful to ask yourself how the results of what we track and measure might influence our decision-making. For example, measuring something that won't help us make concrete product decisions is probably not worth tracking.
 
@@ -91,7 +91,7 @@ Can be used to get more info on the UX.
 
 Examples:
 
-- Use it to track the average position of clicked search result
+- Use it to track the average position of clicked search results
 - What terms are entered into the search field
 - Which option is chosen from a dropdown menu
 - How many or what filters are applied when filtering the list of wallets
