@@ -19,7 +19,7 @@ export async function fetchGasPrice(): Promise<GasPriceData> {
   }
 
   const data = await response.json()
-  const gasPrice = parseFloat(data.result.ProposeGasPrice)
+  const gasPrice = parseFloat(data.result?.ProposeGasPrice)
 
   if (!gasPrice) {
     throw new Error("Unable to parse gas price from Etherscan")

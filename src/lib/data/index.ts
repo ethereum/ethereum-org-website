@@ -5,6 +5,7 @@ import * as dataLayer from "@/data-layer"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
+const CACHE_REVALIDATE_HOUR = BASE_TIME_UNIT
 const CACHE_REVALIDATE_DAY = BASE_TIME_UNIT * 24
 
 function createCachedGetter<T>(
@@ -22,10 +23,22 @@ export const getEthPrice = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+export const getHourlyEthPrice = createCachedGetter(
+  dataLayer.getEthPrice,
+  ["eth-price-hourly"],
+  CACHE_REVALIDATE_HOUR
+)
+
 export const getGasPriceData = createCachedGetter(
   dataLayer.getGasPriceData,
   ["gas-price"],
   CACHE_REVALIDATE_DAY
+)
+
+export const getHourlyGasPriceData = createCachedGetter(
+  dataLayer.getGasPriceData,
+  ["gas-price-hourly"],
+  CACHE_REVALIDATE_HOUR
 )
 
 export const getL2beatData = createCachedGetter(

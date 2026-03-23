@@ -45,7 +45,7 @@ const GasTable = ({ labels, locale, initialData }: GasTableProps) => {
       .then((fresh) => {
         if (fresh) setData(fresh)
       })
-      .catch(() => {})
+      .catch((err) => console.warn("Failed to refresh gas/ETH price", err))
   }, [])
 
   const calculateCost = (gasUnits: number) => {

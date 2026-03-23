@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server"
 
-import { getEthPrice, getGasPriceData } from "@/lib/data"
+import { getHourlyEthPrice, getHourlyGasPriceData } from "@/lib/data"
 
 export const revalidate = 3600 // 1 hour
 
 export async function GET() {
   const [gasPriceData, ethPriceData] = await Promise.all([
-    getGasPriceData(),
-    getEthPrice(),
+    getHourlyGasPriceData(),
+    getHourlyEthPrice(),
   ])
 
   if (!gasPriceData || !ethPriceData || "error" in ethPriceData) {
