@@ -5,7 +5,7 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
-import OnchainGamingProductList from "@/components/Content/gaming/OnchainGamingProductList"
+import CategoryAppsGrid from "@/components/Content/apps/CategoryAppsGrid"
 import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
 import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import TabbedSection from "@/components/Content/restaking/RestakingTab"
@@ -30,9 +30,9 @@ export const useCasesComponents = {
   CardGrid,
   AiAgentProductLists,
   BuildYourOwnAIAgent,
+  CategoryAppsGrid,
   RestakingList,
   TabbedSection,
-  OnchainGamingProductList,
   PredictionMarketLists,
 }
 

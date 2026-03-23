@@ -1,85 +1,106 @@
 ---
 title: "Çağrı Verisi Optimizasyonu için Kısa ABI'ler"
-description: Akıllı sözleşmeleri İyimser Toplamalar için optimize etme
+description: "İyimser Toplamalar için akıllı sözleşmeleri optimize etme"
 author: Ori Pomerantz
 lang: tr
-tags:
-  - "katman 2"
+tags: [ "katman 2" ]
 skill: intermediate
 published: 2022-04-01
 ---
 
 ## Giriş {#introduction}
 
-Bu makalede [iyimser toplamalar](/developers/docs/scaling/optimistic-rollups), onların işlem ücretleri ve bu farklı maliyet yapısının Ethereum Ana Ağı'ndakilere göre farklı şeyler için optimizasyon yapmamızı nasıl şart koştuğu hakkında bilgi edineceksiniz. Aynı zamanda bu optimizasyon işlemini nasıl uygulayacağınızı da göreceksiniz.
+Bu makalede [iyimser toplamalar](/developers/docs/scaling/optimistic-rollups), bunların işlem maliyetleri ve bu farklı maliyet yapısının Ethereum Ana Ağı'ndakinden farklı şeyler için optimizasyon yapmamızı nasıl gerektirdiği hakkında bilgi edineceksiniz.
+Ayrıca bu optimizasyonu nasıl uygulayacağınızı da öğreneceksiniz.
 
-### Bilgilendirme {#full-disclosure}
+### Tam beyan {#full-disclosure}
 
-Ben tam zamanlı bir [ "Optimism"](https://www.optimism.io/) çalışanıyım, bu yüzden bu makaledeki örnekler Optimism üzerinde çalışabilecek örnekler olacaktır. Ancak, burada anlatacağım teknik diğer toplamalarda da işe yarayacaktır.
+Ben tam zamanlı bir [Optimism](https://www.optimism.io/) çalışanıyım, bu nedenle bu makaledeki örnekler Optimism üzerinde çalışacaktır.
+Ancak, burada açıklanan teknik diğer toplamalar için de aynı şekilde çalışmalıdır.
 
 ### Terminoloji {#terminology}
 
-Toplamalar üzerinde konuşurken üretim Ethereum Ağı olan Ana Ağ için "katman 1 (L1)" terimi kullanılacaktır. "Katman 2 (L2)" terimi ise toplama veya güvenliği L1'e dayanan fakat işlemlerinin çoğunu zincir dışında yapan her türlü sistem için kullanılacaktır.
+Toplamalar tartışılırken, üretim Ethereum ağı olan Ana Ağ için 'katman 1' (L1) terimi kullanılır.
+'Katman 2' (L2) terimi, güvenlik için L1'e dayanan ancak işlemlerinin çoğunu zincir dışında yapan toplama veya diğer herhangi bir sistem için kullanılır.
 
-## L2 işlemlerinin maliyetlerini nasıl daha da azaltabiliriz? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## L2 işlemlerinin maliyetini nasıl daha da düşürebiliriz? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
 
-[İyimser toplamalar](/developers/docs/scaling/optimistic-rollups), insanların sonradan gözden geçirip durumun doğru olup olmadığını kontrol edebilmesi için tüm geçmiş işlemlerin kayıtlarını tutmalıdır. Verileri Ethereum Ana Ağı'na sokabilmenin en uygun yolu, onları çağrı verisi olarak yazmaktır. Bu çözüm, hem [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) hem de [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) tarafından tercih edilmiştir.
+[İyimser toplamalar](/developers/docs/scaling/optimistic-rollups), herkesin bunları inceleyebilmesi ve mevcut durumun doğru olduğunu doğrulayabilmesi için her geçmiş işlemin kaydını tutmak zorundadır.
+Verileri Ethereum Ana Ağı'na almanın en ucuz yolu, onları çağrı verisi olarak yazmaktır.
+Bu çözüm hem [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) hem de [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) tarafından seçilmiştir.
 
 ### L2 işlemlerinin maliyeti {#cost-of-l2-transactions}
 
-L2 işlemlerinin maliyetleri iki bileşenden oluşur:
+L2 işlemlerinin maliyeti iki bileşenden oluşur:
 
-1. L2 işlemi, genelde çok ucuzdur
-2. L1 depolaması, Ana Ağ'ın gaz ücretlerine bağlıdır
+1. Genellikle son derece ucuz olan L2 işleme
+2. Ana Ağ gaz maliyetlerine bağlı olan L1 depolaması
 
-Bunu yazarken, Optimism'de L2 gazının maliyeti 0,001 [Gwei](/developers/docs/gas/#pre-london) idi. L1 gazının maliyeti ise şu an yaklaşık 40 Gwei'dir. [Güncel fiyatları buradan inceleyebilirsiniz](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+Bu yazıyı yazarken Optimism'de L2 gaz maliyeti 0,001 [Gwei](/developers/docs/gas/#pre-london)'dir.
+Öte yandan L1 gazının maliyeti ise yaklaşık 40 gwei'dir.
+[Mevcut fiyatları buradan görebilirsiniz](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
-Çağrı verisinin bir baytı 4 gaz (eğer sıfırsa) veya 16 gazdır (eğer farklı bir değerse). EVM'deki en pahalı işlemlerden biri, depolamaya yazmaktır. 32 baytlık bir kelimeyi L2'deki bir depoya yazmanın maksimum maliyeti 22100 gazdır. Şu anda bu 22,1 Gwei'ye tekabül ediyor. Yani eğer sıfır baytlık bir çağrı verisi tasarruf etmemiz, depolamaya 200 bayt bile yazsak hala kârda olabileceğimizi gösteriyor.
+Bir çağrı verisi baytının maliyeti, sıfır ise 4 gaz, başka bir değer ise 16 gazdır.
+EVM'deki en pahalı işlemlerden biri depolamaya yazmaktır.
+32 baytlık bir kelimeyi L2'de depolamaya yazmanın maksimum maliyeti 22.100 gazdır. Şu anda bu, 22,1 gwei'dir.
+Dolayısıyla, çağrı verisinden yalnızca sıfır değerli tek bir bayt tasarruf edebilirsek, depolamaya yaklaşık 200 bayt yazabilir ve yine de kârlı çıkabiliriz.
 
 ### ABI {#the-abi}
 
-İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir. Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzü (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding) ile uyumlu olacak şekilde yorumlar.
+İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir.
+Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzüne (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding) göre yorumlar.
 
-Bununla birlikte ABI, bir çağrı verisi baytının maliyetinin yaklaşık olarak dört aritmetik işlemle aynı olduğu L1 için tasarlanmıştır; bir çağrı verisi baytının bin aritmetik işlemden daha pahalı olduğu L2 için değil. Örneğin, [bir ERC-20 transfer işlemini burada bulabilirsiniz](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998). Çağrı verisi şu şekilde bölünür:
+Ancak ABI, bir çağrı verisi baytının maliyetinin yaklaşık olarak dört aritmetik işlemle aynı olduğu L1 için tasarlanmıştır, bir çağrı verisi baytının bin aritmetik işlemden daha pahalı olduğu L2 için değil.
+Çağrı verisi şu şekilde bölünür:
 
-| Bölüm            | Uzunluk | Baytlar | Harcanan bayt | Harcanan gaz | Gereken bayt | Gereken gaz |
-| ---------------- | -------:| -------:| -------------:| ------------:| ------------:| -----------:|
-| Fonksiyon seçici |       4 |     0-3 |             3 |           48 |            1 |          16 |
-| Sıfırlar         |      12 |    4-15 |            12 |           48 |            0 |           0 |
-| Varış adresi     |      20 |   16-35 |             0 |            0 |           20 |         320 |
-| Miktar           |      32 |   36-67 |            17 |           64 |           15 |         240 |
-| Toplam           |      68 |         |               |          160 |              |         576 |
+| Bölüm            | Uzunluk |  Bayt | İsraf edilen bayt | İsraf edilen gaz | Gerekli bayt | Gerekli gaz |
+| ---------------- | ------: | ----: | ----------------: | ---------------: | -----------: | ----------: |
+| Fonksiyon seçici |       4 |   0-3 |                 3 |               48 |            1 |          16 |
+| Sıfırlar         |      12 |  4-15 |                12 |               48 |            0 |           0 |
+| Hedef adresi     |      20 | 16-35 |                 0 |                0 |           20 |         320 |
+| Miktar           |      32 | 36-67 |                17 |               64 |           15 |         240 |
+| Toplam           |      68 |       |                   |              160 |              |         576 |
 
 Açıklama:
 
-- **İşlem Seçici**: Sözleşmenin 256'den az fonksiyonu var, yani bunları tek bir baytla ayrıştırabiliriz. Bu baytların değeri genelde sıfırdan farklıdır ve bu sebeple [maliyetleri 16 gazdır](https://eips.ethereum.org/EIPS/eip-2028).
-- **Sıfırlar**: Bu baytlar her zaman 0'dır çünkü 20 baytlık bir adres onu tutabilmek için 32 baytlık bir kelimeye ihtiyaç duymaz. 4 gaz tutan 0 maliyetli baytlar ([sarı kağıdı inceleyin](https://ethereum.github.io/yellowpaper/paper.pdf), Ek G, sayfa 27, `G`<sub>`txdatazero`</sub> değeri).
-- **Miktar**: Bu sözleşmede `decimals` değerinin on sekiz (normal değer) ve transfer edilecek maksimum jeton sayısının da 10<sup>18</sup> olduğunu varsayarsak, maksimum 10<sup>36</sup> gibi bir miktar elde ederiz. 256<sup>15</sup> &gt; 10<sup>36</sup>, yani 15 bayt yeterlidir.
+- **Fonksiyon seçici**: Sözleşmenin 256'dan az fonksiyonu olduğundan, bunları tek bir baytla ayırt edebiliriz.
+  Bu baytlar genellikle sıfır değildir ve bu nedenle [maliyeti 16 gazdır](https://eips.ethereum.org/EIPS/eip-2028).
+- **Sıfırlar**: Bu baytlar her zaman sıfırdır çünkü yirmi baytlık bir adres, onu tutmak için otuz iki baytlık bir kelime gerektirmez.
+  Sıfır değeri taşıyan baytların maliyeti dört gazdır ([sarı bültene bakın](https://ethereum.github.io/yellowpaper/paper.pdf), Ek G,
+  s. 27, `G`<sub>`txdatazero`</sub> değeri için).
+- **Miktar**: Bu sözleşmede `decimals` değerinin on sekiz (normal değer) olduğunu ve transfer edeceğimiz maksimum jeton miktarının 10<sup>18</sup> olacağını varsayarsak, maksimum 10<sup>36</sup> tutarında bir miktar elde ederiz.
+  256<sup>15</sup> > 10<sup>36</sup>, yani on beş bayt yeterlidir.
 
-L1 üzerinde harcanan 160 gaz normalde göz ardı edilebilir bir değerdir. Bir işlemin maliyeti en az [21.000 gazdır](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), yani ekstra %0,8'in bir önemi yoktur. Fakat L2'de işler biraz daha farklıdır. Buradaki işlem maliyetinin neredeyse tamamı işlemi L1'e yazmaktır. İşlem çağrı verisine ek olarak, 109 baytlık bir işlem başlığı vardır (varış adresi, imza vs.). Toplam maliyet `109*16+576+160=2480` kadardır ve bunun %65'ini boşa harcıyoruz.
+L1'de 160 gazlık bir israf normalde ihmal edilebilir düzeydedir. Bir işlemin maliyeti en az [21.000 gazdır](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), bu nedenle fazladan %0,8'lik bir oran önemli değildir.
+Ancak L2'de işler farklıdır. İşlem maliyetinin neredeyse tamamı, işlemi L1'e yazmaktır.
+İşlem çağrı verisine ek olarak 109 baytlık bir işlem başlığı (hedef adresi, imza vb.) bulunur.
+Bu nedenle toplam maliyet `109*16+576+160=2480` olup bunun yaklaşık %6,5'ini boşa harcıyoruz.
 
-## Hedefi kontrol etmediğimiz durumlarda maliyetleri azaltma {#reducing-costs-when-you-dont-control-the-destination}
+## Hedef sözleşmeyi kontrol etmediğinizde maliyetleri düşürme {#reducing-costs-when-you-dont-control-the-destination}
 
-Hedef sözleşme üzerinde kontrolünüz olmadığını varsayarsak, yine de [buna](https://github.com/qbzzt/ethereum.org-20220330-shortABI) benzer bir çözüm yolu kullanabilirsiniz. Hadi ilgili dosyalara bir göz atalım.
+Hedef sözleşme üzerinde kontrolünüz olmadığını varsayarsak, yine de [buna](https://github.com/qbzzt/ethereum.org-20220330-shortABI) benzer bir çözüm kullanabilirsiniz.
+İlgili dosyalara bir göz atalım.
 
 ### Token.sol {#token-sol}
 
-[Bu, hedef sözleşmedir](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol). Bu, bir ek özellikle gelen standart bir ERC-20 sözleşmesidir. Bu `faucet`, her kullanıcının kullanabilmek için biraz jeton almasını sağlar. Bu, üretim ERC-20 sözleşmesini gereksiz kılabilecek olsa da, ERC-20 sadece test yapmayı kolaylaştırmak amaçlı var olduğunda işleri gerçekten kolaylaştırıyor.
+[Bu, hedef sözleşmedir](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
+Bu, bir ek özelliğe sahip standart bir ERC-20 sözleşmesidir.
+Bu `faucet` fonksiyonu, herhangi bir kullanıcının kullanmak üzere bir miktar jeton almasını sağlar.
+Bu, bir üretim ERC-20 sözleşmesini kullanışsız hale getirse de bir ERC-20 yalnızca testi kolaylaştırmak için mevcut olduğunda işleri kolaylaştırır.
 
 ```solidity
     /**
-     * @dev Gives the caller 1000 tokens to play with
+     * @dev Çağırana oynaması için 1000 jeton verir
      */
     function faucet() external {
         _mint(msg.sender, 1000);
     }   // function faucet
 ```
 
-[Burada bu sözleşmenin dağıtılmış olduğu bir örneği görebilirsiniz](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
-
 ### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
-[Bu, işlemlerin daha küçük çağrı verileriyle çağırması gereken sözleşmedir](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol). Hadi satır satır inceleyelim.
+[Bu, işlemlerin daha kısa çağrı verisi ile çağırması gereken sözleşmedir](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
+Satır satır üzerinden geçelim.
 
 ```solidity
 //SPDX-License-Identifier: Unlicense
@@ -89,7 +110,7 @@ pragma solidity ^0.8.0;
 import { OrisUselessToken } from "./Token.sol";
 ```
 
-Nasıl çağırabileceğimizi bilmek için jeton işlevine ihtiyacımız var.
+Onu nasıl çağıracağımızı bilmek için jeton fonksiyonuna ihtiyacımız var.
 
 ```solidity
 contract CalldataInterpreter {
@@ -97,13 +118,13 @@ contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
-Bizim vekil olduğumuz jetonun adresi.
+Vekil olduğumuz jetonun adresi.
 
 ```solidity
 
     /**
-     * @dev Specify the token address
-     * @param tokenAddr_ ERC-20 contract address
+     * @dev Jeton adresini belirtin
+     * @param tokenAddr_ ERC-20 sözleşme adresi
      */
     constructor(
         address tokenAddr_
@@ -112,26 +133,28 @@ Bizim vekil olduğumuz jetonun adresi.
     }   // constructor
 ```
 
-Jetonun adresi belirtmemiz gereken tek parametredir.
+Jeton adresi, belirtmemiz gereken tek parametredir.
 
 ```solidity
     function calldataVal(uint startByte, uint length)
         private pure returns (uint) {
 ```
 
-Çağrı verisinden bir değer okuyalım.
+Çağrı verisinden bir değer okuyun.
 
 ```solidity
         uint _retVal;
 
         require(length < 0x21,
-            "calldataVal length limit is 32 bytes");
+            "calldataVal uzunluk sınırı 32 bayttır");
 
         require(length + startByte <= msg.data.length,
-            "calldataVal trying to read beyond calldatasize");
+            "calldataVal, calldatasize ötesini okumaya çalışıyor");
 ```
 
-32 baytlık (256 bit) tek bir kelimeyi belleğe yükleyecek ve istediğimiz alanın bir parçası olmayan baytlardan kurtulacağız. Bu algoritma, 32 bayttan daha büyük değerler için işe yaramaz ve tabi ki çağrı verisini okuyup geçemeyiz. L1'de gaz tasarrufu için bu testleri atlamak gerekli olabilir fakat L2'de gaz oldukça ucuzdur ve düşünebileceğimiz her mantık kontrolünü yapabilmemize olanak sağlar.
+Belleğe tek bir 32 baytlık (256 bit) kelime yükleyeceğiz ve istediğimiz alanın parçası olmayan baytları kaldıracağız.
+Bu algoritma 32 bayttan uzun değerler için çalışmaz ve elbette çağrı verisinin sonundan ötesini okuyamayız.
+L1'de gazdan tasarruf etmek için bu testleri atlamak gerekebilir, ancak L2'de gaz son derece ucuzdur, bu da aklımıza gelebilecek her türlü mantık kontrolünü yapmamızı sağlar.
 
 ```solidity
         assembly {
@@ -139,16 +162,18 @@ Jetonun adresi belirtmemiz gereken tek parametredir.
         }
 ```
 
-`fallback()` (aşağıya bakın) çağrısından verileri kopyalayabilirdik, fakat EVM'nin derleme dili olan [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html)'u kullanmak daha kolaydır.
+Verileri `fallback()` çağrısından (aşağıya bakın) kopyalayabilirdik, ancak EVM'nin assembly dili olan [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html) dilini kullanmak daha kolaydır.
 
-Burada, baytları okuyup yığına yerleştirmek için (`startByte` ve `startByte+31`) [CALLDATALOAD işlem kodunu](https://www.evm.codes/#35) kullanıyoruz. Genelde, Yul'daki bir işlem kodunun söz dizimi şu şekildedir: `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
+Burada `startByte` ile `startByte+31` arasındaki baytları yığına okumak için [CALLDATALOAD işlem kodunu](https://www.evm.codes/#35) kullanıyoruz.
+Genel olarak, Yul'daki bir işlem kodunun sözdizimi `<işlem kodu adı>(<varsa ilk yığın değeri>,<varsa ikinci yığın değeri>...)` şeklindedir.
 
 ```solidity
 
         _retVal = _retVal >> (256-length*8);
 ```
 
-Sadece en önemli `length` baytları alanın bir parçasıdır, bu yüzden diğer verilerden kurtulmak için [sağa kaydırma](https://en.wikipedia.org/wiki/Logical_shift) kullanıyoruz. Bu işlem, değeri alanın sağına taşıma avantajını sağlıyor; yani değer çarpı 256<sup>something</sup> yerine değerin kendisini kullanmış oluyoruz.
+Alanın yalnızca en anlamlı `uzunluktaki` baytları parçasıdır, bu nedenle diğer değerlerden kurtulmak için [sağa kaydırma](https://en.wikipedia.org/wiki/Logical_shift) yaparız.
+Bu, değeri alanın sağına taşıma gibi ek bir avantaja sahiptir, dolayısıyla değerin kendisidir, değer çarpı 256<sup>bir şey</sup> değildir.
 
 ```solidity
 
@@ -159,7 +184,8 @@ Sadece en önemli `length` baytları alanın bir parçasıdır, bu yüzden diğe
     fallback() external {
 ```
 
-Bir Solidity sözleşmesine yapılan çağrı hiçbir işlev imzasıyla eşleşmezse, [`fallback()` fonksiyonunu](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) çağırır (bir tane olduğunu varsayarak). `CalldataInterpreter` söz konusu olduğunda, başka bir `external` veya `public` işlev olmadığından _her_ çağrı buraya ulaşır.
+Bir Solidity sözleşmesine yapılan bir çağrı, işlev imzalarından herhangi biriyle eşleşmediğinde, [`fallback()` işlevini](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) çağırır (varsa).
+`CalldataInterpreter` durumunda, başka `external` veya `public` işlevler olmadığı için _herhangi bir_ çağrı buraya gelir.
 
 ```solidity
         uint _func;
@@ -167,23 +193,27 @@ Bir Solidity sözleşmesine yapılan çağrı hiçbir işlev imzasıyla eşleşm
         _func = calldataVal(0, 1);
 ```
 
-Çağrı verisinin ilk baytını okuyun, bu bize fonksiyonu anlatır. Burada bir fonksiyonun ulaşılabilir olmamasının iki sebebi vardır:
+Bize işlevi söyleyen çağrı verisinin ilk baytını okuyun.
+Bir işlevin burada mevcut olmamasının iki nedeni vardır:
 
-1. `pure` veya `view` olan fonksiyonlar, durumu değiştirmezler ve gaz maliyetleri yoktur (zincir dışı olarak çağrıldıklarında). O yüzden gaz maliyetini düşürmeye çalışmanın da bir anlamı yoktur.
-2. [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties)'a bağımlı olan fonksiyonlar. `msg.sender`'ın değeri, çağıranın değil `CalldataInterpreter`'ın adresi olacaktır.
+1. `pure` veya `view` olan işlevler durumu değiştirmez ve gaza mal olmaz (zincir dışı çağrıldığında).
+   Gaz maliyetlerini düşürmeye çalışmanın bir anlamı yoktur.
+2. [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties)'a dayanan işlevler.
+   `msg.sender` değeri, arayanın değil `CalldataInterpreter` adresinin adresi olacaktır.
 
-Malesef, [ERC-20'nin özelliklerine bakıldığında](https://eips.ethereum.org/EIPS/eip-20) bu bize sadece bir fonksiyon bırakıyor: `transfer`. Bu da bize 2 fonsiyon bırakıyor: `transfer` (çünkü `transferFrom` çağrısı yapabiliyoruz) ve `faucet` (çünkü jetonları bizi kim çağırdıysa ona transfer edebiliyoruz).
+Ne yazık ki, [ERC-20 belirtimlerine bakıldığında](https://eips.ethereum.org/EIPS/eip-20), bu geriye yalnızca bir işlev bırakır: `transfer`.
+Bu bize sadece iki işlev bırakıyor: `transfer` (`transferFrom` çağırabildiğimiz için) ve `faucet` (jetonları bizi çağıran kişiye geri aktarabildiğimiz için).
 
 ```solidity
 
-        // Call the state changing methods of token using
-        // information from the calldata
+        // Çağrı verisindeki bilgileri kullanarak jetonun durum değiştirme
+        // yöntemlerini çağırın
 
         // faucet
         if (_func == 1) {
 ```
 
-`faucet()`'a yapılan parametresiz bir çağrı.
+Parametresi olmayan `faucet()` çağrısı.
 
 ```solidity
             token.faucet();
@@ -192,45 +222,48 @@ Malesef, [ERC-20'nin özelliklerine bakıldığında](https://eips.ethereum.org/
         }
 ```
 
-`token.faucet()`'i çağırdıktan sonra jetonlara sahip oluyoruz. Fakat vekil sözleşmesi olarak, jetonlara **ihtiyaç** duymuyoruz. Ama EOA (dışarıdan sahip olunan hesap) ya da bizi çağıran sözleşme duyuyor. Yani biz bizi kim çağırırsa ona tüm jetonlarımızı transfer ediyoruz.
+`token.faucet()` öğesini çağırdıktan sonra jetonları alırız. Ancak, vekil sözleşmesi olarak jetonlara **ihtiyacımız yok**.
+Bizi arayan EOA (harici olarak sahip olunan hesap) veya sözleşmenin ihtiyacı var.
+Bu yüzden tüm jetonlarımızı bizi arayan kişiye aktarıyoruz.
 
 ```solidity
-        // transfer (assume we have an allowance for it)
+        // transfer (bunun için bir yetkimiz olduğunu varsayalım)
         if (_func == 2) {
 ```
 
-Jeton transferi iki parametreye ihtiyaç duyuyor: hedef adres ve miktar.
+Jeton transferi iki parametre gerektirir: hedef adres ve miktar.
 
 ```solidity
             token.transferFrom(
                 msg.sender,
 ```
 
-Kullanıcıların sadece kendi sahip oldukları jetonları transfer etmesine izin veriyoruz
+Arayanların yalnızca sahip oldukları jetonları transfer etmelerine izin veriyoruz
 
 ```solidity
                 address(uint160(calldataVal(1, 20))),
 ```
 
-Hedef adres, 1 numaralı baytta başlıyor (0 numaralı bayt fonksiyonun kendisi). Bir adres olarak uzunluğu 20 bayttır.
+Hedef adresi 1 numaralı bayttan başlar (0 numaralı bayt işlevdir).
+Bir adres olarak 20 bayt uzunluğundadır.
 
 ```solidity
                 calldataVal(21, 2)
 ```
 
-Bu spesifik sözleşme için birinin isteyebileceği maksimum jeton sayısının 2 bayta sığacağını varsayıyoruz (65536'dan daha az).
+Bu özel sözleşme için, herhangi birinin transfer etmek isteyeceği maksimum jeton sayısının iki bayta (65536'dan az) sığdığını varsayıyoruz.
 
 ```solidity
             );
         }
 ```
 
-Ortalama olarak bir transfer 35 bayt kadar çağrı verisi kaplar:
+Genel olarak, bir transfer 35 bayt çağrı verisi alır:
 
 | Bölüm            | Uzunluk |  Bayt |
-| ---------------- | -------:| -----:|
+| ---------------- | ------: | ----: |
 | Fonksiyon seçici |       1 |     0 |
-| Varış adresi     |      32 |  1-32 |
+| Hedef adresi     |      32 |  1-32 |
 | Miktar           |       2 | 33-34 |
 
 ```solidity
@@ -241,44 +274,48 @@ Ortalama olarak bir transfer 35 bayt kadar çağrı verisi kaplar:
 
 ### test.js {#test-js}
 
-[Bu Javascript birim testi](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) bize bu mekanizmayı nasıl kullanacağımızı (ve nasıl doğru çalışacağını onaylayacağımızı) gösteriyor. [chai](https://www.chaijs.com/) and [ethers](https://docs.ethers.io/v5/) kısımlarını anladığınızı varsayıp sadece sözleşme için geçerli olan kısımları anlatacağım.
+[Bu JavaScript birim testi](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) bize bu mekanizmanın nasıl kullanılacağını (ve doğru çalışıp çalışmadığını nasıl doğrulayacağımızı) gösterir.
+[chai](https://www.chaijs.com/) ve [ethers](https://docs.ethers.io/v5/)'ı anladığınızı varsayacağım ve yalnızca sözleşmeye özel olarak uygulanan kısımları açıklayacağım.
 
 ```js
 const { expect } = require("chai");
 
 describe("CalldataInterpreter", function () {
-  it("Should let us use tokens", async function () {
+  it("Jetonları kullanmamıza izin vermeli", async function () {
     const Token = await ethers.getContractFactory("OrisUselessToken")
     const token = await Token.deploy()
     await token.deployed()
-    console.log("Token addr:", token.address)
+    console.log("Jeton adresi:", token.address)
 
     const Cdi = await ethers.getContractFactory("CalldataInterpreter")
     const cdi = await Cdi.deploy(token.address)
     await cdi.deployed()
-    console.log("CalldataInterpreter addr:", cdi.address)
+    console.log("CalldataInterpreter adresi:", cdi.address)
 
     const signer = await ethers.getSigner()
 ```
 
-Her iki sözleşmeyi dağıtarak başlıyoruz.
+Her iki sözleşmeyi de dağıtarak başlıyoruz.
 
 ```javascript
-    // Get tokens to play with
+    // Oynamak için jetonları al
     const faucetTx = {
 ```
 
-Normalde işlem oluşturmak için kullandığımız yüksek seviyeli fonksiyonları (`token.faucet()` gibi) kullanamıyoruz, çünkü biz ABI'yi uygulamıyoruz. Bunun yerine, işlemi kendimiz oluşturmalı ve sonrasında göndermeliyiz.
+ABI'yi takip etmediğimiz için, normalde kullanacağımız üst düzey işlevleri (`token.faucet()` gibi) işlem oluşturmak için kullanamayız.
+Bunun yerine, işlemi kendimiz oluşturmalı ve sonra göndermeliyiz.
 
 ```javascript
       to: cdi.address,
       data: "0x01"
 ```
 
-İşlem için temin etmemiz gereken 2 parametre var:
+İşlem için sağlamamız gereken iki parametre vardır:
 
-1. `to`, hedef adres. Bu, çağrı verisi yorumlama sözleşmesidir.
-2. `data`, gönderilecek çağrı verisi. Bir musluk çağrısı durumunda veri tek bayttır, `0x01`.
+1. `to`, hedef adres.
+   Bu, çağrı verisi yorumlayıcı sözleşmesidir.
+2. `data`, gönderilecek çağrı verisi.
+   Bir musluk çağrısı durumunda, veri tek bir bayttır, `0x01`.
 
 ```javascript
 
@@ -286,26 +323,27 @@ Normalde işlem oluşturmak için kullandığımız yüksek seviyeli fonksiyonla
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-[İmza sahibinin `sendTransaction` yöntemini](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) çağırıyoruz. Çünkü hedefi çoktan belirledik (`faucetTx.to`) ve artık imzalanacak olan işleme ihtiyacımız var.
+İmzalayanın `sendTransaction` yöntemini çağırırız çünkü hedefi zaten belirttik (`faucetTx.to`) ve işlemin imzalanması gerekiyor.
 
 ```javascript
-// Check the faucet provides the tokens correctly
+// Musluğun jetonları doğru bir şekilde sağladığını kontrol edin
 expect(await token.balanceOf(signer.address)).to.equal(1000)
 ```
 
-Burada bakiyeyi onaylıyoruz. `view` fonsiyonlarında gaz tasarrufuna gerek yoktur, bu yüzden bunları sadece normal şekilde çalıştırıyoruz.
+Burada bakiyeyi doğruluyoruz.
+`view` işlevlerinde gaz tasarrufu yapmaya gerek yoktur, bu yüzden onları normal bir şekilde çalıştırırız.
 
 ```javascript
-// CDI'ye bir izin verin (onaylar vekalet edilemez)
+// CDI'ye bir yetki verin (onaylar vekil aracılığıyla yapılamaz)
 const approveTX = await token.approve(cdi.address, 10000)
 await approveTX.wait()
 expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
 ```
 
-Çağrı verisi yorumlayıcısına transferleri yapabilmesi için bir ödenek verin.
+Transfer yapabilmesi için çağrı verisi yorumlayıcısına bir yetki verin.
 
 ```javascript
-// Transfer tokens
+// Jetonları transfer et
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -313,101 +351,101 @@ const transferTx = {
 }
 ```
 
-Bir transfer işlemi oluşturun. İlk bayt "0x02"dir ve ardından hedef adres gelir; son olarak da miktar bulunur (0x0100, ondalık olarak 256).
+Bir transfer işlemi oluşturun. İlk bayt "0x02"dir, bunu hedef adresi ve son olarak miktar (0x0100, ondalık sistemde 256'dır) takip eder.
 
 ```javascript
     await (await signer.sendTransaction(transferTx)).wait()
 
-    // Check that we have 256 tokens less
+    // 256 jeton daha azımız olduğunu kontrol edin
     expect (await token.balanceOf(signer.address)).to.equal(1000-256)
 
-    // And that our destination got them
+    // Ve hedefimizin onları aldığını
     expect (await token.balanceOf(destAddr)).to.equal(256)
   })    // it
 })      // describe
 ```
 
-### Örnek {#example}
+## Hedef sözleşmeyi kontrol ettiğinizde maliyeti düşürme {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
-Bu dosyaları kendiniz çalıştırmadan çalışırken görmek istiyorsanız, şu bağlantıları izleyin:
+Hedef sözleşme üzerinde kontrolünüz varsa, çağrı verisi yorumlayıcısına güvendikleri için `msg.sender` kontrollerini atlayan işlevler oluşturabilirsiniz.
+[Bunun nasıl çalıştığına dair bir örneği `control-contract` dalında buradan görebilirsiniz](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
 
-1. [ `OrisUselessToken`](https://kovan-optimistic.etherscan.io/tx/1410744)'ın [`0x950c753c0edbde44a74d3793db738a318e9c8ce8`](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8) adresine dağıtılması.
-2. [`CalldataInterpreter`](https://kovan-optimistic.etherscan.io/tx/1410745)'ın [`0x16617fea670aefe3b9051096c0eb4aeb4b3a5f55`](https://kovan-optimistic.etherscan.io/address/0x16617fea670aefe3b9051096c0eb4aeb4b3a5f55) adresine dağıtılması.
-3. [`faucet()`](https://kovan-optimistic.etherscan.io/tx/1410746) çağrısı.
-4. [`OrisUselessToken.approve()`](https://kovan-optimistic.etherscan.io/tx/1410747) çağrısı. Bu çağrı doğrudan jeton sözleşmesine gider, çünkü işleme `msg.sender`'a dayanır.
-5. [`transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748) çağrısı.
-
-## Hedef sözleşmeyi kontrol ederken maliyeti azaltma {#reducing-the-cost-when-you-do-control-the-destination-contract}
-
-Eğer hedef sözleşme üzerinde gerçekten kontrolünüz varsa `msg.sender`'i atlatabilen fonksiyonlar oluşturabilirsiniz. Çünkü bunlar çağrı verisi yorumlayıcısına güvenir. [Burada bunun, `control-contract` bölümü](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract) içerisinde nasıl çalıştığına dair bir örnek görebilirsiniz.
-
-Eğer sözleşme sadece harici sözleşmelere cevap veriyorsa, bunu sadece tek bir sözleşmeye sahip olarak halledebiliriz. Fakat bu [birleştirilebilirliiği](/developers/docs/smart-contracts/composability/) bozardı. Normal ERC-20 çağrılarına yanıt veren bir sözleşmeye ve küçük çağrı verilerine cevap verebilen başka bir sözleşmeye sahip olmak çok daha iyidir.
+Sözleşme yalnızca harici işlemlere yanıt veriyorsa, yalnızca bir sözleşmeye sahip olarak idare edebilirdik.
+Ancak bu, [birleştirilebilirliği](/developers/docs/smart-contracts/composability/) bozar.
+Normal ERC-20 çağrılarına yanıt veren bir sözleşmeye ve kısa çağrı verili işlemlere yanıt veren başka bir sözleşmeye sahip olmak çok daha iyidir.
 
 ### Token.sol {#token-sol-2}
 
-Bu örnekte, `Token.sol`'u modifiye ediyoruz. Bu, bizim sadece vekilin çağırabileceği bir çok fonksiyona sahip olmamızı sağlıyor. İşte yeni bölümler:
+Bu örnekte `Token.sol` dosyasını değiştirebiliriz.
+Bu, yalnızca vekilin çağırabileceği bir dizi işleve sahip olmamızı sağlar.
+İşte yeni kısımlar:
 
 ```solidity
-    // The only address allowed to specify the CalldataInterpreter address
+    // CalldataInterpreter adresini belirtmesine izin verilen tek adres
     address owner;
 
-    // The CalldataInterpreter address
+    // CalldataInterpreter adresi
     address proxy = address(0);
 ```
 
-ERC-2O sözleşmesi yetkili vekilin kimliğini bilmelidir. Fakat, oluşturucu içindeki bu değişkeni biz ayarlayamayız, çünkü değeri henüz bilmiyoruz. Bu sözleşme, vekil jetonun adresinin oluşturucusunda olmasını beklediğinden ilk somutlaştırılan sözleşmedir.
+ERC-20 sözleşmesinin yetkili vekilin kimliğini bilmesi gerekir.
+Ancak, değeri henüz bilmediğimiz için bu değişkeni kurucuda ayarlayamayız.
+Bu sözleşme ilk olarak örneklenir çünkü vekil, kurucusunda jetonun adresini bekler.
 
 ```solidity
     /**
-     * @dev Calls the ERC20 constructor.
+     * @dev ERC20 kurucusunu çağırır.
      */
     constructor(
-    ) ERC20("Oris useless token-2", "OUT-2") {
+    ) ERC20("Oris'in işe yaramaz jetonu-2", "OUT-2") {
         owner = msg.sender;
     }
 ```
 
-Vekili belirlemesine izin verilen tek adres olduğundan yaratıcının adresi (`owner`) de burada depolanır.
+Oluşturanın adresi (`owner` olarak adlandırılır) burada saklanır çünkü vekili ayarlamasına izin verilen tek adres budur.
 
 ```solidity
     /**
-     * @dev set the address for the proxy (the CalldataInterpreter).
-     * Can only be called once by the owner
+     * @dev Vekil için adresi ayarla (CalldataInterpreter).
+     * Yalnızca sahip tarafından bir kez çağrılabilir
      */
     function setProxy(address _proxy) external {
-        require(msg.sender == owner, "Can only be called by owner");
-        require(proxy == address(0), "Proxy is already set");
+        require(msg.sender == owner, "Yalnızca sahip tarafından çağrılabilir");
+        require(proxy == address(0), "Vekil zaten ayarlanmış");
 
         proxy = _proxy;
     }    // function setProxy
 ```
 
-Güvenlik kontrollerini atlayabildiği için vekilin ayrıcalıklı erişimi vardır. Vekile güvenebileceğimizden emin olmak için bu fonksiyonu sadece 1 kereliğine `owner`'ın çağırmasına izin veriyoruz. `proxy`'nin gerçek bir değeri olduğunda (sıfır dışında), o değer değişemez; sözleşme sahibi kötü niyetli olarak bunu değiştirmeye kalksa veya anımsatıcısı açığa çıksa bile hala güvendeyiz demektir.
+Vekil, güvenlik kontrollerini atlayabildiği için ayrıcalıklı erişime sahiptir.
+Vekile güvenebileceğimizden emin olmak için, bu işlevi yalnızca `owner`ın ve yalnızca bir kez çağırmasına izin veriyoruz.
+`proxy` gerçek bir değere (sıfır değil) sahip olduğunda, bu değer değiştirilemez, bu nedenle sahibi dolandırıcı olmaya karar verse veya anımsatıcısı ortaya çıksa bile yine de güvendeyiz.
 
 ```solidity
     /**
-     * @dev Some functions may only be called by the proxy.
+     * @dev Bazı işlevler yalnızca vekil tarafından çağrılabilir.
      */
     modifier onlyProxy {
 ```
 
-Bu [`modifier` fonksiyonudur](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) ve diğer fonksiyonların çalışma şeklini değiştirebilir.
+Bu bir [`değiştirici` işlevidir](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), diğer işlevlerin çalışma şeklini değiştirir.
 
 ```solidity
       require(msg.sender == proxy);
 ```
 
-İlk olarak, başkası tarafından değil, vekil tarafından çağrıldığımızı doğrulayalım. Eğer değilse, `revert` kullanın.
+İlk olarak, vekil tarafından arandığımızı ve başka kimsenin aramadığını doğrulayın.
+Değilse, `revert`.
 
 ```solidity
       _;
     }
 ```
 
-Doğrulayabiliyorsa, değiştirdiğimiz fonksiyonu çalıştıralım.
+Eğer öyleyse, değiştirdiğimiz işlevi çalıştırın.
 
 ```solidity
-   /* Proxy'nin hesaplar için gerçekten proxy yapmasına izin veren işlevler */
+   /* Vekilin hesaplar için gerçekten vekillik yapmasına izin veren işlevler */
 
     function transferProxy(address from, address to, uint256 amount)
         public virtual onlyProxy() returns (bool)
@@ -436,17 +474,18 @@ Doğrulayabiliyorsa, değiştirdiğimiz fonksiyonu çalıştıralım.
     }
 ```
 
-Bunlar normalde mesajın doğrudan jeton aktaran veya bir ödeneği onaylayan kuruluştan gelmesini gerektiren üç işlemdir. Burada bu işlemlerin şu nitelikleri taşıyan vekil versiyonları mevcuttur:
+Bunlar normalde mesajın doğrudan jetonları transfer eden veya bir yetkiyi onaylayan kuruluştan gelmesini gerektiren üç işlemdir.
+Burada bu işlemlerin şu nitelikleri taşıyan vekil versiyonları mevcuttur:
 
-1. Başka hiç kimse kontrol sahibi olamasın diye `onlyProxy()` tarafından değiştirilmiş.
-2. Normalde `msg.sender` olan adresi ekstra parametre olarak alan.
+1. `onlyProxy()` tarafından değiştirilmiştir, böylece başka kimsenin onları kontrol etmesine izin verilmez.
+2. Normalde `msg.sender` olacak adresi ekstra bir parametre olarak alır.
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
-Çağrı verisi yorumlayıcısı neredeyse yukardakiyle aynı olmasına rağmen şu noktada ayrışır: vekil fonksiyonlar `msg.sender` parametresi alır ve `transfer` için herhangi bir ödeneğe ihtiyaç yoktur.
+Çağrı verisi yorumlayıcısı, vekil işlevlerin bir `msg.sender` parametresi alması ve `transfer` için bir yetkiye gerek olmaması dışında, yukarıdakiyle neredeyse aynıdır.
 
 ```solidity
-        // transfer (no need for allowance)
+        // transfer (yetkiye gerek yok)
         if (_func == 2) {
             token.transferProxy(
                 msg.sender,
@@ -477,7 +516,7 @@ Bunlar normalde mesajın doğrudan jeton aktaran veya bir ödeneği onaylayan ku
 
 ### Test.js {#test-js-2}
 
-Az önceki test kodları ve aşağıdakinin arasında birkaç değişiklik vardır.
+Önceki test kodu ile bu kod arasında birkaç değişiklik var.
 
 ```js
 const Cdi = await ethers.getContractFactory("CalldataInterpreter")
@@ -486,21 +525,22 @@ await cdi.deployed()
 await token.setProxy(cdi.address)
 ```
 
-ERC-20 sözleşmesine hangi vekil sunucuya güveneceğini aktarmamız gerekir
+ERC-20 sözleşmesine hangi vekile güveneceğini söylememiz gerekiyor
 
 ```js
-console.log("CalldataInterpreter addr:", cdi.address)
+console.log("CalldataInterpreter adresi:", cdi.address)
 
-// Need two signers to verify allowances
+// Yetkileri doğrulamak için iki imzalayan gerekir
 const signers = await ethers.getSigners()
 const signer = signers[0]
 const poorSigner = signers[1]
 ```
 
-`approve()` ve `transferFrom()`'u kontrol edebilmek için ikinci bir imza sahibine ihtiyacımız var. Buna `poorSigner` adını veriyoruz çünkü bizim jetonlarımızın hiçbirini almıyor (elbette ETH sahibi olmasına gerek yok).
+`approve()` ve `transferFrom()` kontrol etmek için ikinci bir imzalayana ihtiyacımız var.
+Buna `poorSigner` diyoruz çünkü jetonlarımızdan hiçbirini almıyor (tabii ki ETH'ye sahip olması gerekiyor).
 
 ```js
-// Transfer tokens
+// Jetonları transfer et
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -509,10 +549,10 @@ const transferTx = {
 await (await signer.sendTransaction(transferTx)).wait()
 ```
 
-ERC-20 sözleşmesi (`cdi`) vekile güvendiğinden transferleri aktarmak için ödeneğe ihtiyaç duymayız.
+ERC-20 sözleşmesi vekile (`cdi`) güvendiği için, transferleri iletmek için bir yetkiye ihtiyacımız yok.
 
 ```js
-// approval and transferFrom
+// onay ve transferFrom
 const approveTx = {
   to: cdi.address,
   data: "0x03" + poorSigner.address.slice(2, 42) + "00FF",
@@ -527,24 +567,19 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Check the approve / transferFrom combo was done correctly
+// Onay / transferFrom kombinasyonunun doğru yapıldığını kontrol edin
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 
-İki yeni fonksiyonu test edin. `transferFromTx` öğesinin iki adres parametresi gerektirdiğini unutmayın: ödeneği veren ve alıcı.
-
-### Örnek {#example-2}
-
-Bu dosyaları kendiniz çalıştırmadan çalışırken görmek istiyorsanız, şu bağlantıları izleyin:
-
-1. [`OrisUselessToken-2`](https://kovan-optimistic.etherscan.io/tx/1475397)'ın [`0xb47c1f550d8af70b339970c673bbdb2594011696`](https://kovan-optimistic.etherscan.io/address/0xb47c1f550d8af70b339970c673bbdb2594011696) adresine dağıtılması.
-2. [`CalldataInterpreter`'ın](https://kovan-optimistic.etherscan.io/tx/1475400)[`0x0dccfd03e3aaba2f8c4ea4008487fd0380815892`](https://kovan-optimistic.etherscan.io/address/0x0dccfd03e3aaba2f8c4ea4008487fd0380815892) adresine dağıtılması.
-3. [`setProxy()`](https://kovan-optimistic.etherscan.io/tx/1475402) çağrısı.
-4. [`faucet()`](https://kovan-optimistic.etherscan.io/tx/1475409) çağrısı.
-5. [`transferProxy()`](https://kovan-optimistic.etherscan.io/tx/1475416) çağrısı.
-6. [`approveProxy()`](https://kovan-optimistic.etherscan.io/tx/1475419) çağrısı.
-7. [`transferFromProxy()`](https://kovan-optimistic.etherscan.io/tx/1475421) çağrısı. Bu çağrının diğerlerinden farklı bir adresten geldiğini de unutmayın; `poorSigner` yerine `signer`.
+İki yeni işlevi test edin.
+`transferFromTx` öğesinin iki adres parametresi gerektirdiğini unutmayın: yetkiyi veren ve alan.
 
 ## Sonuç {#conclusion}
 
-Hem [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) hem de [Arbitrum](https://developer.offchainlabs.com/docs/special_features), L1'e yazılan çağrı verilerinin boyutunu ve dolayısıyla işlem maliyetlerini azaltmanın yollarını aramaktadır. Fakat altyapı sağlayıcıları genel çözümler arıyorken, bizim yapabileceklerimiz sınırlıdır. Merkeziyetsiz uygulama geliştiricisi olarak uygulamaya özel bilgilere sahipsiniz. Bu da sizin çağrı verilerinizi bizim genel bir çözümle yapabileceğimize göre çok daha iyi optimize edebilmenizi mümkün kılar. Umarım bu makale, ihtiyaçlarınız için ideal çözümler bulmanıza yardımcı olur.
+Hem [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) hem de [Arbitrum](https://developer.offchainlabs.com/docs/special_features), L1'e yazılan çağrı verisinin boyutunu ve dolayısıyla işlem maliyetini düşürmenin yollarını arıyor.
+Ancak, genel çözümler arayan altyapı sağlayıcıları olarak yeteneklerimiz sınırlıdır.
+Merkeziyetsiz uygulama geliştiricisi olarak, uygulamaya özel bilgiye sahipsiniz, bu da çağrı verilerinizi genel bir çözümde yapabileceğimizden çok daha iyi optimize etmenizi sağlar.
+Umarım bu makale ihtiyaçlarınız için ideal çözümü bulmanıza yardımcı olur.
+
+[Çalışmalarımdan daha fazlası için buraya bakın](https://cryptodocguy.pro/).
+

@@ -59,16 +59,23 @@ const SectionHeader = React.forwardRef<
 ))
 SectionHeader.displayName = "SectionHeader"
 
+const tagVariants = cva("w-fit text-sm uppercase", {
+  variants: {
+    variant: {
+      pill: "rounded-full bg-primary-low-contrast px-4 py-0.5 text-primary",
+      plain: "font-semibold tracking-wider text-primary-high-contrast",
+    },
+  },
+  defaultVariants: { variant: "pill" },
+})
+
 const SectionTag = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof tagVariants>
+>(({ className, variant, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(
-      "w-fit rounded-full bg-primary-low-contrast px-4 py-0.5 text-sm uppercase text-primary",
-      className
-    )}
+    className={cn(tagVariants({ variant, className }))}
     {...props}
   />
 ))

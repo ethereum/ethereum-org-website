@@ -35,7 +35,7 @@ Pelajari lebih lanjut di [devcon.org](https://devcon.org/), lihat [Blog Devcon](
 
 Program Beasiswa ini memberi peluang bagi EF untuk bekerja sama dengan para pembawa perubahan, yang proyeknya memiliki potensi tinggi untuk menciptakan dampak di negara-negara ekonomi berkembang dengan menggunakan Ethereum. Program ini menyertakan pengalaman unik yang mencakup bimbingan, keahlian, dan akses ke para pemimpin di ekosistem Ethereum.
 
-Pelajari lebih lanjut di [fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/) atau lihat [posting blog terbaru tentang Program Beasiswa](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/).
+Pelajari lebih lanjut di [fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/) atau lihat [posting blog terbaru tentang Program Beasiswa](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion).
 
 <br/>
 

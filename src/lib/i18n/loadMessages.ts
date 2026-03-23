@@ -1,14 +1,19 @@
 import fs from "fs"
+import { readFile } from "fs/promises"
 import path from "path"
+
+interface IntlMessages {
+  [key: string]: string | IntlMessages
+}
 
 function getNamespaces(localePath: string): string[] {
   return fs
-    .readdirSync(localePath)
-    .filter((file) => file.endsWith(".json"))
-    .map((file) => file.replace(".json", ""))
+    .readdirSync(localePath, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
+    .map((entry) => entry.name.replace(".json", ""))
 }
 
-const messagesCache: Record<string, Record<string, string>> = {}
+const messagesCache: Record<string, Record<string, IntlMessages>> = {}
 
 export async function loadMessages(locale: string) {
   if (messagesCache[locale]) {
@@ -16,15 +21,19 @@ export async function loadMessages(locale: string) {
   }
 
   const intlPath = path.join(process.cwd(), "src/intl")
-  const messages: Record<string, string> = {}
-
   const localePath = path.join(intlPath, locale)
+  const messages: Record<string, IntlMessages> = {}
+
   if (fs.statSync(localePath).isDirectory()) {
     const namespaces = getNamespaces(localePath)
 
-    for (const ns of namespaces) {
-      messages[ns] = (await import(`../../intl/${locale}/${ns}.json`)).default
-    }
+    await Promise.all(
+      namespaces.map(async (ns) => {
+        const filePath = path.join(localePath, `${ns}.json`)
+        const content = await readFile(filePath, "utf-8")
+        messages[ns] = JSON.parse(content) as IntlMessages
+      })
+    )
   }
 
   messagesCache[locale] = messages

@@ -6,6 +6,33 @@ import { fetchWithRetry } from "../utils/fetch"
 import { debugLog } from "../workflows/utils"
 
 /**
+ * Create a new branch on GitHub from a known SHA.
+ * Use this when you already have the base SHA (e.g., from getBranchObject).
+ */
+export const createBranchFromSha = async (
+  branchName: string,
+  sha: string
+): Promise<void> => {
+  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/git/refs`
+
+  debugLog(`Creating branch "${branchName}" from SHA ${sha}`)
+
+  const res = await fetchWithRetry(url, {
+    method: "POST",
+    headers: {
+      ...gitHubBearerHeaders,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ ref: `refs/heads/${branchName}`, sha }),
+  })
+
+  if (!res.ok) {
+    const body = await res.text().catch(() => "")
+    throw new Error(`GitHub createBranch (${res.status}): ${body}`)
+  }
+}
+
+/**
  * Retrieves the Git object for a branch from the GitHub API
  *
  * @param branch - The branch name to look up (e.g., "main" or "dev")
@@ -37,8 +64,14 @@ export const getBranchObject = async (
  * Generate a branch name based on current timestamp
  */
 export const createBranchName = (suffix?: string) => {
-  const ts = new Date().toISOString().replace(/\..*$/, "").replace(/[:]/g, "-")
-  return "i18n/import/" + ts + (suffix ? `-${suffix}` : "")
+  const now = new Date()
+  const mm = String(now.getUTCMonth() + 1).padStart(2, "0")
+  const dd = String(now.getUTCDate()).padStart(2, "0")
+  const hh = String(now.getUTCHours()).padStart(2, "0")
+  const min = String(now.getUTCMinutes()).padStart(2, "0")
+  const ts = `${mm}-${dd}T${hh}${min}`
+  const label = suffix || "multi"
+  return `i18n/${label}-${ts}`
 }
 
 /**

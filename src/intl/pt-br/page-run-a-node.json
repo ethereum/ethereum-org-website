@@ -111,6 +111,7 @@
   "page-run-a-node-sovereignty-1": "Uma carteira Ethereum permite que você tenha total custódia e controle dos seus ativos digitais, pois armazena as chaves privadas para os seus endereços. No entanto, essas chaves não informam o estado atual do blockchain, como o saldo da sua carteira.",
   "page-run-a-node-sovereignty-2": "Por padrão, as carteiras de Ethereum normalmente chegam a um nó de terceiros, como Infura ou Alchemy, quando averiguam seus saldos. Executar o seu próprio nó permite que você tenha a sua própria cópia do blockchain Ethereum.",
   "page-run-a-node-title": "Executar um nó",
+  "page-run-a-node-meta-title": "Como usar Ethereum Node",
   "page-run-a-node-voice-your-choice-title": "Dê voz à sua escolha",
   "page-run-a-node-voice-your-choice-preview": "Não abra mão do controle no caso de um fork.",
   "page-run-a-node-voice-your-choice-1": "No caso de um fork na cadeia, onde surgem duas cadeias com conjuntos de regras diferentes, executar seu próprio nó garante sua capacidade de escolher qual conjunto de regras você apoia. Cabe a você adotar as novas regras e respaldar as alterações propostas, ou não.",

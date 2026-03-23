@@ -8,7 +8,7 @@ lang: en
 
 ## What are EIPs? {#what-are-eips}
 
-[Ethereum Improvement Proposals (EIPs)](https://eips.ethereum.org/) are standards specifying potential new features or processes for Ethereum. EIPs contain technical specifications for the proposed changes and act as the “source of truth” for the community. Network upgrades and application standards for Ethereum are discussed and developed through the EIP process.
+[Ethereum Improvement Proposals (EIPs)](https://eips.ethereum.org/) are standards specifying potential new features or processes for Ethereum. EIPs contain technical specifications for the proposed changes and act as the “source of truth” for the community. Network upgrades and application standards for [Ethereum](/) are discussed and developed through the EIP process.
 
 Anyone within the Ethereum community has the ability to create an EIP. Guidelines for writing EIPs are included in [EIP-1](https://eips.ethereum.org/EIPS/eip-1). An EIP should primarily provide a concise technical specification with a small amount of motivation. The EIP author is responsible for reaching consensus within the community and documenting alternative opinions. Given the high technical barrier for submitting a well-formed EIP, historically, most EIP authors are typically application or protocol developers.
 

@@ -132,7 +132,6 @@ A continuación se presentan algunos proyectos que pueden ayudarle a instalar y 
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar): la forma más rápida y sencilla de configurar un nodo completo. Herramienta de configuración de una sola línea y gestión de nodos TUI. Gratis. Código abierto. Bienes públicos para Ethereum por participantes individuales. Soporte ARM64 y AMD64.
 - [eth-docker](https://eth-docker.net/): configuración automatizada mediante Docker, centrada en un staking fácil y seguro. Requiere conocimientos básicos de terminal y Docker, recomendado para usuarios un poco más avanzados.
 - [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs): lanzador para instalar clientes en un servidor remoto mediante conexión SSH, con una guía de configuración de la GUI, un centro de control y muchas otras funciones.
-- [NiceNode](https://www.nicenode.xyz/): un lanzador con una experiencia de usuario sencilla para ejecutar un nodo en su ordenador. Sólo tiene que elegir a los clientes y empezar con unos pocos clics. Aún está en fase de desarrollo.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro): herramienta de configuración de nodos que genera automáticamente una configuración de Docker mediante el asistente de la CLI. Escrito en Go por Nethermind.
 
 ### Configuración manual de clientes {#manual-setup}

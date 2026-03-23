@@ -1,6 +1,6 @@
 ---
-title: Úvod k platformě Ethereum
-description: Úvod do základních konceptů Etherea pro vývojáře dappek.
+title: "Technický úvod do Etherea"
+description: "Úvod do základních konceptů Etherea pro vývojáře dappek."
 lang: cs
 ---
 
@@ -16,13 +16,13 @@ Každý počítač v síti musí souhlasit s každým novým blokem a řetězcem
 
 Ethereum používá [mechanismus konsenzu založený na důkazu podílem](/developers/docs/consensus-mechanisms/pos/). Každý, kdo chce přidat nové bloky do řetězce, musí uzamknout ETH – nativní měnu v Ethereu – jako záruku a spustit validační software. Tito „validátoři“ mohou být pak náhodně vybráni k navržení bloků, které ostatní validátoři zkontrolují a přidají na blockchain. Existuje systém odměn a trestů, který silně motivuje účastníky, aby byli poctiví a co nejvíce online.
 
-Pokud se chcete podívat, jak jsou blockchainová data hashována a následně přidávána k historii odkazů bloků, podívejte se na [tuto ukázku](https://andersbrownworth.com/blockchain/blockchain) od Anderse Brownwortha na videu níže.
+Pokud se chcete podívat, jak se data v blockchainu hašují a následně připojují k historii odkazů na bloky, určitě si prohlédněte [tuto ukázku](https://andersbrownworth.com/blockchain/blockchain) od Anderse Brownwortha a podívejte se na doprovodné video níže.
 
 Podívejte se, jak Anders vysvětluje hashe na blockchainech:
 
 <YouTube id="_160oMzblY8" />
 
-## Co je to Ethereum? {#what-is-ethereum}
+## Co je to Ethereum? Co je Ethereum? {#what-is-ethereum}
 
 Ethereum je blockchain s integrovaným počítačem. Je základem pro budování aplikací a organizací decentralizovaným, cenzuře odolným způsobem bez nutnosti dovolovat se třetí strany.
 
@@ -32,7 +32,7 @@ Požadavky na výpočet se nazývají transakční požadavky. Záznam všech tr
 
 Kryptografické mechanismy zajišťují, že jakmile jsou transakce ověřeny jako platné a přidány na blockchain, nemohou být později zmanipulovány. Tyto mechanismy také zajišťují, že všechny transakce jsou podepsány a provedeny s odpovídajícími „oprávněními“ (nikdo by neměl být schopen poslat digitální aktiva z účtu Alice, kromě Alice samotné).
 
-## Co je ether? {#what-is-ether}
+## Co je to ether? {#what-is-ether}
 
 **Ether (ETH)** je nativní kryptoměna Etherea. Účelem ETH je umožnit fungování trhu výpočetních zdrojů. Takový trh poskytuje účastníkům ekonomickou pobídku k ověřování a provádění požadavků na transakce a poskytování výpočetních zdrojů síti.
 
@@ -42,9 +42,9 @@ Množství zaplaceného ETH odpovídá zdrojům potřebným k provedení výpoč
 
 ETH se také používá k zajištění kryptografické bezpečnosti sítě třemi hlavními způsoby: 1) Slouží jako prostředek k odměňování validátorů, kteří navrhují bloky nebo upozorňují na nepoctivé chování jiných validátorů. 2) Validátoři ho uzamykají jako záruku proti nepoctivému chování – pokud se validátoři pokusí o nekalou činnost, jejich ETH může být zničeno. 3) Používá se k vážení „hlasů“ pro nově navrhované bloky, což se promítá do volby větve v mechanismu konsenzu.
 
-## Co to jsou chytré kontrakty? {#what-are-smart-contracts}
+## Co to jsou chytré kontrakty? Co jsou chytré kontrakty? {#what-are-smart-contracts}
 
-V praxi účastníci nepíší nový kód pokaždé, když chtějí požádat o výpočet na EVM. Místo toho vývojáři aplikací nahrají programy (znovu použitelné úryvky kódu) do stavu EVM a uživatelé posílají požadavky na provedení těchto úryvků kódu s různými parametry. Tyto programy, které jsou nahrány do sítě a touto sítí také vykonávány, nazýváme chytré kontrakty.
+V praxi účastníci nepíší nový kód pokaždé, když chtějí požádat o výpočet na EVM. Místo toho vývojáři aplikací nahrají programy (znovu použitelné úryvky kódu) do stavu EVM a uživatelé posílají požadavky na provedení těchto úryvků kódu s různými parametry. Programy nahrané do sítě, které síť zároveň vykonává, nazýváme "chytré kontrakty".
 
 Na základní úrovni si můžete chytrý kontrakt představit jako druh automatu: Skript, který při volání s určitými parametry, pokud jsou splněny určité podmínky, provádí nějaké akce nebo výpočet. Např. jednoduchý vydávající chytrý kontrakt by mohl vytvořit a přiřadit vlastnictví digitálního aktiva, pokud volající pošle ETH konkrétnímu příjemci.
 
@@ -62,15 +62,15 @@ Sekvence všech bloků, které byly historicky přidány na síť Ethereum. Toto
 
 **Ether (ETH)** je nativní kryptoměna Etherea. Uživatelé platí ETH jiným uživatelům, aby byly splněny jejich požadavky na vykonání kódu.
 
-[Více o ETH](/developers/docs/intro-to-ether/)
+[Více o ETH](/developers/docs/intro-to-ether/)
 
 ### EVM {#evm}
 
 Virtuální stroj Etherea (EVM) je globální virtuální počítač, jehož stav uchovává a uznává každý účastník sítě Ethereum. Každý účastník může požádat o vykonání libovolného kódu na EVM. To mění stav EVM.
 
-[Další informace o EVM](/developers/docs/evm/)
+[Více o EVM](/developers/docs/evm/)
 
-### Síťové uzly {#nodes}
+### Uzly {#nodes}
 
 Reálné stroje, které ukládají stav EVM. Uzly mezi sebou komunikují, aby sdílely informace o stavu EVM a jeho změnách. Každý uživatel může také požádat o vykonání kódu tím, že z uzlu vyšle požadavek na vykonání kódu. Samotná síť Ethereum je souhrnem všech uzlů Etherea a jejich komunikací.
 
@@ -80,7 +80,7 @@ Reálné stroje, které ukládají stav EVM. Uzly mezi sebou komunikují, aby sd
 
 Místo, kde je uloženo ETH. Uživatelé mohou inicializovat účty, vkládat ETH na účty a převádět ETH ze svých účtů na účty jiných uživatelů. Účty a zůstatky na účtech jsou uloženy ve velké tabulce v EVM. Jsou součástí celkového stavu EVM.
 
-[Další informace o účtech](/developers/docs/accounts/)
+[Více o účtech](/developers/docs/accounts/)
 
 ### Transakce {#transactions}
 
@@ -90,27 +90,35 @@ Místo, kde je uloženo ETH. Uživatelé mohou inicializovat účty, vkládat ET
 - Nahraj nějaký chytrý kontraktový kód do stavu EVM.
 - Vykonej kód chytrého kontraktu na adrese X v EVM s argumenty Y.
 
-[Další informace o transakcích](/developers/docs/transactions/)
+[Více o transakcích](/developers/docs/transactions/)
 
 ### Bloky {#blocks}
 
 Objem transakcí je velmi vysoký, takže transakce jsou „zapisovány“ v dávkách neboli blocích. Bloky obvykle obsahují desítky až stovky transakcí.
 
-[Další informace o blocích](/developers/docs/blocks/)
+[Více o blocích](/developers/docs/blocks/)
 
 ### Chytré kontrakty {#smart-contracts}
 
-Znovu použitelný úryvek kódu (program), který vývojář nahraje do stavu EVM. Každý může podáním transakčního požadavku požádat o vykonání kódu chytrého kontraktu. Protože vývojáři mohou do EVM zapisovat libovolné spustitelné aplikace (hry, tržiště, finanční nástroje atd.) tím, že publikují chytré kontrakty, často se jim říká [dappky nebo decentralizované aplikace](/developers/docs/dapps/).
+Znovu použitelný úryvek kódu (program), který vývojář nahraje do stavu EVM. Každý může podáním transakčního požadavku požádat o vykonání kódu chytrého kontraktu. Protože vývojáři mohou do EVM psát libovolné spustitelné aplikace (hry, tržiště, finanční nástroje atd.) zveřejňováním chytrých kontraktů se těmto často říká také [dapps neboli decentralizované aplikace](/developers/docs/dapps/).
 
 [Více o chytrých kontraktech](/developers/docs/smart-contracts/)
 
-## Další četba {#further-reading}
+## Další čtení {#further-reading}
 
-- [Oficiální dokumenty Ethereum](/whitepaper/)
-- [Jak vlastně Ethereum funguje?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) – _Preethi Kasireddy_ (**Poznámka**: Tento zdroj je stále užitečný, ale vezměte na vědomí, že předchází [Sloučení](/roadmap/merge), a proto stále odkazuje na mechanismus důkazu prací – Ethereum je nyní zabezpečeno pomocí [důkazu podílem.](/developers/docs/consensus-mechanisms/pos))
+- [Bílá kniha Ethereum](/whitepaper/)
+- [Jak vlastně Ethereum funguje?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**Poznámka:** tento zdroj je stále hodnotný, ale uvědomte si, že předchází [Sloučení](/roadmap/merge) a tudíž stále odkazuje na mechanismus důkazu prací – Ethereum je ve skutečnosti nyní zabezpečeno pomocí [důkazu podílem](/developers/docs/consensus-mechanisms/pos))
+
+### Učíte se spíše vizuálně? Vizuální výuka {#visual-learner}
+
+Tato série videí nabízí důkladné prozkoumání základních témat:
+
+<YouTube id="j78ZcIIpi0Q"/>
+
+[Playlist se základy Etherea](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
 
 ## Související návody {#related-tutorials}
 
-- [Průvodce Ethereem pro vývojáře, část 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Velmi přívětivý průvodce Ethereem používající Python a web3.py_
+- [Průvodce Ethereem pro vývojáře, 1. část](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Velice srozumitelné seznámení s Ethereem pro začátečníky s použitím Pythonu a web3.py_

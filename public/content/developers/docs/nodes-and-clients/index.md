@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software must be run on your computer to turn it into an Ethereum node. There are two separate pieces of software (known as 'clients') required to form a node.
+[Ethereum](/) is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software must be run on your computer to turn it into an Ethereum node. There are two separate pieces of software (known as 'clients') required to form a node.
 
 ## Prerequisites {#prerequisites}
 
@@ -161,7 +161,7 @@ Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriente
 
 Go Ethereum (Geth for short) is one of the original implementations of the Ethereum protocol. Currently, it is the most widespread client with the biggest user base and variety of tooling for users and developers. It is written in Go, fully open source and licensed under the GNU LGPL v3.
 
-Learn more about Geth in its [documentation](https://geth.ethereum.org/docs/).
+Learn more about Geth in its [documentation](https://geth.ethereum.org/docs).
 
 ### Nethermind {#nethermind}
 
@@ -294,7 +294,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 Optimistic sync is a post-merge synchronization strategy designed to be opt-in and backwards compatible, allowing execution nodes to sync via established methods. The execution engine can _optimistically_ import beacon blocks without fully verifying them, find the latest head, and then start syncing the chain with the above methods. Then, after the execution client has caught up, it will inform the consensus client of the validity of the transactions in the Beacon Chain.
 
-[More on optimistic sync](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[More on optimistic sync](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### Checkpoint sync {#checkpoint-sync}
 

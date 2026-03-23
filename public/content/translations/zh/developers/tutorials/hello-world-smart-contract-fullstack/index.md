@@ -240,7 +240,7 @@ npm install dotenv --save
 - 按照[这些说明](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)导出你的私钥
 - 请参阅下文以获取 HTTP Alchemy API URL
 
-![](./get-alchemy-api-key.gif)
+![获取 Alchemy API 密钥的动画演练](./get-alchemy-api-key.gif)
 
 你的 `.env` 文件应如下所示：
 
@@ -359,17 +359,17 @@ npx hardhat run scripts/deploy.js --network goerli
 
 如果我们前往 [Goerli etherscan](https://goerli.etherscan.io) 并搜索我们的合约地址，应该能看到它已成功部署。 交易将类似以下：
 
-![](./etherscan-contract.png)
+![在 Etherscan 上部署的智能合约的屏幕截图](./etherscan-contract.png)
 
 `From` 地址应匹配你的 MetaMask 帐户地址，`To` 地址将显示**合约创建**。 如果我们点击进入交易，我们将在 `To` 字段中看到我们的合约地址。
 
-![](./etherscan-transaction.png)
+![Etherscan 上交易的屏幕截图](./etherscan-transaction.png)
 
 恭喜！ 你刚刚在以太坊测试网上部署了一个智能合约。
 
 要了解后台运行情况，我们导航到我们的 [Alchemy 仪表板](https://dashboard.alchemy.com/explorer)中的 Explorer 选项卡。 如果你有多个 Alchemy 应用，请确保按应用筛选并选择“**Hello World**”。
 
-![](./hello-world-explorer.png)
+![区块浏览器中 Hello World 智能合约的屏幕截图](./hello-world-explorer.png)
 
 在这里，你会看到一系列 JSON-RPC 方法，当我们调用 `.deploy()` 函数时，Hardhat/Ethers 会在后台为我们调用这些方法。 这里有两个重要方法：[`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) 是将我们的合约写入 Goerli 链的请求，而 [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) 是在给定哈希的情况下读取我们交易信息的请求。 要了解有关发送交易的更多信息，请查看[我们关于使用 Web3 发送交易的教程](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
 

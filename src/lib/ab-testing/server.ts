@@ -1,8 +1,10 @@
+import { SITE_URL } from "@/lib/constants"
+
 import type { ABTestAssignment, ABTestConfig } from "./types"
 
 const getABTestConfigs = async (): Promise<Record<string, ABTestConfig>> => {
   try {
-    const response = await fetch("https://ethereum.org/api/ab-config", {
+    const response = await fetch(`${SITE_URL}/api/ab-config`, {
       next: { revalidate: 3600 },
     })
 
@@ -26,8 +28,11 @@ export const getABTestAssignment = async (
   const headers = await import("next/headers").then((m) => m.headers())
 
   // Get IP and user agent (primary identifier)
+  // x-forwarded-for contains: "client_ip, proxy1, proxy2, ..." - extract only client IP
   const forwardedFor =
-    headers.get("x-forwarded-for") || headers.get("x-real-ip") || "unknown"
+    headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    headers.get("x-real-ip") ||
+    "unknown"
   const userAgent = headers.get("user-agent") || ""
 
   // Add privacy-preserving entropy sources

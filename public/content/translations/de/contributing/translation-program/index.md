@@ -71,7 +71,7 @@ Wenn Sie zum Übersetzungsprogramm beitragen oder daran denken, sich zu beteilig
 - [Übersetzungsleitfaden](/contributing/translation-program/translators-guide/)_ – Anleitungen und Tipps für ethereum.org-Übersetzer_
 - [Übersetzungs-FAQs](/contributing/translation-program/faq/)_ – häufig gestellte Fragen und Antworten zum Übersetzungsprogramm von ethereum.org_
 - [Editorleitfaden für Crowdin-Online](https://support.crowdin.com/online-editor/)_ – ein ausführlicher Ratgeber für die Nutzung des Online-Crowdin-Editors und seiner umfangreichen Funktionen_
-- [Inhaltsbereich](/contributing/translation-program/content-buckets/)_ – welche Seiten gehören zu welchen Inhaltsbereichen von ethereum.org_
+- [Inhaltsbereich](/contributing/translation-program/)_ – welche Seiten gehören zu welchen Inhaltsbereichen von ethereum.org_
 
 Für andere nützliche Übersetzungstools, Übersetzergemeinschaften und Blog-Einträge des Übersetzungsprogramms besuchen Sie bitte die [Ressourcenseite](/contributing/translation-program/resources/).
 

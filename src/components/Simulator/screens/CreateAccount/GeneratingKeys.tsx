@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { motion } from "framer-motion"
 import { Check } from "lucide-react"
+import { motion } from "motion/react"
 
 import type { PhoneScreenProps } from "@/lib/types"
 

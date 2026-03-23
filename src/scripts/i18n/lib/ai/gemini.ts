@@ -2,7 +2,7 @@
  * Gemini AI translation wrapper for JSX attribute translation
  */
 
-import { GoogleGenerativeAI } from "@google/generative-ai"
+import { GoogleGenAI } from "@google/genai"
 
 import i18nConfig from "../../../../../i18n.config.json"
 import type { ExtractedAttribute, TranslatedAttribute } from "../jsx-attributes"
@@ -26,12 +26,12 @@ export function isGeminiAvailable(): boolean {
 /**
  * Get the Gemini API client
  */
-function getGeminiClient(): GoogleGenerativeAI {
+function getGeminiClient(): GoogleGenAI {
   const apiKey = process.env.GEMINI_API_KEY
   if (!apiKey) {
     throw new Error("GEMINI_API_KEY environment variable is not set")
   }
-  return new GoogleGenerativeAI(apiKey)
+  return new GoogleGenAI({ apiKey })
 }
 
 /**
@@ -140,7 +140,6 @@ export async function translateAttributes(
   }
 
   const client = getGeminiClient()
-  const model = client.getGenerativeModel({ model: GEMINI_MODEL })
 
   const prompt = buildTranslationPrompt(
     attributes,
@@ -153,9 +152,11 @@ export async function translateAttributes(
   )
 
   try {
-    const result = await model.generateContent(prompt)
-    const response = result.response.text()
-    const translations = parseTranslationResponse(response)
+    const result = await client.models.generateContent({
+      model: GEMINI_MODEL,
+      contents: prompt,
+    })
+    const translations = parseTranslationResponse(result.text ?? "")
 
     if (translations.length !== attributes.length) {
       console.warn(
