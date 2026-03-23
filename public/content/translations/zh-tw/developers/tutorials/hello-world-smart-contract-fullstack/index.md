@@ -4,9 +4,9 @@ description: "在以太坊上撰寫和部署簡單智能合約的入門教學。
 author: "nstrike2"
 tags:
   [
-    "穩固",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "智能合約",
     "部署",
     "區塊瀏覽器",
@@ -703,7 +703,7 @@ https://goerli.etherscan.io/address/<contract-address>#contracts
 
 #### 讓你的 React 專案動起來 {#get-your-react-project-running}
 
-讓我們透過在我們的瀏覽器內運行這個「反應」專案來開始是日的教程吧： 「反應」的美在於一旦我們在瀏覽器內已經有在運行自己的專案，我們儲存下來的任何改變都將會被實時更新到我們的瀏覽器裡。
+讓我們透過在我們的瀏覽器內運行這個 React 專案來開始是日的教程吧： React 的美在於一旦我們在瀏覽器內已經有在運行自己的專案，我們儲存下來的任何改變都將會被實時更新到我們的瀏覽器裡。
 
 若要讓專案執行，請導覽至 `starter-files` 資料夾的根目錄，然後在您的終端機中執行 `npm install` 以安裝專案的相依性：
 
@@ -724,7 +724,7 @@ npm start
 
 #### `HelloWorld.js` 元件 {#the-helloworld-js-component}
 
-讓我們回到編輯器中的 `src` 資料夾，並開啟 `HelloWorld.js` 檔案。 這個動作在我們理解該檔案內所有東西上有著超級關鍵的作用，因為它是我們將會首先處理的第一個「反應」組件。
+讓我們回到編輯器中的 `src` 資料夾，並開啟 `HelloWorld.js` 檔案。 這個動作在我們理解該檔案內所有東西上有著超級關鍵的作用，因為它是我們將會首先處理的第一個 React 組件。
 
 在此檔案的頂端，您會注意到我們有幾個執行專案所必需的匯入陳述式，包括 React 函式庫、useEffect 和 useState hook、來自 `./util/interact.js` 的一些項目 (我們稍後將更詳細地描述它們！)，以及 Alchemy 標誌。
 

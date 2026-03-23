@@ -101,7 +101,7 @@ OpenZeppelin ERC-20 合約包含一個[掛鉤 `_beforeTokenTransfer`](https://gi
 讓我們逐行查看新的程式碼：
 
 ```solidity
-        require(to != address(this), "不能將代幣傳送到合約地址");
+        require(to != address(this), "Can't send tokens to the contract address");
 ```
 
 這是第一個要求，檢查 `to` 和 `this(address)` 是否不是同一個東西。
@@ -116,7 +116,7 @@ OpenZeppelin ERC-20 合約包含一個[掛鉤 `_beforeTokenTransfer`](https://gi
 這是我們檢查一個地址是否為合約的方式。 我們無法直接從 Yul 接收輸出，因此我們定義一個變數來儲存結果（在本例中為 `isToContract`）。 Yul 的工作方式是每個 opcode 都被視為一個函式。 所以首先我們調用 [`EXTCODESIZE`](https://www.evm.codes/#3b) 來獲取合約大小，然後使用 [`GT`](https://www.evm.codes/#11) 來檢查它是否不為零（我們處理的是無符號整數，所以它當然不能是負數）。 然後我們將結果寫入 `isToContract`。
 
 ```solidity
-        require(to.balance != 0 || isToContract, "不能將代幣傳送到空地址");
+        require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
 ```
 
 最後，我們有了對空地址的實際檢查。
@@ -171,7 +171,7 @@ OpenZeppelin 提供了兩種啟用管理員存取權的機制：
 
   ```solidity
     {
-        require(!frozenAccounts[addr], "帳戶已凍結");
+        require(!frozenAccounts[addr], "Account already frozen");
         frozenAccounts[addr] = true;
         emit AccountFrozen(addr);
     }  // freezeAccount
@@ -182,7 +182,7 @@ OpenZeppelin 提供了兩種啟用管理員存取權的機制：
 - 變更 `_beforeTokenTransfer` 以防止資金從凍結帳戶中移出。 請注意，資金仍然可以轉入凍結帳戶。
 
   ```solidity
-       require(!frozenAccounts[from], "帳戶已凍結");
+       require(!frozenAccounts[from], "The account is frozen");
   ```
 
 ### 資產清理 {#asset-cleanup}

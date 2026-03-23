@@ -19,7 +19,7 @@ buttons:
 
 以太坊網路全年無休地保護著數十億美元的價值。 怎麼做到的？
 
-世界各地的人們將[以太幣 (ETH)](/eth/) 鎖定（或「質押」）在智能合約中，以運行處理以太坊交易和保護以太坊網路的軟體。 作為回報，他們會獲得更多 ETH 作為獎勵。
+世界各地的人們將[以太幣 (ETH)](/what-is-ether/) 鎖定（或「質押」）在智能合約中，以運行處理以太坊交易和保護以太坊網路的軟體。 作為回報，他們會獲得更多 ETH 作為獎勵。
 
 再質押是一項為[質押者](/staking/)打造的技術，可將此安全性擴展到其他服務、應用程式或網路。 作為回報，他們可以賺取額外的再質押獎勵。 然而，這也使他們已質押的 ETH 承受更大的風險。
 
@@ -144,7 +144,7 @@ buttons:
 <AlertDescription>
   <p className="mt-0"><strong>以太坊共同創辦人正在輸入...</strong></p>
   <p className="mt-2">
-    以太坊共同創辦人 Vitalik 在 2021 年一篇名為 <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">《不要讓共識超載》</a>的部落格文章中警告了再質押的潛在風險。 </a>  
+ 以太坊共同創辦人 Vitalik 在 2021 年一篇名為 <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">《不要讓共識超載》</a>的部落格文章中警告了再質押的潛在風險。
 </p>
 </AlertDescription>
 </AlertContent>

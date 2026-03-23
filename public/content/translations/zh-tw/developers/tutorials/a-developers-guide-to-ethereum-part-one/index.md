@@ -3,7 +3,7 @@ title: "給 Python 開發者的以太坊介紹，第一部分"
 description: "以太坊開發介紹，特別適合了解 Python 程式語言的開發人員。"
 author: Marc Garreau
 lang: zh-tw
-tags: [ "python", "web3.py" ]
+tags: [ "Python", "web3.py" ]
 skill: beginner
 published: 2020-09-08
 source: Snake charmers

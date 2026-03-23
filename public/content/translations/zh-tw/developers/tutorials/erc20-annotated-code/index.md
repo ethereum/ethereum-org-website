@@ -3,7 +3,7 @@ title: "ERC-20 合約逐步解說"
 description: "OpenZeppelin 的 ERC-20 合約內容是什麼？這些內容又為何存在？"
 author: Ori Pomerantz
 lang: zh-tw
-tags: [ "穩固", "erc-20" ]
+tags: [ "Solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---
@@ -209,7 +209,7 @@ import "../../math/SafeMath.sol";
 ```
 
 - `GSN/Context.sol` 是使用 [OpenGSN](https://www.opengsn.org/) 所需的定義，這是一個允許沒有以太幣的使用者使用區塊鏈的系統。 請注意這是舊版本，如果您想與 OpenGSN 整合，[請使用此教學](https://docs.opengsn.org/javascript-client/tutorial.html)。
-- [SafeMath 程式庫](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)，它能防止 Solidity 版本 **<0.8.0** 的算術溢位/下溢。 在 Solidity ≥0.8.0 中，算術運算會在溢位/下溢時自動還原，使得 SafeMath 不再必要。 此合約使用 SafeMath 以便向後相容於舊的編譯器版本。
+- [SafeMath 程式庫](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)，它能防止 Solidity 版本 **&lt;0.8.0** 的算術溢位/下溢。 在 Solidity ≥0.8.0 中，算術運算會在溢位/下溢時自動還原，使得 SafeMath 不再必要。 此合約使用 SafeMath 以便向後相容於舊的編譯器版本。
 
 &nbsp;
 

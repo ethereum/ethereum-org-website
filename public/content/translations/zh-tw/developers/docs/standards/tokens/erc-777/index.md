@@ -6,7 +6,7 @@ lang: zh-tw
 
 ## 警告 {#warning}
 
-\*\*ERC-777 由於[容易受到不同種類的網絡攻擊], 因此難以正確實行 (https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620)。 為此建議使用 [ERC-20](/developers/docs/standards/tokens/erc-20/) 。\*\*本頁保留作歷史檔案。
+<strong>ERC-777 由於[容易受到不同種類的網絡攻擊](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620)，因此難以正確實行。 為此建議使用 [ERC-20](/developers/docs/standards/tokens/erc-20/)。</strong>本頁保留作歷史檔案。
 
 ## 簡介？ {#introduction}
 

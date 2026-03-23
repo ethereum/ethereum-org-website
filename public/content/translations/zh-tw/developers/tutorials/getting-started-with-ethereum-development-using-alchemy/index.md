@@ -2,7 +2,7 @@
 title: "開始以太坊開發之旅"
 description: "這是一份以太坊開發的入門指南。 我們將引導您完成建立 API 端點、發出命令列請求，到撰寫您的第一個 Web3 腳本！ 無需區塊鏈開發經驗！"
 author: "Elan Halpern"
-tags: [ "javascript", "ethers.js", "節點", "諮詢", "alchemy" ]
+tags: [ "JavaScript", "ethers.js", "節點", "諮詢", "Alchemy" ]
 skill: beginner
 lang: zh-tw
 published: 2020-10-30
@@ -68,7 +68,7 @@ _\*\*注意：\*\*將 [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-ma
 
 ## 4 設定您的 Web3 用戶端 {#set-up-your-web3-client}
 
-\*\*如果您有現有的用戶端，\*\*請將您目前的節點提供者 URL 變更為帶有您 API 金鑰的 Alchemy URL：`“https://eth-mainnet.alchemyapi.io/v2/your-api-key\"`
+<strong>如果您有現有的用戶端，</strong>請將您目前的節點提供者 URL 變更為帶有您 API 金鑰的 Alchemy URL：`“https://eth-mainnet.alchemyapi.io/v2/your-api-key\"`
 
 **_注意：_** 下方的腳本需要在 **節點環境** 中執行，或 **儲存在檔案中** 執行，而非從命令列執行。 如果您尚未安裝 Node 或 npm，請查看這份快速的 [mac 版設定指南](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)。
 
@@ -142,7 +142,7 @@ node index.js
 The latest block number is 11043912
 ```
 
-**讚！** 恭喜！ 您剛使用 Alchemy 撰寫了您的第一個 Web3 腳本 🎉\*\*
+**讚！ 恭喜！ 您剛使用 Alchemy 撰寫了您的第一個 Web3 腳本 🎉**
 
 不確定下一步要做什麼？ 試著部署您的第一個智能合約，並在我們的 [Hello World 智能合約指南](https://www.alchemy.com/docs/hello-world-smart-contract) 中實際動手進行一些 Solidity 程式設計，或使用 [儀表板示範應用程式](https://docs.alchemyapi.io/tutorials/demo-app) 來測試您的儀表板知識！
 

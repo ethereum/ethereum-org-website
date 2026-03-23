@@ -3,7 +3,7 @@ title: "Vyper ERC-721 合約逐步解說"
 description: "Ryuya Nakamura 的 ERC-721 合約及其運作方式"
 author: Ori Pomerantz
 lang: zh-tw
-tags: [ "vyper", "erc-721", "python" ]
+tags: [ "Vyper", "erc-721", "Python" ]
 skill: beginner
 published: 2021-04-01
 ---
@@ -216,7 +216,7 @@ def __init__():
     self.minter = msg.sender
 ```
 
-若要存取狀態變數，請使用 `self.<變數名稱>`` (同樣，這和 Python 一樣)。
+若要存取狀態變數，請使用 `self.<變數名稱>` (同樣，這和 Python 一樣)。
 
 #### 檢視函式 {#views}
 

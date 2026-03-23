@@ -3,7 +3,7 @@ title: "智能合約安全工具指南"
 description: "三種不同測試與程式分析技術的概觀"
 author: "Trailofbits"
 lang: zh-tw
-tags: [ "穩固", "智能合約", "安全性" ]
+tags: [ "Solidity", "智能合約", "安全性" ]
 skill: intermediate
 published: 2020-09-07
 source: Building secure contracts
@@ -12,9 +12,9 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 我們將使用三種獨特的測試與程式分析技術：
 
-- \*\*透過 [Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) 進行靜態分析。\*\*程式的所有路徑會透過不同的程式呈現方式（例如控制流程圖）同時進行近似與分析
-- \*\*透過 [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/) 進行模糊測試。\*\*程式碼會透過偽隨機產生的交易來執行。 模糊測試器會嘗試找到違反給定屬性的交易序列。
-- \*\*透過 [Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/) 進行符號執行。\*\*一種正規的驗證技術，將每個執行路徑轉換成數學公式，並在其上檢查約束條件。
+- <strong>透過 [Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) 進行靜態分析。</strong>程式的所有路徑會透過不同的程式呈現方式（例如控制流程圖）同時進行近似與分析
+- <strong>透過 [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/) 進行模糊測試。</strong>程式碼會透過偽隨機產生的交易來執行。 模糊測試器會嘗試找到違反給定屬性的交易序列。
+- <strong>透過 [Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/) 進行符號執行。</strong>一種正規的驗證技術，將每個執行路徑轉換成數學公式，並在其上檢查約束條件。
 
 每種技術都有其優點和缺點，在[特定情況](#determining-security-properties)下會很有用：
 
@@ -60,15 +60,15 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 與智能合約經常相關的廣泛領域包括：
 
-- \*\*狀態機。\*\*大多數合約都可以表示為狀態機。 考慮檢查 (1) 無法達到任何無效狀態，(2) 如果一個狀態是有效的，那麼它可以被達到，以及 (3) 沒有任何狀態會讓合約陷入陷阱。
+- <strong>狀態機。</strong>大多數合約都可以表示為狀態機。 考慮檢查 (1) 無法達到任何無效狀態，(2) 如果一個狀態是有效的，那麼它可以被達到，以及 (3) 沒有任何狀態會讓合約陷入陷阱。
 
   - Echidna 和 Manticore 是測試狀態機規格的首選工具。
 
-- \*\*存取控制。\*\*如果您的系統有特權使用者（例如擁有者、控制者等） 您必須確保 (1) 每個使用者只能執行授權的動作，以及 (2) 沒有使用者可以阻止更具特權的使用者執行動作。
+- <strong>存取控制。</strong>如果您的系統有特權使用者（例如擁有者、控制者等） 您必須確保 (1) 每個使用者只能執行授權的動作，以及 (2) 沒有使用者可以阻止更具特權的使用者執行動作。
 
   - Slither、Echidna 和 Manticore 可以檢查存取控制的正確性。 例如，Slither 可以檢查是否只有列入白名單的函式缺少 `onlyOwner` 修飾符。 Echidna 和 Manticore 對於更複雜的存取控制很有用，例如只有在合約達到給定狀態時才授予權限。
 
-- \*\*算術運算。\*\*檢查算術運算的健全性至關重要。 在各處使用 `SafeMath` 是防止溢出/下溢的好方法，但您仍需考慮其他算術缺陷，包括捨入問題和會讓合約陷入陷阱的缺陷。
+- <strong>算術運算。</strong>檢查算術運算的健全性至關重要。 在各處使用 `SafeMath` 是防止溢出/下溢的好方法，但您仍需考慮其他算術缺陷，包括捨入問題和會讓合約陷入陷阱的缺陷。
 
   - Manticore 是這裡的最佳選擇。 如果算術超出 SMT 求解器的範圍，可以使用 Echidna。
 
@@ -76,11 +76,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
   - Slither 是確保偵測到這些問題的工具。
 
-- \*\*外部互動。\*\*合約會彼此互動，而某些外部合約不應被信任。 例如，如果您的合約依賴外部預言機，當一半可用的預言機遭到入侵時，它還能保持安全嗎？
+- <strong>外部互動。</strong>合約會彼此互動，而某些外部合約不應被信任。 例如，如果您的合約依賴外部預言機，當一半可用的預言機遭到入侵時，它還能保持安全嗎？
 
   - Manticore 和 Echidna 是測試您的合約與外部互動的最佳選擇。 Manticore 有內建機制來模擬外部合約。
 
-- \*\*標準符合性。\*\*以太坊標準（例如 ERC20）的設計歷史上曾出現過瑕疵。 請注意您所依據的標準的限制。
+- <strong>標準符合性。</strong>以太坊標準（例如 ERC20）的設計歷史上曾出現過瑕疵。 請注意您所依據的標準的限制。
   - Slither、Echidna 和 Manticore 將幫助您偵測與給定標準的偏差。
 
 ### 工具選擇快捷手冊 {#tool-selection-cheatsheet}

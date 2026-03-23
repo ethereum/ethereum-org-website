@@ -8,9 +8,9 @@ summaryPoint1: "藉由得到財務的激勵產生正確的預測"
 summaryPoint2: "高品質預測未來事件"
 buttons:
   - content: 瞭解更多
-    toId: "預測市場如何運作"
+    toId: how-prediction-markets-work
   - content: 探索 apps
-    toId: "尋找預測市場"
+    toId: find-a-prediction-market
     isSecondary: false
 ---
 

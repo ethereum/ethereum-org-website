@@ -216,9 +216,9 @@ _圖表改編自 [Ethereum EVM 圖解](https://takenobu-hs.github.io/downloads/e
 
 3. **類型 2 交易**，通常稱為 EIP-1559 交易，是在以太坊[倫敦升級](/ethereum-forks/#london) 的 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 中引入的交易。 這類交易已成為以太坊網路上的標準交易類型。 這些交易引入了一種新的費用市場機制，透過將交易費用分為基本費用和優先費來提高可預測性。 它們以位元組 `0x02` 開頭，並包含 `maxPriorityFeePerGas` 和 `maxFeePerGas` 等欄位。 類型 2 交易因其靈活性和效率而成為預設交易，在網路高度擁塞期間尤其受到青睞，因為它們能夠幫助使用者更好地預測及管理交易費用。 這些交易的 TransactionType 值為 `0x2`。
 
-4. **類型 3 (Blob) 交易**在[EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) 中作為以太坊 [Dencun 升級](/ethereum-forks/#dencun) 的一部分被引入。 這些交易旨在更高效地處理「blob」資料 (二進位大型物件)，它們提供了一種以更低成本將資料發佈到以太坊網路的方法，尤其有利於二層網路卷軸。 Blob 交易包含額外欄位，例如 `blobVersionedHashes`、`maxFeePerBlobGas` 和 `blobGasPrice`。 它們以位元組 `0x03` 開頭，其 TransactionType 值為 `0x3`。 Blob 交易代表了以太坊在資料可用性和可擴張性方面的重大改進。
+4. <strong>類型 3 (Blob) 交易</strong>在[EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) 中作為以太坊 [Dencun 升級](/ethereum-forks/#dencun) 的一部分被引入。 這些交易旨在更高效地處理「blob」資料 (二進位大型物件)，它們提供了一種以更低成本將資料發佈到以太坊網路的方法，尤其有利於二層網路卷軸。 Blob 交易包含額外欄位，例如 `blobVersionedHashes`、`maxFeePerBlobGas` 和 `blobGasPrice`。 它們以位元組 `0x03` 開頭，其 TransactionType 值為 `0x3`。 Blob 交易代表了以太坊在資料可用性和可擴張性方面的重大改進。
 
-5. **類型 4 交易**是在[EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) 中作為以太坊 [Pectra 升級](/roadmap/pectra/) 的一部分引入的。 這些交易被設計為與帳戶抽象化向前相容。 它們允許 EOA 暫時表現得像智慧合約帳戶，而不會影響其原始功能。 它們包含一個 `authorization_list` 參數，用於指定 EOA 將其權限委派給哪個智慧合約。 交易後，EOA 的程式碼欄位將包含被委派的智慧合約地址。
+5. <strong>類型 4 交易</strong>是在[EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) 中作為以太坊 [Pectra 升級](/roadmap/pectra/) 的一部分引入的。 這些交易被設計為與帳戶抽象化向前相容。 它們允許 EOA 暫時表現得像智慧合約帳戶，而不會影響其原始功能。 它們包含一個 `authorization_list` 參數，用於指定 EOA 將其權限委派給哪個智慧合約。 交易後，EOA 的程式碼欄位將包含被委派的智慧合約地址。
 
 ## 延伸閱讀 {#further-reading}
 

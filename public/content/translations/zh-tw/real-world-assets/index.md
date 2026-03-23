@@ -84,10 +84,10 @@ Courtyard 也提供一種版稅機制。 每當某卡片被售出時，將該卡
 
 ## 延伸閱讀 {#further-reading}
 
-- [什麼是資產代幣化？]（https://www.britannica.com/money/real-world-asset-tokenization）——大英百科全書
-- [代幣化如何改變全球金融和投資]（https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/）——世界經濟論壇
+- [什麼是資產代幣化？](https://www.britannica.com/money/real-world-asset-tokenization)——大英百科全書
+- [代幣化如何改變全球金融和投資](https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/)——世界經濟論壇
 - [加密貨幣投資者對於真實世界資產代幣化需要了解的知識](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/)——富比世雜誌
-- [智能合約如何與區塊鏈協同運作]（https://www.britannica.com/money/how-smart-contracts-work）——大英百科全書
-- [代幣化真實世界資產如何改變去中心化金融]（https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a）——Medium文章
-- [加密貨幣中的真實世界資產是什麼？ 闡述其在區塊鏈的作用]（https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto）——BitDegree
-- [按市值排名的當今熱門真實世界資產（RWAs）代幣]（https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/）——富比世雜誌
+- [智能合約如何與區塊鏈協同運作](https://www.britannica.com/money/how-smart-contracts-work)——大英百科全書
+- [代幣化真實世界資產如何改變去中心化金融](https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a)——Medium文章
+- [加密貨幣中的真實世界資產是什麼？ 闡述其在區塊鏈的作用](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto)——BitDegree
+- [按市值排名的當今熱門真實世界資產（RWAs）代幣](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/)——富比世雜誌
