@@ -1,10 +1,10 @@
 ---
-title: Durumsuzluk, durum sonlanması ve tarih sonlanması
-description: Tarih sonlanması ve durumsuz Ethereum'un açıklanması
+title: "Durumsuzluk, durum sonlanması ve tarih sonlanması"
+description: "Tarih sonlanması ve durumsuz Ethereum'un açıklanması"
 lang: tr
 ---
 
-# Durumsuzluk, durum sonlanması ve tarih sonlanması {#statelessness}
+# Durumsuzluk, durum sonlanması ve geçmiş sonlanması {#statelessness}
 
 Gerçek anlamda merkeziyetsizlik için Ethereum düğümlerini ılımlı donanımda yürütme yeteneği hayati önem taşır. Bu; düğüm yürütmenin kullanıcılara, veri ile beslenmeleri için üçüncül şahıslara güvenmektense bağımsız olarak kriptoprafik denetimler uygulayarak bilgiyi doğrulama yeteneği vermesinden ötürüdür. Bir düğüm yürütmek kullanıcılara, herhangi bir aracıya güvenmek zorunda kalmaktansa Ethereum'un eşler arası ağına doğrudan işlem kaydetme olanağı tanır. Eğer bu faydalar yalnızca pahalı donanımlara sahip kullanıcılar için ulaşılabilir olursa merkeziyetsizlik mümkün değildir. Bunun aksine düğümlerin yürütülmesi için o kadar ılımlı işlemci ve hazıfa gereklilikleri olmalıdır ki cep telefonları, mikro bilgisayarlar veya bir ev bilgisayarında bile fark edilmeden yürütülsün.
 
@@ -16,14 +16,14 @@ Daha eski verileri depolamak için daha ucuz sabit sürücüler kullanılabilir,
 
 Her düğümün depolaması gereken veri miktarını azaltmak için birkaç yol vardır ve bunların her biri Ethereum'un çekirdek protokolünün farklı bir alanda güncellenmesine ihtiyaç duyar:
 
-- **Tarih sonlanması**: düğümlerin X bloku öncesi durum verilerini kenara ayırmasına imkân vermek, ancak Ethereum müşterilerinin durum verisini nasıl tutacağını değitirmemek
+- **Geçmiş sonlanması**: düğümlerin X bloktan daha eski durum verilerini atmasını sağlar ancak Ethereum istemcilerinin durum verilerini nasıl işlediğini değiştirmez.
 - **Durum sonlanması**: sıkça kullanılmayan durum verisinin atıl hale geçmesine olanak vermek. Atıl veri canlanana kadar müşteriler tarafından görmezden gelinebilir.
-- **Zayıf durumsuzluk**: tam durum verisine yalnızca blok üreticilerinin erişmesi gerekir, diğer düğümler yerel durum veritabanı olmadan blokları onaylayabilirler.
-- **Güçlü durumsuzluk**: hiçbir düğümün tam durum verisine ihtiyaç duymaması.
+- **Zayıf durumsuzluk**: yalnızca blok üreticilerinin tam durum verisine erişmesi gerekir, diğer düğümler yerel bir durum veritabanı olmadan blokları doğrulayabilir.
+- **Güçlü durumsuzluk**: hiçbir düğümün tam durum verisine erişmesi gerekmez.
 
 ## Veri sonlanması {#data-expiry}
 
-### Tarih sonlanması {#history-expiry}
+### Geçmiş sonlanması {#history-expiry}
 
 Tarih sonlanması; müşteirlerin gelecekte ihtiyaç olmayacak eski verilerin fazlasını yeni veriler geldikçe eskilerini bırakarak ortadan kaldırmasına, bu sayede yalnızca küçük miktarda geçmiş verinin depolanmak zorunda olmasına karşılık gelir. Müşterilerin geçmiş veriye ihtiyaç duymalarının iki sebebi vardır: senkronizasyon ve veri isteklerini karşılamak. Aslen müşteriler, ardışık her bir bloku doğruluğunu onaylayarak zincirin başına kadar başlangıç blokundan başlayarak senkronize olmak zorundadır. Bugün müşteriler ''zayıf öznellik kontrol noktalarını'' zincirin başına giden yollarında önyükleme için kullanır. Bu kontrol noktaları, Ethereum en başındakiler yerine bugüne daha yakın başlangıç blokuna sahip, güvenilir başlama noktalarıdır. Bu; müşterilerin en güncel zayıf öznellik kontrol noktası öncesindeki tüm verileri, zincirin en başı ile senkronize olma yeteneklerini kaybetmeden bırakabileceği anlamına gelir. İstemciler şu anda (JSON-RPC ile geliyor) geçmiş verileri yerel veritabanlarından almak için bazı taleplere hizmet ediyorlar. Ancak tarih sonlanması ile bu durum, eğer talep edilen veri ortadan kaldırılmışsa mümkün olmayacak. Bu geçmiş veriyi sunmak, bazı yenilikçi çözümlerin gerekli olduğu yerdir.
 
@@ -39,12 +39,12 @@ Bu yükseltme temelde Ethereum düğümlerinin veriyi işlemesini değil, geçmi
 
 Durum sonlanması eğer yakın zamanda erişilmediyse durumları bireysel düğümlerden silmekten bahseder. Bunu uygulamak için aşağıdakileri içeren birkaç yol vardır:
 
-- **Kiraya göre sonlanma**: Hesaplardan kira ücreti almak ve kiraları 0'a ulaştığında sonlandırmak
-- **Zamana göre sonlanma**: Eğer hesaplarda okuma/yazma durumu bir süredir yoksa hesapları inaktive etme
+- **Kiraya göre sonlandırma**: hesaplardan "kira" ücreti almak ve kiraları sıfıra ulaştığında hesapları sonlandırmak
+- **Zamana göre sonlandırma**: belirli bir süre boyunca bir hesaba okuma/yazma işlemi yapılmazsa o hesabı pasif hale getirme
 
-Kiraya göre sonlanma, hesapları veritabanında aktif durumda tutmak için direkt olarak kesilmiş bir kira olabilir. Zamana göre sonlanma ise son hesap etkileşiminden itibaren bir geri sayım ya da tüm hesaplara yapılan periyodik bir sonlanma olarak geçebilir. Elementleri hem zaman hem de kirayı baz alan modellerle birleştiren mekanizmalar da olabilir, örnek olarak bireysel hesapların zaman bazlı sonlanmaya yönelik yaptığı küçük ödemeler hesaplarını aktif tutabilir. Durum sonlanmasıyla ilgili inaktif durumu **silinmemiş** olarak bilmek de önemlidir, hesap sadece aktif durumdan ayrılıp depolanmış anlamına gelmektedir. İnaktif durum akfit duruma çevrilebilir.
+Kiraya göre sonlanma, hesapları veritabanında aktif durumda tutmak için direkt olarak kesilmiş bir kira olabilir. Zamana göre sonlanma ise son hesap etkileşiminden itibaren bir geri sayım ya da tüm hesaplara yapılan periyodik bir sonlanma olarak geçebilir. Elementleri hem zaman hem de kirayı baz alan modellerle birleştiren mekanizmalar da olabilir, örnek olarak bireysel hesapların zaman bazlı sonlanmaya yönelik yaptığı küçük ödemeler hesaplarını aktif tutabilir. Durum sonlanmasıyla ilgili olarak, etkin olmayan durumun **silinmediğini**, yalnızca etkin durumdan ayrı olarak depolandığını unutmamak önemlidir. İnaktif durum akfit duruma çevrilebilir.
 
-Bunun çalışmasının yolu muhtemelen belli zaman aralıklarıyla (belki~1 yıl) bir durum ağacına sahip olmaktır. Ne zaman yeni bir zaman aralığı başlarsa, tamamen yeni bir durum ağacı da aynı şekilde başlar. Sadece güncel durum ağaçları değiştirilebilir, diğerlerinin hiçbiri değiştirilemez. Ethereum düğümlerinin sadece güncel ve sonraki en yakın durum ağacını tutması beklenir. Bu, bir adresi bulunduğu zaman aralığıyla damgalamayı gerektirir. Bunu yapmak için [birkaç yol](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607) var, ancak asıl seçenek [ek bilgileri ve faydaları içine katmak ve ayrıca güvenliği sağlamak için adresleri uzatmaya ihtiyaç duyar](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485). Yol haritasında bunu yapan öğenin adı[ adres alanını uzatma](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485)dır.
+Bunun çalışmasının yolu muhtemelen belli zaman aralıklarıyla (belki~1 yıl) bir durum ağacına sahip olmaktır. Ne zaman yeni bir zaman aralığı başlarsa, tamamen yeni bir durum ağacı da aynı şekilde başlar. Sadece güncel durum ağaçları değiştirilebilir, diğerlerinin hiçbiri değiştirilemez. Ethereum düğümlerinin sadece güncel ve sonraki en yakın durum ağacını tutması beklenir. Bu, bir adresi bulunduğu zaman aralığıyla damgalamayı gerektirir. Bunu yapmanın [birkaç olası yolu](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607) vardır, ancak önde gelen seçenek, ek bilgileri barındırmak için [adreslerin uzatılmasını](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485) gerektirir ve bunun ek faydası, daha uzun adreslerin çok daha güvenli olmasıdır. Bunu yapan yol haritası öğesi [adres alanı genişletme](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485) olarak adlandırılır.
 
 Tarih sonlanmasına benzer olarak, durum sonlanmasının eski durum verilerini depolama sorumuluğu da bireysel kullanıcılardan alınıp, merkezileştirilmiş sağlayıcı gibi bazı varlıklara verildi ve Portal Ağı gibi başkalarını da düşünen topluluk üyeleri ya da daha futuristik merkeziyetsiz çözümler bulundu.
 
@@ -56,7 +56,7 @@ Durumsuzluk biraz yanlış bir isim çünkü durum konseptinin elimine edildiği
 
 - neredeyse anında senkronizasyon
 - blokları sırasız şekilde doğrulayabilme
-- düğümlerin çok düşük donanım gereklilikleriyle çalışabilmesini sağlama (ör. telefonlarda)
+- düğümlerin çok düşük donanım gereksinimleriyle çalışabilmesi (ör. telefonlarda)
 - düğümler ucuz donanımlarda çalışabilir çünkü disk okuma/yazmasına gerek yoktur
 - Ethereum Kriptografisinin gelecekteki yükseltmeleriyle uyumludur
 
@@ -66,13 +66,13 @@ Zayıf durumsuzluk Ethereum düğümlerinin durum değişikliklerini onaylaması
 
 **Zayıf durumsuzlukta blok önerileri tüm durum verisine erişim gerektirir fakat blokları onaylamak hiç durum verisi gerektirmez**
 
-Bunun olabilmesi için [Verkle ağaçları](/roadmap/verkle-trees/) Ethereum istemcilerinde çoktan uygulanmış olmalıdır. Verkle ağaçları, veri yapıları yerine kullanılan, Ethereum depolamada veriye eşler arasında küçük, ayarlanmış tanıklar gönderilmesini sağlayan ve yerel veritabanlarına karşı blok onaylamak yerine direkt olarak blok onaylamak için kullanılan bir yedektir. [Önerici-inşa edici ayrımı](/roadmap/pbs/) ayrıca gereklidir çünkü bu blok oluşturucularının daha güçlü donanımlarla uzmanlaşmış düğümler olmasının önünü açar ve bu uzmanlaşmış düğümler tüm durum verilerine ihtiyaç duyarlar.
+Bunun gerçekleşmesi için [Verkle ağaçlarının](/roadmap/verkle-trees/) Ethereum istemcilerinde zaten uygulanmış olması gerekir. Verkle ağaçları, veri yapıları yerine kullanılan, Ethereum depolamada veriye eşler arasında küçük, ayarlanmış tanıklar gönderilmesini sağlayan ve yerel veritabanlarına karşı blok onaylamak yerine direkt olarak blok onaylamak için kullanılan bir yedektir. [Öneren-inşa eden ayrımı](/roadmap/pbs/) da gereklidir çünkü bu, blok inşa edicilerinin daha güçlü donanıma sahip özelleşmiş düğümler olmalarını sağlar ve tam durum verisine erişmesi gerekenler de onlardır.
 
 <ExpandableCard title="Daha az blok önericisine güvenmek neden sorun değil?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 Durumsuzluk blok oluşturucularının tüm durum verilerinin bir kopyasını yönetmesine dayanır, bu sayede bloku onaylaması için tanıklar oluşturabilirler. Diğer düğümlerin ise tüm durum verilerine erişmeye ihtiyaçları yoktur, blokun onayı için gereken tüm bilgiler zaten tanık için ulaşılabilirdir. Bu durum blok önermenin masraflı, ancak blok onaylamanın pahalı olduğu bir olay yaratır, bu da daha az operatörün önerici düğüm için bir blok çalıştırmasıyla sonuçlanır. Ancak, blok önericilerinin merkeziyetsizleştirilmesi olabildiğince çok katılımcının bağımsız olarak önerilen blokların geçerli olduğunu onayladığı sürece çok da kritik bir konu değildir.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Dankrad'ın notlarında daha fazlasını bulabilirsiniz</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Dankrad'ın notlarında daha fazlasını okuyun</ButtonLink>
 </ExpandableCard>
 
 Blok önericileri durum verisini "tanıklar" oluşturmak için kullanırlar, bu da durumdaki değerlerin bloktaki işlemler tarafından değiştirdiğini kanıtlayan minimal bir veri kümesidir. Diğer doğrulayıcılar durumu değil, durum kökünü depolarlar (durumun tamamından oluşan bir düğüm). Bir blok ve tanık alırlar ve bu blok ve tanığı durum köklerini güncellemek için kullanırlar. Bu, doğrulama düğümünü oldukça hafifleştirir.
@@ -85,19 +85,21 @@ Güçlü durumsuzluk, herhangi bir düğümün durum verisi depolamaya olan ihti
 
 Güçlü durumsuzluk araştırmacılar tarafından incelendi fakat şu anda Ethereum Yol Haritasının bir parçası olması beklenmiyor - Ethereum'un ölçeklendirilme gereklilikleri için şu anda zayıf durumsuzluk yeterli gibi görünüyor.
 
-## Güncel ilerleme {#current-progress}
+## Mevcut ilerleme {#current-progress}
 
-Zayıf durumsuzluk, tarih sonlanması ve durum sonlanması hâlâ araştırma aşamasında ve birkaç sene içinde gelmesi bekleniyor. Bu tekliflerinin hepsinin uygulanacağına dair bir garanti yok, örneğin ilk durum sonlanması uygulanırsa diğerlerine ya da tarih sonlanmasına ihtiyaç duyulmayabilir. Ayrıca başka yol haritası öğeleri de var, [Verkle Ağaçları](/roadmap/verkle-trees) ve [Önerici-oluşturucu ayrımı](/roadmap/pbs)gibi. Önce bunların tamamlanması gerekiyor.
+Zayıf durumsuzluk, tarih sonlanması ve durum sonlanması hâlâ araştırma aşamasında ve birkaç sene içinde gelmesi bekleniyor. Bu tekliflerinin hepsinin uygulanacağına dair bir garanti yok, örneğin ilk durum sonlanması uygulanırsa diğerlerine ya da tarih sonlanmasına ihtiyaç duyulmayabilir. Ayrıca, önce tamamlanması gereken [Verkle Ağaçları](/roadmap/verkle-trees) ve [Öneren-inşa eden ayrımı](/roadmap/pbs) gibi başka yol haritası öğeleri de vardır.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-- [Vitalik durumsuzluk AMA (bana her şeyi sorun)](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
-- [Durum boyutu yönetimi teorisi](https://hackmd.io/@vbuterin/state_size_management)
-- [Diriliş-anlaşmazlık-minimize edilmiş durum sınırlaması](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
-- [Durumsuzluğa giden yollar ve durum sonlanması](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [EIP-4444 özellikleri](https://eips.ethereum.org/EIPS/eip-4444)
-- [Alex Stokes'un EIP-4444 hakkındaki görüşleri](https://youtu.be/SfDC_qUZaos)
-- [Durumsuzluk neden bu kadar önemli](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
-- [Orijinal durumsuz istemcinin konsept notları](https://ethresear.ch/t/the-stateless-client-concept/172)
+- [Durumsuz Ethereum nedir?](https://stateless.fyi/)
+- [Vitalik'in durumsuzluk üzerine AMA'sı](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
+- [Bir durum boyutu yönetimi teorisi](https://hackmd.io/@vbuterin/state_size_management)
+- [Resurrection-conflict-minimized state bounding](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
+- [Durumsuzluğa ve durum sonlanmasına giden yollar](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [EIP-4444 spesifikasyonu](https://eips.ethereum.org/EIPS/eip-4444)
+- [Alex Stokes EIP-4444 hakkında](https://youtu.be/SfDC_qUZaos)
+- [Durumsuz olmanın neden bu kadar önemli olduğu](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
+- [Orijinal durumsuz istemci konsept notları](https://ethresear.ch/t/the-stateless-client-concept/172)
 - [Durum sonlanması hakkında daha fazlası](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
 - [Durum sonlanması hakkında daha da fazlası](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Durumsuz Ethereum Bilgi Sayfası](https://stateless.fyi)

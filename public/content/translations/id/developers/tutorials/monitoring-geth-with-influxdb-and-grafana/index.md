@@ -114,23 +114,23 @@ sudo systemctl start grafana-server
 
 Ketika Anda telah membuat Grafana beroperasi, ia seharusnya dapat dicapai di `localhost:3000`. Gunakan peramban yang Anda inginkan untuk mengakses jalur ini, lalu masuk dengan kredensial default (pengguna: `admin` dan kata sandi: `admin`). Ketika diminta, ubah kata sandi defaultnya dan simpan.
 
-![](./grafana1.png)
+![Tangkapan layar dasbor Grafana untuk pemantauan Geth (panel 1)](./grafana1.png)
 
 Anda akan diarahkan kembali ke halaman beranda Grafana. Pertama - tama, siapkan data sumber Anda. Klik pada ikon konfigurasi di bar kiri dan pilih "Sumber data".
 
-![](./grafana2.png)
+![Tangkapan layar dasbor Grafana untuk pemantauan Geth (panel 2)](./grafana2.png)
 
 Tidak ada sumber data mana pun yang dibuat, klik pada "Tambahkan sumber data" untuk menentukan satu sumber.
 
-![](./grafana3.png)
+![Tangkapan layar dasbor Grafana untuk pemantauan Geth (panel 3)](./grafana3.png)
 
 Untuk penyiapan ini, pilih "InfluxDB" dan lanjutkan.
 
-![](./grafana4.png)
+![Tangkapan layar dasbor Grafana untuk pemantauan Geth (panel 4)](./grafana4.png)
 
 Konfigurasi sumber data cukup mudah jika Anda menjalankan perangkat pada mesin yang sama. Anda perlu menyiapkan alamat dan detail InfluxDB untuk mengakses basis data. Lihat gambar di bawah.
 
-![](./grafana5.png)
+![Tangkapan layar dasbor Grafana untuk pemantauan Geth (panel 5)](./grafana5.png)
 
 Jika semuanya lengkap dan InfluxDB dapat dicapai, klik pada "Simpan dan uji" dan tunggu hingga konfirmasinya muncul.
 

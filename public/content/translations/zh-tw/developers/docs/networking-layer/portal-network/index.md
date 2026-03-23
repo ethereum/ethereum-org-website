@@ -1,6 +1,6 @@
 ---
-title: 入口網路
-description: 入口網路概覽 - 一個開發中的網路，設計用來支援資源匱乏的客戶端。
+title: "入口網路"
+description: "入口網路概覽 - 一個開發中的網路，設計用來支援資源匱乏的客戶端。"
 lang: zh-tw
 ---
 
@@ -10,25 +10,25 @@ lang: zh-tw
 
 入口網路是為以太坊開發的新型網路設計。藉由以小塊方式在整個網路分享必要性的資料，輕量級節點不需要信任或增加全節點負擔的方式，解決資料可用性問題。
 
-更多資訊請參閱[節點和用戶端](/developers/docs/nodes-and-clients/)
+深入了解[節點和用戶端](/developers/docs/nodes-and-clients/)
 
-## 為什麼我們需要入口網路 {#why-do-we-need-portal-network}
+## 我們為什麼需要入口網路 {#why-do-we-need-portal-network}
 
 以太坊節點儲存以太坊區塊鏈的全部或部分複製資料。 這些區域性的複本被用來驗證交易和確保節點沿著正確的區塊鏈行進。 在區域儲存資料使節點能夠獨立驗證進來的資料有效和正確與否，不需要依賴任何其他實體。
 
-區塊鏈以及相關狀態和收據資料的區域複本佔據節點硬碟相當大的空間。 例如：使用 [Geth](https://geth.ethereum.org) 搭配共識用戶端來經營一個節點，建議要有 2TB 的硬碟。 使用只儲存比較近期的區塊組的鏈資料的快照同步，Geth 通常佔用約 650GB 的磁碟空間，但以約 14GB/周在成長（你可以定期向下修整節點至 650GB）。
+區塊鏈以及相關狀態和收據資料的區域複本佔據節點硬碟相當大的空間。 例如，建議使用 2TB 的硬碟，以執行與共識用戶端配對的 [Geth](https://geth.ethereum.org) 節點。 使用只儲存比較近期的區塊組的鏈資料的快照同步，Geth 通常佔用約 650GB 的磁碟空間，但以約 14GB/周在成長（你可以定期向下修整節點至 650GB）。
 
-這意味著經營節點的成本是很高的，因為以太坊需要大量的專用磁碟空間。 在以太坊開發藍圖上對這個問題有若干解決方法，包括[歷史有效期限](/roadmap/statelessness/#history-expiry)、[狀態有效期限](/roadmap/statelessness/#state-expiry)和[無狀態](/roadmap/statelessness/)。 然而，這可能要若干年後才有可能實行。 還有不必保存自己的鏈上資料複本的[輕量級節點](/developers/docs/nodes-and-clients/light-clients/)，它們需要向全節點請求資料。 然而，這意味著輕量級節點必須信任全節點會提供真實的資料，並且強調全節點必須提供輕量級節點需要的資料。
+這意味著經營節點的成本是很高的，因為以太坊需要大量的專用磁碟空間。 以太坊開發藍圖上有幾個此問題的解決方案，包括[歷史紀錄過期](/roadmap/statelessness/#history-expiry)、[狀態過期](/roadmap/statelessness/#state-expiry) 和[無狀態性](/roadmap/statelessness/)。 然而，這可能要若干年後才有可能實行。 另外還有[輕量節點](/developers/docs/nodes-and-clients/light-clients/)，它們不會儲存自己的鏈上資料複本，而是向完整節點請求所需的資料。 然而，這意味著輕量級節點必須信任全節點會提供真實的資料，並且強調全節點必須提供輕量級節點需要的資料。
 
 入口網路旨在提供一種替代方法，使輕量級節點能夠獲取它們的資料，而無需信任或顯著增加全節點必須完成的工作。 讓整個網路上的以太坊節點可以分享資料，需要引入新的方法。
 
 ## 入口網路如何運作？ {#how-does-portal-network-work}
 
-以太坊節點有嚴格的協定來定義它們如何相互通訊。 執行用戶端使用一組稱為 [DevP2P](/developers/docs/networking-layer/#devp2p) 的子協定通訊，而共識用戶端則使用一組不同的被稱為 [libP2P](/developers/docs/networking-layer/#libp2p) 的子協定。 它們定義了可以在節點之間傳遞的資料類型。
+以太坊節點有嚴格的協定來定義它們如何相互通訊。 執行用戶端使用一組稱為 [DevP2P](/developers/docs/networking-layer/#devp2p) 的子協定進行通訊，而共識用戶端則使用另一組稱為 [libP2P](/developers/docs/networking-layer/#libp2p) 的子協定堆疊。 它們定義了可以在節點之間傳遞的資料類型。
 
 ![devP2P 和 libP2P](portal-network-devp2p-libp2p.png)
 
-節點可以經由 [JSON-RPC 應用程式介面](/developers/docs/apis/json-rpc/)提供特定資料，這是應用程式和電子錢包與以太坊節點交換資訊的方式。 然而，這些都不是用來提供資料給輕量級用戶端的理想協定。
+節點也可透過 [JSON-RPC API](/developers/docs/apis/json-rpc/) 提供特定資料，應用程式和錢包就是透過這種方式與以太坊節點交換資訊。 然而，這些都不是用來提供資料給輕量級用戶端的理想協定。
 
 輕量級用戶端目前無法透過 DevP2P 或 libP2p 請求具體的鏈資料，因爲那些協定只被設計來實現鏈同步和廣播區塊與交易。 輕量級用戶端不想下載這些資訊，因為這樣它們將不再是「輕量」的。
 
@@ -36,7 +36,7 @@ JSON-RPC 應用程式介面也不是輕量級用戶端資料請求的理想選�
 
 入口網路的重點在於重新思考整個設計，專門為輕便而建立，不受現有以太坊用戶端的設計限制。
 
-入口網路的核心思想是使用[分散式雜湊資料表](https://en.wikipedia.org/wiki/Distributed_hash_table)（類似於 Bittorrent），透過輕量 DevP2P 式的點對點去中心化網絡啓用輕量級用戶端所需的資訊，例如歷史資料和目前鏈頭的身份，從而充分利用目前網路堆棧的最佳部分。
+入口網路的核心概念是汲取當前網路堆疊的精華，透過輕量級 DevP2P 風格的點對點去中心化網路，使用[分散式雜湊表 (DHT)](https://en.wikipedia.org/wiki/Distributed_hash_table)（類似 Bittorrent）來提供輕量用戶端所需的資訊，例如歷史資料與當前鏈首的身分。
 
 這個概念是新增小部分的以太坊全體歷史資料和一些特定節點責任到每一個節點。 然後，尋找儲存所請求特定資料的節點，擷取這些資料，將資料提供給請求。
 
@@ -48,16 +48,16 @@ JSON-RPC 應用程式介面也不是輕量級用戶端資料請求的理想選�
 - 同步近期和歷史鏈資料
 - 擷取狀態資料
 - 廣播交易
-- 使用[以太坊虛擬機](/developers/docs/evm/)執行交易
+- 使用 [EVM](/developers/docs/evm/) 執行交易
 
 這個網路設計的優勢是：
 
 - 降低對中心化提供者的依存
 - 降低網際網路頻寬的使用
 - 同步處理減到最少或零
-- 可存取資源有限的裝置（\<1 GB RAM，\<100 MB 磁碟空間，1 個 CPU）
+- 可供資源受限的裝置存取 (\<1 GB RAM、\<100 MB 磁碟空間、1 個 CPU)
 
-下圖顯示可由入口網路提供的現存用戶端功能，如此讓使用者能在低資源裝置上存取這些功能。
+下表顯示可由入口網路提供的現有用戶端功能，能讓使用者在資源極少的裝置上存取這些功能。
 
 ### 入口網路
 
@@ -69,21 +69,21 @@ JSON-RPC 應用程式介面也不是輕量級用戶端資料請求的理想選�
 
 ## 預設的用戶端多樣性 {#client-diversity-as-default}
 
-入口網路開發者最初也決定建立三種不同的入口網路用戶端設計。
+入口網路的開發者也從一開始就做出了設計選擇，要建置四個獨立的入口網路用戶端。
 
 入口網路用戶端如下：
 
-- [Trin](https://github.com/ethereum/trin)：以 Rust 編寫
-- [Fluffy](https://nimbus.team/docs/fluffy.html)：以 Nim 編寫
-- [Ultralight](https://github.com/ethereumjs/ultralight)：以 Typescript 編寫
-- [Shisui](https://github.com/optimism-java/shisui)：以 Go 語言編寫
+- [Trin](https://github.com/ethereum/trin)：以 Rust 撰寫
+- [Fluffy](https://fluffy.guide)：以 Nim 撰寫
+- [Ultralight](https://github.com/ethereumjs/ultralight)：以 Typescript 撰寫
+- [Shisui](https://github.com/zen-eth/shisui)：以 Go 撰寫
 
 有多個獨立用戶端安裝啟用，增強了以太坊網路的回復力和去中心化。
 
 假如一個用戶端遭受問題或漏洞，其他用戶端能繼續順暢運作，可以防止單點失靈。 此外，多樣化的用戶端安裝啟用能促進創新和競爭，驅使改善，和降低在這生態系統的單一文化風險。
 
-## 了解更多 {#futher-reading}
+## 延伸閱讀 {#further-reading}
 
-- [入口網路（Piper Merriam 在 Bogota 舉辦的 Devcon 大會）](https://www.youtube.com/watch?v=0stc9jnQLXA)。
-- [入口網路 discord](https://discord.gg/CFFnmE7Hbs)
+- [入口網路 (Piper Merriam 於 Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA)。
+- [入口網路 Discord](https://discord.gg/CFFnmE7Hbs)
 - [入口網路網站](https://www.ethportal.net/)

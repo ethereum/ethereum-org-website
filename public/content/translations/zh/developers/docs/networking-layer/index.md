@@ -97,7 +97,7 @@ Hello 消息包含：
 
 ### 发现 {#consensus-discovery}
 
-与执行客户端类似，共识客户端也通过 UDP 使用 [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) 来查找对等点。 discv5 的共识层实现与执行客户端的实现不同，它包含一个将 discv5 连接到 [libP2P](https://libp2p.io/) 堆栈的适配器，并弃用了 DevP2P。 执行层的 RLPx 会话已被弃用，取而代之的是 libP2P 的噪声安全信道握手。
+与执行客户端类似，共识客户端也通过 UDP 使用 [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) 来查找对等点。 discv5 的共识层实现与执行客户端的实现不同，它包含一个将 discv5 连接到 [libP2P](https://libp2p.io/) 堆栈的适配器，并弃用了 DevP2P。 执行层的 RLPx 会话已被弃用，取而代之的是 libP2P 的噪声安全信道握手。
 
 ### ENR {#consensus-enr}
 
@@ -109,7 +109,7 @@ LibP2P 堆栈支持发现后的所有通信。 根据其以太坊节点记录的
 
 ### Gossip {#gossip}
 
-广播域包括必须在整个网络中快速传播的所有信息。 这包括信标块、证明、认证、退出和罚没。 这是使用 libP2P gossipsub v1 传输的，并且依赖于在每个节点本地存储的各种元数据，包括要接收和传输的广播有效载荷的上限。 关于 gossip 域的详细信息，请参见[此处](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub)。
+广播域包括必须在整个网络中快速传播的所有信息。 这包括信标块、证明、认证、退出和罚没。 这是使用 libP2P gossipsub v1 传输的，并且依赖于在每个节点本地存储的各种元数据，包括要接收和传输的广播有效载荷的上限。 关于 gossip 域的详细信息，请参见[此处](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub)。
 
 ### 请求-响应 {#request-response}
 
@@ -146,8 +146,8 @@ SSZ 代表简单序列化。 它使用固定偏移量，可以轻松解码编码
 
 区块被足够多的验证者认证后，就会被添加到链头，经过合理化并最终确定。
 
-![](cons_client_net_layer.png)
-![](exe_client_net_layer.png)
+![以太坊共识客户端网络层图](cons_client_net_layer.png)
+![以太坊执行客户端网络层图](exe_client_net_layer.png)
 
 共识客户端和执行客户端的网络层示意图，来源：[ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
@@ -155,7 +155,7 @@ SSZ 代表简单序列化。 它使用固定偏移量，可以轻松解码编码
 
 [DevP2P](https://github.com/ethereum/devp2p)
 [LibP2p](https://github.com/libp2p/specs)
-[共识层网络规范](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)
+[共识层网络规范](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure)
 [从 kademlia 到 discv5](https://vac.dev/kademlia-to-discv5)
 [kademlia 论文](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [以太坊点对点 (p2p) 简介](https://p2p.paris/en/talks/intro-ethereum-networking/)

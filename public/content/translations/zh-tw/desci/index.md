@@ -1,15 +1,15 @@
 ---
-title: 去中心化科研 (DeSci)
-description: 以太坊的去中心化科研概觀
+title: "去中心化科研 (DeSci)"
+description: "以太坊的去中心化科研概觀"
 lang: zh-tw
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: 當前科學系統的全球開放性替代方案。
-summaryPoint2: 使科學家得以進行募資、試驗研究、資料分享、發表見解等活動的技術。
-summaryPoint3: 以開放科學運動為原則。
+summaryPoint1: "當前科學系統的全球開放性替代方案。"
+summaryPoint2: "使科學家得以進行募資、試驗研究、資料分享、發表見解等活動的技術。"
+summaryPoint3: "以開放科學運動為原則。"
 ---
 
 ## 什麼是去中心化科研 (DeSci)？ {#what-is-desci}
@@ -37,7 +37,7 @@ summaryPoint3: 以開放科學運動為原則。
 | 可以開發**新的發表模式**，使用 Web3 基礎單元實現信任、透明度和存取普及化。        | 透過既有途徑發表研究通常被認為**低效、受偏見影響且會受到剝削**。 |
 | 可以**藉由同儕審查工作獲得代幣與聲望**。                            | **同儕審查工作是無償的**，只有商業出版商能獲益。         |
 | 產生的**知識產權 (IP) 歸你所有**，且能根據透明條款加以分配。               | 產生的**知識產權歸屬於你所屬的機構**。 無法透明地獲得知識產權。 |
-| 透過在鏈上公佈所有步驟，包括來自失敗工作的資料，**實現全面的研究共享**。            | **發表偏見**導致研究者傾向於只分享獲得成功結果的實驗。      |
+| 透過在鏈上公佈所有步驟，包括來自失敗工作的資料，**實現全面的研究共享**。            | <strong>發表偏見</strong>導致研究者傾向於只分享獲得成功結果的實驗。      |
 
 ## 以太坊與去中心化科研 {#ethereum-and-desci}
 
@@ -101,7 +101,6 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [OceanDAO：管理資料相關科學資金的去中心化自治組織](https://oceanprotocol.com/)
 - [Opscientia：開放的去中心化科研工作流程](https://opsci.io/research/)
 - [Bio.xyz：為你的生物技術去中心化自治組織或去中心化科研專案募資](https://www.bio.xyz/)
-- [Fleming Protocol：推動協作生物醫學發現的開源式資料經濟](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets：實現去中心化的科學可信度](https://ideamarket.io/)
 - [去中心化科研實驗室](https://www.desci.com/)

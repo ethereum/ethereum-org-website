@@ -1,6 +1,6 @@
 ---
-title: Documentation sur le développement Ethereum
-description: Introduction à la documentation d'ethereum.org.
+title: "Documentation sur le développement Ethereum"
+description: "Introduction à la documentation d'ethereum.org."
 lang: fr
 ---
 
@@ -20,6 +20,6 @@ S'il s'agit de votre première tentative de développement pour Ethereum, nous v
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 
-### Sujets avancés {#advanced}
+### Avancé {#advanced}
 
 <DeveloperDocsLinks headerId="advanced" />

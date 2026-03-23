@@ -64,7 +64,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # 哈希值应输出：fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-请注意，Rock 5B 和 Odroid M1 单板机的镜像可在 Ethereum-on-Arm [下载页面](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html)获取。
+请注意，Rock 5B 和 Odroid M1 单板机的镜像可在 Ethereum-on-Arm [下载页面](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)获取。
 
 ## 刷写 MicroSD {#flashing-the-microsd}
 
@@ -158,7 +158,7 @@ sudo systemctl start lighthouse-validator
 
 ## 更多详细信息 {#more-details}
 
-本页概述了如何使用树莓派设置 Geth-Lighthouse 节点和验证者。 更详细的说明可在 [Ethereum-on-Arm 网站](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html)上找到。
+本页概述了如何使用树莓派设置 Geth-Lighthouse 节点和验证者。 更详细的说明可在 [Ethereum-on-Arm 网站](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)上找到。
 
 ## 感谢您的反馈 {#feedback-appreciated}
 
@@ -177,7 +177,7 @@ sudo systemctl start lighthouse-validator
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

@@ -1,6 +1,6 @@
 ---
 title: Hafif istemciler
-description: Ethereum hafif istemcilerine giriş.
+description: "Ethereum hafif istemcilerine giriş."
 lang: tr
 ---
 
@@ -12,7 +12,7 @@ Hafif düğüm, açık istemci yazılımını çalıştıran bir düğümdür. B
 
 ## Hafif istemciler nasıl çalışır? {#how-do-light-clients-work}
 
-Ethereum'un hisse ispatı temelli mutabakat mekanizması kullanmaya başlamasıyla beraber özellikle hafif istemcileri desteklemek için yeni bir altyapı tanıtıldı. Çalışma şekli ise; **sekronizasyon kurulu** olarak hareket etmeleri için her 1,1 günde bir 512 doğrulayıcıdan oluşan bir alt kümeyi rastgele seçmektir. Sekronizasyon kurulu son blokların başlıklarını imzalar. Her blok başlığı, senkronizasyon kurulundaki doğrulayıcıların toplu imzasını ve hangi doğrulayıcıların imzalayıp imzalamadığını gösteren bir "bit alanı" içerir. Her başlık ayrıca bir sonraki blokun imzalanmasına katılması beklenen doğrulayıcıların bir listesini de içerir. Yani hafif bir istemcinin, senkronizasyon kurulunun aldıkları verileri imzaladığını hızlı bir şekilde görebileceği ve ayrıca senkronizasyon kurulunun doğru olup olmadığını; kendilerine beklemeleri söylenenden önceki aldıkları blok ile karşılaştırarak kontrol edebileceği anlamına gelir. Bu şekilde hafif istemci, blokun kendisini indirmeden sadece özet bilgilerini içeren blok başlıklarını indirerek Ethereum bloku hakkındaki bilgilerini güncellemeye devam edebilir.
+Ethereum'un hisse ispatı temelli mutabakat mekanizması kullanmaya başlamasıyla beraber özellikle hafif istemcileri desteklemek için yeni bir altyapı tanıtıldı. Çalışma şekli, her 1,1 günde bir **senkronizasyon komitesi** olarak görev yapmak üzere 512 doğrulayıcıdan oluşan bir alt kümenin rastgele seçilmesidir. Sekronizasyon kurulu son blokların başlıklarını imzalar. Her blok başlığı, senkronizasyon komitesindeki doğrulayıcıların toplu imzasını ve hangi doğrulayıcıların imzalayıp imzalamadığını gösteren bir "bit alanı" içerir. Her başlık ayrıca bir sonraki blokun imzalanmasına katılması beklenen doğrulayıcıların bir listesini de içerir. Yani hafif bir istemcinin, senkronizasyon kurulunun aldıkları verileri imzaladığını hızlı bir şekilde görebileceği ve ayrıca senkronizasyon kurulunun doğru olup olmadığını; kendilerine beklemeleri söylenenden önceki aldıkları blok ile karşılaştırarak kontrol edebileceği anlamına gelir. Bu şekilde hafif istemci, blokun kendisini indirmeden sadece özet bilgilerini içeren blok başlıklarını indirerek Ethereum bloku hakkındaki bilgilerini güncellemeye devam edebilir.
 
 Yürütüm katmanında ise hafif düğümler için bir tane bile özellik yoktur. Hafif bir yürütüm istemcisinin kapsamı, tüm EVM ve ağ kurma fonsiyonuna sahip tam bir düğümün "hafif modu"nu kapsayacak kadar değişkenlik gösterebilir, ancak alakalı veriyi yüklemeden ve sadece blok başlarını onaylayabilecek şekilde. Yahut, Ethereum ile etkileşime girmek için bir RPC sağlayıcısına gelen taleplere fazlasıyla bağlı olan sadeleştirilmiş bir istemci olabilir.
 
@@ -32,7 +32,7 @@ Hafif istemcinin birincil faydası; önemsiz bir donanım gereksinimi ile Ethere
 
 Ethereum düğümlerini çok küçük depolama, bellek ve işlem gücü olan cihazlarda yürütebilmek hafif istemcilerle açılan ana yenlilk alanlarından biridir. Günümüzde Ethereum düğümleri çok fazla işlem kaynağı gerektirirken; hafif istemciler tarayıcılara gömülebilir, cep telefonlarında ya da belki de akıllı saatler gibi daha küçük cihazlarda çalıştırılabilir. Bu da gömülü istemcilere sahip Ethereum cüzdanlarının bir cep telefonunda çalışabileceği anlamına gelir. Yani mobil cüzdanlar merkezi veri sağlayıcılarına veri için ihtiyaç duymaları gerekmediğinden daha merkeziyetsiz hale gelebilirler.
 
-Bunun bir uzantısı ise **nesnelerin interneti (IoT)** cihazlarını etkinleştirmektir. Bir hafif istemci, senkronizasyon kurullarının sağladığı tüm güvenlik garantileriyle birlikte, IoT ağında bazı eylemleri tetikleyerek, bazı token bakiyelerinin veya değiştirilemez token'ların (NFT) sahipliğini hızlıca kanıtlamak için kullanılabilir. Kiralama servisinin değiştirilemez NFT'sine sahip olup olmadığınızı hızlı bir şekilde doğrulayacak ve sahipseniz bisikleti kullanmanız için bir tanesinin kilidini açacak gömülü hafif istemcili bir uygulama kullanan bir [bisiklet kiralama servisi](https://youtu.be/ZHNrAXf3RDE?t=929) düşünün.
+Bunun bir uzantısı da **Nesnelerin İnterneti (IoT)** cihazlarını etkinleştirmektir. Bir hafif istemci, senkronizasyon kurullarının sağladığı tüm güvenlik garantileriyle birlikte, IoT ağında bazı eylemleri tetikleyerek, bazı token bakiyelerinin veya değiştirilemez token'ların (NFT) sahipliğini hızlıca kanıtlamak için kullanılabilir. Gömülü hafif istemciye sahip bir uygulama kullanan bir [bisiklet kiralama hizmeti](https://youtu.be/ZHNrAXf3RDE?t=929) düşünün. Bu uygulama, kiralama hizmetinin NFT'sine sahip olup olmadığınızı hızla doğrular ve eğer sahipseniz, binip gitmeniz için bir bisikletin kilidini açar!
 
 Ethereum toplamaları da hafif istemcilerden yararlanacaktır. Toplamaların en büyük sorunlarından biri, Ethereum Ana Ağı'ndan toplamaya fon aktarımı sağlayan köprüleri hedef alan saldırılardır. Toplamaların bir kullanıcının köprüye para yatırıp yatırmadığını tespit etmek için kullandığı kahinler bir zayıflıktır. Eğer bir kahin kötü veri aktarırsa, toplamayı yanıltıp köprüye fon aktarıldığını düşündürerek fonların yanlış bir şekilde serbest bırakılmasına sebep olabilir. Toplamada gömülü bir hafif istemci, kötü niyetli kahinlere karşı koruma sağlayabilir çünkü köprüye gidecek olan fonlar, herhangi bir token'ı serbest bırakmadan önce toplama tarafından doğrulanabilecek bir kanıt ile birlikte gelebilir. Aynı konsept diğer zincirler arası köprülere de uygulanabilir.
 
@@ -42,20 +42,20 @@ Hafif istemciler ayrıca Ethereum cüzdanlarına yapılacak yükseltmelerde de k
 
 Bu geliştirme süreci içinde birkaç hafif istemci vardır, bunlar yürütme, mutabakat ve ikisinin birleşiminden oluşan yürütüm/fikir birliği istemcilerini kapsar. Bunlar, bu sayfayı yazarken güncel olarak bildiğimiz hafif istemci uygulamalarıdır:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): Typescript'te hafif fikir birliği istemcisi
-- [Helios](https://github.com/a16z/helios): Rust'ta hafif yürütüm ve fikir birliği istemcisi birleşimi
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light): Go'da (hâlâ geliştirme sürecinde) yürütüm istemcisi için hafif mod
-- [Nimbus](https://nimbus.guide/el-light-client.html): Nim'de bulunan hafif fikir birliği istemcisi
+- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): TypeScript ile yazılmış mutabakat hafif istemcisi
+- [Helios](https://github.com/a16z/helios): Rust ile yazılmış birleşik yürütme ve mutabakat hafif istemcisi
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go dilinde yürütme istemcisi için hafif mod (geliştirilmekte)
+- [Nimbus](https://nimbus.guide/el-light-client.html): Nim ile yazılmış mutabakat hafif istemcisi
 
 Bildiğimiz kadarıyla bunların hiçbiri henüz üretime hazır değil.
 
-Ayrıca hafif istemcilerin Ethereum verisine erişebilme yollarını geliştirmek için yapılan oldukça fazla iş var. Şu anda, hafif istemciler tam düğümlere bir istemci/sunucu modeli kullanılarak gönderilen RPC taleplerine dayanmakta, ancak gelecekte veri bu amaca yönelik bir ağ ["Portal Network"](https://www.ethportal.net/) kullanılarak daha merkeziyetsiz bir yöntemle talep edilebilir ve bu da hafif istemcilere veriyi eşler arası bir dedikodu protokolü kullanarak sunabilir.
+Ayrıca hafif istemcilerin Ethereum verisine erişebilme yollarını geliştirmek için yapılan oldukça fazla iş var. Şu anda hafif istemciler, bir istemci/sunucu modeli kullanarak tam düğümlere yapılan RPC isteklerine güvenir, ancak gelecekte veriler, [Portal Network](https://www.ethportal.net/) gibi özel bir ağ kullanılarak daha merkeziyetsiz bir şekilde talep edilebilir. Bu ağ, verileri hafif istemcilere eşler arası bir dedikodu protokolü kullanarak sunabilir.
 
-[Yol haritasında bulunan](/roadmap/) [Verkle Ağaçları](/roadmap/verkle-trees/) ve [durumsuzluk](/roadmap/statelessness/) gibi bazı öğeler ise eninde sonunda hafif istemcilerin güvenlik garantisini tam düğümlere verilen güvenlik garantisiyle eşitleyecek.
+[Yol haritası](/roadmap/)ndaki [Verkle ağaçları](/roadmap/verkle-trees/) ve [durumsuzluk](/roadmap/statelessness/) gibi diğer öğeler, zamanla hafif istemcilerin güvenlik garantilerini tam istemcilerinkine eşdeğer hale getirecektir.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-- [Geth hafif istemcileri üzerine, Zsolt Felfodhi](https://www.youtube.com/watch?v=EPZeFXau-RE)
-- [Hafif istemci ağları kurma üzerine, Etan Kissling](https://www.youtube.com/watch?v=85MeiMA4dD8)
-- [Birleşim'den sonraki hafif istemciler üzerine, Etan Kissling](https://www.youtube.com/watch?v=ZHNrAXf3RDE)
-- [Piper Merriam: Fonksiyonel hafif istemcilere giden dönemeçli yol](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)
+- [Zsolt Felfodhi, Geth hafif istemcileri üzerine](https://www.youtube.com/watch?v=EPZeFXau-RE)
+- [Etan Kissling, hafif istemci ağ iletişimi üzerine](https://www.youtube.com/watch?v=85MeiMA4dD8)
+- [Etan Kissling, Birleşim sonrası hafif istemciler üzerine](https://www.youtube.com/watch?v=ZHNrAXf3RDE)
+- [Piper Merriam: İşlevsel hafif istemcilere giden dolambaçlı yol](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)

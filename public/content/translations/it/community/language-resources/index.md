@@ -52,7 +52,7 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - contenuti mantenuti dalla community, su Ethereum, DeFi, NFT, conoscenza correlata a Web3
 - [123ETH](https://123eth.org/) - un Portale per l'ecosistema di Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - corsi online gratuiti sulle criptovalute e loro applicazioni
-- [Ethereum Whitepaper](https://github.com/ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - Versione cinese del Whitepaper di Ethereum
+- [Ethereum Whitepaper](https://ethereum.org/whitepaper//[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - Versione cinese del Whitepaper di Ethereum
 
 **Ecosistema Ethereum**
 

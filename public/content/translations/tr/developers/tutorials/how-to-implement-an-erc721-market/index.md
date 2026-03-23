@@ -1,12 +1,14 @@
 ---
-title: Bir ERC-721 pazarı nasıl uygulanır
-description: Merkeziyetsiz bir ilan panosunda token'laştırılmış ürünler nasıl satışa sunulur
+title: "Bir ERC-721 pazarı nasıl uygulanır"
+description: "Merkeziyetsiz bir ilan panosunda token'laştırılmış ürünler nasıl satışa sunulur"
 author: "Alberto Cuesta Cañada"
 tags:
-  - "akıllı sözleşmeler"
-  - "erc-721"
-  - "katılık"
-  - "token'lar"
+  [
+    "akıllı kontratlar",
+    "erc-721",
+    "solidity",
+    "token'lar"
+  ]
 skill: intermediate
 lang: tr
 published: 2020-03-19
@@ -22,17 +24,17 @@ Bunların tamamı internet ile değişti. Belirli bir ilan panosunu görebilen k
 
 Blok zinciri ile bu pazarlar bir kez daha değişmeye hazır, size nasıl olduğunu göstereyim.
 
-## Para kazanma {#monetization}
+## Para Kazanma {#monetization}
 
 Halka açık bir blok zinciri ilan panosunun iş modelinin Ebay'den ve bir şirketten farklı olması gerekecektir.
 
-İlk olarak, [merkeziyetsizleşme açısı](/developers/docs/web2-vs-web3/) bulunmaktadır. Mevcut platformların kendi sunucularını sürdürmesi gerekir. Merkeziyetsiz bir platform kullanıcıları tarafından sürdürüldüğü için çekirdek platformu çalıştırmanın maliyeti, platform sahibi için sıfıra düşer.
+Öncelikle, [merkeziyetsizleştirme açısı](/developers/docs/web2-vs-web3/) vardır. Mevcut platformların kendi sunucularını sürdürmesi gerekir. Merkeziyetsiz bir platform kullanıcıları tarafından sürdürüldüğü için çekirdek platformu çalıştırmanın maliyeti, platform sahibi için sıfıra düşer.
 
-Ardından, platforma erişim sağlayan ön uç, web sitesi veya arayüz bulunuyor. Burada birçok seçenek bulunur. Platform sahipleri, erişimi kısıtlayabilir ve bir ücret karşılığında herkesi kendi arayüzünü kullanmaya zorlayabilir. Platform sahipleri ayrıca erişimi açmaya karar vererek (Güç İnsanlarda!) herkesin platform için arayüzler oluşturmasına izin verebilir. Veya mal sahipleri, bu aşırı uçların ortasında herhangi bir yaklaşıma karar verebilir.
+Ardından, platforma erişim sağlayan ön uç, web sitesi veya arayüz bulunuyor. Burada birçok seçenek bulunur. Platform sahipleri, erişimi kısıtlayabilir ve bir ücret karşılığında herkesi kendi arayüzünü kullanmaya zorlayabilir. Platform sahipleri ayrıca erişimi açmaya karar verebilir (Güç Halkındır!) ve herkesin platforma arayüzler oluşturmasına izin verebilir. Veya mal sahipleri, bu aşırı uçların ortasında herhangi bir yaklaşıma karar verebilir.
 
 _Benden daha fazla vizyona sahip iş liderleri bundan nasıl para kazanılacağını bilirler. Tek gördüğüm şey, bunun statükodan farklı olduğu ve büyük ihtimalle bundan para kazanılabileceğidir._
 
-Bir de otomasyon ve ödeme açısı var. Bazı şeyler gayet [verimli şekilde token'laştırılarak](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) bir ilan panosunda ticarete açılabilir. Token'laştırılmış varlıklar bir blok zincirinde kolayca aktarılır. Son derece karmaşık ödeme yöntemleri bir blok zincirinde kolayca uygulanabilir.
+Bir de otomasyon ve ödeme açısı var. Bazı şeyler çok [etkili bir şekilde tokenleştirilebilir](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) ve bir seri ilanlar panosunda takas edilebilir. Token'laştırılmış varlıklar bir blok zincirinde kolayca aktarılır. Son derece karmaşık ödeme yöntemleri bir blok zincirinde kolayca uygulanabilir.
 
 Burada bir iş fırsatı kokusu alıyorum. İşletme maliyeti olmayan bir ilan panosu, her işleme dahil edilen karmaşık ödeme yollarıyla kolayca uygulanabilir. Eminim birileri bunu ne için kullanacağına dair bir fikir bulacaktır.
 
@@ -40,9 +42,9 @@ Bunu inşa etmenin verdiği mutluluk benim için yeterli. Hadi koda bir göz ata
 
 ## Uygulama {#implementation}
 
-Bir süre önce, iş örneği uygulamaları ve başka farklı şeyler içeren bir [açık kaynak deposu](https://github.com/HQ20/contracts?ref=hackernoon.com) başlattık, lütfen bir göz atın.
+Bir süre önce, iş durumu örnek uygulamaları ve diğer güzellikleri içeren bir [açık kaynaklı depo](https://github.com/HQ20/contracts?ref=hackernoon.com) başlattık, lütfen bir göz atın.
 
-Bu [Ethereum İlan Panosu](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com)'nun kodları oradadır, lütfen onları kullanın ve onlardan istediğiniz gibi faydalanın. Sadece kodun denetlenmediğini ve işin içine para katmadan önce kendi durum tespitinizi yapmanız gerektiğini unutmayın.
+Bu [Ethereum Seri İlanlar Panosu](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) için kod orada, lütfen kullanın ve dilediğiniz gibi faydalanın. Sadece kodun denetlenmediğini ve işin içine para katmadan önce kendi durum tespitinizi yapmanız gerektiğini unutmayın.
 
 Panonun temelleri karmaşık değildir. Panodaki tüm reklamlar sadece birkaç alana sahip bir yapı olacaktır:
 
@@ -51,7 +53,7 @@ struct Trade {
   address poster;
   uint256 item;
   uint256 price;
-  bytes32 status; // Open, Executed, Cancelled
+  bytes32 status; // Açık, Yürütüldü, İptal Edildi
 }
 ```
 
@@ -67,9 +69,9 @@ Eşleştirme kullanmak, yayınlamadan önce her reklam için bir kimlik bulmamı
 
 Ardından, ilgilendiğimiz bu öğelerin neler olduğu ve işlem için ödeme yapmak için kullanılan bu para biriminin ne olduğu sorusu geliyor.
 
-Öğeler için, [dijital varlıklarla en iyi şekilde çalışmasına](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) rağmen, gerçek dünya öğelerini bir blok zincirinde temsil etmenin bir yolu olan [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com) arayüzünü uygulamalarını isteyeceğiz. Yapıcıda kendi ERC721 sözleşmemizi belirteceğiz, yani ilan panomuzdaki herhangi bir varlığın önceden token'laştırılmış olması gerekir.
+Öğeler için yalnızca, gerçek dünyadaki öğeleri bir blokzincirde temsil etmenin bir yolu olan [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com) arayüzünü uygulamalarını isteyeceğiz; her ne kadar [dijital varlıklarla en iyi şekilde çalışsa da](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Yapıcıda kendi ERC721 sözleşmemizi belirteceğiz, yani ilan panomuzdaki herhangi bir varlığın önceden token'laştırılmış olması gerekir.
 
-Ödemeler için de benzer bir şey yapacağız. Birçok blok zinciri projesi, kendi [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) kripto parasını tanımlar. Bazıları ise DAI gibi bir ana akım parayı kullanmayı tercih ediyor. Bu ilan panosunda, inşa sırasında para biriminize karar vermeniz yeterli olur. Kolay.
+Ödemeler için de benzer bir şey yapacağız. Çoğu blokzincir projesi kendi [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) kripto parasını tanımlar. Bazıları ise DAI gibi bir ana akım parayı kullanmayı tercih ediyor. Bu ilan panosunda, inşa sırasında para biriminize karar vermeniz yeterli olur. Kolay.
 
 ```solidity
 constructor (
@@ -108,7 +110,7 @@ function executeTrade(uint256 _trade)
   public
 {
   Trade memory trade = trades[_trade];
-  require(trade.status == "Open", "Trade is not Open.");
+  require(trade.status == "Open", "Ticaret Açık değil.");
   currencyToken.transferFrom(msg.sender, trade.poster, trade.price);
   itemToken.transferFrom(address(this), msg.sender, trade.item);
   trades[_trade].status = "Executed";
@@ -127,16 +129,16 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "Trade can be cancelled only by poster."
+    "Ticaret sadece gönderen tarafından iptal edilebilir."
   );
-  require(trade.status == "Open", "Trade is not Open.");
+  require(trade.status == "Open", "Ticaret Açık değil.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
   trades[_trade].status = "Cancelled";
   emit TradeStatusChange(_trade, "Cancelled");
 }
 ```
 
-Bu kadar. Uygulamanın sonuna geldiniz. Kodla ifade edildiğinde bazı iş kavramlarının ne kadar kısa olduğu oldukça şaşırtıcıdır ve bu da o durumlardan biridir. [Depomuzda](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol) tam sözleşmeye bakın.
+Bu kadar. Uygulamanın sonuna geldiniz. Kodla ifade edildiğinde bazı iş kavramlarının ne kadar kısa olduğu oldukça şaşırtıcıdır ve bu da o durumlardan biridir. Sözleşmenin tamamını [depomuzda](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol) kontrol edin.
 
 ## Sonuç {#conclusion}
 
@@ -146,4 +148,4 @@ Bu kadar. Uygulamanın sonuna geldiniz. Kodla ifade edildiğinde bazı iş kavra
 
 Bu makalede, bir ilan panosu işinin ticari gerçekliği ile teknolojik uygulama arasında köprü kurmaya çalıştım. Bu bilgi, doğru becerilere sahipseniz, bir vizyon ve uygulama için bir yol haritası oluşturmanıza yardımcı olacaktır.
 
-Her zaman olduğu gibi, eğlenceli bir şey inşa etmek istiyorsanız ve tavsiye almak istiyorsanız, lütfen [bana bir şeyler yazın](https://albertocuesta.es/)! Her zaman yardımcı olmaktan memnuniyet duyarım.
+Her zaman olduğu gibi, eğlenceli bir şeyler inşa ediyorsanız ve tavsiye isterseniz, lütfen [bana ulaşın](https://albertocuesta.es/)! Her zaman yardımcı olmaktan memnuniyet duyarım.

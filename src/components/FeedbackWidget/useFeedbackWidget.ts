@@ -4,7 +4,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 import { useSurvey } from "@/hooks/useSurvey"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 export const useFeedbackWidget = () => {
   const pathname = usePathname()

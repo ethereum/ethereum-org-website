@@ -1,0 +1,21 @@
+{
+  "adoption-chart-artists-label": "Künstler:innen",
+  "adoption-chart-column-now-label": "Gerade",
+  "adoption-chart-companies-label": "Unternehmen",
+  "adoption-chart-developers-label": "Entwickler",
+  "adoption-chart-gamers-label": "Gamer",
+  "adoption-chart-investors-label": "Investoren",
+  "adoption-chart-musicians-label": "Musiker:innen",
+  "adoption-chart-refugees-label": "Flüchtlinge",
+  "adoption-chart-writers-label": "Autor:innen",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "Gaming in den USA",
+  "energy-consumption-chart-global-data-centers-label": "Globale Rechenzentren",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-gold-mining-cbeci-label": "Goldabbau",
+  "energy-consumption-chart-legend": "Jährlicher Energieverbrauch in TWh/Jahr"
+}
