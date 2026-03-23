@@ -1,6 +1,6 @@
 ---
-title: Cancun-Deneb（坎昆）升級常見問題解答
-description: 有關 Cancun-Deneb（坎昆）網路升級的常見問題
+title: "Cancun-Deneb（坎昆）升級常見問題解答"
+description: "有關 Cancun-Deneb（坎昆）網路升級的常見問題"
 lang: zh-tw
 ---
 
@@ -68,9 +68,9 @@ Proto-Danksharding 爲 [Danksharding](/roadmap/danksharding/) 的完全實作奠
 
 共識用戶端處理_驗證者_軟體，這類軟體已全部更新以支援這項升級。
 
-## Cancun-Deneb（坎昆）升級是否對 Goerli 或其他以太坊測試網有影響？ {#testnet-impact}
+## Cancun-Deneb（Dencun）升級是否對以太坊測試網有影響？ {#testnet-impact}
 
-- Devnets、Goerli、Sepolia 和 Holesky 測試網都已經完成了坎昆升級，同時 Proto-Danksharding 已經全面運行
+- Devnets、Sepolia 和 Holesky 測試網都已經完成了 Dencun 升級，同時 Proto-Danksharding 已經全面運行
 - 卷軸開發者可使用這些網路進行 EIP-4844 測試。
 - 大多數的使用者完全不會受到此測試網變更的影響。
 
