@@ -5,7 +5,7 @@ author: Markus Waas
 lang: te
 tags:
   [
-    "దృఢత్వం",
+    "Solidity",
     "స్మార్ట్ కాంట్రాక్టులు",
     "పరీక్షించడం",
     "మాకింగ్"

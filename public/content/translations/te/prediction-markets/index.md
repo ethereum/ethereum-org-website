@@ -54,7 +54,7 @@ buttons:
 <AlertContent>
 <AlertDescription>
   <p className="mt-0"><strong>ప్రమాదాల పట్ల శ్రద్ధ వహించండి</strong></p>
-  <p className="mt-2">మీరు భరించగలిగినంత మాత్రమే పందెం వేయండి మరియు వ్యసనపరుడైన ప్రవర్తనల పట్ల जागरूकంగా ఉండండి.</p>
+  <p className="mt-2">మీరు భరించగలిగినంత మాత్రమే పందెం వేయండి మరియు వ్యసనపరుడైన ప్రవర్తనల పట్ల జాగరూకంగా ఉండండి.</p>
 </AlertDescription>
 
 </AlertContent>

@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "స్మార్ట్ కాంట్రాక్టులు",
-    "remix",
-    "దృఢత్వం",
+    "Remix",
+    "Solidity",
     "డిప్లాయ్ చేయడం"
   ]
 skill: beginner

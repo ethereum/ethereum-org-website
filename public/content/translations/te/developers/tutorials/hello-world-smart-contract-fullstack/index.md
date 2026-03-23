@@ -4,9 +4,9 @@ description: "Ethereumలో ఒక సాధారణ స్మార్ట్ 
 author: "nstrike2"
 tags:
   [
-    "దృఢత్వం",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "స్మార్ట్ కాంట్రాక్టులు",
     "డిప్లాయ్ చేయడం",
     "బ్లాక్ ఎక్స్‌ప్లోరర్",

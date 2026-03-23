@@ -6,7 +6,7 @@ tags:
   [
     "స్మార్ట్ కాంట్రాక్టులు",
     "erc-721",
-    "దృఢత్వం",
+    "Solidity",
     "టోకెన్లు"
   ]
 skill: intermediate

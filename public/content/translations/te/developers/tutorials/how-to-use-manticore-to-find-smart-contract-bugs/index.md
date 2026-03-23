@@ -5,7 +5,7 @@ author: Trailofbits
 lang: te
 tags:
   [
-    "దృఢత్వం",
+    "Solidity",
     "స్మార్ట్ కాంట్రాక్టులు",
     "భద్రత",
     "పరీక్షించడం",

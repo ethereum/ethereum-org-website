@@ -2,7 +2,7 @@
 title: "జావాస్క్రిప్ట్ నుండి స్మార్ట్ కాంట్రాక్టును పిలవడం"
 description: "Dai టోకెన్ ఉదాహరణను ఉపయోగించి జావాస్క్రిప్ట్ నుండి స్మార్ట్ కాంట్రాక్ట్ ఫంక్షన్‌ను ఎలా పిలవాలో"
 author: jdourlens
-tags: [ "లావాదేవీలు", "frontend", "జావాస్క్రిప్ట్", "web3.js" ]
+tags: [ "లావాదేవీలు", "frontend", "JavaScript", "web3.js" ]
 skill: beginner
 lang: te
 published: 2020-04-19
