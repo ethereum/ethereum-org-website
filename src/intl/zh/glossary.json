@@ -150,7 +150,7 @@
   "ethash-term": "Ethash",
   "ethash-definition": "在以太坊过渡到<a href=\"/glossary/#pos\">权益证明</a>之前使用的一种<a href=\"/glossary/#pow\">工作量证明</a>算法。<a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">了解更多</a>",
   "ether-term": "以太币",
-  "ether-definition": "以太坊的原生加密货币，通常称为“以太币”。用于在使用以太坊生态系统和应用程序时支付交易费。<a href=\"/eth/\">了解有关以太币的更多信息</a>。",
+  "ether-definition": "以太坊的原生加密货币，通常称为“以太币”。用于在使用以太坊生态系统和应用程序时支付交易费。<a href=\"/what-is-ether/\">了解有关以太币的更多信息</a>。",
   "events-term": "活动",
   "events-definition": "允许使用<a href=\"/glossary/#evm\">以太坊虚拟机</a>日志工具。<a href=\"/glossary/#dapp\">去中心化应用程序</a>可以侦听事件，并使用它们在用户界面触发 JavaScript 回调。<a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">了解有关事件和日志的更多信息</a>",
   "evm-term": "以太坊虚拟机 (EVM)",

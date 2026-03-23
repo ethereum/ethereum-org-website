@@ -335,6 +335,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
                           src={image}
                           alt=""
                           className="me-4 h-6 w-6"
+                          sizes="24px"
                           width={24}
                           height={24}
                         />

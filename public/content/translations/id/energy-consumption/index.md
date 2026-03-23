@@ -82,6 +82,5 @@ Platform pendanaan barang publik asli Web3 seperti [Gitcoin](https://gitcoin.co)
 
 ## Topik terkait {#related-topics}
 
-- [Visi Ethereum](/roadmap/vision/)
 - [Rantai Suar](/roadmap/beacon-chain)
 - [Penggabungan](/roadmap/merge/)

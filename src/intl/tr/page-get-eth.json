@@ -7,7 +7,7 @@
   "page-get-eth-article-store-digital-assets-desc": "ConsenSys",
   "page-get-eth-cex": "Merkezi borsalar",
   "page-get-eth-cex-desc": "Borsalar, geleneksel para birimleri kullanarak kripto varlık satın almanızı sağlayan işletmelerdir. Satın aldığınız her ETH üzerinde kontrol ettiğiniz bir cüzdana gönderene kadar velayet sahibidirler.",
-  "page-get-eth-checkout-dapps-btn": "Dappsa göz atın",
+  "page-get-eth-checkout-dapps-btn": "Merkezi olmayan uygulamalara göz atın",
   "page-get-eth-community-safety": "Güvenlik üzerine topluluk gönderileri",
   "page-get-eth-description": "Ethereum merkeziyetsizdir, yani tek bir organizasyon tarafından kontrol edilmez.",
   "page-get-eth-dex": "Merkeziyetsiz borsalar (DEXs)",
@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "Bunu e-posta adresiniz gibi düşünün, ancak posta yerine ETH alabilir. ETH'yi bir borsadan cüzdanınıza aktarmak istiyorsanız, hedef olarak adresinizi kullanın. Göndermeden önce her zaman iki kez kontrol ettiğinizden emin olun!",
   "page-get-eth-your-address-wallet-link": "Cüzdanları kontrol edin",
   "listing-policy-raise-issue-link": "Sorun bildir",
-  "page-find-wallet-last-updated": "Son güncelleme"
+  "page-find-wallet-last-updated": "Son güncelleme",
+  "listing-policy-disclaimer": "Bu sayfada listelenen tüm ürünler resmi bir onay değildir ve yalnızca bilgilendirme amaçlıdır. Bir ürün eklemek veya politika hakkında geri bildirimde bulunmak isterseniz, GitHub'da bir sorun oluşturun."
 }

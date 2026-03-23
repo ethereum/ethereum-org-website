@@ -1,6 +1,6 @@
 ---
 title: Anatomie des contrats intelligents
-description: 'Examen approfondi des composantes d''un contrat intelligent : les fonctions, les données et les variables.'
+description: "Examen approfondi des composantes d'un contrat intelligent : les fonctions, les données et les variables."
 lang: fr
 ---
 
@@ -8,20 +8,20 @@ Les contrats intelligents sont des programmes qui s'exécutent à une adresse su
 
 ## Prérequis {#prerequisites}
 
-Assurez-vous de commencer par lire la page [Contrats intelligents](/developers/docs/smart-contracts/). Ce document part du principe que vous êtes déjà familiarisé avec des langages de programmation comme JavaScript ou Python.
+Assurez-vous d'avoir d'abord lu la page sur les [contrats intelligents](/developers/docs/smart-contracts/). Ce document part du principe que vous êtes déjà familiarisé avec des langages de programmation comme JavaScript ou Python.
 
 ## Données {#data}
 
-Toute donnée relative à un contrat doit être affectée à un emplacement : soit `storage` soit `memory`. Il est coûteux de modifier le stockage dans un contrat intelligent. Vous devez donc décider de l'endroit où vous souhaitez conserver vos données.
+Toute donnée de contrat doit être affectée à un emplacement : soit `storage`, soit `memory`. Il est coûteux de modifier le stockage dans un contrat intelligent. Vous devez donc décider de l'endroit où vous souhaitez conserver vos données.
 
 ### Stockage {#storage}
 
 Les données persistantes sont appelées stockage et sont représentées par des variables d'état. Ces valeurs sont stockées en permanence sur la blockchain. Vous devez déclarer le type afin que le contrat puisse garder une trace de la quantité de stockage nécessaire sur la blockchain quand il compile.
 
 ```solidity
-// Solidity example
+// Exemple Solidity
 contract SimpleStorage {
-    uint storedData; // State variable
+    uint storedData; // Variable d'état
     // ...
 }
 ```
@@ -31,9 +31,9 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-Si vous avez déjà programmé des langages orientés objet, vous serez probablement familiarisé avec la plupart des types. Cependant, le type `address` devrait être nouveau pour vous si vous commencez à développer pour Ethereum.
+Si vous avez déjà programmé des langages orientés objet, vous serez probablement familiarisé avec la plupart des types. Cependant, `address` devrait être nouveau pour vous si vous débutez dans le développement Ethereum.
 
-Un type `address ` peut contenir une adresse Ethereum qui équivaut à 20 octets ou 160 bits, ce qui donne une adresse en notation hexadécimale commençant par 0x.
+Un type `address` peut contenir une adresse Ethereum qui équivaut à 20 octets ou 160 bits. ce qui donne une adresse en notation hexadécimale commençant par 0x.
 
 Les autres types incluent les :
 
@@ -41,22 +41,22 @@ Les autres types incluent les :
 - nombres entiers ;
 - numéros de points fixes ;
 - tableaux d'octets de taille fixe ;
-- tableaux d'octets de taille dynamique ;
-- littéraux rationnels et entiers ;
-- littéraux de chaîne ;
-- nombres hexadécimaux ;
-- énumérations.
+- tableaux d'octets de taille dynamique
+- littéraux rationnels et entiers
+- littéraux de chaîne
+- littéraux hexadécimaux
+- énumérations
 
 Pour plus d'explications, consultez les pages ci-dessous :
 
-- [Types Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [Types Solidity](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [Voir les types Vyper](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Voir les types Solidity](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### Mémoire {#memory}
 
 Les valeurs qui ne sont stockées que pendant la durée de l'exécution d'une fonction de contrat sont appelées variables de mémoire. Celles-ci n'étant pas stockées de façon permanente sur la blockchain, elles sont donc moins chères à utiliser.
 
-Pour en savoir plus sur la façon dont l'EVM conserve les données (stockage, mémoire et pile) consultez la documentation [Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Apprenez-en davantage sur la façon dont l'EVM stocke les données (le stockage, la mémoire et la pile) dans la [documentation de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack).
 
 ### Variables d'environnement {#environment-variables}
 
@@ -64,10 +64,10 @@ En plus des variables que vous définissez sur votre contrat, il existent quelqu
 
 Exemples :
 
-| **Propriété**     | **Variable d'état** | **Description**                         |
-| ----------------- | ------------------- | --------------------------------------- |
-| `block.timestamp` | uint256             | Horodatage de la période du bloc actuel |
-| `msg.sender`      | address             | Expéditeur du message (appel en cours)  |
+| **Propriété**     | **Variable d'état** | **Description**                                           |
+| ----------------- | ------------------- | --------------------------------------------------------- |
+| `block.timestamp` | uint256             | Horodatage de la période du bloc actuel                   |
+| `msg.sender`      | Adresse             | Expéditeur du message (appel en cours) |
 
 ## Fonctions {#functions}
 
@@ -75,14 +75,14 @@ En termes simples, les fonctions peuvent obtenir ou définir des informations en
 
 Il existe deux types d'appels de fonctions :
 
-- `internal` - Ces fonctions ne créent pas d'appel EVM
-  - Les fonctions internes et les variables d'état ne peuvent être accédées qu'en interne (c'est-à-dire à partir du contrat actuel ou des contrats qui en découlent)
-- `external` - Ces fonctions créent un appel EVM
-  - Les fonctions externes font partie de l'interface du contrat, ce qui signifie qu'elles peuvent être appelées à partir d'autres contrats et via des transactions. Une fonction externe `f` ne peut pas être appelée en interne (par ex., `f()` ne fonctionne pas, mais `this.f()` fonctionne).
+- `internal` – celles-ci ne créent pas d'appel EVM
+  - Les fonctions internes et les variables d'état ne sont accessibles qu'en interne (c'est-à-dire depuis le contrat actuel ou les contrats qui en dérivent)
+- `external` – celles-ci créent un appel EVM
+  - Les fonctions externes font partie de l'interface du contrat, ce qui signifie qu'elles peuvent être appelées à partir d'autres contrats et via des transactions. Une fonction externe `f` ne peut pas être appelée en interne (c.-à-d. que `f()` ne fonctionne pas, mais `this.f()` fonctionne).
 
-Elles peuvent également être de type `public` ou `private`
+Elles peuvent également être `public` ou `private`
 
-- Les fonctions `public` peuvent être appelées en interne à l'intérieur du contrat ou à l'extérieur via des messages
+- Les fonctions `public` peuvent être appelées en interne depuis le contrat ou en externe via des messages
 - Les fonctions `private` ne sont visibles que pour le contrat dans lequel elles sont définies et non dans les contrats dérivés
 
 Les fonctions et les variables d'état peuvent être rendues publiques ou privées
@@ -96,11 +96,11 @@ function update_name(string value) public {
 }
 ```
 
-- Le paramètre `value` de type `string` est passé dans la fonction : `update_name`.
-- Il est déclaré `public`, ce qui signifie que n'importe qui peut y accéder.
-- Il n'est pas déclaré comme `view`, il peut donc modifier l'état du contrat
+- Le paramètre `value` de type `string` est passé dans la fonction : `update_name`
+- Elle est déclarée `public`, ce qui signifie que n'importe qui peut y accéder
+- Elle n'est pas déclarée `view`, elle peut donc modifier l'état du contrat
 
-### Voir les fonctions {#view-functions}
+### Fonctions View {#view-functions}
 
 Ces fonctions promettent de ne pas modifier l’état des données du contrat. Les exemples courants sont les fonctions « getter » - vous pouvez utiliser ceci pour obtenir le solde d'un utilisateur par exemple.
 
@@ -123,27 +123,27 @@ def readName() -> string:
 Voici ce qui est considéré comme une modification d'état :
 
 1. Écriture dans les variables d'état
-2. [Émission d'événements](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events)
-3. [Création d'autres contrats](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts)
-4. Utilisation d'`autodestruct`
+2. [Émettre des événements](https://docs.soliditylang.org/en/v0.7.0/contracts.html#events).
+3. [Créer d'autres contrats](https://docs.soliditylang.org/en/v0.7.0/control-structures.html#creating-contracts).
+4. Utiliser `selfdestruct`.
 5. Envoi d'ether via des appels
-6. Appel d'une fonction non marquée `view` ni `pure`
+6. Appeler toute fonction non marquée `view` ou `pure`.
 7. Utilisation d'appels de bas niveau
 8. Utilisation d'un assemblage en ligne conteant certains opcodes
 
-### Fonctions du constructeur {#constructor-functions}
+### Fonctions constructeur {#constructor-functions}
 
-Les fonctions `constructor` ne sont exécutées qu'une seule fois lors du premier déploiement du contrat. Comme `constructor` dans de nombreux langages de programmation basés sur des classes, ces fonctions initialisent souvent les variables d'état à leurs valeurs spécifiées.
+Les fonctions `constructor` ne sont exécutées qu'une seule fois lors du premier déploiement du contrat. Comme le `constructor` dans de nombreux langages de programmation orientés objet, ces fonctions initialisent souvent les variables d'état à leurs valeurs spécifiées.
 
 ```solidity
-// Solidity example
-// Initializes the contract's data, setting the `owner`
-// to the address of the contract creator.
+// Exemple Solidity
+// Initialise les données du contrat, en définissant l'`owner`
+// sur l'adresse du créateur du contrat.
 constructor() public {
-    // All smart contracts rely on external transactions to trigger its functions.
-    // `msg` is a global variable that includes relevant data on the given transaction,
-    // such as the address of the sender and the ETH value included in the transaction.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+    // Tous les contrats intelligents s'appuient sur des transactions externes pour déclencher leurs fonctions.
+    // `msg` est une variable globale qui inclut des données pertinentes sur la transaction donnée,
+    // comme l'adresse de l'expéditeur et la valeur en ETH incluse dans la transaction.
+    // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
     owner = msg.sender;
 }
 ```
@@ -162,12 +162,12 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 
 En plus des variables et des fonctions que vous définissez pour votre contrat, il existe des fonctions spéciales intégrées. Exemple le plus évident :
 
-- `address.send()` - Solidity
-- `send(address)` - Vyper
+- `address.send()` – Solidity
+- `send(address)` – Vyper
 
 Celles-ci permettent aux contrats d’envoyer des ETH à d’autres comptes.
 
-## Fonctions d'écriture {#writing-functions}
+## Écrire des fonctions {#writing-functions}
 
 Votre fonction a besoin des éléments suivants :
 
@@ -180,26 +180,26 @@ Votre fonction a besoin des éléments suivants :
 pragma solidity >=0.4.0 <=0.6.0;
 
 contract ExampleDapp {
-    string dapp_name; // state variable
+    string dapp_name; // variable d'état
 
-    // Called when the contract is deployed and initializes the value
+    // Appelé lorsque le contrat est déployé et initialise la valeur
     constructor() public {
-        dapp_name = "My Example dapp";
+        dapp_name = "Ma dapp d'exemple";
     }
 
-    // Get Function
+    // Fonction Get
     function read_name() public view returns(string) {
         return dapp_name;
     }
 
-    // Set Function
+    // Fonction Set
     function update_name(string value) public {
         dapp_name = value;
     }
 }
 ```
 
-Un contrat complet pourrait ressembler à cela. Ici la fonction `constructor` fournit une valeur initiale pour la variable `dapp_name`.
+Un contrat complet pourrait ressembler à cela. Ici, la fonction `constructor` fournit une valeur initiale pour la variable `dapp_name`.
 
 ## Événements et journaux {#events-and-logs}
 
@@ -207,38 +207,39 @@ Les événements permettent à votre contrat intelligent de communiquer avec vot
 
 ## Exemples annotés {#annotated-examples}
 
-Voici quelques exemples rédigés en Solidity. Si vous souhaitez jouer avec le code, vous pouvez interagir avec dans [Remix](http://remix.ethereum.org).
+Voici quelques exemples rédigés en Solidity. Si vous souhaitez vous amuser avec le code, vous pouvez interagir avec celui-ci dans [Remix](http://remix.ethereum.org).
 
 ### Hello world {#hello-world}
 
 ```solidity
-// Specifies the version of Solidity, using semantic versioning.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// Spécifie la version de Solidity, en utilisant le versionnage sémantique.
+// En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
 
-// Defines a contract named `HelloWorld`.
-// A contract is a collection of functions and data (its state).
-// Once deployed, a contract resides at a specific address on the Ethereum blockchain.
-    // Declares a state variable `message` of type `string`.
-    // State variables are variables whose values are permanently stored in contract storage.
-    // The keyword `public` makes variables accessible from outside a contract
-    // and creates a function that other contracts or clients can call to access the value.
+// Définit un contrat nommé `HelloWorld`.
+// Un contrat est une collection de fonctions et de données (son état).
+// Une fois déployé, un contrat réside à une adresse spécifique sur la blockchain Ethereum.
+// En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+contract HelloWorld {
+
+    // Déclare une variable d'état `message` de type `string`.
+    // Les variables d'état sont des variables dont les valeurs sont stockées en permanence dans le stockage du contrat.
+    // Le mot-clé `public` rend les variables accessibles depuis l'extérieur d'un contrat
+    // et crée une fonction que d'autres contrats ou clients peuvent appeler pour accéder à la valeur.
     string public message;
 
-    // Similar to many class-based object-oriented languages, a constructor is
-    // a special function that is only executed upon contract creation.
-
-    // Constructors are used to initialize the contract's data.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+    // Similaire à de nombreux langages orientés objet basés sur des classes, un constructeur est
+    // une fonction spéciale qui n'est exécutée que lors de la création du contrat.
+    // Les constructeurs sont utilisés pour initialiser les données du contrat.
+    // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
     constructor(string memory initMessage) public {
-        // Accepts a string argument `initMessage` and sets the value
-        // into the contract's `message` storage variable).
-
+        // Accepte un argument de chaîne `initMessage` et définit la valeur
+        // dans la variable de stockage `message` du contrat.
         message = initMessage;
     }
 
-    // A public function that accepts a string argument
-    // and updates the `message` storage variable.
+    // Une fonction publique qui accepte un argument de chaîne
+    // et met à jour la variable de stockage `message`.
     function update(string memory newMessage) public {
         message = newMessage;
     }
@@ -251,59 +252,58 @@ pragma solidity ^0.5.10;
 pragma solidity ^0.5.10;
 
 contract Token {
-    // An `address` is comparable to an email address - it's used to identify an account on Ethereum.
-    // Addresses can represent a smart contract or an external (user) accounts.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
+    // Un `address` est comparable à une adresse e-mail - il est utilisé pour identifier un compte sur Ethereum.
+    // Les adresses peuvent représenter un contrat intelligent ou des comptes externes (utilisateur).
+    // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/types.html#address
     address public owner;
 
-    // A `mapping` is essentially a hash table data structure.
-    // This `mapping` assigns an unsigned integer (the token balance) to an address (the token holder).
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
+    // Un `mapping` est essentiellement une structure de données de table de hachage.
+    // Ce `mapping` attribue un entier non signé (le solde de jetons) à une adresse (le détenteur de jetons).
+    // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
     mapping (address => uint) public balances;
 
-    // Events allow for logging of activity on the blockchain.
-    // Ethereum clients can listen for events in order to react to contract state changes.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
+    // Les événements permettent de journaliser l'activité sur la blockchain.
+    // Les clients Ethereum peuvent écouter les événements afin de réagir aux changements d'état du contrat.
+    // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
-    // Initializes the contract's data, setting the `owner`
-    // to the address of the contract creator.
+    // Initialise les données du contrat, en définissant l'`owner`
+    // sur l'adresse du créateur du contrat.
     constructor() public {
-        // All smart contracts rely on external transactions to trigger its functions.
-
-        // `msg` is a global variable that includes relevant data on the given transaction,
-        // such as the address of the sender and the ETH value included in the transaction.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+        // Tous les contrats intelligents s'appuient sur des transactions externes pour déclencher leurs fonctions.
+        // `msg` est une variable globale qui inclut des données pertinentes sur la transaction donnée,
+        // comme l'adresse de l'expéditeur et la valeur en ETH incluse dans la transaction.
+        // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
         owner = msg.sender;
     }
 
-    // Creates an amount of new tokens and sends them to an address.
+    // Crée un montant de nouveaux jetons et les envoie à une adresse.
     function mint(address receiver, uint amount) public {
-        // `require` is a control structure used to enforce certain conditions.
-        // If a `require` statement evaluates to `false`, an exception is triggered,
-        // which reverts all changes made to the state during the current call.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // `require` est une structure de contrôle utilisée pour appliquer certaines conditions.
+        // Si une déclaration `require` est évaluée à `false`, une exception est déclenchée,
+        // qui annule toutes les modifications apportées à l'état au cours de l'appel actuel.
+        // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // Only the contract owner can call this function
-        require(msg.sender == owner, "You are not the owner.");
+        // Seul le propriétaire du contrat peut appeler cette fonction
+        require(msg.sender == owner, "Vous n'êtes pas le propriétaire.");
 
-        // Enforces a maximum amount of tokens
-        require(amount < 1e60, "Maximum issuance exceeded");
+        // Applique un montant maximum de jetons
+        require(amount < 1e60, "Émission maximale dépassée");
 
-        // Increases the balance of `receiver` by `amount`
+        // Augmente le solde de `receiver` de `amount`
         balances[receiver] += amount;
     }
 
-    // Sends an amount of existing tokens from any caller to an address.
+    // Envoie un montant de jetons existants de n'importe quel appelant à une adresse.
     function transfer(address receiver, uint amount) public {
-        // The sender must have enough tokens to send
-        require(amount <= balances[msg.sender], "Insufficient balance.");
+        // L'expéditeur doit avoir suffisamment de jetons à envoyer
+        require(amount <= balances[msg.sender], "Solde insuffisant.");
 
-        // Adjusts token balances of the two addresses
+        // Ajuste les soldes de jetons des deux adresses
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
 
-        // Emits the event defined earlier
+        // Émet l'événement défini plus tôt
         emit Transfer(msg.sender, receiver, amount);
     }
 }
@@ -314,74 +314,74 @@ contract Token {
 ```solidity
 pragma solidity ^0.5.10;
 
-// Imports symbols from other files into the current contract.
-// In this case, a series of helper contracts from OpenZeppelin.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
+// Importe des symboles d'autres fichiers dans le contrat actuel.
+// Dans ce cas, une série de contrats d'aide d'OpenZeppelin.
+// En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// The `is` keyword is used to inherit functions and keywords from external contracts.
-// In this case, `CryptoPizza` inherits from the `IERC721` and `ERC165` contracts.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
+// Le mot-clé `is` est utilisé pour hériter des fonctions et des mots-clés de contrats externes.
+// Dans ce cas, `CryptoPizza` hérite des contrats `IERC721` et `ERC165`.
+// En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
-    // Uses OpenZeppelin's SafeMath library to perform arithmetic operations safely.
-    // Learn more: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // Utilise la bibliothèque SafeMath d'OpenZeppelin pour effectuer des opérations arithmétiques en toute sécurité.
+    // En savoir plus : https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
     using SafeMath for uint256;
 
-    // Constant state variables in Solidity are similar to other languages
-    // but you must assign from an expression which is constant at compile time.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
+    // Les variables d'état constantes dans Solidity sont similaires à d'autres langages
+    // mais vous devez les affecter à partir d'une expression qui est constante au moment de la compilation.
+    // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Struct types let you define your own type
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
+    // Les types struct vous permettent de définir votre propre type
+    // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // Creates an empty array of Pizza structs
+    // Crée un tableau vide de structs Pizza
     Pizza[] public pizzas;
 
-    // Mapping from pizza ID to its owner's address
+    // Mappage de l'ID de la pizza à l'adresse de son propriétaire
     mapping(uint256 => address) public pizzaToOwner;
 
-    // Mapping from owner's address to number of owned token
+    // Mappage de l'adresse du propriétaire au nombre de jetons possédés
     mapping(address => uint256) public ownerPizzaCount;
 
-    // Mapping from token ID to approved address
+    // Mappage de l'ID du jeton à l'adresse approuvée
     mapping(uint256 => address) pizzaApprovals;
 
-    // You can nest mappings, this example maps owner to operator approvals
+    // Vous pouvez imbriquer des mappages, cet exemple mappe le propriétaire aux approbations de l'opérateur
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // Internal function to create a random Pizza from string (name) and DNA
+    // Fonction interne pour créer une Pizza aléatoire à partir d'une chaîne (nom) et d'un ADN
     function _createPizza(string memory _name, uint256 _dna)
-        // The `internal` keyword means this function is only visible
-        // within this contract and contracts that derive this contract
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
+        // Le mot-clé `internal` signifie que cette fonction n'est visible
+        // qu'à l'intérieur de ce contrat et des contrats qui dérivent de ce contrat
+        // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique` is a function modifier that checks if the pizza already exists
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
+        // `isUnique` est un modificateur de fonction qui vérifie si la pizza existe déjà
+        // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Adds Pizza to array of Pizzas and get id
+        // Ajoute une Pizza au tableau de Pizzas et obtient l'ID
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // Checks that Pizza owner is the same as current user
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Vérifie que le propriétaire de la Pizza est le même que l'utilisateur actuel
+        // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // note that address(0) is the zero address,
-        // indicating that pizza[id] is not yet allocated to a particular user.
+        // notez que address(0) est l'adresse zéro,
+        // indiquant que pizza[id] n'est pas encore alloué à un utilisateur particulier.
 
         assert(pizzaToOwner[id] == address(0));
 
-        // Maps the Pizza to the owner
+        // Mappe la Pizza au propriétaire
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -389,38 +389,37 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // Creates a random Pizza from string (name)
+    // Crée une Pizza aléatoire à partir d'une chaîne (nom)
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // Generates random DNA from string (name) and address of the owner (creator)
+    // Génère un ADN aléatoire à partir d'une chaîne (nom) et de l'adresse du propriétaire (créateur)
     function generateRandomDna(string memory _str, address _owner)
         public
-        // Functions marked as `pure` promise not to read from or modify the state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
+        // Les fonctions marquées comme `pure` promettent de ne pas lire ou modifier l'état
+        // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // Generates random uint from string (name) + address (owner)
+        // Génère un uint aléatoire à partir d'une chaîne (nom) + adresse (propriétaire)
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // Returns array of Pizzas found by owner
+    // Renvoie un tableau des Pizzas trouvées par propriétaire
     function getPizzasByOwner(address _owner)
         public
-        // Functions marked as `view` promise not to modify state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
+        // Les fonctions marquées comme `view` promettent de ne pas modifier l'état
+        // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // Uses the `memory` storage location to store values only for the
-        // lifecycle of this function call.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
+        // Utilise l'emplacement de stockage `memory` pour stocker des valeurs uniquement pour le cycle de vie de cet appel de fonction.
+        // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -432,28 +431,28 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // Transfers Pizza and ownership to other address
+    // Transfère la Pizza et la propriété à une autre adresse
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
-        require(_from != address(0) && _to != address(0), "Invalid address.");
-        require(_exists(_pizzaId), "Pizza does not exist.");
-        require(_from != _to, "Cannot transfer to the same address.");
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
+        require(_from != address(0) && _to != address(0), "Adresse non valide.");
+        require(_exists(_pizzaId), "La pizza n'existe pas.");
+        require(_from != _to, "Impossible de transférer à la même adresse.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "L'adresse n'est pas approuvée.");
 
         ownerPizzaCount[_to] = SafeMath.add(ownerPizzaCount[_to], 1);
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // Emits event defined in the imported IERC721 contract
+        // Émet un événement défini dans le contrat IERC721 importé
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
 
     /**
-     * Safely transfers the ownership of a given token ID to another address
-     * If the target address is a contract, it must implement `onERC721Received`,
-     * which is called upon a safe transfer, and return the magic value
+     * Transfère en toute sécurité la propriété d'un ID de jeton donné à une autre adresse
+     * Si l'adresse cible est un contrat, elle doit implémenter `onERC721Received`,
+     * qui est appelée lors d'un transfert sécurisé, et renvoyer la valeur magique
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * otherwise, the transfer is reverted.
+     * sinon, le transfert est annulé.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -463,11 +462,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Safely transfers the ownership of a given token ID to another address
-     * If the target address is a contract, it must implement `onERC721Received`,
-     * which is called upon a safe transfer, and return the magic value
+     * Transfère en toute sécurité la propriété d'un ID de jeton donné à une autre adresse
+     * Si l'adresse cible est un contrat, elle doit implémenter `onERC721Received`,
+     * qui est appelée lors d'un transfert sécurisé, et renvoyer la valeur magique
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * otherwise, the transfer is reverted.
+     * sinon, le transfert est annulé.
      */
     function safeTransferFrom(
         address from,
@@ -476,12 +475,12 @@ contract CryptoPizza is IERC721, ERC165 {
         bytes memory _data
     ) public {
         this.transferFrom(from, to, pizzaId);
-        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implement onERC721Received.");
+        require(_checkOnERC721Received(from, to, pizzaId, _data), "Doit implémenter onERC721Received.");
     }
 
     /**
-     * Internal function to invoke `onERC721Received` on a target address
-     * The call is not executed if the target address is not a contract
+     * Fonction interne pour invoquer `onERC721Received` sur une adresse cible
+     * L'appel n'est pas exécuté si l'adresse cible n'est pas un contrat
      */
     function _checkOnERC721Received(
         address from,
@@ -502,13 +501,13 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Burns a Pizza - destroys Token completely
-    // The `external` function modifier means this function is
-    // part of the contract interface and other contracts can call it
+    // Brûle une Pizza - détruit complètement le jeton
+    // Le modificateur de fonction `external` signifie que cette fonction
+    // fait partie de l'interface du contrat et que d'autres contrats peuvent l'appeler
     function burn(uint256 _pizzaId) external {
-        require(msg.sender != address(0), "Invalid address.");
-        require(_exists(_pizzaId), "Pizza does not exist.");
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
+        require(msg.sender != address(0), "Adresse non valide.");
+        require(_exists(_pizzaId), "La pizza n'existe pas.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "L'adresse n'est pas approuvée.");
 
         ownerPizzaCount[msg.sender] = SafeMath.sub(
             ownerPizzaCount[msg.sender],
@@ -517,58 +516,58 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // Returns count of Pizzas by address
+    // Renvoie le nombre de Pizzas par adresse
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // Returns owner of the Pizza found by id
+    // Renvoie le propriétaire de la Pizza trouvé par ID
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
-        require(owner != address(0), "Invalid Pizza ID.");
+        require(owner != address(0), "ID de Pizza non valide.");
         return owner;
     }
 
-    // Approves other address to transfer ownership of Pizza
+    // Approuve une autre adresse pour transférer la propriété de la Pizza
     function approve(address _to, uint256 _pizzaId) public {
-        require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
+        require(msg.sender == pizzaToOwner[_pizzaId], "Doit être le propriétaire de la Pizza.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // Returns approved address for specific Pizza
+    // Renvoie l'adresse approuvée pour une Pizza spécifique
     function getApproved(uint256 _pizzaId)
         public
         view
         returns (address operator)
     {
-        require(_exists(_pizzaId), "Pizza does not exist.");
+        require(_exists(_pizzaId), "La pizza n'existe pas.");
         return pizzaApprovals[_pizzaId];
     }
 
     /**
-     * Private function to clear current approval of a given token ID
-     * Reverts if the given address is not indeed the owner of the token
+     * Fonction privée pour effacer l'approbation actuelle d'un ID de jeton donné
+     * Annule si l'adresse donnée n'est pas en effet le propriétaire du jeton
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
-        require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
-        require(_exists(_pizzaId), "Pizza does not exist.");
+        require(pizzaToOwner[_pizzaId] == owner, "Doit être le propriétaire de la pizza.");
+        require(_exists(_pizzaId), "La pizza n'existe pas.");
         if (pizzaApprovals[_pizzaId] != address(0)) {
             pizzaApprovals[_pizzaId] = address(0);
         }
     }
 
     /*
-     * Sets or unsets the approval of a given operator
-     * An operator is allowed to transfer all tokens of the sender on their behalf
+     * Définit ou annule l'approbation d'un opérateur donné
+     * Un opérateur est autorisé à transférer tous les jetons de l'expéditeur en leur nom
      */
     function setApprovalForAll(address to, bool approved) public {
-        require(to != msg.sender, "Cannot approve own address");
+        require(to != msg.sender, "Impossible d'approuver sa propre adresse");
         operatorApprovals[msg.sender][to] = approved;
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // Tells whether an operator is approved by a given owner
+    // Indique si un opérateur est approuvé par un propriétaire donné
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -577,20 +576,20 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Takes ownership of Pizza - only for approved users
+    // Prend la propriété de la Pizza - uniquement pour les utilisateurs approuvés
     function takeOwnership(uint256 _pizzaId) public {
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "L'adresse n'est pas approuvée.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // Checks if Pizza exists
+    // Vérifie si la Pizza existe
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // Checks if address is owner or is approved to transfer Pizza
+    // Vérifie si l'adresse est propriétaire ou est approuvée pour transférer la Pizza
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
@@ -605,7 +604,7 @@ contract CryptoPizza is IERC721, ERC165 {
             this.isApprovedForAll(owner, spender));
     }
 
-    // Check if Pizza is unique and doesn't exist yet
+    // Vérifie si la Pizza est unique et n'existe pas encore
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -617,19 +616,19 @@ contract CryptoPizza is IERC721, ERC165 {
                 result = false;
             }
         }
-        require(result, "Pizza with such name already exists.");
+        require(result, "Une pizza avec ce nom existe déjà.");
         _;
     }
 
-    // Returns whether the target address is a contract
+    // Renvoie si l'adresse cible est un contrat
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Currently there is no better way to check if there is a contract in an address
-        // than to check the size of the code at that address.
+        // Actuellement, il n'y a pas de meilleure façon de vérifier s'il y a un contrat à une adresse
+        // que de vérifier la taille du code à cette adresse.
         // Voir https://ethereum.stackexchange.com/a/14016/36603
-        // pour plus de détails sur le fonctionnement.
-        // TODO Vérifiez cela à nouveau avant la version Serenity, car toutes les adresses seront alors contractuelles
-        // .
+        // pour plus de détails sur son fonctionnement.
+        // TODO Vérifier à nouveau avant la sortie de Serenity, car toutes les adresses seront
+        // alors des contrats.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)
@@ -639,20 +638,20 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Complément d'information {#further-reading}
+## En savoir plus {#further-reading}
 
 Consultez la documentation Solidity et Vyper pour une vue d'ensemble plus complète des contrats intelligents :
 
-- [Solidity](https://solidity.readthedocs.io/)
-- [Vyper](https://vyper.readthedocs.io/)
+- [Solidity](https://docs.soliditylang.org/)
+- [Vyper](https://docs.vyperlang.org/en/stable/)
 
 ## Sujets connexes {#related-topics}
 
 - [Contrats intelligents](/developers/docs/smart-contracts/)
-- [Machine virtuelle Ethereum (EVM)](/developers/docs/evm/)
+- [Machine Virtuelle Ethereum](/developers/docs/evm/)
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Réduire les contrats pour respecter la limite de taille](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _ - Quelques conseil pratiques pour réduire la taille de votre contrat intelligent_
-- [Consigner les données des contrats intelligents avec des événements](/developers/tutorials/logging-events-smart-contracts/) _- Introduction aux événements de contrats intelligents et comment vous pouvez les utiliser pour consigner les données_
-- [Interagir avec d'autres contrats Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- Comment déployer et interagir avec un contrat intelligent à partir d'un contrat existant_
+- [Réduire la taille des contrats pour combattre la limite de taille des contrats](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Quelques conseils pratiques pour réduire la taille de votre contrat intelligent._
+- [Journaliser les données des contrats intelligents avec des événements](/developers/tutorials/logging-events-smart-contracts/) _– Une introduction aux événements de contrats intelligents et comment vous pouvez les utiliser pour journaliser des données._
+- [Interagir avec d'autres contrats depuis Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Comment déployer un contrat intelligent à partir d'un contrat existant et interagir avec lui._

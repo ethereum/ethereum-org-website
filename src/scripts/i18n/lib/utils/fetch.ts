@@ -19,7 +19,12 @@ export const fetchWithRetry = async (
   const backoffMs = options?.backoffMs ?? 1000
   const retryOnStatuses = options?.retryOnStatuses ?? [
     403, // GitHub secondary rate limits
-    408, 429, 500, 502, 503, 504,
+    408,
+    429,
+    500,
+    502,
+    503,
+    504,
   ]
 
   for (let attempt = 0; attempt <= retries; attempt++) {

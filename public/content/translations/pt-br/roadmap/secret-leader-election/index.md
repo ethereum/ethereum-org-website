@@ -1,6 +1,6 @@
 ---
-title: Eleição de líder secreto
-description: Explicação de como a eleição de líder secreto pode ajudar a proteger os validadores contra ataques
+title: "Eleição de líder secreto"
+description: "Explicação de como a eleição de líder secreto pode ajudar a proteger os validadores contra ataques"
 lang: pt-br
 summaryPoints:
   - O endereço IP dos proponentes de blocos pode ser conhecido antecipadamente, o que os torna vulneráveis a ataques
@@ -8,19 +8,19 @@ summaryPoints:
   - Uma extensão dessa ideia é tornar a seleção do validador aleatória em cada espaço.
 ---
 
-# Eleição de líder secreto {#single-secret-leader-election}
+# Eleição de líder secreta {#single-secret-leader-election}
 
-No mecanismo atual de consenso baseado em [prova de participação](/developers/docs/consensus-mechanisms/pos), a lista de proponentes de blocos futuros é pública e é possível mapear os endereços IP. Isso significa que os invasores podem identificar quais validadores devem propor um bloco e atacá-los com um ataque de negação de serviço (DOS) que os impeça de propor o bloco a tempo.
+No mecanismo de consenso atual baseado em [prova de participação](/developers/docs/consensus-mechanisms/pos), a lista dos próximos proponentes de bloco é pública e é possível mapear seus endereços IP. Isso significa que os invasores podem identificar quais validadores devem propor um bloco e atacá-los com um ataque de negação de serviço (DOS) que os impeça de propor o bloco a tempo.
 
-Isso pode criar oportunidades de lucro para um invasor. Por exemplo, um proponente de bloco selecionado para o espaço `n+1` poderia aplicar um ataque de DoS contra o proponente no espaço `n` para que perca a oportunidade de propor um bloco. Isso permitiria que o proponente do bloco atacante extraísse o MEV de ambos os espaços ou pegasse todas as transações que deveriam ter sido divididas em dois blocos e, em vez disso, as incluísse em um só, ganhando todas as taxas associadas. É provável que isso afete mais os validadores internos do que os validadores institucionais experientes, que podem usar métodos mais avançados para se proteger de ataques de DOS e, portanto, podem ser uma força centralizadora.
+Isso pode criar oportunidades de lucro para um invasor. Por exemplo, um proponente de bloco selecionado para o espaço `n+1` poderia aplicar um ataque de DoS contra o proponente no espaço `n` para que este perca a oportunidade de propor um bloco. Isso permitiria que o proponente do bloco atacante extraísse o MEV de ambos os espaços ou pegasse todas as transações que deveriam ter sido divididas em dois blocos e, em vez disso, as incluísse em um só, ganhando todas as taxas associadas. É provável que isso afete mais os validadores internos do que os validadores institucionais experientes, que podem usar métodos mais avançados para se proteger de ataques de DOS e, portanto, podem ser uma força centralizadora.
 
-Há várias soluções para esse problema. Uma delas é a [tecnologia de validador distribuído](https://github.com/ethereum/distributed-validator-specs), que visa distribuir as várias tarefas relacionadas à execução de um validador entre várias máquinas, com redundância, de modo que seja muito mais difícil para um invasor impedir que um bloco seja proposto em um espaço específico. Entretanto, a solução mais eficiente é a **eleição de um único líder secreto (Single Secret Leader Election, SSLE)**.
+Há várias soluções para esse problema. Uma delas é a [Tecnologia de Validador Distribuído](https://github.com/ethereum/distributed-validator-specs), que visa distribuir as várias tarefas relacionadas à execução de um validador por várias máquinas, com redundância, de modo que seja muito mais difícil para um invasor impedir que um bloco seja proposto em um determinado espaço. No entanto, a solução mais robusta é a **Eleição de Líder Secreto Único (SSLE)**.
 
-## Eleição secreta de um único líder {#secret-leader-election}
+## Eleição de líder secreto único {#secret-leader-election}
 
 Na SSLE, uma criptografia inteligente é usada para garantir que apenas o validador selecionado saiba que foi selecionado. Isso funciona fazendo com que cada validador envie um compromisso com um segredo que todos compartilham. Os compromissos são embaralhados e reconfigurados para que ninguém possa mapear compromissos a validadores, mas cada validador sabe qual compromisso pertence a ele. Em seguida, um compromisso é escolhido aleatoriamente. Se um validador detectar que o compromisso dele foi escolhido, ele saberá que é a vez dele de propor um bloco.
 
-A principal implementação dessa ideia é chamada [Whisk](https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763). Funciona da seguinte forma:
+A principal implementação desta ideia chama-se [Whisk](https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763). Funciona da seguinte forma:
 
 1. Os validadores se comprometem com um segredo compartilhado. O esquema de compromisso é projetado de forma que possa ser vinculado a uma identidade de validador, mas também randomizado para que nenhum terceiro possa fazer engenharia reversa do vínculo e associar um compromisso específico a um validador específico.
 2. No início de uma época, o RANDAO é utilizado para escolher um conjunto aleatório de 16.384 validadores para uma amostra de compromissos.
@@ -31,9 +31,9 @@ A principal implementação dessa ideia é chamada [Whisk](https://ethresear.ch/
 
 Isso impede que os invasores saibam com antecedência qual validador específico proporá o próximo bloco, evitando a possibilidade de ataques DoS.
 
-## Eleição de líder secreto não único (SnSLE) {#secret-non-single-leader-election}
+## Eleição de líder não único secreta (SnSLE) {#secret-non-single-leader-election}
 
-Há também uma proposta separada que visa criar um cenário em que os validadores têm uma chance aleatória de propor um bloco em cada espaço, de forma semelhante à maneira como a proposta de bloco foi decidida na prova de trabalho, conhecida como **eleição de líder secreto não único (secret non-single leader election, SnSLE)**. Uma maneira simples de fazer isso é utilizar a função RANDAO usada para selecionar validadores aleatoriamente no protocolo atual. A ideia do RANDAO é que um número suficientemente aleatório seja gerado pela combinação de hashes enviados por diversos validadores independentes. Na SnSLE, esses hashes poderiam ser utilizados para escolher o próximo proponente de bloco, por exemplo, ao escolher o hash de menor valor. O intervalo de hashes válidos pode ser restringido para ajustar a probabilidade de validadores individuais serem selecionados em cada espaço. Ao declarar que o hash deve ser inferior a `2^256 * 5 / N`, em que `N` é o número de validadores ativos, a possibilidade de qualquer validador individual ser selecionado em cada espaço seria de `5/N`. Nesse exemplo, haveria uma chance de 99,3% de pelo menos um proponente gerar um hash válido em cada espaço.
+Há também uma proposta separada que visa criar um cenário em que cada validador tenha uma chance aleatória de propor um bloco em cada espaço, de forma semelhante a como a proposta de bloco era decidida sob a prova de trabalho, conhecida como **eleição de líder não único secreta (SnSLE)**. Uma maneira simples de fazer isso é utilizar a função RANDAO usada para selecionar validadores aleatoriamente no protocolo atual. A ideia do RANDAO é que um número suficientemente aleatório seja gerado pela combinação de hashes enviados por diversos validadores independentes. Na SnSLE, esses hashes poderiam ser utilizados para escolher o próximo proponente de bloco, por exemplo, ao escolher o hash de menor valor. O intervalo de hashes válidos pode ser restringido para ajustar a probabilidade de validadores individuais serem selecionados em cada espaço. Ao afirmar que o hash deve ser menor que `2^256 * 5 / N`, onde `N` = o número de validadores ativos, a chance de qualquer validador individual ser selecionado em cada espaço seria de `5/N`. Nesse exemplo, haveria uma chance de 99,3% de pelo menos um proponente gerar um hash válido em cada espaço.
 
 ## Progresso atual {#current-progress}
 

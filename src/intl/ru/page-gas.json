@@ -1,5 +1,5 @@
 {
-  "page-gas-meta-title": "Комиссии за газ в Ethereum: как они работают?",
+  "page-gas-meta-title": "Комиссии Ethereum: что такое газ и как платить меньше?",
   "page-gas-meta-description": "Узнайте, как они работают комиссии за газ в Ethereum и как платить меньше",
   "page-gas-hero-title": "Комиссии за газ",
   "page-gas-hero-header": "Комиссия сети",
@@ -56,7 +56,7 @@
   "page-gas-faq-question-1-a-2": "Вы можете прочитать подробное описание процесса в <a href=\"/developers/docs/gas/\">технической документации по газу.</a>",
   "page-gas-faq-question-2-q": "Обязательно ли платить за газ в ETH?",
   "page-gas-faq-question-2-a-1": "Да. Все комиссии за газ в Ethereum оплачиваются в валюте ETH.",
-  "page-gas-faq-question-2-a-2": "Подробнее о ETH",
+  "page-gas-faq-question-2-a-2": "Подробнее об ETH",
   "page-gas-faq-question-3-q": "Что такое гвей?",
   "page-gas-faq-question-3-a-1": "В большинстве кошельков или газовых трекеров цены на газ обозначены как \"гвей\".",
   "page-gas-faq-question-3-a-2": "Гвей — это дробная единица ETH. Точно так же, как доллар состоит из пенни, 1 ETH состоит из 1 миллиарда гвей. Gwei полезен, когда речь идет об очень маленьком количестве ETH.",

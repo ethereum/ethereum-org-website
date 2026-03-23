@@ -1,7 +1,7 @@
 ---
-title: 如何翻譯
+title: "如何翻譯"
 lang: zh-tw
-description: 使用 Crowdin 翻譯 ethereum.org 的說明
+description: "使用 Crowdin 翻譯 ethereum.org 的說明"
 ---
 
 # 如何翻譯 {#how-to-translate}
@@ -42,7 +42,7 @@ description: 使用 Crowdin 翻譯 ethereum.org 的說明
 
 我們建議你按照數字順序來翻譯 (1 → 2 → 3 → ⋯)，以確保影響力最大的頁面最先翻譯。
 
-[瞭解有關 ethereum.org 內容門類的更多資訊](/contributing/translation-program/content-buckets/)
+[瞭解有關 ethereum.org 內容門類的更多資訊](/contributing/translation-program/)
 
 ### 翻譯 {#translate}
 

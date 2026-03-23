@@ -1,5 +1,5 @@
 {
-  "page-gas-meta-title": "Taxas de gás no Ethereum: como elas funcionam?",
+  "page-gas-meta-title": "Taxas da Ethereum: o que é gas e como pagar menos?",
   "page-gas-meta-description": "Aprenda sobre o gás no Ethereum: como funciona e como pagar menos em taxas de gás",
   "page-gas-hero-title": "Taxas de gás",
   "page-gas-hero-header": "Taxas de rede",
@@ -19,7 +19,7 @@
   "page-gas-how-do-i-pay-less-gas-card-1-description": "Assim como viajar em baixa temporada é menos movimentado e mais acessível, geralmente é mais barato para usar o Ethereum quando a América do Norte está dormindo.",
   "page-gas-how-do-i-pay-less-gas-card-2-title": "Espere o gás baixar",
   "page-gas-how-do-i-pay-less-gas-card-2-description": "O preço do gás sobe e desce a cada doze segundos com base no congestionamento do Ethereum. Quando o preço do gás está alto, esperar alguns minutos antes de fazer uma transação pode causar uma queda significativa no valor que você pagará.",
-  "page-gas-how-do-i-pay-less-gas-card-3-title": "Usar a camada 2",
+  "page-gas-how-do-i-pay-less-gas-card-3-title": "Use a camada 2",
   "page-gas-how-do-i-pay-less-gas-card-3-description": "As cadeias da camada 2 são construídas sobre o Ethereum, oferecendo taxas mais baixas e lidando com mais transações. Eles são uma boa opção para economizar em taxas para transações que não precisam acontecer na rede principal do Ethereum.",
   "page-gas-try-layer-2": "Experimente a camada 2",
   "page-gas-what-causes-high-gas-fees-header": "O que causa altas taxas de gás?",
@@ -60,5 +60,5 @@
   "page-gas-faq-question-3-q": "O que é gwei?",
   "page-gas-faq-question-3-a-1": "Na maioria das carteiras ou rastreadores de gás, você verá o preço do gás denominado como 'gwei'.",
   "page-gas-faq-question-3-a-2": "Gwei é apenas uma pequena unidade do ETH, assim como os centavos são do real, como a diferença sendo que 1 ETH equivale a 1 bilhão de gwei. Gwei é util quando se fala de quantidades muito pequenas de ETH.",
-  "page-gas-use-layer-2": "Usar a camada 2"
+  "page-gas-use-layer-2": "Use a camada 2"
 }

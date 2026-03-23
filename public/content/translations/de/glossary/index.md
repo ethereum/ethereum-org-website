@@ -326,7 +326,7 @@ Ein Validator, der zwei Nachrichten sendet, die sich widersprechen. Ein einfache
 
 ### Eth1 {#eth1}
 
-„Eth1" ist ein Begriff, der sich auf das Ethereum-Mainnet, die bestehende Proof-of-Work-Blockchain, bezieht. Dieser Begriff ist inzwischen im Vergleich zum Begriff „Ausführungsebene" veraltet. [Erfahren Sie mehr über diese Namensänderung](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+„Eth1" ist ein Begriff, der sich auf das Ethereum-Mainnet, die bestehende Proof-of-Work-Blockchain, bezieht. Dieser Begriff ist inzwischen im Vergleich zum Begriff „Ausführungsebene" veraltet. [Erfahren Sie mehr über diese Namensänderung](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming).
 
 <DocLink href="/roadmap/">
   Mehr zu den Ethereum-Upgrades
@@ -334,7 +334,7 @@ Ein Validator, der zwei Nachrichten sendet, die sich widersprechen. Ein einfache
 
 ### Eth2 {#eth2}
 
-„Eth2" ist ein Begriff, der sich auf eine Reihe von Upgrades des Ethereum-Protokolls bezieht, einschließlich des Übergangs von Ethereum zu Proof-of-Stake. Dieser Begriff ist inzwischen im Vergleich zum Begriff „Konsensschicht" veraltet. [Erfahren Sie mehr über diese Namensänderung](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+„Eth2" ist ein Begriff, der sich auf eine Reihe von Upgrades des Ethereum-Protokolls bezieht, einschließlich des Übergangs von Ethereum zu Proof-of-Stake. Dieser Begriff ist inzwischen im Vergleich zum Begriff „Konsensschicht" veraltet. [Erfahren Sie mehr über diese Namensänderung](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming).
 
 <DocLink href="/roadmap/">
   Mehr zu den Ethereum-Upgrades

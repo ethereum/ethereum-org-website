@@ -65,13 +65,13 @@ Questo produrrà le stesse informazioni fornite sulla pagina della transazione d
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Screenshot della visualizzazione dell'Explorer delle transazioni Etherscan](./etherscan_view.png)
 
 [Pagina del contratto dell'EF su Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Screenshot di un dashboard delle query di Dune Analytics](./dune_view.png)
 
 Puoi trovare la dashboard [qui](https://duneanalytics.com/paulapivat/Learn-Ethereum). Clicca sulla tabella per vedere l'interrogazione (vedi anche sopra).
 
@@ -149,7 +149,7 @@ ORDER BY block_time DESC`
 
 Ecco l'output in SQL su Dune:
 
-![](./list_of_txn.png)
+![Screenshot di un elenco di transazioni Ethereum](./list_of_txn.png)
 
 Questo singolo blocco aggiunto alla catena cambia lo stato della macchina virtuale di Ethereum ([EVM](/developers/docs/evm/)). Dozzine, a volte, centinaia di transazioni vengono verificate in un solo colpo. In questo caso specifico, sono state incluse 222 transazioni.
 
@@ -168,7 +168,7 @@ FROM temp_table
 
 Per il blocco 12396854, di 222 transazioni totali, 204 sono state verificate correttamente:
 
-![](./successful_txn.png)
+![Screenshot di una transazione Ethereum riuscita](./successful_txn.png)
 
 Le richieste di transazioni si verificano dozzine di volte al secondo, ma i blocchi sono impegnati approssimativamente ogni 15 secondi ([sorgente](/developers/docs/blocks/)).
 
@@ -176,11 +176,11 @@ Per vedere che un blocco è prodotto approssimativamente ogni 15 secondi, potrem
 
 Il grafico per i blocchi di Ethereum prodotti al giorno (2016 - presente) è:
 
-![](./daily_blocks.png)
+![Grafico che mostra la produzione giornaliera di blocchi Ethereum](./daily_blocks.png)
 
 Il numero medio di blocchi prodotti giornalmente in questo periodo di tempo è di ~5.874:
 
-![](./avg_daily_blocks.png)
+![Grafico che mostra la produzione giornaliera di blocchi Ethereum](./avg_daily_blocks.png)
 
 Le interrogazioni sono:
 
@@ -217,7 +217,7 @@ I blocchi hanno dimensioni limitate. La dimensione massima del blocco è dinamic
 
 Un modo per concettualizzare il limite di gas del blocco è immaginarlo come l'**offerta** di spazio del blocco disponibile, in cui raggruppare le transazioni. Il limite di gas del blocco è interrogabile e visualizzabile dal 2016 a oggi:
 
-![](./avg_gas_limit.png)
+![Grafico che mostra il limite medio di gas di Ethereum nel tempo](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -230,7 +230,7 @@ OFFSET 1
 
 Poi, c'è il gas effettivo, usato quotidianamente per pagare i calcoli effettuati sulla catena di Ethereum (cioè, l'invio della transazione, la chiamata di un contratto intelligente, il conio di un NFT). Questa è la **domanda** di spazio per i blocchi disponibile di Ethereum:
 
-![](./daily_gas_used.png)
+![Grafico che mostra il gas Ethereum utilizzato quotidianamente](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -249,7 +249,7 @@ Dunque, possiamo comprendere i prezzi del gas come una funzione di domanda per l
 
 Infine, potremmo voler interrogare i prezzi del gas quotidiani medi per la catena di Ethereum, tuttavia, farlo risulterà in un tempo di richiesta particolarmente lungo, quindi filtreremo la nostra richiesta all'importo medio di gas pagato per transazione dall'Ethereum Foundation.
 
-![](./ef_daily_gas.png)
+![Grafico che mostra l'utilizzo giornaliero del gas della Ethereum Foundation](./ef_daily_gas.png)
 
 Possiamo vedere i prezzi del gas pagati per tutte le transazioni effettuate all'indirizzo dell'Ethereum Foundation negli anni. Ecco l'interrogazione:
 

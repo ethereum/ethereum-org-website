@@ -31,7 +31,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 ## Artikel tingkat menengah {#intermediate-articles}
 
-- [Pengembangan Dapp untuk Programer Python](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [Pengembangan Dapp untuk Programer Python](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [Membuat Antarmuka Ethereum Python: Bagian 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Kontrak Pintar Ethereum di Python: panduan lengkap](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 - [Menggunakan Brownie dan Python untuk menggunakan Kontrak Pintar](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
@@ -73,7 +73,7 @@ Proyek berbasis Ethereum berikut ini menggunakan peralatan yang disebutkan di ha
 - [Curve](https://curve.fi/) dan [Repositori kontrak pintar Curve](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) dan [kontrak pintar yang menggunakan rantai alat Brownie](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) menggunakan [Python dalam mengelola dan menyebarkan kontrak vesting mereka](https://github.com/sushiswap/sushi-vesting-protocols)
-- [Alpha Finance](https://alphafinance.io/), dari kepopuleran Alpha Homora, menggunakan [Brownie untuk menguji dan menyebarkan kontrak pintar](https://github.com/AlphaFinanceLab/alpha-staking-contract)
+- [Alpha Venture DAO](https://alphaventuredao.io/), dari kepopuleran Alpha Homora, menggunakan [Brownie untuk menguji dan menyebarkan kontrak pintar](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## Kontributor Komunitas Python {#python-community-contributors}
 

@@ -15,7 +15,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## Mengapa ada batasan? {#why-is-there-a-limit}
 
-Pada tanggal [22 November 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/) fork keras Sprurious Dragon memperkenalkan [EIP-170](https://eips.ethereum.org/EIPS/eip-170) yang menambah batas ukuran kontrak pintar sebesar 24,576 kb. Bagi Anda sebagai pengembang Solidity, ini berarti ketika Anda menambahkan lebih banyak fungsionalitas ke kontrak, pada titik tertentu Anda akan mencapai batas dan ketika menggunakannya akan melihat kesalahan:
+Pada tanggal [22 November 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon) fork keras Sprurious Dragon memperkenalkan [EIP-170](https://eips.ethereum.org/EIPS/eip-170) yang menambah batas ukuran kontrak pintar sebesar 24,576 kb. Bagi Anda sebagai pengembang Solidity, ini berarti ketika Anda menambahkan lebih banyak fungsionalitas ke kontrak, pada titik tertentu Anda akan mencapai batas dan ketika menggunakannya akan melihat kesalahan:
 
 `Peringatan: Ukuran kode kontrak melebih 24576 bita (batasan yang diperkenalkan dalam Spurious Dragon). This contract may not be deployable on Mainnet. Pertimbangkan untuk mengaktifkan pengoptimisasi (dengan nilai "berjalan" yang rendah!), yang menghentikan string pembalikan atau menggunakan pustaka.`
 

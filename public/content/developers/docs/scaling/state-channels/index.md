@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 3
 ---
 
-State channels allow participants to securely transact offchain while keeping interaction with Ethereum Mainnet at a minimum. Channel peers can conduct an arbitrary number of offchain transactions while only submitting two onchain transactions to open and close the channel. This allows for extremely high transaction throughput and results in lower costs for users.
+State channels allow participants to securely transact offchain while keeping interaction with [Ethereum](/) Mainnet at a minimum. Channel peers can conduct an arbitrary number of offchain transactions while only submitting two onchain transactions to open and close the channel. This allows for extremely high transaction throughput and results in lower costs for users.
 
 ## Prerequisites {#prerequisites}
 
@@ -255,7 +255,7 @@ Multiple projects provide implementations of state channels that you can integra
 
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, Feb 12 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
-- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Basics of State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [Blockchain State Channels: A State of the Art](https://ieeexplore.ieee.org/document/9627997)
 
 _Know of a community resource that helped you? Edit this page and add it!_

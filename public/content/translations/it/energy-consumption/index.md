@@ -82,6 +82,5 @@ Piattaforme di finanziamento di beni pubblici web3 native come [Gitcoin](https:/
 
 ## Argomenti correlati {#related-topics}
 
-- [Visione di Ethereum](/roadmap/vision/)
 - [La Beacon Chain](/roadmap/beacon-chain)
 - [La Fusione](/roadmap/merge/)

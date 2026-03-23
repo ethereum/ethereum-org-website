@@ -260,7 +260,7 @@ Tolong diperhitungkan, karena ini adalah gambar pertama berbasis Ubuntu 20.04, j
 11. https://www.hyperledger.org/projects/besu
 12. https://github.com/prysmaticlabs/prysm
 13. https://lighthouse.sigmaprime.io
-14. https://ethersphere.github.io/swarm-home
+14. https://docs.ethswarm.org/
 15. https://raiden.network
 16. https://ipfs.io
 17. https://status.im
