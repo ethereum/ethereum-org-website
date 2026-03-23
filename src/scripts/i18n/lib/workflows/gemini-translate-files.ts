@@ -34,6 +34,7 @@ interface TranslationStats {
   filesFailed: number
   totalInputTokens: number
   totalOutputTokens: number
+  durationSeconds: number
 }
 
 /**
@@ -60,6 +61,7 @@ export async function geminiTranslateFiles(
 
   for (const language of targetLanguages) {
     logSection(`Translating: ${language}`)
+    const langStartTime = Date.now()
 
     if (isLanguageCompleted(progress, language)) {
       console.log(`[translate] ${language} already completed, skipping`)
@@ -80,6 +82,7 @@ export async function geminiTranslateFiles(
       progress
     )
 
+    stats.durationSeconds = (Date.now() - langStartTime) / 1000
     allStats[language] = stats
     allCommittedFiles.push(...files)
     allFailedFiles.push(...failedFiles.map((f) => `${language}:${f}`))
@@ -89,10 +92,10 @@ export async function geminiTranslateFiles(
     }
 
     console.log(
-      `[translate] ${language} done: ${stats.filesTranslated} translated, ${stats.filesSkipped} skipped, ${stats.filesFailed} failed`
+      `[translate] ${language} done: ${stats.filesTranslated} translated, ${stats.filesSkipped} skipped, ${stats.filesFailed} failed (${stats.durationSeconds.toFixed(1)}s)`
     )
     console.log(
-      `[translate] ${language} tokens: ${stats.totalInputTokens} in, ${stats.totalOutputTokens} out`
+      `[translate] ${language} tokens: ${stats.totalInputTokens.toLocaleString("en-US")} in, ${stats.totalOutputTokens.toLocaleString("en-US")} out`
     )
   }
 
@@ -145,6 +148,7 @@ async function translateLanguage(
     filesFailed: 0,
     totalInputTokens: 0,
     totalOutputTokens: 0,
+    durationSeconds: 0,
   }
 
   const translatedFiles: CommitFile[] = []

@@ -60,6 +60,15 @@ export interface TranslateFileResult {
   tokensUsed: { input: number; output: number }
 }
 
+/** Optional metadata for richer Gemini API call logging */
+interface GeminiCallMetadata {
+  filePath?: string
+  targetLanguage?: string
+  chunkIndex?: number
+  totalChunks?: number
+  label?: string
+}
+
 /**
  * Translate a single file via Gemini.
  *
@@ -81,7 +90,7 @@ export async function translateFile(
 
   // JSON files: translate directly, no extraction needed
   if (fileType === "json") {
-    return callGemini({ ...options, fileContent })
+    return callGemini({ ...options, fileContent }, { filePath, targetLanguage })
   }
 
   // Markdown: extract code blocks first
@@ -100,10 +109,10 @@ export async function translateFile(
 
   if (chunks.length === 1) {
     // Single chunk: translate normally
-    const result = await callGemini({
-      ...options,
-      fileContent: prose,
-    })
+    const result = await callGemini(
+      { ...options, fileContent: prose },
+      { filePath, targetLanguage }
+    )
     translatedProse = result.translatedContent
     totalTokens = result.tokensUsed
   } else {
@@ -111,10 +120,10 @@ export async function translateFile(
     console.log(`  [chunk] ${filePath}: split into ${chunks.length} chunks`)
     const translatedChunks: string[] = []
     for (let i = 0; i < chunks.length; i++) {
-      const result = await callGemini({
-        ...options,
-        fileContent: chunks[i],
-      })
+      const result = await callGemini(
+        { ...options, fileContent: chunks[i] },
+        { filePath, targetLanguage, chunkIndex: i, totalChunks: chunks.length }
+      )
       translatedChunks.push(result.translatedContent)
       totalTokens.input += result.tokensUsed.input
       totalTokens.output += result.tokensUsed.output
@@ -132,7 +141,8 @@ export async function translateFile(
         finalContent,
         blocks,
         targetLanguage,
-        glossaryTerms
+        glossaryTerms,
+        filePath
       )
     } catch (error) {
       console.warn(
@@ -155,7 +165,8 @@ async function translateCodeComments(
   content: string,
   blocks: CodeBlock[],
   targetLanguage: string,
-  glossaryTerms: Map<string, string>
+  glossaryTerms: Map<string, string>,
+  filePath: string
 ): Promise<string> {
   // Extract comments from all blocks
   const allComments: CodeComment[] = []
@@ -200,7 +211,11 @@ async function translateCodeComments(
 
 ${JSON.stringify(commentPayload, null, 2)}`
 
-  const result = await callGeminiRaw(commentPrompt)
+  const result = await callGeminiRaw(commentPrompt, {
+    filePath,
+    targetLanguage,
+    label: "code-comments",
+  })
   let translatedMap: Record<string, string>
 
   try {
@@ -243,7 +258,8 @@ ${JSON.stringify(commentPayload, null, 2)}`
  * Used by both prose translation and comment translation.
  */
 async function callGemini(
-  options: TranslateFileOptions
+  options: TranslateFileOptions,
+  metadata?: GeminiCallMetadata
 ): Promise<TranslateFileResult> {
   const { filePath, fileContent, fileType, targetLanguage, glossaryTerms } =
     options
@@ -260,7 +276,7 @@ async function callGemini(
 
   // Retry loop for validation failures (API call retries are in callGeminiRaw)
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    const result = await callGeminiRaw(prompt)
+    const result = await callGeminiRaw(prompt, metadata)
 
     let text = result.text
     text = stripCodeBlockWrapping(text, fileType)
@@ -294,17 +310,36 @@ async function callGemini(
 }
 
 /**
- * Raw Gemini API call with retries and model fallback.
+ * Raw Gemini API call with retries, model fallback, and verbose logging.
+ *
+ * Logging behavior:
+ * - Always: timestamped REQUEST/RESPONSE lines with model, duration, tokens
+ * - Verbose: full prompt content between === PROMPT START/END === markers
+ *
  * Returns the raw text response and token usage.
  */
 async function callGeminiRaw(
-  prompt: string
+  prompt: string,
+  metadata?: GeminiCallMetadata
 ): Promise<{ text: string; tokensUsed: { input: number; output: number } }> {
   const client = getGeminiClient()
+  const verbose = process.env.VERBOSE === "true"
+  const ts = () => new Date().toISOString()
 
   const modelsToTry = process.env.GEMINI_MODEL
     ? [process.env.GEMINI_MODEL]
     : GEMINI_MODELS
+
+  // Build context string for log lines
+  const ctx = [
+    metadata?.filePath && `file=${metadata.filePath}`,
+    metadata?.targetLanguage && `lang=${metadata.targetLanguage}`,
+    metadata?.chunkIndex != null &&
+      `chunk=${(metadata.chunkIndex ?? 0) + 1}/${metadata.totalChunks}`,
+    metadata?.label,
+  ]
+    .filter(Boolean)
+    .join(" ")
 
   let lastError: Error | null = null
   const modelNotFound = new Set<string>()
@@ -313,6 +348,20 @@ async function callGeminiRaw(
     let modelFailed = false
 
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+      const startTime = Date.now()
+
+      console.log(
+        `[${ts()}] [gemini] REQUEST model=${modelId} ${ctx}${attempt > 1 ? ` attempt=${attempt}` : ""}`
+      )
+
+      if (verbose) {
+        console.log(
+          `[${ts()}] [gemini] === PROMPT START (${prompt.length} chars) ===`
+        )
+        console.log(prompt)
+        console.log(`[${ts()}] [gemini] === PROMPT END ===`)
+      }
+
       try {
         const response = await client.models.generateContent({
           model: modelId,
@@ -320,6 +369,11 @@ async function callGeminiRaw(
           config: { temperature: 0 },
         })
         const usage = response.usageMetadata
+        const duration = ((Date.now() - startTime) / 1000).toFixed(1)
+
+        console.log(
+          `[${ts()}] [gemini] RESPONSE model=${modelId} ${ctx} duration=${duration}s tokens_in=${usage?.promptTokenCount || 0} tokens_out=${usage?.candidatesTokenCount || 0}`
+        )
 
         return {
           text: response.text ?? "",
@@ -329,6 +383,7 @@ async function callGeminiRaw(
           },
         }
       } catch (error) {
+        const duration = ((Date.now() - startTime) / 1000).toFixed(1)
         lastError = error instanceof Error ? error : new Error(String(error))
 
         if (
@@ -337,7 +392,7 @@ async function callGeminiRaw(
           lastError.message.includes("deprecated")
         ) {
           console.warn(
-            `[WARN] Model ${modelId} unavailable: ${lastError.message}. Trying next model...`
+            `[${ts()}] [gemini] MODEL_UNAVAILABLE model=${modelId} duration=${duration}s error="${lastError.message}"`
           )
           modelNotFound.add(modelId)
           modelFailed = true
@@ -350,7 +405,7 @@ async function callGeminiRaw(
         ) {
           const backoff = RETRY_DELAY_MS * Math.pow(2, attempt)
           console.warn(
-            `[WARN] Rate limited (${modelId}). Waiting ${backoff / 1000}s...`
+            `[${ts()}] [gemini] RATE_LIMITED model=${modelId} ${ctx} duration=${duration}s backoff=${backoff / 1000}s`
           )
           await delay(backoff)
           continue
@@ -358,11 +413,15 @@ async function callGeminiRaw(
 
         if (attempt < MAX_RETRIES) {
           console.warn(
-            `[WARN] Attempt ${attempt} (${modelId}) failed: ${lastError.message}. Retrying...`
+            `[${ts()}] [gemini] ERROR model=${modelId} ${ctx} attempt=${attempt} duration=${duration}s error="${lastError.message.slice(0, 200)}"`
           )
           await delay(RETRY_DELAY_MS * attempt)
           continue
         }
+
+        console.error(
+          `[${ts()}] [gemini] FAILED model=${modelId} ${ctx} duration=${duration}s error="${lastError.message.slice(0, 200)}"`
+        )
       }
     }
 
