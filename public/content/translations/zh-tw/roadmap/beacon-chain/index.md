@@ -1,13 +1,13 @@
 ---
-title: 信標鏈（Beacon Chain）
-description: 瞭解信標鍊 - 將權益證明引入以太坊的升級。
+title: "信標鏈（Beacon Chain）"
+description: "瞭解信標鍊 - 將權益證明引入以太坊的升級。"
 lang: zh-tw
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: 信標鏈將權益證明引入以太坊生態系統。
-summaryPoint2: 信標鏈於 2022 年 9 月與原先的以太坊工作量證明鏈合併。
-summaryPoint3: 信標鏈引入共識邏輯和區塊廣播協定，現在可保護以太坊安全。
+summaryPoint1: "信標鏈將權益證明引入以太坊生態系統。"
+summaryPoint2: "信標鏈於 2022 年 9 月與原先的以太坊工作量證明鏈合併。"
+summaryPoint3: "信標鏈引入共識邏輯和區塊廣播協定，現在可保護以太坊安全。"
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

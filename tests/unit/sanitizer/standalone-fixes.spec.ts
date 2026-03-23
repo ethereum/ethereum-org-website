@@ -1823,30 +1823,28 @@ author: Ori Pomerantz
 
   test.describe("fixGuillemetsInHtmlTags", () => {
     test("fixes right guillemet replacing > after quoted attribute", () => {
-      const input =
-        '<span dir="ltr"\u00BB$100,000</span>'
+      const input = '<span dir="ltr"\u00BB$100,000</span>'
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe('<span dir="ltr">$100,000</span>')
       expect(fixCount).toBe(1)
     })
 
     test("fixes right guillemet replacing > at end of self-closing tag", () => {
-      const input = '<br /\u00BB'
+      const input = "<br /\u00BB"
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe("<br />")
       expect(fixCount).toBe(1)
     })
 
     test("fixes right guillemet replacing > in closing tag", () => {
-      const input = '</span\u00BB'
+      const input = "</span\u00BB"
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe("</span>")
       expect(fixCount).toBe(1)
     })
 
     test("fixes left guillemet replacing < in opening tag", () => {
-      const input =
-        '\u00ABspan dir="ltr">$100,000</span>'
+      const input = '\u00ABspan dir="ltr">$100,000</span>'
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe('<span dir="ltr">$100,000</span>')
       expect(fixCount).toBe(1)
@@ -1877,7 +1875,7 @@ author: Ori Pomerantz
     })
 
     test("fixes guillemet in i tag", () => {
-      const input = '<i\u00BBtext</i>'
+      const input = "<i\u00BBtext</i>"
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe("<i>text</i>")
       expect(fixCount).toBe(1)
@@ -1891,8 +1889,7 @@ author: Ori Pomerantz
     })
 
     test("leaves legitimate guillemet pairs unchanged", () => {
-      const input =
-        "\u00ABThe knowledge complexity\u00BB"
+      const input = "\u00ABThe knowledge complexity\u00BB"
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -1998,16 +1995,14 @@ author: Ori Pomerantz
     })
 
     test("skips fenced code blocks", () => {
-      const input =
-        '```\n<SocialListItem socialIcon="a">unclosed\n```'
+      const input = '```\n<SocialListItem socialIcon="a">unclosed\n```'
       const { content, fixCount } = fixMissingComponentClosingTags(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
 
     test("skips inline code", () => {
-      const input =
-        'Use `<SocialListItem socialIcon="a">unclosed` as example'
+      const input = 'Use `<SocialListItem socialIcon="a">unclosed` as example'
       const { content, fixCount } = fixMissingComponentClosingTags(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -2044,7 +2039,7 @@ author: Ori Pomerantz
     })
 
     test("leaves regular markdown links unchanged", () => {
-      const input = '[some text](https://example.com)'
+      const input = "[some text](https://example.com)"
       const { content, fixCount } = fixMangledDocLinks(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)

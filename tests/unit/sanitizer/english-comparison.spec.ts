@@ -949,18 +949,15 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("leaves components that exist in English", () => {
-      const translated =
-        '<NetworkUpgradeSummary name="paris" />\n\nText'
-      const english =
-        '<NetworkUpgradeSummary name="paris" />\n\nText'
+      const translated = '<NetworkUpgradeSummary name="paris" />\n\nText'
+      const english = '<NetworkUpgradeSummary name="paris" />\n\nText'
       const { content, fixCount } = removeStaleComponents(translated, english)
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
     })
 
     test("removes multiple stale components", () => {
-      const translated =
-        '<StaleOne />\nText\n<StaleTwo className="x" />'
+      const translated = '<StaleOne />\nText\n<StaleTwo className="x" />'
       const english = "Text"
       const { content, fixCount } = removeStaleComponents(translated, english)
       expect(content).not.toContain("StaleOne")
@@ -969,8 +966,7 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("does not remove components inside code blocks", () => {
-      const translated =
-        '```\n<ContributorsQuizBanner />\n```'
+      const translated = "```\n<ContributorsQuizBanner />\n```"
       const english = "```\nsome code\n```"
       const { content, fixCount } = removeStaleComponents(translated, english)
       expect(content).toContain("ContributorsQuizBanner")
@@ -978,8 +974,7 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("cleans up blank line left behind after removal", () => {
-      const translated =
-        'Before\n\n<StaleComponent />\n\nAfter'
+      const translated = "Before\n\n<StaleComponent />\n\nAfter"
       const english = "Before\n\nAfter"
       const { content, fixCount } = removeStaleComponents(translated, english)
       expect(content).not.toContain("\n\n\n")

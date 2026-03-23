@@ -2139,13 +2139,10 @@ function fixGuillemetsInHtmlTags(content: string): {
       )
 
       // Pattern 2: <tagname ...» (right guillemet as >, left < is correct)
-      lines[j] = lines[j].replace(
-        /<([^<>]*)\u00BB/g,
-        (_, inner) => {
-          fixCount++
-          return "<" + inner + ">"
-        }
-      )
+      lines[j] = lines[j].replace(/<([^<>]*)\u00BB/g, (_, inner) => {
+        fixCount++
+        return "<" + inner + ">"
+      })
     }
     parts[i] = lines.join("\n")
   }
