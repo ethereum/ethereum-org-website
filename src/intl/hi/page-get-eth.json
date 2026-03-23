@@ -2,9 +2,9 @@
   "page-get-eth-article-keeping-crypto-safe": "आपके क्रिप्टो को सुरक्षित रखने की कुंजी",
   "page-get-eth-article-protecting-yourself": "अपनी और अपने धन की रक्षा करना",
   "page-get-eth-article-store-digital-assets": "इथेरियम पर डिजिटल एसेट कैसे स्टोर करें",
-  "page-get-eth-article-protecting-yourself-desc": "MyCrypto",
-  "page-get-eth-article-keeping-crypto-safe-desc": "Coinbase",
-  "page-get-eth-article-store-digital-assets-desc": "ConsenSys",
+  "page-get-eth-article-protecting-yourself-desc": "माइक्रिप्टो",
+  "page-get-eth-article-keeping-crypto-safe-desc": "कॉइनबेस",
+  "page-get-eth-article-store-digital-assets-desc": "कंसेंसिस",
   "page-get-eth-cex": "केंद्रीकृत एक्सचेंज",
   "page-get-eth-cex-desc": "एक्सचेंज ऐसे व्यवसाय हैं, जो आपको पारंपरिक मुद्राओं का उपयोग करके क्रिप्टोकरंसी खरीदने देते हैं। आपके द्वारा खरीदे गए किसी भी ETH पर उनका तब तक नियंत्रण होता है, जब तक कि आप उसे आपके द्वारा नियंत्रित वॉलेट में नहीं भेज देते।",
   "page-get-eth-checkout-dapps-btn": "डेप्स की जाँच करें",
@@ -46,7 +46,7 @@
   "page-get-eth-hero-image-alt": "ETH हीरो की छवि प्राप्त करें",
   "page-get-eth-keep-it-safe": "अपने ETH को सुरक्षित रखना",
   "page-get-eth-meta-description": "आप जहां रहते हैं, उसके आधार पर ETH कैसे खरीदें और इसकी देखभाल कैसे करें, इसके बारे में सलाह पाएं।",
-  "page-get-eth-meta-title": "ETH कैसे प्राप्त करें",
+  "page-get-eth-meta-title": "एथेरियम (ETH) कैसे खरीदें",
   "page-get-eth-need-wallet": "DEX का उपयोग करने के लिए आपको एक वॉलेट की आवश्यकता होगी।",
   "page-get-eth-new-to-eth": "ETH पर नए हैं? आरंभ करने के लिए यहां पर आपको एक अवलोकन दिया गया है।",
   "page-get-eth-other-cryptos": "अन्य क्रिप्टो के साथ खरीदें",
@@ -76,5 +76,5 @@
   "page-get-eth-your-address-wallet-link": "वॉलेट की जाँच करें",
   "listing-policy-raise-issue-link": "मुद्दा उठाएं",
   "page-find-wallet-last-updated": "अंतिम अद्यतन",
-  "listing-policy-disclaimer": "इस पृष्ठ पर सूचीबद्ध सभी उत्पाद आधिकारिक समर्थन नहीं हैं, और केवल सूचना के प्रयोजनों के लिए प्रदान किए जाते हैं। यदि आप किसी उत्पाद को जोड़ना चाहते हैं या पॉलिसी पर प्रतिक्रिया देना चाहते हैं, तो GitHub में एक मुद्दा उठाएं।"
+  "listing-policy-disclaimer": "इस पृष्ठ पर सूचीबद्ध सभी उत्पाद आधिकारिक समर्थन नहीं हैं, और केवल सूचना के प्रयोजनों के लिए प्रदान किए जाते हैं। यदि आप किसी उत्पाद को जोड़ना चाहते हैं या पॉलिसी पर प्रतिक्रिया देना चाहते हैं, तो गिटहब में एक मुद्दा उठाएं।"
 }

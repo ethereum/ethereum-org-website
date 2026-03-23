@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { AnimationControls, motion, useAnimationControls } from "framer-motion"
+import { motion, useAnimationControls } from "motion/react"
 import type { Swiper as SwiperType } from "swiper"
 import { SwiperSlide } from "swiper/react"
 
@@ -142,9 +142,9 @@ type SavingsCarouselProps = {
 type ComparisonCardProps = {
   item: ComparisonItem
   variant: "default" | "primary"
-  controls: AnimationControls
+  controls: ReturnType<typeof useAnimationControls>
   initial: { opacity: number; x?: number; y: number }
-  transition: { duration: number; delay: number; ease: string }
+  transition: { duration: number; delay: number; ease: "easeOut" }
   className?: string
 }
 

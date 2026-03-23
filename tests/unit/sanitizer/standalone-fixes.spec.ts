@@ -39,6 +39,15 @@ const {
   fixBrokenBracketInLinks,
   stripLlmArtifactTokens,
   fixSmartQuotesInJsxAttributes,
+  stripCrowdinBoilerplate,
+  fixDuplicatedTagValues,
+  fixKnownBrandGarbles,
+  fixMissingOpeningSup,
+  fixSplitBoldMarkers,
+  fixKnownWrongCompounds,
+  fixGuillemetsInHtmlTags,
+  fixMissingComponentClosingTags,
+  fixMangledDocLinks,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -1493,6 +1502,568 @@ author: Ori Pomerantz
       const { content, fixCount } = fixSmartQuotesInJsxAttributes(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("stripCrowdinBoilerplate", () => {
+    test("strips Arabic boilerplate injected mid-paragraph", () => {
+      const input =
+        "المعاملات هي تعليمات من الحسابات موقعة بشكل مشفّر. نشكرك على مشاركتك في برنامج الترجمة ethereum.org. أبسط معاملة هي نقل ETH من حساب إلى آخر."
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe(
+        "المعاملات هي تعليمات من الحسابات موقعة بشكل مشفّر. أبسط معاملة هي نقل ETH من حساب إلى آخر."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("strips English boilerplate injected mid-paragraph", () => {
+      const input =
+        "Some content here. Thank you for your participation in the ethereum.org Translation Program. More content follows."
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe("Some content here. More content follows.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("preserves boilerplate when standalone paragraph", () => {
+      const input = "نشكرك على مشاركتك في برنامج الترجمة ethereum.org!"
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("preserves boilerplate as standalone line in multi-line content", () => {
+      const input =
+        "Some previous paragraph.\n\nنشكرك على مشاركتك في برنامج الترجمة ethereum.org!\n"
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input =
+        "```\nSome text. نشكرك على مشاركتك في برنامج الترجمة ethereum.org. More.\n```"
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles no boilerplate", () => {
+      const input = "Normal content without any boilerplate text."
+      const { content, fixCount } = stripCrowdinBoilerplate(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixDuplicatedTagValues", () => {
+    test("deduplicates ERC-721ERC-721 in frontmatter tags", () => {
+      const input = 'tags: ["ERC-721ERC-721", "Alchemy", "Solidity"]'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe('tags: ["ERC-721", "Alchemy", "Solidity"]')
+      expect(fixCount).toBe(1)
+    })
+
+    test("deduplicates in JSON values", () => {
+      const input = '  "erc-721-term": "ERC-721ERC-721",'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe('  "erc-721-term": "ERC-721",')
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple duplicated values", () => {
+      const input = 'tags: ["ERC-721ERC-721", "ERC-20ERC-20"]'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe('tags: ["ERC-721", "ERC-20"]')
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves non-duplicated values unchanged", () => {
+      const input = 'tags: ["ERC-721", "Alchemy"]'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not match odd-length strings", () => {
+      const input = '"abc"'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not false-positive on legitimate repeated content", () => {
+      // "aa" is a valid 2-char string where first half equals second half
+      // but we should only match when the repeated unit is at least 2 chars
+      const input = '"testtest"'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe('"test"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips code blocks", () => {
+      const input = '```\n"ERC-721ERC-721"\n```'
+      const { content, fixCount } = fixDuplicatedTagValues(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixKnownBrandGarbles", () => {
+    test("fixes GitHub garble to Latin without locale (fallback)", () => {
+      const input = "- [يجتبه](https://github.com/alchemyplatform)"
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe("- [GitHub](https://github.com/alchemyplatform)")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes GitHub garble to Arabic transliteration with ar locale", () => {
+      const input = "- [يجتبه](https://github.com/alchemyplatform)"
+      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      expect(content).toBe("- [غيت هاب](https://github.com/alchemyplatform)")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes multiple GitHub garbles with locale", () => {
+      const input =
+        "- [يجتبه](https://github.com/foo)\n- [يجتبه](https://github.com/bar)"
+      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      expect(content).toBe(
+        "- [غيت هاب](https://github.com/foo)\n- [غيت هاب](https://github.com/bar)"
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("fixes Solidity garble to Arabic transliteration in tags", () => {
+      const input = 'tags: ["الصلابة", "Waffle", "الاختبار"]'
+      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      expect(content).toBe('tags: ["سوليديتي", "Waffle", "الاختبار"]')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes Solidity garble to Arabic transliteration in prose", () => {
+      const input = "يمكنك كتابة العقود الذكية باستخدام الصلابة"
+      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      expect(content).toBe("يمكنك كتابة العقود الذكية باستخدام سوليديتي")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct brand names unchanged", () => {
+      const input = '- [GitHub](https://github.com/foo)\ntags: ["Solidity"]'
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\nيجتبه\n```"
+      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixMissingOpeningSup", () => {
+    test("restores missing <sup> before footnote link with </sup>", () => {
+      const input = "أرقام[fn3](#notes)</sup>، مع وجود"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toBe("أرقام<sup>[fn3](#notes)</sup>، مع وجود")
+      expect(fixCount).toBe(1)
+    })
+
+    test("restores missing <sup> before numbered footnote", () => {
+      const input = "مرجع[1](#notes)</sup> هنا"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toBe("مرجع<sup>[1](#notes)</sup> هنا")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple missing openers", () => {
+      const input = "أول[fn1](#notes)</sup> وثاني[fn2](#notes)</sup>"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toContain("<sup>[fn1](#notes)</sup>")
+      expect(content).toContain("<sup>[fn2](#notes)</sup>")
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves already-correct <sup> pairs unchanged", () => {
+      const input = "أرقام<sup>[fn3](#notes)</sup>، مع وجود"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not add <sup> when </sup> has matching opener", () => {
+      const input = "قيمة <sup>256</sup> عالية"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n[fn1](#notes)</sup>\n```"
+      const { content, fixCount } = fixMissingOpeningSup(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixSplitBoldMarkers", () => {
+    test("fixes premature bold close with escaped end marker", () => {
+      const input =
+        "**اعتبارًا من التاريخ، فُقِد ما لا يقل عن 83 دولارًا.** لاحظ أن التنفيذ عرضة لهذه المشكلة.\\*\\*"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe(
+        "**اعتبارًا من التاريخ، فُقِد ما لا يقل عن 83 دولارًا. لاحظ أن التنفيذ عرضة لهذه المشكلة.**"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes real ERC-20 reception issue paragraph", () => {
+      const input =
+        '**اعتبارًا من <span dir="ltr">20/06/2024</span>، فُقِد ما لا يقل عن 83,656,418 دولارًا من الرموز المميزة بمعيار ERC-20 بسبب هذه المشكلة.** لاحظ أن التنفيذ الخالص لمعيار ERC-20 عرضة لهذه المشكلة ما لم تنفذ مجموعة من القيود الإضافية على المعيار كما هو موضح أدناه.\\*\\*'
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toContain("كما هو موضح أدناه.**")
+      expect(content).not.toContain("\\*\\*")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct bold unchanged", () => {
+      const input = "**هذا النص بخط عريض بالكامل.**"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves escaped bold that is fully escaped (not split)", () => {
+      const input = "\\*\\*نص مهرب بالكامل\\*\\*"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles split bold ending with period before escaped markers", () => {
+      const input = "**الحلول الممكنة.** يمكن اقتراح.\\*\\*"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe("**الحلول الممكنة. يمكن اقتراح.**")
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n**text.** more.\\*\\*\n```"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not match when escaped markers are on a different line", () => {
+      const input = "**text.** end of line\n\\*\\* start of next"
+      const { content, fixCount } = fixSplitBoldMarkers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixKnownWrongCompounds", () => {
+    test("fixes state-channel compound terms", () => {
+      const input = "تعتمد قنوات الدولة على بيانات الدولة"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("تعتمد قنوات الحالة على بيانات الحالة")
+      expect(fixCount).toBe(2)
+    })
+
+    test("fixes governmental channels variant", () => {
+      const input = "القنوات الحكومية تعمل بشكل جيد"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("قنوات الحالة تعمل بشكل جيد")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes statelessness as nationality", () => {
+      const input = "انعدام الجنسية يقلل من التخزين"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("انعدام الحالة يقلل من التخزين")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes state update with wrong term", () => {
+      const input = "تحديث الولاية يتطلب توقيع"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("تحديث الحالة يتطلب توقيع")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes ether as altruism", () => {
+      const input = "الرمز الأصلي، الإيثار (ETH)."
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("الرمز الأصلي، الإيثر (ETH).")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes liquid staking as liquid mortgage", () => {
+      const input = "الرهن العقاري السائل ومشتقاته"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe("التحصيص السائل ومشتقاته")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct terms unchanged", () => {
+      const input = "قنوات الحالة تعتمد على إثبات الحصة"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\nقنوات الدولة\n```"
+      const { content, fixCount } = fixKnownWrongCompounds(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixGuillemetsInHtmlTags", () => {
+    test("fixes right guillemet replacing > after quoted attribute", () => {
+      const input =
+        '<span dir="ltr"\u00BB$100,000</span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe('<span dir="ltr">$100,000</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes right guillemet replacing > at end of self-closing tag", () => {
+      const input = '<br /\u00BB'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe("<br />")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes right guillemet replacing > in closing tag", () => {
+      const input = '</span\u00BB'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe("</span>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes left guillemet replacing < in opening tag", () => {
+      const input =
+        '\u00ABspan dir="ltr">$100,000</span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe('<span dir="ltr">$100,000</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes left guillemet replacing < in closing tag", () => {
+      const input = '<span dir="ltr">text\u00AB/span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe('<span dir="ltr">text</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes both guillemets in same tag", () => {
+      const input = '\u00ABspan dir="ltr"\u00BB$100</span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe('<span dir="ltr">$100</span>')
+      expect(fixCount).toBeGreaterThanOrEqual(1)
+    })
+
+    test("fixes multiple broken tags in same line", () => {
+      const input =
+        '<span dir="ltr"\u00BB$100</span\u00BB and <span dir="ltr"\u00BB$200</span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(
+        '<span dir="ltr">$100</span> and <span dir="ltr">$200</span>'
+      )
+      expect(fixCount).toBe(3)
+    })
+
+    test("fixes guillemet in i tag", () => {
+      const input = '<i\u00BBtext</i>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe("<i>text</i>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes guillemet in Link component", () => {
+      const input = '<Link href="https://example.com"\u00BBtext</Link>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe('<Link href="https://example.com">text</Link>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves legitimate guillemet pairs unchanged", () => {
+      const input =
+        "\u00ABThe knowledge complexity\u00BB"
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves Arabic quotation guillemets unchanged", () => {
+      const input = "قال \u00ABمرحبا\u00BB في الاجتماع"
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves correct HTML tags unchanged", () => {
+      const input = '<span dir="ltr">$100,000</span>'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input = '```\n<span dir="ltr"\u00BB$100</span>\n```'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips inline code", () => {
+      const input = 'Use `<span dir="ltr"\u00BB` for RTL'
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixMissingComponentClosingTags", () => {
+    test("adds missing closing SocialListItem tag", () => {
+      const input =
+        '<SocialListItem socialIcon="webpage"><Link href="https://example.com">Text</Link> - description'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(
+        '<SocialListItem socialIcon="webpage"><Link href="https://example.com">Text</Link> - description</SocialListItem>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("adds missing closing tag with italic content", () => {
+      const input =
+        '<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Forum</Link> <i>- description</i>'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(
+        '<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Forum</Link> <i>- description</i></SocialListItem>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves properly closed tags unchanged", () => {
+      const input =
+        '<SocialListItem socialIcon="webpage"><Link href="https://example.com">Text</Link></SocialListItem>'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves properly closed tags with content after Link unchanged", () => {
+      const input =
+        '<SocialListItem socialIcon="webpage"><Link href="https://example.com">Text</Link> - desc</SocialListItem>'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple unclosed tags across lines", () => {
+      const input =
+        '<SocialListItem socialIcon="a">one\n<SocialListItem socialIcon="b">two'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toContain("one</SocialListItem>")
+      expect(content).toContain("two</SocialListItem>")
+      expect(fixCount).toBe(2)
+    })
+
+    test("does NOT fix ExpandableCard (multi-line component)", () => {
+      const input = '<ExpandableCard title="test">content here'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not double-close already closed tag", () => {
+      const input =
+        '<SocialListItem socialIcon="a">text</SocialListItem>\n<SocialListItem socialIcon="b">text</SocialListItem>'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles mixed closed and unclosed on consecutive lines", () => {
+      const input =
+        '<SocialListItem socialIcon="a">closed</SocialListItem>\n<SocialListItem socialIcon="b">unclosed'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toContain("closed</SocialListItem>")
+      expect(content).toContain("unclosed</SocialListItem>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input =
+        '```\n<SocialListItem socialIcon="a">unclosed\n```'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips inline code", () => {
+      const input =
+        'Use `<SocialListItem socialIcon="a">unclosed` as example'
+      const { content, fixCount } = fixMissingComponentClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixMangledDocLinks", () => {
+    test("fixes DocLink mangled into markdown link syntax", () => {
+      const input = '[<DocLink href="](/roadmap/beacon-chain)/">'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe('<DocLink href="/roadmap/beacon-chain/">')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes DocLink with different paths", () => {
+      const input = '[<DocLink href="](/developers/docs/evm)/">'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe('<DocLink href="/developers/docs/evm/">')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes DocLink without trailing slash in mangled version", () => {
+      const input = '[<DocLink href="](/roadmap/merge)/">'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe('<DocLink href="/roadmap/merge/">')
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct DocLink unchanged", () => {
+      const input = '<DocLink href="/roadmap/beacon-chain/">'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves regular markdown links unchanged", () => {
+      const input = '[some text](https://example.com)'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = '```\n[<DocLink href="](/roadmap)/">\n```'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple mangled DocLinks", () => {
+      const input =
+        '[<DocLink href="](/roadmap/beacon-chain)/">text</DocLink>\n[<DocLink href="](/roadmap/merge)/">text</DocLink>'
+      const { content, fixCount } = fixMangledDocLinks(input)
+      expect(content).toContain('<DocLink href="/roadmap/beacon-chain/">')
+      expect(content).toContain('<DocLink href="/roadmap/merge/">')
+      expect(fixCount).toBe(2)
     })
   })
 })

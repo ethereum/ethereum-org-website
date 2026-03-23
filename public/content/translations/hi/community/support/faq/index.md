@@ -32,7 +32,7 @@ lang: hi
 
 ### यदि आपका खाता किसी एक्सचेंज पर है
 
-यदि आपका खाता Coinbase, Binance, या Kraken जैसे केंद्रीकृत एक्सचेंज पर है, तो सीधे एक्सचेंज की सहायता टीम से संपर्क करें। वे अपने प्लेटफ़ॉर्म पर खातों को नियंत्रित करते हैं और पासवर्ड रीसेट या खाता रिकवरी में मदद करने में सक्षम हो सकते हैं।
+यदि आपका खाता कॉइनबेस, बाइनेंस, या Kraken जैसे केंद्रीकृत एक्सचेंज पर है, तो सीधे एक्सचेंज की सहायता टीम से संपर्क करें। वे अपने प्लेटफ़ॉर्म पर खातों को नियंत्रित करते हैं और पासवर्ड रीसेट या खाता रिकवरी में मदद करने में सक्षम हो सकते हैं।
 
 <Alert variant="warning">
 <AlertEmoji text=":shield:"/>
@@ -57,7 +57,7 @@ lang: hi
 
 ### सहायक मार्गदर्शिकाएँ
 
-- [MetaMask पर लंबित लेनदेन को कैसे तेज करें या रद्द करें](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
+- [मेटामास्क पर लंबित लेनदेन को कैसे तेज करें या रद्द करें](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
 - [लंबित एथेरियम लेन-देन कैसे रद्द करें](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
 ## मैं अपने एथेरियम गिवअवे का दावा कैसे कर सकता हूं? {#giveaway-scam}

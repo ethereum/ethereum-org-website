@@ -29,7 +29,8 @@ import {
   getL2beatData,
 } from "@/lib/data"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
@@ -116,7 +117,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2/networks")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const props = {
+  const layer2NetworksProps = {
     locale,
     layer2Data: layer2DataCompiled,
     mainnetData: {
@@ -144,17 +145,16 @@ const Page = async ({ params }: { params: PageParams }) => {
         contributors={contributors}
       />
       <Suspense>
-        <Layer2Networks {...props} />
+        <Layer2Networks {...layer2NetworksProps} />
       </Suspense>
     </I18nProvider>
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
   const t = await getTranslations({

@@ -1067,17 +1067,6 @@ const chains = [
     chain: "Ham",
   },
   {
-    name: "Seismic devnet",
-    infoURL: "https://seismic.systems",
-    chainId: 5124,
-    nativeCurrency: {
-      name: "Seismic Ether",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    chain: "Seismic",
-  },
-  {
     name: "Superseed",
     infoURL: "https://www.superseed.xyz",
     chainId: 5330,
