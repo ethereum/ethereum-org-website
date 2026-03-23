@@ -19,7 +19,9 @@ This way, we can provide a gasless way for an account to hold assets (tokens, et
 
 ### Why we can't just relay request {#why-no-tx-origin}
 
-In ERC-20 and related standards, the account owner is [`msg.sender`](), the one that called the token contract, *not* the originator of the transaction ([`tx.origin`](https://docs.soliditylang.org/en/v0.8.35-pre.1/security-considerations.html#tx-origin)). 
+In ERC-20 and related standards, the account owner is [`msg.sender`](https://docs.soliditylang.org/en/latest/cheatsheet.html#block-and-transaction-properties), the address that called the token contract, which is not necessarily the originator of the transaction, (`tx.sender`)[https://docs.soliditylang.org/en/latest/cheatsheet.html#block-and-transaction-properties). This is required for [security reasons](https://docs.soliditylang.org/en/v0.8.35-pre.1/security-considerations.html#tx-origin). This means that if we relayed requests to transfer tokens, they'll have to come from the relayer's address, not an address controlled by the user.
+
+There is a solution that lets you use the EOA address using [EIP-7702](https://eip7702.io/), but it requires signing a potentially dangerous delegation, so you can only use it to delegate to a smart contract of which the wallet provider approves. For this tutorial I prefer the much simpler method of creating a smart contract as a proxy to the user.
 
 ## Seeing it in action {#in-action}
 
@@ -758,7 +760,7 @@ This is just React boilerplate.
 
 Our server is vulnerable to denial of service attacks. This attack is explained [in the previous article of the series](/developers/tutorials/gasless/#dos-on-server).
 
-Additionally, we are encouraging bad user behavior. This is what we want the user the sign:
+Additionally, we are encouraging bad user behavior. This is what we ask the user the sign:
 
 ![Screen capture with opaque calldata](./fig-1-opaque-calldata.png)
 
@@ -777,5 +779,21 @@ The solution is to have separate functions in `UserProxy` for commonly used func
 
 ## Conclusion {#conclusion}
 
+In addition to the vulenrabilities above, the solution in this tutorial suffers from several drawbacks that Ethereum lets us fix.
+
+- *Censorship resistance*. Currently users can use your server, a competing server that somebody else uses, or connect to Ethereum directly, which costs gas. Using [ERC-4337](https://docs.erc4337.io/#what-is-erc-4337) lets users go through a large pool of servers, so there is less chance that their transactions will be censored.
+
+- *EOA owned assets*. As noted above, it is possible to use [EIP-7702](https://eip7702.io/) to manage assets that are already owned by an EOA address. This has its difficulties, but sometimes it is necessary. 
+
+I hope to publish tutorials about adding these features in the near future.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+
+
+<!-- 
+
+"Hardwired" signature. If the algorithm used for `ecrecover` is broken, for example by [Quantum Computing](/roadmap/future-proofing/#quantum-resistance), the signatures that the user proxy relies on will no longer be available. The solution is [EIP-1271]
+
+-->
 
 7702, 4337, and 1271.

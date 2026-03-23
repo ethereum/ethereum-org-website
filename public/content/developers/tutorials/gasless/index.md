@@ -357,6 +357,6 @@ A user submits a greeting. Maybe it gets updated at the next block. Maybe it doe
 
 At this point, you should be able to create a gasless experience for your dapp users, at the cost of some centralization.
 
-However, this only works with smart contracts that support ERC-712. To transfer an ERC-20 token, for example, it is necessary to have the transaction signed by the owner rather than just a message. The solution is [account abstraction (ERC-4337)](https://docs.erc4337.io/index.html). I hope to write a future tutorial about it.
+However, this only works with smart contracts that support ERC-712. To transfer an ERC-20 token, for example, it is necessary to have the transaction signed by the owner rather than just a message. The simplest solution is to have assets owned not by the EOA address, but by a separate contract (a simple form of [account abstraction](/roadmap/account-abstraction/)). You can read more about it [in this sequel tutorial](/developers/tutorials/gasless-token).
 
 [See here for more of my work](https://cryptodocguy.pro/).
