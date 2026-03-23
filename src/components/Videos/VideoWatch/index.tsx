@@ -7,9 +7,10 @@ import { getVideoBySlug } from "@/lib/utils/videos"
 
 interface VideoWatchProps {
   slug: string
+  startTime?: string
 }
 
-const VideoWatch = async ({ slug }: VideoWatchProps) => {
+const VideoWatch = async ({ slug, startTime }: VideoWatchProps) => {
   const video = await getVideoBySlug(slug)
 
   if (!video) {
@@ -20,7 +21,12 @@ const VideoWatch = async ({ slug }: VideoWatchProps) => {
 
   return (
     <div className="my-8">
-      <YouTube id={video.youtubeId} title={video.title} className="mb-0" />
+      <YouTube
+        id={video.youtubeId}
+        title={video.title}
+        className="mb-0"
+        start={startTime}
+      />
       <div className="mt-4 max-w-[560px]">
         <h3 className="text-lg font-semibold text-body">{video.title}</h3>
         <p className="mt-2 text-sm text-body-medium">
