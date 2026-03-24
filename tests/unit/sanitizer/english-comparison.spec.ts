@@ -451,6 +451,92 @@ test.describe("English Comparison Fixes", () => {
       // Translation's blank line must be preserved
       expect(content).toContain("#### Primer {#ex}\n\nContent with blank line")
     })
+
+    test("skips Python # comments inside code fences", () => {
+      // Python # comments match ^#{1,6}\s+ but must not get blank lines added
+      const english = [
+        "## Heading {#id}",
+        "",
+        "```python",
+        "# Auction params",
+        "# Beneficiary receives money",
+        "beneficiary: public(address)",
+        "```",
+      ].join("\n")
+      const translated = [
+        "## Judul {#id}",
+        "",
+        "```python",
+        "# Auction params # Parameter lelang",
+        "# Beneficiary receives money # Penerima manfaat",
+        "beneficiary: public(address)",
+        "```",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // No blank lines should be inserted inside the code fence
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("resumes header detection after code fence closes", () => {
+      const english = [
+        "```python",
+        "# comment",
+        "```",
+        "",
+        "## After Code {#after}",
+        "",
+        "Text",
+      ].join("\n")
+      const translated = [
+        "```python",
+        "# komentar",
+        "```",
+        "",
+        "## Setelah Kode {#after}",
+        "Teks",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // Should add blank line after the heading outside the fence
+      expect(content).toContain("## Setelah Kode {#after}\n\nTeks")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not add blank line after AlertContent when English has none", () => {
+      const english = [
+        "</AlertContent>",
+        "</Alert>",
+        "",
+        "## Next {#next}",
+      ].join("\n")
+      const translated = [
+        "</AlertContent>",
+        "</Alert>",
+        "",
+        "## Berikutnya {#next}",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // Should NOT insert blank line between AlertContent and Alert
+      expect(content).not.toContain("</AlertContent>\n\n</Alert>")
+      expect(fixCount).toBe(0)
+    })
+
+    test("treats whitespace-only lines as blank", () => {
+      const english = "## Heading {#id}\n\nText"
+      const translated = "## Judul {#id}\n  \nTeks"
+      const { fixCount } = restoreBlankLinesFromEnglish(translated, english)
+      // Whitespace-only line counts as blank, so no addition needed
+      expect(fixCount).toBe(0)
+    })
   })
 
   test.describe("collapseInlineHtmlFromEnglish", () => {

@@ -1,264 +1,238 @@
 ---
 title: Penjelajah blok
-description: Pengantar tentang penjelajah blok, portal Anda ke dunia data blockchain, di mana Anda dapat membuat kueri informasi tentang transaksi, akun, kontrak, dan banyak lagi.
+description: Pengenalan tentang penjelajah blok, portal Anda ke dunia data blockchain, tempat Anda dapat meminta informasi tentang transaksi, akun, kontrak, dan banyak lagi.
 lang: id
 sidebarDepth: 3
 ---
 
-Penjelajah blok adalah portal Anda ke data Ethereum. Anda bisa menggunakannya untuk melihat data waktu nyata tentang blok, transaksi, penambang, akun, dan aktivitas on-chain lainnya.
+Penjelajah blok adalah portal Anda ke data Ethereum. Anda dapat menggunakannya untuk melihat data waktu nyata tentang blok, transaksi, validator, akun, dan aktivitas onchain lainnya.
 
 ## Prasyarat {#prerequisites}
 
-Anda harus memahami konsep dasar Ethereum agar Anda dapat memahami data yang diberikan oleh penjelajah blok kepada Anda. Mulai dengan [pengantar Ethereum](/developers/docs/intro-to-ethereum/).
+Anda harus memahami konsep dasar Ethereum sehingga Anda dapat memahami data yang diberikan oleh penjelajah blok kepada Anda. Mulailah dengan [pengenalan tentang Ethereum](/developers/docs/intro-to-ethereum/).
+
+## Alat sumber terbuka {#open-source-tools}
+
+- [3xpl](https://3xpl.com/ethereum) - Penjelajah Ethereum bebas iklan yang memungkinkan pengunduhan kumpulan datanya (open-core: modul inti adalah sumber terbuka)
+- [Beaconcha.in](https://beaconcha.in/)
+- [Blockscout](https://eth.blockscout.com/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
+- [Otterscan](https://otterscan.io/)
 
 ## Layanan {#services}
 
-- [Etherscan](https://etherscan.io/) –_Juga tersedia dalam bahasa Mandarin, Korea, Rusia, dan Jepang_
+- [Blockchair](https://blockchair.com/ethereum) - Penjelajah Ethereum privat. Juga untuk menyortir dan memfilter data (mempool). Tersedia dalam bahasa Spanyol, Prancis, Italia, Belanda, Portugis, Rusia, Mandarin, dan Farsi
+- [Chainlens](https://www.chainlens.com/)
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/) –_Juga tersedia dalam bahasa Mandarin, Spanyol, Prancis, Turki, Rusia, Korea, dan Vietnam_
-- [Blockchair](https://blockchair.com/ethereum) –_Juga tersedia dalam bahasa Spanyol, Prancis, Italia, Belanda, Portugis, Rusia, Mandarin, dan Persia_
-- [Blockscout](https://eth.blockscout.com/)
+- [Etherscan](https://etherscan.io/) - Juga tersedia dalam bahasa Mandarin, Korea, Rusia, dan Jepang
+- [Ethplorer](https://ethplorer.io/) - Penjelajah blok dengan fokus pada token. Juga tersedia dalam bahasa Mandarin, Spanyol, Prancis, Turki, Rusia, Korea, dan Vietnam
+- [Ethseer](https://ethseer.io)
+- [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 
 ## Data {#data}
 
-Ethereum bersifat transparan secara desainnya sehingga semua hal dapat diverifikasi. Penjelajah blok menyediakan antarmuka untuk mendapatkan informasi ini. Dan ini juga berlaku baik untuk jaringan utama Ethereum maupun testnet, jika Anda membutuhkan data itu.
+Ethereum dirancang transparan sehingga semuanya dapat diverifikasi. Penjelajah blok menyediakan antarmuka untuk mendapatkan informasi ini. Dan ini berlaku untuk jaringan utama Ethereum maupun testnet, jika Anda membutuhkan data tersebut. Data dibagi menjadi data eksekusi dan data konsensus. Data eksekusi merujuk pada transaksi yang telah dieksekusi dalam blok tertentu. Data konsensus merujuk pada blok itu sendiri dan validator yang mengusulkannya.
 
-Berikut ini ringkasan jenis data yang bisa Anda dapatkan dari penjelajah blok.
+Berikut adalah ringkasan jenis data yang bisa Anda dapatkan dari penjelajah blok.
 
-### Blok {#blocks}
+### Data eksekusi {#execution-data}
 
-Blok baru ditambahkan ke Ethereum setiap ~12 detik (ini bisa berfluktuasi) sehingga ada aliran data hampir konstan yang ditambahkan ke penjelajah data. Blok berisi banyak data penting yang mungkin Anda anggap berguna:
+Blok baru ditambahkan ke Ethereum setiap 12 detik (kecuali jika pengusul blok melewatkan gilirannya), sehingga aliran data yang hampir konstan ditambahkan ke penjelajah blok. Blok berisi banyak data penting yang mungkin berguna bagi Anda:
 
 **Data standar**
 
-- Ketinggian blok – Angka dan panjang blok dari blockchain (dalam blok) yang terkait dengan pembuatan blok saat ini.
-- Stempel waktu – Waktu di mana seorang penambang menambang blok.
-- Transaksi – Jumlah transaksi yang termasuk dalam blok.
-- Penambang – Alamat penambang yang menambang blok.
-- Imbalan – Jumlah ETH yang diberikan kepada penambang untuk menambahkan blok (imbalan 2ETH standar + biaya tranksasi dari transaksi yang termasuk dalam blok).
-- Tingkat kesulitan – Tingkat kesulitan yang terkait dengan penambangan blok.
-- Ukuran – Ukuran data dalam blok (diukur dalam bita).
-- Gas terpakai – Jumlah unit gas yang dipakai oleh transaksi dalam blok.
-- Batas gas – Jumlah batas gas yang ditetapkan oleh transaksi dalam blok.
-- Data ekstra – Data ekstra yang telah dimasukkan penambang ke dalam blok.
+- Tinggi blok (Block height) - Nomor blok dan panjang blockchain (dalam blok) pada saat pembuatan blok saat ini
+- Stempel waktu (Timestamp) - Waktu saat blok diusulkan
+- Transaksi - Jumlah transaksi yang disertakan di dalam blok
+- Penerima biaya (Fee recipient) - Alamat yang menerima tip biaya gas dari transaksi
+- Hadiah blok (Block Reward) - Jumlah ETH yang diberikan kepada validator yang mengusulkan blok
+- Ukuran (Size) - Ukuran data di dalam blok (diukur dalam byte)
+- Gas yang digunakan (Gas used) - Total unit gas yang digunakan oleh transaksi di dalam blok
+- Batas gas (Gas limit) - Total batas gas yang ditetapkan oleh transaksi di dalam blok
+- Biaya dasar per gas (Base fee per gas) - Pengganda minimum yang diperlukan agar transaksi dapat disertakan dalam blok
+- Biaya yang dibakar (Burnt fees) - Berapa banyak ETH yang dibakar di dalam blok
+- Data tambahan (Extra data) - Data tambahan apa pun yang disertakan oleh pembuat di dalam blok
 
-**Data tingkat lanjut**
+**Data lanjutan**
 
-- Hash – Hash kriptografik yang mewakili header blok (pengenal unik blok).
-- Hash induk – Hash blok yang ada sebelum blok saat ini.
-- Sha3Uncles – Hash kombinasi dar semua paman untuk induk tertentu.
-- StateRoot – Hash akar dari pohon Merkle yang menyimpan keseluruhan state sistem.
-- Nonce – Nilai yang digunakan untuk menunjukkan bukti kerja dari satu blok oleh penambang.
-
-**Blok paman**
-
-Blok paman dibuat ketika dua penambang membuat blok pada saat hampir bersamaan - hanya satu blok yang bisa divalidasi di seluruh node. Blok paman tidak termasuk tapi masih mendapatkan imbalan untuk pekerjaannya.
-
-Penjelajah blok menyediakan informasi tentang blok paman seperti:
-
-- Nomor blok paman.
-- Waktu pembuatan blok.
-- Ketinggian blok saat dibuat.
-- Siapa yang menambang blok.
-- Imbalan ETH.
+- Hash - Hash kriptografi yang mewakili header blok (pengidentifikasi unik dari blok)
+- Hash induk (Parent hash) - Hash dari blok yang datang sebelum blok saat ini
+- StateRoot - Hash root dari Merkle trie yang menyimpan seluruh status sistem
 
 ### Gas {#gas}
 
-Penjelajah blok tidak hanya memberi Anda data tentang penggunaan Gas dalam transaksi dan blok, tapi beberapa juga akan memberi Anda informasi tentang harga gas saat ini di jaringan. Ini akan membantu Anda memahami penggunaan jaringan, mengirimkan transaksi aman, dan tidak memboroskan penggunaan gas. Carilah API yang bisa menolong Anda mendapat informasi ini ke dalam antarmuka produk Anda. Data khusus gas mencakup:
+Penjelajah blok tidak hanya akan memberi Anda data tentang penggunaan Gas dalam transaksi dan blok, tetapi beberapa juga akan memberi Anda informasi tentang harga gas jaringan saat ini. Ini akan membantu Anda memahami penggunaan jaringan, mengirimkan transaksi yang aman, dan tidak menghabiskan terlalu banyak biaya untuk gas. Carilah API yang dapat membantu Anda memasukkan informasi ini ke dalam antarmuka produk Anda. Data khusus gas mencakup:
 
-- Estimasi unit gas yang diperlukan untuk transaksi yang aman tapi lambat (+ perkiraan harga dan durasi).
-- Estimasi unit gas yang diperlukan untuk transaksi rata-rata (+ perkiraan harga dan durasi).
-- Estimasi unit gas yang diperlukan untuk transaksi yang cepat (+ perkiraan harga dan durasi).
-- Waktu konfirmasi rata-rata berdasarkan harga gas.
-- Kontrak yang menggunakan gas - dengan kata lain, produk populer yang sering membutuhkan banyak penggunaan pada jaringan.
-- Akun yang menggunakan gas - dengan kata lain, pengguna jaringan yang aktif.
+- Perkiraan unit gas yang dibutuhkan untuk transaksi yang aman namun lambat (+ perkiraan harga dan durasi)
+- Perkiraan unit gas yang dibutuhkan untuk transaksi rata-rata (+ perkiraan harga dan durasi)
+- Perkiraan unit gas yang dibutuhkan untuk transaksi cepat (+ perkiraan harga dan durasi)
+- Waktu konfirmasi rata-rata berdasarkan harga gas
+- Kontrak yang mengonsumsi gas - dengan kata lain, produk populer yang banyak digunakan di jaringan
+- Akun yang menghabiskan gas - dengan kata lain, pengguna jaringan yang sering bertransaksi
 
 ### Transaksi {#transactions}
 
-Penjelajah blok telah menjadi tempat umum bagi orang-orang untuk mengikuti perkembangan transaksi mereka. Ini karena level detail yang bisa Anda dapatkan memberikan kepastian ekstra. Data transaksi mencakup:
+Penjelajah blok telah menjadi tempat umum bagi orang-orang untuk melacak kemajuan transaksi mereka. Hal ini karena tingkat detail yang bisa Anda dapatkan memberikan kepastian ekstra. Data transaksi mencakup:
 
 **Data standar**
 
-- Hash transaksi – Hash yang dihasilkan ketika transaksi dikirimkan.
-- Status – Indikasi terkait apakah transaksi dalam status menunggu persetujuan, gagal, atau berhasil.
-- Blok – Blok di mana transaksi telah dimasukkan.
-- Stempel waktu – Waktu saat seorang penambang menambang transaksi.
-- Dari – Alamat akun yang mengirimkan transaksi.
-- Kepada – Alamat penerima atau kontrak pintar yang berinteraksi dengan transaksi.
-- Token yang ditransfer – Daftar token yang ditransfer sebagai bagian dari transaksi.
-- Nilai – Nilai total ETH yang ditransfer.
-- Biaya transaksi – Jumlah yang dibayarkan kepada penambang untuk memroses transaksi (dihitung berdasarkan harga gas\*gas yang digunakan).
+- Hash transaksi - Hash yang dihasilkan saat transaksi dikirimkan
+- Status - Indikasi apakah transaksi tertunda, gagal, atau berhasil
+- Blok - Blok tempat transaksi telah disertakan
+- Stempel waktu - Waktu saat transaksi disertakan dalam blok yang diusulkan oleh validator
+- Dari (From) - Alamat akun yang mengirimkan transaksi
+- Ke (To) - Alamat penerima atau kontrak pintar yang berinteraksi dengan transaksi
+- Token yang ditransfer - Daftar token yang ditransfer sebagai bagian dari transaksi
+- Nilai (Value) - Total nilai ETH yang ditransfer
+- Biaya transaksi - Jumlah yang dibayarkan kepada validator untuk memproses transaksi (dihitung dari harga gas\*gas yang digunakan)
 
-**Data tingkat lanjut**
+**Data lanjutan**
 
-- Batas gas – Jumlah maksimum unit gas yang bisa digunakan oleh transaksi ini.
-- Gas yang digunakan – Jumlah sebenarnya unit gas yang digunakan oleh transaksi.
-- Harga gas – Harga yang ditetapkan untuk setiap unit gas.
-- Nonce – Nomor transaksi untuk alamat `dari` (ingat ini dimulai dari angka 0 jadi nonce bernilai `100` sebenarnya akan menjadi transaksi ke-101 yang dikirimkan oleh akun ini.
-- Data input – Informasi ekstra yang diperlukan oleh transaksi.
+- Batas gas - Jumlah maksimum unit gas yang dapat dikonsumsi oleh transaksi ini
+- Gas yang digunakan - Jumlah aktual unit gas yang dikonsumsi oleh transaksi
+- Harga gas - Harga yang ditetapkan per unit gas
+- Nonce - Nomor transaksi untuk alamat `from` (ingatlah bahwa ini dimulai dari 0 sehingga nonce `100` sebenarnya adalah transaksi ke-101 yang dikirimkan oleh akun ini)
+- Data masukan (Input data) - Informasi tambahan apa pun yang diperlukan oleh transaksi
 
 ### Akun {#accounts}
 
-Ada banyak data yang bisa Anda akses tentang sebuah akun. Inilah alasan mengapa sering direkomendasikan untuk menggunakan beberapa akun agar aset dan nilai Anda tidak bisa dilacak dengan mudah. Ada juga beberapa solusi yang sedang dikembangkan untuk membuat transaksi dan aktivitas akun lebih bersifat privat. Tapi berikut ini data yang tersedia untuk akun:
+Ada banyak data yang dapat Anda akses tentang sebuah akun. Inilah sebabnya mengapa sering disarankan untuk menggunakan beberapa akun sehingga aset dan nilai Anda tidak dapat dilacak dengan mudah. Ada juga beberapa solusi yang sedang dikembangkan untuk membuat transaksi dan aktivitas akun menjadi lebih privat. Namun, berikut adalah data yang tersedia untuk akun:
 
 **Akun pengguna**
 
-- Alamat akun – Alamat publik yang bisa Anda gunakan sebagai tujuan pengiriman dana.
-- Saldo ETH – Jumlah ETH yang terkait dengan akun tersebut.
-- Total nilai ETH – Nilai dari ETH.
-- Token – Token yang terkait dengan akun beserta nilainya.
-- Riwayat transaksi – Daftar dari semua transaksi di mana akun ini bertindak baik sebagai pengirim atau penerima.
+- Alamat akun - Alamat publik yang dapat Anda gunakan untuk mengirim dana
+- Saldo ETH - Jumlah ETH yang terkait dengan akun tersebut
+- Total nilai ETH - Nilai dari ETH tersebut
+- Token - Token yang terkait dengan akun dan nilainya
+- Riwayat transaksi - Daftar semua transaksi di mana akun ini menjadi pengirim atau penerima
 
 **Kontrak pintar**
 
-Akun kontrak pintar memiliki semua data dari akun pengguna, tapi beberapa penjelajah blok bahkan akan menampilkan juga beberapa informasi kode. Contohnya mencakup:
+Akun kontrak pintar memiliki semua data yang dimiliki akun pengguna, tetapi beberapa penjelajah blok bahkan akan menampilkan beberapa informasi kode juga. Contohnya meliputi:
 
-- Kreator kontrak – Alamat yang menggunakan kontrak ke Jaringan utama.
-- Transaksi pembuatan – Transaksi yang mencakup proses penggunaan ke Jaringan Utama.
-- Kode sumber – Kode solidity atay vyper dari kontrak pintar.
-- ABI kontrak – Antarmuka Biner Aplikasi kontrak – pemanggilan yang dilakukan kontrak dan data yang diterima.
-- Kode pembuatan kontrak – Kode bita yang dikompilasi dari kontrak pintar – dibuat ketika Anda mengompilasi kontrak pintar yang ditulis dengan Solidity atau Vyper, dll.
-- Aksi kontrak – Riwayat dari metode yang dipanggil dalam kontrak pintar. Pada dasarnya, ini adalah cara untuk melihat bagaimana cara menggunakan kontrak dan seberapa sering.
+- Pembuat kontrak - Alamat yang menerapkan kontrak ke Mainnet
+- Transaksi pembuatan - Transaksi yang menyertakan penerapan ke Mainnet
+- Kode sumber - Kode Solidity atau Vyper dari kontrak pintar
+- ABI Kontrak - Antarmuka Biner Aplikasi (Application Binary Interface) dari kontrak—panggilan yang dilakukan kontrak dan data yang diterima
+- Kode pembuatan kontrak - Bytecode yang dikompilasi dari kontrak pintar—dibuat saat Anda mengompilasi kontrak pintar yang ditulis dalam Solidity atau Vyper, dll.
+- Peristiwa kontrak - Riwayat metode yang dipanggil dalam kontrak pintar—pada dasarnya adalah cara untuk melihat bagaimana kontrak digunakan dan seberapa sering
 
 ### Token {#tokens}
 
-Token adalah suatu jenis kontrak sehingga akan memiliki data yang sama dengan kontrak pintar. Tapi karena token memiliki nilai dan bisa diperdagangkan, token memiliki poin data tambahan:
+Token adalah jenis kontrak sehingga mereka akan memiliki data yang mirip dengan kontrak pintar. Namun karena mereka memiliki nilai dan dapat diperdagangkan, mereka memiliki titik data tambahan:
 
-- Jenis – Apakah jenis token adalah ERC-20, ERC-721 atau standar token lainnya.
-- Harga – Jika jenis token adalah ERC-20, token akan memiliki nilai pasar saat ini.
-- Kapitalisasi pasar – Jika jenis token adalah ERC-20, token akan memiliki kapitalisasi pasar (dihitung berdasarkan harga\*total persediaan).
-- Persediaan total – Jumlah token dalam perederan.
-- Pemilik – Jumlah alamat yang memiliki token.
-- Transfer – Berapa kali token telah ditransfer antar akun.
-- Riwayat transaksi – Riwayat semua transaksi yang melibatkan token.
-- Alamat kontrak – Alamat token yang diterapkan ke Jaringan Utama.
-- Desimal – Token ERC-20 bisa dibagi dan memiliki tempat desimal.
+- Jenis - Apakah mereka ERC-20, ERC-721, atau standar token lainnya
+- Harga - Jika mereka adalah ERC-20, mereka akan memiliki nilai pasar saat ini
+- Kapitalisasi pasar (Market cap) - Jika mereka adalah ERC-20, mereka akan memiliki kapitalisasi pasar (dihitung dari harga\*total pasokan)
+- Total pasokan - Jumlah token yang beredar
+- Pemegang (Holders) - Jumlah alamat yang memegang token
+- Transfer - Berapa kali token telah ditransfer antar akun
+- Riwayat transaksi - Riwayat semua transaksi yang menyertakan token
+- Alamat kontrak - Alamat token yang diterapkan ke Mainnet
+- Desimal - Token ERC-20 dapat dibagi dan memiliki tempat desimal
 
 ### Jaringan {#network}
 
-Tentu ada beberapa data yang berbicara tentang kesehatan jaringan. Ini cukup spesifik dalam mekanisme konsensus bukti kerja Ethereum. Ketika Ethereum beralih ke bukti taruhan, beberapa data ini akan menjadi mubazir
+Beberapa data blok berkaitan dengan kesehatan Ethereum secara lebih holistik.
 
-- Tingkat kesulitan – Tingkat kesulitan penambangan saat ini.
-- Tingkat hash – Estimasi berapa banyak hash yang akan dihasilkan oleh penambang Ethereum yang mencoba menyelesaikan blok Ethereum saat ini atau blok tertentu.
-- Transaksi total – Jumlah transaksi sejak Ethereum didirikan.
-- Transaksi per detik – Jumlah transaksi yang dapat diproses dalam satu detik.
-- Harga ETH – Taksiran harga 1 ETH saat ini.
-- Persediaan ETH total – Jumlah ETH dalam perederan – ingat ETH baru dihasilkan bersamaan dengan pembuatan tiap blok dalam bentuk imbalan blok.
-- Kapitalisasi pasar – Penghitungan harga\*persediaan.
+- Total transaksi - Jumlah transaksi sejak Ethereum dibuat
+- Transaksi per detik - Jumlah transaksi yang dapat diproses dalam satu detik
+- Harga ETH - Valuasi saat ini dari 1 ETH
+- Total pasokan ETH - Jumlah ETH yang beredar—ingatlah bahwa ETH baru dibuat dengan pembuatan setiap blok dalam bentuk hadiah blok
+- Kapitalisasi pasar - Perhitungan harga\*pasokan
 
 ## Data lapisan konsensus {#consensus-layer-data}
 
-Peningkatan skalabilitas masih dalam pengembangan, tetapi rasanya layak membicarakan tentang beberapa poin data yang dapat disediakan oleh penjelajah. Sebenarnya, semua data ini tersedia saat ini dalam testnet.
-
-Jika Anda belum terbiasa dengan road map, lihat [gambaran umum kami tentang peningkatan Ethereum](/roadmap/).
-
 ### Epoch {#epoch}
 
-Rantai Suar akan membuat komite validator yang dipilih secara acak pada akhir dari setiap epoch (setiap 6,4 menit) untuk alasan keamanan. Data epoch meliputi:
+Untuk alasan keamanan, komite validator yang diacak dibuat pada akhir setiap epoch (setiap 6,4 menit). Data epoch mencakup:
 
-- Nomor epoch.
-- Status terselesaikan – Apakah epoch telah diselesaikan (Ya/Tidak).
-- Waktu – Waktu berakhirnya epoch.
-- Atestasi – Jumlah atestasi dalam epoch (pengambilan suara untuk blok dalam slot).
-- Deposito – Jumlah deposito ETH yang termasuk dalam epoch (validator harus mempertaruhkan ETH untuk menjadi validator).
-- Pemotongan – Jumlah penalti yang diberikan kepada pengusul blok atau pemberi atestasi.
-- Partisipasi pengambilan suara – Jumlah ETH yang dipertaruhkan yang digunakan untuk mengesahkan blok.
-- Validator – Jumlah validator aktif dalam epoch.
-- Saldo Validator rata-rata – Saldo rata-rata untuk validator aktif.
-- Slot – Jumlah slot yang termasuk dalam epoch (slot mencakup satu blok valid).
+- Nomor epoch
+- Status difinalisasi - Apakah epoch telah difinalisasi (Ya/Tidak)
+- Waktu - Waktu epoch berakhir
+- Pengesahan (Attestations) - Jumlah pengesahan dalam epoch (suara untuk blok di dalam slot)
+- Deposit - Jumlah deposit ETH yang disertakan dalam epoch (validator harus melakukan stake ETH untuk menjadi validator)
+- Pemotongan (Slashings) - Jumlah penalti yang diberikan kepada pengusul blok atau pemberi pengesahan
+- Partisipasi pemungutan suara - Jumlah ETH yang di-stake yang digunakan untuk mengesahkan blok
+- Validator - Jumlah validator yang aktif untuk epoch tersebut
+- Saldo rata-rata Validator - Saldo rata-rata untuk validator aktif
+- Slot - Jumlah slot yang disertakan dalam epoch (slot mencakup satu blok yang valid)
 
 ### Slot {#slot}
 
-Slot adalah kesempatan untuk pembuatan blok, data yang tersedia untuk tiap slot meliputi:
+Slot adalah peluang untuk pembuatan blok, data yang tersedia untuk setiap slot mencakup:
 
-- Epoch – Epoch di mana slot valid.
-- Nomor slot.
-- Status – Status dari slot (Diusulkan/Terlewatkan).
-- Waktu – Stempel waktu slot.
-- Pengusul – Validator yang mengusulkan blok untuk slot.
-- Akar blok – Akar pohon hash dari BeaconBlock.
-- Akar induk – Hash blok yang ada sebelumnya.
-- Akar state – Root pohon hash dari BeaconState.
-- Tanda tangan.
-- Pengungkapan Randao.
-- Graffiti – Pengusul blok dapat memasukkan pesan sepanjang 32 bita untuk proses pengajuan bloknya.
-- Data Eksekusi.
-  - Hash blok.
-  - Jumlah deposito.
-  - Akar deposito.
-- Atestasi – Jumlah pengesahan blok dalam slot ini.
-- Deposito – Jumlah deposito selama slot ini.
-- Keluar secara sukarela – Jumlah validator yang keluar selama slot tersebut.
-- Pemotongan – Jumlah penalti yang diberikan kepada pengusul blok atau pemberi atestasi.
-- Pengambilan suara – Validator yang mengambil suara untuk blok dalam slot ini.
+- Epoch - Epoch di mana slot tersebut valid
+- Nomor slot
+- Status - Status slot (Diusulkan/Dilewatkan)
+- Waktu - Stempel waktu slot
+- Pengusul (Proposer) - Validator yang mengusulkan blok untuk slot tersebut
+- Root blok - Hash-tree-root dari BeaconBlock
+- Root induk - Hash dari blok yang datang sebelumnya
+- Root status - Hash-tree-root dari BeaconState
+- Tanda tangan (Signature)
+- Pengungkapan Randao (Randao reveal)
+- Grafiti - Pengusul blok dapat menyertakan pesan sepanjang 32 byte ke proposal bloknya
+- Data Eksekusi
+  - Hash blok
+  - Jumlah deposit
+  - Root deposit
+- Pengesahan - Jumlah pengesahan untuk blok di slot ini
+- Deposit - Jumlah deposit selama slot ini
+- Keluar sukarela (Voluntary exits) - Jumlah validator yang keluar selama slot
+- Pemotongan - Jumlah penalti yang diberikan kepada pengusul blok atau pemberi pengesahan
+- Suara (Votes) - Validator yang memberikan suara untuk blok di slot ini
 
 ### Blok {#blocks-1}
 
-Blok lapisan konsensus bekerja secara berbeda karena penambang digantikan oleh validator dan Rantai Suar memperkenalkan slot dan epoch ke Ethereum. Jadi ini berarti data yang baru!
+Proof-of-stake membagi waktu menjadi slot dan epoch. Jadi itu berarti data baru!
 
-- Pengusul – Validator yang terpilih secara algoritma untuk mengajukan blok baru.
-- Epoch – Epoch di mana blok diusulkan.
-- Slot – Slot di mana blok diusulkan.
-- Atestasi – Jumlah pengesahan yang tercakup dalam slot. Atestasi adalah seperti pengambilan suara yang menunjukkan blok siap untuk beralih ke Rantai Suar.
+- Pengusul - Validator yang dipilih secara algoritmik untuk mengusulkan blok baru
+- Epoch - Epoch di mana blok diusulkan
+- Slot - Slot di mana blok diusulkan
+- Pengesahan - Jumlah pengesahan yang disertakan dalam slot—pengesahan seperti suara yang menunjukkan bahwa blok siap untuk masuk ke Beacon Chain
 
 ### Validator {#validators}
 
-Validator bertanggung jawab dalam mengusulkan blok dan mengesahkannya dalam slot.
+Validator bertanggung jawab untuk mengusulkan blok dan mengesahkannya di dalam slot.
 
-- Nomor validator – Nomor unik yang mewakilkan validator.
-- Saldo saat ini – Saldo validator termasuk imbalan.
-- Saldo efektif – Saldo validator yang digunakan untuk penaruhan.
-- Pemasukan – Imbalan atau penalti yang diterima validator.
-- Status – Apakah validator saat ini sedang online dan aktif atau tidak.
-- Efektifitas atestasi – Waktu rata-rata yang diperlukan untuk pengesahan oleh validator yang akan dimasukkan ke dalam rantai.
-- Kelayakan aktivasi – Tanggal (dan epoch) saat validator tersedia untuk memvalidasi.
-- Aktif sejak – Tanggal (dan epoch) saat validator aktif.
-- Blok yang diusulkan – Blok yang telah diajukan oleh validator.
-- Atestasi – Pengesahan yang telah diberikan oleh validator.
-- Deposito – Alamat dari, hash transaksi, nomor blok, stempel waktu, jumlah dan status deposito penaruhan yang dibuat oleh validator.
+- Nomor validator - Nomor unik yang mewakili validator
+- Saldo saat ini - Saldo validator termasuk hadiah
+- Saldo efektif - Saldo validator yang digunakan untuk melakukan stake
+- Pendapatan - Hadiah atau penalti yang diterima oleh validator
+- Status - Apakah validator saat ini sedang online dan aktif atau tidak
+- Efektivitas pengesahan - Waktu rata-rata yang dibutuhkan agar pengesahan validator disertakan dalam rantai
+- Kelayakan untuk aktivasi - Tanggal (dan epoch) saat validator tersedia untuk memvalidasi
+- Aktif sejak - Tanggal (dan epoch) saat validator menjadi aktif
+- Blok yang diusulkan - Blok yang telah diusulkan oleh validator
+- Pengesahan - Pengesahan yang telah diberikan oleh validator
+- Deposit - Alamat pengirim (from), hash transaksi, nomor blok, stempel waktu, jumlah, dan status deposit mengunci yang dilakukan oleh validator
 
-### Atestasi {#attestations}
+### Pengesahan {#attestations}
 
-Atestasi adalah pengambilan suara "ya" untuk memasukkan blok ke dalam rantai. Data ini terkait dengan catatan dari pengesahan dan validator yang mengesahkan
+Pengesahan adalah suara "ya" untuk menyertakan blok dalam rantai. Data mereka berkaitan dengan catatan pengesahan dan validator yang mengesahkan
 
-- Slot – Slot di mana pengesahan terjadi.
-- Indeks komite – Indeks komite pada slot tertentu.
-- Bit agregasi – Mewakili pengesahan teragregasi dari seluruh validator peserta dalam pengesahan.
-- Validator – Validator yang memberikan pengesahan.
-- Akar blok suar – Menunjukkan blok di mana validator sedang melakukan pengesahan.
-- Sumber – Menunjukkan epoch terbaru yang dijustifikasi.
-- Target – Menunjukkan batas epoch terkini.
-- Tanda tangan.
+- Slot - Slot di mana pengesahan berlangsung
+- Indeks komite - Indeks komite pada slot yang diberikan
+- Bit agregasi - Mewakili pengesahan gabungan dari semua validator yang berpartisipasi dalam pengesahan
+- Validator - Validator yang memberikan pengesahan
+- Root blok beacon - Menunjuk ke blok yang disahkan oleh validator
+- Sumber (Source) - Menunjuk ke epoch terbaru yang dibenarkan (justified)
+- Target - Menunjuk ke batas epoch terbaru
+- Tanda tangan
 
 ### Jaringan {#network-1}
 
-Data tingkat atas lapisan konsensus mencakup berikut ini:
+Data tingkat atas lapisan konsensus mencakup hal-hal berikut:
 
-- Epoch saat ini.
-- Slot saat ini.
-- Validator aktif – Jumlah validator aktif.
-- Validator menunggu – Jumlah validator yang menunggu untuk diaktifkan.
-- ETH yang ditaruhkan – Jumlah ETH yang ditaruhkan dalam jaringan.
-- Saldo rata-rata – Saldo ETH rata-rata validator.
-
-## Penjelajah blok {#block-explorers}
-
-- [Etherscan](https://etherscan.io/) – penjelajah blok yang bisa Anda gunakan mengambil data untuk Jaringan Utama Ethereum dan Testnet Sepolia.
-- [Blockscout](https://eth.blockscout.com/) – berfokus pada jaringan berikut:
-  - xDai – kombinasi pintar dari stablecoin DAI MakerDAO dan sidechain POA serta teknologi tokenbridge.
-  - POA – Sidechain dan jaringan otonom yang diamankan oleh satu grup validator terpercaya. Semua validator pada jaringan adalah notaris Amerika Serikat, dan informasi mereka tersedia secara publik.
-- [Otterscan](https://otterscan.io/) – penjelajah blok sumber terbuka alternatif untuk Ethereum
-- [Blockchair](https://blockchair.com/ethereum) – penjelajah Ethereum yang paling privat. Juga bagus untuk menyortir dan memfilter data (mempool)
-- [3xpl](https://3xpl.com/ethereum) – penjelajah blockchain tanpa iklan dengan fokus pada UX yang bersih
-- [Beaconcha.in](https://beaconcha.in) – penjelajah blok sumber terbuka untuk lapisan konsensus di Jaringan Utama dan Sepolia
-- [Blockscout](https://blockscout.com/eth/mainnet/) – Fokus pada lapisan eksekusi Jaringan Utama Ethereum dan Testnet Sepolia
-
-## Penjelajah blok (lapisan konsensus) rantai suar {#beacon-chain-block-explorers}
-
-- [https://beaconcha.in/](https://beaconcha.in/)
-- [https://beaconscan.com/](https://beaconscan.com/)
-- [https://ethscan.org/](https://ethscan.org/) (fork beaconcha.in)
+- Epoch saat ini
+- Slot saat ini
+- Validator aktif - Jumlah validator aktif
+- Validator tertunda - Jumlah validator yang menunggu untuk diaktifkan
+- ETH yang di-stake - Jumlah ETH yang di-stake di jaringan
+- Saldo rata-rata - Saldo ETH rata-rata dari validator
 
 ## Bacaan lebih lanjut {#further-reading}
 
@@ -266,7 +240,6 @@ _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tam
 
 ## Topik terkait {#related-topics}
 
-- [Penambangan](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Transaksi](/developers/docs/transactions/)
 - [Akun](/developers/docs/accounts/)
 - [Jaringan](/developers/docs/networks/)

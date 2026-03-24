@@ -1,95 +1,95 @@
 ---
-title: Penaruhan sebagai layanan
-description: Gambaran umum mengenai bagaimana cara memulai staking untuk pooled ETH
+title: Mengunci sebagai layanan
+description: Pelajari tentang mengunci sebagai layanan (staking as a service)
 lang: id
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Leslie si badak mengapung di awan.
+alt: Badak Leslie mengambang di awan.
 sidebarDepth: 2
 summaryPoints:
-  - Operator simpul pihak ketiga menangani operasi dari klien validator Anda
-  - Pilihan yang bagus bagi siapa pun yang memiliki 32 ETH dan tidak merasa nyaman menghadapi kompleksitas teknis dalam menjalankan simpul
-  - Mengurangi kepercayaan, dan tetap memegang kendali kunci penarikan Anda
+  - Operator node pihak ketiga menangani operasi klien validator Anda
+  - Pilihan tepat bagi siapa saja yang memiliki 32 ETH yang merasa tidak nyaman berurusan dengan kerumitan teknis dalam menjalankan node
+  - Mengurangi kepercayaan, dan mempertahankan hak asuh atas kunci penarikan Anda
 ---
 
-## Apa yang dimaksud dengan penaruhan sebagai layanan? {#what-is-staking-as-a-service}
+## Apa itu mengunci sebagai layanan? {#what-is-staking-as-a-service}
 
-Penaruhan sebagai layanan ("SaaS") merupakan kategori layanan penguncian di mana Anda menyetor sendiri 32 ETH untuk validator, tetapi menugaskan operasi simpul kepada operator pihak ketiga. Proses ini biasanya melibatkan panduan dalam pengaturan awal, termasuk pembuatan kunci dan setoran, kemudian menampilkan kunci tanda tangan Anda ke operator. Ini memungkinkan layanan tersebut menggunakan validator Anda atas nama Anda, biasanya dengan membayar biaya bulanan.
+Mengunci sebagai layanan ("SaaS") mewakili kategori layanan mengunci di mana Anda mendepositkan 32 ETH Anda sendiri untuk validator, tetapi mendelegasikan operasi node ke operator pihak ketiga. Proses ini biasanya melibatkan panduan melalui pengaturan awal, termasuk pembuatan kunci dan deposit, kemudian mengunggah kunci penandatanganan Anda ke operator. Hal ini memungkinkan layanan untuk mengoperasikan validator Anda atas nama Anda, biasanya dengan biaya bulanan.
 
-## Mengapa melakukan taruhan dengan layanan? {#why-stake-with-a-service}
+## Mengapa mengunci dengan layanan? {#why-stake-with-a-service}
 
-Protokol Ethereum tidak secara asli mendukung delegasi taruhan, sehingga layanan-layanan ini dibangun untuk memenuhi permintaan tersebut. Jika Anda memiliki 32 ETH untuk taruhan, namun tidak merasa nyaman menghadapi perangkat keras, layanan SaaS memungkinkan Anda menugaskan bagian yang sulit sementara Anda mendapatkan imbalan blok asli.
+Protokol [Ethereum](/) tidak secara bawaan mendukung pendelegasian stake, sehingga layanan ini telah dibangun untuk memenuhi permintaan ini. Jika Anda memiliki 32 ETH untuk di-stake, tetapi merasa tidak nyaman berurusan dengan perangkat keras, layanan SaaS memungkinkan Anda untuk mendelegasikan bagian yang sulit sementara Anda mendapatkan hadiah blok bawaan.
 
 <CardGrid>
-  <Card title="Validator milik Anda" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Mudah untuk memulai" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Batasi risiko Anda" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Validator Anda sendiri" emoji=":desktop_computer:" description="Depositkan 32 ETH Anda sendiri untuk mengaktifkan set kunci penandatanganan Anda sendiri yang akan berpartisipasi dalam konsensus Ethereum. Pantau kemajuan Anda dengan dasbor untuk melihat akumulasi hadiah ETH tersebut." />
+  <Card title="Mudah untuk memulai" emoji="🏁" description="Lupakan tentang spesifikasi perangkat keras, pengaturan, pemeliharaan node, dan peningkatan. Penyedia SaaS memungkinkan Anda mengalihdayakan bagian yang sulit dengan mengunggah kredensial penandatanganan Anda sendiri, memungkinkan mereka menjalankan validator atas nama Anda, dengan biaya kecil." />
+  <Card title="Batasi risiko Anda" emoji=":shield:" description="Dalam banyak kasus, pengguna tidak perlu menyerahkan akses ke kunci yang memungkinkan penarikan atau transfer dana yang di-stake. Kunci ini berbeda dari kunci penandatanganan, dan dapat disimpan secara terpisah untuk membatasi (tetapi tidak menghilangkan) risiko Anda sebagai staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
 
-## Apa yang perlu ditentukan {#what-to-consider}
+## Apa yang perlu dipertimbangkan {#what-to-consider}
 
-Ada semakin banyak penyedia SaaS yang dapat membantu Anda melakukan taruhan ETH, tetapi setiap penyedia memiliki manfaat dan risikonya sendiri. Semua pilihan layanan SaaS memerlukan keyakinan tambahan dibandingkan dengan penaruhan di beranda. Opsi Saas mungkin memiliki kode tambahan yang melingkupi klien Ethereum yang tidak terbuka atau dapat diaudit. SaaS juga berdampak buruk pada desentralisasi jaringan. Tergantung pada pengaturan, Anda mungkin tidak mengendalikan validator Anda - operator dapat bertindak tidak jujur dengan menggunakan ETH Anda.
+Ada semakin banyak penyedia SaaS untuk membantu Anda mengunci ETH Anda, tetapi semuanya memiliki manfaat dan risikonya masing-masing. Semua opsi SaaS memerlukan asumsi kepercayaan tambahan dibandingkan dengan mengunci di rumah (home-staking). Opsi SaaS mungkin memiliki kode tambahan yang membungkus klien Ethereum yang tidak terbuka atau dapat diaudit. SaaS juga memiliki efek merugikan pada desentralisasi jaringan. Bergantung pada pengaturannya, Anda mungkin tidak mengontrol validator Anda - operator dapat bertindak tidak jujur menggunakan ETH Anda.
 
-Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemahan yang mencolok yang mungkin dimiliki oleh penyedia SaaS yang terdaftar. Gunakan bagian ini sebagai referensi untuk bagaimana kami mendefinisikan atribut-atribut ini saat Anda memilih layanan untuk membantu perjalanan penaruhan Anda.
+Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemahan penting yang mungkin dimiliki penyedia SaaS yang terdaftar. Gunakan bagian ini sebagai referensi tentang bagaimana kami mendefinisikan atribut-atribut ini saat Anda memilih layanan untuk membantu perjalanan mengunci Anda.
 
 <StakingConsiderations page="saas" />
 
-## Eksplorasi penyedia layanan penaruhan {#saas-providers}
+## Jelajahi penyedia layanan mengunci {#saas-providers}
 
-Berikut adalah beberapa penyedia SaaS yang tersedia. Gunakan indikator-indikator di atas untuk membantu memandu Anda melalui layanan-layanan ini
+Di bawah ini adalah beberapa penyedia SaaS yang tersedia. Gunakan indikator di atas untuk membantu memandu Anda melalui layanan ini
 
 <ProductDisclaimer />
 
-### Penyedia layanan SaaS
+### Penyedia SaaS
 
 <StakingProductsCardGrid category="saas" />
 
-Harap perhatikan pentingnya mendukung [diversitas klien](/developers/docs/nodes-and-clients/client-diversity/) karena ini meningkatkan keamanan jaringan, dan membatasi risiko Anda. Layanan-layanan yang memiliki bukti pembatasan penggunaan mayoritas klien ditandai dengan <em style={{ textTransform: "uppercase" }}>"diversitas klien eksekusi"</em> dan <em style={{ textTransform: "uppercase" }}>"diversitas klien konsensus."</em>
+Harap perhatikan pentingnya mendukung [keragaman klien](/developers/docs/nodes-and-clients/client-diversity/) karena hal ini meningkatkan keamanan jaringan, dan membatasi risiko Anda. Layanan yang memiliki bukti membatasi penggunaan klien mayoritas ditunjukkan dengan <em style={{ textTransform: "uppercase" }}>"keragaman klien eksekusi"</em> dan <em style={{ textTransform: "uppercase" }}>"keragaman klien konsensus."</em>
 
-### Pembangkit Kunci
+### Pembuat Kunci
 
 <StakingProductsCardGrid category="keyGen" />
 
-Punya saran untuk penyedia penaruhan sebagai layanan yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah cocok, dan untuk mengirimkannya untuk ditinjau.
+Punya saran untuk penyedia mengunci sebagai layanan yang kami lewatkan? Lihat [kebijakan pendaftaran produk](/contributing/adding-staking-products/) kami untuk melihat apakah itu cocok, dan untuk mengirimkannya agar ditinjau.
 
 ## Pertanyaan yang sering diajukan {#faq}
 
-<ExpandableCard title="Siapa yang menyimpan kunci-kunci saya?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
-Perjanjian akan berbeda dari penyedia ke penyedia, tetapi umumnya Anda akan dipandu melalui pengaturan kunci tanda tangan yang Anda butuhkan (satu per 32 ETH), dan mengunggahnya ke penyedia Anda agar mereka dapat memvalidasi atas nama Anda. Kunci tanda tangan sendiri tidak memberikan kemampuan untuk menarik, mentransfer, atau menghabiskan dana Anda. Namun, kunci tanda tangan juga memberikan kemampuan untuk memberikan suara terhadap konsensus, yang jika tidak dilakukan dengan benar dapat mengakibatkan hukuman offline atau pemotongan.
+<ExpandableCard title="Siapa yang memegang kunci saya?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+Pengaturan akan berbeda dari satu penyedia ke penyedia lainnya, tetapi umumnya Anda akan dipandu melalui pengaturan kunci penandatanganan apa pun yang Anda butuhkan (satu per 32 ETH), dan mengunggahnya ke penyedia Anda untuk memungkinkan mereka memvalidasi atas nama Anda. Kunci penandatanganan saja tidak memberikan kemampuan apa pun untuk menarik, mentransfer, atau membelanjakan dana Anda. Namun, kunci tersebut memberikan kemampuan untuk memberikan suara menuju konsensus, yang jika tidak dilakukan dengan benar dapat mengakibatkan hukuman luring atau pemotongan.
 </ExpandableCard>
 
 <ExpandableCard title="Jadi ada dua set kunci?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-Ya. Setiap akun terdiri dari kunci BLS untuk <em>tanda tangan</em> dan kunci BLS untuk <em>penarikan</em>. Agar seorang validator dapat memberikan tanda tangan atas keadaan jaringan, berpartisipasi dalam komite sinkronisasi, dan mengajukan blok, kunci tanda tangan harus mudah diakses oleh klien validator. Kunci-kunci ini harus terhubung ke internet dalam bentuk tertentu, dan oleh karena itu secara inheren dianggap sebagai kunci "panas" (hot keys). Ini merupakan persyaratan agar validator Anda dapat memberikan tanda tangan, dan oleh karena itu kunci yang digunakan untuk mentransfer atau menarik dana dipisahkan karena alasan keamanan.
+Ya. Setiap akun terdiri dari kunci <em>penandatanganan</em> BLS, dan kunci <em>penarikan</em> BLS. Agar validator dapat mengesahkan status chain, berpartisipasi dalam komite sinkronisasi, dan mengusulkan blok, kunci penandatanganan harus mudah diakses oleh klien validator. Kunci ini harus terhubung ke internet dalam beberapa bentuk, dan dengan demikian secara inheren dianggap sebagai kunci "panas" (hot keys). Ini adalah persyaratan agar validator Anda dapat mengesahkan, dan dengan demikian kunci yang digunakan untuk mentransfer atau menarik dana dipisahkan karena alasan keamanan.
 
-Kunci penarikan BLS digunakan untuk menandatangani pesan satu kali yang menyatakan akun lapisan eksekusi mana yang harus menerima imbalan penaruhan dan dana yang ditarik. Setelah pesan ini disiarkan, kunci <em>penarikan BLS</em> tidak lagi diperlukan. Sebagai gantinya, kendali atas dana yang ditarik secara permanen didelegasikan ke alamat yang Anda berikan. Hal ini memungkinkan Anda untuk mengatur alamat penarikan yang diamankan melalui penyimpanan dingin (cold storage) milik Anda sendiri, meminimalkan risiko terhadap dana validator Anda, bahkan jika orang lain mengontrol kunci tanda tangan validator Anda.
+Kunci penarikan BLS digunakan untuk menandatangani pesan satu kali yang menyatakan ke akun lapisan eksekusi mana hadiah mengunci dan dana yang keluar harus dikirim. Setelah pesan ini disiarkan, kunci <em>penarikan BLS</em> tidak lagi diperlukan. Sebaliknya, kendali atas dana yang ditarik secara permanen didelegasikan ke alamat yang Anda berikan. Hal ini memungkinkan Anda untuk mengatur alamat penarikan yang diamankan melalui penyimpanan dingin (cold storage) Anda sendiri, meminimalkan risiko pada dana validator Anda, bahkan jika orang lain mengontrol kunci penandatanganan validator Anda.
 
-Memperbarui kredensial penarikan adalah langkah yang diperlukan untuk mengaktifkan penarikan\*. Proses ini melibatkan pembuatan kunci penarikan dengan menggunakan frase benih mnemonik Anda.
+Memperbarui kredensial penarikan adalah langkah yang diperlukan untuk mengaktifkan penarikan\*. Proses ini melibatkan pembuatan kunci penarikan menggunakan frasa seed mnemonik Anda.
 
-<strong>Pastikan Anda mencadangkan frase benih ini dengan aman, jika tidak Anda tidak akan dapat menghasilkan kunci penarikan Anda saat waktunya tiba.</strong>
+<strong>Pastikan Anda mencadangkan frasa seed ini dengan aman atau Anda tidak akan dapat membuat kunci penarikan Anda saat waktunya tiba.</strong>
 
-\*Penaruh yang telah menyediakan alamat penarikan pada saat deposit awal tidak perlu mengatur ini. Hubungi penyedia SaaS Anda untuk mendapatkan dukungan mengenai cara menyiapkan validator Anda.
+\*Staker yang memberikan alamat penarikan dengan deposit awal tidak perlu mengatur ini. Periksa dengan penyedia SaaS Anda untuk dukungan mengenai cara menyiapkan validator Anda.
 </ExpandableCard>
 
 <ExpandableCard title="Kapan saya bisa menarik dana?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Penarikan penaruhan diimplementasikan dalam peningkatan Shanghai/Capella pada April 2023. Para penaruh perlu menyediakan alamat penarikan (jika tidak disediakan saat deposit awal), dan pembayaran imbalan akan mulai didistribusikan secara otomatis secara berkala setiap beberapa hari.
+Staker perlu memberikan alamat penarikan (jika tidak diberikan pada deposit awal), dan pembayaran hadiah akan mulai didistribusikan secara otomatis secara berkala setiap beberapa hari.
 
-Para validator juga dapat sepenuhnya keluar sebagai validator, yang akan membuka kunci saldo ETH mereka yang tersisa untuk penarikan. Akun yang telah menyediakan alamat penarikan eksekusi dan menyelesaikan proses keluar akan menerima seluruh saldo mereka ke alamat penarikan yang disediakan selama sweep validator berikutnya.
+Validator juga dapat sepenuhnya keluar sebagai validator, yang akan membuka kunci sisa saldo ETH mereka untuk penarikan. Akun yang telah memberikan alamat penarikan eksekusi dan menyelesaikan proses keluar akan menerima seluruh saldo mereka ke alamat penarikan yang diberikan selama penyapuan validator berikutnya.
 
-<ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan mengunci</ButtonLink>
 </ExpandableCard>
 
-<ExpandableCard title="Apa yang terjadi jika saya terkena pengurangan hadiah pemotongan?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
-Dengan menggunakan penyedia SaaS, Anda mempercayakan operasi simpul Anda kepada pihak lain. Ini membawa risiko kinerja simpul yang buruk, yang tidak berada dalam kendali Anda. Jika validator Anda terkena pemotongan, saldo validator Anda akan dikenai hukuman dan secara paksa dihapus dari pool validator.
+<ExpandableCard title="Apa yang terjadi jika saya terkena pemotongan (slashing)?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+Dengan menggunakan penyedia SaaS, Anda mempercayakan operasi node Anda kepada orang lain. Ini datang dengan risiko kinerja node yang buruk, yang tidak berada dalam kendali Anda. Jika validator Anda terkena pemotongan, saldo validator Anda akan dihukum dan dikeluarkan secara paksa dari kumpulan validator.
 
-Setelah selesai proses pemotongan hadiah/keluar, dana tersebut akan ditransfer ke alamat penarikan yang ditetapkan untuk validator tersebut. Ini memerlukan menyediakan alamat penarikan untuk diaktifkan. Alamat penarikan mungkin telah disediakan saat deposit awal. Jika tidak, kunci penarikan validator harus digunakan untuk menandatangani pesan yang menyatakan alamat penarikan. Jika tidak ada alamat penarikan yang disediakan, dana akan tetap terkunci sampai alamat penarikan diberikan.
+Setelah selesainya proses pemotongan/keluar, dana ini akan ditransfer ke alamat penarikan yang ditetapkan ke validator. Ini memerlukan penyediaan alamat penarikan untuk diaktifkan. Ini mungkin telah diberikan pada deposit awal. Jika tidak, kunci penarikan validator perlu digunakan untuk menandatangani pesan yang menyatakan alamat penarikan. Jika tidak ada alamat penarikan yang diberikan, dana akan tetap terkunci sampai diberikan.
 
-Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut tentang jaminan atau opsi asuransi, dan petunjuk tentang cara menyediakan alamat penarikan. Jika Anda lebih suka memiliki kendali penuh atas pengaturan validator Anda, [pelajari lebih lanjut tentang cara melakukan taruhan solo untuk ETH](/staking/solo/).
+Hubungi masing-masing penyedia SaaS untuk detail lebih lanjut tentang jaminan atau opsi asuransi apa pun, dan untuk instruksi tentang cara memberikan alamat penarikan. Jika Anda lebih suka memegang kendali penuh atas pengaturan validator Anda, [pelajari lebih lanjut tentang cara melakukan solo stake ETH Anda](/staking/solo/).
 </ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [Direktori Penaruhan Ethereum](https://www.staking.directory/) - _Eridian dan Spacesider_
-- [Menilai Layanan Penaruhan](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_
+- [Direktori Mengunci Ethereum](https://www.staking.directory/) - _Eridian dan Spacesider_
+- [Mengevaluasi Layanan Mengunci](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_
