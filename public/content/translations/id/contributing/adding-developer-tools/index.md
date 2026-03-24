@@ -1,60 +1,60 @@
 ---
 title: Menambahkan alat pengembang
 lang: id
-description: Kriteria kami untuk mendaftarkan perangkat pengembang di ethereum.org
+description: Kriteria kami untuk mencantumkan alat pengembang di ethereum.org
 ---
 
 # Menambahkan alat pengembang {#contributing-to-ethereumorg-}
 
-Kami ingin memastikan bahwa kami mencantumkan sumber daya pengembang terbaik sehingga semua orang bisa membangun dengan percaya diri dan mendapatkan dukungan yang mereka butuhkan.
+Kami ingin memastikan bahwa kami mencantumkan sumber daya pengembang terbaik yang memungkinkan agar orang-orang dapat membangun dengan percaya diri dan mendapatkan dukungan yang mereka butuhkan.
 
-Apabila terdapat alat pengembang berguna yang belum tercantum, silakan untuk memberi saran penempatan yang tepat.
+Jika ada alat pengembang yang bermanfaat namun terlewatkan oleh kami, jangan ragu untuk menyarankannya di tempat yang sesuai.
 
-Kami baru saja mencantumkan daftar alat pengembangan melalui [portal pengembang](/developers/).
+Saat ini kami mencantumkan alat pengembang di seluruh [portal pengembang](/developers/) kami.
 
 **Jangan ragu untuk menyarankan penambahan baru ke halaman yang sesuai.**
 
 ## Bagaimana kami memutuskan {#ways-to-contribute}
 
-Pendaftaran alat pengembangan akan dinilai dengan kriteria sebagai berikut:
+Pengajuan alat pengembang akan dinilai berdasarkan kriteria berikut:
 
-**Apakah ini mempunyai arti yang berbeda dengan perangkat yang telah terdaftar?**
+**Apakah alat ini memiliki perbedaan yang berarti dari alat yang sudah dicantumkan?**
 
-- Kategori baru atau jenis perangkat
-- Fitur baru dibandingkan dengan alat yang sejenis
-- Ditargetkan pada kasus penggunaan khusus yang tidak tercakup oleh perangkat serupa yang telah ada
+- Kategori atau jenis alat baru
+- Fitur baru dibandingkan dengan alat serupa yang sudah ada
+- Ditargetkan pada kasus penggunaan berbeda yang belum tercakup oleh alat serupa yang sudah ada
 
-**Apakah peralatannya didokumentasikan dengan baik?**
+**Apakah alat ini didokumentasikan dengan baik?**
 
-- Apakah terdapat dokumentasi?
-- Apakah cukup untuk menggunakan peralatannya?
-- Sudahkah diperbarui baru-baru ini?
+- Apakah dokumentasinya tersedia?
+- Apakah dokumentasi tersebut cukup untuk menggunakan alat ini?
+- Apakah dokumentasi tersebut baru-baru ini diperbarui?
 
-**Apakah peralatannya digunakan secara luas?**
+**Apakah alat ini digunakan secara luas?**
 
-- Kita akan mempertimbangkan metriks seperti bintang GitHub, statistik unduhan, dan apakah itu digunakan oleh perusahaan atau proyek yang dikenal
+- Kami akan mempertimbangkan metrik seperti bintang GitHub, statistik unduhan, dan apakah alat ini digunakan oleh perusahaan atau proyek yang dikenal
 
-**Apakah kualitas peralatannya cukup?**
+**Apakah alat ini memiliki kualitas yang memadai?**
 
-- Apakah terdapat bug yang kembali muncul?
-- Apakah peralatannya dapat diandalkan?
-- Apakah peralatannya secara aktif diurus?
+- Apakah ada bug yang berulang?
+- Apakah alat ini dapat diandalkan?
+- Apakah alat ini dipelihara secara aktif?
 
-**Apakah peralatannya merupakan sumber terbuka?**
+**Apakah alat ini sumber terbuka?**
 
-Banyak proyek di ruangan Ethereum merupakan sumber terbuka. Kita akan lebih mungkin merinci proyek sumber terbuka yang memungkinkan pengembang komunitas untuk memeriksa kode dan berkontribusi dalamnya.
-
----
-
-## Pengurutan Produk {#product-ordering}
-
-Kecuali jika produk secara khusus diurutkan, seperti menurut abjad, produk akan ditampilkan dari yang paling sedikit hingga yang paling baru ditambahkan ke halaman. Dengan kata lain, produk terbaru ditambahkan ke bagian bawah daftar.
+Banyak proyek di ruang Ethereum adalah sumber terbuka. Kami lebih cenderung mencantumkan proyek sumber terbuka yang memungkinkan pengembang komunitas untuk memeriksa kode dan berkontribusi di dalamnya.
 
 ---
 
-## Tambahkan peralatan pengembang Anda {#how-decisions-about-the-site-are-made}
+## Urutan Produk {#product-ordering}
 
-Jika Anda ingin menambahkan peralatan pengembang ke ethereum.org dan itu memenuhi kriteria, buatlah suatu isu di GitHub.
+Kecuali jika produk diurutkan secara khusus, seperti berdasarkan abjad, produk akan ditampilkan dari yang paling lama hingga yang paling baru ditambahkan ke halaman. Dengan kata lain, produk terbaru akan ditambahkan ke bagian bawah daftar.
+
+---
+
+## Tambahkan alat pengembang Anda {#how-decisions-about-the-site-are-made}
+
+Jika Anda ingin menambahkan alat pengembang ke ethereum.org dan alat tersebut memenuhi kriteria, buatlah sebuah isu di GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   Buat isu

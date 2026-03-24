@@ -40,19 +40,38 @@
 | 29 | Broken markdown link: `}` instead of `]` | pt-br #17122 | `[Mais em staking withdrawals}(/staking/withdrawals/)` -- Crowdin replaces closing `]` with `}`, breaking the link | High -- breaks navigation |
 | 30 | TNF ticker transposition for NFT | pt-br #17122 | `TNF` instead of `NFT` -- 37 occurrences across pt-br files; pt-br uses `NFT` (356 occurrences) confirming TNF is a Crowdin error | Medium -- wrong acronym |
 | 31 | Translated inline code content with orphaned backticks | pt-br #17122 | EN: `` pass `wallet`, the compiled `` -> PT: `passar a carteira \`, o arquivo` -- Crowdin translates content inside backticks, breaking the code span and leaving orphaned backticks | High -- broken inline code, stray backtick in prose |
+| 32 | False-positive "Exposed MDX tag" for PascalCase components | PR #17702 | `<DocLink href="...">` flagged as exposed tag -- 384 false warnings across 72 files; DocLink is registered MDX component in MdComponents | Low -- false warning, no build impact |
+| 33 | LLM artifact tokens exposed in MDX | PR #17730 (mr) | `कृ<bos>ितपणे` -- `<bos>` (beginning-of-sequence) token from machine translation leaks into prose; MDX parser treats it as unrecognized JSX component; other tokens: `<eos>`, `<s>`, `</s>`, `<pad>`, `<unk>`, `<mask>` | Critical -- breaks MDX compilation |
+| 34 | Smart/curly quotes in JSX attribute values | PR #17770 (cs,de,pl,zh) | `<YouTube id=\u201Du8XvkTrjITs\u201D />` -- Crowdin or LLM replaces straight `"` with smart quotes (U+201C/U+201D/U+201E) inside JSX component attribute values; MDX parser expects `"` or `'` to delimit attributes | Critical -- breaks MDX compilation |
+| 35 | Crowdin boilerplate injected mid-paragraph | ar #17105 | `...مشفّر. نشكرك على مشاركتك في برنامج الترجمة ethereum.org. أبسط معاملة...` -- Crowdin thank-you message injected between sentences in transactions/index.md; legitimate as standalone line in translation-program pages | Medium -- garbled content |
+| 36 | Duplicated tag values (concatenated with self) | ar #17105 | `"ERC-721ERC-721"` in frontmatter tags and JSON glossary -- Crowdin concatenates the tag value with itself; found in 5 files (3 MD + 2 JSON) | Medium -- wrong tag value |
+| 37 | Brand name garbled as Arabic transliteration "يجتبه" | ar #17105 | `[يجتبه](https://github.com/...)` -- "GitHub" consistently garbled across 15 files, 82 occurrences; appears to be Crowdin TM artifact | High -- wrong brand name, user-visible |
+| 38 | Brand name "Solidity" literally translated as "الصلابة" | ar #17105 | `tags: ["الصلابة", "Waffle"]` -- programming language name translated as its literal meaning "hardness"; found in 3 Waffle tutorial files | Medium -- wrong brand name in tags |
+| 39 | Abbreviation stripped from parentheses in frontmatter | ar #17105 | `title: "الأصول الحقيقية ()"` -- English has `(RWA)` but Crowdin strips the Latin abbreviation leaving empty parens; also found for `(PoA)` | Medium -- missing abbreviation |
+| 40 | Base digit merged into `<sup>` exponent tag | ar #17105 | EN: `2<sup>256</sup>` -> AR: `<sup>2256</sup>` -- Crowdin absorbs the base number into the superscript, making exponent unreadable. Detectable by comparing `<sup>` contents against English. | High -- wrong math rendering |
+| 41 | Missing opening `<sup>` on footnote links | ar #17105 | EN: `<sup>[fn3](#notes)</sup>` -> AR: `[fn3](#notes)</sup>` -- Crowdin drops the opening `<sup>` tag, leaving an orphaned `</sup>`. Detectable by finding `</sup>` without matching `<sup>`. | High -- broken markup |
+| 42 | Split bold with escaped closing markers | ar #17105 | EN: `**full paragraph bold.**` -> AR: `**first sentence.** rest of text.\*\*` -- Crowdin splits a bold block by closing `**` mid-paragraph, then appends escaped `\*\*` at the end. The escaped markers render as literal asterisks. Fix: compare bold spans against English; detect `\*\*` preceded by an earlier premature `**` close. | High -- broken formatting, visible asterisks |
+| 43 | Crowdin numbered tag placeholders exposed | ar #17105 | EN: `<strong>text</strong>` -> AR: `</0>text&lt;0>` or `</0>text<0>` -- Crowdin replaces HTML tags with numbered placeholders `<0>`, `<1>` etc. during translation, but fails to restore them. Tags are inverted (closer first) and/or HTML-escaped. Fix: map `<N>`/`</N>` back to actual tags by comparing against English source. | Critical -- breaks MDX |
+| 44 | Known wrong Arabic compound terms for "state" | ar #17105 | "قنوات الدولة" (nation-state channels) for "state channels", "بيانات الدولة" (nation-state data) for "state data", "انعدام الجنسية" (statelessness as nationality) for "statelessness". 32+ occurrences across 4+ files. Fix: map of known wrong compounds -> correct ones. | High -- wrong meaning |
+| 45 | "Ether" translated as "الإيثار" (altruism) | ar #17105 | Crowdin/MT translates "ether" as "الإيثار" (altruism, a real Arabic word) instead of "الإيثر" (transliteration). Same class as brand garble corrections. | Medium -- wrong term |
+| 46 | `normalizeBlockHtmlLines` splits single-line `<div>content</div>` | id i18n/id-03-23T2228 | EN: `<div>text</div>` (one line) -> sanitizer splits to `<div>text\n</div>` (two lines) -- `normalizeBlockHtmlLines` unconditionally splits closing block HTML tags to their own line, even when the opening tag is on the same line (inline usage). MDX treats the split content as a paragraph and fails: "Expected a closing tag for `<div>` before the end of `paragraph`". Found in 6 files across 5 languages (id, tr, pt-br, ja, es). | Critical -- breaks MDX compilation |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
 These patterns are covered by existing fix functions and should have regression tests:
 
-- **Duplicated headings** (`fixDuplicatedHeadings`) — `## Text? Text? {#id}`
-- **Broken markdown links** (`fixBrokenMarkdownLinks`) — `] (url)` space
-- **Escaped bold/italic** (`fixEscapedBoldAndItalic`) — `\*\*text\*\*`; uses lookbehind to skip `\*` used as multiplication (e.g., `operand\*operand`)
-- **ASCII guillemets** (`fixAsciiGuillemets`) — `<<text>>`
-- **Ticker transpositions** (`fixTickerTranspositions`) — `EHT` → `ETH`, `TNF` → `NFT`, `TNFs` → `NFTs`; uses alphanumeric-only boundaries to match adjacent to markdown `_`
-- **MDX angle brackets** (`escapeMdxAngleBrackets`) — `<5GB`
-- **Orphaned closing tags** (`removeOrphanedClosingTags`) — trailing `</a>`
+- **Duplicated headings** (`fixDuplicatedHeadings`) -- `## Text? Text? {#id}`
+- **Broken markdown links** (`fixBrokenMarkdownLinks`) -- `] (url)` space
+- **Escaped bold/italic** (`fixEscapedBoldAndItalic`) -- `\*\*text\*\*`; uses lookbehind to skip `\*` used as multiplication (e.g., `operand\*operand`)
+- **ASCII guillemets** (`fixAsciiGuillemets`) -- `<<text>>`
+- **Ticker transpositions** (`fixTickerTranspositions`) -- `EHT` -> `ETH`, `TNF` -> `NFT`, `TNFs` -> `NFTs`; uses alphanumeric-only boundaries to match adjacent to markdown `_`
+- **MDX angle brackets** (`escapeMdxAngleBrackets`) -- `<5GB`
+- **Orphaned closing tags** (`removeOrphanedClosingTags`) -- trailing `</a>`
 - **Block component line breaks** (`fixBlockComponentLineBreaks`)
+- **Brand capitalization** (`fixBrandCapitalization`) -- `Github` -> `GitHub`, `Metamask` -> `MetaMask`; skips URLs (github.com etc.) and code blocks. Added in uk PR #17472 review.
+- **Guillemet false positive on short words** (`fixGuillemetsInHtmlTags` bugfix) -- Previously converted guillemet-quoted words like `<<cat>>` to `<cat>` because `^[a-z]{1,4}$` was too broad. Fixed to use HTML tag whitelist. Found in uk PR #17472 (RLP file).
+- **Multi-line YAML brand tags** (`fixBrandTags` bugfix) -- Tags regex `[^\]]*` didn't match newlines in multi-line YAML arrays. Fixed to `[\s\S]*?`. Found in uk PR #17472 (wagmi tutorial).
+- **Brand tag list expanded** -- Added React, Vite, Wagmi, Noir to `PROTECTED_BRAND_NAMES`. Found missing during uk PR #17472 when "react" -> "react/respond" semantic mistranslation in tags wasn't caught.
 - **Frontmatter date normalization** (`normalizeFrontmatterDates`)
 - **Frontmatter non-ASCII quoting** (`quoteFrontmatterNonAscii`)
 - **Header ID sync** (`syncHeaderIdsWithEnglish`)
@@ -71,13 +90,15 @@ These patterns are covered by existing fix functions and should have regression 
 - **Missing link parentheses** (`fixMissingLinkParentheses`) — `[text]https://url` → `[text](https://url)` (ko PR #17166)
 - **Missing closing `</em>`** (`fixMissingClosingEmTag`) — `<em>text.</li>` → `<em>text.</em></li>` (ko PR #17166)
 - **Image path `./` corruption** (`fixImagePathDotSlash`) — `](/.file.png)` → `](./file.png)` (ko PR #17166)
-- **Exposed MDX tags warning** (`warnExposedMdxTags`) — bare `<tag>` or `</>` outside backticks (ko PR #17166)
+- **Exposed MDX tags warning** (`warnExposedMdxTags`) — bare `<tag>` or `</>` outside backticks (ko PR #17166); PascalCase tags (`<DocLink>`, etc.) are automatically treated as safe MDX components and skipped (PR #17702)
 - **Inner quotes in JSX attributes** (`fixInnerQuotesInJsxAttributes`) — `title="text: "inner""` → `title="text: &quot;inner&quot;"` (ko PR #17166)
 - **Orphan tag idempotency** (`removeOrphanedClosingTags`) — fenced-only split + inline-stripped counting prevents false orphan detection when `<em>` spans inline code (ko PR #17166)
 - **Tilde strikethrough escape** (`escapeTildeStrikethrough`) — `100만~200만` → `100만\~200만` prevents remark-gfm `<del>` (ko PR #17166)
 - **Bold adjacent non-Latin** (`fixBoldAdjacentNonLatin`) — `**text**가` → `<strong>text</strong>가` converts ONLY non-Latin-adjacent cases to HTML tags; uses lookbehind to prevent cross-boundary matching (ko PR #17166)
 - **Italic adjacent non-Latin** (`fixItalicAdjacentNonLatin`) — `*text*가` / `_text_가` → `<em>text</em>가` mirrors bold fix for single `*` and `_` italic syntax (ko PR #17166)
 - **Translated inline code warning** (`warnTranslatedInlineCode`) — warns when inline code span count drops significantly OR when orphaned backticks are detected on a line; signals Crowdin translated content inside backticks (pt-br PR #17122)
+- **LLM artifact token stripping** (`stripLlmArtifactTokens`) — strips `<bos>`, `<eos>`, `<s>`, `</s>`, `<pad>`, `<unk>`, `<mask>` tokens from prose; these leak from machine translation pipelines and break MDX compilation (mr PR #17730)
+- **Block HTML inline usage preserved** (`normalizeBlockHtmlLines`) — no longer splits `<div>content</div>` when both tags are on the same line; only splits multi-line block closing tags to their own line. Fixes MDX "Expected a closing tag before end of paragraph" error (id i18n/id-03-23T2228, pattern #46)
 
 ## Recommendations for Future Sanitizer Iteration
 

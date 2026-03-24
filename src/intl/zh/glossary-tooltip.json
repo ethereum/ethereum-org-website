@@ -139,6 +139,8 @@
   "staking-definition": "存入一定数量的<a href=\"/glossary/#ether\">以太币</a>（你的质押）来成为一名验证者并保护<a href=\"/glossary/#network\">网络</a>。验证者在<a href=\"/glossary/#pos\">权益证明</a>的共识模型下检查<a href=\"/glossary/#transaction\">交易</a>并提议<a href=\"/glossary/#block\">区块</a>。质押能够为符合网络最佳利益的行为提供经济上的激励。你会在履行<a href=\"/glossary/#validator\">验证者</a>责任时获得奖励，反之则会损失不同数量的以太币。<a href=\"/staking/\">了解有关以太坊质押的更多信息</a>。",
   "staking-pool-term": "质押池",
   "staking-pool-definition": "联合多个以太坊质押者的以太币，用于达到激活一组验证者密钥所需的 32 个以太币。节点运营商使用这些密钥参与共识，<a href=\"/glossary/#block-reward\">区块奖励</a>会被分配给参与贡献的质押者。质押池或委托质押不是以太坊协议原生的，但社区已经构建了很多解决方案。<a href=\"/staking/pools/\">了解有关联合质押的更多信息</a>。",
+  "state-term": "状态",
+  "state-definition": "区块链上特定时间点的所有余额和数据的快照，通常指特定区块的状况。",
   "sybil-attack-term": "女巫攻击",
   "sybil-attack-definition": "女巫攻击是指个人欺骗系统，使系统认为他们是多人以增加他们的影响力。",
   "terminal-total-difficulty-term": "终端总难度 (TTD)",

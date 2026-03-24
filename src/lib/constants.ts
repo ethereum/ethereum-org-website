@@ -24,13 +24,12 @@ export const LOCALES_CODES = BUILD_LOCALES
   ? BUILD_LOCALES.split(",")
   : i18nConfig.map(({ code }) => code)
 
-// Site urls - auto-detect from Netlify deploy context
+// Site URL - resolved at build time in next.config.js from Netlify deploy context
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  process.env.DEPLOY_PRIME_URL || // Branch/PR deploys
-  process.env.DEPLOY_URL || // Unique deploy URL
-  process.env.URL || // Primary site URL
-  "https://ethereum.org"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
+
+export const IS_PRODUCTION_DEPLOY =
+  process.env.NEXT_PUBLIC_CONTEXT === "production"
 export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
 export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
 export const GITHUB_REPO_URL =

@@ -14,7 +14,7 @@ import docLinks from "@/data/developer-docs-links.yaml"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 const TextDiv = ({ children, className, ...props }) => (
   <div

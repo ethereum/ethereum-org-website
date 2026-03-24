@@ -52,21 +52,21 @@ jobs:
         github.event_name == 'issue_comment' &&
         contains(github.event.comment.body, '@claude') &&
         contains(github.event.comment.body, '/review-translations') &&
-        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja"]'), github.event.comment.user.login) &&
+        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja","mnelsonBT","lukassim"]'), github.event.comment.user.login) &&
         github.event.issue.pull_request
       ) ||
       (
         github.event_name == 'pull_request_review_comment' &&
         contains(github.event.comment.body, '@claude') &&
         contains(github.event.comment.body, '/review-translations') &&
-        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja"]'), github.event.comment.user.login)
+        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja","mnelsonBT","lukassim"]'), github.event.comment.user.login)
       ) ||
       (
         github.event_name == 'pull_request' &&
         startsWith(github.event.pull_request.title, 'i18n:') &&
         startsWith(github.event.pull_request.head.ref, 'i18n/') &&
         github.event.pull_request.head.repo.full_name == github.repository &&
-        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja"]'), github.event.pull_request.user.login)
+        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja","mnelsonBT","lukassim"]'), github.event.pull_request.user.login)
       )
     runs-on: ubuntu-latest
     permissions:

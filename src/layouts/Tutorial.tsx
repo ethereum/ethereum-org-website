@@ -87,9 +87,12 @@ export const tutorialsComponents = {
 type TutorialLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,
-    "tocItems" | "contributors" | "contentNotTranslated" | "slug"
-  > &
-  Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> & {
+    | "tocItems"
+    | "contributors"
+    | "contentNotTranslated"
+    | "slug"
+    | "lastEditLocaleTimestamp"
+  > & {
     frontmatter: TutorialFrontmatter
     timeToRead: number
   }

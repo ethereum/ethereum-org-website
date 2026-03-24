@@ -1,70 +1,102 @@
 ---
-title: "Jeux en chaîne"
+title: Jeux sur Ethereum
 lang: fr
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: "Les règles et l'état du jeu peuvent être appliqués par la blockchain, et non par les serveurs d'un studio"
-summaryPoint2: "N'importe qui peut créer des mods, des bots ou des jeux entièrement nouveaux qui se connectent aux mêmes données en chaîne"
-summaryPoint3: "Les L2 spécialisées, comme Redstone, et les frameworks, comme MUD, réduisent suffisamment les coûts pour permettre un gameplay en temps réel"
+summaryPoint1: "Les règles du jeu et l'état peuvent être appliqués par la blockchain Ethereum, et non par les serveurs d'un studio, ce qui représente un avantage clé des jeux sur chaîne"
+summaryPoint2: "N'importe qui peut créer des mods, des bots ou des jeux entièrement nouveaux qui se branchent sur les mêmes données ouvertes sur chaîne"
+summaryPoint3: "Les L2 spécialement conçus permettent un jeu en temps réel avec des frais moins élevés, tandis que les cadres de développement de jeux rendent la création de jeux sur chaîne plus accessible que jamais"
 buttons:
   - content: En savoir plus
-    toId: how-gaming-on-ethereum-works
-  - content: Découvrir les Apps
-    toId: popular-games-built-on-ethereum
+    toId: gaming-on-ethereum
+  - content: Explorer les jeux
+    toId: games
     isSecondary: false
 ---
 
-## Comment fonctionnent les jeux sur Ethereum {#how-gaming-on-ethereum-works}
+## Jeux sur Ethereum {#gaming-on-ethereum}
 
-Les jeux sur Ethereum se présentent sous diverses formes, allant des jeux qui intègrent la blockchain pour des fonctionnalités spécifiques à ceux où l'univers entier du jeu réside en chaîne. De nombreux jeux utilisent Ethereum pour gérer les actifs du jeu en tant que NFT (jetons non fongibles). Cela permet aux joueurs de posséder réellement des objets numériques uniques, qui peuvent être librement échangés, vendus ou offerts en dehors des limites de l'écosystème d'un unique développeur de jeux. Bien que ces actifs offrent de nouvelles formes d'action pour les joueurs, la logique de base du jeu reste souvent sur des serveurs centralisés.
+Les jeux sur Ethereum se présentent sous diverses formes, des jeux qui utilisent la blockchain pour des fonctionnalités spécifiques à ceux où l'ensemble du monde du jeu vit sur chaîne. La blockchain Ethereum peut être utilisée avec les jeux à divers titres. Les jeux peuvent stocker leurs monnaies sous forme de jetons transférables ou d'autres actifs en jeu (personnages, équipements, animaux de compagnie, etc.) sous la forme de [NFT (jetons non fongibles)](/nft/). Les jeux peuvent également utiliser des contrats intelligents pour héberger leur logique, leurs règles et leur état sur chaîne. Ces jeux sont communément appelés « jeux entièrement sur chaîne ».
 
-Les jeux entièrement en chaîne sont des jeux où les mécanismes fondamentaux, et souvent l'univers entier du jeu, sont directement régis par des contrats intelligents sur la blockchain Ethereum (ou ses couches 2). Cela garantit une transparence inégalée. Pas de serveurs centraux, pas d'intermédiaires — uniquement des expériences et des économies transparentes, pilotées par les joueurs.
+L'écosystème Ethereum comprend également des [blockchains de couche 2 (L2)](/layer-2/learn/) qui héritent des garanties de sécurité du réseau principal Ethereum tout en étendant l'échelle d'Ethereum et en prenant en charge des cas d'utilisation spécialisés. Les réseaux L2 peuvent offrir des avantages supplémentaires pour les jeux sur chaîne et leurs communautés, car les L2 peuvent offrir des temps de confirmation plus rapides, un volume de traitement plus élevé et des frais moins élevés, ce qui rend le jeu plus rapide et plus accessible.
 
-- Les joueurs possèdent leurs actifs en tant que NFT.
-- Les objets peuvent être librement échangés, offerts ou vendus.
-- La blockchain garantit que les actifs restent accessibles pour toujours.
+## Aperçu de l'écosystème de jeu d'Ethereum {#ethereums-gaming-ecosystem-overview}
 
-## L'état actuel du jeu vidéo {#the-current-state-of-gaming}
+- **Couches 2 :** Avec des frais moins chers et des temps de transaction courts, les L2 sont devenus un endroit courant pour lancer des jeux. Les principales couches 2 avec des jeux incluent : Starknet, Immutable, Base et Abstract.
+- **Infrastructure :** Pour faciliter le développement de jeux sur chaîne, il existe un certain nombre de piles d'outils qui peuvent être utilisées avec votre propre projet, notamment : Cartridge, Dojo, Proof of Play et Thirdweb.
+- **Guildes de jeu :** Les joueurs qui souhaitent faire partie d'une communauté de joueurs peuvent rejoindre des guildes de jeu pour élaborer des stratégies et collaborer avec d'autres joueurs de la guilde. Les guildes notables incluent : YGG, WASD, LegacyGG, Gaming Grid, OLAGG, et plus encore.
+- **Jeux :** Les jeux Ethereum se présentent sous différentes formes et tailles, allant de la stratégie en temps réel de _Realms: Eternum_, au MMO d'_Axie: Atia's Legacy_, en passant par le RPG d'action de _Fableborn_ et même des plateformes DeFi ludiques comme _Ponziland_. Avec de nouveaux jeux lancés régulièrement sur différentes chaînes, il y a toujours quelque chose de nouveau à explorer.
 
-- **Arrêts fréquents de jeux :** Rien qu'en 2023, [plus de 60 jeux ont été arrêtés](https://tech4gamers.com/game-studios-shut-down-2023/), et 11 studios de jeux ont complètement fermé, ne laissant aux joueurs rien en retour de leurs investissements dans le jeu. Les jeux en chaîne, avec leur logique et leurs actifs sur un réseau décentralisé, peuvent perdurer aussi longtemps que la blockchain existe, offrant un plus haut degré de permanence.
-- **Frustration liée aux actifs verrouillés :** [51 % des joueurs se sentent frustrés](https://www.starknet.io/blog/blockchain-gaming/) de ne pas pouvoir offrir ou revendre les objets qu'ils achètent dans le jeu, et 23 % sont agacés par la difficulté à récupérer l'argent des achats effectués dans le jeu. Les joueurs investissent beaucoup de temps et d'argent pour acquérir des objets dans le jeu, pour finalement découvrir qu'ils ne les possèdent pas vraiment. Le standard NFT d'Ethereum fournit une propriété numérique vérifiable, garantissant que les joueurs contrôlent leurs actifs.
-- **Dépenses élevées sans retour sur investissement :** [Les joueurs dépensent en moyenne 6 425 \$](https://www.starknet.io/blog/blockchain-gaming/) pour des objets virtuels au cours de leur vie, avec 8,74 \$ dépensés par mois ou 104 \$ par an. La propriété en chaîne transforme ces dépenses, qui ne sont plus à fonds perdus, en un investissement dans un actif numérique qui peut être vendu, échangé ou offert, tout comme un objet de collection physique.
+## Jeux à essayer {#games}
 
-## Jeux populaires développés sur Ethereum {#popular-games-built-on-ethereum}
+<CategoryAppsGrid category="gaming" />
 
-Les développeurs explorent de nouvelles façons de rendre les jeux plus captivants et de dépasser les simples mécanismes de récompense pour approfondir le gameplay basé sur les compétences.
+## Caractéristiques des jeux sur chaîne {#features-of-onchain-games}
 
-<OnchainGamingProductList list="game" />
+1. **Moyen sécurisé d'échanger des biens numériques**
 
-## Play-to-Earn (P2E) {#play-to-earn-p2e}
+   Les actifs en jeu échangeables peuvent être échangés entre les joueurs contre d'autres actifs en jeu ou des jetons sur cette chaîne. Dans le passé, les jeux étaient souvent confrontés au défi de faciliter des échanges équitables entre les joueurs, en particulier pour les objets rares et de grande valeur. Les places de marché tierces et les échanges de pair à pair ont souvent conduit des joueurs à être trompés ou à se faire escroquer leurs biens les plus précieux. Comme les actifs sur chaîne suivent une structure de données établie, ils peuvent être facilement intégrés aux places de marché existantes, ce qui permet aux joueurs d'avoir l'esprit tranquille lorsqu'ils les échangent. Les progrès des AMM permettent également aux joueurs d'échanger instantanément certains objets sans avoir à attendre qu'une contrepartie (acheteur/vendeur) finalise leur échange.
 
-Avec les jeux Play-to-Earn (P2E), vous pouvez gagner des actifs dans le jeu ayant une valeur dans le monde réel. Contrairement aux premiers modèles P2E qui reposaient sur des récompenses non durables, les jeux plus récents se concentrent sur la valeur à long terme. Par exemple, [Wolf Game](https://gam3s.gg/wolf-game/) combine un gameplay stratégique avec une véritable propriété d'actifs numériques. Les joueurs gèrent des moutons et des loups virtuels, gagnant la monnaie du jeu, le WOOL, qui peut être échangé ou vendu.
+2. **Origine transparente des actifs**
 
-<OnchainGamingProductList list="p2e" />
+   Les contrefaçons et les copies d'originaux peuvent être un problème considérable lors de l'évaluation d'objets, surtout si la personne n'est pas très familière avec la façon de distinguer un vrai d'un faux. Les actifs sur chaîne ont toujours un historique complet de qui (quel portefeuille) les a possédés et leur adresse d'origine. Même s'il existe une copie parfaite de l'objet sur chaîne, elle se distingue clairement de l'original en fonction de son contrat intelligent d'origine, ce qui atténue le risque de fraude.
 
-## Interopérabilité et jeu inter-chaînes {#interoperability-and-cross-chain-play}
+3. **Logique transparente**
 
-L'une des fonctionnalités les plus puissantes d'Ethereum pour les jeux est sa prise en charge native de l'interopérabilité et de la composabilité. Les jeux traditionnels fonctionnent dans des « jardins clos », verrouillant les actifs et la progression du jeu à un seul titre. Les actifs du jeu, et même la logique de base du jeu, développés sur Ethereum, peuvent potentiellement interagir entre différentes applications et chaînes, sans sacrifier la sécurité. Bien qu'il s'agisse encore d'un écosystème en développement, certains réseaux de jeux basés sur Ethereum sont déjà interopérables et permettent d'utiliser des objets du jeu (NFT) dans plusieurs jeux.
+   Les jeux entièrement sur chaîne utilisent des contrats intelligents pour leur fonctionnalité. Cela signifie que n'importe qui peut examiner et vérifier la logique du jeu, en s'assurant qu'elle fonctionne comme les développeurs l'ont prévu. Cette transparence de la logique permet également à d'autres développeurs de créer de nouveaux contrats intelligents qui peuvent étendre le jeu ou être intégrés à certaines de ses fonctionnalités.
 
-Par exemple, dans Illuvium, [les joueurs peuvent collectionner des créatures appelées Illuvials](https://gam3s.gg/news/illuvium-three-web3-games/), qui sont des NFT. Ces Illuvials peuvent être utilisés dans divers jeux au sein de l'univers Illuvium. Un Illuvial capturé dans Illuvium Overworld peut également être utilisé dans Illuvium Arena pour les combats.
+4. **Succès prouvables**
 
-Galaxy Fight Club en est un autre exemple. Dans ce jeu, [les joueurs peuvent utiliser différentes collections de NFT](https://gam3s.gg/galaxy-fight-club/) pour participer à des combats, ce qui signifie que des NFT de divers projets peuvent être utilisés dans le jeu.
+   Dans les jeux entièrement sur chaîne, chaque action du joueur est enregistrée sur la blockchain. Il est ainsi très facile de vérifier si un joueur a effectué les actions requises pour une certaine étape/un certain succès. En raison de la nature immuable des blockchains, ces enregistrements de succès resteront intacts tant que la chaîne continuera de fonctionner, et pourront être vérifiés par n'importe quelle partie (pas seulement les développeurs, comme c'est le cas dans les jeux traditionnels).
 
-## Évolutivité et améliorations des frais de gaz {#scalability-and-gas-fee-improvements}
+5. **Jeux éternels**
 
-Une vieille critique des jeux en chaîne était que les blockchains sont trop complexes et lentes pour offrir aux joueurs l'expérience qu'ils attendent. Mais à mesure qu'Ethereum a mûri, des solutions pour réduire considérablement le coût et améliorer les performances des jeux en chaîne ont émergé, rendant viables les expériences interactives et rapides.
+   Les joueurs investissent beaucoup de temps et d'efforts pour construire leur réputation et leurs personnages dans le jeu, mais ces progrès peuvent être facilement perdus si les développeurs décident de fermer les serveurs (surtout s'il s'agit d'un jeu en ligne). Étant donné que les jeux entièrement sur chaîne stockent leur logique et leur état sur chaîne, les joueurs peuvent toujours interagir avec les contrats intelligents du jeu, même si le développeur principal du jeu cesse le développement. De tels jeux peuvent toujours être joués et continuer à recevoir des mises à jour de leurs communautés car leur logique fonctionne toujours sur la blockchain.
 
-Ces avancées sont principalement réalisées grâce à :
+## Comment les jeux intègrent les blockchains {#how-games-integrate-blockchains}
 
-- **Transactions sans gaz :** Certaines plateformes et protocoles, y compris ceux qui s'appuient sur Immutable X, offrent la possibilité d'effectuer des transactions comme l'échange ou la frappe de NFT sans frais pour l'utilisateur, rationalisant davantage l'expérience du joueur.
-- **Solutions de mise à l'échelle :** Les L2 d'Ethereum comme Arbitrum, zkSync et Starknet favorisent activement les écosystèmes pour les jeux en chaîne en raison de leur débit élevé et de leurs faibles coûts.
-- **[Écosystème MUD](https://mud.dev/) :** MUD optimise les boîtes à outils de développement d'applications basées sur Ethereum pour le développement de jeux en chaîne, fournissant une gestion d'état plus efficace pour une logique de jeu complexe.
+Les développeurs de jeux peuvent décider d'intégrer différentes fonctionnalités d'Ethereum dans leurs jeux. Le simple fait que les fonctionnalités existent ne signifie pas que tous les jeux construits sur Ethereum doivent toutes les utiliser, car il existe des solutions alternatives (avec leurs propres avantages et inconvénients) que les développeurs peuvent utiliser à la place.
 
-## Débuter avec les jeux Ethereum {#get-started-with-ethereum-gaming}
+### Connexion avec Ethereum {#sign-in-with-ethereum}
 
-Se lancer dans les jeux sur Ethereum est plus facile que vous ne le pensez. En quelques étapes seulement, vous pouvez commencer à jouer et à profiter de votre progression :
+Les joueurs peuvent utiliser leurs comptes sur chaîne pour se connecter au jeu. Cela se fait généralement en signant une transaction avec le portefeuille web3 d'un joueur. Les joueurs peuvent alors détenir leurs actifs en jeu et conserver leur réputation de joueur dans un seul compte, sur tous les jeux auxquels ils se connectent en utilisant le même portefeuille. L'[EVM](/developers/docs/evm/) d'Ethereum est une norme couramment utilisée sur de nombreuses blockchains, de sorte qu'un joueur peut souvent utiliser le même compte pour se connecter à des jeux sur n'importe quelle blockchain compatible EVM prise en charge par le portefeuille (remarque : certains portefeuilles web3 nécessitent une importation RPC manuelle, en particulier pour les blockchains plus récentes, avant de pouvoir être utilisés pour faire quoi que ce soit sur cette chaîne).
 
-1. **Configurez un portefeuille de cryptomonnaies :** Vous aurez besoin d'un portefeuille pour gérer vos actifs numériques et interagir avec des applications décentralisées. [Choisir un portefeuille](/wallets/find-wallet/)
-2. **Alimentez votre portefeuille :** Acquérez des Ethers (ETH) ou des jetons pertinents pour le réseau de couche 2 que vous prévoyez d'utiliser.
-3. **Explorez les jeux :** Découvrez des jeux sur des plateformes comme [Orden](https://orden.gg/), [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games), [OpenSea](https://opensea.io/) et [PlayToEarn.net](https://playtoearn.com/blockchaingames).
+### Jetons fongibles {#fungible-tokens}
+
+Tout comme l'Ether, les ressources et les monnaies fongibles en jeu peuvent être stockées sur chaîne sous forme de jetons fongibles. Les jetons peuvent ensuite être envoyés entre les adresses et utilisés dans des contrats intelligents, permettant aux joueurs d'échanger ou d'offrir des ressources et des monnaies en jeu sur des marchés ouverts.
+
+### Jetons non fongibles {#non-fungible-tokens}
+
+Les jetons non fongibles (NFT) peuvent représenter des éléments de jeu uniques, tels que des personnages, des objets, des terrains ou même des états de sauvegarde. Avec des métadonnées dynamiques, les NFT peuvent évoluer en réponse aux événements du jeu, permettant aux actifs de conserver leur histoire au fil du temps. Par exemple, les NFT de bête dans Loot Survivor enregistrent en permanence lorsqu'un joueur spécifique bat une créature unique, intégrant ce résultat dans l'actif NFT lui-même. Ce type de conception s'oriente vers des jeux où les actifs sont persistants, avec état, et potentiellement utilisables à travers de multiples expériences sur chaîne, plutôt que de simples objets de collection statiques.
+
+### Contrats intelligents {#smart-contracts}
+
+Les jeux entièrement sur chaîne utilisent des contrats intelligents pour créer une logique de jeu transparente et immuable. Dans de tels cas, la blockchain sert de backend au jeu, remplaçant la nécessité d'héberger sa logique et son stockage de données sur un serveur centralisé. (Remarque : tous les jeux web3 ne sont pas des jeux entièrement sur chaîne. Comme mentionné précédemment, cela dépend au cas par cas de la quantité de données et de logique du jeu qui est stockée sur chaîne, par rapport à une autre couche de disponibilité des données ou à un serveur classique.)
+
+## Évolution des améliorations de l'expérience utilisateur des joueurs {#evolution-of-player-ux-improvements}
+
+### Interopérabilité et jeu inter-chaînes {#interoperability-and-cross-chain-play}
+
+Les progrès en matière d'interactions inter-chaînes et de ponts permettent aux joueurs d'accéder aux jeux sur Ethereum de manière plus transparente que jamais. Les jeux peuvent être déployés sur plusieurs blockchains, et les actifs sur chaîne d'un jeu peuvent être intégrés par un autre jeu. Dans le passé, les joueurs devaient généralement ponter leurs fonds vers une autre chaîne avant de pouvoir les utiliser dans le jeu. Aujourd'hui, les jeux intègrent couramment des ponts de jetons vers d'autres chaînes pour faciliter l'intégration des joueurs.
+
+### Améliorations de la mise à l'échelle et des frais de gaz {#scalability-and-gas-fee-improvements}
+
+En 2017, l'engouement autour des CryptoKitties a considérablement augmenté les frais de gaz pour tous les utilisateurs effectuant des transactions sur Ethereum. Depuis lors, de nombreuses propositions d'amélioration d'Ethereum ont été déployées avec succès dans les mises à niveau du réseau, augmentant la bande passante du réseau principal d'Ethereum et réduisant considérablement les frais de transaction moyens. Les couches 2 élargissent encore le débit disponible, réduisant les frais de transaction à quelques centimes, voire moins. Des frais moins élevés et un débit plus élevé ont élargi les cas d'utilisation de jeux qui peuvent être construits sur Ethereum, prenant en charge des actions à grand volume et des microtransactions en jeu qui n'excluent pas les joueurs ordinaires.
+
+### Connexions sociales {#social-logins}
+
+La connexion avec un compte Ethereum sur chaîne, qui peut être utilisé sur toutes les blockchains compatibles EVM, est l'une des méthodes d'authentification les plus courantes. Certaines chaînes non-EVM l'utilisent également comme option pour créer un compte. Cependant, si un nouveau joueur n'a pas de compte Ethereum existant et souhaite créer facilement un compte pour se connecter à un jeu, l'[abstraction de compte](/roadmap/account-abstraction/) lui permet de se connecter avec ses comptes sociaux et de créer un compte Ethereum en arrière-plan.
+
+### Paymaster et clés de session {#paymaster-and-session-keys}
+
+Payer des frais de gaz pour envoyer des transactions sur chaîne ou interagir avec des contrats intelligents peut être un point de friction important pour de nombreux nouveaux joueurs. Les comptes Paymaster peuvent être financés par le joueur ou subventionnés par le jeu. Les clés de session permettent au joueur de rester connecté au jeu pendant toute la durée de sa session, ne lui demandant de signer que le premier message de sa session, les messages suivants étant signés en arrière-plan.
+
+Il existe des philosophies contrastées autour de ces mécanismes. Un exemple de premier plan est le Kamigotchi d'Initia, qui traite le gaz payé par le joueur comme un revenu direct. En revanche, l'écosystème de jeu Realms.World, qui comprend plus de 4 jeux entièrement sur chaîne en direct sur Starknet, adopte l'approche inverse. Tous les jeux de l'écosystème utilisent le Cartridge Paymaster, permettant aux joueurs d'interagir avec les jeux sans frais de gaz. Alors que Kamigotchi intègre les frais de gaz dans la conception économique, les jeux de Realms.World considèrent les coûts de gaz principalement comme un obstacle à l'expérience du joueur.
+
+## Commencez à jouer sur Ethereum {#get-started-with-gaming-on-ethereum}
+
+1. **Trouvez un jeu amusant à jouer** - Parcourez les jeux listés ci-dessus ou explorez des plateformes comme [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) et [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Configurez votre portefeuille crypto** - Vous aurez besoin d'un portefeuille pour gérer vos actifs numériques en jeu et (dans certains cas) pour vous connecter aux jeux. [Choisissez un portefeuille ici](/wallets/find-wallet/)
+3. **Alimentez votre portefeuille** - Acquérez de l'Ether (ETH) ou des jetons pertinents pour le réseau de couche 2 que vous prévoyez d'utiliser
+4. **Jouez** - Commencez à jouer et profitez de la véritable propriété de votre progression dans le jeu

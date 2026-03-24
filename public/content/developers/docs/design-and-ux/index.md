@@ -40,6 +40,7 @@ This is a curated list of user research done in web3 that may help with design a
 
 ## Design for web3 {#design-for-web3}
 
+- [Web3 Design Playbook](https://learnweb3.design/) - A comprehensive collection of frameworks and notes on Web3 UX principles, DeFi patterns, governance design, wallet UX, and protocol-level thinking for designers and founders
 - [Web3 UX Design Handbook](https://web3ux.design/) - Practical guide to designing Web3 apps
 - [Web3 Design Principles](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - A framework of UX rules for blockchain based dapps
 - [Blockchain Design Principles](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - Lessons learned by the blockchain design team at IBM

@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
@@ -75,7 +75,8 @@ const Section = ({
   <section className={cn("w-full px-8 py-4", className)} {...props} />
 )
 
-async function Page({ params }: { params: PageParams }) {
+async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-stablecoins" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
@@ -410,11 +411,9 @@ async function Page({ params }: { params: PageParams }) {
     },
   ]
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "stablecoins",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -756,11 +755,10 @@ async function Page({ params }: { params: PageParams }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-stablecoins" })
