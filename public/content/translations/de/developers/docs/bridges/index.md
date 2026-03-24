@@ -1,6 +1,6 @@
 ---
-title: Kettenübergreifende Brücken
-description: Ein Überblick über das Bridging für Entwickler
+title: "Kettenübergreifende Brücken"
+description: "Ein Überblick über das Bridging für Entwickler"
 lang: de
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Datenprotokollierung von Smart Contracts mit Ereignissen
-description: Eine Einführung in Smart-Contract-Ereignisse und wie Sie diese zur Datenprotokollierung verwenden können
+description: "Eine Einführung in Smart-Contract-Ereignisse und wie Sie diese zur Datenprotokollierung verwenden können"
 author: "jdourlens"
 tags: ["Smart Contracts", "remix", "solidity", "Ereignisse"]
 skill: intermediate

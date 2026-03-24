@@ -1,6 +1,6 @@
 ---
 title: "The Graph: Web3-Datenabfragen reparieren"
-description: Die Blockchain ist wie eine Datenbank, aber ohne SQL. Alle Daten sind vorhanden, aber es gibt keine Möglichkeit, darauf zuzugreifen. Lass mich dir zeigen, wie du das mit The Graph und GraphQL beheben kannst.
+description: "Die Blockchain ist wie eine Datenbank, aber ohne SQL. Alle Daten sind vorhanden, aber es gibt keine Möglichkeit, darauf zuzugreifen. Lass mich dir zeigen, wie du das mit The Graph und GraphQL beheben kannst."
 author: Markus Waas
 lang: de
 tags: ["solidity", "Smart Contracts", "Abfragen", "the graph", "react"]

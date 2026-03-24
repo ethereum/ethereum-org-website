@@ -1,5 +1,5 @@
 ---
-title: Sicherheitsrichtlinien für Smart Contracts
+title: "Sicherheitsrichtlinien für Smart Contracts"
 description: Eine Checkliste mit Sicherheitsrichtlinien, die Sie bei der Entwicklung Ihrer Dapp beachten sollten
 author: "Trailofbits"
 tags: ["solidity", "Smart Contracts", "Sicherheit"]

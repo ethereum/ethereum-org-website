@@ -1,6 +1,6 @@
 ---
-title: ERC-721 Standard für nicht-fungible Token
-description: Erfahren Sie mehr über ERC-721, den Standard für nicht-fungible Token (NFTs), die einzigartige digitale Vermögenswerte auf Ethereum repräsentieren.
+title: "ERC-721 Standard für nicht-fungible Token"
+description: "Erfahren Sie mehr über ERC-721, den Standard für nicht-fungible Token (NFTs), die einzigartige digitale Vermögenswerte auf Ethereum repräsentieren."
 lang: de
 ---
 

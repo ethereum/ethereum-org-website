@@ -1,6 +1,6 @@
 ---
-title: Hello World Smart Contract für Anfänger - Fullstack
-description: Einführungstutorial zum Schreiben und Bereitstellen eines einfachen Smart Contracts auf Ethereum.
+title: "Hello World Smart Contract für Anfänger - Fullstack"
+description: "Einführungstutorial zum Schreiben und Bereitstellen eines einfachen Smart Contracts auf Ethereum."
 author: "nstrike2"
 breadcrumb: Hello World Fullstack
 tags:
@@ -837,8 +837,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

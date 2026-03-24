@@ -1,6 +1,6 @@
 ---
 title: Proof-of-Stake (PoS)
-description: Eine Erklärung des Proof-of-Stake-Konsensprotokolls und seiner Rolle bei Ethereum.
+description: "Eine Erklärung des Proof-of-Stake-Konsensprotokolls und seiner Rolle bei Ethereum."
 lang: de
 ---
 
@@ -43,7 +43,7 @@ Um einen finalisierten Block rückgängig zu machen, müsste ein Angreifer in Ka
 
 Einen Validator zu betreiben, ist eine Verpflichtung. Es wird erwartet, dass der Validator über ausreichende Hardware und Konnektivität verfügt, um an der Block-Validierung und -Vorschlagung teilzunehmen. Im Gegenzug wird der Validator in ETH bezahlt (sein gestaktes Guthaben steigt). Andererseits eröffnet die Teilnahme als Validator auch neue Wege für Benutzer, das Netzwerk aus persönlichem Gewinnstreben oder zur Sabotage anzugreifen. Um dies zu verhindern, entgehen Validatoren ETH-Belohnungen, wenn sie nicht teilnehmen, wenn sie dazu aufgerufen werden, und ihr bestehender Einsatz kann zerstört werden, wenn sie sich unehrlich verhalten. Zwei primäre Verhaltensweisen können als unehrlich angesehen werden: das Vorschlagen mehrerer Blöcke in einem einzigen Slot (Equivocation) und das Einreichen widersprüchlicher Bestätigungen.
 
-Die Menge an ETH, die dem Slashing unterliegt, hängt davon ab, wie viele Validatoren etwa zur gleichen Zeit ebenfalls geslasht werden. Dies ist als ["Korrelationsstrafe"](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty) bekannt und kann geringfügig sein (~1 % Einsatz für einen einzelnen Validator, der alleine geslasht wird) oder dazu führen, dass 100 % des Einsatzes des Validators zerstört werden (Massen-Slashing-Ereignis). Sie wird auf halbem Weg durch eine erzwungene Austrittsperiode verhängt, die mit einer sofortigen Strafe (bis zu 1 ETH) an Tag 1, der Korrelationsstrafe an Tag 18 und schließlich dem Ausschluss aus dem Netzwerk an Tag 36 beginnt. Sie erhalten jeden Tag geringfügige Strafen für fehlende Bestätigungen, weil sie im Netzwerk präsent sind, aber keine Stimmen abgeben. All dies bedeutet, dass ein koordinierter Angriff für den Angreifer sehr kostspielig wäre.
+Die Menge an ETH, die dem Slashing unterliegt, hängt davon ab, wie viele Validatoren etwa zur gleichen Zeit ebenfalls geslasht werden. Dies ist als ["Korrelationsstrafe"](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty) bekannt und kann geringfügig sein (\~1 % Einsatz für einen einzelnen Validator, der alleine geslasht wird) oder dazu führen, dass 100 % des Einsatzes des Validators zerstört werden (Massen-Slashing-Ereignis). Sie wird auf halbem Weg durch eine erzwungene Austrittsperiode verhängt, die mit einer sofortigen Strafe (bis zu 1 ETH) an Tag 1, der Korrelationsstrafe an Tag 18 und schließlich dem Ausschluss aus dem Netzwerk an Tag 36 beginnt. Sie erhalten jeden Tag geringfügige Strafen für fehlende Bestätigungen, weil sie im Netzwerk präsent sind, aber keine Stimmen abgeben. All dies bedeutet, dass ein koordinierter Angriff für den Angreifer sehr kostspielig wäre.
 
 ## Fork-Choice {#fork-choice}
 

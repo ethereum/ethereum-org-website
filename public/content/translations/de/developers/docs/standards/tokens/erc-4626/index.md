@@ -1,6 +1,6 @@
 ---
 title: ERC-4626 Tokenized Vault Standard
-description: Ein Standard für renditebringende Vaults.
+description: "Ein Standard für renditebringende Vaults."
 lang: de
 ---
 

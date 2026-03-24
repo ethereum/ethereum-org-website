@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen eines Quiz
-description: Die Richtlinie, die wir beim Hinzufügen von Quizzen zu ethereum.org verwenden
+title: "Hinzufügen eines Quiz"
+description: "Die Richtlinie, die wir beim Hinzufügen von Quizzen zu ethereum.org verwenden"
 lang: de
 ---
 

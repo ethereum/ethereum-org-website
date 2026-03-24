@@ -1,6 +1,6 @@
 ---
 title: Hilfe und Meldung von Betrug
-description: Was Sie tun können, wenn Sie betrogen wurden, wie Sie Ihr verbleibendes Vermögen sichern und wo Sie Betrug melden können.
+description: "Was Sie tun können, wenn Sie betrogen wurden, wie Sie Ihr verbleibendes Vermögen sichern und wo Sie Betrug melden können."
 lang: de
 ---
 

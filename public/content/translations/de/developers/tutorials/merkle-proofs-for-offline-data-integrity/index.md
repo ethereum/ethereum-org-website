@@ -1,6 +1,6 @@
 ---
-title: Merkle-Beweise für Offline-Datenintegrität
-description: Sicherstellung der Datenintegrität auf der Blockchain für Daten, die größtenteils Off-Chain gespeichert sind
+title: "Merkle-Beweise für Offline-Datenintegrität"
+description: "Sicherstellung der Datenintegrität auf der Blockchain für Daten, die größtenteils Off-Chain gespeichert sind"
 author: Ori Pomerantz
 tags: ["Speicher"]
 skill: advanced

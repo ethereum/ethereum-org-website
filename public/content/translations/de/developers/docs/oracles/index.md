@@ -1,6 +1,6 @@
 ---
 title: Orakel
-description: Orakel bieten Ethereum-Smart-Contracts Zugriff auf reale Daten, was mehr Anwendungsfälle und einen größeren Wert für die Nutzer erschließt.
+description: "Orakel bieten Ethereum-Smart-Contracts Zugriff auf reale Daten, was mehr Anwendungsfälle und einen größeren Wert für die Nutzer erschließt."
 lang: de
 ---
 

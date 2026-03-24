@@ -1,6 +1,6 @@
 ---
 title: Daten und Analysen
-description: Wie man Analysen und Daten auf der Blockchain für die Verwendung in Dapps erhält
+description: "Wie man Analysen und Daten auf der Blockchain für die Verwendung in Dapps erhält"
 lang: de
 ---
 

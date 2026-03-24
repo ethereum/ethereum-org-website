@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: Erfahren Sie mehr über das Fusaka-Protokoll-Upgrade
+description: "Erfahren Sie mehr über das Fusaka-Protokoll-Upgrade"
 lang: de
 ---
 
@@ -26,7 +26,7 @@ Das Fusaka-Upgrade ist nur ein einzelner Schritt in Ethereums langfristigen Entw
 
 Dies ist das _Hauptmerkmal_ des Fusaka-Forks, die wichtigste Funktion, die in diesem Upgrade hinzugefügt wurde. Ebene 2s posten ihre Daten derzeit in Blobs auf Ethereum, dem flüchtigen Datentyp, der speziell für Ebene 2s erstellt wurde. Vor Fusaka muss jeder vollständige Blockchain-Knoten jeden Blob speichern, um sicherzustellen, dass die Daten existieren. Da der Blob-Durchsatz steigt, wird das Herunterladen all dieser Daten unhaltbar ressourcenintensiv.
 
-Mit [Datenverfügbarkeits-Sampling (Data Availability Sampling)](https://notes.ethereum.org/@fradamt/das-fork-choice) wird jeder Blockchain-Knoten für eine Teilmenge der Blob-Daten verantwortlich sein, anstatt alle Blob-Daten speichern zu müssen. Blobs werden gleichmäßig und zufällig über die Blockchain-Knoten im Netzwerk verteilt, wobei jeder vollständige Blockchain-Knoten nur 1/8 der Daten hält, was eine theoretische Skalierung um das 8-fache ermöglicht. Um die Verfügbarkeit der Daten sicherzustellen, kann jeder Teil der Daten aus beliebigen vorhandenen 50 % des Ganzen rekonstruiert werden, mit Methoden, die die Wahrscheinlichkeit falscher oder fehlender Daten auf ein kryptografisch vernachlässigbares Niveau senken (~eins zu 10<sup>20</sup> bis eins zu 10<sup>24</sup>).
+Mit [Datenverfügbarkeits-Sampling (Data Availability Sampling)](https://notes.ethereum.org/@fradamt/das-fork-choice) wird jeder Blockchain-Knoten für eine Teilmenge der Blob-Daten verantwortlich sein, anstatt alle Blob-Daten speichern zu müssen. Blobs werden gleichmäßig und zufällig über die Blockchain-Knoten im Netzwerk verteilt, wobei jeder vollständige Blockchain-Knoten nur 1/8 der Daten hält, was eine theoretische Skalierung um das 8-fache ermöglicht. Um die Verfügbarkeit der Daten sicherzustellen, kann jeder Teil der Daten aus beliebigen vorhandenen 50 % des Ganzen rekonstruiert werden, mit Methoden, die die Wahrscheinlichkeit falscher oder fehlender Daten auf ein kryptografisch vernachlässigbares Niveau senken (\~eins zu 10<sup>20</sup> bis eins zu 10<sup>24</sup>).
 
 Dies hält die Hardware- und Bandbreitenanforderungen für Blockchain-Knoten vertretbar, während die Blob-Skalierung ermöglicht wird, was zu mehr Skalierung mit geringeren Gebühren für Ebene 2s führt.
 
@@ -187,7 +187,7 @@ Dieses EIP befindet sich in einem Abschnitt abseits der „Core EIPs“, da der 
 
 ### Betrifft dieses Upgrade alle Ethereum-Blockchain-Knoten und Validatoren? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
 
-Ja, das Fusaka-Upgrade erfordert Updates sowohl für [Ausführungs-Clients als auch für Konsens-Clients](/developers/docs/nodes-and-clients/). Alle wichtigen Ethereum-Anwendungen werden Versionen veröffentlichen, die den Hard Fork unterstützen und als hohe Priorität markiert sind. Sie können sich darüber auf dem Laufenden halten, wann diese Releases in den Github-Repos der Anwendungen, ihren [Discord-Kanälen](https://ethstaker.org/support), dem [EthStaker Discord](https://dsc.gg/ethstaker) verfügbar sein werden, oder indem Sie den Ethereum-Blog für Protokoll-Updates abonnieren. Um die Synchronisation mit dem Ethereum-Netzwerk nach dem Upgrade aufrechtzuerhalten, müssen Betreiber von Blockchain-Knoten sicherstellen, dass sie eine unterstützte Anwendungsversion ausführen. Beachten Sie, dass die Informationen zu Anwendungs-Releases zeitkritisch sind und Benutzer sich für die aktuellsten Details auf die neuesten Updates beziehen sollten.
+Ja, das Fusaka-Upgrade erfordert Updates sowohl für [Ausführungs-Clients als auch für Konsens-Clients](/developers/docs/nodes-and-clients/). Alle wichtigen Ethereum-Anwendungen werden Versionen veröffentlichen, die den Hard Fork unterstützen und als hohe Priorität markiert sind. Sie können sich darüber auf dem Laufenden halten, wann diese Releases in den GitHub-Repos der Anwendungen, ihren [Discord-Kanälen](https://ethstaker.org/support), dem [EthStaker Discord](https://dsc.gg/ethstaker) verfügbar sein werden, oder indem Sie den Ethereum-Blog für Protokoll-Updates abonnieren. Um die Synchronisation mit dem Ethereum-Netzwerk nach dem Upgrade aufrechtzuerhalten, müssen Betreiber von Blockchain-Knoten sicherstellen, dass sie eine unterstützte Anwendungsversion ausführen. Beachten Sie, dass die Informationen zu Anwendungs-Releases zeitkritisch sind und Benutzer sich für die aktuellsten Details auf die neuesten Updates beziehen sollten.
 
 ### Wie kann ETH nach dem Hard Fork konvertiert werden? {#how-can-eth-be-converted-after-the-hardfork}
 

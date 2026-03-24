@@ -1,6 +1,6 @@
 ---
 title: Client-Vielfalt
-description: Eine allgemeine Erklärung der Bedeutung der Ethereum-Client-Vielfalt.
+description: "Eine allgemeine Erklärung der Bedeutung der Ethereum-Client-Vielfalt."
 lang: de
 sidebarDepth: 2
 ---

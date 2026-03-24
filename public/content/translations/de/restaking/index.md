@@ -1,14 +1,14 @@
 ---
 title: Restaking
 metaTitle: Was ist Restaking? | Vorteile und Nutzung von Restaking
-description: Verwenden Sie gestaktes ETH, um andere dezentralisierte Dienste abzusichern und zusätzliche Belohnungen zu verdienen.
+description: "Verwenden Sie gestaktes ETH, um andere dezentralisierte Dienste abzusichern und zusätzliche Belohnungen zu verdienen."
 lang: de
 template: use-cases
 emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: Eine visuelle Darstellung von Restaking auf Ethereum.
 sidebarDepth: 2
-summaryPoint1: Verwenden Sie gestaktes ETH, um andere dezentralisierte Dienste abzusichern und zusätzliche Belohnungen zu verdienen.
+summaryPoint1: "Verwenden Sie gestaktes ETH, um andere dezentralisierte Dienste abzusichern und zusätzliche Belohnungen zu verdienen."
 buttons:
   - content: Was ist Restaking?
     toId: what-is-restaking

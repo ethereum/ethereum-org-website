@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Eine Erklärung des Gasper-Proof-of-Stake-Mechanismus.
+description: "Eine Erklärung des Gasper-Proof-of-Stake-Mechanismus."
 lang: de
 ---
 

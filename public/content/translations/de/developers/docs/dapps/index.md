@@ -1,5 +1,5 @@
 ---
-title: Technische Einführung in Dapps
+title: "Technische Einführung in Dapps"
 description:
 lang: de
 ---

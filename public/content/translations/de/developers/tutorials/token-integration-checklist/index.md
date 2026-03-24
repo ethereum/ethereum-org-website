@@ -1,5 +1,5 @@
 ---
-title: Checkliste für die Token-Integration
+title: "Checkliste für die Token-Integration"
 description: Eine Checkliste mit Dingen, die bei der Interaktion mit Token zu beachten sind
 author: "Trailofbits"
 lang: de

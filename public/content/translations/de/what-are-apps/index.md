@@ -1,14 +1,14 @@
 ---
 title: Ethereum-Anwendungen
 metaTitle: Ethereum-Anwendungen | Dezentralisierte Anwendungen auf Ethereum
-description: Apps auf Ethereum sind kostenlos, global und nutzen eine öffentliche Blockchain anstelle von privaten Unternehmensservern. Das bedeutet, dass Sie in jedem Projekt dasselbe Konto verwenden und Ihre Privatsphäre wahren können.
+description: "Apps auf Ethereum sind kostenlos, global und nutzen eine öffentliche Blockchain anstelle von privaten Unternehmensservern. Das bedeutet, dass Sie in jedem Projekt dasselbe Konto verwenden und Ihre Privatsphäre wahren können."
 lang: de
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: Apps auf Ethereum sind kostenlos, global und nutzen eine öffentliche Blockchain anstelle von privaten Unternehmensservern. Das bedeutet, dass Sie in jedem Projekt dasselbe Konto verwenden und Ihre Privatsphäre wahren können.
+summary: "Apps auf Ethereum sind kostenlos, global und nutzen eine öffentliche Blockchain anstelle von privaten Unternehmensservern. Das bedeutet, dass Sie in jedem Projekt dasselbe Konto verwenden und Ihre Privatsphäre wahren können."
 ---
 
 ## Apps mit Superkräften {#apps-with-superpowers}

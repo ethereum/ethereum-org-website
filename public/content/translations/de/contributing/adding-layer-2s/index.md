@@ -1,6 +1,6 @@
 ---
-title: Ebene 2 hinzufügen
-description: Die Richtlinie, die wir beim Hinzufügen einer Ebene 2 zu ethereum.org anwenden
+title: "Ebene 2 hinzufügen"
+description: "Die Richtlinie, die wir beim Hinzufügen einer Ebene 2 zu ethereum.org anwenden"
 lang: de
 ---
 

@@ -1,15 +1,15 @@
 ---
 title: Ethereum-Zahlungen
 metaTitle: Zahlungen auf Ethereum
-description: Ein Überblick über Zahlungen auf Ethereum
+description: "Ein Überblick über Zahlungen auf Ethereum"
 lang: de
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Ein Eth-Logo, das zusammen mit gebenden Händen angezeigt wird.
+alt: "Ein Eth-Logo, das zusammen mit gebenden Händen angezeigt wird."
 summaryPoint1: Eine Welt, in der sich Geld so frei bewegt wie Informationen
-summaryPoint2: Offen und global, ermöglicht grenzenlose Transaktionen für alle
+summaryPoint2: "Offen und global, ermöglicht grenzenlose Transaktionen für alle"
 summaryPoint3: Zahlungen innerhalb einer Minute erhalten
 ---
 

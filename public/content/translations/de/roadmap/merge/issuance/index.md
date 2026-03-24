@@ -1,6 +1,6 @@
 ---
 title: Wie The Merge das ETH-Angebot beeinflusst hat
-description: Aufschlüsselung, wie The Merge das ETH-Angebot beeinflusst hat
+description: "Aufschlüsselung, wie The Merge das ETH-Angebot beeinflusst hat"
 lang: de
 ---
 
@@ -40,18 +40,18 @@ Validatoren auf der Beacon Chain werden mit ETH belohnt, wenn sie den Zustand de
 
 ### Aufschlüsselung der Emission vor The Merge {#pre-merge-issuance-breakdown}
 
-Gesamtes ETH-Angebot: **~120.520.000 ETH** (zum Zeitpunkt von The Merge im September 2022)
+Gesamtes ETH-Angebot: **\~120.520.000 ETH** (zum Zeitpunkt von The Merge im September 2022)
 
 **Emission auf der Ausführungsebene:**
 
-- Wurde auf 2,08 ETH pro 13,3 Sekunden geschätzt\*: **~4.930.000** ETH in einem Jahr emittiert
+- Wurde auf 2,08 ETH pro 13,3 Sekunden geschätzt\*: **\~4.930.000** ETH in einem Jahr emittiert
 - Führte zu einer Inflationsrate von **etwa 4,09 %** (4,93 Mio. pro Jahr / 120,5 Mio. insgesamt)
 - \*Dies beinhaltet die 2 ETH pro kanonischem Block plus durchschnittlich 0,08 ETH im Laufe der Zeit aus Ommer-Blöcken. Verwendet auch 13,3 Sekunden, das grundlegende Blockzeit-Ziel ohne jeglichen Einfluss einer [Difficulty Bomb](/glossary/#difficulty-bomb). ([Siehe Quelle](https://bitinfocharts.com/ethereum/))
 
 **Emission auf der Konsensebene:**
 
 - Bei insgesamt 14.000.000 gestakten ETH beträgt die Rate der ETH-Emission etwa 1.700 ETH/Tag ([Siehe Quelle](https://ultrasound.money/))
-- Führt zu **~620.500** emittierten ETH in einem Jahr
+- Führt zu **\~620.500** emittierten ETH in einem Jahr
 - Führte zu einer Inflationsrate von **etwa 0,52 %** (620,5 Tsd. pro Jahr / 119,3 Mio. insgesamt)
 
 <Alert variant="update">
@@ -59,9 +59,9 @@ Gesamtes ETH-Angebot: **~120.520.000 ETH** (zum Zeitpunkt von The Merge im Septe
 <AlertDescription>
 **Gesamte annualisierte Emissionsrate (vor The Merge): ~4,61 %** (4,09 % + 0,52 %)
 
-**~88,7 %** der Emission gingen an Miner auf der Ausführungsebene (4,09 / 4,61 * 100)
+**\~88,7 %** der Emission gingen an Miner auf der Ausführungsebene (4,09 / 4,61 * 100)
 
-**~11,3 %** wurden an Staker auf der Konsensebene emittiert (0,52 / 4,61 * 100)
+**\~11,3 %** wurden an Staker auf der Konsensebene emittiert (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -86,16 +86,16 @@ Wenn mehr Validatoren abheben, wird die maximale Anzahl der aussteigenden Valida
 
 ### Aufschlüsselung der Inflation nach The Merge {#post-merge-inflation-breakdown}
 
-- [Gesamtes ETH-Angebot](/eth/supply/): **~120.520.000 ETH** (zum Zeitpunkt von The Merge im September 2022)
+- [Gesamtes ETH-Angebot](/eth/supply/): **\~120.520.000 ETH** (zum Zeitpunkt von The Merge im September 2022)
 - Emission auf der Ausführungsebene: **0**
-- Emission auf der Konsensebene: Wie oben, **~0,52 %** annualisierte Emissionsrate (bei insgesamt 14 Millionen gestakten ETH)
+- Emission auf der Konsensebene: Wie oben, **\~0,52 %** annualisierte Emissionsrate (bei insgesamt 14 Millionen gestakten ETH)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Gesamte annualisierte Emissionsrate: **~0,52 %**
+Gesamte annualisierte Emissionsrate: **\~0,52 %**
 
-Netto-Reduzierung der jährlichen ETH-Emission: **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % * 100)
+Netto-Reduzierung der jährlichen ETH-Emission: **\~88,7 %** ((4,61 % - 0,52 %) / 4,61 % * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

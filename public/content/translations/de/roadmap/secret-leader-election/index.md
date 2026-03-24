@@ -1,6 +1,6 @@
 ---
-title: Geheime Anführerwahl
-description: Erklärung, wie die geheime Anführerwahl helfen kann, Validatoren vor Angriffen zu schützen
+title: "Geheime Anführerwahl"
+description: "Erklärung, wie die geheime Anführerwahl helfen kann, Validatoren vor Angriffen zu schützen"
 lang: de
 summaryPoints:
   - Die IP-Adresse von Block-Vorschlagenden kann im Voraus bekannt sein, was sie anfällig für Angriffe macht

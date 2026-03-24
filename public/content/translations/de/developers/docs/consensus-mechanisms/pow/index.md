@@ -1,6 +1,6 @@
 ---
 title: Proof-of-Work (PoW)
-description: Eine Erklärung des Proof-of-Work-Konsensprotokolls und seiner Rolle in Ethereum.
+description: "Eine Erklärung des Proof-of-Work-Konsensprotokolls und seiner Rolle in Ethereum."
 lang: de
 ---
 

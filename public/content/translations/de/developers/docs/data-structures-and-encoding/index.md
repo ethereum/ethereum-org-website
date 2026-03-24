@@ -1,6 +1,6 @@
 ---
 title: Datenstrukturen und Codierung
-description: Ein Überblick über die grundlegenden Ethereum-Datenstrukturen.
+description: "Ein Überblick über die grundlegenden Ethereum-Datenstrukturen."
 lang: de
 sidebarDepth: 2
 ---

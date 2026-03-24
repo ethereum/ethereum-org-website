@@ -1,6 +1,6 @@
 ---
-title: Häufige Missverständnisse über Ethereum
-description: Aufklärung der häufigsten Missverständnisse darüber, wie Ethereum funktioniert.
+title: "Häufige Missverständnisse über Ethereum"
+description: "Aufklärung der häufigsten Missverständnisse darüber, wie Ethereum funktioniert."
 lang: de
 ---
 

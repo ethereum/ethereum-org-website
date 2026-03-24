@@ -1,5 +1,5 @@
 ---
-title: Ethereum-Sicherheit und Betrugsprävention
+title: "Ethereum-Sicherheit und Betrugsprävention"
 description: Sicher bleiben auf Ethereum
 lang: de
 ---

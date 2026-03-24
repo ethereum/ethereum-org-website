@@ -1,6 +1,6 @@
 ---
 title: Light Clients
-description: Einführung in Ethereum Light Clients.
+description: "Einführung in Ethereum Light Clients."
 lang: de
 ---
 

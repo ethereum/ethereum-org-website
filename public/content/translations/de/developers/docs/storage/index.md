@@ -1,6 +1,6 @@
 ---
 title: Dezentralisierte Speicherung
-description: Übersicht darüber, was dezentralisierte Speicherung ist und welche Tools zur Integration in eine Dapp verfügbar sind.
+description: "Übersicht darüber, was dezentralisierte Speicherung ist und welche Tools zur Integration in eine Dapp verfügbar sind."
 lang: de
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Einen Ethereum-Blockchain-Knoten auf einem Raspberry Pi 4 ausführen
-description: Flashen Sie Ihren Raspberry Pi 4, schließen Sie ein Ethernet-Kabel an, verbinden Sie die SSD-Festplatte und schalten Sie das Gerät ein, um den Raspberry Pi 4 in einen vollständigen Ethereum-Blockchain-Knoten + Validator zu verwandeln
+title: "Einen Ethereum-Blockchain-Knoten auf einem Raspberry Pi 4 ausführen"
+description: "Flashen Sie Ihren Raspberry Pi 4, schließen Sie ein Ethernet-Kabel an, verbinden Sie die SSD-Festplatte und schalten Sie das Gerät ein, um den Raspberry Pi 4 in einen vollständigen Ethereum-Blockchain-Knoten + Validator zu verwandeln"
 author: "EthereumOnArm"
 tags: ["Anwendungen", "Ausführungsebene", "Konsensebene", "Blockchain-Knoten"]
 lang: de

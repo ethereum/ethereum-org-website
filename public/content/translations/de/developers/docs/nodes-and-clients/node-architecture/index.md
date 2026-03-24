@@ -1,6 +1,6 @@
 ---
 title: Architektur von Blockchain-Knoten
-description: Einführung in die Organisation von Ethereum-Blockchain-Knoten.
+description: "Einführung in die Organisation von Ethereum-Blockchain-Knoten."
 lang: de
 ---
 

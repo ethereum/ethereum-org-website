@@ -1,6 +1,6 @@
 ---
 title: Proposer-Builder-Trennung
-description: Erfahren Sie, wie und warum Ethereum-Validatoren ihre Verantwortlichkeiten für die Block-Erstellung und die Block-Übertragung aufteilen werden.
+description: "Erfahren Sie, wie und warum Ethereum-Validatoren ihre Verantwortlichkeiten für die Block-Erstellung und die Block-Übertragung aufteilen werden."
 lang: de
 ---
 

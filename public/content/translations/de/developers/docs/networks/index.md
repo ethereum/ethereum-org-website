@@ -1,6 +1,6 @@
 ---
 title: Netzwerke
-description: Ein Überblick über die Netzwerke von Ethereum und wo man Testnet-Ether (ETH) zum Testen seiner Anwendung erhält.
+description: "Ein Überblick über die Netzwerke von Ethereum und wo man Testnet-Ether (ETH) zum Testen seiner Anwendung erhält."
 lang: de
 ---
 
@@ -96,7 +96,7 @@ Ephemery ist eine einzigartige Art von Testnet, das jeden Monat vollständig zur
 ##### Ressourcen
 
 - [Website](https://ephemery.dev/)
-- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
 - [Community-Chat](https://matrix.to/#/#staker-testnet:matrix.org)
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)

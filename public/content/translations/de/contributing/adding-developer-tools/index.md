@@ -1,7 +1,7 @@
 ---
-title: Entwicklertools hinzufügen
+title: "Entwicklertools hinzufügen"
 lang: de
-description: Unsere Kriterien für die Auflistung von Entwicklertools auf ethereum.org
+description: "Unsere Kriterien für die Auflistung von Entwicklertools auf ethereum.org"
 ---
 
 # Entwicklertools hinzufügen {#contributing-to-ethereumorg-}

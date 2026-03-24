@@ -1,6 +1,6 @@
 ---
 title: Richten Sie Ihren eigenen Ethereum-Blockchain-Knoten ein
-description: Allgemeine Einführung in den Betrieb einer eigenen Instanz einer Ethereum-Anwendung.
+description: "Allgemeine Einführung in den Betrieb einer eigenen Instanz einer Ethereum-Anwendung."
 lang: de
 sidebarDepth: 2
 ---
@@ -99,7 +99,7 @@ Der Synchronisationsmodus und die Anwendung, die Sie wählen, wirken sich auf de
 | Nethermind | 500 GB+                      | 12 TB+                                  |
 | Reth       | N/A                          | 2,2 TB+                                 |
 
-- Hinweis: Erigon und Reth bieten keinen Snap-Sync an, aber vollständiges Pruning (Full Pruning) ist möglich (~2 TB für Erigon, ~1,2 TB für Reth).
+- Hinweis: Erigon und Reth bieten keinen Snap-Sync an, aber vollständiges Pruning (Full Pruning) ist möglich (\~2 TB für Erigon, ~1,2 TB für Reth).
 
 Für Konsens-Clients hängt der Speicherbedarf auch von der Anwendungsimplementierung und den aktivierten Funktionen (z. B. Validator-Slasher) ab, aber rechnen Sie im Allgemeinen mit weiteren 200 GB, die für Beacon-Daten benötigt werden. Mit einer großen Anzahl von Validatoren wächst auch die Bandbreitenbelastung. Sie finden [Details zu den Anforderungen von Konsens-Clients in dieser Analyse](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
@@ -235,7 +235,7 @@ Dieser Abschnitt führt Sie durch das Starten von Ausführungs-Clients. Er dient
 
 Bitte denken Sie daran, dass dies nur ein grundlegendes Beispiel ist; alle anderen Einstellungen werden auf die Standardwerte gesetzt. Achten Sie auf die Dokumentation jeder Anwendung, um mehr über Standardwerte, Einstellungen und Funktionen zu erfahren. Für weitere Funktionen, zum Beispiel für den Betrieb von Validatoren, Überwachung usw., beziehen Sie sich bitte auf die Dokumentation der jeweiligen Anwendung.
 
-> Beachten Sie, dass Backslashes `\` in Beispielen nur Formatierungszwecken dienen; Konfigurations-Flags können in einer einzigen Zeile definiert werden.
+> Beachten Sie, dass Backslashes `` in Beispielen nur Formatierungszwecken dienen; Konfigurations-Flags können in einer einzigen Zeile definiert werden.
 
 ##### Ausführen von Besu
 

@@ -1,6 +1,6 @@
 ---
-title: Einführung in Blockchain-Brücken
-description: Kettenübergreifende Brücken ermöglichen es Benutzern, ihre Geldmittel über verschiedene Blockchains hinweg zu bewegen
+title: "Einführung in Blockchain-Brücken"
+description: "Kettenübergreifende Brücken ermöglichen es Benutzern, ihre Geldmittel über verschiedene Blockchains hinweg zu bewegen"
 lang: de
 ---
 

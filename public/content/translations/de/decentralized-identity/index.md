@@ -1,14 +1,14 @@
 ---
-title: Dezentralisierte Identität
-description: Was ist eine dezentralisierte Identität und warum ist sie wichtig?
+title: "Dezentralisierte Identität"
+description: "Was ist eine dezentralisierte Identität und warum ist sie wichtig?"
 lang: de
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: Traditionelle Identitätssysteme haben die Emission, Pflege und Kontrolle Ihrer Identifikatoren zentralisiert.
-summaryPoint2: Dezentralisierte Identität beseitigt die Abhängigkeit von zentralisierten Drittanbietern.
-summaryPoint3: Dank Krypto haben Benutzer nun wieder die Werkzeuge, um ihre eigenen Identifikatoren und Bestätigungen zu emittieren, zu halten und zu kontrollieren.
+summaryPoint1: "Traditionelle Identitätssysteme haben die Emission, Pflege und Kontrolle Ihrer Identifikatoren zentralisiert."
+summaryPoint2: "Dezentralisierte Identität beseitigt die Abhängigkeit von zentralisierten Drittanbietern."
+summaryPoint3: "Dank Krypto haben Benutzer nun wieder die Werkzeuge, um ihre eigenen Identifikatoren und Bestätigungen zu emittieren, zu halten und zu kontrollieren."
 ---
 
 Identität untermauert heute praktisch jeden Aspekt Ihres Lebens. Die Nutzung von Online-Diensten, die Eröffnung eines Bankkontos, die Stimmabgabe bei Wahlen, der Kauf von Immobilien, die Sicherung eines Arbeitsplatzes – all diese Dinge erfordern den Nachweis Ihrer Identität.

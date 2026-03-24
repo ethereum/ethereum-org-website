@@ -1,6 +1,6 @@
 ---
 title: ETH von zu Hause aus staken (Home Staking)
-description: Ein Überblick darüber, wie Sie mit dem Staking Ihrer ETH von zu Hause aus beginnen können
+description: "Ein Überblick darüber, wie Sie mit dem Staking Ihrer ETH von zu Hause aus beginnen können"
 lang: de
 template: staking
 emoji: ":money_with_wings:"

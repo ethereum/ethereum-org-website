@@ -1,6 +1,6 @@
 ---
-title: Wallets hinzufügen
-description: Die Richtlinie, die wir beim Hinzufügen einer Wallet zu ethereum.org anwenden
+title: "Wallets hinzufügen"
+description: "Die Richtlinie, die wir beim Hinzufügen einer Wallet zu ethereum.org anwenden"
 lang: de
 ---
 

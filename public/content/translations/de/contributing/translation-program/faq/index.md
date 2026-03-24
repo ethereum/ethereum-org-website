@@ -1,7 +1,7 @@
 ---
-title: Häufig gestellte Fragen (FAQ) zum Übersetzungsprogramm
+title: "Häufig gestellte Fragen (FAQ) zum Übersetzungsprogramm"
 lang: de
-description: Häufig gestellte Fragen zum Übersetzungsprogramm von ethereum.org
+description: "Häufig gestellte Fragen zum Übersetzungsprogramm von ethereum.org"
 ---
 
 # Leitfaden zur Übersetzung von ethereum.org {#translating-ethereum-guide}

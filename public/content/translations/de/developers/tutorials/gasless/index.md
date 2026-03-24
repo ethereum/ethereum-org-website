@@ -1,6 +1,6 @@
 ---
 title: "Sponsoring von Gasgebühren: Wie Sie Transaktionskosten für Ihre Nutzer übernehmen"
-description: Es ist einfach, einen Private-Key und eine Adresse zu erstellen; es ist nur eine Frage der Ausführung der richtigen Software. Aber es gibt viele Orte auf der Welt, an denen es viel schwieriger ist, ETH zu bekommen, um Transaktionen zu senden. In diesem Tutorial lernen Sie, wie Sie die Gasgebühren auf der Blockchain für die Ausführung von nutzersignierten, strukturierten Off-Chain-Daten in Ihrem Smart Contract übernehmen. Sie lassen den Nutzer eine Struktur signieren, die die Transaktionsinformationen enthält, welche Ihr Off-Chain-Code dann als Transaktion an die Blockchain übermittelt.
+description: "Es ist einfach, einen Private-Key und eine Adresse zu erstellen; es ist nur eine Frage der Ausführung der richtigen Software. Aber es gibt viele Orte auf der Welt, an denen es viel schwieriger ist, ETH zu bekommen, um Transaktionen zu senden. In diesem Tutorial lernen Sie, wie Sie die Gasgebühren auf der Blockchain für die Ausführung von nutzersignierten, strukturierten Off-Chain-Daten in Ihrem Smart Contract übernehmen. Sie lassen den Nutzer eine Struktur signieren, die die Transaktionsinformationen enthält, welche Ihr Off-Chain-Code dann als Transaktion an die Blockchain übermittelt."
 author: Ori Pomerantz
 tags: ["gaslos", "Solidity", "EIP-712", "Meta-Transaktionen"]
 skill: intermediate

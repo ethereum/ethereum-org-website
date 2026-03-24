@@ -1,6 +1,6 @@
 ---
 title: Wie man einen NFT schreibt und bereitstellt (Teil 1/3 der NFT-Tutorial-Reihe)
-description: Dieses Tutorial ist Teil 1 einer Serie über NFTs, die Sie Schritt für Schritt durch das Schreiben und Bereitstellen eines Smart Contracts für einen nicht-fungiblen Token (ERC-721-Token) unter Verwendung von Ethereum und dem Inter Planetary File System (IPFS) führt.
+description: "Dieses Tutorial ist Teil 1 einer Serie über NFTs, die Sie Schritt für Schritt durch das Schreiben und Bereitstellen eines Smart Contracts für einen nicht-fungiblen Token (ERC-721-Token) unter Verwendung von Ethereum und dem Inter Planetary File System (IPFS) führt."
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "Smart Contracts"]
 skill: beginner

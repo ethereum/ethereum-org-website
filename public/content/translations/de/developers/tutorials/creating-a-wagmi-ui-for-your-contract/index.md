@@ -1,6 +1,6 @@
 ---
 title: "Erstellen einer Benutzeroberfläche für Ihren Smart Contract"
-description: Unter Verwendung moderner Komponenten wie TypeScript, React, Vite und Wagmi werden wir eine moderne, aber minimalistische Benutzeroberfläche durchgehen und lernen, wie man ein Wallet mit der Benutzeroberfläche verbindet, einen Smart Contract aufruft, um Informationen zu lesen, eine Transaktion an einen Smart Contract sendet und Ereignisse von einem Smart Contract überwacht, um Änderungen zu identifizieren.
+description: "Unter Verwendung moderner Komponenten wie TypeScript, React, Vite und Wagmi werden wir eine moderne, aber minimalistische Benutzeroberfläche durchgehen und lernen, wie man ein Wallet mit der Benutzeroberfläche verbindet, einen Smart Contract aufruft, um Informationen zu lesen, eine Transaktion an einen Smart Contract sendet und Ereignisse von einem Smart Contract überwacht, um Änderungen zu identifizieren."
 author: Ori Pomerantz
 tags: ["typescript", "react", "vite", "wagmi", "frontend"]
 skill: beginner
@@ -225,7 +225,8 @@ Das JSX einer React-Komponente _muss_ eine einzelne HTML-Komponente zurückgeben
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+ 
+</div>
 ```
 
 Stellen Sie Informationen über die aktuelle Verbindung bereit. Innerhalb von JSX bedeutet `{<expression>}`, dass der Ausdruck als JavaScript ausgewertet wird.
@@ -252,7 +253,8 @@ Hier haben wir zwei solcher Tags, `<Greeter />` (das tatsächlich den HTML-Code 
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+ 
+</div>
       )}
 ```
 
@@ -293,7 +295,8 @@ Die Konnektor-Schaltflächen.
 ```tsx
           <div>{status}</div>
           <div>{error?.message}</div>
-        </div>
+ 
+</div>
       )}
 ```
 

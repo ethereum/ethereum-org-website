@@ -1,6 +1,6 @@
 ---
-title: Wie man Token auf Ebene 2 überbrückt
-description: Ein Leitfaden, der erklärt, wie man Token von Ethereum mithilfe einer kettenübergreifenden Brücke auf Ebene 2 verschiebt.
+title: "Wie man Token auf Ebene 2 überbrückt"
+description: "Ein Leitfaden, der erklärt, wie man Token von Ethereum mithilfe einer kettenübergreifenden Brücke auf Ebene 2 verschiebt."
 lang: de
 ---
 

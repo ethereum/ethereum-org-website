@@ -1,6 +1,6 @@
 ---
 title: "Smart Contracts verkleinern, um das Größenlimit einzuhalten"
-description: Was können Sie tun, um zu verhindern, dass Ihre Smart Contracts zu groß werden?
+description: "Was können Sie tun, um zu verhindern, dass Ihre Smart Contracts zu groß werden?"
 author: Markus Waas
 lang: de
 tags: ["solidity", "Smart Contracts", "Speicher"]

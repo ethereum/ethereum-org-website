@@ -1,6 +1,6 @@
 ---
-title: Häufig gestellte Fragen
-description: Häufige Fragen zu Ethereum über Wallets, Transaktionen, Staking und mehr.
+title: "Häufig gestellte Fragen"
+description: "Häufige Fragen zu Ethereum über Wallets, Transaktionen, Staking und mehr."
 lang: de
 ---
 

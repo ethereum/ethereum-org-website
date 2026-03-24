@@ -1,6 +1,6 @@
 ---
 title: Blockchain-Knoten als Dienstleistung
-description: Ein grundlegender Überblick über Blockchain-Knoten-Dienste, deren Vor- und Nachteile sowie beliebte Anbieter.
+description: "Ein grundlegender Überblick über Blockchain-Knoten-Dienste, deren Vor- und Nachteile sowie beliebte Anbieter."
 lang: de
 sidebarDepth: 2
 ---
@@ -54,7 +54,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Blockchain-Knoten-Anbieter
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentation](https://www.alchemy.com/docs/)
   - Funktionen
-    - Größter kostenloser Tarif mit 300 Mio. Recheneinheiten pro Monat (~30 Mio. getLatestBlock-Anfragen)
+    - Größter kostenloser Tarif mit 300 Mio. Recheneinheiten pro Monat (\~30 Mio. getLatestBlock-Anfragen)
     - Multi-Chain-Unterstützung für Polygon, Starknet, Optimism, Arbitrum
     - Unterstützt ~70 % der größten Ethereum-Dapps und des DeFi-Transaktionsvolumens
     - Echtzeit-Webhook-Benachrichtigungen über Alchemy Notify

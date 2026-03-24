@@ -1,6 +1,6 @@
 ---
 title: Mitwirken
-description: Erfahren Sie mehr über die verschiedenen Möglichkeiten, wie Sie zu ethereum.org beitragen können
+description: "Erfahren Sie mehr über die verschiedenen Möglichkeiten, wie Sie zu ethereum.org beitragen können"
 lang: de
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Auszahlungsberechtigungen
-description: Eine Erklärung der Arten von Validator-Auszahlungsberechtigungen (0x00, 0x01, 0x02) und ihrer Auswirkungen für Ethereum-Staker.
+description: "Eine Erklärung der Arten von Validator-Auszahlungsberechtigungen (0x00, 0x01, 0x02) und ihrer Auswirkungen für Ethereum-Staker."
 lang: de
 ---
 

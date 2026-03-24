@@ -1,10 +1,10 @@
 ---
 title: "All you can cache"
-description: Erfahren Sie, wie Sie einen Caching-Vertrag für günstigere Rollups-Transaktionen erstellen und verwenden
+description: "Erfahren Sie, wie Sie einen Caching-Vertrag für günstigere Rollups-Transaktionen erstellen und verwenden"
 author: Ori Pomerantz
 tags: ["Ebene 2", "Caching", "Speicher", "Skalierung"]
 skill: intermediate
-breadcrumb: Caching für Rollups
+breadcrumb: "Caching für Rollups"
 published: 2022-09-15
 lang: de
 ---

@@ -1,6 +1,6 @@
 ---
-title: Börsen hinzufügen
-description: Die Richtlinie, die wir beim Hinzufügen von Börsen zu ethereum.org anwenden
+title: "Börsen hinzufügen"
+description: "Die Richtlinie, die wir beim Hinzufügen von Börsen zu ethereum.org anwenden"
 lang: de
 ---
 

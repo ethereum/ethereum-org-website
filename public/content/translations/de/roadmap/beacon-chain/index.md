@@ -1,13 +1,13 @@
 ---
 title: Die Beacon Chain
-description: Erfahren Sie mehr über die Beacon Chain – das Upgrade, das Proof-of-Stake bei Ethereum eingeführt hat.
+description: "Erfahren Sie mehr über die Beacon Chain – das Upgrade, das Proof-of-Stake bei Ethereum eingeführt hat."
 lang: de
 template: upgrade
 image: /images/upgrades/core.png
 alt: 
-summaryPoint1: Die Beacon Chain führte Proof-of-Stake in das Ethereum-Ökosystem ein.
-summaryPoint2: Sie wurde im September 2022 mit der ursprünglichen Ethereum-Proof-of-Work-Chain zusammengeführt.
-summaryPoint3: Die Beacon Chain führte die Konsenslogik und das Block-Gossip-Protokoll ein, die nun Ethereum sichern.
+summaryPoint1: "Die Beacon Chain führte Proof-of-Stake in das Ethereum-Ökosystem ein."
+summaryPoint2: "Sie wurde im September 2022 mit der ursprünglichen Ethereum-Proof-of-Work-Chain zusammengeführt."
+summaryPoint3: "Die Beacon Chain führte die Konsenslogik und das Block-Gossip-Protokoll ein, die nun Ethereum sichern."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

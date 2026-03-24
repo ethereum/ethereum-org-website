@@ -1,6 +1,6 @@
 ---
 title: Definition der Web3-Geheimnisspeicherung
-description: Formale Definition für die Web3-Geheimnisspeicherung
+description: "Formale Definition für die Web3-Geheimnisspeicherung"
 lang: de
 sidebarDepth: 2
 ---

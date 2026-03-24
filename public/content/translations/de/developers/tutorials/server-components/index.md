@@ -1,6 +1,6 @@
 ---
 title: "Serverkomponenten und Agenten für Web3-Apps"
-description: Nach dem Lesen dieses Tutorials wirst du in der Lage sein, TypeScript-Server zu schreiben, die auf Ereignisse auf einer Blockchain lauschen und entsprechend mit eigenen Transaktionen reagieren. Dies ermöglicht es dir, zentralisierte Anwendungen zu schreiben (da der Server ein Single Point of Failure ist), die jedoch mit Web3-Entitäten interagieren können. Dieselben Techniken können auch verwendet werden, um einen Agenten zu schreiben, der ohne menschliches Eingreifen auf On-Chain-Ereignisse reagiert.
+description: "Nach dem Lesen dieses Tutorials wirst du in der Lage sein, TypeScript-Server zu schreiben, die auf Ereignisse auf einer Blockchain lauschen und entsprechend mit eigenen Transaktionen reagieren. Dies ermöglicht es dir, zentralisierte Anwendungen zu schreiben (da der Server ein Single Point of Failure ist), die jedoch mit Web3-Entitäten interagieren können. Dieselben Techniken können auch verwendet werden, um einen Agenten zu schreiben, der ohne menschliches Eingreifen auf On-Chain-Ereignisse reagiert."
 
 author: Ori Pomerantz
 lang: de

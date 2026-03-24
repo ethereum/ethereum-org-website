@@ -1,6 +1,6 @@
 ---
-title: Verkle-Bäume
-description: Eine allgemeine Beschreibung von Verkle-Bäumen und wie sie zur Aktualisierung von Ethereum verwendet werden
+title: "Verkle-Bäume"
+description: "Eine allgemeine Beschreibung von Verkle-Bäumen und wie sie zur Aktualisierung von Ethereum verwendet werden"
 lang: de
 summaryPoints:
   - Entdecken Sie, was Verkle-Bäume sind

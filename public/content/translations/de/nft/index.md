@@ -1,14 +1,14 @@
 ---
 title: Nicht-fungible Token (NFT)
 metaTitle: Was sind NFTs? | Vorteile und Nutzen
-description: Ein Überblick über NFTs auf Ethereum
+description: "Ein Überblick über NFTs auf Ethereum"
 lang: de
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Ein Eth-Logo, das als Hologramm angezeigt wird.
-summaryPoint1: Eine Möglichkeit, alles Einzigartige als Ethereum-basierten Vermögenswert darzustellen.
+summaryPoint1: "Eine Möglichkeit, alles Einzigartige als Ethereum-basierten Vermögenswert darzustellen."
 summaryPoint2: NFTs geben den Erstellern von Inhalten mehr Macht als je zuvor.
 summaryPoint3: Angetrieben durch Smart Contracts auf der Ethereum-Blockchain.
 ---
@@ -67,7 +67,7 @@ Vielleicht sind Sie ein Künstler, der seine Werke mithilfe von NFTs teilen möc
 
 Oder denken Sie an ein Ticket für eine Sportveranstaltung. Genauso wie ein **Veranstalter entscheiden kann, wie viele Tickets er verkauft**, kann der Ersteller eines NFTs entscheiden, wie viele Repliken existieren. Manchmal sind dies exakte Repliken, wie z. B. 5000 allgemeine Eintrittskarten. Manchmal werden mehrere geprägt, die sehr ähnlich, aber jeweils leicht unterschiedlich sind, wie z. B. ein Ticket mit einem zugewiesenen Sitzplatz. Diese können Peer-to-Peer gekauft und verkauft werden, ohne Ticketvermittler zu bezahlen, und der Käufer hat durch Überprüfung der Vertragsadresse immer die Gewissheit über die Echtheit des Tickets.
 
-Auf ethereum.org **werden NFTs verwendet, um zu zeigen, dass Personen einen sinnvollen Beitrag** zu unserem Github-Repository geleistet haben (die Website programmiert, einen Artikel geschrieben oder geändert haben...), unsere Inhalte übersetzt oder an unseren Community-Calls teilgenommen haben, und wir haben sogar unseren eigenen NFT-Domainnamen. Wenn Sie zu ethereum.org beitragen, können Sie einen [POAP](/glossary/#poap)-NFT beanspruchen. Einige Krypto-Meetups haben POAPs als Tickets verwendet. [Mehr zum Thema Mitwirken](/contributing/#poap). Sie können auch unsere Seite für [ethereum.org-Sammlerstücke](/collectibles/) erkunden, um NFTs für Community-Erfolge zu sehen.
+Auf ethereum.org **werden NFTs verwendet, um zu zeigen, dass Personen einen sinnvollen Beitrag** zu unserem GitHub-Repository geleistet haben (die Website programmiert, einen Artikel geschrieben oder geändert haben...), unsere Inhalte übersetzt oder an unseren Community-Calls teilgenommen haben, und wir haben sogar unseren eigenen NFT-Domainnamen. Wenn Sie zu ethereum.org beitragen, können Sie einen [POAP](/glossary/#poap)-NFT beanspruchen. Einige Krypto-Meetups haben POAPs als Tickets verwendet. [Mehr zum Thema Mitwirken](/contributing/#poap). Sie können auch unsere Seite für [ethereum.org-Sammlerstücke](/collectibles/) erkunden, um NFTs für Community-Erfolge zu sehen.
 
 ![ethereum.org POAP](./poap.png)
 

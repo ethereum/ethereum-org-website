@@ -1,6 +1,6 @@
 ---
-title: Schreiben Sie ein anwendungsspezifisches Plasma, das die Privatsphäre wahrt
-description: In diesem Tutorial bauen wir eine halbgeheime Bank für Einlagen. Die Bank ist eine zentralisierte Komponente; sie kennt den Kontostand jedes Benutzers. Diese Informationen werden jedoch nicht auf der Blockchain gespeichert. Stattdessen veröffentlicht die Bank einen Hash des Zustands. Jedes Mal, wenn eine Transaktion stattfindet, veröffentlicht die Bank den neuen Hash zusammen mit einem Zero-Knowledge-Beweis, dass sie eine signierte Transaktion hat, die den Hash-Zustand in den neuen ändert. Nach dem Lesen dieses Tutorials werden Sie nicht nur verstehen, wie man Zero-Knowledge-Beweise verwendet, sondern auch, warum man sie verwendet und wie man dies sicher tut.
+title: "Schreiben Sie ein anwendungsspezifisches Plasma, das die Privatsphäre wahrt"
+description: "In diesem Tutorial bauen wir eine halbgeheime Bank für Einlagen. Die Bank ist eine zentralisierte Komponente; sie kennt den Kontostand jedes Benutzers. Diese Informationen werden jedoch nicht auf der Blockchain gespeichert. Stattdessen veröffentlicht die Bank einen Hash des Zustands. Jedes Mal, wenn eine Transaktion stattfindet, veröffentlicht die Bank den neuen Hash zusammen mit einem Zero-Knowledge-Beweis, dass sie eine signierte Transaktion hat, die den Hash-Zustand in den neuen ändert. Nach dem Lesen dieses Tutorials werden Sie nicht nur verstehen, wie man Zero-Knowledge-Beweise verwendet, sondern auch, warum man sie verwendet und wie man dies sicher tut."
 author: Ori Pomerantz
 tags: ["Zero-Knowledge", "Server", "Off-Chain", "Privatsphäre"]
 skill: advanced
@@ -313,7 +313,7 @@ Stellen Sie die Konten bereit.
   }
 
   return (
-    <>
+    \<>
         <h2>Transfer</h2>
 ```
 
@@ -1189,7 +1189,7 @@ Rufen Sie den Verifizierer-Vertrag auf, um den Zero-Knowledge-Beweis zu verifizi
         currentStateHash = _publicFields[1];
 
         emit TransactionProcessed(
-            _publicFields[2]<<128 | _publicFields[3],
+            _publicFields[2]<&lt;128 | _publicFields[3],
             _publicFields[0],
             _publicFields[1]
         );

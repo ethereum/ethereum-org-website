@@ -1,6 +1,6 @@
 ---
 title: Danksharding
-description: Erfahren Sie mehr über Proto-Danksharding und Danksharding – zwei aufeinanderfolgende Upgrades zur Skalierung von Ethereum.
+description: "Erfahren Sie mehr über Proto-Danksharding und Danksharding – zwei aufeinanderfolgende Upgrades zur Skalierung von Ethereum."
 lang: de
 summaryPoints:
   - Danksharding ist ein mehrstufiges Upgrade zur Verbesserung der Skalierbarkeit und Kapazität von Ethereum.

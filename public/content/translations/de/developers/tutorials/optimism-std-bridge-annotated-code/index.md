@@ -1,10 +1,10 @@
 ---
 title: "Walkthrough des Optimism-Standardvertrags für kettenübergreifende Brücken"
-description: Wie funktioniert die kettenübergreifende Standardbrücke für Optimism? Warum funktioniert sie auf diese Weise?
+description: "Wie funktioniert die kettenübergreifende Standardbrücke für Optimism? Warum funktioniert sie auf diese Weise?"
 author: Ori Pomerantz
 tags: ["solidity", "kettenübergreifende Brücke", "Ebene 2"]
 skill: intermediate
-breadcrumb: Optimism kettenübergreifende Brücke
+breadcrumb: "Optimism kettenübergreifende Brücke"
 published: 2022-03-30
 lang: de
 ---

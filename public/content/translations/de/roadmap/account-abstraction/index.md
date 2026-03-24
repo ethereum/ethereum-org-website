@@ -1,6 +1,6 @@
 ---
 title: Kontoabstraktion
-description: Ein Überblick über die Pläne von Ethereum, Benutzerkonten einfacher und sicherer zu machen
+description: "Ein Überblick über die Pläne von Ethereum, Benutzerkonten einfacher und sicherer zu machen"
 lang: de
 summaryPoints:
   - Kontoabstraktion macht es viel einfacher, Smart Contract Wallets zu erstellen

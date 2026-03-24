@@ -1,6 +1,6 @@
 ---
-title: Bestätigungen
-description: Eine Beschreibung von Bestätigungen (Attestations) beim Proof-of-Stake-Ethereum.
+title: "Bestätigungen"
+description: "Eine Beschreibung von Bestätigungen (Attestations) beim Proof-of-Stake-Ethereum."
 lang: de
 ---
 

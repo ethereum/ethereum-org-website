@@ -1,6 +1,6 @@
 ---
-title: Ressourcen hinzufügen
-description: Die Richtlinie, die wir beim Hinzufügen von Ressourcen zu ethereum.org anwenden
+title: "Ressourcen hinzufügen"
+description: "Die Richtlinie, die wir beim Hinzufügen von Ressourcen zu ethereum.org anwenden"
 lang: de
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Aktive Bereiche der Ethereum-Forschung
-description: Erkunden Sie verschiedene Bereiche der offenen Forschung und erfahren Sie, wie Sie sich einbringen können.
+description: "Erkunden Sie verschiedene Bereiche der offenen Forschung und erfahren Sie, wie Sie sich einbringen können."
 lang: de
 ---
 

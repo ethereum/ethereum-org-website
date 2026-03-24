@@ -1,6 +1,6 @@
 ---
 title: Das Portal Network
-description: Ein Überblick über das Portal Network – ein in der Entwicklung befindliches Netzwerk zur Unterstützung von ressourcenarmen Anwendungen.
+description: "Ein Überblick über das Portal Network – ein in der Entwicklung befindliches Netzwerk zur Unterstützung von ressourcenarmen Anwendungen."
 lang: de
 ---
 

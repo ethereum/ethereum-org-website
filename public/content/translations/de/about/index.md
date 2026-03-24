@@ -1,6 +1,6 @@
 ---
-title: Über uns
-description: Über das Team, die Community und die Mission von ethereum.org
+title: "Über uns"
+description: "Über das Team, die Community und die Mission von ethereum.org"
 lang: de
 ---
 

@@ -1,12 +1,12 @@
 ---
 title: Ethereums Energieverbrauch
-description: Die grundlegenden Informationen, die Sie benötigen, um den Energieverbrauch von Ethereum zu verstehen.
+description: "Die grundlegenden Informationen, die Sie benötigen, um den Energieverbrauch von Ethereum zu verstehen."
 lang: de
 ---
 
 # Ethereums Energieaufwand {#proof-of-stake-energy}
 
-[Ethereum](/) ist eine grüne Blockchain. Ethereums [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)-Konsensmechanismus verwendet ETH anstelle von [Energie, um das Netzwerk zu sichern](/developers/docs/consensus-mechanisms/pow). Ethereums Energieverbrauch beträgt im gesamten globalen Netzwerk ungefähr [~0,0026 TWh/Jahr](https://carbon-ratings.com/eth-report-2022).
+[Ethereum](/) ist eine grüne Blockchain. Ethereums [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)-Konsensmechanismus verwendet ETH anstelle von [Energie, um das Netzwerk zu sichern](/developers/docs/consensus-mechanisms/pow). Ethereums Energieverbrauch beträgt im gesamten globalen Netzwerk ungefähr [\~0,0026 TWh/Jahr](https://carbon-ratings.com/eth-report-2022).
 
 Die Schätzung des Energieverbrauchs für Ethereum stammt aus einer Studie des [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Sie erstellten Bottom-up-Schätzungen des Stromverbrauchs und des CO2-Fußabdrucks des Ethereum-Netzwerks ([siehe Bericht](https://carbon-ratings.com/eth-report-2022)). Sie maßen den Stromverbrauch verschiedener Blockchain-Knoten mit unterschiedlichen Hardware- und Anwendungssoftware-Konfigurationen. Die geschätzten **2.601 MWh** (0,0026 TWh) für den jährlichen Stromverbrauch des Netzwerks entsprechen jährlichen CO2-Emissionen von **870 Tonnen CO2e** unter Anwendung regionalspezifischer CO2-Intensitätsfaktoren. Dieser Wert ändert sich, wenn Blockchain-Knoten dem Netzwerk beitreten oder es verlassen – Sie können dies anhand eines gleitenden 7-Tage-Durchschnitts des [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum) verfolgen (beachten Sie, dass dort eine leicht abweichende Methode für die Schätzungen verwendet wird – Details dazu finden Sie auf deren Website).
 

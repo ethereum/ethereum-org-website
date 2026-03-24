@@ -1,6 +1,6 @@
 ---
 title: Bereitstellung deines ersten Smart Contracts
-description: Eine Einführung in die Bereitstellung deines ersten Smart Contracts in einem Ethereum-Testnetzwerk
+description: "Eine Einführung in die Bereitstellung deines ersten Smart Contracts in einem Ethereum-Testnetzwerk"
 author: "jdourlens"
 tags: ["Smart Contracts", "remix", "solidity", "Bereitstellung"]
 skill: beginner

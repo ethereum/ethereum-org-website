@@ -1,6 +1,6 @@
 ---
-title: Blöcke
-description: Ein Überblick über Blöcke in der Ethereum-Blockchain – ihre Datenstruktur, warum sie benötigt werden und wie sie erstellt werden.
+title: "Blöcke"
+description: "Ein Überblick über Blöcke in der Ethereum-Blockchain – ihre Datenstruktur, warum sie benötigt werden und wie sie erstellt werden."
 lang: de
 ---
 

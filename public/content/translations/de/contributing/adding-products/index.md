@@ -1,6 +1,6 @@
 ---
-title: Produkte hinzufügen
-description: Die Richtlinie, die wir beim Hinzufügen von Dapps zu ethereum.org anwenden
+title: "Produkte hinzufügen"
+description: "Die Richtlinie, die wir beim Hinzufügen von Dapps zu ethereum.org anwenden"
 lang: de
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Einführung in den Ethereum-Stack
+title: "Einführung in den Ethereum-Stack"
 description: Ein Durchgang durch die verschiedenen Ebenen des Ethereum-Stacks und wie sie zusammenpassen.
 lang: de
 ---

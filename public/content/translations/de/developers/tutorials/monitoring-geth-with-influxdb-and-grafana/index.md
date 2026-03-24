@@ -1,10 +1,10 @@
 ---
-title: Überwachung von Geth mit InfluxDB und Grafana
-description: Richten Sie die Überwachung für Ihren Geth-Blockchain-Knoten mit InfluxDB und Grafana ein, um die Leistung zu verfolgen und Probleme zu identifizieren.
+title: "Überwachung von Geth mit InfluxDB und Grafana"
+description: "Richten Sie die Überwachung für Ihren Geth-Blockchain-Knoten mit InfluxDB und Grafana ein, um die Leistung zu verfolgen und Probleme zu identifizieren."
 author: "Mario Havel"
 tags: ["Anwendungen", "Blockchain-Knoten"]
 skill: intermediate
-breadcrumb: Geth überwachen
+breadcrumb: "Geth überwachen"
 lang: de
 published: 2021-01-13
 ---

@@ -4,9 +4,9 @@ lang: de
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Spielregeln und -zustände können durch die Ethereum-Blockchain und nicht durch die Server eines Studios durchgesetzt werden, was einen Hauptvorteil von Spielen auf der Blockchain darstellt
-summaryPoint2: Jeder kann Mods, Bots oder völlig neue Spiele entwickeln, die auf dieselben offenen Daten auf der Blockchain zugreifen
-summaryPoint3: Speziell entwickelte L2s ermöglichen Echtzeit-Gameplay mit niedrigeren Gebühren, während Frameworks für die Spieleentwicklung den Aufbau von Spielen auf der Blockchain zugänglicher denn je machen
+summaryPoint1: "Spielregeln und -zustände können durch die Ethereum-Blockchain und nicht durch die Server eines Studios durchgesetzt werden, was einen Hauptvorteil von Spielen auf der Blockchain darstellt"
+summaryPoint2: "Jeder kann Mods, Bots oder völlig neue Spiele entwickeln, die auf dieselben offenen Daten auf der Blockchain zugreifen"
+summaryPoint3: "Speziell entwickelte L2s ermöglichen Echtzeit-Gameplay mit niedrigeren Gebühren, während Frameworks für die Spieleentwicklung den Aufbau von Spielen auf der Blockchain zugänglicher denn je machen"
 buttons:
   - content: Mehr erfahren
     toId: gaming-on-ethereum

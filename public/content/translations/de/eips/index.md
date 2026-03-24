@@ -1,6 +1,6 @@
 ---
-title: Ethereum-Verbesserungsvorschläge (EIPs)
-description: Die grundlegenden Informationen, die Sie benötigen, um EIPs zu verstehen
+title: "Ethereum-Verbesserungsvorschläge (EIPs)"
+description: "Die grundlegenden Informationen, die Sie benötigen, um EIPs zu verstehen"
 lang: de
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Dapp-Entwicklungs-Frameworks
-description: Entdecken Sie die Vorteile von Frameworks und vergleichen Sie die verfügbaren Optionen.
+description: "Entdecken Sie die Vorteile von Frameworks und vergleichen Sie die verfügbaren Optionen."
 lang: de
 ---
 
@@ -114,7 +114,7 @@ Bevor Sie sich in Frameworks vertiefen, empfehlen wir Ihnen, zuerst unsere Einf�
 
 **Catapulta –** **_Multi-Chain-Bereitstellungstool für Smart Contracts, automatisiert Verifizierungen in Blocksuchmaschinen, verfolgt bereitgestellte Smart Contracts und teilt Bereitstellungsberichte, Plug-and-Play für Foundry- und Hardhat-Projekte._**
 
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
 **GoldRush (powered by Covalent) –** **_GoldRush bietet die umfassendste Blockchain-Daten-API-Suite für Entwickler, Analysten und Unternehmen. Egal, ob Sie ein DeFi-Dashboard, ein Wallet, einen Trading-Bot, einen KI-Agenten oder eine Compliance-Plattform erstellen, die Daten-APIs bieten schnellen, genauen und entwicklerfreundlichen Zugriff auf die wesentlichen Daten auf der Blockchain, die Sie benötigen._**
 

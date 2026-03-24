@@ -1,13 +1,13 @@
 ---
 title: Der Merge
-description: Erfahren Sie mehr über den Merge – als das Ethereum-Mainnet auf Proof-of-Stake umstellte.
+description: "Erfahren Sie mehr über den Merge – als das Ethereum-Mainnet auf Proof-of-Stake umstellte."
 lang: de
 template: upgrade
 image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Das Ethereum-Mainnet verwendet Proof-of-Stake, aber das war nicht immer so.
-summaryPoint2: Das Upgrade vom ursprünglichen Proof-of-Work-Mechanismus auf Proof-of-Stake wurde „The Merge“ (der Merge) genannt.
-summaryPoint3: Der Merge bezieht sich auf den Zusammenschluss des ursprünglichen Ethereum-Mainnets mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain, die nun als eine einzige Chain existieren.
+summaryPoint2: "Das Upgrade vom ursprünglichen Proof-of-Work-Mechanismus auf Proof-of-Stake wurde „The Merge“ (der Merge) genannt."
+summaryPoint3: "Der Merge bezieht sich auf den Zusammenschluss des ursprünglichen Ethereum-Mainnets mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain, die nun als eine einzige Chain existieren."
 summaryPoint4: Der Merge reduzierte den Energieverbrauch von Ethereum um ~99,95 %.
 ---
 

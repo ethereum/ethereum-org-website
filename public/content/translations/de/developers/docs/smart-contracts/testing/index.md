@@ -1,6 +1,6 @@
 ---
 title: Testen von Smart Contracts
-description: Ein Überblick über Techniken und Überlegungen zum Testen von Ethereum-Smart-Contracts.
+description: "Ein Überblick über Techniken und Überlegungen zum Testen von Ethereum-Smart-Contracts."
 lang: de
 ---
 

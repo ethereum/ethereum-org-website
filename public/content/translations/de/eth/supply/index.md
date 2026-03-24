@@ -1,6 +1,6 @@
 ---
 title: ETH-Angebot und -Emission verstehen
-description: Ein anfängerfreundlicher Leitfaden zum ETH-Angebot und zur ETH-Emission, der Schlüsselkonzepte wie EIPs, PoS und EIP-1559 abdeckt.
+description: "Ein anfängerfreundlicher Leitfaden zum ETH-Angebot und zur ETH-Emission, der Schlüsselkonzepte wie EIPs, PoS und EIP-1559 abdeckt."
 lang: de
 ---
 

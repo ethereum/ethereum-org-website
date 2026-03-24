@@ -1,6 +1,6 @@
 ---
 title: Token-Standards
-description: Entdecken Sie Ethereum-Token-Standards, einschließlich ERC-20, ERC-721 und ERC-1155 für fungible und nicht-fungible Token.
+description: "Entdecken Sie Ethereum-Token-Standards, einschließlich ERC-20, ERC-721 und ERC-1155 für fungible und nicht-fungible Token."
 lang: de
 incomplete: true
 ---

@@ -1,6 +1,6 @@
 ---
-title: Ethereum für Elixir-Entwickler
-description: Erfahren Sie, wie Sie mit Elixir-basierten Projekten und Tools für Ethereum entwickeln.
+title: "Ethereum für Elixir-Entwickler"
+description: "Erfahren Sie, wie Sie mit Elixir-basierten Projekten und Tools für Ethereum entwickeln."
 lang: de
 incomplete: false
 ---

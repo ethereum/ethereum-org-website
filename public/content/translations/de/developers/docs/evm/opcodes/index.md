@@ -1,6 +1,6 @@
 ---
-title: Opcodes für die EVM
-description: Eine Liste aller verfügbaren Opcodes für die Ethereum Virtual Machine.
+title: "Opcodes für die EVM"
+description: "Eine Liste aller verfügbaren Opcodes für die Ethereum Virtual Machine."
 lang: de
 ---
 

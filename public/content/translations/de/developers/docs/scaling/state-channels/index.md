@@ -1,6 +1,6 @@
 ---
 title: State Channels
-description: Eine Einführung in State Channels und Payment Channels als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
+description: "Eine Einführung in State Channels und Payment Channels als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird."
 lang: de
 sidebarDepth: 3
 ---

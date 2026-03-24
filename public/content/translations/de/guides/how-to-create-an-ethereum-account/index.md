@@ -1,6 +1,6 @@
 ---
 title: Wie man ein Ethereum-Konto "erstellt"
-description: Eine Schritt-für-Schritt-Anleitung zur Erstellung eines Ethereum-Kontos mit einem Wallet.
+description: "Eine Schritt-für-Schritt-Anleitung zur Erstellung eines Ethereum-Kontos mit einem Wallet."
 lang: de
 ---
 

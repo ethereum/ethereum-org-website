@@ -1,6 +1,6 @@
 ---
-title: Single-Slot-Finalität
-description: Erklärung der Single-Slot-Finalität
+title: "Single-Slot-Finalität"
+description: "Erklärung der Single-Slot-Finalität"
 lang: de
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Förderprogramme der Ethereum Foundation und der Community
-description: Eine Auflistung der Förderprogramme im gesamten Ethereum-Ökosystem.
+title: "Förderprogramme der Ethereum Foundation und der Community"
+description: "Eine Auflistung der Förderprogramme im gesamten Ethereum-Ökosystem."
 lang: de
 ---
 

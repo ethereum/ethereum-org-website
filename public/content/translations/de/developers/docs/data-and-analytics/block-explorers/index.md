@@ -1,6 +1,6 @@
 ---
 title: Blocksuchmaschinen
-description: Eine Einführung in Blocksuchmaschinen, Ihr Portal in die Welt der Blockchain-Daten, wo Sie Informationen über Transaktionen, Konten, Verträge und mehr abfragen können.
+description: "Eine Einführung in Blocksuchmaschinen, Ihr Portal in die Welt der Blockchain-Daten, wo Sie Informationen über Transaktionen, Konten, Verträge und mehr abfragen können."
 lang: de
 sidebarDepth: 3
 ---

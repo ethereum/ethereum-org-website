@@ -1,6 +1,6 @@
 ---
 title: Zusammensetzbarkeit von Smart Contracts
-description: Erfahren Sie, wie Smart Contracts wie Legosteine kombiniert werden können, um komplexe Dapps durch die Wiederverwendung bestehender Komponenten zu erstellen.
+description: "Erfahren Sie, wie Smart Contracts wie Legosteine kombiniert werden können, um komplexe Dapps durch die Wiederverwendung bestehender Komponenten zu erstellen."
 lang: de
 incomplete: true
 ---

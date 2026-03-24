@@ -1,6 +1,6 @@
 ---
 title: Lerne grundlegende Ethereum-Themen mit SQL
-description: Dieses Tutorial hilft Lesern, grundlegende Ethereum-Konzepte wie Transaktionen, Blöcke und Gas zu verstehen, indem Daten auf der Blockchain mit der Structured Query Language (SQL) abgefragt werden.
+description: "Dieses Tutorial hilft Lesern, grundlegende Ethereum-Konzepte wie Transaktionen, Blöcke und Gas zu verstehen, indem Daten auf der Blockchain mit der Structured Query Language (SQL) abgefragt werden."
 author: "Paul Apivat"
 tags: ["SQL", "Abfragen", "Transaktionen", "data-and-analytics"]
 skill: beginner

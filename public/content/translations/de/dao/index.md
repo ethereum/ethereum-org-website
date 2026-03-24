@@ -1,16 +1,16 @@
 ---
 title: Was ist eine DAO?
 metaTitle: Was ist eine DAO? | Dezentrale Autonome Organisation
-description: Ein Überblick über DAOs auf Ethereum
+description: "Ein Überblick über DAOs auf Ethereum"
 lang: de
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: Eine Darstellung einer DAO, die über einen Vorschlag abstimmt.
-summaryPoint1: Communities im Besitz der Mitglieder ohne zentralisierte Führung.
+alt: "Eine Darstellung einer DAO, die über einen Vorschlag abstimmt."
+summaryPoint1: "Communities im Besitz der Mitglieder ohne zentralisierte Führung."
 summaryPoint2: Ein sicherer Weg, um mit Unbekannten im Internet zusammenzuarbeiten.
-summaryPoint3: Ein sicherer Ort, um Gelder für einen bestimmten Zweck bereitzustellen.
+summaryPoint3: "Ein sicherer Ort, um Gelder für einen bestimmten Zweck bereitzustellen."
 ---
 
 ## Was sind DAOs? {#what-are-daos}

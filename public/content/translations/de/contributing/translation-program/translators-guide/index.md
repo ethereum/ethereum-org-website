@@ -1,7 +1,7 @@
 ---
-title: Leitfaden für Übersetzer
+title: "Leitfaden für Übersetzer"
 lang: de
-description: Anweisungen und Tipps für Übersetzer von ethereum.org
+description: "Anweisungen und Tipps für Übersetzer von ethereum.org"
 ---
 
 # Ethereum.org Übersetzungs-Styleguide {#style-guide}

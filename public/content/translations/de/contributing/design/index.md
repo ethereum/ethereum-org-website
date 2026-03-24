@@ -1,6 +1,6 @@
 ---
-title: Design-Beiträge
-description: Design-Beiträge zu ethereum.org
+title: "Design-Beiträge"
+description: "Design-Beiträge zu ethereum.org"
 lang: de
 ---
 

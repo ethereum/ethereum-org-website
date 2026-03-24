@@ -1,6 +1,6 @@
 ---
 title: Wie man eine Dapp auf einem lokalen Multi-Client-Testnet entwickelt und testet
-description: Dieser Leitfaden führt Sie zunächst durch die Instanziierung und Konfiguration eines lokalen Multi-Client-Ethereum-Testnets, bevor Sie das Testnet verwenden, um eine Dapp bereitzustellen und zu testen.
+description: "Dieser Leitfaden führt Sie zunächst durch die Instanziierung und Konfiguration eines lokalen Multi-Client-Ethereum-Testnets, bevor Sie das Testnet verwenden, um eine Dapp bereitzustellen und zu testen."
 author: "Tedi Mitiku"
 tags:
   [

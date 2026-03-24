@@ -1,6 +1,6 @@
 ---
 title: Was ist Web3 und warum ist es wichtig?
-description: Eine Einführung in Web3 – die nächste Evolutionsstufe des World Wide Web – und warum es von Bedeutung ist.
+description: "Eine Einführung in Web3 – die nächste Evolutionsstufe des World Wide Web – und warum es von Bedeutung ist."
 lang: de
 ---
 

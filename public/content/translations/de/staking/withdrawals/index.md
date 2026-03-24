@@ -1,6 +1,6 @@
 ---
 title: Staking-Abhebungen
-description: Seite, die zusammenfasst, was Staking-Push-Abhebungen sind, wie sie funktionieren und was Staker tun müssen, um ihre Belohnungen zu erhalten
+description: "Seite, die zusammenfasst, was Staking-Push-Abhebungen sind, wie sie funktionieren und was Staker tun müssen, um ihre Belohnungen zu erhalten"
 lang: de
 template: staking
 image: /images/staking/leslie-withdrawal.png

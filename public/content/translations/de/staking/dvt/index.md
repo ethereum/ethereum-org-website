@@ -1,6 +1,6 @@
 ---
 title: Verteilte Validator-Technologie
-description: Die verteilte Validator-Technologie ermöglicht den verteilten Betrieb eines Ethereum-Validators durch mehrere Parteien.
+description: "Die verteilte Validator-Technologie ermöglicht den verteilten Betrieb eines Ethereum-Validators durch mehrere Parteien."
 lang: de
 ---
 

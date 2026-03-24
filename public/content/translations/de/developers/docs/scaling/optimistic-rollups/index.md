@@ -1,6 +1,6 @@
 ---
 title: Optimistic Rollups
-description: Eine Einführung in Optimistic Rollups – eine Skalierungslösung, die von der Ethereum-Community verwendet wird.
+description: "Eine Einführung in Optimistic Rollups – eine Skalierungslösung, die von der Ethereum-Community verwendet wird."
 lang: de
 ---
 
@@ -223,7 +223,7 @@ Optimistic Rollups verwenden verschiedene Techniken, um eine Komprimierung von T
 | Wert | 9 | ~3 |
 | Signatur | ~68 (2 + 33 + 33) | ~0.5 |
 | Von | 0 (aus Signatur wiederhergestellt) | 4 |
-| **Gesamt** | **~112 Bytes** | **~12 Bytes** |
+| **Gesamt** | **\~112 Bytes** | **\~12 Bytes** |
 
 Einige grobe Berechnungen mit diesen Zahlen können helfen, die Skalierungsverbesserungen zu zeigen, die ein Optimistic Rollup bietet:
 

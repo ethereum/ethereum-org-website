@@ -1,6 +1,6 @@
 ---
 title: Blockchain-Knoten und Clients
-description: Ein Überblick über Ethereum-Blockchain-Knoten und Client-Software sowie darüber, wie man einen Blockchain-Knoten einrichtet und warum man dies tun sollte.
+description: "Ein Überblick über Ethereum-Blockchain-Knoten und Client-Software sowie darüber, wie man einen Blockchain-Knoten einrichtet und warum man dies tun sollte."
 lang: de
 sidebarDepth: 2
 ---

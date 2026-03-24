@@ -1,7 +1,7 @@
 ---
 title: Smart Contracts
 metaTitle: "Smart Contracts: Was sie sind und ihre Vorteile"
-description: Eine nicht-technische Einführung in Smart Contracts
+description: "Eine nicht-technische Einführung in Smart Contracts"
 lang: de
 ---
 
