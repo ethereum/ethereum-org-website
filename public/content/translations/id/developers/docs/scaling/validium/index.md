@@ -5,7 +5,7 @@ lang: id
 sidebarDepth: 3
 ---
 
-Validium adalah [solusi peningkatan](/developers/docs/scaling/) yang menegakkan integritas transaksi menggunakan bukti validitas seperti [ZK-rollup](/developers/docs/scaling/zk-rollups/), tetapi tidak menyimpan data transaksi di Mainnet [Ethereum](/). Meskipun ketersediaan data offchain memperkenalkan pertukaran (trade-off), hal ini dapat mengarah pada peningkatan skalabilitas yang masif (validium dapat memproses [~9.000 transaksi, atau lebih, per detik](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Validium adalah [solusi peningkatan](/developers/docs/scaling/) yang menegakkan integritas transaksi menggunakan bukti validitas seperti [ZK-rollup](/developers/docs/scaling/zk-rollups/), tetapi tidak menyimpan data transaksi di Mainnet [Ethereum](/). Meskipun ketersediaan data offchain memperkenalkan pertukaran (trade-off), hal ini dapat mengarah pada peningkatan skalabilitas yang masif (validium dapat memproses [\~9.000 transaksi, atau lebih, per detik](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Prasyarat {#prerequisites}
 

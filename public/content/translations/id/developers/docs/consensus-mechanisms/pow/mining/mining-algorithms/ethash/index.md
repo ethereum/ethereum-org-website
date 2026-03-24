@@ -8,7 +8,7 @@ lang: id
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash adalah algoritma penambangan proof-of-work Ethereum. Proof-of-work kini telah **dimatikan sepenuhnya** dan Ethereum sekarang diamankan menggunakan [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) sebagai gantinya. Baca lebih lanjut tentang [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) dan [mengunci](/staking/). Halaman ini hanya untuk kepentingan sejarah!  
+   Ethash adalah algoritma penambangan proof-of-work Ethereum. Proof-of-work kini telah **dimatikan sepenuhnya** dan Ethereum sekarang diamankan menggunakan [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) sebagai gantinya. Baca lebih lanjut tentang [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) dan [mengunci](/staking/). Halaman ini hanya untuk kepentingan sejarah!
 </AlertDescription>
 </AlertContent>
 </Alert>

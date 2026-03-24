@@ -99,7 +99,7 @@ Mode sinkronisasi dan klien yang Anda pilih akan memengaruhi persyaratan ruang, 
 | Nethermind | 500GB+                  | 12TB+                     |
 | Reth       | N/A                     | 2.2TB+                    |
 
-- Catatan: Erigon dan Reth tidak menawarkan snap sync, tetapi Pemangkasan Penuh (Full Pruning) dimungkinkan (~2TB untuk Erigon, ~1.2TB untuk Reth)
+- Catatan: Erigon dan Reth tidak menawarkan snap sync, tetapi Pemangkasan Penuh (Full Pruning) dimungkinkan (\~2TB untuk Erigon, ~1.2TB untuk Reth)
 
 Untuk klien konsensus, persyaratan ruang juga bergantung pada implementasi klien dan fitur yang diaktifkan (misalnya, pemotong validator) tetapi umumnya perhitungkan tambahan 200GB yang diperlukan untuk data beacon. Dengan sejumlah besar validator, beban bandwidth juga bertambah. Anda dapat menemukan [detail tentang persyaratan klien konsensus dalam analisis ini](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
@@ -233,7 +233,7 @@ Bagian ini akan memandu Anda melalui memulai klien eksekusi. Ini hanya berfungsi
 
 Harap diingat bahwa ini hanyalah contoh dasar, semua pengaturan lainnya akan diatur ke default. Perhatikan dokumentasi setiap klien untuk mempelajari tentang nilai default, pengaturan, dan fitur. Untuk fitur lebih lanjut, misalnya untuk menjalankan validator, pemantauan, dll., silakan merujuk ke dokumentasi klien tertentu.
 
-> Perhatikan bahwa garis miring terbalik `\` dalam contoh hanya untuk tujuan pemformatan; bendera konfigurasi dapat didefinisikan dalam satu baris.
+> Perhatikan bahwa garis miring terbalik `` dalam contoh hanya untuk tujuan pemformatan; bendera konfigurasi dapat didefinisikan dalam satu baris.
 
 ##### Menjalankan Besu
 

@@ -23,7 +23,6 @@ title="Ringkasan singkat penerbitan ETH">
 - Penerbitan mengunci yang tepat berfluktuasi berdasarkan jumlah total ETH yang di-stake
 - **Sejak The Merge, hanya tersisa ~1.700 ETH/hari, menurunkan total penerbitan ETH baru sebesar ~88%**
 - Pembakaran: Ini berfluktuasi sesuai dengan permintaan jaringan. _Jika_ harga gas rata-rata setidaknya 16 gwei diamati untuk hari tertentu, ini secara efektif mengimbangi ~1.700 ETH yang diterbitkan kepada validator dan membawa inflasi ETH bersih menjadi nol atau kurang untuk hari itu.
-
 </Card>
 
 ## Pra-merge (historis) {#pre-merge}
@@ -40,18 +39,18 @@ Validator di Beacon Chain diberi imbalan ETH karena mengesahkan status rantai da
 
 ### Rincian penerbitan pra-merge {#pre-merge-issuance-breakdown}
 
-Total pasokan ETH: **~120.520.000 ETH** (pada saat The Merge di bulan September 2022)
+Total pasokan ETH: **\~120.520.000 ETH** (pada saat The Merge di bulan September 2022)
 
 **Penerbitan lapisan eksekusi:**
 
-- Diperkirakan sebesar 2,08 ETH per 13,3 detik\*: **~4.930.000** ETH diterbitkan dalam setahun
+- Diperkirakan sebesar 2,08 ETH per 13,3 detik\*: **\~4.930.000** ETH diterbitkan dalam setahun
 - Menghasilkan tingkat inflasi **sekitar 4,09%** (4,93 juta per tahun / total 120,5 juta)
 - \*Ini termasuk 2 ETH per blok kanonikal, ditambah rata-rata 0,08 ETH dari waktu ke waktu dari blok ommer. Juga menggunakan 13,3 detik, target waktu blok dasar tanpa pengaruh apa pun dari [bom kesulitan (difficulty bomb)](/glossary/#difficulty-bomb). ([Lihat sumber](https://bitinfocharts.com/ethereum/))
 
 **Penerbitan lapisan konsensus:**
 
 - Menggunakan total 14.000.000 ETH yang di-stake, tingkat penerbitan ETH adalah sekitar 1.700 ETH/hari ([Lihat sumber](https://ultrasound.money/))
-- Menghasilkan **~620.500** ETH yang diterbitkan dalam setahun
+- Menghasilkan **\~620.500** ETH yang diterbitkan dalam setahun
 - Menghasilkan tingkat inflasi **sekitar 0,52%** (620,5 ribu per tahun / total 119,3 juta)
 
 <Alert variant="update">
@@ -59,9 +58,9 @@ Total pasokan ETH: **~120.520.000 ETH** (pada saat The Merge di bulan September 
 <AlertDescription>
 **Total tingkat penerbitan tahunan (pra-merge): ~4,61%** (4,09% + 0,52%)
 
-**~88,7%** dari penerbitan diberikan kepada penambang di lapisan eksekusi (4,09 / 4,61 * 100)
+**\~88,7%** dari penerbitan diberikan kepada penambang di lapisan eksekusi (4,09 / 4,61 * 100)
 
-**~11,3%** diterbitkan kepada staker di lapisan konsensus (0,52 / 4,61 * 100)
+**\~11,3%** diterbitkan kepada staker di lapisan konsensus (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -86,16 +85,16 @@ Semakin banyak validator yang menarik diri, jumlah maksimum validator yang kelua
 
 ### Rincian inflasi pasca-merge {#post-merge-inflation-breakdown}
 
-- [Total pasokan ETH](/eth/supply/): **~120.520.000 ETH** (pada saat The Merge di bulan September 2022)
+- [Total pasokan ETH](/eth/supply/): **\~120.520.000 ETH** (pada saat The Merge di bulan September 2022)
 - Penerbitan lapisan eksekusi: **0**
-- Penerbitan lapisan konsensus: Sama seperti di atas, tingkat penerbitan tahunan **~0,52%** (dengan total 14 juta ETH yang di-stake)
+- Penerbitan lapisan konsensus: Sama seperti di atas, tingkat penerbitan tahunan **\~0,52%** (dengan total 14 juta ETH yang di-stake)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Total tingkat penerbitan tahunan: **~0,52%**
+Total tingkat penerbitan tahunan: **\~0,52%**
 
-Pengurangan bersih dalam penerbitan ETH tahunan: **~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
+Pengurangan bersih dalam penerbitan ETH tahunan: **\~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

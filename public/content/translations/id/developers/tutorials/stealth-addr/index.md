@@ -279,7 +279,7 @@ Nilai pemindaian adalah bagian dari rahasia bersama (*S = GR<sub>priv</sub>V<sub
 
 ```rust
     let (address, r_pub, scan) = 
-        generate_stealth_address(&str_to_array::<66>(stealth_address)?);
+        generate_stealth_address(&str_to_array::&lt;66>(stealth_address)?);
 ```
 
 Kita menggunakan [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) dari pustaka.

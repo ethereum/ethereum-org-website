@@ -22,13 +22,11 @@ Ini mahal karena diproses oleh semua node Ethereum dan hidup onchain selamanya, 
 <ExpandableCard title="Mengapa blob membuat rollup menjadi lebih murah?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 Rollup adalah cara untuk melakukan peningkatan Ethereum dengan mengelompokkan transaksi secara offchain dan kemudian memposting hasilnya ke Ethereum. Sebuah rollup pada dasarnya terdiri dari dua bagian: data dan pemeriksaan eksekusi. Data adalah urutan penuh transaksi yang sedang diproses oleh rollup untuk menghasilkan perubahan status yang diposting ke Ethereum. Pemeriksaan eksekusi adalah eksekusi ulang dari transaksi tersebut oleh aktor yang jujur (seorang "pembukti" atau "prover") untuk memastikan bahwa perubahan status yang diusulkan adalah benar. Untuk melakukan pemeriksaan eksekusi, data transaksi harus tersedia cukup lama agar siapa pun dapat mengunduh dan memeriksanya. Ini berarti setiap perilaku tidak jujur oleh sequencer rollup dapat diidentifikasi dan ditantang oleh pembukti. Namun, data tersebut tidak perlu tersedia selamanya.
-
 </ExpandableCard>
 
 <ExpandableCard title="Mengapa tidak apa-apa untuk menghapus data blob?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 Rollup memposting komitmen terhadap data transaksi mereka secara onchain dan juga membuat data aktual tersedia dalam blob data. Ini berarti pembukti dapat memeriksa bahwa komitmen tersebut valid atau menantang data yang mereka anggap salah. Pada tingkat node, blob data disimpan di klien konsensus. Klien konsensus memberikan pengesahan bahwa mereka telah melihat data tersebut dan bahwa data itu telah disebarkan ke seluruh jaringan. Jika data disimpan selamanya, klien ini akan membengkak dan menyebabkan persyaratan perangkat keras yang besar untuk menjalankan node. Sebaliknya, data secara otomatis dipangkas dari node setiap 18 hari. Pengesahan klien konsensus menunjukkan bahwa ada kesempatan yang cukup bagi pembukti untuk memverifikasi data. Data aktual dapat disimpan secara offchain oleh operator rollup, pengguna, atau pihak lainnya.
-
 </ExpandableCard>
 
 ### Bagaimana data blob diverifikasi? {#how-are-blobs-verified}
@@ -48,13 +46,11 @@ Upacara KZG EIP-4844 terbuka untuk umum dan puluhan ribu orang berpartisipasi un
 <ExpandableCard title="Untuk apa angka acak dari upacara KZG digunakan?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 Ketika sebuah rollup memposting data dalam blob, mereka memberikan "komitmen" yang mereka posting secara onchain. Komitmen ini adalah hasil dari mengevaluasi kecocokan polinomial ke data pada titik-titik tertentu. Titik-titik ini ditentukan oleh angka acak yang dihasilkan dalam upacara KZG. Pembukti kemudian dapat mengevaluasi polinomial pada titik yang sama untuk memverifikasi data - jika mereka mendapatkan nilai yang sama maka data tersebut benar.
-
 </ExpandableCard>
 
 <ExpandableCard title="Mengapa data acak KZG harus tetap rahasia?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 Jika seseorang mengetahui lokasi acak yang digunakan untuk komitmen, mudah bagi mereka untuk menghasilkan polinomial baru yang cocok pada titik-titik spesifik tersebut (yaitu, sebuah "tabrakan"). Ini berarti mereka dapat menambah atau menghapus data dari blob dan tetap memberikan bukti yang valid. Untuk mencegah hal ini, alih-alih memberikan lokasi rahasia yang sebenarnya kepada pembukti, mereka sebenarnya menerima lokasi yang dibungkus dalam "kotak hitam" kriptografi menggunakan kurva eliptik. Ini secara efektif mengacak nilai sedemikian rupa sehingga nilai aslinya tidak dapat direkayasa balik, tetapi dengan beberapa aljabar yang cerdas, pembukti dan pemverifikasi masih dapat mengevaluasi polinomial pada titik yang diwakilinya.
-
 </ExpandableCard>
 
 <Alert variant="warning" className="mb-8">
@@ -70,13 +66,11 @@ Cara kerjanya adalah dengan memperluas blob yang dilampirkan ke blok dari enam (
 <ExpandableCard title="Mengapa Danksharding memerlukan pemisahan pengusul-pembangun?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 Pemisahan pengusul-pembangun diperlukan untuk mencegah validator individu harus menghasilkan komitmen dan bukti yang mahal untuk 32MB data blob. Ini akan memberikan terlalu banyak tekanan pada staker rumahan dan mengharuskan mereka untuk berinvestasi dalam perangkat keras yang lebih kuat, yang merugikan desentralisasi. Sebaliknya, pembangun blok khusus mengambil tanggung jawab untuk pekerjaan komputasi yang mahal ini. Kemudian, mereka membuat blok mereka tersedia bagi pengusul blok untuk disiarkan. Pengusul blok cukup memilih blok yang paling menguntungkan. Siapa pun dapat memverifikasi blob dengan murah dan cepat, yang berarti setiap validator normal dapat memeriksa bahwa pembangun blok berperilaku jujur. Ini memungkinkan blob besar diproses tanpa mengorbankan desentralisasi. Pembangun blok yang berperilaku buruk dapat dengan mudah dikeluarkan dari jaringan dan mengalami pemotongan - yang lain akan menggantikan tempat mereka karena membangun blok adalah aktivitas yang menguntungkan.
-
 </ExpandableCard>
 
 <ExpandableCard title="Mengapa Danksharding memerlukan pengambilan sampel ketersediaan data?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 Pengambilan sampel ketersediaan data diperlukan bagi validator untuk memverifikasi data blob dengan cepat dan efisien. Menggunakan pengambilan sampel ketersediaan data, validator dapat sangat yakin bahwa data blob tersedia dan dikomit dengan benar. Setiap validator dapat mengambil sampel secara acak hanya beberapa titik data dan membuat bukti, yang berarti tidak ada validator yang harus memeriksa seluruh blob. Jika ada data yang hilang, itu akan diidentifikasi dengan cepat dan blob ditolak.
-
 </ExpandableCard>
 
 ### Kemajuan saat ini {#current-progress}

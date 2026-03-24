@@ -14,7 +14,6 @@ Penipuan mata uang kripto menargetkan orang-orang dari semua tingkat pengalaman,
 <AlertDescription>
 
 **Tidak ada yang dapat membatalkan transaksi blockchain.** Jika seseorang menghubungi Anda dan mengklaim bahwa mereka dapat memulihkan dana Anda dengan imbalan biaya, itu hampir pasti merupakan penipuan kedua. Lihat [penipuan pemulihan](#recovery-scams) di bawah ini.
-
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -97,7 +96,6 @@ Penipu membuat giveaway palsu yang menjanjikan untuk melipatgandakan ETH Anda at
 **Ingat:** Vitalik dan tokoh terkemuka lainnya tidak akan pernah meminta Anda untuk mengirimi mereka ETH.
 
 [Lebih lanjut tentang penipuan umum](/security/#common-scams)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -115,7 +113,6 @@ Penipu menyamar sebagai anggota tim Ethereum, moderator, atau agen dukungan di D
 - Moderator asli tidak akan pernah mengirim DM kepada Anda terlebih dahulu
 - Jangan pernah membagikan frasa seed atau kunci pribadi Anda kepada siapa pun, untuk alasan apa pun
 - Jangan pernah mengeklik tautan yang dikirim dalam pesan yang tidak diminta
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -130,7 +127,6 @@ Penipuan pemulihan secara khusus menargetkan orang-orang yang telah kehilangan d
 Mereka berjanji untuk melacak dan memulihkan kripto Anda yang dicuri dengan biaya di muka. Setelah Anda membayar, mereka menghilang.
 
 **Tidak ada layanan sah yang dapat membatalkan transaksi blockchain.** Siapa pun yang menjanjikan hal ini berbohong. Ini adalah salah satu penipuan lanjutan yang paling umum.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -152,7 +148,6 @@ Situs phishing terlihat identik dengan aplikasi dompet, bursa, atau platform DeF
 <DocLink href="/guides/how-to-id-scam-tokens/">
   Cara mengidentifikasi token penipuan
 </DocLink>
-
 </ExpandableCard>
 
 <DocLink href="/security/">

@@ -40,7 +40,6 @@ Jika akun Anda berada di bursa terpusat seperti Coinbase, Binance, atau Kraken, 
 <AlertDescription>
 
 **Jangan pernah membagikan frasa seed Anda kepada siapa pun** yang mengklaim dapat membantu Anda memulihkan dompet Anda. Ini adalah salah satu taktik penipuan yang paling umum. Tidak ada layanan sah yang akan pernah meminta frasa seed Anda.
-
 </AlertDescription>
 </AlertContent>
 </Alert>

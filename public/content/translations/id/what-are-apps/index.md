@@ -51,7 +51,6 @@ Aplikasi didukung oleh kontrak pintar — potongan kode yang hidup di blockchain
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![Ilustrasi pengembang Ethereum membangun blok](./developers-eth-blocks.png)
-
 </div>
 
 ## Aplikasi Ethereum seperti lego {#ethereum-apps-are-like-legos}

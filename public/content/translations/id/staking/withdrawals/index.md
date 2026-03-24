@@ -162,7 +162,6 @@ eventName="read more">
 Jika Anda adalah bagian dari [kolam staking](/staking/pools/) atau memegang token mengunci, Anda harus memeriksa dengan penyedia Anda untuk detail lebih lanjut tentang bagaimana penarikan mengunci ditangani, karena setiap layanan beroperasi secara berbeda.
 
 Secara umum, pengguna harus bebas untuk mengklaim kembali ETH yang mereka stake yang mendasarinya, atau mengubah penyedia mengunci mana yang mereka gunakan. Jika kolam tertentu menjadi terlalu besar, dana dapat dikeluarkan, ditebus, dan di-stake ulang dengan <a href="https://rated.network/">penyedia yang lebih kecil</a>. Atau, jika Anda telah mengumpulkan cukup ETH, Anda dapat [melakukan stake dari rumah](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -182,7 +181,6 @@ eventName="read more">
 Tidak, jika validator Anda masih aktif di jaringan, penarikan penuh tidak akan terjadi secara otomatis. Ini memerlukan inisiasi keluar sukarela secara manual.
 
 Setelah validator menyelesaikan proses keluar, dan dengan asumsi akun memiliki kredensial penarikan, sisa saldo <em>kemudian</em> akan ditarik selama <a href="#validator-sweeping">penyapuan validator</a> berikutnya.
-
 </ExpandableCard>
 
 <ExpandableCard title="Dapatkah saya menarik jumlah khusus?"
@@ -203,7 +201,6 @@ eventName="read more">
 Operator validator disarankan untuk mengunjungi halaman <a href="https://launchpad.ethereum.org/withdrawals/">Penarikan Staking Launchpad</a> di mana Anda akan menemukan detail lebih lanjut tentang cara menyiapkan validator Anda untuk penarikan, waktu acara, dan detail lebih lanjut tentang bagaimana penarikan berfungsi.
 
 Untuk mencoba pengaturan Anda di testnet terlebih dahulu, kunjungi <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> untuk memulai.
-
 </ExpandableCard>
 
 <ExpandableCard

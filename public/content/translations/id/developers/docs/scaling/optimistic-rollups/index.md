@@ -1,6 +1,6 @@
 ---
 title: Optimistic Rollup
-description: Pengantar tentang optimistic rollup—solusi peningkatan yang digunakan oleh komunitas Ethereum.
+description: "Pengantar tentang optimistic rollup—solusi peningkatan yang digunakan oleh komunitas Ethereum."
 lang: id
 ---
 
@@ -223,7 +223,7 @@ Optimistic rollup menggunakan beberapa teknik untuk mencapai kompresi data trans
 | Nilai     | 9                      | ~3            |
 | Tanda tangan | ~68 (2 + 33 + 33)   | ~0.5          |
 | Dari      | 0 (dipulihkan dari sig)| 4             |
-| **Total** | **~112 byte**          | **~12 byte**  |
+| **Total** | **\~112 byte**          | **\~12 byte**  |
 
 Melakukan beberapa perhitungan kasar pada angka-angka ini dapat membantu menunjukkan peningkatan skalabilitas yang diberikan oleh optimistic rollup:
 

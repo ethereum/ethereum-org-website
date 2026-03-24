@@ -1,6 +1,6 @@
 ---
 title: Transaksi
-description: Gambaran umum tentang transaksi Ethereum – bagaimana cara kerjanya, struktur datanya, dan cara mengirimkannya melalui sebuah aplikasi.
+description: "Gambaran umum tentang transaksi Ethereum – bagaimana cara kerjanya, struktur datanya, dan cara mengirimkannya melalui sebuah aplikasi."
 lang: id
 ---
 

@@ -49,7 +49,8 @@ Kami menyarankan Anda untuk menyegarkan (refresh) alat pencabut setelah beberapa
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Ingin mempelajari lebih lanjut?</div>
+  <div>Ingin mempelajari lebih lanjut?
+</div>
   <ButtonLink href="/guides/">
     Lihat panduan kami yang lain
   </ButtonLink>

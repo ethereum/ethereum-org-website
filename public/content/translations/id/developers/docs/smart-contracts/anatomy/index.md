@@ -1,6 +1,6 @@
 ---
 title: Anatomi kontrak pintar
-description: Pandangan mendalam tentang anatomi kontrak pintar – fungsi, data, dan variabel.
+description: "Pandangan mendalam tentang anatomi kontrak pintar – fungsi, data, dan variabel."
 lang: id
 ---
 

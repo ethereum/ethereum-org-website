@@ -1,6 +1,6 @@
 ---
 title: Akun Ethereum
-description: Penjelasan tentang akun Ethereum – struktur datanya dan hubungannya dengan kriptografi pasangan kunci.
+description: "Penjelasan tentang akun Ethereum – struktur datanya dan hubungannya dengan kriptografi pasangan kunci."
 lang: id
 ---
 

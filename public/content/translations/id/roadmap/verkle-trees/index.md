@@ -18,7 +18,6 @@ Pohon Verkle adalah langkah penting di jalur menuju klien Ethereum tanpa status 
 <ExpandableCard title="Mengapa kita menginginkan klien tanpa status?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Klien Ethereum saat ini menggunakan struktur data yang dikenal sebagai Patricia Merkle Trie untuk menyimpan data statusnya. Informasi tentang akun individu disimpan sebagai daun (leaves) pada trie dan pasangan daun di-hash berulang kali hingga hanya tersisa satu hash. Hash akhir ini dikenal sebagai "akar" (root). Untuk memverifikasi blok, klien Ethereum mengeksekusi semua transaksi dalam sebuah blok dan memperbarui trie status lokal mereka. Blok dianggap valid jika akar dari pohon lokal identik dengan yang disediakan oleh pengusul blok, karena setiap perbedaan dalam komputasi yang dilakukan oleh pengusul blok dan node yang memvalidasi akan menyebabkan hash akar menjadi sama sekali berbeda. Masalahnya adalah memverifikasi blockchain mengharuskan setiap klien untuk menyimpan seluruh trie status untuk blok kepala (head block) dan beberapa blok historis (default di Geth adalah menyimpan data status untuk 128 blok di belakang kepala). Hal ini mengharuskan klien untuk memiliki akses ke ruang disk dalam jumlah besar, yang merupakan hambatan untuk menjalankan node penuh pada perangkat keras yang murah dan berdaya rendah. Solusi untuk ini adalah memperbarui trie status ke struktur yang lebih efisien (pohon Verkle) yang dapat diringkas menggunakan "saksi" kecil ke data yang dapat dibagikan alih-alih data status penuh. Memformat ulang data status menjadi pohon Verkle adalah batu loncatan untuk beralih ke klien tanpa status.
-
 </ExpandableCard>
 
 ## Apa itu saksi dan mengapa kita membutuhkannya? {#what-is-a-witness}
@@ -34,7 +33,6 @@ Di bawah skema komitmen polinomial, saksi memiliki ukuran yang dapat dikelola ya
 <ExpandableCard title="Seberapa banyak tepatnya pohon Verkle dapat mengurangi ukuran saksi?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 Ukuran saksi bervariasi tergantung pada jumlah daun yang disertakannya. Dengan asumsi saksi mencakup 1000 daun, saksi untuk Merkle trie akan menjadi sekitar 3,5MB (dengan asumsi 7 tingkat pada trie). Saksi untuk data yang sama dalam pohon Verkle (dengan asumsi 4 tingkat pada pohon) akan menjadi sekitar 150 kB - **sekitar 23x lebih kecil**. Pengurangan ukuran saksi ini akan memungkinkan saksi klien tanpa status menjadi cukup kecil. Saksi polinomial berukuran 0,128 -1 kB tergantung pada komitmen polinomial spesifik mana yang digunakan.
-
 </ExpandableCard>
 
 ## Bagaimana struktur pohon Verkle? {#what-is-the-structure-of-a-verkle-tree}

@@ -130,7 +130,6 @@ Ini adalah beberapa pertanyaan paling umum tentang mengunci yang patut diketahui
 <ExpandableCard title="Apa itu validator?">
 
 Sebuah <em>validator</em> adalah entitas virtual yang hidup di Ethereum dan berpartisipasi dalam konsensus protokol Ethereum. Validator diwakili oleh saldo, kunci publik, dan properti lainnya. Sebuah <em>klien validator</em> adalah perangkat lunak yang bertindak atas nama validator dengan memegang dan menggunakan kunci pribadinya. Satu klien validator dapat memegang banyak pasangan kunci, mengendalikan banyak validator.
-
 </ExpandableCard>
 
 <ExpandableCard title="Bisakah saya mendepositkan lebih dari 32 ETH?">

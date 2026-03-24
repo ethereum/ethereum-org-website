@@ -312,7 +312,7 @@ Sediakan akun.
   }
 
   return (
-    <>
+    \<>
         <h2>Transfer</h2>
 ```
 
@@ -1188,7 +1188,7 @@ Panggil kontrak pemverifikasi untuk memverifikasi bukti zero-knowledge. Langkah 
         currentStateHash = _publicFields[1];
 
         emit TransactionProcessed(
-            _publicFields[2]<<128 | _publicFields[3],
+            _publicFields[2]<&lt;128 | _publicFields[3],
             _publicFields[0],
             _publicFields[1]
         );

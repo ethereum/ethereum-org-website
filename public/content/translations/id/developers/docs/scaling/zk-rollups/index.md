@@ -1,6 +1,6 @@
 ---
 title: Zero-knowledge rollup
-description: Pengantar zero-knowledge rollup—solusi peningkatan yang digunakan oleh komunitas Ethereum.
+description: "Pengantar zero-knowledge rollup—solusi peningkatan yang digunakan oleh komunitas Ethereum."
 lang: id
 ---
 

@@ -20,7 +20,6 @@ Ini bukanlah mimpi yang jauh—ini terjadi hari ini di Ethereum. Meskipun lembag
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Logo Ethereum di layar komputer](./computer.png)
-
 </div>
 
 ## Pengiriman uang: transfer internasional yang lebih murah {#remittances}
@@ -61,7 +60,8 @@ Di negara-negara di mana alat pembayaran mereka telah terputus dari belahan duni
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Buat akun Ethereum Anda dengan aplikasi dompet hari ini.</div>
+  <div>Buat akun Ethereum Anda dengan aplikasi dompet hari ini.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Mulai
   </ButtonLink>
@@ -143,7 +143,6 @@ Ada juga waktu respons yang serupa untuk tragedi yang terjadi di India dan Ukrai
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Gambar Robot Ethereum](./eth_robot.png)
-
 </div>
 
 ## Ethereum vs fiat {#ethereum-vs-fiat}
@@ -190,7 +189,6 @@ Dengan Ethereum, semua orang dapat melihat bagaimana uang bergerak dan bagaimana
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![gambar berjalan](./walking.png)
-
 </div>
 
 Meskipun mata uang fiat memiliki keuntungan berupa penerimaan dan stabilitas yang luas, Ethereum menawarkan manfaat unik yang menjadikannya pilihan menarik untuk jenis transaksi tertentu.
@@ -200,7 +198,8 @@ Dari memfasilitasi bantuan bencana yang cepat hingga memberdayakan pekerja globa
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Waktunya untuk mendapatkan akun Ethereum Anda sendiri.</div>
+  <div>Waktunya untuk mendapatkan akun Ethereum Anda sendiri.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Mulai!
   </ButtonLink>

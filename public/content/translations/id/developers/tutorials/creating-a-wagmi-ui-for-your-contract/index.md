@@ -224,7 +224,7 @@ JSX dari komponen React _harus_ mengembalikan satu komponen HTML. Ketika kita me
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+</div>
 ```
 
 Berikan informasi tentang koneksi saat ini. Di dalam JSX, `{<expression>}` berarti mengevaluasi ekspresi sebagai JavaScript.
@@ -251,7 +251,7 @@ Di sini kita memiliki dua tag semacam itu, `<Greeter />` (yang sebenarnya berisi
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+</div>
       )}
 ```
 
@@ -290,9 +290,12 @@ Dalam JSX, tag "saudara" (tag yang diturunkan dari induk yang sama) perlu memili
 Tombol-tombol konektor.
 
 ```tsx
-          <div>{status}</div>
-          <div>{error?.message}</div>
-        </div>
+          <div>{status}
+</div>
+          <div>{error?.message}
+</div>
+ 
+</div>
       )}
 ```
 

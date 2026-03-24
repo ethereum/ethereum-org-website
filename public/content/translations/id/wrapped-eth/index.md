@@ -1,6 +1,6 @@
 ---
 title: Apa itu Wrapped Ether (WETH)
-description: Pengantar tentang Wrapped ether (WETH)—pembungkus yang kompatibel dengan ERC20 untuk ether (ETH). 
+description: "Pengantar tentang Wrapped ether (WETH)—pembungkus yang kompatibel dengan ERC20 untuk ether (ETH)."
 lang: id
 ---
 
@@ -8,7 +8,8 @@ lang: id
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Hubungkan dompet Anda untuk membungkus (wrap) atau membuka bungkus (unwrap) ETH di chain mana pun di [WrapETH.com](https://www.wrapeth.com/)</div>
+<div>Hubungkan dompet Anda untuk membungkus (wrap) atau membuka bungkus (unwrap) ETH di chain mana pun di [WrapETH.com](https://www.wrapeth.com/)
+</div>
 </Alert>
 
 Ether (ETH) adalah mata uang utama Ethereum. Ini digunakan untuk beberapa tujuan seperti mengunci (staking), sebagai mata uang, dan membayar biaya gas untuk komputasi. **WETH secara efektif adalah bentuk ETH yang ditingkatkan dengan beberapa fungsionalitas tambahan yang diperlukan oleh banyak aplikasi dan [token ERC-20](/glossary/#erc-20)**, yang merupakan jenis aset digital lain di Ethereum. Untuk bekerja dengan token-token ini, ETH harus mengikuti aturan yang sama dengan mereka, yang dikenal sebagai standar ERC-20.
@@ -41,19 +42,16 @@ Anda dapat membuka bungkus (unwrap) WETH menjadi ETH dengan menggunakan kontrak 
 <ExpandableCard title="Apakah Anda membayar untuk membungkus/membuka bungkus ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 Anda membayar biaya gas untuk membungkus (wrap) atau membuka bungkus (unwrap) ETH menggunakan kontrak WETH.
-
 </ExpandableCard>
 
 <ExpandableCard title="Apakah WETH aman?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH umumnya dianggap aman karena didasarkan pada kontrak pintar yang sederhana dan telah teruji. Kontrak WETH juga telah diverifikasi secara formal, yang merupakan standar keamanan tertinggi untuk kontrak pintar di Ethereum.
-
 </ExpandableCard>
 
 <ExpandableCard title="Mengapa saya melihat token WETH yang berbeda?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Selain [implementasi kanonikal WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) yang dijelaskan di halaman ini, ada varian lain di luar sana. Ini mungkin token kustom yang dibuat oleh pengembang aplikasi atau versi yang diterbitkan di blockchain lain, dan mungkin berperilaku berbeda atau memiliki properti keamanan yang berbeda. **Selalu periksa kembali informasi token untuk mengetahui implementasi WETH mana yang sedang Anda gunakan untuk berinteraksi.**
-
 </ExpandableCard>
 
 <ExpandableCard title="Apa saja kontrak WETH di jaringan lain?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
@@ -61,7 +59,6 @@ Selain [implementasi kanonikal WETH](https://etherscan.io/token/0xc02aaa39b223fe
 - [Ethereum Mainnet](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
-
 </ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}

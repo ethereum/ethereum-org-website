@@ -15,9 +15,9 @@ Ethereum ditingkatkan menggunakan [layer 2](/layer-2/#rollups) (juga dikenal seb
   Biaya transaksi
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Rollup saat ini <strong>~5-20x</strong> lebih murah daripada layer 1 Ethereum</li>
-    <li>ZK-rollup akan segera menurunkan biaya sebesar <strong>~40-100x</strong></li>
-    <li>Perubahan mendatang pada Ethereum akan memberikan <strong>~100-1000x</strong> peningkatan lainnya</li>
+    <li>Rollup saat ini <strong>\~5-20x</strong> lebih murah daripada layer 1 Ethereum</li>
+    <li>ZK-rollup akan segera menurunkan biaya sebesar <strong>\~40-100x</strong></li>
+    <li>Perubahan mendatang pada Ethereum akan memberikan <strong>\~100-1000x</strong> peningkatan lainnya</li>
     <li style={{ marginBottom: 0 }}>Pengguna akan mendapatkan keuntungan dari transaksi <strong>dengan biaya kurang dari $0,001</strong></li>
   </ul>
 </AlertContent>

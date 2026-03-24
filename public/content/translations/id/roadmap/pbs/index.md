@@ -21,7 +21,6 @@ Sebagai contoh, daftar penyertaan (inclusion lists) dapat diperkenalkan sehingga
 <ExpandableCard title="Jenis penyensoran apa yang diselesaikan oleh PBS?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Organisasi yang kuat dapat menekan validator untuk menyensor transaksi ke atau dari alamat tertentu. Validator mematuhi tekanan ini dengan mendeteksi alamat yang masuk daftar hitam di kumpulan transaksi mereka dan menghilangkannya dari blok yang mereka usulkan. Setelah PBS, hal ini tidak akan mungkin lagi terjadi karena pengusul blok tidak akan mengetahui transaksi mana yang mereka siarkan di blok mereka. Mungkin penting bagi individu atau aplikasi tertentu untuk mematuhi aturan penyensoran, misalnya ketika hal itu dijadikan hukum di wilayah mereka. Dalam kasus ini, kepatuhan terjadi di tingkat aplikasi, sementara protokol tetap tanpa izin dan bebas penyensoran.
-
 </ExpandableCard>
 
 ## PBS dan MEV {#pbs-and-mev}
