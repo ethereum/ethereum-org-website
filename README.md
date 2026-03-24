@@ -100,6 +100,12 @@ pnpm install
 
 > Note: On Ubuntu or Debian you may need to run `sudo apt update && sudo apt install nodejs npm` before running `corepack enable` or `pnpm install`.
 
+4. Set up environment variables
+
+```sh
+cp .env.example .env.local
+```
+
 #### Migrating from yarn to pnpm
 
 If you previously used `yarn` to install dependencies, you can safely migrate to `pnpm` by running the following commands:
