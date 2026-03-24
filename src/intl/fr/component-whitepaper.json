@@ -1,0 +1,12 @@
+{
+  "before-you-read": "Avant de lire",
+  "heading": "Vous cherchez à comprendre Ethereum ?",
+  "description": "Ce livre blanc a été publié en <strong>2014</strong>, avant le lancement d'Ethereum. Après plus de 10 ans de développement, de mises à jour majeures et de croissance de l'écosystème, <strong>le livre blanc original ne reflète plus ce qu'est Ethereum aujourd'hui</strong>.",
+  "cta-learn": "En savoir plus sur Ethereum aujourd'hui",
+  "cta-download-pdf": "Télécharger le PDF original (2014)",
+  "whats-changed": "Qu'est-ce qui a changé depuis 2014 ?",
+  "evolution-pos": "Ethereum est passé de la preuve de travail à la preuve d’enjeu (The Merge, 2022)",
+  "evolution-l2": "Les solutions de mise à l'échelle de couche 2 traitent désormais des millions de transactions",
+  "evolution-usecases": "La DeFi, les NFT et les DAO sont apparus comme des cas d'utilisation majeurs",
+  "evolution-standards": "Les normes de contrat intelligent (ERC-20, ERC-721) sont devenues les fondations de l'industrie"
+}
