@@ -26,6 +26,7 @@ const {
   fixCrowdinNumberedTags,
   removeStaleComponents,
   fixLeakedAttrNamesInJsxValues,
+  fixDetachedHeadingAnchors,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -187,6 +188,33 @@ test.describe("English Comparison Fixes", () => {
       )
       expect(content).toBe("no frontmatter")
       expect(fixCount).toBe(0)
+    })
+
+    test("handles multi-line YAML tag arrays", () => {
+      const english = [
+        "---",
+        'tags: ["typescript", "react", "vite", "wagmi", "frontend"]',
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "tags:",
+        "  [",
+        '    "TypeScript",',
+        '    "\u0440\u0435\u0430\u0433\u0443\u0432\u0430\u043D\u043D\u044F",',
+        '    "vite",',
+        '    "wagmi",',
+        '    "\u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u0430\u043D\u043D\u044F"',
+        "  ]",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = fixBrandTags(translated, english)
+      // "react" is a brand -> should be restored to "React"
+      expect(content).toContain('"React"')
+      expect(content).not.toContain(
+        '"\u0440\u0435\u0430\u0433\u0443\u0432\u0430\u043D\u043D\u044F"'
+      )
+      expect(fixCount).toBeGreaterThanOrEqual(1)
     })
   })
 
@@ -1106,6 +1134,89 @@ test.describe("English Comparison Fixes", () => {
       const english = `  <Card title="Test" emoji=":star:" description="Normal text here."/>`
       const translated = `  <Card title="\u0C1F\u0C46\u0C38\u0C4D\u0C1F\u0C4D" emoji=":star:" description="\u0C38\u0C3E\u0C27\u0C3E\u0C30\u0C23 \u0C1F\u0C46\u0C15\u0C4D\u0C38\u0C4D\u0C1F\u0C4D."/>`
       const { content, fixCount } = fixLeakedAttrNamesInJsxValues(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixDetachedHeadingAnchors", () => {
+    test("restores heading marker when anchor is on a non-heading line", () => {
+      const english = [
+        "### Availability bonds {#avail-bonds}",
+        "",
+        "In a real implementation there would be some profit motive.",
+      ].join("\n")
+      const translated = [
+        "Guarantees {#avail-bonds} In a real implementation there would be some profit motive.",
+      ].join("\n")
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("### Guarantees {#avail-bonds}")
+      expect(content).toContain(
+        "\n\nIn a real implementation there would be some profit motive."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple detached anchors", () => {
+      const english = [
+        "### Heading A {#anchor-a}",
+        "",
+        "Para A.",
+        "",
+        "### Heading B {#anchor-b}",
+        "",
+        "Para B.",
+      ].join("\n")
+      const translated = [
+        "Title A {#anchor-a} Para A.",
+        "",
+        "Title B {#anchor-b} Para B.",
+      ].join("\n")
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("### Title A {#anchor-a}")
+      expect(content).toContain("### Title B {#anchor-b}")
+      expect(fixCount).toBe(2)
+    })
+
+    test("uses correct heading level from English (h4)", () => {
+      const english = [
+        "#### Deep heading {#deep-heading}",
+        "",
+        "Content here.",
+      ].join("\n")
+      const translated = "Deep heading translated {#deep-heading} Content here."
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("#### Deep heading translated {#deep-heading}")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves properly formatted headings unchanged", () => {
+      const english = "### Good heading {#good}\n\nParagraph."
+      const translated = "### Good heading translated {#good}\n\nParagraph."
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const english = "### Heading {#my-id}\n\nParagraph."
+      const translated = "```\nSomething {#my-id} inside code\n```"
+      const { content, fixCount } = fixDetachedHeadingAnchors(
         translated,
         english
       )
