@@ -1,14 +1,14 @@
 ---
 title: Subjetividade fraca
-description: Uma explicação de subjetividade fraca e o seu papel na prova de participação do Ethereum.
+description: "Uma explicação de subjetividade fraca e o seu papel na prova de participação do Ethereum."
 lang: pt-br
 ---
 
 Subjetividade em blockchains refere-se à dependência de informações sociais para concordar com o estado atual. Pode haver vários forks válidos que são escolhidos de acordo com as informações coletadas de outros pares na rede. A questão é a objetividade a que se refere às cadeias onde existe apenas uma cadeia válida possível e que todos os nós necessariamente concordarão aplicando as suas regras codificadas. Há também um terceiro estado, conhecido como subjetivo fraco. Isso se refere a uma cadeia que pode progredir objetivamente após alguma semente inicial de informação ser recuperada socialmente.
 
-## Pré-Requisitos {#prerequisites}
+## Pré-requisitos {#prerequisites}
 
-Para entender esta página é necessário primeiro entender os fundamentos de [prova de participação](/developers/docs/consensus-mechanisms/pos/).
+Para entender esta página, é necessário primeiro entender os fundamentos da [prova de participação](/developers/docs/consensus-mechanisms/pos/).
 
 ## Quais são os problemas que a subjetividade fraca resolve? {#problems-ws-solves}
 
@@ -16,7 +16,7 @@ A subjetividade é inerente às blockchains de prova de participação porque a 
 
 ## Pontos de verificação de subjetividade fraca {#ws-checkpoints}
 
-A subjetividade fraca é implementada na prova de participação do Ethereum usando "pontos de verificação de subjetividade fraca". Estes são raízes de estado que todos os nós da rede concordam em integrar à cadeia canônica. Eles servem o mesmo propósito de "verdade universal" para blocos de início, exceto que eles não se colocam na posição de início na blockchain. O algoritmo de escolha de fork confia em que o estado definido naquele ponto de verificação é correto e que ele verifica a cadeia de forma independente e objetiva a partir desse ponto. Os pontos de verificação atuam como "limites de reversão" porque os blocos localizados antes dos pontos de verificação de subjetividade fraca não podem ser alterados. Isto mina os ataques de longo alcance simplesmente definindo forks de longo alcance como inválidos como parte do modelo do mecanismo. Garantir que os pontos de verificação de subjetividade fraca sejam separados por uma distância menor que o período de retirada do validador garante que um validador que faz o fork da cadeia tenha removido pelo menos algum valor limite antes que eles possam retirar seu stake e que novos participantes não possam ser enganados em forks incorretos por validadores cuja participação foi retirada.
+A subjetividade fraca é implementada na prova de participação do Ethereum usando "pontos de verificação de subjetividade fraca". Estes são raízes de estado que todos os nós da rede concordam em integrar à cadeia canônica. Eles servem ao mesmo propósito de "verdade universal" dos blocos iniciais, exceto que não ficam na posição de início na blockchain. O algoritmo de escolha de fork confia em que o estado definido naquele ponto de verificação é correto e que ele verifica a cadeia de forma independente e objetiva a partir desse ponto. Os pontos de verificação atuam como "limites de reversão" porque os blocos localizados antes dos pontos de verificação de subjetividade fraca não podem ser alterados. Isto mina os ataques de longo alcance simplesmente definindo forks de longo alcance como inválidos como parte do modelo do mecanismo. Garantir que os pontos de verificação de subjetividade fraca sejam separados por uma distância menor que o período de retirada do validador garante que um validador que faz o fork da cadeia tenha removido pelo menos algum valor limite antes que eles possam retirar seu stake e que novos participantes não possam ser enganados em forks incorretos por validadores cuja participação foi retirada.
 
 ## Diferença entre pontos de verificação de subjetividade fraca e blocos finalizados {#difference-between-ws-and-finalized-blocks}
 
@@ -32,8 +32,8 @@ Finalmente, os pontos de verificação podem ser solicitados a partir de outros 
 
 ## Leitura adicional {#further-reading}
 
-- [Subjetividade fraca em Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
-- [Vitalik: Como eu aprendi a amar a subjetividade fraca](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
-- [Subjetividade fraca (documentos Teku)](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
-- [Guia de subjetividade fraca: fase-0](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
-- [Análise de subjetividade fraca no Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)
+- [Subjetividade fraca no Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
+- [Vitalik: Como aprendi a amar a subjetividade fraca](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
+- [Subjetividade fraca (docs do Teku)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
+- [Guia de subjetividade fraca da Fase 0](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
+- [Análise da subjetividade fraca no Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

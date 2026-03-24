@@ -168,7 +168,7 @@ Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 w
 - [Dołącz do Discorda R&D Ethereum](https://discord.gg/mncqtgVSVw)
 - [Dodaj serwer](/developers/docs/nodes-and-clients/run-a-node/)
 - [Przyczyń się do rozwoju klientów](/developers/docs/nodes-and-clients/#execution-clients)
-- [Program stażowy dla głównych deweloperów](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Program stażowy dla głównych deweloperów](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Dalsza lektura {#further-reading}
 
@@ -177,6 +177,6 @@ Zarządzanie w Ethereum nie jest jednoznacznie zdefiniowane. Perspektywy na ten 
 - [Więcej o zarządzaniu blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) – _Vitalik Buterin_
 - [Jak działa zarządzanie Ethereum?](https://cryptotesters.com/blog/ethereum-governance) — _Cryptotesters_
 - [Jak działa zarządzanie Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) — _Micah Zoltu_
-- [Czym jest główny deweloper Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) — _Hudson Jameson_
+- [Czym jest główny deweloper Ethereum?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) — _Hudson Jameson_
 - [Zarządzanie, część 2: plutokracja jest nadal zła](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
 - [Wyjście poza zarządzanie głosowaniem monetami](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

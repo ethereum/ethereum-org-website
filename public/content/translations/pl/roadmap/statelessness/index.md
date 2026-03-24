@@ -1,6 +1,6 @@
 ---
-title: Bezstanowość, wygasanie stanu oraz wygasanie historii
-description: Objaśnienie wygasania historii oraz bezstanowości Ethereum
+title: "Bezstanowość, wygasanie stanu oraz wygasanie historii"
+description: "Objaśnienie wygasania historii oraz bezstanowości Ethereum"
 lang: pl
 ---
 
@@ -12,14 +12,14 @@ Obecnie wymóg posiadania dużej ilości przestrzeni dyskowej jest główną prz
 
 Tańsze dyski twarde mogą być stosowane do przechowywania starszych danych, ale te są zbyt wolne, aby nadążać za nadchodzącymi blokami. Utrzymanie obecnych modeli pamięci dla klientów przy jednoczesnym obniżaniu kosztów danych oraz ułatwianiu ich przechowywania jest tylko tymczasowym i częściowym rozwiązaniem problemu, ponieważ wzrost stanu Ethereum jest „nieograniczony”, co oznacza, że wymagania pamięci mogą tylko rosnąć, a ulepszenia technologiczne zawsze będą musiały nadążać za stałym wzrostem stanu. Zamiast tego, klienty muszą znaleźć nowe sposoby na weryfikowanie bloków i transakcji, które nie opierają się na wyszukiwaniu danych w lokalnej bazie danych.
 
-## Zmniejszenie pamięci dla węzłów {#reducing-storage-for-nodes}
+## Zmniejszanie pamięci masowej dla węzłów {#reducing-storage-for-nodes}
 
 Istnieje kilka sposobów na zredukowanie ilości danych, jakie musi przechowywać każdy węzeł, a każdy z nich wymaga zaktualizowania głównego protokołu Ethereum w różnym stopniu:
 
-- **Wygasanie historii**: umożliwia węzłom na porzucenie danych o stanie starszym niż X bloków, ale nie zmienia sposobu, w jaki klient Ethereum obsługuje dane stanu.
+- **Wygasanie historii**: umożliwia węzłom odrzucanie danych stanu starszych niż X bloków, ale nie zmienia sposobu, w jaki klienci Ethereum obsługują dane stanu.
 - **Wygasanie stanu**: umożliwia, aby dane o stanie, które nie są często używane, stały się nieaktywne. Nieaktywne dane mogą być ignorowane przez klientów do czasu ich wskrzeszenia.
 - **Słaba bezstanowość**: tylko twórcy bloków potrzebują dostępu do pełnych danych o stanie, inne węzły mogą zweryfikować bloki bez lokalnej bazy danych stanu.
-- **Silna bezstanowość**: żaden węzeł nie potrzebuje dostępu do pełnych danych o stanie.
+- **Silna bezstanowość**: żadne węzły nie potrzebują dostępu do pełnych danych o stanie.
 
 ## Wygasanie danych {#data-expiry}
 
@@ -42,9 +42,9 @@ Wygasanie stanu odnosi się do usuwania stanu z poszczególnych węzłów, jeśl
 - **Wygasanie przez czynsz**: pobieranie „czynszu” od kont i wygasanie ich, gdy ich czynsz osiągnie zero
 - **Wygasanie przez czas**: zmienianie kont na nieaktywne, jeśli nie ma odczytu/zapisu na danym koncie przez pewien określony czas
 
-Wygasanie przez czynsz mogłoby być bezpośrednim czynszem pobieranym od kont, aby utrzymać je w bazie danych aktywnych stanów. Wygasanie przez czas mogłoby odbywać się poprzez odliczanie od ostatniej interakcji konta lub mogłoby być okresowym wygasaniem wszystkich kont. Mógłby istnieć również mechanizm, który połączyłby elementy obu tych modeli; na przykład indywidualne konto pozostawałoby w aktywnym stanie, gdyby uiściło jakąś niewielką opłatę przed wygaśnięciem opartym na czasie. W przypadku wygasania stanu warto zapamiętać, że nieaktywny stan **nie jest usuwany**, a po prostu przechowywany oddzielnie od aktywnego stanu. Stan nieaktywny może zostać przywrócony do stanu aktywnego.
+Wygasanie przez czynsz mogłoby być bezpośrednim czynszem pobieranym od kont, aby utrzymać je w bazie danych aktywnych stanów. Wygasanie przez czas mogłoby odbywać się poprzez odliczanie od ostatniej interakcji konta lub mogłoby być okresowym wygasaniem wszystkich kont. Mógłby istnieć również mechanizm, który połączyłby elementy obu tych modeli; na przykład indywidualne konto pozostawałoby w aktywnym stanie, gdyby uiściło jakąś niewielką opłatę przed wygaśnięciem opartym na czasie. W przypadku wygasania stanu warto zapamiętać, że nieaktywny stan nie jest usuwany, a po prostu przechowywany oddzielnie od aktywnego stanu. Stan nieaktywny może zostać przywrócony do stanu aktywnego.
 
-Najprawdopodobniej funkcjonowałoby to poprzez posiadanie drzewa stanu dla określonych okresów (być może 1 rok). Wraz z rozpoczęciem nowego okresu rozpoczynałoby się nowe drzewo stanu. Tylko bieżące drzewo stanów podlegałoby modyfikacji, wszystkie inne byłyby niezmienne. Od węzłów Ethereum oczekiwałoby się przechowywania tylko bieżącego drzewa stanu i kolejnego najnowszego. Wymaga to sposobu na oznaczenie adresu okresem, w którym istnieje. Istnieje [kilka możliwych sposobów](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607) na zrobienie tego, ale główna opcja wymaga [wydłużenia adresów](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485), aby pomieścić dodatkowe informacje, co miałoby tę dodatkową zaletę, że dłuższe adresy są o wiele bardziej bezpieczne. Element planu działania, który to robi, nazywa się [rozszerzeniem przestrzeni adresu](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
+Najprawdopodobniej funkcjonowałoby to poprzez posiadanie drzewa stanu dla określonych okresów (być może 1 rok). Wraz z rozpoczęciem nowego okresu rozpoczynałoby się nowe drzewo stanu. Tylko bieżące drzewo stanów podlegałoby modyfikacji, wszystkie inne byłyby niezmienne. Od węzłów Ethereum oczekiwałoby się przechowywania tylko bieżącego drzewa stanu i kolejnego najnowszego. Wymaga to sposobu na oznaczenie adresu okresem, w którym istnieje. Istnieje [kilka możliwych sposobów](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607), aby to zrobić, ale wiodąca opcja wymaga [wydłużenia adresów](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485), aby pomieścić dodatkowe informacje, co ma dodatkową zaletę, że dłuższe adresy są znacznie bezpieczniejsze. Element planu działania, który to realizuje, nazywa się [rozszerzeniem przestrzeni adresowej](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
 
 Podobnie jak w przypadku wygasania historii, w ramach wygasania stanu odpowiedzialność za przechowywanie starych danych stanu jest przenoszona z indywidualnych użytkowników na inne podmioty, takie jak scentralizowani dostawcy, altruistyczni członkowie społeczności lub na bardziej przyszłościowe zdecentralizowane rozwiązania, jak sieć Portal.
 
@@ -56,7 +56,7 @@ Bezstanowość jest nieco mylącym określeniem, ponieważ nie oznacza wyelimino
 
 - prawie natychmiastowa synchronizacja
 - możliwość walidacji bloków poza kolejnością
-- możliwość uruchomienia węzła na sprzęcie z bardzo małymi wymaganiami sprzętowymi (np. na telefonie)
+- węzły mogące działać przy bardzo niskich wymaganiach sprzętowych (np. na telefonach)
 - działanie węzła na tanich dyskach twardych ze względu na brak konieczności ich odczytu/zapisu na nich
 - kompatybilność z przyszłymi aktualizacjami kryptografii Ethereum
 
@@ -66,13 +66,13 @@ Słaba bezstanowość wiąże się ze zmianami sposobu, w jaki węzły Ethereum 
 
 **W słabej bezstanowości proponowanie bloków wymaga dostępu do pełnych danych stanu, ale weryfikowanie bloków nie wymaga żadnych danych stanu**
 
-Aby mogło tak się stać, [drzewa Verkle](/roadmap/verkle-trees/) musiałyby być już wdrożone w klientach Ethereum. Drzewa Verkle są zastępczą strukturą danych do przechowywania danych o stanie Ethereum, która pozwala na przekazywanie małych, stałych rozmiarów „świadków” danych między użytkowników i wykorzystywanie ich do weryfikowania bloków zamiast weryfikowania bloków w lokalnych bazach danych. [Podział proponent-twórca](/roadmap/pbs/) jest wymagany również dlatego, że pozwala twórcom bloków być wyspecjalizowanymi węzłami z bardziej zaawansowanym sprzętem, a to oni właśnie wymagają dostępu do pełnych danych o stanie.
+Aby do tego doszło, [drzewa Verkle](/roadmap/verkle-trees/) muszą już być zaimplementowane w klientach Ethereum. Drzewa Verkle są zastępczą strukturą danych do przechowywania danych o stanie Ethereum, która pozwala na przekazywanie małych, stałych rozmiarów „świadków” danych między użytkowników i wykorzystywanie ich do weryfikowania bloków zamiast weryfikowania bloków w lokalnych bazach danych. [Rozdział proponującego od budowniczego](/roadmap/pbs/) jest również wymagany, ponieważ pozwala to budowniczym bloków być wyspecjalizowanymi węzłami z mocniejszym sprzętem, a to właśnie one wymagają dostępu do pełnych danych stanu.
 
-<ExpandableCard title="Dlaczego poleganie na mniejszej ilości proponentów bloków jest słuszne?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="Dlaczego mniejsza liczba proponujących bloki jest w porządku?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 Bezstanowość polega na tym, że twórcy bloków utrzymują kopię pełnych danych o stanie, tak aby mogli generować świadków, których można by wykorzystać do zweryfikowania bloku. Inne węzły nie musiałyby mieć dostępu do danych o stanie; wszystkie informacje wymagane do zweryfikowania bloku byłyby dostępne w świadku. Stwarza to sytuację, w której proponowanie bloku jest drogie, natomiast weryfikowanie bloku jest tanie, co oznacza, że mniej operatorów będzie uruchamiać węzeł proponowania bloków. Jednakże decentralizacja proponentów bloków nie jest kluczowa, o ile jak największa ilość uczestników może niezależnie weryfikować, że proponowane bloki są ważne.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Poczytaj więcej o uwagach Dankrad'a</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Poczytaj więcej w notatkach Dankrada</ButtonLink>
 </ExpandableCard>
 
 Proponenci bloków używają danych o stanie do stworzenia „świadków” — minimalnego zestawu danych udowadniających wartości stanu, które zmieniają się w wyniku transakcji w bloku. Inni walidatorzy nie przechowują stanu, przechowują jedynie korzeń stanu (hash całego stanu). Otrzymują blok oraz świadka, po czym wykorzystują te dwie rzeczy do zaktualizowania swojego korzenia stanu. To sprawia, że węzeł walidacyjny jest bardzo lekki.
@@ -87,17 +87,19 @@ Silna bezstanowość była badana przez badaczy, ale nie oczekuje się, że będ
 
 ## Aktualny postęp {#current-progress}
 
-Słaba bezstanowość, wygasanie historii oraz wygasanie stanu są nadal w fazie badań i oczekuje się, że zostaną wdrożone za kilka lat. Nie ma gwarancji, że wszystkie te propozycje zostaną wdrożone; jeśli na przykład wygasanie stanu zostanie wdrożone jako pierwsze, może nie być konieczne jednoczesne wdrażanie wygasania historii. Istnieją również inne elementy planu działania, takie jak [drzewa Verkle](/roadmap/verkle-trees) czy [podział proponent-twórca](/roadmap/pbs), które należałoby ukończyć w pierwszej kolejności.
+Słaba bezstanowość, wygasanie historii oraz wygasanie stanu są nadal w fazie badań i oczekuje się, że zostaną wdrożone za kilka lat. Nie ma gwarancji, że wszystkie te propozycje zostaną wdrożone; jeśli na przykład wygasanie stanu zostanie wdrożone jako pierwsze, może nie być konieczne jednoczesne wdrażanie wygasania historii. Istnieją również inne elementy planu działania, takie jak [drzewa Verkle](/roadmap/verkle-trees/) i [rozdział proponującego od budowniczego](/roadmap/pbs/), które muszą najpierw zostać ukończone.
 
 ## Dalsza lektura {#further-reading}
 
-- [AMA bezstanowości Vitalika](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
-- [Teoria zarządzania wielkością stanu](https://hackmd.io/@vbuterin/state_size_management)
-- [Konflikt wskrzeszania zminimalizował ograniczanie stanu](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
-- [Drogi do bezstanowości i wygasania stanu](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [Czym jest bezstanowe Ethereum?](https://stateless.fyi/)
+- [AMA Vitalika na temat bezstanowości](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
+- [Teoria zarządzania rozmiarem stanu](https://hackmd.io/@vbuterin/state_size_management)
+- [Resurrection-conflict-minimized state bounding](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
+- [Ścieżki do bezstanowości i wygasania stanu](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Specyfikacja EIP-4444](https://eips.ethereum.org/EIPS/eip-4444)
 - [Alex Stokes o EIP-4444](https://youtu.be/SfDC_qUZaos)
-- [Dlaczego, przejście na bezstanowość jest takie ważne](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
-- [Uwagi do oryginalnej koncepcji klienta bezstanowego](https://ethresear.ch/t/the-stateless-client-concept/172)
-- [Więcej o wygasaniu stanu](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
-- [Jeszcze więcej o wygasaniu stanu](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Dlaczego tak ważne jest przejście na bezstanowość](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
+- [Oryginalne notatki dotyczące koncepcji klienta bezstanowego](https://ethresear.ch/t/the-stateless-client-concept/172)
+- [Więcej na temat wygasania stanu](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
+- [Jeszcze więcej na temat wygasania stanu](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Strona informacyjna o bezstanowym Ethereum](https://stateless.fyi)

@@ -1,26 +1,26 @@
 ---
 title: Pustaka kontrak pintar
-description:
+description: Temukan pustaka kontrak pintar dan blok penyusun yang dapat digunakan kembali untuk mempercepat proyek pengembangan Ethereum Anda.
 lang: id
 ---
 
-Anda tidak perlu menulis setiap kontrak pintar dalam proyek Anda dari nol. Ada banyak pustaka kontrak pintar sumber terbuka tersedia yang menyediakan blok pembangun yang dapat digunakan kembali untuk proyek Anda yang bisa menghindarkan Anda dari keharusan untuk membuat ulang rodanya.
+Anda tidak perlu menulis setiap kontrak pintar dalam proyek Anda dari awal. Ada banyak pustaka kontrak pintar sumber terbuka yang tersedia yang menyediakan blok penyusun yang dapat digunakan kembali untuk proyek Anda yang dapat menghindarkan Anda dari keharusan membuat semuanya dari nol.
 
 ## Prasyarat {#prerequisites}
 
-Sebelum masuk ke dalam pustaka kontrak pintar, adalah ide bagus untuk memiliki pemahaman yang baik tentang struktur dari sebuah kontrak pintar. Lihat pada bagian [anatomi kontrak pintar](/developers/docs/smart-contracts/anatomy/) jika Anda belum melakukannya.
+Sebelum melompat ke pustaka kontrak pintar, ada baiknya Anda memiliki pemahaman yang baik tentang struktur kontrak pintar. Kunjungi [anatomi kontrak pintar](/developers/docs/smart-contracts/anatomy/) jika Anda belum melakukannya.
 
-## Apa yang ada dalam pustaka {#whats-in-a-library}
+## Apa yang ada di dalam pustaka {#whats-in-a-library}
 
-Anda biasanya bisa menemukan dua jenis blok pembangun dalam pustaka kontrak pintar: perilaku yang dapat digunakan kembali yang bisa Anda tambahkan pada kontrak Anda, dan implementasi dari berbagai standar.
+Anda biasanya dapat menemukan dua jenis blok penyusun dalam pustaka kontrak pintar: perilaku yang dapat digunakan kembali yang dapat Anda tambahkan ke kontrak Anda, dan implementasi dari berbagai standar.
 
 ### Perilaku {#behaviors}
 
-Ketika menulis kontrak pintar, ada kemungkinan Anda akan menemukan bahwa Anda menulis pola yang sama berulang kali, seperti menetapkan alamat _admin_ untuk melakukan operasi yang dilindungi dalam satu kontrak, atau menambahkan tombol _jeda_ darurat jika terjadi masalah tak terduga.
+Saat menulis kontrak pintar, ada kemungkinan besar Anda akan mendapati diri Anda menulis pola yang sama berulang kali, seperti menetapkan alamat _admin_ untuk melakukan operasi yang dilindungi dalam sebuah kontrak, atau menambahkan tombol _jeda_ darurat jika terjadi masalah yang tidak terduga.
 
-Pustaka kontrak pintar biasanya menyediakan implementasi yang dapat digunakan kembali dari perilaku ini sebagai [pustaka](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) atau lewat [warisan](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) dalam Solidity.
+Pustaka kontrak pintar biasanya menyediakan implementasi yang dapat digunakan kembali dari perilaku ini sebagai [pustaka](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) atau melalui [pewarisan](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) di Solidity.
 
-Sebagai contoh, berikut ini adalah versi sederhana dari kontrak [`Ownable`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) dari [pustaka Kontrak OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), yang mendesain alamat sebagai pemilik kontrak, dan menyediakan pengubah untuk membatasi akses pada metode yang hanya terkait dengan pemilik tersebut. ownableownable.
+Sebagai contoh, berikut adalah versi yang disederhanakan dari [kontrak `Ownable`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) dari [pustaka OpenZeppelin Contracts](https://github.com/OpenZeppelin/openzeppelin-contracts), yang menetapkan sebuah alamat sebagai pemilik kontrak, dan menyediakan pengubah untuk membatasi akses ke suatu metode hanya untuk pemilik tersebut.
 
 ```solidity
 contract Ownable {
@@ -37,35 +37,35 @@ contract Ownable {
 }
 ```
 
-Untuk menggunakan blok pembangun seperti ini dalam kontrak, Anda perlu mengimpornya terlebih dahulu, dan kemudian memperpanjangnya dari kontrak milik Anda. Ini akan memungkinkan Anda menggunakan pengubah yang disediakan oleh basis kontrak `Ownable` untuk mengamankan fungsi Anda.
+Untuk menggunakan blok penyusun seperti ini di kontrak Anda, Anda harus mengimpornya terlebih dahulu, dan kemudian memperluasnya di kontrak Anda sendiri. Ini akan memungkinkan Anda untuk menggunakan pengubah yang disediakan oleh kontrak dasar `Ownable` untuk mengamankan fungsi Anda sendiri.
 
 ```solidity
-import ".../Ownable.sol"; // Jalan ke pustaka yang diimpor
+import ".../Ownable.sol"; // Path to the imported library // Jalur ke pustaka yang diimpor
 
 contract MyContract is Ownable {
-    // Fungsi berikut ini hanya bisa dipanggil oleh pemilik
+    // The following function can only be called by the owner // Fungsi berikut hanya dapat dipanggil oleh pemilik
     function secured() onlyOwner public {
         msg.sender.transfer(1 ether);
     }
 }
 ```
 
-Contoh populer lainnya adalah [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) atau [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html). Ini adalah pustaka (jika dibandingkan dengan kontrak dasar) yang menyediakan fungsi aritmatika dengan pemeriksaan overflow, yang tidak disediakan oleh bahasa pemrograman. Adalah langkah yang baik untuk menggunakan salah satu dari kedua pustaka ini ketimbang operasi aritmatika asli untuk mengamankan kontrak Anda terhadap overflow, yang bisa membawa akibat fatal!
+Contoh populer lainnya adalah [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) atau [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html). Ini adalah pustaka (berbeda dengan kontrak dasar) yang menyediakan fungsi aritmatika dengan pemeriksaan luapan (overflow), yang tidak disediakan oleh bahasa tersebut. Merupakan praktik yang baik untuk menggunakan salah satu dari pustaka ini alih-alih operasi aritmatika bawaan untuk menjaga kontrak Anda dari luapan, yang dapat memiliki konsekuensi yang membawa bencana!
 
 ### Standar {#standards}
 
-Untuk mendukung [komposabilitas dan interoperabilitas](/developers/docs/smart-contracts/composability/), komunitas Ethereum telah menetapkan beberapa standar dalam bentuk **ERC**. Anda bisa membaca selengkapnya tentang hal itu di bab [standar](/developers/docs/standards/).
+Untuk memfasilitasi [komposabilitas dan interoperabilitas](/developers/docs/smart-contracts/composability/), komunitas Ethereum telah mendefinisikan beberapa standar dalam bentuk **ERC**. Anda dapat membaca lebih lanjut tentang hal tersebut di bagian [standar](/developers/docs/standards/).
 
-Ketika memasukkan ERC sebagai bagian dari kontrak Anda, adalah ide bagus untuk mencari implementasi standar ketimbang mencoba membuatnya sendiri. Banyak pustaka kontrak pintar mencakup implementasi untuk ERC paling populer. Contohnya, [standar token yang dapat dipertukarkan ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) yang ada di mana-mana dapat ditemukan di [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) dan [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Sebagai tambahan, beberapa ERC juga menyediakan implementasi kanonis sebagai bagian dari ERC sendiri.
+Saat menyertakan ERC sebagai bagian dari kontrak Anda, ada baiknya untuk mencari implementasi standar daripada mencoba membuat sendiri. Banyak pustaka kontrak pintar menyertakan implementasi untuk ERC yang paling populer. Misalnya, [standar token sepadan ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) yang ada di mana-mana dapat ditemukan di [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) dan [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Selain itu, beberapa ERC juga menyediakan implementasi kanonis sebagai bagian dari ERC itu sendiri.
 
-Penting untuk menyebutkan bahwa beberapa ERC tidak bisa berdiri sendiri, tapi sebagai pelengkap bagi ERC lain. Contohnya, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) menambahkan ekstensi ke ERC20 untuk meningkatkan kegunaannya.
+Perlu disebutkan bahwa beberapa ERC tidak berdiri sendiri, melainkan merupakan tambahan untuk ERC lainnya. Misalnya, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) menambahkan ekstensi ke ERC20 untuk meningkatkan kegunaannya.
 
-## Bagaimana menambahkan pustaka {#how-to}
+## Cara menambahkan pustaka {#how-to}
 
-Selalu merujuk pada dokumentasi pustaka yang Anda masukkan untuk instruksi spesifik tentang cara memasukkannya ke dalam proyek Anda. Beberapa library kontrak Solidity dikemas menggunakan `npm`, jadi cukup `npm install`. Sebagian besar alat untuk [mengompilasi](/developers/docs/smart-contracts/compiling/) kontrak akan melihat `node_modules` Anda untuk pustaka kontrak pintar, sehingga Anda dapat melakukan hal berikut:
+Selalu merujuk ke dokumentasi pustaka yang Anda sertakan untuk instruksi spesifik tentang cara menyertakannya dalam proyek Anda. Beberapa pustaka kontrak Solidity dikemas menggunakan `npm`, jadi Anda cukup melakukan `npm install` pada pustaka tersebut. Sebagian besar alat untuk [mengompilasi](/developers/docs/smart-contracts/compiling/) kontrak akan melihat ke dalam `node_modules` Anda untuk pustaka kontrak pintar, sehingga Anda dapat melakukan hal berikut:
 
 ```solidity
-// Ini akan memuat  pustaka @openzeppelin/contracts dari node_modules Anda
+// This will load the @openzeppelin/contracts library from your node_modules // Ini akan memuat pustaka @openzeppelin/contracts dari node_modules Anda
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract MyNFT is ERC721 {
@@ -73,45 +73,45 @@ contract MyNFT is ERC721 {
 }
 ```
 
-Terlepas dari metode yang Anda gunakan, ketika memasukkan pustaka, selalu pastikan versi [bahasanya](/developers/docs/smart-contracts/languages/). Sebagai contoh, Anda tidak bisa menggunakan pustaka untuk Solidity 0.6 jika Anda menulis kontrak dalam Solidity 0.5.
+Terlepas dari metode yang Anda gunakan, saat menyertakan pustaka, selalu perhatikan versi [bahasa](/developers/docs/smart-contracts/languages/). Misalnya, Anda tidak dapat menggunakan pustaka untuk Solidity 0.6 jika Anda menulis kontrak Anda di Solidity 0.5.
 
-## Kapan menggunakannya {#when-to-use}
+## Kapan harus menggunakan {#when-to-use}
 
-Menggunakan pustaka kontrak pintar dalam proyek Anda memiliki beberapa manfaat. Pertama dan terutama, menghemat waktu Anda dengan menyediakan blok pembangun yang siap dipakai yang bisa dimasukkan ke dalam sistem Anda, daripada harus membuat kodenya sendiri.
+Menggunakan pustaka kontrak pintar untuk proyek Anda memiliki beberapa manfaat. Pertama dan terpenting, ini menghemat waktu Anda dengan menyediakan blok penyusun siap pakai yang dapat Anda sertakan dalam sistem Anda, daripada harus mengodenya sendiri.
 
-Keamanan juga adalah satu kelebihan utamanya. Pustaka kontrak pintar sumber terbuka juga sering diperiksa secara ketat. Karena banyak proyek bergantung padanya, ada insentif kuat dari komunitas untuk tetap memeriksanya secara konstan. Kesalahan dalam kode aplikasi jauh lebih sering ditemukan daripada dalam pustaka kontrak yang dapat digunakan kembali. Beberapa pustaka juga menjalani [audit eksternal](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audit) sebagai pengamanan tambahan.
+Keamanan juga merupakan nilai tambah yang besar. Pustaka kontrak pintar sumber terbuka juga sering diteliti dengan cermat. Mengingat banyak proyek bergantung padanya, ada insentif yang kuat dari komunitas untuk terus meninjaunya. Jauh lebih umum menemukan kesalahan dalam kode aplikasi daripada di pustaka kontrak yang dapat digunakan kembali. Beberapa pustaka juga menjalani [audit eksternal](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits) untuk keamanan tambahan.
 
-Namun, menggunakan pustaka kontrak pintar membawa risiko memasukkan kode yang tidak Anda kenali ke dalam proyek. Mengimpor kontrak dan memasukkannya langsung ke dalam proyek Anda memang menggoda, tetapi tanpa pemahaman yang baik tentang apa yang dilakukan kontra, Anda mungkin secara tidak sengaja menimbulkan masalah di sistem Anda karena perilaku yang tidak terduga. Selalu pastikan untuk membaca dokumentasi kode yang Anda impor, lalu tinjau kode itu sendiri sebelum menjadikannya bagian dari proyek Anda!
+Namun, menggunakan pustaka kontrak pintar membawa risiko menyertakan kode yang tidak Anda kenal ke dalam proyek Anda. Sangat menggoda untuk mengimpor kontrak dan menyertakannya langsung ke dalam proyek Anda, tetapi tanpa pemahaman yang baik tentang apa yang dilakukan kontrak tersebut, Anda mungkin secara tidak sengaja memasukkan masalah ke dalam sistem Anda karena perilaku yang tidak terduga. Selalu pastikan untuk membaca dokumentasi kode yang Anda impor, dan kemudian tinjau kode itu sendiri sebelum menjadikannya bagian dari proyek Anda!
 
-Terakhir, saat memutuskan apakah akan memasukkan suatu pustaka, pertimbangkan penggunaannya secara keseluruhan. Pustaka yang diterima secara luas memiliki keuntungan memiliki komunitas yang lebih besar dan banyak mata yang mengawasinya untuk melihat masalah. Keamanan harus menjadi fokus utama Anda saat membangun dengan kontrak pintar!
+Terakhir, saat memutuskan apakah akan menyertakan pustaka, pertimbangkan penggunaan keseluruhannya. Pustaka yang diadopsi secara luas memiliki manfaat memiliki komunitas yang lebih besar dan lebih banyak mata yang melihatnya untuk mencari masalah. Keamanan harus menjadi fokus utama Anda saat membangun dengan kontrak pintar!
 
-## Peralatan terkait {#related-tools}
+## Alat terkait {#related-tools}
 
-**Kontrak OpenZeppelin -** **_Pustaka paling populer untuk pengembangan kontrak pintar yang aman._**
+**OpenZeppelin Contracts -** **_Pustaka paling populer untuk pengembangan kontrak pintar yang aman._**
 
 - [Dokumentasi](https://docs.openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Forum Komunitas](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_Blok pembangun yang aman, sederhana, dan fleksibel untuk kontrak pintar._**
+**DappSys -** **_Blok penyusun yang aman, sederhana, dan fleksibel untuk kontrak pintar._**
 
 - [Dokumentasi](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-**HQ20 -** **_Sebuah proyek Solidity dengan kontrak, pustaka, dan contoh untuk menolong Anda membangun aplikasi yang terdistribusi dengan fitur lengkap untuk dunia nyata._**
+**HQ20 -** **_Proyek Solidity dengan kontrak, pustaka, dan contoh untuk membantu Anda membangun aplikasi terdistribusi berfitur lengkap untuk dunia nyata._**
 
 - [GitHub](https://github.com/HQ20/contracts)
 
-**SDK Solidity thirdweb -** **_Menyediakan alat yang dibutuhkan untuk membuat kontrak pintar khusus dengan efisien_**
+**thirdweb Solidity SDK -** **_Menyediakan alat yang diperlukan untuk membangun kontrak pintar kustom secara efisien_**
 
 - [Dokumentasi](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Pertimbangan keamanan untuk pengembang Ethereum](/developers/docs/smart-contracts/security/) _– Tutorial tentang pertimbangan keamanan pada saat membuat kontrak pintar, termasuk pemakaian pustaka._
-- [Pahami kontrak pintar token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- Tutorial tentang standar ERC20, yang disediakan oleh berbagai pustaka._
+- [Pertimbangan keamanan untuk pengembang Ethereum](/developers/docs/smart-contracts/security/) _– Tutorial tentang pertimbangan keamanan saat membangun kontrak pintar, termasuk penggunaan pustaka._
+- [Memahami kontrak pintar token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Tutorial tentang standar ERC20, yang disediakan oleh berbagai pustaka._
 
 ## Bacaan lebih lanjut {#further-reading}
 
-_Tahu tentang referensi komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
+_Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

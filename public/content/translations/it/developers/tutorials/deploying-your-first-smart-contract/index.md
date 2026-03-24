@@ -8,6 +8,7 @@ tags:
   - "Solidity"
   - "distribuzione"
 skill: beginner
+breadcrumb: "Primo contratto"
 lang: it
 published: 2020-04-03
 source: EthereumDev

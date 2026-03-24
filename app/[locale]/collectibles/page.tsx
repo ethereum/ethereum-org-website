@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
@@ -30,17 +30,18 @@ const STATS_API = `${COLLECTIBLES_BASE_URL}/api/stats`
 
 // Data fetching
 async function fetchBadges() {
-  const res = await fetch(BADGES_API)
+  const res = await fetch(BADGES_API, { cache: "force-cache" })
   if (!res.ok) throw new Error("Failed to fetch badges")
   return res.json()
 }
 async function fetchStats() {
-  const res = await fetch(STATS_API)
+  const res = await fetch(STATS_API, { cache: "force-cache" })
   if (!res.ok) throw new Error("Failed to fetch stats")
   return res.json()
 }
 
-export default async function Page({ params }: { params: PageParams }) {
+export default async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-collectibles" })
   setRequestLocale(locale)
@@ -56,11 +57,9 @@ export default async function Page({ params }: { params: PageParams }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/collectibles/")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "collectibles",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -148,11 +147,10 @@ export default async function Page({ params }: { params: PageParams }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-collectibles" })
   return await getMetadata({

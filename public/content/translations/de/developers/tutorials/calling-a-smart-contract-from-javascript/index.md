@@ -8,6 +8,7 @@ tags:
   - "JavaScript"
   - "web3.js"
 skill: beginner
+breadcrumb: "Vertragsaufruf aus JS"
 lang: de
 published: 2020-04-19
 source: EthereumDev

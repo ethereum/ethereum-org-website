@@ -1,6 +1,6 @@
 ---
-title: Elixir 開發者適用的以太坊資源
-description: 學習如何使用基於 Elixir 的專案和工具進行以太坊開發。
+title: "Elixir 開發者適用的以太坊資源"
+description: "學習如何使用基於 Elixir 的專案和工具進行以太坊開發。"
 lang: zh-tw
 incomplete: false
 ---

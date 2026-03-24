@@ -7,6 +7,7 @@ tags:
   - "web3.js"
   - "alchemy"
 skill: beginner
+breadcrumb: "Inviare transazioni"
 lang: it
 published: 2020-11-04
 source: documentazione Alchemy

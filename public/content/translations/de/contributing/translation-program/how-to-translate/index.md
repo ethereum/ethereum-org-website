@@ -42,7 +42,7 @@ Ein Hinweis zu den Inhaltsbereichen: Wir nutzen 'Inhaltsbereiche' in Crowdin, um
 
 Wir empfehlen Ihnen, in dieser numerischen Reihenfolge zu übersetzen (1 → 2 → 3 → ⋯), um sicherzustellen, dass die Seiten mit der größten Wirkung zuerst übersetzt werden.
 
-[Mehr zu ethereum.org-Inhaltsbereichen](/contributing/translation-program/content-buckets/)
+[Mehr zu ethereum.org-Inhaltsbereichen](/contributing/translation-program/)
 
 ### Übersetzen {#translate}
 

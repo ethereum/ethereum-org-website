@@ -4,7 +4,7 @@ description: Learn about the known attack vectors on proof-of-stake Ethereum and
 lang: en
 ---
 
-Thieves and saboteurs are constantly seeking opportunities to attack Ethereum’s client software. This page outlines the known attack vectors on Ethereum’s consensus layer and outlines how those attacks can be defended. The information on this page is adapted from a [longer form version](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs).
+Thieves and saboteurs are constantly seeking opportunities to attack [Ethereum](/)’s client software. This page outlines the known attack vectors on Ethereum’s consensus layer and outlines how those attacks can be defended. The information on this page is adapted from a [longer form version](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs).
 
 ## Prerequisites {#prerequisites}
 
@@ -89,7 +89,7 @@ There are several other potential future upgrades to the fork choice rule that c
 
 #### Long range attacks {#long-range-attacks}
 
-There is also a class of attack specific to proof-of-stake blockchains that involves a validator that participated in the genesis block maintaining a separate fork of the blockchain alongside the honest one, eventually convincing the honest validator set to switch over to it at some opportune time much later. This type of attack is not possible on Ethereum because of the finality gadget that ensures all validators agree on the state of the honest chain at regular intervals (“checkpoints”). This simple mechanism neutralizes long range attackers because Ethereum clients simply will not reorg finalized blocks. New nodes joining the network do so by finding a trusted recent state hash (a “[weak subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) checkpoint”) and using it as a pseudo-genesis block to build on top of. This creates a ‘trust gateway’ for a new node entering the network before it can start to verify information for itself.
+There is also a class of attack specific to proof-of-stake blockchains that involves a validator that participated in the genesis block maintaining a separate fork of the blockchain alongside the honest one, eventually convincing the honest validator set to switch over to it at some opportune time much later. This type of attack is not possible on Ethereum because of the finality gadget that ensures all validators agree on the state of the honest chain at regular intervals (“checkpoints”). This simple mechanism neutralizes long range attackers because Ethereum clients simply will not reorg finalized blocks. New nodes joining the network do so by finding a trusted recent state hash (a “[weak subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity) checkpoint”) and using it as a pseudo-genesis block to build on top of. This creates a ‘trust gateway’ for a new node entering the network before it can start to verify information for itself.
 
 #### Denial of Service {#denial-of-service}
 
@@ -154,7 +154,7 @@ Overall, despite these potential attack vectors the risk of a successful attack 
 ## Further Reading {#further-reading}
 
 - [More detailed version of this page](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik on settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik on settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [LMD GHOST paper](https://arxiv.org/abs/2003.03052)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
 - [Gasper paper](https://arxiv.org/pdf/2003.03052.pdf)

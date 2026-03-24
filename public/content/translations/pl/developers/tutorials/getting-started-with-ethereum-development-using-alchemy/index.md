@@ -10,6 +10,7 @@ tags:
   - "zapytania"
   - "alchemy"
 skill: beginner
+breadcrumb: "Pierwsze kroki"
 lang: pl
 published: 2020-10-30
 source: Średni

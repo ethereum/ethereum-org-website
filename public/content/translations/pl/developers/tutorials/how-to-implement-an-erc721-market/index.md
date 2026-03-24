@@ -8,6 +8,7 @@ tags:
   - "solidity"
   - "tokeny"
 skill: intermediate
+breadcrumb: "Rynek ERC-721"
 lang: pl
 published: 2020-03-19
 source: Hackernoon

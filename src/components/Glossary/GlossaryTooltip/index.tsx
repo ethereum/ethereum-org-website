@@ -9,7 +9,7 @@ import InlineLink from "@/components/ui/Link"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 type GlossaryTooltipProps = Omit<TooltipProps, "content"> & {
   children: ReactNode

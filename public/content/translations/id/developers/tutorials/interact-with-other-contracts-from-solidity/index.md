@@ -1,15 +1,10 @@
 ---
 title: Berinteraksi dengan kontrak lain dari Solidity
-description: Cara menggunakan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengan kontrak pintar tersebut
+description: Cara menerapkan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengannya
 author: "jdourlens"
-tags:
-  - "kontrak pintar"
-  - "solidity"
-  - "remix"
-  - "pabrik"
-  - "menyebarkan"
-  - "komposabilitas"
+tags: ["kontrak pintar", "Solidity", "Remix", "menerapkan", "komposabilitas"]
 skill: advanced
+breadcrumb: "Interaksi kontrak"
 lang: id
 published: 2020-04-05
 source: EthereumDev
@@ -17,9 +12,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Dalam tutorial sebelumnya, kita belajar banyak [cara menggunakan kontrak pintar pertama Anda](/developers/tutorials/deploying-your-first-smart-contract/) dan menambahkan beberapa fitur ke dalamnya seperti [mengontrol akses dengan pengubah](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) atau [penanganan kesalahan di Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). Dalam tutorial ini kita akan mempelajari cara menggunakan kontrak pintar dari kontrak yang ada dan berinteraksi dengannya.
+Pada tutorial sebelumnya kita telah banyak belajar [cara menerapkan kontrak pintar pertama Anda](/developers/tutorials/deploying-your-first-smart-contract/) dan menambahkan beberapa fitur ke dalamnya seperti [mengontrol akses dengan pengubah (modifier)](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) atau [penanganan kesalahan di Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). Pada tutorial ini kita akan belajar cara menerapkan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengannya.
 
-Kita akan membuat kontrak yang memungkinkan siapa pun untuk memiliki kontrak pintar `Counter` sendiri dengan membuat pabrik untuknya, namanya adalah `CounterFactory`. Pertama, ini adalah kode kontrak pintar `Counter` awal kami:
+Kita akan membuat kontrak yang memungkinkan siapa saja untuk memiliki kontrak pintar `Counter` mereka sendiri dengan membuat pabrik (factory) untuknya, namanya adalah `CounterFactory`. Pertama, berikut adalah kode dari kontrak pintar `Counter` awal kita:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -57,19 +52,19 @@ contract Counter {
 }
 ```
 
-Perhatikan bahwa kami sedikit memodifikasi kode kontrak untuk melacak alamat pabrik dan alamat pemilik kontrak. Saat Anda memanggil kode kontrak dari kontrak lain, msg.sender akan merujuk ke alamat pabrik kontrak kami. Ini **poin yang sangat penting untuk dipahami** karena menggunakan kontrak untuk berinteraksi dengan kontrak lain adalah praktik umum. Karena itu, Anda harus memperhatikan siapa pengirimnya dalam kasus yang rumit.
+Perhatikan bahwa kita sedikit memodifikasi kode kontrak untuk melacak alamat pabrik dan alamat pemilik kontrak. Saat Anda memanggil kode kontrak dari kontrak lain, msg.sender akan merujuk ke alamat pabrik kontrak kita. Ini adalah **poin yang sangat penting untuk dipahami** karena menggunakan kontrak untuk berinteraksi dengan kontrak lain adalah praktik yang umum. Oleh karena itu, Anda harus memperhatikan siapa pengirimnya dalam kasus-kasus yang kompleks.
 
-Untuk ini kami juga menambahkan pengubah `onlyFactory` yang memastikan bahwa fungsi perubahan status hanya dapat dipanggil oleh pabrik yang akan meneruskan fungsi ke pemanggil asli sebagai parameter.
+Untuk ini kita juga menambahkan pengubah `onlyFactory` yang memastikan bahwa fungsi pengubah status hanya dapat dipanggil oleh pabrik yang akan meneruskan pemanggil asli sebagai parameter.
 
-Di dalam `CounterFactory` baru kami yang akan mengelola semua Penghitung lainnya, kami akan menambahkan pemetaan yang akan mengaitkan pemilik ke alamat kontrak penghitungnya:
+Di dalam `CounterFactory` baru kita yang akan mengelola semua Counter lainnya, kita akan menambahkan pemetaan (mapping) yang akan mengaitkan pemilik dengan alamat kontrak counter-nya:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-Di Ethereum, pemetaan sama dengan objek dalam javascript, yang memungkinkan untuk memetakan kunci jenis A ke nilai jenis B. Dalam hal ini, kami memetakan alamat pemilik dengan instance Penghitungnya.
+Di Ethereum, pemetaan setara dengan objek dalam javascript, mereka memungkinkan untuk memetakan kunci tipe A ke nilai tipe B. Dalam hal ini kita memetakan alamat pemilik dengan instansiasi Counter-nya.
 
-Membuat instance Penghitung baru untuk seseorang akan terlihat seperti ini:
+Menginstansiasi Counter baru untuk seseorang akan terlihat seperti ini:
 
 ```solidity
   function createCounter() public {
@@ -78,9 +73,9 @@ Membuat instance Penghitung baru untuk seseorang akan terlihat seperti ini:
   }
 ```
 
-Pertama-tama kami memeriksa apakah orang tersebut sudah memiliki penghitung. Jika dia tidak memiliki penghitung, kami membuat instance penghitung baru dengan meneruskan alamatnya ke pembangun `Counter` dan menetapkan instance yang baru dibuat ke pemetaan.
+Kita pertama-tama memeriksa apakah orang tersebut sudah memiliki counter. Jika dia belum memiliki counter, kita menginstansiasi counter baru dengan meneruskan alamatnya ke konstruktor `Counter` dan menetapkan instansiasi yang baru dibuat ke pemetaan.
 
-Untuk mendapatkan hitungan Penghitung tertentu akan terlihat seperti ini:
+Untuk mendapatkan hitungan dari Counter tertentu, akan terlihat seperti ini:
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
@@ -93,7 +88,7 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-Fungsi pertama memeriksa apakah kontrak Penghitung ada untuk alamat tertentu lalu memanggil metode `getCount` dari instance. Fungsi kedua: `getMyCount` hanyalah akhir singkat untuk meneruskan msg.sender langsung ke fungsi `getCount`.
+Fungsi pertama memeriksa apakah kontrak Counter ada untuk alamat yang diberikan dan kemudian memanggil metode `getCount` dari instansiasi tersebut. Fungsi kedua: `getMyCount` hanyalah jalan pintas untuk meneruskan msg.sender secara langsung ke fungsi `getCount`.
 
 Fungsi `increment` cukup mirip tetapi meneruskan pengirim transaksi asli ke kontrak `Counter`:
 
@@ -104,11 +99,11 @@ function increment() public {
   }
 ```
 
-Perhatikan bahwa jika dipanggil berulang kali, penghitung kami mungkin bisa menjadi korban dari overflow. Anda harus menggunakan [pustaka SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) sesering mungkin agar terhindar dari kasus yang mungkin terjadi ini.
+Perhatikan bahwa jika dipanggil terlalu sering, counter kita mungkin bisa menjadi korban overflow. Anda harus menggunakan [pustaka SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) sebanyak mungkin untuk melindungi dari kemungkinan kasus ini.
 
-Untuk menggunakan kontrak kami, Anda perlu menyediakan kode `CounterFactory` dan `Counter`. Saat menggunakan, misalnya di Remix, Anda perlu memilih CounterFactory.
+Untuk menerapkan kontrak kita, Anda perlu menyediakan kode `CounterFactory` dan `Counter`. Saat menerapkan misalnya di Remix, Anda harus memilih CounterFactory.
 
-Berikut kode lengkapnya:
+Berikut adalah kode lengkapnya:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -171,8 +166,8 @@ contract CounterFactory {
 }
 ```
 
-Setelah mengompilasi, di bagian penggunaan Remix, Anda akan memilih pabrik yang akan digunakan:
+Setelah mengompilasi, di bagian penerapan Remix Anda akan memilih pabrik yang akan diterapkan:
 
-![Memilih pabrik yang akan digunakan di Remix](./counterfactory-deploy.png)
+![Memilih pabrik yang akan diterapkan di Remix](./counterfactory-deploy.png)
 
-Kemudian, Anda bisa bermain dengan pabrik kontrak Anda dan memeriksa perubahan nilainya. Jika Anda ingin memangil kontrak pintar dari alamat lain, Anda perlu mengubah alamat di Akun Remix tertentu.
+Kemudian Anda dapat bermain dengan pabrik kontrak Anda dan memeriksa perubahan nilainya. Jika Anda ingin memanggil kontrak pintar dari alamat yang berbeda, Anda perlu mengubah alamat di pilihan Akun (Account) pada Remix.
