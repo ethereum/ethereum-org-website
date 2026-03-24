@@ -21,6 +21,8 @@ export interface JsxTranslationResult {
 
 /**
  * Translate JSX attributes in markdown files via Gemini.
+ * All languages are dispatched concurrently -- the per-file concurrency
+ * inside translateJsxAttributes is bounded by GEMINI_CONCURRENCY.
  * Updates committedFiles in-place with translated content.
  */
 export async function runJsxTranslation(
@@ -45,8 +47,9 @@ export async function runJsxTranslation(
   let totalAttributesTranslated = 0
   let totalFilesUpdated = 0
 
-  // Process each language separately
-  for (const langPair of languagePairs) {
+  // Dispatch all languages concurrently -- Gemini concurrency is
+  // bounded inside translateAttributesByFile via the shared pool
+  const languageTasks = languagePairs.map((langPair) => async () => {
     const langCode = langPair.internalLanguageCode
 
     // Filter files for this language (markdown only)
@@ -57,7 +60,7 @@ export async function runJsxTranslation(
 
     if (langFiles.length === 0) {
       console.log(`[JSX-TRANSLATE] No markdown files for ${langCode}`)
-      continue
+      return
     }
 
     console.log(
@@ -108,7 +111,9 @@ export async function runJsxTranslation(
         )
       }
     }
-  }
+  })
+
+  await Promise.all(languageTasks.map((task) => task()))
 
   return {
     geminiSkipped: false,

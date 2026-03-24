@@ -7,6 +7,7 @@ import { GoogleGenAI } from "@google/genai"
 import i18nConfig from "../../../../../i18n.config.json"
 import type { ExtractedAttribute, TranslatedAttribute } from "../jsx-attributes"
 import { delay } from "../workflows/utils"
+import { createRateLimiter } from "./rate-limiter"
 
 /** Gemini API configuration */
 const GEMINI_MODEL = "gemini-2.5-pro"
@@ -211,33 +212,42 @@ export async function translateAttributesWithRetry(
 }
 
 /**
- * Translate attributes grouped by file, processing each file's batch sequentially
- * to avoid rate limits while maximizing context per request.
+ * Translate attributes grouped by file, processing files with bounded
+ * concurrency to speed up the JSX translation phase.
  */
 export async function translateAttributesByFile(
   attributesByFile: Map<string, ExtractedAttribute[]>,
   targetLanguage: string,
-  glossaryTerms?: Map<string, string>
+  glossaryTerms?: Map<string, string>,
+  concurrency?: number
 ): Promise<Map<string, TranslatedAttribute[]>> {
   const results = new Map<string, TranslatedAttribute[]>()
+  const maxConcurrent = concurrency || Number(process.env.GEMINI_CONCURRENCY) || 16
+  const limiter = createRateLimiter(maxConcurrent)
 
-  for (const [filePath, attributes] of attributesByFile) {
-    try {
-      const translated = await translateAttributesWithRetry(
-        attributes,
-        targetLanguage,
-        glossaryTerms
-      )
-      results.set(filePath, translated)
-      console.log(
-        `[GEMINI] ✓ Translated ${translated.length} attributes in ${filePath}`
-      )
-    } catch (error) {
-      console.error(`[GEMINI] ✗ Failed to translate ${filePath}:`, error)
-      // Continue with other files even if one fails
-      results.set(filePath, [])
+  const tasks = Array.from(attributesByFile.entries()).map(
+    ([filePath, attributes]) => async () => {
+      await limiter.acquire()
+      try {
+        const translated = await translateAttributesWithRetry(
+          attributes,
+          targetLanguage,
+          glossaryTerms
+        )
+        results.set(filePath, translated)
+        console.log(
+          `[GEMINI] ✓ Translated ${translated.length} attributes in ${filePath}`
+        )
+      } catch (error) {
+        console.error(`[GEMINI] ✗ Failed to translate ${filePath}:`, error)
+        results.set(filePath, [])
+      } finally {
+        limiter.release()
+      }
     }
-  }
+  )
+
+  await Promise.all(tasks.map((task) => task()))
 
   return results
 }

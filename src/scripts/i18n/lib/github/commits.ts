@@ -164,6 +164,280 @@ export class IncrementalCommitter {
 }
 
 /**
+ * Shared committer for parallel language translation.
+ *
+ * Unlike IncrementalCommitter (one amending commit per language), this
+ * creates individual chained commits (each parented on the previous)
+ * so multiple languages can interleave safely. Each file appears on the
+ * branch immediately for crash safety.
+ *
+ * After all translations complete, call squashByLanguage() to collapse
+ * the individual commits into one per language for a clean history.
+ */
+export class SharedCommitter {
+  private currentCommitSha = ""
+  private currentTreeSha = ""
+  private queue: Promise<void> = Promise.resolve()
+  private baseUrl = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}`
+  /** Track blob SHAs per language for squashing */
+  private blobsByLanguage = new Map<string, TreeItem[]>()
+  /** SHA of the original base before any translations */
+  private originalBaseSha = ""
+
+  constructor(private branch: string) {}
+
+  /** Snapshot the current branch state. */
+  async init(): Promise<void> {
+    const refRes = await fetchWithRetry(
+      `${this.baseUrl}/git/ref/heads/${this.branch}`,
+      { headers: gitHubBearerHeaders }
+    )
+    if (!refRes.ok) {
+      const body = await refRes.text().catch(() => "")
+      throw new Error(
+        `SharedCommitter init ref (${refRes.status}): ${body}`
+      )
+    }
+    const refData: { object: { sha: string } } = await refRes.json()
+    this.currentCommitSha = refData.object.sha
+    this.originalBaseSha = refData.object.sha
+
+    const commitRes = await fetchWithRetry(
+      `${this.baseUrl}/git/commits/${this.currentCommitSha}`,
+      { headers: gitHubBearerHeaders }
+    )
+    if (!commitRes.ok) {
+      const body = await commitRes.text().catch(() => "")
+      throw new Error(
+        `SharedCommitter init commit (${commitRes.status}): ${body}`
+      )
+    }
+    const commitData: { tree: { sha: string } } = await commitRes.json()
+    this.currentTreeSha = commitData.tree.sha
+  }
+
+  /**
+   * Queue a file commit. Serialized so concurrent languages don't race.
+   * Each commit chains on the previous (not amending).
+   */
+  commitFile(
+    filePath: string,
+    content: string,
+    language: string
+  ): Promise<void> {
+    const result = this.queue.then(() =>
+      this._doCommit(filePath, content, language)
+    )
+    this.queue = result.then(
+      () => {},
+      () => {}
+    )
+    return result
+  }
+
+  private async _doCommit(
+    filePath: string,
+    content: string,
+    language: string
+  ): Promise<void> {
+    // 1. Create blob
+    const blobRes = await fetchWithRetry(`${this.baseUrl}/git/blobs`, {
+      method: "POST",
+      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        content: Buffer.from(content, "utf8").toString("base64"),
+        encoding: "base64",
+      }),
+    })
+    if (!blobRes.ok) {
+      const body = await blobRes.text().catch(() => "")
+      throw new Error(
+        `Failed to create blob for ${filePath} (${blobRes.status}): ${body}`
+      )
+    }
+    const blobData: { sha: string } = await blobRes.json()
+
+    const item: TreeItem = {
+      path: filePath,
+      mode: "100644",
+      type: "blob",
+      sha: blobData.sha,
+    }
+
+    // Track blob for squashing
+    if (!this.blobsByLanguage.has(language)) {
+      this.blobsByLanguage.set(language, [])
+    }
+    this.blobsByLanguage.get(language)!.push(item)
+
+    // 2. Create tree on top of current tree
+    const treeRes = await fetchWithRetry(`${this.baseUrl}/git/trees`, {
+      method: "POST",
+      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        base_tree: this.currentTreeSha,
+        tree: [item],
+      }),
+    })
+    if (!treeRes.ok) {
+      const body = await treeRes.text().catch(() => "")
+      throw new Error(`Failed to create tree (${treeRes.status}): ${body}`)
+    }
+    const treeData: { sha: string } = await treeRes.json()
+
+    // 3. Create commit parented on the current tip (chaining, not amending)
+    const commitRes = await fetchWithRetry(`${this.baseUrl}/git/commits`, {
+      method: "POST",
+      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: `i18n(${language}): ${filePath.split("/").pop()}`,
+        tree: treeData.sha,
+        parents: [this.currentCommitSha],
+      }),
+    })
+    if (!commitRes.ok) {
+      const body = await commitRes.text().catch(() => "")
+      throw new Error(`Failed to create commit (${commitRes.status}): ${body}`)
+    }
+    const commitData: { sha: string } = await commitRes.json()
+
+    // 4. Update branch ref (no force needed -- linear chain)
+    const updateRes = await fetchWithRetry(
+      `${this.baseUrl}/git/refs/heads/${this.branch}`,
+      {
+        method: "PATCH",
+        headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+        body: JSON.stringify({ sha: commitData.sha }),
+      }
+    )
+    if (!updateRes.ok) {
+      const body = await updateRes.text().catch(() => "")
+      throw new Error(`Failed to update ref (${updateRes.status}): ${body}`)
+    }
+
+    // Advance internal state
+    this.currentCommitSha = commitData.sha
+    this.currentTreeSha = treeData.sha
+
+    debugLog(
+      `SharedCommitter [${language}]: committed ${filePath}`
+    )
+  }
+
+  /**
+   * Squash all individual commits into one per language.
+   * Builds a new commit chain from the original base:
+   *   base -> lang1 (all files) -> lang2 (all files) -> ...
+   * Then force-updates the branch ref.
+   */
+  async squashByLanguage(): Promise<void> {
+    const languages = Array.from(this.blobsByLanguage.keys()).sort()
+    if (languages.length === 0) return
+
+    console.log(
+      `[SharedCommitter] Squashing ${languages.length} language(s): ${languages.join(", ")}`
+    )
+
+    let parentSha = this.originalBaseSha
+    // Get the original base tree
+    const baseCommitRes = await fetchWithRetry(
+      `${this.baseUrl}/git/commits/${this.originalBaseSha}`,
+      { headers: gitHubBearerHeaders }
+    )
+    if (!baseCommitRes.ok) {
+      const body = await baseCommitRes.text().catch(() => "")
+      throw new Error(
+        `Failed to get base commit for squash (${baseCommitRes.status}): ${body}`
+      )
+    }
+    const baseCommitData: { tree: { sha: string } } = await baseCommitRes.json()
+    let currentTree = baseCommitData.tree.sha
+
+    for (const lang of languages) {
+      const blobs = this.blobsByLanguage.get(lang)!
+
+      // Create tree with all blobs for this language on top of current tree
+      const treeRes = await fetchWithRetry(`${this.baseUrl}/git/trees`, {
+        method: "POST",
+        headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          base_tree: currentTree,
+          tree: blobs,
+        }),
+      })
+      if (!treeRes.ok) {
+        const body = await treeRes.text().catch(() => "")
+        throw new Error(
+          `Failed to create squash tree for ${lang} (${treeRes.status}): ${body}`
+        )
+      }
+      const treeData: { sha: string } = await treeRes.json()
+
+      // Create squashed commit
+      const commitRes = await fetchWithRetry(`${this.baseUrl}/git/commits`, {
+        method: "POST",
+        headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: `i18n(${lang}): Gemini translation`,
+          tree: treeData.sha,
+          parents: [parentSha],
+        }),
+      })
+      if (!commitRes.ok) {
+        const body = await commitRes.text().catch(() => "")
+        throw new Error(
+          `Failed to create squash commit for ${lang} (${commitRes.status}): ${body}`
+        )
+      }
+      const commitData: { sha: string } = await commitRes.json()
+
+      parentSha = commitData.sha
+      currentTree = treeData.sha
+
+      console.log(
+        `[SharedCommitter] Squashed ${blobs.length} files for ${lang}`
+      )
+    }
+
+    // Force-update branch to squashed chain
+    const updateRes = await fetchWithRetry(
+      `${this.baseUrl}/git/refs/heads/${this.branch}`,
+      {
+        method: "PATCH",
+        headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+        body: JSON.stringify({ sha: parentSha, force: true }),
+      }
+    )
+    if (!updateRes.ok) {
+      const body = await updateRes.text().catch(() => "")
+      throw new Error(
+        `Failed to update ref after squash (${updateRes.status}): ${body}`
+      )
+    }
+
+    // Update internal state
+    this.currentCommitSha = parentSha
+    this.currentTreeSha = currentTree
+
+    console.log(
+      `[SharedCommitter] Squash complete: ${languages.length} commits`
+    )
+  }
+
+  get totalFiles(): number {
+    let count = 0
+    for (const blobs of this.blobsByLanguage.values()) {
+      count += blobs.length
+    }
+    return count
+  }
+
+  get languageCount(): number {
+    return this.blobsByLanguage.size
+  }
+}
+
+/**
  * Commit multiple files in a single commit using GitHub's Git Data API.
  * This avoids creating one commit per file.
  *
