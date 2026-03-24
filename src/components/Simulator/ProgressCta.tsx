@@ -1,5 +1,5 @@
 import React, { type ComponentPropsWithoutRef } from "react"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -9,7 +9,7 @@ import { Flex } from "../ui/flex"
 import { ClickAnimation } from "./ClickAnimation"
 import { PulseAnimation } from "./PulseAnimation"
 
-const MotionFlex = motion(Flex)
+const MotionFlex = motion.create(Flex)
 
 type ProgressCtaProps = ComponentPropsWithoutRef<typeof MotionFlex> &
   Pick<ButtonProps, "disabled"> & {

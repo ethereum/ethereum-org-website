@@ -141,6 +141,7 @@ const PROTECTED_BRAND_NAMES = [
   "JavaScript",
   "TypeScript",
   "Python",
+  "Noir",
   // Companies/Products
   "Alchemy",
   "Infura",
@@ -158,6 +159,9 @@ const PROTECTED_BRAND_NAMES = [
   "Ganache",
   "Brownie",
   "Waffle",
+  "React",
+  "Vite",
+  "Wagmi",
   // Protocols/Projects
   "Uniswap",
   "Aave",
@@ -421,6 +425,49 @@ function fixMergedSupDigits(
  * the English source. Then replace all numbered tags in the translation.
  * Handles inverted order and HTML-escaped variants.
  */
+/**
+ * Remove self-closing JSX components from translations that no longer
+ * exist in the English source. These are stale references to components
+ * that were removed from the English content but persist in translations.
+ *
+ * Only removes self-closing components (<ComponentName ... />) on their
+ * own line. Does not touch open/close component pairs.
+ */
+function removeStaleComponents(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = translatedContent.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    // Match self-closing JSX components on their own line
+    parts[i] = parts[i].replace(
+      /^[ \t]*<([A-Z][a-zA-Z]+)\b[^>]*\/>\s*$/gm,
+      (match, componentName) => {
+        // Check if this component exists anywhere in the English source
+        if (!englishContent.includes(componentName)) {
+          fixCount++
+          return ""
+        }
+        return match
+      }
+    )
+  }
+
+  let result = parts.join("")
+  // Clean up triple+ blank lines left by removal (only if we actually removed something)
+  if (fixCount > 0) {
+    result = result.replace(/\n{3,}/g, "\n\n")
+  }
+
+  return { content: result, fixCount }
+}
+
 function fixCrowdinNumberedTags(
   translatedContent: string,
   englishContent: string
@@ -462,7 +509,7 @@ function fixCrowdinNumberedTags(
         `</${num}>([\\s\\S]*?)(?:&lt;${num}>|<${num}>)`,
         "g"
       )
-      parts[i] = parts[i].replace(invertedRe, (_match, inner) => {
+      parts[i] = parts[i].replace(invertedRe, (_, inner) => {
         fixCount++
         return `${tags.open}${inner}${tags.close}`
       })
@@ -472,7 +519,7 @@ function fixCrowdinNumberedTags(
         `(?:&lt;${num}>|<${num}>)([\\s\\S]*?)</${num}>`,
         "g"
       )
-      parts[i] = parts[i].replace(normalRe, (_match, inner) => {
+      parts[i] = parts[i].replace(normalRe, (_, inner) => {
         fixCount++
         return `${tags.open}${inner}${tags.close}`
       })
@@ -546,7 +593,7 @@ const KNOWN_WRONG_COMPOUNDS: Record<string, string> = {
   "انتهاء صلاحية الدولة": "انتهاء صلاحية الحالة",
   "مسؤولية الدولة": "مسؤولية الحالة",
   // Ether as altruism
-  "الإيثار": "الإيثر",
+  الإيثار: "الإيثر",
   // Liquid staking as liquid mortgage
   "الرهن العقاري السائل": "التحصيص السائل",
 }
@@ -699,6 +746,47 @@ function fixTickerTranspositions(content: string): {
 }
 
 /**
+ * Fix case-sensitive brand capitalization mistakes.
+ *
+ * Maps wrong-case variants to canonical forms. Skips URLs (github.com etc.)
+ * and code blocks. Only matches standalone occurrences (not inside URLs).
+ */
+const BRAND_CAPITALIZATION_FIXES: Record<string, string> = {
+  Metamask: "MetaMask",
+  Github: "GitHub",
+}
+
+function fixBrandCapitalization(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    for (const [wrong, correct] of Object.entries(BRAND_CAPITALIZATION_FIXES)) {
+      // Match the wrong form but NOT when followed by .com/.org/.io/etc.
+      // (i.e., skip domain names like github.com)
+      const re = new RegExp(
+        `(?<![A-Za-z0-9/])${escapeRegex(wrong)}(?!\\.(?:com|org|io|dev|net))(?![A-Za-z0-9])`,
+        "g"
+      )
+      const matches = parts[i].match(re)
+      if (matches && matches.length > 0) {
+        fixCount += matches.length
+        parts[i] = parts[i].replace(re, correct)
+      }
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Fix only brand/product/language name tags in frontmatter.
  * Generic concept tags (e.g. "zero-knowledge" → "nulová znalost") should
  * remain in the native language. Only tags that match a protected brand name
@@ -721,8 +809,8 @@ function fixBrandTags(
   const transFm = transMatch[1]
   const engFm = engMatch[1]
 
-  // Extract tags arrays
-  const tagsRe = /^tags:\s*\[([^\]]*)\]/m
+  // Extract tags arrays (handles both single-line and multi-line YAML)
+  const tagsRe = /^tags:\s*\[([\s\S]*?)\]/m
   const engTagsMatch = engFm.match(tagsRe)
   const transTagsMatch = transFm.match(tagsRe)
 
@@ -1423,6 +1511,84 @@ function extractHeaderStructure(md: string): HeaderInfo[] {
   return headers
 }
 
+/**
+ * Fix heading anchors that Crowdin detached from their heading lines.
+ *
+ * Crowdin sometimes strips the `###` prefix and merges the heading text
+ * with the following paragraph, leaving `{#anchor-id}` in prose.
+ * MDX parses this as a JSX expression, acorn chokes, and the build crashes.
+ *
+ * Uses English source to determine the correct heading level.
+ */
+function fixDetachedHeadingAnchors(
+  translated: string,
+  english: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  // Build a map: anchor-id -> heading level from English
+  const headingRe = /^(#{1,6})\s+.*\{#([\w-]+)\}/gm
+  const anchorLevelMap = new Map<string, string>()
+  let m: RegExpExecArray | null
+  while ((m = headingRe.exec(english))) {
+    anchorLevelMap.set(m[2], m[1])
+  }
+
+  if (anchorLevelMap.size === 0) {
+    return { content: translated, fixCount: 0 }
+  }
+
+  // Process line by line on the FULL content (not code-block-split)
+  // to preserve heading context. Skip lines inside fenced code blocks.
+  const lines = translated.split("\n")
+  const newLines: string[] = []
+  let inFencedBlock = false
+
+  for (const line of lines) {
+    if (/^```|^~~~/.test(line.trim())) {
+      inFencedBlock = !inFencedBlock
+      newLines.push(line)
+      continue
+    }
+    if (inFencedBlock) {
+      newLines.push(line)
+      continue
+    }
+
+    // Already a heading line? Leave as-is
+    if (/^#{1,6}\s/.test(line)) {
+      newLines.push(line)
+      continue
+    }
+
+    // Check for {#anchor-id} on a non-heading line
+    const anchorMatch = line.match(/^(.+?)\s*(\{#([\w-]+)\})\s*(.*)$/)
+    if (!anchorMatch) {
+      newLines.push(line)
+      continue
+    }
+
+    const [, beforeAnchor, anchorTag, anchorId, afterAnchor] = anchorMatch
+    const level = anchorLevelMap.get(anchorId)
+
+    if (!level) {
+      newLines.push(line)
+      continue
+    }
+
+    // Restore: "Text {#id} Paragraph..." -> "### Text {#id}\n\nParagraph..."
+    const headingLine = `${level} ${beforeAnchor.trim()} ${anchorTag}`
+    newLines.push(headingLine)
+    if (afterAnchor.trim()) {
+      newLines.push("")
+      newLines.push(afterAnchor.trim())
+    }
+    fixCount++
+  }
+
+  return { content: newLines.join("\n"), fixCount }
+}
+
 function syncHeaderIdsWithEnglish(
   translatedMd: string,
   englishMd: string
@@ -1467,8 +1633,21 @@ function syncHeaderIdsWithEnglish(
 
 function normalizeBlockHtmlLines(md: string): string {
   for (const tag of BLOCK_HTML_TAGS) {
-    const inlineCloseRe = new RegExp(`([^\\n])\\s*</${tag}>`, "g")
-    md = md.replace(inlineCloseRe, (_, before) => `${before}\n</${tag}>`)
+    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
+    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${tag}>`, "g")
+    md = md.replace(
+      inlineCloseRe,
+      (match: string, before: string, offset: number) => {
+        // Find start of current line
+        const lineStart = md.lastIndexOf("\n", offset) + 1
+        const lineContent = md.slice(lineStart, offset + match.length)
+        // If opening tag is on the same line, this is inline usage -- leave it
+        if (new RegExp(`<${tag}[\\s>]`).test(lineContent)) {
+          return match
+        }
+        return `${before}\n</${tag}>`
+      }
+    )
   }
   return md
 }
@@ -1493,9 +1672,18 @@ function restoreBlankLinesFromEnglish(
     `</(${BLOCK_MDX_COMPONENTS.join("|")})>`
   )
 
+  let inCodeFence = false
   for (let i = 0; i < translatedLines.length; i++) {
     const line = translatedLines[i]
     result.push(line)
+
+    // Track code fence boundaries
+    if (/^```|^~~~/.test(line.trim())) {
+      inCodeFence = !inCodeFence
+    }
+
+    // Skip lines inside code fences (e.g., Python # comments match header pattern)
+    if (inCodeFence) continue
 
     // Check if this line should be followed by a blank line
     const isHeader = headerPattern.test(line)
@@ -1503,26 +1691,38 @@ function restoreBlankLinesFromEnglish(
 
     if (isHeader || isBlockClose) {
       const nextLine = translatedLines[i + 1]
-      const hasBlankAfter = nextLine === ""
+      // Treat whitespace-only lines as blank (not just empty string)
+      const hasBlankAfter = nextLine !== undefined && nextLine.trim() === ""
 
       // Find corresponding line in English by matching pattern
       let englishShouldHaveBlank = false
-      for (let j = 0; j < englishLines.length; j++) {
-        const englishLine = englishLines[j]
-        if (isHeader && headerPattern.test(englishLine)) {
-          // Headers should match by structure (level)
-          const transLevel = (line.match(/^#+/) || [""])[0].length
-          const engLevel = (englishLine.match(/^#+/) || [""])[0].length
-          if (transLevel === engLevel) {
-            englishShouldHaveBlank = englishLines[j + 1] === ""
-            break
+
+      if (isBlockClose) {
+        // Match by specific tag name to avoid cross-tag false matches
+        const tagMatch = line.match(
+          new RegExp(`</(${BLOCK_MDX_COMPONENTS.join("|")})>`)
+        )
+        if (tagMatch) {
+          const tagName = tagMatch[1]
+          const specificCloseRe = new RegExp(`</${tagName}>`)
+          for (let j = 0; j < englishLines.length; j++) {
+            if (specificCloseRe.test(englishLines[j])) {
+              englishShouldHaveBlank = englishLines[j + 1] === ""
+              break
+            }
           }
-        } else if (
-          isBlockClose &&
-          blockComponentClosePattern.test(englishLine)
-        ) {
-          englishShouldHaveBlank = englishLines[j + 1] === ""
-          break
+        }
+      } else if (isHeader) {
+        for (let j = 0; j < englishLines.length; j++) {
+          const englishLine = englishLines[j]
+          if (headerPattern.test(englishLine)) {
+            const transLevel = (line.match(/^#+/) || [""])[0].length
+            const engLevel = (englishLine.match(/^#+/) || [""])[0].length
+            if (transLevel === engLevel) {
+              englishShouldHaveBlank = englishLines[j + 1] === ""
+              break
+            }
+          }
         }
       }
 
@@ -1604,7 +1804,8 @@ function fixBlockComponentLineBreaks(md: string): {
 
   for (const component of BLOCK_MDX_COMPONENTS) {
     // Fix inline closing tags: content</Component> → content\n</Component>
-    const inlineCloseRe = new RegExp(`([^\\n])\\s*</${component}>`, "g")
+    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
+    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${component}>`, "g")
     content = content.replace(inlineCloseRe, (_, before) => {
       fixCount++
       return `${before}\n</${component}>`
@@ -2040,6 +2241,168 @@ function fixAsciiGuillemets(content: string): {
       fixCount += rightMatches.length
       parts[i] = parts[i].replace(/>>/g, "»")
     }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix Unicode guillemets (U+00AB, U+00BB) that replace < or > in HTML tags.
+ *
+ * Gemini/Crowdin sometimes substitutes the right guillemet for > when closing
+ * an HTML attribute (e.g., dir="ltr">> becomes dir="ltr">). Similarly, left
+ * guillemet can replace <.
+ *
+ * Only fixes guillemets adjacent to HTML tag syntax. Leaves legitimate
+ * guillemet quotation pairs (e.g., <<text>>) untouched.
+ */
+function fixGuillemetsInHtmlTags(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    // Process line by line for context
+    const lines = parts[i].split("\n")
+    for (let j = 0; j < lines.length; j++) {
+      // Match complete tag-like patterns with guillemets replacing < or >
+      // Pattern 1: «tagname attr="val"»  or «/tagname» (guillemets as < and >)
+      // Must contain tag-like syntax: attributes (=, quotes) or be a closing tag (/)
+      lines[j] = lines[j].replace(
+        /\u00AB(\/?[a-zA-Z][\w]*(?:\s[^>\u00BB]*)?)[>\u00BB]/g,
+        (match, inner) => {
+          // Closing tag: «/span» -- always valid
+          if (inner.startsWith("/")) {
+            fixCount++
+            return "<" + inner + ">"
+          }
+          // Opening tag with attributes: «span dir="ltr"» -- has = or quotes
+          if (/[="']/.test(inner)) {
+            fixCount++
+            return "<" + inner + ">"
+          }
+          // Simple tag: «br» «i» «b» -- only known HTML tag names
+          // Whitelist prevents false positives on guillemet-quoted words
+          // like «cat» «dog» «null» which are legitimate quotation marks
+          const KNOWN_SHORT_HTML_TAGS = new Set([
+            "a",
+            "b",
+            "i",
+            "p",
+            "s",
+            "u",
+            "br",
+            "em",
+            "hr",
+            "li",
+            "ol",
+            "td",
+            "th",
+            "tr",
+            "ul",
+            "dd",
+            "dl",
+            "dt",
+            "div",
+            "img",
+            "nav",
+            "pre",
+            "sub",
+            "sup",
+          ])
+          if (KNOWN_SHORT_HTML_TAGS.has(inner)) {
+            fixCount++
+            return "<" + inner + ">"
+          }
+          return match
+        }
+      )
+
+      // Pattern 2: <tagname ...» (right guillemet as >, left < is correct)
+      lines[j] = lines[j].replace(/<([^<>]*)\u00BB/g, (_, inner) => {
+        fixCount++
+        return "<" + inner + ">"
+      })
+    }
+    parts[i] = lines.join("\n")
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix missing closing tags on single-line MDX components.
+ *
+ * Crowdin/Gemini sometimes drops the closing tag on components that should
+ * be self-contained on a single line (e.g., <SocialListItem>).
+ */
+function fixMissingComponentClosingTags(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const singleLineComponents = ["SocialListItem"]
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    const lines = parts[i].split("\n")
+    for (let j = 0; j < lines.length; j++) {
+      for (const comp of singleLineComponents) {
+        const openPattern = new RegExp(`<${comp}\\s[^>]*>`)
+        const closePattern = new RegExp(`</${comp}>`)
+
+        if (openPattern.test(lines[j]) && !closePattern.test(lines[j])) {
+          lines[j] = lines[j].trimEnd() + `</${comp}>`
+          fixCount++
+        }
+      }
+    }
+    parts[i] = lines.join("\n")
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Fix DocLink components mangled into markdown link syntax by Crowdin/Gemini.
+ *
+ * Pattern: `[<DocLink href="](/actual/path)/">` -> `<DocLink href="/actual/path/">`
+ *
+ * Crowdin treats `<DocLink href="...">` as a markdown link, wrapping the
+ * component tag in `[...]()` syntax and moving the href into the parentheses.
+ */
+function fixMangledDocLinks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue
+
+    // Match: [<DocLink href="](path)/">  or  [<DocLink href="](path)">
+    parts[i] = parts[i].replace(
+      /\[<DocLink\s+href="\]\(([^)]+)\)\/?">?/g,
+      (_, path) => {
+        fixCount++
+        const normalizedPath = path.endsWith("/") ? path : path + "/"
+        return `<DocLink href="${normalizedPath}">`
+      }
+    )
   }
 
   return { content: parts.join(""), fixCount }
@@ -2891,6 +3254,84 @@ function fixInnerQuotesInJsxAttributes(content: string): {
 }
 
 /**
+ * Fix Crowdin variable-expansion leak inside JSX attribute values.
+ *
+ * Crowdin sometimes treats `$N` inside attribute values as a variable reference,
+ * expanding `$1` to the attribute name itself (e.g., "description") and leaving
+ * the remaining digits. This produces patterns like:
+ *   description="...text... description=4 ...text..."
+ * where the English source had:
+ *   description="...text... $14 ...text..."
+ *
+ * The fix keeps the translated text and replaces only the leaked
+ * `<attrName>=<digits>` with the corresponding `$NN` from the English source.
+ */
+function fixLeakedAttrNamesInJsxValues(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  const jsxAttrNames = "title|description|label|alt|contentPreview"
+  // Match leaked attrName=digits INSIDE a quoted attribute value
+  const leakInsideValue = new RegExp(`\\b(${jsxAttrNames})=(\\d+)\\b`, "g")
+
+  const lines = translatedContent.split("\n")
+  for (let li = 0; li < lines.length; li++) {
+    const line = lines[li]
+    if (!leakInsideValue.test(line)) continue
+    leakInsideValue.lastIndex = 0
+
+    // Only operate inside quoted attribute values on JSX component lines
+    // (lines containing <Card, <ExpandableCard, etc.)
+    if (!/^\s*<[A-Z]/.test(line)) continue
+
+    // Find the matching English line by emoji (stable across translations)
+    const emojiMatch = line.match(/emoji="([^"]*)"/)
+    if (!emojiMatch) continue
+    const emoji = emojiMatch[1]
+
+    let engLine = ""
+    for (const el of englishContent.split("\n")) {
+      if (el.includes(`emoji="${emoji}"`)) {
+        engLine = el
+        break
+      }
+    }
+    if (!engLine) continue
+
+    // Replace each leaked attrName=digits with the $NN from English
+    lines[li] = line.replace(leakInsideValue, (match, _, digits) => {
+      // Verify this is inside a quoted attribute value (not a bare attribute)
+      // by checking that the attribute pattern `leakedName="...` does NOT
+      // start right before this match (which would be the real attribute)
+      const matchPos = line.indexOf(match)
+      const before = line.slice(Math.max(0, matchPos - 2), matchPos)
+      if (before.endsWith('="') || before.endsWith("='")) {
+        // This is the actual attribute assignment, not a leak inside a value
+        return match
+      }
+
+      // Find all $N+ patterns in the English line's same attribute value
+      const attrRegex = new RegExp(`(${jsxAttrNames})="([^"]*)"`, "g")
+      let engM: RegExpExecArray | null
+      while ((engM = attrRegex.exec(engLine)) !== null) {
+        const engValue = engM[2]
+        // Look for $digits in the English value
+        const dollarMatch = engValue.match(new RegExp(`\\$(\\d*${digits})\\b`))
+        if (dollarMatch) {
+          fixCount++
+          return "$" + dollarMatch[1]
+        }
+      }
+      return match
+    })
+  }
+
+  return { content: lines.join("\n"), fixCount }
+}
+
+/**
  * Escape lone tildes used as range/approximate notation.
  * In Korean (and other CJK), `100만~200만` uses ~ as "to/approximately",
  * but remark-gfm treats paired ~text~ as strikethrough (<del>).
@@ -3249,6 +3690,7 @@ function processMarkdownFile(
   const issues: string[] = []
   let content = providedContent || fs.readFileSync(mdPath, "utf8")
 
+  const before = content
   let englishMd: string | undefined
 
   // Map translated path to English path: remove `/translations/<lang>/` segment
@@ -3266,13 +3708,20 @@ function processMarkdownFile(
     )
     if (fs.existsSync(englishPath)) {
       englishMd = fs.readFileSync(englishPath, "utf8")
+      // Fix detached heading anchors BEFORE syncing IDs
+      {
+        const snapshot = content
+        const result = fixDetachedHeadingAnchors(content, englishMd)
+        content = result.content
+        if (content !== snapshot) {
+          issues.push(`Restored ${result.fixCount} detached heading anchor(s)`)
+        }
+      }
       content = syncHeaderIdsWithEnglish(content, englishMd)
     } else {
       issues.push(`English source missing: ${path.relative(ROOT, englishPath)}`)
     }
   }
-
-  const before = content
 
   // Helper: only log a fix if content actually changed
   function applyFix(
@@ -3399,6 +3848,18 @@ function processMarkdownFile(
     () => fixAsciiGuillemets(content),
     (n) => `Fixed ${n} ASCII guillemets (<< >>) to Unicode (« »)`
   )
+  applyFix(
+    () => fixGuillemetsInHtmlTags(content),
+    (n) => `Fixed ${n} guillemet(s) replacing < or > in HTML tags`
+  )
+  applyFix(
+    () => fixMissingComponentClosingTags(content),
+    (n) => `Fixed ${n} missing component closing tag(s)`
+  )
+  applyFix(
+    () => fixMangledDocLinks(content),
+    (n) => `Fixed ${n} mangled DocLink component(s)`
+  )
 
   // Fix escaped backticks (\`) to regular backticks (`)
   {
@@ -3410,6 +3871,10 @@ function processMarkdownFile(
     }
   }
 
+  applyFix(
+    () => fixBrandCapitalization(content),
+    (n) => `Fixed ${n} brand capitalization issue(s)`
+  )
   applyFix(
     () => fixTickerTranspositions(content),
     (n) => `Fixed ${n} ticker symbol transpositions`
@@ -3443,6 +3908,10 @@ function processMarkdownFile(
 
   // Normalize inline components and restore blank lines from English source
   if (englishMd) {
+    applyFix(
+      () => removeStaleComponents(content, englishMd!),
+      (n) => `Removed ${n} stale component(s) not in English source`
+    )
     applyFix(
       () => syncProtectedFrontmatterFields(content, englishMd!, locale),
       (n) => `Synced ${n} protected frontmatter fields from English`
@@ -3516,6 +3985,15 @@ function processMarkdownFile(
     }
     content = tagResult.content
 
+    // Fix leaked attr names inside JSX attribute values (Crowdin $N expansion)
+    const leakedAttrResult = fixLeakedAttrNamesInJsxValues(content, englishMd)
+    if (leakedAttrResult.content !== content) {
+      issues.push(
+        `Fixed ${leakedAttrResult.fixCount} leaked attribute name(s) in JSX values`
+      )
+    }
+    content = leakedAttrResult.content
+
     // Fix translated hrefs using set comparison
     const hrefResult = fixTranslatedHrefs(content, englishMd)
     if (hrefResult.content !== content) {
@@ -3530,6 +4008,17 @@ function processMarkdownFile(
     applyFix(
       () => fixMissingLinkBrackets(content, englishMd),
       (n) => `Fixed ${n} missing link brackets`
+    )
+
+    // Re-run JSX hybrid fix AFTER fixMissingLinkBrackets, which can
+    // re-introduce [<Component href="](path)"> by wrapping bare JSX hrefs
+    applyFix(
+      () => fixJsxMarkdownHybrids(content),
+      (n) => `Fixed ${n} Crowdin JSX/markdown hybrid manglings`
+    )
+    applyFix(
+      () => fixMangledDocLinks(content),
+      (n) => `Fixed ${n} mangled DocLink component(s)`
     )
 
     // Warn on punctuation-only headings (dropped translation text)
@@ -3675,9 +4164,7 @@ function processJsonFile(
   const compoundResult = fixKnownWrongCompounds(content)
   if (compoundResult.fixCount > 0) {
     content = compoundResult.content
-    issues.push(
-      `Fixed ${compoundResult.fixCount} known wrong compound term(s)`
-    )
+    issues.push(`Fixed ${compoundResult.fixCount} known wrong compound term(s)`)
   }
 
   // Try parsing to validate JSON
@@ -4040,8 +4527,13 @@ export const _testOnly = {
   fixBrokenMarkdownLinks,
   fixEscapedBoldAndItalic,
   fixAsciiGuillemets,
+  fixGuillemetsInHtmlTags,
+  fixMissingComponentClosingTags,
+  fixMangledDocLinks,
+  removeStaleComponents,
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
+  fixBrandCapitalization,
   escapeMdxAngleBrackets,
   removeOrphanedClosingTags,
   normalizeFrontmatterDates,
@@ -4050,6 +4542,7 @@ export const _testOnly = {
   fixAsymmetricBackticks,
   // English-comparison fixes
   syncHeaderIdsWithEnglish,
+  fixDetachedHeadingAnchors,
   fixTranslatedHrefs,
   fixMissingLinkBrackets,
   fixBrandTags,
@@ -4087,6 +4580,7 @@ export const _testOnly = {
   restoreStrippedAbbreviations,
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
+  fixLeakedAttrNamesInJsxValues,
   fixMissingOpeningSup,
   fixSplitBoldMarkers,
   fixKnownWrongCompounds,

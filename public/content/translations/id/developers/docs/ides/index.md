@@ -1,50 +1,52 @@
 ---
-title: Lingkungan Pengembangan Terintegrasi (IDE)
-description:
+title: Lingkungan Pengembangan Terpadu (IDE)
+description: Pelajari tentang IDE berbasis web dan desktop untuk pengembangan Ethereum, termasuk Remix, VS Code, dan plugin populer.
 lang: id
 ---
 
-Ketika berkaitan dengan menyiapkan [lingkungan pengembangan terintegrasi (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), memprogram aplikasi di Ethereum sama dengan pemrograman proyek perangkat lunak lainnya. Ada banyak opsi untuk dipilih, jadi pada akhirnya, pilihlah IDE atau editor kode yang paling sesuai dengan preferensi Anda. Sangat mungkin pilihan IDE terbaik untuk pengembangan Ethereum Anda adalah IDE yang telah Anda gunakan untuk pengembangan perangkat lunak tradisional.
+Dalam hal menyiapkan [lingkungan pengembangan terpadu (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), memprogram aplikasi di Ethereum mirip dengan memprogram proyek perangkat lunak lainnya. Ada banyak pilihan yang dapat dipilih, jadi pada akhirnya, pilihlah IDE atau editor kode yang paling sesuai dengan preferensi Anda. Kemungkinan besar pilihan IDE terbaik untuk pengembangan Ethereum Anda adalah IDE yang sudah Anda gunakan untuk pengembangan perangkat lunak tradisional.
 
 ## IDE berbasis web {#web-based-ides}
 
-Jika Anda ingin mengutak-atik kode sebelum [menyiapkan lingkungan pengembangan lokal](/developers/local-environment/), aplikasi web ini dibuat secara kustom untuk pengembangan kontrak pintar Ethereum.
+Jika Anda ingin mengutak-atik kode sebelum Anda [menyiapkan lingkungan pengembangan lokal](/developers/local-environment/), aplikasi web ini dibuat khusus untuk pengembangan kontrak pintar Ethereum.
 
-**Remix -** **_IDE berbasis web yang dilengkapi dengan analisis statis, dan mesin virtual blockchain uji coba bawaan._**
+**[Remix](https://remix.ethereum.org/)** - **_IDE berbasis web dengan analisis statis bawaan, dan mesin virtual blockchain pengujian_**
 
-- [remix.ethereum.org](https://remix.ethereum.org/)
+- [Dok](https://remix-ide.readthedocs.io/en/latest/#)
+- [Gitter](https://gitter.im/ethereum/remix)
 
-**EthFiddle -** **_IDE berbasis web di mana Anda bisa menulis, mengompilasi, dan men-debug kontrak pintar Anda._**
+**[ChainIDE](https://chainide.com/)** - **_IDE multi-chain berbasis cloud_**
 
-- [ethfiddle.com](https://ethfiddle.com/)
+- [Dok](https://chainide.gitbook.io/chainide-english-1/)
+- [Forum bantuan](https://forum.chainide.com/)
+
+**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_Lingkungan pengembangan yang dapat disesuaikan untuk Ethereum dengan pemuatan ulang cepat (hot reloading), pemeriksaan kesalahan, dan dukungan testnet kelas satu_**
+
+- [Dok](https://docs.replit.com/)
+
+**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_Lingkungan pembuatan prototipe cepat di mana Anda dapat menulis, mengeksekusi, dan men-debug kontrak pintar di peramban menggunakan Solidity dan JavaScript_**
+
+**[EthFiddle](https://ethfiddle.com/)** - **_IDE berbasis web yang memungkinkan Anda menulis, mengompilasi, dan men-debug kontrak pintar Anda_**
+
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-**ChainIDE -** **_Sebuah IDE Multi Rantai Berbasis Cloud_**
+## IDE Desktop {#desktop-ides}
 
-- [chainide.com](https://chainide.com/)
+Sebagian besar IDE yang sudah mapan telah membangun plugin untuk meningkatkan pengalaman pengembangan Ethereum. Setidaknya, mereka menyediakan penyorotan sintaksis untuk [bahasa kontrak pintar](/developers/docs/smart-contracts/languages/).
 
-**Replit -** **_Sebuah lingkungan pengembangan yang dapat dikustomisasi untuk Ethereum dengan pemuatan ulang hot, pemeriksaan kesalahan, dan dukungan testnet kelas satu._**
-
-- [Starter Solidity](https://replit.com/@replit/Solidity-starter-beta)
-
-## IDE desktop {#desktop-ides}
-
-IDE yang paling mapan memiliki plugin untuk meningkatkan pengalaman pengembangan Ethereum. Paling sedikit, mereka menyediakan penyorotan sintaksis untuk [bahasa kontrak pintar](/developers/docs/smart-contracts/languages/).
-
-**Visual Studio Code -** **_IDE antarplatform profesional dengan dukungan Ethereum resmi._**
+**Visual Studio Code -** **_IDE lintas platform profesional dengan dukungan resmi Ethereum_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Meja Kerja Blockchain Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
-- [Contoh kode](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
+- [Sampel kode](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**IDE JetBrains (IntelliJ IDEA, dll.) -** **_Peralatan penting untuk para pengembang dan tim perangkat lunak_**
+**IDE JetBrains (IntelliJ IDEA, dll.) -** **_Alat penting untuk pengembang dan tim perangkat lunak_**
 
 - [JetBrains](https://www.jetbrains.com/)
 - [GitHub](https://github.com/JetBrains)
 - [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
 
-**Desktop Remix -** **_Gunakan IDE Remix pada mesin lokal Anda_**
+**Remix Desktop -** **_Rasakan pengalaman Remix IDE di mesin lokal Anda_**
 
 - [Unduh](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
@@ -52,8 +54,11 @@ IDE yang paling mapan memiliki plugin untuk meningkatkan pengalaman pengembangan
 ## Plugin dan ekstensi {#plugins-extensions}
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Bahasa Solidity Ethereum untuk Visual Studio Code
-- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Pemformat kode dengan menggunakan prettier
+- [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Dukungan Solidity dan Hardhat oleh tim Hardhat
+- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Pemformat kode menggunakan prettier
 
 ## Bacaan lebih lanjut {#further-reading}
+
+- [IDE Ethereum](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Daftar IDE Ethereum dari Alchemy_
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

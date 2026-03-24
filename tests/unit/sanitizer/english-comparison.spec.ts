@@ -24,6 +24,9 @@ const {
   restoreStrippedAbbreviations,
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
+  removeStaleComponents,
+  fixLeakedAttrNamesInJsxValues,
+  fixDetachedHeadingAnchors,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -185,6 +188,33 @@ test.describe("English Comparison Fixes", () => {
       )
       expect(content).toBe("no frontmatter")
       expect(fixCount).toBe(0)
+    })
+
+    test("handles multi-line YAML tag arrays", () => {
+      const english = [
+        "---",
+        'tags: ["typescript", "react", "vite", "wagmi", "frontend"]',
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "tags:",
+        "  [",
+        '    "TypeScript",',
+        '    "\u0440\u0435\u0430\u0433\u0443\u0432\u0430\u043D\u043D\u044F",',
+        '    "vite",',
+        '    "wagmi",',
+        '    "\u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u0430\u043D\u043D\u044F"',
+        "  ]",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = fixBrandTags(translated, english)
+      // "react" is a brand -> should be restored to "React"
+      expect(content).toContain('"React"')
+      expect(content).not.toContain(
+        '"\u0440\u0435\u0430\u0433\u0443\u0432\u0430\u043D\u043D\u044F"'
+      )
+      expect(fixCount).toBeGreaterThanOrEqual(1)
     })
   })
 
@@ -449,6 +479,92 @@ test.describe("English Comparison Fixes", () => {
       // Translation's blank line must be preserved
       expect(content).toContain("#### Primer {#ex}\n\nContent with blank line")
     })
+
+    test("skips Python # comments inside code fences", () => {
+      // Python # comments match ^#{1,6}\s+ but must not get blank lines added
+      const english = [
+        "## Heading {#id}",
+        "",
+        "```python",
+        "# Auction params",
+        "# Beneficiary receives money",
+        "beneficiary: public(address)",
+        "```",
+      ].join("\n")
+      const translated = [
+        "## Judul {#id}",
+        "",
+        "```python",
+        "# Auction params # Parameter lelang",
+        "# Beneficiary receives money # Penerima manfaat",
+        "beneficiary: public(address)",
+        "```",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // No blank lines should be inserted inside the code fence
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("resumes header detection after code fence closes", () => {
+      const english = [
+        "```python",
+        "# comment",
+        "```",
+        "",
+        "## After Code {#after}",
+        "",
+        "Text",
+      ].join("\n")
+      const translated = [
+        "```python",
+        "# komentar",
+        "```",
+        "",
+        "## Setelah Kode {#after}",
+        "Teks",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // Should add blank line after the heading outside the fence
+      expect(content).toContain("## Setelah Kode {#after}\n\nTeks")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not add blank line after AlertContent when English has none", () => {
+      const english = [
+        "</AlertContent>",
+        "</Alert>",
+        "",
+        "## Next {#next}",
+      ].join("\n")
+      const translated = [
+        "</AlertContent>",
+        "</Alert>",
+        "",
+        "## Berikutnya {#next}",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // Should NOT insert blank line between AlertContent and Alert
+      expect(content).not.toContain("</AlertContent>\n\n</Alert>")
+      expect(fixCount).toBe(0)
+    })
+
+    test("treats whitespace-only lines as blank", () => {
+      const english = "## Heading {#id}\n\nText"
+      const translated = "## Judul {#id}\n  \nTeks"
+      const { fixCount } = restoreBlankLinesFromEnglish(translated, english)
+      // Whitespace-only line counts as blank, so no addition needed
+      expect(fixCount).toBe(0)
+    })
   })
 
   test.describe("collapseInlineHtmlFromEnglish", () => {
@@ -702,8 +818,7 @@ test.describe("English Comparison Fixes", () => {
 
   test.describe("restoreStrippedAbbreviations", () => {
     test("restores RWA abbreviation in title", () => {
-      const translated =
-        '---\ntitle: "الأصول الحقيقية ()"\n---\nContent here.'
+      const translated = '---\ntitle: "الأصول الحقيقية ()"\n---\nContent here.'
       const english =
         '---\ntitle: "Real-world assets (RWA)"\n---\nContent here.'
       const { content, fixCount } = restoreStrippedAbbreviations(
@@ -715,10 +830,8 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("restores PoA abbreviation in title", () => {
-      const translated =
-        '---\ntitle: "إثبات السلطة ()"\n---\nContent.'
-      const english =
-        '---\ntitle: "Proof-of-authority (PoA)"\n---\nContent.'
+      const translated = '---\ntitle: "إثبات السلطة ()"\n---\nContent.'
+      const english = '---\ntitle: "Proof-of-authority (PoA)"\n---\nContent.'
       const { content, fixCount } = restoreStrippedAbbreviations(
         translated,
         english
@@ -835,8 +948,10 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("handles multiple merged sup tags", () => {
-      const translated = "تقريبًا 2<sup>187</sup>. يجب إجراء ~<sup>269</sup> محاولة"
-      const english = "approximately 2<sup>187</sup>. must make ~2<sup>69</sup> attempts"
+      const translated =
+        "تقريبًا 2<sup>187</sup>. يجب إجراء ~<sup>269</sup> محاولة"
+      const english =
+        "approximately 2<sup>187</sup>. must make ~2<sup>69</sup> attempts"
       const { content, fixCount } = fixMergedSupDigits(translated, english)
       expect(content).toContain("2<sup>69</sup>")
       expect(fixCount).toBe(1)
@@ -877,15 +992,16 @@ test.describe("English Comparison Fixes", () => {
 
   test.describe("fixCrowdinNumberedTags", () => {
     test("replaces </0>text<0> with <strong>text</strong>", () => {
-      const translated = '</0>الظهور الأول لونا كضيفة<0>'
-      const english = "<strong>Luna's first appearance as a podcast guest</strong>"
+      const translated = "</0>الظهور الأول لونا كضيفة<0>"
+      const english =
+        "<strong>Luna's first appearance as a podcast guest</strong>"
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe("<strong>الظهور الأول لونا كضيفة</strong>")
       expect(fixCount).toBe(1)
     })
 
     test("handles HTML-escaped opening tag &lt;0>", () => {
-      const translated = '</0>من الجيد أن نعلم&lt;0>'
+      const translated = "</0>من الجيد أن نعلم&lt;0>"
       const english = "<strong>Good to know</strong>"
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe("<strong>من الجيد أن نعلم</strong>")
@@ -893,10 +1009,8 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("handles inverted tags inside JSX paragraph", () => {
-      const translated =
-        '<p className="mt-0"></0>من الجيد أن نعلم&lt;0></p>'
-      const english =
-        '<p className="mt-0"><strong>Good to know</strong></p>'
+      const translated = '<p className="mt-0"></0>من الجيد أن نعلم&lt;0></p>'
+      const english = '<p className="mt-0"><strong>Good to know</strong></p>'
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe(
         '<p className="mt-0"><strong>من الجيد أن نعلم</strong></p>'
@@ -905,7 +1019,7 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("handles multiple different numbered tags", () => {
-      const translated = '<0>نص عريض<1>و مائل</1></0>'
+      const translated = "<0>نص عريض<1>و مائل</1></0>"
       const english = "<strong>bold text<em>and italic</em></strong>"
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe("<strong>نص عريض<em>و مائل</em></strong>")
@@ -932,6 +1046,180 @@ test.describe("English Comparison Fixes", () => {
       const translated = "```\n</0>text<0>\n```"
       const english = "```\n<strong>text</strong>\n```"
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("removeStaleComponents", () => {
+    test("removes self-closing component not in English", () => {
+      const translated =
+        'Some text\n\n<ContributorsQuizBanner className="mt-16 mb-8" />\n\nMore text'
+      const english = "Some text\n\nMore text"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("ContributorsQuizBanner")
+      expect(content).toContain("Some text")
+      expect(content).toContain("More text")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves components that exist in English", () => {
+      const translated = '<NetworkUpgradeSummary name="paris" />\n\nText'
+      const english = '<NetworkUpgradeSummary name="paris" />\n\nText'
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("removes multiple stale components", () => {
+      const translated = '<StaleOne />\nText\n<StaleTwo className="x" />'
+      const english = "Text"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("StaleOne")
+      expect(content).not.toContain("StaleTwo")
+      expect(fixCount).toBe(2)
+    })
+
+    test("does not remove components inside code blocks", () => {
+      const translated = "```\n<ContributorsQuizBanner />\n```"
+      const english = "```\nsome code\n```"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).toContain("ContributorsQuizBanner")
+      expect(fixCount).toBe(0)
+    })
+
+    test("cleans up blank line left behind after removal", () => {
+      const translated = "Before\n\n<StaleComponent />\n\nAfter"
+      const english = "Before\n\nAfter"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("\n\n\n")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixLeakedAttrNamesInJsxValues", () => {
+    test("replaces leaked description=N with $NN from English, keeping Telugu text", () => {
+      const english = `  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average."/>`
+      const translated = `  <Card title="\u0C24\u0C15\u0C4D\u0C15\u0C41\u0C35 \u0C2B\u0C40\u0C1C\u0C41\u0C32\u0C41" emoji=":money_with_wings:" description="\u0C30\u0C46\u0C2E\u0C3F\u0C1F\u0C46\u0C28\u0C4D\u0C38\u0C4D \u0C38\u0C47\u0C35\u0C32\u0C41 \u0C38\u0C17\u0C1F\u0C41\u0C28 description=4 \u0C35\u0C30\u0C15\u0C41 \u0C2B\u0C40\u0C1C\u0C41\u0C32\u0C41 \u0C35\u0C38\u0C42\u0C32\u0C41 \u0C1A\u0C47\u0C38\u0C4D\u0C24\u0C3E\u0C2F\u0C3F."/>`
+      const { content, fixCount } = fixLeakedAttrNamesInJsxValues(
+        translated,
+        english
+      )
+      // Telugu text preserved, only the leaked "description=4" replaced with "$14"
+      expect(content).toContain("$14")
+      expect(content).not.toContain("description=4")
+      // Still Telugu
+      expect(content).toContain(
+        "\u0C30\u0C46\u0C2E\u0C3F\u0C1F\u0C46\u0C28\u0C4D\u0C38\u0C4D"
+      )
+      expect(content).toContain(
+        "\u0C35\u0C30\u0C15\u0C41 \u0C2B\u0C40\u0C1C\u0C41\u0C32\u0C41"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves clean attributes unchanged", () => {
+      const english = `  <Card title="Test" emoji=":rocket:" description="A clean description."/>`
+      const translated = `  <Card title="\u0C1F\u0C46\u0C38\u0C4D\u0C1F\u0C4D" emoji=":rocket:" description="\u0C12\u0C15 \u0C36\u0C41\u0C2D\u0C4D\u0C30\u0C2E\u0C48\u0C28 \u0C35\u0C3F\u0C35\u0C30\u0C23."/>`
+      const { content, fixCount } = fixLeakedAttrNamesInJsxValues(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not replace the actual attribute assignment itself", () => {
+      // description=" at the start of a value is the real attribute, not a leak
+      const english = `  <Card title="Test" emoji=":star:" description="Normal text here."/>`
+      const translated = `  <Card title="\u0C1F\u0C46\u0C38\u0C4D\u0C1F\u0C4D" emoji=":star:" description="\u0C38\u0C3E\u0C27\u0C3E\u0C30\u0C23 \u0C1F\u0C46\u0C15\u0C4D\u0C38\u0C4D\u0C1F\u0C4D."/>`
+      const { content, fixCount } = fixLeakedAttrNamesInJsxValues(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixDetachedHeadingAnchors", () => {
+    test("restores heading marker when anchor is on a non-heading line", () => {
+      const english = [
+        "### Availability bonds {#avail-bonds}",
+        "",
+        "In a real implementation there would be some profit motive.",
+      ].join("\n")
+      const translated = [
+        "Guarantees {#avail-bonds} In a real implementation there would be some profit motive.",
+      ].join("\n")
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("### Guarantees {#avail-bonds}")
+      expect(content).toContain(
+        "\n\nIn a real implementation there would be some profit motive."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple detached anchors", () => {
+      const english = [
+        "### Heading A {#anchor-a}",
+        "",
+        "Para A.",
+        "",
+        "### Heading B {#anchor-b}",
+        "",
+        "Para B.",
+      ].join("\n")
+      const translated = [
+        "Title A {#anchor-a} Para A.",
+        "",
+        "Title B {#anchor-b} Para B.",
+      ].join("\n")
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("### Title A {#anchor-a}")
+      expect(content).toContain("### Title B {#anchor-b}")
+      expect(fixCount).toBe(2)
+    })
+
+    test("uses correct heading level from English (h4)", () => {
+      const english = [
+        "#### Deep heading {#deep-heading}",
+        "",
+        "Content here.",
+      ].join("\n")
+      const translated = "Deep heading translated {#deep-heading} Content here."
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("#### Deep heading translated {#deep-heading}")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves properly formatted headings unchanged", () => {
+      const english = "### Good heading {#good}\n\nParagraph."
+      const translated = "### Good heading translated {#good}\n\nParagraph."
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const english = "### Heading {#my-id}\n\nParagraph."
+      const translated = "```\nSomething {#my-id} inside code\n```"
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
     })

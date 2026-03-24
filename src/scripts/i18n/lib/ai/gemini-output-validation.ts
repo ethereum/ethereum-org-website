@@ -109,7 +109,10 @@ function validateCommon(translated: string): ValidationResult {
   const firstLine = translated.trim().split("\n")[0]
   for (const re of startRefusals) {
     if (re.test(firstLine)) {
-      return { valid: false, error: `Gemini refusal: "${firstLine.slice(0, 60)}"` }
+      return {
+        valid: false,
+        error: `Gemini refusal: "${firstLine.slice(0, 60)}"`,
+      }
     }
   }
 

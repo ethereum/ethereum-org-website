@@ -1,8 +1,7 @@
 // import { join } from "path"
-import dynamic from "next/dynamic"
-
 import type { Root } from "@/lib/types"
 
+import FeedbackWidget from "@/components/FeedbackWidget/lazy"
 import Footer from "@/components/Footer"
 import Nav from "@/components/Nav"
 import { SkipLink } from "@/components/SkipLink"
@@ -11,10 +10,6 @@ import { SkipLink } from "@/components/SkipLink"
 // import TranslationBannerLegal from "@/components/TranslationBannerLegal"
 // import { toPosixPath } from "@/lib/utils/relativePath"
 // import { DEFAULT_LOCALE } from "@/lib/constants"
-
-const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
-  ssr: false,
-})
 
 export const BaseLayout = async ({
   children,

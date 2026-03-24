@@ -408,8 +408,7 @@ test.describe("Warning Functions", () => {
     })
 
     test("skips date already in dir=ltr span", () => {
-      const input =
-        'تم الإطلاق في <span dir="ltr">2026-03-15</span> على الشبكة'
+      const input = 'تم الإطلاق في <span dir="ltr">2026-03-15</span> على الشبكة'
       const { content, fixCount } = fixBareRtlDates(input, "ar")
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -430,8 +429,7 @@ test.describe("Warning Functions", () => {
     })
 
     test("skips dates inside markdown link URLs", () => {
-      const input =
-        "[link](/blog/2026-03-15/post) تاريخ"
+      const input = "[link](/blog/2026-03-15/post) تاريخ"
       const { content, fixCount } = fixBareRtlDates(input, "ar")
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -446,24 +444,21 @@ test.describe("Warning Functions", () => {
     })
 
     test("skips dates in bare https URLs", () => {
-      const input =
-        "https://example.com/post/2026-03-15 هو الرابط"
+      const input = "https://example.com/post/2026-03-15 هو الرابط"
       const { content, fixCount } = fixBareRtlDates(input, "ar")
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
 
     test("skips dates inside HTML attributes", () => {
-      const input =
-        '<time datetime="2026-03-15">مارس</time>'
+      const input = '<time datetime="2026-03-15">مارس</time>'
       const { content, fixCount } = fixBareRtlDates(input, "ar")
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
 
     test("skips already-wrapped dates (idempotent)", () => {
-      const input =
-        'تم في <span dir="ltr">2026-03-15</span> الإطلاق'
+      const input = 'تم في <span dir="ltr">2026-03-15</span> الإطلاق'
       const { content, fixCount } = fixBareRtlDates(input, "ar")
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -501,9 +496,7 @@ test.describe("Warning Functions", () => {
     test("wraps division equation", () => {
       const input = "النتيجة 114.632 / 120 = 0.955 تقريبا"
       const { content, fixCount } = fixBareRtlEquations(input, "ar")
-      expect(content).toContain(
-        '<span dir="ltr">114.632 / 120 = 0.955</span>'
-      )
+      expect(content).toContain('<span dir="ltr">114.632 / 120 = 0.955</span>')
       expect(fixCount).toBe(1)
     })
 
@@ -516,12 +509,9 @@ test.describe("Warning Functions", () => {
 
     // === Escaped markdown operators ===
     test("wraps equation with escaped asterisk (\\*)", () => {
-      const input =
-        "تأكد من أن المرسل لديه 2000 \\* 0.001 = 2 إيثر"
+      const input = "تأكد من أن المرسل لديه 2000 \\* 0.001 = 2 إيثر"
       const { content, fixCount } = fixBareRtlEquations(input, "ar")
-      expect(content).toContain(
-        '<span dir="ltr">2000 \\* 0.001 = 2</span>'
-      )
+      expect(content).toContain('<span dir="ltr">2000 \\* 0.001 = 2</span>')
       expect(fixCount).toBe(1)
     })
 
@@ -551,15 +541,12 @@ test.describe("Warning Functions", () => {
     test("wraps full multi-term equation before equals", () => {
       const input = "القيمة هي 20+10\\*0.907 = 29.07 في المجموع"
       const { content, fixCount } = fixBareRtlEquations(input, "ar")
-      expect(content).toContain(
-        '<span dir="ltr">20+10\\*0.907 = 29.07</span>'
-      )
+      expect(content).toContain('<span dir="ltr">20+10\\*0.907 = 29.07</span>')
       expect(fixCount).toBe(1)
     })
 
     test("wraps three-term addition chain", () => {
-      const input =
-        "أصغر ما يمكنها الحصول عليه هو 6+4+2=12 ثم تقوم"
+      const input = "أصغر ما يمكنها الحصول عليه هو 6+4+2=12 ثم تقوم"
       const { content, fixCount } = fixBareRtlEquations(input, "ar")
       expect(content).toContain('<span dir="ltr">6+4+2=12</span>')
       expect(fixCount).toBe(1)
@@ -598,30 +585,22 @@ test.describe("Warning Functions", () => {
         "الغاز هو 2000 \\* 0.001 = 2 إيثر والباقي 963 \\* 0.001 = 0.963 إيثر"
       const { content, fixCount } = fixBareRtlEquations(input, "ar")
       expect(fixCount).toBe(2)
-      expect(content).toContain(
-        '<span dir="ltr">2000 \\* 0.001 = 2</span>'
-      )
-      expect(content).toContain(
-        '<span dir="ltr">963 \\* 0.001 = 0.963</span>'
-      )
+      expect(content).toContain('<span dir="ltr">2000 \\* 0.001 = 2</span>')
+      expect(content).toContain('<span dir="ltr">963 \\* 0.001 = 0.963</span>')
     })
 
     // === Equation at start/end of line ===
     test("wraps equation at start of line", () => {
       const input = "112+32=256 هو المجموع"
       const { content, fixCount } = fixBareRtlEquations(input, "ar")
-      expect(content).toBe(
-        '<span dir="ltr">112+32=256</span> هو المجموع'
-      )
+      expect(content).toBe('<span dir="ltr">112+32=256</span> هو المجموع')
       expect(fixCount).toBe(1)
     })
 
     test("wraps equation at end of line", () => {
       const input = "المجموع هو 112+32=256"
       const { content, fixCount } = fixBareRtlEquations(input, "ar")
-      expect(content).toBe(
-        'المجموع هو <span dir="ltr">112+32=256</span>'
-      )
+      expect(content).toBe('المجموع هو <span dir="ltr">112+32=256</span>')
       expect(fixCount).toBe(1)
     })
 
@@ -656,8 +635,7 @@ test.describe("Warning Functions", () => {
     })
 
     test("skips already-wrapped equations (idempotent)", () => {
-      const input =
-        'النتيجة <span dir="ltr">1150 - 187 = 963</span> صحيحة'
+      const input = 'النتيجة <span dir="ltr">1150 - 187 = 963</span> صحيحة'
       const { content, fixCount } = fixBareRtlEquations(input, "ar")
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -674,19 +652,19 @@ test.describe("Warning Functions", () => {
     // === False positive guards ===
     test("does not match markdown bold syntax", () => {
       const input = "**نص عريض** = 10"
-      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      const { fixCount } = fixBareRtlEquations(input, "ar")
       expect(fixCount).toBe(0)
     })
 
     test("does not match list items", () => {
       const input = "- عنصر في القائمة = مهم"
-      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      const { fixCount } = fixBareRtlEquations(input, "ar")
       expect(fixCount).toBe(0)
     })
 
     test("does not match version strings", () => {
       const input = "الإصدار v1.2.3 متاح"
-      const { content, fixCount } = fixBareRtlEquations(input, "ar")
+      const { fixCount } = fixBareRtlEquations(input, "ar")
       expect(fixCount).toBe(0)
     })
   })

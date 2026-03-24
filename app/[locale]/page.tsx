@@ -1,6 +1,5 @@
 import { Fragment } from "react"
 import { Info } from "lucide-react"
-import nextDynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
@@ -19,7 +18,6 @@ import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
 import HomepageSectionImage from "@/components/Homepage/HomepageSectionImage"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
-import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import BuildAppsIcon from "@/components/icons/build-apps.svg"
 import Discord from "@/components/icons/discord.svg"
@@ -56,7 +54,6 @@ import {
   SectionHeader,
   SectionTag,
 } from "@/components/ui/section"
-import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
@@ -75,6 +72,11 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
+import {
+  BentoCardSwiper,
+  RecentPostsSwiper,
+  ValuesMarquee,
+} from "./_components/HomepageLazyImports"
 import AppsHighlight from "./apps/_components/AppsHighlight"
 import IndexPageJsonLD from "./page-jsonld"
 import { getActivity } from "./utils"
@@ -91,41 +93,8 @@ import {
 } from "@/lib/data"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
-const BentoCardSwiper = nextDynamic(
-  () => import("@/components/Homepage/BentoCardSwiper"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex flex-col items-center gap-4">
-        <Skeleton className="mx-auto mt-4 h-[476px] w-[512px] max-w-128 rounded-2xl border-primary/10 bg-background bg-gradient-to-b from-primary/10 from-20% to-primary/5 to-60% p-4 opacity-50 shadow-card-hover lg:hidden dark:from-primary/20 dark:to-primary/10" />
-        <Skeleton className="h-6 w-[12rem] rounded-full" />
-      </div>
-    ),
-  }
-)
-
-const RecentPostsSwiper = nextDynamic(
-  () => import("@/components/Homepage/RecentPostsSwiper"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex flex-col items-center gap-4">
-        <SkeletonCardGrid className="mt-4 w-full md:mt-16" />
-        <Skeleton className="h-4 w-20 rounded-full" />
-      </div>
-    ),
-  }
-)
-
-const ValuesMarquee = nextDynamic(
-  () => import("@/components/Homepage/ValuesMarquee"),
-  {
-    ssr: false,
-    loading: () => <ValuesMarqueeFallback />,
-  }
-)
-
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   if (!LOCALES_CODES.includes(locale)) return notFound()
@@ -960,11 +929,10 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
   try {

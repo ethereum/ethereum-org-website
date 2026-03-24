@@ -1,5 +1,5 @@
 /**
- * Main entry point for Gemini direct translation pipeline.
+ * Main entry point for Gemini translation pipeline.
  *
  * Replaces Crowdin as the translation intermediary. Sends whole files
  * to Gemini with site-specific context, then runs sanitizer +
@@ -22,9 +22,9 @@
 import { isGeminiAvailable } from "./lib/ai/gemini"
 import { cleanupProgress } from "./lib/ai/progress-tracker"
 import {
+  createBranchFromSha,
   createBranchName,
   getBranchObject,
-  postCreateBranchFrom,
 } from "./lib/github/branches"
 import { geminiInitialize } from "./lib/workflows/gemini-initialize"
 import { geminiTranslateFiles } from "./lib/workflows/gemini-translate-files"
@@ -35,7 +35,7 @@ import { logSection } from "./lib/workflows/utils"
 import { config } from "./config"
 
 async function main() {
-  logSection("Gemini Direct Translation Pipeline")
+  logSection("Gemini Translation Pipeline")
 
   // Preflight checks
   if (!isGeminiAvailable()) {
@@ -69,10 +69,10 @@ async function main() {
 
   // Create branch from base
   const baseBranch = await getBranchObject(config.baseBranch)
-  await postCreateBranchFrom(branchName, baseBranch.sha)
+  await createBranchFromSha(branchName, baseBranch.sha)
 
-  // Phase 2: Translate files
-  const { stats, committedFiles } = await geminiTranslateFiles(
+  // Phase 2: Translate files (committed incrementally as they complete)
+  const { stats, committedFiles, failedFiles } = await geminiTranslateFiles(
     context,
     branchName,
     runId
@@ -133,13 +133,22 @@ async function main() {
   cleanupProgress({ runId, startedAt: "", languages: {} })
 
   logSection("Complete")
-  console.log("[main] Gemini direct translation pipeline finished.")
+  console.log("[main] Gemini translation pipeline finished.")
 
   // Print summary
   for (const [lang, s] of Object.entries(stats)) {
     console.log(
       `  ${lang}: ${s.filesTranslated} translated, ${s.filesFailed} failed, ${s.totalInputTokens + s.totalOutputTokens} tokens`
     )
+  }
+
+  if (failedFiles.length > 0) {
+    console.warn(
+      `\n[main] ${failedFiles.length} file(s) could not be translated:`
+    )
+    for (const f of failedFiles) {
+      console.warn(`  - ${f}`)
+    }
   }
 }
 
