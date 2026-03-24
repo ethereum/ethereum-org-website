@@ -7,6 +7,10 @@ on:
         description: "Path(s) to translate (comma-separated files, single directory, or blank for all)"
         required: false
         type: string
+      exclude_path:
+        description: "Path(s) to exclude (comma-separated files or directories)"
+        required: false
+        type: string
       target_languages:
         description: "Comma-separated language codes (blank for all locales)"
         required: false
@@ -62,6 +66,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
           TARGET_PATH: ${{ github.event.inputs.target_path }}
+          EXCLUDE_PATH: ${{ github.event.inputs.exclude_path }}
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
           BASE_BRANCH: ${{ github.event.inputs.base_branch }}
           GEMINI_CONCURRENCY: ${{ github.event.inputs.concurrency }}

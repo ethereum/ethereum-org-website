@@ -37,18 +37,16 @@ function isFilePath(targetPath: string): boolean {
 export const getAllEnglishFiles = async (): Promise<
   GitHubQueryResponseItem[]
 > => {
-  const { targetPath, excludePath } = config
+  const { targetPath, excludePaths } = config
 
-  // Add runtime exclusion if specified
-  const allExcludedPaths = excludePath
-    ? [...doNotTranslatePaths, excludePath]
-    : doNotTranslatePaths
+  // Add runtime exclusions if specified
+  const allExcludedPaths = [...doNotTranslatePaths, ...excludePaths]
 
   debugLog(
     `Do-not-translate paths loaded: ${doNotTranslatePaths.length} entries`
   )
-  if (excludePath) {
-    debugLog(`Runtime path exclusions: ${excludePath}`)
+  if (excludePaths.length > 0) {
+    debugLog(`Runtime path exclusions: ${excludePaths.join(", ")}`)
   }
 
   // Multi-file mode: comma-separated paths each fetched individually

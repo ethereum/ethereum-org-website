@@ -72,7 +72,13 @@ const targetPaths = targetPathRaw
       .map((p) => p.trim())
       .filter(Boolean)
   : []
-const excludePath = process.env.EXCLUDE_PATH?.trim() || ""
+const excludePathRaw = process.env.EXCLUDE_PATH?.trim() || ""
+const excludePaths = excludePathRaw
+  ? excludePathRaw
+      .split(",")
+      .map((p) => p.trim())
+      .filter(Boolean)
+  : []
 
 // Skip awaiting pre-translation completion (exit early with ID for manual resume)
 const skipAwait = ["1", "true", "yes", "on"].includes(
@@ -114,7 +120,7 @@ if (verbose) {
   console.log(
     `[DEBUG] - Target path: ${targetPath || "none (full translation)"}`
   )
-  console.log(`[DEBUG] - Exclude path: ${excludePath || "none"}`)
+  console.log(`[DEBUG] - Exclude paths: ${excludePaths.length ? excludePaths.join(", ") : "none"}`)
   console.log(`[DEBUG] - Skip await: ${skipAwait}`)
   console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
   if (existingPreTranslationIds.length > 0) {
@@ -141,7 +147,7 @@ export const config = {
   baseBranch,
   targetPath,
   targetPaths,
-  excludePath,
+  excludePaths,
   skipAwait,
   pretranslateTimeoutMs,
   pretranslatePollBaseMs,

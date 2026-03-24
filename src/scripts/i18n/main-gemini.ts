@@ -12,6 +12,7 @@
  *   GEMINI_API_KEY          - Gemini API key (required)
  *   I18N_GITHUB_API_KEY     - GitHub API key (required)
  *   TARGET_PATH             - Comma-separated file paths or single directory
+ *   EXCLUDE_PATH            - Comma-separated paths to exclude from translation
  *   TARGET_LANGUAGES        - Comma-separated language codes (blank = all)
  *   GEMINI_CONCURRENCY      - Max parallel Gemini requests per language (default: 3)
  *   RESUME_RUN_ID           - Resume an interrupted run by ID
