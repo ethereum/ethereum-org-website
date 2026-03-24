@@ -90,7 +90,7 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 - [Kazi-za.kripto](https://crypto.jobs/)
 - [Ajira kwenye ConsenSys](https://consensys.net/careers/)
 - [Orodha ya kazi za kripto](https://cryptojobslist.com/ethereum-jobs)
-- [Bodi ya ajira zisizo za benki](https://pallet.xyz/list/bankless/jobs)
+- [Bodi ya ajira zisizo za benki](https://www.bankless.com/jobs)
 - [tumia kazi za Web3](https://www.useweb3.xyz/jobs)
 - [Kazi za Web3](https://web3.career)
 - [Jeshi la Web3](https://web3army.xyz/)

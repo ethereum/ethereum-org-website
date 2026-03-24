@@ -109,7 +109,7 @@ lang: bn
 - [ক্রিপ্টোকারেন্সি জবস](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSys-এ ক্যারিয়ার](https://consensys.net/careers/)
 - [ক্রিপ্টো জবস লিস্ট](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless জবস বোর্ড](https://pallet.xyz/list/bankless/jobs)
+- [Bankless জবস বোর্ড](https://www.bankless.com/jobs)
 - [Web3 জবস](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [ক্রিপ্টো ভ্যালি জবস](https://cryptovalley.jobs/)

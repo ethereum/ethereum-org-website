@@ -108,7 +108,7 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 - [Jobs im Zusammenhang mit Kryptowährung](https://cryptocurrencyjobs.co/ethereum/)
 - [Karriere bei ConsenSys](https://consensys.net/careers/)
 - [Liste mit Jobs in der Krypto-Welt](https://cryptojobslist.com/ethereum-jobs)
-- [Stellenportal für Jobs ohne Bankbezug](https://pallet.xyz/list/bankless/jobs)
+- [Stellenportal für Jobs ohne Bankbezug](https://www.bankless.com/jobs)
 - [Jobs bei Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Jobs im Crypto Valley](https://cryptovalley.jobs/)

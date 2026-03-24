@@ -109,7 +109,7 @@ lang: zh
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSys 职业发展](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless 招聘看板](https://pallet.xyz/list/bankless/jobs)
+- [Bankless 招聘看板](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

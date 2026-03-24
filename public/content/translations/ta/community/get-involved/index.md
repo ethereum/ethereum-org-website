@@ -109,7 +109,7 @@ lang: ta
 - [கிரிப்டோகரன்சி வேலைகள்](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSys-இல் தொழில்வாழ்க்கை](https://consensys.net/careers/)
 - [கிரிப்டோ வேலைகளின் பட்டியல்](https://cryptojobslist.com/ethereum-jobs)
-- [பேங்க்லெஸ் வேலைகள் பலகை](https://pallet.xyz/list/bankless/jobs)
+- [பேங்க்லெஸ் வேலைகள் பலகை](https://www.bankless.com/jobs)
 - [Web3 வேலைகள்](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [கிரிப்டோ வேலி வேலைகள்](https://cryptovalley.jobs/)
