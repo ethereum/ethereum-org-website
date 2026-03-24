@@ -100,7 +100,8 @@ type CommentSyntax = "js" | "python" | "shell"
 
 /** Map fence language tags to comment syntax family */
 function getCommentSyntax(language: string): CommentSyntax {
-  const lang = language.toLowerCase()
+  // Strip metadata after the language name (e.g., "sh copy", "solidity showLineNumbers")
+  const lang = language.toLowerCase().split(/\s+/)[0]
 
   // JS/Solidity/TS family: // and /* */
   if (

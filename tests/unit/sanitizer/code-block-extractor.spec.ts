@@ -403,6 +403,13 @@ test.describe("getCommentSyntax", () => {
     expect(getCommentSyntax("Solidity")).toBe("js")
     expect(getCommentSyntax("PYTHON")).toBe("python")
   })
+
+  test("strips metadata after language name (e.g., 'sh copy')", () => {
+    expect(getCommentSyntax("sh copy")).toBe("shell")
+    expect(getCommentSyntax("bash copy")).toBe("shell")
+    expect(getCommentSyntax("solidity showLineNumbers")).toBe("js")
+    expect(getCommentSyntax("python {1,3-5}")).toBe("python")
+  })
 })
 
 // ---------------------------------------------------------------------------
@@ -440,6 +447,60 @@ y = 2`
     const code = "uint256 x = 1;"
     const result = restoreComments(code, [], "js")
     expect(result).toBe(code)
+  })
+
+  test("restores multi-line JS comment into stripped code without duplication", () => {
+    const original = `/**
+ * @dev Returns the amount of tokens in existence.
+ */
+function totalSupply() external view returns (uint256);`
+
+    // Extract comments (produces stripped code with empties)
+    const { strippedCode, comments } = extractComments(original, "solidity")
+
+    // Simulate translation
+    const translated = comments.map((c) => ({
+      ...c,
+      text: "@dev Mengembalikan jumlah token yang ada.",
+    }))
+
+    // Restore into STRIPPED code (not original)
+    const result = restoreComments(strippedCode, translated, "js")
+
+    // Should have the Indonesian comment
+    expect(result).toContain("Mengembalikan jumlah token yang ada")
+    // Should NOT have the English comment
+    expect(result).not.toContain("Returns the amount of tokens")
+    // Should still have the function
+    expect(result).toContain("function totalSupply()")
+  })
+
+  test("extract-translate-restore round trip produces clean NatSpec", () => {
+    const original = `    /**
+     * @dev Moves tokens from caller to recipient.
+     *
+     * Returns a boolean value.
+     */
+    function transfer(address to, uint256 amount) external returns (bool);`
+
+    const { strippedCode, comments } = extractComments(original, "solidity")
+
+    const translated = comments.map((c) => ({
+      ...c,
+      text: "@dev Memindahkan token dari pemanggil ke penerima.\n     *\n     * Mengembalikan nilai boolean.",
+    }))
+
+    const result = restoreComments(strippedCode, translated, "js")
+
+    // Should contain translated text
+    expect(result).toContain("Memindahkan token")
+    // Should NOT contain English text
+    expect(result).not.toContain("Moves tokens from caller")
+    // Should have proper comment syntax
+    expect(result).toContain("/*")
+    expect(result).toContain("*/")
+    // Should have the function declaration
+    expect(result).toContain("function transfer")
   })
 })
 

@@ -227,7 +227,7 @@ ${JSON.stringify(commentPayload, null, 2)}`
   }
 
   // Restore translated comments into the code blocks within content
-  for (const { block, comments } of blockData) {
+  for (const { block, strippedCode, comments } of blockData) {
     if (comments.length === 0) continue
 
     const syntax = getCommentSyntax(block.language)
@@ -239,10 +239,12 @@ ${JSON.stringify(commentPayload, null, 2)}`
     })
 
     // Find and replace the code block in content
+    // Use strippedCode (English comments removed) instead of block.content
+    // to avoid duplicating English comments alongside translated ones
     const fence = "```"
     const originalBlock = `${fence}${block.language}\n${block.content}\n${fence}`
     const restoredCode = restoreComments(
-      block.content,
+      strippedCode,
       translatedComments,
       syntax
     )
