@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "Смарт-контракти",
-    "remix",
-    "мова програмування",
+    "Remix",
+    "Solidity",
     "розгортання"
   ]
 skill: beginner

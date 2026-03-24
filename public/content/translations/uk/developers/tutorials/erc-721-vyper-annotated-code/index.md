@@ -3,7 +3,7 @@ title: "Покроковий опис контракту Vyper ERC-721"
 description: "Контракт ERC-721 від Рюї Накамури та як він працює"
 author: Ori Pomerantz
 lang: uk
-tags: [ "vyper", "erc-721", "python" ]
+tags: [ "Vyper", "erc-721", "Python" ]
 skill: beginner
 published: 2021-04-01
 ---
@@ -249,7 +249,7 @@ def __init__():
     self.minter = msg.sender
 ```
 
-Щоб отримати доступ до змінних стану, використовуйте `self.<ім’я змінної>`` (знову ж таки, як і в Python).
+Щоб отримати доступ до змінних стану, використовуйте `self.<ім’я змінної>` (знову ж таки, як і в Python).
 
 #### Функції перегляду {#views}
 

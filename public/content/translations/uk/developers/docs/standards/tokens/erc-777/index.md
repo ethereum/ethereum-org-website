@@ -8,7 +8,7 @@ lang: uk
 
 **ERC-777 складно реалізувати належним чином через його [вразливість до різних форм атак](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). Натомість рекомендується використовувати [ERC-20](/developers/docs/standards/tokens/erc-20/).** Ця сторінка залишається як історичний архів.
 
-## Знайомство? {#introduction}
+## Вступ {#introduction}
 
 ERC-777 — це стандарт взаємозамінних токенів, що вдосконалює існуючий стандарт [ERC-20](/developers/docs/standards/tokens/erc-20/).
 

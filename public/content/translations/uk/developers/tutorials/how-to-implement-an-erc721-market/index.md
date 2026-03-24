@@ -6,8 +6,8 @@ tags:
   [
     "Смарт-контракти",
     "erc-721",
-    "мова програмування",
-    "токени, лексеми"
+    "Solidity",
+    "tokens"
   ]
 skill: intermediate
 lang: uk

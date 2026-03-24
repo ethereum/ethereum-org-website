@@ -4,10 +4,10 @@ description: "Використовуючи сучасні компоненти, 
 author: Ori Pomerantz
 tags:
   [
-    "typescript",
-    "реагування",
-    "vite",
-    "wagmi",
+    "TypeScript",
+    "React",
+    "Vite",
+    "Wagmi",
     "використання"
   ]
 skill: beginner

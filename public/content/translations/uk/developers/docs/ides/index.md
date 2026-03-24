@@ -40,7 +40,7 @@ lang: uk
 - [Зразки коду](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**IDE від JetBrains (IntelliJ IDEA тощо)** -\*\* **_Основні інструменти для розробників програмного забезпечення та команд_**
+**IDE від JetBrains (IntelliJ IDEA тощо) -** **_Основні інструменти для розробників програмного забезпечення та команд_**
 
 - [JetBrains](https://www.jetbrains.com/)
 - [GitHub](https://github.com/JetBrains)

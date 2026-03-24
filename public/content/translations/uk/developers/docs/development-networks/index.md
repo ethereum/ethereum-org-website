@@ -4,25 +4,25 @@ description: An overview of development networks and the tools available to help
 lang: uk
 ---
 
-When building an Ethereum application with smart contracts, you'll want to run it on a local network to see how it works before deploying it.
+Під час розробки застосунку Ethereum зі смарт-контрактами вам потрібно буде запустити його в локальній мережі, щоб побачити, як він працює, перш ніж розгортати його.
 
-Similar to how you might run a local server on your computer for web development, you can use a development network to create a local blockchain instance to test your dapp. Ці мережі розробки Ethereum надають функції, що дозволяють набагато швидшу ітерацію, ніж публічна тестова мережа (наприклад, вам не потрібно займатися отриманням ETH із крана тестової мережі).
+Подібно до того, як ви можете запустити локальний сервер на своєму комп'ютері для веб-розробки, ви можете використовувати мережу для розробки, щоб створити локальний екземпляр блокчейну для тестування вашого децентралізованого застосунку. Ці мережі розробки Ethereum надають функції, що дозволяють набагато швидшу ітерацію, ніж публічна тестова мережа (наприклад, вам не потрібно займатися отриманням ETH із крана тестової мережі).
 
 ## Передумови {#prerequisites}
 
 Ви повинні розуміти [основи стеку Ethereum](/developers/docs/ethereum-stack/) та [мережі Ethereum](/developers/docs/networks/) перед тим, як занурюватися в мережі розробки.
 
-## What is a development network? Що таке мережа для розробки? {#what-is-a-development-network}
+## Що таке мережа для розробки? {#what-is-a-development-network}
 
-Development networks are essentially Ethereum clients (implementations of Ethereum) designed specifically for local development.
+Мережі для розробки -- це, по суті, клієнти Ethereum (реалізації Ethereum), спеціально призначені для локальної розробки.
 
-**Why not just run a standard Ethereum node locally?**
+**Чому б просто не запустити стандартний вузол Ethereum локально?**
 
 Ви _могли б_ [запустити вузол](/developers/docs/nodes-and-clients/#running-your-own-node), але оскільки мережі для розробки створені спеціально для цього, вони часто мають такі зручні функції, як-от:
 
 - Детерміноване заповнення вашого локального блокчейну даними (напр., облікові записи з балансами в ETH).
 - Миттєве створення блоків для кожної отриманої транзакції, у правильному порядку та без затримок.
-- Enhanced debugging and logging functionality
+- Розширена функціональність налагодження та журналювання
 
 ## Доступні інструменти {#available-projects}
 
@@ -30,9 +30,9 @@ Development networks are essentially Ethereum clients (implementations of Ethere
 
 ### Hardhat Network {#hardhat-network}
 
-A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code.
+Локальна мережа Ethereum, створена для розробки. Вона дозволяє розгортати ваші контракти, запускати тести та налагоджувати код.
 
-Hardhat Network comes built-in with Hardhat, an Ethereum development environment for professionals.
+Hardhat Network вбудована в Hardhat -- середовище розробки Ethereum для професіоналів.
 
 - [Вебсайт](https://hardhat.org/)
 - [GitHub](https://github.com/NomicFoundation/hardhat)

@@ -3,7 +3,7 @@ title: "Посібник із засобів безпеки для смарт-к
 description: "Огляд трьох різних методів тестування та програмного аналізу"
 author: "Trailofbits"
 lang: uk
-tags: [ "мова програмування", "Смарт-контракти", "захист" ]
+tags: [ "Solidity", "Смарт-контракти", "захист" ]
 skill: intermediate
 published: 2020-09-07
 source: Building secure contracts
