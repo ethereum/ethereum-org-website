@@ -89,10 +89,8 @@ Fungsi `faucet` ini memungkinkan pengguna mana pun untuk mendapatkan beberapa to
 Ini akan membuat kontrak ERC-20 produksi menjadi tidak berguna, tetapi ini membuat segalanya lebih mudah ketika ERC-20 hanya ada untuk memfasilitasi pengujian.
 
 ```solidity
-    /* *
-     * @dev Memberikan pemanggil 1000 token untuk dimainkan */
     /**
-     * @dev Gives the caller 1000 tokens to play with
+     * @dev Memberikan pemanggil 1000 token untuk dimainkan
      */
     function faucet() external {
         _mint(msg.sender, 1000);
@@ -124,12 +122,9 @@ Alamat token di mana kita bertindak sebagai proksi.
 
 ```solidity
 
-    /* *
-     * @dev Menentukan alamat token
-     * @param tokenAddr_ alamat kontrak ERC-20 */
     /**
-     * @dev Specify the token address
-     * @param tokenAddr_ ERC-20 contract address
+     * @dev Menentukan alamat token
+     * @param tokenAddr_ alamat kontrak ERC-20
      */
     constructor(
         address tokenAddr_
@@ -398,10 +393,8 @@ Namun, kita tidak dapat mengatur variabel ini di konstruktor, karena kita belum 
 Kontrak ini diinstansiasi terlebih dahulu karena proksi mengharapkan alamat token di konstruktornya.
 
 ```solidity
-    /* *
-     * @dev Memanggil konstruktor ERC20. */
     /**
-     * @dev Calls the ERC20 constructor.
+     * @dev Memanggil konstruktor ERC20.
      */
     constructor(
     ) ERC20("Oris useless token-2", "OUT-2") {
@@ -412,12 +405,9 @@ Kontrak ini diinstansiasi terlebih dahulu karena proksi mengharapkan alamat toke
 Alamat pembuat (disebut `owner`) disimpan di sini karena itu adalah satu-satunya alamat yang diizinkan untuk mengatur proksi.
 
 ```solidity
-    /* *
-     * @dev mengatur alamat untuk proksi (CalldataInterpreter).
-     * Hanya dapat dipanggil sekali oleh pemilik */
     /**
-     * @dev set the address for the proxy (the CalldataInterpreter).
-     * Can only be called once by the owner
+     * @dev mengatur alamat untuk proksi (CalldataInterpreter).
+     * Hanya dapat dipanggil sekali oleh pemilik
      */
     function setProxy(address _proxy) external {
         require(msg.sender == owner, "Can only be called by owner");
@@ -432,10 +422,8 @@ Untuk memastikan kita dapat memercayai proksi, kita hanya membiarkan `owner` mem
 Setelah `proxy` memiliki nilai nyata (bukan nol), nilai tersebut tidak dapat berubah, jadi meskipun pemilik memutuskan untuk berbuat jahat, atau mnemonik untuknya terungkap, kita tetap aman.
 
 ```solidity
-    /* *
-     * @dev Beberapa fungsi mungkin hanya dapat dipanggil oleh proksi. */
     /**
-     * @dev Some functions may only be called by the proxy.
+     * @dev Beberapa fungsi mungkin hanya dapat dipanggil oleh proksi.
      */
     modifier onlyProxy {
 ```

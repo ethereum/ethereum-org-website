@@ -271,8 +271,6 @@ Kita telah menambahkan beberapa dependensi dan plugin sejauh ini, sekarang kita 
 Perbarui `hardhat.config.js` Anda agar terlihat seperti ini:
 
 ```javascript
-/* *
- * @type import('hardhat/config').HardhatUserConfig */
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */

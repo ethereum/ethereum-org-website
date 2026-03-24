@@ -66,22 +66,14 @@ contract ERC1271 {
   // bytes4(keccak256("isValidSignature(bytes32,bytes)") // bytes4(keccak256("isValidSignature(bytes32,bytes)")
   bytes4 constant internal MAGICVALUE = 0x1626ba7e;
 
-  /* *
+  /**
    * @dev Harus mengembalikan apakah tanda tangan yang diberikan valid untuk hash yang diberikan
    * @param _hash      Hash dari data yang akan ditandatangani
    * @param _signature Array byte tanda tangan yang terkait dengan _hash
    *
    * HARUS mengembalikan nilai ajaib bytes4 0x1626ba7e ketika fungsi berhasil.
    * TIDAK BOLEH memodifikasi state (menggunakan STATICCALL untuk solc < 0.5, modifier view untuk solc > 0.5)
-   * HARUS mengizinkan panggilan eksternal */
-  /**
-   * @dev Should return whether the signature provided is valid for the provided hash
-   * @param _hash      Hash of the data to be signed
-   * @param _signature Signature byte array associated with _hash
-   *
-   * MUST return the bytes4 magic value 0x1626ba7e when function passes.
-   * MUST NOT modify state (using STATICCALL for solc < 0.5, view modifier for solc > 0.5)
-   * MUST allow external calls
+   * HARUS mengizinkan panggilan eksternal
    */
   function isValidSignature(
     bytes32 _hash,

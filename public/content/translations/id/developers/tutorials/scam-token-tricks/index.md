@@ -52,10 +52,8 @@ abstract contract Ownable is Context {
 [Kontrak token `ARB`](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code) tidak memiliki alamat istimewa secara langsung. Namun, ia tidak membutuhkannya. Ia berada di belakang sebuah [`proxy`](https://docs.openzeppelin.com/contracts/5.x/api/proxy) di [alamat `0xb50721bcf8d664c30412cfbc6cf7a15145234ad1`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code). Kontrak tersebut memiliki alamat istimewa (lihat file keempat, `ERC1967Upgrade.sol`) yang dapat digunakan untuk peningkatan.
 
 ```solidity
-    /* *
-     * @dev Menyimpan alamat baru di slot admin EIP1967. */
     /**
-     * @dev Stores a new address in the EIP1967 admin slot.
+     * @dev Menyimpan alamat baru di slot admin EIP1967.
      */
     function _setAdmin(address newAdmin) private {
         require(newAdmin != address(0), "ERC1967: new admin is the zero address");

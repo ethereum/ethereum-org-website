@@ -86,8 +86,6 @@ Saat penulisan, versi terbaru Solidity adalah 0.8.12.
 Hingga versi 0.9.0 dirilis, kita tidak tahu apakah kode ini kompatibel dengannya atau tidak.
 
 ```solidity
-/* *
- * @title IL1ERC20Bridge */
 /**
  * @title IL1ERC20Bridge
  */
@@ -147,12 +145,9 @@ Dalam kasus jembatan L1, ini berarti inisialisasi deposit dan finalisasi penarik
      * Public Functions *
      ********************/
 
-    /* *
-     * @dev mendapatkan alamat dari kontrak jembatan L2 yang sesuai.
-     * @return Alamat dari kontrak jembatan L2 yang sesuai. */
     /**
-     * @dev get the address of the corresponding L2 bridge contract.
-     * @return Address of the corresponding L2 bridge contract.
+     * @dev mendapatkan alamat dari kontrak jembatan L2 yang sesuai.
+     * @return Alamat dari kontrak jembatan L2 yang sesuai.
      */
     function l2TokenBridge() external returns (address);
 ```
@@ -161,7 +156,7 @@ Fungsi ini sebenarnya tidak terlalu dibutuhkan, karena di L2 ini adalah kontrak 
 Fungsi ini ada di sini untuk simetri dengan jembatan L2, karena alamat jembatan L1 _tidak_ mudah untuk diketahui.
 
 ```solidity
-    /* *
+    /**
      * @dev mendepositkan sejumlah ERC20 ke saldo pemanggil di L2.
      * @param _l1Token Alamat ERC20 L1 yang kita depositkan
      * @param _l2Token Alamat ERC20 L2 yang masing-masing dari L1
@@ -169,16 +164,7 @@ Fungsi ini ada di sini untuk simetri dengan jembatan L2, karena alamat jembatan 
      * @param _l2Gas Batas gas yang diperlukan untuk menyelesaikan deposit di L2.
      * @param _data Data opsional untuk diteruskan ke L2. Data ini disediakan
      *        semata-mata sebagai kemudahan untuk kontrak eksternal. Selain dari menegakkan
-     *        panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya. */
-    /**
-     * @dev deposit an amount of the ERC20 to the caller's balance on L2.
-     * @param _l1Token Address of the L1 ERC20 we are depositing
-     * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _amount Amount of the ERC20 to deposit
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     *        panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya.
      */
     function depositERC20(
         address _l1Token,
@@ -194,7 +180,7 @@ Parameter `_l2Gas` adalah jumlah gas L2 yang diizinkan untuk dihabiskan oleh tra
 Fungsi ini menangani skenario umum, di mana pengguna menjembatani aset ke alamat yang sama di blockchain yang berbeda.
 
 ```solidity
-    /* *
+    /**
      * @dev mendepositkan sejumlah ERC20 ke saldo penerima di L2.
      * @param _l1Token Alamat ERC20 L1 yang kita depositkan
      * @param _l2Token Alamat ERC20 L2 yang masing-masing dari L1
@@ -203,17 +189,7 @@ Fungsi ini menangani skenario umum, di mana pengguna menjembatani aset ke alamat
      * @param _l2Gas Batas gas yang diperlukan untuk menyelesaikan deposit di L2.
      * @param _data Data opsional untuk diteruskan ke L2. Data ini disediakan
      *        semata-mata sebagai kemudahan untuk kontrak eksternal. Selain dari menegakkan
-     *        panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya. */
-    /**
-     * @dev deposit an amount of ERC20 to a recipient's balance on L2.
-     * @param _l1Token Address of the L1 ERC20 we are depositing
-     * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _to L2 address to credit the withdrawal to.
-     * @param _amount Amount of the ERC20 to deposit.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     *        panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya.
      */
     function depositERC20To(
         address _l1Token,
@@ -235,7 +211,7 @@ Fungsi ini hampir identik dengan `depositERC20`, tetapi memungkinkan Anda mengir
      * Cross-chain Functions *
      *************************/
 
-    /* *
+    /**
      * @dev Menyelesaikan penarikan dari L2 ke L1, dan mengkreditkan dana ke saldo penerima dari
      * token ERC20 L1.
      * Panggilan ini akan gagal jika penarikan yang diinisialisasi dari L2 belum diselesaikan.
@@ -247,20 +223,7 @@ Fungsi ini hampir identik dengan `depositERC20`, tetapi memungkinkan Anda mengir
      * @param _amount Jumlah ERC20 yang akan didepositkan.
      * @param _data Data yang disediakan oleh pengirim di L2. Data ini disediakan
      *   semata-mata sebagai kemudahan untuk kontrak eksternal. Selain dari menegakkan
-     *   panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya. */
-    /**
-     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
-     * L1 ERC20 token.
-     * This call will fail if the initialized withdrawal from L2 has not been finalized.
-     *
-     * @param _l1Token Address of L1 token to finalizeWithdrawal for.
-     * @param _l2Token Address of L2 token where withdrawal was initiated.
-     * @param _from L2 address initiating the transfer.
-     * @param _to L1 address to credit the withdrawal to.
-     * @param _amount Amount of the ERC20 to deposit.
-     * @param _data Data provided by the sender on L2. This data is provided
-     *   solely as a convenience for external contracts. Aside from enforcing a maximum
-     *   length, these contracts provide no guarantees about its content.
+     *   panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya.
      */
     function finalizeERC20Withdrawal(
         address _l1Token,
@@ -294,8 +257,6 @@ pragma solidity >0.5.0 <0.9.0;
 
 import "./IL1ERC20Bridge.sol";
 
-/* *
- * @title IL1StandardBridge */
 /**
  * @title IL1StandardBridge
  */
@@ -331,26 +292,16 @@ Hal yang sama berlaku untuk event dan fungsi lainnya.
      * Public Functions *
      ********************/
 
-    /* *
-     * @dev Mendepositkan sejumlah ETH ke saldo pemanggil di L2.
-            .
-            .
-            . */
     /**
-     * @dev Deposit an amount of the ETH to the caller's balance on L2.
+     * @dev Mendepositkan sejumlah ETH ke saldo pemanggil di L2.
             .
             .
             .
      */
     function depositETH(uint32 _l2Gas, bytes calldata _data) external payable;
 
-    /* *
-     * @dev Mendepositkan sejumlah ETH ke saldo penerima di L2.
-            .
-            .
-            . */
     /**
-     * @dev Deposit an amount of ETH to a recipient's balance on L2.
+     * @dev Mendepositkan sejumlah ETH ke saldo penerima di L2.
             .
             .
             .
@@ -368,17 +319,10 @@ Hal yang sama berlaku untuk event dan fungsi lainnya.
      * Cross-chain Functions *
      *************************/
 
-    /* *
+    /**
      * @dev Menyelesaikan penarikan dari L2 ke L1, dan mengkreditkan dana ke saldo penerima dari
      * token ETH L1. Karena hanya xDomainMessenger yang dapat memanggil fungsi ini, fungsi ini tidak akan pernah dipanggil
      * sebelum penarikan diselesaikan.
-                .
-                .
-                . */
-    /**
-     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
-     * L1 ETH token. Since only the xDomainMessenger can call this function, it will never be called
-     * before the withdrawal is finalized.
                 .
                 .
                 .
@@ -409,16 +353,11 @@ import { ICrossDomainMessenger } from "./ICrossDomainMessenger.sol";
 Pengirim pesan lintas domain ini adalah sistem yang sama sekali berbeda, dan layak mendapatkan artikelnya sendiri, yang saya harap dapat ditulis di masa mendatang.
 
 ```solidity
-/* *
+/**
  * @title CrossDomainEnabled
  * @dev Kontrak pembantu untuk kontrak yang melakukan komunikasi lintas-domain
  *
- * Kompiler yang digunakan: ditentukan oleh kontrak yang mewarisi */
-/**
- * @title CrossDomainEnabled
- * @dev Helper contract for contracts performing cross-domain communications
- *
- * Compiler used: defined by inheriting contract
+ * Kompiler yang digunakan: ditentukan oleh kontrak yang mewarisi
  */
 contract CrossDomainEnabled {
     /* ************
@@ -438,10 +377,8 @@ contract CrossDomainEnabled {
      * Constructor *
      ***************/
 
-    /* *
-     * @param _messenger Alamat CrossDomainMessenger di lapisan saat ini. */
     /**
-     * @param _messenger Address of the CrossDomainMessenger on the current layer.
+     * @param _messenger Alamat CrossDomainMessenger di lapisan saat ini.
      */
     constructor(address _messenger) {
         messenger = _messenger;
@@ -460,14 +397,10 @@ Parameter ini diatur sekali, di dalam konstruktor, dan tidak pernah berubah.
      * Function Modifiers *
      **********************/
 
-    /* *
+    /**
      * Menegakkan bahwa fungsi yang diubah hanya dapat dipanggil oleh akun lintas-domain tertentu.
      * @param _sourceDomainAccount Satu-satunya akun di domain asal yang
-     *  diautentikasi untuk memanggil fungsi ini. */
-    /**
-     * Enforces that the modified function is only callable by a specific cross-domain account.
-     * @param _sourceDomainAccount The only account on the originating domain which is
-     *  authenticated to call this function.
+     *  diautentikasi untuk memanggil fungsi ini.
      */
     modifier onlyFromCrossDomainAccount(address _sourceDomainAccount) {
 ```
@@ -509,14 +442,10 @@ Kita perlu memastikan bahwa pesan yang kita terima berasal dari jembatan lainnya
      * Internal Functions *
      **********************/
 
-    /* *
+    /**
      * Mendapatkan messenger, biasanya dari penyimpanan. Fungsi ini diekspos jika kontrak anak
      * perlu menimpanya.
-     * @return Alamat kontrak messenger lintas-domain yang harus digunakan. */
-    /**
-     * Gets the messenger, usually from storage. This function is exposed in case a child contract
-     * needs to override.
-     * @return The address of the cross-domain messenger contract which should be used.
+     * @return Alamat kontrak messenger lintas-domain yang harus digunakan.
      */
     function getCrossDomainMessenger() internal virtual returns (ICrossDomainMessenger) {
         return ICrossDomainMessenger(messenger);
@@ -528,18 +457,12 @@ Kita menggunakan fungsi daripada variabel `messenger` untuk memungkinkan kontrak
 
 ```solidity
 
-    /* *
+    /**
      * Mengirim pesan ke akun di domain lain
      * @param _crossDomainTarget Penerima yang dituju di domain tujuan
      * @param _message Data yang akan dikirim ke target (biasanya calldata ke fungsi dengan
      *  `onlyFromCrossDomainAccount()`)
-     * @param _gasLimit Batas gas untuk penerimaan pesan di domain tujuan. */
-    /**
-     * Sends a message to an account on another domain
-     * @param _crossDomainTarget The intended recipient on the destination domain
-     * @param _message The data to send to the target (usually calldata to a function with
-     *  `onlyFromCrossDomainAccount()`)
-     * @param _gasLimit The gasLimit for the receipt of the message on the target domain.
+     * @param _gasLimit Batas gas untuk penerimaan pesan di domain tujuan.
      */
     function sendCrossDomainMessage(
         address _crossDomainTarget,
@@ -636,17 +559,11 @@ import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.s
 Menangani kedua kasus tersebut akan membuat kode kita lebih rumit, jadi sebagai gantinya kita menggunakan [`SafeERC20` dari OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol), yang memastikan [semua kegagalan menghasilkan revert](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
 
 ```solidity
-/* *
+/**
  * @title L1StandardBridge
  * @dev Jembatan ETH dan ERC20 L1 adalah kontrak yang menyimpan dana L1 yang didepositkan dan token
  * standar yang digunakan di L2. Ini menyinkronkan jembatan L2 yang sesuai, menginformasikannya tentang deposit
  * dan mendengarkannya untuk penarikan yang baru saja diselesaikan.
- * */
-/**
- * @title L1StandardBridge
- * @dev The L1 ETH and ERC20 Bridge is a contract which stores deposited L1 funds and standard
- * tokens that are in use on L2. It synchronizes a corresponding L2 Bridge, informing it of deposits
- * and listening to it for newly finalized withdrawals.
  *
  */
 contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
@@ -709,12 +626,9 @@ Ini juga alasan inisialisasi di bawah ini terpisah dari konstruktor.
      * Initialization *
      ******************/
 
-    /* *
-     * @param _l1messenger Alamat Messenger L1 yang digunakan untuk komunikasi lintas-rantai.
-     * @param _l2TokenBridge Alamat jembatan standar L2. */
     /**
-     * @param _l1messenger L1 Messenger address being used for cross-chain communications.
-     * @param _l2TokenBridge L2 standard bridge address.
+     * @param _l1messenger Alamat Messenger L1 yang digunakan untuk komunikasi lintas-rantai.
+     * @param _l2TokenBridge Alamat jembatan standar L2.
      */
     // slither-disable-next-line external-function // slither-disable-next-line external-function
 ```
@@ -758,10 +672,8 @@ Ini adalah dua parameter yang perlu diketahui oleh jembatan.
      * Depositing *
      **************/
 
-    /* * @dev Pengubah yang mengharuskan pengirim adalah EOA. Pemeriksaan ini dapat dilewati oleh kontrak
-     *  berbahaya melalui initcode, tetapi ini menangani kesalahan pengguna yang ingin kita hindari. */
-    /** @dev Modifier requiring sender to be EOA.  This check could be bypassed by a malicious
-     *  contract via initcode, but it takes care of the user error we want to avoid.
+    /** @dev Pengubah yang mengharuskan pengirim adalah EOA. Pemeriksaan ini dapat dilewati oleh kontrak
+     *  berbahaya melalui initcode, tetapi ini menangani kesalahan pengguna yang ingin kita hindari.
      */
     modifier onlyEOA() {
         // Used to stop deposits from contracts (avoid accidentally lost tokens) // Digunakan untuk menghentikan deposit dari kontrak (menghindari token hilang secara tidak sengaja)
@@ -773,16 +685,11 @@ Ini adalah dua parameter yang perlu diketahui oleh jembatan.
 Inilah alasan kita membutuhkan utilitas `Address` dari OpenZeppelin.
 
 ```solidity
-    /* *
+    /**
      * @dev Fungsi ini dapat dipanggil tanpa data
      * untuk mendepositkan sejumlah ETH ke saldo pemanggil di L2.
      * Karena fungsi receive tidak menerima data, jumlah default
-     * yang konservatif diteruskan ke L2. */
-    /**
-     * @dev This function can be called with no data
-     * to deposit an amount of ETH to the caller's balance on L2.
-     * Since the receive function doesn't take data, a conservative
-     * default amount is forwarded to L2.
+     * yang konservatif diteruskan ke L2.
      */
     receive() external payable onlyEOA {
         _initiateETHDeposit(msg.sender, msg.sender, 200_000, bytes(""));
@@ -793,8 +700,6 @@ Fungsi ini ada untuk tujuan pengujian.
 Perhatikan bahwa fungsi ini tidak muncul dalam definisi antarmuka - ini bukan untuk penggunaan normal.
 
 ```solidity
-    /* *
-     * @inheritdoc IL1StandardBridge */
     /**
      * @inheritdoc IL1StandardBridge
      */
@@ -802,8 +707,6 @@ Perhatikan bahwa fungsi ini tidak muncul dalam definisi antarmuka - ini bukan un
         _initiateETHDeposit(msg.sender, msg.sender, _l2Gas, _data);
     }
 
-    /* *
-     * @inheritdoc IL1StandardBridge */
     /**
      * @inheritdoc IL1StandardBridge
      */
@@ -819,7 +722,7 @@ Perhatikan bahwa fungsi ini tidak muncul dalam definisi antarmuka - ini bukan un
 Kedua fungsi ini adalah pembungkus (wrapper) di sekitar `_initiateETHDeposit`, fungsi yang menangani deposit ETH yang sebenarnya.
 
 ```solidity
-    /* *
+    /**
      * @dev Melakukan logika untuk deposit dengan menyimpan ETH dan menginformasikan Gateway ETH L2 tentang
      * deposit tersebut.
      * @param _from Akun untuk menarik deposit di L1.
@@ -827,16 +730,7 @@ Kedua fungsi ini adalah pembungkus (wrapper) di sekitar `_initiateETHDeposit`, f
      * @param _l2Gas Batas gas yang diperlukan untuk menyelesaikan deposit di L2.
      * @param _data Data opsional untuk diteruskan ke L2. Data ini disediakan
      *        semata-mata sebagai kemudahan untuk kontrak eksternal. Selain dari menegakkan
-     *        panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya. */
-    /**
-     * @dev Performs the logic for deposits by storing the ETH and informing the L2 ETH Gateway of
-     * the deposit.
-     * @param _from Account to pull the deposit from on L1.
-     * @param _to Account to give the deposit to on L2.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     *        panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya.
      */
     function _initiateETHDeposit(
         address _from,
@@ -892,8 +786,6 @@ Kirim pesan melalui pengirim pesan lintas domain.
 Pancarkan (emit) event untuk memberi tahu aplikasi terdesentralisasi mana pun yang mendengarkan transfer ini.
 
 ```solidity
-    /* *
-     * @inheritdoc IL1ERC20Bridge */
     /**
      * @inheritdoc IL1ERC20Bridge
      */
@@ -905,8 +797,6 @@ Pancarkan (emit) event untuk memberi tahu aplikasi terdesentralisasi mana pun ya
         _initiateERC20Deposit(_l1Token, _l2Token, msg.sender, msg.sender, _amount, _l2Gas, _data);
     }
 
-    /* *
-     * @inheritdoc IL1ERC20Bridge */
     /**
      * @inheritdoc IL1ERC20Bridge
      */
@@ -922,7 +812,7 @@ Pancarkan (emit) event untuk memberi tahu aplikasi terdesentralisasi mana pun ya
 Kedua fungsi ini adalah pembungkus di sekitar `_initiateERC20Deposit`, fungsi yang menangani deposit ERC-20 yang sebenarnya.
 
 ```solidity
-    /* *
+    /**
      * @dev Melakukan logika untuk deposit dengan menginformasikan kontrak Token yang Didepositkan L2
      * tentang deposit tersebut dan memanggil penangan untuk mengunci dana L1. (misalnya, transferFrom)
      *
@@ -934,20 +824,7 @@ Kedua fungsi ini adalah pembungkus di sekitar `_initiateERC20Deposit`, fungsi ya
      * @param _l2Gas Batas gas yang diperlukan untuk menyelesaikan deposit di L2.
      * @param _data Data opsional untuk diteruskan ke L2. Data ini disediakan
      *        semata-mata sebagai kemudahan untuk kontrak eksternal. Selain dari menegakkan
-     *        panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya. */
-    /**
-     * @dev Performs the logic for deposits by informing the L2 Deposited Token
-     * contract of the deposit and calling a handler to lock the L1 funds. (e.g., transferFrom)
-     *
-     * @param _l1Token Address of the L1 ERC20 we are depositing
-     * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _from Account to pull the deposit from on L1
-     * @param _to Account to give the deposit to on L2
-     * @param _amount Amount of the ERC20 to deposit.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     *        panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya.
      */
     function _initiateERC20Deposit(
         address _l1Token,
@@ -1017,8 +894,6 @@ Bisa jadi ada beberapa alamat di L2 yang sesuai dengan token ERC-20 L1 yang sama
      * Cross-chain Functions *
      *************************/
 
-    /* *
-     * @inheritdoc IL1StandardBridge */
     /**
      * @inheritdoc IL1StandardBridge
      */
@@ -1057,8 +932,6 @@ Pancarkan event tentang penarikan tersebut.
 ```solidity
     }
 
-    /* *
-     * @inheritdoc IL1ERC20Bridge */
     /**
      * @inheritdoc IL1ERC20Bridge
      */
@@ -1098,16 +971,11 @@ Perbarui struktur data `deposits`.
      * Temporary - Migrating ETH *
      *****************************/
 
-    /* *
+    /**
      * @dev Menambahkan saldo ETH ke akun. Ini dimaksudkan untuk memungkinkan ETH
      * dimigrasikan dari gateway lama ke gateway baru.
      * CATATAN: Ini dibiarkan hanya untuk satu peningkatan sehingga kita dapat menerima ETH yang dimigrasikan dari
-     * kontrak lama */
-    /**
-     * @dev Adds ETH balance to the account. This is meant to allow for ETH
-     * to be migrated from an old gateway to a new gateway.
-     * NOTE: This is left for one upgrade only so we are able to receive the migrated ETH from the
-     * old contract
+     * kontrak lama
      */
     function donateETH() external payable {}
 }
@@ -1197,16 +1065,11 @@ Ini adalah dua parameter konfigurasi tambahan yang kita perlukan dan biasanya ti
 
 ```solidity
 
-    /* *
+    /**
      * @param _l2Bridge Alamat jembatan standar L2.
      * @param _l1Token Alamat token L1 yang sesuai.
      * @param _name Nama ERC20.
-     * @param _symbol Simbol ERC20. */
-    /**
-     * @param _l2Bridge Address of the L2 standard bridge.
-     * @param _l1Token Address of the corresponding L1 token.
-     * @param _name ERC20 name.
-     * @param _symbol ERC20 symbol.
+     * @param _symbol Simbol ERC20.
      */
     constructor(
         address _l2Bridge,
@@ -1303,22 +1166,14 @@ import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployA
 /* Contract Imports */
 import { IL2StandardERC20 } from "../../standards/IL2StandardERC20.sol";
 
-/* *
+/**
  * @title L2StandardBridge
  * @dev Jembatan Standar L2 adalah kontrak yang bekerja sama dengan jembatan Standar L1 untuk
  * memungkinkan transisi ETH dan ERC20 antara L1 dan L2.
  * Kontrak ini bertindak sebagai minter untuk token baru ketika mendengar tentang deposit ke jembatan
  * Standar L1.
  * Kontrak ini juga bertindak sebagai pembakar token yang ditujukan untuk penarikan, menginformasikan jembatan
- * L1 untuk melepaskan dana L1. */
-/**
- * @title L2StandardBridge
- * @dev The L2 Standard bridge is a contract which works together with the L1 Standard bridge to
- * enable ETH and ERC20 transitions between L1 and L2.
- * This contract acts as a minter for new tokens when it hears about deposits into the L1 Standard
- * bridge.
- * This contract also acts as a burner of the tokens intended for withdrawal, informing the L1
- * bridge to release L1 funds.
+ * L1 untuk melepaskan dana L1.
  */
 contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     /* *******************************
@@ -1344,12 +1199,9 @@ Alamat jembatan L1 tidak diketahui sebelumnya.
      * Constructor *
      ***************/
 
-    /* *
-     * @param _l2CrossDomainMessenger Messenger lintas-domain yang digunakan oleh kontrak ini.
-     * @param _l1TokenBridge Alamat jembatan L1 yang disebarkan ke rantai utama. */
     /**
-     * @param _l2CrossDomainMessenger Cross-domain messenger used by this contract.
-     * @param _l1TokenBridge Address of the L1 bridge deployed to the main chain.
+     * @param _l2CrossDomainMessenger Messenger lintas-domain yang digunakan oleh kontrak ini.
+     * @param _l1TokenBridge Alamat jembatan L1 yang disebarkan ke rantai utama.
      */
     constructor(address _l2CrossDomainMessenger, address _l1TokenBridge)
         CrossDomainEnabled(_l2CrossDomainMessenger)
@@ -1364,8 +1216,6 @@ Alamat jembatan L1 tidak diketahui sebelumnya.
      * Withdrawing *
      ***************/
 
-    /* *
-     * @inheritdoc IL2ERC20Bridge */
     /**
      * @inheritdoc IL2ERC20Bridge
      */
@@ -1378,8 +1228,6 @@ Alamat jembatan L1 tidak diketahui sebelumnya.
         _initiateWithdrawal(_l2Token, msg.sender, msg.sender, _amount, _l1Gas, _data);
     }
 
-    /* *
-     * @inheritdoc IL2ERC20Bridge */
     /**
      * @inheritdoc IL2ERC20Bridge
      */
@@ -1400,7 +1248,7 @@ Token L2 diharapkan memberi tahu kita alamat padanan L1-nya.
 
 ```solidity
 
-    /* *
+    /**
      * @dev Melakukan logika untuk penarikan dengan membakar token dan menginformasikan
      *      Gateway token L1 tentang penarikan tersebut.
      * @param _l2Token Alamat token L2 tempat penarikan diinisiasi.
@@ -1410,18 +1258,7 @@ Token L2 diharapkan memberi tahu kita alamat padanan L1-nya.
      * @param _l1Gas Tidak digunakan, tetapi disertakan untuk pertimbangan kompatibilitas ke depan yang potensial.
      * @param _data Data opsional untuk diteruskan ke L1. Data ini disediakan
      *        semata-mata sebagai kemudahan untuk kontrak eksternal. Selain dari menegakkan
-     *        panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya. */
-    /**
-     * @dev Performs the logic for withdrawals by burning the token and informing
-     *      the L1 token Gateway of the withdrawal.
-     * @param _l2Token Address of L2 token where withdrawal is initiated.
-     * @param _from Account to pull the withdrawal from on L2.
-     * @param _to Account to give the withdrawal to on L1.
-     * @param _amount Amount of the token to withdraw.
-     * @param _l1Gas Unused, but included for potential forward compatibility considerations.
-     * @param _data Optional data to forward to L1. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     *        panjang maksimum, kontrak ini tidak memberikan jaminan tentang kontennya.
      */
     function _initiateWithdrawal(
         address _l2Token,
@@ -1486,8 +1323,6 @@ Di L1 perlu untuk membedakan antara ETH dan ERC-20.
      * Cross-chain Function: Depositing *
      ************************************/
 
-    /* *
-     * @inheritdoc IL2ERC20Bridge */
     /**
      * @inheritdoc IL2ERC20Bridge
      */
