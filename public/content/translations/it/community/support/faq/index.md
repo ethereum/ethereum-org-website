@@ -40,7 +40,6 @@ Se il tuo account è su un exchange centralizzato come Coinbase, Binance o Krake
 <AlertDescription>
 
 **Non condividere mai la tua frase di recupero con nessuno** che affermi di aiutarti a recuperare il tuo portafoglio. Questa è una delle tattiche di truffa più comuni. Nessun servizio legittimo ti chiederà mai la tua frase di recupero.
-
 </AlertDescription>
 </AlertContent>
 </Alert>

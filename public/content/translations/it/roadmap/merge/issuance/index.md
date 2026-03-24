@@ -23,7 +23,6 @@ title="TL;DR sull'emissione di ETH">
 - L'esatta emissione dello staking fluttua in base alla quantità totale di ETH in staking
 - **Da The Merge, rimangono solo i ~1.700 ETH/giorno, riducendo l'emissione totale di nuovi ETH di circa l'88%**
 - La distruzione (burn): fluttua in base alla domanda della rete. _Se_ in un determinato giorno si osserva un prezzo del gas medio di almeno 16 gwei, questo compensa efficacemente i ~1.700 ETH emessi ai validatori e porta l'inflazione netta di ETH a zero o meno per quel giorno.
-
 </Card>
 
 ## Pre-Merge (storico) {#pre-merge}
@@ -40,18 +39,18 @@ I validatori sulla Beacon Chain vengono ricompensati con ETH per aver attestato 
 
 ### Ripartizione dell'emissione pre-Merge {#pre-merge-issuance-breakdown}
 
-Offerta totale di ETH: **~120.520.000 ETH** (al momento di The Merge a settembre 2022)
+Offerta totale di ETH: **\~120.520.000 ETH** (al momento di The Merge a settembre 2022)
 
 **Emissione del livello di esecuzione:**
 
-- Era stimata a 2,08 ETH ogni 13,3 secondi\*: **~4.930.000** ETH emessi in un anno
+- Era stimata a 2,08 ETH ogni 13,3 secondi\*: **\~4.930.000** ETH emessi in un anno
 - Risultava in un tasso di inflazione di **circa il 4,09%** (4,93M all'anno / 120,5M totali)
 - \*Questo include i 2 ETH per blocco canonico, più una media di 0,08 ETH nel tempo dai blocchi ommer. Utilizza anche 13,3 secondi, l'obiettivo di tempo del blocco di base senza alcuna influenza da una [bomba di difficoltà](/glossary/#difficulty-bomb). ([Vedi fonte](https://bitinfocharts.com/ethereum/))
 
 **Emissione del livello di consenso:**
 
 - Utilizzando 14.000.000 di ETH totali in staking, il tasso di emissione di ETH è di circa 1.700 ETH/giorno ([Vedi fonte](https://ultrasound.money/))
-- Risulta in **~620.500** ETH emessi in un anno
+- Risulta in **\~620.500** ETH emessi in un anno
 - Risultava in un tasso di inflazione di **circa lo 0,52%** (620,5K all'anno / 119,3M totali)
 
 <Alert variant="update">
@@ -59,9 +58,9 @@ Offerta totale di ETH: **~120.520.000 ETH** (al momento di The Merge a settembre
 <AlertDescription>
 **Tasso di emissione annualizzato totale (pre-Merge): ~4,61%** (4,09% + 0,52%)
 
-**~88,7%** dell'emissione andava ai minatori sul livello di esecuzione (4,09 / 4,61 * 100)
+**\~88,7%** dell'emissione andava ai minatori sul livello di esecuzione (4,09 / 4,61 * 100)
 
-**~11,3%** veniva emesso agli staker sul livello di consenso (0,52 / 4,61 * 100)
+**\~11,3%** veniva emesso agli staker sul livello di consenso (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -86,16 +85,16 @@ Man mano che più validatori prelevano, il numero massimo di validatori in uscit
 
 ### Ripartizione dell'inflazione post-Merge {#post-merge-inflation-breakdown}
 
-- [Offerta totale di ETH](/eth/supply/): **~120.520.000 ETH** (al momento di The Merge a settembre 2022)
+- [Offerta totale di ETH](/eth/supply/): **\~120.520.000 ETH** (al momento di The Merge a settembre 2022)
 - Emissione del livello di esecuzione: **0**
-- Emissione del livello di consenso: Come sopra, tasso di emissione annualizzato di **~0,52%** (con 14 milioni di ETH totali in staking)
+- Emissione del livello di consenso: Come sopra, tasso di emissione annualizzato di **\~0,52%** (con 14 milioni di ETH totali in staking)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Tasso di emissione annualizzato totale: **~0,52%**
+Tasso di emissione annualizzato totale: **\~0,52%**
 
-Riduzione netta dell'emissione annuale di ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
+Riduzione netta dell'emissione annuale di ETH: **\~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

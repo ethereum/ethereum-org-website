@@ -1,6 +1,6 @@
 ---
 title: Migliorare l'esperienza utente
-description: Usare Ethereum è ancora troppo complesso per la maggior parte delle persone. Per incoraggiare l'adozione di massa, Ethereum deve abbassare drasticamente le sue barriere all'ingresso: gli utenti devono ottenere i vantaggi di un accesso decentralizzato, senza permessi e resistente alla censura a Ethereum, ma deve essere privo di attriti come l'uso di una tradizionale app web2.
+description: "Usare Ethereum è ancora troppo complesso per la maggior parte delle persone. Per incoraggiare l'adozione di massa, Ethereum deve abbassare drasticamente le sue barriere all'ingresso: gli utenti devono ottenere i vantaggi di un accesso decentralizzato, senza permessi e resistente alla censura a Ethereum, ma deve essere privo di attriti come l'uso di una tradizionale app web2."
 lang: it
 image: /images/roadmap/roadmap-ux.png
 alt: "Piano d'azione di Ethereum"

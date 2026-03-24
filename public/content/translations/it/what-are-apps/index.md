@@ -51,7 +51,6 @@ Le app sono alimentate da contratti intelligenti: frammenti di codice che vivono
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![Illustrazione di uno sviluppatore di Ethereum che costruisce blocchi](./developers-eth-blocks.png)
-
 </div>
 
 ## Le app di Ethereum sono come i lego {#ethereum-apps-are-like-legos}

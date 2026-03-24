@@ -1,6 +1,6 @@
 ---
 title: "Tutto ciò che puoi mettere in cache"
-description: Impara a creare e utilizzare un contratto di caching per transazioni di rollup più economiche
+description: "Impara a creare e utilizzare un contratto di caching per transazioni di rollup più economiche"
 author: Ori Pomerantz
 tags: ["livello 2", "caching", "archiviazione", "scalabilità"]
 skill: intermediate

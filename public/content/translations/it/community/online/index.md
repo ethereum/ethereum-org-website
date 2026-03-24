@@ -1,6 +1,6 @@
 ---
-title: Comunità online
-description: Scopri forum online, chat room e comunità sui social media in cui gli appassionati di Ethereum si riuniscono per discutere e collaborare.
+title: "Comunità online"
+description: "Scopri forum online, chat room e comunità sui social media in cui gli appassionati di Ethereum si riuniscono per discutere e collaborare."
 lang: it
 ---
 
@@ -70,5 +70,5 @@ Se ritieni che una comunità debba essere aggiunta o rimossa in base a queste li
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Scopri di più sulle DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

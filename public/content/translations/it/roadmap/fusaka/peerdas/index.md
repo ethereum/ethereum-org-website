@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Scopri di più su PeerDAS come parte dell'aggiornamento del protocollo Ethereum Fusaka
+description: "Scopri di più su PeerDAS come parte dell'aggiornamento del protocollo Ethereum Fusaka"
 lang: it
 ---
 

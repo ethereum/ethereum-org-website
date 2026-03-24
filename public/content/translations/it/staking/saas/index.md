@@ -1,6 +1,6 @@
 ---
 title: Staking come servizio
-description: Scopri di più sullo staking come servizio
+description: "Scopri di più sullo staking come servizio"
 lang: it
 template: staking
 emoji: ":money_with_wings:"

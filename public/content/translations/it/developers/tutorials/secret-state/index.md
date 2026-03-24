@@ -1,6 +1,6 @@
 ---
 title: Utilizzare la conoscenza-zero per uno stato segreto
-description: I giochi on-chain sono limitati perché non possono mantenere alcuna informazione nascosta. Dopo aver letto questo tutorial, il lettore sarà in grado di combinare prove a conoscenza-zero e componenti server per creare giochi verificabili con un componente di stato segreto fuori catena. La tecnica per farlo sarà dimostrata creando un gioco di campo minato.
+description: "I giochi on-chain sono limitati perché non possono mantenere alcuna informazione nascosta. Dopo aver letto questo tutorial, il lettore sarà in grado di combinare prove a conoscenza-zero e componenti server per creare giochi verificabili con un componente di stato segreto fuori catena. La tecnica per farlo sarà dimostrata creando un gioco di campo minato."
 author: Ori Pomerantz
 tags: ["server", "fuori catena", "centralizzato", "conoscenza-zero", "zokrates", "mud", "privacy"]
 skill: advanced

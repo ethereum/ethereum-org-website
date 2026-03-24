@@ -1,6 +1,6 @@
 ---
-title: Soggettività debole
-description: Una spiegazione della soggettività debole e del suo ruolo nella prova di stake di Ethereum.
+title: "Soggettività debole"
+description: "Una spiegazione della soggettività debole e del suo ruolo nella prova di stake di Ethereum."
 lang: it
 ---
 

@@ -9,7 +9,7 @@ image: /images/man-and-dog-playing.png
 alt: Uomo e cane che giocano.
 sidebarDepth: 2
 summaryPoint1: Un metodo per trasformare materie prime di valore in token digitali.
-summaryPoint2: Ora puoi possedere porzioni di oggetti o asset della vita reale, invece di dover acquistare un'intera proprietà o un intero articolo.
+summaryPoint2: "Ora puoi possedere porzioni di oggetti o asset della vita reale, invece di dover acquistare un'intera proprietà o un intero articolo."
 summaryPoint3: Collega la finanza tradizionale con l'ecosistema della blockchain.
 ---
 

@@ -43,7 +43,8 @@ Alcune app ti chiederanno di salvare una "frase di recupero" segreta (a volte ch
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Portafoglio installato?</b><br/>Scopri come usarlo.</div>
+  <div><b>Portafoglio installato?</b><br/>Scopri come usarlo.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Come usare un portafoglio
   </ButtonLink>

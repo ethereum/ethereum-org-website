@@ -1,6 +1,6 @@
 ---
 title: Scrivere un plasma specifico per l'app che preserva la privacy
-description: In questo tutorial, costruiamo una banca semi-segreta per i depositi. La banca è un componente centralizzato; conosce il saldo di ogni utente. Tuttavia, queste informazioni non sono memorizzate on-chain. Invece, la banca pubblica un hash dello stato. Ogni volta che si verifica una transazione, la banca pubblica il nuovo hash, insieme a una prova a conoscenza-zero di avere una transazione firmata che modifica lo stato dell'hash in quello nuovo. Dopo aver letto questo tutorial, capirai non solo come usare le prove a conoscenza-zero, ma anche perché usarle e come farlo in modo sicuro.
+description: "In questo tutorial, costruiamo una banca semi-segreta per i depositi. La banca è un componente centralizzato; conosce il saldo di ogni utente. Tuttavia, queste informazioni non sono memorizzate on-chain. Invece, la banca pubblica un hash dello stato. Ogni volta che si verifica una transazione, la banca pubblica il nuovo hash, insieme a una prova a conoscenza-zero di avere una transazione firmata che modifica lo stato dell'hash in quello nuovo. Dopo aver letto questo tutorial, capirai non solo come usare le prove a conoscenza-zero, ma anche perché usarle e come farlo in modo sicuro."
 author: Ori Pomerantz
 tags: ["conoscenza-zero", "server", "fuori catena", "privacy"]
 skill: advanced
@@ -313,7 +313,7 @@ Fornisci gli account.
   }
 
   return (
-    <>
+    \<>
         <h2>Transfer</h2>
 ```
 
@@ -1189,7 +1189,7 @@ Chiama il contratto del verificatore per verificare la prova a conoscenza-zero. 
         currentStateHash = _publicFields[1];
 
         emit TransactionProcessed(
-            _publicFields[2]<<128 | _publicFields[3],
+            _publicFields[2]<&lt;128 | _publicFields[3],
             _publicFields[0],
             _publicFields[1]
         );

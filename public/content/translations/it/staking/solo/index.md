@@ -130,7 +130,6 @@ Queste sono alcune delle domande più comuni sullo staking che vale la pena cono
 <ExpandableCard title="Cos'è un validatore?">
 
 Un <em>validatore</em> è un'entità virtuale che vive su Ethereum e partecipa al consenso del protocollo di Ethereum. I validatori sono rappresentati da un saldo, una chiave pubblica e altre proprietà. Un <em>client del validatore</em> è il software che agisce per conto del validatore conservando e utilizzando la sua chiave privata. Un singolo client del validatore può contenere molte coppie di chiavi, controllando molti validatori.
-
 </ExpandableCard>
 
 <ExpandableCard title="Posso depositare più di 32 ETH?">

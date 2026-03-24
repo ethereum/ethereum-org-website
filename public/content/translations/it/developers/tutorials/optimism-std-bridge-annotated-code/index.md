@@ -1,6 +1,6 @@
 ---
 title: "Panoramica del contratto del ponte standard di Optimism"
-description: Come funziona il ponte standard per Optimism? Perché funziona in questo modo?
+description: "Come funziona il ponte standard per Optimism? Perché funziona in questo modo?"
 author: Ori Pomerantz
 tags: ["solidity", "ponte", "livello 2"]
 skill: intermediate

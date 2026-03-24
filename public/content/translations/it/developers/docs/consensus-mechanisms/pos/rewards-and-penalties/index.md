@@ -1,5 +1,5 @@
 ---
-title: Ricompense e penalità della prova di stake
+title: "Ricompense e penalità della prova di stake"
 description: Scopri gli incentivi interni al protocollo nella prova di stake di Ethereum.
 lang: it
 ---

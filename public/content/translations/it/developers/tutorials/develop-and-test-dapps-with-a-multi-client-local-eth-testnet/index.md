@@ -1,6 +1,6 @@
 ---
 title: Come sviluppare e testare una dApp su una rete di test locale multi-client
-description: Questa guida ti illustrerà prima come istanziare e configurare una rete di test locale di Ethereum multi-client prima di utilizzare la rete di test per distribuire e testare una dApp.
+description: "Questa guida ti illustrerà prima come istanziare e configurare una rete di test locale di Ethereum multi-client prima di utilizzare la rete di test per distribuire e testare una dApp."
 author: "Tedi Mitiku"
 tags:
   [

@@ -1,6 +1,6 @@
 ---
 title: Catene Plasma
-description: Un'introduzione alle catene Plasma come soluzione di scalabilità attualmente utilizzata dalla community di Ethereum.
+description: "Un'introduzione alle catene Plasma come soluzione di scalabilità attualmente utilizzata dalla community di Ethereum."
 lang: it
 incomplete: true
 sidebarDepth: 3

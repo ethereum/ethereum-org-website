@@ -1,6 +1,6 @@
 ---
 title: Rollup ottimistici
-description: Un'introduzione ai rollup ottimistici, una soluzione di scalabilità utilizzata dalla community di Ethereum.
+description: "Un'introduzione ai rollup ottimistici, una soluzione di scalabilità utilizzata dalla community di Ethereum."
 lang: it
 ---
 
@@ -223,7 +223,7 @@ I rollup ottimistici utilizzano diverse tecniche per ottenere la compressione de
 | Value     | 9                      | ~3            |
 | Signature | ~68 (2 + 33 + 33)      | ~0.5          |
 | From      | 0 (recuperato dalla firma) | 4             |
-| **Totale** | **~112 byte**         | **~12 byte** |
+| **Totale** | **\~112 byte**         | **\~12 byte** |
 
 Fare alcuni calcoli approssimativi su queste cifre può aiutare a mostrare i miglioramenti di scalabilità offerti da un rollup ottimistico:
 

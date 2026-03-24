@@ -1,6 +1,6 @@
 ---
 title: Finanza decentralizzata (DeFi)
-metaTitle: Cos'è la DeFi? | Vantaggi e utilizzo della finanza decentralizzata
+metaTitle: "Cos'è la DeFi? | Vantaggi e utilizzo della finanza decentralizzata"
 description: Una panoramica della DeFi su Ethereum
 lang: it
 template: use-cases
@@ -10,7 +10,7 @@ alt: Un logo di Eth fatto di mattoncini lego.
 sidebarDepth: 2
 summaryPoint1: Un'alternativa globale e aperta all'attuale sistema finanziario.
 summaryPoint2: Prodotti che ti permettono di prendere in prestito, risparmiare, investire, scambiare e molto altro.
-summaryPoint3: Basata su una tecnologia open-source con cui chiunque può programmare.
+summaryPoint3: "Basata su una tecnologia open-source con cui chiunque può programmare."
 ---
 
 La DeFi è un sistema finanziario aperto e globale costruito per l'era di internet: un'alternativa a un sistema opaco, strettamente controllato e tenuto insieme da infrastrutture e processi vecchi di decenni. Ti dà controllo e visibilità sul tuo denaro. Ti offre esposizione ai mercati globali e alternative alla tua valuta locale o alle opzioni bancarie. I prodotti della DeFi aprono i servizi finanziari a chiunque abbia una connessione a internet e sono in gran parte posseduti e mantenuti dai loro utenti. Finora, decine di miliardi di dollari in criptovaluta sono fluiti attraverso le applicazioni della DeFi e il numero cresce ogni giorno.
@@ -67,7 +67,8 @@ Suona strano... "perché dovrei voler programmare il mio denaro?". Tuttavia, que
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Esplora i nostri suggerimenti per le applicazioni della DeFi da provare se sei nuovo su Ethereum.</div>
+  <div>Esplora i nostri suggerimenti per le applicazioni della DeFi da provare se sei nuovo su Ethereum.
+</div>
   <ButtonLink href="/apps/categories/defi">
     Esplora le dApp della DeFi
   </ButtonLink>

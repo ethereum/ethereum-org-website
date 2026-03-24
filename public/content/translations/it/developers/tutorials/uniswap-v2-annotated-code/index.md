@@ -1,6 +1,6 @@
 ---
 title: "Analisi dettagliata del contratto Uniswap-v2"
-description: Come funziona il contratto Uniswap-v2? Perché è scritto in questo modo?
+description: "Come funziona il contratto Uniswap-v2? Perché è scritto in questo modo?"
 author: Ori Pomerantz
 tags: ["solidity", "dApp"]
 skill: intermedio

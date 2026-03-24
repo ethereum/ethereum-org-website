@@ -54,7 +54,7 @@ Ecco un elenco di alcuni dei fornitori di nodi di Ethereum più popolari, sentit
 - [**Alchemy**](https://alchemy.com/)
   - [Documentazione](https://www.alchemy.com/docs/)
   - Funzionalità
-    - Il livello gratuito più ampio con 300 milioni di unità di calcolo al mese (~30 milioni di richieste getLatestBlock)
+    - Il livello gratuito più ampio con 300 milioni di unità di calcolo al mese (\~30 milioni di richieste getLatestBlock)
     - Supporto multi-catena per Polygon, Starknet, Optimism, Arbitrum
     - Alimenta circa il 70% delle più grandi dApp di Ethereum e del volume delle transazioni DeFi
     - Avvisi webhook in tempo reale tramite Alchemy Notify

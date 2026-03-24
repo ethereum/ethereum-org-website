@@ -1,6 +1,6 @@
 ---
-title: Finalità a singolo slot
-description: Spiegazione della finalità a singolo slot
+title: "Finalità a singolo slot"
+description: "Spiegazione della finalità a singolo slot"
 lang: it
 ---
 

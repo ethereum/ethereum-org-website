@@ -280,7 +280,7 @@ Il valore di scansione fa parte del segreto condiviso (*S = GR<sub>priv</sub>V<s
 
 ```rust
     let (address, r_pub, scan) = 
-        generate_stealth_address(&str_to_array::<66>(stealth_address)?);
+        generate_stealth_address(&str_to_array::&lt;66>(stealth_address)?);
 ```
 
 Usiamo la funzione [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) della libreria.

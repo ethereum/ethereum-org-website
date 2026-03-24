@@ -1,6 +1,6 @@
 ---
 title: Compilare i contratti intelligenti
-description: Una spiegazione del perché è necessario compilare i contratti intelligenti e di cosa fa effettivamente la compilazione.
+description: "Una spiegazione del perché è necessario compilare i contratti intelligenti e di cosa fa effettivamente la compilazione."
 lang: it
 incomplete: true
 ---

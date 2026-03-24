@@ -1,6 +1,6 @@
 ---
-title: Scalabilità di Ethereum
-description: I rollup raggruppano le transazioni fuori catena, riducendo i costi per l'utente. Tuttavia, il modo in cui i rollup utilizzano attualmente i dati è troppo costoso, limitando quanto possano essere economiche le transazioni. Il Proto-Danksharding risolve questo problema.
+title: "Scalabilità di Ethereum"
+description: "I rollup raggruppano le transazioni fuori catena, riducendo i costi per l'utente. Tuttavia, il modo in cui i rollup utilizzano attualmente i dati è troppo costoso, limitando quanto possano essere economiche le transazioni. Il Proto-Danksharding risolve questo problema."
 lang: it
 image: /images/roadmap/roadmap-transactions.png
 alt: "Piano d'azione di Ethereum"
@@ -15,9 +15,9 @@ La scalabilità di Ethereum avviene utilizzando i [livelli 2](/layer-2/#rollups)
   Costi delle transazioni
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>I rollup odierni sono <strong>~5-20 volte</strong> più economici del livello 1 di Ethereum</li>
-    <li>I rollup a conoscenza zero (ZK-rollup) abbasseranno presto le commissioni di <strong>~40-100 volte</strong></li>
-    <li>Le imminenti modifiche a Ethereum forniranno un'ulteriore scalabilità di <strong>~100-1000 volte</strong></li>
+    <li>I rollup odierni sono <strong>\~5-20 volte</strong> più economici del livello 1 di Ethereum</li>
+    <li>I rollup a conoscenza zero (ZK-rollup) abbasseranno presto le commissioni di <strong>\~40-100 volte</strong></li>
+    <li>Le imminenti modifiche a Ethereum forniranno un'ulteriore scalabilità di <strong>\~100-1000 volte</strong></li>
     <li style={{ marginBottom: 0 }}>Gli utenti dovrebbero beneficiare di transazioni <strong>che costano meno di 0,001 $</strong></li>
   </ul>
 </AlertContent>

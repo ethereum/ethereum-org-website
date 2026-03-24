@@ -1,6 +1,6 @@
 ---
 title: Separazione tra proponente e costruttore
-description: Scopri come e perché i validatori di Ethereum divideranno le loro responsabilità di costruzione e trasmissione dei blocchi.
+description: "Scopri come e perché i validatori di Ethereum divideranno le loro responsabilità di costruzione e trasmissione dei blocchi."
 lang: it
 ---
 
@@ -21,7 +21,6 @@ Le [mempool crittografate](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpk
 <ExpandableCard title="Quali tipi di censura risolve la PBS?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Organizzazioni potenti possono fare pressione sui validatori affinché censurino le transazioni da o verso determinati indirizzi. I validatori si conformano a questa pressione rilevando gli indirizzi in lista nera nel loro pool di transazioni e omettendoli dai blocchi che propongono. Dopo la PBS questo non sarà più possibile perché i proponenti dei blocchi non sapranno quali transazioni stanno trasmettendo nei loro blocchi. Potrebbe essere importante per determinati individui o app conformarsi alle regole di censura, ad esempio quando diventa legge nella loro regione. In questi casi, la conformità avviene a livello di applicazione, mentre il protocollo rimane senza permessi e libero dalla censura.
-
 </ExpandableCard>
 
 ## PBS e MEV {#pbs-and-mev}

@@ -18,7 +18,6 @@ Gli alberi di Verkle sono un passo fondamentale nel percorso verso i client di E
 <ExpandableCard title="Perché vogliamo client senza stato?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 I client di Ethereum attualmente utilizzano una struttura dati nota come Trie di Patricia Merkle per archiviare i propri dati di stato. Le informazioni sui singoli account sono archiviate come foglie sul trie e le coppie di foglie vengono sottoposte a hash ripetutamente finché non rimane un solo hash. Questo hash finale è noto come "radice" (root). Per verificare i blocchi, i client di Ethereum eseguono tutte le transazioni in un blocco e aggiornano il loro trie di stato locale. Il blocco è considerato valido se la radice dell'albero locale è identica a quella fornita dal proponente del blocco, perché qualsiasi differenza nel calcolo effettuato dal proponente del blocco e dal nodo di validazione farebbe sì che l'hash radice sia completamente diverso. Il problema è che la verifica della blockchain richiede che ogni client archivi l'intero trie di stato per il blocco di testa e per diversi blocchi storici (l'impostazione predefinita in Geth è mantenere i dati di stato per 128 blocchi dietro la testa). Ciò richiede che i client abbiano accesso a una grande quantità di spazio su disco, il che rappresenta un ostacolo all'esecuzione di nodi completi su hardware economico e a basso consumo. Una soluzione a questo problema è aggiornare il trie di stato a una struttura più efficiente (l'albero di Verkle) che può essere riassunta utilizzando un piccolo "witness" per i dati, che può essere condiviso al posto dei dati di stato completi. La riformattazione dei dati di stato in un albero di Verkle è un trampolino di lancio per passare ai client senza stato.
-
 </ExpandableCard>
 
 ## Cos'è un witness e perché ne abbiamo bisogno? {#what-is-a-witness}
@@ -34,7 +33,6 @@ Con lo schema di impegno polinomiale, i witness hanno dimensioni gestibili che p
 <ExpandableCard title="Di quanto possono ridurre esattamente le dimensioni del witness gli alberi di Verkle?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 La dimensione del witness varia a seconda del numero di foglie che include. Supponendo che il witness copra 1000 foglie, un witness per un trie di Merkle sarebbe di circa 3,5 MB (ipotizzando 7 livelli per il trie). Un witness per gli stessi dati in un albero di Verkle (ipotizzando 4 livelli per l'albero) sarebbe di circa 150 kB: **circa 23 volte più piccolo**. Questa riduzione delle dimensioni del witness consentirà ai witness dei client senza stato di essere sufficientemente piccoli. I witness polinomiali sono di 0,128 - 1 kB a seconda dello specifico impegno polinomiale utilizzato.
-
 </ExpandableCard>
 
 ## Qual è la struttura di un albero di Verkle? {#what-is-the-structure-of-a-verkle-tree}

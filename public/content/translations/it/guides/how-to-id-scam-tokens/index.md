@@ -20,7 +20,6 @@ title="Cos'è ARB?"
 contentPreview=''>
 
 Arbitrum è un'organizzazione che sviluppa e gestisce [rollup ottimistici](/developers/docs/scaling/optimistic-rollups/). Inizialmente, Arbitrum era organizzata come una società a scopo di lucro, ma poi ha intrapreso passi per decentralizzarsi. Come parte di quel processo, ha emesso un [token di governance](/dao/#token-based-membership) scambiabile.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 C'è una convenzione in Ethereum secondo cui, quando un asset non è conforme allo standard ERC-20, ne creiamo una versione "avvolta" (wrapped) con il nome che inizia per "w". Quindi, per esempio, abbiamo wBTC per bitcoin e <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH per ether</a>.
 
 Non ha senso creare una versione avvolta di un token ERC-20 che è già su Ethereum, ma i truffatori si affidano all'apparenza di legittimità piuttosto che alla realtà sottostante.
-
 </ExpandableCard>
 
 ## Come funzionano i token truffa? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="Cosa sono i contratti intelligenti?"
 contentPreview=''>
 
 I [contratti intelligenti](/developers/docs/smart-contracts/) sono i programmi che vengono eseguiti sulla blockchain di Ethereum. Ogni token ERC-20, ad esempio, è implementato come un contratto intelligente.
-
 </ExpandableCard>
 
 Nello specifico, Arbitrum ha distribuito un contratto che utilizza il simbolo `ARB`. Ma questo non impedisce ad altre persone di distribuire a loro volta un contratto che utilizza lo stesso identico simbolo, o uno simile. Chiunque scriva il contratto può stabilire cosa farà il contratto.

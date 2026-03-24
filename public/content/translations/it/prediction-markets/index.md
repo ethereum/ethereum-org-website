@@ -4,8 +4,8 @@ lang: it
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Ricevi incentivi finanziari per generare previsioni accurate 
-summaryPoint2: Previsioni di alta qualità su eventi futuri
+summaryPoint1: "Ricevi incentivi finanziari per generare previsioni accurate"
+summaryPoint2: "Previsioni di alta qualità su eventi futuri"
 buttons: 
   - content: Scopri di più
     toId: how-prediction-markets-work

@@ -1,6 +1,6 @@
 ---
 title: Rollup a conoscenza zero
-description: Un'introduzione ai rollup a conoscenza zero, una soluzione di scalabilità utilizzata dalla community di Ethereum.
+description: "Un'introduzione ai rollup a conoscenza zero, una soluzione di scalabilità utilizzata dalla community di Ethereum."
 lang: it
 ---
 

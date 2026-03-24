@@ -162,7 +162,6 @@ eventName="read more">
 Se fai parte di un [pool di staking](/staking/pools/) o detieni token di staking, dovresti verificare con il tuo fornitore per maggiori dettagli su come vengono gestiti i prelievi dello staking, poiché ogni servizio opera in modo diverso.
 
 In generale, gli utenti dovrebbero essere liberi di reclamare i propri ETH sottostanti in staking o di cambiare il fornitore di staking che utilizzano. Se un particolare pool sta diventando troppo grande, i fondi possono essere ritirati, riscattati e rimessi in staking con un <a href="https://rated.network/">fornitore più piccolo</a>. Oppure, se hai accumulato abbastanza ETH potresti fare [staking da casa](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -182,7 +181,6 @@ eventName="read more">
 No, se il tuo validatore è ancora attivo sulla rete, un prelievo completo non avverrà automaticamente. Questo richiede l'avvio manuale di un'uscita volontaria.
 
 Una volta che un validatore ha completato il processo di uscita, e supponendo che l'account abbia le credenziali di prelievo, il saldo rimanente verrà <em>quindi</em> prelevato durante il prossimo <a href="#validator-sweeping">sweep del validatore</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Posso prelevare un importo personalizzato?"
@@ -203,7 +201,6 @@ eventName="read more">
 Si consiglia agli operatori dei validatori di visitare la pagina <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> dove troverai maggiori dettagli su come preparare il tuo validatore per i prelievi, le tempistiche degli eventi e maggiori dettagli su come funzionano i prelievi.
 
 Per provare prima la tua configurazione su una rete di test, visita l'<a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> per iniziare.
-
 </ExpandableCard>
 
 <ExpandableCard

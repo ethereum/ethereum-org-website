@@ -1,6 +1,6 @@
 ---
 title: Come simulare (mock) i contratti intelligenti in Solidity per i test
-description: Perché dovresti prendere in giro i tuoi contratti durante i test
+description: "Perché dovresti prendere in giro i tuoi contratti durante i test"
 author: Markus Waas
 lang: it
 tags: ["solidity", "contratti intelligenti", "test", "mocking"]

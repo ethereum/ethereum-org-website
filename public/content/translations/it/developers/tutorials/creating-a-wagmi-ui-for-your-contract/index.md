@@ -225,7 +225,7 @@ Il JSX di un componente React _deve_ restituire un singolo componente HTML. Quan
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+</div>
 ```
 
 Fornisci informazioni sulla connessione corrente. All'interno di JSX, `{<expression>}` significa valutare l'espressione come JavaScript.
@@ -252,7 +252,7 @@ Qui abbiamo due di questi tag, `<Greeter />` (che in realtà contiene il codice 
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+</div>
       )}
 ```
 
@@ -291,9 +291,12 @@ In JSX è necessario che i tag "fratelli" (tag che discendono dallo stesso genit
 I pulsanti del connettore.
 
 ```tsx
-          <div>{status}</div>
-          <div>{error?.message}</div>
-        </div>
+          <div>{status}
+</div>
+          <div>{error?.message}
+</div>
+ 
+</div>
       )}
 ```
 

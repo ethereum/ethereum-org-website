@@ -1,12 +1,12 @@
 ---
 title: The Merge
-description: Scopri di più su The Merge: quando la rete principale di Ethereum ha adottato la prova di stake.
+description: "Scopri di più su The Merge: quando la rete principale di Ethereum ha adottato la prova di stake."
 lang: it
 template: upgrade
 image: /images/upgrades/merge.png
 alt: 
-summaryPoint1: La rete principale di Ethereum utilizza la prova di stake, ma non è sempre stato così.
-summaryPoint2: L'aggiornamento dal meccanismo originale di prova di lavoro alla prova di stake è stato chiamato The Merge.
+summaryPoint1: "La rete principale di Ethereum utilizza la prova di stake, ma non è sempre stato così."
+summaryPoint2: "L'aggiornamento dal meccanismo originale di prova di lavoro alla prova di stake è stato chiamato The Merge."
 summaryPoint3: The Merge si riferisce all'unione della rete principale originale di Ethereum con una blockchain separata basata sulla prova di stake chiamata Beacon Chain, che ora esistono come un'unica catena.
 summaryPoint4: The Merge ha ridotto il consumo energetico di Ethereum di circa il 99,95%.
 ---
@@ -88,7 +88,6 @@ Le azioni chiave includono:
 - Autenticare i client di esecuzione e di consenso con un segreto JWT condiviso in modo che possano comunicare in modo sicuro tra loro.
 
 Il mancato completamento dei punti precedenti farà sì che il tuo nodo appaia "offline" finché entrambi i livelli non saranno sincronizzati e autenticati.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -107,7 +106,6 @@ The Merge ha comportato modifiche al consenso, che includono anche modifiche rel
 </ul>
 
 Per maggiori informazioni, dai un'occhiata a questo post sul blog di Tim Beiko su <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Come The Merge impatta il livello applicativo di Ethereum</a>.
-
 </ExpandableCard>
 
 ## The Merge e il consumo energetico {#merge-and-energy}
@@ -135,7 +133,6 @@ L'esecuzione di un nodo che non produce blocchi è possibile per chiunque con en
 La capacità di chiunque di eseguire il proprio nodo è <em>assolutamente essenziale</em> per mantenere la decentralizzazione della rete Ethereum.
 
 [Maggiori informazioni sull'esecuzione del proprio nodo](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -145,7 +142,6 @@ contentPreview="Falso. The Merge è stato un cambiamento del meccanismo di conse
 Le commissioni del gas sono un prodotto della domanda della rete rispetto alla capacità della rete stessa. The Merge ha deprecato l'uso della prova di lavoro, passando alla prova di stake per il consenso, ma non ha modificato in modo significativo alcun parametro che influenzi direttamente la capacità o il throughput della rete.
 
 Con un <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">piano d'azione incentrato sui rollup</a>, gli sforzi si stanno concentrando sulla scalabilità dell'attività degli utenti al [livello 2](/layer-2/), abilitando al contempo la rete principale di livello 1 come un livello di regolamento decentralizzato sicuro ottimizzato per l'archiviazione dei dati dei rollup per contribuire a rendere le transazioni dei rollup esponenzialmente più economiche. La transizione alla prova di stake è un precursore fondamentale per realizzare tutto ciò. [Maggiori informazioni su gas e commissioni.](/developers/docs/gas/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -156,7 +152,6 @@ La "velocità" di una transazione può essere misurata in diversi modi, tra cui 
 Storicamente, con la prova di lavoro, l'obiettivo era avere un nuovo blocco ogni circa 13,3 secondi. Con la prova di stake, gli slot si verificano esattamente ogni 12 secondi, ognuno dei quali è un'opportunità per un validatore di pubblicare un blocco. La maggior parte degli slot ha blocchi, ma non necessariamente tutti (ad esempio, un validatore è offline). Nella prova di stake, i blocchi vengono prodotti circa il 10% più frequentemente rispetto alla prova di lavoro. Si è trattato di un cambiamento abbastanza insignificante ed è improbabile che venga notato dagli utenti.
 
 La prova di stake ha introdotto il concetto di finalità della transazione che in precedenza non esisteva. Nella prova di lavoro, la capacità di invertire un blocco diventa esponenzialmente più difficile con ogni blocco minato sopra una transazione, ma non raggiunge mai lo zero. Con la prova di stake, i blocchi sono raggruppati in epoche (intervalli di tempo di 6,4 minuti contenenti 32 possibilità per i blocchi) su cui i validatori votano. Quando un'epoca finisce, i validatori votano se considerare l'epoca "giustificata". Se i validatori concordano nel giustificare l'epoca, questa viene finalizzata nell'epoca successiva. Annullare le transazioni finalizzate è economicamente impraticabile in quanto richiederebbe l'ottenimento e il rogo di oltre un terzo degli ETH totali in staking.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -168,7 +163,6 @@ Inizialmente dopo The Merge, gli staker potevano accedere solo alle mance delle 
 Dall'aggiornamento della rete Shanghai/Capella, gli staker possono ora designare un <em>indirizzo di prelievo</em> per iniziare a ricevere pagamenti automatici di qualsiasi saldo di staking in eccesso (ETH oltre i 32 derivanti dalle ricompense del protocollo). Questo aggiornamento ha anche abilitato la capacità per un validatore di sbloccare e reclamare il suo intero saldo all'uscita dalla rete.
 
 [Maggiori informazioni sui prelievi di staking](/staking/withdrawals/)
-
 </ExpandableCard>
 
 <ExpandableCard

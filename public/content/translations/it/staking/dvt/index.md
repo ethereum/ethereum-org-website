@@ -1,6 +1,6 @@
 ---
 title: Tecnologia dei validatori distribuiti
-description: La tecnologia dei validatori distribuiti consente l'operatività distribuita di un validatore di Ethereum da parte di più soggetti.
+description: "La tecnologia dei validatori distribuiti consente l'operatività distribuita di un validatore di Ethereum da parte di più soggetti."
 lang: it
 ---
 

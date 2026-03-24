@@ -1,6 +1,6 @@
 ---
-title: Cos'è il Web3 e perché è importante?
-description: Un'introduzione al Web3, la prossima evoluzione del World Wide Web, e perché è importante.
+title: "Cos'è il Web3 e perché è importante?"
+description: "Un'introduzione al Web3, la prossima evoluzione del World Wide Web, e perché è importante."
 lang: it
 ---
 
@@ -69,7 +69,8 @@ Il Web3 consente la proprietà diretta tramite [token non fungibili (NFT)](/glos
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Scopri di più sugli NFT</div>
+  <div>Scopri di più sugli NFT
+</div>
   <ButtonLink href="/nft/">
     Maggiori informazioni sugli NFT
   </ButtonLink>
@@ -97,7 +98,8 @@ Tuttavia, le persone definiscono molte comunità Web3 come DAO. Queste comunità
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Scopri di più sulle DAO</div>
+  <div>Scopri di più sulle DAO
+</div>
   <ButtonLink href="/dao/">
     Maggiori informazioni sulle DAO
   </ButtonLink>

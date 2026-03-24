@@ -1,6 +1,6 @@
 ---
-title: Cos'è una DAO?
-metaTitle: Cos'è una DAO? | Organizzazione Autonoma Decentralizzata
+title: "Cos'è una DAO?"
+metaTitle: "Cos'è una DAO? | Organizzazione Autonoma Decentralizzata"
 description: Una panoramica delle DAO su Ethereum
 lang: it
 template: use-cases
@@ -8,7 +8,7 @@ emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: Una rappresentazione di una DAO che vota su una proposta.
-summaryPoint1: Comunità di proprietà dei membri senza una leadership centralizzata.
+summaryPoint1: "Comunità di proprietà dei membri senza una leadership centralizzata."
 summaryPoint2: Un modo sicuro per collaborare con sconosciuti su internet.
 summaryPoint3: Un luogo sicuro in cui impegnare fondi per una causa specifica.
 ---

@@ -99,7 +99,7 @@ La modalità di sincronizzazione e il client scelti influenzeranno i requisiti d
 | Nethermind | 500GB+                | 12TB+                    |
 | Reth       | N/A                   | 2.2TB+                   |
 
-- Nota: Erigon e Reth non offrono la sincronizzazione snap, ma è possibile il Pruning Completo (~2TB per Erigon, ~1.2TB per Reth)
+- Nota: Erigon e Reth non offrono la sincronizzazione snap, ma è possibile il Pruning Completo (\~2TB per Erigon, ~1.2TB per Reth)
 
 Per i client di consenso, il requisito di spazio dipende anche dall'implementazione del client e dalle funzionalità abilitate (ad es. lo slasher del validatore), ma in genere calcola altri 200GB necessari per i dati della beacon chain. Con un gran numero di validatori, cresce anche il carico della larghezza di banda. Puoi trovare [dettagli sui requisiti dei client di consenso in questa analisi](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
@@ -235,7 +235,7 @@ Questa sezione ti guiderà nell'avvio dei client di esecuzione. Serve solo come 
 
 Tieni presente che questo è solo un esempio di base, tutte le altre impostazioni verranno impostate sui valori predefiniti. Presta attenzione alla documentazione di ciascun client per conoscere i valori predefiniti, le impostazioni e le funzionalità. Per ulteriori funzionalità, ad esempio per l'esecuzione di validatori, il monitoraggio, ecc., fai riferimento alla documentazione del client specifico.
 
-> Nota che le barre rovesciate `\` negli esempi servono solo a scopo di formattazione; i flag di configurazione possono essere definiti in una singola riga.
+> Nota che le barre rovesciate `` negli esempi servono solo a scopo di formattazione; i flag di configurazione possono essere definiti in una singola riga.
 
 ##### Eseguire Besu
 

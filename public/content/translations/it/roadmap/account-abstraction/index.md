@@ -1,6 +1,6 @@
 ---
 title: Astrazione dell'account
-description: Una panoramica dei piani di Ethereum per rendere gli account degli utenti più semplici e sicuri
+description: "Una panoramica dei piani di Ethereum per rendere gli account degli utenti più semplici e sicuri"
 lang: it
 summaryPoints:
   - L'astrazione dell'account rende molto più semplice creare portafogli di contratti intelligenti
