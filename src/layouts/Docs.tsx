@@ -136,10 +136,12 @@ export const DocsLayout = ({
         <SideNav path={addSlashes(slug)} />
         <MainArticle className="min-w-0 flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12">
           <H1 id="top">{frontmatter.title}</H1>
-          <FileContributors
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-          />
+          {!frontmatter.hideEditButton && (
+            <FileContributors
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
+          )}
           <TableOfContents
             editPath={absoluteEditPath}
             items={tocItems}
