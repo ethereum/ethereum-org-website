@@ -48,6 +48,7 @@ const {
   fixGuillemetsInHtmlTags,
   fixMissingComponentClosingTags,
   fixMangledDocLinks,
+  fixBrandCapitalization,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -1919,6 +1920,85 @@ author: Ori Pomerantz
     test("skips inline code", () => {
       const input = 'Use `<span dir="ltr"\u00BB` for RTL'
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves guillemet-quoted words unchanged (not HTML tags)", () => {
+      // Ukrainian/Russian use guillemets as quotation marks.
+      // Words like \u00ABcat\u00BB, \u00ABdog\u00BB, \u00ABnull\u00BB are quotes, not tags.
+      const input =
+        "- \u0440\u044F\u0434\u043E\u043A, \u0449\u043E \u043C\u0456\u0441\u0442\u0438\u0442\u044C \u0441\u043B\u043E\u0432\u043E \u00ABcat\u00BB;"
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves guillemet-quoted multi-letter words unchanged", () => {
+      const input =
+        "- \u0440\u044F\u0434\u043E\u043A \u00ABdog\u00BB = [ 0x83 ]\n- \u0441\u043F\u0438\u0441\u043E\u043A [ \u00ABcat\u00BB, \u00ABdog\u00BB ]"
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("still fixes actual HTML tags like \u00ABi\u00BB but not \u00ABcat\u00BB", () => {
+      // \u00ABi\u00BB is a known HTML tag and should be fixed
+      const input = "\u00ABi\u00BBtext</i>"
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe("<i>text</i>")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixBrandCapitalization", () => {
+    test("fixes Github to GitHub", () => {
+      const input = "Check the [Github](https://github.com/example) repo"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe(
+        "Check the [GitHub](https://github.com/example) repo"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes Metamask to MetaMask", () => {
+      const input = "Install Metamask from the store"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe("Install MetaMask from the store")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does NOT modify github.com URLs", () => {
+      const input = "Visit https://github.com/ethereum"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does NOT modify github.io URLs", () => {
+      const input = "See blog.ethereum.github.io for docs"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\nGithub repo\n```"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("fixes multiple occurrences", () => {
+      const input = "Use Github and Metamask"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe("Use GitHub and MetaMask")
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves already-correct casing unchanged", () => {
+      const input = "Use GitHub and MetaMask"
+      const { content, fixCount } = fixBrandCapitalization(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })

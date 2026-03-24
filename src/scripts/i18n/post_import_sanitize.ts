@@ -141,6 +141,7 @@ const PROTECTED_BRAND_NAMES = [
   "JavaScript",
   "TypeScript",
   "Python",
+  "Noir",
   // Companies/Products
   "Alchemy",
   "Infura",
@@ -158,6 +159,9 @@ const PROTECTED_BRAND_NAMES = [
   "Ganache",
   "Brownie",
   "Waffle",
+  "React",
+  "Vite",
+  "Wagmi",
   // Protocols/Projects
   "Uniswap",
   "Aave",
@@ -742,6 +746,47 @@ function fixTickerTranspositions(content: string): {
 }
 
 /**
+ * Fix case-sensitive brand capitalization mistakes.
+ *
+ * Maps wrong-case variants to canonical forms. Skips URLs (github.com etc.)
+ * and code blocks. Only matches standalone occurrences (not inside URLs).
+ */
+const BRAND_CAPITALIZATION_FIXES: Record<string, string> = {
+  Metamask: "MetaMask",
+  Github: "GitHub",
+}
+
+function fixBrandCapitalization(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    for (const [wrong, correct] of Object.entries(BRAND_CAPITALIZATION_FIXES)) {
+      // Match the wrong form but NOT when followed by .com/.org/.io/etc.
+      // (i.e., skip domain names like github.com)
+      const re = new RegExp(
+        `(?<![A-Za-z0-9/])${escapeRegex(wrong)}(?!\\.(?:com|org|io|dev|net))(?![A-Za-z0-9])`,
+        "g"
+      )
+      const matches = parts[i].match(re)
+      if (matches && matches.length > 0) {
+        fixCount += matches.length
+        parts[i] = parts[i].replace(re, correct)
+      }
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Fix only brand/product/language name tags in frontmatter.
  * Generic concept tags (e.g. "zero-knowledge" → "nulová znalost") should
  * remain in the native language. Only tags that match a protected brand name
@@ -764,8 +809,8 @@ function fixBrandTags(
   const transFm = transMatch[1]
   const engFm = engMatch[1]
 
-  // Extract tags arrays
-  const tagsRe = /^tags:\s*\[([^\]]*)\]/m
+  // Extract tags arrays (handles both single-line and multi-line YAML)
+  const tagsRe = /^tags:\s*\[([\s\S]*?)\]/m
   const engTagsMatch = engFm.match(tagsRe)
   const transTagsMatch = transFm.match(tagsRe)
 
@@ -2129,8 +2174,36 @@ function fixGuillemetsInHtmlTags(content: string): {
             fixCount++
             return "<" + inner + ">"
           }
-          // Simple tag: «br» «i» «b» -- only short lowercase names
-          if (/^[a-z]{1,4}$/.test(inner)) {
+          // Simple tag: «br» «i» «b» -- only known HTML tag names
+          // Whitelist prevents false positives on guillemet-quoted words
+          // like «cat» «dog» «null» which are legitimate quotation marks
+          const KNOWN_SHORT_HTML_TAGS = new Set([
+            "a",
+            "b",
+            "i",
+            "p",
+            "s",
+            "u",
+            "br",
+            "em",
+            "hr",
+            "li",
+            "ol",
+            "td",
+            "th",
+            "tr",
+            "ul",
+            "dd",
+            "dl",
+            "dt",
+            "div",
+            "img",
+            "nav",
+            "pre",
+            "sub",
+            "sup",
+          ])
+          if (KNOWN_SHORT_HTML_TAGS.has(inner)) {
             fixCount++
             return "<" + inner + ">"
           }
@@ -3600,6 +3673,10 @@ function processMarkdownFile(
   }
 
   applyFix(
+    () => fixBrandCapitalization(content),
+    (n) => `Fixed ${n} brand capitalization issue(s)`
+  )
+  applyFix(
     () => fixTickerTranspositions(content),
     (n) => `Fixed ${n} ticker symbol transpositions`
   )
@@ -4248,6 +4325,7 @@ export const _testOnly = {
   removeStaleComponents,
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
+  fixBrandCapitalization,
   escapeMdxAngleBrackets,
   removeOrphanedClosingTags,
   normalizeFrontmatterDates,

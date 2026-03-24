@@ -187,6 +187,33 @@ test.describe("English Comparison Fixes", () => {
       expect(content).toBe("no frontmatter")
       expect(fixCount).toBe(0)
     })
+
+    test("handles multi-line YAML tag arrays", () => {
+      const english = [
+        "---",
+        'tags: ["typescript", "react", "vite", "wagmi", "frontend"]',
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "tags:",
+        "  [",
+        '    "TypeScript",',
+        '    "\u0440\u0435\u0430\u0433\u0443\u0432\u0430\u043D\u043D\u044F",',
+        '    "vite",',
+        '    "wagmi",',
+        '    "\u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u0430\u043D\u043D\u044F"',
+        "  ]",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = fixBrandTags(translated, english)
+      // "react" is a brand -> should be restored to "React"
+      expect(content).toContain('"React"')
+      expect(content).not.toContain(
+        '"\u0440\u0435\u0430\u0433\u0443\u0432\u0430\u043D\u043D\u044F"'
+      )
+      expect(fixCount).toBeGreaterThanOrEqual(1)
+    })
   })
 
   test.describe("fixProtectedBrandNames", () => {

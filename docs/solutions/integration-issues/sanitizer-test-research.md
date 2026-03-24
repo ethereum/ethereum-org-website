@@ -59,14 +59,18 @@
 
 These patterns are covered by existing fix functions and should have regression tests:
 
-- **Duplicated headings** (`fixDuplicatedHeadings`) — `## Text? Text? {#id}`
-- **Broken markdown links** (`fixBrokenMarkdownLinks`) — `] (url)` space
-- **Escaped bold/italic** (`fixEscapedBoldAndItalic`) — `\*\*text\*\*`; uses lookbehind to skip `\*` used as multiplication (e.g., `operand\*operand`)
-- **ASCII guillemets** (`fixAsciiGuillemets`) — `<<text>>`
-- **Ticker transpositions** (`fixTickerTranspositions`) — `EHT` → `ETH`, `TNF` → `NFT`, `TNFs` → `NFTs`; uses alphanumeric-only boundaries to match adjacent to markdown `_`
-- **MDX angle brackets** (`escapeMdxAngleBrackets`) — `<5GB`
-- **Orphaned closing tags** (`removeOrphanedClosingTags`) — trailing `</a>`
+- **Duplicated headings** (`fixDuplicatedHeadings`) -- `## Text? Text? {#id}`
+- **Broken markdown links** (`fixBrokenMarkdownLinks`) -- `] (url)` space
+- **Escaped bold/italic** (`fixEscapedBoldAndItalic`) -- `\*\*text\*\*`; uses lookbehind to skip `\*` used as multiplication (e.g., `operand\*operand`)
+- **ASCII guillemets** (`fixAsciiGuillemets`) -- `<<text>>`
+- **Ticker transpositions** (`fixTickerTranspositions`) -- `EHT` -> `ETH`, `TNF` -> `NFT`, `TNFs` -> `NFTs`; uses alphanumeric-only boundaries to match adjacent to markdown `_`
+- **MDX angle brackets** (`escapeMdxAngleBrackets`) -- `<5GB`
+- **Orphaned closing tags** (`removeOrphanedClosingTags`) -- trailing `</a>`
 - **Block component line breaks** (`fixBlockComponentLineBreaks`)
+- **Brand capitalization** (`fixBrandCapitalization`) -- `Github` -> `GitHub`, `Metamask` -> `MetaMask`; skips URLs (github.com etc.) and code blocks. Added in uk PR #17472 review.
+- **Guillemet false positive on short words** (`fixGuillemetsInHtmlTags` bugfix) -- Previously converted guillemet-quoted words like `<<cat>>` to `<cat>` because `^[a-z]{1,4}$` was too broad. Fixed to use HTML tag whitelist. Found in uk PR #17472 (RLP file).
+- **Multi-line YAML brand tags** (`fixBrandTags` bugfix) -- Tags regex `[^\]]*` didn't match newlines in multi-line YAML arrays. Fixed to `[\s\S]*?`. Found in uk PR #17472 (wagmi tutorial).
+- **Brand tag list expanded** -- Added React, Vite, Wagmi, Noir to `PROTECTED_BRAND_NAMES`. Found missing during uk PR #17472 when "react" -> "react/respond" semantic mistranslation in tags wasn't caught.
 - **Frontmatter date normalization** (`normalizeFrontmatterDates`)
 - **Frontmatter non-ASCII quoting** (`quoteFrontmatterNonAscii`)
 - **Header ID sync** (`syncHeaderIdsWithEnglish`)
