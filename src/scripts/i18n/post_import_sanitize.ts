@@ -3068,6 +3068,84 @@ function fixInnerQuotesInJsxAttributes(content: string): {
 }
 
 /**
+ * Fix Crowdin variable-expansion leak inside JSX attribute values.
+ *
+ * Crowdin sometimes treats `$N` inside attribute values as a variable reference,
+ * expanding `$1` to the attribute name itself (e.g., "description") and leaving
+ * the remaining digits. This produces patterns like:
+ *   description="...text... description=4 ...text..."
+ * where the English source had:
+ *   description="...text... $14 ...text..."
+ *
+ * The fix keeps the translated text and replaces only the leaked
+ * `<attrName>=<digits>` with the corresponding `$NN` from the English source.
+ */
+function fixLeakedAttrNamesInJsxValues(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  const jsxAttrNames = "title|description|label|alt|contentPreview"
+  // Match leaked attrName=digits INSIDE a quoted attribute value
+  const leakInsideValue = new RegExp(`\\b(${jsxAttrNames})=(\\d+)\\b`, "g")
+
+  const lines = translatedContent.split("\n")
+  for (let li = 0; li < lines.length; li++) {
+    const line = lines[li]
+    if (!leakInsideValue.test(line)) continue
+    leakInsideValue.lastIndex = 0
+
+    // Only operate inside quoted attribute values on JSX component lines
+    // (lines containing <Card, <ExpandableCard, etc.)
+    if (!/^\s*<[A-Z]/.test(line)) continue
+
+    // Find the matching English line by emoji (stable across translations)
+    const emojiMatch = line.match(/emoji="([^"]*)"/)
+    if (!emojiMatch) continue
+    const emoji = emojiMatch[1]
+
+    let engLine = ""
+    for (const el of englishContent.split("\n")) {
+      if (el.includes(`emoji="${emoji}"`)) {
+        engLine = el
+        break
+      }
+    }
+    if (!engLine) continue
+
+    // Replace each leaked attrName=digits with the $NN from English
+    lines[li] = line.replace(leakInsideValue, (match, _, digits) => {
+      // Verify this is inside a quoted attribute value (not a bare attribute)
+      // by checking that the attribute pattern `leakedName="...` does NOT
+      // start right before this match (which would be the real attribute)
+      const matchPos = line.indexOf(match)
+      const before = line.slice(Math.max(0, matchPos - 2), matchPos)
+      if (before.endsWith('="') || before.endsWith("='")) {
+        // This is the actual attribute assignment, not a leak inside a value
+        return match
+      }
+
+      // Find all $N+ patterns in the English line's same attribute value
+      const attrRegex = new RegExp(`(${jsxAttrNames})="([^"]*)"`, "g")
+      let engM: RegExpExecArray | null
+      while ((engM = attrRegex.exec(engLine)) !== null) {
+        const engValue = engM[2]
+        // Look for $digits in the English value
+        const dollarMatch = engValue.match(new RegExp(`\\$(\\d*${digits})\\b`))
+        if (dollarMatch) {
+          fixCount++
+          return "$" + dollarMatch[1]
+        }
+      }
+      return match
+    })
+  }
+
+  return { content: lines.join("\n"), fixCount }
+}
+
+/**
  * Escape lone tildes used as range/approximate notation.
  * In Korean (and other CJK), `100만~200만` uses ~ as "to/approximately",
  * but remark-gfm treats paired ~text~ as strikethrough (<del>).
@@ -3709,6 +3787,15 @@ function processMarkdownFile(
     }
     content = tagResult.content
 
+    // Fix leaked attr names inside JSX attribute values (Crowdin $N expansion)
+    const leakedAttrResult = fixLeakedAttrNamesInJsxValues(content, englishMd)
+    if (leakedAttrResult.content !== content) {
+      issues.push(
+        `Fixed ${leakedAttrResult.fixCount} leaked attribute name(s) in JSX values`
+      )
+    }
+    content = leakedAttrResult.content
+
     // Fix translated hrefs using set comparison
     const hrefResult = fixTranslatedHrefs(content, englishMd)
     if (hrefResult.content !== content) {
@@ -4293,6 +4380,7 @@ export const _testOnly = {
   restoreStrippedAbbreviations,
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
+  fixLeakedAttrNamesInJsxValues,
   fixMissingOpeningSup,
   fixSplitBoldMarkers,
   fixKnownWrongCompounds,
