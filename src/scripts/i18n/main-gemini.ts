@@ -20,6 +20,8 @@
  *   SKIP_PR_CREATION        - Skip PR creation (default: false)
  */
 
+import * as path from "path"
+
 import { isGeminiAvailable } from "./lib/ai/gemini"
 import { cleanupProgress } from "./lib/ai/progress-tracker"
 import {
@@ -82,7 +84,7 @@ async function main() {
 
   // Phase 3: Post-import sanitization
   const sanitizerInput = committedFiles.map((f) => ({
-    path: f.path,
+    path: path.resolve(f.path),
     content: f.content,
   }))
   const sanitizeResult = await runPostImportSanitization(
