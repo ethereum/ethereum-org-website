@@ -121,8 +121,8 @@ Der Merge bereitete auch die Bühne für weitere Skalierungs-Upgrades, die unter
 ## Missverständnisse über den Merge {#misconceptions}
 
 <ExpandableCard
-title="Missverständnis: &quot;Der Betrieb eines Blockchain-Knotens erfordert das Staking von 32 ETH.&quot;"
-contentPreview="Falsch. Es steht jedem frei, seine eigene selbstverifizierte Kopie von Ethereum zu synchronisieren (d. h. einen Blockchain-Knoten zu betreiben). Es ist kein ETH erforderlich – weder vor dem Merge, noch nach dem Merge, noch jemals.">
+title="Missverständnis: „Der Betrieb eines Blockchain-Knotens erfordert das Staking von 32 ETH.“"
+contentPreview="Falsch. Es steht jedem frei, seine eigene selbstverifizierte Kopie von Ethereum zu synchronisieren (d. h. einen Blockchain-Knoten zu betreiben). Es ist kein ETH erforderlich – weder vor dem Merge, noch nach dem Merge, noch jemals.">
 
 Es gibt zwei Arten von Ethereum-Blockchain-Knoten: Knoten, die Blöcke vorschlagen können, und Knoten, die dies nicht können.
 
@@ -139,7 +139,7 @@ Die Fähigkeit für jeden, seinen eigenen Knoten zu betreiben, ist <em>absolut u
 </ExpandableCard>
 
 <ExpandableCard
-title="Missverständnis: &quot;Der Merge hat die Gasgebühren nicht gesenkt.&quot;"
+title="Missverständnis: „Der Merge hat die Gasgebühren nicht gesenkt.“"
 contentPreview="Falsch. Der Merge war eine Änderung des Konsensmechanismus, keine Erweiterung der Netzwerkkapazität, und war nie dazu gedacht, die Gasgebühren zu senken.">
 
 Gasgebühren sind ein Produkt der Netzwerknachfrage im Verhältnis zur Kapazität des Netzwerks. Der Merge hat die Nutzung von Proof-of-Work abgeschafft und ist für den Konsens zu Proof-of-Stake übergegangen, hat aber keine Parameter wesentlich geändert, die die Netzwerkkapazität oder den Durchsatz direkt beeinflussen.
@@ -149,7 +149,7 @@ Mit einer <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-ro
 </ExpandableCard>
 
 <ExpandableCard
-title="Missverständnis: &quot;Transaktionen wurden durch den Merge erheblich beschleunigt.&quot;"
+title="Missverständnis: „Transaktionen wurden durch den Merge erheblich beschleunigt.“"
 contentPreview="Falsch. Obwohl es einige leichte Änderungen gibt, ist die Transaktionsgeschwindigkeit auf Ebene 1 jetzt größtenteils dieselbe wie vor dem Merge.">
 Die „Geschwindigkeit“ einer Transaktion kann auf verschiedene Weise gemessen werden, einschließlich der Zeit bis zur Aufnahme in einen Block und der Zeit bis zur Finalität. Beides ändert sich leicht, aber nicht so, dass Nutzer es bemerken würden.
 
@@ -160,7 +160,7 @@ Proof-of-Stake führte das Konzept der Transaktions-Finalität ein, das es vorhe
 </ExpandableCard>
 
 <ExpandableCard
-title="Missverständnis: &quot;Der Merge hat Staking-Auszahlungen ermöglicht.&quot;"
+title="Missverständnis: „Der Merge hat Staking-Auszahlungen ermöglicht.“"
 contentPreview="Falsch, aber Staking-Auszahlungen wurden seitdem durch das Shanghai/Capella-Upgrade ermöglicht.">
 
 Anfänglich nach dem Merge konnten Staker nur auf Gebühren-Trinkgelder und MEV zugreifen, die als Ergebnis von Blockvorschlägen verdient wurden. Diese Belohnungen werden einem Nicht-Staking-Konto gutgeschrieben, das vom Validator kontrolliert wird (bekannt als <em>fee recipient</em>), und sind sofort verfügbar. Diese Belohnungen sind getrennt von den Protokollbelohnungen für die Erfüllung von Validator-Pflichten.
@@ -172,7 +172,7 @@ Seit dem Shanghai/Capella-Netzwerk-Upgrade können Staker nun eine <em>Auszahlun
 </ExpandableCard>
 
 <ExpandableCard
-title="Missverständnis: &quot;Jetzt, da der Merge abgeschlossen ist und Auszahlungen aktiviert sind, könnten alle Staker auf einmal aussteigen.&quot;"
+title="Missverständnis: „Jetzt, da der Merge abgeschlossen ist und Auszahlungen aktiviert sind, könnten alle Staker auf einmal aussteigen.“"
 contentPreview="Falsch. Validator-Austritte sind aus Sicherheitsgründen ratenbegrenzt.">
 Da das Shanghai/Capella-Upgrade Auszahlungen ermöglicht hat, haben Validatoren einen Anreiz, ihr Staking-Guthaben über 32 ETH abzuheben, da diese Gelder nicht zur Rendite beitragen und ansonsten gesperrt sind. Abhängig vom effektiven Jahreszins (APR, bestimmt durch das gesamte gestakte ETH) könnten sie einen Anreiz haben, ihre(n) Validator(en) zu beenden, um ihr gesamtes Guthaben zurückzufordern, oder möglicherweise noch mehr zu staken, indem sie ihre Belohnungen verwenden, um mehr Rendite zu erzielen.
 

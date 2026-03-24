@@ -16,7 +16,7 @@ Die **Emission** von ETH ist der Prozess der Schaffung von ETH, das zuvor nicht 
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH-Emission TL;DR">
+title="ETH-Emission: Kurz gesagt">
 
 - Vor dem Übergang zu Proof-of-Stake wurden Minern etwa 13.000 ETH/Tag emittiert.
 - Stakern werden etwa 1.700 ETH/Tag emittiert, basierend auf insgesamt etwa 14 Millionen gestakten ETH.

@@ -30,9 +30,9 @@ Ein Home-Staker erhält Belohnungen direkt vom Protokoll, wenn er seinen Validat
 Home Staking geht mit mehr Verantwortung einher, bietet Ihnen jedoch maximale Kontrolle über Ihre Gelder und Ihr Staking-Setup.
 
 <CardGrid>
-  <Card title="Verdienen Sie frische ETH" emoji="💸" description="Verdienen Sie in ETH denominierte Belohnungen direkt vom Protokoll, wenn Ihr Validator online ist, ohne dass Zwischenhändler einen Anteil nehmen." />
-  <Card title="Volle Kontrolle" emoji="🎛️" description="Behalten Sie Ihre eigenen Schlüssel. Wählen Sie die Kombination aus Clients und Hardware, die es Ihnen ermöglicht, Ihr Risiko zu minimieren und am besten zur Gesundheit und Sicherheit des Netzwerks beizutragen. Staking-Dienste von Drittanbietern treffen diese Entscheidungen für Sie und treffen nicht immer die sichersten Entscheidungen." />
-  <Card title="Netzwerksicherheit" emoji="🔐" description="Home Staking ist die wirkungsvollste Art zu staken. Indem Sie einen Validator auf Ihrer eigenen Hardware zu Hause ausführen, stärken Sie die Robustheit, Dezentralisierung und Sicherheit des Ethereum-Protokolls." />
+  <Card title="Verdienen Sie neue ETH" emoji="💸" description="Verdienen Sie in ETH denominierte Belohnungen direkt vom Protokoll, wenn Ihr Validator online ist, ohne dass Zwischenhändler einen Anteil nehmen." />
+  <Card title="Volle Kontrolle" emoji="🎛️" description="Behalten Sie Ihre eigenen Schlüssel. Wählen Sie die Kombination aus Clients und Hardware, die es Ihnen ermöglicht, Ihr Risiko zu minimieren und am besten zur Gesundheit und Sicherheit des Netzwerks beizutragen. Staking-Dienste von Drittanbietern treffen diese Entscheidungen für Sie und nicht immer die sichersten." />
+  <Card title="Netzwerksicherheit" emoji="🔐" description="Home-Staking ist die wirkungsvollste Art zu staken. Indem Sie einen Validator auf Ihrer eigenen Hardware zu Hause betreiben, stärken Sie die Robustheit, Dezentralisierung und Sicherheit des Ethereum-Protokolls." />
 </CardGrid>
 
 ## Überlegungen vor dem Home Staking {#considerations-before-staking-solo}
@@ -145,7 +145,7 @@ Jedes mit einem Validator verknüpfte Schlüsselpaar erfordert mindestens 32 ETH
 Wenn Ihnen Home Staking zu anspruchsvoll erscheint, ziehen Sie die Nutzung eines [Staking-as-a-Service](/staking/saas/)-Anbieters in Betracht, oder wenn Sie mit weniger als 32 ETH arbeiten, sehen Sie sich die [Staking-Pools](/staking/pools/) an.
 </ExpandableCard>
 
-<ExpandableCard title="Werde ich geslasht, wenn ich offline gehe? (TL;DR: Nein.)">
+<ExpandableCard title="Werde ich bei einer Offline-Zeit geslasht? (TL;DR: Nein.)">
 Offline zu gehen, wenn das Netzwerk ordnungsgemäß finalisiert, führt NICHT zu Slashing. Es fallen kleine <em>Inaktivitätsstrafen</em> an, wenn Ihr Validator für eine bestimmte Epoche (jeweils 6,4 Minuten lang) nicht zur Bestätigung verfügbar ist, aber dies unterscheidet sich stark von <em>Slashing</em>. Diese Strafen sind etwas geringer als die Belohnung, die Sie verdient hätten, wenn der Validator zur Bestätigung verfügbar gewesen wäre, und Verluste können mit ungefähr der gleichen Zeit, die Sie wieder online sind, zurückverdient werden.
 
 Beachten Sie, dass Strafen für Inaktivität proportional dazu sind, wie viele Validatoren gleichzeitig offline sind. In Fällen, in denen ein großer Teil des Netzwerks auf einmal offline ist, sind die Strafen für jeden dieser Validatoren höher, als wenn ein einzelner Validator nicht verfügbar ist.

@@ -22,8 +22,8 @@ Sobald eine App auf der Ethereum-Blockchain veröffentlicht ist, wird sie unaufh
 Die Logik von Ethereum-Anwendungen läuft auf der Ethereum-Blockchain anstatt auf zentralisierten Servern. Deshalb werden sie oft als dezentralisierte Anwendungen oder kurz Dapps bezeichnet.
 
 <CardGrid>
-  <Card title="Privater" emoji=":detective:" description="Sie benötigen nur ein Ethereum-Wallet, um eine Dapp zu nutzen. Ihre persönlichen Daten sind nicht erforderlich. Das ist das Internet, wie es immer hätte sein sollen."/>
-  <Card title="Weltweit zugänglich" emoji="🌍" description="Dapps unterliegen nicht den Regeln von Regionen und App-Stores. Ihr Zugang hängt davon ab, ob Sie eine Internetverbindung haben – nicht davon, wo Sie leben." />
+  <Card title="Privat" emoji=":detective:" description="Du benötigst nur ein Ethereum-Wallet, um eine Dapp zu nutzen. Deine persönlichen Daten sind nicht erforderlich. Das ist das Internet, wie es immer hätte sein sollen."/>
+  <Card title="Weltweit zugänglich" emoji="🌍" description="Dapps unterliegen nicht den Regeln von Regionen und App-Stores. Dein Zugang hängt davon ab, ob du eine Internetverbindung hast – nicht davon, wo du lebst." />
   <Card title="Günstigere Dienste" emoji=":handshake:" description="Dapps sind Peer-to-Peer. Keine Vermittler, die einen Anteil nehmen, bedeutet günstigere Dienste." />
 </CardGrid>
 

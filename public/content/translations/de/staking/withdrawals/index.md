@@ -134,7 +134,7 @@ Wie Sie sehen, verlangsamt sich dies, je mehr Validatoren im Netzwerk sind. Eine
 ## Häufig gestellte Fragen {#faq}
 
 <ExpandableCard
-title="Kann ich eine einmal angegebene Abhebungsadresse in eine alternative Abhebungsadresse ändern?"
+title="Kann ich eine bereits angegebene Abhebungsadresse ändern?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
