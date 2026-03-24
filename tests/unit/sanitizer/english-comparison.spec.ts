@@ -25,6 +25,7 @@ const {
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
   removeStaleComponents,
+  fixDetachedHeadingAnchors,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -1006,6 +1007,89 @@ test.describe("English Comparison Fixes", () => {
       const { content, fixCount } = removeStaleComponents(translated, english)
       expect(content).not.toContain("\n\n\n")
       expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixDetachedHeadingAnchors", () => {
+    test("restores heading marker when anchor is on a non-heading line", () => {
+      const english = [
+        "### Availability bonds {#avail-bonds}",
+        "",
+        "In a real implementation there would be some profit motive.",
+      ].join("\n")
+      const translated = [
+        "Guarantees {#avail-bonds} In a real implementation there would be some profit motive.",
+      ].join("\n")
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("### Guarantees {#avail-bonds}")
+      expect(content).toContain(
+        "\n\nIn a real implementation there would be some profit motive."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple detached anchors", () => {
+      const english = [
+        "### Heading A {#anchor-a}",
+        "",
+        "Para A.",
+        "",
+        "### Heading B {#anchor-b}",
+        "",
+        "Para B.",
+      ].join("\n")
+      const translated = [
+        "Title A {#anchor-a} Para A.",
+        "",
+        "Title B {#anchor-b} Para B.",
+      ].join("\n")
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("### Title A {#anchor-a}")
+      expect(content).toContain("### Title B {#anchor-b}")
+      expect(fixCount).toBe(2)
+    })
+
+    test("uses correct heading level from English (h4)", () => {
+      const english = [
+        "#### Deep heading {#deep-heading}",
+        "",
+        "Content here.",
+      ].join("\n")
+      const translated = "Deep heading translated {#deep-heading} Content here."
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("#### Deep heading translated {#deep-heading}")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves properly formatted headings unchanged", () => {
+      const english = "### Good heading {#good}\n\nParagraph."
+      const translated = "### Good heading translated {#good}\n\nParagraph."
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const english = "### Heading {#my-id}\n\nParagraph."
+      const translated = "```\nSomething {#my-id} inside code\n```"
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
     })
   })
 })

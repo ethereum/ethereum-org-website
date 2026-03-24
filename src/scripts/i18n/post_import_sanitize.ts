@@ -1511,6 +1511,84 @@ function extractHeaderStructure(md: string): HeaderInfo[] {
   return headers
 }
 
+/**
+ * Fix heading anchors that Crowdin detached from their heading lines.
+ *
+ * Crowdin sometimes strips the `###` prefix and merges the heading text
+ * with the following paragraph, leaving `{#anchor-id}` in prose.
+ * MDX parses this as a JSX expression, acorn chokes, and the build crashes.
+ *
+ * Uses English source to determine the correct heading level.
+ */
+function fixDetachedHeadingAnchors(
+  translated: string,
+  english: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  // Build a map: anchor-id -> heading level from English
+  const headingRe = /^(#{1,6})\s+.*\{#([\w-]+)\}/gm
+  const anchorLevelMap = new Map<string, string>()
+  let m: RegExpExecArray | null
+  while ((m = headingRe.exec(english))) {
+    anchorLevelMap.set(m[2], m[1])
+  }
+
+  if (anchorLevelMap.size === 0) {
+    return { content: translated, fixCount: 0 }
+  }
+
+  // Process line by line on the FULL content (not code-block-split)
+  // to preserve heading context. Skip lines inside fenced code blocks.
+  const lines = translated.split("\n")
+  const newLines: string[] = []
+  let inFencedBlock = false
+
+  for (const line of lines) {
+    if (/^```|^~~~/.test(line.trim())) {
+      inFencedBlock = !inFencedBlock
+      newLines.push(line)
+      continue
+    }
+    if (inFencedBlock) {
+      newLines.push(line)
+      continue
+    }
+
+    // Already a heading line? Leave as-is
+    if (/^#{1,6}\s/.test(line)) {
+      newLines.push(line)
+      continue
+    }
+
+    // Check for {#anchor-id} on a non-heading line
+    const anchorMatch = line.match(/^(.+?)\s*(\{#([\w-]+)\})\s*(.*)$/)
+    if (!anchorMatch) {
+      newLines.push(line)
+      continue
+    }
+
+    const [, beforeAnchor, anchorTag, anchorId, afterAnchor] = anchorMatch
+    const level = anchorLevelMap.get(anchorId)
+
+    if (!level) {
+      newLines.push(line)
+      continue
+    }
+
+    // Restore: "Text {#id} Paragraph..." -> "### Text {#id}\n\nParagraph..."
+    const headingLine = `${level} ${beforeAnchor.trim()} ${anchorTag}`
+    newLines.push(headingLine)
+    if (afterAnchor.trim()) {
+      newLines.push("")
+      newLines.push(afterAnchor.trim())
+    }
+    fixCount++
+  }
+
+  return { content: newLines.join("\n"), fixCount }
+}
+
 function syncHeaderIdsWithEnglish(
   translatedMd: string,
   englishMd: string
@@ -3499,6 +3577,7 @@ function processMarkdownFile(
   const issues: string[] = []
   let content = providedContent || fs.readFileSync(mdPath, "utf8")
 
+  const before = content
   let englishMd: string | undefined
 
   // Map translated path to English path: remove `/translations/<lang>/` segment
@@ -3516,13 +3595,20 @@ function processMarkdownFile(
     )
     if (fs.existsSync(englishPath)) {
       englishMd = fs.readFileSync(englishPath, "utf8")
+      // Fix detached heading anchors BEFORE syncing IDs
+      {
+        const snapshot = content
+        const result = fixDetachedHeadingAnchors(content, englishMd)
+        content = result.content
+        if (content !== snapshot) {
+          issues.push(`Restored ${result.fixCount} detached heading anchor(s)`)
+        }
+      }
       content = syncHeaderIdsWithEnglish(content, englishMd)
     } else {
       issues.push(`English source missing: ${path.relative(ROOT, englishPath)}`)
     }
   }
-
-  const before = content
 
   // Helper: only log a fix if content actually changed
   function applyFix(
@@ -4334,6 +4420,7 @@ export const _testOnly = {
   fixAsymmetricBackticks,
   // English-comparison fixes
   syncHeaderIdsWithEnglish,
+  fixDetachedHeadingAnchors,
   fixTranslatedHrefs,
   fixMissingLinkBrackets,
   fixBrandTags,
