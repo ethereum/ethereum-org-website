@@ -28,7 +28,6 @@ const communityHubs: CommunityHub[] = [
     coworkingSignupUrl: "https://forms.gle/bm78vRjZqvu45tsz5",
     meetupUrl: "https://luma.com/user/usr-ut3JGCXXuokkPdK",
     banner: HongKongHubBanner,
-    // TODO: Update
     brandColor:
       "bg-gradient-to-b from-[#A4FCF5]/5 to-[#A4FCF5]/10 dark:from-[#A4FCF5]/20 dark:to-[#A4FCF5]/10 border-[#A4FCF5]/20",
   },

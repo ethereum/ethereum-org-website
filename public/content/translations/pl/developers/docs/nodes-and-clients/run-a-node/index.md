@@ -132,7 +132,6 @@ Poniżej jest kilka projektów, które mogą pomóc Ci w instalacji i kontroli k
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) – najszybszy i najłatwiejszy sposób na skonfigurowanie pełnego węzła. Narzędzie do konfiguracji za pomocą jednej linijki i TUI do zarządzania węzłem. Bezpłatne. Otwarte źródło. Dobra publiczne dla Ethereum od solo stakerów. Wsparcie dla ARM64 i AMD64.
 - [eth-docker](https://eth-docker.net/) – zautomatyzowana konfiguracja przy użyciu Dockera, skoncentrowana na łatwym i bezpiecznym stakingu, wymaga podstawowej znajomości terminala i Dockera, zalecana dla nieco bardziej zaawansowanych użytkowników.
 - [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) – launcher do instalowania klientów na zdalnym serwerze przez połączenie SSH, z graficznym przewodnikiem konfiguracji, centrum sterowania i wieloma innymi funkcjami.
-- [NiceNode](https://www.nicenode.xyz/) – launcher z prostym interfejsem użytkownika do uruchamiania węzła na komputerze. Po prostu wybierz klientów i uruchom je za pomocą kilku kliknięć. Wciąż w fazie rozwoju.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) – narzędzie do konfiguracji węzła, które automatycznie generuje konfigurację Dockera za pomocą kreatora CLI. Napisane w Go przez Nethermind.
 
 ### Ręczna konfiguracja klientów {#manual-setup}

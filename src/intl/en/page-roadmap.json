@@ -96,7 +96,13 @@
   "page-roadmap-fusaka-additional-item-1": "Support for secure enclaves on mobile devices to improve UX",
   "page-roadmap-fusaka-additional-item-2": "Blob fee market improvements",
   "page-roadmap-fusaka-additional-item-3": "Further improvements to validator efficiency and network performance",
-  "page-roadmap-glamsterdam-discussed-title": "Scheduled for Glamsterdam",
-  "page-roadmap-glamsterdam-discussed-item-1": "Enshrined Proposer-Builder Separation (ePBS)",
-  "page-roadmap-glamsterdam-discussed-item-2": "Block-level Access Lists (BALs)"
+  "page-roadmap-glamsterdam-epbs-title": "Enshrined proposer-builder separation",
+  "page-roadmap-glamsterdam-epbs-item-1": "Separates block agreement from processing, helping L1 scale by allowing validators to process more data",
+  "page-roadmap-glamsterdam-epbs-item-2": "Natively integrates builders so validators can safely outsource block assembly without trusting external software",
+  "page-roadmap-glamsterdam-bal-title": "Block-level access lists",
+  "page-roadmap-glamsterdam-bal-item-1": "Introduces mandatory access lists at the block level, rather than for individual transactions",
+  "page-roadmap-glamsterdam-bal-item-2": "Maps dependencies upfront for faster syncs, parallel execution, and parallel disk reads",
+  "page-roadmap-glamsterdam-bal-item-3": "Lowers gas for state-heavy apps and improves gas cost predictability",
+  "page-roadmap-hegota-discussed-title": "Planned for Hegotá",
+  "page-roadmap-hegota-discussed-item-1": "Proposals are currently under discussion"
 }

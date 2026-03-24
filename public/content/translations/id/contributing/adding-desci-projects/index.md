@@ -1,44 +1,44 @@
 ---
 title: Menambahkan proyek DeSci
-description: Kebijakan yang kami gunakan saat menambahkan tautan ke proyek di halaman DeSci di ethereum.org
+description: Kebijakan yang kami gunakan saat menambahkan tautan ke proyek di halaman DeSci pada ethereum.org
 lang: id
 ---
 
 # Menambahkan proyek {#adding-projects}
 
-Kami ingin memastikan bahwa kami menunjukkan berbagai proyek dan memberikan gambaran yang baik tentang lanskap DeSci.
+Kami ingin memastikan bahwa kami menampilkan berbagai proyek dan memberikan gambaran yang baik tentang lanskap DeSci.
 
-Siapapun bebas untuk mengusulkan sebuah proyek untuk didaftarkan di halaman DeSci di ethereum.org. Dengan cara yang sama, siapa pun yang menemukan proyek yang tidak lagi relevan atau tidak memenuhi kriteria kelayakan kami dapat menyarankan untuk menghapusnya.
+Siapa pun bebas menyarankan proyek untuk dicantumkan di halaman DeSci pada ethereum.org. Demikian pula, siapa pun yang menyadari ada proyek yang tidak lagi relevan atau tidak lagi memenuhi kriteria kelayakan kami bebas untuk menyarankan penghapusannya.
 
-## Kerangka keputusan {#the-decision-framework}
+## Kerangka kerja keputusan {#the-decision-framework}
 
-### Kriteria untuk penyertaan: yang harus dimiliki {#the-must-haves}
+### Kriteria untuk penyertaan: hal-hal yang wajib ada {#the-must-haves}
 
-- **Kode/data sumber terbuka** - Keterbukaan kode dan data merupakan prinsip utama DeSci, sehingga proyek DeSci tidak boleh bersifat tertutup. Basis kode harus dapat diakses dan idealnya terbuka untuk PR.
-- **Proyek DeSci harus terdesentralisasi secara nyata** - Ini dapat mencakup diatur oleh DAO, atau dengan membangun tumpukan teknologi terdesentralisasi termasuk dompet non-kustodian. Ini mungkin melibatkan kontrak pintar yang dapat diaudit di Ethereum.
-- **Informasi rincian yang terbuka dan akurat** - diharapkan bahwa rincian proyek mana pun yang disarankan hadir dengan informasi yang terbuka dan akurat. Produk yang memalsukan daftar informasi, seperti menyatakan bahwa produk Anda adalah "kode terbuka" padahal tidak, maka akan dihapus.
-- **Komitmen yang dapat dibuktikan untuk memperluas akses ke ilmu pengetahuan** - Proyek DeSci harus dapat mengartikulasikan bagaimana mereka memperluas partisipasi dalam ilmu pengetahuan kepada masyarakat umum, tidak hanya untuk pemegang token/NFT.
-- **Akses global** - Proyek Anda tidak memiliki batasan geografis atau persyaratan KYC yang mengecualikan sebagian orang dari mengakses layanan Anda.
-- **Situs web dan dokumentasi yang informatif** - Penting agar pengunjung situs web proyek dapat memahami apa yang dilakukan proyek tersebut, bagaimana proyek tersebut berkontribusi pada desentralisasi infrastruktur sains, dan bagaimana cara berpartisipasi.
-- **Proyek harus menjadi bagian dari ekosistem Ethereum** - Di ethereum.org kami percaya bahwa Ethereum (dan Lapisan ke-2-nya) adalah lapisan dasar yang tepat untuk gerakan DeSci.
+- **Kode/data sumber terbuka (open source)** - Keterbukaan kode dan data adalah prinsip inti DeSci, sehingga proyek DeSci tidak boleh bersumber tertutup (closed source). Basis kode harus dapat diakses dan idealnya terbuka untuk PR (Pull Request).
+- **Proyek DeSci harus terbukti terdesentralisasi** - Ini dapat mencakup tata kelola oleh DAO, atau dengan membangun menggunakan tumpukan teknologi terdesentralisasi termasuk dompet non-kustodian. Ini mungkin melibatkan kontrak pintar yang dapat diaudit di Ethereum.
+- **Informasi pencantuman yang jujur dan akurat** - Diharapkan bahwa setiap saran pencantuman dari proyek disertai dengan informasi yang jujur dan akurat. Produk yang memalsukan informasi pencantuman, seperti menyatakan produk Anda adalah "open source" padahal tidak, akan dihapus.
+- **Komitmen yang dapat dibuktikan untuk memperluas akses ke sains** - Proyek DeSci harus dapat mengartikulasikan bagaimana mereka memperluas partisipasi dalam sains kepada masyarakat umum, bukan hanya kepada pemegang token/NFT.
+- **Dapat diakses secara global** - Proyek Anda tidak memiliki batasan geografis atau persyaratan KYC yang mengecualikan orang-orang tertentu dari mengakses layanan Anda.
+- **Situs web dan dokumentasi yang informatif** - Penting bagi pengunjung situs web proyek untuk dapat memahami apa yang sebenarnya dilakukan proyek tersebut, bagaimana proyek tersebut berkontribusi pada desentralisasi infrastruktur sains, dan bagaimana cara berpartisipasi.
+- **Proyek harus menjadi bagian dari ekosistem Ethereum** - Di ethereum.org kami percaya Ethereum (dan layer 2-nya) menjadi lapisan dasar yang tepat untuk gerakan DeSci.
 - **Proyek ini cukup mapan** - Proyek ini memiliki pengguna nyata yang telah dapat mengakses layanan proyek selama beberapa bulan.
 
-### Bagus untuk dimiliki
+### Hal-hal yang bagus untuk dimiliki
 
-- **Tersedia dalam berbagai bahasa** - Proyek Anda diterjemahkan ke dalam berbagai bahasa, memungkinkan pengguna di seluruh dunia untuk mengaksesnya.
-- **Sumber daya edukasi** - Produk Anda seharusnya memiliki pengalaman perkenalan yang dirancang dengan baik untuk membantu dan mengedukasi pengguna. Atau bukti tentang cara membuat konten seperti artikel atau video.
+- **Tersedia dalam berbagai bahasa** - Proyek Anda diterjemahkan ke dalam berbagai bahasa yang memungkinkan pengguna di seluruh dunia untuk mengaksesnya.
+- **Sumber daya pendidikan** - Produk Anda harus memiliki pengalaman orientasi (onboarding) yang dirancang dengan baik untuk membantu dan mendidik pengguna. Atau bukti konten panduan seperti artikel atau video.
 - **Audit pihak ketiga** - Produk Anda telah diaudit secara profesional untuk kerentanan oleh pihak ketiga yang tepercaya.
-- **Poin kontak** - Poin kontak untuk proyek (ini mungkin dilakukan oleh perwakilan dari DAO atau komunitas) akan sangat membantu kami mendapatkan informasi yang akurat ketika ada perubahan. Ini akan membuat pembaruan ethereum.org tetap terkelola saat mengumpulkan informasi di masa depan.
+- **Narahubung** - Narahubung untuk proyek (ini mungkin perwakilan dari DAO atau komunitas) akan sangat membantu kami mendapatkan informasi yang akurat saat perubahan dilakukan. Hal ini akan membuat pembaruan ethereum.org tetap dapat dikelola saat mengumpulkan informasi di masa mendatang.
 
 ## Pemeliharaan {#maintenance}
 
-Seperti natur Ethereum yang cair, tim dan produk datang silih berganti dan inovasi terjadi setiap hari, sehingga kami melakukan pemeriksaan konten secara rutin untuk:
+Sesuai dengan sifat Ethereum yang dinamis, tim dan produk datang dan pergi serta inovasi terjadi setiap hari, jadi kami akan melakukan pemeriksaan rutin terhadap konten kami untuk:
 
-- Memastikan bahwa semua proyek yang terdaftar masih memenuhi kriteria kami
-- Pastikan tidak ada produk yang disarankan yang memenuhi lebih banyak kriteria kami daripada yang saat ini terdaftar
+- Memastikan bahwa semua proyek yang tercantum masih memenuhi kriteria kami
+- Memverifikasi bahwa tidak ada produk yang disarankan yang lebih memenuhi kriteria kami daripada yang tercantum saat ini
 
-Ethereum.org dikelola oleh komunitas sumber terbuka & Kami bergantung pada komunitas untuk membantu menjaga agar situs ini selalu diperbarui. Jika Anda melihat ada informasi tentang proyek-proyek yang terdaftar yang perlu diperbarui, silakan buka sebuah isu atau permintaan penarikan di repositori GitHub kami.
+Ethereum.org dipelihara oleh komunitas open source & kami mengandalkan komunitas untuk membantu menjaganya tetap mutakhir. Jika Anda melihat ada informasi tentang proyek yang tercantum yang perlu diperbarui, silakan buka issue atau pull request di repositori GitHub kami.
 
-## Ketentuan Penggunaan {#terms-of-use}
+## Ketentuan penggunaan {#terms-of-use}
 
-Silakan merujuk kepada [syarat penggunaan](/terms-of-use/)kami. Informasi tentang ethereum.org disediakan hanya untuk tujuan informasi umum.
+Silakan merujuk juga ke [ketentuan penggunaan](/terms-of-use/) kami. Informasi di ethereum.org disediakan semata-mata untuk tujuan informasi umum.

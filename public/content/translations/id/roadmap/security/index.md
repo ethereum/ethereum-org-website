@@ -1,48 +1,48 @@
 ---
 title: Ethereum yang lebih aman
-description: Ethereum merupakan platform kontrak pintar yang paling aman dan terdesentralisasi yang pernah ada. Namun, masih diperlukan perbaikan yang dapat dilakukan agar Ethereum tetap tangguh terhadap segala tingkat serangan di masa depan.
+description: Ethereum adalah platform kontrak pintar paling aman dan terdesentralisasi yang pernah ada. Namun, masih ada peningkatan yang dapat dilakukan agar Ethereum tetap tangguh terhadap segala tingkat serangan jauh di masa depan.
 lang: id
 image: /images/roadmap/roadmap-security.png
-alt: "Peta Perjalanan Ethereum"
+alt: "Peta jalan Ethereum"
 template: roadmap
 ---
 
-**Ethereum sudah sangat aman**, platform [kontrak pintar](/glossary/#smart-contract) yang terdesentralisasi. Namun, masih diperlukan perbaikan yang dapat dilakukan agar Ethereum tetap tangguh terhadap segala jenis serangan di masa depan. Ini termasuk perubahan halus pada cara [klien Ethereum](/glossary/#consensus-client) menangani [blok](/glossary/#block) yang bersaing, serta meningkatkan kecepatan di mana jaringan menganggap blok sebagai ["finalized"](/developers/docs/consensus-mechanisms/pos/#finality) (artinya, blok tersebut tidak dapat diubah tanpa menimbulkan kerugian ekonomi yang ekstrem bagi penyerang).
+**Ethereum sudah menjadi platform [kontrak pintar](/glossary/#smart-contract) yang sangat aman** dan terdesentralisasi. Namun, masih ada peningkatan yang dapat dilakukan agar Ethereum tetap tangguh terhadap segala jenis serangan jauh di masa depan. Ini termasuk perubahan halus pada cara [klien Ethereum](/glossary/#consensus-client) menangani [blok](/glossary/#block) yang bersaing, serta meningkatkan kecepatan jaringan dalam menganggap blok telah ["difinalisasi"](/developers/docs/consensus-mechanisms/pos/#finality) (artinya blok tersebut tidak dapat diubah tanpa kerugian ekonomi yang ekstrem bagi penyerang).
 
-Ada juga perbaikan yang membuat sensor transaksi menjadi lebih sulit dengan membuat pengusul blok tidak dapat melihat isi sebenarnya dari blok mereka, dan cara baru untuk mengidentifikasi kapan klien melakukan sensor. Secara bersama-sama, perbaikan ini akan meningkatkan protokol [bukti taruhan](/glossary/#pos) sehingga pengguna-dari individu hingga korporasi-dapat memiliki kepercayaan instan pada aplikasi, data, dan aset mereka di Ethereum.
+Ada juga peningkatan yang membuat penyensoran transaksi menjadi jauh lebih sulit dengan membuat pengusul blok buta terhadap konten sebenarnya dari blok mereka, dan cara baru untuk mengidentifikasi kapan klien melakukan penyensoran. Bersama-sama, peningkatan ini akan memperbarui protokol [proof-of-stake](/glossary/#pos) sehingga pengguna - dari individu hingga perusahaan - memiliki kepercayaan instan pada aplikasi, data, dan aset mereka di Ethereum.
 
-## Penarikan penaruhan {#staking-withdrawals}
+## Penarikan staking {#staking-withdrawals}
 
-Pembaruan dari [proof-of-work](/glossary/#pow) ke proof-of-stake dimulai dengan para pelopor Ethereum “staking” ETH mereka dalam kontrak deposit. ETH tersebut digunakan untuk melindungi jaringan. Telah ada pembaruan kedua pada 12 April 2023 yang memungkinkan penarikan ETH yang dipertaruhkan. Sejak saat itu, validator dapat dengan bebas melakukan taruhan atau penarikan ETH.
+Peningkatan dari [proof-of-work](/glossary/#pow) ke proof-of-stake dimulai dengan para perintis Ethereum yang "mengunci" (staking) ETH mereka dalam kontrak deposit. ETH tersebut digunakan untuk melindungi jaringan. Ada pembaruan kedua pada 12 April 2023 untuk memungkinkan validator menarik ETH yang di-stake. Sejak saat itu, validator dapat dengan bebas melakukan stake atau menarik ETH.
 
 <ButtonLink variant="outline-color" href="/staking/withdrawals/">Baca tentang penarikan</ButtonLink>
 
 ## Bertahan dari serangan {#defending-against-attacks}
 
-Ada peningkatan yang dapat dilakukan pada protokol bukti taruhan Ethereum. Salah satunya dikenal sebagai [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) - algoritma [garpu](/glossary/#fork)-pilihan yang lebih aman yang membuat beberapa jenis serangan canggih menjadi lebih sulit.
+Ada peningkatan yang dapat dilakukan pada protokol proof-of-stake Ethereum. Salah satunya dikenal sebagai [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) - algoritma pilihan [fork](/glossary/#fork) yang lebih aman yang membuat jenis serangan canggih tertentu menjadi lebih sulit.
 
-Mengurangi waktu yang diperlukan Ethereum untuk [finalisasi](/glossary/#finality) blok akan memberikan pengalaman pengguna yang lebih baik dan mencegah serangan "reorg" canggih di mana penyerang mencoba untuk mengatur ulang blok terbaru untuk mendapatkan keuntungan atau menyensor transaksi tertentu. [**Single slot finality (SSF)**](/roadmap/single-slot-finality/) adalah **cara untuk meminimalkan penundaan finalisasi**. Saat ini ada 15 menit blok yang secara teoritis dapat digunakan oleh penyerang untuk mengkonfigurasi ulang validator lain. Dengan SSF, hanya ada 0. Pengguna, dari individu hingga aplikasi dan bursa, mendapat manfaat dari jaminan cepat bahwa transaksi mereka tidak akan dibatalkan, dan jaringan mendapat manfaat dengan menutup seluruh kumpulan serangan.
+Mengurangi waktu yang dibutuhkan Ethereum untuk [memfinalisasi](/glossary/#finality) blok akan memberikan pengalaman pengguna yang lebih baik dan mencegah serangan "reorg" yang canggih di mana penyerang mencoba mengacak ulang blok yang sangat baru untuk mengekstraksi keuntungan atau menyensor transaksi tertentu. [**Single slot finality (SSF)**](/roadmap/single-slot-finality/) adalah **cara untuk meminimalkan penundaan finalisasi**. Saat ini ada blok senilai 15 menit yang secara teoritis dapat diyakinkan oleh penyerang kepada validator lain untuk dikonfigurasi ulang. Dengan SSF, jumlahnya menjadi 0. Pengguna, dari individu hingga aplikasi dan bursa, mendapat manfaat dari jaminan cepat bahwa transaksi mereka tidak akan dikembalikan, dan jaringan mendapat manfaat dengan menutup seluruh kelas serangan.
 
-<ButtonLink variant="outline-color" href="/roadmap/single-slot-finality/">Baca tentang finalitas ruang tunggal</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/single-slot-finality/">Baca tentang single slot finality</ButtonLink>
 
-## Bertahan melawan sensor {#defending-against-censorship}
+## Bertahan dari penyensoran {#defending-against-censorship}
 
-Desentralisasi mencegah individu atau kelompok kecil [validator](/glossary/#validator) menjadi terlalu berpengaruh. Teknologi penaruhan baru dapat membantu memastikan validator Ethereum tetap se-desentralisasi mungkin sekaligus melindungi mereka dari kegagalan perangkat keras, perangkat lunak, dan jaringan. Ini termasuk perangkat lunak yang membagikan tanggung jawab validator di berbagai [simpul](/glossary/#node). Ini dikenal sebagai **teknologi validator terdistribusi (DVT)**. [Kolam staking](/glossary/#staking-pool) diberi insentif untuk menggunakan DVT karena memungkinkan beberapa komputer untuk secara kolektif berpartisipasi dalam validasi, menambah redundansi dan toleransi terhadap kesalahan. Ini juga membagi kunci validator di beberapa sistem, daripada memiliki operator tunggal yang menjalankan beberapa validator. Ini mempersulit operator yang tidak jujur untuk mengoordinasikan serangan terhadap Ethereum. Secara keseluruhan, ide ini adalah untuk mendapatkan manfaat keamanan dengan menjalankan validator sebagai _komunitas_ daripada sebagai individu.
+Desentralisasi mencegah individu atau kelompok kecil [validator](/glossary/#validator) menjadi terlalu berpengaruh. Teknologi staking baru dapat membantu memastikan validator Ethereum tetap sedesentralisasi mungkin sekaligus mempertahankan mereka dari kegagalan perangkat keras, perangkat lunak, dan jaringan. Ini termasuk perangkat lunak yang membagi tanggung jawab validator di beberapa [node](/glossary/#node). Ini dikenal sebagai **distributed validator technology (DVT)**. [Kolam staking](/glossary/#staking-pool) diberi insentif untuk menggunakan DVT karena memungkinkan beberapa komputer untuk berpartisipasi secara kolektif dalam validasi, menambahkan redundansi dan toleransi kesalahan. Ini juga membagi kunci validator di beberapa sistem, daripada memiliki operator tunggal yang menjalankan beberapa validator. Hal ini mempersulit operator yang tidak jujur untuk mengoordinasikan serangan di Ethereum. Secara keseluruhan, idenya adalah untuk memperoleh manfaat keamanan dengan menjalankan validator sebagai _komunitas_ daripada sebagai individu.
 
-<ButtonLink variant="outline-color" href="/staking/dvt/">Baca tentang teknologi validator terdistribusi</ButtonLink>
+<ButtonLink variant="outline-color" href="/staking/dvt/">Baca tentang distributed validator technology</ButtonLink>
 
-Mengimplementasikan **pemisahan pengusul-pembangun (PBS)** akan sangat meningkatkan pertahanan bawaan Ethereum terhadap sensor. PBS memungkinkan satu validator untuk membuat blok dan yang lain untuk menyiarkannya ke seluruh jaringan Ethereum. Ini memastikan bahwa keuntungan dari algoritma pembangun blok profesional yang memaksimalkan keuntungan dibagi lebih adil di seluruh jaringan, **mencegah taruhan berkonsentrasi** dengan penaruh institusional berkinerja terbaik dari waktu ke waktu. Pengusul blok dapat memilih blok paling menguntungkan yang ditawarkan oleh pasar pembangun blok. Untuk menyensor, pengusul blok harus sering memilih blok yang kurang menguntungkan, yang **tidak akan rasional secara ekonomi dan juga jelas bagi validator lain** di jaringan.
+Menerapkan **proposer-builder separation (PBS)** akan secara drastis meningkatkan pertahanan bawaan Ethereum terhadap penyensoran. PBS memungkinkan satu validator untuk membuat blok dan validator lain untuk menyiarkannya ke seluruh jaringan Ethereum. Hal ini memastikan bahwa keuntungan dari algoritma pembuatan blok yang memaksimalkan keuntungan profesional dibagikan secara lebih adil di seluruh jaringan, **mencegah stake terkonsentrasi** pada staker institusional dengan kinerja terbaik dari waktu ke waktu. Pengusul blok dapat memilih blok paling menguntungkan yang ditawarkan kepada mereka oleh pasar pembuat blok. Untuk menyensor, pengusul blok sering kali harus memilih blok yang kurang menguntungkan, yang akan menjadi **tidak rasional secara ekonomi dan juga terlihat jelas oleh validator lainnya** di jaringan.
 
-Ada tambahan potensial untuk PBS, seperti transaksi terenkripsi dan daftar inklusi, yang dapat meningkatkan resistensi sensor Ethereum. Ini membuat pembangun blok dan pengusul tidak dapat melihat transaksi sebenarnya yang termasuk dalam blok mereka.
+Ada potensi tambahan untuk PBS, seperti transaksi terenkripsi dan daftar inklusi, yang dapat lebih meningkatkan ketahanan penyensoran Ethereum. Hal ini membuat pembuat dan pengusul blok buta terhadap transaksi sebenarnya yang disertakan dalam blok mereka.
 
-<ButtonLink variant="outline-color" href="/roadmap/pbs/">Baca tentang pemisahan pengusul-pembangun</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/pbs/">Baca tentang proposer-builder separation</ButtonLink>
 
 ## Melindungi validator {#protecting-validators}
 
-Ada kemungkinan bahwa penyerang canggih dapat mengidentifikasi validator yang akan datang dan menyerang mereka untuk mencegah mereka mengusulkan blok; ini dikenal sebagai serangan **penolakan layanan (DoS)**. Mengimplementasikan [**pemilihan pemimpin rahasia (SLE)**](/roadmap/secret-leader-election) akan melindungi dari jenis serangan ini dengan mencegah pengusul blok diketahui sebelumnya. Ini bekerja dengan terus mengacak sekumpulan komitmen kriptografi yang mewakili proposer blok kandidat dan menggunakan urutan mereka untuk menentukan validator mana yang dipilih dengan cara yang hanya diketahui oleh validator itu sendiri sebelumnya.
+Ada kemungkinan bahwa penyerang yang canggih dapat mengidentifikasi validator yang akan datang dan mengirim spam kepada mereka untuk mencegah mereka mengusulkan blok; ini dikenal sebagai serangan **denial of service (DoS)**. Menerapkan [**secret leader election (SLE)**](/roadmap/secret-leader-election) akan melindungi dari jenis serangan ini dengan mencegah pengusul blok diketahui sebelumnya. Ini bekerja dengan terus mengacak serangkaian komitmen kriptografi yang mewakili kandidat pengusul blok dan menggunakan urutan mereka untuk menentukan validator mana yang dipilih sedemikian rupa sehingga hanya validator itu sendiri yang mengetahui urutan mereka sebelumnya.
 
-<ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Baca tentang pemilihan pemimpin rahasia</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Baca tentang secret leader election</ButtonLink>
 
 ## Kemajuan saat ini {#current-progress}
 
-**Peningkatan keamanan di peta perjalanan sudah berada pada tahap penelitian lanjutan**, tetapi tidak diharapkan akan diimplementasikan dalam waktu dekat. Langkah selanjutnya untuk view-merge, PBS, SSF, dan SLE adalah menyelesaikan spesifikasi dan mulai membangun prototipe.
+**Peningkatan keamanan pada peta jalan berada dalam tahap penelitian lanjutan**, tetapi tidak diharapkan untuk diimplementasikan dalam waktu dekat. Langkah selanjutnya untuk view-merge, PBS, SSF, dan SLE adalah menyelesaikan spesifikasi dan mulai membangun prototipe.

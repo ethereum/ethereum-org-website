@@ -15,7 +15,7 @@ import Translation from "./Translation"
 
 import { useSurvey } from "@/hooks/useSurvey"
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 type FeedbackCardProps = {
   prompt?: string

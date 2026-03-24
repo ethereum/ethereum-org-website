@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "Pense nele como seu endereço de e-mail, mas em vez de mensagens, ele pode receber ETH. Se você quiser transferir ETH de uma corretora para sua carteira, use seu endereço como destino. Sempre confira tudo novamente antes de enviar!",
   "page-get-eth-your-address-wallet-link": "Confira as carteiras",
   "listing-policy-raise-issue-link": "Fazer uma consulta",
-  "page-find-wallet-last-updated": "Última atualização"
+  "page-find-wallet-last-updated": "Última atualização",
+  "listing-policy-disclaimer": "Os produtos listados nesta página não são avais oficiais e são fornecidos apenas para fins informativos. Se você quiser adicionar um produto ou dar feedback sobre as políticas, faça uma consulta no GitHub."
 }

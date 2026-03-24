@@ -98,5 +98,6 @@
   "page-events-meetups-events-subtitle": "Ethereum ekosistemi çevresindeki yaklaşan hackathon'ları, topluluk toplantılarını ve konferansları arayın.",
   "page-events-cta-title": "Bir etkinlik mi düzenliyorsunuz?",
   "page-events-cta-body": "Bu, topluluğumuz tarafından sürdürülen, kapsamlı olmayan bir listedir. Bu listeye eklenecek yaklaşan bir Ethereum etkinliği biliyor musunuz?",
-  "page-events-cta-button": "Etkinlik gönder"
+  "page-events-cta-button": "Etkinlik gönder",
+  "item-logo": "{item} logosu"
 }

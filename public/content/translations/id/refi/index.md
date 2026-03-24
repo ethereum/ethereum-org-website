@@ -7,34 +7,34 @@ emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Sistem ekonomi alternatif yang didasarkan pada prinsip regeneratif
-summaryPoint2: Upaya untuk memanfaatkan Ethereum untuk memecahkan krisis-krisis koordinasi tingkat global seperti perubahan iklim
-summaryPoint3: Alat untuk meningkatkan skala aset manfaat ekologi secara drastis seperti kredit karbon terverifikasi
+summaryPoint1: Sistem ekonomi alternatif yang dibangun di atas prinsip-prinsip regeneratif
+summaryPoint2: Upaya untuk memanfaatkan Ethereum guna menyelesaikan krisis koordinasi tingkat global seperti perubahan iklim
+summaryPoint3: Alat untuk meningkatkan skala aset manfaat ekologis secara drastis seperti kredit karbon yang terverifikasi
 ---
 
 ## Apa itu ReFi? {#what-is-refi}
 
-**Regenerative finance (ReFi)** adalah sekumpulan perangkat dan ide yang dibangun di atas [rantai blok](/glossary/#blockchain), yang bertujuan untuk menciptakan ekonomi yang bersifat regeneratif, bukan yang bersifat ekstraktif atau eksploitatif. Hasilnya, sistem ekstraktif menguras sumber daya yang tersedia dan runtuh; tanpa mekanisme regeneratif, sistem ini tidak memiliki ketahanan. ReFi beroperasi dengan asumsi bahwa penciptaan nilai moneter harus dipisahkan dari ekstraksi sumber daya yang tidak berkelanjutan dari planet dan masyarakat kita.
+**Keuangan regeneratif (ReFi)** adalah serangkaian alat dan ide yang dibangun di atas [blockchain](/glossary/#blockchain), yang bertujuan untuk menciptakan ekonomi yang bersifat regeneratif, alih-alih ekstraktif atau eksploitatif. Pada akhirnya, sistem ekstraktif menghabiskan sumber daya yang tersedia dan runtuh; tanpa mekanisme regeneratif, sistem tersebut tidak memiliki ketahanan. ReFi beroperasi pada asumsi bahwa penciptaan nilai moneter harus dipisahkan dari ekstraksi sumber daya yang tidak berkelanjutan dari planet dan komunitas kita.
 
-Sebaliknya, ReFi bertujuan untuk memecahkan masalah lingkungan, komunal, atau sosial dengan menciptakan siklus regeneratif. Sistem ini menciptakan nilai bagi para partisipan-partisipan sekaligus memberi manfaat bagi ekosistem dan masyarakat.
+Sebaliknya, ReFi bertujuan untuk memecahkan masalah lingkungan, komunal, atau sosial dengan menciptakan siklus regeneratif. Sistem ini menciptakan nilai bagi peserta sekaligus memberikan manfaat bagi ekosistem dan komunitas.
 
-Salah satu fondasi ReFi adalah konsep ekonomi regeneratif yang dirintis oleh John Fullerton dari Capital Institute. Ia mengusulkan [delapan prinsip saling terkait](https://capitalinstitute.org/8-principles-regenerative-economy/) yang melandasi kesehatan sistemis:
+Salah satu fondasi ReFi adalah konsep ekonomi regeneratif yang dipelopori oleh John Fullerton dari Capital Institute. Dia mengusulkan [delapan prinsip yang saling berhubungan](https://capitalinstitute.org/8-principles-regenerative-economy/) yang mendasari kesehatan sistemik:
 
-![Delapan prinsip yang saling terhubung](refi-regenerative-economy-diagram.png)
+![Delapan prinsip yang saling berhubungan](refi-regenerative-economy-diagram.png)
 
-Proyek ReFi merealisasikan prinsip-prinsip ini dengan menggunakan [kontrak pintar](/glossary/#smart-contract) dan aplikasi [keuangan terdesentralisasi (DeFi)](/glossary/#defi) untuk mendorong perilaku regeneratif, misalnya memulihkan ekosistem yang rusak, dan memfasilitasi kolaborasi berskala besar pada isu-isu global seperti perubahan iklim dan hilangnya keanekaragaman hayati.
+Proyek-proyek ReFi mewujudkan prinsip-prinsip ini menggunakan [kontrak pintar](/glossary/#smart-contract) dan aplikasi [keuangan terdesentralisasi (DeFi)](/glossary/#defi) untuk memberikan insentif pada perilaku regeneratif, mis., memulihkan ekosistem yang terdegradasi, dan memfasilitasi kolaborasi skala besar pada isu-isu global seperti perubahan iklim dan hilangnya keanekaragaman hayati.
 
-ReFi juga meliputi gerakan [sains terdesentralisasi (DeSci)](/desci/), yang menggunakan Ethereum sebagai platform untuk membiayai, menciptakan, meninjau, kredit, menyimpan, dan menyebarkan pengetahuan ilmiah. Perangkat DeSci dapat berguna untuk mengembangkan standar dan praktik yang dapat diverifikasi untuk menerapkan dan memantau kegiatan regeneratif seperti menanam pohon, menghilangkan plastik dari lautan, atau memulihkan ekosistem yang rusak.
+ReFi juga tumpang tindih dengan gerakan [sains terdesentralisasi (DeSci)](/desci/), yang menggunakan Ethereum sebagai platform untuk membiayai, membuat, meninjau, memberi kredit, menyimpan, dan menyebarluaskan pengetahuan ilmiah. Alat-alat DeSci dapat menjadi berguna untuk mengembangkan standar dan praktik yang dapat diverifikasi untuk mengimplementasikan dan memantau aktivitas regeneratif seperti menanam pohon, membersihkan plastik dari lautan, atau memulihkan ekosistem yang terdegradasi.
 
 <YouTube id="La52dDzBt2k" />
 
 ## Tokenisasi kredit karbon {#tokenization-of-carbon-credits}
 
-**[Pasar Karbon Sukarela (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** adalah mekanisme untuk mendanai proyek-proyek yang memberikan dampak positif yang terverifikasi terhadap emisi karbon, baik untuk mengurangi emisi yang sedang berlangsung, maupun untuk menghilangkan gas rumah kaca yang telah dipancarkan dari atmosfer. Proyek-proyek ini menerima aset yang disebut "kredit karbon" setelah diverifikasi, yang dapat mereka jual kepada individu dan organisasi yang ingin mendukung aksi iklim.
+**[Pasar karbon sukarela (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** adalah mekanisme untuk mendanai proyek-proyek yang memberikan dampak positif yang terverifikasi pada emisi karbon, baik mengurangi emisi yang sedang berlangsung, atau menghilangkan gas rumah kaca yang sudah dipancarkan dari atmosfer. Proyek-proyek ini menerima aset yang disebut "kredit karbon" setelah diverifikasi, yang dapat mereka jual kepada individu dan organisasi yang ingin mendukung aksi iklim.
 
-Selain VCM, ada juga beberapa pasar karbon yang diatur oleh pemerintah (‘pasar kepatuhan’) yang bertujuan untuk menetapkan harga karbon melalui undang-undang atau peraturan di dalam yurisdiksi tertentu (misalnya negara atau wilayah), mengendalikan pasokan izin yang akan didistribusikan. Pasar kepatuhan mendorong pencemar dalam yurisdiksi mereka untuk mengurangi emisi, tetapi mereka tidak mampu menghapus gas rumah kaca yang telah dikeluarkan.
+Selain VCM, ada juga beberapa pasar karbon yang diamanatkan pemerintah ('pasar kepatuhan') yang bertujuan untuk menetapkan harga karbon melalui undang-undang atau peraturan dalam yurisdiksi tertentu (mis., negara atau wilayah), mengendalikan pasokan izin yang akan didistribusikan. Pasar kepatuhan memberikan insentif kepada pencemar di dalam yurisdiksi mereka untuk mengurangi emisi, tetapi mereka tidak mampu menghilangkan gas rumah kaca yang telah dipancarkan.
 
-Terlepas dari perkembangannya selama beberapa dekade terakhir, VCM terus mengalami berbagai masalah:
+Meskipun perkembangannya selama beberapa dekade terakhir, VCM terus menderita berbagai masalah:
 
 1. Likuiditas yang sangat terfragmentasi
 2. Mekanisme transaksi yang tidak transparan
@@ -42,40 +42,40 @@ Terlepas dari perkembangannya selama beberapa dekade terakhir, VCM terus mengala
 4. Kecepatan perdagangan yang sangat lambat
 5. Kurangnya skalabilitas
 
-Mengalihkan VCM ke **pasar karbon digital (DCM)** baru berbasis rantai blok mungkin menjadi peluang untuk meningkatkan teknologi yang ada untuk memvalidasi, melakukan transaksi, dan menggunakan kredit karbon. Rantai blok memungkinkan data yang dapat diverifikasi secara publik, akses untuk berbagai pengguna, dan likuiditas yang lebih tinggi.
+Transisi VCM ke **pasar karbon digital (DCM)** baru berbasis blockchain mungkin menjadi peluang untuk meningkatkan teknologi yang ada untuk memvalidasi, bertransaksi, dan mengonsumsi kredit karbon. Blockchain memungkinkan data yang dapat diverifikasi secara publik, akses untuk berbagai pengguna, dan lebih banyak likuiditas.
 
-Proyek ReFi menggunakan teknologi rantai blok untuk mengatasi banyak masalah pasar tradisional:
+Proyek-proyek ReFi menggunakan teknologi blockchain untuk meringankan banyak masalah dari pasar tradisional:
 
-- **Likuiditas terkonsentrasi dalam sejumlah kecil pool likuiditas** yang dapat diperdagangkan secara bebas oleh siapa pun. Organisasi besar serta pengguna individu dapat menggunakan pool ini tanpa perlu melakukan pencarian manual untuk penjual/pembeli, biaya partisipasi, atau registrasi sebelumnya.
-- **Semua transaksi dicatat di dalam rantai blok publik**. Jejak setiap kredit karbon yang dihasilkan oleh aktivitas perdagangan dapat dilacak selamanya begitu kredit tersebut tersedia dalam DCM.
-- **Kecepatan transaksi hampir instan**. Mengamankan sejumlah besar kredit karbon melalui pasar-pasar tradisional bisa memakan waktu berhari-hari atau berminggu-minggu, tetapi ini dapat dicapai dalam beberapa detik di DCM.
-- ** Aktivitas perdagangan terjadi tanpa perantara**, yang mengenakan biaya tinggi. Kredit karbon digital mewakili pengurangan biaya yang signifikan dibandingkan dengan kredit karbon tradisional.
-- ** DCM bersifat dapat diskalakan** dan dapat memenuhi permintaan baik dari individu maupun perusahaan multinasional.
+- **Likuiditas terkonsentrasi di sejumlah kecil kolam likuiditas** yang dapat diperdagangkan secara bebas oleh siapa saja. Organisasi besar maupun pengguna individu dapat menggunakan kolam ini tanpa pencarian manual untuk penjual/pembeli, biaya partisipasi, atau pendaftaran sebelumnya.
+- **Semua transaksi dicatat di blockchain publik**. Jalur yang diambil setiap kredit karbon karena aktivitas perdagangan dapat dilacak selamanya segera setelah tersedia di DCM.
+- **Kecepatan transaksi hampir instan**. Mengamankan sejumlah besar kredit karbon melalui pasar lama dapat memakan waktu berhari-hari atau berminggu-minggu, tetapi ini dapat dicapai dalam beberapa detik di DCM.
+- **Aktivitas perdagangan terjadi tanpa perantara**, yang membebankan biaya tinggi. Kredit karbon digital mewakili pengurangan biaya yang signifikan dibandingkan dengan kredit tradisional.
+- **DCM dapat diskalakan** dan dapat memenuhi permintaan individu maupun perusahaan multinasional.
 
-### Komponen kunci dari DCM {#key-components-dcm}
+### Komponen utama DCM {#key-components-dcm}
 
-Empat komponen utama membentuk lanskap saat ini dari DCM:
+Empat komponen utama membentuk lanskap DCM saat ini:
 
-1. Registri seperti [Verra](https://verra.org/project/vcs-program/registry-system/) dan [Gold Standard](https://www.goldstandard.org/) memastikan bahwa proyek-proyek yang menciptakan kredit karbon dapat diandalkan. Mereka juga mengoperasikan basis data di mana kredit karbon digital berasal dan dapat ditransfer atau digunakan (ditarik).
+1. Registri seperti [Verra](https://verra.org/project/vcs-program/registry-system/) dan [Gold Standard](https://www.goldstandard.org/) memastikan bahwa proyek yang menciptakan kredit karbon dapat diandalkan. Mereka juga mengoperasikan basis data tempat kredit karbon digital berasal dan dapat ditransfer atau digunakan (dipensiunkan).
 
-Ada gelombang proyek inovatif baru yang dibangun di atas teknologi rantai blok yang berusaha mengganggu pemain utama di sektor ini.
+Ada gelombang baru proyek inovatif yang dibangun di atas blockchain yang mencoba mendisrupsi petahana di sektor ini.
 
-2. alias jembatan karbon tokenizers, atau pengolah token, menyediakan teknologi untuk mewakili atau mentransfer kredit karbon dari registri tradisional ke dalam DCM. Contoh-contoh yang mencolok termasuk [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/), dan [Moss.Earth](https://moss.earth/).
-3. Layanan terintegrasi menawarkan kredit penghindaran dan/atau penghapusan karbon kepada pengguna akhir sehingga mereka dapat mengklaim manfaat lingkungan dari kredit tersebut dan berbagi dukungan terhadap tindakan iklim dengan dunia.
+2. Jembatan karbon, alias tokenizer, menyediakan teknologi untuk mewakili atau mentransfer kredit karbon dari registri tradisional ke dalam DCM. Contoh penting termasuk [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/), dan [Moss.Earth](https://moss.earth/).
+3. Layanan terintegrasi menawarkan kredit penghindaran dan/atau penghapusan karbon kepada pengguna akhir sehingga mereka dapat mengklaim manfaat lingkungan dari sebuah kredit dan membagikan dukungan mereka terhadap aksi iklim kepada dunia.
 
-Beberapa layanan seperti [Klima Infinity](https://www.klimadao.finance/infinity) dan [Senken](https://senken.io/) menawarkan berbagai proyek yang dikembangkan oleh pihak ketiga dan diterbitkan berdasarkan standar yang sudah mapan seperti Verra; sementara yang lain seperti [Nori](https://nori.com/) hanya menawarkan proyek spesifik yang dikembangkan berdasarkan standar kredit karbon mereka sendiri, yang mereka terbitkan dan untuknya mereka memiliki pasar tersendiri.
+Beberapa seperti [Klima Infinity](https://www.klimadao.finance/infinity) dan [Senken](https://senken.io/) menawarkan berbagai macam proyek yang dikembangkan oleh pihak ketiga dan diterbitkan di bawah standar yang mapan seperti Verra; yang lain seperti [Nori](https://nori.com/) hanya menawarkan proyek spesifik yang dikembangkan di bawah standar kredit karbon mereka sendiri, yang mereka terbitkan dan untuk itu mereka memiliki pasar khusus mereka sendiri.
 
-4. Landasan dan infrastruktur dasar yang memfasilitasi peningkatan dampak dan efisiensi dari seluruh rantai pasokan pasar karbon. [KlimaDAO](http://klimadao.finance/) menyediakan likuiditas sebagai kebaikan publik (memungkinkan siapa pun untuk membeli atau menjual kredit karbon dengan harga yang transparan), memberikan insentif keluaran peningkatan pasar karbon dan penghapusan dengan imbalan, dan menyediakan perangkat yang mudah digunakan dan interoperabel untuk mengakses data tentang, serta mendapatkan dan menghapus, berbagai jenis kredit karbon yang diberikan dalam bentuk token.
+4. Rel dan infrastruktur yang mendasari yang memfasilitasi peningkatan skala dampak dan efisiensi seluruh rantai pasokan pasar karbon. [KlimaDAO](http://klimadao.finance/) memasok likuiditas sebagai barang publik (memungkinkan siapa saja untuk membeli atau menjual kredit karbon dengan harga transparan), memberikan insentif untuk peningkatan throughput pasar karbon dan pensiun dengan hadiah, dan menyediakan alat yang dapat dioperasikan dan ramah pengguna untuk mengakses data tentang, serta memperoleh dan memensiunkan, berbagai macam kredit karbon yang ditokenisasi.
 
 ## ReFi di luar pasar karbon {#refi-beyond}
 
-Meskipun saat ini ada penekanan kuat pada pasar karbon secara umum dan khususnya pada peralihan dari VCM ke DCM di dalam ruang ini, istilah “ReFi” tidak secara ketat terbatas pada karbon. Aset lingkungan lainnya selain kredit karbon dapat dikembangkan dan di-tokenisasi, yang akan berarti eksternalitas negatif lainnya juga dapat dihargai dalam lapisan dasar dari sistem ekonomi di masa depan. Selain itu, aspek regeneratif dari model ekonomi ini dapat diterapkan pada bidang lain, seperti pendanaan barang publik melalui platform pendanaan kuadratik seperti [Gitcoin](https://gitcoin.co/). Organisasi yang dibangun berdasarkan gagasan partisipasi terbuka dan distribusi sumber daya yang adil memberdayakan semua orang untuk mengalirkan dana ke proyek perangkat lunak sumber terbuka, serta proyek pendidikan, lingkungan, dan berbasis komunitas.
+Meskipun saat ini ada penekanan kuat pada pasar karbon secara umum dan transisi VCM ke DCM khususnya di dalam ruang ini, istilah "ReFi" tidak sepenuhnya terbatas pada karbon. Aset lingkungan lain di luar kredit karbon dapat dikembangkan dan ditokenisasi, yang berarti eksternalitas negatif lainnya juga dapat dihargai di dalam lapisan dasar sistem ekonomi masa depan. Selain itu, aspek regeneratif dari model ekonomi ini dapat diterapkan ke area lain, seperti pendanaan barang publik melalui platform pendanaan kuadratik seperti [Gitcoin](https://gitcoin.co/). Organisasi yang dibangun di atas gagasan partisipasi terbuka dan distribusi sumber daya yang adil memberdayakan semua orang untuk menyalurkan uang ke proyek perangkat lunak sumber terbuka, serta proyek pendidikan, lingkungan, dan yang digerakkan oleh komunitas.
 
-Dengan mengalihkan arah modal dari praktik ekstraktif ke aliran regeneratif, proyek dan perusahaan yang memberikan manfaat sosial, lingkungan, atau komunal—dan mungkin gagal mendapatkan pendanaan dalam keuangan tradisional—dapat dimulai dan menghasilkan dampak positif bagi masyarakat dengan lebih cepat dan mudah. Beralih ke model pendanaan ini juga membuka pintu menuju sistem ekonomi yang lebih inklusif, di mana orang dari berbagai latar belakang dapat menjadi peserta aktif daripada sekadar pengamat pasif. ReFi menawarkan visi tentang Ethereum sebagai mekanisme untuk mengoordinasikan tindakan dalam menghadapi tantangan eksistensial yang dihadapi oleh spesies kita dan seluruh kehidupan di planet kita—sebagai lapisan dasar paradigma ekonomi baru, memungkinkan masa depan yang lebih inklusif dan berkelanjutan untuk berabad-abad yang akan datang.
+Dengan mengalihkan arah modal dari praktik ekstraktif menuju aliran regeneratif, proyek dan perusahaan yang memberikan manfaat sosial, lingkungan, atau komunal—dan yang mungkin gagal mendapatkan pendanaan dalam keuangan tradisional—dapat dimulai dan menghasilkan eksternalitas positif bagi masyarakat dengan jauh lebih cepat dan mudah. Transisi ke model pendanaan ini juga membuka pintu ke sistem ekonomi yang jauh lebih inklusif, di mana orang-orang dari semua demografi dapat menjadi peserta aktif alih-alih hanya pengamat pasif. ReFi menawarkan visi Ethereum sebagai mekanisme untuk mengoordinasikan tindakan pada tantangan eksistensial yang dihadapi spesies kita dan semua kehidupan di planet kita—sebagai lapisan dasar dari paradigma ekonomi baru, memungkinkan masa depan yang lebih inklusif dan berkelanjutan selama berabad-abad yang akan datang.
 
-## Bacaan tambahan tentang ReFi
+## Bacaan lebih lanjut tentang ReFi
 
-- [Gambaran Umum Tentang Mata Uang Karbon dan Tempatnya dalam Ekonomi](https://www.klimadao.finance/blog/the-vision-of-a-carbon-currency)
-- [The Ministry for the Future adalah sebuah novel yang menggambarkan peran mata uang berbasis karbon dalam memerangi perubahan iklim](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)
-- [Laporan rinci dari Satuan Tugas untuk Meningkatkan Pasar Karbon Sukarela](https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf)
-- [Entri glosarium CoinMarketCap oleh Kevin Owocki dan Evan Miyazono tentang ReFi](https://coinmarketcap.com/alexandria/glossary/regenerative-finance-refi)
+- [Gambaran umum tingkat tinggi tentang mata uang karbon dan tempatnya dalam ekonomi](https://www.klimadao.finance/resources/the-vision-of-a-carbon-currency)
+- [The Ministry for the Future, sebuah novel yang menggambarkan peran mata uang yang didukung karbon dalam memerangi perubahan iklim](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)
+- [Laporan terperinci oleh Satuan Tugas untuk Meningkatkan Skala Pasar Karbon Sukarela](https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf)
+- [Entri Glosarium CoinMarketCap dari Kevin Owocki dan Evan Miyazono tentang ReFi](https://coinmarketcap.com/academy/glossary/regenerative-finance-refi)

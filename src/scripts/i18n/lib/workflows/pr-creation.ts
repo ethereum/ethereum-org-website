@@ -17,7 +17,8 @@ export function generatePRTitle(
 ): string {
   const isAllLanguages = langCodes.length === allPossibleLanguages.length
 
-  let prTitle = "i18n: automated Crowdin translation import"
+  const source = process.env.TRANSLATION_PIPELINE || "Crowdin"
+  let prTitle = `i18n: ${source} translations`
 
   if (langCodes.length <= 3) {
     prTitle += ` (${langCodes.join(", ")})`
@@ -77,7 +78,8 @@ export function generatePRBody(
 
   // Build PR body
   let prBody = `## Description\n\n`
-  prBody += `This PR contains automated ${aiModelName} translations from Crowdin.\n\n`
+  const pipeline = process.env.TRANSLATION_PIPELINE || "Crowdin"
+  prBody += `This PR contains automated ${aiModelName} translations via ${pipeline}.\n\n`
 
   if (options.workflowRunUrl) {
     prBody += `[🔗 View workflow run](${options.workflowRunUrl})\n\n`
@@ -117,9 +119,16 @@ export function generatePRBody(
 }
 
 /**
- * Fetch AI model name from Crowdin
+ * Fetch AI model name. Returns "Gemini" for the Gemini pipeline,
+ * or queries Crowdin for the model name in the Crowdin pipeline.
  */
 async function fetchAIModelName(): Promise<string> {
+  // Gemini pipeline -- no Crowdin API needed
+  if (process.env.TRANSLATION_PIPELINE === "Gemini") {
+    return process.env.GEMINI_MODEL || "Gemini"
+  }
+
+  // Crowdin pipeline -- fetch from Crowdin API
   try {
     const currentUser = await getCurrentUser()
     const promptInfo = await getPromptInfo(

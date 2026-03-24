@@ -20,7 +20,7 @@ import quarterData from "@/data/translation-reports/quarter/quarter-data.json"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 import darkThemeCertificateImg from "@/public/images/certificates/dark-certificate.png"
 import lightThemeCertificateImg from "@/public/images/certificates/light-certificate.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
