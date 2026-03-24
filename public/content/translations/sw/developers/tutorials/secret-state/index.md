@@ -4,6 +4,7 @@ description: michezo ya onchain ina mipaka kwa sababu haiwezi kutunza taarifa zo
 author: Ori Pomerantz
 tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud"]
 skill: advanced
+breadcrumb: "Hali ya siri ZK"
 lang: sw
 published: 2025-03-15
 ---

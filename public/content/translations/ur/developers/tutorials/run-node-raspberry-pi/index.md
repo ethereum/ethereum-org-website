@@ -5,6 +5,7 @@ author: "EthereumOnArm"
 tags: [ "کلائنٹس", "ایگزیکیوشن لیئر", "کنسینسس لیئر", "نوڈز" ]
 lang: ur-in
 skill: intermediate
+breadcrumb: "Raspberry Pi نوڈ"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

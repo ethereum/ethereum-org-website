@@ -4,6 +4,7 @@ description: "Tìm hiểu cách tạo và sử dụng hợp đồng bộ nhớ �
 author: Ori Pomerantz
 tags: [ "lớp 2", "bộ nhớ đệm", "lưu trữ" ]
 skill: intermediate
+breadcrumb: "Cache cho rollup"
 published: 2022-09-15
 lang: vi
 ---

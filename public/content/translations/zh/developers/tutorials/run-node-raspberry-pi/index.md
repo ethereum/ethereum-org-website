@@ -5,6 +5,7 @@ author: "EthereumOnArm"
 tags: [ "客户端", "执行层", "共识层", "节点" ]
 lang: zh
 skill: intermediate
+breadcrumb: "Raspberry Pi节点"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

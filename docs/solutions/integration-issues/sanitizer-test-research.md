@@ -54,19 +54,24 @@
 | 43 | Crowdin numbered tag placeholders exposed | ar #17105 | EN: `<strong>text</strong>` -> AR: `</0>text&lt;0>` or `</0>text<0>` -- Crowdin replaces HTML tags with numbered placeholders `<0>`, `<1>` etc. during translation, but fails to restore them. Tags are inverted (closer first) and/or HTML-escaped. Fix: map `<N>`/`</N>` back to actual tags by comparing against English source. | Critical -- breaks MDX |
 | 44 | Known wrong Arabic compound terms for "state" | ar #17105 | "قنوات الدولة" (nation-state channels) for "state channels", "بيانات الدولة" (nation-state data) for "state data", "انعدام الجنسية" (statelessness as nationality) for "statelessness". 32+ occurrences across 4+ files. Fix: map of known wrong compounds -> correct ones. | High -- wrong meaning |
 | 45 | "Ether" translated as "الإيثار" (altruism) | ar #17105 | Crowdin/MT translates "ether" as "الإيثار" (altruism, a real Arabic word) instead of "الإيثر" (transliteration). Same class as brand garble corrections. | Medium -- wrong term |
+| 46 | `normalizeBlockHtmlLines` splits single-line `<div>content</div>` | id i18n/id-03-23T2228 | EN: `<div>text</div>` (one line) -> sanitizer splits to `<div>text\n</div>` (two lines) -- `normalizeBlockHtmlLines` unconditionally splits closing block HTML tags to their own line, even when the opening tag is on the same line (inline usage). MDX treats the split content as a paragraph and fails: "Expected a closing tag for `<div>` before the end of `paragraph`". Found in 6 files across 5 languages (id, tr, pt-br, ja, es). | Critical -- breaks MDX compilation |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
 These patterns are covered by existing fix functions and should have regression tests:
 
-- **Duplicated headings** (`fixDuplicatedHeadings`) — `## Text? Text? {#id}`
-- **Broken markdown links** (`fixBrokenMarkdownLinks`) — `] (url)` space
-- **Escaped bold/italic** (`fixEscapedBoldAndItalic`) — `\*\*text\*\*`; uses lookbehind to skip `\*` used as multiplication (e.g., `operand\*operand`)
-- **ASCII guillemets** (`fixAsciiGuillemets`) — `<<text>>`
-- **Ticker transpositions** (`fixTickerTranspositions`) — `EHT` → `ETH`, `TNF` → `NFT`, `TNFs` → `NFTs`; uses alphanumeric-only boundaries to match adjacent to markdown `_`
-- **MDX angle brackets** (`escapeMdxAngleBrackets`) — `<5GB`
-- **Orphaned closing tags** (`removeOrphanedClosingTags`) — trailing `</a>`
+- **Duplicated headings** (`fixDuplicatedHeadings`) -- `## Text? Text? {#id}`
+- **Broken markdown links** (`fixBrokenMarkdownLinks`) -- `] (url)` space
+- **Escaped bold/italic** (`fixEscapedBoldAndItalic`) -- `\*\*text\*\*`; uses lookbehind to skip `\*` used as multiplication (e.g., `operand\*operand`)
+- **ASCII guillemets** (`fixAsciiGuillemets`) -- `<<text>>`
+- **Ticker transpositions** (`fixTickerTranspositions`) -- `EHT` -> `ETH`, `TNF` -> `NFT`, `TNFs` -> `NFTs`; uses alphanumeric-only boundaries to match adjacent to markdown `_`
+- **MDX angle brackets** (`escapeMdxAngleBrackets`) -- `<5GB`
+- **Orphaned closing tags** (`removeOrphanedClosingTags`) -- trailing `</a>`
 - **Block component line breaks** (`fixBlockComponentLineBreaks`)
+- **Brand capitalization** (`fixBrandCapitalization`) -- `Github` -> `GitHub`, `Metamask` -> `MetaMask`; skips URLs (github.com etc.) and code blocks. Added in uk PR #17472 review.
+- **Guillemet false positive on short words** (`fixGuillemetsInHtmlTags` bugfix) -- Previously converted guillemet-quoted words like `<<cat>>` to `<cat>` because `^[a-z]{1,4}$` was too broad. Fixed to use HTML tag whitelist. Found in uk PR #17472 (RLP file).
+- **Multi-line YAML brand tags** (`fixBrandTags` bugfix) -- Tags regex `[^\]]*` didn't match newlines in multi-line YAML arrays. Fixed to `[\s\S]*?`. Found in uk PR #17472 (wagmi tutorial).
+- **Brand tag list expanded** -- Added React, Vite, Wagmi, Noir to `PROTECTED_BRAND_NAMES`. Found missing during uk PR #17472 when "react" -> "react/respond" semantic mistranslation in tags wasn't caught.
 - **Frontmatter date normalization** (`normalizeFrontmatterDates`)
 - **Frontmatter non-ASCII quoting** (`quoteFrontmatterNonAscii`)
 - **Header ID sync** (`syncHeaderIdsWithEnglish`)
@@ -93,6 +98,7 @@ These patterns are covered by existing fix functions and should have regression 
 - **Italic adjacent non-Latin** (`fixItalicAdjacentNonLatin`) — `*text*가` / `_text_가` → `<em>text</em>가` mirrors bold fix for single `*` and `_` italic syntax (ko PR #17166)
 - **Translated inline code warning** (`warnTranslatedInlineCode`) — warns when inline code span count drops significantly OR when orphaned backticks are detected on a line; signals Crowdin translated content inside backticks (pt-br PR #17122)
 - **LLM artifact token stripping** (`stripLlmArtifactTokens`) — strips `<bos>`, `<eos>`, `<s>`, `</s>`, `<pad>`, `<unk>`, `<mask>` tokens from prose; these leak from machine translation pipelines and break MDX compilation (mr PR #17730)
+- **Block HTML inline usage preserved** (`normalizeBlockHtmlLines`) — no longer splits `<div>content</div>` when both tags are on the same line; only splits multi-line block closing tags to their own line. Fixes MDX "Expected a closing tag before end of paragraph" error (id i18n/id-03-23T2228, pattern #46)
 
 ## Recommendations for Future Sanitizer Iteration
 

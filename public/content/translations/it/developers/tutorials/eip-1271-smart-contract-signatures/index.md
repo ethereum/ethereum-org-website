@@ -9,6 +9,7 @@ tags:
   - "verifica"
   - "firma"
 skill: intermediate
+breadcrumb: "Firme EIP-1271"
 published: 2023-01-12
 ---
 

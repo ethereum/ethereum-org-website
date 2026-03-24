@@ -1,4 +1,6 @@
-import { getLocale, getTranslations } from "next-intl/server"
+"use client"
+
+import { useEffect, useState } from "react"
 
 import {
   Table,
@@ -11,30 +13,45 @@ import {
 
 import { formatSmallUSD } from "@/lib/utils/numbers"
 
-const GasTable = async () => {
-  const t = await getTranslations({
-    namespace: "page-what-is-ether",
-  })
-  const locale = await getLocale()
+interface GasTableLabels {
+  transactionType: string
+  typicalCostRange: string
+  estimatedGasUnits: string
+  row1: string
+  row2: string
+  row3: string
+}
 
-  const etherscanApiKey = process.env.ETHERSCAN_API_KEY
+interface GasEthPriceData {
+  gasPrice: number
+  ethPriceUSD: number
+}
 
-  const gwei = await fetch(
-    `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle&apikey=${etherscanApiKey}`,
-    { cache: "force-cache" }
-  ).then((res) => res.json())
-  const ethPrice = await fetch(
-    `https://api.etherscan.io/v2/api?chainid=1&module=stats&action=ethprice&apikey=${etherscanApiKey}`,
-    { cache: "force-cache" }
-  ).then((res) => res.json())
+interface GasTableProps {
+  labels: GasTableLabels
+  locale: string
+  initialData: GasEthPriceData | null
+}
 
-  // Calculate transaction costs in USD
-  const gasPrice = parseFloat(gwei.result.ProposeGasPrice) // Gas price in gwei
-  const ethPriceUSD = parseFloat(ethPrice.result.ethusd) // ETH price in USD
+const GasTable = ({ labels, locale, initialData }: GasTableProps) => {
+  const [data, setData] = useState<GasEthPriceData | null>(initialData)
+
+  useEffect(() => {
+    fetch("/api/gas-eth-price")
+      .then((res) => {
+        if (!res.ok) return
+        return res.json()
+      })
+      .then((fresh) => {
+        if (fresh) setData(fresh)
+      })
+      .catch((err) => console.warn("Failed to refresh gas/ETH price", err))
+  }, [])
 
   const calculateCost = (gasUnits: number) => {
-    const costInETH = gasUnits * gasPrice * 1e-9 // Convert gwei to ETH
-    const costInUSD = costInETH * ethPriceUSD
+    if (!data) return "—"
+    const costInETH = gasUnits * data.gasPrice * 1e-9
+    const costInUSD = costInETH * data.ethPriceUSD
     return formatSmallUSD(costInUSD, locale)
   }
 
@@ -42,32 +59,26 @@ const GasTable = async () => {
     <Table variant="highlight-first-column">
       <TableHeader>
         <TableRow>
-          <TableHead>
-            {t("page-what-is-ether-gas-table-transaction-type")}
-          </TableHead>
-          <TableHead>
-            {t("page-what-is-ether-gas-table-typical-cost-range")}
-          </TableHead>
-          <TableHead>
-            {t("page-what-is-ether-gas-table-estimated-gas-units")}
-          </TableHead>
+          <TableHead>{labels.transactionType}</TableHead>
+          <TableHead>{labels.typicalCostRange}</TableHead>
+          <TableHead>{labels.estimatedGasUnits}</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         <TableRow>
-          <TableCell>{t("page-what-is-ether-gas-table-row-1-1")}</TableCell>
+          <TableCell>{labels.row1}</TableCell>
           <TableCell>{calculateCost(21000)}</TableCell>
           <TableCell>21,000 gas</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>{t("page-what-is-ether-gas-table-row-2-1")}</TableCell>
+          <TableCell>{labels.row2}</TableCell>
           <TableCell>
             {calculateCost(125000)} - {calculateCost(150000)}
           </TableCell>
           <TableCell>100,000 - 150,000 gas</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>{t("page-what-is-ether-gas-table-row-3-1")}</TableCell>
+          <TableCell>{labels.row3}</TableCell>
           <TableCell>
             {calculateCost(200000)} - {calculateCost(500000)}
           </TableCell>

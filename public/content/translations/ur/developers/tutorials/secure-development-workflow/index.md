@@ -4,6 +4,7 @@ description: "محفوظ اسمارٹ کنٹریکٹس لکھنے کے لیے ا
 author: "Trailofbits"
 tags: [ "اسمارٹ معاہدات", "سیکورٹی", "solidity" ]
 skill: intermediate
+breadcrumb: "سیکیورٹی چیک لسٹ"
 lang: ur-in
 published: 2020-09-07
 source: Building secure contracts

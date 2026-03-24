@@ -5,6 +5,7 @@ author: Markus Waas
 lang: tr
 tags: [ "solidity", "akıllı kontratlar", "depolama" ]
 skill: intermediate
+breadcrumb: "Sözleşme küçültme"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

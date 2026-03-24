@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: tr
 tags: [ "katman 2" ]
 skill: intermediate
+breadcrumb: "Kısa ABIs"
 published: 2022-04-01
 ---
 

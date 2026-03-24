@@ -4,6 +4,7 @@ description: "一推薦程序來編輯安全智慧型合約"
 author: "Trailofbits"
 tags: [ "smart contracts", "security", "solidity" ]
 skill: intermediate
+breadcrumb: "安全檢查清單"
 lang: zh-tw
 published: 2020-09-07
 source: Building secure contracts

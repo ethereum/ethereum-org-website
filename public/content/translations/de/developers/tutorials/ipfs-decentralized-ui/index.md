@@ -4,6 +4,7 @@ description: "Dieses Tutorial zeigt dem Leser, wie man IPFS nutzt, um die Benutz
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
+breadcrumb: "IPFS-Dapp-UIs"
 lang: de
 published: 2024-06-29
 ---

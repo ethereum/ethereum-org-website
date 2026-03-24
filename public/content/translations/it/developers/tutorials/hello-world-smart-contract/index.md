@@ -9,6 +9,7 @@ tags:
   - "smart contract"
   - "distribuzione"
 skill: beginner
+breadcrumb: "Contratto Hello World"
 lang: it
 published: 2021-03-31
 ---

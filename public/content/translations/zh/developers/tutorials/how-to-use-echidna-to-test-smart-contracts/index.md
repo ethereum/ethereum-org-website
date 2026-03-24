@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: zh
 tags: [ "Solidity", "智能合同", "安全性。", "测试", "模糊测试" ]
 skill: advanced
+breadcrumb: "Echidna"
 published: 2020-04-10
 source: "构建安全的合约"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

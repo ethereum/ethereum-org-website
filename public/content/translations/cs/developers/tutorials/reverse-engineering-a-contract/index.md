@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: cs
 tags: [ "evm", "opkódy" ]
 skill: advanced
+breadcrumb: "Reverzní inženýrství"
 published: 2021-12-30
 ---
 

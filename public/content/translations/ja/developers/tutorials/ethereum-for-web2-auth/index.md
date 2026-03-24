@@ -4,6 +4,7 @@ description: "このチュートリアルを読むことで、デベロッパー
 author: Ori Pomerantz
 tags: [ "web2", "認証", "eas" ]
 skill: beginner
+breadcrumb: "Ethereum web2認証"
 lang: ja
 published: 2025-04-30
 ---

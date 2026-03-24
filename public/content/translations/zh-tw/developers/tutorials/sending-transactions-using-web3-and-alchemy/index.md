@@ -4,6 +4,7 @@ description: "這是一份初學者友善指南，說明如何使用 Web3 發送
 author: "Elan Halpern"
 tags: [ "transactions", "web3.js", "alchemy" ]
 skill: beginner
+breadcrumb: "傳送交易"
 lang: zh-tw
 published: 2020-11-04
 source: Alchemy docs

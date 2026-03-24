@@ -10,6 +10,7 @@ tags:
     "erc-20"
   ]
 skill: intermediate
+breadcrumb: "Трансфери ERC-20"
 lang: uk
 published: 2020-04-07
 source: EthereumDev

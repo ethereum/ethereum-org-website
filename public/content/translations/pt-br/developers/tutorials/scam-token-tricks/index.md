@@ -11,6 +11,7 @@ tags:
     "TypeScript"
   ]
 skill: intermediate
+breadcrumb: "Truques de tokens falsos"
 published: 2023-09-15
 lang: pt-br
 ---

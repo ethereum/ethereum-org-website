@@ -10,6 +10,7 @@ tags:
     "tokens"
   ]
 skill: intermediate
+breadcrumb: "Chợ ERC-721"
 lang: vi
 published: 2020-03-19
 source: Hackernoon

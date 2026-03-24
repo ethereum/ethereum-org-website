@@ -4,6 +4,7 @@ description: "یہ Web3 کا استعمال کرتے ہوئے Ethereum لین د
 author: "Elan Halpern"
 tags: [ "لین دین", "web3.js", "alchemy" ]
 skill: beginner
+breadcrumb: "ٹرانزیکشنز بھیجیں"
 lang: ur-in
 published: 2020-11-04
 source: Alchemy docs

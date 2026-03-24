@@ -18,6 +18,7 @@ import type { CommunityEventsReturnType } from "@/lib/interfaces"
 import type { DeveloperToolsDataEnvelope } from "./fetchers/developer-tools/utils"
 import type { BeaconChainData } from "./fetchers/fetchBeaconChain"
 import type { BlobscanStats } from "./fetchers/fetchBlobscanStats"
+import type { GasPriceData } from "./fetchers/fetchGasPrice"
 import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
 import type { GlossaryEntry } from "./fetchers/fetchTranslationGlossary"
 import { get } from "./storage"
@@ -39,6 +40,7 @@ export const getBeaconchainData = () => get<BeaconChainData>(KEYS.BEACONCHAIN)
 export const getBlobscanStats = () => get<BlobscanStats>(KEYS.BLOBSCAN_STATS)
 export const getEthereumMarketcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_MARKETCAP)
 export const getEthereumStablecoinsMcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_STABLECOINS_MCAP)
+export const getGasPriceData = () => get<GasPriceData>(KEYS.GAS_PRICE)
 export const getGFIs = () => get<GHIssue[]>(KEYS.GFIS)
 export const getGitHistory = () => get<Commit[]>(KEYS.GIT_HISTORY)
 export const getGithubRepoData = () => get<Record<string, GithubRepoData>>(KEYS.GITHUB_REPO_DATA)

@@ -11,6 +11,7 @@ tags:
     "firma"
   ]
 skill: intermediate
+breadcrumb: "Firmas EIP-1271"
 published: 2023-01-12
 ---
 

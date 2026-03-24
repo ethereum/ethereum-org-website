@@ -11,6 +11,7 @@ tags:
     "కంపోజిబిలిటీ"
   ]
 skill: advanced
+breadcrumb: "కాంట్రాక్ట్ ఇంటరాక్షన్లు"
 lang: te
 published: 2020-04-05
 source: EthereumDev

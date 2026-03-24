@@ -11,6 +11,7 @@ tags:
     "typescript"
   ]
 skill: intermediate
+breadcrumb: "Podvodné tokeny"
 published: 2023-09-15
 lang: cs
 ---

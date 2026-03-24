@@ -12,6 +12,7 @@ tags:
     "Pinata"
   ]
 skill: intermediate
+breadcrumb: "NFT மின்டர் dapp"
 lang: ta
 published: 2021-10-06
 ---

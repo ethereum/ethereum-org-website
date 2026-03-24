@@ -5,6 +5,7 @@ author: "Tellor"
 lang: mr
 tags: [ "सॉलिडिटी", "स्मार्ट कॉन्ट्रॅक्ट", "ओरॅकल्स" ]
 skill: beginner
+breadcrumb: "Tellor oracle"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

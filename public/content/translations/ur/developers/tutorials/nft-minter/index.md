@@ -12,6 +12,7 @@ tags:
     "Pinata"
   ]
 skill: intermediate
+breadcrumb: "NFT منٹر dapp"
 lang: ur-in
 published: 2021-10-06
 ---

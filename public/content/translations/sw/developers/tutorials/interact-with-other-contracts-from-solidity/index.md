@@ -4,6 +4,7 @@ description: Jinsi ya kupeleka mkataba-erevu kutoka kwa mkataba uliopo na kuingi
 author: "jdourlens"
 tags: ["smart contracts", "solidity", "remix", "deploying", "composability"]
 skill: advanced
+breadcrumb: "Mwingiliano wa mikataba"
 lang: sw
 published: 2020-04-05
 source: EthereumDev

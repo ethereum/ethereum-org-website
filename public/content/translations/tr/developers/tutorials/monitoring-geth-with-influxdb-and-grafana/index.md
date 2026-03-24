@@ -4,6 +4,7 @@ description: "Performansı izlemek ve sorunları belirlemek için InfluxDB ve Gr
 author: "Mario Havel"
 tags: [ "istemciler", "düğümler" ]
 skill: intermediate
+breadcrumb: "Geth izleme"
 lang: tr
 published: 2021-01-13
 ---
