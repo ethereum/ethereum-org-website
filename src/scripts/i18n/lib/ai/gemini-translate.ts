@@ -357,11 +357,23 @@ async function callGeminiRaw(
       )
 
       if (verbose) {
-        console.log(
-          `[${ts()}] [gemini] === PROMPT START (${prompt.length} chars) ===`
+        // Split prompt into sections for collapsible groups
+        const sourceMatch = prompt.match(
+          /([\s\S]*?)(=== SOURCE FILE ===[\s\S]*?=== END SOURCE FILE ===)([\s\S]*)/
         )
-        console.log(prompt)
-        console.log(`[${ts()}] [gemini] === PROMPT END ===`)
+        if (sourceMatch) {
+          const [, preamble, sourceFile] = sourceMatch
+          console.log(`::group::Prompt preamble: ${ctx} (rules, glossary, hints)`)
+          console.log(preamble.trim())
+          console.log("::endgroup::")
+          console.log(`::group::Source file: ${ctx} (${prompt.length} chars)`)
+          console.log(sourceFile)
+          console.log("::endgroup::")
+        } else {
+          console.log(`::group::Prompt: ${ctx} (${prompt.length} chars)`)
+          console.log(prompt)
+          console.log("::endgroup::")
+        }
       }
 
       try {

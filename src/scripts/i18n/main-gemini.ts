@@ -115,8 +115,6 @@ async function main() {
   )
 
   if (!skipPr) {
-    logSection("Creating Pull Request")
-
     const languagePairs = Object.keys(stats).map((code) => ({
       crowdinId: code,
       internalLanguageCode: code,
