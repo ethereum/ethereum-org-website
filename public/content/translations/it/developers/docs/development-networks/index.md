@@ -1,73 +1,75 @@
 ---
 title: Reti di sviluppo
-description: Panoramica delle reti di sviluppo e degli strumenti disponibili per creare applicazioni Ethereum.
+description: Una panoramica delle reti di sviluppo e degli strumenti disponibili per aiutare a creare applicazioni su Ethereum.
 lang: it
 ---
 
-Creando un'applicazione di Ethereum con i contratti intelligenti, vorrai eseguirlo su una rete locale per vedere come funziona, prima di distribuirla.
+Quando si crea un'applicazione [Ethereum](/) con contratti intelligenti, è consigliabile eseguirla su una rete locale per vederne il funzionamento prima di distribuirla.
 
-Come è possibile eseguire un server locale sul computer per lo sviluppo web, allo stesso modo è possibile usare una rete di sviluppo per creare un'istanza di blockchain locale per testare una dapp. Queste reti di sviluppo Ethereum offrono funzionalità che permettono un'iterazione molto più veloce rispetto a una rete di prova pubblica (ad esempio, non è necessario acquisire ETH da un faucet di una rete di prova).
+Similmente a come si potrebbe eseguire un server locale sul proprio computer per lo sviluppo web, è possibile utilizzare una rete di sviluppo per creare un'istanza locale della blockchain per testare la propria dApp. Queste reti di sviluppo di Ethereum forniscono funzionalità che consentono un'iterazione molto più rapida rispetto a una rete di test pubblica (ad esempio, non è necessario preoccuparsi di acquisire ETH da un rubinetto della rete di test).
 
 ## Prerequisiti {#prerequisites}
 
-È necessario conoscere le [basi dello stack Ethereum](/developers/docs/ethereum-stack/) e delle [reti Ethereum](/developers/docs/networks/) prima di iniziare ad utilizzare le reti di sviluppo.
+Dovresti comprendere le [basi dello stack di Ethereum](/developers/docs/ethereum-stack/) e le [reti di Ethereum](/developers/docs/networks/) prima di immergerti nelle reti di sviluppo.
 
 ## Cos'è una rete di sviluppo? {#what-is-a-development-network}
 
-Si tratta essenzialmente di client Ethereum (implementazioni di Ethereum) progettate in modo specifico per lo sviluppo locale.
+Le reti di sviluppo sono essenzialmente client di Ethereum (implementazioni di Ethereum) progettati specificamente per lo sviluppo locale.
 
-**Perché allora non eseguire semplicemente un nodo Ethereum locale?**
+**Perché non eseguire semplicemente un nodo standard di Ethereum localmente?**
 
-_Potresti_ [eseguire un nodo](/developers/docs/nodes-and-clients/#running-your-own-node), ma poiché le reti di sviluppo sono costruite per lo sviluppo, spesso includono funzionalità pratiche come:
+_Potresti_ [eseguire un nodo](/developers/docs/nodes-and-clients/#running-your-own-node) ma, poiché le reti di sviluppo sono create appositamente per lo sviluppo, spesso sono dotate di comode funzionalità come:
 
-- Inserimento deterministico dei dati nella tua blockchain locale (es. conti con saldi di ETH)
-- Produzione istantanea di blocchi a ogni transazione ricevuta, in ordine e senza ritardi
-- Funzionalità di debugging e registrazione avanzate
+- Popolamento deterministico della blockchain locale con dati (es. account con saldi in ETH)
+- Produzione istantanea di blocchi con ogni transazione che riceve, in ordine e senza ritardi
+- Funzionalità avanzate di debug e registrazione (logging)
 
 ## Strumenti disponibili {#available-projects}
 
-**Nota**: la maggior parte dei [framework di sviluppo](/developers/docs/frameworks/) include una rete di sviluppo incorporata. Raccomandiamo di iniziare con un framework per [impostare l'ambiente di sviluppo locale](/developers/local-environment/).
+**Nota**: La maggior parte dei [framework di sviluppo](/developers/docs/frameworks/) include una rete di sviluppo integrata. Consigliamo di iniziare con un framework per [configurare il tuo ambiente di sviluppo locale](/developers/local-environment/).
 
-### Rete Hardhat {#hardhat-network}
+### Hardhat Network {#hardhat-network}
 
-Rete Ethereum locale progettata per lo sviluppo. Permette di distribuire contratti, eseguire test e il debug del codice.
+Una rete Ethereum locale progettata per lo sviluppo. Ti consente di distribuire i tuoi contratti, eseguire i tuoi test ed effettuare il debug del tuo codice.
 
-La rete Hardhat è incorporata in Hardhat, un ambiente di sviluppo Ethereum professionale.
+Hardhat Network è integrata in Hardhat, un ambiente di sviluppo Ethereum per professionisti.
 
-- [Sito Web](https://hardhat.org/)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [Sito web](https://hardhat.org/)
+- [GitHub](https://github.com/NomicFoundation/hardhat)
 
-### Beacon Chain Locali {#local-beacon-chains}
+### Beacon chain locali {#local-beacon-chains}
 
-Alcuni client del consenso sono dotati di strumenti integrati per avviare Beacon Chain locali per scopi di test. Sono disponibili le istruzioni per Lighthouse, Nimbus e Lodestar:
+Alcuni client di consenso dispongono di strumenti integrati per avviare beacon chain locali a scopo di test. Sono disponibili le istruzioni per Lighthouse, Nimbus e Lodestar:
 
-- [Testnet locale usando Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
-- [Testnet locale usando Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [Rete di test locale usando Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
+- [Rete di test locale usando Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 
-### Catene di prova pubbliche di Ethereum {#public-beacon-testchains}
+### Catene di test pubbliche di Ethereum {#public-beacon-testchains}
 
-Esistono anche due implementazioni di prova pubbliche e mantenute di Ethereum: Sepolia e Hoodi. Sepolia è la rete di prova standard consigliata per lo sviluppo di applicazioni, con un insieme di validatori chiuso per una sincronizzazione rapida. Hoodi è una rete di prova per la validazione e lo staking, che utilizza un insieme di validatori aperto e permette potenzialmente a chiunque di validare.
+Esistono anche due implementazioni di test pubbliche mantenute di Ethereum: Sepolia e Hoodi. La rete di test consigliata con supporto a lungo termine è Hoodi, su cui chiunque è libero di validare. Sepolia utilizza un set di validatori autorizzati, il che significa che non c'è accesso generale per nuovi validatori su questa rete di test.
 
-- [Launchpad di staking di Hoodi](https://hoodi.launchpad.ethereum.org/en/)
-- [Sito Web di Sepolia](https://sepolia.dev/)
-- [Sito Web di Hoodi](https://hoodi.ethpandaops.io/)
+- [Launchpad di staking di Hoodi](https://hoodi.launchpad.ethereum.org/)
 
-### Pacchetto Ethereum di Kurtosis {#kurtosis}
+### Pacchetto Ethereum Kurtosis {#kurtosis}
 
-Kurtosis è un sistema di produzione per ambienti di prova multi-contenitore che consente agli sviluppatori di avviare localmente istanze riproducibili di reti blockchain.
+Kurtosis è un sistema di compilazione per ambienti di test multi-container che consente agli sviluppatori di avviare localmente istanze riproducibili di reti blockchain.
 
-Il pacchetto Kurtosis di Ethereum è utilizzabile per istanziare rapidamente una rete di prova di Ethereum parametrizzabile, altamente scalabile e privata, su Docker o Kubernetes. Il pacchetto supporta tutti i clienti principali dei Livelli d'Esecuzione (EL) e del Consenso (CL). Kurtosis gestisce comodamente tutte le mappature delle porte locali e le connessioni del servizio per una rete rappresentativa da utilizzare nei flussi di lavoro di convalida e test, relativamente all'infrastruttura principale di Ethereum.
+Il pacchetto Ethereum Kurtosis può essere utilizzato per istanziare rapidamente una rete di test di Ethereum parametrizzabile, altamente scalabile e privata su Docker o Kubernetes. Il pacchetto supporta tutti i principali client del livello di esecuzione (EL) e del livello di consenso (CL). Kurtosis gestisce in modo elegante tutte le mappature delle porte locali e le connessioni ai servizi per una rete rappresentativa da utilizzare nei flussi di lavoro di validazione e test relativi all'infrastruttura principale di Ethereum.
 
-- [Pacchetto rete Ethereum](https://github.com/kurtosis-tech/ethereum-package)
-- [Sito Web](https://www.kurtosis.com/)
+- [Pacchetto di rete Ethereum](https://github.com/kurtosis-tech/ethereum-package)
+- [Sito web](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentazione](https://docs.kurtosis.com/)
 
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
-- [Quadri di sviluppo](/developers/docs/frameworks/)
-- [Configura un ambiente di sviluppo locale](/developers/local-environment/)
+- [Framework di sviluppo](/developers/docs/frameworks/)
+- [Configurare un ambiente di sviluppo locale](/developers/local-environment/)
+
+## Tutorial: Reti di sviluppo e ambienti di test su Ethereum {#tutorials}
+
+- [Sviluppare e testare dApp con una rete di test locale multi-client di Ethereum](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– Come avviare una rete di test locale multi-client di Ethereum con Kurtosis per lo sviluppo e il test di dApp._
