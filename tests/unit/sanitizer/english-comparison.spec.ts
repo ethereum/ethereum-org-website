@@ -25,6 +25,7 @@ const {
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
   removeStaleComponents,
+  fixLeakedAttrNamesInJsxValues,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -979,6 +980,51 @@ test.describe("English Comparison Fixes", () => {
       const { content, fixCount } = removeStaleComponents(translated, english)
       expect(content).not.toContain("\n\n\n")
       expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixLeakedAttrNamesInJsxValues", () => {
+    test("replaces leaked description=N with $NN from English, keeping Telugu text", () => {
+      const english = `  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average."/>`
+      const translated = `  <Card title="\u0C24\u0C15\u0C4D\u0C15\u0C41\u0C35 \u0C2B\u0C40\u0C1C\u0C41\u0C32\u0C41" emoji=":money_with_wings:" description="\u0C30\u0C46\u0C2E\u0C3F\u0C1F\u0C46\u0C28\u0C4D\u0C38\u0C4D \u0C38\u0C47\u0C35\u0C32\u0C41 \u0C38\u0C17\u0C1F\u0C41\u0C28 description=4 \u0C35\u0C30\u0C15\u0C41 \u0C2B\u0C40\u0C1C\u0C41\u0C32\u0C41 \u0C35\u0C38\u0C42\u0C32\u0C41 \u0C1A\u0C47\u0C38\u0C4D\u0C24\u0C3E\u0C2F\u0C3F."/>`
+      const { content, fixCount } = fixLeakedAttrNamesInJsxValues(
+        translated,
+        english
+      )
+      // Telugu text preserved, only the leaked "description=4" replaced with "$14"
+      expect(content).toContain("$14")
+      expect(content).not.toContain("description=4")
+      // Still Telugu
+      expect(content).toContain(
+        "\u0C30\u0C46\u0C2E\u0C3F\u0C1F\u0C46\u0C28\u0C4D\u0C38\u0C4D"
+      )
+      expect(content).toContain(
+        "\u0C35\u0C30\u0C15\u0C41 \u0C2B\u0C40\u0C1C\u0C41\u0C32\u0C41"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves clean attributes unchanged", () => {
+      const english = `  <Card title="Test" emoji=":rocket:" description="A clean description."/>`
+      const translated = `  <Card title="\u0C1F\u0C46\u0C38\u0C4D\u0C1F\u0C4D" emoji=":rocket:" description="\u0C12\u0C15 \u0C36\u0C41\u0C2D\u0C4D\u0C30\u0C2E\u0C48\u0C28 \u0C35\u0C3F\u0C35\u0C30\u0C23."/>`
+      const { content, fixCount } = fixLeakedAttrNamesInJsxValues(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not replace the actual attribute assignment itself", () => {
+      // description=" at the start of a value is the real attribute, not a leak
+      const english = `  <Card title="Test" emoji=":star:" description="Normal text here."/>`
+      const translated = `  <Card title="\u0C1F\u0C46\u0C38\u0C4D\u0C1F\u0C4D" emoji=":star:" description="\u0C38\u0C3E\u0C27\u0C3E\u0C30\u0C23 \u0C1F\u0C46\u0C15\u0C4D\u0C38\u0C4D\u0C1F\u0C4D."/>`
+      const { content, fixCount } = fixLeakedAttrNamesInJsxValues(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
     })
   })
 })
