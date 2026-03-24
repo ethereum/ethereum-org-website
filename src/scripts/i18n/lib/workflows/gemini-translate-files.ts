@@ -53,7 +53,7 @@ export async function geminiTranslateFiles(
   failedFiles: string[]
 }> {
   const { englishFiles, glossary, targetLanguages } = context
-  const concurrency = Number(process.env.GEMINI_CONCURRENCY) || 3
+  const concurrency = Number(process.env.GEMINI_CONCURRENCY) || 6
   const progress = initProgress(runId, targetLanguages)
   const allStats: Record<string, TranslationStats> = {}
   const allCommittedFiles: CommitFile[] = []
