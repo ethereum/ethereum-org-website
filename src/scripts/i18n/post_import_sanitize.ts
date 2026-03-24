@@ -1633,8 +1633,21 @@ function syncHeaderIdsWithEnglish(
 
 function normalizeBlockHtmlLines(md: string): string {
   for (const tag of BLOCK_HTML_TAGS) {
-    const inlineCloseRe = new RegExp(`([^\\n])\\s*</${tag}>`, "g")
-    md = md.replace(inlineCloseRe, (_, before) => `${before}\n</${tag}>`)
+    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
+    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${tag}>`, "g")
+    md = md.replace(
+      inlineCloseRe,
+      (match: string, before: string, offset: number) => {
+        // Find start of current line
+        const lineStart = md.lastIndexOf("\n", offset) + 1
+        const lineContent = md.slice(lineStart, offset + match.length)
+        // If opening tag is on the same line, this is inline usage -- leave it
+        if (new RegExp(`<${tag}[\\s>]`).test(lineContent)) {
+          return match
+        }
+        return `${before}\n</${tag}>`
+      }
+    )
   }
   return md
 }
@@ -1659,9 +1672,18 @@ function restoreBlankLinesFromEnglish(
     `</(${BLOCK_MDX_COMPONENTS.join("|")})>`
   )
 
+  let inCodeFence = false
   for (let i = 0; i < translatedLines.length; i++) {
     const line = translatedLines[i]
     result.push(line)
+
+    // Track code fence boundaries
+    if (/^```|^~~~/.test(line.trim())) {
+      inCodeFence = !inCodeFence
+    }
+
+    // Skip lines inside code fences (e.g., Python # comments match header pattern)
+    if (inCodeFence) continue
 
     // Check if this line should be followed by a blank line
     const isHeader = headerPattern.test(line)
@@ -1669,26 +1691,38 @@ function restoreBlankLinesFromEnglish(
 
     if (isHeader || isBlockClose) {
       const nextLine = translatedLines[i + 1]
-      const hasBlankAfter = nextLine === ""
+      // Treat whitespace-only lines as blank (not just empty string)
+      const hasBlankAfter = nextLine !== undefined && nextLine.trim() === ""
 
       // Find corresponding line in English by matching pattern
       let englishShouldHaveBlank = false
-      for (let j = 0; j < englishLines.length; j++) {
-        const englishLine = englishLines[j]
-        if (isHeader && headerPattern.test(englishLine)) {
-          // Headers should match by structure (level)
-          const transLevel = (line.match(/^#+/) || [""])[0].length
-          const engLevel = (englishLine.match(/^#+/) || [""])[0].length
-          if (transLevel === engLevel) {
-            englishShouldHaveBlank = englishLines[j + 1] === ""
-            break
+
+      if (isBlockClose) {
+        // Match by specific tag name to avoid cross-tag false matches
+        const tagMatch = line.match(
+          new RegExp(`</(${BLOCK_MDX_COMPONENTS.join("|")})>`)
+        )
+        if (tagMatch) {
+          const tagName = tagMatch[1]
+          const specificCloseRe = new RegExp(`</${tagName}>`)
+          for (let j = 0; j < englishLines.length; j++) {
+            if (specificCloseRe.test(englishLines[j])) {
+              englishShouldHaveBlank = englishLines[j + 1] === ""
+              break
+            }
           }
-        } else if (
-          isBlockClose &&
-          blockComponentClosePattern.test(englishLine)
-        ) {
-          englishShouldHaveBlank = englishLines[j + 1] === ""
-          break
+        }
+      } else if (isHeader) {
+        for (let j = 0; j < englishLines.length; j++) {
+          const englishLine = englishLines[j]
+          if (headerPattern.test(englishLine)) {
+            const transLevel = (line.match(/^#+/) || [""])[0].length
+            const engLevel = (englishLine.match(/^#+/) || [""])[0].length
+            if (transLevel === engLevel) {
+              englishShouldHaveBlank = englishLines[j + 1] === ""
+              break
+            }
+          }
         }
       }
 
@@ -1770,7 +1804,8 @@ function fixBlockComponentLineBreaks(md: string): {
 
   for (const component of BLOCK_MDX_COMPONENTS) {
     // Fix inline closing tags: content</Component> → content\n</Component>
-    const inlineCloseRe = new RegExp(`([^\\n])\\s*</${component}>`, "g")
+    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
+    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${component}>`, "g")
     content = content.replace(inlineCloseRe, (_, before) => {
       fixCount++
       return `${before}\n</${component}>`
@@ -3219,6 +3254,84 @@ function fixInnerQuotesInJsxAttributes(content: string): {
 }
 
 /**
+ * Fix Crowdin variable-expansion leak inside JSX attribute values.
+ *
+ * Crowdin sometimes treats `$N` inside attribute values as a variable reference,
+ * expanding `$1` to the attribute name itself (e.g., "description") and leaving
+ * the remaining digits. This produces patterns like:
+ *   description="...text... description=4 ...text..."
+ * where the English source had:
+ *   description="...text... $14 ...text..."
+ *
+ * The fix keeps the translated text and replaces only the leaked
+ * `<attrName>=<digits>` with the corresponding `$NN` from the English source.
+ */
+function fixLeakedAttrNamesInJsxValues(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  const jsxAttrNames = "title|description|label|alt|contentPreview"
+  // Match leaked attrName=digits INSIDE a quoted attribute value
+  const leakInsideValue = new RegExp(`\\b(${jsxAttrNames})=(\\d+)\\b`, "g")
+
+  const lines = translatedContent.split("\n")
+  for (let li = 0; li < lines.length; li++) {
+    const line = lines[li]
+    if (!leakInsideValue.test(line)) continue
+    leakInsideValue.lastIndex = 0
+
+    // Only operate inside quoted attribute values on JSX component lines
+    // (lines containing <Card, <ExpandableCard, etc.)
+    if (!/^\s*<[A-Z]/.test(line)) continue
+
+    // Find the matching English line by emoji (stable across translations)
+    const emojiMatch = line.match(/emoji="([^"]*)"/)
+    if (!emojiMatch) continue
+    const emoji = emojiMatch[1]
+
+    let engLine = ""
+    for (const el of englishContent.split("\n")) {
+      if (el.includes(`emoji="${emoji}"`)) {
+        engLine = el
+        break
+      }
+    }
+    if (!engLine) continue
+
+    // Replace each leaked attrName=digits with the $NN from English
+    lines[li] = line.replace(leakInsideValue, (match, _, digits) => {
+      // Verify this is inside a quoted attribute value (not a bare attribute)
+      // by checking that the attribute pattern `leakedName="...` does NOT
+      // start right before this match (which would be the real attribute)
+      const matchPos = line.indexOf(match)
+      const before = line.slice(Math.max(0, matchPos - 2), matchPos)
+      if (before.endsWith('="') || before.endsWith("='")) {
+        // This is the actual attribute assignment, not a leak inside a value
+        return match
+      }
+
+      // Find all $N+ patterns in the English line's same attribute value
+      const attrRegex = new RegExp(`(${jsxAttrNames})="([^"]*)"`, "g")
+      let engM: RegExpExecArray | null
+      while ((engM = attrRegex.exec(engLine)) !== null) {
+        const engValue = engM[2]
+        // Look for $digits in the English value
+        const dollarMatch = engValue.match(new RegExp(`\\$(\\d*${digits})\\b`))
+        if (dollarMatch) {
+          fixCount++
+          return "$" + dollarMatch[1]
+        }
+      }
+      return match
+    })
+  }
+
+  return { content: lines.join("\n"), fixCount }
+}
+
+/**
  * Escape lone tildes used as range/approximate notation.
  * In Korean (and other CJK), `100만~200만` uses ~ as "to/approximately",
  * but remark-gfm treats paired ~text~ as strikethrough (<del>).
@@ -3872,6 +3985,15 @@ function processMarkdownFile(
     }
     content = tagResult.content
 
+    // Fix leaked attr names inside JSX attribute values (Crowdin $N expansion)
+    const leakedAttrResult = fixLeakedAttrNamesInJsxValues(content, englishMd)
+    if (leakedAttrResult.content !== content) {
+      issues.push(
+        `Fixed ${leakedAttrResult.fixCount} leaked attribute name(s) in JSX values`
+      )
+    }
+    content = leakedAttrResult.content
+
     // Fix translated hrefs using set comparison
     const hrefResult = fixTranslatedHrefs(content, englishMd)
     if (hrefResult.content !== content) {
@@ -4458,6 +4580,7 @@ export const _testOnly = {
   restoreStrippedAbbreviations,
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
+  fixLeakedAttrNamesInJsxValues,
   fixMissingOpeningSup,
   fixSplitBoldMarkers,
   fixKnownWrongCompounds,

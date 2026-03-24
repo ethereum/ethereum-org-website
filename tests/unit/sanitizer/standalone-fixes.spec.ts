@@ -434,6 +434,20 @@ test.describe("Standalone Fixes", () => {
       expect(content).toContain("text\n</ExpandableCard>")
       expect(content).toContain("more\n</Alert>")
     })
+
+    test("preserves blank lines before closing tags", () => {
+      const input =
+        "Some paragraph text.\n\n</ExpandableCard>\n\n<ExpandableCard"
+      const { content } = fixBlockComponentLineBreaks(input)
+      expect(content).toBe(input)
+    })
+
+    test("preserves blank lines between AlertContent and Alert closing tags", () => {
+      const input = "</AlertContent>\n</Alert>"
+      const { content } = fixBlockComponentLineBreaks(input)
+      // Should NOT insert a blank line between them
+      expect(content).toBe(input)
+    })
   })
 
   test.describe("normalizeFrontmatterDates", () => {
@@ -507,6 +521,46 @@ test.describe("Standalone Fixes", () => {
       const input = "some text\n</section>"
       const result = normalizeBlockHtmlLines(input)
       expect(result).toBe(input)
+    })
+
+    test("preserves single-line div with content (inline usage)", () => {
+      const input =
+        "<div>Founders, need help? [Head over to Support](/founders/)</div>"
+      const result = normalizeBlockHtmlLines(input)
+      expect(result).toBe(input)
+    })
+
+    test("preserves single-line div with nested HTML", () => {
+      const input =
+        "<div><b>Wallet installed?</b><br/>Learn how to use it.</div>"
+      const result = normalizeBlockHtmlLines(input)
+      expect(result).toBe(input)
+    })
+
+    test("preserves single-line div inside Alert component", () => {
+      const input = [
+        '<Alert variant="update" className="mt-8">',
+        '<Emoji text="\uD83C\uDF97\uFE0F" />',
+        "<div>Para pendiri, butuh bantuan? [Kunjungi](/founders/)</div>",
+        "</Alert>",
+      ].join("\n")
+      const result = normalizeBlockHtmlLines(input)
+      expect(result).toBe(input)
+    })
+
+    test("still splits multi-line div closing tag", () => {
+      const input = "line one\nline two</div>"
+      const result = normalizeBlockHtmlLines(input)
+      expect(result).toBe("line one\nline two\n</div>")
+    })
+
+    test("idempotent on already-correct content", () => {
+      const input =
+        "<div>Founders, need help? [Head over to Support](/founders/)</div>"
+      const result1 = normalizeBlockHtmlLines(input)
+      const result2 = normalizeBlockHtmlLines(result1)
+      expect(result1).toBe(result2)
+      expect(result1).toBe(input)
     })
   })
 
