@@ -87,9 +87,17 @@ async function main() {
     path: path.resolve(f.path),
     content: f.content,
   }))
+
+  // Build English content map so the sanitizer compares against
+  // the same BASE_BRANCH English files used for translation (not disk)
+  const englishContentMap = new Map<string, string>(
+    context.englishFiles.map((f) => [f.path, f.content])
+  )
+
   const sanitizeResult = await runPostImportSanitization(
     sanitizerInput,
-    branchName
+    branchName,
+    englishContentMap
   )
 
   // Phase 4: JSX attribute translation (reuse existing Gemini JSX flow)
@@ -115,7 +123,8 @@ async function main() {
   // Phase 5: Re-run sanitizer after JSX translation
   const resanitizeResult = await runPostImportSanitization(
     sanitizerInput,
-    branchName
+    branchName,
+    englishContentMap
   )
 
   // Merge changed files from both sanitizer passes for PR summary

@@ -19,13 +19,18 @@ export interface SanitizationResult {
  */
 export async function runPostImportSanitization(
   committedFiles: CommittedFile[],
-  branch: string
+  branch: string,
+  englishContentMap?: Map<string, string>
 ): Promise<SanitizationResult> {
   logSection("Running Post-Import Sanitizer")
 
   console.log(`[SANITIZE] Processing ${committedFiles.length} committed files`)
 
-  const sanitizeResult = await runSanitizer(committedFiles)
+  const sanitizeResult = await runSanitizer(
+    committedFiles,
+    undefined,
+    englishContentMap
+  )
   const changedFiles = sanitizeResult.changedFiles || []
 
   if (changedFiles.length) {

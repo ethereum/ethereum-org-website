@@ -3681,7 +3681,8 @@ function detectUntranslatedContent(content: string, locale: string): string[] {
 
 function processMarkdownFile(
   mdPath: string,
-  providedContent?: string
+  providedContent?: string,
+  englishContentMap?: Map<string, string>
 ): {
   fixed: boolean
   issues: string[]
@@ -3700,14 +3701,28 @@ function processMarkdownFile(
   if (idx === -1 || idx + 2 >= parts.length) {
     issues.push("No translations segment found; skipping formatting sync")
   } else {
-    // Use path.resolve to preserve absolute paths (path.join loses leading /)
-    const englishPath = path.resolve(
-      path.sep,
-      ...parts.slice(0, idx),
-      ...parts.slice(idx + 2) // drop translations/<lang>
-    )
-    if (fs.existsSync(englishPath)) {
-      englishMd = fs.readFileSync(englishPath, "utf8")
+    // Derive the relative English path (e.g. public/content/bridges/index.md)
+    const englishRelPath = [...parts.slice(0, idx), ...parts.slice(idx + 2)]
+      .join(path.sep)
+      // Strip leading absolute prefix to get repo-relative path
+      .replace(/^.*?public\/content\//, "public/content/")
+
+    // Try in-memory map first (from GitHub API), then fall back to disk
+    if (englishContentMap?.has(englishRelPath)) {
+      englishMd = englishContentMap.get(englishRelPath)!
+    } else {
+      // Absolute path for disk fallback (local/CLI usage)
+      const englishPath = path.resolve(
+        path.sep,
+        ...parts.slice(0, idx),
+        ...parts.slice(idx + 2) // drop translations/<lang>
+      )
+      if (fs.existsSync(englishPath)) {
+        englishMd = fs.readFileSync(englishPath, "utf8")
+      }
+    }
+
+    if (englishMd) {
       // Fix detached heading anchors BEFORE syncing IDs
       {
         const snapshot = content
@@ -3719,6 +3734,11 @@ function processMarkdownFile(
       }
       content = syncHeaderIdsWithEnglish(content, englishMd)
     } else {
+      const englishPath = path.resolve(
+        path.sep,
+        ...parts.slice(0, idx),
+        ...parts.slice(idx + 2)
+      )
       issues.push(`English source missing: ${path.relative(ROOT, englishPath)}`)
     }
   }
@@ -4195,7 +4215,8 @@ function languagesFromEnv(): string[] | undefined {
 
 export async function runSanitizer(
   filesWithContent?: Array<{ path: string; content: string }>,
-  langs?: string[]
+  langs?: string[],
+  englishContentMap?: Map<string, string>
 ) {
   console.log("[SANITIZE] Starting post-import sanitizer")
   await loadFranc()
@@ -4322,7 +4343,8 @@ export async function runSanitizer(
       : null
     const { fixed, issues, content } = processMarkdownFile(
       fileInfo.path,
-      fileInfo.content
+      fileInfo.content,
+      englishContentMap
     )
     if (fixed) {
       mdFixed++
