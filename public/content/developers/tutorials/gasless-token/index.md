@@ -790,10 +790,8 @@ I hope to publish tutorials about adding these features in the near future.
 [See here for more of my work](https://cryptodocguy.pro/).
 
 
-<!-- 
+{/*  
 
 "Hardwired" signature. If the algorithm used for `ecrecover` is broken, for example by [Quantum Computing](/roadmap/future-proofing/#quantum-resistance), the signatures that the user proxy relies on will no longer be available. The solution is [EIP-1271]
 
--->
-
-7702, 4337, and 1271.
+*/}
