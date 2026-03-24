@@ -500,7 +500,7 @@ contract ERC20 is Context, IERC20 {
 
 ```solidity
         _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount,
-             "ERC20: బదిలీ మొత్తం అలవెన్స్‌ను మించిపోయింది"));
+             "ERC20: transfer amount exceeds allowance"));
         return true;
     }
 ```
@@ -607,8 +607,8 @@ B:
 &nbsp;
 
 ```solidity
-        require(sender != address(0), "ERC20: సున్నా చిరునామా నుండి బదిలీ");
-        require(recipient != address(0), "ERC20: సున్నా చిరునామాకు బదిలీ");
+        require(sender != address(0), "ERC20: transfer from the zero address");
+        require(recipient != address(0), "ERC20: transfer to the zero address");
 ```
 
 ఇతీరియములో సున్నా చిరునామాను ఎవరూ నిజంగా కలిగి లేరు (అంటే, ఎవరికి సరిపోలే పబ్లిక్ కీ సున్నా చిరునామాకు రూపాంతరం చెందుతుందో ఆ ప్రైవేట్ కీ ఎవరికీ తెలియదు). ప్రజలు ఆ చిరునామాను ఉపయోగించినప్పుడు, అది సాధారణంగా ఒక సాఫ్ట్‌వేర్ బగ్ - కాబట్టి పంపినవారు లేదా గ్రహీతగా సున్నా చిరునామాను ఉపయోగించినట్లయితే మేము విఫలమవుతాము.
@@ -631,7 +631,7 @@ B:
 &nbsp;
 
 ```solidity
-        _balances[sender] = _balances[sender].sub(amount, "ERC20: బదిలీ మొత్తం బ్యాలెన్స్‌ను మించిపోయింది");
+        _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
         _balances[recipient] = _balances[recipient].add(amount);
 ```
 
@@ -664,7 +664,7 @@ B:
      * - `to` సున్నా చిరునామాగా ఉండకూడదు.
      */
     function _mint(address account, uint256 amount) internal virtual {
-        require(account != address(0), "ERC20: సున్నా చిరునామాకు మింట్");
+        require(account != address(0), "ERC20: mint to the zero address");
         _beforeTokenTransfer(address(0), account, amount);
         _totalSupply = _totalSupply.add(amount);
         _balances[account] = _balances[account].add(amount);
@@ -688,11 +688,11 @@ B:
      * - `account` కనీసం `amount` టోకెన్‌లను కలిగి ఉండాలి.
      */
     function _burn(address account, uint256 amount) internal virtual {
-        require(account != address(0), "ERC20: సున్నా చిరునామా నుండి బర్న్");
+        require(account != address(0), "ERC20: burn from the zero address");
 
         _beforeTokenTransfer(account, address(0), amount);
 
-        _balances[account] = _balances[account].sub(amount, "ERC20: బర్న్ మొత్తం బ్యాలెన్స్‌ను మించిపోయింది");
+        _balances[account] = _balances[account].sub(amount, "ERC20: burn amount exceeds balance");
         _totalSupply = _totalSupply.sub(amount);
         emit Transfer(account, address(0), amount);
     }
@@ -719,8 +719,8 @@ B:
      * - `spender` సున్నా చిరునామాగా ఉండకూడదు.
      */
     function _approve(address owner, address spender, uint256 amount) internal virtual {
-        require(owner != address(0), "ERC20: సున్నా చిరునామా నుండి ఆమోదం");
-        require(spender != address(0), "ERC20: సున్నా చిరునామాకు ఆమోదం");
+        require(owner != address(0), "ERC20: approve from the zero address");
+        require(spender != address(0), "ERC20: approve to the zero address");
 
         _allowances[owner][spender] = amount;
 ```
