@@ -1,6 +1,6 @@
 ---
 title: Account di Ethereum
-description: Una spiegazione degli account di Ethereum: le loro strutture dati e la loro relazione con la crittografia a coppie di chiavi.
+description: "Una spiegazione degli account di Ethereum: le loro strutture dati e la loro relazione con la crittografia a coppie di chiavi."
 lang: it
 ---
 
