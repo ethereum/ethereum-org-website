@@ -2409,8 +2409,9 @@ function fixMangledDocLinks(content: string): {
 }
 
 /**
- * Wrap frontmatter string values containing non-ASCII characters in double quotes.
- * Prevents YAML parsing issues with accented characters.
+ * Wrap frontmatter string values in double quotes when they contain characters
+ * that break YAML parsing: non-ASCII characters, colon-space (`: `), or
+ * space-hash (` #`) sequences.
  */
 function quoteFrontmatterNonAscii(content: string): {
   content: string
@@ -2456,9 +2457,18 @@ function quoteFrontmatterNonAscii(content: string): {
         continue
       }
 
-      // Check if value contains non-ASCII characters
-      // eslint-disable-next-line no-control-regex
-      if (/[^\x00-\x7F]/.test(value)) {
+      // Check if value needs quoting:
+      // 1. Contains non-ASCII characters (accented chars, CJK, etc.)
+      // 2. Contains YAML-special sequences that break parsing
+      //    - `: ` (colon-space) triggers nested mapping error
+      //    - ` #` (space-hash) triggers inline comment
+      const needsQuoting =
+        // eslint-disable-next-line no-control-regex
+        /[^\x00-\x7F]/.test(value) ||
+        /: /.test(trimmedValue) ||
+        / #/.test(trimmedValue)
+
+      if (needsQuoting) {
         // Escape any existing double quotes in the value
         const escapedValue = trimmedValue.replace(/"/g, '\\"')
         lines[i] = `${prefix}"${escapedValue}"`
@@ -3842,7 +3852,7 @@ function processMarkdownFile(
   )
   applyFix(
     () => quoteFrontmatterNonAscii(content),
-    (n) => `Quoted ${n} frontmatter values with non-ASCII chars`
+    (n) => `Quoted ${n} frontmatter values with unsafe YAML chars`
   )
   applyFix(
     () => fixAsciiGuillemets(content),
