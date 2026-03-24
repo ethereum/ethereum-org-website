@@ -3,7 +3,7 @@ title: Mulai pengembangan frontend dapp Anda dengan create-eth-app
 description: Gambaran umum tentang cara menggunakan create-eth-app dan fitur-fiturnya
 author: "Markus Waas"
 tags:
-  ["frontend", "javascript", "ethers.js", "the graph", "defi"]
+  ["frontend", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 lang: id
 published: 2020-04-27

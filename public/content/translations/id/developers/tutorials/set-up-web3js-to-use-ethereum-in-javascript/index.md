@@ -2,7 +2,7 @@
 title: Siapkan web3.js untuk menggunakan blockchain Ethereum di JavaScript
 description: Pelajari cara menyiapkan dan mengonfigurasi pustaka web3.js untuk berinteraksi dengan blockchain Ethereum dari aplikasi JavaScript.
 author: "jdourlens"
-tags: ["web3.js", "javascript"]
+tags: ["web3.js", "JavaScript"]
 skill: beginner
 lang: id
 published: 2020-04-11

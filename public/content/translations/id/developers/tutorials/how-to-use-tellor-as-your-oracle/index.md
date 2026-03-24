@@ -3,7 +3,7 @@ title: Cara Menyiapkan Tellor sebagai Oracle Anda
 description: Panduan untuk memulai integrasi oracle Tellor ke dalam protokol Anda
 author: "Tellor"
 lang: id
-tags: ["solidity", "kontrak pintar", "oracle"]
+tags: ["Solidity", "kontrak pintar", "oracle"]
 skill: beginner
 published: 2021-06-29
 source: Tellor Docs

@@ -2,8 +2,8 @@
 title: Berinteraksi dengan kontrak lain dari Solidity
 description: Cara menerapkan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengannya
 author: "jdourlens"
-tags: ["kontrak pintar", "solidity", "remix", "menerapkan", "komposabilitas"]
-skill: lanjutan
+tags: ["kontrak pintar", "Solidity", "Remix", "menerapkan", "komposabilitas"]
+skill: advanced
 lang: id
 published: 2020-04-05
 source: EthereumDev

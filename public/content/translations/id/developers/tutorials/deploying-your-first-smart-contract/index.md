@@ -2,7 +2,7 @@
 title: Menerapkan kontrak pintar pertama Anda
 description: Pengenalan tentang cara menerapkan kontrak pintar pertama Anda di testnet Ethereum
 author: "jdourlens"
-tags: ["kontrak pintar", "remix", "solidity", "menerapkan"]
+tags: ["kontrak pintar", "Remix", "Solidity", "menerapkan"]
 skill: beginner
 lang: id
 published: 2020-04-03

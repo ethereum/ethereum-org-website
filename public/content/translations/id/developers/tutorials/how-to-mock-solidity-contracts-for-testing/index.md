@@ -3,8 +3,8 @@ title: Cara membuat mock kontrak pintar Solidity untuk pengujian
 description: Mengapa Anda harus mengolok-olok kontrak Anda saat pengujian
 author: Markus Waas
 lang: id
-tags: ["solidity", "kontrak pintar", "pengujian", "mocking"]
-skill: menengah
+tags: ["Solidity", "kontrak pintar", "pengujian", "mocking"]
+skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

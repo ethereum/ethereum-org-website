@@ -3,7 +3,7 @@ title: Panduan untuk alat keamanan kontrak pintar
 description: Gambaran umum tentang tiga teknik pengujian dan analisis program yang berbeda
 author: "Trailofbits"
 lang: id
-tags: ["solidity", "kontrak pintar", "keamanan"]
+tags: ["Solidity", "kontrak pintar", "keamanan"]
 skill: intermediate
 published: 2020-09-07
 source: Building secure contracts

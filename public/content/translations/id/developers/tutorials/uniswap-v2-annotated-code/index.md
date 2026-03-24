@@ -2,7 +2,7 @@
 title: "Penelusuran Kontrak Uniswap-v2"
 description: Bagaimana cara kerja kontrak Uniswap-v2? Mengapa ditulis seperti itu?
 author: Ori Pomerantz
-tags: ["solidity", "dapps"]
+tags: ["Solidity", "dapps"]
 skill: intermediate
 published: 2021-05-01
 lang: id

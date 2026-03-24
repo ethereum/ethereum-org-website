@@ -2,7 +2,7 @@
 title: "Beberapa trik yang digunakan oleh token penipuan dan cara mendeteksinya"
 description: Dalam tutorial ini kita membedah sebuah token penipuan untuk melihat beberapa trik yang dimainkan oleh penipu, bagaimana mereka mengimplementasikannya, dan bagaimana kita dapat mendeteksinya.
 author: Ori Pomerantz
-tags: ["penipuan", "solidity", "erc-20", "javascript", "typescript"]
+tags: ["penipuan", "Solidity", "erc-20", "JavaScript", "TypeScript"]
 skill: intermediate
 published: 2023-09-15
 lang: id

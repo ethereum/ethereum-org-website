@@ -2,7 +2,7 @@
 title: Memulai Pengembangan Ethereum
 description: "Ini adalah panduan pemula untuk memulai pengembangan Ethereum. Kami akan memandu Anda dari menyiapkan titik akhir API, membuat permintaan baris perintah, hingga menulis skrip web3 pertama Anda! Tidak diperlukan pengalaman pengembangan blockchain!"
 author: "Elan Halpern"
-tags: ["javascript", "ethers.js", "node", "kueri", "alchemy"]
+tags: ["JavaScript", "ethers.js", "node", "kueri", "Alchemy"]
 skill: beginner
 lang: id
 published: 2020-10-30

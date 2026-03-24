@@ -3,7 +3,7 @@ title: Menggunakan WebSockets
 description: Panduan menggunakan WebSockets dan Alchemy untuk membuat permintaan JSON-RPC dan berlangganan ke event.
 author: "Elan Halpern"
 lang: id
-tags: ["alchemy", "websockets", "kueri", "javascript"]
+tags: ["Alchemy", "websockets", "kueri", "JavaScript"]
 skill: beginner
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3

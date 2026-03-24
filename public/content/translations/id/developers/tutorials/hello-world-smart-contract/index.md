@@ -2,7 +2,7 @@
 title: Kontrak Pintar Hello World untuk Pemula
 description: Tutorial pengantar tentang penulisan dan penerapan kontrak pintar sederhana di Ethereum.
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "kontrak pintar", "menerapkan"]
+tags: ["Solidity", "Hardhat", "Alchemy", "kontrak pintar", "menerapkan"]
 skill: beginner
 lang: id
 published: 2021-03-31

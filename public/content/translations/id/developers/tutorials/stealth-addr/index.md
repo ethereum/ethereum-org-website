@@ -2,7 +2,7 @@
 title: "Menggunakan Alamat Siluman"
 description: "Alamat siluman memungkinkan pengguna untuk mentransfer aset secara anonim. Setelah membaca artikel ini, Anda akan dapat: Menjelaskan apa itu alamat siluman dan bagaimana cara kerjanya, memahami cara menggunakan alamat siluman dengan cara yang menjaga anonimitas, dan menulis aplikasi berbasis web yang menggunakan alamat siluman."
 author: Ori Pomerantz
-tags: ["Alamat siluman", "privasi", "kriptografi", "rust", "wasm"]
+tags: ["Alamat siluman", "privasi", "kriptografi", "Rust", "wasm"]
 skill: intermediate
 published: 2025-11-30
 lang: id

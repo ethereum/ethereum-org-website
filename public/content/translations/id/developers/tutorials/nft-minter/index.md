@@ -2,7 +2,7 @@
 title: Tutorial Minter NFT
 description: Dalam tutorial ini, Anda akan membangun minter NFT dan mempelajari cara membuat dapp full stack dengan menghubungkan kontrak pintar Anda ke frontend React menggunakan MetaMask dan alat Web3.
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "kontrak pintar", "frontend", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "kontrak pintar", "frontend", "Pinata", "erc-721"]
 skill: intermediate
 lang: id
 published: 2021-10-06

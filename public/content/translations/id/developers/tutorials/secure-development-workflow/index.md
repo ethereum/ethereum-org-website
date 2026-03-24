@@ -2,11 +2,11 @@
 title: Daftar periksa keamanan kontrak pintar
 description: Alur kerja yang disarankan untuk menulis kontrak pintar yang aman
 author: "Trailofbits"
-tags: ["kontrak pintar", "keamanan", "solidity"]
-skill: menengah
+tags: ["kontrak pintar", "keamanan", "Solidity"]
+skill: intermediate
 lang: id
 published: 2020-09-07
-source: Membangun kontrak yang aman
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

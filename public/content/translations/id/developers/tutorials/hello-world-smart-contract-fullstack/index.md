@@ -4,9 +4,9 @@ description: Tutorial pengantar tentang menulis dan menerapkan kontrak pintar se
 author: "nstrike2"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "kontrak pintar",
     "menerapkan",
     "penjelajah blok",

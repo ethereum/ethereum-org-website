@@ -2,7 +2,7 @@
 title: "Building a user interface for your contract"
 description: Menggunakan komponen modern seperti TypeScript, React, Vite, dan Wagmi, kita akan membahas antarmuka pengguna yang modern namun minimalis, dan mempelajari cara menghubungkan dompet ke antarmuka pengguna, memanggil kontrak pintar untuk membaca informasi, mengirim transaksi ke kontrak pintar, dan memantau peristiwa dari kontrak pintar untuk mengidentifikasi perubahan.
 author: Ori Pomerantz
-tags: ["typescript", "react", "vite", "wagmi", "frontend"]
+tags: ["TypeScript", "react", "vite", "wagmi", "frontend"]
 skill: beginner
 published: 2023-11-01
 lang: id

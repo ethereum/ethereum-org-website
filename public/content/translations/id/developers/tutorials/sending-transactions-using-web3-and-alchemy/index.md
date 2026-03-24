@@ -2,7 +2,7 @@
 title: Mengirim Transaksi Menggunakan Web3
 description: "Ini adalah panduan ramah pemula untuk mengirim transaksi Ethereum menggunakan Web3. Ada tiga langkah utama untuk mengirim transaksi ke blockchain Ethereum: membuat, menandatangani, dan menyiarkan. Kita akan membahas ketiganya."
 author: "Elan Halpern"
-tags: ["transaksi", "web3.js", "alchemy"]
+tags: ["transaksi", "web3.js", "Alchemy"]
 skill: beginner
 lang: id
 published: 2020-11-04

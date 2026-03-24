@@ -3,7 +3,7 @@ title: "Panduan Kontrak ERC-20"
 description: Apa saja yang ada di dalam kontrak ERC-20 OpenZeppelin dan mengapa itu ada di sana?
 author: Ori Pomerantz
 lang: id
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
 published: 2021-03-09
 ---

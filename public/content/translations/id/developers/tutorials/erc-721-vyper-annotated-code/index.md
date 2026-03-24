@@ -3,7 +3,7 @@ title: "Panduan Kontrak ERC-721 Vyper"
 description: Kontrak ERC-721 Ryuya Nakamura dan cara kerjanya
 author: Ori Pomerantz
 lang: id
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 published: 2021-04-01
 ---

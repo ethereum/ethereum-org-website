@@ -2,7 +2,7 @@
 title: Transfer dan persetujuan token ERC-20 dari kontrak pintar solidity
 description: Bangun kontrak pintar DEX yang menangani transfer dan persetujuan token ERC-20 menggunakan Solidity.
 author: "jdourlens"
-tags: ["kontrak pintar", "token", "solidity", "erc-20"]
+tags: ["kontrak pintar", "token", "Solidity", "erc-20"]
 skill: intermediate
 lang: id
 published: 2020-04-07

@@ -55,8 +55,7 @@ Anda dapat menggunakan [chainlist.org](http://chainlist.org) untuk menemukan det
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Ingin mempelajari lebih lanjut?
-</div>
+  <div>Ingin mempelajari lebih lanjut?</div>
   <ButtonLink href="/guides/">
     Lihat panduan kami yang lain
   </ButtonLink>

@@ -2,7 +2,7 @@
 title: Panduan keamanan kontrak pintar
 description: Daftar periksa panduan keamanan untuk dipertimbangkan saat membangun dapp Anda
 author: "Trailofbits"
-tags: ["solidity", "kontrak pintar", "keamanan"]
+tags: ["Solidity", "kontrak pintar", "keamanan"]
 skill: intermediate
 lang: id
 published: 2020-09-06

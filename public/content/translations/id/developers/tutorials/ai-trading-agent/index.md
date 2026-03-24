@@ -2,7 +2,7 @@
 title: Buat agen perdagangan AI Anda sendiri di Ethereum
 description: Dalam tutorial ini Anda akan belajar cara membuat agen perdagangan AI sederhana. Agen ini membaca informasi dari blockchain, meminta rekomendasi dari LLM berdasarkan informasi tersebut, melakukan perdagangan yang direkomendasikan LLM, lalu menunggu dan mengulanginya.
 author: Ori Pomerantz
-tags: ["AI", "perdagangan", "agen", "python"]
+tags: ["AI", "perdagangan", "agen", "Python"]
 skill: intermediate
 published: 2026-02-13
 lang: id

@@ -2,8 +2,8 @@
 title: Mencatat data dari kontrak pintar dengan event
 description: Pengenalan tentang event kontrak pintar dan bagaimana Anda dapat menggunakannya untuk mencatat data
 author: "jdourlens"
-tags: ["kontrak pintar", "remix", "solidity", "event"]
-skill: menengah
+tags: ["kontrak pintar", "Remix", "Solidity", "event"]
+skill: intermediate
 lang: id
 published: 2020-04-03
 source: EthereumDev

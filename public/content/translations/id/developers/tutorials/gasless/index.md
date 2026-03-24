@@ -2,8 +2,8 @@
 title: "Mensponsori biaya gas: Cara menanggung biaya transaksi untuk pengguna Anda"
 description: Sangat mudah untuk membuat kunci pribadi dan alamat; ini hanya masalah menjalankan perangkat lunak yang tepat. Namun, ada banyak tempat di dunia di mana mendapatkan ETH untuk mengirim transaksi jauh lebih sulit. Dalam tutorial ini Anda akan mempelajari cara menanggung biaya gas onchain untuk mengeksekusi data terstruktur offchain yang ditandatangani pengguna di kontrak pintar Anda. Anda meminta pengguna menandatangani struktur yang berisi informasi transaksi, yang kemudian dikirimkan oleh kode offchain Anda ke blockchain sebagai transaksi.
 author: Ori Pomerantz
-tags: ["tanpa gas", "solidity", "eip-712", "transaksi meta"]
-skill: menengah
+tags: ["tanpa gas", "Solidity", "eip-712", "transaksi meta"]
+skill: intermediate
 lang: id
 published: 2026-02-27
 ---

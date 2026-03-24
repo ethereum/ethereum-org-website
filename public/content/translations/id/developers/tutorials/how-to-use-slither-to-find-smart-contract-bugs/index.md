@@ -3,10 +3,10 @@ title: Cara menggunakan Slither untuk menemukan bug kontrak pintar
 description: Cara menggunakan Slither untuk secara otomatis menemukan bug dalam kontrak pintar
 author: Trailofbits
 lang: id
-tags: ["solidity", "kontrak pintar", "keamanan", "pengujian"]
+tags: ["Solidity", "kontrak pintar", "keamanan", "pengujian"]
 skill: advanced
 published: 2020-06-09
-source: Membangun kontrak yang aman
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 

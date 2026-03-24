@@ -3,7 +3,7 @@ title: "The Graph: Memperbaiki kueri data Web3"
 description: Blockchain itu seperti basis data tetapi tanpa SQL. Semua data ada di sana, tetapi tidak ada cara untuk mengaksesnya. Biarkan saya menunjukkan cara memperbaikinya dengan The Graph dan GraphQL.
 author: Markus Waas
 lang: id
-tags: ["solidity", "kontrak pintar", "kueri", "the graph", "react"]
+tags: ["Solidity", "kontrak pintar", "kueri", "the graph", "react"]
 skill: intermediate
 published: 2020-09-06
 source: soliditydeveloper.com

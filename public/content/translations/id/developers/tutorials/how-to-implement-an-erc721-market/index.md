@@ -2,7 +2,7 @@
 title: Cara mengimplementasikan pasar ERC-721
 description: Cara menempatkan barang yang ditokenisasi untuk dijual di papan iklan baris terdesentralisasi
 author: "Alberto Cuesta Cañada"
-tags: ["kontrak pintar", "erc-721", "solidity", "token"]
+tags: ["kontrak pintar", "erc-721", "Solidity", "token"]
 skill: intermediate
 lang: id
 published: 2020-03-19

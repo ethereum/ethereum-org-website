@@ -2,7 +2,7 @@
 title: Cara Melakukan Mint NFT (Bagian 2/3 dari Seri Tutorial NFT)
 description: Tutorial ini menjelaskan cara melakukan mint NFT di blockchain Ethereum menggunakan kontrak pintar kami dan Web3.
 author: "Sumi Mudgil"
-tags: ["ERC-721", "alchemy", "solidity", "kontrak pintar"]
+tags: ["ERC-721", "Alchemy", "Solidity", "kontrak pintar"]
 skill: beginner
 lang: id
 published: 2021-04-22
