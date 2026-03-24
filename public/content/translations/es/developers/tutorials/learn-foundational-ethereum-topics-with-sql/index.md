@@ -4,6 +4,7 @@ description: Este tutorial ayuda a los lectores a comprender los conceptos funda
 author: "Paul Apivat"
 tags: [ "SQL", "Consultas", "Transacciones" ]
 skill: beginner
+breadcrumb: "Ethereum con SQL"
 lang: es
 published: 2021-05-11
 source: paulapivat.com

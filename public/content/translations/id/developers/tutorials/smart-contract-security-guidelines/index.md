@@ -4,6 +4,7 @@ description: Daftar periksa panduan keamanan untuk dipertimbangkan saat membangu
 author: "Trailofbits"
 tags: ["Solidity", "kontrak pintar", "keamanan"]
 skill: intermediate
+breadcrumb: "Panduan keamanan"
 lang: id
 published: 2020-09-06
 source: Building secure contracts

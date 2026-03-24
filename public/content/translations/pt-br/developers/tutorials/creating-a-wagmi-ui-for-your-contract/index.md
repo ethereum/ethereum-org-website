@@ -4,6 +4,7 @@ description: "Usando componentes modernos como TypeScript, React, Vite e Wagmi, 
 author: Ori Pomerantz
 tags: [ "TypeScript", "react", "vite", "wagmi", "front-end" ]
 skill: beginner
+breadcrumb: "UI com WAGMI"
 published: 2023-11-01
 lang: pt-br
 sidebarDepth: 3

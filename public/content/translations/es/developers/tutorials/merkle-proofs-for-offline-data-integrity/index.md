@@ -4,6 +4,7 @@ description: "Garantizando la integridad de los datos on-chain para información
 author: Ori Pomerantz
 tags: [ "almacenamiento" ]
 skill: advanced
+breadcrumb: "Pruebas Merkle"
 lang: es
 published: 2021-12-30
 ---

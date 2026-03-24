@@ -6,6 +6,7 @@ tags:
   - "client"
   - "nodi"
 skill: intermediate
+breadcrumb: "Monitorare Geth"
 lang: it
 published: 2021-01-13
 ---

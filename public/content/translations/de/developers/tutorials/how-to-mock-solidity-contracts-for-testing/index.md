@@ -5,6 +5,7 @@ author: Markus Waas
 lang: de
 tags: ["solidity", "smart contracts", "testing", "mocking"]
 skill: intermediate
+breadcrumb: "Vertrags-Mocking"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

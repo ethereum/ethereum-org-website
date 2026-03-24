@@ -4,6 +4,7 @@ description: In diesem Tutorial erstellst du einen NFT-Minter und lernst, wie ma
 author: "smudgil"
 tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata"]
 skill: intermediate
+breadcrumb: "NFT-Minter-Dapp"
 lang: de
 published: 2021-10-06
 ---

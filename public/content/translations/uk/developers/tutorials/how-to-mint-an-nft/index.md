@@ -10,6 +10,7 @@ tags:
     "Смарт-контракти"
   ]
 skill: beginner
+breadcrumb: "Mint NFT"
 lang: uk
 published: 2021-04-22
 ---

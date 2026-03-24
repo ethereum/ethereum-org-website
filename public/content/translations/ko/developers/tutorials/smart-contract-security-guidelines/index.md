@@ -4,6 +4,7 @@ description: "탈중앙화앱을 빌드할 때 고려해야 할 보안 가이드
 author: "Trailofbits"
 tags: [ "Solidity", "스마트 컨트랙트", "보안" ]
 skill: intermediate
+breadcrumb: "보안 가이드라인"
 lang: ko
 published: 2020-09-06
 source: Building secure contracts

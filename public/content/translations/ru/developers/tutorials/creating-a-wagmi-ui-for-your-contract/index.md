@@ -4,6 +4,7 @@ description: "Используя современные компоненты, т
 author: Ori Pomerantz
 tags: [ "TypeScript", "react", "vite", "wagmi", "интерфейс" ]
 skill: beginner
+breadcrumb: "UI с WAGMI"
 published: 2023-11-01
 lang: ru
 sidebarDepth: 3

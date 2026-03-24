@@ -6,6 +6,7 @@ tags:
   - "web3.js"
   - "javascript"
 skill: beginner
+breadcrumb: "Configurare web3.js"
 lang: it
 published: 2020-04-11
 source: EthereumDev

@@ -4,6 +4,7 @@ description: Pelajari cara mengimplementasikan standar token ERC-20 dengan conto
 author: "jdourlens"
 tags: ["kontrak pintar", "token", "Solidity", "erc-20"]
 skill: beginner
+breadcrumb: "Dasar token ERC-20"
 lang: id
 published: 2020-04-05
 source: EthereumDev

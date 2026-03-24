@@ -11,6 +11,7 @@ tags:
     "இணைதிறன்"
   ]
 skill: advanced
+breadcrumb: "ஒப்பந்த தொடர்பு"
 lang: ta
 published: 2020-04-05
 source: EthereumDev

@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: vi
 tags: [ "Solidity", "hợp đồng thông minh", "tính bảo mật" ]
 skill: intermediate
+breadcrumb: "Công cụ bảo mật"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

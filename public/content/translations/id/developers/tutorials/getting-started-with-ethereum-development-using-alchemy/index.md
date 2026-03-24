@@ -4,6 +4,7 @@ description: "Ini adalah panduan pemula untuk memulai pengembangan Ethereum. Kam
 author: "Elan Halpern"
 tags: ["JavaScript", "ethers.js", "node", "kueri", "Alchemy"]
 skill: beginner
+breadcrumb: "Memulai"
 lang: id
 published: 2020-10-30
 source: Medium

@@ -4,6 +4,7 @@ description: Alur kerja yang disarankan untuk menulis kontrak pintar yang aman
 author: "Trailofbits"
 tags: ["kontrak pintar", "keamanan", "Solidity"]
 skill: intermediate
+breadcrumb: "Daftar keamanan"
 lang: id
 published: 2020-09-07
 source: Building secure contracts

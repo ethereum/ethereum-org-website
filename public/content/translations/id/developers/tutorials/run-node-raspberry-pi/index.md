@@ -5,6 +5,7 @@ author: "EthereumOnArm"
 tags: ["klien", "lapisan eksekusi", "lapisan konsensus", "node"]
 lang: id
 skill: intermediate
+breadcrumb: "Node Raspberry Pi"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

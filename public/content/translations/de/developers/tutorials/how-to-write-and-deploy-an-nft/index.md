@@ -4,6 +4,7 @@ description: "Dieses Tutorial ist Teil 1 einer Serie über NFTs, die Ihnen Schri
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
+breadcrumb: "NFT erstellen und deployen"
 lang: de
 published: 2021-04-22
 ---

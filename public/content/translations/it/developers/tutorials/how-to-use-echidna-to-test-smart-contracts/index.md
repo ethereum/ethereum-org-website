@@ -10,6 +10,7 @@ tags:
   - "test"
   - "fuzzing"
 skill: advanced
+breadcrumb: "Echidna"
 published: 2020-04-10
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

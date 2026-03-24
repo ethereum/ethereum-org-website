@@ -4,6 +4,7 @@ description: onchain games are limited because they cannot keep any hidden infor
 author: Ori Pomerantz
 tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud", "privacy"]
 skill: advanced
+breadcrumb: ZK secret state
 lang: en
 published: 2025-03-15
 ---

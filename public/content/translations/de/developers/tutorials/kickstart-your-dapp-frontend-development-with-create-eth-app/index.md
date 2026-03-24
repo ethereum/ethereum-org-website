@@ -5,6 +5,7 @@ author: "Markus Waas"
 tags:
   ["frontend", "javascript", "ethers.js", "the graph", "defi"]
 skill: beginner
+breadcrumb: "create-eth-app"
 lang: de
 published: 2020-04-27
 source: soliditydeveloper.com

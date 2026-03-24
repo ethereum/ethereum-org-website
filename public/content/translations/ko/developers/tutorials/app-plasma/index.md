@@ -4,6 +4,7 @@ description: "이 튜토리얼에서는 예금을 위한 반비밀 은행을 구
 author: Ori Pomerantz
 tags: [ "영지식", "서버", "오프체인", "개인정보 보호" ]
 skill: advanced
+breadcrumb: "App Plasma"
 lang: ko
 published: 2025-10-15
 ---

@@ -4,6 +4,7 @@ description: "Đây là hướng dẫn thân thiện với người mới bắt 
 author: "Elan Halpern"
 tags: [ "các giao dịch", "web3.js", "Alchemy" ]
 skill: beginner
+breadcrumb: "Gửi giao dịch"
 lang: vi
 published: 2020-11-04
 source: Alchemy docs

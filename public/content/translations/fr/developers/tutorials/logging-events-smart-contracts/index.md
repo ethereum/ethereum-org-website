@@ -10,6 +10,7 @@ tags:
     "événements"
   ]
 skill: intermediate
+breadcrumb: "Journalisation d'evenements"
 lang: fr
 published: 2020-04-03
 source: EthereumDev

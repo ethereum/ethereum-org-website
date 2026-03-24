@@ -4,6 +4,7 @@ description: Pengenalan tentang event kontrak pintar dan bagaimana Anda dapat me
 author: "jdourlens"
 tags: ["kontrak pintar", "Remix", "Solidity", "event"]
 skill: intermediate
+breadcrumb: "Pencatatan event"
 lang: id
 published: 2020-04-03
 source: EthereumDev

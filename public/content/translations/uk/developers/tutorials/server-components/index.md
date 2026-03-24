@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: uk
 tags: [ "агент", "сервер", "поза ланцюжком" ]
 skill: beginner
+breadcrumb: "Серверні компоненти"
 published: 2024-07-15
 ---
 

@@ -4,6 +4,7 @@ description: "Запропонований робочий процес для з
 author: "Trailofbits"
 tags: [ "Смарт-контракти", "захист", "мова програмування" ]
 skill: intermediate
+breadcrumb: "Чек-ліст безпеки"
 lang: uk
 published: 2020-09-07
 source: Building secure contracts

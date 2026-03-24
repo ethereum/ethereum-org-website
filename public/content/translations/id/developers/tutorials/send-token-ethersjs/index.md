@@ -4,6 +4,7 @@ description: Panduan ramah pemula untuk mengirim token menggunakan ethers.js.
 author: Kim YongJun
 tags: ["ETHERS.JS", "ERC-20", "TOKEN"]
 skill: beginner
+breadcrumb: "Kirim token"
 lang: id
 published: 2021-04-06
 ---

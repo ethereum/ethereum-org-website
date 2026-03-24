@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: sw
 tags: ["agent", "server", "offchain"]
 skill: beginner
+breadcrumb: "Vipengele vya seva"
 published: 2024-07-15
 ---
 

@@ -4,6 +4,7 @@ description: "Wie funktioniert die Standard-Brücke für Optimism? Warum funktio
 author: Ori Pomerantz
 tags: ["solidity", "bridge", "layer 2"]
 skill: intermediate
+breadcrumb: "Optimism-Bridge"
 published: 2022-03-30
 lang: de
 ---

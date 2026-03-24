@@ -4,6 +4,7 @@ description: "Как работает контракт Uniswap-v2? Почему 
 author: Ori Pomerantz
 tags: [ "Solidity" ]
 skill: intermediate
+breadcrumb: "Обзор Uniswap v2"
 published: 2021-05-01
 lang: ru
 ---

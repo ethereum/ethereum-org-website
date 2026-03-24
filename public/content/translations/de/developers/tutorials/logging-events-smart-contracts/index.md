@@ -4,6 +4,7 @@ description: "Eine Einführung in Smart-Contract-Ereignisse und wie Sie diese zu
 author: "jdourlens"
 tags: ["smart contracts", "remix", "solidity", "events"]
 skill: intermediate
+breadcrumb: "Event-Protokollierung"
 lang: de
 published: 2020-04-03
 source: EthereumDev

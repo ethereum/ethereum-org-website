@@ -5,6 +5,7 @@ author: "Tellor"
 lang: id
 tags: ["Solidity", "kontrak pintar", "oracle"]
 skill: beginner
+breadcrumb: "Tellor oracle"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

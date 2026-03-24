@@ -4,6 +4,7 @@ description: "Ini adalah panduan ramah pemula untuk mengirim transaksi Ethereum 
 author: "Elan Halpern"
 tags: ["transaksi", "web3.js", "Alchemy"]
 skill: beginner
+breadcrumb: "Kirim transaksi"
 lang: id
 published: 2020-11-04
 source: Alchemy docs

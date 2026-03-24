@@ -4,6 +4,7 @@ description: Cara menempatkan barang yang ditokenisasi untuk dijual di papan ikl
 author: "Alberto Cuesta Cañada"
 tags: ["kontrak pintar", "erc-721", "Solidity", "token"]
 skill: intermediate
+breadcrumb: "Pasar ERC-721"
 lang: id
 published: 2020-03-19
 source: Hackernoon

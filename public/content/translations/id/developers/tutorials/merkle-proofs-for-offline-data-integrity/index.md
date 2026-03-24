@@ -4,6 +4,7 @@ description: Memastikan integritas data onchain untuk data yang sebagian besar d
 author: Ori Pomerantz
 tags: ["penyimpanan"]
 skill: advanced
+breadcrumb: "Bukti Merkle"
 lang: id
 published: 2021-12-30
 ---

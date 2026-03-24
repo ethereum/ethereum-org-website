@@ -11,6 +11,7 @@ tags:
     "कंपोझेबिलिटी"
   ]
 skill: advanced
+breadcrumb: "कॉन्ट्रॅक्ट संवाद"
 lang: mr
 published: 2020-04-05
 source: EthereumDev

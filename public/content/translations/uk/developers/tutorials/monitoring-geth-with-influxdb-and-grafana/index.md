@@ -4,6 +4,7 @@ description: "Налаштуйте моніторинг для вашого ву
 author: "Mario Havel"
 tags: [ "клієнти", "вузли" ]
 skill: intermediate
+breadcrumb: "Моніторинг Geth"
 lang: uk
 published: 2021-01-13
 ---

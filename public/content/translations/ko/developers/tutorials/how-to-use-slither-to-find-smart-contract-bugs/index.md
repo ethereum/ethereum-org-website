@@ -5,6 +5,7 @@ author: Trailofbits
 lang: ko
 tags: [ "Solidity", "스마트 계약", "보안", "테스트" ]
 skill: advanced
+breadcrumb: "Slither"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
