@@ -168,7 +168,7 @@ I "messaggi di uscita volontaria" firmati pre-generati non scadono più, dando c
 
 L'EIP-7514 porta a un inasprimento dell'emissione di ETH limitando il tasso di "abbandono" (churn) con cui i validatori possono unirsi alla rete a otto (8) per epoca. Poiché l'emissione di ETH è proporzionale al totale di ETH in stake, limitare il numero di validatori che si uniscono limita il _tasso di crescita_ dei nuovi ETH emessi, riducendo al contempo i requisiti hardware per gli operatori dei nodi, favorendo la decentralizzazione.
 
-<ExpandableCard title="EIP di Deneb" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento">
+<ExpandableCard title="EIP di Deneb" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>Radice del blocco della beacon chain nell'EVM</em></li>

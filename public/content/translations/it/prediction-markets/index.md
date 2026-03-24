@@ -31,7 +31,7 @@ In teoria, poiché gli scommettitori traggono profitto dall'avere ragione, i mer
 A differenza delle previsioni tradizionali, i mercati di previsione basati su blockchain sono:
 
 <CardGrid>
-  <Card title="Incentivati" emoji=":money_with_wings:" description="I partecipanti mettono in stake fondi reali, il che deduce previsioni di alta qualità."/>
+  <Card title="Incentivati" emoji=":money_with_wings:" description="I partecipanti mettono in stake fondi reali, il che incoraggia previsioni di alta qualità."/>
   <Card title="Decentralizzazione" emoji="🌎" description="L'utilizzo della blockchain e dei contratti intelligenti garantisce pagamenti trasparenti e automatizzati." />
   <Card title="Quote guidate dal mercato" emoji="🤝" description="I prezzi sono stabiliti dai trader che comprano e vendono quote di risultato, piuttosto che preimpostati da un allibratore centralizzato." />
 </CardGrid>

@@ -22,8 +22,8 @@ Lo staking come servizio ("SaaS") rappresenta una categoria di servizi di stakin
 Il protocollo di [Ethereum](/) non supporta nativamente la delega dello stake, quindi questi servizi sono stati creati per soddisfare questa domanda. Se hai 32 ETH da mettere in staking, ma non ti senti a tuo agio nel gestire l'hardware, i servizi SaaS ti consentono di delegare la parte difficile mentre guadagni le ricompense del blocco native.
 
 <CardGrid>
-  <Card title="Il tuo validatore" emoji=":desktop_computer:" description="Deposita i tuoi 32 ETH per attivare il tuo set di chiavi di firma che parteciperanno al consenso di Ethereum. Monitora i tuoi progressi con le dashboard per guardare accumularsi quelle ricompense in ETH." />
-  <Card title="Facile iniziare" emoji="🏁" description="Dimentica le specifiche hardware, la configurazione, la manutenzione del nodo e gli aggiornamenti. I fornitori SaaS ti permettono di esternalizzare la parte difficile caricando le tue credenziali di firma, consentendo loro di eseguire un validatore per tuo conto, a un piccolo costo." />
+  <Card title="Il tuo validatore" emoji=":desktop_computer:" description="Deposita i tuoi 32 ETH per attivare il tuo set di chiavi di firma che parteciperanno al consenso di Ethereum. Monitora i tuoi progressi con le dashboard per vedere le tue ricompense in ETH accumularsi." />
+  <Card title="Facile iniziare" emoji="🏁" description="Dimentica le specifiche hardware, la configurazione, la manutenzione del nodo e gli aggiornamenti. I fornitori SaaS ti permettono di esternalizzare la parte difficile caricando le tue credenziali di firma, consentendo loro di gestire un validatore per tuo conto, in cambio di una piccola commissione." />
   <Card title="Limita il tuo rischio" emoji=":shield:" description="In molti casi gli utenti non devono rinunciare all'accesso alle chiavi che consentono di prelevare o trasferire i fondi in staking. Queste sono diverse dalle chiavi di firma e possono essere archiviate separatamente per limitare (ma non eliminare) il tuo rischio come staker." />
 </CardGrid>
 

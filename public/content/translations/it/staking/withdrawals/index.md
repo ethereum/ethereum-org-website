@@ -154,7 +154,7 @@ In alternativa alla modifica dell'indirizzo di prelievo per un particolare valid
 </ExpandableCard>
 
 <ExpandableCard
-title="Cosa succede se partecipo ai token di staking o al pool di staking"
+title="Cosa succede se uso token di staking o un pool di staking?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
