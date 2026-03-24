@@ -112,7 +112,19 @@ async function main() {
     }
   }
 
-  // Phase 5: Create PR
+  // Phase 5: Re-run sanitizer after JSX translation
+  const resanitizeResult = await runPostImportSanitization(
+    sanitizerInput,
+    branchName
+  )
+
+  // Merge changed files from both sanitizer passes for PR summary
+  const allSanitizerChanges = [
+    ...sanitizeResult.changedFiles,
+    ...resanitizeResult.changedFiles,
+  ]
+
+  // Phase 6: Create PR
   const skipPr = ["1", "true", "yes", "on"].includes(
     (process.env.SKIP_PR_CREATION || "").toLowerCase()
   )
@@ -126,7 +138,7 @@ async function main() {
     await createTranslationPR(
       branchName,
       sanitizerInput,
-      sanitizeResult.changedFiles,
+      allSanitizerChanges,
       languagePairs
     )
   }
