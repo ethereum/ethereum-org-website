@@ -36,7 +36,7 @@ Untuk menjalankannya:
 1. Klon repositori.
 
    ```sh copy
-   git clone https://github.com/qbzzt/20240715-server-component.git // github.com/qbzzt/20240715-server-component.git
+   git clone https://github.com/qbzzt/20240715-server-component.git
    cd 20240715-server-component
 ```
 

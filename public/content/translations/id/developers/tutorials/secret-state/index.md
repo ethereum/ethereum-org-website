@@ -39,7 +39,7 @@ Untuk menjalankan contoh minesweeper:
 2. Klon repositori.
 
    ```sh copy
-   git clone https://github.com/qbzzt/20240901-secret-state.git // github.com/qbzzt/20240901-secret-state.git
+   git clone https://github.com/qbzzt/20240901-secret-state.git
 ```
 
 3. Instal paket-paketnya.
