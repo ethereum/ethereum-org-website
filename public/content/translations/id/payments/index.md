@@ -27,7 +27,7 @@ Ini bukanlah mimpi yang jauh—ini terjadi hari ini di Ethereum. Meskipun lembag
 Bagi jutaan orang yang bekerja di luar negeri, mengirim uang kembali ke kampung halaman adalah kebutuhan rutin. Layanan pengiriman uang tradisional sering kali membebankan biaya tinggi dan waktu pemrosesan yang lambat. Ethereum menawarkan alternatif yang menarik.
 
 <CardGrid>
-  <Card title="Biaya Lebih Murah" emoji=":money_with_wings:" description="Layanan pengiriman uang rata-rata membebankan biaya hingga $14. Transaksi Ethereum sering kali dapat diselesaikan di bawah $0,01."/>
+  <Card title="Biaya Lebih Murah" emoji=":money_with_wings:" description="Layanan pengiriman uang rata-rata membebankan biaya hingga description=4. Transaksi Ethereum sering kali dapat diselesaikan di bawah $0,01."/>
   <Card title="Transfer Lebih Cepat" emoji="📶" description="Transfer kawat internasional membutuhkan waktu beberapa hari untuk diproses. Transaksi Ethereum diselesaikan dalam hitungan menit." />
   <Card title="Terbuka untuk siapa saja" emoji="🌎" description="Anda hanya memerlukan koneksi internet dan aplikasi dompet untuk mengirim atau menerima Ether." />
 </CardGrid>

@@ -134,7 +134,7 @@ Seperti yang Anda lihat, ini melambat karena semakin banyak validator yang ada d
 ## Pertanyaan yang sering diajukan {#faq}
 
 <ExpandableCard
-title="Setelah saya memberikan alamat penarikan, dapatkah saya mengubahnya ke alamat penarikan alternatif?"
+title="Setelah memberikan alamat penarikan, bisakah saya mengubahnya ke alamat lain?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -142,7 +142,7 @@ Tidak, proses untuk memberikan kredensial penarikan adalah proses satu kali, dan
 </ExpandableCard>
 
 <ExpandableCard
-title="Mengapa alamat penarikan hanya dapat diatur satu kali?"
+title="Mengapa alamat penarikan hanya bisa diatur satu kali?"
 eventCategory="FAQ"
 eventAction="Why can a withdrawal address only be set once?"
 eventName="read more">
@@ -154,7 +154,7 @@ Sebagai alternatif untuk mengubah alamat penarikan untuk validator tertentu, pen
 </ExpandableCard>
 
 <ExpandableCard
-title="Bagaimana jika saya berpartisipasi dalam token mengunci atau mengunci gabungan"
+title="Bagaimana jika saya berpartisipasi dalam mengunci token atau kolam staking?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -183,7 +183,7 @@ Tidak, jika validator Anda masih aktif di jaringan, penarikan penuh tidak akan t
 Setelah validator menyelesaikan proses keluar, dan dengan asumsi akun memiliki kredensial penarikan, sisa saldo <em>kemudian</em> akan ditarik selama <a href="#validator-sweeping">penyapuan validator</a> berikutnya.
 </ExpandableCard>
 
-<ExpandableCard title="Dapatkah saya menarik jumlah khusus?"
+<ExpandableCard title="Bisakah saya menarik jumlah khusus?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -193,7 +193,7 @@ Tidak mungkin untuk secara manual meminta jumlah ETH tertentu untuk ditarik.
 </ExpandableCard>
 
 <ExpandableCard
-title="Saya mengoperasikan validator. Di mana saya dapat menemukan informasi lebih lanjut tentang mengaktifkan penarikan?"
+title="Saya mengoperasikan validator. Di mana saya bisa menemukan informasi lebih lanjut tentang mengaktifkan penarikan?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
@@ -204,7 +204,7 @@ Untuk mencoba pengaturan Anda di testnet terlebih dahulu, kunjungi <a href="http
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapatkah saya mengaktifkan kembali validator saya setelah keluar dengan mendepositkan lebih banyak ETH?"
+title="Bisakah saya mengaktifkan kembali validator saya setelah keluar dengan mendepositkan lebih banyak ETH?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">

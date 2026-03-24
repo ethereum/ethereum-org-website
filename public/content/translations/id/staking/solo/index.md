@@ -46,7 +46,7 @@ Saat mengoperasikan node Anda sendiri, Anda harus meluangkan waktu untuk mempela
 Semakin Anda memahami tentang perangkat lunak yang Anda jalankan dan bagaimana proof-of-stake bekerja, semakin kecil risikonya sebagai staker, dan semakin mudah untuk memperbaiki masalah apa pun yang mungkin timbul di sepanjang jalan sebagai operator node.
 </ExpandableCard>
 
-<ExpandableCard title="Nyaman dengan komputer" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+<ExpandableCard title="Terbiasa dengan komputer" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 Pengaturan node membutuhkan tingkat kenyamanan yang wajar saat bekerja dengan komputer, meskipun alat-alat baru membuatnya lebih mudah seiring waktu. Pemahaman tentang antarmuka baris perintah sangat membantu, tetapi tidak lagi diwajibkan secara ketat.
 
 Ini juga membutuhkan pengaturan perangkat keras yang sangat mendasar, dan beberapa pemahaman tentang spesifikasi minimum yang disarankan.
@@ -132,7 +132,7 @@ Ini adalah beberapa pertanyaan paling umum tentang mengunci yang patut diketahui
 Sebuah <em>validator</em> adalah entitas virtual yang hidup di Ethereum dan berpartisipasi dalam konsensus protokol Ethereum. Validator diwakili oleh saldo, kunci publik, dan properti lainnya. Sebuah <em>klien validator</em> adalah perangkat lunak yang bertindak atas nama validator dengan memegang dan menggunakan kunci pribadinya. Satu klien validator dapat memegang banyak pasangan kunci, mengendalikan banyak validator.
 </ExpandableCard>
 
-<ExpandableCard title="Bisakah saya mendepositkan lebih dari 32 ETH?">
+<ExpandableCard title="Bisakah saya menyetor lebih dari 32 ETH?">
 Ya, akun validator modern mampu menampung hingga 2048 ETH. ETH tambahan di atas 32 akan digabungkan secara bertahap, meningkat dalam kelipatan bilangan bulat seiring dengan peningkatan saldo Anda yang sebenarnya. Ini dikenal sebagai <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efektif</a> Anda.
 
 Untuk meningkatkan saldo efektif suatu akun, dan dengan demikian meningkatkan hadiah, penyangga sebesar 0,25 ETH di atas ambang batas ETH penuh harus dilewati. Misalnya, akun dengan saldo sebenarnya 32,9 dan saldo efektif 32 perlu mendapatkan 0,35 ETH lagi untuk membawa saldo sebenarnya di atas 33,25 sebelum memicu peningkatan saldo efektif.
@@ -183,7 +183,7 @@ Semakin banyak klien validator yang berjalan pada satu solusi penyimpanan cloud 
 Penalti offline sebanding dengan berapa banyak orang lain yang offline pada saat yang sama. Menggunakan VPS sangat meningkatkan risiko bahwa penalti offline akan lebih parah, dan meningkatkan risiko kebocoran kuadratik atau pemotongan jika pemadaman cukup besar. Untuk meminimalkan risiko Anda sendiri, dan risiko terhadap jaringan, pengguna sangat disarankan untuk mendapatkan dan mengoperasikan perangkat keras mereka sendiri.
 </ExpandableCard>
 
-<ExpandableCard title="Bagaimana cara membuka kunci hadiah saya atau mendapatkan kembali ETH saya?">
+<ExpandableCard title="Bagaimana cara menarik hadiah saya atau mendapatkan kembali ETH saya?">
 
 Penarikan dalam bentuk apa pun dari Beacon Chain memerlukan kredensial penarikan untuk diatur.
 

@@ -31,7 +31,7 @@ Secara teori, karena petaruh akan mendapat untung jika benar, pasar prediksi dap
 Berbeda dengan perkiraan tradisional, pasar prediksi berbasis blockchain adalah:
 
 <CardGrid>
-  <Card title="Diberi insentif" emoji=":money_with_wings:" description="Peserta melakukan stake dana nyata, yang menyimpulkan prediksi berkualitas tinggi."/>
+  <Card title="Berinsentif" emoji=":money_with_wings:" description="Peserta melakukan stake dana sungguhan, yang mendorong prediksi berkualitas tinggi."/>
   <Card title="Desentralisasi" emoji="🌎" description="Menggunakan blockchain dan kontrak pintar memastikan pembayaran yang transparan dan otomatis." />
   <Card title="Peluang yang didorong pasar" emoji="🤝" description="Harga ditetapkan oleh pedagang yang membeli dan menjual saham hasil, bukan ditetapkan sebelumnya oleh bandar taruhan terpusat." />
 </CardGrid>
