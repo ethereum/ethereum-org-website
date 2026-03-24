@@ -2,7 +2,7 @@
 title: "Creare un'interfaccia utente per il tuo contratto"
 description: Utilizzando componenti moderni come TypeScript, React, Vite e Wagmi, esamineremo un'interfaccia utente moderna ma minimale e impareremo come connettere un portafoglio all'interfaccia utente, chiamare un contratto intelligente per leggere informazioni, inviare una transazione a un contratto intelligente e monitorare gli eventi da un contratto intelligente per identificare i cambiamenti.
 author: Ori Pomerantz
-tags: ["typescript", "react", "vite", "wagmi", "frontend"]
+tags: ["TypeScript", "React", "Vite", "Wagmi", "frontend"]
 skill: beginner
 breadcrumb: UI con WAGMI
 published: 2023-11-01
@@ -291,10 +291,8 @@ In JSX è necessario che i tag "fratelli" (tag che discendono dallo stesso genit
 I pulsanti del connettore.
 
 ```tsx
-          <div>{status}
-</div>
-          <div>{error?.message}
-</div>
+          <div>{status}</div>
+          <div>{error?.message}</div>
  
 </div>
       )}

@@ -136,6 +136,7 @@ I ponti sono fondamentali per l'inserimento degli utenti negli L2 di Ethereum e 
 <Divider />
 
 ## Letture consigliate {#further-reading}
+
 - [EIP-5164: Esecuzione cross-chain](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 giugno 2022 - Brendan Asselstine_
 - [Framework di rischio per L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 luglio 2022 - Bartek Kiepuszewski_
 - ["Perché il futuro sarà multi-chain, ma non cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 gennaio 2022 - Vitalik Buterin_

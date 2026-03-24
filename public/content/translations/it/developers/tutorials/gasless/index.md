@@ -2,8 +2,8 @@
 title: "Sponsorizzare le commissioni: Come coprire i costi di transazione per i tuoi utenti"
 description: "È facile creare una chiave privata e un indirizzo; è solo questione di eseguire il software giusto. Ma ci sono molti posti al mondo in cui ottenere ETH per inviare transazioni è molto più difficile. In questo tutorial imparerai come coprire i costi del gas on-chain per l'esecuzione di dati strutturati fuori catena firmati dall'utente nel tuo contratto intelligente. Fai firmare all'utente una struttura contenente le informazioni della transazione, che il tuo codice fuori catena invia poi alla blockchain come transazione."
 author: Ori Pomerantz
-tags: ["senza gas", "solidity", "eip-712", "meta-transazioni"]
-skill: intermedio
+tags: ["senza gas", "Solidity", "eip-712", "meta-transazioni"]
+skill: intermediate
 breadcrumb: Sponsorizzazione del gas
 lang: it
 published: 2026-02-27

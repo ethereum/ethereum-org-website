@@ -4,7 +4,7 @@ description: Come usare Manticore per trovare automaticamente bug nei contratti 
 author: Trailofbits
 lang: it
 tags:
-  ["solidity", "contratti intelligenti", "sicurezza", "test", "verifica formale"]
+  ["Solidity", "contratti intelligenti", "sicurezza", "test", "verifica formale"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13

@@ -96,7 +96,7 @@ Ephemery è un tipo unico di rete di test che si ripristina completamente ogni m
 ##### Risorse
 
 - [Sito web](https://ephemery.dev/)
-- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
 - [Chat della community](https://matrix.to/#/#staker-testnet:matrix.org)
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)

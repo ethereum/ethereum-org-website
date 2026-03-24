@@ -2,7 +2,7 @@
 title: Linee guida per la sicurezza dei contratti intelligenti
 description: Una lista di controllo delle linee guida per la sicurezza da considerare quando si crea la propria dApp
 author: "Trailofbits"
-tags: ["solidity", "contratti intelligenti", "sicurezza"]
+tags: ["Solidity", "contratti intelligenti", "sicurezza"]
 skill: intermediate
 breadcrumb: Linee guida per la sicurezza
 lang: it

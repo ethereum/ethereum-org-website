@@ -2,7 +2,7 @@
 title: Contratto intelligente Hello World per principianti
 description: Tutorial introduttivo sulla scrittura e la distribuzione di un semplice contratto intelligente su Ethereum.
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "contratti intelligenti", "distribuzione"]
+tags: ["Solidity", "Hardhat", "Alchemy", "contratti intelligenti", "distribuzione"]
 skill: beginner
 breadcrumb: Contratto Hello World
 lang: it
@@ -45,7 +45,7 @@ Se non vedi Sepolia nell'elenco, vai nel menu, poi su Advanced (Avanzate) e scor
 
 ## Passaggio 4: Aggiungi ether da un rubinetto {#step-4}
 
-Per distribuire il nostro contratto intelligente sulla rete di test, avremo bisogno di alcuni finti ETH. Per ottenere ETH di Sepolia puoi andare ai [dettagli della rete Sepolia](/developers/docs/networks/#sepolia) per visualizzare un elenco di vari rubinetti. Se uno non funziona, provane un altro poiché a volte possono esaurirsi. Potrebbe volerci del tempo per ricevere i tuoi finti ETH a causa del traffico di rete. Dovresti vedere gli ETH nel tuo account Metamask subito dopo!
+Per distribuire il nostro contratto intelligente sulla rete di test, avremo bisogno di alcuni finti ETH. Per ottenere ETH di Sepolia puoi andare ai [dettagli della rete Sepolia](/developers/docs/networks/#sepolia) per visualizzare un elenco di vari rubinetti. Se uno non funziona, provane un altro poiché a volte possono esaurirsi. Potrebbe volerci del tempo per ricevere i tuoi finti ETH a causa del traffico di rete. Dovresti vedere gli ETH nel tuo account MetaMask subito dopo!
 
 ## Passaggio 5: Controlla il tuo saldo {#step-5}
 

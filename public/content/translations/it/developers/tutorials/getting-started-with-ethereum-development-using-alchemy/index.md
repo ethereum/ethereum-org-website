@@ -2,7 +2,7 @@
 title: Iniziare con lo sviluppo su Ethereum
 description: "Questa è una guida per principianti per iniziare con lo sviluppo su Ethereum. Ti accompagneremo dall'avvio di un endpoint API, all'esecuzione di una richiesta da riga di comando, fino alla scrittura del tuo primo script web3! Nessuna esperienza di sviluppo blockchain necessaria!"
 author: "Elan Halpern"
-tags: ["javascript", "ethers.js", "nodi", "query", "alchemy"]
+tags: ["JavaScript", "ethers.js", "nodi", "query", "Alchemy"]
 skill: beginner
 breadcrumb: Per iniziare
 lang: it

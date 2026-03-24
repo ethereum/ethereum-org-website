@@ -120,6 +120,7 @@ Per monitorare l'attività dei contratti tra le catene, gli sviluppatori possono
 - [Tenderly](https://tenderly.co/)
 
 ## Letture consigliate {#further-reading}
+
 - [Ponti blockchain](/bridges/) – ethereum.org
 - [L2Beat Bridge Risk Framework](https://l2beat.com/bridges/summary)
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 set 2021 – Dmitriy Berenzon

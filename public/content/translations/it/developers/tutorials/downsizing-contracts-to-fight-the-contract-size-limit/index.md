@@ -3,8 +3,8 @@ title: "Ridurre le dimensioni dei contratti per combattere il limite di dimensio
 description: Cosa puoi fare per evitare che i tuoi contratti intelligenti diventino troppo grandi?
 author: Markus Waas
 lang: it
-tags: ["solidity", "contratti intelligenti", "archiviazione"]
-skill: intermedio
+tags: ["Solidity", "contratti intelligenti", "archiviazione"]
+skill: intermediate
 breadcrumb: Ridurre le dimensioni dei contratti
 published: 2020-06-26
 source: soliditydeveloper.com

@@ -58,8 +58,7 @@ Forse sei un artista che vuole condividere il proprio lavoro utilizzando gli NFT
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Esplora, acquista o crea la tua arte/oggetti da collezione NFT...
-</div>
+  <div>Esplora, acquista o crea la tua arte/oggetti da collezione NFT...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Esplora l'arte NFT
   </ButtonLink>
@@ -68,7 +67,7 @@ Forse sei un artista che vuole condividere il proprio lavoro utilizzando gli NFT
 
 Oppure considera un biglietto per un evento sportivo. Proprio come un **organizzatore di un evento può scegliere quanti biglietti vendere**, il creatore di un NFT può decidere quante repliche esistono. A volte si tratta di repliche esatte, come 5000 biglietti di Ingresso Generale. A volte ne vengono coniati diversi molto simili, ma ognuno leggermente diverso, come un biglietto con un posto assegnato. Questi possono essere comprati e venduti peer-to-peer senza pagare i gestori dei biglietti e l'acquirente ha sempre la garanzia dell'autenticità del biglietto controllando l'indirizzo del contratto.
 
-Su ethereum.org, **gli NFT sono usati per dimostrare che le persone hanno contribuito in modo significativo** al nostro repository Github (programmato il sito web, scritto o modificato un articolo...), tradotto i nostri contenuti o partecipato alle nostre chiamate della community, e abbiamo persino il nostro nome di dominio NFT. Se contribuisci a ethereum.org, puoi richiedere un NFT [POAP](/glossary/#poap). Alcuni meetup crypto hanno usato i POAP come biglietti. [Maggiori informazioni su come contribuire](/contributing/#poap). Puoi anche esplorare la nostra pagina degli [oggetti da collezione di ethereum.org](/collectibles/) per vedere gli NFT dei traguardi della community.
+Su ethereum.org, **gli NFT sono usati per dimostrare che le persone hanno contribuito in modo significativo** al nostro repository GitHub (programmato il sito web, scritto o modificato un articolo...), tradotto i nostri contenuti o partecipato alle nostre chiamate della community, e abbiamo persino il nostro nome di dominio NFT. Se contribuisci a ethereum.org, puoi richiedere un NFT [POAP](/glossary/#poap). Alcuni meetup crypto hanno usato i POAP come biglietti. [Maggiori informazioni su come contribuire](/contributing/#poap). Puoi anche esplorare la nostra pagina degli [oggetti da collezione di ethereum.org](/collectibles/) per vedere gli NFT dei traguardi della community.
 
 ![ethereum.org POAP](./poap.png)
 

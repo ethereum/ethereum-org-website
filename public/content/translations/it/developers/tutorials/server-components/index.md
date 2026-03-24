@@ -5,7 +5,7 @@ description: "Dopo aver letto questo tutorial, sarai in grado di scrivere server
 author: Ori Pomerantz
 lang: it
 tags: ["agente", "server", "fuori catena", "dApp"]
-skill: principiante
+skill: beginner
 breadcrumb: Componenti server
 published: 2024-07-15
 ---

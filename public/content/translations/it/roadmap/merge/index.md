@@ -119,7 +119,7 @@ The Merge ha anche posto le basi per ulteriori aggiornamenti di scalabilità non
 ## Idee sbagliate su The Merge {#misconceptions}
 
 <ExpandableCard
-title="Idea sbagliata: "Eseguire un nodo richiede lo staking di 32 ETH.""
+title="Idea sbagliata: &quot;Eseguire un nodo richiede lo staking di 32 ETH.&quot;"
 contentPreview="Falso. Chiunque è libero di sincronizzare la propria copia auto-verificata di Ethereum (ovvero, eseguire un nodo). Non è richiesto alcun ETH: né prima di The Merge, né dopo The Merge, mai.">
 
 Esistono due tipi di nodi Ethereum: i nodi che possono proporre blocchi e i nodi che non possono farlo.
@@ -136,7 +136,7 @@ La capacità di chiunque di eseguire il proprio nodo è <em>assolutamente essenz
 </ExpandableCard>
 
 <ExpandableCard
-title="Idea sbagliata: "The Merge non è riuscito a ridurre le commissioni del gas.""
+title="Idea sbagliata: &quot;The Merge non è riuscito a ridurre le commissioni del gas.&quot;"
 contentPreview="Falso. The Merge è stato un cambiamento del meccanismo di consenso, non un'espansione della capacità della rete, e non è mai stato inteso per abbassare le commissioni del gas.">
 
 Le commissioni del gas sono un prodotto della domanda della rete rispetto alla capacità della rete stessa. The Merge ha deprecato l'uso della prova di lavoro, passando alla prova di stake per il consenso, ma non ha modificato in modo significativo alcun parametro che influenzi direttamente la capacità o il throughput della rete.
@@ -145,7 +145,7 @@ Con un <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadm
 </ExpandableCard>
 
 <ExpandableCard
-title="Idea sbagliata: "Le transazioni sono state accelerate in modo sostanziale da The Merge.""
+title="Idea sbagliata: &quot;Le transazioni sono state accelerate in modo sostanziale da The Merge.&quot;"
 contentPreview="Falso. Sebbene esistano alcune lievi modifiche, la velocità delle transazioni è per lo più la stessa sul livello 1 ora come lo era prima di The Merge.">
 La "velocità" di una transazione può essere misurata in diversi modi, tra cui il tempo necessario per essere inclusa in un blocco e il tempo per la finalizzazione. Entrambi cambiano leggermente, ma non in un modo che gli utenti noteranno.
 
@@ -155,7 +155,7 @@ La prova di stake ha introdotto il concetto di finalità della transazione che i
 </ExpandableCard>
 
 <ExpandableCard
-title="Idea sbagliata: "The Merge ha abilitato i prelievi di staking.""
+title="Idea sbagliata: &quot;The Merge ha abilitato i prelievi di staking.&quot;"
 contentPreview="Falso, ma i prelievi di staking sono stati successivamente abilitati tramite l'aggiornamento Shanghai/Capella.">
 
 Inizialmente dopo The Merge, gli staker potevano accedere solo alle mance delle commissioni e al MEV guadagnati come risultato delle proposte di blocco. Queste ricompense vengono accreditate su un account non di staking controllato dal validatore (noto come <em>fee recipient</em>) e sono disponibili immediatamente. Queste ricompense sono separate dalle ricompense del protocollo per l'esecuzione dei doveri del validatore.
@@ -166,7 +166,7 @@ Dall'aggiornamento della rete Shanghai/Capella, gli staker possono ora designare
 </ExpandableCard>
 
 <ExpandableCard
-title="Idea sbagliata: "Ora che The Merge è completo e i prelievi sono abilitati, gli staker potrebbero uscire tutti in una volta.""
+title="Idea sbagliata: &quot;Ora che The Merge è completo e i prelievi sono abilitati, gli staker potrebbero uscire tutti in una volta.&quot;"
 contentPreview="Falso. Le uscite dei validatori sono limitate in base alla frequenza per motivi di sicurezza.">
 Poiché l'aggiornamento Shanghai/Capella ha abilitato i prelievi, i validatori sono incentivati a prelevare il loro saldo di staking superiore a 32 ETH, poiché questi fondi non si aggiungono al rendimento e sono altrimenti bloccati. A seconda dell'APR (determinato dal totale degli ETH in staking), potrebbero essere incentivati a uscire dai loro validatori per reclamare l'intero saldo o potenzialmente mettere in staking ancora di più utilizzando le loro ricompense per guadagnare più rendimento.
 

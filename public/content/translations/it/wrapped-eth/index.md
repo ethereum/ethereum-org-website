@@ -8,8 +8,7 @@ lang: it
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Connetti il tuo portafoglio per avvolgere o svolgere ETH su qualsiasi catena su [WrapETH.com](https://www.wrapeth.com/)
-</div>
+<div>Connetti il tuo portafoglio per avvolgere o svolgere ETH su qualsiasi catena su [WrapETH.com](https://www.wrapeth.com/)</div>
 </Alert>
 
 L'Ether (ETH) è la valuta principale di Ethereum. È utilizzato per diversi scopi come lo staking, come valuta e per pagare le commissioni del gas per il calcolo. **Il WETH è di fatto una forma aggiornata di ETH con alcune funzionalità aggiuntive richieste da molte applicazioni e dai [token ERC-20](/glossary/#erc-20)**, che sono altri tipi di risorse digitali su Ethereum. Per funzionare con questi token, l'ETH deve seguire le loro stesse regole, note come standard ERC-20.
@@ -20,7 +19,7 @@ Per colmare questa lacuna, è stato creato il wrapped ETH (WETH). **Il Wrapped E
 
 **Circa il 3% dell'offerta circolante di ETH è bloccato nel contratto del token WETH**, rendendolo uno dei [contratti intelligenti](/glossary/#smart-contract) più utilizzati. Il WETH è particolarmente importante per gli utenti che interagiscono con le applicazioni della finanza decentralizzata (DeFi).
 
-## Perché dobbiamo avvolgere l'ETH come un ERC-20? {#why-do-we-need-to-wrap-eth} 
+## Perché dobbiamo avvolgere l'ETH come un ERC-20? {#why-do-we-need-to-wrap-eth}
 
 L'[ERC-20](/developers/docs/standards/tokens/erc-20/) definisce un'interfaccia standard per i token trasferibili, in modo che chiunque possa creare token che interagiscono senza problemi con le applicazioni e i token che utilizzano questo standard nell'ecosistema di Ethereum. Poiché **l'ETH precede lo standard ERC-20**, l'ETH non è conforme a questa specifica. Ciò significa che **non puoi facilmente** scambiare ETH con altri token ERC-20 o **utilizzare ETH nelle app che usano lo standard ERC-20**. Avvolgere l'ETH ti offre l'opportunità di fare quanto segue:
 

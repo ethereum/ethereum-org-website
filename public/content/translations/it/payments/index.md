@@ -60,9 +60,8 @@ Nei paesi in cui i mezzi di pagamento sono stati disconnessi dal resto del mondo
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Crea oggi stesso il tuo account Ethereum con un'app portafoglio.
-</div>
-  <ButtonLink href="/wallets/find-wallet">
+  <div>Crea oggi stesso il tuo account Ethereum con un'app portafoglio.</div>
+<ButtonLink href="/wallets/find-wallet">
     Inizia
   </ButtonLink>
 </AlertContent>
@@ -198,8 +197,7 @@ Dal facilitare rapidi soccorsi in caso di calamità al potenziamento dei lavorat
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>È ora di ottenere il tuo account Ethereum.
-</div>
+  <div>È ora di ottenere il tuo account Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Inizia!
   </ButtonLink>

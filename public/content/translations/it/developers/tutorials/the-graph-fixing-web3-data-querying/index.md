@@ -3,7 +3,7 @@ title: "The Graph: Risolvere l'interrogazione dei dati Web3"
 description: "La blockchain è come un database ma senza SQL. Tutti i dati sono lì, ma non c'è modo di accedervi. Lascia che ti mostri come risolvere questo problema con The Graph e GraphQL."
 author: Markus Waas
 lang: it
-tags: ["solidity", "contratti intelligenti", "interrogazione", "the graph", "react"]
+tags: ["Solidity", "contratti intelligenti", "interrogazione", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

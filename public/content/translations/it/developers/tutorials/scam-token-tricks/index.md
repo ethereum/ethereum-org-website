@@ -2,7 +2,7 @@
 title: "Alcuni trucchi usati dai token truffa e come rilevarli"
 description: In questo tutorial analizziamo un token truffa per vedere alcuni dei trucchi usati dai truffatori, come li implementano e come possiamo rilevarli.
 author: Ori Pomerantz
-tags: ["truffa", "solidity", "erc-20", "javascript", "typescript"]
+tags: ["truffa", "Solidity", "erc-20", "JavaScript", "TypeScript"]
 skill: intermediate
 breadcrumb: Trucchi dei token truffa
 published: 2023-09-15

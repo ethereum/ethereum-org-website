@@ -2,7 +2,7 @@
 title: Come coniare un NFT (Parte 2/3 della serie di tutorial sugli NFT)
 description: Questo tutorial descrive come coniare un NFT sulla blockchain di Ethereum usando il nostro contratto intelligente e Web3.
 author: "Sumi Mudgil"
-tags: ["ERC-721", "alchemy", "solidity", "contratti intelligenti"]
+tags: ["ERC-721", "Alchemy", "Solidity", "contratti intelligenti"]
 skill: beginner
 breadcrumb: Coniare un NFT
 lang: it

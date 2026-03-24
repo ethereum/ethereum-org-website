@@ -2,7 +2,7 @@
 title: Tutorial sul minter di NFT
 description: In questo tutorial, costruirai un minter di NFT e imparerai come creare una dApp full stack collegando il tuo contratto intelligente a un frontend React utilizzando MetaMask e strumenti Web3.
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "contratti intelligenti", "frontend", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "contratti intelligenti", "frontend", "Pinata", "erc-721"]
 skill: intermediate
 breadcrumb: dApp per coniare NFT
 lang: it

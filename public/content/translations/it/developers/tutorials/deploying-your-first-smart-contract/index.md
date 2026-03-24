@@ -2,8 +2,8 @@
 title: Distribuire il tuo primo contratto intelligente
 description: Un'introduzione alla distribuzione del tuo primo contratto intelligente su una rete di test di Ethereum
 author: "jdourlens"
-tags: ["contratti intelligenti", "remix", "solidity", "distribuzione"]
-skill: principiante
+tags: ["contratti intelligenti", "Remix", "Solidity", "distribuzione"]
+skill: beginner
 breadcrumb: Distribuisci il primo contratto
 lang: it
 published: 2020-04-03

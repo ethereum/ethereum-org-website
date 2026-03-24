@@ -2,8 +2,8 @@
 title: Registrare i dati dai contratti intelligenti con gli eventi
 description: Un'introduzione agli eventi dei contratti intelligenti e a come puoi usarli per registrare i dati
 author: "jdourlens"
-tags: ["contratti intelligenti", "remix", "solidity", "eventi"]
-skill: intermedio
+tags: ["contratti intelligenti", "Remix", "Solidity", "eventi"]
+skill: intermediate
 breadcrumb: Registrazione degli eventi
 lang: it
 published: 2020-04-03

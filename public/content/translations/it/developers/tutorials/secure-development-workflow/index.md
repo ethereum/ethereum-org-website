@@ -2,12 +2,12 @@
 title: Lista di controllo per la sicurezza dei contratti intelligenti
 description: Un flusso di lavoro suggerito per scrivere contratti intelligenti sicuri
 author: "Trailofbits"
-tags: ["contratti intelligenti", "sicurezza", "solidity"]
-skill: intermedio
+tags: ["contratti intelligenti", "sicurezza", "Solidity"]
+skill: intermediate
 breadcrumb: Lista di controllo per la sicurezza
 lang: it
 published: 2020-09-07
-source: Creare contratti sicuri
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

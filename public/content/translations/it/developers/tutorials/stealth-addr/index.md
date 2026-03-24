@@ -2,7 +2,7 @@
 title: "Usare gli indirizzi stealth"
 description: "Gli indirizzi stealth consentono agli utenti di trasferire asset in modo anonimo. Dopo aver letto questo articolo, sarai in grado di: spiegare cosa sono gli indirizzi stealth e come funzionano, capire come usare gli indirizzi stealth in modo da preservare l'anonimato e scrivere un'applicazione basata sul web che utilizza gli indirizzi stealth."
 author: Ori Pomerantz
-tags: ["Indirizzo stealth", "privacy", "crittografia", "rust", "wasm"]
+tags: ["Indirizzo stealth", "privacy", "crittografia", "Rust", "wasm"]
 skill: intermediate
 breadcrumb: Indirizzi stealth
 published: 2025-11-30
