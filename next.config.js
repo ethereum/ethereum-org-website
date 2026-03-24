@@ -139,6 +139,21 @@ module.exports = (phase) => {
               key: "X-Frame-Options",
               value: "DENY",
             },
+            {
+              // Tell Cloudflare (and any CDN that understands CDN-Cache-Control)
+              // to cache for 5 min with 1 hour stale-while-revalidate.
+              // This is independent of Cache-Control which still tells browsers max-age=0.
+              key: "CDN-Cache-Control",
+              value:
+                "public, max-age=300, stale-while-revalidate=3600, durable",
+            },
+            {
+              // Netlify-specific: override the Edge/Durable TTL to 5 min + 1 hour SWR.
+              // The plugin may override this — we're testing if it sticks.
+              key: "Netlify-CDN-Cache-Control",
+              value:
+                "public, s-maxage=300, stale-while-revalidate=3600, durable",
+            },
           ],
         },
       ]
