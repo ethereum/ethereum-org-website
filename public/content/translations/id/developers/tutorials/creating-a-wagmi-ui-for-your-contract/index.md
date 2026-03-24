@@ -290,10 +290,8 @@ Dalam JSX, tag "saudara" (tag yang diturunkan dari induk yang sama) perlu memili
 Tombol-tombol konektor.
 
 ```tsx
-          <div>{status}
-</div>
-          <div>{error?.message}
-</div>
+          <div>{status}</div>
+          <div>{error?.message}</div>
  
 </div>
       )}

@@ -58,8 +58,7 @@ Mungkin Anda adalah seorang seniman yang ingin membagikan karyanya menggunakan N
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Jelajahi, beli, atau buat seni/barang koleksi NFT Anda sendiri...
-</div>
+  <div>Jelajahi, beli, atau buat seni/barang koleksi NFT Anda sendiri...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Jelajahi seni NFT
   </ButtonLink>

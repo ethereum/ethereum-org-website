@@ -8,8 +8,7 @@ lang: id
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Hubungkan dompet Anda untuk membungkus (wrap) atau membuka bungkus (unwrap) ETH di chain mana pun di [WrapETH.com](https://www.wrapeth.com/)
-</div>
+<div>Hubungkan dompet Anda untuk membungkus (wrap) atau membuka bungkus (unwrap) ETH di chain mana pun di [WrapETH.com](https://www.wrapeth.com/)</div>
 </Alert>
 
 Ether (ETH) adalah mata uang utama Ethereum. Ini digunakan untuk beberapa tujuan seperti mengunci (staking), sebagai mata uang, dan membayar biaya gas untuk komputasi. **WETH secara efektif adalah bentuk ETH yang ditingkatkan dengan beberapa fungsionalitas tambahan yang diperlukan oleh banyak aplikasi dan [token ERC-20](/glossary/#erc-20)**, yang merupakan jenis aset digital lain di Ethereum. Untuk bekerja dengan token-token ini, ETH harus mengikuti aturan yang sama dengan mereka, yang dikenal sebagai standar ERC-20.
@@ -20,7 +19,7 @@ Anda dapat membuka bungkus (unwrap) WETH menjadi ETH dengan menggunakan kontrak 
 
 **Kira-kira ~3% dari pasokan ETH yang beredar terkunci dalam kontrak token WETH** menjadikannya salah satu [kontrak pintar](/glossary/#smart-contract) yang paling banyak digunakan. WETH sangat penting bagi pengguna yang berinteraksi dengan aplikasi dalam keuangan terdesentralisasi (DeFi).
 
-## Mengapa kita perlu membungkus ETH sebagai ERC-20? {#why-do-we-need-to-wrap-eth} 
+## Mengapa kita perlu membungkus ETH sebagai ERC-20? {#why-do-we-need-to-wrap-eth}
 
 [ERC-20](/developers/docs/standards/tokens/erc-20/) mendefinisikan antarmuka standar untuk token yang dapat ditransfer, sehingga siapa pun dapat membuat token yang berinteraksi secara mulus dengan aplikasi dan token yang menggunakan standar ini dalam ekosistem Ethereum. Karena **ETH ada sebelum standar ERC-20**, ETH tidak sesuai dengan spesifikasi ini. Ini berarti **Anda tidak dapat dengan mudah** menukar ETH dengan token ERC-20 lainnya atau **menggunakan ETH dalam aplikasi yang menggunakan standar ERC-20**. Membungkus ETH memberi Anda kesempatan untuk melakukan hal berikut:
 

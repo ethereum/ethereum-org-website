@@ -71,6 +71,7 @@ Berbeda dengan penalti ketidakaktifan karena offline, <em>pemotongan</em> adalah
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Lebih lanjut tentang pemotongan dan siklus hidup validator</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

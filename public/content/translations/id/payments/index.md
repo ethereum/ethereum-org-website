@@ -60,8 +60,7 @@ Di negara-negara di mana alat pembayaran mereka telah terputus dari belahan duni
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Buat akun Ethereum Anda dengan aplikasi dompet hari ini.
-</div>
+  <div>Buat akun Ethereum Anda dengan aplikasi dompet hari ini.</div>
   <ButtonLink href="/wallets/find-wallet">
     Mulai
   </ButtonLink>
@@ -198,8 +197,7 @@ Dari memfasilitasi bantuan bencana yang cepat hingga memberdayakan pekerja globa
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Waktunya untuk mendapatkan akun Ethereum Anda sendiri.
-</div>
+  <div>Waktunya untuk mendapatkan akun Ethereum Anda sendiri.</div>
   <ButtonLink href="/wallets/find-wallet">
     Mulai!
   </ButtonLink>
