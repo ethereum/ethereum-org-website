@@ -1510,8 +1510,21 @@ function syncHeaderIdsWithEnglish(
 
 function normalizeBlockHtmlLines(md: string): string {
   for (const tag of BLOCK_HTML_TAGS) {
-    const inlineCloseRe = new RegExp(`([^\\n])\\s*</${tag}>`, "g")
-    md = md.replace(inlineCloseRe, (_, before) => `${before}\n</${tag}>`)
+    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
+    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${tag}>`, "g")
+    md = md.replace(
+      inlineCloseRe,
+      (match: string, before: string, offset: number) => {
+        // Find start of current line
+        const lineStart = md.lastIndexOf("\n", offset) + 1
+        const lineContent = md.slice(lineStart, offset + match.length)
+        // If opening tag is on the same line, this is inline usage -- leave it
+        if (new RegExp(`<${tag}[\\s>]`).test(lineContent)) {
+          return match
+        }
+        return `${before}\n</${tag}>`
+      }
+    )
   }
   return md
 }
@@ -1536,9 +1549,18 @@ function restoreBlankLinesFromEnglish(
     `</(${BLOCK_MDX_COMPONENTS.join("|")})>`
   )
 
+  let inCodeFence = false
   for (let i = 0; i < translatedLines.length; i++) {
     const line = translatedLines[i]
     result.push(line)
+
+    // Track code fence boundaries
+    if (/^```|^~~~/.test(line.trim())) {
+      inCodeFence = !inCodeFence
+    }
+
+    // Skip lines inside code fences (e.g., Python # comments match header pattern)
+    if (inCodeFence) continue
 
     // Check if this line should be followed by a blank line
     const isHeader = headerPattern.test(line)
@@ -1546,26 +1568,38 @@ function restoreBlankLinesFromEnglish(
 
     if (isHeader || isBlockClose) {
       const nextLine = translatedLines[i + 1]
-      const hasBlankAfter = nextLine === ""
+      // Treat whitespace-only lines as blank (not just empty string)
+      const hasBlankAfter = nextLine !== undefined && nextLine.trim() === ""
 
       // Find corresponding line in English by matching pattern
       let englishShouldHaveBlank = false
-      for (let j = 0; j < englishLines.length; j++) {
-        const englishLine = englishLines[j]
-        if (isHeader && headerPattern.test(englishLine)) {
-          // Headers should match by structure (level)
-          const transLevel = (line.match(/^#+/) || [""])[0].length
-          const engLevel = (englishLine.match(/^#+/) || [""])[0].length
-          if (transLevel === engLevel) {
-            englishShouldHaveBlank = englishLines[j + 1] === ""
-            break
+
+      if (isBlockClose) {
+        // Match by specific tag name to avoid cross-tag false matches
+        const tagMatch = line.match(
+          new RegExp(`</(${BLOCK_MDX_COMPONENTS.join("|")})>`)
+        )
+        if (tagMatch) {
+          const tagName = tagMatch[1]
+          const specificCloseRe = new RegExp(`</${tagName}>`)
+          for (let j = 0; j < englishLines.length; j++) {
+            if (specificCloseRe.test(englishLines[j])) {
+              englishShouldHaveBlank = englishLines[j + 1] === ""
+              break
+            }
           }
-        } else if (
-          isBlockClose &&
-          blockComponentClosePattern.test(englishLine)
-        ) {
-          englishShouldHaveBlank = englishLines[j + 1] === ""
-          break
+        }
+      } else if (isHeader) {
+        for (let j = 0; j < englishLines.length; j++) {
+          const englishLine = englishLines[j]
+          if (headerPattern.test(englishLine)) {
+            const transLevel = (line.match(/^#+/) || [""])[0].length
+            const engLevel = (englishLine.match(/^#+/) || [""])[0].length
+            if (transLevel === engLevel) {
+              englishShouldHaveBlank = englishLines[j + 1] === ""
+              break
+            }
+          }
         }
       }
 
@@ -1647,7 +1681,8 @@ function fixBlockComponentLineBreaks(md: string): {
 
   for (const component of BLOCK_MDX_COMPONENTS) {
     // Fix inline closing tags: content</Component> → content\n</Component>
-    const inlineCloseRe = new RegExp(`([^\\n])\\s*</${component}>`, "g")
+    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
+    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${component}>`, "g")
     content = content.replace(inlineCloseRe, (_, before) => {
       fixCount++
       return `${before}\n</${component}>`
