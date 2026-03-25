@@ -1,4 +1,16 @@
-{
+  "contributors": [
+    {
+      "login": "Pum482930",
+      "name": "Palm (kokocodes)",
+      "avatar_url": "https://avatars.githubusercontent.com/u/104149024",
+      "profile": "https://kokocodes.base.eth",
+      "contributions": [
+        "bug",
+        "translation",
+        "code"
+      ]
+  },  
+  {
   "files": [
     "README.md"
   ],
