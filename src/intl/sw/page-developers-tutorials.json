@@ -1,4 +1,22 @@
 {
+  "comp-tutorial-metadata-minute-read": "soma ndani ya dakika",
+  "page-tutorial-listing-policy-intro": "Kabla ya kuwasilisha mafunzo tafadhali <a href=\"/contributing/content-resources/\">soma sera yetu ya uorodheshaji</a>.",
+  "comp-tutorial-metadata-tip-author": "Mzawadie mwandishi",
+  "page-tutorial-create-an-issue": "Tengeneza suala",
+  "page-tutorial-create-an-issue-desc": "Jaza kiolezo cha suala kinachoelezea mafunzo yako.",
+  "page-tutorial-raise-issue-btn": "Ongeza suala",
+  "page-tutorial-read-time": "dakika",
+  "page-tutorial-submit-btn": "Tuma mafunzo",
+  "page-tutorial-subtitle": "Karibu katika orodha yetu ya mafunzo ya jamii.",
+  "page-tutorial-tags-error": "Bado hamna mafunzo yenye vitambulisho vyako vyote ulivochagua",
+  "page-tutorial-title": "Mafunzo ya Maendeleo ya Ethereum",
+  "page-tutorials-meta-description": "Vinjari na uchunguze mafunzo ya jamii ya Ethereum kwa mada.",
+  "page-tutorial-external-link": "Ya nje",
+  "page-tutorials-meta-title": "Mafunzo ya Maendeleo ya Ethereum",
+  "page-tutorial-beginner": "Mwanzo",
+  "page-tutorial-intermediate": "Wastani",
+  "page-tutorial-advanced": "Ya hali ya juu",
   "page-find-wallet-try-removing": "Jaribu kuondoa kipengele kimoja ama viwili",
-  "page-find-wallet-clear": "Futa vichujaji"
+  "page-find-wallet-clear": "Ondoa vichujaji",
+  "page-tutorials-env-banner": "Usifanye commit ya <code>.env</code>! Tafadhali hakikisha kamwe hushiriki au kufichua faili yako ya <code>.env</code> na mtu yeyote, kwani kwa kufanya hivyo unaweka siri zako hatarini. Ikiwa unatumia udhibiti wa toleo, ongeza <code>.env</code> yako kwenye faili ya <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
 }
