@@ -251,7 +251,7 @@ Miradi mingi hutoa utekelezaji wa njia za hali ambazo unaweza kuunganisha kwenye
 
 ## Masomo zaidi {#further-reading}
 
-**Ugavi na Utoaji wa Eth {#eth-supply-and-issuance}**
+**Njia za hali**
 
 - [Kuelewa Masuluhisho ya Uongezwaji ya Safu ya 2 ya Ethereum: Njia za Hali, Plasma, na Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, Feb 12 2018_
 - [Njia za Hali - maelezo](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
