@@ -20,6 +20,7 @@ Orodha hii imepangwa na jamii yetu. Ikiwa kuna kitu kinakosekana au sio sahihi, 
 Programu hizi zinasaidia ikolojia ya Ethereum kwa kutoa fedha kwa miradi mingi. Hizi ni pamoja na suluhu za kutoweka, ujenzi wa jamii, usalama, faragha, na zaidi. Ruzuku hizi sio maalum kwa jukwaa moja la Ethereum na ni mahali pazuri pa kuanzia ikiwa huna uhakika.
 
 - [Programu ya Usaidizi wa Mfumo Ikolojia ya EF](https://esp.ethereum.foundation) - _Kufadhili miradi ya chanzo huria inayonufaisha Ethereum, kwa kuzingatia hasa zana za jumla, miundombinu, utafiti na bidhaa za umma_
+- [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Saraka inayoweza kutafutwa ya miradi 1,000+ inayosaidiwa na Programu ya Usaidizi wa Mfumo Ikolojia_
 - [Ruzuku za Kitaaluma](https://esp.ethereum.foundation/academic-grants) - _Ruzuku za kusaidia kazi ya kitaaluma inayohusiana na Ethereum_
 
 ## Vikusanyaji na mifumo ya orodha za ruzuku {#grant-list-aggregators}

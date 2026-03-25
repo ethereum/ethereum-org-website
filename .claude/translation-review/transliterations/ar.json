@@ -1,0 +1,968 @@
+{
+  "_meta": {
+    "language": "ar",
+    "language_name": "Arabic",
+    "script": "Arabic (RTL)",
+    "generated": "2026-03-16",
+    "generator": "Gemini",
+    "version": 2
+  },
+  "transliterations": {
+    "Ori Pomerantz": {
+      "text": "أوري بوميرانتز",
+      "source": "gemini"
+    },
+    "Elan Halpern": {
+      "text": "إيلان هالبرن",
+      "source": "gemini"
+    },
+    "Marc Garreau": {
+      "text": "مارك غارو",
+      "source": "gemini"
+    },
+    "Nathan H. Leung": {
+      "text": "ناثان إتش. ليونغ",
+      "source": "gemini"
+    },
+    "Paul Apivat": {
+      "text": "بول أبيفات",
+      "source": "gemini"
+    },
+    "Alberto Cuesta Canada": {
+      "text": "ألبرتو كويستا كندا",
+      "source": "gemini"
+    },
+    "Sumi Mudgil": {
+      "text": "سومي مودجيل",
+      "source": "gemini"
+    },
+    "Mario Havel": {
+      "text": "ماريو هافيل",
+      "source": "gemini"
+    },
+    "Markus Waas": {
+      "text": "ماركوس واس",
+      "source": "gemini"
+    },
+    "Ewa Kowalska": {
+      "text": "إيفا كوفالسكا",
+      "source": "gemini"
+    },
+    "Kim YongJun": {
+      "text": "كيم يونغ جون",
+      "source": "gemini"
+    },
+    "Daniel Izdebski": {
+      "text": "دانيال إيزديبسكي",
+      "source": "gemini"
+    },
+    "Tedi Mitiku": {
+      "text": "تيدي ميتيكو",
+      "source": "gemini"
+    },
+    "Vitalik Buterin": {
+      "text": "فيتاليك بوتيرين",
+      "source": "gemini"
+    },
+    "Gavin Wood": {
+      "text": "غافين وود",
+      "source": "gemini"
+    },
+    "Joseph Lubin": {
+      "text": "جوزيف لوبين",
+      "source": "gemini"
+    },
+    "Tim Beiko": {
+      "text": "تيم بيكو",
+      "source": "gemini"
+    },
+    "Peter Szilagyi": {
+      "text": "بيتر سيلاجي",
+      "source": "gemini"
+    },
+    "Jeffrey Wilcke": {
+      "text": "جيفري ويلك",
+      "source": "gemini"
+    },
+    "Mihai Alisie": {
+      "text": "ميهاي أليسي",
+      "source": "gemini"
+    },
+    "Anthony Di Iorio": {
+      "text": "أنتوني دي إيوريو",
+      "source": "gemini"
+    },
+    "Amir Chetrit": {
+      "text": "أمير شيتريت",
+      "source": "gemini"
+    },
+    "Charles Hoskinson": {
+      "text": "تشارلز هوسكينسون",
+      "source": "gemini"
+    },
+    "Albert Einstein": {
+      "text": "ألبرت أينشتاين",
+      "source": "gemini"
+    },
+    "Solidity": {
+      "text": "سوليديتي",
+      "source": "gemini"
+    },
+    "Vyper": {
+      "text": "فايبر",
+      "source": "gemini"
+    },
+    "Rust": {
+      "text": "راست",
+      "source": "gemini"
+    },
+    "JavaScript": {
+      "text": "جافا سكريبت",
+      "source": "gemini"
+    },
+    "TypeScript": {
+      "text": "تايب سكريبت",
+      "source": "gemini"
+    },
+    "Python": {
+      "text": "بايثون",
+      "source": "gemini"
+    },
+    "Go": {
+      "text": "غو",
+      "source": "gemini"
+    },
+    "Golang": {
+      "text": "غولانغ",
+      "source": "gemini"
+    },
+    "Java": {
+      "text": "جافا",
+      "source": "gemini"
+    },
+    "Ruby": {
+      "text": "روبي",
+      "source": "gemini"
+    },
+    "Elixir": {
+      "text": "إليكسير",
+      "source": "gemini"
+    },
+    "Dart": {
+      "text": "دارت",
+      "source": "gemini"
+    },
+    "Delphi": {
+      "text": "دلفي",
+      "source": "gemini"
+    },
+    "C++": {
+      "text": "سي بلس بلس",
+      "source": "gemini"
+    },
+    ".NET": {
+      "text": "دوت نت",
+      "source": "gemini"
+    },
+    "Hardhat": {
+      "text": "هارد هات",
+      "source": "gemini"
+    },
+    "Foundry": {
+      "text": "فاوندري",
+      "source": "gemini"
+    },
+    "Remix": {
+      "text": "ريميكس",
+      "source": "gemini"
+    },
+    "Truffle": {
+      "text": "ترافل",
+      "source": "gemini"
+    },
+    "Waffle": {
+      "text": "وافل",
+      "source": "gemini"
+    },
+    "Brownie": {
+      "text": "براوني",
+      "source": "gemini"
+    },
+    "Scaffold-ETH": {
+      "text": "سكافولد-إيث",
+      "source": "gemini"
+    },
+    "Wagmi": {
+      "text": "واغمي",
+      "source": "gemini"
+    },
+    "Ethers.js": {
+      "text": "إيثرز.جي إس",
+      "source": "gemini"
+    },
+    "Web3.js": {
+      "text": "ويب3.جي إس",
+      "source": "gemini"
+    },
+    "Web3.py": {
+      "text": "ويب3.باي",
+      "source": "gemini"
+    },
+    "Viem": {
+      "text": "فيم",
+      "source": "gemini"
+    },
+    "React": {
+      "text": "رياكت",
+      "source": "gemini"
+    },
+    "Next.js": {
+      "text": "نكست.جي إس",
+      "source": "gemini"
+    },
+    "Node.js": {
+      "text": "نود.جي إس",
+      "source": "gemini"
+    },
+    "RainbowKit": {
+      "text": "رينبو كيت",
+      "source": "gemini"
+    },
+    "WalletConnect": {
+      "text": "واليت كونكت",
+      "source": "gemini"
+    },
+    "Geth": {
+      "text": "غيث",
+      "source": "gemini"
+    },
+    "Prysm": {
+      "text": "بريزم",
+      "source": "gemini"
+    },
+    "Lighthouse": {
+      "text": "لايت هاوس",
+      "source": "gemini"
+    },
+    "Teku": {
+      "text": "تيكو",
+      "source": "gemini"
+    },
+    "Nimbus": {
+      "text": "نيمبوس",
+      "source": "gemini"
+    },
+    "Lodestar": {
+      "text": "لودستار",
+      "source": "gemini"
+    },
+    "Besu": {
+      "text": "بيسو",
+      "source": "gemini"
+    },
+    "Nethermind": {
+      "text": "نيذرمايند",
+      "source": "gemini"
+    },
+    "Erigon": {
+      "text": "إريغون",
+      "source": "gemini"
+    },
+    "Reth": {
+      "text": "ريث",
+      "source": "gemini"
+    },
+    "IPFS": {
+      "text": "آي بي إف إس",
+      "source": "gemini"
+    },
+    "Filecoin": {
+      "text": "فايل كوين",
+      "source": "gemini"
+    },
+    "Arweave": {
+      "text": "آرويف",
+      "source": "gemini"
+    },
+    "Ethereum Foundation": {
+      "text": "مؤسسة إيثريوم",
+      "source": "gemini"
+    },
+    "ConsenSys": {
+      "text": "كونسنسيس",
+      "source": "gemini"
+    },
+    "Alchemy": {
+      "text": "ألكيمي",
+      "source": "gemini"
+    },
+    "Infura": {
+      "text": "إنفيورا",
+      "source": "gemini"
+    },
+    "Chainlink": {
+      "text": "تشين لينك",
+      "source": "gemini"
+    },
+    "OpenZeppelin": {
+      "text": "أوبن زبلين",
+      "source": "gemini"
+    },
+    "Gnosis": {
+      "text": "غنوسيس",
+      "source": "gemini"
+    },
+    "Flashbots": {
+      "text": "فلاش بوتس",
+      "source": "gemini"
+    },
+    "Trail of Bits": {
+      "text": "تريل أوف بيتس",
+      "source": "gemini"
+    },
+    "Tellor": {
+      "text": "تيلور",
+      "source": "gemini"
+    },
+    "EigenLayer": {
+      "text": "آيغن لاير",
+      "source": "gemini"
+    },
+    "Moralis": {
+      "text": "موراليس",
+      "source": "gemini"
+    },
+    "Gitcoin": {
+      "text": "جيت كوين",
+      "source": "gemini"
+    },
+    "Dune Analytics": {
+      "text": "ديون أناليتكس",
+      "source": "gemini"
+    },
+    "CoinGecko": {
+      "text": "كوين جيكو",
+      "source": "gemini"
+    },
+    "Uniswap": {
+      "text": "يوني سواب",
+      "source": "gemini"
+    },
+    "Aave": {
+      "text": "آفي",
+      "source": "gemini"
+    },
+    "MakerDAO": {
+      "text": "ميكر داو",
+      "source": "gemini"
+    },
+    "Compound": {
+      "text": "كومباوند",
+      "source": "gemini"
+    },
+    "Lido": {
+      "text": "ليدو",
+      "source": "gemini"
+    },
+    "Rocket Pool": {
+      "text": "روكيت بول",
+      "source": "gemini"
+    },
+    "ENS": {
+      "text": "إي إن إس",
+      "source": "gemini"
+    },
+    "The Graph": {
+      "text": "ذا غراف",
+      "source": "gemini"
+    },
+    "Curve": {
+      "text": "كيرف",
+      "source": "gemini"
+    },
+    "Balancer": {
+      "text": "بالانسر",
+      "source": "gemini"
+    },
+    "Farcaster": {
+      "text": "فاركاستر",
+      "source": "gemini"
+    },
+    "Lens Protocol": {
+      "text": "لينس بروتوكول",
+      "source": "gemini"
+    },
+    "Snapshot": {
+      "text": "سناب شوت",
+      "source": "gemini"
+    },
+    "Aragon": {
+      "text": "أراغون",
+      "source": "gemini"
+    },
+    "Optimism": {
+      "text": "أوبتيميزم",
+      "source": "gemini"
+    },
+    "Arbitrum": {
+      "text": "أربيتروم",
+      "source": "gemini"
+    },
+    "Polygon": {
+      "text": "بوليغون",
+      "source": "gemini"
+    },
+    "zkSync": {
+      "text": "زي كي سينك",
+      "source": "gemini"
+    },
+    "Starknet": {
+      "text": "ستارك نت",
+      "source": "gemini"
+    },
+    "Base": {
+      "text": "بيس",
+      "source": "gemini"
+    },
+    "Scroll": {
+      "text": "سكرول",
+      "source": "gemini"
+    },
+    "Linea": {
+      "text": "لينيا",
+      "source": "gemini"
+    },
+    "Taiko": {
+      "text": "تايكو",
+      "source": "gemini"
+    },
+    "Slither": {
+      "text": "سليذر",
+      "source": "gemini"
+    },
+    "Manticore": {
+      "text": "مانتيكور",
+      "source": "gemini"
+    },
+    "Echidna": {
+      "text": "إيكيدنا",
+      "source": "gemini"
+    },
+    "MythX": {
+      "text": "ميث إكس",
+      "source": "gemini"
+    },
+    "Mythril": {
+      "text": "ميثريل",
+      "source": "gemini"
+    },
+    "Certora": {
+      "text": "سيرتورا",
+      "source": "gemini"
+    },
+    "MetaMask": {
+      "text": "ميتاماسك",
+      "source": "gemini"
+    },
+    "Etherscan": {
+      "text": "إيثرسكان",
+      "source": "gemini"
+    },
+    "GitHub": {
+      "text": "غيت هاب",
+      "source": "gemini"
+    },
+    "Discord": {
+      "text": "ديسكورد",
+      "source": "gemini"
+    },
+    "Reddit": {
+      "text": "ريديت",
+      "source": "gemini"
+    },
+    "Telegram": {
+      "text": "تيليغرام",
+      "source": "gemini"
+    },
+    "YouTube": {
+      "text": "يوتيوب",
+      "source": "gemini"
+    },
+    "Crowdin": {
+      "text": "كراودين",
+      "source": "gemini"
+    },
+    "Docker": {
+      "text": "دوكر",
+      "source": "gemini"
+    },
+    "Linux": {
+      "text": "لينكس",
+      "source": "gemini"
+    },
+    "Raspberry Pi": {
+      "text": "راسبيري باي",
+      "source": "gemini"
+    },
+    "InfluxDB": {
+      "text": "إنفلكس دي بي",
+      "source": "gemini"
+    },
+    "Grafana": {
+      "text": "غرافانا",
+      "source": "gemini"
+    },
+    "Tenderly": {
+      "text": "تيندرلي",
+      "source": "gemini"
+    },
+    "Ethereum": {
+      "text": "إيثريوم",
+      "source": "gemini"
+    },
+    "Bitcoin": {
+      "text": "بيتكوين",
+      "source": "gemini"
+    },
+    "Beacon Chain": {
+      "text": "بيكون تشين",
+      "source": "gemini"
+    },
+    "The Merge": {
+      "text": "ذا ميرج",
+      "source": "gemini"
+    },
+    "Web3": {
+      "text": "ويب3",
+      "source": "gemini"
+    },
+    "DeFi": {
+      "text": "دي فاي",
+      "source": "gemini"
+    },
+    "NFT": {
+      "text": "إن إف تي",
+      "source": "gemini"
+    },
+    "DApp": {
+      "text": "داب",
+      "source": "gemini"
+    },
+    "DAO": {
+      "text": "داو",
+      "source": "gemini"
+    },
+    "Glamsterdam": {
+      "text": "جلامستردام",
+      "source": "gemini"
+    },
+    "PeerDAS": {
+      "text": "بير داس",
+      "source": "gemini"
+    },
+    "Dencun": {
+      "text": "دينكون",
+      "source": "gemini"
+    },
+    "Pectra": {
+      "text": "بيكترا",
+      "source": "gemini"
+    },
+    "Gasper": {
+      "text": "جاسبر",
+      "source": "gemini"
+    },
+    "Ethash": {
+      "text": "إيثاش",
+      "source": "gemini"
+    },
+    "Casper": {
+      "text": "كاسبر",
+      "source": "gemini"
+    },
+    "Goerli": {
+      "text": "جيرلي",
+      "source": "gemini"
+    },
+    "Sepolia": {
+      "text": "سيبوليا",
+      "source": "gemini"
+    },
+    "Holesky": {
+      "text": "هوليسكي",
+      "source": "gemini"
+    },
+    "Ropsten": {
+      "text": "روبستين",
+      "source": "gemini"
+    },
+    "Hoodi": {
+      "text": "هودي",
+      "source": "gemini"
+    },
+    "Noir": {
+      "text": "نوار",
+      "source": "gemini"
+    },
+    "Zokrates": {
+      "text": "زوكراتيس",
+      "source": "gemini"
+    },
+    "Blockscout": {
+      "text": "بلوك سكوت",
+      "source": "gemini"
+    },
+    "Kurtosis": {
+      "text": "كورتوسيس",
+      "source": "gemini"
+    },
+    "Nethereum": {
+      "text": "نيثيريوم",
+      "source": "gemini"
+    },
+    "Yul": {
+      "text": "يول",
+      "source": "gemini"
+    },
+    "Pinata": {
+      "text": "بينياتا",
+      "source": "gemini"
+    },
+    "DAppNode": {
+      "text": "دي آب نود",
+      "source": "gemini"
+    },
+    "Vite": {
+      "text": "فيت",
+      "source": "gemini"
+    },
+    "GraphQL": {
+      "text": "جراف كيو إل",
+      "source": "gemini"
+    },
+    "Sourcify": {
+      "text": "سورسيفاي",
+      "source": "gemini"
+    },
+    "EthereumJS": {
+      "text": "إيثيريوم جي إس",
+      "source": "gemini"
+    },
+    "Web3j": {
+      "text": "ويب 3 جي",
+      "source": "gemini"
+    },
+    "Otterscan": {
+      "text": "أوتر سكان",
+      "source": "gemini"
+    },
+    "SubQuery": {
+      "text": "ساب كويري",
+      "source": "gemini"
+    },
+    "GitPOAP": {
+      "text": "جيت بي أو إيه بي",
+      "source": "gemini"
+    },
+    "Crytic": {
+      "text": "كريتيك",
+      "source": "gemini"
+    },
+    "Wake": {
+      "text": "ويك",
+      "source": "gemini"
+    },
+    "Scribble": {
+      "text": "سكربل",
+      "source": "gemini"
+    },
+    "OpenGSN": {
+      "text": "أوبن جي إس إن",
+      "source": "gemini"
+    },
+    "Sablier": {
+      "text": "سابليه",
+      "source": "gemini"
+    },
+    "Chainstack": {
+      "text": "تشين ستاك",
+      "source": "gemini"
+    },
+    "QuickNode": {
+      "text": "كويك نود",
+      "source": "gemini"
+    },
+    "NatSpec": {
+      "text": "نات سبيك",
+      "source": "gemini"
+    },
+    "WebAssembly": {
+      "text": "ويب أسيمبلي",
+      "source": "gemini"
+    },
+    "Blast": {
+      "text": "بلاست",
+      "source": "gemini"
+    },
+    "Sushiswap": {
+      "text": "سوشي سواب",
+      "source": "gemini"
+    },
+    "Namecoin": {
+      "text": "نيم كوين",
+      "source": "gemini"
+    },
+    "Twitter": {
+      "text": "تويتر",
+      "source": "gemini"
+    },
+    "PayPal": {
+      "text": "باي بال",
+      "source": "gemini"
+    },
+    "OpenSea": {
+      "text": "أوبن سي",
+      "source": "gemini"
+    },
+    "Figma": {
+      "text": "فيجما",
+      "source": "gemini"
+    },
+    "Binance": {
+      "text": "بينانس",
+      "source": "gemini"
+    },
+    "VSCode": {
+      "text": "في إس كود",
+      "source": "gemini"
+    },
+    "Coinbase": {
+      "text": "كوين بيز",
+      "source": "gemini"
+    },
+    "EVERLAND": {
+      "text": "إيفرلاند",
+      "source": "gemini"
+    },
+    "Gitter": {
+      "text": "جيتر",
+      "source": "gemini"
+    },
+    "Filebase": {
+      "text": "فايل بيز",
+      "source": "gemini"
+    },
+    "Windows": {
+      "text": "ويندوز",
+      "source": "gemini"
+    },
+    "macOS": {
+      "text": "ماك أو إس",
+      "source": "gemini"
+    },
+    "Android": {
+      "text": "أندرويد",
+      "source": "gemini"
+    },
+    "iOS": {
+      "text": "آي أو إس",
+      "source": "gemini"
+    },
+    "Chrome": {
+      "text": "كروم",
+      "source": "gemini"
+    },
+    "Netflix": {
+      "text": "نتفليكس",
+      "source": "gemini"
+    },
+    "Facebook": {
+      "text": "فيسبوك",
+      "source": "gemini"
+    },
+    "Microsoft": {
+      "text": "مايكروسوفت",
+      "source": "gemini"
+    },
+    "Parity": {
+      "text": "باريتي",
+      "source": "gemini"
+    },
+    "Hyperledger": {
+      "text": "هايبر ليدجر",
+      "source": "gemini"
+    },
+    "Kaleido": {
+      "text": "كاليدو",
+      "source": "gemini"
+    },
+    "EthStaker": {
+      "text": "إيث ستيكر",
+      "source": "gemini"
+    },
+    "ETHGlobal": {
+      "text": "إي تي إتش جلوبال",
+      "source": "gemini"
+    },
+    "PoolTogether": {
+      "text": "بول توجيذر",
+      "source": "gemini"
+    },
+    "MolochDAO": {
+      "text": "مولوك دي إيه أو",
+      "source": "gemini"
+    },
+    "Bankless": {
+      "text": "بانكليس",
+      "source": "gemini"
+    },
+    "MyCrypto": {
+      "text": "ماي كريبتو",
+      "source": "gemini"
+    },
+    "CryptoKitties": {
+      "text": "كريبتو كيتيز",
+      "source": "gemini"
+    },
+    "QuarkID": {
+      "text": "كوارك آي دي",
+      "source": "gemini"
+    },
+    "L2BEAT": {
+      "text": "إل 2 بيت",
+      "source": "gemini"
+    },
+    "Ethereum Cat Herders": {
+      "text": "إيثيريوم كات هيردرز",
+      "source": "gemini"
+    },
+    "Ethereum Magicians": {
+      "text": "إيثيريوم ماجيشنز",
+      "source": "gemini"
+    },
+    "Grandine": {
+      "text": "جراندين",
+      "source": "gemini"
+    },
+    "Nim": {
+      "text": "نيم",
+      "source": "gemini"
+    },
+    "Tornado Cash": {
+      "text": "تورنيدو كاش",
+      "source": "gemini"
+    },
+    "Swarm": {
+      "text": "سوارم",
+      "source": "gemini"
+    },
+    "Quorum": {
+      "text": "كوروم",
+      "source": "gemini"
+    },
+    "Cyfrin Updraft": {
+      "text": "سيفرين أب درافت",
+      "source": "gemini"
+    },
+    "Microsoft Learn": {
+      "text": "مايكروسوفت ليرن",
+      "source": "gemini"
+    },
+    "Omer Greismen": {
+      "text": "أومر جريسمان",
+      "source": "gemini"
+    },
+    "Gal Weizman": {
+      "text": "غال ويزمان",
+      "source": "gemini"
+    },
+    "Shy Datika": {
+      "text": "شاي داتيكا",
+      "source": "gemini"
+    },
+    "Roy Confino": {
+      "text": "روي كونفينو",
+      "source": "gemini"
+    },
+    "Idan Ofrat": {
+      "text": "عيدان عوفرات",
+      "source": "gemini"
+    },
+    "Dror Aviely": {
+      "text": "درور أفيلي",
+      "source": "gemini"
+    },
+    "Nir Rozin": {
+      "text": "نير روزين",
+      "source": "gemini"
+    },
+    "Adan Kedem": {
+      "text": "عدن كيدم",
+      "source": "gemini"
+    },
+    "Uri Kolodny": {
+      "text": "أوري كولودني",
+      "source": "gemini"
+    },
+    "Ben Samocha": {
+      "text": "بن سموحه",
+      "source": "gemini"
+    },
+    "Alon Muroch": {
+      "text": "ألون موروخ",
+      "source": "gemini"
+    },
+    "Zhen Xiao": {
+      "text": "تشن شياو",
+      "source": "gemini"
+    },
+    "James Prestwich": {
+      "text": "جيمس بريستويتش",
+      "source": "gemini"
+    },
+    "Max Mersch": {
+      "text": "ماكس ميرش",
+      "source": "gemini"
+    },
+    "Udi Wertheimer": {
+      "text": "أودي ويرتهايمر",
+      "source": "gemini"
+    },
+    "Eilon Aviv": {
+      "text": "إيلون أفيف",
+      "source": "gemini"
+    },
+    "Wei Dai": {
+      "text": "واي داي",
+      "source": "gemini"
+    },
+    "Wei Wang": {
+      "text": "واي وانج",
+      "source": "gemini"
+    },
+    "Refik Anadol": {
+      "text": "رفيق أنادول",
+      "source": "gemini"
+    },
+    "NFTs": {
+      "text": "إن إف تيز",
+      "source": "gemini"
+    },
+    "DAOs": {
+      "text": "دي إيه أوز",
+      "source": "gemini"
+    },
+    "DApps": {
+      "text": "دي آبس",
+      "source": "gemini"
+    }
+  },
+  "_alternatives": {
+    "Geth": [
+      "جيث"
+    ],
+    "The Merge": [
+      "الدمج"
+    ]
+  }
+}

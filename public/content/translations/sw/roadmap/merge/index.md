@@ -29,7 +29,7 @@ Fikiria Ethereum ni meli ya anga ya juu iliyozinduliwa kabla ya kuwa tayari kabi
 
 Uthibitisho wa kazi ulilinda Ethereum Mainnet kutoka mwanzo hadi The Merge. Hii iliruhusu kiambajengo cha Ethereum ambayo sisi sote tumezoea kuanza kutumika Julai 2015 pamoja na vipengele vyake vyote vinavyojulikana—alama, mikataba mahiri, akaunti, n. k.
 
-Katika historia yote ya Ethereum, wajenziwalitayarisha mabadiliko ya baadaye kutoka kwa uthibitisho wa kazi hadi uthibitisho wa dhamana. Mnamo Desemba 1, 2020, Mnyororo wa Beacon uliundwa kama kiambajengo tofauti kwa Mainnet, inayoendesha sambamba.
+Katika historia yote ya Ethereum, wajenzi walitayarisha mabadiliko ya baadaye kutoka kwa uthibitisho wa kazi hadi uthibitisho wa dhamana. Mnamo Desemba 1, 2020, Mnyororo wa Beacon uliundwa kama kiambajengo tofauti kwa Mainnet, inayoendesha sambamba.
 
 Mnyororo wa Beacon haikuwa ikichakata shughuli za Mainnet. Badala yake, ilikuwa inafikia makubaliano juu ya hali yake yenyewe kwa kukubaliana juu ya wathibitishaji amilifu na salio la akaunti zao. Baada ya majaribio ya kina, ikawa wakati wa mnyororo wa Beacon kufikia makubaliano juu ya data ya ulimwengu halisi. Baada ya Kuunganisha, Beacon Chain ikawa injini ya makubaliano kwa data zote za mtandao, ikiwa ni pamoja na miamala ya safu ya utekelezaji na salio la akaunti.
 

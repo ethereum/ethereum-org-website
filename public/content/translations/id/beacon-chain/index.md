@@ -32,7 +32,7 @@ Penaruhan memiliki tujuan yang serupa dengan [penambangan](/developers/docs/cons
 
 Transisi ke bukti taruhan membuat Ethereum secara signifikan lebih aman dan terdesentralisasi dibandingkan dengan bukti kerja. Semakin banyak orang yang berpartisipasi dalam jaringan, semakin terdesentralisasi dan aman dari serangan.
 
-Dan menggunakan bukti taruhan sebagai mekanisme konsensus adalah komponen dasar untuk [Ethereum yang aman, ramah lingkungan, dan dapat diskalakan yang kita miliki saat ini](/roadmap/vision/).
+Dan menggunakan bukti taruhan sebagai mekanisme konsensus adalah komponen dasar untuk [Ethereum yang aman, ramah lingkungan, dan dapat diskalakan yang kita miliki saat ini](/roadmap/).
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>

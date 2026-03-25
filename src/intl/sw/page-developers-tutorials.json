@@ -18,5 +18,11 @@
   "page-tutorial-advanced": "Ya hali ya juu",
   "page-find-wallet-try-removing": "Jaribu kuondoa kipengele kimoja ama viwili",
   "page-find-wallet-clear": "Ondoa vichujaji",
-  "page-tutorials-env-banner": "Usifanye commit ya <code>.env</code>! Tafadhali hakikisha kamwe hushiriki au kufichua faili yako ya <code>.env</code> na mtu yeyote, kwani kwa kufanya hivyo unaweka siri zako hatarini. Ikiwa unatumia udhibiti wa toleo, ongeza <code>.env</code> yako kwenye faili ya <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
+  "page-tutorials-env-banner": "Usifanye commit ya <code>.env</code>! Tafadhali hakikisha kamwe hushiriki au kufichua faili yako ya <code>.env</code> na mtu yeyote, kwani kwa kufanya hivyo unaweka siri zako hatarini. Ikiwa unatumia udhibiti wa toleo, ongeza <code>.env</code> yako kwenye faili ya <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>.",
+  "page-tutorial-all": "Zote",
+  "page-tutorial-topics": "Mada",
+  "page-tutorial-search-placeholder": "Tafuta mafunzo...",
+  "page-tutorial-filtering-by": "Kuchuja kwa:",
+  "page-tutorial-more-tags": "+{count} zaidi",
+  "page-tutorials-available": "Mafunzo yanayopatikana"
 }

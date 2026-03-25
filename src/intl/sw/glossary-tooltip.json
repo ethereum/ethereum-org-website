@@ -160,5 +160,7 @@
   "wei-term": "Wei",
   "wei-definition": "Yeye ndiye thamani ndogo zaidi ya etha. 10<sup>18</sup> wei = etha 1.",
   "zk-proof-term": "Uthibitishaji wa Zero-knowledge",
-  "zk-proof-definition": "Uthibitishaji wa zero-knowledge ni mbinu ya siri ambayo inaruhusu mtu binafsi kuthibitisha kuwa taarifa ni kweli bila kuwasilisha taarifa yoyote ya ziada. <a href=\"/developers/docs/scaling/zk-rollups/\">Mengi zaidi kuhusu uboreshaji wa zero-knowledge </a>."
+  "zk-proof-definition": "Uthibitishaji wa zero-knowledge ni mbinu ya siri ambayo inaruhusu mtu binafsi kuthibitisha kuwa taarifa ni kweli bila kuwasilisha taarifa yoyote ya ziada. <a href=\"/developers/docs/scaling/zk-rollups/\">Mengi zaidi kuhusu uboreshaji wa zero-knowledge </a>.",
+  "state-term": "Hali",
+  "state-definition": "Picha ya masalio yote na data kwa wakati fulani kwenye blockchain, kwa kawaida ikirejelea hali katika kitalu fulani."
 }

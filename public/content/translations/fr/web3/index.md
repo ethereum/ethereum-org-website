@@ -1,6 +1,6 @@
 ---
 title: Qu'est-ce que le Web3 et pourquoi est-ce important ?
-description: Une introduction au Web3 — la prochaine évolution du World Wide Web — et son intérêt.
+description: "Une introduction au Web3 — la prochaine évolution du World Wide Web — et son intérêt."
 lang: fr
 ---
 
@@ -12,7 +12,8 @@ lang: fr
 
 La centralisation a permis à des milliards de personnes d'accéder au World Wide Web et de créer l'infrastructure stable et robuste sur laquelle il repose. Dans le même temps, une poignée d'entités centralisées ont pris le contrôle de larges pans du World Wide Web, décidant de manière unilatérale de ce qui est autorisé ou non.
 
-Le Web3 est la réponse à ce dilemme. Contrairement à un Web dominé par les grandes entreprises technologiques, le Web3 est décentralisé et est construit, exploité et détenu par ses utilisateurs. Le Web3 donne le pouvoir aux individus plutôt qu'aux entreprises. Avant de parler du Web3, il faut comprendre comment nous en sommes arrivés là.
+Le Web3 est la réponse à ce dilemme. Contrairement à un Web dominé par les grandes entreprises technologiques, le Web3 est décentralisé et est construit, exploité et détenu par ses utilisateurs. Le Web3 donne le pouvoir aux individus plutôt qu'aux entreprises.
+Avant de parler du Web3, il faut comprendre comment nous en sommes arrivés là.
 
 <Divider />
 
@@ -26,34 +27,34 @@ En 1989, au CERN, à Genève, Tim Berners-Lee était occupé à développer les 
 
 Les premiers pas de la création de Berners-Lee, connue aujourd'hui sous le nom de "Web 1.0", se sont déroulés approximativement entre 1990 et 2004. Le Web 1.0 était principalement constitué de sites Web statiques appartenant à des entreprises, et l'interaction entre les utilisateurs était quasi inexistante - les individus produisaient rarement du contenu - ce qui lui a valu d'être connu sous le nom de Web en lecture seule.
 
-![Architecture client-serveur représentant le Web 1.0](./web1.png)
+![Architecture client-serveur, représentant le Web 1.0](./web1.png)
 
-### Web 2.0 : lecture/écriture (2004-maintenant) {#web2}
+### Web 2.0 : Lecture/écriture (2004-aujourd'hui) {#web2}
 
 La période Web 2.0 a commencé en 2004 avec l'émergence des plateformes de médias sociaux. Au lieu d'une lecture seule, le web a évolué pour être en lecture-écriture. Au lieu de fournir du contenu aux utilisateurs, les entreprises ont également commencé à fournir des plateformes pour partager du contenu généré par les utilisateurs et s'engager dans des interactions entre utilisateurs. À mesure que de plus en plus de gens sont arrivés en ligne, une poignée de grandes entreprises ont commencé à contrôler une quantité disproportionnée du trafic et de la valeur générés sur le web. Le Web 2.0 a également donné naissance au modèle de revenus axé sur la publicité. Bien que les utilisateurs puissent créer du contenu, ils n'en sont pas propriétaires ou ne bénéficient pas de sa monétisation.
 
-![Architecture client-serveur représentant le Web 2.0](./web2.png)
+![Architecture client-serveur, représentant le Web 2.0](./web2.png)
 
 <Divider />
 
-## Web 3.0 : Read-Write-Own (Lire-Écrire-Posséder) {#web3}
+## Web 3.0 : Lecture-écriture-possession {#web3}
 
-Les prémisses du « Web 3.0 » ont été élaborés par le co-fondateur d'[Ethereum](/what-is-ethereum/) Gavin Wood, peu après le lancement d'Ethereum en 2014. Gavin a mis en mots une solution à un problème que beaucoup d'adopteurs précoces de crypto-monnaies ressentaient : le Web exigeait trop de confiance. En d'autres termes, la majeure partie du Web que les gens connaissent et utilisent aujourd'hui repose sur la confiance en une poignée d'entreprises privées qui agissent dans l'intérêt du public.
+La prémisse du « Web 3.0 » a été inventée par Gavin Wood, cofondateur d'[Ethereum](/what-is-ethereum/), peu après le lancement d'Ethereum en 2014. Gavin a mis en mots une solution à un problème que beaucoup d'adopteurs précoces de crypto-monnaies ressentaient : le Web exigeait trop de confiance. En d'autres termes, la majeure partie du Web que les gens connaissent et utilisent aujourd'hui repose sur la confiance en une poignée d'entreprises privées qui agissent dans l'intérêt du public.
 
-![Architecture de nœud décentralisée, représentant Web3](./web3.png)
+![Architecture de nœuds décentralisée, représentant Web3](./web3.png)
 
 ### Qu'est-ce que Web3 ? {#what-is-web3}
 
-Web3 est devenu un terme fourre-tout pour la vision d'un nouvel et meilleur internet. Web3 utilise des blockchains, des cryptomonnaies et des NFT pour rendre le pouvoir aux utilisateurs sous forme de propriété. [Un post de 2021 sur Twitter](https://twitter.com/j1mmyeth/status/1459003044067258370) le résume parfaitement : Web1 était en lecture seule, Web2 est en lecture/écriture, Web3 sera lu/écrit/possédé.
+Web3 est devenu un terme fourre-tout pour la vision d'un nouvel et meilleur internet. Web3 utilise des blockchains, des cryptomonnaies et des NFT pour rendre le pouvoir aux utilisateurs sous forme de propriété. [Un post de 2020 sur Twitter](https://twitter.com/himgajria/status/1266415636789334016) le résume parfaitement : Web1 était en lecture seule, Web2 est en lecture/écriture, et Web3 sera lu/écrit/possédé.
 
-#### Principes fondamentaux du Web3 {#core-ideas}
+#### Idées fondamentales du Web3 {#core-ideas}
 
 Bien qu'il soit difficile de fournir une définition stricte de ce qu'est le Web3, quelques principes fondamentaux guident sa création.
 
-- **Le Web3 est décentralisé :** au lieu que de larges pans de l'internet soient détenus et contrôlés par quelques entités centralisées, la propriété est distribuée entre ses créateurs et ses utilisateurs.
-- **Le Web3 est ouvert :** tout le monde a un accès égal pour contribuer au Web3, et personne ne peut être exclu.
-- **Le Web3 supporte les paiements natifs :** il utilise la cryptomonnaie pour dépenser et virer de l'argent en ligne, au lieu de s'appuyer sur l'infrastructure obsolète des banques et des processeurs de paiement.
-- **Le Web3 est « trustless » :** il fonctionne en utilisant des mesures incitatives et des mécanismes économiques au lieu de se fier à des tiers de confiance.
+- **Le Web3 est décentralisé :** au lieu que de larges pans d'Internet soient contrôlés et détenus par des entités centralisées, la propriété est répartie entre ses créateurs et ses utilisateurs.
+- **Le Web3 est sans permission :** tout le monde dispose d'un accès égal pour participer au Web3, et personne n'est exclu.
+- **Le Web3 intègre des paiements natifs :** il utilise la cryptomonnaie pour dépenser et envoyer de l'argent en ligne au lieu de s'appuyer sur l'infrastructure obsolète des banques et des processeurs de paiement.
+- **Le Web3 est sans confiance :** il fonctionne à l'aide d'incitations et de mécanismes économiques au lieu de dépendre de tiers de confiance.
 
 ### Pourquoi le Web3 est-il important ? {#why-is-web3-important}
 
@@ -63,14 +64,14 @@ Bien que les fonctionnalités clés du Web3 ne soient pas isolées et ne rentren
 
 Le Web3 vous donne la propriété de vos actifs numériques de façon inégalée. Par exemple, disons que vous jouez à un jeu web2. Si vous achetez un objet dans le jeu, il est lié directement à votre compte. Si les créateurs du jeu suppriment votre compte, vous perdrez ces objets. Ou, si vous arrêtez de jouer au jeu, vous perdez la valeur que vous avez investie dans vos objets pendant que vous jouiez.
 
-Le Web3 permet la propriété directe via les [jetons non-fongibles (NFT)](/glossary/#nft). Personne, pas même les créateurs du jeu, n'a le pouvoir de vous retirer votre propriété. En outre, si vous vous arrêtez de jouer, vous pouvez vendre ou échanger vos objets en jeu sur des marchés ouverts et récupérer leur valeur.
+Le Web3 permet la propriété directe par le biais de [jetons non fongibles (NFTs)](/glossary/#nft). Personne, pas même les créateurs du jeu, n'a le pouvoir de vous retirer votre propriété. En outre, si vous vous arrêtez de jouer, vous pouvez vendre ou échanger vos objets en jeu sur des marchés ouverts et récupérer leur valeur. Explorez les [jeux en chaîne](/gaming/) pour voir cela en action.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>En savoir plus sur les NFT</div>
   <ButtonLink href="/nft/">
-    Plus d'infos sur les NFT
+    En savoir plus sur les NFT
   </ButtonLink>
 </AlertContent>
 </Alert>
@@ -85,18 +86,18 @@ Sur Web3, vos données vivent sur la blockchain. Lorsque vous décidez de quitte
 
 Le Web 2.0 exige que les créateurs de contenu fassent confiance aux plateformes pour ne pas modifier les règles, mais la résistance à la censure est une fonctionnalité native d'une plateforme Web3.
 
-#### Organisation autonome décentralisée (DAO) {#daos}
+#### Organisations autonomes décentralisées (DAO) {#daos}
 
 En plus de posséder vos données sur le Web3, vous pouvez posséder la plateforme en tant que groupe, en utilisant des jetons qui agissent comme des parts dans une entreprise. Les DAO vous permettent de coordonner la propriété décentralisée d'une plateforme et de prendre des décisions concernant son futur.
 
-Les DAO sont définies techniquement comme des [contrats intelligents](/glossary/#smart-contract) convenus qui automatisent les prises de décision décentralisées sur un ensemble de ressources (jetons). Les utilisateurs disposant de jetons votent sur la manière dont les ressources sont dépensées, et le code exécute automatiquement le résultat du vote.
+Les DAO sont techniquement définies comme des [contrats intelligents](/glossary/#smart-contract) convenus qui automatisent la prise de décision décentralisée sur un ensemble de ressources (jetons). Les utilisateurs disposant de jetons votent sur la manière dont les ressources sont dépensées, et le code exécute automatiquement le résultat du vote.
 
 Le fait est toutefois que les gens définissent de nombreuses communautés Web3 comme étant des DAO. Ces communautés ont toutes des niveaux différents de décentralisation et d'automatisation par code. Actuellement, nous explorons ce que sont les DAO et comment elles pourraient évoluer à l'avenir.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>En savoir plus sur les DAO</div>
+  <div>En savoir plus sur les DAOs</div>
   <ButtonLink href="/dao/">
     En savoir plus sur les DAO
   </ButtonLink>
@@ -107,33 +108,34 @@ Le fait est toutefois que les gens définissent de nombreuses communautés Web3 
 
 Normalement, vous créez un compte pour chaque plateforme que vous utilisez. Par exemple, vous pourriez avoir un compte Twitter, un compte YouTube et un compte Reddit. Vous voulez changer votre nom tel qu'il s'affiche ou votre photo de profil ? Vous devez le faire sur tous les comptes. Vous pouvez utiliser des connexions avec les réseaux sociaux dans certains cas, mais cela pose un problème bien connu : la censure. En un seul clic, ces plateformes peuvent vous bloquer l'accès à toute votre vie en ligne. Pire encore, de nombreuses plates-formes exigent que vous leur fassiez confiance en leur confiant des informations personnelles pour créer un compte.
 
-Le Web3 résout ces problèmes en vous permettant de contrôler votre identité digitale avec une adresse Ethereum et un profil de [service de nom Ethereum (ENS)](/glossary/#ens). Utiliser une adresse Ethereum offre un moyen de connexion unique à toutes les plateformes qui est sûr, résistant à la censure et anonyme.
+Le Web3 résout ces problèmes en vous permettant de contrôler votre identité numérique avec une adresse Ethereum et un profil [Ethereum Name Service (ENS)](/glossary/#ens). Utiliser une adresse Ethereum offre un moyen de connexion unique à toutes les plateformes qui est sûr, résistant à la censure et anonyme.
 
 ### Paiements natifs {#native-payments}
 
-L'infrastructure de paiement sur le Web2 repose sur les banques et les processeurs de paiement, excluant les personnes sans compte bancaire ou les personnes qui vivent dans le mauvais pays. Le Web3 utilise des jetons comme [ETH](/glossary/#ether) pour envoyer de l'argent directement depuis un navigateur et ne nécessite pas de tiers de confiance.
+L'infrastructure de paiement sur le Web2 repose sur les banques et les processeurs de paiement, excluant les personnes sans compte bancaire ou les personnes qui vivent dans le mauvais pays.
+Le Web3 utilise des jetons comme l'[ETH](/glossary/#ether) pour envoyer de l'argent directement dans le navigateur et ne nécessite aucun tiers de confiance.
 
 <ButtonLink href="/eth/">
-  Autres informations sur ETH
+  En savoir plus sur l'ETH
 </ButtonLink>
 
-## Limitations du Web3 {#web3-limitations}
+## Limites du Web3 {#web3-limitations}
 
 Malgré les nombreux avantages du Web3 dans sa forme actuelle, il existe encore de nombreuses limites que l'écosystème doit dépasser pour pouvoir prospérer.
 
 ### Accessibilité {#accessibility}
 
-Des fonctionnalités importantes du Web3, comme Sign-in with Ethereum (siwe), sont déjà disponibles gratuitement pour tout le monde. Mais le coût relatif des transactions reste encore élevé pour beaucoup de personnes. Le Web3 est moins susceptible d'être utilisé dans les pays moins riches et en développement, en raison de frais de transaction élevés. Sur Ethereum, ces défis sont résolus par [la feuille de route](/roadmap/) et [les solutions de mise à l'échelle de la couche 2](/glossary/#layer-2). La technologie est prête, mais les solutions de niveau 2 doivent être plus largement adoptées pour rendre le Web3 accessible à tous.
+Des fonctionnalités importantes du Web3, comme Sign-in with Ethereum (siwe), sont déjà disponibles gratuitement pour tout le monde. Mais le coût relatif des transactions reste encore élevé pour beaucoup de personnes. Le Web3 est moins susceptible d'être utilisé dans les pays moins riches et en développement, en raison de frais de transaction élevés. Sur Ethereum, ces défis sont en cours de résolution grâce à [la feuille de route](/roadmap/) et aux [solutions de mise à l'échelle de couche 2](/glossary/#layer-2). La technologie est prête, mais les solutions de niveau 2 doivent être plus largement adoptées pour rendre le Web3 accessible à tous.
 
 ### Expérience utilisateur {#user-experience}
 
-La barrière technique à l'entrée sur le Web3 est actuellement trop élevée. Les utilisateurs doivent comprendre les problèmes de sécurité, comprendre la documentation technique complexe et naviguer dans des interfaces utilisateur non intuitives. Les [éditeurs de portefeuilles](/wallets/find-wallet/), en particulier, y travaillent, mais davantage d'avancées seront nécessaires pour que le Web3 soit adopté massivement.
+La barrière technique à l'entrée sur le Web3 est actuellement trop élevée. Les utilisateurs doivent comprendre les problèmes de sécurité, comprendre la documentation technique complexe et naviguer dans des interfaces utilisateur non intuitives. [Les fournisseurs de portefeuilles](/wallets/find-wallet/), en particulier, travaillent à résoudre ce problème, mais davantage de progrès sont nécessaires avant que le Web3 ne soit adopté massivement.
 
-### Formation {#education}
+### Éducation {#education}
 
-Le Web3 introduit de nouveaux paradigmes qui nécessitent l'apprentissage de modèles mentaux différents de ceux utilisés sur le Web2.0. Un effort éducatif similaire a été consenti tandis que le Web1.0 gagnait en popularité à la fin des années 1990. Les partisans de la toile mondiale ont utilisé tout un tas de techniques pour éduquer le public, allant de simples métaphores (autoroutes de l'information, navigateurs, surfer sur le web) jusqu'à des [programmes télévisés](https://www.youtube.com/watch?v=SzQLI7BxfYI). Le Web3 n'est pas difficile, mais il est différent. Les initiatives éducatives informant les utilisateurs du Web2 de ces paradigmes propres au Web3 sont vitales pour son succès.
+Le Web3 introduit de nouveaux paradigmes qui nécessitent l'apprentissage de modèles mentaux différents de ceux utilisés sur le Web2.0. Un effort d'éducation similaire a eu lieu lorsque le Web1.0 gagnait en popularité à la fin des années 1990 ; les partisans du World Wide Web ont utilisé toute une série de techniques pédagogiques pour instruire le public, allant de métaphores simples (l'autoroute de l'information, les navigateurs, surfer sur le Web) à des [émissions de télévision](https://www.youtube.com/watch?v=SzQLI7BxfYI). Le Web3 n'est pas difficile, mais il est différent. Les initiatives éducatives informant les utilisateurs du Web2 de ces paradigmes propres au Web3 sont vitales pour son succès.
 
-Ethereum.org contribue à l'éducation Web3 par le biais de son [Programme de Traduction](/contributing/translation-program/) visant à traduire les contenus Ethereum importants dans autant de langues que possible.
+Ethereum.org contribue à l'éducation sur le Web3 par le biais de notre [Programme de traduction](/contributing/translation-program/), qui vise à traduire le contenu important d'Ethereum dans le plus de langues possible.
 
 ### Infrastructure centralisée {#centralized-infrastructure}
 
@@ -145,23 +147,23 @@ Le Web3 est un écosystème jeune et en pleine évolution. Gavin Wood a inventé
 
 Nous n'en sommes qu'au début de la création d'un meilleur Web avec le Web3, mais l'avenir du Web se fera plus radieux à mesure que nous continuerons d'améliorer l'infrastructure qui le supportera.
 
-## Comment puis-je m'impliquer ? {#get-involved}
+## Comment puis-je participer ? {#get-involved}
 
 - [Obtenir un portefeuille](/wallets/)
 - [Trouver une communauté](/community/)
-- [Explorer des applications Web3](/apps/)
+- [Explorer les applications Web3](/apps/)
 - [Rejoindre une DAO](/dao/)
-- [Construire sur le Web3](/developers/)
+- [Développer sur le Web3](/developers/)
 
-## Lectures complémentaires {#further-reading}
+## En savoir plus {#further-reading}
 
 Le Web3 n’est pas strictement défini. Plusieurs participants de la Communauté ont des points de vue différents à ce sujet. Voici quelques-uns d'entre eux :
 
-- [Qu'est-ce que le Web3? L'Internet décentralisé du futur expliqué](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
+- [Qu'est-ce que le Web3? [L'Internet décentralisé du futur expliqué](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Comprendre le Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
-- [Importance du Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
+- [Pourquoi le Web3 est important](https://a16zcrypto.com/posts/article/why-web3-matters/) — _Chris Dixon_
 - [Pourquoi la décentralisation est importante](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
-- [Panorama du Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Débat sur le Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
+- [Le paysage du Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
+- [Le débat sur le Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

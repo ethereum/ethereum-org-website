@@ -12,7 +12,7 @@ Block proposal is part of the proof-of-stake protocol. To help understand this p
 
 ## Who produces blocks? {#who-produces-blocks}
 
-Validator accounts propose blocks. Validator accounts are managed by node operators who run validator software as part of their execution and consensus clients and have deposited at least 32 ETH into the deposit contract. However, each validator is only occasionally responsible for proposing a block. Ethereum measures time in slots and epochs. Each slot is twelve seconds, and 32 slots (6.4 minutes) make up an epoch. Every slot is an opportunity to add a new block on Ethereum.
+Validator accounts propose blocks. Validator accounts are managed by node operators who run validator software as part of their execution and consensus clients and have deposited at least 32 ETH into the deposit contract. However, each validator is only occasionally responsible for proposing a block. [Ethereum](/) measures time in slots and epochs. Each slot is twelve seconds, and 32 slots (6.4 minutes) make up an epoch. Every slot is an opportunity to add a new block on Ethereum.
 
 ### Random selection {#random-selection}
 

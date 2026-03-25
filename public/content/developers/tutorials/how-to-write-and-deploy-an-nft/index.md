@@ -4,6 +4,7 @@ description: This tutorial is Part 1 of a series on NFTs that will take you step
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
+breadcrumb: Write and deploy NFT
 lang: en
 published: 2021-04-22
 ---

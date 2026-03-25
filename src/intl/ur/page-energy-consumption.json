@@ -1,0 +1,21 @@
+{
+  "adoption-chart-artists-label": "فنکار",
+  "adoption-chart-column-now-label": "اب",
+  "adoption-chart-companies-label": "کمپنیاں",
+  "adoption-chart-developers-label": "ڈویلپرز",
+  "adoption-chart-gamers-label": "گیمرز",
+  "adoption-chart-investors-label": "سرمایہ کار",
+  "adoption-chart-musicians-label": "موسیقار",
+  "adoption-chart-refugees-label": "پناہ گزین",
+  "adoption-chart-writers-label": "مصنفین",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "امریکہ میں گیمنگ",
+  "energy-consumption-chart-global-data-centers-label": "عالمی ڈیٹا سینٹرز",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-gold-mining-cbeci-label": "سونے کی میننگ",
+  "energy-consumption-chart-legend": "سالانہ توانائی کی کھپت (TWh/yr)"
+}

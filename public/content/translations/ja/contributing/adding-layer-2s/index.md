@@ -1,6 +1,6 @@
 ---
-title: レイヤー2の追加
-description: ethereum.orgへのレイヤー2の掲載ポリシー
+title: "レイヤー2の追加"
+description: "ethereum.orgへのレイヤー2の掲載ポリシー"
 lang: ja
 ---
 
@@ -8,7 +8,7 @@ lang: ja
 
 ユーザーがレイヤー2を安全かつ自信を持ってナビゲートできるように、可能な限り最良のリソースをリストアップしたいと考えています。
 
-誰でも新たにレイヤー2のethereum.orgへの掲載を提案することができます。 不足しているレイヤー2がある場合は、**[こちらからご提案ください](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)**。
+誰でも新たにレイヤー2のethereum.orgへの掲載を提案することができます。 掲載されていないレイヤー2がありましたら、**[こちらから提案してください](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
 現在、以下のページにレイヤー2を掲載しています。
 
@@ -18,14 +18,14 @@ lang: ja
 
 レイヤー2は、イーサリアムにとって比較的新しいエキサイティングなパラダイムです。 公正なフレームワークの作成を試みていますが、掲載基準は時間と共に変化し、進化する場合があります。
 
-## 基準のフレームワーク {#decision-framework}
+## 意思決定のフレームワーク {#decision-framework}
 
-### 掲載基準: 必須条件 {#criteria-for-inclusion-the-must-haves}
+### 掲載基準：必須条件 {#criteria-for-inclusion-the-must-haves}
 
 **L2BEATへの掲載**
 
-- 提案するプロジェクトが[L2BEAT](https://l2beat.com)に掲載されている必要があります (L2BEATは、レイヤー2プロジェクトを評価する堅固なリスクアセスメントを提供するため)。 **L2BEATで紹介されていない場合は、ethereum.orgにレイヤー2として掲載しません。**
-- [L2BEATにレイヤー2プロジェクトを追加する方法](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md)
+- 検討の対象となるには、このプロジェクトが[L2BEAT](https://l2beat.com)に掲載されている必要があります。 (L2BEATは、レイヤー2プロジェクトを評価する堅固なリスクアセスメントを提供するため)。 **プロジェクトがL2BEATで紹介されていない場合、ethereum.orgではL2として掲載しません。**
+- [L2プロジェクトをL2BEATに追加する方法](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md)。
 
 **オープンソース**
 
@@ -38,11 +38,11 @@ lang: ja
 - オプティミスティック・ロールアップ
 - ゼロ知識ロールアップ
 
-_データの可用性やセキュリティにイーサリアムを使用しない、その他のスケーリング・ソリューションはレイヤー2とは見なしていません。_
+_データの可用性やセキュリティにイーサリアムを使用しない他のスケーリングソリューションは、レイヤー2とは見なしません。_
 
 **イーサリアムによるデータ可用性**
 
-- データ可用性は、他のスケーリング・ソリューションとレイヤー2を区別する重要な差別化要因であり、 掲載にあたっては、データ可用性にイーサリアムメインネットの使用は**必須**となります。
+- データ可用性は、他のスケーリング・ソリューションとレイヤー2を区別する重要な差別化要因であり、 掲載対象として検討されるには、プロジェクトはデータ可用性のためにイーサリアムメインネットを**必ず**使用しなければなりません。
 
 **ブリッジ**
 
@@ -88,10 +88,10 @@ _データの可用性やセキュリティにイーサリアムを使用しな�
 
 - 任意のウォレットがネイティブにレイヤー2に対応していること。
 
-## レイヤー2の追加 {#add-exchange}
+## あなたのレイヤー2を追加 {#add-exchange}
 
 ethereum.orgにレイヤー2の追加をご希望の場合は、GitHubで問題を作成してください。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
-  問題の作成
+　イシューを作成
 </ButtonLink>

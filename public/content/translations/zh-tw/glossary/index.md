@@ -1,6 +1,6 @@
 ---
-title: 以太坊詞彙表
-description: 與以太坊相關的技術和非技術術語的不完整詞彙表
+title: "以太坊詞彙表"
+description: "與以太坊相關的技術和非技術術語的不完整詞彙表"
 lang: zh-tw
 ---
 
@@ -117,6 +117,8 @@ lang: zh-tw
 <GlossaryDefinition term="decentralization" />
 
 <GlossaryDefinition term="dao" />
+
+<GlossaryDefinition term="desci" />
 
 <GlossaryDefinition term="dex" />
 
@@ -320,11 +322,11 @@ lang: zh-tw
 
 ## O {#section-o}
 
-<GlossaryDefinition term="off-chain" />
+<GlossaryDefinition term="offchain" />
 
 <GlossaryDefinition term="ommer" />
 
-<GlossaryDefinition term="on-chain" />
+<GlossaryDefinition term="onchain" />
 
 <GlossaryDefinition term="optimistic-rollup" />
 
@@ -440,6 +442,8 @@ lang: zh-tw
 
 <GlossaryDefinition term="token" />
 
+<GlossaryDefinition term="token-factory" />
+
 <GlossaryDefinition term="transaction" />
 
 <GlossaryDefinition term="transaction-fee" />
@@ -474,6 +478,8 @@ lang: zh-tw
 
 <GlossaryDefinition term="wei" />
 
+<GlossaryDefinition term="wrapped-token" />
+
 <Divider />
 
 ## Z {#section-z}
@@ -488,12 +494,12 @@ lang: zh-tw
 
 ## 來源 {#sources}
 
-_摘自 [Andreas M. Antonopoulos 與 Gavin Wood](https://ethereumbook.info) 所著 [《精通以太坊》](https://github.com/ethereumbook/ethereumbook)（依據 CC-BY-SA 協議）_
+_部分內容來自 [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) 所著的 [《精通以太坊》](https://github.com/ethereumbook/ethereumbook)，遵循 CC-BY-SA 授權_
 
 <Divider />
 
-## 完善本頁面 {#contribute-to-this-page}
+## 為本頁面做出貢獻 {#contribute-to-this-page}
 
 我們是否有所遺漏？ 是否存在謬誤？ 請在 GitHub 上為此詞彙表貢獻力量，幫助我們改進！
 
-[瞭解更多關於如何貢獻的資訊](/contributing/adding-glossary-terms)
+[深入瞭解如何貢獻](/contributing/adding-glossary-terms)
