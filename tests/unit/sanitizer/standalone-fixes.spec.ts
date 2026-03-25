@@ -14,6 +14,7 @@ const {
   fixAsciiGuillemets,
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
+  fixMisplacedBacktickAroundJsxFragment,
   escapeMdxAngleBrackets,
   removeOrphanedClosingTags,
   normalizeFrontmatterDates,
@@ -50,6 +51,8 @@ const {
   fixMangledDocLinks,
   fixBrandCapitalization,
   fixJsxAttributeSpacing,
+  fixEscapedQuotesInJsxAttributes,
+  fixTranslatedJsonPlaceholders,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -300,6 +303,40 @@ test.describe("Standalone Fixes", () => {
     })
   })
 
+  test.describe("fixMisplacedBacktickAroundJsxFragment", () => {
+    test("moves closing backtick to wrap </> in code span", () => {
+      const input = "tunatumia kipengele tupu (`<> ...` </>) ili kuzifanya"
+      const { content, fixCount } = fixMisplacedBacktickAroundJsxFragment(input)
+      expect(content).toBe(
+        "tunatumia kipengele tupu (`<> ... </>`) ili kuzifanya"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes already-escaped \\</> variant", () => {
+      const input = "tunatumia kipengele tupu (`<> ...` \\</>) ili kuzifanya"
+      const { content, fixCount } = fixMisplacedBacktickAroundJsxFragment(input)
+      expect(content).toBe(
+        "tunatumia kipengele tupu (`<> ... </>`) ili kuzifanya"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct backtick placement unchanged", () => {
+      const input = "we use an empty component (`<> ... </>`) to combine"
+      const { content, fixCount } = fixMisplacedBacktickAroundJsxFragment(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input = "```tsx\n(`<> ...` </>)\n```"
+      const { content, fixCount } = fixMisplacedBacktickAroundJsxFragment(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
   test.describe("escapeMdxAngleBrackets", () => {
     test("escapes < before digit", () => {
       const input = "Requires <5GB of disk space"
@@ -412,6 +449,20 @@ test.describe("Standalone Fixes", () => {
       const { content, fixCount } = removeOrphanedClosingTags(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
+    })
+
+    test("collapses double period after orphaned tag removal", () => {
+      const input = "funguo za BLS za kutoa.</em></em>. Ili mthibitishaji"
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe("funguo za BLS za kutoa. Ili mthibitishaji")
+      expect(fixCount).toBe(2)
+    })
+
+    test("collapses double comma after orphaned tag removal", () => {
+      const input = "first,</em>, second"
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe("first, second")
+      expect(fixCount).toBe(1)
     })
   })
 
@@ -2323,6 +2374,74 @@ author: Ori Pomerantz
       const input = '```\n<a href = "test">\n```'
       const { content, fixCount } = fixJsxAttributeSpacing(input)
       expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixEscapedQuotesInJsxAttributes", () => {
+    test("removes backslash-escaped quotes in JSX attributes", () => {
+      const input =
+        '<ButtonLink variant=\\"outline-color\\" href=\\"/roadmap/danksharding/\\">Zaidi</ButtonLink>'
+      const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
+      expect(content).toBe(
+        '<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Zaidi</ButtonLink>'
+      )
+      expect(fixCount).toBeGreaterThan(0)
+    })
+
+    test("leaves normal JSX attributes unchanged", () => {
+      const input =
+        '<ButtonLink variant="outline" href="/path/">Text</ButtonLink>'
+      const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input = '```\n<Tag attr=\\"val\\">\n```'
+      const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("only fixes lines that look like JSX tags", () => {
+      const input = 'This is prose with a \\" quote in it'
+      const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixTranslatedJsonPlaceholders", () => {
+    test("restores translated placeholder names to English", () => {
+      const en = JSON.stringify({ key: "{days} ago" })
+      const tr = JSON.stringify({ key: "{siku} zilizopita" })
+      const { content, fixCount } = fixTranslatedJsonPlaceholders(tr, en)
+      const parsed = JSON.parse(content)
+      expect(parsed.key).toBe("{days} zilizopita")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple placeholders in one value", () => {
+      const en = JSON.stringify({ k: "{count} of {total}" })
+      const tr = JSON.stringify({ k: "{hesabu} ya {jumla}" })
+      const { content, fixCount } = fixTranslatedJsonPlaceholders(tr, en)
+      const parsed = JSON.parse(content)
+      expect(parsed.k).toBe("{count} ya {total}")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct placeholders unchanged", () => {
+      const en = JSON.stringify({ k: "{days} ago" })
+      const tr = JSON.stringify({ k: "{days} zilizopita" })
+      const { fixCount } = fixTranslatedJsonPlaceholders(tr, en)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips keys not present in English", () => {
+      const en = JSON.stringify({ a: "hello" })
+      const tr = JSON.stringify({ a: "habari", b: "{extra}" })
+      const { fixCount } = fixTranslatedJsonPlaceholders(tr, en)
       expect(fixCount).toBe(0)
     })
   })
