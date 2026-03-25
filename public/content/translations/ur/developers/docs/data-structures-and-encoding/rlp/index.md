@@ -1,6 +1,6 @@
 ---
-title: Recursive-length prefix (RLP) سیریلائزیشن
-description: ایتھریم کی ایگزیکیوشن لیئر میں rlp انکوڈنگ کی تعریف۔
+title: "Recursive-length prefix (RLP) سیریلائزیشن"
+description: "ایتھریم کی ایگزیکیوشن لیئر میں rlp انکوڈنگ کی تعریف۔"
 lang: ur
 sidebarDepth: 2
 ---

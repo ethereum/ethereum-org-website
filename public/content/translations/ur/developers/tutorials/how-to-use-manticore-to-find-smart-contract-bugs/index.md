@@ -1,14 +1,14 @@
 ---
-title: اسمارٹ کانٹریکٹس میں بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کریں
-description: اسمارٹ کانٹریکٹس میں خودکار طور پر بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کریں
+title: "اسمارٹ کانٹریکٹس میں بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کریں"
+description: "اسمارٹ کانٹریکٹس میں خودکار طور پر بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کریں"
 author: Trailofbits
 lang: ur
 tags:
-  ["solidity", "اسمارٹ کانٹریکٹس", "سیکیورٹی", "ٹیسٹنگ", "رسمی تصدیق"]
+  ["Solidity", "اسمارٹ کانٹریکٹس", "سیکیورٹی", "ٹیسٹنگ", "رسمی تصدیق"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13
-source: محفوظ کانٹریکٹس بنانا
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
@@ -16,7 +16,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 ## انسٹالیشن {#installation}
 
-Manticore کے لیے <span dir="ltr">>= python 3.6</span> درکار ہے۔ اسے pip کے ذریعے یا docker کا استعمال کرتے ہوئے انسٹال کیا جا سکتا ہے۔
+Manticore کے لیے <span dir="ltr">= python 3.6</span> درکار ہے۔ اسے pip کے ذریعے یا docker کا استعمال کرتے ہوئے انسٹال کیا جا سکتا ہے۔
 
 ### docker کے ذریعے Manticore {#manticore-through-docker}
 

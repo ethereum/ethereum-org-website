@@ -1,10 +1,10 @@
 ---
-title: ایک Solidity اسمارٹ کانٹریکٹ سے ERC-20 ٹوکنز کی منتقلی اور منظوری
-description: ایک DEX اسمارٹ کانٹریکٹ بنائیں جو Solidity کا استعمال کرتے ہوئے ERC-20 ٹوکن کی منتقلی اور منظوری کو ہینڈل کرے۔
+title: "ایک Solidity اسمارٹ کانٹریکٹ سے ERC-20 ٹوکنز کی منتقلی اور منظوری"
+description: "ایک DEX اسمارٹ کانٹریکٹ بنائیں جو Solidity کا استعمال کرتے ہوئے ERC-20 ٹوکن کی منتقلی اور منظوری کو ہینڈل کرے۔"
 author: "jdourlens"
-tags: ["اسمارٹ کانٹریکٹس", "ٹوکنز", "solidity", "erc-20"]
+tags: ["اسمارٹ کانٹریکٹس", "ٹوکنز", "Solidity", "erc-20"]
 skill: intermediate
-breadcrumb: ERC-20 کی منتقلی
+breadcrumb: "ERC-20 کی منتقلی"
 lang: ur
 published: 2020-04-07
 source: EthereumDev

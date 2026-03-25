@@ -1,11 +1,11 @@
 ---
-title: Solidity سے دوسرے کنٹریکٹس کے ساتھ تعامل کریں
-description: موجودہ کنٹریکٹ سے سمارٹ کنٹریکٹ کو کیسے ڈیپلائے کریں اور اس کے ساتھ تعامل کیسے کریں
+title: "Solidity سے دوسرے کنٹریکٹس کے ساتھ تعامل کریں"
+description: "موجودہ کنٹریکٹ سے سمارٹ کنٹریکٹ کو کیسے ڈیپلائے کریں اور اس کے ساتھ تعامل کیسے کریں"
 author: "jdourlens"
-tags: ["سمارٹ کنٹریکٹس", "solidity", "remix", "ڈیپلائنگ", "کمپوزیبلٹی"]
+tags: ["سمارٹ کنٹریکٹس", "Solidity", "Remix", "ڈیپلائنگ", "کمپوزیبلٹی"]
 skill: advanced
-breadcrumb: کنٹریکٹ کے تعاملات
-lang: en
+breadcrumb: "کنٹریکٹ کے تعاملات"
+lang: ur
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/

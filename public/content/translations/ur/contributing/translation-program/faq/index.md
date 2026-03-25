@@ -1,7 +1,7 @@
 ---
-title: ٹرانسلیشن پروگرام کے اکثر پوچھے گئے سوالات (FAQ)
+title: "ٹرانسلیشن پروگرام کے اکثر پوچھے گئے سوالات (FAQ)"
 lang: ur
-description: ethereum.org ٹرانسلیشن پروگرام کے بارے میں اکثر پوچھے گئے سوالات
+description: "ethereum.org ٹرانسلیشن پروگرام کے بارے میں اکثر پوچھے گئے سوالات"
 ---
 
 # ethereum.org گائیڈ کا ترجمہ کرنا {#translating-ethereum-guide}

@@ -1,11 +1,11 @@
 ---
-title: بطور سروس اسٹیکنگ
-description: بطور سروس اسٹیکنگ کے بارے میں جانیں
+title: "بطور سروس اسٹیکنگ"
+description: "بطور سروس اسٹیکنگ کے بارے میں جانیں"
 lang: ur
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: لیسلی گینڈا بادلوں میں تیر رہا ہے۔
+alt: "لیسلی گینڈا بادلوں میں تیر رہا ہے۔"
 sidebarDepth: 2
 summaryPoints:
   - تھرڈ پارٹی نوڈ آپریٹرز آپ کے ویلیڈیٹر کلائنٹ کے آپریشن کو سنبھالتے ہیں

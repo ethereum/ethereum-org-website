@@ -1,7 +1,7 @@
 ---
-title: ہمارے بارے میں
-description: ethereum.org کی ٹیم، کمیونٹی اور مشن کے بارے میں
-lang: en
+title: "ہمارے بارے میں"
+description: "ethereum.org کی ٹیم، کمیونٹی اور مشن کے بارے میں"
+lang: ur
 ---
 
 # ethereum.org کے بارے میں {#about-ethereumorg}

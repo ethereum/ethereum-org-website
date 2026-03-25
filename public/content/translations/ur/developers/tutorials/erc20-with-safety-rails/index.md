@@ -1,11 +1,11 @@
 ---
-title: حفاظتی ریلز کے ساتھ ERC-20
-description: لوگوں کو احمقانہ غلطیوں سے بچنے میں کیسے مدد کی جائے
-author: اوری پومرانٹز
+title: "حفاظتی ریلز کے ساتھ ERC-20"
+description: "لوگوں کو احمقانہ غلطیوں سے بچنے میں کیسے مدد کی جائے"
+author: "اوری پومرانٹز"
 lang: ur
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ERC-20 کی حفاظت
+breadcrumb: "ERC-20 کی حفاظت"
 published: 2022-08-15
 ---
 

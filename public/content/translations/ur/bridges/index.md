@@ -1,6 +1,6 @@
 ---
-title: بلاک چین برجز کا تعارف
-description: برجز صارفین کو اپنے فنڈز مختلف بلاک چینز کے درمیان منتقل کرنے کی سہولت دیتے ہیں
+title: "بلاک چین برجز کا تعارف"
+description: "برجز صارفین کو اپنے فنڈز مختلف بلاک چینز کے درمیان منتقل کرنے کی سہولت دیتے ہیں"
 lang: ur
 ---
 
@@ -136,6 +136,7 @@ _ویب 3 (Web3) اب L1 بلاک چینز اور L2 اسکیلنگ سلوشنز
 <Divider />
 
 ## مزید مطالعہ {#further-reading}
+
 - [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _<span dir="ltr">June 18, 2022</span> - Brendan Asselstine_
 - [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _<span dir="ltr">July 5, 2022</span> - Bartek Kiepuszewski_
 - ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _<span dir="ltr">January 8, 2022</span> - Vitalik Buterin_

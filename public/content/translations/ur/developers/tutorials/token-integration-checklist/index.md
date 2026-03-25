@@ -1,11 +1,11 @@
 ---
-title: ٹوکن انضمام کی چیک لسٹ
-description: ٹوکنز کے ساتھ تعامل کرتے وقت غور کرنے والی چیزوں کی ایک چیک لسٹ
+title: "ٹوکن انضمام کی چیک لسٹ"
+description: "ٹوکنز کے ساتھ تعامل کرتے وقت غور کرنے والی چیزوں کی ایک چیک لسٹ"
 author: "ٹریل آف بٹس"
 lang: ur
-tags: ["solidity", "اسمارٹ کانٹریکٹس", "سیکیورٹی", "ٹوکنز"]
+tags: ["Solidity", "اسمارٹ کانٹریکٹس", "سیکیورٹی", "ٹوکنز"]
 skill: intermediate
-breadcrumb: ٹوکن کا انضمام
+breadcrumb: "ٹوکن کا انضمام"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

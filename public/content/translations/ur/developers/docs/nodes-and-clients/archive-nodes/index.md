@@ -1,6 +1,6 @@
 ---
-title: ایتھیریم آرکائیو نوڈ
-description: آرکائیو نوڈز کا جائزہ
+title: "ایتھیریم آرکائیو نوڈ"
+description: "آرکائیو نوڈز کا جائزہ"
 lang: ur
 sidebarDepth: 2
 ---

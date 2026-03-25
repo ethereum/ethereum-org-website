@@ -1,10 +1,10 @@
 ---
-title: ERC-20 ٹوکن اسمارٹ کانٹریکٹ کو سمجھیں
-description: ایک مکمل Solidity اسمارٹ کانٹریکٹ کی مثال اور وضاحت کے ساتھ ERC-20 ٹوکن اسٹینڈرڈ کو نافذ کرنے کا طریقہ سیکھیں۔
+title: "ERC-20 ٹوکن اسمارٹ کانٹریکٹ کو سمجھیں"
+description: "ایک مکمل Solidity اسمارٹ کانٹریکٹ کی مثال اور وضاحت کے ساتھ ERC-20 ٹوکن اسٹینڈرڈ کو نافذ کرنے کا طریقہ سیکھیں۔"
 author: "jdourlens"
-tags: ["اسمارٹ کانٹریکٹس", "ٹوکنز", "solidity", "erc-20"]
+tags: ["اسمارٹ کانٹریکٹس", "ٹوکنز", "Solidity", "erc-20"]
 skill: beginner
-breadcrumb: ERC-20 ٹوکن کی بنیادی باتیں
+breadcrumb: "ERC-20 ٹوکن کی بنیادی باتیں"
 lang: ur
 published: 2020-04-05
 source: EthereumDev

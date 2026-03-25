@@ -1,10 +1,10 @@
 ---
-title: اسمارٹ کانٹریکٹ سیکیورٹی گائیڈ لائنز
-description: اپنی ڈیپ (dapp) بناتے وقت غور کرنے کے لیے سیکیورٹی گائیڈ لائنز کی ایک چیک لسٹ
+title: "اسمارٹ کانٹریکٹ سیکیورٹی گائیڈ لائنز"
+description: "اپنی ڈیپ (dapp) بناتے وقت غور کرنے کے لیے سیکیورٹی گائیڈ لائنز کی ایک چیک لسٹ"
 author: "ٹریل آف بٹس"
-tags: ["solidity", "اسمارٹ کانٹریکٹس", "سیکیورٹی"]
+tags: ["Solidity", "اسمارٹ کانٹریکٹس", "سیکیورٹی"]
 skill: intermediate
-breadcrumb: سیکیورٹی گائیڈ لائنز
+breadcrumb: "سیکیورٹی گائیڈ لائنز"
 lang: ur
 published: 2020-09-06
 source: Building secure contracts

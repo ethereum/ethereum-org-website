@@ -1,6 +1,6 @@
 ---
-title: گیسپر (Gasper)
-description: گیسپر پروف-آف-اسٹیک میکانزم کی وضاحت۔
+title: "گیسپر (Gasper)"
+description: "گیسپر پروف-آف-اسٹیک میکانزم کی وضاحت۔"
 lang: ur
 ---
 

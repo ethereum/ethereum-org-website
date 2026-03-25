@@ -1,11 +1,11 @@
 ---
-title: ٹیسٹنگ کے لیے Solidity اسمارٹ کانٹریکٹس کو ماک (mock) کیسے کریں
-description: ٹیسٹنگ کے دوران آپ کو اپنے کانٹریکٹس کا مذاق کیوں اڑانا چاہیے
-author: مارکس واس
+title: "ٹیسٹنگ کے لیے Solidity اسمارٹ کانٹریکٹس کو ماک (mock) کیسے کریں"
+description: "ٹیسٹنگ کے دوران آپ کو اپنے کانٹریکٹس کا مذاق کیوں اڑانا چاہیے"
+author: "مارکس واس"
 lang: ur
-tags: ["solidity", "اسمارٹ کانٹریکٹس", "ٹیسٹنگ", "ماکنگ"]
+tags: ["Solidity", "اسمارٹ کانٹریکٹس", "ٹیسٹنگ", "ماکنگ"]
 skill: intermediate
-breadcrumb: کانٹریکٹس کی ماکنگ
+breadcrumb: "کانٹریکٹس کی ماکنگ"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

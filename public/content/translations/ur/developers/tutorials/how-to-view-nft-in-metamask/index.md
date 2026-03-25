@@ -1,10 +1,10 @@
 ---
-title: اپنے والیٹ میں اپنا NFT کیسے دیکھیں (NFT ٹیوٹوریل سیریز کا حصہ 3/3)
-description: یہ ٹیوٹوریل بتاتا ہے کہ MetaMask پر موجودہ NFT کو کیسے دیکھا جائے!
+title: "اپنے والیٹ میں اپنا NFT کیسے دیکھیں (NFT ٹیوٹوریل سیریز کا حصہ 3/3)"
+description: "یہ ٹیوٹوریل بتاتا ہے کہ MetaMask پر موجودہ NFT کو کیسے دیکھا جائے!"
 author: "سومی مدگل"
 tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner
-breadcrumb: والیٹ میں NFT دیکھیں
+breadcrumb: "والیٹ میں NFT دیکھیں"
 lang: ur
 published: 2021-04-22
 ---

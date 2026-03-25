@@ -1,7 +1,7 @@
 ---
-title: مترجمین کے لیے گائیڈ
-lang: en
-description: ethereum.org کے مترجمین کے لیے ہدایات اور تجاویز
+title: "مترجمین کے لیے گائیڈ"
+lang: ur
+description: "ethereum.org کے مترجمین کے لیے ہدایات اور تجاویز"
 ---
 
 # Ethereum.org ترجمے کا اسٹائل گائیڈ {#style-guide}

@@ -1,11 +1,11 @@
 ---
 title: "کانٹریکٹ کے سائز کی حد سے نمٹنے کے لیے کانٹریکٹس کو چھوٹا کرنا"
-description: آپ اپنے اسمارٹ کانٹریکٹس کو بہت بڑا ہونے سے روکنے کے لیے کیا کر سکتے ہیں؟
-author: مارکس واس
+description: "آپ اپنے اسمارٹ کانٹریکٹس کو بہت بڑا ہونے سے روکنے کے لیے کیا کر سکتے ہیں؟"
+author: "مارکس واس"
 lang: ur
-tags: ["solidity", "اسمارٹ کانٹریکٹس", "اسٹوریج"]
+tags: ["Solidity", "اسمارٹ کانٹریکٹس", "اسٹوریج"]
 skill: intermediate
-breadcrumb: کانٹریکٹس کو چھوٹا کرنا
+breadcrumb: "کانٹریکٹس کو چھوٹا کرنا"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

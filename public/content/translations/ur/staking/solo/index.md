@@ -1,11 +1,11 @@
 ---
-title: اپنے ETH کو ہوم اسٹیک کریں
-description: اپنے ETH کی ہوم اسٹیکنگ شروع کرنے کے طریقے کا ایک جائزہ
+title: "اپنے ETH کو ہوم اسٹیک کریں"
+description: "اپنے ETH کی ہوم اسٹیکنگ شروع کرنے کے طریقے کا ایک جائزہ"
 lang: ur
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: لیسلی گینڈا اپنی کمپیوٹر چپ پر۔
+alt: "لیسلی گینڈا اپنی کمپیوٹر چپ پر۔"
 sidebarDepth: 2
 summaryPoints:
   - اپنے ویلیڈیٹر کو مناسب طریقے سے کام کرنے اور آن لائن رکھنے کے لیے براہ راست پروٹوکول سے زیادہ سے زیادہ انعامات حاصل کریں
@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> سلیشنگ اور ویلیڈیٹر لائف سائیکل کے بارے میں مزید</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

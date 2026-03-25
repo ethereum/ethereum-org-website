@@ -1,6 +1,6 @@
 ---
-title: تعاون
-description: ethereum.org میں تعاون کرنے کے مختلف طریقوں کے بارے میں جانیں
+title: "تعاون"
+description: "ethereum.org میں تعاون کرنے کے مختلف طریقوں کے بارے میں جانیں"
 lang: ur
 ---
 
@@ -91,6 +91,7 @@ ethereum.org میں کوئی بھی مواد یا آرٹفیکٹ شامل کرت
 [OATs کے بارے میں مزید](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### کلیم کرنے کا طریقہ
+
 1. ہمارے [Discord سرور](https://discord.gg/ethereum-org) میں شامل ہوں۔
 2. اپنے تعاون کا لنک `#🥇 | proof-of-contribution` چینل میں پیسٹ کریں۔
 3. ہماری ٹیم کے کسی رکن کی جانب سے آپ کو آپ کے OAT کا لنک بھیجنے کا انتظار کریں۔

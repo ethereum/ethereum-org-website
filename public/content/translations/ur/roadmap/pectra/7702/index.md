@@ -1,7 +1,7 @@
 ---
-title: Pectra 7702 گائیڈ لائنز
-description: Pectra ریلیز میں 7702 کے بارے میں مزید جانیں
-lang: en
+title: "Pectra 7702 گائیڈ لائنز"
+description: "Pectra ریلیز میں 7702 کے بارے میں مزید جانیں"
+lang: ur
 ---
 
 # Pectra 7702

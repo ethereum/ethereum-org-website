@@ -1,7 +1,7 @@
 ---
-title: فرہنگ کی اصطلاحات شامل کرنا
+title: "فرہنگ کی اصطلاحات شامل کرنا"
 lang: ur
-description: ethereum.org کی فرہنگ میں نئی اصطلاحات شامل کرنے کا ہمارا معیار
+description: "ethereum.org کی فرہنگ میں نئی اصطلاحات شامل کرنے کا ہمارا معیار"
 ---
 
 # فرہنگ کی اصطلاحات شامل کرنا {#contributing-to-ethereumorg-}

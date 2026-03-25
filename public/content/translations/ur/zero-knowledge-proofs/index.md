@@ -1,6 +1,6 @@
 ---
-title: زیرو نالج پروفز
-description: ابتدائی افراد کے لیے زیرو نالج پروفز کا ایک غیر تکنیکی تعارف۔
+title: "زیرو نالج پروفز"
+description: "ابتدائی افراد کے لیے زیرو نالج پروفز کا ایک غیر تکنیکی تعارف۔"
 lang: ur
 ---
 
@@ -59,8 +59,10 @@ lang: ur
       <p>
         بھوٹان NDI کے بارے میں مزید جانیں <a href="/decentralized-identity/#national-and-government-id">ڈی سینٹرلائزڈ شناخت کی کیس اسٹڈی</a> میں۔
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### انسانیت کا ثبوت (Proof of Humanity) {#proof-of-humanity}

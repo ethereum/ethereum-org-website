@@ -1,5 +1,5 @@
 ---
-title: 2025 ethereum.org ٹرانسلیٹاتھون
+title: "2025 ethereum.org ٹرانسلیٹاتھون"
 lang: ur
 template: translatathon
 ---

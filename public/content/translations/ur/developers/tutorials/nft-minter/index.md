@@ -1,10 +1,10 @@
 ---
-title: NFT منٹر ٹیوٹوریل
-description: اس ٹیوٹوریل میں، آپ ایک NFT منٹر بنائیں گے اور سیکھیں گے کہ MetaMask اور Web3 ٹولز کا استعمال کرتے ہوئے اپنے اسمارٹ کانٹریکٹ کو React فرنٹ اینڈ سے جوڑ کر ایک فل اسٹیک ڈیپ (dapp) کیسے بنائی جائے۔
+title: "NFT منٹر ٹیوٹوریل"
+description: "اس ٹیوٹوریل میں، آپ ایک NFT منٹر بنائیں گے اور سیکھیں گے کہ MetaMask اور Web3 ٹولز کا استعمال کرتے ہوئے اپنے اسمارٹ کانٹریکٹ کو React فرنٹ اینڈ سے جوڑ کر ایک فل اسٹیک ڈیپ (dapp) کیسے بنائی جائے۔"
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "اسمارٹ کانٹریکٹس", "فرنٹ اینڈ", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "اسمارٹ کانٹریکٹس", "فرنٹ اینڈ", "Pinata", "erc-721"]
 skill: intermediate
-breadcrumb: NFT منٹر ڈیپ
+breadcrumb: "NFT منٹر ڈیپ"
 lang: ur
 published: 2021-10-06
 ---
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

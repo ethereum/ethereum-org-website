@@ -1,6 +1,6 @@
 ---
-title: میں کیسے شامل ہو سکتا ہوں؟
-description: ایتھیریم کمیونٹی میں شامل ہونے کا طریقہ۔
+title: "میں کیسے شامل ہو سکتا ہوں؟"
+description: "ایتھیریم کمیونٹی میں شامل ہونے کا طریقہ۔"
 lang: ur
 ---
 
@@ -36,7 +36,7 @@ lang: ur
   - [EIP Governance](https://github.com/ethereum-cat-herders/EIPIP) میں حصہ لیں
     - [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu) میں شامل ہوں
   - [EIPs کے بارے میں مزید](/eips/)
-- [Challenges.ethereum.org](https://challenges.ethereum.org/) - اعلیٰ مالیت کے ریسرچ باؤنٹیز کا ایک سلسلہ، جہاں آپ <span dir="ltr">>$100,000</span> USD کما سکتے ہیں
+- [Challenges.ethereum.org](https://challenges.ethereum.org/) - اعلیٰ مالیت کے ریسرچ باؤنٹیز کا ایک سلسلہ، جہاں آپ <span dir="ltr">$100,000</span> USD کما سکتے ہیں
 - [Ethresear.ch](https://ethresear.ch) - تحقیق کے لیے ایتھیریم کا بنیادی فورم، اور کرپٹو اکنامکس کے لیے دنیا کا سب سے بااثر فورم
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - محققین کے ساتھ سوال و جواب کا ایک جاری سلسلہ۔ جیسے ہی ہر اگلا حصہ کھلتا ہے، کوئی بھی سوالات پوسٹ کر سکتا ہے۔
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - تحقیق کے وہ شعبے جہاں ایتھیریم ایکو سسٹم سپورٹ پروگرام فعال طور پر گرانٹ کی درخواستیں طلب کر رہا ہے

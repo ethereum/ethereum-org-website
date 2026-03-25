@@ -1,11 +1,11 @@
 ---
-title: ٹیلر (Tellor) کو اپنے اوریکل کے طور پر کیسے سیٹ اپ کریں
-description: اپنے پروٹوکول میں ٹیلر اوریکل کو ضم کرنے کے ساتھ شروعات کرنے کے لیے ایک گائیڈ
+title: "ٹیلر (Tellor) کو اپنے اوریکل کے طور پر کیسے سیٹ اپ کریں"
+description: "اپنے پروٹوکول میں ٹیلر اوریکل کو ضم کرنے کے ساتھ شروعات کرنے کے لیے ایک گائیڈ"
 author: "ٹیلر"
 lang: ur
-tags: ["solidity", "اسمارٹ کانٹریکٹس", "اوریکلز"]
+tags: ["Solidity", "اسمارٹ کانٹریکٹس", "اوریکلز"]
 skill: beginner
-breadcrumb: ٹیلر اوریکل
+breadcrumb: "ٹیلر اوریکل"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

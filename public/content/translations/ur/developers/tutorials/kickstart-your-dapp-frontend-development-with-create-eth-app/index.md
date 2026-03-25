@@ -1,9 +1,9 @@
 ---
-title: create-eth-app کے ساتھ اپنی ڈیپ (dapp) فرنٹ اینڈ ڈیولپمنٹ کا آغاز کریں
-description: create-eth-app کو استعمال کرنے کے طریقے اور اس کی خصوصیات کا جائزہ
+title: "create-eth-app کے ساتھ اپنی ڈیپ (dapp) فرنٹ اینڈ ڈیولپمنٹ کا آغاز کریں"
+description: "create-eth-app کو استعمال کرنے کے طریقے اور اس کی خصوصیات کا جائزہ"
 author: "مارکس واس"
 tags:
-  ["فرنٹ اینڈ", "javascript", "ethers.js", "the graph", "ڈی فائی"]
+  ["فرنٹ اینڈ", "JavaScript", "ethers.js", "the graph", "ڈی فائی"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: ur

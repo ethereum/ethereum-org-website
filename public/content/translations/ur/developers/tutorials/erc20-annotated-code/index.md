@@ -1,11 +1,11 @@
 ---
 title: "ERC-20 کنٹریکٹ کا تفصیلی جائزہ"
-description: OpenZeppelin ERC-20 کنٹریکٹ میں کیا ہے اور یہ وہاں کیوں ہے؟
-author: اوری پومرانٹز
+description: "OpenZeppelin ERC-20 کنٹریکٹ میں کیا ہے اور یہ وہاں کیوں ہے؟"
+author: "اوری پومرانٹز"
 lang: ur
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: ERC-20 کا تفصیلی جائزہ
+breadcrumb: "ERC-20 کا تفصیلی جائزہ"
 published: 2021-03-09
 ---
 

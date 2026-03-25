@@ -1,11 +1,11 @@
 ---
-title: اسمارٹ کانٹریکٹ سیکیورٹی چیک لسٹ
-description: محفوظ اسمارٹ کانٹریکٹس لکھنے کے لیے تجویز کردہ ورک فلو
+title: "اسمارٹ کانٹریکٹ سیکیورٹی چیک لسٹ"
+description: "محفوظ اسمارٹ کانٹریکٹس لکھنے کے لیے تجویز کردہ ورک فلو"
 author: "ٹریل آف بٹس"
-tags: ["اسمارٹ کانٹریکٹس", "سیکیورٹی", "solidity"]
+tags: ["اسمارٹ کانٹریکٹس", "سیکیورٹی", "Solidity"]
 skill: intermediate
-breadcrumb: سیکیورٹی چیک لسٹ
-lang: en
+breadcrumb: "سیکیورٹی چیک لسٹ"
+lang: ur
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md

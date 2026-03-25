@@ -1,6 +1,6 @@
 ---
-title: سمپل سیریلائز
-description: ایتھیریم کے SSZ فارمیٹ کی وضاحت۔
+title: "سمپل سیریلائز"
+description: "ایتھیریم کے SSZ فارمیٹ کی وضاحت۔"
 lang: ur
 sidebarDepth: 2
 ---

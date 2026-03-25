@@ -1,6 +1,6 @@
 ---
-title: EVM کے لیے Opcodes
-description: ایتھریم ورچوئل مشین کے لیے دستیاب تمام opcodes کی فہرست۔
+title: "EVM کے لیے Opcodes"
+description: "ایتھریم ورچوئل مشین کے لیے دستیاب تمام opcodes کی فہرست۔"
 lang: ur
 ---
 

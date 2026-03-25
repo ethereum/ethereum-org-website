@@ -1,6 +1,6 @@
 ---
-title: پراگ-الیکٹرا (Pectra)
-description: Pectra پروٹوکول اپ گریڈ کے بارے میں جانیں
+title: "پراگ-الیکٹرا (Pectra)"
+description: "Pectra پروٹوکول اپ گریڈ کے بارے میں جانیں"
 lang: ur
 ---
 

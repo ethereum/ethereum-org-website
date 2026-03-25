@@ -1,16 +1,16 @@
 ---
-title: DAO کیا ہے؟
-metaTitle: DAO کیا ہے؟ | ڈی سینٹرلائزڈ آٹونومس آرگنائزیشن
-description: ایتھریم پر DAOs کا جائزہ
+title: "DAO کیا ہے؟"
+metaTitle: "DAO کیا ہے؟ | ڈی سینٹرلائزڈ آٹونومس آرگنائزیشن"
+description: "ایتھریم پر DAOs کا جائزہ"
 lang: ur
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: ایک تجویز پر ووٹنگ کرتے ہوئے DAO کی نمائندگی۔
-summaryPoint1: مرکزی قیادت کے بغیر ممبران کی ملکیت والی کمیونٹیز۔
-summaryPoint2: انٹرنیٹ پر اجنبیوں کے ساتھ تعاون کرنے کا ایک محفوظ طریقہ۔
-summaryPoint3: کسی خاص مقصد کے لیے فنڈز مختص کرنے کی ایک محفوظ جگہ۔
+alt: "ایک تجویز پر ووٹنگ کرتے ہوئے DAO کی نمائندگی۔"
+summaryPoint1: "مرکزی قیادت کے بغیر ممبران کی ملکیت والی کمیونٹیز۔"
+summaryPoint2: "انٹرنیٹ پر اجنبیوں کے ساتھ تعاون کرنے کا ایک محفوظ طریقہ۔"
+summaryPoint3: "کسی خاص مقصد کے لیے فنڈز مختص کرنے کی ایک محفوظ جگہ۔"
 ---
 
 ## DAOs کیا ہیں؟ {#what-are-daos}

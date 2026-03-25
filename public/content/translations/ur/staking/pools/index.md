@@ -1,11 +1,11 @@
 ---
-title: پولڈ اسٹیکنگ
-description: اسٹیکنگ پولز کے بارے میں جانیں
+title: "پولڈ اسٹیکنگ"
+description: "اسٹیکنگ پولز کے بارے میں جانیں"
 lang: ur
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: لیسلی گینڈا پول میں تیر رہا ہے۔
+alt: "لیسلی گینڈا پول میں تیر رہا ہے۔"
 sidebarDepth: 2
 summaryPoints:
   - دوسروں کے ساتھ مل کر کسی بھی مقدار میں ETH اسٹیک کریں اور انعامات حاصل کریں

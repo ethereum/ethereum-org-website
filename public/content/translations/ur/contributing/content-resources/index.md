@@ -1,7 +1,7 @@
 ---
-title: مواد کے وسائل شامل کرنا
-lang: en
-description: ethereum.org پر مواد کے وسائل کی فہرست بنانے کے لیے ہمارا معیار
+title: "مواد کے وسائل شامل کرنا"
+lang: ur
+description: "ethereum.org پر مواد کے وسائل کی فہرست بنانے کے لیے ہمارا معیار"
 ---
 
 # مواد کے وسائل شامل کرنا {#adding-content-resources}

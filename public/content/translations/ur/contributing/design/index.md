@@ -1,6 +1,6 @@
 ---
-title: ڈیزائن کی شراکت
-description: ethereum.org میں ڈیزائن کی شراکت
+title: "ڈیزائن کی شراکت"
+description: "ethereum.org میں ڈیزائن کی شراکت"
 lang: ur
 ---
 

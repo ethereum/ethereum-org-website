@@ -1,10 +1,10 @@
 ---
 title: "جتنا آپ کیش کر سکیں"
-description: سستے رول اپ ٹرانزیکشنز کے لیے کیشنگ کنٹریکٹ بنانے اور استعمال کرنے کا طریقہ سیکھیں۔
-author: اوری پومرانٹز
+description: "سستے رول اپ ٹرانزیکشنز کے لیے کیشنگ کنٹریکٹ بنانے اور استعمال کرنے کا طریقہ سیکھیں۔"
+author: "اوری پومرانٹز"
 tags: ["لیئر 2", "کیشنگ", "اسٹوریج", "اسکیلنگ"]
 skill: intermediate
-breadcrumb: رول اپس کے لیے کیشنگ
+breadcrumb: "رول اپس کے لیے کیشنگ"
 published: 2022-09-15
 lang: ur
 ---
@@ -739,6 +739,7 @@ contract WORM is Cache {
 یہ وہ طریقہ ہے جس سے ہم تصدیق کرتے ہیں کہ کوڈ Foundry میں [ایونٹ کو درست طریقے سے خارج کرتا ہے](https://getfoundry.sh/reference/cheatcodes/expect-emit/)۔
 
 ### کلائنٹ {#the-client}
+
 ایک چیز جو آپ کو Solidity ٹیسٹس کے ساتھ نہیں ملتی وہ JavaScript کوڈ ہے جسے آپ کاٹ کر اپنی ایپلی کیشن میں پیسٹ کر سکتے ہیں۔ اس کوڈ کو لکھنے کے لیے میں نے WORM کو [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli) پر تعینات کیا، جو [Optimism](https://www.optimism.io/) کا نیا ٹیسٹ نیٹ ہے۔ یہ ایڈریس [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a) پر ہے۔
 
 [آپ کلائنٹ کے لیے JavaScript کوڈ یہاں دیکھ سکتے ہیں](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)۔ اسے استعمال کرنے کے لیے:

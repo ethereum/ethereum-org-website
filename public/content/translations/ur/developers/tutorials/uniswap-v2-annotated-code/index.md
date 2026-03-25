@@ -1,8 +1,8 @@
 ---
 title: "Uniswap-v2 کنٹریکٹ کا جائزہ"
 description: "Uniswap-v2 کنٹریکٹ کیسے کام کرتا ہے؟ اسے اس طرح کیوں لکھا گیا ہے؟"
-author: اوری پومرانٹز
-tags: ["solidity", "dapps"]
+author: "اوری پومرانٹز"
+tags: ["Solidity", "dapps"]
 skill: intermediate
 breadcrumb: "Uniswap v2 کا جائزہ"
 published: 2021-05-01

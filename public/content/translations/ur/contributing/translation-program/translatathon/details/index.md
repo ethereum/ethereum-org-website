@@ -1,5 +1,5 @@
 ---
-title: تفصیلات اور قواعد
+title: "تفصیلات اور قواعد"
 lang: ur
 template: translatathon
 ---

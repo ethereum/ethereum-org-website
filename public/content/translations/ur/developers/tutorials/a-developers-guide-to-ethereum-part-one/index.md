@@ -1,13 +1,13 @@
 ---
-title: ایک پائتھون (Python) ڈیولپر کا ایتھیریم کا تعارف، حصہ 1
-description: ایتھیریم ڈیولپمنٹ کا ایک تعارف، خاص طور پر ان لوگوں کے لیے مفید ہے جو پائتھون (Python) پروگرامنگ زبان کا علم رکھتے ہیں۔
-author: مارک گیرو
+title: "ایک پائتھون (Python) ڈیولپر کا ایتھیریم کا تعارف، حصہ 1"
+description: "ایتھیریم ڈیولپمنٹ کا ایک تعارف، خاص طور پر ان لوگوں کے لیے مفید ہے جو پائتھون (Python) پروگرامنگ زبان کا علم رکھتے ہیں۔"
+author: "مارک گیرو"
 lang: ur
-tags: ["python", "web3.py"]
+tags: ["Python", "web3.py"]
 skill: beginner
-breadcrumb: پائتھون کے ساتھ ایتھیریم
+breadcrumb: "پائتھون کے ساتھ ایتھیریم"
 published: 2020-09-08
-source: اسنیک چارمرز
+source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---
 

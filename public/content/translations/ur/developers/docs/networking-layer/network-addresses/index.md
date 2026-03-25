@@ -1,6 +1,6 @@
 ---
-title: نیٹ ورک ایڈریسز
-description: نیٹ ورک ایڈریسز کا تعارف۔
+title: "نیٹ ورک ایڈریسز"
+description: "نیٹ ورک ایڈریسز کا تعارف۔"
 lang: ur
 sidebarDepth: 2
 ---

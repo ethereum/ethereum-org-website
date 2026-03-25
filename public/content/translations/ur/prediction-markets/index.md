@@ -1,11 +1,11 @@
 ---
-title: پیشین گوئی کی مارکیٹس
+title: "پیشین گوئی کی مارکیٹس"
 lang: ur
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: درست پیشین گوئیاں کرنے کے لیے مالی مراعات حاصل کریں
-summaryPoint2: مستقبل کے واقعات کے بارے میں اعلیٰ معیار کی پیشین گوئیاں
+summaryPoint1: "درست پیشین گوئیاں کرنے کے لیے مالی مراعات حاصل کریں"
+summaryPoint2: "مستقبل کے واقعات کے بارے میں اعلیٰ معیار کی پیشین گوئیاں"
 buttons: 
   - content: مزید جانیں
     toId: how-prediction-markets-work

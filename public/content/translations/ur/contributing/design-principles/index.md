@@ -1,7 +1,7 @@
 ---
-title: ڈیزائن کے اصول
+title: "ڈیزائن کے اصول"
 lang: ur
-description: ethereum.org کے ڈیزائن اور مواد کے فیصلوں کے پیچھے کارفرما اصول
+description: "ethereum.org کے ڈیزائن اور مواد کے فیصلوں کے پیچھے کارفرما اصول"
 ---
 
 # ہمارے ڈیزائن کے اصول {#contributing-to-ethereumorg-}

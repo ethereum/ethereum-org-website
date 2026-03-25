@@ -1,11 +1,11 @@
 ---
 title: "ایک کنٹریکٹ کی ریورس انجینئرنگ"
-description: جب آپ کے پاس سورس کوڈ نہ ہو تو کنٹریکٹ کو کیسے سمجھیں
-author: اوری پومرانٹز
+description: "جب آپ کے پاس سورس کوڈ نہ ہو تو کنٹریکٹ کو کیسے سمجھیں"
+author: "اوری پومرانٹز"
 lang: ur
 tags: ["evm", "opcodes"]
 skill: advanced
-breadcrumb: ریورس انجینئرنگ
+breadcrumb: "ریورس انجینئرنگ"
 published: 2021-12-30
 ---
 ## تعارف {#introduction}

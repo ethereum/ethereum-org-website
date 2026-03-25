@@ -1,6 +1,6 @@
 ---
-title: آن لائن کمیونٹیز
-description: آن لائن فورمز، چیٹ رومز، اور سوشل میڈیا کمیونٹیز دریافت کریں جہاں Ethereum کے شائقین بات چیت اور تعاون کے لیے جمع ہوتے ہیں۔
+title: "آن لائن کمیونٹیز"
+description: "آن لائن فورمز، چیٹ رومز، اور سوشل میڈیا کمیونٹیز دریافت کریں جہاں Ethereum کے شائقین بات چیت اور تعاون کے لیے جمع ہوتے ہیں۔"
 lang: ur
 ---
 
@@ -70,5 +70,6 @@ lang: ur
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAOs کے بارے میں مزید جانیں
     </ButtonLink>
-  </div>
+ 
+</div>
 </Callout>

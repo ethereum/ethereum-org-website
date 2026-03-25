@@ -1,6 +1,6 @@
 ---
-title: پروف-آف-سٹیک (proof-of-stake) ایتھیریم میں کیز (Keys)
-description: ایتھیریم کے پروف-آف-سٹیک (proof-of-stake) کنسینسس میکانزم میں استعمال ہونے والی کیز (keys) کی وضاحت
+title: "پروف-آف-سٹیک (proof-of-stake) ایتھیریم میں کیز (Keys)"
+description: "ایتھیریم کے پروف-آف-سٹیک (proof-of-stake) کنسینسس میکانزم میں استعمال ہونے والی کیز (keys) کی وضاحت"
 lang: ur
 ---
 

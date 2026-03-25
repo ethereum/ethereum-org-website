@@ -1,6 +1,6 @@
 ---
-title: برجز
-description: ڈیولپرز کے لیے برجنگ کا ایک جائزہ
+title: "برجز"
+description: "ڈیولپرز کے لیے برجنگ کا ایک جائزہ"
 lang: ur
 ---
 
@@ -121,6 +121,7 @@ DeFi میں سرفہرست تین [سب سے بڑے ہیکس](https://rekt.news/
 - [Tenderly](https://tenderly.co/)
 
 ## مزید مطالعہ {#further-reading}
+
 - [بلاک چین برجز](/bridges/) – ethereum.org
 - [L2Beat برج رسک فریم ورک](https://l2beat.com/bridges/summary)
 - [بلاک چین برجز: کرپٹو نیٹ ورکس کے نیٹ ورکس بنانا](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 ستمبر 2021 – Dmitriy Berenzon
