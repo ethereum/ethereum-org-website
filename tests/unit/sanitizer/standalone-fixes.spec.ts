@@ -50,6 +50,7 @@ const {
   fixMangledDocLinks,
   fixBrandCapitalization,
   fixFrontmatterLang,
+  fixCrossScriptPunctuation,
   fixJsxAttributeSpacing,
 } = _testOnly
 
@@ -2398,6 +2399,83 @@ author: Ori Pomerantz
       const { content, fixCount } = fixFrontmatterLang(input, "zh-tw")
       expect(content).toContain("lang: zh-tw")
       expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixCrossScriptPunctuation", () => {
+    test("replaces \u3002 with \u06D4 for locale ur", () => {
+      const input = "\u06CC\u06C1 \u0627\u06CC\u06A9 \u062C\u0645\u0644\u06C1 \u06C1\u06D2\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).toBe(
+        "\u06CC\u06C1 \u0627\u06CC\u06A9 \u062C\u0645\u0644\u06C1 \u06C1\u06D2\u06D4"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("replaces \u3002 with \u06D4 for locale ar", () => {
+      const input = "\u0647\u0630\u0627 \u0646\u0635\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ar")
+      expect(content).toBe("\u0647\u0630\u0627 \u0646\u0635\u06D4")
+      expect(fixCount).toBe(1)
+    })
+
+    test("replaces \u3002 with \u0964 for locale hi", () => {
+      const input =
+        "\u092F\u0939 \u090F\u0915 \u0935\u093E\u0915\u094D\u092F \u0939\u0948\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "hi")
+      expect(content).toBe(
+        "\u092F\u0939 \u090F\u0915 \u0935\u093E\u0915\u094D\u092F \u0939\u0948\u0964"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("replaces \u3002 with . for locale de (Latin)", () => {
+      const input = "Dies ist ein Satz\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "de")
+      expect(content).toBe("Dies ist ein Satz.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does NOT replace \u3002 for locale ja (CJK)", () => {
+      const input = "\u3053\u308C\u306F\u6587\u3067\u3059\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ja")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does NOT replace \u3002 for locale zh (CJK)", () => {
+      const input = "\u8FD9\u662F\u4E00\u4E2A\u53E5\u5B50\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "zh")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch \u3002 inside code fences", () => {
+      const input = "text\u3002\n```\ncode\u3002\n```\nmore\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).toContain("code\u3002")
+      expect(fixCount).toBe(2)
+    })
+
+    test("handles multiple \u3002 in one file", () => {
+      const input = "first\u3002 second\u3002 third\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).not.toContain("\u3002")
+      expect(fixCount).toBe(3)
+    })
+
+    test("no-op when no CJK punctuation present", () => {
+      const input = "Normal text with no CJK."
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns fixCount 0 when locale is empty", () => {
+      const input = "text\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 })

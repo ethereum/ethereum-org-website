@@ -2905,6 +2905,70 @@ function warnTranslatedTechnicalNumerals(content: string): string[] {
 }
 
 /**
+ * Replace CJK ideographic full stop (U+3002) with the locale-appropriate
+ * full stop character.  CJK locales (ja, ko, zh, zh-tw) are skipped since
+ * the character is correct there.  Skips code fences using the robust
+ * line-by-line fence-tracking pattern.
+ */
+function fixCrossScriptPunctuation(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (!locale) return { content, fixCount: 0 }
+
+  // CJK locales: the ideographic full stop is correct -- nothing to fix
+  const CJK_LOCALES = new Set(["ja", "ko", "zh", "zh-tw"])
+  if (CJK_LOCALES.has(locale)) return { content, fixCount: 0 }
+
+  // Determine the replacement character based on locale script
+  let replacement: string
+  if (locale === "ar" || locale === "ur") {
+    replacement = "\u06D4" // Arabic full stop
+  } else if (locale === "hi" || locale === "mr" || locale === "bn") {
+    replacement = "\u0964" // Devanagari danda
+  } else {
+    replacement = "." // Latin/Cyrillic/Tamil/Telugu/etc.
+  }
+
+  let fixCount = 0
+  const lines = content.split("\n")
+  let inFencedBlock = false
+
+  for (let lineIdx = 0; lineIdx < lines.length; lineIdx++) {
+    const line = lines[lineIdx]
+
+    // Track fenced code block boundaries
+    if (/^(`{3,}|~{3,})/.test(line)) {
+      inFencedBlock = !inFencedBlock
+      continue
+    }
+    if (inFencedBlock) continue
+
+    // Split on inline code spans to avoid touching code
+    const inlineCodePattern = /(`[^`]+`)/g
+    const parts = line.split(inlineCodePattern)
+
+    let changed = false
+    for (let i = 0; i < parts.length; i++) {
+      if (i % 2 === 1) continue // Skip inline code spans
+
+      const original = parts[i]
+      parts[i] = parts[i].replace(/\u3002/g, () => {
+        fixCount++
+        return replacement
+      })
+      if (parts[i] !== original) changed = true
+    }
+
+    if (changed) {
+      lines[lineIdx] = parts.join("")
+    }
+  }
+
+  return { content: lines.join("\n"), fixCount }
+}
+
+/**
  * Detect cross-script contamination in translated content.
  * Returns warnings for unexpected Unicode characters based on the file's locale.
  */
@@ -4295,6 +4359,16 @@ function processMarkdownFile(
     const inlineCodeWarnings = warnTranslatedInlineCode(content, englishMd)
     issues.push(...inlineCodeWarnings)
 
+    // Fix CJK full stops before cross-script detection (so it doesn't warn
+    // about characters we already fixed)
+    if (locale) {
+      applyFix(
+        () => fixCrossScriptPunctuation(content, locale),
+        (n) =>
+          `Replaced ${n} CJK ideographic full stop(s) with locale-appropriate punctuation`
+      )
+    }
+
     // Detect cross-script contamination
     if (locale) {
       const scriptWarnings = detectCrossScriptContamination(content, locale)
@@ -4421,6 +4495,17 @@ function processJsonFile(
   if (compoundResult.fixCount > 0) {
     content = compoundResult.content
     issues.push(`Fixed ${compoundResult.fixCount} known wrong compound term(s)`)
+  }
+
+  // Fix CJK ideographic full stops in JSON values
+  if (jsonLocale) {
+    const punctResult = fixCrossScriptPunctuation(content, jsonLocale)
+    if (punctResult.fixCount > 0) {
+      content = punctResult.content
+      issues.push(
+        `Replaced ${punctResult.fixCount} CJK ideographic full stop(s) with locale-appropriate punctuation`
+      )
+    }
   }
 
   // Try parsing to validate JSON
@@ -4893,6 +4978,7 @@ export const _testOnly = {
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,
   warnCatastrophicCodeFenceDrift,
+  fixCrossScriptPunctuation,
   detectCrossScriptContamination,
   // Utilities
   toAsciiId,
