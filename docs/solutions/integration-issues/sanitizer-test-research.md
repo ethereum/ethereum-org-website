@@ -62,6 +62,11 @@
 | 49 | Lowercased MDX component name | de #17842 | `<emoji text=":tada:" size={1} />` instead of `<Emoji .../>` -- translation pipeline lowercases the PascalCase MDX component tag; MDX component names are case-sensitive, so the lowercased tag won't resolve to the registered component | Critical -- breaks rendering |
 | 50 | `removeOrphanedClosingTags` strips valid cross-line `</em>` | de #17842 | `<em>\ntext</em></li>` -- `<em>` is on line N, `</em>` is on line N+1; line-by-line counting sees no opener on line N+1 and strips `</em>` as orphaned, breaking MDX compilation. Regression from sanitizer's own orphan removal logic. | Critical -- breaks MDX compilation |
 
+| 49 | Orphaned `</em>` BEFORE `<a>` in HTML list items | pl #17445 | `<li></em><a href="...">EIP-145</a> - <em>text</li>` -- `</em>` appears before its opener `<em>`; `removeOrphanedClosingTags` sees balanced open/close counts on the line so doesn't remove it | Critical -- breaks MDX compilation |
+| 50 | Smart quote double-wrapping in YAML frontmatter | pl #17445 | `summaryPoint1: ""text""` -- value had smart quotes `\u201C...\u201D`; `quoteFrontmatterNonAscii` saw non-ASCII, didn't recognize smart quotes as existing quoting, wrapped in straight quotes producing double-wrapping | Critical -- breaks YAML parsing |
+| 51 | Extra spaces around `=` in JSX attributes | pl #17445 | `<a href = "https://...">` -- Crowdin introduces spaces around `=` in href and other JSX attributes; no sanitizer function normalizes this | High -- may break strict MDX parsers |
+| 52 | Orphaned opening backtick with missing closer | pl #17445 | `` `<nazwa opcodu>(...). `` -- opening backtick with no closing backtick; `repairUnclosedBackticks` needs English comparison and may miss cases where English also has backticks but the translated line lost one | High -- exposed MDX tags |
+
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
 These patterns are covered by existing fix functions and should have regression tests:
@@ -105,7 +110,10 @@ These patterns are covered by existing fix functions and should have regression 
 - **Translated inline code warning** (`warnTranslatedInlineCode`) — warns when inline code span count drops significantly OR when orphaned backticks are detected on a line; signals Crowdin translated content inside backticks (pt-br PR #17122)
 - **LLM artifact token stripping** (`stripLlmArtifactTokens`) — strips `<bos>`, `<eos>`, `<s>`, `</s>`, `<pad>`, `<unk>`, `<mask>` tokens from prose; these leak from machine translation pipelines and break MDX compilation (mr PR #17730)
 - **Block HTML inline usage preserved** (`normalizeBlockHtmlLines`) — no longer splits `<div>content</div>` when both tags are on the same line; only splits multi-line block closing tags to their own line. Fixes MDX "Expected a closing tag before end of paragraph" error (id i18n/id-03-23T2228, pattern #46)
-- **Lowercased MDX component names** (`fixLowercasedMdxComponents`) — `<emoji>` → `<Emoji>` restores PascalCase from English source; translation pipelines occasionally lowercase custom component tags, and MDX component names are case-sensitive (de PR #17842, pattern #49)
+- **Lowercased MDX component names** (`fixLowercasedMdxComponents`) — `<emoji>` -> `<Emoji>` restores PascalCase from English source; translation pipelines occasionally lowercase custom component tags, and MDX component names are case-sensitive (de PR #17842, pattern #49)
+- **Orphaned closer-before-opener** (`removeOrphanedClosingTags`) — `</em><a>...<em>text</em>` now correctly removes the leading `</em>` even when open/close counts are equal on the line; uses left-to-right balance scanning instead of simple count comparison (pl PR #17445, pattern #50)
+- **Smart quote double-wrapping prevention** (`quoteFrontmatterNonAscii`) — replaces smart/curly quotes (U+201C/U+201D/U+201E/U+201F) with straight `"` before checking if YAML value needs quoting, preventing `""text""` double-wrapping (pl PR #17445, pattern #51)
+- **JSX attribute spacing** (`fixJsxAttributeSpacing`) — normalizes `href = "..."` to `href="..."` inside HTML/JSX tags; Crowdin sometimes introduces spaces around `=` in attributes (pl PR #17445, pattern #52)
 
 ## Recommendations for Future Sanitizer Iteration
 
