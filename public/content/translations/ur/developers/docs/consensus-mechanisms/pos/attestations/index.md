@@ -56,7 +56,7 @@ lang: ur
 
 بہترین صورتحال اس وقت ہوتی ہے جب تینوں فلیگز true ہوں، اس صورت میں ایک ویلیڈیٹر کمائے گا (فی درست فلیگ):
 
-<span dir="ltr">`reward += base reward * flag weight * flag attesting rate / 64`</span>
+`reward += base reward * flag weight * flag attesting rate / 64`
 
 فلیگ کی تصدیق کی شرح (flag attesting rate) کو دیے گئے فلیگ کے لیے تمام تصدیق کرنے والے ویلیڈیٹرز کے موثر بیلنس (effective balances) کے مجموعے کا کل فعال موثر بیلنس سے موازنہ کر کے ماپا جاتا ہے۔
 
@@ -64,7 +64,7 @@ lang: ur
 
 بنیادی انعام کا حساب تصدیق کرنے والے ویلیڈیٹرز کی تعداد اور ان کے موثر اسٹیک شدہ ایتھر (ETH) بیلنس کے مطابق کیا جاتا ہے:
 
-<span dir="ltr">`base reward = validator effective balance x 2^6 / SQRT(Effective balance of all active validators)`</span>
+`base reward = validator effective balance x 2^6 / SQRT(Effective balance of all active validators)`
 
 #### شمولیت میں تاخیر (Inclusion delay) {#inclusion-delay}
 
