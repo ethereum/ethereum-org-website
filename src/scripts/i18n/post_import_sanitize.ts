@@ -4337,6 +4337,10 @@ export async function runSanitizer(
     const originalOnDisk = fs.existsSync(fileInfo.path)
       ? fs.readFileSync(fileInfo.path, "utf8")
       : null
+    // Skip files that were deleted (e.g. removed in dev merge) and have no provided content
+    if (originalOnDisk === null && !fileInfo.content) {
+      continue
+    }
     const { fixed, issues, content } = processMarkdownFile(
       fileInfo.path,
       fileInfo.content
@@ -4362,6 +4366,10 @@ export async function runSanitizer(
     const originalOnDisk = fs.existsSync(fileInfo.path)
       ? fs.readFileSync(fileInfo.path, "utf8")
       : null
+    // Skip files that were deleted (e.g. removed in dev merge) and have no provided content
+    if (originalOnDisk === null && !fileInfo.content) {
+      continue
+    }
     const { fixed, issues, content } = processJsonFile(
       fileInfo.path,
       fileInfo.content
