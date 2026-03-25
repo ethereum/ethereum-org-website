@@ -19,7 +19,7 @@ Sie können WETH mithilfe des WETH-Smart-Contracts in ETH entwrappen. Sie könne
 
 **Ungefähr 3 % des zirkulierenden ETH-Angebots sind im WETH-Token-Vertrag gesperrt**, was ihn zu einem der am häufigsten genutzten [Smart Contracts](/glossary/#smart-contract) macht. WETH ist besonders wichtig für Benutzer, die mit Anwendungen im Bereich der dezentralisierten Finanzen (DeFi) interagieren.
 
-## Warum müssen wir ETH als ERC-20 wrappen? {#why-do-we-need-to-wrap-eth} 
+## Warum müssen wir ETH als ERC-20 wrappen? {#why-do-we-need-to-wrap-eth}
 
 [ERC-20](/developers/docs/standards/tokens/erc-20/) definiert eine Standardschnittstelle für übertragbare Token, sodass jeder Token erstellen kann, die nahtlos mit Anwendungen und Token interagieren, die diesen Standard im Ethereum-Ökosystem verwenden. Da **ETH älter als der ERC-20-Standard ist**, entspricht ETH dieser Spezifikation nicht. Das bedeutet, dass **Sie ETH nicht einfach** gegen andere ERC-20-Token eintauschen oder **ETH in Apps verwenden können, die den ERC-20-Standard nutzen**. Das Wrappen von ETH gibt Ihnen die Möglichkeit, Folgendes zu tun:
 

@@ -2,7 +2,7 @@
 title: "Uniswap-v2 Contract Walk-Through"
 description: Wie funktioniert der Uniswap-v2-Contract? Warum ist er so geschrieben?
 author: Ori Pomerantz
-tags: ["solidity", "Dapps"]
+tags: ["Solidity", "Dapps"]
 skill: intermediate
 breadcrumb: Uniswap v2 Walkthrough
 published: 2021-05-01

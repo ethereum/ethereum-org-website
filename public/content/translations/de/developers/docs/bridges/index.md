@@ -121,6 +121,7 @@ Um die Vertragsaktivität über Chains hinweg zu überwachen, können Entwickler
 - [Tenderly](https://tenderly.co/)
 
 ## Weiterführende Literatur {#further-reading}
+
 - [Kettenübergreifende Blockchain-Brücken](/bridges/) – ethereum.org
 - [L2Beat Bridge Risk Framework](https://l2beat.com/bridges/summary)
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8. Sep. 2021 – Dmitriy Berenzon

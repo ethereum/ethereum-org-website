@@ -3,10 +3,10 @@ title: WebSockets verwenden
 description: Leitfaden zur Verwendung von WebSockets und Alchemy, um JSON-RPC-Anfragen zu stellen und Ereignisse zu abonnieren.
 author: "Elan Halpern"
 lang: de
-tags: ["alchemy", "websockets", "abfragen", "javascript"]
+tags: ["Alchemy", "websockets", "abfragen", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
-source: Alchemy-Dokumentation
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---

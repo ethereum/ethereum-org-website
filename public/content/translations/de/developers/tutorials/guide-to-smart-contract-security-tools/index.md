@@ -3,7 +3,7 @@ title: "Ein Leitfaden für Smart-Contract-Sicherheitstools"
 description: "Ein Überblick über drei verschiedene Test- und Programmanalysetechniken"
 author: "Trailofbits"
 lang: de
-tags: ["solidity", "Smart Contracts", "Sicherheit"]
+tags: ["Solidity", "Smart Contracts", "Sicherheit"]
 skill: intermediate
 breadcrumb: Sicherheitstools
 published: 2020-09-07

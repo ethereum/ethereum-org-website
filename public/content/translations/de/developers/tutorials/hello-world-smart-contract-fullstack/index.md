@@ -5,9 +5,9 @@ author: "nstrike2"
 breadcrumb: Hello World Fullstack
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "Smart Contracts",
     "Bereitstellung",
     "Blocksuchmaschine",

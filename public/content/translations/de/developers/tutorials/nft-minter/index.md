@@ -2,7 +2,7 @@
 title: NFT-Minter-Tutorial
 description: "In diesem Tutorial baust du einen NFT-Minter und lernst, wie man eine Full-Stack-Dapp erstellt, indem man einen Smart Contract über MetaMask und Web3-Tools mit einem React-Frontend verbindet."
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "Smart Contracts", "Frontend", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "Smart Contracts", "Frontend", "Pinata", "erc-721"]
 skill: intermediate
 breadcrumb: NFT-Minter-Dapp
 lang: de

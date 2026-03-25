@@ -4,7 +4,7 @@ description: Wie man Manticore verwendet, um automatisch Fehler in Smart Contrac
 author: Trailofbits
 lang: de
 tags:
-  ["solidity", "Smart Contracts", "Sicherheit", "Testen", "formale Verifizierung"]
+  ["Solidity", "Smart Contracts", "Sicherheit", "Testen", "formale Verifizierung"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13

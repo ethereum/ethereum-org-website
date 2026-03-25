@@ -3,7 +3,7 @@ title: Wie man Slither verwendet, um Fehler in Smart Contracts zu finden
 description: Wie man Slither verwendet, um automatisch Fehler in Smart Contracts zu finden
 author: Trailofbits
 lang: de
-tags: ["solidity", "Smart Contracts", "Sicherheit", "Testen"]
+tags: ["Solidity", "Smart Contracts", "Sicherheit", "Testen"]
 skill: advanced
 breadcrumb: Slither
 published: 2020-06-09

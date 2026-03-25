@@ -71,6 +71,7 @@ Im Gegensatz zu Inaktivitätsstrafen für das Offline-Sein ist <em>Slashing</em>
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Mehr über Slashing und den Lebenszyklus von Validatoren</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

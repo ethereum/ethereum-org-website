@@ -2,7 +2,7 @@
 title: "Übertragungen und Freigaben von ERC-20-Token aus einem Solidity-Smart-Contract"
 description: "Erstellen Sie einen DEX-Smart-Contract, der ERC-20-Token-Übertragungen und -Freigaben mit Solidity abwickelt."
 author: "jdourlens"
-tags: ["Smart Contracts", "Token", "solidity", "erc-20"]
+tags: ["Smart Contracts", "Token", "Solidity", "erc-20"]
 skill: intermediate
 breadcrumb: "ERC-20-Übertragungen"
 lang: de

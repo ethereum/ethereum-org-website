@@ -2,7 +2,7 @@
 title: "Verwendung von Stealth-Adressen"
 description: "Stealth-Adressen ermöglichen es Benutzern, Vermögenswerte anonym zu übertragen. Nach dem Lesen dieses Artikels werden Sie in der Lage sein: Zu erklären, was Stealth-Adressen sind und wie sie funktionieren, zu verstehen, wie man Stealth-Adressen so nutzt, dass die Anonymität gewahrt bleibt, und eine webbasierte Anwendung zu schreiben, die Stealth-Adressen verwendet."
 author: Ori Pomerantz
-tags: ["Stealth-Adresse", "Datenschutz", "Kryptografie", "rust", "wasm"]
+tags: ["Stealth-Adresse", "Datenschutz", "Kryptografie", "Rust", "wasm"]
 skill: intermediate
 breadcrumb: Stealth-Adressen
 published: 2025-11-30

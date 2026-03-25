@@ -91,6 +91,7 @@ Wenn Ihr Beitrag in ethereum.org zusammengeführt wird, haben Sie die Möglichke
 [Mehr über OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### So fordern Sie ihn an
+
 1. Treten Sie unserem [Discord-Server](https://discord.gg/ethereum-org) bei.
 2. Fügen Sie einen Link zu Ihrem Beitrag im Kanal `#🥇 | proof-of-contribution` ein.
 3. Warten Sie, bis ein Mitglied unseres Teams Ihnen einen Link zu Ihrem OAT sendet.

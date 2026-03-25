@@ -3,7 +3,7 @@ title: "Checkliste für die Token-Integration"
 description: Eine Checkliste mit Dingen, die bei der Interaktion mit Token zu beachten sind
 author: "Trailofbits"
 lang: de
-tags: ["solidity", "Smart Contracts", "Sicherheit", "Token"]
+tags: ["Solidity", "Smart Contracts", "Sicherheit", "Token"]
 skill: intermediate
 breadcrumb: Token-Integration
 published: 2020-08-13

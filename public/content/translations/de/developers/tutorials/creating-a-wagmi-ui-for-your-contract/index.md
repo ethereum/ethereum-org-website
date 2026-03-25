@@ -2,7 +2,7 @@
 title: "Erstellen einer Benutzeroberfläche für Ihren Smart Contract"
 description: "Unter Verwendung moderner Komponenten wie TypeScript, React, Vite und Wagmi werden wir eine moderne, aber minimalistische Benutzeroberfläche durchgehen und lernen, wie man ein Wallet mit der Benutzeroberfläche verbindet, einen Smart Contract aufruft, um Informationen zu lesen, eine Transaktion an einen Smart Contract sendet und Ereignisse von einem Smart Contract überwacht, um Änderungen zu identifizieren."
 author: Ori Pomerantz
-tags: ["typescript", "react", "vite", "wagmi", "frontend"]
+tags: ["TypeScript", "React", "Vite", "Wagmi", "frontend"]
 skill: beginner
 breadcrumb: UI mit WAGMI
 published: 2023-11-01

@@ -2,7 +2,7 @@
 title: "Wie man einen NFT prägt (Teil 2/3 der NFT-Tutorial-Reihe)"
 description: "Dieses Tutorial beschreibt, wie man einen NFT auf der Ethereum-Blockchain mithilfe unseres Smart Contracts und Web3 prägt."
 author: "Sumi Mudgil"
-tags: ["ERC-721", "alchemy", "solidity", "Smart Contracts"]
+tags: ["ERC-721", "Alchemy", "Solidity", "Smart Contracts"]
 skill: beginner
 breadcrumb: "Einen NFT prägen"
 lang: de
