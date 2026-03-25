@@ -63,7 +63,6 @@ const DesktopLanguagePicker = ({
           languages={languages}
           onSelect={onClose}
           onNoResultsClose={onClose}
-          onTranslationProgramClick={onClose}
         />
       </PopoverContent>
     </Popover>
