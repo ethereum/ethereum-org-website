@@ -49,6 +49,7 @@ const {
   fixMissingComponentClosingTags,
   fixMangledDocLinks,
   fixBrandCapitalization,
+  fixJsxAttributeSpacing,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -2226,6 +2227,103 @@ author: Ori Pomerantz
       expect(content).toContain('<DocLink href="/roadmap/beacon-chain/">')
       expect(content).toContain('<DocLink href="/roadmap/merge/">')
       expect(fixCount).toBe(2)
+    })
+  })
+
+  test.describe("removeOrphanedClosingTags — closer before opener", () => {
+    test("removes </em> appearing before <em> on same line", () => {
+      const input =
+        '<li></em><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> - <em>Optymalizuje koszt.</em></li>'
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe(
+        '<li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> - <em>Optymalizuje koszt.</em></li>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not remove </em> that follows <em> (correct order)", () => {
+      const input = "<li><em>text</em> and <a href='/x'>link</a></li>"
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("removes leading orphan even when counts are equal", () => {
+      const input = "</em>some text <em>more text</em>"
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe("some text <em>more text</em>")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("quoteFrontmatterNonAscii — smart quote handling", () => {
+    test("replaces smart quotes instead of double-wrapping", () => {
+      const input =
+        "---\nsummaryPoint1: \u201CZasady gry\u201D\nlang: pl\n---\n\nContent"
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      // Should replace smart quotes with straight quotes, not wrap
+      expect(content).toContain('summaryPoint1: "Zasady gry"')
+      expect(content).not.toContain('""')
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles value already in straight quotes (no change)", () => {
+      const input = '---\ntitle: "Already quoted"\nlang: pl\n---\n\nContent'
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      expect(content).toContain('title: "Already quoted"')
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles mixed smart quotes and non-ASCII", () => {
+      const input =
+        "---\nsummaryPoint1: \u201CPolski tekst z \u0142\u201D\nlang: pl\n---\n\nContent"
+      const { content } = quoteFrontmatterNonAscii(input)
+      expect(content).toContain('summaryPoint1: "Polski tekst z \u0142"')
+      // Outer smart quotes replaced with straight quotes
+      expect(content).not.toContain("\u201C")
+      expect(content).not.toContain("\u201D")
+    })
+
+    test("preserves inner smart quotes inside already-quoted value", () => {
+      const input =
+        '---\ndescription: "Wyja\u015Bnienie mechanizmu \u201CProof-of stake\u201D."\nlang: pl\n---\n\nContent'
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      // Inner smart quotes must stay -- they're typographic, not YAML delimiters
+      expect(content).toContain("\u201CProof-of stake\u201D")
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixJsxAttributeSpacing", () => {
+    test('normalizes href = "..." to href="..."', () => {
+      const input =
+        '<a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">text</a>'
+      const { content, fixCount } = fixJsxAttributeSpacing(input)
+      expect(content).toBe(
+        '<a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">text</a>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("normalizes multiple spaced attributes", () => {
+      const input = '<Component href = "/path" id = "test">'
+      const { content, fixCount } = fixJsxAttributeSpacing(input)
+      expect(content).toBe('<Component href="/path" id="test">')
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves correctly formatted attributes unchanged", () => {
+      const input = '<a href="https://example.com">link</a>'
+      const { content, fixCount } = fixJsxAttributeSpacing(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = '```\n<a href = "test">\n```'
+      const { content, fixCount } = fixJsxAttributeSpacing(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 })

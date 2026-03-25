@@ -17,7 +17,7 @@ buttons:
 
 ## Gry na Ethereum {#gaming-on-ethereum}
 
-Gry na Ethereum przybierają różne formy, od gier, które wykorzystują blockchain do określonych funkcji, po te, w których cały świat gry żyje na łańcuchu. Blockchain Ethereum może być używany w grach na różne sposoby. Gry mogą przechowywać swoje waluty jako zbywalne tokeny lub inne aktywa w grze (postacie, ekwipunek, zwierzaki itp.) w formie [NFT (tokenów niewymiennych)](/nft/). Gry mogą również wykorzystywać inteligentne kontrakty do hostowania swojej logiki, zasad i stanu na łańcuchu. Takie gry są powszechnie określane jako "gry w pełni na łańcuchu".
+Gry na Ethereum przybierają różne formy, od gier, które wykorzystują blockchain do określonych funkcji, po te, w których cały świat gry żyje na łańcuchu. Blockchain Ethereum może być używany w grach na różne sposoby. Gry mogą przechowywać swoje waluty jako zbywalne tokeny lub inne aktywa w grze (postacie, ekwipunek, zwierzaki itp.) w formie [NFT (tokenów niewymiennych)](/nft/). Gry mogą również wykorzystywać inteligentne kontrakty do hostowania swojej logiki, zasad i stanu na łańcuchu. Takie gry są powszechnie określane jako “gry w pełni na łańcuchu”.
 
 Ekosystem Ethereum obejmuje również [blockchainy warstwy 2 (L2)](/layer-2/learn/), które dziedziczą gwarancje bezpieczeństwa sieci głównej Ethereum, jednocześnie rozszerzając skalę Ethereum i obsługując wyspecjalizowane przypadki użycia. Sieci L2 mogą zapewnić dodatkowe korzyści dla gier na łańcuchu i ich społeczności, ponieważ L2 mogą oferować krótszy czas potwierdzenia, większy wolumen przetwarzania i niższe opłaty, dzięki czemu rozgrywka jest szybsza i bardziej dostępna.
 
@@ -96,7 +96,7 @@ Istnieją kontrastujące filozofie wokół tych mechanik. Głównym przykładem 
 
 ## Zacznij przygodę z grami na Ethereum {#get-started-with-gaming-on-ethereum}
 
-1. **Znajdź fajną grę** – Przeglądaj gry wymienione powyżej lub eksploruj platformy takie jak [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) i [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
-2. **Skonfiguruj swój portfel krypto** – Będziesz potrzebować portfela do zarządzania swoimi cyfrowymi aktywami w grze i (w niektórych przypadkach) do logowania się do gier. [Wybierz portfel tutaj](/wallets/find-wallet/)
-3. **Zasil swój portfel** – Zdobądź trochę Etheru (ETH) lub tokenów odpowiednich dla sieci warstwy 2, z której planujesz korzystać
-4. **Graj** – Zacznij grać i ciesz się prawdziwą własnością swoich postępów w grze
+1. **Znajdź fajną grę** -- Przeglądaj gry wymienione powyżej lub eksploruj platformy takie jak [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/) i [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games)
+2. **Skonfiguruj swój portfel krypto** -- Będziesz potrzebować portfela do zarządzania swoimi cyfrowymi aktywami w grze i (w niektórych przypadkach) do logowania się do gier. [Wybierz portfel tutaj](/wallets/find-wallet/)
+3. **Zasil swój portfel** -- Zdobądź trochę Etheru (ETH) lub tokenów odpowiednich dla sieci warstwy 2, z której planujesz korzystać
+4. **Graj** -- Zacznij grać i ciesz się prawdziwą własnością swoich postępów w grze

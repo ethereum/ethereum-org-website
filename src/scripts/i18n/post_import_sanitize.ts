@@ -2069,6 +2069,67 @@ function repairUnclosedBackticks(
 }
 
 /**
+ * Fix Crowdin-split inline code spans by comparing against English.
+ *
+ * Crowdin sometimes inserts a premature closing backtick inside an inline
+ * code span, splitting it into two fragments:
+ *   English:  `<> ... </>`
+ *   Crowdin:  `<> ...` </>`
+ *
+ * This function finds inline code spans in English, checks if the translated
+ * line has the same content split across two backtick-delimited fragments,
+ * and merges them back into a single span.
+ */
+function fixCrowdinSplitBackticks(
+  translatedMd: string,
+  englishMd: string
+): { content: string; fixCount: number } {
+  const translatedLines = translatedMd.split("\n")
+  const englishLines = englishMd.split("\n")
+  let fixCount = 0
+
+  // Extract all inline code spans from English
+  const engCodeSpans: string[] = []
+  const codeSpanRe = /`([^`]+)`/g
+  for (const engLine of englishLines) {
+    let m: RegExpExecArray | null
+    while ((m = codeSpanRe.exec(engLine)) !== null) {
+      engCodeSpans.push(m[1])
+    }
+  }
+
+  for (let i = 0; i < translatedLines.length; i++) {
+    const line = translatedLines[i]
+    if (line.startsWith("```") || line.startsWith("~~~")) continue
+
+    for (const engCode of engCodeSpans) {
+      // Build a pattern that matches the English code content split by
+      // a premature backtick close+reopen: `part1` part2`
+      // Match: `<prefix>` <suffix>` where prefix+suffix = engCode
+      // The split point could be anywhere, so try each possible split
+      for (let splitAt = 1; splitAt < engCode.length; splitAt++) {
+        const prefix = engCode.slice(0, splitAt)
+        const suffix = engCode.slice(splitAt)
+        const prefixEsc = prefix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+        const suffixEsc = suffix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+        // Match: `prefix` suffix` with optional whitespace around the split
+        const splitPattern = new RegExp(
+          "`" + prefixEsc + "`\\s*" + suffixEsc + "`"
+        )
+        if (splitPattern.test(line)) {
+          translatedLines[i] = line.replace(splitPattern, "`" + engCode + "`")
+          fixCount++
+          break
+        }
+      }
+      if (fixCount > 0) break
+    }
+  }
+
+  return { content: translatedLines.join("\n"), fixCount }
+}
+
+/**
  * Normalize frontmatter dates from localized format (DD-MM-YYYY) back to ISO (YYYY-MM-DD).
  */
 function normalizeFrontmatterDates(content: string): {
@@ -2498,6 +2559,21 @@ function quoteFrontmatterNonAscii(content: string): {
     if (kvMatch) {
       const [, prefix, value] = kvMatch
       const trimmedValue = value.trim()
+
+      // Replace smart/curly quotes ONLY when they act as the outer value
+      // delimiters (first and last character). Inner smart quotes inside an
+      // already-quoted value are legitimate typographic quotes and must stay.
+      // e.g., summaryPoint1: \u201CText\u201D  ->  summaryPoint1: "Text"
+      // but NOT: description: "Text \u201Cinner\u201D."  (leave inner alone)
+      const smartOpen = /^[\u201C\u201E\u201F]/
+      const smartClose = /[\u201D\u201E\u201F]$/
+      if (smartOpen.test(trimmedValue) && smartClose.test(trimmedValue)) {
+        // Smart quotes are the outer delimiters -- replace only first and last
+        const inner = trimmedValue.slice(1, -1)
+        lines[i] = `${prefix}"${inner}"`
+        fixCount++
+        continue
+      }
 
       // Skip if already quoted (starts and ends with matching quotes)
       if (
@@ -3667,41 +3743,87 @@ function removeOrphanedClosingTags(content: string): {
     for (const tag of orphanTags) {
       const lines = parts[partIdx].split("\n")
       // Track unclosed openers across lines so a </tag> on line N+1
-      // paired with <tag> on line N is not treated as orphaned.
+      // paired with <tag> on line N is not treated as orphaned (dev).
       let unclosedFromPrev = 0
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i]
-        // Strip inline code spans for counting only — tags inside
+        // Strip inline code spans for counting only -- tags inside
         // backticks are literal text, not real HTML
         const lineForCounting = line.replace(/`[^`]+`/g, "")
         const closeRe = new RegExp(`</${tag}>`, "g")
         const openRe = new RegExp(`<${tag}[\\s>]`, "g")
-
         const closeCount = (lineForCounting.match(closeRe) || []).length
         const openCount = (lineForCounting.match(openRe) || []).length
 
-        // Effective openers = this line's openers + carry-over from previous lines
-        const effectiveOpen = openCount + unclosedFromPrev
+        // Scan left-to-right tracking opener/closer balance.
+        // Include carry-over from previous lines (dev) so multi-line
+        // spans are not treated as orphaned.
+        // A closer is orphaned if no unmatched opener precedes it.
+        if (closeCount > 0) {
+          // Build a list of opener and closer positions for this tag
+          const openPosRe = new RegExp(`<${tag}[\\s>]`, "g")
+          const closePosRe = new RegExp(`</${tag}>`, "g")
+          type TagEvent = { pos: number; type: "open" | "close" }
+          const events: TagEvent[] = []
+          let m: RegExpExecArray | null
+          while ((m = openPosRe.exec(lineForCounting)) !== null) {
+            events.push({ pos: m.index, type: "open" })
+          }
+          while ((m = closePosRe.exec(lineForCounting)) !== null) {
+            events.push({ pos: m.index, type: "close" })
+          }
+          events.sort((a, b) => a.pos - b.pos)
 
-        // If there are more closing tags than effective openers on this line,
-        // remove the excess closing tags (the trailing orphans)
-        if (closeCount > effectiveOpen) {
-          // Keep the first `effectiveOpen` closers (paired with openers),
-          // remove the rest (orphans at the end of the line)
-          let kept = 0
-          lines[i] = line.replace(closeRe, (match) => {
-            kept++
-            if (kept <= effectiveOpen) {
-              return match // Keep — paired with an opener
+          // Walk events left-to-right: closers without a pending opener
+          // are orphans. Start pendingOpeners with carry-over from prev lines.
+          let pendingOpeners = unclosedFromPrev
+          const orphanCloserPositions: number[] = []
+          for (const ev of events) {
+            if (ev.type === "open") {
+              pendingOpeners++
+            } else {
+              if (pendingOpeners > 0) {
+                pendingOpeners-- // Paired
+              } else {
+                orphanCloserPositions.push(ev.pos)
+              }
             }
-            fixCount++
-            return "" // Remove — orphaned
-          })
-          // Clean up any resulting double spaces
-          lines[i] = lines[i].replace(/  +/g, " ").trimEnd()
+          }
+
+          if (orphanCloserPositions.length > 0) {
+            // Remove orphaned closers from the ORIGINAL line (not lineForCounting)
+            const closeTag = `</${tag}>`
+            // Map orphan positions from lineForCounting to indices in original line
+            const countingPositions: number[] = []
+            const cRe = new RegExp(escapeRegex(closeTag), "g")
+            let cm: RegExpExecArray | null
+            while ((cm = cRe.exec(lineForCounting)) !== null) {
+              countingPositions.push(cm.index)
+            }
+            const toRemoveIndices = new Set(
+              orphanCloserPositions.map((pos) => countingPositions.indexOf(pos))
+            )
+
+            let result = ""
+            let closerIdx = 0
+            const closeReForReplace = new RegExp(escapeRegex(closeTag), "g")
+            let lastEnd = 0
+            let rm: RegExpExecArray | null
+            while ((rm = closeReForReplace.exec(line)) !== null) {
+              if (toRemoveIndices.has(closerIdx)) {
+                result += line.slice(lastEnd, rm.index)
+                lastEnd = rm.index + rm[0].length
+                fixCount++
+              }
+              closerIdx++
+            }
+            result += line.slice(lastEnd)
+            lines[i] = result.replace(/  +/g, " ").trimEnd()
+          }
         }
 
         // Update carry-over: unclosed openers from this line
+        const effectiveOpen = openCount + unclosedFromPrev
         unclosedFromPrev = Math.max(0, effectiveOpen - closeCount)
       }
       parts[partIdx] = lines.join("\n")
@@ -3851,6 +3973,10 @@ function processMarkdownFile(
   applyFix(
     () => fixSmartQuotesInJsxAttributes(content),
     (n) => `Fixed smart quotes in ${n} JSX tag attribute(s)`
+  )
+  applyFix(
+    () => fixJsxAttributeSpacing(content),
+    (n) => `Fixed ${n} spaced JSX attribute(s)`
   )
   applyFix(
     () => fixDuplicateFrontmatterAuthor(content),
@@ -4018,6 +4144,10 @@ function processMarkdownFile(
     applyFix(
       () => repairUnclosedBackticks(content, englishMd!),
       (n) => `Repaired ${n} unclosed backticks`
+    )
+    applyFix(
+      () => fixCrowdinSplitBackticks(content, englishMd!),
+      (n) => `Repaired ${n} Crowdin-split backtick span(s)`
     )
     applyFix(
       () => restoreBlankLinesFromEnglish(content, englishMd!),
@@ -4411,6 +4541,10 @@ export async function runSanitizer(
     const originalOnDisk = fs.existsSync(fileInfo.path)
       ? fs.readFileSync(fileInfo.path, "utf8")
       : null
+    // Skip files that were deleted (e.g. removed in dev merge) and have no provided content
+    if (originalOnDisk === null && !fileInfo.content) {
+      continue
+    }
     const { fixed, issues, content } = processMarkdownFile(
       fileInfo.path,
       fileInfo.content
@@ -4436,6 +4570,10 @@ export async function runSanitizer(
     const originalOnDisk = fs.existsSync(fileInfo.path)
       ? fs.readFileSync(fileInfo.path, "utf8")
       : null
+    // Skip files that were deleted (e.g. removed in dev merge) and have no provided content
+    if (originalOnDisk === null && !fileInfo.content) {
+      continue
+    }
     const { fixed, issues, content } = processJsonFile(
       fileInfo.path,
       fileInfo.content
@@ -4611,6 +4749,40 @@ function fixSmartQuotesInJsxAttributes(content: string): {
   return { content: parts.join(""), fixCount }
 }
 
+/**
+ * Normalize JSX/HTML attribute spacing: `attr = "value"` -> `attr="value"`.
+ * Crowdin sometimes introduces spaces around `=` in translated JSX attributes.
+ */
+function fixJsxAttributeSpacing(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(codeBlockPattern)
+
+  // Match entire HTML/JSX tags, then fix spaced attributes within each
+  const tagRe = /<[A-Za-z][^>]*>/g
+  const spacedAttrRe = /(\w+)\s+=\s+"/g
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    parts[i] = parts[i].replace(tagRe, (tag) => {
+      return tag.replace(spacedAttrRe, (attrMatch, attr) => {
+        const normalized = `${attr}="`
+        if (normalized !== attrMatch) {
+          fixCount++
+        }
+        return normalized
+      })
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
 /** @internal Exposed for unit testing only. Not part of the public API. */
 export const _testOnly = {
   // Standalone fixes
@@ -4631,6 +4803,7 @@ export const _testOnly = {
   quoteFrontmatterNonAscii,
   normalizeBlockHtmlLines,
   fixAsymmetricBackticks,
+  fixJsxAttributeSpacing,
   // English-comparison fixes
   syncHeaderIdsWithEnglish,
   fixDetachedHeadingAnchors,
@@ -4645,6 +4818,7 @@ export const _testOnly = {
   fixMergedClosingTags,
   normalizeInlineComponentsFromEnglish,
   repairUnclosedBackticks,
+  fixCrowdinSplitBackticks,
   restoreDroppedBackslashEscapes,
   fixCollapsedComponentLineBreaks,
   // Warnings
