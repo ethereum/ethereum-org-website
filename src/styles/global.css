@@ -160,6 +160,13 @@
     }
   }
 
+  /* Code blocks are always LTR -- programming languages read left-to-right.
+     On RTL pages (ar, ur) the inherited direction makes code unreadable. */
+  pre:has(code) {
+    direction: ltr;
+    text-align: left;
+  }
+
   /* Apply Urdu numerals to ordered lists when the locale is ur */
   :lang(ur) ol {
     list-style-type: urdu;
