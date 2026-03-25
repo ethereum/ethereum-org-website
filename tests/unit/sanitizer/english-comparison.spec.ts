@@ -590,6 +590,48 @@ test.describe("English Comparison Fixes", () => {
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
     })
+
+    test("does not collapse across blank lines (\\s* crossing newlines)", () => {
+      const english = [
+        "```tsx",
+        "          <div>{status}</div>",
+        "          <div>{error?.message}</div>",
+        "        </div>",
+        "      )}",
+        "```",
+      ].join("\n")
+      const translated = [
+        "```tsx",
+        "          <div>{status}</div>",
+        "          <div>{error?.message}</div>",
+        " ",
+        "</div>",
+        "      )}",
+        "```",
+      ].join("\n")
+      const { content, fixCount } = collapseInlineHtmlFromEnglish(
+        translated,
+        english
+      )
+      // The </div> after the blank line is a separate element -- must not be collapsed
+      expect(content).toContain("<div>{error?.message}</div>\n")
+      expect(content).not.toContain("</div></div>")
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not modify content inside code fences", () => {
+      const english = ["```tsx", "  <div>{status}</div>", "```"].join("\n")
+      const translated = ["```tsx", "  <div>{status}", "  </div>", "```"].join(
+        "\n"
+      )
+      const { content, fixCount } = collapseInlineHtmlFromEnglish(
+        translated,
+        english
+      )
+      // Inside code fence -- should not be touched
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
   })
 
   test.describe("fixMergedClosingTags", () => {

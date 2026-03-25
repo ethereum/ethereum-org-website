@@ -1,80 +1,81 @@
 ---
-title: Nodo archivio di Ethereum
-description: Una panoramica dei nodi archivio
+title: Nodo di archivio di Ethereum
+description: Una panoramica sui nodi di archivio
 lang: it
 sidebarDepth: 2
 ---
 
-Un nodo archivio è un'istanza di un client di Ethereum configurata per creare un archivio di tutti gli stati storici. È uno strumento utile per certi casi d'uso ma potrebbe essere più complicato da eseguire di un nodo completo.
+Un nodo di archivio è un'istanza di un client [Ethereum](/) configurato per creare un archivio di tutti gli stati storici. È uno strumento utile per determinati casi d'uso, ma potrebbe essere più complesso da eseguire rispetto a un nodo completo.
 
 ## Prerequisiti {#prerequisites}
 
-Dovresti comprendere il concetto di [nodo di Ethereum](/developers/docs/nodes-and-clients/), [la sua architettura](/developers/docs/nodes-and-clients/node-architecture/), le [strategie di sincronizzazione](/developers/docs/nodes-and-clients/#sync-modes) e le pratiche della sua [esecuzione](/developers/docs/nodes-and-clients/run-a-node/) e [utilizzo](/developers/docs/apis/json-rpc/).
+Dovresti comprendere il concetto di [nodo Ethereum](/developers/docs/nodes-and-clients/), [la sua architettura](/developers/docs/nodes-and-clients/node-architecture/), [le strategie di sincronizzazione](/developers/docs/nodes-and-clients/#sync-modes), le pratiche per [eseguirli](/developers/docs/nodes-and-clients/run-a-node/) e [utilizzarli](/developers/docs/apis/json-rpc/).
 
-## Cos'è un nodo archivio
+## Cos'è un nodo di archivio
 
-Per cogliere l'importanza di un nodo archivio, chiariamo il concetto di "stato". Ethereum è definibile come una _macchina di stato basata sulle transazioni_. Consiste in conti e applicazioni che eseguono transazioni, i cui stati cambiano. I dati globali con informazioni su ogni conto e contratto sono memorizzati in un database ad albero, detto stato. Questo è gestito dal client del livello di esecuzione (EL) e include:
+Per cogliere l'importanza di un nodo di archivio, chiariamo il concetto di "stato". Ethereum può essere definito come una _macchina a stati basata sulle transazioni_. È composto da account e applicazioni che eseguono transazioni che ne modificano lo stato. I dati globali con le informazioni su ogni account e contratto sono archiviati in un database trie chiamato stato. Questo è gestito dal client del livello di esecuzione (EL) e include:
 
-- Saldi e nonce dei conti
-- Codice del contratto e archiviazione
-- Dati correlati al consenso, es. il Contratto di deposito di staking
+- Saldi degli account e nonce
+- Codice e archiviazione dei contratti
+- Dati relativi al consenso, ad es. il contratto di deposito per lo staking
 
-Per interagire con la rete, verificare e produrre nuovi blocchi, i client di Ethereum devono tenere il passo con i cambiamenti più recenti (la punta della catena) e, dunque, con lo stato corrente. Un client del livello di esecuzione configurato come un nodo completo verifica e segue l'ultimo stato della rete, memorizzando nella cache solo gli ultimi stati, ad esempio quello associato agli ultimi 128 blocchi, così che possa gestire le riorganizzazioni della catena e fornire accesso rapido ai dati recenti. Lo stato recente è ciò che tutti i client necessitano per verificare le transazioni in entrata e per utilizzare la rete.
+Per interagire con la rete, verificare e produrre nuovi blocchi, i client di Ethereum devono tenersi al passo con le modifiche più recenti (la punta della catena) e quindi con lo stato attuale. Un client del livello di esecuzione configurato come nodo completo verifica e segue l'ultimo stato della rete, ma memorizza nella cache solo gli ultimi stati, ad es. lo stato associato agli ultimi 128 blocchi, in modo da poter gestire le riorganizzazioni della catena e fornire un rapido accesso ai dati recenti. Lo stato recente è ciò di cui tutti i client hanno bisogno per verificare le transazioni in entrata e utilizzare la rete.
 
-Puoi immaginare lo stato come un'istantanea momentanea della rete a un dato blocco e l'archivio come una riproduzione dello storico.
+Puoi immaginare lo stato come un'istantanea momentanea della rete in un dato blocco e l'archivio come una riproduzione della cronologia.
 
-Gli stati storici possono essere rimossi in sicurezza, poiché non sono necessari per l'operatività della rete e sarebbe inutilmente ridondante per il client mantenere tutti i dati obsoleti. Gli stati esistenti prima di qualche blocco recente (es. i 128 blocchi prima della testa) sono di fatto gettati via. I nodi completi mantengono soltanto i dati storici della blockchain (blocchi e transazioni) e istantanee storiche occasionali utilizzabili per rigenerare i vecchi stati su richiesta. Lo fanno eseguendo nuovamente le vecchie transazioni nell'EVM, il che può essere impegnativo a livello computazionale quando lo stato desiderato è distante dall'istantanea più vicina.
+Gli stati storici possono essere tranquillamente eliminati (pruned) perché non sono necessari per il funzionamento della rete e sarebbe inutilmente ridondante per il client conservare tutti i dati obsoleti. Gli stati esistenti prima di un blocco recente (ad es. 128 blocchi prima della testa) vengono di fatto scartati. I nodi completi conservano solo i dati storici della blockchain (blocchi e transazioni) e occasionali istantanee storiche che possono utilizzare per rigenerare stati più vecchi su richiesta. Lo fanno rieseguendo le transazioni passate nell'EVM, il che può essere computazionalmente impegnativo quando lo stato desiderato è lontano dall'istantanea più vicina.
 
-Tuttavia, ciò significa che accedere a uno stato storico su un nodo completo produce numerosi calcoli. Il client potrebbe dover eseguire tutte le transazioni precedenti e calcolare uno stato storico dalla genesi. I nodi archivio risolvono tale problema, memorizzando non solo gli stati più recenti ma ogni stato storico creato dopo ogni blocco. Fondamentalmente raggiungono un compromesso con maggiori requisiti di spazio su disco.
+Tuttavia, ciò significa che l'accesso a uno stato storico su un nodo completo consuma molta potenza di calcolo. Il client potrebbe dover eseguire tutte le transazioni passate e calcolare uno stato storico dalla genesi. I nodi di archivio risolvono questo problema archiviando non solo gli stati più recenti, ma ogni stato storico creato dopo ogni blocco. Fondamentalmente, si tratta di un compromesso con un maggiore requisito di spazio su disco.
 
-È importante notare che la rete non dipende dal fatto che i nodi archivio mantengano e forniscano tutti i dati storici. Come detto sopra, tutti gli stati intermedi storici sono derivabili su un nodo completo. Le transazioni sono memorizzate da qualsiasi nodo completo (attualmente meno di 400G) e riproducibili per costruire l'intero archivio.
+È importante notare che la rete non dipende dai nodi di archivio per conservare e fornire tutti i dati storici. Come accennato in precedenza, tutti gli stati intermedi storici possono essere derivati su un nodo completo. Le transazioni sono archiviate da qualsiasi nodo completo (attualmente meno di 400 GB) e possono essere riprodotte per costruire l'intero archivio.
 
 ### Casi d'uso
 
-L'utilizzo regolare di Ethereum, come inviare transazioni, distribuire contratti, verificare il consenso, ecc., non richiede l'accesso agli stati storici. Gli utenti non necessitano mai di un nodo archivio per un'interazione standard con la rete.
+L'uso regolare di Ethereum, come l'invio di transazioni, la distribuzione di contratti, la verifica del consenso, ecc., non richiede l'accesso agli stati storici. Gli utenti non hanno mai bisogno di un nodo di archivio per un'interazione standard con la rete.
 
-Il principale vantaggio dell'archivio di stato è un accesso rapido alle richieste sugli stati storici. Ad esempio, il nodo archivio restituirà prontamente risultati come:
+Il vantaggio principale dell'archivio di stato è un rapido accesso alle query sugli stati storici. Ad esempio, un nodo di archivio restituirebbe prontamente risultati come:
 
-- _Qual era il saldo di ETH del conto 0x1337... al blocco 15537393?_
-- _Qual era il saldo del token 0x nel contratto 0x al blocco 1920000?_
+- _Qual era il saldo in ETH dell'account 0x1337... al blocco 15537393?_
+- _Qual è il saldo del token 0x nel contratto 0x al blocco 1920000?_
 
-Come spiegato sopra, un nodo completo dovrebbe generare questi dati dall'esecuzione dell'EVM, utilizzando CPU e richiedendo tempo. I nodi archivio vi accedono sul disco e servono immediatamente le risposte. Questa è un'utile funzionalità per certe parti dell'infrastruttura, ad esempio:
+Come spiegato sopra, un nodo completo dovrebbe generare questi dati tramite l'esecuzione dell'EVM, che utilizza la CPU e richiede tempo. I nodi di archivio vi accedono sul disco e forniscono le risposte immediatamente. Questa è una funzionalità utile per alcune parti dell'infrastruttura, ad esempio:
 
-- Fornitori di servizi come i block explorer
+- Fornitori di servizi come gli esploratori di blocchi
 - Ricercatori
-- Analisti della sicurezza
-- Sviluppatori di Dapp
-- Controllo e conformità
+- Analisti di sicurezza
+- Sviluppatori di dApp
+- Revisione e conformità
 
-Esistono anche vari [servizi](/developers/docs/nodes-and-clients/nodes-as-a-service/) gratuiti che consentono l'accesso a dati storici. Essendo più impegnativo eseguire un nodo archivio, questo accesso è per lo più limitato e funziona soltanto per l'accesso occasionale. Se il tuo progetto richiede l'accesso costante ai dati storici, dovresti considerare di eseguirne uno tu stesso.
+Esistono vari [servizi](/developers/docs/nodes-and-clients/nodes-as-a-service/) gratuiti che consentono anche l'accesso ai dati storici. Poiché è più impegnativo eseguire un nodo di archivio, questo accesso è per lo più limitato e funziona solo per accessi occasionali. Se il tuo progetto richiede un accesso costante ai dati storici, dovresti prendere in considerazione l'idea di eseguirne uno tu stesso.
 
-## Implementazioni e utilizzi
+## Implementazioni e utilizzo
 
-Il nodo archivio, in questo contesto, indica i dati serviti dai client del livello di esecuzione rivolti agli utenti mentre gestiscono il database di stato e forniscono gli endpoint JSON-RPC. Opzioni di configurazione, tempi di sincronizzazione e dimensioni del database potrebbero variare a seconda del client. Per i dettagli, sei pregato di fare riferimento alla documentazione fornita dal tuo client.
+Nodo di archivio in questo contesto significa dati forniti dai client del livello di esecuzione rivolti all'utente, poiché gestiscono il database di stato e forniscono endpoint JSON-RPC. Le opzioni di configurazione, il tempo di sincronizzazione e le dimensioni del database possono variare a seconda del client. Per i dettagli, fai riferimento alla documentazione fornita dal tuo client.
 
-Prima di avviare il tuo nodo archivio, scopri le differenze tra i client e, in particolare, i vari [requisiti hardware](/developers/docs/nodes-and-clients/run-a-node/#requirements). Gran parte dei client non è ottimizzata per questa funzionalità e i loro archivi richiedono oltre 12TB di spazio. Per contro, le implementazioni come Erigon possono memorizzare gli stessi dati in meno di 3TB, il che li rende il metodo più efficace per eseguire un nodo archivio.
+Prima di avviare il tuo nodo di archivio, informati sulle differenze tra i client e in particolare sui vari [requisiti hardware](/developers/docs/nodes-and-clients/run-a-node/#requirements). La maggior parte dei client non è ottimizzata per questa funzionalità e i loro archivi richiedono più di 12 TB di spazio. Al contrario, implementazioni come Erigon possono archiviare gli stessi dati in meno di 3 TB, il che le rende il modo più efficace per eseguire un nodo di archivio.
 
 ## Pratiche consigliate
 
-Oltre ai [consigli generali per eseguire un nodo](/developers/docs/nodes-and-clients/run-a-node/), un nodo archivio potrebbe avere requisiti maggiori in termini di hardware e manutenzione. Considerando le [funzionalità chiave](https://github.com/ledgerwatch/erigon#key-features) di Erigon, l'approccio più pratico è utilizzare l'implementazione del client di [Erigon](/developers/docs/nodes-and-clients/#erigon).
+Oltre alle [raccomandazioni generali per l'esecuzione di un nodo](/developers/docs/nodes-and-clients/run-a-node/), un nodo di archivio può essere più esigente in termini di hardware e manutenzione. Considerando le [funzionalità chiave](https://github.com/ledgerwatch/erigon#key-features) di Erigon, l'approccio più pratico è utilizzare l'implementazione del client [Erigon](/developers/docs/nodes-and-clients/#erigon).
 
 ### Hardware
 
-Assicurati sempre di verificare i requisiti hardware per una data modalità nella documentazione di un client. Il principale requisito per i nodi archivio è lo spazio su disco. A seconda del client, varia da 3TB a 12TB. Anche se gli HDD potrebbero essere considerati la migliore soluzione per grandi quantità di dati, sincronizzare e aggiornare costantemente la testa della catena richiederà dischi SSD. I dischi [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) sono abbastanza buoni ma dovrebbero essere di una qualità affidabile, almeno [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). I dischi possono esser montati in un computer fisso o un server dotato di un numero sufficiente di slot. Tali dispositivi dedicati sono ideali per eseguire nodi con tempi di disponibilità elevati. È assolutamente possibile eseguirli su un laptop, ma la portabilità comporterà un costo aggiuntivo.
+Assicurati sempre di verificare i requisiti hardware per una determinata modalità nella documentazione di un client.
+Il requisito principale per i nodi di archivio è lo spazio su disco. A seconda del client, varia da 3 TB a 12 TB. Anche se gli HDD potrebbero essere considerati una soluzione migliore per grandi quantità di dati, la loro sincronizzazione e il costante aggiornamento della testa della catena richiederanno unità SSD. Le unità [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) sono sufficienti, ma dovrebbero essere di qualità affidabile, almeno [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). I dischi possono essere inseriti in un computer desktop o in un server con slot sufficienti. Tali dispositivi dedicati sono ideali per eseguire un nodo con un tempo di attività elevato. È assolutamente possibile eseguirlo su un laptop, ma la portabilità comporterà un costo aggiuntivo.
 
-Tutti i dati devono entrare in un volume, dunque i dischi devono essere uniti, ad esempio con [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) o LVM. Inoltre, potrebbe valere la pena di considerare l'utilizzo di [ZFS](https://en.wikipedia.org/wiki/ZFS) poiché supporta la "Copy-on-write", che assicura che i dati siano scritti correttamente senza alcun errore di basso livello.
+Tutti i dati devono risiedere in un unico volume, pertanto i dischi devono essere uniti, ad es. con [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) o LVM. Potrebbe valere la pena prendere in considerazione anche l'utilizzo di [ZFS](https://en.wikipedia.org/wiki/ZFS) in quanto supporta il "Copy-on-write", che garantisce che i dati vengano scritti correttamente sul disco senza errori di basso livello.
 
-Per una maggiore stabilità e sicurezza nel prevenire la corruzione accidentale del database, specialmente in una configurazione professionale, prendi in considerazione di utilizzare la [memoria ECC](https://en.wikipedia.org/wiki/ECC_memory), se il tuo sistema la supporta. Generalmente si consiglia che le dimensioni della RAM siano le stesse richieste per un nodo completo, ma maggiori quantità di RAM possono aiutare a velocizzare la sincronizzazione.
+Per maggiore stabilità e sicurezza nella prevenzione della corruzione accidentale del database, specialmente in una configurazione professionale, considera l'utilizzo della [memoria ECC](https://en.wikipedia.org/wiki/ECC_memory) se il tuo sistema la supporta. In genere si consiglia che la dimensione della RAM sia la stessa di un nodo completo, ma una maggiore quantità di RAM può aiutare a velocizzare la sincronizzazione.
 
-Durante la sincronizzazione iniziale, i client in modalità archivio eseguiranno ogni transazione dalla genesi. La velocità di esecuzione è per lo più limitata dalla CPU, quindi una CPU più veloce può aiutare con i tempi della sincronizzazione iniziale. Sul computer del consumatore medio, la sincronizzazione iniziale può richiedere fino a un mese.
+Durante la sincronizzazione iniziale, i client in modalità archivio eseguiranno ogni transazione dalla genesi. La velocità di esecuzione è per lo più limitata dalla CPU, quindi una CPU più veloce può aiutare con il tempo di sincronizzazione iniziale. Su un computer consumer medio, la sincronizzazione iniziale può richiedere fino a un mese.
 
-## Letture consigliate {#further-reading}
+## Letture di approfondimento {#further-reading}
 
-- [Nodo completo vs nodo archivio di Ethereum](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode, settembre 2022_
-- [Costruire il proprio nodo archivio di Ethereum](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush, agosto 2021_
-- [Come configurare Erigon, RPC di Erigon e TrueBlocks (scrape e API) come servizi](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, aggiornato a settembre 2022_
+- [Ethereum Full Node vs Archive Node](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode, settembre 2022_
+- [Building Your Own Ethereum Archive Node](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush, agosto 2021_
+- [How to set up Erigon, Erigon’s RPC and TrueBlocks (scrape and API) as services](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, aggiornato a settembre 2022_
 
 ## Argomenti correlati {#related-topics}
 
-- [ Nodi e client](/developers/docs/nodes-and-clients/)
+- [Nodi e client](/developers/docs/nodes-and-clients/)
 - [Eseguire un nodo](/developers/docs/nodes-and-clients/run-a-node/)

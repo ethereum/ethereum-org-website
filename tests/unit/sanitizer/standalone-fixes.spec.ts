@@ -508,6 +508,31 @@ test.describe("Standalone Fixes", () => {
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
+
+    test("quotes values containing colon-space (YAML nested mapping)", () => {
+      const input =
+        "---\ndescription: Una spiegazione degli account di Ethereum: le loro strutture dati.\n---\nContent"
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      expect(content).toContain(
+        'description: "Una spiegazione degli account di Ethereum: le loro strutture dati."'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("quotes values containing hash (YAML comment)", () => {
+      const input = "---\ntitle: Section #1 overview\n---\nContent"
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      expect(content).toContain('title: "Section #1 overview"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves colon-space in already-quoted values unchanged", () => {
+      const input =
+        '---\ndescription: "Ethereum accounts: their data structures"\n---\nContent'
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
   })
 
   test.describe("normalizeBlockHtmlLines", () => {

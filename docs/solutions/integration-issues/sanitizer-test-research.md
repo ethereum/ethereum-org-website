@@ -56,6 +56,10 @@
 | 45 | "Ether" translated as "الإيثار" (altruism) | ar #17105 | Crowdin/MT translates "ether" as "الإيثار" (altruism, a real Arabic word) instead of "الإيثر" (transliteration). Same class as brand garble corrections. | Medium -- wrong term |
 | 46 | `normalizeBlockHtmlLines` splits single-line `<div>content</div>` | id i18n/id-03-23T2228 | EN: `<div>text</div>` (one line) -> sanitizer splits to `<div>text\n</div>` (two lines) -- `normalizeBlockHtmlLines` unconditionally splits closing block HTML tags to their own line, even when the opening tag is on the same line (inline usage). MDX treats the split content as a paragraph and fails: "Expected a closing tag for `<div>` before the end of `paragraph`". Found in 6 files across 5 languages (id, tr, pt-br, ja, es). | Critical -- breaks MDX compilation |
 
+| 47 | Unquoted frontmatter value with YAML-special characters | it #17841 | `description: Una spiegazione degli account di Ethereum: le loro strutture dati...` -- colon-space (`: `) inside unquoted YAML value triggers `YAMLParseError: Nested mappings are not allowed`; existing `quoteFrontmatterNonAscii` only quotes values with non-ASCII chars, missing pure-ASCII values with YAML-special sequences | Critical -- breaks build |
+
+| 48 | `collapseInlineHtmlFromEnglish` matches across code fences and newlines | it #17841 | Inside ````tsx` fence: `<div>{error?.message}</div>\n \n</div>` -- regex `\s*</div>` crosses the blank line and collapses a separate `</div>` onto the previous line, producing `<div>{error?.message}</div></div>`. Two bugs: (1) no code fence protection, (2) `\s*` matches newlines allowing cross-line grabs | High -- corrupts code examples |
+
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
 These patterns are covered by existing fix functions and should have regression tests:
