@@ -868,6 +868,60 @@ function fixBrandTags(
 }
 
 /**
+ * Fix lowercased MDX component names in translations.
+ *
+ * Translation pipelines occasionally lowercase PascalCase MDX component tags
+ * (e.g. <Emoji> becomes <emoji>). MDX component names are case-sensitive,
+ * so the lowercased tag won't resolve to the registered component.
+ * This function extracts PascalCase component names from the English source
+ * and restores their casing in the translation.
+ */
+function fixLowercasedMdxComponents(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  // Extract PascalCase component names from English (opening, closing, self-closing)
+  const componentRe = /<\/?([A-Z][a-zA-Z0-9]+)[\s/>]/g
+  const componentNames = new Set<string>()
+  let match
+  while ((match = componentRe.exec(englishContent)) !== null) {
+    componentNames.add(match[1])
+  }
+
+  if (componentNames.size === 0)
+    return { content: translatedContent, fixCount: 0 }
+
+  // Build a map from lowercase name to PascalCase
+  const caseMap = new Map<string, string>()
+  for (const name of componentNames) {
+    caseMap.set(name.toLowerCase(), name)
+  }
+
+  let fixCount = 0
+
+  // Split to preserve code blocks
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = translatedContent.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match opening/closing/self-closing tags with lowercase names
+    parts[i] = parts[i].replace(
+      /<(\/?)([a-z][a-z0-9]*)(?=[\s/>])/g,
+      (full, slash, tagName) => {
+        const correct = caseMap.get(tagName)
+        if (!correct) return full // Not a known MDX component
+        fixCount++
+        return `<${slash}${correct}`
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Fix protected brand names that were mistranslated.
  * For each brand found in English source, if the count drops in translation,
  * attempt to restore by finding the translated variants and replacing them.
@@ -3655,6 +3709,10 @@ function warnExposedMdxTags(content: string): string[] {
         // — they never break compilation, so skip them unconditionally
         if (tagName && /^[A-Z]/.test(tagName)) continue
         if (tagName && safePattern.test(tagName)) continue
+        // URL autolinks <https://...> and <http://...> are valid markdown
+        // and commonly used inside [label](<url>) to wrap URLs with
+        // special chars (parens, underscores). Skip these entirely.
+        if (/^https?$/i.test(tagName)) continue
         // This is a bare tag outside backticks — likely exposed by Crowdin
         warnings.push(
           `Exposed MDX tag outside backticks: "${m[0]}" — may break MDX compilation`
@@ -3684,15 +3742,22 @@ function removeOrphanedClosingTags(content: string): {
 
     for (const tag of orphanTags) {
       const lines = parts[partIdx].split("\n")
+      // Track unclosed openers across lines so a </tag> on line N+1
+      // paired with <tag> on line N is not treated as orphaned (dev).
+      let unclosedFromPrev = 0
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i]
-        // Strip inline code spans for counting only — tags inside
+        // Strip inline code spans for counting only -- tags inside
         // backticks are literal text, not real HTML
         const lineForCounting = line.replace(/`[^`]+`/g, "")
         const closeRe = new RegExp(`</${tag}>`, "g")
+        const openRe = new RegExp(`<${tag}[\\s>]`, "g")
         const closeCount = (lineForCounting.match(closeRe) || []).length
+        const openCount = (lineForCounting.match(openRe) || []).length
 
         // Scan left-to-right tracking opener/closer balance.
+        // Include carry-over from previous lines (dev) so multi-line
+        // spans are not treated as orphaned.
         // A closer is orphaned if no unmatched opener precedes it.
         if (closeCount > 0) {
           // Build a list of opener and closer positions for this tag
@@ -3709,9 +3774,9 @@ function removeOrphanedClosingTags(content: string): {
           }
           events.sort((a, b) => a.pos - b.pos)
 
-          // Walk events left-to-right: closers without a pending opener are orphans
-          let pendingOpeners = 0
-          let orphanCloserCount = 0
+          // Walk events left-to-right: closers without a pending opener
+          // are orphans. Start pendingOpeners with carry-over from prev lines.
+          let pendingOpeners = unclosedFromPrev
           const orphanCloserPositions: number[] = []
           for (const ev of events) {
             if (ev.type === "open") {
@@ -3720,42 +3785,26 @@ function removeOrphanedClosingTags(content: string): {
               if (pendingOpeners > 0) {
                 pendingOpeners-- // Paired
               } else {
-                orphanCloserCount++
                 orphanCloserPositions.push(ev.pos)
               }
             }
           }
 
-          if (orphanCloserCount > 0) {
+          if (orphanCloserPositions.length > 0) {
             // Remove orphaned closers from the ORIGINAL line (not lineForCounting)
-            // We remove them left-to-right, adjusting offsets
-            let removed = 0
             const closeTag = `</${tag}>`
-            let result = line
-            // Find closer positions in the original line (may differ from
-            // lineForCounting due to inline code stripping)
-            const originalClosePosRe = new RegExp(escapeRegex(closeTag), "g")
-            let origMatch: RegExpExecArray | null
-            const origPositions: number[] = []
-            while ((origMatch = originalClosePosRe.exec(result)) !== null) {
-              origPositions.push(origMatch.index)
+            // Map orphan positions from lineForCounting to indices in original line
+            const countingPositions: number[] = []
+            const cRe = new RegExp(escapeRegex(closeTag), "g")
+            let cm: RegExpExecArray | null
+            while ((cm = cRe.exec(lineForCounting)) !== null) {
+              countingPositions.push(cm.index)
             }
-            // Map: the nth closer in lineForCounting corresponds to the nth
-            // closer in the original line (inline code spans don't contain closers)
             const toRemoveIndices = new Set(
-              orphanCloserPositions.map((pos) => {
-                // Find which sequential closer index this position belongs to
-                const countingPositions: number[] = []
-                const cRe = new RegExp(escapeRegex(closeTag), "g")
-                let cm: RegExpExecArray | null
-                while ((cm = cRe.exec(lineForCounting)) !== null) {
-                  countingPositions.push(cm.index)
-                }
-                return countingPositions.indexOf(pos)
-              })
+              orphanCloserPositions.map((pos) => countingPositions.indexOf(pos))
             )
 
-            result = ""
+            let result = ""
             let closerIdx = 0
             const closeReForReplace = new RegExp(escapeRegex(closeTag), "g")
             let lastEnd = 0
@@ -3764,18 +3813,18 @@ function removeOrphanedClosingTags(content: string): {
               if (toRemoveIndices.has(closerIdx)) {
                 result += line.slice(lastEnd, rm.index)
                 lastEnd = rm.index + rm[0].length
-                removed++
+                fixCount++
               }
               closerIdx++
             }
             result += line.slice(lastEnd)
-
-            if (removed > 0) {
-              fixCount += removed
-              lines[i] = result.replace(/  +/g, " ").trimEnd()
-            }
+            lines[i] = result.replace(/  +/g, " ").trimEnd()
           }
         }
+
+        // Update carry-over: unclosed openers from this line
+        const effectiveOpen = openCount + unclosedFromPrev
+        unclosedFromPrev = Math.max(0, effectiveOpen - closeCount)
       }
       parts[partIdx] = lines.join("\n")
     }
@@ -3991,12 +4040,6 @@ function processMarkdownFile(
     (n) => `Converted ${n} *italic* to <em> tags before non-Latin text`
   )
 
-  // Warn about exposed MDX tags from broken backtick spans
-  {
-    const tagWarnings = warnExposedMdxTags(content)
-    issues.push(...tagWarnings)
-  }
-
   applyFix(
     () => normalizeFrontmatterDates(content),
     (n) => `Normalized ${n} frontmatter dates to ISO format`
@@ -4114,7 +4157,20 @@ function processMarkdownFile(
       () => fixCollapsedComponentLineBreaks(content, englishMd!),
       (n) => `Fixed ${n} collapsed component line breaks`
     )
+    applyFix(
+      () => fixLowercasedMdxComponents(content, englishMd!),
+      (n) => `Restored ${n} lowercased MDX component name(s) to PascalCase`
+    )
+  }
 
+  // Warn about exposed MDX tags from broken backtick spans
+  // (runs after fixLowercasedMdxComponents so restored PascalCase tags are skipped)
+  {
+    const tagWarnings = warnExposedMdxTags(content)
+    issues.push(...tagWarnings)
+  }
+
+  if (englishMd) {
     // Fix and check protected brand names
     const brandResult = fixProtectedBrandNames(content, englishMd, locale)
     if (brandResult.content !== content) {
@@ -4790,6 +4846,7 @@ export const _testOnly = {
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
   fixLeakedAttrNamesInJsxValues,
+  fixLowercasedMdxComponents,
   fixMissingOpeningSup,
   fixSplitBoldMarkers,
   fixKnownWrongCompounds,

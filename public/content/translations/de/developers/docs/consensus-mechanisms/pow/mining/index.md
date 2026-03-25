@@ -1,6 +1,6 @@
 ---
 title: Mining
-description: Wie funktionierte das Ethereum-Mining?
+description: "Eine Erklärung, wie Mining auf Ethereum funktionierte."
 lang: de
 ---
 
@@ -8,79 +8,79 @@ lang: de
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-Proof-of-Work ist nicht mehr der zugrunde liegende Konsensmechanismus von Ethereum, was bedeutet, dass das Mining ausgeschaltet wurde. Stattdessen wird Ethereum von Validatoren gesichert, die ETH staken. Du kannst schon heute mit dem Staking deiner ETH beginnen. Lese mehr dazu unter <a href='/roadmap/merge/'>den Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>Proof-of-Stake</a>, und <a href='/staking/'>Staking</a>. Diese Seite dient ausschließlich zu Archivierungszwecken, um Ereignisse rund um Ethereum zu dokumentieren.
+Proof-of-Work liegt dem Konsensmechanismus von Ethereum nicht mehr zugrunde, was bedeutet, dass das Mining abgeschaltet wurde. Stattdessen wird [Ethereum](/) durch Validatoren gesichert, die ETH staken. Sie können noch heute mit dem Staking Ihrer ETH beginnen. Lesen Sie mehr über <a href='/roadmap/merge/'>The Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>Proof-of-Stake</a> und <a href='/staking/'>Staking</a>. Diese Seite ist nur von historischem Interesse.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Voraussetzungen {#prerequisites}
 
-Um diese Seite besser zu verstehen, empfehlen wir dir, zuerst [Transaktionen](/developers/docs/transactions/), [Blöcke](/developers/docs/blocks/) und [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) zu lesen.
+Um diese Seite besser zu verstehen, empfehlen wir Ihnen, sich zunächst über [Transaktionen](/developers/docs/transactions/), [Blöcke](/developers/docs/blocks/) und [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) zu informieren.
 
 ## Was ist Ethereum-Mining? {#what-is-ethereum-mining}
 
-Mining ist der Prozess der Erstellung eines Blocks von Transaktionen, der zur Ethereum-Blockchain in der mittlerweile veralteten Proof-of-Work-Architektur von Ethereum hinzugefügt werden soll.
+Mining ist der Prozess der Erstellung eines Blocks von Transaktionen, der der Ethereum-Blockchain in der nun veralteten Proof-of-Work-Architektur von Ethereum hinzugefügt wird.
 
-Das Wort Mining stammt aus dem Kontext der Goldanalogie für Kryptowährungen. Gold oder Edelmetalle sind knapp, digitale Token sind es auch, und die einzige Möglichkeit, das Gesamtvolumen in einem Proof-of-Work System zu erhöhen, ist das Mining. Beim Proof-of-Work von Ethereum erfolgte die Ausgabe ausschließlich durch Mining. Im Gegensatz zum Mining von Gold oder Edelmetallen, diente Mining bei Ethereum, durch das Kreieren, Verifizieren, Publizieren und Verteilen von Blocks in der Blockchain, auch der Sicherung des Netzwerkes.
+Das Wort Mining stammt aus dem Kontext der Goldanalogie für Kryptowährungen. Gold oder Edelmetalle sind knapp, ebenso wie digitale Token, und die einzige Möglichkeit, das Gesamtvolumen in einem Proof-of-Work-System zu erhöhen, ist durch Mining. Im Proof-of-Work-Ethereum war die einzige Art der Emission das Mining. Im Gegensatz zu Gold oder Edelmetallen war das Ethereum-Mining jedoch auch die Methode, um das Netzwerk zu sichern, indem Blöcke in der Blockchain erstellt, verifiziert, veröffentlicht und verbreitet wurden.
 
-Mining von Ether = Sicherung des Netzwerks
+Ether minen = Das Netzwerk sichern
 
-Mining ist das Lebenselixier jeder Proof-of-Work Blockchain. Ethereum-Miner – die Computer, auf denen die Software lief – investierten ihre Zeit und Rechenleistung, um Transaktionen zu verarbeiten und Blöcke zu generieren, bevor der Übergang zu Proof-of-Stake erfolgte.
+Mining ist das Lebenselixier jeder Proof-of-Work-Blockchain. Ethereum-Miner – Computer, auf denen Software läuft – nutzten vor dem Übergang zu Proof-of-Stake ihre Zeit und Rechenleistung, um Transaktionen zu verarbeiten und Blöcke zu produzieren.
 
 ## Warum gibt es Miner? {#why-do-miners-exist}
 
-In dezentralisierten Systemen wie Ethereum müssen wir sicherstellen, dass jeder mit der Reihenfolge der Transaktionen einverstanden ist. Miner halfen dabei, indem sie rechnerisch schwierige Puzzles lösten, um Blöcke zu produzieren und dabei das Netzwerk vor Attacken zu schützen.
+In dezentralisierten Systemen wie Ethereum müssen wir sicherstellen, dass sich alle über die Reihenfolge der Transaktionen einig sind. Miner halfen dabei, indem sie rechenintensive Rätsel lösten, um Blöcke zu produzieren und das Netzwerk vor Angriffen zu sichern.
 
 [Mehr zu Proof-of-Work](/developers/docs/consensus-mechanisms/pow/)
 
-Zuvor war es jedem möglich, mit dem eigenen Computer im Ethereum-Netzwerk zu minen. Allerdings konnte nicht jeder profitabel Ether (ETH) minen. In den meisten Fällen mussten Miner dedizierte Computer-Hardware kauften und Zugang zu günstigen Energiequellen haben. Es war unwahrscheinlich, dass ein durchschnittlicher Computer genug Blockbelohnungen verdienen konnte, um die Kosten für das Mining zu kompensieren.
+Zuvor konnte jeder mit seinem Computer im Ethereum-Netzwerk minen. Allerdings konnte nicht jeder Ether (ETH) profitabel minen. In den meisten Fällen mussten Miner spezielle Computerhardware kaufen und Zugang zu günstigen Energiequellen haben. Der durchschnittliche Computer verdiente wahrscheinlich nicht genug Block-Belohnungen, um die mit dem Mining verbundenen Kosten zu decken.
 
-### Mining-Kosten {#cost-of-mining}
+### Kosten des Minings {#cost-of-mining}
 
-- Mögliche Kosten für die Hardware, die für den Bau und die Wartung einer Mining-Anlage erforderlich ist
-- Stromkosten für den Betrieb der Mining-Anlage
-- Wenn man Miner in einem Pool war, erhob der Pool üblicherweise eine pauschale prozentuale Gebühr für jeden im Pool generierten Block
-- Mögliche Kosten für die Ausrüstung zur Unterstützung der Mining-Anlage (Belüftung, Energieüberwachung, elektrische Verkabelung usw.)
+- Potenzielle Kosten für die Hardware, die zum Bau und zur Wartung eines Mining-Rigs erforderlich ist
+- Stromkosten für den Betrieb des Mining-Rigs
+- Wenn Sie in einem Pool gemint haben, berechneten diese Pools in der Regel eine pauschale prozentuale Gebühr für jeden vom Pool generierten Block
+- Potenzielle Kosten für Ausrüstung zur Unterstützung des Mining-Rigs (Belüftung, Energieüberwachung, elektrische Verkabelung usw.)
 
-Um die Rentabilität des Minings weiterzuerkunden, können Sie einen Mining-Rechner verwenden, beispielsweise den von [Etherscan](https://etherscan.io/ether-mining-calculator).
+Um die Rentabilität des Minings weiter zu untersuchen, verwenden Sie einen Mining-Rechner, wie ihn [Etherscan](https://etherscan.io/ether-mining-calculator) anbietet.
 
 ## Wie Ethereum-Transaktionen gemint wurden {#how-ethereum-transactions-were-mined}
 
-Im Folgenden wird ein Überblick darüber gegeben, wie Transaktionen in Ethereum-Proof-of-Work gemint wurden. Eine analoge Beschreibung dieses Prozesses für Ethereum-Proof-of-Stake finden Sie [hier](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
+Im Folgenden finden Sie einen Überblick darüber, wie Transaktionen im Ethereum-Proof-of-Work gemint wurden. Eine analoge Beschreibung dieses Prozesses für Ethereum-Proof-of-Stake finden Sie [hier](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
 
-1. Ein Benutzer schreibt und signiert eine Anfrage für eine [Transaktion](/developers/docs/transactions/) mit seinem privaten Schlüssel von einem [Konto](/developers/docs/accounts/).
-2. Der Benutzer überträgt die Transaktionsanfrage von einigen [Nodes](/developers/docs/nodes-and-clients/) an das gesamte Ethereum-Netzwerk.
-3. Wenn sie von der neuen Transaktionsanfrage hören, fügen alle Nodes die Anfrage ihrem lokalen Mempool (eine Liste aller Transaktionsanfragen, die noch nicht an die Blockchain übertragen wurden, von denen sie gehört haben) hinzu.
-4. Irgendwann fasst ein Mining-Node mehrere Dutzend oder Hundert Transaktionsanfragen in einem potenziellen [Block](/developers/docs/blocks/) zusammen, sodass die [Transaktionsentgelte](/developers/docs/gas/), die sie verdienen, maximiert werden, während sie unter dem Block-Ressourcen-Limit bleiben. Zu diesem Zeitpunkt tut der Mining-Node Folgendes:
-   1. Er überprüft die Gültigkeit jeder Transaktionsanfrage (z. B. es versucht keiner, die Ether von einem Konto ohne Signatur zu transferieren, die Anfrage ist nicht fehlerhaft etc.), führt dann den Code der Anfrage aus und ändert den Status ihrer lokalen Kopie der EVM. Die Miner erhalten die Transaktionsentgelte für jede dieser Transaktionsanfragen auf ihr eigenes Konto.
-   2. Startet den Prozess der Erstellung des Proof-of-Work "Nachweiszertifikat der Legitimität" für den potenziellen Block, sobald alle Transaktionsanfragen in dem Block verifiziert und in der lokalen EVM-Kopie ausgeführt wurden.
-5. Letztendlich wird ein Miner ein Zertifikat für einen Block erstellen, der unsere spezifische Transaktionsanfrage enthält. Dieser Miner sendet dann den vollendeten Block, der das Zertifikat und eine Prüfsumme des beanspruchten neuen EVM-Status enthält.
-6. Andere Nodes hören von dem neuen Block. Sie prüfen das Zertifikat, führen alle Transaktionen in dem Block selbst aus (einschließlich der ursprünglich von unserem Nutzer übermittelten Transaktion) und überprüfen, ob die Prüfsumme von ihrem neuem EVM-Status nach der Ausführung aller Transaktionen mit der Prüfsumme aus dem vom Miner-Block selbst behaupteten Status übereinstimmt. Nur dann fügen diese Nodes den Block an den Schwanz ihrer Blockchain an und akzeptieren den neuen EVM-Status als kanonischen Status.
-7. Jeder Node entfernt alle Transaktionen in dem neuen Block aus seinem lokalen Mempool aus unerfüllten Transaktionsanfragen.
-8. Neue Knoten, die dem Netzwerk beitreten, laden alle Blöcke in Reihenfolge herunter, einschließlich des Blocks mit der von uns vefolgten Transaktion. Sie initialisieren eine lokale EVM-Kopie (diese startet als ein leerer EVM-Status), gehen dann durch den Ausführungsprozess jeder Transaktion in jedem Block an der Spitze der lokalen EVM-Kopie und überprüfen dabei in jedem Block die Prüfsummenstatus.
+1. Ein Benutzer schreibt und signiert eine [Transaktionsanfrage](/developers/docs/transactions/) mit dem Private-Key eines [Kontos](/developers/docs/accounts/).
+2. Der Benutzer sendet die Transaktionsanfrage von einem [Blockchain-Knoten](/developers/docs/nodes-and-clients/) an das gesamte Ethereum-Netzwerk.
+3. Sobald ein Blockchain-Knoten im Ethereum-Netzwerk von der neuen Transaktionsanfrage erfährt, fügt er die Anfrage seinem lokalen Mempool hinzu, einer Liste aller Transaktionsanfragen, von denen er gehört hat und die noch nicht in einem Block in die Blockchain aufgenommen wurden.
+4. Irgendwann fasst ein Mining-Knoten mehrere Dutzend oder Hundert Transaktionsanfragen zu einem potenziellen [Block](/developers/docs/blocks/) zusammen, und zwar so, dass die [Transaktionsgebühren](/developers/docs/gas/), die er verdient, maximiert werden, während er gleichzeitig unter das Gaslimit des Blocks fällt. Der Mining-Knoten führt dann Folgendes aus:
+   1. Er verifiziert die Gültigkeit jeder Transaktionsanfrage (d. h. niemand versucht, Ether von einem Konto zu überweisen, für das er keine Signatur erstellt hat, die Anfrage ist nicht fehlerhaft usw.) und führt dann den Code der Anfrage aus, wodurch der Zustand seiner lokalen Kopie der EVM geändert wird. Der Miner schreibt die Transaktionsgebühr für jede dieser Transaktionsanfragen seinem eigenen Konto gut.
+   2. Er beginnt mit dem Prozess der Erstellung des Proof-of-Work-„Legitimitätszertifikats“ für den potenziellen Block, sobald alle Transaktionsanfragen im Block verifiziert und auf der lokalen EVM-Kopie ausgeführt wurden.
+5. Schließlich wird ein Miner die Erstellung eines Zertifikats für einen Block abschließen, der unsere spezifische Transaktionsanfrage enthält. Der Miner sendet dann den fertigen Block, der das Zertifikat und eine Prüfsumme des behaupteten neuen EVM-Zustands enthält.
+6. Andere Blockchain-Knoten erfahren von dem neuen Block. Sie verifizieren das Zertifikat, führen alle Transaktionen auf dem Block selbst aus (einschließlich der ursprünglich von unserem Benutzer gesendeten Transaktion) und verifizieren, dass die Prüfsumme ihres neuen EVM-Zustands nach der Ausführung aller Transaktionen mit der Prüfsumme des vom Block des Miners behaupteten Zustands übereinstimmt. Erst dann hängen diese Blockchain-Knoten diesen Block an das Ende ihrer Blockchain an und akzeptieren den neuen EVM-Zustand als den kanonischen Zustand.
+7. Jeder Blockchain-Knoten entfernt alle Transaktionen im neuen Block aus seinem lokalen Mempool unerfüllter Transaktionsanfragen.
+8. Neue Blockchain-Knoten, die dem Netzwerk beitreten, laden alle Blöcke nacheinander herunter, einschließlich des Blocks, der unsere interessante Transaktion enthält. Sie initialisieren eine lokale EVM-Kopie (die als EVM mit leerem Zustand beginnt) und durchlaufen dann den Prozess der Ausführung jeder Transaktion in jedem Block auf ihrer lokalen EVM-Kopie, wobei sie die Zustandsprüfsummen bei jedem Block auf dem Weg verifizieren.
 
-Jede Transaktion wird einmal gemint (in einen neuen Block eingeschlossen und zum ersten Mal propagiert), aber von jedem Teilnehmer im Prozess der Weitergabe des kanonischen EVM-Status ausgeführt und verifiziert. Dies hebt eines der wichtigsten Mantras der Blockchain hervor: **Nicht vertrauen – prüfen**.
+Jede Transaktion wird einmal gemint (in einen neuen Block aufgenommen und zum ersten Mal verbreitet), aber von jedem Teilnehmer im Prozess der Weiterentwicklung des kanonischen EVM-Zustands ausgeführt und verifiziert. Dies unterstreicht eines der zentralen Mantras der Blockchain: **Nicht vertrauen, verifizieren** (Don’t trust, verify).
 
-## Ommer(Onkel)-Blöcke {#ommer-blocks}
+## Ommer- (Uncle-) Blöcke {#ommer-blocks}
 
-Das Mining von Blöcken bei Proof-of-Work war probabilistisch, was bedeutet, dass manchmal aufgrund von Netzwerklatenz gleichzeitig zwei gültige Blöcke veröffentlicht wurden. In diesem Fall musste das Protokoll die längste (und daher „gültigste“) Kette bestimmen und gleichzeitig Fairness gegenüber den Minern gewährleisten, indem es den vorgeschlagenen, aber nicht einbezogenen gültigen Block teilweise belohnte. Das förderte eine weitere Dezentralisierung des Netzwerks, da kleinere Miner, die möglicherweise mit größerer Latenz konfrontiert sind, immer noch Erträge durch [Ommer](/glossary/#ommer)-Blockbelohnungen generieren konnten.
+Das Block-Mining bei Proof-of-Work war probabilistisch, was bedeutet, dass aufgrund von Netzwerklatenz manchmal zwei gültige Blöcke gleichzeitig veröffentlicht wurden. In diesem Fall musste das Protokoll die längste (und damit „gültigste“) Kette bestimmen und gleichzeitig Fairness gegenüber den Minern gewährleisten, indem der vorgeschlagene, aber nicht aufgenommene gültige Block teilweise belohnt wurde. Dies förderte die weitere Dezentralisierung des Netzwerks, da kleinere Miner, die möglicherweise mit einer größeren Latenz konfrontiert waren, dennoch Erträge über [Ommer](/glossary/#ommer)-Block-Belohnungen erzielen konnten.
 
-Der Begriff „Ommer" ist der bevorzugte geschlechtsneutrale Begriff für das Geschwisterteil eines Elternblocks, aber manchmal ist auch die Rede von „Onkel". **Seit dem Übergang von Ethereum zu Proof-of-Stake werden keine Ommer-Blöcke mehr gemint**, da in jedem Slot nur ein Vorschlaggeber gewählt wird. Sie können diese Veränderung im [Geschichtsdiagramm](https://ycharts.com/indicators/ethereum_uncle_rate) der geminten Ommer-Blöcke einsehen.
+Der Begriff „Ommer“ ist der bevorzugte geschlechtsneutrale Begriff für das Geschwisterkind eines Elternblocks, wird aber manchmal auch als „Uncle“ (Onkel) bezeichnet. **Seit Ethereums Wechsel zu Proof-of-Stake werden Ommer-Blöcke nicht mehr gemint**, da in jedem Slot nur ein Block-Vorschlagender gewählt wird. Sie können diese Änderung sehen, indem Sie sich das [historische Diagramm](https://ycharts.com/indicators/ethereum_uncle_rate) der geminten Ommer-Blöcke ansehen.
 
 ## Eine visuelle Demo {#a-visual-demo}
 
-Sehen Sie Austin bei einer Führung durch das Mining und die Proof-of-Work-Blockchain zu.
+Sehen Sie zu, wie Austin Sie durch das Mining und die Proof-of-Work-Blockchain führt.
 
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## Der Mining-Algorithmus {#mining-algorithm}
 
-Das Ethereum-Mainnet hat immer nur einen Mining-Algorithmus verwendet – [„Ethash“](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethash war der Nachfolger eines ursprünglichen Algorithmus für Forschung und Entwicklung namens [„Dagger-Hashimoto“](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/).
+Das Ethereum-Mainnet verwendete immer nur einen Mining-Algorithmus – ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethash war der Nachfolger eines ursprünglichen F&E-Algorithmus, der als ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) bekannt ist.
 
-[Mehr über Mining-Algorithmen](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
+[Mehr zu Mining-Algorithmen](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
 
 ## Verwandte Themen {#related-topics}
 
-- [Ressourcen](/developers/docs/gas/)
+- [Gas](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)
-- [Proof-of-Work (Arbeitsnachweis)](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/)

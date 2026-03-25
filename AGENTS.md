@@ -68,6 +68,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 
 - Use `interface` for object shapes, `type` for unions/intersections
 - Prefer explicit typing over `any` (ESLint enforces `fixToUnknown`)
+- **NEVER leave unused variables or parameters** - ESLint `unused-imports/no-unused-vars` will fail the Netlify build. The only allowed unused arg pattern is a single underscore `_`. Do NOT use `_prefixedNames` (e.g., `_foo`) - either use the variable or remove it from the signature entirely.
 - Use generic constraints for reusable components
 - Export types from dedicated files in `@/lib/types`
 

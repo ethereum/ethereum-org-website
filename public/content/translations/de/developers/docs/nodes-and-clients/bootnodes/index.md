@@ -1,31 +1,31 @@
 ---
-title: Einführung zu Ethereum Bootnodes
-description: Grundlegend benötigte Informationen zum Verständnis von Bootnodes
+title: "Einführung in Ethereum-Bootnodes"
+description: "Die grundlegenden Informationen, die Sie benötigen, um Bootnodes zu verstehen"
 lang: de
 ---
 
-Wenn ein neuer Knoten dem Ethereum-Netzwerk beitritt, muss er sich mit anderen Knoten, sich sich bereits im Netzwerk befinden, verbinden, damit er neue Peers finden kann. Diese Eintrittspunkte in das Ethereum-Netzwerk werden Bootnodes genannt. Clients haben häufig eine Liste von Bootnodes fest einkodiert. Diese Bootnodes werden normalerweise vom Ethereum Foundation Entwicklerteam oder den Client-Teams betrieben. Beachten Sie dabei, dass Bootnodes nicht dasselbe wie statische Knoten sind. Statische Knoten werden immer wieder aufgerufen, während Bootnodes nur aufgerufen werden, wenn es genug Peers zum Verbinden gibt. Der Knoten muss zudem neue komplexere Verbindungen aufbauen.
+Wenn ein neuer Blockchain-Knoten dem Ethereum-Netzwerk beitritt, muss er sich mit Blockchain-Knoten verbinden, die sich bereits im Netzwerk befinden, um dann neue Peers zu entdecken. Diese Einstiegspunkte in das Ethereum-Netzwerk werden Bootnodes genannt. Anwendungen haben normalerweise eine Liste von Bootnodes fest einkodiert. Diese Bootnodes werden typischerweise vom DevOps-Team der Ethereum Foundation oder den Anwendungs-Teams selbst betrieben. Beachten Sie, dass Bootnodes nicht dasselbe sind wie statische Blockchain-Knoten. Statische Blockchain-Knoten werden immer wieder aufgerufen, während Bootnodes nur dann aufgerufen werden, wenn es nicht genügend Peers gibt, mit denen man sich verbinden kann, und ein Blockchain-Knoten einige neue Verbindungen aufbauen muss.
 
-## Verbinden mit einem Bootnode {#connect-to-a-bootnode}
+## Mit einem Bootnode verbinden {#connect-to-a-bootnode}
 
-Die meisten Clients verfügen über eine integrierte Liste von Bootnodes. Aber möglicherweise möchten Sie auch Ihren eigenen Bootnode betreiben, oder einen nutzen, der nicht Teil der fest einkodierten Liste des Clients ist. In diesem Fall können Sie sie spezifizieren, wenn Sie ihren Client wie folgt starten (Beispiel gilt für Geth, bitte überprüfen Sie die Dokumentation Ihres Clients):
+Die meisten Anwendungen haben eine Liste von Bootnodes integriert, aber vielleicht möchten Sie auch Ihren eigenen Bootnode betreiben oder einen verwenden, der nicht Teil der fest einkodierten Liste der Anwendung ist. In diesem Fall können Sie diese beim Starten Ihrer Anwendung wie folgt angeben (das Beispiel gilt für Geth, bitte überprüfen Sie die Dokumentation Ihrer Anwendung):
 
 ```
 geth --bootnodes "enode://<node ID>@<IP address>:<port>"
 ```
 
-## Betrieb eines Bootnodes {#run-a-bootnode}
+## Einen Bootnode betreiben {#run-a-bootnode}
 
-Bootnodes sind vollständige Knoten, die nicht hinter einem NAT ([Network Address Translation](https://www.geeksforgeeks.org/network-address-translation-nat/)) stehen. Jeder vollständige Knoten kann als Bootnode wirken, solange er öffentlich zugänglich ist.
+Bootnodes sind vollständige Blockchain-Knoten, die sich nicht hinter einem NAT ([Network Address Translation](https://www.geeksforgeeks.org/network-address-translation-nat/)) befinden. Jeder vollständige Blockchain-Knoten kann als Bootnode fungieren, solange er öffentlich erreichbar ist.
 
-Wenn Sie einen Knoten starten, sollte er sich in Ihren ["Enode"](/developers/docs/networking-layer/network-addresses/#enode) einloggen. Dieser ist ein öffentlicher Identifikator, den andere nutzen können, um sich mit Ihrem Knoten zu verbinden.
+Wenn Sie einen Blockchain-Knoten starten, sollte dieser Ihre [enode](/developers/docs/networking-layer/network-addresses/#enode) protokollieren. Dies ist eine öffentliche Kennung, die andere verwenden können, um sich mit Ihrem Blockchain-Knoten zu verbinden.
 
-Der Enode wird normalerweise bei jedem Neustart neu generiert, schauen Sie sich daher die Dokumentation Ihres Clients an. Dort erfahren Sie, wie man einen beständigen Enode für Ihren Bootnode erzeugt.
+Die enode wird normalerweise bei jedem Neustart neu generiert. Schauen Sie daher in der Dokumentation Ihrer Anwendung nach, wie Sie eine dauerhafte enode für Ihren Bootnode generieren können.
 
-Ein guter Bootnode benötigt möglichst viele Peers, die an ihm andocken können, daher wird empfohlen, die maximale Anzahl davon zu erhöhen. Einen Bootnode mit vielen Peers auszuführen, kann die benötigte Bandbreite signifikant vergrößern.
+Um ein guter Bootnode zu sein, ist es ratsam, die maximale Anzahl von Peers zu erhöhen, die sich mit ihm verbinden können. Der Betrieb eines Bootnodes mit vielen Peers wird den Bandbreitenbedarf erheblich erhöhen.
 
 ## Verfügbare Bootnodes {#available-bootnodes}
 
-Eine Liste bereits verfügbarer Bootnodes in go-Ethereum finden Sie [hier](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Diese Bootnodes werden von der Ethereum Foundation und dem go-Ethereum Team gewartet.
+Eine Liste der in go-ethereum integrierten Bootnodes finden Sie [hier](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Diese Bootnodes werden von der Ethereum Foundation und dem go-ethereum-Team gepflegt.
 
-Es gibt weitere Listen von Bootnodes, die von Freiwilligen gepflegt werden. Stellen Sie sicher, dass Sie immer mindestens einen offiziellen Bootnode verwenden, da Sie sonst Opfer eines Eclipse-Angriffs werden könnten.
+Es gibt noch weitere Listen von Bootnodes, die von Freiwilligen gepflegt werden. Bitte stellen Sie sicher, dass Sie immer mindestens einen offiziellen Bootnode einbeziehen, da Sie sonst Opfer eines Eclipse-Angriffs werden könnten.

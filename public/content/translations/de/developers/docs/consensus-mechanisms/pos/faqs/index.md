@@ -1,172 +1,172 @@
 ---
-title: Häufig gestellte Fragen
-description: Häufig gestellte Fragen zu Proof-of-Stake-Ethereum.
+title: "Häufig gestellte Fragen"
+description: "Häufig gestellte Fragen zu Proof-of-Stake bei Ethereum."
 lang: de
 ---
 
 ## Was ist Proof-of-Stake? {#what-is-proof-of-stake}
 
-Proof-of-Stake beschreibt eine Klasse von Algorithmen, die für die Sicherheit von Blockchains sorgen können, indem sie sicherstellen, dass Assets von Angreifern, die unehrlich handeln, verloren gehen. Für Proof-of-Stake-Systeme ist ein Validatoren-Set erforderlich, um Assets verfügbar zu machen, die zerstört werden können, sollte ein Validator ein nachweislich unehrliches Verhalten an den Tag legen. Ethereum nutzt einen Proof-of-Stake-Mechanismus zur Sicherung der Blockchain.
+Proof-of-Stake ist eine Klasse von Algorithmen, die Blockchains Sicherheit bieten kann, indem sie sicherstellt, dass Angreifer, die unehrlich handeln, wertvolle Vermögenswerte verlieren. Proof-of-Stake-Systeme erfordern eine Gruppe von Validatoren, die einen Vermögenswert zur Verfügung stellen, der zerstört werden kann, wenn der Validator ein nachweislich unehrliches Verhalten an den Tag legt. Ethereum verwendet einen Konsensmechanismus basierend auf Proof-of-Stake, um die Blockchain zu sichern.
 
-## Was ist der Unterschied zwischen Proof-of-Stake und Proof-of-Work? {#comparison-to-proof-of-work}
+## Wie lässt sich Proof-of-Stake mit Proof-of-Work vergleichen? {#comparison-to-proof-of-work}
 
-Sowohl Proof-of-Work als auch Proof-of-Stake sind Mechanismen, die böswillige Akteure wirtschaftlich davon abhalten, das Netzwerk mit Spam zu überhäufen oder betrügerische Aktivitäten auszuführen. In beiden Fällen legen Nodes, die aktiv am Konsens teilnehmen, Assets „in das Netzwerk“ ab, das sie verlieren, sollten sie sich falsch verhalten.
+Sowohl Proof-of-Work als auch Proof-of-Stake sind Mechanismen, die bösartige Akteure wirtschaftlich davon abhalten, das Netzwerk zu spammen oder zu betrügen. In beiden Fällen bringen Blockchain-Knoten, die aktiv am Konsens teilnehmen, einen Vermögenswert „in das Netzwerk“ ein, den sie verlieren, wenn sie sich falsch verhalten.
 
-Bei Proof-of-Work ist dieses Asset die Energie. Der Node, bekannt als Miner, führt einen Algorithmus aus, der versucht, einen Wert schneller als jeder andere Node zu berechnen. Der schnellste Node hat das Recht, der Chain einen Block vorzuschlagen. Um die Historie der Chain zu verändern oder die Block-Proposals zu dominieren müsste ein Miner über so viel Rechenleistung verfügen, dass er immer das Rennen gewinnt. Dies ist unerschwinglich teuer und schwierig auszuführen und schützt die Chain so vor Angriffen. Die Energie, die für das „Mining“ über den Proof-of-Work-Mechanismus erforderlich ist, ist ein Asset in der realen Welt, für den Miner bezahlen.
+Bei Proof-of-Work ist dieser Vermögenswert Energie. Der Blockchain-Knoten, bekannt als Miner, führt einen Algorithmus aus, der darauf abzielt, einen Wert schneller als jeder andere Blockchain-Knoten zu berechnen. Der schnellste Blockchain-Knoten hat das Recht, der Chain einen Block vorzuschlagen. Um die Historie der Chain zu ändern oder den Blockvorschlag zu dominieren, müsste ein Miner über so viel Rechenleistung verfügen, dass er das Rennen immer gewinnt. Dies ist unerschwinglich teuer und schwer auszuführen, was die Chain vor Angriffen schützt. Die Energie, die für das „Mining“ mittels Proof-of-Work erforderlich ist, ist ein realer Vermögenswert, für den die Miner bezahlen.
 
-Proof-of-Stake erfordert Nodes, bekannt als Validatoren, die ein Krypto-Asset einem Smart Contract explizit übergeben. Wenn sich ein Validator falsch verhält, können diese Kryptowerte zerstört werden, da er seine Assets direkt in die Chain und nicht indirekt über den Energieverbrauch einbringt. Dieser Vorgang wird auch „Staking“ (englisch für „Einsatz“) genannt.
+Proof-of-Stake erfordert, dass Blockchain-Knoten, bekannt als Validatoren, explizit ein Krypto-Asset an einen Smart Contract übermitteln. Wenn sich ein Validator falsch verhält, kann diese Kryptowährung zerstört werden, da er seine Vermögenswerte direkt in die Chain einbringt (Staking), anstatt indirekt über Energieaufwand.
 
-Proof-of-Work ist sehr viel energieaufwendiger, da Elektrizität im Mining-Prozess verbraucht wird. Für Proof-of-Stake wird hingegen nur eine sehr kleine Mengen an Energie benötigt – Ethereum-Validatoren können sogar auf Geräten mit geringem Energiebedarf wie etwa einem Raspberry Pi ausgeführt werden. Es wird davon ausgegangen, dass Ethereums Proof-of-Stake-Mechanismus sicherer ist als der Proof-of-Work-Mechanismus, da die Kosten für einen Angriff höher und die Konsequenzen für einen Angreifer schwerwiegender sind.
+Proof-of-Work ist viel energiehungriger, da beim Mining-Prozess Strom verbraucht wird. Proof-of-Stake hingegen benötigt nur eine sehr geringe Menge an Energie – Ethereum-Validatoren können sogar auf einem stromsparenden Gerät wie einem Raspberry Pi ausgeführt werden. Der Proof-of-Stake-Mechanismus von Ethereum gilt als sicherer als Proof-of-Work, da die Kosten für einen Angriff höher sind und die Konsequenzen für einen Angreifer schwerwiegender ausfallen.
 
-Proof-of-Work versus Proof-of-Stake ist ein umstrittenes Thema. [Vitalik Buterins Blog](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) und die Debatte zwischen Justin Drake und Lyn Alden geben einen guten Überblick über die Argumente.
+Proof-of-Work versus Proof-of-Stake ist ein umstrittenes Thema. [Vitalik Buterins Blog](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) und die Debatte zwischen Justin Drake und Lyn Alden bieten eine gute Zusammenfassung der Argumente.
 
 <YouTube id="1m12zgJ42dI" />
 
 ## Ist Proof-of-Stake energieeffizient? {#is-pos-energy-efficient}
 
-Ja. Nodes auf dem Proof-of-Stake-Netzwerk nutzen sehr geringe Mengen an Energie. Eine Studie Dritter kam zu dem Schluss, dass Ethereums gesamtes Proof-of-Stake-Netzwerk ungefähr 0,0026 TWh/Jahr verbraucht – ungefähr 13.000-mal weniger Energie, als allein in den USA jedes für Gaming aufgebraucht wird.
+Ja. Blockchain-Knoten in einem Proof-of-Stake-Netzwerk verbrauchen eine winzige Menge an Energie. Eine unabhängige Studie kam zu dem Schluss, dass das gesamte Proof-of-Stake-Netzwerk von Ethereum rund 0,0026 TWh/Jahr verbraucht – etwa 13.000-mal weniger als Gaming allein in den USA.
 
-[ Mehr zum Energieverbrauch von Ethereum](/energy-consumption/).
+[Mehr zum Energieverbrauch von Ethereum](/energy-consumption/).
 
 ## Ist Proof-of-Stake sicher? {#is-pos-secure}
 
-Ethereums Proof-of-Stake ist sehr sicher. Der Mechanismus wurde acht Jahre lang erforscht, entwickelt und rigoros getestet, bevor er in Betrieb genommen wurde. Die Sicherheitsversprechen unterscheiden sich von Proof-of-Work-Blockchains. Bei Proof-of-Stake können böswillige Validatoren aktiv bestraft („geslasht“) werden und aus dem Validatoren-Set ausgeschlossen werden. Das kostet eine erhebliche Menge an ETH. Unter Proof-of-Work kann ein böswilliger Akteur seinen Angriff immer wieder ausführen, solange er über die erforderliche Hash-Leistung verfügt. Außerdem ist es im Vergleich zu Proof-of-Work-Ethereum kostspieliger, gleichwertige Angriffe auf Proof-of-Stake-Ethereum durchzuführen. Um die Liveness der Chain zu beeinflussen, sind mindestens 33 % der insgesamt eingesetzten Ether im Netzwerk erforderlich (außer in Fällen sehr ausgeklügelter Angriffe mit extrem geringer Erfolgswahrscheinlichkeit). Um die Inhalte zukünftiger Blocks zu kontrollieren, werden mindestens 51 % der insgesamt eingesetzten ETH benötigt, und um die Historie zu verändern, sind mindestens 66 % der insgesamt eingesetzten ETH erforderlich. Das Ethereum-Protokoll würde diese Assetss in den Angriffsszenarien mit 33 % oder 51 % und durch sozialen Konsens im Angriffsszenario mit 66 % zerstören.
+Das Proof-of-Stake von Ethereum ist sehr sicher. Der Mechanismus wurde über acht Jahre lang erforscht, entwickelt und streng getestet, bevor er live ging. Die Sicherheitsgarantien unterscheiden sich von Proof-of-Work-Blockchains. Bei Proof-of-Stake können bösartige Validatoren aktiv bestraft („Slashing“) und aus der Gruppe der Validatoren ausgeschlossen werden, was eine erhebliche Menge an ETH kostet. Unter Proof-of-Work kann ein Angreifer seinen Angriff beliebig oft wiederholen, solange er über ausreichend Hash-Leistung verfügt. Es ist auch kostspieliger, gleichwertige Angriffe auf das Proof-of-Stake von Ethereum durchzuführen als unter Proof-of-Work. Um die Lebendigkeit (Liveness) der Chain zu beeinträchtigen, sind mindestens 33 % der gesamten im Netzwerk eingesetzten Ether erforderlich (außer in Fällen sehr raffinierter Angriffe mit extrem geringer Erfolgswahrscheinlichkeit). Um den Inhalt zukünftiger Blöcke zu kontrollieren, sind mindestens 51 % der gesamten eingesetzten ETH erforderlich, und um die Historie neu zu schreiben, werden über 66 % des gesamten Einsatzes benötigt. Das Ethereum-Protokoll würde diese Vermögenswerte in den 33-%- oder 51-%-Angriffsszenarien zerstören und durch sozialen Konsens im 66-%-Angriffsszenario.
 
-- [Weitere Informationen zur Absicherung von Ethereum durch Proof-of-Stake gegen Angreifer](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
-- [Weitere Informationen zum Aufbau von Proof-of-Stake](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
+- [Mehr zur Verteidigung des Ethereum-Proof-of-Stake vor Angreifern](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
+- [Mehr zum Proof-of-Stake-Design](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
 
-## Macht Proof-of-Stake Ethereum günstiger? {#does-pos-make-ethereum-cheaper}
+## Macht Proof-of-Stake Ethereum billiger? {#does-pos-make-ethereum-cheaper}
 
-Nein. Die Kosten für das Versenden einer Transaktion (Gasgebühren) werden von einem dynamischen Gebührenmarkt bestimmt. Sie erhöhen sich bei steigender Netzwerknachfrage. Der Konsensmechanismus beeinflusst dies nicht direkt.
+Nein. Die Kosten für das Senden einer Transaktion (Gasgebühr) werden durch einen dynamischen Gebührenmarkt bestimmt, der mit steigender Netzwerknachfrage zunimmt. Der Konsensmechanismus hat darauf keinen direkten Einfluss.
 
 [Mehr zu Gas](/developers/docs/gas).
 
-## Was sind Nodes, Clients und Validatoren? {#what-are-nodes-clients-and-validators}
+## Was sind Blockchain-Knoten, Anwendungen und Validatoren? {#what-are-nodes-clients-and-validators}
 
-Nodes sind Computer, die mit dem Ethereum-Netzwerk verbunden sind. Clients sind die Software, die von ihnen ausgeführt wird und die den Computer in einen Node verwandelt. Es gibt zwei Arten von Clients: Ausführungs-Clients und Konsens-Clients. Es bedarf beider, um einen Node zu erstellen. Ein Validator ist eine optionale Erweiterung zu einem Konsens-Client, der es dem Node ermöglicht, am Proof-of-Stake-Konsens teilzunehmen. Das bedeutet, dass er Blöcke erstellen und vorschlagen kann, wenn er ausgewählt wird, und dass er Blöcke, von denen er im Netzwerk erfährt, attestieren kann. Um einen Validator zu betreiben, muss ein Operator eines Nodes 32 ETH in den Einzahlungsvertrag trasferieren.
+Blockchain-Knoten sind Computer, die mit dem Ethereum-Netzwerk verbunden sind. Anwendungen sind die Software, die sie ausführen und die den Computer in einen Blockchain-Knoten verwandelt. Es gibt zwei Arten von Anwendungen: Ausführungs-Clients und Konsens-Clients. Beide werden benötigt, um einen Blockchain-Knoten zu erstellen. Ein Validator ist ein optionales Add-on zu einem Konsens-Client, das es dem Blockchain-Knoten ermöglicht, am Proof-of-Stake-Konsens teilzunehmen. Dies bedeutet das Erstellen und Vorschlagen von Blöcken, wenn sie ausgewählt werden, und das Bestätigen von Blöcken, von denen sie im Netzwerk erfahren. Um einen Validator zu betreiben, muss der Betreiber des Blockchain-Knotens 32 ETH in den Einzahlungsvertrag einzahlen.
 
-- [Mehr zu Nodes und Clients](/developers/docs/nodes-and-clients)
-- [Mehr zum Staking](/staking)
+- [Mehr zu Blockchain-Knoten und Anwendungen](/developers/docs/nodes-and-clients)
+- [Mehr zu Staking](/staking)
 
 ## Ist Proof-of-Stake eine neue Idee? {#is-pos-new}
 
-Nein. Ein Benutzer auf BitcoinTalk [schlug 2011 die grundlegende Idee von Proof-of-Stake](https://bitcointalk.org/index.php?topic=27787.0) als ein Upgrade für Bitcoin vor. Es vergingen elf Jahre, bevor die Technologie bereit war, auf dem Ethereum Mainnet implementiert zu werden. Einige andere Chains implementierten Proof-of-Stake bereits vor Ethereum, jedoch nicht Ethereums spezifischen Mechanismus (bekannt als Gasper).
+Nein. Ein Benutzer auf BitcoinTalk [schlug die Grundidee von Proof-of-Stake vor](https://bitcointalk.org/index.php?topic=27787.0), als Upgrade für Bitcoin im Jahr 2011. Es dauerte elf Jahre, bis es bereit war, im Ethereum-Mainnet implementiert zu werden. Einige andere Chains implementierten Proof-of-Stake früher als Ethereum, jedoch nicht den spezifischen Mechanismus von Ethereum (bekannt als Gasper).
 
-## Was ist das Besondere an Ethereums Proof-of-Stake? {#why-is-ethereum-pos-special}
+## Was ist das Besondere am Proof-of-Stake von Ethereum? {#why-is-ethereum-pos-special}
 
-Ethereums Proof-of-Stake-Mechanismus ist in seinem Aufbau einzigartig. Er war nicht der erste Proof-of-Stake-Mechanismus, der konzipiert und implementiert wurde, jedoch ist es der robusteste. Der Proof-of-Stake-Mechanismus ist als „Casper“ bekannt. Casper definiert, wie Validatoren ausgewählt werden, um Blöcke vorzuschlagen, wie und wann Attestierungen gemacht werden, wie Attestierungen gezählt werden, welche Belohnungen und Strafen an die Validatoren gehen, welche Bedingungen für das Slashing gelten, welche ausfallsicheren Mechanismen wie das Inactivity Leak es gibt und welche Bedingungen für „Endgültikeit“ gelten. Endgültigkeit ist die Bedingung, dass mindestens 66 % der insgesamt eingesetzten ETH im Netzwerk für einen Block gestimmt haben müssen, damit dieser als permanenter Teil der kanonischen Chain betrachtet wird. Forscher haben Casper spezifisch für Ethereum entwickelt und Ethereum ist die erste und einzige Blockchain, die es implementiert hat.
+Der Proof-of-Stake-Mechanismus von Ethereum ist in seinem Design einzigartig. Es war nicht der erste Proof-of-Stake-Mechanismus, der entworfen und implementiert wurde, aber er ist der robusteste. Der Proof-of-Stake-Mechanismus ist als „Casper“ bekannt. Casper definiert, wie Validatoren ausgewählt werden, um Blöcke vorzuschlagen, wie und wann Bestätigungen vorgenommen werden, wie Bestätigungen gezählt werden, die Belohnungen und Strafen für Validatoren, Slashing-Bedingungen, ausfallsichere Mechanismen wie das Inactivity Leak und die Bedingungen für „Finalität“. Finalität ist die Bedingung, dass ein Block, um als dauerhafter Teil der kanonischen Chain betrachtet zu werden, von mindestens 66 % der gesamten im Netzwerk eingesetzten ETH gewählt worden sein muss. Forscher haben Casper speziell für Ethereum entwickelt, und Ethereum ist die erste und einzige Blockchain, die es implementiert hat.
 
-Zusätzlich zu Casper nutzt Ethereums Proof-of-Stake einen Abspaltungs-Wahl-Algorithmus, der LMD-GHOST genannt wird. Dies ist für den Fall erforderlich, dass zwei Blöcke für denselben Slot existieren. In diesem Fall werden zwei Abspaltungen der Blockchain erstellt. LMD-GHOST wählt diejenige aus, die das größte „Gewicht“ an Attestierungen hat. Das Gewicht ist die Anzahl der Attestierungen, die anhand des Effektiguthabens der Validatoren gewichtet wird. LMD-GHOST existiert nur für Ethereum.
+Zusätzlich zu Casper verwendet das Proof-of-Stake von Ethereum einen Fork-Choice-Algorithmus namens LMD-GHOST. Dies ist erforderlich, falls eine Bedingung eintritt, bei der zwei Blöcke für denselben Slot existieren. Dadurch entstehen zwei Forks der Blockchain. LMD-GHOST wählt denjenigen aus, der das größte „Gewicht“ an Bestätigungen aufweist. Das Gewicht ist die Anzahl der Bestätigungen, gewichtet mit dem effektiven Kontostand der Validatoren. LMD-GHOST ist einzigartig für Ethereum.
 
-Die Kombination von Casper und LMD_Ghost ist als Gasper bekannt.
+Die Kombination aus Casper und LMD_GHOST ist als Gasper bekannt.
 
 [Mehr zu Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 
 ## Was ist Slashing? {#what-is-slashing}
 
-Slashing ist der gegebene Begriff für das Zerstören einiger Teile des Stakes (des Einsatzes) der Validatoren und das Entfernen des Validator aus dem Netzwerk. Die Menge an ETH, die beim Slashing verloren geht, skaliert mit der Anzahl der Validatoren, die geslasht werden – das heißt, dass illegal zusammenarbeitende Validatoren schwerer bestraft werden als einzeln Handelnde.
+Slashing ist der Begriff für die Zerstörung eines Teils des Einsatzes eines Validators und den Ausschluss des Validators aus dem Netzwerk. Die Menge an ETH, die bei einem Slashing verloren geht, skaliert mit der Anzahl der Validatoren, die geslasht werden – das bedeutet, dass kolludierende Validatoren strenger bestraft werden als Einzelpersonen.
 
 [Mehr zu Slashing](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing)
 
 ## Warum benötigen Validatoren 32 ETH? {#why-32-eth}
 
-Validatoren müssen ETH einsetzen, damit sie etwas zu verlieren haben, sollten sie sich falsch benehmen. Der Grund, warum sie genau 32 ETH einsetzen müssen, ist, dass die Nodes so auf einfacher Hardware laufen können. Wenn der minimal pro Validator eingesetzte ETH-Betrag niedriger wäre, würde sich die Anzahl an Validatoren und auch die Anzahl an Nachrichten, die in jedem Slot verarbeitet werden müssen, erhöhen. Dies würde bedeuten, dass leistungsstärkere Hardware nötig wäre, um einen Node zu betreiben.
+Validatoren müssen ETH einsetzen (Staking), damit sie etwas zu verlieren haben, wenn sie sich falsch verhalten. Der Grund, warum sie genau 32 ETH einsetzen müssen, besteht darin, es Blockchain-Knoten zu ermöglichen, auf bescheidener Hardware zu laufen. Wäre das Minimum an ETH pro Validator geringer, würde die Anzahl der Validatoren und damit die Anzahl der Nachrichten, die in jedem Slot verarbeitet werden müssen, steigen, was bedeuten würde, dass leistungsfähigere Hardware erforderlich wäre, um einen Blockchain-Knoten zu betreiben.
 
-## Wie werden die Validatoren ausgewählt? {#how-are-validators-selected}
+## Wie werden Validatoren ausgewählt? {#how-are-validators-selected}
 
-Ein einzelner Validator wird pseudo-zufällig ausgewählt, um in jedem Slot einen Block vorzuschlagen. Der dabei verwendete Algorithmus nennt sich RANDAO und mischt einen Hash vom Block-Proposer mit einem Seed, der für jeden Block aktualisiert wird. Dieser Wert wird genutzt, um einen spezifischen Validator aus dem gesamten Validatoren-Set auszuwählen. Die Auswahl des Validators wird zwei Epochen im Voraus festgelegt.
+Ein einzelner Validator wird pseudozufällig ausgewählt, um in jedem Slot einen Block vorzuschlagen, wobei ein Algorithmus namens RANDAO verwendet wird, der einen Hash vom Block-Vorschlagenden mit einem Seed mischt, der bei jedem Block aktualisiert wird. Dieser Wert wird verwendet, um einen bestimmten Validator aus der gesamten Gruppe der Validatoren auszuwählen. Die Auswahl der Validatoren wird zwei Epochen im Voraus festgelegt.
 
 [Mehr zur Auswahl von Validatoren](/developers/docs/consensus-mechanisms/pos/block-proposal)
 
-## Was ist Stake Grinding? {#what-is-stake-grinding}
+## Was ist Stake-Grinding? {#what-is-stake-grinding}
 
-Stake Grinding beschreibt eine Kategorie von Angriffen auf Proof-of-Stake-Netzwerke, bei denen der Angreifer versucht, den Auswahlalgorithmus für Validatoren zu Gunsten seiner eigenen Validatoren zu beeinflussen. Für diese Angriffe auf RANDAO ist ungefähr die Hälfte der insgesamt eingesetzten ETH erforderlich.
+Stake-Grinding ist eine Kategorie von Angriffen auf Proof-of-Stake-Netzwerke, bei denen der Angreifer versucht, den Algorithmus zur Auswahl der Validatoren zugunsten seiner eigenen Validatoren zu beeinflussen. Stake-Grinding-Angriffe auf RANDAO erfordern etwa die Hälfte der gesamten eingesetzten ETH.
 
-[Mehr zu Stake Grinding](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
+[Mehr zu Stake-Grinding](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
 
-## Was ist soziales Slashing? {#what-is-social-slashing}
+## Was ist Social Slashing? {#what-is-social-slashing}
 
-Soziales Slashing beschreibt die Fähigkeit der Community, als Antwort auf einen Angriff eine Abspaltung der Blockchain zu bewirken. Es ermöglicht der Community, sich von einem Angriff, bei dem eine unehrliche Chain finalisiert wurde, zu erholen. Soziales Slashing kann auch als Verteidigung gegen Zensurangriffe zur Anwendung kommen.
+Social Slashing ist die Fähigkeit der Community, als Reaktion auf einen Angriff einen Fork der Blockchain zu koordinieren. Es ermöglicht der Community, sich davon zu erholen, wenn ein Angreifer eine unehrliche Chain finalisiert. Social Slashing kann auch gegen Zensurangriffe eingesetzt werden.
 
-- [Mehr zum sozialen Slashing](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin zum sozialen Slashing](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Mehr zu Social Slashing](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
+- [Vitalik Buterin über Social Slashing](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## Werde ich geslasht? {#will-i-get-slashed}
 
-Als Validator ist es sehr schwierig, geslasht zu werden, außer Sie verhalten sich absichtlich auf bösartige Weise. Slashing wird nur in sehr spezifischen Szenarios implementiert, bei denen Validatoren mehrere Blöcke für denselben Slot vorschlagen oder sich bei ihren Attestierungen widersprechen. Es ist sehr unwahrscheinlich, dass diese Fälle zufällig auftreten.
+Als Validator ist es sehr schwierig, geslasht zu werden, es sei denn, man legt absichtlich ein bösartiges Verhalten an den Tag. Slashing wird nur in sehr spezifischen Szenarien implementiert, in denen Validatoren mehrere Blöcke für denselben Slot vorschlagen oder sich mit ihren Bestätigungen selbst widersprechen – es ist sehr unwahrscheinlich, dass dies versehentlich geschieht.
 
-[Mehr zu den Bedingungen für Slashing](https://eth2book.info/altair/part2/incentives/slashing)
+[Mehr zu Slashing-Bedingungen](https://eth2book.info/altair/part2/incentives/slashing)
 
-## Was ist das „Nothing-at-Stake“-Problem? {#what-is-nothing-at-stake-problem}
+## Was ist das Nothing-at-Stake-Problem? {#what-is-nothing-at-stake-problem}
 
-Das Nothing-at-Stake(„nichts zu verlieren“)-Problem ist ein konzeptionelles Problem mit einigen Proof-of-Stake-Mechanismen, bei denen es nur Belohnungen und keine Bestrafungen gibt. Wenn es nichts zu verlieren gibt, ist ein pragmatischer Validierer auch gerne bereit, jede oder sogar mehrere Abspaltungen der Blockchain zu attestieren, da die seine Belohnungen vermehrt. Ethereum umgeht dies, indem es Endgültigkeitsbedingungen und Slashing nutzt, um sicherzugehen, dass es eine kanonische Chain gibt.
+Das Nothing-at-Stake-Problem ist ein konzeptionelles Problem bei einigen Proof-of-Stake-Mechanismen, bei denen es nur Belohnungen und keine Strafen gibt. Wenn nichts auf dem Spiel steht (Einsatz), ist ein pragmatischer Validator gleichermaßen bereit, jeden oder sogar mehrere Forks der Blockchain zu bestätigen, da dies seine Belohnungen erhöht. Ethereum umgeht dies durch die Verwendung von Finalitätsbedingungen und Slashing, um eine einzige kanonische Chain sicherzustellen.
 
 [Mehr zum Nothing-at-Stake-Problem](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
-## Was ist ein Abspaltungs-Wahl-Algorithmus? {#what-is-a-fork-choice-algorithm}
+## Was ist ein Fork-Choice-Algorithmus? {#what-is-a-fork-choice-algorithm}
 
-Ein Abspaltungs-Wahl-Algorithmus implementiert Regeln, mit denen festgelegt wird, welche Chain die kanonische ist. Unter optimalen Bedingungen bedarf es keiner Abspaltungs-Wahl-Regel, da es nur einen Block-Proposer pro Slot gibt und nur einen Block, der ausgewählt werden kann. Gelegentlich führen jedoch mehrere Blöcke für denselben Slot oder spät eintreffende Informationen dazu, dass es mehrere Optionen dafür gibt, wie Blöcke in der Nähe der Chain-Spitze organisiert sind. In diesen Fällen müssen alle Clients einige identische Regeln implementieren, um sicherzustellen, dass sie alle die richtige Blockreihenfolge auswählen. Der Abspaltungs-Wahl-Algorithmus kodiert diese Regeln.
+Ein Fork-Choice-Algorithmus implementiert Regeln, die bestimmen, welche Chain die kanonische ist. Unter optimalen Bedingungen besteht keine Notwendigkeit für eine Fork-Choice-Regel, da es nur einen Block-Vorschlagenden pro Slot und einen Block zur Auswahl gibt. Gelegentlich führen jedoch mehrere Blöcke für denselben Slot oder spät eintreffende Informationen zu mehreren Optionen dafür, wie Blöcke nahe der Spitze der Chain organisiert sind. In diesen Fällen müssen alle Anwendungen einige Regeln identisch implementieren, um sicherzustellen, dass sie alle die richtige Abfolge von Blöcken auswählen. Der Fork-Choice-Algorithmus kodiert diese Regeln.
 
-Ethereums Abspaltungs-Wahl-Algorithmus heißt LMD-GHOST. Es wählt die Abspaltung mit dem größten Gewicht an Attestierungen, d. h. die Abspaltung, für die die meisten eingesetzten ETH gestimmt haben.
+Der Fork-Choice-Algorithmus von Ethereum heißt LMD-GHOST. Er wählt den Fork mit dem größten Gewicht an Bestätigungen, also denjenigen, für den die meisten eingesetzten ETH gestimmt haben.
 
 [Mehr zu LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper/#fork-choice)
 
-## Was ist Endgültigkeit bei Proof-of-Stake? {#what-is-finality}
+## Was ist Finalität bei Proof-of-Stake? {#what-is-finality}
 
-Endgültigkeit bei Proof-of-Stake ist die Garantie, dass ein gegebener Block ein permanenter Teil der kanonischen Chain ist und nicht rückgängig gemacht werden kann, außer es kommt zu einem Konsensversagen, bei dem ein Angreifer 33 % der insgesamt eingesetzten Ether verbrennt. Das ist „krypto-ökonomische“ Endgültigkeit, im Gegensatz zur „probabilistischer Endgültigkeit“, die für Proof-of-Work-Blockchains relevant ist. Bei der probabilistischen Endgültigkeit gibt es keine expliziten finalisierten oder nicht finalisierten Zustände für die Blöcke – es wird lediglich immer weniger wahrscheinlich, dass ein Block aus der Chain entfernt werden könnte, je älter er wird. Außerdem bestimmen die Benutzer für sich selbst, wann sie überzeugt genug sind, dass ein Block „sicher“ ist. Bei krypto-ökonomischer Endgültigkeit müssen Paare von Checkpoint-Blöcken von 66 % der eingesetzten Ether gewählt werden. Wenn diese Bedingung erfüllt ist, werden Blöcke zwischen diesen Checkpoints explizit „finalisiert“.
+Finalität bei Proof-of-Stake ist die Garantie, dass ein bestimmter Block ein dauerhafter Teil der kanonischen Chain ist und nicht rückgängig gemacht werden kann, es sei denn, es liegt ein Konsensfehler vor, bei dem ein Angreifer 33 % der gesamten eingesetzten Ether verbrennt. Dies ist eine „kryptoökonomische“ Finalität im Gegensatz zur „probabilistischen Finalität“, die für Proof-of-Work-Blockchains relevant ist. Bei der probabilistischen Finalität gibt es keine expliziten finalisierten/nicht-finalisierten Zustände für Blöcke – es wird einfach immer unwahrscheinlicher, dass ein Block aus der Chain entfernt werden könnte, je älter er wird, und die Benutzer entscheiden selbst, wann sie ausreichend zuversichtlich sind, dass ein Block „sicher“ ist. Bei der kryptoökonomischen Finalität müssen Paare von Checkpoint-Blöcken von 66 % der eingesetzten Ether gewählt werden. Wenn diese Bedingung erfüllt ist, werden Blöcke zwischen diesen Checkpoints explizit „finalisiert“.
 
-[Mehr zur Endgültigkeit](/developers/docs/consensus-mechanisms/pos/#finality)
+[Mehr zu Finalität](/developers/docs/consensus-mechanisms/pos/#finality)
 
-## Was ist „schwache Subjektivität“? {#what-is-weak-subjectivity}
+## Was ist „schwache Subjektivität“ (Weak Subjectivity)? {#what-is-weak-subjectivity}
 
-Schwache Subjektivität ist eine Funktion des Proof-of-Stake-Netzwerks, bei der soziale Informationen genutzt werden, um den derzeitigen Zustand der Blockchain zu bestätigen. Neuen Nodes oder Nodes, die das Netzwerk wieder betreten, nachdem sie für eine längere Zeit offline waren, kann ein aktueller Zustand gegeben werden. Auf diese Weise kann der Node direkt sehen, ob er sich auf der korrekten Chain befindet. Diese Zustände sind bekannt als „Checkpoints von schwacher Subjektivität“ und sie können von anderen Node-Operatoren außerhalb des Bands, von Block-Explorern oder von mehreren öffentliche Endpunkten erhalten werden.
+Schwache Subjektivität ist ein Merkmal von Proof-of-Stake-Netzwerken, bei dem soziale Informationen verwendet werden, um den aktuellen Zustand der Blockchain zu bestätigen. Neuen Blockchain-Knoten oder Blockchain-Knoten, die dem Netzwerk nach langer Offline-Zeit wieder beitreten, kann ein aktueller Zustand übergeben werden, sodass der Blockchain-Knoten sofort erkennen kann, ob er sich auf der richtigen Chain befindet. Diese Zustände sind als „Weak Subjectivity Checkpoints“ bekannt und können von anderen Betreibern von Blockchain-Knoten Out-of-Band, von Blocksuchmaschinen oder von verschiedenen öffentlichen Endpunkten bezogen werden.
 
 [Mehr zu schwacher Subjektivität](/developers/docs/consensus-mechanisms/pos/weak-subjectivity)
 
 ## Ist Proof-of-Stake zensurresistent? {#is-pos-censorship-resistant}
 
-Zensurresistenz ist im Moment schwer zu beweisen. Jedoch bietet Proof-of-Stake anders als Proof-of-Work die Option, Slashings zu koordinieren, sodass zensierende Validatoren bestraft werden können. Es stehen Änderungen an den Protokollen an, die Blockersteller von Block-Proposern trennen und Listen von Transaktionen einführen, die Ersteller in jeden Block mit aufnehmen müssen. Dieser Vorschlag wird als „richtige-Ersteller-Separierung“ bezeichnet und hilft dabei, Validatoren daran zu hindern, Transaktionen zu zensieren.
+Zensurresistenz ist derzeit schwer zu beweisen. Im Gegensatz zu Proof-of-Work bietet Proof-of-Stake jedoch die Möglichkeit, Slashings zu koordinieren, um zensierende Validatoren zu bestrafen. Es stehen Änderungen am Protokoll an, die Block-Ersteller von Block-Vorschlagenden trennen und Listen von Transaktionen implementieren, die Ersteller in jeden Block aufnehmen müssen. Dieser Vorschlag ist als Proposer-Builder Separation bekannt und hilft zu verhindern, dass Validatoren Transaktionen zensieren.
 
-[Mehr zur Proposer-Ersteller-Separierung](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
+[Mehr zur Proposer-Builder Separation](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
 
-## Ist Ethereums Proof-of-Stake-System anfällig für einen 51 %-Angriff? {#pos-51-attack}
+## Kann das Proof-of-Stake-System von Ethereum durch einen 51-%-Angriff attackiert werden? {#pos-51-attack}
 
-Ja. Proof-of-Stake ist genauso wie Proof-of-Work anfällig für 51 %-Angriffe. Anstatt 51 % der Hash-Leistung eines Netzwerks benötigt ein Angreifer 51 % der insgesamt eingesetzten ETH. Ein Angreifer, der 51 % des gesamten Stakes ansammelt, erhält die Kontrolle über den Abspaltungs-Wahl-Algorithmus. Dies ermöglicht es dem Angreifer, bestimmte Transaktionen zu zensieren, Kurzstrecken-Neuorganisationen durchzuführen und MEV zu extrahieren, indem er Blöcke zu seinen Gunsten neu anordnet.
+Ja. Proof-of-Stake ist anfällig für 51-%-Angriffe, genau wie Proof-of-Work. Anstatt dass der Angreifer 51 % der Hash-Leistung des Netzwerks benötigt, benötigt der Angreifer 51 % der gesamten eingesetzten ETH. Ein Angreifer, der 51 % des gesamten Einsatzes ansammelt, erlangt die Kontrolle über den Fork-Choice-Algorithmus. Dies ermöglicht es dem Angreifer, bestimmte Transaktionen zu zensieren, kurzfristige Reorganisationen durchzuführen und MEV zu extrahieren, indem er Blöcke zu seinen Gunsten neu anordnet.
 
 [Mehr zu Angriffen auf Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 
 ## Was ist soziale Koordination und warum wird sie benötigt? {#what-is-social-coordination}
 
-Soziale Koordination ist die letzte Verteidigungslinie auf Ethereum, mit der es möglich wäre, eine ehrliche Chain wiederherzustellen, die einem Angriff zum Opfer gefallen ist, bei dem unehrliche Blöcke finalisiert wurden. In diesem Fall müsste sich die Ethereum-Community „außerhalb des Bands“ koordinieren und sich darauf einigen, eine ehrliche Minderheitsabspaltung zu nutzen und dabei die Validatoren des Angreifers mit Slashing zu bestrafen. Dies würde voraussetzen, dass auch Anwendungen und Börsen die ehrliche Abspaltung anerkennen.
+Soziale Koordination ist eine letzte Verteidigungslinie für Ethereum, die es ermöglichen würde, eine ehrliche Chain von einem Angriff zu erholen, der unehrliche Blöcke finalisiert hat. In diesem Fall müsste sich die Ethereum-Community „Out-of-Band“ koordinieren und sich darauf einigen, einen ehrlichen Minderheits-Fork zu verwenden, wobei die Validatoren des Angreifers im Zuge dessen geslasht werden. Dies würde erfordern, dass auch Apps und Börsen den ehrlichen Fork anerkennen.
 
-[Lesen Sie mehr zu sozialer Koordination](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
+[Mehr zur sozialen Koordination lesen](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
 
-## Werden die Reichen durch Proof-of-Stake noch reicher? {#do-rich-get-richer}
+## Werden die Reichen bei Proof-of-Stake reicher? {#do-rich-get-richer}
 
-Je mehr ETH jemand einsetzt, desto mehr Validatoren kann derjenige betreiben und desto mehr Belohnungen können für ihn anfallen. Die Belohnung skaliert linear mit der Menge an eingesetzten ETH und jeder bekommt denselben prozentualen Ertrag. Proof-of-Work bereichert die Reichen mehr als Proof-of-Stake, weil reichere Miner, die Hardware in großem Umfang kaufen, von Skaleneffekten profitieren. Das bedeutet, dass die Beziehung zwischen Reichtum und Belohnung nicht linear ist.
+Je mehr ETH jemand für das Staking hat, desto mehr Validatoren kann er betreiben und desto mehr Belohnungen kann er ansammeln. Die Belohnungen skalieren linear mit der Menge der eingesetzten ETH, und jeder erhält die gleiche prozentuale Rendite. Proof-of-Work bereichert die Reichen mehr als Proof-of-Stake, da reichere Miner, die Hardware in großem Maßstab kaufen, von Skaleneffekten profitieren, was bedeutet, dass die Beziehung zwischen Reichtum und Belohnung nicht linear ist.
 
 ## Ist Proof-of-Stake zentralisierter als Proof-of-Work? {#is-pos-decentralized}
 
-Nein, Proof-of-Work tendiert stärker zur Zentralisierung, weil die Mining-Kosten steigen und Einzelpersonen und dann kleine Unternehmen verdrängen, und so weiter. Das derzeitige Problem mit Proof-of-Stake ist der Einfluss von Liquid Staking Derivatives (LSDs). Dabei handelt es sich um Token, die ETH repräsentieren und von einem Anbieter eingesetzt wurden. Diese können von jeder Person auf Sekundärmärkten getauscht werden, ohne dass die eigentlichen ETH entwertet werden. LSDs erlauben es Nutzern, weniger als 32 ETH einzusetzen. Sie erzeugen jedoch auch ein Zentralisierungsrisiko, bei dem einige wenige große Organisationen einen Großteil des Stakes kontrollieren. Aus diesem Grund ist [Solo-Staking](/staking/solo) die beste Option für Ethereum.
+Nein, Proof-of-Work tendiert zur Zentralisierung, da die Mining-Kosten steigen und Einzelpersonen, dann kleine Unternehmen und so weiter vom Markt verdrängen. Das aktuelle Problem bei Proof-of-Stake ist der Einfluss von Liquid Staking Derivatives (LSDs). Dies sind Token, die von einem Anbieter eingesetzte ETH repräsentieren und die jeder auf Sekundärmärkten tauschen kann, ohne dass das eigentliche ETH-Staking beendet wird. LSDs ermöglichen es Benutzern, mit weniger als 32 ETH am Staking teilzunehmen, aber sie schaffen auch ein Zentralisierungsrisiko, bei dem einige wenige große Organisationen am Ende einen Großteil des Einsatzes kontrollieren können. Aus diesem Grund ist [Solo-Staking](/staking/solo) die beste Option für Ethereum.
 
-[Mehr zur Stake-Zentralisierung in LSDs](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+[Mehr zur Zentralisierung von Einsätzen bei LSDs](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
-## Warum kann ich nur ETH einsetzen? {#why-can-i-only-stake-eth}
+## Warum kann ich nur ETH für das Staking verwenden? {#why-can-i-only-stake-eth}
 
-ETH ist die Währung von Ethereum. Eine einheitliche Währung, auf die alle Stakes lauten, ist sowohl für die Buchhaltung von Effektivguthaben als auch für die Stimmengewichtung und die Sicherheit unerlässlich. ETH selbst sind eher ein fundamentaler Bestandteil von Ethereum als ein Smart Contract. Die Einbeziehung anderer Währungen würde die Komplexität deutlich erhöhen und die Sicherheit des Stakings verringern.
+ETH ist die native Währung von Ethereum. Es ist unerlässlich, eine einzige Währung zu haben, in der alle Einsätze denominiert sind, sowohl für die Bilanzierung effektiver Kontostände zur Gewichtung von Stimmen als auch für die Sicherheit. ETH selbst ist eine grundlegende Komponente von Ethereum und kein Smart Contract. Die Einbeziehung anderer Währungen würde die Komplexität erheblich erhöhen und die Sicherheit des Stakings verringern.
 
 ## Ist Ethereum die einzige Proof-of-Stake-Blockchain? {#is-ethereum-the-only-pos-blockchain}
 
-Nein, es gibt mehrere Proof-of-Stake-Blockchains. Keiner ist identisch mit Ethereum; der Proof-of-Stake-Mechanismus von Ethereum ist einzigartig.
+Nein, es gibt mehrere Proof-of-Stake-Blockchains. Keine ist identisch mit Ethereum; der Proof-of-Stake-Mechanismus von Ethereum ist einzigartig.
 
 ## Was ist The Merge? {#what-is-the-merge}
 
-The Merge war der Moment, als für Ethereum der auf Proof-of-Work basierende Konsensmechanismus abgeschaltet und der auf Proof-of-Stake basierende Konsensmechanismus eingeschaltet wurde. The Merge wurde am 15. September 2022 durchgeführt.
+The Merge war der Moment, in dem Ethereum seinen auf Proof-of-Work basierenden Konsensmechanismus abschaltete und seinen auf Proof-of-Stake basierenden Konsensmechanismus einschaltete. The Merge fand am 15. September 2022 statt.
 
-[Mehr zum Zusammenschluss](/roadmap/merge)
+[Mehr zu The Merge](/roadmap/merge)
 
-## Was sind Liveness und Sicherheit? {#what-are-liveness-and-safety}
+## Was sind Lebendigkeit (Liveness) und Sicherheit (Safety)? {#what-are-liveness-and-safety}
 
-Liveness und Sicherheit sind die beiden fundamentalen Sicherheitsbedenken einer Blockchain. Liveness ist die Verfügbarkeit einer finalisierenden Chain. Wenn die Chain aufhört, sich zu finalisieren, oder Benutzer nicht mehr einfach auf sie zugreifen können, heißt das Livesness-Versagen. Extrem hohe Zugangskosten könnten auch als Livesness-Versagen bezeichnet werden. Die Sicherheit beschreibt, wie schwer es ist, die Chain anzugreifen – d.h. widersprüchliche Checkpoints zu finalisieren.
+Lebendigkeit und Sicherheit sind die beiden grundlegenden Sicherheitsaspekte für eine Blockchain. Lebendigkeit ist die Verfügbarkeit einer finalisierenden Chain. Wenn die Chain aufhört zu finalisieren oder Benutzer nicht einfach darauf zugreifen können, handelt es sich um Lebendigkeitsausfälle. Extrem hohe Zugangskosten könnten ebenfalls als Lebendigkeitsausfall betrachtet werden. Sicherheit bezieht sich darauf, wie schwierig es ist, die Chain anzugreifen – d. h. widersprüchliche Checkpoints zu finalisieren.
 
-[Lesen sie mehr dazu im Casper-Artikel](https://arxiv.org/pdf/1710.09437.pdf)
+[Mehr dazu im Casper-Paper lesen](https://arxiv.org/pdf/1710.09437.pdf)
