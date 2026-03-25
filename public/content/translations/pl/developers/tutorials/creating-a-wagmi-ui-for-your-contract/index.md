@@ -143,7 +143,7 @@ Zgodnie z konwencją, w React funkcje o nazwie `use...` są [hookami](https://ww
     <>
 ```
 
-JSX komponentu React _musi_ zwrócić jeden komponent. Gdy mamy wiele komponentów i nie mamy niczego, co "naturalnie" je opakowuje, używamy pustego komponentu (`` `<> ... </>` ``), aby uczynić je pojedynczym komponentem.
+JSX komponentu React _musi_ zwrócić jeden komponent. Gdy mamy wiele komponentów i nie mamy niczego, co "naturalnie" je opakowuje, używamy pustego komponentu (`<> ... </>`), aby uczynić je pojedynczym komponentem.
 
 ```tsx
       <h1>Greeter</h1>
@@ -158,7 +158,7 @@ Komponent [`ConnectButton`](https://www.rainbowkit.com/docs/connect-button) otrz
 
 Gdy musimy wstawić rzeczywisty JavaScript (lub TypeScript, który zostanie skompilowany do JavaScriptu) do JSX, używamy nawiasów (`{}`).
 
-Składnia `a && b` jest skrótem od [`a ? b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Oznacza to, że jeśli `a` jest prawdziwe, wynikiem jest `b`, a w przeciwnym razie wynikiem jest `a` (które może być `false`, `0` itp.). Jest to łatwy sposób, aby powiedzieć React, że komponent powinien być wyświetlany tylko wtedy, gdy spełniony jest określony warunek.
+Składnia `a && b` jest skrótem od [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Oznacza to, że jeśli `a`jest prawdziwe, wynikiem jest`b`, a w przeciwnym razie wynikiem jest `a`(które może być`false`, `0` itp.). Jest to łatwy sposób, aby powiedzieć React, że komponent powinien być wyświetlany tylko wtedy, gdy spełniony jest określony warunek.
 
 W tym przypadku chcemy pokazać użytkownikowi `Greeter` tylko wtedy, gdy użytkownik jest połączony z blockchainem.
 

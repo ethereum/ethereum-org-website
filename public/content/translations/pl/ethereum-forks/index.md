@@ -471,7 +471,7 @@ Fork Constantinople:
 <ExpandableCard title="EIP-y Constantinople" contentPreview="Oficjalne ulepszenia zawarte w tym forku.">
 
 <ul>
- <li></em><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> - <em>Optymalizuje koszt pewnych działań na łańcuchu. </li>
+ <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> - <em>Optymalizuje koszt pewnych działań na łańcuchu. </em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> — <em>umożliwia interakcję z adresami, które nie zostały jeszcze utworzone.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> - <em>Wprowadza <code>EXTCODEHASH</code> instrukcje do uzyskania haszu z kodu innego kontraktu.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>zapewnia, że blockchain nie zamarznie przed proof-of-stake i zmniejsza nagrodę za blok z 3 do 2 ETH.</em></li>
