@@ -8,15 +8,15 @@ summaryPoint1: Pokea motisha za kifedha ili kutoa utabiri sahihi
 summaryPoint2: Utabiri wa hali ya juu kuhusu yajayo
 buttons:
   - content: Jifunze zaidi
-    toId: jinsi utabiri wa masoko
+    toId: how-prediction-markets-work
   - content: Programu za kuchunguza
-    toId: tafuta utabiri wa soko
+    toId: find-a-prediction-market
     isSecondary: false
 ---
 
 Utabiri wa masoko hutumia ujuzi na faida za kifedha wa umati kwa matukio yajayo. Wao hutoa taarifa mbalimbali za hali ya juu na walipata umaarufu Marekani 2024. chaguzi.
 
-## {#how-prediction-markets-work}
+## Jinsi masoko ya utabiri yanavyofanya kazi {#how-prediction-markets-work}
 
 Tofauti na mbinu za kitamaduni za utabiri zinazotegemea maoni ya wataalamu, sampuli ndogo za utafiti au data ya kihistoria, soko la utabiri hutumia fursa za kifedha za wakati halisi na hekima ya umma kutoa utabiri kuhusu tukio fulani kama vile uchaguzi, bei za fedha za kidijitali, matokeo ya michezo miongoni mwa mambo mengine
 
@@ -25,7 +25,7 @@ Kwa kuwezesha kamari kuhusu matukio ya ulimwengu halisi na kurekebisha bei kadri
 
 Kiurahisi, sababu wanaokamari wanaweza kufaidi kwa kuwa sahihi, soko la utabiri linaweza kutabiri matokeo kwa usahihi mkubwa. Soko la utabiri lililojengwa juu ya Blockchain linaonyesha mwonekano zaidi mwenye kusisimua, kwa sababu karibu mtu yeyote anaweza kushiriki katika utabiri na kupokea malipo ya sarafu thabiti au fedha za kidijitali.
 
-## Kwanini hili ni la muhimu? {#kwanini-hili-ni-la-muhimu?}
+## Kwanini hili ni la muhimu? {#why-does-this-matter}
 
 Tofauti na utabiri wa kienyeji masoko ya utabiri hutumia teknolojia ya mnyororo wa vizuizi ni:
 
@@ -71,15 +71,13 @@ Masoko ya utabiri kwenye mnyororo wa vizuizi hupata vikwazo athiri haki, kisheri
 
 Ili kupunguza matatizo haya, watengenezaji wa Ethereum wanafanya majaribio kwa suluhisho kama (utawala kwa masharti ya masoko ya utabiri) na uthibitishaji wa utambulisho usio na makao makuu.
 
-Kufanya majaribio na utabiri wa masoko
-{#experimenting-with-prediction-markets}
-----------------------------------------
+## Kufanya majaribio na utabiri wa masoko {#experimenting-with-prediction-markets}
 
 Utabiri masoko umeleta mageuzi wa maamuzi kwenye wakati wa enzi ya kisasa. Kwa kutumia uwezo wa Ethereum, wao hutoa **njia za haki, wazi, na zenye malipo ya kutabiri mustakabali.**
 
 Kuna njia nyingi za kutumia zana za utabiri nje ya kupata faida ya kifedha. Kwa mfano, katika DevCon Improvement Proposal (DIP) ilipendekezwa kwamba waandaaji wa DevCon watumie masoko ya utabiri (prediction markets) ili kutarajia idadi ya mahudhurio ya matukio yao ya baadaye.
 
-ii ingesaidia waandaaji kubaini ni eneo gani lingesababisha tukio lenye mahudhurio makubwa zaidi, ikilinganishwa na eneo gani lingekuwa na nafasi kubwa zaidi ya kufikiwa kimataifa. Aida za haya humaanisha kwamba waandaaji wa DevCon wanaweza kuharakisha muda unaohitajika kuchuja sera nyingi za visa, upatikanaji wa uwanja wa ndege, na gharama ya maisha katika eneo hilo, huku wakikusanya data kuhusu maeneo ambayo walio na uwezekano wa kuhudhuria wangependa kwenda.
+Hii ingesaidia waandaaji kubaini ni eneo gani lingesababisha tukio lenye mahudhurio makubwa zaidi, ikilinganishwa na eneo gani lingekuwa na nafasi kubwa zaidi ya kufikiwa kimataifa. Aida za haya humaanisha kwamba waandaaji wa DevCon wanaweza kuharakisha muda unaohitajika kuchuja sera nyingi za visa, upatikanaji wa uwanja wa ndege, na gharama ya maisha katika eneo hilo, huku wakikusanya data kuhusu maeneo ambayo walio na uwezekano wa kuhudhuria wangependa kwenda.
 
 ## Masomo zaidi {#further-reading}
 

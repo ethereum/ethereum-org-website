@@ -67,7 +67,7 @@ Labda wewe ni msanii amabaye angependa kushiriki kazi yake kupitia NFT bila wewe
 
 Ama zingatia tiketi ya tukio ya mechi ijayo. Kama vile **mratibu wa tukio anavyoweza kuchagua ni tiketi ngapi za kuuza**, muumbaji wa NFT anaweza kuamua ni nakala ngapi zitakuwepo. Wakati mwingine huwa na nakala za ziada, kama vile Tiketi 5000 za Kiingilio cha Jumla. Wakati mwingine nyingine zinachapishwa zinazofanana, ila kila moja ina tofauti ndogo na yenzake, kama vile tiketi yeneye nambari ya kiti. Hizi zinaweza kununuliwa na kuuzwa kutoka kwa mshirika mmoja mpaka kwa mwingine kusipokuwepo na ulipaji wa washikaji tiketi na wanunuzi watakuwa na uhakika wa tiketi halisi kwa kuangalia anwani ya mkataba huo.
 
-Katika ethereum.org, **NFTs hutumika kuonyesha kwamba watu wamechangia kwa dhati** kwenye hazina yetu ya Github (wamepanga tovuti, wameandika au kurekebisha makala...), wametafsiri maudhui yetu, au wamehudhuria simu zetu za jumuiya, na hata tuna jina letu la kikoa la NFT. Ukichangia ethereum.org, unaweza kudai [POAP](/glossary/#poap) NFT. Mikutano mingine ya sarafu za kidijitali imetumia POAPs kama tiketi. [Zaidi kuhusu kuchangia](/contributing/#poap).
+Katika ethereum.org, **NFTs hutumika kuonyesha kwamba watu wamechangia kwa dhati** kwenye hazina yetu ya GitHub (wamepanga tovuti, wameandika au kurekebisha makala...), wametafsiri maudhui yetu, au wamehudhuria simu zetu za jumuiya, na hata tuna jina letu la kikoa la NFT. Ukichangia ethereum.org, unaweza kudai [POAP](/glossary/#poap) NFT. Mikutano mingine ya sarafu za kidijitali imetumia POAPs kama tiketi. [Zaidi kuhusu kuchangia](/contributing/#poap).
 
 ![POAP za ethereum.org](./poap.png)
 

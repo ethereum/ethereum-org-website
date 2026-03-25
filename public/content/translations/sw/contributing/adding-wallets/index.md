@@ -60,7 +60,7 @@ Pochi za kidijitali hubadilika kwa haraka sana kwenye Ethereum. ''Tumejaribu kuu
 
 ## Kuongeza mkoba {#adding-a-wallet}
 
-Kama unataka kuongeza pochi kwenye ethereum.org, tengeneza suala kwenye Github.
+Kama unataka kuongeza pochi kwenye ethereum.org, tengeneza suala kwenye GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Unda suala

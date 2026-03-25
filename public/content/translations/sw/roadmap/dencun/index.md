@@ -59,7 +59,7 @@ Ni muhimu kutambua kwamba urejeshaji wa hali ya kihistoria unafanya kazi kwa mfu
 
 ## Sasisha hii inachangiaje katika mkakati mpana wa maendeleo ya Ethereum? {#roadmap-impact}
 
-Proto-Danksharding inaandaa jukwaa la utekelezaji kamili wa [Danksharding].(/roadmap/danksharding/). Danksharding imebuniwa kusambaza ghala la data ya unda-mpya kwa waendeshaji wa nodi, ili kila mwendeshaji ahitaji kushughulikia sehemu ndogo tu ya data yote. Usambazaji huu utaongeza idadi ya 'blobs' za data kwa kila bloku, jambo ambalo ni muhimu kwa kupanua uwezo wa Ethereum ili kuhudumia watumiaji na miamala mingi zaidi.
+[Proto-Danksharding inaandaa jukwaa la utekelezaji kamili wa [Danksharding].](/roadmap/danksharding/). Danksharding imebuniwa kusambaza ghala la data ya unda-mpya kwa waendeshaji wa nodi, ili kila mwendeshaji ahitaji kushughulikia sehemu ndogo tu ya data yote. Usambazaji huu utaongeza idadi ya 'blobs' za data kwa kila bloku, jambo ambalo ni muhimu kwa kupanua uwezo wa Ethereum ili kuhudumia watumiaji na miamala mingi zaidi.
 
 Uwezo huu wa kupanuka ni muhimu ili [kuhudumia mabilioni ya watumiaji kwenye Ethereum](/roadmap/scaling/) kwa ada nafuu na programu za hali ya juu zaidi, huku ukidumisha mtandao uliogatuliwa. Bila mabadiliko haya, mahitaji ya maunzi kwa waendeshaji nodi yangeongezeka, na kusababisha hitaji la vifaa vya gharama kubwa zaidi. Hii inaweza kuwaondoa waendeshaji wadogo sokoni, na kusababisha udhibiti wa mtandao kujilimbikizia kwa waendeshaji wachache wakubwa, jambo ambalo lingeenda kinyume na kanuni ya ugatuzi.
 

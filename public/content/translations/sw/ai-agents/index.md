@@ -13,9 +13,9 @@ summaryPoint2: Hudhibiti pochi na fedha zilizo kwenye mnyororo
 summaryPoint3: Huajiri watu au mawakala wengine kwa kazi
 buttons:
   - content: Mawakala wa AI ni nini?
-    toId: mawakala wa-ai-ni-nini
+    toId: what-are-ai-agents
   - content: Chunguza mawakala
-    toId: ai-mawakala-katika-ethereum
+    toId: ai-agents-on-ethereum
     isSecondary: false
 ---
 

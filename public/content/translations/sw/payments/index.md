@@ -28,7 +28,7 @@ Hii si ndoto ya mbali—inafanyika leo kwenye Ethereum. Wakati taasisi za jadi z
 Kwa mamilioni ya watu wanaofanya kazi nje ya nchi, kutuma pesa nyumbani ni hitaji la mara kwa mara. Huduma za kawaida za utumaji pesa mara nyingi huambatana na ada za juu na muda mrefu wa kushughulikiwa. Ethereum inatoa mbadala unaovutia.
 
 <CardGrid>
-  <Card title="Ada Nafuu" emoji=":money_with_wings:" description="Huduma za kutuma pesa hutoza ada hadi description=4 kwa wastani. Miamala ya Ethereum mara nyingi inaweza kukamilika kwa chini ya $0.01."/>
+  <Card title="Ada Nafuu" emoji=":money_with_wings:" description="Huduma za kutuma pesa hutoza ada hadi $14 kwa wastani. Miamala ya Ethereum mara nyingi inaweza kukamilika kwa chini ya $0.01."/>
   <Card title="Uhamisho wa Haraka" emoji="📶" description="Uhamisho wa kimataifa wa benki huchukua siku kadhaa kuchakatwa. Miamala ya Ethereum hukamilika kwa dakika chache." />
   <Card title="Wazi kwa Yeyote" emoji="🌎" description="Unahitaji tu muunganisho wa intaneti na programu ya mkoba ili kutuma au kupokea Ether." />
 </CardGrid>
@@ -62,7 +62,7 @@ Katika nchi ambazo njia zao za malipo hazipo ulimwenguni kote, suluhisho za mali
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Fungua akaunti yako ya Ethereum na programu ya mkoba wa kidijitali leo.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
 Anza sasa
 </ButtonLink>
 </AlertContent>

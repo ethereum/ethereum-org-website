@@ -3,7 +3,7 @@ title: "Mkataba wa ERC-20: Maelezo ya Kina"
 description: Kuna nini katika mkataba wa OpenZeppelin ERC-20 na kwa nini kipo hapo?
 author: Ori Pomerantz
 lang: sw
-tags: [ "uimara", "erc-20" ]
+tags: [ "Solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---

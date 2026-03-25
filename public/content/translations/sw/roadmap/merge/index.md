@@ -119,7 +119,7 @@ Muungano pia uliweka msingi kwa masasisho zaidi ya uongezaji yasiyowezekana chin
 ## Dhana potofu kuhusu Muungano {#misconceptions}
 
 <ExpandableCard
-title="Dhana potofu: "Kuendesha nodi kunahitaji kushikiza ETH 32.""
+title="Dhana potofu: &quot;Kuendesha nodi kunahitaji kushikiza ETH 32.&quot;"
 contentPreview="Si kweli. Mtu yeyote yuko huru kusawazisha nakala yake mwenyewe iliyothibitishwa ya Ethereum (yaani, kuendesha nodi). Hakuna ETH inayohitajika—si kabla ya Muungano, si baada ya Muungano, kamwe.">
 
 Kuna aina mbili za nodi za Ethereum: nodi zinazoweza kupendekeza bloku na nodi ambazo haziwezi.
@@ -136,7 +136,7 @@ Uwezo wa mtu yeyote kuendesha nodi yake mwenyewe ni <em>muhimu kabisa</em> katik
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: "Muungano ulishindwa kupunguza ada za gesi.""
+title="Dhana potofu: &quot;Muungano ulishindwa kupunguza ada za gesi.&quot;"
 contentPreview="Si kweli. Muungano ulikuwa mabadiliko ya utaratibu wa makubaliano, sio upanuzi wa uwezo wa mtandao, na haukuwahi kukusudiwa kupunguza ada za gesi.">
 
 Ada za gesi ni zao la mahitaji ya mtandao kulingana na uwezo wa mtandao. Muungano ulipuuza matumizi ya uthibitisho wa kazi, ukibadilika hadi uthibitisho wa dhamana kwa makubaliano, lakini haukubadilisha sana vigezo vyovyote vinavyoathiri moja kwa moja uwezo wa mtandao au upitishaji.
@@ -145,7 +145,7 @@ Kwa a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadma
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: "Miamala iliharakishwa sana na Muungano.""
+title="Dhana potofu: &quot;Miamala iliharakishwa sana na Muungano.&quot;"
 contentPreview="Si kweli. Ingawa kuna mabadiliko madogo, kasi ya muamala kwa kiasi kikubwa ni sawa kwenye safu ya 1 sasa kama ilivyokuwa kabla ya Muungano.">
 \"Kasi\" ya muamala inaweza kupimwa kwa njia chache, ikiwa ni pamoja na muda wa kujumuishwa kwenye bloku na muda wa kukamilishwa. Mabadiliko haya yote ni madogo, lakini si kwa namna ambayo watumiaji watagundua.
 
@@ -155,7 +155,7 @@ Uthibitishaji-wa-hisa ulianzisha dhana ya umaliziaji wa muamala ambayo haikuwepo
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: "Muungano uliwezesha utoaji wa mali zilizoshikizwa.""
+title="Dhana potofu: &quot;Muungano uliwezesha utoaji wa mali zilizoshikizwa.&quot;"
 contentPreview="Si kweli, lakini utoaji wa mali zilizoshikizwa umewezeshwa tangu wakati huo kupitia sasisho la Shanghai/Capella.">
 
 Hapo awali baada ya Muungano, washikadau waliweza tu kufikia vidokezo vya ada na MEV vilivyopatikana kutokana na mapendekezo ya bloku. Zawadi hizi huwekwa kwenye akaunti isiyo ya hisa inayodhibitiwa na mthibitishaji (known as the <em>fee recipient</em>), na zinapatikana mara moja. Zawadi hizi ni tofauti na zawadi za itifaki kwa kutekeleza majukumu ya mthibitishaji.
@@ -166,7 +166,7 @@ Tangu uboreshaji wa mtandao wa Shanghai/Capella, wadau sasa wanaweza kuteua <em>
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: "Sasa kwa kuwa Muungano umekamilika, na uondoaji umewezeshwa, washikadau wote wanaweza kutoka kwa pamoja.""
+title="Dhana potofu: &quot;Sasa kwa kuwa Muungano umekamilika, na uondoaji umewezeshwa, washikadau wote wanaweza kutoka kwa pamoja.&quot;"
 contentPreview="Si kweli. Matokeo ya wathibitishaji yana kikomo cha kiwango kwa sababu za kiusalama.">
 Tangu sasisho la Shanghai/Capella liwezeshe uondoaji, wathibitishaji wanahamasishwa kuondoa salio lao la kushikiza lililo juu ya ETH 32, kwa kuwa fedha hizi haziongezi mavuno na vinginevyo zimefungwa. Kutegemeana na APR (inayobainishwa na jumla ya ETH iliyoshikizwa), wanaweza kuhamasishwa kutoka kwenye wathibitishaji wao ili kudai salio lao lote au hata kushikiza zaidi kwa kutumia zawadi zao ili kupata mavuno zaidi.
 

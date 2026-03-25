@@ -3,7 +3,7 @@ title: "Mwongozo wa Mkataba wa ERC-721 wa Vyper"
 description: Mkataba wa ERC-721 wa Ryuya Nakamura na jinsi unavyofanya kazi
 author: Ori Pomerantz
 lang: sw
-tags: [ "vyper", "erc-721", "python" ]
+tags: [ "Vyper", "erc-721", "Python" ]
 skill: beginner
 published: 2021-04-01
 ---

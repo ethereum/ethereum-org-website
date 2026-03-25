@@ -50,7 +50,7 @@ summary: Programu zinazojengwa kwenye Ethereum ni bure, za kimataifa na zinatumi
 
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
-''!['',./developers-eth-blocks.png].''
+![./developers-eth-blocks.png]
 </div>
 
 ## ''Programu za Ethereum ni kama lego{#ethereum-apps-are-like-legos}.''

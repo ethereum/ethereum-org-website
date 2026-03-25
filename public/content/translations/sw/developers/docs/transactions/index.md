@@ -226,6 +226,6 @@ _Unajua rasilimali ya jamii iliyokusaidia?_ Hariri ukurasa huu na uiongeze!_
 
 ## Mada zinazohusiana {#related-topics}
 
-- Hifadhi ya fedha (/developers/docs/accounts/)
+- [Hifadhi ya fedha](/developers/docs/accounts/)
 - [Mashine Halisi ya Ethereum (EVM)](/developers/docs/evm/)
 - [Gesi](/developers/docs/gas/)

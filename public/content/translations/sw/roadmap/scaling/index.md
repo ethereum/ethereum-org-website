@@ -16,8 +16,8 @@ Ethereum hupandishwa kiwango kwa kutumia [safu 2](/layer-2/#rollups) (pia zinaju
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>Muunganiko wa miamala ya leo ni takriban mara 5–20 nafuu kuliko safu 1 ya Ethereum</li>
-    <li>Ukusanyaji wa ZK hivi karibuni utapunguza ada kwa <strong>~40-100x</strong></li>
-    <li>Mabadiliko yajayo kwa Ethereum yatatoa <strong>~100-1000x</strong> nyingine ya kuongeza</li>
+    <li>Ukusanyaji wa ZK hivi karibuni utapunguza ada kwa <strong>\~40-100x</strong></li>
+    <li>Mabadiliko yajayo kwa Ethereum yatatoa <strong>\~100-1000x</strong> nyingine ya kuongeza</li>
     <li style={{ marginBottom: 0 }}>Watumiaji wanapaswa kufaidika na miamala <strong>ya gharama ya chini ya $0.001</strong></li>
   </ul>
 </AlertContent>
@@ -39,13 +39,13 @@ Hatua ya pili ya kupanua data ya blob ni ngumu kwa sababu inahitaji mbinu mpya z
 
 Hatua hii ya pili inajulikana kama [\"Danksharding\"](/roadmap/danksharding/). Kazi ya utekelezaji inaendelea, huku maendeleo yakifanywa kwenye masharti ya awali kama [kutenganisha uundaji wa bloku na pendekezo la bloku](/roadmap/pbs) na miundo mipya ya mtandao ambayo huwezesha mtandao kuthibitisha kwa ufanisi kuwa data inapatikana kwa kuchukua sampuli nasibu za kilobaiti chache kwa wakati mmoja, inayojulikana kama [uchukuaji sampuli wa upatikanaji wa data (DAS)](/developers/docs/data-availability).
 
-<ButtonLink variant=\"outline-color\" href=\"/roadmap/danksharding/\">Zaidi kuhusu Danksharding</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Zaidi kuhusu Danksharding</ButtonLink>
 
 ## Kugatua rollups {#decentralizing-rollups}
 
 [Rollups](/layer-2) tayari zinapanua kiwango cha Ethereum. [Mfumo ikolojia tele wa miradi ya rollup](https://l2beat.com/scaling/tvs) unawawezesha watumiaji kufanya miamala haraka na kwa bei nafuu, kukiwa na dhamana mbalimbali za usalama. Hata hivyo, rollups zimewekwa kujitegemea kuanzishwa kwa kutumia wapangaji wa muamala kati (kompyuta hufanya shughuli zote usindikaji na uchanganuzi kabla ya kuwasilisha yao kwa Ethereum). Hii inaweza kuathiriwa na udhibiti, kwa sababu waendeshaji wa mpangilio wanaweza kuidhinishwa, kuhongwa au kuathiriwa vinginevyo. Wakati huo huo, [rollups hutofautiana](https://l2beat.com/scaling/summary) kwa jinsi zinavyothibitisha data inayoingia. Njia bora zaidi ni kwa \"provers\" kuwasilisha [ushahidi wa ulaghai](/glossary/#fraud-proof) au ushahidi wa uhalali, lakini sio rollups zote zimefika hapo bado. Hata zile orodha zinazotumia uthibitisho wa uhalali/udanganyifu hutumia kundi dogo la methali zinazojulikana. Kwa hiyo, hatua inayofuata muhimu katika kuongeza kiwango cha Ethereum ni kusambaza jukumu la kuendesha vifuatavyo na methali kwa watu wengi zaidi.
 
-<ButtonLink variant=\"outline-color\" href=\"/developers/docs/scaling/\">Zaidi kuhusu rollups</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">Zaidi kuhusu rollups</ButtonLink>
 
 ## Maendeleo ya sasa {#current-progress}
 

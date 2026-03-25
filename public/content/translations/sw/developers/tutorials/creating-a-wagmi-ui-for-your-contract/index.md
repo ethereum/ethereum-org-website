@@ -2,7 +2,7 @@
 title: "Kutengeneza kiolesura cha mtumiaji kwa ajili ya mkataba wako"
 description: Kwa kutumia vipengele vya kisasa kama vile TypeScript, React, Vite, na Wagmi, tutapitia kiolesura cha kisasa, lakini kidogo, cha mtumiaji na kujifunza jinsi ya kuunganisha mkoba kwenye kiolesura cha mtumiaji, kupiga simu mkataba-erevu ili kusoma habari, kutuma muamala kwenye mkataba-erevu, na kufuatilia matukio kutoka kwenye mkataba-erevu ili kubaini mabadiliko.
 author: Ori Pomerantz
-tags: [ "typescript", "react", "vite", "wagmi", "frontend" ]
+tags: [ "TypeScript", "React", "Vite", "Wagmi", "frontend" ]
 skill: beginner
 published: 2023-11-01
 lang: sw
@@ -143,7 +143,7 @@ Kwa kimkataba, katika chaguo za kukokotoa za React zinazoitwa `use...` ni [hooks
     <>
 ```
 
-JSX ya kipengele cha React _lazima_ irudishe kipengele kimoja. Tunapokuwa na vipengele vingi na hatuna chochote kinachomaliza "kawaida" tunatumia kipengele tupu (`<> ...` </>) ili kuzifanya kuwa sehemu moja.
+JSX ya kipengele cha React _lazima_ irudishe kipengele kimoja. Tunapokuwa na vipengele vingi na hatuna chochote kinachomaliza "kawaida" tunatumia kipengele tupu (`<> ... </>`) ili kuzifanya kuwa sehemu moja.
 
 ```tsx
       <h1>Greeter</h1>

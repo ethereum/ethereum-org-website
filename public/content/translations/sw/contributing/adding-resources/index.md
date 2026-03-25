@@ -26,8 +26,8 @@ Kwa ujumla **ethereum.org inakusudia kutoa bila mshono ndani ya jambo uzoefu kwa
 
 ### Viwango {#criteria}
 
-- \*\* Habari ya uaminifu na sahihi ya orodha \*\* - Orodha yoyote kupendekeza lazima kuja na habari ya uaminifu na sahihi. Bidhaa ambazo kudanganya habari kuondolewa.
-- \*\* mradi kazi \*\* - rasilimali inapaswa kudumisha na timu ya kazi ili kuhakikisha ubora na msaada kwa watumiaji. Rasilimali pitwa na wakati ni chini ya kuondolewa.
+- ** Habari ya uaminifu na sahihi ya orodha ** - Orodha yoyote kupendekeza lazima kuja na habari ya uaminifu na sahihi. Bidhaa ambazo kudanganya habari kuondolewa.
+- ** mradi kazi ** - rasilimali inapaswa kudumisha na timu ya kazi ili kuhakikisha ubora na msaada kwa watumiaji. Rasilimali pitwa na wakati ni chini ya kuondolewa.
 
 ### Kuagiza Bidhaa {#product-ordering}
 
@@ -46,7 +46,7 @@ Unaweza kusaidia kwa kuangalia na kujua. [Tengeneza toleo](https://github.com/et
 
 ## Ongeza rasilimali yako {#add-your-resource}
 
-Kama unataka kuongeza rasilimali kwa ethereum.org na hukutana vigezo, kujenga suala juu ya Github.
+Kama unataka kuongeza rasilimali kwa ethereum.org na hukutana vigezo, kujenga suala juu ya GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=resource+📚&template=suggest_resource.yaml">
   Unda suala

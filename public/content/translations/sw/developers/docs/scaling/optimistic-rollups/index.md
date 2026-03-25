@@ -223,7 +223,7 @@ Optimistic rollups hutumia mbinu kadhaa kufikia ubanaji wa data ya muamala na ku
 | Thamani     | 9                                                    | ~3                   |
 | Sahihi      | ~68 (2 + 33 + 33) | ~0.5 |
 | Kutoka      | 0 (imerejeshwa kutoka kwa sig)    | 4                                    |
-| **Jumla**   | **~baiti 112**                       | **~baiti 12**        |
+| **Jumla**   | **\~baiti 112**                       | **\~baiti 12**        |
 
 Kufanya hesabu zisizo sahihi kwenye takwimu hizi kunaweza kusaidia kuonyesha uboreshaji wa uwezo wa kupanuka unaotolewa na uwasilishaji wa matumaini:
 

@@ -152,7 +152,7 @@ Mtangulizi wa Dankharding kamili inayojulikana kama Proto-Dankharding ilipatikan
 
 ### Vifaa {#hardware}
 
-[nodes zinazoendeshwa] /developers/docs/nodes-and-clients/run-a-node/kwenye vifaa vya kompyuta vya wastani ni muhimu kuweka mfumo mtawanyo wa kawaida wa Ethereum. Kwa hivyo, utafiti unaofanya kazi katika kupunguza mahitaji ya vifaa vya kuendesha nodi ni eneo muhimu la utafiti.
+[[nodes zinazoendeshwa]](/developers/docs/nodes-and-clients/)run-a-node/kwenye vifaa vya kompyuta vya wastani ni muhimu kuweka mfumo mtawanyo wa kawaida wa Ethereum. Kwa hivyo, utafiti unaofanya kazi katika kupunguza mahitaji ya vifaa vya kuendesha nodi ni eneo muhimu la utafiti.
 
 #### Usomaji wa ziada {#background-reading-5}
 

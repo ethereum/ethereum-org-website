@@ -4,9 +4,9 @@ description: Mafunzo ya utangulizi kuhusu kuandika na kusambaza mkataba-erevu ra
 author: "nstrike2"
 tags:
   [
-    "uimara",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "mikataba erevu",
     "upelekaji",
     "kichunguzi cha bloku",

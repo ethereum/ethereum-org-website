@@ -2,7 +2,7 @@
 title: Kupeleka mkataba-erevu wako wa kwanza
 description: Utangulizi wa kupeleka mkataba-erevu wako wa kwanza kwenye mtandao wa majaribio wa Ethereum
 author: "jdourlens"
-tags: [ "mikataba erevu", "remix", "uimara", "upelekaji" ]
+tags: [ "mikataba erevu", "Remix", "Solidity", "upelekaji" ]
 skill: beginner
 lang: sw
 published: 2020-04-03

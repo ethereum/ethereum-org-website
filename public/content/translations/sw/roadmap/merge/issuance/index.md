@@ -41,18 +41,18 @@ title="Utoaji wa ETH kwa kifupi">
 
 ### Mchanganuo wa utoaji kabla ya Muungano {#pre-merge-issuance-breakdown}
 
-Jumla ya usambazaji wa ETH: **~ETH 120,520,000** (wakati wa Muungano mnamo Septemba 2022)
+Jumla ya usambazaji wa ETH: **\~ETH 120,520,000** (wakati wa Muungano mnamo Septemba 2022)
 
 **Utoaji wa safu ya utekelezaji:**
 
-- Ilikadiriwa kuwa ETH 2.08 kwa kila sekunde 13.3\*: **~4,930,000** za ETH zilizotolewa kwa mwaka
+- Ilikadiriwa kuwa ETH 2.08 kwa kila sekunde 13.3\*: **\~4,930,000** za ETH zilizotolewa kwa mwaka
 - Ilisababisha kiwango cha mfumuko wa bei cha **takriban 4.09%** (milioni 4.93 kwa mwaka / jumla ya milioni 120.5)
 - ''\*Hii inajumuisha 2 ETH kwa kila kizuizi ya kawaida pamoja na wastani wa 0.08ETH kwa muda kutoka kizuizi halali zisizo kwenye mnyororo mkuu.''. Pia hutumia sekunde 13.3, lengo la msingi la muda wa kizuizi bila ushawishi wowote kutoka kwa [bomu la ugumu](/glossary/#difficulty-bomb). ([Angalia chanzo](https://bitinfocharts.com/ethereum/))
 
 **Utoaji wa safu ya makubaliano:**
 
 - Kwa kutumia jumla ya ETH 14,000,000 zilizowekwa hisa, kiwango cha utoaji wa ETH ni takriban ETH 1700 kwa siku ([Angalia chanzo](https://ultrasound.money/))
-- Husababisha **~620,500** za ETH kutolewa kwa mwaka
+- Husababisha **\~620,500** za ETH kutolewa kwa mwaka
 - Ilisababisha kiwango cha mfumuko wa bei cha **takriban 0.52%** (elfu 620.5 kwa mwaka / jumla ya milioni 119.3)
 
 <Alert variant="update">
@@ -60,9 +60,9 @@ Jumla ya usambazaji wa ETH: **~ETH 120,520,000** (wakati wa Muungano mnamo Septe
 <AlertDescription>
 **Jumla ya kiwango cha utoaji cha mwaka (kabla ya Muungano): ~4.61%** (4.09% + 0.52%)
 
-**~88.7%** ya utoaji ilikuwa ikienda kwa wachimbaji kwenye safu ya utekelezaji (4.09 / 4.61 \* 100)
+**\~88.7%** ya utoaji ilikuwa ikienda kwa wachimbaji kwenye safu ya utekelezaji (4.09 / 4.61 \* 100)
 
-**~11.3%** ilikuwa inatolewa kwa waweka hisa kwenye safu ya makubaliano (0.52 / 4.61 \* 100)
+**\~11.3%** ilikuwa inatolewa kwa waweka hisa kwenye safu ya makubaliano (0.52 / 4.61 \* 100)
 </AlertDescription>
 
 </AlertContent>
@@ -89,16 +89,16 @@ Wathibitishaji wengi zaidi wanapotoa hisa, idadi ya juu ya wathibitishaji wanaoo
 
 ### Mchanganuo wa mfumuko wa bei baada ya Muungano {#post-merge-inflation-breakdown}
 
-- Jumla ya usambazaji wa ETH: **~ETH 120,520,000** (wakati wa Muungano mnamo Septemba 2022)
+- Jumla ya usambazaji wa ETH: **\~ETH 120,520,000** (wakati wa Muungano mnamo Septemba 2022)
 - Utoaji wa safu ya utekelezaji: **0**
-- Utoaji wa safu ya makubaliano: Sawa na hapo juu, kiwango cha utoaji cha mwaka cha **~0.52%** (kukiwa na jumla ya ETH milioni 14 zilizowekwa hisa)
+- Utoaji wa safu ya makubaliano: Sawa na hapo juu, kiwango cha utoaji cha mwaka cha **\~0.52%** (kukiwa na jumla ya ETH milioni 14 zilizowekwa hisa)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Jumla ya kiwango cha utoaji cha mwaka: **~0.52%**
+Jumla ya kiwango cha utoaji cha mwaka: **\~0.52%**
 
-Upungufu halisi katika utoaji wa ETH wa mwaka: **~88.7%** ((4.61% - 0.52%) / 4.61% \* 100)
+Upungufu halisi katika utoaji wa ETH wa mwaka: **\~88.7%** ((4.61% - 0.52%) / 4.61% \* 100)
 </AlertDescription>
 
 </AlertContent>

@@ -144,7 +144,7 @@ Ingawa AVS hutoa viwango tofauti, Tokeni za Kuweka Dhamana Tena kwa Ukwasi (LRTs
 <AlertDescription>
   <p className="mt-0"><strong>Mwanzilishi mwenza wa Ethereum anaandika…</strong></p>
   <p className="mt-2">
-    Vitalik, mwanzilishi mwenza wa Ethereum, alionya kuhusu hatari zinazoweza kutokea za kuweka dhamana tena katika chapisho la blogu la 2021 liitwalo <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> Usizidishe Makubaliano.</a> </a>  
+ Vitalik, mwanzilishi mwenza wa Ethereum, alionya kuhusu hatari zinazoweza kutokea za kuweka dhamana tena katika chapisho la blogu la 2021 liitwalo <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> Usizidishe Makubaliano.</a>
 </p>
 </AlertDescription>
 </AlertContent>

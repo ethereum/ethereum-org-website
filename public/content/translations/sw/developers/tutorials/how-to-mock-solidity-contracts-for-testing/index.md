@@ -3,7 +3,7 @@ title: Jinsi ya kuiga mikataba-erevu ya Solidity kwa ajili ya majaribio
 description: Kwa nini unapaswa kufanyia mzaha mikataba yako unapofanya majaribio
 author: Markus Waas
 lang: sw
-tags: [ "uimara", "mikataba erevu", "majaribio", "kuiga" ]
+tags: [ "Solidity", "mikataba erevu", "majaribio", "kuiga" ]
 skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com

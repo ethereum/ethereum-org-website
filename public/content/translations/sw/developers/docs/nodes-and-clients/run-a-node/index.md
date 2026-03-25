@@ -99,7 +99,7 @@ Hali ya usawazishaji na mteja utakayochagua itaathiri mahitaji ya nafasi, lakini
 | Nethermind | 500GB+                                                      | 12TB+                                                  |
 | Reth       | N/A                                                         | 2.2TB+                                 |
 
-- Kumbuka: Erigon na Reth hawatoi usawazishaji wa haraka, lakini Full Prunning inawezekana (~2TB kwa Erigon, ~1.2TB kwa Reth)
+- Kumbuka: Erigon na Reth hawatoi usawazishaji wa haraka, lakini Full Prunning inawezekana (\~2TB kwa Erigon, ~1.2TB kwa Reth)
 
 Kwa wateja wa makubaliano, hitaji la nafasi pia linategemea utekelezaji wa mteja na vipengele vilivyowezeshwa (k.m., kikataji cha mthibitishaji) lakini kwa ujumla hesabia GB 200 nyingine inayohitajika kwa data ya beacon. Kwa namba kubwa ya wahalalishaji, kipimo data kinakuwa kikubwa pia. Unaweza kupata [maelezo kuhusu mahitaji ya mteja wa makubaliano katika uchambuzi huu](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 

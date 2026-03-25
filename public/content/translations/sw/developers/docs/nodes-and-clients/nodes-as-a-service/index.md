@@ -54,7 +54,7 @@ Hii ni orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie hur
 - [**Alchemy**](https://alchemy.com/)
   - [Hati](https://www.alchemy.com/docs/)
   - Vipengele
-    - Kiwango kikubwa cha bure na vitengo vya kukokotoa milioni 300 kwa mwezi (~maombi milioni 30 ya getLatestBlock)
+    - Kiwango kikubwa cha bure na vitengo vya kukokotoa milioni 300 kwa mwezi (\~maombi milioni 30 ya getLatestBlock)
     - Usaidizi wa minyororo mingi kwa Polygon, Starknet, Optimism, Arbitrum
     - Inawezesha ~70% ya mfumo mtawanyo wa kimamlaka mkubwa zaidi wa Ethereum na ujazo wa miamala wa DeFi
     - Arifa za webhook za wakati halisi kupitia Alchemy Notify

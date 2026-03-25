@@ -4,11 +4,11 @@ description: "Huu ni mwongozo wa wanaoanza jinsi ya kuanza na uundaji wa Ethereu
 author: "Elan Halpern"
 tags:
   [
-    "javascript",
+    "JavaScript",
     "ethers.js",
     "nodi",
     "kuuliza",
-    "alchemy"
+    "Alchemy"
   ]
 skill: beginner
 lang: sw
@@ -137,13 +137,13 @@ main()
 
 Hufahamu mambo ya async? Angalia [chapisho hili la Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c).
 
-**4.** Endesha kwenye terminal yako ukitumia node\*\*
+**4. Endesha kwenye terminal yako ukitumia node**
 
 ```
 node index.js
 ```
 
-**5.** Sasa unapaswa kuona tokeo la nambari ya bloku ya hivi karibuni kwenye konsoli yako!\*\*
+**5. Sasa unapaswa kuona tokeo la nambari ya bloku ya hivi karibuni kwenye konsoli yako!**
 
 ```
 Nambari ya bloku ya hivi karibuni ni 11043912

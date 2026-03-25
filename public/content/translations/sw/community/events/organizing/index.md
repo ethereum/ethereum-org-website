@@ -75,7 +75,7 @@ Kuanzia na mbinu iliyopangwa itakusaidia kukaa kwa mpangilio na kupunguza mafadh
 
 Hatua nyingine muhimu kabla ya kuanza kuunda programu au kufikia wafadhili ni kuchagua tarehe. Ingawa hiyo inaonekana kama hatua rahisi, kuna mambo machache muhimu ambayo unapaswa kuzingatia kabla. ''Baadhi yao ni.'':
 
-- \*\*Epuka tarehe zinazogongana na mikutano au matukio makubwa \*\*.''
+- **Epuka tarehe zinazogongana na mikutano au matukio makubwa **.''
 - **Zingatia hali na hali za eneo lako** (kama vile msimu wa mwaka, likizo kuu, n. k.)
 - **Zingatia hali ya soko**
 - **Jipe muda wa kutosha kuandaa na kila kitu** - angalau miezi tisa.''

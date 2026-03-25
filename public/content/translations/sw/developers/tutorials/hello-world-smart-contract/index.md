@@ -4,9 +4,9 @@ description: Mafunzo ya utangulizi kuhusu kuandika na kusambaza mkataba-erevu ra
 author: "elanh"
 tags:
   [
-    "uimara",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "mikataba erevu",
     "upelekaji"
   ]
@@ -51,7 +51,7 @@ Ikiwa huoni Sepolia ikiwa imeorodheshwa, nenda kwenye menyu, kisha kwenye Kina n
 
 ## Hatua ya 4: Ongeza ether kutoka kwenye bomba {#step-4}
 
-Ili kusambaza mkataba-erevu wetu kwenye testnet, tutahitaji ETH bandia. Ili kupata ETH ya Sepolia unaweza kwenda kwenye [maelezo ya mtandao wa Sepolia](/developers/docs/networks/#sepolia) ili kuona orodha ya mabomba mbalimbali. Ikiwa moja haifanyi kazi, jaribu nyingine kwani wakati mwingine zinaweza kuishiwa. Inaweza kuchukua muda kupokea ETH yako bandia kutokana na msongamano wa mtandao. Unapaswa kuona ETH katika akaunti yako ya Metamask muda mfupi baadaye!
+Ili kusambaza mkataba-erevu wetu kwenye testnet, tutahitaji ETH bandia. Ili kupata ETH ya Sepolia unaweza kwenda kwenye [maelezo ya mtandao wa Sepolia](/developers/docs/networks/#sepolia) ili kuona orodha ya mabomba mbalimbali. Ikiwa moja haifanyi kazi, jaribu nyingine kwani wakati mwingine zinaweza kuishiwa. Inaweza kuchukua muda kupokea ETH yako bandia kutokana na msongamano wa mtandao. Unapaswa kuona ETH katika akaunti yako ya MetaMask muda mfupi baadaye!
 
 ## Hatua ya 5: Angalia Salio lako {#step-5}
 
@@ -364,4 +364,4 @@ miamala). Ili kujifunza zaidi kuhusu kutuma miamala, angalia mafunzo haya kuhusu
 
 Hayo ni yote kwa sehemu ya 1 ya mafunzo haya, katika sehemu ya 2 [tutaingiliana na mkataba-erevu wetu](https://www.alchemy.com/docs/interacting-with-a-smart-contract) kwa kusasisha ujumbe wetu wa awali, na katika sehemu ya 3 [tutachapisha mkataba-erevu wetu kwenye Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) ili kila mtu ajue jinsi ya kuingiliana nao.
 
-**Unataka kujifunza zaidi kuhusu Alchemy?** Angalia [tovuti](https://www.alchemy.com/eth) yetu. Hutaki kamwe kukosa sasisho? Jisajili kwa jarida letu [hapa](https://www.alchemy.com/newsletter)! Hakikisha pia unajiunga na [Discord](https://discord.gg/u72VCg3) yetu.\*\*.
+**Unataka kujifunza zaidi kuhusu Alchemy? Angalia [tovuti](https://www.alchemy.com/eth) yetu. Hutaki kamwe kukosa sasisho? Jisajili kwa jarida letu [hapa](https://www.alchemy.com/newsletter)! Hakikisha pia unajiunga na [Discord](https://discord.gg/u72VCg3) yetu.**.

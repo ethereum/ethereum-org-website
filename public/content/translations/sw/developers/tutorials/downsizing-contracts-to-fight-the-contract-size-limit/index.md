@@ -3,7 +3,7 @@ title: "Kupunguza ukubwa wa mikataba ili kupambana na kikomo cha ukubwa wa mkata
 description: Unaweza kufanya nini kuzuia mikataba-erevu yako isiwe mikubwa sana?
 author: Markus Waas
 lang: sw
-tags: [ "uimara", "mikataba erevu", "ghala" ]
+tags: [ "Solidity", "mikataba erevu", "ghala" ]
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com

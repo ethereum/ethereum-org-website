@@ -2,7 +2,7 @@
 title: Jinsi ya Kutengeneza NFT (Sehemu ya 2/3 ya Mfululizo wa Mafunzo ya NFT)
 description: Mafunzo haya yanaelezea jinsi ya kutengeneza NFT kwenye mnyororo wa bloku wa Ethereum kwa kutumia mkataba-erevu wetu na Web3.
 author: "Sumi Mudgil"
-tags: [ "ERC-721", "alchemy", "uimara", "mikataba erevu" ]
+tags: [ "ERC-721", "Alchemy", "Solidity", "mikataba erevu" ]
 skill: beginner
 lang: sw
 published: 2021-04-22

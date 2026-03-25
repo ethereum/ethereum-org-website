@@ -3,7 +3,7 @@ title: Mwongozo wa zana za usalama za mkataba-erevu
 description: Muhtasari wa mbinu tatu tofauti za upimaji na uchanganuzi wa programu
 author: "Trailofbits"
 lang: sw
-tags: [ "uimara", "mikataba erevu", "usalama" ]
+tags: [ "Solidity", "mikataba erevu", "usalama" ]
 skill: intermediate
 published: 2020-09-07
 source: Building secure contracts

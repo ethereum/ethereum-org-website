@@ -2,7 +2,7 @@
 title: Jinsi ya kutekeleza soko la ERC-721
 description: Jinsi ya kuweka vitu vilivyowekwa kwenye tokeni kwa ajili ya kuuza kwenye ubao wa matangazo uliogatuliwa
 author: "Alberto Cuesta Cañada"
-tags: [ "mikataba erevu", "erc-721", "uimara", "tokeni" ]
+tags: [ "mikataba erevu", "erc-721", "Solidity", "tokeni" ]
 skill: intermediate
 lang: sw
 published: 2020-03-19

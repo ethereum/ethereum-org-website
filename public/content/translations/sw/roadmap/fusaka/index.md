@@ -26,7 +26,7 @@ Sasisho la Fusaka ni hatua moja tu katika malengo ya maendeleo ya muda mrefu ya 
 
 Hiki ndicho _kichwa_ cha mgawanyiko wa Fusaka, kipengele kikuu kilichoongezwa katika sasisho hili. Layer 2s kwa sasa huchapisha data zao kwa Ethereum katika blobs, aina ya data ya muda mfupi iliyoundwa mahsusi kwa safu ya 2. Kabla ya Fusaka, kila nodi kamili lazima ihifadhi kila blob ili kuhakikisha kuwa data iko. Kadiri upitishaji wa blob unavyoongezeka, kulazimika kupakua data hii yote kunachukua rasilimali nyingi.
 
-Kwa [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-choice) , badala ya kulazimika kuhifadhi data yote ya blob, kila nodi itawajibika kwa seti ndogo ya data ya blob. Blobu husambazwa kwa nasibu katika vifundo vyote kwenye mtandao huku kila kifundo kikiwa na 1/8 pekee ya data, kwa hivyo kuwezesha ukubwa wa kinadharia hadi 8x. Ili kuhakikisha upatikanaji wa data, sehemu yoyote ya data inaweza kuundwa upya kutoka kwa 50% yoyote iliyopo ya yote kwa mbinu zinazopunguza uwezekano wa data isiyo sahihi au inayokosekana hadi kiwango kidogo sana cha kriptografia (~moja kwa 10<sup>20</sup> hadi moja kwa 10<sup>24</sup>).
+Kwa [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-choice) , badala ya kulazimika kuhifadhi data yote ya blob, kila nodi itawajibika kwa seti ndogo ya data ya blob. Blobu husambazwa kwa nasibu katika vifundo vyote kwenye mtandao huku kila kifundo kikiwa na 1/8 pekee ya data, kwa hivyo kuwezesha ukubwa wa kinadharia hadi 8x. Ili kuhakikisha upatikanaji wa data, sehemu yoyote ya data inaweza kuundwa upya kutoka kwa 50% yoyote iliyopo ya yote kwa mbinu zinazopunguza uwezekano wa data isiyo sahihi au inayokosekana hadi kiwango kidogo sana cha kriptografia (\~moja kwa 10<sup>20</sup> hadi moja kwa 10<sup>24</sup>).
 
 Hii hudumisha mahitaji ya maunzi na kipimo data cha nodi kushinikizwa huku kuwezesha uongezaji wa blob na kusababisha kiwango kikubwa na ada ndogo za safu ya 2.
 
@@ -150,13 +150,7 @@ Kipengele hiki hunufaisha utekelezaji wa mteja na usalama wa mtandao kwa vile hu
 
 **Rasilimali**: [Uainishaji wa kiufundi wa EIP-7917](https://eips.ethereum.org/EIPS/eip-7917)
 
-#### Count leading zeros (CLZ) opcode {#count-leading-zeros-opcode
-
-Kipengele hiki kinaongeza agizo dogo la EVM, **hesabu sifuri zinazoongoza (CLZ)**. Takriban kila kitu katika EVM kinawakilishwa kama thamani ya biti-256—opcode hii mpya inarudisha idadi ya biti za sifuri zilizo mbele. Hiki ni kipengele cha kawaida katika usanifu wa seti nyingi za maagizo kwani huwezesha utendakazi bora wa hesabu. Kwa vitendo, hii hubadilisha utafutaji wa baiti ulioandikwa kwa mkono wa leo kuwa hatua moja, hivyo basi kupata biti ya kwanza iliyo washwa, kuchanganua baiti, au kuchambua sehemu za biti kunakuwa rahisi na cha bei nafuu zaidi. Opcode ni ya chini, ya gharama isiyobadilika na imeainishwa kuwa sambamba na nyongeza ya kimsingi, ambayo hupunguza bytecode na kuokoa gesi kwa kazi sawa.
-
-**Rasilimali**: [Uainishaji wa kiufundi wa EIP-7939](https://eips.ethereum.org/EIPS/eip-7939)
-
-#### Precompile kwa Usaidizi wa Curve ya secp256r1 {#secp256r1-precompile}
+#### Count leading zeros (CLZ) opcode {#count-leading-zeros-opcode}
 
 Huanzisha kikagua saini cha secp256r1 (P-256) kilichojengewa ndani, cha mtindo wa passkey katika anwani isiyobadilika `0x100` kwa kutumia umbizo la wito lilelile ambalo tayari limetumiwa na L2 nyingi na kurekebisha kesi za pembezoni, ili mikataba iliyoandikwa kwa ajili ya mazingira hayo ifanye kazi kwenye L1 bila mabadiliko.
 
@@ -187,7 +181,7 @@ EIP hii iko katika sehemu tofauti na "Core EIPs" kwa sababu mgawanyiko hautekele
 
 ### Je, uboreshaji huu unaathiri nodi zote za Ethereum na wathibitishaji? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
 
-Ndiyo, uboreshaji wa Fusaka unahitaji masasisho kwa [wateja wa kutekeleza na wateja wa makubaliano](/developers/docs/nodes-and-clients/). Wateja wote wakuu wa Ethereum watatoa matoleo yanayounga mkono mgawanyiko mkuu uliotiwa alama kuwa kipaumbele cha juu. Unaweza kufuatilia ni lini matoleo haya yatapatikana katika repos za mteja za Github,[Discord channels](https://ethstaker.org/support), the [EthStaker Discord](https://dsc.gg/ethstaker), au kwa kujiandikisha kwenye blogu ya Ethereum kwa masasisho ya itifaki. Ili kudumisha usawazishaji na mtandao wa Ethereum baada ya uboreshaji, waendeshaji nodi lazima wahakikishe kuwa wanatumia toleo la mteja linaloungwa mkono. Kumbuka kwamba taarifa kuhusu matoleo ya wateja hubadilika kulingana na wakati, na watumiaji wanapaswa kurejelea masasisho ya hivi punde kwa maelezo ya sasa zaidi.
+Ndiyo, uboreshaji wa Fusaka unahitaji masasisho kwa [wateja wa kutekeleza na wateja wa makubaliano](/developers/docs/nodes-and-clients/). Wateja wote wakuu wa Ethereum watatoa matoleo yanayounga mkono mgawanyiko mkuu uliotiwa alama kuwa kipaumbele cha juu. Unaweza kufuatilia ni lini matoleo haya yatapatikana katika repos za mteja za GitHub,[Discord channels](https://ethstaker.org/support), the [EthStaker Discord](https://dsc.gg/ethstaker), au kwa kujiandikisha kwenye blogu ya Ethereum kwa masasisho ya itifaki. Ili kudumisha usawazishaji na mtandao wa Ethereum baada ya uboreshaji, waendeshaji nodi lazima wahakikishe kuwa wanatumia toleo la mteja linaloungwa mkono. Kumbuka kwamba taarifa kuhusu matoleo ya wateja hubadilika kulingana na wakati, na watumiaji wanapaswa kurejelea masasisho ya hivi punde kwa maelezo ya sasa zaidi.
 
 ### Je, ETH inawezaje kubadilishwa baada ya 'hard fork'? {#how-can-eth-be-converted-after-the-hardfork}
 
