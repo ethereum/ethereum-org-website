@@ -4,6 +4,7 @@ description: "Tento tutoriál pomáhá čtenářům pochopit základní koncepty
 author: "Paul Apivat"
 tags: [ "SQL", "Dotazování", "Transakce" ]
 skill: beginner
+breadcrumb: "Ethereum s SQL"
 lang: cs
 published: 2021-05-11
 source: paulapivat.com

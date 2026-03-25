@@ -4,6 +4,7 @@ description: "ایک مکمل Solidity اسمارٹ کنٹریکٹ مثال او
 author: "jdourlens"
 tags: [ "اسمارٹ معاہدات", "tokens", "solidity", "erc-20" ]
 skill: beginner
+breadcrumb: "ERC-20 ٹوکن بنیادی"
 lang: ur-in
 published: 2020-04-05
 source: EthereumDev

@@ -10,6 +10,7 @@ tags:
     "implementación"
   ]
 skill: beginner
+breadcrumb: "Desplegar primer contrato"
 lang: es
 published: 2020-04-03
 source: EthereumDev

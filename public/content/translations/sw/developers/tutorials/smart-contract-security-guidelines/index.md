@@ -4,6 +4,7 @@ description: Orodha hakiki ya miongozo ya usalama ya kuzingatia unapojenga dapp 
 author: "Trailofbits"
 tags: [ "uimara", "mikataba erevu", "usalama" ]
 skill: intermediate
+breadcrumb: "Miongozo ya usalama"
 lang: sw
 published: 2020-09-06
 source: Building secure contracts

@@ -9,6 +9,7 @@ tags:
   - "nodi"
 lang: it
 skill: intermediate
+breadcrumb: "Nodo Raspberry Pi"
 published: 2022-06-10
 source: Ethereum su ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

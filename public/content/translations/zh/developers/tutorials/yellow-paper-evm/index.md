@@ -4,6 +4,7 @@ description: "理解黄皮书中关于以太坊正式规范的部分，该部分
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: zh
 published: 2022-05-15
 ---

@@ -4,6 +4,7 @@ description: "Sau khi đọc hướng dẫn này, nhà phát triển sẽ có th
 author: Ori Pomerantz
 tags: [ "web2", "xác thực", "eas" ]
 skill: beginner
+breadcrumb: "Ethereum cho web2 auth"
 lang: vi
 published: 2025-04-30
 ---

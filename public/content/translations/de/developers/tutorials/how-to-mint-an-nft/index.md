@@ -4,6 +4,7 @@ description: "In diesem Tutorial wird beschrieben, wie Sie einen NFT auf der Eth
 author: "Sumi Mudgil"
 tags: ["ERC-721", "alchemy", "solidity", "smart contracts"]
 skill: beginner
+breadcrumb: "NFT minten"
 lang: de
 published: 2021-04-22
 ---

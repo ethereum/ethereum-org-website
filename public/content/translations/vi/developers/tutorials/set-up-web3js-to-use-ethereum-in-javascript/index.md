@@ -4,6 +4,7 @@ description: "Tìm hiểu cách thiết lập và cấu hình thư viện web3.j
 author: "jdourlens"
 tags: [ "web3.js", "JavaScript" ]
 skill: beginner
+breadcrumb: "Cài đặt web3.js"
 lang: vi
 published: 2020-04-11
 source: EthereumDev

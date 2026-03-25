@@ -4,6 +4,7 @@ description: "Pochopení části Yellow Paperu, formálních specifikací pro Et
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: cs
 published: 2022-05-15
 ---

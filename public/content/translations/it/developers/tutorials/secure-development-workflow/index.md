@@ -7,6 +7,7 @@ tags:
   - "sicurezza"
   - "Solidity"
 skill: intermediate
+breadcrumb: "Lista di sicurezza"
 lang: it
 published: 2020-09-07
 source: Creare contratti sicuri

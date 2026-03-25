@@ -4,6 +4,7 @@ description: "Une liste de contrôle des consignes de sécurité à prendre en c
 author: "Trailofbits"
 tags: [ "Solidity", "contrats intelligents", "sécurité" ]
 skill: intermediate
+breadcrumb: "Regles de securite"
 lang: fr
 published: 2020-09-06
 source: Building secure contracts

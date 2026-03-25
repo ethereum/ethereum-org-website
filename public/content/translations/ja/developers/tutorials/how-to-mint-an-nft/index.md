@@ -4,6 +4,7 @@ description: "このチュートリアルでは、スマートコントラクト
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "スマートコントラクト" ]
 skill: beginner
+breadcrumb: "NFTミント"
 lang: ja
 published: 2021-04-22
 ---

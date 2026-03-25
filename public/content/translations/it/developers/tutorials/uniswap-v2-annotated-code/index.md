@@ -5,6 +5,7 @@ author: Ori Pomerantz
 tags:
   - "solidity"
 skill: intermediate
+breadcrumb: "Uniswap v2 passo passo"
 published: 2021-05-01
 lang: it
 ---

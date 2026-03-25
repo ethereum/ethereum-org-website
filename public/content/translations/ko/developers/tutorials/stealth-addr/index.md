@@ -4,6 +4,7 @@ description: "스텔스 주소는 사용자가 자산을 익명으로 전송할 
 author: Ori Pomerantz
 tags: [ "스텔스 주소", "개인정보 보호", "암호학", "Rust", "wasm" ]
 skill: intermediate
+breadcrumb: "스텔스 주소"
 published: 2025-11-30
 lang: ko
 sidebarDepth: 3

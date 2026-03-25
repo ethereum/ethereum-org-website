@@ -1,27 +1,26 @@
 ---
-title: Mengirimkan Token Menggunakan ethers.js
-description: Panduan yang ramah pemula untuk mengirimkan token menggunakan ethers.js.
+title: Mengirim Token Menggunakan ethers.js
+description: Panduan ramah pemula untuk mengirim token menggunakan ethers.js.
 author: Kim YongJun
-tags:
-  - "ETHERS.JS"
-  - "ERC-20"
-  - "TOKEN"
+tags: ["ETHERS.JS", "ERC-20", "TOKEN"]
 skill: beginner
+breadcrumb: "Kirim token"
 lang: id
 published: 2021-04-06
 ---
 
-## Kirimkan Token Menggunakan ethers.js(5.0) {#send-token}
+## Mengirim Token Menggunakan ethers.js(5.0) {#send-token}
 
-### Dalam Tutorial Ini, Anda Akan Belajar Cara {#you-learn-about}
+### Dalam Tutorial Ini Anda Akan Mempelajari Cara {#you-learn-about}
 
 - Mengimpor ethers.js
 - Mentransfer token
-- Menetapkan harga gas sesuai dengan kondisi lalu lintas jaringan
+- Mengatur harga gas sesuai dengan situasi lalu lintas jaringan
 
 ### Untuk Memulai {#to-get-started}
 
-Untuk memulai, kita harus terlebih dahulu mengimpor pustaka ethers.js ke dalam Include ethers.js(5.0) javascript kita
+Untuk memulai, pertama-tama kita harus mengimpor pustaka ethers.js ke dalam javascript kita
+Sertakan ethers.js(5.0)
 
 ### Menginstal {#install-ethersjs}
 
@@ -34,11 +33,11 @@ ES6 di Peramban
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // Your code here...
+  // Your code here... // Kode Anda di sini...
 </script>
 ```
 
-ES3 (UMD) di Peramban
+ES3(UMD) di Peramban
 
 ```html
 <script
@@ -49,49 +48,49 @@ ES3 (UMD) di Peramban
 
 ### Parameter {#param}
 
-1. **`contract_address`**: Akun kontrak token (akun kontrak diperlukan ketika token yang ingin Anda transfer bukan merupakan ether)
-2. **`send_token_amount`**: Jumlah yang ingin Anda kirimkan ke penerima
+1. **`contract_address`**: Alamat kontrak token (alamat kontrak diperlukan ketika token yang ingin Anda transfer bukan ether)
+2. **`send_token_amount`**: Jumlah yang ingin Anda kirim ke penerima
 3. **`to_address`**: Alamat penerima
 4. **`send_account`**: Alamat pengirim
-5. **`private_key`**: Kunci pribadi dari pengirim untuk menandatangani transaksi dan benar-benar mentransfer token
+5. **`private_key`**: Kunci pribadi pengirim untuk menandatangani transaksi dan benar-benar mentransfer token
 
-## Pemberitahuan {#notice}
+## Catatan {#notice}
 
-`signTransaction(tx)` dihilangkan karena `sendTransaction()` dilakukan secara internal.
+`signTransaction(tx)` dihapus karena `sendTransaction()` melakukannya secara internal.
 
-## Prosedur Mengirim {#procedure}
+## Prosedur Pengiriman {#procedure}
 
-### 1. Hubungkan ke jaringan (jaringan percobaan) {#connect-to-network}
+### 1. Terhubung ke jaringan (testnet) {#connect-to-network}
 
-#### Tetapkan Penyedia (Infura) {#set-provider}
+#### Mengatur Penyedia (Infura) {#set-provider}
 
-Hubungkan ke jaringan percobaan Ropsten
+Terhubung ke testnet Ropsten
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. Buat dompet {#create-wallet}
+### 2. Membuat dompet {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Hubungkan Dompet ke net {#connect-wallet-to-net}
+### 3. Menghubungkan Dompet ke jaringan {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Dapatkan harga gas saat ini {#get-gas}
+### 4. Mendapatkan harga gas saat ini {#get-gas}
 
 ```javascript
-window.ethersProvider.getGasPrice() // gasPrice
+window.ethersProvider.getGasPrice() // gasPrice // gasPrice
 ```
 
-### 5. Tentukan Transaksi {#define-transaction}
+### 5. Mendefinisikan Transaksi {#define-transaction}
 
-Variabel-variabel ini yang ditentukan di bawah bergantung pada `send_token()`
+Variabel-variabel yang didefinisikan di bawah ini bergantung pada `send_token()`
 
 ### Parameter transaksi {#transaction-params}
 
@@ -101,7 +100,7 @@ Variabel-variabel ini yang ditentukan di bawah bergantung pada `send_token()`
 4. **`gas_limit`**: batas gas
 5. **`gas_price`**: harga gas
 
-[Lihat di bawah untuk cara mengggunakan](#how-to-use)
+[Lihat di bawah untuk cara menggunakannya](#how-to-use)
 
 ```javascript
 const tx = {
@@ -109,7 +108,7 @@ const tx = {
   to: to_address,
   value: ethers.utils.parseEther(send_token_amount),
   nonce: window.ethersProvider.getTransactionCount(send_account, "latest"),
-  gasLimit: ethers.utils.hexlify(gas_limit), // 100000
+  gasLimit: ethers.utils.hexlify(gas_limit), // 100000 // 100000
   gasPrice: gas_price,
 }
 ```
@@ -146,9 +145,9 @@ send_token(
 )
 ```
 
-### Sukses! {#success}
+### Berhasil! {#success}
 
-![gambar transaksi berhasil](./successful-transaction.png)
+![gambar transaksi berhasil dilakukan](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -168,23 +167,23 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // general token send
+      // general token send // pengiriman token umum
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // How many tokens?
+      // How many tokens? // Berapa banyak token?
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // Send tokens
+      // Send tokens // Kirim token
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
         alert("sent token")
       })
-    } // ether send
+    } // ether send // pengiriman ether
     else {
       const tx = {
         from: send_account,
@@ -194,7 +193,7 @@ function send_token(
           send_account,
           "latest"
         ),
-        gasLimit: ethers.utils.hexlify(gas_limit), // 100000
+        gasLimit: ethers.utils.hexlify(gas_limit), // 100000 // 100000
         gasPrice: gas_price,
       }
       console.dir(tx)

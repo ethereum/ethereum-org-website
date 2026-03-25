@@ -1,22 +1,22 @@
 ---
 title: Cara menerjemahkan
 lang: id
-description: Instruksi untuk menggunakan Crowdin dalam menerjemahkan ethereum.org
+description: Instruksi untuk menggunakan Crowdin untuk menerjemahkan ethereum.org
 ---
 
 # Cara menerjemahkan {#how-to-translate}
 
 ## Panduan visual {#visual-guide}
 
-Bagi yang lebih suka belajar secara visual, tonton Luka menjelaskan langkah-langkah untuk memulai Crowdin. Sebagai alternatif, Anda dapat menemukan langkah-langkah yang sama dalam format tulisan di bagian berikutnya.
+Bagi Anda yang lebih suka belajar secara visual, tonton Luka memandu cara menyiapkan Crowdin. Sebagai alternatif, Anda dapat menemukan langkah-langkah yang sama dalam format tertulis di bagian selanjutnya.
 
 <YouTube id="Ii7bYhanLs4" />
 
 ## Panduan tertulis {#written-guide}
 
-### Bergabung dalam proyek kami di Crowdin {#join-project}
+### Bergabung dengan proyek kami di Crowdin {#join-project}
 
-Anda harus masuk ke akun Crowdin atau mendaftar jika belum memiliki akun. Yang diperlukan untuk mendaftar hanyalah akun email dan kata sandi.
+Anda harus masuk ke akun Crowdin Anda atau mendaftar jika Anda belum memilikinya. Yang diperlukan untuk mendaftar hanyalah akun email dan kata sandi.
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Bergabung dengan proyek
@@ -24,68 +24,68 @@ Anda harus masuk ke akun Crowdin atau mendaftar jika belum memiliki akun. Yang d
 
 ### Buka bahasa Anda {#open-language}
 
-Setelah masuk ke Crowdin, Anda akan melihat deskripsi proyek dan daftar semua bahasa yang tersedia. Setiap bahasa juga berisi informasi tentang jumlah total kata yang dapat diterjemahkan dan gambaran umum tentang seberapa banyak konten yang telah diterjemahkan dan disetujui dalam bahasa tertentu.
+Setelah masuk ke Crowdin, Anda akan melihat deskripsi proyek dan daftar semua bahasa yang tersedia.
+Setiap bahasa juga berisi informasi tentang jumlah total kata yang dapat diterjemahkan dan gambaran umum tentang seberapa banyak konten yang telah diterjemahkan dan disetujui dalam bahasa tertentu.
 
 Buka bahasa yang ingin Anda terjemahkan untuk melihat daftar file yang tersedia untuk diterjemahkan.
 
 ![Daftar bahasa di Crowdin](./list-of-languages.png)
 
-### Temukan dokumen yang ingin dikerjakan {#find-document}
+### Temukan dokumen untuk dikerjakan {#find-document}
 
-Konten situs web dibagi menjadi beberapa dokumen dan ember konten. Anda dapat memeriksa kemajuan setiap dokumen di sebelah kanan – jika kemajuan terjemahan di bawah 100%, silakan berkontribusi!
+Konten situs web dibagi menjadi sejumlah dokumen dan keranjang konten (content bucket). Anda dapat memeriksa kemajuan setiap dokumen di sebelah kanan – jika kemajuan terjemahan di bawah 100%, silakan berkontribusi!
 
-Tidak melihat bahasa Anda tercantum? [Buat isu](https://github.com/ethereum/ethereum-org-website/issues/new/choose) atau ajukan pertanyaan di [Discord](https://discord.gg/ethereum-org) kami
+Tidak melihat bahasa Anda terdaftar? [Buka sebuah isu](https://github.com/ethereum/ethereum-org-website/issues/new/choose) atau tanyakan di [Discord](https://discord.gg/ethereum-org) kami
 
-![File yang telah diterjemahkan atau belum diterjemahkan di Crowdin](./crowdin-files.png)
+![File yang diterjemahkan dan belum diterjemahkan di Crowdin](./crowdin-files.png)
 
-Catatan tentang ember konten: kami menggunakan 'ember konten' di dalam Crowdin untuk membuat konten berprioritas tertinggi dirilis terlebih dahulu. Ketika Anda memeriksa sebuah bahasa, misalkan, [Filipina](https://crowdin.com/project/ethereum-org/fil#) Anda akan melihat folder untuk ember konten ("1. Halaman beranda", "2. Dasar-dasar", "3. Menjelajahi", dll.).
+Catatan tentang keranjang konten: kami menggunakan 'keranjang konten' di dalam Crowdin agar konten dengan prioritas tertinggi dirilis terlebih dahulu. Saat Anda memeriksa suatu bahasa, misalnya, [Filipino](https://crowdin.com/project/ethereum-org/fil#) Anda akan melihat folder untuk keranjang konten ("1. Homepage", "2. Essentials", "3. Exploring", dll.).
 
 Kami mendorong Anda untuk menerjemahkan dalam urutan numerik ini (1 → 2 → 3 → ⋯) untuk memastikan halaman dengan dampak tertinggi diterjemahkan terlebih dahulu.
 
-[Pelajari selengkapnya tentang ember konten ethereum.org](/contributing/translation-program/)
+### Terjemahkan {#translate}
 
-### Menerjemahkan {#translate}
-
-Setelah memilih file yang ingin Anda terjemahkan, file akan terbuka di editor online. Jika belum pernah menggunakan Crowdin sebelumnya, Anda dapat menggunakan panduan cepat ini untuk melihat dasar-dasarnya.
+Setelah memilih file yang ingin Anda terjemahkan, file tersebut akan terbuka di editor online. Jika Anda belum pernah menggunakan Crowdin sebelumnya, Anda dapat menggunakan panduan singkat ini untuk mempelajari dasar-dasarnya.
 
 ![Editor online Crowdin](./online-editor.png)
 
-**_1 – Sidebar kiri_**
+**_1 – Bilah sisi kiri_**
 
 - Belum diterjemahkan (merah) – teks yang belum dikerjakan. Ini adalah string yang harus Anda terjemahkan.
-- Diterjemahkan (hijau) – teks yang telah diterjemahkan, tetapi belum ditinjau. Anda diperbolehkan untuk menyarankan terjemahan alternatif, atau memilih yang sudah ada dengan menggunakan tombol ‘’+’’ dan ‘’-‘‘ di editor.
-- Disetujui (tanda centang) – teks yang telah ditinjau dan saat ini berada di situs web.
+- Diterjemahkan (hijau) – teks yang sudah diterjemahkan, tetapi belum ditinjau. Anda dipersilakan untuk menyarankan terjemahan alternatif, atau memberikan suara pada terjemahan yang ada menggunakan tombol ‘’+’’ dan ‘’-‘‘ di editor.
+- Disetujui (tanda centang) – teks yang sudah ditinjau dan saat ini tayang di situs web.
 
-Anda juga dapat menggunakan tombol di atas untuk mencari string tertentu, memfilternya berdasarkan status atau mengubah tampilan.
+Anda juga dapat menggunakan tombol di bagian atas untuk mencari string tertentu, memfilternya berdasarkan status, atau mengubah tampilan.
 
 **_2 – Area editor_**
 
-Area terjemahan utama – teks sumber ditampilkan di atas, dengan konteks dan tangkapan layar tambahan, jika tersedia. Untuk menyarankan terjemahan baru, masukkan terjemahan Anda di kolom ‘’Masukkan terjemahan di sini’’ dan klik Save.
+Area terjemahan utama – teks sumber ditampilkan di bagian atas, dengan konteks tambahan dan tangkapan layar, jika tersedia.
+Untuk menyarankan terjemahan baru, masukkan terjemahan Anda di bidang ‘’Enter translation here’’ dan klik Simpan.
 
-Anda juga dapat menemukan terjemahan string dan terjemahan yang ada ke dalam bahasa lain di bagian ini, serta kecocokan memori terjemahan dan saran terjemahan mesin.
+Anda juga dapat menemukan terjemahan string yang ada dan terjemahan ke bahasa lain di bagian ini, serta kecocokan memori terjemahan dan saran terjemahan mesin.
 
-**_3 – Sidebar kanan_**
+**_3 – Bilah sisi kanan_**
 
-Di sinilah Anda dapat menemukan komentar, memasukkan entri memori terjemahan, dan glosarium. Tampilan default menunjukkan komentar dan memungkinkan penerjemah untuk berkomunikasi, membuat isu, atau melaporkan terjemahan yang salah.
+Di sinilah Anda dapat menemukan komentar, entri memori terjemahan, dan entri glosarium. Tampilan default menunjukkan komentar dan memungkinkan penerjemah untuk berkomunikasi, mengangkat masalah, atau melaporkan terjemahan yang salah.
 
-Dengan menggunakan tombol di atas, Anda juga dapat beralih ke Translation Memory, tempat Anda dapat mencari terjemahan yang ada, atau ke Glosarium, yang terdiri dari deskripsi dan terjemahan standar istilah utama.
+Dengan menggunakan tombol di bagian atas, Anda juga dapat beralih ke Memori Terjemahan, tempat Anda dapat mencari terjemahan yang ada, atau ke Glosarium, yang berisi deskripsi dan terjemahan standar dari istilah-istilah utama.
 
-Ingin mempelajari selengkapnya? Jangan ragu untuk memeriksa [dokumentasi tentang menggunakan editor online Crowdin](https://support.crowdin.com/online-editor/)
+Ingin mempelajari lebih lanjut? Jangan ragu untuk memeriksa [dokumentasi tentang penggunaan editor online Crowdin](https://support.crowdin.com/online-editor/)
 
 ### Proses peninjauan {#review-process}
 
-Setelah Anda menyelesaikan terjemahan (yaitu, semua file untuk satu kelompok konten menunjukkan 100%), layanan terjemahan profesional kami akan meninjau (dan mungkin mengedit) konten tersebut. Setelah peninjauan selesai (yaitu kemajuan peninjauan sudah 100%), kami akan menambahkannya ke situs web.
+Setelah Anda menyelesaikan terjemahan (yaitu, semua file untuk keranjang konten menampilkan 100%), layanan terjemahan profesional kami akan meninjau (dan berpotensi mengedit) konten tersebut. Setelah peninjauan selesai (yaitu, kemajuan peninjauan adalah 100%), kami akan menambahkannya ke situs web.
 
 <Alert variant="update">
 <AlertEmoji text=":warning:"/>
 <AlertContent>
-  Harap tidak menggunakan terjemahan mesin untuk menerjemahkan proyek tersebut. Semua terjemahan akan ditinjau sebelum ditambahkan ke situs web. Jika terjemahan yang Anda sarankan ternyata merupakan terjemahan mesin, terjemahan tersebut akan ditolak dan kontributor yang sering menggunakan terjemahan mesin akan dikeluarkan dari proyek.
+  Tolong jangan gunakan terjemahan mesin untuk menerjemahkan proyek ini. Semua terjemahan akan ditinjau sebelum ditambahkan ke situs web. Jika terjemahan yang Anda sarankan diketahui merupakan hasil terjemahan mesin, terjemahan tersebut akan ditolak dan kontributor yang sering menggunakan terjemahan mesin akan dikeluarkan dari proyek.
 </AlertContent>
 </Alert>
 
 ### Hubungi kami {#get-in-touch}
 
-Ada pertanyaan? Atau ingin berkolaborasi dengan tim kami atau penerjemah lainnya? Silakan posting di kanal #translations dari server [Discord ethereum.org](https://discord.gg/ethereum-org) kami
+Apakah Anda memiliki pertanyaan? Atau ingin berkolaborasi dengan tim kami dan penerjemah lainnya? Silakan posting di saluran #translations di [server Discord ethereum.org](https://discord.gg/ethereum-org) kami
 
 Anda juga dapat menghubungi kami di translations@ethereum.org
 

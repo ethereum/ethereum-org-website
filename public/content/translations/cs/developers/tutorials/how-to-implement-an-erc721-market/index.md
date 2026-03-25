@@ -4,6 +4,7 @@ description: "Jak dát tokenizované položky k prodeji na decentralizovanou inz
 author: "Alberto Cuesta Cañada"
 tags: [ "chytré kontrakty", "erc-721", "solidity", "tokeny" ]
 skill: intermediate
+breadcrumb: "ERC-721 tržiště"
 lang: cs
 published: 2020-03-19
 source: Hackernoon

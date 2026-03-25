@@ -6,6 +6,7 @@ lang: de
 tags:
   ["solidity", "smart contracts", "security", "testing", "formal verification"]
 skill: advanced
+breadcrumb: "Manticore"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

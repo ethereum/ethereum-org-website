@@ -8,6 +8,7 @@ tags:
   - "Solidity"
   - "erc-20"
 skill: beginner
+breadcrumb: "Basi ERC-20"
 lang: it
 published: 2020-04-05
 source: EthereumDev

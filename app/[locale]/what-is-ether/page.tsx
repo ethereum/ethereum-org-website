@@ -27,6 +27,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import GasTable from "./_components/GasTable"
 import WhatIsEtherPageJsonLD from "./page-jsonld"
 
+import { getEthPrice, getGasPriceData } from "@/lib/data"
 import heroImg from "@/public/images/eth.png"
 import ethOrgLogo from "@/public/images/eth-org-logo.png"
 import developersHubHero from "@/public/images/heroes/developers-hub-hero.png"
@@ -42,8 +43,20 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     namespace: "page-what-is-ether",
   })
 
-  const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo("what-is-ether", locale as Lang)
+  const [
+    { contributors, lastEditLocaleTimestamp },
+    gasPriceData,
+    ethPriceData,
+  ] = await Promise.all([
+    getAppPageContributorInfo("what-is-ether", locale as Lang),
+    getGasPriceData(),
+    getEthPrice(),
+  ])
+
+  const gasTableInitialData =
+    gasPriceData && ethPriceData && !("error" in ethPriceData)
+      ? { gasPrice: gasPriceData.gasPrice, ethPriceUSD: ethPriceData.value }
+      : null
 
   const heroProps: ContentHeroProps = {
     breadcrumbs: {
@@ -400,7 +413,24 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                   }
                 )}
               </p>
-              <GasTable />
+              <GasTable
+                labels={{
+                  transactionType: t(
+                    "page-what-is-ether-gas-table-transaction-type"
+                  ),
+                  typicalCostRange: t(
+                    "page-what-is-ether-gas-table-typical-cost-range"
+                  ),
+                  estimatedGasUnits: t(
+                    "page-what-is-ether-gas-table-estimated-gas-units"
+                  ),
+                  row1: t("page-what-is-ether-gas-table-row-1-1"),
+                  row2: t("page-what-is-ether-gas-table-row-2-1"),
+                  row3: t("page-what-is-ether-gas-table-row-3-1"),
+                }}
+                locale={locale}
+                initialData={gasTableInitialData}
+              />
             </div>
           </Section>
 

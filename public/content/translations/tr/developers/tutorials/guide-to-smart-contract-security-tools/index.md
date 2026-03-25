@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: tr
 tags: [ "solidity", "akıllı kontratlar", "güvenlik" ]
 skill: intermediate
+breadcrumb: "Güvenlik araçları"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

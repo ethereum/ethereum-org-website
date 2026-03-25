@@ -7,6 +7,7 @@ tags:
   - "inteligentne kontrakty"
   - "ochrona"
 skill: intermediate
+breadcrumb: "Zasady bezpieczeństwa"
 lang: pl
 published: 2020-09-06
 source: Tworzenie bezpiecznych kontraktów

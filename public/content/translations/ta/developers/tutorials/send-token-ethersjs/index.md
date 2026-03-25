@@ -4,6 +4,7 @@ description: "ethers.js-ஐப் பயன்படுத்தி டோக்
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "டோக்கன்கள்" ]
 skill: beginner
+breadcrumb: "டோக்கன் அனுப்பு"
 lang: ta
 published: 2021-04-06
 ---

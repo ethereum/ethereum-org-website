@@ -4,6 +4,7 @@ description: "یہ ٹیوٹوریل بیان کرتا ہے کہ MetaMask پر م
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
+breadcrumb: "والٹ میں NFT دیکھیں"
 lang: ur-in
 published: 2021-04-22
 ---

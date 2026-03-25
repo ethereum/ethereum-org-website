@@ -5,6 +5,7 @@ author: "EthereumOnArm"
 tags: ["clients", "execution layer", "consensus layer", "nodes"]
 lang: de
 skill: intermediate
+breadcrumb: "Raspberry Pi-Node"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

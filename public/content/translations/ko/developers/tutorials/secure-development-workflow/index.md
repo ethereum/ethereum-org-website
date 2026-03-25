@@ -4,6 +4,7 @@ description: "안전한 스마트 계약 작성을 위한 워크플로 제안"
 author: "Trailofbits"
 tags: [ "스마트 컨트랙트", "보안", "Solidity" ]
 skill: intermediate
+breadcrumb: "보안 체크리스트"
 lang: ko
 published: 2020-09-07
 source: Building secure contracts

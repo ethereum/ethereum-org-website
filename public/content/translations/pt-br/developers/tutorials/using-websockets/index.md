@@ -5,6 +5,7 @@ author: "Elan Halpern"
 lang: pt-br
 tags: [ "Alchemy", "websocket", "consultando", "JavaScript" ]
 skill: beginner
+breadcrumb: "WebSockets"
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01

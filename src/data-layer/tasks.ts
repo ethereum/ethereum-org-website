@@ -20,6 +20,7 @@ import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
 import { fetchEthereumStablecoinsMcap } from "./fetchers/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "./fetchers/fetchEthPrice"
 import { fetchEvents } from "./fetchers/fetchEvents"
+import { fetchGasPrice } from "./fetchers/fetchGasPrice"
 import { fetchGFIs } from "./fetchers/fetchGFIs"
 import { fetchGitHistory } from "./fetchers/fetchGitHistory"
 import { fetchGitHubContributors } from "./fetchers/fetchGitHubContributors"
@@ -57,6 +58,7 @@ export const KEYS = {
   ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
   ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
   ETH_PRICE: "fetch-eth-price",
+  GAS_PRICE: "fetch-gas-price",
   TOTAL_ETH_STAKED: "fetch-total-eth-staked",
   TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
   STABLECOINS_DATA: "fetch-stablecoins-data",
@@ -86,14 +88,15 @@ const DAILY: TaskDef[] = [
   [KEYS.EVENTS, fetchEvents],
   [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
+  [KEYS.BEACONCHAIN, fetchBeaconChain],
 ]
 
 const HOURLY: TaskDef[] = [
-  [KEYS.BEACONCHAIN, fetchBeaconChain],
   [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.ETH_PRICE, fetchEthPrice],
+  [KEYS.GAS_PRICE, fetchGasPrice],
   [KEYS.TOTAL_ETH_STAKED, fetchTotalEthStaked],
   [KEYS.TOTAL_VALUE_LOCKED, fetchTotalValueLocked],
   [KEYS.STABLECOINS_DATA, fetchStablecoinsData],
@@ -104,11 +107,7 @@ function createDataTask([key, fetchFn]: TaskDef) {
   return task({
     id: key,
     retry: {
-      maxAttempts: 3,
-      factor: 2,
-      minTimeoutInMs: 2000,
-      maxTimeoutInMs: 30000,
-      randomize: true,
+      maxAttempts: 2,
     },
     catchError: async ({ error }) => {
       logger.error(`[${key}] failed`, { error })

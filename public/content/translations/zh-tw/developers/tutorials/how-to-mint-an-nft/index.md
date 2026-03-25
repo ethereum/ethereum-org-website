@@ -4,6 +4,7 @@ description: "本教學說明如何在以太坊區塊鏈上，使用我們的智
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "alchemy", "solidity", "smart contracts" ]
 skill: beginner
+breadcrumb: "鑄造NFT"
 lang: zh-tw
 published: 2021-04-22
 ---

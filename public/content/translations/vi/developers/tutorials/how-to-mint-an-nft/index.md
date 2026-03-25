@@ -10,6 +10,7 @@ tags:
     "hợp đồng thông minh"
   ]
 skill: beginner
+breadcrumb: "Đúc NFT"
 lang: vi
 published: 2021-04-22
 ---

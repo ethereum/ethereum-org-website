@@ -7,6 +7,7 @@ tags:
   - "smart contract"
   - "sicurezza"
 skill: intermediate
+breadcrumb: "Linee guida sicurezza"
 lang: it
 published: 2020-09-06
 source: Creare contratti sicuri

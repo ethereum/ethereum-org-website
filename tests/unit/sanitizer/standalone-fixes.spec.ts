@@ -48,6 +48,7 @@ const {
   fixGuillemetsInHtmlTags,
   fixMissingComponentClosingTags,
   fixMangledDocLinks,
+  fixBrandCapitalization,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -433,6 +434,20 @@ test.describe("Standalone Fixes", () => {
       expect(content).toContain("text\n</ExpandableCard>")
       expect(content).toContain("more\n</Alert>")
     })
+
+    test("preserves blank lines before closing tags", () => {
+      const input =
+        "Some paragraph text.\n\n</ExpandableCard>\n\n<ExpandableCard"
+      const { content } = fixBlockComponentLineBreaks(input)
+      expect(content).toBe(input)
+    })
+
+    test("preserves blank lines between AlertContent and Alert closing tags", () => {
+      const input = "</AlertContent>\n</Alert>"
+      const { content } = fixBlockComponentLineBreaks(input)
+      // Should NOT insert a blank line between them
+      expect(content).toBe(input)
+    })
   })
 
   test.describe("normalizeFrontmatterDates", () => {
@@ -506,6 +521,46 @@ test.describe("Standalone Fixes", () => {
       const input = "some text\n</section>"
       const result = normalizeBlockHtmlLines(input)
       expect(result).toBe(input)
+    })
+
+    test("preserves single-line div with content (inline usage)", () => {
+      const input =
+        "<div>Founders, need help? [Head over to Support](/founders/)</div>"
+      const result = normalizeBlockHtmlLines(input)
+      expect(result).toBe(input)
+    })
+
+    test("preserves single-line div with nested HTML", () => {
+      const input =
+        "<div><b>Wallet installed?</b><br/>Learn how to use it.</div>"
+      const result = normalizeBlockHtmlLines(input)
+      expect(result).toBe(input)
+    })
+
+    test("preserves single-line div inside Alert component", () => {
+      const input = [
+        '<Alert variant="update" className="mt-8">',
+        '<Emoji text="\uD83C\uDF97\uFE0F" />',
+        "<div>Para pendiri, butuh bantuan? [Kunjungi](/founders/)</div>",
+        "</Alert>",
+      ].join("\n")
+      const result = normalizeBlockHtmlLines(input)
+      expect(result).toBe(input)
+    })
+
+    test("still splits multi-line div closing tag", () => {
+      const input = "line one\nline two</div>"
+      const result = normalizeBlockHtmlLines(input)
+      expect(result).toBe("line one\nline two\n</div>")
+    })
+
+    test("idempotent on already-correct content", () => {
+      const input =
+        "<div>Founders, need help? [Head over to Support](/founders/)</div>"
+      const result1 = normalizeBlockHtmlLines(input)
+      const result2 = normalizeBlockHtmlLines(result1)
+      expect(result1).toBe(result2)
+      expect(result1).toBe(input)
     })
   })
 
@@ -1823,30 +1878,28 @@ author: Ori Pomerantz
 
   test.describe("fixGuillemetsInHtmlTags", () => {
     test("fixes right guillemet replacing > after quoted attribute", () => {
-      const input =
-        '<span dir="ltr"\u00BB$100,000</span>'
+      const input = '<span dir="ltr"\u00BB$100,000</span>'
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe('<span dir="ltr">$100,000</span>')
       expect(fixCount).toBe(1)
     })
 
     test("fixes right guillemet replacing > at end of self-closing tag", () => {
-      const input = '<br /\u00BB'
+      const input = "<br /\u00BB"
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe("<br />")
       expect(fixCount).toBe(1)
     })
 
     test("fixes right guillemet replacing > in closing tag", () => {
-      const input = '</span\u00BB'
+      const input = "</span\u00BB"
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe("</span>")
       expect(fixCount).toBe(1)
     })
 
     test("fixes left guillemet replacing < in opening tag", () => {
-      const input =
-        '\u00ABspan dir="ltr">$100,000</span>'
+      const input = '\u00ABspan dir="ltr">$100,000</span>'
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe('<span dir="ltr">$100,000</span>')
       expect(fixCount).toBe(1)
@@ -1877,7 +1930,7 @@ author: Ori Pomerantz
     })
 
     test("fixes guillemet in i tag", () => {
-      const input = '<i\u00BBtext</i>'
+      const input = "<i\u00BBtext</i>"
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe("<i>text</i>")
       expect(fixCount).toBe(1)
@@ -1891,8 +1944,7 @@ author: Ori Pomerantz
     })
 
     test("leaves legitimate guillemet pairs unchanged", () => {
-      const input =
-        "\u00ABThe knowledge complexity\u00BB"
+      const input = "\u00ABThe knowledge complexity\u00BB"
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -1922,6 +1974,85 @@ author: Ori Pomerantz
     test("skips inline code", () => {
       const input = 'Use `<span dir="ltr"\u00BB` for RTL'
       const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves guillemet-quoted words unchanged (not HTML tags)", () => {
+      // Ukrainian/Russian use guillemets as quotation marks.
+      // Words like \u00ABcat\u00BB, \u00ABdog\u00BB, \u00ABnull\u00BB are quotes, not tags.
+      const input =
+        "- \u0440\u044F\u0434\u043E\u043A, \u0449\u043E \u043C\u0456\u0441\u0442\u0438\u0442\u044C \u0441\u043B\u043E\u0432\u043E \u00ABcat\u00BB;"
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves guillemet-quoted multi-letter words unchanged", () => {
+      const input =
+        "- \u0440\u044F\u0434\u043E\u043A \u00ABdog\u00BB = [ 0x83 ]\n- \u0441\u043F\u0438\u0441\u043E\u043A [ \u00ABcat\u00BB, \u00ABdog\u00BB ]"
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("still fixes actual HTML tags like \u00ABi\u00BB but not \u00ABcat\u00BB", () => {
+      // \u00ABi\u00BB is a known HTML tag and should be fixed
+      const input = "\u00ABi\u00BBtext</i>"
+      const { content, fixCount } = fixGuillemetsInHtmlTags(input)
+      expect(content).toBe("<i>text</i>")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixBrandCapitalization", () => {
+    test("fixes Github to GitHub", () => {
+      const input = "Check the [Github](https://github.com/example) repo"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe(
+        "Check the [GitHub](https://github.com/example) repo"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes Metamask to MetaMask", () => {
+      const input = "Install Metamask from the store"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe("Install MetaMask from the store")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does NOT modify github.com URLs", () => {
+      const input = "Visit https://github.com/ethereum"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does NOT modify github.io URLs", () => {
+      const input = "See blog.ethereum.github.io for docs"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\nGithub repo\n```"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("fixes multiple occurrences", () => {
+      const input = "Use Github and Metamask"
+      const { content, fixCount } = fixBrandCapitalization(input)
+      expect(content).toBe("Use GitHub and MetaMask")
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves already-correct casing unchanged", () => {
+      const input = "Use GitHub and MetaMask"
+      const { content, fixCount } = fixBrandCapitalization(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
@@ -1998,16 +2129,14 @@ author: Ori Pomerantz
     })
 
     test("skips fenced code blocks", () => {
-      const input =
-        '```\n<SocialListItem socialIcon="a">unclosed\n```'
+      const input = '```\n<SocialListItem socialIcon="a">unclosed\n```'
       const { content, fixCount } = fixMissingComponentClosingTags(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
 
     test("skips inline code", () => {
-      const input =
-        'Use `<SocialListItem socialIcon="a">unclosed` as example'
+      const input = 'Use `<SocialListItem socialIcon="a">unclosed` as example'
       const { content, fixCount } = fixMissingComponentClosingTags(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -2044,7 +2173,7 @@ author: Ori Pomerantz
     })
 
     test("leaves regular markdown links unchanged", () => {
-      const input = '[some text](https://example.com)'
+      const input = "[some text](https://example.com)"
       const { content, fixCount } = fixMangledDocLinks(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)

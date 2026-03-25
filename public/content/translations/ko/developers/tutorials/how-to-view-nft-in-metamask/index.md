@@ -4,6 +4,7 @@ description: "이 튜토리얼은 MetaMask에서 기존 NFT를 보는 방법을 
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
+breadcrumb: "지갑에서 NFT 보기"
 lang: ko
 published: 2021-04-22
 ---

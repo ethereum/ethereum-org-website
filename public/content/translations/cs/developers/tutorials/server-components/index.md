@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: cs
 tags: [ "agent", "server", "offchain" ]
 skill: beginner
+breadcrumb: "Serverové komponenty"
 published: 2024-07-15
 ---
 

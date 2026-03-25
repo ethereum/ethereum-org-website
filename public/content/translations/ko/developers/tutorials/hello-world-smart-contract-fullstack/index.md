@@ -14,6 +14,7 @@ tags:
     "트랜잭션"
   ]
 skill: beginner
+breadcrumb: "Hello World 풀스택"
 lang: ko
 published: 2021-10-25
 ---
