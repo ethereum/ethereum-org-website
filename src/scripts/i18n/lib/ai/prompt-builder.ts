@@ -41,7 +41,7 @@ export function buildTranslationPrompt(options: PromptOptions): string {
   const group = getLanguageGroup(targetLanguage)
   const siteNotes = getSiteSpecificNotes(group)
   const glossarySection = formatGlossary(glossaryTerms)
-  const formatRules = getFormatRules(fileType, group)
+  const formatRules = getFormatRules(fileType, group, targetLanguage)
   const sanitizerHints = getSanitizerHints()
 
   return `Translate this ${fileType} file from English to ${languageName} (${targetLanguage}).
@@ -65,7 +65,8 @@ Output ONLY the translated file content. No explanations, no markdown wrapping, 
 
 function getFormatRules(
   fileType: "markdown" | "json",
-  group: LanguageGroup
+  group: LanguageGroup,
+  targetLanguage: string
 ): string {
   if (fileType === "json") {
     return `Format rules:
@@ -83,7 +84,7 @@ function getFormatRules(
       : "Transliterate the author field into the target script (phonetic, not semantic). Pseudonyms or GitHub handles (e.g., qbzzt, jdourlens) must stay in Latin."
 
   return `Format rules:
-- Frontmatter: translate the values of title, description, and breadcrumb. ${authorRule} Keep all other fields (tags, skill, published, lang, sidebarDepth) unchanged. Preserve YAML structure exactly.
+- Frontmatter: translate the values of title, description, and breadcrumb. ${authorRule} Change the \`lang\` field to \`${targetLanguage}\`. Keep all other fields (tags, skill, published, sidebarDepth) unchanged. Preserve YAML structure exactly.
 - Preserve all markdown syntax (headings, lists, links, code blocks) and their indentation exactly.
 - Preserve all JSX/HTML components and their attributes exactly.
 - Preserve heading anchor IDs exactly as in English ({#anchor-id}).
