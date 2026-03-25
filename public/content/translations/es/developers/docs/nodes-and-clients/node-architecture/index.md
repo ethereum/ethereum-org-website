@@ -6,7 +6,7 @@ lang: es
 
 Un nodo de Ethereum se compone de dos clientes: un [cliente de ejecución](/developers/docs/nodes-and-clients/#execution-clients) y un [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients). Para que un nodo proponga un nuevo bloque, también debe ejecutar un [cliente validador](#validators).
 
-Cuando Ethereum utilizaba la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/), un cliente de ejecución era suficiente para ejecutar un nodo de Ethereum completo. Sin embargo, desde la implementación de la [prueba de participación](/developers/docs/consensus-mechanisms/pow/), el cliente de ejecución debe utilizarse junto con otro software llamado [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients).
+Cuando Ethereum utilizaba la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/), un cliente de ejecución era suficiente para ejecutar un nodo de Ethereum completo. Sin embargo, desde la implementación de la [prueba de participación](/developers/docs/consensus-mechanisms/pos/), el cliente de ejecución debe utilizarse junto con otro software llamado [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients).
 
 El siguiente diagrama muestra la relación entre los dos clientes Ethereum. Los dos clientes se conectan a sus respectivas redes entre pares (P2P). Se necesitan redes P2P separadas, ya que los clientes de ejecución envían transacciones con protocolo de intercambio de información (o Gossip) a través de su red P2P, lo que les permite administrar su reserva de transacciones local, mientras que los clientes de consenso envían por Gossip bloques de su red P2P, lo que permite el consenso y el crecimiento de la cadena.
 

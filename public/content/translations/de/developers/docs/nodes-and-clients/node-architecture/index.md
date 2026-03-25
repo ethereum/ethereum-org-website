@@ -6,7 +6,7 @@ lang: de
 
 Ein Ethereum-Knoten besteht aus zwei Clients: einem [Ausführungs-Client](/developers/docs/nodes-and-clients/#execution-clients) und einem [Konsens-Client](/developers/docs/nodes-and-clients/#consensus-clients). Damit ein Knoten einen neuen Block vorschlagen kann, muss er auch einen [Validator-Client](#validators) betreiben.
 
-Als Ethereum noch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) verwendete, reichte ein Ausführungs-Client aus, um einen vollständigen Ethereum-Knoten zu betreiben. Seit der Implementierung von [Proof-of-Stake](/developers/docs/consensus-mechanisms/pow/) muss der Ausführungs-Client jedoch zusammen mit einer anderen Software, einem sogenannten [Konsens-Client](/developers/docs/nodes-and-clients/#consensus-clients), verwendet werden.
+Als Ethereum noch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) verwendete, reichte ein Ausführungs-Client aus, um einen vollständigen Ethereum-Knoten zu betreiben. Seit der Implementierung von [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) muss der Ausführungs-Client jedoch zusammen mit einer anderen Software, einem sogenannten [Konsens-Client](/developers/docs/nodes-and-clients/#consensus-clients), verwendet werden.
 
 Das folgende Diagramm zeigt die Verbindung zwischen zwei Ethereum-Clients. Die beiden Clients verbinden sich mit ihren eigenen Peer-to-Peer(P2P)-Netzwerken. Es werden separate P2P-Netzwerke benötigt, da der Ausführungsclient Transaktionen über ihr P2P Netzwerk kommuniziert, wodurch sie ihren lokalen Transaktionspool verwalten können. Konsensclients können dabei Blöcke über ihr eigenes P2P-Netzwerk kommunizieren, was Konsens und Wachstum der Blockchain ermöglicht.
 

@@ -6,7 +6,7 @@ lang: zh
 
 一个以太坊节点由两个客户端组成：一个[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)和一个[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)。 节点若要提议新区块，还必须运行一个[验证者客户端](#validators)。
 
-当以太坊使用[工作量证明](/developers/docs/consensus-mechanisms/pow/)时，一个执行客户端就足以运行一个完整的以太坊节点。 然而，自实施[权益证明](/developers/docs/consensus-mechanisms/pow/)以来，执行客户端必须与另一个名为[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)的软件一起使用。
+当以太坊使用[工作量证明](/developers/docs/consensus-mechanisms/pow/)时，一个执行客户端就足以运行一个完整的以太坊节点。 然而，自实施[权益证明](/developers/docs/consensus-mechanisms/pos/)以来，执行客户端必须与另一个名为[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)的软件一起使用。
 
 以下图表显示了两种以太坊客户端之间的关系。 这两种客户端与其各自的点对点（对等）网络连接。 分离对等网络是有必要的，因为执行客户端通过它们的对等网络广播交易，确保它们能够管理自己的本地交易池，同时共识客户端通过它们的对等网络广播区块，保证共识和链增长。
 
