@@ -11,7 +11,7 @@ summaryPoint2: "Dezentralisierte soziale Netzwerke schützen die Privatsphäre d
 summaryPoint3: "Token und NFTs schaffen neue Möglichkeiten zur Monetarisierung von Inhalten."
 ---
 
-Soziale Netzwerke spielen eine massive Rolle in unserer täglichen Kommunikation und Interaktion. Die zentralisierte Kontrolle dieser Plattformen hat jedoch viele Probleme verursacht: Datenschutzverletzungen, Serverausfälle, De-Platforming, Zensur und Verletzungen der Privatsphäre sind einige der Kompromisse, die soziale Medien oft eingehen. Um diese Probleme zu bekämpfen, entwickeln Entwickler soziale Netzwerke auf [Ethereum](). Dezentralisierte soziale Netzwerke können viele der Probleme traditioneller sozialer Netzwerkplattformen beheben und die allgemeine Nutzererfahrung verbessern.
+Soziale Netzwerke spielen eine massive Rolle in unserer täglichen Kommunikation und Interaktion. Die zentralisierte Kontrolle dieser Plattformen hat jedoch viele Probleme verursacht: Datenschutzverletzungen, Serverausfälle, De-Platforming, Zensur und Verletzungen der Privatsphäre sind einige der Kompromisse, die soziale Medien oft eingehen. Um diese Probleme zu bekämpfen, entwickeln Entwickler soziale Netzwerke auf [Ethereum](/). Dezentralisierte soziale Netzwerke können viele der Probleme traditioneller sozialer Netzwerkplattformen beheben und die allgemeine Nutzererfahrung verbessern.
 
 ## Was sind dezentralisierte soziale Netzwerke? {#what-are-decentralized-social-networks}
 
