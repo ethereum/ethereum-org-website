@@ -2,7 +2,7 @@
 title: "Uniswap-v2 कॉन्ट्रॅक्ट वॉक-थ्रू"
 description: Uniswap-v2 कॉन्ट्रॅक्ट कसे काम करते? ते तसे का लिहिले आहे?
 author: Ori Pomerantz
-tags: ["solidity", "डॅप्स"]
+tags: ["solidity", "dapps"]
 skill: intermediate
 breadcrumb: Uniswap v2 वॉक-थ्रू
 published: 2021-05-01
