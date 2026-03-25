@@ -58,6 +58,8 @@
 
 | 47 | Unquoted frontmatter value with YAML-special characters | it #17841 | `description: Una spiegazione degli account di Ethereum: le loro strutture dati...` -- colon-space (`: `) inside unquoted YAML value triggers `YAMLParseError: Nested mappings are not allowed`; existing `quoteFrontmatterNonAscii` only quotes values with non-ASCII chars, missing pure-ASCII values with YAML-special sequences | Critical -- breaks build |
 
+| 48 | `collapseInlineHtmlFromEnglish` matches across code fences and newlines | it #17841 | Inside ````tsx` fence: `<div>{error?.message}</div>\n \n</div>` -- regex `\s*</div>` crosses the blank line and collapses a separate `</div>` onto the previous line, producing `<div>{error?.message}</div></div>`. Two bugs: (1) no code fence protection, (2) `\s*` matches newlines allowing cross-line grabs | High -- corrupts code examples |
+
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
 These patterns are covered by existing fix functions and should have regression tests:

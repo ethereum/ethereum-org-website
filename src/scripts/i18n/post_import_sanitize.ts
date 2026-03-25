@@ -1832,8 +1832,11 @@ function collapseInlineHtmlFromEnglish(
   englishMd: string
 ): { content: string; fixCount: number } {
   const inlineTags = ["div", "span", "p", "strong", "em"]
-  let content = translatedMd
   let fixCount = 0
+
+  // Split on code fences to protect code blocks
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = translatedMd.split(codeBlockPattern)
 
   // Build a set of lines in English where tag opens and closes on same line
   const englishLines = englishMd.split("\n")
@@ -1857,28 +1860,32 @@ function collapseInlineHtmlFromEnglish(
     // In translated content, find cases where:
     // - Opening tag + content is on one line (content may include nested tags)
     // - Newline follows
-    // - Closing tag is on the next line (possibly with leading whitespace)
-    // Pattern: <tag...>content-with-possible-nested-tags\n  </tag>
+    // - Closing tag is on the NEXT line (horizontal whitespace only, no newline crossing)
+    // Use [ \t]* instead of \s* to prevent matching across blank lines
     const translatedMultiLineRe = new RegExp(
-      `(<${tag}[^>]*>)([^\\n]+)\\n(\\s*</${tag}>)`,
+      `(<${tag}[^>]*>)([^\\n]+)\\n([ \\t]*</${tag}>)`,
       "g"
     )
 
-    content = content.replace(
-      translatedMultiLineRe,
-      (fullMatch, openTag, innerContent, closeTagLine) => {
-        // Check if this opening tag should be single-line per English
-        if (englishSingleLineSet.has(openTag)) {
-          fixCount++
-          // Collapse: opening tag + trimmed content + closing tag (no newline)
-          return `${openTag}${innerContent.trim()}${closeTagLine.trim()}`
+    for (let i = 0; i < parts.length; i++) {
+      if (i % 2 === 1) continue // Skip code blocks
+
+      parts[i] = parts[i].replace(
+        translatedMultiLineRe,
+        (fullMatch, openTag, innerContent, closeTagLine) => {
+          // Check if this opening tag should be single-line per English
+          if (englishSingleLineSet.has(openTag)) {
+            fixCount++
+            // Collapse: opening tag + trimmed content + closing tag (no newline)
+            return `${openTag}${innerContent.trim()}${closeTagLine.trim()}`
+          }
+          return fullMatch
         }
-        return fullMatch
-      }
-    )
+      )
+    }
   }
 
-  return { content, fixCount }
+  return { content: parts.join(""), fixCount }
 }
 
 /**
