@@ -289,7 +289,7 @@ Die Istanbul-Fork:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>die Optimierung der Gaspreis-Verfahrenscodes auf der Grundlage des Gasverbrauchs.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>reduziert die Kosten für „CallData“, mit dem Ziel, mehr Daten in den Blöcken zu implementieren – gut für [Layer-2-Skalierbarkeit](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>
-weitere Änderungen der Gaspreisverfahrenscodes.</li>
+weitere Änderungen der Gaspreisverfahrenscodes.</em></li>
 </ul>
 
 </ExpandableCard>
@@ -441,7 +441,7 @@ Die Homestead-Fork, die in die Zukunft schaute. Sie enthielt mehrere Protokollä
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>ermöglicht es Bearbeitungen bei der Entwicklung von Smart Contracts vorzunehmen.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>
-führt einen neuen Verfahrenscode ein: <code>DELEGATECALL</code></li>
+führt einen neuen Verfahrenscode ein: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>präsentiert DEVP2P zur Erfüllung der Kompatibilitätsanforderungen</em></li>
 </ul>
 

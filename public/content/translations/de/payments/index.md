@@ -62,7 +62,7 @@ In Ländern, in denen die Zahlungsmittel vom Rest der Welt abgeschnitten wurden,
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Erstellen Sie noch heute Ihr Ethereum-Konto mit einer Wallet-App.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Loslegen
   </ButtonLink>
 </AlertContent>
