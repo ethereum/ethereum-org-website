@@ -22,7 +22,7 @@ DeSci має на меті створити екосистему, у якій у
 
 ### Хуан Бенет — Рух DeSci
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## Як DeSci покращує науку {#desci-improves-science}
 
