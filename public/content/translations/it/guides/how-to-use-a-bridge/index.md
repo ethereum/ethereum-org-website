@@ -1,73 +1,73 @@
 ---
-title: Come collegare i token al livello 2
-description: Una guida a come spostare i token da Ethereum al livello 2 utilizzando un ponte.
+title: Come trasferire token al livello 2 tramite un ponte
+description: Una guida che spiega come spostare i token da Ethereum al livello 2 utilizzando un ponte.
 lang: it
 ---
 
-# Come collegare i token al livello 2
+# Come trasferire token al livello 2 tramite un ponte
 
-Se c'è molto traffico su Ethereum, può diventare costoso. Una soluzione è creare nuovi "livelli", ossia reti differenti che operano in modi similari alla stessa Ethereum. Questi cosiddetti Livelli 2 aiutano a ridurre la congestione e i costi su Ethereum elaborando molte altre transazioni a commissioni inferiori, memorizzandone i risultati su Ethereum soltanto una volta ogni tanto. Come tali, questi livelli 2 ci consentono di effettuare transazioni a maggiori velocità e costi ridotti. Molti progetti di criptovalute popolari si stanno spostando ai livelli 2 per questi vantaggi. Il metodo più semplice per spostare i token da Ethereum al livello 2 è utilizzare un ponte.
+Se c'è molto traffico su Ethereum, può diventare costoso. Una soluzione a questo problema è creare nuovi "livelli": ovvero, reti diverse che operano in modi simili a Ethereum stesso. Questi cosiddetti livelli 2 aiutano a ridurre la congestione e i costi su Ethereum elaborando molte più transazioni a commissioni inferiori, e memorizzando il risultato di queste su Ethereum solo di tanto in tanto. Come tali, questi livelli 2 ci consentono di effettuare transazioni con maggiore velocità e costi ridotti. Molti progetti crypto popolari si stanno spostando sui livelli 2 a causa di questi vantaggi. Il modo più semplice per spostare i token da Ethereum al livello 2 è utilizzare un ponte.
 
-**Prerequisiti:**
+**Prerequisiti:** 
 
-- possedere un portafoglio di criptovalute; a tale scopo puoi seguire questo tutorial: [Come creare un conto di Ethereum](/guides/how-to-create-an-ethereum-account/)
+- avere un portafoglio crypto: se non ne hai uno, segui questa guida per [creare un account di Ethereum](/guides/how-to-create-an-ethereum-account/)
 - aggiungere fondi al tuo portafoglio
 
 ## 1. Determina quale rete di livello 2 desideri utilizzare
 
-Puoi scoprire di più sui diversi progetti e i collegamenti importanti sulla nostra [pagina del livello 2](/layer-2/).
+Puoi scoprire di più sui diversi progetti e sui link importanti nella nostra [pagina del livello 2](/layer-2/).
 
 ## 2. Vai al ponte selezionato
 
 Alcuni livelli 2 popolari sono:
 
-- [Ponte Arbitrum](https://bridge.arbitrum.io/?l2ChainId=42161)
-- [Ponte Optimism](https://app.optimism.io/bridge/deposit)
-- [Ponte della rete Boba](https://gateway.boba.network/)
+- [Ponte di Arbitrum](https://portal.arbitrum.io/bridge?l2ChainId=42161)
+- [Ponte di Optimism](https://app.optimism.io/bridge/deposit)
+- [Ponte della rete Boba](https://hub.boba.network/)
 
 ## 3. Connettiti al ponte con il tuo portafoglio
 
-Assicurati che il tuo portafoglio sia connesso alla Rete Principale di Ethereum. Altrimenti, il sito web ti richiederà automaticamente di cambiare rete.
+Assicurati che il tuo portafoglio sia connesso alla rete principale di Ethereum. Se non lo è, il sito web ti chiederà automaticamente di cambiare rete.
 
-![Interfaccia comune per collegare token](./bridge1.png)
+![Interfaccia comune per il trasferimento di token tramite ponte](./bridge1.png)
 
 ## 4. Specifica l'importo e sposta i fondi
 
-Ricontrolla l'importo che otterrai in cambio sulla rete di livello 2 e le commissioni per evitare spiacevoli sorprese.
+Controlla l'importo che otterrai in cambio sulla rete di livello 2 e le commissioni per evitare spiacevoli sorprese.
 
-![Interfaccia comune per collegare token](./bridge2.png)
+![Interfaccia comune per il trasferimento di token tramite ponte](./bridge2.png)
 
 ## 5. Conferma la transazione nel tuo portafoglio
 
-Dovrai pagare una commissione sotto forma di ETH per elaborare la transazione.
+Dovrai pagare una commissione (chiamata [gas](/glossary/#gas)) sotto forma di ETH per l'elaborazione della transazione.
 
-![Interfaccia comune per collegare token](./bridge3.png)
+![Interfaccia comune per il trasferimento di token tramite ponte](./bridge3.png)
 
-## 6. Attendi che i tuoi fondi siano spostati
+## 6. Attendi che i tuoi fondi vengano spostati
 
-Questo procedimento non dovrebbe richiedere più di 10 minuti.
+Questo processo non dovrebbe richiedere più di 10 minuti.
 
-## 7. Aggiungi la rete di livello 2 selezionata al tuo portafoglio (facoltativo)
+## 7. Aggiungi la rete di livello 2 selezionata al tuo portafoglio (opzionale)
 
-Puoi utilizzare [chainlist.org](http://chainlist.org) per trovare i dettagli RPC della rete. Una volta che la rete è aggiunta e la transazione è terminata, dovresti visualizzare i token nel tuo portafoglio.
+Puoi usare [chainlist.org](http://chainlist.org) per trovare i dettagli RPC della rete. Una volta aggiunta la rete e terminata la transazione, dovresti vedere i token nel tuo portafoglio.
 <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Vuoi scoprire di più?</div>
+  <div>Vuoi saperne di più?</div>
   <ButtonLink href="/guides/">
-    Visualizza le altre guide
+    Consulta le nostre altre guide
   </ButtonLink>
 </AlertContent>
 </Alert>
 
 ## Domande frequenti
 
-### E se ho dei fondi su una borsa?
+### E se avessi dei fondi su un exchange?
 
-Dovresti riuscire a prelevare su qualche livello 2 direttamente da una borsa. Consulta la sezione "Sposta al livello 2" della nostra [Pagina del Livello 2](/layer-2/) per ulteriori informazioni.
+Potresti essere in grado di prelevare su alcuni livelli 2 direttamente da un exchange. Dai un'occhiata alla sezione "Passa al livello 2" della nostra [pagina del livello 2](/layer-2/) per maggiori informazioni.
 
-### Posso tornare alla Rete Principale di Ethereum dopo aver collegato i miei token al L2?
+### Posso tornare alla rete principale di Ethereum dopo aver trasferito i miei token al L2 tramite ponte?
 
-Sì, puoi sempre spostare nuovamente i tuoi fondi nella Rete Principale utilizzando lo stesso ponte.
+Sì, puoi sempre riportare i tuoi fondi sulla rete principale utilizzando lo stesso ponte.

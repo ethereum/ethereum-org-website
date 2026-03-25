@@ -1,89 +1,90 @@
 ---
-title: Ricompense e sanzioni del proof-of-stake
-description: Scopri di più sugli incentivi del protocollo nel proof-of-stake di Ethereum.
+title: "Ricompense e penalità della prova di stake"
+description: Scopri gli incentivi interni al protocollo nella prova di stake di Ethereum.
 lang: it
 ---
 
-Ethereum è protetta utilizzando la sua criptovaluta nativa, ether (ETH). Gli operatori del nodo che desiderano partecipare alla convalida dei blocchi e all'identificazione della testa della catena, depositano dell'ether nel [contratto di deposito](/staking/deposit-contract/) su Ethereum. Quindi sono pagati in ether per eseguire il software del validatore, che verifica la validità dei nuovi blocchi ricevuti tramite la rete peer-to-peer e applica l'algoritmo di scelta della diramazione per identificare la testa della catena.
+[Ethereum](/) è protetto utilizzando la sua criptovaluta nativa, l'ether (ETH). Gli operatori dei nodi che desiderano partecipare alla convalida dei blocchi e all'identificazione della testa della catena, depositano ether nel [contratto di deposito](/staking/deposit-contract/) su Ethereum. Vengono quindi pagati in ether per eseguire il software del validatore che controlla la validità dei nuovi blocchi ricevuti sulla rete peer-to-peer e applicano l'algoritmo di scelta della biforcazione per identificare la testa della catena.
 
-Esistono due ruoli principali per un validatore: 1) controllare i nuovi blocchi e "attestarne" la validità, 2) proporre nuovi blocchi quando selezionati casualmente dal gruppo totale di validatori. Se il validatore non riesce a svolgere una di queste mansioni quando richiesto, perde un pagamento di ether. Talvolta, inoltre, i validatori sono incaricati di aggregare le firme e partecipare alle commissioni di sincronizzazione.
+Ci sono due ruoli principali per un validatore: 1) controllare i nuovi blocchi e "attestarli" se sono validi, 2) proporre nuovi blocchi quando selezionato casualmente dal pool totale dei validatori. Se il validatore non riesce a svolgere nessuno di questi compiti quando richiesto, perde un pagamento in ether. A volte ai validatori viene anche assegnato il compito di aggregare le firme e partecipare ai comitati di sincronizzazione.
 
-Esistono poi delle azioni molto difficili da compiere per errore e che denotano un intento malevolo, come proporre diversi blocchi per lo stesso slot o attestare più blocchi per lo stesso slot. Questi sono comportamenti "tagliabili" che risultano nel bruciare alcuni importi di ether (fino a 1 ETH) prima che il validatore venga rimosso dalla rete, il che richiede 36 giorni. L'ether del validatore sanzionato si riduce lentamente durante il periodo d'uscita, ma al diciottesimo giorno riceve una "sanzione di correlazione", maggiore quando più validatori sono sanzionati contemporaneamente. La struttura di incentivazione del meccanismo di consenso, dunque, paga per l'onestà, punendo gli utenti malevoli.
+Ci sono anche alcune azioni che sono molto difficili da compiere accidentalmente e indicano un intento malevolo, come proporre più blocchi per lo stesso slot o attestare più blocchi per lo stesso slot. Questi sono comportamenti "punibili" che comportano per il validatore il bruciare di una certa quantità di ether (fino a 1 ETH) prima che il validatore venga rimosso dalla rete, il che richiede 36 giorni. L'ether del validatore punito si esaurisce lentamente durante il periodo di uscita, ma il 18° giorno riceve una "penalità di correlazione" che è maggiore quando più validatori vengono puniti nello stesso periodo. La struttura degli incentivi del meccanismo di consenso paga quindi per l'onestà e punisce i cattivi attori.
 
-Tutte le ricompense e le sanzioni sono applicate una volta all'epoca.
+Tutte le ricompense e le penalità vengono applicate una volta per epoca.
 
-Continua a leggere per ulteriori dettagli...
+Continua a leggere per maggiori dettagli...
 
-## Ricompense e sanzioni {#rewards}
+## Ricompense e penalità {#rewards}
 
 ### Ricompense {#rewards}
 
-I validatori ricevono ricompense quando effettuano voti coerenti con la maggioranza degli altri validatori, quando propongono blocchi e quando partecipano alle commissioni di sincronizzazione. Il valore delle ricompense in ogni epoca è calcolato a partire da una `base_reward` (ricompensa di base). Questa unità fornisce le basi per il calcolo delle ricompense. La`base_reward` rappresenta la ricompensa media ricevuta da un validatore in condizioni ottimali per ogni epoca. Questa è calcolata in base al saldo effettivo del validatore e al numero totale di validatori attivi, come segue:
+I validatori ricevono ricompense quando esprimono voti coerenti con la maggioranza degli altri validatori, quando propongono blocchi e quando partecipano ai comitati di sincronizzazione. Il valore delle ricompense in ogni epoca è calcolato da una `base_reward`. Questa è l'unità di base da cui vengono calcolate le altre ricompense. La `base_reward` rappresenta la ricompensa media ricevuta da un validatore in condizioni ottimali per epoca. Questa viene calcolata dal saldo effettivo del validatore e dal numero totale di validatori attivi come segue:
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
 ```
 
-dove `base_reward_factor` è 64, `base_rewards_per_epoch` è 4 e `sum(active balance)` è l'ether totale in staking tra tutti i validatori attivi.
+dove `base_reward_factor` è 64, `base_rewards_per_epoch` è 4 e `sum(active balance)` è l'ether totale messo in stake tra tutti i validatori attivi.
 
-Ciò significa che la ricompensa di base è proporzionale al saldo effettivo del validatore ed è inversamente proporzionale al numero di validatori sulla rete. Più validatori ci sono, maggiore sarà l'emissione complessiva (poiché `sqrt(N)`), ma minore sarà la `base_reward` per validatore (come `1/sqrt(N)`). Questi fattori influenzano l'APR per un nodo di staking. Leggi la logica alla base nelle [note di Vitalik](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#Base-rewards).
+Questo significa che la ricompensa di base è proporzionale al saldo effettivo del validatore e inversamente proporzionale al numero di validatori sulla rete. Più validatori ci sono, maggiore è l'emissione complessiva (come `sqrt(N)`) ma minore è la `base_reward` per validatore (come `1/sqrt(N)`). Questi fattori influenzano l'APR per un nodo di staking. Leggi la logica di questo negli [appunti di Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
-La ricompensa totale è quindi calcolata come la somma di cinque componenti, ognuno avente un peso che determina quanto ogni componente aggiunge alla ricompensa totale. I componenti sono:
-
-```
-1. voto sull'origine: il validatore ha effettuato un voto tempestivo per il punto di controllo di origine corretto
-2. voto sulla destinazione: il validatore ha effettuato un voto tempestivo per il punto di controllo di destinazione corretto
-3. voto sulla testa: il validatore ha effettuato un voto tempestivo per il blocco di testa corretto
-4. ricompensa della commissione di sincronizzazione: il validatore ha partecipato a una commissione di sincronizzazione
-5. ricompensa del propositore: il validatore ha proposto un blocco nello slot corretto
-```
-
-Le ponderazioni per ciascun componente sono le seguenti:
+La ricompensa totale viene quindi calcolata come la somma di cinque componenti, ognuna delle quali ha un peso che determina quanto ciascuna componente aggiunge alla ricompensa totale. Le componenti sono:
 
 ```
-TIMELY_SOURCE_WEIGHT    uint64(14)
-TIMELY_TARGET_WEIGHT    uint64(26)
-TIMELY_HEAD_WEIGHT  uint64(14)
-SYNC_REWARD_WEIGHT  uint64(2)
-PROPOSER_WEIGHT uint64(8)
+1. source vote: the validator has made a timely vote for the correct source checkpoint
+2. target vote: the validator has made a timely vote for the correct target checkpoint
+3. head vote: the validator has made a timely vote for the correct head block
+4. sync committee reward: the validator has participated in a sync committee
+5. proposer reward: the validator has proposed a block in the correct slot
 ```
 
-Questi pesi ammontano a 64. La ricompensa è calcolata come la somma dei pesi applicabili, divisa per 64. Un validatore che ha effettuato tempestivi voti sull'origine, sula destinazione e sulla testa, ha proposto un blocco e ha partecipato a una commissione di sincronizzazione, potrebbe ricevere `64/64 * base_reward == base_reward`. Tuttavia, solitamente un validatore non è un propositore di blocchi, quindi la sua ricompensa massima è `64-8 /64 * base_reward == 7/8 * base_reward`. I validatori che non sono propositori di blocchi né partecipano a una commissione di sincronizzazione possono ricevere `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
+I pesi per ciascuna componente sono i seguenti:
 
-È prevista una ricompensa aggiuntiva per incentivare attestazioni rapide. Questa è la `inclusion_delay_reward`. Ha un valore pari alla `base_reward`, moltiplicata per `1/delay`, dove `delay` è il numero di slot che separano la proposta e l'attestazione del blocco. Ad esempio, se l'attestazione è inviata entro uno slot della proposta del blocco, l'attestatore riceve `base_reward * 1/1 == base_reward`. Se l'attestazione arriva nello slot successivo, l'attestatore riceve `base_reward * 1/2`, e così via.
+```
+TIMELY_SOURCE_WEIGHT	uint64(14)
+TIMELY_TARGET_WEIGHT	uint64(26)
+TIMELY_HEAD_WEIGHT	uint64(14)
+SYNC_REWARD_WEIGHT	uint64(2)
+PROPOSER_WEIGHT	uint64(8)
+```
 
-I propositori di blocchi ricevono `8 / 64 * base_reward` per **ogni attestazione valida** inclusa nel blocco, quindi il valore effettivo della ricompensa scala con il numero di validatori attestanti. I propositori di blocchi, inoltre, possono incrementare la propria ricompensa includendo prova del comportamento scorretto di altri validatori nel loro blocco proposto. Queste ricompense sono le "carote" che incoraggiano l'onestà del validatore. Un propositore di blocchi che include il taglio sarà ricompensato con `slashed_validators_effective_balance / 512`.
+Questi pesi sommano a 64. La ricompensa è calcolata come la somma dei pesi applicabili divisa per 64. Un validatore che ha effettuato voti tempestivi di origine, destinazione e testa, ha proposto un blocco e ha partecipato a un comitato di sincronizzazione potrebbe ricevere `64/64 * base_reward == base_reward`. Tuttavia, un validatore di solito non è un proponente del blocco, quindi la sua ricompensa massima è `64-8 /64 * base_reward == 7/8 * base_reward`. I validatori che non sono né proponenti del blocco né in un comitato di sincronizzazione possono ricevere `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
-### Sanzioni {#penalties}
+Viene aggiunta un'ulteriore ricompensa per incentivare le attestazioni rapide. Questa è la `inclusion_delay_reward`. Ha un valore pari alla `base_reward` moltiplicata per `1/delay` dove `delay` è il numero di slot che separano la proposta del blocco e l'attestazione. Ad esempio, se l'attestazione viene inviata entro uno slot dalla proposta del blocco, l'attestatore riceve `base_reward * 1/1 == base_reward`. Se l'attestazione arriva nello slot successivo, l'attestatore riceve `base_reward * 1/2` e così via.
 
-Finora abbiamo considerato validatori che si comportano in modo impeccabile, ma quali sono le sanzioni per i validatori che non effettuano tempestivi voti sull'origine, sulla destinazione e sulla testa o lo fanno lentamente?
+I proponenti del blocco ricevono `8 / 64 * base_reward` per **ogni attestazione valida** inclusa nel blocco, quindi il valore effettivo della ricompensa scala con il numero di validatori attestanti. I proponenti del blocco possono anche aumentare la loro ricompensa includendo prove di comportamento scorretto da parte di altri validatori nel blocco proposto. Queste ricompense sono le "carote" che incoraggiano l'onestà del validatore. Un proponente del blocco che include il punire verrà ricompensato con il `slashed_validators_effective_balance / 512`.
 
-Le sanzioni per la mancanza di voti sull'origine e sulla destinazione equivalgono alle ricompense che l'attestatore avrebbe ricevuto se li avesse inviati. Ciò significa che, invece di aggiungere la ricompensa al loro saldo, si vedono rimuovere un valore equivalente dal proprio saldo. Non è presente alcuna sanzione per il mancato voto sulla testa (ossia, i voti di testa sono solo ricompensati, mai sanzionati). Non esiste alcuna sanzione associata all'`inclusion_delay`; la ricompensa, semplicemente, non sarà aggiunta al saldo del validatore. Inoltre, non esiste alcuna sanzione per la mancata proposizione di un blocco.
+### Penalità {#penalties}
 
-Leggi di più sulle ricompense e le sanzioni nelle [specifiche del consenso](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md). Ricompense e sanzioni sono state adeguate nell'aggiornamento di Bellatrix; guarda Danny Ryan e Vitalik discuterne in questo [Video Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
+Finora abbiamo considerato validatori dal comportamento perfetto, ma che dire dei validatori che non effettuano voti tempestivi di testa, origine e destinazione o lo fanno lentamente?
 
-## Taglio {#slashing}
+Le penalità per aver mancato i voti di destinazione e origine sono pari alle ricompense che l'attestatore avrebbe ricevuto se li avesse inviati. Questo significa che invece di avere la ricompensa aggiunta al proprio saldo, viene rimosso un valore uguale dal proprio saldo. Non c'è alcuna penalità per aver mancato il voto di testa (cioè, i voti di testa vengono solo ricompensati, mai penalizzati). Non c'è alcuna penalità associata all'`inclusion_delay` - la ricompensa semplicemente non verrà aggiunta al saldo del validatore. Non c'è inoltre alcuna penalità per non aver proposto un blocco.
 
-Il taglio è un'azione più grave che risulta nella rimozione forzata di un validatore dalla rete e nella perdita associata del suo ether in staking. Esistono tre modi in cui un validatore può essere tagliato, tutti equivalenti alla proposta o attestazione disonesta dei blocchi:
+Leggi di più su ricompense e penalità nelle [specifiche del consenso](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md). Le ricompense e le penalità sono state modificate nell'aggiornamento Bellatrix - guarda Danny Ryan e Vitalik discuterne in questo [video Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
+
+## Punire {#slashing}
+
+Punire è un'azione più severa che comporta la rimozione forzata di un validatore dalla rete e una perdita associata del suo ether messo in stake. Ci sono tre modi in cui un validatore può essere punito, tutti riconducibili alla proposta disonesta o all'attestazione di blocchi:
 
 - Proponendo e firmando due blocchi diversi per lo stesso slot
-- Attestando un blocco che ne "circonda" un altro (modificando di fatto lo storico)
-- Eseguendo un "doppio voto", attestando due candidati per lo stesso blocco
+- Attestando un blocco che "circonda" un altro (cambiando di fatto la cronologia)
+- Con il "doppio voto", attestando due candidati per lo stesso blocco
 
-Se queste azioni sono rilevate, il validatore viene tagliato. Ciò significa che 1/32 del suo ether in staking (fino a un massimo di 1 ether) viene immediatamente bruciato, poi inizia un periodo di rimozione di 36 giorni. Durante tale periodo di rimozione, lo stake del validatore si riduce gradualmente. Al punto intermedio (Giorno 18), è applicata una sanzione aggiuntiva la cui portata scala con il totale di ether in staking di tutti i validatori tagliati nei 36 giorni precedenti all'evento di taglio. Ciò significa che più validatori sono tagliati, maggiore è l'entità del taglio. Il taglio massimo è il saldo effettivo di tutti i validatori tagliati (cioè, se molti validatori sono tagliati, potrebbero perdere il proprio intero stake). D'altra parte, un evento di taglio singolo e isolato brucia soltanto una piccola porzione dello stake del validatore. Questa sanzione intermedia che scala con il numero di validatori tagliati è detta "sanzione di correlazione".
+Se queste azioni vengono rilevate, il validatore viene punito. Questo significa che 0,0078125 ETH vengono immediatamente bruciati per un validatore da 32 ETH (scalato linearmente con il saldo attivo), quindi inizia un periodo di rimozione di 36 giorni. Durante questo periodo di rimozione, lo stake del validatore si esaurisce gradualmente. A metà del periodo (Giorno 18) viene applicata una penalità aggiuntiva la cui entità scala con l'ether totale messo in stake di tutti i validatori puniti nei 36 giorni precedenti all'evento di punizione. Questo significa che quando più validatori vengono puniti, l'entità della punizione aumenta. La punizione massima è l'intero saldo effettivo di tutti i validatori puniti (cioè, se ci sono molti validatori che vengono puniti, potrebbero perdere l'intero stake). D'altra parte, un singolo evento di punizione isolato brucia solo una piccola porzione dello stake del validatore. Questa penalità intermedia che scala con il numero di validatori puniti è chiamata "penalità di correlazione".
 
 ## Perdita per inattività {#inactivity-leak}
 
-Se il livello del consenso ha superato più di quattro epoche senza finalizzare, un protocollo di emergenza detto "perdita di inattività" viene attivato. Lo scopo ultimo della perdita per inattività è creare le condizioni necessarie perché la catena recuperi la finalità. Come spiegato sopra, la finalità richiede una maggioranza dei 2/3 dell'ether in staking totale per accordarsi sui punti di controllo di origine e di destinazione. Se validatori che rappresentano oltre 1/3 dei validatori totali vanno offline o non riescono a inviare le attestazioni corrette, non è possibile che una supermaggioranza dei 2/3 finalizzi i punti di controllo. La perdita per inattività consente allo stake appartenente ai validatori inattivi di disperdersi gradualmente finché non controllano meno di 1/3 dello stake totale, consentendo ai validatori attivi rimanenti di finalizzare la catena. Indipendentemente da quanto sia grande il gruppo di validatori inattivi, i rimanenti validatori attivi alla fine controlleranno più di 2/3 dello stake. La perdita di stake è un forte incentivo per i validatori inattivi a riattivarsi appena possibile! Uno scenario di perdita per inattività è stato riscontrato sulla rete di prova Medalla quando \<66% di validatori attivi è riuscito ad arrivare al consenso sulla testa corrente della blockchain. La perdita per inattività è stata attivata e la finalità è stata infine recuperata!
+Se il livello di consenso è trascorso per più di quattro epoche senza finalizzare, viene attivato un protocollo di emergenza chiamato "perdita per inattività" (inactivity leak). Lo scopo ultimo della perdita per inattività è creare le condizioni necessarie affinché la catena recuperi la finalità. Come spiegato sopra, la finalità richiede una maggioranza di 2/3 dell'ether totale messo in stake per concordare sui checkpoint di origine e destinazione. Se i validatori che rappresentano più di 1/3 dei validatori totali vanno offline o non riescono a inviare attestazioni corrette, non è possibile per una supermaggioranza di 2/3 finalizzare i checkpoint. La perdita per inattività lascia che lo stake appartenente ai validatori inattivi si esaurisca gradualmente finché non controllano meno di 1/3 dello stake totale, consentendo ai restanti validatori attivi di finalizzare la catena. Per quanto grande sia il pool di validatori inattivi, i restanti validatori attivi finiranno per controllare >2/3 dello stake. La perdita di stake è un forte incentivo per i validatori inattivi a riattivarsi il prima possibile! Uno scenario di perdita per inattività è stato riscontrato sulla rete di test Medalla quando < 66% dei validatori attivi è riuscito a raggiungere il consenso sull'attuale testa della blockchain. La perdita per inattività è stata attivata e la finalità è stata infine recuperata!
 
-Il design di ricompense, sanzioni e frazionamenti del meccanismo di consenso incoraggia i singoli validatori a comportarsi correttamente. Tuttavia, da tali scelte di progettazione emerge un sistema che incentiva fortemente la distribuzione equa dei validatori tra i vari client e dovrebbe disincentivare fortemente il dominio di un singolo client.
+Il design delle ricompense, delle penalità e del punire del meccanismo di consenso incoraggia i singoli validatori a comportarsi correttamente. Tuttavia, da queste scelte di progettazione emerge un sistema che incentiva fortemente un'equa distribuzione dei validatori su più client e dovrebbe disincentivare fortemente il predominio di un singolo client.
 
-## Ulteriori letture {#further-reading}
+## Letture consigliate {#further-reading}
 
-- [Aggiornare Ethereum: Il livello d'incentivazione](https://eth2book.info/altair/part2/incentives)
+- [Aggiornare Ethereum: Il livello degli incentivi](https://eth2book.info/altair/part2/incentives)
 - [Incentivi nel protocollo ibrido Casper di Ethereum](https://arxiv.org/pdf/1903.04205.pdf)
 - [Specifiche annotate di Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
-- [Suggerimenti di prevenzione del taglio di Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
+- [Suggerimenti per la prevenzione del punire in Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
+- [Analisi delle penalità del punire sotto l'EIP-7251](https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509)
 
 _Fonti_
 

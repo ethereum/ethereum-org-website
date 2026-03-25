@@ -1,6 +1,6 @@
 ---
-title: ERC-20 Token-Standard
-description: "Erfahren Sie mehr über ERC-20, den Standard für fungible Token auf Ethereum, der interoperable Token Anwendungen ermöglicht."
+title: ERC-20-Token-Standard
+description: "Erfahren Sie mehr über ERC-20, den Standard für fungible Token auf Ethereum, der interoperable Token-Anwendungen ermöglicht."
 lang: de
 ---
 
@@ -8,21 +8,20 @@ lang: de
 
 **Was ist ein Token?**
 
-Token können praktisch alles in Ethereum darstellen:
+Token können in [Ethereum](/) praktisch alles repräsentieren:
 
-- Reputationspunkte auf einer Online-Platform
+- Reputationspunkte auf einer Online-Plattform
 - Fähigkeiten eines Charakters in einem Spiel
-- Vermögenswerte wie Anteile an einer Firma
-- Eine Fiat-Währung wie der US-Dollar
-- Eine Goldunze
-- und mehr...
+- Finanzanlagen wie eine Unternehmensaktie
+- eine Fiatwährung wie USD
+- eine Unze Gold
+- und vieles mehr...
 
-Diese mächtigen Eigenschaften von Ethereum sollten in einem stabilen Standard bereitgestellt werden, oder? Und genau das ist der Punkt, an dem ERC-20 ins Spiel kommt! Dieser Standard ermöglicht es Entwicklern, Token zu erstellen, die mit anderen Produkten und Services interagieren können. Der ERC-20-Standard wird auch verwendet, um [Ether](/glossary/#ether) zusätzliche Funktionalität bereitzustellen.
+Eine so mächtige Funktion von Ethereum muss durch einen robusten Standard gehandhabt werden, richtig? Genau hier kommt ERC-20 ins Spiel! Dieser Standard ermöglicht es Entwicklern, Token-Anwendungen zu erstellen, die mit anderen Produkten und Dienstleistungen interoperabel sind. Der ERC-20-Standard wird auch verwendet, um [Ether](/glossary/#ether) zusätzliche Funktionen bereitzustellen.
 
 **Was ist ERC-20?**
 
-Der ERC-20 führt einen Standard für fungible Token ein, das heißt, sie haben eine Eigenschaft, die jeden Token genau gleich (in Art und Wert) wie einen anderen Token macht. Zum Beispiel verhält sich ein ERC-20-Token genau wie der ETH. Das bedeutet, dass ein Token
-immer dem Wert aller anderen Token entspricht.
+ERC-20 führt einen Standard für fungible Token ein. Mit anderen Worten: Sie haben eine Eigenschaft, die jeden Token (in Art und Wert) exakt gleich wie einen anderen Token macht. Ein ERC-20-Token verhält sich beispielsweise genau wie ETH, was bedeutet, dass 1 Token immer gleich allen anderen Token ist und sein wird.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -32,17 +31,16 @@ immer dem Wert aller anderen Token entspricht.
 
 ## Hauptteil {#body}
 
-Der im November 2015 von Fabian Vogelsteller eingereichte ERC-20-Antrag (Ethereum Request for Comments 20) ist ein Token-Standard, der
-eine API für Tokens innerhalb von Smart Contracts implementiert.
+Der ERC-20 (Ethereum Request for Comments 20), der im November 2015 von Fabian Vogelsteller vorgeschlagen wurde, ist ein Token-Standard, der eine API für Token innerhalb von Smart Contracts implementiert.
 
-Beispielfunktionalitäten, die ERC-20 bietet:
+Beispielfunktionen, die ERC-20 bietet:
 
 - Token von einem Konto auf ein anderes übertragen
-- den aktuellen Token-Saldo eines Kontos abfragen
-- den im Netz verfügbaren Gesamtvorrat an Token ermitteln
-- genehmigen, ob ein Token-Betrag von einem Konto durch ein Drittkonto ausgegeben werden kann
+- den aktuellen Token-Kontostand eines Kontos abrufen
+- das Gesamtangebot des im Netzwerk verfügbaren Tokens abrufen
+- genehmigen, ob eine bestimmte Menge an Token von einem Konto durch ein Drittanbieter-Konto ausgegeben werden darf
 
-Wenn ein Smart Contract die folgenden Methoden und Ereignisse implementiert, kann er als ERC-20-Token-Vertrag bezeichnet werden und ist nach der Bereitstellung dafür verantwortlich, die erstellten Token auf Ethereum zu verfolgen.
+Wenn ein Smart Contract die folgenden Methoden und Ereignisse implementiert, kann er als ERC-20-Token-Vertrag bezeichnet werden. Sobald er bereitgestellt ist, ist er dafür verantwortlich, die erstellten Token auf Ethereum zu verfolgen.
 
 Aus [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
@@ -69,9 +67,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### Beispiele {#web3py-example}
 
-Sehen wir uns an, wie wichtig ein Standard ist, um uns die Überprüfung jedes ERC-20-Token-Vertrags auf Ethereum zu erleichtern.
-Wir benötigen lediglich das Contract Application Binary Interface (ABI), um eine Schnittstelle zu einem beliebigen ERC-20-Token zu erstellen. Wie Sie
-unten sehen können, werden wir ein vereinfachtes ABI verwenden, um es zu einem Beispiel mit geringer Reibung zu machen.
+Lassen Sie uns sehen, warum ein Standard so wichtig ist, um es uns einfach zu machen, jeden ERC-20-Token-Vertrag auf Ethereum zu überprüfen. Wir benötigen lediglich das Contract Application Binary Interface (ABI), um eine Schnittstelle zu einem beliebigen ERC-20-Token zu erstellen. Wie Sie unten sehen können, werden wir ein vereinfachtes ABI verwenden, um es zu einem reibungslosen Beispiel zu machen.
 
 #### Web3.py-Beispiel {#web3py-example}
 
@@ -87,13 +83,13 @@ from web3 import Web3
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
-weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Gedeckter Ether (WETH)
+dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F" # DAI
+weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" # Wrapped Ether (WETH)
 
-acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
+acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11" # Uniswap V2: DAI 2
 
-# Dies ist eine vereinfachte Contract Application Binary Interface (ABI) eines ERC-20-Token-Vertrags.
-# Es werden nur die Methoden verfügbar gemacht: balanceOf(address), decimals(), symbol() und totalSupply()
+# Dies ist eine vereinfachte Contract Application Binary Interface (ABI) eines ERC-20-Token-Contracts.
+# Es stellt nur die Methoden: balanceOf(address), decimals(), symbol() und totalSupply() bereit.
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'account', 'type': 'address'}],
@@ -127,7 +123,7 @@ decimals = dai_contract.functions.decimals().call()
 totalSupply = dai_contract.functions.totalSupply().call() / 10**decimals
 addr_balance = dai_contract.functions.balanceOf(acc_address).call() / 10**decimals
 
-#  DAI
+# DAI
 print("===== %s =====" % symbol)
 print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
@@ -138,7 +134,7 @@ decimals = weth_contract.functions.decimals().call()
 totalSupply = weth_contract.functions.totalSupply().call() / 10**decimals
 addr_balance = weth_contract.functions.balanceOf(acc_address).call() / 10**decimals
 
-#  WETH
+# WETH
 print("===== %s =====" % symbol)
 print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
@@ -148,42 +144,47 @@ print("Addr Balance:", addr_balance)
 
 ### Problem beim Empfang von ERC-20-Token {#reception-issue}
 
-**Bis zum 20.06.2024 gingen aufgrund dieses Problems ERC-20-Token im Wert von mindestens 83.656.418 US-Dollar verloren. Beachten Sie, dass eine reine ERC-20-Implementierung anfällig für dieses Problem ist, es sei denn, Sie implementieren zusätzlich zu dem Standard eine Reihe weiterer Einschränkungen, wie unten aufgeführt.**
+**Bis zum 20.06.2024 gingen aufgrund dieses Problems ERC-20-Token im Wert von mindestens 83.656.418 $ verloren. Beachten Sie, dass eine reine ERC-20-Implementierung für dieses Problem anfällig ist, es sei denn, Sie implementieren zusätzlich zum Standard eine Reihe von Einschränkungen, wie unten aufgeführt.**
 
-Wenn ERC-20-Token an einen Smart Contract gesendet werden, der nicht für den Umgang mit ERC-20-Token ausgelegt ist, können diese Token dauerhaft verloren gehen. Das passiert, weil der empfangende Vertrag nicht die Funktionalität hat, die eingehenden Token zu erkennen oder darauf zu reagieren, und es gibt keinen Mechanismus im ERC-20-Standard, um den empfangenden Vertrag über die eingehenden Token zu benachrichtigen. Die Hauptursachen dieses Problems sind:
+Wenn ERC-20-Token an einen Smart Contract gesendet werden, der nicht für die Verarbeitung von ERC-20-Token ausgelegt ist, können diese Token dauerhaft verloren gehen. Dies geschieht, weil der empfangende Vertrag nicht über die Funktionalität verfügt, die eingehenden Token zu erkennen oder darauf zu reagieren, und es im ERC-20-Standard keinen Mechanismus gibt, um den empfangenden Vertrag über die eingehenden Token zu benachrichtigen. Dieses Problem tritt hauptsächlich auf folgende Weise auf:
 
-1. Token-Übertragungsmechanismus
-
-- ERC-20-Token werden mit den Funktionen transfer oder transferFrom übertragen
-  - Wenn ein Benutzer Token an eine Vertragsadresse mit diesen Funktionen sendet, werden die Token unabhängig davon übertragen, ob der empfangende Vertrag dafür ausgelegt ist oder nicht
-
-2. Fehlende Benachrichtigung
-   - Der empfangende Vertrag erhält keine Benachrichtigung oder Rückmeldung, dass Token an ihn gesendet wurden
-   - Wenn der empfangende Vertrag keinen Mechanismus hat, um Token zu verarbeiten (z.B. eine Fallback-Funktion oder eine spezielle Funktion zur Verwaltung des Tokenempfangs), bleiben die Token effektiv in der Adresse des Vertrags hängen
-3. Keine eingebaute Verarbeitung
-   - Der ERC-20-Standard enthält keine obligatorische Funktion, die empfangende Verträge implementieren müssen, was dazu führt, dass viele Verträge nicht in der Lage sind, eingehende Token richtig zu verwalten
+1.	Token-Übertragungsmechanismus
+  - ERC-20-Token werden mit den Funktionen transfer oder transferFrom übertragen
+	-	Wenn ein Benutzer Token mit diesen Funktionen an eine Vertragsadresse sendet, werden die Token übertragen, unabhängig davon, ob der empfangende Vertrag für deren Verarbeitung ausgelegt ist
+2.	Fehlende Benachrichtigung
+	-	Der empfangende Vertrag erhält keine Benachrichtigung oder keinen Rückruf, dass Token an ihn gesendet wurden
+	-	Wenn dem empfangenden Vertrag ein Mechanismus zur Verarbeitung von Token fehlt (z. B. eine Fallback-Funktion oder eine dedizierte Funktion zur Verwaltung des Token-Empfangs), stecken die Token effektiv in der Adresse des Vertrags fest
+3.	Keine integrierte Verarbeitung
+	-	Der ERC-20-Standard enthält keine obligatorische Funktion, die empfangende Verträge implementieren müssen, was zu einer Situation führt, in der viele Verträge eingehende Token nicht ordnungsgemäß verwalten können
 
 **Mögliche Lösungen**
 
-Es ist zwar nicht möglich, dieses Problem mit ERC-20 vollständig zu verhindern, aber es gibt Methoden, mit denen die Wahrscheinlichkeit eines Sickerverlusts für den Endnutzer erheblich verringert werden kann:
+Obwohl es nicht möglich ist, dieses Problem bei ERC-20 vollständig zu verhindern, gibt es Methoden, mit denen die Wahrscheinlichkeit eines Token-Verlusts für den Endbenutzer erheblich verringert werden kann:
 
-- Das häufigste Problem tritt auf, wenn ein Benutzer Token an die Adresse des Token-Vertrags selbst sendet (z. B. USDT, die an die Adresse des USDT-Token-Vertrags eingezahlt werden). Es wird empfohlen, die transfer(..)-Funktion einzuschränken, um solche Übertragungsversuche rückgängig zu machen. Erwägen Sie, die Prüfung require(_to != address(this)); in die Implementierung der Funktion transfer(..) aufzunehmen.
-- Die transfer(..)-Funktion ist im Allgemeinen nicht dafür ausgelegt, Token in Verträge einzuzahlen. `Genehmigung(..) & transferFrom(..)`-Muster wird stattdessen verwendet, um ERC-20-Token in Verträge einzuzahlen. Es ist möglich, die Transferfunktion so einzuschränken, dass keine Token in Verträge mit dieser Funktion eingezahlt werden können. Dies kann jedoch die Kompatibilität mit Verträgen beeinträchtigen, die davon ausgehen, dass Token mit der Funktion trasnfer(..) in Verträge eingezahlt werden können (z. B. Uniswap-Liquiditätspools).
-- Gehen Sie immer davon aus, dass ERC-20-Token in Ihrem Vertrag landen können, auch wenn Ihr Vertrag eigentlich keine erhalten soll. Es gibt keine Möglichkeit, versehentliche Einzahlungen aufseiten des Empfängers zu verhindern oder abzulehnen. Es wird empfohlen, eine Funktion zu implementieren, mit der versehentlich hinterlegte ERC-20-Token extrahiert werden können.
+- Das häufigste Problem tritt auf, wenn ein Benutzer Token an die Adresse des Token-Vertrags selbst sendet (z. B. USDT, die an die Adresse des USDT-Token-Vertrags eingezahlt werden). Es wird empfohlen, die Funktion `transfer(..)` einzuschränken, um solche Übertragungsversuche rückgängig zu machen. Erwägen Sie das Hinzufügen der Überprüfung `require(_to != address(this));` innerhalb der Implementierung der Funktion `transfer(..)`.
+- Die Funktion `transfer(..)` ist im Allgemeinen nicht für die Einzahlung von Token in Verträge vorgesehen. Stattdessen wird das Muster `approve(..) & transferFrom(..)` verwendet, um ERC-20-Token in Verträge einzuzahlen. Es ist möglich, die Übertragungsfunktion so einzuschränken, dass die Einzahlung von Token in beliebige Verträge damit nicht zulässig ist. Dies kann jedoch die Kompatibilität mit Verträgen beeinträchtigen, die davon ausgehen, dass Token mit der Funktion `transfer(..)` in Verträge eingezahlt werden können (z. B. Uniswap-Liquiditätspools).
+- Gehen Sie immer davon aus, dass ERC-20-Token in Ihrem Vertrag landen können, selbst wenn Ihr Vertrag niemals welche erhalten soll. Es gibt keine Möglichkeit, versehentliche Einzahlungen auf Empfängerseite zu verhindern oder abzulehnen. Es wird empfohlen, eine Funktion zu implementieren, mit der versehentlich eingezahlte ERC-20-Token extrahiert werden können.
 - Erwägen Sie die Verwendung alternativer Token-Standards.
 
-Aus diesem Problem sind einige alternative Standards hervorgegangen, wie zum Beispiel [ERC-223](/developers/docs/standards/tokens/erc-223) oder [ERC-1363](/developers/docs/standards/tokens/erc-1363).
+Aus diesem Problem sind einige alternative Standards hervorgegangen, wie z. B. [ERC-223](/developers/docs/standards/tokens/erc-223) oder [ERC-1363](/developers/docs/standards/tokens/erc-1363).
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
 - [EIP-20: ERC-20-Token-Standard](https://eips.ethereum.org/EIPS/eip-20)
-- [OpenZeppelin – Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
-- [OpenZeppelin – ERC-20-Implementierung](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [Alchemy – Leitfaden für Solidity-ERC20-Token](https://www.alchemy.com/overviews/erc20-solidity)
+- [OpenZeppelin - Token](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
+- [OpenZeppelin - ERC-20-Implementierung](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [Alchemy - Leitfaden zu Solidity-ERC20-Token](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Andere fungible Token-Standards {#fungible-token-standards}
+## Andere Standards für fungible Token {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
-- [ERC-4626 – Tokenisierte Vaults](/developers/docs/standards/tokens/erc-4626)
+- [ERC-4626 - Tokenisierte Tresore](/developers/docs/standards/tokens/erc-4626)
+
+## Tutorials: Mit ERC-20 auf Ethereum bauen {#tutorials}
+
+- [ERC-20-Vertrag-Walkthrough](/developers/tutorials/erc20-annotated-code/) _– Ein zeilenweise kommentierter Walkthrough der OpenZeppelin-ERC-20-Vertragsimplementierung._
+- [ERC-20 mit Sicherheitsvorkehrungen](/developers/tutorials/erc20-with-safety-rails/) _– Wie man ERC-20-Token mit Schutzmaßnahmen versieht, um Benutzern zu helfen, häufige Fehler zu vermeiden._
+- [Senden von Token mit ethers.js](/developers/tutorials/send-token-ethersjs/) _– Ein anfängerfreundlicher Leitfaden zur Übertragung von ERC-20-Token mit ethers.js._
+- [Einige Tricks von Betrugs-Token und wie man sie erkennt](/developers/tutorials/scam-token-tricks/) _– Ein tiefer Einblick in Muster von betrügerischen ERC-20-Token und wie man sie identifiziert._

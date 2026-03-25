@@ -1,120 +1,120 @@
 ---
-title: FAQs zu Cancun-Deneb (Dencun)
-description: Häufig gestellte Fragen zum Netzwerk-Upgrade Cancun-Deneb (Dencun)
+title: Cancun-Deneb (Dencun) FAQ
+description: "Häufig gestellte Fragen zum Netzwerk-Upgrade Cancun-Deneb (Dencun)"
 lang: de
 ---
 
 # Cancun-Deneb (Dencun) {#dencun}
 
-Cancun-Deneb (Dencun) ist ein Upgrade des Ethereum-Netzwerks, bei dem **Proto-Danksharding (EIP-4844)** aktiviert wird. Im Zuge dessen werden temporäre Daten **Blobs** für günstigere [Layer 2 (L2)](/Glossar/#layer-2)-Rollup-Speicherung einführt.
+Cancun-Deneb (Dencun) ist ein Upgrade für das Ethereum-Netzwerk, das **Proto-Danksharding (EIP-4844)** aktiviert und temporäre Daten-**Blobs** für eine günstigere Speicherung von [Ebene 2 (L2)](/glossary/#layer-2)-Rollups einführt.
 
-Ein neuer Transaktionstyp ermöglicht es Rollup-Anbietern, Daten kostengünstiger in sogenannten „Blobs“ zu speichern. Diese Blobs stehen dem Netzwerk etwa 18 Tage lang garantiert zur Verfügung (genauer gesagt 4096 [Epochen](/Glossar/#epoch)). Nach Ablauf dieser Zeit werden die Blobs aus dem Netzwerk entfernt, aber die Anwendungen können die Gültigkeit ihrer Daten immer noch mithilfe von Nachweisen verifizieren.
+Ein neuer Transaktionstyp ermöglicht es Rollup-Anbietern, Daten kostengünstiger in sogenannten „Blobs“ zu speichern. Es wird garantiert, dass Blobs dem Netzwerk für etwa 18 Tage (genauer gesagt 4096 [Epochen](/glossary/#epoch)) zur Verfügung stehen. Nach diesem Zeitraum werden Blobs aus dem Netzwerk entfernt, aber Anwendungen können die Gültigkeit ihrer Daten weiterhin mithilfe von Nachweisen überprüfen. 
 
-Dies senkt die Kosten für Rollups erheblich, begrenzt das Wachstum der Chain und sorgt dafür, das mehr Nutzer unterstützt werden. Gleichzeitig bleibt die Sicherheit und eine dezentralisierte Gruppe von Knotenpunktbetreibern erhalten.
+Dies senkt die Kosten für Rollups erheblich, begrenzt das Wachstum der Blockchain und hilft dabei, mehr Benutzer zu unterstützen, während gleichzeitig die Sicherheit und eine dezentralisierte Gruppe von Blockchain-Knoten-Betreibern erhalten bleiben.
 
-## Wann ist damit zu rechnen, dass Rollups aufgrund von Proto-Danksharding die niedrigeren Transaktionsgebühren widerspiegeln? {#when}
+## Wann können wir erwarten, dass Rollups aufgrund von Proto-Danksharding niedrigere Gebühren aufweisen? {#when}
 
-- Dieses Upgrade wurde in Epoche 269568 am **13. März 2024 um 13:55 Uhr (UTC)** aktiviert
-- Alle großen Rollup-Anbieter wie Arbitrum oder Optimism haben signalisiert, dass Blobs unmittelbar nach dem Upgrade unterstützt werden
-- Der Zeitplan für den individuellen Rollup-Support kann variieren, da jeder Anbieter seine Systeme aktualisieren muss, um vom neuen Blob-Space zu profitieren
+- Dieses Upgrade wurde in Epoche 269568 am **13. März 2024 um 13:55 Uhr (UTC)** aktiviert.
+- Alle großen Rollup-Anbieter wie Arbitrum oder Optimism haben signalisiert, dass Blobs unmittelbar nach dem Upgrade unterstützt werden.
+- Der Zeitplan für die Unterstützung einzelner Rollups kann variieren, da jeder Anbieter seine Systeme aktualisieren muss, um den neuen Blob-Speicherplatz nutzen zu können.
 
-## Wie kann ETH nach der Hard Fork umgewandelt werden? {#scam-alert}
+## Wie kann ETH nach dem Hard Fork umgewandelt werden? {#scam-alert}
 
-- **Kein Handlungsbedarf für Ihre ETH**: Nach dem Upgrade Ethereum Dencun besteht keine Notwendigkeit, Ihre ETH umzuwandeln oder zu aktualisieren. Ihre Kontoguthaben bleiben unverändert und die ETH, die Sie derzeit besitzen, bleiben auch nach dem Hard Fork in der bestehenden Form zugänglich.
-- **Vorsicht vor Betrug!** <Emoji text="⚠️" /> **Jeder, der Sie anweist, Ihre ETH zu „aktualisieren“, versucht, Sie zu betrügen.** Es gibt nichts, was Sie in Bezug auf dieses Upgrade tun müssen. Ihre Assets bleiben davon völlig unberührt. Denken Sie daran: Informiert zu sein ist der beste Schutz vor Betrug.
+- **Keine Aktion für Ihre ETH erforderlich**: Nach dem Ethereum-Dencun-Upgrade müssen Sie Ihre ETH nicht umwandeln oder aktualisieren. Ihre Kontostände bleiben gleich und die ETH, die Sie derzeit halten, bleiben nach dem Hard Fork in ihrer bestehenden Form zugänglich.
+- **Vorsicht vor Betrug!** <Emoji text="⚠️" /> **Jeder, der Sie anweist, Ihre ETH zu „aktualisieren“, versucht, Sie zu betrügen.** Sie müssen im Zusammenhang mit diesem Upgrade nichts tun. Ihre Vermögenswerte bleiben völlig unberührt. Denken Sie daran: Informiert zu bleiben ist der beste Schutz vor Betrug.
 
-[Mehr zur Erkennung und Vermeidung von Betrug](/Sicherheit/)
+[Mehr zum Erkennen und Vermeiden von Betrug](/security/)
 
-## Welches Problem wird durch das Update des Dencun-Netzwerks gelöst? {#network-impact}
+## Welches Problem löst das Dencun-Netzwerk-Upgrade? {#network-impact}
 
-Dencun zielt in erster Linie auf **Skalierbarkeit** (Handhabung von mehr Nutzern und mehr Transaktionen) bei **erschwinglichen Gebühren** ab. Gleichzeitig bleibt **die Dezentralisierung** des Netzwerks erhalten.
+Dencun befasst sich in erster Linie mit der **Skalierung** (Verarbeitung von mehr Benutzern und mehr Transaktionen) bei **erschwinglichen Gebühren**, während die **Dezentralisierung** des Netzwerks aufrechterhalten wird.
 
-Die Ethereum-Community hat sich für ihr Wachstum für einen „Rollup-zentrierten“ Ansatz entschlossen, bei dem Layer-2-Rollups das wichtigste Mittel für die sichere Unterstützung von mehr Nutzern sind.
+Die Ethereum-Community verfolgt bei ihrem Wachstum einen „Rollup-zentrierten“ Ansatz, bei dem Ebene-2-Rollups das primäre Mittel sind, um mehr Benutzer sicher zu unterstützen.
 
-Rollup-Netzwerke wickeln die _Verarbeitung_ (oder „Ausführung“) von Transaktionen getrennt vom Mainnet ab und veröffentlichen dann zur Aufbewahrung einen kryptografischen Beweis und/oder komprimierte Transaktionsdaten der Ergebnisse zurück im Mainnet. Die Speicherung dieser Nachweise ist mit Kosten verbunden (in Form von [Gas](/Glossar/#gas)). Diese mussten vor dem Proto-Danksharding von allen Betreibern von Netzwerkknoten dauerhaft gespeichert werden, was eine teure Angelegenheit ist.
+Rollup-Netzwerke übernehmen die _Verarbeitung_ (oder „Ausführung“) von Transaktionen getrennt vom Mainnet und veröffentlichen dann einen kryptografischen Nachweis und/oder komprimierte Transaktionsdaten der Ergebnisse zur Aufzeichnung zurück an das Mainnet. Die Speicherung dieser Nachweise ist mit Kosten verbunden (in Form von [Gas](/glossary/#gas)), die vor Proto-Danksharding von allen Netzwerk-Blockchain-Knoten-Betreibern dauerhaft gespeichert werden mussten, was es zu einer teuren Aufgabe machte.
 
-Durch die Einführung von Proto-Danksharding im Dencun-Upgrade wird die Datenspeicherung für diese Nachweise kostengünstiger, da die Betreiber der Knoten diese Daten nur noch etwa 18 Tage lang speichern müssen. Nach diesem Zeitraum können die Daten sicher entfernt werden, um eine Ausweitung der Hardwareanforderungen zu verhindern.  Da Rollups in der Regel eine Abhebungsfrist von 7 Tagen haben, bleibt ihr Sicherheitsmodell unverändert, solange Blobs für diesen Zeitraum auf L1 verfügbar sind. Das 18-tägige Zeitfenster für die Löschung bietet einen erheblichen Puffer für diesen Zeitraum.
+Die Einführung von Proto-Danksharding im Dencun-Upgrade fügt eine günstigere Datenspeicherung für diese Nachweise hinzu, indem Blockchain-Knoten-Betreiber diese Daten nur für etwa 18 Tage speichern müssen. Danach können die Daten sicher entfernt werden, um eine Ausweitung der Hardwareanforderungen zu verhindern. Da Rollups in der Regel eine Auszahlungsfrist von 7 Tagen haben, bleibt ihr Sicherheitsmodell unverändert, solange Blobs für diese Dauer auf L1 verfügbar sind. Das 18-tägige Bereinigungsfenster bietet einen erheblichen Puffer für diesen Zeitraum.
 
 [Mehr zur Skalierung von Ethereum](/roadmap/scaling/)
 
 ## Wie wird auf alte Blob-Daten zugegriffen? {#historical-access}
 
-Reguläre Ethereum-Knoten speichern immer den _aktuellen Status_ des Netzwerks. Historische Blob-Daten hingegen können etwa 18 Tage nach ihrer Einführung verworfen werden. Bevor diese Daten verworfen werden, stellt Ethereum sicher, dass sie allen Netzwerkteilnehmern zur Verfügung gestellt wurden, sodass Zeit zur Verfügung steht für:
+Während reguläre Ethereum-Blockchain-Knoten immer den _aktuellen Zustand_ des Netzwerks speichern, können historische Blob-Daten etwa 18 Tage nach ihrer Einführung verworfen werden. Bevor diese Daten verworfen werden, stellt Ethereum sicher, dass sie allen Netzwerkteilnehmern zur Verfügung gestellt wurden, sodass Zeit bleibt für:
 
-- Herunterladen und Speichern der Daten durch interessierte Parteien,
-- Abschluss aller Rollup-Challenge-Perioden,
-- Abschluss der Rollup-Transaktionen.
+- Interessierte Parteien, um die Daten herunterzuladen und zu speichern.
+- Den Abschluss aller Rollup-Anfechtungsfristen.
+- Die Finalisierung der Rollup-Transaktionen.
 
-_Historische_ Blob-Daten können aus verschiedenen Gründen erwünscht sein und können mit verschiedenen dezentralen Protokollen gespeichert und abgerufen werden:
+_Historische_ Blob-Daten können aus verschiedenen Gründen gewünscht sein und können über mehrere dezentralisierte Protokolle gespeichert und abgerufen werden:
 
-- **Indexierungsprotokolle von Drittanbietern** wie The Graph speichern diese Daten über ein dezentrales Netzwerk von Knotenbetreibern, die durch kryptoökonomische Mechanismen Anreize erhalten.
-- **BitTorrent** ist ein dezentrales Protokoll, wo Freiwillige diese Daten speichern und an andere weitergeben können.
-- Das **[Ethereum-Portalnetzwerk](/developers/docs/networking-layer/portal-network/)** zielt darauf ab, Zugang zu allen Ethereum-Daten über ein dezentrales Netzwerk von Knotenbetreibern zu ermöglichen. Hierfür werden Daten ähnlich wie bei BitTorrent an die Teilnehmer weitergegeben.
-- **Einzelnen Nutzern** steht es jederzeit frei, ihre eigenen Kopien von Daten zu speichern, die sie als historische Referenz benötigen.
-- Für **Rollup-Anbieter** besteht ein Anreiz, diese Daten zu speichern, um die Benutzerfreundlichkeit ihres Rollups zu verbessern.
-- **Block Explorer** betreiben in der Regel Archivierungsknoten, die all diese Informationen für eine einfache historische Referenz indizieren und speichern und sie den Nutzern über eine Weboberfläche zugänglich zu machen.
+- **Indexierungsprotokolle von Drittanbietern**, wie The Graph, speichern diese Daten über ein dezentralisiertes Netzwerk von Blockchain-Knoten-Betreibern, die durch kryptoökonomische Mechanismen motiviert werden.
+- **BitTorrent** ist ein dezentralisiertes Protokoll, bei dem Freiwillige diese Daten speichern und an andere verteilen können.
+- Das **[Ethereum-Portal-Netzwerk](/developers/docs/networking-layer/portal-network/)** zielt darauf ab, den Zugriff auf alle Ethereum-Daten über ein dezentralisiertes Netzwerk von Blockchain-Knoten-Betreibern zu ermöglichen, indem Daten ähnlich wie bei BitTorrent unter den Teilnehmern verteilt werden.
+- **Einzelne Benutzer** können jederzeit ihre eigenen Kopien beliebiger Daten für historische Referenzzwecke speichern.
+- **Rollup-Anbieter** haben einen Anreiz, diese Daten zu speichern, um die Benutzererfahrung ihres Rollups zu verbessern.
+- **Blocksuchmaschinen** betreiben in der Regel Archiv-Knoten, die all diese Informationen für eine einfache historische Referenz indexieren und speichern und für Benutzer über eine Weboberfläche zugänglich sind.
 
-Es ist wichtig zu beachten, dass die Wiederherstellung des historischen Zustands nach einem **1-von-N-Vertrauensmodell** funktioniert. Das bedeutet, dass Sie nur Daten aus _einer einzigen vertrauenswürdigen Quelle_ benötigen, um deren Korrektheit anhand des aktuellen Zustands des Netzwerks zu verifizieren.
+Es ist wichtig zu beachten, dass die Wiederherstellung des historischen Zustands auf einem **1-von-N-Vertrauensmodell** basiert. Das bedeutet, dass Sie nur Daten von _einer einzigen vertrauenswürdigen Quelle_ benötigen, um deren Richtigkeit anhand des aktuellen Zustands des Netzwerks zu überprüfen.
 
 ## Wie trägt dieses Upgrade zur breiteren Ethereum-Roadmap bei? {#roadmap-impact}
 
-Proto-Danksharding bereitet den Weg für die vollständige Implementierung von [Danksharding](/roadmap/danksharding/). Danksharding ist darauf ausgelegt, die Speicherung von Rollup-Daten über verschiedene Knotenbetreiber hinweg zu verteilen, sodass jeder Betreiber nur einen kleinen Teil der Gesamtdaten bewältigen muss. Diese Verteilung wird die Anzahl der Daten-Blobs pro Block erhöhen, was entscheidend für die Skalierung von Ethereum ist, damit die Plattform mehr Nutzer und Transaktionen bewältigen kann.
+Proto-Danksharding bereitet den Weg für die vollständige Implementierung von [Danksharding](/roadmap/danksharding/). Danksharding ist darauf ausgelegt, die Speicherung von Rollup-Daten auf Blockchain-Knoten-Betreiber zu verteilen, sodass jeder Betreiber nur einen kleinen Teil der Gesamtdaten verarbeiten muss. Diese Verteilung wird die Anzahl der Daten-Blobs pro Block erhöhen, was für die Skalierung von Ethereum zur Verarbeitung von mehr Benutzern und Transaktionen unerlässlich ist.
 
-Diese Skalierbarkeit ist entscheidend, um [Milliarden von Nutzern auf Ethereum zu unterstüzen](/roadmap/scaling/), nämlich mit erschwinglichen Gebühren und fortschrittlicheren Anwendungen, wobei das dezentrale Netzwerk erhalten bleibt. Ohne diese Änderungen würden die Hardwareanforderungen für die Knotenbetreiber eskalieren, was zu immer teurerer Ausrüstung führen würde. Dies könnte kleinere Betreiber aufgrund zu hoher Kosten verdrängen und zu einer Konzentration der Netzwerk-Kontrolle bei wenigen großen Betreibern führen, was dem Prinzip der Dezentralisierung widersprechen würde.
+Diese Skalierung ist entscheidend, um [Milliarden von Benutzern auf Ethereum zu unterstützen](/roadmap/scaling/), mit erschwinglichen Gebühren und fortschrittlicheren Anwendungen, während gleichzeitig ein dezentralisiertes Netzwerk aufrechterhalten wird. Ohne diese Änderungen würden die Hardwareanforderungen für Blockchain-Knoten-Betreiber eskalieren, was zu einem Bedarf an immer teurerer Ausrüstung führen würde. Dies könnte kleinere Betreiber vom Markt verdrängen und zu einer Konzentration der Netzwerkkontrolle bei einigen wenigen großen Betreibern führen, was dem Prinzip der Dezentralisierung widersprechen würde.
 
-## Beeinflusst dieses Upgrade alle Ethereum-Konsens- und Validatoren-Clients? {#client-impact}
+## Betrifft dieses Upgrade alle Ethereum-Konsens- und Validator-Clients? {#client-impact}
 
-Ja, für Proto-Danksharding (EIP-4844) sind Updates sowohl an den Ausführungs- als auch an den Konsens-Clients erforderlich. Alle Haupt-Ethereum-Clients haben Versionen veröffentlicht, die das Upgrade unterstützen. Um nach dem Upgrade die Synchronisation mit dem Ethereum-Netzwerk aufrechtzuerhalten, müssen die Knotenbetreiber sicherstellen, dass die von ihnen eingesetzte Client-Version unterstützt wird. Beachten Sie, dass die Informationen zu Client-Versionen zeitkritisch sind, und Benutzer sollten die neuesten Updates konsultieren, um die die aktuellsten Details zu erfahren. [Siehe Details zu unterstützten Client-Versionen](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
+Ja, Proto-Danksharding (EIP-4844) erfordert Updates sowohl für Ausführungs-Clients als auch für Konsens-Clients. Alle wichtigen Ethereum-Clients haben Versionen veröffentlicht, die das Upgrade unterstützen. Um die Synchronisation mit dem Ethereum-Netzwerk nach dem Upgrade aufrechtzuerhalten, müssen Blockchain-Knoten-Betreiber sicherstellen, dass sie eine unterstützte Client-Version ausführen. Beachten Sie, dass die Informationen zu Client-Veröffentlichungen zeitkritisch sind und Benutzer sich für die aktuellsten Details auf die neuesten Updates beziehen sollten. [Siehe Details zu unterstützten Client-Veröffentlichungen](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
 
-Die Konsens-Clients verwalten die _Validatoren_Software, die durchgängig aktualisiert wurde, um das Upgrade zu unterstützen.
+Die Konsens-Clients verwalten die _Validator_-Software, die vollständig aktualisiert wurde, um das Upgrade zu unterstützen.
 
-## Wie wirkt sich Cancun-Deneb (Dencun) auf Goerli oder andere Ethereum-Testnetze aus? {#testnet-impact}
+## Wie wirkt sich Cancun-Deneb (Dencun) auf Ethereum-Testnets aus? {#testnet-impact}
 
-- Devnets, Goerli, Sepolia und Holesky haben alle das Dencun-Upgrade durchlaufen. Bei ihnen ist Proto-Danksharding vollständig funktionsfähig.
-- Rollup-Entwickler können diese Netzwerke für EIP-4844-Tests nutzen
-- Die meisten Benutzer sind von dieser Änderung in den einzelnen Testnetzen in keiner Weise betroffen.
+- Devnets, Sepolia und Holesky haben alle das Dencun-Upgrade durchlaufen und Proto-Danksharding ist vollständig funktionsfähig.
+- Rollup-Entwickler können diese Netzwerke für EIP-4844-Tests nutzen.
+- Die meisten Benutzer werden von dieser Änderung an jedem Testnet völlig unberührt bleiben.
 
-## Werden alle Transaktionen auf L2 jetzt temporären Blob-Speicher nutzen oder hat der Benutzer die Wahl? {#calldata-vs-blobs}
+## Werden nun alle Transaktionen auf L2s temporären Blob-Speicherplatz nutzen, oder wird man wählen können? {#calldata-vs-blobs}
 
-Rollup-Transaktionen auf Layer 2 (L2) von Ethereum haben die Option, zwei Arten der Datenspeicherung zu verwenden: temporären Blob-Speicher oder permanente Smart-Contract-Calldata. Blob-Speicher ist eine kostengünstige Wahl, die temporäre Speicherung zu einem niedrigeren Preis bietet. Er garantiert die Datenverfügbarkeit für alle erforderlichen Challenge-Perioden. Auf der anderen Seite bieten Smart-Contract-Calldata permanente Speicherung, sind aber teurer.
+Rollup-Transaktionen auf Ebene 2 (L2) von Ethereum haben die Möglichkeit, zwei Arten der Datenspeicherung zu nutzen: temporären Blob-Speicherplatz oder permanente Smart Contract-Calldata. Blob-Speicherplatz ist eine wirtschaftliche Wahl und bietet temporäre Speicherung zu geringeren Kosten. Er garantiert die Datenverfügbarkeit für alle notwendigen Anfechtungsfristen. Andererseits bieten Smart Contract-Calldata eine permanente Speicherung, sind aber teurer.
 
-Die Entscheidung, ob Blob-Speicher oder Calldata verwendet werden, liegt hauptsächlich bei den Rollup-Anbietern. Diese Entscheidung basiert auf der aktuellen Nachfrage nach Blob-Speicher. Wenn die Nachfrage nach Blob-Speicher hoch ist, können sich Rollups für Calldata entscheiden, um sicherzustellen, dass die Daten rechtzeitig veröffentlicht werden.
+Die Entscheidung zwischen der Nutzung von Blob-Speicherplatz oder Calldata wird in erster Linie von den Rollup-Anbietern getroffen. Sie stützen diese Entscheidung auf die aktuelle Nachfrage nach Blob-Speicherplatz. Wenn die Nachfrage nach Blob-Speicherplatz hoch ist, können sich Rollups für Calldata entscheiden, um sicherzustellen, dass die Daten rechtzeitig veröffentlicht werden.
 
-Obwohl es theoretisch möglich ist, dass Benutzer ihren bevorzugten Speichertyp wählen, wird diese Entscheidung in der Regel von den Rollup-Anbietern getroffen.  Die Bereitstellung dieser Option für Benutzer würde für zusätzliche Komplexität sorgen, insbesondere bei der kosteneffektiven Bündelung von Transaktionen. Spezifische Details zu dieser Wahl finden Benutzer in den von den einzelnen Rollup-Anbietern bereitgestellten Dokumentationen.
+Obwohl es für Benutzer theoretisch möglich ist, ihren bevorzugten Speichertyp zu wählen, verwalten in der Regel die Rollup-Anbieter diese Auswahl. Diese Option den Benutzern anzubieten, würde die Komplexität erhöhen, insbesondere bei kostengünstigen Bündelungstransaktionen. Für spezifische Details zu dieser Wahl sollten Benutzer die Dokumentation der einzelnen Rollup-Anbieter konsultieren.
 
-## Wird EIP-4844 L1-Gas senken? {#l1-fee-impact}
+## Wird 4844 das L1-Gas reduzieren? {#l1-fee-impact}
 
-Nicht sonderlich. Ein neuer Gasmarkt wird ausschließlich für Blob-Speicher eingeführt und soll von Rollup-Anbietern verwendet werden. _Obwohl die Gebühren auf L1 durch das Abladen von Rollup-Daten auf Blobs möglicherweise gesenkt werden können, konzentriert sich dieses Upgrade hauptsächlich auf die Senkung der L2-Gebühren. Eine Reduzierung der Gebühren auf L1 (Mainnet) kann als eine Auswirkung zweiter Ordnung in geringerem Maße auftreten._
+Nicht signifikant. Ein neuer Gasmarkt wird exklusiv für Blob-Speicherplatz eingeführt, der von Rollup-Anbietern genutzt wird. _Obwohl die Gebühren auf L1 durch die Auslagerung von Rollup-Daten in Blobs gesenkt werden können, konzentriert sich dieses Upgrade in erster Linie auf die Reduzierung der L2-Gebühren. Eine Reduzierung der Gebühren auf L1 (Mainnet) kann als Effekt zweiter Ordnung in geringerem Maße auftreten._
 
-- Die Reduzierung der L1-Gasgebühren ist proportional zur Übernahme/Nutzung von Blob-Daten durch Rollup-Anbieter
-- L1-Gas bleibt voraussichtlich wettbewerbsfähig aufgrund von Aktivitäten, die nicht mit Rollups zusammenhängen
-- Rollups, die Blob-Speicher nutzen, werden weniger L1-Gas benötigen, was dazu beiträgt, die L1-Gasgebühren kurzfristig zu senken
-- Blob-Speicher ist noch begrenzt. Wenn Blobs also innerhalb eines Blocks gesättigt/voll sind, müssen Rollups ihre Daten möglicherweise in der Zwischenzeit als permanente Daten veröffentlichen, was die L1- und L2-Gaspreise in die Höhe treiben würde
+- Die Reduzierung des L1-Gases wird proportional zur Akzeptanz/Nutzung von Blob-Daten durch Rollup-Anbieter sein.
+- L1-Gas wird wahrscheinlich durch nicht-Rollup-bezogene Aktivitäten wettbewerbsfähig bleiben.
+- Rollups, die die Nutzung von Blob-Speicherplatz übernehmen, werden weniger L1-Gas nachfragen, was dazu beiträgt, die L1-Gasgebühren kurzfristig nach unten zu drücken.
+- Der Blob-Speicherplatz ist immer noch begrenzt. Wenn also Blobs innerhalb eines Blocks gesättigt/voll sind, müssen Rollups ihre Daten in der Zwischenzeit möglicherweise als permanente Daten veröffentlichen, was die L1- und L2-Gaspreise in die Höhe treiben würde.
 
-## Wird dies die Gebühren auf anderen EVM-Layer-1-Blockchains senken? {#alt-l1-fee-impact}
+## Wird dies die Gebühren auf anderen EVM-Ebene-1-Blockchains reduzieren? {#alt-l1-fee-impact}
 
-Nein. Die Vorteile von Proto-Danksharding sind spezifisch für Layer-2-Rollups auf Ethereum, die ihre Nachweise auf Layer 1 (Mainnet) speichern.
+Nein. Die Vorteile von Proto-Danksharding sind spezifisch für Ethereum-Ebene-2-Rollups, die ihre Nachweise auf Ebene 1 (Mainnet) speichern.
 
-Die bloße Kompatibilität mit der Ethereum Virtual Machine (EVM) bedeutet nicht, dass ein Netzwerk von diesem Upgrade auf irgendeine Weise profitieren wird. Netzwerke, die unabhängig von Ethereum operieren (ob EVM-kompatibel oder nicht), speichern ihre Daten nicht auf Ethereum und werden von diesem Upgrade keinen Nutzen ziehen.
+Nur weil ein Netzwerk mit der Ethereum Virtual Machine (EVM) kompatibel ist, bedeutet das nicht, dass es von diesem Upgrade profitieren wird. Netzwerke, die unabhängig von Ethereum arbeiten (ob EVM-kompatibel oder nicht), speichern ihre Daten nicht auf Ethereum und werden von diesem Upgrade nicht profitieren.
 
-[Weitere Informationen zu Layer-2-Rollups](/layer-2/)
+[Mehr über Ebene-2-Rollups](/layer-2/)
 
-## Eher der visuelle Lernende? {#visual-learner}
+## Lernen Sie lieber visuell? {#visual-learner}
 
 <YouTube id="HT9PHWloIiU" />
 
-_Die Skalierung von Ethereum freischalten, EIP-4844 — Finematics _
+_Unlocking Ethereum's Scaling, EIP-4844 — Finematics _
 
 <YouTube id="dFjyUY3e53Q" />
 
-_Blobspace 101 mit Domothy — Bankless_
+_Blobspace 101 with Domothy — Bankless_
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
 - [EIP4844.com](https://www.eip4844.com/)
-- [EIP-4844: Shard-Blob-Transaktionen (Proto-Danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
-- [Ankündigung zum Dencun Mainnet](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) - _Ethereum Foundation blog_
+- [EIP-4844: Shard blob transactions (Proto-Danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
+- [Dencun Mainnet Announcement](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) - _Ethereum Foundation Blog_
 - [The Hitchhiker's Guide to Ethereum: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) - _Jon Charbonneau_
-- [FAQs zu Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
-- [Eine ausführliche Erläuterung von EIP-4844: Der Kern des Cancun Upgrade](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
+- [Proto-Danksharding FAQ](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
+- [An In-depth Explanation of EIP-4844: The Core of the Cancun Upgrade](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
 - [AllCoreDevs Update 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro) - _Tim Beiko_
