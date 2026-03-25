@@ -242,13 +242,14 @@ ${JSON.stringify(commentPayload, null, 2)}`
     // Use strippedCode (English comments removed) instead of block.content
     // to avoid duplicating English comments alongside translated ones
     const fence = "```"
-    const originalBlock = `${fence}${block.language}\n${block.content}\n${fence}`
+    const ind = block.indent || ""
+    const originalBlock = `${fence}${block.language}\n${block.content}\n${ind}${fence}`
     const restoredCode = restoreComments(
       strippedCode,
       translatedComments,
       syntax
     )
-    const newBlock = `${fence}${block.language}\n${restoredCode}\n${fence}`
+    const newBlock = `${fence}${block.language}\n${restoredCode}\n${ind}${fence}`
     content = content.replace(originalBlock, newBlock)
   }
 

@@ -86,6 +86,12 @@ export function validateTranslatedMarkdown(
     }
   }
 
+  // Frontmatter title/description should be translated, not left in English
+  const untranslatedFm = checkFrontmatterTranslated(translated, english)
+  if (untranslatedFm) {
+    return { valid: false, error: untranslatedFm }
+  }
+
   return { valid: true }
 }
 
@@ -140,4 +146,38 @@ function validateCommon(translated: string): ValidationResult {
   }
 
   return { valid: true }
+}
+
+/**
+ * Extract a frontmatter field value from raw markdown.
+ * Returns undefined if the field is not found.
+ */
+function extractFrontmatterField(
+  content: string,
+  field: string
+): string | undefined {
+  const fmMatch = content.match(/^---\n([\s\S]*?)\n---/)
+  if (!fmMatch) return undefined
+  const re = new RegExp(`^${field}:\\s*"?(.+?)"?\\s*$`, "m")
+  const match = fmMatch[1].match(re)
+  return match?.[1]
+}
+
+/**
+ * Check that key frontmatter fields (title, description) were actually
+ * translated and not left identical to the English source.
+ * Returns an error string if untranslated, or undefined if OK.
+ */
+function checkFrontmatterTranslated(
+  translated: string,
+  english: string
+): string | undefined {
+  for (const field of ["title", "description"]) {
+    const enValue = extractFrontmatterField(english, field)
+    const trValue = extractFrontmatterField(translated, field)
+    if (enValue && trValue && enValue === trValue) {
+      return `Frontmatter "${field}" was not translated (identical to English)`
+    }
+  }
+  return undefined
 }

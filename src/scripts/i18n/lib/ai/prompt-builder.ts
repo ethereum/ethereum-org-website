@@ -10,7 +10,11 @@
  * transliteration norms, etc. better than any regex.
  */
 
-import { getLanguageGroup, getSiteSpecificNotes } from "./language-groups"
+import {
+  type LanguageGroup,
+  getLanguageGroup,
+  getSiteSpecificNotes,
+} from "./language-groups"
 
 interface PromptOptions {
   filePath: string
@@ -37,7 +41,7 @@ export function buildTranslationPrompt(options: PromptOptions): string {
   const group = getLanguageGroup(targetLanguage)
   const siteNotes = getSiteSpecificNotes(group)
   const glossarySection = formatGlossary(glossaryTerms)
-  const formatRules = getFormatRules(fileType)
+  const formatRules = getFormatRules(fileType, group)
   const sanitizerHints = getSanitizerHints()
 
   return `Translate this ${fileType} file from English to ${languageName} (${targetLanguage}).
@@ -59,7 +63,10 @@ ${fileContent}
 Output ONLY the translated file content. No explanations, no markdown wrapping, no commentary.`
 }
 
-function getFormatRules(fileType: "markdown" | "json"): string {
+function getFormatRules(
+  fileType: "markdown" | "json",
+  group: LanguageGroup
+): string {
   if (fileType === "json") {
     return `Format rules:
 - Output valid JSON with identical key structure.
@@ -69,9 +76,15 @@ function getFormatRules(fileType: "markdown" | "json"): string {
 - Internal href paths (/developers/docs/...) must stay in English.`
   }
 
+  // Author handling differs by script family
+  const authorRule =
+    group === "latin"
+      ? "Keep the author field unchanged."
+      : "Transliterate the author field into the target script (phonetic, not semantic). Pseudonyms or GitHub handles (e.g., qbzzt, jdourlens) must stay in Latin."
+
   return `Format rules:
-- Preserve all frontmatter fields and structure exactly.
-- Preserve all markdown syntax (headings, lists, links, code blocks).
+- Frontmatter: translate the values of title, description, and breadcrumb. ${authorRule} Keep all other fields (tags, skill, published, lang, sidebarDepth) unchanged. Preserve YAML structure exactly.
+- Preserve all markdown syntax (headings, lists, links, code blocks) and their indentation exactly.
 - Preserve all JSX/HTML components and their attributes exactly.
 - Preserve heading anchor IDs exactly as in English ({#anchor-id}).
 - Never translate content inside code fences (\`\`\` blocks).

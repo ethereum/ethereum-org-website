@@ -12,6 +12,8 @@ export interface CodeBlock {
   index: number
   language: string
   content: string
+  /** Indentation prefix (spaces/tabs) of the original fence */
+  indent: string
 }
 
 /** Result of extracting code blocks from markdown */
@@ -26,6 +28,8 @@ export interface ExtractionResult {
 export interface CodeComment {
   blockIndex: number
   line: number
+  /** Last line of a multi-line comment (for collapsing placeholder lines) */
+  endLine?: number
   type: "single" | "multi"
   text: string
 }
@@ -66,6 +70,7 @@ export function extractCodeBlocks(markdown: string): ExtractionResult {
         index,
         language: lang,
         content,
+        indent: ind,
       })
       return `${ind}${makePlaceholder(index)}`
     }
@@ -85,7 +90,9 @@ export function restoreCodeBlocks(prose: string, blocks: CodeBlock[]): string {
     const placeholder = makePlaceholder(block.index)
     const fence = "```"
     const langTag = block.language ? block.language : ""
-    const restored = `${fence}${langTag}\n${block.content}\n${fence}`
+    // Opening fence gets indent from the prose context (placeholder was indented).
+    // Closing fence needs explicit indent since it's on a new line in the replacement.
+    const restored = `${fence}${langTag}\n${block.content}\n${block.indent}${fence}`
     result = result.replace(placeholder, restored)
   }
 
@@ -187,6 +194,7 @@ export function extractComments(
         comments.push({
           blockIndex: -1, // filled in by caller
           line: multiLineStart,
+          endLine: i,
           type: "multi",
           text: multiLineBuffer.trim(),
         })
@@ -372,9 +380,24 @@ export function restoreComments(
       // Multi-line: wrap in block comment syntax
       const indent = existing.match(/^(\s*)/)?.[1] || ""
       if (syntax === "js") {
-        lines[comment.line] = `${indent}/* ${comment.text} */\n${existing}`
+        lines[comment.line] = `${indent}/* ${comment.text} */`
       } else {
-        lines[comment.line] = `${indent}# ${comment.text}\n${existing}`
+        lines[comment.line] = `${indent}# ${comment.text}`
+      }
+      // Collapse empty placeholder lines left by multi-line comment extraction.
+      // Preserve the endLine if it has code after the comment close (e.g., "*/ doSomething()").
+      if (comment.endLine != null && comment.endLine > comment.line) {
+        const endContent = lines[comment.endLine]?.trim() || ""
+        if (endContent) {
+          // Keep endLine (has code after */), remove only the middle lines
+          const removeCount = comment.endLine - comment.line - 1
+          if (removeCount > 0) {
+            lines.splice(comment.line + 1, removeCount)
+          }
+        } else {
+          // endLine is empty too -- remove all placeholder lines
+          lines.splice(comment.line + 1, comment.endLine - comment.line)
+        }
       }
     }
   }
