@@ -18,10 +18,11 @@ fs.readFile("keyfile.json", (err, data) => {
   var result = recognizer(json)
 })
 
-/* * نتیجہ
- *               [ 'web3', 3 ]   web3 (v3) کی فائل
- *  [ 'ethersale', undefined ]   Ethersale کی فائل
- *                        null     نامعتبر کی فائل */
+/** result
+ *               [ 'web3', 3 ]   web3 (v3) keyfile
+ *  [ 'ethersale', undefined ]   Ethersale keyfile
+ *                        null     invalid keyfile
+ */
 ```
 
 یہ ویب 3 سیکرٹ اسٹوریج کی تعریف کے **ورژن 3** کی دستاویز ہے۔

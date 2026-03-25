@@ -301,7 +301,7 @@ contract Incrementor {
   function inc(uint val) public returns (uint){
     uint tmp = counter;
     counter += val;
-    // tmp، counter سے کم یا اس کے برابر ہے
+    // tmp <= counter
     return (counter - tmp);
   }
 }
