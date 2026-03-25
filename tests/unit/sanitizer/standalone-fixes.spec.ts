@@ -404,6 +404,14 @@ test.describe("Standalone Fixes", () => {
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
+
+    test("preserves </em> when <em> is on previous line", () => {
+      const input =
+        '  <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>\nweitere Änderungen der Gaspreisverfahrenscodes.</em></li>'
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
   })
 
   test.describe("fixBlockComponentLineBreaks", () => {

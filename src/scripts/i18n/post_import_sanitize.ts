@@ -3666,6 +3666,9 @@ function removeOrphanedClosingTags(content: string): {
 
     for (const tag of orphanTags) {
       const lines = parts[partIdx].split("\n")
+      // Track unclosed openers across lines so a </tag> on line N+1
+      // paired with <tag> on line N is not treated as orphaned.
+      let unclosedFromPrev = 0
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i]
         // Strip inline code spans for counting only — tags inside
@@ -3677,15 +3680,18 @@ function removeOrphanedClosingTags(content: string): {
         const closeCount = (lineForCounting.match(closeRe) || []).length
         const openCount = (lineForCounting.match(openRe) || []).length
 
-        // If there are more closing tags than opening tags on this line,
+        // Effective openers = this line's openers + carry-over from previous lines
+        const effectiveOpen = openCount + unclosedFromPrev
+
+        // If there are more closing tags than effective openers on this line,
         // remove the excess closing tags (the trailing orphans)
-        if (closeCount > openCount) {
-          // Keep the first `openCount` closers (paired with openers),
+        if (closeCount > effectiveOpen) {
+          // Keep the first `effectiveOpen` closers (paired with openers),
           // remove the rest (orphans at the end of the line)
           let kept = 0
           lines[i] = line.replace(closeRe, (match) => {
             kept++
-            if (kept <= openCount) {
+            if (kept <= effectiveOpen) {
               return match // Keep — paired with an opener
             }
             fixCount++
@@ -3694,6 +3700,9 @@ function removeOrphanedClosingTags(content: string): {
           // Clean up any resulting double spaces
           lines[i] = lines[i].replace(/  +/g, " ").trimEnd()
         }
+
+        // Update carry-over: unclosed openers from this line
+        unclosedFromPrev = Math.max(0, effectiveOpen - closeCount)
       }
       parts[partIdx] = lines.join("\n")
     }

@@ -60,6 +60,7 @@
 
 | 48 | `collapseInlineHtmlFromEnglish` matches across code fences and newlines | it #17841 | Inside ````tsx` fence: `<div>{error?.message}</div>\n \n</div>` -- regex `\s*</div>` crosses the blank line and collapses a separate `</div>` onto the previous line, producing `<div>{error?.message}</div></div>`. Two bugs: (1) no code fence protection, (2) `\s*` matches newlines allowing cross-line grabs | High -- corrupts code examples |
 | 49 | Lowercased MDX component name | de #17842 | `<emoji text=":tada:" size={1} />` instead of `<Emoji .../>` -- translation pipeline lowercases the PascalCase MDX component tag; MDX component names are case-sensitive, so the lowercased tag won't resolve to the registered component | Critical -- breaks rendering |
+| 50 | `removeOrphanedClosingTags` strips valid cross-line `</em>` | de #17842 | `<em>\ntext</em></li>` -- `<em>` is on line N, `</em>` is on line N+1; line-by-line counting sees no opener on line N+1 and strips `</em>` as orphaned, breaking MDX compilation. Regression from sanitizer's own orphan removal logic. | Critical -- breaks MDX compilation |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
