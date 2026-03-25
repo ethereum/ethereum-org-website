@@ -2906,6 +2906,48 @@ function detectCrossScriptContamination(
 }
 
 /**
+ * Fix misplaced closing backtick around JSX fragment patterns.
+ * Crowdin sometimes moves the closing backtick before `</>`, producing:
+ *   (`<> ...` </>)  instead of  (`<> ... </>`)
+ * The escapeMdxAngleBrackets function then escapes the exposed </>,
+ * making things worse. This fix must run BEFORE escapeMdxAngleBrackets.
+ */
+function fixMisplacedBacktickAroundJsxFragment(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Process line-by-line, skip fenced code blocks
+  const lines = content.split("\n")
+  let inFencedBlock = false
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+
+    if (/^(`{3,}|~{3,})/.test(line)) {
+      inFencedBlock = !inFencedBlock
+      continue
+    }
+    if (inFencedBlock) continue
+
+    // Match: `<content>` </>) or `<content>` \</>) -- backtick closed too early
+    // The closing backtick should wrap the </> too.
+    // Pattern: backtick-content-backtick SPACE </> or \</> followed by )
+    lines[i] = line.replace(
+      /(`<[^`]*`)\s*(?:\\)?(<\/>)(\))/g,
+      (_, codeSpan, fragment, paren) => {
+        fixCount++
+        // Move closing backtick to after the fragment
+        return codeSpan.slice(0, -1) + " " + fragment + "`" + paren
+      }
+    )
+  }
+
+  return { content: lines.join("\n"), fixCount }
+}
+
+/**
  * Escape raw `<` before numbers in MDX content.
  * Pattern: `<5GB` becomes `&lt;5GB` to prevent MDX treating it as a JSX tag.
  * Skips code blocks (fenced and inline) where `<` is valid.
@@ -3366,6 +3408,45 @@ function fixImagePathDotSlash(content: string): {
 }
 
 /**
+ * Fix backslash-escaped quotes in JSX/MDX attributes.
+ *
+ * Crowdin sometimes backslash-escapes double quotes in JSX attributes:
+ *   <ButtonLink variant=\"outline-color\" href=\"/path/\">
+ * This is valid in JSON but breaks MDX compilation.
+ * Fix: remove the backslash before quotes in JSX-like tag attributes.
+ */
+function fixEscapedQuotesInJsxAttributes(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip fenced code blocks
+
+    const original = parts[i]
+    // Match JSX tag lines containing =\"  and replace all \" with "
+    parts[i] = parts[i].replace(/^(\s*<[A-Za-z].*)\\"(.*)$/gm, (fullLine) => {
+      // Only fix lines that have =\" (attribute assignment with escaped quote)
+      if (!fullLine.includes('=\\"')) return fullLine
+      return fullLine.replace(/\\"/g, '"')
+    })
+    if (parts[i] !== original) {
+      // Count the number of \" that were replaced
+      const replacements =
+        (original.match(/\\"/g) || []).length -
+        (parts[i].match(/\\"/g) || []).length
+      fixCount += replacements
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Fix inner quotes inside JSX attribute values that break MDX parsing.
  * Crowdin translates attribute content like title="Misconception: &quot;text&quot;"
  * but uses literal " instead of &quot;, prematurely closing the attribute.
@@ -3818,6 +3899,9 @@ function removeOrphanedClosingTags(content: string): {
               closerIdx++
             }
             result += line.slice(lastEnd)
+            // Collapse doubled punctuation left behind after tag removal
+            // e.g., "word.</em>." becomes "word.." after removal, fix to "word."
+            result = result.replace(/([.!?,;:])(\s*)\1/g, "$1$2")
             lines[i] = result.replace(/  +/g, " ").trimEnd()
           }
         }
@@ -4023,6 +4107,10 @@ function processMarkdownFile(
     (n) => `Fixed ${n} corrupted ./ image paths`
   )
   applyFix(
+    () => fixEscapedQuotesInJsxAttributes(content),
+    (n) => `Fixed ${n} backslash-escaped quotes in JSX attributes`
+  )
+  applyFix(
     () => fixInnerQuotesInJsxAttributes(content),
     (n) => `Fixed ${n} unescaped inner quotes in JSX attributes`
   )
@@ -4086,6 +4174,10 @@ function processMarkdownFile(
   applyFix(
     () => fixAsymmetricBackticks(content),
     (n) => `Fixed ${n} asymmetric backtick pairs`
+  )
+  applyFix(
+    () => fixMisplacedBacktickAroundJsxFragment(content),
+    (n) => `Repaired ${n} Crowdin-split backtick span(s)`
   )
   applyFix(
     () => escapeMdxAngleBrackets(content),
@@ -4341,9 +4433,71 @@ function processMarkdownFile(
   return { fixed, issues, content }
 }
 
+/**
+ * Fix translated interpolation placeholders in JSON values.
+ *
+ * Crowdin sometimes translates the variable name inside {braces}:
+ *   EN: "{days} ago" -> SW: "{siku} zilizopita"
+ * The app expects the English key name. This function compares each
+ * translated JSON value against its English counterpart and restores
+ * the original placeholder names.
+ */
+function fixTranslatedJsonPlaceholders(
+  translatedJson: string,
+  englishJson: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  let trObj: Record<string, string>
+  let enObj: Record<string, string>
+  try {
+    trObj = JSON.parse(translatedJson)
+    enObj = JSON.parse(englishJson)
+  } catch {
+    return { content: translatedJson, fixCount: 0 }
+  }
+
+  for (const key of Object.keys(trObj)) {
+    const enVal = enObj[key]
+    if (!enVal || typeof enVal !== "string" || typeof trObj[key] !== "string")
+      continue
+
+    // Extract placeholders from English: {word} patterns
+    const enPlaceholders = enVal.match(/\{[a-zA-Z_]\w*\}/g)
+    if (!enPlaceholders || enPlaceholders.length === 0) continue
+
+    // Extract placeholders from translated value
+    const trPlaceholders = trObj[key].match(/\{[a-zA-Z_]\w*\}/g)
+    if (!trPlaceholders || trPlaceholders.length === 0) continue
+
+    // If counts match but names differ, map by position
+    if (enPlaceholders.length === trPlaceholders.length) {
+      let val = trObj[key]
+      let changed = false
+      for (let j = 0; j < enPlaceholders.length; j++) {
+        if (trPlaceholders[j] !== enPlaceholders[j]) {
+          val = val.replace(trPlaceholders[j], enPlaceholders[j])
+          changed = true
+        }
+      }
+      if (changed) {
+        trObj[key] = val
+        fixCount++
+      }
+    }
+  }
+
+  if (fixCount === 0) return { content: translatedJson, fixCount }
+
+  // Re-serialize preserving the original formatting (2-space indent)
+  const content = JSON.stringify(trObj, null, 2) + "\n"
+  return { content, fixCount }
+}
+
 function processJsonFile(
   jsonPath: string,
-  providedContent?: string
+  providedContent?: string,
+  englishContent?: string
 ): {
   fixed: boolean
   issues: string[]
@@ -4386,6 +4540,20 @@ function processJsonFile(
   if (compoundResult.fixCount > 0) {
     content = compoundResult.content
     issues.push(`Fixed ${compoundResult.fixCount} known wrong compound term(s)`)
+  }
+
+  // Fix translated interpolation placeholders if English is available
+  if (englishContent) {
+    const placeholderResult = fixTranslatedJsonPlaceholders(
+      content,
+      englishContent
+    )
+    if (placeholderResult.fixCount > 0) {
+      content = placeholderResult.content
+      issues.push(
+        `Fixed ${placeholderResult.fixCount} translated placeholder(s)`
+      )
+    }
   }
 
   // Try parsing to validate JSON
@@ -4574,9 +4742,25 @@ export async function runSanitizer(
     if (originalOnDisk === null && !fileInfo.content) {
       continue
     }
+    // Load English counterpart for JSON placeholder comparison
+    // e.g., src/intl/sw/page-apps.json -> src/intl/en/page-apps.json
+    let englishJsonContent: string | undefined
+    const jsonRelParts = fileInfo.path.split(path.sep)
+    const intlIdx = jsonRelParts.lastIndexOf("intl")
+    if (intlIdx !== -1 && intlIdx + 2 < jsonRelParts.length) {
+      const enJsonPath = [
+        ...jsonRelParts.slice(0, intlIdx + 1),
+        "en",
+        ...jsonRelParts.slice(intlIdx + 2),
+      ].join(path.sep)
+      if (fs.existsSync(enJsonPath)) {
+        englishJsonContent = fs.readFileSync(enJsonPath, "utf8")
+      }
+    }
     const { fixed, issues, content } = processJsonFile(
       fileInfo.path,
-      fileInfo.content
+      fileInfo.content,
+      englishJsonContent
     )
     if (fixed) {
       jsonFixed++
@@ -4797,6 +4981,7 @@ export const _testOnly = {
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
   fixBrandCapitalization,
+  fixMisplacedBacktickAroundJsxFragment,
   escapeMdxAngleBrackets,
   removeOrphanedClosingTags,
   normalizeFrontmatterDates,
@@ -4831,7 +5016,9 @@ export const _testOnly = {
   fixMissingLinkParentheses,
   fixMissingClosingEmTag,
   fixImagePathDotSlash,
+  fixEscapedQuotesInJsxAttributes,
   fixInnerQuotesInJsxAttributes,
+  fixTranslatedJsonPlaceholders,
   escapeTildeStrikethrough,
   fixBoldAdjacentNonLatin,
   fixItalicAdjacentNonLatin,
