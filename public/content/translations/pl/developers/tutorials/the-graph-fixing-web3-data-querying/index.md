@@ -5,11 +5,11 @@ author: Markus Waas
 lang: pl
 tags:
   [
-    "solidity",
+    "Solidity",
     "smart kontrakty",
     "zapytania",
     "the graph",
-    "react"
+    "React"
   ]
 skill: intermediate
 breadcrumb: "The Graph"

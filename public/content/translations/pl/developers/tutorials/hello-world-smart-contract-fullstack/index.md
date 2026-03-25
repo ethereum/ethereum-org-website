@@ -4,9 +4,9 @@ description: "Samouczek wprowadzający na temat pisania i wdrażania prostego in
 author: "nstrike2"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "smart kontrakty",
     "wdrażanie",
     "eksplorator bloków",

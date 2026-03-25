@@ -2,7 +2,7 @@
 title: "Transfery i zatwierdzenie tokenów ERC-20 z inteligentnego kontraktu Solidity"
 description: "Zbuduj inteligentny kontrakt DEX, który obsługuje transfery i zatwierdzenia tokenów ERC-20 przy użyciu Solidity."
 author: "jdourlens"
-tags: [ "smart kontrakty", "tokeny", "solidity", "erc-20" ]
+tags: [ "smart kontrakty", "tokeny", "Solidity", "erc-20" ]
 skill: intermediate
 breadcrumb: "Transfery ERC-20"
 lang: pl

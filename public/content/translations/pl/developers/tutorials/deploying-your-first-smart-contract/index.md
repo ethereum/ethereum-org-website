@@ -2,7 +2,7 @@
 title: "Wdrożenie pierwszego inteligentnego kontraktu"
 description: "Wprowadzenie do wdrożenia pierwszego inteligentnego kontraktu w sieci testowej Ethereum"
 author: "jdourlens"
-tags: [ "smart kontrakty", "remix", "solidity", "wdrażanie" ]
+tags: [ "smart kontrakty", "Remix", "Solidity", "wdrażanie" ]
 skill: beginner
 breadcrumb: "Pierwszy kontrakt"
 lang: pl

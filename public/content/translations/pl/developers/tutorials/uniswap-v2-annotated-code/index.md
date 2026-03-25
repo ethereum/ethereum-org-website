@@ -2,7 +2,7 @@
 title: "Przewodnik po kontrakcie Uniswap-v2"
 description: "Jak działa kontrakt Uniswap-v2? Dlaczego jest on napisany w ten sposób?"
 author: Ori Pomerantz
-tags: [ "solidity" ]
+tags: [ "Solidity" ]
 skill: intermediate
 published: 2021-05-01
 lang: pl
@@ -56,7 +56,7 @@ Jest to najczęstszy przepływ, używany przez handlowców:
 4. Iteruje po ścieżce. Dla każdej giełdy po drodze wysyła token wejściowy, a następnie wywołuje funkcję `swap` giełdy.
    W większości przypadków adresem docelowym dla tokenów jest następna giełda par na ścieżce. W ostatniej giełdzie jest to adres podany przez handlowca.
 
-#### W kontrakcie głównym (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Zweryfikuj, czy kontrakt główny nie jest oszukiwany i czy może utrzymać wystarczającą płynność po zamianie.
+#### W kontrakcie głównym (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
 
 6. Sprawdź, ile dodatkowych tokenów mamy oprócz znanych rezerw. Ta kwota to liczba tokenów wejściowych, które otrzymaliśmy do wymiany.
 7. Wyślij tokeny wyjściowe do miejsca docelowego.

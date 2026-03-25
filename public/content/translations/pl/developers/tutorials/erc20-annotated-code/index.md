@@ -3,7 +3,7 @@ title: "Przewodnik po kontrakcie ERC-20"
 description: "Co znajduje się w kontrakcie ERC-20 OpenZeppelin i dlaczego tam jest?"
 author: Ori Pomerantz
 lang: pl
-tags: [ "solidity", "erc-20" ]
+tags: [ "Solidity", "erc-20" ]
 skill: beginner
 published: 2021-03-09
 ---

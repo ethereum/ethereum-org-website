@@ -7,7 +7,7 @@ tags:
     "Ukryty adres",
     "prywatność",
     "kryptografia",
-    "rust",
+    "Rust",
     "wasm"
   ]
 skill: intermediate

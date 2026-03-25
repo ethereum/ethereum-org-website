@@ -4,9 +4,9 @@ description: "Samouczek wprowadzający na temat pisania i wdrażania prostego in
 author: "elanh"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "smart kontrakty",
     "wdrażanie"
   ]
@@ -51,7 +51,7 @@ Jeśli nie widzisz na liście sieci Sepolia, przejdź do menu, następnie do opc
 
 ## Krok 4: Dodaj ether z kranu (faucet) {#step-4}
 
-Aby wdrożyć nasz inteligentny kontrakt w sieci testowej, będziemy potrzebować trochę fałszywego ETH. Aby otrzymać Sepolia ETH, możesz przejść do [szczegółów sieci Sepolia](/developers/docs/networks/#sepolia), aby zobaczyć listę różnych kranów (faucetów). Jeśli jeden nie działa, spróbuj innego, ponieważ czasami mogą się wyczerpać. Otrzymanie fałszywego ETH może zająć trochę czasu ze względu na ruch w sieci. Wkrótce powinieneś zobaczyć ETH na swoim koncie Metamask!
+Aby wdrożyć nasz inteligentny kontrakt w sieci testowej, będziemy potrzebować trochę fałszywego ETH. Aby otrzymać Sepolia ETH, możesz przejść do [szczegółów sieci Sepolia](/developers/docs/networks/#sepolia), aby zobaczyć listę różnych kranów (faucetów). Jeśli jeden nie działa, spróbuj innego, ponieważ czasami mogą się wyczerpać. Otrzymanie fałszywego ETH może zająć trochę czasu ze względu na ruch w sieci. Wkrótce powinieneś zobaczyć ETH na swoim koncie MetaMask!
 
 ## Krok 5: Sprawdź saldo {#step-5}
 
@@ -364,4 +364,4 @@ transakcji). Aby dowiedzieć się więcej o wysyłaniu transakcji, zapoznaj się
 
 To wszystko w części 1 tego samouczka, w części 2 faktycznie [wejdziemy w interakcję z naszym inteligentnym kontraktem](https://www.alchemy.com/docs/interacting-with-a-smart-contract) poprzez aktualizację naszej początkowej wiadomości, a w części 3 [opublikujemy nasz inteligentny kontrakt na Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan), aby każdy wiedział, jak z nim wchodzić w interakcję.
 
-**Chcesz dowiedzieć się więcej o Alchemy?** Sprawdź naszą [stronę internetową](https://www.alchemy.com/eth). Nie chcesz przegapić żadnej aktualizacji? Zapisz się do naszego newslettera [tutaj](https://www.alchemy.com/newsletter)! Pamiętaj, aby dołączyć również do naszego [Discorda](https://discord.gg/u72VCg3).\*\*.
+**Chcesz dowiedzieć się więcej o Alchemy? Sprawdź naszą [stronę internetową](https://www.alchemy.com/eth). Nie chcesz przegapić żadnej aktualizacji? Zapisz się do naszego newslettera [tutaj](https://www.alchemy.com/newsletter)! Pamiętaj, aby dołączyć również do naszego [Discorda](https://discord.gg/u72VCg3).**.

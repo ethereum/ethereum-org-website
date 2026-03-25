@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: pl
 tags:
   [
-    "solidity",
+    "Solidity",
     "smart kontrakty",
     "bezpieczeństwo",
     "tokeny"

@@ -2,7 +2,7 @@
 title: "Wskazówki dotyczące bezpieczeństwa kontraktów inteligentnych"
 description: "Lista kontrolna wytycznych bezpieczeństwa do rozważenia podczas tworzenia aplikacji zdecentralizowanych"
 author: "Trailofbits"
-tags: [ "solidity", "smart kontrakty", "bezpieczeństwo" ]
+tags: [ "Solidity", "smart kontrakty", "bezpieczeństwo" ]
 skill: intermediate
 breadcrumb: "Zasady bezpieczeństwa"
 lang: pl

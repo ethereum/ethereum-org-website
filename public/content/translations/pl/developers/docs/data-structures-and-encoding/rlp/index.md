@@ -16,7 +16,7 @@ Aby użyć RLP do zakodowania słownika, zaleca się dwie następujące kanonicz
 
 ## Definicja {#definition}
 
-Funkcja kodowania RLP przyjmuje jeden element. Element zdefiniowany jest w następujący sposób：
+Funkcja kodowania RLP przyjmuje jeden element. Element zdefiniowany jest w następujący sposób:
 
 - ciąg znaków (tzn. tablica bajtów) jest elementem
 - lista elementów jest elementem
@@ -156,7 +156,7 @@ def to_integer(b):
 
 - [RLP w Ethereum](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [Ethereum od podszewki: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
-- Coglio, A. (2020 r.). Prefiks o rekursywnej długości Ethereum w ACL2. preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
+- [Coglio, A. (2020 r.). Prefiks o rekursywnej długości Ethereum w ACL2. preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
 ## Powiązane tematy {#related-topics}
 

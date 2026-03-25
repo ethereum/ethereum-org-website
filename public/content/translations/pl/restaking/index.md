@@ -144,7 +144,7 @@ Podczas gdy AVS-y oferują różne stawki, tokeny płynnego restakingu (LRT), ta
 <AlertDescription>
   <p className="mt-0"><strong>Współzałożyciel Ethereum pisze…</strong></p>
   <p className="mt-2">
-    Vitalik, współzałożyciel Ethereum, ostrzegał przed potencjalnymi zagrożeniami związanymi z restakingiem we wpisie na blogu z 2021 roku zatytułowanym <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus</a>. </a>  
+ Vitalik, współzałożyciel Ethereum, ostrzegał przed potencjalnymi zagrożeniami związanymi z restakingiem we wpisie na blogu z 2021 roku zatytułowanym <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus</a>.
 </p>
 </AlertDescription>
 </AlertContent>

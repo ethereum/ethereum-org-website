@@ -8,7 +8,7 @@ tags:
     "ethers.js",
     "węzły",
     "zapytania",
-    "alchemy"
+    "Alchemy"
   ]
 skill: beginner
 breadcrumb: "Pierwsze kroki"

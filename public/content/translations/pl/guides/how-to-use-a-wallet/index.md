@@ -1,6 +1,6 @@
 ---
 title: "Jak używać portfela"
-metaTitle: "Jak używać portfeli Ethereum | Kroku po kroku"
+metaTitle: "Jak używać portfeli Ethereum | Krok po kroku"
 description: "Przewodnik wyjaśniający, jak wysyłać, odbierać tokeny i łączyć się z projektami web3."
 lang: pl
 ---

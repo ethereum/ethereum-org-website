@@ -46,7 +46,7 @@ Emerytowani edytorzy EIP to
 
 Jeśli chcesz zostać redaktorem EIP, sprawdź [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
-Edytorzy EPI decydują, kiedy propozycja jest gotowa, aby stać się EIP, i pomagają autorom EPI w realizacji ich propozycji. [Ethereum Cat Herders](https://www.ethereumcatherders.com/) pomagają w organizacji spotkań redaktorów EIP i społeczności (zobacz [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
+Edytorzy EIP decydują, kiedy propozycja jest gotowa, aby stać się EIP, i pomagają autorom EIP w realizacji ich propozycji. [Ethereum Cat Herders](https://www.ethereumcatherders.com/) pomagają w organizacji spotkań redaktorów EIP i społeczności (zobacz [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
 
 Pełny proces standaryzacji wraz z wykresem jest opisany w [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 

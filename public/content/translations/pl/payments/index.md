@@ -34,7 +34,7 @@ Dla milionów ludzi pracujących za granicą wysyłanie pieniędzy do domu jest 
 
 ## Dostęp do globalnych walut {#access-to-global-currencies}
 
-W wielu krajach jest poważnym problemem, często połączonym z ograniczonym dostępem do obcych walut. Ludzie w takich sytuacjach mają trudności z ochroną swojego majątku, ponieważ zmuszeni są do trzymania oszczędności, które szybko tracą na wartości.
+W wielu krajach inflacja jest poważnym problemem, często połączonym z ograniczonym dostępem do obcych walut. Ludzie w takich sytuacjach mają trudności z ochroną swojego majątku, ponieważ zmuszeni są do trzymania oszczędności, które szybko tracą na wartości.
 
 Społeczność Ethereum stworzyła **solidny alternatywny system finansowy**, niezależny od polityki monetarnej czy kontroli jakiegokolwiek państwa.
 
@@ -61,7 +61,7 @@ W krajach, gdzie lokalne środki płatnicze zostały odłączone od reszty świa
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Utwórz swoje konto Ethereum w aplikacji portfela już dziś.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Zacznij teraz
   </ButtonLink>
 </AlertContent>
@@ -198,7 +198,7 @@ Od ułatwiania szybkiej pomocy w przypadku katastrof po wspieranie pracowników 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Czas założyć własne konto Etthereum.</div>
+  <div>Czas założyć własne konto Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Rozpocznij
   </ButtonLink>

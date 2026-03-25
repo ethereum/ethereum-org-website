@@ -3,7 +3,7 @@ title: "Używanie WebSockets"
 description: "Przewodnik korzystania z WebSockets i Alchemy do wysyłania żądań JSON-RPC i subskrybowania zdarzeń."
 author: "Elan Halpern"
 lang: pl
-tags: [ "alchemy", "websockets", "zapytania", "JavaScript" ]
+tags: [ "Alchemy", "websockets", "zapytania", "JavaScript" ]
 skill: beginner
 breadcrumb: "WebSockets"
 source: Alchemy docs
