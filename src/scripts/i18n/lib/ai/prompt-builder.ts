@@ -11,9 +11,9 @@
  */
 
 import {
-  type LanguageGroup,
   getLanguageGroup,
   getSiteSpecificNotes,
+  type LanguageGroup,
 } from "./language-groups"
 
 interface PromptOptions {

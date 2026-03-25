@@ -7,6 +7,7 @@ import { GoogleGenAI } from "@google/genai"
 import i18nConfig from "../../../../../i18n.config.json"
 import type { ExtractedAttribute, TranslatedAttribute } from "../jsx-attributes"
 import { delay } from "../workflows/utils"
+
 import { createRateLimiter } from "./rate-limiter"
 
 /** Gemini API configuration */
@@ -222,29 +223,31 @@ export async function translateAttributesByFile(
   concurrency?: number
 ): Promise<Map<string, TranslatedAttribute[]>> {
   const results = new Map<string, TranslatedAttribute[]>()
-  const maxConcurrent = concurrency || Number(process.env.GEMINI_CONCURRENCY) || 16
+  const maxConcurrent =
+    concurrency || Number(process.env.GEMINI_CONCURRENCY) || 16
   const limiter = createRateLimiter(maxConcurrent)
 
   const tasks = Array.from(attributesByFile.entries()).map(
-    ([filePath, attributes]) => async () => {
-      await limiter.acquire()
-      try {
-        const translated = await translateAttributesWithRetry(
-          attributes,
-          targetLanguage,
-          glossaryTerms
-        )
-        results.set(filePath, translated)
-        console.log(
-          `[GEMINI] ✓ Translated ${translated.length} attributes in ${filePath}`
-        )
-      } catch (error) {
-        console.error(`[GEMINI] ✗ Failed to translate ${filePath}:`, error)
-        results.set(filePath, [])
-      } finally {
-        limiter.release()
+    ([filePath, attributes]) =>
+      async () => {
+        await limiter.acquire()
+        try {
+          const translated = await translateAttributesWithRetry(
+            attributes,
+            targetLanguage,
+            glossaryTerms
+          )
+          results.set(filePath, translated)
+          console.log(
+            `[GEMINI] ✓ Translated ${translated.length} attributes in ${filePath}`
+          )
+        } catch (error) {
+          console.error(`[GEMINI] ✗ Failed to translate ${filePath}:`, error)
+          results.set(filePath, [])
+        } finally {
+          limiter.release()
+        }
       }
-    }
   )
 
   await Promise.all(tasks.map((task) => task()))
