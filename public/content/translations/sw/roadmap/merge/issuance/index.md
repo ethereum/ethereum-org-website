@@ -1,157 +1,150 @@
 ---
-title: |-
-  ''Jinsi mchanganyiko ulivyobadilisha ugavi
-   wa ETH.''
-description: "''Ufafanuzi juu ya jinsi mchanganyiko ulivyoathiri usambazaji wa ETH.''"
+title: Jinsi The Merge ilivyoathiri ugavi wa ETH
+description: Mchanganuo wa jinsi The Merge ilivyoathiri ugavi wa ETH
 lang: sw
 ---
 
-# Jinsi Muungano ulivyoathiri usambazaji wa ETH {#how-the-merge-impacts-ETH-supply}
+# Jinsi The Merge ilivyoathiri ugavi wa ETH {#how-the-merge-impacts-ETH-supply}
 
-''Mchanganyiko uliwakilisha mabadiliko ya wavu wa Ethereum kutoka proof-of-work hadi proof-of-stake, yaliyotokea mwezi septemba 2022.''. ''Njia ambayo ETH ilitolewa ilipitia mabadiliko wakati wa mabadiliko huo.''. Hapo awali, ETH mpya ilitolewa kutoka vyanzo viwili: safu ya utekelezaji (yaani, Mtandao Mkuu) na safu ya makubaliano (yaani, Mnyororo Kioleza). ''Tangu muungano, utoaji kwenye safu ya utekelezaji sasa umefika sifuri.''. 'Tufanye ufafanuzi kwa sehemu kwa urahisi.''.
+The Merge iliwakilisha mpito wa mtandao wa [Ethereum](/) kutoka uthibitishaji wa kazi kwenda uthibitishaji wa dhamana uliotokea Septemba 2022. Njia ambayo ETH ilitolewa ilipitia mabadiliko wakati wa mpito huo. Hapo awali, ETH mpya ilitolewa kutoka vyanzo viwili: safu ya utekelezaji (yaani, mainnet) na safu ya makubaliano (yaani, roro wa beacon). Tangu The Merge, utoaji kwenye safu ya utekelezaji sasa ni sifuri. Hebu tuchanganue hili.
 
 ## Vipengele vya utoaji wa ETH {#components-of-eth-issuance}
 
-''Tunaweza kugawanya ugavi wa ETH katika nguvu kuu mbili: utoaji na kufutwa.''.
+Tunaweza kugawanya ugavi wa ETH katika nguvu mbili kuu: utoaji na uchomaji.
 
-**Utoaji** wa ETH ni mchakato wa kuunda ETH ambayo haikuwepo hapo awali. **Uchomaji** wa ETH ni wakati ETH iliyopo inaharibiwa, na kuiondoa kwenye mzunguko. ''Kiwango cha kutoa na kufuta uhesabiwa kwa vigezo kadhaa, na uwiano kati yake unaamua kiwango cha mfumuko/ufungaji wa bei ya Ether.''.
+**Utoaji** wa ETH ni mchakato wa kuunda ETH ambayo haikuwepo hapo awali. **Uchomaji** wa ETH ni pale ETH iliyopo inapoharibiwa, na kuiondoa kwenye mzunguko. Kiwango cha utoaji na uchomaji kinahesabiwa kwa vigezo kadhaa, na usawa kati yao huamua kiwango cha mfumuko wa bei/kushuka kwa bei ya ether kinachotokea.
 
 <Card
 emoji=":chart_decreasing:"
-title="Utoaji wa ETH kwa kifupi">
+title="Muhtasari wa utoaji wa ETH">
 
-- Kabla ya kubadilisha hadi uthibitisho-wa-hisa, wachimbaji walikuwa wakitolewa takriban ETH 13,000 kwa siku
-- Waweka hisa wanatolewa takriban ETH 1,700 kwa siku, kulingana na jumla ya takriban milioni 14 za ETH zilizowekwa hisa
-- Utoaji kamili kutokana na kuweka hisa hubadilika-badilika kulingana na jumla ya kiasi cha ETH kilichowekwa hisa
-- **Tangu Muungano, ni ~ETH 1,700 kwa siku pekee ndizo zimesalia, na kupunguza jumla ya utoaji mpya wa ETH kwa ~88%**
-- Uchomaji: Hii hubadilika-badilika kulingana na mahitaji ya mtandao. ''-Ikiwa-bei ya wastani ya gesi ya angalau gwei kumi na sita inatambulika kwa siku fulani, hii inalinganisha kabisa ~1,700 ETHzinazotolewa kwa wakaguzi na kufanya mfumuko halisi wa ETH kwa sifuri au chini ya sifuri kwa siku hiyo.''.
+- Kabla ya kuhamia kwenye uthibitishaji wa dhamana, wachimbaji walipewa takriban ETH 13,000 kwa siku
+- Waweka dhamana wanapewa takriban ETH 1,700 kwa siku, kulingana na takriban jumla ya ETH milioni 14 zilizowekwa dhamana
+- Utoaji halisi wa kuweka dhamana hubadilika kulingana na jumla ya kiasi cha ETH kilichowekwa dhamana
+- **Tangu The Merge, ni takriban ETH 1,700 pekee kwa siku zinazosalia, na kushusha jumla ya utoaji mpya wa ETH kwa takriban 88%**
+- Uchomaji: Hii hubadilika kulingana na mahitaji ya mtandao. _Ikiwa_ bei ya gesi ya wastani ya angalau gwei 16 inazingatiwa kwa siku fulani, hii inafidia kikamilifu takriban ETH 1,700 zinazotolewa kwa wathibitishaji na kuleta mfumuko halisi wa ETH kuwa sifuri au chini ya hapo kwa siku hiyo.
+
 </Card>
 
-## Kabla ya Muungano (kihistoria) {#pre-merge}
+## Kabla ya The Merge (kihistoria) {#pre-merge}
 
 ### Utoaji wa safu ya utekelezaji {#el-issuance-pre-merge}
 
-''Chini ya uthibitisho wa kazi, wachimbaji walishirikiana tu na safu ya utekelezaji na walipokea tuzo za vizuizi ikiwa walikuwa wachimbaji wa kwanza kutatua kizuizi inayofuata.''. Tangu uboreshaji wa [Constantinople](/ethereum-forks/#constantinople) mnamo 2019 zawadi hii ilikuwa ETH 2 kwa kila kizuizi. Wachimbaji pia walituzwa kwa kuchapisha vizuizi vya [ommer](/glossary/#ommer), ambavyo vilikuwa vizuizi halali ambavyo havikuingia kwenye mnyororo mrefu/halisi. Zawadi hizi zilifikia kiwango cha juu cha ETH 1.75 kwa kila ommer, na zilikuwa _zaidi ya_ zawadi iliyotolewa kutoka kwa kizuizi halisi. ''Mchakato wa uchimbaji ulikuwa shughuli inayohitaji rasilimali nyingi kiuchumi, ambayo kihistoria ilihitaji viwango vya juu vya utoaji wa ETH ili kudumisha mfumo.''.
+Chini ya uthibitishaji wa kazi, wachimbaji waliingiliana tu na safu ya utekelezaji na walizawadiwa na zawadi ya kizuizi ikiwa walikuwa wachimbaji wa kwanza kutatua kitalu kinachofuata. Tangu [sasisho la Constantinople](/ethereum-forks/#constantinople) mnamo 2019 zawadi hii ilikuwa ETH 2 kwa kila kitalu. Wachimbaji pia walizawadiwa kwa kuchapisha bloku za [ommer](/glossary/#ommer), ambazo zilikuwa bloku halali ambazo hazikuishia kwenye mnyororo mrefu zaidi/mkuu. Zawadi hizi zilifikia ukomo wa ETH 1.75 kwa kila ommer, na zilikuwa _pamoja na_ zawadi iliyotolewa kutoka kwenye kitalu kikuu. Mchakato wa kuchimba ulikuwa shughuli kubwa kiuchumi, ambayo kihistoria ilihitaji viwango vya juu vya utoaji wa ETH ili kudumisha.
 
 ### Utoaji wa safu ya makubaliano {#cl-issuance-pre-merge}
 
-[Mnyororo Kioleza](/ethereum-forks/#beacon-chain-genesis) ulianza kufanya kazi mnamo 2020. ''Badala ya wachimbaji, mtandao inalindwa na wakaguzi kwa kutumia uthibitisho.''. ''Mnyororo ulianzishwa na wtumiaji wa Ethereum kwa kuweka ETH moja kwa moja kwenye maktaba mahiri (smart contract) kwenye mainnet (safu ya utekelezaji), ambao beacon chain unausikiliza, na kumpa mtumiaji kiasi sawa cha ETH kwenye mnyororo mpya.''. ''Hadi muungano haujatokea, wakaguzi wa Beacon chain hawakuwa wakishughulikia miamala, bali kwa kimsingi walikua wanakubaliana juu ya hali ya kikundi cha wakaguzi wenyewe.''.
+[Roro wa beacon](/ethereum-forks/#beacon-chain-genesis) ulianza kufanya kazi mnamo 2020. Badala ya wachimbaji, inalindwa na wathibitishaji wanaotumia uthibitishaji wa dhamana. Mnyororo huu ulianzishwa na watumiaji wa Ethereum wakiweka ETH kwa njia moja kwenye mkataba mahiri kwenye mainnet (safu ya utekelezaji), ambayo roro wa beacon inasikiliza, na kumpa mtumiaji kiasi sawa cha ETH kwenye mnyororo mpya. Hadi The Merge ilipotokea, wathibitishaji wa roro wa beacon hawakuwa wakichakata miamala na kimsingi walikuwa wakifikia makubaliano juu ya hali ya bwawa la wathibitishaji lenyewe.
 
-''Wakaguzi kwenye Beacon chain wanapokea tuzo za ETH kwa kuthibitisha hali ya mnyororo na kupendekeza kizuizi.''. ''Tuzo (au adhabu) huhesabiwa na kugawanywa kila kipindi epoch (cha dakika 6.4) kulingana na utendaji wa wakaguzi.''. Zawadi za wathibitishaji ni ndogo **kwa kiasi kikubwa** kuliko zawadi za uchimbaji zilizokuwa zikitolewa hapo awali chini ya uthibitisho-wa-kazi (ETH 2 kila sekunde ~13.5), kwa kuwa kuendesha nodi ya kuthibitisha hakuna gharama kubwa kiuchumi na hivyo hakuhitaji au kuhalalisha zawadi ya juu kiasi hicho.
+Wathibitishaji kwenye roro wa beacon wanazawadiwa ETH kwa kuthibitisha hali ya mnyororo na kupendekeza bloku. Zawadi (au adhabu) zinahesabiwa na kusambazwa katika kila kipindi (kila dakika 6.4) kulingana na utendaji wa Mthibitishaji. Zawadi za Mthibitishaji ni **ndogo sana** kuliko zawadi za uchimbaji zilizokuwa zikitolewa hapo awali chini ya uthibitishaji wa kazi (ETH 2 kila takriban sekunde 13.5), kwani kuendesha Nodi ya kuthibitisha sio kubwa kiuchumi na hivyo haihitaji au kuhalalisha zawadi kubwa kiasi hicho.
 
-### Mchanganuo wa utoaji kabla ya Muungano {#pre-merge-issuance-breakdown}
+### Mchanganuo wa utoaji kabla ya The Merge {#pre-merge-issuance-breakdown}
 
-Jumla ya usambazaji wa ETH: **\~ETH 120,520,000** (wakati wa Muungano mnamo Septemba 2022)
+Jumla ya ugavi wa ETH: **~120,520,000 ETH** (wakati wa The Merge mnamo Septemba 2022)
 
 **Utoaji wa safu ya utekelezaji:**
 
-- Ilikadiriwa kuwa ETH 2.08 kwa kila sekunde 13.3\*: **\~4,930,000** za ETH zilizotolewa kwa mwaka
-- Ilisababisha kiwango cha mfumuko wa bei cha **takriban 4.09%** (milioni 4.93 kwa mwaka / jumla ya milioni 120.5)
-- ''\*Hii inajumuisha 2 ETH kwa kila kizuizi ya kawaida pamoja na wastani wa 0.08ETH kwa muda kutoka kizuizi halali zisizo kwenye mnyororo mkuu.''. Pia hutumia sekunde 13.3, lengo la msingi la muda wa kizuizi bila ushawishi wowote kutoka kwa [bomu la ugumu](/glossary/#difficulty-bomb). ([Angalia chanzo](https://bitinfocharts.com/ethereum/))
+- Ilikadiriwa kuwa ETH 2.08 kwa kila sekunde 13.3\*: **~4,930,000** ETH zilizotolewa kwa mwaka
+- Ilisababisha kiwango cha mfumuko wa bei cha **takriban 4.09%** (Milioni 4.93 kwa mwaka / Jumla ya Milioni 120.5)
+- \*Hii inajumuisha ETH 2 kwa kila kitalu kikuu, pamoja na wastani wa ETH 0.08 kwa muda kutoka kwenye bloku za ommer. Pia inatumia sekunde 13.3, lengo la msingi la muda wa kitalu bila ushawishi wowote kutoka kwa [bomu la ugumu](/glossary/#difficulty-bomb). ([Tazama chanzo](https://bitinfocharts.com/ethereum/))
 
 **Utoaji wa safu ya makubaliano:**
 
-- Kwa kutumia jumla ya ETH 14,000,000 zilizowekwa hisa, kiwango cha utoaji wa ETH ni takriban ETH 1700 kwa siku ([Angalia chanzo](https://ultrasound.money/))
-- Husababisha **\~620,500** za ETH kutolewa kwa mwaka
-- Ilisababisha kiwango cha mfumuko wa bei cha **takriban 0.52%** (elfu 620.5 kwa mwaka / jumla ya milioni 119.3)
+- Kwa kutumia jumla ya ETH 14,000,000 zilizowekwa dhamana, kiwango cha utoaji wa ETH ni takriban ETH 1700 kwa siku ([Tazama chanzo](https://ultrasound.money/))
+- Inasababisha **~620,500** ETH kutolewa kwa mwaka
+- Ilisababisha kiwango cha mfumuko wa bei cha **takriban 0.52%** (620.5K kwa mwaka / Jumla ya Milioni 119.3)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-**Jumla ya kiwango cha utoaji cha mwaka (kabla ya Muungano): ~4.61%** (4.09% + 0.52%)
+**Jumla ya kiwango cha utoaji kwa mwaka (kabla ya The Merge): ~4.61%** (4.09% + 0.52%)
 
-**\~88.7%** ya utoaji ilikuwa ikienda kwa wachimbaji kwenye safu ya utekelezaji (4.09 / 4.61 \* 100)
+**~88.7%** ya utoaji ilikuwa ikienda kwa wachimbaji kwenye safu ya utekelezaji (4.09 / 4.61 * 100)
 
-**\~11.3%** ilikuwa inatolewa kwa waweka hisa kwenye safu ya makubaliano (0.52 / 4.61 \* 100)
+**~11.3%** ilikuwa ikitolewa kwa waweka dhamana kwenye safu ya makubaliano (0.52 / 4.61 * 100)
 </AlertDescription>
-
 </AlertContent>
-
 </Alert>
 
-## Baada ya Muungano (siku ya sasa) {#post-merge}
+## Baada ya The Merge (siku hizi) {#post-merge}
 
 ### Utoaji wa safu ya utekelezaji {#el-issuance-post-merge}
 
-Utoaji wa safu ya utekelezaji tangu Muungano ni sifuri. Uthibitisho-wa-kazi si njia halali tena ya uzalishaji wa vizuizi chini ya sheria zilizoboreshwa za makubaliano. Shughuli zote za safu ya utekelezaji hupakiwa kwenye "vizuizi vya kioleza", ambavyo huchapishwa na kuthibitishwa na wathibitishaji wa uthibitisho-wa-hisa. Zawadi za kuthibitisha na kuchapisha vizuizi vya kioleza huhesabiwa kando kwenye safu ya makubaliano.
+Utoaji wa safu ya utekelezaji tangu The Merge ni sifuri. Uthibitishaji wa kazi sio tena njia halali ya uzalishaji wa kitalu chini ya sheria zilizoboreshwa za makubaliano. Shughuli zote za safu ya utekelezaji zimefungwa kwenye "bloku za beacon", ambazo zinachapishwa na kuthibitishwa na wathibitishaji wa uthibitishaji wa dhamana. Zawadi za kuthibitisha na kuchapisha bloku za beacon zinahesabiwa kando kwenye safu ya makubaliano.
 
 ### Utoaji wa safu ya makubaliano {#cl-issuance-post-merge}
 
-Utoaji wa safu ya makubaliano unaendelea leo kama kabla ya Muungano, kukiwa na zawadi ndogo kwa wathibitishaji wanaothibitisha na kupendekeza vizuizi. Zawadi za wathibitishaji zinaendelea kukusanywa kwenye _salio za wathibitishaji_ zinazosimamiwa ndani ya safu ya makubaliano. Tofauti na akaunti za sasa (akaunti za "utekelezaji"), zinazoweza kufanya miamala kwenye Mtandao Mkuu, hizi ni akaunti tofauti za Ethereum ambazo haziwezi kufanya miamala kwa uhuru na akaunti zingine za Ethereum. Pesa katika akaunti hizi zinaweza tu kutolewa kwenda anwani moja maalum ya utekelezaji.
+Utoaji wa safu ya makubaliano unaendelea leo kama ilivyokuwa kabla ya The Merge, na zawadi ndogo kwa wathibitishaji wanaothibitisha na kupendekeza bloku. Zawadi za Mthibitishaji zinaendelea kujilimbikiza kwenye _salio la Mthibitishaji_ ambalo linasimamiwa ndani ya safu ya makubaliano. Tofauti na akaunti za sasa (akaunti za "utekelezaji"), ambazo zinaweza kufanya miamala kwenye mainnet, hizi ni akaunti tofauti za Ethereum ambazo haziwezi kufanya miamala kwa uhuru na akaunti zingine za Ethereum. Fedha katika akaunti hizi zinaweza tu kutolewa kwenda kwenye anwani moja maalum ya utekelezaji.
 
-Tangu uboreshaji wa Shanghai/Capella uliofanyika Aprili 2023, uondoaji huu umewezeshwa kwa waweka hisa. Waweka hisa wanahamasishwa kuondoa _mapato/zawadi zao (salio zaidi ya ETH 32)_ kwa kuwa pesa hizi vinginevyo hazichangii kwenye uzito wa hisa zao (ambao unafikia kiwango cha juu cha 32).
+Tangu sasisho la Shanghai/Capella lililofanyika Aprili 2023, utoaji huu umewezeshwa kwa waweka dhamana. Waweka dhamana wanahamasishwa kuondoa _mapato/zawadi zao (salio la zaidi ya ETH 32)_ kwani fedha hizi vinginevyo hazichangii kwenye uzito wao wa kuweka dhamana (ambao unafikia ukomo wa 32).
 
-Waweka hisa wanaweza pia kuchagua kutoka na kutoa salio lao lote la mthibitishaji. Ili kuhakikisha Ethereum iko thabiti, idadi ya wathibitishaji wanaoondoka kwa wakati mmoja imezuiliwa.
+Waweka dhamana wanaweza pia kuchagua kutoka na kutoa salio lao lote la Mthibitishaji. Ili kuhakikisha Ethereum ni imara, idadi ya wathibitishaji wanaoondoka kwa wakati mmoja imewekewa ukomo.
 
-Takriban 0.33% ya jumla ya idadi ya wathibitishaji wanaweza kutoka kwa siku. Kwa chaguo-msingi, wathibitishaji wanne (4) wanaweza kutoka kwa kila epoch (kila dakika 6.4, au 900 kwa siku). Mthibitishaji mmoja (1) wa ziada anaruhusiwa kutoka kwa kila wathibitishaji wa ziada 65,536 (2<sup>16</sup>) zaidi ya 262,144 (2<sup>18</sup>). Kwa mfano, kukiwa na wathibitishaji zaidi ya 327,680, watano (5) wanaweza kuondoka kwa kila epoch (1,125 kwa siku). Sita (6) wataruhusiwa kukiwa na jumla ya idadi ya wathibitishaji hai zaidi ya 393,216, na kadhalika.
+Takriban 0.33% ya jumla ya idadi ya wathibitishaji wanaweza kutoka kwa siku fulani. Kwa chaguo-msingi, wathibitishaji wanne (4) wanaweza kutoka kwa kila kipindi (kila dakika 6.4, au 900 kwa siku). Mthibitishaji mmoja (1) wa ziada anaruhusiwa kutoka kwa kila wathibitishaji 65,536 (2<sup>16</sup>) wa ziada zaidi ya 262,144 (2<sup>18</sup>). Kwa mfano, kukiwa na wathibitishaji zaidi ya 327,680, watano (5) wanaweza kuondoka kwa kila kipindi (1,125 kwa siku). Sita (6) wataruhusiwa kukiwa na jumla ya idadi ya wathibitishaji wanaofanya kazi zaidi ya 393,216, na kadhalika.
 
-Wathibitishaji wengi zaidi wanapotoa hisa, idadi ya juu ya wathibitishaji wanaoondoka itapunguzwa polepole hadi kiwango cha chini cha wanne ili kuzuia kimakusudi kiasi kikubwa cha kudhoofisha cha ETH iliyowekwa hisa kisitolewe kwa wakati mmoja.
+Kadiri wathibitishaji wengi wanavyotoa, idadi ya juu zaidi ya wathibitishaji wanaoondoka itapunguzwa polepole hadi kiwango cha chini cha wanne ili kuzuia kwa makusudi kiasi kikubwa kinachoweza kuyumbisha cha ETH iliyowekwa dhamana kutolewa kwa wakati mmoja.
 
-### Mchanganuo wa mfumuko wa bei baada ya Muungano {#post-merge-inflation-breakdown}
+### Mchanganuo wa mfumuko wa bei baada ya The Merge {#post-merge-inflation-breakdown}
 
-- Jumla ya usambazaji wa ETH: **\~ETH 120,520,000** (wakati wa Muungano mnamo Septemba 2022)
+- [Jumla ya ugavi wa ETH](/eth/supply/): **~120,520,000 ETH** (wakati wa The Merge mnamo Septemba 2022)
 - Utoaji wa safu ya utekelezaji: **0**
-- Utoaji wa safu ya makubaliano: Sawa na hapo juu, kiwango cha utoaji cha mwaka cha **\~0.52%** (kukiwa na jumla ya ETH milioni 14 zilizowekwa hisa)
+- Utoaji wa safu ya makubaliano: Sawa na hapo juu, **~0.52%** kiwango cha utoaji kwa mwaka (kukiwa na jumla ya ETH milioni 14 zilizowekwa dhamana)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Jumla ya kiwango cha utoaji cha mwaka: **\~0.52%**
+Jumla ya kiwango cha utoaji kwa mwaka: **~0.52%**
 
-Upungufu halisi katika utoaji wa ETH wa mwaka: **\~88.7%** ((4.61% - 0.52%) / 4.61% \* 100)
+Punguzo halisi katika utoaji wa ETH wa kila mwaka: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
 </AlertDescription>
-
 </AlertContent>
-
 </Alert>
 
-## <Emoji text=":fire:" size="1" /> Uchomaji {#the-burn}
+## <Emoji text=":fire:" size="1" /> Uchomaji {#the-burn}
 
-Nguvu kinyume na utoaji wa ETH ni kiwango ambacho ETH inachomwa. Ili muamala ufanyike kwenye Ethereum, ada ya chini (inayojulikana kama "ada ya msingi") lazima ilipwe, ambayo hubadilika-badilika kila mara (kutoka kizuizi hadi kizuizi) kulingana na shughuli za mtandao. Ada hulipwa kwa ETH na _inahitajika_ ili muamala uonekane kuwa halali. Ada hii _huchomwa_ wakati wa mchakato wa muamala, na kuiondoa kwenye mzunguko.
+Nguvu iliyo kinyume na utoaji wa ETH ni kiwango ambacho ETH inachomwa. Ili muamala utekelezwe kwenye Ethereum, ada ya chini (inayojulikana kama "ada ya msingi") lazima ilipwe, ambayo hubadilika mfululizo (kitalu hadi kitalu) kulingana na shughuli za mtandao. Ada inalipwa kwa ETH na _inahitajika_ ili muamala uchukuliwe kuwa halali. Ada hii _inachomwa_ wakati wa mchakato wa muamala, na kuiondoa kwenye mzunguko.
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
 
-Uchomaji wa ada ulianza kutumika na [uboreshaji wa London](/ethereum-forks/#london) mnamo Agosti 2021, na haujabadilika tangu Muungano.
+Uchomaji wa ada ulianza kufanya kazi na [sasisho la London](/ethereum-forks/#london) mnamo Agosti 2021, na unabaki bila kubadilika tangu The Merge.
 </AlertDescription>
-
 </AlertContent>
-
 </Alert>
 
-Zaidi ya uchomaji wa ada uliotekelezwa na uboreshaji wa London, wathibitishaji wanaweza pia kupata adhabu kwa kutokuwa mtandaoni, au mbaya zaidi, wanaweza kupunguzwa hisa zao kwa kukiuka sheria maalum zinazotishia usalama wa mtandao. Adhabu hizi husababisha kupungua kwa ETH kutoka kwa salio la mthibitishaji huyo, ambayo haituzwi moja kwa moja kwa akaunti nyingine yoyote, na kwa ufanisi kuichoma/kuiondoa kwenye mzunguko.
+Juu ya uchomaji wa ada uliotekelezwa na sasisho la London, wathibitishaji wanaweza pia kupata adhabu kwa kuwa nje ya mtandao, au mbaya zaidi, wanaweza kupunguzwa kwa dhamana kwa kukiuka sheria maalum zinazotishia usalama wa mtandao. Adhabu hizi husababisha kupungua kwa ETH kutoka kwenye salio la Mthibitishaji huyo, ambayo haitolewi moja kwa moja kama zawadi kwa akaunti nyingine yoyote, na hivyo kuichoma/kuiondoa kwenye mzunguko.
 
-### Kukokotoa wastani wa bei ya gesi kwa ajili ya upungufu wa bei {#calculating-average-gas-price-for-deflation}
+### Kuhesabu bei ya gesi ya wastani kwa kushuka kwa bei {#calculating-average-gas-price-for-deflation}
 
-Kama ilivyojadiliwa hapo juu, kiasi cha ETH kinachotolewa kwa siku kinategemea jumla ya ETH iliyowekwa hisa. Wakati wa kuandika, hii ni takriban ETH 1700 kwa siku.
+Kama ilivyojadiliwa hapo juu, kiasi cha ETH kinachotolewa kwa siku fulani kinategemea jumla ya ETH iliyowekwa dhamana. Wakati wa kuandika haya, hii ni takriban ETH 1700 kwa siku.
 
-Ili kubaini wastani wa bei ya gesi inayohitajika ili kufidia kabisa utoaji huu katika kipindi cha saa 24, tutaanza kwa kukokotoa jumla ya idadi ya vizuizi kwa siku, kwa kuzingatia muda wa kizuizi wa sekunde 12:
+Ili kubaini bei ya gesi ya wastani inayohitajika kufidia kikamilifu utoaji huu katika kipindi fulani cha saa 24, tutaanza kwa kuhesabu jumla ya idadi ya bloku kwa siku, ikizingatiwa muda wa kitalu wa sekunde 12:
 
-- `(kizuizi 1 / sekunde 12) * (sekunde 60/dakika) = vizuizi 5/dakika`
-- `(vizuizi 5/dakika) * (dakika 60/saa) = vizuizi 300/saa`
-- `(vizuizi 300/saa) * (saa 24/siku) = vizuizi 7200/siku`
+- `(kitalu 1 / sekunde 12) * (sekunde 60/dakika) = bloku 5/dakika`
+- `(bloku 5/dakika) * (dakika 60/saa) = bloku 300/saa`
+- `(bloku 300/saa) * (saa 24/siku) = bloku 7200/siku`
 
-Kila kizuizi kinalenga `gesi 15x10^6/kizuizi` ([zaidi kuhusu gesi](/developers/docs/gas/)). Kwa kutumia hii, tunaweza kutatua kwa ajili ya wastani wa bei ya gesi (katika vitengo vya gwei/gesi) inayohitajika kufidia utoaji, kwa kuzingatia jumla ya utoaji wa ETH wa kila siku wa ETH 1700:
+Kila kitalu kinalenga `15x10^6 gesi/kitalu` ([zaidi kuhusu gesi](/developers/docs/gas/)). Kwa kutumia hii, tunaweza kutatua bei ya gesi ya wastani (katika vipimo vya gwei/gesi) inayohitajika kufidia utoaji, ikizingatiwa jumla ya utoaji wa ETH wa kila siku wa ETH 1700:
 
-- `vizuizi 7200/siku * gesi 15x10^6/kizuizi * `**`Y gwei/gesi`**` * ETH 1/ gwei 10^9 = ETH 1700/siku`
+- `bloku 7200/siku * 15x10^6 gesi/kitalu * `**`Y gwei/gesi`**` * 1 ETH/ 10^9 gwei = 1700 ETH/siku`
 
 Kutatua kwa `Y`:
 
-- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (kuzungusha hadi tarakimu mbili muhimu)
+- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (kuzungusha hadi tarakimu mbili muhimu pekee)
 
-Njia nyingine ya kupanga upya hatua hii ya mwisho itakuwa ni kubadilisha `1700` na kigezo `X` kinachowakilisha utoaji wa ETH wa kila siku, na kurahisisha iliyobaki hadi:
+Njia nyingine ya kupanga upya hatua hii ya mwisho itakuwa kubadilisha `1700` na kigezo `X` kinachowakilisha utoaji wa ETH wa kila siku, na kurahisisha iliyosalia kuwa:
 
 - `Y = (X(10^3)/(7200 * 15)) = X/108`
 
-Tunaweza kurahisisha na kuandika hii kama chaguo la kukokotoa la `X`:
+Tunaweza kurahisisha na kuandika hii kama utendakazi wa `X`:
 
-- `f(X) = X/108` ambapo `X` ni utoaji wa ETH wa kila siku, na `f(X)` inawakilisha bei ya gwei/gesi inayohitajika kufidia ETH zote mpya zilizotolewa.
+- `f(X) = X/108` ambapo `X` ni utoaji wa ETH wa kila siku, na `f(X)` inawakilisha bei ya gwei/gesi inayohitajika kufidia ETH yote mpya iliyotolewa.
 
-Kwa hivyo, kwa mfano, ikiwa `X` (utoaji wa ETH wa kila siku) itapanda hadi 1800 kulingana na jumla ya ETH iliyowekwa hisa, `f(X)` (gwei inayohitajika kufidia utoaji wote) basi itakuwa `gwei 17` (kwa kutumia tarakimu 2 muhimu)
+Kwa hivyo, kwa mfano, ikiwa `X` (utoaji wa ETH wa kila siku) itapanda hadi 1800 kulingana na jumla ya ETH iliyowekwa dhamana, `f(X)` (gwei inayohitajika kufidia utoaji wote) itakuwa `17 gwei` (kwa kutumia tarakimu 2 muhimu)
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-- [Muungano](/roadmap/merge/)
-- [Ultrasound.money](https://ultrasound.money/) - _Dashibodi zinazopatikana ili kuonyesha utoaji na uchomaji wa ETH kwa wakati halisi_
-- [Uchoraji Chati ya Utoaji wa Ethereum](https://www.attestant.io/posts/charting-ethereum-issuance/) - _Jim McDonald 2020_
+- [The Merge](/roadmap/merge/)
+- [Ultrasound.money](https://ultrasound.money/) - _Dashibodi zinazopatikana ili kuona utoaji na uchomaji wa ETH kwa wakati halisi_
+- [Charting Ethereum Issuance](https://www.attestant.io/posts/charting-ethereum-issuance/) - _Jim McDonald 2020_

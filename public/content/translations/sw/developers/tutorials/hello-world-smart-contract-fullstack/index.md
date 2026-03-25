@@ -1,77 +1,79 @@
 ---
-title: Mkataba-erevu wa Hello World kwa Wanaoanza - Fullstack
-description: Mafunzo ya utangulizi kuhusu kuandika na kusambaza mkataba-erevu rahisi kwenye Ethereum.
+title: Mkataba Mahiri wa Hello World kwa Wanaoanza - Fullstack
+description: Mafunzo ya utangulizi kuhusu kuandika na kusambaza mkataba mahiri rahisi kwenye Ethereum.
 author: "nstrike2"
+breadcrumb: Hello World fullstack
 tags:
   [
-    "Solidity",
-    "Hardhat",
-    "Alchemy",
-    "mikataba erevu",
-    "upelekaji",
-    "kichunguzi cha bloku",
+    "solidity",
+    "hardhat",
+    "alchemy",
+    "mikataba mahiri",
+    "kusambaza",
+    "kichunguzi kizuizi",
     "frontend",
-    "miamala"
+    "miamala",
+    "mfumo",
   ]
 skill: beginner
 lang: sw
 published: 2021-10-25
 ---
 
-Mwongozo huu ni kwa ajili yako kama wewe ni mgeni katika utengenezaji wa mnyororo wa bloku na hujui pa kuanzia au jinsi ya kupeleka na kuingiliana na mikataba-erevu. Tutapitia hatua za kuunda na kupeleka mkataba-erevu rahisi kwenye testnet ya Goerli kwa kutumia [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), na [Alchemy](https://alchemy.com/eth).
+Mwongozo huu ni kwa ajili yako ikiwa wewe ni mgeni katika uundaji wa kiambajengo na hujui wapi pa kuanzia au jinsi ya kusambaza na kuingiliana na mikataba mahiri. Tutapitia hatua za kuunda na kusambaza mkataba mahiri rahisi kwenye mtandao wa testnet wa Goerli kwa kutumia [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), na [Alchemy](https://alchemy.com/eth).
 
 Utahitaji akaunti ya Alchemy ili kukamilisha mafunzo haya. [Jisajili kwa akaunti ya bure](https://www.alchemy.com/).
 
 Ikiwa una maswali wakati wowote, jisikie huru kuuliza katika [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
-## Sehemu ya 1 - Unda na Upeleke Mkataba-erevu wako kwa kutumia Hardhat {#part-1}
+## Sehemu ya 1 - Unda na Usambaze Mkataba Mahiri wako ukitumia Hardhat {#part-1}
 
 ### Unganisha kwenye mtandao wa Ethereum {#connect-to-the-ethereum-network}
 
-Kuna njia nyingi za kufanya maombi kwa mnyororo wa Ethereum. Kwa urahisi, tutatumia akaunti ya bure kwenye Alchemy, jukwaa la wasanidi programu wa mnyororo wa bloku na API inayoturuhusu kuwasiliana na mnyororo wa Ethereum bila kuendesha nodi wenyewe. Alchemy pia ina zana za wasanidi programu kwa ufuatiliaji na uchambuzi; tutatumia fursa hii katika mafunzo haya kuelewa kinachoendelea nyuma ya pazia katika upelekaji wa mkataba-erevu wetu.
+Kuna njia nyingi za kufanya maombi kwenye mnyororo wa Ethereum. Kwa urahisi, tutatumia akaunti ya bure kwenye Alchemy, jukwaa la msanidi wa kiambajengo na API inayoturuhusu kuwasiliana na mnyororo wa Ethereum bila kujiendeshea Nodi sisi wenyewe. Alchemy pia ina zana za wasanidi kwa ajili ya ufuatiliaji na uchanganuzi; tutatumia fursa hizi katika mafunzo haya ili kuelewa kinachoendelea nyuma ya pazia katika usambazaji wetu wa mkataba mahiri.
 
 ### Unda programu yako na ufunguo wa API {#create-your-app-and-api-key}
 
-Baada ya kuunda akaunti ya Alchemy, unaweza kutengeneza ufunguo wa API kwa kuunda programu. Hii itakuruhusu kufanya maombi kwenye testnet ya Goerli. Ikiwa hufahamu testnets unaweza [kusoma mwongozo wa Alchemy wa kuchagua mtandao](https://www.alchemy.com/docs/choosing-a-web3-network).
+Mara tu unapounda akaunti ya Alchemy, unaweza kuzalisha ufunguo wa API kwa kuunda programu. Hii itakuruhusu kufanya maombi kwenye testnet ya Goerli. Ikiwa hufahamu kuhusu testnets unaweza [kusoma mwongozo wa Alchemy wa kuchagua mtandao](https://www.alchemy.com/docs/choosing-a-web3-network).
 
-Kwenye dashibodi ya Alchemy, tafuta menyu kunjuzi ya **Programu** kwenye upau wa urambazaji na ubofye **Unda Programu**.
+Kwenye dashibodi ya Alchemy, tafuta menyu kunjuzi ya **Apps** katika upau wa kusogeza na ubofye **Create App**.
 
-![Programu ya uundaji wa Hello world](./hello-world-create-app.png)
+![Unda programu ya Hello world](./hello-world-create-app.png)
 
-Ipe programu yako jina '_Hello World_' na uandike maelezo mafupi. Chagua **Staging** kama mazingira yako na **Goerli** kama mtandao wako.
+Ipe programu yako jina la '_Hello World_' na uandike maelezo mafupi. Chagua **Staging** kama mazingira yako na **Goerli** kama mtandao wako.
 
-![mwonekano wa programu ya kuunda hello world](./create-app-view-hello-world.png)
+![mwonekano wa kuunda programu hello world](./create-app-view-hello-world.png)
 
-_Kumbuka: hakikisha unachagua **Goerli**, la sivyo mafunzo haya hayatafanya kazi._
+_Kumbuka: hakikisha umechagua **Goerli**, la sivyo mafunzo haya hayatafanya kazi._
 
-Bofya **Unda programu**. Programu yako itaonekana kwenye jedwali hapa chini.
+Bofya **Create app**. Programu yako itaonekana kwenye jedwali hapa chini.
 
 ### Unda akaunti ya Ethereum {#create-an-ethereum-account}
 
-Unahitaji akaunti ya Ethereum ili kutuma na kupokea miamala. Tutatumia MetaMask, mkoba halisi kwenye kivinjari unaowawezesha watumiaji kudhibiti anwani ya akaunti yao ya Ethereum.
+Unahitaji akaunti ya Ethereum ili kutuma na kupokea miamala. Tutatumia MetaMask, mkoba wa mtandaoni kwenye kivinjari unaoruhusu watumiaji kudhibiti anwani ya akaunti yao ya Ethereum.
 
-Unaweza kupakua na kuunda akaunti ya MetaMask bure [hapa](https://metamask.io/download). Unapounda akaunti, au ikiwa tayari una akaunti, hakikisha umebadili na kuweka "Mtandao wa Majaribio wa Goerli" juu kulia (ili tusitumie pesa halisi).
+Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamask.io/download). Unapounda akaunti, au ikiwa tayari una akaunti, hakikisha umebadilisha kwenda kwenye "Goerli Test Network" upande wa juu kulia (ili tusiwe tunashughulika na pesa halisi).
 
-### Hatua ya 4: Ongeza ether kutoka kwa Bomba {#step-4-add-ether-from-a-faucet}
+### Hatua ya 4: Ongeza ether kutoka kwenye Bomba la majaribio {#step-4-add-ether-from-a-faucet}
 
-Ili kupeleka mkataba-erevu wako kwenye mtandao wa majaribio, utahitaji ETH bandia. Ili kupata ETH kwenye mtandao wa Goerli, nenda kwenye bomba la Goerli na uweke anwani ya akaunti yako ya Goerli. Kumbuka kwamba mabomba ya Goerli yamekuwa hayategemewi sana hivi karibuni - angalia [ukurasa wa mitandao ya majaribio](/developers/docs/networks/#goerli) kwa orodha ya machaguo ya kujaribu:
+Ili kusambaza mkataba mahiri wako kwenye mtandao wa majaribio, utahitaji ETH bandia. Ili kupata ETH kwenye mtandao wa Goerli, nenda kwenye bomba la majaribio la Goerli na uweke anwani ya akaunti yako ya Goerli. Kumbuka kwamba mabomba ya majaribio ya Goerli yanaweza kuwa yasiyotegemewa hivi karibuni - tazama [ukurasa wa mitandao ya majaribio](/developers/docs/networks/#goerli) kwa orodha ya chaguo za kujaribu:
 
 _Kumbuka: kutokana na msongamano wa mtandao, hii inaweza kuchukua muda._
 ``
 
 ### Hatua ya 5: Angalia Salio lako {#step-5-check-your-balance}
 
-Ili kuhakikisha mara mbili kuwa ETH iko kwenye mkoba wako, hebu tufanye ombi la [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) kwa kutumia [zana ya mtunzi ya Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Hii itarudisha kiasi cha ETH katika mkoba wetu. Ili kujifunza zaidi angalia [mafunzo mafupi ya Alchemy ya jinsi ya kutumia zana ya mtunzi](https://youtu.be/r6sjRxBZJuU).
+Ili kuhakikisha kuwa ETH ipo kwenye mkoba wako, hebu tufanye ombi la [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) tukitumia [zana ya kutunga ya Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Hii itarejesha kiasi cha ETH kwenye mkoba wetu. Ili kujifunza zaidi angalia [mafunzo mafupi ya Alchemy kuhusu jinsi ya kutumia zana ya kutunga](https://youtu.be/r6sjRxBZJuU).
 
-Weka anwani ya akaunti yako ya MetaMask na ubofye **Tuma Ombi**. Utaona jibu linalofanana na sehemu ya msimbo hapa chini.
+Weka anwani ya akaunti yako ya MetaMask na ubofye **Send Request**. Utaona jibu linalofanana na kijisehemu cha msimbo hapa chini.
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> _Kumbuka: Matokeo haya yako katika wei, sio ETH. Wei hutumika kama thamani ndogo zaidi ya ether._
+> _Kumbuka: Matokeo haya yapo katika wei, si ETH. Wei inatumika kama kiasi kidogo zaidi cha ether._
 
-Phew! Pesa zetu bandia zote zipo.
+Phew! Pesa zetu bandia zote zipo hapo.
 
 ### Hatua ya 6: Anzisha mradi wetu {#step-6-initialize-our-project}
 
@@ -82,43 +84,43 @@ mkdir hello-world
 cd hello-world
 ```
 
-Sasa kwa kuwa tuko ndani ya folda ya mradi wetu, tutatumia `npm init` kuanzisha mradi.
+Sasa kwa kuwa tuko ndani ya folda yetu ya mradi, tutatumia `npm init` kuanzisha mradi.
 
-> Ikiwa bado hujasakinisha npm, fuata [maelekezo haya ili kusakinisha Node.js na npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> Ikiwa bado hujasakinisha npm, fuata [maagizo haya ili kusakinisha Node.js na npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
 
-Kwa madhumuni ya mafunzo haya, haijalishi jinsi unavyojibu maswali ya uanzishaji. Hivi ndivyo tulivyofanya kwa ajili ya marejeleo:
+Kwa madhumuni ya mafunzo haya, haijalishi jinsi unavyojibu maswali ya kuanzisha. Hivi ndivyo tulivyofanya kwa marejeleo:
 
 ```
-jina la kifurushi: (hello-world)
-toleo: (1.0.0)
-maelezo: mkataba-erevu wa hello world
-mahali pa kuanzia: (index.js)
-amri ya majaribio:
-hazina ya git:
-maneno muhimu:
-mwandishi:
-leseni: (ISC)
+package name: (hello-world)
+version: (1.0.0)
+description: hello world smart contract
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
 
-Karibu kuandika kwa /Users/.../.../.../hello-world/package.json:
+About to write to /Users/.../.../.../hello-world/package.json:
 
 {
    "name": "hello-world",
    "version": "1.0.0",
-   "description": "mkataba-erevu wa hello world",
+   "description": "hello world smart contract",
    "main": "index.js",
    "scripts": {
-      "test": "echo \"Kosa: hakuna jaribio lililobainishwa\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1"
    },
    "author": "",
    "license": "ISC"
 }
 ```
 
-Thibitisha package.json na tuko tayari kwenda!
+Idhinisha package.json na tuko tayari kuendelea!
 
 ### Hatua ya 7: Pakua Hardhat {#step-7-download-hardhat}
 
-Hardhat ni mazingira ya usanidi wa kuandaa, kupeleka, kupima, na kutatua programu yako ya Ethereum. Inasaidia wasanidi programu wanapojenga mikataba-erevu na dApps ndani ya nchi kabla ya kupeleka kwenye mnyororo hai.
+Hardhat ni mazingira ya usanidi ya kukusanya, kusambaza, kujaribu, na kurekebisha programu yako ya Ethereum. Inasaidia wasanidi wanapounda mikataba mahiri na mfumo mtawanyo wa kimamlaka (dapps) ndani ya kompyuta zao kabla ya kusambaza kwenye mnyororo wa moja kwa moja.
 
 Ndani ya mradi wetu wa `hello-world` endesha:
 
@@ -130,13 +132,13 @@ Angalia ukurasa huu kwa maelezo zaidi kuhusu [maagizo ya usakinishaji](https://h
 
 ### Hatua ya 8: Unda mradi wa Hardhat {#step-8-create-hardhat-project}
 
-Ndani ya folda ya mradi wetu wa `hello-world`, endesha:
+Ndani ya folda yetu ya mradi wa `hello-world`, endesha:
 
 ```
 npx hardhat
 ```
 
-Unapaswa kisha kuona ujumbe wa kukaribisha na chaguo la kuchagua unachotaka kufanya. Chagua “unda hardhat.config.js tupu”:
+Kisha unapaswa kuona ujumbe wa kukaribisha na chaguo la kuchagua unachotaka kufanya. Chagua "create an empty hardhat.config.js":
 
 ```
 888    888                      888 888               888
@@ -148,65 +150,65 @@ Unapaswa kisha kuona ujumbe wa kukaribisha na chaguo la kuchagua unachotaka kufa
 888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
 888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
 
-👷 Karibu kwenye Hardhat v2.0.11 👷‍
+👷 Welcome to Hardhat v2.0.11 👷‍
 
-Unataka kufanya nini? ...
-Unda mradi wa mfano
-❯ Unda hardhat.config.js tupu
-Acha
+What do you want to do? …
+Create a sample project
+❯ Create an empty hardhat.config.js
+Quit
 ```
 
-Hii itatengeneza faili ya `hardhat.config.js` katika mradi. Tutaitumia baadaye katika mafunzo haya kubainisha usanidi wa mradi wetu.
+Hii itazalisha faili la `hardhat.config.js` kwenye mradi. Tutatumia hii baadaye katika mafunzo ili kubainisha usanidi wa mradi wetu.
 
 ### Hatua ya 9: Ongeza folda za mradi {#step-9-add-project-folders}
 
-Ili kuuweka mradi katika mpangilio, hebu tuunde folda mbili mpya. Katika mstari wa amri, nenda kwenye saraka kuu ya mradi wako wa `hello-world` na uandike:
+Ili kuweka mradi ukiwa umepangiliwa, hebu tuunde folda mbili mpya. Kwenye mstari wa amri, nenda kwenye saraka kuu ya mradi wako wa `hello-world` na uandike:
 
 ```
 mkdir contracts
 mkdir scripts
 ```
 
-- `contracts/` ni mahali ambapo tutaweka faili la msimbo wa mkataba-erevu wetu wa hello world
-- `scripts/` ni mahali ambapo tutaweka hati za kusambaza na kuingiliana na mkataba wetu
+- `contracts/` ndipo tutakapoweka faili letu la msimbo wa mkataba mahiri wa hello world
+- `scripts/` ndipo tutakapoweka hati za kusambaza na kuingiliana na mkataba wetu
 
 ### Hatua ya 10: Andika mkataba wetu {#step-10-write-our-contract}
 
-Huenda unajiuliza, ni lini tutaandika msimbo? Muda umefika!
+Unaweza kuwa unajiuliza, ni lini tutaandika msimbo? Ni wakati sasa!
 
-Fungua mradi wa hello-world katika kihariri chako unachopenda. Mikataba-erevu mara nyingi huandikwa kwa Solidity, ambayo tutaitumia kuandika mkataba-erevu wetu.‌
+Fungua mradi wa hello-world kwenye kihariri chako unachokipenda. Mikataba mahiri mara nyingi huandikwa kwa Solidity, ambayo tutaitumia kuandika mkataba mahiri wetu.‌
 
-1. Nenda kwenye folda ya `contracts` na uunde faili mpya iitwayo `HelloWorld.sol`
-2. Hapa chini kuna sampuli ya mkataba-erevu wa Hello World ambao tutautumia kwa mafunzo haya. Nakili yaliyomo hapa chini kwenye faili ya `HelloWorld.sol`.
+1. Nenda kwenye folda ya `contracts` na uunde faili jipya linaloitwa `HelloWorld.sol`
+2. Hapa chini kuna sampuli ya mkataba mahiri wa Hello World ambao tutautumia kwa mafunzo haya. Nakili yaliyomo hapa chini kwenye faili la `HelloWorld.sol`.
 
-_Kumbuka: Hakikisha unasoma maoni ili kuelewa mkataba huu unafanya nini._
+_Kumbuka: Hakikisha unasoma maoni ili kuelewa kile mkataba huu unafanya._
 
 ```
-// Inabainisha toleo la Solidity, kwa kutumia matoleo ya kimantiki.
-// Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// Specifies the version of Solidity, using semantic versioning.
+// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity >=0.7.3;
 
-// Inafafanua mkataba unaoitwa `HelloWorld`.
-// Mkataba ni mkusanyiko wa kazi na data (hali yake). Baada ya kupelekwa, mkataba hukaa kwenye anwani maalum kwenye mnyororo wa bloku wa Ethereum. Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Defines a contract named `HelloWorld`.
+// A contract is a collection of functions and data (its state). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-   // Hutolewa wakati kazi ya sasisho inapoitwa
-   // Matukio ya mkataba-erevu ni njia ya mkataba wako kuwasiliana kwamba kitu kilitokea kwenye mnyororo wa bloku kwa programu yako ya mbele, ambayo inaweza kuwa 'inasikiliza' matukio fulani na kuchukua hatua yanapotokea.
+   //Emitted when update function is called
+   //Smart contract events are a way for your contract to communicate that something happened on the blockchain to your app front-end, which can be 'listening' for certain events and take action when they happen.
    event UpdatedMessages(string oldStr, string newStr);
 
-   // Inatangaza kigezo cha hali `message` cha aina ya `string`.
-   // Vigezo vya hali ni vigezo ambavyo thamani zake huhifadhiwa kabisa katika hifadhi ya mkataba. Neno muhimu `public` hufanya vigezo kupatikana kutoka nje ya mkataba na huunda kazi ambayo mikataba mingine au wateja wanaweza kuita ili kupata thamani.
+   // Declares a state variable `message` of type `string`.
+   // State variables are variables whose values are permanently stored in contract storage. The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
    string public message;
 
-   // Sawa na lugha nyingi za upangaji zinazotegemea darasa, konstruka ni kazi maalum ambayo hutekelezwa tu wakati wa uundaji wa mkataba.
-   // Konstruka hutumiwa kuanzisha data ya mkataba. Jifunze zaidi:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
+   // Constructors are used to initialize the contract's data. Learn more:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
    constructor(string memory initMessage) {
 
-      // Inakubali hoja ya mfuatano `initMessage` na kuweka thamani katika kigezo cha hifadhi cha mkataba `message`).
+      // Accepts a string argument `initMessage` and sets the value into the contract's `message` storage variable).
       message = initMessage;
    }
 
-   // Kazi ya umma inayokubali hoja ya mfuatano na kusasisha kigezo cha hifadhi `message`.
+   // A public function that accepts a string argument and updates the `message` storage variable.
    function update(string memory newMessage) public {
       string memory oldMsg = message;
       message = newMessage;
@@ -215,49 +217,49 @@ contract HelloWorld {
 }
 ```
 
-Huu ni mkataba-erevu wa msingi unaohifadhi ujumbe wakati wa uundaji. Inaweza kusasishwa kwa kuita kazi ya `update`.
+Huu ni mkataba mahiri wa msingi unaohifadhi ujumbe unapoundwa. Unaweza kusasishwa kwa kuita kipengele cha `update`.
 
-### Hatua ya 11: Unganisha MetaMask & Alchemy kwenye mradi wako {#step-11-connect-metamask-alchemy-to-your-project}
+### Hatua ya 11: Unganisha MetaMask na Alchemy kwenye mradi wako {#step-11-connect-metamask-alchemy-to-your-project}
 
-Tumeunda pochi ya MetaMask, akaunti ya Alchemy, na kuandika mkataba-erevu wetu, sasa ni wakati wa kuunganisha vitu hivi vitatu.
+Tumeunda mkoba wa MetaMask, akaunti ya Alchemy, na kuandika mkataba mahiri wetu, sasa ni wakati wa kuunganisha vyote vitatu.
 
-Kila muamala unaotumwa kutoka kwa mkoba wako unahitaji saini kwa kutumia ufunguo wako wa kipekee binafsi. Ili kuipa programu yetu ruhusa hii, tunaweza kuhifadhi ufunguo wetu binafsi kwa usalama katika faili ya mazingira. Pia tutahifadhi ufunguo wa API kwa Alchemy hapa.
+Kila muamala unaotumwa kutoka kwenye mkoba wako unahitaji saini kwa kutumia ufunguo binafsi wako wa kipekee. Ili kuipa programu yetu ruhusa hii, tunaweza kuhifadhi ufunguo binafsi wetu kwa usalama kwenye faili la mazingira. Pia tutahifadhi ufunguo wa API wa Alchemy hapa.
 
 > Ili kujifunza zaidi kuhusu kutuma miamala, angalia [mafunzo haya](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) kuhusu kutuma miamala kwa kutumia web3.
 
-Kwanza, sakinisha kifurushi cha dotenv katika saraka ya mradi wako:
+Kwanza, sakinisha kifurushi cha dotenv kwenye saraka yako ya mradi:
 
 ```
 npm install dotenv --save
 ```
 
-Kisha, unda faili ya `.env` katika saraka kuu ya mradi. Ongeza ufunguo wako binafsi wa MetaMask na URL ya API ya HTTP ya Alchemy humo.
+Kisha, unda faili la `.env` kwenye saraka kuu ya mradi. Ongeza ufunguo binafsi wako wa MetaMask na URL ya HTTP ya API ya Alchemy ndani yake.
 
-Faili yako ya mazingira lazima iitwe `.env` la sivyo haitatambuliwa kama faili ya mazingira.
+Faili lako la mazingira lazima liitwe `.env` la sivyo halitatambuliwa kama faili la mazingira.
 
-Usiite `process.env` au `.env-custom` au jina lingine lolote.
+Usiliite `process.env` au `.env-custom` au jina lingine lolote.
 
-- Fuata [maelekezo haya](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) ili kuhamisha ufunguo wako binafsi
-- Angalia hapa chini ili kupata URL ya API ya HTTP ya Alchemy
+- Fuata [maagizo haya](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) ili kuhamisha ufunguo binafsi wako
+- Tazama hapa chini ili kupata URL ya HTTP ya API ya Alchemy
 
-![](./get-alchemy-api-key.gif)
+![Mwongozo wa uhuishaji wa kupata ufunguo wa API wa Alchemy](./get-alchemy-api-key.gif)
 
 Faili lako la `.env` linapaswa kuonekana hivi:
 
 ```
-API_URL = "https://eth-goerli.alchemyapi.io/v2/ufunguo-wako-wa-api"
-PRIVATE_KEY = "ufunguo-wako-binafsi-wa-metamask"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+PRIVATE_KEY = "your-metamask-private-key"
 ```
 
-Ili kuunganisha hivi kwenye msimbo wetu, tutarejelea vigezo hivi katika faili letu la `hardhat.config.js` kwenye hatua ya 13.
+Ili kuunganisha haya kwenye msimbo wetu, tutarejelea vigezo hivi kwenye faili letu la `hardhat.config.js` katika hatua ya 13.
 
 ### Hatua ya 12: Sakinisha Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js ni maktaba inayorahisisha kuingiliana na kufanya maombi kwa Ethereum kwa kufunika [mbinu za kawaida za JSON-RPC](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) na mbinu rahisi zaidi kwa mtumiaji.
+Ethers.js ni maktaba inayorahisisha kuingiliana na kufanya maombi kwenye Ethereum kwa kufunga [njia za kawaida za JSON-RPC](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) na njia zinazofaa zaidi kwa mtumiaji.
 
-Hardhat inaturuhusu kuunganisha [plugins](https://hardhat.org/plugins/) kwa zana za ziada na utendaji uliopanuliwa. Tutatumia fursa ya [Ethers plugin](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) kwa upelekaji wa mkataba.
+Hardhat inaturuhusu kujumuisha [programu-jalizi](https://hardhat.org/plugins/) kwa zana za ziada na utendaji uliopanuliwa. Tutatumia fursa ya [programu-jalizi ya Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) kwa usambazaji wa mkataba.
 
-Katika saraka yako ya mradi, andika:
+Kwenye saraka yako ya mradi andika:
 
 ```bash
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
@@ -265,14 +267,13 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 ### Hatua ya 13: Sasisha hardhat.config.js {#step-13-update-hardhat-configjs}
 
-Tumeongeza vitegemezi na programu-jalizi kadhaa hadi sasa, sasa tunahitaji kusasisha `hardhat.config.js` ili mradi wetu uvifahamu vyote.
+Tumeongeza vitegemezi na programu-jalizi kadhaa hadi sasa, sasa tunahitaji kusasisha `hardhat.config.js` ili mradi wetu uzitambue zote.
 
 Sasisha `hardhat.config.js` yako ili ionekane hivi:
 
 ```javascript
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
+/* *
+ * @type import('hardhat/config').HardhatUserConfig */
 
 require("dotenv").config()
 require("@nomiclabs/hardhat-ethers")
@@ -294,29 +295,29 @@ module.exports = {
 
 ### Hatua ya 14: Kusanya mkataba wetu {#step-14-compile-our-contract}
 
-Ili kuhakikisha kila kitu kinafanya kazi hadi sasa, hebu tuandae mkataba wetu. Jukumu la `compile` ni mojawapo ya majukumu yaliyojengewa ndani ya hardhat.
+Ili kuhakikisha kila kitu kinafanya kazi hadi sasa, hebu tukusanye mkataba wetu. Kazi ya `compile` ni mojawapo ya kazi zilizojengewa ndani za hardhat.
 
-Kutoka kwenye mstari wa amri, endesha:
+Kutoka kwenye mstari wa amri endesha:
 
 ```bash
 npx hardhat compile
 ```
 
-Unaweza kupata onyo kuhusu `Kitambulisho cha leseni cha SPDX hakijatolewa kwenye faili ya chanzo`, lakini hakuna haja ya kuwa na wasiwasi kuhusu hilo - tunatumai kila kitu kingine kinaonekana vizuri! Ikiwa sivyo, unaweza kutuma ujumbe kila wakati katika [discord ya Alchemy](https://discord.gg/u72VCg3).
+Unaweza kupata onyo kuhusu `SPDX license identifier not provided in source file`, lakini hakuna haja ya kuwa na wasiwasi kuhusu hilo — tunatumai kila kitu kingine kinaonekana vizuri! Ikiwa sivyo, unaweza kutuma ujumbe kwenye [discord ya Alchemy](https://discord.gg/u72VCg3) wakati wowote.
 
-### Hatua ya 15: Andika hati yetu ya kupeleka {#step-15-write-our-deploy-script}
+### Hatua ya 15: Andika hati yetu ya kusambaza {#step-15-write-our-deploy-script}
 
-Sasa kwa kuwa mkataba wetu umeandikwa na faili yetu ya usanidi iko tayari, ni wakati wa kuandika hati ya kupeleka mkataba wetu.
+Sasa kwa kuwa mkataba wetu umeandikwa na faili letu la usanidi liko tayari, ni wakati wa kuandika hati yetu ya kusambaza mkataba.
 
-Nenda kwenye folda ya `scripts/` na uunde faili jipya liitwalo `deploy.js`, na uongeze yaliyomo yafuatayo ndani yake:
+Nenda kwenye folda ya `scripts/` na uunde faili jipya linaloitwa `deploy.js` , ukiongeza yaliyomo yafuatayo ndani yake:
 
 ```javascript
 async function main() {
   const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
-  // Anza upelekaji, ukirudisha ahadi inayotatuliwa kuwa kitu cha mkataba
+  // Anza usambazaji, ukirudisha ahadi inayotatuliwa kuwa kitu cha mkataba
   const hello_world = await HelloWorld.deploy("Hello World!")
-  console.log("Mkataba umepelekwa kwenye anwani:", hello_world.address)
+  console.log("Contract deployed to address:", hello_world.address)
 }
 
 main()
@@ -327,61 +328,61 @@ main()
   })
 ```
 
-Hardhat hufanya kazi nzuri ya kuelezea kile kila mstari wa msimbo huu unafanya katika [mafunzo yao ya Mikataba](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), tumechukua maelezo yao hapa.
+Hardhat inafanya kazi nzuri sana ya kueleza kile kila mstari wa msimbo huu unafanya katika [mafunzo yao ya Mikataba](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), tumetumia maelezo yao hapa.
 
 ```javascript
 const HelloWorld = await ethers.getContractFactory("HelloWorld")
 ```
 
-`ContractFactory` katika ethers.js ni dhana inayotumika kupeleka mikataba-erevu mpya, kwa hivyo `HelloWorld` hapa ni [kiwanda](https://en.wikipedia.org/wiki/Factory_\(object-oriented_programming\)) cha vielelezo vya mkataba wetu wa hello world. Wakati unatumia programu-jalizi ya `hardhat-ethers` `ContractFactory` na `Contract`, vielelezo huunganishwa na mtia saini wa kwanza (mmiliki) kwa chaguo-msingi.
+`ContractFactory` katika ethers.js ni dhana inayotumika kusambaza mikataba mahiri mipya, kwa hivyo `HelloWorld` hapa ni [kiwanda](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>) cha matukio ya mkataba wetu wa hello world. Unapotumia programu-jalizi ya `hardhat-ethers` `ContractFactory` na `Contract`, matukio huunganishwa kwa mtia saini wa kwanza (mmiliki) kwa chaguo-msingi.
 
 ```javascript
 const hello_world = await HelloWorld.deploy()
 ```
 
-Kuita `deploy()` kwenye `ContractFactory` kutaanza upelekaji, na kurudisha `Promise` inayotatuliwa kuwa kitu cha `Contract`. Hiki ndicho kitu ambacho kina mbinu kwa kila moja ya kazi zetu za mkataba-erevu.
+Kuita `deploy()` kwenye `ContractFactory` kutaanzisha usambazaji, na kurejesha `Promise` inayotatuliwa kuwa kipengee cha `Contract`. Hiki ndicho kipengee kilicho na mbinu kwa kila moja ya kazi zetu za mkataba mahiri.
 
 ### Hatua ya 16: Sambaza mkataba wetu {#step-16-deploy-our-contract}
 
-Hatimaye tuko tayari kupeleka mkataba-erevu wetu! Nenda kwenye mstari wa amri na uendeshe:
+Hatimaye tuko tayari kusambaza mkataba mahiri wetu! Nenda kwenye mstari wa amri na uendeshe:
 
 ```bash
 npx hardhat run scripts/deploy.js --network goerli
 ```
 
-Unapaswa kisha kuona kitu kama:
+Kisha unapaswa kuona kitu kama:
 
 ```bash
-Mkataba umesambazwa kwa anwani: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
+Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
 **Tafadhali hifadhi anwani hii**. Tutaitumia baadaye katika mafunzo.
 
-Tukienda kwenye [Goerli etherscan](https://goerli.etherscan.io) na kutafuta anwani yetu ya mkataba tunapaswa kuona kuwa imesambazwa kwa mafanikio. Muamala utaonekana kitu kama hiki:
+Tukienda kwenye [Goerli etherscan](https://goerli.etherscan.io) na kutafuta anwani ya mkataba wetu tunapaswa kuweza kuona kwamba umesambazwa kwa ufanisi. Muamala utaonekana kama hivi:
 
 ![](./etherscan-contract.png)
 
-Anwani ya `Kutoka` inapaswa kufanana na anwani ya akaunti yako ya MetaMask na anwani ya `Kwenda` itasema **Uundaji wa Mkataba**. Tukibofya kwenye muamala tutaona anwani yetu ya mkataba katika sehemu ya `Kwenda`.
+Anwani ya `From` inapaswa kulingana na anwani ya akaunti yako ya MetaMask na anwani ya `To` itasema **Contract Creation**. Tukibofya kwenye muamala tutaona anwani ya mkataba wetu kwenye sehemu ya `To`.
 
 ![](./etherscan-transaction.png)
 
-Hongera! Umepeleka mkataba-erevu kwenye testnet ya Ethereum.
+Hongera! Umetoka tu kusambaza mkataba mahiri kwenye testnet ya Ethereum.
 
-Ili kuelewa kinachoendelea nyuma ya pazia, hebu tuelekee kwenye kichupo cha Explorer katika [dashibodi yetu ya Alchemy](https://dashboard.alchemy.com/explorer). Ikiwa una programu nyingi za Alchemy hakikisha unachuja kwa programu na uchague **Hello World**.
+Ili kuelewa kinachoendelea nyuma ya pazia, hebu twende kwenye kichupo cha Kichunguzi katika [dashibodi yetu ya Alchemy](https://dashboard.alchemy.com/explorer). Ikiwa una programu nyingi za Alchemy hakikisha unachuja kwa programu na uchague **Hello World**.
 
 ![](./hello-world-explorer.png)
 
-Hapa utaona mbinu chache za JSON-RPC ambazo Hardhat/Ethers zilitengeneza nyuma ya pazia tulipoiita kazi ya `.deploy()`. Mbinu mbili muhimu hapa ni [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), ambalo ni ombi la kuandika mkataba wetu kwenye mnyororo wa Goerli, na [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), ambalo ni ombi la kusoma taarifa kuhusu muamala wetu kwa kutumia hashi. Ili kujifunza zaidi kuhusu kutuma miamala, angalia [mafunzo yetu ya kutuma miamala kwa kutumia Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Hapa utaona njia chache za JSON-RPC ambazo Hardhat/Ethers ilitutengenezea nyuma ya pazia tulipoiita kazi ya `.deploy()`. Njia mbili muhimu hapa ni [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), ambalo ni ombi la kuandika mkataba wetu kwenye mnyororo wa Goerli, na [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), ambalo ni ombi la kusoma taarifa kuhusu muamala wetu kwa kutumia hashi. Ili kujifunza zaidi kuhusu kutuma miamala, angalia [mafunzo yetu kuhusu kutuma miamala kwa kutumia Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
-## Sehemu ya 2: Wasiliana na Mkataba wako Mahiri {#part-2-interact-with-your-smart-contract}
+## Sehemu ya 2: Kuingiliana na Mkataba Mahiri wako {#part-2-interact-with-your-smart-contract}
 
-Sasa kwa kuwa tumefanikiwa kupeleka mkataba-erevu kwenye mtandao wa Goerli, hebu tujifunze jinsi ya kuingiliana nao.
+Kwa kuwa sasa tumefanikiwa kusambaza mkataba mahiri kwenye mtandao wa Goerli hebu tujifunze jinsi ya kuingiliana nao.
 
-### Unda faili ya interact.js {#create-a-interactjs-file}
+### Unda faili la interact.js {#create-a-interactjs-file}
 
-Hii ndiyo faili ambapo tutaandika hati yetu ya mwingiliano. Tutatumia maktaba ya Ethers.js uliyosakinisha hapo awali katika Sehemu ya 1.
+Hili ndilo faili ambapo tutaandika hati yetu ya mwingiliano. Tutakuwa tukitumia maktaba ya Ethers.js uliyosakinisha hapo awali katika Sehemu ya 1.
 
-Ndani ya folda ya `scripts/`, unda faili mpya inayoitwa `interact.js` na uongeze msimbo ufuatao:
+Ndani ya folda ya `scripts/`, unda faili jipya linaloitwa `interact.js` ongeza msimbo ufuatao:
 
 ```javascript
 // interact.js
@@ -391,39 +392,39 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 ```
 
-### Sasisha faili yako ya .env {#update-your-env-file}
+### Sasisha faili lako la .env {#update-your-env-file}
 
-Tutakuwa tukitumia vigezo vipya vya mazingira, kwa hivyo tunahitaji kuvifafanua katika faili ya `.env` ambayo [tuliiunda mapema](#step-11-connect-metamask-&-alchemy-to-your-project).
+Tutakuwa tukitumia vigezo vipya vya mazingira, kwa hivyo tunahitaji kuvifafanua katika faili la `.env` ambalo [tuliunda mapema](#step-11-connect-metamask-&-alchemy-to-your-project).
 
-Tutahitaji kuongeza ufafanuzi wa `API_KEY` yetu ya Alchemy na `CONTRACT_ADDRESS` ambapo mkataba wako mahiri ulitumwa.
+Tutahitaji kuongeza ufafanuzi kwa `API_KEY` yetu ya Alchemy na `CONTRACT_ADDRESS` ambapo mkataba mahiri wako ulisambazwa.
 
-Faili yako ya `.env` inapaswa kuonekana kama hii:
+Faili lako la `.env` linapaswa kuonekana kama hivi:
 
 ```bash
 # .env
 
-API_URL = "https://eth-goerli.alchemyapi.io/v2/<ufunguo-wako-wa-api>"
-API_KEY = "<ufunguo-wako-wa-api>"
-PRIVATE_KEY = "<ufunguo-wako-binafsi-wa-metamask>"
-CONTRACT_ADDRESS = "0x<anwani ya mkataba wako>"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/<your-api-key>"
+API_KEY = "<your-api-key>"
+PRIVATE_KEY = "<your-metamask-private-key>"
+CONTRACT_ADDRESS = "0x<your contract address>"
 ```
 
 ### Chukua ABI ya mkataba wako {#grab-your-contract-ABI}
 
-[ABI (Kiolesura cha Maombi cha Mfumo-mbili)](/glossary/#abi) ya mkataba wetu ni kiolesura cha kuingiliana na mkataba-erevu wetu. Hardhat hutengeneza ABI kiotomatiki na kuihifadhi katika `HelloWorld.json`. Ili kutumia ABI, tutahitaji kuchanganua yaliyomo kwa kuongeza mistari ifuatayo ya msimbo kwenye faili yetu ya `interact.js`:
+[ABI (Application Binary Interface)](/glossary/#abi) ya mkataba wetu ni kiolesura cha kuingiliana na mkataba mahiri wetu. Hardhat inazalisha ABI kiotomatiki na kuihifadhi katika `HelloWorld.json`. Ili kutumia ABI, tutahitaji kuchanganua yaliyomo kwa kuongeza mistari ifuatayo ya msimbo kwenye faili letu la `interact.js`:
 
 ```javascript
 // interact.js
 const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json")
 ```
 
-Ikiwa unataka kuona ABI unaweza kuichapisha kwenye koni yako:
+Ikiwa unataka kuona ABI unaweza kuichapisha kwenye kiweko chako:
 
 ```javascript
 console.log(JSON.stringify(contract.abi))
 ```
 
-Ili kuona ABI yako ikichapishwa kwenye koni, nenda kwenye terminal yako na uendeshe:
+Ili kuona ABI yako ikichapishwa kwenye kiweko, nenda kwenye kituo chako na uendeshe:
 
 ```bash
 npx hardhat run scripts/interact.js
@@ -433,11 +434,11 @@ npx hardhat run scripts/interact.js
 
 Ili kuingiliana na mkataba wetu, tunahitaji kuunda mfano wa mkataba katika msimbo wetu. Ili kufanya hivyo na Ethers.js, tutahitaji kufanya kazi na dhana tatu:
 
-1. Mtoa huduma - mtoa huduma wa nodi anayekupa ufikiaji wa kusoma na kuandika kwenye mnyororo wa bloku
-2. Mwenye saini - inawakilisha akaunti ya Ethereum inayoweza kusaini miamala
-3. Mkataba - kitu cha Ethers.js kinachowakilisha mkataba maalum uliotumwa kwenye mnyororo
+1. Mtoa huduma - mtoa huduma wa Nodi anayekupa ufikiaji wa kusoma na kuandika kwenye kiambajengo
+2. Mtia saini - inawakilisha akaunti ya Ethereum inayoweza kutia saini miamala
+3. Mkataba - kipengee cha Ethers.js kinachowakilisha mkataba maalum uliosambazwa ndani ya mnyororo
 
-Tutatumia ABI ya mkataba kutoka hatua ya awali ili kuunda mfano wetu wa mkataba:
+Tutatumia ABI ya mkataba kutoka hatua iliyopita ili kuunda mfano wetu wa mkataba:
 
 ```javascript
 // interact.js
@@ -448,7 +449,7 @@ const alchemyProvider = new ethers.providers.AlchemyProvider(
   API_KEY
 )
 
-// Mwenye saini
+// Mtia saini
 const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider)
 
 // Mkataba
@@ -459,15 +460,15 @@ const helloWorldContract = new ethers.Contract(
 )
 ```
 
-Jifunze zaidi kuhusu Watoa huduma, Wanaosaini, na Mikataba katika [nyaraka za ethers.js](https://docs.ethers.io/v5/).
+Jifunze zaidi kuhusu Watoa huduma, Watia saini, na Mikataba katika [nyaraka za ethers.js](https://docs.ethers.io/v5/).
 
 ### Soma ujumbe wa kuanzisha {#read-the-init-message}
 
-Unakumbuka tuliposambaza mkataba wetu na `initMessage = "Hello world!"`? Sasa tutasoma ujumbe huo uliohifadhiwa katika mkataba-erevu wetu na kuuchapisha kwenye koni.
+Unakumbuka tuliposambaza mkataba wetu na `initMessage = "Hello world!"`? Sasa tutasoma ujumbe huo uliohifadhiwa katika mkataba mahiri wetu na kuuchapisha kwenye kiweko.
 
-Katika JavaScript, kazi za asinkroni hutumiwa wakati wa kuingiliana na mitandao. Ili kujifunza zaidi kuhusu kazi za asinkroni, [soma makala hii ya kati](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff).
+Katika JavaScript, vitendaji visivyolingana (asynchronous functions) hutumika wakati wa kuingiliana na mitandao. Ili kujifunza zaidi kuhusu vitendaji visivyolingana, [soma makala haya ya medium](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff).
 
-Tumia msimbo ulio hapa chini kuita kazi ya `ujumbe` katika mkataba-erevu wetu na kusoma ujumbe wa kuanzisha:
+Tumia msimbo ulio hapa chini kuita kitendaji cha `message` katika mkataba mahiri wetu na usome ujumbe wa kuanzisha:
 
 ```javascript
 // interact.js
@@ -476,24 +477,24 @@ Tumia msimbo ulio hapa chini kuita kazi ya `ujumbe` katika mkataba-erevu wetu na
 
 async function main() {
   const message = await helloWorldContract.message()
-  console.log("Ujumbe ni: " + message)
+  console.log("The message is: " + message)
 }
 main()
 ```
 
-Baada ya kuendesha faili kwa kutumia `npx hardhat run scripts/interact.js` kwenye terminal tunapaswa kuona jibu hili:
+Baada ya kuendesha faili kwa kutumia `npx hardhat run scripts/interact.js` kwenye kituo tunapaswa kuona jibu hili:
 
 ```
-Ujumbe ni: Hello world!
+The message is: Hello world!
 ```
 
-Hongera! Umefanikiwa kusoma data ya mkataba-erevu kutoka kwa mnyororo wa bloku wa Ethereum, hongera sana!
+Hongera! Umefanikiwa kusoma data ya mkataba mahiri kutoka kwenye kiambajengo cha Ethereum, kazi nzuri!
 
 ### Sasisha ujumbe {#update-the-message}
 
-Badala ya kusoma tu ujumbe, tunaweza pia kusasisha ujumbe uliohifadhiwa katika mkataba-erevu wetu kwa kutumia kazi ya `sasisho`! Inapendeza, sivyo?
+Badala ya kusoma tu ujumbe, tunaweza pia kusasisha ujumbe uliohifadhiwa katika mkataba mahiri wetu kwa kutumia kitendaji cha `update`! Inapendeza sana, sivyo?
 
-Ili kusasisha ujumbe, tunaweza kuita moja kwa moja kazi ya `sasisho` kwenye kitu chetu cha Mkataba kilichoundwa:
+Ili kusasisha ujumbe, tunaweza kuita moja kwa moja kitendaji cha `update` kwenye kipengee chetu cha Mkataba kilichoundwa:
 
 ```javascript
 // interact.js
@@ -502,22 +503,22 @@ Ili kusasisha ujumbe, tunaweza kuita moja kwa moja kazi ya `sasisho` kwenye kitu
 
 async function main() {
   const message = await helloWorldContract.message()
-  console.log("Ujumbe ni: " + message)
+  console.log("The message is: " + message)
 
-  console.log("Inasasisha ujumbe...")
-  const tx = await helloWorldContract.update("Huu ndio ujumbe mpya.")
+  console.log("Updating the message...")
+  const tx = await helloWorldContract.update("This is the new message.")
   await tx.wait()
 }
 main()
 ```
 
-Kumbuka kuwa kwenye mstari wa 11, tunafanya mwito kwa `.wait()` kwenye kitu cha muamala kilichorudishwa. Hii inahakikisha kwamba hati yetu inasubiri muamala uchimbwe kwenye mnyororo wa bloku kabla ya kutoka kwenye kazi. Ikiwa wito wa `.wait()` haujajumuishwa, hati inaweza isione thamani iliyosasishwa ya `ujumbe` katika mkataba.
+Kumbuka kwamba kwenye mstari wa 11, tunaita `.wait()` kwenye kipengee cha muamala kilichorejeshwa. Hii inahakikisha kwamba hati yetu inasubiri muamala kuchimbwa kwenye kiambajengo kabla ya kutoka kwenye kitendaji. Ikiwa wito wa `.wait()` haujajumuishwa, hati inaweza isione thamani iliyosasishwa ya `message` katika mkataba.
 
 ### Soma ujumbe mpya {#read-the-new-message}
 
-Unapaswa kuwa na uwezo wa kurudia [hatua ya awali](#read-the-init-message) ili kusoma thamani iliyosasishwa ya `ujumbe`. Chukua muda na uone ikiwa unaweza kufanya mabadiliko muhimu ili kuchapisha thamani hiyo mpya!
+Unapaswa kuweza kurudia [hatua iliyopita](#read-the-init-message) ili kusoma thamani iliyosasishwa ya `message`. Chukua muda na uone ikiwa unaweza kufanya mabadiliko yanayohitajika ili kuchapisha thamani hiyo mpya!
 
-Ikiwa unahitaji dokezo, hivi ndivyo faili yako ya `interact.js` inavyopaswa kuonekana kwa sasa:
+Ikiwa unahitaji dokezo, hivi ndivyo faili lako la `interact.js` linapaswa kuonekana kwa wakati huu:
 
 ```javascript
 // interact.js
@@ -534,7 +535,7 @@ const alchemyProvider = new ethers.providers.AlchemyProvider(
   API_KEY
 )
 
-// mtiaji saini - wewe
+// mtia saini - wewe
 const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider)
 
 // mfano wa mkataba
@@ -546,72 +547,72 @@ const helloWorldContract = new ethers.Contract(
 
 async function main() {
   const message = await helloWorldContract.message()
-  console.log("Ujumbe ni: " + message)
+  console.log("The message is: " + message)
 
-  console.log("Inasasisha ujumbe...")
-  const tx = await helloWorldContract.update("huu ni ujumbe mpya")
+  console.log("Updating the message...")
+  const tx = await helloWorldContract.update("this is the new message")
   await tx.wait()
 
   const newMessage = await helloWorldContract.message()
-  console.log("Ujumbe mpya ni: " + newMessage)
+  console.log("The new message is: " + newMessage)
 }
 
 main()
 ```
 
-Sasa endesha tu hati na unapaswa kuona ujumbe wa zamani, hali ya kusasisha, na ujumbe mpya ukichapishwa kwenye terminal yako!
+Sasa endesha tu hati na unapaswa kuweza kuona ujumbe wa zamani, hali ya kusasisha, na ujumbe mpya uliochapishwa kwenye kituo chako!
 
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Ujumbe ni: Hello World!
-Inasasisha ujumbe...
-Ujumbe mpya ni: Huu ni ujumbe mpya.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
-Wakati unapoendesha hati hiyo, unaweza kugundua kuwa hatua ya `Inasasisha ujumbe...` inachukua muda kupakia kabla ya ujumbe mpya kupakiwa. Hiyo ni kutokana na mchakato wa uchimbaji; ikiwa una hamu ya kufuatilia miamala inapochimbwa, tembelea [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) ili kuona hali ya muamala. Ikiwa muamala umeacha, inasaidia pia kuangalia [Goerli Etherscan](https://goerli.etherscan.io) na kutafuta hashi ya muamala wako.
+Wakati unaendesha hati hiyo, unaweza kugundua kuwa hatua ya `Updating the message...` inachukua muda kupakia kabla ya ujumbe mpya kupakia. Hiyo inatokana na mchakato wa uchimbaji; ikiwa una hamu ya kufuatilia miamala wakati inachimbwa, tembelea [mempool ya Alchemy](https://dashboard.alchemyapi.io/mempool) ili kuona hali ya muamala. Ikiwa muamala utaachwa, inasaidia pia kuangalia [Goerli Etherscan](https://goerli.etherscan.io) na kutafuta hashi ya muamala wako.
 
-## Sehemu ya 3: Chapisha Mkataba-erevu wako kwenye Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
+## Sehemu ya 3: Chapisha Mkataba Mahiri wako kwenye Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
-Umefanya kazi yote ngumu ya kuufanya mkataba-erevu wako kuwa hai; sasa ni wakati wa kuushiriki na ulimwengu!
+Umefanya kazi ngumu yote ya kuleta mkataba mahiri wako kwenye uhalisia; sasa ni wakati wa kuushiriki na ulimwengu!
 
-Kwa kuthibitisha mkataba-erevu wako kwenye Etherscan, mtu yeyote anaweza kuona msimbo wako chanzo na kuingiliana na mkataba-erevu wako. Tuanze!
+Kwa kuthibitisha mkataba mahiri wako kwenye Etherscan, mtu yeyote anaweza kutazama msimbo wako wa chanzo na kuingiliana na mkataba mahiri wako. Hebu tuanze!
 
 ### Hatua ya 1: Tengeneza Ufunguo wa API kwenye akaunti yako ya Etherscan {#step-1-generate-an-api-key-on-your-etherscan-account}
 
-Ufunguo wa API wa Etherscan ni muhimu ili kuthibitisha kuwa wewe ndiye mmiliki wa mkataba-erevu unaojaribu kuchapisha.
+Ufunguo wa API wa Etherscan ni muhimu ili kuthibitisha kuwa unamiliki mkataba mahiri unaojaribu kuuchapisha.
 
-Ikiwa huna akaunti ya Etherscan tayari, [jisajili kwa akaunti](https://etherscan.io/register).
+Ikiwa bado huna akaunti ya Etherscan, [jisajili kwa ajili ya akaunti](https://etherscan.io/register).
 
-Baada ya kuingia, tafuta jina lako la mtumiaji kwenye upau wa urambazaji, lielekeze juu yake na uchague kitufe cha **Wasifu wangu**.
+Baada ya kuingia, tafuta jina lako la mtumiaji kwenye upau wa kusogeza, weka mshale juu yake na uchague kitufe cha **My profile**.
 
-Kwenye ukurasa wako wa wasifu, unapaswa kuona upau wa urambazaji wa kando. Kutoka kwenye upau wa urambazaji wa kando, chagua **Vifunguo vya API**. Kisha, bonyeza kitufe cha "Ongeza" ili kuunda ufunguo mpya wa API, ipe jina programu yako **hello-world** na bonyeza kitufe cha **Unda Ufunguo Mpya wa API**.
+Kwenye ukurasa wako wa wasifu, unapaswa kuona upau wa kusogeza wa pembeni. Kutoka kwenye upau wa kusogeza wa pembeni, chagua **API Keys**. Kisha, bonyeza kitufe cha "Add" ili kuunda ufunguo mpya wa API, ipatie programu yako jina la **hello-world** na ubonyeze kitufe cha **Create New API Key**.
 
-Ufunguo wako mpya wa API unapaswa kuonekana kwenye jedwali la ufunguo wa API. Nakili ufunguo wa API kwenye ubao wako wa kunakili.
+Ufunguo wako mpya wa API unapaswa kuonekana kwenye jedwali la ufunguo wa API. Nakili ufunguo wa API kwenye ubao wako wa kunakili (clipboard).
 
 Kisha, tunahitaji kuongeza ufunguo wa API wa Etherscan kwenye faili yetu ya `.env`.
 
-Baada ya kuiongeza, faili yako ya `.env` inapaswa kuonekana hivi:
+Baada ya kuuongeza, faili yako ya `.env` inapaswa kuonekana hivi:
 
 ```javascript
-API_URL = "https://eth-goerli.alchemyapi.io/v2/ufunguo-wako-wa-api"
-PUBLIC_KEY = "anwani-yako-ya-akaunti-ya-umma"
-PRIVATE_KEY = "anwani-yako-ya-akaunti-binafsi"
-CONTRACT_ADDRESS = "anwani-yako-ya-mkataba"
-ETHERSCAN_API_KEY = "ufunguo-wako-wa-etherscan"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+PUBLIC_KEY = "your-public-account-address"
+PRIVATE_KEY = "your-private-account-address"
+CONTRACT_ADDRESS = "your-contract-address"
+ETHERSCAN_API_KEY = "your-etherscan-key"
 ```
 
-### Mikataba-erevu iliyotumwa na Hardhat {#hardhat-deployed-smart-contracts}
+### Mikataba mahiri iliyosambazwa na Hardhat {#hardhat-deployed-smart-contracts}
 
 #### Sakinisha hardhat-etherscan {#install-hardhat-etherscan}
 
-Kuchapisha mkataba wako kwa Etherscan kwa kutumia Hardhat ni rahisi. Kwanza utahitaji kusakinisha programu-jalizi ya `hardhat-etherscan` ili kuanza. `hardhat-etherscan` itathibitisha kiotomatiki msimbo chanzo wa mkataba-erevu na ABI kwenye Etherscan. Ili kuongeza hii, katika saraka ya `hello-world` endesha:
+Kuchapisha mkataba wako kwenye Etherscan kwa kutumia Hardhat ni rahisi. Kwanza utahitaji kusakinisha programu-jalizi ya `hardhat-etherscan` ili kuanza. `hardhat-etherscan` itathibitisha kiotomatiki msimbo wa chanzo wa mkataba mahiri na ABI kwenye Etherscan. Ili kuongeza hii, katika saraka ya `hello-world` endesha:
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan
 ```
 
-Baada ya kusakinishwa, jumuisha taarifa ifuatayo juu ya `hardhat.config.js` yako, na ongeza chaguzi za usanidi wa Etherscan:
+Baada ya kusakinishwa, jumuisha taarifa ifuatayo juu ya `hardhat.config.js` yako, na uongeze chaguo za usanidi za Etherscan:
 
 ```javascript
 // hardhat.config.js
@@ -640,93 +641,93 @@ module.exports = {
 }
 ```
 
-#### Thibitisha mkataba-erevu wako kwenye Etherscan {#verify-your-smart-contract-on-etherscan}
+#### Thibitisha mkataba mahiri wako kwenye Etherscan {#verify-your-smart-contract-on-etherscan}
 
-Hakikisha faili zote zimehifadhiwa na vigezo vyote vya `.env` vimesanidiwa ipasavyo.
+Hakikisha faili zote zimehifadhiwa na vigezo vyote vya `.env` vimesanidiwa kwa usahihi.
 
-Endesha kazi ya `kuthibitisha`, ukipitisha anwani ya mkataba, na mtandao ambapo umewekwa:
-
-```text
-npx hardhat verify --network goerli ANWANI_YA_MKATABA_ULIOPELEKWA 'Hello World!'
-```
-
-Hakikisha kwamba `ANWANI_YA_MKATABA_ULIOPELEKWA` ni anwani ya mkataba-erevu wako uliotumwa kwenye mtandao wa majaribio wa Goerli. Pia, hoja ya mwisho (`'Hello World!'`) lazima iwe thamani sawa ya mfuatano iliyotumiwa [wakati wa hatua ya kupeleka katika sehemu ya 1](#write-our-deploy-script).
-
-Ikiwa yote yatakwenda sawa, utaona ujumbe ufuatao kwenye terminal yako:
+Endesha jukumu la `verify`, ukipitisha anwani ya mkataba, na mtandao ambapo imesambazwa:
 
 ```text
-Msimbo chanzo umewasilishwa kwa mafanikio kwa mkataba
-contracts/HelloWorld.sol:HelloWorld kwenye 0xdeployed-contract-address
-kwa uthibitisho kwenye Etherscan. Inasubiri matokeo ya uthibitisho...
-
-
-Mkataba wa HelloWorld umethibitishwa kwa mafanikio kwenye Etherscan.
-https://goerli.etherscan.io/address/<contract-address>#contracts
+npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-Hongera! Msimbo wako wa mkataba-erevu uko kwenye Etherscan!
+Hakikisha kwamba `DEPLOYED_CONTRACT_ADDRESS` ni anwani ya mkataba mahiri wako uliosambazwa kwenye mtandao wa testnet wa Goerli. Pia, hoja ya mwisho (`'Hello World!'`) lazima iwe thamani sawa ya mfuatano iliyotumika [wakati wa hatua ya kusambaza katika sehemu ya 1](#write-our-deploy-script).
 
-### Angalia mkataba-erevu wako kwenye Etherscan! {#check-out-your-smart-contract-on-etherscan}
+Ikiwa yote yataenda vizuri, utaona ujumbe ufuatao kwenye terminal yako:
 
-Unapoelekea kwenye kiungo kilichotolewa kwenye terminal yako, unapaswa kuwa na uwezo wa kuona msimbo wako wa mkataba-erevu na ABI zilizochapishwa kwenye Etherscan!
+```text
+Successfully submitted source code for contract
+contracts/HelloWorld.sol:HelloWorld at 0xdeployed-contract-address
+for verification on Etherscan. Waiting for verification result...
 
-**Wahooo - umefanikiwa bingwa! Sasa mtu yeyote anaweza kuita au kuandika kwa mkataba-erevu wako! Tunatarajia kuona utakachojenga baadaye!**
 
-## Sehemu ya 4 - Kuunganisha mkataba-erevu wako na sehemu ya mbele {#part-4-integrating-your-smart-contract-with-the-frontend}
+Successfully verified contract HelloWorld on Etherscan.
+https: // goerli.etherscan.io/address/<contract-address>#contracts
+```
 
-Mwishoni mwa mafunzo haya, utajua jinsi ya:
+Hongera! Msimbo wako wa mkataba mahiri upo kwenye Etherscan!
 
-- Unganisha mkoba wa MetaMask kwenye mfumo mtawanyo wa kimamlaka wako
-- Soma data kutoka kwa mkataba-erevu wako kwa kutumia API ya [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
-- Saini miamala ya Ethereum kwa kutumia MetaMask
+### Angalia mkataba mahiri wako kwenye Etherscan! {#check-out-your-smart-contract-on-etherscan}
 
-Kwa mfumo mtawanyo wa kimamlaka huu, tutatumia [React](https://react.dev/) kama mfumo wetu wa mbele; hata hivyo, ni muhimu kutambua kwamba hatutatumia muda mwingi kuchanganua misingi yake, kwani tutazingatia zaidi kuleta utendaji wa Web3 kwenye mradi wetu.
+Unapoenda kwenye kiungo kilichotolewa kwenye terminal yako, unapaswa kuweza kuona msimbo wako wa mkataba mahiri na ABI iliyochapishwa kwenye Etherscan!
 
-Kama sharti, unapaswa kuwa na uelewa wa kiwango cha mwanzo cha React. Ikiwa sivyo, tunapendekeza ukamilishe [mafunzo rasmi ya Utangulizi wa React](https://react.dev/learn).
+**Wahooo - umefanya vizuri bingwa! Sasa mtu yeyote anaweza kuita au kuandika kwenye mkataba mahiri wako! Hatuwezi kusubiri kuona utajenga nini baadaye!**
+
+## Sehemu ya 4 - Kuunganisha mkataba mahiri wako na frontend {#part-4-integrating-your-smart-contract-with-the-frontend}
+
+Kufikia mwisho wa mafunzo haya, utajua jinsi ya:
+
+- Kuunganisha mkoba wa MetaMask kwenye dapp yako
+- Kusoma data kutoka kwenye mkataba mahiri wako ukitumia API ya [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Kusaini miamala ya Ethereum ukitumia MetaMask
+
+Kwa dapp hii, tutatumia [React](https://react.dev/) kama mfumo wetu wa frontend; hata hivyo, ni muhimu kutambua kwamba hatutatumia muda mwingi kuchambua misingi yake, kwani tutazingatia zaidi kuleta utendaji wa Web3 kwenye mradi wetu.
+
+Kama sharti, unapaswa kuwa na uelewa wa kiwango cha kuanza wa React. Ikiwa sivyo, tunapendekeza ukamilishe [Mafunzo ya Utangulizi wa React](https://react.dev/learn) rasmi.
 
 ### Nakili faili za kuanzia {#clone-the-starter-files}
 
-Kwanza, nenda kwenye [hazina ya GitHub ya hello-world-part-four](https://github.com/alchemyplatform/hello-world-part-four-tutorial) ili kupata faili za kuanzia za mradi huu na unakili hazina hii kwenye mashine yako ya ndani.
+Kwanza, nenda kwenye [hifadhi ya GitHub ya hello-world-part-four](https://github.com/alchemyplatform/hello-world-part-four-tutorial) ili kupata faili za kuanzia za mradi huu na unakili hifadhi hii kwenye mashine yako ya ndani.
 
-Fungua hazina iliyonakiliwa ndani ya nchi. Angalia kuwa ina folda mbili: `starter-files` na `completed`.
+Fungua hifadhi iliyonakiliwa ndani ya kompyuta yako. Kumbuka kwamba ina folda mbili: `starter-files` na `completed`.
 
-- `starter-files`- **tutafanya kazi katika saraka hii**, tutaunganisha UI na mkoba wako wa Ethereum na mkataba-erevu tuliouchapisha kwenye Etherscan katika [Sehemu ya 3](#part-3).
-- `completed` ina mafunzo yote yaliyokamilika na inapaswa kutumika tu kama rejea ukikwama.
+- `starter-files`- **tutakuwa tukifanya kazi katika saraka hii**, tutaunganisha UI kwenye mkoba wako wa Ethereum na mkataba mahiri tuliouchapisha kwenye Etherscan katika [Sehemu ya 3](#part-3).
+- `completed` ina mafunzo yote yaliyokamilika na inapaswa kutumika tu kama rejeleo ikiwa utakwama.
 
-Kisha, fungua nakala yako ya `starter-files` kwenye kihariri chako cha msimbo unachokipenda, na kisha nenda kwenye folda ya `src`.
+Ifuatayo, fungua nakala yako ya `starter-files` kwenye kihariri chako cha msimbo unachokipenda, na kisha nenda kwenye folda ya `src`.
 
-Msimbo wote tutakaouandika utakuwa chini ya folda ya `src`. Tutakuwa tukihariri kijenzi cha `HelloWorld.js` na faili za JavaScript za `util/interact.js` ili kuupa mradi wetu utendaji wa Web3.
+Msimbo wote tutakaoandika utakuwa chini ya folda ya `src`. Tutakuwa tukihariri kipengele cha `HelloWorld.js` na faili za JavaScript za `util/interact.js` ili kuupa mradi wetu utendaji wa Web3.
 
 ### Angalia faili za kuanzia {#check-out-the-starter-files}
 
-Kabla ya kuanza kuandika msimbo, hebu tuchunguze tulichopewa katika faili za kuanzia.
+Kabla hatujaanza kuandika msimbo, hebu tuchunguze kile tulichopewa kwenye faili za kuanzia.
 
-#### Fanya mradi wako wa react uendeshwe {#get-your-react-project-running}
+#### Fanya mradi wako wa react ufanye kazi {#get-your-react-project-running}
 
-Tuanze kwa kuendesha mradi wa React katika kivinjari chetu. Uzuri wa React ni kwamba mara tu mradi wetu unapokuwa ukifanya kazi katika kivinjari chetu, mabadiliko yoyote tunayohifadhi yatasasishwa moja kwa moja kwenye kivinjari chetu.
+Hebu tuanze kwa kuendesha mradi wa React kwenye kivinjari chetu. Uzuri wa React ni kwamba mara tu tunapokuwa na mradi wetu unaoendeshwa kwenye kivinjari chetu, mabadiliko yoyote tunayohifadhi yatasasishwa moja kwa moja kwenye kivinjari chetu.
 
-Ili kuendesha mradi, nenda kwenye saraka kuu ya folda ya `starter-files`, na kisha endesha `npm install` kwenye terminal yako ili kusakinisha vitegemezi vya mradi:
+Ili kufanya mradi ufanye kazi, nenda kwenye saraka kuu ya folda ya `starter-files`, na uendeshe `npm install` kwenye terminal yako ili kusakinisha vitegemezi vya mradi:
 
 ```bash
 cd starter-files
 npm install
 ```
 
-Mara tu hizo zikimaliza kusakinisha, endesha `npm start` kwenye terminal yako:
+Mara tu hizo zitakapomaliza kusakinishwa, endesha `npm start` kwenye terminal yako:
 
 ```bash
 npm start
 ```
 
-Kufanya hivyo kunapaswa kufungua [http://localhost:3000/](http://localhost:3000/) kwenye kivinjari chako, ambapo utaona sehemu ya mbele ya mradi wetu. Inapaswa kuwa na sehemu moja (mahali pa kusasisha ujumbe uliohifadhiwa katika mkataba-erevu wako), kitufe cha "Unganisha Mkoba", na kitufe cha "Sasisha".
+Kufanya hivyo kunapaswa kufungua [http://localhost:3000/](http://localhost:3000/) kwenye kivinjari chako, ambapo utaona frontend ya mradi wetu. Inapaswa kuwa na uwanja mmoja \(mahali pa kusasisha ujumbe uliohifadhiwa kwenye mkataba mahiri wako\), kitufe cha "Connect Wallet", na kitufe cha "Update".
 
-Ukijaribu kubofya kitufe chochote, utagundua kuwa havifanyi kazi—hiyo ni kwa sababu bado tunahitaji kupanga utendaji wao.
+Ikiwa utajaribu kubofya kitufe chochote, utagundua kuwa havifanyi kazi—hiyo ni kwa sababu bado tunahitaji kupanga utendaji wao.
 
-#### Kijenzi cha `HelloWorld.js` {#the-helloworld-js-component}
+#### Kipengele cha `HelloWorld.js` {#the-helloworld-js-component}
 
-Hebu turudi kwenye folda ya `src` kwenye kihariri chetu na tufungue faili ya `HelloWorld.js`. Ni muhimu sana tuelewe kila kitu katika faili hii, kwani ndicho kijenzi kikuu cha React tutakachokuwa tukifanyia kazi.
+Hebu turudi kwenye folda ya `src` kwenye kihariri chetu na tufungue faili ya `HelloWorld.js`. Ni muhimu sana tuelewe kila kitu katika faili hili, kwani ndicho kipengele kikuu cha React tutakachokuwa tukifanyia kazi.
 
-Juu ya faili hii, utaona tuna taarifa kadhaa za uingizaji ambazo ni muhimu ili mradi wetu uendeshwe, ikiwa ni pamoja na maktaba ya React, hook za useEffect na useState, baadhi ya vitu kutoka `./util/interact.js` (tutaelezea kwa undani zaidi hivi karibuni!), na nembo ya Alchemy.
+Juu ya faili hili, utagundua tuna taarifa kadhaa za kuingiza ambazo ni muhimu ili kufanya mradi wetu ufanye kazi, ikiwa ni pamoja na maktaba ya React, ndoano za useEffect na useState, baadhi ya vipengee kutoka `./util/interact.js` (tutavielezea kwa undani zaidi hivi karibuni!), na nembo ya Alchemy.
 
 ```javascript
 // HelloWorld.js
@@ -744,127 +745,126 @@ import {
 import alchemylogo from "./alchemylogo.svg"
 ```
 
-Kisha, tuna vigezo vyetu vya hali ambavyo tutasasisha baada ya matukio maalum.
+Ifuatayo, tuna vigezo vyetu vya hali ambavyo tutavisasisha baada ya matukio maalum.
 
 ```javascript
 // HelloWorld.js
 
-//Vigezo vya hali
+// Vigezo vya hali
 const [walletAddress, setWallet] = useState("")
 const [status, setStatus] = useState("")
-const [message, setMessage] = useState("Hakuna muunganisho na mtandao.")
+const [message, setMessage] = useState("No connection to the network.")
 const [newMessage, setNewMessage] = useState("")
 ```
 
-Hivi ndivyo kila kigezo kinavyowakilisha:
+Hapa kuna kile kila kigezo kinawakilisha:
 
-- `walletAddress` - mfuatano unaohifadhi anwani ya pochi ya mtumiaji
-- `status`- mfuatano unaohifadhi ujumbe muhimu unaomwongoza mtumiaji jinsi ya kuingiliana na mfumo mtawanyo wa kimamlaka
-- `message` - mfuatano unaohifadhi ujumbe wa sasa katika mkataba-erevu
-- `newMessage` - mfuatano unaohifadhi ujumbe mpya utakaondikwa kwenye mkataba-erevu
+- `walletAddress` - mfuatano unaohifadhi anwani ya mkoba wa mtumiaji
+- `status`- mfuatano unaohifadhi ujumbe wa msaada unaomwongoza mtumiaji jinsi ya kuingiliana na dapp
+- `message` - mfuatano unaohifadhi ujumbe wa sasa katika mkataba mahiri
+- `newMessage` - mfuatano unaohifadhi ujumbe mpya utakaondikwa kwenye mkataba mahiri
 
-Baada ya vigezo vya hali, utaona kazi tano ambazo hazijatekelezwa: `useEffect` ,`addSmartContractListener`, `addWalletListener` , `connectWalletPressed`, na `onUpdatePressed`. Tutaeleza wanachofanya hapa chini:
+Baada ya vigezo vya hali, utaona vitendaji vitano ambavyo havijatekelezwa: `useEffect` ,`addSmartContractListener`, `addWalletListener` , `connectWalletPressed`, na `onUpdatePressed`. Tutafafanua kile wanachofanya hapa chini:
 
 ```javascript
 // HelloWorld.js
 
-//inayoitwa mara moja tu
+// huitwa mara moja tu
 useEffect(async () => {
-  //TODO: tekeleza
+  // TODO: tekeleza
 }, [])
 
 function addSmartContractListener() {
-  //TODO: tekeleza
+  // TODO: tekeleza
 }
 
 function addWalletListener() {
-  //TODO: tekeleza
+  // TODO: tekeleza
 }
 
 const connectWalletPressed = async () => {
-  //TODO: tekeleza
+  // TODO: tekeleza
 }
 
 const onUpdatePressed = async () => {
-  //TODO: tekeleza
+  // TODO: tekeleza
 }
 ```
 
-- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html)- hii ni hook ya React inayoitwa baada ya kijenzi chako kutolewa. Kwa sababu ina propu ya safu tupu `[]` iliyopitishwa ndani yake (tazama mstari wa 4), itaitwa tu kwenye utoaji wa _kwanza_ wa kijenzi. Hapa tutapakia ujumbe wa sasa uliohifadhiwa katika mkataba-erevu wetu, tuite wasikilizaji wetu wa mkataba-erevu na mkoba, na tusasishe UI yetu ili kuonyesha ikiwa mkoba tayari umeunganishwa.
-- `addSmartContractListener`- kazi hii inaweka msikilizaji ambaye atatazama tukio la `UpdatedMessages` la mkataba wetu wa HelloWorld na kusasisha UI yetu ujumbe unapobadilishwa katika mkataba-erevu wetu.
-- `addWalletListener`- kazi hii inaweka msikilizaji anayegundua mabadiliko katika hali ya mkoba wa MetaMask wa mtumiaji, kama vile mtumiaji anapotenganisha mkoba wake au kubadilisha anwani.
-- `connectWalletPressed`- kazi hii itaitwa ili kuunganisha mkoba wa MetaMask wa mtumiaji kwenye mfumo mtawanyo wa kimamlaka wetu.
-- `onUpdatePressed` - kazi hii itaitwa wakati mtumiaji anataka kusasisha ujumbe uliohifadhiwa katika mkataba-erevu.
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html)- hii ni ndoano ya React inayoitwa baada ya kipengele chako kutolewa. Kwa sababu ina propu ya safu tupu `[]` iliyopitishwa ndani yake \(tazama mstari wa 4\), itaitwa tu kwenye utoaji wa _kwanza_ wa kipengele. Hapa tutapakia ujumbe wa sasa uliohifadhiwa kwenye mkataba mahiri wetu, tutaita wasikilizaji wetu wa mkataba mahiri na mkoba, na kusasisha UI yetu ili kuonyesha ikiwa mkoba tayari umeunganishwa.
+- `addSmartContractListener`- kitendaji hiki kinaweka msikilizaji ambaye atatazama tukio la `UpdatedMessages` la mkataba wetu wa HelloWorld na kusasisha UI yetu wakati ujumbe unabadilishwa kwenye mkataba mahiri wetu.
+- `addWalletListener`- kitendaji hiki kinaweka msikilizaji anayegundua mabadiliko katika hali ya mkoba wa MetaMask wa mtumiaji, kama vile wakati mtumiaji anapokata muunganisho wa mkoba wao au kubadilisha anwani.
+- `connectWalletPressed`- kitendaji hiki kitaitwa ili kuunganisha mkoba wa MetaMask wa mtumiaji kwenye dapp yetu.
+- `onUpdatePressed` - kitendaji hiki kitaitwa wakati mtumiaji anataka kusasisha ujumbe uliohifadhiwa kwenye mkataba mahiri.
 
-Karibu na mwisho wa faili hii, tuna UI ya kijenzi chetu.
+Karibu na mwisho wa faili hili, tuna UI ya kipengele chetu.
 
 ```javascript
 // HelloWorld.js
 
-//UI ya kijenzi chetu
+// kiolesura cha mtumiaji cha kijenzi chetu
 return (
   <div id="container">
     <img id="logo" src={alchemylogo}></img>
     <button id="walletButton" onClick={connectWalletPressed}>
       {walletAddress.length > 0 ? (
-        "Imeunganishwa: " +
+        "Connected: " +
         String(walletAddress).substring(0, 6) +
         "..." +
         String(walletAddress).substring(38)
       ) : (
-        <span>Unganisha Mkoba</span>
+        <span>Connect Wallet</span>
       )}
     </button>
 
-    <h2 style={{ paddingTop: "50px" }}>Ujumbe wa Sasa:</h2>
+    <h2 style={{ paddingTop: "50px" }}>Current Message:</h2>
     <p>{message}</p>
 
-    <h2 style={{ paddingTop: "18px" }}>Ujumbe Mpya:</h2>
+    <h2 style={{ paddingTop: "18px" }}>New Message:</h2>
 
     <div>
       <input
         type="text"
-        placeholder="Sasisha ujumbe katika mkataba-erevu wako."
+        placeholder="Update the message in your smart contract."
         onChange={(e) => setNewMessage(e.target.value)}
         value={newMessage}
       />
       <p id="status">{status}</p>
 
       <button id="publishButton" onClick={onUpdatePressed}>
-        Sasisha
+        Update
       </button>
-</div>
- 
-</div>
+    </div>
+  </div>
 )
 ```
 
-Ukichunguza msimbo huu kwa makini, utaona wapi tunatumia vigezo vyetu mbalimbali vya hali katika UI yetu:
+Ikiwa utachunguza msimbo huu kwa uangalifu, utagundua mahali tunapotumia vigezo vyetu mbalimbali vya hali katika UI yetu:
 
-- Kwenye mistari 6-12, ikiwa mkoba wa mtumiaji umeunganishwa (yaani, `walletAddress.length > 0`), tunaonyesha toleo lililofupishwa la `anwani ya mkoba` wa mtumiaji katika kitufe chenye ID "walletButton;" vinginevyo inasema tu "Unganisha Mkoba".
-- Kwenye mstari wa 17, tunaonyesha ujumbe wa sasa uliohifadhiwa katika mkataba-erevu, ambao unanaswa katika mfuatano wa `ujumbe`.
-- Kwenye mistari 23-26, tunatumia [kijenzi kinachodhibitiwa](https://legacy.reactjs.org/docs/forms.html#controlled-components) kusasisha kigezo chetu cha hali cha `newMessage` wakati ingizo katika sehemu ya maandishi linapobadilika.
+- Kwenye mistari ya 6-12, ikiwa mkoba wa mtumiaji umeunganishwa \(yaani, `walletAddress.length > 0`\), tunaonyesha toleo lililofupishwa la `walletAddress` ya mtumiaji kwenye kitufe chenye kitambulisho "walletButton;" vinginevyo inasema tu "Connect Wallet."
+- Kwenye mstari wa 17, tunaonyesha ujumbe wa sasa uliohifadhiwa kwenye mkataba mahiri, ambao unanaswa katika mfuatano wa `message`.
+- Kwenye mistari ya 23-26, tunatumia [kipengele kinachodhibitiwa](https://legacy.reactjs.org/docs/forms.html#controlled-components) kusasisha kigezo chetu cha hali cha `newMessage` wakati ingizo katika uwanja wa maandishi linabadilika.
 
-Mbali na vigezo vyetu vya hali, utaona pia kwamba kazi za `connectWalletPressed` na `onUpdatePressed` huitwa wakati vitufe vyenye ID `publishButton` na `walletButton` vinapobofywa mtawalia.
+Mbali na vigezo vyetu vya hali, utaona pia kwamba vitendaji vya `connectWalletPressed` na `onUpdatePressed` vinaitwa wakati vitufe vyenye vitambulisho `publishButton` na `walletButton` vinapobofywa mtawalia.
 
-Mwisho, hebu tushughulikie wapi kijenzi hiki cha `HelloWorld.js` kinaongezwa.
+Hatimaye, hebu tushughulikie wapi kipengele hiki cha `HelloWorld.js` kinaongezwa.
 
-Ukienda kwenye faili ya `App.js`, ambayo ni kijenzi kikuu katika React kinachofanya kazi kama chombo cha vijenzi vingine vyote, utaona kwamba kijenzi chetu cha `HelloWorld.js` kinaingizwa kwenye mstari wa 7.
+Ikiwa utaenda kwenye faili ya `App.js`, ambayo ni kipengele kikuu katika React kinachofanya kazi kama chombo cha vipengele vingine vyote, utaona kwamba kipengele chetu cha `HelloWorld.js` kinaingizwa kwenye mstari wa 7.
 
-Mwisho lakini sio uchache, hebu tuangalie faili moja zaidi uliyopewa, faili ya `interact.js`.
+Mwisho kabisa, hebu tuangalie faili moja zaidi uliyopewa, faili ya `interact.js`.
 
 #### Faili ya `interact.js` {#the-interact-js-file}
 
-Kwa sababu tunataka kufuata dhana ya [M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), tutataka faili tofauti ambayo ina kazi zetu zote za kudhibiti mantiki, data, na sheria za mfumo mtawanyo wa kimamlaka wetu, na kisha tuweze kuhamisha kazi hizo kwenye sehemu yetu ya mbele (kijenzi chetu cha `HelloWorld.js`).
+Kwa sababu tunataka kufuata dhana ya [M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), tutataka faili tofauti ambalo lina vitendaji vyetu vyote vya kusimamia mantiki, data, na sheria za dapp yetu, na kisha kuweza kuhamisha vitendaji hivyo kwenye frontend yetu \(kipengele chetu cha `HelloWorld.js`\).
 
-👆🏽Hii ndiyo hasa madhumuni ya faili yetu ya `interact.js`!
+👆🏽Hili ndilo dhumuni hasa la faili yetu ya `interact.js`!
 
-Nenda kwenye folda ya `util` katika saraka yako ya `src`, na utaona tumejumuisha faili inayoitwa `interact.js` ambayo itakuwa na kazi zetu zote za mwingiliano wa mkataba-erevu na mkoba na vigezo.
+Nenda kwenye folda ya `util` katika saraka yako ya `src`, na utagundua tumejumuisha faili inayoitwa `interact.js` ambayo itakuwa na mwingiliano wetu wote wa mkataba mahiri na vitendaji na vigezo vya mkoba.
 
 ```javascript
 // interact.js
 
-//export const helloWorldContract;
+// export const helloWorldContract;
 
 export const loadCurrentMessage = async () => {}
 
@@ -875,31 +875,31 @@ const getCurrentWalletConnected = async () => {}
 export const updateMessage = async (message) => {}
 ```
 
-Utaona juu ya faili kwamba tumeacha maoni kwenye kitu cha `helloWorldContract`. Baadaye katika mafunzo haya, tutaondoa maoni kwenye kitu hiki na kuanzisha mkataba-erevu wetu katika kigezo hiki, ambacho kisha tutakihamisha kwenye kijenzi chetu cha `HelloWorld.js`.
+Utagundua juu ya faili kwamba tumetoa maoni kwenye kipengee cha `helloWorldContract`. Baadaye katika mafunzo haya, tutaondoa maoni kwenye kipengee hiki na kuanzisha mkataba mahiri wetu katika kigezo hiki, ambacho kisha tutakihamisha kwenye kipengele chetu cha `HelloWorld.js`.
 
-Kazi nne ambazo hazijatekelezwa baada ya kitu chetu cha `helloWorldContract` hufanya yafuatayo:
+Vitendaji vinne ambavyo havijatekelezwa baada ya kipengee chetu cha `helloWorldContract` vinafanya yafuatayo:
 
-- `loadCurrentMessage` - kazi hii inashughulikia mantiki ya kupakia ujumbe wa sasa uliohifadhiwa katika mkataba-erevu. Itafanya wito wa _kusoma_ kwa mkataba-erevu wa Hello World kwa kutumia [API ya Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
-- `connectWallet` - kazi hii itaunganisha MetaMask ya mtumiaji kwenye mfumo mtawanyo wa kimamlaka wetu.
-- `getCurrentWalletConnected` - kazi hii itaangalia ikiwa akaunti ya Ethereum tayari imeunganishwa na mfumo mtawanyo wa kimamlaka wetu wakati wa upakiaji wa ukurasa na kusasisha UI yetu ipasavyo.
-- `updateMessage` - kazi hii itasasisha ujumbe uliohifadhiwa katika mkataba-erevu. Itafanya mwito wa _kuandika_ kwa mkataba-erevu wa Hello World, hivyo mkoba wa MetaMask wa mtumiaji utalazimika kusaini muamala wa Ethereum ili kusasisha ujumbe.
+- `loadCurrentMessage` - kitendaji hiki kinashughulikia mantiki ya kupakia ujumbe wa sasa uliohifadhiwa kwenye mkataba mahiri. Kitafanya wito wa _kusoma_ kwenye mkataba mahiri wa Hello World kwa kutumia [API ya Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
+- `connectWallet` - kitendaji hiki kitaunganisha MetaMask ya mtumiaji kwenye dapp yetu.
+- `getCurrentWalletConnected` - kitendaji hiki kitaangalia ikiwa akaunti ya Ethereum tayari imeunganishwa kwenye dapp yetu wakati wa kupakia ukurasa na kusasisha UI yetu ipasavyo.
+- `updateMessage` - kitendaji hiki kitasasisha ujumbe uliohifadhiwa kwenye mkataba mahiri. Kitafanya wito wa _kuandika_ kwenye mkataba mahiri wa Hello World, kwa hivyo mkoba wa MetaMask wa mtumiaji utalazimika kusaini muamala wa Ethereum ili kusasisha ujumbe.
 
-Sasa kwa kuwa tunaelewa tunachofanya kazi nacho, hebu tujue jinsi ya kusoma kutoka kwa mkataba-erevu wetu!
+Sasa kwa kuwa tunaelewa kile tunachofanya kazi nacho, hebu tujue jinsi ya kusoma kutoka kwenye mkataba mahiri wetu!
 
-### Hatua ya 3: Soma kutoka kwa mkataba-erevu wako {#step-3-read-from-your-smart-contract}
+### Hatua ya 3: Soma kutoka kwenye mkataba mahiri wako {#step-3-read-from-your-smart-contract}
 
-Ili kusoma kutoka kwa mkataba-erevu wako, utahitaji kusanidi kwa mafanikio:
+Ili kusoma kutoka kwenye mkataba mahiri wako, utahitaji kuweka kwa ufanisi:
 
 - Muunganisho wa API kwenye mnyororo wa Ethereum
-- Mfano uliopakiwa wa mkataba-erevu wako
-- Kazi ya kuita kazi ya mkataba-erevu wako
-- Msikilizaji wa kutazama masasisho wakati data unayosoma kutoka kwa mkataba-erevu inapobadilika
+- Mfano uliopakiwa wa mkataba mahiri wako
+- Kitendaji cha kuita kwenye kitendaji cha mkataba mahiri wako
+- Msikilizaji wa kutazama sasisho wakati data unayosoma kutoka kwenye mkataba mahiri inabadilika
 
-Hii inaweza kuonekana kama hatua nyingi, lakini usijali! Tutakuongoza jinsi ya kufanya kila moja hatua kwa hatua! :\)
+Hii inaweza kusikika kama hatua nyingi, lakini usijali! Tutakutembeza jinsi ya kufanya kila moja wapo hatua kwa hatua! :\)
 
 #### Anzisha muunganisho wa API kwenye mnyororo wa Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
 
-Kwa hiyo unakumbuka jinsi katika Sehemu ya 2 ya mafunzo haya, tulitumia ufunguo wetu wa [Alchemy Web3 kusoma kutoka kwa mkataba-erevu wetu](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? Utahitaji pia ufunguo wa Alchemy Web3 katika mfumo mtawanyo wa kimamlaka wako ili kusoma kutoka kwenye mnyororo.
+Kwa hivyo kumbuka jinsi katika Sehemu ya 2 ya mafunzo haya, tulitumia [ufunguo wetu wa Alchemy Web3 kusoma kutoka kwenye mkataba mahiri wetu](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? Utahitaji pia ufunguo wa Alchemy Web3 kwenye dapp yako ili kusoma kutoka kwenye mnyororo.
 
 Ikiwa huna tayari, kwanza sakinisha [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) kwa kwenda kwenye saraka kuu ya `starter-files` yako na kuendesha yafuatayo kwenye terminal yako:
 
@@ -907,23 +907,23 @@ Ikiwa huna tayari, kwanza sakinisha [Alchemy Web3](https://github.com/alchemypla
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) ni kifuniko karibu na [Web3.js](https://docs.web3js.org/), inayotoa mbinu za API zilizoboreshwa na manufaa mengine muhimu ili kurahisisha maisha yako kama msanidi programu wa web3. Imeundwa kuhitaji usanidi mdogo ili uweze kuanza kuitumia katika programu yako mara moja!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) ni kanga inayozunguka [Web3.js](https://docs.web3js.org/), ikitoa mbinu zilizoboreshwa za API na faida zingine muhimu ili kurahisisha maisha yako kama msanidi wa web3. Imeundwa kuhitaji usanidi mdogo ili uweze kuanza kuitumia kwenye programu yako mara moja!
 
-Kisha, sakinisha kifurushi cha [dotenv](https://www.npmjs.com/package/dotenv) katika saraka ya mradi wako, ili tuwe na mahali salama pa kuhifadhi ufunguo wetu wa API baada ya kuupata.
+Kisha, sakinisha kifurushi cha [dotenv](https://www.npmjs.com/package/dotenv) katika saraka ya mradi wako, ili tuwe na mahali salama pa kuhifadhi ufunguo wetu wa API baada ya kuuchukua.
 
 ```text
 npm install dotenv --save
 ```
 
-Kwa mfumo mtawanyo wa kimamlaka wetu, **tutatumia ufunguo wetu wa API wa Websockets** badala ya ufunguo wetu wa API wa HTTP, kwani utaturuhusu kuweka msikilizaji anayegundua wakati ujumbe uliohifadhiwa katika mkataba-erevu unapobadilika.
+Kwa dapp yetu, **tutatumia ufunguo wetu wa API wa Websockets** badala ya ufunguo wetu wa API wa HTTP, kwani itaturuhusu kuweka msikilizaji anayegundua wakati ujumbe uliohifadhiwa kwenye mkataba mahiri unabadilika.
 
-Baada ya kupata ufunguo wako wa API, unda faili ya `.env` katika saraka yako kuu na uongeze url yako ya Websockets ya Alchemy. Baadaye, faili yako ya `.env` inapaswa kuonekana hivi:
+Mara tu unapokuwa na ufunguo wako wa API, tengeneza faili ya `.env` katika saraka yako kuu na uongeze url yako ya Alchemy Websockets kwake. Baadaye, faili yako ya `.env` inapaswa kuonekana hivi:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
+REACT_APP_ALCHEMY_KEY = wss: // eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-Sasa, tuko tayari kusanidi kituo chetu cha Alchemy Web3 katika mfumo mtawanyo wa kimamlaka wetu! Hebu turudi kwenye `interact.js` yetu, ambayo iko ndani ya folda yetu ya `util` na tuongeze msimbo ufuatao juu ya faili:
+Sasa, tuko tayari kuweka mwisho wetu wa Alchemy Web3 kwenye dapp yetu! Hebu turudi kwenye `interact.js` yetu, ambayo imewekwa ndani ya folda yetu ya `util` na tuongeze msimbo ufuatao juu ya faili:
 
 ```javascript
 // interact.js
@@ -933,26 +933,26 @@ const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 
-//export const helloWorldContract;
+// export const helloWorldContract;
 ```
 
-Hapo juu, kwanza tuliingiza ufunguo wa Alchemy kutoka kwa faili yetu ya `.env` na kisha tukapitisha `alchemyKey` yetu kwa `createAlchemyWeb3` ili kuanzisha kituo chetu cha Alchemy Web3.
+Hapo juu, kwanza tuliingiza ufunguo wa Alchemy kutoka kwenye faili yetu ya `.env` na kisha tukapitisha `alchemyKey` yetu kwa `createAlchemyWeb3` ili kuanzisha mwisho wetu wa Alchemy Web3.
 
-Na kituo hiki kikiwa tayari, ni wakati wa kupakia mkataba-erevu wetu!
+Pamoja na mwisho huu kuwa tayari, ni wakati wa kupakia mkataba mahiri wetu!
 
-#### Inapakia mkataba-erevu wako wa Hello World {#loading-your-hello-world-smart-contract}
+#### Kupakia mkataba mahiri wako wa Hello World {#loading-your-hello-world-smart-contract}
 
-Ili kupakia mkataba-erevu wako wa Hello World, utahitaji anwani yake ya mkataba na ABI, zote mbili zinaweza kupatikana kwenye Etherscan ikiwa ulikamilisha [Sehemu ya 3 ya mafunzo haya.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
+Ili kupakia mkataba mahiri wako wa Hello World, utahitaji anwani ya mkataba wake na ABI, ambazo zote zinaweza kupatikana kwenye Etherscan ikiwa ulikamilisha [Sehemu ya 3 ya mafunzo haya.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
 #### Jinsi ya kupata ABI ya mkataba wako kutoka Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
-Ikiwa uliruka Sehemu ya 3 ya mafunzo haya, unaweza kutumia mkataba wa HelloWorld na anwani [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). ABI yake inaweza kupatikana [hapa](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
+Ikiwa uliruka Sehemu ya 3 ya mafunzo haya, unaweza kutumia mkataba wa HelloWorld wenye anwani [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). ABI yake inaweza kupatikana [hapa](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
 
-ABI ya mkataba ni muhimu kwa kubainisha ni kazi gani mkataba utaita na pia kuhakikisha kuwa kazi hiyo itarudisha data katika umbizo unalotarajia. Baada ya kunakili ABI yetu ya mkataba, hebu tuihifadhi kama faili ya JSON inayoitwa `contract-abi.json` katika saraka yako ya `src`.
+ABI ya mkataba ni muhimu kwa kubainisha ni kitendaji gani mkataba utaita na pia kuhakikisha kwamba kitendaji kitarudisha data katika muundo unaotarajia. Mara tu tunaponakili ABI ya mkataba wetu, hebu tuihifadhi kama faili ya JSON inayoitwa `contract-abi.json` katika saraka yako ya `src`.
 
-Faili yako ya contract-abi.json inapaswa kuhifadhiwa katika folda yako ya src.
+Faili yako ya contract-abi.json inapaswa kuhifadhiwa kwenye folda yako ya src.
 
-Tukiwa na anwani ya mkataba wetu, ABI, na kituo cha Alchemy Web3, tunaweza kutumia [mbinu ya mkataba](https://docs.web3js.org/api/web3-eth-contract/class/Contract) kupakia mfano wa mkataba-erevu wetu. Ingiza ABI ya mkataba wako kwenye faili ya `interact.js` na uongeze anwani ya mkataba wako.
+Tukiwa na anwani yetu ya mkataba, ABI, na mwisho wa Alchemy Web3, tunaweza kutumia [mbinu ya mkataba](https://docs.web3js.org/api/web3-eth-contract/class/Contract) kupakia mfano wa mkataba mahiri wetu. Ingiza ABI ya mkataba wako kwenye faili ya `interact.js` na uongeze anwani ya mkataba wako.
 
 ```javascript
 // interact.js
@@ -961,7 +961,7 @@ const contractABI = require("../contract-abi.json")
 const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
 ```
 
-Sasa tunaweza hatimaye kuondoa maoni kwenye kigezo chetu cha `helloWorldContract`, na kupakia mkataba-erevu kwa kutumia kituo chetu cha AlchemyWeb3:
+Sasa tunaweza hatimaye kuondoa maoni kwenye kigezo chetu cha `helloWorldContract`, na kupakia mkataba mahiri kwa kutumia mwisho wetu wa AlchemyWeb3:
 
 ```javascript
 // interact.js
@@ -990,13 +990,13 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-Sasa kwa kuwa mkataba wetu umepakiwa, tunaweza kutekeleza kazi yetu ya `loadCurrentMessage`!
+Sasa kwa kuwa tumepakia mkataba wetu, tunaweza kutekeleza kitendaji chetu cha `loadCurrentMessage`!
 
 #### Kutekeleza `loadCurrentMessage` katika faili yako ya `interact.js` {#implementing-loadCurrentMessage-in-your-interact-js-file}
 
-Kazi hii ni rahisi sana. Tutafanya wito rahisi wa asinkroni wa web3 kusoma kutoka kwa mkataba wetu. Kazi yetu itarudisha ujumbe uliohifadhiwa katika mkataba-erevu:
+Kitendaji hiki ni rahisi sana. Tutafanya wito rahisi wa async wa web3 kusoma kutoka kwenye mkataba wetu. Kitendaji chetu kitarudisha ujumbe uliohifadhiwa kwenye mkataba mahiri:
 
-Sasisha `loadCurrentMessage` katika faili yako ya `interact.js` kuwa ifuatavyo:
+Sasisha `loadCurrentMessage` katika faili yako ya `interact.js` kwa yafuatayo:
 
 ```javascript
 // interact.js
@@ -1007,60 +1007,60 @@ export const loadCurrentMessage = async () => {
 }
 ```
 
-Kwa kuwa tunataka kuonyesha mkataba-erevu huu katika UI yetu, hebu tusasishe kazi ya `useEffect` katika kijenzi chetu cha `HelloWorld.js` kuwa ifuatavyo:
+Kwa kuwa tunataka kuonyesha mkataba mahiri huu kwenye UI yetu, hebu tusasishe kitendaji cha `useEffect` katika kipengele chetu cha `HelloWorld.js` kwa yafuatayo:
 
 ```javascript
 // HelloWorld.js
 
-//inayoitwa mara moja tu
+// huitwa mara moja tu
 useEffect(async () => {
   const message = await loadCurrentMessage()
   setMessage(message)
 }, [])
 ```
 
-Kumbuka, tunataka tu `loadCurrentMessage` iitwe mara moja wakati wa utoaji wa kwanza wa kijenzi. Hivi karibuni tutatekeleza `addSmartContractListener` ili kusasisha UI kiotomatiki baada ya ujumbe katika mkataba-erevu kubadilika.
+Kumbuka, tunataka tu `loadCurrentMessage` yetu iitwe mara moja wakati wa utoaji wa kwanza wa kipengele. Hivi karibuni tutatekeleza `addSmartContractListener` ili kusasisha UI kiotomatiki baada ya ujumbe kwenye mkataba mahiri kubadilika.
 
-Kabla ya kuingia kwenye msikilizaji wetu, hebu tuangalie tulichonacho hadi sasa! Hifadhi faili zako za `HelloWorld.js` na `interact.js`, na kisha nenda kwenye [http://localhost:3000/](http://localhost:3000/)
+Kabla hatujaingia kwenye msikilizaji wetu, hebu tuangalie kile tulicho nacho hadi sasa! Hifadhi faili zako za `HelloWorld.js` na `interact.js`, na kisha nenda kwenye [http://localhost:3000/](http://localhost:3000/)
 
-Utaona kwamba ujumbe wa sasa hausomi tena "Hakuna muunganisho na mtandao." Badala yake unaonyesha ujumbe uliohifadhiwa katika mkataba-erevu. Safi!
+Utagundua kuwa ujumbe wa sasa hausemi tena "Hakuna muunganisho kwenye mtandao." Badala yake unaonyesha ujumbe uliohifadhiwa kwenye mkataba mahiri. Safi sana!
 
-#### UI yako sasa inapaswa kuonyesha ujumbe uliohifadhiwa katika mkataba-erevu {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
+#### UI yako sasa inapaswa kuonyesha ujumbe uliohifadhiwa kwenye mkataba mahiri {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
 
 Sasa tukizungumzia msikilizaji huyo...
 
 #### Tekeleza `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-Ukikumbuka faili ya `HelloWorld.sol` tuliyoandika katika [Sehemu ya 1 ya mfululizo huu wa mafunzo](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), utakumbuka kuwa kuna tukio la mkataba-erevu linaloitwa `UpdatedMessages` ambalo hutolewa baada ya kazi ya `update` ya mkataba-erevu wetu kuitwa (tazama mistari 9 na 27):
+Ikiwa unakumbuka faili ya `HelloWorld.sol` tuliyoiandika katika [Sehemu ya 1 ya mfululizo huu wa mafunzo](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), utakumbuka kuwa kuna tukio la mkataba mahiri linaloitwa `UpdatedMessages` ambalo hutolewa baada ya kitendaji cha `update` cha mkataba mahiri wetu kuitwa \(tazama mistari ya 9 na 27\):
 
 ```javascript
 // HelloWorld.sol
 
-// Inabainisha toleo la Solidity, kwa kutumia matoleo ya kimantiki.
+// Inabainisha toleo la Solidity, ikitumia uwekaji matoleo wa kisemantiki.
 // Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.7.3;
 
 // Inafafanua mkataba unaoitwa `HelloWorld`.
-// Mkataba ni mkusanyiko wa kazi na data (hali yake). Baada ya kupelekwa, mkataba hukaa kwenye anwani maalum kwenye mnyororo wa bloku wa Ethereum. Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Mkataba ni mkusanyiko wa kazi na data (hali yake). Baada ya kusambazwa, mkataba hukaa kwenye anwani maalum kwenye blockchain ya Ethereum. Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-   // Hutolewa wakati kazi ya sasisho inapoitwa
-   // Matukio ya mkataba-erevu ni njia ya mkataba wako kuwasiliana kwamba kitu kilitokea kwenye mnyororo wa bloku kwa programu yako ya mbele, ambayo inaweza kuwa 'inasikiliza' matukio fulani na kuchukua hatua yanapotokea.
+   // Hutolewa wakati kazi ya kusasisha inapoitwa
+   // Matukio ya mkataba mahiri ni njia ya mkataba wako kuwasiliana kwamba kuna kitu kimetokea kwenye blockchain kwenda kwenye front-end ya programu yako, ambayo inaweza kuwa 'inasikiliza' matukio fulani na kuchukua hatua yanapotokea.
    event UpdatedMessages(string oldStr, string newStr);
 
    // Inatangaza kigezo cha hali `message` cha aina ya `string`.
-   // Vigezo vya hali ni vigezo ambavyo thamani zake huhifadhiwa kabisa katika hifadhi ya mkataba. Neno muhimu `public` hufanya vigezo kupatikana kutoka nje ya mkataba na huunda kazi ambayo mikataba mingine au wateja wanaweza kuita ili kupata thamani.
+   // Vigezo vya hali ni vigezo ambavyo thamani zake huhifadhiwa kabisa kwenye hifadhi ya mkataba. Neno kuu `public` hufanya vigezo viweze kufikiwa kutoka nje ya mkataba na huunda kazi ambayo mikataba mingine au wateja wanaweza kuita ili kufikia thamani.
    string public message;
 
-   // Sawa na lugha nyingi za upangaji zinazotegemea darasa, konstruka ni kazi maalum ambayo hutekelezwa tu wakati wa uundaji wa mkataba.
-   // Konstruka hutumiwa kuanzisha data ya mkataba. Jifunze zaidi:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // Sawa na lugha nyingi zinazoelekezwa kwa vitu zinazotegemea darasa, constructor ni kazi maalum ambayo hutekelezwa tu wakati wa kuunda mkataba.
+   // Constructors hutumika kuanzisha data ya mkataba. Jifunze zaidi:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
    constructor(string memory initMessage) {
 
-      // Inakubali hoja ya mfuatano `initMessage` na kuweka thamani katika kigezo cha hifadhi cha mkataba `message`).
+      // Inakubali hoja ya string `initMessage` na kuweka thamani kwenye kigezo cha hifadhi cha `message` cha mkataba).
       message = initMessage;
    }
 
-   // Kazi ya umma inayokubali hoja ya mfuatano na kusasisha kigezo cha hifadhi `message`.
+   // Kazi ya umma inayokubali hoja ya string na kusasisha kigezo cha hifadhi cha `message`.
    function update(string memory newMessage) public {
       string memory oldMsg = message;
       message = newMessage;
@@ -1069,11 +1069,11 @@ contract HelloWorld {
 }
 ```
 
-Matukio ya mkataba-erevu ni njia ya mkataba wako kuwasiliana kwamba kitu kilitokea (yaani, kulikuwa na _tukio_) kwenye mnyororo wa bloku kwa programu yako ya mbele, ambayo inaweza kuwa 'inasikiliza' matukio maalum na kuchukua hatua yanapotokea.
+Matukio ya mkataba mahiri ni njia ya mkataba wako kuwasiliana kwamba kuna kitu kimetokea \(yaani, kulikuwa na _tukio_\) kwenye kiambajengo kwenda kwenye programu yako ya front-end, ambayo inaweza kuwa 'inasikiliza' matukio maalum na kuchukua hatua yanapotokea.
 
-Kazi ya `addSmartContractListener` itasikiliza hasa tukio la `UpdatedMessages` la mkataba-erevu wetu wa Hello World, na kusasisha UI yetu ili kuonyesha ujumbe mpya.
+Kitendaji cha `addSmartContractListener` kitasikiliza haswa tukio la `UpdatedMessages` la mkataba mahiri wetu wa Hello World, na kusasisha UI yetu ili kuonyesha ujumbe mpya.
 
-Badilisha `addSmartContractListener` kuwa ifuatavyo:
+Badilisha `addSmartContractListener` kwa yafuatayo:
 
 ```javascript
 // HelloWorld.js
@@ -1085,18 +1085,18 @@ function addSmartContractListener() {
     } else {
       setMessage(data.returnValues[1])
       setNewMessage("")
-      setStatus("🎉 Ujumbe wako umesasishwa!")
+      setStatus("🎉 Your message has been updated!")
     }
   })
 }
 ```
 
-Hebu tuchanganue kinachotokea wakati msikilizaji anapogundua tukio:
+Hebu tuchambue kile kinachotokea wakati msikilizaji anagundua tukio:
 
-- Ikiwa kosa litatokea wakati tukio linapotolewa, litaonyeshwa kwenye UI kupitia kigezo chetu cha hali cha `hali`.
-- Vinginevyo, tutatumia kitu cha `data` kilichorudishwa. `data.returnValues` ni safu iliyopangwa kuanzia sifuri ambapo kipengele cha kwanza katika safu huhifadhi ujumbe wa awali na kipengele cha pili huhifadhi ule uliosasishwa. Kwa ujumla, kwenye tukio lililofanikiwa tutaweka mfuatano wetu wa `ujumbe` kuwa ujumbe uliosasishwa, tufute mfuatano wa `ujumbeMpya`, na tusasishe kigezo chetu cha hali cha `hali` ili kuonyesha kwamba ujumbe mpya umechapishwa kwenye mkataba-erevu wetu.
+- Ikiwa hitilafu itatokea wakati tukio linatolewa, itaonyeshwa kwenye UI kupitia kigezo chetu cha hali cha `status`.
+- Vinginevyo, tutatumia kipengee cha `data` kilichorudishwa. `data.returnValues` ni safu iliyoorodheshwa kwenye sifuri ambapo kipengele cha kwanza kwenye safu kinahifadhi ujumbe uliopita na kipengele cha pili kinahifadhi ule uliosasishwa. Kwa ujumla, kwenye tukio lenye mafanikio tutaweka mfuatano wetu wa `message` kwa ujumbe uliosasishwa, kufuta mfuatano wa `newMessage`, na kusasisha kigezo chetu cha hali cha `status` ili kuonyesha kwamba ujumbe mpya umechapishwa kwenye mkataba mahiri wetu.
 
-Mwisho, hebu tuite msikilizaji wetu katika kazi yetu ya `useEffect` ili ianzishwe kwenye utoaji wa kwanza wa kijenzi cha `HelloWorld.js`. Kwa ujumla, kazi yako ya `useEffect` inapaswa kuonekana hivi:
+Hatimaye, hebu tuite msikilizaji wetu katika kitendaji chetu cha `useEffect` ili kianzishwe kwenye utoaji wa kwanza wa kipengele cha `HelloWorld.js`. Kwa ujumla, kitendaji chako cha `useEffect` kinapaswa kuonekana hivi:
 
 ```javascript
 // HelloWorld.js
@@ -1108,45 +1108,45 @@ useEffect(async () => {
 }, [])
 ```
 
-Sasa kwa kuwa tunaweza kusoma kutoka kwa mkataba-erevu wetu, ingekuwa vizuri kujua jinsi ya kuandika ndani yake pia! Hata hivyo, ili kuandika kwenye mfumo mtawanyo wa kimamlaka wetu, lazima kwanza tuwe na mkoba wa Ethereum uliounganishwa nao.
+Sasa kwa kuwa tunaweza kusoma kutoka kwenye mkataba mahiri wetu, itakuwa vizuri kujua jinsi ya kuandika kwake pia! Hata hivyo, ili kuandika kwenye dapp yetu, lazima kwanza tuwe na mkoba wa Ethereum uliounganishwa kwake.
 
-Kwa hiyo, baadaye tutashughulikia kusanidi mkoba wetu wa Ethereum (MetaMask) na kisha kuunganisha na mfumo mtawanyo wa kimamlaka wetu!
+Kwa hivyo, ifuatayo tutashughulikia kuweka mkoba wetu wa Ethereum \(MetaMask\) na kisha kuuunganisha kwenye dapp yetu!
 
-### Hatua ya 4: Sanidi mkoba wako wa Ethereum {#step-4-set-up-your-ethereum-wallet}
+### Hatua ya 4: Weka mkoba wako wa Ethereum {#step-4-set-up-your-ethereum-wallet}
 
-Ili kuandika chochote kwenye mnyororo wa Ethereum, watumiaji lazima wasaini miamala kwa kutumia funguo zao za faragha za mkoba halisi. Kwa mafunzo haya, tutatumia [MetaMask](https://metamask.io/), mkoba halisi kwenye kivinjari unaotumiwa kudhibiti anwani ya akaunti yako ya Ethereum, kwani hurahisisha sana utiaji saini wa muamala huu kwa mtumiaji wa mwisho.
+Ili kuandika chochote kwenye mnyororo wa Ethereum, watumiaji lazima wasaini miamala wakitumia funguo zao binafsi za mkoba wao wa mtandaoni. Kwa mafunzo haya, tutatumia [MetaMask](https://metamask.io/), mkoba wa mtandaoni kwenye kivinjari unaotumika kusimamia anwani ya akaunti yako ya Ethereum, kwani inafanya usainiji huu wa muamala kuwa rahisi sana kwa mtumiaji wa mwisho.
 
-Ikiwa unataka kuelewa zaidi jinsi miamala kwenye Ethereum inavyofanya kazi, angalia [ukurasa huu](/developers/docs/transactions/) kutoka kwa Msingi wa Ethereum.
+Ikiwa unataka kuelewa zaidi kuhusu jinsi miamala kwenye Ethereum inavyofanya kazi, angalia [ukurasa huu](/developers/docs/transactions/) kutoka kwa taasisi ya Ethereum.
 
 #### Pakua MetaMask {#download-metamask}
 
-Unaweza kupakua na kuunda akaunti ya MetaMask bure [hapa](https://metamask.io/download). Unapounda akaunti, au ikiwa tayari una akaunti, hakikisha umebadili na kuweka "Mtandao wa Majaribio wa Goerli" juu kulia (ili tusitumie pesa halisi).
+Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamask.io/download). Unapounda akaunti, au ikiwa tayari una akaunti, hakikisha unabadilisha kwenda kwenye "Goerli Test Network" upande wa juu kulia \(ili tusiwe tunashughulika na pesa halisi\).
 
-#### Ongeza ether kutoka kwa Bomba {#add-ether-from-a-faucet}
+#### Ongeza ether kutoka kwenye Bomba la majaribio {#add-ether-from-a-faucet}
 
-Ili kusaini muamala kwenye mnyororo wa bloku wa Ethereum, tutahitaji Eth bandia. Ili kupata Eth unaweza kwenda kwenye [FaucETH](https://fauceth.komputing.org) na uweke anwani ya akaunti yako ya Goerli, bofya "Omba fedha", kisha uchague "Ethereum Testnet Goerli" katika menyu kunjuzi na hatimaye bofya kitufe cha "Omba fedha" tena. Unapaswa kuona Eth katika akaunti yako ya MetaMask muda mfupi baadaye!
+Ili kusaini muamala kwenye kiambajengo cha Ethereum, tutahitaji Eth bandia. Ili kupata Eth unaweza kwenda kwenye [FaucETH](https://fauceth.komputing.org) na uweke anwani yako ya akaunti ya Goerli, bofya "Request funds", kisha chagua "Ethereum Testnet Goerli" kwenye menyu kunjuzi na hatimaye bofya kitufe cha "Request funds" tena. Unapaswa kuona Eth kwenye akaunti yako ya MetaMask muda mfupi baadaye!
 
 #### Angalia Salio lako {#check-your-balance}
 
-Ili kuhakikisha salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) kwa kutumia [zana ya mtunzi ya Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Hii itarudisha kiasi cha Eth katika pochi yetu. Baada ya kuweka anwani ya akaunti yako ya MetaMask na kubofya “Tuma Ombi”, unapaswa kuona jibu kama hili:
+Ili kuhakikisha salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) tukitumia [zana ya mtunzi ya Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Hii itarudisha kiasi cha Eth kwenye mkoba wetu. Baada ya kuweka anwani yako ya akaunti ya MetaMask na kubofya "Send Request", unapaswa kuona jibu kama hili:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**KUMBUKA:** Matokeo haya yako katika wei si eth. Wei hutumika kama denomina ndogo zaidi ya ether. Ubadilishaji kutoka wei hadi eth ni: 1 eth = 10¹⁸ wei. Kwa hivyo, tukibadilisha 0xde0b6b3a7640000 hadi desimali tunapata 1\*10¹⁸ ambayo ni sawa na eth 1.
+**KUMBUKA:** Matokeo haya yako katika wei sio eth. Wei inatumika kama kiasi kidogo zaidi cha ether. Ubadilishaji kutoka wei kwenda eth ni: 1 eth = 10¹⁸ wei. Kwa hivyo ikiwa tutabadilisha 0xde0b6b3a7640000 kuwa desimali tunapata 1\*10¹⁸ ambayo ni sawa na 1 eth.
 
 Phew! Pesa zetu bandia zote zipo! 🤑
 
-### Hatua ya 5: Unganisha MetaMask na UI yako {#step-5-connect-metamask-to-your-UI}
+### Hatua ya 5: Unganisha MetaMask kwenye UI yako {#step-5-connect-metamask-to-your-UI}
 
-Sasa kwa kuwa pochi yetu ya MetaMask imesanidiwa, hebu tuunganishe mfumo wetu uliotawanywa nayo!
+Sasa kwa kuwa mkoba wetu wa MetaMask umewekwa, hebu tuunganishe dapp yetu kwake!
 
-#### Kazi ya `connectWallet` {#the-connectWallet-function}
+#### Kitendaji cha `connectWallet` {#the-connectWallet-function}
 
-Katika faili yetu ya `interact.js`, hebu tutekeleze kazi ya `connectWallet`, ambayo tunaweza kuiita katika kijenzi chetu cha `HelloWorld.js`.
+Katika faili yetu ya `interact.js`, hebu tutekeleze kitendaji cha `connectWallet`, ambacho kisha tunaweza kukiita katika kipengele chetu cha `HelloWorld.js`.
 
-Hebu tubadilishe `connectWallet` kuwa ifuatavyo:
+Hebu tubadilishe `connectWallet` kwa yafuatayo:
 
 ```javascript
 // interact.js
@@ -1158,7 +1158,7 @@ export const connectWallet = async () => {
         method: "eth_requestAccounts",
       })
       const obj = {
-        status: "👆🏽 Andika ujumbe kwenye sehemu ya maandishi hapo juu.",
+        status: "👆🏽 Write a message in the text-field above.",
         address: addressArray[0],
       }
       return obj
@@ -1176,7 +1176,8 @@ export const connectWallet = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              Lazima usakinishe MetaMask, mkoba halisi wa Ethereum, katika kivinjari chako.
+              You must install MetaMask, a virtual Ethereum wallet, in your
+              browser.
             </a>
           </p>
         </span>
@@ -1186,26 +1187,26 @@ export const connectWallet = async () => {
 }
 ```
 
-Kwa hiyo, je, kizuizi hiki kikubwa cha msimbo kinafanya nini hasa?
+Kwa hivyo kizuizi hiki kikubwa cha msimbo kinafanya nini hasa?
 
-Naam, kwanza, huangalia ikiwa `window.ethereum` imewezeshwa katika kivinjari chako.
+Kweli, kwanza, inaangalia ikiwa `window.ethereum` imewezeshwa kwenye kivinjari chako.
 
-`window.ethereum` ni API ya kimataifa inayoingizwa na MetaMask na watoa huduma wengine wa pochi ambayo inaruhusu tovuti kuomba akaunti za Ethereum za watumiaji. Ikiwa imeidhinishwa, inaweza kusoma data kutoka kwa minyororo ya bloku ambayo mtumiaji ameunganishwa nayo, na kupendekeza mtumiaji asaini ujumbe na miamala. Angalia [hati za MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) kwa maelezo zaidi!
+`window.ethereum` ni API ya kimataifa inayoingizwa na MetaMask na watoa huduma wengine wa mkoba ambayo inaruhusu tovuti kuomba akaunti za Ethereum za watumiaji. Ikiidhinishwa, inaweza kusoma data kutoka kwenye viambajengo ambavyo mtumiaji ameunganishwa navyo, na kupendekeza kwamba mtumiaji asaini jumbe na miamala. Angalia [nyaraka za MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) kwa maelezo zaidi!
 
-Ikiwa `window.ethereum` _haipo_, basi hiyo inamaanisha kuwa MetaMask haijasakinishwa. Hii inasababisha kurudishwa kwa kitu cha JSON, ambapo `anwani` iliyorudishwa ni mfuatano tupu, na kitu cha `status` cha JSX kinaeleza kuwa mtumiaji lazima asakinishe MetaMask.
+Ikiwa `window.ethereum` _haipo_, basi hiyo inamaanisha MetaMask haijasakinishwa. Hii inasababisha kipengee cha JSON kurudishwa, ambapo `address` iliyorudishwa ni mfuatano mtupu, na kipengee cha JSX cha `status` kinawasilisha kwamba mtumiaji lazima asakinishe MetaMask.
 
-Sasa ikiwa `window.ethereum` _ipo_, hapo ndipo mambo yanapopendeza.
+Sasa ikiwa `window.ethereum` _ipo_, basi hapo ndipo mambo yanapovutia.
 
-Kwa kutumia kitanzi cha kujaribu/kukamatwa, tutajaribu kuunganisha kwenye MetaMask kwa kuita [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Kuita kazi hii kutafungua MetaMask kwenye kivinjari, ambapo mtumiaji ataombwa kuunganisha pochi yake kwenye mfumo wako uliotawanywa.
+Tukitumia kitanzi cha try/catch, tutajaribu kuunganisha kwenye MetaMask kwa kuita [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Kuita kitendaji hiki kutafungua MetaMask kwenye kivinjari, ambapo mtumiaji ataombwa kuunganisha mkoba wao kwenye dapp yako.
 
-- Ikiwa mtumiaji atachagua kuunganisha, `method: "eth_requestAccounts"` itarudisha safu iliyo na anwani zote za akaunti za mtumiaji zilizounganishwa na mfumo mtawanyo wa kimamlaka. Kwa pamoja, kazi yetu ya `connectWallet` itarudisha kitu cha JSON kilicho na `anwani` ya _kwanza_ katika safu hii (tazama mstari wa 9) na ujumbe wa `status` unaomwomba mtumiaji aandike ujumbe kwenye mkataba erevu.
-- Ikiwa mtumiaji atakataa muunganisho, basi kitu cha JSON kitakuwa na mfuatano tupu kwa `anwani` iliyorudishwa na ujumbe wa `status` unaoonyesha kuwa mtumiaji alikataa muunganisho.
+- Ikiwa mtumiaji atachagua kuunganisha, `method: "eth_requestAccounts"` itarudisha safu ambayo ina anwani zote za akaunti za mtumiaji zilizounganishwa kwenye dapp. Kwa ujumla, kitendaji chetu cha `connectWallet` kitarudisha kipengee cha JSON ambacho kina `address` ya _kwanza_ katika safu hii \(tazama mstari wa 9\) na ujumbe wa `status` unaomwomba mtumiaji kuandika ujumbe kwenye mkataba mahiri.
+- Ikiwa mtumiaji atakataa muunganisho, basi kipengee cha JSON kitakuwa na mfuatano mtupu kwa `address` iliyorudishwa na ujumbe wa `status` unaoonyesha kwamba mtumiaji alikataa muunganisho.
 
-Sasa kwa kuwa tumeandika kazi hii ya `connectWallet`, hatua inayofuata ni kuiita kwenye kijenzi chetu cha `HelloWorld.js`.
+Sasa kwa kuwa tumeandika kitendaji hiki cha `connectWallet`, hatua inayofuata ni kukiita kwenye kipengele chetu cha `HelloWorld.js`.
 
-#### Ongeza kazi ya `connectWallet` kwenye Kijenzi chako cha UI cha `HelloWorld.js` {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
+#### Ongeza kitendaji cha `connectWallet` kwenye Kipengele chako cha UI cha `HelloWorld.js` {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
 
-Nenda kwenye kazi ya `connectWalletPressed` katika `HelloWorld.js`, na uisasishe kuwa ifuatavyo:
+Nenda kwenye kitendaji cha `connectWalletPressed` katika `HelloWorld.js`, na ukisasishe kwa yafuatayo:
 
 ```javascript
 // HelloWorld.js
@@ -1217,25 +1218,25 @@ const connectWalletPressed = async () => {
 }
 ```
 
-Je, unaona jinsi utendaji wetu mwingi umefichwa kutoka kwa kijenzi chetu cha `HelloWorld.js` kutoka kwa faili ya `interact.js`? Hii ni ili tuendane na dhana ya M-V-C!
+Unaona jinsi utendaji wetu mwingi unavyotengwa kutoka kwenye kipengele chetu cha `HelloWorld.js` kutoka kwenye faili ya `interact.js`? Hii ni ili tuzingatie dhana ya M-V-C!
 
-Katika `connectWalletPressed`, tunafanya tu wito wa kusubiri kwa kazi yetu iliyoingizwa ya `connectWallet`, na kwa kutumia jibu lake, tunasasisha vigezo vyetu vya `status` na `walletAddress` kupitia ndoana zao za hali.
+Katika `connectWalletPressed`, tunafanya tu wito wa await kwenye kitendaji chetu cha `connectWallet` kilichoingizwa, na kwa kutumia jibu lake, tunasasisha vigezo vyetu vya `status` na `walletAddress` kupitia ndoano zao za hali.
 
-Sasa, hebu tuhifadhi faili zote mbili (`HelloWorld.js` na `interact.js`) na tujaribu UI yetu hadi sasa.
+Sasa, hebu tuhifadhi faili zote mbili \(`HelloWorld.js` na `interact.js`\) na tujaribu UI yetu hadi sasa.
 
-Fungua kivinjari chako kwenye ukurasa wa [http://localhost:3000/](http://localhost:3000/), na ubonyeze kitufe cha "Unganisha Mkoba" juu kulia mwa ukurasa.
+Fungua kivinjari chako kwenye ukurasa wa [http://localhost:3000/](http://localhost:3000/), na ubofye kitufe cha "Connect Wallet" upande wa juu kulia wa ukurasa.
 
-Ikiwa umesakinisha MetaMask, unapaswa kuombwa kuunganisha pochi yako kwenye mfumo wako uliotawanywa. Kubali mwaliko wa kuunganisha.
+Ikiwa umesakinisha MetaMask, unapaswa kuombwa kuunganisha mkoba wako kwenye dapp yako. Kubali mwaliko wa kuunganisha.
 
-Unapaswa kuona kwamba kitufe cha mkoba sasa kinaonyesha kwamba anwani yako imeunganishwa! Yasssss 🔥
+Unapaswa kuona kwamba kitufe cha mkoba sasa kinaonyesha kwamba anwani yako imeunganishwa! Ndiyoooo 🔥
 
-Kisha, jaribu kuonyesha upya ukurasa... hii ni ajabu. Kitufe chetu cha pochi kinatuomba tuunganishe MetaMask, ingawa tayari imeunganishwa...
+Ifuatayo, jaribu kuonyesha upya ukurasa... hii ni ajabu. Kitufe chetu cha mkoba kinatuomba tuunganishe MetaMask, ingawa tayari imeunganishwa...
 
-Hata hivyo, usiogope! Tunaweza kushughulikia hilo kwa urahisi (umeipata?) kwa kutekeleza `getCurrentWalletConnected`, ambayo itaangalia ikiwa anwani tayari imeunganishwa na mfumo mtawanyo wa kimamlaka wetu na kusasisha UI yetu ipasavyo!
+Hata hivyo, usiwe na hofu! Tunaweza kushughulikia hilo kwa urahisi kwa kutekeleza `getCurrentWalletConnected`, ambayo itaangalia ikiwa anwani tayari imeunganishwa kwenye dapp yetu na kusasisha UI yetu ipasavyo!
 
-#### Kazi ya `getCurrentWalletConnected` {#the-getcurrentwalletconnected-function}
+#### Kitendaji cha `getCurrentWalletConnected` {#the-getcurrentwalletconnected-function}
 
-Sasisha kazi yako ya `getCurrentWalletConnected` katika faili ya `interact.js` kuwa ifuatavyo:
+Sasisha kitendaji chako cha `getCurrentWalletConnected` katika faili ya `interact.js` kwa yafuatayo:
 
 ```javascript
 // interact.js
@@ -1249,12 +1250,12 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 Andika ujumbe kwenye sehemu ya maandishi hapo juu.",
+          status: "👆🏽 Write a message in the text-field above.",
         }
       } else {
         return {
           address: "",
-          status: "🦊 Unganisha na MetaMask ukitumia kitufe cha juu kulia.",
+          status: "🦊 Connect to MetaMask using the top right button.",
         }
       }
     } catch (err) {
@@ -1271,7 +1272,8 @@ export const getCurrentWalletConnected = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              Lazima usakinishe MetaMask, mkoba halisi wa Ethereum, katika kivinjari chako.
+              You must install MetaMask, a virtual Ethereum wallet, in your
+              browser.
             </a>
           </p>
         </span>
@@ -1281,11 +1283,11 @@ export const getCurrentWalletConnected = async () => {
 }
 ```
 
-Msimbo huu _unafanana sana_ na kazi ya `connectWallet` tuliyoandika katika hatua iliyopita.
+Msimbo huu unafanana _sana_ na kitendaji cha `connectWallet` tulichokiandika katika hatua iliyopita.
 
-Tofauti kuu ni kwamba badala ya kuita mbinu ya `eth_requestAccounts`, ambayo inafungua MetaMask kwa mtumiaji kuunganisha pochi yake, hapa tunaita mbinu ya `eth_accounts`, ambayo inarudisha tu safu iliyo na anwani za MetaMask zilizounganishwa kwa sasa kwenye mfumo wetu uliotawanywa.
+Tofauti kuu ni kwamba badala ya kuita mbinu ya `eth_requestAccounts`, ambayo inafungua MetaMask kwa mtumiaji kuunganisha mkoba wao, hapa tunaita mbinu ya `eth_accounts`, ambayo inarudisha tu safu iliyo na anwani za MetaMask zilizounganishwa kwa sasa kwenye dapp yetu.
 
-Ili kuona kazi hii ikifanya kazi, hebu tuiite katika kazi yetu ya `useEffect` ya kijenzi chetu cha `HelloWorld.js`:
+Ili kuona kitendaji hiki kikifanya kazi, hebu tukiite katika kitendaji chetu cha `useEffect` cha kipengele chetu cha `HelloWorld.js`:
 
 ```javascript
 // HelloWorld.js
@@ -1303,15 +1305,15 @@ useEffect(async () => {
 
 Kumbuka, tunatumia jibu la wito wetu kwa `getCurrentWalletConnected` kusasisha vigezo vyetu vya hali vya `walletAddress` na `status`.
 
-Sasa kwa kuwa umeongeza msimbo huu, hebu tujaribu kuonyesha upya dirisha la kivinjari chetu.
+Sasa kwa kuwa umeongeza msimbo huu, hebu tujaribu kuonyesha upya dirisha letu la kivinjari.
 
-Safi sana! Kitufe kinapaswa kusema kuwa umeunganishwa, na kuonyesha hakikisho la anwani ya pochi yako iliyounganishwa - hata baada ya kuonyesha upya!
+Safi sanaaaa! Kitufe kinapaswa kusema kwamba umeunganishwa, na kuonyesha hakikisho la anwani ya mkoba wako uliounganishwa - hata baada ya kuonyesha upya!
 
 #### Tekeleza `addWalletListener` {#implement-addwalletlistener}
 
-Hatua ya mwisho katika usanidi wa pochi ya mfumo wetu uliotawanywa ni kutekeleza msikilizaji wa pochi ili UI yetu isasishwe wakati hali ya pochi yetu inabadilika, kama vile mtumiaji anapokatisha muunganisho au kubadilisha akaunti.
+Hatua ya mwisho katika usanidi wa mkoba wa dapp yetu ni kutekeleza msikilizaji wa mkoba ili UI yetu isasishwe wakati hali ya mkoba wetu inabadilika, kama vile wakati mtumiaji anapokata muunganisho au kubadilisha akaunti.
 
-Katika faili yako ya `HelloWorld.js`, badilisha kazi yako ya `addWalletListener` kama ifuatavyo:
+Katika faili yako ya `HelloWorld.js`, badilisha kitendaji chako cha `addWalletListener` kama ifuatavyo:
 
 ```javascript
 // HelloWorld.js
@@ -1321,10 +1323,10 @@ function addWalletListener() {
     window.ethereum.on("accountsChanged", (accounts) => {
       if (accounts.length > 0) {
         setWallet(accounts[0])
-        setStatus("👆🏽 Andika ujumbe kwenye sehemu ya maandishi hapo juu.")
+        setStatus("👆🏽 Write a message in the text-field above.")
       } else {
         setWallet("")
-        setStatus("🦊 Unganisha na MetaMask ukitumia kitufe cha juu kulia.")
+        setStatus("🦊 Connect to MetaMask using the top right button.")
       }
     })
   } else {
@@ -1332,7 +1334,7 @@ function addWalletListener() {
       <p>
         {" "}
         🦊 <a target="_blank" href={`https://metamask.io/download`}>
-          Lazima usakinishe MetaMask, mkoba halisi wa Ethereum, katika kivinjari chako.
+          You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
     )
@@ -1340,13 +1342,13 @@ function addWalletListener() {
 }
 ```
 
-Nina hakika hauhitaji hata msaada wetu kuelewa kinachoendelea hapa kwa sasa, lakini kwa madhumuni ya ukamilifu, hebu tuchanganue haraka:
+Nina uhakika hata huhitaji msaada wetu kuelewa kinachoendelea hapa kwa wakati huu, lakini kwa madhumuni ya ukamilifu, hebu tuchambue haraka:
 
-- Kwanza, kazi yetu inakagua ikiwa `window.ethereum` imewezeshwa (yaani, MetaMask imesakinishwa).
-  - Ikiwa sivyo, tunaweka tu kigezo chetu cha hali cha `status` kuwa mfuatano wa JSX unaomwomba mtumiaji asakinishe MetaMask.
-  - Ikiwa imewezeshwa, tunaweka msikilizaji `window.ethereum.on("accountsChanged")` kwenye mstari wa 3 anayesikiliza mabadiliko ya hali katika pochi ya MetaMask, ambayo ni pamoja na wakati mtumiaji anapounganisha akaunti ya ziada kwenye mfumo uliotawanywa, anapobadilisha akaunti, au anapokatisha muunganisho wa akaunti. Ikiwa kuna angalau akaunti moja iliyounganishwa, kigezo cha hali cha `walletAddress` kinasasishwa kama akaunti ya kwanza katika safu ya `accounts` iliyorudishwa na msikilizaji. Vinginevyo, `walletAddress` huwekwa kama mfuatano tupu.
+- Kwanza, kitendaji chetu kinaangalia ikiwa `window.ethereum` imewezeshwa \(yaani, MetaMask imesakinishwa\).
+  - Ikiwa sivyo, tunaweka tu kigezo chetu cha hali cha `status` kwa mfuatano wa JSX unaomwomba mtumiaji kusakinisha MetaMask.
+  - Ikiwa imewezeshwa, tunaweka msikilizaji `window.ethereum.on("accountsChanged")` kwenye mstari wa 3 anayesikiliza mabadiliko ya hali katika mkoba wa MetaMask, ambayo ni pamoja na wakati mtumiaji anaunganisha akaunti ya ziada kwenye dapp, kubadilisha akaunti, au kukata muunganisho wa akaunti. Ikiwa kuna angalau akaunti moja iliyounganishwa, kigezo cha hali cha `walletAddress` kinasasishwa kama akaunti ya kwanza katika safu ya `accounts` iliyorudishwa na msikilizaji. Vinginevyo, `walletAddress` inawekwa kama mfuatano mtupu.
 
-Mwisho lakini sio uchache, lazima tuiite katika kazi yetu ya `useEffect`:
+Mwisho kabisa, lazima tukiite katika kitendaji chetu cha `useEffect`:
 
 ```javascript
 // HelloWorld.js
@@ -1364,23 +1366,23 @@ useEffect(async () => {
 }, [])
 ```
 
-Na ndivyo hivyo! Tumefanikiwa kukamilisha upangaji wote wa utendaji wetu wa mkoba! Sasa kwenye kazi yetu ya mwisho: kusasisha ujumbe uliohifadhiwa katika mkataba-erevu wetu!
+Na ndivyo hivyo! Tumekamilisha kwa ufanisi kupanga utendaji wetu wote wa mkoba! Sasa kwenye kazi yetu ya mwisho: kusasisha ujumbe uliohifadhiwa kwenye mkataba mahiri wetu!
 
-### Hatua ya 6: Tekeleza kazi ya `updateMessage` {#step-6-implement-the-updateMessage-function}
+### Hatua ya 6: Tekeleza kitendaji cha `updateMessage` {#step-6-implement-the-updateMessage-function}
 
-Sawa jamani, tumefika mwisho! Katika `updateMessage` ya faili yako ya `interact.js`, tutafanya yafuatayo:
+Sawa jamani, tumefika kwenye hatua ya mwisho! Katika `updateMessage` ya faili yako ya `interact.js`, tutafanya yafuatayo:
 
-1. Hakikisha ujumbe tunaotaka kuchapisha katika mkataba wetu mahiri ni halali
-2. Saini muamala wetu kwa kutumia MetaMask
-3. Ita kazi hii kutoka kwa kijenzi chetu cha mbele cha `HelloWorld.js`
+1. Hakikisha ujumbe tunaotaka kuchapisha kwenye mkataba mahiri wetu ni halali
+2. Saini muamala wetu ukitumia MetaMask
+3. Ita kitendaji hiki kutoka kwenye kipengele chetu cha frontend cha `HelloWorld.js`
 
-Hii haitachukua muda mrefu; hebu tumalize mfumo mtawanyo wa kimamlaka huu!
+Hii haitachukua muda mrefu sana; hebu tumalize dapp hii!
 
-#### Ushughulikiaji wa hitilafu ya ingizo {#input-error-handling}
+#### Kushughulikia hitilafu za ingizo {#input-error-handling}
 
-Kwa kawaida, inaleta maana kuwa na aina fulani ya utunzaji wa makosa ya ingizo mwanzoni mwa kazi.
+Kwa kawaida, inaleta maana kuwa na aina fulani ya ushughulikiaji wa hitilafu za ingizo mwanzoni mwa kitendaji.
 
-Tutataka kazi yetu irudi mapema ikiwa hakuna kiendelezi cha MetaMask kilichosakinishwa, hakuna mkoba uliounganishwa (yaani, `anwani` iliyopitishwa ni mfuatano tupu), au `ujumbe` ni mfuatano tupu. Hebu tuongeze utunzaji wa makosa ufuatao kwenye `updateMessage`:
+Tutataka kitendaji chetu kirudi mapema ikiwa hakuna kiendelezi cha MetaMask kilichosakinishwa, hakuna mkoba uliounganishwa \(yaani, `address` iliyopitishwa ni mfuatano mtupu\), au `message` ni mfuatano mtupu. Hebu tuongeze ushughulikiaji ufuatao wa hitilafu kwenye `updateMessage`:
 
 ```javascript
 // interact.js
@@ -1389,35 +1391,35 @@ export const updateMessage = async (address, message) => {
   if (!window.ethereum || address === null) {
     return {
       status:
-        "💡 Unganisha mkoba wako wa MetaMask ili kusasisha ujumbe kwenye mnyororo wa bloku.",
+        "💡 Connect your MetaMask wallet to update the message on the blockchain.",
     }
   }
 
   if (message.trim() === "") {
     return {
-      status: "❌ Ujumbe wako hauwezi kuwa mfuatano tupu.",
+      status: "❌ Your message cannot be an empty string.",
     }
   }
 }
 ```
 
-Sasa kwa kuwa ina utunzaji sahihi wa makosa ya ingizo, ni wakati wa kusaini muamala kupitia MetaMask!
+Sasa kwa kuwa ina ushughulikiaji sahihi wa hitilafu za ingizo, ni wakati wa kusaini muamala kupitia MetaMask!
 
 #### Kusaini muamala wetu {#signing-our-transaction}
 
-Ikiwa tayari una uzoefu na miamala ya jadi ya web3 Ethereum, msimbo tutakaouandika baadaye utakuwa unafahamika sana. Chini ya msimbo wako wa kushughulikia makosa ya ingizo, ongeza yafuatayo kwenye `updateMessage`:
+Ikiwa tayari unajisikia vizuri na miamala ya jadi ya web3 ya Ethereum, msimbo tutakaoandika unaofuata utakuwa wa kawaida sana. Chini ya msimbo wako wa kushughulikia hitilafu za ingizo, ongeza yafuatayo kwenye `updateMessage`:
 
 ```javascript
 // interact.js
 
-//weka vigezo vya muamala
+// weka vigezo vya muamala
 const transactionParameters = {
   to: contractAddress, // Inahitajika isipokuwa wakati wa uchapishaji wa mkataba.
-  from: address, // lazima ifanane na anwani inayotumika ya mtumiaji.
+  from: address, // lazima ilingane na anwani inayotumika ya mtumiaji.
   data: helloWorldContract.methods.update(message).encodeABI(),
 }
 
-//saini muamala
+// weka saini muamala
 try {
   const txHash = await window.ethereum.request({
     method: "eth_sendTransaction",
@@ -1428,10 +1430,11 @@ try {
       <span>
         ✅{" "}
         <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
-          Tazama hali ya muamala wako kwenye Etherscan!
+          View the status of your transaction on Etherscan!
         </a>
         <br />
-        ℹ️ Mara tu muamala utakapothibitishwa na mtandao, ujumbe utasasishwa kiotomatiki.
+        ℹ️ Once the transaction is verified by the network, the message will be
+        updated automatically.
       </span>
     ),
   }
@@ -1442,47 +1445,47 @@ try {
 }
 ```
 
-Hebu tuchanganue kinachoendelea. Kwanza, tunaweka vigezo vyetu vya miamala, ambapo:
+Hebu tuchambue kinachotokea. Kwanza, tunaweka vigezo vyetu vya miamala, ambapo:
 
-- `to` inabainisha anwani ya mpokeaji (mkataba wetu erevu)
-- `kutoka` inabainisha mtia saini wa muamala, kigezo cha `anwani` tulichopitisha kwenye kazi yetu
-- `data` ina wito kwa mbinu ya `update` ya mkataba-erevu wetu wa Hello World, ikipokea kigezo chetu cha mfuatano wa `ujumbe` kama ingizo
+- `to` inabainisha anwani ya mpokeaji \(mkataba mahiri wetu\)
+- `from` inabainisha msainiji wa muamala, kigezo cha `address` tulichopitisha kwenye kitendaji chetu
+- `data` ina wito kwa mbinu ya `update` ya mkataba mahiri wetu wa Hello World, ikipokea kigezo chetu cha mfuatano cha `message` kama ingizo
 
-Kisha, tunafanya mwito wa kusubiri, `window.ethereum.request`, ambapo tunaiomba MetaMask kusaini muamala. Angalia, kwenye mistari 11 na 12, tunabainisha mbinu yetu ya eth, `eth_sendTransaction` na kupitisha `transactionParameters` zetu.
+Kisha, tunafanya wito wa await, `window.ethereum.request`, ambapo tunaiomba MetaMask kusaini muamala. Kumbuka, kwenye mistari ya 11 na 12, tunabainisha mbinu yetu ya eth, `eth_sendTransaction` na kupitisha `transactionParameters` zetu.
 
-Katika hatua hii, MetaMask itafunguka kwenye kivinjari, na kumwomba mtumiaji asaini au kukataa muamala.
+Kwa wakati huu, MetaMask itafunguka kwenye kivinjari, na kumwomba mtumiaji kusaini au kukataa muamala.
 
-- Ikiwa muamala utafanikiwa, kazi itarudisha kitu cha JSON ambapo mfuatano wa `hali` wa JSX unamshawishi mtumiaji kuangalia Etherscan kwa taarifa zaidi kuhusu muamala wake.
-- Ikiwa muamala utashindwa, kazi itarudisha kitu cha JSON ambapo mfuatano wa `hali` unapeleka ujumbe wa kosa.
+- Ikiwa muamala utafanikiwa, kitendaji kitarudisha kipengee cha JSON ambapo mfuatano wa JSX wa `status` unamwomba mtumiaji kuangalia Etherscan kwa maelezo zaidi kuhusu muamala wao.
+- Ikiwa muamala utashindwa, kitendaji kitarudisha kipengee cha JSON ambapo mfuatano wa `status` unawasilisha ujumbe wa hitilafu.
 
-Kwa ujumla, kazi yetu ya `updateMessage` inapaswa kuonekana hivi:
+Kwa ujumla, kitendaji chetu cha `updateMessage` kinapaswa kuonekana hivi:
 
 ```javascript
 // interact.js
 
 export const updateMessage = async (address, message) => {
-  //ushughulikiaji wa makosa ya ingizo
+  // ushughulikiaji wa makosa ya uingizaji
   if (!window.ethereum || address === null) {
     return {
       status:
-        "💡 Unganisha mkoba wako wa MetaMask ili kusasisha ujumbe kwenye mnyororo wa bloku.",
+        "💡 Connect your MetaMask wallet to update the message on the blockchain.",
     }
   }
 
   if (message.trim() === "") {
     return {
-      status: "❌ Ujumbe wako hauwezi kuwa mfuatano tupu.",
+      status: "❌ Your message cannot be an empty string.",
     }
   }
 
-  //weka vigezo vya muamala
+  // weka vigezo vya muamala
   const transactionParameters = {
     to: contractAddress, // Inahitajika isipokuwa wakati wa uchapishaji wa mkataba.
-    from: address, // lazima ifanane na anwani inayotumika ya mtumiaji.
+    from: address, // lazima ilingane na anwani inayotumika ya mtumiaji.
     data: helloWorldContract.methods.update(message).encodeABI(),
   }
 
-  //saini muamala
+  // weka saini muamala
   try {
     const txHash = await window.ethereum.request({
       method: "eth_sendTransaction",
@@ -1493,10 +1496,11 @@ export const updateMessage = async (address, message) => {
         <span>
           ✅{" "}
           <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
-            Tazama hali ya muamala wako kwenye Etherscan!
+            View the status of your transaction on Etherscan!
           </a>
           <br />
-          ℹ️ Mara tu muamala utakapothibitishwa na mtandao, ujumbe utasasishwa kiotomatiki.
+          ℹ️ Once the transaction is verified by the network, the message will
+          be updated automatically.
         </span>
       ),
     }
@@ -1508,11 +1512,11 @@ export const updateMessage = async (address, message) => {
 }
 ```
 
-Mwisho lakini sio uchache, tunahitaji kuunganisha kazi yetu ya `updateMessage` na kijenzi chetu cha `HelloWorld.js`.
+Mwisho kabisa, tunahitaji kuunganisha kitendaji chetu cha `updateMessage` kwenye kipengele chetu cha `HelloWorld.js`.
 
-#### Unganisha `updateMessage` na sehemu ya mbele ya `HelloWorld.js` {#connect-updatemessage-to-the-helloworld-js-frontend}
+#### Unganisha `updateMessage` kwenye frontend ya `HelloWorld.js` {#connect-updatemessage-to-the-helloworld-js-frontend}
 
-Kazi yetu ya `onUpdatePressed` inapaswa kufanya mwito wa kusubiri kwa kazi iliyoingizwa ya `updateMessage` na kubadilisha kigezo cha hali cha `hali` ili kuonyesha ikiwa muamala wetu ulifanikiwa au ulishindwa:
+Kitendaji chetu cha `onUpdatePressed` kinapaswa kufanya wito wa await kwenye kitendaji cha `updateMessage` kilichoingizwa na kubadilisha kigezo cha hali cha `status` ili kuonyesha ikiwa muamala wetu ulifanikiwa au ulishindwa:
 
 ```javascript
 // HelloWorld.js
@@ -1523,18 +1527,18 @@ const onUpdatePressed = async () => {
 }
 ```
 
-Ni safi sana na rahisi. Na nadhani nini... MFUMO MTAWANYO WA KIMAMLAKA WAKO UMEKAMILIKA!!!
+Ni safi sana na rahisi. Na nadhani nini... DAPP YAKO IMEKAMILIKA!!!
 
-Endelea na ujaribu kitufe cha **Sasisha**!
+Endelea na ujaribu kitufe cha **Update**!
 
-### Tengeneza mfumo mtawanyo wa kimamlaka wako mwenyewe {#make-your-own-custom-dapp}
+### Tengeneza dapp yako mwenyewe maalum {#make-your-own-custom-dapp}
 
 Wooooo, umefika mwisho wa mafunzo! Kwa muhtasari, umejifunza jinsi ya:
 
-- Unganisha mkoba wa MetaMask na mradi wako wa mfumo mtawanyo wa kimamlaka
-- Soma data kutoka kwa mkataba-erevu wako kwa kutumia API ya [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
-- Saini miamala ya Ethereum kwa kutumia MetaMask
+- Kuunganisha mkoba wa MetaMask kwenye mradi wako wa dapp
+- Kusoma data kutoka kwenye mkataba mahiri wako ukitumia API ya [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Kusaini miamala ya Ethereum ukitumia MetaMask
 
-Sasa una vifaa kamili vya kutumia ujuzi kutoka kwa mafunzo haya ili kujenga mradi wako mwenyewe wa mfumo mtawanyo wa kimamlaka! Kama kawaida, ikiwa una maswali yoyote, usisite kuwasiliana nasi kwa msaada katika [Alchemy Discord](https://discord.gg/gWuC7zB). 🧙‍♂️
+Sasa una vifaa kamili vya kutumia ujuzi kutoka kwenye mafunzo haya ili kujenga mradi wako mwenyewe wa dapp maalum! Kama kawaida, ikiwa una maswali yoyote, usisite kuwasiliana nasi kwa msaada katika [Discord ya Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️
 
-Baada ya kukamilisha mafunzo haya, tujulishe jinsi uzoefu wako ulivyokuwa au ikiwa una maoni yoyote kwa kututagi kwenye Twitter [@alchemyplatform](https://twitter.com/AlchemyPlatform)!
+Mara tu utakapokamilisha mafunzo haya, tujulishe uzoefu wako ulikuwaje au ikiwa una maoni yoyote kwa kututag kwenye Twitter [@alchemyplatform](https://twitter.com/AlchemyPlatform)!

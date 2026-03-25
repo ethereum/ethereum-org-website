@@ -1,46 +1,46 @@
 ---
 title: Muungano
-description: Jifunze kuhusu kuunganisha - wakati Mainnet Ethereum ilipopitisha uthibitisho wa dhamana.
+description: Jifunze kuhusu Muungano - wakati Mainnet ya Ethereum ilipopitisha uthibitishaji wa dhamana.
 lang: sw
 template: upgrade
 image: /images/upgrades/merge.png
-alt:
-summaryPoint1: Ethereum Mainnet hutumia uthibitisho wa dhamana, lakini haikuwa hivyo kila wakati.
-summaryPoint2: Uboreshaji kutoka kwa utaratibu wa asili wa uthibitisho wa kazi hadi uthibitisho wa dhamana uliitwa Kuunganisha.
-summaryPoint3: Kuunganisha kunarejelea Ethereum Mainnet iliyounganishwa na mnyororo tofauti wa uthibitisho wa dhamana unaoitwa mnyororo Beacon, ambayo sasa inapatikana kama mnyororo mmoja.
-summaryPoint4: The Merge ilipunguza matumizi ya nishati ya Ethereum kwa ~99.95%.
+alt: 
+summaryPoint1: Mainnet ya Ethereum inatumia uthibitishaji wa dhamana, lakini haikuwa hivi siku zote.
+summaryPoint2: Uboreshaji kutoka kwenye mfumo wa asili wa uthibitishaji wa kazi kwenda kwenye uthibitishaji wa dhamana uliitwa Muungano.
+summaryPoint3: Muungano unarejelea Mainnet ya asili ya Ethereum kuungana na kiambajengo tofauti cha uthibitishaji wa dhamana kinachoitwa roro wa beacon, ambacho sasa kipo kama mnyororo mmoja.
+summaryPoint4: Muungano ulipunguza matumizi ya nishati ya Ethereum kwa ~99.95%.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  Kuunganisha kulitekelezwa mnamo Septemba 15, 2022. Hii ilikamilisha mpito wa Ethereum hadi makubaliano ya uthibitisho wa hisa, ikipuuza rasmi uthibitisho wa kazi na kupunguza matumizi ya nishati kwa ~ 99.95%.
+  Muungano ulitekelezwa mnamo Septemba 15, 2022. Hii ilikamilisha mpito wa Ethereum kwenda kwenye makubaliano ya uthibitishaji wa dhamana, ikiondoa rasmi uthibitishaji wa kazi na kupunguza matumizi ya nishati kwa ~99.95%.
 </UpgradeStatus>
 
-## Kuunganisha ni nini? {#what-is-the-merge}
+## Muungano ulikuwa nini? {#what-is-the-merge}
 
-Muungano ulikuwa ni uunganishaji wa safu ya utekelezaji ya awali ya Ethereum (Mtandao Mkuu ambao umekuwepo tangu [genesis](/ethereum-forks/#frontier)) na safu yake mpya ya makubaliano ya uthibitishaji-wa-hisa, Mnyororo Kioleza. Iliondoa hitaji la uchimbaji madini unaotumia nishati nyingi na badala yake kuwezesha mtandao kulindwa kwa kutumia ETH iliyowekwa hatarini. Ilikuwa ni hatua ya kusisimua kweli katika kutimiza maono ya Ethereum—usalama zaidi, usalama, na uendelevu.
+Muungano ulikuwa ni kuunganishwa kwa safu ya utekelezaji ya asili ya Ethereum (mainnet ambayo imekuwepo tangu [mwanzo](/ethereum-forks/#frontier)) na safu yake mpya ya makubaliano ya uthibitishaji wa dhamana, roro wa beacon. Iliondoa hitaji la uchimbaji unaotumia nishati nyingi na badala yake kuwezesha mtandao kulindwa kwa kutumia ETH iliyowekwa dhamana. Ilikuwa hatua ya kusisimua kweli katika kutimiza maono ya [Ethereum](/)—uboreshaji wa uwezo zaidi, usalama, na uendelevu.
 
 <MergeInfographic />
 
-Hapo awali, [Mnyororo Kioleza](/roadmap/beacon-chain/) ulitolewa kando na [Mtandao Mkuu](/glossary/#mainnet). Mtandao Mkuu wa Ethereum - pamoja na akaunti zake zote, salio, mikataba-erevu, na hali ya mnyororo wa bloku - uliendelea kulindwa na [uthibitishaji-wa-kazi](/developers/docs/consensus-mechanisms/pow/), hata wakati Mnyororo Kioleza ulikuwa ukifanya kazi sambamba kwa kutumia [uthibitishaji-wa-hisa](/developers/docs/consensus-mechanisms/pos/). Kuunganisha ndipo mifumo hii miwili ilipokuja pamoja, na uthibitisho wa kazi ulibadilishwa kabisa na uthibitisho wa dhamana.
+Hapo awali, [roro wa beacon](/roadmap/beacon-chain/) ulitolewa tofauti na [mainnet](/glossary/#mainnet). Mainnet ya Ethereum - pamoja na akaunti zake zote, salio, mikataba mahiri, na hali ya kiambajengo - iliendelea kulindwa na [uthibitishaji wa kazi](/developers/docs/consensus-mechanisms/pow/), hata wakati roro wa beacon ulikuwa ukifanya kazi sambamba kwa kutumia [uthibitishaji wa dhamana](/developers/docs/consensus-mechanisms/pos/). Muungano ulikuwa wakati mifumo hii miwili hatimaye ilipoungana, na uthibitishaji wa kazi ulibadilishwa kabisa na uthibitishaji wa dhamana.
 
-Fikiria Ethereum ni meli ya anga ya juu iliyozinduliwa kabla ya kuwa tayari kabisa kwa safari ya nyota. Pamoja na Mnyororo wa Beacon, jumuiya ilijenga injini mpya na ukuta mgumu. Baada ya majaribio makubwa, ikawa wakati wa kubadilisha injini mpya kwa ile ya zamani ya safari ya katikati ya ndege. Hii iliunganisha injini mpya, yenye ufanisi zaidi katika meli iliyopo na kuiwezesha kuweka miaka kadhaa ya mwanga na kuchukua ulimwengu.
+Fikiria Ethereum ni chombo cha anga za juu ambacho kilizinduliwa kabla hakijawa tayari kwa safari ya kati ya nyota. Pamoja na roro wa beacon, jamii ilijenga injini mpya na ganda gumu. Baada ya majaribio makubwa, ukafika wakati wa kubadilisha injini mpya na ya zamani katikati ya safari. Hii iliunganisha injini mpya, yenye ufanisi zaidi kwenye chombo kilichopo na kukiwezesha kusafiri miaka mingi ya mwanga na kukabiliana na ulimwengu.
 
-## Kuunganisha na Mtandao Mkuu {#merging-with-mainnet}
+## Kuungana na Mainnet {#merging-with-mainnet}
 
-Uthibitisho wa kazi ulilinda Ethereum Mainnet kutoka mwanzo hadi The Merge. Hii iliruhusu kiambajengo cha Ethereum ambayo sisi sote tumezoea kuanza kutumika Julai 2015 pamoja na vipengele vyake vyote vinavyojulikana—alama, mikataba mahiri, akaunti, n. k.
+Uthibitishaji wa kazi ulilinda Mainnet ya Ethereum tangu mwanzo hadi Muungano. Hii iliruhusu kiambajengo cha Ethereum ambacho sote tumezoea kuwepo mnamo Julai 2015 na vipengele vyake vyote vinavyofahamika—miamala, mikataba mahiri, akaunti, n.k.
 
-Katika historia yote ya Ethereum, wajenzi walitayarisha mabadiliko ya baadaye kutoka kwa uthibitisho wa kazi hadi uthibitisho wa dhamana. Mnamo Desemba 1, 2020, Mnyororo wa Beacon uliundwa kama kiambajengo tofauti kwa Mainnet, inayoendesha sambamba.
+Katika historia yote ya Ethereum, watengenezaji walijiandaa kwa mpito wa mwisho kutoka kwenye uthibitishaji wa kazi kwenda kwenye uthibitishaji wa dhamana. Mnamo Desemba 1, 2020, roro wa beacon uliundwa kama kiambajengo tofauti na mainnet, ukifanya kazi sambamba.
 
-Mnyororo wa Beacon haikuwa ikichakata shughuli za Mainnet. Badala yake, ilikuwa inafikia makubaliano juu ya hali yake yenyewe kwa kukubaliana juu ya wathibitishaji amilifu na salio la akaunti zao. Baada ya majaribio ya kina, ikawa wakati wa mnyororo wa Beacon kufikia makubaliano juu ya data ya ulimwengu halisi. Baada ya Kuunganisha, Beacon Chain ikawa injini ya makubaliano kwa data zote za mtandao, ikiwa ni pamoja na miamala ya safu ya utekelezaji na salio la akaunti.
+Roro wa beacon hapo awali haukuwa ukichakata miamala ya mainnet. Badala yake, ulikuwa ukifikia makubaliano juu ya hali yake yenyewe kwa kukubaliana juu ya wathibitishaji wanaofanya kazi na salio la akaunti zao. Baada ya majaribio ya kina, ukafika wakati wa roro wa beacon kufikia makubaliano juu ya data za ulimwengu halisi. Baada ya Muungano, roro wa beacon ukawa injini ya makubaliano kwa data zote za mtandao, ikiwa ni pamoja na miamala ya safu ya utekelezaji na salio la akaunti.
 
-Baada ya Kuunganisha, Beacon Chain ikawa injini ya makubaliano kwa data zote za mtandao, ikiwa ni pamoja na miamala ya safu ya utekelezaji na salio la akaunti. Uchimbaji siyo tena njia ya kuzalisha bloku halali. Badala yake, wathibitishaji wa uthibitishaji-wa-hisa wamechukua jukumu hili na sasa wanawajibika kwa kuchakata uhalali wa miamala yote na kupendekeza bloku.
+Muungano uliwakilisha mabadiliko rasmi ya kutumia roro wa beacon kama injini ya uzalishaji wa kitalu. Uchimbaji sio tena njia ya kuzalisha bloku halali. Badala yake, wathibitishaji wa uthibitishaji wa dhamana wamechukua jukumu hili na sasa wanawajibika kuchakata uhalali wa miamala yote na kupendekeza bloku.
 
-Hakuna historia iliyopotea katika Muungano. Wakati Mtandao Mkuu ulipoungana na Mnyororo Kioleza, pia uliunganisha historia yote ya miamala ya Ethereum.
+Hakuna historia iliyopotea katika Muungano. Wakati mainnet ilipoungana na roro wa beacon, pia iliunganisha historia nzima ya miamala ya Ethereum.
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Mpito huu kwenda kwenye uthibitishaji-wa-hisa ulibadilisha jinsi ether inavyotolewa. Jifunze zaidi kuhusu [utoaji wa ether kabla na baada ya Muungano](/roadmap/merge/issuance/).
+Mpito huu kwenda kwenye uthibitishaji wa dhamana ulibadilisha jinsi ether inavyotolewa. Jifunze zaidi kuhusu [utoaji wa ether kabla na baada ya Muungano](/roadmap/merge/issuance/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -49,178 +49,184 @@ Mpito huu kwenda kwenye uthibitishaji-wa-hisa ulibadilisha jinsi ether inavyotol
 
 **Muungano haukubadilisha chochote kwa wamiliki/watumiaji.**
 
-_Hii inapaswa kurudiwa_: Kama mtumiaji au mmiliki wa ETH au mali nyingine yoyote ya kidijitali kwenye Ethereum, pamoja na washikadau wasioendesha nodi, **huna haja ya kufanya chochote na fedha zako au mkoba wako kuhusiana na Muungano.** ETH ni ETH tu. Hakuna kitu kama "ETH ya zamani"/"ETH mpya" au "ETH1"/"ETH2" na pochi hufanya kazi sawasawa baada ya The Merge kama zilivyokuwa awali—watu wanaokuambia vinginevyo wanaweza kuwa walaghai.
+_Hili linastahili kurudiwa_: Kama mtumiaji au mmiliki wa ETH au rasilimali nyingine yoyote ya kidijitali kwenye Ethereum, pamoja na waweka dhamana wasioendesha Nodi, **huhitaji kufanya chochote na fedha zako au mkoba wako ili kuendana na Muungano.** ETH ni ETH tu. Hakuna kitu kama "ETH ya zamani"/"ETH mpya" au "ETH1"/"ETH2" na mikoba inafanya kazi sawa kabisa baada ya Muungano kama ilivyokuwa kabla—watu wanaokuambia vinginevyo huenda ni matapeli.
 
-Licha ya kubadilisha uthibitishaji-wa-kazi, historia yote ya Ethereum tangu genesis ilibaki thabiti na haikubadilishwa na mabadiliko ya kwenda kwenye uthibitishaji-wa-hisa. Fedha zozote zilizokuwa kwenye mkoba wako kabla ya Muungano bado zinapatikana baada ya Muungano. **No action is required to upgrade on your part.**
+Licha ya kubadilisha uthibitishaji wa kazi, historia nzima ya Ethereum tangu mwanzo ilibaki salama na haikubadilishwa na mpito kwenda kwenye uthibitishaji wa dhamana. Fedha zozote zilizokuwa kwenye mkoba wako kabla ya Muungano bado zinapatikana baada ya Muungano. **Hakuna hatua inayohitajika ili kuboresha kwa upande wako.**
 
-[Maelezo zaidi kuhusu usalama wa Ethereum](/security/#eth2-token-scam)
+[Zaidi kuhusu usalama wa Ethereum](/security/#eth2-token-scam)
 
-### Waendeshaji wa nodi na wasanidi wa mfumo mtawanyo wa kimamlaka {#node-operators-dapp-developers}
+### Waendeshaji wa Nodi na watengenezaji wa dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Waendeshaji wa nodi za kushikiza na watoa huduma"
-contentPreview="Kama wewe ni mshikizi unayeendesha nodi yako mwenyewe au mtoa huduma wa miundombinu ya nodi, kuna mambo machache unayopaswa kufahamu baada ya Muungano."
+title="Waendeshaji wa Nodi za kuweka dhamana na watoa huduma"
+contentPreview="Kama wewe ni muweka dhamana unayeendesha usanidi wako mwenyewe wa Nodi au mtoa huduma wa miundombinu ya Nodi, kuna mambo machache unayohitaji kufahamu baada ya Muungano."
 id="staking-node-operators">
 
-Vipengee muhimu vya kuchukua hatua ni pamoja na:
+Vipengele muhimu vya hatua ni pamoja na:
 
-1. Endesha _zote mbili_ mteja wa makubaliano na mteja wa utekelezaji; sehemu za mwisho za wahusika wengine za kupata data ya utekelezaji hazifanyi kazi tena tangu Muungano.
-2. Thibitisha wateja wote wa utekelezaji na wa makubaliano kwa siri ya pamoja ya JWT ili waweze kuwasiliana kwa usalama.
-3. Weka anwani ya `mpokeaji ada` ili kupokea vidokezo/MEV vya ada ya muamala uliyochuma.
+1. Endesha _zote_ mteja wa makubaliano na mteja wa utekelezaji; vituo vya wahusika wengine kupata data ya utekelezaji havifanyi kazi tena tangu Muungano.
+2. Thibitisha wateja wote wa utekelezaji na makubaliano kwa siri ya pamoja ya JWT ili waweze kuwasiliana kwa usalama.
+3. Weka anwani ya `fee recipient` ili kupokea vidokezo vyako vya ada ya muamala/MEV ulivyochuma.
 
-Kutokukamilisha vipengee viwili vya kwanza hapo juu kutasababisha nodi yako ionekane kama \"nje ya mtandao\" hadi safu zote mbili zisawazishwe na kuthibitishwa.
+Kutokamilisha vipengele viwili vya kwanza hapo juu kutasababisha Nodi yako kuonekana kama "nje ya mtandao" hadi safu zote mbili zisawazishwe na kuthibitishwa.
 
-Kutokuweka `mpokezi wa ada` bado kutamruhusu kiidhinishi chako kufanya kama kawaida, lakini hutakosa vidokezo vya ada ya kutolipa na MEV yoyote ambayo ungepokea katika vitalu inapendekeza mthibitishaji wako.
+Kutoweka `fee recipient` bado kutaruhusu Mthibitishaji wako kufanya kazi kama kawaida, lakini utakosa vidokezo vya ada ambavyo havijachomwa na MEV yoyote ambayo ungepata katika bloku ambazo Mthibitishaji wako anapendekeza.
 </ExpandableCard>
 
 <ExpandableCard
-title="Waendeshaji wa nodi zisizothibitisha na watoa huduma za miundombinu"
-contentPreview="Ikiwa unaendesha nodi ya Ethereum isiyothibitisha, mabadiliko muhimu zaidi yaliyoletwa na Muungano lilikuwa ni sharti la kuendesha wateja kwa safu ya utekelezaji PAMOJA na safu ya makubaliano."
+title="Waendeshaji wa Nodi wasiothibitisha na watoa huduma wa miundombinu"
+contentPreview="Ikiwa unaendesha Nodi ya Ethereum isiyothibitisha, mabadiliko makubwa zaidi yaliyokuja na Muungano yalikuwa hitaji la kuendesha wateja kwa ZOTE safu ya utekelezaji NA safu ya makubaliano."
 id="node-operators">
 
-Hadi kabla ya Muungano, mteja wa utekelezaji (kama Geth, Erigon, Besu au Nethermind) alitosha kupokea, kuthibitisha ipasavyo, na kueneza bloku zinazoenezwa na mtandao. _Baada ya Muungano_, uhalali wa miamala iliyomo ndani ya shehena ya utekelezaji sasa pia unategemea uhalali wa \"bloku ya makubaliano\" iliyomo.
+Hadi Muungano, mteja wa utekelezaji (kama vile Geth, Erigon, Besu au Nethermind) alitosha kupokea, kuthibitisha ipasavyo, na kusambaza bloku zinazotangazwa na mtandao. _Baada ya Muungano_, uhalali wa miamala iliyomo ndani ya mzigo wa utekelezaji sasa pia unategemea uhalali wa "kitalu cha makubaliano" ambacho imo ndani yake.
 
-Kwa sababu hiyo, nodi kamili ya Ethereum sasa inahitaji mteja wa utekelezaji na mteja wa makubaliano. Wateja hawa wawili hufanya kazi pamoja kwa kutumia API mpya ya Engine. API ya Engine inahitaji uthibitishaji kwa kutumia siri ya JWT, ambayo hutolewa kwa wateja wote wawili ikiruhusu mawasiliano salama.
+Kama matokeo, Nodi kamili ya Ethereum sasa inahitaji mteja wa utekelezaji na mteja wa makubaliano. Wateja hawa wawili wanafanya kazi pamoja wakitumia API mpya ya Injini. API ya Injini inahitaji uthibitishaji kwa kutumia siri ya JWT, ambayo hutolewa kwa wateja wote wawili kuruhusu mawasiliano salama.
 
-Vipengee muhimu vya kuchukua hatua ni pamoja na:
+Vipengele muhimu vya hatua ni pamoja na:
 
 - Sakinisha mteja wa makubaliano pamoja na mteja wa utekelezaji
-- Thibitisha wateja wa utekelezaji na makubaliano kwa siri ya pamoja ya JWT ili waweze kuwasiliana kwa usalama.
+- Thibitisha wateja wa utekelezaji na makubaliano kwa siri ya pamoja ya JWT ili waweze kuwasiliana kwa usalama wao kwa wao.
 
-Kutokukamilisha vipengee vilivyo hapo juu kutasababisha nodi yako kuonekana kuwa \"nje ya mtandao\" hadi safu zote mbili zisawazishwe na kuthibitishwa.
+Kutokamilisha vipengele hapo juu kutasababisha Nodi yako kuonekana kuwa "nje ya mtandao" hadi safu zote mbili zisawazishwe na kuthibitishwa.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Wasanidi wa mfumo mtawanyo wa kimamlaka na mikataba mahiri"
-contentPreview="Muungano ulibuniwa kuwa na athari ndogo sana kwa wasanidi wa mikataba mahiri na mfumo mtawanyo wa kimamlaka."
+title="Watengenezaji wa Dapp na mikataba mahiri"
+contentPreview="Muungano uliundwa kuwa na athari ndogo kwa watengenezaji wa mikataba mahiri na dapp."
 id="developers">
 
 Muungano ulikuja na mabadiliko kwenye makubaliano, ambayo pia yanajumuisha mabadiliko yanayohusiana na:
 
 <ul>
-  <li>muundo wa bloku</li>
-  <li>muda wa nafasi/bloku</li>
+  <li>muundo wa kitalu</li>
+  <li>muda wa nafasi/kitalu</li>
   <li>mabadiliko ya opcode</li>
-  <li>vyanzo vya nasibu kwenye mnyororo</li>
-  <li>dhana ya <em>kichwa salama</em> na <em>bloku zilizokamilishwa</em></li>
+  <li>vyanzo vya nasibu ndani ya mnyororo</li>
+  <li>dhana ya <em>kichwa salama</em> na <em>bloku zilizofikia mwisho</em></li>
 </ul>
 
-Kwa maelezo zaidi, angalia chapisho hili la blogu na Tim Beiko kuhusu <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Jinsi Muungano Unavyoathiri Safu ya Matumizi ya Ethereum</a>.
+Kwa habari zaidi, angalia chapisho hili la blogu na Tim Beiko kuhusu <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Jinsi Muungano Unavyoathiri Safu ya Maombi ya Ethereum</a>.
+
 </ExpandableCard>
 
 ## Muungano na matumizi ya nishati {#merge-and-energy}
 
-Muungano uliashiria mwisho wa uthibitishaji-wa-kazi kwa Ethereum na kuanzisha enzi ya Ethereum endelevu zaidi na rafiki kwa mazingira. Matumizi ya nishati ya Ethereum yalipungua kwa takriban 99.95%, na kuifanya Ethereum kuwa mnyororo wa bloku unaojali mazingira. Jifunze zaidi kuhusu [matumizi ya nishati ya Ethereum](/energy-consumption/).
+Muungano uliashiria mwisho wa uthibitishaji wa kazi kwa Ethereum na kuanzisha enzi ya Ethereum endelevu zaidi na rafiki kwa mazingira. Matumizi ya nishati ya Ethereum yalishuka kwa takriban 99.95%, na kuifanya Ethereum kuwa kiambajengo cha kijani. Jifunze zaidi kuhusu [matumizi ya nishati ya Ethereum](/energy-consumption/).
 
-## Muungano na uongezaji {#merge-and-scaling}
+## Muungano na uboreshaji wa uwezo {#merge-and-scaling}
 
-Muungano pia uliweka msingi kwa masasisho zaidi ya uongezaji yasiyowezekana chini ya uthibitishaji-wa-kazi, na kuipeleka Ethereum hatua moja karibu na kufikia kiwango kamili, usalama na uendelevu ambao [ramani yake ya barabara](/roadmap/) inaelekea.
+Muungano pia uliweka msingi wa uboreshaji zaidi wa uwezo ambao haukuwezekana chini ya uthibitishaji wa kazi, na kuileta Ethereum hatua moja karibu na kufikia kiwango kamili, usalama na uendelevu ambao [mpango wake wa utekelezaji](/roadmap/) unajenga kuelekea.
 
 ## Dhana potofu kuhusu Muungano {#misconceptions}
 
 <ExpandableCard
-title="Dhana potofu: &quot;Kuendesha nodi kunahitaji kushikiza ETH 32.&quot;"
-contentPreview="Si kweli. Mtu yeyote yuko huru kusawazisha nakala yake mwenyewe iliyothibitishwa ya Ethereum (yaani, kuendesha nodi). Hakuna ETH inayohitajika—si kabla ya Muungano, si baada ya Muungano, kamwe.">
+title="Dhana potofu: &quot;Kuendesha Nodi kunahitaji kuweka dhamana ya 32 ETH.&quot;"
+contentPreview="Si kweli. Mtu yeyote yuko huru kusawazisha nakala yake mwenyewe iliyothibitishwa ya Ethereum (yaani, kuendesha Nodi). Hakuna ETH inayohitajika—sio kabla ya Muungano, sio baada ya Muungano, sio kamwe.">
 
-Kuna aina mbili za nodi za Ethereum: nodi zinazoweza kupendekeza bloku na nodi ambazo haziwezi.
+Kuna aina mbili za Nodi za Ethereum: Nodi zinazoweza kupendekeza bloku na Nodi ambazo haziwezi.
 
-Nodi zinazopendekeza bloku ni idadi ndogo tu ya jumla ya nodi kwenye Ethereum. Aina hii inajumuisha nodi za uchimbaji chini ya uthibitishaji-wa-kazi (PoW) na nodi za wathibitishaji chini ya uthibitishaji-wa-hisa (PoS). Aina hii inahitaji kuweka rasilimali za kiuchumi (kama vile nguvu ya hashi ya GPU katika uthibitishaji-wa-kazi au ETH iliyoshikizwa katika uthibitishaji-wa-hisa) kwa kubadilishana na uwezo wa kupendekeza bloku inayofuata mara kwa mara na kupata zawadi za itifaki.
+Nodi zinazopendekeza bloku ni idadi ndogo tu ya Nodi zote kwenye Ethereum. Kundi hili linajumuisha Nodi za uchimbaji chini ya uthibitishaji wa kazi (PoW) na Nodi za Mthibitishaji chini ya uthibitishaji wa dhamana (PoS). Kundi hili linahitaji kujitolea rasilimali za kiuchumi (kama vile nguvu ya hashi ya GPU katika uthibitishaji wa kazi au ETH iliyowekwa dhamana katika uthibitishaji wa dhamana) badala ya uwezo wa kupendekeza kitalu kinachofuata mara kwa mara na kupata zawadi za itifaki.
 
-Nodi zingine kwenye mtandao (yaani, idadi kubwa) hazihitajiki kuweka rasilimali zozote za kiuchumi zaidi ya kompyuta ya kiwango cha mtumiaji na hifadhi ya 1-2 TB na muunganisho wa intaneti. Nodi hizi hazipendekezi bloku, lakini bado zina jukumu muhimu katika kulinda mtandao kwa kuwawajibisha wapendekezaji wote wa bloku kwa kusikiliza bloku mpya na kuthibitisha uhalali wao zinapofika kulingana na sheria za makubaliano ya mtandao. Ikiwa bloku ni halali, nodi inaendelea kuieneza kupitia mtandao. Ikiwa bloku si halali kwa sababu yoyote ile, programu ya nodi itaipuuza kuwa si halali na kusitisha uenezaji wake.
+Nodi nyingine kwenye mtandao (yaani, walio wengi) hazihitajiki kujitolea rasilimali zozote za kiuchumi zaidi ya kompyuta ya kiwango cha mtumiaji yenye TB 1-2 ya hifadhi inayopatikana na muunganisho wa intaneti. Nodi hizi hazipendekezi bloku, lakini bado zina jukumu muhimu katika kulinda mtandao kwa kuwafanya wapendekezaji wa kizuizi wote kuwajibika kwa kusikiliza bloku mpya na kuthibitisha uhalali wao wanapowasili kulingana na sheria za makubaliano ya mtandao. Ikiwa kitalu ni halali, Nodi inaendelea kukisambaza kupitia mtandao. Ikiwa kitalu si halali kwa sababu yoyote, programu ya Nodi itakipuuza kama si halali na kusimamisha usambazaji wake.
 
-Kuendesha nodi isiyozalisha bloku inawezekana kwa mtu yeyote chini ya utaratibu wowote wa makubaliano (uthibitishaji-wa-kazi au uthibitishaji-wa-hisa); <em>inahimizwa sana</em> kwa watumiaji wote ikiwa wana uwezo. Kuendesha nodi kuna thamani kubwa sana kwa Ethereum na kunatoa manufaa ya ziada kwa mtu yeyote anayeiendesha, kama vile usalama ulioboreshwa, faragha na uwezo wa kustahimili udhibiti.
+Kuendesha Nodi isiyozalisha kitalu inawezekana kwa mtu yeyote chini ya utaratibu wowote wa makubaliano (uthibitishaji wa kazi au uthibitishaji wa dhamana); <em>inashauriwa sana</em> kwa watumiaji wote ikiwa wana uwezo. Kuendesha Nodi ni muhimu sana kwa Ethereum na inatoa faida za ziada kwa mtu yeyote anayeiendesha, kama vile usalama ulioboreshwa, faragha na upinzani dhidi ya udhibiti.
 
-Uwezo wa mtu yeyote kuendesha nodi yake mwenyewe ni <em>muhimu kabisa</em> katika kudumisha ugatuaji wa mtandao wa Ethereum.
+Uwezo wa mtu yeyote kuendesha Nodi yake mwenyewe ni <em>muhimu kabisa</em> katika kudumisha mfumo mtawanyo wa mtandao wa Ethereum.
 
-[More on running your own node](/run-a-node/)
+[Zaidi kuhusu kuendesha Nodi yako mwenyewe](/run-a-node/)
+
 </ExpandableCard>
 
 <ExpandableCard
 title="Dhana potofu: &quot;Muungano ulishindwa kupunguza ada za gesi.&quot;"
 contentPreview="Si kweli. Muungano ulikuwa mabadiliko ya utaratibu wa makubaliano, sio upanuzi wa uwezo wa mtandao, na haukuwahi kukusudiwa kupunguza ada za gesi.">
 
-Ada za gesi ni zao la mahitaji ya mtandao kulingana na uwezo wa mtandao. Muungano ulipuuza matumizi ya uthibitisho wa kazi, ukibadilika hadi uthibitisho wa dhamana kwa makubaliano, lakini haukubadilisha sana vigezo vyovyote vinavyoathiri moja kwa moja uwezo wa mtandao au upitishaji.
+Ada za gesi ni zao la mahitaji ya mtandao kulingana na uwezo wa mtandao. Muungano uliondoa matumizi ya uthibitishaji wa kazi, ukihamia kwenye uthibitishaji wa dhamana kwa makubaliano, lakini haukubadilisha kwa kiasi kikubwa vigezo vyovyote vinavyoathiri moja kwa moja uwezo wa mtandao au kasi ya uchakataji.
 
-Kwa a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric roadmap</a>, efforts are being focused on scaling user activity at [layer 2](/layer-2/), huku kuwezesha safu ya 1 ya Mainnet kama safu salama ya ugawaji wa data kwa ajili ya usaidizi wa ugavi wa data ulioidhinishwa. kwa bei nafuu. Mpito kwenda kwenye uthibitishaji-wa-hisa ni mtangulizi muhimu katika kutimiza hili. [More on gas and fees.](/developers/docs/gas/)
+Pamoja na <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">mpango wa utekelezaji unaozingatia rollup</a>, juhudi zinaelekezwa katika kuboresha uwezo wa shughuli za watumiaji kwenye [safu ya 2](/layer-2/), huku ikiwezesha Mainnet ya safu ya 1 kama safu salama ya makazi ya mfumo mtawanyo iliyoboreshwa kwa uhifadhi wa data wa rollup ili kusaidia kufanya miamala ya rollup kuwa nafuu zaidi. Mpito kwenda kwenye uthibitishaji wa dhamana ni mtangulizi muhimu katika kutimiza hili. [Zaidi kuhusu gesi na ada.](/developers/docs/gas/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: &quot;Miamala iliharakishwa sana na Muungano.&quot;"
-contentPreview="Si kweli. Ingawa kuna mabadiliko madogo, kasi ya muamala kwa kiasi kikubwa ni sawa kwenye safu ya 1 sasa kama ilivyokuwa kabla ya Muungano.">
-\"Kasi\" ya muamala inaweza kupimwa kwa njia chache, ikiwa ni pamoja na muda wa kujumuishwa kwenye bloku na muda wa kukamilishwa. Mabadiliko haya yote ni madogo, lakini si kwa namna ambayo watumiaji watagundua.
+title="Dhana potofu: &quot;Miamala iliharakishwa kwa kiasi kikubwa na Muungano.&quot;"
+contentPreview="Si kweli. Ingawa kuna mabadiliko madogo, kasi ya muamala ni sawa zaidi kwenye safu ya 1 sasa kama ilivyokuwa kabla ya Muungano.">
+"Kasi" ya muamala inaweza kupimwa kwa njia chache, ikiwa ni pamoja na muda wa kujumuishwa kwenye kitalu na muda wa kufikia mwisho. Yote haya yanabadilika kidogo, lakini si kwa njia ambayo watumiaji wataona.
 
-Kihistoria, kwenye uthibitishaji-wa-kazi, lengo lilikuwa kuwa na bloku mpya kila baada ya sekunde ~13.3. Chini ya uthibitishaji-wa-hisa, nafasi hutokea kila sekunde 12, na kila nafasi ni fursa kwa mthibitishaji kuchapisha bloku. Nafasi nyingi zina bloku, lakini si lazima zote (yaani, mthibitishaji yuko nje ya mtandao). Katika uthibitishaji-wa-hisa, bloku zinazalishwa ~10% mara nyingi zaidi kuliko kwenye uthibitishaji-wa-kazi. Hili lilikuwa badiliko dogo na halina uwezekano wa kugunduliwa na watumiaji.
+Kihistoria, kwenye uthibitishaji wa kazi, lengo lilikuwa kuwa na kitalu kipya kila sekunde ~13.3. Chini ya uthibitishaji wa dhamana, nafasi hutokea haswa kila sekunde 12, ambapo kila moja ni fursa kwa Mthibitishaji kuchapisha kitalu. Nafasi nyingi zina bloku, lakini si lazima zote (yaani, Mthibitishaji yuko nje ya mtandao). Katika uthibitishaji wa dhamana, bloku huzalishwa ~10% mara kwa mara zaidi kuliko kwenye uthibitishaji wa kazi. Hili lilikuwa badiliko dogo sana na hakuna uwezekano wa kuonekana na watumiaji.
 
-Uthibitishaji-wa-hisa ulianzisha dhana ya umaliziaji wa muamala ambayo haikuwepo hapo awali. Katika uthibitisho wa kazi, uwezo wa kubadilisha kizuizi unakuwa mgumu zaidi kwa kila kizuizi kinachopita kinachochimbwa juu ya shughuli, lakini haifiki kabisa sifuri. Chini ya uthibitisho wa dhamana, vizuizi vinaunganishwa katika nyakati (muda wa dakika 6.4 zenye nafasi 32 za vizuizi) ambazo waidhinishaji hupigia kura. Wakati epoki inapoisha, wathibitishaji hupiga kura iwapo watazingatia epoki hiyo kama 'imehalalishwa'. Ikiwa wathibitishaji watakubali kuhalalisha epoki, inakamilishwa katika epoki inayofuata. Kutengua miamala iliyokamilishwa hakuwezekani kiuchumi kwani kungehitaji kupata na kuchoma zaidi ya theluthi moja ya jumla ya ETH iliyoshikizwa.
+Uthibitishaji wa dhamana ulianzisha dhana ya mwisho wa muamala ambayo haikuwepo hapo awali. Katika uthibitishaji wa kazi, uwezo wa kubadilisha kitalu unakuwa mgumu zaidi kwa kila kitalu kinachopita kinachochimbwa juu ya muamala, lakini haufikii sifuri kamwe. Chini ya uthibitishaji wa dhamana, bloku huunganishwa katika vipindi (muda wa dakika 6.4 ulio na nafasi 32 za bloku) ambazo wathibitishaji hupigia kura. Wakati kipindi kinapoisha, wathibitishaji hupiga kura kama watafikiria kipindi 'kimehalalishwa'. Ikiwa wathibitishaji wanakubali kuhalalisha kipindi, kinafikia mwisho katika kipindi kinachofuata. Kutengua miamala iliyofikia mwisho haiwezekani kiuchumi kwani itahitaji kupata na kuchoma zaidi ya theluthi moja ya jumla ya ETH iliyowekwa dhamana.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: &quot;Muungano uliwezesha utoaji wa mali zilizoshikizwa.&quot;"
-contentPreview="Si kweli, lakini utoaji wa mali zilizoshikizwa umewezeshwa tangu wakati huo kupitia sasisho la Shanghai/Capella.">
+title="Dhana potofu: &quot;Muungano uliwezesha uondoaji wa dhamana.&quot;"
+contentPreview="Si kweli, lakini uondoaji wa dhamana umewezeshwa tangu wakati huo kupitia uboreshaji wa Shanghai/Capella.">
 
-Hapo awali baada ya Muungano, washikadau waliweza tu kufikia vidokezo vya ada na MEV vilivyopatikana kutokana na mapendekezo ya bloku. Zawadi hizi huwekwa kwenye akaunti isiyo ya hisa inayodhibitiwa na mthibitishaji (known as the <em>fee recipient</em>), na zinapatikana mara moja. Zawadi hizi ni tofauti na zawadi za itifaki kwa kutekeleza majukumu ya mthibitishaji.
+Hapo awali baada ya Muungano, waweka dhamana wangeweza tu kupata vidokezo vya ada na MEV ambavyo vilipatikana kutokana na mapendekezo ya kitalu. Zawadi hizi huwekwa kwenye akaunti isiyoweka dhamana inayodhibitiwa na Mthibitishaji (inayojulikana kama <em>fee recipient</em>), na zinapatikana mara moja. Zawadi hizi ni tofauti na zawadi za itifaki kwa kutekeleza majukumu ya Mthibitishaji.
 
-Tangu uboreshaji wa mtandao wa Shanghai/Capella, wadau sasa wanaweza kuteua <em>withdrawal address</em> ili kuanza kupokea malipo ya kiotomatiki ya salio lolote la ziada la hisa (ETH zaidi ya 32 kutoka kwa zawadi za itifaki). Sasisho hili pia liliwezesha uwezo wa mthibitishaji kufungua na kudai salio lake lote anapotoka kwenye mtandao.
+Tangu uboreshaji wa mtandao wa Shanghai/Capella, waweka dhamana sasa wanaweza kuteua <em>anwani ya kutoa</em> ili kuanza kupokea malipo ya kiotomatiki ya salio lolote la ziada la kuweka dhamana (ETH zaidi ya 32 kutoka kwa zawadi za itifaki). Uboreshaji huu pia uliwezesha uwezo wa Mthibitishaji kufungua na kudai salio lake lote anapotoka kwenye mtandao.
 
-[Maelezo zaidi kuhusu uondoaji wa ushikizaji](/staking/withdrawals/)
+[Zaidi kuhusu uondoaji wa dhamana](/staking/withdrawals/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: &quot;Sasa kwa kuwa Muungano umekamilika, na uondoaji umewezeshwa, washikadau wote wanaweza kutoka kwa pamoja.&quot;"
-contentPreview="Si kweli. Matokeo ya wathibitishaji yana kikomo cha kiwango kwa sababu za kiusalama.">
-Tangu sasisho la Shanghai/Capella liwezeshe uondoaji, wathibitishaji wanahamasishwa kuondoa salio lao la kushikiza lililo juu ya ETH 32, kwa kuwa fedha hizi haziongezi mavuno na vinginevyo zimefungwa. Kutegemeana na APR (inayobainishwa na jumla ya ETH iliyoshikizwa), wanaweza kuhamasishwa kutoka kwenye wathibitishaji wao ili kudai salio lao lote au hata kushikiza zaidi kwa kutumia zawadi zao ili kupata mavuno zaidi.
+title="Dhana potofu: &quot;Sasa kwa kuwa Muungano umekamilika, na uondoaji umewezeshwa, waweka dhamana wote wanaweza kutoka kwa wakati mmoja.&quot;"
+contentPreview="Si kweli. Kutoka kwa Mthibitishaji kuna kikomo cha kiwango kwa sababu za kiusalama.">
+Tangu uboreshaji wa Shanghai/Capella uwezeshe uondoaji, wathibitishaji wanahamasishwa kutoa salio lao la kuweka dhamana zaidi ya 32 ETH, kwani fedha hizi haziongezi faida na vinginevyo zimefungwa. Kulingana na APR (inayoamuliwa na jumla ya ETH iliyowekwa dhamana), wanaweza kuhamasishwa kutoa Mthibitishaji wao ili kudai salio lao lote au kuweka dhamana zaidi kwa kutumia zawadi zao ili kupata faida zaidi.
 
-Onyo muhimu hapa ni kwamba, matokeo kamili ya wathibitishaji yana kikomo cha kiwango na itifaki, na ni wathibitishaji wachache tu wanaoweza kutoka kwa kila epoki (kila dakika 6.4). Kikomo hiki hubadilika kulingana na idadi ya wathibitishaji hai, lakini ni takriban 0.33% ya jumla ya ETH iliyoshikizwa inaweza kutolewa kutoka kwa mtandao kwa siku moja.
+Tahadhari muhimu hapa, kutoka kamili kwa Mthibitishaji kuna kikomo cha kiwango na itifaki, na ni wathibitishaji wachache tu wanaoweza kutoka kwa kila kipindi (kila dakika 6.4). Kikomo hiki kinabadilika kulingana na idadi ya wathibitishaji wanaofanya kazi, lakini inakuja kwa takriban 0.33% ya jumla ya ETH iliyowekwa dhamana inaweza kutolewa kwenye mtandao kwa siku moja.
 
-Hii inazuia utokaji mkubwa wa fedha zilizoshikizwa. Zaidi ya hayo, huzuia mshambulizi anayeweza kufikia sehemu kubwa ya jumla ya ETH inayohusishwa na kutenda kosa linaloweza kupunguzwa na kuondoka/kutoa salio zote za waidhinishaji potofu katika kipindi sawa kabla ya itifaki kutekeleza adhabu ya kufyeka.
+Hii inazuia kutoka kwa wingi kwa fedha zilizowekwa dhamana. Zaidi ya hayo, inazuia mshambuliaji anayeweza kupata sehemu kubwa ya jumla ya ETH iliyowekwa dhamana kufanya kosa linaloweza kupunguzwa dhamana na kutoka/kutoa salio lote la Mthibitishaji anayekosa katika kipindi hicho hicho kabla ya itifaki kutekeleza adhabu ya kupunguzwa kwa dhamana.
 
-APR pia inabadilika kimakusudi, ikiruhusu soko la washikadau kusawazisha kiasi wanachotaka kulipwa ili kusaidia kulinda mtandao. Ikiwa kiwango ni cha chini sana, basi wathibitishaji watatoka kwa kiwango kilichowekwa na itifaki. Hatua kwa hatua hii itapandisha APR kwa kila mtu anayebaki, na kuvutia washikadau wapya au wanaorejea tena.
+APR pia inabadilika kwa makusudi, ikiruhusu soko la waweka dhamana kusawazisha kiasi gani wako tayari kulipwa ili kusaidia kulinda mtandao. Ikiwa kiwango ni cha chini sana, basi wathibitishaji watatoka kwa kiwango kilichowekewa kikomo na itifaki. Hatua kwa hatua hii itapandisha APR kwa kila mtu anayebaki, na kuvutia waweka dhamana wapya au wanaorudi tena.
 </ExpandableCard>
 
-## Nini kimeipata 'Eth2?' {#eth2}
+## Nini kilitokea kwa 'Eth2'? {#eth2}
 
-Istilahi ya 'Eth2' imeachwa kutumika. Baada ya kuunganisha 'Eth1' na 'Eth2' kuwa mnyororo mmoja, hakuna tena haja ya kutofautisha kati ya mitandao miwili ya Ethereum; kuna Ethereum tu.
+Neno 'Eth2' limeachwa kutumika. Baada ya kuunganisha 'Eth1' na 'Eth2' kuwa mnyororo mmoja, hakuna haja tena ya kutofautisha kati ya mitandao miwili ya Ethereum; kuna Ethereum tu.
 
-Ili kuondoa sintofahamu, jamii imesasisha haya maneno:
+Ili kupunguza mkanganyiko, jamii imesasisha maneno haya:
 
-- 'Eth1'ni 'safu ya utekelezaji', ambayo hushughulikia miamala na utekelezaji.
-- 'Eth2' ni 'safu ya makubaliano', inayoshughulikia makubaliano ya uthibitisho-wa-hisa.
+- 'Eth1' sasa ni 'safu ya utekelezaji', ambayo inashughulikia miamala na utekelezaji.
+- 'Eth2' sasa ni 'safu ya makubaliano', ambayo inashughulikia makubaliano ya uthibitishaji wa dhamana.
 
-Visasisho vya maneno haya ni kwa ajili ya majina peke yake; hii haibadili malengo ya Ethereum au njia yake.
+Masasisho haya ya istilahi yanabadilisha tu mikataba ya majina; hii haibadilishi malengo au mpango wa utekelezaji wa Ethereum.
 
-[Jifunze zaidi kuhusu kubadilishwa jina la 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Jifunze zaidi kuhusu kubadilishwa jina kwa 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
-## Uhusiano kati ya masasisho {#relationship-between-upgrades}
+## Uhusiano kati ya uboreshaji {#relationship-between-upgrades}
 
-Visasisho vyote vya Eth2 vinahusiana kwa kiasi fulani. Kwahio tukumbushie jinsi muungano huu unavyohusiana na visasisho vingine.
+Uboreshaji wa Ethereum wote unahusiana kwa kiasi fulani. Kwa hivyo hebu tujikumbushe jinsi Muungano unavyohusiana na uboreshaji mwingine.
 
-### Muungano na Mnyororo Kioleza {#merge-and-beacon-chain}
+### Muungano na roro wa beacon {#merge-and-beacon-chain}
 
-Muungano unawakilisha ukubali rasmi wa Mnyororo Kioleza kama safu mpya ya makubaliano kwa safu ya awali ya utekelezaji ya Mtandao Mkuu. Tangu Muungano, wathibitishaji wamepewa jukumu la kulinda Mtandao Mkuu wa Ethereum, na uchimbaji kwenye [uthibitishaji-wa-kazi](/developers/docs/consensus-mechanisms/pow/) siyo tena njia halali ya uzalishaji wa bloku.
+Muungano unawakilisha kupitishwa rasmi kwa roro wa beacon kama safu mpya ya makubaliano kwa safu ya utekelezaji ya asili ya Mainnet. Tangu Muungano, wathibitishaji wamepewa jukumu la kulinda Mainnet ya Ethereum, na uchimbaji kwenye [uthibitishaji wa kazi](/developers/docs/consensus-mechanisms/pow/) sio tena njia halali ya uzalishaji wa kitalu.
 
-Badala yake, bloku zinapendekezwa na nodi za kuthibitisha ambazo zimeshikiza ETH kwa kubadilishana na haki ya kushiriki katika makubaliano. Masasisho haya yanaweka msingi kwa masasisho yajayo ya uongezaji, ikiwa ni pamoja na ugawanyaji.
+Bloku badala yake zinapendekezwa na Nodi zinazothibitisha ambazo zimeweka dhamana ya ETH kwa kubadilishana na haki ya kushiriki katika makubaliano. Uboreshaji huu unaweka msingi wa uboreshaji wa uwezo wa baadaye, ikiwa ni pamoja na kugawanyika.
 
 <ButtonLink href="/roadmap/beacon-chain/">
-  Mnyororo Kioleza
+  Roro wa beacon
 </ButtonLink>
 
-### Muungano na sasisho la Shanghai {#merge-and-shanghai}
+### Muungano na uboreshaji wa Shanghai {#merge-and-shanghai}
 
-Ili kurahisisha na kuongeza umakini katika mpito wenye mafanikio kwenda kwenye uthibitishaji-wa-hisa, sasisho la Muungano halikujumuisha baadhi ya vipengele vilivyotarajiwa kama vile uwezo wa kuondoa ETH iliyoshikizwa. Utendaji huu uliwezeshwa kando na sasisho la Shanghai/Capella.
+Ili kurahisisha na kuongeza umakini kwenye mpito wenye mafanikio kwenda kwenye uthibitishaji wa dhamana, uboreshaji wa Muungano haukujumuisha vipengele fulani vilivyotarajiwa kama vile uwezo wa kutoa ETH iliyowekwa dhamana. Utendaji huu uliwezeshwa tofauti na uboreshaji wa Shanghai/Capella.
 
-Kwa wale wanaotaka kujua, jifunze zaidi kuhusu [Nini Hutokea Baada ya Muungano](https://youtu.be/7ggwLccuN5s?t=101), iliyowasilishwa na Vitalik katika tukio la ETHGlobal la Aprili 2021.
+Kwa wale wanaotaka kujua, jifunze zaidi kuhusu [Nini Kinatokea Baada ya Muungano](https://youtu.be/7ggwLccuN5s?t=101), iliyowasilishwa na Vitalik kwenye hafla ya ETHGlobal ya Aprili 2021.
 
-### Muungano na ugawanyaji {#merge-and-data-sharding}
+### Muungano na kugawanyika {#merge-and-data-sharding}
 
-Hapo awali, mpango ulikuwa kufanyia kazi ugawanyaji kabla ya Muungano ili kushughulikia uongezaji. Hata hivyo, kutokana na kuongezeka kwa [suluhisho za uongezaji za safu ya 2](/layer-2/), kipaumbele kilihamia kwenye kubadilisha uthibitishaji-wa-kazi kwenda uthibitishaji-wa-hisa kwanza.
+Hapo awali, mpango ulikuwa kufanya kazi kwenye kugawanyika kabla ya Muungano ili kushughulikia uboreshaji wa uwezo. Hata hivyo, kutokana na kuongezeka kwa [suluhisho za uboreshaji wa uwezo wa safu ya 2](/layer-2/), kipaumbele kilibadilika na kuwa kubadilisha uthibitishaji wa kazi kwenda kwenye uthibitishaji wa dhamana kwanza.
 
-Mipango ya ugawanyaji inabadilika haraka, lakini kutokana na kuongezeka na kufanikiwa kwa teknolojia za safu ya 2 ili kuongeza utekelezaji wa miamala, mipango ya ugawanyaji imehamia kwenye kutafuta njia bora zaidi ya kusambaza mzigo wa kuhifadhi calldata iliyobanwa kutoka kwa mikataba ya unda-mpya, ikiruhusu ukuaji wa kielelezo katika uwezo wa mtandao. Hili lisingewezekana bila kwanza kubadilika kwenda kwenye uthibitishaji-wa-hisa.
+Mipango ya kugawanyika inabadilika kwa kasi, lakini kutokana na kuongezeka na mafanikio ya teknolojia za safu ya 2 ili kuboresha uwezo wa utekelezaji wa muamala, mipango ya kugawanyika imebadilika na kutafuta njia bora zaidi ya kusambaza mzigo wa kuhifadhi data iliyobanwa kutoka kwa mikataba ya rollup, ikiruhusu ukuaji mkubwa katika uwezo wa mtandao. Hili lisingewezekana bila kwanza kuhamia kwenye uthibitishaji wa dhamana.
 
 <ButtonLink href="/roadmap/danksharding/">
-  Ugawanyaji
+  Kugawanyika
 </ButtonLink>
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
 <MergeArticleList />
 
