@@ -1054,6 +1054,51 @@ function warnPunctuationOnlyHeadings(content: string): string[] {
  * Code inside fences should never be translated (variable names, keywords, etc.).
  * Catches issues like `or` → `または` inside code fences.
  */
+/**
+ * Strip comments from a code block body so we can compare functional code only.
+ * Handles JS-family (// and block comments), Python/Vyper (# and docstrings), and shell (#).
+ */
+function stripCodeComments(body: string, lang: string): string {
+  const l = lang.toLowerCase().split(/\s+/)[0]
+
+  const isPython = ["python", "py", "vyper", "ruby", "rb"].includes(l)
+  const isShell = [
+    "bash",
+    "sh",
+    "shell",
+    "zsh",
+    "fish",
+    "yaml",
+    "yml",
+    "toml",
+  ].includes(l)
+  const isJs = !isPython && !isShell // default to JS-family
+
+  let result = body
+
+  if (isPython) {
+    // Remove """ ... """ docstrings (multiline)
+    result = result.replace(/"""[\s\S]*?"""/g, '""""""')
+    // Remove # comments (preserve the line structure)
+    result = result.replace(/#[^\n]*/g, "#")
+  } else if (isShell) {
+    result = result.replace(/#[^\n]*/g, "#")
+  } else if (isJs) {
+    // Remove /* ... */ block comments (preserve as marker)
+    result = result.replace(/\/\*[\s\S]*?\*\//g, "/**/")
+    // Remove // line comments
+    result = result.replace(/\/\/[^\n]*/g, "//")
+  }
+
+  // Normalize whitespace for comparison: collapse blank lines, trim each line
+  return result
+    .split("\n")
+    .map((line) => line.trimEnd())
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim()
+}
+
 function warnCodeFenceContentDrift(
   translatedContent: string,
   englishContent: string
@@ -1083,10 +1128,14 @@ function warnCodeFenceContentDrift(
   }
 
   for (let i = 0; i < engFences.length; i++) {
-    if (engFences[i].body !== transFences[i].body) {
-      const preview = transFences[i].body.substring(0, 60).replace(/\n/g, "\\n")
+    const lang = engFences[i].lang || transFences[i].lang
+    const engStripped = stripCodeComments(engFences[i].body, lang)
+    const transStripped = stripCodeComments(transFences[i].body, lang)
+
+    if (engStripped !== transStripped) {
+      const preview = transStripped.substring(0, 60).replace(/\n/g, "\\n")
       warnings.push(
-        `Code fence #${i + 1} content differs from English: "${preview}..."`
+        `Code fence #${i + 1} functional code differs from English: "${preview}..."`
       )
     }
   }
@@ -4648,6 +4697,7 @@ export const _testOnly = {
   warnTranslatedTechnicalNumerals,
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,
+  stripCodeComments,
   warnCatastrophicCodeFenceDrift,
   detectCrossScriptContamination,
   // Utilities
