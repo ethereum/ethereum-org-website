@@ -50,7 +50,11 @@ const {
   fixMissingComponentClosingTags,
   fixMangledDocLinks,
   fixBrandCapitalization,
+  fixFrontmatterLang,
+  fixCrossScriptPunctuation,
   fixJsxAttributeSpacing,
+  fixSpanWrappedBackticks,
+  fixBoldWrappedOrderedListNumerals,
   fixEscapedQuotesInJsxAttributes,
   fixTranslatedJsonPlaceholders,
 } = _testOnly
@@ -2409,6 +2413,307 @@ author: Ori Pomerantz
       const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixFrontmatterLang", () => {
+    test("fixes lang: en to target locale", () => {
+      const input = `---\ntitle: "Test"\nlang: en\n---\n\nBody text`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(`---\ntitle: "Test"\nlang: ur\n---\n\nBody text`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes wrong locale to correct one", () => {
+      const input = `---\ntitle: "Test"\nlang: ja\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ko")
+      expect(content).toBe(`---\ntitle: "Test"\nlang: ko\n---\n\nBody`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct locale unchanged", () => {
+      const input = `---\ntitle: "Test"\nlang: ur\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns unchanged when no frontmatter", () => {
+      const input = `# Just a heading\n\nNo frontmatter here`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns unchanged when no lang field in frontmatter", () => {
+      const input = `---\ntitle: "Test"\nskill: beginner\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns unchanged when locale is empty string", () => {
+      const input = `---\ntitle: "Test"\nlang: en\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles lang with extra whitespace", () => {
+      const input = `---\ntitle: "Test"\nlang:   en  \n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ar")
+      expect(content).toContain("lang: ar")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles quoted lang value", () => {
+      const input = `---\ntitle: "Test"\nlang: "en"\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "hi")
+      expect(content).toContain("lang: hi")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not modify lang-like text in body", () => {
+      const input = `---\ntitle: "Test"\nlang: ur\n---\n\nlang: en appears in body`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(content).toContain("lang: en appears in body")
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles hyphenated locale codes", () => {
+      const input = `---\ntitle: "Test"\nlang: en\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "zh-tw")
+      expect(content).toContain("lang: zh-tw")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixCrossScriptPunctuation", () => {
+    test("replaces \u3002 with \u06D4 for locale ur", () => {
+      const input = "\u06CC\u06C1 \u0627\u06CC\u06A9 \u062C\u0645\u0644\u06C1 \u06C1\u06D2\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).toBe(
+        "\u06CC\u06C1 \u0627\u06CC\u06A9 \u062C\u0645\u0644\u06C1 \u06C1\u06D2\u06D4"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("replaces \u3002 with \u06D4 for locale ar", () => {
+      const input = "\u0647\u0630\u0627 \u0646\u0635\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ar")
+      expect(content).toBe("\u0647\u0630\u0627 \u0646\u0635\u06D4")
+      expect(fixCount).toBe(1)
+    })
+
+    test("replaces \u3002 with \u0964 for locale hi", () => {
+      const input =
+        "\u092F\u0939 \u090F\u0915 \u0935\u093E\u0915\u094D\u092F \u0939\u0948\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "hi")
+      expect(content).toBe(
+        "\u092F\u0939 \u090F\u0915 \u0935\u093E\u0915\u094D\u092F \u0939\u0948\u0964"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("replaces \u3002 with . for locale de (Latin)", () => {
+      const input = "Dies ist ein Satz\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "de")
+      expect(content).toBe("Dies ist ein Satz.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does NOT replace \u3002 for locale ja (CJK)", () => {
+      const input = "\u3053\u308C\u306F\u6587\u3067\u3059\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ja")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does NOT replace \u3002 for locale zh (CJK)", () => {
+      const input = "\u8FD9\u662F\u4E00\u4E2A\u53E5\u5B50\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "zh")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch \u3002 inside code fences", () => {
+      const input = "text\u3002\n```\ncode\u3002\n```\nmore\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).toContain("code\u3002")
+      expect(fixCount).toBe(2)
+    })
+
+    test("handles multiple \u3002 in one file", () => {
+      const input = "first\u3002 second\u3002 third\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).not.toContain("\u3002")
+      expect(fixCount).toBe(3)
+    })
+
+    test("no-op when no CJK punctuation present", () => {
+      const input = "Normal text with no CJK."
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns fixCount 0 when locale is empty", () => {
+      const input = "text\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixSpanWrappedBackticks", () => {
+    test("unwraps <span dir=\"ltr\"> around backtick content", () => {
+      const input = '<span dir="ltr">`APPLY(S,TX) -> S\'`</span>'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`APPLY(S,TX) -> S'`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple occurrences in one file", () => {
+      const input = [
+        '<span dir="ltr">`code1`</span> some text',
+        '<span dir="ltr">`code2`</span> more text',
+      ].join("\n")
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`code1` some text\n`code2` more text")
+      expect(fixCount).toBe(2)
+    })
+
+    test("does not touch <span dir=\"ltr\"> wrapping non-backtick content", () => {
+      const input = '<span dir="ltr">2026-03-15</span>'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch backticks that are NOT inside spans", () => {
+      const input = "Use `eth_getBalance` to query the balance."
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles whitespace inside the span", () => {
+      const input = '<span dir="ltr"> `some_code` </span>'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`some_code`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("no-op when pattern not present", () => {
+      const input = "Plain text with no spans or backticks."
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns correct fixCount", () => {
+      const input = [
+        '<span dir="ltr">`a`</span>',
+        '<span dir="ltr">`b`</span>',
+        '<span dir="ltr">`c`</span>',
+      ].join(" ")
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(fixCount).toBe(3)
+      expect(content).toBe("`a` `b` `c`")
+    })
+
+    test("skips code fences", () => {
+      const input = '```\n<span dir="ltr">`code`</span>\n```'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("unwraps backticks around span (pattern 2: span visible as code)", () => {
+      const input = '`<span dir="ltr">kR</span>`'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`kR`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple pattern 2 occurrences", () => {
+      const input =
+        '`<span dir="ltr">S[i]</span>` and `<span dir="ltr">S[i-1]</span>`'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`S[i]` and `S[i-1]`")
+      expect(fixCount).toBe(2)
+    })
+
+    test("handles mixed pattern 1 and pattern 2", () => {
+      const input =
+        '<span dir="ltr">`code`</span> and `<span dir="ltr">kR</span>`'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`code` and `kR`")
+      expect(fixCount).toBe(2)
+    })
+  })
+
+  test.describe("fixBoldWrappedOrderedListNumerals", () => {
+    test("moves bold markers off numeral for ur locale", () => {
+      const input = "**1. some text**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe("1. **some text**")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multi-digit numbers", () => {
+      const input = "**12. longer item here**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe("12. **longer item here**")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple list items", () => {
+      const input = "**1. first**\n\n**2. second**\n\n**3. third**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe("1. **first**\n\n2. **second**\n\n3. **third**")
+      expect(fixCount).toBe(3)
+    })
+
+    test("no-op for non-ur locale", () => {
+      const input = "**1. some text**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ar"
+      )
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch bold text without leading numeral", () => {
+      const input = "**some bold text without number**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("preserves trailing punctuation", () => {
+      const input =
+        "**8. \u0622\u0646 \u0686\u06CC\u0646 \u0645\u0627\u0631\u06A9\u06CC\u0679 \u067E\u0644\u06CC\u0633\u0632**\u060C \u0634\u0646\u0627\u062E\u062A"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toContain("8. **")
+      expect(fixCount).toBe(1)
     })
   })
 

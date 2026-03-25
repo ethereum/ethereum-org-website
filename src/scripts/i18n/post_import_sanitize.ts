@@ -2176,7 +2176,7 @@ function syncProtectedFrontmatterFields(
 ): { content: string; fixCount: number } {
   // Fields that should never be translated - sync from English canonical
   // Note: 'buttons' array needs special handling (content translatable, toId/isSecondary not)
-  // Note: 'lang' must NOT be protected - it must remain as target language code
+  // Note: 'lang' must NOT be protected - it is handled by fixFrontmatterLang()
   // Note: 'author' is excluded for non-Latin locales -- author names render to readers
   //   and should be transliterated for reading flow
   const isTranslitLang = locale ? TRANSLITERATION_LOCALES.has(locale) : false
@@ -2250,6 +2250,37 @@ function syncProtectedFrontmatterFields(
   }
 
   return { content: translatedMd, fixCount }
+}
+
+/**
+ * Force the frontmatter `lang` field to match the locale derived from the file path.
+ * The lang field must always equal the target language code (e.g., "ur", "ja", "es").
+ * This is a deterministic fix -- the correct value is encoded in the path itself:
+ *   public/content/translations/<LANG_CODE>/...
+ */
+function fixFrontmatterLang(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (!locale) return { content, fixCount: 0 }
+
+  const frontmatterRe = /^---\n([\s\S]*?)\n---/
+  const match = content.match(frontmatterRe)
+  if (!match) return { content, fixCount: 0 }
+
+  const frontmatter = match[1]
+  const langRe = /^lang:\s*(.+)$/m
+  const langMatch = frontmatter.match(langRe)
+  if (!langMatch) return { content, fixCount: 0 }
+
+  const currentLang = langMatch[1].trim()
+  if (currentLang === locale) return { content, fixCount: 0 }
+
+  const fixedFrontmatter = frontmatter.replace(langRe, `lang: ${locale}`)
+  return {
+    content: content.replace(frontmatterRe, `---\n${fixedFrontmatter}\n---`),
+    fixCount: 1,
+  }
 }
 
 /**
@@ -2838,6 +2869,79 @@ function fixBareRtlEquations(
 }
 
 /**
+ * Remove redundant <span dir="ltr"> wrappers around backtick-delimited inline
+ * code. MDX cannot nest markdown syntax (backticks) inside JSX (<span>), so
+ * `<span dir="ltr">`\`...\``</span>` renders as broken text instead of inline
+ * code. Inline code is already inherently LTR (monospace Latin font), so the
+ * wrapper is both harmful and unnecessary.
+ *
+ * This can be produced by fixBareRtlDates/fixBareRtlEquations wrapping content
+ * that was already inside backticks, or by Gemini translations directly.
+ *
+ * Skips code fences (operates only on prose).
+ */
+function fixSpanWrappedBackticks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Split out code fences so we only operate on prose
+  const fencePattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(fencePattern)
+
+  // Pattern 1: <span dir="ltr"> wrapping backtick content
+  const spanAroundBacktickRe =
+    /<span dir="ltr">\s*(`[^`]+`)\s*<\/span>/g
+
+  // Pattern 2: backticks wrapping <span dir="ltr"> content (makes span visible as code)
+  const backtickAroundSpanRe =
+    /`<span dir="ltr">\s*([\s\S]+?)\s*<\/span>`/g
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code fences
+    parts[i] = parts[i].replace(spanAroundBacktickRe, (_, backtickContent) => {
+      fixCount++
+      return backtickContent
+    })
+    parts[i] = parts[i].replace(backtickAroundSpanRe, (_, innerContent) => {
+      fixCount++
+      return `\`${innerContent}\``
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Urdu-specific: move bold markers off ordered list numerals so CSS can
+ * render the number in the correct Urdu/Nastaliq numeral script.
+ *
+ * When Gemini produces `**1. some text**`, the numeral is inside the bold
+ * span and CSS `list-style-type` cannot restyle it. The fix moves the bold
+ * markers after the `N. ` prefix: `1. **some text**`.
+ *
+ * Only applies to Urdu (ur) locale.
+ */
+function fixBoldWrappedOrderedListNumerals(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (locale !== "ur") return { content, fixCount: 0 }
+
+  let fixCount = 0
+  // Match start-of-line **N. ...** where N is one or more digits
+  // The closing ** can be followed by any trailing punctuation
+  const re = /^\*\*(\d+\.\s)([\s\S]*?)\*\*/gm
+  content = content.replace(re, (_, numPrefix, rest) => {
+    fixCount++
+    return `${numPrefix}**${rest}**`
+  })
+
+  return { content, fixCount }
+}
+
+/**
  * Warn about translated technical numerals in any locale.
  * Technical identifiers like ERC-20, EIP-1559, Web3 must keep Western Arabic
  * numerals. Detects Arabic-Indic (٠-٩) or Extended Arabic-Indic (۰-۹) digits
@@ -2871,6 +2975,70 @@ function warnTranslatedTechnicalNumerals(content: string): string[] {
   }
 
   return warnings
+}
+
+/**
+ * Replace CJK ideographic full stop (U+3002) with the locale-appropriate
+ * full stop character.  CJK locales (ja, ko, zh, zh-tw) are skipped since
+ * the character is correct there.  Skips code fences using the robust
+ * line-by-line fence-tracking pattern.
+ */
+function fixCrossScriptPunctuation(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (!locale) return { content, fixCount: 0 }
+
+  // CJK locales: the ideographic full stop is correct -- nothing to fix
+  const CJK_LOCALES = new Set(["ja", "ko", "zh", "zh-tw"])
+  if (CJK_LOCALES.has(locale)) return { content, fixCount: 0 }
+
+  // Determine the replacement character based on locale script
+  let replacement: string
+  if (locale === "ar" || locale === "ur") {
+    replacement = "\u06D4" // Arabic full stop
+  } else if (locale === "hi" || locale === "mr" || locale === "bn") {
+    replacement = "\u0964" // Devanagari danda
+  } else {
+    replacement = "." // Latin/Cyrillic/Tamil/Telugu/etc.
+  }
+
+  let fixCount = 0
+  const lines = content.split("\n")
+  let inFencedBlock = false
+
+  for (let lineIdx = 0; lineIdx < lines.length; lineIdx++) {
+    const line = lines[lineIdx]
+
+    // Track fenced code block boundaries
+    if (/^(`{3,}|~{3,})/.test(line)) {
+      inFencedBlock = !inFencedBlock
+      continue
+    }
+    if (inFencedBlock) continue
+
+    // Split on inline code spans to avoid touching code
+    const inlineCodePattern = /(`[^`]+`)/g
+    const parts = line.split(inlineCodePattern)
+
+    let changed = false
+    for (let i = 0; i < parts.length; i++) {
+      if (i % 2 === 1) continue // Skip inline code spans
+
+      const original = parts[i]
+      parts[i] = parts[i].replace(/\u3002/g, () => {
+        fixCount++
+        return replacement
+      })
+      if (parts[i] !== original) changed = true
+    }
+
+    if (changed) {
+      lines[lineIdx] = parts.join("")
+    }
+  }
+
+  return { content: lines.join("\n"), fixCount }
 }
 
 /**
@@ -4137,6 +4305,10 @@ function processMarkdownFile(
     (n) => `Quoted ${n} frontmatter values with unsafe YAML chars`
   )
   applyFix(
+    () => fixFrontmatterLang(content, locale),
+    (n) => `Fixed ${n} frontmatter lang field to match locale "${locale}"`
+  )
+  applyFix(
     () => fixAsciiGuillemets(content),
     (n) => `Fixed ${n} ASCII guillemets (<< >>) to Unicode (« »)`
   )
@@ -4352,6 +4524,16 @@ function processMarkdownFile(
     const inlineCodeWarnings = warnTranslatedInlineCode(content, englishMd)
     issues.push(...inlineCodeWarnings)
 
+    // Fix CJK full stops before cross-script detection (so it doesn't warn
+    // about characters we already fixed)
+    if (locale) {
+      applyFix(
+        () => fixCrossScriptPunctuation(content, locale),
+        (n) =>
+          `Replaced ${n} CJK ideographic full stop(s) with locale-appropriate punctuation`
+      )
+    }
+
     // Detect cross-script contamination
     if (locale) {
       const scriptWarnings = detectCrossScriptContamination(content, locale)
@@ -4372,6 +4554,22 @@ function processMarkdownFile(
           `Wrapped ${eqResult.fixCount} bare math equation(s) in <span dir="ltr"> for RTL`
         )
       }
+
+      // Remove redundant <span dir="ltr"> around backtick inline code
+      // (cleans up after fixBareRtlDates/fixBareRtlEquations and Gemini)
+      const spanBtResult = fixSpanWrappedBackticks(content)
+      if (spanBtResult.fixCount > 0) {
+        content = spanBtResult.content
+        issues.push(
+          `Unwrapped ${spanBtResult.fixCount} redundant <span dir="ltr"> around backtick code`
+        )
+      }
+
+      applyFix(
+        () => fixBoldWrappedOrderedListNumerals(content, locale),
+        (n) =>
+          `Moved ${n} bold marker(s) off ordered list numerals for Urdu numeral rendering`
+      )
 
       // Technical numeral warnings (all locales)
       const numeralWarnings = warnTranslatedTechnicalNumerals(content)
@@ -4540,6 +4738,17 @@ function processJsonFile(
   if (compoundResult.fixCount > 0) {
     content = compoundResult.content
     issues.push(`Fixed ${compoundResult.fixCount} known wrong compound term(s)`)
+  }
+
+  // Fix CJK ideographic full stops in JSON values
+  if (jsonLocale) {
+    const punctResult = fixCrossScriptPunctuation(content, jsonLocale)
+    if (punctResult.fixCount > 0) {
+      content = punctResult.content
+      issues.push(
+        `Replaced ${punctResult.fixCount} CJK ideographic full stop(s) with locale-appropriate punctuation`
+      )
+    }
   }
 
   // Fix translated interpolation placeholders if English is available
@@ -4986,6 +5195,7 @@ export const _testOnly = {
   removeOrphanedClosingTags,
   normalizeFrontmatterDates,
   quoteFrontmatterNonAscii,
+  fixFrontmatterLang,
   normalizeBlockHtmlLines,
   fixAsymmetricBackticks,
   fixJsxAttributeSpacing,
@@ -5040,10 +5250,13 @@ export const _testOnly = {
   warnExposedMdxTags,
   fixBareRtlDates,
   fixBareRtlEquations,
+  fixSpanWrappedBackticks,
+  fixBoldWrappedOrderedListNumerals,
   warnTranslatedTechnicalNumerals,
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,
   warnCatastrophicCodeFenceDrift,
+  fixCrossScriptPunctuation,
   detectCrossScriptContamination,
   // Utilities
   toAsciiId,
