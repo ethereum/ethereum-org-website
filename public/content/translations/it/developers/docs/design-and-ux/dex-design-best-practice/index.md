@@ -1,220 +1,216 @@
 ---
-title: Buone pratiche di progettazione di borse decentralizzate (DEX)
+title: Migliori pratiche di progettazione per gli exchange decentralizzati (DEX)
 description: Una guida che spiega le decisioni UX/UI per lo scambio di token.
 lang: it
 ---
 
-Dal lancio di Uniswap nel 2018, sono state lanciate centinaia di borse decentralizzate in decine di catene differenti.
-Molte di queste hanno introdotto nuovi elementi o aggiunto i propri tocchi, ma l'interfaccia è rimasta per lo più la stessa.
+Dal lancio di Uniswap nel 2018, sono stati lanciati centinaia di exchange decentralizzati su dozzine di catene diverse.
+Molti di questi hanno introdotto nuovi elementi o aggiunto il proprio tocco personale, ma l'interfaccia è rimasta generalmente la stessa.
 
-Una delle ragioni è la [Legge di Jakob](https://lawsofux.com/jakobs-law/):
+Una ragione di ciò è la [Legge di Jakob](https://lawsofux.com/jakobs-law/):
 
-> Gli utenti trascorrono la maggior parte del tempo su altri siti. Ciò significa che gli utenti preferiscono che il tuo sito funzioni proprio come gli altri che già conoscono.
+> Gli utenti trascorrono la maggior parte del loro tempo su altri siti. Ciò significa che gli utenti preferiscono che il tuo sito funzioni allo stesso modo di tutti gli altri siti che già conoscono.
 
-Grazie ai primi innovatori come Uniswap, Pancakeswap e Sushiswap, gli utenti della DeFi hanno un'idea collettiva dell'aspetto di una DEX.
-Per questo motivo adesso sta emergendo qualcosa di simile alle "buone pratiche". Osserviamo una sempre maggiore standardizzazione delle decisioni di progettazione nei vari siti. L'evoluzione delle DEX può essere visto come un grande esempio di test in corso d'opera. Le cose che hanno funzionato rimangono, mentre quelle che non hanno funzionato vengono scartate. C'è ancora spazio per la personalità, ma ci sono alcuni standard a cui una DEX si deve conformare.
+Grazie ai primi innovatori come Uniswap, Pancakeswap e Sushiswap, gli utenti della DeFi hanno un'idea collettiva di come sia fatto un DEX.
+Per questo motivo, sta ora emergendo qualcosa di simile a una "migliore pratica". Vediamo sempre più decisioni di progettazione standardizzate tra i siti. Puoi vedere l'evoluzione dei DEX come un gigantesco esempio di test dal vivo. Le cose che hanno funzionato sono rimaste, quelle che non hanno funzionato sono state scartate. C'è ancora spazio per la personalità, ma ci sono determinati standard a cui un DEX dovrebbe conformarsi.
 
-Questo articolo è il riassunto di:
-
+Questo articolo è un riassunto di:
 - cosa includere
-- come renderlo utilizzabile e possibile
-- i modi principali di personalizzare la progettazione
+- come renderlo il più utilizzabile possibile
+- i modi principali per personalizzare il design
 
-Tutti i wireframe di esempio sono stati realizzati specificatamente per questo articolo, anche se si basano su progetti reali.
+Tutti i wireframe di esempio sono stati realizzati specificamente per questo articolo, sebbene siano tutti basati su progetti reali.
 
-In fondo è incluso anche il kit di Figma: puoi usarlo liberamente per velocizzare i tuoi wireframe!
+Il kit Figma è incluso anche in fondo: sentiti libero di usarlo e velocizzare i tuoi wireframe!
 
-## Anatomia di base di uan DEX {#basic-anatomy-of-a-dex}
+## Anatomia di base di un DEX {#basic-anatomy-of-a-dex}
 
-L'interfaccia utente (UI) in genere contiene tre elementi:
-
+L'interfaccia utente (UI) contiene generalmente tre elementi:
 1. Modulo principale
 2. Pulsante
 3. Pannello dei dettagli
 
-![UI di DEX generica, che mostra i tre elementi principali](./1.png)
+![UI generica di un DEX, che mostra i tre elementi principali](./1.png)
 
-## Varianti {#variations}
+## Variazioni {#variations}
 
-Questo sarà un tema ricorrente in questo articolo, ma ci sono modi diversi con i quali questi elementi possono essere organizzati. I "pannello dei dettagli" può essere:
-
+Questo sarà un tema comune in questo articolo, ma ci sono vari modi diversi in cui questi elementi possono essere organizzati. Il "pannello dei dettagli" può essere:
 - Sopra il pulsante
 - Sotto il pulsante
-- Nascosto in un pannello accordion
-- E/o in una finestra modale “anteprima”
-
-N.B. Una finestra modale "anteprima" è facoltativa ma diventa essenziale se si stanno mostrando pochissimi dettagli sull'UI principale.
+- Nascosto in un pannello a fisarmonica
+- E/o su un modale di "anteprima"
+  
+N.B. Un modale di "anteprima" è opzionale, ma se stai mostrando pochissimi dettagli sull'UI principale, diventa essenziale.
 
 ## Struttura del modulo principale {#structure-of-the-main-form}
 
-Questo è il riquadro dove si sceglie di fatto quale token scambiare. Il componente consiste in un campo di input e un piccolo pulsante sulla stessa riga.
+Questo è il riquadro in cui scegli effettivamente quale token vuoi scambiare. Il componente è costituito da un campo di input e da un piccolo pulsante in una riga.
 
-Le DEX di solito mostrano ulteriori dettagli su una riga sopra e una sotto, anche se questo può essere configurato diversamente.
+I DEX in genere mostrano dettagli aggiuntivi in una riga sopra e una riga sotto, sebbene ciò possa essere configurato diversamente.
 
-![Riga di input, con una riga di dettaglio sopra e una sotto](./2.png)
+![Riga di input, con una riga di dettagli sopra e sotto](./2.png)
 
-## Varianti {#variations2}
+## Variazioni {#variations2}
 
-Qui sono mostrate due varianti della UI: una senza bordi, creando un design molto aperto, e una dove la riga di input ha un bordo, creando un focus su quell'elemento.
+Qui sono mostrate due variazioni dell'UI; una senza alcun bordo, creando un design molto aperto, e una in cui la riga di input ha un bordo, creando un focus su quell'elemento.
 
-![Due varianti della UI del modulo principale](./3.png)
+![Due variazioni dell'UI del modulo principale](./3.png)
 
-Questa struttura di base permette di visualizzare **quattro informazioni chiave** nel design: una in ogni angolo. Se c'è solo una riga sopra/sotto, allora ci sono solo due punti focali.
+Questa struttura di base consente di mostrare **quattro informazioni chiave** nel design: una in ogni angolo. Se c'è solo una riga superiore/inferiore, allora ci sono solo due posti.
 
-Durante l'evoluzione della DeFi, qui sono stati inclusi molti elementi diversi.
+Durante l'evoluzione della DeFi, qui sono state incluse molte cose diverse.
 
 ## Informazioni chiave da includere {#key-info-to-include}
 
 - Saldo nel portafoglio
-- Pulsante max
-- Equivalente in valuta legale
-- Impatto del prezzo sull'importo "ricevuto"
+- Pulsante Max
+- Equivalente in valuta fiat
+- Impatto sul prezzo dell'importo "ricevuto"
 
-Agli albori della DeFi, l'equivalente in valuta legale era spesso mancante. Se si sta costruendo qualsiasi progetto Web3, è essenziale che sia mostrato un equivalente in valuta legale. Gli utenti pensano ancora in termini di valuta locale, quindi questo dato dovrebbe essere incluso per adeguarsi ai modelli mentali del mondo reale.
+Agli albori della DeFi, l'equivalente in valuta fiat era spesso assente. Se stai costruendo qualsiasi tipo di progetto web3, è essenziale che venga mostrato un equivalente in valuta fiat. Gli utenti pensano ancora in termini di valute locali, quindi per corrispondere ai modelli mentali del mondo reale, questo dovrebbe essere incluso.
 
-Nel secondo campo (quello dove si sceglie il token per il quale effettuare lo scambio), vicino all'importo in valuta legale è possibile includere anche l'impatto del prezzo, calcolando la differenza tra l'importo dell'input e la stima dell'importo dell'output. Questo è un dettaglio piuttosto utile da includere.
+Nel secondo campo (quello in cui scegli il token verso cui stai scambiando) puoi anche includere l'impatto sul prezzo accanto all'importo in valuta fiat, calcolando la differenza tra l'importo di input e gli importi di output stimati. Questo è un dettaglio piuttosto utile da includere.
 
-I pulsanti di percentuale (ad es. 25%, 50%, 75%) possono essere una funzione utile, ma occupano più spazio, aggiungono più chiamate all'azione e aumentano il carico mentale. Lo stesso vale per i cursori percentuali. Alcune di queste decisioni sulla UI dipendono dal proprio brand e dal proprio tipo di utente.
+I pulsanti percentuali (ad es. 25%, 50%, 75%) possono essere una funzionalità utile, ma occupano più spazio, aggiungono più inviti all'azione e aumentano il carico mentale. Lo stesso vale per i cursori percentuali. Alcune di queste decisioni sull'UI dipenderanno dal tuo marchio e dal tuo tipo di utente.
 
-Sotto il modulo principale possono essere visualizzati dettagli extra. Dato che questo tipo di informazione è soprattutto per gli utenti avanzati, ha senso:
+Dettagli extra possono essere mostrati sotto il modulo principale. Poiché questo tipo di informazioni è principalmente per utenti professionisti, ha senso:
+- mantenerlo il più minimale possibile, oppure;
+- nasconderlo in un pannello a fisarmonica
 
-- tenerli il più minimali possibile, oppure;
-- nasconderli nel pannello accordion
-
-![Dettagli visualizzati negli angoli del modulo principale](./4.png)
+![Dettagli mostrati negli angoli di quel modulo principale](./4.png)
 
 ## Informazioni extra da includere {#extra-info-to-include}
 
-- Prezzo dei token
-- Scivolamento
+- Prezzo del token
+- Slippage
 - Minimo ricevuto
 - Output previsto
-- Impatto del prezzo
+- Impatto sul prezzo
 - Stima del costo del gas
 - Altre commissioni
-- Instradamento degli ordini
+- Instradamento dell'ordine
 
-Probabilmente alcuni di questi dettagli potrebbero essere facoltativi.
+Probabilmente, alcuni di questi dettagli potrebbero essere opzionali.
 
-L'instradamento degli ordini è interessante, ma non fa molta differenza per la maggior parte degli utenti.
+L'instradamento dell'ordine è interessante, ma non fa molta differenza per la maggior parte degli utenti.
 
-Altri dettagli ripetono semplicemente la stessa cosa in modi diversi. Per esempio "minimo ricevuto" e "scivolamento" sono due facce della stessa medaglia. Se si ha lo scivolamento fissato all'1%, allora il minimo che ci si può aspettare di ricevere = output previsto -1%. Alcune UI visualizzeranno la quantità prevista, la quantità minima e lo scivolamento… Il che è utile ma forse eccessivo.
+Alcuni altri dettagli stanno semplicemente ribadendo la stessa cosa in modi diversi. Ad esempio "minimo ricevuto" e "slippage" sono due facce della stessa medaglia. Se hai lo slippage impostato all'1%, allora il minimo che puoi aspettarti di ricevere = output previsto-1%. Alcune UI mostreranno l'importo previsto, l'importo minimo e lo slippage... Il che è utile ma forse eccessivo. 
 
-Molti utenti lasceranno in ogni caso lo scivolamento predefinito.
+La maggior parte degli utenti lascerà comunque lo slippage predefinito.
 
-L'"impatto del prezzo" è spesso visualizzato tra parentesi vicino all'equivalente in valuta legale nel campo "a". Questo è un fantastico dettaglio UX da aggiungere – ma se viene visualizzato qui, occorre davvero che sia mostrato di nuovo anche sotto? E poi ancora una volta su una schermata di anteprima?
+L'"impatto sul prezzo" è spesso mostrato tra parentesi accanto all'equivalente in valuta fiat nel campo "verso". Questo è un ottimo dettaglio UX da aggiungere, ma se viene mostrato qui, ha davvero bisogno di essere mostrato di nuovo sotto? E poi di nuovo in una schermata di anteprima?
 
-A molti utenti (specialmente quelli che scambiano piccole cifre) non interessano questi dettagli; vogliono semplicemente immettere un numero e cliccare su scambia.
+A molti utenti (specialmente quelli che scambiano piccole somme) non importerà di questi dettagli; inseriranno semplicemente un numero e premeranno scambia.
 
 ![Alcuni dettagli mostrano la stessa cosa](./5.png)
 
-I dettagli precisi che saranno visualizzati dipenderà dal proprio pubblico e dall'impatto che si vuole abbia la propria applicazione.
+Esattamente quali dettagli vengono mostrati dipenderà dal tuo pubblico e dall'atmosfera che vuoi che l'app abbia.
 
-Se si decide di includere la tolleranza di scivolamento nel pannello dei dettagli, dovrebbe anche essere resa modificabile direttamente da lì. Questo è un buon esempio di "acceleratore"; un trucco per una UX pulita che può velocizzare il flusso degli utenti esperti senza inficiare l'usabilità generale dell'applicazione.
+Se includi la tolleranza allo slippage nel pannello dei dettagli, dovresti anche renderla modificabile direttamente da qui. Questo è un buon esempio di "acceleratore"; un trucco UX pulito che può velocizzare i flussi degli utenti esperti, senza influire sull'usabilità generale dell'app.
 
-![Lo scivolamento può essere controllato dal pannello dei dettagli](./6.png)
+![Lo slippage può essere controllato dal pannello dei dettagli](./6.png)
 
-È una buona idea pensare attentamente non solo a un'informazione specifica in una schermata, ma all'intero flusso come segue:
-Immettere numeri nel Modulo principale → Rivedere i dettagli → Fare clic sulla Schermata di anteprima (se prevista).
-Il pannello dei dettagli dev'essere sempre visibile o l'utente deve cliccare per ampliarlo?
-Andrebbe creata frizione aggiungendo una schermata di anteprima? Questo obbliga l'utente a rallentare e valutare lo scambio, il che può essere utile. Ma desidera vedere di nuovo le stesse informazioni? Qual è la più importante a questo punto?
+È una buona idea pensare attentamente non solo a una specifica informazione su una schermata, ma all'intero flusso:
+Inserimento dei numeri nel Modulo Principale → Scansione dei Dettagli → Clic sulla Schermata di Anteprima (se hai una schermata di anteprima). 
+Il pannello dei dettagli dovrebbe essere sempre visibile o l'utente deve cliccarlo per espanderlo?
+Dovresti creare attrito aggiungendo una schermata di anteprima? Questo costringe l'utente a rallentare e considerare il proprio scambio, il che può essere utile. Ma vogliono vedere di nuovo tutte le stesse informazioni? Cosa è più utile per loro a questo punto?
 
-## Opzioni di progettazione {#design-options}
+## Opzioni di design {#design-options}
 
-Come detto, molto di tutto ciò dipende dal proprio stile personale
-Chi è il proprio utente?
-Qual è il proprio marchio?
-Si desidera un'interfaccia avanzata che visualizzi ogni dettaglio o qualcosa di minimalista?
-Anche se si mira agli utenti avanzati che vogliono tutte le informazioni possibili, non bisogna dimenticare le parole sagge di Alan Cooper:
+Come accennato, molto di questo si riduce al tuo stile personale
+Chi è il tuo utente?
+Qual è il tuo marchio?
+Vuoi un'interfaccia "pro" che mostri ogni dettaglio o vuoi essere minimalista?
+Anche se punti agli utenti pro che vogliono tutte le informazioni possibili, dovresti comunque ricordare le sagge parole di Alan Cooper:
 
-> Non importa quanto bella o di tendenza sia la tua interfaccia, sarebbe ancora più bella se fosse ridotta.
+> Non importa quanto sia bella, non importa quanto sia fantastica la tua interfaccia, sarebbe meglio se ce ne fosse di meno.
 
 ### Struttura {#structure}
 
-- token sulla sinistra, o token sulla destra
+- token a sinistra o token a destra
 - 2 righe o 3
 - dettagli sopra o sotto il pulsante
-- dettagli ampliati, ridotti a icona o non visualizzati
+- dettagli espansi, ridotti a icona o non mostrati
 
-### Stile dei componenti {#component-style}
+### Stile del componente {#component-style}
 
 - vuoto
-- bordato
-- pieno
+- contornato
+- riempito
 
-Da un punto di vista puramente UX, lo stile della UI è meno importante di quanto si pensi. Le tendenze vanno e vengono ciclicamente e molte preferenze sono soggettive.
+Da un punto di vista puramente UX, lo stile dell'UI conta meno di quanto pensi. Le tendenze visive vanno e vengono in cicli e gran parte delle preferenze è soggettiva.
 
-Il modo più facile per farsi un'idea – e pensare alle varie configurazioni diverse – è dare un'occhiata ad alcuni esempi e poi sperimentare.
+Il modo più semplice per farsi un'idea di questo - e pensare alle varie configurazioni diverse - è dare un'occhiata ad alcuni esempi e poi fare qualche esperimento da soli.
 
-Il kit di Figma incluso contiene componenti vuoti, bordati e pieni.
+Il kit Figma incluso contiene componenti vuoti, contornati e riempiti.
 
-Dai un'occhiata ai seguenti esempi per vedere modi diversi per combinarli:
+Dai un'occhiata agli esempi seguenti per vedere i diversi modi in cui puoi mettere tutto insieme:
 
-![3 righe in uno stile pieno](./7.png)
+![3 righe in uno stile riempito](./7.png)
 
-![3 righe in uno stile bordato](./8.png)
+![3 righe in uno stile contornato](./8.png)
 
 ![2 righe in uno stile vuoto](./9.png)
 
-![3 righe in uno stile bordato, con un pannello dei dettagli](./10.png)
+![3 righe in uno stile contornato, con un pannello dei dettagli](./10.png)
 
-![3 righe con la riga di input in uno stile bordato](./11.png)
+![3 righe con la riga di input in uno stile contornato](./11.png)
 
-![2 righe in uno stile pieno](./12.png)
+![2 righe in uno stile riempito](./12.png)
 
-## Ma da quale parte dovrebbe andare il token? {#but-which-side-should-the-token-go-on}
+## Ma da che parte dovrebbe andare il token? {#but-which-side-should-the-token-go-on}
 
-Il punto è che probabilmente non farà molta differenza in quanto a usabilità. Ci sono alcune cose da tenere comunque presenti che potrebbero influenzarti in un modo o nell'altro.
+Il punto fondamentale è che probabilmente non fa un'enorme differenza per l'usabilità. Ci sono alcune cose da tenere a mente, tuttavia, che potrebbero farti propendere da una parte o dall'altra.
 
-È abbastanza interessante vedere come la moda cambia con il tempo. Uniswap inizialmente aveva il token sulla sinistra ma lo ha poi spostato sulla destra. Anche Sushiswap fece questo cambiamento durante un aggiornamento di design. Molti ma non tutti i protocolli hanno fatto altrettanto.
+È stato moderatamente interessante vedere la moda cambiare nel tempo. Uniswap inizialmente aveva il token a sinistra, ma da allora lo ha spostato a destra. Anche Sushiswap ha apportato questa modifica durante un aggiornamento del design. La maggior parte dei protocolli, ma non tutti, ha seguito l'esempio.
 
-La convenzione finanziaria mette tradizionalmente il simbolo della valuta prima del numero, ad es. $50, €50, £50, ma _diciamo_ 50 dollari, 50 euro, 50 sterline.
+La convenzione finanziaria tradizionalmente mette il simbolo della valuta prima del numero, ad es. $50, €50, £50, ma noi *diciamo* 50 dollari, 50 euro, 50 sterline.
 
-Per l'utente generico – specialmente qualcuno che legge da sinistra a destra, dall'alto al basso – il token sulla destra risulta probabilmente più naturale.
+Per l'utente generico - specialmente qualcuno che legge da sinistra a destra, dall'alto verso il basso - il token a destra probabilmente sembra più naturale.
 
-![Una UI con i token sulla sinistra](./13.png)
+![Un'UI con i token a sinistra](./13.png)
 
-Mettere il token sulla sinistra e tutti i numeri sulla destra dà un aspetto piacevolmente simmetrico, il che è un vantaggio, ma c'è un altro lato negativo in questa disposizione.
+Mettere il token a sinistra e tutti i numeri a destra sembra piacevolmente simmetrico, il che è un vantaggio, ma c'è un altro svantaggio in questo layout.
 
-La legge della prossimità dice che gli elementi vicini sono percepiti come correlati. Di conseguenza vogliamo mettere gli elementi correlati gli uni vicini agli altri. Il saldo del token è direttamente correlato al token stesso e cambierà ogni volta che viene selezionato un nuovo token. Ha quindi più senso che il saldo dei token sia vicino al pulsante per selezionare il token. Potrebbe essere spostato sotto il token, ma in questo modo si romperebbe la simmetria della disposizione.
+La legge della prossimità afferma che gli elementi vicini tra loro sono percepiti come correlati. Di conseguenza, vogliamo posizionare gli elementi correlati uno accanto all'altro. Il saldo del token è direttamente correlato al token stesso e cambierà ogni volta che viene selezionato un nuovo token. Ha quindi leggermente più senso che il saldo del token si trovi accanto al pulsante di selezione del token. Potrebbe essere spostato sotto il token, ma ciò rompe la simmetria del layout.
 
-In definitiva ci sono pro e contro in entrambe le opzioni, ma è interessante come il trend sembri andare verso il token sulla destra.
+In definitiva, ci sono pro e contro per entrambe le opzioni, ma è interessante come la tendenza sembri essere verso il token a destra.
 
 ## Comportamento del pulsante {#button-behavior}
 
-Non inserire un pulsante separato per Approva. Inoltre, non prevedere clic separati per Approva. L'utente vuole Scambiare, quindi basta indicare "scambia" sul pulsante e avviare l'approvazione come primo passaggio. Una finestra modale può mostrare il progresso con uno stepper o con una semplice notifica che dica "tx 1 di 2 - approvazione in corso".
+Non avere un pulsante separato per Approva. Inoltre, non avere un clic separato per Approva. L'utente vuole Scambiare, quindi scrivi semplicemente "scambia" sul pulsante e avvia l'approvazione come primo passo. Un modale può mostrare i progressi con un indicatore di passaggi, o una semplice notifica "tx 1 di 2 - approvazione in corso".
 
-![Una UI con pulsanti separati per approvare e scambiare](./14.png)
+![Un'UI con pulsanti separati per approva e scambia](./14.png)
 
-![Una UI con un pulsante che indica approva](./15.png)
+![Un'UI con un pulsante che dice approva](./15.png)
 
-### Pulsanti come aiuto contestuale {#button-as-contextual-help}
+### Pulsante come aiuto contestuale {#button-as-contextual-help}
 
-Il pulsante può svolgere il doppio compito di avviso!
+Il pulsante può svolgere una doppia funzione come avviso!
 
-Questo è infatti un modello di progettazione abbastanza insolito fuori dal Web3, ma è diventato la norma al suo interno. Si tratta di un'ottima innovazione che fa risparmiare spazio e tiene focalizzata l'attenzione.
+Questo è in realtà un modello di progettazione piuttosto insolito al di fuori del web3, ma è diventato standard al suo interno. Questa è una buona innovazione in quanto fa risparmiare spazio e mantiene l'attenzione focalizzata.
 
-Se l'azione principale – SCAMBIO – non è disponibile a causa di un errore, la ragione può essere spiegata attraverso il pulsante, ad es.:
+Se l'azione principale - SCAMBIA - non è disponibile a causa di un errore, il motivo può essere spiegato con il pulsante, ad es.:
 
 - cambia rete
 - connetti portafoglio
-- errori vari
+- vari errori
 
-Il pulsante può anche venire **mappato all'azione** che deve essere eseguita. Per esempio, se un utente non può effettuare lo scambio perché è nella rete sbagliata, il pulsante dovrebbe dire "passa a Ethereum", e quando l'utente clicca sul pulsante la rete dovrebbe passare a Ethereum. Questo velocizza il flusso dell'utente in maniera significativa.
+Il pulsante può anche essere **mappato all'azione** che deve essere eseguita. Ad esempio, se l'utente non può scambiare perché si trova sulla rete sbagliata, il pulsante dovrebbe dire "passa a Ethereum" e, quando l'utente fa clic sul pulsante, dovrebbe cambiare la rete in Ethereum. Questo accelera notevolmente il flusso dell'utente.
 
 ![Azioni chiave avviate dalla CTA principale](./16.png)
 
-![Messaggio di errore visualizzato nella CTA principale](./17.png)
+![Messaggio di errore mostrato all'interno della CTA principale](./17.png)
 
-### Costruisci la tua con questo file di Figma {#build-your-own-with-this-figma-file}
+## Costruisci il tuo con questo file Figma {#build-your-own-with-this-figma-file}
 
-Grazie al duro lavoro di vari protocolli, la progettazione delle DEX è migliorata parecchio. Sappiamo di quali informazioni ha bisogno l'utente, come dobbiamo visualizzarle e come far andare più liscio possibile il flusso.
-Speriamo che questo articolo ti abbia dato una solida panoramica dei principi UX.
+Grazie al duro lavoro di molteplici protocolli, il design dei DEX è migliorato molto. Sappiamo di quali informazioni ha bisogno l'utente, come dovremmo mostrarle e come rendere il flusso il più fluido possibile.
+Speriamo che questo articolo fornisca una solida panoramica dei principi UX. 
 
-Se desideri sperimentare, sentiti libero di utilizzare il kit wireframe di Figma. È tenuto il più semplice possibile ma ha abbastanza flessibilità per costruire la struttura di base in vari modi.
+Se vuoi sperimentare, sentiti libero di usare il kit wireframe di Figma. È mantenuto il più semplice possibile, ma ha abbastanza flessibilità per costruire la struttura di base in vari modi.
 
 [Kit wireframe di Figma](https://www.figma.com/community/file/1393606680816807382/dex-wireframes-kit)
 
-La DeFi continuerà a evolversi e ci sarà sempre margine di miglioramento.
+La DeFi continuerà a evolversi e c'è sempre spazio per miglioramenti. 
 
 Buona fortuna!
