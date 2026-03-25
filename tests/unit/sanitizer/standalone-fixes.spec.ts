@@ -49,6 +49,7 @@ const {
   fixMissingComponentClosingTags,
   fixMangledDocLinks,
   fixBrandCapitalization,
+  fixFrontmatterLang,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -2193,6 +2194,79 @@ author: Ori Pomerantz
       expect(content).toContain('<DocLink href="/roadmap/beacon-chain/">')
       expect(content).toContain('<DocLink href="/roadmap/merge/">')
       expect(fixCount).toBe(2)
+    })
+  })
+
+  test.describe("fixFrontmatterLang", () => {
+    test("fixes lang: en to target locale", () => {
+      const input = `---\ntitle: "Test"\nlang: en\n---\n\nBody text`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(`---\ntitle: "Test"\nlang: ur\n---\n\nBody text`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes wrong locale to correct one", () => {
+      const input = `---\ntitle: "Test"\nlang: ja\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ko")
+      expect(content).toBe(`---\ntitle: "Test"\nlang: ko\n---\n\nBody`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct locale unchanged", () => {
+      const input = `---\ntitle: "Test"\nlang: ur\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns unchanged when no frontmatter", () => {
+      const input = `# Just a heading\n\nNo frontmatter here`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns unchanged when no lang field in frontmatter", () => {
+      const input = `---\ntitle: "Test"\nskill: beginner\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns unchanged when locale is empty string", () => {
+      const input = `---\ntitle: "Test"\nlang: en\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles lang with extra whitespace", () => {
+      const input = `---\ntitle: "Test"\nlang:   en  \n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ar")
+      expect(content).toContain("lang: ar")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles quoted lang value", () => {
+      const input = `---\ntitle: "Test"\nlang: "en"\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "hi")
+      expect(content).toContain("lang: hi")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not modify lang-like text in body", () => {
+      const input = `---\ntitle: "Test"\nlang: ur\n---\n\nlang: en appears in body`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(content).toContain("lang: en appears in body")
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles hyphenated locale codes", () => {
+      const input = `---\ntitle: "Test"\nlang: en\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "zh-tw")
+      expect(content).toContain("lang: zh-tw")
+      expect(fixCount).toBe(1)
     })
   })
 })

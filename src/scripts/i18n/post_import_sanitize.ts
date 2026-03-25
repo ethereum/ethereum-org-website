@@ -2054,7 +2054,7 @@ function syncProtectedFrontmatterFields(
 ): { content: string; fixCount: number } {
   // Fields that should never be translated - sync from English canonical
   // Note: 'buttons' array needs special handling (content translatable, toId/isSecondary not)
-  // Note: 'lang' must NOT be protected - it must remain as target language code
+  // Note: 'lang' must NOT be protected - it is handled by fixFrontmatterLang()
   // Note: 'author' is excluded for non-Latin locales -- author names render to readers
   //   and should be transliterated for reading flow
   const isTranslitLang = locale ? TRANSLITERATION_LOCALES.has(locale) : false
@@ -2128,6 +2128,37 @@ function syncProtectedFrontmatterFields(
   }
 
   return { content: translatedMd, fixCount }
+}
+
+/**
+ * Force the frontmatter `lang` field to match the locale derived from the file path.
+ * The lang field must always equal the target language code (e.g., "ur", "ja", "es").
+ * This is a deterministic fix -- the correct value is encoded in the path itself:
+ *   public/content/translations/<LANG_CODE>/...
+ */
+function fixFrontmatterLang(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (!locale) return { content, fixCount: 0 }
+
+  const frontmatterRe = /^---\n([\s\S]*?)\n---/
+  const match = content.match(frontmatterRe)
+  if (!match) return { content, fixCount: 0 }
+
+  const frontmatter = match[1]
+  const langRe = /^lang:\s*(.+)$/m
+  const langMatch = frontmatter.match(langRe)
+  if (!langMatch) return { content, fixCount: 0 }
+
+  const currentLang = langMatch[1].trim()
+  if (currentLang === locale) return { content, fixCount: 0 }
+
+  const fixedFrontmatter = frontmatter.replace(langRe, `lang: ${locale}`)
+  return {
+    content: content.replace(frontmatterRe, `---\n${fixedFrontmatter}\n---`),
+    fixCount: 1,
+  }
 }
 
 /**
@@ -3865,6 +3896,10 @@ function processMarkdownFile(
     (n) => `Quoted ${n} frontmatter values with non-ASCII chars`
   )
   applyFix(
+    () => fixFrontmatterLang(content, locale),
+    (n) => `Fixed ${n} frontmatter lang field to match locale "${locale}"`
+  )
+  applyFix(
     () => fixAsciiGuillemets(content),
     (n) => `Fixed ${n} ASCII guillemets (<< >>) to Unicode (« »)`
   )
@@ -4560,6 +4595,7 @@ export const _testOnly = {
   removeOrphanedClosingTags,
   normalizeFrontmatterDates,
   quoteFrontmatterNonAscii,
+  fixFrontmatterLang,
   normalizeBlockHtmlLines,
   fixAsymmetricBackticks,
   // English-comparison fixes
