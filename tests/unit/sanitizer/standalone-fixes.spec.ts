@@ -52,6 +52,8 @@ const {
   fixFrontmatterLang,
   fixCrossScriptPunctuation,
   fixJsxAttributeSpacing,
+  fixSpanWrappedBackticks,
+  fixBoldWrappedOrderedListNumerals,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -2476,6 +2478,134 @@ author: Ori Pomerantz
       const { content, fixCount } = fixCrossScriptPunctuation(input, "")
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixSpanWrappedBackticks", () => {
+    test("unwraps <span dir=\"ltr\"> around backtick content", () => {
+      const input = '<span dir="ltr">`APPLY(S,TX) -> S\'`</span>'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`APPLY(S,TX) -> S'`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple occurrences in one file", () => {
+      const input = [
+        '<span dir="ltr">`code1`</span> some text',
+        '<span dir="ltr">`code2`</span> more text',
+      ].join("\n")
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`code1` some text\n`code2` more text")
+      expect(fixCount).toBe(2)
+    })
+
+    test("does not touch <span dir=\"ltr\"> wrapping non-backtick content", () => {
+      const input = '<span dir="ltr">2026-03-15</span>'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch backticks that are NOT inside spans", () => {
+      const input = "Use `eth_getBalance` to query the balance."
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles whitespace inside the span", () => {
+      const input = '<span dir="ltr"> `some_code` </span>'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`some_code`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("no-op when pattern not present", () => {
+      const input = "Plain text with no spans or backticks."
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns correct fixCount", () => {
+      const input = [
+        '<span dir="ltr">`a`</span>',
+        '<span dir="ltr">`b`</span>',
+        '<span dir="ltr">`c`</span>',
+      ].join(" ")
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(fixCount).toBe(3)
+      expect(content).toBe("`a` `b` `c`")
+    })
+
+    test("skips code fences", () => {
+      const input = '```\n<span dir="ltr">`code`</span>\n```'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixBoldWrappedOrderedListNumerals", () => {
+    test("moves bold markers off numeral for ur locale", () => {
+      const input = "**1. some text**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe("1. **some text**")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multi-digit numbers", () => {
+      const input = "**12. longer item here**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe("12. **longer item here**")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple list items", () => {
+      const input = "**1. first**\n\n**2. second**\n\n**3. third**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe("1. **first**\n\n2. **second**\n\n3. **third**")
+      expect(fixCount).toBe(3)
+    })
+
+    test("no-op for non-ur locale", () => {
+      const input = "**1. some text**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ar"
+      )
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch bold text without leading numeral", () => {
+      const input = "**some bold text without number**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("preserves trailing punctuation", () => {
+      const input =
+        "**8. \u0622\u0646 \u0686\u06CC\u0646 \u0645\u0627\u0631\u06A9\u06CC\u0679 \u067E\u0644\u06CC\u0633\u0632**\u060C \u0634\u0646\u0627\u062E\u062A"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toContain("8. **")
+      expect(fixCount).toBe(1)
     })
   })
 })

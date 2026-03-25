@@ -2869,6 +2869,72 @@ function fixBareRtlEquations(
 }
 
 /**
+ * Remove redundant <span dir="ltr"> wrappers around backtick-delimited inline
+ * code. MDX cannot nest markdown syntax (backticks) inside JSX (<span>), so
+ * `<span dir="ltr">`\`...\``</span>` renders as broken text instead of inline
+ * code. Inline code is already inherently LTR (monospace Latin font), so the
+ * wrapper is both harmful and unnecessary.
+ *
+ * This can be produced by fixBareRtlDates/fixBareRtlEquations wrapping content
+ * that was already inside backticks, or by Gemini translations directly.
+ *
+ * Skips code fences (operates only on prose).
+ */
+function fixSpanWrappedBackticks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Split out code fences so we only operate on prose
+  const fencePattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(fencePattern)
+
+  // Match <span dir="ltr"> followed by optional whitespace, backtick content,
+  // optional whitespace, then </span>
+  const spanBacktickRe =
+    /<span dir="ltr">\s*(`[^`]+`)\s*<\/span>/g
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code fences
+    parts[i] = parts[i].replace(spanBacktickRe, (_, backtickContent) => {
+      fixCount++
+      return backtickContent
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Urdu-specific: move bold markers off ordered list numerals so CSS can
+ * render the number in the correct Urdu/Nastaliq numeral script.
+ *
+ * When Gemini produces `**1. some text**`, the numeral is inside the bold
+ * span and CSS `list-style-type` cannot restyle it. The fix moves the bold
+ * markers after the `N. ` prefix: `1. **some text**`.
+ *
+ * Only applies to Urdu (ur) locale.
+ */
+function fixBoldWrappedOrderedListNumerals(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (locale !== "ur") return { content, fixCount: 0 }
+
+  let fixCount = 0
+  // Match start-of-line **N. ...** where N is one or more digits
+  // The closing ** can be followed by any trailing punctuation
+  const re = /^\*\*(\d+\.\s)([\s\S]*?)\*\*/gm
+  content = content.replace(re, (_, numPrefix, rest) => {
+    fixCount++
+    return `${numPrefix}**${rest}**`
+  })
+
+  return { content, fixCount }
+}
+
+/**
  * Warn about translated technical numerals in any locale.
  * Technical identifiers like ERC-20, EIP-1559, Web3 must keep Western Arabic
  * numerals. Detects Arabic-Indic (٠-٩) or Extended Arabic-Indic (۰-۹) digits
@@ -4390,6 +4456,22 @@ function processMarkdownFile(
         )
       }
 
+      // Remove redundant <span dir="ltr"> around backtick inline code
+      // (cleans up after fixBareRtlDates/fixBareRtlEquations and Gemini)
+      const spanBtResult = fixSpanWrappedBackticks(content)
+      if (spanBtResult.fixCount > 0) {
+        content = spanBtResult.content
+        issues.push(
+          `Unwrapped ${spanBtResult.fixCount} redundant <span dir="ltr"> around backtick code`
+        )
+      }
+
+      applyFix(
+        () => fixBoldWrappedOrderedListNumerals(content, locale),
+        (n) =>
+          `Moved ${n} bold marker(s) off ordered list numerals for Urdu numeral rendering`
+      )
+
       // Technical numeral warnings (all locales)
       const numeralWarnings = warnTranslatedTechnicalNumerals(content)
       issues.push(...numeralWarnings)
@@ -4974,6 +5056,8 @@ export const _testOnly = {
   warnExposedMdxTags,
   fixBareRtlDates,
   fixBareRtlEquations,
+  fixSpanWrappedBackticks,
+  fixBoldWrappedOrderedListNumerals,
   warnTranslatedTechnicalNumerals,
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,
