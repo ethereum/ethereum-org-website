@@ -3579,6 +3579,10 @@ function warnExposedMdxTags(content: string): string[] {
         // — they never break compilation, so skip them unconditionally
         if (tagName && /^[A-Z]/.test(tagName)) continue
         if (tagName && safePattern.test(tagName)) continue
+        // URL autolinks <https://...> and <http://...> are valid markdown
+        // and commonly used inside [label](<url>) to wrap URLs with
+        // special chars (parens, underscores). Skip these entirely.
+        if (/^https?$/i.test(tagName)) continue
         // This is a bare tag outside backticks — likely exposed by Crowdin
         warnings.push(
           `Exposed MDX tag outside backticks: "${m[0]}" — may break MDX compilation`
