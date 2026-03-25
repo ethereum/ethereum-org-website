@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: mr
 tags:
   [
-    "सॉलिडिटी",
+    "Solidity",
     "स्मार्ट कॉन्ट्रॅक्ट",
     "सुरक्षा",
     "tokens"

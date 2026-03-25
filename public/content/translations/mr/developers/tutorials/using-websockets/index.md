@@ -3,7 +3,7 @@ title: "WebSockets वापरणे"
 description: "JSON-RPC विनंत्या करण्यासाठी आणि इव्हेंटसाठी सदस्यत्व घेण्यासाठी WebSockets आणि Alchemy वापरण्याकरिता मार्गदर्शक."
 author: "Elan Halpern"
 lang: mr
-tags: [ "alchemy", "websockets", "querying", "javascript" ]
+tags: [ "Alchemy", "websockets", "querying", "JavaScript" ]
 skill: beginner
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3

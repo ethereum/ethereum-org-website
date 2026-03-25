@@ -717,7 +717,7 @@ contract WORM is Cache {
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-Foundry चाचणीमध्ये पुढील कॉल अयशस्वी व्हावा आणि अयशस्वी होण्याचे नोंदवलेले कारण कसे निर्दिष्ट करावे हे [हे (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) आहे. जेव्हा आपण `<contract>.<function name>` सिंटॅक्स वापरतो तेव्हा हे लागू होते()` कॉलडेटा तयार करून आणि निम्न-स्तरीय इंटरफेस (`<contract>.call()` इत्यादी) वापरून कराराला कॉल करण्याऐवजी.
+Foundry चाचणीमध्ये पुढील कॉल अयशस्वी व्हावा आणि अयशस्वी होण्याचे नोंदवलेले कारण कसे निर्दिष्ट करावे हे [हे (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) आहे. जेव्हा आपण `<contract>.<function name>()` सिंटॅक्स वापरतो तेव्हा हे लागू होते कॉलडेटा तयार करून आणि निम्न-स्तरीय इंटरफेस (`<contract>.call()` इत्यादी) वापरून कराराला कॉल करण्याऐवजी.
 
 ```solidity
     function testReadWriteCached() public {

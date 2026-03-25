@@ -5,11 +5,11 @@ author: Markus Waas
 lang: mr
 tags:
   [
-    "सॉलिडिटी",
+    "Solidity",
     "स्मार्ट कॉन्ट्रॅक्ट",
     "querying",
     "द ग्राफ",
-    "react"
+    "React"
   ]
 skill: intermediate
 published: 2020-09-06

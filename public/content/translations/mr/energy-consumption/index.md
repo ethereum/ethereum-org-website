@@ -6,7 +6,7 @@ lang: mr
 
 # Ethereum चा ऊर्जा खर्च {#proof-of-stake-energy}
 
-इथरियम एक हिरवा ब्लॉकचेन आहे. Ethereum ची [प्रूफ-ऑफ-स्टेक](/developers/docs/consensus-mechanisms/pos) सहमती यंत्रणा [नेटवर्क सुरक्षित करण्यासाठी ऊर्जेऐवजी](/developers/docs/consensus-mechanisms/pow) ETH वापरते. संपूर्ण जागतिक नेटवर्कवर Ethereum चा ऊर्जेचा वापर अंदाजे [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) आहे.
+इथरियम एक हिरवा ब्लॉकचेन आहे. Ethereum ची [प्रूफ-ऑफ-स्टेक](/developers/docs/consensus-mechanisms/pos) सहमती यंत्रणा [नेटवर्क सुरक्षित करण्यासाठी ऊर्जेऐवजी](/developers/docs/consensus-mechanisms/pow) ETH वापरते. संपूर्ण जागतिक नेटवर्कवर Ethereum चा ऊर्जेचा वापर अंदाजे [\~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) आहे.
 
 Ethereum साठी ऊर्जेच्या वापराचा अंदाज [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com) च्या अभ्यासातून आला आहे. त्यांनी Ethereum नेटवर्कच्या विजेच्या वापराचे आणि कार्बन फूटप्रिंटचे बॉटम-अप अंदाज तयार केले ([अहवाल पहा](https://carbon-ratings.com/eth-report-2022)). त्यांनी विविध हार्डवेअर आणि क्लायंट सॉफ्टवेअर कॉन्फिगरेशनसह वेगवेगळ्या नोड्सचा वीज वापर मोजला. नेटवर्कच्या वार्षिक वीज वापरासाठी अंदाजित **2,601 MWh** (0.0026 TWh) हे प्रादेशिक-विशिष्ट कार्बन तीव्रता घटक लागू केल्यावर **870 टन CO2e** च्या वार्षिक कार्बन उत्सर्जनाशी संबंधित आहे. जेव्हा नोड्स नेटवर्कमध्ये प्रवेश करतात आणि बाहेर पडतात तेव्हा हे मूल्य बदलते - आपण [Cambridge Blockchain network Sustainability Index](https://ccaf.io/cbnsi/ethereum) द्वारे 7-दिवसांच्या सरासरी अंदाजाचा वापर करून याचा मागोवा ठेवू शकता (लक्षात घ्या की ते त्यांच्या अंदाजांसाठी थोडी वेगळी पद्धत वापरतात - तपशील त्यांच्या साइटवर उपलब्ध आहेत).
 

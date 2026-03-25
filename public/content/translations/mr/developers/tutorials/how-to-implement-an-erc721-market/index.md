@@ -6,7 +6,7 @@ tags:
   [
     "स्मार्ट कॉन्ट्रॅक्ट",
     "erc-721",
-    "सॉलिडिटी",
+    "Solidity",
     "tokens"
   ]
 skill: intermediate

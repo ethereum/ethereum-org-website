@@ -5,8 +5,8 @@ author: "jdourlens"
 tags:
   [
     "स्मार्ट कॉन्ट्रॅक्ट",
-    "रीमिक्स",
-    "सॉलिडिटी",
+    "Remix",
+    "Solidity",
     "डिप्लॉयिंग"
   ]
 skill: beginner

@@ -5,8 +5,8 @@ author: "Sumi Mudgil"
 tags:
   [
     "ERC-721",
-    "alchemy",
-    "सॉलिडिटी",
+    "Alchemy",
+    "Solidity",
     "स्मार्ट कॉन्ट्रॅक्ट"
   ]
 skill: beginner
