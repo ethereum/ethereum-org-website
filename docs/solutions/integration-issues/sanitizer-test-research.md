@@ -59,6 +59,7 @@
 | 47 | Unquoted frontmatter value with YAML-special characters | it #17841 | `description: Una spiegazione degli account di Ethereum: le loro strutture dati...` -- colon-space (`: `) inside unquoted YAML value triggers `YAMLParseError: Nested mappings are not allowed`; existing `quoteFrontmatterNonAscii` only quotes values with non-ASCII chars, missing pure-ASCII values with YAML-special sequences | Critical -- breaks build |
 
 | 48 | `collapseInlineHtmlFromEnglish` matches across code fences and newlines | it #17841 | Inside ````tsx` fence: `<div>{error?.message}</div>\n \n</div>` -- regex `\s*</div>` crosses the blank line and collapses a separate `</div>` onto the previous line, producing `<div>{error?.message}</div></div>`. Two bugs: (1) no code fence protection, (2) `\s*` matches newlines allowing cross-line grabs | High -- corrupts code examples |
+| 49 | Lowercased MDX component name | de #17842 | `<emoji text=":tada:" size={1} />` instead of `<Emoji .../>` -- translation pipeline lowercases the PascalCase MDX component tag; MDX component names are case-sensitive, so the lowercased tag won't resolve to the registered component | Critical -- breaks rendering |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
@@ -103,6 +104,7 @@ These patterns are covered by existing fix functions and should have regression 
 - **Translated inline code warning** (`warnTranslatedInlineCode`) — warns when inline code span count drops significantly OR when orphaned backticks are detected on a line; signals Crowdin translated content inside backticks (pt-br PR #17122)
 - **LLM artifact token stripping** (`stripLlmArtifactTokens`) — strips `<bos>`, `<eos>`, `<s>`, `</s>`, `<pad>`, `<unk>`, `<mask>` tokens from prose; these leak from machine translation pipelines and break MDX compilation (mr PR #17730)
 - **Block HTML inline usage preserved** (`normalizeBlockHtmlLines`) — no longer splits `<div>content</div>` when both tags are on the same line; only splits multi-line block closing tags to their own line. Fixes MDX "Expected a closing tag before end of paragraph" error (id i18n/id-03-23T2228, pattern #46)
+- **Lowercased MDX component names** (`fixLowercasedMdxComponents`) — `<emoji>` → `<Emoji>` restores PascalCase from English source; translation pipelines occasionally lowercase custom component tags, and MDX component names are case-sensitive (de PR #17842, pattern #49)
 
 ## Recommendations for Future Sanitizer Iteration
 
