@@ -11,7 +11,7 @@ const CACHE_REVALIDATE_DAY = BASE_TIME_UNIT * 24
 function createCachedGetter<T>(
   fetcher: () => Promise<T>,
   cacheKey: string[],
-  revalidate: number
+  revalidate: number | false
 ) {
   const persistentCache = unstable_cache(fetcher, cacheKey, { revalidate })
   return cache(persistentCache)
@@ -20,13 +20,31 @@ function createCachedGetter<T>(
 export const getEthPrice = createCachedGetter(
   dataLayer.getEthPrice,
   ["eth-price"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getHourlyEthPrice = createCachedGetter(
+  dataLayer.getEthPrice,
+  ["eth-price-hourly"],
+  CACHE_REVALIDATE_HOUR
+)
+
+export const getGasPriceData = createCachedGetter(
+  dataLayer.getGasPriceData,
+  ["gas-price"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getHourlyGasPriceData = createCachedGetter(
+  dataLayer.getGasPriceData,
+  ["gas-price-hourly"],
   CACHE_REVALIDATE_HOUR
 )
 
 export const getL2beatData = createCachedGetter(
   dataLayer.getL2beatData,
   ["l2beat-data"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getAppsData = createCachedGetter(
@@ -35,16 +53,30 @@ export const getAppsData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+/**
+ * Static-cached version of getAppsData -- no revalidation.
+ * Use this in components embedded in MDX pages rendered by the catch-all
+ * [...slug] route. A finite revalidate value opts the page into ISR, which
+ * fails on Netlify because public/content/ files are not available in the
+ * serverless runtime. Data refreshes only on deploy.
+ * See: docs/solutions/integration-issues/netlify-isr-404-async-server-components.md
+ */
+export const getStaticAppsData = createCachedGetter(
+  dataLayer.getAppsData,
+  ["apps-data-static"],
+  false
+)
+
 export const getGrowThePieData = createCachedGetter(
   dataLayer.getGrowThePieData,
   ["grow-the-pie-data"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getGrowThePieBlockspaceData = createCachedGetter(
   dataLayer.getGrowThePieBlockspaceData,
   ["grow-the-pie-blockspace-data"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getGrowThePieMasterData = createCachedGetter(
@@ -62,55 +94,55 @@ export const getCommunityPicks = createCachedGetter(
 export const getCalendarEvents = createCachedGetter(
   dataLayer.getCalendarEvents,
   ["calendar-events"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getRSSData = createCachedGetter(
   dataLayer.getRSSData,
   ["rss-data"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getAttestantPosts = createCachedGetter(
   dataLayer.getAttestantPosts,
   ["attestant-posts"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getBeaconchainData = createCachedGetter(
   dataLayer.getBeaconchainData,
   ["beaconchain-data"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getBlobscanStats = createCachedGetter(
   dataLayer.getBlobscanStats,
   ["blobscan-stats"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getEthereumMarketcapData = createCachedGetter(
   dataLayer.getEthereumMarketcapData,
   ["ethereum-marketcap-data"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getEthereumStablecoinsMcapData = createCachedGetter(
   dataLayer.getEthereumStablecoinsMcapData,
   ["ethereum-stablecoins-mcap-data"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getGFIs = createCachedGetter(
   dataLayer.getGFIs,
   ["gfis"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getGitHistory = createCachedGetter(
   dataLayer.getGitHistory,
   ["git-history"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getGithubRepoData = createCachedGetter(
@@ -122,19 +154,19 @@ export const getGithubRepoData = createCachedGetter(
 export const getStablecoinsData = createCachedGetter(
   dataLayer.getStablecoinsData,
   ["stablecoins-data"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getTotalEthStakedData = createCachedGetter(
   dataLayer.getTotalEthStakedData,
   ["total-eth-staked-data"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getTotalValueLockedData = createCachedGetter(
   dataLayer.getTotalValueLockedData,
   ["total-value-locked-data"],
-  CACHE_REVALIDATE_HOUR
+  CACHE_REVALIDATE_DAY
 )
 
 export const getEventsData = createCachedGetter(
@@ -147,4 +179,34 @@ export const getDeveloperToolsData = createCachedGetter(
   dataLayer.getDeveloperToolsData,
   ["developer-tools-data"],
   CACHE_REVALIDATE_DAY
+)
+
+export const getAccountHolders = createCachedGetter(
+  dataLayer.getAccountHolders,
+  ["account-holders"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getTranslationGlossary = createCachedGetter(
+  dataLayer.getTranslationGlossary,
+  ["translation-glossary"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getGitHubContributors = createCachedGetter(
+  dataLayer.getGitHubContributors,
+  ["github-contributors"],
+  CACHE_REVALIDATE_DAY
+)
+
+/**
+ * Static-cached version of getGitHubContributors — no revalidation.
+ * Use this in static pages (e.g., md content pages via [...slug]) to avoid
+ * opting them into ISR, which would cause 404s in the serverless environment
+ * where public/content is not available.
+ */
+export const getStaticGitHubContributors = createCachedGetter(
+  dataLayer.getGitHubContributors,
+  ["github-contributors-static"],
+  false
 )

@@ -50,7 +50,7 @@ Apps are powered by smart contracts — bits of code that live on the Ethereum b
 
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
-![](./developers-eth-blocks.png)
+![Illustration of Ethereum developer block building](./developers-eth-blocks.png)
 
 </div>
 

@@ -4,6 +4,7 @@ description: "Wprowadzenie do wdrożenia pierwszego inteligentnego kontraktu w s
 author: "jdourlens"
 tags: [ "smart kontrakty", "remix", "solidity", "wdrażanie" ]
 skill: beginner
+breadcrumb: "Pierwszy kontrakt"
 lang: pl
 published: 2020-04-03
 source: EthereumDev

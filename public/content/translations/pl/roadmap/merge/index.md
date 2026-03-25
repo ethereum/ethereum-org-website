@@ -105,7 +105,7 @@ Połączenie nastąpiło wraz ze zmianami w konsensusie, które obejmują równi
   <li>koncepcja <em>bezpiecznej głowy</em> i <em>sfinalizowanych bloków</em></li>
 </ul>
 
-Aby uzyskać więcej informacji, zapoznaj się z tym wpisem na blogu autorstwa Tima Beiko <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/"> Wpływ połączenia na warstwę aplikacji Ethereum </a>.
+Aby uzyskać więcej informacji, zapoznaj się z tym wpisem na blogu autorstwa Tima Beiko <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer"> Wpływ połączenia na warstwę aplikacji Ethereum </a>.
 </ExpandableCard>
 
 ## Połączenie i zużycie energii {#merge-and-energy}
@@ -189,7 +189,7 @@ Aby ograniczyć zamieszanie, społeczność zaktualizowała te warunki:
 
 Te zmiany w terminologii dotyczą tylko kwestii nazewnictwa; nie zmieniają się cele ani plan działania Ethereum.
 
-[Dowiedz się więcej o zmianie nazwy „Eth2”](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Dowiedz się więcej o zmianie nazwy „Eth2”](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Związek między aktualizacjami {#relationship-between-upgrades}
 

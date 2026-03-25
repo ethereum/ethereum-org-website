@@ -4,6 +4,7 @@ description: "Lista kontrolna wytycznych bezpieczeństwa do rozważenia podczas 
 author: "Trailofbits"
 tags: [ "solidity", "smart kontrakty", "bezpieczeństwo" ]
 skill: intermediate
+breadcrumb: "Zasady bezpieczeństwa"
 lang: pl
 published: 2020-09-06
 source: Building secure contracts

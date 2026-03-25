@@ -48,7 +48,7 @@
   "page-find-wallet-features": "Особливості",
   "page-find-wallet-security": "Безпека",
   "page-find-wallet-smart-contract": "Смарт-контракт",
-  "page-find-wallet-advanced": "Для досвідчених розробників",
+  "page-find-wallet-advanced": "Для досвідчених користувачів",
   "page-find-wallet-check-out": "Перегляньте",
   "page-find-wallet-info-updated-on": "Інформацію оновлено",
   "page-find-wallet-showing-all-wallets": "Показ усіх гаманців",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Посилання",
   "page-find-wallet-empty-results-title": "Немає результатів",
   "page-find-wallet-empty-results-desc": "Немає гаманців, що відповідають вашим критеріям, спробуйте видалити деякі фільтри.",
-  "page-find-wallet-see-wallets": "Переглянути гаманці"
+  "page-find-wallet-privacy": "Конфіденційність",
+  "page-find-wallet-privacy-desc": "Гаманці, що підтримують вбудовані приватні транзакції",
+  "page-find-wallet-see-wallets": "Переглянути гаманці",
+  "page-find-wallet-search-languages": "Пошук мов..."
 }

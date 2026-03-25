@@ -96,6 +96,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   published: string
   address?: string
   hideEditButton?: boolean
+  breadcrumb?: string
 }
 
 export interface MdPageContent {
@@ -103,7 +104,7 @@ export interface MdPageContent {
   content: string
   frontmatter: Frontmatter
   tocItems: ToCItem[]
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp?: string
   lastDeployLocaleTimestamp: string
   contentNotTranslated: boolean
   contributors: FileContributor[]

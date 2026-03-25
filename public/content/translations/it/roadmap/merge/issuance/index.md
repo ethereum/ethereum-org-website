@@ -1,149 +1,149 @@
 ---
-title: In che modo La Fusione ha influenzato l'offerta di ETH
-description: Analisi dell'impatto de La Fusione sull'offerta di ETH
+title: In che modo The Merge ha impattato l'offerta di ETH
+description: Analisi di come The Merge ha impattato l'offerta di ETH
 lang: it
 ---
 
-# In che modo La Fusione ha influenzato l'offerta di ETH {#how-the-merge-impacts-ETH-supply}
+# In che modo The Merge ha impattato l'offerta di ETH {#how-the-merge-impacts-ETH-supply}
 
-La Fusione ha rappresentato la transizione delle reti di Ethereum dal proof-of-work al proof-of-stake, verificatasi a settembre 2022. Il metodo di emissione degli ETH ha subito delle modifiche al momento di tale transizione. Precedentemente, i nuovi ETH erano emessi da due fonti: il livello d'esecuzione (cioè la Rete Principale) e il livello di consenso (cioè La Beacon Chain). Da La Fusione, l'emissione sul livello d'esecuzione è ora pari a zero. Analizziamolo.
+The Merge ha rappresentato la transizione della rete [Ethereum](/) dalla prova di lavoro alla prova di stake, avvenuta a settembre 2022. Il modo in cui venivano emessi gli ETH ha subito dei cambiamenti al momento di tale transizione. In precedenza, i nuovi ETH venivano emessi da due fonti: il livello di esecuzione (ovvero, la rete principale) e il livello di consenso (ovvero, la Beacon Chain). Da The Merge, l'emissione sul livello di esecuzione è ora pari a zero. Analizziamo questo aspetto nel dettaglio.
 
 ## Componenti dell'emissione di ETH {#components-of-eth-issuance}
 
-Possiamo spezzare la fornitura di ETH in due forze principali: emissione e bruciatura.
+Possiamo suddividere l'offerta di ETH in due forze principali: l'emissione e la distruzione (burn).
 
-L'**emissione** di ETH è il procedimento di creazione di ETH, che precedentemente non esisteva. La **bruciatura** di ETH è quando gli ETH esistenti vengono distrutti, rimuovendoli dalla circolazione. Il tasso di emissione e bruciatura viene calcolato su diversi parametri e, il saldo tra di essi, determina il tasso di inflazione/deflazione di ether risultante.
+L'**emissione** di ETH è il processo di creazione di ETH che prima non esistevano. La **distruzione** (burning) di ETH avviene quando gli ETH esistenti vengono distrutti, rimuovendoli dalla circolazione. Il tasso di emissione e di distruzione viene calcolato su diversi parametri e l'equilibrio tra di essi determina il tasso di inflazione/deflazione risultante dell'ether.
 
 <Card
 emoji=":chart_decreasing:"
-title="Tldr sull'emissione di ETH">
+title="In sintesi sull'emissione di ETH">
 
-- Prima di passare al proof of stake, i miner emettevano approssimativamente 13.000ETH/giorno
-- Gli staker emettono approssimativamente 1.700 ETH/giorno, sulla base di un totale di circa 14 milioni di ETH in staking
-- L'emissione di staking esatta fluttua a seconda dell'importo totale di ETH in staking
-- **Da La Fusione, restano approssimativamnte soltanto 1.700 ETH/giorno, riducendo la nuova emissione totale di ETH di circa l'88%**
-- La bruciatura: questa, fluttua secondo la domanda di rete. _Se_ per un dato giorno si osserva un prezzo di gas medio di almeno 16 gwei, questo compensa effettivamente i circa 1.700 ETH emessi ai validatori e porta l'inflazione netta di ETH a zero, o meno, per quel giorno.
-
+- Prima della transizione alla prova di stake, ai minatori venivano emessi circa 13.000 ETH/giorno
+- Agli staker vengono emessi circa 1.700 ETH/giorno, in base a circa 14 milioni di ETH totali in staking
+- L'esatta emissione dello staking fluttua in base alla quantità totale di ETH in staking
+- **Da The Merge, rimangono solo i ~1.700 ETH/giorno, riducendo l'emissione totale di nuovi ETH di circa l'88%**
+- La distruzione (burn): fluttua in base alla domanda della rete. _Se_ in un determinato giorno si osserva un prezzo del gas medio di almeno 16 gwei, questo compensa efficacemente i ~1.700 ETH emessi ai validatori e porta l'inflazione netta di ETH a zero o meno per quel giorno.
 </Card>
 
-## Pre-Fusione (storico) {#pre-merge}
+## Pre-Merge (storico) {#pre-merge}
 
-### Emissione del livello d'esecuzione {#el-issuance-pre-merge}
+### Emissione del livello di esecuzione {#el-issuance-pre-merge}
 
-Sotto il proof of work, i miner interagivano soltanto con il livello d'esecuzione, venendo ricompensati con ricompense dei blocchi, se erano i primi a risolvere il blocco successivo. Dall'[aggiornamento di Costantinopoli](/ethereum-forks/#constantinople) nel 2019, questa ricompensa era di 2 ETH per blocco. I miner, inoltre, erano ricompensati per la pubblicazione di blocchi [ommer](/glossary/#ommer), blocchi validi che non finivano nella catena più lunga/canonica. Queste ricompense erano massimizzate a 1,75 ETH per ommer ed erano _da sommarsi_ alla ricompensa emessa dal blocco canonico. Il processo di mining era un'attività economicamente intensiva che, storicamente, richiedeva elevati livelli di emissione di ETH per essere sostenuta.
+Con la prova di lavoro, i minatori interagivano solo con il livello di esecuzione e venivano ricompensati con ricompense del blocco se erano i primi a risolvere il blocco successivo. Dall'[aggiornamento Constantinople](/ethereum-forks/#constantinople) nel 2019, questa ricompensa era di 2 ETH per blocco. I minatori venivano anche ricompensati per la pubblicazione di blocchi [ommer](/glossary/#ommer), che erano blocchi validi che non finivano nella catena più lunga/canonica. Queste ricompense raggiungevano un massimo di 1,75 ETH per ommer ed erano _in aggiunta_ alla ricompensa emessa dal blocco canonico. Il processo di mining era un'attività economicamente intensiva, che storicamente richiedeva alti livelli di emissione di ETH per essere sostenuta.
 
-### Emissione del livello del consenso {#cl-issuance-pre-merge}
+### Emissione del livello di consenso {#cl-issuance-pre-merge}
 
-La [Beacon Chain](/ethereum-forks/#beacon-chain-genesis) è stata attivata nel 2020. Invece dei miner, è protetta dai validatori, che utilizzano il proof of stake. Questa catena è stata avviata dagli utenti di Ethereum, che depositavano ETH a senso unico in uno smart contract sulla Rete Principale (il livello d'esecuzione), ascoltato dalla Beacon Chain, accreditando l'utente con un importo equivalente di ETH, sulla nuova catena. Fino alla Fusione, i validatori della Beacon Chain non stavano elaborando le transazioni e, fondamentalmente, arrivavano al consenso sullo stato dello stesso gruppo di validatori.
+La [Beacon Chain](/ethereum-forks/#beacon-chain-genesis) è diventata operativa nel 2020. Invece dei minatori, è protetta dai validatori che utilizzano la prova di stake. Questa catena è stata avviata dagli utenti di Ethereum depositando ETH in modo unidirezionale in un contratto intelligente sulla rete principale (il livello di esecuzione), che la Beacon Chain ascolta, accreditando all'utente una quantità uguale di ETH sulla nuova catena. Fino a quando non è avvenuto The Merge, i validatori della Beacon Chain non elaboravano transazioni e stavano essenzialmente raggiungendo il consenso sullo stato del pool di validatori stesso.
 
-I validatori sulla Beacon Chain sono ricompensati con ETH per l'attestazione allo stato della catena e la proposta di blocchi. Le ricompense (o penalità) sono calcolate e distribuite a ogni epoca (ogni 6,4 minuti) a seconda delle prestazioni del validatore. Le ricompense del validatore sono **significativamente** inferiori a quelle di mining, emesse precedentemente sotto il proof-of-work (pari a 2 ETH circa ogni 13,5 secondi), poiché l'operazione di un nodo di convalida non è altrettanto intenso dal punto di vista economico e quindi non richiede né garantisce una ricompensa altrettanto elevata.
+I validatori sulla Beacon Chain vengono ricompensati con ETH per aver attestato lo stato della catena e proposto blocchi. Le ricompense (o le penalità) vengono calcolate e distribuite a ogni epoca (ogni 6,4 minuti) in base alle prestazioni del validatore. Le ricompense dei validatori sono **significativamente** inferiori alle ricompense di mining che venivano precedentemente emesse con la prova di lavoro (2 ETH ogni ~13,5 secondi), poiché la gestione di un nodo di validazione non è così economicamente intensa e quindi non richiede né giustifica una ricompensa così alta.
 
-### Analisi sulle emissioni pre-Fusione {#pre-merge-issuance-breakdown}
+### Ripartizione dell'emissione pre-Merge {#pre-merge-issuance-breakdown}
 
-Offerta totale di ETH: **circa 120.520.000 ETH** (al momento della Fusione a settembre 2022)
+Offerta totale di ETH: **\~120.520.000 ETH** (al momento di The Merge a settembre 2022)
 
-**Emissione del livello d'esecuzione:**
+**Emissione del livello di esecuzione:**
 
-- Era stimata a 2,08 ETH ogni 13,3 secondi\*: **circa 4.930.000** ETH emessi in un anno
-- Il risultato è un tasso d'inflazione **di circa il 4,09%** (4,93M l'anno / 120,5M totali)
-- \*Ciò include i 2 ETH per blocco canonico, più una media di 0,08 ETH nel tempo dai blocchi ommer. Inoltre, utilizza 13,3 secondi, l'obiettivo temporale di base del blocco senza alcuna influenza da una [bomba di difficoltà](/glossary/#difficulty-bomb). ([Vedi fonte](https://bitinfocharts.com/ethereum/))
+- Era stimata a 2,08 ETH ogni 13,3 secondi\*: **\~4.930.000** ETH emessi in un anno
+- Risultava in un tasso di inflazione di **circa il 4,09%** (4,93M all'anno / 120,5M totali)
+- \*Questo include i 2 ETH per blocco canonico, più una media di 0,08 ETH nel tempo dai blocchi ommer. Utilizza anche 13,3 secondi, l'obiettivo di tempo del blocco di base senza alcuna influenza da una [bomba di difficoltà](/glossary/#difficulty-bomb). ([Vedi fonte](https://bitinfocharts.com/ethereum/))
 
-**Emissione del livello d'esecuzione:**
+**Emissione del livello di consenso:**
 
-- Utilizzando i 14.000.000 di ETH totali in staking, il tasso di emissione di ETH è approssimativamente di 1700 ETH/giorno ([Vedi fonte](https://ultrasound.money/))
-- Il risultato è **circa 620.500** ETH emessi in un anno
-- Il risultato è un tasso d'inflazione **approssimativamente dello 0,52%** (620.5K l'anno / 119.3M totali)
-
-<Alert variant="update">
-<AlertContent>
-<AlertDescription>
-**Tasso di emissione annualizzato totale (pre-Fusione): circa 4,61%** (4,09% + 0,52%)
-
-**Circa l'88,7%** dell'emissione andava ai miner sul livello d'esecuzione (4,09 / 4,61 * 100)
-
-**Circa l'11,3%** era emesso agli staker sul livello del consenso (0,52 / 4,61 * 100)
-</AlertDescription>
-</AlertContent>
-</Alert>
-
-## Post-Fusione (oggi) {#post-merge}
-
-### Emissione del livello d'esecuzione {#el-issuance-post-merge}
-
-L'emissione del livello d'esecuzione dalla Fusione è pari a zero. Il proof-of-work non è più un mezzo valido per la produzione di blocchi, secondo le regole aggiornate del consenso. Tutta l'attività del livello d'esecuzione è impacchettata nei "blocchi della Beacon", pubblicati e attestati dai validatori del proof-of-stake. Le ricompense per l'attestazione e pubblicazione dei blocchi della Beacon sono considerate separatamente sul livello del consenso.
-
-### Emissione del livello del consenso {#cl-issuance-post-merge}
-
-L'emissione del livello di consenso continua ad oggi, così come prima della Fusione, con piccole ricompense per i validtori che attestano a e propongono i blocchi. Le ricompense dei validatori continuano a maturare ai _saldi dei validatori_, gestiti nel livello del consenso. A differenza dei conti correnti (conti di "esecuzione"), che possono effettuare transazioni sulla Rete Principale, questi conti separati di Ethereum non possono operare liberamente con altri conti di Ethereum. I fondi in questi conti sono prelevabili esclusivamente a un singolo indirizzo d'esecuzione specificato.
-
-Dall'aggiornamento di Shanghai/Capella, avvenuto ad aprile 2023, questi prelievi sono stati consentiti per gli staker. Gli staker sono incentivati a rimuovere i propri _guadagni/ricompense (per saldi superiori a 32 ETH)_, poiché, tali fondi non contribuirebbero altrimenti al loro peso di staking (che si massimizza a 32 ETH).
-
-Gli staker, inoltre, potrebbero scegliere di uscire e prelevare l'intero saldo del loro validatore. Per assicurare la stabilità di Ethereum, il numero di validatori in uscita simultanea è limitato.
-
-Approssimativamente lo 0,33% del conteggio totale dei validatori può uscire in un dato giorno. Di default, possono uscire quattro (4) validatori per epoca (ogni 6,4 minuti, o 900 al giorno). Un (1) validatore aggiuntivo può uscire per ogni 65.536 (2<sup>16</sup>) validatori aggiuntivi su 262.144 (2<sup>18</sup>). Ad esempio, con oltre 327.680 validatori, potrebbero uscirne cinque (5) per epoca (1.125 al giorno). Sei (6) sarebbero autorizzati con un conteggio di validatori attivi totali superiore a 393.216 e così via.
-
-All'aumentare del numero di validatori che prelevano, il numero massimo di validatori in uscita sarà ridotto gradualmente a un minimo di quattro, per evitare intenzionalmente che vengano prelevati contemporaneament egrandi quantitativi destabilizzanti di ETH in staking.
-
-### Analisi dell'inflazione post-Fusione {#post-merge-inflation-breakdown}
-
-- Offerta totale di ETH: **circa 120.520.000 ETH** (al momento della Fusione a settembre 2022)
-- Emissione del livello d'esecuzione: **0**
-- Emissione del livello di consenso: come sopra, tasso di emissione annualizzato **approssimativo dello 0,52%** (con 14 milioni di ETH in staking totali)
+- Utilizzando 14.000.000 di ETH totali in staking, il tasso di emissione di ETH è di circa 1.700 ETH/giorno ([Vedi fonte](https://ultrasound.money/))
+- Risulta in **\~620.500** ETH emessi in un anno
+- Risultava in un tasso di inflazione di **circa lo 0,52%** (620,5K all'anno / 119,3M totali)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Tasso di emissione annualizzato totale: **circa 0,52%**
+**Tasso di emissione annualizzato totale (pre-Merge): ~4,61%** (4,09% + 0,52%)
 
-Riduzione netta nell'emissione annuale di ETH: **circa 88,7%** ((4,61%-0,52%) / 4,61% * 100)
+**\~88,7%** dell'emissione andava ai minatori sul livello di esecuzione (4,09 / 4,61 * 100)
+
+**\~11,3%** veniva emesso agli staker sul livello di consenso (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## <Emoji text=":fire:" size="1" />La bruciatura {#the-burn}
+## Post-Merge (giorni nostri) {#post-merge}
 
-La forza opposta all'emissione di ETH è il tasso a cui gli ETH sono bruciati. Per l'esecuzione di una transazione su Ethereum, dev'essere pagata una commissione minima (nota come "commissione di base"), che fluttua continuamente (da blocco a blocco), a seconda dell'attività di rete. La commissione è pagata in ETH ed è _necessaria_ affinché la transazione sia considerata valida. Questa commissione viene _bruciata_ durante il procedimento della transazione, rimuovendola dalla circolazione.
+### Emissione del livello di esecuzione {#el-issuance-post-merge}
+
+L'emissione del livello di esecuzione da The Merge è pari a zero. La prova di lavoro non è più un mezzo valido per la produzione di blocchi in base alle regole aggiornate del consenso. Tutte le attività del livello di esecuzione sono pacchettizzate in "blocchi beacon", che vengono pubblicati e attestati dai validatori della prova di stake. Le ricompense per l'attestazione e la pubblicazione dei blocchi beacon sono contabilizzate separatamente sul livello di consenso.
+
+### Emissione del livello di consenso {#cl-issuance-post-merge}
+
+L'emissione del livello di consenso continua oggi come prima di The Merge, con piccole ricompense per i validatori che attestano e propongono blocchi. Le ricompense dei validatori continuano ad accumularsi nei _saldi dei validatori_ che sono gestiti all'interno del livello di consenso. A differenza degli account attuali (account di "esecuzione"), che possono effettuare transazioni sulla rete principale, questi sono account Ethereum separati che non possono effettuare transazioni liberamente con altri account Ethereum. I fondi in questi account possono essere prelevati solo verso un singolo indirizzo di esecuzione specificato.
+
+Dall'aggiornamento Shanghai/Capella avvenuto ad aprile 2023, questi prelievi sono stati abilitati per gli staker. Gli staker sono incentivati a rimuovere i loro _guadagni/ricompense (saldo superiore a 32 ETH)_ poiché questi fondi altrimenti non contribuiscono al loro peso di stake (che ha un massimo di 32).
+
+Gli staker possono anche scegliere di uscire e prelevare l'intero saldo del validatore. Per garantire che Ethereum sia stabile, il numero di validatori che escono contemporaneamente è limitato.
+
+Circa lo 0,33% del numero totale di validatori può uscire in un determinato giorno. Per impostazione predefinita, quattro (4) validatori possono uscire per epoca (ogni 6,4 minuti, o 900 al giorno). È consentito l'uscita di un (1) validatore aggiuntivo per ogni 65.536 (2<sup>16</sup>) validatori aggiuntivi oltre i 262.144 (2<sup>18</sup>). Ad esempio, con oltre 327.680 validatori, cinque (5) possono uscire per epoca (1.125 al giorno). Sei (6) saranno consentiti con un conteggio totale di validatori attivi superiore a 393.216, e così via.
+
+Man mano che più validatori prelevano, il numero massimo di validatori in uscita verrà gradualmente ridotto a un minimo di quattro per impedire intenzionalmente che grandi quantità destabilizzanti di ETH in staking vengano prelevate contemporaneamente.
+
+### Ripartizione dell'inflazione post-Merge {#post-merge-inflation-breakdown}
+
+- [Offerta totale di ETH](/eth/supply/): **\~120.520.000 ETH** (al momento di The Merge a settembre 2022)
+- Emissione del livello di esecuzione: **0**
+- Emissione del livello di consenso: Come sopra, tasso di emissione annualizzato di **\~0,52%** (con 14 milioni di ETH totali in staking)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-La bruciatura delle commissioni è divenuta attiva con l'[aggiornamento di Londra](/ethereum-forks/#london) ad agosto 2021 e resta immutata da La Fusione.
+Tasso di emissione annualizzato totale: **\~0,52%**
+
+Riduzione netta dell'emissione annuale di ETH: **\~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Oltre alla bruciatura della commissione, implementata dall'aggiornamento di Londra, i validatori, inoltre, possono incorrere in sanzioni per essere online o, peggio, possono ricevere tagli per l'infrazione di regole specifiche che minacciano la sicurezza della rete. Queste, risultano in una riduzione degli ETH dal saldo di quel validatore, che non è ricompensato direttamente a nessun altro conto, bruciandoli/rimuovendoli effettivamente dalla circolazione.
+## <Emoji text=":fire:" size="1" /> La distruzione (burn) {#the-burn}
 
-### Calcolare il prezzo medio del gas per la deflazione {#calculating-average-gas-price-for-deflation}
+La forza opposta all'emissione di ETH è il tasso al quale gli ETH vengono bruciati. Affinché una transazione venga eseguita su Ethereum, deve essere pagata una commissione minima (nota come "commissione di base"), che fluttua continuamente (da blocco a blocco) a seconda dell'attività della rete. La commissione viene pagata in ETH ed è _necessaria_ affinché la transazione sia considerata valida. Questa commissione viene _bruciata_ durante il processo della transazione, rimuovendola dalla circolazione.
 
-Come discusso sopra, l'importo di ETH emessi in un dato giorno dipende dagli ETH in staking totali. Al momento della scrittura, questo equivale a circa 1700 ETH/giorno.
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 
-Per determinare il prezzo medio del gas necessario a compensare completamente tale emissione in un dato periodo di 24 ore, inizieremo calcolando il numero totale di blocchi in un giorno, dato il tempo di un blocco di 12 secondi:
+La distruzione delle commissioni è diventata operativa con [l'aggiornamento London](/ethereum-forks/#london) ad agosto 2021 e rimane invariata da The Merge.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+Oltre alla distruzione delle commissioni implementata dall'aggiornamento London, i validatori possono anche incorrere in penalità per essere offline o, peggio, possono essere puniti (slashed) per aver infranto regole specifiche che minacciano la sicurezza della rete. Queste penalità comportano una riduzione di ETH dal saldo di quel validatore, che non viene ricompensato direttamente a nessun altro account, di fatto bruciandolo/rimuovendolo dalla circolazione.
+
+### Calcolo del prezzo del gas medio per la deflazione {#calculating-average-gas-price-for-deflation}
+
+Come discusso in precedenza, la quantità di ETH emessa in un determinato giorno dipende dal totale di ETH in staking. Al momento della stesura di questo documento, si tratta di circa 1.700 ETH/giorno.
+
+Per determinare il prezzo del gas medio necessario per compensare completamente questa emissione in un determinato periodo di 24 ore, inizieremo calcolando il numero totale di blocchi in un giorno, dato un tempo del blocco di 12 secondi:
 
 - `(1 blocco / 12 secondi) * (60 secondi/minuto) = 5 blocchi/minuto`
 - `(5 blocchi/minuto) * (60 minuti/ora) = 300 blocchi/ora`
 - `(300 blocchi/ora) * (24 ore/giorno) = 7200 blocchi/giorno`
 
-Ogni blocco indirizza `15x10^6 gas/blocco` ([di più sul gas](/developers/docs/gas/)). Utilizzandolo, possiamo risolvere per il prezzo medio del gas (in unità di gwei/gas), necessario per compensare l'emissione, data un'emissione totale giornaliera di 1700 ETH:
+Ogni blocco ha come obiettivo `15x10^6 gas/blocco` ([maggiori informazioni sul gas](/developers/docs/gas/)). Utilizzando questo dato, possiamo calcolare il prezzo del gas medio (in unità di gwei/gas) necessario per compensare l'emissione, data un'emissione giornaliera totale di ETH di 1.700 ETH:
 
-- `7200 blocchi/giorno * 15x10^6 gas/blocco *`**`Y gwei/gas`**`* 1 ETH/ 10^9 gwei = 1700 ETH/giorno`
+- `7200 blocchi/giorno * 15x10^6 gas/blocco * `**`Y gwei/gas`**` * 1 ETH/ 10^9 gwei = 1700 ETH/giorno`
 
 Risolvendo per `Y`:
 
-- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (arrotondando soltanto alle due cifre significative)
+- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (arrotondando a sole due cifre significative)
 
-Un altro metodo per riorganizzare questo ultimo passaggio sarebbe sostituire `1700` con una variabile `X` che rappresenti l'emissione giornaliera di ETH e semplificare il resto a:
+Un altro modo per riorganizzare quest'ultimo passaggio sarebbe sostituire `1700` con una variabile `X` che rappresenta l'emissione giornaliera di ETH, e semplificare il resto in:
 
 - `Y = (X(10^3)/(7200 * 15)) = X/108`
 
-Possiamo semplificarlo e scriverlo come una funzione di `X`:
+Possiamo semplificare e scriverlo come funzione di `X`:
 
-- `f(X) = X/108` dove `X` è l'emissione giornaliera di ETH, e `f(X)` rappresenta il prezzo di gwei/gas necessario per compensare tutti i nuovi ETH emessi.
+- `f(X) = X/108` dove `X` è l'emissione giornaliera di ETH e `f(X)` rappresenta il prezzo in gwei/gas necessario per compensare tutti i nuovi ETH emessi.
 
-Quindi, ad esempio, se `X` (emissione giornaliera di ETH) sale a 1800 secondo gli ETH totali in staking, `f(X)` (gwei necessari per compensare tutta l'emissione) sarebbe `17 gwei` (utilizzando le 2 cifre significative)
+Quindi, ad esempio, se `X` (emissione giornaliera di ETH) sale a 1800 in base agli ETH totali in staking, `f(X)` (gwei necessari per compensare tutta l'emissione) sarebbe quindi `17 gwei` (utilizzando 2 cifre significative)
 
-## Ulteriori letture {#further-reading}
+## Letture consigliate {#further-reading}
 
-- [La fusione](/roadmap/merge/)
-- [Ultrasound.money](https://ultrasound.money/) - _Pannelli di controllo disponibili per visualizzare l'emissione e la bruciatura di ETH in tempo reale_
-- [Rilevare l'Emissione di Ethereum](https://www.attestant.io/posts/charting-ethereum-issuance/) - _Jim McDonald 2020_
+- [The Merge](/roadmap/merge/)
+- [Ultrasound.money](https://ultrasound.money/) - _Dashboard disponibili per visualizzare l'emissione e la distruzione di ETH in tempo reale_
+- [Charting Ethereum Issuance](https://www.attestant.io/posts/charting-ethereum-issuance/) - _Jim McDonald 2020_

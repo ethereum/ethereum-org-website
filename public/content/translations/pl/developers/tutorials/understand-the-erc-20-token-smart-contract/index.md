@@ -4,6 +4,7 @@ description: "Dowiedz się, jak zaimplementować standard tokena ERC-20, korzyst
 author: "jdourlens"
 tags: [ "smart kontrakty", "tokeny", "solidity", "erc-20" ]
 skill: beginner
+breadcrumb: "Podstawy ERC-20"
 lang: pl
 published: 2020-04-05
 source: EthereumDev

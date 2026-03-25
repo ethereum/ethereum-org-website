@@ -4,6 +4,7 @@ description: "编写安全智能合约的推荐工作流程"
 author: "Trailofbits"
 tags: [ "智能合同", "安全性。", "Solidity" ]
 skill: intermediate
+breadcrumb: "安全检查清单"
 lang: zh
 published: 2020-09-07
 source: "构建安全的合约"

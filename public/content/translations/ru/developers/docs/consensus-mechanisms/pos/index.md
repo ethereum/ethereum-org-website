@@ -1,6 +1,6 @@
 ---
-title: Доказательство владения (PoS)
-description: Объяснение протокола доказательства владения и его роли в Ethereum.
+title: "Доказательство владения (PoS)"
+description: "Объяснение протокола доказательства владения и его роли в Ethereum."
 lang: ru
 incomplete: true
 ---
@@ -89,7 +89,7 @@ PoS требует от пользователей вкладывать свои
 - [Что такое доказательство владения и почему это важно](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) — _Виталик Бутерин_
 - [Объяснение сети Beacon Chain Ethereum 2.0, которое вам нужно прочитать в первую очередь](https://ethos.dev/beacon-chain/) — _Ethos.dev_
 - [Почему именно доказательство владения (ноябрь 2020 г.)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) — _Виталик Бутерин_
-- [Доказательство владения: как я научился любить слабую субъективность (Weak Subjectivity)](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) — _Виталик Бутерин_
+- [Доказательство владения: как я научился любить слабую субъективность (Weak Subjectivity)](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity) — _Виталик Бутерин_
 - [Философия дизайна доказательства владения](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) — _Виталик Бутерин_
 
 ## Похожие темы {#related-topics}

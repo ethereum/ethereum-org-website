@@ -280,7 +280,7 @@ contract Oracle {
 
 [谢林点](https://en.wikipedia.org/wiki/Focal_point_\(game_theory\))是一个博弈论概念，它假设在没有任何沟通的情况下，多个实体总是会默认采用一个共同的解决方案来解决问题。 谢林点机制常用于去中心化预言机网络，使节点对数据请求的应答达成共识。
 
-这方面的一个早期想法是 [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/)，这是一种提议的数据馈送，参与者提交“标量”问题的答案（这些问题的答案由数量描述，例如“ETH 的价格是多少？”），并附带一笔押金。 提供的值在第 25 和第 75 [百分位](https://en.wikipedia.org/wiki/Percentile)之间的用户将得到奖励，而提供的值大幅偏离中值的用户将受到惩罚。
+这方面的一个早期想法是 [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed)，这是一种提议的数据馈送，参与者提交“标量”问题的答案（这些问题的答案由数量描述，例如“ETH 的价格是多少？”），并附带一笔押金。 提供的值在第 25 和第 75 [百分位](https://en.wikipedia.org/wiki/Percentile)之间的用户将得到奖励，而提供的值大幅偏离中值的用户将受到惩罚。
 
 虽然 SchellingCoin 如今已不存在，但许多去中心化预言机（特别是 [Maker 协议的预言机](https://docs.makerdao.com/smart-contract-modules/oracle-module)）仍使用谢林点机制来提高预言机数据的准确性。 每个 Maker 预言机均由提交抵押品资产的市场价格的链下对等节点网络（“中继者”和“馈送者”）和链上“中值器”合约组成，后者会计算所有提交的价格的中值。 规定的延迟期结束后，该中值成为相关资产的新参考价格。
 

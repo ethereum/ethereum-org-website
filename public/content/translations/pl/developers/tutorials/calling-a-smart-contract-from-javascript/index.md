@@ -4,6 +4,7 @@ description: "Jak wywołać funkcję inteligentnego kontraktu z JavaScript za po
 author: jdourlens
 tags: [ "transakcje", "frontend", "JavaScript", "web3.js" ]
 skill: beginner
+breadcrumb: "Wywołanie kontraktu z JS"
 lang: pl
 published: 2020-04-19
 source: EthereumDev

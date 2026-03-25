@@ -116,7 +116,7 @@ export const StaticLayout = ({
             <Stack className="gap-8">
               <Breadcrumbs slug={slug} />
 
-              {!slug.includes("/whitepaper") && (
+              {!slug.includes("/whitepaper") && lastEditLocaleTimestamp && (
                 <p
                   className="text-body-medium"
                   dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
@@ -138,11 +138,13 @@ export const StaticLayout = ({
             />
             {children}
 
-            <FileContributors
-              className="my-10 border-t"
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-            />
+            {!frontmatter.hideEditButton && (
+              <FileContributors
+                className="my-10 border-t"
+                contributors={contributors}
+                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+              />
+            )}
             <FeedbackCard isArticle />
           </MainArticle>
         </div>

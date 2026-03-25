@@ -4,6 +4,7 @@ description: "Zbuduj inteligentny kontrakt DEX, który obsługuje transfery i za
 author: "jdourlens"
 tags: [ "smart kontrakty", "tokeny", "solidity", "erc-20" ]
 skill: intermediate
+breadcrumb: "Transfery ERC-20"
 lang: pl
 published: 2020-04-07
 source: EthereumDev

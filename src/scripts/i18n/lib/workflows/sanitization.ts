@@ -25,7 +25,7 @@ export async function runPostImportSanitization(
 
   console.log(`[SANITIZE] Processing ${committedFiles.length} committed files`)
 
-  const sanitizeResult = runSanitizer(committedFiles)
+  const sanitizeResult = await runSanitizer(committedFiles)
   const changedFiles = sanitizeResult.changedFiles || []
 
   if (changedFiles.length) {

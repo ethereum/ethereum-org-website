@@ -1,6 +1,6 @@
 ---
-title: Etický kodex
-description: Základní standardy, o které se snažíme napříč ekosystémem ethereum.org.
+title: "Etický kodex"
+description: "Základní standardy, o které se snažíme napříč ekosystémem ethereum.org."
 lang: cs
 ---
 

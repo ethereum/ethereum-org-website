@@ -1,0 +1,21 @@
+{
+  "adoption-chart-artists-label": "الفنانون",
+  "adoption-chart-column-now-label": "الآن",
+  "adoption-chart-companies-label": "الشركات",
+  "adoption-chart-developers-label": "المبرمجون",
+  "adoption-chart-gamers-label": "اللاعبون",
+  "adoption-chart-investors-label": "المستثمرون",
+  "adoption-chart-musicians-label": "الموسيقيون",
+  "adoption-chart-refugees-label": "اللاجئون",
+  "adoption-chart-writers-label": "الكُتّاب",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "الألعاب في الولايات المتحدة",
+  "energy-consumption-chart-global-data-centers-label": "مراكز البيانات العالمية",
+  "energy-consumption-chart-netflix-label": "نتفليكس",
+  "energy-consumption-chart-paypal-label": "بيبال",
+  "energy-consumption-gold-mining-cbeci-label": "التنقيب عن الذهب",
+  "energy-consumption-chart-legend": "الاستهلاك السنوي للطاقة مقدّرًا بتيرا واط ساعة/السنة"
+}

@@ -15,7 +15,8 @@ import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 const TutorialSubmitModal = ({
   dir,
-}: Pick<React.HTMLAttributes<React.JSX.Element>, "dir">) => {
+  children,
+}: Pick<React.HTMLAttributes<React.JSX.Element>, "dir" | "children">) => {
   const [isModalOpen, setModalOpen] = useState(false)
 
   const modalSize = useBreakpointValue({ base: "xl", md: "md" } as const)
@@ -65,7 +66,7 @@ const TutorialSubmitModal = ({
           })
         }}
       >
-        <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
+        {children}
       </Button>
     </>
   )

@@ -101,7 +101,7 @@ Na wysokim poziomie, model proof-of-stake ma taki sam cel co proof-of-work: pom�
 ## Dalsza lektura {#further-reading}
 
 - [Atak większościowy](https://en.bitcoin.it/wiki/Majority_attack)
-- [O nieodwołalności rozliczeń](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [O nieodwołalności rozliczeń](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Filmy {#videos}
 

@@ -4,6 +4,7 @@ description: "Jak umieścić tokenizowane przedmioty w celu sprzedaży w zdecent
 author: "Alberto Cuesta Cañada"
 tags: [ "smart kontrakty", "erc-721", "solidity", "tokeny" ]
 skill: intermediate
+breadcrumb: "Rynek ERC-721"
 lang: pl
 published: 2020-03-19
 source: Hackernoon

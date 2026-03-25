@@ -4,8 +4,9 @@ description: After reading this tutorial, you will be able to write TypeScript s
 
 author: Ori Pomerantz
 lang: en
-tags: ["agent", "server", "offchain"]
+tags: ["agent", "server", "offchain", "dapps"]
 skill: beginner
+breadcrumb: Server components
 published: 2024-07-15
 ---
 

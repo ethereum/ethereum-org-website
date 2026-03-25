@@ -169,16 +169,16 @@ Gdy 15 września 2022 r. Łańcuch śledzący połączył się z warstwą wykona
 - [Dołącz do Discorda Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Uruchom węzeł](/developers/docs/nodes-and-clients/run-a-node/)
 - [Wnieś wkład w rozwój klientów](/developers/docs/nodes-and-clients/#execution-clients)
-- [Program stażowy dla głównych deweloperów](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Program stażowy dla głównych deweloperów](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Dalsza lektura {#further-reading}
 
 Zarządzanie w Ethereum nie jest jednoznacznie zdefiniowane. Perspektywy na ten temat różnią się wśród różnych uczestników społeczności. Oto kilka z nich:
 
 - [Notatki na temat zarządzania blockchainem](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Jak działa zarządzanie Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
-- [Jak działa zarządzanie Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Kim jest główny deweloper Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Jak działa zarządzanie Ethereum?](https://cryptotesters.com/blog/ethereum-governance) - _Cryptotesters_
+- [Jak działa zarządzanie Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) - _Micah Zoltu_
+- [Kim jest główny deweloper Ethereum?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Zarządzanie, część 2: Plutokracja wciąż jest zła](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Wychodząc poza zarządzanie przez głosowanie monetami](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
 - [Zrozumienie zarządzania blockchainem](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_

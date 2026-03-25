@@ -1,163 +1,166 @@
 ---
-title: Lakukan taruhan solo untuk ETH Anda
-description: Berikut adalah gambaran buat kamu cara memulai solo penaruhan ETH
+title: Mengunci ETH Anda dari rumah
+description: Gambaran umum tentang cara memulai mengunci ETH Anda dari rumah
 lang: id
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Leslie seekor badak dengan komputer chipnya sendiri.
+alt: Badak Leslie di atas chip komputernya sendiri.
 sidebarDepth: 2
 summaryPoints:
-  - Terima imbalan maksimum langsung dari protokol dengan menjaga validator Anda berfungsi dengan baik dan tetap daring
-  - Jalankan perangkat keras di beranda dan secara pribadi berkontribusi pada keamanan dan desentralisasi jaringan Ethereum
-  - Hapus kepercayaan, dan jangan pernah menyerahkan kendali atas kunci dana Anda
+  - Menerima hadiah maksimum langsung dari protokol karena menjaga validator Anda berfungsi dengan baik dan online
+  - Menjalankan perangkat keras di rumah dan secara pribadi menambah keamanan dan desentralisasi jaringan Ethereum
+  - Menghilangkan kepercayaan, dan tidak pernah menyerahkan kendali atas kunci dana Anda
 ---
 
-## Apa yang dimaksud solo penaruhan? {#what-is-solo-staking}
+## Apa itu mengunci dari rumah? {#what-is-solo-staking}
 
-Solo penaruhan adalah tindakan [menjalankan simpul Ethereum](/run-a-node/) yang terhubung ke internet dan mendepositkan 32 ETH untuk mengaktifkan [validator](#faq), memberi Anda kemampuan untuk berpartisipasi secara langsung dalam konsensus jaringan.
+Mengunci dari rumah adalah tindakan [menjalankan node Ethereum](/run-a-node/) yang terhubung ke internet dan mendepositkan 32 ETH untuk mengaktifkan [validator](#faq), memberi Anda kemampuan untuk berpartisipasi langsung dalam konsensus jaringan.
 
-**Solo penaruhan meningkatkan desentralisasi jaringan Ethereum**, menjadikan Ethereum lebih tahan sensor dan tangguh terhadap serangan. Metode penaruhan lain mungkin tidak membantu jaringan dengan cara yang sama. Penaruhan solo adalah pilihan staking terbaik untuk mengamankan Ethereum.
+**Mengunci dari rumah meningkatkan desentralisasi jaringan Ethereum**, membuat [Ethereum](/) lebih tahan terhadap sensor dan kuat terhadap serangan. Metode mengunci lainnya mungkin tidak membantu jaringan dengan cara yang sama. Mengunci dari rumah adalah opsi mengunci terbaik untuk mengamankan Ethereum.
 
-Sebuah simpul Ethereum terdiri dari klien lapisan eksekusi (EL) dan juga klien lapisan konsensus (CL). Klien-klien ini adalah perangkat lunak yang bekerja bersama, bersama dengan seperangkat kunci tanda tangan yang sah, untuk memverifikasi transaksi dan blok, memberikan kesaksian terhadap kepala rantai yang benar, menggabungkan kesaksian, dan mengajukan blok.
+Sebuah node Ethereum terdiri dari klien lapisan eksekusi (EL), serta klien lapisan konsensus (CL). Klien-klien ini adalah perangkat lunak yang bekerja bersama, bersama dengan serangkaian kunci penandatanganan yang valid, untuk memverifikasi transaksi dan blok, mengesahkan kepala rantai yang benar, menggabungkan pengesahan, dan mengusulkan blok.
 
-Para penaruh solo bertanggung jawab atas mengoperasikan perangkat keras yang diperlukan untuk menjalankan klien-klien ini. Sangat disarankan untuk menggunakan mesin khusus untuk ini yang Anda operasikan dari beranda - ini sangat bermanfaat untuk kesehatan jaringan.
+Staker dari rumah bertanggung jawab untuk mengoperasikan perangkat keras yang diperlukan untuk menjalankan klien-klien ini. Sangat disarankan untuk menggunakan mesin khusus untuk ini yang Anda operasikan dari rumah–ini sangat bermanfaat bagi kesehatan jaringan.
 
-Seorang penaruh solo menerima imbalan langsung dari protokol karena menjaga validator mereka berfungsi dengan baik dan tetap daring.
+Seorang staker dari rumah menerima hadiah langsung dari protokol karena menjaga validator mereka berfungsi dengan baik dan online.
 
-## Mengapa taruhan solo? {#why-stake-solo}
+## Mengapa mengunci dari rumah? {#why-stake-solo}
 
-Penaruhan solo membawa tanggung jawab lebih besar tetapi memberikan Anda kendali maksimal atas dana dan pengaturan penaruhan Anda.
+Mengunci dari rumah datang dengan lebih banyak tanggung jawab tetapi memberi Anda kendali maksimum atas dana dan pengaturan mengunci Anda.
 
 <CardGrid>
-  <Card title="Mendapatkan ETH yang baru" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
-  <Card title="Full control
-Pengaturan penuh" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Keamanan Jaringan" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="Dapatkan ETH baru" emoji="💸" description="Dapatkan hadiah dalam denominasi ETH langsung dari protokol saat validator Anda online, tanpa ada perantara yang mengambil potongan." />
+  <Card title="Kendali penuh" emoji="🎛️" description="Simpan kunci Anda sendiri. Pilih kombinasi klien dan perangkat keras yang memungkinkan Anda meminimalkan risiko dan berkontribusi terbaik pada kesehatan dan keamanan jaringan. Layanan mengunci pihak ketiga membuat keputusan ini untuk Anda, dan mereka tidak selalu membuat pilihan yang paling aman." />
+  <Card title="Keamanan jaringan" emoji="🔐" description="Mengunci dari rumah adalah cara paling berdampak untuk mengunci. Dengan menjalankan validator di perangkat keras Anda sendiri di rumah, Anda memperkuat ketahanan, desentralisasi, dan keamanan protokol Ethereum." />
 </CardGrid>
 
-## Pertimbangan sebelum melakukan penaruhan solo {#considerations-before-staking-solo}
+## Pertimbangan sebelum mengunci dari rumah {#considerations-before-staking-solo}
 
-Seberapa pun kita berharap bahwa penaruhan solo dapat diakses dan bebas risiko bagi semua orang, kenyataannya tidak demikian. Ada beberapa pertimbangan praktis dan serius yang perlu diingat sebelum memutuskan untuk melakukan taruhan solo pada ETH Anda.
+Meskipun kami berharap mengunci dari rumah dapat diakses dan bebas risiko bagi semua orang, ini bukanlah kenyataan. Ada beberapa pertimbangan praktis dan serius yang perlu diingat sebelum memilih untuk mengunci ETH Anda dari rumah.
 
 <InfoGrid>
-<ExpandableCard title="Bacaan yang diperlukan" eventCategory="SoloStaking" eventName="clicked required reading">
-Ketika mengoperasikan simpul Anda sendiri, Anda sebaiknya menghabiskan waktu untuk mempelajari cara menggunakan perangkat lunak yang telah Anda pilih. Hal ini melibatkan membaca dokumentasi yang relevan dan memperhatikan saluran komunikasi tim pengembang tersebut.
+<ExpandableCard title="Bacaan wajib" eventCategory="SoloStaking" eventName="clicked required reading">
+Saat mengoperasikan node Anda sendiri, Anda harus meluangkan waktu untuk mempelajari cara menggunakan perangkat lunak yang telah Anda pilih. Ini melibatkan membaca dokumentasi yang relevan dan peka terhadap saluran komunikasi dari tim pengembang tersebut.
 
-Semakin Anda memahami tentang perangkat lunak yang Anda jalankan dan bagaimana bukti penaruhan bekerja, semakin minim risikonya sebagai penaruh, dan semakin mudah memperbaiki masalah yang mungkin muncul sepanjang jalan sebagai operator simpul.
+Semakin Anda memahami tentang perangkat lunak yang Anda jalankan dan bagaimana proof-of-stake bekerja, semakin kecil risikonya sebagai staker, dan semakin mudah untuk memperbaiki masalah apa pun yang mungkin timbul di sepanjang jalan sebagai operator node.
 </ExpandableCard>
 
-<ExpandableCard title="Nyaman dengan komputer" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-Pengaturan simpul memerlukan tingkat kenyamanan yang wajar saat bekerja dengan komputer, meskipun perangkat baru membuat ini menjadi lebih mudah seiring berjalannya waktu. Memahami antarmuka baris perintah bermanfaat, tetapi tidak lagi mutlak diperlukan.
+<ExpandableCard title="Terbiasa dengan komputer" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+Pengaturan node membutuhkan tingkat kenyamanan yang wajar saat bekerja dengan komputer, meskipun alat-alat baru membuatnya lebih mudah seiring waktu. Pemahaman tentang antarmuka baris perintah sangat membantu, tetapi tidak lagi diwajibkan secara ketat.
 
-Ini juga memerlukan pengaturan perangkat keras yang sangat dasar, dan pemahaman tentang spesifikasi minimum yang direkomendasikan.
+Ini juga membutuhkan pengaturan perangkat keras yang sangat mendasar, dan beberapa pemahaman tentang spesifikasi minimum yang disarankan.
 </ExpandableCard>
 
-<ExpandableCard title="Manajemen kunci Aman" eventCategory="SoloStaking" eventName="clicked secure key management">
-Sama seperti kunci pribadi yang mengamankan alamat Ethereum Anda, Anda perlu menghasilkan kunci-kunci khusus untuk validator Anda. Anda harus memahami bagaimana cara menjaga frasa benih atau kunci pribadi tetap aman dan terlindungi.{' '}
+<ExpandableCard title="Manajemen kunci yang aman" eventCategory="SoloStaking" eventName="clicked secure key management">
+Sama seperti bagaimana kunci pribadi mengamankan alamat Ethereum Anda, Anda perlu membuat kunci khusus untuk validator Anda. Anda harus memahami cara menjaga frasa seed atau kunci pribadi apa pun tetap aman dan terlindungi.{' '}
 
 [Keamanan Ethereum dan pencegahan penipuan](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Pemeliharaan" eventCategory="SoloStaking" eventName="clicked maintenance">
-Perangkat keras kadang-kadang mengalami kegagalan, koneksi jaringan terputus, dan perangkat lunak klien kadang-kadang perlu ditingkatkan. Pemeliharaan simpul tidak terhindarkan dan kadang-kadang akan memerlukan perhatian Anda. Anda akan ingin memastikan Anda tetap sadar akan semua peningkatan jaringan yang diantisipasi, atau peningkatan klien penting lainnya.
+Perangkat keras terkadang gagal, koneksi jaringan mengalami kesalahan, dan perangkat lunak klien terkadang perlu ditingkatkan. Pemeliharaan node tidak dapat dihindari dan terkadang akan membutuhkan perhatian Anda. Anda pasti ingin memastikan Anda tetap mengetahui setiap peningkatan jaringan yang diantisipasi, atau peningkatan klien penting lainnya.
 </ExpandableCard>
 
-<ExpandableCard title="Ketahanan waktu yang baik" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-Imbalan Anda sebanding dengan waktu validator Anda daring dan memberikan pembuktian dengan benar. Waktu tidak aktif menimbulkan hukuman sebanding dengan berapa banyak validator lain yang sedang offline pada saat yang sama, tetapi <a href="#faq">tidak mengakibatkan pemotongan</a>. Lebar pita juga penting, karena imbalan dikurangi untuk pembuktian yang tidak diterima tepat waktu. Persyaratan akan bervariasi, tetapi disarankan memiliki setidaknya kecepatan unggah dan unduh 10 Mb/dtk.
+<ExpandableCard title="Waktu aktif yang andal" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+Hadiah Anda sebanding dengan waktu validator Anda online dan mengesahkan dengan benar. Waktu henti (downtime) menimbulkan penalti yang sebanding dengan berapa banyak validator lain yang offline pada saat yang sama, tetapi <a href="#faq">tidak mengakibatkan pemotongan</a>. Bandwidth juga penting, karena hadiah dikurangi untuk pengesahan yang tidak diterima tepat waktu. Persyaratan akan bervariasi, tetapi disarankan minimal 10 Mb/s untuk unggah dan unduh.
 </ExpandableCard>
 
 <ExpandableCard title="Risiko pemotongan" eventCategory="SoloStaking" eventName="clicked slashing risk">
-Berbeda dari hukuman ketidakaktifan karena offline, <em>pemotongan</em> merupakan hukuman yang jauh lebih serius yang diberikan untuk pelanggaran yang bersifat jahat. Dengan menjalankan klien minoritas dengan kunci Anda dimuat hanya pada satu mesin pada satu waktu, risiko pemotongan slashed Anda diminimalkan. Dengan demikian, semua staker harus menyadari risiko pemotongan.
+Berbeda dengan penalti ketidakaktifan karena offline, <em>pemotongan</em> adalah penalti yang jauh lebih serius yang dikhususkan untuk pelanggaran berbahaya. Dengan menjalankan klien minoritas dengan kunci Anda dimuat hanya pada satu mesin pada satu waktu, risiko Anda terkena pemotongan diminimalkan. Meskipun demikian, semua staker harus menyadari risiko pemotongan.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Lebih lanjut tentang pemotongan dan siklus validator</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Lebih lanjut tentang pemotongan dan siklus hidup validator</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />
 
-## Cara kerjanya {#how-it-works}
+## Bagaimana cara kerjanya {#how-it-works}
 
 <StakingHowSoloWorks />
 
-Saat aktif, Anda akan mendapatkan rewards ETH, yang akan secara berkala disetor ke alamat penarikan Anda.
+Saat aktif Anda akan mendapatkan hadiah ETH, yang akan secara berkala didepositkan ke alamat penarikan Anda.
 
-Jika diinginkan, Anda dapat keluar sebagai validator yang menghilangkan keharusan untuk daring, dan menghentikan segala hadiah lebih lanjut. Saldo Anda yang tersisa akan ditarik ke alamat penarikan yang Anda tentukan saat pengaturan.
+Jika diinginkan, Anda dapat keluar sebagai validator yang menghilangkan persyaratan untuk online, dan menghentikan hadiah lebih lanjut. Saldo Anda yang tersisa kemudian akan ditarik ke alamat penarikan yang Anda tentukan selama pengaturan.
 
-[Lebih lanjut tentang penarikan penaruhan](/staking/withdrawals/)
+[Lebih lanjut tentang penarikan mengunci](/staking/withdrawals/)
 
-## Mulai di Landasan Peluncuran Penaruhan {#get-started-on-the-staking-launchpad}
+## Mulai di Staking Launchpad {#get-started-on-the-staking-launchpad}
 
-Landasan Peluncuran Penaruhan adalah aplikasi sumber terbuka yang akan membantu Anda menjadi seorang penaruh. Aplikasi ini akan membimbing Anda dalam memilih klien, menghasilkan kunci Anda, dan mendepositkan ETH Anda ke kontrak deposit penaruhan. Daftar periksa disediakan untuk memastikan Anda telah mencakup semua yang diperlukan untuk mengatur validator dengan aman.
+Staking Launchpad adalah aplikasi sumber terbuka yang akan membantu Anda menjadi staker. Ini akan memandu Anda dalam memilih klien Anda, membuat kunci Anda, dan mendepositkan ETH Anda ke kontrak deposit mengunci. Sebuah daftar periksa disediakan untuk memastikan Anda telah mencakup semuanya agar validator Anda diatur dengan aman.
 
 <StakingLaunchpadWidget />
 
-## Apa yang perlu dipertimbangkan dalam perangkat pengaturan simpul dan klien {#node-tool-considerations}
+## Apa yang perlu dipertimbangkan dengan alat pengaturan node dan klien {#node-tool-considerations}
 
-Ada sejumlah perangkat dan layanan yang semakin banyak membantu Anda untuk melakukan taruhan solo ETH, tetapi masing-masing memiliki risiko dan manfaat yang berbeda.
+Ada semakin banyak alat dan layanan untuk membantu Anda mengunci ETH Anda dari rumah, tetapi masing-masing datang dengan risiko dan manfaat yang berbeda.
 
-Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemahan yang signifikan yang mungkin dimiliki oleh perangkat penaruhan yang terdaftar. Gunakan bagian ini sebagai referensi untuk cara kami mendefinisikan atribut-atribut ini saat Anda memilih perangkat membantu perjalanan penaruhan Anda.
+Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemahan penting yang mungkin dimiliki oleh alat mengunci yang terdaftar. Gunakan bagian ini sebagai referensi tentang bagaimana kami mendefinisikan atribut-atribut ini saat Anda memilih alat apa yang akan membantu perjalanan mengunci Anda.
 
 <StakingConsiderations page="solo" />
 
-## Jelajahi perangkat pengaturan simpul dan klien {#node-and-client-tools}
+## Jelajahi alat pengaturan node dan klien {#node-and-client-tools}
 
-Terdapat berbagai pilihan yang tersedia untuk membantu Anda dengan pengaturan Anda. Gunakan petunjuk di atas untuk membantu Anda memandu melalui perangkat di bawah ini.
+Ada berbagai opsi yang tersedia untuk membantu Anda dengan pengaturan Anda. Gunakan indikator di atas untuk membantu memandu Anda melalui alat-alat di bawah ini.
 
 <ProductDisclaimer />
 
-### Perangkat simpul
+### Alat node
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Harap perhatikan pentingnya memilih [klien minoritas](/developers/docs/nodes-and-clients/client-diversity/) karena ini meningkatkan keamanan jaringan dan membatasi risiko Anda. Perangkat yang memungkinkan Anda mengatur klien minoritas ditandai sebagai <em style={{ textTransform: "uppercase" }}>"multi-klien."</em>
+Harap perhatikan pentingnya memilih [klien minoritas](/developers/docs/nodes-and-clients/client-diversity/) karena ini meningkatkan keamanan jaringan, dan membatasi risiko Anda. Alat yang memungkinkan Anda mengatur klien minoritas dilambangkan sebagai <em style={{ textTransform: "uppercase" }}>"multi-klien."</em>
 
-### Pembangkit Kunci
+### Pembuat Kunci
 
-Perangkat ini dapat digunakan sebagai alternatif untuk [CLI Deposit Penaruhan](https://github.com/ethereum/staking-deposit-cli/) untuk membantu dalam pembuatan kunci.
+Alat-alat ini dapat digunakan sebagai alternatif dari [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) untuk membantu pembuatan kunci.
 
 <StakingProductsCardGrid category="keyGen" />
 
-Punya saran untuk alat penaruhan yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah cocok, dan untuk mengirimkannya untuk ditinjau.
+Punya saran untuk alat mengunci yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah itu cocok, dan untuk mengirimkannya agar ditinjau.
 
-## Jelajahi panduan penaruhan solo {#staking-guides}
+## Jelajahi panduan mengunci dari rumah {#staking-guides}
 
 <StakingGuides />
 
 ## Pertanyaan yang sering diajukan {#faq}
 
-Berikut adalah beberapa pertanyaan umum tentang penaruhan yang layak diketahui.
+Ini adalah beberapa pertanyaan paling umum tentang mengunci yang patut diketahui.
 
 <ExpandableCard title="Apa itu validator?">
 
-Seorang <em>validator</em> adalah entitas virtual yang ada di Ethereum dan berpartisipasi dalam konsensus protokol Ethereum. Validator direpresentasikan oleh saldo, kunci publik, dan properti lainnya. Sebuah <em>validator klien</em> adalah perangkat lunak yang bertindak atas nama validator dengan menyimpan dan menggunakan kunci pribadinya. Satu klien validator tunggal dapat menyimpan banyak pasangan kunci, mengendalikan banyak validator.
-
+Sebuah <em>validator</em> adalah entitas virtual yang hidup di Ethereum dan berpartisipasi dalam konsensus protokol Ethereum. Validator diwakili oleh saldo, kunci publik, dan properti lainnya. Sebuah <em>klien validator</em> adalah perangkat lunak yang bertindak atas nama validator dengan memegang dan menggunakan kunci pribadinya. Satu klien validator dapat memegang banyak pasangan kunci, mengendalikan banyak validator.
 </ExpandableCard>
 
-<ExpandableCard title="Dapatkah saya melakukan deposit lebih dari 32 ETH?">
-Setiap pasangan kunci yang terkait dengan validator memerlukan persis 32 ETH untuk diaktifkan. Penambahan ETH lebih banyak ke satu set kunci tidak meningkatkan potensi imbalankarena setiap validator dibatasi oleh <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efektif</a> 32 ETH. Ini berarti bahwa penaruhan dilakukan dalam penambahan 32 ETH, masing-masing dengan set kunci dan saldo yang terpisah.
+<ExpandableCard title="Bisakah saya menyetor lebih dari 32 ETH?">
+Ya, akun validator modern mampu menampung hingga 2048 ETH. ETH tambahan di atas 32 akan digabungkan secara bertahap, meningkat dalam kelipatan bilangan bulat seiring dengan peningkatan saldo Anda yang sebenarnya. Ini dikenal sebagai <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efektif</a> Anda.
 
-Jangan meletakkan lebih dari 32 ETH untuk satu validator. Ini tidak akan meningkatkan imbalan Anda. Jika alamat penarikan telah diatur untuk validator, dana yang berlebihan di atas 32 ETH akan secara otomatis ditarik ke alamat ini selama [pembersihan validator](/staking/withdrawals/#validator-sweeping) berikutnya.
+Untuk meningkatkan saldo efektif suatu akun, dan dengan demikian meningkatkan hadiah, penyangga sebesar 0,25 ETH di atas ambang batas ETH penuh harus dilewati. Misalnya, akun dengan saldo sebenarnya 32,9 dan saldo efektif 32 perlu mendapatkan 0,35 ETH lagi untuk membawa saldo sebenarnya di atas 33,25 sebelum memicu peningkatan saldo efektif.
 
-Jika penaruhan solo terlalu menantang bagi Anda, pertimbangkan untuk menggunakan penyedia [staking-as-a-service](/staking/saas/), atau jika Anda memiliki kurang dari 32 ETH, lihatlah [pool penaruhan](/staking/pools/).
+Penyangga ini juga mencegah saldo efektif turun hingga mencapai 0,25 ETH di bawah saldo efektifnya saat ini.
+
+Setiap pasangan kunci yang terkait dengan validator memerlukan setidaknya 32 ETH untuk diaktifkan. Saldo apa pun di atas ini dapat ditarik ke alamat penarikan terkait kapan saja melalui transaksi yang ditandatangani oleh alamat ini. Dana apa pun di atas saldo efektif maksimum akan ditarik secara otomatis secara berkala.
+
+Jika mengunci dari rumah tampaknya terlalu menuntut bagi Anda, pertimbangkan untuk menggunakan penyedia [staking-as-a-service](/staking/saas/), atau jika Anda bekerja dengan kurang dari 32 ETH, periksa [kolam staking](/staking/pools/).
 </ExpandableCard>
 
-<ExpandableCard title="Apakah saya akan mengalami pemotongan jika saya offline? (tptb: Tidak.)">
-Mengalami kehilangan koneksi saat jaringan sedang berjalan dengan baik dan stabil TIDAK akan mengakibatkan pemotongan. Denda kecil <em>akibat ketidakaktifan</em> (inactivity penalties) dikenakan jika validator Anda tidak tersedia untuk mengesahkan dalam suatu jangka waktu tertentu (setiap 6,4 menit), namun ini sangat berbeda dengan <em>pemotongan</em>. Denda ini sedikit lebih rendah daripada imbalan yang akan Anda peroleh jika validator tersedia untuk mengesahkan, dan kerugian dapat dikembalikan dengan waktu daring yang sekitar sama lamanya.
+<ExpandableCard title="Apakah saya akan terkena pemotongan jika saya offline? (singkatnya: Tidak.)">
+Menjadi offline saat jaringan menyelesaikan dengan benar TIDAK akan mengakibatkan pemotongan. <em>Penalti ketidakaktifan</em> kecil dikenakan jika validator Anda tidak tersedia untuk mengesahkan pada epoch tertentu (masing-masing berdurasi 6,4 menit), tetapi ini sangat berbeda dengan <em>pemotongan</em>. Penalti ini sedikit lebih kecil dari hadiah yang akan Anda peroleh seandainya validator tersedia untuk mengesahkan, dan kerugian dapat diperoleh kembali dengan jumlah waktu yang kira-kira sama saat kembali online.
 
-Perlu dicatat bahwa denda atas ketidakaktifan berbanding lurus dengan jumlah validator yang tidak aktif pada saat bersamaan. Dalam kasus di mana sebagian besar jaringan tidak aktif secara bersamaan, denda untuk masing-masing validator ini akan lebih besar daripada saat satu validator tidak tersedia.
+Perhatikan bahwa penalti untuk ketidakaktifan sebanding dengan berapa banyak validator yang offline pada saat yang sama. Dalam kasus di mana sebagian besar jaringan semuanya offline sekaligus, penalti untuk masing-masing validator ini akan lebih besar daripada saat satu validator tidak tersedia.
 
-Dalam kasus ekstrem di mana jaringan berhenti untuk mengkonfirmasi hasil akhir akibat lebih dari sepertiga validator tidak aktif, pengguna ini akan mengalami apa yang dikenal sebagai <em>kebocoran inaktivitas kuadratik</em>, yang merupakan pengurasan eksponensial ETH dari akun validator yang tidak aktif. Ini memungkinkan jaringan untuk akhirnya pulih sendiri dengan membakar ETH dari validator yang tidak aktif hingga saldo mereka mencapai 16 ETH, pada saat itu mereka akan secara otomatis dikeluarkan dari kolam validator. Validator yang tetap daring akhirnya akan terdiri dari lebih dari 2/3 dari jaringan lagi, memenuhi supermayoritas yang diperlukan untuk sekali lagi mengesahkan rantai.
+Dalam kasus ekstrem jika jaringan berhenti menyelesaikan sebagai akibat dari lebih dari sepertiga validator offline, pengguna ini akan menderita apa yang dikenal sebagai <em>kebocoran ketidakaktifan kuadratik</em>, yang merupakan pengurasan eksponensial ETH dari akun validator offline. Ini memungkinkan jaringan untuk akhirnya menyembuhkan dirinya sendiri dengan membakar ETH dari validator yang tidak aktif hingga saldo mereka mencapai 16 ETH, pada titik mana mereka akan secara otomatis dikeluarkan dari kumpulan validator. Validator online yang tersisa pada akhirnya akan terdiri dari lebih dari 2/3 jaringan lagi, memenuhi supermayoritas yang diperlukan untuk sekali lagi menyelesaikan rantai.
 </ExpandableCard>
 
-<ExpandableCard title="Bagaimana saya memastikan bahwa saya tidak terkena pemotongan?">
-Secara singkat, ini tidak dapat dijamin sepenuhnya, tetapi jika Anda bertindak dengan itikad baik, menjalankan klien minoritas, dan hanya menyimpan kunci tanda tangan Anda di satu mesin pada satu waktu, risiko terkena potongan hampir nol.
+<ExpandableCard title="Bagaimana saya memastikan saya tidak terkena pemotongan?">
+Singkatnya, ini tidak pernah dapat dijamin sepenuhnya, tetapi jika Anda bertindak dengan itikad baik, menjalankan klien minoritas dan hanya menyimpan kunci penandatanganan Anda di satu mesin pada satu waktu, risiko terkena pemotongan hampir nol.
 
-Hanya ada beberapa cara khusus yang dapat menyebabkan seorang validator terkena potongan dan dikeluarkan dari jaringan. Pada saat penulisan ini, pemotongan yang terjadi secara eksklusif merupakan hasil dari pengaturan perangkat keras yang berlebihan di mana kunci tanda tangan disimpan di dua mesin terpisah sekaligus. Ini dapat secara tidak sengaja mengakibatkan <em>suara ganda</em> dari kunci Anda, yang merupakan pelanggaran yang dapat mengakibatkan pemotongan.
+Hanya ada beberapa cara spesifik yang dapat mengakibatkan validator terkena pemotongan dan dikeluarkan dari jaringan. Pada saat penulisan, pemotongan yang telah terjadi secara eksklusif merupakan produk dari pengaturan perangkat keras yang berlebihan di mana kunci penandatanganan disimpan di dua mesin terpisah sekaligus. Ini secara tidak sengaja dapat mengakibatkan <em>suara ganda</em> dari kunci Anda, yang merupakan pelanggaran yang dapat dipotong.
 
-Menjalankan klien supermayoritas (klien yang digunakan oleh lebih dari 2/3 jaringan) juga memiliki risiko potensial pemotongan jika klien ini memiliki bug yang mengakibatkan terjadinya garpu pada rantai. Hal ini dapat mengakibatkan garpu yang cacat dan kemudian di-finalisasi. Untuk kembali ke rantai yang dimaksud, diperlukan pengajuan <em>surround vote</em> dengan mencoba untuk mengembalikan blok yang telah di-finalisasi. Ini juga merupakan tindakan yang dapat menyebabkan pemotongan dan dapat dihindari dengan menjalankan klien minoritas.
+Menjalankan klien supermayoritas (klien mana pun yang digunakan oleh lebih dari 2/3 jaringan) juga memiliki risiko potensi pemotongan jika klien ini memiliki bug yang mengakibatkan fork rantai. Ini dapat mengakibatkan fork yang salah yang diselesaikan. Untuk mengoreksi kembali ke rantai yang dimaksud akan memerlukan pengiriman <em>suara keliling (surround vote)</em> dengan mencoba membatalkan blok yang telah diselesaikan. Ini juga merupakan pelanggaran yang dapat dipotong dan dapat dihindari hanya dengan menjalankan klien minoritas sebagai gantinya.
 
-Bugs serupa dalam klien <em>minoritas tidak akan pernah difinalisasi</em> dan oleh karena itu tidak akan mengakibatkan suara perkeliling, dan hanya akan mengakibatkan hukuman ketidakaktifan, <em>bukan pemotongan</em>.
+Bug yang setara dalam <em>klien minoritas tidak akan pernah diselesaikan</em> dan dengan demikian tidak akan pernah menghasilkan suara keliling, dan hanya akan menghasilkan penalti ketidakaktifan, <em>bukan pemotongan</em>.
 
 <ul>
   <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Pelajari lebih lanjut tentang pentingnya menjalankan klien minoritas.</a></li>
@@ -166,41 +169,41 @@ Bugs serupa dalam klien <em>minoritas tidak akan pernah difinalisasi</em> dan ol
 </ExpandableCard>
 
 <ExpandableCard title="Klien mana yang terbaik?">
-Masing-masing klien dapat memiliki perbedaan sedikit dalam hal kinerja dan antarmuka pengguna, karena masing-masing dikembangkan oleh tim yang berbeda menggunakan berbagai bahasa pemrograman. Meskipun demikian, tidak ada yang dianggap sebagai "terbaik." Semua klien produksi adalah perangkat lunak yang sangat baik, yang semuanya melakukan fungsi inti yang sama untuk menyinkronkan dan berinteraksi dengan rantai blok.
+Klien individu mungkin sedikit berbeda dalam hal kinerja dan antarmuka pengguna, karena masing-masing dikembangkan oleh tim yang berbeda menggunakan berbagai bahasa pemrograman. Meskipun demikian, tidak ada satupun yang "terbaik." Semua klien produksi adalah perangkat lunak yang sangat baik, yang semuanya melakukan fungsi inti yang sama untuk menyinkronkan dan berinteraksi dengan blockchain.
 
-Karena semua klien produksi menyediakan fungsionalitas dasar yang sama, sebenarnya sangat penting bagi Anda untuk memilih <strong>klien minoritas</strong>, yang berarti klien mana pun yang TIDAK sedang digunakan oleh sebagian besar validator di jaringan. Hal ini mungkin terdengar kontraproduktif, tetapi menjalankan klien mayoritas atau supermayoritas meningkatkan risiko Anda terkena pemotongan jika terjadi bug pada klien tersebut. Menjalankan klien minoritas secara signifikan mengurangi risiko tersebut.
+Karena semua klien produksi menyediakan fungsionalitas dasar yang sama, sebenarnya sangat penting bagi Anda untuk memilih <strong>klien minoritas</strong>, yang berarti klien mana pun yang TIDAK sedang digunakan oleh mayoritas validator di jaringan. Ini mungkin terdengar berlawanan dengan intuisi, tetapi menjalankan klien mayoritas atau supermayoritas menempatkan Anda pada peningkatan risiko pemotongan jika terjadi bug pada klien tersebut. Menjalankan klien minoritas secara drastis membatasi risiko ini.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Pelajari lebih lanjut mengenai mengapa keragaman klien sangat penting di sini</a>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Pelajari lebih lanjut tentang mengapa keragaman klien sangat penting</a>
 </ExpandableCard>
 
-<ExpandableCard title="Apakah saya hanya bisa menggunakan VPS (server pribadi virtual)?">
-Meskipun server pribadi virtual (VPS) dapat digunakan sebagai pengganti perangkat keras di beranda, akses fisik dan lokasi klien validator Anda <em>memang penting</em>. Solusi cloud terpusat seperti Amazon Web Services atau Digital Ocean memungkinkan kenyamanan tanpa harus mendapatkan dan mengoperasikan perangkat keras, dengan biaya sentralisasi jaringan.
+<ExpandableCard title="Bisakah saya menggunakan VPS (server pribadi virtual) saja?">
+Meskipun server pribadi virtual (VPS) dapat digunakan sebagai pengganti perangkat keras rumah, akses fisik dan lokasi klien validator Anda <em>memang penting</em>. Solusi cloud terpusat seperti Amazon Web Services atau Digital Ocean memberikan kenyamanan karena tidak perlu mendapatkan dan mengoperasikan perangkat keras, dengan mengorbankan sentralisasi jaringan.
 
-Semakin banyak klien validator yang berjalan pada satu solusi penyimpanan cloud terpusat, semakin berbahaya bagi pengguna-pengguna ini. Setiap kejadian yang membuat penyedia ini offline, baik itu oleh serangan, tuntutan regulasi, atau gangguan daya/internet, akan menyebabkan setiap klien validator yang bergantung pada server ini menjadi offline secara bersamaan.
+Semakin banyak klien validator yang berjalan pada satu solusi penyimpanan cloud terpusat, semakin berbahaya bagi para pengguna ini. Setiap peristiwa yang membuat penyedia ini offline, baik karena serangan, tuntutan peraturan, atau hanya pemadaman listrik/internet, akan mengakibatkan setiap klien validator yang bergantung pada server ini menjadi offline pada saat yang sama.
 
-Denda ketidakhadiran secara online sebanding dengan berapa banyak orang lain yang tidak online pada saat yang sama. Menggunakan VPS secara besar-besaran meningkatkan risiko bahwa denda ketidakhadiran daring akan lebih parah, dan meningkatkan risiko bocornya kuadrat atau pemotongan jika pemadaman cukup besar. Untuk meminimalkan risiko Anda sendiri dan risiko bagi jaringan, pengguna sangat disarankan untuk mendapatkan dan mengoperasikan perangkat keras mereka sendiri.
+Penalti offline sebanding dengan berapa banyak orang lain yang offline pada saat yang sama. Menggunakan VPS sangat meningkatkan risiko bahwa penalti offline akan lebih parah, dan meningkatkan risiko kebocoran kuadratik atau pemotongan jika pemadaman cukup besar. Untuk meminimalkan risiko Anda sendiri, dan risiko terhadap jaringan, pengguna sangat disarankan untuk mendapatkan dan mengoperasikan perangkat keras mereka sendiri.
 </ExpandableCard>
 
-<ExpandableCard title="Bagaimana cara untuk membuka hadiah saya atau mendapatkan kembali ETH saya?">
+<ExpandableCard title="Bagaimana cara menarik hadiah saya atau mendapatkan kembali ETH saya?">
 
-Penarikan apa pun dari Rantai Suar memerlukan pengaturan kredensial penarikan.
+Penarikan dalam bentuk apa pun dari Beacon Chain memerlukan kredensial penarikan untuk diatur.
 
-Pemegang staking baru mengatur ini pada saat pembuatan kunci dan deposit. Pemegang penaruhan yang sudah ada yang belum mengatur ini dapat meningkatkan kunci mereka untuk mendukung fungsionalitas ini.
+Staker baru mengatur ini pada saat pembuatan kunci dan deposit. Staker yang ada yang belum mengatur ini dapat meningkatkan kunci mereka untuk mendukung fungsionalitas ini.
 
-Setelah kredensial penarikan diatur, pembayaran imbalan (ETH yang terakumulasi di atas 32 awal) akan secara berkala didistribusikan ke alamat penarikan secara otomatis.
+Setelah kredensial penarikan diatur, pembayaran hadiah (akumulasi ETH di atas 32 awal) akan didistribusikan secara berkala ke alamat penarikan secara otomatis.
 
-Untuk membuka dan menerima seluruh saldo Anda kembali, Anda juga harus menyelesaikan proses keluar dari validator Anda.
+Untuk membuka kunci dan menerima kembali seluruh saldo Anda, Anda juga harus menyelesaikan proses keluar dari validator Anda.
 
-<ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan mengunci</ButtonLink>
 </ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [Direktori Penaruhan Ethereum](https://www.staking.directory/) - _Eridian dan Spacesider_
+- [Direktori Mengunci Ethereum](https://www.staking.directory/) - _Eridian dan Spacesider_
 - [Masalah Keragaman Klien Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Membantu Keragaman Klien](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
-- [Klien keragaman pada Ethereum Lapisan konsensus](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
-- [Caranya: Berbelanja Untuk Ethereum Validator Perangkat Keras](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
+- [Keragaman klien pada lapisan konsensus Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
+- [Cara: Berbelanja Perangkat Keras Validator Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Tips Pencegahan Pemotongan Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

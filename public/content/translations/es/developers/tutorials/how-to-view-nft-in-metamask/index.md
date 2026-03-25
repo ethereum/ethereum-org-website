@@ -4,6 +4,7 @@ description: "¡Este tutorial describe cómo ver un NFT existente en MetaMask!"
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
+breadcrumb: "Ver NFT en wallet"
 lang: es
 published: 2021-04-22
 ---

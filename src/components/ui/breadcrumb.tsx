@@ -4,7 +4,7 @@ import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Link } from "@/i18n/routing"
+import { Link } from "@/i18n/navigation"
 
 interface BreadcrumbProps extends React.ComponentPropsWithoutRef<"nav"> {
   separator?: React.ReactNode
@@ -21,7 +21,7 @@ const BreadcrumbList = React.forwardRef<
   <ol
     ref={ref}
     className={cn(
-      "m-0 flex list-none flex-wrap items-center tracking-wider",
+      "m-0 flex list-none flex-wrap items-center text-sm tracking-wider",
       className
     )}
     {...props}
