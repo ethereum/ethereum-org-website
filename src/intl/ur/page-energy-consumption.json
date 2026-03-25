@@ -2,7 +2,7 @@
   "adoption-chart-artists-label": "فنکار",
   "adoption-chart-column-now-label": "اب",
   "adoption-chart-companies-label": "کمپنیاں",
-  "adoption-chart-developers-label": "ڈویلپرز",
+  "adoption-chart-developers-label": "ڈیولپرز",
   "adoption-chart-gamers-label": "گیمرز",
   "adoption-chart-investors-label": "سرمایہ کار",
   "adoption-chart-musicians-label": "موسیقار",
@@ -16,6 +16,6 @@
   "energy-consumption-chart-global-data-centers-label": "عالمی ڈیٹا سینٹرز",
   "energy-consumption-chart-netflix-label": "Netflix",
   "energy-consumption-chart-paypal-label": "PayPal",
-  "energy-consumption-gold-mining-cbeci-label": "سونے کی میننگ",
-  "energy-consumption-chart-legend": "سالانہ توانائی کی کھپت (TWh/yr)"
+  "energy-consumption-gold-mining-cbeci-label": "سونے کی کان کنی",
+  "energy-consumption-chart-legend": "سالانہ توانائی کی کھپت TWh/yr میں"
 }
