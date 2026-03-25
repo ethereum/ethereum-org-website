@@ -908,8 +908,8 @@ function fixLowercasedMdxComponents(
 
     // Match opening/closing/self-closing tags with lowercase names
     parts[i] = parts[i].replace(
-      /<(\/?)(([a-z][a-z0-9]*))(?=[\s/>])/g,
-      (full, slash, _fullName, tagName) => {
+      /<(\/?)([a-z][a-z0-9]*)(?=[\s/>])/g,
+      (full, slash, tagName) => {
         const correct = caseMap.get(tagName)
         if (!correct) return full // Not a known MDX component
         fixCount++
