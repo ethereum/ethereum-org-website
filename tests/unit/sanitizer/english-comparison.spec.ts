@@ -27,6 +27,7 @@ const {
   removeStaleComponents,
   fixLeakedAttrNamesInJsxValues,
   fixDetachedHeadingAnchors,
+  fixCrowdinSplitBackticks,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -1259,6 +1260,34 @@ test.describe("English Comparison Fixes", () => {
       const english = "### Heading {#my-id}\n\nParagraph."
       const translated = "```\nSomething {#my-id} inside code\n```"
       const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixCrowdinSplitBackticks", () => {
+    test("repairs premature backtick close splitting inline code", () => {
+      const english = "we use an empty component (`<> ... </>`) to combine them"
+      const translated =
+        "u\u017Cywamy pustego komponentu (`<> ...` </>`), aby uczynić"
+      const { content, fixCount } = fixCrowdinSplitBackticks(
+        translated,
+        english
+      )
+      expect(content).toBe(
+        "u\u017Cywamy pustego komponentu (`<> ... </>`), aby uczynić"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct backtick pairs unchanged", () => {
+      const english = "we use an empty component (`<> ... </>`) to combine them"
+      const translated =
+        "u\u017Cywamy pustego komponentu (`<> ... </>`), aby uczynić"
+      const { content, fixCount } = fixCrowdinSplitBackticks(
         translated,
         english
       )

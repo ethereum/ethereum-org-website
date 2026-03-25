@@ -60,6 +60,11 @@
 
 | 48 | `collapseInlineHtmlFromEnglish` matches across code fences and newlines | it #17841 | Inside ````tsx` fence: `<div>{error?.message}</div>\n \n</div>` -- regex `\s*</div>` crosses the blank line and collapses a separate `</div>` onto the previous line, producing `<div>{error?.message}</div></div>`. Two bugs: (1) no code fence protection, (2) `\s*` matches newlines allowing cross-line grabs | High -- corrupts code examples |
 
+| 49 | Orphaned `</em>` BEFORE `<a>` in HTML list items | pl #17445 | `<li></em><a href="...">EIP-145</a> - <em>text</li>` -- `</em>` appears before its opener `<em>`; `removeOrphanedClosingTags` sees balanced open/close counts on the line so doesn't remove it | Critical -- breaks MDX compilation |
+| 50 | Smart quote double-wrapping in YAML frontmatter | pl #17445 | `summaryPoint1: ""text""` -- value had smart quotes `\u201C...\u201D`; `quoteFrontmatterNonAscii` saw non-ASCII, didn't recognize smart quotes as existing quoting, wrapped in straight quotes producing double-wrapping | Critical -- breaks YAML parsing |
+| 51 | Extra spaces around `=` in JSX attributes | pl #17445 | `<a href = "https://...">` -- Crowdin introduces spaces around `=` in href and other JSX attributes; no sanitizer function normalizes this | High -- may break strict MDX parsers |
+| 52 | Orphaned opening backtick with missing closer | pl #17445 | `` `<nazwa opcodu>(...). `` -- opening backtick with no closing backtick; `repairUnclosedBackticks` needs English comparison and may miss cases where English also has backticks but the translated line lost one | High -- exposed MDX tags |
+
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
 These patterns are covered by existing fix functions and should have regression tests:
@@ -103,6 +108,9 @@ These patterns are covered by existing fix functions and should have regression 
 - **Translated inline code warning** (`warnTranslatedInlineCode`) — warns when inline code span count drops significantly OR when orphaned backticks are detected on a line; signals Crowdin translated content inside backticks (pt-br PR #17122)
 - **LLM artifact token stripping** (`stripLlmArtifactTokens`) — strips `<bos>`, `<eos>`, `<s>`, `</s>`, `<pad>`, `<unk>`, `<mask>` tokens from prose; these leak from machine translation pipelines and break MDX compilation (mr PR #17730)
 - **Block HTML inline usage preserved** (`normalizeBlockHtmlLines`) — no longer splits `<div>content</div>` when both tags are on the same line; only splits multi-line block closing tags to their own line. Fixes MDX "Expected a closing tag before end of paragraph" error (id i18n/id-03-23T2228, pattern #46)
+- **Orphaned closer-before-opener** (`removeOrphanedClosingTags`) — `</em><a>...<em>text</em>` now correctly removes the leading `</em>` even when open/close counts are equal on the line; uses left-to-right balance scanning instead of simple count comparison (pl PR #17445, pattern #49)
+- **Smart quote double-wrapping prevention** (`quoteFrontmatterNonAscii`) — replaces smart/curly quotes (U+201C/U+201D/U+201E/U+201F) with straight `"` before checking if YAML value needs quoting, preventing `""text""` double-wrapping (pl PR #17445, pattern #50)
+- **JSX attribute spacing** (`fixJsxAttributeSpacing`) — normalizes `href = "..."` to `href="..."` inside HTML/JSX tags; Crowdin sometimes introduces spaces around `=` in attributes (pl PR #17445, pattern #51)
 
 ## Recommendations for Future Sanitizer Iteration
 
