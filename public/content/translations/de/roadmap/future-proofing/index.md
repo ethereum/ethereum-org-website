@@ -1,38 +1,53 @@
 ---
 title: Zukunftssicherung von Ethereum
-description: Diese Verbesserungen festigen Ethereum als widerstandsfähige und dezentrale Grundlage für die ungewisse Zukunft.
+description: "Diese Upgrades festigen Ethereum als die widerstandsfähige, dezentralisierte Basisebene für die Zukunft, was auch immer sie bringen mag."
 lang: de
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum-Roadmap"
 template: roadmap
 ---
 
-Einige Aspekte der Roadmap sind zwar nicht unmittelbar für die Skalierung oder Sicherheit von Ethereum erforderlich, legen jedoch den Grundstein für langfristige Stabilität und Zuverlässigkeit von Ethereum.
+Einige Teile der Roadmap sind nicht zwingend erforderlich, um Ethereum kurzfristig zu skalieren oder abzusichern, sondern bereiten Ethereum auf Stabilität und Zuverlässigkeit weit in der Zukunft vor.
 
 ## Quantenresistenz {#quantum-resistance}
 
-Ein Teil der [Kryptographie](/glossary/#cryptography), die derzeit Ethereum sichert, wird gefährdet sein, wenn Quantencomputing Realität wird. Obwohl Quantencomputer vermutlich noch Jahrzehnte davon entfernt sind, eine echte Bedrohung für die moderne Kryptographie darzustellen, wird Ethereum dennoch so entwickelt, dass es für die kommenden Jahrhunderte sicher ist. Dies bedeutet, dass Ethereum so schnell wie möglich [quantenresistent](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) gemacht werden soll.
+Ein Teil der [Kryptografie](/glossary/#cryptography), die das heutige Ethereum absichert, wird kompromittiert sein, sobald Quantencomputing Realität wird. Obwohl Quantencomputer wahrscheinlich noch Jahrzehnte davon entfernt sind, eine echte Bedrohung für die moderne Kryptografie darzustellen, wird Ethereum so gebaut, dass es für die kommenden Jahrhunderte sicher ist. Das bedeutet, [Ethereum so schnell wie möglich quantenresistent zu machen](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/).
 
-Die Herausforderung für die Ethereum-Entwickler besteht darin, dass sich das aktuelle [Proof-of-Stake](/glossary/#pos)-Protokoll auf ein sehr effizientes Signaturschema namens BLS stützt, um Stimmen auf gültigen [Blöcken](/glossary/#block) zu aggregieren. Dieses Signaturschema wird von Quantencomputern gebrochen, aber die quantenresistenten Alternativen sind nicht so effizient.
+Die Herausforderung für Ethereum-Entwickler besteht darin, dass das aktuelle [Proof-of-Stake](/glossary/#pos)-Protokoll auf einem sehr effizienten Signaturschema namens BLS beruht, um Stimmen für gültige [Blöcke](/glossary/#block) zu aggregieren. Dieses Signaturschema kann von Quantencomputern geknackt werden, aber die quantenresistenten Alternativen sind nicht so effizient.
 
-Die in mehreren Bereichen von Ethereum zur Generierung kryptographischer Geheimnisse verwendeten ["KZG"-Verpflichtungsschemata](/roadmap/danksharding/#what-is-kzg) sind als quantenanfällig bekannt. Derzeit wird dies durch "vertrauenswürdige Setups" umgangen, bei denen viele Benutzer Zufälligkeit erzeugen, die von einem Quantencomputer nicht rückgängig gemacht werden kann. Die ideale Lösung wäre jedoch einfach, Quanten-sichere Kryptographie einzubauen. Es gibt zwei führende Ansätze, die effiziente Ersatzlösungen für das BLS-Schema werden könnten: [STARK-basierte](https://hackmd.io/@vbuterin/stark_aggregation) und [Gitter-basierte](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) Signierung. **Diese werden noch erforscht und in Prototypen umgesetzt**.
+Die [„KZG“-Commitment-Schemata](/roadmap/danksharding/#what-is-kzg), die an mehreren Stellen in Ethereum verwendet werden, um kryptografische Geheimnisse zu generieren, sind bekanntermaßen anfällig für Quantencomputer. Derzeit wird dies durch „Trusted Setups“ (für die die Haupt-Setup-Zeremonie 2023 erfolgreich abgeschlossen wurde) umgangen, bei denen viele Benutzer Zufälligkeiten generierten, die von einem Quantencomputer nicht zurückentwickelt werden können. Die ideale langfristige Lösung wäre jedoch, stattdessen quantensichere Kryptografie zu integrieren. Es gibt zwei führende Ansätze, die effiziente Ersatzlösungen für das BLS-Schema werden könnten: [STARK-basierte](https://hackmd.io/@vbuterin/stark_aggregation) und [gitterbasierte (lattice-based)](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) Signaturen. **Diese werden derzeit noch aktiv erforscht und als Prototypen entwickelt**.
 
-<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Lesen Sie über KZG und vertrauenswürdige Setups</ButtonLink>
+[Lesen Sie mehr über KZG und Trusted Setups](/roadmap/danksharding#what-is-kzg)
 
-## Einfacheres und effizienteres Ethereum {#simpler-more-efficient-ethereum}
+## Ein einfacheres und effizienteres Ethereum {#simpler-more-efficient-ethereum}
 
-Komplexität schafft Möglichkeiten für Fehler oder Schwachstellen, die von Angreifern ausgenutzt werden können. Ein Bestandteil des Fahrplans besteht daher darin, Ethereum zu vereinfachen, indem nicht mehr benötigter oder verbesserungsfähiger Code, der sich durch verschiedene Upgrades gehalten hat, entfernt wird. Eine schlankere, einfachere Codebasis ist für Entwickler leichter zu warten und zu verstehen.
+Komplexität schafft Möglichkeiten für Fehler oder Schwachstellen, die von Angreifern ausgenutzt werden können. Daher ist ein Teil der Roadmap die Vereinfachung von Ethereum und das Entfernen oder Ändern von Code, der durch verschiedene Upgrades mitgeschleppt wurde, aber nicht mehr benötigt wird oder nun verbessert werden kann. Eine schlankere, einfachere Codebasis ist für Entwickler leichter zu pflegen und zu verstehen.
 
-Es gibt mehrere Updates, die an der [Ethereum Virtual Machine (EVM)](/developers/docs/evm) vorgenommen werden, um sie einfacher und effizienter zu gestalten. Dazu gehört [das Entfernen des SELFDESTRUCT Opcodes](https://hackmd.io/@vbuterin/selfdestruct) - ein selten genutztes Kommando, das nicht mehr benötigt wird und unter bestimmten Umständen gefährlich zu verwenden sein kann, insbesondere in Kombination mit anderen zukünftigen Upgrades des Speichermodells von Ethereum. [Ethereum-Clients](/glossary/#consensus-client) unterstützen auch noch einige alte Transaktionsarten, die nun komplett entfernt werden können. Die Art und Weise, wie [Gas](/glossary/#gas) berechnet wird, kann ebenfalls verbessert werden. Darüber hinaus können effizientere Methoden für die Arithmetik, die einigen kryptographischen Operationen zugrunde liegt, eingeführt werden.
+Um die [Ethereum Virtual Machine (EVM)](/developers/docs/evm) einfacher und effizienter zu machen, werden kontinuierlich Verbesserungen erforscht und implementiert. Dies umfasst sowohl die Behandlung von Legacy-Komponenten als auch die Einführung von Optimierungen.
 
-Ebenso können Updates an anderen Teilen der gegenwärtigen Ethereum-Clients vorgenommen werden. Ein Beispiel dafür ist, dass aktuelle Ausführungs- und Konsens-Clients eine andere Art der Datenkompression verwenden. Es wird viel einfacher und intuitiver sein, Daten zwischen Clients auszutauschen, wenn das Kompressionsschema im gesamten Netzwerk einheitlich ist.
+**Kürzlich implementierte Änderungen:**
+
+- **Überarbeitung der Gasberechnung:** Die Art und Weise, wie [Gas](/glossary/#gas) berechnet wird, wurde mit **EIP-1559 (implementiert im London-Upgrade, 2021)** erheblich verbessert, indem eine Grundgebühr und ein Verbrennungsmechanismus für eine vorhersehbarere Preisgestaltung von Transaktionen eingeführt wurden.
+- **Einschränkung von `SELFDESTRUCT`:** Der `SELFDESTRUCT`-Opcode wurde zwar selten verwendet, barg jedoch potenzielle Risiken. Seine Funktionalität wurde im **Dencun-Upgrade (März 2024) über EIP-6780** stark eingeschränkt, um Gefahren, insbesondere im Hinblick auf die Zustandsverwaltung, zu mindern.
+- **Modernisierte Transaktionstypen:** Neue Transaktionsformate wurden eingeführt (z. B. über **EIP-2718** und **EIP-4844** für Blobs im Dencun-Upgrade), um neue Funktionen zu unterstützen und die Effizienz gegenüber älteren Typen zu verbessern.
+
+**Laufende und zukünftige Ziele:**
+
+- **Weitere Handhabung von `SELFDESTRUCT`:** Obwohl eingeschränkt, wird die **potenzielle vollständige Entfernung** des `SELFDESTRUCT`-Opcodes für zukünftige Upgrades weiterhin in Betracht gezogen, um den EVM-Zustand weiter zu vereinfachen. ([Mehr Kontext zu SELFDESTRUCT-Problemen](https://hackmd.io/@vbuterin/selfdestruct)).
+- **Auslaufen von Legacy-Transaktionen:** Obwohl [Ethereum-Anwendungen](/glossary/#consensus-client) aus Gründen der Abwärtskompatibilität immer noch ältere Transaktionstypen unterstützen, ist es das Ziel, die Migration zu neueren Typen zu fördern und **die Unterstützung für die ältesten Formate in Zukunft möglicherweise als veraltet zu markieren oder vollständig zu entfernen**.
+- **Fortgesetzte Forschung zur Gaseffizienz:** Die Erforschung **weiterer Verfeinerungen der Gasberechnung** wird fortgesetzt, was möglicherweise Konzepte wie mehrdimensionales Gas einschließt, um die Ressourcennutzung besser widerzuspiegeln.
+- **Optimierte kryptografische Operationen:** Es laufen Bemühungen, **effizientere Methoden für die Arithmetik einzuführen**, die den kryptografischen Operationen zugrunde liegt, die innerhalb der EVM verwendet werden.
+
+In ähnlicher Weise gibt es Updates, die an anderen Teilen heutiger Ethereum-Anwendungen vorgenommen werden können. Ein Beispiel ist, dass aktuelle Ausführungs- und Konsens-Clients eine andere Art der Datenkomprimierung verwenden. Es wird viel einfacher und intuitiver sein, Daten zwischen Anwendungen auszutauschen, wenn das Komprimierungsschema im gesamten Netzwerk vereinheitlicht ist. Dies bleibt ein Bereich der Erforschung.
 
 ## Aktueller Fortschritt {#current-progress}
 
-Die meisten der Upgrades, die erforderlich sind, um Ethereum zukunftssicher zu machen, befinden sich **noch in der Forschungsphase. Möglicherweise kann es noch mehrere Jahre dauern**, bis sie implementiert werden. Upgrades wie die Abschaffung von SELFDESTRUCT und die Harmonisierung des in den Ausführungs- und Konsens-Clients verwendeten Kompressionsschemas werden wahrscheinlich früher eingeführt als die quantenresistente Kryptografie.
+Viele der langfristigen Upgrades zur Zukunftssicherung, insbesondere die **vollständige Quantenresistenz für Kernprotokolle, befinden sich noch in der Forschungsphase und sind möglicherweise noch einige Jahre von der Implementierung entfernt**.
 
-**Weiterführende Informationen**
+Es wurden jedoch **bereits erhebliche Fortschritte bei den Vereinfachungsbemühungen erzielt.** Beispielsweise wurden wichtige Änderungen wie die **Einschränkung von `SELFDESTRUCT` (EIP-6780)** und die Einführung von **Blob-tragenden Transaktionen (EIP-4844)** im **Dencun-Upgrade (März 2024)** implementiert. Die Arbeit an der Harmonisierung der Komprimierungsschemata der Anwendungen und anderen Effizienzverbesserungen wird ebenfalls fortgesetzt.
+
+**Weiterführende Literatur**
 
 - [Gas](/developers/docs/gas)
 - [EVM](/developers/docs/evm)
-- [Data structures](/developers/docs/data-structures-and-encoding)
+- [Datenstrukturen](/developers/docs/data-structures-and-encoding)

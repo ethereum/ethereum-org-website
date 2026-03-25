@@ -1,55 +1,55 @@
 ---
-title: Wie man Token auf die Layer 2 überträgt
-description: Ein Leitfaden, der erklärt, wie man Token von Ethereum mithilfe eines Übergangs zu Ebene 2 überträgt.
+title: "Wie man Token auf Ebene 2 überbrückt"
+description: "Ein Leitfaden, der erklärt, wie man Token von Ethereum mithilfe einer kettenübergreifenden Brücke auf Ebene 2 verschiebt."
 lang: de
 ---
 
-# Wie man Token auf die Layer 2 überträgt
+# Wie man Token auf Ebene 2 überbrückt
 
-Wenn eine hohe Auslastung auf Ethereum herrscht, kann es teuer werden. Eine Lösung hierfür ist die Erstellung neuer „Layer": d. h. unterschiedlicher Netzwerke, die ähnlich wie Ethereum selbst arbeiten. Diese sogenannten Layer 2 tragen zur Verringerung der Auslastung und der Kosten von Ethereum bei, indem sie deutlich mehr Transaktionen zu niedrigeren Gebühren abwickeln und die Ergebnisse regelmäßig auf Ethereum speichern. Layer 2 als solches ermöglichen es, die Geschwindigkeit der Transaktionen zu erhöhen und gleichzeitig die Kosten zu senken. Viele beliebte Krypto-Projekte wechseln aufgrund dieser Vorteile zu Layer 2. Der einfachste Weg, Token von Ethereum zu Layer 2 zu übertragen, ist die Nutzung einer Brücke.
+Wenn es viel Datenverkehr auf Ethereum gibt, kann es teuer werden. Eine Lösung dafür ist die Schaffung neuer "Ebenen" (Layers): d. h. verschiedene Netzwerke, die auf ähnliche Weise wie Ethereum selbst funktionieren. Diese sogenannten Ebene-2-Netzwerke helfen, Überlastungen und Kosten auf Ethereum zu reduzieren, indem sie viel mehr Transaktionen zu niedrigeren Gebühren verarbeiten und nur das Ergebnis dieser Transaktionen ab und zu auf Ethereum speichern. Als solche ermöglichen uns diese Ebene-2-Lösungen, Transaktionen mit erhöhter Geschwindigkeit und geringeren Kosten durchzuführen. Viele beliebte Krypto-Projekte wechseln aufgrund dieser Vorteile auf Ebene 2. Der einfachste Weg, Token von Ethereum auf Ebene 2 zu verschieben, ist die Verwendung einer kettenübergreifenden Brücke.
 
-**Voraussetzung:**
+**Voraussetzung:** 
 
-- Haben Sie eine Krypto-Wallet, können Sie sich dieses Tutorium ansehen: [So "registrieren" Sie ein Ethereum-Konto](/guides/how-to-create-an-ethereum-account/)
-- Laden Sie Ihre Krypto-Wallet auf
+- Sie benötigen ein Krypto-Wallet – wenn Sie keines haben, folgen Sie diesem Leitfaden, um [ein Ethereum-Konto zu erstellen](/guides/how-to-create-an-ethereum-account/)
+- Fügen Sie Ihrem Wallet Guthaben hinzu
 
-## 1. Bestimmen Sie, welches Layer-2-Netzwerk Sie verwenden möchten
+## 1. Bestimmen Sie, welches Ebene-2-Netzwerk Sie verwenden möchten
 
-Sie können mehr über die verschiedenen Projekte und wichtige Links auf unserer [Layer-2-Seite](/layer-2/) erfahren.
+Weitere Informationen zu den verschiedenen Projekten und wichtige Links finden Sie auf unserer [Ebene-2-Seite](/layer-2/).
 
-## 2. Gehen Sie zu der ausgewählten Brücke
+## 2. Gehen Sie zur ausgewählten kettenübergreifenden Brücke
 
-Einige beliebte Layer-2-Lösungen sind:
+Einige beliebte Ebene-2-Netzwerke sind:
 
-- [Arbitrum-Brücke](https://bridge.arbitrum.io/?l2ChainId=42161)
+- [Arbitrum-Brücke](https://portal.arbitrum.io/bridge?l2ChainId=42161)
 - [Optimism-Brücke](https://app.optimism.io/bridge/deposit)
-- [Boba-Netzwerk-Brücke](https://gateway.boba.network/)
+- [Boba-Netzwerk-Brücke](https://hub.boba.network/)
 
-## 3. Verbinden Sie sich mit der Brücke mithilfe Ihrer Wallet
+## 3. Verbinden Sie Ihr Wallet mit der Brücke
 
-Stellen Sie sicher, dass Ihre Wallet mit dem Ethereum-Mainnet verbunden ist. Wenn dies nicht der Fall ist, fordert Sie die Website automatisch auf, das Netzwerk zu wechseln.
+Stellen Sie sicher, dass Ihr Wallet mit dem Ethereum-Mainnet-Netzwerk verbunden ist. Wenn dies nicht der Fall ist, wird die Website Sie automatisch auffordern, das Netzwerk zu wechseln.
 
-![Gemeinsame Schnittstelle zum Übergang von Token](./bridge1.png)
+![Allgemeine Benutzeroberfläche für die Überbrückung von Token](./bridge1.png)
 
-## 4. Geben Sie den Betrag an und transferieren Sie die Geldmittel
+## 4. Geben Sie den Betrag an und verschieben Sie das Guthaben
 
-Überprüfen Sie den Betrag, den Sie im Gegenzug im Layer-2-Netzwerk erhalten, sowie die Gebühren, um unangenehme Überraschungen zu vermeiden.
+Überprüfen Sie den Betrag, den Sie im Gegenzug im Ebene-2-Netzwerk erhalten, sowie die Gebühren, um unangenehme Überraschungen zu vermeiden.
 
-![Gemeinsame Schnittstelle zum Übergang von Token](./bridge2.png)
+![Allgemeine Benutzeroberfläche für die Überbrückung von Token](./bridge2.png)
 
-## 5. Bestätigen Sie die Transaktion in Ihrer Wallet
+## 5. Bestätigen Sie die Transaktion in Ihrem Wallet
 
-Sie müssen eine Gebühr in Form von ETH für die Abwicklung der Transaktion bezahlen.
+Sie müssen eine Gebühr (genannt [Gas](/glossary/#gas)) in Form von ETH für die Verarbeitung der Transaktion bezahlen.
 
-![Gemeinsame Schnittstelle zum Übergang von Token](./bridge3.png)
+![Allgemeine Benutzeroberfläche für die Überbrückung von Token](./bridge3.png)
 
-## 6. Warten Sie, bis Ihre Geldmittel transferiert wurden
+## 6. Warten Sie, bis Ihr Guthaben verschoben wurde
 
 Dieser Vorgang sollte nicht länger als 10 Minuten dauern.
 
-## 7. Fügen Sie das ausgewählte Layer-2-Netzwerk Ihrer Wallet hinzu (optional)
+## 7. Fügen Sie das ausgewählte Ebene-2-Netzwerk zu Ihrem Wallet hinzu (optional)
 
-Sie können [chainlist.org](http://chainlist.org) verwenden, um die RPC-Details des Netzwerks zu finden. Sobald das Netzwerk hinzugefügt wurde und die Transaktion abgeschlossen ist, sollten Sie die Token in Ihrer Wallet sehen.
+Sie können [chainlist.org](http://chainlist.org) verwenden, um die RPC-Details des Netzwerks zu finden. Sobald das Netzwerk hinzugefügt und die Transaktion abgeschlossen ist, sollten Sie die Token in Ihrem Wallet sehen.
 <br />
 
 <Alert variant="update">
@@ -57,17 +57,17 @@ Sie können [chainlist.org](http://chainlist.org) verwenden, um die RPC-Details 
 <AlertContent className="justify-between flex-row items-center">
   <div>Möchten Sie mehr erfahren?</div>
   <ButtonLink href="/guides/">
-    Sehen Sie unsere anderen Anleitungen
+    Sehen Sie sich unsere anderen Leitfäden an
   </ButtonLink>
 </AlertContent>
 </Alert>
 
 ## Häufig gestellte Fragen
 
-### Was ist, wenn ich Geldmittel an einer Börse habe?
+### Was ist, wenn ich Guthaben auf einer Börse habe?
 
-Sie können möglicherweise direkt von einer Börse auf einige Layer 2 abheben. Weitere Informationen finden Sie im Abschnitt „Zum Layer 2 wechseln" auf unserer [Layer-2-Seite](/layer-2/).
+Möglicherweise können Sie von einer Börse direkt auf einige Ebene-2-Netzwerke abheben. Weitere Informationen finden Sie im Abschnitt „Auf Ebene 2 wechseln“ auf unserer [Ebene-2-Seite](/layer-2/).
 
-### Kann ich nach dem Übergang meine Tokens auf L2 zum Ethereum-Mainnet zurückkehren?
+### Kann ich zum Ethereum-Mainnet zurückkehren, nachdem ich meine Token auf Ebene 2 überbrückt habe?
 
-Ja, Sie können Ihre Gelder jederzeit mit derselben Brücke wieder zurück zum Mainnet transferieren.
+Ja, Sie können Ihr Guthaben jederzeit über dieselbe kettenübergreifende Brücke zurück ins Mainnet verschieben.

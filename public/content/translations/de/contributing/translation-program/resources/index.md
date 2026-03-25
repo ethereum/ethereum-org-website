@@ -1,44 +1,49 @@
 ---
-title: Ressourcen für Übersetzer/Innen
+title: "Ressourcen für Übersetzer"
 lang: de
-description: Nützliche Ressourcen für ethereum.org-Übersetzer
+description: "Nützliche Ressourcen für Übersetzer von ethereum.org"
 ---
 
 # Ressourcen {#resources}
 
-Nachfolgend finden Sie einige nützliche Anleitungen und Tools für ethereum.org-Übersetzer sowie Übersetzergemeinschaften und Updates.
+Nachfolgend finden Sie einige nützliche Leitfäden und Werkzeuge für Übersetzer von ethereum.org sowie Übersetzungs-Communitys und Neuigkeiten.
 
 ## Leitfäden {#guides}
 
-- [Leitfaden für die Übersetzung](/contributing/translation-program/translators-guide/) _ – Anweisungen und Tipps für ethereum.org-Übersetzer_
-- [Übersetzungs-FAQs](/contributing/translation-program/faq/)_ – häufig gestellte Fragen und Antworten zum Übersetzungsprogramm von ethereum.org_
-- [Editorleitfaden für Crowdin-Online](https://support.crowdin.com/online-editor/)_ – ein ausführlicher Ratgeber für die Nutzung des Online-Crowdin-Editors und seiner umfangreichen Funktionen_
-- [Inhaltsbereich](/contributing/translation-program/)_ – welche Seiten gehören zu welchen Inhaltsbereichen von ethereum.org_
+- [Übersetzungs-Styleguide](/contributing/translation-program/translators-guide/) _– Anweisungen und Tipps für Übersetzer von ethereum.org_
+- [Häufig gestellte Fragen (FAQ) zur Übersetzung](/contributing/translation-program/faq/) _– häufig gestellte Fragen und Antworten zum Übersetzungsprogramm von ethereum.org_
+- [Leitfaden für den Crowdin-Online-Editor](https://support.crowdin.com/online-editor/) _– ein ausführlicher Leitfaden zur Verwendung des Crowdin-Online-Editors und einiger der erweiterten Funktionen von Crowdin_
 
-## Tools {#tools}
+## Werkzeuge {#tools}
 
-- [Linguee](https://www.linguee.com/) _ – Suchmaschine für Übersetzungen und ein Wörterbuch, in dem Sie nach Wörtern und auch nach Phrasen suchen können_
-- [Proz-Begriffssuche](https://www.proz.com/search/) _ – Datenbank für Übersetzungen, Wörterbücher und Glossare für Fachbegriffe_
-- [Eurotermbank](https://www.eurotermbank.com/) _ – Sammlungen von Terminologie zu europäischen Themen in 42 Sprachen_
+- [Linguee](https://www.linguee.com/)
+  _– Suchmaschine für Übersetzungen und Wörterbuch, das die Suche nach Wörtern oder Phrasen ermöglicht_
+- [Proz-Begriffssuche](https://www.proz.com/search/)
+  _– Datenbank mit Übersetzungswörterbüchern und Glossaren für Fachbegriffe_
+- [Eurotermbank](https://www.eurotermbank.com/)
+  _– Sammlungen europäischer Terminologie in 42 Sprachen_
 
-## Communities {#communities}
+## Communitys {#communities}
 
-- [Sprachenspezifische Discord-Übersetzungsgruppen](https://discord.gg/ethereum-org) _ – eine Initiative zur Verbindung von ethereum.org-Übersetzern mit Übersetzungsgruppen_
-- [Chinesische Übersetzergruppe](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _ – Begriffsseite für die einfachere Koordination zwischen den chinesischen Übersetzern_
+- [Sprachspezifische Discord-Übersetzungsgruppen](https://discord.gg/ethereum-org)
+  _– eine Initiative, um Übersetzer von ethereum.org mit Übersetzungsgruppen zu verbinden_
+- [Chinesische Übersetzergruppe](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
+  _– Notion-Seite zur einfacheren Koordination zwischen chinesischen Übersetzern_
 
-## Letzte Aktualisierungen {#latest-updates}
+## Neueste Updates {#latest-updates}
 
-Damit Sie beim aktuellen Fortschritt des Übersetzungsprogramms auf dem Laufenden bleiben, folgen Sie dem [Ethereum Foundation-Blog](https://blog.ethereum.org/):
+Um über die neuesten Fortschritte des Übersetzungsprogramms auf dem Laufenden zu bleiben, können Sie dem [Blog der Ethereum Foundation](https://blog.ethereum.org/) folgen:
 
-- [Oktober 2021, Updates für Meilensteine](https://blog.ethereum.org/2021/10/04/translation-program-update)
-- [Dezember 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
-- [Juli 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
-- [August 2019, Start des Übersetzungsprogramms](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
+- [Meilenstein-Update vom Oktober 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Meilenstein-Update vom Dezember 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Meilenstein-Update vom Juli 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Start des Übersetzungsprogramms im August 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
-## Sprechstunde für Übersetzerinnen und Übersetzer {#office-hours}
+## Sprechstunden für Übersetzer {#office-hours}
 
-Jeden zweiten Mittwoch im Monat haben wir Sprechstunde für Übersetzer. Diese finden im Sprachkanal #office-hours auf dem [ethereum.org-Discord](https://discord.gg/ethereum-org) statt, wo Sie auch die genauen Zeiten und weitere Details finden.
+Wir bieten an jedem zweiten Mittwoch im Monat Sprechstunden für Übersetzer an. Diese finden im Sprachkanal #office-hours auf dem [Discord von ethereum.org](https://discord.gg/ethereum-org) statt, wo Sie auch die genauen Zeiten und weitere Details finden.
 
-Während der Geschäftszeiten haben unsere Übersetzer die Möglichkeit, Fragen zum Übersetzungsprozess zu stellen, Feedback zum Programm zu geben, ihre Ideen mitzuteilen oder einfach mit dem ethereum.org-Kernteam zu plaudern. Schließlich wollen wir diese Zusammentreffen nutzen, um die neuesten Entwicklungen im Übersetzungsprogramm mitzuteilen und wichtige Tipps und Anleitungen an unsere Mitwirkenden weiterzugeben.
+Die Sprechstunden ermöglichen es unseren Übersetzern, Fragen zum Übersetzungsprozess zu stellen, Feedback zum Programm zu geben, ihre Ideen zu teilen oder einfach mit dem Kernteam von ethereum.org zu plaudern.
+Schließlich möchten wir diese Anrufe nutzen, um aktuelle Entwicklungen im Übersetzungsprogramm zu kommunizieren und wichtige Tipps und Anweisungen mit unseren Mitwirkenden zu teilen.
 
-Wenn Sie ethereum.org-Übersetzerin und -Übersetzer sind oder werden möchten, können Sie gerne an einer dieser Sitzungen teilnehmen.
+Wenn Sie ein Übersetzer für ethereum.org sind oder einer werden möchten, können Sie gerne an einer dieser Sitzungen teilnehmen.

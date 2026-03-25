@@ -868,6 +868,60 @@ function fixBrandTags(
 }
 
 /**
+ * Fix lowercased MDX component names in translations.
+ *
+ * Translation pipelines occasionally lowercase PascalCase MDX component tags
+ * (e.g. <Emoji> becomes <emoji>). MDX component names are case-sensitive,
+ * so the lowercased tag won't resolve to the registered component.
+ * This function extracts PascalCase component names from the English source
+ * and restores their casing in the translation.
+ */
+function fixLowercasedMdxComponents(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  // Extract PascalCase component names from English (opening, closing, self-closing)
+  const componentRe = /<\/?([A-Z][a-zA-Z0-9]+)[\s/>]/g
+  const componentNames = new Set<string>()
+  let match
+  while ((match = componentRe.exec(englishContent)) !== null) {
+    componentNames.add(match[1])
+  }
+
+  if (componentNames.size === 0)
+    return { content: translatedContent, fixCount: 0 }
+
+  // Build a map from lowercase name to PascalCase
+  const caseMap = new Map<string, string>()
+  for (const name of componentNames) {
+    caseMap.set(name.toLowerCase(), name)
+  }
+
+  let fixCount = 0
+
+  // Split to preserve code blocks
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = translatedContent.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // Match opening/closing/self-closing tags with lowercase names
+    parts[i] = parts[i].replace(
+      /<(\/?)([a-z][a-z0-9]*)(?=[\s/>])/g,
+      (full, slash, tagName) => {
+        const correct = caseMap.get(tagName)
+        if (!correct) return full // Not a known MDX component
+        fixCount++
+        return `<${slash}${correct}`
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Fix protected brand names that were mistranslated.
  * For each brand found in English source, if the count drops in translation,
  * attempt to restore by finding the translated variants and replacing them.
@@ -3579,6 +3633,10 @@ function warnExposedMdxTags(content: string): string[] {
         // — they never break compilation, so skip them unconditionally
         if (tagName && /^[A-Z]/.test(tagName)) continue
         if (tagName && safePattern.test(tagName)) continue
+        // URL autolinks <https://...> and <http://...> are valid markdown
+        // and commonly used inside [label](<url>) to wrap URLs with
+        // special chars (parens, underscores). Skip these entirely.
+        if (/^https?$/i.test(tagName)) continue
         // This is a bare tag outside backticks — likely exposed by Crowdin
         warnings.push(
           `Exposed MDX tag outside backticks: "${m[0]}" — may break MDX compilation`
@@ -3608,6 +3666,9 @@ function removeOrphanedClosingTags(content: string): {
 
     for (const tag of orphanTags) {
       const lines = parts[partIdx].split("\n")
+      // Track unclosed openers across lines so a </tag> on line N+1
+      // paired with <tag> on line N is not treated as orphaned.
+      let unclosedFromPrev = 0
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i]
         // Strip inline code spans for counting only — tags inside
@@ -3619,15 +3680,18 @@ function removeOrphanedClosingTags(content: string): {
         const closeCount = (lineForCounting.match(closeRe) || []).length
         const openCount = (lineForCounting.match(openRe) || []).length
 
-        // If there are more closing tags than opening tags on this line,
+        // Effective openers = this line's openers + carry-over from previous lines
+        const effectiveOpen = openCount + unclosedFromPrev
+
+        // If there are more closing tags than effective openers on this line,
         // remove the excess closing tags (the trailing orphans)
-        if (closeCount > openCount) {
-          // Keep the first `openCount` closers (paired with openers),
+        if (closeCount > effectiveOpen) {
+          // Keep the first `effectiveOpen` closers (paired with openers),
           // remove the rest (orphans at the end of the line)
           let kept = 0
           lines[i] = line.replace(closeRe, (match) => {
             kept++
-            if (kept <= openCount) {
+            if (kept <= effectiveOpen) {
               return match // Keep — paired with an opener
             }
             fixCount++
@@ -3636,6 +3700,9 @@ function removeOrphanedClosingTags(content: string): {
           // Clean up any resulting double spaces
           lines[i] = lines[i].replace(/  +/g, " ").trimEnd()
         }
+
+        // Update carry-over: unclosed openers from this line
+        unclosedFromPrev = Math.max(0, effectiveOpen - closeCount)
       }
       parts[partIdx] = lines.join("\n")
     }
@@ -3847,12 +3914,6 @@ function processMarkdownFile(
     (n) => `Converted ${n} *italic* to <em> tags before non-Latin text`
   )
 
-  // Warn about exposed MDX tags from broken backtick spans
-  {
-    const tagWarnings = warnExposedMdxTags(content)
-    issues.push(...tagWarnings)
-  }
-
   applyFix(
     () => normalizeFrontmatterDates(content),
     (n) => `Normalized ${n} frontmatter dates to ISO format`
@@ -3966,7 +4027,20 @@ function processMarkdownFile(
       () => fixCollapsedComponentLineBreaks(content, englishMd!),
       (n) => `Fixed ${n} collapsed component line breaks`
     )
+    applyFix(
+      () => fixLowercasedMdxComponents(content, englishMd!),
+      (n) => `Restored ${n} lowercased MDX component name(s) to PascalCase`
+    )
+  }
 
+  // Warn about exposed MDX tags from broken backtick spans
+  // (runs after fixLowercasedMdxComponents so restored PascalCase tags are skipped)
+  {
+    const tagWarnings = warnExposedMdxTags(content)
+    issues.push(...tagWarnings)
+  }
+
+  if (englishMd) {
     // Fix and check protected brand names
     const brandResult = fixProtectedBrandNames(content, englishMd, locale)
     if (brandResult.content !== content) {
@@ -4598,6 +4672,7 @@ export const _testOnly = {
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
   fixLeakedAttrNamesInJsxValues,
+  fixLowercasedMdxComponents,
   fixMissingOpeningSup,
   fixSplitBoldMarkers,
   fixKnownWrongCompounds,

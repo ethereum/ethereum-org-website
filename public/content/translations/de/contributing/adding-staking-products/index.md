@@ -1,176 +1,176 @@
 ---
-title: Staking-Produkte oder -Services hinzufügen
-description: Richtlinien, die wir beim Hinzufügen von Staking-Produkten oder -Dienstleistungen zu ethereum.org anwenden
+title: "Hinzufügen von Staking-Produkten oder -Diensten"
+description: "Die Richtlinie, die wir beim Hinzufügen von Staking-Produkten oder -Diensten zu ethereum.org anwenden"
 lang: de
 ---
 
-# Staking-Produkte oder -Services hinzufügen {#adding-staking-products-or-services}
+# Hinzufügen von Staking-Produkten oder -Diensten {#adding-staking-products-or-services}
 
-Wir möchten sicherstellen, dass wir die bestmöglichen Ressourcen auflisten und gleichzeitig die Sicherheit und das Vertrauen der Nutzer gewährleisten.
+Wir möchten sicherstellen, dass wir die bestmöglichen Ressourcen auflisten und gleichzeitig die Sicherheit und das Vertrauen der Nutzer wahren.
 
-Jeder kann ein Staking-Produkt oder einen Service zur Hinzufügung auf ethereum.org vorschlagen. Wenn wir ein Produkt übersehen haben, **[dann schlagen Sie es bitte vor](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml).**
+Jeder kann vorschlagen, ein Staking-Produkt oder einen Staking-Dienst auf ethereum.org hinzuzufügen. Wenn wir eines übersehen haben, **[schlagen Sie es bitte vor](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
 
-Auf den folgenden Seiten finden Sie eine Liste der Staking-Produkte und Services, die wir derzeit anbieten:
+Wir listen derzeit Staking-Produkte und -Dienste auf den folgenden Seiten auf:
 
 - [Solo-Staking](/staking/solo/)
-- [Staking als Dienstleistung](/staking/saas/)
-- [Staking-Pool](/staking/pools/)
+- [Staking-as-a-Service](/staking/saas/)
+- [Staking-Pools](/staking/pools/)
 
-Der Proof-of-Stake wurde am 1. Dezember 2020 auf der Beacon Chain eingeführt. Das Staking ist ein noch relativ neues Verfahren. Dennoch haben wir versucht, einen fairen und transparenten Rahmen für die Berücksichtigung auf ethereum.org zu schaffen. Die Kriterien für die Auflistung werden sich jedoch im Laufe der Zeit ändern und weiterentwickeln und liegen letztendlich im Ermessen des ethereum.org-Website-Teams.
+Proof-of-Stake auf der Beacon Chain ist seit dem 1. Dezember 2020 live. Obwohl Staking noch relativ neu ist, haben wir versucht, einen fairen und transparenten Rahmen für die Berücksichtigung auf ethereum.org zu schaffen. Die Kriterien für die Auflistung werden sich jedoch im Laufe der Zeit ändern und weiterentwickeln und liegen letztendlich im Ermessen des Website-Teams von ethereum.org.
 
 ## Der Entscheidungsrahmen {#the-decision-framework}
 
-Die Entscheidung, ein Produkt auf ethereum.org zu listen, ist von mehrern Faktoren abhängig. Mehrer Kriterien werden bei der Entscheidung über die Aufnahme eines Produkts oder einer Dienstleistung gemeinsam berücksichtigt. Je mehr dieser Kriterien erfüllt sind, umso wahrscheinlicher ist eine Aufnahme in die Liste.
+Die Entscheidung, ein Produkt auf ethereum.org aufzulisten, hängt nicht von einem einzigen Faktor ab. Bei der Entscheidung, ein Produkt oder einen Dienst aufzulisten, werden mehrere Kriterien zusammen berücksichtigt. Je mehr dieser Kriterien erfüllt sind, desto wahrscheinlicher ist eine Auflistung.
 
-**Erstens: Um welche Art von Produkt oder Dienstleistung handelt es sich?**
+**Erstens: Um welche Kategorie von Produkt oder Dienst handelt es sich?**
 
-- Node- oder Client-Tool
+- Blockchain-Knoten- oder Anwendungs-Tools
 - Schlüsselverwaltung
-- Staking als Dienstleistung (SaaS)
+- Staking-as-a-Service (SaaS)
 - Staking-Pool
 
-Derzeit sind nur Produkte oder Dienstleistungen in diesen Kategorien aufgeführt.
+Derzeit listen wir nur Produkte oder Dienste in diesen Kategorien auf.
 
-### Aufnahmekriterien {#criteria-for-inclusion}
+### Kriterien für die Aufnahme {#criteria-for-inclusion}
 
-Die eingereichten Staking-Produkte oder Services werden anhand von folgenden Kriterien bewertet:
+Einreichungen von Staking-Produkten oder -Diensten werden nach den folgenden Kriterien bewertet:
 
-**Wann wurde das Projekt oder der Service gestartet?**
+**Wann wurde das Projekt oder der Dienst gestartet?**
 
-- Gibt es Belege dafür, wann das Produkt oder der Service der Öffentlichkeit zugänglich gemacht wurde?
-- Auf dieser Grundlage wird ermittelt, wie bewährt ein Produkt ist.
+- Gibt es Belege dafür, wann das Produkt oder der Dienst der Öffentlichkeit zugänglich gemacht wurde?
+- Dies wird verwendet, um die „Praxiserprobung“ (Battle-Tested-Score) des Produkts zu bestimmen.
 
-**Wird das Projekt aktiv verwaltet?**
+**Wird das Projekt aktiv gepflegt?**
 
-- Gibt es ein aktives Team, das aktuell an der Entwicklung des Projekts arbeitet? Wer sind die Beteiligten?
-- Es werden nur aktiv verwaltete Produkte berücksichtigt.
+- Gibt es ein aktives Team, das das Projekt entwickelt? Wer ist daran beteiligt?
+- Es werden nur aktiv gepflegte Produkte berücksichtigt.
 
-**Ist das Produkt oder der Service frei von vertrauenswürdigen/menschlichen Vermittlern?**
+**Ist das Produkt oder der Dienst frei von vertrauenswürdigen/menschlichen Vermittlern?**
 
-- Für welche Schritte der Benutzererfahrung ist es erforderlich, dass Vertrauen in die Menschen gesetzt wird, die entweder die Schlüssel zu ihren Geldern halten oder die Belohnungen richtig verteilen?
-- Damit wird die "Vertrauenswürdigkeit" des Produkts oder Services ermittelt.
+- Welche Schritte in der Nutzererfahrung erfordern das Vertrauen in Menschen, die entweder die Schlüssel zu ihren Geldern aufbewahren oder Belohnungen ordnungsgemäß verteilen?
+- Dies wird verwendet, um den „Vertrauenslosigkeits“-Score (Trustless-Score) des Produkts oder Dienstes zu bestimmen.
 
-**Liefert das Projekt genaue und zuverlässige Informationen?**
+**Stellt das Projekt genaue und zuverlässige Informationen bereit?**
 
 - Es ist von entscheidender Bedeutung, dass die Website des Produkts aktuelle, genaue und nicht irreführende Informationen enthält, insbesondere wenn sie sich auf das Ethereum-Protokoll oder andere verwandte Technologien beziehen.
-- Beiträge, die Fehlinformationen, veraltete Details oder potenziell irreführende Aussagen über Ethereum oder andere relevante Themen enthalten, werden nicht aufgelistet oder werden entfernt, wenn sie bereits aufgelistet sind.
+- Einreichungen, die Fehlinformationen, veraltete Details oder potenziell irreführende Aussagen über Ethereum oder andere relevante Themen enthalten, werden nicht aufgelistet oder entfernt, falls sie bereits aufgelistet sind.
 
 **Welche Plattformen werden unterstützt?**
 
-- z. B. Linux, macOS, Windows, iOS, Android
+- d. h. Linux, macOS, Windows, iOS, Android
 
 #### Software und Smart Contracts {#software-and-smart-contracts}
 
-Für jegliche benutzerdefinierte Software oder Smart Contracts:
+Für jede beteiligte benutzerdefinierte Software oder Smart Contracts:
 
 **Ist alles Open Source?**
 
 - Open-Source-Projekte sollten über ein öffentlich zugängliches Quellcode-Repository verfügen.
-- Das wird verwendet, um die "Open-Source"-Bewertung des Produkts zu bestimmen.
+- Dies wird verwendet, um den „Open-Source“-Score des Produkts zu bestimmen.
 
-**Ist die _Beta-Entwicklung_ für das Produkt abgeschlossen?**
+**Hat das Produkt die _Beta_-Entwicklungsphase verlassen?**
 
 - Wo befindet sich das Produkt in seinem Entwicklungszyklus?
-- Produkte in der Betaphase werden nicht für die Aufnahme auf ethereum.org berücksichtigt.
+- Produkte in der Beta-Phase werden für die Aufnahme auf ethereum.org nicht berücksichtigt.
 
 **Wurde die Software einem externen Sicherheitsaudit unterzogen?**
 
-- Wenn nicht, ist eine externe Prüfung geplant?
-- Auf diese Weise wird die "Prüfungsbewertung" des Produkts ermittelt.
+- Wenn nicht, gibt es Pläne, ein externes Audit durchzuführen?
+- Dies wird verwendet, um den „Audit“-Score des Produkts zu bestimmen.
 
-**Hat das Projekt ein Bug-Bounty-Programm?**
+**Verfügt das Projekt über ein Bug-Bounty-Programm?**
 
-- Wenn nicht, ist die Zahlung einer Prämie für entdeckte Sicherheitslücken geplant?
-- Das wird verwendet, um die "Bug Bounty"-Punktzahl des Produkts zu ermitteln.
+- Wenn nicht, gibt es Pläne, ein Sicherheits-Bug-Bounty-Programm einzurichten?
+- Dies wird verwendet, um den „Bug-Bounty“-Score des Produkts zu bestimmen.
 
-#### Node- oder Client-Tool {#node-or-client-tooling}
+#### Blockchain-Knoten- oder Anwendungs-Tools {#node-or-client-tooling}
 
-Für Softwareprodukte im Zusammenhang mit der Einrichtung, Verwaltung oder Migration von Nodes oder Clients:
+Für Softwareprodukte im Zusammenhang mit der Einrichtung, Verwaltung oder Migration von Blockchain-Knoten oder Anwendungen:
 
-**Welche Clients auf Konsensebene (d. h. Lighthouse, Teku, Nimbus, Prysm) werden unterstützt?**
+**Welche Konsens-Clients (d. h. Lighthouse, Teku, Nimbus, Prysm, Grandine) werden unterstützt?**
 
-- Welche Clients werden unterstützt? Kann der Nutzer wählen?
-- Das wird zur Ermittlung der "Multi-Client"-Bewertung des Produkts verwendet.
+- Welche Anwendungen werden unterstützt? Kann der Nutzer wählen?
+- Dies wird verwendet, um den „Multi-Client“-Score des Produkts zu bestimmen.
 
-#### Staking als Service {#staking-as-a-service}
+#### Staking-as-a-Service {#staking-as-a-service}
 
-Für [Staking-as-a-Service-Listings](/staking/saas/) (d. h. delegierter Node-Betrieb):
+Für [Staking-as-a-Service-Einträge](/staking/saas/) (d. h. delegierter Betrieb von Blockchain-Knoten):
 
-**Wie hoch sind die Gebühren für die Nutzung des Services?**
+**Welche Gebühren fallen für die Nutzung des Dienstes an?**
 
-- Wie ist die Gebührenstruktur, gibt es z. B. eine monatliche Gebühr für den Service?
+- Wie ist die Gebührenstruktur, gibt es z. B. eine monatliche Gebühr für den Dienst?
 - Gibt es zusätzliche Staking-Anforderungen?
 
-**Müssen sich die Nutzer für ein Konto registrieren?**
+**Müssen sich Nutzer für ein Konto registrieren?**
 
-- Kann jemand den Service ohne Genehmigung oder KYC nutzen?
-- Auf diese Weise wird der Aspekt der "Berechtigungsfreiheit" für das Produkt bewertet.
+- Kann jemand den Dienst erlaubnisfrei oder ohne KYC nutzen?
+- Dies wird verwendet, um den „Erlaubnisfreiheits“-Score (Permissionless-Score) des Produkts zu bestimmen.
 
-**Wer hat die Singatur- und Abhebungsschlüssel?**
+**Wer besitzt die Signaturschlüssel und die Auszahlungsschlüssel?**
 
-- Auf welche Schlüssel hat der Benutzer Zugriff? Auf welche Schlüssel hat der Service Zugriff?
-- Das wird zur Ermittlung der "Vertrauenswürdigkeit" des Produkts herangezogen.
+- Auf welche Schlüssel behält der Nutzer Zugriff? Auf welche Schlüssel erhält der Dienst Zugriff?
+- Dies wird verwendet, um den „Vertrauenslosigkeits“-Score (Trustless-Score) des Produkts zu bestimmen.
 
-**Wie groß ist die Kundenvielfalt der betriebenen Knoten?**
+**Wie ist die Client-Vielfalt der betriebenen Blockchain-Knoten?**
 
-- Wie viel Prozent der Validierungsschlüssel werden von einem Client der Konsensebene (CL) ausgeführt?
-- Seit der letzten Bearbeitung wird vowiegend Prysm als Konsensebenen-Client von den Knotenbetreibern verwendet. Das ist gefährlich für Netzwerk. Wenn ein CL-Client derzeit von mehr als 33 % des Netzes genutzt wird, fordern wir Daten zur Nutzung an.
-- Auf dieser Grundlage wird für das Produkt der Aspekt "Diverse Clients" bewertet.
+- Wie viel Prozent der Validator-Schlüssel werden von einem mehrheitlich genutzten Konsensebenen-Client (CL) ausgeführt?
+- Zum Zeitpunkt der letzten Bearbeitung ist Prysm der Konsensebenen-Client, der von der Mehrheit der Betreiber von Blockchain-Knoten ausgeführt wird, was für das Netzwerk gefährlich ist. Wenn ein CL-Client derzeit von über 33 % des Netzwerks verwendet wird, fordern wir Daten zu seiner Nutzung an.
+- Dies wird verwendet, um den „Client-Vielfalt“-Score (Diverse-Clients-Score) des Produkts zu bestimmen.
 
 #### Staking-Pool {#staking-pool}
 
-Für [Staking-Services im Pool](/staking/pools/):
+Für [gepoolte Staking-Dienste](/staking/pools/):
 
-**Wie hoch ist die Mindest-ETH, die für einen Einsatz erforderlich ist?**
+**Was ist das Minimum an ETH, das für das Staking erforderlich ist?**
 
 - z. B. 0,01 ETH
 
-**Wie hoch sind die Gebühren oder die Anforderungen für bzw. an das Staking?**
+**Welche Gebühren oder Staking-Anforderungen sind damit verbunden?**
 
-- Wie viel Prozent der Prämien werden als Gebühren abgezogen?
+- Wie viel Prozent der Belohnungen werden als Gebühren abgezogen?
 - Gibt es zusätzliche Staking-Anforderungen?
 
 **Gibt es einen Liquiditäts-Token?**
 
-- Um welche Token handelt es sich? Wie funktionieren sie? Wie lauten die Vertragsadressen?
-- Das wird zur Ermittlung der "Liquiditäts-Token"-Bewertung des Produkts verwendet.
+- Welche Token sind beteiligt? Wie funktionieren sie? Wie lauten die Vertragsadressen?
+- Dies wird verwendet, um den „Liquiditäts-Token“-Score des Produkts zu bestimmen.
 
-**Können Nutzer als Knotenbetreiber teilnehmen?**
+**Können Nutzer als Betreiber eines Blockchain-Knotens teilnehmen?**
 
-- Was ist erforderlich, um Validator-Clients mit den gepoolten Mitteln zu betreiben?
-- Ist hierfür die Genehmigung einer Einzelperson, eines Unternehmens oder einer DAO erforderlich?
-- Auf diese Weise wird der Aspekt "berechtigungsfreie Knoten" für das Produkt bewertet.
+- Was ist erforderlich, um Validator-Anwendungen mit den gepoolten Geldern auszuführen?
+- Ist dafür die Erlaubnis einer Einzelperson, eines Unternehmens oder einer DAO erforderlich?
+- Dies wird verwendet, um den „Erlaubnisfreie Blockchain-Knoten“-Score (Permissionless-Nodes-Score) des Produkts zu bestimmen.
 
-**Wie groß ist die Kundenvielfalt bei den Betreibern der Poolknoten?**
+**Wie ist die Client-Vielfalt der Pool-Blockchain-Knoten-Betreiber?**
 
-- Wie viel Prozent der Knotenbetreiber verwenden einen Mehrheits-Client der Konsensebene (CL)?
-- Seit der letzten Bearbeitung wird vowiegend Prysm als Konsensebenen-Client von den Knotenbetreibern verwendet. Das ist gefährlich für Netzwerk. Wenn ein CL-Client derzeit von mehr als 33 % des Netzes genutzt wird, fordern wir Daten zur Nutzung an.
-- Auf dieser Grundlage wird für das Produkt der Aspekt "Diverse Clients" bewertet.
+- Wie viel Prozent der Betreiber von Blockchain-Knoten führen einen mehrheitlich genutzten Konsensebenen-Client (CL) aus?
+- Zum Zeitpunkt der letzten Bearbeitung ist Prysm der Konsensebenen-Client, der von der Mehrheit der Betreiber von Blockchain-Knoten ausgeführt wird, was für das Netzwerk gefährlich ist. Wenn ein CL-Client derzeit von über 33 % des Netzwerks verwendet wird, fordern wir Daten zu seiner Nutzung an.
+- Dies wird verwendet, um den „Client-Vielfalt“-Score (Diverse-Clients-Score) des Produkts zu bestimmen.
 
-### Weitere Kriterien: optionale Aspekte {#other-criteria}
+### Weitere Kriterien: Nice-to-haves {#other-criteria}
 
 **Welche Benutzeroberflächen werden unterstützt?**
 
-- z. B. Browser-Anwendung, Desktop-Anwendung, mobile Anwendung, CLI
+- d. h. Browser-App, Desktop-App, Mobile-App, CLI
 
-**Bietet die Software für das Knoten-Tooling eine einfache Möglichkeit, zwischen den Clients zu wechseln?**
+**Bietet die Software bei Blockchain-Knoten-Tools eine einfache Möglichkeit, zwischen Anwendungen zu wechseln?**
 
-- Kann der Benutzer mit dem Tool einfach und sicher zwischen Clients wechseln?
+- Kann der Nutzer mit dem Tool einfach und sicher die Anwendungen wechseln?
 
-**Bei SaaS: Wie viele Validatoren werden derzeit von dem Service betrieben?**
+**Wie viele Validatoren werden bei SaaS derzeit von dem Dienst betrieben?**
 
-- Das gibt uns einen Eindruck von der bisherigen Reichweite Ihres Services.
+- Dies gibt uns eine Vorstellung von der bisherigen Reichweite Ihres Dienstes.
 
-## So erfolgt die Anzeige von Ergebnissen {#product-ordering}
+## Wie wir Ergebnisse anzeigen {#product-ordering}
 
-Die [Kriterien für die Aufnahme](#criteria-for-inclusion) werden verwendet, um eine kumulative Punktzahl für jedes Produkt oder jeden Service zu berechnen. Das dient dazu, Produkte, die bestimmte objektive Kriterien erfüllen, zu sortieren und zu präsentieren. Je mehr Kriterien belegt werden, desto höher fällt die Bewertung eines Produkts aus. Gleichstände werden dabei nach dem Zufallsprinzip gewertet.
+Die oben genannten [Kriterien für die Aufnahme](#criteria-for-inclusion) werden verwendet, um einen kumulativen Score für jedes Produkt oder jeden Dienst zu berechnen. Dies dient als Mittel zum Sortieren und Präsentieren von Produkten, die bestimmte objektive Kriterien erfüllen. Je mehr Kriterien nachgewiesen werden, desto höher wird ein Produkt einsortiert, wobei bei Gleichstand beim Laden eine zufällige Reihenfolge gewählt wird.
 
 Die Codelogik und die Gewichtungen für diese Kriterien sind derzeit in [dieser JavaScript-Komponente](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) in unserem Repo enthalten.
 
-## Ihr Produkt oder Ihren Service hinzufügen {#add-product}
+## Fügen Sie Ihr Produkt oder Ihren Dienst hinzu {#add-product}
 
-Wenn Sie ein Staking-Produkt oder einen Staking-Service zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
+Wenn Sie ein Staking-Produkt oder einen Staking-Dienst zu ethereum.org hinzufügen möchten, erstellen Sie ein Issue auf GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
-  Eintrag erstellen
+  Issue erstellen
 </ButtonLink>

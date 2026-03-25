@@ -1,61 +1,61 @@
 ---
-title: Entwicklertools hinzufügen
+title: "Entwicklertools hinzufügen"
 lang: de
-description: Unsere Kriterien für die Auflistung von Entwicklertools auf ethereum.org
+description: "Unsere Kriterien für die Auflistung von Entwicklertools auf ethereum.org"
 ---
 
 # Entwicklertools hinzufügen {#contributing-to-ethereumorg-}
 
-Wir möchten sicherstellen, dass wir nur die besten Entwicklerressourcen auflisten, damit andere vertrauensvoll damit arbeiten können und die Unterstützung bekommen, die sie benötigen.
+Wir möchten sicherstellen, dass wir die bestmöglichen Entwicklerressourcen auflisten, damit die Leute mit Zuversicht entwickeln können und die Unterstützung erhalten, die sie benötigen.
 
-Wenn es ein hilfreiches Entwicklungstool gibt, das wir vergessen haben, dann schlagen Sie es gerne an geeigneter Stelle vor.
+Wenn es ein hilfreiches Entwicklertool gibt, das wir übersehen haben, kannst du es gerne an einer passenden Stelle vorschlagen.
 
-Derzeit listen wir Entwicklertools in unserem [Entwicklerportal](/developers/).
+Wir listen derzeit Entwicklertools in unserem gesamten [Entwicklerportal](/developers/) auf.
 
-**Sie können gerne neue Ergänzungen zu den entsprechenden Seiten vorschlagen.**
+**Fühle dich frei, neue Ergänzungen für die entsprechenden Seiten vorzuschlagen.**
 
-## So treffen wir Entscheidungen {#ways-to-contribute}
+## Wie wir entscheiden {#ways-to-contribute}
 
-Die eingereichten Entwicklertools werden anhand der folgenden Kriterien bewertet:
+Einreichungen von Entwicklertools werden nach den folgenden Kriterien bewertet:
 
-**Unterscheidet es sich wesentlich von den bereits aufgelisteten Tools?**
+**Unterscheidet es sich sinnvoll von bereits gelisteten Tools?**
 
-- Neue Toolkategorien oder -typen
-- Neue Funktionen im Vergleich zu bestehenden, ähnlichen Tools
-- Konzipiert für einen bestimmten Anwendungsfall, der von bestehenden, ähnlichen Tools nicht abgedeckt wird
+- Neue Kategorien oder Arten von Tools
+- Neue Funktionen im Vergleich zu bestehenden ähnlichen Tools
+- Ausgerichtet auf einen bestimmten Anwendungsfall, der von bestehenden ähnlichen Tools nicht abgedeckt wird
 
 **Ist das Tool gut dokumentiert?**
 
-- Gibt es eine Dokumentation?
-- Reicht es aus, das Werkzeug zu benutzen?
-- Sind kürzlich Aktualisierungen erfolgt?
+- Ist eine Dokumentation vorhanden?
+- Ist sie ausreichend, um das Tool zu nutzen?
+- Wurde sie in letzter Zeit aktualisiert?
 
-**Ist das Tool gängig?**
+**Ist das Tool weit verbreitet?**
 
-- Wir berücksichtigen Kennzahlen wie GitHub-Sterne, Downloadstatistiken und die Frage, ob es von bekannten Unternehmen oder Projekten eingesetzt wird.
+- Wir berücksichtigen Metriken wie GitHub-Sterne, Download-Statistiken und ob es von bekannten Unternehmen oder Projekten verwendet wird.
 
-**Ist die Toolqualität ausreichend?**
+**Ist das Tool von ausreichender Qualität?**
 
-- Treten wiederkehrend Fehler auf?
+- Gibt es wiederkehrende Fehler?
 - Ist das Tool zuverlässig?
-- Wird das Tool aktiv gewartet?
+- Wird das Tool aktiv gepflegt?
 
 **Ist das Tool Open Source?**
 
-Viele Projekte im Bereich Ethereum sind Open Source. Wir führen mit höherer Wahrscheinlichkeit Open-Source-Projekte auf, die es Entwicklern aus der Community ermöglichen, den Code einzusehen und dazu beizutragen.
+Viele Projekte im Ethereum-Bereich sind Open Source. Wir listen eher Open-Source-Projekte auf, die es Community-Entwicklern ermöglichen, den Code zu überprüfen und dazu beizutragen.
 
 ---
 
-## Produktanordnung {#product-ordering}
+## Produktreihenfolge {#product-ordering}
 
-Sofern die Produkte nicht ausdrücklich anders geordnet sind, z. B. alphabetisch, werden sie in der Reihenfolge der Hinzufügung angezeigt. Die neuesten Produkte erscheinen also am Ende der Liste.
+Sofern Produkte nicht ausdrücklich anders geordnet sind, z. B. alphabetisch, werden sie in der Reihenfolge vom ältesten zum neuesten hinzugefügten Produkt auf der Seite angezeigt. Mit anderen Worten: Die neuesten Produkte werden am Ende der Liste hinzugefügt.
 
 ---
 
-## Ihr Entwicklertool hinzufügen {#how-decisions-about-the-site-are-made}
+## Füge dein Entwicklertool hinzu {#how-decisions-about-the-site-are-made}
 
-Wenn Sie ein Entwicklertool zu ethereum.org hinzufügen möchten, das die Kriterien erfüllt, erstellen Sie einen Eintrag auf GitHub.
+Wenn du ein Entwicklertool zu ethereum.org hinzufügen möchtest und es die Kriterien erfüllt, erstelle ein Issue auf GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
-  Ticket erstellen
+  Issue erstellen
 </ButtonLink>
