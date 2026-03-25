@@ -1,5 +1,7 @@
 import type { MetricReturnData } from "@/lib/types"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_ETHEREUM_STABLECOINS_MCAP_TASK_ID =
   "fetch-ethereum-stablecoins-mcap"
 
@@ -19,7 +21,7 @@ export async function fetchEthereumStablecoinsMcap(): Promise<MetricReturnData> 
 
   console.log("Starting Ethereum stablecoins market cap data fetch")
 
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status
