@@ -1,10 +1,10 @@
 ---
 title: "آپٹیمزم (Optimism) کے معیاری برج کنٹریکٹ کا جائزہ"
-description: آپٹیمزم کا معیاری برج کیسے کام کرتا ہے؟ یہ اس طرح کیوں کام کرتا ہے؟
-author: اوری پومرانٹز
-tags: ["solidity", "برج", "لیئر 2"]
+description: "آپٹیمزم کا معیاری برج کیسے کام کرتا ہے؟ یہ اس طرح کیوں کام کرتا ہے؟"
+author: "اوری پومرانٹز"
+tags: ["Solidity", "برج", "لیئر 2"]
 skill: intermediate
-breadcrumb: آپٹیمزم برج
+breadcrumb: "آپٹیمزم برج"
 published: 2022-03-30
 lang: ur
 ---

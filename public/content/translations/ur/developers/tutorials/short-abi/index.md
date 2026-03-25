@@ -1,11 +1,11 @@
 ---
 title: "کال ڈیٹا (Calldata) کی بہتری کے لیے مختصر ABIs"
-description: آپٹیمسٹک رول اپس (Optimistic Rollups) کے لیے اسمارٹ کانٹریکٹس کو بہتر بنانا
-author: اوری پومرانٹز
+description: "آپٹیمسٹک رول اپس (Optimistic Rollups) کے لیے اسمارٹ کانٹریکٹس کو بہتر بنانا"
+author: "اوری پومرانٹز"
 lang: ur
 tags: ["لیئر 2"]
 skill: intermediate
-breadcrumb: مختصر ABIs
+breadcrumb: "مختصر ABIs"
 published: 2022-04-01
 ---
 

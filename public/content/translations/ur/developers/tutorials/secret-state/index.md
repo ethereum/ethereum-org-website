@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 breadcrumb: "ZK خفیہ حالت"
-lang: ur-in
+lang: ur
 published: 2025-03-15
 ---
 

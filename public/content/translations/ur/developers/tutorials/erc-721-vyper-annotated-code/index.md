@@ -1,9 +1,9 @@
 ---
 title: "Vyper ERC-721 کنٹریکٹ کا جائزہ"
 description: "Ryuya Nakamura کا ERC-721 کنٹریکٹ اور یہ کیسے کام کرتا ہے"
-author: اوری پومرانٹز
+author: "اوری پومرانٹز"
 lang: ur
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: Vyper ERC-721
 published: 2021-04-01
