@@ -4,6 +4,7 @@ description: "一安全指南列表來介紹如何考慮安全當建立你個人
 author: "Trailofbits"
 tags: [ "solidity", "smart contracts", "security" ]
 skill: intermediate
+breadcrumb: "安全指南"
 lang: zh-tw
 published: 2020-09-06
 source: Building secure contracts

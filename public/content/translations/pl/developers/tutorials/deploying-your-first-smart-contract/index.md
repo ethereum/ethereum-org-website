@@ -9,6 +9,7 @@ tags:
   - "pierwsze kroki"
   - "wdrożenie"
 skill: beginner
+breadcrumb: "Pierwszy kontrakt"
 lang: pl
 published: 2020-04-03
 source: EthereumDev

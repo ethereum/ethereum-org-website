@@ -1,6 +1,6 @@
 import { type ReactNode, useState } from "react"
-import { motion } from "framer-motion"
 import { Info, X } from "lucide-react"
+import { motion } from "motion/react"
 
 import { Button } from "../ui/buttons/Button"
 import {
@@ -12,7 +12,7 @@ import {
 
 import { PulseAnimation } from "./PulseAnimation"
 
-const MotionButton = motion(Button)
+const MotionButton = motion.create(Button)
 
 type MoreInfoPopover = {
   isFirstStep: boolean

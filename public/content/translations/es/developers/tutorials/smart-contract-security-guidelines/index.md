@@ -4,6 +4,7 @@ description: Lista de directrices de seguridad para tener en cuenta al crear una
 author: "Trailofbits"
 tags: [ "Solidity", "contratos Inteligentes", "seguridades" ]
 skill: intermediate
+breadcrumb: "Pautas de seguridad"
 lang: es
 published: 2020-09-06
 source: Building secure contracts

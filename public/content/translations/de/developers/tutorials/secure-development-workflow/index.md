@@ -4,6 +4,7 @@ description: Ein empfohlener Workflow zum Schreiben sicherer Smart Contracts
 author: "Trailofbits"
 tags: ["smart contracts", "security", "solidity"]
 skill: intermediate
+breadcrumb: "Sicherheitscheckliste"
 lang: de
 published: 2020-09-07
 source: Building secure contracts

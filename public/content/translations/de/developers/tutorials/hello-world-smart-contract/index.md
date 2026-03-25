@@ -10,6 +10,7 @@ tags:
   - "Erste Schritte"
   - "Bereitstellung"
 skill: beginner
+breadcrumb: "Hello World-Vertrag"
 lang: de
 published: 2021-03-31
 ---

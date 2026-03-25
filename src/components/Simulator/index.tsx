@@ -22,7 +22,7 @@ import { Template } from "./Template"
 import type { PathId, SimulatorData } from "./types"
 import { getValidPathId, isValidPathId } from "./utils"
 
-import { usePathname, useRouter } from "@/i18n/routing"
+import { usePathname, useRouter } from "@/i18n/navigation"
 
 type SimulatorProps = {
   children: ReactNode

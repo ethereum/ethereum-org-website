@@ -8,6 +8,7 @@ tags:
   - "Solidity"
   - "contratti intelligenti"
 skill: beginner
+breadcrumb: "Creare e distribuire NFT"
 lang: it
 published: 2021-04-22
 ---

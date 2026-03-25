@@ -10,6 +10,7 @@ tags:
     "ஸ்மார்ட் ஒப்பந்தங்கள்"
   ]
 skill: beginner
+breadcrumb: "NFT எழுது நிறுவு"
 lang: ta
 published: 2021-04-22
 ---

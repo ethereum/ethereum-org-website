@@ -1,0 +1,12 @@
+{
+  "before-you-read": "Zanim przeczytasz",
+  "heading": "Chcesz zrozumieć Ethereum?",
+  "description": "Ta biała księga została opublikowana w <strong>2014</strong> roku, przed uruchomieniem Ethereum. Po ponad 10 latach rozwoju, ważnych aktualizacjach i rozwoju ekosystemu, <strong>oryginalna biała księga nie odzwierciedla już tego, czym Ethereum jest dzisiaj</strong>.",
+  "cta-learn": "Dowiedz się więcej o dzisiejszym Ethereum",
+  "cta-download-pdf": "Pobierz oryginalny plik PDF (2014)",
+  "whats-changed": "Co zmieniło się od 2014 roku?",
+  "evolution-pos": "Ethereum przeszło z proof-of-work na proof-of-stake (The Merge, 2022)",
+  "evolution-l2": "Rozwiązania skalujące warstwy 2 przetwarzają teraz miliony transakcji",
+  "evolution-usecases": "DeFi, NFT i DAO stały się głównymi przypadkami użycia",
+  "evolution-standards": "Standardy inteligentnych kontraktów (ERC-20, ERC-721) stały się fundamentami branży"
+}

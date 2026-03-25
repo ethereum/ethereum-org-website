@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 import EthGlyph from "@/components/icons/eth-glyph-solid.svg"
 import { Image } from "@/components/Image"

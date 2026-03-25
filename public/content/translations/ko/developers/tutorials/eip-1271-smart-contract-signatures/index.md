@@ -5,6 +5,7 @@ author: Nathan H. Leung
 lang: ko
 tags: [ "eip-1271", "스마트 컨트랙트", "확인", "서명" ]
 skill: intermediate
+breadcrumb: "EIP-1271 서명"
 published: 2023-01-12
 ---
 

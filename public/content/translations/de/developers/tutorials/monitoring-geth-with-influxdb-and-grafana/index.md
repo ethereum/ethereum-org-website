@@ -4,6 +4,7 @@ description: "Richten Sie die Überwachung für Ihren Geth-Node mit InfluxDB und
 author: "Mario Havel"
 tags: ["clients", "nodes"]
 skill: intermediate
+breadcrumb: "Geth-Monitoring"
 lang: de
 published: 2021-01-13
 ---

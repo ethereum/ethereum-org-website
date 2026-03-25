@@ -4,6 +4,7 @@ description: "JavaScript uygulamalarından Ethereum blokzinciri ile etkileşim k
 author: "jdourlens"
 tags: [ "web3.js", "javascript" ]
 skill: beginner
+breadcrumb: "web3.js kurulumu"
 lang: tr
 published: 2020-04-11
 source: EthereumDev

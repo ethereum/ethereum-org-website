@@ -8,6 +8,7 @@ tags:
   - "solidity"
   - "contratti intelligenti"
 skill: beginner
+breadcrumb: "Coniare un NFT"
 lang: it
 published: 2021-04-22
 ---

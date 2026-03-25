@@ -4,6 +4,7 @@ description: "本教程将教读者如何使用 IPFS 来存储去中心化应用
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
+breadcrumb: "IPFS去中心化UI"
 lang: zh
 published: 2024-06-29
 ---

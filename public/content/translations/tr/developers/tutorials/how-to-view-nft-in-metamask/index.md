@@ -4,6 +4,7 @@ description: "Bu öğretici, MetaMask'ta mevcut bir NFT'nin nasıl görüntülen
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
+breadcrumb: "Cüzdanda NFT görüntüleme"
 lang: tr
 published: 2021-04-22
 ---

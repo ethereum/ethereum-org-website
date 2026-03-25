@@ -4,6 +4,7 @@ description: This tutorial describes how to view an existing NFT on MetaMask!
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner
+breadcrumb: View NFT in wallet
 lang: en
 published: 2021-04-22
 ---

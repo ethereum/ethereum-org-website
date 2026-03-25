@@ -8,6 +8,7 @@ tags:
   - "solidity"
   - "eventi"
 skill: intermediate
+breadcrumb: "Registrazione eventi"
 lang: it
 published: 2020-04-03
 source: EthereumDev

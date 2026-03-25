@@ -4,6 +4,7 @@ description: "Ten samouczek pomaga czytelnikom zrozumieć podstawowe koncepcje E
 author: "Paul Apivat"
 tags: [ "SQL", "Wykonywanie zapytań", "Transakcje" ]
 skill: beginner
+breadcrumb: "Ethereum z SQL"
 lang: pl
 published: 2021-05-11
 source: paulapivat.com

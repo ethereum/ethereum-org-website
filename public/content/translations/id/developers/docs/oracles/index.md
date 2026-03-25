@@ -1,338 +1,116 @@
 ---
 title: Oracle
-description: Oracle membantu memasukkan data dunia nyata ke dalam aplikasi Ethereum Anda karena kontrak pintar tidak dapat membuat kueri data dunia nyata dengan sendirinya.
+description: Oracle memberi kontrak pintar Ethereum akses ke data dunia nyata, membuka lebih banyak kasus penggunaan dan nilai yang lebih besar bagi pengguna.
 lang: id
-incomplete: true
 ---
 
-Oracle adalah pengumpan data yang menghubungkan Ethereum ke informasi dunia nyata off-chain, sehingga Anda dapat membuat kueri data dalam kontrak pintar Anda. Sebagai contoh, dapp pasar prediksi menggunakan oracle untuk menyelesaikan pembayaran berdasarkan kejadian. Pasar prediksi mungkin meminta Anda untuk mempertaruhkan ETH siapa yang akan menjadi presiden Amerika Serikat berikutnya. Mereka akan menggunakan oracle untuk mengonfirmasi hasilnya dan membayar kepada para pemenang.
+Oracle adalah aplikasi yang menghasilkan umpan data yang membuat sumber data offchain tersedia di blockchain untuk kontrak pintar. Hal ini diperlukan karena kontrak pintar berbasis Ethereum, secara default, tidak dapat mengakses informasi yang disimpan di luar jaringan blockchain.
+
+Memberikan kontrak pintar kemampuan untuk mengeksekusi menggunakan data offchain memperluas utilitas dan nilai aplikasi terdesentralisasi. Misalnya, pasar prediksi onchain bergantung pada oracle untuk memberikan informasi tentang hasil yang mereka gunakan untuk memvalidasi prediksi pengguna. Misalkan Alice bertaruh 20 ETH tentang siapa yang akan menjadi Presiden AS berikutnya. Dalam hal ini, dapp pasar prediksi memerlukan oracle untuk mengonfirmasi hasil pemilu dan menentukan apakah Alice berhak atas pembayaran.
 
 ## Prasyarat {#prerequisites}
 
-Pastikan Anda sudah familiar dengan [node](/developers/docs/nodes-and-clients/), [mekanisme konsensus](/developers/docs/consensus-mechanisms/), dan [anatomi kontrak pintar](/developers/docs/smart-contracts/anatomy/), khususnya aksi.
+Halaman ini mengasumsikan pembaca sudah familier dengan dasar-dasar [Ethereum](/), termasuk [node](/developers/docs/nodes-and-clients/), [mekanisme konsensus](/developers/docs/consensus-mechanisms/), dan [EVM](/developers/docs/evm/). Anda juga harus memiliki pemahaman yang baik tentang [kontrak pintar](/developers/docs/smart-contracts/) dan [anatomi kontrak pintar](/developers/docs/smart-contracts/anatomy/), terutama [event](/glossary/#events).
 
-## Apa itu oracle {#what-is-an-oracle}
+## Apa itu oracle blockchain? {#what-is-a-blockchain-oracle}
 
-Oracle merupakan sebuah jembatan yang menghubungkan antara blockchain dan dunia nyata. Oracle bertindak sebagai API on-chain yang dapat Anda tanya untuk mendapatkan informasi tentang kontrak pintar Anda. Ini bisa berupa apa saja mulai dari informasi harga hingga laporan cuaca. Oracle dapat juga bersifat dua arah, yang digunakan untuk "mengirim" data ke dunia nyata.
+Oracle adalah aplikasi yang mencari, memverifikasi, dan mengirimkan informasi eksternal (yaitu, informasi yang disimpan secara offchain) ke kontrak pintar yang berjalan di blockchain. Selain "menarik" data offchain dan menyiarkannya di Ethereum, oracle juga dapat "mendorong" informasi dari blockchain ke sistem eksternal, mis., membuka kunci pintar setelah pengguna mengirimkan biaya melalui transaksi Ethereum.
 
-Tonton Patrick menjelaskan Oracle:
+Tanpa oracle, kontrak pintar akan sepenuhnya terbatas pada data onchain.
 
-<YouTube id="ZJfkNzyO7-U" start="10" />
+Oracle berbeda-beda berdasarkan sumber data (satu atau beberapa sumber), model kepercayaan (terpusat atau terdesentralisasi), dan arsitektur sistem (baca-langsung, publikasi-berlangganan, dan permintaan-respons). Kita juga dapat membedakan oracle berdasarkan apakah mereka mengambil data eksternal untuk digunakan oleh kontrak onchain (oracle input), mengirim informasi dari blockchain ke aplikasi offchain (oracle output), atau melakukan tugas komputasi secara offchain (oracle komputasi).
 
-## Mengapa oracle dibutuhkan? {#why-are-they-needed}
+## Mengapa kontrak pintar membutuhkan oracle? {#why-do-smart-contracts-need-oracles}
 
-Dengan blockchain seperti Ethereum, Anda membutuhkan setiap node di jaringan untuk dapat memutar ulang setiap transaksi dan berakhir dengan hasil yang sama, yang terjamin. API mengenalkan data yang berpotensi menjadi variabel. Jika Anda mengirimkan ETH sesuai nilai $USD yang disetujui menggunakan API harga, kueri akan kembali dengan hasil yang berbeda setiap harinya. Belum lagi, API bisa diretas atau tidak digunakan lagi. Jika ini terjadi, node di jaringan tidak akan bisa berkesesuaian dengan state Ethereum saat ini, yang secara efektif melanggar [konsensus](/developers/docs/consensus-mechanisms/).
+Banyak pengembang melihat kontrak pintar sebagai kode yang berjalan di alamat tertentu di blockchain. Namun, [pandangan yang lebih umum tentang kontrak pintar](/smart-contracts/) adalah bahwa mereka merupakan program perangkat lunak yang mengeksekusi sendiri yang mampu menegakkan perjanjian antara para pihak setelah kondisi tertentu terpenuhi - karenanya disebut "kontrak pintar."
 
-Oracle menyelesaikan masalah ini dengan mencatatkan data pada blockchain. Jadi node mana saja yang memutar ulang transaksi akan menggunakan data sama yang tidak bisa dirubah yang dicatatkan untuk dilihat semua orang. Untuk melakukan ini, oracle biasanya terdiri dari kontrak pintar dan beberapa komponen off-chain yang dapat meminta API, lalu mengirim transaksi secara berkala untuk memperbarui data kontrak pintar.
+Namun, menggunakan kontrak pintar untuk menegakkan perjanjian antar individu tidaklah mudah, mengingat Ethereum bersifat deterministik. [Sistem deterministik](https://en.wikipedia.org/wiki/Deterministic_algorithm) adalah sistem yang selalu menghasilkan hasil yang sama jika diberikan status awal dan input tertentu, yang berarti tidak ada keacakan atau variasi dalam proses menghitung output dari input.
 
-### Masalah oracle {#oracle-problem}
+Untuk mencapai eksekusi deterministik, blockchain membatasi node untuk mencapai konsensus pada pertanyaan biner sederhana (benar/salah) _hanya_ menggunakan data yang disimpan di blockchain itu sendiri. Contoh pertanyaan tersebut meliputi:
 
-Seperti yang kami sebutkan, transaksi Ethereum tidak dapat mengakses data off-chain secara langsung. Pada saat yang sama, mengandalkan satu sumber kebenaran untuk menyediakan data tidaklah aman dan melanggar desentralisasi sebuah kontrak pintar. Ini dikenal sebagai masalah oracle.
+- "Apakah pemilik akun (diidentifikasi dengan kunci publik) menandatangani transaksi ini dengan kunci pribadi yang berpasangan?"
+- "Apakah akun ini memiliki dana yang cukup untuk menutupi transaksi?"
+- "Apakah transaksi ini valid dalam konteks kontrak pintar ini?", dll.
 
-Kita dapat menghindari masalah oracle dengan menggunakan oracle terdesentralisasi yang menarik data dari berbagai sumber data; jika sata sumber data diretas atau gagal, kontrak pintar akan tetap berfungsi sebagaimana mestinya.
+Jika blockchain menerima informasi dari sumber eksternal (yaitu, dari dunia nyata), determinisme akan mustahil dicapai, mencegah node menyetujui validitas perubahan pada status blockchain. Ambil contoh kontrak pintar yang mengeksekusi transaksi berdasarkan nilai tukar ETH-USD saat ini yang diperoleh dari API harga tradisional. Angka ini kemungkinan akan sering berubah (belum lagi API tersebut bisa dihentikan atau diretas), yang berarti node yang mengeksekusi kode kontrak yang sama akan mendapatkan hasil yang berbeda.
 
-### Keamanan {#security}
+Untuk blockchain publik seperti Ethereum, dengan ribuan node di seluruh dunia yang memproses transaksi, determinisme sangatlah penting. Tanpa otoritas pusat yang berfungsi sebagai sumber kebenaran, node memerlukan mekanisme untuk mencapai status yang sama setelah menerapkan transaksi yang sama. Kasus di mana node A mengeksekusi kode kontrak pintar dan mendapatkan hasil "3", sementara node B mendapatkan "7" setelah menjalankan transaksi yang sama akan menyebabkan konsensus rusak dan menghilangkan nilai Ethereum sebagai platform komputasi terdesentralisasi.
 
-Oracle seaman sumber datanya. Jika dapp menggunakan Uniswap sebagai oracle untuk pengumpan harga ETH/DAI-nya, penyerang dapat memindahkan harga di Uniswap untuk memanipulasi kemampuan dapp dalam memahami harga terkini. Contoh cara melawannya adalah [sistem pengumpan](https://developer.makerdao.com/feeds/) seperti yang digunakan oleh MakerDAO, yang menyusun data harga dari banyak pengumpan harga eksternal ketimbang hanya bergantung pada satu sumber.
+Skenario ini juga menyoroti masalah dalam merancang blockchain untuk menarik informasi dari sumber eksternal. Namun, oracle memecahkan masalah ini dengan mengambil informasi dari sumber offchain dan menyimpannya di blockchain untuk dikonsumsi oleh kontrak pintar. Karena informasi yang disimpan secara onchain tidak dapat diubah dan tersedia untuk publik, node Ethereum dapat dengan aman menggunakan data offchain yang diimpor oracle untuk menghitung perubahan status tanpa merusak konsensus.
 
-### Arsitektur {#architecture}
+Untuk melakukan ini, oracle biasanya terdiri dari kontrak pintar yang berjalan secara onchain dan beberapa komponen offchain. Kontrak onchain menerima permintaan data dari kontrak pintar lainnya, yang kemudian diteruskan ke komponen offchain (disebut node oracle). Node oracle ini dapat menanyakan sumber data—menggunakan antarmuka pemrograman aplikasi (API), misalnya—dan mengirim transaksi untuk menyimpan data yang diminta di penyimpanan kontrak pintar.
 
-Ini adalah sebuah contoh arsitektur Oracle sederhana, tetapi masih ada lebih banyak cara dari pada hanya ini untuk memicu komputasi off-chain.
+Pada dasarnya, oracle blockchain menjembatani kesenjangan informasi antara blockchain dan lingkungan eksternal, menciptakan "kontrak pintar hibrida". Kontrak pintar hibrida adalah kontrak yang berfungsi berdasarkan kombinasi kode kontrak onchain dan infrastruktur offchain. Pasar prediksi terdesentralisasi adalah contoh yang sangat baik dari kontrak pintar hibrida. Contoh lain mungkin termasuk kontrak pintar asuransi tanaman yang membayar ketika serangkaian oracle menentukan bahwa fenomena cuaca tertentu telah terjadi.
 
-1. Keluarkan log dengan [aksi kontrak pintar](/developers/docs/smart-contracts/anatomy/#events-and-logs) Anda
-2. Layanan off-chain telah berlangganan (biasanya menggunakan sesuatu seperti perintah `eth_subscribe` JSON-RPC) untuk jenis log khusus ini.
-3. Layanan off-chain melanjutkan dengan melakukan beberapa tugas yang ditentukan oleh log.
-4. Layanan off-chain menanggapi dengan mengirimkan data yang diminta dalam transaksi sekunder ke kontrak pintar.
+## Apa itu masalah oracle? {#the-oracle-problem}
 
-Inilah cara mendapatkan data dengan cara 1 lawan 1, namun untuk meningkatkan keamanan, Anda mungkin ingin mendesentralisasikan cara mengumpulkan data off-chain Anda.
+Oracle memecahkan masalah penting, tetapi juga memperkenalkan beberapa komplikasi, mis.,:
 
-Langkah berikutnya mungkin membuat jaringan node ini melakukan pemanggilan terhadap API dan sumber yang beragam, dan mengumpulkan datanya secara on-chain.
+- Bagaimana kita memverifikasi bahwa informasi yang disuntikkan diekstraksi dari sumber yang benar atau belum dirusak?
 
-[Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) telah meningkatkan metodologi ini dengan membuat jaringan oracle off-chain berkomunikasi satu sama lain, secara kriptografi menandatangani respons mereka, mengumpulkan respons off-chain mereka, dan hanya mengirim satu transaksi on-chain dengan hasilnya. Dengan cara ini, lebih sedikit gas terpakai, tetapi Anda masih mendapatkan jaminan data terdesentralisasi karena setiap node telah menandatangani bagian transaksi mereka, yang membuatnya tidak dapat diubah oleh node yang mengirimkan transaksi. Kebijakan eskalasi melakukan fungsinya jika node tidak melakukan transaksi, dan node berikutnya mengirimkan transaksi.
+- Bagaimana kita memastikan bahwa data ini selalu tersedia dan diperbarui secara berkala?
 
-## Penggunaan {#usage}
+Apa yang disebut "masalah oracle" menunjukkan masalah yang muncul dengan menggunakan oracle blockchain untuk mengirim input ke kontrak pintar. Data dari oracle harus benar agar kontrak pintar dapat dieksekusi dengan benar. Lebih jauh lagi, keharusan untuk 'mempercayai' operator oracle untuk memberikan informasi yang akurat merusak aspek 'tanpa kepercayaan' dari kontrak pintar.
 
-Dengan menggunakan layanan seperti Chainlink, Anda dapat memberi referensi data terdesentralisasi on-chain yang telah ditarik dari dunia nyata dan dikumpulkan. Ini seperti kepemilikan umum, tetapi untuk data terdesentralisasi. Anda dapat juga membangun jaringan oracle modular sendiri untuk mendapatkan data yang disesuaikan yang Anda cari. Selain itu, Anda dapat melakukan komputasi off-chain dan sekaligus mengirimkan informasi ke dunia nyata. Chainlink memiliki infrastruktur bawaan untuk:
+Oracle yang berbeda menawarkan solusi yang berbeda untuk masalah oracle, yang akan kita jelajahi nanti. Oracle biasanya dievaluasi berdasarkan seberapa baik mereka dapat menangani tantangan berikut:
 
-- [Mendapatkan pengumpan harga kripto di kontrak Anda](https://chain.link/solutions/defi)
-- [Menghasilkan nomor acak yang terverifikasi (berguna untuk bermain game)](https://chain.link/solutions/chainlink-vrf)
-- [Memanggil API eksternal](https://docs.chain.link/docs/request-and-receive-data) – Satu penggunaan baru untuk ini adalah [Memeriksa cadangan wBTC](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
+1. **Kebenaran**: Oracle tidak boleh menyebabkan kontrak pintar memicu perubahan status berdasarkan data offchain yang tidak valid. Oracle harus menjamin _keaslian_ dan _integritas_ data. Keaslian berarti data didapatkan dari sumber yang benar, sedangkan integritas berarti data tetap utuh (yaitu, tidak diubah) sebelum dikirim secara onchain.
 
-Ini adalah contoh cara mendapatkan harga ETH terbaru di dalam kontrak pintar Anda dengan menggunakan sebuah pengumpan harga Chainlink:
+2. **Ketersediaan**: Oracle tidak boleh menunda atau mencegah kontrak pintar mengeksekusi tindakan dan memicu perubahan status. Ini berarti bahwa data dari oracle harus _tersedia berdasarkan permintaan_ tanpa gangguan.
 
-### Pengumpan Data Chainlink {#chainlink-data-feeds}
+3. **Kompatibilitas insentif**: Oracle harus memberi insentif kepada penyedia data offchain untuk mengirimkan informasi yang benar ke kontrak pintar. Kompatibilitas insentif melibatkan _atribusibilitas_ dan _akuntabilitas_. Atribusibilitas memungkinkan untuk menautkan sepotong informasi eksternal ke penyedianya, sementara akuntabilitas mengikat penyedia data dengan informasi yang mereka berikan, sehingga mereka dapat diberi hadiah atau dihukum berdasarkan kualitas informasi yang diberikan.
 
-```solidity
-pragma solidity ^0.6.7;
+## Bagaimana cara kerja layanan oracle blockchain? {#how-does-a-blockchain-oracle-service-work}
 
-import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
+### Pengguna {#users}
 
-contract PriceConsumerV3 {
+Pengguna adalah entitas (yaitu, kontrak pintar) yang membutuhkan informasi eksternal ke blockchain untuk menyelesaikan tindakan tertentu. Alur kerja dasar layanan oracle dimulai dengan pengguna mengirimkan permintaan data ke kontrak oracle. Permintaan data biasanya akan menjawab beberapa atau semua pertanyaan berikut:
 
-    AggregatorV3Interface internal priceFeed;
+1. Sumber apa yang dapat dikonsultasikan oleh node offchain untuk informasi yang diminta?
 
-    /**
-     * Network: Kovan
-     * Aggregator: ETH/USD
-     * Address: 0x9326BFA02ADD2366b30bacB125260Af641031331
-     */
-    constructor() public {
-        priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331);
-    }
+2. Bagaimana pelapor memproses informasi dari sumber data dan mengekstrak titik data yang berguna?
 
-    /**
-     * Returns the latest price
-     */
-    function getLatestPrice() public view returns (int) {
-        (
-            uint80 roundID,
-            int price,
-            uint startedAt,
-            uint timeStamp,
-            uint80 answeredInRound
-        ) = priceFeed.latestRoundData();
-        return price;
-    }
-}
-```
+3. Berapa banyak node oracle yang dapat berpartisipasi dalam mengambil data?
 
-[Anda dapat menguji ini dalam remix dengan mengklik tautan ini](https://remix.ethereum.org/#version=soljson-v0.6.7+commit.b8d736ae.js&optimize=false&evmVersion=null&gist=0c5928a00094810d2ba01fd8d1083581)
+4. Bagaimana seharusnya perbedaan dalam laporan oracle dikelola?
 
-[Lihat dokumen](https://docs.chain.link/docs/get-the-latest-price)
+5. Metode apa yang harus diterapkan dalam memfilter pengiriman dan menggabungkan laporan menjadi satu nilai?
 
-### Chainlink VRF {#chainlink-vrf}
+### Kontrak oracle {#oracle-contract}
 
-Chainlink VRF (Verifiable Random Function) adalah sumber keacakan yang terbukti adil dan terverifikasi yang dirancang untuk kontrak pintar. Para pengembang kontrak pintar dapat menggunakan Chainlink VRF sebagai random number generation (RNG) yang tahan perubahan untuk membangun kontrak pintar handal untuk aplikasi apa pun yang mengandalkan hasil yang tidak terprediksi:
+Kontrak oracle adalah komponen onchain untuk layanan oracle. Kontrak ini mendengarkan permintaan data dari kontrak lain, meneruskan kueri data ke node oracle, dan menyiarkan data yang dikembalikan ke kontrak klien. Kontrak ini juga dapat melakukan beberapa komputasi pada titik data yang dikembalikan untuk menghasilkan nilai agregat untuk dikirim ke kontrak yang meminta.
 
-- Game dan NFT blockchain
-- Penetapan acak untuk tugas dan sumber daya (misalnya secara acak menetapkan para hakim untuk menangani kasus)
-- Memilih sampel representatif untuk mekanisme konsensus
+Kontrak oracle mengekspos beberapa fungsi yang dipanggil oleh kontrak klien saat membuat permintaan data. Setelah menerima kueri baru, kontrak pintar akan memancarkan [log event](/developers/docs/smart-contracts/anatomy/#events-and-logs) dengan detail permintaan data. Ini memberi tahu node offchain yang berlangganan log (biasanya menggunakan sesuatu seperti perintah JSON-RPC `eth_subscribe`), yang kemudian melanjutkan untuk mengambil data yang ditentukan dalam log event.
 
-Angka acak sulit dihasilkan karena blockchain bersifat deterministik.
-
-Bekerja dengan Oracle Chainlink di luar pengumpan data mengikuti [siklus minta dan terima](https://docs.chain.link/docs/architecture-request-model) dengan Chainlink. Ini menggunakan token LINK untuk mengirimkan gas oracle kepada para penyedia oracle sebagai respons pengembalian. Token LINK khususnya dirancang untuk berfungsi dengan oracle dan didasarkan pada token ERC-677 yang ditingkatkan, yang kompatibel ke belakang dengan [ERC-20](/developers/docs/standards/tokens/erc-20/). Kode berikut ini, jika digunakan pada testnet Kovan akan mengambil angka acak yang terbukti secara kriptografis. Untuk membuat permintaan, taruhlah dana dalam kontrak dengan beberapa token LINK testnet yang bisa Anda dapatkan dari [Keran LINK Kovan](https://kovan.chain.link/).
-
-```javascript
-
-pragma solidity 0.6.6;
-
-import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
-
-contract RandomNumberConsumer is VRFConsumerBase {
-
-    bytes32 internal keyHash;
-    uint256 internal fee;
-
-    uint256 public randomResult;
-
-    /**
-     * Constructor inherits VRFConsumerBase
-     *
-     * Network: Kovan
-     * Chainlink VRF Coordinator address: 0xdD3782915140c8f3b190B5D67eAc6dc5760C46E9
-     * LINK token address:                0xa36085F69e2889c224210F603D836748e7dC0088
-     * Key Hash: 0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4
-     */
-    constructor()
-        VRFConsumerBase(
-            0xdD3782915140c8f3b190B5D67eAc6dc5760C46E9, // VRF Coordinator
-            0xa36085F69e2889c224210F603D836748e7dC0088  // LINK Token
-        ) public
-    {
-        keyHash = 0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4;
-        fee = 0.1 * 10 ** 18; // 0.1 LINK (varies by network)
-    }
-
-    /**
-     * Requests randomness from a user-provided seed
-     */
-    function getRandomNumber(uint256 userProvidedSeed) public returns (bytes32 requestId) {
-        require(LINK.balanceOf(address(this)) >= fee, "Not enough LINK - fill contract with faucet");
-        return requestRandomness(keyHash, fee, userProvidedSeed);
-    }
-
-    /**
-     * Callback function used by VRF Coordinator
-     */
-    function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
-        randomResult = randomness;
-    }
-}
-```
-
-### Penjaga Chainlink {#chainlink-keepers}
-
-Kontrak pintar tidak dapat memicu atau memulai fungsinya sendiri pada waktu arbitrari atau dalam kondisi arbitrari. Perubahan state hanya akan terjadi ketika akun lainnya memulai transaksi (seperti pengguna, oracle, atau kontrak). [Jaringan Penjaga Chainlink](https://docs.chain.link/docs/chainlink-keepers/introduction/) menyediakan opsi bagi kontrak pintar untuk men-outsource tugas pemeliharaan reguler dalam cara yang terpercaya, sederhana, dan terdesentralisasi.
-
-Untuk menggunakan Penjaga Chainlink, suatu kontrak pintar harus mengimplementasikan [KeeperCompatibleInterface](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/), yang terdiri dari dua fungsi:
-
-- `checkUpkeep` - Memeriksa apakah kontrak membutuhkan pemeliharaan yang perlu dilakukan.
-- `performUpkeep` - Melakukan pemeliharaan pada kontrak, jika diinstruksikan oleh checkUpkeep.
-
-Contoh di bawah adalah suatu kontrak penghitung sederhana. Variabel `counter` ditambahkan sebanyak satu oleh setiap pemanggilan ke `performUpkeep`. Anda dapat [melihat kode berikut ini dengan menggunakan Remix](https://remix.ethereum.org/#url=https://docs.chain.link/samples/Keepers/KeepersCounter.sol)
-
-```javascript
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.7.0;
-
-// KeeperCompatible.sol imports the functions from both ./KeeperBase.sol and
-// ./interfaces/KeeperCompatibleInterface.sol
-import "@chainlink/contracts/src/v0.7/KeeperCompatible.sol";
-
-contract Counter is KeeperCompatibleInterface {
-    /**
-    * Public counter variable
-    */
-    uint public counter;
-
-    /**
-    * Use an interval in seconds and a timestamp to slow execution of Upkeep
-    */
-    uint public immutable interval;
-    uint public lastTimeStamp;
-
-    constructor(uint updateInterval) {
-      interval = updateInterval;
-      lastTimeStamp = block.timestamp;
-
-      counter = 0;
-    }
-
-    function checkUpkeep(bytes calldata /* checkData */) external override returns (bool upkeepNeeded, bytes memory /* performData */) {
-        upkeepNeeded = (block.timestamp - lastTimeStamp) > interval;
-        // We don't use the checkData in this example. checkData ditentukan ketika Upkeep didaftarkan.
-    }
-
-    function performUpkeep(bytes calldata /* performData */) external override {
-        lastTimeStamp = block.timestamp;
-        counter = counter + 1;
-        // We don't use the performData in this example. performData dibuat oleh pemanggilan Penjaga ke fungsi checkUpkeep Anda
-    }
-}
-```
-
-Setelah menyebarkan kontrak yang kompatibel dengan Penjaga, Anda harus mendaftarkan kontrak untuk [Upkeep](https://docs.chain.link/docs/chainlink-keepers/register-upkeep/) dan membiayainya dengan LINK, untuk memberitahu Jaringan Penjaga tentang kontrak Anda, sehingga pemeliharaan Anda dilakukan secara berkelanjutan.
-
-### Proyek Penjaga {#keepers}
-
-- [Penjaga Chainlink](https://keepers.chain.link/)
-- [Jaringan Keep3r](https://docs.keep3r.network/)
-
-### Pemanggilan API Chainlink {#chainlink-api-call}
-
-[Pemanggilan API Chainlink](https://docs.chain.link/docs/make-a-http-get-request) merupakan cara termudah untuk mendapatkan data dari dunia off-chain dengan cara tradisional yang memfungsikan web: pemanggilan API. Melakukan satu instance ini dan hanya memiliki satu oracle akan membuatnya terpusat secara alami. Agar benar-benar terdesentralisasi, platform kontrak pintar perlu menggunakan banyak node yang ditemukan di [pasar data eksternal](https://market.link/).
-
-[Sebarkan kode berikut ini di remix pada jaringan kovan untuk mengujinya](https://remix.ethereum.org/#version=soljson-v0.6.7+commit.b8d736ae.js&optimize=false&evmVersion=null&gist=8a173a65099261582a652ba18b7d96c1)
-
-Ini juga mengikuti siklus minta dan terima oracle dan mengharuskan kontrak untuk didanai dengan LINK Kovan (gas oracle) agar berfungsi.
-
-```javascript
-pragma solidity ^0.6.0;
-
-import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
-
-contract APIConsumer is ChainlinkClient {
-
-    uint256 public volume;
-
-    address private oracle;
-    bytes32 private jobId;
-    uint256 private fee;
-
-    /**
-     * Network: Kovan
-     * Oracle: 0x2f90A6D021db21e1B2A077c5a37B3C7E75D15b7e
-     * Job ID: 29fa9aa13bf1468788b7cc4a500a45b8
-     * Fee: 0.1 LINK
-     */
-    constructor() public {
-        setPublicChainlinkToken();
-        oracle = 0x2f90A6D021db21e1B2A077c5a37B3C7E75D15b7e;
-        jobId = "29fa9aa13bf1468788b7cc4a500a45b8";
-        fee = 0.1 * 10 ** 18; // 0.1 LINK
-    }
-
-    /**
-     * Create a Chainlink request to retrieve API response, find the target
-     * data, then multiply by 1000000000000000000 (to remove decimal places from data).
-     */
-    function requestVolumeData() public returns (bytes32 requestId)
-    {
-        Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
-
-        // Set the URL to perform the GET request on
-        request.add("get", "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD");
-
-        // Set the path to find the desired data in the API response, where the response format is:
-        // {"RAW":
-        //   {"ETH":
-        //    {"USD":
-        //     {
-        //      "VOLUME24HOUR": xxx.xxx,
-        //     }
-        //    }
-        //   }
-        //  }
-        request.add("path", "RAW.ETH.USD.VOLUME24HOUR");
-
-        // Multiply the result by 1000000000000000000 to remove decimals
-        int timesAmount = 10**18;
-        request.addInt("times", timesAmount);
-
-        // Sends the request
-        return sendChainlinkRequestTo(oracle, request, fee);
-    }
-
-    /**
-     * Receive the response in the form of uint256
-     */
-    function fulfill(bytes32 _requestId, uint256 _volume) public recordChainlinkFulfillment(_requestId)
-    {
-        volume = _volume;
-    }
-}
-```
-
-Anda dapat mempelajari lebih lanjut tentang penerapan Chainlink dengan membaca [Blog pengembang Chainlink](https://blog.chain.link/tag/developers/).
-
-## Layanan Oracle {#other-services}
-
-- [Chainlink](https://chain.link/)
-- [Witnet](https://witnet.io/)
-- [Dapat dibuktikan](https://provable.xyz/)
-- [Dos.Network](https://dos.network/)
-
-### Membuat sebuah oracle kontrak pintar {#build-an-oracle-smart-contract}
-
-Ini adalah suatu contoh kontrak oracle oleh Pedro Costa. Anda dapat menemukan penjelasan lebih lanjut di artikelnya: [Mengimplementasikan Oracle Blockchain di Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e).
+Di bawah ini adalah [contoh kontrak oracle](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) oleh Pedro Costa. Ini adalah layanan oracle sederhana yang dapat menanyakan API offchain atas permintaan kontrak pintar lainnya dan menyimpan informasi yang diminta di blockchain:
 
 ```solidity
 pragma solidity >=0.4.21 <0.6.0;
 
 contract Oracle {
-  Request[] requests; //list of requests made to the contract
-  uint currentId = 0; //increasing request id
-  uint minQuorum = 2; //minimum number of responses to receive before declaring final result
-  uint totalOracleCount = 3; // Hardcoded oracle count
+  Request[] requests; //list of requests made to the contract // daftar permintaan yang dibuat ke kontrak
+  uint currentId = 0; //increasing request id // id permintaan yang meningkat
+  uint minQuorum = 2; //minimum number of responses to receive before declaring final result // jumlah minimum respons yang harus diterima sebelum mendeklarasikan hasil akhir
+  uint totalOracleCount = 3; // Hardcoded oracle count // Jumlah oracle yang di-hardcode
 
-  // defines a general api request
+  // defines a general api request // mendefinisikan permintaan api umum
   struct Request {
-    uint id;                            //request id
-    string urlToQuery;                  //API url
-    string attributeToFetch;            //json attribute (key) to retrieve in the response
-    string agreedValue;                 //value from key
-    mapping(uint => string) anwers;     //answers provided by the oracles
-    mapping(address => uint) quorum;    //oracles which will query the answer (1=oracle hasn't voted, 2=oracle has voted)
+    uint id;                            //request id // id permintaan
+    string urlToQuery;                  //API url // url API
+    string attributeToFetch;            //json attribute (key) to retrieve in the response // atribut json (kunci) yang akan diambil dalam respons
+    string agreedValue;                 //value from key // nilai dari kunci
+    mapping(uint => string) answers;     //answers provided by the oracles // jawaban yang diberikan oleh oracle
+    mapping(address => uint) quorum;    //oracles which will query the answer (1=oracle hasn't voted, 2=oracle has voted) // oracle yang akan meminta jawaban (1=oracle belum memilih, 2=oracle sudah memilih)
   }
 
-  //event that triggers oracle outside of the blockchain
+  //event that triggers oracle outside of the blockchain // event yang memicu oracle di luar blockchain
   event NewRequest (
     uint id,
     string urlToQuery,
     string attributeToFetch
   );
 
-  //triggered when there's a consensus on the final result
+  //triggered when there's a consensus on the final result // dipicu ketika ada konsensus pada hasil akhir
   event UpdatedRequest (
     uint id,
     string urlToQuery,
@@ -349,23 +127,23 @@ contract Oracle {
     uint length = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
     Request storage r = requests[length-1];
 
-    // Hardcoded oracles address
+    // Hardcoded oracles address // Alamat oracle yang di-hardcode
     r.quorum[address(0x6c2339b46F41a06f09CA0051ddAD54D1e582bA77)] = 1;
     r.quorum[address(0xb5346CF224c02186606e5f89EACC21eC25398077)] = 1;
     r.quorum[address(0xa2997F1CA363D11a0a35bB1Ac0Ff7849bc13e914)] = 1;
 
-    // launch an event to be detected by oracle outside of blockchain
+    // launch an event to be detected by oracle outside of blockchain // meluncurkan event untuk dideteksi oleh oracle di luar blockchain
     emit NewRequest (
       currentId,
       _urlToQuery,
       _attributeToFetch
     );
 
-    // increase request id
+    // increase request id // meningkatkan id permintaan
     currentId++;
   }
 
-  //called by the oracle to record its answer
+  //called by the oracle to record its answer // dipanggil oleh oracle untuk merekam jawabannya
   function updateRequest (
     uint _id,
     string memory _valueRetrieved
@@ -373,31 +151,31 @@ contract Oracle {
 
     Request storage currRequest = requests[_id];
 
-    //check if oracle is in the list of trusted oracles
-    //and if the oracle hasn't voted yet
+    //check if oracle is in the list of trusted oracles // periksa apakah oracle ada dalam daftar oracle tepercaya
+    //and if the oracle hasn't voted yet // dan jika oracle belum memilih
     if(currRequest.quorum[address(msg.sender)] == 1){
 
-      //marking that this address has voted
+      //marking that this address has voted // menandai bahwa alamat ini telah memilih
       currRequest.quorum[msg.sender] = 2;
 
-      //iterate through "array" of answers until a position if free and save the retrieved value
+      //iterate through "array" of answers until a position if free and save the retrieved value // iterasi melalui "array" jawaban hingga ada posisi yang kosong dan simpan nilai yang diambil
       uint tmpI = 0;
       bool found = false;
       while(!found) {
-        //find first empty slot
-        if(bytes(currRequest.anwers[tmpI]).length == 0){
+        //find first empty slot // temukan slot kosong pertama
+        if(bytes(currRequest.answers[tmpI]).length == 0){
           found = true;
-          currRequest.anwers[tmpI] = _valueRetrieved;
+          currRequest.answers[tmpI] = _valueRetrieved;
         }
         tmpI++;
       }
 
       uint currentQuorum = 0;
 
-      //iterate through oracle list and check if enough oracles(minimum quorum)
-      //have voted the same answer has the current one
+      //iterate through oracle list and check if enough oracles(minimum quorum) // iterasi melalui daftar oracle dan periksa apakah cukup oracle (kuorum minimum)
+      //have voted the same answer as the current one // telah memilih jawaban yang sama dengan yang saat ini
       for(uint i = 0; i < totalOracleCount; i++){
-        bytes memory a = bytes(currRequest.anwers[i]);
+        bytes memory a = bytes(currRequest.answers[i]);
         bytes memory b = bytes(_valueRetrieved);
 
         if(keccak256(a) == keccak256(b)){
@@ -418,23 +196,248 @@ contract Oracle {
 }
 ```
 
-_Kami ingin lebih banyak dokumentasi tentang pembuatan sebuah oracle kontrak pintar. Jika Anda dapat membantu, buat sebuah PR!_
+### Node oracle {#oracle-nodes}
+
+Node oracle adalah komponen offchain dari layanan oracle. Node ini mengekstrak informasi dari sumber eksternal, seperti API yang di-host di server pihak ketiga, dan meletakkannya secara onchain untuk dikonsumsi oleh kontrak pintar. Node oracle mendengarkan event dari kontrak oracle onchain dan melanjutkan untuk menyelesaikan tugas yang dijelaskan dalam log.
+
+Tugas umum untuk node oracle adalah mengirimkan permintaan [HTTP GET](https://www.w3schools.com/tags/ref_httpmethods.asp) ke layanan API, mengurai respons untuk mengekstrak data yang relevan, memformatnya menjadi output yang dapat dibaca blockchain, dan mengirimkannya secara onchain dengan menyertakannya dalam transaksi ke kontrak oracle. Node oracle mungkin juga diminta untuk membuktikan validitas dan integritas informasi yang dikirimkan menggunakan "bukti keaslian", yang akan kita jelajahi nanti.
+
+Oracle komputasi juga bergantung pada node offchain untuk melakukan tugas komputasi yang tidak praktis untuk dieksekusi secara onchain, mengingat biaya gas dan batas ukuran blok. Misalnya, node oracle mungkin ditugaskan untuk menghasilkan angka acak yang dapat diverifikasi (mis., untuk game berbasis blockchain).
+
+## Pola desain oracle {#oracle-design-patterns}
+
+Oracle hadir dalam berbagai jenis, termasuk _baca-langsung_, _publikasi-berlangganan_, dan _permintaan-respons_, dengan dua yang terakhir menjadi yang paling populer di antara kontrak pintar Ethereum. Di sini kami menjelaskan secara singkat model publikasi-berlangganan dan permintaan-respons.
+
+### Oracle publikasi-berlangganan {#publish-subscribe-oracles}
+
+Jenis oracle ini mengekspos "umpan data" yang dapat dibaca secara teratur oleh kontrak lain untuk mendapatkan informasi. Data dalam kasus ini diharapkan sering berubah, sehingga kontrak klien harus mendengarkan pembaruan data di penyimpanan oracle. Contohnya adalah oracle yang memberikan informasi harga ETH-USD terbaru kepada pengguna.
+
+### Oracle permintaan-respons {#request-response-oracles}
+
+Pengaturan permintaan-respons memungkinkan kontrak klien untuk meminta data arbitrer selain yang disediakan oleh oracle publikasi-berlangganan. Oracle permintaan-respons sangat ideal ketika kumpulan data terlalu besar untuk disimpan di penyimpanan kontrak pintar, dan/atau pengguna hanya akan membutuhkan sebagian kecil data pada waktu tertentu.
+
+Meskipun lebih kompleks daripada model publikasi-berlangganan, oracle permintaan-respons pada dasarnya adalah apa yang kami jelaskan di bagian sebelumnya. Oracle akan memiliki komponen onchain yang menerima permintaan data dan meneruskannya ke node offchain untuk diproses.
+
+Pengguna yang memulai kueri data harus menanggung biaya pengambilan informasi dari sumber offchain. Kontrak klien juga harus menyediakan dana untuk menutupi biaya gas yang dikeluarkan oleh kontrak oracle dalam mengembalikan respons melalui fungsi panggilan balik yang ditentukan dalam permintaan.
+
+## Oracle terpusat vs. terdesentralisasi {#types-of-oracles}
+
+### Oracle terpusat {#centralized-oracles}
+
+Oracle terpusat dikendalikan oleh satu entitas yang bertanggung jawab untuk menggabungkan informasi offchain dan memperbarui data kontrak oracle seperti yang diminta. Oracle terpusat efisien karena mereka bergantung pada satu sumber kebenaran. Mereka mungkin berfungsi lebih baik dalam kasus di mana kumpulan data kepemilikan diterbitkan langsung oleh pemilik dengan tanda tangan yang diterima secara luas. Namun, mereka juga membawa kelemahan:
+
+#### Jaminan kebenaran yang rendah {#low-correctness-guarantees}
+
+Dengan oracle terpusat, tidak ada cara untuk mengonfirmasi apakah informasi yang diberikan benar atau tidak. Bahkan penyedia yang "bereputasi baik" bisa menjadi nakal atau diretas. Jika oracle menjadi rusak, kontrak pintar akan dieksekusi berdasarkan data yang buruk.
+
+#### Ketersediaan yang buruk {#poor-availability}
+
+Oracle terpusat tidak dijamin untuk selalu membuat data offchain tersedia untuk kontrak pintar lainnya. Jika penyedia memutuskan untuk mematikan layanan atau peretas membajak komponen offchain oracle, kontrak pintar Anda berisiko terkena serangan penolakan layanan (DoS).
+
+#### Kompatibilitas insentif yang buruk {#poor-incentive-compatibility}
+
+Oracle terpusat sering kali memiliki insentif yang dirancang dengan buruk atau tidak ada sama sekali bagi penyedia data untuk mengirimkan informasi yang akurat/tidak diubah. Membayar oracle untuk kebenaran tidak menjamin kejujuran. Masalah ini semakin besar seiring dengan meningkatnya jumlah nilai yang dikendalikan oleh kontrak pintar.
+
+### Oracle terdesentralisasi {#decentralized-oracles}
+
+Oracle terdesentralisasi dirancang untuk mengatasi keterbatasan oracle terpusat dengan menghilangkan titik kegagalan tunggal. Layanan oracle terdesentralisasi terdiri dari beberapa peserta dalam jaringan peer-to-peer yang membentuk konsensus pada data offchain sebelum mengirimkannya ke kontrak pintar.
+
+Oracle terdesentralisasi (idealnya) harus tanpa izin, tanpa kepercayaan, dan bebas dari administrasi oleh pihak pusat; pada kenyataannya, desentralisasi di antara oracle berada pada sebuah spektrum. Ada jaringan oracle semi-terdesentralisasi di mana siapa pun dapat berpartisipasi, tetapi dengan "pemilik" yang menyetujui dan menghapus node berdasarkan kinerja historis. Jaringan oracle yang sepenuhnya terdesentralisasi juga ada: ini biasanya berjalan sebagai blockchain mandiri dan telah menetapkan mekanisme konsensus untuk mengoordinasikan node dan menghukum perilaku buruk.
+
+Menggunakan oracle terdesentralisasi memberikan manfaat berikut:
+
+### Jaminan kebenaran yang tinggi {#high-correctness-guarantees}
+
+Oracle terdesentralisasi berusaha mencapai kebenaran data menggunakan pendekatan yang berbeda. Ini termasuk menggunakan bukti yang membuktikan keaslian dan integritas informasi yang dikembalikan dan mengharuskan beberapa entitas untuk secara kolektif menyetujui validitas data offchain.
+
+#### Bukti keaslian {#authenticity-proofs}
+
+Bukti keaslian adalah mekanisme kriptografi yang memungkinkan verifikasi independen atas informasi yang diambil dari sumber eksternal. Bukti ini dapat memvalidasi sumber informasi dan mendeteksi kemungkinan perubahan pada data setelah pengambilan.
+
+Contoh bukti keaslian meliputi:
+
+**Bukti Transport Layer Security (TLS)**: Node oracle sering kali mengambil data dari sumber eksternal menggunakan koneksi HTTP aman berdasarkan protokol Transport Layer Security (TLS). Beberapa oracle terdesentralisasi menggunakan bukti keaslian untuk memverifikasi sesi TLS (yaitu, mengonfirmasi pertukaran informasi antara node dan server tertentu) dan mengonfirmasi bahwa isi sesi tidak diubah.
+
+**Pengesahan Trusted Execution Environment (TEE)**: [Trusted execution environment](https://en.wikipedia.org/wiki/Trusted_execution_environment) (TEE) adalah lingkungan komputasi sandbox yang diisolasi dari proses operasional sistem host-nya. TEE memastikan bahwa kode aplikasi atau data apa pun yang disimpan/digunakan dalam lingkungan komputasi mempertahankan integritas, kerahasiaan, dan sifat tetap. Pengguna juga dapat menghasilkan pengesahan untuk membuktikan bahwa instans aplikasi berjalan di dalam trusted execution environment.
+
+Kelas oracle terdesentralisasi tertentu mengharuskan operator node oracle untuk memberikan pengesahan TEE. Ini mengonfirmasi kepada pengguna bahwa operator node menjalankan instans klien oracle di trusted execution environment. TEE mencegah proses eksternal mengubah atau membaca kode dan data aplikasi, oleh karena itu, pengesahan tersebut membuktikan bahwa node oracle telah menjaga informasi tetap utuh dan rahasia.
+
+#### Validasi informasi berbasis konsensus {#consensus-based-validation-of-information}
+
+Oracle terpusat bergantung pada satu sumber kebenaran saat memberikan data ke kontrak pintar, yang memperkenalkan kemungkinan penerbitan informasi yang tidak akurat. Oracle terdesentralisasi memecahkan masalah ini dengan mengandalkan beberapa node oracle untuk menanyakan informasi offchain. Dengan membandingkan data dari berbagai sumber, oracle terdesentralisasi mengurangi risiko meneruskan informasi yang tidak valid ke kontrak onchain.
+
+Namun, oracle terdesentralisasi harus berurusan dengan perbedaan informasi yang diambil dari beberapa sumber offchain. Untuk meminimalkan perbedaan informasi dan memastikan data yang diteruskan ke kontrak oracle mencerminkan pendapat kolektif dari node oracle, oracle terdesentralisasi menggunakan mekanisme berikut:
+
+##### Pemungutan suara/mengunci pada keakuratan data
+
+Beberapa jaringan oracle terdesentralisasi mengharuskan peserta untuk memberikan suara atau stake pada keakuratan jawaban atas kueri data (mis., "Siapa yang memenangkan pemilu AS 2020?") menggunakan token asli jaringan. Protokol agregasi kemudian menggabungkan suara dan stake dan mengambil jawaban yang didukung oleh mayoritas sebagai jawaban yang valid.
+
+Node yang jawabannya menyimpang dari jawaban mayoritas akan dihukum dengan mendistribusikan token mereka kepada orang lain yang memberikan nilai yang lebih benar. Memaksa node untuk memberikan jaminan sebelum memberikan data akan memberi insentif pada respons yang jujur karena mereka diasumsikan sebagai pelaku ekonomi rasional yang berniat memaksimalkan keuntungan.
+
+Mengunci/pemungutan suara juga melindungi oracle terdesentralisasi dari [serangan sybil](/glossary/#sybil-attack) di mana aktor jahat membuat banyak identitas untuk mempermainkan sistem konsensus. Namun, mengunci tidak dapat mencegah "freeloading" (node oracle menyalin informasi dari orang lain) dan "validasi malas" (node oracle mengikuti mayoritas tanpa memverifikasi informasi itu sendiri).
+
+##### Mekanisme titik Schelling
+
+[Titik Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) adalah konsep teori permainan yang mengasumsikan beberapa entitas akan selalu menggunakan solusi umum untuk suatu masalah tanpa adanya komunikasi. Mekanisme titik Schelling sering digunakan dalam jaringan oracle terdesentralisasi untuk memungkinkan node mencapai konsensus pada jawaban atas permintaan data.
+
+Ide awal untuk ini adalah [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed), umpan data yang diusulkan di mana peserta mengirimkan respons terhadap pertanyaan "skalar" (pertanyaan yang jawabannya dijelaskan berdasarkan besaran, mis., "berapa harga ETH?"), bersama dengan deposit. Pengguna yang memberikan nilai antara [persentil](https://en.wikipedia.org/wiki/Percentile) ke-25 dan ke-75 akan diberi hadiah, sementara mereka yang nilainya sangat menyimpang dari nilai median akan dihukum.
+
+Meskipun SchellingCoin tidak ada saat ini, sejumlah oracle terdesentralisasi—terutama [Oracle Protokol Maker](https://docs.makerdao.com/smart-contract-modules/oracle-module)—menggunakan mekanisme titik schelling untuk meningkatkan keakuratan data oracle. Setiap Oracle Maker terdiri dari jaringan node P2P offchain ("relayer" dan "feed") yang mengirimkan harga pasar untuk aset jaminan dan kontrak "Medianizer" onchain yang menghitung median dari semua nilai yang diberikan. Setelah periode penundaan yang ditentukan berakhir, nilai median ini menjadi harga referensi baru untuk aset terkait.
+
+Contoh lain dari oracle yang menggunakan mekanisme titik Schelling termasuk [Pelaporan Offchain Chainlink](https://docs.chain.link/architecture-overview/off-chain-reporting) dan [Witnet](https://witnet.io/). Dalam kedua sistem, respons dari node oracle dalam jaringan peer-to-peer digabungkan menjadi satu nilai agregat, seperti rata-rata atau median. Node diberi hadiah atau dihukum sesuai dengan sejauh mana respons mereka selaras dengan atau menyimpang dari nilai agregat.
+
+Mekanisme titik Schelling menarik karena meminimalkan jejak onchain (hanya satu transaksi yang perlu dikirim) sambil menjamin desentralisasi. Hal yang terakhir ini dimungkinkan karena node harus menandatangani daftar respons yang dikirimkan sebelum dimasukkan ke dalam algoritma yang menghasilkan nilai rata-rata/median.
+
+### Ketersediaan {#availability}
+
+Layanan oracle terdesentralisasi memastikan ketersediaan data offchain yang tinggi untuk kontrak pintar. Hal ini dicapai dengan mendesentralisasi sumber informasi offchain dan node yang bertanggung jawab untuk mentransfer informasi secara onchain.
+
+Ini memastikan toleransi kesalahan karena kontrak oracle dapat mengandalkan beberapa node (yang juga mengandalkan beberapa sumber data) untuk mengeksekusi kueri dari kontrak lain. Desentralisasi pada tingkat sumber _dan_ operator node sangat penting—jaringan node oracle yang menyajikan informasi yang diambil dari sumber yang sama akan mengalami masalah yang sama dengan oracle terpusat.
+
+Oracle berbasis stake juga dimungkinkan untuk memotong operator node yang gagal merespons permintaan data dengan cepat. Hal ini secara signifikan memberi insentif pada node oracle untuk berinvestasi dalam infrastruktur yang toleran terhadap kesalahan dan menyediakan data secara tepat waktu.
+
+### Kompatibilitas insentif yang baik {#good-incentive-compatibility}
+
+Oracle terdesentralisasi menerapkan berbagai desain insentif untuk mencegah perilaku [Byzantine](https://en.wikipedia.org/wiki/Byzantine_fault) di antara node oracle. Secara khusus, mereka mencapai _atribusibilitas_ dan _akuntabilitas_:
+
+1. Node oracle terdesentralisasi sering kali diharuskan untuk menandatangani data yang mereka berikan sebagai respons terhadap permintaan data. Informasi ini membantu mengevaluasi kinerja historis node oracle, sehingga pengguna dapat memfilter node oracle yang tidak dapat diandalkan saat membuat permintaan data. Contohnya adalah [Sistem Reputasi Algoritmik](https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system) Witnet.
+
+2. Oracle terdesentralisasi—seperti yang dijelaskan sebelumnya—mungkin mengharuskan node untuk menempatkan stake pada keyakinan mereka terhadap kebenaran data yang mereka kirimkan. Jika klaim tersebut terbukti benar, stake ini dapat dikembalikan bersama dengan hadiah untuk layanan yang jujur. Namun, stake ini juga dapat dipotong jika informasinya salah, yang memberikan ukuran akuntabilitas tertentu.
+
+## Aplikasi oracle dalam kontrak pintar {#applications-of-oracles-in-smart-contracts}
+
+Berikut ini adalah kasus penggunaan umum untuk oracle di Ethereum:
+
+### Mengambil data keuangan {#retrieving-financial-data}
+
+Aplikasi [keuangan terdesentralisasi](/defi/) (DeFi) memungkinkan peminjaman, meminjam, dan perdagangan aset secara peer-to-peer. Hal ini sering kali memerlukan perolehan informasi keuangan yang berbeda, termasuk data nilai tukar (untuk menghitung nilai fiat dari mata uang kripto atau membandingkan harga token) dan data pasar modal (untuk menghitung nilai aset yang ditokenisasi, seperti emas atau dolar AS).
+
+Protokol peminjaman DeFi, misalnya, perlu menanyakan harga pasar saat ini untuk aset (mis., ETH) yang disetorkan sebagai jaminan. Hal ini memungkinkan kontrak untuk menentukan nilai aset jaminan dan menentukan berapa banyak yang dapat dipinjam dari sistem.
+
+"Oracle harga" (sebutan yang sering digunakan) yang populer di DeFi termasuk Umpan Harga Chainlink, [Umpan Harga Terbuka](https://compound.finance/docs/prices) Protokol Compound, [Harga Rata-Rata Tertimbang Waktu (TWAP)](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) Uniswap, dan [Oracle Maker](https://docs.makerdao.com/smart-contract-modules/oracle-module).
+
+Pembangun harus memahami peringatan yang menyertai oracle harga ini sebelum mengintegrasikannya ke dalam proyek mereka. [Artikel](https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles/) ini memberikan analisis terperinci tentang apa yang harus dipertimbangkan saat merencanakan untuk menggunakan salah satu oracle harga yang disebutkan.
+
+Di bawah ini adalah contoh bagaimana Anda dapat mengambil harga ETH terbaru dalam kontrak pintar Anda menggunakan umpan harga Chainlink:
+
+```solidity
+pragma solidity ^0.6.7;
+
+import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
+
+contract PriceConsumerV3 {
+
+    AggregatorV3Interface internal priceFeed;
+
+    /* *
+     * Jaringan: Kovan
+     * Agregator: ETH/USD
+     * Alamat: 0x9326BFA02ADD2366b30bacB125260Af641031331 */
+    /**
+     * Network: Kovan
+     * Aggregator: ETH/USD
+     * Address: 0x9326BFA02ADD2366b30bacB125260Af641031331
+     */
+    constructor() public {
+        priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331);
+    }
+
+    /* *
+     * Mengembalikan harga terbaru */
+    /**
+     * Returns the latest price
+     */
+    function getLatestPrice() public view returns (int) {
+        (
+            uint80 roundID,
+            int price,
+            uint startedAt,
+            uint timeStamp,
+            uint80 answeredInRound
+        ) = priceFeed.latestRoundData();
+        return price;
+    }
+}
+```
+
+### Menghasilkan keacakan yang dapat diverifikasi {#generating-verifiable-randomness}
+
+Aplikasi blockchain tertentu, seperti game berbasis blockchain atau skema lotre, memerlukan tingkat ketidakpastian dan keacakan yang tinggi untuk bekerja secara efektif. Namun, eksekusi deterministik dari blockchain menghilangkan keacakan.
+
+Pendekatan aslinya adalah menggunakan fungsi kriptografi pseudorandom, seperti `blockhash`, tetapi ini dapat [dimanipulasi oleh penambang](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) yang memecahkan algoritma proof-of-work. Selain itu, [peralihan Ethereum ke proof-of-stake](/roadmap/merge/) berarti pengembang tidak dapat lagi mengandalkan `blockhash` untuk keacakan onchain. [Mekanisme RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) dari beacon chain menyediakan sumber keacakan alternatif sebagai gantinya.
+
+Dimungkinkan untuk menghasilkan nilai acak secara offchain dan mengirimkannya secara onchain, tetapi melakukan hal itu membebankan persyaratan kepercayaan yang tinggi pada pengguna. Mereka harus percaya bahwa nilai tersebut benar-benar dihasilkan melalui mekanisme yang tidak dapat diprediksi dan tidak diubah saat transit.
+
+Oracle yang dirancang untuk komputasi offchain memecahkan masalah ini dengan secara aman menghasilkan hasil acak secara offchain yang mereka siarkan secara onchain bersama dengan bukti kriptografi yang membuktikan ketidakpastian proses tersebut. Contohnya adalah [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Fungsi Acak yang Dapat Diverifikasi), yang merupakan generator angka acak (RNG) yang terbukti adil dan tahan kerusakan yang berguna untuk membangun kontrak pintar yang andal untuk aplikasi yang bergantung pada hasil yang tidak dapat diprediksi.
+
+### Mendapatkan hasil untuk event {#getting-outcomes-for-events}
+
+Dengan oracle, membuat kontrak pintar yang merespons event dunia nyata menjadi mudah. Layanan oracle memungkinkan hal ini dengan mengizinkan kontrak untuk terhubung ke API eksternal melalui komponen offchain dan mengonsumsi informasi dari sumber data tersebut. Misalnya, dapp prediksi yang disebutkan sebelumnya dapat meminta oracle untuk mengembalikan hasil pemilu dari sumber offchain tepercaya (mis., Associated Press).
+
+Menggunakan oracle untuk mengambil data berdasarkan hasil dunia nyata memungkinkan kasus penggunaan baru lainnya; misalnya, produk asuransi terdesentralisasi membutuhkan informasi yang akurat tentang cuaca, bencana, dll. untuk bekerja secara efektif.
+
+### Mengotomatiskan kontrak pintar {#automating-smart-contracts}
+
+Kontrak pintar tidak berjalan secara otomatis; melainkan, akun yang dimiliki secara eksternal (EOA), atau akun kontrak lain, harus memicu fungsi yang tepat untuk mengeksekusi kode kontrak. Dalam kebanyakan kasus, sebagian besar fungsi kontrak bersifat publik dan dapat dipanggil oleh EOA dan kontrak lainnya.
+
+Namun ada juga _fungsi privat_ di dalam kontrak yang tidak dapat diakses oleh orang lain;, tetapi sangat penting untuk fungsionalitas dapp secara keseluruhan. Contohnya termasuk fungsi `mintERC721Token()` yang secara berkala melakukan mint NFT baru untuk pengguna, fungsi untuk memberikan pembayaran di pasar prediksi, atau fungsi untuk membuka kunci token yang dikunci di DEX.
+
+Pengembang perlu memicu fungsi tersebut secara berkala untuk menjaga aplikasi berjalan lancar. Namun, ini mungkin menyebabkan lebih banyak waktu yang hilang untuk tugas-tugas duniawi bagi pengembang, itulah sebabnya mengotomatiskan eksekusi kontrak pintar menjadi menarik.
+
+Beberapa jaringan oracle terdesentralisasi menawarkan layanan otomatisasi, yang memungkinkan node oracle offchain untuk memicu fungsi kontrak pintar sesuai dengan parameter yang ditentukan oleh pengguna. Biasanya, ini memerlukan "pendaftaran" kontrak target dengan layanan oracle, menyediakan dana untuk membayar operator oracle, dan menentukan kondisi atau waktu untuk memicu kontrak.
+
+[Jaringan Keeper](https://chain.link/keepers) Chainlink memberikan opsi untuk kontrak pintar untuk mengalihdayakan tugas pemeliharaan rutin dengan cara yang meminimalkan kepercayaan dan terdesentralisasi. Baca [dokumentasi Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) resmi untuk informasi tentang membuat kontrak Anda kompatibel dengan Keeper dan menggunakan layanan Upkeep.
+
+## Cara menggunakan oracle blockchain {#use-blockchain-oracles}
+
+Ada beberapa aplikasi oracle yang dapat Anda integrasikan ke dalam dapp Ethereum Anda:
+
+**[Chainlink](https://chain.link/)** - _Jaringan oracle terdesentralisasi Chainlink menyediakan input, output, dan komputasi yang tahan kerusakan untuk mendukung kontrak pintar tingkat lanjut di blockchain mana pun._
+
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone adalah oracle modular terdesentralisasi yang menyediakan umpan data yang dioptimalkan untuk gas. Ini mengkhususkan diri dalam menawarkan umpan harga untuk aset yang sedang berkembang, seperti token liquid staking (LST), token liquid restaking (LRT), dan derivatif staking Bitcoin._
+
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle mengatasi keterbatasan saat ini dalam mentransfer data secara onchain dengan mengembangkan oracle yang benar-benar dapat diskalakan, hemat biaya, terdesentralisasi, dan dapat diverifikasi._
+
+**[Witnet](https://witnet.io/)** - _Witnet adalah oracle tanpa izin, terdesentralisasi, dan tahan sensor yang membantu kontrak pintar untuk bereaksi terhadap event dunia nyata dengan jaminan kripto-ekonomi yang kuat._
+
+**[UMA Oracle](https://uma.xyz)** - _Oracle optimis UMA memungkinkan kontrak pintar untuk dengan cepat menerima segala jenis data untuk berbagai aplikasi, termasuk asuransi, derivatif keuangan, dan pasar prediksi._
+
+**[Tellor](https://tellor.io/)** - _Tellor adalah protokol oracle yang transparan dan tanpa izin untuk kontrak pintar Anda agar dengan mudah mendapatkan data apa pun kapan pun dibutuhkan._
+
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol adalah platform oracle data lintas rantai yang menggabungkan dan menghubungkan data dunia nyata dan API ke kontrak pintar._
+
+**[Pyth Network](https://pyth.network/)** - _Jaringan Pyth adalah jaringan oracle keuangan pihak pertama yang dirancang untuk menerbitkan data dunia nyata secara berkelanjutan secara onchain dalam lingkungan yang tahan kerusakan, terdesentralisasi, dan mandiri._
+
+**[API3 DAO](https://www.api3.org/)** - _API3 DAO memberikan solusi oracle pihak pertama yang memberikan transparansi sumber, keamanan, dan skalabilitas yang lebih besar dalam solusi terdesentralisasi untuk kontrak pintar_
+
+**[Supra](https://supra.com/)** - Perangkat solusi lintas rantai yang terintegrasi secara vertikal yang menghubungkan semua blockchain, publik (L1 dan L2) atau privat (perusahaan), menyediakan umpan harga oracle terdesentralisasi yang dapat digunakan untuk kasus penggunaan onchain dan offchain. 
+
+**[Gas Network](https://gas.network/)** - Platform oracle terdistribusi yang menyediakan data harga gas waktu nyata di seluruh blockchain. Dengan membawa data dari penyedia data harga gas terkemuka secara onchain, Gas Network membantu mendorong interoperabilitas. Gas Network mendukung data untuk lebih dari 35 rantai, termasuk Mainnet Ethereum dan banyak L2 terkemuka.
+
+**[DIA](https://www.diadata.org/)** - Jaringan oracle lintas rantai yang memberikan umpan data yang dapat diverifikasi untuk 20.000+ aset di semua kelas aset utama. DIA mengambil data perdagangan mentah langsung dari 100+ pasar utama dan menghitungnya secara onchain, memastikan transparansi dan verifiabilitas data yang lengkap dengan konfigurasi khusus untuk kasus penggunaan apa pun.
+
+**[Stork](https://stork.network)** - Stork memberikan data harga dengan latensi sangat rendah, mendukung berbagai kasus penggunaan termasuk pasar perpetual, protokol peminjaman, dan ekosistem DeFi, dengan aset baru yang didukung dengan cepat saat listing.
 
 ## Bacaan lebih lanjut {#further-reading}
 
 **Artikel**
 
-- [Apa itu Oracle Blockchain?](https://chain.link/education/blockchain-oracles) - _Chainlink_
-- [Apa itu Oracle Blockchain?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
-- [Oracle Terdesentralisasi: gambaran umum lengkap](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
-- [Mengimplementasikan Oracle Blockchain di Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
-- [Mengapa kontrak pintar tidak bisa melakukan pemanggilan API?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
-- [Jadi, Anda ingin menggunakan oracle harga](https://samczsun.com/so-you-want-to-use-a-price-oracle/) -_samczsun_
+- [What Is a Blockchain Oracle?](https://chain.link/education/blockchain-oracles) — _Chainlink_
+- [What is a Blockchain Oracle?](https://medium.com/better-programming/what-is-a-blockchain-oracle-f5ccab8dbd72) — _Patrick Collins_
+- [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
+- [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
+- [Why can't smart contracts make API calls?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
+- [So you want to use a price oracle](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **Video**
 
-- [Oracle dan Ekspansi Utilitas Blockchain](https://youtu.be/BVUZpWa8vpw) - _Real Vision Finance_
+- [Oracles and the Expansion of Blockchain Utility](https://youtu.be/BVUZpWa8vpw) — _Real Vision Finance_
 
 **Tutorial**
 
-- [Bagaimana cara Mengambil Harga Ethereum Saat Ini di Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) - _Chainlink_
+- [How to Fetch the Current Price of Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _Chainlink_
+- [Consuming Oracle Data](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_ 
+
+**Contoh proyek**
+
+- [Full Chainlink starter project for Ethereum in Solidity](https://github.com/hackbg/chainlink-fullstack) — _HackBG_

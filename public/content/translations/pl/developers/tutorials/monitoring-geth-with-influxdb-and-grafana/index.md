@@ -4,6 +4,7 @@ description: "Skonfiguruj monitorowanie węzła Geth za pomocą InfluxDB i Grafa
 author: "Mario Havel"
 tags: [ "klienci", "węzły" ]
 skill: intermediate
+breadcrumb: "Monitoring Geth"
 lang: pl
 published: 2021-01-13
 ---

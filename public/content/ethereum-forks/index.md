@@ -56,7 +56,7 @@ Since the launch of the [Beacon Chain](/glossary/#beacon-chain), upgrades to the
 | [Electra](<https://en.wikipedia.org/wiki/Electra_(star)>) | May 7, 2025  |
 | [Fulu](<https://en.wikipedia.org/wiki/Fulu_(star)>)       | Dec 3, 2025  |
 | [**Gloas**](https://en.wikipedia.org/wiki/WASP-13)        | TBD - Next   |
-| [_Heka_](https://en.wikipedia.org/wiki/Meissa)            | TBD          |
+| [_Heze_](https://en.wikipedia.org/wiki/Zeta_Virginis)     | TBD          |
 
 **Combined naming**
 
@@ -69,7 +69,7 @@ The execution and consensus upgrades were initially rolled out at different time
 | Prague            | Electra           | "Pectra"      |
 | Osaka             | Fulu              | "Fusaka"      |
 | Amsterdam         | Gloas             | "Glamsterdam" |
-| Bogotá            | Heka              | "Hekotá"      |
+| Bogotá            | Heze              | "Hegotá"      |
 
 </ExpandableCard>
 

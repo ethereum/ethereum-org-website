@@ -4,6 +4,7 @@ description: "Comprendre la partie du Livre jaune, les spécifications formelles
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: fr
 published: 2022-05-15
 ---

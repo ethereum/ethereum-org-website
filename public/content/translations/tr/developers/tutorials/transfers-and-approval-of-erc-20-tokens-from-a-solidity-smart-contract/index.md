@@ -4,6 +4,7 @@ description: "Solidity kullanarak ERC-20 jeton transferlerini ve onaylarını y�
 author: "jdourlens"
 tags: [ "akıllı kontratlar", "token'lar", "solidity", "erc-20" ]
 skill: intermediate
+breadcrumb: "ERC-20 transferleri"
 lang: tr
 published: 2020-04-07
 source: EthereumDev

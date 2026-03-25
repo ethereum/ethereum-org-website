@@ -4,6 +4,7 @@ description: How to put tokenized items for sale on a decentralized classifieds 
 author: "Alberto Cuesta Cañada"
 tags: ["smart contracts", "erc-721", "solidity", "tokens"]
 skill: intermediate
+breadcrumb: ERC-721 market
 lang: en
 published: 2020-03-19
 source: Hackernoon
