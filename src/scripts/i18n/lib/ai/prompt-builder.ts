@@ -85,11 +85,11 @@ function getFormatRules(
 
   return `Format rules:
 - Frontmatter: translate the values of title, description, and breadcrumb. ${authorRule} Change the \`lang\` field to \`${targetLanguage}\`. Keep all other fields (tags, skill, published, sidebarDepth) unchanged. Preserve YAML structure exactly.
-- Preserve all markdown syntax (headings, lists, links, code blocks) and their indentation exactly.
+- Preserve all markdown syntax (headings, lists, links) and their indentation exactly.
 - Preserve all JSX/HTML components and their attributes exactly.
 - Preserve heading anchor IDs exactly as in English ({#anchor-id}).
-- Never translate content inside code fences (\`\`\` blocks).
-- Code comments inside code fences may be translated.
+- HTML comment placeholders like \`<!-- CODE_BLOCK_0 -->\` are code block stand-ins managed by our pipeline. You MUST preserve them EXACTLY as-is -- same text, same position, same line. Do NOT remove, translate, modify, or replace them with code. They will be restored automatically after translation.
+- If a true code fence (\`\`\` block) is encountered in the source, never translate the functional code inside it. Only code comments (// or /* */ or #) within fences may be translated. Never change the language identifier after the opening fence (e.g. \`\`\`python, \`\`\`solidity, \`\`\`bash must stay exactly as-is).
 - Internal links (href starting with /) must match English exactly.
 - Image paths must match English exactly.`
 }

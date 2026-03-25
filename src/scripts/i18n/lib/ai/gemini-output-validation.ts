@@ -92,6 +92,33 @@ export function validateTranslatedMarkdown(
     return { valid: false, error: untranslatedFm }
   }
 
+  // Code block placeholders must survive translation intact.
+  // The pipeline extracts code blocks before sending to Gemini and restores
+  // them afterward. If Gemini drops or corrupts a placeholder, the code
+  // block is lost and Gemini may hallucinate replacement code.
+  const expectedPlaceholders = (
+    english.match(/<!-- CODE_BLOCK_\d+ -->/g) || []
+  )
+  for (const placeholder of expectedPlaceholders) {
+    if (!translated.includes(placeholder)) {
+      return {
+        valid: false,
+        error: `Missing code block placeholder: ${placeholder}`,
+      }
+    }
+  }
+
+  // Gemini must not introduce code fences -- all code was extracted
+  if (expectedPlaceholders.length > 0) {
+    const fenceCount = (translated.match(/^```/gm) || []).length
+    if (fenceCount > 0) {
+      return {
+        valid: false,
+        error: `Output contains ${fenceCount} code fences but code blocks were extracted -- Gemini is hallucinating code`,
+      }
+    }
+  }
+
   return { valid: true }
 }
 
