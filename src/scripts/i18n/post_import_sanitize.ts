@@ -2890,16 +2890,23 @@ function fixSpanWrappedBackticks(content: string): {
   const fencePattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
   const parts = content.split(fencePattern)
 
-  // Match <span dir="ltr"> followed by optional whitespace, backtick content,
-  // optional whitespace, then </span>
-  const spanBacktickRe =
+  // Pattern 1: <span dir="ltr"> wrapping backtick content
+  const spanAroundBacktickRe =
     /<span dir="ltr">\s*(`[^`]+`)\s*<\/span>/g
+
+  // Pattern 2: backticks wrapping <span dir="ltr"> content (makes span visible as code)
+  const backtickAroundSpanRe =
+    /`<span dir="ltr">\s*([\s\S]+?)\s*<\/span>`/g
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code fences
-    parts[i] = parts[i].replace(spanBacktickRe, (_, backtickContent) => {
+    parts[i] = parts[i].replace(spanAroundBacktickRe, (_, backtickContent) => {
       fixCount++
       return backtickContent
+    })
+    parts[i] = parts[i].replace(backtickAroundSpanRe, (_, innerContent) => {
+      fixCount++
+      return `\`${innerContent}\``
     })
   }
 

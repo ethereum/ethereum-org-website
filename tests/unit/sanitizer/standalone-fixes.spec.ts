@@ -2544,6 +2544,29 @@ author: Ori Pomerantz
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
+
+    test("unwraps backticks around span (pattern 2: span visible as code)", () => {
+      const input = '`<span dir="ltr">kR</span>`'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`kR`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple pattern 2 occurrences", () => {
+      const input =
+        '`<span dir="ltr">S[i]</span>` and `<span dir="ltr">S[i-1]</span>`'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`S[i]` and `S[i-1]`")
+      expect(fixCount).toBe(2)
+    })
+
+    test("handles mixed pattern 1 and pattern 2", () => {
+      const input =
+        '<span dir="ltr">`code`</span> and `<span dir="ltr">kR</span>`'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`code` and `kR`")
+      expect(fixCount).toBe(2)
+    })
   })
 
   test.describe("fixBoldWrappedOrderedListNumerals", () => {
