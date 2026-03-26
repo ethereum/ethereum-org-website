@@ -1,20 +1,20 @@
 ---
-title: Standar Token Non-Fungible ERC-721
-description:
+title: Standar Non-Fungible Token ERC-721
+description: Pelajari tentang ERC-721, standar untuk non-fungible token (NFT) yang mewakili aset digital unik di Ethereum.
 lang: id
 ---
 
-## Pendahuluan {#introduction}
+## Pengantar {#introduction}
 
-**Apa itu Token Non-Fungible?**
+**Apa itu Non-Fungible Token?**
 
-Token yang Tidak Dapat Dipertukarkan (NFT) digunakan untuk mengenali sesuatu atau seseorang dengan cara yang unik. Jenis Token ini tepat untuk digunakan pada platform yang menawarkan item yang dapat dikoleksi, kunci akses, tiket lotre, kursi bernomor untuk konser dan pertandingan olahraga, dll. Jenis Token spesial ini memiliki kemungkinan yang luar biasa sehingga layak mendapatkan Standar yang sesuai, ERC-721 hadir untuk memecahkannya!
+Non-Fungible Token (NFT) digunakan untuk mengidentifikasi sesuatu atau seseorang dengan cara yang unik. Jenis Token ini sangat cocok digunakan pada platform yang menawarkan barang koleksi, kunci akses, tiket lotre, kursi bernomor untuk konser dan pertandingan olahraga, dll. Jenis Token khusus ini memiliki kemungkinan yang luar biasa sehingga layak mendapatkan Standar yang tepat, ERC-721 hadir untuk menyelesaikannya!
 
 **Apa itu ERC-721?**
 
-ERC-721 memperkenalkan sebuah standar untuk NFT, dengan kata lain, tipe Token ini adalah unik dan bisa memiliki nilai yang berbeda dari Token lainnya yang berasal dari Kontrak Pintar yang sama, mungkin dikarenakan usia, keunikan, atau bahkan hal lain seperti visualnya. Tunggu, visualnya?
+ERC-721 memperkenalkan standar untuk NFT, dengan kata lain, jenis Token ini unik dan dapat memiliki nilai yang berbeda dari Token lain dari kontrak pintar yang sama, mungkin karena usianya, kelangkaannya, atau bahkan hal lain seperti visualnya. Tunggu, visual?
 
-Ya! Semua NFT memiliki variabel `uint256` yang disebut `tokenId`, sehingga untuk Kontrak ERC-721 mana pun, pasangan `contract address, uint256 tokenId` harus bersifat unik secara global. Anggap saja, dApp bisa memiliki "konverter" yang menggunakan `tokenId` sebagai input dan output gambar dari sesuatu yang keren, seperti zombi, senjata, kemampuan, atau anak kucing yang menakjubkan!
+Ya! Semua NFT memiliki variabel `uint256` yang disebut `tokenId`, jadi untuk Kontrak ERC-721 apa pun, pasangan `alamat kontrak, uint256 tokenId` harus unik secara global. Oleh karena itu, sebuah dapp dapat memiliki "konverter" yang menggunakan `tokenId` sebagai input dan menghasilkan gambar sesuatu yang keren, seperti zombi, senjata, keterampilan, atau anak kucing yang luar biasa!
 
 ## Prasyarat {#prerequisites}
 
@@ -22,13 +22,13 @@ Ya! Semua NFT memiliki variabel `uint256` yang disebut `tokenId`, sehingga untuk
 - [Kontrak Pintar](/developers/docs/smart-contracts/)
 - [Standar token](/developers/docs/standards/tokens/)
 
-## Tubuh {#body}
+## Isi {#body}
 
-ERC-721 (Ethereum Request for Comments 721), yang diusulkan oleh William Entriken, Dieter Shirley, Jacob Evans, Nastassia Sachs pada Januari 2018, adalah Standar Token yang Tidak Dapat Dipertukarkan yang menerapkan API untuk token di dalam Kontrak Pintar.
+ERC-721 ([Ethereum](/) Request for Comments 721), yang diusulkan oleh William Entriken, Dieter Shirley, Jacob Evans, Nastassia Sachs pada Januari 2018, adalah Standar Non-Fungible Token yang mengimplementasikan API untuk token di dalam kontrak pintar.
 
-ERC-721 ini menyediakan fungsionalitas seperti mentransfer token dari satu akun ke akun lainnya, mendapatkan informasi saldo token saat ini dari sebuah akun, mendapatkan pemilik token tertentu, dan juga informasi persediaan total dari token yang tersedia di jaringan. Selain itu, juga memiliki beberapa fungsionalitas lain seperti memberi persetujuan untuk pemindahan sejumlah token dari sebuah akun oleh akun pihak ketiga.
+Ini menyediakan fungsionalitas seperti mentransfer token dari satu akun ke akun lain, untuk mendapatkan saldo token saat ini dari sebuah akun, untuk mendapatkan pemilik token tertentu dan juga total pasokan token yang tersedia di jaringan. Selain itu, ini juga memiliki beberapa fungsionalitas lain seperti menyetujui bahwa sejumlah token dari sebuah akun dapat dipindahkan oleh akun pihak ketiga.
 
-Jika Kontrak Pintar menerapkan metode dan aksi berikut, kontrak itu dapat disebut Kontrak Token yang Tidak Dapat Dipertukarkan ERC-721 dan, setelah digunakan, akan bertanggungjawab untuk melacak token yang dibuat di Ethereum.
+Jika sebuah kontrak pintar mengimplementasikan metode dan peristiwa berikut, itu dapat disebut Kontrak Non-Fungible Token ERC-721 dan, setelah diterapkan, ia akan bertanggung jawab untuk melacak token yang dibuat di Ethereum.
 
 Dari [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
@@ -46,7 +46,7 @@ Dari [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### Aksi {#events}
+### Peristiwa {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -56,11 +56,11 @@ Dari [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
 ### Contoh {#web3py-example}
 
-Mari kita lihat bagaimana sebuah Standar begitu penting untuk mempermudah pemeriksaan Kontrak Token ERC-721 di Ethereum. Kita hanya memerlukan Application Binary Interface (ABI) Kontrak untuk membuat antarmuka untuk Token ERC-721 mana pun. Seperti yang dapat Anda lihat di bawah, kita akan menggunakan satu ABI yang disederhanakan, untuk membuatnya menjadi contoh bergesekan rendah.
+Mari kita lihat bagaimana sebuah Standar sangat penting untuk memudahkan kita memeriksa Kontrak Token ERC-721 apa pun di Ethereum. Kita hanya memerlukan Antarmuka Biner Aplikasi (ABI) Kontrak untuk membuat antarmuka ke Token ERC-721 apa pun. Seperti yang dapat Anda lihat di bawah ini, kita akan menggunakan ABI yang disederhanakan, untuk menjadikannya contoh dengan hambatan rendah.
 
 #### Contoh Web3.py {#web3py-example}
 
-Pertama-tama, pastikan Anda telah menginstal pustaka Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
+Pertama, pastikan Anda telah menginstal pustaka Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
 pip install web3
@@ -73,12 +73,12 @@ from web3._utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract # Kontrak CryptoKitties
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction # Lelang Penjualan CryptoKitties
 
-# Ini adalah sebuah Kontrak Application Binary Interface (ABI) yang disederhanakan dari kontrak NFT ERC-721.
-# Kontrak akan hanya menampilkan metode: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-721 NFT Contract. # Ini adalah Contract Application Binary Interface (ABI) yang disederhanakan dari Kontrak NFT ERC-721.
+# It will expose only the methods: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply() # Ini hanya akan mengekspos metode: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
@@ -127,7 +127,7 @@ ck_extra_abi = [
     }
 ]
 
-ck_contract = w3.eth.contract(address=w3.toChecksumAddress(ck_token_addr), abi=simplified_abi+ck_extra_abi)
+ck_contract = w3.eth.contract(address=w3.to_checksum_address(ck_token_addr), abi=simplified_abi+ck_extra_abi)
 name = ck_contract.functions.name().call()
 symbol = ck_contract.functions.symbol().call()
 kitties_auctions = ck_contract.functions.balanceOf(acc_address).call()
@@ -136,7 +136,7 @@ print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 pregnant_kitties = ck_contract.functions.pregnantKitties().call()
 print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
-# Menggunakan ABI Aksi Transfer untuk mendapat informasi tentang Kitties yang ditransfer.
+# Using the Transfer Event ABI to get info about transferred Kitties. # Menggunakan ABI Event Transfer untuk mendapatkan info tentang Kitties yang ditransfer.
 tx_event_abi = {
     'anonymous': False,
     'inputs': [
@@ -147,34 +147,34 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# Kita membutuhkan tanda tangan aksi untuk menyaring log
-event_signature = w3.sha3(text="Transfer(address,address,uint256)").hex()
+# We need the event's signature to filter the logs # Kita memerlukan tanda tangan event untuk memfilter log
+event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
-logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [event_signature]
 })
 
-# Catatan:
-#   - 120 blok adalah kisaran maksimum yang disediakan layanan Penyedia CloudFlare
-#   - Jika Anda tidak menemukan Transfer event apa pun, Anda juga dapat mendapatkan tokenId di:
-#       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-#       Klik untuk memperluas log aksi dan salin argumen "tokenId"nya
-
+# Notes: # Catatan:
+#   - Increase the number of blocks up from 120 if no Transfer event is returned. # - Tingkatkan jumlah blok lebih dari 120 jika tidak ada event Transfer yang dikembalikan.
+#   - If you didn't find any Transfer event you can also try to get a tokenId at: # - Jika Anda tidak menemukan event Transfer apa pun, Anda juga dapat mencoba mendapatkan tokenId di:
+#       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events # https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
+#       Click to expand the event's logs and copy its "tokenId" argument # Klik untuk memperluas log event dan salin argumen "tokenId"-nya
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
-kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
-is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
-print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
+if recent_tx:
+    kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above # Tempel "tokenId" di sini dari tautan di atas
+    is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
+    print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
-Kontrak CryptoKitties memiliki beberapa Aksi menarik selain dari aksi Standar.
+Kontrak CryptoKitties memiliki beberapa Peristiwa menarik selain yang Standar.
 
-Mari kita lihat dua di antaranya, `Pregnant` dan `Birth`.
+Mari kita periksa dua di antaranya, `Pregnant` dan `Birth`.
 
 ```python
-# Menggunakan ABI Aksi Pregnant dan Birth untuk mendapatkan informasi tentang Kitties baru.
+# Using the Pregnant and Birth Events ABI to get info about new Kitties. # Menggunakan ABI Event Pregnant dan Birth untuk mendapatkan info tentang Kitties baru.
 ck_extra_events_abi = [
     {
         'anonymous': False,
@@ -198,27 +198,27 @@ ck_extra_events_abi = [
         'type': 'event'
     }]
 
-# Kita membutuhkan tanda tangan aksi untuk menyaring log
+# We need the event's signature to filter the logs # Kita memerlukan tanda tangan event untuk memfilter log
 ck_event_signatures = [
-    w3.sha3(text="Pregnant(address,uint256,uint256,uint256)").hex(),
-    w3.sha3(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
+    w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
+    w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
-# Berikut adalah Aksi Pregnant:
-# - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
-pregnant_logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+# Here is a Pregnant Event: # Berikut adalah Event Pregnant:
+# - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
+pregnant_logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [ck_event_signatures[0]]
 })
 
 recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
-# Berikut adalah Aksi Birth:
-# - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
-birth_logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+# Here is a Birth Event: # Berikut adalah Event Birth:
+# - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
+birth_logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [ck_event_signatures[1]]
 })
 
@@ -227,16 +227,26 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## NFT Populer {#popular-nfts}
 
-- [Pelacak NFT Etherscan](https://etherscan.io/tokens-nft) mendaftarkan NFT populer di Ethereum berdasarkan volume transfer.
-- [CryptoKitties](https://www.cryptokitties.co/) adalah sebuah game yang berpusat pada mahluk yang dapat dikembangbiakkan, dikoleksi, dan begitu menggemaskan yang kita sebut CryptoKitties.
-- [Sorare](https://sorare.com/) adalah sebuah game sepakbola fantasi global di mana Anda bisa mengumpulkan item koleksi edisi terbatas, mengatur tim Anda, dan berkompetisi untuk mendapatkah hadiah.
-- [Layanan Nama Ethereum (ENS)](https://ens.domains/) menawarkan cara yang aman dan terdesentralisasi untuk mengelola sumber daya baik on dan off blockchain menggunakan nama yang sederhana dan mudah dimengerti.
-- [Unstoppable Domains](https://unstoppabledomains.com/) adalah sebuah perusahaan berbasis di San Fransisco yang membangun domain di blockchain. Domain blockchain menggantikan alamat mata uang kripto dengan nama yang mudah dimengerti dan bisa digunakan untuk memungkinkan situs web yang tahan penyensoran.
-- [Gods Unchained Cards](https://godsunchained.com/) adalah sebuah TCG pada blockchain Ethereum yang menggunakan NFT untuk membawa kepemilikan asli ke aset dalam game.
-- [Bored Ape Yacht Club](https://boredapeyachtclub.com) adalah koleksi dari 10.000 NFT unik, yang, selain merupakan karya seni langkah yang terbukti, bertindak sebagai token keanggotaan klub, yang menyediakan fasilitas dan keuntungan yang bertambah seiring dengan waktu sebagai hasil dari usaha komunitas.
+- [Etherscan NFT Tracker](https://etherscan.io/nft-top-contracts) mencantumkan NFT teratas di Ethereum berdasarkan volume transfer.
+- [CryptoKitties](https://www.cryptokitties.co/) adalah permainan yang berpusat pada makhluk yang dapat dikembangbiakkan, dikoleksi, dan sangat menggemaskan yang kita sebut CryptoKitties.
+- [Sorare](https://sorare.com/) adalah permainan sepak bola fantasi global di mana Anda dapat mengumpulkan barang koleksi edisi terbatas, mengelola tim Anda, dan bersaing untuk mendapatkan hadiah.
+- [The Ethereum Name Service (ENS)](https://ens.domains/) menawarkan cara yang aman & terdesentralisasi untuk mengalamatkan sumber daya baik di dalam maupun di luar blockchain menggunakan nama yang sederhana dan dapat dibaca manusia.
+- [POAP](https://poap.xyz) memberikan NFT gratis kepada orang-orang yang menghadiri acara atau menyelesaikan tindakan tertentu. POAP gratis untuk dibuat dan didistribusikan.
+- [Unstoppable Domains](https://unstoppabledomains.com/) adalah perusahaan yang berbasis di San Francisco yang membangun domain di blockchain. Domain blockchain menggantikan alamat mata uang kripto dengan nama yang dapat dibaca manusia dan dapat digunakan untuk mengaktifkan situs web yang tahan sensor.
+- [Gods Unchained Cards](https://godsunchained.com/) adalah TCG di blockchain Ethereum yang menggunakan NFT untuk membawa kepemilikan nyata pada aset dalam permainan.
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com) adalah koleksi 10.000 NFT unik, yang, selain menjadi karya seni yang terbukti langka, bertindak sebagai token keanggotaan ke klub, memberikan fasilitas dan manfaat anggota yang meningkat seiring waktu sebagai hasil dari upaya komunitas.
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [EIP-721: Standar Token Non-Fungible ERC-721](https://eips.ethereum.org/EIPS/eip-721)
+- [EIP-721: Standar Non-Fungible Token ERC-721](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - Dokumen ERC-721](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - Implementasi ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
+- [API NFT Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)
+
+## Tutorial: Membangun dengan non-fungible token (ERC-721) di Ethereum {#tutorials}
+
+- [Panduan Kontrak ERC-721 Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Panduan beranotasi dari kontrak NFT ERC-721 lengkap yang ditulis dalam Vyper._
+- [Cara Menulis & Menerapkan NFT (Bagian 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Panduan langkah demi langkah untuk menulis dan menerapkan kontrak pintar ERC-721 pertama Anda._
+- [Cara Melakukan Mint NFT (Bagian 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Cara melakukan mint NFT ERC-721 menggunakan kontrak pintar yang Anda terapkan dan Web3._
+- [Cara Melihat NFT Anda di Dompet Anda (Bagian 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Cara menampilkan NFT yang telah di-mint di MetaMask setelah penerapan._
+- [Tutorial Minter NFT](/developers/tutorials/nft-minter/) _– Membangun dapp minting NFT full-stack dengan frontend React, MetaMask, dan Alchemy._

@@ -51,7 +51,7 @@ lang: ja
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - 既存および潜在的なステーカーのための、コミュニティによるガイダンス、教育、サポート、リソース</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - チームやコミュニティの人々と一緒にethereum.orgのWeb開発やデザインについてチャットしましょう</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - ビルダー、業界の重鎮、イーサリアムの愛好家が集まるWeb3クリエイターコミュニティ。 Web3開発、設計、文化に熱心です。 ぜひ一緒に開発しましょう。</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - Solidity開発のためのチャット (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.element.io/#/room/#solidity:matrix.org">Solidity Matrix</Link> - Solidity開発のためのチャット (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity開発のためのチャット (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 質問と回答のフォーラム</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- 分散型の質問と回答のフォーラム</i></SocialListItem>

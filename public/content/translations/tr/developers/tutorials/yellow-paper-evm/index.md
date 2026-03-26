@@ -4,6 +4,7 @@ description: "Ethereum için resmi spesifikasyonlar olan Sarı Kağıt'ın, Ethe
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: tr
 published: 2022-05-15
 ---
@@ -275,4 +276,4 @@ Matematiksel gösterim kesindir ve Sarı Kağıt'ın Ethereum'un her ayrıntıs�
 - Programcılar bilgisayar kodunu anlar.
   Matematiksel gösterimi anlıyor olabilirler veya anlamıyor olabilirler.
 
-Belki de bu nedenlerden dolayı, daha yeni olan [mutabakat katmanı özellikleri](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md) Python ile yazılmıştır. [Python'da yürütme katmanı özellikleri](https://ethereum.github.io/execution-specs) vardır, ancak bunlar tam değildir. Tüm Sarı Kağıt Python'a veya benzer bir dile çevrilene kadar Sarı Kağıt hizmette kalmaya devam edecek ve onu okuyabilmek faydalı olacaktır.
+Belki de bu nedenlerden dolayı, daha yeni olan [mutabakat katmanı özellikleri](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) Python ile yazılmıştır. [Python'da yürütme katmanı özellikleri](https://ethereum.github.io/execution-specs) vardır, ancak bunlar tam değildir. Tüm Sarı Kağıt Python'a veya benzer bir dile çevrilene kadar Sarı Kağıt hizmette kalmaya devam edecek ve onu okuyabilmek faydalı olacaktır.

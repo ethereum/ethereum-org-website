@@ -42,7 +42,7 @@ const nestedAccordionSpacingMap = {
   6: "ps-24",
 }
 
-const LvlAccordion = async ({
+const LvlAccordion = ({
   lvl,
   items,
   activeSection,

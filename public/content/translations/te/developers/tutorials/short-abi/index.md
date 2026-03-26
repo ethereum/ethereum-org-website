@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: te
 tags: [ "లేయర్ 2" ]
 skill: intermediate
+breadcrumb: "చిన్న ABI"
 published: 2022-04-01
 ---
 

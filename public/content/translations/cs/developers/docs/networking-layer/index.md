@@ -97,7 +97,7 @@ Konsensuální klienti se účastní samostatné peer-to-peer sítě s odlišnou
 
 ### Objevování {#consensus-discovery}
 
-Podobně jako exekuční klienti používají i konsensuální klienti pro vyhledávání peerů protokol [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) přes UDP. Implementace protokolu discv5 na konsensuální vrstvě se liší od implementace exekučních klientů pouze v tom, že obsahuje adaptér propojující discv5 se stackem [libP2P](https://libp2p.io/), čímž se DevP2P stává zastaralým. RLPx relace v exekuční vrstvě jsou nahrazeny zabezpečeným kanálem libP2P noise.
+Podobně jako exekuční klienti používají i konsensuální klienti pro vyhledávání peerů protokol [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) přes UDP. Implementace protokolu discv5 na konsensuální vrstvě se liší od implementace exekučních klientů pouze v tom, že obsahuje adaptér propojující discv5 se stackem [libP2P](https://libp2p.io/), čímž se DevP2P stává zastaralým. RLPx relace v exekuční vrstvě jsou nahrazeny zabezpečeným kanálem libP2P noise.
 
 ### ENR {#consensus-enr}
 
@@ -109,7 +109,7 @@ LibP2P stack podporuje veškerou komunikaci po objevení. Klienti mohou volat a 
 
 ### Gossip {#gossip}
 
-Doména gossip zahrnuje veškeré informace, které musí být rychle rozšířeny po síti. To zahrnuje beacon bloky, důkazy, potvrzení, výstupy a penalty. Toto je přenášeno pomocí libP2P gossipsub v1 a spoléhá na různá metadata, která jsou lokálně uložena na každém uzlu, včetně maximální velikosti gossip payloadů k přijímání a přenosu. Podrobné informace o gossip doméně jsou k dispozici [zde](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+Doména gossip zahrnuje veškeré informace, které musí být rychle rozšířeny po síti. To zahrnuje beacon bloky, důkazy, potvrzení, výstupy a penalty. Toto je přenášeno pomocí libP2P gossipsub v1 a spoléhá na různá metadata, která jsou lokálně uložena na každém uzlu, včetně maximální velikosti gossip payloadů k přijímání a přenosu. Podrobné informace o gossip doméně jsou k dispozici [zde](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Požadavek–odpověď {#request-response}
 
@@ -146,10 +146,10 @@ Souhrn toku řízení je uveden níže, s relevantní síťovou vrstvou v závor
 
 Jakmile je blok potvrzen dostatečným počtem validátorů, je přidán na hlavu řetězce, ospravedlněn a nakonec finalizován.
 
-![](cons_client_net_layer.png)\n![](exe_client_net_layer.png)
+![Schéma síťové vrstvy klienta Ethereum consensus](cons_client_net_layer.png)\n![Schéma síťové vrstvy klienta pro provádění Etherea](exe_client_net_layer.png)
 
 Schéma síťové vrstvy pro konsensuální a exekuční klienty, z [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
 ## Další čtení {#further-reading}
 
-[DevP2P](https://github.com/ethereum/devp2p)\n[LibP2p](https://github.com/libp2p/specs)\n[Specifikace sítě konsensuální vrstvy](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)\n[Od Kademlia k Discv5](https://vac.dev/kademlia-to-discv5)\n[Článek o Kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)\n[Úvod do P2P sítě Etherea](https://p2p.paris/en/talks/intro-ethereum-networking/)\n[Vztah eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)\n[Video s podrobnostmi o klientech pro sloučení a eth2](https://www.youtube.com/watch?v=zNIrIninMgg)
+[DevP2P](https://github.com/ethereum/devp2p)\n[LibP2p](https://github.com/libp2p/specs)\n[Specifikace sítě konsensuální vrstvy](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure)\n[Od Kademlia k Discv5](https://vac.dev/kademlia-to-discv5)\n[Článek o Kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)\n[Úvod do P2P sítě Etherea](https://p2p.paris/en/talks/intro-ethereum-networking/)\n[Vztah eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)\n[Video s podrobnostmi o klientech pro sloučení a eth2](https://www.youtube.com/watch?v=zNIrIninMgg)

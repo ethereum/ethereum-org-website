@@ -255,7 +255,7 @@ sidebarDepth: 3
 
 - [理解以太坊的 Layer 2 擴容解決方案：狀態通道、Plasma 和 Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark，2018 年 2 月 12 日_
 - [狀態通道 - 釋義](https://www.jeffcoleman.ca/state-channels/) _2015 年 11 月 6 日 - Jeff Coleman_
-- [狀態通道基本概念](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [狀態通道基本概念](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [區塊鏈狀態通道:前沿技術概覽](https://ieeexplore.ieee.org/document/9627997)
 
 _知道一個曾經幫助你學習更多社區或社團資源? 歡迎在本頁自由編輯或添加內容！_

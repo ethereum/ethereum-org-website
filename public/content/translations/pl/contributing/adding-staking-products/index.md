@@ -165,7 +165,7 @@ Dla [usług stakowania w puli](/staking/pools/):
 
 Powyższe [kryteria włączenia](#criteria-for-inclusion) służą do obliczenia łącznej oceny dla każdego produktu lub usługi. Służy to jako sposób sortowania i prezentowania produktów, które spełniają określone obiektywne kryteria. Im więcej kryteriów, dla których dostarczono dowody, tym wyżej produkt będzie sortowany, a w przypadku remisów kolejność będzie losowa przy każdym załadowaniu strony.
 
-Logika kodu i wagi dla tych kryteriów są obecnie zawarte w [tym komponencie JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) w naszym repozytorium.
+Logika kodu i wagi dla tych kryteriów są obecnie zawarte w [tym komponencie JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) w naszym repozytorium.
 
 ## Dodaj swój produkt lub usługę {#add-product}
 

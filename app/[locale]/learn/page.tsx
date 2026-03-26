@@ -2,7 +2,7 @@ import { HTMLAttributes, ReactNode } from "react"
 import { getTranslations } from "next-intl/server"
 
 import type { ChildOnlyProp, PageParams, ToCItem } from "@/lib/types"
-import type { CommitHistory, Lang } from "@/lib/types"
+import type { Lang } from "@/lib/types"
 
 import OriginalCard, {
   type CardProps as OriginalCardProps,
@@ -114,14 +114,14 @@ const ImageHeight200 = ({ src, alt }: ImageProps) => (
   <Image className="h-[200px] w-auto" src={src} alt={alt} sizes="250px" />
 )
 
-export default async function Page({ params }: { params: PageParams }) {
+export default async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-learn" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo("learn", locale as Lang, commitHistoryCache)
+    await getAppPageContributorInfo("learn", locale as Lang)
 
   const tocItems = [
     {
@@ -732,11 +732,10 @@ export default async function Page({ params }: { params: PageParams }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-learn" })

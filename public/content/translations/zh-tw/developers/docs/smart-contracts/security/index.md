@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-你還可以使用[提取款項](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment)系統，要求使用者從智慧型合約提款，而不是使用「推送付款」系統傳送資金至帳戶。 如此一來，就可免除在未知地址上意外啟動程式碼的可能性（也能防止特定阻斷服務攻擊）。
+你還可以使用[提取款項](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment)系統，要求使用者從智慧型合約提款，而不是使用「推送付款」系統傳送資金至帳戶。 如此一來，就可免除在未知地址上意外啟動程式碼的可能性（也能防止特定阻斷服務攻擊）。
 
 #### 整數下溢與上溢 {#integer-underflows-and-overflows}
 

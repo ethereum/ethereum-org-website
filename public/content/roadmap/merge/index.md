@@ -12,7 +12,7 @@ summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  The Merge was executed on September 15, 2022. This completed [Ethereum's](/) transition to proof-of-stake consensus, officially deprecating proof-of-work and reducing energy consumption by ~99.95%.
+  The Merge was executed on September 15, 2022. This completed Ethereum's transition to proof-of-stake consensus, officially deprecating proof-of-work and reducing energy consumption by ~99.95%.
 </UpgradeStatus>
 
 ## What was The Merge? {#what-is-the-merge}
@@ -106,7 +106,7 @@ The Merge came with changes to consensus, which also includes changes related to
   <li>concept of <em>safe head</em> and <em>finalized blocks</em></li>
 </ul>
 
-For more information, check out this blog post by Tim Beiko on <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">How The Merge Impacts Ethereum’s Application Layer</a>.
+For more information, check out this blog post by Tim Beiko on <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">How The Merge Impacts Ethereum’s Application Layer</a>.
 
 </ExpandableCard>
 
@@ -195,7 +195,7 @@ To limit confusion, the community has updated these terms:
 
 These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap.
 
-[Learn more about the 'Eth2' renaming](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Learn more about the 'Eth2' renaming](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 

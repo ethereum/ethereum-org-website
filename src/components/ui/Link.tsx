@@ -14,8 +14,8 @@ import * as url from "@/lib/utils/url"
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
-import { Link as I18nLink } from "@/i18n/routing"
-import { usePathname } from "@/i18n/routing"
+import { Link as I18nLink } from "@/i18n/navigation"
+import { usePathname } from "@/i18n/navigation"
 
 export const ExternalLinkIcon = () => {
   const { twFlipForRtl } = useRtlFlip()
@@ -133,8 +133,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         ) : (
           children
         )}
-        <span className="sr-only">
-          {isMailto ? "opens email client" : "opens in a new tab"}
+        <span className="sr-only select-none">
+          &nbsp;
+          {isMailto ? "(opens email client)" : "(opens in a new tab)"}
         </span>
         {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>

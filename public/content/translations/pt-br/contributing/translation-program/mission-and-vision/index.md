@@ -1,7 +1,7 @@
 ---
-title: Missão e visão
+title: "Missão e visão"
 lang: pt-br
-description: A missão e visão do Programa de Tradução do ethereum.org
+description: "A missão e visão do Programa de Tradução do ethereum.org"
 ---
 
 # Missão e visão {#mission-and-vision}

@@ -96,7 +96,7 @@ Každá větev je oddělena znakem `/`, takže `m/2` znamená začít od hlavní
 
 ## Další čtení {#further-reading}
 
-- [Příspěvek na blogu Nadace Ethereum od Carla Beekhuizena](https://blog.ethereum.org/2020/05/21/keys/)
+- [Příspěvek na blogu Nadace Ethereum od Carla Beekhuizena](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 Generování klíčů BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)
 - [EIP-7002: Odchody spouštěné exekuční vrstvou](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [Správa klíčů ve velkém měřítku](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

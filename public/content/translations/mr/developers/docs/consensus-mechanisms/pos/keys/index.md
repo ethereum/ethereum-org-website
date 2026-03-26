@@ -96,7 +96,7 @@ m/44'/60'/0'/0`
 
 ## पुढील वाचन {#further-reading}
 
-- [कार्ल बीखुइझेनचा Ethereum फाउंडेशन ब्लॉग पोस्ट](https://blog.ethereum.org/2020/05/21/keys/)
+- [कार्ल बीखुइझेनचा Ethereum फाउंडेशन ब्लॉग पोस्ट](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 BLS12-381 की जनरेशन](https://eips.ethereum.org/EIPS/eip-2333)
 - [EIP-7002: एक्झिक्युशन लेयर ट्रिगर्ड एक्झिट्स](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [मोठ्या प्रमाणावर की मॅनेजमेंट](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

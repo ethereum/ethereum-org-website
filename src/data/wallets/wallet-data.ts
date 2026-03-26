@@ -838,7 +838,7 @@ export const walletsData: WalletData[] = [
     image: FoxWalletImage,
     twBackgroundColor: "bg-[#000000]",
     twGradiantBrandColor: "from-[#000000]",
-    url: "https://foxwallet.com/en",
+    url: "https://foxwallet.com/",
     active_development_team: true,
     languages_supported: [
       "en",

@@ -4,6 +4,7 @@ description: Katika mafunzo haya, utaunda muunda wa NFT na kujifunza jinsi ya ku
 author: "smudgil"
 tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata"]
 skill: intermediate
+breadcrumb: "Dapp ya kutengeneza NFT"
 lang: sw
 published: 2021-10-06
 ---

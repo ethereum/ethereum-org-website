@@ -11,6 +11,7 @@ tags:
     "podepisování"
   ]
 skill: intermediate
+breadcrumb: "EIP-1271 podpisy"
 published: 2023-01-12
 ---
 

@@ -1,32 +1,32 @@
 ---
-title: "ڈیٹا کی ساختیں اور انکوڈنگ"
-description: "بنیادی Ethereum ڈیٹا کی ساختوں کا ایک جائزہ۔"
-lang: ur-in
+title: "ڈیٹا اسٹرکچرز اور انکوڈنگ"
+description: "بنیادی ایتھیریم ڈیٹا اسٹرکچرز کا ایک جائزہ۔"
+lang: ur
 sidebarDepth: 2
 ---
 
-Ethereum بڑی مقدار میں ڈیٹا بناتا، ذخیرہ کرتا اور منتقل کرتا ہے۔ اس ڈیٹا کو معیاری اور میموری کے موافق طریقوں سے فارمیٹ کیا جانا چاہیے تاکہ کسی کو بھی نسبتاً معمولی کنزیومر گریڈ ہارڈویئر پر [ایک نوڈ چلانے](/run-a-node/) کی اجازت دی جا سکے۔ اس کو حاصل کرنے کے لیے، Ethereum اسٹیک پر کئی مخصوص ڈیٹا کی ساختیں استعمال کی جاتی ہیں۔
+ایتھیریم ڈیٹا کی بڑی مقدار بناتا، اسٹور کرتا اور منتقل کرتا ہے۔ اس ڈیٹا کو معیاری اور میموری کے لحاظ سے موثر طریقوں سے فارمیٹ کیا جانا چاہیے تاکہ کوئی بھی نسبتاً معمولی کنزیومر گریڈ ہارڈویئر پر [نوڈ چلا سکے](/run-a-node/)۔ اسے حاصل کرنے کے لیے، ایتھیریم اسٹیک پر کئی مخصوص ڈیٹا اسٹرکچرز استعمال کیے جاتے ہیں۔
 
-## شرائط {#prerequisites}
+## پیشگی شرائط {#prerequisites}
 
-آپ کو Ethereum کی بنیادی باتوں اور [کلائنٹ سافٹ ویئر](/developers/docs/nodes-and-clients/) کو سمجھنا چاہیے۔ نیٹ ورکنگ لیئر اور [Ethereum وائٹ پیپر](/whitepaper/) سے واقفیت کی سفارش کی جاتی ہے۔
+آپ کو ایتھیریم اور [کلائنٹ سافٹ ویئر](/developers/docs/nodes-and-clients/) کے بنیادی اصولوں کو سمجھنا چاہیے۔ نیٹ ورکنگ لیئر اور [ایتھیریم وائٹ پیپر](/whitepaper/) سے واقفیت کی سفارش کی جاتی ہے۔
 
-## ڈیٹا کی ساختیں {#data-structures}
+## ڈیٹا اسٹرکچرز {#data-structures}
 
-### Patricia merkle tries {#patricia-merkle-tries}
+### پیٹریشیا مرکل ٹرائیز {#patricia-merkle-tries}
 
-Patricia Merkle Tries ایسی ساختیں ہیں جو کلیدی-ویلیو کے جوڑوں کو ایک ڈیٹرمنسٹک اور کرپٹوگرافک طور پر مستند trie میں انکوڈ کرتی ہیں۔ یہ Ethereum کی ایگزیکیوشن لیئر میں بڑے پیمانے پر استعمال ہوتے ہیں۔
+پیٹریشیا مرکل ٹرائیز (Patricia Merkle Tries) ایسے اسٹرکچرز ہیں جو کلید-قدر (key-value) کے جوڑوں کو ایک متعین اور کرپٹوگرافک طور پر تصدیق شدہ ٹرائی (trie) میں انکوڈ کرتے ہیں۔ یہ ایتھیریم کی ایگزیکیوشن لیئر میں وسیع پیمانے پر استعمال ہوتے ہیں۔
 
-[Patricia Merkle Tries کے بارے میں مزید](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
+[پیٹریشیا مرکل ٹرائیز کے بارے میں مزید](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
 
-### Recursive Length Prefix {#recursive-length-prefix}
+### ریکرسیو لینتھ پریفکس {#recursive-length-prefix}
 
-Recursive Length Prefix (RLP) ایک سیریلائزیشن طریقہ ہے جو Ethereum کی ایگزیکیوشن لیئر میں بڑے پیمانے پر استعمال ہوتا ہے۔
+ریکرسیو لینتھ پریفکس (RLP) ایک سیریلائزیشن کا طریقہ ہے جو ایتھیریم کی ایگزیکیوشن لیئر میں وسیع پیمانے پر استعمال ہوتا ہے۔
 
 [RLP کے بارے میں مزید](/developers/docs/data-structures-and-encoding/rlp)
 
-### Simple Serialize {#simple-serialize}
+### سمپل سیریلائز {#simple-serialize}
 
-Simple Serialize (SSZ) Ethereum کی کنسینسس لیئر پر ایک غالب سیریلائزیشن فارمیٹ ہے کیونکہ یہ merklelization کے ساتھ مطابقت رکھتا ہے۔
+سمپل سیریلائز (SSZ) ایتھیریم کی کنسینسس لیئر پر غالب سیریلائزیشن فارمیٹ ہے کیونکہ یہ مرکلائزیشن (merklelization) کے ساتھ مطابقت رکھتا ہے۔
 
 [SSZ کے بارے میں مزید](/developers/docs/data-structures-and-encoding/ssz)

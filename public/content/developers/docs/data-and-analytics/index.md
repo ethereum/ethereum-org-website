@@ -76,3 +76,7 @@ EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum
 - [SubQuery Ethereum Quick Start Guide](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD Network Overview](https://docs.sqd.dev/)
 - [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+
+## Tutorials: Data & analytics / SQL on Ethereum {#tutorials}
+
+- [Learn Foundational Ethereum Topics with SQL](/developers/tutorials/learn-foundational-ethereum-topics-with-sql/) _– Query on-chain Ethereum data with SQL to understand transactions, blocks, and gas fundamentals._

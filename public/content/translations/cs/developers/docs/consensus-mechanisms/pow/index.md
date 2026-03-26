@@ -101,7 +101,7 @@ Z obecného pohledu má proof-of-stake stejný cíl jako proof-of-work: Pomoci d
 ## Další čtení {#further-reading}
 
 - [Většinový útok](https://en.bitcoin.it/wiki/Majority_attack)
-- [O finalitě vypořádání](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [O finalitě vypořádání](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Videa {#videos}
 

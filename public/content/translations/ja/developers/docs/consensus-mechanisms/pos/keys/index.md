@@ -94,7 +94,7 @@ master_key / purpose / coin_type / account / change / address_index
 
 ## 参考リンク {#further-reading}
 
-- [Carl Beekhuizenによるイーサリアム・ファウンデーションのブログ投稿](https://blog.ethereum.org/2020/05/21/keys/)
+- [Carl Beekhuizenによるイーサリアム・ファウンデーションのブログ投稿](https://blog.ethereum.org/2020/05/21/keys)
 - [EIP-2333 BLS12-381 鍵生成](https://eips.ethereum.org/EIPS/eip-2333)
 - [EIP-7002: 実行レイヤーによってトリガーされる退出](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [大規模な鍵管理](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

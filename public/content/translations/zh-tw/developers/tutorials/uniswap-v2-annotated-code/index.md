@@ -4,6 +4,7 @@ description: "Uniswap-v2 合約如何運作？ 為何要這樣編寫？"
 author: Ori Pomerantz
 tags: [ "solidity" ]
 skill: intermediate
+breadcrumb: "Uniswap v2詳解"
 published: 2021-05-01
 lang: zh-tw
 ---

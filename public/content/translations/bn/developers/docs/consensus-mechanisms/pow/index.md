@@ -101,7 +101,7 @@ lang: bn
 ## আরও পড়ুন {#further-reading}
 
 - [সংখ্যাগরিষ্ঠের আক্রমণ](https://en.bitcoin.it/wiki/Majority_attack)
-- [সেটেলমেন্ট ফাইনালিটির উপর](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [সেটেলমেন্ট ফাইনালিটির উপর](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### ভিডিও {#videos}
 

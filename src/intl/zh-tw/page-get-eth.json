@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "請將其想像為電子郵件地址，但是接收的是以太幣而非郵件。如果你想要將以太幣從交易所轉移到你的錢包，使用你的位址作為目的地。發送前請記得檢查！",
   "page-get-eth-your-address-wallet-link": "查看錢包",
   "listing-policy-raise-issue-link": "提出問題",
-  "page-find-wallet-last-updated": "最後更新"
+  "page-find-wallet-last-updated": "最後更新",
+  "listing-policy-disclaimer": "此頁面所列出的所有商品皆非官方代言，僅供參考。如果你想要新增產品或提供與政策相關的回饋，可於 GitHub 提出。"
 }

@@ -281,7 +281,7 @@ contract Oracle {
 
 [シェリングポイント](https://en.wikipedia.org/wiki/Focal_point_\(game_theory\))とは、複数のエンティティがコミュニケーションなしに問題に対する共通の解決策に常にデフォルトで従うと仮定するゲーム理論の概念です。 シェリングポイントのメカニズムは、分散型のオラクルネットワークにおいて、データリクエストへの回答について各ノードがコンセンサスを得るためにしばしば利用されます。
 
-これに関する初期のアイデアは [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/) でした。これは、参加者がデポジットとともに「スカラー」の質問（「ETHの価格は？」など、回答が大きさで記述される質問）への回答を送信する、提案されたデータフィードです。 25パーセンタイルと75[パーセンタイル](https://en.wikipedia.org/wiki/Percentile)の間の値を提供したユーザーは報酬を受け取りますが、中央値から大きく外れた値を提供したユーザーはペナルティを受けます。
+これに関する初期のアイデアは [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed) でした。これは、参加者がデポジットとともに「スカラー」の質問（「ETHの価格は？」など、回答が大きさで記述される質問）への回答を送信する、提案されたデータフィードです。 25パーセンタイルと75[パーセンタイル](https://en.wikipedia.org/wiki/Percentile)の間の値を提供したユーザーは報酬を受け取りますが、中央値から大きく外れた値を提供したユーザーはペナルティを受けます。
 
 SchellingCoinは現在存在しませんが、多くの分散型オラクル、特に[Makerプロトコルのオラクル](https://docs.makerdao.com/smart-contract-modules/oracle-module)は、シェリングポイントのメカニズムを使用してオラクルデータの正確性を向上させています。 各Makerオラクルは、担保資産の市場価格を提出するオフチェーンのP2Pネットワークのノード（「リレイヤー」と「フィード」）と、提供されたすべての値の中央値を計算するオンチェーンの「Medianizer」コントラクトで構成されています。 定められた遅延期間が経過すると、この中央値が当該資産における新たな参照価格になります。
 

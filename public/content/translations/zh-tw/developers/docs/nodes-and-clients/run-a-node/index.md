@@ -132,7 +132,6 @@ sidebarDepth: 2
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - 設定完整節點最快、最簡單的方法。 單行設置工具和節點管理 TUI。 免費。 開源. 由單獨質押者提供的以太坊公共物品。 ARM64 和 AMD64 支援。
 - [eth-docker](https://eth-docker.net/) - 使用 Docker 的自動化設定，專注於簡單安全的質押，需要基本的終端機和 Docker 知識，建議給較進階的使用者。
 - [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) - 透過 SSH 連線在遠端伺服器上安裝用戶端的啟動器，附有 GUI 設定指南、控制中心和許多其他功能。
-- [NiceNode](https://www.nicenode.xyz/) - 一款啟動器，提供直觀的使用者體驗，可在您的電腦上執行節點。 只要選擇用戶端並簡單點按幾下即可啟動。 仍在開發中。
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - 節點設定工具，使用 CLI 精靈自動產生 Docker 設定。 由 Nethermind 使用 Go 語言開發。
 
 ### 手動設定用戶端 {#manual-setup}

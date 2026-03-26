@@ -23,7 +23,7 @@ Isso reduz significativamente o custo dos rollups, limita o crescimento da cadei
 - **Nenhuma ação será necessária para seu ETH**: Depois da melhoria Dencun no Ethereum, não é necessários converter or atualizar seu ETH. Seu saldo de conta irá permanecer o mesmo e o ETH que você tem atualmente continuará acessível na sua forma existente depois do hard fork.
 - **Atenção aos golpes!**<Emoji text="⚠️" />**Qualquer pessoa que instrua você a "atualizar" seu ETH está tentando aplicar um golpe.** Você não precisa fazer nada em relação a essa melhoria. Seus ativos não serão afetados de forma nenhuma. Lembre-se: estar informado é a melhor defesa contra golpes.
 
-[Mais sobre como reconhecer e evitar golpes](/segurança/)
+[Mais sobre como reconhecer e evitar golpes](/security/)
 
 ## Qual problema a melhoria de rede Dencun está resolvendo? {#network-impact}
 
@@ -64,25 +64,25 @@ Esse dimensionamento é crucial para [suportar bilhões de usuários no Ethereum
 
 ## Essa melhoria afeta todos os clientes de consenso e validação do Ethereum? {#client-impact}
 
-Sim, o Proto-Danksharding (EIP-4844) requer melhorias tanto para os clientes de execução quanto para os clientes de consenso. Todos os clientes de Ethereum têm versões lançadas compatíveis com a melhoria. Para manter a sincronização com a rede Ethereum depois da melhoria, os operadores de nó precisam assegurar que estão executando uma versão compatível do cliente. Observe que as informações sobre os lançamentos de clientes são perenes, e os usuários deveriam usar como referência as últimas melhorias para ter os detalhes mais atuais. [Veja detalhes sobre lançamentos de clientes compatíveis](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
+Sim, o Proto-Danksharding (EIP-4844) requer melhorias tanto para os clientes de execução quanto para os clientes de consenso. Todos os clientes de Ethereum têm versões lançadas compatíveis com a melhoria. Para manter a sincronização com a rede Ethereum após a atualização, os operadores de nó precisam assegurar que eles estão executando uma versão habilitada do cliente. Observe que as informações sobre os lançamentos de clientes são perenes, e os usuários deveriam usar como referência as últimas melhorias para ter os detalhes mais atuais. [Veja detalhes sobre lançamentos de clientes compatíveis](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
 
 Os clientes de consenso gerenciam o software _validador_, que foi atualizado para acomodar a melhoria.
 
-## Como a Cancun-Deneb (Dencun) afeta a Goerli ou outras redes de teste Ethereum? {#testnet-impact}
+## Como o Cancun-Deneb (Dencun) afeta as testnets do Ethereum? {#testnet-impact}
 
-- Devnets, Goerli, Sepolia e Holesky, todas passaram pela melhoria Dencun e têm o Proto-Danksharding em funcionamento total
+- Devnets, Sepolia e Holesky passaram pela atualização do Dencun e têm o Proto-Danksharding totalmente funcional
 - Os desenvolvedores de rollup podem usar essas redes para testar o EIP-4844
 - A maioria dos usuários não será afetada por essa mudança em cada rede de teste
 
 ## Todas as transações nas camadas L2 vão utilizar o espaço de blob temporário ou é possível escolher? {#calldata-vs-blobs}
 
-As transações rollup na Camada 2 (L2) do Ethereum têm a opção de usar dois tipos de armazenamento de dados: espaço temporário de blobs ou calldata permanente para contratos inteligentes. O espaço de blobs é uma escolha econômica, fornecendo um armazenamento temporário com um custo menor. Ele garante a disponibilidade dos dados para todos os períodos de desafio necessários. Por outro lado, o calldata do contrato inteligente oferece um armazenamento permanente, mas tem um custo maior.
+As transações rollup na Camada 2 (L2) do Ethereum têm a opção de usar dois tipos de armazenamento de dados: espaço temporário de blobs ou calldata permanente para contratos inteligentes. O espaço bolha é uma escolha econômica, fornecendo um armazenamento temporário com um custo menor. Ele garante a disponibilidade dos dados para todos os períodos de desafio necessários. Por outro lado, o calldata do contrato inteligente oferece um armazenamento permanente, mas tem um custo maior.
 
 A decisão de utilizar o espaço de blobs ou calldata é feita principalmente pelos provedores de rollup. Eles baseiam essa decisão de acordo com a demanda atual por espaço de blobs. Se o espaço de blobs está com alta demanda, os rollups podem optar por calldata para assegurar que os dados são publicados de maneira oportuna.
 
 Enquanto é teoricamente possível para os usuários escolherem o tipo de armazenamento preferido, geralmente são os provedores de rollup que gerenciam essa escolha. Oferecer essa opção para os usuários adicionaria complexidade, particularmente em transações envolvendo rentabilidade. Para detalhes específicos sobre essa escolha, os usuários devem ler a documentação fornecida por cada provedor de rollup.
 
-## O 4844 irá reduzir o gás na L1? {#l1-fee-impact}
+## O 4844 reduzirá o gás da L1? {#l1-fee-impact}
 
 Não muito. Um novo mercado de gás foi introduzido exclusivamente para o espaço de blobs, com uso destinado aos provedores de rollup. _Apesar das taxas na L1 poderem ser diminuídas pela redução da carga dos dados do rollup para os blobs, essa melhoria visa a redução das taxas na L2. Pode ocorrer uma redução nas taxas L1 (rede principal) como um efeito secundário menor._
 

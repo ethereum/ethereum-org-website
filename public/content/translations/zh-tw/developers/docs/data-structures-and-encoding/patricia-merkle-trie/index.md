@@ -262,5 +262,5 @@ else:
 ## 延伸閱讀 {#further-reading}
 
 - [改良版默克爾-派翠西亞樹 — 以太坊如何儲存狀態](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [以太坊中的默克爾化](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [以太坊中的默克爾化](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [了解以太坊前綴樹](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

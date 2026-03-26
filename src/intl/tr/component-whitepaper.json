@@ -1,0 +1,12 @@
+{
+  "before-you-read": "Okumadan önce",
+  "heading": "Ethereum'u anlamak mı istiyorsunuz?",
+  "description": "Bu teknik inceleme, Ethereum piyasaya sürülmeden önce <strong>2014</strong> yılında yayımlandı. 10 yılı aşkın geliştirme, büyük güncellemeler ve ekosistem büyümesinin ardından, <strong>orijinal teknik inceleme artık Ethereum'un bugünkü halini yansıtmamaktadır</strong>.",
+  "cta-learn": "Bugün Ethereum hakkında bilgi edinin",
+  "cta-download-pdf": "Orijinal PDF'i indirin (2014)",
+  "whats-changed": "2014'ten bu yana neler değişti?",
+  "evolution-pos": "Ethereum iş ispatından hisse ispatına geçti (Birleşme, 2022)",
+  "evolution-l2": "Katman 2 ölçeklendirme çözümleri artık milyonlarca işlemi işliyor",
+  "evolution-usecases": "DeFi, NFT'ler ve DAO'lar ana kullanım durumları olarak ortaya çıktı",
+  "evolution-standards": "Akıllı sözleşme standartları (ERC-20, ERC-721) endüstrinin temelleri haline geldi"
+}

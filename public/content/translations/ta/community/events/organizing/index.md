@@ -218,4 +218,3 @@ LinkedIn விளம்பரத்திற்கான மிகவும் 
 கட்டுரைகள்:
 
 - [ETHKL ஐ உருவாக்குதல், Danny H. மூலம்](https://sekto.tech/ethkl24)
-- [POKT நிகழ்வுகள் பிளேபுக்](https://docs.pokt.network/community/pokt-events-playbook)

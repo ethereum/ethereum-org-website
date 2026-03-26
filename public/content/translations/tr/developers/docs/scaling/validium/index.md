@@ -162,5 +162,5 @@ Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz Validium ve istemlere i
 - [Validium ve Katman 2 Karşılaştırması — Sayı No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZK-toplamalar ve Validium karşılaştırması](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [İstem ve Gelişmekte Olan Veri Kullanılabilirliği Spektrumu](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [Toplamalar, Validium'lar ve İstemler: En Popüler Ethereum Ölçeklendirme Çözümleri Hakkında Bilgi Edinin](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
+- [Toplamalar, Validium'lar ve İstemler: En Popüler Ethereum Ölçeklendirme Çözümleri Hakkında Bilgi Edinin](https://medium.com/coinmonks/rollups-vs-validiums-vs-volitions-d76300170f4a)
 - [Ethereum Toplamaları için Pratik Kılavuz](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

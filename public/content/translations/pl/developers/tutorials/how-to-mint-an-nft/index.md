@@ -4,6 +4,7 @@ description: "Ten samouczek opisuje, jak wybiÄ‡ NFT na blockchainie Ethereum, uÅ
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "alchemy", "solidity", "smart kontrakty" ]
 skill: beginner
+breadcrumb: "Mintowanie NFT"
 lang: pl
 published: 2021-04-22
 ---

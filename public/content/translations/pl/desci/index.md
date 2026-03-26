@@ -22,7 +22,7 @@ Zdecentralizowana nauka pozwala na bardziej zróżnicowane źródła finansowani
 
 ### Juan Benet — ruch DeSci
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## Jak DeSci ulepsza naukę {#desci-improves-science}
 
@@ -102,7 +102,6 @@ Przeglądaj projekty i dołącz do społeczności DeSci.
 - [OceanDAO: finansowanie dla nauki związanej z danymi, zarządzane przez DAO](https://oceanprotocol.com/)
 - [Opscientia: otwarte, zdecentralizowane przepływy pracy w nauce](https://opsci.io/research/)
 - [Bio.xyz: zdobądź fundusze na swój biotechnologiczny projekt DAO lub desci](https://www.bio.xyz/)
-- [Fleming Protocol: gospodarka danymi typu open-source, która napędza wspólne odkrycia biomedyczne](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: umożliwianie zdecentralizowanej wiarygodności naukowej](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

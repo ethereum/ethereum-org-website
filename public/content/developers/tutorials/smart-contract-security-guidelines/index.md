@@ -4,6 +4,7 @@ description: A checklist of security guidelines to consider when building your d
 author: "Trailofbits"
 tags: ["solidity", "smart contracts", "security"]
 skill: intermediate
+breadcrumb: Security guidelines
 lang: en
 published: 2020-09-06
 source: Building secure contracts

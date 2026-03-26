@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Unaweza pia kutumia mfumo wa [malipo ya kuvuta](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) unaohitaji watumiaji kutoa fedha kutoka kwa mikataba-erevu, badala ya mfumo wa "malipo ya kusukuma" unaotuma fedha kwenye akaunti. Hii huondoa uwezekano wa kuanzisha msimbo bila kukusudia katika anwani zisizojulikana (na pia inaweza kuzuia mashambulizi fulani ya kunyimwa huduma).
+Unaweza pia kutumia mfumo wa [malipo ya kuvuta](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment) unaohitaji watumiaji kutoa fedha kutoka kwa mikataba-erevu, badala ya mfumo wa "malipo ya kusukuma" unaotuma fedha kwenye akaunti. Hii huondoa uwezekano wa kuanzisha msimbo bila kukusudia katika anwani zisizojulikana (na pia inaweza kuzuia mashambulizi fulani ya kunyimwa huduma).
 
 #### Kupungua na kufurika kwa nambari kamili {#integer-underflows-and-overflows}
 
