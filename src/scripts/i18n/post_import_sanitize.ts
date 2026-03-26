@@ -1867,7 +1867,11 @@ function fixBlockComponentLineBreaks(md: string): {
 
     // Fix inline opening tags: <Component>content → <Component>\ncontent
     // Match any non-newline character after the tag (including other tags)
-    const inlineOpenRe = new RegExp(`(<${component}[^>]*>)([^\\n])`, "g")
+    // Use (?![A-Za-z]) after component name to prevent "Alert" matching "AlertTitle"
+    const inlineOpenRe = new RegExp(
+      `(<${component}(?![A-Za-z])[^>]*>)([^\\n])`,
+      "g"
+    )
     content = content.replace(inlineOpenRe, (_, tag, after) => {
       fixCount++
       return `${tag}\n${after}`
@@ -2891,12 +2895,10 @@ function fixSpanWrappedBackticks(content: string): {
   const parts = content.split(fencePattern)
 
   // Pattern 1: <span dir="ltr"> wrapping backtick content
-  const spanAroundBacktickRe =
-    /<span dir="ltr">\s*(`[^`]+`)\s*<\/span>/g
+  const spanAroundBacktickRe = /<span dir="ltr">\s*(`[^`]+`)\s*<\/span>/g
 
   // Pattern 2: backticks wrapping <span dir="ltr"> content (makes span visible as code)
-  const backtickAroundSpanRe =
-    /`<span dir="ltr">\s*([\s\S]+?)\s*<\/span>`/g
+  const backtickAroundSpanRe = /`<span dir="ltr">\s*([\s\S]+?)\s*<\/span>`/g
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code fences
@@ -4326,12 +4328,24 @@ function processMarkdownFile(
   )
 
   // Fix escaped backticks (\`) to regular backticks (`)
+  // Must skip code blocks and inline code to avoid stripping backslashes that are
+  // legitimate content inside backtick delimiters (e.g., `\` should stay as-is)
   {
     const snapshot = content
-    content = content.replace(/\\`/g, "`")
+    const cbPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+    const cbParts = content.split(cbPattern)
+    for (let ci = 0; ci < cbParts.length; ci++) {
+      if (ci % 2 === 1) continue // Skip code blocks and inline code
+      cbParts[ci] = cbParts[ci].replace(/\\`/g, "`")
+    }
+    content = cbParts.join("")
     if (content !== snapshot) {
-      const count = (snapshot.match(/\\`/g) || []).length
-      issues.push(`Unescaped ${count} backslash-escaped backticks`)
+      const count =
+        (snapshot.match(/\\`/g) || []).length -
+        (content.match(/\\`/g) || []).length
+      if (count > 0) {
+        issues.push(`Unescaped ${count} backslash-escaped backticks`)
+      }
     }
   }
 

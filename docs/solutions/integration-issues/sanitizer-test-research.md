@@ -118,6 +118,8 @@ These patterns are covered by existing fix functions and should have regression 
 - **Orphaned closer-before-opener** (`removeOrphanedClosingTags`) — `</em><a>...<em>text</em>` now correctly removes the leading `</em>` even when open/close counts are equal on the line; uses left-to-right balance scanning instead of simple count comparison (pl PR #17445, pattern #50)
 - **Smart quote double-wrapping prevention** (`quoteFrontmatterNonAscii`) — replaces smart/curly quotes (U+201C/U+201D/U+201E/U+201F) with straight `"` before checking if YAML value needs quoting, preventing `""text""` double-wrapping (pl PR #17445, pattern #51)
 - **JSX attribute spacing** (`fixJsxAttributeSpacing`) — normalizes `href = "..."` to `href="..."` inside HTML/JSX tags; Crowdin sometimes introduces spaces around `=` in attributes (pl PR #17445, pattern #52)
+- **Escaped backtick inside inline code** (escaped-backtick fix) — `\`` replacement now skips inline code spans to preserve `\` as legitimate content in `` `\` ``; previously stripped the backslash leaving empty backticks `` `` `` (bn PR #17866, pattern #53)
+- **Block component regex over-matching** (`fixBlockComponentLineBreaks`) — `Alert` regex no longer matches `AlertTitle`/`AlertEmoji` etc.; added negative lookahead `(?![A-Za-z])` after component name to prevent prefix matching (bn PR #17866, pattern #54)
 
 ## Recommendations for Future Sanitizer Iteration
 
