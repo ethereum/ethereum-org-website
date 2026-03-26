@@ -6,7 +6,7 @@ lang: sw
 
 # Jinsi The Merge ilivyoathiri ugavi wa ETH {#how-the-merge-impacts-ETH-supply}
 
-The Merge iliwakilisha mpito wa mtandao wa [Ethereum](/) kutoka uthibitishaji wa kazi kwenda uthibitishaji wa dhamana uliotokea Septemba 2022. Njia ambayo ETH ilitolewa ilipitia mabadiliko wakati wa mpito huo. Hapo awali, ETH mpya ilitolewa kutoka vyanzo viwili: safu ya utekelezaji (yaani, mainnet) na safu ya makubaliano (yaani, roro wa beacon). Tangu The Merge, utoaji kwenye safu ya utekelezaji sasa ni sifuri. Hebu tuchanganue hili.
+The Merge iliwakilisha mpito wa mtandao wa [Ethereum](/) kutoka uthibitishaji wa kazi kwenda uthibitishaji wa dhamana uliotokea Septemba 2022. Njia ambayo ETH ilitolewa ilipitia mabadiliko wakati wa mpito huo. Hapo awali, ETH mpya ilitolewa kutoka vyanzo viwili: safu ya utekelezaji (yaani, mainnet) na safu ya makubaliano (yaani, Beacon Chain). Tangu The Merge, utoaji kwenye safu ya utekelezaji sasa ni sifuri. Hebu tuchanganue hili.
 
 ## Vipengele vya utoaji wa ETH {#components-of-eth-issuance}
 
@@ -34,24 +34,24 @@ Chini ya uthibitishaji wa kazi, wachimbaji waliingiliana tu na safu ya utekeleza
 
 ### Utoaji wa safu ya makubaliano {#cl-issuance-pre-merge}
 
-[Roro wa beacon](/ethereum-forks/#beacon-chain-genesis) ulianza kufanya kazi mnamo 2020. Badala ya wachimbaji, inalindwa na wathibitishaji wanaotumia uthibitishaji wa dhamana. Mnyororo huu ulianzishwa na watumiaji wa Ethereum wakiweka ETH kwa njia moja kwenye mkataba mahiri kwenye mainnet (safu ya utekelezaji), ambayo roro wa beacon inasikiliza, na kumpa mtumiaji kiasi sawa cha ETH kwenye mnyororo mpya. Hadi The Merge ilipotokea, wathibitishaji wa roro wa beacon hawakuwa wakichakata miamala na kimsingi walikuwa wakifikia makubaliano juu ya hali ya bwawa la wathibitishaji lenyewe.
+[Beacon Chain](/ethereum-forks/#beacon-chain-genesis) ulianza kufanya kazi mnamo 2020. Badala ya wachimbaji, inalindwa na wathibitishaji wanaotumia uthibitishaji wa dhamana. Mnyororo huu ulianzishwa na watumiaji wa Ethereum wakiweka ETH kwa njia moja kwenye mkataba mahiri kwenye mainnet (safu ya utekelezaji), ambayo Beacon Chain inasikiliza, na kumpa mtumiaji kiasi sawa cha ETH kwenye mnyororo mpya. Hadi The Merge ilipotokea, wathibitishaji wa Beacon Chain hawakuwa wakichakata miamala na kimsingi walikuwa wakifikia makubaliano juu ya hali ya bwawa la wathibitishaji lenyewe.
 
-Wathibitishaji kwenye roro wa beacon wanazawadiwa ETH kwa kuthibitisha hali ya mnyororo na kupendekeza bloku. Zawadi (au adhabu) zinahesabiwa na kusambazwa katika kila kipindi (kila dakika 6.4) kulingana na utendaji wa Mthibitishaji. Zawadi za Mthibitishaji ni **ndogo sana** kuliko zawadi za uchimbaji zilizokuwa zikitolewa hapo awali chini ya uthibitishaji wa kazi (ETH 2 kila takriban sekunde 13.5), kwani kuendesha Nodi ya kuthibitisha sio kubwa kiuchumi na hivyo haihitaji au kuhalalisha zawadi kubwa kiasi hicho.
+Wathibitishaji kwenye Beacon Chain wanazawadiwa ETH kwa kuthibitisha hali ya mnyororo na kupendekeza bloku. Zawadi (au adhabu) zinahesabiwa na kusambazwa katika kila kipindi (kila dakika 6.4) kulingana na utendaji wa Mthibitishaji. Zawadi za Mthibitishaji ni **ndogo sana** kuliko zawadi za uchimbaji zilizokuwa zikitolewa hapo awali chini ya uthibitishaji wa kazi (ETH 2 kila takriban sekunde 13.5), kwani kuendesha Nodi ya kuthibitisha sio kubwa kiuchumi na hivyo haihitaji au kuhalalisha zawadi kubwa kiasi hicho.
 
 ### Mchanganuo wa utoaji kabla ya The Merge {#pre-merge-issuance-breakdown}
 
-Jumla ya ugavi wa ETH: **~120,520,000 ETH** (wakati wa The Merge mnamo Septemba 2022)
+Jumla ya ugavi wa ETH: **\~120,520,000 ETH** (wakati wa The Merge mnamo Septemba 2022)
 
 **Utoaji wa safu ya utekelezaji:**
 
-- Ilikadiriwa kuwa ETH 2.08 kwa kila sekunde 13.3\*: **~4,930,000** ETH zilizotolewa kwa mwaka
+- Ilikadiriwa kuwa ETH 2.08 kwa kila sekunde 13.3\*: **\~4,930,000** ETH zilizotolewa kwa mwaka
 - Ilisababisha kiwango cha mfumuko wa bei cha **takriban 4.09%** (Milioni 4.93 kwa mwaka / Jumla ya Milioni 120.5)
 - \*Hii inajumuisha ETH 2 kwa kila kitalu kikuu, pamoja na wastani wa ETH 0.08 kwa muda kutoka kwenye bloku za ommer. Pia inatumia sekunde 13.3, lengo la msingi la muda wa kitalu bila ushawishi wowote kutoka kwa [bomu la ugumu](/glossary/#difficulty-bomb). ([Tazama chanzo](https://bitinfocharts.com/ethereum/))
 
 **Utoaji wa safu ya makubaliano:**
 
 - Kwa kutumia jumla ya ETH 14,000,000 zilizowekwa dhamana, kiwango cha utoaji wa ETH ni takriban ETH 1700 kwa siku ([Tazama chanzo](https://ultrasound.money/))
-- Inasababisha **~620,500** ETH kutolewa kwa mwaka
+- Inasababisha **\~620,500** ETH kutolewa kwa mwaka
 - Ilisababisha kiwango cha mfumuko wa bei cha **takriban 0.52%** (620.5K kwa mwaka / Jumla ya Milioni 119.3)
 
 <Alert variant="update">
@@ -59,9 +59,9 @@ Jumla ya ugavi wa ETH: **~120,520,000 ETH** (wakati wa The Merge mnamo Septemba 
 <AlertDescription>
 **Jumla ya kiwango cha utoaji kwa mwaka (kabla ya The Merge): ~4.61%** (4.09% + 0.52%)
 
-**~88.7%** ya utoaji ilikuwa ikienda kwa wachimbaji kwenye safu ya utekelezaji (4.09 / 4.61 * 100)
+**\~88.7%** ya utoaji ilikuwa ikienda kwa wachimbaji kwenye safu ya utekelezaji (4.09 / 4.61 * 100)
 
-**~11.3%** ilikuwa ikitolewa kwa waweka dhamana kwenye safu ya makubaliano (0.52 / 4.61 * 100)
+**\~11.3%** ilikuwa ikitolewa kwa waweka dhamana kwenye safu ya makubaliano (0.52 / 4.61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -86,16 +86,16 @@ Kadiri wathibitishaji wengi wanavyotoa, idadi ya juu zaidi ya wathibitishaji wan
 
 ### Mchanganuo wa mfumuko wa bei baada ya The Merge {#post-merge-inflation-breakdown}
 
-- [Jumla ya ugavi wa ETH](/eth/supply/): **~120,520,000 ETH** (wakati wa The Merge mnamo Septemba 2022)
+- [Jumla ya ugavi wa ETH](/eth/supply/): **\~120,520,000 ETH** (wakati wa The Merge mnamo Septemba 2022)
 - Utoaji wa safu ya utekelezaji: **0**
-- Utoaji wa safu ya makubaliano: Sawa na hapo juu, **~0.52%** kiwango cha utoaji kwa mwaka (kukiwa na jumla ya ETH milioni 14 zilizowekwa dhamana)
+- Utoaji wa safu ya makubaliano: Sawa na hapo juu, **\~0.52%** kiwango cha utoaji kwa mwaka (kukiwa na jumla ya ETH milioni 14 zilizowekwa dhamana)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Jumla ya kiwango cha utoaji kwa mwaka: **~0.52%**
+Jumla ya kiwango cha utoaji kwa mwaka: **\~0.52%**
 
-Punguzo halisi katika utoaji wa ETH wa kila mwaka: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
+Punguzo halisi katika utoaji wa ETH wa kila mwaka: **\~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

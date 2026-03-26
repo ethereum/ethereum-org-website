@@ -16,7 +16,7 @@ Kwa sasa tunaorodhesha bidhaa na huduma za kuweka dhamana kwenye kurasa zifuataz
 - [Kuweka dhamana kama huduma](/staking/saas/)
 - [Mabwawa ya kushikiria dhamana](/staking/pools/)
 
-Uthibitishaji wa dhamana kwenye roro wa beacon umekuwa hewani tangu Desemba 1, 2020. Ingawa kuweka dhamana bado ni jambo geni kiasi, tumejaribu kuunda mfumo wa haki na wazi wa kuzingatiwa kwenye ethereum.org lakini vigezo vya kuorodhesha vitabadilika na kuboreka kadiri muda unavyopita, na hatimaye ni kwa hiari ya timu ya tovuti ya ethereum.org.
+Uthibitishaji wa dhamana kwenye Beacon Chain umekuwa hewani tangu Desemba 1, 2020. Ingawa kuweka dhamana bado ni jambo geni kiasi, tumejaribu kuunda mfumo wa haki na wazi wa kuzingatiwa kwenye ethereum.org lakini vigezo vya kuorodhesha vitabadilika na kuboreka kadiri muda unavyopita, na hatimaye ni kwa hiari ya timu ya tovuti ya ethereum.org.
 
 ## Mfumo wa maamuzi {#the-decision-framework}
 

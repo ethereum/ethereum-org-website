@@ -71,6 +71,7 @@ Tofauti na adhabu za kutofanya kazi kwa kutokuwa mtandaoni, <em>kupunguzwa kwa d
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Zaidi kuhusu kupunguzwa kwa dhamana na mzunguko wa maisha wa mthibitishaji</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -186,7 +187,7 @@ Adhabu za kutokuwa mtandaoni zinalingana na idadi ya wengine ambao hawako mtanda
 
 <ExpandableCard title="Nitafunguaji zawadi zangu au kurudisha ETH yangu?">
 
-Utoaji wa aina yoyote kutoka kwenye roro wa beacon unahitaji vitambulisho vya kutoa fedha kuwekwa.
+Utoaji wa aina yoyote kutoka kwenye Beacon Chain unahitaji vitambulisho vya kutoa fedha kuwekwa.
 
 Waweka dhamana wapya huweka hili wakati wa kuunda funguo na kuweka amana. Waweka dhamana waliopo ambao hawakuweka hili tayari wanaweza kuboresha funguo zao ili kusaidia utendaji huu.
 

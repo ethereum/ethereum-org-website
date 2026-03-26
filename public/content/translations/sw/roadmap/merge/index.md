@@ -7,7 +7,7 @@ image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Mainnet ya Ethereum inatumia uthibitishaji wa dhamana, lakini haikuwa hivi siku zote.
 summaryPoint2: Uboreshaji kutoka kwenye mfumo wa asili wa uthibitishaji wa kazi kwenda kwenye uthibitishaji wa dhamana uliitwa Muungano.
-summaryPoint3: Muungano unarejelea Mainnet ya asili ya Ethereum kuungana na kiambajengo tofauti cha uthibitishaji wa dhamana kinachoitwa roro wa beacon, ambacho sasa kipo kama mnyororo mmoja.
+summaryPoint3: Muungano unarejelea Mainnet ya asili ya Ethereum kuungana na kiambajengo tofauti cha uthibitishaji wa dhamana kinachoitwa Beacon Chain, ambacho sasa kipo kama mnyororo mmoja.
 summaryPoint4: Muungano ulipunguza matumizi ya nishati ya Ethereum kwa ~99.95%.
 ---
 
@@ -17,25 +17,25 @@ summaryPoint4: Muungano ulipunguza matumizi ya nishati ya Ethereum kwa ~99.95%.
 
 ## Muungano ulikuwa nini? {#what-is-the-merge}
 
-Muungano ulikuwa ni kuunganishwa kwa safu ya utekelezaji ya asili ya Ethereum (mainnet ambayo imekuwepo tangu [mwanzo](/ethereum-forks/#frontier)) na safu yake mpya ya makubaliano ya uthibitishaji wa dhamana, roro wa beacon. Iliondoa hitaji la uchimbaji unaotumia nishati nyingi na badala yake kuwezesha mtandao kulindwa kwa kutumia ETH iliyowekwa dhamana. Ilikuwa hatua ya kusisimua kweli katika kutimiza maono ya [Ethereum](/)—uboreshaji wa uwezo zaidi, usalama, na uendelevu.
+Muungano ulikuwa ni kuunganishwa kwa safu ya utekelezaji ya asili ya Ethereum (mainnet ambayo imekuwepo tangu [mwanzo](/ethereum-forks/#frontier)) na safu yake mpya ya makubaliano ya uthibitishaji wa dhamana, Beacon Chain. Iliondoa hitaji la uchimbaji unaotumia nishati nyingi na badala yake kuwezesha mtandao kulindwa kwa kutumia ETH iliyowekwa dhamana. Ilikuwa hatua ya kusisimua kweli katika kutimiza maono ya [Ethereum](/)—uboreshaji wa uwezo zaidi, usalama, na uendelevu.
 
 <MergeInfographic />
 
-Hapo awali, [roro wa beacon](/roadmap/beacon-chain/) ulitolewa tofauti na [mainnet](/glossary/#mainnet). Mainnet ya Ethereum - pamoja na akaunti zake zote, salio, mikataba mahiri, na hali ya kiambajengo - iliendelea kulindwa na [uthibitishaji wa kazi](/developers/docs/consensus-mechanisms/pow/), hata wakati roro wa beacon ulikuwa ukifanya kazi sambamba kwa kutumia [uthibitishaji wa dhamana](/developers/docs/consensus-mechanisms/pos/). Muungano ulikuwa wakati mifumo hii miwili hatimaye ilipoungana, na uthibitishaji wa kazi ulibadilishwa kabisa na uthibitishaji wa dhamana.
+Hapo awali, [Beacon Chain](/roadmap/beacon-chain/) ulitolewa tofauti na [mainnet](/glossary/#mainnet). Mainnet ya Ethereum - pamoja na akaunti zake zote, salio, mikataba mahiri, na hali ya kiambajengo - iliendelea kulindwa na [uthibitishaji wa kazi](/developers/docs/consensus-mechanisms/pow/), hata wakati Beacon Chain ulikuwa ukifanya kazi sambamba kwa kutumia [uthibitishaji wa dhamana](/developers/docs/consensus-mechanisms/pos/). Muungano ulikuwa wakati mifumo hii miwili hatimaye ilipoungana, na uthibitishaji wa kazi ulibadilishwa kabisa na uthibitishaji wa dhamana.
 
-Fikiria Ethereum ni chombo cha anga za juu ambacho kilizinduliwa kabla hakijawa tayari kwa safari ya kati ya nyota. Pamoja na roro wa beacon, jamii ilijenga injini mpya na ganda gumu. Baada ya majaribio makubwa, ukafika wakati wa kubadilisha injini mpya na ya zamani katikati ya safari. Hii iliunganisha injini mpya, yenye ufanisi zaidi kwenye chombo kilichopo na kukiwezesha kusafiri miaka mingi ya mwanga na kukabiliana na ulimwengu.
+Fikiria Ethereum ni chombo cha anga za juu ambacho kilizinduliwa kabla hakijawa tayari kwa safari ya kati ya nyota. Pamoja na Beacon Chain, jamii ilijenga injini mpya na ganda gumu. Baada ya majaribio makubwa, ukafika wakati wa kubadilisha injini mpya na ya zamani katikati ya safari. Hii iliunganisha injini mpya, yenye ufanisi zaidi kwenye chombo kilichopo na kukiwezesha kusafiri miaka mingi ya mwanga na kukabiliana na ulimwengu.
 
 ## Kuungana na Mainnet {#merging-with-mainnet}
 
 Uthibitishaji wa kazi ulilinda Mainnet ya Ethereum tangu mwanzo hadi Muungano. Hii iliruhusu kiambajengo cha Ethereum ambacho sote tumezoea kuwepo mnamo Julai 2015 na vipengele vyake vyote vinavyofahamika—miamala, mikataba mahiri, akaunti, n.k.
 
-Katika historia yote ya Ethereum, watengenezaji walijiandaa kwa mpito wa mwisho kutoka kwenye uthibitishaji wa kazi kwenda kwenye uthibitishaji wa dhamana. Mnamo Desemba 1, 2020, roro wa beacon uliundwa kama kiambajengo tofauti na mainnet, ukifanya kazi sambamba.
+Katika historia yote ya Ethereum, watengenezaji walijiandaa kwa mpito wa mwisho kutoka kwenye uthibitishaji wa kazi kwenda kwenye uthibitishaji wa dhamana. Mnamo Desemba 1, 2020, Beacon Chain uliundwa kama kiambajengo tofauti na mainnet, ukifanya kazi sambamba.
 
-Roro wa beacon hapo awali haukuwa ukichakata miamala ya mainnet. Badala yake, ulikuwa ukifikia makubaliano juu ya hali yake yenyewe kwa kukubaliana juu ya wathibitishaji wanaofanya kazi na salio la akaunti zao. Baada ya majaribio ya kina, ukafika wakati wa roro wa beacon kufikia makubaliano juu ya data za ulimwengu halisi. Baada ya Muungano, roro wa beacon ukawa injini ya makubaliano kwa data zote za mtandao, ikiwa ni pamoja na miamala ya safu ya utekelezaji na salio la akaunti.
+Beacon Chain hapo awali haukuwa ukichakata miamala ya mainnet. Badala yake, ulikuwa ukifikia makubaliano juu ya hali yake yenyewe kwa kukubaliana juu ya wathibitishaji wanaofanya kazi na salio la akaunti zao. Baada ya majaribio ya kina, ukafika wakati wa Beacon Chain kufikia makubaliano juu ya data za ulimwengu halisi. Baada ya Muungano, Beacon Chain ukawa injini ya makubaliano kwa data zote za mtandao, ikiwa ni pamoja na miamala ya safu ya utekelezaji na salio la akaunti.
 
-Muungano uliwakilisha mabadiliko rasmi ya kutumia roro wa beacon kama injini ya uzalishaji wa kitalu. Uchimbaji sio tena njia ya kuzalisha bloku halali. Badala yake, wathibitishaji wa uthibitishaji wa dhamana wamechukua jukumu hili na sasa wanawajibika kuchakata uhalali wa miamala yote na kupendekeza bloku.
+Muungano uliwakilisha mabadiliko rasmi ya kutumia Beacon Chain kama injini ya uzalishaji wa kitalu. Uchimbaji sio tena njia ya kuzalisha bloku halali. Badala yake, wathibitishaji wa uthibitishaji wa dhamana wamechukua jukumu hili na sasa wanawajibika kuchakata uhalali wa miamala yote na kupendekeza bloku.
 
-Hakuna historia iliyopotea katika Muungano. Wakati mainnet ilipoungana na roro wa beacon, pia iliunganisha historia nzima ya miamala ya Ethereum.
+Hakuna historia iliyopotea katika Muungano. Wakati mainnet ilipoungana na Beacon Chain, pia iliunganisha historia nzima ya miamala ya Ethereum.
 
 <Alert variant="update">
 <AlertContent>
@@ -200,14 +200,14 @@ Masasisho haya ya istilahi yanabadilisha tu mikataba ya majina; hii haibadilishi
 
 Uboreshaji wa Ethereum wote unahusiana kwa kiasi fulani. Kwa hivyo hebu tujikumbushe jinsi Muungano unavyohusiana na uboreshaji mwingine.
 
-### Muungano na roro wa beacon {#merge-and-beacon-chain}
+### Muungano na Beacon Chain {#merge-and-beacon-chain}
 
-Muungano unawakilisha kupitishwa rasmi kwa roro wa beacon kama safu mpya ya makubaliano kwa safu ya utekelezaji ya asili ya Mainnet. Tangu Muungano, wathibitishaji wamepewa jukumu la kulinda Mainnet ya Ethereum, na uchimbaji kwenye [uthibitishaji wa kazi](/developers/docs/consensus-mechanisms/pow/) sio tena njia halali ya uzalishaji wa kitalu.
+Muungano unawakilisha kupitishwa rasmi kwa Beacon Chain kama safu mpya ya makubaliano kwa safu ya utekelezaji ya asili ya Mainnet. Tangu Muungano, wathibitishaji wamepewa jukumu la kulinda Mainnet ya Ethereum, na uchimbaji kwenye [uthibitishaji wa kazi](/developers/docs/consensus-mechanisms/pow/) sio tena njia halali ya uzalishaji wa kitalu.
 
 Bloku badala yake zinapendekezwa na Nodi zinazothibitisha ambazo zimeweka dhamana ya ETH kwa kubadilishana na haki ya kushiriki katika makubaliano. Uboreshaji huu unaweka msingi wa uboreshaji wa uwezo wa baadaye, ikiwa ni pamoja na kugawanyika.
 
 <ButtonLink href="/roadmap/beacon-chain/">
-  Roro wa beacon
+  Beacon Chain
 </ButtonLink>
 
 ### Muungano na uboreshaji wa Shanghai {#merge-and-shanghai}

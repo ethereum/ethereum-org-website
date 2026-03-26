@@ -5,9 +5,9 @@ author: "nstrike2"
 breadcrumb: Hello World fullstack
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "mikataba mahiri",
     "kusambaza",
     "kichunguzi kizuizi",
@@ -272,7 +272,7 @@ Tumeongeza vitegemezi na programu-jalizi kadhaa hadi sasa, sasa tunahitaji kusas
 Sasisha `hardhat.config.js` yako ili ionekane hivi:
 
 ```javascript
-/* *
+/**
  * @type import('hardhat/config').HardhatUserConfig */
 
 require("dotenv").config()
@@ -834,8 +834,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

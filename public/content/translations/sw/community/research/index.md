@@ -294,7 +294,7 @@ Uthibitishaji rasmi ni kuandika msimbo ili kuthibitisha kwamba vipimo vya makuba
 #### Utafiti wa hivi karibuni {#recent-research-13}
 
 - [Uthibitishaji rasmi wa mkataba wa amana](https://github.com/runtimeverification/deposit-contract-verification)
-- [Uthibitishaji rasmi wa vipimo vya Mnyororo wa Beacon](https://github.com/runtimeverification/deposit-contract-verification)
+- [Uthibitishaji rasmi wa vipimo vya Beacon Chain](https://github.com/runtimeverification/deposit-contract-verification)
 
 ## Sayansi ya data na uchanganuzi {#data-science-and-analytics}
 

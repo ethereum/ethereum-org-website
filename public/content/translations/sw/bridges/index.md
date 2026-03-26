@@ -136,6 +136,7 @@ Madaraja ni muhimu katika kuingiza watumiaji kwenye L2 za Ethereum, na hata kwa 
 <Divider />
 
 ## Usomaji zaidi {#further-reading}
+
 - [EIP-5164: Utekelezaji wa Minyororo Tofauti](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _Juni 18, 2022 - Brendan Asselstine_
 - [Mfumo wa Hatari wa L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _Julai 5, 2022 - Bartek Kiepuszewski_
 - ["Kwa nini siku zijazo zitakuwa za minyororo mingi, lakini hazitakuwa za minyororo tofauti."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _Januari 8, 2022 - Vitalik Buterin_
