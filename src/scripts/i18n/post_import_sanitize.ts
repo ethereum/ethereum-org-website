@@ -2069,6 +2069,67 @@ function repairUnclosedBackticks(
 }
 
 /**
+ * Fix Crowdin-split inline code spans by comparing against English.
+ *
+ * Crowdin sometimes inserts a premature closing backtick inside an inline
+ * code span, splitting it into two fragments:
+ *   English:  `<> ... </>`
+ *   Crowdin:  `<> ...` </>`
+ *
+ * This function finds inline code spans in English, checks if the translated
+ * line has the same content split across two backtick-delimited fragments,
+ * and merges them back into a single span.
+ */
+function fixCrowdinSplitBackticks(
+  translatedMd: string,
+  englishMd: string
+): { content: string; fixCount: number } {
+  const translatedLines = translatedMd.split("\n")
+  const englishLines = englishMd.split("\n")
+  let fixCount = 0
+
+  // Extract all inline code spans from English
+  const engCodeSpans: string[] = []
+  const codeSpanRe = /`([^`]+)`/g
+  for (const engLine of englishLines) {
+    let m: RegExpExecArray | null
+    while ((m = codeSpanRe.exec(engLine)) !== null) {
+      engCodeSpans.push(m[1])
+    }
+  }
+
+  for (let i = 0; i < translatedLines.length; i++) {
+    const line = translatedLines[i]
+    if (line.startsWith("```") || line.startsWith("~~~")) continue
+
+    for (const engCode of engCodeSpans) {
+      // Build a pattern that matches the English code content split by
+      // a premature backtick close+reopen: `part1` part2`
+      // Match: `<prefix>` <suffix>` where prefix+suffix = engCode
+      // The split point could be anywhere, so try each possible split
+      for (let splitAt = 1; splitAt < engCode.length; splitAt++) {
+        const prefix = engCode.slice(0, splitAt)
+        const suffix = engCode.slice(splitAt)
+        const prefixEsc = prefix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+        const suffixEsc = suffix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+        // Match: `prefix` suffix` with optional whitespace around the split
+        const splitPattern = new RegExp(
+          "`" + prefixEsc + "`\\s*" + suffixEsc + "`"
+        )
+        if (splitPattern.test(line)) {
+          translatedLines[i] = line.replace(splitPattern, "`" + engCode + "`")
+          fixCount++
+          break
+        }
+      }
+      if (fixCount > 0) break
+    }
+  }
+
+  return { content: translatedLines.join("\n"), fixCount }
+}
+
+/**
  * Normalize frontmatter dates from localized format (DD-MM-YYYY) back to ISO (YYYY-MM-DD).
  */
 function normalizeFrontmatterDates(content: string): {
@@ -2115,7 +2176,7 @@ function syncProtectedFrontmatterFields(
 ): { content: string; fixCount: number } {
   // Fields that should never be translated - sync from English canonical
   // Note: 'buttons' array needs special handling (content translatable, toId/isSecondary not)
-  // Note: 'lang' must NOT be protected - it must remain as target language code
+  // Note: 'lang' must NOT be protected - it is handled by fixFrontmatterLang()
   // Note: 'author' is excluded for non-Latin locales -- author names render to readers
   //   and should be transliterated for reading flow
   const isTranslitLang = locale ? TRANSLITERATION_LOCALES.has(locale) : false
@@ -2189,6 +2250,37 @@ function syncProtectedFrontmatterFields(
   }
 
   return { content: translatedMd, fixCount }
+}
+
+/**
+ * Force the frontmatter `lang` field to match the locale derived from the file path.
+ * The lang field must always equal the target language code (e.g., "ur", "ja", "es").
+ * This is a deterministic fix -- the correct value is encoded in the path itself:
+ *   public/content/translations/<LANG_CODE>/...
+ */
+function fixFrontmatterLang(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (!locale) return { content, fixCount: 0 }
+
+  const frontmatterRe = /^---\n([\s\S]*?)\n---/
+  const match = content.match(frontmatterRe)
+  if (!match) return { content, fixCount: 0 }
+
+  const frontmatter = match[1]
+  const langRe = /^lang:\s*(.+)$/m
+  const langMatch = frontmatter.match(langRe)
+  if (!langMatch) return { content, fixCount: 0 }
+
+  const currentLang = langMatch[1].trim()
+  if (currentLang === locale) return { content, fixCount: 0 }
+
+  const fixedFrontmatter = frontmatter.replace(langRe, `lang: ${locale}`)
+  return {
+    content: content.replace(frontmatterRe, `---\n${fixedFrontmatter}\n---`),
+    fixCount: 1,
+  }
 }
 
 /**
@@ -2499,6 +2591,21 @@ function quoteFrontmatterNonAscii(content: string): {
       const [, prefix, value] = kvMatch
       const trimmedValue = value.trim()
 
+      // Replace smart/curly quotes ONLY when they act as the outer value
+      // delimiters (first and last character). Inner smart quotes inside an
+      // already-quoted value are legitimate typographic quotes and must stay.
+      // e.g., summaryPoint1: \u201CText\u201D  ->  summaryPoint1: "Text"
+      // but NOT: description: "Text \u201Cinner\u201D."  (leave inner alone)
+      const smartOpen = /^[\u201C\u201E\u201F]/
+      const smartClose = /[\u201D\u201E\u201F]$/
+      if (smartOpen.test(trimmedValue) && smartClose.test(trimmedValue)) {
+        // Smart quotes are the outer delimiters -- replace only first and last
+        const inner = trimmedValue.slice(1, -1)
+        lines[i] = `${prefix}"${inner}"`
+        fixCount++
+        continue
+      }
+
       // Skip if already quoted (starts and ends with matching quotes)
       if (
         (trimmedValue.startsWith('"') && trimmedValue.endsWith('"')) ||
@@ -2762,6 +2869,77 @@ function fixBareRtlEquations(
 }
 
 /**
+ * Remove redundant <span dir="ltr"> wrappers around backtick-delimited inline
+ * code. MDX cannot nest markdown syntax (backticks) inside JSX (<span>), so
+ * `<span dir="ltr">`\`...\``</span>` renders as broken text instead of inline
+ * code. Inline code is already inherently LTR (monospace Latin font), so the
+ * wrapper is both harmful and unnecessary.
+ *
+ * This can be produced by fixBareRtlDates/fixBareRtlEquations wrapping content
+ * that was already inside backticks, or by Gemini translations directly.
+ *
+ * Skips code fences (operates only on prose).
+ */
+function fixSpanWrappedBackticks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Split out code fences so we only operate on prose
+  const fencePattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(fencePattern)
+
+  // Pattern 1: <span dir="ltr"> wrapping backtick content
+  const spanAroundBacktickRe = /<span dir="ltr">\s*(`[^`]+`)\s*<\/span>/g
+
+  // Pattern 2: backticks wrapping <span dir="ltr"> content (makes span visible as code)
+  const backtickAroundSpanRe = /`<span dir="ltr">\s*([\s\S]+?)\s*<\/span>`/g
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code fences
+    parts[i] = parts[i].replace(spanAroundBacktickRe, (_, backtickContent) => {
+      fixCount++
+      return backtickContent
+    })
+    parts[i] = parts[i].replace(backtickAroundSpanRe, (_, innerContent) => {
+      fixCount++
+      return `\`${innerContent}\``
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Urdu-specific: move bold markers off ordered list numerals so CSS can
+ * render the number in the correct Urdu/Nastaliq numeral script.
+ *
+ * When Gemini produces `**1. some text**`, the numeral is inside the bold
+ * span and CSS `list-style-type` cannot restyle it. The fix moves the bold
+ * markers after the `N. ` prefix: `1. **some text**`.
+ *
+ * Only applies to Urdu (ur) locale.
+ */
+function fixBoldWrappedOrderedListNumerals(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (locale !== "ur") return { content, fixCount: 0 }
+
+  let fixCount = 0
+  // Match start-of-line **N. ...** where N is one or more digits
+  // The closing ** can be followed by any trailing punctuation
+  const re = /^\*\*(\d+\.\s)([\s\S]*?)\*\*/gm
+  content = content.replace(re, (_, numPrefix, rest) => {
+    fixCount++
+    return `${numPrefix}**${rest}**`
+  })
+
+  return { content, fixCount }
+}
+
+/**
  * Warn about translated technical numerals in any locale.
  * Technical identifiers like ERC-20, EIP-1559, Web3 must keep Western Arabic
  * numerals. Detects Arabic-Indic (٠-٩) or Extended Arabic-Indic (۰-۹) digits
@@ -2798,6 +2976,70 @@ function warnTranslatedTechnicalNumerals(content: string): string[] {
 }
 
 /**
+ * Replace CJK ideographic full stop (U+3002) with the locale-appropriate
+ * full stop character.  CJK locales (ja, ko, zh, zh-tw) are skipped since
+ * the character is correct there.  Skips code fences using the robust
+ * line-by-line fence-tracking pattern.
+ */
+function fixCrossScriptPunctuation(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (!locale) return { content, fixCount: 0 }
+
+  // CJK locales: the ideographic full stop is correct -- nothing to fix
+  const CJK_LOCALES = new Set(["ja", "ko", "zh", "zh-tw"])
+  if (CJK_LOCALES.has(locale)) return { content, fixCount: 0 }
+
+  // Determine the replacement character based on locale script
+  let replacement: string
+  if (locale === "ar" || locale === "ur") {
+    replacement = "\u06D4" // Arabic full stop
+  } else if (locale === "hi" || locale === "mr" || locale === "bn") {
+    replacement = "\u0964" // Devanagari danda
+  } else {
+    replacement = "." // Latin/Cyrillic/Tamil/Telugu/etc.
+  }
+
+  let fixCount = 0
+  const lines = content.split("\n")
+  let inFencedBlock = false
+
+  for (let lineIdx = 0; lineIdx < lines.length; lineIdx++) {
+    const line = lines[lineIdx]
+
+    // Track fenced code block boundaries
+    if (/^(`{3,}|~{3,})/.test(line)) {
+      inFencedBlock = !inFencedBlock
+      continue
+    }
+    if (inFencedBlock) continue
+
+    // Split on inline code spans to avoid touching code
+    const inlineCodePattern = /(`[^`]+`)/g
+    const parts = line.split(inlineCodePattern)
+
+    let changed = false
+    for (let i = 0; i < parts.length; i++) {
+      if (i % 2 === 1) continue // Skip inline code spans
+
+      const original = parts[i]
+      parts[i] = parts[i].replace(/\u3002/g, () => {
+        fixCount++
+        return replacement
+      })
+      if (parts[i] !== original) changed = true
+    }
+
+    if (changed) {
+      lines[lineIdx] = parts.join("")
+    }
+  }
+
+  return { content: lines.join("\n"), fixCount }
+}
+
+/**
  * Detect cross-script contamination in translated content.
  * Returns warnings for unexpected Unicode characters based on the file's locale.
  */
@@ -2827,6 +3069,48 @@ function detectCrossScriptContamination(
   }
 
   return warnings
+}
+
+/**
+ * Fix misplaced closing backtick around JSX fragment patterns.
+ * Crowdin sometimes moves the closing backtick before `</>`, producing:
+ *   (`<> ...` </>)  instead of  (`<> ... </>`)
+ * The escapeMdxAngleBrackets function then escapes the exposed </>,
+ * making things worse. This fix must run BEFORE escapeMdxAngleBrackets.
+ */
+function fixMisplacedBacktickAroundJsxFragment(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Process line-by-line, skip fenced code blocks
+  const lines = content.split("\n")
+  let inFencedBlock = false
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+
+    if (/^(`{3,}|~{3,})/.test(line)) {
+      inFencedBlock = !inFencedBlock
+      continue
+    }
+    if (inFencedBlock) continue
+
+    // Match: `<content>` </>) or `<content>` \</>) -- backtick closed too early
+    // The closing backtick should wrap the </> too.
+    // Pattern: backtick-content-backtick SPACE </> or \</> followed by )
+    lines[i] = line.replace(
+      /(`<[^`]*`)\s*(?:\\)?(<\/>)(\))/g,
+      (_, codeSpan, fragment, paren) => {
+        fixCount++
+        // Move closing backtick to after the fragment
+        return codeSpan.slice(0, -1) + " " + fragment + "`" + paren
+      }
+    )
+  }
+
+  return { content: lines.join("\n"), fixCount }
 }
 
 /**
@@ -3290,6 +3574,45 @@ function fixImagePathDotSlash(content: string): {
 }
 
 /**
+ * Fix backslash-escaped quotes in JSX/MDX attributes.
+ *
+ * Crowdin sometimes backslash-escapes double quotes in JSX attributes:
+ *   <ButtonLink variant=\"outline-color\" href=\"/path/\">
+ * This is valid in JSON but breaks MDX compilation.
+ * Fix: remove the backslash before quotes in JSX-like tag attributes.
+ */
+function fixEscapedQuotesInJsxAttributes(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip fenced code blocks
+
+    const original = parts[i]
+    // Match JSX tag lines containing =\"  and replace all \" with "
+    parts[i] = parts[i].replace(/^(\s*<[A-Za-z].*)\\"(.*)$/gm, (fullLine) => {
+      // Only fix lines that have =\" (attribute assignment with escaped quote)
+      if (!fullLine.includes('=\\"')) return fullLine
+      return fullLine.replace(/\\"/g, '"')
+    })
+    if (parts[i] !== original) {
+      // Count the number of \" that were replaced
+      const replacements =
+        (original.match(/\\"/g) || []).length -
+        (parts[i].match(/\\"/g) || []).length
+      fixCount += replacements
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Fix inner quotes inside JSX attribute values that break MDX parsing.
  * Crowdin translates attribute content like title="Misconception: &quot;text&quot;"
  * but uses literal " instead of &quot;, prematurely closing the attribute.
@@ -3667,41 +3990,90 @@ function removeOrphanedClosingTags(content: string): {
     for (const tag of orphanTags) {
       const lines = parts[partIdx].split("\n")
       // Track unclosed openers across lines so a </tag> on line N+1
-      // paired with <tag> on line N is not treated as orphaned.
+      // paired with <tag> on line N is not treated as orphaned (dev).
       let unclosedFromPrev = 0
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i]
-        // Strip inline code spans for counting only — tags inside
+        // Strip inline code spans for counting only -- tags inside
         // backticks are literal text, not real HTML
         const lineForCounting = line.replace(/`[^`]+`/g, "")
         const closeRe = new RegExp(`</${tag}>`, "g")
         const openRe = new RegExp(`<${tag}[\\s>]`, "g")
-
         const closeCount = (lineForCounting.match(closeRe) || []).length
         const openCount = (lineForCounting.match(openRe) || []).length
 
-        // Effective openers = this line's openers + carry-over from previous lines
-        const effectiveOpen = openCount + unclosedFromPrev
+        // Scan left-to-right tracking opener/closer balance.
+        // Include carry-over from previous lines (dev) so multi-line
+        // spans are not treated as orphaned.
+        // A closer is orphaned if no unmatched opener precedes it.
+        if (closeCount > 0) {
+          // Build a list of opener and closer positions for this tag
+          const openPosRe = new RegExp(`<${tag}[\\s>]`, "g")
+          const closePosRe = new RegExp(`</${tag}>`, "g")
+          type TagEvent = { pos: number; type: "open" | "close" }
+          const events: TagEvent[] = []
+          let m: RegExpExecArray | null
+          while ((m = openPosRe.exec(lineForCounting)) !== null) {
+            events.push({ pos: m.index, type: "open" })
+          }
+          while ((m = closePosRe.exec(lineForCounting)) !== null) {
+            events.push({ pos: m.index, type: "close" })
+          }
+          events.sort((a, b) => a.pos - b.pos)
 
-        // If there are more closing tags than effective openers on this line,
-        // remove the excess closing tags (the trailing orphans)
-        if (closeCount > effectiveOpen) {
-          // Keep the first `effectiveOpen` closers (paired with openers),
-          // remove the rest (orphans at the end of the line)
-          let kept = 0
-          lines[i] = line.replace(closeRe, (match) => {
-            kept++
-            if (kept <= effectiveOpen) {
-              return match // Keep — paired with an opener
+          // Walk events left-to-right: closers without a pending opener
+          // are orphans. Start pendingOpeners with carry-over from prev lines.
+          let pendingOpeners = unclosedFromPrev
+          const orphanCloserPositions: number[] = []
+          for (const ev of events) {
+            if (ev.type === "open") {
+              pendingOpeners++
+            } else {
+              if (pendingOpeners > 0) {
+                pendingOpeners-- // Paired
+              } else {
+                orphanCloserPositions.push(ev.pos)
+              }
             }
-            fixCount++
-            return "" // Remove — orphaned
-          })
-          // Clean up any resulting double spaces
-          lines[i] = lines[i].replace(/  +/g, " ").trimEnd()
+          }
+
+          if (orphanCloserPositions.length > 0) {
+            // Remove orphaned closers from the ORIGINAL line (not lineForCounting)
+            const closeTag = `</${tag}>`
+            // Map orphan positions from lineForCounting to indices in original line
+            const countingPositions: number[] = []
+            const cRe = new RegExp(escapeRegex(closeTag), "g")
+            let cm: RegExpExecArray | null
+            while ((cm = cRe.exec(lineForCounting)) !== null) {
+              countingPositions.push(cm.index)
+            }
+            const toRemoveIndices = new Set(
+              orphanCloserPositions.map((pos) => countingPositions.indexOf(pos))
+            )
+
+            let result = ""
+            let closerIdx = 0
+            const closeReForReplace = new RegExp(escapeRegex(closeTag), "g")
+            let lastEnd = 0
+            let rm: RegExpExecArray | null
+            while ((rm = closeReForReplace.exec(line)) !== null) {
+              if (toRemoveIndices.has(closerIdx)) {
+                result += line.slice(lastEnd, rm.index)
+                lastEnd = rm.index + rm[0].length
+                fixCount++
+              }
+              closerIdx++
+            }
+            result += line.slice(lastEnd)
+            // Collapse doubled punctuation left behind after tag removal
+            // e.g., "word.</em>." becomes "word.." after removal, fix to "word."
+            result = result.replace(/([.!?,;:])(\s*)\1/g, "$1$2")
+            lines[i] = result.replace(/  +/g, " ").trimEnd()
+          }
         }
 
         // Update carry-over: unclosed openers from this line
+        const effectiveOpen = openCount + unclosedFromPrev
         unclosedFromPrev = Math.max(0, effectiveOpen - closeCount)
       }
       parts[partIdx] = lines.join("\n")
@@ -3853,6 +4225,10 @@ function processMarkdownFile(
     (n) => `Fixed smart quotes in ${n} JSX tag attribute(s)`
   )
   applyFix(
+    () => fixJsxAttributeSpacing(content),
+    (n) => `Fixed ${n} spaced JSX attribute(s)`
+  )
+  applyFix(
     () => fixDuplicateFrontmatterAuthor(content),
     (n) => `Fixed ${n} duplicate author frontmatter lines`
   )
@@ -3897,6 +4273,10 @@ function processMarkdownFile(
     (n) => `Fixed ${n} corrupted ./ image paths`
   )
   applyFix(
+    () => fixEscapedQuotesInJsxAttributes(content),
+    (n) => `Fixed ${n} backslash-escaped quotes in JSX attributes`
+  )
+  applyFix(
     () => fixInnerQuotesInJsxAttributes(content),
     (n) => `Fixed ${n} unescaped inner quotes in JSX attributes`
   )
@@ -3921,6 +4301,10 @@ function processMarkdownFile(
   applyFix(
     () => quoteFrontmatterNonAscii(content),
     (n) => `Quoted ${n} frontmatter values with unsafe YAML chars`
+  )
+  applyFix(
+    () => fixFrontmatterLang(content, locale),
+    (n) => `Fixed ${n} frontmatter lang field to match locale "${locale}"`
   )
   applyFix(
     () => fixAsciiGuillemets(content),
@@ -3960,6 +4344,10 @@ function processMarkdownFile(
   applyFix(
     () => fixAsymmetricBackticks(content),
     (n) => `Fixed ${n} asymmetric backtick pairs`
+  )
+  applyFix(
+    () => fixMisplacedBacktickAroundJsxFragment(content),
+    (n) => `Repaired ${n} Crowdin-split backtick span(s)`
   )
   applyFix(
     () => escapeMdxAngleBrackets(content),
@@ -4018,6 +4406,10 @@ function processMarkdownFile(
     applyFix(
       () => repairUnclosedBackticks(content, englishMd!),
       (n) => `Repaired ${n} unclosed backticks`
+    )
+    applyFix(
+      () => fixCrowdinSplitBackticks(content, englishMd!),
+      (n) => `Repaired ${n} Crowdin-split backtick span(s)`
     )
     applyFix(
       () => restoreBlankLinesFromEnglish(content, englishMd!),
@@ -4130,6 +4522,16 @@ function processMarkdownFile(
     const inlineCodeWarnings = warnTranslatedInlineCode(content, englishMd)
     issues.push(...inlineCodeWarnings)
 
+    // Fix CJK full stops before cross-script detection (so it doesn't warn
+    // about characters we already fixed)
+    if (locale) {
+      applyFix(
+        () => fixCrossScriptPunctuation(content, locale),
+        (n) =>
+          `Replaced ${n} CJK ideographic full stop(s) with locale-appropriate punctuation`
+      )
+    }
+
     // Detect cross-script contamination
     if (locale) {
       const scriptWarnings = detectCrossScriptContamination(content, locale)
@@ -4150,6 +4552,22 @@ function processMarkdownFile(
           `Wrapped ${eqResult.fixCount} bare math equation(s) in <span dir="ltr"> for RTL`
         )
       }
+
+      // Remove redundant <span dir="ltr"> around backtick inline code
+      // (cleans up after fixBareRtlDates/fixBareRtlEquations and Gemini)
+      const spanBtResult = fixSpanWrappedBackticks(content)
+      if (spanBtResult.fixCount > 0) {
+        content = spanBtResult.content
+        issues.push(
+          `Unwrapped ${spanBtResult.fixCount} redundant <span dir="ltr"> around backtick code`
+        )
+      }
+
+      applyFix(
+        () => fixBoldWrappedOrderedListNumerals(content, locale),
+        (n) =>
+          `Moved ${n} bold marker(s) off ordered list numerals for Urdu numeral rendering`
+      )
 
       // Technical numeral warnings (all locales)
       const numeralWarnings = warnTranslatedTechnicalNumerals(content)
@@ -4211,9 +4629,71 @@ function processMarkdownFile(
   return { fixed, issues, content }
 }
 
+/**
+ * Fix translated interpolation placeholders in JSON values.
+ *
+ * Crowdin sometimes translates the variable name inside {braces}:
+ *   EN: "{days} ago" -> SW: "{siku} zilizopita"
+ * The app expects the English key name. This function compares each
+ * translated JSON value against its English counterpart and restores
+ * the original placeholder names.
+ */
+function fixTranslatedJsonPlaceholders(
+  translatedJson: string,
+  englishJson: string
+): { content: string; fixCount: number } {
+  let fixCount = 0
+
+  let trObj: Record<string, string>
+  let enObj: Record<string, string>
+  try {
+    trObj = JSON.parse(translatedJson)
+    enObj = JSON.parse(englishJson)
+  } catch {
+    return { content: translatedJson, fixCount: 0 }
+  }
+
+  for (const key of Object.keys(trObj)) {
+    const enVal = enObj[key]
+    if (!enVal || typeof enVal !== "string" || typeof trObj[key] !== "string")
+      continue
+
+    // Extract placeholders from English: {word} patterns
+    const enPlaceholders = enVal.match(/\{[a-zA-Z_]\w*\}/g)
+    if (!enPlaceholders || enPlaceholders.length === 0) continue
+
+    // Extract placeholders from translated value
+    const trPlaceholders = trObj[key].match(/\{[a-zA-Z_]\w*\}/g)
+    if (!trPlaceholders || trPlaceholders.length === 0) continue
+
+    // If counts match but names differ, map by position
+    if (enPlaceholders.length === trPlaceholders.length) {
+      let val = trObj[key]
+      let changed = false
+      for (let j = 0; j < enPlaceholders.length; j++) {
+        if (trPlaceholders[j] !== enPlaceholders[j]) {
+          val = val.replace(trPlaceholders[j], enPlaceholders[j])
+          changed = true
+        }
+      }
+      if (changed) {
+        trObj[key] = val
+        fixCount++
+      }
+    }
+  }
+
+  if (fixCount === 0) return { content: translatedJson, fixCount }
+
+  // Re-serialize preserving the original formatting (2-space indent)
+  const content = JSON.stringify(trObj, null, 2) + "\n"
+  return { content, fixCount }
+}
+
 function processJsonFile(
   jsonPath: string,
-  providedContent?: string
+  providedContent?: string,
+  englishContent?: string
 ): {
   fixed: boolean
   issues: string[]
@@ -4256,6 +4736,31 @@ function processJsonFile(
   if (compoundResult.fixCount > 0) {
     content = compoundResult.content
     issues.push(`Fixed ${compoundResult.fixCount} known wrong compound term(s)`)
+  }
+
+  // Fix CJK ideographic full stops in JSON values
+  if (jsonLocale) {
+    const punctResult = fixCrossScriptPunctuation(content, jsonLocale)
+    if (punctResult.fixCount > 0) {
+      content = punctResult.content
+      issues.push(
+        `Replaced ${punctResult.fixCount} CJK ideographic full stop(s) with locale-appropriate punctuation`
+      )
+    }
+  }
+
+  // Fix translated interpolation placeholders if English is available
+  if (englishContent) {
+    const placeholderResult = fixTranslatedJsonPlaceholders(
+      content,
+      englishContent
+    )
+    if (placeholderResult.fixCount > 0) {
+      content = placeholderResult.content
+      issues.push(
+        `Fixed ${placeholderResult.fixCount} translated placeholder(s)`
+      )
+    }
   }
 
   // Try parsing to validate JSON
@@ -4411,6 +4916,10 @@ export async function runSanitizer(
     const originalOnDisk = fs.existsSync(fileInfo.path)
       ? fs.readFileSync(fileInfo.path, "utf8")
       : null
+    // Skip files that were deleted (e.g. removed in dev merge) and have no provided content
+    if (originalOnDisk === null && !fileInfo.content) {
+      continue
+    }
     const { fixed, issues, content } = processMarkdownFile(
       fileInfo.path,
       fileInfo.content
@@ -4436,9 +4945,29 @@ export async function runSanitizer(
     const originalOnDisk = fs.existsSync(fileInfo.path)
       ? fs.readFileSync(fileInfo.path, "utf8")
       : null
+    // Skip files that were deleted (e.g. removed in dev merge) and have no provided content
+    if (originalOnDisk === null && !fileInfo.content) {
+      continue
+    }
+    // Load English counterpart for JSON placeholder comparison
+    // e.g., src/intl/sw/page-apps.json -> src/intl/en/page-apps.json
+    let englishJsonContent: string | undefined
+    const jsonRelParts = fileInfo.path.split(path.sep)
+    const intlIdx = jsonRelParts.lastIndexOf("intl")
+    if (intlIdx !== -1 && intlIdx + 2 < jsonRelParts.length) {
+      const enJsonPath = [
+        ...jsonRelParts.slice(0, intlIdx + 1),
+        "en",
+        ...jsonRelParts.slice(intlIdx + 2),
+      ].join(path.sep)
+      if (fs.existsSync(enJsonPath)) {
+        englishJsonContent = fs.readFileSync(enJsonPath, "utf8")
+      }
+    }
     const { fixed, issues, content } = processJsonFile(
       fileInfo.path,
-      fileInfo.content
+      fileInfo.content,
+      englishJsonContent
     )
     if (fixed) {
       jsonFixed++
@@ -4611,6 +5140,40 @@ function fixSmartQuotesInJsxAttributes(content: string): {
   return { content: parts.join(""), fixCount }
 }
 
+/**
+ * Normalize JSX/HTML attribute spacing: `attr = "value"` -> `attr="value"`.
+ * Crowdin sometimes introduces spaces around `=` in translated JSX attributes.
+ */
+function fixJsxAttributeSpacing(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
+  const parts = content.split(codeBlockPattern)
+
+  // Match entire HTML/JSX tags, then fix spaced attributes within each
+  const tagRe = /<[A-Za-z][^>]*>/g
+  const spacedAttrRe = /(\w+)\s+=\s+"/g
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    parts[i] = parts[i].replace(tagRe, (tag) => {
+      return tag.replace(spacedAttrRe, (attrMatch, attr) => {
+        const normalized = `${attr}="`
+        if (normalized !== attrMatch) {
+          fixCount++
+        }
+        return normalized
+      })
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
 /** @internal Exposed for unit testing only. Not part of the public API. */
 export const _testOnly = {
   // Standalone fixes
@@ -4625,12 +5188,15 @@ export const _testOnly = {
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
   fixBrandCapitalization,
+  fixMisplacedBacktickAroundJsxFragment,
   escapeMdxAngleBrackets,
   removeOrphanedClosingTags,
   normalizeFrontmatterDates,
   quoteFrontmatterNonAscii,
+  fixFrontmatterLang,
   normalizeBlockHtmlLines,
   fixAsymmetricBackticks,
+  fixJsxAttributeSpacing,
   // English-comparison fixes
   syncHeaderIdsWithEnglish,
   fixDetachedHeadingAnchors,
@@ -4645,6 +5211,7 @@ export const _testOnly = {
   fixMergedClosingTags,
   normalizeInlineComponentsFromEnglish,
   repairUnclosedBackticks,
+  fixCrowdinSplitBackticks,
   restoreDroppedBackslashEscapes,
   fixCollapsedComponentLineBreaks,
   // Warnings
@@ -4657,7 +5224,9 @@ export const _testOnly = {
   fixMissingLinkParentheses,
   fixMissingClosingEmTag,
   fixImagePathDotSlash,
+  fixEscapedQuotesInJsxAttributes,
   fixInnerQuotesInJsxAttributes,
+  fixTranslatedJsonPlaceholders,
   escapeTildeStrikethrough,
   fixBoldAdjacentNonLatin,
   fixItalicAdjacentNonLatin,
@@ -4679,10 +5248,13 @@ export const _testOnly = {
   warnExposedMdxTags,
   fixBareRtlDates,
   fixBareRtlEquations,
+  fixSpanWrappedBackticks,
+  fixBoldWrappedOrderedListNumerals,
   warnTranslatedTechnicalNumerals,
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,
   warnCatastrophicCodeFenceDrift,
+  fixCrossScriptPunctuation,
   detectCrossScriptContamination,
   // Utilities
   toAsciiId,

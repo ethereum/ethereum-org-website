@@ -99,6 +99,8 @@ Aquí es donde entra en juego el cálculo verificable. Cuando un nodo ejecuta un
 
 Los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups) y los [validiums](/developers/docs/scaling/validium/) son dos soluciones de escalado fuera de la cadena que utilizan pruebas de validez para proporcionar una escalabilidad segura. Estos protocolos ejecutan miles de transacciones fuera de la cadena y presentan pruebas para su verificación en Ethereum. Estos resultados se pueden aplicar inmediatamente una vez verificada la prueba, lo que permite a Ethereum procesar más transacciones sin aumentar el cálculo en la capa base.
 
+Más allá del escalado de capa 2, las pruebas de conocimiento cero también pueden verificar la ejecución de bloques de la L1 de Ethereum. El zkEVM para la verificación de la L1 permitiría a los validadores verificar bloques comprobando una prueba en lugar de volver a ejecutar todas las transacciones -- permitiendo limite de gas más altos sin aumentar los requisitos de hardware del validador.
+
 ### Reducción del soborno y la colusión en la votación en cadena {#secure-blockchain-voting}
 
 Los esquemas de votación de la cadena de bloques tienen muchas características favorables: son totalmente auditables, son seguros contra los ataques, son resistentes a la censura y están libres de restricciones geográficas. Pero incluso los esquemas de votación en cadena no son inmunes al problema de la **colusión**.

@@ -1,5 +1,7 @@
 import { DeveloperToolsResponse } from "@/lib/types"
 
+import { fetchRetry } from "@/data-layer/fetchers/fetchRetry"
+
 /**
  * Normalizes a URL field by ensuring it has an https:// protocol prefix.
  * Returns undefined for empty/whitespace-only values.
@@ -35,7 +37,7 @@ export async function fetchBuidlGuidl(): Promise<DeveloperToolsResponse[]> {
 
   console.log("Starting BuidlGuidl developer tooling data fetch")
 
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status

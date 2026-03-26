@@ -22,7 +22,7 @@ summaryPoint3: "يعتمد على حركة العلوم المفتوحة."
 
 ### جوان بينيت - حركة العلوم اللامركزية
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## كيف تحسن العلوم اللامركزية (DeSci) العلوم {#desci-improves-science}
 
