@@ -94,7 +94,7 @@ Utekelezaji kadhaa wa zkVM unatengenezwa na kujaribiwa kwa uthibitishaji wa kita
 | [Jolt](https://github.com/a16z/jolt) | rv32im |
 | [Zisk](https://github.com/0xPolygonHermez/zisk) | rv64ima |
 
-Hizi zinatumia mashine halisi zinazotegemea RISC-V kutekeleza msimbo wa baiti wa EVM, kisha kuzalisha uthibitisho wa ZK wa utekelezaji sahihi. Matokeo ya majaribio ya hivi punde na maendeleo yanafuatiliwa kwenye [kifuatiliaji cha zkVM cha Ethereum Foundation](https://zkevm.ethereum.foundation/zkvm-tracker).
+Hizi zinatumia mashine pepe zinazotegemea RISC-V kutekeleza msimbo wa baiti wa EVM, kisha kuzalisha uthibitisho wa ZK wa utekelezaji sahihi. Matokeo ya majaribio ya hivi punde na maendeleo yanafuatiliwa kwenye [kifuatiliaji cha zkVM cha Ethereum Foundation](https://zkevm.ethereum.foundation/zkvm-tracker).
 
 ## Jinsi zkEVM inavyoendana na maboresho mengine {#related-upgrades}
 

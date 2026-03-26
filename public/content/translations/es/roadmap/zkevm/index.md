@@ -45,7 +45,7 @@ Las zkEVMs se clasifican en tipos según su compatibilidad con Ethereum:
 
 Para la verificación de la L1, el Tipo 1 es esencial. La zkEVM debe ser capaz de probar cualquier bloque válido de Ethereum, incluidos los casos extremos y los bloques históricos. Cualquier desviación del comportamiento exacto de Ethereum crearía problemas de consenso.
 
-La investigación sobre zkEVM de la Fundación Ethereum se centra en implementaciones de Tipo 1 que son totalmente compatibles con la ejecución existente de Ethereum.
+La investigación sobre zkEVM de la Ethereum Foundation se centra en implementaciones de Tipo 1 que son totalmente compatibles con la ejecución existente de Ethereum.
 
 ## Beneficios para Ethereum {#benefits}
 
@@ -76,7 +76,7 @@ Las implementaciones actuales de zkEVM pueden tardar de minutos a horas en proba
 
 ## Investigación e implementaciones actuales {#current-research}
 
-La Fundación Ethereum financia la investigación de zkEVM a través del equipo [Privacy Stewards of Ethereum (PSE)](https://pse.dev/). Las principales líneas de investigación incluyen:
+La Ethereum Foundation financia la investigación de zkEVM a través del equipo [Privacy Stewards of Ethereum (PSE)](https://pse.dev/). Las principales líneas de investigación incluyen:
 
 - **Pruebas en tiempo real**: Generación de pruebas de bloques completos en ranuras de 12 segundos
 - **Integración de clientes**: Estandarización de interfaces entre clientes de ejecución y probadores
@@ -94,7 +94,7 @@ Se están desarrollando y probando varias implementaciones de zkVM para la prueb
 | [Jolt](https://github.com/a16z/jolt) | rv32im |
 | [Zisk](https://github.com/0xPolygonHermez/zisk) | rv64ima |
 
-Estas utilizan máquinas virtuales basadas en RISC-V para ejecutar el código de bytes de la EVM y luego generan pruebas ZK de la ejecución correcta. Los resultados de las pruebas actualizados y el progreso se rastrean en el [rastreador de zkVM de la Fundación Ethereum](https://zkevm.ethereum.foundation/zkvm-tracker).
+Estas utilizan máquinas virtuales basadas en RISC-V para ejecutar el código de bytes de la EVM y luego generan pruebas ZK de la ejecución correcta. Los resultados de las pruebas actualizados y el progreso se rastrean en el [rastreador de zkVM de la Ethereum Foundation](https://zkevm.ethereum.foundation/zkvm-tracker).
 
 ## Cómo encaja zkEVM con otras actualizaciones {#related-upgrades}
 
@@ -116,7 +116,7 @@ La verificación de la L1 con zkEVM se encuentra en investigación activa y aún
 
 ## Más información {#further-reading}
 
-- [Fundación zkEVM](https://zkevm.ethereum.foundation): centro oficial de investigación de zkEVM de la Fundación Ethereum
+- [Fundación zkEVM](https://zkevm.ethereum.foundation): centro oficial de investigación de zkEVM de la Ethereum Foundation
 - [Ethproofs](https://ethproofs.org/): siga la carrera para probar Ethereum en tiempo real
 - [zkevm.fyi](https://zkevm.fyi): libro técnico sobre zkEVM para la L1
 - [Especificaciones de zkEVM de PSE](https://github.com/privacy-scaling-explorations/zkevm-specs): especificaciones técnicas
