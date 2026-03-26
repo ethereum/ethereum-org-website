@@ -1,176 +1,176 @@
 ---
-title: Kuongeza kuunganisha bidhaa au huduma
-description: Hati sisi kutumia wakati wa kuongeza bidhaa kuunganisha au huduma kwa ethereum.org
+title: Kuongeza bidhaa au huduma za kuweka dhamana
+description: Sera tunayotumia tunapoongeza bidhaa au huduma za kuweka dhamana kwenye ethereum.org
 lang: sw
 ---
 
-# Kuongeza bidhaa au huduma za kusimamisha {#adding-staking-products-or-services}
+# Kuongeza bidhaa au huduma za kuweka dhamana {#adding-staking-products-or-services}
 
-Tunataka kuhakikisha orodha rasilimali bora inawezekana wakati wa kuweka watumiaji salama na kujiamini.
+Tunataka kuhakikisha tunaorodhesha rasilimali bora iwezekanavyo huku tukiwaweka watumiaji salama na wenye ujasiri.
 
-Mtu yeyote ni huru kupendekeza kuongeza bidhaa kuunganisha au huduma kwenye ehtereum.org. Ikiwa kuna moja ambayo tumeikosa, **[tafadhali pendekeza](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
+Mtu yeyote yuko huru kupendekeza kuongeza bidhaa au huduma za kuweka dhamana kwenye ethereum.org. Ikiwa kuna moja ambayo tumeikosa, **[tafadhali ipendekeze](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
 
-Kwa sasa orodha bidhaa na huduma za kuunganisha kwenye kurasa kufuatia:
+Kwa sasa tunaorodhesha bidhaa na huduma za kuweka dhamana kwenye kurasa zifuatazo:
 
-- [Kusimamisha peke yako](/staking/solo/)
-- [Kusimamisha kama huduma](/staking/saas/)
-- [Vidimbwi vya kusimamisha](/staking/pools/)
+- [Kuweka dhamana peke yako](/staking/solo/)
+- [Kuweka dhamana kama huduma](/staking/saas/)
+- [Mabwawa ya kushikiria dhamana](/staking/pools/)
 
-Uthibitisho wa hisa kwenye mlolongo wa mwangaza umekuwa ukifanya kazi tangu Desemba 1, 2020. Wakati kuunganisha bado ni mpya, sisi wamejaribu kujenga haki na uwazi mfumo kwa ajili kuzingatia ethereum.org lakini orodha vigezo mabadiliko na kuendeleza baada ya muda, na ni hatimaye kwa hiari ya ethereum.org Mtandao ya timu.
+Uthibitishaji wa dhamana kwenye Beacon Chain umekuwa hewani tangu Desemba 1, 2020. Ingawa kuweka dhamana bado ni jambo geni kiasi, tumejaribu kuunda mfumo wa haki na wazi wa kuzingatiwa kwenye ethereum.org lakini vigezo vya kuorodhesha vitabadilika na kuboreka kadiri muda unavyopita, na hatimaye ni kwa hiari ya timu ya tovuti ya ethereum.org.
 
-## Mfumo wa uamuzi {#the-decision-framework}
+## Mfumo wa maamuzi {#the-decision-framework}
 
-Uamuzi wa orodha ya bidhaa kwenye ethereum.org si tegemezi juu ya sababu yeyote moja. Vigezo mbalimbali ni kuchukuliwa pamoja wakati wa kuamua kuorodhesha bidhaa au huduma. Kadiri zaidi ya vigezo hivi kutimizwa, ndivyo uwezekano zaidi kwenye orodha.
+Uamuzi wa kuorodhesha bidhaa kwenye ethereum.org hautegemei sababu moja tu. Vigezo vingi huzingatiwa kwa pamoja wakati wa kuamua kuorodhesha bidhaa au huduma. Kadiri vigezo hivi vinavyofikiwa kwa wingi, ndivyo uwezekano wa kuorodheshwa unavyokuwa mkubwa.
 
-**Kwanza ni aina gani ya bidhaa au huduma je ni?**
+**Kwanza, ni kategoria gani ya bidhaa au huduma?**
 
 - Zana za nodi au mteja
-- Usimamizi muhimu
-- Kuunganisha kama huduma(Mtandao)
-- Kuunganisha bwawa
+- Usimamizi wa ufunguo
+- Kuweka dhamana kama huduma (SaaS)
+- Bwawa la kushikiria dhamana
 
-Kwa sasa kwenye orodha tu bidhaa au huduma katika makundi haya.
+Kwa sasa, tunaorodhesha tu bidhaa au huduma katika kategoria hizi.
 
 ### Vigezo vya kujumuishwa {#criteria-for-inclusion}
 
-Kuunganisha kwa bidhaa au huduma za wasilisha kutathmini na vigezo kufuatia:
+Mawasilisho ya bidhaa au huduma za kuweka dhamana yatatathminiwa kwa vigezo vifuatavyo:
 
-**Mradi au huduma kuzindua lini?**
+**Mradi au huduma ilizinduliwa lini?**
 
-- Je kuna uthibitisho wa wakati bidhaa au huduma ikawa inapatikana kwa umma?
-- Hii ni kutumika kuamua bidhaa "mapigano pimwa" alama.
+- Je, kuna ushahidi wa lini bidhaa au huduma ilipatikana kwa umma?
+- Hii inatumika kubainisha alama ya "kujaribiwa vitani" ya bidhaa.
 
-**Je mradi huo kudumisha kikamilifu?**
+**Je, mradi unadumishwa kikamilifu?**
 
-- Je kuna timu hai kuendeleza mradi? ''Ni nani washiriki.''?
-- Bidhaa zilizo kudumisha tu kuchukuliwa.
+- Je, kuna timu inayoendeleza mradi kikamilifu? Nani anahusika?
+- Bidhaa zinazodumishwa kikamilifu pekee ndizo zitakazozingatiwa.
 
-**Je bidhaa au huduma ni huru ya kuaminiwa / binadamu waamuzi?**
+**Je, bidhaa au huduma haina waamuzi wanaoaminika/binadamu?**
 
-- Ni hatua gani katika safari ya watumiaji lazima kuamini binadamu ama kushikilia funguo za fedha zao, au kugawanya tuzo kwa usahihi?
-- Hii kutumika kuamua bidhaa au huduma "kutokuwa na uaminifu" alama.
+- Ni hatua zipi katika safari ya watumiaji zinahitaji kuwaamini binadamu kushikilia funguo za fedha zao, au kusambaza zawadi ipasavyo?
+- Hii inatumika kubainisha alama ya "kutohitaji uaminifu" ya bidhaa au huduma.
 
-**Je mradi huo hutoa habari sahihi na yenye kutegemeka?**
+**Je, mradi unatoa taarifa sahihi na za kuaminika?**
 
-- Ni muhimu kwamba Mtandao ya bidhaa ina juu-kwa-habari, sahihi, na yasiyo ya kupotosha habari, hasa kama kuhusiana na itifaki Ethereum au teknolojia nyingine kuhusiana.
-- Wasilisha yaliyo na habari potofu, maelezo ya zamani, au taarifa zinazoweza kupotosha kuhusu Ethereum au mada zingine muhimu kutolewa kwenye orodha au kutolewa ikiwa tayari kwenye orodha.
+- Ni muhimu kwamba tovuti ya bidhaa iwe na taarifa za kisasa, sahihi, na zisizopotosha, hasa ikiwa inahusu itifaki ya Ethereum au teknolojia nyingine zinazohusiana.
+- Mawasilisho yenye taarifa potofu, maelezo yaliyopitwa na wakati, au kauli zinazoweza kupotosha kuhusu Ethereum au mada nyingine husika hayataorodheshwa au yataondolewa ikiwa tayari yameorodheshwa.
 
-**Ni majukwaa gani kuungwa mkono?**
+**Ni majukwaa gani yanayotumika?**
 
-- yaani, Linux, macOS, Windows, iOS, Android
+- k.m., Linux, macOS, Windows, iOS, Android
 
-#### Programu na mikataba-erevu {#software-and-smart-contracts}
+#### Programu na mikataba mahiri {#software-and-smart-contracts}
 
-Kwa mpango yeyote maalum au mikataba erevu inayohusika:
+Kwa programu yoyote maalum au mikataba mahiri inayohusika:
 
-**Je kila kitu ni chanzo wazi?**
+**Je, kila kitu ni chanzo wazi?**
 
-- Kufungua chanzo miradi lazima kuwa na umma inapatikana chanzo kumbukumbu ya kificho
-- Hii ni kutumika kuamua bidhaa "chanzo wazi" alama.
+- Miradi ya chanzo wazi inapaswa kuwa na hazina ya msimbo wa chanzo inayopatikana kwa umma
+- Hii inatumika kubainisha alama ya "chanzo wazi" ya bidhaa.
 
-**Je, bidhaa imetoka katika usanidi wa _beta_?**
+**Je, bidhaa imetoka kwenye hatua ya maendeleo ya _beta_?**
 
-- Je, bidhaa ni katika mzunguko yake wa maendeleo?
-- Bidhaa katika hatua ya miali si kuchukuliwa kwa ajili ya kuingizwa kwenye ethereum.org
+- Bidhaa iko wapi katika mzunguko wake wa maendeleo?
+- Bidhaa zilizo katika hatua ya beta hazizingatiwi kujumuishwa kwenye ethereum.org
 
-**Je, mpango imekuwa chini ya ukaguzi wa usalama wa nje?**
+**Je, programu imefanyiwa ukaguzi wa usalama wa nje?**
 
-- Kama si, kuna mipango ya kufanya ukaguzi wa nje?
-- Hii ni kutumika kuamua bidhaa "kaguliwa" alama.
+- Kama sivyo, je, kuna mipango ya kufanya ukaguzi wa nje?
+- Hii inatumika kubainisha alama ya "kukaguliwa" ya bidhaa.
 
-**Je, mradi huo una mpango ya kutafuta wadudu?**
+**Je, mradi una programu ya zawadi kwa kugundua hitilafu?**
 
-- Kama si, kuna mipango ya kujenga usalama kutafuta wadudu?
-- Hii hutumiwa kuamua bidhaa "kutafuta wadudu" alama.
+- Kama sivyo, je, kuna mipango ya kuunda zawadi kwa kugundua hitilafu za usalama?
+- Hii inatumika kubainisha alama ya "zawadi ya hitilafu" ya bidhaa.
 
 #### Zana za nodi au mteja {#node-or-client-tooling}
 
-Kwa ajili ya bidhaa za mpango kuhusiana na nodi au mteja kuanzisha, usimamizi au uhamiaji:
+Kwa bidhaa za programu zinazohusiana na usanidi, usimamizi au uhamishaji wa nodi au mteja:
 
-**Ni wateja gani wa safu ya makubaliano (yaani, Lighthouse, Teku, Nimbus, Prysm, Grandine) wanaotumika?**
+**Ni wateja gani wa safu ya makubaliano (k.m., Lighthouse, Teku, Nimbus, Prysm, Grandine) wanaotumika?**
 
-- Ni wateja gani ni saidiwa? Je mtumiaji anaweza kuchagua?
-- Hii ni kutumika kuamua bidhaa nyingi-mteja alama.
+- Ni wateja gani wanaotumika? Je, mtumiaji anaweza kuchagua?
+- Hii inatumika kubainisha alama ya "wateja wengi" ya bidhaa.
 
-#### Kusimamisha kama huduma {#staking-as-a-service}
+#### Kuweka dhamana kama huduma {#staking-as-a-service}
 
-Kwa [orodha za kusimamisha kama huduma](/staking/saas/) (yaani, uendeshaji wa nodi uliokabidhiwa):
+Kwa [orodha za kuweka dhamana kama huduma](/staking/saas/) (k.m., uendeshaji wa nodi uliokabidhiwa):
 
-**Ni ada gani kuhusishwa na kutumia huduma hiyo?**
+**Ni ada gani zinazohusiana na kutumia huduma?**
 
 - Muundo wa ada ukoje, k.m., je, kuna ada ya kila mwezi kwa huduma?
-- Je kuna matakwa mengine ya kuweka nguzo?
+- Kuna mahitaji yoyote ya ziada ya kuweka dhamana?
 
-**Je watumiaji takiwa kujiandikisha kwa ajili ya hifadhi ya fedha?**
+**Je, watumiaji wanatakiwa kujisajili kwa ajili ya akaunti?**
 
-- Je mtu anaweza kutumia huduma bila ruhusa au KYC?
-- Hii ni kutumika kuamua bidhaa "ruhusa" alama.
+- Je, mtu anaweza kutumia huduma bila ruhusa au KYC?
+- Hii inatumika kubainisha alama ya "bila ruhusa" ya bidhaa.
 
-**Ni nani anayeshikilia funguo za kutia sahihi, na funguo za kuondoa pesa?**
+**Nani anashikilia funguo za kutia saini, na funguo za kutoa fedha?**
 
-- Ni funguo gani mtumiaji anaendelea kupata? Ni funguo gani huduma ya kupata kufikia wa?
-- Hii hutumiwa kuamua bidhaa "kutokuwa na uhakika" alama.
+- Ni funguo zipi ambazo mtumiaji anaendelea kuwa na ufikiaji nazo? Ni funguo zipi ambazo huduma inapata ufikiaji nazo?
+- Hii inatumika kubainisha alama ya "kutohitaji uaminifu" ya bidhaa.
 
-**Ni nini mteja tofauti wa nodi kuwa enezwa?**
+**Utofauti wa watekelezaji wa nodi zinazoendeshwa ukoje?**
 
-- Ni asilimia ngapi ya kuthibitisha funguo ni kuwa kukimbia na wengi makubaliano safu (CL) mteja?
-- Kama ya mwisho hariri, Prysm ni makubaliano safu mteja kuwa kukimbia na wengi wa nodi waendeshaji, ambayo ni hatari kwa ajili ya Mtandao. Kama yoyote CL mteja ni sasa kutumika kwa zaidi ya 33% ya Mtandao, sisi kuomba habari kuhusiana na matumizi yake.
-- Hii ni kutumika kuamua bidhaa "wanunuzi mbalimbali" alama.
+- Ni asilimia ngapi ya funguo za mthibitishaji zinaendeshwa na mteja wa safu ya makubaliano (CL) aliye na idadi kubwa?
+- Kufikia uhariri wa mwisho, Prysm ndiye mteja wa safu ya makubaliano anayeendeshwa na idadi kubwa ya waendeshaji wa nodi, jambo ambalo ni hatari kwa mtandao. Ikiwa mteja yeyote wa CL kwa sasa anatumiwa na zaidi ya 33% ya mtandao, tunaomba data inayohusiana na matumizi yake.
+- Hii inatumika kubainisha alama ya "wateja tofauti" ya bidhaa.
 
-#### Kidimbwi cha kusimamisha {#staking-pool}
+#### Bwawa la kushikiria dhamana {#staking-pool}
 
-Kwa [huduma za vidimbwi vya kusimamisha](/staking/pools/):
+Kwa [huduma za mabwawa ya kushikiria dhamana](/staking/pools/):
 
-**Je ni kiwango cha chini ETH lazima ufanye mchango?**
+**Kiwango cha chini cha ETH kinachohitajika kuweka dhamana ni kipi?**
 
 - k.m., 0.01 ETH
 
-**Ni ada au mahitaji gani ya kuweka kushiriki?**
+**Ni ada gani au mahitaji gani ya kuweka dhamana yanayohusika?**
 
-- Ni asilimia ngapi ya tuzo huondolewa kama ada?
-- Je kuna matakwa mengine ya kuweka nguzo?
+- Ni asilimia ngapi ya zawadi huondolewa kama ada?
+- Kuna mahitaji yoyote ya ziada ya kuweka dhamana?
 
 **Je, kuna tokeni ya ukwasi?**
 
-- Ni ishara yapi zinazohusika? Jinsi gani wanafanya kazi? Anwani za mkataba ni nini?
-- Hii ni kutumika kuamua bidhaa "fedha taslimu ishara" alama.
+- Ni tokeni gani zinazohusika? Zinafanyaje kazi? Anwani za mkataba ni zipi?
+- Hii inatumika kubainisha alama ya "tokeni ya ukwasi" ya bidhaa.
 
-**Je watumiaji kushiriki kama nodi waendeshaji?**
+**Je, watumiaji wanaweza kushiriki kama mwendeshaji wa nodi?**
 
-- Ni nini takiwa kuendesha wateja wa uthibitishaji kutumia fedha pamoja?
-- Je hii takiwa ruhusa kutoka kwa mtu binafsi, kampuni au DAO?
-- Hii ni kutumika kuamua bidhaa "bila ruhusa nodi" alama.
+- Nini kinahitajika ili kuendesha wateja wa mthibitishaji kwa kutumia fedha zilizokusanywa?
+- Je, hii inahitaji ruhusa kutoka kwa mtu binafsi, kampuni au shirika lisilo na mamlaka kuu linalojiendesha kiotimatiki (DAO)?
+- Hii inatumika kubainisha alama ya "nodi bila ruhusa" ya bidhaa.
 
-**Je ni mteja tofauti wa watoa huduma kundi nodi waendeshaji?**
+**Utofauti wa watekelezaji wa waendeshaji wa nodi za bwawa ukoje?**
 
-- Ni asilimia ngapi ya nodi waendeshaji ni mbio wengi makubaliano safu (CL) mteja?
-- Kama ya mwisho hariri, Prysm ni makubaliano safu mteja kuwa kukimbia na wengi wa nodi waendeshaji, ambayo ni hatari kwa ajili ya Mtandao. Kama yoyote CL mteja ni sasa kutumika kwa zaidi ya 33% ya Mtandao, sisi kuomba habari kuhusiana na matumizi yake.
-- Hii ni kutumika kuamua bidhaa "wanunuzi mbalimbali" alama.
+- Ni asilimia ngapi ya waendeshaji wa nodi wanaendesha mteja wa safu ya makubaliano (CL) aliye na idadi kubwa?
+- Kufikia uhariri wa mwisho, Prysm ndiye mteja wa safu ya makubaliano anayeendeshwa na idadi kubwa ya waendeshaji wa nodi, jambo ambalo ni hatari kwa mtandao. Ikiwa mteja yeyote wa CL kwa sasa anatumiwa na zaidi ya 33% ya mtandao, tunaomba data inayohusiana na matumizi yake.
+- Hii inatumika kubainisha alama ya "wateja tofauti" ya bidhaa.
 
-### Vigezo vingine: vinavyopendelewa lakini si vya lazima {#other-criteria}
+### Vigezo vingine: vitu vizuri kuwa navyo {#other-criteria}
 
-**Nini mtumiaji wasilisha ni saidiwa?**
+**Ni miingiliano gani ya mtumiaji inayotumika?**
 
-- yaani, Programu ya kivinjari, programu ya kompyuta, programu ya simu, CLI
+- k.m., Programu ya kivinjari, programu ya kompyuta, programu ya simu, CLI
 
-**Kwa nodi zana, je mpango kutoa njia rahisi ya kubadili kati ya wateja?**
+**Kwa zana za nodi, je, programu inatoa njia rahisi ya kubadilisha kati ya wateja?**
 
-- Je mtumiaji urahisi na salama kubadilisha wateja kutumia chombo?
+- Je, mtumiaji anaweza kubadilisha wateja kwa urahisi na kwa usalama akitumia zana hii?
 
-**Kwa Mtandao, jinsi wengi kuthibitisha kwa sasa ni enezwa na huduma?**
+**Kwa SaaS, ni wathibitishaji wangapi kwa sasa wanaendeshwa na huduma?**
 
-- Hii inatoa wazo la kufikia huduma yako hadi sasa.
+- Hii inatupa wazo la ufikiaji wa huduma yako hadi sasa.
 
 ## Jinsi tunavyoonyesha matokeo {#product-ordering}
 
-[Vigezo vya kujumuishwa](#criteria-for-inclusion) vilivyo hapo juu hutumika kukokotoa alama ya jumla kwa kila bidhaa au huduma. Hii hutumiwa kama njia ya kuchagua na kuonyesha bidhaa ambazo kukutana vigezo fulani vya lengo. Vigezo zaidi kwamba ushahidi ni kutoa kwa ajili ya, juu ya bidhaa itakuwa aina, na vifungo kuwa nasibu juu ya mzigo.
+[Vigezo vya kujumuishwa](#criteria-for-inclusion) hapo juu vinatumika kukokotoa alama ya jumla kwa kila bidhaa au huduma. Hii inatumika kama njia ya kupanga na kuonyesha bidhaa zinazokidhi vigezo fulani vya lengo. Kadiri ushahidi unavyotolewa kwa vigezo vingi, ndivyo bidhaa itakavyopangwa juu zaidi, huku zile zinazolingana zikipangwa kwa nasibu wakati wa kupakia.
 
-Mantiki ya msimbo na uzito wa vigezo hivi kwa sasa vimo ndani ya [sehemu hii ya JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) katika repo yetu.
+Mantiki ya msimbo na uzito wa vigezo hivi kwa sasa vimo katika [sehemu hii ya JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) kwenye hazina yetu.
 
 ## Ongeza bidhaa au huduma yako {#add-product}
 
-Kama unataka kuongeza bidhaa kuunganisha au huduma kwa ethereum.org, kujenga suala juu ya jukwaa la kuhifadhi.
+Ikiwa unataka kuongeza bidhaa au huduma ya kuweka dhamana kwenye ethereum.org, fungua suala kwenye GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
-  Unda suala
+  Fungua suala
 </ButtonLink>
