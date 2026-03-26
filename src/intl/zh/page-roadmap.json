@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "预先映射依赖项，以实现更快的同步、并行执行和并行磁盘读取。",
   "page-roadmap-glamsterdam-bal-item-3": "降低状态密集型应用的 Gas 消耗，并提高 Gas 成本的可预测性。",
   "page-roadmap-hegota-discussed-title": "为 Hegotá 规划的",
-  "page-roadmap-hegota-discussed-item-1": "目前正在讨论各项提案。"
+  "page-roadmap-hegota-discussed-item-1": "目前正在讨论各项提案。",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "零知识证明可以让验证者在不重新执行交易的情况下验证以太坊区块，从而在不提高硬件要求的情况下实现更高的燃料限制。"
 }

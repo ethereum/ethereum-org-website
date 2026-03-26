@@ -99,6 +99,8 @@ La catena ha bisogno di un modo per convalidare le transazioni fuori catena senz
 
 I [rollup a conoscenza zero](/developers/docs/scaling/zk-rollups) e i [validium](/developers/docs/scaling/validium/) sono due soluzioni di scalabilità fuori catena che utilizzano le prove di validità per fornire una scalabilità sicura. Questi protocolli eseguono migliaia di transazioni fuori catena e inviano prove per la verifica su Ethereum. Tali risultati possono essere applicati immediatamente una volta verificata la prova, consentendo a Ethereum di elaborare più transazioni senza aumentare il calcolo sul livello di base.
 
+Oltre alla scalabilità del livello 2, le prove a conoscenza zero possono anche verificare l'esecuzione stessa del blocco L1 di Ethereum. Lo zkEVM per la verifica L1 consentirebbe ai validatori di verificare i blocchi controllando una prova piuttosto che ri-eseguire tutte le transazioni -- consentendo limiti del gas più elevati senza aumentare i requisiti hardware del validatore.
+
 ### Ridurre la corruzione e la collusione nel voto on-chain {#secure-blockchain-voting}
 
 Gli schemi di voto su blockchain hanno molte caratteristiche favorevoli: sono completamente verificabili, sicuri contro gli attacchi, resistenti alla censura e privi di vincoli geografici. Ma anche gli schemi di voto on-chain non sono immuni al problema della **collusione**.
