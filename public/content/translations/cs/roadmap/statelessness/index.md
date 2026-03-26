@@ -79,6 +79,8 @@ Navrhovatelé bloků používají stavová data k vytvoření „svědků“ –
 
 Slabá bezstavovost je v pokročilém stadiu výzkumu, ale spoléhá na implementaci oddělení navrhovatelů a sestavovatelů bloků a Verkle trees, aby malí svědci mohli být předáváni mezi peery. To znamená, že slabá bezstavovost bude pravděpodobně na hlavní síti Etherea spuštěna až za několik let.
 
+zkEVM pro ověřování L1 je doplňková technologie, která by mohla dále vylepšit bezstavové ověřování. Namísto pouhé kontroly svědků by validátoři mohli ověřit důkaz s nulovým rozšířením znalostí, že celý blok byl proveden správně -- poskytující kryptografickou jistotu bez opětovného provádění transakce.
+
 ### Silná bezstavovost {#strong-statelessness}
 
 Silná bezstavovost odstraňuje potřebu jakéhokoliv uzlu uchovávat stavová data. Místo toho jsou transakce odesílány se svědky, kteří mohou být sdružováni producenty bloků. Producenti bloků jsou pak zodpovědní za ukládání pouze těch stavových dat, která jsou potřeba pro generování svědků k příslušným účtům. Odpovědnost za stav se téměř úplně přesouvá na uživatele, kteří posílají svědky a „přístupové seznamy“, aby deklarovali, s jakými účty a klíči úložiště interagují. To by umožnilo extrémně lehké uzly, ale za cenu kompromisů, včetně toho, že transakce s chytrými kontrakty by byly obtížnější.
