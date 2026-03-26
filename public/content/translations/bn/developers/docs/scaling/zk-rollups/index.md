@@ -228,8 +228,7 @@ Finematics-এর ZK-রোলআপস ব্যাখ্যা দেখুন
 <Alert variant="info">
 <AlertEmoji text="💡" />
 <AlertContent>
-<AlertTitle>
-L2 বনাম L1 এর জন্য zkEVM</AlertTitle>
+<AlertTitle>L2 বনাম L1 এর জন্য zkEVM</AlertTitle>
 <AlertDescription>
 নিচের প্রজেক্টগুলো লেয়ার ২ রোলআপস তৈরি করতে zkEVM প্রযুক্তি ব্যবহার করে। [L1 ব্লক ভেরিফিকেশন](/roadmap/zkevm/)-এর জন্য zkEVM ব্যবহার করার বিষয়েও গবেষণা চলছে, যা ভ্যালিডেটরস-দের লেনদেন পুনরায় এক্সিকিউট না করেই ইথিরিয়াম ব্লকস যাচাই করতে সক্ষম করবে।
 </AlertDescription>
