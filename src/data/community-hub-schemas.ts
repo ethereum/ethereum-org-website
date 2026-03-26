@@ -13,7 +13,7 @@ export type CommunityHubSchemaData = {
   eventSeriesName?: string
   eventDescription: string
   address?: {
-    streetAddress: string
+    streetAddress?: string
     addressLocality: string
     postalCode?: string
     addressCountry: string
@@ -68,6 +68,10 @@ export const communityHubSchemas: Record<string, CommunityHubSchemaData> = {
     eventSeriesName: "Ethereum Community Hub Berlin -- Co-working Wednesdays",
     eventDescription:
       "Every Wednesday the Ethereum Foundation office opens for builders, researchers, creators, students, and explorers to co-work, connect, and collaborate.",
+    address: {
+      addressLocality: "Berlin",
+      addressCountry: "DE",
+    },
     schedule: {
       startTime: "10:00",
       endTime: "20:00",
