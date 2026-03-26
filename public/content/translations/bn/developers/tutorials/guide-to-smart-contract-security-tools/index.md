@@ -1,11 +1,11 @@
 ---
-title: স্মার্ট কন্ট্রাক্ট সিকিউরিটি টুলের একটি গাইড
-description: তিনটি ভিন্ন টেস্টিং এবং প্রোগ্রাম অ্যানালাইসিস টেকনিকের একটি ওভারভিউ
+title: "স্মার্ট কন্ট্রাক্ট সিকিউরিটি টুলের একটি গাইড"
+description: "তিনটি ভিন্ন টেস্টিং এবং প্রোগ্রাম অ্যানালাইসিস টেকনিকের একটি ওভারভিউ"
 author: "ট্রেইলঅফবিটস"
 lang: bn
-tags: ["solidity", "স্মার্ট কন্ট্রাক্ট", "সিকিউরিটি"]
+tags: ["Solidity", "স্মার্ট কন্ট্রাক্ট", "সিকিউরিটি"]
 skill: intermediate
-breadcrumb: সিকিউরিটি টুল
+breadcrumb: "সিকিউরিটি টুল"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

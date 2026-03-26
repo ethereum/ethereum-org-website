@@ -1,11 +1,11 @@
 ---
 title: "একটি কন্ট্রাক্ট রিভার্স ইঞ্জিনিয়ারিং করা"
-description: সোর্স কোড না থাকলে কীভাবে একটি কন্ট্রাক্ট বুঝতে হয়
-author: ওরি পোমেরান্টজ
+description: "সোর্স কোড না থাকলে কীভাবে একটি কন্ট্রাক্ট বুঝতে হয়"
+author: "ওরি পোমেরান্টজ"
 lang: bn
 tags: ["evm", "opcodes"]
 skill: advanced
-breadcrumb: রিভার্স ইঞ্জিনিয়ারিং
+breadcrumb: "রিভার্স ইঞ্জিনিয়ারিং"
 published: 2021-12-30
 ---
 ## ভূমিকা {#introduction}

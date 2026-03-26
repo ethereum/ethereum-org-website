@@ -1,11 +1,11 @@
 ---
-title: আপনার ETH হোম স্টেক করুন
-description: কীভাবে আপনার ETH হোম স্টেকিং শুরু করবেন তার একটি ওভারভিউ
+title: "আপনার ETH হোম স্টেক করুন"
+description: "কীভাবে আপনার ETH হোম স্টেকিং শুরু করবেন তার একটি ওভারভিউ"
 lang: bn
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: লেসলি গন্ডার তার নিজের কম্পিউটার চিপে।
+alt: "লেসলি গন্ডার তার নিজের কম্পিউটার চিপে।"
 sidebarDepth: 2
 summaryPoints:
   - আপনার ভ্যালিডেটর সঠিকভাবে কাজ করতে এবং অনলাইনে রাখার জন্য প্রটোকল থেকে সরাসরি সর্বোচ্চ রিওয়ার্ড পান
@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> স্ল্যাশিং এবং ভ্যালিডেটর লাইফসাইকেল সম্পর্কে আরও জানুন</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

@@ -1,6 +1,6 @@
 ---
-title: DeSci প্রজেক্ট যুক্ত করা
-description: ethereum.org-এর DeSci পেজে প্রজেক্টের লিংক যুক্ত করার সময় আমরা যে পলিসি ব্যবহার করি
+title: "DeSci প্রজেক্ট যুক্ত করা"
+description: "ethereum.org-এর DeSci পেজে প্রজেক্টের লিংক যুক্ত করার সময় আমরা যে পলিসি ব্যবহার করি"
 lang: bn
 ---
 

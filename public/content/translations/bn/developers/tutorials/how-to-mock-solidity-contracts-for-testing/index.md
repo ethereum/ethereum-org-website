@@ -1,7 +1,7 @@
 ---
-title: টেস্টিংয়ের জন্য সলিডিটি স্মার্ট কন্ট্রাক্ট কীভাবে মক করবেন
-description: টেস্টিংয়ের সময় কেন আপনার কন্ট্রাক্টগুলো নিয়ে মজা করা উচিত
-author: মার্কাস ওয়াস
+title: "টেস্টিংয়ের জন্য সলিডিটি স্মার্ট কন্ট্রাক্ট কীভাবে মক করবেন"
+description: "টেস্টিংয়ের সময় কেন আপনার কন্ট্রাক্টগুলো নিয়ে মজা করা উচিত"
+author: "মার্কাস ওয়াস"
 lang: bn
 tags:
   - solidity
@@ -9,7 +9,7 @@ tags:
   - টেস্টিং
   - মকিং
 skill: intermediate
-breadcrumb: মকিং কন্ট্রাক্ট
+breadcrumb: "মকিং কন্ট্রাক্ট"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

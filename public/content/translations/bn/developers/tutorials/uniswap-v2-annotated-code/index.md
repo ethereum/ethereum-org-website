@@ -1,10 +1,10 @@
 ---
 title: "Uniswap-v2 কন্ট্রাক্ট ওয়াক-থ্রু"
 description: "Uniswap-v2 কন্ট্রাক্ট কীভাবে কাজ করে? এটি কেন সেভাবে লেখা হয়েছে?"
-author: ওরি পোমেরান্টজ
-tags: ["solidity", "ডিএ্যাপস"]
+author: "ওরি পোমেরান্টজ"
+tags: ["Solidity", "ডিএ্যাপস"]
 skill: intermediate
-breadcrumb: Uniswap v2 ওয়াক-থ্রু
+breadcrumb: "Uniswap v2 ওয়াক-থ্রু"
 published: 2021-05-01
 lang: bn
 ---

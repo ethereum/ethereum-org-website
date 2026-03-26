@@ -1,5 +1,5 @@
 ---
-title: বিস্তারিত এবং নিয়মাবলী
+title: "বিস্তারিত এবং নিয়মাবলী"
 lang: bn
 template: translatathon
 ---

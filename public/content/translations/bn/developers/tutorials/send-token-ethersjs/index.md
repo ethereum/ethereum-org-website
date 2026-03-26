@@ -1,10 +1,10 @@
 ---
-title: ethers.js ব্যবহার করে টোকেন পাঠানো
-description: ethers.js ব্যবহার করে টোকেন পাঠানোর জন্য নতুনদের উপযোগী গাইড।
-author: কিম ইয়ংজুন
+title: "ethers.js ব্যবহার করে টোকেন পাঠানো"
+description: "ethers.js ব্যবহার করে টোকেন পাঠানোর জন্য নতুনদের উপযোগী গাইড।"
+author: "কিম ইয়ংজুন"
 tags: ["ETHERS.JS", "ERC-20", "টোকেন"]
 skill: beginner
-breadcrumb: টোকেন পাঠান
+breadcrumb: "টোকেন পাঠান"
 lang: bn
 published: 2021-04-06
 ---

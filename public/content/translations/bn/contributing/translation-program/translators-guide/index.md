@@ -1,7 +1,7 @@
 ---
-title: অনুবাদকদের গাইড
+title: "অনুবাদকদের গাইড"
 lang: bn
-description: ethereum.org অনুবাদকদের জন্য নির্দেশিকা এবং টিপস
+description: "ethereum.org অনুবাদকদের জন্য নির্দেশিকা এবং টিপস"
 ---
 
 # Ethereum.org অনুবাদ স্টাইল গাইড {#style-guide}

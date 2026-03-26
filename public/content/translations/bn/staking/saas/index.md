@@ -1,11 +1,11 @@
 ---
-title: সার্ভিস হিসেবে স্টেকিং
-description: সার্ভিস হিসেবে স্টেকিং সম্পর্কে জানুন
+title: "সার্ভিস হিসেবে স্টেকিং"
+description: "সার্ভিস হিসেবে স্টেকিং সম্পর্কে জানুন"
 lang: bn
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: লেসলি গন্ডার মেঘের মধ্যে ভাসছে।
+alt: "লেসলি গন্ডার মেঘের মধ্যে ভাসছে।"
 sidebarDepth: 2
 summaryPoints:
   - থার্ড-পার্টি নোড অপারেটররা আপনার ভ্যালিডেটর ক্লায়েন্টের অপারেশন পরিচালনা করে

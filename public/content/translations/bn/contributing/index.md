@@ -1,6 +1,6 @@
 ---
-title: অবদান রাখা
-description: ethereum.org-এ আপনি কীভাবে অবদান রাখতে পারেন তার বিভিন্ন উপায় সম্পর্কে জানুন
+title: "অবদান রাখা"
+description: "ethereum.org-এ আপনি কীভাবে অবদান রাখতে পারেন তার বিভিন্ন উপায় সম্পর্কে জানুন"
 lang: bn
 ---
 
@@ -91,6 +91,7 @@ ethereum.org-এ কোনো কন্টেন্ট বা আর্টিফ
 [OAT সম্পর্কে আরও জানুন](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### কীভাবে ক্লেইম করবেন
+
 1. আমাদের [Discord সার্ভারে](https://discord.gg/ethereum-org) যোগ দিন।
 2. `#🥇 | proof-of-contribution` চ্যানেলে আপনার অবদানের একটি লিংক পেস্ট করুন।
 3. আমাদের টিমের কোনো সদস্য আপনাকে আপনার OAT-এর লিংক পাঠানো পর্যন্ত অপেক্ষা করুন।

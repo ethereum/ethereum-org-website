@@ -1,10 +1,10 @@
 ---
-title: InfluxDB এবং Grafana দিয়ে Geth মনিটরিং
-description: পারফরম্যান্স ট্র্যাক করতে এবং সমস্যাগুলি চিহ্নিত করতে InfluxDB এবং Grafana ব্যবহার করে আপনার Geth নোডের জন্য মনিটরিং সেট আপ করুন।
+title: "InfluxDB এবং Grafana দিয়ে Geth মনিটরিং"
+description: "পারফরম্যান্স ট্র্যাক করতে এবং সমস্যাগুলি চিহ্নিত করতে InfluxDB এবং Grafana ব্যবহার করে আপনার Geth নোডের জন্য মনিটরিং সেট আপ করুন।"
 author: "মারিও হ্যাভেল"
 tags: ["ক্লায়েন্ট", "নোড"]
 skill: intermediate
-breadcrumb: Geth মনিটরিং
+breadcrumb: "Geth মনিটরিং"
 lang: bn
 published: 2021-01-13
 ---

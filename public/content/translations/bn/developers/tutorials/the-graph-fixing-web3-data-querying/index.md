@@ -1,9 +1,9 @@
 ---
 title: "The Graph: ওয়েব3 ডাটা কুয়েরিং ঠিক করা"
 description: "ব্লকচেইন হলো একটি ডাটাবেসের মতো কিন্তু SQL ছাড়া। সব ডাটা সেখানে আছে, কিন্তু এক্সেস করার কোনো উপায় নেই। চলুন দেখি কীভাবে The Graph এবং GraphQL দিয়ে এটি ঠিক করা যায়।"
-author: মার্কাস ওয়াস
+author: "মার্কাস ওয়াস"
 lang: bn
-tags: ["solidity", "স্মার্ট কন্ট্রাক্ট", "কুয়েরিং", "the graph", "react"]
+tags: ["Solidity", "স্মার্ট কন্ট্রাক্ট", "কুয়েরিং", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

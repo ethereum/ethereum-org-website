@@ -1,6 +1,6 @@
 ---
-title: কুইজ যোগ করা
-description: ethereum.org-এ কুইজ যোগ করার সময় আমরা যে নীতি ব্যবহার করি
+title: "কুইজ যোগ করা"
+description: "ethereum.org-এ কুইজ যোগ করার সময় আমরা যে নীতি ব্যবহার করি"
 lang: bn
 ---
 

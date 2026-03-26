@@ -1,6 +1,6 @@
 ---
-title: পেক্ট্রা MaxEB
-description: পেক্ট্রা রিলিজে MaxEB সম্পর্কে আরও জানুন
+title: "পেক্ট্রা MaxEB"
+description: "পেক্ট্রা রিলিজে MaxEB সম্পর্কে আরও জানুন"
 lang: bn
 ---
 

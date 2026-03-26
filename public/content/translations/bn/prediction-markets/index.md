@@ -1,11 +1,11 @@
 ---
-title: প্রেডিকশন মার্কেট
+title: "প্রেডিকশন মার্কেট"
 lang: bn
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: সঠিক পূর্বাভাস তৈরি করে আর্থিক প্রণোদনা পান 
-summaryPoint2: ভবিষ্যতের ইভেন্ট সম্পর্কে উচ্চ মানের পূর্বাভাস
+summaryPoint1: "সঠিক পূর্বাভাস তৈরি করে আর্থিক প্রণোদনা পান"
+summaryPoint2: "ভবিষ্যতের ইভেন্ট সম্পর্কে উচ্চ মানের পূর্বাভাস"
 buttons: 
   - content: আরও জানুন
     toId: how-prediction-markets-work

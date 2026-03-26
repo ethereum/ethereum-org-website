@@ -1,9 +1,9 @@
 ---
-title: create-eth-app এর মাধ্যমে আপনার ডিএ্যাপ ফ্রন্টএন্ড ডেভেলপমেন্ট শুরু করুন
-description: create-eth-app কীভাবে ব্যবহার করবেন এবং এর বৈশিষ্ট্যগুলোর একটি ওভারভিউ
+title: "create-eth-app এর মাধ্যমে আপনার ডিএ্যাপ ফ্রন্টএন্ড ডেভেলপমেন্ট শুরু করুন"
+description: "create-eth-app কীভাবে ব্যবহার করবেন এবং এর বৈশিষ্ট্যগুলোর একটি ওভারভিউ"
 author: "মার্কাস ওয়াস"
 tags:
-  ["ফ্রন্টএন্ড", "javascript", "ethers.js", "the graph", "defi"]
+  ["ফ্রন্টএন্ড", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: bn

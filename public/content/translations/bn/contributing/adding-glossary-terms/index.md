@@ -1,7 +1,7 @@
 ---
-title: গ্লোসারি টার্ম যোগ করা
+title: "গ্লোসারি টার্ম যোগ করা"
 lang: bn
-description: ethereum.org গ্লোসারিতে নতুন টার্ম যোগ করার জন্য আমাদের মানদণ্ড
+description: "ethereum.org গ্লোসারিতে নতুন টার্ম যোগ করার জন্য আমাদের মানদণ্ড"
 ---
 
 # গ্লোসারি টার্ম যোগ করা {#contributing-to-ethereumorg-}

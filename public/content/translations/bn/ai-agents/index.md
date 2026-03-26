@@ -1,16 +1,16 @@
 ---
-title: এআই এজেন্ট
-metaTitle: এআই এজেন্ট | ইথিরিয়ামে এআই এজেন্ট
-description: ইথিরিয়ামে এআই এজেন্টগুলোর একটি ওভারভিউ
+title: "এআই এজেন্ট"
+metaTitle: "এআই এজেন্ট | ইথিরিয়ামে এআই এজেন্ট"
+description: "ইথিরিয়ামে এআই এজেন্টগুলোর একটি ওভারভিউ"
 lang: bn
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: টার্মিনাল টেবিলে জড়ো হওয়া মানুষ
-summaryPoint1: এআই যা ব্লকচেইনের সাথে যোগাযোগ করে এবং স্বাধীনভাবে ট্রেড করে
-summaryPoint2: অনচেইন ওয়ালেট এবং ফান্ড নিয়ন্ত্রণ করে
-summaryPoint3: কাজের জন্য মানুষ বা অন্যান্য এজেন্টদের নিয়োগ দেয়
+alt: "টার্মিনাল টেবিলে জড়ো হওয়া মানুষ"
+summaryPoint1: "এআই যা ব্লকচেইনের সাথে যোগাযোগ করে এবং স্বাধীনভাবে ট্রেড করে"
+summaryPoint2: "অনচেইন ওয়ালেট এবং ফান্ড নিয়ন্ত্রণ করে"
+summaryPoint3: "কাজের জন্য মানুষ বা অন্যান্য এজেন্টদের নিয়োগ দেয়"
 buttons:
   - content: এআই এজেন্ট কী?
     toId: what-are-ai-agents

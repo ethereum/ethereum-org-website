@@ -1,11 +1,11 @@
 ---
 title: "কন্ট্রাক্ট সাইজ লিমিট মোকাবেলা করতে কন্ট্রাক্ট ছোট করা"
 description: "আপনার স্মার্ট কন্ট্রাক্টগুলো যাতে খুব বড় না হয়ে যায় তার জন্য আপনি কী করতে পারেন?"
-author: মার্কাস ওয়াস
+author: "মার্কাস ওয়াস"
 lang: bn
-tags: ["solidity", "স্মার্ট কন্ট্রাক্ট", "স্টোরেজ"]
+tags: ["Solidity", "স্মার্ট কন্ট্রাক্ট", "স্টোরেজ"]
 skill: intermediate
-breadcrumb: কন্ট্রাক্ট ছোট করা
+breadcrumb: "কন্ট্রাক্ট ছোট করা"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

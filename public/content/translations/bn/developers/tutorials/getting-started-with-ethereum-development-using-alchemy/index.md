@@ -1,10 +1,10 @@
 ---
-title: ইথিরিয়াম ডেভেলপমেন্ট শুরু করা
+title: "ইথিরিয়াম ডেভেলপমেন্ট শুরু করা"
 description: "এটি ইথিরিয়াম ডেভেলপমেন্ট শুরু করার জন্য নতুনদের একটি গাইড। আমরা আপনাকে একটি API এন্ডপয়েন্ট তৈরি করা থেকে শুরু করে, কমান্ড লাইন রিকোয়েস্ট করা এবং আপনার প্রথম ওয়েব3 স্ক্রিপ্ট লেখা পর্যন্ত নিয়ে যাব! কোনো ব্লকচেইন ডেভেলপমেন্ট অভিজ্ঞতার প্রয়োজন নেই!"
 author: "এলান হ্যালপার্ন"
-tags: ["javascript", "ethers.js", "nodes", "querying", "alchemy"]
+tags: ["JavaScript", "ethers.js", "nodes", "querying", "Alchemy"]
 skill: beginner
-breadcrumb: শুরু করা
+breadcrumb: "শুরু করা"
 lang: bn
 published: 2020-10-30
 source: Medium

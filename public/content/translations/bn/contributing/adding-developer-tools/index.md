@@ -1,7 +1,7 @@
 ---
-title: ডেভেলপার টুল যোগ করা
+title: "ডেভেলপার টুল যোগ করা"
 lang: bn
-description: ethereum.org-এ ডেভেলপার টুল তালিকাভুক্ত করার জন্য আমাদের মানদণ্ড
+description: "ethereum.org-এ ডেভেলপার টুল তালিকাভুক্ত করার জন্য আমাদের মানদণ্ড"
 ---
 
 # ডেভেলপার টুল যোগ করা {#contributing-to-ethereumorg-}

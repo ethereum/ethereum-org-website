@@ -1,11 +1,11 @@
 ---
-title: কীভাবে আপনার ওরাকল হিসেবে Tellor সেট আপ করবেন
-description: আপনার প্রটোকলে Tellor ওরাকল ইন্টিগ্রেট করা শুরু করার একটি গাইড
+title: "কীভাবে আপনার ওরাকল হিসেবে Tellor সেট আপ করবেন"
+description: "আপনার প্রটোকলে Tellor ওরাকল ইন্টিগ্রেট করা শুরু করার একটি গাইড"
 author: "টেলর"
 lang: bn
-tags: ["solidity", "স্মার্ট কন্ট্রাক্ট", "ওরাকল"]
+tags: ["Solidity", "স্মার্ট কন্ট্রাক্ট", "ওরাকল"]
 skill: beginner
-breadcrumb: Tellor ওরাকল
+breadcrumb: "Tellor ওরাকল"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

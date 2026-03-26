@@ -1,6 +1,6 @@
 ---
-title: ওয়ালেট যোগ করা
-description: ethereum.org-এ ওয়ালেট যোগ করার সময় আমরা যে নীতি ব্যবহার করি
+title: "ওয়ালেট যোগ করা"
+description: "ethereum.org-এ ওয়ালেট যোগ করার সময় আমরা যে নীতি ব্যবহার করি"
 lang: bn
 ---
 

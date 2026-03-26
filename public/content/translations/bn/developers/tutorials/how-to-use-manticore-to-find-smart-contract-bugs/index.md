@@ -1,12 +1,12 @@
 ---
-title: স্মার্ট কন্ট্রাক্টে বাগ খুঁজতে কীভাবে ম্যান্টিকোর (Manticore) ব্যবহার করবেন
-description: স্মার্ট কন্ট্রাক্টে স্বয়ংক্রিয়ভাবে বাগ খুঁজতে কীভাবে ম্যান্টিকোর (Manticore) ব্যবহার করবেন
-author: ট্রেইলঅফবিটস
+title: "স্মার্ট কন্ট্রাক্টে বাগ খুঁজতে কীভাবে ম্যান্টিকোর (Manticore) ব্যবহার করবেন"
+description: "স্মার্ট কন্ট্রাক্টে স্বয়ংক্রিয়ভাবে বাগ খুঁজতে কীভাবে ম্যান্টিকোর (Manticore) ব্যবহার করবেন"
+author: "ট্রেইলঅফবিটস"
 lang: bn
 tags:
   ["Solidity", "স্মার্ট কন্ট্রাক্ট", "নিরাপত্তা", "টেস্টিং", "ফরমাল ভেরিফিকেশন"]
 skill: advanced
-breadcrumb: ম্যান্টিকোর
+breadcrumb: "ম্যান্টিকোর"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

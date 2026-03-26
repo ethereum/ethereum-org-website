@@ -1,11 +1,11 @@
 ---
 title: "কলডাটা অপ্টিমাইজেশনের জন্য শর্ট ABI"
-description: অপ্টিমেস্টিক রোলআপ এর জন্য স্মার্ট কন্ট্রাক্ট অপ্টিমাইজ করা
-author: ওরি পোমেরান্টজ
+description: "অপ্টিমেস্টিক রোলআপ এর জন্য স্মার্ট কন্ট্রাক্ট অপ্টিমাইজ করা"
+author: "ওরি পোমেরান্টজ"
 lang: bn
 tags: ["লেয়ার ২"]
 skill: intermediate
-breadcrumb: শর্ট ABI
+breadcrumb: "শর্ট ABI"
 published: 2022-04-01
 ---
 

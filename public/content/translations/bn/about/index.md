@@ -1,6 +1,6 @@
 ---
-title: আমাদের সম্পর্কে
-description: ethereum.org-এর দল, কমিউনিটি এবং লক্ষ্য সম্পর্কে
+title: "আমাদের সম্পর্কে"
+description: "ethereum.org-এর দল, কমিউনিটি এবং লক্ষ্য সম্পর্কে"
 lang: bn
 ---
 

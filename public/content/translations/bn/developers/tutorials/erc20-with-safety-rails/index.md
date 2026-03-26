@@ -1,11 +1,11 @@
 ---
-title: সেফটি রেইলস সহ ERC-20
-description: মানুষকে বোকা ভুল এড়াতে কীভাবে সাহায্য করবেন
-author: ওরি পোমেরান্টজ
+title: "সেফটি রেইলস সহ ERC-20"
+description: "মানুষকে বোকা ভুল এড়াতে কীভাবে সাহায্য করবেন"
+author: "ওরি পোমেরান্টজ"
 lang: bn
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ERC-20 সেফটি
+breadcrumb: "ERC-20 সেফটি"
 published: 2022-08-15
 ---
 
