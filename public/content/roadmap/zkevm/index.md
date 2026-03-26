@@ -13,7 +13,7 @@ zkEVM is a technology that uses [zero-knowledge proofs](/zero-knowledge-proofs/)
 <AlertContent>
 <AlertTitle>Not to be confused with zkEVM rollups</AlertTitle>
 <AlertDescription>
-This page discusses using zkEVM to verify Ethereum L1 block execution. For zkEVM rollups that use ZK proofs to scale Ethereum as Layer 2 solutions, see [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
+This page discusses using zkEVM to verify Ethereum L1 block execution. For zkEVM rollups that use ZK proofs to scale Ethereum as Layer 2 solutions, see [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -57,7 +57,7 @@ When verification is cheap, the gas limit can safely increase. This expands netw
 
 With zkEVM verification, validators only need to verify proofs rather than execute transactions. This dramatically lowers the hardware requirements for running a validator, enabling more people to participate in securing the network. Greater validator diversity strengthens Ethereum's censorship resistance and resilience.
 
-Note that proving itself requires significant computational resources, greater than current validator hardware. However, unlike validation, proving does not need to be decentralized in the same way: only one correct proof is needed per block, and anyone can verify it quickly. Research into prover markets, proof aggregation, and hardware acceleration aims to ensure that proving remains competitive and accessible rather than concentrated among a few large operators.
+Note that proving itself requires significant computational resources, greater than that of current validator hardware. However, unlike validation, proving does not need to be decentralized in the same way: only one correct proof is needed per block, and anyone can verify it quickly. Research into prover markets, proof aggregation, and hardware acceleration aims to ensure that proving remains competitive and accessible rather than concentrated among a few large operators.
 
 ### Predictable finality {#predictable-finality}
 
@@ -89,7 +89,7 @@ Several zkVM implementations are being developed and tested for Ethereum block p
 | Implementation | Architecture |
 |----------------|--------------|
 | [OpenVM](https://github.com/openvm-org/openvm) | rv32im |
-| [RISC0](https://github.com/risc0/risc0) | rv32im |
+| [RISC Zero](https://github.com/risc0/risc0) | rv32im |
 | [Airbender](https://github.com/matter-labs/zksync-airbender) | rv32im |
 | [Jolt](https://github.com/a16z/jolt) | rv32im |
 | [Zisk](https://github.com/0xPolygonHermez/zisk) | rv64ima |
@@ -121,4 +121,4 @@ zkEVM L1 verification is in active research and not yet integrated into producti
 - [zkevm.fyi](https://zkevm.fyi) - Technical book on zkEVM for L1
 - [PSE zkEVM Specs](https://github.com/privacy-scaling-explorations/zkevm-specs) - Technical specifications
 - [The Verge](https://vitalik.eth.limo/general/2024/10/23/futures4.html) - Vitalik's overview of verification improvements
-- [Benchmarking zkVMs for Ethereum](https://zkevm.ethereum.foundation/blog) - Performance analysis from the EF team
+- [EF zkEVM Blog](https://zkevm.ethereum.foundation/blog) - Performance analysis from the EF team
