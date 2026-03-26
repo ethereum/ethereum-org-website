@@ -11,14 +11,14 @@
 import { expect, test } from "@playwright/test"
 
 import { getVideoBySlug, getVideos } from "@/lib/utils/videos"
-import { getTranscript } from "@/lib/utils/videoTranscripts"
+import { getTranscript, getVideoMeta } from "@/lib/utils/videoTranscripts"
 
 test.describe("Video Data Access Utilities", () => {
   test.describe("getVideos", () => {
     test("returns all videos", async () => {
       const videos = await getVideos()
       expect(Array.isArray(videos)).toBe(true)
-      expect(videos).toHaveLength(37)
+      expect(videos).toHaveLength(42)
     })
 
     test("each video has required fields", async () => {
@@ -26,8 +26,6 @@ test.describe("Video Data Access Utilities", () => {
       for (const video of videos) {
         expect(typeof video.slug).toBe("string")
         expect(typeof video.youtubeId).toBe("string")
-        expect(typeof video.title).toBe("string")
-        expect(typeof video.description).toBe("string")
         expect(typeof video.uploadDate).toBe("string")
         expect(typeof video.duration).toBe("string")
         expect(["beginner", "intermediate", "advanced"]).toContain(
@@ -43,7 +41,6 @@ test.describe("Video Data Access Utilities", () => {
         ]).toContain(video.format)
         expect(video.language).toBe("en")
         expect(typeof video.author).toBe("string")
-        expect(typeof video.transcriptPath).toBe("string")
       }
     })
   })
@@ -53,21 +50,24 @@ test.describe("Video Data Access Utilities", () => {
       const video = await getVideoBySlug("desci-movement-juan-benet")
       expect(video).not.toBeNull()
       expect(video!.slug).toBe("desci-movement-juan-benet")
-      expect(video!.title).toBe("The DeSci movement with Juan Benet")
     })
 
     test("returns null for nonexistent slug", async () => {
       const video = await getVideoBySlug("nonexistent")
       expect(video).toBeNull()
     })
+  })
 
-    test("video has title and description on the Video object", async () => {
-      const video = await getVideoBySlug("desci-movement-juan-benet")
-      expect(video).not.toBeNull()
-      expect(typeof video!.title).toBe("string")
-      expect(video!.title.length).toBeGreaterThan(0)
-      expect(typeof video!.description).toBe("string")
-      expect(video!.description.length).toBeGreaterThan(0)
+  test.describe("getVideoMeta", () => {
+    test("returns title and description from transcript frontmatter", async () => {
+      const meta = await getVideoMeta("desci-movement-juan-benet")
+      expect(typeof meta.title).toBe("string")
+      expect(meta.title.length).toBeGreaterThan(0)
+      expect(meta.title).toBe(
+        "DeSci, independent labs, and large-scale data science"
+      )
+      expect(typeof meta.description).toBe("string")
+      expect(meta.description.length).toBeGreaterThan(0)
     })
   })
 
@@ -90,20 +90,6 @@ test.describe("Video Data Access Utilities", () => {
       await expect(getTranscript("invalid-slug-999")).rejects.toThrow(
         /No video found with slug/
       )
-    })
-
-    test("uses transcriptPath from video data", async () => {
-      // Verifies the implementation uses video.transcriptPath from videos.json
-      const video = await getVideoBySlug("desci-movement-juan-benet")
-      expect(video).not.toBeNull()
-      expect(video!.transcriptPath).toBe(
-        "videos/desci-movement-juan-benet/transcript"
-      )
-
-      // getTranscript should resolve this path successfully
-      const transcript = await getTranscript("desci-movement-juan-benet")
-      expect(typeof transcript).toBe("string")
-      expect(transcript.length).toBeGreaterThan(0)
     })
   })
 })

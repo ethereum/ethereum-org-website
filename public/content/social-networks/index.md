@@ -53,6 +53,8 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 
 The Ethereum network has become the preferred tool for developers creating decentralized social media owing to the popularity of its tokens and its massive user base. Here are some examples of Ethereum-based social networks:
 
+<VideoWatch slug="crypto-apps-desocial-linda-xie" />
+
 ### Mirror {#mirror}
 
 [Mirror](https://mirror.xyz/) is a web3-enabled writing platform that aims to be decentralized and user-owned. Users can read and write for free on Mirror by simply connecting their wallets. Users can also collect writing and subscribe to their favorite writers.

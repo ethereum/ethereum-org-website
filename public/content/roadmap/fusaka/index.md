@@ -18,6 +18,8 @@ The Fusaka upgrade is only a single step in Ethereum's long-term development goa
 </AlertContent>
 </Alert>
 
+<VideoWatch slug="fusaka-upgrade-explained" />
+
 ## Improvements in Fusaka {#improvements-in-fusaka}
 
 ### Scale blobs {#scale-blobs}
