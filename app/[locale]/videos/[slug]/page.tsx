@@ -30,12 +30,10 @@ import { getTranscript } from "@/lib/utils/videoTranscripts"
 
 import VideoPageJsonLD from "./page-jsonld"
 
-const VideoLandingPage = async ({
-  params,
-}: {
-  params: { locale: string; slug: string }
+const VideoLandingPage = async (props: {
+  params: Promise<{ locale: string; slug: string }>
 }) => {
-  const { locale, slug } = params
+  const { locale, slug } = await props.params
 
   setRequestLocale(locale)
 
@@ -77,9 +75,7 @@ const VideoLandingPage = async ({
               /
             </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbPage>
-                {params.slug.replaceAll("-", " ")}
-              </BreadcrumbPage>
+              <BreadcrumbPage>{slug.replaceAll("-", " ")}</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
@@ -118,12 +114,10 @@ export async function generateStaticParams() {
   return videos.map((video) => ({ slug: video.slug }))
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string; slug: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const { locale, slug } = params
+  const { locale, slug } = await props.params
 
   const video = await getVideoBySlug(slug)
 
