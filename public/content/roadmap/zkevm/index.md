@@ -13,7 +13,7 @@ zkEVM is a technology that uses [zero-knowledge proofs](/zero-knowledge-proofs/)
 <AlertContent>
 <AlertTitle>Not to be confused with zkEVM rollups</AlertTitle>
 <AlertDescription>
-This page discusses using zkEVM to verify Ethereum L1 block execution. For zkEVM rollups that use ZK proofs to scale Ethereum as Layer 2 solutions, see [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
+This page discusses using zkEVM to verify Ethereum L1 block execution. For zkEVM rollups that use ZK proofs to scale Ethereum as layer 2 solutions, see [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
 </AlertDescription>
 </AlertContent>
 </Alert>
