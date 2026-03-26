@@ -1,3 +1,8 @@
+---
+title: "What are NFTs and how can they be used in decentralized finance?"
+description: "Understand the mechanics of non-fungible tokens (NFTs) on Ethereum and how they are used in decentralized finance (DeFi) apps. This video covers the core Ethereum token standards for NFTs, while explaining how unique assets can be used in lending protocols."
+---
+
 An explainer by **Finematics** covering the mechanics of non-fungible tokens (NFTs) on Ethereum and how they intersect with decentralized finance (DeFi) — including token standards, use cases, and NFT-collateralized lending.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=Xdkkux6OxfM) published by Finematics. It has been lightly edited for readability.*

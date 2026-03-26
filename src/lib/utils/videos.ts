@@ -112,7 +112,10 @@ export const VIDEO_CATEGORIES = [
  * provided tags (comma-split, trimmed, case-insensitive OR match).
  * Results are deduplicated — a video appears at most once.
  */
-export function getVideosByCategory(videos: Video[], tags: string[]): Video[] {
+export function getVideosByCategory<T extends Video>(
+  videos: T[],
+  tags: string[]
+): T[] {
   const lowerTags = new Set(tags.map((t) => t.trim().toLowerCase()))
 
   return videos.filter((video) => {

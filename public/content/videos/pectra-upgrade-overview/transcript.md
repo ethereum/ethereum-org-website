@@ -1,3 +1,8 @@
+---
+title: "What's going into the Pectra upgrade?"
+description: "Christine Kim presents at Devcon SEA on the Pectra upgrade for Ethereum, covering the EIPs included in the upgrade, what they change about the protocol, and why they matter for users, developers, and validators."
+---
+
 A presentation by **Christine Kim** at Devcon SEA covering the EIPs included in the Pectra upgrade, what they change about the protocol, when mainnet activation is expected, and which EIPs were removed from scope.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=ufIDBCgdGwY) published by Ethereum Foundation. It has been lightly edited for readability.*

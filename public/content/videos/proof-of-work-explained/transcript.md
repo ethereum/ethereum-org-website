@@ -1,3 +1,8 @@
+---
+title: "What is proof of work?"
+description: "A beginner-friendly explanation of the proof-of-work (PoW) consensus mechanism, covering how miners solve cryptographic puzzles to validate transactions and secure the blockchain network."
+---
+
 An explainer by **Binance Academy** covering the proof-of-work (PoW) consensus mechanism — its origins, how miners compete to solve cryptographic puzzles, and how it secures the blockchain network.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=3EUAcxhuoU4) published by Binance Academy. It has been lightly edited for readability.*

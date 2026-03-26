@@ -1,3 +1,8 @@
+---
+title: "Beyond the Ethereum protocol: proposer-builder separation"
+description: "A presentation on proposer-builder separation (PBS) — a design pattern that separates the roles of block building and block proposing in Ethereum to improve censorship resistance, MEV distribution, and validator decentralization."
+---
+
 This presentation explains how Ethereum's block production has evolved from a simple model into a sophisticated supply chain involving validators, builders, searchers, and relays. Barnabé Monnot from the Ethereum Foundation walks through why proposer-builder separation exists, how MEV-Boost relays mediate the relationship between proposers and builders, and what in-protocol solutions are being explored to reduce trust dependencies.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=u8XvkTrjITs) published by CBER Forum. It has been lightly edited for readability.*

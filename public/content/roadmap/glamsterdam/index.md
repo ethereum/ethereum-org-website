@@ -25,7 +25,7 @@ While Fusaka focused on foundational refinements, Glamsterdam advances the "Scal
 
 These improvements ensure Ethereum remains fast, affordable, and decentralized as it handles more activity, while keeping hardware requirements manageable for people running [nodes](/glossary/#node) at home.
 
-<YouTube id="GgKveVMLnoo" />
+<VideoWatch slug="ethereum-evolution-glamsterdam" />
 
 ## Improvements considered for Glamsterdam {#improvements-in-glamsterdam}
 
@@ -67,7 +67,7 @@ Building the trustless exchange of a block payload for payment directly into the
 
 To address the "hot path" bottleneck, ePBS also introduces the Payload Timeliness Committee (PTC) and a dual-deadline logic, allowing validators to attest to the consensus block and the execution payload timeliness separately to maximize throughput.
 
-<YouTube id="u8XvkTrjITs" />
+<VideoWatch slug="proposer-builder-separation" />
 
 Separating the proposer and builder roles at the protocol level expands the propagation window (or the time available to spread data across the network) from 2 seconds to about 9 seconds.
 

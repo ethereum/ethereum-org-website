@@ -1,3 +1,8 @@
+---
+title: "Ethereum Pectra upgrade: what stakers need to know"
+description: "Blockdaemon explains the Pectra upgrade from a staker's perspective, covering the practical impacts on validators, staking operations, and the key EIPs that affect staking in the Ethereum protocol."
+---
+
 A webinar hosted by **Blockdaemon** with blockchain engineer Julia Schmidt (Aluvial) and Freddy Tänzer (Blockdaemon) discussing how the Pectra upgrade impacts ETH staking — covering execution-layer-triggerable withdrawals, max effective balance increases, validator consolidation, and liquid staking implications.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=_UpAFpC7X6Y) published by Blockdaemon. It has been lightly edited for readability.*

@@ -1,3 +1,8 @@
+---
+title: "Blockchain 101: a visual demo"
+description: "Anders Brownworth's classic visual demonstration of how blockchain technology works. This hands-on walkthrough covers hashing, blocks, chains, distributed ledgers, and tokens — making blockchain concepts tangible and intuitive."
+---
+
 Anders Brownworth's classic visual demonstration of how blockchain technology works — a hands-on walkthrough covering SHA-256 hashing, blocks, mining, blockchains, distributed ledgers, tokens, and coinbase transactions.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=_160oMzblY8) published by Anders Brownworth. It has been lightly edited for readability.*

@@ -1,3 +1,8 @@
+---
+title: "Code is law? Smart contracts explained"
+description: "Finematics explores the concept of 'code is law' through the lens of smart contracts on Ethereum and DeFi. This video covers what smart contracts are, how they work, and the philosophical question of whether code should be the ultimate arbiter."
+---
+
 An explainer by **Finematics** exploring the concept of "code is law" through the lens of smart contracts on Ethereum — covering what smart contracts are, how they work, their advantages over traditional contracts, and why they are the building blocks of decentralized finance.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=pWGLtjG-F5c) published by Finematics. It has been lightly edited for readability.*

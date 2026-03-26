@@ -1,3 +1,8 @@
+---
+title: "Decentralized identity explained"
+description: "An explainer on how decentralized identity gives users more control over their digital identity and keeps personal information on the internet safer using blockchain-based credentials."
+---
+
 An explainer by **Microsoft Security** on how decentralized identity gives users more control over their digital credentials — covering the problems with current digital identifiers, how Verifiable Credentials and Decentralized Identifiers work, and what this means for privacy online.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=Ew-_F-OtDFI) published by Microsoft Security. It has been lightly edited for readability.*

@@ -1,3 +1,8 @@
+---
+title: "Ethereum's evolution: Fusaka, Glamsterdam, and beyond"
+description: "Preston Van Loon of Offchain Labs and Prysm presents at ETHDenver on Ethereum's upcoming protocol upgrades, covering the Fusaka and Glamsterdam roadmap milestones and the long-term evolution of the protocol."
+---
+
 A presentation by **Preston Van Loon** of Offchain Labs and Prysm, delivered at ETHDenver, covering Ethereum's recent upgrade velocity and what's ahead — including Pectra, Fusaka, PeerDAS, Glamsterdam, FOCIL, shorter slot times, and faster finality.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=GgKveVMLnoo) published by ETHDenver. It has been lightly edited for readability.*

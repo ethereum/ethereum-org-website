@@ -1,3 +1,8 @@
+---
+title: "Rollups: the ultimate Ethereum scaling strategy?"
+description: "A deep dive into rollups as Ethereum's primary scaling strategy. This video explains how optimistic rollups (Arbitrum, Optimism) and zero-knowledge rollups work, comparing their trade-offs and examining why rollups have become the dominant approach to scaling Ethereum."
+---
+
 An explainer by **Finematics** covering rollups as Ethereum's primary scaling strategy — comparing optimistic rollups (Arbitrum, Optimism) with ZK rollups, and examining why rollups are considered the holy grail of Ethereum scaling.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=7pWxCklcNsU) published by Finematics. It has been lightly edited for readability.*

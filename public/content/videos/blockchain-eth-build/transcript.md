@@ -1,3 +1,8 @@
+---
+title: "Blockchain — ETH.BUILD"
+description: "An interactive visual demonstration of how blockchain mining works using the ETH.BUILD educational tool. See how blocks are chained together, how proof of work secures the chain, and what happens when someone tries to tamper with data."
+---
+
 A tutorial by **Austin Griffith** demonstrating how blockchain mining works using the ETH.BUILD visual programming tool — covering proof of work, block chaining, mining difficulty, consensus, block rewards, and chain immutability.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=zcX7OJ-L8XQ) published by Austin Griffith. It has been lightly edited for readability.*

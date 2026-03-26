@@ -1,3 +1,8 @@
+---
+title: "The game of reorgs in proof-of-stake Ethereum"
+description: "Caspar Schwarz-Schilling of the Ethereum Foundation presents research on block reorganization attacks in proof-of-stake Ethereum, covering attack vectors, defense mechanisms, and the protocol-level mitigations in place."
+---
+
 This presentation explores the types of block reorganizations possible in proof-of-stake Ethereum and the mitigations designed to prevent them. Caspar Schwarz-Schilling, a researcher at the Ethereum Foundation's Robust Incentives Group, walks through the mechanics of ex-post and ex-ante reorgs, comparing the security landscape between proof of work and proof of stake.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=xcPxwhrg3Ao) published by LisCon. It has been lightly edited for readability.*

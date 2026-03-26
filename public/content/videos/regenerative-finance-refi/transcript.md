@@ -1,3 +1,8 @@
+---
+title: "Can regenerative finance clean up crypto's dirty image?"
+description: "CNBC explores how regenerative finance (ReFi) uses blockchain technology to fund environmental and social projects, examining whether crypto can shift its narrative from energy consumption to positive ecological impact."
+---
+
 An explainer by **CNBC Television** exploring the regenerative finance (ReFi) movement — the intersection of crypto and climate, how blockchain is being used to fund environmental projects, and whether ReFi can clean up crypto's reputation.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=La52dDzBt2k) published by CNBC Television. It has been lightly edited for readability.*

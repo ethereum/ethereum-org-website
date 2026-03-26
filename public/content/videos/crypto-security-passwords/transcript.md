@@ -1,3 +1,8 @@
+---
+title: "Crypto security: passwords and authentication"
+description: "Andreas Antonopoulos covers essential crypto security practices in this livestream, focusing on password management, authentication methods, and best practices for protecting your digital assets and private keys."
+---
+
 This livestream covers essential security practices for cryptocurrency holders, from password management fundamentals to multi-factor authentication. Andreas Antonopoulos walks through the principles of balancing security with usability, explains why password managers are essential, introduces the XKCD passphrase concept, and details the hierarchy of two-factor authentication methods.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=m8jlnZuV1i4) published by aantonop. It has been lightly edited for readability.*

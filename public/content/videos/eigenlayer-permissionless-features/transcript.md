@@ -1,3 +1,8 @@
+---
+title: "EigenLayer: permissionless feature addition to Ethereum"
+description: "Sreeram Kannan presents EigenLayer's approach to permissionless feature addition on Ethereum, explaining how restaking allows developers to bootstrap new decentralized services using Ethereum's existing validator set and economic security."
+---
+
 A research talk by **Sreeram Kannan** (University of Washington / EigenLayer) at an a16z crypto research event, explaining how EigenLayer enables permissionless innovation on Ethereum by allowing stakers to "restake" — committing the same capital to additional slashing conditions in exchange for providing new services like oracles, bridges, data availability layers, and alternative execution environments.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=-V-fG4J1N_M) published by a16z crypto. It has been lightly edited for readability.*

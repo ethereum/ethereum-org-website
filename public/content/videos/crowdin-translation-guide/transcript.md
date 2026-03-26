@@ -1,3 +1,8 @@
+---
+title: "Guide to using Crowdin for ethereum.org translations"
+description: "A walkthrough for translators contributing to ethereum.org, demonstrating how to use the Crowdin platform to translate content and help make Ethereum accessible to a global audience."
+---
+
 A tutorial by the **Ethereum Foundation** walking translators through the Crowdin localization platform — covering onboarding, the translation editor, translation memory, the glossary, and tips for an efficient workflow.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=Ii7bYhanLs4) published by Ethereum Foundation. It has been lightly edited for readability.*

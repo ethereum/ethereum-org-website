@@ -134,7 +134,7 @@ Today, the Ethereum community has adopted a policy of non-intervention in cases 
 
 Watch more on the DAO hack:
 
-<YouTube id="rNeLuBOVe8A" />
+<VideoWatch slug="dao-hack-ethereum-classic" />
 
 <Divider />
 

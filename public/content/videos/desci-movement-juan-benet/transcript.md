@@ -1,3 +1,8 @@
+---
+title: "The DeSci movement with Juan Benet"
+description: "Protocol Labs founder Juan Benet explores how the decentralized science (DeSci) movement uses decentralized tools to bridge the \"innovation chasm\" and revolutionize scientific funding. This seminar highlights the potential of Web3 in accelerating humanity's engine for progress."
+---
+
 A seminar presentation by **Juan Benet**, founder of Protocol Labs and inventor of IPFS and Filecoin, on how the decentralized science (DeSci) movement can transform scientific research over the next decade. Recorded as part of the Future of Science Seminar series hosted by the DeSci Foundation. 
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=5ORvbCIW39o) published by the DeSci Foundation. It has been lightly edited for readability.*

@@ -1,3 +1,8 @@
+---
+title: "Zero-knowledge proofs explained in 5 levels of difficulty"
+description: "A computer scientist explains zero-knowledge proofs at five different levels of complexity, from a child to an expert. This WIRED video makes one of cryptography's most important concepts accessible to everyone."
+---
+
 Computer scientist **Amit Sahai**, a professor at the UCLA Samueli School of Engineering, explains zero-knowledge proofs at five levels of complexity — from a child to an expert — in this **WIRED** production. The concept is demonstrated through physical analogies and discussed in increasing technical depth.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=fOGdb1CTu5c) published by WIRED. It has been lightly edited for readability.*

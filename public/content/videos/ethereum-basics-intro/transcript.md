@@ -1,3 +1,8 @@
+---
+title: "Ethereum basics: intro"
+description: "An introductory lecture on Ethereum fundamentals covering what Ethereum is, how it differs from Bitcoin, and the core concepts that underpin the Ethereum network."
+---
+
 An introductory lecture by **Quezar** covering the fundamentals of Ethereum — what blockchains are, how they work under the hood, and the key components that make up the Ethereum network.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=j78ZcIIpi0Q) published by Quezar. It has been lightly edited for readability.*

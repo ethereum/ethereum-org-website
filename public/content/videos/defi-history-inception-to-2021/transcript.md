@@ -1,3 +1,8 @@
+---
+title: "DeFi: from inception to 2021 and beyond"
+description: "A history of decentralized finance from its beginnings through the DeFi Summer of 2020 and beyond. This video covers the key milestones, projects, and innovations that shaped the DeFi ecosystem on Ethereum."
+---
+
 An explainer by **Finematics** tracing the history of decentralized finance from the earliest experiments on Ethereum through the explosive DeFi Summer of 2020 — covering key protocols, milestones, market events, and where DeFi is headed in 2021 and beyond.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=qFBYB4W2tqU) published by Finematics. It has been lightly edited for readability.*

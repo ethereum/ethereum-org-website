@@ -21,7 +21,7 @@ DeFi is a collective term for financial products and services that are accessibl
 
 There's a booming crypto economy out there, where you can lend, borrow, long/short, earn interest, and more. Crypto-savvy Argentinians have used DeFi to escape crippling inflation. Companies have started streaming their employees their wages in real time. Some folks have even taken out and paid off loans worth millions of dollars without the need for any personal identification.
 
-<YouTube id="H-O3r2YMWJ4" />
+<VideoWatch slug="defi-future-of-finance" />
 
 ## DeFi vs traditional finance {#defi-vs-tradfi}
 
@@ -58,7 +58,7 @@ Bitcoin in many ways was the first DeFi application. Bitcoin lets you really own
 
 Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyone has access. But it also makes this digital money programmable, using [smart contracts](/glossary/#smart-contract), so you can go beyond storing and sending value.
 
-<YouTube id="qFBYB4W2tqU" />
+<VideoWatch slug="defi-history-inception-to-2021" />
 
 ## Programmable money {#programmable-money}
 

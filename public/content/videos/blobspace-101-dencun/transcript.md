@@ -1,3 +1,8 @@
+---
+title: "The next Ethereum upgrade: blobspace 101"
+description: "Domothy explains blobspace — the new data availability layer introduced by the Dencun upgrade — covering how blob transactions work, why they matter for Ethereum scaling, and what comes next for data availability."
+---
+
 This deep-dive interview covers everything you need to know about Ethereum's new blob space resource, introduced with EIP-4844 (proto-danksharding). Ethereum Foundation researcher Domothy joins David Hoffman and Ryan Sean Adams on Bankless to explain the history of the rollup-centric roadmap, the technical mechanics of blobs, and the economic implications of separating block space from blob space.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=dFjyUY3e53Q) published by Bankless. It has been lightly edited for readability.*

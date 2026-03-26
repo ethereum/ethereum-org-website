@@ -1,3 +1,8 @@
+---
+title: "Unlocking Ethereum's scaling: EIP-4844 explained"
+description: "Finematics explains EIP-4844 (proto-danksharding), the key upgrade in the Dencun hard fork that introduces blob transactions to dramatically reduce costs for layer 2 rollups on Ethereum."
+---
+
 An explainer by **Finematics** covering EIP-4844 (proto-danksharding), the key upgrade in the Dencun hard fork that introduces blob transactions to dramatically reduce costs for layer 2 rollups on Ethereum.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=HT9PHWloIiU) published by Finematics. It has been lightly edited for readability.*

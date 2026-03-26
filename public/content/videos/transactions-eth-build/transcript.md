@@ -1,3 +1,8 @@
+---
+title: "Transactions — ETH.BUILD"
+description: "An interactive visual demonstration of how Ethereum transactions work using the ETH.BUILD educational tool. See how transactions are constructed, signed, and sent on the Ethereum network."
+---
+
 A tutorial by **Austin Griffith** demonstrating how Ethereum transactions work using the ETH.BUILD visual programming tool — covering transaction structure, gas prices, signing, broadcasting, and the transaction pool.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=er-0ihqFQB0) published by Austin Griffith. It has been lightly edited for readability.*

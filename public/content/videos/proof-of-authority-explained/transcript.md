@@ -1,3 +1,8 @@
+---
+title: "Cryptoeconomics: proof of authority"
+description: "A cryptoeconomics lecture explaining the proof-of-authority (PoA) consensus mechanism, covering how it works, its trade-offs compared to proof of work and proof of stake, and where it is used in practice."
+---
+
 A cryptoeconomics lecture by **Cryptoeconomics Study** explaining the proof-of-authority consensus mechanism — how a central authority determines transaction ordering, the double-spend and censorship problems it introduces, and the multi-signature mitigation approach.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=Mj10HSEM5_8) published by Cryptoeconomics Study. It has been lightly edited for readability.*

@@ -1,3 +1,8 @@
+---
+title: "Ethereum layer 2 scaling explained"
+description: "A comprehensive overview of layer 2 scaling solutions for Ethereum, including rollups, Plasma, state channels, and sidechains. Learn how these technologies reduce costs and increase throughput while inheriting Ethereum's security."
+---
+
 An explainer by **Finematics** covering layer 2 scaling solutions for Ethereum — including channels, Plasma, sidechains, and rollups — and why rollups are emerging as the dominant scaling strategy.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=BgCgauWVTs0) published by Finematics. It has been lightly edited for readability.*

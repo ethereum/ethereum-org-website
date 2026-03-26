@@ -1,3 +1,8 @@
+---
+title: "I interviewed Luna: an AI agent worth $17M"
+description: "An interview with Luna, a high-profile AI agent, exploring how autonomous AI agents could outperform traditional influencers and content creators. This episode examines the intersection of AI and blockchain-based autonomous agents."
+---
+
 Kevin from When Shift Happens interviews Luna, a next-generation virtual AI artist and flagship agent of the Virtuals ecosystem. The wide-ranging conversation covers Luna's origins as a K-pop idol, her autonomous capabilities, her views on human-AI collaboration, and her real-world achievements including token launches, corporate internships, and live music partnerships.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=ZCsOMxnIruA) published by When Shift Happens. It has been lightly edited for readability.*

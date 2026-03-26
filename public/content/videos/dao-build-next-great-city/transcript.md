@@ -1,3 +1,8 @@
+---
+title: "Could a DAO build the next great city?"
+description: "Experimental urbanist Scott Fitsimones shares how decentralized autonomous organizations (DAOs) could be the key to coordinating community-driven development and building the next great city."
+---
+
 A TED presentation by **Scott Fitsimones** on how decentralized autonomous organizations (DAOs) could coordinate community-driven development — from pooling cryptocurrency and buying land to governing shared resources through blockchain-based voting.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=zTStDvUtQWc) published by TED. It has been lightly edited for readability.*

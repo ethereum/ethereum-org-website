@@ -1,3 +1,8 @@
+---
+title: "How do Ethereum withdrawals work?"
+description: "Finematics explains how staking withdrawals work on Ethereum after the Shanghai/Capella upgrade, covering the technical process, withdrawal queue, and what stakers need to know about accessing their staked ETH."
+---
+
 An explainer by **Finematics** covering how staking withdrawals work on Ethereum after the Shanghai/Capella upgrade — including the mechanics of partial and full withdrawals, common misconceptions, and the implications for the staking ecosystem.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=RwwU3P9n3uo) published by Finematics. It has been lightly edited for readability.*

@@ -1,3 +1,8 @@
+---
+title: "The PoW vs. PoS debate with Lyn Alden & Justin Drake"
+description: "Macro strategist Lyn Alden and Ethereum researcher Justin Drake debate the foundational trade-offs between proof-of-work and proof-of-stake. This video dives deep into economic security, 51% attack recovery, and the philosophical differences between commodity and equity-based money systems."
+---
+
 A debate between **Lyn Alden** and **Justin Drake**, hosted by **Ryan Sean Adams** and **David Hoffman** on the Bankless podcast.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=1m12zgJ42dI) published by Bankless. It has been lightly edited for readability.*

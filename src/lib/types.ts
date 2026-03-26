@@ -595,13 +595,12 @@ export type StatsBoxState = ValueOrError<string>
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
 /**
- * Video data structure
+ * Video data structure (static metadata stored in videos.json).
+ * Does not include title or description — those are stored in transcript frontmatter.
  */
 export type Video = {
   slug: string
   youtubeId: string
-  title: string
-  description: string
   uploadDate: string
   duration: string
   educationLevel: "beginner" | "intermediate" | "advanced"
@@ -610,8 +609,23 @@ export type Video = {
   language: "en"
   author: string
   thumbnailUrl?: string
-  transcriptPath: string
 }
+
+/**
+ * Video title and description, sourced from the transcript file's YAML frontmatter.
+ * Stored in `public/content/videos/{slug}/transcript.md` (and locale equivalents),
+ * enabling translation via the standard content pipeline.
+ */
+export type VideoMeta = {
+  title: string
+  description: string
+}
+
+/**
+ * Combined type for pages and components that need both static video data
+ * and translatable metadata (title + description from transcript frontmatter).
+ */
+export type VideoWithMeta = Video & VideoMeta
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>

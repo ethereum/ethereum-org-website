@@ -1,3 +1,8 @@
+---
+title: "Explanation of restaking"
+description: "An explainer on restaking — the practice of using already-staked ETH to provide security for additional protocols and services beyond Ethereum's base layer, extending the network's trust and economic security."
+---
+
 A presentation by **Mike** at a CBER Forum event covering how restaking works — defining self-staking, delegated staking, native and non-native restaking, the mechanics of liquid staking and liquid restaking tokens, and how slashing interacts with restaked positions.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=rOJo7VwPh7I) published by CBER Forum. It has been lightly edited for readability.*

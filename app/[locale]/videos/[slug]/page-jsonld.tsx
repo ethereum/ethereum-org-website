@@ -1,4 +1,4 @@
-import type { Video } from "@/lib/types"
+import type { Video, VideoMeta } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -42,10 +42,12 @@ function stripMdx(mdx: string): string {
 export default function VideoPageJsonLD({
   locale,
   video,
+  meta,
   transcript,
 }: {
   locale: string
   video: Video
+  meta: VideoMeta
   transcript: string | null
 }) {
   const url = normalizeUrlForJsonLd(locale, `/videos/${video.slug}/`)
@@ -54,8 +56,8 @@ export default function VideoPageJsonLD({
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "@id": `${url}#video`,
-    name: video.title,
-    description: video.description,
+    name: meta.title,
+    description: meta.description,
     uploadDate: `${video.uploadDate}T00:00:00+00:00`,
     duration: toIsoDuration(video.duration),
     thumbnailUrl:

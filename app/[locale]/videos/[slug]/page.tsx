@@ -26,7 +26,7 @@ import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getVideoBySlug, getVideos } from "@/lib/utils/videos"
-import { getTranscript } from "@/lib/utils/videoTranscripts"
+import { getTranscript, getVideoMeta } from "@/lib/utils/videoTranscripts"
 
 import VideoPageJsonLD from "./page-jsonld"
 
@@ -43,7 +43,10 @@ const VideoLandingPage = async (props: {
     notFound()
   }
 
-  // Fetch transcript MDX — graceful handling if not found
+  // Load translatable metadata (title + description) from transcript frontmatter
+  const meta = await getVideoMeta(slug, locale)
+
+  // Fetch transcript MDX body — graceful handling if not found
   let transcriptMdx: string | null = null
   try {
     transcriptMdx = await getTranscript(slug, locale)
@@ -62,6 +65,7 @@ const VideoLandingPage = async (props: {
       <VideoPageJsonLD
         locale={locale}
         video={video}
+        meta={meta}
         transcript={transcriptMdx}
       />
       <MainArticle className="px-8 py-4">
@@ -81,16 +85,16 @@ const VideoLandingPage = async (props: {
         </Breadcrumb>
 
         {/* Video Title */}
-        <h1 className="mb-4 text-3xl font-bold md:text-4xl">{video.title}</h1>
+        <h1 className="mb-4 text-3xl font-bold md:text-4xl">{meta.title}</h1>
 
         {/* Video Description */}
-        <p className="mb-8 text-lg text-body-medium">{video.description}</p>
+        <p className="mb-8 text-lg text-body-medium">{meta.description}</p>
 
         {/* YouTube Player */}
         <div className={cn("sticky top-24 z-10 mb-8 md:static")}>
           <YouTube
             id={video.youtubeId}
-            title={video.title}
+            title={meta.title}
             className="max-w-3xl"
           />
         </div>
@@ -129,11 +133,13 @@ export async function generateMetadata(props: {
     }
   }
 
+  const meta = await getVideoMeta(slug, locale)
+
   return await getMetadata({
     locale,
     slug: ["videos", slug],
-    title: `${video.title} | ethereum.org`,
-    description: video.description,
+    title: `${meta.title} | ethereum.org`,
+    description: meta.description,
   })
 }
 

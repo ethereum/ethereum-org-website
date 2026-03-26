@@ -1,3 +1,8 @@
+---
+title: "Understanding blockchain consensus mechanisms"
+description: "An explainer covering the core consensus mechanisms used in blockchains, including how they enable decentralized networks to agree on the state of transactions without a central authority."
+---
+
 An explainer by **Tech in Asia** covering the three main consensus mechanisms used in blockchain systems — proof of work, proof of stake, and proof of authority — and how they enable decentralized networks to agree on the state of transactions.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=ojxfbN78WFQ) published by Tech in Asia. It has been lightly edited for readability.*

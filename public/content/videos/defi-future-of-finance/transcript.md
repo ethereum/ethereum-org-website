@@ -1,3 +1,8 @@
+---
+title: "DeFi: the future of finance explained"
+description: "An overview of decentralized finance (DeFi) and how it compares to the current financial system. This video explores the problems DeFi solves and whether it has a chance to create a parallel financial ecosystem on Ethereum."
+---
+
 An explainer by **Finematics** covering the future of decentralized finance (DeFi) — comparing it to the current financial system, exploring the problems DeFi solves, its growth metrics, and whether it has a chance to create a parallel financial ecosystem on Ethereum.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=H-O3r2YMWJ4) published by Finematics. It has been lightly edited for readability.*

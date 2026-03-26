@@ -1,3 +1,8 @@
+---
+title: "Decentralized social media explained"
+description: "An explainer on decentralized social media platforms that use blockchain technology to give users ownership of their data, content, and social connections — without relying on centralized corporations."
+---
+
 An explainer by **CoinMarketCap** covering decentralized social media platforms — how they differ from centralized networks, the freedom of speech trade-offs, interoperability benefits, and a tour of leading platforms including Mastodon, Minds, Steem, DTube, Audius, and Subsocial.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=UdT2lpcGvcQ) published by CoinMarketCap. It has been lightly edited for readability.*

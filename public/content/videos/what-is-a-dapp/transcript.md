@@ -1,3 +1,8 @@
+---
+title: "What is a dapp? Decentralized application on the blockchain"
+description: "An introduction to decentralized applications (dapps) and how they differ from traditional apps. This video explains how dapps use smart contracts on the blockchain to operate without a central authority."
+---
+
 An explainer by **district0x Network** introducing decentralized applications (dapps) — covering what makes them different from traditional apps, how they run on blockchain infrastructure, and their security benefits.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=F50OrwV6Uk8) published by district0x Network. It has been lightly edited for readability.*

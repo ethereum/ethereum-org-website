@@ -1,3 +1,8 @@
+---
+title: "The DAO hack: story of Ethereum Classic"
+description: "The story of the DAO hack in 2016 — one of the most significant events in Ethereum's history — and how the community's response led to the creation of Ethereum Classic as a separate chain."
+---
+
 An explainer by **Junion** telling the story of the DAO hack in 2016 — one of the largest digital heists in crypto history — and how the Ethereum community's controversial decision to fork the blockchain led to the creation of Ethereum Classic.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=rNeLuBOVe8A) published by Junion. It has been lightly edited for readability.*
