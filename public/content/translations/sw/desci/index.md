@@ -22,7 +22,7 @@ Sayansi iliyogatuliwa inaruhusu vyanzo mbalimbali vya ufadhili (kutoka [DAOs](/g
 
 ### Juan Benet - Harakati ya DeSci
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## Jinsi DeSci inavyoboresha sayansi {#desci-improves-science}
 

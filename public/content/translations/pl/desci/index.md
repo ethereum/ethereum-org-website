@@ -22,7 +22,7 @@ Zdecentralizowana nauka pozwala na bardziej zróżnicowane źródła finansowani
 
 ### Juan Benet — ruch DeSci
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## Jak DeSci ulepsza naukę {#desci-improves-science}
 
