@@ -66,8 +66,9 @@ Site-specific rules for ethereum.org:
   switch (group) {
     case "rtl":
       return `${common}
+- Content inside backticks (\`inline code\`) is already rendered as LTR monospace. Do NOT wrap backtick content in <span dir="ltr"> -- this breaks MDX rendering. Use <span dir="ltr">...</span> ONLY for bare mathematical expressions or bare numeric dates that are NOT already inside backticks.
 - Wrap bare numeric dates (YYYY-MM-DD, DD/MM/YYYY) in <span dir="ltr">...</span> to prevent BiDi flipping.
-- Wrap mathematical equations with operators in <span dir="ltr">...</span>.
+- Wrap mathematical equations with operators in <span dir="ltr">...</span>, but only when they are NOT inside backticks.
 - Use Western Arabic numerals (1, 2, 3) for Arabic. Urdu uses native numerals for prose but Western for technical identifiers.
 - Never convert Gregorian dates to Hijri calendar.
 - The word "state" in blockchain context means computational state, not political state.`
