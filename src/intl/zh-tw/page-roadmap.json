@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "預先建立依賴關係圖，以加快同步、平行執行和平行磁碟讀取的速度。",
   "page-roadmap-glamsterdam-bal-item-3": "降低對狀態管理較多的應用程式的Gas消耗，並提高Gas成本的可預測性。",
   "page-roadmap-hegota-discussed-title": "為Hegotá而規劃",
-  "page-roadmap-hegota-discussed-item-1": "目前正在討論這些提案。"
+  "page-roadmap-hegota-discussed-item-1": "目前正在討論這些提案。",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "零知識證明可以讓驗證者在不重新執行交易的情況下驗證 Ethereum 區塊，從而在不提高硬體要求的情況下實現更高的燃料限制。"
 }

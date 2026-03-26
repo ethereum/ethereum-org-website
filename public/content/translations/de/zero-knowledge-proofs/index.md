@@ -101,6 +101,8 @@ Hier kommt die verifizierbare Berechnung ins Spiel. Wenn ein Blockchain-Knoten e
 
 [Zero-Knowledge Rollups](/developers/docs/scaling/zk-rollups) und [Validiums](/developers/docs/scaling/validium/) sind zwei Off-Chain-Skalierungslösungen, die Validitätsnachweise verwenden, um sichere Skalierbarkeit zu bieten. Diese Protokolle führen Tausende von Transaktionen Off-Chain aus und reichen Beweise zur Verifizierung auf Ethereum ein. Diese Ergebnisse können sofort angewendet werden, sobald der Beweis verifiziert ist, sodass Ethereum mehr Transaktionen verarbeiten kann, ohne die Berechnung auf der Basisebene zu erhöhen.
 
+Über die Skalierung auf Ebene 2 hinaus können Zero-Knowledge-Beweise auch die Ausführung von Ethereum-L1-Blöcken selbst verifizieren. zkEVM für die L1-Verifizierung würde es Validatoren ermöglichen, Blöcke durch die Prüfung eines Beweises zu verifizieren, anstatt alle Transaktionen erneut auszuführen -- was höhere Gaslimits ermöglicht, ohne die Hardwareanforderungen für Validatoren zu erhöhen.
+
 ### Reduzierung von Bestechung und Absprachen bei Abstimmungen auf der Blockchain {#secure-blockchain-voting}
 
 Blockchain-Abstimmungssysteme haben viele vorteilhafte Eigenschaften: Sie sind vollständig überprüfbar, sicher gegen Angriffe, zensurresistent und frei von geografischen Einschränkungen. Aber selbst Abstimmungssysteme auf der Blockchain sind nicht immun gegen das Problem von **Absprachen** (Collusion).

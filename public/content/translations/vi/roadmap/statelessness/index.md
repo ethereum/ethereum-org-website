@@ -79,6 +79,8 @@ Các trình đề xuất khối sử dụng dữ liệu trạng thái để tạ
 
 "Weak statelessness" đang trong giai đoạn nghiên cứu chuyên sâu, nhưng công cuộc triển khai sẽ phụ thuộc vào sự tách biệt trình xây dựng khối - trình đề xuất khối và cách ứng dụng "Verkle Trees" để có thể truyền các "nhân chứng" nhỏ giữa các node ngang hàng tham gia mạng lưới. Nghĩa là "weak statelessness" có thể sẽ mất vài năm nữa trước khi được triển khai chính thức trên Ethereum Mainnet.
 
+zkEVM cho viec xac minh L1 la mot cong nghe bo tro co the tang cuong hon nua viec xac minh khong trang thai. Thay vi chi kiem tra cac witness, trinh xac thuc co the xac minh mot bang chung khong kien thuc rang toan bo Khoi da duoc thuc thi dung -- cung cap su chac chan ve mat mat ma ma khong can thuc thi lai cac giao dich.
+
 ### Strong statelessness {#strong-statelessness}
 
 Tình trạng tính không trạng thái loại bỏ nhu cầu đối với bất kỳ nút nào lưu trữ dữ liệu trạng thái. Thay vào đó, các giao dịch được gửi đi kèm theo các "nhân chứng" có thể được tổng hợp bởi các trình sản xuất khối. Các trình sản xuất khối này sẽ chịu trách nhiệm lưu trữ chỉ những trạng thái cần thiết để tạo ra "nhân chứng" cho các tài khoản liên quan. Trách nhiệm về trạng thái gần như được chuyển hoàn toàn sang người dùng, vì họ chính là người gửi các "nhân chứng" cùng với 'danh sách truy cập' (access list) để khai báo các tài khoản và khóa lưu trữ mà họ đang tương tác. Cơ chế này cho phép các node hoạt động cực kỳ gọn nhẹ, nhưng cũng dẫn đến các tình huống đánh đổi, bao gồm rào cản trong thực hiện giao dịch với các hợp đồng thông minh.

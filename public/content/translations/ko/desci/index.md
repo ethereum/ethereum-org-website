@@ -22,7 +22,7 @@ DeSci는 과학자들이 그들의 연구를 공개적으로 공유하고 그들
 
 ### Juan Benet - DeSci 운동
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## DeSci가 과학을 개선하는 방법 {#desci-improves-science}
 
