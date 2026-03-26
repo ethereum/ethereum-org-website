@@ -25,7 +25,7 @@ Identitas berarti rasa diri seorang individu, yang didefinisikan oleh karakteris
 
 ## Apa itu pengidentifikasi? {#what-are-identifiers}
 
-Pengidentifikasi adalah sepotong informasi yang bertindak sebagai penunjuk ke identitas atau identitas tertentu. Pengidentifikasi umum meliputi:
+Pengidentifikasi adalah sepotong informasi yang bertindak sebagai penunjuk ke identitas tertentu. Pengidentifikasi umum meliputi:
 
 - Nama
 - Nomor jaminan sosial/nomor pokok wajib pajak (NPWP)
@@ -45,7 +45,7 @@ Contoh pengidentifikasi tradisional ini diterbitkan, disimpan, dan dikontrol ole
 
 4. Identitas terdesentralisasi membuat data identitas menjadi portabel. Pengguna menyimpan pengesahan dan pengidentifikasi dalam dompet seluler dan dapat membagikannya dengan pihak mana pun yang mereka pilih. Pengidentifikasi dan pengesahan terdesentralisasi tidak terkunci dalam basis data organisasi penerbit.
 
-5. Identitas terdesentralisasi harus bekerja dengan baik dengan teknologi [zero-knowledge](/glossary/#zk-proof) yang sedang berkembang yang akan memungkinkan individu untuk membuktikan bahwa mereka memiliki atau telah melakukan sesuatu tanpa mengungkapkan apa hal tersebut. Ini bisa menjadi cara yang ampuh untuk menggabungkan kepercayaan dan privasi untuk aplikasi seperti pemungutan suara.
+5. Identitas terdesentralisasi harus bekerja dengan baik dengan teknologi [zero-knowledge](/glossary/#zk-proof) yang sedang berkembang yang akan memungkinkan individu untuk membuktikan bahwa mereka memiliki atau telah melakukan sesuatu tanpa mengungkapkan apa hal tersebut. Ini bisa menjadi cara yang kuat untuk menggabungkan kepercayaan dan privasi untuk aplikasi seperti pemungutan suara.
 
 6. Identitas terdesentralisasi memungkinkan mekanisme [anti-Sybil](/glossary/#anti-sybil) untuk mengidentifikasi ketika satu individu manusia berpura-pura menjadi banyak manusia untuk memanipulasi atau melakukan spam pada suatu sistem.
 
@@ -61,7 +61,7 @@ Fungsi [Sign-In with Ethereum](https://siwe.xyz/) kemudian akan memungkinkan ser
 
 ### 2. Autentikasi KYC {#kyc-authentication}
 
-Menggunakan banyak layanan online mengharuskan individu untuk memberikan pengesahan dan kredensial, seperti SIM atau paspor nasional. Namun pendekatan ini bermasalah karena informasi pribadi pengguna dapat disusupi dan penyedia layanan tidak dapat memverifikasi keaslian pengesahan tersebut.
+Menggunakan banyak layanan online mengharuskan individu untuk memberikan pengesahan dan kredensial, seperti surat izin mengemudi atau paspor nasional. Namun pendekatan ini bermasalah karena informasi pribadi pengguna dapat disusupi dan penyedia layanan tidak dapat memverifikasi keaslian pengesahan tersebut.
 
 Identitas terdesentralisasi memungkinkan perusahaan untuk melewati proses [Know-Your-Customer (KYC)](https://en.wikipedia.org/wiki/Know_your_customer) konvensional dan mengautentikasi identitas pengguna melalui Kredensial yang Dapat Diverifikasi (Verifiable Credentials). Ini mengurangi biaya manajemen identitas dan mencegah penggunaan dokumentasi palsu.
 
@@ -73,39 +73,27 @@ Identitas terdesentralisasi dapat membantu menciptakan komunitas online yang beb
 
 ### 4. Perlindungan anti-Sybil {#sybil-protection}
 
-Aplikasi pemberian hibah yang menggunakan [pemungutan suara kuadratik (quadratic voting)](/glossary/#quadratic-voting) rentan terhadap [serangan sybil](/glossary/#sybil-attack) karena nilai hibah meningkat ketika lebih banyak individu memilihnya, yang mendorong pengguna untuk membagi kontribusi mereka ke banyak identitas. Identitas terdesentralisasi membantu mencegah hal ini dengan meningkatkan beban pada setiap peserta untuk membuktikan bahwa mereka benar-benar manusia, meskipun seringkali tanpa harus mengungkapkan informasi pribadi yang spesifik.
+Aplikasi pemberian hibah yang menggunakan [pemungutan suara kuadratik (quadratic voting)](/glossary/#quadratic-voting) rentan terhadap [serangan sybil](/glossary/#sybil-attack) karena nilai hibah meningkat ketika lebih banyak individu memilihnya, yang memberikan insentif kepada pengguna untuk membagi kontribusi mereka ke banyak identitas. Identitas terdesentralisasi membantu mencegah hal ini dengan meningkatkan beban pada setiap peserta untuk membuktikan bahwa mereka benar-benar manusia, meskipun sering kali tanpa harus mengungkapkan informasi pribadi yang spesifik.
 
 ### 5. ID Nasional dan Pemerintah {#national-and-government-id}
 
-Pemerintah dapat menggunakan prinsip-prinsip identitas terdesentralisasi untuk menerbitkan dokumen identitas dasar—seperti KTP nasional, paspor, atau SIM—sebagai kredensial yang dapat diverifikasi di Ethereum, memberikan jaminan kriptografi yang kuat atas keaslian untuk mengurangi penipuan dan pemalsuan dalam verifikasi identitas online. Warga negara dapat menyimpan pengesahan ini di [dompet](/wallets/) pribadi mereka dan menggunakannya untuk membuktikan identitas, usia, atau hak pilih mereka.
+Pemerintah dapat menggunakan prinsip-prinsip identitas terdesentralisasi untuk menerbitkan dokumen identitas dasar—seperti KTP nasional, paspor, atau surat izin mengemudi—sebagai kredensial yang dapat diverifikasi di Ethereum, memberikan jaminan kriptografi yang kuat atas keaslian untuk mengurangi penipuan dan pemalsuan dalam verifikasi identitas online. Warga negara dapat menyimpan pengesahan ini di [dompet](/wallets/) pribadi mereka dan menggunakannya untuk membuktikan identitas, usia, atau hak pilih mereka.
 
-Model ini memungkinkan pengungkapan selektif, terutama bila dikombinasikan dengan teknologi privasi [zero-knowledge proof (ZKP)](/zero-knowledge-proofs/). Misalnya, seorang warga negara dapat membuktikan secara kriptografi bahwa mereka berusia di atas 18 tahun untuk mengakses layanan yang dibatasi usia tanpa mengungkapkan tanggal lahir mereka yang sebenarnya, menawarkan privasi yang lebih besar daripada ID tradisional.
+Model ini memungkinkan pengungkapan selektif, terutama bila dikombinasikan dengan teknologi privasi [bukti zero-knowledge (ZKP)](/zero-knowledge-proofs/). Misalnya, seorang warga negara dapat membuktikan secara kriptografi bahwa mereka berusia di atas 18 tahun untuk mengakses layanan yang dibatasi usia tanpa mengungkapkan tanggal lahir mereka yang sebenarnya, menawarkan privasi yang lebih besar daripada ID tradisional.
 
-#### 💡Studi kasus: Bhutan National Digital ID (NDI) di Ethereum {#case-study-bhutan-ndi}
+#### 💡Studi kasus: ID Digital Nasional (NDI) Bhutan di Ethereum {#case-study-bhutan-ndi}
 
-- Menyediakan akses ke kredensial identitas yang dapat diverifikasi untuk hampir 800.000 warga negara Bhutan
+- Menyediakan akses ke kredensial yang dapat diverifikasi untuk hampir 800.000 warga negara Bhutan
 - Bermigrasi dari jaringan Polygon [ke mainnet Ethereum](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) pada Oktober 2025
 - Lebih dari [234.000 ID digital](https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/) diterbitkan per Maret 2025
 
-Kerajaan Bhutan [memigrasikan sistem National Digital Identity (NDI) miliknya](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) ke Ethereum pada Oktober 2025. Dibangun di atas prinsip-prinsip identitas terdesentralisasi dan identitas berdaulat sendiri (self-sovereign identity), sistem NDI Bhutan menggunakan pengidentifikasi terdesentralisasi dan kredensial yang dapat diverifikasi untuk menerbitkan kredensial yang ditandatangani secara digital langsung ke dompet pribadi warga negara. Dengan menambatkan bukti kriptografi dari kredensial ini di Ethereum, sistem memastikan bahwa kredensial tersebut autentik, anti-rusak, dan dapat diverifikasi oleh pihak mana pun tanpa menanyakan otoritas pusat.
-
-Arsitektur sistem ini menekankan privasi melalui penggunaan teknologi [zero-knowledge proof (ZKP)](/zero-knowledge-proofs/). Implementasi "pengungkapan selektif" ini memungkinkan warga negara untuk membuktikan fakta spesifik (mis., "Saya berusia di atas 18 tahun" atau "Saya adalah warga negara") untuk mengakses layanan tanpa mengungkapkan data pribadi yang mendasarinya, seperti nomor ID lengkap atau tanggal lahir mereka yang sebenarnya. Ini menunjukkan penggunaan Ethereum di dunia nyata yang kuat untuk sistem ID nasional yang aman, berpusat pada pengguna, dan menjaga privasi.
-
-#### 💡Studi kasus: QuarkID Kota Buenos Aires di [Layer 2](/layer-2/) Ethereum ZKSync Era {#case-study-buenos-aires-quarkid}
-
-- Menerbitkan kredensial identitas terdesentralisasi kepada lebih dari [3,6 juta pengguna](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo) saat peluncuran
-- QuarkID adalah protokol sumber terbuka yang diakui sebagai [Barang Publik Digital (Digital Public Good)](https://www.digitalpublicgoods.net/r/quarkid) di bawah Tujuan Pembangunan Berkelanjutan PBB
-- Menekankan model "[pemerintah-sebagai-pengguna](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo)", di mana kota tidak memiliki protokol tersebut, memberikan warga negara kepemilikan data dan privasi penuh
-
-Pada tahun 2024, Pemerintah Kota Buenos Aires (GCBA) mengintegrasikan QuarkID, "kerangka kepercayaan digital" sumber terbuka yang dibangun oleh Sekretariat Inovasi dan Transformasi Digital GCBA, ke dalam miBA, aplikasi resmi kota bagi penduduk untuk mengakses layanan pemerintah dan dokumen resmi. Saat peluncuran, seluruh 3,6 juta+ pengguna miBA diberikan identitas digital terdesentralisasi yang memungkinkan mereka untuk mengelola dan membagikan dokumen dan sertifikat digital yang dapat diverifikasi secara onchain, termasuk kredensial kewarganegaraan, akta kelahiran, pernikahan, dan kematian, catatan pajak, catatan vaksinasi, dan banyak lagi.
-
-Dibangun di jaringan [Layer 2](/layer-2/) Ethereum ZKSync Era, sistem QuarkID menggunakan teknologi ZKP untuk memungkinkan warga negara memverifikasi kredensial pribadi secara peer-to-peer melalui perangkat seluler mereka&mdash;tanpa mengekspos data pribadi yang tidak perlu. Program ini menyoroti model "pemerintah-sebagai-pengguna" di mana GCBA bertindak sebagai salah satu pengguna protokol QuarkID yang sumber terbuka dan dapat dioperasikan, alih-alih bertindak sebagai pemilik terpusat. Arsitektur yang diaktifkan ZKP ini memberikan fitur privasi utama: tidak ada pihak ketiga, bahkan GCBA sekalipun, yang dapat melacak bagaimana, kapan, atau mengapa seorang warga negara menggunakan kredensial mereka. Program yang sukses ini memberi warga negara identitas berdaulat sendiri secara penuh dan kontrol atas data sensitif mereka, semuanya diamankan oleh jaringan Ethereum yang terdistribusi secara global.
+Kerajaan Bhutan [memigrasikan sistem Identitas Digital Nasional (NDI)-nya](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) ke Ethereum pada Oktober 2025. Dibangun di atas prinsip-prinsip identitas terdesentralisasi dan identitas berdaulat sendiri (self-sovereign identity), sistem NDI Bhutan menggunakan pengidentifikasi terdesentralisasi dan kredensial yang dapat diverifikasi untuk menerbitkan kredensial yang ditandatangani secara digital langsung ke dompet pribadi warga negara. Dengan menambatkan skema penerbit dari kredensial ini di Ethereum, sistem memastikan bahwa kredensial tersebut autentik, anti-rusak, dan dapat diverifikasi oleh pihak mana pun tanpa menanyakan kepada otoritas pusat.
 
 ## Apa itu pengesahan? {#what-are-attestations}
 
-Pengesahan adalah klaim yang dibuat oleh satu entitas tentang entitas lain. Jika Anda tinggal di Amerika Serikat, SIM yang diterbitkan untuk Anda oleh Departemen Kendaraan Bermotor (satu entitas) mengesahkan bahwa Anda (entitas lain) secara hukum diizinkan untuk mengemudikan mobil.
+Pengesahan adalah klaim yang dibuat oleh satu entitas tentang entitas lain. Jika Anda tinggal di Amerika Serikat, surat izin mengemudi yang diterbitkan untuk Anda oleh Departemen Kendaraan Bermotor (satu entitas) mengesahkan bahwa Anda (entitas lain) secara hukum diizinkan untuk mengemudikan mobil.
 
-Pengesahan berbeda dari pengidentifikasi. Sebuah pengesahan _berisi_ pengidentifikasi untuk merujuk pada identitas tertentu, dan membuat klaim tentang atribut yang terkait dengan identitas ini. Jadi, SIM Anda memiliki pengidentifikasi (nama, tanggal lahir, alamat) tetapi juga merupakan pengesahan tentang hak hukum Anda untuk mengemudi.
+Pengesahan berbeda dari pengidentifikasi. Sebuah pengesahan _berisi_ pengidentifikasi untuk merujuk pada identitas tertentu, dan membuat klaim tentang atribut yang terkait dengan identitas ini. Jadi, surat izin mengemudi Anda memiliki pengidentifikasi (nama, tanggal lahir, alamat) tetapi juga merupakan pengesahan tentang hak hukum Anda untuk mengemudi.
 
 ### Apa itu pengidentifikasi terdesentralisasi? {#what-are-decentralized-identifiers}
 
@@ -115,7 +103,7 @@ Pengidentifikasi terdesentralisasi diterbitkan, disimpan, dan dikontrol oleh ind
 
 Pengidentifikasi terdesentralisasi disimpan di buku besar terdistribusi ([blockchain](/glossary/#blockchain)) atau [jaringan peer-to-peer](/glossary/#peer-to-peer-network). Hal ini membuat DID [unik secara global, dapat diselesaikan dengan ketersediaan tinggi, dan dapat diverifikasi secara kriptografi](https://w3c-ccg.github.io/did-primer/). Pengidentifikasi terdesentralisasi dapat dikaitkan dengan berbagai entitas, termasuk orang, organisasi, atau institusi pemerintah.
 
-## Apa yang membuat pengidentifikasi terdesentralisasi menjadi mungkin? {#what-makes-decentralized-identifiers-possible}
+## Apa yang memungkinkan adanya pengidentifikasi terdesentralisasi? {#what-makes-decentralized-identifiers-possible}
 
 ### 1. Kriptografi Kunci Publik {#public-key-cryptography}
 
@@ -133,23 +121,23 @@ Jika ada yang perlu mengonfirmasi validitas pengidentifikasi terdesentralisasi, 
 
 Identitas terdesentralisasi adalah gagasan bahwa informasi terkait identitas harus dikontrol sendiri, bersifat pribadi, dan portabel, dengan pengidentifikasi dan pengesahan terdesentralisasi sebagai blok bangunan utamanya.
 
-Dalam konteks identitas terdesentralisasi, pengesahan (juga dikenal sebagai [Kredensial yang Dapat Diverifikasi](https://www.w3.org/TR/vc-data-model/)) adalah klaim anti-rusak dan dapat diverifikasi secara kriptografi yang dibuat oleh penerbit. Setiap pengesahan atau Kredensial yang Dapat Diverifikasi yang diterbitkan oleh suatu entitas (mis., organisasi) dikaitkan dengan DID mereka.
+Dalam konteks identitas terdesentralisasi, pengesahan (juga dikenal sebagai [Kredensial yang Dapat Diverifikasi](https://www.w3.org/TR/vc-data-model/)) adalah klaim yang anti-rusak dan dapat diverifikasi secara kriptografi yang dibuat oleh penerbit. Setiap pengesahan atau Kredensial yang Dapat Diverifikasi yang diterbitkan oleh suatu entitas (mis., organisasi) dikaitkan dengan DID mereka.
 
 Karena DID disimpan di blockchain, siapa pun dapat memverifikasi validitas pengesahan dengan memeriksa silang DID penerbit di Ethereum. Pada dasarnya, blockchain Ethereum bertindak seperti direktori global yang memungkinkan verifikasi DID yang terkait dengan entitas tertentu.
 
 Pengidentifikasi terdesentralisasi adalah alasan mengapa pengesahan dapat dikontrol sendiri dan diverifikasi. Bahkan jika penerbitnya sudah tidak ada lagi, pemegangnya selalu memiliki bukti asal dan validitas pengesahan tersebut.
 
-Pengidentifikasi terdesentralisasi juga sangat penting untuk melindungi privasi informasi pribadi melalui identitas terdesentralisasi. Misalnya, jika seorang individu menyerahkan bukti pengesahan (SIM), pihak yang memverifikasi tidak perlu memeriksa validitas informasi dalam bukti tersebut. Sebaliknya, pemverifikasi hanya memerlukan jaminan kriptografi atas keaslian pengesahan dan identitas organisasi penerbit untuk menentukan apakah bukti tersebut valid.
+Pengidentifikasi terdesentralisasi juga sangat penting untuk melindungi privasi informasi pribadi melalui identitas terdesentralisasi. Misalnya, jika seorang individu menyerahkan bukti pengesahan (surat izin mengemudi), pihak yang memverifikasi tidak perlu memeriksa validitas informasi dalam bukti tersebut. Sebaliknya, pemverifikasi hanya memerlukan jaminan kriptografi atas keaslian pengesahan dan identitas organisasi penerbit untuk menentukan apakah bukti tersebut valid.
 
 ## Jenis-jenis pengesahan dalam identitas terdesentralisasi {#types-of-attestations-in-decentralized-identity}
 
-Bagaimana informasi pengesahan disimpan dan diambil dalam ekosistem identitas berbasis Ethereum berbeda dari manajemen identitas tradisional. Berikut adalah gambaran umum tentang berbagai pendekatan untuk menerbitkan, menyimpan, dan memverifikasi pengesahan dalam sistem identitas terdesentralisasi:
+Cara informasi pengesahan disimpan dan diambil dalam ekosistem identitas berbasis Ethereum berbeda dari manajemen identitas tradisional. Berikut adalah gambaran umum tentang berbagai pendekatan untuk menerbitkan, menyimpan, dan memverifikasi pengesahan dalam sistem identitas terdesentralisasi:
 
 ### Pengesahan offchain {#offchain-attestations}
 
 Salah satu kekhawatiran dengan menyimpan pengesahan secara onchain adalah bahwa pengesahan tersebut mungkin berisi informasi yang ingin dirahasiakan oleh individu. Sifat publik dari blockchain Ethereum membuatnya tidak menarik untuk menyimpan pengesahan semacam itu.
 
-Solusinya adalah menerbitkan pengesahan, yang disimpan oleh pengguna secara offchain di dompet digital, tetapi ditandatangani dengan DID penerbit yang disimpan secara onchain. Pengesahan ini dikodekan sebagai [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) dan berisi tanda tangan digital penerbit—yang memungkinkan verifikasi klaim offchain dengan mudah.
+Solusinya adalah menerbitkan pengesahan, yang disimpan oleh pengguna secara offchain di dompet digital, tetapi ditandatangani dengan DID penerbit yang disimpan secara onchain. Pengesahan ini dienkode sebagai [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) dan berisi tanda tangan digital penerbit—yang memungkinkan verifikasi klaim offchain dengan mudah.
 
 Berikut adalah skenario hipotetis untuk menjelaskan pengesahan offchain:
 
@@ -159,13 +147,13 @@ Berikut adalah skenario hipotetis untuk menjelaskan pengesahan offchain:
 
 ### Pengesahan offchain dengan akses persisten {#offchain-attestations-with-persistent-access}
 
-Di bawah pengaturan ini, pengesahan diubah menjadi file JSON dan disimpan secara offchain (idealnya di platform [penyimpanan cloud terdesentralisasi](/developers/docs/storage/), seperti IPFS atau Swarm). Namun, [hash](/glossary/#hash) dari file JSON disimpan secara onchain dan ditautkan ke DID melalui registri onchain. DID terkait bisa berupa DID penerbit pengesahan atau penerimanya.
+Di bawah pengaturan ini, pengesahan diubah menjadi file JSON dan disimpan secara offchain (idealnya di platform [penyimpanan cloud terdesentralisasi](/developers/docs/storage/), seperti IPFS atau Swarm). Namun, sebuah [hash](/glossary/#hash) dari file JSON disimpan secara onchain dan ditautkan ke DID melalui registri onchain. DID yang terkait bisa berupa DID penerbit pengesahan atau penerimanya.
 
 Pendekatan ini memungkinkan pengesahan untuk mendapatkan persistensi berbasis blockchain, sambil menjaga informasi klaim tetap terenkripsi dan dapat diverifikasi. Ini juga memungkinkan pengungkapan selektif karena pemegang kunci pribadi dapat mendekripsi informasi tersebut.
 
 ### Pengesahan onchain {#onchain-attestations}
 
-Pengesahan onchain disimpan dalam [kontrak pintar](/glossary/#smart-contract) di blockchain Ethereum. Kontrak pintar (bertindak sebagai registri) akan memetakan pengesahan ke pengidentifikasi terdesentralisasi onchain yang sesuai (kunci publik).
+Pengesahan onchain disimpan dalam [kontrak pintar](/glossary/#smart-contract) di blockchain Ethereum. Kontrak pintar (bertindak sebagai registri) akan memetakan pengesahan ke pengidentifikasi terdesentralisasi onchain yang sesuai (sebuah kunci publik).
 
 Berikut adalah contoh untuk menunjukkan bagaimana pengesahan onchain mungkin bekerja dalam praktiknya:
 
@@ -177,7 +165,7 @@ Berikut adalah contoh untuk menunjukkan bagaimana pengesahan onchain mungkin bek
 
 ### Token Soulbound dan identitas {#soulbound}
 
-[Token Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([non-fungible token](/glossary/#nft) yang tidak dapat ditransfer) dapat digunakan untuk mengumpulkan informasi yang unik untuk dompet tertentu. Ini secara efektif menciptakan identitas onchain unik yang terikat pada alamat Ethereum tertentu yang dapat mencakup token yang mewakili pencapaian (mis., menyelesaikan kursus online tertentu atau melewati skor ambang batas dalam sebuah game) atau partisipasi komunitas.
+[Token Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([NFT yang tidak dapat ditransfer](/glossary/#nft)) dapat digunakan untuk mengumpulkan informasi yang unik untuk dompet tertentu. Ini secara efektif menciptakan identitas onchain unik yang terikat pada alamat Ethereum tertentu yang dapat mencakup token yang mewakili pencapaian (mis., menyelesaikan kursus online tertentu atau melewati skor ambang batas dalam sebuah game) atau partisipasi komunitas.
 
 ## Gunakan identitas terdesentralisasi {#use-decentralized-identity}
 
@@ -187,9 +175,7 @@ Ada banyak proyek ambisius yang menggunakan Ethereum sebagai fondasi untuk solus
 - **[Sign in with Ethereum (SIWE)](https://siwe.xyz/)** - _Standar terbuka untuk autentikasi dengan akun Ethereum._
 - **[SpruceID](https://www.spruceid.com/)** - _Proyek identitas terdesentralisasi yang memungkinkan pengguna untuk mengontrol identitas digital dengan akun Ethereum dan profil ENS alih-alih bergantung pada layanan pihak ketiga._
 - **[Ethereum Attestation Service (EAS)](https://attest.org/)** - _Buku besar/protokol terdesentralisasi untuk membuat pengesahan onchain atau offchain tentang apa pun._
-- **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (atau PoH) adalah sistem verifikasi identitas sosial yang dibangun di Ethereum._
-- **[BrightID](https://www.brightid.org/)** - _Jaringan identitas sosial sumber terbuka dan terdesentralisasi yang berupaya mereformasi verifikasi identitas melalui pembuatan dan analisis grafik sosial._
-- **[walt.id](https://walt.id)** — _Infrastruktur identitas dan dompet terdesentralisasi sumber terbuka yang memungkinkan pengembang dan organisasi untuk memanfaatkan identitas berdaulat sendiri dan NFT/SBT._
+- **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (atau PoH) adalah sistem verifikasi identitas sosial yang dibangun di atas Ethereum._
 - **[Veramo](https://veramo.io/)** - _Kerangka kerja JavaScript yang memudahkan siapa saja untuk menggunakan data yang dapat diverifikasi secara kriptografi dalam aplikasi mereka._
 
 ## Bacaan lebih lanjut {#further-reading}
