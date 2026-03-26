@@ -106,7 +106,7 @@ Sasa kuna itifaki kadhaa za Safu ya 2 zinazoboresha uwezo wa Ethereum kwa kutumi
 #### Usomaji wa usuli {#background-reading-2}
 
 - [Utangulizi wa safu ya 2](/layer-2/)
-- [Polynya: Rollups, DA na minyororo ya msimu](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
+- [Polynya: Rollups, DA na minyororo ya moduli](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
 
 #### Utafiti wa hivi karibuni {#recent-research-2}
 
