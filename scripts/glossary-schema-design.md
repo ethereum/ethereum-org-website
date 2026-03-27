@@ -64,23 +64,22 @@ glossary.json
   +-- version, generated, languages (metadata)
   +-- entries (keyed by stable slug ID)
        +-- Entry
-            +-- id, term, category, tier, status
+            +-- id, term, category, tier, note
             +-- aliases, related, term_family
             +-- script_rule
             +-- en (English source)
-            |    +-- term, definition, definition_short
+            |    +-- term, glossary_ref, translation_context
             |    +-- forms (morphological)
             |    +-- usage_note
             +-- translations (keyed by BCP-47 code)
                  +-- TranslationEntry
                       +-- term, transliteration
-                      +-- definition (if localized)
                       +-- script_override
                       +-- forms (translated morphological forms)
                       +-- contexts (prose/heading/tag/ui/code)
                       +-- grammar (gender/number/pos/formality)
                       +-- plurals (CLDR categories)
-                      +-- source, confidence, reviewed_by, notes
+                      +-- source, confidence, reviewed_by, notes, updated
 ```
 
 ## What This Enables

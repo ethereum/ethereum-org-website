@@ -9,9 +9,9 @@
 
     "stake": {
       "id": "stake",
-      "term": "Stake",
       "category": "consensus",
       "tier": 1,
+      "deprecated": false,
       "note": "",
       "aliases": ["staking deposit"],
       "related": ["validator", "proof-of-stake", "staking-pool", "slashing"],
@@ -154,9 +154,9 @@
 
     "gas": {
       "id": "gas",
-      "term": "Gas",
       "category": "transactions",
       "tier": 1,
+      "deprecated": false,
       "note": "",
       "aliases": [],
       "related": ["gas-fee", "gas-limit", "gas-price", "base-fee", "gwei"],
@@ -242,9 +242,9 @@
 
     "defi": {
       "id": "defi",
-      "term": "DeFi",
       "category": "defi",
       "tier": 1,
+      "deprecated": false,
       "note": "",
       "aliases": ["decentralized finance", "Decentralized Finance"],
       "related": ["dex", "liquidity", "lending", "stablecoin"],
@@ -326,9 +326,9 @@
 
     "rollup": {
       "id": "rollup",
-      "term": "Rollup",
       "category": "scaling",
       "tier": 1,
+      "deprecated": false,
       "note": "",
       "aliases": ["roll-up"],
       "related": ["optimistic-rollup", "zero-knowledge-rollup", "layer-2", "sequencer"],
@@ -412,9 +412,9 @@
 
     "validator": {
       "id": "validator",
-      "term": "Validator",
       "category": "consensus",
       "tier": 1,
+      "deprecated": false,
       "note": "",
       "aliases": [],
       "related": ["stake", "attestation", "slashing", "beacon-chain"],
@@ -443,6 +443,7 @@
       "translations": {
         "ja": {
           "term": "バリデータ",
+          "aliases": ["検証者"],
           "transliteration": "barideeta",
           "forms": {
             "base": "バリデータ",

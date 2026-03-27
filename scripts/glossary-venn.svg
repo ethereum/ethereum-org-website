@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="900" height="600" fill="#1a1a2e" rx="12"/>
+
+  <text x="450" y="40" text-anchor="middle" fill="#e0e0e0" font-size="18" font-weight="bold">Definition Glossary (/glossary) vs Translation Glossary</text>
+
+  <!-- Left circle: Definition glossary -->
+  <circle cx="320" cy="310" r="200" fill="#2d5a8e" fill-opacity="0.35" stroke="#4a9eff" stroke-width="2"/>
+
+  <!-- Right circle: Translation glossary -->
+  <circle cx="580" cy="310" r="200" fill="#8e2d5a" fill-opacity="0.35" stroke="#ff4a9e" stroke-width="2"/>
+
+  <!-- Labels -->
+  <text x="200" y="120" text-anchor="middle" fill="#4a9eff" font-size="15" font-weight="bold">Definition Glossary</text>
+  <text x="200" y="140" text-anchor="middle" fill="#7ab8ff" font-size="11">/glossary page</text>
+  <text x="200" y="158" text-anchor="middle" fill="#7ab8ff" font-size="11">User-facing definitions</text>
+  <text x="200" y="176" text-anchor="middle" fill="#7ab8ff" font-size="11">203 terms today</text>
+
+  <text x="700" y="120" text-anchor="middle" fill="#ff4a9e" font-size="15" font-weight="bold">Translation Glossary</text>
+  <text x="700" y="140" text-anchor="middle" fill="#ff7ab8" font-size="11">Translation pipeline + API</text>
+  <text x="700" y="158" text-anchor="middle" fill="#ff7ab8" font-size="11">Translator-facing guidance</text>
+  <text x="700" y="176" text-anchor="middle" fill="#ff7ab8" font-size="11">453 terms + all languages</text>
+
+  <!-- LEFT ONLY: Terms with definitions but less translation complexity -->
+  <text x="210" y="240" text-anchor="middle" fill="#c0d8f0" font-size="11" font-weight="bold">Definition-only terms</text>
+  <text x="210" y="260" text-anchor="middle" fill="#a0b8d0" font-size="10">(Educational value, low</text>
+  <text x="210" y="274" text-anchor="middle" fill="#a0b8d0" font-size="10">translation complexity)</text>
+
+  <text x="210" y="300" text-anchor="middle" fill="#e0e8f0" font-size="11">Big-endian</text>
+  <text x="210" y="318" text-anchor="middle" fill="#e0e8f0" font-size="11">Byzantium fork</text>
+  <text x="210" y="336" text-anchor="middle" fill="#e0e8f0" font-size="11">DAG</text>
+  <text x="210" y="354" text-anchor="middle" fill="#e0e8f0" font-size="11">Holographic consensus</text>
+  <text x="210" y="372" text-anchor="middle" fill="#e0e8f0" font-size="11">Constantinople fork</text>
+  <text x="210" y="390" text-anchor="middle" fill="#e0e8f0" font-size="11">Turing complete</text>
+  <text x="210" y="414" text-anchor="middle" fill="#7a98b0" font-size="9" font-style="italic">Keep as-is in most languages</text>
+
+  <!-- OVERLAP: Terms in both -->
+  <text x="450" y="220" text-anchor="middle" fill="#d0a0d0" font-size="11" font-weight="bold">Both: Definition +</text>
+  <text x="450" y="236" text-anchor="middle" fill="#d0a0d0" font-size="11" font-weight="bold">Translation guidance</text>
+  <text x="450" y="256" text-anchor="middle" fill="#b080b0" font-size="10">(linked via glossary_ref)</text>
+
+  <text x="450" y="282" text-anchor="middle" fill="#f0e0f0" font-size="11">Blockchain</text>
+  <text x="450" y="300" text-anchor="middle" fill="#f0e0f0" font-size="11">Smart contract</text>
+  <text x="450" y="318" text-anchor="middle" fill="#f0e0f0" font-size="11">Validator</text>
+  <text x="450" y="336" text-anchor="middle" fill="#f0e0f0" font-size="11">Gas</text>
+  <text x="450" y="354" text-anchor="middle" fill="#f0e0f0" font-size="11">Staking / Stake</text>
+  <text x="450" y="372" text-anchor="middle" fill="#f0e0f0" font-size="11">DeFi</text>
+  <text x="450" y="390" text-anchor="middle" fill="#f0e0f0" font-size="11">Rollup</text>
+  <text x="450" y="408" text-anchor="middle" fill="#f0e0f0" font-size="11">Wallet</text>
+  <text x="450" y="432" text-anchor="middle" fill="#9070a0" font-size="9" font-style="italic">~180 terms in overlap</text>
+
+  <!-- RIGHT ONLY: Terms needing translation guidance but not full definitions -->
+  <text x="690" y="240" text-anchor="middle" fill="#f0c0d8" font-size="11" font-weight="bold">Translation-only terms</text>
+  <text x="690" y="260" text-anchor="middle" fill="#d0a0b8" font-size="10">(Common words w/ Ethereum</text>
+  <text x="690" y="274" text-anchor="middle" fill="#d0a0b8" font-size="10">meaning, need consistency)</text>
+
+  <text x="690" y="300" text-anchor="middle" fill="#f0e0e8" font-size="11">client (software)</text>
+  <text x="690" y="318" text-anchor="middle" fill="#f0e0e8" font-size="11">state (chain state)</text>
+  <text x="690" y="336" text-anchor="middle" fill="#f0e0e8" font-size="11">exit (validator exit)</text>
+  <text x="690" y="354" text-anchor="middle" fill="#f0e0e8" font-size="11">slippage</text>
+  <text x="690" y="372" text-anchor="middle" fill="#f0e0e8" font-size="11">on-ramp / off-ramp</text>
+  <text x="690" y="390" text-anchor="middle" fill="#f0e0e8" font-size="11">vesting / cliff</text>
+  <text x="690" y="414" text-anchor="middle" fill="#b07898" font-size="9" font-style="italic">~250 terms, no /glossary entry</text>
+
+  <!-- Arrows showing the link -->
+  <line x1="450" y1="460" x2="450" y2="490" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="450" y="510" text-anchor="middle" fill="#888" font-size="10">Overlap linked via glossary_ref field</text>
+  <text x="450" y="526" text-anchor="middle" fill="#888" font-size="10">Translation glossary is the SUPERSET</text>
+  <text x="450" y="542" text-anchor="middle" fill="#888" font-size="10">/glossary page can GROW by pulling from translation glossary term list</text>
+
+  <!-- Count summary -->
+  <rect x="30" y="545" width="840" height="35" fill="#222244" rx="6"/>
+  <text x="450" y="568" text-anchor="middle" fill="#aaa" font-size="12">~23 definition-only  |  ~180 in both  |  ~250 translation-only  |  453 total in translation glossary</text>
+</svg>

@@ -42,7 +42,9 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 
 ## Phase 4: Schema Validation [IN PROGRESS]
 
-- [ ] Get Gemini review/critique of the schema
+- [x] Get Gemini review/critique of the schema
+- [x] Apply Gemini feedback: per-language aliases, remove top-level term redundancy, deprecated boolean, date-time consistency
+- [x] Tabled: Slavic case declensions (handle via notes for now, revisit during pilot)
 - [ ] Pilot batch: ~10-15 terms fully translated into 3-4 diverse languages (ja, ar, fr, + Indic)
 - [ ] Validate schema handles all edge cases from the pilot
 - [ ] Iterate on schema if needed
@@ -111,3 +113,9 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 | 2026-03-27 | Simple `note` field for lifecycle, no formal status | "Mining" is still active in broader crypto; blanket "deprecated" too rigid |
 | 2026-03-27 | Import community as seed, Gemini as primary | Community signal valuable but low-vote data not reliable enough to override |
 | 2026-03-27 | English-only translator context | Translators already read English; localized definitions out of scope |
+| 2026-03-27 | Per-language aliases in TranslationEntry | JP/CN may have multiple valid translations (katakana vs kanji, etc.) |
+| 2026-03-27 | Remove top-level Entry.term, use en.term | Avoids desync; en.term is the source of truth |
+| 2026-03-27 | Add deprecated boolean + note | Machine-filterable flag; note provides human context |
+| 2026-03-27 | Slavic cases deferred to notes | Full case declension tables would explode data; handle via inflection notes |
+| 2026-03-27 | Split per-language JSONs for delivery | Master file stays whole; build generates glossary-{lang}.json for API/frontend |
+| 2026-03-27 | Definition/translation glossary overlap tabled | Doc notes both sides could benefit from the other's terms; discuss later |

@@ -37,16 +37,12 @@
     "Entry": {
       "type": "object",
       "description": "A single concept entry. Represents one Ethereum concept with all its forms and translations.",
-      "required": ["id", "term", "category", "en"],
+      "required": ["id", "category", "en"],
       "properties": {
         "id": {
           "type": "string",
           "description": "Stable slug identifier. Kebab-case, immutable once assigned. Must match the key in the entries object.",
           "pattern": "^[a-z0-9][a-z0-9-]*[a-z0-9]$"
-        },
-        "term": {
-          "type": "string",
-          "description": "Canonical English display form (e.g., 'Proof-of-stake (PoS)')"
         },
         "category": {
           "type": "string",
@@ -73,6 +69,11 @@
           "type": "integer",
           "description": "Priority tier for translation. 1=core (translate first), 2=important, 3=specialist",
           "enum": [1, 2, 3]
+        },
+        "deprecated": {
+          "type": "boolean",
+          "description": "Whether this term is a legacy/retired term in the Ethereum ecosystem. Use alongside 'note' for context (e.g., preferred replacement). Deprecated terms still need translations for historical content.",
+          "default": false
         },
         "note": {
           "type": "string",
@@ -155,6 +156,11 @@
           "type": "string",
           "description": "Primary/canonical translation of the term"
         },
+        "aliases": {
+          "type": "array",
+          "description": "Alternative valid translations in this language. E.g., Japanese may have both katakana and kanji forms. First item is preferred if multiple exist.",
+          "items": { "type": "string" }
+        },
         "transliteration": {
           "type": "string",
           "description": "Latin-script phonetic rendering (e.g., 'suteeku' for Japanese). Only for non-Latin scripts."
@@ -211,8 +217,8 @@
         },
         "updated": {
           "type": "string",
-          "format": "date",
-          "description": "Date this translation was last updated"
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of when this translation was last updated"
         }
       }
     },
