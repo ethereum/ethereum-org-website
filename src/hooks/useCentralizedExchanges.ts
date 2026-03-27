@@ -45,11 +45,11 @@ import matrixport from "@/public/images/exchanges/matrixport.png"
 import moonpay from "@/public/images/exchanges/moonpay.png"
 import mtpelerin from "@/public/images/exchanges/mtpelerin.png"
 import okx from "@/public/images/exchanges/okx.png"
+import peer from "@/public/images/exchanges/peer.png"
 import rain from "@/public/images/exchanges/rain.png"
 import shakepay from "@/public/images/exchanges/shakepay.png"
 import wazirx from "@/public/images/exchanges/wazirx.png"
 import zebpay from "@/public/images/exchanges/zebpay.png"
-import peer from "@/public/images/exchanges/peer.png"
 
 type ExchangeKey =
   | "binance"
