@@ -11,6 +11,7 @@ tags:
     "taklit etme"
   ]
 skill: intermediate
+breadcrumb: "Sözleşme mocklama"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

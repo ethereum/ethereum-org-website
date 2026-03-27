@@ -4,6 +4,7 @@ description: Kuhakikisha uadilifu wa data onchain kwa data ambayo imehifadhiwa, 
 author: Ori Pomerantz
 tags: ["storage"]
 skill: advanced
+breadcrumb: "Uthibitisho wa Merkle"
 lang: sw
 published: 2021-12-30
 ---

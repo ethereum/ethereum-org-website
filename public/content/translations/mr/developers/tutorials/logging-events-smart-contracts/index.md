@@ -10,6 +10,7 @@ tags:
     "इव्हेंट्स"
   ]
 skill: intermediate
+breadcrumb: "इव्हेंट लॉगिंग"
 lang: mr
 published: 2020-04-03
 source: EthereumDev

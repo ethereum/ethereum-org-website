@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: id
 tags: ["Solidity", "kontrak pintar", "keamanan", "pengujian", "fuzzing"]
 skill: advanced
+breadcrumb: "Echidna"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

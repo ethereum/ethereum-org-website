@@ -4,6 +4,7 @@ description: "Configurez la surveillance de votre nœud Geth avec InfluxDB et Gr
 author: "Mario Havel"
 tags: [ "clients", "nœuds" ]
 skill: intermediate
+breadcrumb: "Surveiller Geth"
 lang: fr
 published: 2021-01-13
 ---

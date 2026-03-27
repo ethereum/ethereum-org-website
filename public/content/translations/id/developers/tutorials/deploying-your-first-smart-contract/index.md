@@ -4,6 +4,7 @@ description: Pengenalan tentang cara menerapkan kontrak pintar pertama Anda di t
 author: "jdourlens"
 tags: ["kontrak pintar", "Remix", "Solidity", "menerapkan"]
 skill: beginner
+breadcrumb: "Deploy kontrak pertama"
 lang: id
 published: 2020-04-03
 source: EthereumDev

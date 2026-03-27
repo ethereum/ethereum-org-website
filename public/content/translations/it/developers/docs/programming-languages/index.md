@@ -1,21 +1,22 @@
 ---
 title: Linguaggi di programmazione
-description:
+description: Scopri le risorse di sviluppo di Ethereum per vari linguaggi di programmazione, tra cui JavaScript, Python, Go, Rust e altri.
 lang: it
 ---
 
-Spesso, si crede erroneamente che gli sviluppatori debbano scrivere i [contratti intelligenti](/developers/docs/smart-contracts/) per poter sviluppare su Ethereum. Non è vero. Uno degli aspetti positivi della rete e della community Ethereum è che si può [partecipare](/community/) usando praticamente qualsiasi linguaggio di programmazione.
+Un malinteso comune è che gli sviluppatori debbano scrivere [contratti intelligenti](/developers/docs/smart-contracts/) per poter sviluppare su Ethereum. Questo è falso.
+Una delle bellezze della rete e della community di Ethereum è che puoi [partecipare](/community/) in quasi tutti i linguaggi di programmazione.
 
-Ethereum e la sua community adottano l'open source. È possibile trovare progetti della community, cioè implementazioni di client, API, framework di sviluppo, strumenti di test, in un'ampia gamma di linguaggi.
+Ethereum e la sua community abbracciano l'open source. Puoi trovare progetti della community - implementazioni di client, API, framework di sviluppo, strumenti di test - in un'ampia varietà di linguaggi.
 
-## Scegli il linguaggio che preferisci {#data}
+## Scegli il tuo linguaggio {#data}
 
-Seleziona il linguaggio di programmazione che preferisci per trovare progetti, risorse e community virtuali:
+Seleziona il tuo linguaggio di programmazione preferito per trovare progetti, risorse e community virtuali:
 
 - [Ethereum per sviluppatori Dart](/developers/docs/programming-languages/dart/)
 - [Ethereum per sviluppatori Delphi](/developers/docs/programming-languages/delphi/)
 - [Ethereum per sviluppatori .NET](/developers/docs/programming-languages/dot-net/)
-- [Ethereum per gli sviluppatori Elixir](/developers/docs/programming-languages/elixir/)
+- [Ethereum per sviluppatori Elixir](/developers/docs/programming-languages/elixir/)
 - [Ethereum per sviluppatori Go](/developers/docs/programming-languages/golang/)
 - [Ethereum per sviluppatori Java](/developers/docs/programming-languages/java/)
 - [Ethereum per sviluppatori JavaScript](/developers/docs/programming-languages/javascript/)
@@ -23,8 +24,8 @@ Seleziona il linguaggio di programmazione che preferisci per trovare progetti, r
 - [Ethereum per sviluppatori Ruby](/developers/docs/programming-languages/ruby/)
 - [Ethereum per sviluppatori Rust](/developers/docs/programming-languages/rust/)
 
-### Cosa succede se il mio linguaggio non è supportato {#other-lang}
+### E se il mio linguaggio non fosse supportato? {#other-lang}
 
-Se vuoi collegarti alle risorse o puntare a una community virtuale per un linguaggio di programmazione aggiuntivo, puoi richiedere una nuova pagina [aprendo una segnalazione](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+Se desideri collegare risorse o indicare una community virtuale per un linguaggio di programmazione aggiuntivo, puoi richiedere una nuova pagina [aprendo una issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-Se vuoi solo scrivere il codice sull'interfaccia con la blockchain usando un linguaggio attualmente non supportato, puoi usare l'[interfaccia JSON-RPC](/developers/docs/apis/json-rpc/) per connetterti alla rete di Ethereum. Ogni linguaggio di programmazione che può usare TCP/IP può usare quest'interfaccia.
+Se vuoi solo scrivere codice per interfacciarti con la blockchain usando un linguaggio attualmente non supportato, puoi usare l'[interfaccia JSON-RPC](/developers/docs/apis/json-rpc/) per connetterti alla rete di Ethereum. Qualsiasi linguaggio di programmazione in grado di usare TCP/IP può usare questa interfaccia.

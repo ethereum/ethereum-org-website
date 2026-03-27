@@ -13,6 +13,7 @@ tags:
     "testování"
   ]
 skill: intermediate
+breadcrumb: "Multi-klient testnet"
 lang: cs
 published: 2023-04-11
 ---

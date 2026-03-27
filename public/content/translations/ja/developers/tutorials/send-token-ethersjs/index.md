@@ -4,6 +4,7 @@ description: "ethers.jsを使用してトークンを送信するための初心
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "トークン" ]
 skill: beginner
+breadcrumb: "トークン送信"
 lang: ja
 published: 2021-04-06
 ---

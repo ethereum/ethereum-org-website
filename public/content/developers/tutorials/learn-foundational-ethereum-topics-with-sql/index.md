@@ -4,6 +4,7 @@ description: This tutorial helps readers understand fundamental Ethereum concept
 author: "Paul Apivat"
 tags: ["SQL", "Querying", "Transactions", "data-and-analytics"]
 skill: beginner
+breadcrumb: Ethereum with SQL
 lang: en
 published: 2021-05-11
 source: paulapivat.com

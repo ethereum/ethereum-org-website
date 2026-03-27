@@ -4,6 +4,7 @@ description: Tutorial ini menjelaskan cara melihat NFT yang ada di MetaMask!
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner
+breadcrumb: "Lihat NFT di dompet"
 lang: id
 published: 2021-04-22
 ---

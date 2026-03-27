@@ -10,6 +10,7 @@ tags:
     "privacidade"
   ]
 skill: advanced
+breadcrumb: "Plasma para apps"
 lang: pt-br
 published: 2025-10-15
 ---

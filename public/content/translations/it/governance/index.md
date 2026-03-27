@@ -1,36 +1,36 @@
 ---
-title: La governance di Ethereum
+title: Governance di Ethereum
 description: Un'introduzione a come vengono prese le decisioni su Ethereum.
 lang: it
 ---
 
 # Introduzione alla governance di Ethereum {#introduction}
 
-_Se nessuno possiede Ethereum, come vengono prese le decisioni sui cambiamenti passati e futuri? La governance di Ethereum si riferisce al processo che consente di prendere tali decisioni._
+_Se nessuno possiede [Ethereum](/), come vengono prese le decisioni sui cambiamenti passati e futuri di Ethereum? La governance di Ethereum si riferisce al processo che consente di prendere tali decisioni._
 
 <Divider />
 
-## Che cos'è la governance? {#what-is-governance}
+## Cos'è la governance? {#what-is-governance}
 
-La governance è il sistema in atto che consente di prendere decisioni. In una struttura organizzativa tipica, il team esecutivo o un consiglio di amministrazione può avere l'ultima parola nel processo decisionale. Oppure gli azionisti votano le proposte per attuare eventuali cambiamenti. In un sistema politico, i funzionari eletti possono emanare leggi che cercano di rappresentare i desideri degli elettori.
+La governance è l'insieme dei sistemi in atto che consentono di prendere decisioni. In una tipica struttura organizzativa, il team esecutivo o un consiglio di amministrazione potrebbero avere l'ultima parola nel processo decisionale. O forse gli azionisti votano su proposte per attuare un cambiamento. In un sistema politico, i funzionari eletti possono promulgare leggi che tentano di rappresentare i desideri dei loro elettori.
 
 ## Governance decentralizzata {#decentralized-governance}
 
-Nessuna persona possiede o controlla il protocollo Ethereum, ma è comunque necessario prendere decisioni sull'implementazione delle modifiche per garantire al meglio la longevità e la prosperità della rete. Questa mancanza di proprietà rende la governance organizzativa tradizionale una soluzione incompatibile.
+Nessuna singola persona possiede o controlla il protocollo di Ethereum, ma è comunque necessario prendere decisioni sull'implementazione di modifiche per garantire al meglio la longevità e la prosperità della rete. Questa mancanza di proprietà rende la governance organizzativa tradizionale una soluzione incompatibile.
 
-## La governance di Ethereum {#ethereum-governance}
+## Governance di Ethereum {#ethereum-governance}
 
-La governance di Ethereum è il processo attraverso il quale vengono apportate modifiche al protocollo. È importante sottolineare che questo processo non ha a che fare con il modo in cui le persone e le applicazioni utilizzano il protocollo, infatti Ethereum è senza autorizzazioni. Chiunque da qualsiasi parte del mondo può partecipare ad attività on-chain. Non ci sono regole fisse su chi può o non può creare un'applicazione o inviare una transazione. Tuttavia, esiste un processo per proporre modifiche al protocollo principale, su cui vengono eseguite queste applicazioni. Poiché molte persone dipendono dalla stabilità di Ethereum, esiste una soglia di coordinamento davvero elevata per i cambiamenti principali, inclusi i processi sociali e tecnici, per garantire che ogni modifica a Ethereum sia sicura e ampiamente supportata dalla community.
+La governance di Ethereum è il processo attraverso il quale vengono apportate modifiche al protocollo. È importante sottolineare che questo processo non è correlato a come le persone e le applicazioni utilizzano il protocollo: Ethereum è senza permessi. Chiunque, da qualsiasi parte del mondo, può partecipare alle attività on-chain. Non ci sono regole stabilite su chi può o non può creare un'applicazione o inviare una transazione. Tuttavia, esiste un processo per proporre modifiche al protocollo principale, su cui vengono eseguite le applicazioni decentralizzate. Poiché così tante persone dipendono dalla stabilità di Ethereum, esiste una soglia di coordinamento molto alta per le modifiche principali, che include processi sociali e tecnici, per garantire che qualsiasi modifica a Ethereum sia sicura e ampiamente supportata dalla community.
 
-### Governance on-chain e off-chain {#on-chain-vs-off-chain}
+### Governance on-chain vs fuori catena {#onchain-vs-offchain}
 
-La tecnologia blockchain rende possibili nuove modalità di governance, conosciute come governance on-chain. Per governance on-chain si intende che le proposte di modifica al protocollo sono decise tramite il voto degli stakeholder, che in genere detengono un governance token, e la votazione avviene sulla blockchain. In alcune forme di governance on-chain, le modifiche proposte al protocollo sono già scritte nel codice e vengono implementate automaticamente nel caso in cui vengano approvate dagli stakeholder tramite la sottoscrizione di una transazione.
+La tecnologia blockchain consente nuove capacità di governance, note come governance on-chain. La governance on-chain si ha quando le modifiche proposte al protocollo vengono decise dal voto degli stakeholder, di solito dai detentori di un token di governance, e la votazione avviene sulla blockchain. Con alcune forme di governance on-chain, le modifiche proposte al protocollo sono già scritte nel codice e implementate automaticamente se gli stakeholder approvano le modifiche firmando una transazione.
 
-Con governance off-chain si intende invece l'approccio opposto, ovvero quando le decisioni di modifica al protocollo passano attraverso un processo informale di discussione e, se approvate, vengono implementate nel codice.
+L'approccio opposto, la governance fuori catena, è quello in cui qualsiasi decisione di modifica del protocollo avviene attraverso un processo informale di discussione sociale che, se approvato, verrebbe implementato nel codice.
 
-**La governance di Ethereum viene gestita off-chain**, con una grande varietà di stakeholder coinvolti nel processo.
+**La governance di Ethereum avviene fuori catena** con un'ampia varietà di stakeholder coinvolti nel processo.
 
-_Mentre a livello di protocollo Ethereum la governance è gestita off-chain, molti casi d'uso costruiti su Ethereum, come le DAO, utilizzano una governance on-chain._
+_Mentre a livello di protocollo la governance di Ethereum è fuori catena, molti casi d'uso costruiti su Ethereum, come le DAO, utilizzano la governance on-chain._
 
 <ButtonLink href="/dao/">
   Maggiori informazioni sulle DAO
@@ -40,23 +40,23 @@ _Mentre a livello di protocollo Ethereum la governance è gestita off-chain, mol
 
 ## Chi è coinvolto? {#who-is-involved}
 
-Ci sono diversi stakeholder nella [ community Ethereum](/community/), ognuno dei quali svolge il proprio ruolo nel processo di governance. Partendo dagli stakeholder più "lontani" dal protocollo per arrivare a quelli più vicini, abbiamo:
+Ci sono vari stakeholder nella [community di Ethereum](/community/), ognuno dei quali svolge un ruolo nel processo di governance. Partendo dagli stakeholder più lontani dal protocollo e avvicinandoci, abbiamo:
 
-- **Detentori di Ether**: persone che detengono una quantità arbitraria di ETH. [Maggiori informazioni su ETH](/what-is-ether/).
-- **Utenti delle applicazioni**: queste persone interagiscono con le applicazioni sulla blockchain Ethereum.
-- **Sviluppatori di applicazioni/strumenti**: queste persone scrivono applicazioni che vengono eseguite sulla blockchain Ethereum (ad esempio DeFi, NFT, ecc.) o sviluppano strumenti per interagire con Ethereum (ad esempio wallet, suite di test, ecc.). [Di più sulle dapp](/apps/).
-- **Gestori di nodi**: queste persone eseguono nodi che propagano blocchi e transazioni, rifiutando eventuali transazioni o blocchi invalidi che intercettano. [Maggiori informazioni sui nodi](/developers/docs/nodes-and-clients/).
-- **Autori EIP**: queste persone propongono modifiche al protocollo Ethereum, sotto forma di Ethereum Improvement Proposal (EIP). [Maggiori informazioni sulle EIP](/eips/).
-- **Validatori**: queste persone eseguono nodi che possono aggiungere nuovi blocchi alla blockchain Ethereum.
-- **Sviluppatori del protocollo** (o "Sviluppatori core"): coloro che mantengono le varie implementazioni di Ethereum (ad es. go-ethereum, Nethermind, Besu, Erigon, Reth al livello di esecuzione, o Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine al livello di consenso). [Maggiori informazioni sui client di Ethereum](/developers/docs/nodes-and-clients/).
+- **Detentori di Ether**: queste persone detengono una quantità arbitraria di ETH. [Maggiori informazioni su ETH](/what-is-ether/).
+- **Utenti delle applicazioni**: queste persone interagiscono con le applicazioni sulla blockchain di Ethereum.
+- **Sviluppatori di applicazioni/strumenti**: queste persone scrivono applicazioni che vengono eseguite sulla blockchain di Ethereum (es. DeFi, NFT, ecc.) o creano strumenti per interagire con Ethereum (es. portafogli, suite di test, ecc.). [Maggiori informazioni sulle dApp](/apps/).
+- **Operatori dei nodi**: queste persone gestiscono i nodi che propagano blocchi e transazioni, rifiutando qualsiasi transazione o blocco non valido in cui si imbattono. [Maggiori informazioni sui nodi](/developers/docs/nodes-and-clients/).
+- **Autori di EIP**: queste persone propongono modifiche al protocollo di Ethereum, sotto forma di proposte di miglioramento di ethereum (EIP). [Maggiori informazioni sulle EIP](/eips/).
+- **Validatori**: queste persone gestiscono nodi che possono aggiungere nuovi blocchi alla blockchain di Ethereum.
+- **Sviluppatori del protocollo** (noti anche come "Core Developer"): queste persone mantengono le varie implementazioni di Ethereum (es. go-ethereum, Nethermind, Besu, Erigon, Reth al livello di esecuzione o Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine al livello di consenso). [Maggiori informazioni sui client di Ethereum](/developers/docs/nodes-and-clients/).
 
-_Nota: chiunque può far parte di più gruppi (ad esempio uno sviluppatore di protocollo può sostenere un EIP, essere validatore sulla beacon chain e usare applicazioni DeFi). Tuttavia, per chiarezza concettuale risulta più facile distinguerli._
+_Nota: qualsiasi individuo può far parte di più di questi gruppi (es. uno sviluppatore del protocollo potrebbe sostenere una EIP, gestire un validatore della beacon chain e utilizzare applicazioni DeFi). Per chiarezza concettuale, tuttavia, è più semplice distinguerli._
 
 <Divider />
 
 ## Cos'è una EIP? {#what-is-an-eip}
 
-Un processo importante usato nella governance di Ethereum è la proposta di miglioramento di Ethereum **(Ethereum Improvement Proposal, EIP)**. Le EIP costituiscono lo standard per potenziali nuove funzioni o processi di Ethereum. Chiunque nella community Ethereum può creare un'EIP. Se sei interessata/o a scrivere un’EIP o a partecipare alla revisione tra colleghi e/o alla governance, vedi:
+Un processo importante utilizzato nella governance di Ethereum è la presentazione delle **proposte di miglioramento di ethereum (EIP)**. Le EIP sono standard che specificano potenziali nuove funzionalità o processi per Ethereum. Chiunque all'interno della community di Ethereum può creare una EIP. Se sei interessato a scrivere una EIP o a partecipare alla revisione paritaria e/o alla governance, consulta:
 
 <ButtonLink href="/eips/">
   Maggiori informazioni sulle EIP
@@ -66,117 +66,119 @@ Un processo importante usato nella governance di Ethereum è la proposta di migl
 
 ## Il processo formale {#formal-process}
 
-Il processo formale per l'introduzione di modifiche al protocollo Ethereum è il seguente:
+Il processo formale per introdurre modifiche al protocollo di Ethereum è il seguente:
 
-1. **Proposta di una EIP principale**: come spiegato in [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), il primo step per proporre formalmente una modifica a Ethereum consiste nell'indicare i dettagli in una EIP principale. Questa fungerà da specifica ufficiale per una EIP the gli sviluppatori del protocollo implementeranno nel caso venga accettata.
+1. **Proporre una Core EIP**: come descritto nella [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), il primo passo per proporre formalmente una modifica a Ethereum è dettagliarla in una Core EIP. Questa fungerà da specifica ufficiale per una EIP che gli sviluppatori del protocollo implementeranno se accettata.
 
-2. **Presenta la tua EIP agli sviluppatori del protocollo**: una volta elaborata una EIP principale per la quale hai raccolto gli input della community, dovrai presentarla agli sviluppatori del protocollo. Puoi farlo proponendola per la discussione attraverso una [AllCoreDevs call](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Alcune discussioni potrebbero essere già state intraprese in passato sul [forum di Ethereum Magician](https://ethereum-magicians.org/) o sul [canale Discord Ethereum R&D](https://discord.gg/mncqtgVSVw).
+2. **Presentare la tua EIP agli sviluppatori del protocollo**: una volta che hai una Core EIP per la quale hai raccolto i feedback della community, dovresti presentarla agli sviluppatori del protocollo. Puoi farlo proponendola per la discussione in una [chiamata AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). È probabile che alcune discussioni siano già avvenute in modo asincrono sul [forum di Ethereum Magicians](https://ethereum-magicians.org/) o nel [Discord di R&S di Ethereum](https://discord.gg/mncqtgVSVw).
 
-> I possibili risultati di questa fase sono:
+> I potenziali risultati di questa fase sono:
 
-> - L'EIP verrà presa in considerazione per un upgrade futuro del network
-> - Saranno richieste modifiche tecniche
-> - Potrebbe essere rifiutata se non viene considerata una priorità o se il miglioramento non giustifica lo sforzo di sviluppo
+> - La EIP sarà presa in considerazione per un futuro aggiornamento della rete
+> - Verranno richieste modifiche tecniche
+> - Potrebbe essere rifiutata se non è una priorità o se il miglioramento non è abbastanza grande rispetto allo sforzo di sviluppo
 
-3. **Iterazione verso una proposta finale:** dopo aver ricevuto il feedback di tutti gli stakeholder interessati, potresti dover fare alcune variazioni alla tua proposta iniziale per migliorarne la sicurezza o per far sì che soddisfi le esigenze di vari utenti. Una volta che la tua EIP incorporerà tutte le modifiche ritenute necessarie, dovrai presentarla di nuovo agli sviluppatori del protocollo. Dovrai quindi passare alla fase successiva del processo; se invece emergeranno nuovi dubbi, occorrerà un nuovo round di iterazione della proposta.
+3. **Iterare verso una proposta finale:** dopo aver ricevuto feedback da tutti gli stakeholder rilevanti, probabilmente dovrai apportare modifiche alla tua proposta iniziale per migliorarne la sicurezza o soddisfare meglio le esigenze dei vari utenti. Una volta che la tua EIP avrà incorporato tutte le modifiche che ritieni necessarie, dovrai presentarla nuovamente agli sviluppatori del protocollo. Passerai quindi alla fase successiva di questo processo, oppure emergeranno nuove preoccupazioni, che richiederanno un altro ciclo di iterazioni sulla tua proposta.
 
-4. **Inclusione dell'EIP nell'aggiornamento della rete**: supponendo che venga approvata, testata e implementata, l'EIP verrà inserita in un programma di aggiornamento della rete. Considerati gli elevati costi di coordinamento (tutti devono procedere all'upgrade della rete contemporaneamente), in genere le EIP vengono raggruppate in un aggiornamento polivalente.
+4. **EIP inclusa nell'aggiornamento della rete**: supponendo che la EIP venga approvata, testata e implementata, viene programmata come parte di un aggiornamento della rete. Dati gli elevati costi di coordinamento degli aggiornamenti della rete (tutti devono aggiornare contemporaneamente), le EIP vengono generalmente raggruppate negli aggiornamenti.
 
-5. **Attivazione dell'aggiornamento della rete**: una volta attivato l'upgrade, l'EIP sarà attiva sulla rete Ethereum. _Nota: spesso gli upgrade vengono attivati su reti di prova prima di essere essere attivati sulla rete principale di Ethereum_
+5. **Aggiornamento della rete attivato**: dopo l'attivazione dell'aggiornamento della rete, la EIP sarà attiva sulla rete Ethereum. _Nota: gli aggiornamenti della rete vengono solitamente attivati sulle reti di test prima di essere attivati sulla rete principale di Ethereum._
 
-Benché molto semplificato, questo flusso può dare un'idea delle fasi principali necessarie per l'implementazione di una modifica su Ethereum. Ora diamo un'occhiata ai fattori informali che entrano in gioco durante il processo.
+Questo flusso, sebbene molto semplificato, fornisce una panoramica delle fasi significative affinché una modifica del protocollo venga attivata su Ethereum. Ora, diamo un'occhiata ai fattori informali in gioco durante questo processo.
 
 ## Il processo informale {#informal-process}
 
-### Comprendere il lavoro fatto in precedenza {#prior-work}
+### Comprendere il lavoro precedente {#prior-work}
 
-Gli EIP Champion dovrebbero familiarizzare con il lavoro e le proposte fatte in precedenza prima di creare una EIP che possa essere considerata seriamente per il rilascio sulla rete principale di Ethereum. In questo modo, si spera che l'EIP possa portare qualcosa di nuovo, che non sia già stato rifiutato in precedenza. Le tre principali fonti di informazioni a questo proposito sono [l'EIP repository](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) ed [ethresear.ch](https://ethresear.ch/).
+I sostenitori delle EIP dovrebbero familiarizzare con i lavori e le proposte precedenti prima di creare una EIP che possa essere seriamente presa in considerazione per la distribuzione sulla rete principale di Ethereum. In questo modo, si spera che la EIP porti qualcosa di nuovo che non sia stato rifiutato in precedenza. I tre luoghi principali in cui fare ricerca al riguardo sono il [repository delle EIP](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) ed [ethresear.ch](https://ethresear.ch/).
 
 ### Gruppi di lavoro {#working-groups}
 
-La bozza iniziale di una EIP difficilmente verrà implementata sulla rete principale di Ethereum senza modifiche o variazioni. Generalmente, l'EIP Champion lavorerà con un sottoinsieme di sviluppatori del protocollo per specificare, implementare, testare, iterare e finalizzare la proposta. Storicamente, questi gruppi impiegano diversi mesi (a volte persino anni!) di lavoro. Allo stesso modo, gli EIP Champion coinvolti in queste modifiche dovrebbero includere sviluppatori di app/tool sin dall'inizio per ottenere un feedback dall'utente finale e mitigare i potenziali rischi connessi al rilascio.
+È improbabile che la bozza iniziale di una EIP venga implementata sulla rete principale di Ethereum senza modifiche o cambiamenti. In genere, i sostenitori delle EIP lavoreranno con un sottoinsieme di sviluppatori del protocollo per specificare, implementare, testare, iterare e finalizzare la loro proposta. Storicamente, questi gruppi di lavoro hanno richiesto diversi mesi (e a volte anni!) di lavoro. Allo stesso modo, i sostenitori delle EIP per tali modifiche dovrebbero coinvolgere tempestivamente gli sviluppatori di applicazioni/strumenti pertinenti nei loro sforzi per raccogliere i feedback degli utenti finali e mitigare eventuali rischi di distribuzione.
 
 ### Consenso della community {#community-consensus}
 
-Mentre alcune EIP sono semplici miglioramenti tecnici con sfumature minime, altre sono più complesse e implicano compromessi che influenzeranno diverse parti interessate, in modi differenti. Questo significa che alcune EIP finiscono per essere più discusse nella community rispetto ad altre.
+Mentre alcune EIP sono semplici miglioramenti tecnici con sfumature minime, altre sono più complesse e comportano compromessi che influenzeranno i diversi stakeholder in modi diversi. Ciò significa che alcune EIP sono più controverse all'interno della community rispetto ad altre.
 
-Non c'è una modalità definita su come gestire le proposte controverse. Questo è il risultato del design decentralizzato di Ethereum in cui nessun singolo gruppo di stakeholder può costringere l'altro attraverso la forza bruta: gli sviluppatori di protocollo possono scegliere di non implementare modifiche di codice; gli operatori dei nodi possono scegliere di non eseguire l'ultimo client Ethereum; i team di applicazioni e gli utenti possono scegliere di non effettuare transazioni sulla catena. Dato che gli sviluppatori del protocollo non hanno modo di forzare le persone ad adottare gli upgrade, evitano generalmente di implementare le EIP per le quali le discussioni superano i benefici per l'intera community.
+Non esiste un manuale chiaro su come gestire le proposte controverse. Questo è il risultato del design decentralizzato di Ethereum, in base al quale nessun singolo gruppo di stakeholder può costringere l'altro con la forza bruta: gli sviluppatori del protocollo possono scegliere di non implementare le modifiche al codice; gli operatori dei nodi possono scegliere di non eseguire l'ultimo client di Ethereum; i team delle applicazioni e gli utenti possono scegliere di non effettuare transazioni sulla catena. Poiché gli sviluppatori del protocollo non hanno modo di costringere le persone ad adottare gli aggiornamenti della rete, in genere eviteranno di implementare EIP in cui la controversia supera i vantaggi per la community più ampia.
 
-Gli EIP Champion dovrebbero sollecitare i feedback da tutti gli stakeholder interessati. Se ti ritrovi ad essere un EIP Champion di un'EIP controversa, dovresti provare a rispondere alle obiezioni cercando di raggiungere un consenso. Date le dimensioni e la diversità della community di Ethereum, non vi sono singoli parametri (es. un voto con moneta) utilizzabili per misurare il consenso della community e gli EIP Champion dovrebbero adattarsi alle circostanze della proposta.
+Ci si aspetta che i sostenitori delle EIP sollecitino feedback da tutti gli stakeholder rilevanti. Se ti ritrovi a essere il sostenitore di una EIP controversa, dovresti cercare di affrontare le obiezioni per creare consenso attorno alla tua EIP. Date le dimensioni e la diversità della community di Ethereum, non esiste una singola metrica (es. un voto basato sulle monete) che possa essere utilizzata per valutare il consenso della community, e ci si aspetta che i sostenitori delle EIP si adattino alle circostanze della loro proposta.
 
-Al di là della sicurezza della rete di Ethereum, storicamente gli sviluppatori del protocollo attribuiscono un peso significativo agli aspetti che hanno valore per gli sviluppatori di app/tool e gli utenti dell'applicazione, dato che il loro utilizzo e sviluppo su Ethereum è ciò che rende l'ecosistema interessante per gli altri stakeholder. Inoltre, le EIP devono essere implementate per tutte le implementazioni del client, gestite da team distinti. Parte di questo processo significa solitamente convincere più team di Sviluppatori del Protocollo che una modifica particolare sia preziosa e aiuti gli utenti finali o risolva un problema di sicurezza.
+Oltre alla sicurezza della rete Ethereum, storicamente gli sviluppatori del protocollo hanno attribuito un peso significativo a ciò che gli sviluppatori di applicazioni/strumenti e gli utenti delle applicazioni apprezzano, dato che il loro utilizzo e sviluppo su Ethereum è ciò che rende l'ecosistema attraente per gli altri stakeholder. Inoltre, le EIP devono essere implementate in tutte le implementazioni dei client, che sono gestite da team distinti. Parte di questo processo di solito significa convincere più team di sviluppatori del protocollo che una particolare modifica è preziosa e che aiuta gli utenti finali o risolve un problema di sicurezza.
 
 <Divider />
 
-## Gestire le idee contrastanti {#disagreements}
+## Gestire i disaccordi {#disagreements}
 
-Avere molte parti interessate con motivazioni e convinzioni diverse si traduce in frequenti disaccordi.
+Avere molti stakeholder con motivazioni e convinzioni diverse significa che i disaccordi non sono rari.
 
-In genere le controversie sono gestite mediante discussioni approfondite nei forum pubblici, per comprendere la radice del problema e consentire a chiunque di soppesarlo. Solitamente un gruppo cede oppure viene raggiunto un accordo soddisfacente. Può però accadere che un gruppo arrivi a forzare un particolare cambiamento, con il rischio di una divisione della catena. Una divisione della catena si verifica quando alcuni stakeholder protestano, implementando una modifica del protocollo che si traduce in versioni differenti e incompatibili del protocollo operativo, da cui emergono due blockchain distinte.
+In genere, i disaccordi vengono gestiti con lunghe discussioni nei forum pubblici per comprendere la radice del problema e consentire a chiunque di intervenire. Di solito, un gruppo cede o si raggiunge un felice compromesso. Se un gruppo è abbastanza convinto, forzare una particolare modifica potrebbe provocare una divisione della catena. Una divisione della catena si verifica quando alcuni stakeholder protestano contro l'implementazione di una modifica del protocollo, con il risultato che operano versioni diverse e incompatibili del protocollo, da cui emergono due blockchain distinte.
 
-### La diramazione DAO {#dao-fork}
+### La biforcazione della DAO {#dao-fork}
 
-Le diramazioni si verificano quando occorre eseguire aggiornamenti tecnici o modifiche importanti alla rete, tali da cambiare le "regole" del protocollo. I [client di Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software e implementare le regole della nuova diramazione.
+Le biforcazioni si verificano quando è necessario apportare importanti aggiornamenti tecnici o modifiche alla rete e cambiare le "regole" del protocollo. I [client di Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il loro software per implementare le nuove regole della biforcazione.
 
-La diramazione DAO arrivò in risposta all'[attacco alla DAO del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack), durante il quale un contratto [DAO](/glossary/#dao) non sicuro fu svuotato di oltre 3,6 milioni di ETH in una sola volta. La diramazione ha spostato i fondi dal contratto lacunoso a uno nuovo, consentendo a chiunque avesse perso i fondi di hackerare per recuperarli.
+La biforcazione della DAO è stata una risposta all'[attacco alla DAO del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack), in cui un contratto [DAO](/glossary/#dao) non sicuro è stato prosciugato di oltre 3,6 milioni di ETH in un hack. La biforcazione ha spostato i fondi dal contratto difettoso a un nuovo contratto, consentendo a chiunque avesse perso fondi nell'hack di recuperarli.
 
-Questo corso d'azione fu votato dalla community di Ethereum. Ogni titolare di ETH ha potuto votare tramite una transazione su [una piattaforma di voto](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). La decisione di creare la diramazione ottenne oltre l'85% dei voti.
+Questa linea d'azione è stata votata dalla community di Ethereum. Qualsiasi detentore di ETH ha potuto votare tramite una transazione su [una piattaforma di voto](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). La decisione di effettuare la biforcazione ha raggiunto oltre l'85% dei voti.
 
-È importante notare che, anche se la diramazione del protocollo è servita per invertire l'attacco, il peso assegnato al voto per decidere in merito alla diramazione è discutibile per alcune ragioni:
+È importante notare che, sebbene il protocollo abbia effettuato una biforcazione per annullare l'hack, il peso che il voto ha avuto nella decisione di biforcare è discutibile per alcuni motivi:
 
-- La partecipazione al voto è stata incredibilmente bassa
-- Gran parte delle persone non era al corrente della votazione
-- Il voto rappresentava solo i titolari di ETH, lasciando fuori tutti gli altri partecipanti al sistema
+- L'affluenza al voto è stata incredibilmente bassa
+- La maggior parte delle persone non sapeva che si stesse svolgendo la votazione
+- Il voto rappresentava solo i detentori di ETH, non nessuno degli altri partecipanti al sistema
 
-Un sottogruppo della community ha rifiutato la diramazione, soprattutto perché riteneva che l'episodio del DAO non fosse imputabile a un difetto del protocollo. Questi utenti misero insieme le forze per formare [Ethereum Classic](https://ethereumclassic.org/).
+Un sottoinsieme della community si è rifiutato di effettuare la biforcazione, in gran parte perché riteneva che l'incidente della DAO non fosse un difetto del protocollo. Hanno continuato a formare [Ethereum Classic](https://ethereumclassic.org/).
 
-Oggi, la community di Ethereum ha adottato una politica di non intervento in caso di bug sui contratti o di fondi persi per mantenere la credibile neutralità del sistema.
+Oggi, la community di Ethereum ha adottato una politica di non intervento in caso di bug dei contratti o fondi persi per mantenere la neutralità credibile del sistema.
 
-Guarda altri contenuti sull'attacco alla DAO:
+Guarda di più sull'hack della DAO:
 
 <YouTube id="rNeLuBOVe8A" />
 
 <Divider />
 
-### L'utilità della diramazione {#forking-utility}
+### L'utilità della biforcazione {#forking-utility}
 
-Il fork Ethereum/Ethereum Classic è un ottimo esempio di fork sano. Due gruppi hanno espresso un disaccordo sufficientemente forte tra loro su alcuni valori principali, per ritenere che valesse la pena correre i rischi connessi al perseguimento delle loro specifiche linee d'azione.
+La biforcazione Ethereum/Ethereum Classic è un eccellente esempio di una biforcazione sana. Avevamo due gruppi che erano in forte disaccordo tra loro su alcuni valori fondamentali, tanto da ritenere che valesse la pena correre i rischi connessi per perseguire le loro specifiche linee d'azione.
 
-La capacità di eseguire il fork di fronte a divergenze politiche, filosofiche o economiche molto significative, svolge un ruolo importante nel successo della governance di Ethereum. Senza la capacità di eseguire il fork, l'alternativa sarebbe quella di lotte continue, di una partecipazione riluttante e forzata per coloro che alla fine hanno deciso di formare Ethereum Classic nonché una visione sempre più divergente su quale sia l'aspetto del successo per Ethereum.
+La capacità di effettuare una biforcazione di fronte a significative differenze politiche, filosofiche o economiche gioca un ruolo importante nel successo della governance di Ethereum. Senza la capacità di biforcare, l'alternativa era una continua lotta intestina, una partecipazione forzata e riluttante per coloro che alla fine hanno formato Ethereum Classic e una visione sempre più divergente di come appare il successo per Ethereum.
 
 <Divider />
 
 ## Governance della beacon chain {#beacon-chain}
 
-Il processo di governance di Ethereum spesso rinuncia a velocità ed efficienza a favore di apertura e inclusività. Al fine di accelerare lo sviluppo della Beacon Chain, è stata lanciata separatamente dalla rete proof-of-work di Ethereum e ha seguito le proprie pratiche di governance.
+Il processo di governance di Ethereum spesso scambia velocità ed efficienza con apertura e inclusività. Al fine di accelerare lo sviluppo della beacon chain, è stata lanciata separatamente dalla rete Ethereum a prova di lavoro e ha seguito le proprie pratiche di governance.
 
-Lo sviluppo di specifiche e implementazioni è sempre stato totalmente open source, non sono stati invece utilizzati i processi formali descritti sopra per proporre gli aggiornamenti. Questo ha consentito a ricercatori e implementatori di specificare e concordare le modifiche più rapidamente.
+Sebbene le specifiche e le implementazioni di sviluppo siano sempre state completamente open source, i processi formali utilizzati per proporre gli aggiornamenti descritti sopra non sono stati utilizzati. Ciò ha consentito a ricercatori e implementatori di specificare e concordare le modifiche più rapidamente.
 
-Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 settembre 2022, la Fusione si è completata come parte dell'[aggiornamento di rete di Parigi](/ethereum-forks/#paris). La proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) è stata modificata da 'Ultimo Appello' a 'Definitiva', completando la transizione al proof-of-stake.
+Quando la beacon chain si è fusa con il livello di esecuzione di Ethereum il 15 settembre 2022, Il Merge è stato completato come parte dell'[aggiornamento della rete Paris](/ethereum-forks/#paris). La proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) è passata da 'Last Call' a 'Final', completando la transizione alla prova di stake.
 
 <ButtonLink href="/roadmap/merge/">
-  Maggiori informazioni sulla fusione
+  Maggiori informazioni su Il Merge
 </ButtonLink>
 
 <Divider />
 
-## Come posso partecipare? {#get-involved}
+## Come posso essere coinvolto? {#get-involved}
 
-- [Proponi un'EIP](/eips/#participate)
-- [Discuti le proposte correnti](https://ethereum-magicians.org/)
-- [Partecipa alla discussione di R&D](https://ethresear.ch/)
-- [Unisciti al Discord R&D di Ethereum](https://discord.gg/mncqtgVSVw)
+- [Proponi una EIP](/eips/#participate)
+- [Discuti le proposte attuali](https://ethereum-magicians.org/)
+- [Partecipa alle discussioni di R&S](https://ethresear.ch/)
+- [Unisciti al Discord di R&S di Ethereum](https://discord.gg/mncqtgVSVw)
 - [Esegui un nodo](/developers/docs/nodes-and-clients/run-a-node/)
-- [Contribuisci allo sviluppo del client](/developers/docs/nodes-and-clients/#execution-clients)
-- [Programma di apprendistato per sviluppatori core](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
+- [Contribuisci allo sviluppo dei client](/developers/docs/nodes-and-clients/#execution-clients)
+- [Programma di apprendistato per Core Developer](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
-## Lettura consigliate {#further-reading}
+## Letture consigliate {#further-reading}
 
-La governance in Ethereum non è definita rigidamente. I vari partecipanti della comunità hanno diverse prospettive a riguardo. Eccone alcune:
+La governance in Ethereum non è definita in modo rigido. I vari partecipanti alla community hanno prospettive diverse al riguardo. Eccone alcune:
 
-- [Note sulla Governance della Blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Come funziona la governance di Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotester_
+- [Note sulla governance della blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Come funziona la governance di Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Come funziona la governance di Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Cos'è uno sviluppatore core di Ethereum?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Governance, Parte 2: La plutocrazia non va ancora beene](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Andando oltre la governance di voto con moneta](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Cos'è un core developer di Ethereum?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Governance, Parte 2: La plutocrazia è ancora un male](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Andare oltre la governance del voto basato sulle monete](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Comprendere la governance della blockchain](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
+- [Il governo di Ethereum](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

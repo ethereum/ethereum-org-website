@@ -4,6 +4,7 @@ description: Dalam tutorial ini, Anda akan membangun minter NFT dan mempelajari 
 author: "smudgil"
 tags: ["Solidity", "NFT", "Alchemy", "kontrak pintar", "frontend", "Pinata", "erc-721"]
 skill: intermediate
+breadcrumb: "Dapp pencetak NFT"
 lang: id
 published: 2021-10-06
 ---

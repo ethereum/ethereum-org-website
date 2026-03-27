@@ -4,6 +4,7 @@ description: "关于在以太坊上编写和部署一个简单智能合约的入
 author: "elanh"
 tags: [ "Solidity", "hardhat", "Alchemy", "智能合同", "部署" ]
 skill: beginner
+breadcrumb: "Hello World合约"
 lang: zh
 published: 2021-03-31
 ---

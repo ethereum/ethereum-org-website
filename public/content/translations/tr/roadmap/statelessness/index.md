@@ -79,6 +79,8 @@ Blok önericileri durum verisini "tanıklar" oluşturmak için kullanırlar, bu 
 
 Zayıf durumsuzluk geliştirilmiş bir araştırma aşamasındadır, ancak önerici-oluşturucu ayrımına ve Verkel Ağaçlarının eşler arasında küçük tanıkların iletilmesine dayanır. Bu zayıf durumsuzluğun muhtemelen Ethereum Ana Ağı'ndan birkaç yıl uzakta olduğu anlamına gelir.
 
+L1 doğrulaması için zkEVM, durumsuz doğrulamayı daha da geliştirebilecek tamamlayıcı bir teknolojidir. Doğrulayıcılar sadece şahitleri kontrol etmek yerine, tüm bloğun doğru şekilde yürütüldüğüne dair bir sıfır bilgi ispatını doğrulayabilir -- bu da işlemleri yeniden yürütmeden kriptografik kesinlik sağlar.
+
 ### Güçlü durumsuzluk {#strong-statelessness}
 
 Güçlü durumsuzluk, herhangi bir düğümün durum verisi depolamaya olan ihtiyacını ortadan kaldırır. Bunun yerine, işlemler blok oluşturucular tarafından toplanabilen tanıklar aracılığıyla gönderilir. Blok oluşturucular sonrasında sadece alakalı hesaplara gerekli tanıkları oluşturman durumu depolamaktan sorumludur. Durumun sorumluluğu neredeyse tamamen kullanıcılara verilmiştir, yani kullanıcılar hangi hesap ve depolama anahtarlarıyla etkileşimde olduklarını tanımlamak için tanıkları ve "erişim listelerini" gönderirler. Bu, son derece hafif düğümleri olanaklı kılardı ancak akıllı sözleşmelerle işlem yapmayı zorlaştırmak gibi bazı bedeller söz konusudur.

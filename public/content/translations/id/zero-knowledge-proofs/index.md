@@ -99,6 +99,8 @@ Di sinilah komputasi yang dapat diverifikasi berperan. Ketika sebuah node mengek
 
 [Zero-knowledge rollup](/developers/docs/scaling/zk-rollups) dan [validium](/developers/docs/scaling/validium/) adalah dua solusi peningkatan offchain yang menggunakan bukti validitas untuk memberikan skalabilitas yang aman. Protokol ini mengeksekusi ribuan transaksi offchain dan mengirimkan bukti untuk verifikasi di Ethereum. Hasil tersebut dapat diterapkan segera setelah bukti diverifikasi, memungkinkan Ethereum untuk memproses lebih banyak transaksi tanpa meningkatkan komputasi pada lapisan dasar.
 
+Di luar penskalaan layer 2, bukti zero-knowledge juga dapat memverifikasi eksekusi blok L1 Ethereum itu sendiri. zkEVM untuk verifikasi L1 akan memungkinkan validator untuk memverifikasi blok dengan memeriksa bukti alih-alih menjalankan kembali semua transaksi -- memungkinkan batas gas yang lebih tinggi tanpa meningkatkan persyaratan perangkat keras validator.
+
 ### Mengurangi penyuapan dan kolusi dalam pemungutan suara onchain {#secure-blockchain-voting}
 
 Skema pemungutan suara blockchain memiliki banyak karakteristik yang menguntungkan: sepenuhnya dapat diaudit, aman terhadap serangan, tahan terhadap penyensoran, dan bebas dari kendala geografis. Namun, bahkan skema pemungutan suara onchain tidak kebal terhadap masalah **kolusi**.

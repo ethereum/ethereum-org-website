@@ -4,6 +4,7 @@ description: "Optimism için standart köprü nasıl çalışır? Neden bu şeki
 author: Ori Pomerantz
 tags: [ "solidity", "köprü", "katman 2" ]
 skill: intermediate
+breadcrumb: "Optimism köprüsü"
 published: 2022-03-30
 lang: tr
 ---

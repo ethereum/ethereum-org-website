@@ -1,46 +1,66 @@
 ---
-title: Ethereum Foundation und Förderprogramme der Community
-description: Eine Auflistung der Förderprogramme im gesamten Ethereum-Ökosystem.
+title: "Förderprogramme der Ethereum Foundation und der Community"
+description: "Eine Auflistung der Förderprogramme im gesamten Ethereum-Ökosystem."
 lang: de
 ---
 
-# Ethereum-Finanzierungshilfen {#ethereum-grants}
+# Ethereum-Förderprogramme {#ethereum-grants}
 
-Die unten aufgelisteten Programme bieten eine Vielzahl von Finanzierungshilfen für Projekte, die den Erfolg und das Wachstum des Ethereum-Ökosystems fördern. Nutzen Sie die Liste als Leitfaden, um Finanzierungsmöglichkeiten zu finden und zu beantragen, die Ihr nächstes Ethereum-Projekt zu einem Erfolg machen.
+Die unten aufgeführten Programme bieten eine Vielzahl von Fördergeldern (Grants) für Projekte, die den Erfolg und das Wachstum des [Ethereum](/)-Ökosystems fördern. Nutzen Sie dies als Leitfaden, um Gelder zu finden und zu beantragen, die dazu beitragen, Ihr nächstes Ethereum-Projekt zu einem Erfolg zu machen.
 
-Diese Liste wird von unserer Community verwaltet. Wenn Informationen fehlen oder falsch sind, bearbeiten Sie diese Seite gerne.
+Diese Liste wird von unserer Community gepflegt. Wenn etwas fehlt oder falsch ist, bearbeiten Sie bitte diese Seite!
 
-## Das weitere Ethereum-Ökosystem {#broad-ethereum-ecosystem}
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>Gründer, benötigen Sie Hilfe bei der Beschleunigung Ihres Unternehmens? [Besuchen Sie den Founders Support](/founders/)</div>
+</Alert>
 
-Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem sie Finanzierungen für zahlreiche Projekte bereitstellen. Dazu gehören unter anderem Lösungen zu Skalierbarkeit, Community-Aufbau, Sicherheit und Privatsphäre. Diese Fördermaßnahmen sind nicht spezifisch für eine bestimmte Ethereum-Plattform und sind ein guter Ausgangspunkt, wenn Sie unsicher sind.
+## Breites Ethereum-Ökosystem {#broad-ethereum-ecosystem}
 
-- [EF-Ökosystem Unterstützungsprogramm](https://esp.ethereum.foundation) - _Finanzierung von Open-Source-Projekten, die Ethereum zugutekommen, mit besonderem Fokus auf universelle Werkzeuge, Infrastruktur, Forschung und öffentliche Güter_
-- [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Durchsuchbares Verzeichnis von über 1.000 Projekten, die vom Ecosystem Support Program unterstützt werden_
-- [Moloch DAO](https://www.molochdao.com/) – _Datenschutz, Layer-2-Skalierung, Client-Sicherheit und mehr_
-- [DAO-Zuschüsse](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _Google-Tabelle der Organisationen, die Zuschüsse anbieten_
-- [Akademische Stipendien](https://esp.ethereum.foundation/academic-grants) – _Stipendien zur Untstützung akademischer Arbeiten in Bezug auf Ethereum_
+Diese Programme unterstützen das breite Ethereum-Ökosystem, indem sie Fördergelder für ein breites Spektrum von Projekten anbieten. Dazu gehören Lösungen für Skalierbarkeit, Community-Aufbau, Sicherheit, Datenschutz und mehr. Diese Förderprogramme sind nicht auf eine bestimmte Ethereum-Plattform beschränkt und ein guter Ausgangspunkt, wenn Sie sich unsicher sind.
 
-## Projektspezifisch {#project-specific}
+- [EF Ecosystem Support Program](https://esp.ethereum.foundation) – _Förderung von Open-Source-Projekten, die Ethereum zugutekommen, mit besonderem Fokus auf universelle Tools, Infrastruktur, Forschung und öffentliche Güter_
+- [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) – _Durchsuchbares Verzeichnis von über 1.000 Projekten, die durch das Ecosystem Support Program unterstützt werden_
+- [Academic Grants](https://esp.ethereum.foundation/academic-grants) – _Fördergelder zur Unterstützung von Ethereum-bezogener akademischer Arbeit_
 
-Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklung und Erprobung ihrer eigenen Technologie geschaffen.
+## Aggregatoren und Plattformen für Förderprogramme {#grant-list-aggregators}
 
-- [Aave-Zuschussprogramm](https://aavegrants.org/) – _[Aave](https://aave.com/) Grants DAO_
-- [Balancer](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/)-Ökosystemfonds_
-- [Decentraland-Zuschussprogramm](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/)-DAO-Metaverse_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/)-Finanzökosystem_
-- [MetaMask-Programm](https://metamaskgrants.org/) – _Mitarbeitergeleitete DAO für[MetaMask](https://metamask.io/)-Zuschüsse_
-- [SKALE-Network-Förderprogramm](https://skale.space/developers#grants) – _[SKALE-Network](https://skale.space/)-Ökosystem_
-- [Swarm Foundation-Förderprogramm](https://www.ethswarm.org/grants) – _[Swarm Foundation](https://www.ethswarm.org/)-Ökosystem_
-- [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/)-Ökosystem_
-- [Uniswap-Förderprogramm](https://www.uniswapfoundation.org/grants) – _[Uniswap](https://uniswap.org/)-Community_
+Diese Ressourcen sammeln und organisieren verschiedene Fördermöglichkeiten im gesamten Ethereum-Ökosystem und erleichtern so die Entdeckung von Finanzierungsmöglichkeiten, die den Anforderungen Ihres Projekts entsprechen. Wir haben sie nach Zielgruppen geordnet, um Ihnen den Einstieg in die Suche nach den relevantesten Ressourcen basierend auf Ihrem spezifischen Finanzierungsbedarf zu erleichtern.
 
-## Quadratische Finanzierung {#quadratic-funding}
+### Für alle Fördersuchenden: Umfassende Verzeichnisse {#comprehensive-directories}
 
-Die Open-Source-Wurzeln von Ethereum haben zur Entwicklung eines interessanten neuen Finanzierungsmodells geführt: die quadratische Finanzierung. Dieses Modell hat das Potenzial die Art und Weise zu verbessern, wie wir in Zukunft alle Arten von öffentlichen Gütern finanzieren. Die quadratische Finanzierung stellt sicher, dass die Projekte mit dem größten individuellen Bedarf auch die meisten Mittel erhalten. Mit anderen Worten: Projekte, die das Leben der meisten Menschen verbessern können. [Mehr zur quadratischen Finanzierung.](/defi/#quadratic-funding)
+Diese allgemeinen Plattformen bieten eine breite Abdeckung von Förderprogrammen im gesamten Web3-Bereich und sind nützliche Ausgangspunkte für jeden, der nach Finanzierung sucht:
 
-- [Gitcoin](https://gitcoin.co/grants)
-- [clr.fund](https://clr.fund/)
+- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) – Verzeichnis aller Web3-Förderprogramme, das wöchentlich aktualisiert wird
 
-## Arbeiten in Ethereum {#work-in-ethereum}
+### Für Entwickler und Builder {#for-developers-and-builders}
 
-Sind Sie noch nicht bereit, Ihr eigenes Projekt zu starten? Es gibt Hunderte von Unternehmen, die aktiv nach engagierten Personen suchen, die im Ethereum-Ökosystem arbeiten und einen Beitrag dazu leisten wollen. Sind Sie an weiteren Informationen interessiert? [Suche nach Jobs mit Bezug zu Ethereum](/community/get-involved/#ethereum-jobs)
+- [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) – _Öffentliche Airtable-Datenbank für Förderprogramme_
+- [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) – _Google-Tabelle mit Web3-Fördermöglichkeiten_
+- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO und [The Arbitrum Foundation](https://arbitrum.foundation/)
+
+### Für DeFi-Projekte und Finanzanwendungen {#for-defi-projects}
+
+- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) – _Umfassende Liste von Krypto- und Web3-Förderprogrammen_
+- [Uniswap Foundation Grants](https://www.uniswapfoundation.org/build) – _Unichain- und Uniswap v4-Fördergelder sowie Unterstützung für DeFi-Entwickler_
+
+### Für DAO-Mitwirkende und Governance-Innovatoren {#for-dao-contributors}
+
+Ressourcen für Community-gesteuerte Projekte und Governance-Experimente:
+
+- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _Google-Tabelle von Organisationen, die Fördergelder anbieten_
+- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) – _Umfassende Karte für Web3-Förderprogramme_
+
+### Öffentliche Güter und Impact {#public-goods-and-impact}
+
+Diese Programme konzentrieren sich auf die Finanzierung von Projekten, die der breiteren Community, öffentlichen Gütern und Impact-Initiativen zugutekommen. Dazu gehören Fördergeber sowie Spendenplattformen, die Zuweisungsmechanismen für Finanzierungen auf der Blockchain nutzen, einschließlich [Quadratic Funding](/defi/#quadratic-funding):
+
+- [Gitcoin](https://www.gitcoin.co/program) – _Gitcoin Grants nutzt mehrere Kapitalzuweisungsmechanismen, um Open-Source-Projekte und öffentliche Güter im Ethereum-Ökosystem zu finanzieren_
+- [Octant](https://octant.app/home) – _Ökosystem zur Finanzierung öffentlicher Güter, das das Gemeinwohl und die individuelle finanzielle Stärkung in Einklang bringt_
+- [Giveth](https://giveth.io/) – _Krypto-Spendenplattform, die direkte Spenden für gemeinnützige Projekte ohne zusätzliche Gebühren ermöglicht_
+- [Artizen](https://artizen.fund/) – _Hilft Kreativen bei der Mitfinanzierung neuer Projekte an der Grenze von Kunst, Wissenschaft, Technologie und Kultur_
+- [Quadratic Accelerator](https://qacc.giveth.io/) – _Start-up-Accelerator-Programm, das Quadratic Funding nutzt, um Projekte zu unterstützen, die dem Gemeinwohl dienen_
+
+## Arbeiten im Ethereum-Ökosystem {#work-in-ethereum}
+
+Noch nicht bereit, ein eigenes Projekt zu starten? Es gibt Hunderte von Unternehmen, die aktiv nach leidenschaftlichen Personen suchen, die im Ethereum-Ökosystem arbeiten und dazu beitragen möchten. Suchen Sie nach weiteren Informationen? [Sehen Sie sich Ethereum-bezogene Jobs an](/community/get-involved/#ethereum-jobs)

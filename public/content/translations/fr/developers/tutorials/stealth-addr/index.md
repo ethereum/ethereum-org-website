@@ -11,6 +11,7 @@ tags:
     "wasm"
   ]
 skill: intermediate
+breadcrumb: "Adresses furtives"
 published: 2025-11-30
 lang: fr
 sidebarDepth: 3

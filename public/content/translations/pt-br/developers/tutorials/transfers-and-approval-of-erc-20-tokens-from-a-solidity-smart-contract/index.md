@@ -4,6 +4,7 @@ description: "Crie um contrato inteligente de DEX que lida com transferências e
 author: "jdourlens"
 tags: [ "smart contracts", "tokens", "Solidity", "erc-20" ]
 skill: intermediate
+breadcrumb: "Transferencias ERC-20"
 lang: pt-br
 published: 2020-04-07
 source: EthereumDev

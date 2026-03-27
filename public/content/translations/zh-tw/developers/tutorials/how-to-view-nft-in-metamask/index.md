@@ -4,6 +4,7 @@ description: "本教學說明如何在 MetaMask 上檢視現有的 NFT！"
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
+breadcrumb: "在錢包中查看NFT"
 lang: zh-tw
 published: 2021-04-22
 ---

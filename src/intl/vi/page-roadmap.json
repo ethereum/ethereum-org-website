@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "Ánh xạ các phụ thuộc ngay từ đầu để đồng bộ hóa nhanh hơn, thực thi song song và đọc đĩa song song.",
   "page-roadmap-glamsterdam-bal-item-3": "Giảm ga cho các ứng dụng nặng về trạng thái và cải thiện khả năng dự đoán chi phí ga.",
   "page-roadmap-hegota-discussed-title": "Đã lên kế hoạch cho Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Các đề xuất hiện đang được thảo luận"
+  "page-roadmap-hegota-discussed-item-1": "Các đề xuất hiện đang được thảo luận",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "Bang chung khong kien thuc co the cho phep trinh xac thuc xac minh cac Khoi Ethereum ma khong can thuc thi lai cac giao dich, cho phep gioi han gas cao hon ma khong lam tang yeu cau phan cung."
 }

@@ -11,6 +11,7 @@ tags:
     "složitelnost"
   ]
 skill: advanced
+breadcrumb: "Interakce kontraktu"
 lang: cs
 published: 2020-04-05
 source: EthereumDev

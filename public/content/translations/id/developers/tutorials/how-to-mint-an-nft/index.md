@@ -4,6 +4,7 @@ description: Tutorial ini menjelaskan cara melakukan mint NFT di blockchain Ethe
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "kontrak pintar"]
 skill: beginner
+breadcrumb: "Cetak NFT"
 lang: id
 published: 2021-04-22
 ---

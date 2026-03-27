@@ -11,6 +11,7 @@ tags:
     "имитация"
   ]
 skill: intermediate
+breadcrumb: "Мокирование контрактов"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

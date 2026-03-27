@@ -4,6 +4,7 @@ description: "Как работает стандартный Мост для Opt
 author: Ori Pomerantz
 tags: [ "Solidity", "Мост", "уровень 2" ]
 skill: intermediate
+breadcrumb: "Мост Optimism"
 published: 2022-03-30
 lang: ru
 ---

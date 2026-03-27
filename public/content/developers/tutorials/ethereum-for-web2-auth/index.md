@@ -4,6 +4,7 @@ description: After reading this tutorial, a developer will be able to integrate 
 author: Ori Pomerantz
 tags: ["web2", "authentication", "eas"]
 skill: beginner
+breadcrumb: Ethereum for web2 auth
 lang: en
 published: 2025-04-30
 ---

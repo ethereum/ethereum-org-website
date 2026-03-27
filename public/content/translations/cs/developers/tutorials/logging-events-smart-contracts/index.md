@@ -10,6 +10,7 @@ tags:
     "události"
   ]
 skill: intermediate
+breadcrumb: "Logování událostí"
 lang: cs
 published: 2020-04-03
 source: EthereumDev

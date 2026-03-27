@@ -4,6 +4,7 @@ description: Cara menerapkan kontrak pintar dari kontrak yang sudah ada dan beri
 author: "jdourlens"
 tags: ["kontrak pintar", "Solidity", "Remix", "menerapkan", "komposabilitas"]
 skill: advanced
+breadcrumb: "Interaksi kontrak"
 lang: id
 published: 2020-04-05
 source: EthereumDev

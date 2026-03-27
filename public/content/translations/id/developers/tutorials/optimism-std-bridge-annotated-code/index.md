@@ -4,6 +4,7 @@ description: Bagaimana cara kerja jembatan standar untuk Optimism? Mengapa ia be
 author: Ori Pomerantz
 tags: ["Solidity", "jembatan", "layer 2"]
 skill: intermediate
+breadcrumb: "Bridge Optimism"
 published: 2022-03-30
 lang: id
 ---

@@ -4,6 +4,7 @@ description: "Zapewnienie integralności danych w łańcuchu dla danych, które 
 author: Ori Pomerantz
 tags: [ "przechowywanie" ]
 skill: advanced
+breadcrumb: "Dowody Merkle"
 lang: pl
 published: 2021-12-30
 ---

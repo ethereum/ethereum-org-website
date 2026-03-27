@@ -4,6 +4,7 @@ description: Jenga mkataba-erevu wa DEX unaoshughulikia uhamisho na uidhinishaji
 author: "jdourlens"
 tags: [ "mikataba erevu", "tokeni", "uimara", "erc-20" ]
 skill: intermediate
+breadcrumb: "Uhamisho wa ERC-20"
 lang: sw
 published: 2020-04-07
 source: EthereumDev

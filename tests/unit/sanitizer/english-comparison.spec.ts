@@ -27,6 +27,8 @@ const {
   removeStaleComponents,
   fixLeakedAttrNamesInJsxValues,
   fixDetachedHeadingAnchors,
+  fixCrowdinSplitBackticks,
+  fixLowercasedMdxComponents,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -587,6 +589,48 @@ test.describe("English Comparison Fixes", () => {
         english
       )
       // English is not single-line for this div, so no collapse
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not collapse across blank lines (\\s* crossing newlines)", () => {
+      const english = [
+        "```tsx",
+        "          <div>{status}</div>",
+        "          <div>{error?.message}</div>",
+        "        </div>",
+        "      )}",
+        "```",
+      ].join("\n")
+      const translated = [
+        "```tsx",
+        "          <div>{status}</div>",
+        "          <div>{error?.message}</div>",
+        " ",
+        "</div>",
+        "      )}",
+        "```",
+      ].join("\n")
+      const { content, fixCount } = collapseInlineHtmlFromEnglish(
+        translated,
+        english
+      )
+      // The </div> after the blank line is a separate element -- must not be collapsed
+      expect(content).toContain("<div>{error?.message}</div>\n")
+      expect(content).not.toContain("</div></div>")
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not modify content inside code fences", () => {
+      const english = ["```tsx", "  <div>{status}</div>", "```"].join("\n")
+      const translated = ["```tsx", "  <div>{status}", "  </div>", "```"].join(
+        "\n"
+      )
+      const { content, fixCount } = collapseInlineHtmlFromEnglish(
+        translated,
+        english
+      )
+      // Inside code fence -- should not be touched
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
     })
@@ -1222,6 +1266,119 @@ test.describe("English Comparison Fixes", () => {
       )
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixCrowdinSplitBackticks", () => {
+    test("repairs premature backtick close splitting inline code", () => {
+      const english = "we use an empty component (`<> ... </>`) to combine them"
+      const translated =
+        "u\u017Cywamy pustego komponentu (`<> ...` </>`), aby uczynić"
+      const { content, fixCount } = fixCrowdinSplitBackticks(
+        translated,
+        english
+      )
+      expect(content).toBe(
+        "u\u017Cywamy pustego komponentu (`<> ... </>`), aby uczynić"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct backtick pairs unchanged", () => {
+      const english = "we use an empty component (`<> ... </>`) to combine them"
+      const translated =
+        "u\u017Cywamy pustego komponentu (`<> ... </>`), aby uczynić"
+      const { content, fixCount } = fixCrowdinSplitBackticks(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixLowercasedMdxComponents", () => {
+    test("restores PascalCase from English source", () => {
+      const english = `#### <Emoji text=":tada:" size={1} className="me-2" /> Fun fact!`
+      const translated = `#### <emoji text=":tada:" size={1} className="me-2" /> Wissenswertes!`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(
+        `#### <Emoji text=":tada:" size={1} className="me-2" /> Wissenswertes!`
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles self-closing components", () => {
+      const english = `<YouTube id="abc123" />`
+      const translated = `<youtube id="abc123" />`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(`<YouTube id="abc123" />`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles opening and closing tag pairs", () => {
+      const english = `<ExpandableCard title="FAQ">\nContent\n</ExpandableCard>`
+      const translated = `<expandablecard title="FAQ">\nInhalt\n</expandablecard>`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(
+        `<ExpandableCard title="FAQ">\nInhalt\n</ExpandableCard>`
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves already-correct components unchanged", () => {
+      const english = `<Emoji text=":tada:" size={1} />`
+      const translated = `<Emoji text=":tada:" size={1} />`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const english = `<Emoji text=":tada:" />`
+      const translated = '```\n<emoji text=":tada:" />\n```'
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch standard HTML elements", () => {
+      const english = `<div class="test">content</div>`
+      const translated = `<div class="test">Inhalt</div>`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("fixes multiple different components in one pass", () => {
+      const english = `<Emoji text=":wave:" /> Hello\n<InfoBanner>\nInfo\n</InfoBanner>`
+      const translated = `<emoji text=":wave:" /> Hallo\n<infobanner>\nInfo\n</infobanner>`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(
+        `<Emoji text=":wave:" /> Hallo\n<InfoBanner>\nInfo\n</InfoBanner>`
+      )
+      expect(fixCount).toBe(3)
     })
   })
 })

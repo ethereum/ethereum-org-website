@@ -4,6 +4,7 @@ description: Bagaimana cara kerja kontrak Uniswap-v2? Mengapa ditulis seperti it
 author: Ori Pomerantz
 tags: ["Solidity", "dapps"]
 skill: intermediate
+breadcrumb: "Panduan Uniswap v2"
 published: 2021-05-01
 lang: id
 ---

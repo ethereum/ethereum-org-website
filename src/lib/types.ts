@@ -305,24 +305,11 @@ export type LocaleContributions = {
   data: FileContributorData[]
 }
 
-// Crowdin translation progress
-export type ProjectProgressData = {
-  languageId: string
-  words: {
-    total: number
-    approved: number
-  }
-}
-
 export type LocaleDisplayInfo = {
   localeOption: string
   sourceName: string
   targetName: string
   englishName: string
-  approvalProgress: number
-  wordsApproved: number
-  progress: string
-  words: string
   isBrowserDefault?: boolean
 }
 

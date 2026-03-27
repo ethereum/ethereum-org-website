@@ -4,6 +4,7 @@ description: "Ce tutoriel explique au lecteur comment utiliser l'IPFS pour stock
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
+breadcrumb: "IPFS pour UIs de dapps"
 lang: fr
 published: 2024-06-29
 ---
