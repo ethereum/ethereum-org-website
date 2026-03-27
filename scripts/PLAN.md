@@ -51,7 +51,10 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 - [x] Updated schema to match agreed structure
 - [x] Final validation: 5 terms x 6 languages, 30/30 entries conform to schema
 - [x] Schema confirmed locked -- ready for full translation generation
+- [x] Full 24-language stress test: 10 terms x 24 langs = 240 entries, 100% conformance after normalization
+- [x] Identified 2 auto-fixable Gemini drift patterns: code context as string, missing aliases
 - [ ] Note for full run: enforce "onchain"/"offchain" (no hyphen) in prompts
+- [ ] Note for full run: normalization script needed post-generation for the 2 known drift patterns
 
 ## Phase 5: Community Glossary Import
 
