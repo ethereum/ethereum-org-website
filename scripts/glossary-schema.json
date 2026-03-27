@@ -136,8 +136,8 @@
           "description": "English-only disambiguation for translators. Not a full definition -- just enough context to translate correctly. E.g., 'financial deposit/collateral, not a wooden stake' or 'computational fuel unit, not chemical gas'. Assumes the translator reads English."
         },
         "forms": {
-          "$ref": "#/$defs/MorphForms",
-          "description": "English morphological forms"
+          "$ref": "#/$defs/Morphology",
+          "description": "English morphological forms (POS-based)"
         },
         "usage_note": {
           "type": "string",
@@ -178,8 +178,8 @@
         },
 
         "forms": {
-          "$ref": "#/$defs/MorphForms",
-          "description": "Translated morphological forms"
+          "$ref": "#/$defs/Morphology",
+          "description": "Translated morphological forms (POS-based)"
         },
 
         "contexts": {
@@ -223,73 +223,84 @@
       }
     },
 
-    "MorphForms": {
+    "Morphology": {
       "type": "object",
-      "description": "Morphological forms of a term. Not all forms apply to every term -- only include forms that are actively used in Ethereum content.",
+      "description": "POS-based morphological forms. Use null for forms that don't exist for this term in this language. Only include forms that are actually used in Ethereum content.",
       "properties": {
-        "base": {
-          "type": "string",
-          "description": "Lemma / dictionary / citation form"
+        "noun": {
+          "type": "object",
+          "description": "Noun form(s). Singular is the lemma/dictionary form.",
+          "properties": {
+            "singular": { "type": "string", "description": "Lemma / dictionary / citation form" }
+          }
         },
         "verb": {
-          "type": "string",
-          "description": "Infinitive verb form (e.g., 'to stake', 'to mint')"
-        },
-        "gerund": {
-          "type": "string",
-          "description": "Verbal noun / -ing form (e.g., 'staking', 'minting')"
-        },
-        "past": {
-          "type": "string",
-          "description": "Past participle / adjective (e.g., 'staked', 'minted')"
-        },
-        "agent": {
-          "type": "string",
-          "description": "Person/entity performing the action (e.g., 'staker', 'minter', 'validator')"
-        },
-        "plural": {
-          "type": "string",
-          "description": "Simple plural form (e.g., 'validators', 'tokens')"
+          "type": "object",
+          "description": "Verb form(s)",
+          "properties": {
+            "infinitive": { "type": "string", "description": "Infinitive form (e.g., 'to stake', 'walidowac')" },
+            "participle": { "type": "string", "description": "Present/active participle (e.g., 'staking', 'walidujacy')" }
+          }
         },
         "adjective": {
-          "type": "string",
-          "description": "Adjectival form (e.g., 'decentralized', 'finalized')"
+          "type": ["string", "null"],
+          "description": "Adjectival form (e.g., 'decentralized', 'walidatorski')"
+        },
+        "agent": {
+          "type": ["string", "null"],
+          "description": "Person/entity performing the action (e.g., 'staker', 'walidator')"
         },
         "negation": {
-          "type": "string",
-          "description": "Negated/reversed form (e.g., 'unstaking', 'de-peg')"
+          "type": ["string", "null"],
+          "description": "Negated/reversed form (e.g., 'unstaking', 'de-peg'). Null if none exists."
         },
         "compounds": {
           "type": "object",
-          "description": "Compound terms built from this root, keyed by a descriptive slug",
+          "description": "Compound terms built from this root, keyed by the compound entry's slug ID",
           "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+
+    "ContextForm": {
+      "type": "object",
+      "description": "How a term appears in a specific display context. Contains the term form and optionally an example sentence.",
+      "required": ["term"],
+      "properties": {
+        "term": {
+          "type": "string",
+          "description": "The term as it should appear in this context (may be inflected, capitalized, or kept in Latin)"
+        },
+        "example": {
+          "type": "string",
+          "description": "Optional example sentence showing the term in use in this context"
         }
       }
     },
 
     "ContextForms": {
       "type": "object",
-      "description": "How the term should appear in different display contexts. Follows CLDR stand-alone vs format pattern.",
+      "description": "How the term should appear in 5 display contexts. Each contains a term form and optional example sentence.",
       "properties": {
         "prose": {
-          "type": "string",
-          "description": "Inline in flowing text / sentences. May be fully translated/transliterated."
+          "$ref": "#/$defs/ContextForm",
+          "description": "Inline in flowing text. Often inflected (e.g., genitive/accusative). Example sentence required."
         },
         "heading": {
-          "type": "string",
-          "description": "As a standalone section heading or title. May retain Latin script or use a hybrid form."
+          "$ref": "#/$defs/ContextForm",
+          "description": "Standalone section heading or title. Usually nominative, capitalized."
         },
         "tag": {
-          "type": "string",
-          "description": "As a metadata tag, label, or filter chip. Often shorter, may keep Latin."
+          "$ref": "#/$defs/ContextForm",
+          "description": "Metadata tag, label, or filter chip. Short, identifier-style."
         },
         "ui": {
-          "type": "string",
-          "description": "In UI elements (buttons, menus, tooltips). Often abbreviated."
+          "$ref": "#/$defs/ContextForm",
+          "description": "UI elements: buttons, menus, tooltips. Action-oriented."
         },
         "code": {
-          "type": "string",
-          "description": "When referenced as a technical/code term. Usually kept in Latin/ASCII."
+          "$ref": "#/$defs/ContextForm",
+          "description": "Technical/code reference. Usually Latin/ASCII."
         }
       }
     },
@@ -302,11 +313,6 @@
           "type": "string",
           "description": "Grammatical gender in this language",
           "enum": ["masculine", "feminine", "neuter", "common", "animate", "inanimate"]
-        },
-        "number": {
-          "type": "string",
-          "description": "Grammatical number of the base form",
-          "enum": ["singular", "plural", "dual", "uncountable"]
         },
         "part_of_speech": {
           "type": "string",

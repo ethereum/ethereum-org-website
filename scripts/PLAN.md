@@ -44,10 +44,13 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 
 - [x] Get Gemini review/critique of the schema
 - [x] Apply Gemini feedback: per-language aliases, remove top-level term redundancy, deprecated boolean, date-time consistency
-- [x] Tabled: Slavic case declensions (handle via notes for now, revisit during pilot)
-- [ ] Pilot batch: ~10-15 terms fully translated into 3-4 diverse languages (ja, ar, fr, + Indic)
-- [ ] Validate schema handles all edge cases from the pilot
-- [ ] Iterate on schema if needed
+- [x] Tabled: Slavic case declensions (CLDR categories map to cases; one=nom.sg, few=nom.pl, many=gen.pl)
+- [x] Pilot batch: 12 terms x 6 languages (ja, ar, fr, pl, cs, hi) -- 3 Gemini batches
+- [x] Identified schema friction: morphology labels too English-centric, contexts inconsistent, Slavic plurals
+- [x] Negotiated with Gemini: POS-based morphology, term+example contexts, CLDR plurals confirmed
+- [x] Updated schema to match agreed structure
+- [ ] Normalize pilot translations into final schema format
+- [ ] Final validation pass
 
 ## Phase 5: Community Glossary Import
 
@@ -119,3 +122,7 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 | 2026-03-27 | Slavic cases deferred to notes | Full case declension tables would explode data; handle via inflection notes |
 | 2026-03-27 | Split per-language JSONs for delivery | Master file stays whole; build generates glossary-{lang}.json for API/frontend |
 | 2026-03-27 | Definition/translation glossary overlap tabled | Doc notes both sides could benefit from the other's terms; discuss later |
+| 2026-03-27 | POS-based morphology (not English-centric) | Gemini negotiation: noun.singular, verb.infinitive/participle, adjective, agent, negation, compounds |
+| 2026-03-27 | Context forms = term + optional example | Gemini can reliably distinguish all 5 contexts (prose/heading/tag/ui/code) |
+| 2026-03-27 | CLDR plurals map to Slavic cases | one=nom.sg, few=nom.pl, many=gen.pl, other=fallback; works for both next-intl and Slavic |
+| 2026-03-27 | Pilot languages: ja, ar, fr, pl, cs, hi | Covers CJK, RTL, Romance, 2x Slavic, Indic script |
