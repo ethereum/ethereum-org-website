@@ -1,7 +1,7 @@
 {
   "metadata": {
     "generated": "2026-03-26",
-    "total_confirmed": 453,
+    "total_confirmed": 455,
     "total_with_script_rule": 34,
     "total_with_morph_family": 36,
     "total_with_translation_note": 38,
@@ -3678,6 +3678,24 @@
         "base": "double spend"
       }
     },
+    "ethereum": {
+      "id": "ethereum",
+      "term": "Ethereum",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 9999,
+      "content_files": 263,
+      "intl_keys": 0,
+      "sources": [
+        "manual"
+      ],
+      "translation_note": "Proper noun. Always transliterated in non-Latin scripts (not translated). Must be consistent across all content.",
+      "forms": {
+        "base": "Ethereum"
+      }
+    },
     "ethereum classic": {
       "id": "ethereum-classic",
       "term": "Ethereum Classic",
@@ -4448,6 +4466,25 @@
       ],
       "forms": {
         "base": "proof-of-work (pow)"
+      }
+    },
+    "protocol": {
+      "id": "protocol",
+      "term": "protocol",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 500,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "ethglossary",
+        "manual"
+      ],
+      "translation_note": "Set of rules governing network communication. In Ethereum context, refers to the Ethereum protocol (the rules that define the network).",
+      "forms": {
+        "base": "protocol"
       }
     },
     "public goods": {
