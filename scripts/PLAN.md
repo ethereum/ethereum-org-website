@@ -49,8 +49,9 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 - [x] Identified schema friction: morphology labels too English-centric, contexts inconsistent, Slavic plurals
 - [x] Negotiated with Gemini: POS-based morphology, term+example contexts, CLDR plurals confirmed
 - [x] Updated schema to match agreed structure
-- [ ] Normalize pilot translations into final schema format
-- [ ] Final validation pass
+- [x] Final validation: 5 terms x 6 languages, 30/30 entries conform to schema
+- [x] Schema confirmed locked -- ready for full translation generation
+- [ ] Note for full run: enforce "onchain"/"offchain" (no hyphen) in prompts
 
 ## Phase 5: Community Glossary Import
 
