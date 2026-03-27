@@ -8,6 +8,11 @@ import type { VideoFrontmatter } from "@/lib/interfaces"
 
 import { CONTENT_DIR, DEFAULT_LOCALE } from "@/lib/constants"
 
+// Build-time caches to avoid redundant filesystem reads during static generation.
+// These are module-scoped Maps that persist for the duration of the build process.
+const videoDataCache = new Map<string, VideoData>()
+const videosCache = new Map<string, VideoCardData[]>()
+
 /**
  * Resolve the absolute path to a video's index.md for a given locale.
  * English: public/content/videos/{slug}/index.md
@@ -33,6 +38,10 @@ export function getDefaultThumbnailUrl(youtubeId: string): string {
  * Read and parse a video's index.md file for a given slug and locale.
  * Returns the full frontmatter and markdown body content.
  *
+ * Results are cached per slug+locale to avoid redundant reads during
+ * static generation (generateStaticParams, generateMetadata, and the
+ * page component all call this for the same slug).
+ *
  * For non-English locales, metadata (youtubeId, duration, etc.) is always
  * read from the English source. Title and description are overridden from
  * the translated file if available.
@@ -41,6 +50,10 @@ export async function getVideoData(
   slug: string,
   locale: string = DEFAULT_LOCALE
 ): Promise<VideoData> {
+  const cacheKey = `${locale}:${slug}`
+  const cached = videoDataCache.get(cacheKey)
+  if (cached) return cached
+
   // Always read English source for full metadata
   const enPath = videoPath(slug, DEFAULT_LOCALE)
   const enRaw = await readFile(enPath, "utf-8")
@@ -77,7 +90,9 @@ export async function getVideoData(
     }
   }
 
-  return { slug, content, frontmatter }
+  const result = { slug, content, frontmatter }
+  videoDataCache.set(cacheKey, result)
+  return result
 }
 
 /**
@@ -103,10 +118,14 @@ function toVideoCardData(data: VideoData): VideoCardData {
 /**
  * Get all videos by scanning the content/videos directory.
  * Returns flat VideoCardData[] suitable for passing to client components.
+ * Results are cached per locale for the duration of the build.
  */
 export async function getVideos(
   locale: string = DEFAULT_LOCALE
 ): Promise<VideoCardData[]> {
+  const cached = videosCache.get(locale)
+  if (cached) return cached
+
   const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
   const entries = await readdir(videosDir, { withFileTypes: true })
   const slugs = entries.filter((e) => e.isDirectory()).map((e) => e.name)
@@ -123,7 +142,9 @@ export async function getVideos(
     })
   )
 
-  return results.filter((v): v is VideoCardData => v !== null)
+  const videos = results.filter((v): v is VideoCardData => v !== null)
+  videosCache.set(locale, videos)
+  return videos
 }
 
 /**
