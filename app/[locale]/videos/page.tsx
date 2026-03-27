@@ -18,6 +18,7 @@ import { getVideos } from "@/lib/utils/videos"
 
 import VideoGalleryFilter from "./_components/VideoGalleryFilter"
 import { VIDEO_CATEGORIES } from "./constants"
+import VideosPageJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
 
@@ -38,6 +39,7 @@ const VideoGalleryPage = async (props: {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <VideosPageJsonLD locale={locale} videos={videos} />
       <MainArticle className="space-y-12">
         <SimpleHero
           breadcrumbs={<Breadcrumbs slug="videos" />}
