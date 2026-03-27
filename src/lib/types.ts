@@ -70,8 +70,7 @@ export type Frontmatter = RoadmapFrontmatter &
   UseCasesFrontmatter &
   StakingFrontmatter &
   DocsFrontmatter &
-  TutorialFrontmatter &
-  VideoFrontmatter
+  TutorialFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
 export type Layout = keyof LayoutMappingType | "docs" | "tutorial"

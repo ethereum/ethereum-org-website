@@ -90,7 +90,6 @@ const VideoLandingPage = async (props: {
 
         <p className="text-body-medium">
           {t("page-videos-date-published")}:{" "}
-          {/* // TODO: Update to use dateTimeFormat when #17791 merged */}
           {formatDate(frontmatter.uploadDate, locale, { timeZone: "UTC" })}
         </p>
 
