@@ -8,24 +8,12 @@ import { cn } from "@/lib/utils/cn"
 
 import { CommandItem } from "../ui/command"
 
-import ProgressBar from "./ProgressBar"
-
-import { useTranslation } from "@/hooks/useTranslation"
-
 type ItemProps = ComponentPropsWithoutRef<typeof CommandItem> & {
   displayInfo: LocaleDisplayInfo
 }
 
 const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
-  const {
-    localeOption,
-    sourceName,
-    targetName,
-    approvalProgress,
-    progress,
-    words,
-  } = displayInfo
-  const { t } = useTranslation("common")
+  const { localeOption, sourceName, targetName } = displayInfo
   const locale = useLocale()
   const isCurrent = localeOption === locale
 
@@ -61,11 +49,6 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
           />
         )}
       </div>
-      <p className="max-w-full text-xs lowercase text-body-medium">
-        {progress} {t("page-languages-translated")} • {words}{" "}
-        {t("page-languages-words")}
-      </p>
-      <ProgressBar value={approvalProgress} />
     </CommandItem>
   )
 }

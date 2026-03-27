@@ -242,7 +242,7 @@
       "description": "Ethers.js is a simple, compact and complete JavaScript (via TypeScript) library for interacting with Ethereum and related blockchains.\n\nIt is currently used in a very large number of Blockchain projects, including everything from block explorers to wallets (like MetaMask) and is downloaded over 7.1 million times per month (as of this writing). It is also one of the top 500 projects (by dependants) on NPM.\n\nIt was written and is maintained by me, RicMoo (Richard Moore), a random developer from Canada that is passionate about open-source and dedicates most his waking-time (and some sleeping-time) to it.\n\nHack the Planet! :)",
       "thumbnail_url": "https://storage.googleapis.com/op-atlas/f8d776ab-ca70-42ee-9e41-d4f709cd6fd4.png",
       "banner_url": "https://storage.googleapis.com/op-atlas/459bdd5e-60a5-49ca-88b8-d4537ebfec16.png",
-      "twitter": "@ricmoo",
+      "twitter": "https://x.com/ricmoo",
       "tags": [
         "frontend",
         "json-rpc",
@@ -628,14 +628,14 @@
       "description": "Runtime Verification is a leading formal verification company specializing in blockchain security and smart contract correctness. We've developed ERCx, the most comprehensive open-source testing library for ERC token standards, featuring over 500 individual tests across ERC-20, ERC-721, ERC-1155, and ERC-4626 implementations.\nERCx directly empowers Superchain builders by providing production-ready test suites that verify both standard compliance and security properties. Our library offers zero-configuration testing for deployed contracts via Foundry fork testing, plus simple integration for pre-deployment source code validation. With three testing tiers: Standard (EIP compliance), Security (vulnerability detection), and Features (implementation validation), developers can ship token contracts with confidence, knowing they've been thoroughly vetted against real-world attack vectors and edge cases.\nWhat makes ERCx particularly valuable for the Optimism ecosystem is its cross-chain compatibility and handling of complex deployment scenarios. The library seamlessly works across OP Stack chains and handles storage complexities that often challenge developers working with established tokens like USDC or stETH. By providing this critical testing infrastructure as open-source tooling, we're enabling safer, more reliable token implementations across the entire Superchain, directly supporting the ecosystem's growth while reducing the security risks that have historically plagued token contracts in DeFi.",
       "thumbnail_url": "https://storage.googleapis.com/op-atlas/e6a6dd9b-4ace-4187-8408-0e5729bb0265.png",
       "banner_url": "https://storage.googleapis.com/op-atlas/eee0738d-3735-42c8-8802-93b22a041803.png",
-      "twitter": "x.com/rv_inc",
+      "twitter": "https://x.com/rv_inc",
       "tags": [
         "foundry",
         "security",
         "erc721",
         "runtime-verification"
       ],
-      "website": "ercx.runtimeverification.com",
+      "website": "https://ercx.runtimeverification.com",
       "category": "Security, Testing & Formal Verification",
       "repos": [
         {

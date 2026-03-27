@@ -2,7 +2,7 @@
   "adoption-chart-artists-label": "கலைஞர்கள்",
   "adoption-chart-column-now-label": "இப்போது",
   "adoption-chart-companies-label": "நிறுவனங்கள்",
-  "adoption-chart-developers-label": "உருவாக்குநர்கள் (டெவலப்பர்கள்)",
+  "adoption-chart-developers-label": "உருவாக்குநர்கள்",
   "adoption-chart-gamers-label": "விளையாட்டாளர்கள்",
   "adoption-chart-investors-label": "முதலீட்டாளர்கள்",
   "adoption-chart-musicians-label": "இசைக்கலைஞர்கள்",
@@ -14,8 +14,8 @@
   "energy-consumption-chart-eth-pow-label": "ETH PoW",
   "energy-consumption-chart-gaming-us-label": "அமெரிக்காவில் கேமிங்",
   "energy-consumption-chart-global-data-centers-label": "உலகளாவிய தரவு மையங்கள்",
-  "energy-consumption-chart-netflix-label": "நெட்ஃப்ளிக்ஸ்",
-  "energy-consumption-chart-paypal-label": "பேபால்",
-  "energy-consumption-gold-mining-cbeci-label": "தங்க சுரங்கம்",
-  "energy-consumption-chart-legend": "TWh/yr இல் வருடாந்திர ஆற்றல் நுகர்வு"
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-gold-mining-cbeci-label": "தங்கச் சுரங்கம்",
+  "energy-consumption-chart-legend": "ஆண்டு ஆற்றல் நுகர்வு TWh/yr இல்"
 }
