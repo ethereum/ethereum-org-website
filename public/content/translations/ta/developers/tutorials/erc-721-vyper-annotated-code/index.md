@@ -1,9 +1,9 @@
 ---
 title: "Vyper ERC-721 ஒப்பந்த வழிகாட்டி"
-description: ரியுயா நகமுராவின் ERC-721 ஒப்பந்தம் மற்றும் அது எவ்வாறு செயல்படுகிறது
-author: ஓரி பொமரன்ட்ஸ்
+description: "ரியுயா நகமுராவின் ERC-721 ஒப்பந்தம் மற்றும் அது எவ்வாறு செயல்படுகிறது"
+author: "ஓரி பொமரன்ட்ஸ்"
 lang: ta
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: Vyper ERC-721
 published: 2021-04-01

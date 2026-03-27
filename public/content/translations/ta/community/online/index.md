@@ -1,6 +1,6 @@
 ---
-title: ஆன்லைன் சமூகங்கள்
-description: Ethereum ஆர்வலர்கள் கூடி விவாதிக்கவும் ஒத்துழைக்கவும் கூடிய ஆன்லைன் மன்றங்கள், அரட்டை அறைகள் மற்றும் சமூக ஊடக சமூகங்களைக் கண்டறியவும்.
+title: "ஆன்லைன் சமூகங்கள்"
+description: "Ethereum ஆர்வலர்கள் கூடி விவாதிக்கவும் ஒத்துழைக்கவும் கூடிய ஆன்லைன் மன்றங்கள், அரட்டை அறைகள் மற்றும் சமூக ஊடக சமூகங்களைக் கண்டறியவும்."
 lang: ta
 ---
 
@@ -70,5 +70,6 @@ lang: ta
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAO-கள் பற்றி மேலும் அறிக
     </ButtonLink>
-  </div>
+ 
+</div>
 </Callout>

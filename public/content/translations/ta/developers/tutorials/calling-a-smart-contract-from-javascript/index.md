@@ -1,10 +1,10 @@
 ---
-title: JavaScript-லிருந்து ஒரு ஸ்மார்ட் ஒப்பந்தத்தை அழைப்பது
-description: Dai டோக்கன் உதாரணத்தைப் பயன்படுத்தி JavaScript-லிருந்து ஒரு ஸ்மார்ட் ஒப்பந்தச் செயல்பாட்டை எவ்வாறு அழைப்பது
+title: "JavaScript-லிருந்து ஒரு ஸ்மார்ட் ஒப்பந்தத்தை அழைப்பது"
+description: "Dai டோக்கன் உதாரணத்தைப் பயன்படுத்தி JavaScript-லிருந்து ஒரு ஸ்மார்ட் ஒப்பந்தச் செயல்பாட்டை எவ்வாறு அழைப்பது"
 author: jdourlens
 tags: ["பரிவர்த்தனைகள்", "முன்பக்கம்", "JavaScript", "web3.js"]
 skill: beginner
-breadcrumb: JS-லிருந்து ஒப்பந்தங்களை அழைப்பது
+breadcrumb: "JS-லிருந்து ஒப்பந்தங்களை அழைப்பது"
 lang: ta
 published: 2020-04-19
 source: EthereumDev

@@ -1,6 +1,6 @@
 ---
-title: Ethereum proof-of-stake தாக்குதல் மற்றும் பாதுகாப்பு
-description: proof-of-stake Ethereum மீதான அறியப்பட்ட தாக்குதல் முறைகள் மற்றும் அவை எவ்வாறு பாதுகாக்கப்படுகின்றன என்பதைப் பற்றி அறிக.
+title: "Ethereum proof-of-stake தாக்குதல் மற்றும் பாதுகாப்பு"
+description: "proof-of-stake Ethereum மீதான அறியப்பட்ட தாக்குதல் முறைகள் மற்றும் அவை எவ்வாறு பாதுகாக்கப்படுகின்றன என்பதைப் பற்றி அறிக."
 lang: ta
 ---
 

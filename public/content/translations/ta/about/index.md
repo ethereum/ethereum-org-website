@@ -1,6 +1,6 @@
 ---
-title: எங்களைப் பற்றி
-description: ethereum.org இன் குழு, சமூகம் மற்றும் நோக்கம் பற்றி
+title: "எங்களைப் பற்றி"
+description: "ethereum.org இன் குழு, சமூகம் மற்றும் நோக்கம் பற்றி"
 lang: ta
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: ethers.js ஐப் பயன்படுத்தி டோக்கன்களை அனுப்புதல்
-description: ethers.js ஐப் பயன்படுத்தி டோக்கன்களை அனுப்புவதற்கான தொடக்கநிலையாளர் வழிகாட்டி.
-author: கிம் யோங்ஜுன்
+title: "ethers.js ஐப் பயன்படுத்தி டோக்கன்களை அனுப்புதல்"
+description: "ethers.js ஐப் பயன்படுத்தி டோக்கன்களை அனுப்புவதற்கான தொடக்கநிலையாளர் வழிகாட்டி."
+author: "கிம் யோங்ஜுன்"
 tags: ["ETHERS.JS", "ERC-20", "TOKENS"]
 skill: beginner
-breadcrumb: டோக்கன்களை அனுப்புதல்
+breadcrumb: "டோக்கன்களை அனுப்புதல்"
 lang: ta
 published: 2021-04-06
 ---

@@ -1,6 +1,6 @@
 ---
-title: Ethereum Bootnodes அறிமுகம்
-description: பூட்நோடுகளைப் புரிந்து கொள்ளத் தேவையான அடிப்படைத் தகவல்கள்
+title: "Ethereum Bootnodes அறிமுகம்"
+description: "பூட்நோடுகளைப் புரிந்து கொள்ளத் தேவையான அடிப்படைத் தகவல்கள்"
 lang: ta
 ---
 

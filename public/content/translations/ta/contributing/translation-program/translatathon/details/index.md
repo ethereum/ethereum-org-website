@@ -1,5 +1,5 @@
 ---
-title: விவரங்கள் மற்றும் விதிகள்
+title: "விவரங்கள் மற்றும் விதிகள்"
 lang: ta
 template: translatathon
 ---

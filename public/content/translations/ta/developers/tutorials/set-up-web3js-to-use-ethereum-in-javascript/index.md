@@ -1,10 +1,10 @@
 ---
-title: JavaScript-இல் Ethereum பிளாக்செயினைப் பயன்படுத்த web3.js-ஐ அமைத்தல்
-description: JavaScript பயன்பாடுகளிலிருந்து Ethereum பிளாக்செயினுடன் தொடர்புகொள்ள web3.js லைப்ரரியை எவ்வாறு அமைப்பது மற்றும் உள்ளமைப்பது என்பதை அறிக.
+title: "JavaScript-இல் Ethereum பிளாக்செயினைப் பயன்படுத்த web3.js-ஐ அமைத்தல்"
+description: "JavaScript பயன்பாடுகளிலிருந்து Ethereum பிளாக்செயினுடன் தொடர்புகொள்ள web3.js லைப்ரரியை எவ்வாறு அமைப்பது மற்றும் உள்ளமைப்பது என்பதை அறிக."
 author: "jdourlens"
-tags: ["web3.js", "javascript"]
+tags: ["web3.js", "JavaScript"]
 skill: beginner
-breadcrumb: web3.js அமைப்பு
+breadcrumb: "web3.js அமைப்பு"
 lang: ta
 published: 2020-04-11
 source: EthereumDev

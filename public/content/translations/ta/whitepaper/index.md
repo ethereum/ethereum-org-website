@@ -1,6 +1,6 @@
 ---
-title: Ethereum வெள்ளை அறிக்கை
-description: Ethereum அறிமுக அறிக்கை, இது அதன் தொடக்கத்திற்கு முன்பு 2013 இல் வெளியிடப்பட்டது.
+title: "Ethereum வெள்ளை அறிக்கை"
+description: "Ethereum அறிமுக அறிக்கை, இது அதன் தொடக்கத்திற்கு முன்பு 2013 இல் வெளியிடப்பட்டது."
 lang: ta
 sidebarDepth: 2
 hideEditButton: true

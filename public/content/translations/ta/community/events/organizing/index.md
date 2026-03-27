@@ -1,6 +1,6 @@
 ---
-title: ஒரு Ethereum நிகழ்வை ஏற்பாடு செய்தல்
-description: ஒரு Ethereum நிகழ்வை எவ்வாறு ஏற்பாடு செய்வது
+title: "ஒரு Ethereum நிகழ்வை ஏற்பாடு செய்தல்"
+description: "ஒரு Ethereum நிகழ்வை எவ்வாறு ஏற்பாடு செய்வது"
 lang: ta
 hideEditButton: true
 ---

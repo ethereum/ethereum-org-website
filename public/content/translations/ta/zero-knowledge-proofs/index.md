@@ -1,6 +1,6 @@
 ---
-title: பூஜ்ஜிய அறிவுச் சான்றுகள் (Zero-knowledge proofs)
-description: ஆரம்பநிலையாளர்களுக்கான பூஜ்ஜிய அறிவுச் சான்றுகள் பற்றிய தொழில்நுட்பம் அல்லாத அறிமுகம்.
+title: "பூஜ்ஜிய அறிவுச் சான்றுகள் (Zero-knowledge proofs)"
+description: "ஆரம்பநிலையாளர்களுக்கான பூஜ்ஜிய அறிவுச் சான்றுகள் பற்றிய தொழில்நுட்பம் அல்லாத அறிமுகம்."
 lang: ta
 ---
 
@@ -59,8 +59,10 @@ lang: ta
       <p>
         பூட்டான் NDI பற்றி <a href="/decentralized-identity/#national-and-government-id">பரவலாக்கப்பட்ட அடையாள வழக்கு ஆய்வில்</a> மேலும் அறிக.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### மனிதநேயச் சான்று (Proof of Humanity) {#proof-of-humanity}

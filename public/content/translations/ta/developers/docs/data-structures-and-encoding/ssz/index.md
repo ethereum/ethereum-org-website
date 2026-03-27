@@ -1,6 +1,6 @@
 ---
-title: எளிய வரிசையாக்கம் (Simple serialize)
-description: எத்தேரியத்தின் SSZ வடிவமைப்பு பற்றிய விளக்கம்.
+title: "எளிய வரிசையாக்கம் (Simple serialize)"
+description: "எத்தேரியத்தின் SSZ வடிவமைப்பு பற்றிய விளக்கம்."
 lang: ta
 sidebarDepth: 2
 ---

@@ -1,11 +1,11 @@
 ---
-title: உங்கள் ETH-ஐ வீட்டிலிருந்தே ஸ்டேக் செய்யுங்கள்
-description: உங்கள் ETH-ஐ வீட்டிலிருந்தே ஸ்டேக் செய்வதை எவ்வாறு தொடங்குவது என்பதற்கான மேலோட்டம்
+title: "உங்கள் ETH-ஐ வீட்டிலிருந்தே ஸ்டேக் செய்யுங்கள்"
+description: "உங்கள் ETH-ஐ வீட்டிலிருந்தே ஸ்டேக் செய்வதை எவ்வாறு தொடங்குவது என்பதற்கான மேலோட்டம்"
 lang: ta
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: லெஸ்லி காண்டாமிருகம் தனது சொந்த கம்ப்யூட்டர் சிப்பில் உள்ளது.
+alt: "லெஸ்லி காண்டாமிருகம் தனது சொந்த கம்ப்யூட்டர் சிப்பில் உள்ளது."
 sidebarDepth: 2
 summaryPoints:
   - உங்கள் வேலிடேட்டரைச் சரியாகச் செயல்பட வைப்பதற்கும் ஆன்லைனில் வைத்திருப்பதற்கும் நெறிமுறையிலிருந்து நேரடியாக அதிகபட்ச வெகுமதிகளைப் பெறுங்கள்
@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> ஸ்லாஷிங் மற்றும் வேலிடேட்டர் வாழ்க்கைச் சுழற்சி பற்றி மேலும்</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

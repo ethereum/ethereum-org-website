@@ -1,6 +1,6 @@
 ---
-title: சுரங்க வழிமுறைகள்
-description: Ethereum சுரங்கத்திற்குப் பயன்படுத்தப்படும் வழிமுறைகள் பற்றிய விரிவான பார்வை.
+title: "சுரங்க வழிமுறைகள்"
+description: "Ethereum சுரங்கத்திற்குப் பயன்படுத்தப்படும் வழிமுறைகள் பற்றிய விரிவான பார்வை."
 lang: ta
 ---
 
@@ -8,7 +8,7 @@ lang: ta
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-Proof-of-work (வேலைக்கான சான்று) இனி Ethereum இன் ஒருமித்த பொறிமுறையின் அடிப்படையாக இல்லை, அதாவது சுரங்கம் (mining) நிறுத்தப்பட்டுள்ளது. அதற்குப் பதிலாக, ETH ஐப் பணயம் வைக்கும் (stake) மதிப்பீட்டாளர்களால் (validators) Ethereum பாதுகாக்கப்படுகிறது. நீங்கள் இன்றே உங்கள் ETH ஐப் பணயம் வைக்கத் தொடங்கலாம். <a href='/roadmap/merge/'>The Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake (பங்குச் சான்று)</a> மற்றும் <a href='/staking/'>staking (பணயம் வைத்தல்)</a> பற்றி மேலும் படிக்கவும். இந்தப் பக்கம் வரலாற்று ஆர்வத்திற்காக மட்டுமே.
+Proof-of-work (வேலைக்கான சான்று) இனி Ethereum இன் ஒருமித்த பொறிமுறையின் அடிப்படையாக இல்லை, அதாவது சுரங்கம் (mining) நிறுத்தப்பட்டுள்ளது. அதற்குப் பதிலாக, ETH ஐப் பணயம் வைக்கும் (stake) வேலிடேட்டர்களால் (validators) Ethereum பாதுகாக்கப்படுகிறது. நீங்கள் இன்றே உங்கள் ETH ஐப் பணயம் வைக்கத் தொடங்கலாம். <a href='/roadmap/merge/'>The Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake (பங்குச் சான்று)</a> மற்றும் <a href='/staking/'>staking (பணயம் வைத்தல்)</a> பற்றி மேலும் படிக்கவும். இந்தப் பக்கம் வரலாற்று ஆர்வத்திற்காக மட்டுமே.
 </AlertDescription>
 </AlertContent>
 </Alert>

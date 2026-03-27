@@ -1,6 +1,6 @@
 ---
-title: Ethereum காப்பக நோடு
-description: காப்பக நோடுகளின் மேலோட்டம்
+title: "Ethereum காப்பக நோடு"
+description: "காப்பக நோடுகளின் மேலோட்டம்"
 lang: ta
 sidebarDepth: 2
 ---

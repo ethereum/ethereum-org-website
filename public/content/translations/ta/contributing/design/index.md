@@ -1,6 +1,6 @@
 ---
-title: வடிவமைப்பு பங்களிப்பு
-description: ethereum.org-க்கு வடிவமைப்பு பங்களிப்பு
+title: "வடிவமைப்பு பங்களிப்பு"
+description: "ethereum.org-க்கு வடிவமைப்பு பங்களிப்பு"
 lang: ta
 ---
 

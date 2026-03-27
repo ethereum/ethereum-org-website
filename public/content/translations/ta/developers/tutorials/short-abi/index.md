@@ -1,11 +1,11 @@
 ---
 title: "கால்-டேட்டா (Calldata) மேம்படுத்தலுக்கான சுருக்கமான ABI-கள்"
 description: "ஆப்டிமிஸ்டிக் ரோலப்களுக்கான (Optimistic Rollups) ஸ்மார்ட் ஒப்பந்தங்களை மேம்படுத்துதல்"
-author: ஓரி பொமரன்ட்ஸ்
+author: "ஓரி பொமரன்ட்ஸ்"
 lang: ta
 tags: ["லேயர் 2"]
 skill: intermediate
-breadcrumb: சுருக்கமான ABI-கள்
+breadcrumb: "சுருக்கமான ABI-கள்"
 published: 2022-04-01
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: டோக்கன் தரநிலைகள்
-description: பூஞ்சையக்கூடிய (fungible) மற்றும் பூஞ்சையற்ற (non-fungible) டோக்கன்களுக்கான ERC-20, ERC-721 மற்றும் ERC-1155 உள்ளிட்ட Ethereum டோக்கன் தரநிலைகளை ஆராயுங்கள்.
+title: "டோக்கன் தரநிலைகள்"
+description: "பூஞ்சையக்கூடிய (fungible) மற்றும் பூஞ்சையற்ற (non-fungible) டோக்கன்களுக்கான ERC-20, ERC-721 மற்றும் ERC-1155 உள்ளிட்ட Ethereum டோக்கன் தரநிலைகளை ஆராயுங்கள்."
 lang: ta
 incomplete: true
 ---

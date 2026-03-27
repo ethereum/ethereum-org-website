@@ -1,6 +1,6 @@
 ---
-title: Pectra 7702 வழிகாட்டுதல்கள்
-description: Pectra வெளியீட்டில் 7702 பற்றி மேலும் அறிக
+title: "Pectra 7702 வழிகாட்டுதல்கள்"
+description: "Pectra வெளியீட்டில் 7702 பற்றி மேலும் அறிக"
 lang: ta
 ---
 

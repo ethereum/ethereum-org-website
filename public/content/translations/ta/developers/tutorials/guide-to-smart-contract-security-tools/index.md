@@ -1,11 +1,11 @@
 ---
-title: ஸ்மார்ட் ஒப்பந்த பாதுகாப்பு கருவிகளுக்கான வழிகாட்டி
-description: மூன்று வெவ்வேறு சோதனை மற்றும் நிரல் பகுப்பாய்வு நுட்பங்களின் கண்ணோட்டம்
+title: "ஸ்மார்ட் ஒப்பந்த பாதுகாப்பு கருவிகளுக்கான வழிகாட்டி"
+description: "மூன்று வெவ்வேறு சோதனை மற்றும் நிரல் பகுப்பாய்வு நுட்பங்களின் கண்ணோட்டம்"
 author: "ட்ரெயில்ஆஃப்பிட்ஸ்"
 lang: ta
-tags: ["solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு"]
+tags: ["Solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு"]
 skill: intermediate
-breadcrumb: பாதுகாப்பு கருவிகள்
+breadcrumb: "பாதுகாப்பு கருவிகள்"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

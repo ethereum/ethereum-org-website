@@ -1,6 +1,6 @@
 ---
-title: கேஸ்பர் (Gasper)
-description: கேஸ்பர் (Gasper) ப்ரூஃப்-ஆஃப்-ஸ்டேக் (proof-of-stake) பொறிமுறையின் விளக்கம்.
+title: "கேஸ்பர் (Gasper)"
+description: "கேஸ்பர் (Gasper) ப்ரூஃப்-ஆஃப்-ஸ்டேக் (proof-of-stake) பொறிமுறையின் விளக்கம்."
 lang: ta
 ---
 

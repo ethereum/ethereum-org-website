@@ -1,6 +1,6 @@
 ---
-title: Dart டெவலப்பர்களுக்கான Ethereum
-description: Dart மொழியைப் பயன்படுத்தி Ethereum-க்கு எவ்வாறு உருவாக்குவது என்பதை அறிக
+title: "Dart டெவலப்பர்களுக்கான Ethereum"
+description: "Dart மொழியைப் பயன்படுத்தி Ethereum-க்கு எவ்வாறு உருவாக்குவது என்பதை அறிக"
 lang: ta
 incomplete: true
 ---

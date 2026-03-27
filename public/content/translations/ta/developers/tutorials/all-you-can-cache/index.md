@@ -1,10 +1,10 @@
 ---
 title: "உங்களால் முடிந்த அனைத்தையும் கேச் (cache) செய்யுங்கள்"
-description: மலிவான ரோலப் (rollup) பரிவர்த்தனைகளுக்கு கேச்சிங் (caching) ஒப்பந்தத்தை எவ்வாறு உருவாக்குவது மற்றும் பயன்படுத்துவது என்பதை அறிக
-author: ஓரி பொமரன்ட்ஸ்
+description: "மலிவான ரோலப் (rollup) பரிவர்த்தனைகளுக்கு கேச்சிங் (caching) ஒப்பந்தத்தை எவ்வாறு உருவாக்குவது மற்றும் பயன்படுத்துவது என்பதை அறிக"
+author: "ஓரி பொமரன்ட்ஸ்"
 tags: ["லேயர் 2", "கேச்சிங்", "சேமிப்பகம்", "ஸ்கேலிங்"]
 skill: intermediate
-breadcrumb: ரோலப்களுக்கான கேச்சிங்
+breadcrumb: "ரோலப்களுக்கான கேச்சிங்"
 published: 2022-09-15
 lang: ta
 ---
@@ -757,6 +757,7 @@ contract WORM is Cache {
 Foundry இல் குறியீடு [ஒரு நிகழ்வைச் சரியாக வெளியிடுகிறதா](https://getfoundry.sh/reference/cheatcodes/expect-emit/) என்பதை நாம் சரிபார்க்கும் வழி இதுதான்.
 
 ### கிளையன்ட் {#the-client}
+
 Solidity சோதனைகளில் உங்களுக்குக் கிடைக்காத ஒன்று, உங்கள் சொந்தப் பயன்பாட்டில் வெட்டி ஒட்டக்கூடிய JavaScript குறியீடு ஆகும். அந்தக் குறியீட்டை எழுத நான் WORM ஐ [Optimism இன்](https://www.optimism.io/) புதிய டெஸ்ட்நெட்டான (testnet) [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli) இல் டிப்ளாய் (deploy) செய்தேன். இது [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a) என்ற முகவரியில் உள்ளது.
 
 [கிளையன்ட்டிற்கான JavaScript குறியீட்டை நீங்கள் இங்கே பார்க்கலாம்](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). இதைப் பயன்படுத்த:

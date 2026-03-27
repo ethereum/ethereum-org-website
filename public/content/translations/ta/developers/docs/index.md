@@ -1,6 +1,6 @@
 ---
-title: Ethereum மேம்பாட்டு ஆவணங்கள்
-description: ethereum.org டெவலப்பர் ஆவணங்களின் அறிமுகம்.
+title: "Ethereum மேம்பாட்டு ஆவணங்கள்"
+description: "ethereum.org டெவலப்பர் ஆவணங்களின் அறிமுகம்."
 lang: ta
 ---
 

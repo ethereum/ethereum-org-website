@@ -1,13 +1,13 @@
 ---
-title: ஆரம்பநிலையாளர்களுக்கான Hello World ஸ்மார்ட் ஒப்பந்தம் - Fullstack
-description: Ethereum இல் ஒரு எளிய ஸ்மார்ட் ஒப்பந்தத்தை எழுதி டெப்லாய் செய்வது குறித்த அறிமுகப் பயிற்சி.
+title: "ஆரம்பநிலையாளர்களுக்கான Hello World ஸ்மார்ட் ஒப்பந்தம் - Fullstack"
+description: "Ethereum இல் ஒரு எளிய ஸ்மார்ட் ஒப்பந்தத்தை எழுதி டெப்லாய் செய்வது குறித்த அறிமுகப் பயிற்சி."
 author: "nstrike2"
 breadcrumb: Hello World fullstack
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "ஸ்மார்ட் ஒப்பந்தங்கள்",
     "டெப்லாய் செய்தல்",
     "பிளாக் எக்ஸ்ப்ளோரர்",
@@ -834,8 +834,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

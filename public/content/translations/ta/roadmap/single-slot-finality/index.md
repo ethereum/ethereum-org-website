@@ -1,6 +1,6 @@
 ---
-title: ஒற்றை ஸ்லாட் இறுதிநிலை (Single slot finality)
-description: ஒற்றை ஸ்லாட் இறுதிநிலை பற்றிய விளக்கம்
+title: "ஒற்றை ஸ்லாட் இறுதிநிலை (Single slot finality)"
+description: "ஒற்றை ஸ்லாட் இறுதிநிலை பற்றிய விளக்கம்"
 lang: ta
 ---
 

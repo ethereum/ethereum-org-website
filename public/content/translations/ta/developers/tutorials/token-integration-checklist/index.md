@@ -1,13 +1,13 @@
 ---
-title: டோக்கன் ஒருங்கிணைப்பு சரிபார்ப்புப் பட்டியல்
-description: டோக்கன்களுடன் தொடர்பு கொள்ளும்போது கருத்தில் கொள்ள வேண்டிய விஷயங்களின் சரிபார்ப்புப் பட்டியல்
+title: "டோக்கன் ஒருங்கிணைப்பு சரிபார்ப்புப் பட்டியல்"
+description: "டோக்கன்களுடன் தொடர்பு கொள்ளும்போது கருத்தில் கொள்ள வேண்டிய விஷயங்களின் சரிபார்ப்புப் பட்டியல்"
 author: "ட்ரெயில்ஆஃப்பிட்ஸ்"
 lang: ta
-tags: ["solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு", "டோக்கன்கள்"]
+tags: ["Solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு", "டோக்கன்கள்"]
 skill: intermediate
-breadcrumb: டோக்கன் ஒருங்கிணைப்பு
+breadcrumb: "டோக்கன் ஒருங்கிணைப்பு"
 published: 2020-08-13
-source: பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

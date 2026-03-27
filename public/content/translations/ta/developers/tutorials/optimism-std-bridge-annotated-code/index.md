@@ -1,10 +1,10 @@
 ---
 title: "Optimism நிலையான பால ஒப்பந்தத்தின் (standard bridge contract) வழிகாட்டி"
-description: Optimism-க்கான நிலையான பாலம் எவ்வாறு செயல்படுகிறது? இது ஏன் இவ்வாறு செயல்படுகிறது?
-author: ஓரி பொமரன்ட்ஸ்
-tags: ["solidity", "பாலம்", "அடுக்கு 2"]
+description: "Optimism-க்கான நிலையான பாலம் எவ்வாறு செயல்படுகிறது? இது ஏன் இவ்வாறு செயல்படுகிறது?"
+author: "ஓரி பொமரன்ட்ஸ்"
+tags: ["Solidity", "பாலம்", "அடுக்கு 2"]
 skill: intermediate
-breadcrumb: Optimism பாலம்
+breadcrumb: "Optimism பாலம்"
 published: 2022-03-30
 lang: ta
 ---

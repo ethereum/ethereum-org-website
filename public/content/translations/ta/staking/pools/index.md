@@ -1,11 +1,11 @@
 ---
-title: குழுவாக்கப்பட்ட ஸ்டேக்கிங்
-description: ஸ்டேக்கிங் குழுக்கள் பற்றி அறிக
+title: "குழுவாக்கப்பட்ட ஸ்டேக்கிங்"
+description: "ஸ்டேக்கிங் குழுக்கள் பற்றி அறிக"
 lang: ta
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: லெஸ்லி காண்டாமிருகம் குளத்தில் நீந்துகிறது.
+alt: "லெஸ்லி காண்டாமிருகம் குளத்தில் நீந்துகிறது."
 sidebarDepth: 2
 summaryPoints:
   - மற்றவர்களுடன் இணைந்து எந்தவொரு அளவு ETH-ஐயும் ஸ்டேக் செய்து வெகுமதிகளைப் பெறுங்கள்

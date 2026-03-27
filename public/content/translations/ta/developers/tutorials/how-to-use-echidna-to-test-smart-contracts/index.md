@@ -1,13 +1,13 @@
 ---
-title: ஸ்மார்ட் ஒப்பந்தங்களைச் சோதிக்க Echidna-ஐ எவ்வாறு பயன்படுத்துவது
-description: ஸ்மார்ட் ஒப்பந்தங்களைத் தானாகச் சோதிக்க Echidna-ஐ எவ்வாறு பயன்படுத்துவது
+title: "ஸ்மார்ட் ஒப்பந்தங்களைச் சோதிக்க Echidna-ஐ எவ்வாறு பயன்படுத்துவது"
+description: "ஸ்மார்ட் ஒப்பந்தங்களைத் தானாகச் சோதிக்க Echidna-ஐ எவ்வாறு பயன்படுத்துவது"
 author: "ட்ரெயில்ஆஃப்பிட்ஸ்"
 lang: ta
-tags: ["solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு", "சோதனை", "ஃபஸ்ஸிங்"]
+tags: ["Solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு", "சோதனை", "ஃபஸ்ஸிங்"]
 skill: advanced
 breadcrumb: Echidna
 published: 2020-04-10
-source: பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

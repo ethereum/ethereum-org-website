@@ -1,11 +1,11 @@
 ---
-title: பைதான் டெவலப்பர்களுக்கான எத்தேரியம் அறிமுகம், பகுதி 1
-description: எத்தேரியம் மேம்பாடு குறித்த அறிமுகம், குறிப்பாக பைதான் நிரலாக்க மொழி தெரிந்தவர்களுக்கு மிகவும் பயனுள்ளதாக இருக்கும்
-author: மார்க் கரோ
+title: "பைதான் டெவலப்பர்களுக்கான எத்தேரியம் அறிமுகம், பகுதி 1"
+description: "எத்தேரியம் மேம்பாடு குறித்த அறிமுகம், குறிப்பாக பைதான் நிரலாக்க மொழி தெரிந்தவர்களுக்கு மிகவும் பயனுள்ளதாக இருக்கும்"
+author: "மார்க் கரோ"
 lang: ta
-tags: ["python", "web3.py"]
+tags: ["Python", "web3.py"]
 skill: beginner
-breadcrumb: பைதானுடன் எத்தேரியம்
+breadcrumb: "பைதானுடன் எத்தேரியம்"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

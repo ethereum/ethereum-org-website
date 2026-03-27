@@ -1,7 +1,7 @@
 ---
-title: எரிவாயு மற்றும் கட்டணங்கள்
+title: "எரிவாயு மற்றும் கட்டணங்கள்"
 metaTitle: "Ethereum எரிவாயு மற்றும் கட்டணங்கள்: தொழில்நுட்ப கண்ணோட்டம்"
-description: Ethereum எரிவாயு கட்டணங்கள், அவை எவ்வாறு கணக்கிடப்படுகின்றன, மற்றும் நெட்வொர்க் பாதுகாப்பு மற்றும் பரிவர்த்தனை செயலாக்கத்தில் அவற்றின் பங்கு பற்றி அறிக.
+description: "Ethereum எரிவாயு கட்டணங்கள், அவை எவ்வாறு கணக்கிடப்படுகின்றன, மற்றும் நெட்வொர்க் பாதுகாப்பு மற்றும் பரிவர்த்தனை செயலாக்கத்தில் அவற்றின் பங்கு பற்றி அறிக."
 lang: ta
 ---
 
@@ -130,8 +130,8 @@ Ethereum [அளவிடுதல் மேம்படுத்தல்கள
 
 நீங்கள் எரிவாயு விலைகளைக் கண்காணிக்க விரும்பினால், உங்கள் ETH-ஐக் குறைந்த விலையில் அனுப்பலாம், இது போன்ற பல வெவ்வேறு கருவிகளை நீங்கள் பயன்படுத்தலாம்:
 
-- [Etherscan](https://etherscan.io/gastracker) _பரிவர்த்தனை எரிவாயு விலை மதிப்பீட்டாளர்_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _ஓப்பன் சோர்ஸ் பரிவர்த்தனை எரிவாயு விலை மதிப்பீட்டாளர்_
+- [Etherscan](https://etherscan.io/gastracker) _பரிவர்த்தனை எரிவாயு விலை வேலிடேட்டர்_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _ஓப்பன் சோர்ஸ் பரிவர்த்தனை எரிவாயு விலை வேலிடேட்டர்_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _பரிவர்த்தனை கட்டணங்களைக் குறைக்கவும் பணத்தைச் சேமிக்கவும் Ethereum மற்றும் L2 எரிவாயு விலைகளைக் கண்காணித்துப் பின்தொடரவும்_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Type 0 மரபுப் பரிவர்த்தனைகள் மற்றும் Type 2 EIP-1559 பரிவர்த்தனைகள் இரண்டையும் ஆதரிக்கும் எரிவாயுவை மதிப்பிடும் Chrome நீட்டிப்பு._
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Mainnet, Arbitrum மற்றும் Polygon ஆகியவற்றில் வெவ்வேறு பரிவர்த்தனை வகைகளுக்கு உங்கள் உள்ளூர் நாணயத்தில் எரிவாயு கட்டணங்களைக் கணக்கிடுங்கள்._

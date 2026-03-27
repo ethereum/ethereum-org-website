@@ -1,6 +1,6 @@
 ---
-title: நிரலாக்க மொழிகள்
-description: JavaScript, Python, Go, Rust மற்றும் பல நிரலாக்க மொழிகளுக்கான Ethereum மேம்பாட்டு வளங்களைக் கண்டறியவும்.
+title: "நிரலாக்க மொழிகள்"
+description: "JavaScript, Python, Go, Rust மற்றும் பல நிரலாக்க மொழிகளுக்கான Ethereum மேம்பாட்டு வளங்களைக் கண்டறியவும்."
 lang: ta
 ---
 

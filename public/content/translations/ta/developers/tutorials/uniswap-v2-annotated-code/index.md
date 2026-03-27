@@ -1,10 +1,10 @@
 ---
 title: "Uniswap-v2 ஒப்பந்தத்தின் வழிகாட்டி"
-description: Uniswap-v2 ஒப்பந்தம் எவ்வாறு செயல்படுகிறது? அது ஏன் அவ்வாறு எழுதப்பட்டுள்ளது?
-author: ஓரி பொமரன்ட்ஸ்
-tags: ["solidity", "dapps"]
+description: "Uniswap-v2 ஒப்பந்தம் எவ்வாறு செயல்படுகிறது? அது ஏன் அவ்வாறு எழுதப்பட்டுள்ளது?"
+author: "ஓரி பொமரன்ட்ஸ்"
+tags: ["Solidity", "dapps"]
 skill: intermediate
-breadcrumb: Uniswap v2 வழிகாட்டி
+breadcrumb: "Uniswap v2 வழிகாட்டி"
 published: 2021-05-01
 lang: ta
 ---

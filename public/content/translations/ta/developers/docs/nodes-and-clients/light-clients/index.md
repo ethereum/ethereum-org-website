@@ -1,6 +1,6 @@
 ---
-title: லைட் கிளைண்டுகள்
-description: Ethereum லைட் கிளைண்டுகளுக்கான அறிமுகம்.
+title: "லைட் கிளைண்டுகள்"
+description: "Ethereum லைட் கிளைண்டுகளுக்கான அறிமுகம்."
 lang: ta
 ---
 

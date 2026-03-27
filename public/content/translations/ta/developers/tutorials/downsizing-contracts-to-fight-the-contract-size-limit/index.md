@@ -1,11 +1,11 @@
 ---
 title: "ஒப்பந்த அளவின் வரம்பை எதிர்கொள்ள ஒப்பந்தங்களின் அளவைக் குறைத்தல்"
 description: "உங்கள் ஸ்மார்ட் ஒப்பந்தங்கள் மிகப் பெரியதாக மாறுவதைத் தடுக்க நீங்கள் என்ன செய்யலாம்?"
-author: மார்கஸ் வாஸ்
+author: "மார்கஸ் வாஸ்"
 lang: ta
-tags: ["solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "சேமிப்பகம்"]
+tags: ["Solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "சேமிப்பகம்"]
 skill: intermediate
-breadcrumb: ஒப்பந்தங்களின் அளவைக் குறைத்தல்
+breadcrumb: "ஒப்பந்தங்களின் அளவைக் குறைத்தல்"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

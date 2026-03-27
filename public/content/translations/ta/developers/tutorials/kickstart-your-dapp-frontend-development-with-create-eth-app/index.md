@@ -1,9 +1,9 @@
 ---
-title: create-eth-app மூலம் உங்கள் dapp ஃபிரண்ட்எண்ட் மேம்பாட்டைத் தொடங்குங்கள்
-description: create-eth-app மற்றும் அதன் அம்சங்களை எவ்வாறு பயன்படுத்துவது என்பதற்கான மேலோட்டம்
+title: "create-eth-app மூலம் உங்கள் dapp ஃபிரண்ட்எண்ட் மேம்பாட்டைத் தொடங்குங்கள்"
+description: "create-eth-app மற்றும் அதன் அம்சங்களை எவ்வாறு பயன்படுத்துவது என்பதற்கான மேலோட்டம்"
 author: "மார்கஸ் வாஸ்"
 tags:
-  ["ஃபிரண்ட்எண்ட்", "javascript", "ethers.js", "the graph", "defi"]
+  ["ஃபிரண்ட்எண்ட்", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: ta

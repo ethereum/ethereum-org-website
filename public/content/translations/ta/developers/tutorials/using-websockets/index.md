@@ -1,12 +1,12 @@
 ---
-title: WebSockets-ஐப் பயன்படுத்துதல்
-description: JSON-RPC கோரிக்கைகளைச் செய்வதற்கும் நிகழ்வுகளுக்குச் சந்தா செலுத்துவதற்கும் WebSockets மற்றும் Alchemy-ஐப் பயன்படுத்துவதற்கான வழிகாட்டி.
+title: "WebSockets-ஐப் பயன்படுத்துதல்"
+description: "JSON-RPC கோரிக்கைகளைச் செய்வதற்கும் நிகழ்வுகளுக்குச் சந்தா செலுத்துவதற்கும் WebSockets மற்றும் Alchemy-ஐப் பயன்படுத்துவதற்கான வழிகாட்டி."
 author: "எலான் ஹால்பெர்ன்"
 lang: ta
-tags: ["alchemy", "websockets", "querying", "javascript"]
+tags: ["Alchemy", "websockets", "querying", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
-source: Alchemy ஆவணங்கள்
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---

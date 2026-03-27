@@ -1,6 +1,6 @@
 ---
-title: ERC-4626 டோக்கனாக்கப்பட்ட வால்ட் தரநிலை
-description: வருவாய் ஈட்டும் வால்ட்டுகளுக்கான (yield bearing vaults) ஒரு தரநிலை.
+title: "ERC-4626 டோக்கனாக்கப்பட்ட வால்ட் தரநிலை"
+description: "வருவாய் ஈட்டும் வால்ட்டுகளுக்கான (yield bearing vaults) ஒரு தரநிலை."
 lang: ta
 ---
 

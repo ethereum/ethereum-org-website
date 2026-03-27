@@ -1,11 +1,11 @@
 ---
-title: சோதனைக்காக Solidity ஸ்மார்ட் ஒப்பந்தங்களை மாக்கிங் (mocking) செய்வது எப்படி
-description: சோதனையின் போது உங்கள் ஒப்பந்தங்களை ஏன் மாக்கிங் செய்ய வேண்டும்
-author: மார்கஸ் வாஸ்
+title: "சோதனைக்காக Solidity ஸ்மார்ட் ஒப்பந்தங்களை மாக்கிங் (mocking) செய்வது எப்படி"
+description: "சோதனையின் போது உங்கள் ஒப்பந்தங்களை ஏன் மாக்கிங் செய்ய வேண்டும்"
+author: "மார்கஸ் வாஸ்"
 lang: ta
-tags: ["solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "சோதனை", "மாக்கிங்"]
+tags: ["Solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "சோதனை", "மாக்கிங்"]
 skill: intermediate
-breadcrumb: ஒப்பந்தங்களை மாக்கிங் செய்தல்
+breadcrumb: "ஒப்பந்தங்களை மாக்கிங் செய்தல்"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

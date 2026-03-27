@@ -1,11 +1,11 @@
 ---
 title: "ERC-20 ஒப்பந்தத்தின் வழிகாட்டி"
-description: OpenZeppelin ERC-20 ஒப்பந்தத்தில் என்ன இருக்கிறது, அது ஏன் அங்கு இருக்கிறது?
-author: ஓரி பொமரன்ட்ஸ்
+description: "OpenZeppelin ERC-20 ஒப்பந்தத்தில் என்ன இருக்கிறது, அது ஏன் அங்கு இருக்கிறது?"
+author: "ஓரி பொமரன்ட்ஸ்"
 lang: ta
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: ERC-20 வழிகாட்டி
+breadcrumb: "ERC-20 வழிகாட்டி"
 published: 2021-03-09
 ---
 

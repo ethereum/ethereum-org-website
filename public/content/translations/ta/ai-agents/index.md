@@ -1,16 +1,16 @@
 ---
-title: AI ஏஜெண்டுகள்
-metaTitle: AI ஏஜெண்டுகள் | Ethereum-இல் AI ஏஜெண்டுகள்
-description: Ethereum-இல் உள்ள AI ஏஜெண்டுகளின் மேலோட்டம்
+title: "AI ஏஜெண்டுகள்"
+metaTitle: "AI ஏஜெண்டுகள் | Ethereum-இல் AI ஏஜெண்டுகள்"
+description: "Ethereum-இல் உள்ள AI ஏஜெண்டுகளின் மேலோட்டம்"
 lang: ta
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: டெர்மினல் மேசையைச் சுற்றி கூடியிருக்கும் மக்கள்
-summaryPoint1: பிளாக்செயினுடன் தொடர்புகொண்டு தன்னிச்சையாக வர்த்தகம் செய்யும் AI
-summaryPoint2: ஆன்செயின் வாலெட்டுகள் மற்றும் நிதிகளைக் கட்டுப்படுத்துகிறது
-summaryPoint3: வேலைக்காக மனிதர்களையோ அல்லது பிற ஏஜெண்டுகளையோ பணியமர்த்துகிறது
+alt: "டெர்மினல் மேசையைச் சுற்றி கூடியிருக்கும் மக்கள்"
+summaryPoint1: "பிளாக்செயினுடன் தொடர்புகொண்டு தன்னிச்சையாக வர்த்தகம் செய்யும் AI"
+summaryPoint2: "ஆன்செயின் வாலெட்டுகள் மற்றும் நிதிகளைக் கட்டுப்படுத்துகிறது"
+summaryPoint3: "வேலைக்காக மனிதர்களையோ அல்லது பிற ஏஜெண்டுகளையோ பணியமர்த்துகிறது"
 buttons:
   - content: AI ஏஜெண்டுகள் என்றால் என்ன?
     toId: what-are-ai-agents

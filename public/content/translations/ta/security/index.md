@@ -1,6 +1,6 @@
 ---
-title: Ethereum பாதுகாப்பு மற்றும் மோசடி தடுப்பு
-description: Ethereum-ல் பாதுகாப்பாக இருத்தல்
+title: "Ethereum பாதுகாப்பு மற்றும் மோசடி தடுப்பு"
+description: "Ethereum-ல் பாதுகாப்பாக இருத்தல்"
 lang: ta
 ---
 
