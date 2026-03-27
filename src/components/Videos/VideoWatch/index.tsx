@@ -46,10 +46,7 @@ const VideoWatch = async ({ slug, startTime }: VideoWatchProps) => {
           {frontmatter.description.split(/(?<=\.)\s/)[0]}
         </p>
         {hasTranscript && (
-          <LinkWithArrow
-            href={`/videos/${slug}/`}
-            className="inline//-block text-//sm font-//medium"
-          >
+          <LinkWithArrow href={`/videos/${slug}/`}>
             {t("page-videos-watch-with-transcript")}
           </LinkWithArrow>
         )}
