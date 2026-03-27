@@ -1,0 +1,12 @@
+{
+  "before-you-read": "읽기 전에",
+  "heading": "이더리움을 이해하고 싶으신가요?",
+  "description": "이 백서는 이더리움이 출시되기 전인 <strong>2014년</strong>에 발행되었습니다. 10년 이상의 개발, 주요 업그레이드 및 생태계 성장을 거치면서 <strong>원본 백서는 더 이상 현재의 이더리움을 반영하지 않습니다</strong>.",
+  "cta-learn": "오늘날의 이더리움에 대해 알아보기",
+  "cta-download-pdf": "원본 PDF 다운로드 (2014)",
+  "whats-changed": "2014년 이후 무엇이 달라졌나요?",
+  "evolution-pos": "이더리움은 작업증명에서 지분증명으로 전환되었습니다(머지(The Merge), 2022년)",
+  "evolution-l2": "레이어2 확장 솔루션은 이제 수백만 건의 트랜잭션을 처리합니다",
+  "evolution-usecases": "DeFi, NFT 및 DAO가 주요 사용 사례로 등장했습니다",
+  "evolution-standards": "스마트 컨트랙트 표준(ERC-20, ERC-721)이 산업의 기반이 되었습니다"
+}

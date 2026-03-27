@@ -11,6 +11,7 @@ tags:
     "tworzenie atrap"
   ]
 skill: intermediate
+breadcrumb: "Mockowanie kontraktów"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

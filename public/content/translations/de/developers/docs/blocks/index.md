@@ -1,152 +1,153 @@
 ---
-title: Blöcke
-description: Eine Übersicht über Blöcke in der Ethereum Blockchain – ihre Datenstruktur, warum sie benötigt werden und wie sie erstellt werden.
+title: "Blöcke"
+description: "Ein Überblick über Blöcke in der Ethereum-Blockchain – ihre Datenstruktur, warum sie benötigt werden und wie sie erstellt werden."
 lang: de
 ---
 
-Blöcke sind Stapel von Transaktionen mit einem Hash des vorherigen Blocks in der Kette. Dies verbindet Blöcke (in einer Kette), weil Hashes kryptographisch aus den Blockdaten abgeleitet werden. Dies verhindert Betrug: Eine Änderung in irgendeiner Chronik würde alle nachfolgenden Blöcke ungültig machen, da sich alle nachfolgenden Hashes ändern und jeder, der die Blockchain ausführt, dies bemerken würde.
+Blöcke sind Bündel von Transaktionen mit einem Hash des vorherigen Blocks in der Kette. Dies verbindet Blöcke miteinander (in einer Kette), da Hashes kryptografisch aus den Blockdaten abgeleitet werden. Dies verhindert Betrug, da eine einzige Änderung in einem beliebigen Block in der Historie alle folgenden Blöcke ungültig machen würde, da sich alle nachfolgenden Hashes ändern würden und jeder, der die Blockchain ausführt, dies bemerken würde.
 
 ## Voraussetzungen {#prerequisites}
 
-Blöcke sind ein sehr anfängerfreundliches Thema. Um dir jedoch zu helfen, diese Seite besser zu verstehen, empfehlen wir, zuerst [ Konten](/developers/docs/accounts/), [Transaktionen](/developers/docs/transactions/) und unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
+Blöcke sind ein sehr anfängerfreundliches Thema. Damit Sie diese Seite jedoch besser verstehen, empfehlen wir Ihnen, zuerst [Konten](/developers/docs/accounts/), [Transaktionen](/developers/docs/transactions/) und unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
 
 ## Warum Blöcke? {#why-blocks}
 
-Um sicherzustellen, dass alle Teilnehmer des Ethereum-Netzwerks einen synchronisierten Zustand beibehalten und sich über den genauen Verlauf der Transaktionen einig sind, fassen wir die Transaktionen in Blöcken zusammen. Das bedeutet, dass Dutzende (oder Hunderte) von Transaktionen in einem Durchgang übergeben, bestätigt und synchronisiert werden.
+Um sicherzustellen, dass alle Teilnehmer im [Ethereum](/)-Netzwerk einen synchronisierten Zustand beibehalten und sich auf die genaue Historie der Transaktionen einigen, bündeln wir Transaktionen in Blöcke. Das bedeutet, dass Dutzende (oder Hunderte) von Transaktionen auf einmal festgeschrieben, vereinbart und synchronisiert werden.
 
-![Ein Diagramm, das Transaktionen in einem Block zeigt, die Zustandsänderungen verursachen](./tx-block.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Ein Diagramm, das zeigt, wie eine Transaktion in einem Block Zustandsänderungen verursacht](./tx-block.png)
+_Diagramm adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Durch die zeitliche Verteilung der Commits geben wir allen Netzwerkteilnehmern genügend Zeit, einen Konsens zu erzielen: Obwohl Transaktionsanfragen dutzende Male pro Sekunde erfolgen, werden Blöcke auf Ethereum nur alle zwölf Sekunden erstellt und festgeschrieben.
+Indem wir die Festschreibungen (Commits) zeitlich verteilen, geben wir allen Netzwerk-Teilnehmern genügend Zeit, um zu einem Konsens zu gelangen: Auch wenn Transaktionsanfragen dutzende Male pro Sekunde auftreten, werden Blöcke auf Ethereum nur alle zwölf Sekunden erstellt und festgeschrieben.
 
 ## Wie Blöcke funktionieren {#how-blocks-work}
 
-Um die Transaktionsgeschichte zu erhalten, sind Blöcke streng sortiert (jeder neu erstellte Block enthält einen Verweis auf den übergeordneten Block), und Transaktionen innerhalb von Blöcken sind ebenfalls streng geordnet. Außer in seltenen Fällen, zu einem bestimmten Zeitpunkt, sind sich alle Teilnehmer des Netzwerks über die genaue Anzahl und Geschichte der Blöcke einig und arbeiten daran, die aktuellen Live-Transaktionsanfragen in den nächsten Block zu integrieren.
+Um die Transaktionshistorie zu bewahren, sind Blöcke streng geordnet (jeder neu erstellte Block enthält einen Verweis auf seinen übergeordneten Block), und auch die Transaktionen innerhalb der Blöcke sind streng geordnet. Bis auf seltene Ausnahmen sind sich zu jedem Zeitpunkt alle Teilnehmer im Netzwerk über die genaue Anzahl und Historie der Blöcke einig und arbeiten daran, die aktuellen Live-Transaktionsanfragen in den nächsten Block zu bündeln.
 
-Sobald ein Block von einem zufällig ausgewählten Validator im Netzwerk erstellt wird, wird er im gesamten Netzwerk verbreitet. Alle Knoten fügen diesen Block dann am Ende ihrer Blockchain hinzu und ein neuer Validator wird ausgewählt, um den nächsten Block zu erstellen. Der genaue Prozess der Blockzusammenstellung und Festlegung/Konsensbildung ist zurzeit in Ethereums Proof-of-Stake-Protokoll festgelegt.
+Sobald ein Block von einem zufällig ausgewählten Validator im Netzwerk zusammengestellt wurde, wird er an den Rest des Netzwerks weitergeleitet; alle Blockchain-Knoten fügen diesen Block an das Ende ihrer Blockchain an, und ein neuer Validator wird ausgewählt, um den nächsten Block zu erstellen. Der genaue Prozess der Blockzusammenstellung und der Festschreibungs-/Konsensprozess wird derzeit durch Ethereums „Proof-of-Stake“-Protokoll spezifiziert.
 
-## Proof-of-Stake-Protokoll {#proof-of-work-protocol}
+## Proof-of-Stake-Protokoll {#proof-of-stake-protocol}
 
 Proof-of-Stake bedeutet Folgendes:
 
-- Validierende Nodes müssen 32 ETH als Sicherheit gegen Fehlverhalten in einen Einzahlungsvertrag einlagern. Das dient dem Schutz des Netzwerks, da nachweislich unehrliches Verhalten zum anteiligen oder vollständigen Verlust des Einsatzes führt.
-- In jedem Slot (zwölf Sekunden voneinander entfernt) wird zufällig ein Validator ausgewählt, um als Vorschlagender für einen Block zu agieren. Sie bündeln Transaktionen, führen sie aus und bestimmen einen neuen „Zustand“. Sie verpacken diese Informationen in einen Block und geben sie an andere Validatoren weiter.
-- Andere Validatoren, die von dem neuen Block erfahren, führen die Transaktionen erneut aus, um sicherzustellen, dass sie der vorgeschlagenen Änderung des globalen Zustands zustimmen. In der Annahme, dass der Block gültig ist, fügen sie ihn zu ihrer eigenen Datenbank hinzu.
-- Wenn ein Validator von zwei konkurrierenden Blöcken für denselben Slot erfährt, wählt er mit seinem Fork-Wahlalgorithmus den Block aus, der von den meisten eingesetzten ETH unterstützt wird.
+- Validierende Blockchain-Knoten müssen 32 ETH in einen Einzahlungsvertrag als Sicherheit gegen schlechtes Verhalten einzahlen (staken). Dies hilft, das Netzwerk zu schützen, da nachweislich unehrliches Verhalten dazu führt, dass ein Teil oder der gesamte Einsatz zerstört wird.
+- In jedem Slot (im Abstand von zwölf Sekunden) wird ein Validator zufällig als Block-Vorschlagender ausgewählt. Er bündelt Transaktionen, führt sie aus und bestimmt einen neuen „Zustand“. Er verpackt diese Informationen in einen Block und leitet ihn an andere Validatoren weiter.
+- Andere Validatoren, die von dem neuen Block erfahren, führen die Transaktionen erneut aus, um sicherzustellen, dass sie mit der vorgeschlagenen Änderung des globalen Zustands einverstanden sind. Unter der Annahme, dass der Block gültig ist, fügen sie ihn ihrer eigenen Datenbank hinzu.
+- Wenn ein Validator von zwei widersprüchlichen Blöcken für denselben Slot erfährt, verwendet er seinen Fork-Choice-Algorithmus, um denjenigen auszuwählen, der durch die meisten gestakten ETH unterstützt wird.
 
 [Mehr über Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)
 
-## Was enthält ein Block? {#block-anatomy}
+## Was ist in einem Block? {#block-anatomy}
 
-Ein Block enthält viele verschiedene Informationen. Auf oberster Ebene enthält ein Block folgende Felder:
+Ein Block enthält viele Informationen. Auf der höchsten Ebene enthält ein Block die folgenden Felder:
 
-| Feld                | Beschreibung                                                |
-|:------------------- |:----------------------------------------------------------- |
-| `Zeitspanne (Slot)` | Der Slot, zu dem der Block gehört                           |
-| `proposer_index`    | Die ID des Validators, der den Block vorschlägt             |
-| `parent_root`       | Der Hash des vorausgehenden Blocks                          |
-| `state_root`        | Der Stamm-Hash des Zustandsobjekts                          |
-| `hauptteil`         | Ein Objekt, das mehrere Felder enthält, wie unten definiert |
+| Feld             | Beschreibung                                                  |
+| :--------------- | :------------------------------------------------------------ |
+| `slot`           | der Slot, zu dem der Block gehört                             |
+| `proposer_index` | die ID des Validators, der den Block vorschlägt               |
+| `parent_root`    | der Hash des vorhergehenden Blocks                            |
+| `state_root`     | der Root-Hash des Zustandsobjekts                             |
+| `body`           | ein Objekt, das mehrere Felder enthält, wie unten definiert   |
 
-Der `Body` eines Blocks enthält selbst mehrere Felder:
+Der Block-`body` enthält selbst mehrere Felder:
 
-| Feld                 | Beschreibung                                                                     |
-|:-------------------- |:-------------------------------------------------------------------------------- |
-| `randao_reveal`      | Ein Wert, der zur Auswahl des nächsten Block-Vorschlagenden verwendet wird       |
-| `eth1_data`          | Informationen zum Einzahlungsvertrag                                             |
-| `graffiti`           | Beliebige Daten, die zum Markieren von Blöcken verwendet werden                  |
-| `proposer_slashings` | Liste der zu streichenden Validatoren                                            |
-| `attester_slashings` | Liste der Attestierer für Slashing                                               |
-| `beglaubigungen`     | Liste der Bescheinigungen zugunsten des aktuellen Blocks                         |
-| `einzahlungen`       | Liste der neuen Einlagen zum Einzahlungsvertrag                                  |
-| `voluntary_exits`    | Liste der Validatoren, die das Netzwerk verlassen                                |
-| `sync_aggregate`     | Teilmenge der Validatoren, die zur Bedienung von leichten Clients verwendet wird |
-| `execution_payload`  | Vom Ausführungs-Client übergebene Transaktionen                                  |
+| Feld                 | Beschreibung                                                                      |
+| :------------------- | :-------------------------------------------------------------------------------- |
+| `randao_reveal`      | ein Wert, der verwendet wird, um den nächsten Block-Vorschlagenden auszuwählen    |
+| `eth1_data`          | Informationen über den Einzahlungsvertrag                                         |
+| `graffiti`           | beliebige Daten, die zum Markieren von Blöcken verwendet werden                   |
+| `proposer_slashings` | Liste der Validatoren, die einem Slashing unterzogen werden sollen                |
+| `attester_slashings` | Liste der Bestätiger (Attester), die einem Slashing unterzogen werden sollen      |
+| `attestations`       | Liste der Bestätigungen, die für vorherige Slots vorgenommen wurden               |
+| `deposits`           | Liste der neuen Einzahlungen in den Einzahlungsvertrag                            |
+| `voluntary_exits`    | Liste der Validatoren, die das Netzwerk verlassen                                 |
+| `sync_aggregate`     | Teilmenge der Validatoren, die zur Bedienung von Light Clients verwendet werden   |
+| `execution_payload`  | Transaktionen, die vom Ausführungs-Client übergeben wurden                        |
 
-Das Feld `attestations` enthält eine Liste aller Attestierungen im Block. Attestierungen haben ihren eigenen Datentyp der mehrere Datenteile enthält. Jede Attestierung enthält:
+Das Feld `attestations` enthält eine Liste aller Bestätigungen im Block. Bestätigungen haben ihren eigenen Datentyp, der mehrere Datenbestandteile enthält. Jede Bestätigung enthält:
 
 | Feld               | Beschreibung                                                              |
-|:------------------ |:------------------------------------------------------------------------- |
-| `aggregation_bits` | Eine Liste der Validatoren, die an dieser Attestierung teilgenommen haben |
-| `daten`            | Ein Container mit mehreren Unterfeldern                                   |
-| `signature`        | Kollektivsignatur aller bescheinigenden Validatoren                       |
+| :----------------- | :------------------------------------------------------------------------ |
+| `aggregation_bits` | eine Liste, welche Validatoren an dieser Bestätigung teilgenommen haben   |
+| `data`             | ein Container mit mehreren Unterfeldern                                   |
+| `signature`        | aggregierte Signatur einer Gruppe von Validatoren für den `data`-Teil     |
 
-Das Feld `data` in `attestation` enthält folgende Elemente:
+Das Feld `data` in der `attestation` enthält Folgendes:
 
-| Feld                | Beschreibung                                                |
-|:------------------- |:----------------------------------------------------------- |
-| `Zeitspanne (Slot)` | Der Slot, auf den sich die Attestierung bezieht             |
-| `Index`             | Indizes für die bescheinigenden Validatoren                 |
-| `beacon_block_root` | Der Stamm-Hash des Beacon-Blocks, der dieses Objekt enthält |
-| `quelle`            | Der letzte berechtigte Kontrollpunkt                        |
-| `target`            | Der Grenzblock der neuesten Epoche                          |
+| Feld                | Beschreibung                                                              |
+| :------------------ | :------------------------------------------------------------------------ |
+| `slot`              | der Slot, auf den sich die Bestätigung bezieht                            |
+| `index`             | Indizes für bestätigende Validatoren                                      |
+| `beacon_block_root` | der Root-Hash des Beacon-Blocks, der als Kopf der Kette angesehen wird    |
+| `source`            | der letzte gerechtfertigte (justified) Checkpoint                         |
+| `target`            | der neueste Epochengrenzblock                                             |
 
-Die Ausführung der Transaktionen in der `execution_payload` aktualisiert den globalen Zustand. Alle Clients führen die Transaktionen in der `execution_payload` erneut aus, um sicherzustellen, dass der neue Zustand dem Zustand im neuen Block im Feld `state_root` entspricht. Auf diese Weise stellen Clients sicher, dass ein neuer Block gültig und sicher ist, um ihn der Blockchain hinzuzufügen. Der `execution payload` selbst ist ein Objekt mit mehreren Feldern. Es gibt auch einen `execution_payload_header`, der wichtige zusammengefasste Informationen über die auszuführenden Daten enthält. Diese Datenstrukturen sind wie folgt organisiert:
+Das Ausführen der Transaktionen im `execution_payload` aktualisiert den globalen Zustand. Alle Anwendungen führen die Transaktionen im `execution_payload` erneut aus, um sicherzustellen, dass der neue Zustand mit dem im Feld `state_root` des neuen Blocks übereinstimmt. Auf diese Weise können Anwendungen erkennen, dass ein neuer Block gültig und sicher ist, um ihn ihrer Blockchain hinzuzufügen. Das `execution payload` selbst ist ein Objekt mit mehreren Feldern. Es gibt auch einen `execution_payload_header`, der wichtige zusammenfassende Informationen über die Ausführungsdaten enthält. Diese Datenstrukturen sind wie folgt organisiert:
 
 Der `execution_payload_header` enthält die folgenden Felder:
 
-| Feld                  | Beschreibung                                                                          |
-|:--------------------- |:------------------------------------------------------------------------------------- |
-| `übergeordneter_hash` | Hash des übergeordneten Blocks                                                        |
-| `fee_recipient`       | Kontoadresse, an die die Transaktionsgebühren gezahlt werden                          |
-| `state_root`          | Stamm-Hash für den globalen Zustand nach der Anwendung der Änderungen in diesem Block |
-| `receipts_root`       | Hash des Transaktionsempfänger-Baums                                                  |
-| `logs_bloom`          | Datenstruktur, die Ereignisprotokolle enthält                                         |
-| `prev_randao`         | Verwendeter Wert in einer zufälligen Validatorauswahl                                 |
-| `block_number`        | Die Nummer des aktuellen Blocks                                                       |
-| `gas_limit`           | Maximales für diesen Block erlaubtes Gas                                              |
-| `gas_used`            | Die eingesetzte Menge an Gas in diesem Block                                          |
-| `Zeitstempel`         | Die Blockzeit                                                                         |
-| `extra_data`          | Beliebige zusätzliche Daten als rohe Bytes                                            |
-| `base_fee_per_gas`    | Der Basisgebührenwert                                                                 |
-| `block_hash`          | Hash des ausführenden Blocks                                                          |
-| `transactions_root`   | Stamm-Hash der Transaktionen in der Nutzlast                                          |
-| `withdrawal_root`     | Stamm-Hash der Abhebungen in der Nutzlast                                             |
+| Feld                | Beschreibung                                                                        |
+| :------------------ | :---------------------------------------------------------------------------------- |
+| `parent_hash`       | Hash des übergeordneten Blocks                                                      |
+| `fee_recipient`     | Kontoadresse für die Zahlung von Transaktionsgebühren                               |
+| `state_root`        | Root-Hash für den globalen Zustand nach Anwendung der Änderungen in diesem Block    |
+| `receipts_root`     | Hash des Transaktionsbeleg-Tries                                                    |
+| `logs_bloom`        | Datenstruktur, die Ereignisprotokolle enthält                                       |
+| `prev_randao`       | Wert, der bei der zufälligen Auswahl von Validatoren verwendet wird                 |
+| `block_number`      | die Nummer des aktuellen Blocks                                                     |
+| `gas_limit`         | maximal zulässiges Gaslimit in diesem Block                                         |
+| `gas_used`          | die tatsächliche Menge an Gas, die in diesem Block verbraucht wurde                 |
+| `timestamp`         | die Blockzeit                                                                       |
+| `extra_data`        | beliebige zusätzliche Daten als rohe Bytes                                          |
+| `base_fee_per_gas`  | der Wert der Grundgebühr                                                            |
+| `block_hash`        | Hash des Ausführungsblocks                                                          |
+| `transactions_root` | Root-Hash der Transaktionen im Payload                                              |
+| `withdrawal_root`   | Root-Hash der Abhebungen im Payload                                                 |
 
-Die `execution_payload` selbst enthält Folgendes (das ist identisch zum Header, außer dass es anstatt des Stamm-Hash der Transaktionen die Liste der Transaktions- und Abhebungsinformationen enthält) :
+Das `execution_payload` selbst enthält Folgendes (beachten Sie, dass dies identisch mit dem Header ist, außer dass es anstelle des Root-Hashs der Transaktionen die tatsächliche Liste der Transaktionen und Abhebungsinformationen enthält):
 
-| Feld                  | Beschreibung                                                                          |
-|:--------------------- |:------------------------------------------------------------------------------------- |
-| `übergeordneter_hash` | Hash des übergeordneten Blocks                                                        |
-| `fee_recipient`       | Kontoadresse, an die die Transaktionsgebühren gezahlt werden                          |
-| `state_root`          | Stamm-Hash für den globalen Zustand nach der Anwendung der Änderungen in diesem Block |
-| `receipts_root`       | Hash des Transaktionsempfänger-Baums                                                  |
-| `logs_bloom`          | Datenstruktur, die Ereignisprotokolle enthält                                         |
-| `prev_randao`         | Verwendeter Wert in einer zufälligen Validatorauswahl                                 |
-| `block_number`        | Die Nummer des aktuellen Blocks                                                       |
-| `gas_limit`           | Maximales für diesen Block erlaubtes Gas                                              |
-| `gas_used`            | Die eingesetzte Menge an Gas in diesem Block                                          |
-| `Zeitstempel`         | Die Blockzeit                                                                         |
-| `extra_data`          | Beliebige zusätzliche Daten als rohe Bytes                                            |
-| `base_fee_per_gas`    | Der Basisgebührenwert                                                                 |
-| `block_hash`          | Hash des ausführenden Blocks                                                          |
-| `Transaktionen`       | Liste der Transaktionen, die ausgeführt werden sollen                                 |
-| `abhebungen`          | Liste der Abhebungsobjekte                                                            |
+| Feld               | Beschreibung                                                                        |
+| :----------------- | :---------------------------------------------------------------------------------- |
+| `parent_hash`      | Hash des übergeordneten Blocks                                                      |
+| `fee_recipient`    | Kontoadresse für die Zahlung von Transaktionsgebühren                               |
+| `state_root`       | Root-Hash für den globalen Zustand nach Anwendung der Änderungen in diesem Block    |
+| `receipts_root`    | Hash des Transaktionsbeleg-Tries                                                    |
+| `logs_bloom`       | Datenstruktur, die Ereignisprotokolle enthält                                       |
+| `prev_randao`      | Wert, der bei der zufälligen Auswahl von Validatoren verwendet wird                 |
+| `block_number`     | die Nummer des aktuellen Blocks                                                     |
+| `gas_limit`        | maximal zulässiges Gaslimit in diesem Block                                         |
+| `gas_used`         | die tatsächliche Menge an Gas, die in diesem Block verbraucht wurde                 |
+| `timestamp`        | die Blockzeit                                                                       |
+| `extra_data`       | beliebige zusätzliche Daten als rohe Bytes                                          |
+| `base_fee_per_gas` | der Wert der Grundgebühr                                                            |
+| `block_hash`       | Hash des Ausführungsblocks                                                          |
+| `transactions`     | Liste der auszuführenden Transaktionen                                              |
+| `withdrawals`      | Liste der Abhebungsobjekte                                                          |
 
 Die Liste `withdrawals` enthält `withdrawal`-Objekte, die wie folgt strukturiert sind:
 
-| Feld             | Beschreibung                                   |
-|:---------------- |:---------------------------------------------- |
-| `address`        | Kontoadresse, für die die Abhebung erfolgt ist |
-| `Betrag`         | Abgehobener Betrag                             |
-| `Index`          | Abhebungsindexwert                             |
-| `validatorIndex` | Validatorindexwert                             |
+| Feld             | Beschreibung                       |
+| :--------------- | :--------------------------------- |
+| `address`        | Kontoadresse, die abgehoben hat    |
+| `amount`         | Abhebungsbetrag                    |
+| `index`          | Indexwert der Abhebung             |
+| `validatorIndex` | Indexwert des Validators           |
 
 ## Blockzeit {#block-time}
 
-Die Blockzeit bezieht sich auf die Zeit zwischen Blöcken. In Ethereum wird Zeit in Einheiten zu je zwölf Sekunden aufgeteilt. Diese heißen "Slots". In jedem Slot wird ein Validator ausgewählt, der einen Block vorschlägt. Geht man davon aus, dass alle Validatoren online und voll funktionsfähig sind, wird es in jedem Slot einen Block gegen. Die zugehörige Blockzeit beträgt dann 12 Sekunden. Es kann jedoch vorkommen, dass Validatoren offline sind, wenn sie dazu aufgerufen werden einen Block vorzuschlagen. Der zugehörige Slot bleibt dann leer.
+Die Blockzeit bezieht sich auf die Zeit, die Blöcke voneinander trennt. In Ethereum ist die Zeit in Einheiten von zwölf Sekunden unterteilt, die „Slots“ genannt werden. In jedem Slot wird ein einzelner Validator ausgewählt, um einen Block vorzuschlagen. Unter der Annahme, dass alle Validatoren online und voll funktionsfähig sind, wird es in jedem Slot einen Block geben, was bedeutet, dass die Blockzeit 12 Sekunden beträgt. Gelegentlich können Validatoren jedoch offline sein, wenn sie aufgerufen werden, einen Block vorzuschlagen, was bedeutet, dass Slots manchmal leer bleiben können.
 
-Diese Implementierung unterscheidet sich von PoW-basierten Blockchain-Systemen, in denen die Erzeugung eines Blocks zu den probabilistischen Verfahren gehört, wodurch die Mining-Schwierigkeit des Protokolls ausgeglichen wird. Die [durchschnittliche Blockverbreitungszeit](https://etherscan.io/chart/blocktime) von Ethereum ist ein perfektes Beispiel für die Implementierung von Proof of Stake und damit für den Wechsel von Proof of Work (PoW) zu Proof of Stake (PoS), der durch eine weitere Anpassung der Blockverbreitungszeit auf 12 Sekunden ermöglicht wurde.
+Diese Implementierung unterscheidet sich von Proof-of-Work-basierten Systemen, bei denen die Blockzeiten probabilistisch sind und durch die Ziel-Mining-Schwierigkeit des Protokolls abgestimmt werden. Ethereums [durchschnittliche Blockzeit](https://etherscan.io/chart/blocktime) ist ein perfektes Beispiel dafür, wobei der Übergang von Proof-of-Work zu Proof-of-Stake anhand der Konsistenz der neuen 12-Sekunden-Blockzeit klar abgeleitet werden kann.
 
 ## Blockgröße {#block-size}
 
-Ein finaler, wichtiger Hinweis ist, dass Blöcke selbst in ihrer Größe begrenzt sind. Jeder Block hat eine Zielgröße von 30 Millionen Gas, aber die Größe der Blöcke wird entsprechend der Netznachfrage erhöht oder verringert, bis zur Blockgrenze von 60 Millionen Gas (doppelte Zielblockgröße). Das Gas-Limit eines Blocks kann um den Faktor 1/1024 vom Gas-Limit des vorangegangenen Blocks nach oben oder unten justiert werden. Dadurch können Validatoren das Gas-Limit eines Blocks durch Konsens verändern. Die Gesamtmenge des von allen Transaktionen im Block verbrauchten Gases muss unter dem Blockgaslimit liegen. Das ist wichtig, weil dadurch sichergestellt wird, dass Blöcke nicht willkürlich groß sein können. Wenn Blöcke beliebig groß sein könnten, würden weniger leistungsstarke Knoten aufgrund von Platz- und Geschwindigkeitsanforderungen allmählich nicht mehr mit dem Netzwerk Schritt halten können. Je größer der Block, desto höher ist die erforderliche Verarbeitungsleistung, um den Block rechtzeitig für das nächste Zeitintervall zu berechnen. Das ist ein ganz zentraler Aspekt, der durch die Begrenzung der Blockgröße umgangen wird.
+Ein letzter wichtiger Hinweis ist, dass Blöcke selbst in ihrer Größe begrenzt sind. Jeder Block hat eine Zielgröße von 30 Millionen Gas, aber die Größe der Blöcke wird entsprechend den Netzwerkanforderungen steigen oder fallen, bis zum Blocklimit von 60 Millionen Gas (2x Zielblockgröße). Das Block-Gaslimit kann um einen Faktor von 1/1024 gegenüber dem Gaslimit des vorherigen Blocks nach oben oder unten angepasst werden. Infolgedessen können Validatoren das Block-Gaslimit durch Konsens ändern. Die Gesamtmenge an Gas, die von allen Transaktionen im Block verbraucht wird, muss geringer sein als das Block-Gaslimit. Dies ist wichtig, da es sicherstellt, dass Blöcke nicht beliebig groß sein können. Wenn Blöcke beliebig groß sein könnten, würden weniger leistungsfähige vollständige Blockchain-Knoten (Full Nodes) aufgrund von Platz- und Geschwindigkeitsanforderungen allmählich nicht mehr mit dem Netzwerk mithalten können. Je größer der Block, desto größer ist die Rechenleistung, die erforderlich ist, um ihn rechtzeitig für den nächsten Slot zu verarbeiten. Dies ist eine zentralisierende Kraft, der durch die Begrenzung der Blockgrößen entgegengewirkt wird.
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
+_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
 ## Verwandte Themen {#related-topics}
 
 - [Transaktionen](/developers/docs/transactions/)
-- [Ressourcen](/developers/docs/gas/)
+- [Gas](/developers/docs/gas/)
 - [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)

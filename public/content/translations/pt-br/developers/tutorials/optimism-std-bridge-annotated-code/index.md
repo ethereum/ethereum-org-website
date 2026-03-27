@@ -4,6 +4,7 @@ description: "Como funciona a ponte padrão para o Optimism? Por que funciona de
 author: Ori Pomerantz
 tags: [ "Solidity", "ponte", "camada 2" ]
 skill: intermediate
+breadcrumb: "Ponte Optimism"
 published: 2022-03-30
 lang: pt-br
 ---

@@ -1,63 +1,63 @@
 ---
 title: Aggiungere prodotti o servizi di staking
-description: La politica che usiamo quando aggiungiamo prodotti o servizi di staking a ethereum.org
+description: La politica che utilizziamo quando aggiungiamo prodotti o servizi di staking su ethereum.org
 lang: it
 ---
 
 # Aggiungere prodotti o servizi di staking {#adding-staking-products-or-services}
 
-Vogliamo assicurarci di elencare le migliori risorse possibili, mantenendo gli utenti al sicuro.
+Vogliamo assicurarci di elencare le migliori risorse possibili mantenendo gli utenti al sicuro e fiduciosi.
 
-Chiunque è libero di suggerire e aggiungere prodotti o servizi di staking su ethereum.org. Se ce ne siamo dimenticati uno, **[sei pregato di suggerirlo](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
+Chiunque è libero di suggerire l'aggiunta di un prodotto o servizio di staking su ethereum.org. Se ce n'è uno che ci è sfuggito, **[suggeriscilo](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
 
-Attualmente, elenchiamo i prodotti e i servizi di staking sulle seguenti pagine:
+Attualmente elenchiamo prodotti e servizi di staking nelle seguenti pagine:
 
-- [Staking in solo](/staking/solo/)
+- [Staking in solitaria](/staking/solo/)
 - [Staking come servizio](/staking/saas/)
 - [Pool di staking](/staking/pools/)
 
-Il proof-of-stake sulla Beacon Chain è attivo dal 1° dicembre 2020. Sebbene lo staking sia relativamente nuovo, abbiamo provato a creare un meccanismo equo e trasparente per la considerazione su ethereum.org, ma i criteri per l'inclusione nell'elenco cambieranno ed evolveranno col tempo e, in ultima analisi, saranno a discrezione del team del sito web di ethereum.org.
+La prova di stake sulla beacon chain è attiva dal 1° dicembre 2020. Sebbene lo staking sia ancora relativamente nuovo, abbiamo cercato di creare un quadro equo e trasparente per la valutazione su ethereum.org, ma i criteri di inserimento cambieranno e si evolveranno nel tempo e sono, in ultima analisi, a discrezione del team del sito web di ethereum.org.
 
-## Il meccanismo decisionale {#the-decision-framework}
+## Il quadro decisionale {#the-decision-framework}
 
-La decisione di elencare un prodotto su ethereum.org non dipende da un unico fattore. Nel decidere se elencare un prodotto o servizio, vengono considerati diversi criteri. Più questi criteri sono soddisfatti e più è probabile che venga elencato.
+La decisione di elencare un prodotto su ethereum.org non dipende da un singolo fattore. Vengono considerati insieme molteplici criteri quando si decide di elencare un prodotto o servizio. Più di questi criteri vengono soddisfatti, più è probabile che venga elencato.
 
-**Innanzitutto, di quale categoria di prodotto o di servizio si tratta?**
+**Innanzitutto, di quale categoria di prodotto o servizio si tratta?**
 
-- Strumenti del nodo o del client
+- Strumenti per nodi o client
 - Gestione delle chiavi
 - Staking come servizio (SaaS)
 - Pool di staking
 
-Al momento elenchiamo solo i prodotti e i servizi in queste categorie.
+Attualmente, elenchiamo solo prodotti o servizi in queste categorie.
 
-### Criteri per l'inclusione {#criteria-for-inclusion}
+### Criteri di inclusione {#criteria-for-inclusion}
 
-Le proposte di prodotti o servizi di staking saranno valutate secondo i seguenti criteri:
+Le proposte di prodotti o servizi di staking saranno valutate in base ai seguenti criteri:
 
-**Quando è stato lanciato il progetto o il servizio?**
+**Quando è stato lanciato il progetto o servizio?**
 
-- Vi sono prove di quando il prodotto o il servizio è diventato disponibile al pubblico?
-- Questo serve a determinare il punteggio di "test di battaglia" dei prodotti.
+- Ci sono prove di quando il prodotto o servizio è diventato disponibile al pubblico?
+- Questo viene utilizzato per determinare il punteggio "testato sul campo" (battle tested) del prodotto.
 
-**Il progetto viene mantenuto attivamente?**
+**Il progetto è mantenuto attivamente?**
 
-- C'è un team attivo che sta sviluppando il progetto? Chi è coinvolto?
-- Solo i prodotti mantenuti attivamente saranno considerati.
+- C'è un team attivo che sviluppa il progetto? Chi è coinvolto?
+- Saranno presi in considerazione solo i prodotti mantenuti attivamente.
 
-**Il prodotto o servizio è libero da intermediari fidati/umani?**
+**Il prodotto o servizio è privo di intermediari umani/di fiducia?**
 
-- Quali passaggi nel percorso degli utenti richiedono di affidarsi a esseri umani per detenere le chiavi dei loro fondi o distribuire adeguatamente le ricompense?
-- Questo viene utilizzato per determinare il punteggio "senza fiducia" del prodotto o dei servizi.
+- Quali passaggi nel percorso dell'utente richiedono di fidarsi di esseri umani per detenere le chiavi dei propri fondi o per distribuire correttamente le ricompense?
+- Questo viene utilizzato per determinare il punteggio "trustless" del prodotto o servizio.
 
 **Il progetto fornisce informazioni accurate e affidabili?**
 
-- È essenziale che il sito web del prodotto abbia informazioni aggiornate, accurate e non fuorvianti, specialmente se riguardano il protocollo Ethereum o altre tecnologie a esso collegate.
-- Applicazioni che contengono disinformazione, dettagli obsoleti o dichiarazioni potenzialmente fuorvianti riguardanti Ethereum o altri soggetti rilevanti non verranno elencate o, se già elencate, verranno rimosse.
+- È fondamentale che il sito web del prodotto presenti informazioni aggiornate, accurate e non fuorvianti, in particolare se riguardano il protocollo Ethereum o altre tecnologie correlate.
+- Le proposte contenenti disinformazione, dettagli obsoleti o dichiarazioni potenzialmente fuorvianti su Ethereum o altri argomenti rilevanti non saranno elencate o verranno rimosse se già presenti.
 
 **Quali piattaforme sono supportate?**
 
-- ossia Linux, macOS, Windows, iOS, Android
+- es. Linux, macOS, Windows, iOS, Android
 
 #### Software e contratti intelligenti {#software-and-smart-contracts}
 
@@ -65,112 +65,112 @@ Per qualsiasi software personalizzato o contratto intelligente coinvolto:
 
 **È tutto open source?**
 
-- I progetti open source dovrebbero avere un repository di codice sorgente accessibile al pubblico
-- Questo serve a determinare il punteggio "open source" dei prodotti.
+- I progetti open source dovrebbero avere un repository del codice sorgente disponibile pubblicamente
+- Questo viene utilizzato per determinare il punteggio "open source" del prodotto.
 
-**Lo sviluppo in _beta_ del prodotto è terminato?**
+**Il prodotto è fuori dalla fase di sviluppo _beta_?**
 
-- Dove si trova il prodotto nel suo ciclo di sviluppo?
-- I prodotti nella fase beta non sono presi in considerazione per l'inclusione su ethereum.org
+- A che punto è il prodotto nel suo ciclo di sviluppo?
+- I prodotti in fase beta non sono presi in considerazione per l'inclusione su ethereum.org
 
-**Il software è stato sottoposto a un controllo di sicurezza esterno?**
+**Il software è stato sottoposto a un audit di sicurezza esterno?**
 
-- In caso contrario, vi è in programma di realizzarne uno?
-- Questo serve a determinare il punteggio "verificato" dei prodotti.
+- In caso contrario, ci sono piani per condurre un audit esterno?
+- Questo viene utilizzato per determinare il punteggio "audited" (revisionato) del prodotto.
 
-**Il progetto ha un programma di ricompense per la ricerca di bug?**
+**Il progetto ha un programma di bug bounty?**
 
-- Altrimenti, ci sono piani per creare un programma di ricompense per la ricerca dei bug di sicurezza?
-- Questo serve a determinare il punteggio di "ricerca dei bug" dei prodotti.
+- In caso contrario, ci sono piani per creare un bug bounty per la sicurezza?
+- Questo viene utilizzato per determinare il punteggio "bug bounty" del prodotto.
 
-#### Strumenti del nodo o del client {#node-or-client-tooling}
+#### Strumenti per nodi o client {#node-or-client-tooling}
 
-Per i prodotti del software correlati alla configurazione, alla gestione o alla migrazione del nodo o del client:
+Per i prodotti software relativi alla configurazione, gestione o migrazione di nodi o client:
 
-**Quali client del livello del consenso (ovvero Lighthouse, Teku, Nimbus, Prysm, Grandine) sono supportati?**
+**Quali client di livello di consenso (es. Lighthouse, Teku, Nimbus, Prysm, Grandine) sono supportati?**
 
 - Quali client sono supportati? L'utente può scegliere?
-- Questo serve a determinare il punteggio "multi-client" dei prodotti.
+- Questo viene utilizzato per determinare il punteggio "multi-client" del prodotto.
 
 #### Staking come servizio {#staking-as-a-service}
 
-Per gli [elenchi di staking-as-a-service](/staking/saas/) (cioè operazioni del nodo delegato):
+Per gli [elenchi di staking come servizio](/staking/saas/) (es. operazione di nodi delegata):
 
-**Quali sono le commissioni associate all'uso del servizio?**
+**Quali sono le commissioni associate all'utilizzo del servizio?**
 
-- Qual è la struttura tariffaria, ad esempio vi è un canone mensile per il servizio?
-- Ulteriori requisiti per lo staking?
+- Qual è la struttura delle commissioni, ad esempio, c'è una commissione mensile per il servizio?
+- Ci sono requisiti di staking aggiuntivi?
 
-**Gli utenti sono tenuti a registrarsi per avere un conto?**
+**Agli utenti è richiesto di registrarsi per un account?**
 
-- Qualcuno può usare il servizio senza permessi o KYC?
-- Questo serve a determinare il punteggio "senza permessi" dei prodotti.
+- Qualcuno può utilizzare il servizio senza permessi o KYC?
+- Questo viene utilizzato per determinare il punteggio "senza permessi" (permissionless) del prodotto.
 
 **Chi detiene le chiavi di firma e le chiavi di prelievo?**
 
-- A quali chiavi l'utente mantiene l'accesso? A quali chiavi il servizio ottiene accesso?
-- Questo serve a determinare il punteggio "senza fiducia" dei prodotti.
+- A quali chiavi l'utente mantiene l'accesso? A quali chiavi il servizio ottiene l'accesso?
+- Questo viene utilizzato per determinare il punteggio "trustless" del prodotto.
 
-**Qual è la diversità del client dei nodi operati?**
+**Qual è la diversità dei client dei nodi gestiti?**
 
-- Qual è la percentuale di chiavi del validatore eseguite dalla maggioranza dei client del livello di consenso (CL)?
-- A partire dall'ultima modifica, Prysm è il client di livello di consenso eseguito da una maggioranza di operatori di nodi, il che è pericoloso per la rete. Se un client CL è attualmente utilizzato da oltre il 33% della rete, richiediamo i dati correlati al suo utilizzo.
-- Questo serve a determinare il punteggio dei prodotti con "client diversi".
+- Quale percentuale di chiavi del validatore è gestita da un client di livello di consenso (CL) di maggioranza?
+- All'ultimo aggiornamento, Prysm è il client di livello di consenso eseguito dalla maggioranza degli operatori di nodi, il che è pericoloso per la rete. Se un qualsiasi client CL è attualmente utilizzato da oltre il 33% della rete, richiediamo dati relativi al suo utilizzo.
+- Questo viene utilizzato per determinare il punteggio "client diversi" del prodotto.
 
 #### Pool di staking {#staking-pool}
 
-Per i [servizi di staking in pool](/staking/pools/):
+Per i [servizi di pool di staking](/staking/pools/):
 
-**Qual è il livello minimo di ETH richiesto per lo staking?**
+**Qual è l'ETH minimo richiesto per lo stake?**
 
 - es. 0,01 ETH
 
-**Quali sono le commissioni o i requisiti di staking coinvolti?**
+**Quali sono le commissioni o i requisiti di staking previsti?**
 
-- Quale percentuale di ricompense viene rimossa come commissione?
-- Ulteriori requisiti per lo staking?
+- Quale percentuale delle ricompense viene trattenuta come commissione?
+- Ci sono requisiti di staking aggiuntivi?
 
-**Esiste un token di liquidità?**
+**C'è un token di liquidità?**
 
 - Quali sono i token coinvolti? Come funzionano? Quali sono gli indirizzi del contratto?
-- Questo serve a determinare il punteggio "token di liquidità" dei prodotti.
+- Questo viene utilizzato per determinare il punteggio "token di liquidità" del prodotto.
 
-**Gli utenti possono partecipare come operatore di nodi?**
+**Gli utenti possono partecipare come operatori di nodi?**
 
-- Cosa serve per eseguire i client validatori usando i fondi in pool?
-- Ciò richiede l'autorizzazione da una persona, una società o una DAO?
-- Questo serve a determinare il punteggio dei prodotti dei "nodi senza permessi".
+- Cosa è richiesto per eseguire i client del validatore utilizzando i fondi del pool?
+- Questo richiede il permesso di un individuo, un'azienda o una DAO?
+- Questo viene utilizzato per determinare il punteggio "nodi senza permessi" del prodotto.
 
-**Qual è la diversità del client degli operatori del nodo in pool?**
+**Qual è la diversità dei client degli operatori di nodi del pool?**
 
-- Quale percentuale di operatori dei nodi esegue un client del livello di consenso di maggioranza (CL)?
-- A partire dall'ultima modifica, Prysm è il client di livello di consenso eseguito da una maggioranza di operatori di nodi, il che è pericoloso per la rete. Se un client CL è attualmente utilizzato da oltre il 33% della rete, richiediamo i dati correlati al suo utilizzo.
-- Questo serve a determinare il punteggio dei prodotti con "client diversi".
+- Quale percentuale di operatori di nodi esegue un client di livello di consenso (CL) di maggioranza?
+- All'ultimo aggiornamento, Prysm è il client di livello di consenso eseguito dalla maggioranza degli operatori di nodi, il che è pericoloso per la rete. Se un qualsiasi client CL è attualmente utilizzato da oltre il 33% della rete, richiediamo dati relativi al suo utilizzo.
+- Questo viene utilizzato per determinare il punteggio "client diversi" del prodotto.
 
-### Altri criteri: gli aspetti preferibili {#other-criteria}
+### Altri criteri: i requisiti opzionali {#other-criteria}
 
 **Quali interfacce utente sono supportate?**
 
-- ossia App browser, app desktop, app mobili, CLI
+- es. App per browser, app desktop, app mobile, CLI
 
-**Per la strumentazione del nodo, il software fornisce un modo semplice per passare da un client all'altro?**
+**Per gli strumenti dei nodi, il software fornisce un modo semplice per passare da un client all'altro?**
 
-- L'utente può modificare facilmente e in sicurezza i client usando lo strumento?
+- L'utente può cambiare client in modo facile e sicuro utilizzando lo strumento?
 
-**Per SaaS, quanti validatori sono attualmente operati dal servizio?**
+**Per il SaaS, quanti validatori sono attualmente gestiti dal servizio?**
 
-- Questo ci da un'idea del raggio d'azione del tuo servizio finora.
+- Questo ci dà un'idea della portata del tuo servizio finora.
 
 ## Come mostriamo i risultati {#product-ordering}
 
-I [criteri di inclusione](#criteria-for-inclusion) di cui sopra vengono utilizzati per calcolare un punteggio cumulativo per ciascun prodotto o servizio. Questo viene utilizzato come mezzo per selezionare e mostrare prodotti che soddisfano determinati criteri oggettivi. Più criteri sono disponibili con le relative prove, più il prodotto sarà in cima all'elenco, mentre i pareggi saranno randomizzati al caricamento.
+I [criteri di inclusione](#criteria-for-inclusion) sopra indicati vengono utilizzati per calcolare un punteggio cumulativo per ogni prodotto o servizio. Questo viene utilizzato come mezzo per ordinare e mostrare i prodotti che soddisfano determinati criteri oggettivi. Più sono i criteri per i quali vengono fornite prove, più in alto verrà ordinato un prodotto, con i pareggi randomizzati al caricamento.
 
-La logica del codice e le ponderazioni per questi criteri sono attualmente contenute in [questo componente JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) nel nostro repository.
+La logica del codice e i pesi per questi criteri sono attualmente contenuti in [questo componente JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) nel nostro repository.
 
 ## Aggiungi il tuo prodotto o servizio {#add-product}
 
-Se desideri aggiungere un prodotto o servizio di staking su ethereum.org, crea un ticket su GitHub.
+Se desideri aggiungere un prodotto o servizio di staking su ethereum.org, crea una issue su GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
-  Crea un ticket
+  Crea una issue
 </ButtonLink>

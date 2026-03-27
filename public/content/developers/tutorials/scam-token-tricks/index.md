@@ -4,6 +4,7 @@ description: In this tutorial we dissect a scam token to see some of the tricks 
 author: Ori Pomerantz
 tags: ["scam", "solidity", "erc-20", "javascript", "typescript"]
 skill: intermediate
+breadcrumb: Scam token tricks
 published: 2023-09-15
 lang: en
 ---

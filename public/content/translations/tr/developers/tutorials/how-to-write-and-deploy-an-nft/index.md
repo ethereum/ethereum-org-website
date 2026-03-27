@@ -4,6 +4,7 @@ description: "Bu öğretici, Ethereum ve Gezegenler Arası Dosya Sistemi (IPFS) 
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "akıllı kontratlar" ]
 skill: beginner
+breadcrumb: "NFT oluştur ve dağıt"
 lang: tr
 published: 2021-04-22
 ---

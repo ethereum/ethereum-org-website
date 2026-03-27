@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: en
 tags: ["layer 2"]
 skill: intermediate
+breadcrumb: Short ABIs
 published: 2022-04-01
 ---
 

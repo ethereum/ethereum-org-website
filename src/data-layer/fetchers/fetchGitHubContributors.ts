@@ -2,6 +2,8 @@ import type { FileContributor, GitHubContributorsData } from "@/lib/types"
 
 import { CONTENT_DIR, OLD_CONTENT_DIR } from "@/lib/constants"
 
+import { fetchRetry } from "./fetchRetry"
+
 const GITHUB_API_BASE =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 
@@ -26,7 +28,7 @@ type NameLookup = Map<string, AllContributorsEntry>
 async function fetchNameLookup(): Promise<NameLookup> {
   const url =
     "https://raw.githubusercontent.com/ethereum/ethereum-org-website/master/.all-contributorsrc"
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     console.warn("Failed to fetch .all-contributorsrc:", response.status)
@@ -64,6 +66,7 @@ const EXCLUDED_LOGINS = [
   "eth-bot",
   "ethereumoptimism-bot",
   "coderabbitai[bot]",
+  "myelinated-wackerow",
 ]
 
 /** Name patterns (case-insensitive substring match) for AI agent co-authors */
@@ -250,14 +253,14 @@ async function fetchCommitsForPath(
   url.searchParams.set("path", filepath)
   url.searchParams.set("sha", "master")
 
-  const response = await fetch(url.href, {
+  const response = await fetchRetry(url.href, {
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/vnd.github.v3+json",
     },
   })
 
-  // Handle rate limiting
+  // Handle GitHub-specific rate limiting (403, not 429)
   if (
     response.status === 403 &&
     response.headers.get("X-RateLimit-Remaining") === "0"
@@ -301,17 +304,18 @@ async function fetchCommitsForPath(
 
       // Use username-based avatar URL instead of the API's /u/{id}?v=4
       // format which causes redirect loops with Next.js image optimization
-      const primary: FileContributor[] =
-        isExcludedContributor(login)
-          ? []
-          : [{
+      const primary: FileContributor[] = isExcludedContributor(login)
+        ? []
+        : [
+            {
               login,
               avatar_url: commit.author
                 ? `https://avatars.githubusercontent.com/${commit.author.login}`
                 : "",
               html_url: commit.author?.html_url ?? "",
               date,
-            }]
+            },
+          ]
 
       const coAuthors = parseCoAuthors(commit.commit.message, date, nameLookup)
 
@@ -367,7 +371,7 @@ async function discoverPathsFromTree(token: string): Promise<{
 }> {
   const url = `${GITHUB_API_BASE}/git/trees/master?recursive=1`
 
-  const response = await fetch(url, {
+  const response = await fetchRetry(url, {
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/vnd.github.v3+json",
@@ -481,7 +485,11 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
   const contentResults = await parallelBatch(
     contentPathPairs,
     async ({ slug, paths }) => {
-      const contributors = await fetchContributorsForPaths(paths, token, nameLookup)
+      const contributors = await fetchContributorsForPaths(
+        paths,
+        token,
+        nameLookup
+      )
       return { slug, contributors }
     }
   )
@@ -513,7 +521,11 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
   const appPageResults = await parallelBatch(
     appPagePathPairs,
     async ({ pagePath, paths }) => {
-      const contributors = await fetchContributorsForPaths(paths, token, nameLookup)
+      const contributors = await fetchContributorsForPaths(
+        paths,
+        token,
+        nameLookup
+      )
       return { pagePath, contributors }
     }
   )

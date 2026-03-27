@@ -1,64 +1,72 @@
 ---
 title: Mesin Virtual Ethereum (EVM)
-description: Pengantar mesin virtual Ethereum dan bagaimana kaitannya dengan state, transaksi, dan kontrak pintar.
+description: Pengantar tentang mesin virtual Ethereum dan bagaimana kaitannya dengan status, transaksi, dan kontrak pintar.
 lang: id
 ---
 
-Instansiasi fisik EVM tidak dapat dideskripsikan dengan cara yang sama seperti seseorang menunjuk ke awan atau gelombang laut, tetapi _ada_ sebagai satu entitas tunggal yang dikelola oleh ribuan komputer terhubung yang menjalankan klien Ethereum.
-
-Protokol Ethereum itu sendiri ada semata-mata untuk tujuan menjaga operasi yang berkelanjutan, tidak terputus, dan tidak dapat diubah dari mesin state khusus ini; Ini adalah lingkungan di mana semua akun Ethereum dan kontrak pintar tinggal. Pada blok mana pun dalam rantai, Ethereum memiliki satu dan hanya satu state 'kanonis', dan EVM adalah yang mendefinisikan aturan untuk menghitung state valid baru dari blok ke blok.
+Mesin Virtual Ethereum (EVM) adalah lingkungan virtual desentralisasi yang mengeksekusi kode secara konsisten dan aman di seluruh node [Ethereum](/). Node menjalankan EVM untuk mengeksekusi kontrak pintar, menggunakan "[gas](/developers/docs/gas/)" untuk mengukur upaya komputasi yang diperlukan untuk [operasi](/developers/docs/evm/opcodes/), memastikan alokasi sumber daya yang efisien dan keamanan jaringan.
 
 ## Prasyarat {#prerequisites}
 
-Beberapa pemahaman dasar tentang terminologi umum dalam ilmu komputer seperti [bita](https://wikipedia.org/wiki/Byte), [memori](https://wikipedia.org/wiki/Computer_memory), dan [tumpukan](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) diperlukan untuk memahami EVM. Akan sangat membantu jika Anda merasa nyaman dengan konsep kriptografi/blockchain seperti [fungsi hash](https://wikipedia.org/wiki/Cryptographic_hash_function), [bukti kerja](https://wikipedia.org/wiki/Proof_of_work) dan [Pohon Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Beberapa pemahaman dasar tentang terminologi umum dalam ilmu komputer seperti [byte](https://wikipedia.org/wiki/Byte), [memori](https://wikipedia.org/wiki/Computer_memory), dan [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) diperlukan untuk memahami EVM. Akan sangat membantu juga jika Anda terbiasa dengan konsep kriptografi/blockchain seperti [fungsi hash](https://wikipedia.org/wiki/Cryptographic_hash_function) dan [Merkle tree](https://wikipedia.org/wiki/Merkle_tree).
 
-## Dari buku besar ke mesin state {#from-ledger-to-state-machine}
+## Dari buku besar ke mesin status {#from-ledger-to-state-machine}
 
-Analogi dari 'buku besar terdistribusi' sering digunakan untuk menggambarkan blockchain seperti Bitcoin, yang memungkinkan mata uang terdesentralisasi menggunakan peralatan dasar kriptografi. Mata uang kripto berperilaku seperti mata uang 'biasa' karena aturan yang mengatur apa yang bisa dan tidak bisa dilakukan untuk memodifikasi buku besar. Misalnya, alamat Bitcoin tidak dapat membelanjakan lebih banyak Bitcoin daripada yang diterima sebelumnya. Aturan ini mendukung semua transaksi di Bitcoin dan banyak blockchain lainnya.
+Analogi 'buku besar terdistribusi' sering digunakan untuk menggambarkan blockchain seperti Bitcoin, yang memungkinkan mata uang kripto desentralisasi menggunakan alat dasar kriptografi. Buku besar menyimpan catatan aktivitas yang harus mematuhi serangkaian aturan yang mengatur apa yang dapat dan tidak dapat dilakukan seseorang untuk memodifikasi buku besar tersebut. Misalnya, alamat Bitcoin tidak dapat membelanjakan lebih banyak Bitcoin daripada yang telah diterimanya sebelumnya. Aturan-aturan ini mendasari semua transaksi di Bitcoin dan banyak blockchain lainnya.
 
-Meskipun Ethereum memiliki mata uang kripto (Ether) asli sendiri yang mengikuti aturan intuitif yang hampir sama persis, Ethereum juga memungkinkan fungsi yang jauh lebih kuat: [kontrak pintar](/developers/docs/smart-contracts/). Untuk fitur yang lebih kompleks ini, diperlukan analogi yang lebih canggih. Alih-alih buku besar terdistribusi, Ethereum adalah [mesin state](https://wikipedia.org/wiki/Finite-state_machine) yang terdistribusi. State Ethereum adalah struktur data yang sangat besar yang menyimpan tidak hanya semua akun dan saldo, tapi _state mesin_, yang bisa mengubah blok ke blok sesuai dengan serangkaian aturan yang telah ditetapkan sebelumnnya, dan bisa menjalankan kode mesin arbitrari. Aturan spesifik tentang mengubah state dari blok ke blok ditentukan oleh EVM.
+Meskipun Ethereum memiliki mata uang kripto aslinya sendiri (ether) yang mengikuti aturan intuitif yang hampir sama persis, Ethereum juga memungkinkan fungsi yang jauh lebih kuat: [kontrak pintar](/developers/docs/smart-contracts/). Untuk fitur yang lebih kompleks ini, diperlukan analogi yang lebih canggih. Alih-alih buku besar terdistribusi, Ethereum adalah [mesin status](https://wikipedia.org/wiki/Finite-state_machine) terdistribusi. Status Ethereum adalah struktur data besar yang tidak hanya menyimpan semua akun dan saldo, tetapi juga _status mesin_, yang dapat berubah dari blok ke blok sesuai dengan serangkaian aturan yang telah ditentukan sebelumnya, dan yang dapat mengeksekusi kode mesin arbitrer. Aturan spesifik untuk mengubah status dari blok ke blok ditentukan oleh EVM.
 
-![Sebuah diagram menunjukkan susunan EVM](./evm.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram yang menunjukkan susunan EVM](./evm.png)
+_Diagram diadaptasi dari [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Fungsi transisi state Ethereum {#the-ethereum-state-transition-function}
+## Fungsi transisi status Ethereum {#the-ethereum-state-transition-function}
 
-EVM bertindak seperti fungsi matematika: Jika menerima input, akan menghasilkan output deterministik. Oleh karena itu cukup membantu mendeskripsikan Ethereum dengan lebih formal sebagai memiliki **fungsi transaksi state**:
+EVM berperilaku seperti fungsi matematika: Diberikan sebuah input, ia menghasilkan output yang deterministik. Oleh karena itu, cukup membantu untuk mendeskripsikan Ethereum secara lebih formal sebagai memiliki **fungsi transisi status**:
 
 ```
 Y(S, T)= S'
 ```
 
-Dengan state valid versi lama `(S)` dan kumpulan baru dari transaksi valid `(T)`, fungsi transisi Ethereum `Y(S, T)` menghasilkan state output valid yang baru `S'`
+Diberikan status valid lama `(S)` dan serangkaian transaksi valid baru `(T)`, fungsi transisi status Ethereum `Y(S, T)` menghasilkan status output valid baru `S'`
 
-### State {#state}
+### Status {#state}
 
-Dalam konteks Ethereum, state adalah struktur data yang sangat besar yang disebut [Pohon Merkle Patricia yang dimodifikasi](https://eth.wiki/en/fundamentals/patricia-tree), yang menyimpan semua [akun](/developers/docs/accounts/) yang ditautkan oleh hash dan dapat direduksi menjadi satu hash root yang disimpan pada blockchain.
+Dalam konteks Ethereum, status adalah struktur data yang sangat besar yang disebut [Merkle Patricia Trie yang dimodifikasi](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), yang menjaga semua [akun](/developers/docs/accounts/) terhubung oleh hash dan dapat direduksi menjadi satu root hash yang disimpan di blockchain.
 
 ### Transaksi {#transactions}
 
-Transaksi adalah instruksi yang ditandatangani secara kriptografis dari akun. Ada dua jenis transaksi: transaksi yang menghasilkan pemanggilan pesan dan transaksi yang menghasilkan pembuatan kontrak.
+Transaksi adalah instruksi yang ditandatangani secara kriptografi dari akun. Ada dua jenis transaksi: yang menghasilkan panggilan pesan dan yang menghasilkan pembuatan kontrak.
 
-Pembuatan kontrak menghasilkan pembuatan akun kontrak baru yang berisi kode bita [kontrak pintar](/developers/docs/smart-contracts/anatomy/) yang dikompilasi. Setiap kali akun lain melakukan pemanggilan pesan ke kontrak itu, akun itu akan mengeksekusi kode bitanya.
+Pembuatan kontrak menghasilkan pembuatan akun kontrak baru yang berisi bytecode [kontrak pintar](/developers/docs/smart-contracts/anatomy/) yang telah dikompilasi. Kapan pun akun lain melakukan panggilan pesan ke kontrak tersebut, ia akan mengeksekusi bytecode-nya.
 
 ## Instruksi EVM {#evm-instructions}
 
-EVM beroperasi sebagai [mesin tumpukan](https://wikipedia.org/wiki/Stack_machine) dengan kedalaman 1024 item. Setiap item adalah kata berukuran 256 bit, yang dipilih untuk kemudahan penggunaan dengan kriptografi 256 bit (seperti hash Keccak-256 atau tanda tangan secp256k1).
+EVM mengeksekusi sebagai [mesin stack](https://wikipedia.org/wiki/Stack_machine) dengan kedalaman 1024 item. Setiap item adalah kata 256-bit, yang dipilih untuk kemudahan penggunaan dengan kriptografi 256-bit (seperti hash Keccak-256 atau tanda tangan secp256k1).
 
-Saat pengoperasian, EVM mempertahankan _memori_ sementara (sebagai himpunan bita kata yang dirujuk), yang tidak bertahan di antara transaksi.
+Selama eksekusi, EVM memelihara _memori_ sementara (sebagai array byte yang dialamatkan dengan kata), yang tidak bertahan di antara transaksi.
 
-Akan tetapi, kontrak berisi pohon _penyimpanan_ Merkle Patricia (sebagai himpunan kata yang dapat dirujuk), yang terkait dengan akun yang sedang dipertanyakan dan merupakan bagian dari state global.
+### Penyimpanan sementara
 
-Kode bita kontrak pintar yang dikompilasi dieksekusi sebagai nomor EVM [opcode](/developers/docs/evm/opcodes), yang melakukan operasi tumpukan standar seperti `XOR`, `AND`, `ADD`, `SUB`, dll. EVM juga menerapkan sejumlah operasi tumpukan khusus blockchain, seperti `ADDRESS`, `BALANCE`, `BLOCKHASH`, dll.
+Penyimpanan sementara adalah penyimpanan nilai-kunci per transaksi yang diakses melalui opcode `TSTORE` dan `TLOAD`. Penyimpanan ini bertahan di semua panggilan internal selama transaksi yang sama tetapi dihapus pada akhir transaksi. Tidak seperti memori, penyimpanan sementara dimodelkan sebagai bagian dari status EVM daripada bingkai eksekusi, namun tidak dikomit ke status global. Penyimpanan sementara memungkinkan pembagian status sementara yang efisien gas di seluruh panggilan internal selama transaksi.
 
-![Sebuah diagram menampilkan gas yang diperlukan untuk operasi EVM](../gas/gas.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+### Penyimpanan
+
+Kontrak berisi trie _penyimpanan_ Merkle Patricia (sebagai array kata yang dapat dialamatkan dengan kata), yang terkait dengan akun yang bersangkutan dan merupakan bagian dari status global. Penyimpanan persisten ini berbeda dari penyimpanan sementara, yang hanya tersedia selama durasi satu transaksi dan tidak membentuk bagian dari trie penyimpanan persisten akun.
+
+### Opcode
+
+Bytecode kontrak pintar yang dikompilasi dieksekusi sebagai sejumlah [opcode](/developers/docs/evm/opcodes) EVM, yang melakukan operasi stack standar seperti `XOR`, `AND`, `ADD`, `SUB`, dll. EVM juga mengimplementasikan sejumlah operasi stack khusus blockchain, seperti `ADDRESS`, `BALANCE`, `BLOCKHASH`, dll. Kumpulan opcode juga mencakup `TSTORE` dan `TLOAD`, yang menyediakan akses ke penyimpanan sementara.
+
+![Diagram yang menunjukkan di mana gas dibutuhkan untuk operasi EVM](../gas/gas.png)
+_Diagram diadaptasi dari [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Implementasi EVM {#evm-implementations}
 
-Semua implementasi EVM harus sesuai dengan spesifikasi yang dideskripsikan dalam Yellowpaper Ethereum.
+Semua implementasi EVM harus mematuhi spesifikasi yang dijelaskan dalam Ethereum Yellowpaper.
 
-Dalam riwayat 5 tahun Ethereum, EVM telah menjalani beberapa revisi, dan ada beberapa implementasi EVM dalam bahasa pemrograman yang beragam.
+Selama sepuluh tahun sejarah Ethereum, EVM telah mengalami beberapa revisi, dan ada beberapa implementasi EVM dalam berbagai bahasa pemrograman.
 
-Semua [klien Ethereum](/developers/docs/nodes-and-clients/#execution-clients) mencakup implementasi EVM. Selain itu, ada beberapa implementasi mandiri, yang meliputi:
+[Klien eksekusi Ethereum](/developers/docs/nodes-and-clients/#execution-clients) mencakup implementasi EVM. Selain itu, ada beberapa implementasi mandiri, termasuk:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
@@ -67,12 +75,19 @@ Semua [klien Ethereum](/developers/docs/nodes-and-clients/#execution-clients) me
 
 ## Bacaan Lebih Lanjut {#further-reading}
 
-- [Yellowpaper Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
-- [Jellopaper aka KEVM: Semantik EVM dalam K](https://jellopaper.org/)
+- [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [Jellopaper alias KEVM: Semantics of EVM in K](https://jellopaper.org/)
 - [The Beigepaper](https://github.com/chronaeon/beigepaper)
-- [Opcode Mesin Virtual Ethereum](https://www.ethervm.io/)
+- [Ethereum Virtual Machine Opcodes](https://www.ethervm.io/)
+- [Referensi Interaktif Opcode Mesin Virtual Ethereum](https://www.evm.codes/)
 - [Pengantar singkat dalam dokumentasi Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Mastering Ethereum - The Ethereum Virtual Machine](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## Topik Terkait {#related-topics}
 
 - [Gas](/developers/docs/gas/)
+
+## Tutorial: Mesin Virtual Ethereum (EVM) / Opcode di Ethereum {#tutorials}
+
+- [Memahami Spesifikasi EVM Yellow Paper](/developers/tutorials/yellow-paper-evm/) _– Panduan terarah tentang spesifikasi EVM formal dari Ethereum Yellow Paper._
+- [Rekayasa Balik Kontrak](/developers/tutorials/reverse-engineering-a-contract/) _– Cara merekayasa balik kontrak pintar yang dikompilasi menggunakan opcode EVM._

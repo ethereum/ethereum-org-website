@@ -4,6 +4,7 @@ description: "Uma introdução aos eventos de contrato inteligente e como você 
 author: "jdourlens"
 tags: [ "smart contracts", "Remix", "Solidity", "eventos" ]
 skill: intermediate
+breadcrumb: "Registro de eventos"
 lang: pt-br
 published: 2020-04-03
 source: EthereumDev

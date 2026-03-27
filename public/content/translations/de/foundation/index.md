@@ -1,40 +1,33 @@
 ---
 title: Ethereum Foundation
-description: Erfahren Sie mehr über die Ethereum Foundation (EF), eine gemeinnützige Organisation, die sich der Förderung von Ethereum und verwandten Technologien widmet.
+description: "Erfahren Sie mehr über die Ethereum Foundation (EF), eine gemeinnützige Organisation, die sich der Unterstützung von Ethereum und verwandten Technologien widmet."
 hideEditButton: true
 lang: de
 ---
 
-# Über die Ethereum Foundation {#about-the-ethereum-foundation}
+# Ethereum Foundation {#ethereum-foundation}
 
 <Logo/>
 
-Die [Ethereum Foundation](http://ethereum.foundation/) (EF) ist eine gemeinnützige Organisation, die sich der Unterstützung von [Ethereum](/what-is-ethereum/) und verwandten Technologien widmet.
+Die [Ethereum Foundation](http://ethereum.foundation/) (EF) ist eine gemeinnützige Organisation, die das [Ethereum](/)-Ökosystem unterstützt. Sie finanziert die Protokollentwicklung, fördert das Wachstum des Ökosystems und setzt sich für Ethereum ein.
 
-Die EF ist kein Unternehmen, auch kein gemeinnütziges im herkömmlichen Sinne. Ihre Aufgabe besteht weder darin, Ethereum zu überwachen oder zu führen, noch ist sie die einzige Organisation, welche die entscheidenden Entwicklungen von Technologien Ethereum betreffend finanziert. Die EF ist Teil eines weit größeren [Ökosystems](/community/).
+Die EF ist weder ein Unternehmen noch eine traditionelle gemeinnützige Organisation. Sie kontrolliert oder leitet Ethereum nicht und ist auch nicht die einzige Organisation, die die kritische Entwicklung von Ethereum-bezogenen Technologien finanziert. Die EF ist ein Teil eines viel größeren [Ökosystems](/community/).
 
-## Ethereum Foundation – Initiativen {#ethereum-foundation-initiatives}
+## Was die EF macht {#what-the-ef-does}
 
-### Ökosystem-Förderprogramm {#ecosystem-support-program}
+- **Protokollentwicklung** – Unterstützung von Teams, die am Kernprotokoll von Ethereum arbeiten, einschließlich Client-Entwicklung, Forschung, Upgrades und dem [Bug-Bounty-Programm](/bug-bounty/)
+- **Ökosystem-Finanzierung** – Bereitstellung von Zuschüssen und Unterstützung für Projekte, die auf Ethereum aufbauen, durch das [Ecosystem Support Program](https://esp.ethereum.foundation/)
+- **Forschung** – Finanzierung von Forschung in den Bereichen Kryptografie, Konsens, Skalierung, Datenschutz und Sicherheit
 
-Das [Ökosystem-Förderprogramm](https://esp.ethereum.foundation/) existiert, um Projekte und Einrichtungen innerhalb der übergeordneten Ethereum-Community sowohl finanziell als auch nicht finanziell zu unterstützen, um das Wachstum des Ökosystems zu beschleunigen. Das Ökosystem-Förderprogramm ist eine Erweiterung des ursprünglichen Ethereum-Förderprogramms, welches hauptsächlich auf finanzielle Unterstützung fokussiert war.
+## Programme und Initiativen {#programs-and-initiatives}
 
-Erfahren Sie mehr über das Ökosystem-Förderprogramm, ehemalige Zuschussempfänger sowie den Bewerbungsprozess für Förderungen unter [esp.ethereum.foundation](https://esp.ethereum.foundation/). Alternativ können Sie dem [Ökosystem-Förderprogramm-Blog](https://blog.ethereum.org/category/ecosystem-support-program/) oder [@EF_ESP](https://twitter.com/EF_ESP) für deren aktuellste Nachrichten und Ankündigungen folgen.
+- **[Ecosystem Support Program](https://esp.ethereum.foundation/)** – Zuschüsse und Unterstützung für Open-Source-Projekte, die auf Ethereum aufbauen
+- **[Academic Grants](https://esp.ethereum.foundation/academic-grants)** – Unterstützung von Ethereum-bezogener akademischer Forschung
+- **[Devcon](https://devcon.org/)** – Die jährliche Konferenz für Ethereum-Entwickler, -Forscher und -Ersteller
+- **[Bug-Bounty-Programm](/bug-bounty/)** – Belohnungen für das Finden von Schwachstellen im Ethereum-Protokoll
 
-### Devcon {#devcon}
+## Weiterführende Informationen {#learn-more}
 
-Seit 2014 organisiert die Ethereum Foundation die jährliche Konferenz Devcon für alle Ethereum-Entwickler, -Forscher, -Denker und -Gestalter.
-
-Auf Videoinhalte der Konferenzpräsentationen aus jedem Jahr seit ihrer Gründung können Sie unter [archive.devcon.org](https://archive.devcon.org/) zugreifen.
-
-Informieren Sie sich unter [devcon.org](https://devcon.org/), folgn Sie dem [Devcon Blog](https://devcon.org/en/blogs/) oder [@efdevcon](https://twitter.com/EFDevcon) für aktuelle Ankündigungen.
-
-### Stipendienprogramm {#fellowship-program}
-
-Das [Stipendienprogramm der Ethereum Foundation](https://fellowship.ethereum.foundation/) ist eine Initiative zur Überwindung von Repräsentationslücken zwischen Kulturen, Nationalitäten und Wirtschaftsklassen. Beim Stipendienprogramm geht es darum, diese Lücken zu überbrücken, indem einzigartige und talentierte Personen identifiziert und unterstützt werden, die zur Relevanz von Ethereum beitragen, sowie um den Abbau von Zugangsbarrieren für unterrepräsentierte Menschen und Gemeinschaften, die die Zukunft von Web3 sein werden.
-
-[Erfahren Sie mehr unter fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/).
-
-<br/>
-
-Für mehr Informationen zur Stiftung und zu ihrer Arbeit, folgen Sie [ethereum.foundation](http://ethereum.foundation/) oder dem [Ethereum Foundation Blog](https://blog.ethereum.org/). Dort finden Sie aktuelle Nachrichten und Ankündigungen der EF.
+- [ethereum.foundation](https://ethereum.foundation/) – Offizielle Website der EF
+- [EF-Blog](https://blog.ethereum.org/) – Neuigkeiten und Ankündigungen
+- [Ecosystem Support Program](https://esp.ethereum.foundation/) – Zuschüsse und Unterstützung

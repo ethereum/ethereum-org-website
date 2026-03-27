@@ -4,6 +4,7 @@ description: "После прочтения этого руководства р
 author: Ori Pomerantz
 tags: [ "web2", "аутентификация", "eas" ]
 skill: beginner
+breadcrumb: "Ethereum для web2 auth"
 lang: ru
 published: 2025-04-30
 ---

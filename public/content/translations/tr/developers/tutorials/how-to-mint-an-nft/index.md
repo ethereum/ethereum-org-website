@@ -4,6 +4,7 @@ description: "Bu öğretici, akıllı sözleşmemizi ve Web3'ü kullanarak Ether
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "alchemy", "solidity", "akıllı kontratlar" ]
 skill: beginner
+breadcrumb: "NFT basımı"
 lang: tr
 published: 2021-04-22
 ---

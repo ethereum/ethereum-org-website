@@ -4,6 +4,7 @@ description: "Guía para principiantes sobre el envío de tokens usando ethers.j
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "TOKENS" ]
 skill: beginner
+breadcrumb: "Enviar tokens"
 lang: es
 published: 2021-04-06
 ---

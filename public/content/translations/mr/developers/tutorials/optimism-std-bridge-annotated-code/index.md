@@ -4,6 +4,7 @@ description: "Optimism साठी स्टँडर्ड ब्रिज क
 author: Ori Pomerantz
 tags: [ "सॉलिडिटी", "ब्रिज", "स्तर 2" ]
 skill: intermediate
+breadcrumb: "Optimism ब्रिज"
 published: 2022-03-30
 lang: mr
 ---

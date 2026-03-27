@@ -10,6 +10,7 @@ tags:
     "quyền riêng tư"
   ]
 skill: advanced
+breadcrumb: "Plasma cho ứng dụng"
 lang: vi
 published: 2025-10-15
 ---

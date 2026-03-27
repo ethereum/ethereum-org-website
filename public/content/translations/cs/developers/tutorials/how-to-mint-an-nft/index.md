@@ -10,6 +10,7 @@ tags:
     "smart kontrakt účty"
   ]
 skill: beginner
+breadcrumb: "Mint NFT"
 lang: cs
 published: 2021-04-22
 ---

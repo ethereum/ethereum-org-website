@@ -46,7 +46,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
     image: DevelopersHubHeroImage,
     releaseName: "Paris (The Merge)",
-    releaseDate: "2022-09-15",
+    releaseDate: "2022-09-15T06:42:42.000Z",
     content: (
       <div>
         <p className="font-bold">{t("page-roadmap-paris-pos-title")}</p>
@@ -71,7 +71,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
     image: QuizzesHubHeroImage,
     releaseName: "Shapella",
-    releaseDate: "2023-04-12",
+    releaseDate: "2023-04-12T22:27:35.000Z",
     content: (
       <div>
         <p className="font-bold">
@@ -98,7 +98,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
     image: Layer2HubHeroImage,
     releaseName: "Dencun",
-    releaseDate: "2024-03-13",
+    releaseDate: "2024-03-13T13:55:35.000Z",
     content: (
       <div>
         <p className="font-bold">
@@ -125,7 +125,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
     image: PectraImage,
     releaseName: "Pectra",
-    releaseDate: "2025-05-07",
+    releaseDate: "2025-05-07T10:05:11.000Z",
     content: (
       <div>
         <p className="font-bold">{t("page-roadmap-pectra-eoa-title")}</p>

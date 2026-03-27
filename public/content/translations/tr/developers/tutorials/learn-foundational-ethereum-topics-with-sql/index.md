@@ -4,6 +4,7 @@ description: "Bu öğretici, okuyucuların Yapılandırılmış Sorgu Dili (SQL)
 author: "Paul Apivat"
 tags: [ "SQL", "Sorgulama", "İşlemler" ]
 skill: beginner
+breadcrumb: "SQL ile Ethereum"
 lang: tr
 published: 2021-05-11
 source: paulapivat.com

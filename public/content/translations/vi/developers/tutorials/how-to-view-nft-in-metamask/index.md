@@ -4,6 +4,7 @@ description: "Hướng dẫn này mô tả cách xem một NFT hiện có trên 
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
+breadcrumb: "Xem NFT trong ví"
 lang: vi
 published: 2021-04-22
 ---

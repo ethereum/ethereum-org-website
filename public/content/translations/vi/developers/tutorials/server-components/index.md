@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: vi
 tags: [ "tác nhân", "máy chủ", "ngoài chuỗi" ]
 skill: beginner
+breadcrumb: "Thành phần server"
 published: 2024-07-15
 ---
 

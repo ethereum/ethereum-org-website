@@ -224,6 +224,17 @@ Finematics에서 영지식 증명에 대해 설명합니다.
 
 ## zkEVM을 개발하는 곳은 어디인가요? {#zkevm-projects}
 
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>L2용 zkEVM vs L1용 zkEVM</AlertTitle>
+<AlertDescription>
+아래 프로젝트들은 zkEVM 기술을 사용하여 레이어2 롤업을 구축합니다. 또한 L1 블록 검증에 zkEVM을 사용하는 연구도 진행 중이며, 이를 통해 검증자는 트랜잭션을 재실행하지 않고도 이더리움 블록을 검증할 수 있습니다.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+
 zkEVM을 개발하는 프로젝트는 다음과 같습니다.
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM은 이더리움 재단이 EVM 호환 ZK-롤업과 이더리움 블록에 대한 유효성 증명 생성 메커니즘을 개발하기 위해 자금을 지원하는 프로젝트입니다._

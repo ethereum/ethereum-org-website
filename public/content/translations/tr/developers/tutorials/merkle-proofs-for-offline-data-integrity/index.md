@@ -4,6 +4,7 @@ description: "Çoğunlukla zincir dışında depolanan veriler için zincir üst
 author: Ori Pomerantz
 tags: [ "depolama" ]
 skill: advanced
+breadcrumb: "Merkle kanıtları"
 lang: tr
 published: 2021-12-30
 ---

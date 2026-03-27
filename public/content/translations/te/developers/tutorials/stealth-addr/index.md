@@ -11,6 +11,7 @@ tags:
     "wasm"
   ]
 skill: intermediate
+breadcrumb: "రహస్య చిరునామాలు"
 published: 2025-11-30
 lang: te
 sidebarDepth: 3

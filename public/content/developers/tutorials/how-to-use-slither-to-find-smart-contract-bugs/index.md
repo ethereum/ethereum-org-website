@@ -5,6 +5,7 @@ author: Trailofbits
 lang: en
 tags: ["solidity", "smart contracts", "security", "testing"]
 skill: advanced
+breadcrumb: Slither
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

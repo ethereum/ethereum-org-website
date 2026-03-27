@@ -103,6 +103,12 @@ const RoadmapPage = () => {
       description: t("page-roadmap-statelessness-description"),
       href: "/roadmap/statelessness",
     },
+    {
+      icon: <ExtraSecurityIcon className="size-7" />,
+      title: t("page-roadmap-zkevm-title"),
+      description: t("page-roadmap-zkevm-description"),
+      href: "/roadmap/zkevm",
+    },
   ]
 
   // TODO: MATOMO EVENTS

@@ -193,9 +193,78 @@ If a human translator has transliterated a domain name, it must be reverted.
 
 **Pattern:** `[a-zA-Z0-9][\w.-]*\.(org|com|io|net|dev|xyz|eth|fm|tv|co)`
 
+### 13. Brand Name Garbled Transliterations (HIGH)
+
+Crowdin TM produces consistent garbled transliterations of brand names that are
+neither the correct Latin form nor a valid transliteration.
+
+**Known garbles (discovered in Arabic PR #17105):**
+- "GitHub" -> "يجتبه" (82 occurrences across 15 files)
+- "Solidity" -> "الصلابة" (literal "hardness", 3 files in Waffle tutorials)
+
+**Fix:** `fixKnownBrandGarbles()` in sanitizer, using the transliteration bank
+at `.claude/translation-review/transliterations/{locale}.json` for correct native-script
+replacements. Falls back to Latin for locales without a bank.
+
+**Pattern:** Map of known garble -> correct form. Language-specific (يجتبه is Arabic-only).
+
+### 14. Crowdin Boilerplate Injection (MEDIUM)
+
+Crowdin thank-you messages injected mid-paragraph during translation.
+
+**Known string:** "نشكرك على مشاركتك في برنامج الترجمة ethereum.org" (Arabic)
+and "Thank you for your participation in the ethereum.org Translation Program" (English)
+
+**Fix:** `stripCrowdinBoilerplate()` strips when embedded mid-sentence (after ". ").
+Preserves standalone occurrences (legitimate in translation-program pages).
+
+### 15. Duplicated Tag Values (MEDIUM)
+
+Crowdin concatenates a tag value with itself: "ERC-721ERC-721".
+
+**Fix:** `fixDuplicatedTagValues()` detects quoted strings where first half === second half.
+Found in 5 files (3 MD frontmatter + 2 JSON glossary files).
+
+### 16. Stripped Abbreviations in Parentheses (MEDIUM)
+
+Crowdin strips Latin abbreviations from parentheses in frontmatter, leaving "()".
+
+**Known examples:** "(RWA)" -> "()", "(PoA)" -> "()"
+
+**Fix:** `restoreStrippedAbbreviations()` compares against English frontmatter and
+restores ASCII abbreviations. Only operates in frontmatter section.
+
+### 17. Igbo/Wrong-Language Contamination (CRITICAL)
+
+Entire JSON files contain text in the wrong language. Arabic page-roadmap.json
+was ~60% Igbo (Nigerian language). Not caught by cross-script detection because
+Igbo uses Latin script (same as English).
+
+**Detection:** Would need franc-min language detection extended beyond English detection.
+Currently document-only (not automatable without false positive risk).
+
+### 18. "State" Polysemy -- Computational vs Political (HIGH)
+
+The word "state" consistently translated as political/governmental terms instead of
+computational state across multiple non-Latin languages.
+
+**Arabic examples:**
+- "state channels" -> "قنوات الدولة" (nation-state channels) instead of "قنوات الحالة"
+- "statelessness" -> "انعدام الجنسية" (statelessness/nationality) instead of "انعدام الحالة"
+- Also seen in de, tr, sw, ru, uk, zh, zh-tw, te (8+ languages)
+
+**Not automatable** -- requires semantic context. Glossary has "state" -> "حالة" for Arabic.
+
+### 19. MEV Mistranslation as Vehicles (HIGH)
+
+"MEV" (Maximal Extractable Value) interpreted as "multi-purpose electric vehicles"
+in Arabic mev/index.md. Sentences read "electric SUV extraction rates surged."
+
+**Not automatable** -- semantic error requiring human/AI review.
+
 ## Per-Language Notes
 
-### Turkish (tr) — Reviewed PR #17182
+### Turkish (tr) -- Reviewed PR #17182
 - Quality score: 7.7/10
 - 34 critical issues, 56 warnings across 301 files
 - Community glossary: proof-of-stake = "hisse ispatı", mainnet = "ana ağ", client = "istemci", stablecoin = "sabit para"
@@ -221,6 +290,25 @@ If a human translator has transliterated a domain name, it must be reverted.
 - Same MDX error patterns as Turkish (misplaced backticks, orphaned HTML tags)
 - Significant untranslated content chunks requiring Gemini re-pass
 - See: `docs/solutions/translation-review/crowdin-import-review-vietnamese-pr-17176.md` (on PR branch)
+
+### Arabic (ar) -- Reviewed PR #17105
+- Quality score: 5.2/10 (pre-fix)
+- ~85 critical issues, ~60 warnings across 299 files (excluding gaming)
+- 4 showstoppers: Igbo contamination in page-roadmap.json, "Ethereum is centralized" semantic inversion, romanized Arabic visible in page-what-is-ethereum.json, Farsi text in page-developers-docs.json
+- Systematic "GitHub" garbled as "يجتبه" across 15 files (82 occurrences) -- fixed by sanitizer
+- Systematic "state" polysemy: "الدولة" (nation-state) instead of "الحالة" (computational)
+- "Solidity" literally translated as "الصلابة" (hardness) in 3 Waffle tutorial tags
+- MEV interpreted as "multi-purpose electric vehicles/SUVs" in mev/index.md
+- Oracle rendered 5+ ways including "fortune teller" and "sacred systems"
+- 20+ files with untranslated English paragraphs
+- 5+ different Ethereum transliterations with no consistency
+- 5 different staking terms used across files
+- Crowdin boilerplate injected mid-content in transactions/index.md
+- ERC-721 tag duplicated as "ERC-721ERC-721" in 5 files
+- POAP translated as "Consumer Protection Office" in glossary-tooltip.json
+- "validator" as "consensus client", "block" as "barrier" in glossary files
+- "liquid staking" as "liquid mortgage" in community/research
+- Tone/register: formal MSA consistently maintained where translated
 
 ## Agent Architecture Notes
 

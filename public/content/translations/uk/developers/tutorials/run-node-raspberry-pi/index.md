@@ -5,6 +5,7 @@ author: "EthereumOnArm"
 tags: [ "клієнти", "шар виконання", "шар консенсусу", "вузли" ]
 lang: uk
 skill: intermediate
+breadcrumb: "Вузол Raspberry Pi"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

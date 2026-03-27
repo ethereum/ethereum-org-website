@@ -5,6 +5,7 @@ author: Trailofbits
 lang: mr
 tags: [ "सॉलिडिटी", "स्मार्ट कॉन्ट्रॅक्ट", "सुरक्षा", "चाचणी" ]
 skill: advanced
+breadcrumb: "Slither"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

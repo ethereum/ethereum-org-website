@@ -10,6 +10,7 @@ tags:
     "конфиденциальность"
   ]
 skill: advanced
+breadcrumb: "Plasma для приложений"
 lang: ru
 published: 2025-10-15
 ---

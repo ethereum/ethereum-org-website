@@ -4,6 +4,7 @@ description: "Понимание той части Желтой книги (оф
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: ru
 published: 2022-05-15
 ---

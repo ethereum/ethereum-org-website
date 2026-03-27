@@ -4,6 +4,7 @@ description: "Garantindo a integridade dos dados na cadeia para dados que são a
 author: Ori Pomerantz
 tags: [ "armazenamento" ]
 skill: advanced
+breadcrumb: "Provas Merkle"
 lang: pt-br
 published: 2021-12-30
 ---

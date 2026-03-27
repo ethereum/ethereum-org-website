@@ -11,6 +11,7 @@ tags:
     "композиційність"
   ]
 skill: advanced
+breadcrumb: "Взаємодія контрактів"
 lang: uk
 published: 2020-04-05
 source: EthereumDev

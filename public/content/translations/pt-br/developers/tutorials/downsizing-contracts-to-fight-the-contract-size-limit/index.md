@@ -5,6 +5,7 @@ author: Markus Waas
 lang: pt-br
 tags: [ "Solidity", "smart contracts", "armazenamento" ]
 skill: intermediate
+breadcrumb: "Reduzir contratos"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

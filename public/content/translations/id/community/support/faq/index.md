@@ -1,6 +1,6 @@
 ---
 title: Pertanyaan yang sering diajukan
-description: Pertanyaan umum Ethereum tentang dompet, transaksi, penaruhan, dan lainnya.
+description: Pertanyaan umum tentang Ethereum mengenai dompet, transaksi, mengunci, dan lainnya.
 lang: id
 ---
 
@@ -8,38 +8,38 @@ lang: id
 
 ## Saya mengirim kripto ke alamat yang salah {#wrong-wallet}
 
-Transaksi yang dikirimkan di Ethereum tidak dapat dibalikkan. Sayangnya, jika Anda mengirim ETH atau token ke dompet yang salah, tidak ada cara untuk membalikkan transaksi tersebut.
+Transaksi yang dikirim di Ethereum tidak dapat dibatalkan. Sayangnya, jika Anda mengirim ETH atau token ke dompet yang salah, tidak ada cara untuk membatalkan transaksi tersebut.
 
 **Apa yang dapat Anda lakukan:**
 
-- **Jika Anda mengetahui pemilik alamat tersebut**, hubungi mereka secara langsung dan minta mereka untuk mengembalikan dananya
+- **Jika Anda mengetahui pemilik alamat tersebut**, hubungi mereka secara langsung dan minta mereka untuk mengembalikan dana tersebut
 - **Jika alamat tersebut milik bursa atau layanan yang dikenal**, hubungi tim dukungan mereka, karena mereka mungkin dapat membantu
-- **Jika Anda mengirim token ke akun kontrak**, periksa apakah kontrak tersebut memiliki fungsi penarikan atau pemulihan (ini jarang terjadi)
+- **Jika Anda mengirim token ke alamat kontrak**, periksa apakah kontrak tersebut memiliki fungsi penarikan atau pemulihan (ini jarang terjadi)
 
-Dalam sebagian besar kasus, tidak ada cara untuk memulihkan dana tersebut. Tidak ada organisasi, entitas, atau orang pusat yang memiliki Ethereum, yang berarti tidak ada yang bisa membalikkan transaksi. Selalu periksa kembali alamat penerima sebelum mengonfirmasi.
+Dalam kebanyakan kasus, tidak ada cara untuk memulihkan dana. Tidak ada organisasi pusat, entitas, atau orang yang memiliki Ethereum, yang berarti tidak ada yang dapat membatalkan transaksi. Selalu periksa kembali alamat penerima sebelum mengonfirmasi.
 
 ## Saya kehilangan akses ke dompet saya {#lost-wallet-access}
 
 Opsi pemulihan Anda bergantung pada jenis dompet yang Anda gunakan.
 
-### Jika Anda memiliki frase benih (frasa pemulihan) Anda
+### Jika Anda memiliki frasa seed (frasa pemulihan) Anda
 
-Anda dapat memulihkan dompet Anda di aplikasi dompet apa pun yang kompatibel menggunakan frase benih Anda. Inilah sebabnya sangat penting untuk menyimpan frase benih Anda dengan aman secara luring. Periksa dokumentasi penyedia dompet Anda untuk instruksi pemulihan.
+Anda dapat memulihkan dompet Anda di aplikasi dompet apa pun yang kompatibel menggunakan frasa seed Anda. Inilah sebabnya mengapa sangat penting untuk menyimpan frasa seed Anda dengan aman secara offline. Periksa dokumentasi penyedia dompet Anda untuk instruksi pemulihan.
 
-### Jika Anda kehilangan frase benih Anda
+### Jika Anda kehilangan frasa seed Anda
 
-Tanpa frase benih atau kunci pribadi Anda, dana Anda tidak dapat dipulihkan. Tidak seorang pun, termasuk ethereum.org, dapat mengatur ulang kata sandi Anda atau memulihkan akses ke dompet kustodi mandiri.
+Tanpa frasa seed atau kunci pribadi Anda, dana Anda tidak dapat dipulihkan. Tidak ada seorang pun, termasuk ethereum.org, yang dapat mengatur ulang kata sandi Anda atau memulihkan akses ke dompet hak asuh mandiri (self-custody).
 
-### Jika akun Anda ada di bursa
+### Jika akun Anda berada di bursa
 
-Jika akun Anda ada di bursa terpusat seperti Coinbase, Binance, atau Kraken, hubungi tim dukungan bursa secara langsung. Mereka mengontrol akun di platform mereka dan mungkin dapat membantu mengatur ulang kata sandi atau pemulihan akun.
+Jika akun Anda berada di bursa terpusat seperti Coinbase, Binance, atau Kraken, hubungi tim dukungan bursa tersebut secara langsung. Mereka mengontrol akun di platform mereka dan mungkin dapat membantu dengan pengaturan ulang kata sandi atau pemulihan akun.
 
 <Alert variant="warning">
 <AlertEmoji text=":shield:"/>
 <AlertContent>
 <AlertDescription>
 
-**Jangan pernah membagikan frase benih Anda kepada siapa pun** yang mengaku membantu Anda memulihkan dompet Anda. Ini adalah salah satu taktik penipuan yang paling umum. Tidak ada layanan sah yang akan pernah meminta frase benih Anda.
+**Jangan pernah membagikan frasa seed Anda kepada siapa pun** yang mengklaim dapat membantu Anda memulihkan dompet Anda. Ini adalah salah satu taktik penipuan yang paling umum. Tidak ada layanan sah yang akan pernah meminta frasa seed Anda.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -50,28 +50,28 @@ Jika akun Anda ada di bursa terpusat seperti Coinbase, Binance, atau Kraken, hub
 
 ## Transaksi saya macet atau tertunda {#stuck-transaction}
 
-Transaksi di Ethereum bisa macet ketika biaya gas yang Anda tetapkan lebih rendah dari yang dibutuhkan jaringan saat ini. Sebagian besar dompet memungkinkan Anda memperbaikinya:
+Transaksi di Ethereum bisa macet ketika biaya gas yang Anda tetapkan lebih rendah dari yang dibutuhkan jaringan saat ini. Sebagian besar dompet memungkinkan Anda untuk memperbaikinya:
 
 - **Percepat:** Kirim ulang transaksi yang sama dengan biaya gas yang lebih tinggi
 - **Batalkan:** Kirim transaksi 0 ETH ke alamat Anda sendiri menggunakan nonce yang sama dengan transaksi yang tertunda
 
-### Panduan bermanfaat
+### Panduan yang membantu
 
 - [Cara mempercepat atau membatalkan transaksi yang tertunda di MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
 - [Cara membatalkan transaksi Ethereum yang tertunda](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-## Bagaimana saya dapat mengklaim hadiah Ethereum? {#giveaway-scam}
+## Bagaimana cara mengklaim giveaway Ethereum saya? {#giveaway-scam}
 
-Hadiah Ethereum adalah penipuan yang dirancang untuk mencuri ETH Anda. Jangan tergoda oleh penawaran yang tampaknya terlalu bagus untuk menjadi kenyataan. Jika Anda mengirim ETH ke alamat giveaway, Anda tidak akan menerima giveaway, dan Anda tidak akan dapat memulihkan dana Anda.
+Giveaway Ethereum adalah penipuan yang dirancang untuk mencuri ETH Anda. Jangan tergoda oleh penawaran yang tampaknya terlalu bagus untuk menjadi kenyataan. Jika Anda mengirim ETH ke alamat giveaway, Anda tidak akan menerima giveaway, dan Anda tidak akan dapat memulihkan dana Anda.
 
-[Selengkapnya tentang pencegahan penipuan](/security/#common-scams)
+[Lebih lanjut tentang pencegahan penipuan](/security/#common-scams)
 
-## Bagaimana cara saya melakukan penaruhan ETH? {#how-to-stake}
+## Bagaimana cara saya stake ETH? {#how-to-stake}
 
-Untuk menjadi seorang validator, Anda harus memasang taruhan 32 ETH di kontrak deposit Ethereum dan mengatur simpul validator. Anda juga dapat berpartisipasi dengan lebih sedikit ETH melalui pool penaruhan.
+Untuk menjadi validator, Anda harus stake 32 ETH di kontrak deposit Ethereum dan menyiapkan node validator. Anda juga dapat berpartisipasi dengan lebih sedikit ETH melalui kolam staking.
 
-Informasi lebih lanjut tersedia di [halaman penaruhan](/staking/) kami dan di [landasan peluncuran penaruhan](https://launchpad.ethereum.org/)
+Informasi lebih lanjut tersedia di [halaman mengunci](/staking/) kami dan di [launchpad mengunci](https://launchpad.ethereum.org/).
 
 ## Bagaimana cara menambang Ethereum? {#mining-ethereum}
 
-Penambangan Ethereum tidak lagi memungkinkan. Penambangan dinonaktifkan ketika Ethereum beralih dari [bukti kerja](/glossary/#pow) ke [bukti taruhan](/glossary/#pos) selama [Penggabungan](/roadmap/merge/) pada bulan September 2022. Sekarang, Ethereum memiliki validator, bukan penambang. Siapa pun dapat [melakukan penaruhan](/glossary/#staking) ETH dan menerima imbalan penaruhan dengan menjalankan perangkat lunak validator untuk mengamankan jaringan.
+Penambangan Ethereum tidak lagi memungkinkan. Penambangan dimatikan ketika Ethereum beralih dari [proof-of-work](/glossary/#pow) ke [proof-of-stake](/glossary/#pos) selama [The Merge](/roadmap/merge/) pada bulan September 2022. Sekarang, alih-alih penambang, Ethereum memiliki validator. Siapa pun dapat [stake](/glossary/#staking) ETH dan menerima hadiah mengunci untuk menjalankan perangkat lunak validator guna mengamankan jaringan.

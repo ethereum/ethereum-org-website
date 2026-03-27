@@ -4,6 +4,7 @@ description: "介绍如何在以太坊测试网上部署您的第一个智能合
 author: "jdourlens"
 tags: [ "智能合同", "remix", "Solidity", "部署" ]
 skill: beginner
+breadcrumb: "部署首个合约"
 lang: zh
 published: 2020-04-03
 source: EthereumDev

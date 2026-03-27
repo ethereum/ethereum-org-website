@@ -4,6 +4,7 @@ description: "這篇教學是是一個關於NFT教學系列的文章之一，這
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "smart contracts" ]
 skill: beginner
+breadcrumb: "編寫和部署NFT"
 lang: zh-tw
 published: 2021-04-22
 ---

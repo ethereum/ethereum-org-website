@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: pt-br
 tags: [ "camada 2" ]
 skill: intermediate
+breadcrumb: "ABIs curtos"
 published: 2022-04-01
 ---
 

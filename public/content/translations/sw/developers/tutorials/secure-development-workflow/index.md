@@ -4,6 +4,7 @@ description: Mtiririko wa kazi unaopendekezwa wa kuandika mikataba-erevu salama
 author: "Trailofbits"
 tags: ["smart contracts", "security", "solidity"]
 skill: intermediate
+breadcrumb: "Orodha ya usalama"
 lang: sw
 published: 2020-09-07
 source: Building secure contracts

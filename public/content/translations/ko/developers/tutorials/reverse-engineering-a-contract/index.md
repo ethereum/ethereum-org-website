@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: ko
 tags: [ "evm", "연산 부호" ]
 skill: advanced
+breadcrumb: "리버스 엔지니어링"
 published: 2021-12-30
 ---
 

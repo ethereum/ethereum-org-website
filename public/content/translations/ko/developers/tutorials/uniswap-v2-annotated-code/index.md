@@ -4,6 +4,7 @@ description: "Uniswap-v2 컨트랙트는 어떻게 작동하나요? 왜 그렇�
 author: Ori Pomerantz
 tags: [ "솔리디티" ]
 skill: intermediate
+breadcrumb: "Uniswap v2 해설"
 published: 2021-05-01
 lang: ko
 ---

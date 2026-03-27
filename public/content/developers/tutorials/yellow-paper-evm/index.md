@@ -4,6 +4,7 @@ description: Understanding the part of the Yellow Paper, the formal specificatio
 author: "qbzzt"
 tags: ["evm"]
 skill: intermediate
+breadcrumb: Yellow Paper EVM
 lang: en
 published: 2022-05-15
 ---

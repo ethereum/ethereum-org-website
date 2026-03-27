@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: pt-br
 tags: [ "erc-20" ]
 skill: beginner
+breadcrumb: "ERC-20 seguro"
 published: 2022-08-15
 ---
 

@@ -46,11 +46,10 @@ const VALID_CATEGORIES = Object.values(AppCategoryEnum)
 const isValidCategory = (category: string): category is AppCategoryEnum =>
   VALID_CATEGORIES.includes(category as AppCategoryEnum)
 
-const Page = async ({
-  params,
-}: {
-  params: PageParams & { catetgoryName: string }
+const Page = async (props: {
+  params: Promise<PageParams & { catetgoryName: string }>
 }) => {
+  const params = await props.params
   const { locale, catetgoryName } = params
   setRequestLocale(locale)
 
@@ -180,11 +179,10 @@ const Page = async ({
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string; catetgoryName: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; catetgoryName: string }>
 }) {
+  const params = await props.params
   const { locale, catetgoryName } = params
   const t = await getTranslations({ locale, namespace: "page-apps" })
 

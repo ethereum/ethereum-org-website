@@ -4,6 +4,7 @@ description: "Đảm bảo tính toàn vẹn dữ liệu trên chuỗi cho dữ 
 author: Ori Pomerantz
 tags: [ "lưu trữ" ]
 skill: advanced
+breadcrumb: "Bằng chứng Merkle"
 lang: vi
 published: 2021-12-30
 ---
