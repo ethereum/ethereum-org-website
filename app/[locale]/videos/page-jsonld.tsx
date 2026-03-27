@@ -9,7 +9,6 @@ import {
   ethereumFoundationOrganization,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
-import { getDefaultThumbnailUrl } from "@/lib/utils/videos"
 
 export default async function VideosPageJsonLD({
   locale,
@@ -71,20 +70,6 @@ export default async function VideosPageJsonLD({
           position: index + 1,
           name: video.title,
           url: normalizeUrlForJsonLd(locale, `/videos/${video.slug}/`),
-          item: {
-            "@type": "VideoObject",
-            name: video.title,
-            description: video.description,
-            thumbnailUrl:
-              video.thumbnailUrl || getDefaultThumbnailUrl(video.youtubeId),
-            uploadDate: `${video.uploadDate}T00:00:00+00:00`,
-            embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
-            contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
-            educationalLevel: video.educationLevel,
-            inLanguage: locale,
-            publisher: ethereumFoundationOrganization,
-            isAccessibleForFree: true,
-          },
         })),
       },
     ],
