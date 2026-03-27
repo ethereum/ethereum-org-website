@@ -6,7 +6,6 @@
  */
 export function numberFormat(
   locale: string,
-  // locales?: string | string[],
   options?: Intl.NumberFormatOptions
 ): Intl.NumberFormat {
   // If numberingSystem explicitly passed, respect it.
