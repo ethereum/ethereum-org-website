@@ -2,12 +2,10 @@ import { getTranslations } from "next-intl/server"
 
 import type { VideoData } from "@/lib/types"
 
-import PageJsonLD from "@/components/PageJsonLD"
 import { LinkWithArrow } from "@/components/ui/Link"
 import YouTube from "@/components/YouTube"
 
-import { toIsoDuration } from "@/lib/utils/time"
-import { getDefaultThumbnailUrl, getVideoData } from "@/lib/utils/videos"
+import { getVideoData } from "@/lib/utils/videos"
 
 interface VideoWatchProps {
   slug: string
@@ -34,25 +32,8 @@ const VideoWatch = async ({ slug, startTime }: VideoWatchProps) => {
 
   const t = await getTranslations("page-videos")
 
-  const videoJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    name: frontmatter.title,
-    description: frontmatter.description,
-    thumbnailUrl:
-      frontmatter.customThumbnailUrl ||
-      getDefaultThumbnailUrl(frontmatter.youtubeId),
-    uploadDate: `${frontmatter.uploadDate}T00:00:00+00:00`,
-    duration: toIsoDuration(frontmatter.duration),
-    embedUrl: `https://www.youtube.com/embed/${frontmatter.youtubeId}`,
-    contentUrl: `https://www.youtube.com/watch?v=${frontmatter.youtubeId}`,
-    educationalLevel: frontmatter.educationLevel,
-    isAccessibleForFree: true,
-  }
-
   return (
     <div className="my-8 max-w-xl space-y-4">
-      <PageJsonLD structuredData={videoJsonLd} />
       <YouTube
         id={frontmatter.youtubeId}
         title={frontmatter.title}
