@@ -29,6 +29,7 @@ import {
   createBranchName,
   getBranchObject,
 } from "./lib/github/branches"
+import { postPullRequestComment } from "./lib/github/pull-requests"
 import { geminiInitialize } from "./lib/workflows/gemini-initialize"
 import { geminiTranslateFiles } from "./lib/workflows/gemini-translate-files"
 import { runJsxTranslation } from "./lib/workflows/jsx-translation"
@@ -144,12 +145,29 @@ async function main() {
       internalLanguageCode: code,
     }))
 
-    await createTranslationPR(
+    const pr = await createTranslationPR(
       branchName,
       sanitizerInput,
       allSanitizerChanges,
       languagePairs
     )
+
+    // Post failed files as a PR comment for follow-up
+    if (failedFiles.length > 0) {
+      const commentBody =
+        `Failed files noted for follow-up:\n\n` +
+        "```\n" + 
+        failedFiles.join("\n") + 
+        "\n```"
+      try {
+        await postPullRequestComment(pr.number, commentBody)
+        console.log(`[main] Posted failed file${failedFiles.length > 1 ? "s" : ""} comment on PR #${pr.number}`)
+      } catch (error) {
+        console.warn(
+          `[main] Could not post failed files comment: ${error instanceof Error ? error.message : String(error)}`
+        )
+      }
+    }
   }
 
   // Cleanup progress manifest on success
@@ -160,7 +178,7 @@ async function main() {
 
   if (failedFiles.length > 0) {
     console.warn(
-      `\n[main] ${failedFiles.length} file(s) could not be translated:`
+      `\n[main] ${failedFiles.length} file${failedFiles.length > 1 ? "s" : ""} could not be translated:`
     )
     for (const f of failedFiles) {
       console.warn(`  - ${f}`)
