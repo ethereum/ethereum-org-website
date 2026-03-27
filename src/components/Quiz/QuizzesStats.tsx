@@ -61,7 +61,7 @@ const QuizzesStats = ({
     formattedCollectiveQuestionsAnswered,
     formattedCollectiveAverageScore,
     formattedCollectiveRetryRate,
-  } = getFormattedStats(locale!, averageScoresArray)
+  } = getFormattedStats(locale, averageScoresArray)
 
   return (
     <div>
