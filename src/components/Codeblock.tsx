@@ -1,12 +1,12 @@
 "use client"
 import React, { useState } from "react"
 import { Clipboard, ClipboardCheck } from "lucide-react"
-import Highlight, {
-  defaultProps,
-  Language,
-  PrismTheme,
+import {
+  Highlight,
+  type Language,
+  Prism,
+  type PrismTheme,
 } from "prism-react-renderer"
-import Prism from "prism-react-renderer/prism"
 
 // https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
 import CopyToClipboard from "@/components/CopyToClipboard"
@@ -40,6 +40,7 @@ const TopBarItem = ({
 
 const codeTheme = {
   light: {
+    plain: { color: "#474b5e", backgroundColor: "#fafafa" },
     styles: [
       {
         style: { color: "#6c6783" },
@@ -107,7 +108,7 @@ const codeTheme = {
     ],
   },
   dark: {
-    // Pulled from `defaultProps.theme` for potential customization
+    plain: { color: "#e4e2f0", backgroundColor: "#1e1e2e" },
     styles: [
       {
         style: { color: "#6c6783" },
@@ -176,21 +177,15 @@ const codeTheme = {
   },
 }
 
-const getValidChildrenForCodeblock = (child) => {
+const getValidChildrenForCodeblock = (child: unknown): string | undefined => {
   try {
     if (typeof child !== "string") {
-      return getValidChildrenForCodeblock(child.props.children)
+      const element = child as React.ReactElement<{ children: unknown }>
+      return getValidChildrenForCodeblock(element.props.children)
     } else {
       return child
     }
-  } catch (e) {
-    /*For now available: code without wrappers like div
-    * example:
-    * <Codeblock codeLanguage="language-js">
-        const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key"){"\n"}
-        web3.eth.getBlockNumber().then(console.log)
-      </Codeblock>
-    * */
+  } catch {
     console.error(`Codeblock children is not valid`)
   }
 }
@@ -252,7 +247,6 @@ const Codeblock = ({
         }}
       >
         <Highlight
-          {...defaultProps}
           code={codeText}
           language={language as Language}
           theme={selectedTheme as PrismTheme}
@@ -272,7 +266,7 @@ const Codeblock = ({
                   <div
                     key={i}
                     style={{ display: "table-row" }}
-                    {...getLineProps({ line, key: i })}
+                    {...getLineProps({ line })}
                   >
                     {shouldShowLineNumbers && (
                       <span className="table-cell select-none pe-8 text-end opacity-40">
@@ -281,7 +275,7 @@ const Codeblock = ({
                     )}
                     <span className="table-cell">
                       {line.map((token, key) => (
-                        <span key={key} {...getTokenProps({ token, key })} />
+                        <span key={key} {...getTokenProps({ token })} />
                       ))}
                     </span>
                   </div>
