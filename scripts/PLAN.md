@@ -1,0 +1,113 @@
+# Ethereum Translation Glossary -- Project Plan
+
+## Goal
+
+Build a comprehensive, multilingual translation glossary for Ethereum terminology that serves as:
+1. Internal tool for LLM-assisted and human translation workflows
+2. Public API for the ecosystem
+3. Downloadable reference (JSON/CSV/TBX)
+4. Foundation for a rebuilt ethglossary.xyz with SIWE auth and community feedback
+
+---
+
+## Phase 1: Term Extraction [DONE]
+
+- [x] Crawl `public/content/**/*.md` for Ethereum-specific terms
+- [x] Parse `src/intl/en/*.json` for terms in UI strings
+- [x] Merge with existing 203 glossary.json terms
+- [x] Deduplicate, categorize into 15 categories
+- [x] Identify 22 morphological term families
+- [x] Clean up noise (168 excluded, 83 merged)
+- [x] **Result: 415 confirmed terms + 19 for manual review**
+
+## Phase 2: Gemini Consultation [DONE]
+
+- [x] Round 1: Identify 45 missing terms
+- [x] Round 2: 30 context-dependent translation challenges
+- [x] Round 3: Script decision rules (Latin vs transliterate vs translate)
+- [x] Round 4: 20 morphological variant families with linguistic notes
+- [x] Incorporate feedback into enhanced term list
+- [x] **Result: 453 terms with enriched metadata**
+
+## Phase 3: Schema Design [DONE]
+
+- [x] Research TBX/CLDR standards via Gemini
+- [x] Design JSON Schema v1 (concept-oriented, CLDR plurals, context forms)
+- [x] Write 5 pilot examples (stake, gas, DeFi, rollup, validator) in 3 languages
+- [x] Resolve open questions with Doc:
+  - [x] Compounds: both top-level entry AND nested under root
+  - [x] Definitions: reference /glossary page + English-only `translation_context`
+  - [x] Lifecycle: simple `note` field, no formal status system
+  - [x] Community: import ethglossary.xyz as seed, Gemini as primary, community as signal
+
+## Phase 4: Schema Validation [IN PROGRESS]
+
+- [ ] Get Gemini review/critique of the schema
+- [ ] Pilot batch: ~10-15 terms fully translated into 3-4 diverse languages (ja, ar, fr, + Indic)
+- [ ] Validate schema handles all edge cases from the pilot
+- [ ] Iterate on schema if needed
+
+## Phase 5: Community Glossary Import
+
+- [ ] Fetch existing ethglossary.xyz data (107 terms, ~4,800 translations, 56 languages)
+- [ ] Map community terms to our schema IDs
+- [ ] Import as `source: "community"` with vote counts informing confidence
+- [ ] Flag conflicts between community and LLM translations for review
+
+## Phase 6: Full Translation Generation
+
+- [ ] Batch Gemini translations for all 453 terms x 24 languages
+- [ ] Apply per-language rules (script decisions, morphological forms, context forms)
+- [ ] Grammar metadata (gender, animacy, formality) for applicable languages
+- [ ] CLDR plural forms for languages that need them (ar, pl, ru, cs, etc.)
+- [ ] Cross-reference with community glossary where overlaps exist
+- [ ] Quality review pass
+
+## Phase 7: Integration & Delivery
+
+- [ ] Store glossary data in repo (likely `src/data/glossary/` or `public/data/glossary/`)
+- [ ] API endpoint: extend `app/api/glossary/` to serve translation glossary
+  - Support queries: `?term=X&lang=Y&context=Z&form=W`
+- [ ] Downloadable formats: JSON, CSV, TBX export generation
+- [ ] Wire into internal translation pipeline (LLM translation scripts, review processes)
+- [ ] Expand `/glossary` page with new terms from the 453 list
+- [ ] Documentation for external consumers
+
+## Phase 8: Community Platform (Future)
+
+- [ ] Design rebuilt ethglossary.xyz
+  - SIWE authentication (not Discord)
+  - Display full glossary with all languages
+  - Feedback actions: agree, disagree, suggest alternative
+  - Context-specific feedback (different form for prose vs heading vs tag)
+  - Sybil resistance considerations
+- [ ] Feedback loop: community signals feed back into glossary review cycle
+- [ ] Gemini re-evaluation based on accumulated community feedback
+
+---
+
+## Key Files
+
+| File | Description |
+|------|-------------|
+| `scripts/extract-glossary-terms.py` | Initial term extraction script |
+| `scripts/cleanup-glossary-terms.py` | Noise filtering and dedup |
+| `scripts/incorporate-gemini-feedback.py` | Merges Gemini suggestions |
+| `scripts/glossary-terms-cleaned.json` | 415 cleaned terms (pre-Gemini) |
+| `scripts/glossary-terms-enhanced.json` | 453 terms with Gemini enrichment |
+| `scripts/glossary-terms-cleaned.md` | Human-readable term list by category |
+| `scripts/glossary-schema.json` | JSON Schema v1 |
+| `scripts/glossary-schema-examples.json` | 5 pilot term examples |
+| `scripts/glossary-schema-design.md` | Schema design rationale + resolved decisions |
+| `scripts/gemini-feedback-round[1-4].md` | Raw Gemini consultation notes |
+
+## Decisions Log
+
+| Date | Decision | Rationale |
+|------|----------|-----------|
+| 2026-03-26 | Use concept-oriented schema (not string-as-key) | TBX standard; stable IDs prevent breakage |
+| 2026-03-26 | Include both top-level and nested compounds | Maximum API flexibility |
+| 2026-03-27 | Reference /glossary definitions, don't duplicate | Single source of truth; translation glossary adds `translation_context` only |
+| 2026-03-27 | Simple `note` field for lifecycle, no formal status | "Mining" is still active in broader crypto; blanket "deprecated" too rigid |
+| 2026-03-27 | Import community as seed, Gemini as primary | Community signal valuable but low-vote data not reliable enough to override |
+| 2026-03-27 | English-only translator context | Translators already read English; localized definitions out of scope |
