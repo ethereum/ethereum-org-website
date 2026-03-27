@@ -13,6 +13,7 @@ import type {
   TutorialFrontmatter,
   UpgradeFrontmatter,
   UseCasesFrontmatter,
+  VideoFrontmatter,
 } from "@/lib/interfaces"
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
@@ -69,7 +70,8 @@ export type Frontmatter = RoadmapFrontmatter &
   UseCasesFrontmatter &
   StakingFrontmatter &
   DocsFrontmatter &
-  TutorialFrontmatter
+  TutorialFrontmatter &
+  VideoFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
 export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
@@ -595,37 +597,38 @@ export type StatsBoxState = ValueOrError<string>
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
 /**
- * Video data structure (static metadata stored in videos.json).
- * Does not include title or description — those are stored in transcript frontmatter.
+ * Full video data parsed from a video's index.md file.
+ * Includes frontmatter metadata and the markdown body (transcript).
  */
-export type Video = {
+export type VideoData = {
   slug: string
+  content: string
+  frontmatter: VideoFrontmatter
+}
+
+export type VideoFormat =
+  | "presentation"
+  | "explainer"
+  | "interview"
+  | "tutorial"
+  | "panel"
+/**
+ * Flat, serializable video data for client components (e.g. VideoGalleryFilter).
+ * thumbnailUrl is pre-resolved server-side from customThumbnailUrl or youtubeId.
+ */
+export type VideoCardData = {
+  slug: string
+  title: string
+  description: string
   youtubeId: string
   uploadDate: string
   duration: string
   educationLevel: "beginner" | "intermediate" | "advanced"
-  topic: string
-  format: "presentation" | "explainer" | "interview" | "tutorial" | "panel"
-  language: "en"
+  topic: string[]
+  format: VideoFormat
   author: string
-  thumbnailUrl?: string
+  thumbnailUrl: string
 }
-
-/**
- * Video title and description, sourced from the transcript file's YAML frontmatter.
- * Stored in `public/content/videos/{slug}/transcript.md` (and locale equivalents),
- * enabling translation via the standard content pipeline.
- */
-export type VideoMeta = {
-  title: string
-  description: string
-}
-
-/**
- * Combined type for pages and components that need both static video data
- * and translatable metadata (title + description from transcript frontmatter).
- */
-export type VideoWithMeta = Video & VideoMeta
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
