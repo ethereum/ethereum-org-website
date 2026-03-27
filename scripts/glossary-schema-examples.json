@@ -1,0 +1,535 @@
+{
+  "$schema": "https://ethereum.org/glossary/schema/v1",
+  "version": "0.1.0",
+  "generated": "2026-03-27T00:00:00Z",
+  "languages": ["en", "ar", "fr", "hi", "ja", "ko"],
+  "_comment": "PILOT EXAMPLES: 5 diverse terms showing schema coverage. Not all fields populated -- this demonstrates the structure.",
+
+  "entries": {
+
+    "stake": {
+      "id": "stake",
+      "term": "Stake",
+      "category": "consensus",
+      "tier": 1,
+      "note": "",
+      "aliases": ["staking deposit"],
+      "related": ["validator", "proof-of-stake", "staking-pool", "slashing"],
+      "script_rule": "translate",
+
+      "en": {
+        "term": "stake",
+        "glossary_ref": "staking",
+        "translation_context": "Financial deposit/collateral put up by a validator, not a wooden stake. Noun and verb forms both very common.",
+        "forms": {
+          "base": "stake",
+          "verb": "to stake",
+          "gerund": "staking",
+          "past": "staked",
+          "agent": "staker",
+          "plural": "stakes",
+          "adjective": "staked",
+          "negation": "unstaking",
+          "compounds": {
+            "proof-of-stake": "proof of stake",
+            "solo-staking": "solo staking",
+            "pooled-staking": "pooled staking",
+            "liquid-staking": "liquid staking",
+            "restaking": "restaking",
+            "staking-pool": "staking pool",
+            "staking-as-a-service": "staking as a service"
+          }
+        },
+        "usage_note": "Used as both noun ('your stake') and verb ('to stake ETH'). The 'staking' gerund is extremely common. 'Staked' functions as both past tense and adjective ('staked ETH')."
+      },
+
+      "translations": {
+        "ja": {
+          "term": "ステーク",
+          "transliteration": "suteeku",
+          "forms": {
+            "base": "ステーク",
+            "verb": "ステーキングする",
+            "gerund": "ステーキング",
+            "past": "ステーキング済み",
+            "agent": "ステーカー",
+            "negation": "アンステーキング",
+            "compounds": {
+              "proof-of-stake": "プルーフ・オブ・ステーク",
+              "solo-staking": "ソロステーキング",
+              "liquid-staking": "リキッドステーキング"
+            }
+          },
+          "contexts": {
+            "prose": "ステーク",
+            "heading": "ステーク (Stake)",
+            "tag": "Stake",
+            "ui": "ステーク",
+            "code": "stake"
+          },
+          "grammar": {
+            "part_of_speech": "noun",
+            "formality": "neutral"
+          },
+          "source": "llm",
+          "confidence": "medium",
+          "notes": "Katakana transliteration standard for this term. Verb form requires Japanese helper verb する (suru)."
+        },
+
+        "ar": {
+          "term": "حصة",
+          "transliteration": "hissa",
+          "forms": {
+            "base": "حصة",
+            "verb": "رهن",
+            "gerund": "الرهن",
+            "past": "مرهون",
+            "agent": "مُراهن",
+            "plural": "حصص",
+            "negation": "إلغاء الرهن",
+            "compounds": {
+              "proof-of-stake": "إثبات الحصة",
+              "solo-staking": "الرهن المنفرد",
+              "liquid-staking": "الرهن السائل"
+            }
+          },
+          "contexts": {
+            "prose": "حصة",
+            "heading": "الحصة (Stake)",
+            "tag": "Stake",
+            "ui": "حصة",
+            "code": "stake"
+          },
+          "grammar": {
+            "gender": "feminine",
+            "number": "singular",
+            "part_of_speech": "noun"
+          },
+          "plurals": {
+            "one": "حصة",
+            "two": "حصتان",
+            "few": "حصص",
+            "many": "حصة",
+            "other": "حصص"
+          },
+          "source": "llm",
+          "confidence": "medium",
+          "notes": "Noun (hissa) and verb (rahn) use completely different roots. Arabic verbal noun pattern for 'staking' (al-rahn) differs from agent noun (murahin)."
+        },
+
+        "fr": {
+          "term": "mise en jeu",
+          "forms": {
+            "base": "mise en jeu",
+            "verb": "mettre en jeu",
+            "gerund": "mise en jeu",
+            "past": "mis(e) en jeu",
+            "agent": "validateur",
+            "plural": "mises en jeu",
+            "negation": "retrait de mise en jeu",
+            "compounds": {
+              "proof-of-stake": "preuve d'enjeu",
+              "solo-staking": "mise en jeu individuelle",
+              "liquid-staking": "mise en jeu liquide"
+            }
+          },
+          "contexts": {
+            "prose": "mise en jeu",
+            "heading": "Mise en jeu (Staking)",
+            "tag": "Staking",
+            "ui": "Mise en jeu",
+            "code": "stake"
+          },
+          "grammar": {
+            "gender": "feminine",
+            "number": "singular",
+            "part_of_speech": "noun"
+          },
+          "source": "llm",
+          "confidence": "medium",
+          "notes": "French often uses 'staking' as a loanword in informal contexts. 'Mise en jeu' is the formal/educational translation. Agent form defaults to 'validateur' since 'stakeur' is not standard."
+        }
+      }
+    },
+
+    "gas": {
+      "id": "gas",
+      "term": "Gas",
+      "category": "transactions",
+      "tier": 1,
+      "note": "",
+      "aliases": [],
+      "related": ["gas-fee", "gas-limit", "gas-price", "base-fee", "gwei"],
+      "script_rule": "context_dependent",
+
+      "en": {
+        "term": "gas",
+        "glossary_ref": "gas",
+        "translation_context": "Computational fuel unit for Ethereum transactions. Metaphor for 'fuel', NOT chemical/physical gas. Almost always a noun or modifier.",
+        "forms": {
+          "base": "gas",
+          "adjective": "gas",
+          "compounds": {
+            "gas-fee": "gas fee",
+            "gas-limit": "gas limit",
+            "gas-price": "gas price",
+            "gas-optimization": "gas optimization"
+          }
+        },
+        "usage_note": "Almost always used as a noun or modifier ('gas fee', 'gas limit'). No verb or agent forms. The metaphor is 'fuel' -- computational fuel."
+      },
+
+      "translations": {
+        "ja": {
+          "term": "ガス",
+          "transliteration": "gasu",
+          "contexts": {
+            "prose": "ガス",
+            "heading": "ガス (Gas)",
+            "tag": "Gas",
+            "ui": "ガス",
+            "code": "gas"
+          },
+          "grammar": {
+            "part_of_speech": "noun",
+            "formality": "neutral"
+          },
+          "source": "llm",
+          "confidence": "high",
+          "notes": "Universally transliterated to katakana. Never translated as chemical gas (気体/kitai)."
+        },
+
+        "ar": {
+          "term": "غاز",
+          "transliteration": "ghaz",
+          "script_override": "transliterate",
+          "contexts": {
+            "prose": "غاز",
+            "heading": "الغاز (Gas)",
+            "tag": "Gas",
+            "ui": "غاز",
+            "code": "gas"
+          },
+          "grammar": {
+            "gender": "masculine",
+            "part_of_speech": "noun"
+          },
+          "source": "llm",
+          "confidence": "medium",
+          "notes": "Transliterated, not translated. Must not be confused with natural gas (غاز طبيعي). Some communities use 'رسوم' (rusum/fees) instead but this loses the unit concept."
+        },
+
+        "fr": {
+          "term": "gas",
+          "script_override": "keep_latin",
+          "contexts": {
+            "prose": "gas",
+            "heading": "Gas",
+            "tag": "Gas",
+            "ui": "Gas",
+            "code": "gas"
+          },
+          "grammar": {
+            "gender": "masculine",
+            "part_of_speech": "noun"
+          },
+          "source": "llm",
+          "confidence": "high",
+          "notes": "Kept as English loanword in French. 'Gaz' (French word) refers to physical gas and would be confusing. Treated as masculine noun."
+        }
+      }
+    },
+
+    "defi": {
+      "id": "defi",
+      "term": "DeFi",
+      "category": "defi",
+      "tier": 1,
+      "note": "",
+      "aliases": ["decentralized finance", "Decentralized Finance"],
+      "related": ["dex", "liquidity", "lending", "stablecoin"],
+      "script_rule": "context_dependent",
+
+      "en": {
+        "term": "DeFi",
+        "glossary_ref": "defi",
+        "translation_context": "Acronym for Decentralized Finance. Used as both noun and adjective. The acronym is strongly preferred over the expanded form in all contexts.",
+        "forms": {
+          "base": "DeFi",
+          "compounds": {
+            "defi-protocol": "DeFi protocol",
+            "defi-platform": "DeFi platform"
+          }
+        },
+        "usage_note": "Used as both a noun ('the DeFi ecosystem') and adjective ('DeFi protocols'). The acronym is strongly preferred over the expanded form in all contexts."
+      },
+
+      "translations": {
+        "ja": {
+          "term": "DeFi",
+          "transliteration": "diifai",
+          "script_override": "context_dependent",
+          "contexts": {
+            "prose": "DeFi（分散型金融）",
+            "heading": "DeFi",
+            "tag": "DeFi",
+            "ui": "DeFi",
+            "code": "DeFi"
+          },
+          "grammar": {
+            "part_of_speech": "noun",
+            "formality": "neutral"
+          },
+          "source": "llm",
+          "confidence": "high",
+          "notes": "Latin 'DeFi' kept in most contexts. First use in prose may include parenthetical Japanese explanation (分散型金融 / bunsan-gata kin'yuu). Subsequent uses just 'DeFi'."
+        },
+
+        "ar": {
+          "term": "التمويل اللامركزي",
+          "transliteration": "al-tamwil al-lamarkazi",
+          "contexts": {
+            "prose": "التمويل اللامركزي (DeFi)",
+            "heading": "DeFi",
+            "tag": "DeFi",
+            "ui": "DeFi",
+            "code": "DeFi"
+          },
+          "grammar": {
+            "gender": "masculine",
+            "part_of_speech": "noun"
+          },
+          "source": "llm",
+          "confidence": "medium",
+          "notes": "Full Arabic translation for prose; Latin 'DeFi' for headings, tags, and UI. First prose mention should include both forms."
+        },
+
+        "fr": {
+          "term": "DeFi",
+          "contexts": {
+            "prose": "la DeFi (finance decentralisee)",
+            "heading": "DeFi",
+            "tag": "DeFi",
+            "ui": "DeFi",
+            "code": "DeFi"
+          },
+          "grammar": {
+            "gender": "feminine",
+            "part_of_speech": "noun"
+          },
+          "source": "llm",
+          "confidence": "high",
+          "notes": "Latin acronym kept. Feminine in French because 'finance' is feminine. First use may expand as 'la finance decentralisee (DeFi)'."
+        }
+      }
+    },
+
+    "rollup": {
+      "id": "rollup",
+      "term": "Rollup",
+      "category": "scaling",
+      "tier": 1,
+      "note": "",
+      "aliases": ["roll-up"],
+      "related": ["optimistic-rollup", "zero-knowledge-rollup", "layer-2", "sequencer"],
+      "script_rule": "context_dependent",
+
+      "en": {
+        "term": "rollup",
+        "glossary_ref": "rollups",
+        "translation_context": "L2 scaling technology that bundles transactions. From phrasal verb 'roll up' but NEVER used as a verb in Ethereum context -- always a noun or modifier.",
+        "forms": {
+          "base": "rollup",
+          "plural": "rollups",
+          "compounds": {
+            "optimistic-rollup": "optimistic rollup",
+            "zk-rollup": "ZK rollup",
+            "rollup-bridge": "rollup bridge"
+          }
+        },
+        "usage_note": "Used as both noun ('a rollup') and modifier ('rollup technology'). The phrasal verb origin ('roll up') is never used as a verb in Ethereum context."
+      },
+
+      "translations": {
+        "ja": {
+          "term": "ロールアップ",
+          "transliteration": "rooruappu",
+          "contexts": {
+            "prose": "ロールアップ",
+            "heading": "ロールアップ (Rollup)",
+            "tag": "Rollup",
+            "ui": "ロールアップ",
+            "code": "rollup"
+          },
+          "grammar": {
+            "part_of_speech": "noun",
+            "formality": "neutral"
+          },
+          "source": "llm",
+          "confidence": "high",
+          "notes": "Standard katakana transliteration. Never translated semantically."
+        },
+
+        "ar": {
+          "term": "تجميع",
+          "transliteration": "tajmee'",
+          "contexts": {
+            "prose": "تجميع (Rollup)",
+            "heading": "Rollup",
+            "tag": "Rollup",
+            "ui": "Rollup",
+            "code": "rollup"
+          },
+          "grammar": {
+            "gender": "masculine",
+            "part_of_speech": "noun"
+          },
+          "source": "llm",
+          "confidence": "low",
+          "notes": "Arabic translation 'tajmee' (gathering/bundling) captures the concept but is not universally adopted. Many Arabic-speaking communities keep 'Rollup' in Latin. Low confidence -- needs community validation."
+        },
+
+        "fr": {
+          "term": "rollup",
+          "script_override": "keep_latin",
+          "contexts": {
+            "prose": "rollup",
+            "heading": "Rollup",
+            "tag": "Rollup",
+            "ui": "Rollup",
+            "code": "rollup"
+          },
+          "grammar": {
+            "gender": "masculine",
+            "part_of_speech": "noun"
+          },
+          "source": "llm",
+          "confidence": "high",
+          "notes": "Kept as English loanword. No established French translation. Masculine by default (like most English tech loanwords in French)."
+        }
+      }
+    },
+
+    "validator": {
+      "id": "validator",
+      "term": "Validator",
+      "category": "consensus",
+      "tier": 1,
+      "note": "",
+      "aliases": [],
+      "related": ["stake", "attestation", "slashing", "beacon-chain"],
+      "term_family": "validate",
+      "script_rule": "translate",
+
+      "en": {
+        "term": "validator",
+        "glossary_ref": "validator",
+        "translation_context": "Software entity (node) that validates blocks in PoS. Sometimes refers to the human operator too. Do NOT confuse with 'miner' (PoW equivalent).",
+        "forms": {
+          "base": "validator",
+          "verb": "to validate",
+          "gerund": "validating",
+          "past": "validated",
+          "plural": "validators",
+          "adjective": "valid",
+          "compounds": {
+            "validator-lifecycle": "validator lifecycle",
+            "validator-client": "validator client"
+          }
+        },
+        "usage_note": "Refers to both the software entity (node) and sometimes the human operator. Context usually makes this clear."
+      },
+
+      "translations": {
+        "ja": {
+          "term": "バリデータ",
+          "transliteration": "barideeta",
+          "forms": {
+            "base": "バリデータ",
+            "verb": "検証する",
+            "gerund": "検証",
+            "past": "検証済み",
+            "plural": "バリデータ",
+            "adjective": "有効な"
+          },
+          "contexts": {
+            "prose": "バリデータ",
+            "heading": "バリデータ (Validator)",
+            "tag": "Validator",
+            "ui": "バリデータ",
+            "code": "validator"
+          },
+          "grammar": {
+            "part_of_speech": "noun",
+            "formality": "neutral"
+          },
+          "source": "llm",
+          "confidence": "high",
+          "notes": "Agent noun transliterated; verb forms use native Japanese '検証する' (kenshou suru). No plural inflection in Japanese."
+        },
+
+        "ar": {
+          "term": "مُدقِّق",
+          "transliteration": "mudaqqiq",
+          "forms": {
+            "base": "مُدقِّق",
+            "verb": "يُدقِّق",
+            "gerund": "التدقيق",
+            "past": "مُدقَّق",
+            "plural": "مُدقِّقون"
+          },
+          "contexts": {
+            "prose": "مُدقِّق",
+            "heading": "المُدقِّق (Validator)",
+            "tag": "Validator",
+            "ui": "مُدقِّق",
+            "code": "validator"
+          },
+          "grammar": {
+            "gender": "masculine",
+            "number": "singular",
+            "part_of_speech": "noun",
+            "animacy": "animate"
+          },
+          "plurals": {
+            "one": "مُدقِّق",
+            "two": "مُدقِّقان",
+            "few": "مُدقِّقون",
+            "many": "مُدقِّقين",
+            "other": "مُدقِّقون"
+          },
+          "source": "llm",
+          "confidence": "medium",
+          "notes": "Active participle pattern (mudaqqiq) used for the agent. Treated as animate/masculine when referring to the role, even though it's software. Full broken plural paradigm needed for Arabic."
+        },
+
+        "fr": {
+          "term": "validateur",
+          "forms": {
+            "base": "validateur",
+            "verb": "valider",
+            "gerund": "validation",
+            "past": "valide",
+            "plural": "validateurs",
+            "adjective": "valide"
+          },
+          "contexts": {
+            "prose": "validateur",
+            "heading": "Validateur",
+            "tag": "Validateur",
+            "ui": "Validateur",
+            "code": "validator"
+          },
+          "grammar": {
+            "gender": "masculine",
+            "number": "singular",
+            "part_of_speech": "noun"
+          },
+          "source": "llm",
+          "confidence": "high",
+          "notes": "Straightforward translation. Masculine form used for the technical role. Feminine 'validatrice' exists but is not commonly used in this technical context."
+        }
+      }
+    }
+  }
+}
