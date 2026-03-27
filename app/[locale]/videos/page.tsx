@@ -6,19 +6,18 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { VideoWithMeta } from "@/lib/types"
-
 import Breadcrumbs from "@/components/Breadcrumbs"
 import SimpleHero from "@/components/Hero/SimpleHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
-import VideoGalleryFilter from "@/components/Videos/VideoGalleryFilter"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-import { getVideos, VIDEO_CATEGORIES } from "@/lib/utils/videos"
-import { getVideoMeta } from "@/lib/utils/videoTranscripts"
+import { getVideos } from "@/lib/utils/videos"
+
+import VideoGalleryFilter from "./_components/VideoGalleryFilter"
+import { VIDEO_CATEGORIES } from "./constants"
 
 import { routing } from "@/i18n/routing"
 
@@ -29,17 +28,8 @@ const VideoGalleryPage = async (props: {
 
   setRequestLocale(locale)
 
-  const videos = await getVideos()
+  const videos = await getVideos(locale)
   const t = await getTranslations({ locale, namespace: "page-videos" })
-
-  // Merge translatable metadata (title + description from transcript frontmatter)
-  // into each video object for the client-side filter component
-  const videosWithMeta: VideoWithMeta[] = await Promise.all(
-    videos.map(async (video) => {
-      const meta = await getVideoMeta(video.slug, locale)
-      return { ...video, ...meta }
-    })
-  )
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -49,19 +39,14 @@ const VideoGalleryPage = async (props: {
   return (
     <I18nProvider locale={locale} messages={messages}>
       <MainArticle className="space-y-12">
-        {/* Hero Section */}
         <SimpleHero
           breadcrumbs={<Breadcrumbs slug="videos" />}
           title={t("page-videos-hero-title")}
           subtitle={t("page-videos-hero-description")}
         />
 
-        {/* All Videos — Client-side filter island */}
         <Section id="videos" className="space-y-6 px-4 md:px-8">
-          <VideoGalleryFilter
-            videos={videosWithMeta}
-            categories={VIDEO_CATEGORIES}
-          />
+          <VideoGalleryFilter videos={videos} categories={VIDEO_CATEGORIES} />
         </Section>
       </MainArticle>
     </I18nProvider>
