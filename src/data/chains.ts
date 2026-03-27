@@ -1342,6 +1342,17 @@ const chains = [
     chain: "Everclear Mainnet",
   },
   {
+    name: "Fluent",
+    infoURL: "https://www.fluent.xyz/",
+    chainId: 25363,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "FLUENT",
+  },
+  {
     name: "Horizen Mainnet",
     infoURL: "https://horizen.hub.caldera.xyz",
     chainId: 26514,
@@ -1571,6 +1582,17 @@ const chains = [
       decimals: 18,
     },
     chain: "Superposition",
+  },
+  {
+    name: "DUST Mainnet",
+    infoURL: "https://dustproject.org",
+    chainId: 55378,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
   },
   {
     name: "Lambda Chain Mainnet",
@@ -2045,6 +2067,17 @@ const chains = [
       decimals: 18,
     },
     chain: "DUSTBOY",
+  },
+  {
+    name: "Gensyn Mainnet",
+    infoURL: "https://www.gensyn.ai/",
+    chainId: 685689,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "Gensyn",
   },
   {
     name: "Zether Mainnet",
