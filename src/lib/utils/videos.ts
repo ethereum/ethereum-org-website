@@ -1,125 +1,162 @@
-import type { Video } from "@/lib/types"
+import { readdir, readFile } from "fs/promises"
+import { join } from "path"
 
-import videosData from "@/data/videos.json"
+import matter from "gray-matter"
+
+import type { VideoCardData, VideoData } from "@/lib/types"
+import type { VideoFrontmatter } from "@/lib/interfaces"
+
+import { CONTENT_DIR, DEFAULT_LOCALE } from "@/lib/constants"
 
 /**
- * Get all videos from the static JSON data file.
+ * Resolve the absolute path to a video's index.md for a given locale.
+ * English: public/content/videos/{slug}/index.md
+ * Translated: public/content/translations/{locale}/videos/{slug}/index.md
  */
-export async function getVideos(): Promise<Video[]> {
-  return videosData as Video[]
+function videoPath(slug: string, locale: string): string {
+  return join(
+    process.cwd(),
+    CONTENT_DIR,
+    locale === DEFAULT_LOCALE ? "" : `translations/${locale}`,
+    `videos/${slug}/index.md`
+  )
 }
 
 /**
- * Get a single video by its URL slug.
- * Returns null if no video matches the given slug.
+ * Default YouTube thumbnail URL derived from a video ID.
  */
-export async function getVideoBySlug(slug: string): Promise<Video | null> {
-  const videos = await getVideos()
-  return videos.find((v) => v.slug === slug) ?? null
+export function getDefaultThumbnailUrl(youtubeId: string): string {
+  return `https://img.youtube.com/vi/${youtubeId}/sddefault.jpg`
 }
 
 /**
- * Category configuration for the video gallery shelves.
- * Each category maps a URL-safe key to the tags that place a video in that shelf.
+ * Read and parse a video's index.md file for a given slug and locale.
+ * Returns the full frontmatter and markdown body content.
+ *
+ * For non-English locales, metadata (youtubeId, duration, etc.) is always
+ * read from the English source. Title and description are overridden from
+ * the translated file if available.
  */
-export const VIDEO_CATEGORIES = [
-  {
-    key: "how-ethereum-works",
-    labelKey: "page-videos-category-how-ethereum-works",
-    tags: [
-      "consensus",
-      "blockchain",
-      "cryptography",
-      "accounts",
-      "ethereum",
-      "intro",
-      "transactions",
-      "pow",
-      "proof-of-authority",
-      "pos",
-      "staking",
-      "withdrawals",
-    ],
-    minVideos: 4,
-  },
-  {
-    key: "network-upgrades",
-    labelKey: "page-videos-category-network-upgrades",
-    tags: ["upgrades", "pectra", "dencun", "eip-4844", "blobs", "history"],
-    minVideos: 4,
-  },
-  {
-    key: "roadmap-and-priorities",
-    labelKey: "page-videos-category-roadmap-and-priorities",
-    tags: ["roadmap", "pbs", "mev"],
-    minVideos: 4,
-  },
-  {
-    key: "scaling-and-layer-2",
-    labelKey: "page-videos-category-scaling-and-layer-2",
-    tags: [
-      "scaling",
-      "layer-2",
-      "rollups",
-      "optimistic-rollups",
-      "zk-rollups",
-      "zero-knowledge-proofs",
-    ],
-    minVideos: 4,
-  },
-  {
-    key: "use-cases",
-    labelKey: "page-videos-category-use-cases",
-    tags: [
-      "defi",
-      "finance",
-      "nfts",
-      "erc-721",
-      "erc-1155",
-      "lending",
-      "smart-contracts",
-      "dapps",
-      "restaking",
-      "eigenlayer",
-      "refi",
-      "sustainability",
-      "desci",
-      "funding",
-      "social",
-      "decentralization",
-      "dao",
-      "identity",
-    ],
-    minVideos: 4,
-  },
-  {
-    key: "privacy-and-security",
-    labelKey: "page-videos-category-privacy-and-security",
-    tags: ["security", "authentication", "privacy", "governance"],
-    minVideos: 4,
-  },
-  {
-    key: "community-stories",
-    labelKey: "page-videos-category-community-stories",
-    tags: ["contributing", "translations", "ai", "agents"],
-    minVideos: 4,
-  },
-] as const
+export async function getVideoData(
+  slug: string,
+  locale: string = DEFAULT_LOCALE
+): Promise<VideoData> {
+  // Always read English source for full metadata
+  const enPath = videoPath(slug, DEFAULT_LOCALE)
+  const enRaw = await readFile(enPath, "utf-8")
+  const enParsed = matter(enRaw)
+  const frontmatter = enParsed.data as VideoFrontmatter
+
+  // gray-matter auto-converts YAML dates to Date objects; coerce back to string
+  if ((frontmatter.uploadDate as unknown) instanceof Date) {
+    frontmatter.uploadDate = (frontmatter.uploadDate as unknown as Date)
+      .toISOString()
+      .split("T")[0]
+  }
+  let content = enParsed.content
+
+  // For non-English locales, try to read translated title/description
+  if (locale !== DEFAULT_LOCALE) {
+    try {
+      const localePath = videoPath(slug, locale)
+      const localeRaw = await readFile(localePath, "utf-8")
+      const localeParsed = matter(localeRaw)
+
+      if (typeof localeParsed.data.title === "string") {
+        frontmatter.title = localeParsed.data.title
+      }
+      if (typeof localeParsed.data.description === "string") {
+        frontmatter.description = localeParsed.data.description
+      }
+      // Use translated body if available
+      if (localeParsed.content.trim()) {
+        content = localeParsed.content
+      }
+    } catch {
+      // Translated file not found -- use English (already loaded)
+    }
+  }
+
+  return { slug, content, frontmatter }
+}
 
 /**
- * Filter videos by category tags.
- * Returns all videos where `video.topic` contains at least one of the
- * provided tags (comma-split, trimmed, case-insensitive OR match).
- * Results are deduplicated — a video appears at most once.
+ * Convert VideoData to a flat VideoCardData suitable for client components.
  */
-export function getVideosByCategory<T extends Video>(
-  videos: T[],
-  tags: string[]
-): T[] {
-  const lowerTags = new Set(tags.map((t) => t.trim().toLowerCase()))
+function toVideoCardData(data: VideoData): VideoCardData {
+  const { slug, frontmatter: fm } = data
+  return {
+    slug,
+    title: fm.title,
+    description: fm.description,
+    youtubeId: fm.youtubeId,
+    uploadDate: fm.uploadDate,
+    duration: fm.duration,
+    educationLevel: fm.educationLevel,
+    topic: fm.topic,
+    format: fm.format,
+    author: fm.author,
+    thumbnailUrl: fm.customThumbnailUrl || getDefaultThumbnailUrl(fm.youtubeId),
+  }
+}
 
-  return videos.filter((video) => {
-    const videoTags = video.topic.split(",").map((t) => t.trim().toLowerCase())
-    return videoTags.some((vt) => lowerTags.has(vt))
-  })
+/**
+ * Get all videos by scanning the content/videos directory.
+ * Returns flat VideoCardData[] suitable for passing to client components.
+ */
+export async function getVideos(
+  locale: string = DEFAULT_LOCALE
+): Promise<VideoCardData[]> {
+  const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
+  const entries = await readdir(videosDir, { withFileTypes: true })
+  const slugs = entries.filter((e) => e.isDirectory()).map((e) => e.name)
+
+  const results = await Promise.all(
+    slugs.map(async (slug) => {
+      try {
+        const data = await getVideoData(slug, locale)
+        return toVideoCardData(data)
+      } catch {
+        console.warn(`Skipping video ${slug}: missing index.md`)
+        return null
+      }
+    })
+  )
+
+  return results.filter((v): v is VideoCardData => v !== null)
+}
+
+/**
+ * Get all video slugs by scanning the content/videos directory.
+ */
+export async function getVideoSlugs(): Promise<string[]> {
+  const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
+  const entries = await readdir(videosDir, { withFileTypes: true })
+  return entries.filter((e) => e.isDirectory()).map((e) => e.name)
+}
+
+/**
+ * Get the markdown body (transcript) for a video.
+ * Returns empty string if no body content exists.
+ */
+export async function getTranscript(
+  slug: string,
+  locale: string = DEFAULT_LOCALE
+): Promise<string> {
+  const data = await getVideoData(slug, locale)
+  return data.content
+}
+
+/**
+ * Get the title and description for a video from its frontmatter.
+ */
+export async function getVideoMeta(
+  slug: string,
+  locale: string = DEFAULT_LOCALE
+): Promise<{ title: string; description: string }> {
+  const data = await getVideoData(slug, locale)
+  return {
+    title: data.frontmatter.title,
+    description: data.frontmatter.description,
+  }
 }
