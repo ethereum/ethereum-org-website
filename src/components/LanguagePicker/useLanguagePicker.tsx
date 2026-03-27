@@ -36,9 +36,6 @@ export const useLanguagePicker = (languages: LocaleDisplayInfo[]) => {
     return preferences
   }, [])
 
-  // Keep the first preference for backward compatibility
-  const intlLocalePreference = intlLocalePreferences[0] || ""
-
   // Sort languages client-side to prioritize browser preference
   const sortedLanguages = useMemo<LocaleDisplayInfo[]>(() => {
     return [...languages]
@@ -73,12 +70,5 @@ export const useLanguagePicker = (languages: LocaleDisplayInfo[]) => {
       })
   }, [languages, intlLocalePreferences, locale])
 
-  const intlLanguagePreference = sortedLanguages.find(
-    (lang) => lang.localeOption === intlLocalePreference
-  )
-
-  return {
-    languages: sortedLanguages,
-    intlLanguagePreference,
-  }
+  return { languages: sortedLanguages }
 }

@@ -168,7 +168,6 @@ export type I18nLocale = {
   name: string
   localName: string
   langDir: Direction
-  dateFormat: string
   /**
    * @property forceLocalName - Optional flag to indicate that the local name should be used instead of the fallback from `Intl.DisplayName`.
    *   Fallback used when locale language name matches English name.
@@ -307,24 +306,11 @@ export type LocaleContributions = {
   data: FileContributorData[]
 }
 
-// Crowdin translation progress
-export type ProjectProgressData = {
-  languageId: string
-  words: {
-    total: number
-    approved: number
-  }
-}
-
 export type LocaleDisplayInfo = {
   localeOption: string
   sourceName: string
   targetName: string
   englishName: string
-  approvalProgress: number
-  wordsApproved: number
-  progress: string
-  words: string
   isBrowserDefault?: boolean
 }
 
