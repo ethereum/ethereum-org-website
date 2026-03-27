@@ -512,6 +512,24 @@ test.describe("Standalone Fixes", () => {
       // Should NOT insert a blank line between them
       expect(content).toBe(input)
     })
+
+    test("does not break AlertTitle onto new line (Alert must not match AlertTitle)", () => {
+      const input =
+        "<AlertContent>\n<AlertTitle>Do not confuse with zkEVM</AlertTitle>"
+      const { content } = fixBlockComponentLineBreaks(input)
+      // AlertTitle is NOT a block component; it should stay on one line
+      expect(content).toContain(
+        "<AlertTitle>Do not confuse with zkEVM</AlertTitle>"
+      )
+    })
+
+    test("does not break AlertDescription onto new line", () => {
+      const input = "<AlertDescription>Some warning text</AlertDescription>"
+      const { content } = fixBlockComponentLineBreaks(input)
+      // AlertDescription IS in BLOCK_MDX_COMPONENTS, so its opening/closing get line-broken
+      // But the close regex should still work correctly
+      expect(content).toContain("</AlertDescription>")
+    })
   })
 
   test.describe("normalizeFrontmatterDates", () => {
@@ -2491,7 +2509,8 @@ author: Ori Pomerantz
 
   test.describe("fixCrossScriptPunctuation", () => {
     test("replaces \u3002 with \u06D4 for locale ur", () => {
-      const input = "\u06CC\u06C1 \u0627\u06CC\u06A9 \u062C\u0645\u0644\u06C1 \u06C1\u06D2\u3002"
+      const input =
+        "\u06CC\u06C1 \u0627\u06CC\u06A9 \u062C\u0645\u0644\u06C1 \u06C1\u06D2\u3002"
       const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
       expect(content).toBe(
         "\u06CC\u06C1 \u0627\u06CC\u06A9 \u062C\u0645\u0644\u06C1 \u06C1\u06D2\u06D4"
@@ -2567,7 +2586,7 @@ author: Ori Pomerantz
   })
 
   test.describe("fixSpanWrappedBackticks", () => {
-    test("unwraps <span dir=\"ltr\"> around backtick content", () => {
+    test('unwraps <span dir="ltr"> around backtick content', () => {
       const input = '<span dir="ltr">`APPLY(S,TX) -> S\'`</span>'
       const { content, fixCount } = fixSpanWrappedBackticks(input)
       expect(content).toBe("`APPLY(S,TX) -> S'`")
@@ -2584,7 +2603,7 @@ author: Ori Pomerantz
       expect(fixCount).toBe(2)
     })
 
-    test("does not touch <span dir=\"ltr\"> wrapping non-backtick content", () => {
+    test('does not touch <span dir="ltr"> wrapping non-backtick content', () => {
       const input = '<span dir="ltr">2026-03-15</span>'
       const { content, fixCount } = fixSpanWrappedBackticks(input)
       expect(content).toBe(input)

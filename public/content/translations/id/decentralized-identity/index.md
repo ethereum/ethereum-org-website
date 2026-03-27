@@ -83,23 +83,11 @@ Model ini memungkinkan pengungkapan selektif, terutama bila dikombinasikan denga
 
 #### 💡Studi kasus: Bhutan National Digital ID (NDI) di Ethereum {#case-study-bhutan-ndi}
 
-- Menyediakan akses ke kredensial identitas yang dapat diverifikasi untuk hampir 800.000 warga negara Bhutan
+- Menyediakan akses ke kredensial yang dapat diverifikasi untuk hampir 800.000 warga negara Bhutan
 - Bermigrasi dari jaringan Polygon [ke mainnet Ethereum](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) pada Oktober 2025
 - Lebih dari [234.000 ID digital](https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/) diterbitkan per Maret 2025
 
-Kerajaan Bhutan [memigrasikan sistem National Digital Identity (NDI) miliknya](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) ke Ethereum pada Oktober 2025. Dibangun di atas prinsip-prinsip identitas terdesentralisasi dan identitas berdaulat sendiri (self-sovereign identity), sistem NDI Bhutan menggunakan pengidentifikasi terdesentralisasi dan kredensial yang dapat diverifikasi untuk menerbitkan kredensial yang ditandatangani secara digital langsung ke dompet pribadi warga negara. Dengan menambatkan bukti kriptografi dari kredensial ini di Ethereum, sistem memastikan bahwa kredensial tersebut autentik, anti-rusak, dan dapat diverifikasi oleh pihak mana pun tanpa menanyakan otoritas pusat.
-
-Arsitektur sistem ini menekankan privasi melalui penggunaan teknologi [zero-knowledge proof (ZKP)](/zero-knowledge-proofs/). Implementasi "pengungkapan selektif" ini memungkinkan warga negara untuk membuktikan fakta spesifik (mis., "Saya berusia di atas 18 tahun" atau "Saya adalah warga negara") untuk mengakses layanan tanpa mengungkapkan data pribadi yang mendasarinya, seperti nomor ID lengkap atau tanggal lahir mereka yang sebenarnya. Ini menunjukkan penggunaan Ethereum di dunia nyata yang kuat untuk sistem ID nasional yang aman, berpusat pada pengguna, dan menjaga privasi.
-
-#### 💡Studi kasus: QuarkID Kota Buenos Aires di [Layer 2](/layer-2/) Ethereum ZKSync Era {#case-study-buenos-aires-quarkid}
-
-- Menerbitkan kredensial identitas terdesentralisasi kepada lebih dari [3,6 juta pengguna](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo) saat peluncuran
-- QuarkID adalah protokol sumber terbuka yang diakui sebagai [Barang Publik Digital (Digital Public Good)](https://www.digitalpublicgoods.net/r/quarkid) di bawah Tujuan Pembangunan Berkelanjutan PBB
-- Menekankan model "[pemerintah-sebagai-pengguna](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo)", di mana kota tidak memiliki protokol tersebut, memberikan warga negara kepemilikan data dan privasi penuh
-
-Pada tahun 2024, Pemerintah Kota Buenos Aires (GCBA) mengintegrasikan QuarkID, "kerangka kepercayaan digital" sumber terbuka yang dibangun oleh Sekretariat Inovasi dan Transformasi Digital GCBA, ke dalam miBA, aplikasi resmi kota bagi penduduk untuk mengakses layanan pemerintah dan dokumen resmi. Saat peluncuran, seluruh 3,6 juta+ pengguna miBA diberikan identitas digital terdesentralisasi yang memungkinkan mereka untuk mengelola dan membagikan dokumen dan sertifikat digital yang dapat diverifikasi secara onchain, termasuk kredensial kewarganegaraan, akta kelahiran, pernikahan, dan kematian, catatan pajak, catatan vaksinasi, dan banyak lagi.
-
-Dibangun di jaringan [Layer 2](/layer-2/) Ethereum ZKSync Era, sistem QuarkID menggunakan teknologi ZKP untuk memungkinkan warga negara memverifikasi kredensial pribadi secara peer-to-peer melalui perangkat seluler mereka&mdash;tanpa mengekspos data pribadi yang tidak perlu. Program ini menyoroti model "pemerintah-sebagai-pengguna" di mana GCBA bertindak sebagai salah satu pengguna protokol QuarkID yang sumber terbuka dan dapat dioperasikan, alih-alih bertindak sebagai pemilik terpusat. Arsitektur yang diaktifkan ZKP ini memberikan fitur privasi utama: tidak ada pihak ketiga, bahkan GCBA sekalipun, yang dapat melacak bagaimana, kapan, atau mengapa seorang warga negara menggunakan kredensial mereka. Program yang sukses ini memberi warga negara identitas berdaulat sendiri secara penuh dan kontrol atas data sensitif mereka, semuanya diamankan oleh jaringan Ethereum yang terdistribusi secara global.
+Kerajaan Bhutan [memigrasikan sistem National Digital Identity (NDI) miliknya](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) ke Ethereum pada Oktober 2025. Dibangun di atas prinsip-prinsip identitas terdesentralisasi dan identitas berdaulat sendiri (self-sovereign identity), sistem NDI Bhutan menggunakan pengidentifikasi terdesentralisasi dan kredensial yang dapat diverifikasi untuk menerbitkan kredensial yang ditandatangani secara digital langsung ke dompet pribadi warga negara. Dengan menambatkan skema penerbit dari kredensial ini di Ethereum, sistem memastikan bahwa kredensial tersebut autentik, anti-rusak, dan dapat diverifikasi oleh pihak mana pun tanpa menanyakan otoritas pusat.
 
 ## Apa itu pengesahan? {#what-are-attestations}
 
@@ -188,8 +176,6 @@ Ada banyak proyek ambisius yang menggunakan Ethereum sebagai fondasi untuk solus
 - **[SpruceID](https://www.spruceid.com/)** - _Proyek identitas terdesentralisasi yang memungkinkan pengguna untuk mengontrol identitas digital dengan akun Ethereum dan profil ENS alih-alih bergantung pada layanan pihak ketiga._
 - **[Ethereum Attestation Service (EAS)](https://attest.org/)** - _Buku besar/protokol terdesentralisasi untuk membuat pengesahan onchain atau offchain tentang apa pun._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (atau PoH) adalah sistem verifikasi identitas sosial yang dibangun di Ethereum._
-- **[BrightID](https://www.brightid.org/)** - _Jaringan identitas sosial sumber terbuka dan terdesentralisasi yang berupaya mereformasi verifikasi identitas melalui pembuatan dan analisis grafik sosial._
-- **[walt.id](https://walt.id)** — _Infrastruktur identitas dan dompet terdesentralisasi sumber terbuka yang memungkinkan pengembang dan organisasi untuk memanfaatkan identitas berdaulat sendiri dan NFT/SBT._
 - **[Veramo](https://veramo.io/)** - _Kerangka kerja JavaScript yang memudahkan siapa saja untuk menggunakan data yang dapat diverifikasi secara kriptografi dalam aplikasi mereka._
 
 ## Bacaan lebih lanjut {#further-reading}
