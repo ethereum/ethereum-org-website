@@ -22,7 +22,7 @@ Merkeziyetsiz bilim, ([DAO'lardan](/glossary/#dao), [ikinci dereceden bağışla
 
 ### Juan Benet - DeSci Hareketi
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## DeSci bilimi nasıl geliştirir {#desci-improves-science}
 

@@ -79,6 +79,8 @@ I proponenti dei blocchi utilizzano i dati di stato per creare "testimoni": l'in
 
 L'assenza di stato debole è in uno stato avanzato di ricerca, ma si basa sull'implementazione della separazione tra proponente e costruttore e degli alberi di Verkle in modo che piccoli testimoni possano essere passati tra i peer. Ciò significa che l'assenza di stato debole è probabilmente a qualche anno di distanza dalla rete principale di Ethereum.
 
+Lo zkEVM per la verifica L1 è una tecnologia complementare che potrebbe migliorare ulteriormente la verifica stateless. Invece di controllare solo i testimoni, i validatori potrebbero verificare una prova a conoscenza zero che l'intero blocco è stato eseguito correttamente -- fornendo certezza crittografica senza ri-eseguire le transazioni.
+
 ### Assenza di stato forte {#strong-statelessness}
 
 L'assenza di stato forte rimuove la necessità per qualsiasi nodo di archiviare i dati di stato. Invece, le transazioni vengono inviate con testimoni che possono essere aggregati dai produttori di blocchi. I produttori di blocchi sono quindi responsabili dell'archiviazione solo di quello stato necessario per generare testimoni per gli account rilevanti. La responsabilità dello stato è quasi interamente spostata sugli utenti, poiché inviano testimoni ed "elenchi di accesso" (access lists) per dichiarare con quali account e chiavi di archiviazione stanno interagendo. Ciò consentirebbe nodi estremamente leggeri, ma ci sono dei compromessi, tra cui rendere più difficile effettuare transazioni con i contratti intelligenti.

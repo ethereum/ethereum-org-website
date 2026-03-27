@@ -99,6 +99,8 @@ Zde přichází na řadu ověřitelný výpočet. Když uzel provede transakci m
 
 [Rollupy s nulovou znalostí](/developers/docs/scaling/zk-rollups) a [validia](/developers/docs/scaling/validium/) jsou dvě řešení škálování mimo blockchain, která používají důkazy platnosti k zajištění bezpečné škálovatelnosti. Tyto protokoly provádějí tisíce transakcí mimo blockchain a předkládají důkazy k ověření na Ethereu. Tyto výsledky lze použít okamžitě po ověření důkazu, což umožňuje Ethereu zpracovat více transakcí bez zvýšení náročnosti výpočtů na základní vrstvě.
 
+Kromě škálování na druhá vrstva mohou důkazy s nulovým rozšířením znalostí ověřovat i samotné provádění bloků na Ethereum L1. zkEVM pro ověřování L1 by validatorům umožnilo ověřovat bloky kontrolou důkazu namísto opětovného provádění všech transakce -- což by umožnilo vyšší limit transakcnich poplatku bez zvyšování hardwarových nároků validatorů.
+
 ### Snížení úplatkářství a tajných dohod při hlasování na blockchainu {#secure-blockchain-voting}
 
 Hlasovací schémata na blockchainu mají spoustu dobrých vlastností: Jsou plně auditovatelná, zabezpečená proti útokům, odolná vůči cenzuře a nemají žádná geografická omezení. Ale ani systémy hlasování na blockchainu nejsou imunní vůči problému **koluze**.

@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "Memetakan dependensi di awal untuk sinkronisasi yang lebih cepat, eksekusi paralel, dan pembacaan disk paralel",
   "page-roadmap-glamsterdam-bal-item-3": "Menurunkan gas untuk aplikasi yang sarat status dan meningkatkan prediktabilitas biaya gas",
   "page-roadmap-hegota-discussed-title": "Direncanakan untuk Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Proposal saat ini sedang dalam diskusi"
+  "page-roadmap-hegota-discussed-item-1": "Proposal saat ini sedang dalam diskusi",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "Bukti zero-knowledge dapat memungkinkan validator untuk memverifikasi blok Ethereum tanpa menjalankan kembali transaksi, memungkinkan batas gas yang lebih tinggi tanpa meningkatkan persyaratan perangkat keras."
 }

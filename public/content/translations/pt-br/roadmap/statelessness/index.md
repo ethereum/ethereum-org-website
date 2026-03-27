@@ -79,6 +79,8 @@ Os proponentes de blocos usam os dados de estado para criar "testemunhas", o con
 
 O conceito "sem estado fraco" está em um estado avançado de pesquisa, mas depende da implementação da separação entre proponente e construtor e das Verkle Trees para que as pequenas testemunhas possam ser transferidas entre os pares. Isso significa que provavelmente ainda vai demorar alguns anos para a implementação do conceito "sem estado fraco" na rede principal do Ethereum.
 
+O zkEVM para verificacao de L1 e uma tecnologia complementar que pode melhorar ainda mais a verificacao sem estado. Em vez de apenas verificar as testemunhas (witnesses), os validadores poderiam verificar uma prova de conhecimento zero de que todo o bloco foi executado corretamente -- fornecendo certeza criptografica sem reexecutar transacoes.
+
 ### Ausência de estado forte {#strong-statelessness}
 
 A forte ausência de estado elimina a necessidade de qualquer nó armazenar dados de estado. Em vez disso, as transações são enviadas com testemunhas que podem ser agregadas pelos produtores de blocos. Portanto, os produtores de blocos serão responsáveis por armazenar apenas o estado necessário para gerar testemunhas para as contas relevantes. A responsabilidade pelo estado é quase totalmente transferida para os usuários, pois eles enviam testemunhas e "listas de acesso" para declarar com quais contas e chaves de armazenamento estão interagindo. Embora isso permitiria nódulos altamente leves, seria mais difícil realizar trtansações conm contratos inteligentes.

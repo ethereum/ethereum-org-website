@@ -79,6 +79,8 @@ Block proposers use the state data to create "witnesses" - the minimal set of da
 
 Weak statelessness is in an advanced state of research, but it relies upon proposer-builder separation and Verkle Trees to have been implemented so that small witnesses can be passed between peers. This means weak statelessness is probably a few years away from Ethereum Mainnet.
 
+[zkEVM for L1 verification](/roadmap/zkevm/) is a complementary technology that could further enhance stateless verification. Instead of just checking witnesses, validators could verify a zero-knowledge proof that the entire block was executed correctly—providing cryptographic certainty without re-executing transactions.
+
 ### Strong statelessness {#strong-statelessness}
 
 Strong statelessness removes the need for any node to store state data. Instead, transactions are sent with witnesses that can be aggregated by block producers. The block producers are then responsible for storing only that state that are needed for generating witnesses for relevant accounts. The responsibility for state is almost entirely moved to users, as they send witnesses and 'access lists' to declare which accounts and storage keys they are interacting with. This would enable extremely lightweight nodes, but there are tradeoffs including making it more difficult to transact with smart contracts.

@@ -225,6 +225,17 @@ Guarda Finematics spiegare i rollup a conoscenza zero:
 
 ## Chi sta lavorando a una zkEVM? {#zkevm-projects}
 
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>zkEVM per L2 vs L1</AlertTitle>
+<AlertDescription>
+I progetti seguenti utilizzano la tecnologia zkEVM per creare rollup di livello 2. Esistono anche ricerche sull'utilizzo dello zkEVM per la verifica dei blocchi L1, che consentirebbe ai validatori di verificare i blocchi di Ethereum senza ri-eseguire le transazioni.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+
 I progetti che lavorano sulle zkEVM includono:
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM è un progetto finanziato dalla Ethereum Foundation per sviluppare uno ZK-rollup compatibile con la EVM e un meccanismo per generare prove di validità per i blocchi di Ethereum._

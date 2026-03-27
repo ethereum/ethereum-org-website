@@ -50,9 +50,16 @@ function getPageType(slug: string): "md" | "intl" {
   return primaryNamespace ? "intl" : "md"
 }
 
+// Cache of translated locales per slug, ensuring consistent results across
+// all pages rendered during a single build. Without this cache, filesystem
+// checks via existsSync() could return different results for the same slug
+// at different points in the build, breaking hreflang reciprocity.
+const translatedLocalesCache = new Map<string, string[]>()
+
 /**
  * Get all translated locales for a given page slug.
  * Works for both MD pages and intl pages.
+ * Results are cached per slug for build-time consistency.
  *
  * @param slug - Page slug/path (e.g., "about" for MD or "/wallets/" for intl)
  * @returns Promise resolving to array of locale codes that have translations
@@ -61,6 +68,9 @@ function getPageType(slug: string): "md" | "intl" {
  *   await getTranslatedLocales("/wallets/") // => ["en", "es"]
  */
 export async function getTranslatedLocales(slug: string): Promise<string[]> {
+  const cached = translatedLocalesCache.get(slug)
+  if (cached) return cached
+
   const pageType = getPageType(slug)
   const translatedLocales: string[] = []
 
@@ -80,6 +90,7 @@ export async function getTranslatedLocales(slug: string): Promise<string[]> {
     }
   }
 
+  translatedLocalesCache.set(slug, translatedLocales)
   return translatedLocales
 }
 
