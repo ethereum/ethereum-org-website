@@ -66,6 +66,7 @@ const EXCLUDED_LOGINS = [
   "eth-bot",
   "ethereumoptimism-bot",
   "coderabbitai[bot]",
+  "myelinated-wackerow",
 ]
 
 /** Name patterns (case-insensitive substring match) for AI agent co-authors */
