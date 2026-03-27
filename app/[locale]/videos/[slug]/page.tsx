@@ -7,106 +7,110 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
+import type { VideoData } from "@/lib/types"
+
+import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
+import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import { htmlElements } from "@/components/MdComponents"
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Transcript } from "@/components/Videos"
-import TranscriptContent from "@/components/Videos/Transcript/TranscriptContent"
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
+import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-import { getVideoBySlug, getVideos } from "@/lib/utils/videos"
-import { getTranscript, getVideoMeta } from "@/lib/utils/videoTranscripts"
+import { getVideoData, getVideoSlugs } from "@/lib/utils/videos"
 
 import VideoPageJsonLD from "./page-jsonld"
+
+import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
 
 const VideoLandingPage = async (props: {
   params: Promise<{ locale: string; slug: string }>
 }) => {
   const { locale, slug } = await props.params
 
+  const t = await getTranslations({ locale, namespace: "page-videos" })
   setRequestLocale(locale)
 
-  const video = await getVideoBySlug(slug)
-
-  if (!video) {
+  let data: VideoData | undefined
+  try {
+    data = await getVideoData(slug, locale)
+  } catch {
     notFound()
   }
 
-  // Load translatable metadata (title + description) from transcript frontmatter
-  const meta = await getVideoMeta(slug, locale)
-
-  // Fetch transcript MDX body — graceful handling if not found
-  let transcriptMdx: string | null = null
-  try {
-    transcriptMdx = await getTranscript(slug, locale)
-  } catch {
-    // Transcript not found — render page without accordion
-    // This is expected for videos with no transcript file
-  }
+  const { frontmatter } = data
+  const transcriptMdx = data.content.trim() ? data.content : null
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/videos/")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const breadcrumbSlug =
+    "/videos/" + (frontmatter.breadcrumb || slug.replaceAll("-", " "))
+
   return (
     <I18nProvider locale={locale} messages={messages}>
       <VideoPageJsonLD
         locale={locale}
-        video={video}
-        meta={meta}
+        slug={slug}
+        frontmatter={frontmatter}
         transcript={transcriptMdx}
       />
-      <MainArticle className="px-8 py-4">
-        {/* Breadcrumb Navigation */}
-        <Breadcrumb className="mb-8">
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/videos/">VIDEOS</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
-              /
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbPage>{slug.replaceAll("-", " ")}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+      <SimpleHero
+        breadcrumbs={<Breadcrumbs slug={breadcrumbSlug} startDepth={1} />}
+        title={frontmatter.title}
+        subtitle={
+          <p className="text-lg text-body-medium">{frontmatter.description}</p>
+        }
+        className="max-w-3xl md:w-full"
+      />
 
-        {/* Video Title */}
-        <h1 className="mb-4 text-3xl font-bold md:text-4xl">{meta.title}</h1>
-
-        {/* Video Description */}
-        <p className="mb-8 text-lg text-body-medium">{meta.description}</p>
-
-        {/* YouTube Player */}
-        <div className={cn("sticky top-24 z-10 mb-8 md:static")}>
+      <MainArticle className="max-w-4xl space-y-8 px-4 md:px-8">
+        <h2 className="sr-only">{t("page-videos-watch-video")}</h2>
+        <div className={cn("sticky top-24 z-10 md:static")}>
           <YouTube
-            id={video.youtubeId}
-            title={meta.title}
-            className="max-w-3xl"
+            id={frontmatter.youtubeId}
+            title={frontmatter.title}
+            className="max-w-full"
           />
         </div>
 
-        {/* Transcript Accordion */}
-        {transcriptMdx && (
-          <Transcript>
-            <TranscriptContent source={transcriptMdx} />
-          </Transcript>
+        <p className="text-body-medium">
+          {t("page-videos-date-published")}:{" "}
+          {/* // TODO: Update to use dateTimeFormat when #17791 merged */}
+          {formatDate(frontmatter.uploadDate, locale, { timeZone: "UTC" })}
+        </p>
+
+        {transcriptMdx && transcriptMdx.trim().length > 0 && (
+          <Accordion type="single" collapsible>
+            <AccordionItem value="transcript">
+              <AccordionTrigger className="py-4">
+                <h2 className="text-xl">{t("view-transcript")}</h2>
+              </AccordionTrigger>
+              {/* forceMount keeps transcript in DOM for SEO crawlers */}
+              <AccordionContent
+                className="text-base [[data-state=closed]_&]:invisible [[data-state=closed]_&]:h-0"
+                forceMount
+              >
+                {await renderSimpleMarkdown(transcriptMdx, {
+                  h1: htmlElements.h2,
+                })}
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         )}
 
-        {/* Feedback Card */}
         <FeedbackCard />
       </MainArticle>
     </I18nProvider>
@@ -114,8 +118,8 @@ const VideoLandingPage = async (props: {
 }
 
 export async function generateStaticParams() {
-  const videos = await getVideos()
-  return videos.map((video) => ({ slug: video.slug }))
+  const slugs = await getVideoSlugs()
+  return slugs.map((slug) => ({ slug }))
 }
 
 export async function generateMetadata(props: {
@@ -123,9 +127,10 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const { locale, slug } = await props.params
 
-  const video = await getVideoBySlug(slug)
-
-  if (!video) {
+  let data
+  try {
+    data = await getVideoData(slug, locale)
+  } catch {
     const t = await getTranslations({ locale, namespace: "common" })
     return {
       title: t("page-not-found"),
@@ -133,13 +138,11 @@ export async function generateMetadata(props: {
     }
   }
 
-  const meta = await getVideoMeta(slug, locale)
-
   return await getMetadata({
     locale,
     slug: ["videos", slug],
-    title: `${meta.title} | ethereum.org`,
-    description: meta.description,
+    title: `${data.frontmatter.title} | ethereum.org`,
+    description: data.frontmatter.description,
   })
 }
 

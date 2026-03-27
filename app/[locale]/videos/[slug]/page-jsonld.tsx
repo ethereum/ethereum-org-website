@@ -1,9 +1,11 @@
-import type { Video, VideoMeta } from "@/lib/types"
+import type { VideoFrontmatter } from "@/lib/interfaces"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import { stripMarkdown } from "@/lib/utils/md"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+import { getDefaultThumbnailUrl } from "@/lib/utils/videos"
 
 /**
  * Convert duration from "H:MM:SS" or "M:SS" format to ISO 8601 (PTxHxMxS)
@@ -21,55 +23,37 @@ function toIsoDuration(duration: string): string {
   return duration
 }
 
-/**
- * Strip MDX/Markdown syntax from transcript to produce plain text
- * for the JSON-LD transcript field.
- */
-function stripMdx(mdx: string): string {
-  return mdx
-    .replace(/^#{1,6}\s+/gm, "") // Remove heading markers
-    .replace(/\*\*([^*]+)\*\*/g, "$1") // Bold → plain
-    .replace(/\*([^*]+)\*/g, "$1") // Italic → plain
-    .replace(/`([^`]+)`/g, "$1") // Inline code → plain
-    .replace(/^\s*[-*+]\s+/gm, "") // List markers → plain
-    .replace(/^\s*\d+\.\s+/gm, "") // Ordered list markers → plain
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // Links → text only
-    .replace(/!\[([^\]]*)\]\([^)]+\)/g, "") // Images → remove
-    .replace(/\n{3,}/g, "\n\n") // Collapse excess newlines
-    .trim()
-}
-
 export default function VideoPageJsonLD({
   locale,
-  video,
-  meta,
+  slug,
+  frontmatter,
   transcript,
 }: {
   locale: string
-  video: Video
-  meta: VideoMeta
+  slug: string
+  frontmatter: VideoFrontmatter
   transcript: string | null
 }) {
-  const url = normalizeUrlForJsonLd(locale, `/videos/${video.slug}/`)
+  const url = normalizeUrlForJsonLd(locale, `/videos/${slug}/`)
 
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "@id": `${url}#video`,
-    name: meta.title,
-    description: meta.description,
-    uploadDate: `${video.uploadDate}T00:00:00+00:00`,
-    duration: toIsoDuration(video.duration),
+    name: frontmatter.title,
+    description: frontmatter.description,
+    uploadDate: `${frontmatter.uploadDate}T00:00:00+00:00`,
+    duration: toIsoDuration(frontmatter.duration),
     thumbnailUrl:
-      video.thumbnailUrl ||
-      `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`,
-    embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
-    contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
-    educationalLevel: video.educationLevel,
-    inLanguage: video.language,
+      frontmatter.customThumbnailUrl ||
+      getDefaultThumbnailUrl(frontmatter.youtubeId),
+    embedUrl: `https://www.youtube.com/embed/${frontmatter.youtubeId}`,
+    contentUrl: `https://www.youtube.com/watch?v=${frontmatter.youtubeId}`,
+    educationalLevel: frontmatter.educationLevel,
+    inLanguage: frontmatter.lang,
     creator: {
       "@type": "Person",
-      name: video.author,
+      name: frontmatter.author,
     },
     publisher: ethereumFoundationOrganization,
     isAccessibleForFree: true,
@@ -79,7 +63,7 @@ export default function VideoPageJsonLD({
   // Add transcript as plain text if available
   if (transcript) {
     // Escape < and / to prevent script injection (XSS protection)
-    jsonLd.transcript = stripMdx(transcript)
+    jsonLd.transcript = stripMarkdown(transcript, true)
       .replace(/</g, "\\u003c")
       .replace(/\//g, "\\u002f")
   }
