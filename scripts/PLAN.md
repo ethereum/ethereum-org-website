@@ -82,7 +82,16 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 - [ ] Expand `/glossary` page with new terms from the 453 list
 - [ ] Documentation for external consumers
 
-## Phase 8: Community Platform (Future)
+## Phase 8: Definition Glossary Expansion (Future)
+
+- [ ] Audit current /glossary page (203 terms) against the 453-term translation list
+- [ ] Identify terms that should be added to /glossary (prioritize by content occurrence)
+- [ ] Redesign /glossary page: multi-definition support, better search/indexing
+- [ ] Support correct alphabetical ordering in non-English languages
+- [ ] Consider concept-oriented model for definitions (like translation glossary)
+- [ ] Update components: GlossaryDefinition, GlossaryTooltip, JSON namespaces
+
+## Phase 9: Community Platform (Future)
 
 - [ ] Design rebuilt ethglossary.xyz
   - SIWE authentication (not Discord)
@@ -130,3 +139,7 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 | 2026-03-27 | Context forms = term + optional example | Gemini can reliably distinguish all 5 contexts (prose/heading/tag/ui/code) |
 | 2026-03-27 | CLDR plurals map to Slavic cases | one=nom.sg, few=nom.pl, many=gen.pl, other=fallback; works for both next-intl and Slavic |
 | 2026-03-27 | Pilot languages: ja, ar, fr, pl, cs, hi | Covers CJK, RTL, Romance, 2x Slavic, Indic script |
+| 2026-03-27 | Collapse definition/translation Venn | All 453 terms are candidates for both; glossary_ref=null means "not yet" not "never" |
+| 2026-03-27 | Content occurrence threshold for priority | Terms with 5+ occurrences prioritized; low-occurrence terms (vesting, cliff) go to reference tier |
+| 2026-03-27 | Multi-definition dictionary design | Future task: redesign /glossary page to support multiple definitions per term (like standard dictionaries) |
+| 2026-03-27 | onchain/offchain no-hyphen rule | Firm for English; other languages get a note "analogous to online/offline"; aliases include hyphenated forms |
