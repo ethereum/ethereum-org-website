@@ -1,5 +1,5 @@
 ---
-title: ڈی ایپس (dapps) کا تکنیکی تعارف
+title: "ڈی ایپس (dapps) کا تکنیکی تعارف"
 description:
 lang: ur
 ---
