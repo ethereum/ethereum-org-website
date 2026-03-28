@@ -24,7 +24,7 @@ TERMS_PATH = REPO_ROOT / "scripts" / "glossary-terms-enhanced.json"
 OUTPUT_DIR = REPO_ROOT / "scripts" / "translations"
 PROGRESS_PATH = REPO_ROOT / "scripts" / "translations" / "progress.json"
 
-MIN_HITS = 75  # Tier 1 threshold
+MIN_HITS = 0  # Generate for ALL terms (0 = no threshold)
 
 LANGUAGES = [
     {"code": "ar", "name": "Arabic", "script": "Arabic", "notes": "RTL. Use Western Arabic numerals. Broken plural system (zero/one/two/few/many/other)."},
@@ -99,16 +99,35 @@ STRICT RULES:
 """
 
 
-def load_tier1_terms():
-    """Load terms with 75+ content occurrences."""
+def load_terms_needing_translation():
+    """Load all terms that don't yet have translations.
+
+    Checks the first language file (ar) to determine which terms
+    already have translations. Returns only untranslated terms.
+    """
     with open(TERMS_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    tier1 = {}
-    for key, t in data["confirmed_terms"].items():
-        if t.get("content_occurrences", 0) >= MIN_HITS:
-            tier1[key] = t
-    return tier1
+    all_terms = data["confirmed_terms"]
+
+    # Check what's already translated (use Arabic as reference)
+    already_translated = set()
+    ref_path = OUTPUT_DIR / "glossary-ar.json"
+    if ref_path.exists():
+        with open(ref_path, "r", encoding="utf-8") as f:
+            already_translated = set(json.load(f).keys())
+
+    # Filter to untranslated terms only
+    needs_translation = {}
+    for key, t in all_terms.items():
+        if key not in already_translated:
+            needs_translation[key] = t
+
+    if not needs_translation:
+        # If everything is translated, return all (for re-runs/retries)
+        return all_terms
+
+    return needs_translation
 
 
 def group_into_batches(terms, batch_size=10):
@@ -362,7 +381,7 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     # Load terms and create batches
-    terms = load_tier1_terms()
+    terms = load_terms_needing_translation()
     batches = group_into_batches(terms)
     progress = load_progress()
 
