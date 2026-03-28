@@ -1,0 +1,4413 @@
+{
+  "attestation": {
+    "term": "tasdik",
+    "aliases": [
+      "onaylama",
+      "doğrulama"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tasdik"
+      },
+      "verb": {
+        "infinitive": "tasdik etmek",
+        "participle": "tasdik eden"
+      },
+      "adjective": "tasdiklenmiş",
+      "agent": "tasdikleyici",
+      "negation": "tasdiksiz",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tasdik",
+        "example": "Bir tasdik, bir doğrulayıcının zincirin mevcut durumuna verdiği oydur."
+      },
+      "heading": {
+        "term": "Tasdik"
+      },
+      "tag": {
+        "term": "Tasdik"
+      },
+      "ui": {
+        "term": "Tasdik Et"
+      },
+      "code": {
+        "term": "tasdik"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Ethereum consensus, 'tasdik' is the technical standard for Attestation."
+  },
+  "bridge": {
+    "term": "köprü",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "köprü"
+      },
+      "verb": {
+        "infinitive": "köprülemek",
+        "participle": "köprüleyen"
+      },
+      "adjective": "köprülenmiş",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "köprü",
+        "example": "Bir köprü, varlıkların farklı blok zincirleri arasında transfer edilmesini sağlar."
+      },
+      "heading": {
+        "term": "Köprü"
+      },
+      "tag": {
+        "term": "Köprü"
+      },
+      "ui": {
+        "term": "Köprüle"
+      },
+      "code": {
+        "term": "kopru"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralization": {
+    "term": "merkezsizleşme",
+    "aliases": [
+      "merkeziyetsizleşme"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "merkezsizleşme"
+      },
+      "verb": {
+        "infinitive": "merkezsizleşmek",
+        "participle": "merkezsizleşen"
+      },
+      "adjective": "merkezsizleşmiş",
+      "agent": null,
+      "negation": "merkezileşme",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "merkezsizleşme",
+        "example": "Ethereum, ağın kontrolünü binlerce katılımcıya dağıtarak merkezsizleşmeyi hedefler."
+      },
+      "heading": {
+        "term": "Merkezsizleşme"
+      },
+      "tag": {
+        "term": "Merkezsizleşme"
+      },
+      "ui": {
+        "term": "Merkezsizleşme"
+      },
+      "code": {
+        "term": "merkezsizlesme"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized": {
+    "term": "merkezsiz",
+    "aliases": [
+      "merkeziyetsiz"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "merkezsiz",
+      "agent": null,
+      "negation": "merkezi",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "merkezsiz",
+        "example": "Merkezsiz bir uygulamada, veriler tek bir sunucu yerine bir ağda tutulur."
+      },
+      "heading": {
+        "term": "Merkezsiz"
+      },
+      "tag": {
+        "term": "Merkezsiz"
+      },
+      "ui": {
+        "term": "Merkezsiz"
+      },
+      "code": {
+        "term": "merkezsiz"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "deploy": {
+    "term": "dağıtmak",
+    "aliases": [
+      "yayınlamak",
+      "konuşlandırmak"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "dağıtım"
+      },
+      "verb": {
+        "infinitive": "dağıtmak",
+        "participle": "dağıtan"
+      },
+      "adjective": "dağıtılmış",
+      "agent": "dağıtıcı",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "dağıtmak",
+        "example": "Akıllı sözleşmenizi ana ağda dağıtmak için bir işlem ücreti ödemeniz gerekir."
+      },
+      "heading": {
+        "term": "Dağıtım"
+      },
+      "tag": {
+        "term": "Dağıtım"
+      },
+      "ui": {
+        "term": "Dağıt"
+      },
+      "code": {
+        "term": "dagit"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In software development, 'dağıtmak' is the common translation for deployment."
+  },
+  "finality": {
+    "term": "kesinlik",
+    "aliases": [
+      "nihailik"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "kesinlik"
+      },
+      "verb": null,
+      "adjective": "kesin",
+      "agent": null,
+      "negation": "belirsizlik",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kesinlik",
+        "example": "Kesinlik, bir blok zinciri işleminin artık değiştirilemeyeceği veya geri alınamayacağı garantisidir."
+      },
+      "heading": {
+        "term": "Kesinlik"
+      },
+      "tag": {
+        "term": "Kesinlik"
+      },
+      "ui": {
+        "term": "Kesinlik"
+      },
+      "code": {
+        "term": "kesinlik"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "fork": {
+    "term": "çatallanma",
+    "aliases": [
+      "çatal"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "çatallanma"
+      },
+      "verb": {
+        "infinitive": "çatallanmak",
+        "participle": "çatallanan"
+      },
+      "adjective": "çatallanmış",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "çatallanma",
+        "example": "Bir çatallanma, topluluk protokolün kuralları konusunda anlaşmazlığa düştüğünde meydana gelebilir."
+      },
+      "heading": {
+        "term": "Çatallanma"
+      },
+      "tag": {
+        "term": "Çatallanma"
+      },
+      "ui": {
+        "term": "Çatallanma"
+      },
+      "code": {
+        "term": "catallanma"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "governance": {
+    "term": "yönetişim",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "yönetişim"
+      },
+      "verb": {
+        "infinitive": "yönetmek",
+        "participle": "yöneten"
+      },
+      "adjective": "yönetişimsel",
+      "agent": "yönetici",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "yönetişim",
+        "example": "Zincir üstü yönetişim, token sahiplerinin protokol iyileştirmeleri için oy kullanmasına imkan tanır."
+      },
+      "heading": {
+        "term": "Yönetişim"
+      },
+      "tag": {
+        "term": "Yönetişim"
+      },
+      "ui": {
+        "term": "Yönetişim"
+      },
+      "code": {
+        "term": "yonetisim"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Yönetişim' refers specifically to participatory governance, as opposed to 'Yönetim' (administration)."
+  },
+  "hash": {
+    "term": "özet",
+    "aliases": [
+      "karma",
+      "hash"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "özet"
+      },
+      "verb": {
+        "infinitive": "özetlemek",
+        "participle": "özetleyen"
+      },
+      "adjective": "özetlenmiş",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "özet",
+        "example": "Her blok, kendisinden önceki bloğun kriptografik özetini içerir."
+      },
+      "heading": {
+        "term": "Özet (Hash)"
+      },
+      "tag": {
+        "term": "Hash"
+      },
+      "ui": {
+        "term": "Özeti Kopyala"
+      },
+      "code": {
+        "term": "ozet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'hash' is frequently used as a loanword, 'özet' is the formal technical translation in Turkish computer science."
+  },
+  "miner": {
+    "term": "Madenci",
+    "aliases": [
+      "Miner"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Madenci"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "Madenci",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "madenci",
+        "example": "Bir madenci yeni bir blok bulduğunda blok ödülü ile ödüllendirilir."
+      },
+      "heading": {
+        "term": "Madenci"
+      },
+      "tag": {
+        "term": "Madenci"
+      },
+      "ui": {
+        "term": "Madenci"
+      },
+      "code": {
+        "term": "miner"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mining": {
+    "term": "Madencilik",
+    "aliases": [
+      "Mining"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Madencilik"
+      },
+      "verb": {
+        "infinitive": "madencilik yapmak",
+        "participle": "madencilik yapan"
+      },
+      "adjective": null,
+      "agent": "Madenci",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "madencilik",
+        "example": "Madencilik, İş İspatı (PoW) sisteminde ağ güvenliğini sağlamak için kullanılan bir süreçtir."
+      },
+      "heading": {
+        "term": "Madencilik"
+      },
+      "tag": {
+        "term": "Madencilik"
+      },
+      "ui": {
+        "term": "Madencilik"
+      },
+      "code": {
+        "term": "mining"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mint": {
+    "term": "Basmak",
+    "aliases": [
+      "Darphane",
+      "Basım"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Basım"
+      },
+      "verb": {
+        "infinitive": "basmak",
+        "participle": "basan"
+      },
+      "adjective": null,
+      "agent": "Basan",
+      "negation": null,
+      "compounds": {
+        "nft-mint": "NFT basmak"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "basmak",
+        "example": "Yeni bir NFT basmak için akıllı sözleşme ile etkileşime girmelisiniz."
+      },
+      "heading": {
+        "term": "Basım"
+      },
+      "tag": {
+        "term": "Basım"
+      },
+      "ui": {
+        "term": "Bas"
+      },
+      "code": {
+        "term": "mint"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used primarily in the context of creating new tokens or NFTs."
+  },
+  "signature": {
+    "term": "İmza",
+    "aliases": [
+      "Dijital imza"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "İmza"
+      },
+      "verb": {
+        "infinitive": "imzalamak",
+        "participle": "imzalayan"
+      },
+      "adjective": null,
+      "agent": "İmzalayıcı",
+      "negation": null,
+      "compounds": {
+        "multi-signature": "çoklu imza"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "imza",
+        "example": "İşlemin geçerli olması için cüzdanınızdan bir dijital imza sağlamanız gerekir."
+      },
+      "heading": {
+        "term": "İmza"
+      },
+      "tag": {
+        "term": "İmza"
+      },
+      "ui": {
+        "term": "İmzala"
+      },
+      "code": {
+        "term": "signature"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "stake": {
+    "term": "Stake",
+    "aliases": [
+      "Pay",
+      "Hisse"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Stake"
+      },
+      "verb": {
+        "infinitive": "stake etmek",
+        "participle": "stake eden"
+      },
+      "adjective": null,
+      "agent": "Stake eden",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "stake",
+        "example": "Doğrulayıcı olmak için belirli bir miktarda ETH'yi ağda stake etmeniz gerekir."
+      },
+      "heading": {
+        "term": "Stake"
+      },
+      "tag": {
+        "term": "Stake"
+      },
+      "ui": {
+        "term": "Stake Et"
+      },
+      "code": {
+        "term": "stake"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'Pay' is a literal translation, 'Stake' is the industry standard in Turkish crypto communities."
+  },
+  "staked": {
+    "term": "Stake edilmiş",
+    "aliases": [
+      "Paylaştırılmış"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "Stake edilmiş",
+      "agent": null,
+      "negation": "Stake edilmemiş",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "stake edilmiş",
+        "example": "Stake edilmiş varlıklarınız, doğrulama görevlerinizi yerine getirdiğiniz sürece ödül kazanır."
+      },
+      "heading": {
+        "term": "Stake Edilmiş"
+      },
+      "tag": {
+        "term": "Stake Edilmiş"
+      },
+      "ui": {
+        "term": "Stake Edildi"
+      },
+      "code": {
+        "term": "staked"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staker": {
+    "term": "Stake eden",
+    "aliases": [
+      "Staker",
+      "Paydaş"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Stake eden"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "Stake eden",
+      "negation": null,
+      "compounds": {
+        "solo-staker": "bireysel stake eden"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "stake eden",
+        "example": "Bir stake eden olarak, Ethereum ağının güvenliğine ve merkeziyetsizliğine katkıda bulunursunuz."
+      },
+      "heading": {
+        "term": "Stake Eden"
+      },
+      "tag": {
+        "term": "Stake Eden"
+      },
+      "ui": {
+        "term": "Stake Eden"
+      },
+      "code": {
+        "term": "staker"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staking": {
+    "term": "Stake etme",
+    "aliases": [
+      "Staking",
+      "Paydaşlaştırma"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Stake etme"
+      },
+      "verb": {
+        "infinitive": "stake etmek",
+        "participle": "stake eden"
+      },
+      "adjective": null,
+      "agent": "Stake eden",
+      "negation": null,
+      "compounds": {
+        "liquid-staking": "likit staking"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "stake etme",
+        "example": "Staking, Ethereum'un hisse ispatı konsensüs mekanizmasının temelini oluşturur."
+      },
+      "heading": {
+        "term": "Staking"
+      },
+      "tag": {
+        "term": "Staking"
+      },
+      "ui": {
+        "term": "Staking"
+      },
+      "code": {
+        "term": "staking"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "swap": {
+    "term": "Takas",
+    "aliases": [
+      "Swap",
+      "Değiş tokuş"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Takas"
+      },
+      "verb": {
+        "infinitive": "takas etmek",
+        "participle": "takas eden"
+      },
+      "adjective": null,
+      "agent": "Takasçı",
+      "negation": null,
+      "compounds": {
+        "token-swap": "token takası"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "takas",
+        "example": "Uniswap üzerinden ETH'yi kolayca başka bir ERC-20 tokenı ile takas edebilirsiniz."
+      },
+      "heading": {
+        "term": "Takas"
+      },
+      "tag": {
+        "term": "Takas"
+      },
+      "ui": {
+        "term": "Takas Et"
+      },
+      "code": {
+        "term": "swap"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transaction": {
+    "term": "İşlem",
+    "aliases": [
+      "Transfer"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "İşlem"
+      },
+      "verb": {
+        "infinitive": "işlem yapmak",
+        "participle": "işlem yapan"
+      },
+      "adjective": null,
+      "agent": "İşlem yapan",
+      "negation": null,
+      "compounds": {
+        "transaction-fee": "işlem ücreti"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "işlem",
+        "example": "İşlem onaylandığında, Ethereum ağındaki bakiyeniz kalıcı olarak güncellenir."
+      },
+      "heading": {
+        "term": "İşlem"
+      },
+      "tag": {
+        "term": "İşlem"
+      },
+      "ui": {
+        "term": "İşlem"
+      },
+      "code": {
+        "term": "transaction"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "validator": {
+    "term": "doğrulayıcı",
+    "aliases": [
+      "onaylayıcı"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "doğrulayıcı"
+      },
+      "verb": {
+        "infinitive": "doğrulamak",
+        "participle": "doğrulayan"
+      },
+      "adjective": "doğrulayıcı",
+      "agent": "doğrulayıcı",
+      "negation": "doğrulamayan",
+      "compounds": {
+        "validator-set": "doğrulayıcı seti"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "doğrulayıcı",
+        "example": "Bir doğrulayıcı olabilmek için 32 ETH yatırmanız gerekir."
+      },
+      "heading": {
+        "term": "Doğrulayıcı"
+      },
+      "tag": {
+        "term": "Doğrulayıcı"
+      },
+      "ui": {
+        "term": "Doğrulayıcı"
+      },
+      "code": {
+        "term": "validator"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "vote": {
+    "term": "oy",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "oy"
+      },
+      "verb": {
+        "infinitive": "oy vermek",
+        "participle": "oy veren"
+      },
+      "adjective": null,
+      "agent": "seçmen",
+      "negation": "oy vermemek",
+      "compounds": {
+        "vote-count": "oy sayısı"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "oy",
+        "example": "Teklifi onaylamak için evet oyu verin."
+      },
+      "heading": {
+        "term": "Oy"
+      },
+      "tag": {
+        "term": "Oy"
+      },
+      "ui": {
+        "term": "Oy Ver"
+      },
+      "code": {
+        "term": "vote"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "voting": {
+    "term": "oylama",
+    "aliases": [
+      "oy kullanma"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "oylama"
+      },
+      "verb": {
+        "infinitive": "oylamak",
+        "participle": "oylanan"
+      },
+      "adjective": "oylama",
+      "agent": null,
+      "negation": "oylamama",
+      "compounds": {
+        "voting-power": "oylama gücü"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "oylama",
+        "example": "Oylama süreci merkeziyetsiz yönetişimin temelidir."
+      },
+      "heading": {
+        "term": "Oylama"
+      },
+      "tag": {
+        "term": "Oylama"
+      },
+      "ui": {
+        "term": "Oylama"
+      },
+      "code": {
+        "term": "voting"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum": {
+    "term": "Ethereum",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "ethereum-network": "Ethereum ağı"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum",
+        "example": "Ethereum, dünyanın bilgisayarı olarak adlandırılır."
+      },
+      "heading": {
+        "term": "Ethereum"
+      },
+      "tag": {
+        "term": "Ethereum"
+      },
+      "ui": {
+        "term": "Ethereum"
+      },
+      "code": {
+        "term": "ethereum"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, preserved in Latin script."
+  },
+  "contract": {
+    "term": "sözleşme",
+    "aliases": [
+      "kontrat"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "sözleşme"
+      },
+      "verb": null,
+      "adjective": "sözleşmeli",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "contract-address": "sözleşme adresi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "sözleşme",
+        "example": "Sözleşme şartları blok zinciri üzerinde doğrulanır."
+      },
+      "heading": {
+        "term": "Sözleşme"
+      },
+      "tag": {
+        "term": "Sözleşme"
+      },
+      "ui": {
+        "term": "Sözleşme"
+      },
+      "code": {
+        "term": "contract"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block": {
+    "term": "blok",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blok"
+      },
+      "verb": {
+        "infinitive": "bloklamak",
+        "participle": "bloklanan"
+      },
+      "adjective": "blok",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "block-reward": "blok ödülü"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "blok",
+        "example": "Her yeni blok bir önceki bloğa kriptografik olarak bağlıdır."
+      },
+      "heading": {
+        "term": "Blok"
+      },
+      "tag": {
+        "term": "Blok"
+      },
+      "ui": {
+        "term": "Blok"
+      },
+      "code": {
+        "term": "block"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "smart contract": {
+    "term": "akıllı sözleşme",
+    "aliases": [
+      "akıllı kontrat"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "akıllı sözleşme"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "akıllı sözleşme",
+        "example": "Akıllı sözleşmeler, belirli koşullar sağlandığında otomatik olarak yürütülür."
+      },
+      "heading": {
+        "term": "Akıllı Sözleşme"
+      },
+      "tag": {
+        "term": "Akıllı Sözleşme"
+      },
+      "ui": {
+        "term": "Akıllı Sözleşme"
+      },
+      "code": {
+        "term": "smartContract"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "node": {
+    "term": "düğüm",
+    "aliases": [
+      "node"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "düğüm"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node": "tam düğüm"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "düğüm",
+        "example": "Ethereum ağı, binlerce bağımsız düğüm tarafından sürdürülür."
+      },
+      "heading": {
+        "term": "Düğüm"
+      },
+      "tag": {
+        "term": "Düğüm"
+      },
+      "ui": {
+        "term": "Düğüm"
+      },
+      "code": {
+        "term": "node"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "token": {
+    "term": "token",
+    "aliases": [
+      "jeton"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "token"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-standard": "token standardı"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "token",
+        "example": "Yeni tokenlar Ethereum ağında ERC-20 standardı ile oluşturulabilir."
+      },
+      "heading": {
+        "term": "Token"
+      },
+      "tag": {
+        "term": "Token"
+      },
+      "ui": {
+        "term": "Token"
+      },
+      "code": {
+        "term": "token"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Turkish tech contexts, 'token' is more common than 'jeton'."
+  },
+  "address": {
+    "term": "adres",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "adres"
+      },
+      "verb": {
+        "infinitive": "adreslemek",
+        "participle": "adreslenen"
+      },
+      "adjective": "adresi",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "wallet-address": "cüzdan adresi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "adres",
+        "example": "Ethereum adresiniz '0x' ile başlayan benzersiz bir karakter dizisidir."
+      },
+      "heading": {
+        "term": "Adres"
+      },
+      "tag": {
+        "term": "Adres"
+      },
+      "ui": {
+        "term": "Adres"
+      },
+      "code": {
+        "term": "address"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "eth": {
+    "term": "ETH",
+    "aliases": [
+      "Ether"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ETH"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "eth-staking": "ETH stake etme"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ETH",
+        "example": "İşlem ücretlerini ödemek için cüzdanınızda ETH bulunmalıdır."
+      },
+      "heading": {
+        "term": "ETH"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "ETH"
+      },
+      "code": {
+        "term": "eth"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often kept as the ticker symbol ETH or the name Ether in Turkish technical discourse."
+  },
+  "blockchain": {
+    "term": "blokzincir",
+    "aliases": [
+      "blok zinciri",
+      "blockchain"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blokzincir"
+      },
+      "verb": null,
+      "adjective": "blokzincir",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "blockchain-technology": "blokzincir teknolojisi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "blokzincir",
+        "example": "Ethereum, merkeziyetsiz bir blokzincir platformudur."
+      },
+      "heading": {
+        "term": "Blokzincir"
+      },
+      "tag": {
+        "term": "Blokzincir"
+      },
+      "ui": {
+        "term": "Blokzincir"
+      },
+      "code": {
+        "term": "blockchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Written as a single word 'blokzincir' or two words 'blok zinciri' in Turkish."
+  },
+  "account": {
+    "term": "hesap",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "hesap"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "account-abstraction": "hesap soyutlama"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "hesap",
+        "example": "Ethereum üzerinde işlem yapmak için bir hesaba ihtiyacınız vardır."
+      },
+      "heading": {
+        "term": "Hesap"
+      },
+      "tag": {
+        "term": "Hesap"
+      },
+      "ui": {
+        "term": "Hesap"
+      },
+      "code": {
+        "term": "account"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "chain": {
+    "term": "zincir",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "zincir"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "crosschain": "zincirler arası"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "zincir",
+        "example": "Veriler zincir üzerinde kalıcı olarak saklanır."
+      },
+      "heading": {
+        "term": "Zincir"
+      },
+      "tag": {
+        "term": "Zincir"
+      },
+      "ui": {
+        "term": "Zincir"
+      },
+      "code": {
+        "term": "chain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "protocol": {
+    "term": "protokol",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "protokol"
+      },
+      "verb": null,
+      "adjective": "protokol",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "protocol-upgrade": "protokol yükseltmesi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "protokol",
+        "example": "Ethereum protokolü ağın nasıl çalışacağını belirleyen kurallar bütünüdür."
+      },
+      "heading": {
+        "term": "Protokol"
+      },
+      "tag": {
+        "term": "Protokol"
+      },
+      "ui": {
+        "term": "Protokol"
+      },
+      "code": {
+        "term": "protocol"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "wallet": {
+    "term": "cüzdan",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "cüzdan"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hardware-wallet": "donanım cüzdanı"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "cüzdan",
+        "example": "Varlıklarınızı yönetmek için bir Ethereum cüzdanı kullanmalısınız."
+      },
+      "heading": {
+        "term": "Cüzdan"
+      },
+      "tag": {
+        "term": "Cüzdan"
+      },
+      "ui": {
+        "term": "Cüzdan"
+      },
+      "code": {
+        "term": "wallet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "gas": {
+    "term": "gas",
+    "aliases": [
+      "yakıt"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "gas"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "gas-limit": "gas limiti"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "gas",
+        "example": "Yoğun saatlerde ağda işlem yapmak için daha fazla gas ödemeniz gerekebilir."
+      },
+      "heading": {
+        "term": "Gas"
+      },
+      "tag": {
+        "term": "Gas"
+      },
+      "ui": {
+        "term": "Gas"
+      },
+      "code": {
+        "term": "gas"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Generally kept as 'gas' in technical contexts, though 'yakıt' is sometimes used metaphorically."
+  },
+  "rollup": {
+    "term": "rollup",
+    "aliases": [
+      "toplama"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "rollup"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "optimistic-rollup": "iyimser rollup"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "rollup",
+        "example": "Rollup çözümleri, Ethereum'un ölçeklenebilirliğini artırır."
+      },
+      "heading": {
+        "term": "Rollup"
+      },
+      "tag": {
+        "term": "Rollup"
+      },
+      "ui": {
+        "term": "Rollup"
+      },
+      "code": {
+        "term": "rollup"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually transliterated/kept as is."
+  },
+  "ethereum improvement proposal (eip)": {
+    "term": "Ethereum İyileştirme Önerisi (EIP)",
+    "aliases": [
+      "EIP"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum İyileştirme Önerisi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "eip-standard": "EIP standardı"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum İyileştirme Önerisi (EIP)",
+        "example": "Yeni özellikler genellikle bir Ethereum İyileştirme Önerisi (EIP) aracılığıyla sunulur."
+      },
+      "heading": {
+        "term": "Ethereum İyileştirme Önerisi (EIP)"
+      },
+      "tag": {
+        "term": "EIP"
+      },
+      "ui": {
+        "term": "EIP"
+      },
+      "code": {
+        "term": "eip"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "require": {
+    "term": "gerektirmek",
+    "aliases": [
+      "koşul koymak"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "gerektirmek",
+        "participle": "gerektiren"
+      },
+      "adjective": "gerekli",
+      "agent": null,
+      "negation": "gerektirmemek",
+      "compounds": {
+        "requirement": "gereksinim"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "gerektirir",
+        "example": "Bu fonksiyonun çalışması için belirli bir bakiyeye sahip olunması gerekir."
+      },
+      "heading": {
+        "term": "Gereksinim"
+      },
+      "tag": {
+        "term": "Koşul"
+      },
+      "ui": {
+        "term": "Gerektirir"
+      },
+      "code": {
+        "term": "require"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "In smart contract code, 'require' is a keyword and should not be translated in snippets."
+  },
+  "web3": {
+    "term": "Web3",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Web3"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "web3-developer": "Web3 geliştiricisi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Web3'ün",
+        "example": "Web3'ün temel amacı interneti merkeziyetsiz hale getirmektir."
+      },
+      "heading": {
+        "term": "Web3"
+      },
+      "tag": {
+        "term": "Web3"
+      },
+      "ui": {
+        "term": "Web3"
+      },
+      "code": {
+        "term": "web3"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as a proper noun without translation in Turkish tech circles."
+  },
+  "solidity": {
+    "term": "Solidity",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Solidity"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "Solidity geliştiricisi",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Solidity ile",
+        "example": "Akıllı sözleşmeler genellikle Solidity ile yazılır."
+      },
+      "heading": {
+        "term": "Solidity"
+      },
+      "tag": {
+        "term": "Solidity"
+      },
+      "ui": {
+        "term": "Solidity"
+      },
+      "code": {
+        "term": "solidity"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "event": {
+    "term": "Etkinlik",
+    "aliases": [
+      "Olay"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Etkinlik"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "event-listener": "Etkinlik dinleyicisi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "etkinliği",
+        "example": "Akıllı sözleşme, bir işlem tamamlandığında bir etkinlik yayınlar."
+      },
+      "heading": {
+        "term": "Etkinlik"
+      },
+      "tag": {
+        "term": "Etkinlik"
+      },
+      "ui": {
+        "term": "Etkinlik"
+      },
+      "code": {
+        "term": "event"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Etkinlik' is the standard translation for 'event' in software contexts."
+  },
+  "onchain": {
+    "term": "Zincir üstü",
+    "aliases": [
+      "Zincirüzeri"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "Zincir üstü",
+      "agent": null,
+      "negation": "Zincir dışı",
+      "compounds": {
+        "onchain-data": "Zincir üstü veri"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "zincir üstünde",
+        "example": "Tüm kritik veriler zincir üstünde saklanır."
+      },
+      "heading": {
+        "term": "Zincir Üstü"
+      },
+      "tag": {
+        "term": "Zincir Üstü"
+      },
+      "ui": {
+        "term": "Zincir Üstü"
+      },
+      "code": {
+        "term": "onchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Translated as two words in Turkish for clarity."
+  },
+  "ether": {
+    "term": "Ether",
+    "aliases": [
+      "ETH"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ether"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ether'i",
+        "example": "İşlem ücretini ödemek için cüzdanınızda Ether bulundurmalısınız."
+      },
+      "heading": {
+        "term": "Ether"
+      },
+      "tag": {
+        "term": "Ether"
+      },
+      "ui": {
+        "term": "Ether"
+      },
+      "code": {
+        "term": "ether"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum virtual machine (evm)": {
+    "term": "Ethereum Sanal Makinesi (EVM)",
+    "aliases": [
+      "EVM"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Sanal Makinesi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "evm-compatible": "EVM uyumlu"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Sanal Makinesi'nde",
+        "example": "Akıllı sözleşmeler Ethereum Sanal Makinesi'nde yürütülür."
+      },
+      "heading": {
+        "term": "Ethereum Sanal Makinesi (EVM)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "EVM"
+      },
+      "code": {
+        "term": "evm"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized application (dapp)": {
+    "term": "Merkeziyetsiz uygulama (dapp)",
+    "aliases": [
+      "Merkezi olmayan uygulama"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Merkeziyetsiz uygulama"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "merkeziyetsiz uygulamalar",
+        "example": "Kullanıcılar, bir merkeziyetsiz uygulama aracılığıyla protokollerle etkileşime girer."
+      },
+      "heading": {
+        "term": "Merkeziyetsiz Uygulama"
+      },
+      "tag": {
+        "term": "dapp"
+      },
+      "ui": {
+        "term": "dapp"
+      },
+      "code": {
+        "term": "dapp"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Both 'merkeziyetsiz' and 'merkezi olmayan' are used, but 'merkeziyetsiz' is more common in modern crypto terminology."
+  },
+  "non-fungible token (nft)": {
+    "term": "Nitelikli fikri tapu (NFT)",
+    "aliases": [
+      "Değiştirilemez token",
+      "Gayri-misli jeton"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Nitelikli fikri tapu"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "nft-marketplace": "NFT pazaryeri"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "NFT'lerin",
+        "example": "NFT'lerin benzersiz olması onları dijital sanat için ideal kılar."
+      },
+      "heading": {
+        "term": "Nitelikli Fikri Tapu (NFT)"
+      },
+      "tag": {
+        "term": "NFT"
+      },
+      "ui": {
+        "term": "NFT"
+      },
+      "code": {
+        "term": "nft"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Nitelikli fikri tapu' is the official translation used by some Turkish authorities, though 'NFT' is most common in speech."
+  },
+  "api": {
+    "term": "API",
+    "aliases": [
+      "Uygulama Programlama Arayüzü"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "API"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "api-endpoint": "API uç noktası"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "API'den",
+        "example": "Verileri gerçek zamanlı olarak çekmek için bir API kullanılır."
+      },
+      "heading": {
+        "term": "API"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "API"
+      },
+      "code": {
+        "term": "api"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transfer": {
+    "term": "Transfer",
+    "aliases": [
+      "Aktarım",
+      "Gönderim"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Transfer"
+      },
+      "verb": {
+        "infinitive": "Transfer etmek",
+        "participle": "Transfer eden"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": "Transfer etmemek",
+      "compounds": {
+        "token-transfer": "Token transferi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "transferi",
+        "example": "Ether transferi birkaç saniye içinde onaylandı."
+      },
+      "heading": {
+        "term": "Transfer"
+      },
+      "tag": {
+        "term": "Transfer"
+      },
+      "ui": {
+        "term": "Transfer"
+      },
+      "code": {
+        "term": "transfer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "withdrawal": {
+    "term": "çekme",
+    "aliases": [
+      "çekim",
+      "para çekme"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "çekme"
+      },
+      "verb": {
+        "infinitive": "çekmek",
+        "participle": "çeken"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": "çekmeme",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "çekme",
+        "example": "Doğrulayıcılar ödüllerini çekme işlemini gerçekleştirebilirler."
+      },
+      "heading": {
+        "term": "Çekme İşlemleri"
+      },
+      "tag": {
+        "term": "Çekme"
+      },
+      "ui": {
+        "term": "Çek"
+      },
+      "code": {
+        "term": "withdrawal"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as 'para çekme' in financial contexts, but 'çekme' or 'çekim' is standard for Ethereum consensus."
+  },
+  "consensus": {
+    "term": "konsensüs",
+    "aliases": [
+      "uzlaşı",
+      "fikir birliği"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "konsensüs"
+      },
+      "verb": null,
+      "participle": null,
+      "adjective": "konsensüel",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "consensus-mechanism": "konsensüs mekanizması"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "konsensüs",
+        "example": "Ethereum ağı, güvenliği sağlamak için hisse ispatı konsensüsünü kullanır."
+      },
+      "heading": {
+        "term": "Konsensüs"
+      },
+      "tag": {
+        "term": "Konsensüs"
+      },
+      "ui": {
+        "term": "Konsensüs"
+      },
+      "code": {
+        "term": "consensus"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mainnet": {
+    "term": "Mainnet",
+    "aliases": [
+      "ana ağ"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mainnet"
+      },
+      "verb": null,
+      "participle": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Mainnet",
+        "example": "Akıllı sözleşmenizi Mainnet üzerinde yayına almadan önce test etmelisiniz."
+      },
+      "heading": {
+        "term": "Mainnet"
+      },
+      "tag": {
+        "term": "Mainnet"
+      },
+      "ui": {
+        "term": "Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used as a loanword in Turkish crypto communities."
+  },
+  "offchain": {
+    "term": "offchain",
+    "aliases": [
+      "zincir dışı"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "participle": null,
+      "adjective": "offchain",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "offchain",
+        "example": "Bazı hesaplamalar maliyeti düşürmek için offchain olarak gerçekleştirilir."
+      },
+      "heading": {
+        "term": "Offchain Çözümler"
+      },
+      "tag": {
+        "term": "Offchain"
+      },
+      "ui": {
+        "term": "Offchain"
+      },
+      "code": {
+        "term": "offchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Spelled without hyphen per instructions."
+  },
+  "erc-20": {
+    "term": "ERC-20",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ERC-20"
+      },
+      "verb": null,
+      "participle": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ERC-20",
+        "example": "Çoğu Ethereum tabanlı token ERC-20 standartlarını takip eder."
+      },
+      "heading": {
+        "term": "ERC-20 Standartları"
+      },
+      "tag": {
+        "term": "ERC-20"
+      },
+      "ui": {
+        "term": "ERC-20"
+      },
+      "code": {
+        "term": "erc20"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "oracle": {
+    "term": "oracle",
+    "aliases": [
+      "kahin"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "oracle"
+      },
+      "verb": null,
+      "participle": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "oracle",
+        "example": "Oracle ağları, blokzinciri dışındaki verileri akıllı sözleşmelere taşır."
+      },
+      "heading": {
+        "term": "Oracle Verileri"
+      },
+      "tag": {
+        "term": "Oracle"
+      },
+      "ui": {
+        "term": "Oracle"
+      },
+      "code": {
+        "term": "oracle"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Turkish, 'kahin' is the literal translation, but 'oracle' is almost exclusively used in technical documentation."
+  },
+  "blob": {
+    "term": "blob",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blob"
+      },
+      "verb": null,
+      "participle": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "blob-transaction": "blob işlemi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "blob",
+        "example": "Deneb güncellemesi ile birlikte veriler artık blob içerisinde saklanabiliyor."
+      },
+      "heading": {
+        "term": "Blob Verisi"
+      },
+      "tag": {
+        "term": "Blob"
+      },
+      "ui": {
+        "term": "Blob"
+      },
+      "code": {
+        "term": "blob"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually kept as is."
+  },
+  "slot": {
+    "term": "slot",
+    "aliases": [
+      "yuva"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "slot"
+      },
+      "verb": null,
+      "participle": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "slot",
+        "example": "Ethereum'da her slot 12 saniyelik bir süreyi temsil eder."
+      },
+      "heading": {
+        "term": "Slot Yapısı"
+      },
+      "tag": {
+        "term": "Slot"
+      },
+      "ui": {
+        "term": "Slot"
+      },
+      "code": {
+        "term": "slot"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized autonomous organization (dao)": {
+    "term": "merkeziyetsiz otonom organizasyon (DAO)",
+    "aliases": [
+      "merkezi olmayan otonom kuruluş",
+      "DAO"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "merkeziyetsiz otonom organizasyon"
+      },
+      "verb": null,
+      "participle": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "merkeziyetsiz otonom organizasyon (DAO)",
+        "example": "Bir DAO bünyesinde kararlar topluluk oylamasıyla alınır."
+      },
+      "heading": {
+        "term": "Merkeziyetsiz Otonom Organizasyonlar"
+      },
+      "tag": {
+        "term": "DAO"
+      },
+      "ui": {
+        "term": "DAO"
+      },
+      "code": {
+        "term": "dao"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "testnet": {
+    "term": "Testnet",
+    "aliases": [
+      "test ağı"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Testnet"
+      },
+      "verb": null,
+      "participle": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Testnet",
+        "example": "Sepolia, geliştiriciler için popüler bir Ethereum testnetidir."
+      },
+      "heading": {
+        "term": "Testnetler"
+      },
+      "tag": {
+        "term": "Testnet"
+      },
+      "ui": {
+        "term": "Testnet"
+      },
+      "code": {
+        "term": "testnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus client": {
+    "term": "Konsensüs istemcisi",
+    "aliases": [
+      "Mutabakat istemcisi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "konsensüs istemcisi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "konsensüs istemcisi",
+        "example": "Ethereum ağında bir konsensüs istemcisi çalıştırmak ağın güvenliğini artırır."
+      },
+      "heading": {
+        "term": "Konsensüs İstemcisi"
+      },
+      "tag": {
+        "term": "İstemci"
+      },
+      "ui": {
+        "term": "Konsensüs İstemcisi"
+      },
+      "code": {
+        "term": "consensus-client"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "konsensüs istemcisi",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "konsensüs istemcileri"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Turkish uses possessive suffixes in compound nouns like 'konsensüs istemcisi'."
+  },
+  "layer 2 (l2)": {
+    "term": "Katman 2 (L2)",
+    "aliases": [
+      "İkinci katman"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "katman 2"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "katman 2",
+        "example": "İşlem ücretlerini düşürmek için katman 2 çözümleri kullanılır."
+      },
+      "heading": {
+        "term": "Katman 2 (L2)"
+      },
+      "tag": {
+        "term": "Ölçeklendirme"
+      },
+      "ui": {
+        "term": "L2"
+      },
+      "code": {
+        "term": "layer-2"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "katman 2",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "katman 2'ler"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zk": {
+    "term": "ZK",
+    "aliases": [
+      "Sıfır bilgi",
+      "Zero knowledge"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "sıfır bilgi"
+      },
+      "verb": null,
+      "adjective": "sıfır bilgi",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ZK",
+        "example": "ZK teknolojisi, veriyi açıklamadan doğruluğunu kanıtlamayı sağlar."
+      },
+      "heading": {
+        "term": "ZK"
+      },
+      "tag": {
+        "term": "Gizlilik"
+      },
+      "ui": {
+        "term": "ZK"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ZK",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "ZK'ler"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "private key": {
+    "term": "Özel anahtar",
+    "aliases": [
+      "Gizli anahtar"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "özel anahtar"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "özel anahtar",
+        "example": "Özel anahtarınızı asla kimseyle paylaşmamalısınız."
+      },
+      "heading": {
+        "term": "Özel Anahtar"
+      },
+      "tag": {
+        "term": "Güvenlik"
+      },
+      "ui": {
+        "term": "Özel Anahtar"
+      },
+      "code": {
+        "term": "private-key"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "özel anahtar",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "özel anahtarlar"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "crypto": {
+    "term": "Kripto",
+    "aliases": [
+      "Kripto para",
+      "Kriptografi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "kripto"
+      },
+      "verb": null,
+      "adjective": "kripto",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kripto",
+        "example": "Kripto dünyasında güvenlik en önemli unsurdur."
+      },
+      "heading": {
+        "term": "Kripto"
+      },
+      "tag": {
+        "term": "Genel"
+      },
+      "ui": {
+        "term": "Kripto"
+      },
+      "code": {
+        "term": "crypto"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "kripto",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "kriptolar"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "layer 1 (l1)": {
+    "term": "Katman 1 (L1)",
+    "aliases": [
+      "Birinci katman"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "katman 1"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "katman 1",
+        "example": "Ethereum ana ağı bir katman 1 protokolüdür."
+      },
+      "heading": {
+        "term": "Katman 1 (L1)"
+      },
+      "tag": {
+        "term": "Genel"
+      },
+      "ui": {
+        "term": "L1"
+      },
+      "code": {
+        "term": "layer-1"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "katman 1",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "katman 1'ler"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "maximal extractable value (mev)": {
+    "term": "Maksimal çıkarılabilir değer (MEV)",
+    "aliases": [
+      "Maksimum çıkarılabilir değer"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "maksimal çıkarılabilir değer"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "MEV",
+        "example": "MEV, blok üretiminden elde edilebilecek ek kârı ifade eder."
+      },
+      "heading": {
+        "term": "Maksimal Çıkarılabilir Değer (MEV)"
+      },
+      "tag": {
+        "term": "MEV"
+      },
+      "ui": {
+        "term": "MEV"
+      },
+      "code": {
+        "term": "mev"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "maksimal çıkarılabilir değer",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "maksimal çıkarılabilir değerler"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "exit": {
+    "term": "Çıkış",
+    "aliases": [
+      "Ayrılma"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "çıkış"
+      },
+      "verb": {
+        "infinitive": "çıkış yapmak",
+        "participle": "çıkış yapan"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": "çıkış yapmamak",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "çıkış",
+        "example": "Doğrulayıcı havuzundan çıkış yapmak için bir işlem göndermeniz gerekir."
+      },
+      "heading": {
+        "term": "Çıkış"
+      },
+      "tag": {
+        "term": "Konsensüs"
+      },
+      "ui": {
+        "term": "Çıkış Yap"
+      },
+      "code": {
+        "term": "exit"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "çıkış",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "çıkışlar"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "opcode": {
+    "term": "İşlem kodu",
+    "aliases": [
+      "Opcode"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "işlem kodu"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "işlem kodu",
+        "example": "EVM her bir akıllı kontratı işlem kodları dizisi olarak yürütür."
+      },
+      "heading": {
+        "term": "İşlem Kodu (Opcode)"
+      },
+      "tag": {
+        "term": "Geliştirici"
+      },
+      "ui": {
+        "term": "İşlem Kodu"
+      },
+      "code": {
+        "term": "opcode"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "işlem kodu",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "işlem kodları"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized finance (defi)": {
+    "term": "Merkeziyetsiz finans (DeFi)",
+    "aliases": [
+      "Merkezi olmayan finans"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "merkeziyetsiz finans"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "merkeziyetsiz finans",
+        "example": "Merkeziyetsiz finans, geleneksel bankacılık hizmetlerini blokzincirine taşır."
+      },
+      "heading": {
+        "term": "Merkeziyetsiz Finans (DeFi)"
+      },
+      "tag": {
+        "term": "DeFi"
+      },
+      "ui": {
+        "term": "DeFi"
+      },
+      "code": {
+        "term": "defi"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "merkeziyetsiz finans",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "privacy": {
+    "term": "gizlilik",
+    "aliases": [
+      "mahremiyet"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "gizlilik"
+      },
+      "verb": {
+        "infinitive": "gizlemek",
+        "participle": "gizleyen"
+      },
+      "adjective": "gizli",
+      "agent": null,
+      "negation": "gizlilik dışı",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "gizlilik",
+        "example": "Gizlilik, blockchain teknolojisinde temel bir kullanıcı hakkıdır."
+      },
+      "heading": {
+        "term": "Gizlilik"
+      },
+      "tag": {
+        "term": "Gizlilik"
+      },
+      "ui": {
+        "term": "Gizlilik Ayarları"
+      },
+      "code": {
+        "term": "privacy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "optimistic rollup": {
+    "term": "iyimser toplama",
+    "aliases": [
+      "optimistic rollup"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "iyimser toplama"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "layer-2": "katman 2 iyimser toplama"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "iyimser toplama",
+        "example": "İyimser toplama, Ethereum'u ölçeklendirmek için kullanılan bir katman 2 çözümüdür."
+      },
+      "heading": {
+        "term": "İyimser Toplama"
+      },
+      "tag": {
+        "term": "Ölçeklendirme"
+      },
+      "ui": {
+        "term": "İyimser Toplama"
+      },
+      "code": {
+        "term": "optimistic_rollup"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often left untranslated as 'Optimistic Rollup' in technical contexts."
+  },
+  "ethereum request for comments (erc)": {
+    "term": "Ethereum Yorum Talebi (ERC)",
+    "aliases": [
+      "ERC",
+      "Ethereum Request for Comments"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Yorum Talebi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Yorum Talebi (ERC)",
+        "example": "ERC-20, en yaygın kullanılan Ethereum Yorum Talebi standartlarından biridir."
+      },
+      "heading": {
+        "term": "Ethereum Yorum Talebi (ERC)"
+      },
+      "tag": {
+        "term": "Protokol"
+      },
+      "ui": {
+        "term": "ERC Standartları"
+      },
+      "code": {
+        "term": "erc"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "plasma": {
+    "term": "plazma",
+    "aliases": [
+      "plasma"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "plazma"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "plasma-chain": "plazma zinciri"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "plazma",
+        "example": "Plazma, ana zincir dışındaki işlemleri yöneten bir ölçeklendirme çerçevesidir."
+      },
+      "heading": {
+        "term": "Plazma"
+      },
+      "tag": {
+        "term": "Ölçeklendirme"
+      },
+      "ui": {
+        "term": "Plazma"
+      },
+      "code": {
+        "term": "plasma"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "library": {
+    "term": "kütüphane",
+    "aliases": [
+      "kitaplık"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "kütüphane"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "smart-contract-library": "akıllı sözleşme kütüphanesi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "kütüphane",
+        "example": "Akıllı sözleşmelerde kod tekrarını önlemek için kütüphaneler kullanılır."
+      },
+      "heading": {
+        "term": "Kütüphane"
+      },
+      "tag": {
+        "term": "Geliştirme"
+      },
+      "ui": {
+        "term": "Kütüphaneler"
+      },
+      "code": {
+        "term": "library"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "the merge": {
+    "term": "birleşme",
+    "aliases": [
+      "The Merge"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "birleşme"
+      },
+      "verb": {
+        "infinitive": "birleşmek",
+        "participle": "birleşen"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "birleşme",
+        "example": "Birleşme, Ethereum'un hisse ispatı (Proof of Stake) mekanizmasına geçişini sağlamıştır."
+      },
+      "heading": {
+        "term": "Birleşme"
+      },
+      "tag": {
+        "term": "Güncelleme"
+      },
+      "ui": {
+        "term": "Birleşme"
+      },
+      "code": {
+        "term": "the_merge"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often referred to by its English name 'The Merge' in global contexts."
+  },
+  "zero-knowledge proof": {
+    "term": "sıfır bilgi kanıtı",
+    "aliases": [
+      "sıfır bilgi ispatı",
+      "ZKP"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "sıfır bilgi kanıtı"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "sıfır bilgi toplama"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "sıfır bilgi kanıtı",
+        "example": "Sıfır bilgi kanıtı, bir bilginin içeriğini açıklamadan doğruluğunu kanıtlamaya yarar."
+      },
+      "heading": {
+        "term": "Sıfır Bilgi Kanıtı"
+      },
+      "tag": {
+        "term": "Kriptografi"
+      },
+      "ui": {
+        "term": "Sıfır Bilgi Kanıtı"
+      },
+      "code": {
+        "term": "zkp"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "data availability": {
+    "term": "veri kullanılabilirliği",
+    "aliases": [
+      "veri erişilebilirliği"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "veri kullanılabilirliği"
+      },
+      "verb": null,
+      "adjective": "veri kullanılabilir",
+      "agent": null,
+      "negation": "veri kullanılmazlığı",
+      "compounds": {
+        "data-availability-layer": "veri kullanılabilirlik katmanı"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "veri kullanılabilirliği",
+        "example": "Veri kullanılabilirliği, katman 2 ağlarının güvenliğini sağlamak için esastır."
+      },
+      "heading": {
+        "term": "Veri Kullanılabilirliği"
+      },
+      "tag": {
+        "term": "Ölçeklendirme"
+      },
+      "ui": {
+        "term": "Veri Durumu"
+      },
+      "code": {
+        "term": "data_availability"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "log": {
+    "term": "günlük",
+    "aliases": [
+      "log",
+      "kayıt"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "günlük"
+      },
+      "verb": {
+        "infinitive": "kaydetmek",
+        "participle": "kaydedilen"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "event-log": "olay günlüğü"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "günlük",
+        "example": "Akıllı sözleşmeler, blok zinciri üzerindeki olayları takip etmek için günlükleri kullanır."
+      },
+      "heading": {
+        "term": "Günlükler"
+      },
+      "tag": {
+        "term": "Geliştirme"
+      },
+      "ui": {
+        "term": "Günlükleri Görüntüle"
+      },
+      "code": {
+        "term": "log"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "'Log' is very common among developers, but 'günlük' or 'kayıt' is better for general audiences."
+  },
+  "beacon chain": {
+    "term": "işaret zinciri",
+    "aliases": [
+      "Beacon zinciri",
+      "Beacon Chain"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "işaret zinciri"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "işaret zinciri",
+        "example": "İşaret zinciri, Ethereum'un hisse ispatı sisteminin merkezinde yer alan bir koordinasyon mekanizmasıdır."
+      },
+      "heading": {
+        "term": "İşaret Zinciri"
+      },
+      "tag": {
+        "term": "Konsensüs"
+      },
+      "ui": {
+        "term": "İşaret Zinciri"
+      },
+      "code": {
+        "term": "beacon_chain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "liquidity": {
+    "term": "Likidite",
+    "aliases": [
+      "Akışkanlık"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "likidite"
+      },
+      "verb": null,
+      "adjective": "likit",
+      "agent": null,
+      "negation": "likidite eksikliği",
+      "compounds": {
+        "liquidity-pool": "likidite havuzu"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "likidite",
+        "example": "Merkeziyetsiz borsalar, işlemlerin gerçekleşmesi için yeterli likiditeye ihtiyaç duyar."
+      },
+      "heading": {
+        "term": "Likidite"
+      },
+      "tag": {
+        "term": "Likidite"
+      },
+      "ui": {
+        "term": "Likidite"
+      },
+      "code": {
+        "term": "liquidity"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical finance term commonly used in its loanword form in Turkish."
+  },
+  "epoch": {
+    "term": "Epok",
+    "aliases": [
+      "Dönem"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "epok"
+      },
+      "verb": null,
+      "adjective": "epok bazlı",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "epoch-boundary": "epok sınırı"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "epok",
+        "example": "Ethereum ağında bir epok, 32 slottan oluşur ve yaklaşık 6,4 dakika sürer."
+      },
+      "heading": {
+        "term": "Epok"
+      },
+      "tag": {
+        "term": "Epok"
+      },
+      "ui": {
+        "term": "Epok"
+      },
+      "code": {
+        "term": "epoch"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Specific to consensus mechanisms; 'Dönem' is the general meaning but 'Epok' is the technical standard."
+  },
+  "ethereum mainnet": {
+    "term": "Ethereum Ana Ağı",
+    "aliases": [
+      "Ethereum Mainnet"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Ana Ağı"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Ana Ağı'nda",
+        "example": "Gerçek değer taşıyan işlemler Ethereum Ana Ağı üzerinde gerçekleştirilir."
+      },
+      "heading": {
+        "term": "Ethereum Ana Ağı"
+      },
+      "tag": {
+        "term": "Ana Ağ"
+      },
+      "ui": {
+        "term": "Ethereum Ana Ağı"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "proposal": {
+    "term": "Teklif",
+    "aliases": [
+      "Öneri"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "teklif"
+      },
+      "verb": {
+        "infinitive": "teklif etmek",
+        "participle": "teklif eden"
+      },
+      "adjective": "teklif edilen",
+      "agent": "teklif sahibi",
+      "negation": "reddedilen teklif",
+      "compounds": {
+        "governance-proposal": "yönetişim teklifi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "teklif",
+        "example": "Topluluk üyeleri, protokolü geliştirmek için yeni bir yönetişim teklifi sundular."
+      },
+      "heading": {
+        "term": "Teklif"
+      },
+      "tag": {
+        "term": "Teklif"
+      },
+      "ui": {
+        "term": "Teklif"
+      },
+      "code": {
+        "term": "proposal"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block proposer": {
+    "term": "Blok teklifçisi",
+    "aliases": [
+      "Blok önericisi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blok teklifçisi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "blok teklifçisi",
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "blok teklifçisi",
+        "example": "Her slotta, bir doğrulayıcı rastgele olarak blok teklifçisi olarak seçilir."
+      },
+      "heading": {
+        "term": "Blok Teklifçisi"
+      },
+      "tag": {
+        "term": "Teklifçi"
+      },
+      "ui": {
+        "term": "Blok Teklifçisi"
+      },
+      "code": {
+        "term": "blockProposer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus layer": {
+    "term": "Mutabakat katmanı",
+    "aliases": [
+      "Konsensüs katmanı"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mutabakat katmanı"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "execution-layer": "yürütme katmanı"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "mutabakat katmanı",
+        "example": "Ethereum'un mutabakat katmanı, ağın güvenliğini sağlayan hisse ispatı mantığını yürütür."
+      },
+      "heading": {
+        "term": "Mutabakat Katmanı"
+      },
+      "tag": {
+        "term": "Mutabakat"
+      },
+      "ui": {
+        "term": "Mutabakat Katmanı"
+      },
+      "code": {
+        "term": "consensusLayer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "peer": {
+    "term": "Eş",
+    "aliases": [
+      "Akran"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "eş"
+      },
+      "verb": null,
+      "adjective": "eşler arası",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "peer-to-peer": "eşler arası"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "eş",
+        "example": "Bir düğüm, blok zinciri verilerini senkronize etmek için diğer eşlere bağlanır."
+      },
+      "heading": {
+        "term": "Eşler"
+      },
+      "tag": {
+        "term": "Eş"
+      },
+      "ui": {
+        "term": "Eşler"
+      },
+      "code": {
+        "term": "peer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used in the context of network nodes."
+  },
+  "json-rpc": {
+    "term": "JSON-RPC",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "JSON-RPC"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "JSON-RPC",
+        "example": "Uygulamalar, Ethereum düğümleriyle etkileşim kurmak için JSON-RPC protokolünü kullanır."
+      },
+      "heading": {
+        "term": "JSON-RPC"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "JSON-RPC"
+      },
+      "code": {
+        "term": "jsonrpc"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": null
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical protocol name, remains untranslated."
+  },
+  "nonce": {
+    "term": "Nonce",
+    "aliases": [
+      "Sayı"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nonce"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "account-nonce": "hesap noncesi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "nonce",
+        "example": "Her işlemin, gönderici hesabın işlem sırasını belirleyen benzersiz bir noncesi vardır."
+      },
+      "heading": {
+        "term": "Nonce"
+      },
+      "tag": {
+        "term": "Nonce"
+      },
+      "ui": {
+        "term": "Nonce"
+      },
+      "code": {
+        "term": "nonce"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Crypto-technical term usually kept in English or transliterated as 'nons'."
+  },
+  "ipfs": {
+    "term": "IPFS",
+    "aliases": [
+      "Gezegenler Arası Dosya Sistemi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "IPFS"
+      },
+      "verb": null,
+      "adjective": "IPFS tabanlı",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "ipfs-gateway": "IPFS ağ geçidi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "IPFS",
+        "example": "NFT görselleri genellikle merkeziyetsiz depolama sağlamak için IPFS üzerinde saklanır."
+      },
+      "heading": {
+        "term": "IPFS"
+      },
+      "tag": {
+        "term": "Depolama"
+      },
+      "ui": {
+        "term": "IPFS"
+      },
+      "code": {
+        "term": "ipfs"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": null
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used as an acronym in technical contexts."
+  },
+  "full node": {
+    "term": "tam düğüm",
+    "aliases": [
+      "full node"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tam düğüm"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tam düğüm",
+        "example": "Ağı güvende tutmak için bir tam düğüm çalıştırmanız önerilir."
+      },
+      "heading": {
+        "term": "Tam Düğüm"
+      },
+      "tag": {
+        "term": "Düğüm"
+      },
+      "ui": {
+        "term": "Tam Düğüm"
+      },
+      "code": {
+        "term": "full node"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zero-knowledge": {
+    "term": "sıfır bilgi",
+    "aliases": [
+      "zero-knowledge",
+      "zk"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "sıfır bilgi"
+      },
+      "verb": null,
+      "adjective": "sıfır bilgi",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zero-knowledge-proof": "sıfır bilgi kanıtı",
+        "zero-knowledge-rollup": "sıfır bilgi toplu paketi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "sıfır bilgi",
+        "example": "Sıfır bilgi kanıtları, veriyi açıklamadan doğruluğunu kanıtlamaya olanak tanır."
+      },
+      "heading": {
+        "term": "Sıfır Bilgi"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "Sıfır Bilgi"
+      },
+      "code": {
+        "term": "zero-knowledge"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as a prefix for other technical terms (e.g., sıfır bilgi kanıtı)."
+  },
+  "hardhat": {
+    "term": "Hardhat",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Hardhat"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Hardhat",
+        "example": "Hardhat, Ethereum geliştiricileri için popüler bir geliştirme ortamıdır."
+      },
+      "heading": {
+        "term": "Hardhat"
+      },
+      "tag": {
+        "term": "Araçlar"
+      },
+      "ui": {
+        "term": "Hardhat"
+      },
+      "code": {
+        "term": "hardhat"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Specialized development tool name; remains untranslated."
+  },
+  "checkpoint": {
+    "term": "kontrol noktası",
+    "aliases": [
+      "checkpoint"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "kontrol noktası"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kontrol noktası",
+        "example": "İşaret zinciri, ağın güvenliğini sağlamak için belirli aralıklarla bir kontrol noktası oluşturur."
+      },
+      "heading": {
+        "term": "Kontrol Noktası"
+      },
+      "tag": {
+        "term": "Konsensüs"
+      },
+      "ui": {
+        "term": "Kontrol Noktası"
+      },
+      "code": {
+        "term": "checkpoint"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  }
+}

@@ -11,7 +11,10 @@
  * complete, individual commits are squashed into one per language.
  */
 
+import { join } from "path"
+
 import { translateFile } from "../ai/gemini-translate"
+import { filterGlossaryFlat } from "../ai/glossary-lookup"
 import {
   initProgress,
   isFileCompleted,
@@ -24,6 +27,11 @@ import {
 import { createRateLimiter, type RateLimiter } from "../ai/rate-limiter"
 import { getDestinationFromPath, SharedCommitter } from "../github/commits"
 import { getGlossaryForLanguage } from "../supabase/glossary"
+
+/** Paths to local glossary data (relative to project root) */
+const GLOSSARY_DATA_DIR = join(process.cwd(), "src/scripts/i18n/data/glossary")
+const GLOSSARY_PATH = join(GLOSSARY_DATA_DIR, "glossary-terms-enhanced.json")
+const TRANSLATIONS_DIR = join(GLOSSARY_DATA_DIR, "translations")
 
 import type { GeminiWorkflowContext } from "./gemini-initialize"
 import { logSection } from "./utils"
@@ -179,12 +187,32 @@ async function translateLanguage(
 
     await limiter.acquire()
     try {
+      // Filter glossary to only terms present in this source file
+      let fileGlossary = glossaryTerms
+      try {
+        const filtered = filterGlossaryFlat(
+          file.content,
+          file.type,
+          language,
+          GLOSSARY_PATH,
+          TRANSLATIONS_DIR
+        )
+        if (filtered.size > 0) {
+          fileGlossary = filtered
+          console.log(
+            `  [glossary] ${file.path}: ${filtered.size} terms matched`
+          )
+        }
+      } catch {
+        // Local glossary unavailable -- fall back to Supabase glossary
+      }
+
       const result = await translateFile({
         filePath: file.path,
         fileContent: file.content,
         fileType: file.type,
         targetLanguage: language,
-        glossaryTerms,
+        glossaryTerms: fileGlossary,
       })
 
       const destPath = getDestinationFromPath(file.path, language)

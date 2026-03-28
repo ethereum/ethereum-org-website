@@ -1,0 +1,4306 @@
+{
+  "attestation": {
+    "term": "atestación",
+    "aliases": [
+      "testimonio",
+      "atestiguamiento"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "atestación"
+      },
+      "verb": {
+        "infinitive": "atestar",
+        "participle": "atestado"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "atestación",
+        "example": "Los validadores envían una atestación para confirmar el estado del bloque."
+      },
+      "heading": {
+        "term": "Atestación"
+      },
+      "tag": {
+        "term": "Atestación"
+      },
+      "ui": {
+        "term": "Atestación"
+      },
+      "code": {
+        "term": "attestation"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "bridge": {
+    "term": "puente",
+    "aliases": [
+      "puente de red"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "puente"
+      },
+      "verb": {
+        "infinitive": "cruzar",
+        "participle": "cruzado"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "puente",
+        "example": "Usa un puente para transferir tus tokens de la red principal a una capa 2."
+      },
+      "heading": {
+        "term": "Puente"
+      },
+      "tag": {
+        "term": "Puente"
+      },
+      "ui": {
+        "term": "Puente"
+      },
+      "code": {
+        "term": "bridge"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralization": {
+    "term": "descentralización",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "descentralización"
+      },
+      "verb": {
+        "infinitive": "descentralizar",
+        "participle": "descentralizado"
+      },
+      "adjective": "descentralizado",
+      "agent": null,
+      "negation": "centralización",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "descentralización",
+        "example": "La descentralización es un pilar fundamental de la red Ethereum."
+      },
+      "heading": {
+        "term": "Descentralización"
+      },
+      "tag": {
+        "term": "Descentralización"
+      },
+      "ui": {
+        "term": "Descentralización"
+      },
+      "code": {
+        "term": "decentralization"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized": {
+    "term": "descentralizado",
+    "aliases": [
+      "descentralizada"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "descentralización"
+      },
+      "verb": {
+        "infinitive": "descentralizar",
+        "participle": "descentralizado"
+      },
+      "adjective": "descentralizado",
+      "agent": null,
+      "negation": "centralizado",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "descentralizada",
+        "example": "Ethereum es una red descentralizada que permite aplicaciones sin intermediarios."
+      },
+      "heading": {
+        "term": "Descentralizado"
+      },
+      "tag": {
+        "term": "Descentralizado"
+      },
+      "ui": {
+        "term": "Descentralizado"
+      },
+      "code": {
+        "term": "decentralized"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Adjective form changes gender based on the noun (e.g., aplicación descentralizada)."
+  },
+  "deploy": {
+    "term": "desplegar",
+    "aliases": [
+      "implementar"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "despliegue"
+      },
+      "verb": {
+        "infinitive": "desplegar",
+        "participle": "desplegado"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "desplegar",
+        "example": "Puedes desplegar un contrato inteligente usando herramientas como Hardhat."
+      },
+      "heading": {
+        "term": "Desplegar"
+      },
+      "tag": {
+        "term": "Desplegar"
+      },
+      "ui": {
+        "term": "Desplegar"
+      },
+      "code": {
+        "term": "deploy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "finality": {
+    "term": "finalidad",
+    "aliases": [
+      "finalización"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "finalidad"
+      },
+      "verb": {
+        "infinitive": "finalizar",
+        "participle": "finalizado"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "finalidad",
+        "example": "La finalidad garantiza que una transacción no pueda ser revertida una vez confirmada."
+      },
+      "heading": {
+        "term": "Finalidad"
+      },
+      "tag": {
+        "term": "Finalidad"
+      },
+      "ui": {
+        "term": "Finalidad"
+      },
+      "code": {
+        "term": "finality"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In a consensus context, 'finalidad' refers to the technical guarantee of irreversibility."
+  },
+  "fork": {
+    "term": "bifurcación",
+    "aliases": [
+      "fork"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "bifurcación"
+      },
+      "verb": {
+        "infinitive": "bifurcar",
+        "participle": "bifurcado"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "bifurcación",
+        "example": "Una bifurcación fuerte requiere que todos los usuarios actualicen su software."
+      },
+      "heading": {
+        "term": "Bifurcación"
+      },
+      "tag": {
+        "term": "Bifurcación"
+      },
+      "ui": {
+        "term": "Bifurcación"
+      },
+      "code": {
+        "term": "fork"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "governance": {
+    "term": "gobernanza",
+    "aliases": [
+      "gobierno"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "gobernanza"
+      },
+      "verb": {
+        "infinitive": "gobernar",
+        "participle": "gobernado"
+      },
+      "adjective": null,
+      "agent": "gobernador",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "gobernanza",
+        "example": "La gobernanza descentralizada permite a los poseedores de tokens votar sobre propuestas."
+      },
+      "heading": {
+        "term": "Gobernanza"
+      },
+      "tag": {
+        "term": "Gobernanza"
+      },
+      "ui": {
+        "term": "Gobernanza"
+      },
+      "code": {
+        "term": "governance"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "hash": {
+    "term": "hash",
+    "aliases": [
+      "resumen criptográfico"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "hash"
+      },
+      "verb": {
+        "infinitive": "hashear",
+        "participle": "hasheado"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "hash",
+        "example": "Cada bloque contiene el hash del bloque anterior para mantener la integridad de la cadena."
+      },
+      "heading": {
+        "term": "Hash"
+      },
+      "tag": {
+        "term": "Hash"
+      },
+      "ui": {
+        "term": "Hash"
+      },
+      "code": {
+        "term": "hash"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The technical term 'hash' is widely used and accepted in Spanish tech contexts."
+  },
+  "miner": {
+    "term": "minero",
+    "aliases": [
+      "minador"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "minero"
+      },
+      "verb": {
+        "infinitive": "minar",
+        "participle": "minando"
+      },
+      "adjective": null,
+      "agent": "minero",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "minero",
+        "example": "Un minero compite por resolver un enigma criptográfico para agregar un bloque."
+      },
+      "heading": {
+        "term": "Minero"
+      },
+      "tag": {
+        "term": "Minero"
+      },
+      "ui": {
+        "term": "Minero"
+      },
+      "code": {
+        "term": "miner"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mining": {
+    "term": "minería",
+    "aliases": [
+      "minado"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "minería"
+      },
+      "verb": {
+        "infinitive": "minar",
+        "participle": "minando"
+      },
+      "adjective": null,
+      "agent": "minero",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "minería",
+        "example": "La minería de Ethereum fue reemplazada por el staking con la llegada de la Fusión."
+      },
+      "heading": {
+        "term": "Minería"
+      },
+      "tag": {
+        "term": "Minería"
+      },
+      "ui": {
+        "term": "Minería"
+      },
+      "code": {
+        "term": "mining"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mint": {
+    "term": "acuñar",
+    "aliases": [
+      "crear",
+      "emitir"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "acuñación"
+      },
+      "verb": {
+        "infinitive": "acuñar",
+        "participle": "acuñando"
+      },
+      "adjective": null,
+      "agent": "emisor",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "acuñar",
+        "example": "El protocolo permite acuñar nuevos tokens NFT directamente en la cadena."
+      },
+      "heading": {
+        "term": "Acuñar"
+      },
+      "tag": {
+        "term": "Acuñar"
+      },
+      "ui": {
+        "term": "Acuñar"
+      },
+      "code": {
+        "term": "mint"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In the context of tokens, 'acuñar' is the standard translation for 'mint'."
+  },
+  "signature": {
+    "term": "firma",
+    "aliases": [
+      "firma criptográfica",
+      "firma digital"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "firma"
+      },
+      "verb": {
+        "infinitive": "firmar",
+        "participle": "firmando"
+      },
+      "adjective": "firmado",
+      "agent": "firmante",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "firma",
+        "example": "La firma criptográfica valida que el propietario de la cuenta autorizó la transacción."
+      },
+      "heading": {
+        "term": "Firma"
+      },
+      "tag": {
+        "term": "Firma"
+      },
+      "ui": {
+        "term": "Firma"
+      },
+      "code": {
+        "term": "signature"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "stake": {
+    "term": "participación",
+    "aliases": [
+      "stake",
+      "fondo en garantía"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "participación"
+      },
+      "verb": {
+        "infinitive": "participar",
+        "participle": "participando"
+      },
+      "adjective": "participado",
+      "agent": "participante",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "participación",
+        "example": "Debes depositar una participación de 32 ETH para convertirte en validador."
+      },
+      "heading": {
+        "term": "Participación"
+      },
+      "tag": {
+        "term": "Participación"
+      },
+      "ui": {
+        "term": "Participación"
+      },
+      "code": {
+        "term": "stake"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Stake' is widely used as an anglicism in Spanish crypto communities, but 'participación' is the neutral formal term."
+  },
+  "staked": {
+    "term": "en participación",
+    "aliases": [
+      "depositado",
+      "staked"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "poner en participación",
+        "participle": null
+      },
+      "adjective": "en participación",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "en participación",
+        "example": "El ETH en participación genera recompensas por asegurar la red."
+      },
+      "heading": {
+        "term": "En Participación"
+      },
+      "tag": {
+        "term": "En Participación"
+      },
+      "ui": {
+        "term": "En Participación"
+      },
+      "code": {
+        "term": "staked"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staker": {
+    "term": "participante",
+    "aliases": [
+      "staker",
+      "depositante"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "participante"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "participante",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "participante",
+        "example": "Cada participante recibe recompensas proporcionales a su depósito."
+      },
+      "heading": {
+        "term": "Participante"
+      },
+      "tag": {
+        "term": "Participante"
+      },
+      "ui": {
+        "term": "Participante"
+      },
+      "code": {
+        "term": "staker"
+      }
+    },
+    "grammar": {
+      "gender": "common",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Staker' is very common in industry vernacular."
+  },
+  "staking": {
+    "term": "staking",
+    "aliases": [
+      "participación"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "staking"
+      },
+      "verb": {
+        "infinitive": "hacer staking",
+        "participle": "haciendo staking"
+      },
+      "adjective": null,
+      "agent": "staker",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "staking",
+        "example": "El staking es fundamental para mantener el mecanismo de consenso de Ethereum."
+      },
+      "heading": {
+        "term": "Staking"
+      },
+      "tag": {
+        "term": "Staking"
+      },
+      "ui": {
+        "term": "Staking"
+      },
+      "code": {
+        "term": "staking"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'participación' is accurate, 'staking' is the universally recognized term in Spanish tech contexts."
+  },
+  "swap": {
+    "term": "intercambio",
+    "aliases": [
+      "swap",
+      "canje"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "intercambio"
+      },
+      "verb": {
+        "infinitive": "intercambiar",
+        "participle": "intercambiando"
+      },
+      "adjective": "intercambiado",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "intercambio",
+        "example": "Realicé un intercambio de ETH por DAI usando un exchange descentralizado."
+      },
+      "heading": {
+        "term": "Intercambio"
+      },
+      "tag": {
+        "term": "Intercambio"
+      },
+      "ui": {
+        "term": "Intercambio"
+      },
+      "code": {
+        "term": "swap"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transaction": {
+    "term": "transacción",
+    "aliases": [
+      "operación"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "transacción"
+      },
+      "verb": {
+        "infinitive": "transaccionar",
+        "participle": "transaccionando"
+      },
+      "adjective": "transaccional",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "transacción",
+        "example": "Cada transacción en la red requiere el pago de una comisión de gas."
+      },
+      "heading": {
+        "term": "Transacción"
+      },
+      "tag": {
+        "term": "Transacción"
+      },
+      "ui": {
+        "term": "Transacción"
+      },
+      "code": {
+        "term": "transaction"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "validator": {
+    "term": "validador",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "validador"
+      },
+      "verb": {
+        "infinitive": "validar",
+        "participle": "validando"
+      },
+      "adjective": "validador",
+      "agent": "validador",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "validador",
+        "example": "El validador propuso un nuevo bloque para la cadena."
+      },
+      "heading": {
+        "term": "Validador"
+      },
+      "tag": {
+        "term": "Validador"
+      },
+      "ui": {
+        "term": "Validador"
+      },
+      "code": {
+        "term": "validator"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "vote": {
+    "term": "voto",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "voto"
+      },
+      "verb": {
+        "infinitive": "votar",
+        "participle": "votando"
+      },
+      "adjective": null,
+      "agent": "votante",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "voto",
+        "example": "Debes emitir tu voto antes de que termine el periodo de gobernanza."
+      },
+      "heading": {
+        "term": "Voto"
+      },
+      "tag": {
+        "term": "Voto"
+      },
+      "ui": {
+        "term": "Votar"
+      },
+      "code": {
+        "term": "vote"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "voting": {
+    "term": "votación",
+    "aliases": [
+      "voto"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "votación"
+      },
+      "verb": {
+        "infinitive": "votar",
+        "participle": "votando"
+      },
+      "adjective": null,
+      "agent": "votante",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "votación",
+        "example": "La votación está abierta para todos los miembros de la DAO."
+      },
+      "heading": {
+        "term": "Votación"
+      },
+      "tag": {
+        "term": "Votación"
+      },
+      "ui": {
+        "term": "Votación"
+      },
+      "code": {
+        "term": "voting"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum": {
+    "term": "Ethereum",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum",
+        "example": "Ethereum es una plataforma global para aplicaciones descentralizadas."
+      },
+      "heading": {
+        "term": "Ethereum"
+      },
+      "tag": {
+        "term": "Ethereum"
+      },
+      "ui": {
+        "term": "Ethereum"
+      },
+      "code": {
+        "term": "ethereum"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, remains unchanged in Latin script."
+  },
+  "contract": {
+    "term": "contrato",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "contrato"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "smart-contract": "contrato inteligente"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "contrato",
+        "example": "El contrato contiene las reglas de la aplicación descentralizada."
+      },
+      "heading": {
+        "term": "Contrato"
+      },
+      "tag": {
+        "term": "Contrato"
+      },
+      "ui": {
+        "term": "Contrato"
+      },
+      "code": {
+        "term": "contract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block": {
+    "term": "bloque",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "bloque"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "block-header": "encabezado de bloque"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "bloque",
+        "example": "Cada nuevo bloque se añade al final de la cadena."
+      },
+      "heading": {
+        "term": "Bloque"
+      },
+      "tag": {
+        "term": "Bloque"
+      },
+      "ui": {
+        "term": "Bloque"
+      },
+      "code": {
+        "term": "block"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "smart contract": {
+    "term": "contrato inteligente",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "contrato inteligente"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "contrato inteligente",
+        "example": "Un contrato inteligente se ejecuta de forma autónoma en la blockchain."
+      },
+      "heading": {
+        "term": "Contrato inteligente"
+      },
+      "tag": {
+        "term": "Contrato inteligente"
+      },
+      "ui": {
+        "term": "Contrato inteligente"
+      },
+      "code": {
+        "term": "smart_contract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "node": {
+    "term": "nodo",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nodo"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node": "nodo completo"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "nodo",
+        "example": "Ejecutar tu propio nodo te permite verificar las transacciones personalmente."
+      },
+      "heading": {
+        "term": "Nodo"
+      },
+      "tag": {
+        "term": "Nodo"
+      },
+      "ui": {
+        "term": "Nodo"
+      },
+      "code": {
+        "term": "node"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "token": {
+    "term": "token",
+    "aliases": [
+      "ficha"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "token"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-standard": "estándar de token"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "token",
+        "example": "El token ERC-20 es el estándar más común en la red."
+      },
+      "heading": {
+        "term": "Token"
+      },
+      "tag": {
+        "term": "Token"
+      },
+      "ui": {
+        "term": "Token"
+      },
+      "code": {
+        "term": "token"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'ficha' exists, 'token' is the standard industry term in Spanish."
+  },
+  "address": {
+    "term": "dirección",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "dirección"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "wallet-address": "dirección de billetera"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "dirección",
+        "example": "Asegúrate de copiar correctamente la dirección de destino."
+      },
+      "heading": {
+        "term": "Dirección"
+      },
+      "tag": {
+        "term": "Dirección"
+      },
+      "ui": {
+        "term": "Dirección"
+      },
+      "code": {
+        "term": "address"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "eth": {
+    "term": "ether",
+    "aliases": [
+      "ETH"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ether"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ether",
+        "example": "Puedes enviar ether a cualquier dirección de la red."
+      },
+      "heading": {
+        "term": "Ether (ETH)"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "Saldo de ETH"
+      },
+      "code": {
+        "term": "eth"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "blockchain": {
+    "term": "blockchain",
+    "aliases": [
+      "cadena de bloques"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blockchain"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "onchain": "onchain",
+        "offchain": "offchain"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "blockchain",
+        "example": "La blockchain de Ethereum registra todas las transacciones."
+      },
+      "heading": {
+        "term": "Blockchain"
+      },
+      "tag": {
+        "term": "Blockchain"
+      },
+      "ui": {
+        "term": "Explorador de blockchain"
+      },
+      "code": {
+        "term": "blockchain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "En español se usa predominantemente el término en inglés 'blockchain' en contextos técnicos."
+  },
+  "account": {
+    "term": "cuenta",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "cuenta"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "externally-owned-account": "cuenta de propiedad externa"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "cuenta",
+        "example": "Tu cuenta de Ethereum tiene una dirección pública única."
+      },
+      "heading": {
+        "term": "Cuenta"
+      },
+      "tag": {
+        "term": "Cuenta"
+      },
+      "ui": {
+        "term": "Mi cuenta"
+      },
+      "code": {
+        "term": "account"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "chain": {
+    "term": "cadena",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "cadena"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "sidechain": "cadena lateral"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "cadena",
+        "example": "Los nodos validan los nuevos bloques en la cadena."
+      },
+      "heading": {
+        "term": "Cadena"
+      },
+      "tag": {
+        "term": "Cadena"
+      },
+      "ui": {
+        "term": "Estado de la cadena"
+      },
+      "code": {
+        "term": "chain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "protocol": {
+    "term": "protocolo",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "protocolo"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "protocolo",
+        "example": "El protocolo Ethereum define las reglas de interacción en la red."
+      },
+      "heading": {
+        "term": "Protocolo"
+      },
+      "tag": {
+        "term": "Protocolo"
+      },
+      "ui": {
+        "term": "Versión del protocolo"
+      },
+      "code": {
+        "term": "protocol"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "wallet": {
+    "term": "billetera",
+    "aliases": [
+      "monedero",
+      "cartera"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "billetera"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hardware-wallet": "billetera de hardware"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "billetera",
+        "example": "Conecta tu billetera para interactuar con esta aplicación."
+      },
+      "heading": {
+        "term": "Billetera"
+      },
+      "tag": {
+        "term": "Billetera"
+      },
+      "ui": {
+        "term": "Conectar billetera"
+      },
+      "code": {
+        "term": "wallet"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Se prefiere 'billetera' para neutralidad en Latinoamérica."
+  },
+  "gas": {
+    "term": "gas",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "gas"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "gas-limit": "límite de gas",
+        "gas-price": "precio del gas"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "gas",
+        "example": "Cada transacción requiere gas para ser procesada por la red."
+      },
+      "heading": {
+        "term": "Gas"
+      },
+      "tag": {
+        "term": "Gas"
+      },
+      "ui": {
+        "term": "Tarifa de gas"
+      },
+      "code": {
+        "term": "gas"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "rollup": {
+    "term": "rollup",
+    "aliases": [
+      "agregación"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "rollup"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "optimistic-rollup": "rollup optimista",
+        "zk-rollup": "rollup de conocimiento cero"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "rollup",
+        "example": "Un rollup permite procesar transacciones fuera de la cadena principal."
+      },
+      "heading": {
+        "term": "Rollup"
+      },
+      "tag": {
+        "term": "Escalabilidad"
+      },
+      "ui": {
+        "term": "Redes rollup"
+      },
+      "code": {
+        "term": "rollup"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Al igual que 'blockchain', el término en inglés 'rollup' es el estándar en la industria."
+  },
+  "ethereum improvement proposal (eip)": {
+    "term": "Propuesta de Mejora de Ethereum (EIP)",
+    "aliases": [
+      "EIP"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Propuesta de Mejora de Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "EIP",
+        "example": "La comunidad está discutiendo una nueva Propuesta de Mejora de Ethereum."
+      },
+      "heading": {
+        "term": "Propuestas de Mejora de Ethereum (EIPs)"
+      },
+      "tag": {
+        "term": "Gobernanza"
+      },
+      "ui": {
+        "term": "Ver EIP"
+      },
+      "code": {
+        "term": "eip"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "require": {
+    "term": "require",
+    "aliases": [
+      "requerir"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "requerir",
+        "participle": "requerido"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "require",
+        "example": "La función require se utiliza para validar condiciones en contratos inteligentes."
+      },
+      "heading": {
+        "term": "Función require"
+      },
+      "tag": {
+        "term": "Código"
+      },
+      "ui": {
+        "term": "Error de validación (require)"
+      },
+      "code": {
+        "term": "require"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Se mantiene el término original en inglés por ser una palabra clave reservada en lenguajes como Solidity."
+  },
+  "web3": {
+    "term": "Web3",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Web3"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Web3",
+        "example": "Web3 permite a los usuarios ser dueños de sus propios datos e identidad."
+      },
+      "heading": {
+        "term": "Web3"
+      },
+      "tag": {
+        "term": "Web3"
+      },
+      "ui": {
+        "term": "Web3"
+      },
+      "code": {
+        "term": "web3"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually treated as feminine (la Web3) in Spanish technical contexts."
+  },
+  "solidity": {
+    "term": "Solidity",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Solidity"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Solidity",
+        "example": "Solidity es el lenguaje de programación más utilizado para crear contratos inteligentes."
+      },
+      "heading": {
+        "term": "Solidity"
+      },
+      "tag": {
+        "term": "Solidity"
+      },
+      "ui": {
+        "term": "Solidity"
+      },
+      "code": {
+        "term": "solidity"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "event": {
+    "term": "evento",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "evento"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "evento",
+        "example": "El contrato inteligente emite un evento cada vez que se procesa un pago."
+      },
+      "heading": {
+        "term": "Eventos"
+      },
+      "tag": {
+        "term": "Evento"
+      },
+      "ui": {
+        "term": "Evento"
+      },
+      "code": {
+        "term": "event"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "onchain": {
+    "term": "onchain",
+    "aliases": [
+      "en la cadena",
+      "en cadena"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "onchain",
+      "agent": null,
+      "negation": "offchain",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "onchain",
+        "example": "Los datos almacenados onchain son inmutables y pueden ser verificados por cualquiera."
+      },
+      "heading": {
+        "term": "Onchain"
+      },
+      "tag": {
+        "term": "Onchain"
+      },
+      "ui": {
+        "term": "Onchain"
+      },
+      "code": {
+        "term": "onchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'onchain' is standard in Spanish technical documentation, often used as an invariable adjective."
+  },
+  "ether": {
+    "term": "ether",
+    "aliases": [
+      "ETH"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ether"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ether",
+        "example": "Necesitas tener una pequeña cantidad de ether para pagar las comisiones de red."
+      },
+      "heading": {
+        "term": "Ether"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "Ether"
+      },
+      "code": {
+        "term": "eth"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum virtual machine (evm)": {
+    "term": "Máquina Virtual de Ethereum (EVM)",
+    "aliases": [
+      "EVM"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Máquina Virtual de Ethereum"
+      },
+      "verb": null,
+      "adjective": "compatible con la EVM",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Máquina Virtual de Ethereum (EVM)",
+        "example": "La Máquina Virtual de Ethereum (EVM) es el entorno donde se ejecutan todos los contratos."
+      },
+      "heading": {
+        "term": "Máquina Virtual de Ethereum (EVM)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "EVM"
+      },
+      "code": {
+        "term": "evm"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized application (dapp)": {
+    "term": "aplicación descentralizada (dapp)",
+    "aliases": [
+      "dapp",
+      "aplicación descentralizada"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "aplicación descentralizada"
+      },
+      "verb": null,
+      "adjective": "descentralizada",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "aplicación descentralizada (dapp)",
+        "example": "Una aplicación descentralizada (dapp) utiliza contratos inteligentes para eliminar intermediarios."
+      },
+      "heading": {
+        "term": "Aplicaciones descentralizadas"
+      },
+      "tag": {
+        "term": "dapp"
+      },
+      "ui": {
+        "term": "dapp"
+      },
+      "code": {
+        "term": "dapp"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "non-fungible token (nft)": {
+    "term": "token no fungible (NFT)",
+    "aliases": [
+      "NFT",
+      "token no fungible"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "token no fungible"
+      },
+      "verb": null,
+      "adjective": "no fungible",
+      "agent": null,
+      "negation": "token fungible",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "token no fungible (NFT)",
+        "example": "Cada token no fungible (NFT) tiene un identificador único que lo diferencia de cualquier otro."
+      },
+      "heading": {
+        "term": "Tokens no fungibles (NFT)"
+      },
+      "tag": {
+        "term": "NFT"
+      },
+      "ui": {
+        "term": "NFT"
+      },
+      "code": {
+        "term": "nft"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "api": {
+    "term": "API",
+    "aliases": [
+      "interfaz de programación de aplicaciones"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "API"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "API",
+        "example": "Puedes usar una API para conectar tu aplicación con la red de Ethereum."
+      },
+      "heading": {
+        "term": "API"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "API"
+      },
+      "code": {
+        "term": "api"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Feminine (la API) because it stands for 'interfaz' (feminine)."
+  },
+  "transfer": {
+    "term": "transferencia",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "transferencia"
+      },
+      "verb": {
+        "infinitive": "transferir",
+        "participle": "transfiriendo"
+      },
+      "adjective": "transferible",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "transferencia",
+        "example": "La transferencia de tokens se registró correctamente en la cadena de bloques."
+      },
+      "heading": {
+        "term": "Transferencias"
+      },
+      "tag": {
+        "term": "Transferencia"
+      },
+      "ui": {
+        "term": "Transferir"
+      },
+      "code": {
+        "term": "transfer"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "withdrawal": {
+    "term": "retiro",
+    "aliases": [
+      "retirada"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "retiro"
+      },
+      "verb": {
+        "infinitive": "retirar",
+        "participle": "retirado"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "retiro",
+        "example": "El usuario inició un retiro de sus fondos de la red de consenso."
+      },
+      "heading": {
+        "term": "Retiros"
+      },
+      "tag": {
+        "term": "Retiro"
+      },
+      "ui": {
+        "term": "Retirar"
+      },
+      "code": {
+        "term": "withdrawal"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "retiro",
+      "other": "retiros",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus": {
+    "term": "consenso",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "consenso"
+      },
+      "verb": {
+        "infinitive": "consensuar",
+        "participle": "consensuado"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "consenso",
+        "example": "La red alcanzó el consenso sobre el estado del próximo bloque."
+      },
+      "heading": {
+        "term": "Consenso"
+      },
+      "tag": {
+        "term": "Consenso"
+      },
+      "ui": {
+        "term": "Consenso"
+      },
+      "code": {
+        "term": "consensus"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "consenso",
+      "other": "consensos",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mainnet": {
+    "term": "mainnet",
+    "aliases": [
+      "red principal"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mainnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": "testnet",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mainnet",
+        "example": "El contrato inteligente se desplegó con éxito en la mainnet de Ethereum."
+      },
+      "heading": {
+        "term": "Mainnet"
+      },
+      "tag": {
+        "term": "Mainnet"
+      },
+      "ui": {
+        "term": "Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "mainnet",
+      "other": "mainnets",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Anglicismo técnico aceptado universalmente en el ecosistema."
+  },
+  "offchain": {
+    "term": "offchain",
+    "aliases": [
+      "fuera de la cadena"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "offchain",
+      "agent": null,
+      "negation": "onchain",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "offchain",
+        "example": "Las transacciones offchain ayudan a escalar la red reduciendo la congestión."
+      },
+      "heading": {
+        "term": "Offchain"
+      },
+      "tag": {
+        "term": "Offchain"
+      },
+      "ui": {
+        "term": "Fuera de la cadena"
+      },
+      "code": {
+        "term": "offchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "erc-20": {
+    "term": "ERC-20",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ERC-20"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ERC-20",
+        "example": "Muchos tokens fungibles en Ethereum siguen el estándar ERC-20."
+      },
+      "heading": {
+        "term": "ERC-20"
+      },
+      "tag": {
+        "term": "ERC-20"
+      },
+      "ui": {
+        "term": "ERC-20"
+      },
+      "code": {
+        "term": "erc20"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "oracle": {
+    "term": "oráculo",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "oráculo"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "oráculo",
+        "example": "Un oráculo es necesario para traer datos del mundo real a un contrato inteligente."
+      },
+      "heading": {
+        "term": "Oráculos"
+      },
+      "tag": {
+        "term": "Oráculo"
+      },
+      "ui": {
+        "term": "Oráculo"
+      },
+      "code": {
+        "term": "oracle"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "oráculo",
+      "other": "oráculos",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "blob": {
+    "term": "blob",
+    "aliases": [
+      "objeto binario grande"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blob"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "blob",
+        "example": "El uso de blobs permite un almacenamiento de datos más eficiente para los rollups."
+      },
+      "heading": {
+        "term": "Blobs"
+      },
+      "tag": {
+        "term": "Blob"
+      },
+      "ui": {
+        "term": "Blob"
+      },
+      "code": {
+        "term": "blob"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "blob",
+      "other": "blobs",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Término técnico referente a EIP-4844."
+  },
+  "slot": {
+    "term": "slot",
+    "aliases": [
+      "espacio",
+      "ranura"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "slot"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "slot",
+        "example": "Cada slot en la red de Ethereum tiene una duración de doce segundos."
+      },
+      "heading": {
+        "term": "Slots"
+      },
+      "tag": {
+        "term": "Slot"
+      },
+      "ui": {
+        "term": "Slot"
+      },
+      "code": {
+        "term": "slot"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "slot",
+      "other": "slots",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "En el contexto del consenso de Ethereum, 'slot' es el término preferido."
+  },
+  "decentralized autonomous organization (dao)": {
+    "term": "organización autónoma descentralizada (DAO)",
+    "aliases": [
+      "DAO"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "organización autónoma descentralizada"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "organización autónoma descentralizada (DAO)",
+        "example": "La comunidad votó sobre la nueva propuesta a través de su organización autónoma descentralizada (DAO)."
+      },
+      "heading": {
+        "term": "Organización autónoma descentralizada (DAO)"
+      },
+      "tag": {
+        "term": "DAO"
+      },
+      "ui": {
+        "term": "DAO"
+      },
+      "code": {
+        "term": "dao"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "organización autónoma descentralizada",
+      "other": "organizaciones autónomas descentralizadas",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "testnet": {
+    "term": "testnet",
+    "aliases": [
+      "red de prueba"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "testnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": "mainnet",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "testnet",
+        "example": "Es recomendable probar los contratos inteligentes en una testnet antes de desplegarlos."
+      },
+      "heading": {
+        "term": "Testnet"
+      },
+      "tag": {
+        "term": "Testnet"
+      },
+      "ui": {
+        "term": "Testnet"
+      },
+      "code": {
+        "term": "testnet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "testnet",
+      "other": "testnets",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Al igual que mainnet, es un término técnico estándar."
+  },
+  "consensus client": {
+    "term": "cliente de consenso",
+    "aliases": [
+      "cliente de la capa de consenso"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "cliente de consenso"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "cliente de consenso",
+        "example": "Un cliente de consenso es responsable de validar los bloques y asegurar que la red siga las reglas del protocolo."
+      },
+      "heading": {
+        "term": "Cliente de Consenso"
+      },
+      "tag": {
+        "term": "Consenso"
+      },
+      "ui": {
+        "term": "Cliente de consenso"
+      },
+      "code": {
+        "term": "consensus_client"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "layer 2 (l2)": {
+    "term": "capa 2 (L2)",
+    "aliases": [
+      "segunda capa",
+      "L2"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "capa 2"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "capa 2 (L2)",
+        "example": "Las soluciones de capa 2 (L2) permiten procesar transacciones fuera de la red principal para mejorar la escalabilidad."
+      },
+      "heading": {
+        "term": "Capa 2 (L2)"
+      },
+      "tag": {
+        "term": "L2"
+      },
+      "ui": {
+        "term": "Capa 2"
+      },
+      "code": {
+        "term": "layer2"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zk": {
+    "term": "ZK",
+    "aliases": [
+      "conocimiento cero",
+      "zero knowledge"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ZK"
+      },
+      "verb": null,
+      "adjective": "ZK",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "ZK-rollup"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ZK",
+        "example": "La tecnología ZK permite demostrar que una afirmación es cierta sin revelar la información subyacente."
+      },
+      "heading": {
+        "term": "Conocimiento Cero (ZK)"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "ZK"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": "neutral",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "private key": {
+    "term": "clave privada",
+    "aliases": [
+      "llave privada"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "clave privada"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "clave privada",
+        "example": "Nunca compartas tu clave privada, ya que da acceso total a tus fondos en la red."
+      },
+      "heading": {
+        "term": "Clave Privada"
+      },
+      "tag": {
+        "term": "Seguridad"
+      },
+      "ui": {
+        "term": "Clave privada"
+      },
+      "code": {
+        "term": "private_key"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Latin America, 'llave privada' is a very common alternative."
+  },
+  "crypto": {
+    "term": "cripto",
+    "aliases": [
+      "criptomonedas",
+      "criptografía"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "cripto"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "cripto",
+        "example": "El ecosistema cripto ofrece nuevas formas de interactuar con servicios financieros globales."
+      },
+      "heading": {
+        "term": "Cripto"
+      },
+      "tag": {
+        "term": "Cripto"
+      },
+      "ui": {
+        "term": "Cripto"
+      },
+      "code": {
+        "term": "crypto"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually used as a feminine noun (la cripto) when referring to the technology or assets."
+  },
+  "layer 1 (l1)": {
+    "term": "capa 1 (L1)",
+    "aliases": [
+      "primera capa",
+      "L1"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "capa 1"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "capa 1 (L1)",
+        "example": "Ethereum es una red de capa 1 (L1) sobre la cual se construyen otras soluciones de escalabilidad."
+      },
+      "heading": {
+        "term": "Capa 1 (L1)"
+      },
+      "tag": {
+        "term": "L1"
+      },
+      "ui": {
+        "term": "Capa 1"
+      },
+      "code": {
+        "term": "layer1"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "maximal extractable value (mev)": {
+    "term": "valor máximo extraíble (MEV)",
+    "aliases": [
+      "MEV"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "valor máximo extraíble"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "valor máximo extraíble (MEV)",
+        "example": "El valor máximo extraíble (MEV) se refiere al beneficio que los validadores pueden obtener al reordenar transacciones."
+      },
+      "heading": {
+        "term": "Valor Máximo Extraíble (MEV)"
+      },
+      "tag": {
+        "term": "MEV"
+      },
+      "ui": {
+        "term": "MEV"
+      },
+      "code": {
+        "term": "mev"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "exit": {
+    "term": "salida",
+    "aliases": [
+      "egreso"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "salida"
+      },
+      "verb": {
+        "infinitive": "salir",
+        "participle": "salido"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "salida",
+        "example": "Un validador debe iniciar una salida voluntaria para dejar de participar en el consenso y retirar su stake."
+      },
+      "heading": {
+        "term": "Salida"
+      },
+      "tag": {
+        "term": "Protocolo"
+      },
+      "ui": {
+        "term": "Salir"
+      },
+      "code": {
+        "term": "exit"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "opcode": {
+    "term": "código de operación",
+    "aliases": [
+      "opcode"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "código de operación"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "código de operación",
+        "example": "Cada opcode representa una instrucción básica que la Máquina Virtual de Ethereum (EVM) puede ejecutar."
+      },
+      "heading": {
+        "term": "Códigos de Operación (Opcodes)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "Opcode"
+      },
+      "code": {
+        "term": "opcode"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical users often use the English term 'opcode' directly in Spanish."
+  },
+  "decentralized finance (defi)": {
+    "term": "finanzas descentralizadas (DeFi)",
+    "aliases": [
+      "DeFi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "finanzas descentralizadas"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "finanzas descentralizadas (DeFi)",
+        "example": "Las finanzas descentralizadas (DeFi) permiten a los usuarios acceder a préstamos e intercambios sin intermediarios bancarios."
+      },
+      "heading": {
+        "term": "Finanzas Descentralizadas (DeFi)"
+      },
+      "tag": {
+        "term": "DeFi"
+      },
+      "ui": {
+        "term": "DeFi"
+      },
+      "code": {
+        "term": "defi"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "privacy": {
+    "term": "privacidad",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "privacidad"
+      },
+      "verb": null,
+      "adjective": "privado",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "privacidad",
+        "example": "La privacidad es un derecho fundamental que Ethereum busca proteger mediante diversas tecnologías criptográficas."
+      },
+      "heading": {
+        "term": "Privacidad"
+      },
+      "tag": {
+        "term": "Privacidad"
+      },
+      "ui": {
+        "term": "Privacidad"
+      },
+      "code": {
+        "term": "privacy"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "optimistic rollup": {
+    "term": "rollup optimista",
+    "aliases": [
+      "agrupamiento optimista"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "rollup optimista"
+      },
+      "verb": null,
+      "adjective": "optimista",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "rollup optimista",
+        "example": "Un rollup optimista mejora la escalabilidad al procesar transacciones fuera de la cadena principal por defecto."
+      },
+      "heading": {
+        "term": "Rollup optimista"
+      },
+      "tag": {
+        "term": "Escalabilidad"
+      },
+      "ui": {
+        "term": "Rollup optimista"
+      },
+      "code": {
+        "term": "optimistic rollup"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The term 'rollup' is widely used as a loanword in Spanish technical contexts."
+  },
+  "ethereum request for comments (erc)": {
+    "term": "Solicitud de Comentarios de Ethereum (ERC)",
+    "aliases": [
+      "ERC"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Solicitud de Comentarios de Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Solicitud de Comentarios de Ethereum (ERC)",
+        "example": "Cualquier estándar nuevo para tokens debe ser propuesto mediante una Solicitud de Comentarios de Ethereum (ERC)."
+      },
+      "heading": {
+        "term": "ERC"
+      },
+      "tag": {
+        "term": "Protocolo"
+      },
+      "ui": {
+        "term": "ERC"
+      },
+      "code": {
+        "term": "erc"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "plasma": {
+    "term": "Plasma",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Plasma"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Plasma",
+        "example": "Plasma permite la creación de cadenas secundarias que dependen de la seguridad de la red principal de Ethereum."
+      },
+      "heading": {
+        "term": "Plasma"
+      },
+      "tag": {
+        "term": "Escalabilidad"
+      },
+      "ui": {
+        "term": "Plasma"
+      },
+      "code": {
+        "term": "plasma"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "library": {
+    "term": "biblioteca",
+    "aliases": [
+      "librería"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "biblioteca"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "biblioteca",
+        "example": "En Solidity, una biblioteca se utiliza para delegar llamadas y reutilizar código de forma eficiente."
+      },
+      "heading": {
+        "term": "Biblioteca"
+      },
+      "tag": {
+        "term": "Contratos"
+      },
+      "ui": {
+        "term": "Biblioteca"
+      },
+      "code": {
+        "term": "library"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'librería' is common in dev circles, 'biblioteca' is the linguistically correct translation for software library."
+  },
+  "the merge": {
+    "term": "La Fusión",
+    "aliases": [
+      "The Merge"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "La Fusión"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "La Fusión",
+        "example": "La Fusión fue el evento que unió la capa de ejecución con la capa de consenso Beacon Chain."
+      },
+      "heading": {
+        "term": "La Fusión"
+      },
+      "tag": {
+        "term": "Actualización"
+      },
+      "ui": {
+        "term": "La Fusión"
+      },
+      "code": {
+        "term": "the merge"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zero-knowledge proof": {
+    "term": "prueba de conocimiento cero",
+    "aliases": [
+      "ZKP",
+      "prueba de conocimiento nulo"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "prueba de conocimiento cero"
+      },
+      "verb": null,
+      "adjective": "de conocimiento cero",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "prueba de conocimiento cero",
+        "example": "Una prueba de conocimiento cero permite a un probador convencer a un verificador de que una afirmación es válida sin revelar información secreta."
+      },
+      "heading": {
+        "term": "Prueba de conocimiento cero"
+      },
+      "tag": {
+        "term": "Criptografía"
+      },
+      "ui": {
+        "term": "ZKP"
+      },
+      "code": {
+        "term": "zkp"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "data availability": {
+    "term": "disponibilidad de datos",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "disponibilidad de datos"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "disponibilidad de datos",
+        "example": "La disponibilidad de datos garantiza que los participantes de la red puedan acceder a la información necesaria para reconstruir el estado."
+      },
+      "heading": {
+        "term": "Disponibilidad de datos"
+      },
+      "tag": {
+        "term": "Seguridad"
+      },
+      "ui": {
+        "term": "Disponibilidad de datos"
+      },
+      "code": {
+        "term": "data availability"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "log": {
+    "term": "registro",
+    "aliases": [
+      "log",
+      "bitácora"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "registro"
+      },
+      "verb": {
+        "infinitive": "registrar",
+        "participle": "registrando"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "registro",
+        "example": "Los contratos inteligentes emiten eventos que se guardan en el registro de la cadena de bloques para facilitar el rastreo."
+      },
+      "heading": {
+        "term": "Registro"
+      },
+      "tag": {
+        "term": "Desarrollo"
+      },
+      "ui": {
+        "term": "Registro"
+      },
+      "code": {
+        "term": "log"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "beacon chain": {
+    "term": "Beacon Chain",
+    "aliases": [
+      "cadena de baliza"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Beacon Chain"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Beacon Chain",
+        "example": "La Beacon Chain es el componente central que gestiona el sistema de prueba de participación de Ethereum."
+      },
+      "heading": {
+        "term": "Beacon Chain"
+      },
+      "tag": {
+        "term": "Consenso"
+      },
+      "ui": {
+        "term": "Beacon Chain"
+      },
+      "code": {
+        "term": "beacon chain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "liquidity": {
+    "term": "liquidez",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "liquidez"
+      },
+      "verb": null,
+      "adjective": "líquido",
+      "agent": null,
+      "negation": "iliquidez",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "liquidez",
+        "example": "La liquidez es esencial para el funcionamiento de los intercambios descentralizados."
+      },
+      "heading": {
+        "term": "Liquidez"
+      },
+      "tag": {
+        "term": "Liquidez"
+      },
+      "ui": {
+        "term": "Liquidez"
+      },
+      "code": {
+        "term": "liquidity"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "epoch": {
+    "term": "época",
+    "aliases": [
+      "epoch"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "época"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "época",
+        "example": "En Ethereum, una época consta de 32 slots de tiempo."
+      },
+      "heading": {
+        "term": "Época"
+      },
+      "tag": {
+        "term": "Época"
+      },
+      "ui": {
+        "term": "Época"
+      },
+      "code": {
+        "term": "epoch"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "En contextos técnicos se suele mantener el término en inglés 'epoch'."
+  },
+  "ethereum mainnet": {
+    "term": "red principal de Ethereum",
+    "aliases": [
+      "Ethereum Mainnet",
+      "mainnet de Ethereum"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "red principal de Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "red principal de Ethereum",
+        "example": "La red principal de Ethereum es la cadena de bloques pública original donde ocurren las transacciones de valor real."
+      },
+      "heading": {
+        "term": "Red principal de Ethereum"
+      },
+      "tag": {
+        "term": "Red principal"
+      },
+      "ui": {
+        "term": "Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "proposal": {
+    "term": "propuesta",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "propuesta"
+      },
+      "verb": {
+        "infinitive": "proponer",
+        "participle": "propuesto"
+      },
+      "adjective": null,
+      "agent": "proponente",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "propuesta",
+        "example": "Se presentó una nueva propuesta para mejorar la gobernanza del protocolo."
+      },
+      "heading": {
+        "term": "Propuesta"
+      },
+      "tag": {
+        "term": "Propuesta"
+      },
+      "ui": {
+        "term": "Propuesta"
+      },
+      "code": {
+        "term": "proposal"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block proposer": {
+    "term": "proponente de bloque",
+    "aliases": [
+      "propulsor de bloque",
+      "validador proponente"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "proponente de bloque"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "proponente de bloque",
+        "example": "El proponente de bloque es seleccionado aleatoriamente por el protocolo en cada slot."
+      },
+      "heading": {
+        "term": "Proponente de bloque"
+      },
+      "tag": {
+        "term": "Proponente"
+      },
+      "ui": {
+        "term": "Proponente de bloque"
+      },
+      "code": {
+        "term": "block_proposer"
+      }
+    },
+    "grammar": {
+      "gender": "common",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus layer": {
+    "term": "capa de consenso",
+    "aliases": [
+      "Consensus Layer"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "capa de consenso"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "capa de consenso",
+        "example": "La capa de consenso gestiona la seguridad y la validación de la red Ethereum."
+      },
+      "heading": {
+        "term": "Capa de consenso"
+      },
+      "tag": {
+        "term": "Consenso"
+      },
+      "ui": {
+        "term": "Capa de consenso"
+      },
+      "code": {
+        "term": "consensus_layer"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "peer": {
+    "term": "par",
+    "aliases": [
+      "nodo par",
+      "peer"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "par"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "par",
+        "example": "Un par es cualquier otro nodo conectado directamente a tu nodo en la red P2P."
+      },
+      "heading": {
+        "term": "Par"
+      },
+      "tag": {
+        "term": "Par"
+      },
+      "ui": {
+        "term": "Par"
+      },
+      "code": {
+        "term": "peer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "json-rpc": {
+    "term": "JSON-RPC",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "JSON-RPC"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "JSON-RPC",
+        "example": "JSON-RPC es un protocolo de comunicación ligero utilizado para interactuar con clientes de Ethereum."
+      },
+      "heading": {
+        "term": "JSON-RPC"
+      },
+      "tag": {
+        "term": "JSON-RPC"
+      },
+      "ui": {
+        "term": "JSON-RPC"
+      },
+      "code": {
+        "term": "json_rpc"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "nonce": {
+    "term": "nonce",
+    "aliases": [
+      "número de un solo uso"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nonce"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "nonce",
+        "example": "El nonce de una transacción evita ataques de denegación de servicio y asegura el orden de ejecución."
+      },
+      "heading": {
+        "term": "Nonce"
+      },
+      "tag": {
+        "term": "Nonce"
+      },
+      "ui": {
+        "term": "Nonce"
+      },
+      "code": {
+        "term": "nonce"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ipfs": {
+    "term": "IPFS",
+    "aliases": [
+      "Sistema de Archivos InterPlanetario"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "IPFS"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "IPFS",
+        "example": "IPFS permite que los usuarios compartan y almacenen archivos sin depender de servidores centrales."
+      },
+      "heading": {
+        "term": "IPFS"
+      },
+      "tag": {
+        "term": "IPFS"
+      },
+      "ui": {
+        "term": "IPFS"
+      },
+      "code": {
+        "term": "ipfs"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "full node": {
+    "term": "nodo completo",
+    "aliases": [
+      "nodo integral"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nodo completo"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "nodo completo",
+        "example": "Un nodo completo descarga y verifica todos los datos de la cadena de bloques."
+      },
+      "heading": {
+        "term": "Nodo completo"
+      },
+      "tag": {
+        "term": "Nodo"
+      },
+      "ui": {
+        "term": "Nodo completo"
+      },
+      "code": {
+        "term": "fullnode"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zero-knowledge": {
+    "term": "conocimiento cero",
+    "aliases": [
+      "zero-knowledge",
+      "prueba de conocimiento cero"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "conocimiento cero"
+      },
+      "verb": null,
+      "adjective": "conocimiento cero",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "conocimiento cero",
+        "example": "Las pruebas de conocimiento cero permiten demostrar la validez de una declaración sin revelar la información subyacente."
+      },
+      "heading": {
+        "term": "Conocimiento cero"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "Conocimiento cero"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as part of 'pruebas de conocimiento cero' (zero-knowledge proofs)."
+  },
+  "hardhat": {
+    "term": "Hardhat",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Hardhat"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Hardhat",
+        "example": "Hardhat es un entorno de desarrollo para profesionales que facilita la creación de contratos inteligentes."
+      },
+      "heading": {
+        "term": "Hardhat"
+      },
+      "tag": {
+        "term": "Herramienta"
+      },
+      "ui": {
+        "term": "Hardhat"
+      },
+      "code": {
+        "term": "hardhat"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun of a development tool; typically not translated."
+  },
+  "checkpoint": {
+    "term": "punto de control",
+    "aliases": [
+      "checkpoint"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "punto de control"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "punto de control",
+        "example": "La red alcanza la finalidad una vez que un bloque se incluye en un punto de control justificado."
+      },
+      "heading": {
+        "term": "Punto de control"
+      },
+      "tag": {
+        "term": "Consenso"
+      },
+      "ui": {
+        "term": "Punto de control"
+      },
+      "code": {
+        "term": "checkpoint"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  }
+}

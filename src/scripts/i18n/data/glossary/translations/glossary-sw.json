@@ -1,0 +1,4475 @@
+{
+  "attestation": {
+    "term": "ushuhuda",
+    "aliases": [
+      "uthibitisho"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ushuhuda"
+      },
+      "verb": {
+        "infinitive": "kushuhudia",
+        "participle": "inayoshuhudia"
+      },
+      "adjective": null,
+      "agent": "mshuhudiaji",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ushuhuda",
+        "example": "Kila kithibitishaji lazima atoe ushuhuda ili mtandao ufikie mwafaka."
+      },
+      "heading": {
+        "term": "Ushuhuda"
+      },
+      "tag": {
+        "term": "ushuhuda"
+      },
+      "ui": {
+        "term": "Toa Ushuhuda"
+      },
+      "code": {
+        "term": "attestation"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "ushuhuda",
+      "other": "ushuhuda"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Swahili, 'ushuhuda' captures the 'witnessing' aspect of consensus attestations."
+  },
+  "bridge": {
+    "term": "daraja",
+    "aliases": [
+      "kiunganishi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "daraja"
+      },
+      "verb": {
+        "infinitive": "kudarajia",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "daraja",
+        "example": "Tumia daraja kuhamisha mali zako kutoka mtandao mkuu kwenda kwa Tabaka la 2."
+      },
+      "heading": {
+        "term": "Daraja"
+      },
+      "tag": {
+        "term": "daraja"
+      },
+      "ui": {
+        "term": "Tumia Daraja"
+      },
+      "code": {
+        "term": "bridge"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "daraja",
+      "other": "madaraja"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard Swahili term for both physical and technical bridges."
+  },
+  "decentralization": {
+    "term": "ugatuzi",
+    "aliases": [
+      "ugatuaji"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ugatuzi"
+      },
+      "verb": {
+        "infinitive": "kugatua",
+        "participle": "inayogatua"
+      },
+      "adjective": "kigatuzi",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ugatuzi",
+        "example": "Ugatuzi ni sifa kuu ya mtandao wa Ethereum inayozuia udhibiti."
+      },
+      "heading": {
+        "term": "Ugatuzi"
+      },
+      "tag": {
+        "term": "ugatuzi"
+      },
+      "ui": {
+        "term": "Ugatuzi"
+      },
+      "code": {
+        "term": "decentralization"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Ugatuzi' is the standard administrative and political term for decentralization in Swahili."
+  },
+  "decentralized": {
+    "term": "-a kigatuzi",
+    "aliases": [
+      "iliyogatuliwa"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "-a kigatuzi",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "wa kigatuzi",
+        "example": "Ethereum ni mfumo wa kigatuzi ambapo hakuna mamlaka kuu."
+      },
+      "heading": {
+        "term": "Kigatuzi"
+      },
+      "tag": {
+        "term": "kigatuzi"
+      },
+      "ui": {
+        "term": "Kigatuzi"
+      },
+      "code": {
+        "term": "decentralized"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Uses the '-a' association particle followed by the adverbial noun form."
+  },
+  "deploy": {
+    "term": "kusambaza",
+    "aliases": [
+      "kutekeleza",
+      "kupeleka"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "kusambaza",
+        "participle": "inayosambazwa"
+      },
+      "adjective": null,
+      "agent": "msambazaji",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kusambaza",
+        "example": "Ni gharama nafuu kusambaza mkataba mwerevu wakati wa ada ndogo za gesi."
+      },
+      "heading": {
+        "term": "Sambaza"
+      },
+      "tag": {
+        "term": "sambaza"
+      },
+      "ui": {
+        "term": "Sambaza Mkataba"
+      },
+      "code": {
+        "term": "deploy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "In software, 'kusambaza' (distribute/spread) is common, though 'kupeleka' (send/place) is also used."
+  },
+  "finality": {
+    "term": "ufinali",
+    "aliases": [
+      "uthabiti wa mwisho"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ufinali"
+      },
+      "verb": {
+        "infinitive": "kufinalisha",
+        "participle": null
+      },
+      "adjective": "-a kufinalisha",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ufinali",
+        "example": "Ufinali unahakikisha kuwa miamala haiwezi kubadilishwa tena."
+      },
+      "heading": {
+        "term": "Ufinali"
+      },
+      "tag": {
+        "term": "ufinali"
+      },
+      "ui": {
+        "term": "Ufinali"
+      },
+      "code": {
+        "term": "finality"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "'Ufinali' is a technical loan-construction. 'Uamuzi wa mwisho' is more common but less specific."
+  },
+  "fork": {
+    "term": "mchepuko",
+    "aliases": [
+      "uma",
+      "tawi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mchepuko"
+      },
+      "verb": {
+        "infinitive": "kuchepuka",
+        "participle": "inayochepuka"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hard-fork": "mchepuko mgumu",
+        "soft-fork": "mchepuko laini"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "mchepuko",
+        "example": "Mchepuko wa mtandao hutokea wakati watumiaji wanaposhindwa kukubaliana kuhusu mabadiliko ya itifaki."
+      },
+      "heading": {
+        "term": "Mchepuko"
+      },
+      "tag": {
+        "term": "mchepuko"
+      },
+      "ui": {
+        "term": "Mchepuko"
+      },
+      "code": {
+        "term": "fork"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "mchepuko",
+      "other": "michepuko"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Mchepuko' (deviation/branch) is better for technical contexts than 'uma' (dining fork)."
+  },
+  "governance": {
+    "term": "utawala",
+    "aliases": [
+      "uongozi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "utawala"
+      },
+      "verb": {
+        "infinitive": "kutawala",
+        "participle": "inayotawala"
+      },
+      "adjective": "wa kitawala",
+      "agent": "mtawala",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "utawala",
+        "example": "Utawala wa kigatuzi unaruhusu wamiliki wa tokeni kupiga kura kuhusu mapendekezo."
+      },
+      "heading": {
+        "term": "Utawala"
+      },
+      "tag": {
+        "term": "utawala"
+      },
+      "ui": {
+        "term": "Utawala"
+      },
+      "code": {
+        "term": "governance"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "utawala",
+      "other": "tawala"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard term for governance and administration."
+  },
+  "hash": {
+    "term": "hashi",
+    "aliases": [
+      "nambari ya utambulisho"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "hashi"
+      },
+      "verb": {
+        "infinitive": "kuhashi",
+        "participle": "iliyohashiwa"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "hashi",
+        "example": "Hashi ya kitalu inaunganisha kitalu kipya na kile kilichopita."
+      },
+      "heading": {
+        "term": "Hashi"
+      },
+      "tag": {
+        "term": "hashi"
+      },
+      "ui": {
+        "term": "Nakili Hashi"
+      },
+      "code": {
+        "term": "hash"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "hashi",
+      "other": "hashi"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical loanword adapted to Swahili phonology."
+  },
+  "miner": {
+    "term": "Mchimba",
+    "aliases": [
+      "Mchimba migodi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mchimba"
+      },
+      "verb": {
+        "infinitive": "Kuchimba",
+        "participle": "Anayechimba"
+      },
+      "adjective": null,
+      "agent": "Mchimba",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mchimba",
+        "example": "Mchimba anapokea zawadi kwa kuongeza kitalu kipya kwenye mnyororo."
+      },
+      "heading": {
+        "term": "Mchimba"
+      },
+      "tag": {
+        "term": "Mchimba"
+      },
+      "ui": {
+        "term": "Mchimba"
+      },
+      "code": {
+        "term": "miner"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Mchimba",
+      "two": "Wachimba",
+      "few": "Wachimba",
+      "many": "Wachimba",
+      "other": "Wachimba"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Based on 'chimba' (to dig/mine). 'Mchimba' is the standard agent noun."
+  },
+  "mining": {
+    "term": "Uchimbaji",
+    "aliases": [
+      "Uchimbaji wa migodi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Uchimbaji"
+      },
+      "verb": {
+        "infinitive": "Kuchimba",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": "Mchimba",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "uchimbaji",
+        "example": "Uchimbaji unahitaji nguvu nyingi za kopyuta ili kutatua mafumbo ya hisabati."
+      },
+      "heading": {
+        "term": "Uchimbaji"
+      },
+      "tag": {
+        "term": "Uchimbaji"
+      },
+      "ui": {
+        "term": "Uchimbaji"
+      },
+      "code": {
+        "term": "mining"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Uchimbaji",
+      "two": "Uchimbaji",
+      "few": "Uchimbaji",
+      "many": "Uchimbaji",
+      "other": "Uchimbaji"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Abstract noun (U- class) for the process of mining."
+  },
+  "mint": {
+    "term": "Kufua",
+    "aliases": [
+      "Kutengeneza"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ufuaji"
+      },
+      "verb": {
+        "infinitive": "Kufua",
+        "participle": "Inayofua"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kufua",
+        "example": "Unaweza kufua NFT mpya kwa kutumia mkataba mahiri."
+      },
+      "heading": {
+        "term": "Kufua"
+      },
+      "tag": {
+        "term": "Kufua"
+      },
+      "ui": {
+        "term": "Fua"
+      },
+      "code": {
+        "term": "mint"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "'Kufua' traditionally means to forge/mint metal/coins; 'Kutengeneza' (to make) is more general but widely understood."
+  },
+  "signature": {
+    "term": "Sahihi",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Sahihi"
+      },
+      "verb": {
+        "infinitive": "Kutia sahihi",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "sahihi",
+        "example": "Sahihi yako ya kidijitali inahitajika ili kuidhinisha muamala huu."
+      },
+      "heading": {
+        "term": "Sahihi"
+      },
+      "tag": {
+        "term": "Sahihi"
+      },
+      "ui": {
+        "term": "Sahihi"
+      },
+      "code": {
+        "term": "signature"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Sahihi",
+      "two": "Sahihi",
+      "few": "Sahihi",
+      "many": "Sahihi",
+      "other": "Sahihi"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard term for signature."
+  },
+  "stake": {
+    "term": "Dau",
+    "aliases": [
+      "Amana"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Dau"
+      },
+      "verb": {
+        "infinitive": "Kuweka dau",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": "Mwekaji dau",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "dau",
+        "example": "Weka dau la ETH ili uweze kuwa mthibitishaji kwenye mtandao."
+      },
+      "heading": {
+        "term": "Dau"
+      },
+      "tag": {
+        "term": "Dau"
+      },
+      "ui": {
+        "term": "Dau"
+      },
+      "code": {
+        "term": "stake"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Dau",
+      "two": "Madau",
+      "few": "Madau",
+      "many": "Madau",
+      "other": "Madau"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Dau' is commonly used for a stake or wager."
+  },
+  "staked": {
+    "term": "Iliyowekewa dau",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "Iliyowekewa dau",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "iliyowekewa dau",
+        "example": "ETH iliyowekewa dau haiwezi kutolewa hadi muda wa kufunga uishe."
+      },
+      "heading": {
+        "term": "Iliyowekewa Dau"
+      },
+      "tag": {
+        "term": "Dau"
+      },
+      "ui": {
+        "term": "Iliyowekewa dau"
+      },
+      "code": {
+        "term": "staked"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Iliyowekewa dau",
+      "two": "Zilizowekewa dau",
+      "few": "Zilizowekewa dau",
+      "many": "Zilizowekewa dau",
+      "other": "Zilizowekewa dau"
+    },
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "Passive participle construction: 'which has been staked'."
+  },
+  "staker": {
+    "term": "Mwekaji dau",
+    "aliases": [
+      "Mshiriki wa dau"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mwekaji dau"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "Mwekaji dau",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mwekaji dau",
+        "example": "Kila mwekaji dau anapata tuzo kwa kusaidia usalama wa mtandao."
+      },
+      "heading": {
+        "term": "Mwekaji dau"
+      },
+      "tag": {
+        "term": "Mwekaji dau"
+      },
+      "ui": {
+        "term": "Mwekaji dau"
+      },
+      "code": {
+        "term": "staker"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Mwekaji dau",
+      "two": "Wawekaji dau",
+      "few": "Wawekaji dau",
+      "many": "Wawekaji dau",
+      "other": "Wawekaji dau"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Agent noun for the person staking."
+  },
+  "staking": {
+    "term": "Uwekaji dau",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Uwekaji dau"
+      },
+      "verb": {
+        "infinitive": "Kuweka dau",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": "Mwekaji dau",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "uwekaji dau",
+        "example": "Uwekaji dau ni mbadala wa uchimbaji katika Ethereum."
+      },
+      "heading": {
+        "term": "Uwekaji Dau"
+      },
+      "tag": {
+        "term": "Uwekaji dau"
+      },
+      "ui": {
+        "term": "Uwekaji dau"
+      },
+      "code": {
+        "term": "staking"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Uwekaji dau",
+      "two": "Uwekaji dau",
+      "few": "Uwekaji dau",
+      "many": "Uwekaji dau",
+      "other": "Uwekaji dau"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Abstract noun (U- class) for the act of staking."
+  },
+  "swap": {
+    "term": "Kubadilisha",
+    "aliases": [
+      "Ubadilishaji",
+      "Swap"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mabadilishano"
+      },
+      "verb": {
+        "infinitive": "Kubadilisha",
+        "participle": "Inayobadilisha"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kubadilisha",
+        "example": "Unaweza kubadilisha ETH kwa tokeni nyingine kwenye DEX."
+      },
+      "heading": {
+        "term": "Kubadilisha"
+      },
+      "tag": {
+        "term": "Swap"
+      },
+      "ui": {
+        "term": "Badilisha"
+      },
+      "code": {
+        "term": "swap"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard term for exchanging/swapping assets."
+  },
+  "transaction": {
+    "term": "Muamala",
+    "aliases": [
+      "Miamala"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Muamala"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "transaction-fee": "ada ya muamala"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "muamala",
+        "example": "Muamala wako umethibitishwa kwenye mtandao."
+      },
+      "heading": {
+        "term": "Muamala"
+      },
+      "tag": {
+        "term": "Muamala"
+      },
+      "ui": {
+        "term": "Muamala"
+      },
+      "code": {
+        "term": "transaction"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Muamala",
+      "two": "Miamala",
+      "few": "Miamala",
+      "many": "Miamala",
+      "other": "Miamala"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard financial term used across East Africa (e.g., in mobile money)."
+  },
+  "validator": {
+    "term": "Mthibitishaji",
+    "aliases": [
+      "Valideiti"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mthibitishaji"
+      },
+      "verb": {
+        "infinitive": "kuthibitisha",
+        "participle": "anayethibitisha"
+      },
+      "adjective": null,
+      "agent": "Mthibitishaji",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mthibitishaji",
+        "example": "Mthibitishaji anapokea zawadi kwa kulinda mtandao na kuthibitisha miamala."
+      },
+      "heading": {
+        "term": "Mthibitishaji"
+      },
+      "tag": {
+        "term": "Mthibitishaji"
+      },
+      "ui": {
+        "term": "Mthibitishaji"
+      },
+      "code": {
+        "term": "validator"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "Mthibitishaji",
+      "other": "Wathibitishaji"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Mthibitishaji is the formal Swahili term for one who validates/confirms."
+  },
+  "vote": {
+    "term": "Kura",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Kura"
+      },
+      "verb": {
+        "infinitive": "kupiga kura",
+        "participle": "anayepiga kura"
+      },
+      "adjective": null,
+      "agent": "mpiga kura",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kura",
+        "example": "Unapaswa kupiga kura yako ili kushiriki katika maamuzi ya utawala."
+      },
+      "heading": {
+        "term": "Piga Kura"
+      },
+      "tag": {
+        "term": "Kura"
+      },
+      "ui": {
+        "term": "Piga Kura"
+      },
+      "code": {
+        "term": "vote"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Kura",
+      "other": "Kura"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "voting": {
+    "term": "Upigaji kura",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Upigaji kura"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "upigaji kura",
+        "example": "Upigaji kura kwa ajili ya pendekezo jipya umeanza."
+      },
+      "heading": {
+        "term": "Upigaji Kura"
+      },
+      "tag": {
+        "term": "Upigaji Kura"
+      },
+      "ui": {
+        "term": "Upigaji Kura"
+      },
+      "code": {
+        "term": "voting"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Upigaji kura",
+      "other": "Upigaji kura"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Abstract noun referring to the process of voting."
+  },
+  "ethereum": {
+    "term": "Ethereum",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum",
+        "example": "Ethereum ni jukwaa la kidijitali linalotumia teknolojia ya blockchain."
+      },
+      "heading": {
+        "term": "Ethereum"
+      },
+      "tag": {
+        "term": "Ethereum"
+      },
+      "ui": {
+        "term": "Ethereum"
+      },
+      "code": {
+        "term": "ethereum"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, remains untranslated."
+  },
+  "contract": {
+    "term": "Mkataba",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mkataba"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mkataba",
+        "example": "Mkataba huu unaelezea masharti ya ushirikiano."
+      },
+      "heading": {
+        "term": "Mkataba"
+      },
+      "tag": {
+        "term": "Mkataba"
+      },
+      "ui": {
+        "term": "Mkataba"
+      },
+      "code": {
+        "term": "contract"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Mkataba",
+      "other": "Mikataba"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "General term for a contract."
+  },
+  "block": {
+    "term": "Bloku",
+    "aliases": [
+      "Fungu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Bloku"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "blockchain": "mnyororo wa bloku"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "bloku",
+        "example": "Bloku mpya huongezwa kwenye mnyororo kila baada ya sekunde chache."
+      },
+      "heading": {
+        "term": "Bloku"
+      },
+      "tag": {
+        "term": "Bloku"
+      },
+      "ui": {
+        "term": "Bloku"
+      },
+      "code": {
+        "term": "block"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Bloku",
+      "other": "Bloku"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used loanword in Swahili technology contexts."
+  },
+  "smart contract": {
+    "term": "Mkataba werevu",
+    "aliases": [
+      "Mkataba mwerevu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mkataba werevu"
+      },
+      "verb": null,
+      "adjective": "werevu",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mkataba werevu",
+        "example": "Mkataba werevu hufanya kazi kiotomatiki bila mpatanishi."
+      },
+      "heading": {
+        "term": "Mkataba Werevu"
+      },
+      "tag": {
+        "term": "Mkataba Werevu"
+      },
+      "ui": {
+        "term": "Mkataba Werevu"
+      },
+      "code": {
+        "term": "smart_contract"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "Mkataba werevu",
+      "other": "Mikataba yerevu"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Werevu' is used to translate 'smart' in the sense of intelligent/clever for Class 3 nouns."
+  },
+  "node": {
+    "term": "Nodi",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Nodi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "nodi",
+        "example": "Kila nodi inahifadhi nakala kamili ya blockchain ya Ethereum."
+      },
+      "heading": {
+        "term": "Nodi"
+      },
+      "tag": {
+        "term": "Nodi"
+      },
+      "ui": {
+        "term": "Nodi"
+      },
+      "code": {
+        "term": "node"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Nodi",
+      "other": "Nodi"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Loanword used in computing."
+  },
+  "token": {
+    "term": "Tokeni",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Tokeni"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tokeni",
+        "example": "Unaweza kutuma tokeni zako kwa mtumiaji mwingine kupitia mkoba wako."
+      },
+      "heading": {
+        "term": "Tokeni"
+      },
+      "tag": {
+        "term": "Tokeni"
+      },
+      "ui": {
+        "term": "Tokeni"
+      },
+      "code": {
+        "term": "token"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Tokeni",
+      "other": "Tokeni"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Loanword for cryptographic tokens."
+  },
+  "address": {
+    "term": "Anwani",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Anwani"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "wallet-address": "anwani ya mkoba"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "anwani",
+        "example": "Hakikisha unanakili anwani yako ya Ethereum kwa usahihi."
+      },
+      "heading": {
+        "term": "Anwani"
+      },
+      "tag": {
+        "term": "Anwani"
+      },
+      "ui": {
+        "term": "Anwani"
+      },
+      "code": {
+        "term": "address"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Anwani",
+      "other": "Anwani"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "eth": {
+    "term": "ETH",
+    "aliases": [
+      "Ether"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ether"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ETH",
+        "example": "ETH ndiyo sarafu asilia inayotumika kulipia miamala kwenye mtandao wa Ethereum."
+      },
+      "heading": {
+        "term": "ETH (Ether)"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "ETH"
+      },
+      "code": {
+        "term": "ETH"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often kept as ETH or Ether in technical contexts."
+  },
+  "blockchain": {
+    "term": "Blockchain",
+    "aliases": [
+      "Mlolongo wa mizuia"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Blockchain"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "public-blockchain": "Blockchain ya umma"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "blockchain",
+        "example": "Blockchain ni rejista ya kidijitali ambayo hurekodi miamala yote kwa njia salama."
+      },
+      "heading": {
+        "term": "Blockchain"
+      },
+      "tag": {
+        "term": "Blockchain"
+      },
+      "ui": {
+        "term": "Blockchain"
+      },
+      "code": {
+        "term": "blockchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'Mlolongo wa mizuia' is the literal translation, 'Blockchain' is the standard industry term in Swahili."
+  },
+  "account": {
+    "term": "Akaunti",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Akaunti"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "Mmiliki wa akaunti",
+      "negation": null,
+      "compounds": {
+        "externally-owned-account": "Akaunti inayomilikiwa na nje"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "akaunti",
+        "example": "Unahitaji kuunda akaunti ya Ethereum ili kuanza kutuma na kupokea ETH."
+      },
+      "heading": {
+        "term": "Akaunti"
+      },
+      "tag": {
+        "term": "Akaunti"
+      },
+      "ui": {
+        "term": "Akaunti yangu"
+      },
+      "code": {
+        "term": "account"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "chain": {
+    "term": "Mnyororo",
+    "aliases": [
+      "Chain"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mnyororo"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "sidechain": "Mnyororo wa pembeni"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "mnyororo",
+        "example": "Data zote za miamala zinahifadhiwa kwenye mnyororo mkuu."
+      },
+      "heading": {
+        "term": "Mnyororo"
+      },
+      "tag": {
+        "term": "Mnyororo"
+      },
+      "ui": {
+        "term": "Mnyororo"
+      },
+      "code": {
+        "term": "chain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard Bantu root for physical or metaphorical chains."
+  },
+  "protocol": {
+    "term": "Itifaki",
+    "aliases": [
+      "Kanuni"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Itifaki"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "itifaki",
+        "example": "Itifaki ya Ethereum inafafanua jinsi nodi zinavyopaswa kufanya kazi katika mtandao."
+      },
+      "heading": {
+        "term": "Itifaki"
+      },
+      "tag": {
+        "term": "Itifaki"
+      },
+      "ui": {
+        "term": "Itifaki"
+      },
+      "code": {
+        "term": "protocol"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "wallet": {
+    "term": "Mkoba",
+    "aliases": [
+      "Wallet",
+      "Mkoba wa kidijitali"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mkoba"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hardware-wallet": "Mkoba wa vifaa"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "mkoba",
+        "example": "Hakikisha unahifadhi maneno yako ya siri mahali salama nje ya mkoba wako."
+      },
+      "heading": {
+        "term": "Mkoba wa Kidijitali"
+      },
+      "tag": {
+        "term": "Mkoba"
+      },
+      "ui": {
+        "term": "Unganisha Mkoba"
+      },
+      "code": {
+        "term": "wallet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Mkoba is the common word for a wallet/bag; widely used for digital wallets in fintech."
+  },
+  "gas": {
+    "term": "Gesi",
+    "aliases": [
+      "Gas"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Gesi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "gas-fee": "Ada ya gesi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "gesi",
+        "example": "Unapaswa kuongeza kikomo cha gesi ili kuhakikisha mwamala wako unatekelezwa."
+      },
+      "heading": {
+        "term": "Gesi na Ada"
+      },
+      "tag": {
+        "term": "Gesi"
+      },
+      "ui": {
+        "term": "Bei ya Gesi"
+      },
+      "code": {
+        "term": "gas"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "rollup": {
+    "term": "Rollup",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Rollup"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "optimistic-rollup": "Rollup ya matumaini"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "rollup",
+        "example": "Teknolojia ya rollup inaruhusu miamala mingi kuunganishwa na kusindika nje ya mnyororo mkuu."
+      },
+      "heading": {
+        "term": "Rollups"
+      },
+      "tag": {
+        "term": "Rollup"
+      },
+      "ui": {
+        "term": "Rollup"
+      },
+      "code": {
+        "term": "rollup"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "Technical term usually kept in English."
+  },
+  "ethereum improvement proposal (eip)": {
+    "term": "Pendekezo la Uboreshaji la Ethereum",
+    "aliases": [
+      "EIP"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Pendekezo la Uboreshaji la Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "pendekezo la uboreshaji la Ethereum",
+        "example": "EIP ni hati inayoelezea sifa mpya au mabadiliko kwenye itifaki ya Ethereum."
+      },
+      "heading": {
+        "term": "Mapendekezo ya Uboreshaji (EIPs)"
+      },
+      "tag": {
+        "term": "EIP"
+      },
+      "ui": {
+        "term": "EIP"
+      },
+      "code": {
+        "term": "eip"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "require": {
+    "term": "Hitaji",
+    "aliases": [
+      "Lazimu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "kuhitaji",
+        "participle": "inayohitaji"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": "isihitaji",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "inahitaji",
+        "example": "Kandarasi hii inahitaji usawa wa kutosha kabla ya kutekelezwa."
+      },
+      "heading": {
+        "term": "Sharti"
+      },
+      "tag": {
+        "term": "Hitaji"
+      },
+      "ui": {
+        "term": "Inahitajika"
+      },
+      "code": {
+        "term": "require"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In code/smart contracts, this translates to a condition or 'sharti'."
+  },
+  "web3": {
+    "term": "Web3",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Web3"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Web3",
+        "example": "Web3 inaruhusu watumiaji kumiliki data na utambulisho wao kidijitali."
+      },
+      "heading": {
+        "term": "Web3"
+      },
+      "tag": {
+        "term": "Web3"
+      },
+      "ui": {
+        "term": "Web3"
+      },
+      "code": {
+        "term": "web3"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "solidity": {
+    "term": "Solidity",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Solidity"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Solidity",
+        "example": "Solidity ni lugha kuu ya programu inayotumika kuandika mikataba ya kiakili kwenye Ethereum."
+      },
+      "heading": {
+        "term": "Solidity"
+      },
+      "tag": {
+        "term": "Solidity"
+      },
+      "ui": {
+        "term": "Solidity"
+      },
+      "code": {
+        "term": "solidity"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "event": {
+    "term": "tukio",
+    "aliases": [
+      "event"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tukio"
+      },
+      "verb": {
+        "infinitive": "kutokea",
+        "participle": "inayotokea"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tukio",
+        "example": "Mkataba wa kiakili hutoa tukio wakati muamala unapokamilika."
+      },
+      "heading": {
+        "term": "Matukio"
+      },
+      "tag": {
+        "term": "Tukio"
+      },
+      "ui": {
+        "term": "Tukio"
+      },
+      "code": {
+        "term": "event"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "tukio",
+      "other": "matukio"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Swahili, 'tukio' is the standard word for event/occurrence."
+  },
+  "onchain": {
+    "term": "onchain",
+    "aliases": [
+      "kwenye mnyororo"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "onchain",
+      "agent": null,
+      "negation": "offchain",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "onchain",
+        "example": "Data zote za onchain zinapatikana kwa umma kwenye kizuizi."
+      },
+      "heading": {
+        "term": "Shughuli za Onchain"
+      },
+      "tag": {
+        "term": "Onchain"
+      },
+      "ui": {
+        "term": "Onchain"
+      },
+      "code": {
+        "term": "onchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually kept as 'onchain' in Swahili tech contexts, though 'kwenye mnyororo' is the literal translation."
+  },
+  "ether": {
+    "term": "Ether",
+    "aliases": [
+      "ETH"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ether"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ether",
+        "example": "Ether ni sarafu ya asili ya mtandao wa Ethereum."
+      },
+      "heading": {
+        "term": "Ether (ETH)"
+      },
+      "tag": {
+        "term": "Ether"
+      },
+      "ui": {
+        "term": "Ether"
+      },
+      "code": {
+        "term": "ether"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum virtual machine (evm)": {
+    "term": "Mashine ya Mtandao ya Ethereum (EVM)",
+    "aliases": [
+      "EVM",
+      "Ethereum Virtual Machine"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mashine ya Mtandao ya Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Mashine ya Mtandao ya Ethereum (EVM)",
+        "example": "EVM inafanya kazi kama kompyuta moja kubwa ya kimataifa."
+      },
+      "heading": {
+        "term": "Mashine ya Mtandao ya Ethereum (EVM)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "EVM"
+      },
+      "code": {
+        "term": "evm"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized application (dapp)": {
+    "term": "programu iliyogatuliwa (dapp)",
+    "aliases": [
+      "dapp",
+      "programu isiyomilikiwa na upande mmoja"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "programu iliyogatuliwa"
+      },
+      "verb": null,
+      "adjective": "iliyogatuliwa",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "programu iliyogatuliwa (dapp)",
+        "example": "Dapp ni programu inayofanya kazi kwenye mfumo wa mnyororo wa kizuizi."
+      },
+      "heading": {
+        "term": "Programu Zilizogatuliwa (dapps)"
+      },
+      "tag": {
+        "term": "dapp"
+      },
+      "ui": {
+        "term": "dapp"
+      },
+      "code": {
+        "term": "dapp"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "programu iliyogatuliwa",
+      "other": "programu zilizogatuliwa"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Kugatuliwa' is the standard Swahili term for decentralized."
+  },
+  "non-fungible token (nft)": {
+    "term": "tokeni isiyoweza kubadilika (NFT)",
+    "aliases": [
+      "NFT",
+      "tokeni ya kipekee"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tokeni isiyoweza kubadilika"
+      },
+      "verb": null,
+      "adjective": "isiyoweza kubadilika",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tokeni isiyoweza kubadilika (NFT)",
+        "example": "Kila NFT ina utambulisho wa kipekee ambao hauwezi kunakiliwa."
+      },
+      "heading": {
+        "term": "Tokeni Zisizoweza Kubadilika (NFTs)"
+      },
+      "tag": {
+        "term": "NFT"
+      },
+      "ui": {
+        "term": "NFT"
+      },
+      "code": {
+        "term": "nft"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "tokeni isiyoweza kubadilika",
+      "other": "tokeni zisizoweza kubadilika"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "api": {
+    "term": "API",
+    "aliases": [
+      "kiolesura cha programu ya matumizi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "API"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "API",
+        "example": "Wasanidi programu wanatumia API kuunganisha programu zao na mtandao wa Ethereum."
+      },
+      "heading": {
+        "term": "API"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "API"
+      },
+      "code": {
+        "term": "api"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transfer": {
+    "term": "uhamisho",
+    "aliases": [
+      "kutuma"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "uhamisho"
+      },
+      "verb": {
+        "infinitive": "kuhamisha",
+        "participle": "anayeshamisha"
+      },
+      "adjective": null,
+      "agent": "mhamishaji",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "uhamisho",
+        "example": "Uhamisho wa Ether unahitaji ada ya gesi ili kutekelezwa."
+      },
+      "heading": {
+        "term": "Uhamisho"
+      },
+      "tag": {
+        "term": "Uhamisho"
+      },
+      "ui": {
+        "term": "Hamisha"
+      },
+      "code": {
+        "term": "transfer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In UI contexts, 'Hamisha' (the imperative/short form) is often used for buttons."
+  },
+  "withdrawal": {
+    "term": "utoaji",
+    "aliases": [
+      "kutoa"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "utoaji"
+      },
+      "verb": {
+        "infinitive": "kutoa",
+        "participle": "anayetoa"
+      },
+      "adjective": null,
+      "agent": "mtoaji",
+      "negation": "kutotoa",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "utoaji",
+        "example": "Unaweza kuanzisha utoaji wa ETH yako kutoka kwenye mkataba wa hisa."
+      },
+      "heading": {
+        "term": "Utoaji"
+      },
+      "tag": {
+        "term": "Utoaji"
+      },
+      "ui": {
+        "term": "Toa"
+      },
+      "code": {
+        "term": "withdrawal"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "utoaji",
+      "other": "mautoaji"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers to the process of removing funds from the consensus layer."
+  },
+  "consensus": {
+    "term": "muafaka",
+    "aliases": [
+      "maridhiano"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "muafaka"
+      },
+      "verb": {
+        "infinitive": "kufikia muafaka",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "muafaka",
+        "example": "Mtandao wa Ethereum hufikia muafaka kupitia itifaki ya uthibitisho wa hisa."
+      },
+      "heading": {
+        "term": "Muafaka"
+      },
+      "tag": {
+        "term": "Muafaka"
+      },
+      "ui": {
+        "term": "Muafaka"
+      },
+      "code": {
+        "term": "consensus"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "muafaka",
+      "other": "miafaka"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mainnet": {
+    "term": "Mainnet",
+    "aliases": [
+      "Mtandao mkuu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mainnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Mainnet",
+        "example": "Shughuli zote za thamani halisi hufanyika kwenye Mainnet ya Ethereum."
+      },
+      "heading": {
+        "term": "Mainnet"
+      },
+      "tag": {
+        "term": "Mainnet"
+      },
+      "ui": {
+        "term": "Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually kept as a proper noun in technical contexts."
+  },
+  "offchain": {
+    "term": "offchain",
+    "aliases": [
+      "nje ya mnyororo"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "offchain",
+      "agent": null,
+      "negation": "onchain",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "offchain",
+        "example": "Shughuli za offchain husaidia kupunguza gharama na kuongeza kasi."
+      },
+      "heading": {
+        "term": "Offchain"
+      },
+      "tag": {
+        "term": "Offchain"
+      },
+      "ui": {
+        "term": "Offchain"
+      },
+      "code": {
+        "term": "offchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used without a hyphen as per instructions."
+  },
+  "erc-20": {
+    "term": "ERC-20",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ERC-20"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ERC-20",
+        "example": "Tokeni nyingi kwenye Ethereum hufuata kiwango cha ERC-20."
+      },
+      "heading": {
+        "term": "ERC-20"
+      },
+      "tag": {
+        "term": "ERC-20"
+      },
+      "ui": {
+        "term": "ERC-20"
+      },
+      "code": {
+        "term": "erc20"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "oracle": {
+    "term": "orakali",
+    "aliases": [
+      "oracle"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "orakali"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "orakali",
+        "example": "Orakali huleta data ya bei ya ulimwengu halisi kwenye mikataba mahiri."
+      },
+      "heading": {
+        "term": "Orakali"
+      },
+      "tag": {
+        "term": "Orakali"
+      },
+      "ui": {
+        "term": "Orakali"
+      },
+      "code": {
+        "term": "oracle"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "orakali",
+      "other": "orakali"
+    },
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "Loanword used for technical consistency."
+  },
+  "blob": {
+    "term": "blob",
+    "aliases": [
+      "blobu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blob"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "blob",
+        "example": "Miamala ya blob hupunguza kwa kiasi kikubwa gharama za Layer 2."
+      },
+      "heading": {
+        "term": "Blob"
+      },
+      "tag": {
+        "term": "Blob"
+      },
+      "ui": {
+        "term": "Blob"
+      },
+      "code": {
+        "term": "blob"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "blob",
+      "other": "blob"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term, often kept as is or Swahilized as 'blobu'."
+  },
+  "slot": {
+    "term": "sloti",
+    "aliases": [
+      "nafasi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "sloti"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "sloti",
+        "example": "Katika kila sloti, mthibitishaji mmoja huchaguliwa kupendekeza kitalu."
+      },
+      "heading": {
+        "term": "Sloti"
+      },
+      "tag": {
+        "term": "Sloti"
+      },
+      "ui": {
+        "term": "Sloti"
+      },
+      "code": {
+        "term": "slot"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "sloti",
+      "other": "sloti"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Specific 12-second time window in Ethereum consensus."
+  },
+  "decentralized autonomous organization (dao)": {
+    "term": "shirika la kujiendesha lililogatuliwa",
+    "aliases": [
+      "DAO"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "shirika la kujiendesha lililogatuliwa"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "shirika la kujiendesha lililogatuliwa",
+        "example": "DAO inaruhusu jumuiya kufanya maamuzi bila uongozi mkuu."
+      },
+      "heading": {
+        "term": "Shirika la Kujiendesha Lililogatuliwa (DAO)"
+      },
+      "tag": {
+        "term": "DAO"
+      },
+      "ui": {
+        "term": "DAO"
+      },
+      "code": {
+        "term": "dao"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "shirika la kujiendesha lililogatuliwa",
+      "other": "mashirika ya kujiendesha yaliyogatuliwa"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "testnet": {
+    "term": "testnet",
+    "aliases": [
+      "mtandao wa majaribio"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "testnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "testnet",
+        "example": "Unapaswa kujaribu mkataba wako mahiri kwenye testnet kabla ya kuupeleka kwenye Mainnet."
+      },
+      "heading": {
+        "term": "Testnet"
+      },
+      "tag": {
+        "term": "Testnet"
+      },
+      "ui": {
+        "term": "Testnet"
+      },
+      "code": {
+        "term": "testnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "testnet",
+      "other": "testnet"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus client": {
+    "term": "Mteja wa maafikiano",
+    "aliases": [
+      "Klianti wa maafikiano",
+      "Mteja wa makubaliano"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mteja wa maafikiano"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "Mteja",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mteja wa maafikiano",
+        "example": "Mteja wa maafikiano anasaidia mtandao kufikia uamuzi mmoja kuhusu hali ya mnyororo."
+      },
+      "heading": {
+        "term": "Mteja wa Maafikiano"
+      },
+      "tag": {
+        "term": "Maafikiano"
+      },
+      "ui": {
+        "term": "Mteja wa Maafikiano"
+      },
+      "code": {
+        "term": "consensus_client"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "Mteja wa maafikiano",
+      "other": "Wateja wa maafikiano",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Swahili, 'mteja' refers to a client/customer; used here in the technical sense of client software."
+  },
+  "layer 2 (l2)": {
+    "term": "Safu ya pili (L2)",
+    "aliases": [
+      "Tabaka la pili",
+      "L2"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Safu ya pili"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "safu ya pili",
+        "example": "Safu ya pili inasaidia kupunguza ada za miamala kwa kufanya miamala nje ya mnyororo mkuu."
+      },
+      "heading": {
+        "term": "Safu ya Pili (L2)"
+      },
+      "tag": {
+        "term": "L2"
+      },
+      "ui": {
+        "term": "Safu ya Pili"
+      },
+      "code": {
+        "term": "layer2"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Safu ya pili",
+      "other": "Safu za pili",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zk": {
+    "term": "ZK",
+    "aliases": [
+      "Uthibitisho wa siri",
+      "Zero-knowledge"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ZK"
+      },
+      "verb": null,
+      "adjective": "ya ZK",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "ZK-rollup"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ZK",
+        "example": "Teknolojia ya ZK inaruhusu kuthibitisha habari bila kufichua data yenyewe."
+      },
+      "heading": {
+        "term": "Zero-Knowledge (ZK)"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "ZK"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually kept as an abbreviation ZK in Swahili technical contexts."
+  },
+  "private key": {
+    "term": "Ufunguo wa siri",
+    "aliases": [
+      "Key ya siri",
+      "Ufunguo binafsi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ufunguo wa siri"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ufunguo wa siri",
+        "example": "Usishiriki kamwe ufunguo wako wa siri na mtu yeyote ili kulinda pochi yako."
+      },
+      "heading": {
+        "term": "Ufunguo wa Siri"
+      },
+      "tag": {
+        "term": "Siri"
+      },
+      "ui": {
+        "term": "Ufunguo wa Siri"
+      },
+      "code": {
+        "term": "private_key"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Ufunguo wa siri",
+      "other": "Funguo za siri",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "crypto": {
+    "term": "Kripto",
+    "aliases": [
+      "Sarafu ya kripto",
+      "Cryptocurrency"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Kripto"
+      },
+      "verb": null,
+      "adjective": "ya kripto",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kripto",
+        "example": "Watu wengi wanatumia kripto kwa malipo ya kimataifa ya haraka."
+      },
+      "heading": {
+        "term": "Kripto"
+      },
+      "tag": {
+        "term": "Kripto"
+      },
+      "ui": {
+        "term": "Kripto"
+      },
+      "code": {
+        "term": "crypto"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "casual"
+    },
+    "plurals": {
+      "one": "Kripto",
+      "other": "Kripto",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "A loanword widely accepted in Swahili media."
+  },
+  "layer 1 (l1)": {
+    "term": "Safu ya kwanza (L1)",
+    "aliases": [
+      "Tabaka la kwanza",
+      "L1"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Safu ya kwanza"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "safu ya kwanza",
+        "example": "Ethereum ni mfano wa safu ya kwanza ambapo usalama wa msingi unapatikana."
+      },
+      "heading": {
+        "term": "Safu ya Kwanza (L1)"
+      },
+      "tag": {
+        "term": "L1"
+      },
+      "ui": {
+        "term": "Safu ya Kwanza"
+      },
+      "code": {
+        "term": "layer1"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Safu ya kwanza",
+      "other": "Safu za kwanza",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "maximal extractable value (mev)": {
+    "term": "Thamani ya Juu Inayoweza Kutolewa (MEV)",
+    "aliases": [
+      "MEV"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Thamani ya Juu Inayoweza Kutolewa"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "thamani ya juu inayoweza kutolewa",
+        "example": "MEV inahusu faida ya ziada ambayo wachimbaji au wathibitishaji wanaweza kupata."
+      },
+      "heading": {
+        "term": "MEV"
+      },
+      "tag": {
+        "term": "MEV"
+      },
+      "ui": {
+        "term": "MEV"
+      },
+      "code": {
+        "term": "mev"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "Direct translation of the technical concept; often kept as MEV."
+  },
+  "exit": {
+    "term": "Kujiondoa",
+    "aliases": [
+      "Kutoka",
+      "Exit"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Kujiondoa"
+      },
+      "verb": {
+        "infinitive": "kujiondoa",
+        "participle": "anayeliondoa"
+      },
+      "adjective": null,
+      "agent": "anayeliondoa",
+      "negation": "kutojiondoa",
+      "compounds": {
+        "voluntary-exit": "Kujiondoa kwa hiari"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "kujiondoa",
+        "example": "Mthibitishaji lazima aombe kujiondoa kabla ya kutoa kiasi chake cha amana."
+      },
+      "heading": {
+        "term": "Kujiondoa"
+      },
+      "tag": {
+        "term": "Toka"
+      },
+      "ui": {
+        "term": "Toka"
+      },
+      "code": {
+        "term": "exit"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers to the process of leaving the validator set."
+  },
+  "opcode": {
+    "term": "Opcodi",
+    "aliases": [
+      "Msimbo wa operesheni",
+      "Opcode"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Opcodi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "opcodi",
+        "example": "Kila opcodi katika EVM inawakilisha kazi fulani ya kompyuta."
+      },
+      "heading": {
+        "term": "Opcodi"
+      },
+      "tag": {
+        "term": "Opcodi"
+      },
+      "ui": {
+        "term": "Opcodi"
+      },
+      "code": {
+        "term": "opcode"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Opcodi",
+      "other": "Opcodi",
+      "two": null,
+      "few": null,
+      "many": null
+    },
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "Swahili phonetic spelling of the technical term 'opcode'."
+  },
+  "decentralized finance (defi)": {
+    "term": "Fedha zisizo na mfumo mkuu (DeFi)",
+    "aliases": [
+      "DeFi",
+      "Fedha huru"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Fedha zisizo na mfumo mkuu"
+      },
+      "verb": null,
+      "adjective": "ya DeFi",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "fedha zisizo na mfumo mkuu",
+        "example": "DeFi inaruhusu ufikiaji wa huduma za kifedha bila kuhitaji benki ya jadi."
+      },
+      "heading": {
+        "term": "DeFi"
+      },
+      "tag": {
+        "term": "DeFi"
+      },
+      "ui": {
+        "term": "DeFi"
+      },
+      "code": {
+        "term": "defi"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard descriptive translation for 'decentralized finance'."
+  },
+  "privacy": {
+    "term": "faragha",
+    "aliases": [
+      "usiri"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "faragha"
+      },
+      "verb": null,
+      "adjective": "ya faragha",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "faragha",
+        "example": "Faragha ni muhimu katika kulinda utambulisho wa watumiaji kwenye mtandao."
+      },
+      "heading": {
+        "term": "Faragha"
+      },
+      "tag": {
+        "term": "Faragha"
+      },
+      "ui": {
+        "term": "Faragha"
+      },
+      "code": {
+        "term": "privacy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "faragha",
+      "other": "faragha"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used for both personal and data privacy."
+  },
+  "optimistic rollup": {
+    "term": "Optimistic rollup",
+    "aliases": [
+      "rollup yenye matumaini"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Optimistic rollup"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Optimistic rollup",
+        "example": "Optimistic rollup inasaidia kupunguza gharama za miamala kwa kuichakata nje ya mnyororo mkuu."
+      },
+      "heading": {
+        "term": "Optimistic Rollup"
+      },
+      "tag": {
+        "term": "L2"
+      },
+      "ui": {
+        "term": "Optimistic Rollup"
+      },
+      "code": {
+        "term": "optimisticRollup"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Optimistic rollup",
+      "other": "Optimistic rollups"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually kept in English or translated descriptively."
+  },
+  "ethereum request for comments (erc)": {
+    "term": "Ethereum Request for Comments (ERC)",
+    "aliases": [
+      "Ombi la Maoni la Ethereum"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Request for Comments"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Request for Comments (ERC)",
+        "example": "ERC-20 ni kiwango kinachotumika zaidi kwa kutengeneza tokeni kwenye Ethereum."
+      },
+      "heading": {
+        "term": "Ethereum Request for Comments (ERC)"
+      },
+      "tag": {
+        "term": "ERC"
+      },
+      "ui": {
+        "term": "ERC"
+      },
+      "code": {
+        "term": "erc"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually kept as an acronym ERC."
+  },
+  "plasma": {
+    "term": "Plasma",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Plasma"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Plasma",
+        "example": "Plasma ni suluhisho la kiwango cha pili linalotumia minyororo ya watoto."
+      },
+      "heading": {
+        "term": "Plasma"
+      },
+      "tag": {
+        "term": "Plasma"
+      },
+      "ui": {
+        "term": "Plasma"
+      },
+      "code": {
+        "term": "plasma"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical proper noun."
+  },
+  "library": {
+    "term": "maktaba",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "maktaba"
+      },
+      "verb": null,
+      "adjective": "ya maktaba",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "smart-contract-library": "maktaba ya mkataba janja"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "maktaba",
+        "example": "Wasanidi programu wanaweza kutumia maktaba zilizopo ili kupunguza urudiaji wa kodi."
+      },
+      "heading": {
+        "term": "Maktaba"
+      },
+      "tag": {
+        "term": "Maktaba"
+      },
+      "ui": {
+        "term": "Maktaba"
+      },
+      "code": {
+        "term": "library"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "maktaba",
+      "other": "maktaba"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Swahili, 'maktaba' belongs to the N-class where singular and plural are often identical."
+  },
+  "the merge": {
+    "term": "The Merge",
+    "aliases": [
+      "Uunganishaji"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "The Merge"
+      },
+      "verb": {
+        "infinitive": "kuunganisha",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "The Merge",
+        "example": "The Merge ilikuwa hatua muhimu iliyohamisha Ethereum kwenda kwenye Proof-of-Stake."
+      },
+      "heading": {
+        "term": "The Merge"
+      },
+      "tag": {
+        "term": "Upgrade"
+      },
+      "ui": {
+        "term": "The Merge"
+      },
+      "code": {
+        "term": "theMerge"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Specific historical event in Ethereum; proper noun status is preferred."
+  },
+  "zero-knowledge proof": {
+    "term": "Uthibitisho wa ufahamu sufuri",
+    "aliases": [
+      "Zero-knowledge proof",
+      "ZKP"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "uthibitisho"
+      },
+      "verb": {
+        "infinitive": "kuthibitisha",
+        "participle": "thibitisho"
+      },
+      "adjective": null,
+      "agent": "mthibitishaji",
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "zk-rollup"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "uthibitisho wa ufahamu sufuri",
+        "example": "Uthibitisho wa ufahamu sufuri unaruhusu kuthibitisha ukweli bila kufichua siri yenyewe."
+      },
+      "heading": {
+        "term": "Uthibitisho wa Ufahamu Sufuri"
+      },
+      "tag": {
+        "term": "ZKP"
+      },
+      "ui": {
+        "term": "Uthibitisho wa ZK"
+      },
+      "code": {
+        "term": "zkProof"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "uthibitisho",
+      "other": "thibitisho"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Direct translation of 'Zero-knowledge'."
+  },
+  "data availability": {
+    "term": "upatikanaji wa data",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "upatikanaji"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "upatikanaji wa data",
+        "example": "Upatikanaji wa data ni hitaji la msingi kwa usalama wa minyororo ya kiwango cha pili."
+      },
+      "heading": {
+        "term": "Upatikanaji wa Data"
+      },
+      "tag": {
+        "term": "Data"
+      },
+      "ui": {
+        "term": "Upatikanaji wa Data"
+      },
+      "code": {
+        "term": "dataAvailability"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "log": {
+    "term": "logi",
+    "aliases": [
+      "kumbukumbu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "logi"
+      },
+      "verb": {
+        "infinitive": "kunakili",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "event-log": "logi ya tukio"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "logi",
+        "example": "Mikataba janja hutoa logi ili kuruhusu programu za nje kufuatilia matukio."
+      },
+      "heading": {
+        "term": "Logi"
+      },
+      "tag": {
+        "term": "Logi"
+      },
+      "ui": {
+        "term": "Kumbukumbu"
+      },
+      "code": {
+        "term": "log"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "logi",
+      "other": "logi"
+    },
+    "source": "llm",
+    "confidence": "medium",
+    "notes": " 'Logi' is a loanword from English; 'kumbukumbu' is more general Swahili for records/memory."
+  },
+  "beacon chain": {
+    "term": "Beacon Chain",
+    "aliases": [
+      "Mnyororo wa Beacon"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Beacon Chain"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Beacon Chain",
+        "example": "Beacon Chain ilianzisha Proof-of-Stake kwenye mfumo wa Ethereum."
+      },
+      "heading": {
+        "term": "Beacon Chain"
+      },
+      "tag": {
+        "term": "Consensus"
+      },
+      "ui": {
+        "term": "Beacon Chain"
+      },
+      "code": {
+        "term": "beaconChain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun for the consensus layer component."
+  },
+  "liquidity": {
+    "term": "Ukwasi",
+    "aliases": [
+      "likwiditi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ukwasi"
+      },
+      "verb": null,
+      "adjective": "enye ukwasi",
+      "agent": null,
+      "negation": "ukosefu wa ukwasi",
+      "compounds": {
+        "liquidity-pool": "bwawa la ukwasi",
+        "liquidity-provider": "mtoa ukwasi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ukwasi",
+        "example": "Ukwasi unaruhusu watumiaji kubadilisha mali moja kwenda nyingine bila kuathiri bei kwa kiasi kikubwa."
+      },
+      "heading": {
+        "term": "Ukwasi"
+      },
+      "tag": {
+        "term": "Ukwasi"
+      },
+      "ui": {
+        "term": "Ukwasi"
+      },
+      "code": {
+        "term": "liquidity"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard financial Swahili term for liquidity."
+  },
+  "epoch": {
+    "term": "Epoch",
+    "aliases": [
+      "kipindi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "epoch"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "epoch",
+        "example": "Katika Ethereum, kila epoch inajumuisha seti ya vipindi vya muda vinavyoitwa slots."
+      },
+      "heading": {
+        "term": "Epoch"
+      },
+      "tag": {
+        "term": "Epoch"
+      },
+      "ui": {
+        "term": "Epoch"
+      },
+      "code": {
+        "term": "epoch"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "epoch",
+      "other": "epoch"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly kept as a technical loanword in blockchain contexts."
+  },
+  "ethereum mainnet": {
+    "term": "Ethereum Mainnet",
+    "aliases": [
+      "Mtandao mkuu wa Ethereum"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Mainnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Mainnet",
+        "example": "Ethereum Mainnet ndio mtandao wa msingi ambapo miamala ya kweli hufanyika."
+      },
+      "heading": {
+        "term": "Ethereum Mainnet"
+      },
+      "tag": {
+        "term": "Mainnet"
+      },
+      "ui": {
+        "term": "Ethereum Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, usually not fully translated."
+  },
+  "proposal": {
+    "term": "Pendekezo",
+    "aliases": [
+      "propozali"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "pendekezo"
+      },
+      "verb": {
+        "infinitive": "kupendekeza",
+        "participle": "inayopendekezwa"
+      },
+      "adjective": null,
+      "agent": "mpendekeza",
+      "negation": null,
+      "compounds": {
+        "governance-proposal": "pendekezo la uongozi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "pendekezo",
+        "example": "Wamiliki wa tokeni wanaweza kupiga kura kwenye pendekezo jipya la uboreshaji."
+      },
+      "heading": {
+        "term": "Pendekezo"
+      },
+      "tag": {
+        "term": "Pendekezo"
+      },
+      "ui": {
+        "term": "Wasilisha Pendekezo"
+      },
+      "code": {
+        "term": "proposal"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "pendekezo",
+      "other": "mapendekezo"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block proposer": {
+    "term": "Mpendekeza kitalu",
+    "aliases": [
+      "mwasilishaji wa kitalu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mpendekeza kitalu"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "mpendekeza kitalu",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mpendekeza kitalu",
+        "example": "Mpendekeza kitalu huchaguliwa kwa nasibu ili kuunda kitalu kipya katika mtandao."
+      },
+      "heading": {
+        "term": "Mpendekeza Kitalu"
+      },
+      "tag": {
+        "term": "Mpendekeza"
+      },
+      "ui": {
+        "term": "Mpendekeza Kitalu"
+      },
+      "code": {
+        "term": "proposer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "mpendekeza kitalu",
+      "other": "wapendekeza vitalu"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus layer": {
+    "term": "Tabaka la makubaliano",
+    "aliases": [
+      "leya ya konsensasi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tabaka la makubaliano"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tabaka la makubaliano",
+        "example": "Tabaka la makubaliano linahakikisha kuwa node zote zinakubaliana juu ya hali ya mtandao."
+      },
+      "heading": {
+        "term": "Tabaka la Makubaliano"
+      },
+      "tag": {
+        "term": "Makubaliano"
+      },
+      "ui": {
+        "term": "Tabaka la Makubaliano"
+      },
+      "code": {
+        "term": "consensus_layer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "tabaka la makubaliano",
+      "other": "matabaka ya makubaliano"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "peer": {
+    "term": "Mshirika",
+    "aliases": [
+      "rika",
+      "node mwenza"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mshirika"
+      },
+      "verb": null,
+      "adjective": "shirika",
+      "agent": "mshirika",
+      "negation": null,
+      "compounds": {
+        "peer-to-peer": "mshirika-kwa-mshirika"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "mshirika",
+        "example": "Kila mshirika katika mtandao wa Ethereum anashiriki data na washirika wengine."
+      },
+      "heading": {
+        "term": "Mshirika"
+      },
+      "tag": {
+        "term": "Mshirika"
+      },
+      "ui": {
+        "term": "Washirika"
+      },
+      "code": {
+        "term": "peer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "mshirika",
+      "other": "washirika"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "json-rpc": {
+    "term": "JSON-RPC",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "JSON-RPC"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "JSON-RPC",
+        "example": "Wasanidi programu hutumia JSON-RPC kuingiliana na node za Ethereum kupitia programu zao."
+      },
+      "heading": {
+        "term": "JSON-RPC"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "JSON-RPC Endpoint"
+      },
+      "code": {
+        "term": "json-rpc"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical protocol name."
+  },
+  "nonce": {
+    "term": "Nonce",
+    "aliases": [
+      "namba ya kipekee"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nonce"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "nonce",
+        "example": "Nonce inahakikisha kuwa muamala mmoja hautumiki mara mbili."
+      },
+      "heading": {
+        "term": "Nonce"
+      },
+      "tag": {
+        "term": "Nonce"
+      },
+      "ui": {
+        "term": "Nonce"
+      },
+      "code": {
+        "term": "nonce"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "nonce",
+      "other": "nonce"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually preserved in Swahili."
+  },
+  "ipfs": {
+    "term": "IPFS",
+    "aliases": [
+      "InterPlanetary File System"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "IPFS"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "IPFS",
+        "example": "IPFS inatumika kuhifadhi picha za NFT kwa njia isiyo na kituo."
+      },
+      "heading": {
+        "term": "IPFS"
+      },
+      "tag": {
+        "term": "Hifadhi"
+      },
+      "ui": {
+        "term": "Unganisha na IPFS"
+      },
+      "code": {
+        "term": "ipfs"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical acronym."
+  },
+  "full node": {
+    "term": "nodi kamili",
+    "aliases": [
+      "node kamili"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nodi kamili"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "nodi kamili",
+        "example": "Nodi kamili huhifadhi nakala nzima ya blockchain ya Ethereum na kuthibitisha miamala yote."
+      },
+      "heading": {
+        "term": "Nodi Kamili"
+      },
+      "tag": {
+        "term": "nodi"
+      },
+      "ui": {
+        "term": "Nodi kamili"
+      },
+      "code": {
+        "term": "full_node"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "nodi kamili",
+      "two": "nodi kamili",
+      "few": "nodi kamili",
+      "many": "nodi kamili",
+      "other": "nodi kamili"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Swahili, 'nodi' is a loanword typically treated as an N-class noun, which remains invariant in plural forms."
+  },
+  "zero-knowledge": {
+    "term": "ujuzi sifuri",
+    "aliases": [
+      "maarifa sifuri"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ujuzi sifuri"
+      },
+      "verb": null,
+      "adjective": "-a ujuzi sifuri",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-proof": "uthibitisho wa ujuzi sifuri"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ujuzi sifuri",
+        "example": "Teknolojia ya ujuzi sifuri inaruhusu kuthibitisha taarifa bila kufichua data yenyewe."
+      },
+      "heading": {
+        "term": "Ujuzi Sifuri"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "Ujuzi sifuri"
+      },
+      "code": {
+        "term": "zero-knowledge"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Direct translation of 'zero-knowledge' as 'ujuzi' (knowledge) and 'sifuri' (zero). Often used in the context of ZK-rollups."
+  },
+  "hardhat": {
+    "term": "Hardhat",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Hardhat"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Hardhat",
+        "example": "Hardhat ni mazingira ya uendelezaji yanayotumiwa na watengenezaji wa Ethereum."
+      },
+      "heading": {
+        "term": "Hardhat"
+      },
+      "tag": {
+        "term": "zana"
+      },
+      "ui": {
+        "term": "Hardhat"
+      },
+      "code": {
+        "term": "hardhat"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun for a development tool; remains untranslated."
+  },
+  "checkpoint": {
+    "term": "kituo cha ukaguzi",
+    "aliases": [
+      "alama ya ukaguzi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "kituo cha ukaguzi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kituo cha ukaguzi",
+        "example": "Kituo cha ukaguzi husaidia kuzuia mabadiliko kwenye historia ya blockchain baada ya muda fulani."
+      },
+      "heading": {
+        "term": "Kituo cha Ukaguzi"
+      },
+      "tag": {
+        "term": "konsensus"
+      },
+      "ui": {
+        "term": "Kituo cha ukaguzi"
+      },
+      "code": {
+        "term": "checkpoint"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "kituo cha ukaguzi",
+      "two": "vituo vya ukaguzi",
+      "few": "vituo vya ukaguzi",
+      "many": "vituo vya ukaguzi",
+      "other": "vituo vya ukaguzi"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Uses the Ki-Vi noun class for 'kituo' (station/point) and 'ukaguzi' (inspection/audit)."
+  }
+}

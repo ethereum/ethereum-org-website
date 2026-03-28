@@ -1,0 +1,4545 @@
+{
+  "attestation": {
+    "term": "Attestierung",
+    "aliases": [
+      "Attestat",
+      "Bestätigung"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Attestierung"
+      },
+      "verb": {
+        "infinitive": "attestieren",
+        "participle": "attestierend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "attestation-committee": "Attestierungskomitee"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Attestierung",
+        "example": "Der Validator reichte eine Attestierung für den Block ein."
+      },
+      "heading": {
+        "term": "Attestierung"
+      },
+      "tag": {
+        "term": "Attestierung"
+      },
+      "ui": {
+        "term": "Attestieren"
+      },
+      "code": {
+        "term": "attestation"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used in the context of Proof of Stake (Consensus Layer)."
+  },
+  "bridge": {
+    "term": "Bridge",
+    "aliases": [
+      "Brücke"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Bridge"
+      },
+      "verb": {
+        "infinitive": "bridgen",
+        "participle": "bridgend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-bridge": "Token-Bridge"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Bridge",
+        "example": "Nutzer können ihre Token über eine Bridge auf ein Layer-2-Netzwerk übertragen."
+      },
+      "heading": {
+        "term": "Bridge"
+      },
+      "tag": {
+        "term": "Bridge"
+      },
+      "ui": {
+        "term": "Bridge"
+      },
+      "code": {
+        "term": "bridge"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'Bridge' is predominantly used in German crypto circles."
+  },
+  "decentralization": {
+    "term": "Dezentralisierung",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Dezentralisierung"
+      },
+      "verb": {
+        "infinitive": "dezentralisieren",
+        "participle": "dezentralisierend"
+      },
+      "adjective": "dezentral",
+      "agent": null,
+      "negation": "Zentralisierung",
+      "compounds": {
+        "decentralization-index": "Dezentralisierungsindex"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Dezentralisierung",
+        "example": "Dezentralisierung ist ein Kernprinzip von Ethereum."
+      },
+      "heading": {
+        "term": "Dezentralisierung"
+      },
+      "tag": {
+        "term": "Dezentralisierung"
+      },
+      "ui": {
+        "term": "Dezentralisierung"
+      },
+      "code": {
+        "term": "decentralization"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized": {
+    "term": "dezentral",
+    "aliases": [
+      "dezentralisiert"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Dezentralität"
+      },
+      "verb": null,
+      "adjective": "dezentral",
+      "agent": null,
+      "negation": "zentral",
+      "compounds": {
+        "decentralized-finance": "Dezentralisierte Finanzen"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "dezentrales",
+        "example": "Ethereum ist ein dezentrales Netzwerk."
+      },
+      "heading": {
+        "term": "Dezentral"
+      },
+      "tag": {
+        "term": "Dezentral"
+      },
+      "ui": {
+        "term": "Dezentral"
+      },
+      "code": {
+        "term": "decentralized"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "deploy": {
+    "term": "deployen",
+    "aliases": [
+      "bereitstellen",
+      "implementieren"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Deployment"
+      },
+      "verb": {
+        "infinitive": "deployen",
+        "participle": "deployend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "contract-deployment": "Contract-Deployment"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "deployen",
+        "example": "Entwickler können Smart Contracts direkt auf dem Mainnet deployen."
+      },
+      "heading": {
+        "term": "Deployment"
+      },
+      "tag": {
+        "term": "Deploy"
+      },
+      "ui": {
+        "term": "Deployen"
+      },
+      "code": {
+        "term": "deploy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "German developers use the anglicism 'deployen' almost exclusively."
+  },
+  "finality": {
+    "term": "Finalität",
+    "aliases": [
+      "Endgültigkeit"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Finalität"
+      },
+      "verb": {
+        "infinitive": "finalisieren",
+        "participle": "finalisierend"
+      },
+      "adjective": "final",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "finality-gadget": "Finalitäts-Gadget"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Finalität",
+        "example": "Sobald die Finalität erreicht ist, kann eine Transaktion nicht mehr rückgängig gemacht werden."
+      },
+      "heading": {
+        "term": "Finalität"
+      },
+      "tag": {
+        "term": "Finalität"
+      },
+      "ui": {
+        "term": "Finalität"
+      },
+      "code": {
+        "term": "finality"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "fork": {
+    "term": "Fork",
+    "aliases": [
+      "Abspaltung",
+      "Gabelung"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Fork"
+      },
+      "verb": {
+        "infinitive": "forken",
+        "participle": "forkend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hard-fork": "Hard Fork",
+        "soft-fork": "Soft Fork"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Fork",
+        "example": "Ein Hard Fork erfordert, dass alle Teilnehmer ihre Software aktualisieren."
+      },
+      "heading": {
+        "term": "Fork"
+      },
+      "tag": {
+        "term": "Fork"
+      },
+      "ui": {
+        "term": "Fork"
+      },
+      "code": {
+        "term": "fork"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'Fork' is standard in German IT contexts."
+  },
+  "governance": {
+    "term": "Governance",
+    "aliases": [
+      "Verwaltung",
+      "Mitbestimmung"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Governance"
+      },
+      "verb": {
+        "infinitive": "regieren",
+        "participle": "regierend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "onchain-governance": "Onchain-Governance",
+        "governance-token": "Governance-Token"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Governance",
+        "example": "Das Protokoll wird durch Onchain-Governance verwaltet."
+      },
+      "heading": {
+        "term": "Governance"
+      },
+      "tag": {
+        "term": "Governance"
+      },
+      "ui": {
+        "term": "Governance"
+      },
+      "code": {
+        "term": "governance"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used without translation in business and tech."
+  },
+  "hash": {
+    "term": "Hash",
+    "aliases": [
+      "Hashwert",
+      "Prüfsumme"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Hash"
+      },
+      "verb": {
+        "infinitive": "hashen",
+        "participle": "hashend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "block-hash": "Block-Hash",
+        "hash-function": "Hashfunktion"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Hash",
+        "example": "Jeder Block im Ethereum-Netzwerk ist über seinen Hash mit dem vorherigen Block verknüpft."
+      },
+      "heading": {
+        "term": "Hash"
+      },
+      "tag": {
+        "term": "Hash"
+      },
+      "ui": {
+        "term": "Hash"
+      },
+      "code": {
+        "term": "hash"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "validator": {
+    "term": "Validator",
+    "aliases": [
+      "Validierer"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Validator"
+      },
+      "verb": {
+        "infinitive": "validieren",
+        "participle": "validierend"
+      },
+      "adjective": null,
+      "agent": "Validator",
+      "negation": null,
+      "compounds": {
+        "validator-set": "Validator-Set",
+        "validator-queue": "Validator-Warteschlange"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Validator",
+        "example": "Ein Validator ist dafür verantwortlich, neue Blöcke vorzuschlagen und zu beglaubigen."
+      },
+      "heading": {
+        "term": "Validator"
+      },
+      "tag": {
+        "term": "Validator"
+      },
+      "ui": {
+        "term": "Validator"
+      },
+      "code": {
+        "term": "validator"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Validator",
+      "two": "Validatoren",
+      "few": "Validatoren",
+      "many": "Validatoren",
+      "other": "Validatoren"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In technical German contexts, the English term 'Validator' is standard."
+  },
+  "vote": {
+    "term": "Stimme",
+    "aliases": [
+      "Votum"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Stimme"
+      },
+      "verb": {
+        "infinitive": "abstimmen",
+        "participle": "abstimmend"
+      },
+      "adjective": null,
+      "agent": "Wähler",
+      "negation": null,
+      "compounds": {
+        "vote-count": "Stimmenzahl"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Stimme",
+        "example": "Jeder Token-Inhaber kann seine Stimme für den Vorschlag abgeben."
+      },
+      "heading": {
+        "term": "Stimme"
+      },
+      "tag": {
+        "term": "Stimme"
+      },
+      "ui": {
+        "term": "Abstimmen"
+      },
+      "code": {
+        "term": "vote"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Stimme",
+      "two": "Stimmen",
+      "few": "Stimmen",
+      "many": "Stimmen",
+      "other": "Stimmen"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "voting": {
+    "term": "Abstimmung",
+    "aliases": [
+      "Wählen"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Abstimmung"
+      },
+      "verb": {
+        "infinitive": "abstimmen",
+        "participle": "abstimmend"
+      },
+      "adjective": null,
+      "agent": "Abstimmender",
+      "negation": null,
+      "compounds": {
+        "voting-power": "Stimmgewicht"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Abstimmung",
+        "example": "Die Abstimmung findet onchain statt, um Transparenz zu gewährleisten."
+      },
+      "heading": {
+        "term": "Abstimmung"
+      },
+      "tag": {
+        "term": "Abstimmung"
+      },
+      "ui": {
+        "term": "Abstimmung"
+      },
+      "code": {
+        "term": "voting"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Abstimmung",
+      "two": "Abstimmungen",
+      "few": "Abstimmungen",
+      "many": "Abstimmungen",
+      "other": "Abstimmungen"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum": {
+    "term": "Ethereum",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "ethereum-network": "Ethereum-Netzwerk"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum",
+        "example": "Ethereum ist eine dezentrale Plattform für Smart Contracts."
+      },
+      "heading": {
+        "term": "Ethereum"
+      },
+      "tag": {
+        "term": "Ethereum"
+      },
+      "ui": {
+        "term": "Ethereum"
+      },
+      "code": {
+        "term": "ethereum"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, remains unchanged in German."
+  },
+  "contract": {
+    "term": "Vertrag",
+    "aliases": [
+      "Kontrakt"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Vertrag"
+      },
+      "verb": null,
+      "adjective": "vertraglich",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "contract-address": "Vertragsadresse"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Vertrag",
+        "example": "Der Vertrag regelt die Bedingungen der Transaktion automatisch."
+      },
+      "heading": {
+        "term": "Vertrag"
+      },
+      "tag": {
+        "term": "Vertrag"
+      },
+      "ui": {
+        "term": "Vertrag"
+      },
+      "code": {
+        "term": "contract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Vertrag",
+      "two": "Verträge",
+      "few": "Verträge",
+      "many": "Verträge",
+      "other": "Verträge"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block": {
+    "term": "Block",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Block"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "block-reward": "Block-Belohnung",
+        "block-header": "Block-Header"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Block",
+        "example": "Ein neuer Block wird etwa alle 12 Sekunden zur Chain hinzugefügt."
+      },
+      "heading": {
+        "term": "Block"
+      },
+      "tag": {
+        "term": "Block"
+      },
+      "ui": {
+        "term": "Block"
+      },
+      "code": {
+        "term": "block"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Block",
+      "two": "Blöcke",
+      "few": "Blöcke",
+      "many": "Blöcke",
+      "other": "Blöcke"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "smart contract": {
+    "term": "Smart Contract",
+    "aliases": [
+      "intelligenter Vertrag"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Smart Contract"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "smart-contract-security": "Smart-Contract-Sicherheit"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Smart Contract",
+        "example": "Ein Smart Contract führt Code automatisch aus, wenn Bedingungen erfüllt sind."
+      },
+      "heading": {
+        "term": "Smart Contract"
+      },
+      "tag": {
+        "term": "Smart Contract"
+      },
+      "ui": {
+        "term": "Smart Contract"
+      },
+      "code": {
+        "term": "smartContract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Smart Contract",
+      "two": "Smart Contracts",
+      "few": "Smart Contracts",
+      "many": "Smart Contracts",
+      "other": "Smart Contracts"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'Smart Contract' is universally used in German technical documentation."
+  },
+  "node": {
+    "term": "Node",
+    "aliases": [
+      "Knoten",
+      "Netzwerkknoten"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Node"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node": "Full Node",
+        "light-node": "Light Node"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Node",
+        "example": "Eine Node speichert eine Kopie der Blockchain und validiert Transaktionen."
+      },
+      "heading": {
+        "term": "Node"
+      },
+      "tag": {
+        "term": "Node"
+      },
+      "ui": {
+        "term": "Node"
+      },
+      "code": {
+        "term": "node"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Node",
+      "two": "Nodes",
+      "few": "Nodes",
+      "many": "Nodes",
+      "other": "Nodes"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Node' is typically feminine ('die Node') or masculine ('der Node') in German, but feminine is very common."
+  },
+  "token": {
+    "term": "Token",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Token"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-standard": "Token-Standard",
+        "token-holder": "Token-Inhaber"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Token",
+        "example": "ERC-20 ist der am häufigsten verwendete Standard für Token auf Ethereum."
+      },
+      "heading": {
+        "term": "Token"
+      },
+      "tag": {
+        "term": "Token"
+      },
+      "ui": {
+        "term": "Token"
+      },
+      "code": {
+        "term": "token"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Token",
+      "two": "Tokens",
+      "few": "Tokens",
+      "many": "Tokens",
+      "other": "Tokens"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Both 'Token' and 'Tokens' are acceptable as plural in German."
+  },
+  "address": {
+    "term": "Adresse",
+    "aliases": [
+      "Ethereum-Adresse"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Adresse"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "wallet-address": "Wallet-Adresse"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Adresse",
+        "example": "Geben Sie die Adresse des Empfängers sorgfältig ein."
+      },
+      "heading": {
+        "term": "Adresse"
+      },
+      "tag": {
+        "term": "Adresse"
+      },
+      "ui": {
+        "term": "Adresse"
+      },
+      "code": {
+        "term": "address"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Adresse",
+      "two": "Adressen",
+      "few": "Adressen",
+      "many": "Adressen",
+      "other": "Adressen"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "eth": {
+    "term": "Ether",
+    "aliases": [
+      "ETH"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ether"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ether",
+        "example": "Du kannst Ether an eine andere Adresse senden."
+      },
+      "heading": {
+        "term": "Ether"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "Ether"
+      },
+      "code": {
+        "term": "eth"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "blockchain": {
+    "term": "Blockchain",
+    "aliases": [
+      "Blockkette"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Blockchain"
+      },
+      "verb": null,
+      "adjective": "blockchain-basiert",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Blockchain",
+        "example": "Alle Transaktionen werden in der Blockchain gespeichert."
+      },
+      "heading": {
+        "term": "Blockchain"
+      },
+      "tag": {
+        "term": "Blockchain"
+      },
+      "ui": {
+        "term": "Blockchain"
+      },
+      "code": {
+        "term": "blockchain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "account": {
+    "term": "Konto",
+    "aliases": [
+      "Account"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Konto"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Konto",
+        "example": "Dein Ethereum-Konto hält dein Guthaben."
+      },
+      "heading": {
+        "term": "Konto"
+      },
+      "tag": {
+        "term": "Konto"
+      },
+      "ui": {
+        "term": "Konto"
+      },
+      "code": {
+        "term": "account"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "chain": {
+    "term": "Chain",
+    "aliases": [
+      "Kette"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Chain"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Chain",
+        "example": "Ethereum ist eine dezentrale Chain."
+      },
+      "heading": {
+        "term": "Chain"
+      },
+      "tag": {
+        "term": "Chain"
+      },
+      "ui": {
+        "term": "Chain"
+      },
+      "code": {
+        "term": "chain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "protocol": {
+    "term": "Protokoll",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Protokoll"
+      },
+      "verb": null,
+      "adjective": "protokollgemäß",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Protokoll",
+        "example": "Das Ethereum-Protokoll definiert die Regeln des Netzwerks."
+      },
+      "heading": {
+        "term": "Protokoll"
+      },
+      "tag": {
+        "term": "Protokoll"
+      },
+      "ui": {
+        "term": "Protokoll"
+      },
+      "code": {
+        "term": "protocol"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "wallet": {
+    "term": "Wallet",
+    "aliases": [
+      "Brieftasche",
+      "elektronische Geldbörse"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Wallet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Wallet",
+        "example": "Sichere deine Wallet mit einem starken Passwort."
+      },
+      "heading": {
+        "term": "Wallet"
+      },
+      "tag": {
+        "term": "Wallet"
+      },
+      "ui": {
+        "term": "Wallet"
+      },
+      "code": {
+        "term": "wallet"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In German, 'Wallet' is most commonly used as a feminine noun (die Wallet)."
+  },
+  "gas": {
+    "term": "Gas",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Gas"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Gas",
+        "example": "Jede Transaktion auf Ethereum benötigt Gas."
+      },
+      "heading": {
+        "term": "Gas"
+      },
+      "tag": {
+        "term": "Gas"
+      },
+      "ui": {
+        "term": "Gas"
+      },
+      "code": {
+        "term": "gas"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "rollup": {
+    "term": "Rollup",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Rollup"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Rollup",
+        "example": "Ein Rollup hilft dabei, Ethereum zu skalieren."
+      },
+      "heading": {
+        "term": "Rollup"
+      },
+      "tag": {
+        "term": "Rollup"
+      },
+      "ui": {
+        "term": "Rollup"
+      },
+      "code": {
+        "term": "rollup"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum improvement proposal (eip)": {
+    "term": "Ethereum Improvement Proposal",
+    "aliases": [
+      "EIP"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Improvement Proposal"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Improvement Proposal",
+        "example": "Ein Ethereum Improvement Proposal (EIP) beschreibt technische Standards."
+      },
+      "heading": {
+        "term": "Ethereum Improvement Proposal (EIP)"
+      },
+      "tag": {
+        "term": "EIP"
+      },
+      "ui": {
+        "term": "EIP"
+      },
+      "code": {
+        "term": "eip"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "require": {
+    "term": "require",
+    "aliases": [
+      "erfordern"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "erfordern",
+        "participle": "erfordernd"
+      },
+      "adjective": "erforderlich",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "require",
+        "example": "Die require-Anweisung prüft Bedingungen in einem Smart Contract."
+      },
+      "heading": {
+        "term": "require"
+      },
+      "tag": {
+        "term": "Validierung"
+      },
+      "ui": {
+        "term": "Prüfen"
+      },
+      "code": {
+        "term": "require"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Primarily used as a technical keyword in Solidity code."
+  },
+  "withdrawal": {
+    "term": "Auszahlung",
+    "aliases": [
+      "Abhebung"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Auszahlung"
+      },
+      "verb": {
+        "infinitive": "auszahlen",
+        "participle": "auszahlend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Auszahlung",
+        "example": "Die Auszahlung von gestakten ETH ist nun im Netzwerk möglich."
+      },
+      "heading": {
+        "term": "Auszahlung"
+      },
+      "tag": {
+        "term": "Auszahlung"
+      },
+      "ui": {
+        "term": "Auszahlen"
+      },
+      "code": {
+        "term": "withdrawal"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus": {
+    "term": "Konsens",
+    "aliases": [
+      "Konsensus"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Konsens"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "consensus-mechanism": "Konsensmechanismus"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Konsens",
+        "example": "Der Konsens wird durch den Proof-of-Stake-Mechanismus erreicht."
+      },
+      "heading": {
+        "term": "Konsens"
+      },
+      "tag": {
+        "term": "Konsens"
+      },
+      "ui": {
+        "term": "Konsens"
+      },
+      "code": {
+        "term": "consensus"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mainnet": {
+    "term": "Mainnet",
+    "aliases": [
+      "Hauptnetz"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mainnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Mainnet",
+        "example": "Nach dem Testen wird die Anwendung auf dem Mainnet bereitgestellt."
+      },
+      "heading": {
+        "term": "Mainnet"
+      },
+      "tag": {
+        "term": "Mainnet"
+      },
+      "ui": {
+        "term": "Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Mainnet is the standard technical term in German."
+  },
+  "offchain": {
+    "term": "offchain",
+    "aliases": [
+      "netzextern"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "offchain",
+      "agent": null,
+      "negation": "onchain",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "offchain",
+        "example": "Einige Berechnungen werden offchain durchgeführt, um Gaskosten zu sparen."
+      },
+      "heading": {
+        "term": "Offchain"
+      },
+      "tag": {
+        "term": "offchain"
+      },
+      "ui": {
+        "term": "offchain"
+      },
+      "code": {
+        "term": "offchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used as an adjective/adverb; lower case in prose unless at start of sentence."
+  },
+  "erc-20": {
+    "term": "ERC-20",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ERC-20"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "erc-20-token": "ERC-20-Token"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ERC-20",
+        "example": "Der ERC-20-Standard ermöglicht die Interoperabilität von Token auf Ethereum."
+      },
+      "heading": {
+        "term": "ERC-20"
+      },
+      "tag": {
+        "term": "ERC-20"
+      },
+      "ui": {
+        "term": "ERC-20"
+      },
+      "code": {
+        "term": "erc20"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "oracle": {
+    "term": "Orakel",
+    "aliases": [
+      "Oracle"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Orakel"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Orakel",
+        "example": "Ein Orakel liefert externe Daten an einen Smart Contract."
+      },
+      "heading": {
+        "term": "Orakel"
+      },
+      "tag": {
+        "term": "Orakel"
+      },
+      "ui": {
+        "term": "Orakel"
+      },
+      "code": {
+        "term": "oracle"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "blob": {
+    "term": "Blob",
+    "aliases": [
+      "Binary Large Object"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Blob"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Blob",
+        "example": "Ein Blob wird zur kostengünstigen Speicherung von Layer-2-Daten verwendet."
+      },
+      "heading": {
+        "term": "Blob"
+      },
+      "tag": {
+        "term": "Blob"
+      },
+      "ui": {
+        "term": "Blob"
+      },
+      "code": {
+        "term": "blob"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "slot": {
+    "term": "Slot",
+    "aliases": [
+      "Zeitfenster"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Slot"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Slot",
+        "example": "In jedem Slot wird ein neuer Block vorgeschlagen."
+      },
+      "heading": {
+        "term": "Slot"
+      },
+      "tag": {
+        "term": "Slot"
+      },
+      "ui": {
+        "term": "Slot"
+      },
+      "code": {
+        "term": "slot"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized autonomous organization (dao)": {
+    "term": "Dezentrale Autonome Organisation (DAO)",
+    "aliases": [
+      "DAO"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Dezentrale Autonome Organisation"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Dezentrale Autonome Organisation (DAO)",
+        "example": "Die Dezentrale Autonome Organisation (DAO) ermöglicht eine gemeinschaftliche Governance."
+      },
+      "heading": {
+        "term": "Dezentrale Autonome Organisation (DAO)"
+      },
+      "tag": {
+        "term": "DAO"
+      },
+      "ui": {
+        "term": "DAO"
+      },
+      "code": {
+        "term": "dao"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "testnet": {
+    "term": "Testnet",
+    "aliases": [
+      "Testnetz"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Testnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Testnet",
+        "example": "Bevor ein Smart Contract live geht, wird er ausführlich auf einem Testnet geprüft."
+      },
+      "heading": {
+        "term": "Testnet"
+      },
+      "tag": {
+        "term": "Testnet"
+      },
+      "ui": {
+        "term": "Testnet"
+      },
+      "code": {
+        "term": "testnet"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus client": {
+    "term": "Konsens-Client",
+    "aliases": [
+      "Consensus-Client",
+      "Konsensclient"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Konsens-Client"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "software": "Konsens-Client-Software"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Konsens-Client",
+        "example": "Der Konsens-Client ist für die Validierung von Blöcken und die Einhaltung der Netzwerkregeln zuständig."
+      },
+      "heading": {
+        "term": "Konsens-Client"
+      },
+      "tag": {
+        "term": "Konsens"
+      },
+      "ui": {
+        "term": "Konsens-Client"
+      },
+      "code": {
+        "term": "consensus_client"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Konsens-Client",
+      "two": "Konsens-Clients",
+      "few": "Konsens-Clients",
+      "many": "Konsens-Clients",
+      "other": "Konsens-Clients"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used in its English form but capitalized according to German grammar rules."
+  },
+  "layer 2 (l2)": {
+    "term": "Layer 2 (L2)",
+    "aliases": [
+      "L2",
+      "Zweite Schicht"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Layer 2"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "scaling": "Layer-2-Skalierung"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Layer 2",
+        "example": "Layer 2 Lösungen skalieren Ethereum, indem sie Transaktionen offchain verarbeiten."
+      },
+      "heading": {
+        "term": "Layer 2 (L2)"
+      },
+      "tag": {
+        "term": "L2"
+      },
+      "ui": {
+        "term": "Layer 2"
+      },
+      "code": {
+        "term": "layer2"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Layer 2",
+      "two": "Layer 2s",
+      "few": "Layer 2s",
+      "many": "Layer 2s",
+      "other": "Layer 2s"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zk": {
+    "term": "ZK",
+    "aliases": [
+      "Zero-Knowledge",
+      "Nullwissen"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ZK"
+      },
+      "verb": null,
+      "adjective": "Zero-Knowledge",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "proof": "ZK-Proof",
+        "rollup": "ZK-Rollup"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ZK",
+        "example": "ZK-Rollups nutzen Zero-Knowledge-Proofs, um die Privatsphäre und Skalierbarkeit zu verbessern."
+      },
+      "heading": {
+        "term": "Zero-Knowledge (ZK)"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "ZK"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used as an abbreviation for Zero-Knowledge."
+  },
+  "private key": {
+    "term": "Privater Schlüssel",
+    "aliases": [
+      "Private Key"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Privater Schlüssel"
+      },
+      "verb": null,
+      "adjective": "privat",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "storage": "Schlüsselaufbewahrung"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "privaten Schlüssel",
+        "example": "Geben Sie Ihren privaten Schlüssel niemals an Dritte weiter."
+      },
+      "heading": {
+        "term": "Privater Schlüssel"
+      },
+      "tag": {
+        "term": "Schlüssel"
+      },
+      "ui": {
+        "term": "Privater Schlüssel"
+      },
+      "code": {
+        "term": "private_key"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "privater Schlüssel",
+      "two": "private Schlüssel",
+      "few": "private Schlüssel",
+      "many": "private Schlüssel",
+      "other": "private Schlüssel"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "crypto": {
+    "term": "Krypto",
+    "aliases": [
+      "Kryptowährungen",
+      "Crypto"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Krypto"
+      },
+      "verb": null,
+      "adjective": "kryptographisch",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "ecosystem": "Krypto-Ökosystem"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Krypto",
+        "example": "Krypto hat die Art und Weise, wie wir über Finanzen denken, grundlegend verändert."
+      },
+      "heading": {
+        "term": "Krypto"
+      },
+      "tag": {
+        "term": "Krypto"
+      },
+      "ui": {
+        "term": "Krypto"
+      },
+      "code": {
+        "term": "crypto"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually used as a shorthand for 'Kryptowährungen' (feminine plural)."
+  },
+  "layer 1 (l1)": {
+    "term": "Layer 1 (L1)",
+    "aliases": [
+      "L1",
+      "Basisschicht"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Layer 1"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "security": "Layer-1-Sicherheit"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Layer 1",
+        "example": "Ethereum ist ein Layer 1 Netzwerk, auf dem andere Protokolle aufgebaut werden."
+      },
+      "heading": {
+        "term": "Layer 1 (L1)"
+      },
+      "tag": {
+        "term": "L1"
+      },
+      "ui": {
+        "term": "Layer 1"
+      },
+      "code": {
+        "term": "layer1"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Layer 1",
+      "two": "Layer 1s",
+      "few": "Layer 1s",
+      "many": "Layer 1s",
+      "other": "Layer 1s"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "maximal extractable value (mev)": {
+    "term": "Maximal Extractable Value (MEV)",
+    "aliases": [
+      "MEV",
+      "Maximal extrahierbarer Wert"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Maximal Extractable Value"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "MEV-Searcher",
+      "negation": null,
+      "compounds": {
+        "boost": "MEV-Boost"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "MEV",
+        "example": "MEV bezieht sich auf den maximalen Wert, den ein Validator durch das Umordnen von Transaktionen erzielen kann."
+      },
+      "heading": {
+        "term": "Maximal Extractable Value (MEV)"
+      },
+      "tag": {
+        "term": "MEV"
+      },
+      "ui": {
+        "term": "MEV"
+      },
+      "code": {
+        "term": "mev"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually kept in English."
+  },
+  "exit": {
+    "term": "Exit",
+    "aliases": [
+      "Ausstieg",
+      "Validator-Exit"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Exit"
+      },
+      "verb": {
+        "infinitive": "exiten",
+        "participle": "exitend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "queue": "Exit-Warteschlange"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Exit",
+        "example": "Ein Validator kann einen freiwilligen Exit einleiten, um das Staking zu beenden."
+      },
+      "heading": {
+        "term": "Exit"
+      },
+      "tag": {
+        "term": "Exit"
+      },
+      "ui": {
+        "term": "Exit einleiten"
+      },
+      "code": {
+        "term": "exit"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Exit",
+      "two": "Exits",
+      "few": "Exits",
+      "many": "Exits",
+      "other": "Exits"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "opcode": {
+    "term": "Opcode",
+    "aliases": [
+      "Operationscode"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Opcode"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "gas": "Opcode-Gas-Kosten"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Opcode",
+        "example": "Jeder Opcode führt eine spezifische Operation innerhalb der Ethereum Virtual Machine (EVM) aus."
+      },
+      "heading": {
+        "term": "Opcode"
+      },
+      "tag": {
+        "term": "Opcode"
+      },
+      "ui": {
+        "term": "Opcode"
+      },
+      "code": {
+        "term": "opcode"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Opcode",
+      "two": "Opcodes",
+      "few": "Opcodes",
+      "many": "Opcodes",
+      "other": "Opcodes"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized finance (defi)": {
+    "term": "Dezentralisierte Finanzen (DeFi)",
+    "aliases": [
+      "DeFi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Dezentralisierte Finanzen"
+      },
+      "verb": null,
+      "adjective": "dezentralisiert",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "protocol": "DeFi-Protokoll"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "DeFi",
+        "example": "DeFi ermöglicht den Zugang zu Finanzdienstleistungen ohne die Notwendigkeit einer zentralen Instanz."
+      },
+      "heading": {
+        "term": "Dezentralisierte Finanzen (DeFi)"
+      },
+      "tag": {
+        "term": "DeFi"
+      },
+      "ui": {
+        "term": "DeFi"
+      },
+      "code": {
+        "term": "defi"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Treat as plural 'Finanzen' or singular abbreviation 'DeFi'."
+  },
+  "privacy": {
+    "term": "Privatsphäre",
+    "aliases": [
+      "Datenschutz"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Privatsphäre"
+      },
+      "verb": null,
+      "adjective": "privat",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "privacy-protection": "Privatsphärenschutz"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Privatsphäre",
+        "example": "Zero-Knowledge-Proofs verbessern die Privatsphäre der Nutzer auf Ethereum."
+      },
+      "heading": {
+        "term": "Privatsphäre"
+      },
+      "tag": {
+        "term": "Privatsphäre"
+      },
+      "ui": {
+        "term": "Privatsphäre"
+      },
+      "code": {
+        "term": "privacy"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "optimistic rollup": {
+    "term": "Optimistic Rollup",
+    "aliases": [
+      "optimistisches Rollup"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Optimistic Rollup"
+      },
+      "verb": null,
+      "adjective": "optimistisch",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "rollup-technology": "Rollup-Technologie"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Optimistic Rollup",
+        "example": "Ein Optimistic Rollup verarbeitet Transaktionen offchain, um das Netzwerk zu entlasten."
+      },
+      "heading": {
+        "term": "Optimistic Rollup"
+      },
+      "tag": {
+        "term": "Rollup"
+      },
+      "ui": {
+        "term": "Optimistic Rollup"
+      },
+      "code": {
+        "term": "optimistic_rollup"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum request for comments (erc)": {
+    "term": "Ethereum Request for Comments (ERC)",
+    "aliases": [
+      "ERC"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Request for Comments"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "erc-token-standard": "ERC-Token-Standard"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Request for Comments (ERC)",
+        "example": "Jeder neue Standard für Token beginnt als ein Ethereum Request for Comments (ERC)."
+      },
+      "heading": {
+        "term": "Ethereum Request for Comments"
+      },
+      "tag": {
+        "term": "ERC"
+      },
+      "ui": {
+        "term": "ERC"
+      },
+      "code": {
+        "term": "erc"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Request is typically feminine (die Anfrage) in German context."
+  },
+  "plasma": {
+    "term": "Plasma",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Plasma"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "plasma-chain": "Plasma-Chain"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Plasma",
+        "example": "Plasma ist ein Framework für die Erstellung von Sidechains, die Sicherheit von Ethereum ableiten."
+      },
+      "heading": {
+        "term": "Plasma"
+      },
+      "tag": {
+        "term": "Plasma"
+      },
+      "ui": {
+        "term": "Plasma"
+      },
+      "code": {
+        "term": "plasma"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "library": {
+    "term": "Bibliothek",
+    "aliases": [
+      "Programmbibliothek",
+      "Library"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Bibliothek"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "smart-contract-library": "Smart-Contract-Bibliothek"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Bibliothek",
+        "example": "Ein Smart Contract kann Code aus einer bereits bereitgestellten Bibliothek wiederverwenden."
+      },
+      "heading": {
+        "term": "Bibliothek"
+      },
+      "tag": {
+        "term": "Bibliothek"
+      },
+      "ui": {
+        "term": "Bibliothek"
+      },
+      "code": {
+        "term": "library"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "the merge": {
+    "term": "The Merge",
+    "aliases": [
+      "Die Zusammenführung",
+      "Merge"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "The Merge"
+      },
+      "verb": {
+        "infinitive": "mergen",
+        "participle": "gemergt"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "post-merge-era": "Post-Merge-Ära"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "The Merge",
+        "example": "The Merge markierte den Übergang von Ethereum zu Proof-of-Stake."
+      },
+      "heading": {
+        "term": "The Merge"
+      },
+      "tag": {
+        "term": "The Merge"
+      },
+      "ui": {
+        "term": "The Merge"
+      },
+      "code": {
+        "term": "the_merge"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used as an English proper noun in German."
+  },
+  "zero-knowledge proof": {
+    "term": "Zero-Knowledge-Beweis",
+    "aliases": [
+      "ZKP",
+      "nullbasierter Erkenntnisbeweis"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Zero-Knowledge-Beweis"
+      },
+      "verb": {
+        "infinitive": "beweisen",
+        "participle": "bewiesen"
+      },
+      "adjective": "wissensfrei",
+      "agent": "Prover",
+      "negation": null,
+      "compounds": {
+        "zk-cryptography": "Zero-Knowledge-Kryptografie"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Zero-Knowledge-Beweis",
+        "example": "Mit einem Zero-Knowledge-Beweis lässt sich die Korrektheit einer Aussage ohne Preisgabe von Details bestätigen."
+      },
+      "heading": {
+        "term": "Zero-Knowledge-Beweis"
+      },
+      "tag": {
+        "term": "ZKP"
+      },
+      "ui": {
+        "term": "ZKP"
+      },
+      "code": {
+        "term": "zk_proof"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "data availability": {
+    "term": "Datenverfügbarkeit",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Datenverfügbarkeit"
+      },
+      "verb": null,
+      "adjective": "datenverfügbar",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "data-availability-sampling": "Datenverfügbarkeits-Sampling"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Datenverfügbarkeit",
+        "example": "Datenverfügbarkeit stellt sicher, dass alle Netzwerkteilnehmer die Transaktionsdaten prüfen können."
+      },
+      "heading": {
+        "term": "Datenverfügbarkeit"
+      },
+      "tag": {
+        "term": "Verfügbarkeit"
+      },
+      "ui": {
+        "term": "Datenverfügbarkeit"
+      },
+      "code": {
+        "term": "data_availability"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "log": {
+    "term": "Log",
+    "aliases": [
+      "Protokoll",
+      "Ereignisprotokoll"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Log"
+      },
+      "verb": {
+        "infinitive": "loggen",
+        "participle": "geloggt"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "event-log": "Event-Log"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Log",
+        "example": "Smart Contracts verwenden Events, um Daten im Log der Blockchain zu speichern."
+      },
+      "heading": {
+        "term": "Log"
+      },
+      "tag": {
+        "term": "Log"
+      },
+      "ui": {
+        "term": "Protokoll"
+      },
+      "code": {
+        "term": "log"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually 'das Log' in technical German."
+  },
+  "beacon chain": {
+    "term": "Beacon Chain",
+    "aliases": [
+      "Leuchtturm-Kette"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Beacon Chain"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "beacon-chain-validator": "Beacon-Chain-Validator"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Beacon Chain",
+        "example": "Die Beacon Chain war die erste Proof-of-Stake-Komponente von Ethereum."
+      },
+      "heading": {
+        "term": "Beacon Chain"
+      },
+      "tag": {
+        "term": "Beacon Chain"
+      },
+      "ui": {
+        "term": "Beacon Chain"
+      },
+      "code": {
+        "term": "beacon_chain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "liquidity": {
+    "term": "Liquidität",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Liquidität"
+      },
+      "verb": null,
+      "adjective": "liquide",
+      "agent": null,
+      "negation": "Illiquidität",
+      "compounds": {
+        "liquidity-pool": "Liquiditätspool",
+        "liquidity-provider": "Liquiditätsanbieter"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Liquidität",
+        "example": "Hohe Liquidität ist für den effizienten Betrieb von dezentralen Börsen entscheidend."
+      },
+      "heading": {
+        "term": "Liquidität"
+      },
+      "tag": {
+        "term": "Liquidität"
+      },
+      "ui": {
+        "term": "Liquidität"
+      },
+      "code": {
+        "term": "liquidity"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Liquidität",
+      "other": "Liquiditäten"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "epoch": {
+    "term": "Epoche",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Epoche"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "epoch-boundary": "Epochengrenze"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Epoche",
+        "example": "Im Ethereum-Konsens besteht eine Epoche aus 32 Slots."
+      },
+      "heading": {
+        "term": "Epoche"
+      },
+      "tag": {
+        "term": "Epoche"
+      },
+      "ui": {
+        "term": "Epoche"
+      },
+      "code": {
+        "term": "epoch"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Epoche",
+      "other": "Epochen"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum mainnet": {
+    "term": "Ethereum-Mainnet",
+    "aliases": [
+      "Mainnet"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum-Mainnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum-Mainnet",
+        "example": "Transaktionen auf dem Ethereum-Mainnet erfordern ETH zur Bezahlung der Gasgebühren."
+      },
+      "heading": {
+        "term": "Ethereum-Mainnet"
+      },
+      "tag": {
+        "term": "Mainnet"
+      },
+      "ui": {
+        "term": "Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually used without plural in technical German."
+  },
+  "proposal": {
+    "term": "Vorschlag",
+    "aliases": [
+      "Antrag"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Vorschlag"
+      },
+      "verb": {
+        "infinitive": "vorschlagen",
+        "participle": "vorschlagend"
+      },
+      "adjective": null,
+      "agent": "Vorschlagender",
+      "negation": null,
+      "compounds": {
+        "improvement-proposal": "Verbesserungsvorschlag"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Vorschlag",
+        "example": "Der Governance-Vorschlag wurde mit einer großen Mehrheit angenommen."
+      },
+      "heading": {
+        "term": "Vorschlag"
+      },
+      "tag": {
+        "term": "Vorschlag"
+      },
+      "ui": {
+        "term": "Vorschlag einreichen"
+      },
+      "code": {
+        "term": "proposal"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Vorschlag",
+      "other": "Vorschläge"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block proposer": {
+    "term": "Block-Proposer",
+    "aliases": [
+      "Blockvorschlagender"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Block-Proposer"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "Block-Proposer",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Block-Proposer",
+        "example": "In jedem Slot wird zufällig ein Validator als Block-Proposer ausgewählt."
+      },
+      "heading": {
+        "term": "Block-Proposer"
+      },
+      "tag": {
+        "term": "Proposer"
+      },
+      "ui": {
+        "term": "Block-Proposer"
+      },
+      "code": {
+        "term": "block_proposer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Block-Proposer",
+      "other": "Block-Proposer"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term 'Proposer' is very common in German Ethereum communities."
+  },
+  "consensus layer": {
+    "term": "Consensus-Layer",
+    "aliases": [
+      "Konsensschicht"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Consensus-Layer"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Consensus-Layer",
+        "example": "Der Consensus-Layer ist für die Koordination der Validatoren verantwortlich."
+      },
+      "heading": {
+        "term": "Consensus-Layer"
+      },
+      "tag": {
+        "term": "Consensus"
+      },
+      "ui": {
+        "term": "Consensus-Layer"
+      },
+      "code": {
+        "term": "consensus_layer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Consensus-Layer",
+      "other": "Consensus-Layers"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Layer' is masculine in German (der Layer)."
+  },
+  "peer": {
+    "term": "Peer",
+    "aliases": [
+      "Netzwerkknoten",
+      "Gleichrangiger"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Peer"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "Peer",
+      "negation": null,
+      "compounds": {
+        "peer-to-peer": "Peer-to-Peer"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Peer",
+        "example": "Ihr Node tauscht Daten mit anderen Peers im Netzwerk aus."
+      },
+      "heading": {
+        "term": "Peer"
+      },
+      "tag": {
+        "term": "Peer"
+      },
+      "ui": {
+        "term": "Peers"
+      },
+      "code": {
+        "term": "peer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "common",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Peer",
+      "other": "Peers"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "json-rpc": {
+    "term": "JSON-RPC",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "JSON-RPC"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "json-rpc-api": "JSON-RPC-API"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "JSON-RPC",
+        "example": "Entwickler verwenden JSON-RPC, um mit einem Ethereum-Node zu interagieren."
+      },
+      "heading": {
+        "term": "JSON-RPC"
+      },
+      "tag": {
+        "term": "JSON-RPC"
+      },
+      "ui": {
+        "term": "JSON-RPC"
+      },
+      "code": {
+        "term": "json-rpc"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "nonce": {
+    "term": "Nonce",
+    "aliases": [
+      "Einmalzahl"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Nonce"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Nonce",
+        "example": "Die Nonce stellt sicher, dass jede Transaktion nur einmal verarbeitet wird."
+      },
+      "heading": {
+        "term": "Nonce"
+      },
+      "tag": {
+        "term": "Nonce"
+      },
+      "ui": {
+        "term": "Nonce"
+      },
+      "code": {
+        "term": "nonce"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Nonce",
+      "other": "Noncen"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly treated as feminine (die Nonce) in German technical context."
+  },
+  "ipfs": {
+    "term": "IPFS",
+    "aliases": [
+      "InterPlanetary File System"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "IPFS"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "ipfs-hash": "IPFS-Hash"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "IPFS",
+        "example": "Metadaten von NFTs werden häufig dezentral auf IPFS gespeichert."
+      },
+      "heading": {
+        "term": "IPFS"
+      },
+      "tag": {
+        "term": "IPFS"
+      },
+      "ui": {
+        "term": "IPFS"
+      },
+      "code": {
+        "term": "ipfs"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "full node": {
+    "term": "Full Node",
+    "aliases": [
+      "Vollknoten"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Full Node"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node-sync": "Full-Node-Synchronisierung"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Full Node",
+        "example": "Ein Full Node validiert alle Transaktionen und Blöcke, um die Integrität der Blockchain sicherzustellen."
+      },
+      "heading": {
+        "term": "Full Node"
+      },
+      "tag": {
+        "term": "Node"
+      },
+      "ui": {
+        "term": "Full Node"
+      },
+      "code": {
+        "term": "full_node"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Full Node",
+      "other": "Full Nodes"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In German technical contexts, the English term is more prevalent than 'Vollknoten'."
+  },
+  "zero-knowledge": {
+    "term": "Zero-Knowledge",
+    "aliases": [
+      "Kenntnisfreiheit"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Zero-Knowledge"
+      },
+      "verb": null,
+      "adjective": "zero-knowledge",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zero-knowledge-proof": "Zero-Knowledge-Beweis"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Zero-Knowledge",
+        "example": "Zero-Knowledge-Beweise ermöglichen es, die Richtigkeit einer Information zu beweisen, ohne die Information selbst preiszugeben."
+      },
+      "heading": {
+        "term": "Zero-Knowledge"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "Zero-Knowledge"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used as a prefix in compound nouns like Zero-Knowledge-Technologie."
+  },
+  "hardhat": {
+    "term": "Hardhat",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Hardhat"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Hardhat",
+        "example": "Hardhat ist eine beliebte Entwicklungsumgebung zum Testen und Deployen von Smart Contracts."
+      },
+      "heading": {
+        "term": "Hardhat"
+      },
+      "tag": {
+        "term": "Dev-Tool"
+      },
+      "ui": {
+        "term": "Hardhat"
+      },
+      "code": {
+        "term": "hardhat"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, remains untranslated."
+  },
+  "checkpoint": {
+    "term": "Checkpoint",
+    "aliases": [
+      "Kontrollpunkt"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Checkpoint"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "checkpoint-sync": "Checkpoint-Synchronisierung"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Checkpoint",
+        "example": "Ein Checkpoint markiert im Konsensmechanismus einen Block, der als finalisiert betrachtet wird."
+      },
+      "heading": {
+        "term": "Checkpoint"
+      },
+      "tag": {
+        "term": "Konsens"
+      },
+      "ui": {
+        "term": "Checkpoint"
+      },
+      "code": {
+        "term": "checkpoint"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Checkpoint",
+      "other": "Checkpoints"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "miner": {
+    "term": "Miner",
+    "aliases": [
+      "Schürfer"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Miner"
+      },
+      "verb": {
+        "infinitive": "minen",
+        "participle": "minend"
+      },
+      "adjective": null,
+      "agent": "Miner",
+      "negation": null,
+      "compounds": {
+        "miner-reward": "Miner-Belohnung"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Miner",
+        "example": "Der Miner erhält für die Validierung des Blocks eine Belohnung."
+      },
+      "heading": {
+        "term": "Miner"
+      },
+      "tag": {
+        "term": "Miner"
+      },
+      "ui": {
+        "term": "Miner"
+      },
+      "code": {
+        "term": "miner"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Miner",
+      "other": "Miner"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mining": {
+    "term": "Mining",
+    "aliases": [
+      "Schürfen"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mining"
+      },
+      "verb": {
+        "infinitive": "minen",
+        "participle": "minend"
+      },
+      "adjective": null,
+      "agent": "Miner",
+      "negation": null,
+      "compounds": {
+        "mining-pool": "Mining-Pool"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Mining",
+        "example": "Mining ist der Prozess, bei dem neue Blöcke zur Blockchain hinzugefügt werden."
+      },
+      "heading": {
+        "term": "Mining"
+      },
+      "tag": {
+        "term": "Mining"
+      },
+      "ui": {
+        "term": "Mining"
+      },
+      "code": {
+        "term": "mining"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mint": {
+    "term": "Prägen",
+    "aliases": [
+      "Minten"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Prägung"
+      },
+      "verb": {
+        "infinitive": "prägen",
+        "participle": "prägend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "mint-condition": "Prägezustand"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Prägen",
+        "example": "Das Prägen eines neuen NFT erfordert eine Netzwerkgebühr."
+      },
+      "heading": {
+        "term": "Prägen"
+      },
+      "tag": {
+        "term": "Prägen"
+      },
+      "ui": {
+        "term": "Prägen"
+      },
+      "code": {
+        "term": "mint"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used here as a verbal noun (Gerund)."
+  },
+  "signature": {
+    "term": "Signatur",
+    "aliases": [
+      "Unterschrift"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Signatur"
+      },
+      "verb": {
+        "infinitive": "signieren",
+        "participle": "signierend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "digital-signature": "digitale Signatur"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Signatur",
+        "example": "Jede Transaktion muss mit einer privaten digitalen Signatur versehen werden."
+      },
+      "heading": {
+        "term": "Signatur"
+      },
+      "tag": {
+        "term": "Signatur"
+      },
+      "ui": {
+        "term": "Signatur"
+      },
+      "code": {
+        "term": "signature"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Signatur",
+      "other": "Signaturen"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "stake": {
+    "term": "Einsatz",
+    "aliases": [
+      "Stake"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Einsatz"
+      },
+      "verb": {
+        "infinitive": "staken",
+        "participle": "stakend"
+      },
+      "adjective": "gestakt",
+      "agent": "Staker",
+      "negation": null,
+      "compounds": {
+        "stake-pool": "Einsatz-Pool"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Einsatz",
+        "example": "Um am Konsens teilzunehmen, müssen Validatoren einen Einsatz hinterlegen."
+      },
+      "heading": {
+        "term": "Einsatz"
+      },
+      "tag": {
+        "term": "Einsatz"
+      },
+      "ui": {
+        "term": "Einsatz"
+      },
+      "code": {
+        "term": "stake"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Einsatz",
+      "other": "Einsätze"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staked": {
+    "term": "gestakt",
+    "aliases": [
+      "eingesetzt"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "staken",
+        "participle": "gestakt"
+      },
+      "adjective": "gestakt",
+      "agent": null,
+      "negation": "ungestakt",
+      "compounds": {
+        "staked-eth": "gestaktes ETH"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "gestakt",
+        "example": "Die gestakten Ether generieren kontinuierlich Belohnungen."
+      },
+      "heading": {
+        "term": "Gestakt"
+      },
+      "tag": {
+        "term": "Gestakt"
+      },
+      "ui": {
+        "term": "gestakt"
+      },
+      "code": {
+        "term": "staked"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staker": {
+    "term": "Staker",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Staker"
+      },
+      "verb": {
+        "infinitive": "staken",
+        "participle": "stakend"
+      },
+      "adjective": null,
+      "agent": "Staker",
+      "negation": null,
+      "compounds": {
+        "solo-staker": "Solo-Staker"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Staker",
+        "example": "Als Staker hilfst du dabei, das Ethereum-Netzwerk abzusichern."
+      },
+      "heading": {
+        "term": "Staker"
+      },
+      "tag": {
+        "term": "Staker"
+      },
+      "ui": {
+        "term": "Staker"
+      },
+      "code": {
+        "term": "staker"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Staker",
+      "other": "Staker"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staking": {
+    "term": "Staking",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Staking"
+      },
+      "verb": {
+        "infinitive": "staken",
+        "participle": "stakend"
+      },
+      "adjective": null,
+      "agent": "Staker",
+      "negation": null,
+      "compounds": {
+        "liquid-staking": "Liquid-Staking"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Staking",
+        "example": "Staking ist eine energieeffiziente Methode zur Sicherung der Blockchain."
+      },
+      "heading": {
+        "term": "Staking"
+      },
+      "tag": {
+        "term": "Staking"
+      },
+      "ui": {
+        "term": "Staking"
+      },
+      "code": {
+        "term": "staking"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "swap": {
+    "term": "Swap",
+    "aliases": [
+      "Tausch"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Swap"
+      },
+      "verb": {
+        "infinitive": "swappen",
+        "participle": "swappend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-swap": "Token-Swap"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Swap",
+        "example": "Führe einen Swap durch, um ETH direkt in DAI umzutauschen."
+      },
+      "heading": {
+        "term": "Swap"
+      },
+      "tag": {
+        "term": "Swap"
+      },
+      "ui": {
+        "term": "Swappen"
+      },
+      "code": {
+        "term": "swap"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Swap",
+      "other": "Swaps"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transaction": {
+    "term": "Transaktion",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Transaktion"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "transaction-fee": "Transaktionsgebühr"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Transaktion",
+        "example": "Die Transaktion wurde erfolgreich in den Block aufgenommen."
+      },
+      "heading": {
+        "term": "Transaktion"
+      },
+      "tag": {
+        "term": "Transaktion"
+      },
+      "ui": {
+        "term": "Transaktion"
+      },
+      "code": {
+        "term": "transaction"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Transaktion",
+      "other": "Transaktionen"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "web3": {
+    "term": "Web3",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Web3"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "web3-stack": "Web3-Stack"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Web3",
+        "example": "Das Web3 ermöglicht Nutzern die volle Kontrolle über ihre Daten."
+      },
+      "heading": {
+        "term": "Web3"
+      },
+      "tag": {
+        "term": "Web3"
+      },
+      "ui": {
+        "term": "Web3"
+      },
+      "code": {
+        "term": "web3"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually used as a proper noun without an article or with the neuter article 'das'."
+  },
+  "solidity": {
+    "term": "Solidity",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Solidity"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "Solidity-Entwickler",
+      "negation": null,
+      "compounds": {
+        "solidity-compiler": "Solidity-Compiler"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Solidity",
+        "example": "Smart Contracts auf Ethereum werden überwiegend in Solidity geschrieben."
+      },
+      "heading": {
+        "term": "Solidity"
+      },
+      "tag": {
+        "term": "Solidity"
+      },
+      "ui": {
+        "term": "Solidity"
+      },
+      "code": {
+        "term": "solidity"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Gender derived from 'die Programmiersprache'."
+  },
+  "event": {
+    "term": "Ereignis",
+    "aliases": [
+      "Event"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ereignis"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "event-log": "Ereignisprotokoll"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ereignis",
+        "example": "Ein Ereignis wird ausgelöst, wenn der Smart Contract eine bestimmte Funktion ausführt."
+      },
+      "heading": {
+        "term": "Ereignis"
+      },
+      "tag": {
+        "term": "Ereignis"
+      },
+      "ui": {
+        "term": "Ereignis"
+      },
+      "code": {
+        "term": "event"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Ereignis",
+      "other": "Ereignisse"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "onchain": {
+    "term": "Onchain",
+    "aliases": [
+      "Auf der Blockchain"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "onchain",
+      "agent": null,
+      "negation": "offchain",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "onchain",
+        "example": "Diese Transaktion wurde bereits onchain bestätigt."
+      },
+      "heading": {
+        "term": "Onchain"
+      },
+      "tag": {
+        "term": "Onchain"
+      },
+      "ui": {
+        "term": "Onchain"
+      },
+      "code": {
+        "term": "onchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Written without hyphen as per instructions."
+  },
+  "ether": {
+    "term": "Ether",
+    "aliases": [
+      "ETH"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ether"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "ether-balance": "Ether-Guthaben"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ether",
+        "example": "Um Transaktionen durchzuführen, müssen Sie eine Gebühr in Ether bezahlen."
+      },
+      "heading": {
+        "term": "Ether"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "Ether"
+      },
+      "code": {
+        "term": "ether"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Ether",
+      "other": "Ether"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The plural 'Ether' remains the same as singular in German currency context."
+  },
+  "ethereum virtual machine (evm)": {
+    "term": "Ethereum Virtual Machine",
+    "aliases": [
+      "EVM"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Virtual Machine"
+      },
+      "verb": null,
+      "adjective": "EVM-kompatibel",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "evm-bytecode": "EVM-Bytecode"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Virtual Machine",
+        "example": "Die Ethereum Virtual Machine verarbeitet den Code der Smart Contracts."
+      },
+      "heading": {
+        "term": "Ethereum Virtual Machine (EVM)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "EVM"
+      },
+      "code": {
+        "term": "evm"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Gender derived from 'die Maschine'."
+  },
+  "decentralized application (dapp)": {
+    "term": "Dezentralisierte Applikation",
+    "aliases": [
+      "dApp",
+      "Dezentrale App"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Dezentralisierte Applikation"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "dapp-developer": "dApp-Entwickler"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "dezentralisierte Applikation",
+        "example": "Eine dezentralisierte Applikation nutzt Smart Contracts für ihre Backend-Logik."
+      },
+      "heading": {
+        "term": "Dezentralisierte Applikationen"
+      },
+      "tag": {
+        "term": "dApp"
+      },
+      "ui": {
+        "term": "dApp"
+      },
+      "code": {
+        "term": "dapp"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Dezentralisierte Applikation",
+      "other": "Dezentralisierte Applikationen"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "non-fungible token (nft)": {
+    "term": "Nicht-fungibler Token",
+    "aliases": [
+      "NFT"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Nicht-fungibler Token"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": "Fungibler Token",
+      "compounds": {
+        "nft-marketplace": "NFT-Marktplatz"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "nicht-fungibler Token",
+        "example": "Jeder nicht-fungibler Token ist einzigartig und unteilbar."
+      },
+      "heading": {
+        "term": "Nicht-fungible Token (NFTs)"
+      },
+      "tag": {
+        "term": "NFT"
+      },
+      "ui": {
+        "term": "NFT"
+      },
+      "code": {
+        "term": "nft"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Nicht-fungibler Token",
+      "other": "Nicht-fungible Token"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "api": {
+    "term": "API",
+    "aliases": [
+      "Programmierschnittstelle"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "API"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "api-endpoint": "API-Endpunkt"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "API",
+        "example": "Die API ermöglicht es Anwendungen, mit der Ethereum-Blockchain zu interagieren."
+      },
+      "heading": {
+        "term": "API"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "API"
+      },
+      "code": {
+        "term": "api"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "API",
+      "other": "APIs"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Gender derived from 'die Schnittstelle'."
+  },
+  "transfer": {
+    "term": "Transfer",
+    "aliases": [
+      "Übertragung"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Transfer"
+      },
+      "verb": {
+        "infinitive": "transferieren",
+        "participle": "transferierend"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-transfer": "Token-Transfer"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Transfer",
+        "example": "Der Transfer von Vermögenswerten erfolgt ohne Intermediäre."
+      },
+      "heading": {
+        "term": "Transfer"
+      },
+      "tag": {
+        "term": "Transfer"
+      },
+      "ui": {
+        "term": "Senden"
+      },
+      "code": {
+        "term": "transfer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Transfer",
+      "other": "Transfers"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  }
+}

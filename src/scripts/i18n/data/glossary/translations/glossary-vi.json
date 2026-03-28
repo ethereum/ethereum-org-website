@@ -1,0 +1,4305 @@
+{
+  "attestation": {
+    "term": "chứng thực",
+    "aliases": [
+      "xác thực",
+      "bằng chứng"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "chứng thực"
+      },
+      "verb": {
+        "infinitive": "chứng thực",
+        "participle": "chứng thực"
+      },
+      "adjective": "thuộc về chứng thực",
+      "agent": "người chứng thực",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "chứng thực",
+        "example": "Trình xác thực gửi một bản chứng thực để xác nhận tính hợp lệ của khối."
+      },
+      "heading": {
+        "term": "Chứng thực"
+      },
+      "tag": {
+        "term": "Chứng thực"
+      },
+      "ui": {
+        "term": "Chứng thực"
+      },
+      "code": {
+        "term": "attestation"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Ethereum consensus, this specifically refers to a validator's vote."
+  },
+  "bridge": {
+    "term": "cầu nối",
+    "aliases": [
+      "cầu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "cầu nối"
+      },
+      "verb": {
+        "infinitive": "bắc cầu",
+        "participle": "đang bắc cầu"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "cầu nối",
+        "example": "Cầu nối cho phép chuyển đổi tài sản giữa các mạng lưới khác nhau."
+      },
+      "heading": {
+        "term": "Cầu nối"
+      },
+      "tag": {
+        "term": "Cầu nối"
+      },
+      "ui": {
+        "term": "Cầu nối"
+      },
+      "code": {
+        "term": "bridge"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralization": {
+    "term": "phi tập trung hóa",
+    "aliases": [
+      "sự phi tập trung",
+      "tính phi tập trung"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "phi tập trung hóa"
+      },
+      "verb": {
+        "infinitive": "phi tập trung hóa",
+        "participle": "phi tập trung hóa"
+      },
+      "adjective": "phi tập trung",
+      "agent": null,
+      "negation": "tập trung hóa",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "phi tập trung hóa",
+        "example": "Phi tập trung hóa giúp loại bỏ các điểm yếu đơn lẻ trong hệ thống."
+      },
+      "heading": {
+        "term": "Phi tập trung hóa"
+      },
+      "tag": {
+        "term": "Phi tập trung"
+      },
+      "ui": {
+        "term": "Phi tập trung"
+      },
+      "code": {
+        "term": "decentralization"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized": {
+    "term": "phi tập trung",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tính phi tập trung"
+      },
+      "verb": null,
+      "adjective": "phi tập trung",
+      "agent": null,
+      "negation": "tập trung",
+      "compounds": {
+        "dapp": "ứng dụng phi tập trung"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "phi tập trung",
+        "example": "Ứng dụng phi tập trung hoạt động trên mạng ngang hàng."
+      },
+      "heading": {
+        "term": "Phi tập trung"
+      },
+      "tag": {
+        "term": "Phi tập trung"
+      },
+      "ui": {
+        "term": "Phi tập trung"
+      },
+      "code": {
+        "term": "decentralized"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "deploy": {
+    "term": "triển khai",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "sự triển khai"
+      },
+      "verb": {
+        "infinitive": "triển khai",
+        "participle": "đang triển khai"
+      },
+      "adjective": null,
+      "agent": "người triển khai",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "triển khai",
+        "example": "Hợp đồng thông minh đã được triển khai thành công trên mạng thử nghiệm."
+      },
+      "heading": {
+        "term": "Triển khai"
+      },
+      "tag": {
+        "term": "Triển khai"
+      },
+      "ui": {
+        "term": "Triển khai"
+      },
+      "code": {
+        "term": "deploy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "finality": {
+    "term": "tính chung kết",
+    "aliases": [
+      "tính hoàn tất"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tính chung kết"
+      },
+      "verb": {
+        "infinitive": "hoàn tất",
+        "participle": "hoàn tất"
+      },
+      "adjective": "chung kết",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tính chung kết",
+        "example": "Tính chung kết đảm bảo rằng các giao dịch đã xác nhận không thể bị đảo ngược."
+      },
+      "heading": {
+        "term": "Tính chung kết"
+      },
+      "tag": {
+        "term": "Chung kết"
+      },
+      "ui": {
+        "term": "Hoàn tất"
+      },
+      "code": {
+        "term": "finality"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In BFT and blockchain contexts, 'tính chung kết' is the standard technical term."
+  },
+  "fork": {
+    "term": "phân tách",
+    "aliases": [
+      "nhánh",
+      "fork"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "phân tách"
+      },
+      "verb": {
+        "infinitive": "phân tách",
+        "participle": "phân tách"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hard-fork": "phân tách cứng",
+        "soft-fork": "phân tách mềm"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "phân tách",
+        "example": "Một bản phân tách cứng có thể xảy ra khi có sự thay đổi quy tắc mạng."
+      },
+      "heading": {
+        "term": "Phân tách"
+      },
+      "tag": {
+        "term": "Phân tách"
+      },
+      "ui": {
+        "term": "Phân tách"
+      },
+      "code": {
+        "term": "fork"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical users often use the English word 'fork' directly."
+  },
+  "governance": {
+    "term": "quản trị",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "quản trị"
+      },
+      "verb": {
+        "infinitive": "quản trị",
+        "participle": "đang quản trị"
+      },
+      "adjective": "thuộc về quản trị",
+      "agent": "nhà quản trị",
+      "negation": null,
+      "compounds": {
+        "onchain-governance": "quản trị trên chuỗi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "quản trị",
+        "example": "Hệ thống quản trị giúp cộng đồng đưa ra quyết định về tương lai của dự án."
+      },
+      "heading": {
+        "term": "Quản trị"
+      },
+      "tag": {
+        "term": "Quản trị"
+      },
+      "ui": {
+        "term": "Quản trị"
+      },
+      "code": {
+        "term": "governance"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "hash": {
+    "term": "mã băm",
+    "aliases": [
+      "băm",
+      "hàm băm"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mã băm"
+      },
+      "verb": {
+        "infinitive": "băm",
+        "participle": "băm"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hash-function": "hàm băm"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "mã băm",
+        "example": "Mỗi giao dịch được xác định bằng một mã băm duy nhất."
+      },
+      "heading": {
+        "term": "Mã băm"
+      },
+      "tag": {
+        "term": "Băm"
+      },
+      "ui": {
+        "term": "Mã băm"
+      },
+      "code": {
+        "term": "hash"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Mã băm' refers to the result, 'Hàm băm' refers to the function."
+  },
+  "miner": {
+    "term": "thợ đào",
+    "aliases": [
+      "người khai thác"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "thợ đào"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "thợ đào",
+      "negation": null,
+      "compounds": {
+        "mining-pool": "nhóm khai thác"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "thợ đào",
+        "example": "Các thợ đào giúp bảo mật mạng lưới bằng cách giải các bài toán phức tạp."
+      },
+      "heading": {
+        "term": "Thợ đào"
+      },
+      "tag": {
+        "term": "Thợ đào"
+      },
+      "ui": {
+        "term": "Thợ đào"
+      },
+      "code": {
+        "term": "miner"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Vietnamese uses the noun 'thợ' (worker/craftsman) combined with 'đào' (to dig/mine)."
+  },
+  "mining": {
+    "term": "đào",
+    "aliases": [
+      "khai thác"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "việc đào"
+      },
+      "verb": {
+        "infinitive": "đào",
+        "participle": "đang đào"
+      },
+      "adjective": null,
+      "agent": "thợ đào",
+      "negation": null,
+      "compounds": {
+        "mining-reward": "phần thưởng khối"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "đào",
+        "example": "Quá trình đào Ethereum đã chuyển sang Proof-of-Stake."
+      },
+      "heading": {
+        "term": "Đào"
+      },
+      "tag": {
+        "term": "Đào"
+      },
+      "ui": {
+        "term": "Đào"
+      },
+      "code": {
+        "term": "mining"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Vietnamese, verbs like 'đào' can function as nouns (gerunds) without change."
+  },
+  "mint": {
+    "term": "đúc",
+    "aliases": [
+      "tạo mới"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "việc đúc"
+      },
+      "verb": {
+        "infinitive": "đúc",
+        "participle": "đang đúc"
+      },
+      "adjective": null,
+      "agent": "người đúc",
+      "negation": null,
+      "compounds": {
+        "mint-nft": "đúc NFT"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "đúc",
+        "example": "Bạn có thể đúc một NFT mới trực tiếp trên nền tảng này."
+      },
+      "heading": {
+        "term": "Đúc"
+      },
+      "tag": {
+        "term": "Đúc"
+      },
+      "ui": {
+        "term": "Đúc"
+      },
+      "code": {
+        "term": "mint"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "signature": {
+    "term": "chữ ký",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "chữ ký"
+      },
+      "verb": {
+        "infinitive": "ký",
+        "participle": "đang ký"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "digital-signature": "chữ ký số"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "chữ ký",
+        "example": "Giao dịch cần có chữ ký hợp lệ để được mạng lưới chấp nhận."
+      },
+      "heading": {
+        "term": "Chữ ký"
+      },
+      "tag": {
+        "term": "Chữ ký"
+      },
+      "ui": {
+        "term": "Chữ ký"
+      },
+      "code": {
+        "term": "signature"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "stake": {
+    "term": "đặt cọc",
+    "aliases": [
+      "stake"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tiền cọc"
+      },
+      "verb": {
+        "infinitive": "đặt cọc",
+        "participle": "đang đặt cọc"
+      },
+      "adjective": null,
+      "agent": "người đặt cọc",
+      "negation": null,
+      "compounds": {
+        "stake-reward": "thưởng đặt cọc"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "đặt cọc",
+        "example": "Bạn cần đặt cọc ít nhất 32 ETH để trở thành người xác thực."
+      },
+      "heading": {
+        "term": "Đặt cọc"
+      },
+      "tag": {
+        "term": "Đặt cọc"
+      },
+      "ui": {
+        "term": "Đặt cọc"
+      },
+      "code": {
+        "term": "stake"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The loanword 'stake' is also very common in the Vietnamese crypto community."
+  },
+  "staked": {
+    "term": "đã đặt cọc",
+    "aliases": [
+      "đang được đặt cọc"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "đã đặt cọc",
+      "agent": null,
+      "negation": "chưa đặt cọc",
+      "compounds": {
+        "staked-eth": "ETH đã đặt cọc"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "đã đặt cọc",
+        "example": "Số ETH đã đặt cọc sẽ được khóa cho đến khi quá trình nâng cấp hoàn tất."
+      },
+      "heading": {
+        "term": "Đã đặt cọc"
+      },
+      "tag": {
+        "term": "Đã đặt cọc"
+      },
+      "ui": {
+        "term": "Đã đặt cọc"
+      },
+      "code": {
+        "term": "staked"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Vietnamese uses 'đã' (past marker) to indicate the 'staked' state."
+  },
+  "staker": {
+    "term": "người đặt cọc",
+    "aliases": [
+      "staker"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "người đặt cọc"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "người đặt cọc",
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "người đặt cọc",
+        "example": "Người đặt cọc nhận được phần thưởng khi giúp vận hành mạng lưới."
+      },
+      "heading": {
+        "term": "Người đặt cọc"
+      },
+      "tag": {
+        "term": "Người đặt cọc"
+      },
+      "ui": {
+        "term": "Người đặt cọc"
+      },
+      "code": {
+        "term": "staker"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staking": {
+    "term": "việc đặt cọc",
+    "aliases": [
+      "staking"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "việc đặt cọc"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "người đặt cọc",
+      "negation": null,
+      "compounds": {
+        "staking-pool": "nhóm đặt cọc"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "việc đặt cọc",
+        "example": "Việc đặt cọc là cơ chế đồng thuận cốt lõi của Ethereum hiện nay."
+      },
+      "heading": {
+        "term": "Việc đặt cọc"
+      },
+      "tag": {
+        "term": "Đặt cọc"
+      },
+      "ui": {
+        "term": "Đặt cọc"
+      },
+      "code": {
+        "term": "staking"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Adding 'việc' (action/work) before the verb turns it into a formal noun/gerund."
+  },
+  "swap": {
+    "term": "hoán đổi",
+    "aliases": [
+      "swap"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "lệnh hoán đổi"
+      },
+      "verb": {
+        "infinitive": "hoán đổi",
+        "participle": "đang hoán đổi"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "hoán đổi",
+        "example": "Bạn có thể hoán đổi ETH sang các token ERC-20 khác."
+      },
+      "heading": {
+        "term": "Hoán đổi"
+      },
+      "tag": {
+        "term": "Hoán đổi"
+      },
+      "ui": {
+        "term": "Hoán đổi"
+      },
+      "code": {
+        "term": "swap"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transaction": {
+    "term": "giao dịch",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "giao dịch"
+      },
+      "verb": {
+        "infinitive": "giao dịch",
+        "participle": "đang giao dịch"
+      },
+      "adjective": null,
+      "agent": "người giao dịch",
+      "negation": null,
+      "compounds": {
+        "transaction-fee": "phí giao dịch"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "giao dịch",
+        "example": "Mỗi giao dịch trên Ethereum đều cần một lượng phí gas nhất định."
+      },
+      "heading": {
+        "term": "Giao dịch"
+      },
+      "tag": {
+        "term": "Giao dịch"
+      },
+      "ui": {
+        "term": "Giao dịch"
+      },
+      "code": {
+        "term": "transaction"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "validator": {
+    "term": "người xác thực",
+    "aliases": [
+      "xác thực viên",
+      "validator"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "người xác thực"
+      },
+      "verb": {
+        "infinitive": "xác thực",
+        "participle": "đang xác thực"
+      },
+      "adjective": null,
+      "agent": "người xác thực",
+      "negation": null,
+      "compounds": {
+        "consensus-validator": "người xác thực đồng thuận"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "người xác thực",
+        "example": "Người xác thực giúp bảo mật mạng lưới bằng cách kiểm tra các giao dịch mới."
+      },
+      "heading": {
+        "term": "Người xác thực"
+      },
+      "tag": {
+        "term": "Xác thực"
+      },
+      "ui": {
+        "term": "Người xác thực"
+      },
+      "code": {
+        "term": "validator"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Vietnamese often uses the English term 'validator' in technical discussions."
+  },
+  "vote": {
+    "term": "bỏ phiếu",
+    "aliases": [
+      "biểu quyết"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "bỏ phiếu",
+        "participle": "đang bỏ phiếu"
+      },
+      "adjective": null,
+      "agent": "người bỏ phiếu",
+      "negation": "không bỏ phiếu",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "bỏ phiếu",
+        "example": "Người dùng có thể bỏ phiếu cho các đề xuất quản trị."
+      },
+      "heading": {
+        "term": "Bỏ phiếu"
+      },
+      "tag": {
+        "term": "Bỏ phiếu"
+      },
+      "ui": {
+        "term": "Bỏ phiếu"
+      },
+      "code": {
+        "term": "vote"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "voting": {
+    "term": "việc bỏ phiếu",
+    "aliases": [
+      "sự biểu quyết",
+      "quá trình bỏ phiếu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "việc bỏ phiếu"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "voting-power": "quyền biểu quyết"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "việc bỏ phiếu",
+        "example": "Việc bỏ phiếu sẽ kết thúc sau khi đạt được sự đồng thuận."
+      },
+      "heading": {
+        "term": "Việc bỏ phiếu"
+      },
+      "tag": {
+        "term": "Bỏ phiếu"
+      },
+      "ui": {
+        "term": "Đang bỏ phiếu"
+      },
+      "code": {
+        "term": "voting"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often translated using the gerund-like prefix 'việc' or 'sự' in Vietnamese."
+  },
+  "ethereum": {
+    "term": "Ethereum",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum",
+        "example": "Ethereum là một nền tảng blockchain phi tập trung."
+      },
+      "heading": {
+        "term": "Ethereum"
+      },
+      "tag": {
+        "term": "Ethereum"
+      },
+      "ui": {
+        "term": "Ethereum"
+      },
+      "code": {
+        "term": "ethereum"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun remains unchanged in Vietnamese."
+  },
+  "contract": {
+    "term": "hợp đồng",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "hợp đồng"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "hợp đồng",
+        "example": "Mỗi giao dịch có thể tương tác với một hợp đồng trên mạng lưới."
+      },
+      "heading": {
+        "term": "Hợp đồng"
+      },
+      "tag": {
+        "term": "Hợp đồng"
+      },
+      "ui": {
+        "term": "Hợp đồng"
+      },
+      "code": {
+        "term": "contract"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block": {
+    "term": "khối",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "khối"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "block-time": "thời gian tạo khối",
+        "block-reward": "phần thưởng khối"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "khối",
+        "example": "Dữ liệu được lưu trữ vĩnh viễn trong các khối."
+      },
+      "heading": {
+        "term": "Khối"
+      },
+      "tag": {
+        "term": "Khối"
+      },
+      "ui": {
+        "term": "Khối"
+      },
+      "code": {
+        "term": "block"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "smart contract": {
+    "term": "hợp đồng thông minh",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "hợp đồng thông minh"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "hợp đồng thông minh",
+        "example": "Hợp đồng thông minh cho phép thực thi các thỏa thuận mà không cần trung gian."
+      },
+      "heading": {
+        "term": "Hợp đồng thông minh"
+      },
+      "tag": {
+        "term": "Hợp đồng thông minh"
+      },
+      "ui": {
+        "term": "Hợp đồng thông minh"
+      },
+      "code": {
+        "term": "smart_contract"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "node": {
+    "term": "nút",
+    "aliases": [
+      "node"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nút"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node": "nút đầy đủ",
+        "light-node": "nút nhẹ"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "nút",
+        "example": "Một nút lưu trữ bản sao của toàn bộ blockchain."
+      },
+      "heading": {
+        "term": "Nút"
+      },
+      "tag": {
+        "term": "Nút"
+      },
+      "ui": {
+        "term": "Nút"
+      },
+      "code": {
+        "term": "node"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English word 'node' is very common in Vietnamese technical communities."
+  },
+  "token": {
+    "term": "token",
+    "aliases": [
+      "mã thông báo"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "token"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "utility-token": "token tiện ích"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "token",
+        "example": "Bạn có thể chuyển đổi token này lấy một loại tài sản khác."
+      },
+      "heading": {
+        "term": "Token"
+      },
+      "tag": {
+        "term": "Token"
+      },
+      "ui": {
+        "term": "Token"
+      },
+      "code": {
+        "term": "token"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Token' is more common than the formal 'mã thông báo' in modern crypto contexts."
+  },
+  "address": {
+    "term": "địa chỉ",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "địa chỉ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "wallet-address": "địa chỉ ví",
+        "contract-address": "địa chỉ hợp đồng"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "địa chỉ",
+        "example": "Hãy kiểm tra kỹ địa chỉ trước khi gửi tiền."
+      },
+      "heading": {
+        "term": "Địa chỉ"
+      },
+      "tag": {
+        "term": "Địa chỉ"
+      },
+      "ui": {
+        "term": "Địa chỉ"
+      },
+      "code": {
+        "term": "address"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "eth": {
+    "term": "ETH",
+    "aliases": [
+      "Ether"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ETH"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ETH",
+        "example": "Bạn có thể gửi ETH cho bất kỳ ai trên mạng lưới."
+      },
+      "heading": {
+        "term": "ETH"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "Gửi ETH"
+      },
+      "code": {
+        "term": "eth"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "ETH is the standard ticker and commonly used term in Vietnamese tech contexts."
+  },
+  "blockchain": {
+    "term": "blockchain",
+    "aliases": [
+      "chuỗi khối"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blockchain"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "blockchain",
+        "example": "Dữ liệu được lưu trữ vĩnh viễn trên blockchain."
+      },
+      "heading": {
+        "term": "Blockchain"
+      },
+      "tag": {
+        "term": "Blockchain"
+      },
+      "ui": {
+        "term": "Blockchain"
+      },
+      "code": {
+        "term": "blockchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'blockchain' is more common than 'chuỗi khối' in Vietnamese developer communities."
+  },
+  "account": {
+    "term": "tài khoản",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tài khoản"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "chủ tài khoản",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tài khoản",
+        "example": "Mỗi tài khoản Ethereum có một địa chỉ công khai duy nhất."
+      },
+      "heading": {
+        "term": "Tài khoản"
+      },
+      "tag": {
+        "term": "Tài khoản"
+      },
+      "ui": {
+        "term": "Thông tin tài khoản"
+      },
+      "code": {
+        "term": "account"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "chain": {
+    "term": "chuỗi",
+    "aliases": [
+      "mạng lưới"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "chuỗi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "onchain": "trên chuỗi",
+        "offchain": "ngoại chuỗi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "chuỗi",
+        "example": "Giao dịch được xác nhận và thêm vào chuỗi."
+      },
+      "heading": {
+        "term": "Chuỗi"
+      },
+      "tag": {
+        "term": "Chuỗi"
+      },
+      "ui": {
+        "term": "Chuỗi"
+      },
+      "code": {
+        "term": "chain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "protocol": {
+    "term": "giao thức",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "giao thức"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "giao thức",
+        "example": "Giao thức Ethereum quy định cách các nút tương tác với nhau."
+      },
+      "heading": {
+        "term": "Giao thức"
+      },
+      "tag": {
+        "term": "Giao thức"
+      },
+      "ui": {
+        "term": "Giao thức"
+      },
+      "code": {
+        "term": "protocol"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "wallet": {
+    "term": "ví",
+    "aliases": [
+      "ví tiền mã hóa"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ví"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ví",
+        "example": "Bạn cần một ví để tương tác với các ứng dụng phi tập trung."
+      },
+      "heading": {
+        "term": "Ví"
+      },
+      "tag": {
+        "term": "Ví"
+      },
+      "ui": {
+        "term": "Kết nối ví"
+      },
+      "code": {
+        "term": "wallet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "gas": {
+    "term": "gas",
+    "aliases": [
+      "nhiên liệu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "gas"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "gas-price": "giá gas",
+        "gas-fee": "phí gas"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "gas",
+        "example": "Mỗi giao dịch yêu cầu một lượng gas nhất định để thực thi."
+      },
+      "heading": {
+        "term": "Gas"
+      },
+      "tag": {
+        "term": "Gas"
+      },
+      "ui": {
+        "term": "Phí gas"
+      },
+      "code": {
+        "term": "gas"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Gas' is almost never translated to 'xăng' or 'khí' in blockchain contexts."
+  },
+  "rollup": {
+    "term": "rollup",
+    "aliases": [
+      "giải pháp rollup"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "rollup"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "optimistic-rollup": "optimistic rollup",
+        "zk-rollup": "zk-rollup"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "rollup",
+        "example": "Rollup giúp giảm chi phí giao dịch bằng cách xử lý chúng ngoài chuỗi."
+      },
+      "heading": {
+        "term": "Rollup"
+      },
+      "tag": {
+        "term": "Rollup"
+      },
+      "ui": {
+        "term": "Rollup"
+      },
+      "code": {
+        "term": "rollup"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually kept in English."
+  },
+  "ethereum improvement proposal (eip)": {
+    "term": "Đề xuất cải tiến Ethereum",
+    "aliases": [
+      "EIP"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Đề xuất cải tiến Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "người đề xuất",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Đề xuất cải tiến Ethereum (EIP)",
+        "example": "EIP mô tả các tiêu chuẩn cho nền tảng Ethereum."
+      },
+      "heading": {
+        "term": "Đề xuất cải tiến Ethereum (EIP)"
+      },
+      "tag": {
+        "term": "EIP"
+      },
+      "ui": {
+        "term": "Xem EIP"
+      },
+      "code": {
+        "term": "eip"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "require": {
+    "term": "yêu cầu",
+    "aliases": [
+      "bắt buộc"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "yêu cầu",
+        "participle": "đang yêu cầu"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": "không yêu cầu",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "yêu cầu",
+        "example": "Hợp đồng thông minh yêu cầu điều kiện này phải đúng để tiếp tục."
+      },
+      "heading": {
+        "term": "Yêu cầu"
+      },
+      "tag": {
+        "term": "Yêu cầu"
+      },
+      "ui": {
+        "term": "Yêu cầu"
+      },
+      "code": {
+        "term": "require"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In code documentation, 'require' refers to the Solidity keyword."
+  },
+  "web3": {
+    "term": "Web3",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Web3"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Web3",
+        "example": "Web3 cho phép người dùng thực sự sở hữu dữ liệu của chính mình."
+      },
+      "heading": {
+        "term": "Web3"
+      },
+      "tag": {
+        "term": "Web3"
+      },
+      "ui": {
+        "term": "Web3"
+      },
+      "code": {
+        "term": "web3"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Web3 is commonly kept in English within the Vietnamese tech community."
+  },
+  "solidity": {
+    "term": "Solidity",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Solidity"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "lập trình viên Solidity",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Solidity",
+        "example": "Solidity là ngôn ngữ lập trình phổ biến nhất để viết hợp đồng thông minh."
+      },
+      "heading": {
+        "term": "Solidity"
+      },
+      "tag": {
+        "term": "Solidity"
+      },
+      "ui": {
+        "term": "Solidity"
+      },
+      "code": {
+        "term": "solidity"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "event": {
+    "term": "sự kiện",
+    "aliases": [
+      "event"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "sự kiện"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "sự kiện",
+        "example": "Hợp đồng thông minh phát ra một sự kiện khi giao dịch hoàn tất."
+      },
+      "heading": {
+        "term": "Sự kiện"
+      },
+      "tag": {
+        "term": "Sự kiện"
+      },
+      "ui": {
+        "term": "Sự kiện"
+      },
+      "code": {
+        "term": "event"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "onchain": {
+    "term": "onchain",
+    "aliases": [
+      "trên chuỗi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "onchain",
+      "agent": null,
+      "negation": "offchain",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "onchain",
+        "example": "Dữ liệu được lưu trữ onchain để đảm bảo tính minh bạch và bất biến."
+      },
+      "heading": {
+        "term": "Onchain"
+      },
+      "tag": {
+        "term": "Onchain"
+      },
+      "ui": {
+        "term": "Onchain"
+      },
+      "code": {
+        "term": "onchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'onchain' is standard in Vietnamese blockchain technical contexts."
+  },
+  "ether": {
+    "term": "Ether",
+    "aliases": [
+      "ETH"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ether"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ether",
+        "example": "Bạn cần một ít Ether trong ví để thanh toán phí gas."
+      },
+      "heading": {
+        "term": "Ether"
+      },
+      "tag": {
+        "term": "Ether"
+      },
+      "ui": {
+        "term": "Ether"
+      },
+      "code": {
+        "term": "ether"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum virtual machine (evm)": {
+    "term": "Máy ảo Ethereum (EVM)",
+    "aliases": [
+      "Ethereum Virtual Machine",
+      "EVM"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Máy ảo Ethereum"
+      },
+      "verb": null,
+      "adjective": "tương thích EVM",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Máy ảo Ethereum (EVM)",
+        "example": "Máy ảo Ethereum (EVM) là môi trường thực thi các hợp đồng thông minh."
+      },
+      "heading": {
+        "term": "Máy ảo Ethereum (EVM)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "EVM"
+      },
+      "code": {
+        "term": "evm"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized application (dapp)": {
+    "term": "ứng dụng phi tập trung (dapp)",
+    "aliases": [
+      "dapp",
+      "ứng dụng phân tán"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ứng dụng phi tập trung"
+      },
+      "verb": null,
+      "adjective": "phi tập trung",
+      "agent": null,
+      "negation": "ứng dụng tập trung",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ứng dụng phi tập trung (dapp)",
+        "example": "Người dùng có thể tương tác với các ứng dụng phi tập trung thông qua trình duyệt Web3."
+      },
+      "heading": {
+        "term": "Ứng dụng phi tập trung (dapp)"
+      },
+      "tag": {
+        "term": "Dapp"
+      },
+      "ui": {
+        "term": "Dapp"
+      },
+      "code": {
+        "term": "dapp"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "non-fungible token (nft)": {
+    "term": "token không thể thay thế (NFT)",
+    "aliases": [
+      "NFT",
+      "vật phẩm không thể thay thế"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "token không thể thay thế"
+      },
+      "verb": null,
+      "adjective": "không thể thay thế",
+      "agent": null,
+      "negation": "token có thể thay thế",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "token không thể thay thế (NFT)",
+        "example": "Mỗi token không thể thay thế (NFT) là duy nhất và không thể bị sao chép."
+      },
+      "heading": {
+        "term": "Token không thể thay thế (NFT)"
+      },
+      "tag": {
+        "term": "NFT"
+      },
+      "ui": {
+        "term": "NFT"
+      },
+      "code": {
+        "term": "nft"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The term 'NFT' is overwhelmingly more common than the full Vietnamese translation."
+  },
+  "api": {
+    "term": "API",
+    "aliases": [
+      "giao diện lập trình ứng dụng"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "API"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "API",
+        "example": "API này cung cấp dữ liệu giá Ether theo thời gian thực."
+      },
+      "heading": {
+        "term": "API"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "API"
+      },
+      "code": {
+        "term": "api"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transfer": {
+    "term": "chuyển",
+    "aliases": [
+      "chuyển tiền",
+      "giao dịch chuyển"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "việc chuyển"
+      },
+      "verb": {
+        "infinitive": "chuyển",
+        "participle": "đang chuyển"
+      },
+      "adjective": null,
+      "agent": "người chuyển",
+      "negation": null,
+      "compounds": {
+        "transfer-fee": "phí chuyển"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "chuyển",
+        "example": "Bạn có thể chuyển tài sản của mình sang một ví khác chỉ trong vài giây."
+      },
+      "heading": {
+        "term": "Chuyển tiền"
+      },
+      "tag": {
+        "term": "Chuyển"
+      },
+      "ui": {
+        "term": "Chuyển"
+      },
+      "code": {
+        "term": "transfer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "withdrawal": {
+    "term": "rút tiền",
+    "aliases": [
+      "rút ETH",
+      "việc rút tiền"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "rút tiền"
+      },
+      "verb": {
+        "infinitive": "rút tiền",
+        "participle": "đang rút tiền"
+      },
+      "adjective": null,
+      "agent": "người rút tiền",
+      "negation": "không rút tiền",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "rút tiền",
+        "example": "Người dùng có thể thực hiện rút tiền từ Beacon Chain sau khi nâng cấp thành công."
+      },
+      "heading": {
+        "term": "Rút tiền"
+      },
+      "tag": {
+        "term": "Rút tiền"
+      },
+      "ui": {
+        "term": "Rút tiền"
+      },
+      "code": {
+        "term": "withdrawal"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Trong ngữ cảnh đồng thuận (consensus), từ này thường ám chỉ việc rút ETH đã stake của validator."
+  },
+  "consensus": {
+    "term": "đồng thuận",
+    "aliases": [
+      "cơ chế đồng thuận"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "đồng thuận"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": "bất đồng",
+      "compounds": {
+        "consensus-mechanism": "cơ chế đồng thuận"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "đồng thuận",
+        "example": "Cơ chế đồng thuận Proof-of-Stake giúp bảo mật mạng lưới Ethereum."
+      },
+      "heading": {
+        "term": "Đồng thuận"
+      },
+      "tag": {
+        "term": "Đồng thuận"
+      },
+      "ui": {
+        "term": "Đồng thuận"
+      },
+      "code": {
+        "term": "consensus"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mainnet": {
+    "term": "mạng chính",
+    "aliases": [
+      "mainnet"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mạng chính"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mạng chính",
+        "example": "Hợp đồng thông minh này đã được triển khai chính thức trên mạng chính."
+      },
+      "heading": {
+        "term": "Mạng chính"
+      },
+      "tag": {
+        "term": "Mainnet"
+      },
+      "ui": {
+        "term": "Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Người dùng Việt Nam thường giữ nguyên thuật ngữ 'Mainnet'."
+  },
+  "offchain": {
+    "term": "offchain",
+    "aliases": [
+      "ngoại chuỗi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "offchain",
+      "agent": null,
+      "negation": "onchain",
+      "compounds": {
+        "offchain-storage": "lưu trữ offchain"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "offchain",
+        "example": "Các tính toán phức tạp có thể được xử lý offchain để tiết kiệm chi phí gas."
+      },
+      "heading": {
+        "term": "Offchain"
+      },
+      "tag": {
+        "term": "Offchain"
+      },
+      "ui": {
+        "term": "Offchain"
+      },
+      "code": {
+        "term": "offchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Tuân thủ quy tắc viết không có dấu gạch ngang."
+  },
+  "erc-20": {
+    "term": "ERC-20",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ERC-20"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ERC-20",
+        "example": "Tiêu chuẩn ERC-20 cho phép các token tương tác mượt mà với nhau trên Ethereum."
+      },
+      "heading": {
+        "term": "ERC-20"
+      },
+      "tag": {
+        "term": "ERC-20"
+      },
+      "ui": {
+        "term": "ERC-20"
+      },
+      "code": {
+        "term": "erc20"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Đây là một tiêu chuẩn kỹ thuật, không nên dịch."
+  },
+  "oracle": {
+    "term": "oracle",
+    "aliases": [
+      "nguồn dữ liệu ngoại vi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "oracle"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "oracle",
+        "example": "Dự án DeFi này sử dụng một oracle phi tập trung để cập nhật giá Ether."
+      },
+      "heading": {
+        "term": "Oracle"
+      },
+      "tag": {
+        "term": "Oracle"
+      },
+      "ui": {
+        "term": "Oracle"
+      },
+      "code": {
+        "term": "oracle"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Trong cộng đồng blockchain Việt Nam, 'oracle' là thuật ngữ phổ biến nhất."
+  },
+  "blob": {
+    "term": "blob",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blob"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "blob-transaction": "giao dịch blob"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "blob",
+        "example": "Các bản cập nhật mới giới thiệu blob để giúp lưu trữ dữ liệu rẻ hơn cho Layer 2."
+      },
+      "heading": {
+        "term": "Blob"
+      },
+      "tag": {
+        "term": "Blob"
+      },
+      "ui": {
+        "term": "Blob"
+      },
+      "code": {
+        "term": "blob"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Đây là thuật ngữ kỹ thuật chuyên sâu liên quan đến EIP-4844."
+  },
+  "slot": {
+    "term": "slot",
+    "aliases": [
+      "khe thời gian"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "slot"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "slot",
+        "example": "Trong mạng Ethereum, mỗi slot có thời gian kéo dài 12 giây."
+      },
+      "heading": {
+        "term": "Slot"
+      },
+      "tag": {
+        "term": "Slot"
+      },
+      "ui": {
+        "term": "Slot"
+      },
+      "code": {
+        "term": "slot"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Thường được giữ nguyên vì tính chuyên môn trong cơ chế Proof-of-Stake."
+  },
+  "decentralized autonomous organization (dao)": {
+    "term": "tổ chức tự trị phi tập trung (DAO)",
+    "aliases": [
+      "DAO"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tổ chức tự trị phi tập trung"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tổ chức tự trị phi tập trung (DAO)",
+        "example": "Tham gia vào một tổ chức tự trị phi tập trung (DAO) giúp bạn có quyền biểu quyết các thay đổi của dự án."
+      },
+      "heading": {
+        "term": "Tổ chức tự trị phi tập trung (DAO)"
+      },
+      "tag": {
+        "term": "DAO"
+      },
+      "ui": {
+        "term": "DAO"
+      },
+      "code": {
+        "term": "dao"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Nên đi kèm viết tắt DAO để người dùng dễ nhận diện."
+  },
+  "testnet": {
+    "term": "mạng thử nghiệm",
+    "aliases": [
+      "testnet"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mạng thử nghiệm"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mạng thử nghiệm",
+        "example": "Bạn nên kiểm tra kỹ các chức năng trên mạng thử nghiệm trước khi triển khai thực tế."
+      },
+      "heading": {
+        "term": "Mạng thử nghiệm"
+      },
+      "tag": {
+        "term": "Testnet"
+      },
+      "ui": {
+        "term": "Testnet"
+      },
+      "code": {
+        "term": "testnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus client": {
+    "term": "Client đồng thuận",
+    "aliases": [
+      "Phần mềm đồng thuận",
+      "Consensus client"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "client đồng thuận"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "client đồng thuận",
+        "example": "Client đồng thuận chịu trách nhiệm triển khai thuật toán đồng thuận Proof-of-Stake."
+      },
+      "heading": {
+        "term": "Client đồng thuận"
+      },
+      "tag": {
+        "term": "Đồng thuận"
+      },
+      "ui": {
+        "term": "Client đồng thuận"
+      },
+      "code": {
+        "term": "consensus_client"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Vietnamese uses the English loanword 'client' frequently in technical contexts."
+  },
+  "layer 2 (l2)": {
+    "term": "Lớp 2 (L2)",
+    "aliases": [
+      "Layer 2",
+      "Giải pháp mở rộng lớp 2"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "lớp 2"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "lớp 2",
+        "example": "Các giải pháp lớp 2 giúp tăng tốc độ giao dịch và giảm chi phí trên Ethereum."
+      },
+      "heading": {
+        "term": "Lớp 2 (L2)"
+      },
+      "tag": {
+        "term": "L2"
+      },
+      "ui": {
+        "term": "Lớp 2"
+      },
+      "code": {
+        "term": "layer2"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zk": {
+    "term": "ZK",
+    "aliases": [
+      "Zero-knowledge",
+      "Bằng chứng không tri thức"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ZK"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ZK",
+        "example": "Công nghệ ZK cho phép xác minh giao dịch mà không cần tiết lộ chi tiết bên trong."
+      },
+      "heading": {
+        "term": "Zero-Knowledge (ZK)"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "ZK"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly kept as 'ZK' or 'Zero-knowledge' in Vietnamese tech circles."
+  },
+  "private key": {
+    "term": "Khóa riêng tư",
+    "aliases": [
+      "Khóa bí mật",
+      "Private key"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "khóa riêng tư"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "khóa riêng tư",
+        "example": "Bạn không bao giờ được tiết lộ khóa riêng tư của mình cho người khác."
+      },
+      "heading": {
+        "term": "Khóa riêng tư"
+      },
+      "tag": {
+        "term": "Bảo mật"
+      },
+      "ui": {
+        "term": "Khóa riêng tư"
+      },
+      "code": {
+        "term": "private_key"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "crypto": {
+    "term": "Tiền mã hóa",
+    "aliases": [
+      "Tiền điện tử",
+      "Crypto"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tiền mã hóa"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tiền mã hóa",
+        "example": "Sự phổ biến của tiền mã hóa đã thúc đẩy sự đổi mới trong hệ thống tài chính."
+      },
+      "heading": {
+        "term": "Tiền mã hóa"
+      },
+      "tag": {
+        "term": "Crypto"
+      },
+      "ui": {
+        "term": "Tiền mã hóa"
+      },
+      "code": {
+        "term": "crypto"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Tiền mã hóa' is more accurate than 'Tiền ảo' (virtual money) or 'Tiền điện tử' (electronic money)."
+  },
+  "layer 1 (l1)": {
+    "term": "Lớp 1 (L1)",
+    "aliases": [
+      "Layer 1",
+      "Giao thức lớp 1"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "lớp 1"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "lớp 1",
+        "example": "Ethereum là một giao thức lớp 1 cung cấp nền tảng cho các ứng dụng phi tập trung."
+      },
+      "heading": {
+        "term": "Lớp 1 (L1)"
+      },
+      "tag": {
+        "term": "L1"
+      },
+      "ui": {
+        "term": "Lớp 1"
+      },
+      "code": {
+        "term": "layer1"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "maximal extractable value (mev)": {
+    "term": "Giá trị tối đa có thể chiết xuất (MEV)",
+    "aliases": [
+      "MEV"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "giá trị tối đa có thể chiết xuất"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "giá trị tối đa có thể chiết xuất",
+        "example": "MEV đề cập đến lợi nhuận tối đa mà người khai thác hoặc người xác thực có thể thu được."
+      },
+      "heading": {
+        "term": "Maximal Extractable Value (MEV)"
+      },
+      "tag": {
+        "term": "MEV"
+      },
+      "ui": {
+        "term": "MEV"
+      },
+      "code": {
+        "term": "mev"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "exit": {
+    "term": "Thoát",
+    "aliases": [
+      "Rút khỏi",
+      "Lệnh thoát"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "lệnh thoát"
+      },
+      "verb": {
+        "infinitive": "thoát",
+        "participle": "đang thoát"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": "không thoát",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "thoát",
+        "example": "Người xác thực có thể thực hiện lệnh thoát để ngừng tham gia vào mạng lưới."
+      },
+      "heading": {
+        "term": "Thoát"
+      },
+      "tag": {
+        "term": "Thoát"
+      },
+      "ui": {
+        "term": "Rút/Thoát"
+      },
+      "code": {
+        "term": "exit"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In staking context, 'thoát' refers to leaving the validator set."
+  },
+  "opcode": {
+    "term": "Mã lệnh (opcode)",
+    "aliases": [
+      "Opcode",
+      "Mã vận hành"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mã lệnh"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mã lệnh",
+        "example": "EVM thực thi các hợp đồng thông minh thông qua một tập hợp các mã lệnh."
+      },
+      "heading": {
+        "term": "Mã lệnh (Opcode)"
+      },
+      "tag": {
+        "term": "Opcode"
+      },
+      "ui": {
+        "term": "Mã lệnh"
+      },
+      "code": {
+        "term": "opcode"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized finance (defi)": {
+    "term": "Tài chính phi tập trung (DeFi)",
+    "aliases": [
+      "DeFi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tài chính phi tập trung"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tài chính phi tập trung",
+        "example": "DeFi mở ra cơ hội tiếp cận các dịch vụ tài chính mà không cần qua trung gian."
+      },
+      "heading": {
+        "term": "Tài chính phi tập trung (DeFi)"
+      },
+      "tag": {
+        "term": "DeFi"
+      },
+      "ui": {
+        "term": "DeFi"
+      },
+      "code": {
+        "term": "defi"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "privacy": {
+    "term": "quyền riêng tư",
+    "aliases": [
+      "tính riêng tư",
+      "sự riêng tư"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "quyền riêng tư"
+      },
+      "verb": null,
+      "adjective": "riêng tư",
+      "agent": null,
+      "negation": "mất quyền riêng tư",
+      "compounds": {
+        "privacy-preserving": "bảo vệ quyền riêng tư"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "quyền riêng tư",
+        "example": "Quyền riêng tư là một khía cạnh quan trọng của các giao dịch trên blockchain."
+      },
+      "heading": {
+        "term": "Quyền riêng tư"
+      },
+      "tag": {
+        "term": "Riêng tư"
+      },
+      "ui": {
+        "term": "Cài đặt quyền riêng tư"
+      },
+      "code": {
+        "term": "privacy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Vietnamese uses classifiers like 'quyền' (right) or 'tính' (property) to define the specific aspect of privacy."
+  },
+  "optimistic rollup": {
+    "term": "Optimistic rollup",
+    "aliases": [
+      "bản tổng hợp lạc quan",
+      "rollup lạc quan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Optimistic rollup"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Optimistic rollup",
+        "example": "Optimistic rollup giúp mở rộng quy mô Ethereum bằng cách giả định các giao dịch là hợp lệ theo mặc định."
+      },
+      "heading": {
+        "term": "Optimistic Rollup"
+      },
+      "tag": {
+        "term": "Lớp 2"
+      },
+      "ui": {
+        "term": "Optimistic Rollup"
+      },
+      "code": {
+        "term": "optimisticRollup"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical terms like 'rollup' are usually kept in English in Vietnamese developer communities to avoid confusion."
+  },
+  "ethereum request for comments (erc)": {
+    "term": "Yêu cầu nhận xét Ethereum (ERC)",
+    "aliases": [
+      "Ethereum Request for Comments",
+      "ERC"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Yêu cầu nhận xét Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ERC",
+        "example": "ERC-20 là một tiêu chuẩn Ethereum Request for Comments phổ biến cho các token có thể thay thế."
+      },
+      "heading": {
+        "term": "Yêu cầu nhận xét Ethereum (ERC)"
+      },
+      "tag": {
+        "term": "Tiêu chuẩn"
+      },
+      "ui": {
+        "term": "ERC"
+      },
+      "code": {
+        "term": "erc"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "plasma": {
+    "term": "Plasma",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Plasma"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Plasma",
+        "example": "Plasma là một giải pháp mở rộng quy mô ngoại chuỗi sử dụng các chuỗi con để giảm tải cho chuỗi chính."
+      },
+      "heading": {
+        "term": "Plasma"
+      },
+      "tag": {
+        "term": "Scaling"
+      },
+      "ui": {
+        "term": "Plasma"
+      },
+      "code": {
+        "term": "plasma"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Kept as a technical proper noun."
+  },
+  "library": {
+    "term": "thư viện",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "thư viện"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "smart-contract-library": "thư viện hợp đồng thông minh"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "thư viện",
+        "example": "Sử dụng thư viện trong Solidity giúp giảm chi phí gas và tái sử dụng mã nguồn hiệu quả."
+      },
+      "heading": {
+        "term": "Thư viện"
+      },
+      "tag": {
+        "term": "Phát triển"
+      },
+      "ui": {
+        "term": "Thư viện"
+      },
+      "code": {
+        "term": "library"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "the merge": {
+    "term": "The Merge",
+    "aliases": [
+      "Hợp nhất"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "The Merge"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "The Merge",
+        "example": "The Merge đánh dấu sự chuyển đổi lịch sử của Ethereum sang cơ chế đồng thuận Proof-of-Stake."
+      },
+      "heading": {
+        "term": "The Merge"
+      },
+      "tag": {
+        "term": "Sự kiện"
+      },
+      "ui": {
+        "term": "The Merge"
+      },
+      "code": {
+        "term": "theMerge"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper name for the specific Ethereum protocol upgrade."
+  },
+  "zero-knowledge proof": {
+    "term": "bằng chứng không tri thức",
+    "aliases": [
+      "bằng chứng không tiết lộ thông tin",
+      "ZKP"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "bằng chứng không tri thức"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "bằng chứng không tri thức",
+        "example": "Bằng chứng không tri thức cho phép một bên chứng minh với bên khác rằng một tuyên bố là đúng mà không cần tiết lộ thông tin đó."
+      },
+      "heading": {
+        "term": "Bằng chứng không tri thức"
+      },
+      "tag": {
+        "term": "Mật mã học"
+      },
+      "ui": {
+        "term": "ZKP"
+      },
+      "code": {
+        "term": "zkProof"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Không tri thức' is the literal academic translation of 'Zero-knowledge'."
+  },
+  "data availability": {
+    "term": "tính khả dụng của dữ liệu",
+    "aliases": [
+      "sự sẵn có của dữ liệu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tính khả dụng của dữ liệu"
+      },
+      "verb": null,
+      "adjective": "khả dụng",
+      "agent": null,
+      "negation": "không khả dụng của dữ liệu",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tính khả dụng của dữ liệu",
+        "example": "Tính khả dụng của dữ liệu là yếu tố then chốt để đảm bảo tính bảo mật của các giải pháp lớp 2."
+      },
+      "heading": {
+        "term": "Tính khả dụng của dữ liệu"
+      },
+      "tag": {
+        "term": "Dữ liệu"
+      },
+      "ui": {
+        "term": "Khả dụng dữ liệu"
+      },
+      "code": {
+        "term": "dataAvailability"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "log": {
+    "term": "nhật ký",
+    "aliases": [
+      "bản ghi",
+      "log"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nhật ký"
+      },
+      "verb": {
+        "infinitive": "ghi nhật ký",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "event-log": "nhật ký sự kiện"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "nhật ký",
+        "example": "Các hợp đồng thông minh phát ra các sự kiện được lưu trữ trong nhật ký của blockchain."
+      },
+      "heading": {
+        "term": "Nhật ký"
+      },
+      "tag": {
+        "term": "Logs"
+      },
+      "ui": {
+        "term": "Xem nhật ký"
+      },
+      "code": {
+        "term": "log"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "beacon chain": {
+    "term": "Beacon Chain",
+    "aliases": [
+      "chuỗi Beacon"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Beacon Chain"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Beacon Chain",
+        "example": "Beacon Chain giới thiệu Proof-of-Stake cho hệ sinh thái Ethereum."
+      },
+      "heading": {
+        "term": "Beacon Chain"
+      },
+      "tag": {
+        "term": "Đồng thuận"
+      },
+      "ui": {
+        "term": "Beacon Chain"
+      },
+      "code": {
+        "term": "beaconChain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "liquidity": {
+    "term": "thanh khoản",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "thanh khoản"
+      },
+      "verb": null,
+      "adjective": "thanh khoản",
+      "agent": null,
+      "negation": "vô thanh khoản",
+      "compounds": {
+        "liquidity-provider": "nhà cung cấp thanh khoản",
+        "liquidity-pool": "bể thanh khoản"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "thanh khoản",
+        "example": "Cung cấp thanh khoản giúp giảm trượt giá khi giao dịch trên các sàn phi tập trung."
+      },
+      "heading": {
+        "term": "Thanh khoản"
+      },
+      "tag": {
+        "term": "Thanh khoản"
+      },
+      "ui": {
+        "term": "Thanh khoản"
+      },
+      "code": {
+        "term": "liquidity"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Vietnamese uses the same form for singular and plural."
+  },
+  "epoch": {
+    "term": "epoch",
+    "aliases": [
+      "kỷ nguyên"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "epoch"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "epoch",
+        "example": "Trong Ethereum, một epoch bao gồm 32 slot và kéo dài khoảng 6,4 phút."
+      },
+      "heading": {
+        "term": "Epoch"
+      },
+      "tag": {
+        "term": "Epoch"
+      },
+      "ui": {
+        "term": "Epoch"
+      },
+      "code": {
+        "term": "epoch"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The technical term 'epoch' is preferred over 'kỷ nguyên' in blockchain contexts."
+  },
+  "ethereum mainnet": {
+    "term": "Ethereum Mainnet",
+    "aliases": [
+      "mạng chính Ethereum"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Mainnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Mainnet",
+        "example": "Giao dịch này đã được xác nhận thành công trên Ethereum Mainnet."
+      },
+      "heading": {
+        "term": "Ethereum Mainnet"
+      },
+      "tag": {
+        "term": "Mainnet"
+      },
+      "ui": {
+        "term": "Ethereum Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "proposal": {
+    "term": "đề xuất",
+    "aliases": [
+      "bản đề xuất"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "đề xuất"
+      },
+      "verb": {
+        "infinitive": "đề xuất",
+        "participle": "đang đề xuất"
+      },
+      "adjective": null,
+      "agent": "người đề xuất",
+      "negation": null,
+      "compounds": {
+        "governance-proposal": "đề xuất quản trị"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "đề xuất",
+        "example": "Cộng đồng đang tiến hành bỏ phiếu cho đề xuất cải tiến Ethereum mới."
+      },
+      "heading": {
+        "term": "Đề xuất"
+      },
+      "tag": {
+        "term": "Đề xuất"
+      },
+      "ui": {
+        "term": "Gửi đề xuất"
+      },
+      "code": {
+        "term": "proposal"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block proposer": {
+    "term": "người đề xuất khối",
+    "aliases": [
+      "block proposer"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "người đề xuất khối"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "người đề xuất khối",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "người đề xuất khối",
+        "example": "Thuật toán sẽ chọn ngẫu nhiên một trình xác thực làm người đề xuất khối cho mỗi slot."
+      },
+      "heading": {
+        "term": "Người đề xuất khối"
+      },
+      "tag": {
+        "term": "Người đề xuất"
+      },
+      "ui": {
+        "term": "Người đề xuất khối"
+      },
+      "code": {
+        "term": "block_proposer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus layer": {
+    "term": "lớp đồng thuận",
+    "aliases": [
+      "consensus layer"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "lớp đồng thuận"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "lớp đồng thuận",
+        "example": "Lớp đồng thuận điều hành mạng lưới các trình xác thực và cơ chế Proof-of-Stake."
+      },
+      "heading": {
+        "term": "Lớp đồng thuận"
+      },
+      "tag": {
+        "term": "Đồng thuận"
+      },
+      "ui": {
+        "term": "Lớp đồng thuận"
+      },
+      "code": {
+        "term": "consensus_layer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "peer": {
+    "term": "máy ngang hàng",
+    "aliases": [
+      "nút đồng đẳng",
+      "peer"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "máy ngang hàng"
+      },
+      "verb": null,
+      "adjective": "ngang hàng",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "peer-to-peer": "mạng ngang hàng"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "máy ngang hàng",
+        "example": "Nút của bạn đang cố gắng kết nối với các máy ngang hàng khác để đồng bộ hóa chuỗi khối."
+      },
+      "heading": {
+        "term": "Máy ngang hàng"
+      },
+      "tag": {
+        "term": "Peer"
+      },
+      "ui": {
+        "term": "Danh sách Peer"
+      },
+      "code": {
+        "term": "peer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "json-rpc": {
+    "term": "JSON-RPC",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "JSON-RPC"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "JSON-RPC",
+        "example": "Các ứng dụng tương tác với nút Ethereum thông qua giao thức JSON-RPC."
+      },
+      "heading": {
+        "term": "JSON-RPC"
+      },
+      "tag": {
+        "term": "Giao thức"
+      },
+      "ui": {
+        "term": "Cổng JSON-RPC"
+      },
+      "code": {
+        "term": "jsonrpc"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "nonce": {
+    "term": "nonce",
+    "aliases": [
+      "số dùng một lần"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nonce"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "nonce",
+        "example": "Mỗi giao dịch gửi từ một địa chỉ phải có giá trị nonce tăng dần để tránh tấn công lặp lại."
+      },
+      "heading": {
+        "term": "Nonce"
+      },
+      "tag": {
+        "term": "Nonce"
+      },
+      "ui": {
+        "term": "Số nonce"
+      },
+      "code": {
+        "term": "nonce"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Ethereum transactions, nonce specifically refers to the transaction count of an account."
+  },
+  "ipfs": {
+    "term": "IPFS",
+    "aliases": [
+      "Hệ thống tệp liên hành tinh"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "IPFS"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "IPFS",
+        "example": "Dữ liệu NFT thường được lưu trữ phi tập trung trên IPFS."
+      },
+      "heading": {
+        "term": "IPFS"
+      },
+      "tag": {
+        "term": "Lưu trữ"
+      },
+      "ui": {
+        "term": "Tải lên IPFS"
+      },
+      "code": {
+        "term": "ipfs"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "full node": {
+    "term": "nút đầy đủ",
+    "aliases": [
+      "full node",
+      "nút lưu trữ đầy đủ"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nút đầy đủ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "light-node": "nút nhẹ"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "nút đầy đủ",
+        "example": "Một nút đầy đủ tải xuống và xác minh độc lập mọi khối trên Ethereum."
+      },
+      "heading": {
+        "term": "Nút đầy đủ"
+      },
+      "tag": {
+        "term": "Nút đầy đủ"
+      },
+      "ui": {
+        "term": "Nút đầy đủ"
+      },
+      "code": {
+        "term": "full node"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'full node' is also frequently used in technical Vietnamese discourse."
+  },
+  "zero-knowledge": {
+    "term": "không kiến thức",
+    "aliases": [
+      "zero-knowledge",
+      "bằng chứng không kiến thức",
+      "ZK"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "không kiến thức"
+      },
+      "verb": null,
+      "adjective": "không kiến thức",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-proof": "bằng chứng không kiến thức",
+        "zk-rollup": "zk-rollup"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "không kiến thức",
+        "example": "Bằng chứng không kiến thức cho phép xác minh thông tin mà không cần tiết lộ thông tin đó."
+      },
+      "heading": {
+        "term": "Không kiến thức"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "Không kiến thức"
+      },
+      "code": {
+        "term": "zero-knowledge"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually used within the phrase 'bằng chứng không kiến thức' (zero-knowledge proof)."
+  },
+  "hardhat": {
+    "term": "Hardhat",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Hardhat"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Hardhat",
+        "example": "Hardhat là một môi trường phát triển để biên dịch, triển khai và kiểm tra các hợp đồng thông minh."
+      },
+      "heading": {
+        "term": "Hardhat"
+      },
+      "tag": {
+        "term": "Hardhat"
+      },
+      "ui": {
+        "term": "Hardhat"
+      },
+      "code": {
+        "term": "hardhat"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun; stays untranslated."
+  },
+  "checkpoint": {
+    "term": "điểm kiểm soát",
+    "aliases": [
+      "checkpoint",
+      "điểm chốt"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "điểm kiểm soát"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "điểm kiểm soát",
+        "example": "Trong cơ chế đồng thuận Casper, các điểm kiểm soát được sử dụng để hoàn tất các khối."
+      },
+      "heading": {
+        "term": "Điểm kiểm soát"
+      },
+      "tag": {
+        "term": "Điểm kiểm soát"
+      },
+      "ui": {
+        "term": "Điểm kiểm soát"
+      },
+      "code": {
+        "term": "checkpoint"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "'Điểm chốt' is often used specifically in consensus context for finality points."
+  }
+}

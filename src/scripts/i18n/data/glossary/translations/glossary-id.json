@@ -1,0 +1,4278 @@
+{
+  "attestation": {
+    "term": "Atestasi",
+    "aliases": [
+      "Pernyataan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "atestasi"
+      },
+      "verb": {
+        "infinitive": "mengatestasi",
+        "participle": "pengatestasian"
+      },
+      "adjective": null,
+      "agent": "atestor",
+      "negation": null,
+      "compounds": {
+        "consensus-attestation": "atestasi konsensus"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "atestasi",
+        "example": "Validator memberikan atestasi untuk memvalidasi bahwa sebuah blok adalah valid."
+      },
+      "heading": {
+        "term": "Atestasi"
+      },
+      "tag": {
+        "term": "Atestasi"
+      },
+      "ui": {
+        "term": "Kirim Atestasi"
+      },
+      "code": {
+        "term": "attestation"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "bridge": {
+    "term": "Jembatan",
+    "aliases": [
+      "Bridge"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "jembatan"
+      },
+      "verb": {
+        "infinitive": "menjembatani",
+        "participle": "penjembatanan"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "cross-chain-bridge": "jembatan lintas rantai"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "jembatan",
+        "example": "Jembatan memungkinkan Anda untuk memindahkan aset dari satu jaringan ke jaringan lainnya."
+      },
+      "heading": {
+        "term": "Jembatan"
+      },
+      "tag": {
+        "term": "Jembatan"
+      },
+      "ui": {
+        "term": "Gunakan Jembatan"
+      },
+      "code": {
+        "term": "bridge"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used in technical contexts as 'Bridge' but 'Jembatan' is the canonical translation."
+  },
+  "decentralization": {
+    "term": "Desentralisasi",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "desentralisasi"
+      },
+      "verb": null,
+      "adjective": "terdesentralisasi",
+      "agent": null,
+      "negation": "sentralisasi",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "desentralisasi",
+        "example": "Desentralisasi adalah aspek fundamental yang membuat Ethereum tahan terhadap sensor."
+      },
+      "heading": {
+        "term": "Desentralisasi"
+      },
+      "tag": {
+        "term": "Desentralisasi"
+      },
+      "ui": {
+        "term": "Desentralisasi"
+      },
+      "code": {
+        "term": "decentralization"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized": {
+    "term": "Terdesentralisasi",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": "desentralisasi",
+      "verb": {
+        "infinitive": "mendesentralisasikan",
+        "participle": "pendesentralisasian"
+      },
+      "adjective": "terdesentralisasi",
+      "agent": null,
+      "negation": "tersentralisasi",
+      "compounds": {
+        "decentralized-application": "aplikasi terdesentralisasi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "terdesentralisasi",
+        "example": "Aplikasi terdesentralisasi berjalan di jaringan blockchain tanpa otoritas pusat."
+      },
+      "heading": {
+        "term": "Terdesentralisasi"
+      },
+      "tag": {
+        "term": "Terdesentralisasi"
+      },
+      "ui": {
+        "term": "Terdesentralisasi"
+      },
+      "code": {
+        "term": "decentralized"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "deploy": {
+    "term": "Menerapkan",
+    "aliases": [
+      "Meluncurkan",
+      "Deploy"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "penerapan"
+      },
+      "verb": {
+        "infinitive": "menerapkan",
+        "participle": "penerapan"
+      },
+      "adjective": null,
+      "agent": "penerap",
+      "negation": null,
+      "compounds": {
+        "contract-deployment": "penerapan kontrak"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "menerapkan",
+        "example": "Pengembang perlu membayar biaya gas untuk menerapkan kontrak pintar ke jaringan utama."
+      },
+      "heading": {
+        "term": "Terapkan"
+      },
+      "tag": {
+        "term": "Penerapan"
+      },
+      "ui": {
+        "term": "Terapkan Kontrak"
+      },
+      "code": {
+        "term": "deploy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'Deploy' is common in technical ID, 'Menerapkan' is the formal software engineering term."
+  },
+  "finality": {
+    "term": "Finalitas",
+    "aliases": [
+      "Kepastian"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "finalitas"
+      },
+      "verb": {
+        "infinitive": "memfinalisasi",
+        "participle": "finalisasi"
+      },
+      "adjective": "final",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "economic-finality": "finalitas ekonomi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "finalitas",
+        "example": "Finalitas menjamin bahwa transaksi tidak akan pernah dibatalkan atau diubah."
+      },
+      "heading": {
+        "term": "Finalitas"
+      },
+      "tag": {
+        "term": "Finalitas"
+      },
+      "ui": {
+        "term": "Status Finalitas"
+      },
+      "code": {
+        "term": "finality"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "fork": {
+    "term": "Fork",
+    "aliases": [
+      "Percabangan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "fork"
+      },
+      "verb": {
+        "infinitive": "melakukan fork",
+        "participle": "percabangan"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hard-fork": "hard fork",
+        "soft-fork": "soft fork"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "fork",
+        "example": "Pembaruan protokol utama sering kali dilakukan melalui hard fork yang direncanakan."
+      },
+      "heading": {
+        "term": "Fork"
+      },
+      "tag": {
+        "term": "Fork"
+      },
+      "ui": {
+        "term": "Fork Jaringan"
+      },
+      "code": {
+        "term": "fork"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical users almost exclusively use 'Fork', though 'Percabangan' is the direct translation."
+  },
+  "governance": {
+    "term": "Tata kelola",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tata kelola"
+      },
+      "verb": {
+        "infinitive": "mengelola",
+        "participle": "pengelolaan"
+      },
+      "adjective": null,
+      "agent": "pengelola",
+      "negation": null,
+      "compounds": {
+        "onchain-governance": "tata kelola onchain"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "tata kelola",
+        "example": "Tata kelola onchain memungkinkan pemegang token untuk memberikan suara pada usulan perubahan protokol."
+      },
+      "heading": {
+        "term": "Tata Kelola"
+      },
+      "tag": {
+        "term": "Tata Kelola"
+      },
+      "ui": {
+        "term": "Portal Tata Kelola"
+      },
+      "code": {
+        "term": "governance"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "hash": {
+    "term": "Hash",
+    "aliases": [
+      "Fungsi hash"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "hash"
+      },
+      "verb": {
+        "infinitive": "melakukan hashing",
+        "participle": "peng-hash-an"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hash-function": "fungsi hash",
+        "transaction-hash": "hash transaksi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "hash",
+        "example": "Hash adalah sidik jari digital unik yang dihasilkan oleh algoritma kriptografi."
+      },
+      "heading": {
+        "term": "Hash"
+      },
+      "tag": {
+        "term": "Hash"
+      },
+      "ui": {
+        "term": "ID Hash"
+      },
+      "code": {
+        "term": "hash"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Loanword from English is the standard technical term in Indonesian."
+  },
+  "miner": {
+    "term": "penambang",
+    "aliases": [
+      "miner"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "penambang"
+      },
+      "verb": {
+        "infinitive": "menambang",
+        "participle": "menambang"
+      },
+      "adjective": null,
+      "agent": "penambang",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "penambang",
+        "example": "Penambang menggunakan daya komputasi untuk mengamankan jaringan."
+      },
+      "heading": {
+        "term": "Penambang"
+      },
+      "tag": {
+        "term": "Penambang"
+      },
+      "ui": {
+        "term": "Penambang"
+      },
+      "code": {
+        "term": "miner"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mining": {
+    "term": "penambangan",
+    "aliases": [
+      "mining"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "penambangan"
+      },
+      "verb": {
+        "infinitive": "menambang",
+        "participle": "menambang"
+      },
+      "adjective": null,
+      "agent": "penambang",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "penambangan",
+        "example": "Penambangan blok baru memerlukan konsensus dari seluruh node jaringan."
+      },
+      "heading": {
+        "term": "Penambangan"
+      },
+      "tag": {
+        "term": "Penambangan"
+      },
+      "ui": {
+        "term": "Penambangan"
+      },
+      "code": {
+        "term": "mining"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mint": {
+    "term": "mencetak",
+    "aliases": [
+      "pencetakan",
+      "minting"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "pencetakan"
+      },
+      "verb": {
+        "infinitive": "mencetak",
+        "participle": "mencetak"
+      },
+      "adjective": null,
+      "agent": "pencetak",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mencetak",
+        "example": "Anda dapat mencetak token baru dengan memicu fungsi kontrak pintar ini."
+      },
+      "heading": {
+        "term": "Mencetak"
+      },
+      "tag": {
+        "term": "Mencetak"
+      },
+      "ui": {
+        "term": "Cetak"
+      },
+      "code": {
+        "term": "mint"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "signature": {
+    "term": "tanda tangan",
+    "aliases": [
+      "tanda tangan digital"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "tanda tangan"
+      },
+      "verb": {
+        "infinitive": "menandatangani",
+        "participle": "menandatangani"
+      },
+      "adjective": null,
+      "agent": "penandatangan",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "tanda tangan",
+        "example": "Pastikan Anda memverifikasi tanda tangan kriptografi sebelum memproses transaksi."
+      },
+      "heading": {
+        "term": "Tanda Tangan"
+      },
+      "tag": {
+        "term": "Tanda Tangan"
+      },
+      "ui": {
+        "term": "Tanda Tangan"
+      },
+      "code": {
+        "term": "signature"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "stake": {
+    "term": "stake",
+    "aliases": [
+      "mempertaruhkan",
+      "taruhan",
+      "simpanan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "stake"
+      },
+      "verb": {
+        "infinitive": "menaruh stake",
+        "participle": "staking"
+      },
+      "adjective": null,
+      "agent": "staker",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "stake",
+        "example": "Untuk menjadi validator, Anda harus menyetor stake sebesar 32 ETH."
+      },
+      "heading": {
+        "term": "Stake"
+      },
+      "tag": {
+        "term": "Stake"
+      },
+      "ui": {
+        "term": "Stake"
+      },
+      "code": {
+        "term": "stake"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "English term is widely used in Indonesian crypto communities to avoid confusion with literal 'betting'."
+  },
+  "staked": {
+    "term": "dipertaruhkan",
+    "aliases": [
+      "di-stake",
+      "ter-stake"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "mempertaruhkan",
+        "participle": "dipertaruhkan"
+      },
+      "adjective": "dipertaruhkan",
+      "agent": null,
+      "negation": "tidak dipertaruhkan",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "dipertaruhkan",
+        "example": "Saldo ETH yang dipertaruhkan tidak dapat ditarik secara instan."
+      },
+      "heading": {
+        "term": "Dipertaruhkan"
+      },
+      "tag": {
+        "term": "Ter-stake"
+      },
+      "ui": {
+        "term": "Di-stake"
+      },
+      "code": {
+        "term": "staked"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staker": {
+    "term": "staker",
+    "aliases": [
+      "penaruh stake",
+      "penyetor stake"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "staker"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "staker",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "staker",
+        "example": "Setiap staker berhak mendapatkan imbalan atas perannya dalam validasi."
+      },
+      "heading": {
+        "term": "Staker"
+      },
+      "tag": {
+        "term": "Staker"
+      },
+      "ui": {
+        "term": "Staker"
+      },
+      "code": {
+        "term": "staker"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staking": {
+    "term": "staking",
+    "aliases": [
+      "mempertaruhkan aset"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "staking"
+      },
+      "verb": {
+        "infinitive": "melakukan staking",
+        "participle": "staking"
+      },
+      "adjective": null,
+      "agent": "staker",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "staking",
+        "example": "Layanan staking memungkinkan pengguna kecil untuk bergabung dalam pool validator."
+      },
+      "heading": {
+        "term": "Staking"
+      },
+      "tag": {
+        "term": "Staking"
+      },
+      "ui": {
+        "term": "Staking"
+      },
+      "code": {
+        "term": "staking"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "swap": {
+    "term": "tukar",
+    "aliases": [
+      "swap",
+      "pertukaran"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "pertukaran"
+      },
+      "verb": {
+        "infinitive": "menukar",
+        "participle": "menukar"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "menukar",
+        "example": "Fitur swap memungkinkan Anda menukar token tanpa perlu buku pesanan."
+      },
+      "heading": {
+        "term": "Tukar"
+      },
+      "tag": {
+        "term": "Tukar"
+      },
+      "ui": {
+        "term": "Tukar"
+      },
+      "code": {
+        "term": "swap"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transaction": {
+    "term": "transaksi",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "transaksi"
+      },
+      "verb": {
+        "infinitive": "bertransaksi",
+        "participle": "bertransaksi"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "transaksi",
+        "example": "Setiap transaksi yang masuk ke blockchain bersifat permanen dan tidak dapat diubah."
+      },
+      "heading": {
+        "term": "Transaksi"
+      },
+      "tag": {
+        "term": "Transaksi"
+      },
+      "ui": {
+        "term": "Transaksi"
+      },
+      "code": {
+        "term": "transaction"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "validator": {
+    "term": "Validator",
+    "aliases": [
+      "Validatór"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Validator"
+      },
+      "verb": {
+        "infinitive": "memvalidasi",
+        "participle": "memvalidasi"
+      },
+      "adjective": null,
+      "agent": "Validator",
+      "negation": null,
+      "compounds": {
+        "validator-set": "set validator"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "validator",
+        "example": "Validator bertanggung jawab untuk mengusulkan blok baru ke jaringan."
+      },
+      "heading": {
+        "term": "Validator"
+      },
+      "tag": {
+        "term": "Validator"
+      },
+      "ui": {
+        "term": "Validator"
+      },
+      "code": {
+        "term": "validator"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used in technical Indonesian context without translation."
+  },
+  "vote": {
+    "term": "Suara",
+    "aliases": [
+      "Pilih"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Suara"
+      },
+      "verb": {
+        "infinitive": "memilih",
+        "participle": "memilih"
+      },
+      "adjective": null,
+      "agent": "Pemilih",
+      "negation": null,
+      "compounds": {
+        "vote-weight": "bobot suara"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "suara",
+        "example": "Setiap pemegang token dapat memberikan suara pada proposal tata kelola."
+      },
+      "heading": {
+        "term": "Berikan Suara"
+      },
+      "tag": {
+        "term": "Suara"
+      },
+      "ui": {
+        "term": "Pilih"
+      },
+      "code": {
+        "term": "vote"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "voting": {
+    "term": "Pemungutan suara",
+    "aliases": [
+      "Voting"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Pemungutan suara"
+      },
+      "verb": {
+        "infinitive": "melakukan pemungutan suara",
+        "participle": "melakukan pemungutan suara"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "voting-power": "kekuatan pemungutan suara"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "pemungutan suara",
+        "example": "Pemungutan suara akan berakhir dalam tiga hari."
+      },
+      "heading": {
+        "term": "Pemungutan Suara"
+      },
+      "tag": {
+        "term": "Voting"
+      },
+      "ui": {
+        "term": "Voting"
+      },
+      "code": {
+        "term": "voting"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum": {
+    "term": "Ethereum",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "ethereum-network": "jaringan Ethereum"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum",
+        "example": "Ethereum adalah platform global untuk aplikasi terdesentralisasi."
+      },
+      "heading": {
+        "term": "Apa itu Ethereum?"
+      },
+      "tag": {
+        "term": "Ethereum"
+      },
+      "ui": {
+        "term": "Ethereum"
+      },
+      "code": {
+        "term": "ethereum"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, remains unchanged."
+  },
+  "contract": {
+    "term": "Kontrak",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Kontrak"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "contract-address": "alamat kontrak"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "kontrak",
+        "example": "Kontrak ini mengatur bagaimana token didistribusikan."
+      },
+      "heading": {
+        "term": "Kontrak"
+      },
+      "tag": {
+        "term": "Kontrak"
+      },
+      "ui": {
+        "term": "Lihat Kontrak"
+      },
+      "code": {
+        "term": "contract"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block": {
+    "term": "Blok",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Blok"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "block-height": "tinggi blok",
+        "block-time": "waktu blok"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "blok",
+        "example": "Setiap blok berisi daftar transaksi yang telah dikonfirmasi."
+      },
+      "heading": {
+        "term": "Eksplorasi Blok"
+      },
+      "tag": {
+        "term": "Blok"
+      },
+      "ui": {
+        "term": "Blok"
+      },
+      "code": {
+        "term": "block"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "smart contract": {
+    "term": "Kontrak pintar",
+    "aliases": [
+      "Smart contract"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Kontrak pintar"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "smart-contract-vulnerability": "kerentanan kontrak pintar"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "kontrak pintar",
+        "example": "Kontrak pintar memungkinkan transaksi tanpa perantara."
+      },
+      "heading": {
+        "term": "Panduan Kontrak Pintar"
+      },
+      "tag": {
+        "term": "Kontrak Pintar"
+      },
+      "ui": {
+        "term": "Gunakan Kontrak Pintar"
+      },
+      "code": {
+        "term": "smartContract"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "node": {
+    "term": "Node",
+    "aliases": [
+      "Simpul"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Node"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node": "node penuh"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "node",
+        "example": "Menjalankan node Anda sendiri meningkatkan keamanan jaringan."
+      },
+      "heading": {
+        "term": "Menjalankan Node"
+      },
+      "tag": {
+        "term": "Node"
+      },
+      "ui": {
+        "term": "Node"
+      },
+      "code": {
+        "term": "node"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Node' is preferred over 'Simpul' in modern tech contexts."
+  },
+  "token": {
+    "term": "Token",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Token"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-balance": "saldo token"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "token",
+        "example": "Anda dapat mengirim token ini ke alamat dompet mana pun."
+      },
+      "heading": {
+        "term": "Daftar Token"
+      },
+      "tag": {
+        "term": "Token"
+      },
+      "ui": {
+        "term": "Kirim Token"
+      },
+      "code": {
+        "term": "token"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "address": {
+    "term": "Alamat",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Alamat"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "wallet-address": "alamat dompet"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "alamat",
+        "example": "Periksa kembali alamat penerima sebelum mengirim dana."
+      },
+      "heading": {
+        "term": "Detail Alamat"
+      },
+      "tag": {
+        "term": "Alamat"
+      },
+      "ui": {
+        "term": "Salin Alamat"
+      },
+      "code": {
+        "term": "address"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "eth": {
+    "term": "ETH",
+    "aliases": [
+      "Ether"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ETH"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ETH",
+        "example": "ETH digunakan untuk membayar biaya transaksi di jaringan Ethereum."
+      },
+      "heading": {
+        "term": "ETH"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "ETH"
+      },
+      "code": {
+        "term": "ETH"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "blockchain": {
+    "term": "rantai blok",
+    "aliases": [
+      "blockchain"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "rantai blok"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "rantai blok",
+        "example": "Data dalam rantai blok bersifat publik dan tidak dapat diubah."
+      },
+      "heading": {
+        "term": "Rantai Blok"
+      },
+      "tag": {
+        "term": "Rantai Blok"
+      },
+      "ui": {
+        "term": "Rantai Blok"
+      },
+      "code": {
+        "term": "blockchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "English term 'blockchain' is very commonly used in Indonesian technical contexts."
+  },
+  "account": {
+    "term": "akun",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "akun"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "akun",
+        "example": "Setiap akun Ethereum memiliki alamat unik dan saldo ETH."
+      },
+      "heading": {
+        "term": "Akun"
+      },
+      "tag": {
+        "term": "Akun"
+      },
+      "ui": {
+        "term": "Akun"
+      },
+      "code": {
+        "term": "account"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "chain": {
+    "term": "rantai",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "rantai"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "rantai",
+        "example": "Node menyinkronkan data untuk memastikan mereka memiliki versi rantai yang sama."
+      },
+      "heading": {
+        "term": "Rantai"
+      },
+      "tag": {
+        "term": "Rantai"
+      },
+      "ui": {
+        "term": "Rantai"
+      },
+      "code": {
+        "term": "chain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "protocol": {
+    "term": "protokol",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "protokol"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "protokol",
+        "example": "Pembaruan protokol memerlukan konsensus dari komunitas Ethereum."
+      },
+      "heading": {
+        "term": "Protokol"
+      },
+      "tag": {
+        "term": "Protokol"
+      },
+      "ui": {
+        "term": "Protokol"
+      },
+      "code": {
+        "term": "protocol"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "wallet": {
+    "term": "dompet",
+    "aliases": [
+      "dompet kripto"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "dompet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "dompet",
+        "example": "Jangan pernah membagikan frasa pemulihan dompet Anda kepada siapa pun."
+      },
+      "heading": {
+        "term": "Dompet"
+      },
+      "tag": {
+        "term": "Dompet"
+      },
+      "ui": {
+        "term": "Dompet"
+      },
+      "code": {
+        "term": "wallet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "gas": {
+    "term": "gas",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "gas"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "gas",
+        "example": "Biaya gas meningkat ketika jaringan sedang sangat sibuk."
+      },
+      "heading": {
+        "term": "Gas"
+      },
+      "tag": {
+        "term": "Gas"
+      },
+      "ui": {
+        "term": "Gas"
+      },
+      "code": {
+        "term": "gas"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "rollup": {
+    "term": "rollup",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "rollup"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "rollup",
+        "example": "Rollup memungkinkan transaksi yang lebih cepat dan murah di Layer 2."
+      },
+      "heading": {
+        "term": "Rollup"
+      },
+      "tag": {
+        "term": "Rollup"
+      },
+      "ui": {
+        "term": "Rollup"
+      },
+      "code": {
+        "term": "rollup"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Typically kept as a loanword in Indonesian."
+  },
+  "ethereum improvement proposal (eip)": {
+    "term": "Ethereum Improvement Proposal (EIP)",
+    "aliases": [
+      "Proposal Peningkatan Ethereum"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Improvement Proposal (EIP)"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "EIP",
+        "example": "EIP-1559 memperkenalkan mekanisme pembakaran biaya untuk setiap transaksi."
+      },
+      "heading": {
+        "term": "Ethereum Improvement Proposal (EIP)"
+      },
+      "tag": {
+        "term": "EIP"
+      },
+      "ui": {
+        "term": "EIP"
+      },
+      "code": {
+        "term": "EIP"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually kept in English with the abbreviation EIP."
+  },
+  "require": {
+    "term": "mewajibkan",
+    "aliases": [
+      "require",
+      "membutuhkan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "mewajibkan",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mewajibkan",
+        "example": "Fungsi ini mewajibkan pemanggil untuk mengirimkan sejumlah ETH tertentu."
+      },
+      "heading": {
+        "term": "Mewajibkan"
+      },
+      "tag": {
+        "term": "Persyaratan"
+      },
+      "ui": {
+        "term": "Wajib"
+      },
+      "code": {
+        "term": "require"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In code context, 'require' is a function name and is not translated."
+  },
+  "web3": {
+    "term": "Web3",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Web3"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Web3",
+        "example": "Web3 memungkinkan pengguna untuk memiliki data dan identitas mereka sendiri tanpa bergantung pada otoritas pusat."
+      },
+      "heading": {
+        "term": "Web3"
+      },
+      "tag": {
+        "term": "Web3"
+      },
+      "ui": {
+        "term": "Web3"
+      },
+      "code": {
+        "term": "web3"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "solidity": {
+    "term": "Solidity",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Solidity"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Solidity",
+        "example": "Solidity adalah bahasa pemrograman berorientasi objek untuk menulis kontrak pintar di Ethereum."
+      },
+      "heading": {
+        "term": "Solidity"
+      },
+      "tag": {
+        "term": "Solidity"
+      },
+      "ui": {
+        "term": "Solidity"
+      },
+      "code": {
+        "term": "solidity"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "event": {
+    "term": "peristiwa",
+    "aliases": [
+      "event"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "peristiwa"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "peristiwa",
+        "example": "Kontrak pintar memicu peristiwa untuk mencatat aktivitas di blockchain yang dapat didengarkan oleh aplikasi luar."
+      },
+      "heading": {
+        "term": "Peristiwa"
+      },
+      "tag": {
+        "term": "Peristiwa"
+      },
+      "ui": {
+        "term": "Peristiwa"
+      },
+      "code": {
+        "term": "event"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In technical contexts, 'event' is often kept in English or used alongside 'peristiwa'."
+  },
+  "onchain": {
+    "term": "onchain",
+    "aliases": [
+      "di atas rantai",
+      "dalam rantai"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "onchain",
+      "agent": null,
+      "negation": "offchain",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "onchain",
+        "example": "Data transaksi yang disimpan secara onchain bersifat permanen dan tidak dapat diubah."
+      },
+      "heading": {
+        "term": "Onchain"
+      },
+      "tag": {
+        "term": "Onchain"
+      },
+      "ui": {
+        "term": "Onchain"
+      },
+      "code": {
+        "term": "onchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Indonesian tech community usually uses 'onchain' directly."
+  },
+  "ether": {
+    "term": "Ether",
+    "aliases": [
+      "ETH"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ether"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ether",
+        "example": "Ether adalah aset kripto asli yang digunakan untuk membayar biaya transaksi di jaringan Ethereum."
+      },
+      "heading": {
+        "term": "Ether"
+      },
+      "tag": {
+        "term": "Ether"
+      },
+      "ui": {
+        "term": "Ether"
+      },
+      "code": {
+        "term": "eth"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum virtual machine (evm)": {
+    "term": "Mesin Virtual Ethereum (EVM)",
+    "aliases": [
+      "Ethereum Virtual Machine",
+      "EVM"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mesin Virtual Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Mesin Virtual Ethereum (EVM)",
+        "example": "EVM adalah lingkungan komputasi yang mengeksekusi kode kontrak pintar di setiap node Ethereum."
+      },
+      "heading": {
+        "term": "Mesin Virtual Ethereum (EVM)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "EVM"
+      },
+      "code": {
+        "term": "evm"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized application (dapp)": {
+    "term": "aplikasi terdesentralisasi (dapp)",
+    "aliases": [
+      "decentralized application",
+      "dapp"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "aplikasi terdesentralisasi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "aplikasi terdesentralisasi (dapp)",
+        "example": "Dapp menggunakan kontrak pintar untuk memastikan logika aplikasi berjalan tanpa perantara."
+      },
+      "heading": {
+        "term": "Aplikasi Terdesentralisasi (dapp)"
+      },
+      "tag": {
+        "term": "Dapp"
+      },
+      "ui": {
+        "term": "Dapp"
+      },
+      "code": {
+        "term": "dapp"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "non-fungible token (nft)": {
+    "term": "token non-fungible (NFT)",
+    "aliases": [
+      "Non-fungible token",
+      "NFT"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "token non-fungible"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "token non-fungible (NFT)",
+        "example": "Setiap NFT memiliki pengidentifikasi unik yang membedakannya dari token lainnya."
+      },
+      "heading": {
+        "term": "Token Non-fungible (NFT)"
+      },
+      "tag": {
+        "term": "NFT"
+      },
+      "ui": {
+        "term": "NFT"
+      },
+      "code": {
+        "term": "nft"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "api": {
+    "term": "API",
+    "aliases": [
+      "Antarmuka Pemrograman Aplikasi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "API"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "API",
+        "example": "API memungkinkan aplikasi Anda berkomunikasi dengan node Ethereum untuk membaca data blockchain."
+      },
+      "heading": {
+        "term": "API"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "API"
+      },
+      "code": {
+        "term": "api"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transfer": {
+    "term": "transfer",
+    "aliases": [
+      "pengiriman",
+      "perpindahan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "transfer"
+      },
+      "verb": {
+        "infinitive": "mentransfer",
+        "participle": "ditransfer"
+      },
+      "adjective": null,
+      "agent": "pentransfer",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mentransfer",
+        "example": "Anda dapat mentransfer token ke alamat dompet mana pun di jaringan dengan biaya gas yang sesuai."
+      },
+      "heading": {
+        "term": "Transfer"
+      },
+      "tag": {
+        "term": "Transfer"
+      },
+      "ui": {
+        "term": "Transfer"
+      },
+      "code": {
+        "term": "transfer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "withdrawal": {
+    "term": "penarikan",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "penarikan"
+      },
+      "verb": {
+        "infinitive": "menarik",
+        "participle": "menarik"
+      },
+      "adjective": null,
+      "agent": "penarik",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "penarikan",
+        "example": "Validator sekarang dapat melakukan penarikan dana yang mereka pertaruhkan dari lapisan konsensus."
+      },
+      "heading": {
+        "term": "Penarikan"
+      },
+      "tag": {
+        "term": "penarikan"
+      },
+      "ui": {
+        "term": "Tarik"
+      },
+      "code": {
+        "term": "withdrawal"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus": {
+    "term": "konsensus",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "konsensus"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "consensus-mechanism": "mekanisme konsensus"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "konsensus",
+        "example": "Mekanisme konsensus memastikan bahwa semua node di jaringan Ethereum menyetujui status yang sama."
+      },
+      "heading": {
+        "term": "Konsensus"
+      },
+      "tag": {
+        "term": "konsensus"
+      },
+      "ui": {
+        "term": "Konsensus"
+      },
+      "code": {
+        "term": "consensus"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mainnet": {
+    "term": "mainnet",
+    "aliases": [
+      "jaringan utama"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mainnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mainnet",
+        "example": "Transaksi dengan nilai ekonomi nyata biasanya dilakukan di mainnet Ethereum."
+      },
+      "heading": {
+        "term": "Mainnet"
+      },
+      "tag": {
+        "term": "mainnet"
+      },
+      "ui": {
+        "term": "Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as a loanword in Indonesian technical contexts."
+  },
+  "offchain": {
+    "term": "offchain",
+    "aliases": [
+      "luar rantai"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "offchain",
+      "agent": null,
+      "negation": "onchain",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "offchain",
+        "example": "Beberapa data disimpan secara offchain untuk menghemat biaya gas dan meningkatkan efisiensi."
+      },
+      "heading": {
+        "term": "Offchain"
+      },
+      "tag": {
+        "term": "offchain"
+      },
+      "ui": {
+        "term": "Offchain"
+      },
+      "code": {
+        "term": "offchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Written without hyphen as per rules."
+  },
+  "erc-20": {
+    "term": "ERC-20",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ERC-20"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "erc-20-token": "token ERC-20"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ERC-20",
+        "example": "ERC-20 adalah standar teknis yang digunakan untuk kontrak pintar di blockchain Ethereum guna mengimplementasikan token."
+      },
+      "heading": {
+        "term": "ERC-20"
+      },
+      "tag": {
+        "term": "ERC-20"
+      },
+      "ui": {
+        "term": "ERC-20"
+      },
+      "code": {
+        "term": "erc20"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "oracle": {
+    "term": "orakel",
+    "aliases": [
+      "oracle"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "orakel"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "decentralized-oracle": "orakel terdesentralisasi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "orakel",
+        "example": "Orakel mengirimkan data dari dunia luar ke dalam kontrak pintar di blockchain."
+      },
+      "heading": {
+        "term": "Orakel"
+      },
+      "tag": {
+        "term": "orakel"
+      },
+      "ui": {
+        "term": "Orakel"
+      },
+      "code": {
+        "term": "oracle"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "blob": {
+    "term": "blob",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blob"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "blob",
+        "example": "EIP-4844 memperkenalkan blob data yang secara signifikan mengurangi biaya transaksi untuk Layer 2."
+      },
+      "heading": {
+        "term": "Blob"
+      },
+      "tag": {
+        "term": "blob"
+      },
+      "ui": {
+        "term": "Blob"
+      },
+      "code": {
+        "term": "blob"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually kept as is."
+  },
+  "slot": {
+    "term": "slot",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "slot"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "slot",
+        "example": "Dalam Ethereum, setiap slot adalah jangka waktu 12 detik di mana sebuah blok dapat diusulkan."
+      },
+      "heading": {
+        "term": "Slot"
+      },
+      "tag": {
+        "term": "slot"
+      },
+      "ui": {
+        "term": "Slot"
+      },
+      "code": {
+        "term": "slot"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized autonomous organization (dao)": {
+    "term": "organisasi otonom terdesentralisasi (DAO)",
+    "aliases": [
+      "DAO"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "organisasi otonom terdesentralisasi"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "organisasi otonom terdesentralisasi (DAO)",
+        "example": "Sebuah organisasi otonom terdesentralisasi (DAO) menggunakan kontrak pintar untuk mengotomatiskan pengambilan keputusan kelompok."
+      },
+      "heading": {
+        "term": "Organisasi Otonom Terdesentralisasi (DAO)"
+      },
+      "tag": {
+        "term": "DAO"
+      },
+      "ui": {
+        "term": "DAO"
+      },
+      "code": {
+        "term": "dao"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "testnet": {
+    "term": "testnet",
+    "aliases": [
+      "jaringan uji"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "testnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "testnet",
+        "example": "Sebelum menerapkan ke mainnet, pengembang harus menguji kontrak pintar mereka di testnet seperti Sepolia."
+      },
+      "heading": {
+        "term": "Testnet"
+      },
+      "tag": {
+        "term": "testnet"
+      },
+      "ui": {
+        "term": "Testnet"
+      },
+      "code": {
+        "term": "testnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus client": {
+    "term": "klien konsensus",
+    "aliases": [
+      "perangkat lunak konsensus"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "klien konsensus"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "klien konsensus",
+        "example": "Klien konsensus menjalankan algoritme bukti kepemilikan (proof-of-stake)."
+      },
+      "heading": {
+        "term": "Klien Konsensus"
+      },
+      "tag": {
+        "term": "Konsensus"
+      },
+      "ui": {
+        "term": "Klien Konsensus"
+      },
+      "code": {
+        "term": "consensus_client"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Indonesian tech terms often keep 'klien' from 'client'."
+  },
+  "layer 2 (l2)": {
+    "term": "layer 2 (L2)",
+    "aliases": [
+      "lapis 2",
+      "layer dua"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "layer 2"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "layer 2 (L2)",
+        "example": "Layer 2 (L2) membantu menskalakan Ethereum dengan memproses transaksi di luar rantai (offchain)."
+      },
+      "heading": {
+        "term": "Layer 2"
+      },
+      "tag": {
+        "term": "Skalabilitas"
+      },
+      "ui": {
+        "term": "L2"
+      },
+      "code": {
+        "term": "layer_2"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Layer' is more commonly used in Indonesian tech communities than the formal 'lapis'."
+  },
+  "zk": {
+    "term": "ZK",
+    "aliases": [
+      "Zero Knowledge",
+      "Bukti Tanpa Pengetahuan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ZK"
+      },
+      "verb": null,
+      "adjective": "tanpa pengetahuan",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "zk-rollup"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ZK",
+        "example": "Teknologi ZK memungkinkan verifikasi data tanpa mengungkapkan data itu sendiri."
+      },
+      "heading": {
+        "term": "Zero Knowledge (ZK)"
+      },
+      "tag": {
+        "term": "Privasi"
+      },
+      "ui": {
+        "term": "ZK"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly kept as an abbreviation in technical Indonesian."
+  },
+  "private key": {
+    "term": "kunci privat",
+    "aliases": [
+      "kunci pribadi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "kunci privat"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kunci privat",
+        "example": "Jangan pernah membagikan kunci privat Anda kepada siapa pun."
+      },
+      "heading": {
+        "term": "Kunci Privat"
+      },
+      "tag": {
+        "term": "Keamanan"
+      },
+      "ui": {
+        "term": "Kunci Privat"
+      },
+      "code": {
+        "term": "private_key"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "crypto": {
+    "term": "kripto",
+    "aliases": [
+      "mata uang kripto",
+      "aset kripto"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "kripto"
+      },
+      "verb": null,
+      "adjective": "kriptografis",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "cryptoeconomics": "kriptoekonomi"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "kripto",
+        "example": "Pasar kripto sangat fluktuatif namun penuh inovasi."
+      },
+      "heading": {
+        "term": "Kripto"
+      },
+      "tag": {
+        "term": "Umum"
+      },
+      "ui": {
+        "term": "Kripto"
+      },
+      "code": {
+        "term": "crypto"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "layer 1 (l1)": {
+    "term": "layer 1 (L1)",
+    "aliases": [
+      "lapis 1",
+      "layer satu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "layer 1"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "layer 1 (L1)",
+        "example": "Ethereum adalah protokol layer 1 (L1) yang mendasari berbagai aplikasi."
+      },
+      "heading": {
+        "term": "Layer 1"
+      },
+      "tag": {
+        "term": "Infrastruktur"
+      },
+      "ui": {
+        "term": "L1"
+      },
+      "code": {
+        "term": "layer_1"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "maximal extractable value (mev)": {
+    "term": "Nilai Ekstraksi Maksimal (MEV)",
+    "aliases": [
+      "Maximal Extractable Value"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Nilai Ekstraksi Maksimal"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "MEV (Nilai Ekstraksi Maksimal)",
+        "example": "MEV merujuk pada keuntungan maksimum yang dapat diperoleh penambang atau validator."
+      },
+      "heading": {
+        "term": "Maximal Extractable Value (MEV)"
+      },
+      "tag": {
+        "term": "Ekonomi"
+      },
+      "ui": {
+        "term": "MEV"
+      },
+      "code": {
+        "term": "mev"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually referred to by its English acronym MEV."
+  },
+  "exit": {
+    "term": "keluar",
+    "aliases": [
+      "penarikan diri"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "pintu keluar"
+      },
+      "verb": {
+        "infinitive": "keluar",
+        "participle": "meninggalkan"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": "batal keluar",
+      "compounds": {
+        "voluntary-exit": "keluar sukarela"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "keluar",
+        "example": "Validator dapat memilih untuk keluar dari rantai suar (beacon chain)."
+      },
+      "heading": {
+        "term": "Keluar"
+      },
+      "tag": {
+        "term": "Aksi"
+      },
+      "ui": {
+        "term": "Keluar"
+      },
+      "code": {
+        "term": "exit"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "opcode": {
+    "term": "opcode",
+    "aliases": [
+      "kode operasi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "opcode"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "opcode",
+        "example": "Setiap opcode dalam EVM memiliki biaya gas yang berbeda."
+      },
+      "heading": {
+        "term": "Opcode"
+      },
+      "tag": {
+        "term": "Teknis"
+      },
+      "ui": {
+        "term": "Opcode"
+      },
+      "code": {
+        "term": "opcode"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Kept in English as it is a standard programming term."
+  },
+  "decentralized finance (defi)": {
+    "term": "keuangan terdesentralisasi (DeFi)",
+    "aliases": [
+      "DeFi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "keuangan terdesentralisasi"
+      },
+      "verb": null,
+      "adjective": "terdesentralisasi",
+      "agent": null,
+      "negation": "keuangan tersentralisasi",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "DeFi (keuangan terdesentralisasi)",
+        "example": "DeFi memungkinkan akses ke layanan keuangan tanpa perantara tradisional."
+      },
+      "heading": {
+        "term": "Keuangan Terdesentralisasi (DeFi)"
+      },
+      "tag": {
+        "term": "Finansial"
+      },
+      "ui": {
+        "term": "DeFi"
+      },
+      "code": {
+        "term": "defi"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "privacy": {
+    "term": "privasi",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "privasi"
+      },
+      "verb": null,
+      "adjective": "pribadi",
+      "agent": null,
+      "negation": "non-privasi",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "privasi",
+        "example": "Privasi adalah hak mendasar bagi setiap pengguna di dalam jaringan Ethereum."
+      },
+      "heading": {
+        "term": "Privasi"
+      },
+      "tag": {
+        "term": "Privasi"
+      },
+      "ui": {
+        "term": "Privasi"
+      },
+      "code": {
+        "term": "privacy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "optimistic rollup": {
+    "term": "rollup optimis",
+    "aliases": [
+      "optimistic rollup"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "rollup optimis"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "rollup optimis",
+        "example": "Rollup optimis meningkatkan skalabilitas dengan memproses transaksi offchain secara default."
+      },
+      "heading": {
+        "term": "Rollup Optimis"
+      },
+      "tag": {
+        "term": "Rollup Optimis"
+      },
+      "ui": {
+        "term": "Rollup Optimis"
+      },
+      "code": {
+        "term": "optimisticRollup"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly kept as 'rollup' in technical Indonesian discourse."
+  },
+  "ethereum request for comments (erc)": {
+    "term": "Ethereum Request for Comments (ERC)",
+    "aliases": [
+      "Permintaan Komentar Ethereum"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Request for Comments (ERC)"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Request for Comments (ERC)",
+        "example": "ERC-20 adalah standar teknis Ethereum Request for Comments yang paling umum digunakan untuk token."
+      },
+      "heading": {
+        "term": "ERC"
+      },
+      "tag": {
+        "term": "ERC"
+      },
+      "ui": {
+        "term": "ERC"
+      },
+      "code": {
+        "term": "erc"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical standard names are typically left in English."
+  },
+  "plasma": {
+    "term": "Plasma",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Plasma"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Plasma",
+        "example": "Plasma adalah solusi skalabilitas yang menggunakan rantai anak untuk meringankan beban rantai utama."
+      },
+      "heading": {
+        "term": "Plasma"
+      },
+      "tag": {
+        "term": "Plasma"
+      },
+      "ui": {
+        "term": "Plasma"
+      },
+      "code": {
+        "term": "plasma"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "library": {
+    "term": "pustaka",
+    "aliases": [
+      "library"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "pustaka"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "pustaka",
+        "example": "Pustaka dalam Solidity memungkinkan pengembang untuk menggunakan kembali kode yang telah dideploy."
+      },
+      "heading": {
+        "term": "Pustaka"
+      },
+      "tag": {
+        "term": "Pustaka"
+      },
+      "ui": {
+        "term": "Pustaka"
+      },
+      "code": {
+        "term": "library"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "the merge": {
+    "term": "The Merge",
+    "aliases": [
+      "Penggabungan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "The Merge"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "The Merge",
+        "example": "The Merge menandai akhir dari bukti kerja dan transisi penuh Ethereum ke bukti kepemilikan."
+      },
+      "heading": {
+        "term": "The Merge"
+      },
+      "tag": {
+        "term": "The Merge"
+      },
+      "ui": {
+        "term": "The Merge"
+      },
+      "code": {
+        "term": "theMerge"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The official name of the event is usually not translated."
+  },
+  "zero-knowledge proof": {
+    "term": "bukti nol-pengetahuan",
+    "aliases": [
+      "ZKP",
+      "bukti tanpa pengetahuan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "bukti nol-pengetahuan"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "bukti nol-pengetahuan",
+        "example": "Bukti nol-pengetahuan memungkinkan verifikasi data tanpa harus mengungkapkan isi data tersebut."
+      },
+      "heading": {
+        "term": "Bukti Nol-Pengetahuan"
+      },
+      "tag": {
+        "term": "ZKP"
+      },
+      "ui": {
+        "term": "ZKP"
+      },
+      "code": {
+        "term": "zkProof"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "data availability": {
+    "term": "ketersediaan data",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ketersediaan data"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": "ketidaktersediaan data",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ketersediaan data",
+        "example": "Ketersediaan data menjamin bahwa semua peserta jaringan dapat mengakses dan memverifikasi status blockchain."
+      },
+      "heading": {
+        "term": "Ketersediaan Data"
+      },
+      "tag": {
+        "term": "Ketersediaan Data"
+      },
+      "ui": {
+        "term": "Ketersediaan Data"
+      },
+      "code": {
+        "term": "dataAvailability"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "log": {
+    "term": "log",
+    "aliases": [
+      "catatan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "log"
+      },
+      "verb": {
+        "infinitive": "mencatat",
+        "participle": "tercatat"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "log",
+        "example": "Pengembang menggunakan log untuk melacak peristiwa penting di dalam kontrak pintar."
+      },
+      "heading": {
+        "term": "Log"
+      },
+      "tag": {
+        "term": "Log"
+      },
+      "ui": {
+        "term": "Log"
+      },
+      "code": {
+        "term": "log"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "beacon chain": {
+    "term": "Beacon Chain",
+    "aliases": [
+      "Rantai Beacon"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Beacon Chain"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Beacon Chain",
+        "example": "Beacon Chain bertugas mengoordinasikan jaringan validator sebelum akhirnya bergabung dengan rantai utama."
+      },
+      "heading": {
+        "term": "Beacon Chain"
+      },
+      "tag": {
+        "term": "Beacon Chain"
+      },
+      "ui": {
+        "term": "Beacon Chain"
+      },
+      "code": {
+        "term": "beaconChain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "liquidity": {
+    "term": "likuiditas",
+    "aliases": [
+      "ketersediaan aset"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "likuiditas"
+      },
+      "verb": null,
+      "adjective": "likuid",
+      "agent": null,
+      "negation": "tidak likuid",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "likuiditas",
+        "example": "Likuiditas yang tinggi memudahkan pengguna untuk menukar aset tanpa perubahan harga yang besar."
+      },
+      "heading": {
+        "term": "Likuiditas"
+      },
+      "tag": {
+        "term": "Likuiditas"
+      },
+      "ui": {
+        "term": "Likuiditas"
+      },
+      "code": {
+        "term": "liquidity"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "epoch": {
+    "term": "epoch",
+    "aliases": [
+      "epok"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "epoch"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "epoch",
+        "example": "Satu epoch di Ethereum terdiri dari 32 slot waktu."
+      },
+      "heading": {
+        "term": "Epoch"
+      },
+      "tag": {
+        "term": "Epoch"
+      },
+      "ui": {
+        "term": "Epoch"
+      },
+      "code": {
+        "term": "epoch"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually kept in English or adapted as 'epok'."
+  },
+  "ethereum mainnet": {
+    "term": "Mainnet Ethereum",
+    "aliases": [
+      "jaringan utama Ethereum"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Mainnet Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Mainnet Ethereum",
+        "example": "Transaksi ini dilakukan secara langsung di Mainnet Ethereum."
+      },
+      "heading": {
+        "term": "Mainnet Ethereum"
+      },
+      "tag": {
+        "term": "Mainnet"
+      },
+      "ui": {
+        "term": "Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "proposal": {
+    "term": "proposal",
+    "aliases": [
+      "usulan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "proposal"
+      },
+      "verb": {
+        "infinitive": "mengusulkan",
+        "participle": "pengusul"
+      },
+      "adjective": null,
+      "agent": "pengusul",
+      "negation": null,
+      "compounds": {
+        "eip": "Proposal Peningkatan Ethereum"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "proposal",
+        "example": "Komunitas sedang memberikan suara untuk menyetujui proposal tata kelola yang baru."
+      },
+      "heading": {
+        "term": "Proposal"
+      },
+      "tag": {
+        "term": "Proposal"
+      },
+      "ui": {
+        "term": "Kirim Proposal"
+      },
+      "code": {
+        "term": "proposal"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block proposer": {
+    "term": "pengusul blok",
+    "aliases": [
+      "penerbit blok"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "pengusul blok"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "pengusul blok",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "pengusul blok",
+        "example": "Pengusul blok dipilih secara acak dari kumpulan validator untuk setiap slot."
+      },
+      "heading": {
+        "term": "Pengusul Blok"
+      },
+      "tag": {
+        "term": "Pengusul"
+      },
+      "ui": {
+        "term": "Pengusul Blok"
+      },
+      "code": {
+        "term": "blockProposer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus layer": {
+    "term": "lapisan konsensus",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "lapisan konsensus"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "lapisan konsensus",
+        "example": "Lapisan konsensus bertanggung jawab atas pembuatan blok dan validasi bukti-pasak."
+      },
+      "heading": {
+        "term": "Lapisan Konsensus"
+      },
+      "tag": {
+        "term": "Konsensus"
+      },
+      "ui": {
+        "term": "Lapisan Konsensus"
+      },
+      "code": {
+        "term": "consensus_layer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "peer": {
+    "term": "peer",
+    "aliases": [
+      "rekan",
+      "node tetangga"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "peer"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "p2p": "peer-to-peer"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "peer",
+        "example": "Node harus terhubung ke beberapa peer untuk menyinkronkan data jaringan."
+      },
+      "heading": {
+        "term": "Peer"
+      },
+      "tag": {
+        "term": "Peer"
+      },
+      "ui": {
+        "term": "Daftar Peer"
+      },
+      "code": {
+        "term": "peer"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term widely used in Indonesian tech communities."
+  },
+  "json-rpc": {
+    "term": "JSON-RPC",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "JSON-RPC"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "JSON-RPC",
+        "example": "Dompet kripto berkomunikasi dengan node Ethereum menggunakan antarmuka JSON-RPC."
+      },
+      "heading": {
+        "term": "JSON-RPC"
+      },
+      "tag": {
+        "term": "Protokol"
+      },
+      "ui": {
+        "term": "Titik Akhir JSON-RPC"
+      },
+      "code": {
+        "term": "json-rpc"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "nonce": {
+    "term": "nonce",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nonce"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "nonce",
+        "example": "Setiap transaksi memiliki nonce unik untuk mencegah serangan replay."
+      },
+      "heading": {
+        "term": "Nonce"
+      },
+      "tag": {
+        "term": "Transaksi"
+      },
+      "ui": {
+        "term": "Nonce"
+      },
+      "code": {
+        "term": "nonce"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Cryptographic term kept in English."
+  },
+  "ipfs": {
+    "term": "IPFS",
+    "aliases": [
+      "InterPlanetary File System"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "IPFS"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "IPFS",
+        "example": "Data NFT sering kali disimpan secara terdesentralisasi di IPFS."
+      },
+      "heading": {
+        "term": "IPFS"
+      },
+      "tag": {
+        "term": "Penyimpanan"
+      },
+      "ui": {
+        "term": "Buka di IPFS"
+      },
+      "code": {
+        "term": "ipfs"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "full node": {
+    "term": "node penuh",
+    "aliases": [
+      "simpul penuh"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "node penuh"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "node penuh",
+        "example": "Menjalankan node penuh memungkinkan Anda untuk memverifikasi semua transaksi dan blok secara mandiri."
+      },
+      "heading": {
+        "term": "Node Penuh"
+      },
+      "tag": {
+        "term": "Node Penuh"
+      },
+      "ui": {
+        "term": "Node Penuh"
+      },
+      "code": {
+        "term": "full-node"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'node' is widely accepted in Indonesian technical contexts alongside the translation 'simpul'."
+  },
+  "zero-knowledge": {
+    "term": "tanpa pengetahuan",
+    "aliases": [
+      "zero-knowledge",
+      "bukti tanpa pengetahuan"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "bukti tanpa pengetahuan"
+      },
+      "verb": null,
+      "adjective": "tanpa pengetahuan",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zero-knowledge-proof": "bukti tanpa pengetahuan",
+        "zero-knowledge-rollup": "rollup tanpa pengetahuan"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "tanpa pengetahuan",
+        "example": "Teknologi tanpa pengetahuan memungkinkan pembuktian kebenaran informasi tanpa mengungkapkan detail data tersebut."
+      },
+      "heading": {
+        "term": "Tanpa Pengetahuan"
+      },
+      "tag": {
+        "term": "Zero-knowledge"
+      },
+      "ui": {
+        "term": "Tanpa Pengetahuan"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as part of the phrase 'bukti tanpa pengetahuan' (zero-knowledge proof)."
+  },
+  "hardhat": {
+    "term": "Hardhat",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Hardhat"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Hardhat",
+        "example": "Hardhat adalah lingkungan pengembangan Ethereum yang membantu pengembang menguji dan meluncurkan kontrak pintar."
+      },
+      "heading": {
+        "term": "Hardhat"
+      },
+      "tag": {
+        "term": "Hardhat"
+      },
+      "ui": {
+        "term": "Hardhat"
+      },
+      "code": {
+        "term": "hardhat"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun referring to a specific development tool; should not be translated."
+  },
+  "checkpoint": {
+    "term": "titik pemeriksaan",
+    "aliases": [
+      "pos pemeriksaan",
+      "checkpoint"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "titik pemeriksaan"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "titik pemeriksaan",
+        "example": "Dalam mekanisme konsensus, titik pemeriksaan digunakan untuk menjamin bahwa rantai tidak dapat diatur ulang sebelum blok tertentu."
+      },
+      "heading": {
+        "term": "Titik Pemeriksaan"
+      },
+      "tag": {
+        "term": "Checkpoint"
+      },
+      "ui": {
+        "term": "Titik Pemeriksaan"
+      },
+      "code": {
+        "term": "checkpoint"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  }
+}
