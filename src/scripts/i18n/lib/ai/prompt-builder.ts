@@ -99,7 +99,8 @@ ${htmlRule}
 - HTML comment placeholders like \`<!-- CODE_BLOCK_0 -->\` are code block stand-ins managed by our pipeline. You MUST preserve them EXACTLY as-is -- same text, same position, same line. Do NOT remove, translate, modify, or replace them with code. They will be restored automatically after translation.
 - If a true code fence (\`\`\` block) is encountered in the source, never translate the functional code inside it. Only code comments (// or /* */ or #) within fences may be translated. Never change the language identifier after the opening fence (e.g. \`\`\`python, \`\`\`solidity, \`\`\`bash must stay exactly as-is).
 - Internal links (href starting with /) must match English exactly.
-- Image paths must match English exactly.`
+- Image paths must match English exactly.
+- For technical acronyms (DAO, PoS, AMM, MEV, etc.): on the first occurrence, provide the translated expansion with the English acronym in parentheses. Use only the English acronym for subsequent mentions.`
 }
 
 function formatGlossary(terms: Map<string, string>): string {

@@ -61,7 +61,14 @@ Site-specific rules for ethereum.org:
 - Internal links (href starting with /) must stay exactly as in English.
 - Ticker symbols (ETH, BTC, ERC, EIP, BLS) always stay in Latin script.
 - URLs and domain names always stay in Latin script.
-- Use community glossary terms exactly as provided (these are community-voted).`
+- Use community glossary terms exactly as provided (these are community-voted).
+- EVM opcodes (SSTORE, CALL, PUSH, DELEGATECALL, etc.) always stay in Latin.
+- Hexadecimal values and addresses (0x1234...) always stay in Latin.
+- Cryptographic primitive names (SHA-256, Keccak-256, ECDSA, zk-SNARKs, zk-STARKs) always stay in Latin.
+- Network and testnet names (Mainnet, Sepolia, Holesky, Goerli) always stay in Latin.
+- Client implementation names (Lighthouse, Prysm, Geth, Nethermind, Besu, Teku, Lodestar, Nimbus): never translate the meaning. In non-Latin scripts, phonetic transliteration alongside the Latin name is acceptable.
+- License identifiers (MIT, Apache-2.0) always stay in Latin.
+- Mathematical notations and formulas: keep as-is.`
 
   switch (group) {
     case "rtl":
@@ -85,12 +92,17 @@ Site-specific rules for ethereum.org:
 - If no official translation exists for a brand, keep it in Latin script.`
 
     case "indic":
-    case "cyrillic":
       return `${common}
 - Use Western Arabic numerals (1, 2, 3) -- not native numeral scripts.`
 
+    case "cyrillic":
+      return `${common}
+- Use Western Arabic numerals (1, 2, 3) -- not native numeral scripts.
+- For plural forms, use the correct grammatical categories (one/few/many/other) as appropriate for the target language. English loanwords may need to be declined through grammatical cases.`
+
     case "latin":
       return `${common}
-- Brand names must stay in English (do not translate Solidity, MetaMask, etc.).`
+- Brand names must stay in English (do not translate Solidity, MetaMask, etc.).
+- For German, French, and other European languages: English technical loanwords (Staking, Slashing, Gas, Node) may be kept as-is when no natural translation exists in the community. Do not force awkward translations.`
   }
 }
