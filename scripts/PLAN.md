@@ -63,9 +63,15 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 - [ ] Import as `source: "community"` with vote counts informing confidence
 - [ ] Flag conflicts between community and LLM translations for review
 
-## Phase 6: Full Translation Generation
+## Phase 6: Full Translation Generation [IN PROGRESS]
 
-- [ ] Batch Gemini translations for all 453 terms x 24 languages
+- [x] Tier 1 complete: 93 terms x 24 languages = 2,232 entries
+- [x] Tier 1 quality review passed (0 critical issues)
+- [x] Arabic quality fixes applied (stake root harmonized, slot fixed)
+- [ ] Tier 2: ~90 terms (3-74 content occurrences) x 24 languages
+- [ ] Tier 3: ~64 terms (<3 occurrences) x 24 languages
+- [ ] Phase 7.5 terms: ~64 new terms x 24 languages
+- [ ] Batch Gemini translations for all 519 terms x 24 languages
 - [ ] Apply per-language rules (script decisions, morphological forms, context forms)
 - [ ] Grammar metadata (gender, animacy, formality) for applicable languages
 - [ ] CLDR plural forms for languages that need them (ar, pl, ru, cs, etc.)
@@ -82,15 +88,17 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 - [ ] Expand `/glossary` page with new terms from the 453 list
 - [ ] Documentation for external consumers
 
-## Phase 7.5: Proper Names & Publication Titles
+## Phase 7.5: Proper Names & Publication Titles [DONE]
 
-- [ ] Grep repo for capitalized proper nouns appearing 3+ times
-- [ ] Filter against existing term list and known-noise
-- [ ] Categorize with Gemini: always Latin, transliterate, or translate
-- [ ] Cover: protocol names, client implementations, L2/chain names, tools
-- [ ] Add relevant names to glossary with correct script_rule and part_of_speech: proper_noun
-- [ ] Document publication title rules (external titles stay English; free-text descriptions translate)
+- [x] Grep repo for capitalized proper nouns appearing 3+ times
+- [x] Filter against existing term list and known-noise
+- [x] Categorize with Gemini: always Latin, transliterate, or translate
+- [x] Cover: protocol names, client implementations, L2/chain names, tools
+- [x] Add 64 new terms with correct script_rule (keep_latin/transliterate/translate)
+- [x] Document publication title rules (external titles stay English; free-text descriptions translate)
+- [x] Tier 1 quality review: 0 critical, 3 moderate (Arabic fixes applied)
 - [ ] Drop KEVM and SSTORE from glossary (too niche / pure opcode)
+- [ ] Polish "stawka"/"mostek" flags -- deferred to community review
 
 ## Phase 8: Definition Glossary Expansion (Future)
 
