@@ -37,6 +37,19 @@ const GEMINI_MODELS = ["gemini-3.1-pro-preview", "gemini-3.1-pro"]
 const MAX_RETRIES = 3
 const RETRY_DELAY_MS = 5000
 
+/**
+ * Disable safety filters for all categories. Translation content (educational
+ * blockchain docs) should never be blocked. Without this, Gemini silently
+ * returns empty candidates for content that triggers false positives (e.g.,
+ * mining/attack descriptions in certain non-Latin languages).
+ */
+const SAFETY_SETTINGS = [
+  { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
+  { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
+  { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
+  { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" },
+]
+
 const LANGUAGE_NAMES: Record<string, string> = Object.fromEntries(
   i18nConfig.map(({ code, name }: { code: string; name: string }) => [
     code,
@@ -484,17 +497,62 @@ async function callGeminiRaw(
         const response = await client.models.generateContent({
           model: modelId,
           contents: prompt,
-          config: { temperature: 0 },
+          config: { temperature: 0, safetySettings: SAFETY_SETTINGS },
         })
         const usage = response.usageMetadata
         const duration = ((Date.now() - startTime) / 1000).toFixed(1)
 
+        // Inspect response for non-obvious failure modes before accessing .text
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const candidate = (response as any).candidates?.[0]
+        const finishReason: string | undefined = candidate?.finishReason
+
+        // Log non-STOP finish reasons (these explain silent failures)
+        if (finishReason && finishReason !== "STOP") {
+          const safetyInfo = candidate?.safetyRatings
+            ?.map(
+              (r: { category?: string; probability?: string }) =>
+                `${r.category}=${r.probability}`
+            )
+            .join(", ")
+          console.warn(
+            `[${ts()}] [gemini] FINISH_REASON model=${modelId} ${ctx} ` +
+              `duration=${duration}s reason=${finishReason}` +
+              (safetyInfo ? ` safety=[${safetyInfo}]` : "")
+          )
+        }
+
+        // Check prompt-level blocking
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const blockReason = (response as any).promptFeedback?.blockReason
+        if (blockReason) {
+          console.warn(
+            `[${ts()}] [gemini] PROMPT_BLOCKED model=${modelId} ${ctx} ` +
+              `duration=${duration}s reason=${blockReason}`
+          )
+        }
+
         console.log(
-          `[${ts()}] [gemini] RESPONSE model=${modelId} ${ctx} duration=${duration}s tokens_in=${usage?.promptTokenCount || 0} tokens_out=${usage?.candidatesTokenCount || 0}`
+          `[${ts()}] [gemini] RESPONSE model=${modelId} ${ctx} ` +
+            `duration=${duration}s ` +
+            `tokens_in=${usage?.promptTokenCount || 0} ` +
+            `tokens_out=${usage?.candidatesTokenCount || 0}` +
+            (finishReason && finishReason !== "STOP"
+              ? ` finishReason=${finishReason}`
+              : "")
         )
 
+        // Access .text -- may be empty/undefined if blocked
+        const text = response.text ?? ""
+        if (!text && finishReason && finishReason !== "STOP") {
+          throw new Error(
+            `Gemini returned no content (finishReason=${finishReason}). ` +
+              `This file/language combination may be triggering content filters.`
+          )
+        }
+
         return {
-          text: response.text ?? "",
+          text,
           tokensUsed: {
             input: usage?.promptTokenCount || 0,
             output: usage?.candidatesTokenCount || 0,
