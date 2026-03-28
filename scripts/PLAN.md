@@ -22,103 +22,67 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 
 ## Phase 2: Gemini Consultation [DONE]
 
-- [x] Round 1: Identify 45 missing terms
-- [x] Round 2: 30 context-dependent translation challenges
-- [x] Round 3: Script decision rules (Latin vs transliterate vs translate)
-- [x] Round 4: 20 morphological variant families with linguistic notes
-- [x] Incorporate feedback into enhanced term list
-- [x] **Result: 453 terms with enriched metadata**
+- [x] 4 rounds of Gemini feedback (missing terms, context challenges, script rules, morphological variants)
+- [x] **Result: 455 terms with enriched metadata**
 
 ## Phase 3: Schema Design [DONE]
 
-- [x] Research TBX/CLDR standards via Gemini
-- [x] Design JSON Schema v1 (concept-oriented, CLDR plurals, context forms)
-- [x] Write 5 pilot examples (stake, gas, DeFi, rollup, validator) in 3 languages
-- [x] Resolve open questions with Doc:
-  - [x] Compounds: both top-level entry AND nested under root
-  - [x] Definitions: reference /glossary page + English-only `translation_context`
-  - [x] Lifecycle: simple `note` field, no formal status system
-  - [x] Community: import ethglossary.xyz as seed, Gemini as primary, community as signal
+- [x] JSON Schema v1 designed (concept-oriented, CLDR plurals, POS-based morphology, 5 context forms)
+- [x] Resolved open questions: compounds (both), definitions (reference + context), lifecycle (note field), community (import as seed)
+- [x] Preferred alias status added (preferred/accepted/deprecated for English style guide use)
 
-## Phase 4: Schema Validation [IN PROGRESS]
+## Phase 4: Schema Validation [DONE]
 
-- [x] Get Gemini review/critique of the schema
-- [x] Apply Gemini feedback: per-language aliases, remove top-level term redundancy, deprecated boolean, date-time consistency
-- [x] Tabled: Slavic case declensions (CLDR categories map to cases; one=nom.sg, few=nom.pl, many=gen.pl)
-- [x] Pilot batch: 12 terms x 6 languages (ja, ar, fr, pl, cs, hi) -- 3 Gemini batches
-- [x] Identified schema friction: morphology labels too English-centric, contexts inconsistent, Slavic plurals
-- [x] Negotiated with Gemini: POS-based morphology, term+example contexts, CLDR plurals confirmed
-- [x] Updated schema to match agreed structure
-- [x] Final validation: 5 terms x 6 languages, 30/30 entries conform to schema
-- [x] Schema confirmed locked -- ready for full translation generation
-- [x] Full 24-language stress test: 10 terms x 24 langs = 240 entries, 100% conformance after normalization
-- [x] Identified 2 auto-fixable Gemini drift patterns: code context as string, missing aliases
-- [ ] Note for full run: enforce "onchain"/"offchain" (no hyphen) in prompts
-- [ ] Note for full run: normalization script needed post-generation for the 2 known drift patterns
+- [x] Gemini review + negotiation on morphology, contexts, plurals
+- [x] Pilot: 12 terms x 6 languages, then 10 terms x 24 languages = 240 entries, 100% conformance
+- [x] 2 auto-fixable Gemini drift patterns identified (code context as string, missing aliases)
 
-## Phase 5: Community Glossary Import
+## Phase 5: Community Glossary Import [DEFERRED]
 
-- [ ] Fetch existing ethglossary.xyz data (107 terms, ~4,800 translations, 56 languages)
-- [ ] Map community terms to our schema IDs
-- [ ] Import as `source: "community"` with vote counts informing confidence
-- [ ] Flag conflicts between community and LLM translations for review
+- [ ] Fetch ethglossary.xyz data (107 terms, ~4,800 translations)
+- [ ] Import as `source: "community"` -- deferred until quality sweep prep
+- Not blocking; Gemini output is primary, community data is validation layer
 
-## Phase 6: Full Translation Generation [IN PROGRESS]
+## Phase 6: Translation Generation [IN PROGRESS]
 
-- [x] Tier 1 complete: 93 terms x 24 languages = 2,232 entries
-- [x] Tier 1 quality review passed (0 critical issues)
-- [x] Arabic quality fixes applied (stake root harmonized, slot fixed)
-- [ ] Tier 2: ~90 terms (3-74 content occurrences) x 24 languages
-- [ ] Tier 3: ~64 terms (<3 occurrences) x 24 languages
-- [ ] Phase 7.5 terms: ~64 new terms x 24 languages
-- [ ] Batch Gemini translations for all 519 terms x 24 languages
-- [ ] Apply per-language rules (script decisions, morphological forms, context forms)
-- [ ] Grammar metadata (gender, animacy, formality) for applicable languages
-- [ ] CLDR plural forms for languages that need them (ar, pl, ru, cs, etc.)
-- [ ] Cross-reference with community glossary where overlaps exist
-- [ ] Quality review pass
+- [x] Tier 1: 93 terms x 24 languages = 2,232 entries -- DONE
+- [x] Tier 1 quality review: 0 critical, 3 moderate (Arabic fixes applied)
+- [ ] Tier 2/3 + Phase 7.5 terms: 426 remaining terms x 24 languages -- IN PROGRESS (paused at ~21/1032 for rate limits)
 
 ## Phase 7: Integration & Delivery
 
-- [ ] Store glossary data in repo (likely `src/data/glossary/` or `public/data/glossary/`)
-- [ ] API endpoint: extend `app/api/glossary/` to serve translation glossary
-  - Support queries: `?term=X&lang=Y&context=Z&form=W`
-- [ ] Downloadable formats: JSON, CSV, TBX export generation
-- [ ] Wire into internal translation pipeline (LLM translation scripts, review processes)
-- [ ] Expand `/glossary` page with new terms from the 453 list
+- [x] TypeScript lookup module (`glossary-lookup.ts`) -- filters glossary to source file terms
+- [x] Lean prompt format agreed with Relay: english + translation + note + example (when 2+ occurrences)
+- [x] JSON file support in lookup (extracts string values, skips keys)
+- [ ] Wire into Relay's pipeline (Relay ports to `lib/ai/` when ready)
+- [ ] Store final glossary in repo (`src/data/glossary/` or `public/data/glossary/`)
+- [ ] API endpoint: extend `app/api/glossary/`
+- [ ] Downloadable formats: JSON, CSV, TBX
 - [ ] Documentation for external consumers
 
 ## Phase 7.5: Proper Names & Publication Titles [DONE]
 
-- [x] Grep repo for capitalized proper nouns appearing 3+ times
-- [x] Filter against existing term list and known-noise
-- [x] Categorize with Gemini: always Latin, transliterate, or translate
-- [x] Cover: protocol names, client implementations, L2/chain names, tools
-- [x] Add 64 new terms with correct script_rule (keep_latin/transliterate/translate)
-- [x] Document publication title rules (external titles stay English; free-text descriptions translate)
-- [x] Tier 1 quality review: 0 critical, 3 moderate (Arabic fixes applied)
-- [ ] Drop KEVM and SSTORE from glossary (too niche / pure opcode)
+- [x] 75 missing terms identified from content page scan
+- [x] 64 new terms added with correct script_rule (keep_latin/transliterate/translate)
+- [x] All execution + consensus clients covered
+- [x] Translation rules document created and reconciled with pipeline prompt
+- [x] **Total terms: 519**
+- [ ] Drop KEVM and SSTORE (too niche / pure opcode)
 - [ ] Polish "stawka"/"mostek" flags -- deferred to community review
 
 ## Phase 8: Definition Glossary Expansion (Future)
 
-- [ ] Audit current /glossary page (203 terms) against the 453-term translation list
-- [ ] Identify terms that should be added to /glossary (prioritize by content occurrence)
-- [ ] Redesign /glossary page: multi-definition support, better search/indexing
-- [ ] Support correct alphabetical ordering in non-English languages
-- [ ] Consider concept-oriented model for definitions (like translation glossary)
+- [ ] Audit /glossary page (203 terms) against 519-term translation list
+- [ ] Identify terms to add to /glossary (prioritize by content occurrence)
+- [ ] Redesign /glossary page: multi-definition support, better search/indexing, correct non-English ordering
 - [ ] Update components: GlossaryDefinition, GlossaryTooltip, JSON namespaces
 
 ## Phase 9: Community Platform (Future)
 
-- [ ] Design rebuilt ethglossary.xyz
-  - SIWE authentication (not Discord)
-  - Display full glossary with all languages
-  - Feedback actions: agree, disagree, suggest alternative
-  - Context-specific feedback (different form for prose vs heading vs tag)
-  - Sybil resistance considerations
-- [ ] Feedback loop: community signals feed back into glossary review cycle
-- [ ] Gemini re-evaluation based on accumulated community feedback
+- [ ] Design rebuilt ethglossary.xyz with SIWE auth
+- [ ] Feedback actions: agree, disagree, suggest alternative
+- [ ] Sybil resistance considerations
+- [ ] Community signals feed back into glossary review cycle
 
 ---
 
@@ -126,43 +90,46 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 
 | File | Description |
 |------|-------------|
-| `scripts/extract-glossary-terms.py` | Initial term extraction script |
-| `scripts/cleanup-glossary-terms.py` | Noise filtering and dedup |
-| `scripts/incorporate-gemini-feedback.py` | Merges Gemini suggestions |
-| `scripts/glossary-terms-cleaned.json` | 415 cleaned terms (pre-Gemini) |
-| `scripts/glossary-terms-enhanced.json` | 453 terms with Gemini enrichment |
-| `scripts/glossary-terms-cleaned.md` | Human-readable term list by category |
+| `scripts/glossary-terms-enhanced.json` | 519 terms with metadata (canonical source) |
 | `scripts/glossary-schema.json` | JSON Schema v1 |
-| `scripts/glossary-schema-examples.json` | 5 pilot term examples |
-| `scripts/glossary-schema-design.md` | Schema design rationale + resolved decisions |
-| `scripts/gemini-feedback-round[1-4].md` | Raw Gemini consultation notes |
+| `scripts/glossary-schema-design.md` | Schema rationale + resolved decisions |
+| `scripts/glossary-lookup.ts` | TypeScript lookup module for pipeline integration |
+| `scripts/glossary-lookup.py` | Python prototype (validation/testing) |
+| `scripts/generate-translations.py` | Batch translation generation via Gemini CLI |
+| `scripts/translations/glossary-{lang}.json` | Per-language translation files (24 languages) |
+| `scripts/translation-rules.md` | Never-translate rules + conditional guidance |
+| `scripts/proper-names-categorized.md` | ~60 proper names with A/B/C categories |
+| `scripts/missing-terms-from-titles.md` | 75 missing terms from content scan |
+| `scripts/tier1-quality-review.md` | Tier 1 quality review report |
+| `scripts/PLAN.md` | This file |
+| `docs/selective-glossary-injection.md` | Spec for filtered glossary in translation prompts |
+| `docs/translation-rules-reconciliation.md` | Our rules vs pipeline prompt comparison |
+| `docs/agent-crosswalk.md` | Inter-agent communication log (NOT committed) |
+
+## Active Agents
+
+| Name | Worktree | Focus |
+|------|----------|-------|
+| Atlas | `.worktrees/glossary-extraction` | Glossary terms, schema, translations, lookup module |
+| Relay | `.worktrees/gemini-v3` | Translation pipeline, prompt builder, automation |
+| Sentinel | (as needed) | Translation review, PR quality checks |
 
 ## Decisions Log
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
-| 2026-03-26 | Use concept-oriented schema (not string-as-key) | TBX standard; stable IDs prevent breakage |
-| 2026-03-26 | Include both top-level and nested compounds | Maximum API flexibility |
-| 2026-03-27 | Reference /glossary definitions, don't duplicate | Single source of truth; translation glossary adds `translation_context` only |
-| 2026-03-27 | Simple `note` field for lifecycle, no formal status | "Mining" is still active in broader crypto; blanket "deprecated" too rigid |
-| 2026-03-27 | Import community as seed, Gemini as primary | Community signal valuable but low-vote data not reliable enough to override |
-| 2026-03-27 | English-only translator context | Translators already read English; localized definitions out of scope |
-| 2026-03-27 | Per-language aliases in TranslationEntry | JP/CN may have multiple valid translations (katakana vs kanji, etc.) |
-| 2026-03-27 | Remove top-level Entry.term, use en.term | Avoids desync; en.term is the source of truth |
-| 2026-03-27 | Add deprecated boolean + note | Machine-filterable flag; note provides human context |
-| 2026-03-27 | Slavic cases deferred to notes | Full case declension tables would explode data; handle via inflection notes |
-| 2026-03-27 | Split per-language JSONs for delivery | Master file stays whole; build generates glossary-{lang}.json for API/frontend |
-| 2026-03-27 | Definition/translation glossary overlap tabled | Doc notes both sides could benefit from the other's terms; discuss later |
-| 2026-03-27 | POS-based morphology (not English-centric) | Gemini negotiation: noun.singular, verb.infinitive/participle, adjective, agent, negation, compounds |
-| 2026-03-27 | Context forms = term + optional example | Gemini can reliably distinguish all 5 contexts (prose/heading/tag/ui/code) |
-| 2026-03-27 | CLDR plurals map to Slavic cases | one=nom.sg, few=nom.pl, many=gen.pl, other=fallback; works for both next-intl and Slavic |
-| 2026-03-27 | Pilot languages: ja, ar, fr, pl, cs, hi | Covers CJK, RTL, Romance, 2x Slavic, Indic script |
-| 2026-03-28 | Proper names stay in glossary | Mark as proper_noun, use script_rule for DNT/transliterate/translate guidance |
-| 2026-03-28 | City-named upgrades use localized city name | Shanghai -> localized in each language, with note it's the upgrade not the city |
-| 2026-03-28 | Publication titles: keep English for external links | Only translate free-text descriptions; keep original title for English-language destinations |
-| 2026-03-28 | Preferred alias flag on English entries | Useful for content generation (not just translation); e.g., "onchain" preferred over "on-chain" |
-| 2026-03-28 | Selective glossary injection for prompts | Filter glossary to only terms in source file; full dump decreases quality (see docs/selective-glossary-injection.md) |
-| 2026-03-27 | Collapse definition/translation Venn | All 453 terms are candidates for both; glossary_ref=null means "not yet" not "never" |
-| 2026-03-27 | Content occurrence threshold for priority | Terms with 5+ occurrences prioritized; low-occurrence terms (vesting, cliff) go to reference tier |
-| 2026-03-27 | Multi-definition dictionary design | Future task: redesign /glossary page to support multiple definitions per term (like standard dictionaries) |
-| 2026-03-27 | onchain/offchain no-hyphen rule | Firm for English; other languages get a note "analogous to online/offline"; aliases include hyphenated forms |
+| 03-26 | Concept-oriented schema (not string-as-key) | TBX standard; stable IDs prevent breakage |
+| 03-26 | Both top-level and nested compounds | Maximum API flexibility |
+| 03-27 | Reference /glossary definitions, don't duplicate | Single source of truth for definitions |
+| 03-27 | Simple `note` field, no formal status | "Mining" still active in broader crypto |
+| 03-27 | Import community as seed, Gemini as primary | Low-vote community data not reliable enough to override |
+| 03-27 | English-only translator context | Translators already read English |
+| 03-27 | POS-based morphology | Universal labels vs English-centric (gerund/past) |
+| 03-27 | CLDR plurals map to Slavic cases | Works for both next-intl and Slavic accuracy |
+| 03-28 | Proper names stay in glossary with script_rule | DNT/transliterate/translate per term |
+| 03-28 | City-named upgrades use localized city name | Shanghai -> localized, with note it's the upgrade |
+| 03-28 | Preferred alias status on English entries | Useful for content generation + translation |
+| 03-28 | Selective glossary injection | Full dump decreases quality; filter to source file terms |
+| 03-28 | Lean prompt format (english + translation + note + example) | Aliases/morphology serve matching step, not translation |
+| 03-28 | Collapse definition/translation Venn | All 519 terms candidates for both; glossary_ref=null means "not yet" |
+| 03-28 | Names policy: internal only | Agent names never appear in public GitHub comments |
