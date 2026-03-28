@@ -672,21 +672,21 @@
     "notes": null
   },
   "stake": {
-    "term": "حصة",
+    "term": "رهن",
     "aliases": [
-      "رهان"
+      "حصة"
     ],
-    "transliteration": "Hissa",
+    "transliteration": "rahn",
     "morphology": {
       "noun": {
-        "singular": "حصة"
+        "singular": "رهن"
       },
       "verb": {
-        "infinitive": "رهن",
-        "participle": "مرهون"
+        "infinitive": "يرهن",
+        "participle": "راهن"
       },
-      "adjective": null,
-      "agent": "مودع",
+      "adjective": "مرهون",
+      "agent": "راهن",
       "negation": null,
       "compounds": {}
     },
@@ -724,14 +724,14 @@
     },
     "source": "llm",
     "confidence": "high",
-    "notes": "Refers to the amount of crypto pledged."
+    "notes": "Harmonized to ر-ه-ن root (pledge/collateral). Avoids gambling connotation of رهان."
   },
   "staked": {
     "term": "مرهون",
     "aliases": [
       "موضوع في الحصة"
     ],
-    "transliteration": "Marhun",
+    "transliteration": "marhun",
     "morphology": {
       "noun": null,
       "verb": {
@@ -780,21 +780,21 @@
     "notes": null
   },
   "staker": {
-    "term": "مودع",
+    "term": "راهن",
     "aliases": [
       "مشارك في الحصة"
     ],
-    "transliteration": "Mudi'",
+    "transliteration": "rahin",
     "morphology": {
       "noun": {
-        "singular": "مودع"
+        "singular": "راهن"
       },
       "verb": {
         "infinitive": "رهن",
         "participle": "مودع"
       },
       "adjective": null,
-      "agent": "مودع",
+      "agent": "راهن",
       "negation": null,
       "compounds": {}
     },
@@ -835,21 +835,21 @@
     "notes": "Arabic community uses 'Mudi' (depositor) or 'Musharik' (participant)."
   },
   "staking": {
-    "term": "رهن الحصص",
+    "term": "الرهن",
     "aliases": [
       "تخزين"
     ],
-    "transliteration": "Rahn al-hissas",
+    "transliteration": "al-rahn",
     "morphology": {
       "noun": {
-        "singular": "رهن"
+        "singular": "الرهن"
       },
       "verb": {
-        "infinitive": "رهن",
-        "participle": "مرهون"
+        "infinitive": "يرهن",
+        "participle": "راهن"
       },
       "adjective": "رهني",
-      "agent": "مودع",
+      "agent": "راهن",
       "negation": "إلغاء الرهن",
       "compounds": {}
     },
@@ -2885,11 +2885,12 @@
     "notes": "Specific to EIP-4844, transliteration is preferred."
   },
   "slot": {
-    "term": "فتحة",
+    "term": "خانة زمنية",
     "aliases": [
-      "خانة زمنية"
+      "خانة",
+      "فتحة"
     ],
-    "transliteration": "Fut-hah",
+    "transliteration": "khana zamaniyya",
     "morphology": {
       "noun": {
         "singular": "فتحة"
@@ -2934,7 +2935,7 @@
     },
     "source": "llm",
     "confidence": "medium",
-    "notes": "Translates to 'slot' or 'aperture', used for time slots in Ethereum."
+    "notes": "خانة زمنية (time slot) preferred over فتحة (aperture) for beacon chain 12-second period."
   },
   "decentralized autonomous organization (dao)": {
     "term": "منظمة لامركزية ذاتية الحكم",
