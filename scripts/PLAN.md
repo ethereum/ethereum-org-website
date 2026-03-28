@@ -82,6 +82,16 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 - [ ] Expand `/glossary` page with new terms from the 453 list
 - [ ] Documentation for external consumers
 
+## Phase 7.5: Proper Names & Publication Titles
+
+- [ ] Grep repo for capitalized proper nouns appearing 3+ times
+- [ ] Filter against existing term list and known-noise
+- [ ] Categorize with Gemini: always Latin, transliterate, or translate
+- [ ] Cover: protocol names, client implementations, L2/chain names, tools
+- [ ] Add relevant names to glossary with correct script_rule and part_of_speech: proper_noun
+- [ ] Document publication title rules (external titles stay English; free-text descriptions translate)
+- [ ] Drop KEVM and SSTORE from glossary (too niche / pure opcode)
+
 ## Phase 8: Definition Glossary Expansion (Future)
 
 - [ ] Audit current /glossary page (203 terms) against the 453-term translation list
@@ -139,6 +149,9 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 | 2026-03-27 | Context forms = term + optional example | Gemini can reliably distinguish all 5 contexts (prose/heading/tag/ui/code) |
 | 2026-03-27 | CLDR plurals map to Slavic cases | one=nom.sg, few=nom.pl, many=gen.pl, other=fallback; works for both next-intl and Slavic |
 | 2026-03-27 | Pilot languages: ja, ar, fr, pl, cs, hi | Covers CJK, RTL, Romance, 2x Slavic, Indic script |
+| 2026-03-28 | Proper names stay in glossary | Mark as proper_noun, use script_rule for DNT/transliterate/translate guidance |
+| 2026-03-28 | City-named upgrades use localized city name | Shanghai -> localized in each language, with note it's the upgrade not the city |
+| 2026-03-28 | Publication titles: keep English for external links | Only translate free-text descriptions; keep original title for English-language destinations |
 | 2026-03-27 | Collapse definition/translation Venn | All 453 terms are candidates for both; glossary_ref=null means "not yet" not "never" |
 | 2026-03-27 | Content occurrence threshold for priority | Terms with 5+ occurrences prioritized; low-occurrence terms (vesting, cliff) go to reference tier |
 | 2026-03-27 | Multi-definition dictionary design | Future task: redesign /glossary page to support multiple definitions per term (like standard dictionaries) |
