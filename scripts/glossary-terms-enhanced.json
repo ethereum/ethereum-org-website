@@ -927,12 +927,12 @@
       },
       "aliases": [
         {
-          "term": "DVT",
+          "term": "distributed validator technology",
           "status": "preferred"
         },
         {
-          "term": "distributed validator technology",
-          "status": "accepted"
+          "term": "DVT",
+          "status": "preferred"
         }
       ]
     },
@@ -1190,11 +1190,11 @@
       },
       "aliases": [
         {
-          "term": "liquid staking token",
+          "term": "LST",
           "status": "preferred"
         },
         {
-          "term": "LST",
+          "term": "liquid staking token",
           "status": "accepted"
         },
         {
@@ -1202,14 +1202,13 @@
           "status": "accepted"
         },
         {
-          "term": "liquid staking derivative",
-          "status": "deprecated",
-          "note": "LSD acronym avoided due to unfortunate connotation"
+          "term": "LSD",
+          "status": "accepted",
+          "note": "Liquid staking derivative; still widely used"
         },
         {
-          "term": "LSD",
-          "status": "deprecated",
-          "note": "Acronym avoided; use LST"
+          "term": "liquid staking derivative",
+          "status": "accepted"
         }
       ]
     },
@@ -1252,7 +1251,7 @@
           "status": "preferred"
         },
         {
-          "term": "EIP-7251",
+          "term": "maximum effective balance",
           "status": "accepted"
         }
       ],
@@ -1453,12 +1452,12 @@
       },
       "aliases": [
         {
-          "term": "PBS",
+          "term": "proposer-builder separation",
           "status": "preferred"
         },
         {
-          "term": "proposer-builder separation",
-          "status": "accepted"
+          "term": "PBS",
+          "status": "preferred"
         }
       ]
     },
@@ -2544,12 +2543,12 @@
       },
       "aliases": [
         {
-          "term": "AMM",
+          "term": "automated market maker",
           "status": "preferred"
         },
         {
-          "term": "automated market maker",
-          "status": "accepted"
+          "term": "AMM",
+          "status": "preferred"
         }
       ]
     },
@@ -2680,9 +2679,14 @@
         {
           "term": "DeFi",
           "status": "preferred",
-          "note": "Acronym strongly preferred in all contexts"
+          "note": "Acronym preferred in all contexts"
         },
-        "decentralized finance",
+        {
+          "term": "decentralized finance",
+          "status": "accepted"
+        }
+      ],
+      "avoid": [
         "Decentralized Finance"
       ]
     },
@@ -3166,15 +3170,24 @@
         "base": "dapp"
       },
       "aliases": [
-        "dapp",
-        "dApp",
-        "DApp",
         {
-          "term": "dapps",
-          "status": "deprecated",
-          "note": "ethereum.org prefers 'apps' or 'Ethereum apps'"
+          "term": "dapp",
+          "status": "accepted",
+          "note": "Lowercase as regular noun. Prefer 'app' or 'onchain app' for new content."
         },
-        "decentralized application"
+        {
+          "term": "decentralized application",
+          "status": "accepted"
+        }
+      ],
+      "note": "Prefer 'app', 'application', or qualify with 'onchain'/'on Ethereum' for new content. E.g., 'Build an onchain app' over 'Build a dapp'.",
+      "avoid": [
+        "Dapp",
+        "DApp",
+        "dApp",
+        "dapps",
+        "Dapps",
+        "DApps"
       ]
     },
     "devp2p": {
@@ -3625,7 +3638,11 @@
       ],
       "forms": {
         "base": "ether"
-      }
+      },
+      "note": "Lowercase when referring to the currency/denomination. Title case only when referring to the person (Hal Finney, Nick Szabo).",
+      "avoid": [
+        "Ether"
+      ]
     },
     "etherscan": {
       "id": "etherscan",
@@ -3667,7 +3684,7 @@
         },
         {
           "term": "Go Ethereum",
-          "status": "accepted"
+          "status": "preferred"
         }
       ]
     },
@@ -3689,12 +3706,12 @@
       },
       "aliases": [
         {
-          "term": "WETH",
+          "term": "wrapped ether",
           "status": "preferred"
         },
         {
-          "term": "wrapped ether",
-          "status": "accepted"
+          "term": "WETH",
+          "status": "preferred"
         }
       ]
     },
@@ -4277,12 +4294,12 @@
       },
       "aliases": [
         {
-          "term": "DePIN",
+          "term": "decentralized physical infrastructure",
           "status": "preferred"
         },
         {
-          "term": "decentralized physical infrastructure",
-          "status": "accepted"
+          "term": "DePIN",
+          "status": "preferred"
         }
       ]
     },
@@ -4304,12 +4321,12 @@
       },
       "aliases": [
         {
-          "term": "DeSci",
+          "term": "decentralized science",
           "status": "preferred"
         },
         {
-          "term": "decentralized science",
-          "status": "accepted"
+          "term": "DeSci",
+          "status": "preferred"
         }
       ]
     },
@@ -4575,7 +4592,11 @@
       ],
       "forms": {
         "base": "finney"
-      }
+      },
+      "note": "Lowercase when referring to the currency/denomination. Title case only when referring to the person (Hal Finney, Nick Szabo).",
+      "avoid": [
+        "Finney"
+      ]
     },
     "fork": {
       "id": "fork",
@@ -4773,13 +4794,18 @@
       },
       "aliases": [
         {
-          "term": "Layer 1",
+          "term": "layer 1",
           "status": "preferred"
         },
         {
           "term": "L1",
-          "status": "accepted"
+          "status": "preferred"
         }
+      ],
+      "avoid": [
+        "Layer 1",
+        "layer-1",
+        "Layer-1"
       ]
     },
     "light client": {
@@ -5109,6 +5135,13 @@
           "note": "ethereum.org prefers unhyphenated form, like online/offline"
         },
         "off chain"
+      ],
+      "avoid": [
+        "off-chain",
+        "off chain",
+        "Off-chain",
+        "Off-Chain",
+        "Off Chain"
       ]
     },
     "ommer (uncle) block": {
@@ -5206,6 +5239,13 @@
           "note": "ethereum.org prefers unhyphenated form, like online/offline"
         },
         "on chain"
+      ],
+      "avoid": [
+        "on-chain",
+        "on chain",
+        "On-chain",
+        "On-Chain",
+        "On Chain"
       ]
     },
     "peer": {
@@ -5463,12 +5503,12 @@
       },
       "aliases": [
         {
-          "term": "RWA",
+          "term": "real world assets",
           "status": "preferred"
         },
         {
-          "term": "real world assets",
-          "status": "accepted"
+          "term": "RWA",
+          "status": "preferred"
         }
       ]
     },
@@ -5507,12 +5547,12 @@
       },
       "aliases": [
         {
-          "term": "ReFi",
+          "term": "regenerative finance",
           "status": "preferred"
         },
         {
-          "term": "regenerative finance",
-          "status": "accepted"
+          "term": "ReFi",
+          "status": "preferred"
         }
       ]
     },
@@ -5559,7 +5599,7 @@
         },
         {
           "term": "RPGF",
-          "status": "accepted"
+          "status": "preferred"
         }
       ]
     },
@@ -5832,7 +5872,11 @@
       ],
       "forms": {
         "base": "szabo"
-      }
+      },
+      "note": "Lowercase when referring to the currency/denomination. Title case only when referring to the person (Hal Finney, Nick Szabo).",
+      "avoid": [
+        "Szabo"
+      ]
     },
     "teku": {
       "id": "teku",
@@ -5905,12 +5949,12 @@
       },
       "aliases": [
         {
-          "term": "TVL",
+          "term": "total value locked",
           "status": "preferred"
         },
         {
-          "term": "total value locked",
-          "status": "accepted"
+          "term": "TVL",
+          "status": "preferred"
         }
       ]
     },
@@ -6417,7 +6461,7 @@
         },
         {
           "term": "DID",
-          "status": "accepted"
+          "status": "preferred"
         }
       ]
     },
@@ -6738,9 +6782,17 @@
           "status": "preferred"
         },
         {
+          "term": "Cancun-Deneb",
+          "status": "accepted"
+        },
+        {
           "term": "dencun upgrade",
           "status": "accepted"
         }
+      ],
+      "avoid": [
+        "dencun",
+        "DENCUN"
       ]
     },
     "eip-7702": {
@@ -6814,12 +6866,20 @@
       },
       "aliases": [
         {
+          "term": "Fusaka",
+          "status": "preferred"
+        },
+        {
           "term": "Fulu-Osaka",
           "status": "accepted"
         }
       ],
       "script_rule": "transliterate",
-      "note": "Planned Ethereum upgrade combining Fulu and Osaka. Portmanteau name."
+      "note": "Planned Ethereum upgrade combining Fulu and Osaka. Portmanteau name.",
+      "avoid": [
+        "fusaka",
+        "FUSAKA"
+      ]
     },
     "glamsterdam": {
       "id": "glamsterdam",
@@ -6838,7 +6898,21 @@
         "base": "Glamsterdam"
       },
       "script_rule": "transliterate",
-      "note": "Planned Ethereum upgrade. Portmanteau name."
+      "note": "Planned Ethereum upgrade. Portmanteau name.",
+      "aliases": [
+        {
+          "term": "Glamsterdam",
+          "status": "preferred"
+        },
+        {
+          "term": "Amsterdam-Gloas",
+          "status": "accepted"
+        }
+      ],
+      "avoid": [
+        "glamsterdam",
+        "GLAMSTERDAM"
+      ]
     },
     "homestead": {
       "id": "homestead",
@@ -6892,12 +6966,20 @@
       },
       "aliases": [
         {
+          "term": "Pectra",
+          "status": "preferred"
+        },
+        {
           "term": "Prague-Electra",
           "status": "accepted"
         }
       ],
       "script_rule": "transliterate",
-      "note": "Ethereum upgrade combining Prague (execution) and Electra (consensus). Portmanteau name."
+      "note": "Ethereum upgrade combining Prague (execution) and Electra (consensus). Portmanteau name.",
+      "avoid": [
+        "pectra",
+        "PECTRA"
+      ]
     },
     "shanghai": {
       "id": "shanghai",
@@ -6934,12 +7016,20 @@
       },
       "aliases": [
         {
+          "term": "Shapella",
+          "status": "preferred"
+        },
+        {
           "term": "Shanghai-Capella",
           "status": "accepted"
         }
       ],
       "script_rule": "transliterate",
-      "note": "Ethereum upgrade combining Shanghai (execution) and Capella (consensus). Enabled staking withdrawals."
+      "note": "Ethereum upgrade combining Shanghai (execution) and Capella (consensus). Enabled staking withdrawals.",
+      "avoid": [
+        "shapella",
+        "SHAPELLA"
+      ]
     },
     "the merge": {
       "id": "the-merge",
@@ -7209,7 +7299,7 @@
         },
         {
           "term": "DAS",
-          "status": "accepted"
+          "status": "preferred"
         }
       ],
       "script_rule": "translate",
@@ -7344,12 +7434,18 @@
       },
       "aliases": [
         {
-          "term": "Layer 2",
+          "term": "layer 2",
           "status": "preferred"
         },
-        "L2",
-        "layer 2",
-        "layer-2"
+        {
+          "term": "L2",
+          "status": "preferred"
+        }
+      ],
+      "avoid": [
+        "Layer 2",
+        "layer-2",
+        "Layer-2"
       ]
     },
     "optimistic rollup": {
@@ -7392,7 +7488,7 @@
           "status": "preferred"
         },
         {
-          "term": "EIP-7594",
+          "term": "Peer Data Availability Sampling",
           "status": "accepted"
         }
       ],
@@ -8995,7 +9091,7 @@
         },
         {
           "term": "SBT",
-          "status": "accepted"
+          "status": "preferred"
         }
       ]
     },

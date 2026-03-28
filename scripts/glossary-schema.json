@@ -101,6 +101,11 @@
             ]
           }
         },
+        "avoid": {
+          "type": "array",
+          "description": "Forms to avoid in new English content. These are recognized but discouraged -- e.g., title-cased forms of non-proper nouns ('Layer 2'), hyphenated forms ('on-chain'), or outdated capitalizations ('DApp'). Useful for content linting and style enforcement.",
+          "items": { "type": "string" }
+        },
         "related": {
           "type": "array",
           "description": "IDs of related entries (e.g., proof-of-stake -> validator, staking)",
