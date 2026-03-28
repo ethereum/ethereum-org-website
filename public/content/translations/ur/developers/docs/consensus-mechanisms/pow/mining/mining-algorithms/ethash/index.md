@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Ethash الگورتھم کا تفصیلی جائزہ۔
+description: "Ethash الگورتھم کا تفصیلی جائزہ۔"
 lang: ur
 ---
 

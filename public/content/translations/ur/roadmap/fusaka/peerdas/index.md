@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: فوساکا (Fusaka) ایتھریم پروٹوکول اپ گریڈ کے حصے کے طور پر PeerDAS کے بارے میں جانیں
+description: "فوساکا (Fusaka) ایتھریم پروٹوکول اپ گریڈ کے حصے کے طور پر PeerDAS کے بارے میں جانیں"
 lang: ur
 ---
 
