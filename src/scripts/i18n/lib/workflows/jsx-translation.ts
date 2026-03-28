@@ -1,5 +1,7 @@
 // JSX attribute translation workflow phase
 
+import path from "path"
+
 import { config } from "../../config"
 import { translateJsxAttributes } from "../../translate-jsx-attributes"
 import { isGeminiAvailable } from "../ai"
@@ -81,7 +83,10 @@ export async function runJsxTranslation(
 
       for (const updated of jsxResult.updatedFiles) {
         const buf = Buffer.from(updated.updatedContent, "utf8")
-        filesToCommit.push({ path: updated.filePath, content: buf })
+        filesToCommit.push({
+          path: path.relative(process.cwd(), updated.filePath),
+          content: buf,
+        })
         debugLog(`JSX-TRANSLATE: Will commit ${updated.filePath}`)
 
         // Update the committedFiles array with new content for sanitizer
