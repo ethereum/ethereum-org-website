@@ -63,7 +63,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
             status={getCategoryTagStyle(categorySlug)}
             className="px-1 py-0"
           >
-            {tool.category}
+            {t(`page-developers-tools-category-${categorySlug}-title`)}
           </Tag>
           <h2 className="text-3xl">{tool.name}</h2>
           <TagsInlineText
