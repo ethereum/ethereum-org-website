@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Glamsterdam நெறிமுறை மேம்படுத்தல் பற்றி அறிக
+description: "Glamsterdam நெறிமுறை மேம்படுத்தல் பற்றி அறிக"
 lang: ta
 ---
 

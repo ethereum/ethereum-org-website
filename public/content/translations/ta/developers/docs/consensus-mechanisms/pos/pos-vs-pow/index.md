@@ -1,6 +1,6 @@
 ---
 title: Proof-of-stake vs proof-of-work
-description: Ethereum இன் proof-of-stake மற்றும் proof-of-work அடிப்படையிலான ஒருமித்த வழிமுறைகளுக்கு இடையிலான ஒப்பீடு
+description: "Ethereum இன் proof-of-stake மற்றும் proof-of-work அடிப்படையிலான ஒருமித்த வழிமுறைகளுக்கு இடையிலான ஒப்பீடு"
 lang: ta
 ---
 

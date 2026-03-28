@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC API
-description: Ethereum கிளையண்டுகளுக்கான நிலையற்ற (stateless), குறைந்த எடையுள்ள ரிமோட் ப்ரொசீஜர் கால் (RPC) நெறிமுறை.
+description: "Ethereum கிளையண்டுகளுக்கான நிலையற்ற (stateless), குறைந்த எடையுள்ள ரிமோட் ப்ரொசீஜர் கால் (RPC) நெறிமுறை."
 lang: ta
 ---
 

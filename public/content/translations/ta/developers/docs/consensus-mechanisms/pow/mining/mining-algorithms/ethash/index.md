@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Ethash அல்காரிதம் பற்றிய விரிவான பார்வை.
+description: "Ethash அல்காரிதம் பற்றிய விரிவான பார்வை."
 lang: ta
 ---
 
