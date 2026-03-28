@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: ফুসাকা (Fusaka) ইথিরিয়াম প্রটোকল আপগ্রেডের অংশ হিসেবে PeerDAS সম্পর্কে জানুন
+description: "ফুসাকা (Fusaka) ইথিরিয়াম প্রটোকল আপগ্রেডের অংশ হিসেবে PeerDAS সম্পর্কে জানুন"
 lang: bn
 ---
 

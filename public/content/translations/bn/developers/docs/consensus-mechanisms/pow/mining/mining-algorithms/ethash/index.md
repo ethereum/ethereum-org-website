@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: ইথহ্যাস (Ethash) এ্যালগরিদমের একটি বিস্তারিত রূপ।
+description: "ইথহ্যাস (Ethash) এ্যালগরিদমের একটি বিস্তারিত রূপ।"
 lang: bn
 ---
 
