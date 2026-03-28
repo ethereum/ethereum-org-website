@@ -113,13 +113,66 @@ def build_regex_patterns(index):
     return combined, sorted_forms
 
 
-def extract_source_text(file_path):
-    """Read and clean a source file for term matching."""
+def detect_filetype(file_path):
+    """Detect whether a file is markdown or JSON."""
+    path = Path(file_path)
+    ext = path.suffix.lower()
+    if ext == ".json":
+        return "json"
+    return "markdown"
+
+
+def extract_source_text(file_path, filetype=None):
+    """Read and clean a source file for term matching.
+
+    Handles both markdown and JSON files. For JSON, extracts only
+    string values (not keys) to avoid false matches on key names.
+    """
     path = Path(file_path)
     if not path.exists():
         print("Error: file not found: %s" % file_path, file=sys.stderr)
         sys.exit(1)
 
+    if filetype is None:
+        filetype = detect_filetype(file_path)
+
+    if filetype == "json":
+        return _extract_json_values(path)
+    else:
+        return _extract_markdown_text(path)
+
+
+def _extract_json_values(path):
+    """Extract only string values from a JSON file for matching.
+
+    Walks the entire JSON tree, collecting string values only.
+    Keys are ignored -- 'what-is-ethereum-1-a-label' should NOT trigger matches.
+    """
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    values = []
+
+    def walk(obj):
+        if isinstance(obj, str):
+            values.append(obj)
+        elif isinstance(obj, dict):
+            for v in obj.values():
+                walk(v)
+        elif isinstance(obj, list):
+            for item in obj:
+                walk(item)
+
+    walk(data)
+
+    # Join all string values, strip HTML from them
+    text = " ".join(values)
+    text = re.sub(r'<[^>]+>', ' ', text)
+    return text
+
+
+def _extract_markdown_text(path):
+    """Extract clean text from a markdown file for matching."""
     text = path.read_text(encoding="utf-8")
 
     # Strip frontmatter
@@ -145,7 +198,8 @@ def filter_glossary_for_source(source_text, index, pattern):
     """
     Find all glossary terms that appear in the source text.
 
-    Returns: dict[entry_id] -> list of matched surface forms
+    Returns: dict[entry_id] -> { "forms": list of matched surface forms,
+                                  "count": total occurrences across all forms }
     """
     matches = {}
 
@@ -154,11 +208,15 @@ def filter_glossary_for_source(source_text, index, pattern):
         if surface_form in index:
             entry_id = index[surface_form]
             if entry_id not in matches:
-                matches[entry_id] = set()
-            matches[entry_id].add(surface_form)
+                matches[entry_id] = {"forms": set(), "count": 0}
+            matches[entry_id]["forms"].add(surface_form)
+            matches[entry_id]["count"] += 1
 
     # Convert sets to sorted lists
-    return {k: sorted(v) for k, v in sorted(matches.items())}
+    return {
+        k: {"forms": sorted(v["forms"]), "count": v["count"]}
+        for k, v in sorted(matches.items())
+    }
 
 
 def load_translation(lang_code, entry_id):
@@ -173,66 +231,46 @@ def load_translation(lang_code, entry_id):
     return data.get(entry_id)
 
 
-def format_rich(entry_id, glossary_entry, translation, matched_forms):
+def format_rich(entry_id, glossary_entry, translation, matched_forms, occurrence_count):
     """
-    Format a glossary match as a rich object for LLM prompt injection.
+    Format a glossary match for LLM prompt injection.
 
-    Returns a dict with enough context for Gemini to use the term correctly.
+    Uses the lean format agreed with Relay:
+    - english + translation: always included
+    - note: when present (disambiguation terms)
+    - example: only when term appears 2+ times in source (per Relay's guidance)
+
+    Returns a dict matching GlossaryEntryForPrompt interface.
     """
     result = {
-        "id": entry_id,
         "english": glossary_entry.get("term", entry_id),
-        "matched_forms": matched_forms,
     }
 
-    # Translation data
     if translation:
         result["translation"] = translation.get("term", "")
 
-        # Aliases from the translation
-        aliases = translation.get("aliases", [])
-        if aliases:
-            result["translation_aliases"] = aliases
+        # Example sentence: only include for high-frequency terms (2+ occurrences)
+        if occurrence_count >= 2:
+            contexts = translation.get("contexts", {})
+            if contexts and isinstance(contexts, dict):
+                prose = contexts.get("prose", {})
+                if isinstance(prose, dict) and "example" in prose:
+                    result["example"] = prose["example"]
 
-        # Example sentence
-        contexts = translation.get("contexts", {})
-        if contexts and isinstance(contexts, dict):
-            prose = contexts.get("prose", {})
-            if isinstance(prose, dict) and "example" in prose:
-                result["example"] = prose["example"]
-
-        # Key morphological forms
-        morph = translation.get("morphology", {})
-        if morph and isinstance(morph, dict):
-            rich_morph = {}
-            if morph.get("verb") and isinstance(morph["verb"], dict):
-                inf = morph["verb"].get("infinitive")
-                if inf:
-                    rich_morph["verb"] = inf
-            if morph.get("noun") and isinstance(morph["noun"], dict):
-                plural_or_singular = morph["noun"].get("singular")
-                if plural_or_singular:
-                    rich_morph["noun"] = plural_or_singular
-            if morph.get("agent"):
-                rich_morph["agent"] = morph["agent"]
-            if rich_morph:
-                result["morphology"] = rich_morph
-
-        # Grammar notes
-        grammar = translation.get("grammar", {})
-        if grammar and isinstance(grammar, dict):
-            if grammar.get("gender"):
-                result["gender"] = grammar["gender"]
-
-        # Translation notes
+        # Translation notes (disambiguation)
         notes = translation.get("notes")
         if notes:
             result["note"] = notes
+    else:
+        result["translation"] = ""
 
-    # English context for the translator
+    # English context for the translator (from our glossary metadata)
     translation_context = glossary_entry.get("translation_note", "")
-    if translation_context:
-        result["context"] = translation_context
+    if translation_context and "note" not in result:
+        result["note"] = translation_context
+
+    # Include occurrence count for logging/debugging
+    result["occurrences"] = occurrence_count
 
     return result
 
@@ -298,11 +336,13 @@ def main():
         print("Matched %d/%d glossary terms in %s\n" % (
             matched_count, total_terms, args.source
         ))
-        for entry_id, forms in matches.items():
+        for entry_id, match_info in matches.items():
             entry = terms.get(entry_id, {})
             term = entry.get("term", entry_id)
             cat = entry.get("category", "?")
-            print("  %-35s [%s] (matched: %s)" % (term, cat, ", ".join(forms)))
+            count = match_info["count"]
+            forms = match_info["forms"]
+            print("  %-35s [%s] x%d (matched: %s)" % (term, cat, count, ", ".join(forms)))
         return
 
     if not args.lang:
@@ -319,10 +359,11 @@ def main():
             "entries": []
         }
 
-        for entry_id, forms in matches.items():
+        for entry_id, match_info in matches.items():
             entry = terms.get(entry_id, {})
             translation = load_translation(args.lang, entry_id)
-            rich = format_rich(entry_id, entry, translation, forms)
+            rich = format_rich(entry_id, entry, translation,
+                               match_info["forms"], match_info["count"])
             output["entries"].append(rich)
 
         if args.json:
@@ -332,7 +373,8 @@ def main():
                 matched_count, total_terms, args.source, args.lang
             ))
             for entry in output["entries"]:
-                print("  %s -> %s" % (entry["english"], entry.get("translation", "?")))
+                freq = "x%d" % entry.get("occurrences", 1)
+                print("  %s -> %s (%s)" % (entry["english"], entry.get("translation", "?"), freq))
                 if "example" in entry:
                     print("    example: %s" % entry["example"])
                 if "note" in entry:
@@ -340,7 +382,7 @@ def main():
 
     elif args.format == "flat":
         flat_map = {}
-        for entry_id, forms in matches.items():
+        for entry_id, match_info in matches.items():
             entry = terms.get(entry_id, {})
             translation = load_translation(args.lang, entry_id)
             eng, trans = format_flat(entry_id, entry, translation)
