@@ -5,7 +5,7 @@
  * Gemini handles the linguistics; we handle the guardrails.
  */
 
-import { GoogleGenAI } from "@google/genai"
+import { GoogleGenAI, HarmBlockThreshold,HarmCategory } from "@google/genai"
 
 import i18nConfig from "../../../../../i18n.config.json"
 import { delay } from "../workflows/utils"
@@ -44,10 +44,22 @@ const RETRY_DELAY_MS = 5000
  * mining/attack descriptions in certain non-Latin languages).
  */
 const SAFETY_SETTINGS = [
-  { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
-  { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
-  { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
-  { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" },
+  {
+    category: HarmCategory.HARM_CATEGORY_HARASSMENT,
+    threshold: HarmBlockThreshold.BLOCK_NONE,
+  },
+  {
+    category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+    threshold: HarmBlockThreshold.BLOCK_NONE,
+  },
+  {
+    category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+    threshold: HarmBlockThreshold.BLOCK_NONE,
+  },
+  {
+    category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+    threshold: HarmBlockThreshold.BLOCK_NONE,
+  },
 ]
 
 const LANGUAGE_NAMES: Record<string, string> = Object.fromEntries(
