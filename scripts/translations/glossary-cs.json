@@ -1,0 +1,4725 @@
+{
+  "attestation": {
+    "term": "Atestace",
+    "aliases": [
+      "Potvrzení"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "atestace"
+      },
+      "verb": {
+        "infinitive": "atestovat",
+        "participle": "atestující"
+      },
+      "adjective": "atestační",
+      "agent": "atestující",
+      "negation": null,
+      "compounds": {
+        "attestation-committee": "atestační výbor"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "atestaci",
+        "example": "Validátor odeslal svou atestaci do sítě pro potvrzení stavu."
+      },
+      "heading": {
+        "term": "Atestace"
+      },
+      "tag": {
+        "term": "atestace"
+      },
+      "ui": {
+        "term": "Odeslat atestaci"
+      },
+      "code": {
+        "term": "attestation"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "atestace",
+      "few": "atestace",
+      "many": "atestací",
+      "other": "atestace"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Ethereum consensus, 'atestace' is the standard technical translation."
+  },
+  "bridge": {
+    "term": "Most",
+    "aliases": [
+      "Bridge"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "most"
+      },
+      "verb": {
+        "infinitive": "přemostit",
+        "participle": "přemosťující"
+      },
+      "adjective": "mostní",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "cross-chain-bridge": "cross-chain most"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "most",
+        "example": "Použijte most pro převod vašich aktiv z hlavní sítě na druhou vrstvu."
+      },
+      "heading": {
+        "term": "Mosty"
+      },
+      "tag": {
+        "term": "most"
+      },
+      "ui": {
+        "term": "Most"
+      },
+      "code": {
+        "term": "bridge"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "most",
+      "few": "mosty",
+      "many": "mostů",
+      "other": "mosty"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralization": {
+    "term": "Decentralizace",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "decentralizace"
+      },
+      "verb": {
+        "infinitive": "decentralizovat",
+        "participle": "decentralizující"
+      },
+      "adjective": "decentralizační",
+      "agent": null,
+      "negation": "centralizace",
+      "compounds": {
+        "progressive-decentralization": "progresivní decentralizace"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "decentralizace",
+        "example": "Decentralizace je klíčovým aspektem bezpečnosti sítě Ethereum."
+      },
+      "heading": {
+        "term": "Decentralizace"
+      },
+      "tag": {
+        "term": "decentralizace"
+      },
+      "ui": {
+        "term": "Stupeň decentralizace"
+      },
+      "code": {
+        "term": "decentralization"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "decentralizace",
+      "few": "decentralizace",
+      "many": "decentralizací",
+      "other": "decentralizace"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized": {
+    "term": "Decentralizovaný",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "decentralizace"
+      },
+      "verb": {
+        "infinitive": "decentralizovat",
+        "participle": "decentralizující"
+      },
+      "adjective": "decentralizovaný",
+      "agent": null,
+      "negation": "centralizovaný",
+      "compounds": {
+        "decentralized-application": "decentralizovaná aplikace"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "decentralizované",
+        "example": "Dapps jsou decentralizované aplikace běžící na blockchainu."
+      },
+      "heading": {
+        "term": "Decentralizované"
+      },
+      "tag": {
+        "term": "decentralizovaný"
+      },
+      "ui": {
+        "term": "Decentralizovaný"
+      },
+      "code": {
+        "term": "decentralized"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "decentralizovaný",
+      "few": "decentralizované",
+      "many": "decentralizovaných",
+      "other": "decentralizované"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "deploy": {
+    "term": "Nasadit",
+    "aliases": [
+      "Deployovat"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nasazení"
+      },
+      "verb": {
+        "infinitive": "nasadit",
+        "participle": "nasazující"
+      },
+      "adjective": "nasazovací",
+      "agent": "nasazující",
+      "negation": null,
+      "compounds": {
+        "contract-deployment": "nasazení kontraktu"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "nasadit",
+        "example": "Vývojář se chystá nasadit svůj první chytrý kontrakt do testovací sítě."
+      },
+      "heading": {
+        "term": "Nasadit kontrakt"
+      },
+      "tag": {
+        "term": "nasazení"
+      },
+      "ui": {
+        "term": "Nasadit"
+      },
+      "code": {
+        "term": "deploy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard professional translation for 'deploy' in software and blockchain contexts."
+  },
+  "finality": {
+    "term": "Finalita",
+    "aliases": [
+      "Konečnost"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "finalita"
+      },
+      "verb": {
+        "infinitive": "finalizovat",
+        "participle": "finalizující"
+      },
+      "adjective": "finální",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "finality-gadget": "nástroj finality"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "finality",
+        "example": "Po dosažení finality již nelze transakci z historie blockchainu odstranit."
+      },
+      "heading": {
+        "term": "Finalita"
+      },
+      "tag": {
+        "term": "finalita"
+      },
+      "ui": {
+        "term": "Čas do finality"
+      },
+      "code": {
+        "term": "finality"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "finalita",
+      "few": "finality",
+      "many": "finalit",
+      "other": "finality"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "fork": {
+    "term": "Fork",
+    "aliases": [
+      "Větvení",
+      "Odštěpení"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "fork"
+      },
+      "verb": {
+        "infinitive": "forknout",
+        "participle": "forkující"
+      },
+      "adjective": "forknutý",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hard-fork": "hard fork",
+        "soft-fork": "soft fork"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "fork",
+        "example": "V případě neshody v komunitě může dojít k hard forku sítě."
+      },
+      "heading": {
+        "term": "Forky"
+      },
+      "tag": {
+        "term": "fork"
+      },
+      "ui": {
+        "term": "Forknout"
+      },
+      "code": {
+        "term": "fork"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "fork",
+      "few": "forky",
+      "many": "forků",
+      "other": "forky"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'fork' is widely used in Czech IT; 'větvení' is the literal translation."
+  },
+  "governance": {
+    "term": "Správa",
+    "aliases": [
+      "Governance",
+      "Řízení"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "správa"
+      },
+      "verb": {
+        "infinitive": "spravovat",
+        "participle": "spravující"
+      },
+      "adjective": "správní",
+      "agent": "správce",
+      "negation": null,
+      "compounds": {
+        "onchain-governance": "onchain správa"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "správy",
+        "example": "Držitelé tokenů mají právo účastnit se správy protokolu."
+      },
+      "heading": {
+        "term": "Správa sítě"
+      },
+      "tag": {
+        "term": "správa"
+      },
+      "ui": {
+        "term": "Governance"
+      },
+      "code": {
+        "term": "governance"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "správa",
+      "few": "správy",
+      "many": "správ",
+      "other": "správy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'správa' is the general term, 'governance' is often kept in English in specialized crypto UI."
+  },
+  "hash": {
+    "term": "Hash",
+    "aliases": [
+      "Haš"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "hash"
+      },
+      "verb": {
+        "infinitive": "hashovat",
+        "participle": "hashující"
+      },
+      "adjective": "hashovací",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hash-function": "hashovací funkce"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "hash",
+        "example": "Každý blok v řetězci obsahuje hash bloku předchozího."
+      },
+      "heading": {
+        "term": "Hash"
+      },
+      "tag": {
+        "term": "hash"
+      },
+      "ui": {
+        "term": "Zkopírovat hash"
+      },
+      "code": {
+        "term": "hash"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "hash",
+      "few": "hashe",
+      "many": "hashů",
+      "other": "hashe"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "English spelling 'hash' is dominant; 'haš' is rare but correct phonetically."
+  },
+  "miner": {
+    "term": "těžař",
+    "aliases": [
+      "miner"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "těžař"
+      },
+      "verb": {
+        "infinitive": "těžit",
+        "participle": "těžící"
+      },
+      "adjective": "těžařský",
+      "agent": "těžař",
+      "negation": null,
+      "compounds": {
+        "mining-pool": "těžařský pool"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "těžař",
+        "example": "Těžař přidává nové bloky do blockchainu a získává za to odměnu."
+      },
+      "heading": {
+        "term": "Těžař"
+      },
+      "tag": {
+        "term": "těžař"
+      },
+      "ui": {
+        "term": "těžař"
+      },
+      "code": {
+        "term": "miner"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "těžař",
+      "two": "těžaři",
+      "few": "těžaři",
+      "many": "těžařů",
+      "other": "těžaři"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mining": {
+    "term": "těžba",
+    "aliases": [
+      "mining"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "těžba"
+      },
+      "verb": {
+        "infinitive": "těžit",
+        "participle": "těžený"
+      },
+      "adjective": "těžební",
+      "agent": "těžař",
+      "negation": null,
+      "compounds": {
+        "mining-reward": "těžební odměna"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "těžba",
+        "example": "Těžba etherea byla po přechodu na Proof of Stake ukončena."
+      },
+      "heading": {
+        "term": "Těžba"
+      },
+      "tag": {
+        "term": "těžba"
+      },
+      "ui": {
+        "term": "těžba"
+      },
+      "code": {
+        "term": "mining"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "těžba",
+      "two": "těžby",
+      "few": "těžby",
+      "many": "těžeb",
+      "other": "těžby"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mint": {
+    "term": "ražba",
+    "aliases": [
+      "mincování"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ražba"
+      },
+      "verb": {
+        "infinitive": "razit",
+        "participle": "ražený"
+      },
+      "adjective": "razební",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "mint-price": "cena ražby"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ražba",
+        "example": "Ražba nového NFT vyžaduje zaplacení poplatku za plyn."
+      },
+      "heading": {
+        "term": "Ražba"
+      },
+      "tag": {
+        "term": "ražba"
+      },
+      "ui": {
+        "term": "Razit"
+      },
+      "code": {
+        "term": "mint"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ražba",
+      "two": "ražby",
+      "few": "ražby",
+      "many": "ražeb",
+      "other": "ražby"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "signature": {
+    "term": "podpis",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "podpis"
+      },
+      "verb": {
+        "infinitive": "podepsat",
+        "participle": "podepsaný"
+      },
+      "adjective": "podpisový",
+      "agent": null,
+      "negation": "nepodepsaný",
+      "compounds": {
+        "digital-signature": "digitální podpis"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "podpis",
+        "example": "Každá transakce musí obsahovat platný digitální podpis."
+      },
+      "heading": {
+        "term": "Podpis"
+      },
+      "tag": {
+        "term": "podpis"
+      },
+      "ui": {
+        "term": "Podepsat"
+      },
+      "code": {
+        "term": "signature"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "podpis",
+      "two": "podpisy",
+      "few": "podpisy",
+      "many": "podpisů",
+      "other": "podpisy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "stake": {
+    "term": "vklad",
+    "aliases": [
+      "stake"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "vklad"
+      },
+      "verb": {
+        "infinitive": "vložit",
+        "participle": "vložený"
+      },
+      "adjective": "vkladový",
+      "agent": "vkladatel",
+      "negation": null,
+      "compounds": {
+        "stake-amount": "výše vkladu"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "vklad",
+        "example": "Uživatel musí uzamknout svůj vklad, aby se mohl účastnit konsenzu."
+      },
+      "heading": {
+        "term": "Vklad"
+      },
+      "tag": {
+        "term": "vklad"
+      },
+      "ui": {
+        "term": "Vložit"
+      },
+      "code": {
+        "term": "stake"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "vklad",
+      "two": "vklady",
+      "few": "vklady",
+      "many": "vkladů",
+      "other": "vklady"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staked": {
+    "term": "vložený",
+    "aliases": [
+      "stakovaný"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "vložit",
+        "participle": "vložený"
+      },
+      "adjective": "vložený",
+      "agent": null,
+      "negation": "nevložený",
+      "compounds": {
+        "staked-ether": "vložený ether"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "vložené",
+        "example": "Celkové množství vložené kryptoměny zajišťuje bezpečnost sítě."
+      },
+      "heading": {
+        "term": "Vložené"
+      },
+      "tag": {
+        "term": "vložené"
+      },
+      "ui": {
+        "term": "Vložené"
+      },
+      "code": {
+        "term": "staked"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used typically as a passive participle/adjective."
+  },
+  "staker": {
+    "term": "staker",
+    "aliases": [
+      "vkladatel"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "staker"
+      },
+      "verb": {
+        "infinitive": "stakovat",
+        "participle": "stakující"
+      },
+      "adjective": "stakerský",
+      "agent": "staker",
+      "negation": null,
+      "compounds": {
+        "solo-staker": "sólo staker"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "staker",
+        "example": "Každý staker je zodpovědný za provoz svého validačního uzlu."
+      },
+      "heading": {
+        "term": "Staker"
+      },
+      "tag": {
+        "term": "staker"
+      },
+      "ui": {
+        "term": "staker"
+      },
+      "code": {
+        "term": "staker"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "staker",
+      "two": "stakeři",
+      "few": "stakeři",
+      "many": "stakerů",
+      "other": "stakeři"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Loanword 'staker' is very common in the Czech crypto community."
+  },
+  "staking": {
+    "term": "staking",
+    "aliases": [
+      "stakování"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "staking"
+      },
+      "verb": {
+        "infinitive": "stakovat",
+        "participle": "stakovaný"
+      },
+      "adjective": "stakovací",
+      "agent": "staker",
+      "negation": null,
+      "compounds": {
+        "liquid-staking": "likvidní staking"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "staking",
+        "example": "Staking umožňuje uživatelům získávat výnosy z jejich držených prostředků."
+      },
+      "heading": {
+        "term": "Staking"
+      },
+      "tag": {
+        "term": "staking"
+      },
+      "ui": {
+        "term": "Staking"
+      },
+      "code": {
+        "term": "staking"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "staking",
+      "two": "stakingy",
+      "few": "stakingy",
+      "many": "stakingů",
+      "other": "stakingy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "swap": {
+    "term": "směna",
+    "aliases": [
+      "swap",
+      "výměna"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "směna"
+      },
+      "verb": {
+        "infinitive": "směnit",
+        "participle": "směněný"
+      },
+      "adjective": "směnný",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-swap": "směna tokenů"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "směna",
+        "example": "Směna jednoho tokenu za druhý proběhla přes decentralizovanou burzu."
+      },
+      "heading": {
+        "term": "Směna"
+      },
+      "tag": {
+        "term": "swap"
+      },
+      "ui": {
+        "term": "Směnit"
+      },
+      "code": {
+        "term": "swap"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "směna",
+      "two": "směny",
+      "few": "směny",
+      "many": "směn",
+      "other": "směny"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transaction": {
+    "term": "transakce",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "transakce"
+      },
+      "verb": {
+        "infinitive": "provést transakci",
+        "participle": null
+      },
+      "adjective": "transakční",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "transaction-fee": "transakční poplatek"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "transakce",
+        "example": "Počkejte, dokud nebude transakce potvrzena v dalším bloku."
+      },
+      "heading": {
+        "term": "Transakce"
+      },
+      "tag": {
+        "term": "transakce"
+      },
+      "ui": {
+        "term": "Transakce"
+      },
+      "code": {
+        "term": "transaction"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "transakce",
+      "two": "transakce",
+      "few": "transakce",
+      "many": "transakcí",
+      "other": "transakce"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "validator": {
+    "term": "validátor",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "validátor"
+      },
+      "verb": {
+        "infinitive": "validovat",
+        "participle": "validující"
+      },
+      "adjective": "validátorský",
+      "agent": "validátor",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "validátor",
+        "example": "Validátor navrhuje nové bloky v síti a zajišťuje její bezpečnost."
+      },
+      "heading": {
+        "term": "Validátor"
+      },
+      "tag": {
+        "term": "validátor"
+      },
+      "ui": {
+        "term": "Validátor"
+      },
+      "code": {
+        "term": "validator"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "validátor",
+      "two": "validátoři",
+      "few": "validátoři",
+      "many": "validátorů",
+      "other": "validátory"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Czech technical context, it can be treated as animate when referring to the entity or inanimate when referring to the software (plural validátory)."
+  },
+  "vote": {
+    "term": "hlas",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "hlas"
+      },
+      "verb": {
+        "infinitive": "hlasovat",
+        "participle": "hlasující"
+      },
+      "adjective": "hlasovací",
+      "agent": "hlasující",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "hlas",
+        "example": "Každý hlas v rámci DAO má svou váhu podle počtu držených tokenů."
+      },
+      "heading": {
+        "term": "Hlas"
+      },
+      "tag": {
+        "term": "hlas"
+      },
+      "ui": {
+        "term": "Hlasovat"
+      },
+      "code": {
+        "term": "vote"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "hlas",
+      "two": "hlasy",
+      "few": "hlasy",
+      "many": "hlasů",
+      "other": "hlasy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "voting": {
+    "term": "hlasování",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "hlasování"
+      },
+      "verb": {
+        "infinitive": "hlasovat",
+        "participle": "hlasující"
+      },
+      "adjective": "hlasovací",
+      "agent": "hlasující",
+      "negation": "nehlasování",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "hlasování",
+        "example": "Hlasování o tomto vylepšení sítě bude ukončeno příští týden."
+      },
+      "heading": {
+        "term": "Hlasování"
+      },
+      "tag": {
+        "term": "hlasování"
+      },
+      "ui": {
+        "term": "Hlasování"
+      },
+      "code": {
+        "term": "voting"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "hlasování",
+      "two": "hlasování",
+      "few": "hlasování",
+      "many": "hlasování",
+      "other": "hlasování"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Czech neuter nouns ending in -ní are often invariant in plural nominative/genitive forms."
+  },
+  "ethereum": {
+    "term": "Ethereum",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum"
+      },
+      "verb": null,
+      "adjective": "ethereový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum",
+        "example": "Ethereum je decentralizovaná platforma pro chytré kontrakty."
+      },
+      "heading": {
+        "term": "Ethereum"
+      },
+      "tag": {
+        "term": "Ethereum"
+      },
+      "ui": {
+        "term": "Ethereum"
+      },
+      "code": {
+        "term": "ethereum"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Czech, it is usually inflected as a neuter noun (v Ethereu, do Etherea)."
+  },
+  "contract": {
+    "term": "kontrakt",
+    "aliases": [
+      "smlouva"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "kontrakt"
+      },
+      "verb": null,
+      "adjective": "kontraktuální",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kontrakt",
+        "example": "Tento kontrakt definuje pravidla pro distribuci odměn."
+      },
+      "heading": {
+        "term": "Kontrakt"
+      },
+      "tag": {
+        "term": "kontrakt"
+      },
+      "ui": {
+        "term": "Kontrakt"
+      },
+      "code": {
+        "term": "contract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "kontrakt",
+      "two": "kontrakty",
+      "few": "kontrakty",
+      "many": "kontraktů",
+      "other": "kontrakty"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Smlouva' is a more common Czech word for agreement, but 'kontrakt' is preferred in technical smart contract contexts."
+  },
+  "block": {
+    "term": "blok",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blok"
+      },
+      "verb": {
+        "infinitive": "blokovat",
+        "participle": "blokující"
+      },
+      "adjective": "blokový",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "block-height": "výška bloku",
+        "block-reward": "odměna za blok"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "blok",
+        "example": "Každý nový blok v blockchainu obsahuje hash předchozího bloku."
+      },
+      "heading": {
+        "term": "Blok"
+      },
+      "tag": {
+        "term": "blok"
+      },
+      "ui": {
+        "term": "Blok"
+      },
+      "code": {
+        "term": "block"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "blok",
+      "two": "bloky",
+      "few": "bloky",
+      "many": "bloků",
+      "other": "bloky"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "smart contract": {
+    "term": "chytrý kontrakt",
+    "aliases": [
+      "inteligentní kontrakt",
+      "smart kontrakt"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "chytrý kontrakt"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "chytrý kontrakt",
+        "example": "Chytrý kontrakt se automaticky spustí, jakmile jsou splněny podmínky."
+      },
+      "heading": {
+        "term": "Chytrý kontrakt"
+      },
+      "tag": {
+        "term": "chytrý kontrakt"
+      },
+      "ui": {
+        "term": "Chytrý kontrakt"
+      },
+      "code": {
+        "term": "smartContract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "chytrý kontrakt",
+      "two": "chytré kontrakty",
+      "few": "chytré kontrakty",
+      "many": "chytrých kontraktů",
+      "other": "chytré kontrakty"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Chytrý kontrakt' is the literal and most widely accepted translation in the Czech crypto community."
+  },
+  "node": {
+    "term": "uzel",
+    "aliases": [
+      "node"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "uzel"
+      },
+      "verb": null,
+      "adjective": "uzlový",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node": "plný uzel",
+        "light-node": "lehký uzel"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "uzel",
+        "example": "Plný uzel udržuje kompletní historii všech transakcí na síti."
+      },
+      "heading": {
+        "term": "Uzel"
+      },
+      "tag": {
+        "term": "uzel"
+      },
+      "ui": {
+        "term": "Uzel"
+      },
+      "code": {
+        "term": "node"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "uzel",
+      "two": "uzly",
+      "few": "uzly",
+      "many": "uzlů",
+      "other": "uzly"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'node' is common in IT jargon, 'uzel' is the standard technical translation."
+  },
+  "token": {
+    "term": "token",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "token"
+      },
+      "verb": {
+        "infinitive": "tokenizovat",
+        "participle": "tokenizující"
+      },
+      "adjective": "tokenový",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-holder": "držitel tokenu"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "token",
+        "example": "Tento token lze použít k hlasování v governance protokolu."
+      },
+      "heading": {
+        "term": "Token"
+      },
+      "tag": {
+        "term": "token"
+      },
+      "ui": {
+        "term": "Token"
+      },
+      "code": {
+        "term": "token"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "token",
+      "two": "tokeny",
+      "few": "tokeny",
+      "many": "tokenů",
+      "other": "tokeny"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "address": {
+    "term": "adresa",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "adresa"
+      },
+      "verb": {
+        "infinitive": "adresovat",
+        "participle": "adresující"
+      },
+      "adjective": "adresní",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "wallet-address": "adresa peněženky"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "adresa",
+        "example": "Ujistěte se, že posíláte prostředky na správnou adresu."
+      },
+      "heading": {
+        "term": "Adresa"
+      },
+      "tag": {
+        "term": "adresa"
+      },
+      "ui": {
+        "term": "Adresa"
+      },
+      "code": {
+        "term": "address"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "adresa",
+      "two": "adresy",
+      "few": "adresy",
+      "many": "adres",
+      "other": "adresy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "eth": {
+    "term": "Ether",
+    "aliases": [
+      "ETH"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ether"
+      },
+      "verb": null,
+      "adjective": "etherový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ether",
+        "example": "Transakční poplatek byl zaplacen v etherech."
+      },
+      "heading": {
+        "term": "Ether (ETH)"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "Ether"
+      },
+      "code": {
+        "term": "eth"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ether",
+      "two": "ethery",
+      "few": "ethery",
+      "many": "etherů",
+      "other": "ethery"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as an abbreviation 'ETH' in all contexts."
+  },
+  "blockchain": {
+    "term": "Blockchain",
+    "aliases": [
+      "blokový řetězec"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blockchain"
+      },
+      "verb": null,
+      "adjective": "blockchainový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "blockchainu",
+        "example": "Data jsou trvale uložena v blockchainu."
+      },
+      "heading": {
+        "term": "Blockchain"
+      },
+      "tag": {
+        "term": "Blockchain"
+      },
+      "ui": {
+        "term": "Blockchain"
+      },
+      "code": {
+        "term": "blockchain"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "blockchain",
+      "two": "blockchainy",
+      "few": "blockchainy",
+      "many": "blockchainů",
+      "other": "blockchainy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Loanword 'blockchain' is much more common than the literal translation 'blokový řetězec'."
+  },
+  "account": {
+    "term": "Účet",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "účet"
+      },
+      "verb": null,
+      "adjective": "účtový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "účtu",
+        "example": "Zůstatek na vašem účtu je dostatečný pro provedení transakce."
+      },
+      "heading": {
+        "term": "Účet"
+      },
+      "tag": {
+        "term": "Účet"
+      },
+      "ui": {
+        "term": "Účet"
+      },
+      "code": {
+        "term": "account"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "účet",
+      "two": "účty",
+      "few": "účty",
+      "many": "účtů",
+      "other": "účty"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "chain": {
+    "term": "Řetězec",
+    "aliases": [
+      "chain"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "řetězec"
+      },
+      "verb": null,
+      "adjective": "řetězcový",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "onchain": "onchain",
+        "offchain": "offchain"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "řetězci",
+        "example": "Tento řetězec využívá mechanismus Proof of Stake."
+      },
+      "heading": {
+        "term": "Řetězec"
+      },
+      "tag": {
+        "term": "Chain"
+      },
+      "ui": {
+        "term": "Řetězec"
+      },
+      "code": {
+        "term": "chain"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "řetězec",
+      "two": "řetězce",
+      "few": "řetězce",
+      "many": "řetězců",
+      "other": "řetězce"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "protocol": {
+    "term": "Protokol",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "protokol"
+      },
+      "verb": null,
+      "adjective": "protokolární",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "protokolu",
+        "example": "Aktualizace protokolu vyžaduje shodu mezi uzly."
+      },
+      "heading": {
+        "term": "Protokol"
+      },
+      "tag": {
+        "term": "Protokol"
+      },
+      "ui": {
+        "term": "Protokol"
+      },
+      "code": {
+        "term": "protocol"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "protokol",
+      "two": "protokoly",
+      "few": "protokoly",
+      "many": "protokolů",
+      "other": "protokoly"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "wallet": {
+    "term": "Peněženka",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "peněženka"
+      },
+      "verb": null,
+      "adjective": "peněženkový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "peněžence",
+        "example": "Své soukromé klíče byste měli uchovávat v bezpečné peněžence."
+      },
+      "heading": {
+        "term": "Peněženka"
+      },
+      "tag": {
+        "term": "Peněženka"
+      },
+      "ui": {
+        "term": "Peněženka"
+      },
+      "code": {
+        "term": "wallet"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": null,
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "peněženka",
+      "two": "peněženky",
+      "few": "peněženky",
+      "many": "peněženek",
+      "other": "peněženky"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "gas": {
+    "term": "Gas",
+    "aliases": [
+      "plyn"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "gas"
+      },
+      "verb": null,
+      "adjective": "gasový",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "gas-limit": "limit gasu",
+        "gas-price": "cena gasu"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "gasu",
+        "example": "Cena gasu se mění v závislosti na vytížení sítě."
+      },
+      "heading": {
+        "term": "Gas"
+      },
+      "tag": {
+        "term": "Gas"
+      },
+      "ui": {
+        "term": "Gas"
+      },
+      "code": {
+        "term": "gas"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "gas",
+      "two": "gasy",
+      "few": "gasy",
+      "many": "gasů",
+      "other": "gasy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'gas' is standard in the Czech Ethereum community, though 'plyn' is the literal translation."
+  },
+  "rollup": {
+    "term": "Rollup",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "rollup"
+      },
+      "verb": null,
+      "adjective": "rollupový",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "optimistic-rollup": "optimistický rollup",
+        "zk-rollup": "ZK rollup"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "rollupu",
+        "example": "Využití rollupu výrazně snižuje transakční náklady."
+      },
+      "heading": {
+        "term": "Rollup"
+      },
+      "tag": {
+        "term": "Rollup"
+      },
+      "ui": {
+        "term": "Rollup"
+      },
+      "code": {
+        "term": "rollup"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "rollup",
+      "two": "rollupy",
+      "few": "rollupy",
+      "many": "rollupů",
+      "other": "rollupy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term used without translation."
+  },
+  "ethereum improvement proposal (eip)": {
+    "term": "Návrh na vylepšení Etherea (EIP)",
+    "aliases": [
+      "EIP"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "návrh"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "EIP",
+        "example": "Tento EIP navrhuje nový standard pro tokeny."
+      },
+      "heading": {
+        "term": "Ethereum Improvement Proposal (EIP)"
+      },
+      "tag": {
+        "term": "EIP"
+      },
+      "ui": {
+        "term": "EIP"
+      },
+      "code": {
+        "term": "eip"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "návrh (EIP)",
+      "two": "návrhy (EIP)",
+      "few": "návrhy (EIP)",
+      "many": "návrhů (EIP)",
+      "other": "návrhy (EIP)"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually referred to by the acronym 'EIP'."
+  },
+  "require": {
+    "term": "Vyžadovat",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "vyžadovat",
+        "participle": "vyžadující"
+      },
+      "adjective": "vyžadovaný",
+      "agent": null,
+      "negation": "nevyžadovat",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "vyžaduje",
+        "example": "Tato funkce vyžaduje, aby odesílatel byl vlastníkem kontraktu."
+      },
+      "heading": {
+        "term": "Vyžadovat"
+      },
+      "tag": {
+        "term": "Vyžadováno"
+      },
+      "ui": {
+        "term": "Vyžadovat"
+      },
+      "code": {
+        "term": "require"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In code context, 'require' is a specific Solidity keyword and should remain untranslated."
+  },
+  "web3": {
+    "term": "Web3",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Web3"
+      },
+      "verb": null,
+      "adjective": "web3ový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Web3",
+        "example": "Web3 umožňuje uživatelům vlastnit svá data."
+      },
+      "heading": {
+        "term": "Web3"
+      },
+      "tag": {
+        "term": "Web3"
+      },
+      "ui": {
+        "term": "Web3"
+      },
+      "code": {
+        "term": "web3"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Web3",
+      "two": "Web3",
+      "few": "Web3",
+      "many": "Web3",
+      "other": "Web3"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as an uninflected proper noun in Czech tech contexts."
+  },
+  "solidity": {
+    "term": "Solidity",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Solidity"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Solidity",
+        "example": "Chytré kontrakty na Ethereu se nejčastěji píší v jazyce Solidity."
+      },
+      "heading": {
+        "term": "Solidity"
+      },
+      "tag": {
+        "term": "Solidity"
+      },
+      "ui": {
+        "term": "Solidity"
+      },
+      "code": {
+        "term": "solidity"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Solidity",
+      "two": "Solidity",
+      "few": "Solidity",
+      "many": "Solidity",
+      "other": "Solidity"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, programming language name."
+  },
+  "event": {
+    "term": "událost",
+    "aliases": [
+      "event"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "událost"
+      },
+      "verb": null,
+      "adjective": "událostní",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "událost",
+        "example": "Chytrý kontrakt vyvolal událost o převodu tokenů."
+      },
+      "heading": {
+        "term": "Události"
+      },
+      "tag": {
+        "term": "událost"
+      },
+      "ui": {
+        "term": "událost"
+      },
+      "code": {
+        "term": "event"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "událost",
+      "two": "události",
+      "few": "události",
+      "many": "událostí",
+      "other": "události"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "onchain": {
+    "term": "onchain",
+    "aliases": [
+      "v řetězci",
+      "na blockchainu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "onchainový",
+      "agent": null,
+      "negation": "offchain",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "onchain",
+        "example": "Tato data jsou uložena přímo onchain."
+      },
+      "heading": {
+        "term": "Onchain data"
+      },
+      "tag": {
+        "term": "onchain"
+      },
+      "ui": {
+        "term": "onchain"
+      },
+      "code": {
+        "term": "onchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used as an uninflected loanword in Czech tech slang."
+  },
+  "ether": {
+    "term": "ether",
+    "aliases": [
+      "ETH"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ether"
+      },
+      "verb": null,
+      "adjective": "etherový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ether",
+        "example": "Za transakci musíte zaplatit poplatek v ethereu."
+      },
+      "heading": {
+        "term": "Ether"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "ether"
+      },
+      "code": {
+        "term": "ether"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ether",
+      "two": "ethery",
+      "few": "ethery",
+      "many": "etherů",
+      "other": "ethery"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum virtual machine (evm)": {
+    "term": "Ethereum Virtual Machine (EVM)",
+    "aliases": [
+      "virtuální stroj Etherea"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Virtual Machine"
+      },
+      "verb": null,
+      "adjective": "EVM kompatibilní",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Virtual Machine (EVM)",
+        "example": "EVM je prostředí, ve kterém běží všechny chytré kontrakty."
+      },
+      "heading": {
+        "term": "Ethereum Virtual Machine (EVM)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "EVM"
+      },
+      "code": {
+        "term": "evm"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually kept in English or with the Czech translation 'virtuální stroj Etherea'."
+  },
+  "decentralized application (dapp)": {
+    "term": "decentralizovaná aplikace (dapp)",
+    "aliases": [
+      "dapp",
+      "decentralizovaná aplikace"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "decentralizovaná aplikace"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "decentralizované aplikaci",
+        "example": "K této decentralizované aplikaci se připojíte pomocí peněženky."
+      },
+      "heading": {
+        "term": "Decentralizované aplikace (dapps)"
+      },
+      "tag": {
+        "term": "dapp"
+      },
+      "ui": {
+        "term": "dapp"
+      },
+      "code": {
+        "term": "dapp"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "decentralizovaná aplikace",
+      "two": "decentralizované aplikace",
+      "few": "decentralizované aplikace",
+      "many": "decentralizovaných aplikací",
+      "other": "decentralizované aplikace"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "non-fungible token (nft)": {
+    "term": "nezaměnitelný token (NFT)",
+    "aliases": [
+      "NFT",
+      "non-fungible token"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nezaměnitelný token"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "nezaměnitelný token",
+        "example": "Tento nezaměnitelný token reprezentuje digitální umění."
+      },
+      "heading": {
+        "term": "Nezaměnitelné tokeny (NFT)"
+      },
+      "tag": {
+        "term": "NFT"
+      },
+      "ui": {
+        "term": "NFT"
+      },
+      "code": {
+        "term": "nft"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "nezaměnitelný token",
+      "two": "nezaměnitelné tokeny",
+      "few": "nezaměnitelné tokeny",
+      "many": "nezaměnitelných tokenů",
+      "other": "nezaměnitelné tokeny"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "api": {
+    "term": "API",
+    "aliases": [
+      "rozhraní pro programování aplikací"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "API"
+      },
+      "verb": null,
+      "adjective": "apíčkový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "API",
+        "example": "Data lze získat prostřednictvím veřejného API."
+      },
+      "heading": {
+        "term": "API"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "API"
+      },
+      "code": {
+        "term": "api"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "API",
+      "two": "API",
+      "few": "API",
+      "many": "API",
+      "other": "API"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Czech tech context, 'API' is often treated as indeclinable neuter."
+  },
+  "transfer": {
+    "term": "převod",
+    "aliases": [
+      "transfer",
+      "přesun"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "převod"
+      },
+      "verb": {
+        "infinitive": "převést",
+        "participle": "převedl"
+      },
+      "adjective": "převodní",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "převod",
+        "example": "Byl iniciován převod etheru na jinou adresu."
+      },
+      "heading": {
+        "term": "Převod"
+      },
+      "tag": {
+        "term": "převod"
+      },
+      "ui": {
+        "term": "převést"
+      },
+      "code": {
+        "term": "transfer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "převod",
+      "two": "převody",
+      "few": "převody",
+      "many": "převodů",
+      "other": "převody"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "withdrawal": {
+    "term": "výběr",
+    "aliases": [
+      "vybrání"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "výběr"
+      },
+      "verb": {
+        "infinitive": "vybrat",
+        "participle": "vybral"
+      },
+      "adjective": "výběrový",
+      "agent": null,
+      "negation": "nevýběr",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "výběru",
+        "example": "Po provedení výběru budou prostředky převedeny do vaší peněženky."
+      },
+      "heading": {
+        "term": "Výběr"
+      },
+      "tag": {
+        "term": "výběr"
+      },
+      "ui": {
+        "term": "Vybrat"
+      },
+      "code": {
+        "term": "withdrawal"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "výběr",
+      "two": "výběry",
+      "few": "výběry",
+      "many": "výběrů",
+      "other": "výběry"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus": {
+    "term": "konsenzus",
+    "aliases": [
+      "shoda"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "konsenzus"
+      },
+      "verb": null,
+      "adjective": "konsenzuální",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "konsenzu",
+        "example": "Síť dosahuje konsenzu prostřednictvím Proof of Stake."
+      },
+      "heading": {
+        "term": "Konsenzus"
+      },
+      "tag": {
+        "term": "konsenzus"
+      },
+      "ui": {
+        "term": "Konsenzus"
+      },
+      "code": {
+        "term": "consensus"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "konsenzus",
+      "two": "konsenzy",
+      "few": "konsenzy",
+      "many": "konsenzů",
+      "other": "konsenzy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mainnet": {
+    "term": "mainnet",
+    "aliases": [
+      "hlavní síť"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "mainnet"
+      },
+      "verb": null,
+      "adjective": "mainnetový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "mainnetu",
+        "example": "Aplikace byla úspěšně nasazena na mainnet."
+      },
+      "heading": {
+        "term": "Mainnet"
+      },
+      "tag": {
+        "term": "mainnet"
+      },
+      "ui": {
+        "term": "Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "mainnet",
+      "two": "mainnety",
+      "few": "mainnety",
+      "many": "mainnetů",
+      "other": "mainnety"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "offchain": {
+    "term": "offchain",
+    "aliases": [
+      "mimo řetězec"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "offchainový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "offchain",
+        "example": "Transakce jsou zpracovávány offchain pro zvýšení rychlosti."
+      },
+      "heading": {
+        "term": "Offchain"
+      },
+      "tag": {
+        "term": "offchain"
+      },
+      "ui": {
+        "term": "Offchain"
+      },
+      "code": {
+        "term": "offchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as an indeclinable adjective or adverb in technical contexts."
+  },
+  "erc-20": {
+    "term": "ERC-20",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ERC-20",
+        "example": "Většina tokenů na Ethereu používá standard ERC-20."
+      },
+      "heading": {
+        "term": "ERC-20"
+      },
+      "tag": {
+        "term": "ERC-20"
+      },
+      "ui": {
+        "term": "ERC-20"
+      },
+      "code": {
+        "term": "erc-20"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "oracle": {
+    "term": "orákl",
+    "aliases": [
+      "oracle",
+      "věštírna"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "orákl"
+      },
+      "verb": null,
+      "adjective": "oráklový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "oráklu",
+        "example": "Smart kontrakt získává data z vnějšího světa pomocí oráklu."
+      },
+      "heading": {
+        "term": "Orákl"
+      },
+      "tag": {
+        "term": "orákl"
+      },
+      "ui": {
+        "term": "Orákl"
+      },
+      "code": {
+        "term": "oracle"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "orákl",
+      "two": "orákly",
+      "few": "orákly",
+      "many": "oráklů",
+      "other": "orákly"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Phonetic adaptation 'orákl' is standard in Czech crypto communities."
+  },
+  "blob": {
+    "term": "blob",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "blob"
+      },
+      "verb": null,
+      "adjective": "blobový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "blobu",
+        "example": "Data v blobu jsou dostupná pouze po omezenou dobu."
+      },
+      "heading": {
+        "term": "Blob"
+      },
+      "tag": {
+        "term": "blob"
+      },
+      "ui": {
+        "term": "Blob"
+      },
+      "code": {
+        "term": "blob"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "blob",
+      "two": "bloby",
+      "few": "bloby",
+      "many": "blobů",
+      "other": "bloby"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "slot": {
+    "term": "slot",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "slot"
+      },
+      "verb": null,
+      "adjective": "slotový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "slotu",
+        "example": "Každý slot v Beacon Chainu trvá 12 sekund."
+      },
+      "heading": {
+        "term": "Slot"
+      },
+      "tag": {
+        "term": "slot"
+      },
+      "ui": {
+        "term": "Slot"
+      },
+      "code": {
+        "term": "slot"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "slot",
+      "two": "sloty",
+      "few": "sloty",
+      "many": "slotů",
+      "other": "sloty"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized autonomous organization (dao)": {
+    "term": "decentralizovaná autonomní organizace (DAO)",
+    "aliases": [
+      "DAO"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "decentralizovaná autonomní organizace"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "decentralizované autonomní organizaci",
+        "example": "Členové hlasují o návrzích v rámci decentralizované autonomní organizace."
+      },
+      "heading": {
+        "term": "Decentralizovaná autonomní organizace"
+      },
+      "tag": {
+        "term": "DAO"
+      },
+      "ui": {
+        "term": "DAO"
+      },
+      "code": {
+        "term": "dao"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "decentralizovaná autonomní organizace",
+      "two": "decentralizované autonomní organizace",
+      "few": "decentralizované autonomní organizace",
+      "many": "decentralizovaných autonomních organizací",
+      "other": "decentralizované autonomní organizace"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "testnet": {
+    "term": "testnet",
+    "aliases": [
+      "testovací síť"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "testnet"
+      },
+      "verb": null,
+      "adjective": "testnetový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "testnetu",
+        "example": "Před spuštěním na hlavní síti otestujte svůj kód na testnetu."
+      },
+      "heading": {
+        "term": "Testnet"
+      },
+      "tag": {
+        "term": "testnet"
+      },
+      "ui": {
+        "term": "Testnet"
+      },
+      "code": {
+        "term": "testnet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "testnet",
+      "two": "testnety",
+      "few": "testnety",
+      "many": "testnetů",
+      "other": "testnety"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus client": {
+    "term": "konsenzuální klient",
+    "aliases": [
+      "konsensuální klient",
+      "consensus klient"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "konsenzuální klient"
+      },
+      "verb": null,
+      "adjective": "konsenzuální",
+      "agent": "klient",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "konsenzuálním klientovi",
+        "example": "Konsenzuální klient zajišťuje, aby se síť dohodla na stavu blockchainu pomocí proof-of-stake."
+      },
+      "heading": {
+        "term": "Konsenzuální klient"
+      },
+      "tag": {
+        "term": "Konsenzus"
+      },
+      "ui": {
+        "term": "Konsenzuální klient"
+      },
+      "code": {
+        "term": "consensus-client"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "konsenzuální klient",
+      "few": "konsenzuální klienty",
+      "many": "konsenzuálních klientů",
+      "other": "konsenzuální klienti"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In software contexts, 'klient' is grammatically inanimate, though sometimes declined as animate in tech slang."
+  },
+  "layer 2 (l2)": {
+    "term": "druhá vrstva (L2)",
+    "aliases": [
+      "vrstva 2",
+      "L2 solution"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "druhá vrstva"
+      },
+      "verb": null,
+      "adjective": "druhovrstvý",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "druhé vrstvě",
+        "example": "Řešení na druhé vrstvě pomáhají škálovat Ethereum tím, že zpracovávají transakce mimo hlavní síť."
+      },
+      "heading": {
+        "term": "Druhá vrstva (L2)"
+      },
+      "tag": {
+        "term": "L2"
+      },
+      "ui": {
+        "term": "L2"
+      },
+      "code": {
+        "term": "layer-2"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "druhá vrstva",
+      "few": "druhé vrstvy",
+      "many": "druhých vrstev",
+      "other": "druhé vrstvy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zk": {
+    "term": "nulová znalost (ZK)",
+    "aliases": [
+      "zero-knowledge",
+      "důkaz s nulovou znalostí"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nulová znalost"
+      },
+      "verb": null,
+      "adjective": "bezznalostní",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "ZK rollup"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "nulovou znalostí",
+        "example": "Technologie s nulovou znalostí umožňuje prokázat platnost informace bez jejího prozrazení."
+      },
+      "heading": {
+        "term": "Nulová znalost (ZK)"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "ZK"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "nulová znalost",
+      "few": "nulové znalosti",
+      "many": "nulových znalostí",
+      "other": "nulové znalosti"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as part of 'důkaz s nulovou znalostí' (ZK proof)."
+  },
+  "private key": {
+    "term": "soukromý klíč",
+    "aliases": [
+      "privátní klíč"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "soukromý klíč"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "soukromým klíčem",
+        "example": "Nikdy nikomu nesdělujte svůj soukromý klíč, protože umožňuje plnou kontrolu nad vašimi prostředky."
+      },
+      "heading": {
+        "term": "Soukromý klíč"
+      },
+      "tag": {
+        "term": "Klíč"
+      },
+      "ui": {
+        "term": "Soukromý klíč"
+      },
+      "code": {
+        "term": "private-key"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "soukromý klíč",
+      "few": "soukromé klíče",
+      "many": "soukromých klíčů",
+      "other": "soukromé klíče"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "crypto": {
+    "term": "krypto",
+    "aliases": [
+      "kryptoměny",
+      "kryptografie"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "krypto"
+      },
+      "verb": null,
+      "adjective": "kryptografický",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kryptu",
+        "example": "Svět krypta se neustále vyvíjí a přináší nové možnosti decentralizace."
+      },
+      "heading": {
+        "term": "Krypto"
+      },
+      "tag": {
+        "term": "Krypto"
+      },
+      "ui": {
+        "term": "Krypto"
+      },
+      "code": {
+        "term": "crypto"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "casual"
+    },
+    "plurals": {
+      "one": "krypto",
+      "few": "krypta",
+      "many": "krypt",
+      "other": "krypta"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used colloquially for both cryptocurrency and the general ecosystem."
+  },
+  "layer 1 (l1)": {
+    "term": "první vrstva (L1)",
+    "aliases": [
+      "hlavní síť",
+      "L1 blockchain"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "první vrstva"
+      },
+      "verb": null,
+      "adjective": "prvovrstvý",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "první vrstvě",
+        "example": "Ethereum je první vrstva, která poskytuje bezpečnost pro ostatní řešení na ní postavená."
+      },
+      "heading": {
+        "term": "První vrstva (L1)"
+      },
+      "tag": {
+        "term": "L1"
+      },
+      "ui": {
+        "term": "L1"
+      },
+      "code": {
+        "term": "layer-1"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "první vrstva",
+      "few": "první vrstvy",
+      "many": "prvních vrstev",
+      "other": "první vrstvy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "maximal extractable value (mev)": {
+    "term": "maximální vytěžitelná hodnota (MEV)",
+    "aliases": [
+      "MEV",
+      "miner extractable value"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "maximální vytěžitelná hodnota"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "searcher",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "maximální vytěžitelné hodnoty",
+        "example": "MEV představuje zisk, který mohou těžaři nebo validátoři získat úpravou pořadí transakcí v bloku."
+      },
+      "heading": {
+        "term": "Maximální vytěžitelná hodnota (MEV)"
+      },
+      "tag": {
+        "term": "MEV"
+      },
+      "ui": {
+        "term": "MEV"
+      },
+      "code": {
+        "term": "mev"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "maximální vytěžitelná hodnota",
+      "few": "maximální vytěžitelné hodnoty",
+      "many": "maximálních vytěžitelných hodnot",
+      "other": "maximální vytěžitelné hodnoty"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "exit": {
+    "term": "výstup",
+    "aliases": [
+      "ukončení",
+      "validator exit"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "výstup"
+      },
+      "verb": {
+        "infinitive": "vystoupit",
+        "participle": "vystupující"
+      },
+      "adjective": "výstupní",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "výstupu",
+        "example": "Pokud chcete přestat stakovat, musíte iniciovat dobrovolný výstup ze sady validátorů."
+      },
+      "heading": {
+        "term": "Výstup"
+      },
+      "tag": {
+        "term": "Výstup"
+      },
+      "ui": {
+        "term": "Ukončit stakování"
+      },
+      "code": {
+        "term": "exit"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "výstup",
+      "few": "výstupy",
+      "many": "výstupů",
+      "other": "výstupy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In the context of Ethereum consensus, refers to a validator leaving the active set."
+  },
+  "opcode": {
+    "term": "operační kód",
+    "aliases": [
+      "opcode",
+      "instrukce"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "operační kód"
+      },
+      "verb": null,
+      "adjective": "instrukční",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "operačním kódům",
+        "example": "EVM provádí výpočty pomocí sady operačních kódů, které definují základní operace."
+      },
+      "heading": {
+        "term": "Operační kód (opcode)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "Opcode"
+      },
+      "code": {
+        "term": "opcode"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "operační kód",
+      "few": "operační kódy",
+      "many": "operačních kódů",
+      "other": "operační kódy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized finance (defi)": {
+    "term": "decentralizované finance (DeFi)",
+    "aliases": [
+      "DeFi"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "decentralizované finance"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "decentralizovaných financích",
+        "example": "V decentralizovaných financích nepotřebujete banku, protože transakce řídí chytré smlouvy."
+      },
+      "heading": {
+        "term": "Decentralizované finance (DeFi)"
+      },
+      "tag": {
+        "term": "DeFi"
+      },
+      "ui": {
+        "term": "DeFi"
+      },
+      "code": {
+        "term": "defi"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "decentralizované finance",
+      "few": "decentralizované finance",
+      "many": "decentralizovaných financí",
+      "other": "decentralizované finance"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The word 'finance' is a plurale tantum in this context in Czech."
+  },
+  "privacy": {
+    "term": "soukromí",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "soukromí"
+      },
+      "verb": null,
+      "adjective": "soukromý",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "soukromí",
+        "example": "Ethereum umožňuje uživatelům provádět transakce s vysokou mírou soukromí."
+      },
+      "heading": {
+        "term": "Soukromí"
+      },
+      "tag": {
+        "term": "Soukromí"
+      },
+      "ui": {
+        "term": "Soukromí"
+      },
+      "code": {
+        "term": "privacy"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "soukromí",
+      "two": "soukromí",
+      "few": "soukromí",
+      "many": "soukromí",
+      "other": "soukromí"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The word 'soukromí' is an indeclinable neuter noun in most cases, or follows a very specific singular-only pattern in common usage."
+  },
+  "optimistic rollup": {
+    "term": "optimistický rollup",
+    "aliases": [
+      "optimistický souhrn"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "optimistický rollup"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "optimistický rollup",
+        "example": "Optimistický rollup předpokládá, že transakce jsou platné, dokud není prokázán opak."
+      },
+      "heading": {
+        "term": "Optimistický rollup"
+      },
+      "tag": {
+        "term": "L2"
+      },
+      "ui": {
+        "term": "Optimistický rollup"
+      },
+      "code": {
+        "term": "optimisticRollup"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "optimistický rollup",
+      "two": "optimistické rollupy",
+      "few": "optimistické rollupy",
+      "many": "optimistických rollupů",
+      "other": "optimistické rollupy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'rollup' is standard in the Czech technical community."
+  },
+  "ethereum request for comments (erc)": {
+    "term": "Ethereum Request for Comments (ERC)",
+    "aliases": [
+      "žádost o připomínky k Ethereu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Request for Comments"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Request for Comments (ERC)",
+        "example": "Standardy tokenů jsou definovány prostřednictvím dokumentů Ethereum Request for Comments (ERC)."
+      },
+      "heading": {
+        "term": "Ethereum Request for Comments (ERC)"
+      },
+      "tag": {
+        "term": "ERC"
+      },
+      "ui": {
+        "term": "ERC"
+      },
+      "code": {
+        "term": "erc"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually kept in English as it refers to a specific technical document series."
+  },
+  "plasma": {
+    "term": "Plasma",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Plasma"
+      },
+      "verb": null,
+      "adjective": "plasmový",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Plasma",
+        "example": "Plasma je řešení pro škálování mimo řetězec, které využívá dětské řetězce."
+      },
+      "heading": {
+        "term": "Plasma"
+      },
+      "tag": {
+        "term": "Scaling"
+      },
+      "ui": {
+        "term": "Plasma"
+      },
+      "code": {
+        "term": "plasma"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "Plasma",
+      "two": "Plasmy",
+      "few": "Plasmy",
+      "many": "Plasm",
+      "other": "Plasmy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "library": {
+    "term": "knihovna",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "knihovna"
+      },
+      "verb": null,
+      "adjective": "knihovní",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "knihovna",
+        "example": "V Solidity je knihovna speciální typ kontraktu, který nemá vnitřní stav."
+      },
+      "heading": {
+        "term": "Knihovna"
+      },
+      "tag": {
+        "term": "Vývoj"
+      },
+      "ui": {
+        "term": "Knihovna"
+      },
+      "code": {
+        "term": "library"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "knihovna",
+      "two": "knihovny",
+      "few": "knihovny",
+      "many": "knihoven",
+      "other": "knihovny"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "the merge": {
+    "term": "The Merge",
+    "aliases": [
+      "sloučení"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "The Merge"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "The Merge",
+        "example": "The Merge byla historická událost, kdy Ethereum přešlo na proof-of-stake."
+      },
+      "heading": {
+        "term": "The Merge"
+      },
+      "tag": {
+        "term": "Upgrade"
+      },
+      "ui": {
+        "term": "The Merge"
+      },
+      "code": {
+        "term": "theMerge"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Czech crypto circles, the English term is almost exclusively used as a proper noun."
+  },
+  "zero-knowledge proof": {
+    "term": "důkaz s nulovou znalostí",
+    "aliases": [
+      "důkaz s nulovým rozšířením znalosti",
+      "ZKP"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "důkaz s nulovou znalostí"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "důkazem s nulovou znalostí",
+        "example": "Transakci lze ověřit pomocí důkazu s nulovou znalostí bez odhalení detailů."
+      },
+      "heading": {
+        "term": "Důkaz s nulovou znalostí"
+      },
+      "tag": {
+        "term": "Soukromí"
+      },
+      "ui": {
+        "term": "Zk-proof"
+      },
+      "code": {
+        "term": "zkp"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "důkaz s nulovou znalostí",
+      "two": "důkazy s nulovou znalostí",
+      "few": "důkazy s nulovou znalostí",
+      "many": "důkazů s nulovou znalostí",
+      "other": "důkazy s nulovou znalostí"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "data availability": {
+    "term": "dostupnost dat",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "dostupnost dat"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "dostupnost dat",
+        "example": "Dostupnost dat zajišťuje, že všichni účastníci sítě mohou ověřit stav blockchainu."
+      },
+      "heading": {
+        "term": "Dostupnost dat"
+      },
+      "tag": {
+        "term": "Škálování"
+      },
+      "ui": {
+        "term": "Dostupnost dat"
+      },
+      "code": {
+        "term": "dataAvailability"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "log": {
+    "term": "log",
+    "aliases": [
+      "záznam",
+      "protokol"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "log"
+      },
+      "verb": "logovat",
+      "adjective": "logovací",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "log",
+        "example": "Chytrý kontrakt může vygenerovat log, který klientské aplikace zachytí."
+      },
+      "heading": {
+        "term": "Log"
+      },
+      "tag": {
+        "term": "Vývoj"
+      },
+      "ui": {
+        "term": "Protokol"
+      },
+      "code": {
+        "term": "log"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "log",
+      "two": "logy",
+      "few": "logy",
+      "many": "logů",
+      "other": "logy"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term 'log' is masculine inanimate and declines according to the 'hrad' pattern in Czech."
+  },
+  "beacon chain": {
+    "term": "Beacon Chain",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Beacon Chain"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Beacon Chainu",
+        "example": "Beacon Chain slouží jako koordinační vrstva pro celou síť Ethereum."
+      },
+      "heading": {
+        "term": "Beacon Chain"
+      },
+      "tag": {
+        "term": "Konsenzus"
+      },
+      "ui": {
+        "term": "Beacon Chain"
+      },
+      "code": {
+        "term": "beaconChain"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often treated as masculine inanimate in Czech (according to 'řetězec'), leading to the genitive form 'Beacon Chainu'."
+  },
+  "liquidity": {
+    "term": "likvidita",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "likvidita"
+      },
+      "verb": null,
+      "adjective": "likvidní",
+      "agent": null,
+      "negation": "nelikvidita",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "likviditu",
+        "example": "Vysoká likvidita na decentralizované burze umožňuje obchodování s minimálním skluzem."
+      },
+      "heading": {
+        "term": "Likvidita"
+      },
+      "tag": {
+        "term": "Likvidita"
+      },
+      "ui": {
+        "term": "Likvidita"
+      },
+      "code": {
+        "term": "liquidity"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "likvidita",
+      "few": "likvidity",
+      "many": "likvidit",
+      "other": "likvidit"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "epoch": {
+    "term": "epocha",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "epocha"
+      },
+      "verb": null,
+      "adjective": "epochální",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "epochu",
+        "example": "V síti Ethereum trvá jedna epocha 32 slotů, což odpovídá přibližně šesti minutám."
+      },
+      "heading": {
+        "term": "Epocha"
+      },
+      "tag": {
+        "term": "Epocha"
+      },
+      "ui": {
+        "term": "Epocha"
+      },
+      "code": {
+        "term": "epoch"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "epocha",
+      "few": "epochy",
+      "many": "epoch",
+      "other": "epoch"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum mainnet": {
+    "term": "Ethereum Mainnet",
+    "aliases": [
+      "hlavní síť Ethereum"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Ethereum Mainnet"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Ethereum Mainnetu",
+        "example": "Před nasazením na Ethereum Mainnet byste měli svůj kontrakt otestovat na testnetu."
+      },
+      "heading": {
+        "term": "Ethereum Mainnet"
+      },
+      "tag": {
+        "term": "Mainnet"
+      },
+      "ui": {
+        "term": "Ethereum Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used in English form within the Czech technical community."
+  },
+  "proposal": {
+    "term": "návrh",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "návrh"
+      },
+      "verb": {
+        "infinitive": "navrhnout",
+        "participle": "navrhující"
+      },
+      "adjective": "navrhovaný",
+      "agent": "navrhovatel",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "návrhu",
+        "example": "Držitelé tokenů mohou hlasovat o každém novém návrhu v DAO."
+      },
+      "heading": {
+        "term": "Návrh"
+      },
+      "tag": {
+        "term": "Návrh"
+      },
+      "ui": {
+        "term": "Návrh"
+      },
+      "code": {
+        "term": "proposal"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "návrh",
+      "few": "návrhy",
+      "many": "návrhů",
+      "other": "návrhů"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block proposer": {
+    "term": "navrhovatel bloku",
+    "aliases": [
+      "proposer bloku"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "navrhovatel bloku"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "navrhovatel",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "navrhovatele bloku",
+        "example": "Algoritmus náhodně vybere jednoho validátora jako navrhovatele bloku pro daný slot."
+      },
+      "heading": {
+        "term": "Navrhovatel bloku"
+      },
+      "tag": {
+        "term": "Proposer"
+      },
+      "ui": {
+        "term": "Navrhovatel"
+      },
+      "code": {
+        "term": "block_proposer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "navrhovatel bloku",
+      "few": "navrhovatelé bloku",
+      "many": "navrhovatelů bloku",
+      "other": "navrhovatelů bloku"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus layer": {
+    "term": "konsenzuální vrstva",
+    "aliases": [
+      "vrstva konsenzu"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "konsenzuální vrstva"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "konsenzuální vrstvě",
+        "example": "Po sloučení běží Ethereum na exekuční vrstvě a konsenzuální vrstvě současně."
+      },
+      "heading": {
+        "term": "Konsenzuální vrstva"
+      },
+      "tag": {
+        "term": "Konsenzus"
+      },
+      "ui": {
+        "term": "Konsenzuální vrstva"
+      },
+      "code": {
+        "term": "consensus_layer"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "konsenzuální vrstva",
+      "few": "konsenzuální vrstvy",
+      "many": "konsenzuálních vrstev",
+      "other": "konsenzuálních vrstev"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "peer": {
+    "term": "peer",
+    "aliases": [
+      "protějšek",
+      "rovnocenný uzel"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "peer"
+      },
+      "verb": null,
+      "adjective": "peer-to-peer",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "peeru",
+        "example": "Váš uzel se musí připojit k ostatním peerům, aby mohl synchronizovat data o blocích."
+      },
+      "heading": {
+        "term": "Peer"
+      },
+      "tag": {
+        "term": "Peer"
+      },
+      "ui": {
+        "term": "Peer"
+      },
+      "code": {
+        "term": "peer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "peer",
+      "few": "peery",
+      "many": "peerů",
+      "other": "peerů"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually kept in English but declined as a Czech masculine inanimate noun."
+  },
+  "json-rpc": {
+    "term": "JSON-RPC",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "JSON-RPC"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "JSON-RPC",
+        "example": "Aplikace komunikují s uzlem Ethereum pomocí rozhraní JSON-RPC."
+      },
+      "heading": {
+        "term": "JSON-RPC"
+      },
+      "tag": {
+        "term": "JSON-RPC"
+      },
+      "ui": {
+        "term": "JSON-RPC"
+      },
+      "code": {
+        "term": "json_rpc"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "nonce": {
+    "term": "nonce",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nonce"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "nonce",
+        "example": "Každá transakce musí mít správnou nonce, aby byla v síti akceptována."
+      },
+      "heading": {
+        "term": "Nonce"
+      },
+      "tag": {
+        "term": "Nonce"
+      },
+      "ui": {
+        "term": "Nonce"
+      },
+      "code": {
+        "term": "nonce"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "nonce",
+      "few": "nonce",
+      "many": "noncí",
+      "other": "noncí"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Czech IT context, 'nonce' is often treated as feminine or indeclinable masculine, but usually follows masculine inanimate patterns in genitive plural."
+  },
+  "ipfs": {
+    "term": "IPFS",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "IPFS"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "IPFS",
+        "example": "Metadata pro NFT jsou často ukládána decentralizovaně na IPFS."
+      },
+      "heading": {
+        "term": "IPFS"
+      },
+      "tag": {
+        "term": "IPFS"
+      },
+      "ui": {
+        "term": "IPFS"
+      },
+      "code": {
+        "term": "ipfs"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "full node": {
+    "term": "plný uzel",
+    "aliases": [
+      "full node"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "plný uzel"
+      },
+      "verb": null,
+      "adjective": "plnouzlový",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node-sync": "synchronizace plného uzlu"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "plný uzel",
+        "example": "Spuštění plného uzlu vám umožňuje nezávisle ověřovat transakce a bloky v síti Ethereum."
+      },
+      "heading": {
+        "term": "Plný uzel"
+      },
+      "tag": {
+        "term": "Plný uzel"
+      },
+      "ui": {
+        "term": "Plný uzel"
+      },
+      "code": {
+        "term": "full node"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "plný uzel",
+      "two": "plné uzly",
+      "few": "plné uzly",
+      "many": "plných uzlů",
+      "other": "plné uzly"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "English term 'full node' is also very common in technical discourse."
+  },
+  "zero-knowledge": {
+    "term": "nulová znalost",
+    "aliases": [
+      "zero-knowledge",
+      "ZK"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "nulová znalost"
+      },
+      "verb": null,
+      "adjective": "bezznalostní",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zero-knowledge-proof": "důkaz s nulovou znalostí"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "nulová znalost",
+        "example": "Důkazy s nulovou znalostí umožňují jedné straně dokázat druhé straně, že něco ví, aniž by prozradila samotnou informaci."
+      },
+      "heading": {
+        "term": "Nulová znalost"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "Nulová znalost"
+      },
+      "code": {
+        "term": "zero-knowledge"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "nulová znalost",
+      "two": "nulové znalosti",
+      "few": "nulové znalosti",
+      "many": "nulových znalostí",
+      "other": "nulové znalosti"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually used in the context of 'zero-knowledge proofs' (důkazy s nulovou znalostí)."
+  },
+  "hardhat": {
+    "term": "Hardhat",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Hardhat"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Hardhat",
+        "example": "Hardhat je vývojové prostředí pro profesionály, které usnadňuje testování a nasazování chytrých kontraktů."
+      },
+      "heading": {
+        "term": "Hardhat"
+      },
+      "tag": {
+        "term": "Hardhat"
+      },
+      "ui": {
+        "term": "Hardhat"
+      },
+      "code": {
+        "term": "hardhat"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, remains untranslated."
+  },
+  "checkpoint": {
+    "term": "kontrolní bod",
+    "aliases": [
+      "checkpoint"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "kontrolní bod"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "checkpoint-sync": "synchronizace kontrolních bodů"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "kontrolní bod",
+        "example": "V protokolu Proof-of-Stake se kontrolní body používají k zajištění konečnosti bloků."
+      },
+      "heading": {
+        "term": "Kontrolní bod"
+      },
+      "tag": {
+        "term": "Checkpoint"
+      },
+      "ui": {
+        "term": "Kontrolní bod"
+      },
+      "code": {
+        "term": "checkpoint"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "kontrolní bod",
+      "two": "kontrolní body",
+      "few": "kontrolní body",
+      "many": "kontrolních bodů",
+      "other": "kontrolní body"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  }
+}

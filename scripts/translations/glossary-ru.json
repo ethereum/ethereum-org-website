@@ -1,0 +1,4776 @@
+{
+  "attestation": {
+    "term": "аттестация",
+    "aliases": [
+      "подтверждение",
+      "свидетельство"
+    ],
+    "transliteration": "attestatsiya",
+    "morphology": {
+      "noun": {
+        "singular": "аттестация"
+      },
+      "verb": {
+        "infinitive": "аттестовать",
+        "participle": "аттестующий"
+      },
+      "adjective": "аттестационный",
+      "agent": "аттестатор",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "аттестации",
+        "example": "Валидаторы отправляют аттестации, чтобы подтвердить текущее состояние цепочки Beacon Chain."
+      },
+      "heading": {
+        "term": "Аттестация"
+      },
+      "tag": {
+        "term": "аттестация"
+      },
+      "ui": {
+        "term": "Аттестация"
+      },
+      "code": {
+        "term": "attestation"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "аттестация",
+      "two": "аттестации",
+      "few": "аттестации",
+      "many": "аттестаций",
+      "other": "аттестации"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term specifically used in Ethereum PoS consensus."
+  },
+  "bridge": {
+    "term": "мост",
+    "aliases": [
+      "кроссчейн-мост"
+    ],
+    "transliteration": "most",
+    "morphology": {
+      "noun": {
+        "singular": "мост"
+      },
+      "verb": null,
+      "adjective": "мостовой",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-bridge": "токеновый мост"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "мост",
+        "example": "Вы можете использовать мост для перевода активов из основной сети Ethereum в сеть второго уровня."
+      },
+      "heading": {
+        "term": "Мост"
+      },
+      "tag": {
+        "term": "мост"
+      },
+      "ui": {
+        "term": "Мост"
+      },
+      "code": {
+        "term": "bridge"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "мост",
+      "two": "моста",
+      "few": "моста",
+      "many": "мостов",
+      "other": "моста"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralization": {
+    "term": "децентрализация",
+    "aliases": [],
+    "transliteration": "detsentralizatsiya",
+    "morphology": {
+      "noun": {
+        "singular": "децентрализация"
+      },
+      "verb": {
+        "infinitive": "децентрализовать",
+        "participle": "децентрализующий"
+      },
+      "adjective": "децентрализационный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "децентрализации",
+        "example": "Высокое количество индивидуальных валидаторов способствует децентрализации сети."
+      },
+      "heading": {
+        "term": "Децентрализация"
+      },
+      "tag": {
+        "term": "децентрализация"
+      },
+      "ui": {
+        "term": "Децентрализация"
+      },
+      "code": {
+        "term": "decentralization"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "децентрализация",
+      "two": "децентрализации",
+      "few": "децентрализации",
+      "many": "децентрализаций",
+      "other": "децентрализации"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized": {
+    "term": "децентрализованный",
+    "aliases": [],
+    "transliteration": "detsentralizovannyy",
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "децентрализованный",
+      "agent": null,
+      "negation": "централизованный",
+      "compounds": {
+        "decentralized-app": "децентрализованное приложение"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "децентрализованные",
+        "example": "Децентрализованные приложения (dapps) работают на основе смарт-контрактов."
+      },
+      "heading": {
+        "term": "Децентрализованный"
+      },
+      "tag": {
+        "term": "децентрализованный"
+      },
+      "ui": {
+        "term": "Децентрализованный"
+      },
+      "code": {
+        "term": "decentralized"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": null,
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "децентрализованный",
+      "two": "децентрализованных",
+      "few": "децентрализованных",
+      "many": "децентрализованных",
+      "other": "децентрализованные"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "deploy": {
+    "term": "развертывание",
+    "aliases": [
+      "деплой"
+    ],
+    "transliteration": "razvertyvaniye",
+    "morphology": {
+      "noun": {
+        "singular": "развертывание"
+      },
+      "verb": {
+        "infinitive": "развернуть",
+        "participle": "развернутый"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "развертывания",
+        "example": "После развертывания кода смарт-контракта в сети его нельзя изменить."
+      },
+      "heading": {
+        "term": "Развертывание"
+      },
+      "tag": {
+        "term": "развертывание"
+      },
+      "ui": {
+        "term": "Развернуть"
+      },
+      "code": {
+        "term": "deploy"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "развертывание",
+      "two": "развертывания",
+      "few": "развертывания",
+      "many": "развертываний",
+      "other": "развертывания"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Using the noun form for the primary glossary term; 'деплой' is a very common technical loanword."
+  },
+  "finality": {
+    "term": "финальность",
+    "aliases": [
+      "завершенность",
+      "окончательность"
+    ],
+    "transliteration": "final'nost'",
+    "morphology": {
+      "noun": {
+        "singular": "финальность"
+      },
+      "verb": {
+        "infinitive": "финализировать",
+        "participle": "финализированный"
+      },
+      "adjective": "финальный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "финальности",
+        "example": "Криптографическая финальность гарантирует, что транзакция не может быть отменена."
+      },
+      "heading": {
+        "term": "Финальность"
+      },
+      "tag": {
+        "term": "финальность"
+      },
+      "ui": {
+        "term": "Финальность"
+      },
+      "code": {
+        "term": "finality"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "финальность",
+      "two": "финальности",
+      "few": "финальности",
+      "many": "финальностей",
+      "other": "финальности"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "fork": {
+    "term": "форк",
+    "aliases": [
+      "ответвление",
+      "разветвление"
+    ],
+    "transliteration": "fork",
+    "morphology": {
+      "noun": {
+        "singular": "форк"
+      },
+      "verb": {
+        "infinitive": "форкнуть",
+        "participle": "форкнутый"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hard-fork": "хардфорк",
+        "soft-fork": "софтфорк"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "форка",
+        "example": "В результате жесткого форка сеть разделяется на две несовместимые версии."
+      },
+      "heading": {
+        "term": "Форк"
+      },
+      "tag": {
+        "term": "форк"
+      },
+      "ui": {
+        "term": "Форк"
+      },
+      "code": {
+        "term": "fork"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "форк",
+      "two": "форка",
+      "few": "форка",
+      "many": "форков",
+      "other": "форка"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Loanword 'форк' is standard in the Russian crypto community."
+  },
+  "governance": {
+    "term": "управление",
+    "aliases": [
+      "говернанс"
+    ],
+    "transliteration": "upravleniye",
+    "morphology": {
+      "noun": {
+        "singular": "управление"
+      },
+      "verb": {
+        "infinitive": "управлять",
+        "participle": "управляющий"
+      },
+      "adjective": "управленческий",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "governance-token": "токен управления"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "управления",
+        "example": "Механизмы ончейн-управления позволяют владельцам токенов голосовать за изменения протокола."
+      },
+      "heading": {
+        "term": "Управление"
+      },
+      "tag": {
+        "term": "управление"
+      },
+      "ui": {
+        "term": "Управление"
+      },
+      "code": {
+        "term": "governance"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "управление",
+      "two": "управления",
+      "few": "управления",
+      "many": "управлений",
+      "other": "управления"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "hash": {
+    "term": "хеш",
+    "aliases": [
+      "хэш"
+    ],
+    "transliteration": "khesh",
+    "morphology": {
+      "noun": {
+        "singular": "хеш"
+      },
+      "verb": {
+        "infinitive": "хешировать",
+        "participle": "хешированный"
+      },
+      "adjective": "хеш-функция",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "хешу",
+        "example": "Вы можете проверить статус своей транзакции в обозревателе блоков по её уникальному хешу."
+      },
+      "heading": {
+        "term": "Хеш"
+      },
+      "tag": {
+        "term": "хеш"
+      },
+      "ui": {
+        "term": "Хеш"
+      },
+      "code": {
+        "term": "hash"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "хеш",
+      "two": "хеша",
+      "few": "хеша",
+      "many": "хешей",
+      "other": "хеша"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Both 'хеш' and 'хэш' are common, but 'хеш' is more standard in formal orthography for loanwords."
+  },
+  "miner": {
+    "term": "майнер",
+    "aliases": [
+      "добытчик"
+    ],
+    "transliteration": "mayner",
+    "morphology": {
+      "noun": {
+        "singular": "майнер"
+      },
+      "verb": null,
+      "adjective": "майнерский",
+      "agent": "майнер",
+      "negation": null,
+      "compounds": {
+        "miner-reward": "вознаграждение майнера"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "майнера",
+        "example": "Для добавления блока в цепочку требуется участие майнера."
+      },
+      "heading": {
+        "term": "Майнер"
+      },
+      "tag": {
+        "term": "майнер"
+      },
+      "ui": {
+        "term": "Майнер"
+      },
+      "code": {
+        "term": "miner"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "майнер",
+      "two": "майнера",
+      "few": "майнера",
+      "many": "майнеров",
+      "other": "майнеры"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard transliteration of the loanword."
+  },
+  "mining": {
+    "term": "майнинг",
+    "aliases": [
+      "добыча"
+    ],
+    "transliteration": "mayning",
+    "morphology": {
+      "noun": {
+        "singular": "майнинг"
+      },
+      "verb": {
+        "infinitive": "майнить",
+        "participle": "майнящий"
+      },
+      "adjective": "майнинговый",
+      "agent": "майнер",
+      "negation": null,
+      "compounds": {
+        "mining-pool": "майнинг-пул"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "майнинга",
+        "example": "Сложность майнинга адаптируется к общей вычислительной мощности сети."
+      },
+      "heading": {
+        "term": "Майнинг"
+      },
+      "tag": {
+        "term": "майнинг"
+      },
+      "ui": {
+        "term": "Майнинг"
+      },
+      "code": {
+        "term": "mining"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "майнинг",
+      "two": "майнинга",
+      "few": "майнинга",
+      "many": "майнингов",
+      "other": "майнинги"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Dominant term in Russian crypto community."
+  },
+  "mint": {
+    "term": "минт",
+    "aliases": [
+      "чеканка",
+      "эмиссия",
+      "выпуск"
+    ],
+    "transliteration": "mint",
+    "morphology": {
+      "noun": {
+        "singular": "минт"
+      },
+      "verb": {
+        "infinitive": "минтить",
+        "participle": "минтящий"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "mint-price": "цена минта"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "минта",
+        "example": "После завершения минта токены появятся в вашем кошельке."
+      },
+      "heading": {
+        "term": "Минт"
+      },
+      "tag": {
+        "term": "минт"
+      },
+      "ui": {
+        "term": "Минтить"
+      },
+      "code": {
+        "term": "mint"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "минт",
+      "two": "минта",
+      "few": "минта",
+      "many": "минтов",
+      "other": "минты"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Минт' is common in NFT/Web3 contexts; 'чеканка' is more formal."
+  },
+  "signature": {
+    "term": "подпись",
+    "aliases": [
+      "цифровая подпись"
+    ],
+    "transliteration": "podpis",
+    "morphology": {
+      "noun": {
+        "singular": "подпись"
+      },
+      "verb": {
+        "infinitive": "подписать",
+        "participle": "подписывающий"
+      },
+      "adjective": "подписной",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "multi-signature": "мультиподпись"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "подписи",
+        "example": "Для подтверждения транзакции требуется криптографическая подпись."
+      },
+      "heading": {
+        "term": "Подпись"
+      },
+      "tag": {
+        "term": "подпись"
+      },
+      "ui": {
+        "term": "Подписать"
+      },
+      "code": {
+        "term": "signature"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "подпись",
+      "two": "подписи",
+      "few": "подписи",
+      "many": "подписей",
+      "other": "подписи"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "stake": {
+    "term": "стейк",
+    "aliases": [
+      "ставка",
+      "доля"
+    ],
+    "transliteration": "steyk",
+    "morphology": {
+      "noun": {
+        "singular": "стейк"
+      },
+      "verb": {
+        "infinitive": "стейкать",
+        "participle": "стейкающий"
+      },
+      "adjective": null,
+      "agent": "стейкер",
+      "negation": null,
+      "compounds": {
+        "stake-weight": "вес стейка"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "стейка",
+        "example": "Размер вашего вознаграждения зависит от величины вашего стейка."
+      },
+      "heading": {
+        "term": "Стейк"
+      },
+      "tag": {
+        "term": "стейк"
+      },
+      "ui": {
+        "term": "Стейк"
+      },
+      "code": {
+        "term": "stake"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "стейк",
+      "two": "стейка",
+      "few": "стейка",
+      "many": "стейков",
+      "other": "стейки"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Loanword 'стейк' is preferred over 'ставка' to avoid gambling connotations."
+  },
+  "staked": {
+    "term": "в стейкинге",
+    "aliases": [
+      "застейканный"
+    ],
+    "transliteration": "v steykinge",
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "застейканный",
+      "agent": null,
+      "negation": "незастейканный",
+      "compounds": {
+        "staked-ether": "застейканный эфир"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "застейканных",
+        "example": "Количество застейканных ETH продолжает расти."
+      },
+      "heading": {
+        "term": "В стейкинге"
+      },
+      "tag": {
+        "term": "стейкано"
+      },
+      "ui": {
+        "term": "В стейкинге"
+      },
+      "code": {
+        "term": "staked"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "застейканный",
+      "two": "застейканных",
+      "few": "застейканных",
+      "many": "застейканных",
+      "other": "застейканные"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as an adjective or prepositional phrase."
+  },
+  "staker": {
+    "term": "стейкер",
+    "aliases": [
+      "валидатор"
+    ],
+    "transliteration": "steyker",
+    "morphology": {
+      "noun": {
+        "singular": "стейкер"
+      },
+      "verb": null,
+      "adjective": "стейкерский",
+      "agent": "стейкер",
+      "negation": null,
+      "compounds": {
+        "solo-staker": "соло-стейкер"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "стейкера",
+        "example": "Каждый стейкер несет ответственность за работу своего узла."
+      },
+      "heading": {
+        "term": "Стейкер"
+      },
+      "tag": {
+        "term": "стейкер"
+      },
+      "ui": {
+        "term": "Стейкер"
+      },
+      "code": {
+        "term": "staker"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "стейкер",
+      "two": "стейкера",
+      "few": "стейкера",
+      "many": "стейкеров",
+      "other": "стейкеры"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staking": {
+    "term": "стейкинг",
+    "aliases": [],
+    "transliteration": "steyking",
+    "morphology": {
+      "noun": {
+        "singular": "стейкинг"
+      },
+      "verb": {
+        "infinitive": "стейкать",
+        "participle": "стейкающий"
+      },
+      "adjective": "стейкинговый",
+      "agent": "стейкер",
+      "negation": null,
+      "compounds": {
+        "liquid-staking": "ликвидный стейкинг"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "стейкинга",
+        "example": "Стейкинг позволяет получать вознаграждение за обеспечение безопасности сети."
+      },
+      "heading": {
+        "term": "Стейкинг"
+      },
+      "tag": {
+        "term": "стейкинг"
+      },
+      "ui": {
+        "term": "Стейкинг"
+      },
+      "code": {
+        "term": "staking"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "стейкинг",
+      "two": "стейкинга",
+      "few": "стейкинга",
+      "many": "стейкингов",
+      "other": "стейкинги"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "swap": {
+    "term": "своп",
+    "aliases": [
+      "обмен"
+    ],
+    "transliteration": "svop",
+    "morphology": {
+      "noun": {
+        "singular": "своп"
+      },
+      "verb": {
+        "infinitive": "свопать",
+        "participle": "свопающий"
+      },
+      "adjective": "своповый",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "atomic-swap": "атомарный своп"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "свопа",
+        "example": "Вы можете совершить быстрый своп одного токена на другой прямо в кошельке."
+      },
+      "heading": {
+        "term": "Своп"
+      },
+      "tag": {
+        "term": "своп"
+      },
+      "ui": {
+        "term": "Обменять"
+      },
+      "code": {
+        "term": "swap"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "своп",
+      "two": "свопа",
+      "few": "свопа",
+      "many": "свопов",
+      "other": "свопы"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Своп' is technical; 'обмен' is general."
+  },
+  "transaction": {
+    "term": "транзакция",
+    "aliases": [
+      "операция"
+    ],
+    "transliteration": "tranzaktsiya",
+    "morphology": {
+      "noun": {
+        "singular": "транзакция"
+      },
+      "verb": null,
+      "adjective": "транзакционный",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "transaction-fee": "комиссия за транзакцию"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "транзакции",
+        "example": "Каждая транзакция должна быть подтверждена сетью."
+      },
+      "heading": {
+        "term": "Транзакция"
+      },
+      "tag": {
+        "term": "транзакция"
+      },
+      "ui": {
+        "term": "Транзакция"
+      },
+      "code": {
+        "term": "transaction"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "транзакция",
+      "two": "транзакции",
+      "few": "транзакции",
+      "many": "транзакций",
+      "other": "транзакции"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "validator": {
+    "term": "Валидатор",
+    "aliases": [],
+    "transliteration": "Validator",
+    "morphology": {
+      "noun": {
+        "singular": "валидатор"
+      },
+      "verb": {
+        "infinitive": "валидировать",
+        "participle": "валидирующий"
+      },
+      "adjective": "валидаторский",
+      "agent": "валидатор",
+      "negation": null,
+      "compounds": {
+        "validator-set": "набор валидаторов"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "валидатором",
+        "example": "Вы можете стать валидатором, внеся в стейкинг 32 ETH."
+      },
+      "heading": {
+        "term": "Валидаторы"
+      },
+      "tag": {
+        "term": "Валидатор"
+      },
+      "ui": {
+        "term": "Валидатор"
+      },
+      "code": {
+        "term": "validator"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "валидатор",
+      "two": "валидатора",
+      "few": "валидатора",
+      "many": "валидаторов",
+      "other": "валидатора"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In technical contexts, it can be treated as inanimate, but animate is standard for entities."
+  },
+  "vote": {
+    "term": "Голос",
+    "aliases": [
+      "вотум"
+    ],
+    "transliteration": "Golos",
+    "morphology": {
+      "noun": {
+        "singular": "голос"
+      },
+      "verb": {
+        "infinitive": "голосовать",
+        "participle": "голосующий"
+      },
+      "adjective": "голосовой",
+      "agent": "голосующий",
+      "negation": null,
+      "compounds": {
+        "vote-weight": "вес голоса"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "голос",
+        "example": "Ваш голос важен для принятия решений в DAO."
+      },
+      "heading": {
+        "term": "Голос"
+      },
+      "tag": {
+        "term": "Голос"
+      },
+      "ui": {
+        "term": "Голосовать"
+      },
+      "code": {
+        "term": "vote"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "голос",
+      "two": "голоса",
+      "few": "голоса",
+      "many": "голосов",
+      "other": "голоса"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers to the unit of voting power."
+  },
+  "voting": {
+    "term": "Голосование",
+    "aliases": [],
+    "transliteration": "Golosovaniye",
+    "morphology": {
+      "noun": {
+        "singular": "голосование"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "quadratic-voting": "квадратичное голосование"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "голосовании",
+        "example": "Примите участие в текущем голосовании."
+      },
+      "heading": {
+        "term": "Голосование"
+      },
+      "tag": {
+        "term": "Голосование"
+      },
+      "ui": {
+        "term": "Голосование"
+      },
+      "code": {
+        "term": "voting"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "голосование",
+      "two": "голосования",
+      "few": "голосования",
+      "many": "голосований",
+      "other": "голосования"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers to the process."
+  },
+  "ethereum": {
+    "term": "Эфириум",
+    "aliases": [
+      "Ethereum",
+      "Эфир"
+    ],
+    "transliteration": "Efirium",
+    "morphology": {
+      "noun": {
+        "singular": "Эфириум"
+      },
+      "verb": null,
+      "adjective": "эфириумовский",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "ethereum-network": "сеть Эфириум"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Эфириуме",
+        "example": "Смарт-контракты работают в Эфириуме."
+      },
+      "heading": {
+        "term": "Эфириум"
+      },
+      "tag": {
+        "term": "Ethereum"
+      },
+      "ui": {
+        "term": "Ethereum"
+      },
+      "code": {
+        "term": "ethereum"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "Эфириум",
+      "two": "Эфириума",
+      "few": "Эфириума",
+      "many": "Эфириумов",
+      "other": "Эфириума"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliterated as per requirements. 'Эфир' is a common shorter alias."
+  },
+  "contract": {
+    "term": "Контракт",
+    "aliases": [
+      "договор"
+    ],
+    "transliteration": "Kontrakt",
+    "morphology": {
+      "noun": {
+        "singular": "контракт"
+      },
+      "verb": null,
+      "adjective": "контрактный",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "contract-address": "адрес контракта"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "контракту",
+        "example": "Обратитесь к этому контракту для совершения транзакции."
+      },
+      "heading": {
+        "term": "Контракт"
+      },
+      "tag": {
+        "term": "Контракт"
+      },
+      "ui": {
+        "term": "Контракт"
+      },
+      "code": {
+        "term": "contract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "контракт",
+      "two": "контракта",
+      "few": "контракта",
+      "many": "контрактов",
+      "other": "контракта"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block": {
+    "term": "Блок",
+    "aliases": [],
+    "transliteration": "Blok",
+    "morphology": {
+      "noun": {
+        "singular": "блок"
+      },
+      "verb": null,
+      "adjective": "блочный",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "block-height": "высота блока"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "блоке",
+        "example": "Ваша транзакция включена в новом блоке."
+      },
+      "heading": {
+        "term": "Блок"
+      },
+      "tag": {
+        "term": "Блок"
+      },
+      "ui": {
+        "term": "Блок"
+      },
+      "code": {
+        "term": "block"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "блок",
+      "two": "блока",
+      "few": "блока",
+      "many": "блоков",
+      "other": "блока"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "smart contract": {
+    "term": "Смарт-контракт",
+    "aliases": [
+      "умный контракт"
+    ],
+    "transliteration": "Smart-kontrakt",
+    "morphology": {
+      "noun": {
+        "singular": "смарт-контракт"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "smart-contract-security": "безопасность смарт-контрактов"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "смарт-контрактов",
+        "example": "Протокол использует систему смарт-контрактов."
+      },
+      "heading": {
+        "term": "Смарт-контракты"
+      },
+      "tag": {
+        "term": "Смарт-контракт"
+      },
+      "ui": {
+        "term": "Смарт-контракт"
+      },
+      "code": {
+        "term": "smartContract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "смарт-контракт",
+      "two": "смарт-контракта",
+      "few": "смарт-контракта",
+      "many": "смарт-контрактов",
+      "other": "смарт-контракта"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Hyphenated in Russian transliteration."
+  },
+  "node": {
+    "term": "Нода",
+    "aliases": [
+      "узел"
+    ],
+    "transliteration": "Noda",
+    "morphology": {
+      "noun": {
+        "singular": "нода"
+      },
+      "verb": null,
+      "adjective": "нодальный",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node": "полная нода"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ноды",
+        "example": "Запуск собственной ноды помогает децентрализации."
+      },
+      "heading": {
+        "term": "Ноды"
+      },
+      "tag": {
+        "term": "Нода"
+      },
+      "ui": {
+        "term": "Нода"
+      },
+      "code": {
+        "term": "node"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "нода",
+      "two": "ноды",
+      "few": "ноды",
+      "many": "нод",
+      "other": "ноды"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Нода' is the ubiquitous transliterated loanword in crypto communities; 'Узел' is the literal translation."
+  },
+  "token": {
+    "term": "Токен",
+    "aliases": [],
+    "transliteration": "Token",
+    "morphology": {
+      "noun": {
+        "singular": "токен"
+      },
+      "verb": null,
+      "adjective": "токенный",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-balance": "баланс токенов"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "токенами",
+        "example": "Вы можете торговать этими токенами на бирже."
+      },
+      "heading": {
+        "term": "Токены"
+      },
+      "tag": {
+        "term": "Токен"
+      },
+      "ui": {
+        "term": "Токен"
+      },
+      "code": {
+        "term": "token"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "токен",
+      "two": "токена",
+      "few": "токена",
+      "many": "токенов",
+      "other": "токена"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "address": {
+    "term": "Адрес",
+    "aliases": [],
+    "transliteration": "Adres",
+    "morphology": {
+      "noun": {
+        "singular": "адрес"
+      },
+      "verb": null,
+      "adjective": "адресный",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "wallet-address": "адрес кошелька"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "адресу",
+        "example": "Отправьте средства на этот адрес."
+      },
+      "heading": {
+        "term": "Адрес"
+      },
+      "tag": {
+        "term": "Адрес"
+      },
+      "ui": {
+        "term": "Адрес"
+      },
+      "code": {
+        "term": "address"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "адрес",
+      "two": "адреса",
+      "few": "адреса",
+      "many": "адресов",
+      "other": "адреса"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "eth": {
+    "term": "Эфир",
+    "aliases": [
+      "ETH",
+      "Ether",
+      "Эфириум"
+    ],
+    "transliteration": "Efir",
+    "morphology": {
+      "noun": {
+        "singular": "эфир"
+      },
+      "verb": null,
+      "adjective": "эфирный",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "eth-transfer": "перевод эфира"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "эфир",
+        "example": "Вы можете отправить эфир на любой адрес Ethereum."
+      },
+      "heading": {
+        "term": "Эфир (ETH)"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "Эфир"
+      },
+      "code": {
+        "term": "eth"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "эфир",
+      "two": "эфира",
+      "few": "эфира",
+      "many": "эфиров",
+      "other": "эфира"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Primary native asset of Ethereum."
+  },
+  "blockchain": {
+    "term": "Блокчейн",
+    "aliases": [
+      "цепочка блоков"
+    ],
+    "transliteration": "Blokcheyn",
+    "morphology": {
+      "noun": {
+        "singular": "блокчейн"
+      },
+      "verb": null,
+      "adjective": "блокчейновый",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "blockchain-network": "блокчейн-сеть"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "блокчейн",
+        "example": "Данные в блокчейне защищены криптографией."
+      },
+      "heading": {
+        "term": "Блокчейн"
+      },
+      "tag": {
+        "term": "Блокчейн"
+      },
+      "ui": {
+        "term": "Блокчейн"
+      },
+      "code": {
+        "term": "blockchain"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "блокчейн",
+      "two": "блокчейна",
+      "few": "блокчейна",
+      "many": "блокчейнов",
+      "other": "блокчейна"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "account": {
+    "term": "Аккаунт",
+    "aliases": [
+      "учётная запись",
+      "счёт"
+    ],
+    "transliteration": "Akkaunt",
+    "morphology": {
+      "noun": {
+        "singular": "аккаунт"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "external-account": "внешний аккаунт"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "аккаунт",
+        "example": "Ваш аккаунт содержит баланс и историю транзакций."
+      },
+      "heading": {
+        "term": "Аккаунт"
+      },
+      "tag": {
+        "term": "Аккаунт"
+      },
+      "ui": {
+        "term": "Аккаунт"
+      },
+      "code": {
+        "term": "account"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "аккаунт",
+      "two": "аккаунта",
+      "few": "аккаунта",
+      "many": "аккаунтов",
+      "other": "аккаунта"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "chain": {
+    "term": "Цепочка",
+    "aliases": [
+      "цепь"
+    ],
+    "transliteration": "Tsepochka",
+    "morphology": {
+      "noun": {
+        "singular": "цепочка"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "side-chain": "сайдчейн"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "цепочка",
+        "example": "Транзакция была добавлена в основную цепочку."
+      },
+      "heading": {
+        "term": "Цепочка"
+      },
+      "tag": {
+        "term": "Цепь"
+      },
+      "ui": {
+        "term": "Цепь"
+      },
+      "code": {
+        "term": "chain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "цепочка",
+      "two": "цепочки",
+      "few": "цепочки",
+      "many": "цепочек",
+      "other": "цепочки"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "protocol": {
+    "term": "Протокол",
+    "aliases": [],
+    "transliteration": "Protokol",
+    "morphology": {
+      "noun": {
+        "singular": "протокол"
+      },
+      "verb": null,
+      "adjective": "протокольный",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "protocol-layer": "уровень протокола"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "протокол",
+        "example": "Протокол Ethereum определяет правила взаимодействия узлов."
+      },
+      "heading": {
+        "term": "Протокол"
+      },
+      "tag": {
+        "term": "Протокол"
+      },
+      "ui": {
+        "term": "Протокол"
+      },
+      "code": {
+        "term": "protocol"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "протокол",
+      "two": "протокола",
+      "few": "протокола",
+      "many": "протоколов",
+      "other": "протокола"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "wallet": {
+    "term": "Кошелёк",
+    "aliases": [],
+    "transliteration": "Koshelyok",
+    "morphology": {
+      "noun": {
+        "singular": "кошелёк"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hardware-wallet": "аппаратный кошелёк"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "кошелёк",
+        "example": "Для хранения средств вам понадобится криптографический кошелёк."
+      },
+      "heading": {
+        "term": "Кошелёк"
+      },
+      "tag": {
+        "term": "Кошелёк"
+      },
+      "ui": {
+        "term": "Кошелёк"
+      },
+      "code": {
+        "term": "wallet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "кошелёк",
+      "two": "кошелька",
+      "few": "кошелька",
+      "many": "кошельков",
+      "other": "кошелька"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "gas": {
+    "term": "Газ",
+    "aliases": [],
+    "transliteration": "Gaz",
+    "morphology": {
+      "noun": {
+        "singular": "газ"
+      },
+      "verb": null,
+      "adjective": "газовый",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "gas-price": "цена газа"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "газ",
+        "example": "Цена газа зависит от загруженности сети."
+      },
+      "heading": {
+        "term": "Газ"
+      },
+      "tag": {
+        "term": "Газ"
+      },
+      "ui": {
+        "term": "Газ"
+      },
+      "code": {
+        "term": "gas"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "газ",
+      "two": "газа",
+      "few": "газа",
+      "many": "газов",
+      "other": "газа"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "rollup": {
+    "term": "Роллап",
+    "aliases": [
+      "свёртка"
+    ],
+    "transliteration": "Rollap",
+    "morphology": {
+      "noun": {
+        "singular": "роллап"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "optimistic-rollup": "оптимистичный роллап"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "роллап",
+        "example": "Роллапы позволяют значительно снизить стоимость транзакций."
+      },
+      "heading": {
+        "term": "Роллап"
+      },
+      "tag": {
+        "term": "Роллап"
+      },
+      "ui": {
+        "term": "Роллап"
+      },
+      "code": {
+        "term": "rollup"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "роллап",
+      "two": "роллапа",
+      "few": "роллапа",
+      "many": "роллапов",
+      "other": "роллапа"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Scaling solution loanword."
+  },
+  "ethereum improvement proposal (eip)": {
+    "term": "Предложение по улучшению Ethereum (EIP)",
+    "aliases": [
+      "EIP"
+    ],
+    "transliteration": "Predlozheniye po uluchsheniyu Ethereum (EIP)",
+    "morphology": {
+      "noun": {
+        "singular": "предложение"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "предложение",
+        "example": "Новое предложение по улучшению Ethereum описывает стандарт токенов."
+      },
+      "heading": {
+        "term": "Предложение по улучшению Ethereum (EIP)"
+      },
+      "tag": {
+        "term": "EIP"
+      },
+      "ui": {
+        "term": "EIP"
+      },
+      "code": {
+        "term": "eip"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "предложение",
+      "two": "предложения",
+      "few": "предложения",
+      "many": "предложений",
+      "other": "предложения"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "require": {
+    "term": "require",
+    "aliases": [],
+    "transliteration": "require",
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "требовать",
+        "participle": "требующий"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "require",
+        "example": "Функция require проверяет выполнение условия перед выполнением кода."
+      },
+      "heading": {
+        "term": "Инструкция require"
+      },
+      "tag": {
+        "term": "require"
+      },
+      "ui": {
+        "term": "require"
+      },
+      "code": {
+        "term": "require"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical keyword in Solidity; usually left in Latin in code contexts but translated conceptually."
+  },
+  "web3": {
+    "term": "Веб3",
+    "aliases": [
+      "Web3",
+      "Web 3.0"
+    ],
+    "transliteration": "Veb3",
+    "morphology": {
+      "noun": {
+        "singular": "Веб3"
+      },
+      "verb": null,
+      "adjective": "веб3-ориентированный",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "web3-stack": "стек Веб3"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "Веб3",
+        "example": "Будущее интернета строится на технологиях Веб3."
+      },
+      "heading": {
+        "term": "Веб3"
+      },
+      "tag": {
+        "term": "Веб3"
+      },
+      "ui": {
+        "term": "Веб3"
+      },
+      "code": {
+        "term": "web3"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as a proper noun; usually indeclinable in Russian context."
+  },
+  "solidity": {
+    "term": "Солидити",
+    "aliases": [
+      "Solidity"
+    ],
+    "transliteration": "Soliditi",
+    "morphology": {
+      "noun": {
+        "singular": "Солидити"
+      },
+      "verb": null,
+      "adjective": "солидити-контракт",
+      "agent": "разработчик на Солидити",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Солидити",
+        "example": "Этот смарт-контракт написан на языке Солидити."
+      },
+      "heading": {
+        "term": "Солидити"
+      },
+      "tag": {
+        "term": "Солидити"
+      },
+      "ui": {
+        "term": "Солидити"
+      },
+      "code": {
+        "term": "solidity"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliterated name of the programming language."
+  },
+  "event": {
+    "term": "событие",
+    "aliases": [
+      "ивент"
+    ],
+    "transliteration": "sobytiye",
+    "morphology": {
+      "noun": {
+        "singular": "событие"
+      },
+      "verb": null,
+      "adjective": "событийный",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "event-log": "журнал событий"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "событие",
+        "example": "Смарт-контракт вызывает событие при завершении транзакции."
+      },
+      "heading": {
+        "term": "События"
+      },
+      "tag": {
+        "term": "событие"
+      },
+      "ui": {
+        "term": "Событие"
+      },
+      "code": {
+        "term": "event"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "событие",
+      "two": "события",
+      "few": "события",
+      "many": "событий",
+      "other": "события"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "onchain": {
+    "term": "ончейн",
+    "aliases": [
+      "в сети",
+      "внутрисетевой"
+    ],
+    "transliteration": "oncheyn",
+    "morphology": {
+      "noun": {
+        "singular": "ончейн"
+      },
+      "verb": null,
+      "adjective": "ончейн-данные",
+      "agent": null,
+      "negation": "оффчейн",
+      "compounds": {
+        "onchain-governance": "ончейн-управление"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ончейн",
+        "example": "Эта транзакция записывается напрямую ончейн."
+      },
+      "heading": {
+        "term": "Ончейн"
+      },
+      "tag": {
+        "term": "ончейн"
+      },
+      "ui": {
+        "term": "Ончейн"
+      },
+      "code": {
+        "term": "onchain"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used both as a noun and an adverbial/adjective loanword in technical Russian."
+  },
+  "ether": {
+    "term": "Эфир",
+    "aliases": [
+      "ETH",
+      "эфириум"
+    ],
+    "transliteration": "Efir",
+    "morphology": {
+      "noun": {
+        "singular": "эфир"
+      },
+      "verb": null,
+      "adjective": "эфирный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Эфир",
+        "example": "Для оплаты комиссии за газ вам понадобится Эфир."
+      },
+      "heading": {
+        "term": "Эфир (ETH)"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "Эфир"
+      },
+      "code": {
+        "term": "ether"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "эфир",
+      "two": "эфира",
+      "few": "эфира",
+      "many": "эфиров",
+      "other": "эфира"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers to the currency, distinct from the network name 'Ethereum'."
+  },
+  "ethereum virtual machine (evm)": {
+    "term": "Виртуальная машина Эфириума",
+    "aliases": [
+      "EVM",
+      "Виртуальная машина Ethereum"
+    ],
+    "transliteration": "Virtual'naya mashina Efiriuma",
+    "morphology": {
+      "noun": {
+        "singular": "Виртуальная машина Эфириума"
+      },
+      "verb": null,
+      "adjective": "EVM-совместимый",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Виртуальной машине Эфириума",
+        "example": "Код смарт-контрактов выполняется в Виртуальной машине Эфириума."
+      },
+      "heading": {
+        "term": "Виртуальная машина Эфириума (EVM)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "EVM"
+      },
+      "code": {
+        "term": "evm"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually abbreviated as EVM even in Cyrillic texts."
+  },
+  "decentralized application (dapp)": {
+    "term": "децентрализованное приложение",
+    "aliases": [
+      "дапп",
+      "dapp"
+    ],
+    "transliteration": "detsentralizovannoye prilozheniye",
+    "morphology": {
+      "noun": {
+        "singular": "децентрализованное приложение"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "децентрализованное приложение",
+        "example": "Это децентрализованное приложение работает без посредников."
+      },
+      "heading": {
+        "term": "Децентрализованные приложения"
+      },
+      "tag": {
+        "term": "дапп"
+      },
+      "ui": {
+        "term": "Dapp"
+      },
+      "code": {
+        "term": "dapp"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "приложение",
+      "two": "приложения",
+      "few": "приложения",
+      "many": "приложений",
+      "other": "приложения"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Dapp is often transliterated as 'дапп' in casual developer speech."
+  },
+  "non-fungible token (nft)": {
+    "term": "невзаимозаменяемый токен",
+    "aliases": [
+      "НФТ",
+      "NFT"
+    ],
+    "transliteration": "nevzaimozamenyayemyy token",
+    "morphology": {
+      "noun": {
+        "singular": "невзаимозаменяемый токен"
+      },
+      "verb": null,
+      "adjective": "NFT-коллекция",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "невзаимозаменяемый токен",
+        "example": "Каждый невзаимозаменяемый токен уникален и доказуемо дефицитен."
+      },
+      "heading": {
+        "term": "Невзаимозаменяемые токены (NFT)"
+      },
+      "tag": {
+        "term": "NFT"
+      },
+      "ui": {
+        "term": "NFT"
+      },
+      "code": {
+        "term": "nft"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "токен",
+      "two": "токена",
+      "few": "токена",
+      "many": "токенов",
+      "other": "токена"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "api": {
+    "term": "API",
+    "aliases": [
+      "АПИ",
+      "программный интерфейс приложения"
+    ],
+    "transliteration": "API",
+    "morphology": {
+      "noun": {
+        "singular": "API"
+      },
+      "verb": null,
+      "adjective": "API-ключ",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "api-endpoint": "конечная точка API"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "API",
+        "example": "Вы можете получить данные из сети через наше API."
+      },
+      "heading": {
+        "term": "API"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "API"
+      },
+      "code": {
+        "term": "api"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually kept in Latin script even in Cyrillic texts."
+  },
+  "transfer": {
+    "term": "перевод",
+    "aliases": [
+      "трансфер",
+      "передача"
+    ],
+    "transliteration": "perevod",
+    "morphology": {
+      "noun": {
+        "singular": "перевод"
+      },
+      "verb": {
+        "infinitive": "переводить",
+        "participle": "переводящий"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "перевод",
+        "example": "Перевод токенов на другой адрес занимает несколько минут."
+      },
+      "heading": {
+        "term": "Перевод"
+      },
+      "tag": {
+        "term": "перевод"
+      },
+      "ui": {
+        "term": "Перевести"
+      },
+      "code": {
+        "term": "transfer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "перевод",
+      "two": "перевода",
+      "few": "перевода",
+      "many": "переводов",
+      "other": "перевода"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "withdrawal": {
+    "term": "вывод",
+    "aliases": [
+      "снятие",
+      "вывод средств"
+    ],
+    "transliteration": "vyvod",
+    "morphology": {
+      "noun": {
+        "singular": "вывод"
+      },
+      "verb": null,
+      "adjective": "выводной",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "вывод",
+        "example": "Пользователь инициировал вывод своих средств из стейкинга через стейкинг-контракт."
+      },
+      "heading": {
+        "term": "Вывод средств"
+      },
+      "tag": {
+        "term": "Вывод"
+      },
+      "ui": {
+        "term": "Вывести"
+      },
+      "code": {
+        "term": "withdrawal"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "вывод",
+      "two": "вывода",
+      "few": "вывода",
+      "many": "выводов",
+      "other": "вывода"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In the context of Ethereum consensus, 'вывод' is the standard term for moving ETH from the beacon chain to the execution layer."
+  },
+  "consensus": {
+    "term": "консенсус",
+    "aliases": [
+      "согласие"
+    ],
+    "transliteration": "konsensus",
+    "morphology": {
+      "noun": {
+        "singular": "консенсус"
+      },
+      "verb": null,
+      "adjective": "консенсус-ориентированный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "консенсус",
+        "example": "Механизм консенсуса обеспечивает безопасность и неизменность блокчейна Ethereum."
+      },
+      "heading": {
+        "term": "Консенсус"
+      },
+      "tag": {
+        "term": "Консенсус"
+      },
+      "ui": {
+        "term": "Консенсус"
+      },
+      "code": {
+        "term": "consensus"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "консенсус",
+      "two": "консенсуса",
+      "few": "консенсуса",
+      "many": "консенсусов",
+      "other": "консенсуса"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mainnet": {
+    "term": "мейннет",
+    "aliases": [
+      "основная сеть"
+    ],
+    "transliteration": "meynnet",
+    "morphology": {
+      "noun": {
+        "singular": "мейннет"
+      },
+      "verb": null,
+      "adjective": "мейннет-версия",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "мейннете",
+        "example": "Смарт-контракт был успешно развернут в мейннете Ethereum после тестирования."
+      },
+      "heading": {
+        "term": "Мейннет"
+      },
+      "tag": {
+        "term": "Мейннет"
+      },
+      "ui": {
+        "term": "Мейннет"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "мейннет",
+      "two": "мейннета",
+      "few": "мейннета",
+      "many": "мейннетов",
+      "other": "мейннета"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "offchain": {
+    "term": "оффчейн",
+    "aliases": [
+      "вне цепочки",
+      "вне сети"
+    ],
+    "transliteration": "offcheyn",
+    "morphology": {
+      "noun": {
+        "singular": "оффчейн"
+      },
+      "verb": null,
+      "adjective": "оффчейн",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "offchain-data": "оффчейн-данные"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "оффчейн",
+        "example": "Использование оффчейн вычислений позволяет значительно снизить комиссии для пользователей."
+      },
+      "heading": {
+        "term": "Оффчейн решения"
+      },
+      "tag": {
+        "term": "Оффчейн"
+      },
+      "ui": {
+        "term": "Оффчейн"
+      },
+      "code": {
+        "term": "offchain"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Written without hyphens per instructions. Often used as an invariant adjective in Russian technical discourse."
+  },
+  "erc-20": {
+    "term": "ERC-20",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ERC-20"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ERC-20",
+        "example": "Стандарт ERC-20 определяет правила для создания взаимозаменяемых токенов на Ethereum."
+      },
+      "heading": {
+        "term": "Стандарт ERC-20"
+      },
+      "tag": {
+        "term": "ERC-20"
+      },
+      "ui": {
+        "term": "ERC-20"
+      },
+      "code": {
+        "term": "ERC20"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technically a standard number, usually remains in Latin script even in Cyrillic texts."
+  },
+  "oracle": {
+    "term": "оракул",
+    "aliases": [],
+    "transliteration": "orakul",
+    "morphology": {
+      "noun": {
+        "singular": "оракул"
+      },
+      "verb": null,
+      "adjective": "оракульный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "оракул",
+        "example": "Децентрализованный оракул поставляет данные о реальном курсе валют в смарт-контракт."
+      },
+      "heading": {
+        "term": "Оракулы"
+      },
+      "tag": {
+        "term": "Оракул"
+      },
+      "ui": {
+        "term": "Оракул"
+      },
+      "code": {
+        "term": "oracle"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "оракул",
+      "two": "оракула",
+      "few": "оракула",
+      "many": "оракулов",
+      "other": "оракула"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In IT, 'оракул' is inanimate, despite the mythological personified origin."
+  },
+  "blob": {
+    "term": "блоб",
+    "aliases": [
+      "двоичный объект"
+    ],
+    "transliteration": "blob",
+    "morphology": {
+      "noun": {
+        "singular": "блоб"
+      },
+      "verb": null,
+      "adjective": "блоб-транзакция",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "блобов",
+        "example": "Использование блобов в обновлении Dencun значительно снизило стоимость хранения данных в L2."
+      },
+      "heading": {
+        "term": "Блобы (Blobs)"
+      },
+      "tag": {
+        "term": "Блоб"
+      },
+      "ui": {
+        "term": "Блоб"
+      },
+      "code": {
+        "term": "blob"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "блоб",
+      "two": "блоба",
+      "few": "блоба",
+      "many": "блобов",
+      "other": "блоба"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Direct transliteration of 'Binary Large Object' acronym, now standard for EIP-4844."
+  },
+  "slot": {
+    "term": "слот",
+    "aliases": [],
+    "transliteration": "slot",
+    "morphology": {
+      "noun": {
+        "singular": "слот"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "слот",
+        "example": "В Ethereum каждый слот длится 12 секунд, в течение которых может быть предложен новый блок."
+      },
+      "heading": {
+        "term": "Слоты"
+      },
+      "tag": {
+        "term": "Слот"
+      },
+      "ui": {
+        "term": "Слот"
+      },
+      "code": {
+        "term": "slot"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "слот",
+      "two": "слота",
+      "few": "слота",
+      "many": "слотов",
+      "other": "слота"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized autonomous organization (dao)": {
+    "term": "децентрализованная автономная организация",
+    "aliases": [
+      "ДАО",
+      "DAO"
+    ],
+    "transliteration": "detsentralizovannaya avtonomnaya organizatsiya (DAO)",
+    "morphology": {
+      "noun": {
+        "singular": "децентрализованная автономная организация"
+      },
+      "verb": null,
+      "adjective": "ДАО-управление",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "децентрализованной автономной организации",
+        "example": "Участники децентрализованной автономной организации принимают решения путем голосования токенами."
+      },
+      "heading": {
+        "term": "Децентрализованная автономная организация (ДАО)"
+      },
+      "tag": {
+        "term": "ДАО"
+      },
+      "ui": {
+        "term": "ДАО"
+      },
+      "code": {
+        "term": "dao"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "децентрализованная автономная организация",
+      "two": "децентрализованные автономные организации",
+      "few": "децентрализованные автономные организации",
+      "many": "децентрализованных автономных организаций",
+      "other": "децентрализованных автономных организаций"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "testnet": {
+    "term": "тестнет",
+    "aliases": [
+      "тестовая сеть"
+    ],
+    "transliteration": "testnet",
+    "morphology": {
+      "noun": {
+        "singular": "тестнет"
+      },
+      "verb": null,
+      "adjective": "тестнетный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "тестнете",
+        "example": "Разработчики рекомендуют сначала протестировать код в тестнете Sepolia."
+      },
+      "heading": {
+        "term": "Тестнет"
+      },
+      "tag": {
+        "term": "Тестнет"
+      },
+      "ui": {
+        "term": "Тестнет"
+      },
+      "code": {
+        "term": "testnet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "тестнет",
+      "two": "тестнета",
+      "few": "тестнета",
+      "many": "тестнетов",
+      "other": "тестнета"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus client": {
+    "term": "клиент консенсуса",
+    "aliases": [
+      "консенсус-клиент"
+    ],
+    "transliteration": "klient konsensusa",
+    "morphology": {
+      "noun": {
+        "singular": "клиент консенсуса"
+      },
+      "verb": null,
+      "adjective": "консенсусный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "клиенту консенсуса",
+        "example": "Для участия в стейкинге вам необходимо подключиться к клиенту консенсуса."
+      },
+      "heading": {
+        "term": "Клиент консенсуса"
+      },
+      "tag": {
+        "term": "Консенсус"
+      },
+      "ui": {
+        "term": "Клиент консенсуса"
+      },
+      "code": {
+        "term": "consensus-client"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "клиент консенсуса",
+      "two": "клиента консенсуса",
+      "few": "клиента консенсуса",
+      "many": "клиентов консенсуса",
+      "other": "клиентов консенсуса"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "layer 2 (l2)": {
+    "term": "второй уровень (L2)",
+    "aliases": [
+      "L2",
+      "уровень 2",
+      "лейер 2"
+    ],
+    "transliteration": "vtoroy uroven",
+    "morphology": {
+      "noun": {
+        "singular": "второй уровень"
+      },
+      "verb": null,
+      "adjective": "второуровневый",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "втором уровне (L2)",
+        "example": "Решения на втором уровне (L2) значительно снижают комиссии за газ."
+      },
+      "heading": {
+        "term": "Второй уровень (L2)"
+      },
+      "tag": {
+        "term": "L2"
+      },
+      "ui": {
+        "term": "Layer 2"
+      },
+      "code": {
+        "term": "layer2"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "второй уровень",
+      "two": "вторых уровня",
+      "few": "вторых уровня",
+      "many": "вторых уровней",
+      "other": "вторых уровней"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zk": {
+    "term": "нулевое разглашение",
+    "aliases": [
+      "ZK",
+      "доказательство с нулевым разглашением"
+    ],
+    "transliteration": "nulevoye razglasheniye",
+    "morphology": {
+      "noun": {
+        "singular": "нулевое разглашение"
+      },
+      "verb": null,
+      "adjective": "ZK",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "ZK-роллап"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "нулевым разглашением",
+        "example": "Технология доказательства с нулевым разглашением обеспечивает конфиденциальность транзакций."
+      },
+      "heading": {
+        "term": "Нулевое разглашение (ZK)"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "ZK"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "ZK is widely used as an acronym in Russian tech circles."
+  },
+  "private key": {
+    "term": "закрытый ключ",
+    "aliases": [
+      "приватный ключ"
+    ],
+    "transliteration": "zakrytyy klyuch",
+    "morphology": {
+      "noun": {
+        "singular": "закрытый ключ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "закрытого ключа",
+        "example": "Никогда не делитесь своим закрытым ключом с посторонними лицами."
+      },
+      "heading": {
+        "term": "Закрытый ключ"
+      },
+      "tag": {
+        "term": "Безопасность"
+      },
+      "ui": {
+        "term": "Закрытый ключ"
+      },
+      "code": {
+        "term": "private_key"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "закрытый ключ",
+      "two": "закрытых ключа",
+      "few": "закрытых ключа",
+      "many": "закрытых ключей",
+      "other": "закрытых ключей"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "crypto": {
+    "term": "крипто",
+    "aliases": [
+      "криптовалюта"
+    ],
+    "transliteration": "kripto",
+    "morphology": {
+      "noun": {
+        "singular": "крипто"
+      },
+      "verb": null,
+      "adjective": "криптографический",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "crypto-wallet": "криптокошелек"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "крипто",
+        "example": "Мир крипто постоянно развивается и предлагает новые возможности."
+      },
+      "heading": {
+        "term": "Крипто"
+      },
+      "tag": {
+        "term": "Крипто"
+      },
+      "ui": {
+        "term": "Крипто"
+      },
+      "code": {
+        "term": "crypto"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Russian 'крипто' is indeclinable as a noun."
+  },
+  "layer 1 (l1)": {
+    "term": "первый уровень (L1)",
+    "aliases": [
+      "L1",
+      "базовый уровень",
+      "лейер 1"
+    ],
+    "transliteration": "pervyy uroven",
+    "morphology": {
+      "noun": {
+        "singular": "первый уровень"
+      },
+      "verb": null,
+      "adjective": "первоуровневый",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "первом уровне (L1)",
+        "example": "Ethereum — это протокол первого уровня (L1), обеспечивающий безопасность сети."
+      },
+      "heading": {
+        "term": "Первый уровень (L1)"
+      },
+      "tag": {
+        "term": "L1"
+      },
+      "ui": {
+        "term": "Layer 1"
+      },
+      "code": {
+        "term": "layer1"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "первый уровень",
+      "two": "первых уровня",
+      "few": "первых уровня",
+      "many": "первых уровней",
+      "other": "первых уровней"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "maximal extractable value (mev)": {
+    "term": "максимальная извлекаемая стоимость (MEV)",
+    "aliases": [
+      "MEV"
+    ],
+    "transliteration": "maksimalnaya izvlekayemaya stoimost",
+    "morphology": {
+      "noun": {
+        "singular": "максимальная извлекаемая стоимость"
+      },
+      "verb": null,
+      "adjective": "MEV-ориентированный",
+      "agent": "MEV-бот",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "максимальной извлекаемой стоимости",
+        "example": "Поиск максимальной извлекаемой стоимости (MEV) может влиять на приоритизацию транзакций."
+      },
+      "heading": {
+        "term": "Максимальная извлекаемая стоимость (MEV)"
+      },
+      "tag": {
+        "term": "MEV"
+      },
+      "ui": {
+        "term": "MEV"
+      },
+      "code": {
+        "term": "mev"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "exit": {
+    "term": "выход",
+    "aliases": [
+      "выход из стейкинга"
+    ],
+    "transliteration": "vykhod",
+    "morphology": {
+      "noun": {
+        "singular": "выход"
+      },
+      "verb": {
+        "infinitive": "выйти",
+        "participle": "выходящий"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "выхода",
+        "example": "После инициирования выхода ваши средства станут доступны через определенное время."
+      },
+      "heading": {
+        "term": "Выход"
+      },
+      "tag": {
+        "term": "Консенсус"
+      },
+      "ui": {
+        "term": "Выйти"
+      },
+      "code": {
+        "term": "exit"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "выход",
+      "two": "выхода",
+      "few": "выхода",
+      "many": "выходов",
+      "other": "выходов"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "opcode": {
+    "term": "код операции",
+    "aliases": [
+      "опкод"
+    ],
+    "transliteration": "kod operatsii",
+    "morphology": {
+      "noun": {
+        "singular": "код операции"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "кода операции",
+        "example": "Каждый код операции в EVM имеет свою стоимость в газе."
+      },
+      "heading": {
+        "term": "Код операции"
+      },
+      "tag": {
+        "term": "Разработка"
+      },
+      "ui": {
+        "term": "Опкод"
+      },
+      "code": {
+        "term": "opcode"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "код операции",
+      "two": "кода операции",
+      "few": "кода операции",
+      "many": "кодов операций",
+      "other": "кодов операций"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized finance (defi)": {
+    "term": "децентрализованные финансы (DeFi)",
+    "aliases": [
+      "DeFi",
+      "децентрализованные финансовые услуги"
+    ],
+    "transliteration": "detsentralizovannyye finansy",
+    "morphology": {
+      "noun": {
+        "singular": "децентрализованные финансы"
+      },
+      "verb": null,
+      "adjective": "DeFi",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "децентрализованных финансах (DeFi)",
+        "example": "Инновации в децентрализованных финансах открывают доступ к банковским услугам для всех."
+      },
+      "heading": {
+        "term": "Децентрализованные финансы (DeFi)"
+      },
+      "tag": {
+        "term": "DeFi"
+      },
+      "ui": {
+        "term": "DeFi"
+      },
+      "code": {
+        "term": "defi"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "децентрализованные финансы",
+      "two": "децентрализованных финансов",
+      "few": "децентрализованных финансов",
+      "many": "децентрализованных финансов",
+      "other": "децентрализованных финансов"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually used in plural form in Russian."
+  },
+  "privacy": {
+    "term": "конфиденциальность",
+    "aliases": [
+      "приватность"
+    ],
+    "transliteration": "konfidentsial'nost'",
+    "morphology": {
+      "noun": {
+        "singular": "конфиденциальность"
+      },
+      "verb": null,
+      "adjective": "конфиденциальный",
+      "agent": null,
+      "negation": "публичность",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "конфиденциальности",
+        "example": "Доказательства с нулевым разглашением повышают уровень конфиденциальности транзакций."
+      },
+      "heading": {
+        "term": "Конфиденциальность"
+      },
+      "tag": {
+        "term": "Конфиденциальность"
+      },
+      "ui": {
+        "term": "Настройки конфиденциальности"
+      },
+      "code": {
+        "term": "privacy"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "конфиденциальность",
+      "two": "конфиденциальности",
+      "few": "конфиденциальности",
+      "many": "конфиденциальностей",
+      "other": "конфиденциальности"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Russian often uses 'приватность' in tech, but 'конфиденциальность' is more formal and standard."
+  },
+  "optimistic rollup": {
+    "term": "оптимистичный роллап",
+    "aliases": [
+      "optimistic rollup"
+    ],
+    "transliteration": "optimistichnyy rollap",
+    "morphology": {
+      "noun": {
+        "singular": "роллап"
+      },
+      "verb": null,
+      "adjective": "оптимистичный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "оптимистичного роллапа",
+        "example": "Транзакции в оптимистичном роллапе считаются валидными, пока не доказано обратное."
+      },
+      "heading": {
+        "term": "Оптимистичные роллапы"
+      },
+      "tag": {
+        "term": "L2"
+      },
+      "ui": {
+        "term": "Оптимистичный роллап"
+      },
+      "code": {
+        "term": "optimistic rollup"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "оптимистичный роллап",
+      "two": "оптимистичных роллапа",
+      "few": "оптимистичных роллапа",
+      "many": "оптимистичных роллапов",
+      "other": "оптимистичных роллапов"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliteration of 'rollup' is standard in Russian crypto-communities."
+  },
+  "ethereum request for comments (erc)": {
+    "term": "запрос на комментарии Ethereum (ERC)",
+    "aliases": [
+      "ERC"
+    ],
+    "transliteration": "zapros na kommentarii Ethereum",
+    "morphology": {
+      "noun": {
+        "singular": "запрос"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "запроса на комментарии Ethereum (ERC)",
+        "example": "ERC-20 — это самый известный стандарт, созданный через запрос на комментарии Ethereum."
+      },
+      "heading": {
+        "term": "Ethereum Request for Comments (ERC)"
+      },
+      "tag": {
+        "term": "ERC"
+      },
+      "ui": {
+        "term": "ERC"
+      },
+      "code": {
+        "term": "erc"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "запрос на комментарии Ethereum",
+      "two": "запроса на комментарии Ethereum",
+      "few": "запроса на комментарии Ethereum",
+      "many": "запросов на комментарии Ethereum",
+      "other": "запросов на комментарии Ethereum"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually referred to by the acronym ERC in both English and Russian."
+  },
+  "plasma": {
+    "term": "плазма",
+    "aliases": [
+      "Plasma"
+    ],
+    "transliteration": "plazma",
+    "morphology": {
+      "noun": {
+        "singular": "плазма"
+      },
+      "verb": null,
+      "adjective": "плазменный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "плазмы",
+        "example": "Технология плазмы позволяет создавать дочерние цепочки для масштабирования основной сети."
+      },
+      "heading": {
+        "term": "Плазма (Plasma)"
+      },
+      "tag": {
+        "term": "Scaling"
+      },
+      "ui": {
+        "term": "Плазма"
+      },
+      "code": {
+        "term": "plasma"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "плазма",
+      "two": "плазмы",
+      "few": "плазмы",
+      "many": "плазм",
+      "other": "плазмы"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "library": {
+    "term": "библиотека",
+    "aliases": [],
+    "transliteration": "biblioteka",
+    "morphology": {
+      "noun": {
+        "singular": "библиотека"
+      },
+      "verb": null,
+      "adjective": "библиотечный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "библиотеки",
+        "example": "В Solidity библиотека — это особый тип смарт-контракта, который нельзя передавать."
+      },
+      "heading": {
+        "term": "Библиотеки"
+      },
+      "tag": {
+        "term": "Разработка"
+      },
+      "ui": {
+        "term": "Библиотека"
+      },
+      "code": {
+        "term": "library"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "библиотека",
+      "two": "библиотеки",
+      "few": "библиотеки",
+      "many": "библиотек",
+      "other": "библиотеки"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "the merge": {
+    "term": "Слияние",
+    "aliases": [
+      "The Merge"
+    ],
+    "transliteration": "Sliyaniye",
+    "morphology": {
+      "noun": {
+        "singular": "слияние"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Слияния",
+        "example": "После Слияния Ethereum перешел на алгоритм консенсуса Proof-of-Stake."
+      },
+      "heading": {
+        "term": "Слияние (The Merge)"
+      },
+      "tag": {
+        "term": "Обновление"
+      },
+      "ui": {
+        "term": "Слияние"
+      },
+      "code": {
+        "term": "the-merge"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "слияние",
+      "two": "слияния",
+      "few": "слияния",
+      "many": "слияний",
+      "other": "слияния"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often capitalized in Russian as a proper name for the specific protocol event."
+  },
+  "zero-knowledge proof": {
+    "term": "доказательство с нулевым разглашением",
+    "aliases": [
+      "ZKP",
+      "доказательство с нулевым знанием"
+    ],
+    "transliteration": "dokazatel'stvo s nulevym razglasheniyem",
+    "morphology": {
+      "noun": {
+        "singular": "доказательство"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "ZK-роллап"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "доказательства с нулевым разглашением",
+        "example": "Доказательство с нулевым разглашением позволяет подтвердить истинность утверждения, не раскрывая само утверждение."
+      },
+      "heading": {
+        "term": "Доказательства с нулевым разглашением"
+      },
+      "tag": {
+        "term": "Криптография"
+      },
+      "ui": {
+        "term": "ZKP"
+      },
+      "code": {
+        "term": "zkp"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "доказательство с нулевым разглашением",
+      "two": "доказательства с нулевым разглашением",
+      "few": "доказательства с нулевым разглашением",
+      "many": "доказательств с нулевым разглашением",
+      "other": "доказательства с нулевым разглашением"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "data availability": {
+    "term": "доступность данных",
+    "aliases": [],
+    "transliteration": "dostupnost' dannykh",
+    "morphology": {
+      "noun": {
+        "singular": "доступность"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "доступности данных",
+        "example": "Проблема доступности данных критически важна для безопасности L2-решений."
+      },
+      "heading": {
+        "term": "Доступность данных"
+      },
+      "tag": {
+        "term": "Scaling"
+      },
+      "ui": {
+        "term": "Доступность данных"
+      },
+      "code": {
+        "term": "data-availability"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "доступность данных",
+      "two": "доступности данных",
+      "few": "доступности данных",
+      "many": "доступностей данных",
+      "other": "доступности данных"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "log": {
+    "term": "лог",
+    "aliases": [
+      "журнал событий"
+    ],
+    "transliteration": "log",
+    "morphology": {
+      "noun": {
+        "singular": "лог"
+      },
+      "verb": {
+        "infinitive": "логировать",
+        "participle": "логирующий"
+      },
+      "adjective": "логовый",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "лога",
+        "example": "Смарт-контракты записывают важную информацию в лог для внешних приложений."
+      },
+      "heading": {
+        "term": "Логи"
+      },
+      "tag": {
+        "term": "Разработка"
+      },
+      "ui": {
+        "term": "Лог"
+      },
+      "code": {
+        "term": "log"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "лог",
+      "two": "лога",
+      "few": "лога",
+      "many": "логов",
+      "other": "логи"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliteration 'лог' is common in Russian programming; 'журнал' is a more native alternative."
+  },
+  "beacon chain": {
+    "term": "Beacon Chain",
+    "aliases": [
+      "сигнальная цепь"
+    ],
+    "transliteration": "Bikon Cheyn",
+    "morphology": {
+      "noun": {
+        "singular": "цепь"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Beacon Chain",
+        "example": "Beacon Chain представила Proof-of-Stake в экосистеме Ethereum."
+      },
+      "heading": {
+        "term": "Beacon Chain"
+      },
+      "tag": {
+        "term": "Consensus"
+      },
+      "ui": {
+        "term": "Beacon Chain"
+      },
+      "code": {
+        "term": "beacon-chain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "Beacon Chain",
+      "two": "Beacon Chain",
+      "few": "Beacon Chain",
+      "many": "Beacon Chain",
+      "other": "Beacon Chain"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually left in English in Russian technical documentation as a proper name."
+  },
+  "liquidity": {
+    "term": "ликвидность",
+    "aliases": [],
+    "transliteration": "likvidnost'",
+    "morphology": {
+      "noun": {
+        "singular": "ликвидность"
+      },
+      "verb": null,
+      "adjective": "ликвидный",
+      "agent": null,
+      "negation": "неликвидность",
+      "compounds": {
+        "liquidity-provider": "поставщик ликвидности",
+        "liquidity-pool": "пул ликвидности"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ликвидности",
+        "example": "Высокий уровень ликвидности позволяет совершать сделки с минимальным проскальзыванием."
+      },
+      "heading": {
+        "term": "Ликвидность"
+      },
+      "tag": {
+        "term": "ликвидность"
+      },
+      "ui": {
+        "term": "Ликвидность"
+      },
+      "code": {
+        "term": "liquidity"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ликвидность",
+      "two": "ликвидности",
+      "few": "ликвидности",
+      "many": "ликвидностей",
+      "other": "ликвидности"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "epoch": {
+    "term": "эпоха",
+    "aliases": [],
+    "transliteration": "epokha",
+    "morphology": {
+      "noun": {
+        "singular": "эпоха"
+      },
+      "verb": null,
+      "adjective": "эпохальный",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "эпохи",
+        "example": "В сети Ethereum одна эпоха состоит из 32 слотов."
+      },
+      "heading": {
+        "term": "Эпоха"
+      },
+      "tag": {
+        "term": "эпоха"
+      },
+      "ui": {
+        "term": "Эпоха"
+      },
+      "code": {
+        "term": "epoch"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "эпоха",
+      "two": "эпохи",
+      "few": "эпохи",
+      "many": "эпох",
+      "other": "эпохи"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum mainnet": {
+    "term": "основная сеть Ethereum",
+    "aliases": [
+      "мейннет Ethereum"
+    ],
+    "transliteration": "osnovnaya set' Ethereum",
+    "morphology": {
+      "noun": {
+        "singular": "основная сеть Ethereum"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "основной сети Ethereum",
+        "example": "Это приложение уже развернуто в основной сети Ethereum."
+      },
+      "heading": {
+        "term": "Основная сеть Ethereum"
+      },
+      "tag": {
+        "term": "mainnet"
+      },
+      "ui": {
+        "term": "Ethereum Mainnet"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "proposal": {
+    "term": "предложение",
+    "aliases": [],
+    "transliteration": "predlozheniye",
+    "morphology": {
+      "noun": {
+        "singular": "предложение"
+      },
+      "verb": {
+        "infinitive": "предлагать",
+        "participle": "предлагающий"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "предложения",
+        "example": "Сообщество проголосовало за принятие нового предложения по улучшению."
+      },
+      "heading": {
+        "term": "Предложение"
+      },
+      "tag": {
+        "term": "предложение"
+      },
+      "ui": {
+        "term": "Предложение"
+      },
+      "code": {
+        "term": "proposal"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "предложение",
+      "two": "предложения",
+      "few": "предложения",
+      "many": "предложений",
+      "other": "предложения"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block proposer": {
+    "term": "предлагающий блок",
+    "aliases": [
+      "пропозер блока"
+    ],
+    "transliteration": "predlagayushchiy blok",
+    "morphology": {
+      "noun": {
+        "singular": "предлагающий блок"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "пропозер",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "предлагающего блок",
+        "example": "Валидатор был выбран в качестве предлагающего блок в текущем слоте."
+      },
+      "heading": {
+        "term": "Предлагающий блок"
+      },
+      "tag": {
+        "term": "пропозер"
+      },
+      "ui": {
+        "term": "Предлагающий блок"
+      },
+      "code": {
+        "term": "blockProposer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "предлагающий блок",
+      "two": "предлагающих блок",
+      "few": "предлагающих блок",
+      "many": "предлагающих блок",
+      "other": "предлагающие блоки"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as 'пропозер' in technical contexts."
+  },
+  "consensus layer": {
+    "term": "уровень консенсуса",
+    "aliases": [],
+    "transliteration": "uroven' konsensusa",
+    "morphology": {
+      "noun": {
+        "singular": "уровень консенсуса"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "уровне консенсуса",
+        "example": "Обновление затронуло работу программного обеспечения на уровне консенсуса."
+      },
+      "heading": {
+        "term": "Уровень консенсуса"
+      },
+      "tag": {
+        "term": "консенсус"
+      },
+      "ui": {
+        "term": "Уровень консенсуса"
+      },
+      "code": {
+        "term": "consensusLayer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "peer": {
+    "term": "пир",
+    "aliases": [
+      "узел сети",
+      "участник сети"
+    ],
+    "transliteration": "pir",
+    "morphology": {
+      "noun": {
+        "singular": "пир"
+      },
+      "verb": null,
+      "adjective": "пиринговый",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "peer-to-peer": "одноранговый"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "пиров",
+        "example": "Ваш узел начал обнаруживать других пиров в сети."
+      },
+      "heading": {
+        "term": "Пиры"
+      },
+      "tag": {
+        "term": "пир"
+      },
+      "ui": {
+        "term": "Пиры"
+      },
+      "code": {
+        "term": "peer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "пир",
+      "two": "пира",
+      "few": "пира",
+      "many": "пиров",
+      "other": "пиры"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Direct transliteration of 'peer' is standard in networking."
+  },
+  "json-rpc": {
+    "term": "JSON-RPC",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "JSON-RPC"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "JSON-RPC",
+        "example": "Вы можете взаимодействовать с нодой через протокол JSON-RPC."
+      },
+      "heading": {
+        "term": "JSON-RPC"
+      },
+      "tag": {
+        "term": "JSON-RPC"
+      },
+      "ui": {
+        "term": "JSON-RPC"
+      },
+      "code": {
+        "term": "jsonrpc"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Protocol name remains in Latin script."
+  },
+  "nonce": {
+    "term": "нонс",
+    "aliases": [
+      "одноразовое число"
+    ],
+    "transliteration": "nons",
+    "morphology": {
+      "noun": {
+        "singular": "нонс"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "нонса",
+        "example": "Каждая транзакция должна содержать правильный нонс для защиты от повторов."
+      },
+      "heading": {
+        "term": "Нонс"
+      },
+      "tag": {
+        "term": "нонс"
+      },
+      "ui": {
+        "term": "Нонс"
+      },
+      "code": {
+        "term": "nonce"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "нонс",
+      "two": "нонса",
+      "few": "нонса",
+      "many": "нонсов",
+      "other": "нонсы"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliterated loanword is standard in crypto contexts."
+  },
+  "ipfs": {
+    "term": "IPFS",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "IPFS"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "IPFS",
+        "example": "Многие NFT хранят свои метаданные в децентрализованной сети IPFS."
+      },
+      "heading": {
+        "term": "IPFS"
+      },
+      "tag": {
+        "term": "IPFS"
+      },
+      "ui": {
+        "term": "IPFS"
+      },
+      "code": {
+        "term": "ipfs"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually feminine as 'сеть' (network)."
+  },
+  "full node": {
+    "term": "полная нода",
+    "aliases": [
+      "полный узел"
+    ],
+    "transliteration": "polnaya noda",
+    "morphology": {
+      "noun": {
+        "singular": "полная нода"
+      },
+      "verb": null,
+      "adjective": "полноузловой",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "полной ноды",
+        "example": "Запуск полной ноды позволяет вам самостоятельно проверять транзакции и состояние сети Ethereum."
+      },
+      "heading": {
+        "term": "Полная нода"
+      },
+      "tag": {
+        "term": "Нода"
+      },
+      "ui": {
+        "term": "Полная нода"
+      },
+      "code": {
+        "term": "full_node"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "полная нода",
+      "two": "полные ноды",
+      "few": "полные ноды",
+      "many": "полных нод",
+      "other": "полные ноды"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The term 'нода' is a widely accepted transliteration in the Russian crypto community, while 'узел' is more formal."
+  },
+  "zero-knowledge": {
+    "term": "нулевое разглашение",
+    "aliases": [
+      "ZK",
+      "с нулевым разглашением",
+      "доказательство с нулевым разглашением"
+    ],
+    "transliteration": "nulevoye razglasheniye",
+    "morphology": {
+      "noun": {
+        "singular": "нулевое разглашение"
+      },
+      "verb": null,
+      "adjective": "с нулевым разглашением",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-proof": "доказательство с нулевым разглашением"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "нулевым разглашением",
+        "example": "Доказательства с нулевым разглашением позволяют подтвердить истинность данных, не раскрывая их содержания."
+      },
+      "heading": {
+        "term": "Нулевое разглашение"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "Нулевое разглашение"
+      },
+      "code": {
+        "term": "zero_knowledge"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "нулевое разглашение",
+      "two": "нулевых разглашения",
+      "few": "нулевых разглашения",
+      "many": "нулевых разглашений",
+      "other": "нулевых разглашений"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually used as part of the phrase 'доказательство с нулевым разглашением' (zero-knowledge proof)."
+  },
+  "hardhat": {
+    "term": "Хардхэт",
+    "aliases": [
+      "Hardhat"
+    ],
+    "transliteration": "Khardkhet",
+    "morphology": {
+      "noun": {
+        "singular": "Хардхэт"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Хардхэт",
+        "example": "Хардхэт — это мощная среда разработки для компиляции, тестирования и развертывания смарт-контрактов."
+      },
+      "heading": {
+        "term": "Hardhat"
+      },
+      "tag": {
+        "term": "Инструментарий"
+      },
+      "ui": {
+        "term": "Hardhat"
+      },
+      "code": {
+        "term": "hardhat"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun of a developer tool; often kept in Latin script but transliterated here as per instructions."
+  },
+  "checkpoint": {
+    "term": "чекпоинт",
+    "aliases": [
+      "контрольная точка"
+    ],
+    "transliteration": "chekpoint",
+    "morphology": {
+      "noun": {
+        "singular": "чекпоинт"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "чекпоинта",
+        "example": "В Casper FFG блоки финализируются после прохождения определенного чекпоинта в каждой эпохе."
+      },
+      "heading": {
+        "term": "Чекпоинт"
+      },
+      "tag": {
+        "term": "Консенсус"
+      },
+      "ui": {
+        "term": "Чекпоинт"
+      },
+      "code": {
+        "term": "checkpoint"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "чекпоинт",
+      "two": "чекпоинта",
+      "few": "чекпоинта",
+      "many": "чекпоинтов",
+      "other": "чекпоинты"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard technical term in the context of Ethereum Proof-of-Stake consensus."
+  }
+}

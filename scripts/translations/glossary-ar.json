@@ -1,0 +1,4752 @@
+{
+  "attestation": {
+    "term": "إشهاد",
+    "aliases": [
+      "تصديق"
+    ],
+    "transliteration": "Ishhād",
+    "morphology": {
+      "noun": {
+        "singular": "إشهاد"
+      },
+      "verb": {
+        "infinitive": "شهد",
+        "participle": "مُشهِد"
+      },
+      "adjective": null,
+      "agent": "مُشهِد",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "إشهاد",
+        "example": "يقوم المدققون بإرسال إشهاد للتحقق من صحة الكتلة."
+      },
+      "heading": {
+        "term": "الإشهادات"
+      },
+      "tag": {
+        "term": "إشهاد"
+      },
+      "ui": {
+        "term": "إرسال إشهاد"
+      },
+      "code": {
+        "term": "attestation"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "إشهاد",
+      "two": "إشهادان",
+      "few": "إشهادات",
+      "many": "إشهاداً",
+      "other": "إشهاد"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In Ethereum, it refers to a validator's vote on the state of the chain."
+  },
+  "bridge": {
+    "term": "جسر",
+    "aliases": [
+      "قنطرة"
+    ],
+    "transliteration": "Jisr",
+    "morphology": {
+      "noun": {
+        "singular": "جسر"
+      },
+      "verb": {
+        "infinitive": "تجسير",
+        "participle": "مُجسِّر"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "cross-chain-bridge": "جسر عبر السلاسل"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "جسر",
+        "example": "يمكنك استخدام جسر لنقل الأصول من شبكة إيثيريوم إلى شبكة أخرى."
+      },
+      "heading": {
+        "term": "الجسور"
+      },
+      "tag": {
+        "term": "جسر"
+      },
+      "ui": {
+        "term": "استخدام الجسر"
+      },
+      "code": {
+        "term": "bridge"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "جسر",
+      "two": "جسران",
+      "few": "جسور",
+      "many": "جسراً",
+      "other": "جسر"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralization": {
+    "term": "لامركزية",
+    "aliases": [
+      "اللامركزية"
+    ],
+    "transliteration": "Lā-markaziya",
+    "morphology": {
+      "noun": {
+        "singular": "لامركزية"
+      },
+      "verb": null,
+      "adjective": "لامركزي",
+      "agent": null,
+      "negation": "مركزية",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "اللامركزية",
+        "example": "تعد اللامركزية ركيزة أساسية في أمن شبكة إيثيريوم."
+      },
+      "heading": {
+        "term": "اللامركزية"
+      },
+      "tag": {
+        "term": "لامركزية"
+      },
+      "ui": {
+        "term": "اللامركزية"
+      },
+      "code": {
+        "term": "decentralization"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Abstract noun, plurals rarely used."
+  },
+  "decentralized": {
+    "term": "لامركزي",
+    "aliases": [
+      "غير مركزي"
+    ],
+    "transliteration": "Lā-markazi",
+    "morphology": {
+      "noun": "لامركزية",
+      "verb": null,
+      "adjective": "لامركزي",
+      "agent": null,
+      "negation": "مركزي",
+      "compounds": {
+        "decentralized-application": "تطبيق لامركزي"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "لامركزي",
+        "example": "هذا التطبيق يعمل بشكل لامركزي بالكامل."
+      },
+      "heading": {
+        "term": "لامركزي"
+      },
+      "tag": {
+        "term": "لامركزي"
+      },
+      "ui": {
+        "term": "لامركزي"
+      },
+      "code": {
+        "term": "decentralized"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "لامركزي",
+      "two": "لامركزيان",
+      "few": "لامركزيون",
+      "many": "لامركزياً",
+      "other": "لامركزي"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Adjective form of decentralization."
+  },
+  "deploy": {
+    "term": "نشر",
+    "aliases": [
+      "تثبيت"
+    ],
+    "transliteration": "Nashr",
+    "morphology": {
+      "noun": {
+        "singular": "نشر"
+      },
+      "verb": {
+        "infinitive": "نشر",
+        "participle": "ناشر"
+      },
+      "adjective": "منشور",
+      "agent": "ناشر",
+      "negation": null,
+      "compounds": {
+        "contract-deployment": "نشر العقد"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "نشر",
+        "example": "يجب عليك نشر العقد الذكي على الشبكة التجريبية أولاً."
+      },
+      "heading": {
+        "term": "النشر"
+      },
+      "tag": {
+        "term": "نشر"
+      },
+      "ui": {
+        "term": "نشر العقد"
+      },
+      "code": {
+        "term": "deploy"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "finality": {
+    "term": "نهائية",
+    "aliases": [
+      "حتمية"
+    ],
+    "transliteration": "Nihā'iya",
+    "morphology": {
+      "noun": {
+        "singular": "نهائية"
+      },
+      "verb": {
+        "infinitive": "إنهاء",
+        "participle": "مُنهِي"
+      },
+      "adjective": "نهائي",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "النهائية",
+        "example": "بمجرد وصول الكتلة إلى مرحلة النهائية، لا يمكن تغييرها."
+      },
+      "heading": {
+        "term": "النهائية"
+      },
+      "tag": {
+        "term": "نهائية"
+      },
+      "ui": {
+        "term": "تأكيد النهائية"
+      },
+      "code": {
+        "term": "finality"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "fork": {
+    "term": "انقسام",
+    "aliases": [
+      "تفرع"
+    ],
+    "transliteration": "Inqisām",
+    "morphology": {
+      "noun": {
+        "singular": "انقسام"
+      },
+      "verb": {
+        "infinitive": "انقسم",
+        "participle": "منقسم"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hard-fork": "انقسام كلي",
+        "soft-fork": "انقسام جزئي"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "انقسام",
+        "example": "حدث انقسام في الشبكة لتحديث البروتوكول."
+      },
+      "heading": {
+        "term": "الانقسامات"
+      },
+      "tag": {
+        "term": "انقسام"
+      },
+      "ui": {
+        "term": "انقسام"
+      },
+      "code": {
+        "term": "fork"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "انقسام",
+      "two": "انقسامان",
+      "few": "انقسامات",
+      "many": "انقساماً",
+      "other": "انقسام"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Inqisām is preferred for consensus-level forks."
+  },
+  "governance": {
+    "term": "حوكمة",
+    "aliases": [
+      "إدارة"
+    ],
+    "transliteration": "Hawkama",
+    "morphology": {
+      "noun": {
+        "singular": "حوكمة"
+      },
+      "verb": {
+        "infinitive": "حكم",
+        "participle": "حاكم"
+      },
+      "adjective": null,
+      "agent": "حاكم",
+      "negation": null,
+      "compounds": {
+        "onchain-governance": "حوكمة على السلسلة"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "الحوكمة",
+        "example": "تتم الحوكمة في المنظمات اللامركزية عبر التصويت."
+      },
+      "heading": {
+        "term": "الحوكمة"
+      },
+      "tag": {
+        "term": "حوكمة"
+      },
+      "ui": {
+        "term": "بوابة الحوكمة"
+      },
+      "code": {
+        "term": "governance"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "hash": {
+    "term": "تجزئة",
+    "aliases": [
+      "هاش",
+      "بصمة"
+    ],
+    "transliteration": "Tajzi'a",
+    "morphology": {
+      "noun": {
+        "singular": "تجزئة"
+      },
+      "verb": {
+        "infinitive": "جزّأ",
+        "participle": "مُجزِّئ"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hash-function": "دالة التجزئة"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "تجزئة",
+        "example": "تستخدم الخوارزمية دالة تجزئة لربط الكتل."
+      },
+      "heading": {
+        "term": "التجزئة"
+      },
+      "tag": {
+        "term": "تجزئة"
+      },
+      "ui": {
+        "term": "نسخ التجزئة"
+      },
+      "code": {
+        "term": "hash"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "تجزئة",
+      "two": "تجزئتان",
+      "few": "تجزئات",
+      "many": "تجزئةً",
+      "other": "تجزئة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'Hash' is used in tech circles, 'Tajzi'a' is the formal Arabic translation."
+  },
+  "miner": {
+    "term": "معدن",
+    "aliases": [
+      "منقب"
+    ],
+    "transliteration": "Mu'addin",
+    "morphology": {
+      "noun": {
+        "singular": "معدن"
+      },
+      "verb": {
+        "infinitive": "تعدين",
+        "participle": "معدن"
+      },
+      "adjective": "تعديني",
+      "agent": "معدن",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "المعدن",
+        "example": "يقوم المعدن بالتحقق من المعاملات في الشبكة."
+      },
+      "heading": {
+        "term": "المعدن"
+      },
+      "tag": {
+        "term": "معدن"
+      },
+      "ui": {
+        "term": "معدن"
+      },
+      "code": {
+        "term": "miner"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "معدنون",
+      "one": "معدن",
+      "two": "معدنان",
+      "few": "معدنون",
+      "many": "معدناً",
+      "other": "معدن"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers to participants in Proof of Work consensus."
+  },
+  "mining": {
+    "term": "تعدين",
+    "aliases": [],
+    "transliteration": "Ta'deen",
+    "morphology": {
+      "noun": {
+        "singular": "تعدين"
+      },
+      "verb": {
+        "infinitive": "تعدين",
+        "participle": "معدن"
+      },
+      "adjective": "تعديني",
+      "agent": "معدن",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "التعدين",
+        "example": "توقف التعدين في إيثيريوم بعد الانتقال إلى إثبات الحصة."
+      },
+      "heading": {
+        "term": "التعدين"
+      },
+      "tag": {
+        "term": "تعدين"
+      },
+      "ui": {
+        "term": "التعدين"
+      },
+      "code": {
+        "term": "mining"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mint": {
+    "term": "سك",
+    "aliases": [
+      "إنشاء"
+    ],
+    "transliteration": "Sakk",
+    "morphology": {
+      "noun": {
+        "singular": "سك"
+      },
+      "verb": {
+        "infinitive": "سك",
+        "participle": "مسكوك"
+      },
+      "adjective": "مسكوك",
+      "agent": "ساك",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سك",
+        "example": "يتم سك الرموز غير القابلة للاستبدال على الشبكة."
+      },
+      "heading": {
+        "term": "سك"
+      },
+      "tag": {
+        "term": "سك"
+      },
+      "ui": {
+        "term": "سك"
+      },
+      "code": {
+        "term": "mint"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used for token creation."
+  },
+  "signature": {
+    "term": "توقيع",
+    "aliases": [
+      "توقيع رقمي"
+    ],
+    "transliteration": "Tawqi'",
+    "morphology": {
+      "noun": {
+        "singular": "توقيع"
+      },
+      "verb": {
+        "infinitive": "توقيع",
+        "participle": "موقع"
+      },
+      "adjective": "توقيعي",
+      "agent": "موقع",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "التوقيع",
+        "example": "يتطلب إرسال المعاملة توقيعاً من المحفظة."
+      },
+      "heading": {
+        "term": "التوقيع"
+      },
+      "tag": {
+        "term": "توقيع"
+      },
+      "ui": {
+        "term": "توقيع"
+      },
+      "code": {
+        "term": "signature"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "توقيعات",
+      "one": "توقيع",
+      "two": "توقيعان",
+      "few": "توقيعات",
+      "many": "توقيعاً",
+      "other": "توقيع"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "stake": {
+    "term": "حصة",
+    "aliases": [
+      "رهان"
+    ],
+    "transliteration": "Hissa",
+    "morphology": {
+      "noun": {
+        "singular": "حصة"
+      },
+      "verb": {
+        "infinitive": "رهن",
+        "participle": "مرهون"
+      },
+      "adjective": null,
+      "agent": "مودع",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "حصة",
+        "example": "يجب أن تملك حصة من الإيثير للمشاركة في تأمين الشبكة."
+      },
+      "heading": {
+        "term": "الحصة"
+      },
+      "tag": {
+        "term": "حصة"
+      },
+      "ui": {
+        "term": "الحصة"
+      },
+      "code": {
+        "term": "stake"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "حصص",
+      "one": "حصة",
+      "two": "حصتان",
+      "few": "حصص",
+      "many": "حصة",
+      "other": "حصة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers to the amount of crypto pledged."
+  },
+  "staked": {
+    "term": "مرهون",
+    "aliases": [
+      "موضوع في الحصة"
+    ],
+    "transliteration": "Marhun",
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "رهن",
+        "participle": "مرهون"
+      },
+      "adjective": "مرهون",
+      "agent": null,
+      "negation": "غير مرهون",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "المرهونة",
+        "example": "العملات المرهونة تولد مكافآت للمستخدم."
+      },
+      "heading": {
+        "term": "المرهونة"
+      },
+      "tag": {
+        "term": "مرهون"
+      },
+      "ui": {
+        "term": "مرهون"
+      },
+      "code": {
+        "term": "staked"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "مرهونة",
+      "one": "مرهون",
+      "two": "مرهونان",
+      "few": "مرهونة",
+      "many": "مرهونة",
+      "other": "مرهونة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staker": {
+    "term": "مودع",
+    "aliases": [
+      "مشارك في الحصة"
+    ],
+    "transliteration": "Mudi'",
+    "morphology": {
+      "noun": {
+        "singular": "مودع"
+      },
+      "verb": {
+        "infinitive": "رهن",
+        "participle": "مودع"
+      },
+      "adjective": null,
+      "agent": "مودع",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "المودع",
+        "example": "يحصل المودع على عوائد مقابل دوره في الإجماع."
+      },
+      "heading": {
+        "term": "المودع"
+      },
+      "tag": {
+        "term": "مودع"
+      },
+      "ui": {
+        "term": "مودع"
+      },
+      "code": {
+        "term": "staker"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "مودعون",
+      "one": "مودع",
+      "two": "مودعان",
+      "few": "مودعون",
+      "many": "مودعاً",
+      "other": "مودع"
+    },
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "Arabic community uses 'Mudi' (depositor) or 'Musharik' (participant)."
+  },
+  "staking": {
+    "term": "رهن الحصص",
+    "aliases": [
+      "تخزين"
+    ],
+    "transliteration": "Rahn al-hissas",
+    "morphology": {
+      "noun": {
+        "singular": "رهن"
+      },
+      "verb": {
+        "infinitive": "رهن",
+        "participle": "مرهون"
+      },
+      "adjective": "رهني",
+      "agent": "مودع",
+      "negation": "إلغاء الرهن",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "رهن الحصص",
+        "example": "يعد رهن الحصص وسيلة لتأمين شبكة إيثيريوم."
+      },
+      "heading": {
+        "term": "رهن الحصص"
+      },
+      "tag": {
+        "term": "رهن"
+      },
+      "ui": {
+        "term": "الرهن"
+      },
+      "code": {
+        "term": "staking"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "swap": {
+    "term": "مبادلة",
+    "aliases": [
+      "تبادل"
+    ],
+    "transliteration": "Mubadala",
+    "morphology": {
+      "noun": {
+        "singular": "مبادلة"
+      },
+      "verb": {
+        "infinitive": "مبادلة",
+        "participle": "متبادل"
+      },
+      "adjective": "تبادلي",
+      "agent": "مبادل",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "مبادلة",
+        "example": "يمكنك مبادلة العملات في المنصات اللامركزية."
+      },
+      "heading": {
+        "term": "المبادلة"
+      },
+      "tag": {
+        "term": "مبادلة"
+      },
+      "ui": {
+        "term": "مبادلة"
+      },
+      "code": {
+        "term": "swap"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "zero": "مبادلات",
+      "one": "مبادلة",
+      "two": "مبادلتان",
+      "few": "مبادلات",
+      "many": "مبادلة",
+      "other": "مبادلة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transaction": {
+    "term": "معاملة",
+    "aliases": [
+      "عملية"
+    ],
+    "transliteration": "Mu'amala",
+    "morphology": {
+      "noun": {
+        "singular": "معاملة"
+      },
+      "verb": {
+        "infinitive": "تعامل",
+        "participle": "متعامل"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "معاملة",
+        "example": "تم تأكيد المعاملة بنجاح على البلوكشين."
+      },
+      "heading": {
+        "term": "المعاملة"
+      },
+      "tag": {
+        "term": "معاملة"
+      },
+      "ui": {
+        "term": "المعاملة"
+      },
+      "code": {
+        "term": "transaction"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "معاملات",
+      "one": "معاملة",
+      "two": "معاملتان",
+      "few": "معاملات",
+      "many": "معاملة",
+      "other": "معاملة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "validator": {
+    "term": "مصادق",
+    "aliases": [
+      "مدقق"
+    ],
+    "transliteration": "Musadiq",
+    "morphology": {
+      "noun": {
+        "singular": "مصادق"
+      },
+      "verb": {
+        "infinitive": "مصادقة",
+        "participle": "مصادق"
+      },
+      "adjective": null,
+      "agent": "مصادق",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "المصادق",
+        "example": "يعمل المصادق على اقتراح الكتل الجديدة في الشبكة."
+      },
+      "heading": {
+        "term": "مصادق"
+      },
+      "tag": {
+        "term": "مصادق"
+      },
+      "ui": {
+        "term": "مصادق"
+      },
+      "code": {
+        "term": "validator"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "مصادق",
+      "two": "مصادقان",
+      "few": "مصادقون",
+      "many": "مصادقاً",
+      "other": "مصادق"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used specifically in the context of Proof of Stake."
+  },
+  "vote": {
+    "term": "صوت",
+    "aliases": [
+      "تصويت"
+    ],
+    "transliteration": "Sawt",
+    "morphology": {
+      "noun": {
+        "singular": "صوت"
+      },
+      "verb": {
+        "infinitive": "تصويت",
+        "participle": "مصوت"
+      },
+      "adjective": null,
+      "agent": "مصوت",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "صوتك",
+        "example": "يمكنك الإدلاء بصوتك في مقترحات الحوكمة."
+      },
+      "heading": {
+        "term": "تصويت"
+      },
+      "tag": {
+        "term": "صوت"
+      },
+      "ui": {
+        "term": "صوّت"
+      },
+      "code": {
+        "term": "vote"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "صوت",
+      "two": "صوتان",
+      "few": "أصوات",
+      "many": "صوتاً",
+      "other": "صوت"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "voting": {
+    "term": "تصويت",
+    "aliases": [
+      "عملية التصويت"
+    ],
+    "transliteration": "Taswit",
+    "morphology": {
+      "noun": {
+        "singular": "تصويت"
+      },
+      "verb": {
+        "infinitive": "تصويت",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "التصويت",
+        "example": "التصويت هو الآلية الأساسية لصنع القرار في الداو (DAO)."
+      },
+      "heading": {
+        "term": "التصويت"
+      },
+      "tag": {
+        "term": "تصويت"
+      },
+      "ui": {
+        "term": "تصويت"
+      },
+      "code": {
+        "term": "voting"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum": {
+    "term": "إيثيريوم",
+    "aliases": [],
+    "transliteration": "Ithiriyum",
+    "morphology": {
+      "noun": {
+        "singular": "إيثيريوم"
+      },
+      "verb": null,
+      "adjective": "إيثيريومي",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "إيثيريوم",
+        "example": "إيثيريوم هي منصة عالمية لامركزية للتطبيقات."
+      },
+      "heading": {
+        "term": "إيثيريوم"
+      },
+      "tag": {
+        "term": "إيثيريوم"
+      },
+      "ui": {
+        "term": "إيثيريوم"
+      },
+      "code": {
+        "term": "ethereum"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, always transliterated."
+  },
+  "contract": {
+    "term": "عقد",
+    "aliases": [],
+    "transliteration": "'Aqd",
+    "morphology": {
+      "noun": {
+        "singular": "عقد"
+      },
+      "verb": {
+        "infinitive": "تعاقد",
+        "participle": "متعاقد"
+      },
+      "adjective": "تعاقدي",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "العقد",
+        "example": "يتم تنفيذ العقد تلقائياً عند استيفاء الشروط."
+      },
+      "heading": {
+        "term": "عقد"
+      },
+      "tag": {
+        "term": "عقد"
+      },
+      "ui": {
+        "term": "عقد"
+      },
+      "code": {
+        "term": "contract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "عقد",
+      "two": "عقدان",
+      "few": "عقود",
+      "many": "عقداً",
+      "other": "عقد"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block": {
+    "term": "كتلة",
+    "aliases": [],
+    "transliteration": "Kutlah",
+    "morphology": {
+      "noun": {
+        "singular": "كتلة"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "block-height": "ارتفاع الكتلة",
+        "block-time": "وقت الكتلة"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "كتلة",
+        "example": "تحتوي كل كتلة على قائمة من المعاملات."
+      },
+      "heading": {
+        "term": "كتلة"
+      },
+      "tag": {
+        "term": "كتلة"
+      },
+      "ui": {
+        "term": "كتلة"
+      },
+      "code": {
+        "term": "block"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "كتلة",
+      "two": "كتلتان",
+      "few": "كتل",
+      "many": "كتلة",
+      "other": "كتلة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "smart contract": {
+    "term": "عقد ذكي",
+    "aliases": [],
+    "transliteration": "'Aqd dhaki",
+    "morphology": {
+      "noun": {
+        "singular": "عقد ذكي"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "العقد الذكي",
+        "example": "يعمل العقد الذكي على بلوكتشين إيثيريوم."
+      },
+      "heading": {
+        "term": "عقد ذكي"
+      },
+      "tag": {
+        "term": "عقد ذكي"
+      },
+      "ui": {
+        "term": "عقد ذكي"
+      },
+      "code": {
+        "term": "smart_contract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "عقد ذكي",
+      "two": "عقدان ذكيان",
+      "few": "عقود ذكية",
+      "many": "عقداً ذكياً",
+      "other": "عقد ذكي"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "node": {
+    "term": "عقدة",
+    "aliases": [],
+    "transliteration": "'Uqdah",
+    "morphology": {
+      "noun": {
+        "singular": "عقدة"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node": "عقدة كاملة",
+        "light-node": "عقدة خفيفة"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "العقدة",
+        "example": "تقوم العقدة بالتحقق من صحة المعاملات."
+      },
+      "heading": {
+        "term": "عقدة"
+      },
+      "tag": {
+        "term": "عقدة"
+      },
+      "ui": {
+        "term": "عقدة"
+      },
+      "code": {
+        "term": "node"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "عقدة",
+      "two": "عقدتان",
+      "few": "عقد",
+      "many": "عقدة",
+      "other": "عقدة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "token": {
+    "term": "رمز",
+    "aliases": [
+      "توكن",
+      "رمز مميز"
+    ],
+    "transliteration": "Ramz",
+    "morphology": {
+      "noun": {
+        "singular": "رمز"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-standards": "معايير الرموز"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "الرمز",
+        "example": "يمكن استبدال هذا الرمز برموز أخرى على الشبكة."
+      },
+      "heading": {
+        "term": "رمز"
+      },
+      "tag": {
+        "term": "رمز"
+      },
+      "ui": {
+        "term": "رمز"
+      },
+      "code": {
+        "term": "token"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "رمز",
+      "two": "رمزان",
+      "few": "رموز",
+      "many": "رمزاً",
+      "other": "رمز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In crypto, 'رمز' (Ramz) is preferred over the transliterated 'توكن' (Token)."
+  },
+  "address": {
+    "term": "عنوان",
+    "aliases": [],
+    "transliteration": "'Unwan",
+    "morphology": {
+      "noun": {
+        "singular": "عنوان"
+      },
+      "verb": {
+        "infinitive": "عنونة",
+        "participle": "معنون"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "wallet-address": "عنوان المحفظة"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "عنوان",
+        "example": "تأكد دائماً من صحة عنوان المستلم قبل الإرسال."
+      },
+      "heading": {
+        "term": "عنوان"
+      },
+      "tag": {
+        "term": "عنوان"
+      },
+      "ui": {
+        "term": "عنوان"
+      },
+      "code": {
+        "term": "address"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "عنوان",
+      "two": "عنوانان",
+      "few": "عناوين",
+      "many": "عنواناً",
+      "other": "عنوان"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "eth": {
+    "term": "إيث",
+    "aliases": [
+      "إثير"
+    ],
+    "transliteration": "Eth",
+    "morphology": {
+      "noun": {
+        "singular": "إيث"
+      },
+      "verb": null,
+      "adjective": "إيثيري",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "eth-staking": "تحصيص الإيث"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "إيث",
+        "example": "تم إرسال 1 إيث إلى المحفظة."
+      },
+      "heading": {
+        "term": "إيث"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "إيث"
+      },
+      "code": {
+        "term": "ETH"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "zero": "إيث",
+      "one": "إيث",
+      "two": "إيث",
+      "few": "إيث",
+      "many": "إيث",
+      "other": "إيث"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as a unit symbol; 'إثير' is more formal for the asset name."
+  },
+  "blockchain": {
+    "term": "سلسلة الكتل",
+    "aliases": [
+      "بلوكتشين"
+    ],
+    "transliteration": "Silsilat al-Kutal",
+    "morphology": {
+      "noun": {
+        "singular": "سلسلة كتل"
+      },
+      "verb": null,
+      "adjective": "سلسلي",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "blockchain-explorer": "مستكشف سلسلة الكتل"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "سلسلة الكتل",
+        "example": "يتم تسجيل جميع المعاملات على سلسلة الكتل."
+      },
+      "heading": {
+        "term": "سلسلة الكتل"
+      },
+      "tag": {
+        "term": "بلوكتشين"
+      },
+      "ui": {
+        "term": "سلسلة الكتل"
+      },
+      "code": {
+        "term": "blockchain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "سلاسل كتل",
+      "one": "سلسلة كتل",
+      "two": "سلسلتان للكتل",
+      "few": "سلاسل كتل",
+      "many": "سلسلة كتل",
+      "other": "سلاسل كتل"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Arabic technical standard uses the literal translation."
+  },
+  "account": {
+    "term": "حساب",
+    "aliases": [],
+    "transliteration": "Hisab",
+    "morphology": {
+      "noun": {
+        "singular": "حساب"
+      },
+      "verb": null,
+      "adjective": "حسابي",
+      "agent": "صاحب الحساب",
+      "negation": null,
+      "compounds": {
+        "externally-owned-account": "حساب مملوك خارجيًا"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "الحساب",
+        "example": "تأكد من تأمين حسابك بكلمة مرور قوية."
+      },
+      "heading": {
+        "term": "حساب"
+      },
+      "tag": {
+        "term": "حساب"
+      },
+      "ui": {
+        "term": "حسابي"
+      },
+      "code": {
+        "term": "account"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "zero": "حسابات",
+      "one": "حساب",
+      "two": "حسابان",
+      "few": "حسابات",
+      "many": "حساباً",
+      "other": "حساب"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "chain": {
+    "term": "سلسلة",
+    "aliases": [
+      "سلسلة كتل"
+    ],
+    "transliteration": "Silsila",
+    "morphology": {
+      "noun": {
+        "singular": "سلسلة"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "sidechain": "سلسلة جانبية"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "السلسلة",
+        "example": "هذه السلسلة توفر أماناً عالياً."
+      },
+      "heading": {
+        "term": "السلسلة"
+      },
+      "tag": {
+        "term": "سلسلة"
+      },
+      "ui": {
+        "term": "السلسلة"
+      },
+      "code": {
+        "term": "chain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "zero": "سلاسل",
+      "one": "سلسلة",
+      "two": "سلسلتان",
+      "few": "سلاسل",
+      "many": "سلسلةً",
+      "other": "سلاسل"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "protocol": {
+    "term": "بروتوكول",
+    "aliases": [
+      "ميثاق"
+    ],
+    "transliteration": "Brutukul",
+    "morphology": {
+      "noun": {
+        "singular": "بروتوكول"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "consensus-protocol": "بروتوكول الإجماع"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "بروتوكول",
+        "example": "يحدد بروتوكول إيثيريوم كيفية عمل الشبكة."
+      },
+      "heading": {
+        "term": "بروتوكول"
+      },
+      "tag": {
+        "term": "بروتوكول"
+      },
+      "ui": {
+        "term": "بروتوكول"
+      },
+      "code": {
+        "term": "protocol"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "بروتوكولات",
+      "one": "بروتوكول",
+      "two": "بروتوكولان",
+      "few": "بروتوكولات",
+      "many": "بروتوكولاً",
+      "other": "بروتوكولات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard loanword in Arabic for IT."
+  },
+  "wallet": {
+    "term": "محفظة",
+    "aliases": [
+      "محفظة رقمية"
+    ],
+    "transliteration": "Mahfaza",
+    "morphology": {
+      "noun": {
+        "singular": "محفظة"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hardware-wallet": "محفظة أجهزة"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "محفظة",
+        "example": "قم بربط محفظتك للتفاعل مع التطبيق."
+      },
+      "heading": {
+        "term": "المحفظة"
+      },
+      "tag": {
+        "term": "محفظة"
+      },
+      "ui": {
+        "term": "المحفظة"
+      },
+      "code": {
+        "term": "wallet"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "zero": "محافظ",
+      "one": "محفظة",
+      "two": "محفظتان",
+      "few": "محافظ",
+      "many": "محفظةً",
+      "other": "محافظ"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "gas": {
+    "term": "غاز",
+    "aliases": [],
+    "transliteration": "Ghaz",
+    "morphology": {
+      "noun": {
+        "singular": "غاز"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "gas-limit": "حد الغاز"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "الغاز",
+        "example": "تنخفض رسوم الغاز في أوقات محددة."
+      },
+      "heading": {
+        "term": "رسوم الغاز"
+      },
+      "tag": {
+        "term": "غاز"
+      },
+      "ui": {
+        "term": "الغاز"
+      },
+      "code": {
+        "term": "gas"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually used as an uncountable noun in the context of transactions."
+  },
+  "rollup": {
+    "term": "رول-أب",
+    "aliases": [
+      "تجميع"
+    ],
+    "transliteration": "Roll-up",
+    "morphology": {
+      "noun": {
+        "singular": "رول-أب"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "optimistic-rollup": "رول-أب تفاؤلي"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "رول-أب",
+        "example": "تعتبر تقنية رول-أب حلاً فعالاً لتوسيع الشبكة."
+      },
+      "heading": {
+        "term": "رول-أب"
+      },
+      "tag": {
+        "term": "توسيع"
+      },
+      "ui": {
+        "term": "رول-أب"
+      },
+      "code": {
+        "term": "rollup"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "zero": "عمليات رول-أب",
+      "one": "رول-أب",
+      "two": "رول-أب",
+      "few": "عمليات رول-أب",
+      "many": "رول-أب",
+      "other": "رول-أب"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliterated term is standard in the Arab crypto community."
+  },
+  "ethereum improvement proposal (eip)": {
+    "term": "مقترح تحسين إيثيريوم",
+    "aliases": [
+      "EIP"
+    ],
+    "transliteration": "Muqtaraḥ Taḥsīn 'Īthīriyūm",
+    "morphology": {
+      "noun": {
+        "singular": "مقترح تحسين إيثيريوم"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "مقترح تحسين إيثيريوم",
+        "example": "يهدف EIP-1559 إلى تحسين سوق الرسوم."
+      },
+      "heading": {
+        "term": "مقترح تحسين إيثيريوم (EIP)"
+      },
+      "tag": {
+        "term": "EIP"
+      },
+      "ui": {
+        "term": "EIP"
+      },
+      "code": {
+        "term": "EIP"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "مقترحات تحسين إيثيريوم",
+      "one": "مقترح تحسين إيثيريوم",
+      "two": "مقترحان لتحسين إيثيريوم",
+      "few": "مقترحات تحسين إيثيريوم",
+      "many": "مقترحاً لتحسين إيثيريوم",
+      "other": "مقترحات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly referred to by the acronym EIP."
+  },
+  "require": {
+    "term": "يتطلب",
+    "aliases": [
+      "require",
+      "استلزم"
+    ],
+    "transliteration": "Yatatallab",
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "تطلب",
+        "participle": "متطلب"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "يتطلب",
+        "example": "تتطلب هذه الوظيفة وجود رصيد كافٍ."
+      },
+      "heading": {
+        "term": "المتطلبات"
+      },
+      "tag": {
+        "term": "شرط"
+      },
+      "ui": {
+        "term": "مطلوب"
+      },
+      "code": {
+        "term": "require"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In the context of smart contracts, it refers to the condition-checking function."
+  },
+  "web3": {
+    "term": "ويب 3",
+    "aliases": [
+      "ويب3",
+      "الجيل الثالث للويب"
+    ],
+    "transliteration": "Web 3",
+    "morphology": {
+      "noun": {
+        "singular": "ويب 3"
+      },
+      "verb": null,
+      "adjective": "ويب 3",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ويب 3",
+        "example": "يوفر ويب 3 سيادة كاملة للمستخدم على بياناته الرقمية."
+      },
+      "heading": {
+        "term": "ويب 3"
+      },
+      "tag": {
+        "term": "ويب 3"
+      },
+      "ui": {
+        "term": "دخول ويب 3"
+      },
+      "code": {
+        "term": "web3"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "solidity": {
+    "term": "سوليديتي",
+    "aliases": [
+      "لغة سوليديتي"
+    ],
+    "transliteration": "Solidity",
+    "morphology": {
+      "noun": {
+        "singular": "سوليديتي"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سوليديتي",
+        "example": "تُستخدم لغة سوليديتي لكتابة العقود الذكية على شبكة إيثيريوم."
+      },
+      "heading": {
+        "term": "سوليديتي"
+      },
+      "tag": {
+        "term": "سوليديتي"
+      },
+      "ui": {
+        "term": "برمجة سوليديتي"
+      },
+      "code": {
+        "term": "solidity"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Treated as feminine in Arabic because it is categorized as a language (لغة)."
+  },
+  "event": {
+    "term": "حدث",
+    "aliases": [
+      "فعالية"
+    ],
+    "transliteration": "Hadath",
+    "morphology": {
+      "noun": {
+        "singular": "حدث"
+      },
+      "verb": {
+        "infinitive": "حدوث",
+        "participle": "حادث"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "حدث",
+        "example": "يُصدر العقد الذكي حدثاً عند إتمام عملية التحويل بنجاح."
+      },
+      "heading": {
+        "term": "الأحداث"
+      },
+      "tag": {
+        "term": "حدث"
+      },
+      "ui": {
+        "term": "سجل الأحداث"
+      },
+      "code": {
+        "term": "event"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "حدث",
+      "two": "حدثان",
+      "few": "أحداث",
+      "many": "حدثاً",
+      "other": "حدث"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "onchain": {
+    "term": "على السلسلة",
+    "aliases": [
+      "داخل السلسلة",
+      "أونشين"
+    ],
+    "transliteration": "ala al-silsilah",
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "على السلسلة",
+      "agent": null,
+      "negation": "خارج السلسلة",
+      "compounds": {
+        "onchain-data": "بيانات على السلسلة"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "على السلسلة",
+        "example": "يتم تسجيل جميع المعاملات على السلسلة لضمان الشفافية."
+      },
+      "heading": {
+        "term": "نشاط على السلسلة"
+      },
+      "tag": {
+        "term": "على السلسلة"
+      },
+      "ui": {
+        "term": "بيانات على السلسلة"
+      },
+      "code": {
+        "term": "onchain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Gender is feminine to match the Arabic word for chain (سلسلة)."
+  },
+  "ether": {
+    "term": "إيثر",
+    "aliases": [
+      "عملة الإيثر",
+      "ETH"
+    ],
+    "transliteration": "Ether",
+    "morphology": {
+      "noun": {
+        "singular": "إيثر"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "الإيثر",
+        "example": "يُستخدم الإيثر لدفع رسوم المعاملات (الغاز) في شبكة إيثيريوم."
+      },
+      "heading": {
+        "term": "رصيد الإيثر"
+      },
+      "tag": {
+        "term": "إيثر"
+      },
+      "ui": {
+        "term": "إرسال إيثر"
+      },
+      "code": {
+        "term": "ether"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used as a singular mass noun for currency."
+  },
+  "ethereum virtual machine (evm)": {
+    "term": "آلة إيثيريوم الافتراضية",
+    "aliases": [
+      "المحرك الافتراضي لإيثيريوم",
+      "EVM"
+    ],
+    "transliteration": "Alat Ethereum al-Iftiradiyyah",
+    "morphology": {
+      "noun": {
+        "singular": "آلة إيثيريوم الافتراضية"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "evm-compatible": "متوافق مع آلة إيثيريوم الافتراضية"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "آلة إيثيريوم الافتراضية",
+        "example": "تعد آلة إيثيريوم الافتراضية بيئة التشغيل الأساسية للعقود الذكية."
+      },
+      "heading": {
+        "term": "آلة إيثيريوم الافتراضية (EVM)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "بيئة EVM"
+      },
+      "code": {
+        "term": "evm"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized application (dapp)": {
+    "term": "تطبيق لا مركزي",
+    "aliases": [
+      "تطبيق داب",
+      "dapp"
+    ],
+    "transliteration": "Tatbiq la markazi",
+    "morphology": {
+      "noun": {
+        "singular": "تطبيق لا مركزي"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "تطبيق لا مركزي",
+        "example": "يتيح لك كل تطبيق لا مركزي التفاعل مع البلوكشين مباشرة دون وسيط."
+      },
+      "heading": {
+        "term": "التطبيقات لا مركزية"
+      },
+      "tag": {
+        "term": "داب"
+      },
+      "ui": {
+        "term": "استكشاف التطبيقات"
+      },
+      "code": {
+        "term": "dapp"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "تطبيق لا مركزي",
+      "two": "تطبيقان لا مركزيان",
+      "few": "تطبيقات لا مركزية",
+      "many": "تطبيقاً لا مركزياً",
+      "other": "تطبيق لا مركزي"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "non-fungible token (nft)": {
+    "term": "رمز غير قابل للاستبدال",
+    "aliases": [
+      "NFT",
+      "رموز غير قابلة للاستبدال"
+    ],
+    "transliteration": "Ramz ghayr qabil lil-istibdal",
+    "morphology": {
+      "noun": {
+        "singular": "رمز غير قابل للاستبدال"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "رمز غير قابل للاستبدال",
+        "example": "يمثل هذا الرمز غير قابل للاستبدال ملكية فنية رقمية فريدة."
+      },
+      "heading": {
+        "term": "الرموز غير قابلة للاستبدال"
+      },
+      "tag": {
+        "term": "NFT"
+      },
+      "ui": {
+        "term": "مجموعتي من NFTs"
+      },
+      "code": {
+        "term": "nft"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "رمز غير قابل للاستبدال",
+      "two": "رمزان غير قابلين للاستبدال",
+      "few": "رموز غير قابلة للاستبدال",
+      "many": "رمزاً غير قابل للاستبدال",
+      "other": "رمز غير قابل للاستبدال"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "api": {
+    "term": "واجهة برمجة التطبيقات",
+    "aliases": [
+      "API",
+      "واجهة البرمجيات"
+    ],
+    "transliteration": "Wajihat barmajat al-tatbiqat",
+    "morphology": {
+      "noun": {
+        "singular": "واجهة برمجة التطبيقات"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "واجهة برمجة التطبيقات",
+        "example": "تستخدم واجهة برمجة التطبيقات لربط تطبيقك ببيانات البلوكشين."
+      },
+      "heading": {
+        "term": "توثيق واجهة برمجة التطبيقات"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "مفتاح API"
+      },
+      "code": {
+        "term": "api"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "واجهة برمجة تطبيقات",
+      "two": "واجهتا برمجة تطبيقات",
+      "few": "واجهات برمجة تطبيقات",
+      "many": "واجهة برمجة تطبيقات",
+      "other": "واجهة برمجة تطبيقات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transfer": {
+    "term": "تحويل",
+    "aliases": [
+      "نقل"
+    ],
+    "transliteration": "Tahwil",
+    "morphology": {
+      "noun": {
+        "singular": "تحويل"
+      },
+      "verb": {
+        "infinitive": "تحويل",
+        "participle": "محوّل"
+      },
+      "adjective": null,
+      "agent": "محوّل",
+      "negation": null,
+      "compounds": {
+        "transfer-fee": "رسوم التحويل"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "تحويل",
+        "example": "يجب التأكد من العنوان قبل إجراء أي عملية تحويل للإيثر."
+      },
+      "heading": {
+        "term": "سجل التحويلات"
+      },
+      "tag": {
+        "term": "تحويل"
+      },
+      "ui": {
+        "term": "تأكيد التحويل"
+      },
+      "code": {
+        "term": "transfer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "تحويل",
+      "two": "تحويلان",
+      "few": "تحويلات",
+      "many": "تحويلاً",
+      "other": "تحويل"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "withdrawal": {
+    "term": "سحب",
+    "aliases": [
+      "عملية سحب"
+    ],
+    "transliteration": "Sahb",
+    "morphology": {
+      "noun": {
+        "singular": "سحب"
+      },
+      "verb": {
+        "infinitive": "سحب",
+        "participle": "ساحب"
+      },
+      "adjective": null,
+      "agent": "ساحب",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سحب",
+        "example": "يمكن للمتحققين طلب سحب حصصهم من الإيثيريوم بعد تفعيل الترقية."
+      },
+      "heading": {
+        "term": "السحب"
+      },
+      "tag": {
+        "term": "سحب"
+      },
+      "ui": {
+        "term": "سحب"
+      },
+      "code": {
+        "term": "withdrawal"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "سحوبات",
+      "one": "سحب",
+      "two": "سحبان",
+      "few": "سحوبات",
+      "many": "سحباً",
+      "other": "سحوبات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus": {
+    "term": "إجماع",
+    "aliases": [
+      "توافق الآراء"
+    ],
+    "transliteration": "Ijmā‘",
+    "morphology": {
+      "noun": {
+        "singular": "إجماع"
+      },
+      "verb": {
+        "infinitive": "أجمع",
+        "participle": "مُجمع عليه"
+      },
+      "adjective": "إجماعي",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "consensus-layer": "طبقة الإجماع"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "إجماع",
+        "example": "تستخدم إيثيريوم آلية إثبات الحصة للوصول إلى إجماع بين العقد."
+      },
+      "heading": {
+        "term": "الإجماع"
+      },
+      "tag": {
+        "term": "إجماع"
+      },
+      "ui": {
+        "term": "الإجماع"
+      },
+      "code": {
+        "term": "consensus"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "إجماعات",
+      "one": "إجماع",
+      "two": "إجماعان",
+      "few": "إجماعات",
+      "many": "إجماعاً",
+      "other": "إجماعات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mainnet": {
+    "term": "الشبكة الرئيسية",
+    "aliases": [
+      "ماينيت"
+    ],
+    "transliteration": "ash-shabakah ar-ra'īsīyah",
+    "morphology": {
+      "noun": {
+        "singular": "الشبكة الرئيسية"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "الشبكة الرئيسية",
+        "example": "يتم تنفيذ المعاملات النهائية ذات القيمة الحقيقية على الشبكة الرئيسية."
+      },
+      "heading": {
+        "term": "الشبكة الرئيسية"
+      },
+      "tag": {
+        "term": "الرئيسية"
+      },
+      "ui": {
+        "term": "الشبكة الرئيسية"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "شبكات رئيسية",
+      "one": "شبكة رئيسية",
+      "two": "شبكتان رئيسيتان",
+      "few": "شبكات رئيسية",
+      "many": "شبكةً رئيسيةً",
+      "other": "شبكات رئيسية"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "offchain": {
+    "term": "خارج السلسلة",
+    "aliases": [
+      "أوف تشين"
+    ],
+    "transliteration": "khārij as-silsilah",
+    "morphology": {
+      "noun": {
+        "singular": "خارج السلسلة"
+      },
+      "verb": null,
+      "adjective": "خارجي",
+      "agent": null,
+      "negation": "داخل السلسلة",
+      "compounds": {
+        "offchain-data": "بيانات خارج السلسلة"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "خارج السلسلة",
+        "example": "تتم معالجة بعض العمليات المعقدة خارج السلسلة لتقليل رسوم الغاز."
+      },
+      "heading": {
+        "term": "خارج السلسلة"
+      },
+      "tag": {
+        "term": "خارج السلسلة"
+      },
+      "ui": {
+        "term": "خارج السلسلة"
+      },
+      "code": {
+        "term": "offchain"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used as an adverbial phrase or adjective in Arabic."
+  },
+  "erc-20": {
+    "term": "ERC-20",
+    "aliases": [
+      "إي آر سي-20"
+    ],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "ERC-20"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ERC-20",
+        "example": "يعتبر معيار ERC-20 هو الأساس لمعظم الرموز المميزة على إيثيريوم."
+      },
+      "heading": {
+        "term": "معيار ERC-20"
+      },
+      "tag": {
+        "term": "ERC-20"
+      },
+      "ui": {
+        "term": "ERC-20"
+      },
+      "code": {
+        "term": "erc-20"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical standard name, usually kept in Latin script."
+  },
+  "oracle": {
+    "term": "أوراكل",
+    "aliases": [
+      "مزود بيانات",
+      "عراف"
+    ],
+    "transliteration": "Awrākil",
+    "morphology": {
+      "noun": {
+        "singular": "أوراكل"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "أوراكل",
+      "negation": null,
+      "compounds": {
+        "price-oracle": "أوراكل الأسعار"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "أوراكل",
+        "example": "تحتاج العقود الذكية إلى أوراكل لجلب بيانات أسعار الصرف من العالم الخارجي."
+      },
+      "heading": {
+        "term": "أوراكل"
+      },
+      "tag": {
+        "term": "أوراكل"
+      },
+      "ui": {
+        "term": "أوراكل"
+      },
+      "code": {
+        "term": "oracle"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "zero": "أوراكلات",
+      "one": "أوراكل",
+      "two": "أوراكلان",
+      "few": "أوراكلات",
+      "many": "أوراكلاً",
+      "other": "أوراكلات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly transliterated in tech contexts."
+  },
+  "blob": {
+    "term": "بلوب",
+    "aliases": [
+      "كتلة بيانات"
+    ],
+    "transliteration": "Blob",
+    "morphology": {
+      "noun": {
+        "singular": "بلوب"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "بلوب",
+        "example": "تعمل تقنية البلوبات على خفض تكاليف تخزين البيانات لشبكات الطبقة الثانية."
+      },
+      "heading": {
+        "term": "البلوب (Blob)"
+      },
+      "tag": {
+        "term": "بلوب"
+      },
+      "ui": {
+        "term": "بلوب"
+      },
+      "code": {
+        "term": "blob"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "zero": "بلوبات",
+      "one": "بلوب",
+      "two": "بلوبان",
+      "few": "بلوبات",
+      "many": "بلوبات",
+      "other": "بلوبات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Specific to EIP-4844, transliteration is preferred."
+  },
+  "slot": {
+    "term": "فتحة",
+    "aliases": [
+      "خانة زمنية"
+    ],
+    "transliteration": "Fut-hah",
+    "morphology": {
+      "noun": {
+        "singular": "فتحة"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "فتحة",
+        "example": "يتم تقسيم الوقت في منارة الإجماع إلى فتحات مدة كل منها 12 ثانية."
+      },
+      "heading": {
+        "term": "فتحة زمنية"
+      },
+      "tag": {
+        "term": "فتحة"
+      },
+      "ui": {
+        "term": "فتحة"
+      },
+      "code": {
+        "term": "slot"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "فتحات",
+      "one": "فتحة",
+      "two": "فتحتان",
+      "few": "فتحات",
+      "many": "فتحةً",
+      "other": "فتحات"
+    },
+    "source": "llm",
+    "confidence": "medium",
+    "notes": "Translates to 'slot' or 'aperture', used for time slots in Ethereum."
+  },
+  "decentralized autonomous organization (dao)": {
+    "term": "منظمة لامركزية ذاتية الحكم",
+    "aliases": [
+      "DAO",
+      "داو"
+    ],
+    "transliteration": "munaẓẓamah lā-markazīyah dhātīyat al-ḥukm",
+    "morphology": {
+      "noun": {
+        "singular": "منظمة لامركزية ذاتية الحكم"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "منظمة لامركزية ذاتية الحكم",
+        "example": "تعمل المنظمة اللامركزية ذاتية الحكم عبر عقود ذكية دون الحاجة لوسطاء."
+      },
+      "heading": {
+        "term": "منظمة لامركزية ذاتية الحكم (DAO)"
+      },
+      "tag": {
+        "term": "DAO"
+      },
+      "ui": {
+        "term": "DAO"
+      },
+      "code": {
+        "term": "dao"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "منظمات لامركزية ذاتية الحكم",
+      "one": "منظمة لامركزية ذاتية الحكم",
+      "two": "منظمتان لامركزيتان ذاتيتا الحكم",
+      "few": "منظمات لامركزية ذاتية الحكم",
+      "many": "منظمةً لامركزيةً ذاتية الحكم",
+      "other": "منظمات لامركزية ذاتية الحكم"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "testnet": {
+    "term": "شبكة اختبار",
+    "aliases": [
+      "تيست نيت"
+    ],
+    "transliteration": "shabakat ikhtibār",
+    "morphology": {
+      "noun": {
+        "singular": "شبكة اختبار"
+      },
+      "verb": null,
+      "adjective": "اختباري",
+      "agent": null,
+      "negation": "شبكة رئيسية",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "شبكة اختبار",
+        "example": "ينصح دائماً بتجربة الكود على شبكة اختبار قبل نشره على الماينيت."
+      },
+      "heading": {
+        "term": "شبكة الاختبار"
+      },
+      "tag": {
+        "term": "اختبار"
+      },
+      "ui": {
+        "term": "شبكة اختبار"
+      },
+      "code": {
+        "term": "testnet"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "zero": "شبكات اختبار",
+      "one": "شبكة اختبار",
+      "two": "شبكتان اختباريتان",
+      "few": "شبكات اختبار",
+      "many": "شبكةً اختباريةً",
+      "other": "شبكات اختبار"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus client": {
+    "term": "عميل الإجماع",
+    "aliases": [
+      "برمجية الإجماع"
+    ],
+    "transliteration": "Amil al-ijma'",
+    "morphology": {
+      "noun": {
+        "singular": "عميل الإجماع"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "عميل الإجماع",
+        "example": "يقوم عميل الإجماع بالتحقق من صحة الكتل في شبكة إيثيريوم."
+      },
+      "heading": {
+        "term": "عميل الإجماع"
+      },
+      "tag": {
+        "term": "إجماع"
+      },
+      "ui": {
+        "term": "عميل الإجماع"
+      },
+      "code": {
+        "term": "consensusClient"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "عميل إجماع واحد",
+      "two": "عميلا إجماع",
+      "few": "عملاء إجماع",
+      "many": "عميلاً للإجماع",
+      "other": "عملاء إجماع"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used to distinguish from execution clients in Ethereum's architecture."
+  },
+  "layer 2 (l2)": {
+    "term": "الطبقة الثانية",
+    "aliases": [
+      "L2"
+    ],
+    "transliteration": "Al-tabaqa al-thaniya",
+    "morphology": {
+      "noun": {
+        "singular": "الطبقة الثانية"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "الطبقة الثانية",
+        "example": "تساعد حلول الطبقة الثانية في زيادة سرعة المعاملات وتقليل الرسوم."
+      },
+      "heading": {
+        "term": "الطبقة الثانية (L2)"
+      },
+      "tag": {
+        "term": "L2"
+      },
+      "ui": {
+        "term": "الطبقة الثانية"
+      },
+      "code": {
+        "term": "layer2"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "طبقة ثانية واحدة",
+      "two": "طبقتان ثانيتان",
+      "few": "طبقات ثانية",
+      "many": "طبقة ثانية",
+      "other": "طبقات ثانية"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zk": {
+    "term": "المعرفة الصفرية",
+    "aliases": [
+      "ZK",
+      "إثبات المعرفة الصفرية"
+    ],
+    "transliteration": "Al-ma'rifa al-sifriya",
+    "morphology": {
+      "noun": {
+        "singular": "المعرفة الصفرية"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "تجميعة المعرفة الصفرية"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "المعرفة الصفرية",
+        "example": "تستخدم تقنية المعرفة الصفرية لتعزيز الخصوصية والأمان في البلوكشين."
+      },
+      "heading": {
+        "term": "المعرفة الصفرية (ZK)"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "ZK"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "private key": {
+    "term": "المفتاح الخاص",
+    "aliases": [
+      "المفتاح السري"
+    ],
+    "transliteration": "Al-miftah al-khass",
+    "morphology": {
+      "noun": {
+        "singular": "المفتاح الخاص"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "المفتاح الخاص",
+        "example": "لا تشارك المفتاح الخاص الخاص بك أبداً مع أي شخص لحماية أصولك."
+      },
+      "heading": {
+        "term": "المفتاح الخاص"
+      },
+      "tag": {
+        "term": "مفتاح"
+      },
+      "ui": {
+        "term": "المفتاح الخاص"
+      },
+      "code": {
+        "term": "privateKey"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "مفتاح خاص واحد",
+      "two": "مفتاحان خاصان",
+      "few": "مفاتيح خاصة",
+      "many": "مفتاحاً خاصاً",
+      "other": "مفاتيح خاصة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "crypto": {
+    "term": "العملات المشفرة",
+    "aliases": [
+      "الكريبتو",
+      "تشفير"
+    ],
+    "transliteration": "Al-'umlat al-mushaffara",
+    "morphology": {
+      "noun": {
+        "singular": "عملة مشفرة"
+      },
+      "verb": null,
+      "adjective": "مشفر",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "العملات المشفرة",
+        "example": "أصبحت العملات المشفرة وسيلة شائعة للتبادل الرقمي."
+      },
+      "heading": {
+        "term": "العملات المشفرة"
+      },
+      "tag": {
+        "term": "كريبتو"
+      },
+      "ui": {
+        "term": "كريبتو"
+      },
+      "code": {
+        "term": "crypto"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "عملة مشفرة واحدة",
+      "two": "عملتان مشفرتان",
+      "few": "عملات مشفرة",
+      "many": "عملة مشفرة",
+      "other": "عملات مشفرة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "layer 1 (l1)": {
+    "term": "الطبقة الأولى",
+    "aliases": [
+      "L1",
+      "الشبكة الأساسية"
+    ],
+    "transliteration": "Al-tabaqa al-ula",
+    "morphology": {
+      "noun": {
+        "singular": "الطبقة الأولى"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "الطبقة الأولى",
+        "example": "إيثيريوم هي بروتوكول من الطبقة الأولى يوفر الأمان للشبكة."
+      },
+      "heading": {
+        "term": "الطبقة الأولى (L1)"
+      },
+      "tag": {
+        "term": "L1"
+      },
+      "ui": {
+        "term": "الطبقة الأولى"
+      },
+      "code": {
+        "term": "layer1"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "طبقة أولى واحدة",
+      "two": "طبقتان أولتان",
+      "few": "طبقات أولى",
+      "many": "طبقة أولى",
+      "other": "طبقات أولى"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "maximal extractable value (mev)": {
+    "term": "أقصى قيمة يمكن استخراجها",
+    "aliases": [
+      "MEV"
+    ],
+    "transliteration": "Aqsa qima yumkin istikhrajuha",
+    "morphology": {
+      "noun": {
+        "singular": "أقصى قيمة يمكن استخراجها"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "أقصى قيمة يمكن استخراجها",
+        "example": "يشير MEV إلى أقصى قيمة يمكن استخراجها من خلال إعادة ترتيب المعاملات في الكتلة."
+      },
+      "heading": {
+        "term": "أقصى قيمة يمكن استخراجها (MEV)"
+      },
+      "tag": {
+        "term": "MEV"
+      },
+      "ui": {
+        "term": "MEV"
+      },
+      "code": {
+        "term": "mev"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "exit": {
+    "term": "الخروج",
+    "aliases": [
+      "سحب"
+    ],
+    "transliteration": "Al-khuruj",
+    "morphology": {
+      "noun": {
+        "singular": "خروج"
+      },
+      "verb": {
+        "infinitive": "خرج",
+        "participle": "خارج"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "الخروج",
+        "example": "يجب على المدققين بدء عملية الخروج لسحب حصتهم من شبكة المنارة."
+      },
+      "heading": {
+        "term": "خروج"
+      },
+      "tag": {
+        "term": "خروج"
+      },
+      "ui": {
+        "term": "خروج"
+      },
+      "code": {
+        "term": "exit"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "خروج واحد",
+      "two": "خروجان",
+      "few": "عمليات خروج",
+      "many": "عملية خروج",
+      "other": "عمليات خروج"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers specifically to validator exit in the consensus layer."
+  },
+  "opcode": {
+    "term": "رمز العملية",
+    "aliases": [
+      "Opcode"
+    ],
+    "transliteration": "Ramz al-'amaliya",
+    "morphology": {
+      "noun": {
+        "singular": "رمز العملية"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "رموز العمليات",
+        "example": "كل رمز عملية في آلة إيثيريوم الافتراضية له تكلفة غاز محددة."
+      },
+      "heading": {
+        "term": "رموز العمليات (Opcodes)"
+      },
+      "tag": {
+        "term": "Opcode"
+      },
+      "ui": {
+        "term": "Opcode"
+      },
+      "code": {
+        "term": "opcode"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "رمز عملية واحد",
+      "two": "رمزا عملية",
+      "few": "رموز عمليات",
+      "many": "رمز عملية",
+      "other": "رموز عمليات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized finance (defi)": {
+    "term": "التمويل اللامركزي",
+    "aliases": [
+      "DeFi"
+    ],
+    "transliteration": "Al-tamwil al-lamarkazi",
+    "morphology": {
+      "noun": {
+        "singular": "التمويل اللامركزي"
+      },
+      "verb": null,
+      "adjective": "لامركزي",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "التمويل اللامركزي",
+        "example": "يهدف التمويل اللامركزي إلى بناء نظام مالي مفتوح لا يحتاج إلى وسطاء."
+      },
+      "heading": {
+        "term": "التمويل اللامركزي (DeFi)"
+      },
+      "tag": {
+        "term": "DeFi"
+      },
+      "ui": {
+        "term": "DeFi"
+      },
+      "code": {
+        "term": "defi"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "privacy": {
+    "term": "الخصوصية",
+    "aliases": [
+      "السرية"
+    ],
+    "transliteration": "Al-Khususiyah",
+    "morphology": {
+      "noun": {
+        "singular": "خصوصية"
+      },
+      "verb": null,
+      "adjective": "خصوصي",
+      "agent": null,
+      "negation": "انعدام الخصوصية",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "الخصوصية",
+        "example": "تعتبر الخصوصية حقاً أساسياً في شبكة إيثيريوم."
+      },
+      "heading": {
+        "term": "الخصوصية"
+      },
+      "tag": {
+        "term": "خصوصية"
+      },
+      "ui": {
+        "term": "الخصوصية"
+      },
+      "code": {
+        "term": "privacy"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "خصوصية واحدة",
+      "two": "خصوصيتان",
+      "few": "خصوصيات",
+      "many": "خصوصية",
+      "other": "خصوصيات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "General term for privacy in tech contexts."
+  },
+  "optimistic rollup": {
+    "term": "تجميع تفاؤلي",
+    "aliases": [
+      "رول-أب تفاؤلي",
+      "تجميعات تفاؤلية"
+    ],
+    "transliteration": "Tajmi' Tafa'uli",
+    "morphology": {
+      "noun": {
+        "singular": "تجميع تفاؤلي"
+      },
+      "verb": null,
+      "adjective": "تفاؤلي",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "optimistic-proof": "إثبات تفاؤلي"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "التجميع التفاؤلي",
+        "example": "يعتمد التجميع التفاؤلي على افتراض صحة المعاملات افتراضياً."
+      },
+      "heading": {
+        "term": "التجميع التفاؤلي"
+      },
+      "tag": {
+        "term": "تجميع تفاؤلي"
+      },
+      "ui": {
+        "term": "تجميع تفاؤلي"
+      },
+      "code": {
+        "term": "optimistic rollup"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "تجميع تفاؤلي واحد",
+      "two": "تجميعان تفاؤليان",
+      "few": "تجميعات تفاؤلية",
+      "many": "تجميعاً تفاؤلياً",
+      "other": "تجميعات تفاؤلية"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard translation for Optimistic Rollup in scaling contexts."
+  },
+  "ethereum request for comments (erc)": {
+    "term": "طلب تعليقات إيثيريوم (ERC)",
+    "aliases": [
+      "معيار ERC",
+      "إي آر سي"
+    ],
+    "transliteration": "Talab Ta'liqat Ethereum",
+    "morphology": {
+      "noun": {
+        "singular": "طلب تعليقات إيثيريوم"
+      },
+      "verb": null,
+      "adjective": "معياري",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "طلبات تعليقات إيثيريوم",
+        "example": "يحدد معيار ERC-20 كيفية إنشاء الرموز على إيثيريوم."
+      },
+      "heading": {
+        "term": "طلب تعليقات إيثيريوم (ERC)"
+      },
+      "tag": {
+        "term": "ERC"
+      },
+      "ui": {
+        "term": "ERC"
+      },
+      "code": {
+        "term": "ERC"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "طلب واحد",
+      "two": "طلبان",
+      "few": "طلبات",
+      "many": "طلباً",
+      "other": "طلبات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Usually kept as ERC alongside the Arabic translation."
+  },
+  "plasma": {
+    "term": "بلازما",
+    "aliases": [],
+    "transliteration": "Plasma",
+    "morphology": {
+      "noun": {
+        "singular": "بلازما"
+      },
+      "verb": null,
+      "adjective": "بلازمي",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "بلازما",
+        "example": "تعد بلازما أحد حلول التوسع المبكرة خارج السلسلة."
+      },
+      "heading": {
+        "term": "بلازما"
+      },
+      "tag": {
+        "term": "بلازما"
+      },
+      "ui": {
+        "term": "بلازما"
+      },
+      "code": {
+        "term": "plasma"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical proper noun, transliterated."
+  },
+  "library": {
+    "term": "مكتبة",
+    "aliases": [
+      "مكتبة برمجية"
+    ],
+    "transliteration": "Maktabah",
+    "morphology": {
+      "noun": {
+        "singular": "مكتبة"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "المكتبة",
+        "example": "يمكن استدعاء وظائف المكتبة من عقود ذكية أخرى."
+      },
+      "heading": {
+        "term": "المكتبة"
+      },
+      "tag": {
+        "term": "مكتبة"
+      },
+      "ui": {
+        "term": "مكتبة"
+      },
+      "code": {
+        "term": "library"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "مكتبة واحدة",
+      "two": "مكتبتان",
+      "few": "مكتبات",
+      "many": "مكتبة",
+      "other": "مكتبات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard term for software library."
+  },
+  "the merge": {
+    "term": "الدمج",
+    "aliases": [
+      "عملية الدمج"
+    ],
+    "transliteration": "Al-Damj",
+    "morphology": {
+      "noun": {
+        "singular": "دمج"
+      },
+      "verb": {
+        "infinitive": "دمج",
+        "participle": "مدمج"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "الدمج",
+        "example": "غيّر الدمج آلية إجماع إيثيريوم إلى إثبات الحصة."
+      },
+      "heading": {
+        "term": "الدمج"
+      },
+      "tag": {
+        "term": "الدمج"
+      },
+      "ui": {
+        "term": "الدمج"
+      },
+      "code": {
+        "term": "merge"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers specifically to the Ethereum network upgrade."
+  },
+  "zero-knowledge proof": {
+    "term": "إثبات المعرفة الصفرية",
+    "aliases": [
+      "برهان المعرفة الصفرية",
+      "زد كيه بي"
+    ],
+    "transliteration": "Ithbat al-Ma'rifa al-Sifriya",
+    "morphology": {
+      "noun": {
+        "singular": "إثبات"
+      },
+      "verb": {
+        "infinitive": "أثبت",
+        "participle": "مُثبِت"
+      },
+      "adjective": "صفري",
+      "agent": "مُثبِت",
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "تجميع معرفة صفرية"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "إثباتات المعرفة الصفرية",
+        "example": "يسمح إثبات المعرفة الصفرية بالتحقق من البيانات دون كشفها."
+      },
+      "heading": {
+        "term": "إثبات المعرفة الصفرية"
+      },
+      "tag": {
+        "term": "ZKP"
+      },
+      "ui": {
+        "term": "إثبات ZK"
+      },
+      "code": {
+        "term": "zk-proof"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "إثبات واحد",
+      "two": "إثباتان",
+      "few": "إثباتات",
+      "many": "إثباتاً",
+      "other": "إثباتات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard cryptographic term."
+  },
+  "data availability": {
+    "term": "توفر البيانات",
+    "aliases": [
+      "إتاحة البيانات"
+    ],
+    "transliteration": "Tawaffur al-Bayanat",
+    "morphology": {
+      "noun": {
+        "singular": "توفر"
+      },
+      "verb": {
+        "infinitive": "توفر",
+        "participle": "متوفر"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": "عدم توفر البيانات",
+      "compounds": {
+        "data-availability-layer": "طبقة توفر البيانات"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "توفر البيانات",
+        "example": "يعد توفر البيانات أمراً حيوياً لأمان حلول الطبقة الثانية."
+      },
+      "heading": {
+        "term": "توفر البيانات"
+      },
+      "tag": {
+        "term": "توفر البيانات"
+      },
+      "ui": {
+        "term": "توفر البيانات"
+      },
+      "code": {
+        "term": "data availability"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Abstract technical concept."
+  },
+  "log": {
+    "term": "سجل",
+    "aliases": [
+      "سجل الأحداث"
+    ],
+    "transliteration": "Sijill",
+    "morphology": {
+      "noun": {
+        "singular": "سجل"
+      },
+      "verb": {
+        "infinitive": "سجل",
+        "participle": "مسجل"
+      },
+      "adjective": "سجلي",
+      "agent": "مسجل",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "السجل",
+        "example": "يتم حفظ مخرجات العقد في سجل البلوكشين."
+      },
+      "heading": {
+        "term": "السجل"
+      },
+      "tag": {
+        "term": "سجل"
+      },
+      "ui": {
+        "term": "عرض السجل"
+      },
+      "code": {
+        "term": "log"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "سجل واحد",
+      "two": "سجلان",
+      "few": "سجلات",
+      "many": "سجلاً",
+      "other": "سجلات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used for both transaction logs and general event logs."
+  },
+  "beacon chain": {
+    "term": "سلسلة المنارة",
+    "aliases": [
+      "بيكون تشين"
+    ],
+    "transliteration": "Silsilat al-Manara",
+    "morphology": {
+      "noun": {
+        "singular": "سلسلة منارة"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سلسلة المنارة",
+        "example": "أدخلت سلسلة المنارة إثبات الحصة إلى نظام إيثيريوم البيئي."
+      },
+      "heading": {
+        "term": "سلسلة المنارة"
+      },
+      "tag": {
+        "term": "سلسلة المنارة"
+      },
+      "ui": {
+        "term": "سلسلة المنارة"
+      },
+      "code": {
+        "term": "beacon chain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "سلسلة منارة واحدة",
+      "two": "سلسلتا منارة",
+      "few": "سلاسل منارة",
+      "many": "سلسلة منارة",
+      "other": "سلاسل منارة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers to the core consensus layer of Ethereum."
+  },
+  "liquidity": {
+    "term": "السيولة",
+    "aliases": [
+      "سيولة"
+    ],
+    "transliteration": "Al-suyūlah",
+    "morphology": {
+      "noun": {
+        "singular": "السيولة"
+      },
+      "verb": null,
+      "adjective": "سائل",
+      "agent": null,
+      "negation": "عدم السيولة",
+      "compounds": {
+        "liquidity-pool": "مجمع السيولة"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "السيولة",
+        "example": "تعتمد بروتوكولات التمويل اللامركزي على السيولة العالية لضمان كفاءة التداول."
+      },
+      "heading": {
+        "term": "السيولة"
+      },
+      "tag": {
+        "term": "سيولة"
+      },
+      "ui": {
+        "term": "السيولة المتوفرة"
+      },
+      "code": {
+        "term": "liquidity"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "سيولة",
+      "two": "سيولتان",
+      "few": "سيولات",
+      "many": "سيولات",
+      "other": "سيولات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used as an uncountable noun in financial contexts."
+  },
+  "epoch": {
+    "term": "الحقبة",
+    "aliases": [
+      "إيبوك",
+      "فترة زمنية"
+    ],
+    "transliteration": "Al-ḥiqbah",
+    "morphology": {
+      "noun": {
+        "singular": "الحقبة"
+      },
+      "verb": null,
+      "adjective": "حقبي",
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "الحقبة",
+        "example": "تتكون كل حقبة في شبكة إيثيريوم من 32 فاصلًا زمنيًا (slot)."
+      },
+      "heading": {
+        "term": "الحقبة الزمنية"
+      },
+      "tag": {
+        "term": "حقبة"
+      },
+      "ui": {
+        "term": "الحقبة الحالية"
+      },
+      "code": {
+        "term": "epoch"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "حقبة",
+      "two": "حقبتان",
+      "few": "حقبات",
+      "many": "حقبة",
+      "other": "حقبات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard term for a collection of slots in Ethereum consensus."
+  },
+  "ethereum mainnet": {
+    "term": "شبكة إيثيريوم الرئيسية",
+    "aliases": [
+      "إيثيريوم مين نت",
+      "الشبكة الرئيسية"
+    ],
+    "transliteration": "Shabakat īthīryūm al-ra'īsīyah",
+    "morphology": {
+      "noun": {
+        "singular": "شبكة إيثيريوم الرئيسية"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "شبكة إيثيريوم الرئيسية",
+        "example": "يتم تنفيذ المعاملات ذات القيمة الحقيقية على شبكة إيثيريوم الرئيسية."
+      },
+      "heading": {
+        "term": "شبكة إيثيريوم الرئيسية"
+      },
+      "tag": {
+        "term": "الشبكة الرئيسية"
+      },
+      "ui": {
+        "term": "الشبكة الرئيسية"
+      },
+      "code": {
+        "term": "ethereum mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "proposal": {
+    "term": "مقترح",
+    "aliases": [
+      "عرض",
+      "مقترح تحسين"
+    ],
+    "transliteration": "Muqtaraḥ",
+    "morphology": {
+      "noun": {
+        "singular": "مقترح"
+      },
+      "verb": {
+        "infinitive": "اقترح",
+        "participle": "مقترح"
+      },
+      "adjective": "مقترح",
+      "agent": "مقدم المقترح",
+      "negation": "رفض المقترح",
+      "compounds": {
+        "eip": "مقترح تحسين إيثيريوم"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "المقترح",
+        "example": "يمكن للمصادقين التصويت على المقترح الجديد لتحديث الشبكة."
+      },
+      "heading": {
+        "term": "المقترح"
+      },
+      "tag": {
+        "term": "مقترح"
+      },
+      "ui": {
+        "term": "تقديم مقترح"
+      },
+      "code": {
+        "term": "proposal"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "مقترح",
+      "two": "مقترحان",
+      "few": "مقترحات",
+      "many": "مقترحاً",
+      "other": "مقترحات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block proposer": {
+    "term": "مقترح الكتل",
+    "aliases": [
+      "منشئ الكتل"
+    ],
+    "transliteration": "Muqtaraḥ al-kutal",
+    "morphology": {
+      "noun": {
+        "singular": "مقترح الكتل"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "مقترح الكتل",
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "مقترح الكتل",
+        "example": "يتم اختيار مقترح الكتل بشكل عشوائي من بين مجموعة المصادقين النشطين."
+      },
+      "heading": {
+        "term": "مقترح الكتل"
+      },
+      "tag": {
+        "term": "مقترح كتل"
+      },
+      "ui": {
+        "term": "مقترح الكتلة الحالية"
+      },
+      "code": {
+        "term": "block proposer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "مقترح كتل",
+      "two": "مقترحا كتل",
+      "few": "مقترحو كتل",
+      "many": "مقترحي كتل",
+      "other": "مقترحو كتل"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Refers to the validator chosen to propose a block in a slot."
+  },
+  "consensus layer": {
+    "term": "طبقة الإجماع",
+    "aliases": [
+      "طبقة التوافق"
+    ],
+    "transliteration": "Ṭabaqat al-ijmā‘",
+    "morphology": {
+      "noun": {
+        "singular": "طبقة الإجماع"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "طبقة الإجماع",
+        "example": "تدير طبقة الإجماع آلية إثبات الحصة وتضمن أمن الشبكة."
+      },
+      "heading": {
+        "term": "طبقة الإجماع"
+      },
+      "tag": {
+        "term": "طبقة الإجماع"
+      },
+      "ui": {
+        "term": "حالة طبقة الإجماع"
+      },
+      "code": {
+        "term": "consensus layer"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "طبقة إجماع",
+      "two": "طبقتان للإجماع",
+      "few": "طبقات إجماع",
+      "many": "طبقة إجماع",
+      "other": "طبقات إجماع"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "peer": {
+    "term": "نظير",
+    "aliases": [
+      "عقدة نظيرة",
+      "طرف"
+    ],
+    "transliteration": "Naẓīr",
+    "morphology": {
+      "noun": {
+        "singular": "نظير"
+      },
+      "verb": null,
+      "adjective": "نظير",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "p2p": "نظير لنظير"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "النظراء",
+        "example": "تتبادل العقد المعلومات مع النظراء المتصلين في الشبكة."
+      },
+      "heading": {
+        "term": "النظراء"
+      },
+      "tag": {
+        "term": "نظير"
+      },
+      "ui": {
+        "term": "النظراء المتصلون"
+      },
+      "code": {
+        "term": "peer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "نظير",
+      "two": "نظيران",
+      "few": "نظراء",
+      "many": "نظيراً",
+      "other": "نظراء"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used in the context of peer-to-peer (P2P) networking."
+  },
+  "json-rpc": {
+    "term": "JSON-RPC",
+    "aliases": [],
+    "transliteration": "JSON-RPC",
+    "morphology": {
+      "noun": {
+        "singular": "JSON-RPC"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "JSON-RPC",
+        "example": "يوفر بروتوكول JSON-RPC طريقة للتفاعل مع عقد إيثيريوم برمجياً."
+      },
+      "heading": {
+        "term": "JSON-RPC"
+      },
+      "tag": {
+        "term": "JSON-RPC"
+      },
+      "ui": {
+        "term": "نقطة نهاية JSON-RPC"
+      },
+      "code": {
+        "term": "json-rpc"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Kept in Latin script as it is a technical standard."
+  },
+  "nonce": {
+    "term": "نونس",
+    "aliases": [
+      "رقم المعاملة الفريد",
+      "رقم الاستخدام الواحد"
+    ],
+    "transliteration": "Nūns",
+    "morphology": {
+      "noun": {
+        "singular": "نونس"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "النونس",
+        "example": "يجب أن يتطابق النونس الخاص بالمعاملة مع تسلسل المعاملات في الحساب."
+      },
+      "heading": {
+        "term": "النونس (Nonce)"
+      },
+      "tag": {
+        "term": "نونس"
+      },
+      "ui": {
+        "term": "رقم النونس"
+      },
+      "code": {
+        "term": "nonce"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "نونس",
+      "two": "نونسين",
+      "few": "نونسات",
+      "many": "نونس",
+      "other": "نونسات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliterated term 'نونس' is common, though 'رقم الاستخدام الواحد' is more descriptive."
+  },
+  "ipfs": {
+    "term": "IPFS",
+    "aliases": [
+      "نظام الملفات بين الكوكبي"
+    ],
+    "transliteration": "IPFS",
+    "morphology": {
+      "noun": {
+        "singular": "IPFS"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "IPFS",
+        "example": "يستخدم IPFS لتخزين الملفات بطريقة لامركزية وموزعة."
+      },
+      "heading": {
+        "term": "IPFS"
+      },
+      "tag": {
+        "term": "IPFS"
+      },
+      "ui": {
+        "term": "رابط IPFS"
+      },
+      "code": {
+        "term": "ipfs"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used in its abbreviated Latin form."
+  },
+  "full node": {
+    "term": "عقدة كاملة",
+    "aliases": [],
+    "transliteration": "'uqdah kāmilah",
+    "morphology": {
+      "noun": {
+        "singular": "عقدة كاملة"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "عقدة كاملة",
+        "example": "تقوم العقدة الكاملة بالتحقق من جميع المعاملات والكتل بشكل مستقل."
+      },
+      "heading": {
+        "term": "العقدة الكاملة"
+      },
+      "tag": {
+        "term": "عقدة"
+      },
+      "ui": {
+        "term": "عقدة كاملة"
+      },
+      "code": {
+        "term": "full_node"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "عقدة كاملة واحدة",
+      "two": "عقدتان كاملتان",
+      "few": "عقد كاملة",
+      "many": "عقدة كاملة",
+      "other": "عقد كاملة"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zero-knowledge": {
+    "term": "المعرفة الصفرية",
+    "aliases": [
+      "انعدام المعرفة"
+    ],
+    "transliteration": "al-ma'rifah al-ṣifriyyah",
+    "morphology": {
+      "noun": {
+        "singular": "المعرفة الصفرية"
+      },
+      "verb": null,
+      "adjective": "صفري المعرفة",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zero-knowledge-proof": "إثبات المعرفة الصفرية",
+        "zero-knowledge-rollup": "تجميعة المعرفة الصفرية"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "المعرفة الصفرية",
+        "example": "تسمح تقنية المعرفة الصفرية بإثبات صحة المعلومات دون الكشف عنها."
+      },
+      "heading": {
+        "term": "تقنية المعرفة الصفرية"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "المعرفة الصفرية"
+      },
+      "code": {
+        "term": "zero-knowledge"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Often used in the context of ZK-proofs."
+  },
+  "hardhat": {
+    "term": "هارد هات",
+    "aliases": [
+      "Hardhat"
+    ],
+    "transliteration": "hārd hāt",
+    "morphology": {
+      "noun": {
+        "singular": "هارد هات"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "هارد هات",
+        "example": "يعتبر هارد هات بيئة تطوير شائعة لبرمجة العقود الذكية على إيثريوم."
+      },
+      "heading": {
+        "term": "Hardhat"
+      },
+      "tag": {
+        "term": "تطوير"
+      },
+      "ui": {
+        "term": "Hardhat"
+      },
+      "code": {
+        "term": "hardhat"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, usually kept in English or transliterated."
+  },
+  "checkpoint": {
+    "term": "نقطة تفتيش",
+    "aliases": [
+      "نقطة مرجعية"
+    ],
+    "transliteration": "nuqṭat taftīsh",
+    "morphology": {
+      "noun": {
+        "singular": "نقطة تفتيش"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "نقطة تفتيش",
+        "example": "في إثبات الحصة، تعتبر نقطة التفتيش كتلة تم الانتهاء من تأكيدها."
+      },
+      "heading": {
+        "term": "نقاط التفتيش"
+      },
+      "tag": {
+        "term": "إجماع"
+      },
+      "ui": {
+        "term": "نقطة تفتيش"
+      },
+      "code": {
+        "term": "checkpoint"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "نقطة تفتيش",
+      "two": "نقطتان للتفتيش",
+      "few": "نقاط تفتيش",
+      "many": "نقطة تفتيش",
+      "other": "نقاط تفتيش"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Used specifically in Beacon Chain consensus context."
+  }
+}

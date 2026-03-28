@@ -1,0 +1,4479 @@
+{
+  "attestation": {
+    "term": "تصدیق",
+    "aliases": [
+      "گواہی",
+      "توثیق"
+    ],
+    "transliteration": "Tasdeeq",
+    "morphology": {
+      "noun": {
+        "singular": "تصدیق"
+      },
+      "verb": {
+        "infinitive": "تصدیق کرنا",
+        "participle": "تصدیق شدہ"
+      },
+      "adjective": "تصدیقی",
+      "agent": "تصدیق کنندہ",
+      "negation": null,
+      "compounds": {
+        "attestation-committee": "کمیٹی برائے تصدیق"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "تصدیق",
+        "example": "نیٹ ورک پر ہر بلاک کی درستی کے لیے ایک تصدیق درکار ہوتی ہے۔"
+      },
+      "heading": {
+        "term": "تصدیق"
+      },
+      "tag": {
+        "term": "تصدیق"
+      },
+      "ui": {
+        "term": "تصدیق کریں"
+      },
+      "code": {
+        "term": "attestation"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "تصدیق",
+      "other": "تصدیقات"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "bridge": {
+    "term": "پل",
+    "aliases": [
+      "برج",
+      "رابطہ"
+    ],
+    "transliteration": "Pul",
+    "morphology": {
+      "noun": {
+        "singular": "پل"
+      },
+      "verb": {
+        "infinitive": "پل بنانا",
+        "participle": "پل بنایا ہوا"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "cross-chain-bridge": "بین زنجیری پل"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "پل",
+        "example": "ایک پل اثاثوں کو ایک نیٹ ورک سے دوسرے نیٹ ورک پر منتقل کرنے میں مدد دیتا ہے۔"
+      },
+      "heading": {
+        "term": "پل"
+      },
+      "tag": {
+        "term": "پل"
+      },
+      "ui": {
+        "term": "پل کا استعمال کریں"
+      },
+      "code": {
+        "term": "bridge"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "پل",
+      "other": "پلوں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The English term 'bridge' is also frequently used in technical Urdu."
+  },
+  "decentralization": {
+    "term": "عدم مرکزیت",
+    "aliases": [
+      "مرکز گزیری"
+    ],
+    "transliteration": "Adam-e-markaziyat",
+    "morphology": {
+      "noun": {
+        "singular": "عدم مرکزیت"
+      },
+      "verb": null,
+      "adjective": "غیر مرکزی",
+      "agent": null,
+      "negation": "مرکزیت",
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "عدم مرکزیت",
+        "example": "ایتھیریم کا بنیادی مقصد مکمل عدم مرکزیت حاصل کرنا ہے۔"
+      },
+      "heading": {
+        "term": "عدم مرکزیت"
+      },
+      "tag": {
+        "term": "عدم مرکزیت"
+      },
+      "ui": {
+        "term": "عدم مرکزیت"
+      },
+      "code": {
+        "term": "decentralization"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized": {
+    "term": "غیر مرکزی",
+    "aliases": [
+      "غیر مرکوز"
+    ],
+    "transliteration": "Ghair markazi",
+    "morphology": {
+      "noun": "عدم مرکزیت",
+      "verb": null,
+      "adjective": "غیر مرکزی",
+      "agent": null,
+      "negation": "مرکزی",
+      "compounds": {
+        "decentralized-application": "غیر مرکزی ایپلی کیشن"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "غیر مرکزی",
+        "example": "یہ ایک غیر مرکزی نظام ہے جہاں کوئی واحد ادارہ کنٹرول نہیں رکھتا۔"
+      },
+      "heading": {
+        "term": "غیر مرکزی"
+      },
+      "tag": {
+        "term": "غیر مرکزی"
+      },
+      "ui": {
+        "term": "غیر مرکزی"
+      },
+      "code": {
+        "term": "decentralized"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "deploy": {
+    "term": "تعینات کرنا",
+    "aliases": [
+      "نافذ کرنا",
+      "جاری کرنا"
+    ],
+    "transliteration": "Ta'ayunaat karna",
+    "morphology": {
+      "noun": "تعیناتی",
+      "verb": {
+        "infinitive": "تعینات کرنا",
+        "participle": "تعینات شدہ"
+      },
+      "adjective": null,
+      "agent": "تعینات کنندہ",
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "تعینات",
+        "example": "آپ اپنا سمارٹ کنٹریکٹ ایتھیریم نیٹ ورک پر تعینات کر سکتے ہیں۔"
+      },
+      "heading": {
+        "term": "تعیناتی"
+      },
+      "tag": {
+        "term": "تعینات"
+      },
+      "ui": {
+        "term": "تعینات کریں"
+      },
+      "code": {
+        "term": "deploy"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "finality": {
+    "term": "حتمیت",
+    "aliases": [
+      "فیصلہ کنیت"
+    ],
+    "transliteration": "Hatmiyat",
+    "morphology": {
+      "noun": {
+        "singular": "حتمیت"
+      },
+      "verb": {
+        "infinitive": "حتمی بنانا",
+        "participle": "حتمی"
+      },
+      "adjective": "حتمی",
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "حتمیت",
+        "example": "ٹرانزیکشن کی حتمیت کا مطلب ہے کہ اسے اب بدلا نہیں جا سکتا۔"
+      },
+      "heading": {
+        "term": "حتمیت"
+      },
+      "tag": {
+        "term": "حتمیت"
+      },
+      "ui": {
+        "term": "حتمیت"
+      },
+      "code": {
+        "term": "finality"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "fork": {
+    "term": "فورک",
+    "aliases": [
+      "شاخ",
+      "دو شاخہ"
+    ],
+    "transliteration": "Fork",
+    "morphology": {
+      "noun": {
+        "singular": "فورک"
+      },
+      "verb": {
+        "infinitive": "فورک کرنا",
+        "participle": "فورک شدہ"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hard-fork": "ہارڈ فورک",
+        "soft-fork": "سافٹ فورک"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "فورک",
+        "example": "نیٹ ورک کے اپ گریڈ کے دوران ایک ہارڈ فورک واقع ہو سکتا ہے۔"
+      },
+      "heading": {
+        "term": "فورک"
+      },
+      "tag": {
+        "term": "فورک"
+      },
+      "ui": {
+        "term": "فورک"
+      },
+      "code": {
+        "term": "fork"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "فورک",
+      "other": "فورک"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term 'fork' is widely accepted in Urdu IT contexts."
+  },
+  "governance": {
+    "term": "حکمرانی",
+    "aliases": [
+      "نظم و نسق",
+      "گورننس"
+    ],
+    "transliteration": "Hukm-rani",
+    "morphology": {
+      "noun": {
+        "singular": "حکمرانی"
+      },
+      "verb": {
+        "infinitive": "حکومت کرنا",
+        "participle": "حکمران"
+      },
+      "adjective": null,
+      "agent": "حکمران",
+      "negation": null,
+      "compounds": {
+        "onchain-governance": "آن چین حکمرانی"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "حکمرانی",
+        "example": "غیر مرکزی حکمرانی میں ٹوکن ہولڈرز تجاویز پر ووٹ دیتے ہیں۔"
+      },
+      "heading": {
+        "term": "حکمرانی"
+      },
+      "tag": {
+        "term": "حکمرانی"
+      },
+      "ui": {
+        "term": "حکمرانی"
+      },
+      "code": {
+        "term": "governance"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "hash": {
+    "term": "ہیش",
+    "aliases": [],
+    "transliteration": "Hash",
+    "morphology": {
+      "noun": {
+        "singular": "ہیش"
+      },
+      "verb": {
+        "infinitive": "ہیش کرنا",
+        "participle": "ہیش شدہ"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "hash-function": "ہیش فنکشن"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ہیش",
+        "example": "ڈیٹا کا ایک منفرد ہیش اس کی شناخت کے لیے استعمال ہوتا ہے۔"
+      },
+      "heading": {
+        "term": "ہیش"
+      },
+      "tag": {
+        "term": "ہیش"
+      },
+      "ui": {
+        "term": "ہیش کاپی کریں"
+      },
+      "code": {
+        "term": "hash"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ہیش",
+      "other": "ہیشز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliterated as it is a specific cryptographic term."
+  },
+  "miner": {
+    "term": "مائنر",
+    "aliases": [
+      "کان کن"
+    ],
+    "transliteration": "miner",
+    "morphology": {
+      "noun": {
+        "singular": "مائنر"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "مائنر",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "مائنر",
+        "example": "ایک مائنر نیٹ ورک کے ۱ بلاک کی توثیق کرتا ہے۔"
+      },
+      "heading": {
+        "term": "مائنر"
+      },
+      "tag": {
+        "term": "مائنر"
+      },
+      "ui": {
+        "term": "مائنر"
+      },
+      "code": {
+        "term": "miner"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "مائنر",
+      "other": "مائنرز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliterated term is standard in technical Urdu; 'کان کن' is the literal translation."
+  },
+  "mining": {
+    "term": "مائننگ",
+    "aliases": [
+      "کان کنی"
+    ],
+    "transliteration": "mining",
+    "morphology": {
+      "noun": {
+        "singular": "مائننگ"
+      },
+      "verb": {
+        "infinitive": "مائننگ کرنا",
+        "participle": "مائننگ کردہ"
+      },
+      "adjective": "مائننگ والا",
+      "agent": "مائنر",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "مائننگ",
+        "example": "ایتھریم نیٹ ورک پر مائننگ اب پروف آف سٹیک میں تبدیل ہو چکی ہے۔"
+      },
+      "heading": {
+        "term": "مائننگ"
+      },
+      "tag": {
+        "term": "مائننگ"
+      },
+      "ui": {
+        "term": "مائننگ"
+      },
+      "code": {
+        "term": "mining"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "مائننگ",
+      "other": "مائننگز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mint": {
+    "term": "منٹ کرنا",
+    "aliases": [
+      "ٹوکن بنانا",
+      "ڈھالنا"
+    ],
+    "transliteration": "mint karna",
+    "morphology": {
+      "noun": {
+        "singular": "منٹنگ"
+      },
+      "verb": {
+        "infinitive": "منٹ کرنا",
+        "participle": "منٹ کردہ"
+      },
+      "adjective": null,
+      "agent": "منٹ کرنے والا",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "منٹ کرنے",
+        "example": "این ایف ٹی منٹ کرنے کے لیے گیس فیس ادا کرنی پڑتی ہے۔"
+      },
+      "heading": {
+        "term": "منٹ کرنا"
+      },
+      "tag": {
+        "term": "منٹ"
+      },
+      "ui": {
+        "term": "منٹ کریں"
+      },
+      "code": {
+        "term": "mint"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly used as a compound verb with 'karna' in Urdu tech contexts."
+  },
+  "signature": {
+    "term": "دستخط",
+    "aliases": [
+      "ڈیجیٹل دستخط"
+    ],
+    "transliteration": "dastkhat",
+    "morphology": {
+      "noun": {
+        "singular": "دستخط"
+      },
+      "verb": {
+        "infinitive": "دستخط کرنا",
+        "participle": "دستخط شدہ"
+      },
+      "adjective": "دستخطی",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "دستخط",
+        "example": "ہر ٹرانزیکشن کے لیے ایک ڈیجیٹل دستخط کی ضرورت ہوتی ہے۔"
+      },
+      "heading": {
+        "term": "دستخط"
+      },
+      "tag": {
+        "term": "دستخط"
+      },
+      "ui": {
+        "term": "دستخط"
+      },
+      "code": {
+        "term": "signature"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "دستخط",
+      "other": "دستخطوں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "stake": {
+    "term": "سٹیک",
+    "aliases": [
+      "حصہ",
+      "داؤ"
+    ],
+    "transliteration": "stake",
+    "morphology": {
+      "noun": {
+        "singular": "سٹیک"
+      },
+      "verb": {
+        "infinitive": "سٹیک کرنا",
+        "participle": "سٹیک شدہ"
+      },
+      "adjective": null,
+      "agent": "سٹیکر",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سٹیک",
+        "example": "آپ کو نیٹ ورک کی حفاظت کے لیے ۳۲ ایتھریم سٹیک کرنے کی ضرورت ہے۔"
+      },
+      "heading": {
+        "term": "سٹیک"
+      },
+      "tag": {
+        "term": "سٹیک"
+      },
+      "ui": {
+        "term": "سٹیک کریں"
+      },
+      "code": {
+        "term": "stake"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "سٹیک",
+      "other": "سٹیک"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staked": {
+    "term": "سٹیک شدہ",
+    "aliases": [
+      "داؤ پر لگا ہوا"
+    ],
+    "transliteration": "stake shuda",
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "سٹیک شدہ",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سٹیک شدہ",
+        "example": "سٹیک شدہ ایتھریم کو کسی بھی وقت نکالا جا سکتا ہے۔"
+      },
+      "heading": {
+        "term": "سٹیک شدہ"
+      },
+      "tag": {
+        "term": "سٹیک شدہ"
+      },
+      "ui": {
+        "term": "سٹیک شدہ"
+      },
+      "code": {
+        "term": "staked"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staker": {
+    "term": "سٹیکر",
+    "aliases": [
+      "سٹیک کرنے والا"
+    ],
+    "transliteration": "staker",
+    "morphology": {
+      "noun": {
+        "singular": "سٹیکر"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "سٹیکر",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سٹیکر",
+        "example": "سٹیکر نیٹ ورک کے استحکام میں اپنا حصہ ڈالتا ہے۔"
+      },
+      "heading": {
+        "term": "سٹیکر"
+      },
+      "tag": {
+        "term": "سٹیکر"
+      },
+      "ui": {
+        "term": "سٹیکر"
+      },
+      "code": {
+        "term": "staker"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "سٹیکر",
+      "other": "سٹیکرز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "staking": {
+    "term": "سٹیکنگ",
+    "aliases": [],
+    "transliteration": "staking",
+    "morphology": {
+      "noun": {
+        "singular": "سٹیکنگ"
+      },
+      "verb": {
+        "infinitive": "سٹیکنگ کرنا",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": "سٹیکر",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سٹیکنگ",
+        "example": "سٹیکنگ انعامات حاصل کرنے کا ایک محفوظ طریقہ ہے۔"
+      },
+      "heading": {
+        "term": "سٹیکنگ"
+      },
+      "tag": {
+        "term": "سٹیکنگ"
+      },
+      "ui": {
+        "term": "سٹیکنگ"
+      },
+      "code": {
+        "term": "staking"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "سٹیکنگ",
+      "other": "سٹیکنگز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "swap": {
+    "term": "سویپ",
+    "aliases": [
+      "تبادلہ"
+    ],
+    "transliteration": "swap",
+    "morphology": {
+      "noun": {
+        "singular": "سویپ"
+      },
+      "verb": {
+        "infinitive": "سویپ کرنا",
+        "participle": "سویپ کردہ"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سویپ",
+        "example": "آپ یونیسویپ پر ایک ٹوکن کو دوسرے ٹوکن سے سویپ کر سکتے ہیں۔"
+      },
+      "heading": {
+        "term": "سویپ"
+      },
+      "tag": {
+        "term": "سویپ"
+      },
+      "ui": {
+        "term": "سویپ کریں"
+      },
+      "code": {
+        "term": "swap"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "سویپ",
+      "other": "سویپس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transaction": {
+    "term": "ٹرانزیکشن",
+    "aliases": [
+      "لین دین"
+    ],
+    "transliteration": "transaction",
+    "morphology": {
+      "noun": {
+        "singular": "ٹرانزیکشن"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ٹرانزیکشن",
+        "example": "میری ٹرانزیکشن بلاک چین پر کامیابی سے مکمل ہو گئی۔"
+      },
+      "heading": {
+        "term": "ٹرانزیکشن"
+      },
+      "tag": {
+        "term": "ٹرانزیکشن"
+      },
+      "ui": {
+        "term": "ٹرانزیکشن"
+      },
+      "code": {
+        "term": "transaction"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ٹرانزیکشن",
+      "other": "ٹرانزیکشنز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "validator": {
+    "term": "توثیق کار",
+    "aliases": [
+      "ویلیڈیٹر"
+    ],
+    "transliteration": "tauseeq-kar",
+    "morphology": {
+      "noun": {
+        "singular": "توثیق کار"
+      },
+      "verb": {
+        "infinitive": "توثیق کرنا",
+        "participle": "توثیق کنندہ"
+      },
+      "adjective": "توثیقی",
+      "agent": "توثیق کار",
+      "negation": null,
+      "compounds": {
+        "validator-set": "توثیق کاروں کا مجموعہ"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "توثیق کار",
+        "example": "نیٹ ورک کی حفاظت کے لیے ایک توثیق کار بلاکس کی تصدیق کرتا ہے۔"
+      },
+      "heading": {
+        "term": "توثیق کار"
+      },
+      "tag": {
+        "term": "توثیق کار"
+      },
+      "ui": {
+        "term": "توثیق کار"
+      },
+      "code": {
+        "term": "validator"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "توثیق کار",
+      "other": "توثیق کاروں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term often transliterated as 'ویلیڈیٹر' in casual tech talk."
+  },
+  "vote": {
+    "term": "ووٹ",
+    "aliases": [
+      "رائے"
+    ],
+    "transliteration": "vōṭ",
+    "morphology": {
+      "noun": {
+        "singular": "ووٹ"
+      },
+      "verb": {
+        "infinitive": "ووٹ دینا",
+        "participle": "ووٹ دہندہ"
+      },
+      "adjective": null,
+      "agent": "ووٹ دینے والا",
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ووٹ",
+        "example": "آپ کو اس تجویز پر اپنا ووٹ ڈالنا چاہیے۔"
+      },
+      "heading": {
+        "term": "ووٹ"
+      },
+      "tag": {
+        "term": "ووٹ"
+      },
+      "ui": {
+        "term": "ووٹ دیں"
+      },
+      "code": {
+        "term": "vote"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ووٹ",
+      "other": "ووٹوں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "voting": {
+    "term": "ووٹنگ",
+    "aliases": [
+      "رائے دہی"
+    ],
+    "transliteration": "vōṭing",
+    "morphology": {
+      "noun": {
+        "singular": "ووٹنگ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "voting-power": "ووٹنگ پاور"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ووٹنگ",
+        "example": "ووٹنگ کا عمل شفاف ہونا چاہیے۔"
+      },
+      "heading": {
+        "term": "ووٹنگ"
+      },
+      "tag": {
+        "term": "ووٹنگ"
+      },
+      "ui": {
+        "term": "ووٹنگ"
+      },
+      "code": {
+        "term": "voting"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum": {
+    "term": "ایتھریم",
+    "aliases": [],
+    "transliteration": "ēthīrīyam",
+    "morphology": {
+      "noun": {
+        "singular": "ایتھریم"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ایتھریم",
+        "example": "ایتھریم ایک وکندریقرت پلیٹ فارم ہے۔"
+      },
+      "heading": {
+        "term": "ایتھریم"
+      },
+      "tag": {
+        "term": "ایتھریم"
+      },
+      "ui": {
+        "term": "ایتھریم"
+      },
+      "code": {
+        "term": "ethereum"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Always transliterated as per global standard."
+  },
+  "contract": {
+    "term": "معاہدہ",
+    "aliases": [
+      "کنٹریکٹ"
+    ],
+    "transliteration": "mu'āhidah",
+    "morphology": {
+      "noun": {
+        "singular": "معاہدہ"
+      },
+      "verb": {
+        "infinitive": "معاہدہ کرنا",
+        "participle": null
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "معاہدہ",
+        "example": "یہ معاہدہ بلاک چین پر محفوظ ہے۔"
+      },
+      "heading": {
+        "term": "معاہدہ"
+      },
+      "tag": {
+        "term": "معاہدہ"
+      },
+      "ui": {
+        "term": "معاہدہ"
+      },
+      "code": {
+        "term": "contract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "معاہدہ",
+      "other": "معاہدے"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block": {
+    "term": "بلاک",
+    "aliases": [],
+    "transliteration": "blāk",
+    "morphology": {
+      "noun": {
+        "singular": "بلاک"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "block-height": "بلاک کی اونچائی"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "بلاک",
+        "example": "ہر نیا بلاک پچھلے بلاک سے منسلک ہوتا ہے۔"
+      },
+      "heading": {
+        "term": "بلاک"
+      },
+      "tag": {
+        "term": "بلاک"
+      },
+      "ui": {
+        "term": "بلاک"
+      },
+      "code": {
+        "term": "block"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "بلاک",
+      "other": "بلاکوں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "smart contract": {
+    "term": "سمارٹ معاہدہ",
+    "aliases": [
+      "سمارٹ کنٹریکٹ"
+    ],
+    "transliteration": "smārṭ mu'āhidah",
+    "morphology": {
+      "noun": {
+        "singular": "سمارٹ معاہدہ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سمارٹ معاہدہ",
+        "example": "سمارٹ معاہدہ خودکار طریقے سے شرائط پر عمل درآمد کرتا ہے۔"
+      },
+      "heading": {
+        "term": "سمارٹ معاہدہ"
+      },
+      "tag": {
+        "term": "سمارٹ معاہدہ"
+      },
+      "ui": {
+        "term": "سمارٹ معاہدہ"
+      },
+      "code": {
+        "term": "smartContract"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "سمارٹ معاہدہ",
+      "other": "سمارٹ معاہدے"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "node": {
+    "term": "نوڈ",
+    "aliases": [],
+    "transliteration": "nōḍ",
+    "morphology": {
+      "noun": {
+        "singular": "نوڈ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "full-node": "فل نوڈ"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "نوڈ",
+        "example": "ایک نوڈ پورے نیٹ ورک کا ڈیٹا محفوظ رکھتا ہے۔"
+      },
+      "heading": {
+        "term": "نوڈ"
+      },
+      "tag": {
+        "term": "نوڈ"
+      },
+      "ui": {
+        "term": "نوڈ"
+      },
+      "code": {
+        "term": "node"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "نوڈ",
+      "other": "نوڈز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "token": {
+    "term": "ٹوکن",
+    "aliases": [],
+    "transliteration": "ṭōkan",
+    "morphology": {
+      "noun": {
+        "singular": "ٹوکن"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "token-balance": "ٹوکن بیلنس"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ٹوکن",
+        "example": "آپ اپنے بٹوے میں ٹوکن وصول کر سکتے ہیں۔"
+      },
+      "heading": {
+        "term": "ٹوکن"
+      },
+      "tag": {
+        "term": "ٹوکن"
+      },
+      "ui": {
+        "term": "ٹوکن"
+      },
+      "code": {
+        "term": "token"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ٹوکن",
+      "other": "ٹوکنوں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "address": {
+    "term": "پتہ",
+    "aliases": [
+      "ایڈریس"
+    ],
+    "transliteration": "patah",
+    "morphology": {
+      "noun": {
+        "singular": "پتہ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "wallet-address": "والٹ ایڈریس"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "پتہ",
+        "example": "رقم بھیجنے سے پہلے وصول کنندہ کا پتہ چیک کر لیں۔"
+      },
+      "heading": {
+        "term": "پتہ"
+      },
+      "tag": {
+        "term": "پتہ"
+      },
+      "ui": {
+        "term": "پتہ"
+      },
+      "code": {
+        "term": "address"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "پتہ",
+      "other": "پتے"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "eth": {
+    "term": "ایتھر",
+    "aliases": [
+      "ای ٹی ایچ",
+      "ETH"
+    ],
+    "transliteration": "Ether",
+    "morphology": {
+      "noun": {
+        "singular": "ایتھر"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ایتھر",
+        "example": "ایتھر ایتھریم نیٹ ورک پر ٹرانزیکشن فیس ادا کرنے کے لیے استعمال ہوتا ہے۔"
+      },
+      "heading": {
+        "term": "ایتھر (ETH)"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "ایتھر"
+      },
+      "code": {
+        "term": "ETH"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly transliterated as ایتھر in Urdu technical discourse."
+  },
+  "blockchain": {
+    "term": "بلاک چین",
+    "aliases": [
+      "بلاک-چین"
+    ],
+    "transliteration": "Blockchain",
+    "morphology": {
+      "noun": {
+        "singular": "بلاک چین"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "بلاک چین",
+        "example": "بلاک چین ایک غیر مرکزی لیجر ہے جو تمام ٹرانزیکشنز کو ریکارڈ کرتا ہے۔"
+      },
+      "heading": {
+        "term": "بلاک چین"
+      },
+      "tag": {
+        "term": "بلاک چین"
+      },
+      "ui": {
+        "term": "بلاک چین"
+      },
+      "code": {
+        "term": "blockchain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "بلاک چین",
+      "other": "بلاک چینز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Gender is feminine following the Urdu word for chain (زنجیر)."
+  },
+  "account": {
+    "term": "اکاؤنٹ",
+    "aliases": [
+      "کھاتہ"
+    ],
+    "transliteration": "Account",
+    "morphology": {
+      "noun": {
+        "singular": "اکاؤنٹ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "اکاؤنٹ",
+        "example": "اپنے اکاؤنٹ کا بیلنس چیک کرنے کے لیے والٹ استعمال کریں۔"
+      },
+      "heading": {
+        "term": "اکاؤنٹ"
+      },
+      "tag": {
+        "term": "اکاؤنٹ"
+      },
+      "ui": {
+        "term": "اکاؤنٹ"
+      },
+      "code": {
+        "term": "account"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "اکاؤنٹ",
+      "other": "اکاؤنٹس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "chain": {
+    "term": "چین",
+    "aliases": [
+      "زنجیر"
+    ],
+    "transliteration": "Chain",
+    "morphology": {
+      "noun": {
+        "singular": "چین"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "چین",
+        "example": "یہ ڈیٹا براہ راست چین پر محفوظ کیا جاتا ہے۔"
+      },
+      "heading": {
+        "term": "چین"
+      },
+      "tag": {
+        "term": "چین"
+      },
+      "ui": {
+        "term": "چین"
+      },
+      "code": {
+        "term": "chain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "چین",
+      "other": "چینیں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "protocol": {
+    "term": "پروٹوکول",
+    "aliases": [
+      "ضابطہ"
+    ],
+    "transliteration": "Protocol",
+    "morphology": {
+      "noun": {
+        "singular": "پروٹوکول"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "پروٹوکول",
+        "example": "ایتھریم پروٹوکول نیٹ ورک کے شرکاء کے درمیان رابطے کے اصول طے کرتا ہے۔"
+      },
+      "heading": {
+        "term": "پروٹوکول"
+      },
+      "tag": {
+        "term": "پروٹوکول"
+      },
+      "ui": {
+        "term": "پروٹوکول"
+      },
+      "code": {
+        "term": "protocol"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "پروٹوکول",
+      "other": "پروٹوکولز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "wallet": {
+    "term": "والٹ",
+    "aliases": [
+      "بٹوا"
+    ],
+    "transliteration": "Wallet",
+    "morphology": {
+      "noun": {
+        "singular": "والٹ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "والٹ",
+        "example": "اپنے والٹ کی سیکیورٹی کو یقینی بنانے کے لیے ایک مضبوط پاس ورڈ استعمال کریں۔"
+      },
+      "heading": {
+        "term": "والٹ"
+      },
+      "tag": {
+        "term": "والٹ"
+      },
+      "ui": {
+        "term": "والٹ"
+      },
+      "code": {
+        "term": "wallet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "والٹ",
+      "other": "والٹس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "gas": {
+    "term": "گیس",
+    "aliases": [],
+    "transliteration": "Gas",
+    "morphology": {
+      "noun": {
+        "singular": "گیس"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "گیس",
+        "example": "نیٹ ورک کی زیادہ بھیڑ کے دوران گیس کی قیمت بڑھ جاتی ہے۔"
+      },
+      "heading": {
+        "term": "گیس"
+      },
+      "tag": {
+        "term": "گیس"
+      },
+      "ui": {
+        "term": "گیس"
+      },
+      "code": {
+        "term": "gas"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "rollup": {
+    "term": "رول اپ",
+    "aliases": [],
+    "transliteration": "Rollup",
+    "morphology": {
+      "noun": {
+        "singular": "رول اپ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "رول اپ",
+        "example": "رول اپ ٹیکنالوجی کے ذریعے ٹرانزیکشنز کو سستا اور تیز بنایا جا سکتا ہے۔"
+      },
+      "heading": {
+        "term": "رول اپ"
+      },
+      "tag": {
+        "term": "رول اپ"
+      },
+      "ui": {
+        "term": "رول اپ"
+      },
+      "code": {
+        "term": "rollup"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "رول اپ",
+      "other": "رول اپس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum improvement proposal (eip)": {
+    "term": "ایتھریم کی بہتری کی تجویز (EIP)",
+    "aliases": [
+      "ای آئی پی"
+    ],
+    "transliteration": "Ethereum Improvement Proposal",
+    "morphology": {
+      "noun": {
+        "singular": "تجویز"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "EIP",
+        "example": "نئی خصوصیات کو متعارف کروانے کے لیے ایک EIP پیش کی جانی چاہیے۔"
+      },
+      "heading": {
+        "term": "ایتھریم کی بہتری کی تجویز (EIP)"
+      },
+      "tag": {
+        "term": "EIP"
+      },
+      "ui": {
+        "term": "EIP"
+      },
+      "code": {
+        "term": "EIP"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "EIP",
+      "other": "EIPs"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "EIP is commonly used as an abbreviation even in Urdu prose."
+  },
+  "require": {
+    "term": "درکار ہونا",
+    "aliases": [
+      "ضروری ہونا",
+      "لازم ہونا"
+    ],
+    "transliteration": "Darkaar hona",
+    "morphology": {
+      "noun": null,
+      "verb": {
+        "infinitive": "درکار ہونا",
+        "participle": "درکار"
+      },
+      "adjective": "درکار",
+      "agent": null,
+      "negation": "درکار نہ ہونا",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "درکار",
+        "example": "اس اسمارٹ کانٹریکٹ کو چلانے کے لیے کچھ ایتھر درکار ہیں۔"
+      },
+      "heading": {
+        "term": "درکار شرائط"
+      },
+      "tag": {
+        "term": "درکار"
+      },
+      "ui": {
+        "term": "درکار ہے"
+      },
+      "code": {
+        "term": "require"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": null,
+      "part_of_speech": "verb",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In the context of Solidity, 'require' is often left as is in code, but explained as 'darkaar' (needed/required)."
+  },
+  "web3": {
+    "term": "ویب۳",
+    "aliases": [
+      "ویب تھری",
+      "Web3"
+    ],
+    "transliteration": "Veb-teen",
+    "morphology": {
+      "noun": {
+        "singular": "ویب۳"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ویب۳",
+        "example": "ویب۳ انٹرنیٹ کے ایک نئے اور غیر مرکزی دور کا آغاز ہے۔"
+      },
+      "heading": {
+        "term": "ویب۳"
+      },
+      "tag": {
+        "term": "Web3"
+      },
+      "ui": {
+        "term": "ویب۳"
+      },
+      "code": {
+        "term": "web3"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ویب۳",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "ویب۳"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Using Urdu numeral ۳ for the '3' as requested."
+  },
+  "solidity": {
+    "term": "سولیڈٹی",
+    "aliases": [
+      "Solidity"
+    ],
+    "transliteration": "Soliditi",
+    "morphology": {
+      "noun": {
+        "singular": "سولیڈٹی"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سولیڈٹی",
+        "example": "سولیڈٹی ایتھریم پر سمارٹ کنٹریکٹس لکھنے کی بنیادی زبان ہے۔"
+      },
+      "heading": {
+        "term": "سولیڈٹی"
+      },
+      "tag": {
+        "term": "Solidity"
+      },
+      "ui": {
+        "term": "سولیڈٹی"
+      },
+      "code": {
+        "term": "solidity"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "event": {
+    "term": "ایونٹ",
+    "aliases": [
+      "واقعہ"
+    ],
+    "transliteration": "Ivênt",
+    "morphology": {
+      "noun": {
+        "singular": "ایونٹ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ایونٹ",
+        "example": "جب سمارٹ کنٹریکٹ میں کوئی تبدیلی ہوتی ہے تو وہ ایک ایونٹ جاری کرتا ہے۔"
+      },
+      "heading": {
+        "term": "ایونٹس"
+      },
+      "tag": {
+        "term": "ایونٹ"
+      },
+      "ui": {
+        "term": "ایونٹ"
+      },
+      "code": {
+        "term": "event"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ایونٹ",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "ایونٹس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical 'event' is usually transliterated as 'ایونٹ' in Urdu dev communities."
+  },
+  "onchain": {
+    "term": "آن چین",
+    "aliases": [
+      "Onchain"
+    ],
+    "transliteration": "Aan-chain",
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "آن چین",
+      "agent": null,
+      "negation": "آف چین",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "آن چین",
+        "example": "تمام اہم ڈیٹا آن چین محفوظ کیا جاتا ہے۔"
+      },
+      "heading": {
+        "term": "آن چین ڈیٹا"
+      },
+      "tag": {
+        "term": "Onchain"
+      },
+      "ui": {
+        "term": "آن چین"
+      },
+      "code": {
+        "term": "onchain"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Following the rule to keep 'onchain' as a single concept without hyphens."
+  },
+  "ether": {
+    "term": "ایتھر",
+    "aliases": [
+      "Ether",
+      "ETH"
+    ],
+    "transliteration": "Eethar",
+    "morphology": {
+      "noun": {
+        "singular": "ایتھر"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ایتھر",
+        "example": "نیٹ ورک کی فیس ادا کرنے کے لیے آپ کو ایتھر کی ضرورت ہوگی۔"
+      },
+      "heading": {
+        "term": "ایتھر"
+      },
+      "tag": {
+        "term": "ETH"
+      },
+      "ui": {
+        "term": "ایتھر"
+      },
+      "code": {
+        "term": "ether"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ایتھر",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "ایتھرز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "ethereum virtual machine (evm)": {
+    "term": "ایتھریم ورچوئل مشین",
+    "aliases": [
+      "ای وی ایم",
+      "EVM"
+    ],
+    "transliteration": "Eethreem varchual masheen",
+    "morphology": {
+      "noun": {
+        "singular": "ایتھریم ورچوئل مشین"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ای وی ایم",
+        "example": "ایتھریم ورچوئل مشین (ای وی ایم) نیٹ ورک کا انجن ہے۔"
+      },
+      "heading": {
+        "term": "ایتھریم ورچوئل مشین (EVM)"
+      },
+      "tag": {
+        "term": "EVM"
+      },
+      "ui": {
+        "term": "ای وی ایم"
+      },
+      "code": {
+        "term": "evm"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Machine (Masheen) is feminine in Urdu."
+  },
+  "decentralized application (dapp)": {
+    "term": "غیر مرکزی ایپلیکیشن",
+    "aliases": [
+      "ڈی ایپ",
+      "dapp"
+    ],
+    "transliteration": "Ghair markazi aiplikeeshan",
+    "morphology": {
+      "noun": {
+        "singular": "غیر مرکزی ایپلیکیشن"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ڈی ایپ",
+        "example": "یہ غیر مرکزی ایپلیکیشن بغیر کسی درمیانی واسطے کے کام کرتی ہے۔"
+      },
+      "heading": {
+        "term": "ڈی ایپس (dapps)"
+      },
+      "tag": {
+        "term": "dapp"
+      },
+      "ui": {
+        "term": "ڈی ایپ"
+      },
+      "code": {
+        "term": "dapp"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "غیر مرکزی ایپلیکیشن",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "غیر مرکزی ایپلیکیشنز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Application is feminine in Urdu."
+  },
+  "non-fungible token (nft)": {
+    "term": "نان فنجیبل ٹوکن",
+    "aliases": [
+      "این ایف ٹی",
+      "NFT"
+    ],
+    "transliteration": "Naan-fanjibal tookan",
+    "morphology": {
+      "noun": {
+        "singular": "نان فنجیبل ٹوکن"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "این ایف ٹی",
+        "example": "ایک نان فنجیبل ٹوکن ڈیجیٹل ملکیت کی نمائندگی کرتا ہے۔"
+      },
+      "heading": {
+        "term": "نان فنجیبل ٹوکن (NFT)"
+      },
+      "tag": {
+        "term": "NFT"
+      },
+      "ui": {
+        "term": "این ایف ٹی"
+      },
+      "code": {
+        "term": "nft"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "نان فنجیبل ٹوکن",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "نان فنجیبل ٹوکنز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Token is masculine in Urdu."
+  },
+  "api": {
+    "term": "اے پی آئی",
+    "aliases": [
+      "Application Programming Interface",
+      "API"
+    ],
+    "transliteration": "Ay-pee-aayi",
+    "morphology": {
+      "noun": {
+        "singular": "اے پی آئی"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "اے پی آئی",
+        "example": "ڈیٹا تک رسائی کے لیے ہم اس اے پی آئی کا استعمال کرتے ہیں۔"
+      },
+      "heading": {
+        "term": "اے پی آئی"
+      },
+      "tag": {
+        "term": "API"
+      },
+      "ui": {
+        "term": "اے پی آئی"
+      },
+      "code": {
+        "term": "api"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "transfer": {
+    "term": "منتقلی",
+    "aliases": [
+      "ٹرانسفر"
+    ],
+    "transliteration": "Muntaqali",
+    "morphology": {
+      "noun": {
+        "singular": "منتقلی"
+      },
+      "verb": {
+        "infinitive": "منتقل کرنا",
+        "participle": "منتقل کرنے والا"
+      },
+      "adjective": null,
+      "agent": "منتقل کنندہ",
+      "negation": null,
+      "compounds": {
+        "transfer-fee": "فیس منتقلی"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "منتقلی",
+        "example": "ٹکنز کی منتقلی کامیابی سے مکمل ہوگئی ہے۔"
+      },
+      "heading": {
+        "term": "فنڈز کی منتقلی"
+      },
+      "tag": {
+        "term": "منتقلی"
+      },
+      "ui": {
+        "term": "منتقل کریں"
+      },
+      "code": {
+        "term": "transfer"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "منتقلی",
+      "two": null,
+      "few": null,
+      "many": null,
+      "other": "منتقلیاں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "withdrawal": {
+    "term": "رقم کی واپسی",
+    "aliases": [
+      "واپسی"
+    ],
+    "transliteration": "Raqam ki wapasi",
+    "morphology": {
+      "noun": {
+        "singular": "رقم کی واپسی"
+      },
+      "verb": {
+        "infinitive": "رقم نکلوانا",
+        "participle": "نکلوائی ہوئی"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "رقم کی واپسی",
+        "example": "صارف نے اسٹیکنگ سے اپنی رقم کی واپسی کی درخواست کی۔"
+      },
+      "heading": {
+        "term": "رقم کی واپسی"
+      },
+      "tag": {
+        "term": "واپسی"
+      },
+      "ui": {
+        "term": "رقم نکلوائیں"
+      },
+      "code": {
+        "term": "withdrawal"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "رقم کی واپسی",
+      "other": "رقم کی واپسیاں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In the context of Ethereum consensus, it refers specifically to withdrawing staked ETH."
+  },
+  "consensus": {
+    "term": "اتفاقِ رائے",
+    "aliases": [
+      "کنسنسس"
+    ],
+    "transliteration": "Ittifaq-e-rai",
+    "morphology": {
+      "noun": {
+        "singular": "اتفاقِ رائے"
+      },
+      "verb": null,
+      "adjective": "متفقہ",
+      "agent": null,
+      "negation": "اختلاف",
+      "compounds": {
+        "consensus-mechanism": "اتفاقِ رائے کا طریقہ کار"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "اتفاقِ رائے",
+        "example": "ایتھریم نیٹ ورک بلاکس کی تصدیق کے لیے اتفاقِ رائے کا استعمال کرتا ہے۔"
+      },
+      "heading": {
+        "term": "اتفاقِ رائے"
+      },
+      "tag": {
+        "term": "اتفاقِ رائے"
+      },
+      "ui": {
+        "term": "اتفاقِ رائے"
+      },
+      "code": {
+        "term": "consensus"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "mainnet": {
+    "term": "مین نیٹ",
+    "aliases": [
+      "اصل نیٹ ورک"
+    ],
+    "transliteration": "Mainnet",
+    "morphology": {
+      "noun": {
+        "singular": "مین نیٹ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "مین نیٹ",
+        "example": "اپنی ٹرانزیکشن مین نیٹ پر بھیجنے سے پہلے اسے ٹیسٹ نیٹ پر چیک کریں۔"
+      },
+      "heading": {
+        "term": "مین نیٹ"
+      },
+      "tag": {
+        "term": "مین نیٹ"
+      },
+      "ui": {
+        "term": "مین نیٹ"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Mainnet is treated as a technical proper noun in Urdu."
+  },
+  "offchain": {
+    "term": "آف چین",
+    "aliases": [
+      "نیٹ ورک سے باہر"
+    ],
+    "transliteration": "Offchain",
+    "morphology": {
+      "noun": null,
+      "verb": null,
+      "adjective": "آف چین",
+      "agent": null,
+      "negation": "آن چین",
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "آف چین",
+        "example": "کچھ ڈیٹا کو اسٹوریج بچانے کے لیے آف چین رکھا جاتا ہے۔"
+      },
+      "heading": {
+        "term": "آف چین"
+      },
+      "tag": {
+        "term": "آف چین"
+      },
+      "ui": {
+        "term": "آف چین"
+      },
+      "code": {
+        "term": "offchain"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "erc-20": {
+    "term": "ای آر سی-۲۰",
+    "aliases": [
+      "ERC-20"
+    ],
+    "transliteration": "ERC-20",
+    "morphology": {
+      "noun": {
+        "singular": "ای آر سی-۲۰"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "erc-20-token": "ای آر سی-۲۰ ٹوکن"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "ای آر سی-۲۰",
+        "example": "زیادہ تر ٹوکن ای آر سی-۲۰ معیار پر مبنی ہوتے ہیں۔"
+      },
+      "heading": {
+        "term": "ای آر سی-۲۰"
+      },
+      "tag": {
+        "term": "ای آر سی-۲۰"
+      },
+      "ui": {
+        "term": "ای آر سی-۲۰"
+      },
+      "code": {
+        "term": "erc20"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard technical identifier; use Urdu numerals for prose context."
+  },
+  "oracle": {
+    "term": "اوریکل",
+    "aliases": [
+      "ڈیٹا فراہم کنندہ"
+    ],
+    "transliteration": "Oracle",
+    "morphology": {
+      "noun": {
+        "singular": "اوریکل"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "اوریکل",
+        "example": "اوریکل سمارٹ کنٹریکٹس کو بیرونی دنیا سے ڈیٹا فراہم کرتا ہے۔"
+      },
+      "heading": {
+        "term": "اوریکل"
+      },
+      "tag": {
+        "term": "اوریکل"
+      },
+      "ui": {
+        "term": "اوریکل"
+      },
+      "code": {
+        "term": "oracle"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "اوریکل",
+      "other": "اوریکلز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "blob": {
+    "term": "بلوب",
+    "aliases": [],
+    "transliteration": "Blob",
+    "morphology": {
+      "noun": {
+        "singular": "بلوب"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "بلوب",
+        "example": "ایتھریم اپ گریڈ نے ڈیٹا اسٹوریج کے لیے بلوب کا تصور متعارف کرایا۔"
+      },
+      "heading": {
+        "term": "بلوب"
+      },
+      "tag": {
+        "term": "بلوب"
+      },
+      "ui": {
+        "term": "بلوب"
+      },
+      "code": {
+        "term": "blob"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "بلوب",
+      "other": "بلوبس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term for EIP-4844 data blobs."
+  },
+  "slot": {
+    "term": "سلاٹ",
+    "aliases": [
+      "خانہ"
+    ],
+    "transliteration": "Slot",
+    "morphology": {
+      "noun": {
+        "singular": "سلاٹ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "سلاٹ",
+        "example": "ہر ۱۲ سیکنڈ میں نیٹ ورک پر ایک نیا سلاٹ بنتا ہے۔"
+      },
+      "heading": {
+        "term": "سلاٹ"
+      },
+      "tag": {
+        "term": "سلاٹ"
+      },
+      "ui": {
+        "term": "سلاٹ"
+      },
+      "code": {
+        "term": "slot"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "سلاٹ",
+      "other": "سلاٹس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "decentralized autonomous organization (dao)": {
+    "term": "غیر مرکزی خود مختار تنظیم",
+    "aliases": [
+      "ڈی اے او"
+    ],
+    "transliteration": "Ghair markazi khud mukhtar tanzeem",
+    "morphology": {
+      "noun": {
+        "singular": "غیر مرکزی خود مختار تنظیم"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "غیر مرکزی خود مختار تنظیم (DAO)",
+        "example": "غیر مرکزی خود مختار تنظیم کے اراکین گورننس ٹوکنز کے ذریعے ووٹ دیتے ہیں۔"
+      },
+      "heading": {
+        "term": "غیر مرکزی خود مختار تنظیم (DAO)"
+      },
+      "tag": {
+        "term": "DAO"
+      },
+      "ui": {
+        "term": "ڈی اے او"
+      },
+      "code": {
+        "term": "dao"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "تنظیم",
+      "other": "تنظیمیں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Common to include the English acronym DAO in parentheses."
+  },
+  "testnet": {
+    "term": "ٹیسٹ نیٹ",
+    "aliases": [
+      "آزمائشی نیٹ ورک"
+    ],
+    "transliteration": "Testnet",
+    "morphology": {
+      "noun": {
+        "singular": "ٹیسٹ نیٹ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ٹیسٹ نیٹ",
+        "example": "ڈیولپرز اپنے سمارٹ کنٹریکٹس کو پہلے ٹیسٹ نیٹ پر لانچ کرتے ہیں۔"
+      },
+      "heading": {
+        "term": "ٹیسٹ نیٹ"
+      },
+      "tag": {
+        "term": "ٹیسٹ نیٹ"
+      },
+      "ui": {
+        "term": "ٹیسٹ نیٹ"
+      },
+      "code": {
+        "term": "testnet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus client": {
+    "term": "اتفاقِ رائے کا کلائنٹ",
+    "aliases": [
+      "کنسنسس کلائنٹ"
+    ],
+    "transliteration": "Ittifaq-e-rai ka client",
+    "morphology": {
+      "noun": {
+        "singular": "اتفاقِ رائے کا کلائنٹ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "اتفاقِ رائے کا کلائنٹ",
+        "example": "نیٹ ورک کی حفاظت کے لیے ایک فعال اتفاقِ رائے کا کلائنٹ ضروری ہے۔"
+      },
+      "heading": {
+        "term": "اتفاقِ رائے کا کلائنٹ"
+      },
+      "tag": {
+        "term": "کنسنسس"
+      },
+      "ui": {
+        "term": "اتفاقِ رائے کا کلائنٹ"
+      },
+      "code": {
+        "term": "consensus_client"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "اتفاقِ رائے کا کلائنٹ",
+      "other": "اتفاقِ رائے کے کلائنٹس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Consensus is translated as 'Ittifaq-e-rai', while client is commonly transliterated in Urdu technical contexts."
+  },
+  "layer 2 (l2)": {
+    "term": "لیئر ۲",
+    "aliases": [
+      "ایل ۲",
+      "دوسری تہہ"
+    ],
+    "transliteration": "Layer Do",
+    "morphology": {
+      "noun": {
+        "singular": "لیئر ۲"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "l2-scaling": "لیئر ۲ سکیلنگ"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "لیئر ۲",
+        "example": "لیئر ۲ سلوشنز ایتھریم پر ٹرانزیکشن فیس کو کم کرتے ہیں۔"
+      },
+      "heading": {
+        "term": "لیئر ۲ (ایل ۲)"
+      },
+      "tag": {
+        "term": "ایل ۲"
+      },
+      "ui": {
+        "term": "لیئر ۲"
+      },
+      "code": {
+        "term": "layer2"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "لیئر ۲",
+      "other": "لیئر ۲ نیٹ ورکس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Uses Urdu numeral ۲ for '2'."
+  },
+  "zk": {
+    "term": "زیڈ کے",
+    "aliases": [
+      "صفر علمی",
+      "زیرو نالج"
+    ],
+    "transliteration": "ZK",
+    "morphology": {
+      "noun": {
+        "singular": "زیڈ کے"
+      },
+      "verb": null,
+      "adjective": "زیڈ کے پر مبنی",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zk-rollup": "زیڈ کے رول اپ"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "زیڈ کے",
+        "example": "زیڈ کے ٹیکنالوجی صارفین کی رازداری کو یقینی بناتی ہے۔"
+      },
+      "heading": {
+        "term": "زیڈ کے (ZK)"
+      },
+      "tag": {
+        "term": "ZK"
+      },
+      "ui": {
+        "term": "زیڈ کے"
+      },
+      "code": {
+        "term": "zk"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliteration of initials is standard for technical abbreviations in Urdu."
+  },
+  "private key": {
+    "term": "نجی کلید",
+    "aliases": [
+      "پرائیویٹ کی"
+    ],
+    "transliteration": "Niji kaleed",
+    "morphology": {
+      "noun": {
+        "singular": "نجی کلید"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "نجی کلید",
+        "example": "اپنی نجی کلید کو کبھی بھی کسی کے ساتھ شیئر نہ کریں۔"
+      },
+      "heading": {
+        "term": "نجی کلید"
+      },
+      "tag": {
+        "term": "کلید"
+      },
+      "ui": {
+        "term": "نجی کلید"
+      },
+      "code": {
+        "term": "private_key"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "نجی کلید",
+      "other": "نجی کلیدیں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "crypto": {
+    "term": "کرپٹو",
+    "aliases": [
+      "کرپٹو کرنسی",
+      "خفیہ نگاری"
+    ],
+    "transliteration": "Crypto",
+    "morphology": {
+      "noun": {
+        "singular": "کرپٹو"
+      },
+      "verb": null,
+      "adjective": "کرپٹو گرافک",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "crypto-wallet": "کرپٹو والٹ"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "کرپٹو",
+        "example": "کرپٹو کی دنیا تیزی سے ترقی کر رہی ہے۔"
+      },
+      "heading": {
+        "term": "کرپٹو"
+      },
+      "tag": {
+        "term": "کرپٹو"
+      },
+      "ui": {
+        "term": "کرپٹو"
+      },
+      "code": {
+        "term": "crypto"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly transliterated."
+  },
+  "layer 1 (l1)": {
+    "term": "لیئر ۱",
+    "aliases": [
+      "ایل ۱",
+      "پہلی تہہ"
+    ],
+    "transliteration": "Layer Ek",
+    "morphology": {
+      "noun": {
+        "singular": "لیئر ۱"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "لیئر ۱",
+        "example": "ایتھریم ایک لیئر ۱ بلاک چین نیٹ ورک ہے۔"
+      },
+      "heading": {
+        "term": "لیئر ۱ (ایل ۱)"
+      },
+      "tag": {
+        "term": "ایل ۱"
+      },
+      "ui": {
+        "term": "لیئر ۱"
+      },
+      "code": {
+        "term": "layer1"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "لیئر ۱",
+      "other": "لیئر ۱ نیٹ ورکس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Uses Urdu numeral ۱ for '1'."
+  },
+  "maximal extractable value (mev)": {
+    "term": "زیادہ سے زیادہ نکالی جانے والی قدر",
+    "aliases": [
+      "ایم ای وی"
+    ],
+    "transliteration": "Ziada se ziada nikali jane wali qadr",
+    "morphology": {
+      "noun": {
+        "singular": "زیادہ سے زیادہ نکالی جانے والی قدر"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "mev-boost": "ایم ای وی بوسٹ"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "زیادہ سے زیادہ نکالی جانے والی قدر",
+        "example": "ایم ای وی سے مراد وہ اضافی منافع ہے جو بلاک پروڈیوسر حاصل کر سکتے ہیں۔"
+      },
+      "heading": {
+        "term": "زیادہ سے زیادہ نکالی جانے والی قدر (MEV)"
+      },
+      "tag": {
+        "term": "MEV"
+      },
+      "ui": {
+        "term": "ایم ای وی"
+      },
+      "code": {
+        "term": "mev"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Literal translation of the English concept."
+  },
+  "exit": {
+    "term": "خروج",
+    "aliases": [
+      "باہر نکلنا"
+    ],
+    "transliteration": "Khurooj",
+    "morphology": {
+      "noun": {
+        "singular": "خروج"
+      },
+      "verb": {
+        "infinitive": "خروج کرنا",
+        "participle": "خروج کر رہا"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "validator-exit": "ویلیڈیٹر کا خروج"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "خروج",
+        "example": "ویلیڈیٹر کو نیٹ ورک سے خروج کے لیے ایک ٹرانزیکشن بھیجنی پڑتی ہے۔"
+      },
+      "heading": {
+        "term": "خروج"
+      },
+      "tag": {
+        "term": "خروج"
+      },
+      "ui": {
+        "term": "باہر نکلیں"
+      },
+      "code": {
+        "term": "exit"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "خروج",
+      "other": "خروج"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "'Khurooj' is a formal Arabic-derived Urdu term for exit/departure."
+  },
+  "opcode": {
+    "term": "آپ کوڈ",
+    "aliases": [
+      "آپریشن کوڈ"
+    ],
+    "transliteration": "Opcode",
+    "morphology": {
+      "noun": {
+        "singular": "آپ کوڈ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "آپ کوڈ",
+        "example": "ایتھریم ورچوئل مشین ہر آپ کوڈ کو ایک مخصوص ترتیب میں چلاتی ہے۔"
+      },
+      "heading": {
+        "term": "آپ کوڈ"
+      },
+      "tag": {
+        "term": "کوڈ"
+      },
+      "ui": {
+        "term": "آپ کوڈ"
+      },
+      "code": {
+        "term": "opcode"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "آپ کوڈ",
+      "other": "آپ کوڈز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Transliterated as it is a low-level programming term."
+  },
+  "decentralized finance (defi)": {
+    "term": "غیر مرکزی مالیات",
+    "aliases": [
+      "ڈی فائی"
+    ],
+    "transliteration": "Ghair markazi maliyat",
+    "morphology": {
+      "noun": {
+        "singular": "غیر مرکزی مالیات"
+      },
+      "verb": null,
+      "adjective": "غیر مرکزی مالیاتی",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "defi-protocol": "ڈی فائی پروٹوکول"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "غیر مرکزی مالیات",
+        "example": "غیر مرکزی مالیات روایتی بینکوں کے بغیر مالیاتی خدمات فراہم کرتی ہے۔"
+      },
+      "heading": {
+        "term": "غیر مرکزی مالیات (DeFi)"
+      },
+      "tag": {
+        "term": "DeFi"
+      },
+      "ui": {
+        "term": "غیر مرکزی مالیات"
+      },
+      "code": {
+        "term": "defi"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "privacy": {
+    "term": "راز داری",
+    "aliases": [
+      "خلوت"
+    ],
+    "transliteration": "Raazdari",
+    "morphology": {
+      "noun": {
+        "singular": "راز داری"
+      },
+      "verb": null,
+      "adjective": "نجی",
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "راز داری",
+        "example": "بلاک چین ٹیکنالوجی میں صارفین کی راز داری کا تحفظ ایک اہم چیلنج ہے۔"
+      },
+      "heading": {
+        "term": "راز داری"
+      },
+      "tag": {
+        "term": "راز داری"
+      },
+      "ui": {
+        "term": "راز داری"
+      },
+      "code": {
+        "term": "privacy"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "راز داری",
+      "other": "راز داریاں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "optimistic rollup": {
+    "term": "آپٹیمسٹک رول اپ",
+    "aliases": [
+      "پر امید رول اپ"
+    ],
+    "transliteration": "Optimistic rollup",
+    "morphology": {
+      "noun": {
+        "singular": "آپٹیمسٹک رول اپ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "آپٹیمسٹک رول اپ",
+        "example": "آپٹیمسٹک رول اپ نیٹ ورک کی گنجائش بڑھانے کے لیے استعمال ہوتے ہیں۔"
+      },
+      "heading": {
+        "term": "آپٹیمسٹک رول اپ"
+      },
+      "tag": {
+        "term": "رول اپ"
+      },
+      "ui": {
+        "term": "آپٹیمسٹک رول اپ"
+      },
+      "code": {
+        "term": "optimisticRollup"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "آپٹیمسٹک رول اپ",
+      "other": "آپٹیمسٹک رول اپس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually transliterated in Urdu tech circles."
+  },
+  "ethereum request for comments (erc)": {
+    "term": "ایتھیریم کمنٹس کی درخواست (ERC)",
+    "aliases": [
+      "ای آر سی"
+    ],
+    "transliteration": "Ethereum Request for Comments (ERC)",
+    "morphology": {
+      "noun": {
+        "singular": "درخواست"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ای آر سی (ERC)",
+        "example": "ای آر سی-۲۰ ٹوکنز کے لیے سب سے زیادہ استعمال ہونے والا معیار ہے۔"
+      },
+      "heading": {
+        "term": "ای آر سی (ERC)"
+      },
+      "tag": {
+        "term": "ERC"
+      },
+      "ui": {
+        "term": "ERC"
+      },
+      "code": {
+        "term": "erc"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": {
+      "one": "درخواست",
+      "other": "درخواستیں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "The acronym ERC is widely used and recognized."
+  },
+  "plasma": {
+    "term": "پلازما",
+    "aliases": [],
+    "transliteration": "Plasma",
+    "morphology": {
+      "noun": {
+        "singular": "پلازما"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "پلازما",
+        "example": "پلازما فریم ورک مین چین کے باہر لین دین کو پروسیس کرنے کی اجازت دیتا ہے۔"
+      },
+      "heading": {
+        "term": "پلازما"
+      },
+      "tag": {
+        "term": "پلازما"
+      },
+      "ui": {
+        "term": "پلازما"
+      },
+      "code": {
+        "term": "plasma"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "library": {
+    "term": "لائبریری",
+    "aliases": [
+      "کتب خانہ"
+    ],
+    "transliteration": "Library",
+    "morphology": {
+      "noun": {
+        "singular": "لائبریری"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "لائبریری",
+        "example": "سولیڈیٹی میں لائبریری کا استعمال کوڈ کو دوبارہ استعمال کرنے کے لیے کیا جاتا ہے۔"
+      },
+      "heading": {
+        "term": "لائبریری"
+      },
+      "tag": {
+        "term": "لائبریری"
+      },
+      "ui": {
+        "term": "لائبریری"
+      },
+      "code": {
+        "term": "library"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "لائبریری",
+      "other": "لائبریریاں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "the merge": {
+    "term": "دی مرج",
+    "aliases": [
+      "انضمام"
+    ],
+    "transliteration": "The Merge",
+    "morphology": {
+      "noun": {
+        "singular": "دی مرج"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "دی مرج",
+        "example": "دی مرج کے بعد ایتھیریم پروف آف اسٹیک پر منتقل ہو گیا۔"
+      },
+      "heading": {
+        "term": "دی مرج"
+      },
+      "tag": {
+        "term": "مرج"
+      },
+      "ui": {
+        "term": "دی مرج"
+      },
+      "code": {
+        "term": "the-merge"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Specific historical event name in Ethereum."
+  },
+  "zero-knowledge proof": {
+    "term": "زیرو نالج پروف",
+    "aliases": [
+      "علم کے بغیر ثبوت"
+    ],
+    "transliteration": "Zero-knowledge proof",
+    "morphology": {
+      "noun": {
+        "singular": "زیرو نالج پروف"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "زیرو نالج پروف",
+        "example": "زیرو نالج پروف کے ذریعے آپ اپنی شناخت ظاہر کیے بغیر تصدیق کر سکتے ہیں۔"
+      },
+      "heading": {
+        "term": "زیرو نالج پروف"
+      },
+      "tag": {
+        "term": "ZKP"
+      },
+      "ui": {
+        "term": "زیرو نالج پروف"
+      },
+      "code": {
+        "term": "zkProof"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "زیرو نالج پروف",
+      "other": "زیرو نالج پروفس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "data availability": {
+    "term": "ڈیٹا کی دستیابی",
+    "aliases": [],
+    "transliteration": "Data ki dastyabi",
+    "morphology": {
+      "noun": {
+        "singular": "دستیابی"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ڈیٹا کی دستیابی",
+        "example": "لیئر ۲ سلوشنز کے لیے ڈیٹا کی دستیابی ایک بنیادی ضرورت ہے۔"
+      },
+      "heading": {
+        "term": "ڈیٹا کی دستیابی"
+      },
+      "tag": {
+        "term": "ڈیٹا"
+      },
+      "ui": {
+        "term": "ڈیٹا کی دستیابی"
+      },
+      "code": {
+        "term": "dataAvailability"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "log": {
+    "term": "لاگ",
+    "aliases": [
+      "ریکارڈ"
+    ],
+    "transliteration": "Log",
+    "morphology": {
+      "noun": {
+        "singular": "لاگ"
+      },
+      "verb": {
+        "infinitive": "لاگ کرنا",
+        "participle": "لاگ کیا گیا"
+      },
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "لاگ",
+        "example": "ایونٹ لاگ میں ۱۰ ٹرانزیکشنز کا ریکارڈ محفوظ کیا گیا ہے۔"
+      },
+      "heading": {
+        "term": "لاگ"
+      },
+      "tag": {
+        "term": "لاگ"
+      },
+      "ui": {
+        "term": "لاگ"
+      },
+      "code": {
+        "term": "log"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "لاگ",
+      "other": "لاگز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "beacon chain": {
+    "term": "بیکن چین",
+    "aliases": [],
+    "transliteration": "Beacon chain",
+    "morphology": {
+      "noun": {
+        "singular": "بیکن چین"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "بیکن چین",
+        "example": "بیکن چین نے ایتھیریم کے اسٹیکنگ میکانزم کو متعارف کرایا۔"
+      },
+      "heading": {
+        "term": "بیکن چین"
+      },
+      "tag": {
+        "term": "بیکن"
+      },
+      "ui": {
+        "term": "بیکن چین"
+      },
+      "code": {
+        "term": "beaconChain"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "liquidity": {
+    "term": "سیالیت",
+    "aliases": [
+      "لکویڈیٹی"
+    ],
+    "transliteration": "Sayaliyat",
+    "morphology": {
+      "noun": {
+        "singular": "سیالیت"
+      },
+      "verb": null,
+      "adjective": "سیال",
+      "agent": null,
+      "negation": "عدمِ سیالیت",
+      "compounds": {
+        "liquidity-provider": "سیالیت فراہم کنندہ",
+        "liquidity-pool": "سیالیت کا پول"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "سیالیت",
+        "example": "ڈی فائی (DeFi) میں، کسی بھی اثاثے کی آسانی سے خرید و فروخت کے لیے سیالیت کا ہونا ضروری ہے۔"
+      },
+      "heading": {
+        "term": "سیالیت"
+      },
+      "tag": {
+        "term": "سیالیت"
+      },
+      "ui": {
+        "term": "سیالیت"
+      },
+      "code": {
+        "term": "liquidity"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "سیالیت",
+      "other": "سیالیتیں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "While 'Sayaliyat' is the formal Urdu term, 'Liquidity' is frequently transliterated in technical discussions."
+  },
+  "epoch": {
+    "term": "ایپوک",
+    "aliases": [
+      "دور"
+    ],
+    "transliteration": "Epoch",
+    "morphology": {
+      "noun": {
+        "singular": "ایپوک"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "ایپوک",
+        "example": "ایتھریم نیٹ ورک پر ایک ایپوک (Epoch) تقریباً ٦.٤ منٹ پر مشتمل ہوتا ہے۔"
+      },
+      "heading": {
+        "term": "ایپوک"
+      },
+      "tag": {
+        "term": "ایپوک"
+      },
+      "ui": {
+        "term": "ایپوک"
+      },
+      "code": {
+        "term": "epoch"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "ایپوک",
+      "other": "ایپوکس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Commonly transliterated to maintain technical precision within the consensus context."
+  },
+  "ethereum mainnet": {
+    "term": "ایتھریم مین نیٹ",
+    "aliases": [],
+    "transliteration": "Ethereum Mainnet",
+    "morphology": {
+      "noun": {
+        "singular": "ایتھریم مین نیٹ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "ایتھریم مین نیٹ",
+        "example": "صارفین اپنی اصل ٹرانزیکشنز ایتھریم مین نیٹ پر مکمل کرتے ہیں۔"
+      },
+      "heading": {
+        "term": "ایتھریم مین نیٹ"
+      },
+      "tag": {
+        "term": "مین نیٹ"
+      },
+      "ui": {
+        "term": "ایتھریم مین نیٹ"
+      },
+      "code": {
+        "term": "mainnet"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun, always transliterated."
+  },
+  "proposal": {
+    "term": "تجویز",
+    "aliases": [
+      "پروپوزل"
+    ],
+    "transliteration": "Tajveez",
+    "morphology": {
+      "noun": {
+        "singular": "تجویز"
+      },
+      "verb": {
+        "infinitive": "تجویز کرنا",
+        "participle": "تجویز کردہ"
+      },
+      "adjective": "تجویزی",
+      "agent": "تجویز کنندہ",
+      "negation": null,
+      "compounds": {
+        "governance-proposal": "گورننس کی تجویز"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "تجویز",
+        "example": "گورننس سسٹم میں تبدیلی لانے کے لیے ایک نئی تجویز پیش کی گئی ہے۔"
+      },
+      "heading": {
+        "term": "تجویز"
+      },
+      "tag": {
+        "term": "تجویز"
+      },
+      "ui": {
+        "term": "تجویز پیش کریں"
+      },
+      "code": {
+        "term": "proposal"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "تجویز",
+      "other": "تجاویز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "block proposer": {
+    "term": "بلاک تجویز کنندہ",
+    "aliases": [
+      "بلاک پروپوزر"
+    ],
+    "transliteration": "Block tajveez kuninda",
+    "morphology": {
+      "noun": {
+        "singular": "بلاک تجویز کنندہ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": "بلاک تجویز کنندہ",
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "بلاک تجویز کنندہ",
+        "example": "پروف آف اسٹیک (PoS) میں، ایک تصدیق کنندہ کو بلاک تجویز کنندہ کے طور پر منتخب کیا جاتا ہے۔"
+      },
+      "heading": {
+        "term": "بلاک تجویز کنندہ"
+      },
+      "tag": {
+        "term": "تجویز کنندہ"
+      },
+      "ui": {
+        "term": "بلاک تجویز کنندہ"
+      },
+      "code": {
+        "term": "proposer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "بلاک تجویز کنندہ",
+      "other": "بلاک تجویز کنندگان"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "consensus layer": {
+    "term": "اتفاق رائے کی تہہ",
+    "aliases": [
+      "کنسنسس لیئر"
+    ],
+    "transliteration": "Ittifaq-e-rai ki teh",
+    "morphology": {
+      "noun": {
+        "singular": "اتفاق رائے کی تہہ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "اتفاق رائے کی تہہ",
+        "example": "اتفاق رائے کی تہہ نیٹ ورک کے تمام نوڈس کے درمیان ہم آہنگی پیدا کرتی ہے۔"
+      },
+      "heading": {
+        "term": "اتفاق رائے کی تہہ"
+      },
+      "tag": {
+        "term": "اتفاق رائے"
+      },
+      "ui": {
+        "term": "اتفاق رائے کی تہہ"
+      },
+      "code": {
+        "term": "consensus_layer"
+      }
+    },
+    "grammar": {
+      "gender": "feminine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "اتفاق رائے کی تہہ",
+      "other": "اتفاق رائے کی تہیں"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "peer": {
+    "term": "پیئر",
+    "aliases": [
+      "ہمسر"
+    ],
+    "transliteration": "Peer",
+    "morphology": {
+      "noun": {
+        "singular": "پیئر"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "peer-to-peer": "پیئر ٹو پیئر"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "پیئر",
+        "example": "آپ کا نوڈ فی الوقت ٥ مختلف پیئرز سے جڑا ہوا ہے۔"
+      },
+      "heading": {
+        "term": "پیئرز"
+      },
+      "tag": {
+        "term": "پیئر"
+      },
+      "ui": {
+        "term": "پیئرز کی فہرست"
+      },
+      "code": {
+        "term": "peer"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "animate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "پیئر",
+      "other": "پیئرز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "In networking, 'Peer' is almost exclusively transliterated in Urdu technical literature."
+  },
+  "json-rpc": {
+    "term": "JSON-RPC",
+    "aliases": [
+      "جے سن آر پی سی"
+    ],
+    "transliteration": "JSON-RPC",
+    "morphology": {
+      "noun": {
+        "singular": "JSON-RPC"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "JSON-RPC",
+        "example": "ایپلی کیشنز ایتھریم سے بات چیت کرنے کے لیے JSON-RPC کا استعمال کرتی ہیں۔"
+      },
+      "heading": {
+        "term": "JSON-RPC"
+      },
+      "tag": {
+        "term": "JSON-RPC"
+      },
+      "ui": {
+        "term": "JSON-RPC اینڈ پوائنٹ"
+      },
+      "code": {
+        "term": "jsonrpc"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Standard technical protocol acronym."
+  },
+  "nonce": {
+    "term": "نونس",
+    "aliases": [],
+    "transliteration": "Nonce",
+    "morphology": {
+      "noun": {
+        "singular": "نونس"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "نونس",
+        "example": "ہر ٹرانزیکشن میں ایک نونس (Nonce) شامل ہوتا ہے تاکہ اسے دوبارہ استعمال نہ کیا جا سکے۔"
+      },
+      "heading": {
+        "term": "نونس"
+      },
+      "tag": {
+        "term": "نونس"
+      },
+      "ui": {
+        "term": "نونس"
+      },
+      "code": {
+        "term": "nonce"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "نونس",
+      "other": "نونسز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Cryptographic term, typically transliterated as there is no direct equivalent in common Urdu."
+  },
+  "ipfs": {
+    "term": "IPFS",
+    "aliases": [
+      "آئی پی ایف ایس"
+    ],
+    "transliteration": "IPFS",
+    "morphology": {
+      "noun": {
+        "singular": "IPFS"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": null
+    },
+    "contexts": {
+      "prose": {
+        "term": "IPFS",
+        "example": "آپ اپنی فائلیں IPFS پر محفوظ کر سکتے ہیں جو کہ ایک غیر مرکزی اسٹوریج نیٹ ورک ہے۔"
+      },
+      "heading": {
+        "term": "IPFS"
+      },
+      "tag": {
+        "term": "IPFS"
+      },
+      "ui": {
+        "term": "IPFS پر اپ لوڈ کریں"
+      },
+      "code": {
+        "term": "ipfs"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "abbreviation",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Acronym for InterPlanetary File System."
+  },
+  "full node": {
+    "term": "مکمل نوڈ",
+    "aliases": [
+      "فل نوڈ"
+    ],
+    "transliteration": "Mukammal Node",
+    "morphology": {
+      "noun": {
+        "singular": "مکمل نوڈ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "مکمل نوڈ",
+        "example": "ایک مکمل نوڈ بلاک چین کے تمام قوانین کی آزادانہ طور پر تصدیق کرتا ہے۔"
+      },
+      "heading": {
+        "term": "مکمل نوڈ"
+      },
+      "tag": {
+        "term": "نوڈ"
+      },
+      "ui": {
+        "term": "مکمل نوڈ چلائیں"
+      },
+      "code": {
+        "term": "full_node"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "مکمل نوڈ",
+      "other": "مکمل نوڈز"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
+  },
+  "zero-knowledge": {
+    "term": "زیرو نالج",
+    "aliases": [
+      "صفر علم",
+      "خفیہ علم"
+    ],
+    "transliteration": "Zero Knowledge",
+    "morphology": {
+      "noun": {
+        "singular": "زیرو نالج"
+      },
+      "verb": null,
+      "adjective": "زیرو نالج",
+      "agent": null,
+      "negation": null,
+      "compounds": {
+        "zero-knowledge-proof": "زیرو نالج ثبوت"
+      }
+    },
+    "contexts": {
+      "prose": {
+        "term": "زیرو نالج",
+        "example": "زیرو نالج ٹیکنالوجی صارف کی رازداری کو برقرار رکھتے ہوئے ڈیٹا کی تصدیق کرتی ہے۔"
+      },
+      "heading": {
+        "term": "زیرو نالج"
+      },
+      "tag": {
+        "term": "رازداری"
+      },
+      "ui": {
+        "term": "زیرو نالج"
+      },
+      "code": {
+        "term": "zero_knowledge"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "adjective",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Technical term usually kept as transliterated 'Zero Knowledge' in Urdu tech discourse."
+  },
+  "hardhat": {
+    "term": "ہارڈ ہیٹ",
+    "aliases": [],
+    "transliteration": "Hardhat",
+    "morphology": {
+      "noun": {
+        "singular": "ہارڈ ہیٹ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ہارڈ ہیٹ",
+        "example": "ڈویلپرز اپنے سمارٹ کنٹریکٹس کی جانچ اور تعیناتی کے لیے ہارڈ ہیٹ کا استعمال کرتے ہیں۔"
+      },
+      "heading": {
+        "term": "ہارڈ ہیٹ"
+      },
+      "tag": {
+        "term": "ٹول"
+      },
+      "ui": {
+        "term": "ہارڈ ہیٹ"
+      },
+      "code": {
+        "term": "hardhat"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "proper_noun",
+      "formality": "neutral"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Proper noun referring to the development framework."
+  },
+  "checkpoint": {
+    "term": "چیک پوائنٹ",
+    "aliases": [
+      "نشانِ تصدیق",
+      "پڑاؤ"
+    ],
+    "transliteration": "Checkpoint",
+    "morphology": {
+      "noun": {
+        "singular": "چیک پوائنٹ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "چیک پوائنٹ",
+        "example": "بیقن چین میں ہر ۳۲ سلاٹ کے بعد ایک چیک پوائنٹ بنایا جاتا ہے۔"
+      },
+      "heading": {
+        "term": "چیک پوائنٹ"
+      },
+      "tag": {
+        "term": "کنسنسس"
+      },
+      "ui": {
+        "term": "چیک پوائنٹ"
+      },
+      "code": {
+        "term": "checkpoint"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "neutral"
+    },
+    "plurals": {
+      "one": "چیک پوائنٹ",
+      "other": "چیک پوائنٹس"
+    },
+    "source": "llm",
+    "confidence": "high",
+    "notes": "Native Urdu numerals used in example sentence."
+  }
+}

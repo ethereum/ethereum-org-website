@@ -1,0 +1,12 @@
+Keychain initialization encountered an error: libsecret-1.so.0: cannot open shared object file: No such file or directory
+Using FileKeychain fallback for secure storage.
+Loaded cached credentials.
+Error when talking to Gemini API Full report available at: /tmp/gemini-client-error-Turn.run-sendMessageStream-2026-03-28T01-59-46-308Z.json Error: Premature close
+    at IncomingMessage.<anonymous> (/home/claude/.local/share/fnm/node-versions/v22.22.0/installation/lib/node_modules/@google/gemini-cli/node_modules/node-fetch/lib/index.js:1748:18)
+    at Object.onceWrapper (node:events:633:28)
+    at IncomingMessage.emit (node:events:519:28)
+    at emitCloseNT (node:internal/streams/destroy:148:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'ERR_STREAM_PREMATURE_CLOSE'
+}
+An unexpected critical error occurred:[object Object]
