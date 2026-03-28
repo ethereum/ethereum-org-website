@@ -6,13 +6,11 @@ sidebarDepth: 2
 hideEditButton: true
 ---
 
+<WhitepaperBridge />
+
+_Obwohl schon einige Jahre alt, behalten wir das untenstehende Originaldokument bei, da es nach wie vor als nützliche Referenz und als zutreffende Darstellung von [Ethereum](/) und seiner Vision dient._
+
 # Ethereum Whitepaper {#ethereum-whitepaper}
-
-_Diese einleitende Arbeit wurde ursprünglich 2014 von Vitalik Buterin, dem Gründer von [Ethereum](/what-is-ethereum/), vor dem Projektstart im Jahr 2015 veröffentlicht. Es ist erwähnenswert, dass sich Ethereum, wie viele gemeinschaftlich gesteuerte Open-Source-Softwareprojekte, seit seiner anfänglichen Einführung weiterentwickelt hat._
-
-_Obwohl diese Arbeit schon einige Jahre alt ist, pflegen wir sie nach wie vor, weil sie weiterhin als nützliche Referenz und präzise Darstellung von Ethereum und seiner Vision dient. Um mehr über die neuesten Entwicklungen von Ethereum und dazu zu erfahren, wie Änderungen am Protokoll vorgenommen werden, empfehlen wir [diese Anleitung](/learn/)._
-
-[Forscher und Akademiker, die eine historische oder kanonische Version des Whitepapers [vom Dezember 2014] suchen, sollten diese PDF-Datei verwenden.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
 ## Eine Plattform der nächsten Generation für Smart Contracts und dezentralisierte Anwendungen {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
