@@ -1,7 +1,7 @@
 {
   "metadata": {
     "generated": "2026-03-26",
-    "total_confirmed": 455,
+    "total_confirmed": 519,
     "total_with_script_rule": 34,
     "total_with_morph_family": 36,
     "total_with_translation_note": 38,
@@ -664,6 +664,25 @@
         "base": "beacon node"
       }
     },
+    "beacon-block": {
+      "id": "beacon-block",
+      "term": "beacon block",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 12,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "beacon block"
+      },
+      "script_rule": "translate",
+      "note": "A block on the beacon chain containing attestations and the execution payload."
+    },
     "block builder": {
       "id": "block-builder",
       "term": "block builder",
@@ -963,6 +982,25 @@
         "nominalization": "equivocation"
       }
     },
+    "execution-payload": {
+      "id": "execution-payload",
+      "term": "execution payload",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 15,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "execution payload"
+      },
+      "script_rule": "translate",
+      "note": "The transaction-containing portion of a beacon block."
+    },
     "exit": {
       "id": "exit",
       "term": "exit",
@@ -1016,6 +1054,29 @@
       "forms": {
         "base": "fork choice algorithm"
       }
+    },
+    "gasper": {
+      "id": "gasper",
+      "term": "Gasper",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 27,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Gasper"
+      },
+      "script_rule": "keep_latin",
+      "note": "Combined consensus protocol: Casper FFG + LMD-GHOST. Named algorithm, do not translate.",
+      "related": [
+        "casper-ffg",
+        "lmd-ghost"
+      ]
     },
     "holographic consensus": {
       "id": "holographic-consensus",
@@ -1146,6 +1207,28 @@
         "base": "lmd-ghost"
       }
     },
+    "maxeb": {
+      "id": "maxeb",
+      "term": "MaxEB",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 10,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "MaxEB"
+      },
+      "aliases": [
+        "EIP-7251"
+      ],
+      "script_rule": "keep_latin",
+      "note": "Max Effective Balance. Pectra feature (EIP-7251) raising validator balance cap."
+    },
     "miner": {
       "id": "miner",
       "term": "Miner",
@@ -1186,6 +1269,25 @@
       "term_family": "mine",
       "script_rule": "B_always_translate"
     },
+    "nothing-at-stake": {
+      "id": "nothing-at-stake",
+      "term": "nothing-at-stake problem",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 5,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "nothing-at-stake problem"
+      },
+      "script_rule": "translate",
+      "note": "PoS attack vector where validators can vote on multiple chains at no cost."
+    },
     "pooled staking": {
       "id": "pooled-staking",
       "term": "pooled staking",
@@ -1204,6 +1306,28 @@
         "gerund": "pooled staking"
       },
       "term_family": "stake"
+    },
+    "proof-of-authority": {
+      "id": "proof-of-authority",
+      "term": "proof-of-authority (PoA)",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 15,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "proof-of-authority (PoA)"
+      },
+      "aliases": [
+        "PoA"
+      ],
+      "script_rule": "translate",
+      "note": "Consensus mechanism used in private/test networks. Not used on Ethereum mainnet."
     },
     "proof-of-stake (pos)": {
       "id": "pos",
@@ -1254,6 +1378,25 @@
       "morph_family": "propose",
       "morph_note": "'Block proposer' translates differently than general 'to propose an idea'"
     },
+    "proposer-boost": {
+      "id": "proposer-boost",
+      "term": "proposer boost",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 5,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "proposer boost"
+      },
+      "script_rule": "translate",
+      "note": "LMD-GHOST mechanism giving extra weight to timely block proposals."
+    },
     "proposer-builder separation (pbs)": {
       "id": "proposer-builder-separation-pbs",
       "term": "proposer-builder separation (pbs)",
@@ -1294,6 +1437,29 @@
         "base": "re-org"
       }
     },
+    "reorg": {
+      "id": "reorg",
+      "term": "reorg",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 26,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "reorg"
+      },
+      "aliases": [
+        "chain reorganization",
+        "re-org"
+      ],
+      "script_rule": "translate",
+      "note": "When the canonical chain changes and previously included blocks are removed."
+    },
     "restaking": {
       "id": "restaking",
       "term": "restaking",
@@ -1312,6 +1478,48 @@
         "gerund": "restaking"
       },
       "term_family": "stake"
+    },
+    "secret-leader-election": {
+      "id": "secret-leader-election",
+      "term": "secret leader election",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 15,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "secret leader election"
+      },
+      "script_rule": "translate",
+      "note": "Mechanism to hide which validator will propose the next block until after proposal."
+    },
+    "single-slot-finality": {
+      "id": "single-slot-finality",
+      "term": "single slot finality",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 30,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "single slot finality"
+      },
+      "script_rule": "translate",
+      "note": "Proposed upgrade to finalize blocks in a single slot (~12s) instead of ~15 minutes.",
+      "related": [
+        "slot",
+        "finality"
+      ]
     },
     "slashing": {
       "id": "slashing",
@@ -1351,6 +1559,25 @@
       "forms": {
         "base": "slot"
       }
+    },
+    "social-slashing": {
+      "id": "social-slashing",
+      "term": "social slashing",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 3,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "social slashing"
+      },
+      "script_rule": "translate",
+      "note": "Community-coordinated penalty for validator misbehavior outside protocol rules."
     },
     "solo staking": {
       "id": "solo-staking",
@@ -1407,6 +1634,25 @@
       "term_family": "stake",
       "morph_family": "stake",
       "morph_note": "Arabic: verbal noun vs agent noun use distinct patterns. JP/KO: noun is loanword, verb needs native helper"
+    },
+    "stake-grinding": {
+      "id": "stake-grinding",
+      "term": "stake grinding",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 3,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "stake grinding"
+      },
+      "script_rule": "translate",
+      "note": "Attack where validators manipulate randomness to gain advantage in block proposal."
     },
     "staked": {
       "id": "staked",
@@ -1620,6 +1866,25 @@
         "base": "validator lifecycle"
       }
     },
+    "weak-subjectivity": {
+      "id": "weak-subjectivity",
+      "term": "weak subjectivity",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 12,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "weak subjectivity"
+      },
+      "script_rule": "translate",
+      "note": "PoS concept: new nodes need a recent trusted checkpoint to sync safely. Abstract concept, hard to translate."
+    },
     "withdrawal": {
       "id": "withdrawal",
       "term": "withdrawal",
@@ -1639,6 +1904,25 @@
       "morph_family": "withdraw",
       "morph_note": "Action vs resulting transaction are grammatically distinct in Arabic"
     },
+    "withdrawal-credentials": {
+      "id": "withdrawal-credentials",
+      "term": "withdrawal credentials",
+      "category": "consensus",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 8,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "withdrawal credentials"
+      },
+      "script_rule": "translate",
+      "note": "Staking configuration specifying where withdrawn ETH goes."
+    },
     "bls": {
       "id": "bls",
       "term": "BLS",
@@ -1655,6 +1939,25 @@
       "forms": {
         "base": "bls"
       }
+    },
+    "bls-signature": {
+      "id": "bls-signature",
+      "term": "BLS signature",
+      "category": "cryptography",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 4,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "BLS signature"
+      },
+      "script_rule": "hybrid",
+      "note": "Boneh-Lynn-Shacham signature scheme. 'BLS' stays Latin, 'signature' translates."
     },
     "commitment": {
       "id": "commitment",
@@ -1690,6 +1993,25 @@
       "forms": {
         "base": "cryptography"
       }
+    },
+    "dagger-hashimoto": {
+      "id": "dagger-hashimoto",
+      "term": "Dagger-Hashimoto",
+      "category": "cryptography",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 24,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Dagger-Hashimoto"
+      },
+      "script_rule": "keep_latin",
+      "note": "Predecessor to Ethash mining algorithm. Historical, named algorithm."
     },
     "distributed hash table (dht)": {
       "id": "distributed-hash-table",
@@ -2206,6 +2528,25 @@
         "gerund": "borrowing"
       }
     },
+    "chainlink": {
+      "id": "chainlink",
+      "term": "Chainlink",
+      "category": "defi",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 16,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Chainlink"
+      },
+      "script_rule": "transliterate",
+      "note": "Oracle network. Product name -- do NOT translate as 'chain link'."
+    },
     "collateral": {
       "id": "collateral",
       "term": "collateral",
@@ -2477,6 +2818,25 @@
       },
       "script_rule": "B_always_translate"
     },
+    "oracle-problem": {
+      "id": "oracle-problem",
+      "term": "oracle problem",
+      "category": "defi",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 5,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "oracle problem"
+      },
+      "script_rule": "translate",
+      "note": "The challenge of getting reliable external data onto a blockchain."
+    },
     "overcollateralization": {
       "id": "overcollateralization",
       "term": "overcollateralization",
@@ -2638,6 +2998,44 @@
       "morph_family": "swap",
       "morph_note": "DE/NL: noun (Tausch) and verb (tauschen) differ; DeFi context needs technical synonyms"
     },
+    "tellor": {
+      "id": "tellor",
+      "term": "Tellor",
+      "category": "defi",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 27,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Tellor"
+      },
+      "script_rule": "transliterate",
+      "note": "Oracle protocol. Product name."
+    },
+    "uniswap": {
+      "id": "uniswap",
+      "term": "Uniswap",
+      "category": "defi",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 109,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Uniswap"
+      },
+      "script_rule": "transliterate",
+      "note": "Decentralized exchange protocol. Product name."
+    },
     "vault": {
       "id": "vault",
       "term": "vault",
@@ -2718,6 +3116,63 @@
         },
         "decentralized application"
       ]
+    },
+    "devp2p": {
+      "id": "devp2p",
+      "term": "devp2p",
+      "category": "development",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 29,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "devp2p"
+      },
+      "script_rule": "keep_latin",
+      "note": "Ethereum networking protocol stack. Technical identifier."
+    },
+    "discv5": {
+      "id": "discv5",
+      "term": "discv5",
+      "category": "development",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 10,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "discv5"
+      },
+      "script_rule": "keep_latin",
+      "note": "Node discovery protocol v5. Technical identifier."
+    },
+    "echidna": {
+      "id": "echidna",
+      "term": "Echidna",
+      "category": "development",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 133,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Echidna"
+      },
+      "script_rule": "transliterate",
+      "note": "Fuzzing tool. Product name -- do NOT translate as the animal."
     },
     "faucet": {
       "id": "faucet",
@@ -2805,6 +3260,101 @@
         "base": "json-rpc"
       }
     },
+    "kurtosis": {
+      "id": "kurtosis",
+      "term": "Kurtosis",
+      "category": "development",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 18,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Kurtosis"
+      },
+      "script_rule": "keep_latin",
+      "note": "Development and testing platform. Product name."
+    },
+    "libp2p": {
+      "id": "libp2p",
+      "term": "libp2p",
+      "category": "development",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 17,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "libp2p"
+      },
+      "script_rule": "keep_latin",
+      "note": "Modular networking library used by consensus clients. Technical identifier."
+    },
+    "manticore": {
+      "id": "manticore",
+      "term": "Manticore",
+      "category": "development",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 119,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Manticore"
+      },
+      "script_rule": "transliterate",
+      "note": "Symbolic execution tool. Product name -- do NOT translate as the mythical creature."
+    },
+    "openzeppelin": {
+      "id": "openzeppelin",
+      "term": "OpenZeppelin",
+      "category": "development",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 189,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "OpenZeppelin"
+      },
+      "script_rule": "transliterate",
+      "note": "Smart contract library and security framework. Product name."
+    },
+    "portal-network": {
+      "id": "portal-network",
+      "term": "Portal Network",
+      "category": "development",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 10,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Portal Network"
+      },
+      "script_rule": "transliterate",
+      "note": "Lightweight protocol for serving Ethereum data to resource-constrained devices."
+    },
     "remix": {
       "id": "remix",
       "term": "Remix",
@@ -2821,6 +3371,25 @@
       "forms": {
         "base": "remix"
       }
+    },
+    "slither": {
+      "id": "slither",
+      "term": "Slither",
+      "category": "development",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 179,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Slither"
+      },
+      "script_rule": "transliterate",
+      "note": "Static analysis tool. Product name -- do NOT translate as the verb 'to slither'."
     },
     "ssz": {
       "id": "ssz",
@@ -3193,6 +3762,25 @@
         "base": "autonomous agent"
       }
     },
+    "besu": {
+      "id": "besu",
+      "term": "Besu",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 37,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Besu"
+      },
+      "script_rule": "transliterate",
+      "note": "Java-based execution client (Hyperledger). Product name, do not translate meaning."
+    },
     "big-endian": {
       "id": "big-endian",
       "term": "Big-endian",
@@ -3209,6 +3797,25 @@
       "forms": {
         "base": "big-endian"
       }
+    },
+    "bitcoin": {
+      "id": "bitcoin",
+      "term": "Bitcoin",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 104,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Bitcoin"
+      },
+      "script_rule": "transliterate",
+      "note": "Cryptocurrency and blockchain network. Proper noun."
     },
     "block": {
       "id": "block",
@@ -3419,6 +4026,25 @@
       },
       "morph_family": "chain",
       "morph_note": "Prefixes 'on-'/'off-' become complex prepositional phrases in TR/HU"
+    },
+    "client-diversity": {
+      "id": "client-diversity",
+      "term": "client diversity",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 20,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "client diversity"
+      },
+      "script_rule": "translate",
+      "note": "Principle of running multiple client implementations to prevent single points of failure."
     },
     "compiling": {
       "id": "compiling",
@@ -3707,6 +4333,25 @@
         "base": "double spend"
       }
     },
+    "erigon": {
+      "id": "erigon",
+      "term": "Erigon",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 40,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Erigon"
+      },
+      "script_rule": "transliterate",
+      "note": "Go-based execution client. Product name, do not translate meaning."
+    },
     "ethereum": {
       "id": "ethereum",
       "term": "Ethereum",
@@ -3973,6 +4618,25 @@
       "morph_family": "fork",
       "morph_note": "Often loanword as noun but translated as 'divergence' as verb in RU/PL"
     },
+    "history-expiry": {
+      "id": "history-expiry",
+      "term": "history expiry",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 8,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "history expiry"
+      },
+      "script_rule": "translate",
+      "note": "Mechanism to remove old block history from nodes. Distinct from state expiry."
+    },
     "integrated development environment (ide)": {
       "id": "ide",
       "term": "Integrated development environment (IDE)",
@@ -4062,6 +4726,44 @@
         "base": "light node"
       }
     },
+    "lighthouse": {
+      "id": "lighthouse",
+      "term": "Lighthouse",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 48,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Lighthouse"
+      },
+      "script_rule": "transliterate",
+      "note": "Rust-based consensus client. Product name -- do NOT translate as 'lighthouse/beacon tower'."
+    },
+    "lodestar": {
+      "id": "lodestar",
+      "term": "Lodestar",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 30,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Lodestar"
+      },
+      "script_rule": "transliterate",
+      "note": "TypeScript-based consensus client. Product name -- do NOT translate as 'guiding star'."
+    },
     "mainnet": {
       "id": "mainnet",
       "term": "Mainnet",
@@ -4131,6 +4833,25 @@
         "base": "metadata"
       }
     },
+    "metamask": {
+      "id": "metamask",
+      "term": "MetaMask",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 198,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "MetaMask"
+      },
+      "script_rule": "transliterate",
+      "note": "Wallet software. Product name -- do NOT translate as 'Meta Mask' or equivalent."
+    },
     "modular blockchain": {
       "id": "modular-blockchain",
       "term": "modular blockchain",
@@ -4165,6 +4886,25 @@
         "base": "monolithic blockchain"
       }
     },
+    "nethermind": {
+      "id": "nethermind",
+      "term": "Nethermind",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 45,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Nethermind"
+      },
+      "script_rule": "transliterate",
+      "note": ".NET-based execution client. Product name, do not translate meaning."
+    },
     "network": {
       "id": "network",
       "term": "Network",
@@ -4181,6 +4921,25 @@
       "forms": {
         "base": "network"
       }
+    },
+    "nimbus": {
+      "id": "nimbus",
+      "term": "Nimbus",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 26,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Nimbus"
+      },
+      "script_rule": "transliterate",
+      "note": "Nim-based consensus client. Product name -- do NOT translate as 'cloud/halo'."
     },
     "node": {
       "id": "node",
@@ -4543,6 +5302,25 @@
         "base": "protocol"
       }
     },
+    "prysm": {
+      "id": "prysm",
+      "term": "Prysm",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 31,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Prysm"
+      },
+      "script_rule": "transliterate",
+      "note": "Go-based consensus client. Product name, do not translate meaning."
+    },
     "public goods": {
       "id": "public-goods",
       "term": "Public goods",
@@ -4636,6 +5414,25 @@
         "refi"
       ]
     },
+    "reth": {
+      "id": "reth",
+      "term": "Reth",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 34,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Reth"
+      },
+      "script_rule": "transliterate",
+      "note": "Rust-based execution client. Product name, do not translate meaning."
+    },
     "retroactive public goods funding (rpgf)": {
       "id": "retroactive-public-goods-funding-rpgf",
       "term": "retroactive public goods funding (rpgf)",
@@ -4692,6 +5489,25 @@
       "forms": {
         "base": "self-sovereignty"
       }
+    },
+    "sepolia": {
+      "id": "sepolia",
+      "term": "Sepolia",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 53,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Sepolia"
+      },
+      "script_rule": "keep_latin",
+      "note": "Ethereum testnet. Network name, keep Latin."
     },
     "serialization": {
       "id": "serialization",
@@ -4802,6 +5618,25 @@
         "base": "state bloat"
       }
     },
+    "state-expiry": {
+      "id": "state-expiry",
+      "term": "state expiry",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 10,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "state expiry"
+      },
+      "script_rule": "translate",
+      "note": "Mechanism to remove old state data from nodes to reduce storage requirements."
+    },
     "statelessness": {
       "id": "statelessness",
       "term": "statelessness",
@@ -4890,6 +5725,25 @@
       "forms": {
         "base": "szabo"
       }
+    },
+    "teku": {
+      "id": "teku",
+      "term": "Teku",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 31,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Teku"
+      },
+      "script_rule": "transliterate",
+      "note": "Java-based consensus client. Product name, do not translate meaning."
     },
     "terminal total difficulty (ttd)": {
       "id": "terminal-total-difficulty",
@@ -5116,6 +5970,25 @@
       "forms": {
         "base": "whitepaper"
       }
+    },
+    "witness": {
+      "id": "witness",
+      "term": "witness",
+      "category": "general",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 10,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "witness"
+      },
+      "script_rule": "translate",
+      "note": "In Verkle tree context: proof data needed to verify a state access without full state."
     },
     "yellow paper": {
       "id": "yellow-paper",
@@ -5479,6 +6352,25 @@
         "base": "siwe"
       }
     },
+    "stealth-address": {
+      "id": "stealth-address",
+      "term": "stealth address",
+      "category": "identity",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 11,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "stealth address"
+      },
+      "script_rule": "translate",
+      "note": "Privacy technique generating one-time addresses for each transaction."
+    },
     "verifiable credential": {
       "id": "verifiable-credential",
       "term": "verifiable credential",
@@ -5548,6 +6440,25 @@
       "forms": {
         "base": "maximal extractable value (mev)"
       }
+    },
+    "mev-boost": {
+      "id": "mev-boost",
+      "term": "MEV-Boost",
+      "category": "mev",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 16,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "MEV-Boost"
+      },
+      "script_rule": "keep_latin",
+      "note": "Software for proposer-builder separation. Product name, do not translate."
     },
     "sandwich attack": {
       "id": "sandwich-attack",
@@ -5705,6 +6616,25 @@
         "dencun"
       ]
     },
+    "eip-7702": {
+      "id": "eip-7702",
+      "term": "EIP-7702",
+      "category": "protocol-upgrades",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 33,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "EIP-7702"
+      },
+      "script_rule": "keep_latin",
+      "note": "Account abstraction EIP in Pectra. Technical identifier."
+    },
     "erc-4626": {
       "id": "erc-4626",
       "term": "ERC-4626",
@@ -5738,6 +6668,50 @@
       "forms": {
         "base": "ethereum request for comments (erc)"
       }
+    },
+    "fusaka": {
+      "id": "fusaka",
+      "term": "Fusaka",
+      "category": "protocol-upgrades",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 68,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Fusaka"
+      },
+      "aliases": [
+        {
+          "term": "Fulu-Osaka",
+          "status": "accepted"
+        }
+      ],
+      "script_rule": "transliterate",
+      "note": "Planned Ethereum upgrade combining Fulu and Osaka. Portmanteau name."
+    },
+    "glamsterdam": {
+      "id": "glamsterdam",
+      "term": "Glamsterdam",
+      "category": "protocol-upgrades",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 46,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Glamsterdam"
+      },
+      "script_rule": "transliterate",
+      "note": "Planned Ethereum upgrade. Portmanteau name."
     },
     "homestead": {
       "id": "homestead",
@@ -5773,6 +6747,31 @@
         "base": "istanbul"
       }
     },
+    "pectra": {
+      "id": "pectra",
+      "term": "Pectra",
+      "category": "protocol-upgrades",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 76,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Pectra"
+      },
+      "aliases": [
+        {
+          "term": "Prague-Electra",
+          "status": "accepted"
+        }
+      ],
+      "script_rule": "transliterate",
+      "note": "Ethereum upgrade combining Prague (execution) and Electra (consensus). Portmanteau name."
+    },
     "shanghai": {
       "id": "shanghai",
       "term": "Shanghai",
@@ -5789,6 +6788,31 @@
       "forms": {
         "base": "shanghai"
       }
+    },
+    "shapella": {
+      "id": "shapella",
+      "term": "Shapella",
+      "category": "protocol-upgrades",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 12,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "Shapella"
+      },
+      "aliases": [
+        {
+          "term": "Shanghai-Capella",
+          "status": "accepted"
+        }
+      ],
+      "script_rule": "transliterate",
+      "note": "Ethereum upgrade combining Shanghai (execution) and Capella (consensus). Enabled staking withdrawals."
     },
     "the merge": {
       "id": "the-merge",
@@ -6035,6 +7059,32 @@
         "base": "data availability layer"
       }
     },
+    "data-availability-sampling": {
+      "id": "data-availability-sampling",
+      "term": "data availability sampling",
+      "category": "scaling",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 18,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "data availability sampling"
+      },
+      "aliases": [
+        "DAS"
+      ],
+      "script_rule": "translate",
+      "note": "Technique allowing nodes to verify data availability without downloading entire blobs.",
+      "related": [
+        "data-availability",
+        "peerdas"
+      ]
+    },
     "eip-4844": {
       "id": "eip-4844",
       "term": "EIP-4844",
@@ -6051,6 +7101,25 @@
       "forms": {
         "base": "eip-4844"
       }
+    },
+    "erasure-coding": {
+      "id": "erasure-coding",
+      "term": "erasure coding",
+      "category": "scaling",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 6,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "erasure coding"
+      },
+      "script_rule": "translate",
+      "note": "Data redundancy technique used in data availability sampling."
     },
     "escape hatch": {
       "id": "escape-hatch",
@@ -6166,6 +7235,28 @@
         "base": "optimistic rollup"
       },
       "script_rule": "D_hybrid"
+    },
+    "peerdas": {
+      "id": "peerdas",
+      "term": "PeerDAS",
+      "category": "scaling",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 31,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "PeerDAS"
+      },
+      "aliases": [
+        "EIP-7594"
+      ],
+      "script_rule": "keep_latin",
+      "note": "Peer Data Availability Sampling. Protocol name, do not translate."
     },
     "plasma": {
       "id": "plasma",
@@ -6515,6 +7606,25 @@
         "base": "zk-stark"
       }
     },
+    "zkevm": {
+      "id": "zkevm",
+      "term": "zkEVM",
+      "category": "scaling",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 66,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "zkEVM"
+      },
+      "script_rule": "keep_latin",
+      "note": "Zero-Knowledge Ethereum Virtual Machine. Technical identifier, keep Latin."
+    },
     "application binary interface (abi)": {
       "id": "abi",
       "term": "Application Binary Interface (ABI)",
@@ -6809,6 +7919,25 @@
         "base": "fallback function",
         "nominalization": "fallback function"
       }
+    },
+    "formal-verification": {
+      "id": "formal-verification",
+      "term": "formal verification",
+      "category": "smart-contracts",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 25,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "formal verification"
+      },
+      "script_rule": "translate",
+      "note": "Mathematical proof that smart contract code meets its specification. Academic term."
     },
     "gas optimization": {
       "id": "gas-optimization",
@@ -7156,6 +8285,25 @@
         "base": "solidity inline assembly"
       }
     },
+    "source-code-verification": {
+      "id": "source-code-verification",
+      "term": "source code verification",
+      "category": "smart-contracts",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 8,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "source code verification"
+      },
+      "script_rule": "translate",
+      "note": "Process of proving deployed bytecode matches published source code."
+    },
     "sstore": {
       "id": "sstore",
       "term": "SSTORE",
@@ -7189,6 +8337,44 @@
       "forms": {
         "base": "state"
       }
+    },
+    "state-trie": {
+      "id": "state-trie",
+      "term": "state trie",
+      "category": "smart-contracts",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 12,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "state trie"
+      },
+      "script_rule": "translate",
+      "note": "Merkle Patricia trie storing all Ethereum account state."
+    },
+    "storage-trie": {
+      "id": "storage-trie",
+      "term": "storage trie",
+      "category": "smart-contracts",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 6,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "storage trie"
+      },
+      "script_rule": "translate",
+      "note": "Per-account trie storing contract storage data."
     },
     "upgradeable contract": {
       "id": "upgradeable-contract",
@@ -7407,6 +8593,25 @@
       },
       "script_rule": "A_always_latin"
     },
+    "erc-1363": {
+      "id": "erc-1363",
+      "term": "ERC-1363",
+      "category": "tokens",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 5,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "ERC-1363"
+      },
+      "script_rule": "keep_latin",
+      "note": "Payable token standard. Technical identifier."
+    },
     "erc-20": {
       "id": "erc-20",
       "term": "ERC-20",
@@ -7425,6 +8630,25 @@
       },
       "script_rule": "A_always_latin"
     },
+    "erc-223": {
+      "id": "erc-223",
+      "term": "ERC-223",
+      "category": "tokens",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 8,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "ERC-223"
+      },
+      "script_rule": "keep_latin",
+      "note": "Token standard addressing ERC-20 transfer issues. Technical identifier."
+    },
     "erc-721": {
       "id": "erc-721",
       "term": "ERC-721",
@@ -7442,6 +8666,25 @@
         "base": "erc-721"
       },
       "script_rule": "A_always_latin"
+    },
+    "erc-777": {
+      "id": "erc-777",
+      "term": "ERC-777",
+      "category": "tokens",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 10,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "ERC-777"
+      },
+      "script_rule": "keep_latin",
+      "note": "Advanced token standard with hooks. Technical identifier."
     },
     "fractionalization": {
       "id": "fractionalization",
@@ -7798,6 +9041,25 @@
       "forms": {
         "base": "base fee"
       }
+    },
+    "blob-fee": {
+      "id": "blob-fee",
+      "term": "blob fee",
+      "category": "transactions",
+      "definition": "",
+      "has_tooltip": false,
+      "in_glossary": false,
+      "content_occurrences": 6,
+      "content_files": 0,
+      "intl_keys": 0,
+      "sources": [
+        "content-scan"
+      ],
+      "forms": {
+        "base": "blob fee"
+      },
+      "script_rule": "translate",
+      "note": "Fee for blob data in EIP-4844 transactions. Separate from regular gas fees."
     },
     "gas": {
       "id": "gas",
