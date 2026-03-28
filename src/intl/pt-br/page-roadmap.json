@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "Mapeia dependências antecipadamente para sincronizações mais rápidas, execução paralela e leituras de disco paralelas",
   "page-roadmap-glamsterdam-bal-item-3": "Reduz o gas para aplicativos com uso intensivo de estado e melhora a previsibilidade do custo do gas",
   "page-roadmap-hegota-discussed-title": "Planejado para Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Propostas estão atualmente em discussão"
+  "page-roadmap-hegota-discussed-item-1": "Propostas estão atualmente em discussão",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "Provas de conhecimento zero podem permitir que os validadores verifiquem blocos da Ethereum sem reexecutar transacoes, permitindo limites de gas mais altos sem aumentar os requisitos de hardware."
 }

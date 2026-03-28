@@ -14,8 +14,8 @@ import Tooltip from "@/components/Tooltip"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+import { getLocaleFormattedDate } from "@/lib/utils/date"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getLocaleFormattedDate } from "@/lib/utils/time"
 
 import { useTranslation } from "@/hooks/useTranslation"
 

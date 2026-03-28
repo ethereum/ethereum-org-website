@@ -34,6 +34,8 @@
   "page-roadmap-account-abstraction-description": "Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.",
   "page-roadmap-statelessness-title": "Statelessness",
   "page-roadmap-statelessness-description": "Stateless clients will be able to verify new blocks without having to store large amounts of data. This will provide all the benefits of running a node with only a tiny fraction of today's costs.",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "Zero-knowledge proofs could allow validators to verify Ethereum blocks without re-executing transactions, enabling higher gas limits without raising hardware requirements.",
   "page-roadmap-learn-more": "Learn more",
   "page-roadmap-timeline-title": "What is the timeline for these upgrades?",
   "page-roadmap-blocks-alt": "Ethereum blocks",

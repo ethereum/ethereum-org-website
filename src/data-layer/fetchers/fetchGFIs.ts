@@ -1,5 +1,7 @@
 import type { GHIssue } from "@/lib/types"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_GFIS_TASK_ID = "fetch-gfis"
 
 const owner = "ethereum"
@@ -27,7 +29,7 @@ export async function fetchGFIs(): Promise<GHIssue[]> {
 
   console.log("Starting GitHub good first issues data fetch")
 
-  const response = await fetch(url, {
+  const response = await fetchRetry(url, {
     headers: {
       Authorization: `token ${githubToken}`,
       Accept: "application/vnd.github.v3+json",

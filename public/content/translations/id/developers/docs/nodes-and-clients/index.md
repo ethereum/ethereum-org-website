@@ -1,305 +1,313 @@
 ---
 title: Node dan klien
-description: Gambaran umum tentang perangkat lunak node dan klien Ethereum, juga cara menyiapkan node dan mengapa Anda harus melakukannya.
+description: Gambaran umum tentang node dan perangkat lunak klien Ethereum, ditambah cara menyiapkan node dan mengapa Anda harus melakukannya.
 lang: id
 sidebarDepth: 2
 ---
 
-Ethereum adalah jaringan komputer terdistribusi yang menjalankan perangkat lunak (dikenal sebagai node) yang dapat memverifikasi blok dan data transaksi. Anda memerlukan satu aplikasi, yang dikenal sebagai klien, pada perangkat Anda untuk "menjalankan" sebuah node.
+[Ethereum](/) adalah jaringan komputer terdistribusi (dikenal sebagai node) yang menjalankan perangkat lunak yang dapat memverifikasi blok dan data transaksi. Perangkat lunak ini harus dijalankan di komputer Anda untuk mengubahnya menjadi node Ethereum. Ada dua perangkat lunak terpisah (dikenal sebagai 'klien') yang diperlukan untuk membentuk sebuah node.
 
 ## Prasyarat {#prerequisites}
 
-Anda harus memahami konsep jaringan peer-to-peer dan [dasar-dasar EVM](/developers/docs/evm/) sebelum menggali lebih dalam dan menjalankan instance klien Ethereum Anda sendiri. Coba lihat [pengantar Ethereum](/developers/docs/intro-to-ethereum/) kami.
+Anda harus memahami konsep jaringan peer-to-peer dan [dasar-dasar EVM](/developers/docs/evm/) sebelum menyelam lebih dalam dan menjalankan instans klien Ethereum Anda sendiri. Lihat [pengantar Ethereum](/developers/docs/intro-to-ethereum/) kami.
+
+Jika Anda baru mengenal topik node, kami sarankan untuk terlebih dahulu memeriksa pengantar ramah pengguna kami tentang [menjalankan node Ethereum](/run-a-node).
 
 ## Apa itu node dan klien? {#what-are-nodes-and-clients}
 
-"Node" merujuk pada satu bagian perangkat lunak yang dikenal sebagai satu klien. Klien adalah implementasi Ethereum yang memverifikasi semua transaksi di setiap blok, menjaga jaringan tetap aman dan data tetap akurat.
+"Node" adalah instans perangkat lunak klien Ethereum apa pun yang terhubung ke komputer lain yang juga menjalankan perangkat lunak Ethereum, membentuk sebuah jaringan. Klien adalah implementasi Ethereum yang memverifikasi data terhadap aturan protokol dan menjaga jaringan tetap aman. Sebuah node harus menjalankan dua klien: klien konsensus dan klien eksekusi.
 
-Anda bisa melihat tampilan jaringan Ethereum secara nyata dengan melihat [peta node](https://etherscan.io/nodetracker) ini.
+- Klien eksekusi (juga dikenal sebagai Mesin Eksekusi, klien EL atau sebelumnya klien Eth1) mendengarkan transaksi baru yang disiarkan di jaringan, mengeksekusinya di EVM, dan menyimpan status terbaru serta basis data dari semua data Ethereum saat ini.
+- Klien konsensus (juga dikenal sebagai Beacon Node, klien CL atau sebelumnya klien Eth2) mengimplementasikan algoritma konsensus proof-of-stake, yang memungkinkan jaringan untuk mencapai kesepakatan berdasarkan data yang divalidasi dari klien eksekusi. Ada juga perangkat lunak ketiga, yang dikenal sebagai 'validator' yang dapat ditambahkan ke klien konsensus, memungkinkan node untuk berpartisipasi dalam mengamankan jaringan.
 
-Ada banyak [klien Ethereum](/developers/docs/nodes-and-clients/#execution-clients), dalam berbagai bahasa pemrograman seperti Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim dan Java. Persamaan dari semua implementasi ini adalah semuanya mengikuti spesifikasi formal (pada awalnya [Yellow Paper Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)). Spesifikasi ini mengatur bagaimana jaringan Ethereum dan blockchain berfungsi.
+Klien-klien ini bekerja sama untuk melacak kepala rantai Ethereum dan memungkinkan pengguna untuk berinteraksi dengan jaringan Ethereum. Desain modular dengan beberapa perangkat lunak yang bekerja bersama disebut [kompleksitas terenkapsulasi](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Pendekatan ini membuatnya lebih mudah untuk mengeksekusi [The Merge](/roadmap/merge) dengan mulus, membuat perangkat lunak klien lebih mudah dipelihara dan dikembangkan, dan memungkinkan penggunaan kembali klien individu, misalnya, dalam [ekosistem layer 2](/layer-2/).
 
-![Klien eksekusi](./client-diagram.png) Diagram yang disederhanakan tentang apa saja fitur klien Ethereum.
+![Coupled execution and consensus clients](./eth1eth2client.png)
+Diagram yang disederhanakan dari klien eksekusi dan konsensus yang digabungkan.
+
+### Keragaman klien {#client-diversity}
+
+Baik [klien eksekusi](/developers/docs/nodes-and-clients/#execution-clients) maupun [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients) ada dalam berbagai bahasa pemrograman yang dikembangkan oleh tim yang berbeda.
+
+Beberapa implementasi klien dapat membuat jaringan lebih kuat dengan mengurangi ketergantungannya pada satu basis kode. Tujuan idealnya adalah untuk mencapai keragaman tanpa ada klien yang mendominasi jaringan, sehingga menghilangkan potensi titik kegagalan tunggal.
+Berbagai bahasa juga mengundang komunitas pengembang yang lebih luas dan memungkinkan mereka untuk membuat integrasi dalam bahasa pilihan mereka.
+
+Pelajari lebih lanjut tentang [keragaman klien](/developers/docs/nodes-and-clients/client-diversity/).
+
+Kesamaan dari implementasi ini adalah semuanya mengikuti satu spesifikasi. Spesifikasi mendikte bagaimana jaringan dan blockchain Ethereum berfungsi. Setiap detail teknis didefinisikan dan spesifikasi dapat ditemukan sebagai:
+
+- Awalnya, [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [Spesifikasi eksekusi](https://github.com/ethereum/execution-specs/)
+- [Spesifikasi konsensus](https://github.com/ethereum/consensus-specs)
+- [EIP](https://eips.ethereum.org/) yang diimplementasikan dalam berbagai [peningkatan jaringan](/ethereum-forks/)
+
+### Melacak node di jaringan {#network-overview}
+
+Beberapa pelacak menawarkan gambaran umum waktu nyata dari node di jaringan Ethereum. Perhatikan bahwa karena sifat jaringan yang terdesentralisasi, perayap ini hanya dapat memberikan pandangan terbatas tentang jaringan dan mungkin melaporkan hasil yang berbeda.
+
+- [Peta node](https://etherscan.io/nodetracker) oleh Etherscan
+- [Ethernodes](https://ethernodes.org/) oleh Bitfly
+- [Nodewatch](https://www.nodewatch.io/) oleh Chainsafe, merayapi node konsensus
+- [Monitoreth](https://monitoreth.io/) - oleh MigaLabs, Alat pemantauan jaringan terdistribusi
+- [Laporan Kesehatan Jaringan Mingguan](https://probelab.io) - oleh ProbeLab, Menggunakan [perayap Nebula](https://github.com/dennis-tra/nebula) dan alat lainnya
 
 ## Jenis node {#node-types}
 
-Jika Anda ingin [menjalankan node sendiri](/developers/docs/nodes-and-clients/run-a-node/), Anda harus mengerti bahwa ada berbagai jenis node yang mengonsumsi data secara berbeda. Bahkan, klien dapat menjalankan 3 tipe node yang berbeda - ringan, penuh, dan arsip. Ada juga opsi strategi sinkronisasi berbeda yang memungkinkan waktu sinkronisasi yang lebih cepat. Sinkronisasi merujuk pada seberapa cepat prosesnya mendapat informasi paling terbaru pada state Ethereum.
+Jika Anda ingin [menjalankan node Anda sendiri](/developers/docs/nodes-and-clients/run-a-node/), Anda harus memahami bahwa ada berbagai jenis node yang mengonsumsi data secara berbeda. Faktanya, klien dapat menjalankan tiga jenis node yang berbeda: light, full, dan archive. Ada juga opsi strategi sinkronisasi yang berbeda yang memungkinkan waktu sinkronisasi lebih cepat. Sinkronisasi mengacu pada seberapa cepat ia bisa mendapatkan informasi paling mutakhir tentang status Ethereum.
 
-### Node penuh {#full-node}
+### Full node {#full-node}
 
-- Menyimpan data blockchain penuh.
-- Berpartisipasi dalam validasi blok, memverifikasi semua blok dan state.
-- Semua state bisa dikembangkan dari satu node penuh.
-- Melayani jaringan dan menyediakan data sesuai permintaan.
+Full node melakukan validasi blok demi blok dari blockchain, termasuk mengunduh dan memverifikasi badan blok dan data status untuk setiap blok. Ada berbagai kelas full node - beberapa mulai dari blok genesis dan memverifikasi setiap blok dalam seluruh sejarah blockchain. Yang lain memulai verifikasi mereka pada blok yang lebih baru yang mereka percayai valid (misalnya, 'snap sync' Geth). Terlepas dari mana verifikasi dimulai, full node hanya menyimpan salinan lokal dari data yang relatif baru (biasanya 128 blok terbaru), memungkinkan data lama dihapus untuk menghemat ruang disk. Data lama dapat dibuat ulang saat dibutuhkan.
 
-### Node Ringan {#light-node}
+- Menyimpan data blockchain penuh (meskipun ini dipangkas secara berkala sehingga full node tidak menyimpan semua data status kembali ke genesis)
+- Berpartisipasi dalam validasi blok, memverifikasi semua blok dan status.
+- Semua status dapat diambil dari penyimpanan lokal atau dibuat ulang dari 'snapshot' oleh full node.
+- Melayani jaringan dan menyediakan data berdasarkan permintaan.
 
-- Menyimpan rantai header dan meminta semua hal lainnya.
-- Bisa memverifikasi keabsahan data yang dibandingkan dengan root state dalam header blok.
-- Berguna untuk perangkat dengan kapasitas rendah, seperti perangkat bawaan atau ponsel, yang tidak sanggup menyimpan data blokchain dalam ukuran gigabyte.
+### Archive node {#archive-node}
 
-### Node arsip {#archive-node}
+Archive node adalah full node yang memverifikasi setiap blok dari genesis dan tidak pernah menghapus data apa pun yang diunduh.
 
-- Menyimpan semua data yang tersimpan dalam node penuh dan menyusun riwayat arsip state. Diperlukan jika Anda ingin menanyakan sesuatu seperti saldo akun pada blok #4.000.000, atau secara sederhana dan andal [menguji sekumpulan transaksi Anda sendiri tanpa menambangnya dengan mengggunakan OpenEthereum](https://openethereum.github.io/JSONRPC-trace-module#trace_callmany).
-- Data ini mewakilkan unit terabita yang membuat node arsip kurang menarik bagi pengguna pada umumnya, tetapi dapat menolong untuk layanan seperti penjelajah blok, vendor dompet, dan analitik rantai.
+- Menyimpan semua yang disimpan di full node dan membangun arsip status historis. Ini diperlukan jika Anda ingin menanyakan sesuatu seperti saldo akun pada blok #4.000.000, atau sekadar dan secara andal menguji set transaksi Anda sendiri tanpa memvalidasinya menggunakan pelacakan.
+- Data ini mewakili unit terabyte, yang membuat archive node kurang menarik bagi pengguna rata-rata tetapi bisa berguna untuk layanan seperti penjelajah blok, vendor dompet, dan analitik rantai.
 
-Mensinkronisasikan klien di mode mana saja selain arsip akan menghasilkan data blockchain yang terpangkas. Ini berarti, tidak ada arsip untuk semua state riwayat, tetapi node penuh dapat menyusunnya sesuai permintaan.
+Menyinkronkan klien dalam mode apa pun selain archive akan menghasilkan data blockchain yang dipangkas. Ini berarti, tidak ada arsip dari semua status historis tetapi full node dapat membangunnya sesuai permintaan.
 
-## Mengapa Anda harus menjalankan satu node Ethereum? {#why-should-i-run-an-ethereum-node}
+Pelajari lebih lanjut tentang [Archive node](/developers/docs/nodes-and-clients/archive-nodes).
 
-Menjalankan node memungkinkan Anda menggunakan Ethereum tanpa membutuhkan kepercayaan dan secara privat sekaligus Anda mendukung ekosistem.
+### Light node {#light-node}
 
-### Keuntungan untuk Anda {#benefits-to-you}
+Alih-alih mengunduh setiap blok, light node hanya mengunduh header blok. Header ini berisi informasi ringkasan tentang isi blok. Informasi lain apa pun yang dibutuhkan light node diminta dari full node. Light node kemudian dapat secara independen memverifikasi data yang mereka terima terhadap akar status di header blok. Light node memungkinkan pengguna untuk berpartisipasi dalam jaringan Ethereum tanpa perangkat keras yang kuat atau bandwidth tinggi yang diperlukan untuk menjalankan full node. Pada akhirnya, light node mungkin berjalan di ponsel atau perangkat tertanam. Light node tidak berpartisipasi dalam konsensus (yaitu, mereka tidak bisa menjadi validator), tetapi mereka dapat mengakses blockchain Ethereum dengan fungsionalitas dan jaminan keamanan yang sama seperti full node.
 
-Menjalankan node sendiri memungkinkan Anda menggunakan Ethereum dengan cara yang benar-benar privat, mandiri, dan tidak membutuhkan kepercayaan. Anda tidak perlu mempercayai jaringan karena Anda bisa memverifikasi data sendiri dengan klien Anda. "Jangan percaya, lakukan verifikasi" adalah mantra blockchain yang populer.
+Klien light adalah area pengembangan aktif untuk Ethereum dan kami berharap dapat segera melihat klien light baru untuk lapisan konsensus dan lapisan eksekusi.
+Ada juga rute potensial untuk menyediakan data klien light melalui [jaringan gosip](https://www.ethportal.net/). Ini menguntungkan karena jaringan gosip dapat mendukung jaringan light node tanpa memerlukan full node untuk melayani permintaan.
 
-- Node Anda memverifikasi semua transaksi dan blok dibandingkan dengan aturan konsensus itu sendiri. Ini berarti Anda tidak harus mengandalkan node lain dalam jaringan atau sepenuhnya mempercayainya.
-- Anda tidak akan harus membocorkan alamat dan saldo Anda ke node acak. Semua hal bisa dicek dengan klien Anda sendiri.
-- Dapp Anda bisa lebih aman dan privat jika Anda menggunakan node Anda sendiri. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) and some other wallets can be easily pointed to your own local node.
-- Anda dapat memrogram endpoint RPC kustom Anda sendiri.
-- Anda dapat menghubungkan node Anda dengan menggunakan **Komunikasi Antar Proes (IPC)** atau menulis kembali node untuk memuat program Anda sebagai plugin. Ini menghasilkan latensi yang rendah, yang diperlukan untuk menggantikan transaksi Anda secepat mungkin (maksudnya frontrunning).
+Ethereum belum mendukung populasi light node yang besar, tetapi dukungan light node adalah area yang diharapkan berkembang pesat dalam waktu dekat. Secara khusus, klien seperti [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios), dan [LodeStar](https://lodestar.chainsafe.io/) saat ini sangat fokus pada light node.
 
-![Bagaimana Anda mengakses Ethereum lewat aplikasi dan node Anda](./nodes.png)
+## Mengapa saya harus menjalankan node Ethereum? {#why-should-i-run-an-ethereum-node}
 
-### Keuntungan jaringan {#network-benefits}
+Menjalankan node memungkinkan Anda untuk secara langsung, tanpa kepercayaan, dan secara pribadi menggunakan Ethereum sambil mendukung jaringan dengan menjaganya agar lebih kuat dan terdesentralisasi.
 
-Sebuah kumpulan node beragam penting untuk kesehatan, keamanan dan ketahanan operasional Ethereum.
+### Manfaat bagi Anda {#benefits-to-you}
 
-- Mereka menyediakan akses ke data blockchain untuk klien lightweight yang bergantung pada data tersebut. Pada puncak tinggi penggunaan, harus ada node penuh yang cukup untuk membantu sinkronisasi node ringan. Node ringan tidak menyimpan seluruh blockchain, melainkan memverifikasi data lewat [root state dalam header blok](/developers/docs/blocks/#block-anatomy). Mereka bisa meminta lebih banyak informasi dari blok jika mereka membutuhkannya.
-- Node penuh melaksanakan aturan konsensus bukti kerja sehingga mereka tidak bisa ditipu untuk menerima blok yang tidak mengikutinya. Ini menyediakan keamanan ekstra dalam jaringan karena jika semua node berjenis node ringan, yang tidak melakukan verifikasi penuh, penambang bisa menyerang jaringan dan, sebagai contoh, membuat blok dengan imbalan yang lebih tinggi.
+Menjalankan node Anda sendiri memungkinkan Anda untuk menggunakan Ethereum dengan cara yang pribadi, mandiri, dan tanpa kepercayaan. Anda tidak perlu memercayai jaringan karena Anda dapat memverifikasi data sendiri dengan klien Anda. "Jangan percaya, verifikasi" adalah mantra blockchain yang populer.
 
-Jika Anda menjalankan node penuh, seluruh jaringan Ethereum mendapat keuntungan darinya.
+- Node Anda memverifikasi semua transaksi dan blok terhadap aturan konsensus dengan sendirinya. Ini berarti Anda tidak perlu bergantung pada node lain di jaringan atau sepenuhnya memercayai mereka.
+- Anda dapat menggunakan dompet Ethereum dengan node Anda sendiri. Anda dapat menggunakan dapps dengan lebih aman dan pribadi karena Anda tidak perlu membocorkan alamat dan saldo Anda ke perantara. Semuanya dapat diperiksa dengan klien Anda sendiri. [MetaMask](https://metamask.io), [Frame](https://frame.sh/), dan [banyak dompet lainnya](/wallets/find-wallet/) menawarkan impor RPC, yang memungkinkan mereka untuk menggunakan node Anda.
+- Anda dapat menjalankan dan meng-host sendiri layanan lain yang bergantung pada data dari Ethereum. Misalnya, ini mungkin validator Beacon Chain, perangkat lunak seperti layer 2, infrastruktur, penjelajah blok, pemroses pembayaran, dll.
+- Anda dapat menyediakan [titik akhir RPC](/developers/docs/apis/json-rpc/) kustom Anda sendiri. Anda bahkan dapat menawarkan titik akhir ini secara publik kepada komunitas untuk membantu mereka menghindari penyedia terpusat yang besar.
+- Anda dapat terhubung ke node Anda menggunakan **Komunikasi Antar-proses (IPC)** atau menulis ulang node untuk memuat program Anda sebagai plugin. Ini memberikan latensi rendah, yang sangat membantu, mis., saat memproses banyak data menggunakan pustaka web3 atau saat Anda perlu mengganti transaksi Anda secepat mungkin (yaitu, frontrunning).
+- Anda dapat secara langsung melakukan stake ETH untuk mengamankan jaringan dan mendapatkan hadiah. Lihat [mengunci solo](/staking/solo/) untuk memulai.
 
-## Menjalankan node milik Anda sendiri {#running-your-own-node}
+![How you access Ethereum via your application and nodes](./nodes.png)
 
-Tertarik menjalankan klien Ethereum Anda sendiri?
+### Manfaat jaringan {#network-benefits}
 
-For a beginner-friendly introduction visit our [run a node](/run-a-node) page to learn more.
+Serangkaian node yang beragam penting untuk kesehatan, keamanan, dan ketahanan operasional Ethereum.
 
-If you're more of a technical user, learn how to [spin up your own node](/developers/docs/nodes-and-clients/run-a-node/) with the command line!
+- Full node menegakkan aturan konsensus sehingga mereka tidak dapat ditipu untuk menerima blok yang tidak mengikutinya. Ini memberikan keamanan ekstra di jaringan karena jika semua node adalah light node, yang tidak melakukan verifikasi penuh, validator dapat menyerang jaringan.
+- Jika terjadi serangan yang mengatasi pertahanan kripto-ekonomi dari [proof-of-stake](/developers/docs/consensus-mechanisms/pos/#what-is-pos), pemulihan sosial dapat dilakukan oleh full node yang memilih untuk mengikuti rantai yang jujur.
+- Lebih banyak node di jaringan menghasilkan jaringan yang lebih beragam dan kuat, tujuan akhir dari desentralisasi, yang memungkinkan sistem yang tahan sensor dan andal.
+- Full node menyediakan akses ke data blockchain untuk klien ringan yang bergantung padanya. Light node tidak menyimpan seluruh blockchain, melainkan memverifikasi data melalui [akar status di header blok](/developers/docs/blocks/#block-anatomy). Mereka dapat meminta lebih banyak informasi dari full node jika mereka membutuhkannya.
 
-### Proyek {#projects}
+Jika Anda menjalankan full node, seluruh jaringan Ethereum mendapat manfaat darinya, bahkan jika Anda tidak menjalankan validator.
 
-[**Pilih klien dan ikuti petunjuknya**](#clients)
+## Menjalankan node Anda sendiri {#running-your-own-node}
 
-**ethnode -** **_Jalankan node Ethereum (Geth atau OpenEthereum) untuk pengembangan lokal._**
+Tertarik untuk menjalankan klien Ethereum Anda sendiri?
 
-- [GitHub](https://github.com/vrde/ethnode)
+Untuk pengantar yang ramah pemula, kunjungi halaman [menjalankan node](/run-a-node) kami untuk mempelajari lebih lanjut.
 
-**DAppNode -** **_Sebuah sistem operasi GUI untuk menjalankan node Web3, yang mencakup Ethereum dan rantai suar, pada satu mesin khusus._**
-
-- [dappnode.io](https://dappnode.io)
-
-### Sumber Daya {#resources}
-
-- [Menjalankan Node Penuh Ethereum: Sebuah Panduan Lengkap](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _7 November 2019 - Justin Leroux_
-- [Lembaran Cheat Konfigurasi Node](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _5 Januari 2019 - Afri Schoeden_
-- [Cara Menginstal dan Menjalankan Node Geth](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _4 Okt 2020 - Sahil Sen_
-- [Cara Menginstal dan Menjalankan Node OpenEthereum (fka. Parity)](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _22 Sept 2020 - Sahil Sen_
+Jika Anda lebih merupakan pengguna teknis, selami lebih banyak detail dan opsi tentang cara [menyiapkan node Anda sendiri](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Alternatif {#alternatives}
 
-Menjalankan node Anda sendiri dapat menjadi sulit dan Anda tidak selalu harus menjalankan instance Anda sendiri. Dalam kasus ini, Anda bisa menggunakan satu penyedia API pihak ketiga seperti [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), atau [QuikNode](https://www.quiknode.io). Sebagai alternatifnya [ArchiveNode](https://archivenode.io/) adalah satu node Arsip yang didanai komunitas yang bertujuan membawa data arsip blockchain Ethereum kepada para pengembang independen yang sebaliknya tidak bisa mendapatkannya. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Menyiapkan node Anda sendiri dapat menghabiskan waktu dan sumber daya Anda, tetapi Anda tidak selalu perlu menjalankan instans Anda sendiri. Dalam hal ini, Anda dapat menggunakan penyedia API pihak ketiga. Untuk gambaran umum tentang penggunaan layanan ini, lihat [node sebagai layanan](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Jika seseorang menjalankan node Ethereum dengan API publik dalam komunitas Anda, Anda bisa merujuk dompet ringan Anda (seperti MetaMask) ke node komunitas [melalui RPC Kustom](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) dan mendapat lebih banyak privasi dari pada menggunakan beberapa pihak ketiga terpercaya acak.
+Jika seseorang menjalankan node Ethereum dengan API publik di komunitas Anda, Anda dapat mengarahkan dompet Anda ke node komunitas melalui RPC Kustom dan mendapatkan lebih banyak privasi daripada dengan pihak ketiga tepercaya yang acak.
 
-Di sisi lain, jika Anda menjalankan satu klien, Anda bisa membagikannya dengan teman Anda yang mungkin membutuhkannya.
+Di sisi lain, jika Anda menjalankan klien, Anda dapat membagikannya dengan teman-teman Anda yang mungkin membutuhkannya.
 
-## Klien eksekusi (sebelumnya 'klien Eth1') {#execution-clients}
+## Klien eksekusi {#execution-clients}
 
-Komunitas Ethereum memelihara beberapa klien eksekusi sumber terbuka (sebelumnya dikenal sebagai 'klien Eth1', atau 'klien Ethereum'), yang dikembangkan oleh berbagai tim menggunakan beragam bahasa pemrograman. Ini membuat jaringan lebih kuat dan lebih beragam. Tujuan idealnya adalah untuk mencapai keberagaman tanpa dominasi klien mana pun sehingga ini menurunkan jumlah titik kegagalan mana pun.
+Komunitas Ethereum memelihara beberapa klien eksekusi sumber terbuka (sebelumnya dikenal sebagai 'klien Eth1', atau hanya 'klien Ethereum'), yang dikembangkan oleh tim yang berbeda menggunakan bahasa pemrograman yang berbeda. Ini membuat jaringan lebih kuat dan lebih [beragam](/developers/docs/nodes-and-clients/client-diversity/). Tujuan idealnya adalah untuk mencapai keragaman tanpa ada klien yang mendominasi untuk mengurangi titik kegagalan tunggal.
 
-Tabel ini meringkaskan berbagai jenis klien. Semuanya telah lulus [pengujian klien](https://github.com/ethereum/tests) dan secara aktif dipertahankan agar tetap yang terbaru dengan peningkatan jaringan.
+Tabel ini merangkum klien yang berbeda. Semuanya lulus [pengujian klien](https://github.com/ethereum/tests) dan dipelihara secara aktif untuk tetap diperbarui dengan peningkatan jaringan.
 
-| Klien                                                                     | Bahasa   | Sistem operasi        | Jaringan                                                 | Strategi sinkronisasi | Pemotongan state |
-| ------------------------------------------------------------------------- | -------- | --------------------- | -------------------------------------------------------- | --------------------- | ---------------- |
-| [Geth](https://geth.ethereum.org/)                                        | Go       | Linux, Windows, macOS | Jaringan Utama, Görli, Rinkeby, Ropsten                  | Snap, Full            | Arsip, Dipotong  |
-| [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Jaringan Utama, Görli, Ropsten, Rinkeby, dan banyak lagi | Fast, Beam, Archive   | Arsip, Dipotong  |
-| [Besu](https://besu.hyperledger.org/en/stable/)                           | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more               | Cepat, Penuh          | Arsip, Dipotong  |
-| [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Jaringan Utama, Görli, Rinkeby, Ropsten                  | Full                  | Arsip, Dipotong  |
-| [OpenEthereum (Deprecated)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Jaringan Utama, Kovan, Ropsten, dan banyak lagi          | Warp, Penuh           | Arsip, Dipotong  |
+| Klien                                                                    | Bahasa     | Sistem operasi        | Jaringan                  | Strategi sinkronisasi                                          | Pemangkasan status |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | -------------------------------------------------------------- | ------------------ |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                         | Archive, Dipangkas |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync) (tanpa melayani), Fast, [Full](#full-sync)  | Archive, Dipangkas |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync)     | Archive, Dipangkas |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                             | Archive, Dipangkas |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                             | Archive, Dipangkas |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Full](#full-sync)                                             | Dipangkas          |
 
-**Perhatikan bahwa OpenEthereum [telah menjadi usang](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) dan tidak lagi dipertahankan.** Gunakan dengan hati-hati dan lebih baik beralih ke implementasi klien lainnya.
+Untuk informasi lebih lanjut tentang jaringan yang didukung, bacalah tentang [jaringan Ethereum](/developers/docs/networks/).
 
-Untuk informasi lebih lanjut tentang jaringan yang didukung, baca tentang [jaringan Ethereum](/developers/docs/networks/).
+Setiap klien memiliki kasus penggunaan dan keuntungan yang unik, jadi Anda harus memilih satu berdasarkan preferensi Anda sendiri. Keragaman memungkinkan implementasi difokuskan pada fitur dan audiens pengguna yang berbeda. Anda mungkin ingin memilih klien berdasarkan fitur, dukungan, bahasa pemrograman, atau lisensi.
 
-### Manfaat dari impelementasi berbeda {#advantages-of-different-implementations}
+### Besu {#besu}
 
-Setiap klien mempunyai kasus penggunaan dan keuntungan yang unik, jadi Anda harus memilih salah satu berdasarkan preferensi Anda sendiri. Keberagaman memungkinkan implementasi difokuskan pada fitur dan audiens pengguna berbeda. Anda mungkin ingin memilih satu klien berdasarkan fitur, dukungan, bahasa pemrograman, atau lisensi.
+Hyperledger Besu adalah klien Ethereum tingkat perusahaan untuk jaringan publik dan berizin. Ini menjalankan semua fitur Mainnet Ethereum, dari pelacakan hingga GraphQL, memiliki pemantauan ekstensif dan didukung oleh ConsenSys, baik di saluran komunitas terbuka maupun melalui SLA komersial untuk perusahaan. Ini ditulis dalam Java dan dilisensikan di bawah Apache 2.0.
 
-#### Go Ethereum {#geth}
+[Dokumentasi](https://besu.hyperledger.org/en/stable/) ekstensif Besu akan memandu Anda melalui semua detail tentang fitur dan pengaturannya.
 
-Go Ethereum (singkatannya Geth) adalah satu dari implementasi original protokol Ethereum. Saat ini, Geth adalah klien yang paling tersebar luas dengan basis pengguna terbesar dan keberagaman perangkat untuk para pengguna dan pengembang. Geth ditulis dalam Go, yang adalah sumber terbuka penuh dan terlisensi di bawah GNU LGPL v3.
+### Erigon {#erigon}
 
-#### OpenEthereum {#openethereum}
+Erigon, sebelumnya dikenal sebagai Turbo-Geth, dimulai sebagai fork dari Go Ethereum yang berorientasi pada kecepatan dan efisiensi ruang disk. Erigon adalah implementasi Ethereum yang sepenuhnya diarsiteki ulang, saat ini ditulis dalam Go tetapi dengan implementasi dalam bahasa lain yang sedang dikembangkan. Tujuan Erigon adalah untuk menyediakan implementasi Ethereum yang lebih cepat, lebih modular, dan lebih dioptimalkan. Ini dapat melakukan sinkronisasi archive node penuh menggunakan sekitar 2TB ruang disk, dalam waktu kurang dari 3 hari.
 
-OpenEthereum adalah sebuah klien Ethereum cepat, kaya akan fitur, dan berbasis CLI tingkat lanjut. Dibangun guna menyediakan infrastruktur penting untuk layanan cepat dan dapat diandalkan yang membutuhkan sinkronisasi cepat dan uptime maksimum. Tujuan OpenEthereum adalah menjadi klien Ethereum tercepat, paling ringan, dan paling aman. Menyediakan basis kode yang bersih dan modular untuk:
+### Go Ethereum {#geth}
 
-- kostumisasi yang mudah.
-- integrasi ringan ke dalam layanan atau produk.
-- memori minimal dan jejak penyimpanan.
+Go Ethereum (disingkat Geth) adalah salah satu implementasi asli dari protokol Ethereum. Saat ini, ini adalah klien yang paling tersebar luas dengan basis pengguna terbesar dan berbagai perkakas untuk pengguna dan pengembang. Ini ditulis dalam Go, sepenuhnya sumber terbuka dan dilisensikan di bawah GNU LGPL v3.
 
-OpenEthereum dikembangkan menggunakan bahasa pemrograman Rust canggih dan terlisensi di bawah GPLv3.
+Pelajari lebih lanjut tentang Geth di [dokumentasinya](https://geth.ethereum.org/docs).
 
-**Perhatikan bahwa OpenEthereum [telah menjadi usang](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) dan tidak lagi dipertahankan.** Gunakan dengan hati-hati dan lebih baik beralih ke implementasi klien lainnya.
+### Nethermind {#nethermind}
 
-#### Nethermind {#nethermind}
-
-Nethermind adalah satu implementasi Ethereum yang dibuat dengan tumpukan teknologi C# .NET, beroperasi pada semua platform utama termasuk ARM. Implementasi ini menawarkan kinerja luar biasa dengan:
+Nethermind adalah implementasi Ethereum yang dibuat dengan tumpukan teknologi C# .NET, dilisensikan dengan LGPL-3.0, berjalan di semua platform utama termasuk ARM. Ini menawarkan kinerja luar biasa dengan:
 
 - mesin virtual yang dioptimalkan
-- akses state
-- jaringan dan fitur yang kaya seperti dasbor Prometheus/Graphana, dukungan logging perusahaan seq, pelacakan JSON RPC, dan plugin analitik.
+- akses status
+- jaringan dan fitur kaya seperti dasbor Prometheus/Grafana, dukungan pencatatan perusahaan seq, pelacakan JSON-RPC, dan plugin analitik.
 
-Nethermind juga mempunyai [dokumentasi detil](https://docs.nethermind.io), dukungan pengembang yang kuat, komunitasi daring dan dukungan 24/7 yang tersedia untuk para pengguna premium.
+Nethermind juga memiliki [dokumentasi terperinci](https://docs.nethermind.io), dukungan pengembang yang kuat, komunitas online, dan dukungan 24/7 yang tersedia untuk pengguna premium.
 
-#### Besu {#besu}
+### Reth {#reth}
 
-Hyperledger Besu adalah klien Ethereum standar perusahaan untuk jaringan publik dan berizin. Ia menjalankan seluruh fitur Jaringan Utama Ethereum, mulai dari pelacakan hingga GraphQL, memiliki pengawasan ektensif dan didukung oleh ConsenSys, baik di kanal komunitas terbuka maupun melalui SLA komersial untuk perusahaan. Ditulis dalam Java dan berlisensi Apache 2.0.
+Reth (singkatan dari Rust Ethereum) adalah implementasi full node Ethereum yang difokuskan untuk menjadi ramah pengguna, sangat modular, cepat, dan efisien. Reth awalnya dibangun dan didorong maju oleh Paradigm, dan dilisensikan di bawah lisensi Apache dan MIT.
 
-#### Erigon {#erigon}
+Reth siap produksi, dan cocok untuk penggunaan di lingkungan yang sangat penting seperti mengunci atau layanan dengan waktu aktif tinggi. Berkinerja baik dalam kasus penggunaan di mana kinerja tinggi dengan margin besar diperlukan seperti RPC, MEV, pengindeksan, simulasi, dan aktivitas P2P.
 
-Erigon, yang sebelumnya dikenal sebagai Erigon, adalah sebuah fork Go Ethereum yang diarahkan untuk efisiensi kecepatan dan pemakaian ruangan cakram. Erigon adalah sebuah implementasi yang sepenuhnya di buat kembali di Ethereum, yang saat ini ditulis dalam Go dengan implementasi dalam bahasa pemograman lain yang direncanakan. Tujuan Erigon adalah menyediakan implementasi Ethereum yang lebih cepat, lebih modular, dan lebih teroptimisasi. Ia dapat melakukan sinkronisasi node arsip penuh dengan menggunakan kurang dari 2 TB ruangan cakram, dalam waktu kurang dari 3 hari
+Pelajari lebih lanjut dengan memeriksa [Buku Reth](https://reth.rs/), atau [repo GitHub Reth](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
-### Mode sinkronisasi {#sync-modes}
+### Dalam pengembangan {#execution-in-development}
 
-Untuk mengikuti dan memverifikasi data saat ini di jaringan, klien Ethereum perlu melakukan sinkronisasi dengan state jaringan terkini. Ini dilakukan dengan mengunduh data dari para rekan sejawat, yang secara kriptografik memverifikasi integritas mereka, dan membangun basis data blockchain lokal.
+Klien-klien ini masih dalam tahap awal pengembangan dan belum direkomendasikan untuk penggunaan produksi.
 
-Mode sinkronisasi mewakili pendekatan berbeda terhadap proses ini dengan berbagai pertukaran. Klien juga bervariasi dalam implementasi algoritma sinkronisasinya. Mengaculah selalu pada dokumentasi resmi dari klien pilihan Anda untuk spesifikasi tentang implementasi.
+#### EthereumJS {#ethereumjs}
 
-#### Gambaran umum strategi {#overview-of-strategies}
+Klien Eksekusi EthereumJS (EthereumJS) ditulis dalam TypeScript dan terdiri dari sejumlah paket, termasuk primitif inti Ethereum yang diwakili oleh kelas Blok, Transaksi, dan Merkle-Patricia Trie serta komponen klien inti termasuk implementasi Mesin Virtual Ethereum (EVM), kelas blockchain, dan tumpukan jaringan DevP2P.
 
-Tinjauan umum pendekatan sinkronisasi yang digunakan dalam klien untuk Jaringan Utama:
+Pelajari lebih lanjut tentang hal itu dengan membaca [dokumentasinya](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
 
-##### Sinkonisasi penuh
+## Klien konsensus {#consensus-clients}
 
-Sinkronisasi penuh mengunduh semua blok (termasuk header, transaksi, dan bukti pembayaran) dan menghasilkan state blockchain yang terus bertambah dengan mengeksekusi setiap blok dari blok genesis.
+Ada beberapa klien konsensus (sebelumnya dikenal sebagai klien 'Eth2') untuk mendukung [peningkatan konsensus](/roadmap/beacon-chain/). Mereka bertanggung jawab atas semua logika terkait konsensus termasuk algoritma pilihan fork, memproses pengesahan, dan mengelola hadiah serta penalti [proof-of-stake](/developers/docs/consensus-mechanisms/pos).
+
+| Klien                                                         | Bahasa     | Sistem operasi        | Jaringan                                                  |
+| ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Pyrmont, Sepolia, dan lainnya      |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, dan lainnya               |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, dan lainnya               |
+| [Prysm](https://prysm.offchainlabs.com/docs/)                 | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Pyrmont, Sepolia, dan lainnya |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Sepolia, dan lainnya       |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, dan lainnya               |
+
+### Lighthouse {#lighthouse}
+
+Lighthouse adalah implementasi klien konsensus yang ditulis dalam Rust di bawah lisensi Apache-2.0. Ini dipelihara oleh Sigma Prime dan telah stabil serta siap produksi sejak genesis Beacon Chain. Ini diandalkan oleh berbagai perusahaan, kolam staking, dan individu. Ini bertujuan untuk menjadi aman, berkinerja, dan dapat dioperasikan di berbagai lingkungan, dari PC desktop hingga penerapan otomatis yang canggih.
+
+Dokumentasi dapat ditemukan di [Buku Lighthouse](https://lighthouse-book.sigmaprime.io/)
+
+### Lodestar {#lodestar}
+
+Lodestar adalah implementasi klien konsensus siap produksi yang ditulis dalam Typescript di bawah lisensi LGPL-3.0. Ini dipelihara oleh ChainSafe Systems dan merupakan klien konsensus terbaru untuk staker solo, pengembang, dan peneliti. Lodestar terdiri dari beacon node dan klien validator yang didukung oleh implementasi JavaScript dari protokol Ethereum. Lodestar bertujuan untuk meningkatkan kegunaan Ethereum dengan klien light, memperluas aksesibilitas ke kelompok pengembang yang lebih besar, dan berkontribusi lebih lanjut pada keragaman ekosistem.
+
+Informasi lebih lanjut dapat ditemukan di [situs web Lodestar](https://lodestar.chainsafe.io/)
+
+### Nimbus {#nimbus}
+
+Nimbus adalah implementasi klien konsensus yang ditulis dalam Nim di bawah lisensi Apache-2.0. Ini adalah klien siap produksi yang digunakan oleh staker solo dan kolam staking. Nimbus dirancang untuk efisiensi sumber daya, membuatnya mudah dijalankan pada perangkat dengan sumber daya terbatas dan infrastruktur perusahaan dengan kemudahan yang sama, tanpa mengorbankan stabilitas atau kinerja hadiah. Jejak sumber daya yang lebih ringan berarti klien memiliki margin keamanan yang lebih besar saat jaringan berada di bawah tekanan.
+
+Pelajari lebih lanjut di [dokumen Nimbus](https://nimbus.guide/)
+
+### Prysm {#prysm}
+
+Prysm adalah klien konsensus sumber terbuka berfitur lengkap yang ditulis dalam Go di bawah lisensi GPL-3.0. Ini menampilkan UI aplikasi web opsional dan memprioritaskan pengalaman pengguna, dokumentasi, dan konfigurabilitas untuk pengguna stake-at-home dan institusional.
+
+Kunjungi [dokumen Prysm](https://prysm.offchainlabs.com/docs/) untuk mempelajari lebih lanjut.
+
+### Teku {#teku}
+
+Teku adalah salah satu klien genesis Beacon Chain asli. Di samping tujuan biasa (keamanan, ketahanan, stabilitas, kegunaan, kinerja), Teku secara khusus bertujuan untuk sepenuhnya mematuhi semua berbagai standar klien konsensus.
+
+Teku menawarkan opsi penerapan yang sangat fleksibel. Beacon node dan klien validator dapat dijalankan bersama sebagai satu proses, yang sangat nyaman untuk staker solo, atau node dapat dijalankan secara terpisah untuk operasi mengunci yang canggih. Selain itu, Teku sepenuhnya dapat dioperasikan dengan [Web3Signer](https://github.com/ConsenSys/web3signer/) untuk keamanan kunci penandatanganan dan perlindungan pemotongan.
+
+Teku ditulis dalam Java dan dilisensikan di bawah Apache 2.0. Ini dikembangkan oleh tim Protokol di ConsenSys yang juga bertanggung jawab atas Besu dan Web3Signer. Pelajari lebih lanjut di [dokumen Teku](https://docs.teku.consensys.net/en/latest/).
+
+### Grandine {#grandine}
+
+Grandine adalah implementasi klien konsensus, yang ditulis dalam Rust di bawah lisensi GPL-3.0. Ini dipelihara oleh Tim Inti Grandine dan cepat, berkinerja tinggi, serta ringan. Ini cocok untuk berbagai staker dari staker solo yang berjalan pada perangkat bersumber daya rendah seperti Raspberry Pi hingga staker institusional besar yang menjalankan puluhan ribu validator.
+
+Dokumentasi dapat ditemukan di [Buku Grandine](https://docs.grandine.io/)
+
+## Mode sinkronisasi {#sync-modes}
+
+Untuk mengikuti dan memverifikasi data saat ini di jaringan, klien Ethereum perlu menyinkronkan dengan status jaringan terbaru. Ini dilakukan dengan mengunduh data dari rekan, memverifikasi integritasnya secara kriptografi, dan membangun basis data blockchain lokal.
+
+Mode sinkronisasi mewakili pendekatan yang berbeda untuk proses ini dengan berbagai pertukaran. Klien juga bervariasi dalam implementasi algoritma sinkronisasi mereka. Selalu merujuk ke dokumentasi resmi dari klien pilihan Anda untuk spesifikasi implementasi.
+
+### Mode sinkronisasi lapisan eksekusi {#execution-layer-sync-modes}
+
+Lapisan eksekusi dapat dijalankan dalam mode yang berbeda agar sesuai dengan kasus penggunaan yang berbeda, dari mengeksekusi ulang status dunia blockchain hingga hanya menyinkronkan dengan ujung rantai dari pos pemeriksaan tepercaya.
+
+#### Sinkronisasi penuh {#full-sync}
+
+Sinkronisasi penuh mengunduh semua blok (termasuk header dan badan blok) dan membuat ulang status blockchain secara bertahap dengan mengeksekusi setiap blok dari genesis.
 
 - Meminimalkan kepercayaan dan menawarkan keamanan tertinggi dengan memverifikasi setiap transaksi.
-- Dengan meningkatnya jumlah transaksi, butuh waktu berhari-hari hingga berminggu-minggu untuk memroses semua transaksi.
+- Dengan meningkatnya jumlah transaksi, dibutuhkan waktu berhari-hari hingga berminggu-minggu untuk memproses semua transaksi.
 
-##### Sinkronisasi cepat
+[Archive node](#archive-node) melakukan sinkronisasi penuh untuk membangun (dan mempertahankan) riwayat lengkap perubahan status yang dibuat oleh setiap transaksi di setiap blok.
 
-Sinkronisasi cepat mengunduh semua blok (termasuk header, transaksi dan bukti pembayaran), memverifikasi semua header, dan mengunduh state dan memverifikasinya dengan membandingkannya terhadap header.
+#### Sinkronisasi cepat {#fast-sync}
 
-- Mengandalkan keamanan mekanisme konsensus.
-- Sinkronisasi memakan waktu hanya beberapa jam.
+Seperti sinkronisasi penuh, sinkronisasi cepat mengunduh semua blok (termasuk header, transaksi, dan tanda terima). Namun, alih-alih memproses ulang transaksi historis, sinkronisasi cepat bergantung pada tanda terima hingga mencapai kepala terbaru, ketika ia beralih ke mengimpor dan memproses blok untuk menyediakan full node.
 
-##### Sinkronisasi ringan
+- Strategi fast sync.
+- Mengurangi permintaan pemrosesan demi penggunaan bandwidth.
 
-Mode klien ringan mengunduh semua header blok, data blok, dan memverifikasi beberapa secara acak. Hanya menyinkronkan ujung rantai dari pos pemeriksaan terpercaya.
+#### Snap sync {#snap-sync}
 
-- Hanya mengambil state terbaru saat mengandalkan kepercayaan pada pengembang dan mekanisme konsensus.
-- Klien siap dipakai dengan state jaringan saat ini dalam beberapa menit.
+Snap sync juga memverifikasi rantai blok demi blok. Namun, alih-alih memulai dari blok genesis, snap sync dimulai pada pos pemeriksaan 'tepercaya' yang lebih baru yang diketahui menjadi bagian dari blockchain yang sebenarnya. Node menyimpan pos pemeriksaan berkala sambil menghapus data yang lebih lama dari usia tertentu. Snapshot ini digunakan untuk membuat ulang data status sesuai kebutuhan, daripada menyimpannya selamanya.
 
-[Lebih lanjut tentang klien Ringan](https://www.parity.io/blog/what-is-a-light-client/)
+- Strategi sinkronisasi tercepat, saat ini menjadi default di Mainnet Ethereum.
+- Menghemat banyak penggunaan disk dan bandwidth jaringan tanpa mengorbankan keamanan.
 
-##### Sinkronisasi snap
+[Lebih lanjut tentang snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
 
-Diimplementasikan oleh Geth. Dengan menggunakan foto - foto dinamis yang disediakan oleh para rekan sejawat, ia mengambilkan semua data akun dan penyimpanan tanpa mengunduh node trie menengah dan kemudian menyusun ulang trie Merkle secara lokal.
+#### Light sync {#light-sync}
 
-- Strategi sinkronisasi tercepat yang dikembangkan oleh Geth, yang saat ini adalah versi defaultnya
-- Menghemat pemakaian ruangan cakram dan bandwidth jaringan tanpa mengorbankan aspek keamanan.
+Mode klien light mengunduh semua header blok, data blok, dan memverifikasi beberapa secara acak. Hanya menyinkronkan ujung rantai dari pos pemeriksaan tepercaya.
 
-[Lebih lanjut tentang Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+- Hanya mendapatkan status terbaru sambil mengandalkan kepercayaan pada pengembang dan mekanisme konsensus.
+- Klien siap digunakan dengan status jaringan saat ini dalam beberapa menit.
 
-##### Sinkronisasi warp
+**NB** Light sync belum berfungsi dengan Ethereum proof-of-stake - versi baru dari light sync akan segera dirilis!
 
-Diimplementasikan oleh OpenEthereum. Node secara teratur menghasilkan foto state konsensus yang penting dan rekan sejawat mana pun dapat mengambilkan foto ini di jaringan, yang memungkinkan sinkronisasi cepat dari titik ini.
+[Lebih lanjut tentang klien light](/developers/docs/nodes-and-clients/light-clients/)
 
-- Mode sinkronisasi OpenEthereum yang tercepat dan default mengandalkan foto statis yang disediakan oleh para rekan sejawat.
-- Strategi yang mirip dengan sinkronisasi snap, tetapi tanpa manfaat keamanan tertentu.
+### Mode sinkronisasi lapisan konsensus {#consensus-layer-sync-modes}
 
-[Lebih lanjut tentang Warp](https://openethereum.github.io/Beginner-Introduction#warping---no-warp)
+#### Optimistic sync {#optimistic-sync}
 
-##### Sinkronisasi beam
+Optimistic sync adalah strategi sinkronisasi pasca-penggabungan yang dirancang untuk menjadi opt-in dan kompatibel ke belakang, memungkinkan node eksekusi untuk menyinkronkan melalui metode yang sudah mapan. Mesin eksekusi dapat _secara optimis_ mengimpor blok beacon tanpa memverifikasinya sepenuhnya, menemukan kepala terbaru, dan kemudian mulai menyinkronkan rantai dengan metode di atas. Kemudian, setelah klien eksekusi menyusul, ia akan memberi tahu klien konsensus tentang validitas transaksi di Beacon Chain.
 
-Diimplementasikan oleh Nethermind dan Trinity. Berfungsi seperti sinkronisasi cepat tetapi juga mengunduh data yang diperlukan untuk mengeksekusi blok terkini, yang memungkinkan Anda membuat query terhadap rantai dalam beberapa menit pertama sejak dimulai.
+[Lebih lanjut tentang optimistic sync](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
-- Menyinkronkan state terlebih dahulu dan memungkinkan Anda membuat kueri terhadap RPC dalam waktu beberapa menit.
-- Masih dalam tahap pengembangan dan belum sepenuhnya bisa diandalkan, sinkronisasi latar belakang diperlambat dan respons RPC mungkin gagal.
+#### Checkpoint sync {#checkpoint-sync}
 
-[Lebih lanjut tentang Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
+Checkpoint sync, juga dikenal sebagai sinkronisasi subjektivitas lemah, menciptakan pengalaman pengguna yang unggul untuk menyinkronkan Beacon Node. Ini didasarkan pada asumsi [subjektivitas lemah](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) yang memungkinkan sinkronisasi Beacon Chain dari pos pemeriksaan subjektivitas lemah baru-baru ini alih-alih genesis. Checkpoint sync membuat waktu sinkronisasi awal secara signifikan lebih cepat dengan asumsi kepercayaan yang serupa dengan sinkronisasi dari [genesis](/glossary/#genesis-block).
 
-#### Pengaturan di klien {#client-setup}
+Dalam praktiknya, ini berarti node Anda terhubung ke layanan jarak jauh untuk mengunduh status final terbaru dan terus memverifikasi data dari titik tersebut. Pihak ketiga yang menyediakan data dipercaya dan harus dipilih dengan cermat.
 
-Klien menawarkan opsi konfigurasi yang kaya untuk menyesuaikan dengan kebutuhan Anda. Pilih salah satu yang paling sesuai dengan Anda berdasarkan tingkat keamanan, data yang tersedia, dan biayanya. Selain algoritma sinkronisasi, Anda juga dapat menentukan pemangkasan berbagai jenis data lama. Pemangkasan memungkinkan penghapusan data lama, contohnya menghilangkan node trie state yang tidak dapat dicapai dari blok terkini.
-
-Perhatikan dokumentasi klien atau halaman bantuan untuk menemukan mode sinkronisasi mana yang merupakan opsi defaultnya. Anda dapat menentukan tipe sinkronisasi yang lebih disukai ketika Anda melakukan penyiapan, dalam cara:
-
-**Menyiapkan sinkronisasi ringan di [GETH](https://geth.ethereum.org/) atau [ERIGON](https://github.com/ledgerwatch/erigon)**
-
-`geth --syncmode "light"`
-
-**Menyiapkan sinkronisasi penuh dengan arsip di [Besu](https://besu.hyperledger.org/)**
-
-`besu --sync-mode=FULL`
-
-Sama seperti konfigurasi lainnya, ia dapat ditentukan dengan bendera startup atau dalam berkas konfigurasi. Contoh lainnya adalah [Nethermind](https://docs.nethermind.io/) yang mendorong Anda untuk memilih konfigurasi pada saat inisiasi pertama dan membuat berkas konfigurasi.
-
-## Klien konsensus (sebelumnya klien 'Eth2') {#consensus-clients}
-
-Ada beberapa klien konsensus (sebelumnya dikenal sebagai klien 'Eth2') untuk mendukung [peningkatan konsensus](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
-
-| Klien                                                       | Bahasa     | Sistem operasi        | Jaringan                             |
-| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------ |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Rantai Suar, Goerli                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Rantai Suar, Goerli                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Rantai Suar, Goerli, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Rantai Suar, Goerli                  |
-| [Prysm](https://prysm.offchainlabs.com/docs/) | Go         | Linux, Windows, macOS | Rantai Suar, Gnosis, Goerli, Pyrmont |
-
-## Perangkat keras {#hardware}
-
-Kebutuhan perangkat keras berbeda untuk tiap klien tapi secara umum tidak terlalu tinggi karena node hanya perlu terus dalam kondisi tersinkronisasi. Jangan merancukannya dengan penambangan yang memerlukan lebih banyak daya komputasi. Akan tetapi, waktu sinkronisasi dan performa memang meningkat dengan perangkat keras yang lebih kuat. Bergantung kebutuhan dan keinginan Anda, Ethereum dapat dijalankan pada komputer, server rumah, komputer papan tunggal, atau server privat virtual di cloud.
-
-Satu cara mudah untuk menjalankan node Anda sendiri adalah menggunakan kotak 'colokkan dan jalankan' seperti [DAppNode](https://dappnode.io/). Menyediakan perangkat keras untuk menjalankan klien dan apllikasi yang bergantung padanya dengan antar muka pengguna sederhana.
-
-### Persyaratan {#requirements}
-
-Sebelum menginstal klien apa pun, pastikan komputer Anda punya sumber daya yang cukup untuk menjalankannya. Persayaratan minimum dan disarankan bisa ditemukan di bawah, akan tetapi bagian kuncinya adalah kapasitas penyimpanan disk. Menyinkronisasikan blockchain Ethereum sangat bergantung banyak pada input/output. Sangat disarankan untuk memiliki satu solid-state drive (SSD). Untuk menjalankan satu klien Ethereum pada HDD, Anda akan membutuhkan paling sedikit 8GB RAM untuk digunakan sebagai cache.
-
-#### Persayaratan minimum {#recommended-specifications}
-
-- CPU dengan 2+ inti
-- RAM dengan ukuran minimum 4GB dengan satu SSD, 8 GB+ jika Anda punya satu HDD
-- Bandwidth dengan kecepatan 8 MBit/d
-
-#### Spesifikasi yang direkomendasikan {#recommended-specifications}
-
-- CPU cepat dengan 4+ inti
-- RAM berukuran 16 GB+
-- SSD cepat dengan kapasitas penyimpanan paling sedikit 500 GB
-- Bandwidth dengan kecepatan 25+ MBit/d
-
-Mode sinkronisasi yang Anda pilih akan mempengaruhi persyaratan ukuran ruangan cakram, tapi kami telah memperkirakan ruangan cakram yang akan Anda perlukan untuk setiap klien di bawah ini.
-
-| Klien        | Ukuran disk (sinkronisasi cepat) | Ukuran disk (arsip penuh) |
-| ------------ | -------------------------------- | ------------------------- |
-| Geth         | 400GB+                           | 6TB+                      |
-| OpenEthereum | 280GB+                           | 6TB+                      |
-| Nethermind   | 200GB+                           | 5TB+                      |
-| Besu         | 750GB+                           | 5TB+                      |
-| Erigon       | N/A                              | 1TB+                      |
-
-- Catatan: Erigon tidak melakukan Sinkronisasi Cepat, tapi Pemangkasan Penuh masih memungkinkan (\~500GB)
-
-Bagan ini menunjukkan bagaimana persyaratan kapasitas penyimpanan selalu berubah. Untuk data Geth dan Parity yang paling terbaru, lihat [data sinkronisasi penuh](https://etherscan.io/chartsync/chaindefault) dan [ data sinkronisasi arsip](https://etherscan.io/chartsync/chainarchive).
-
-### Ethereum pada komputer papan tunggal {#ethereum-on-a-single-board-computer}
-
-Cara paling nyaman dan murah untuk menjalankan node Ethereum adalah menggunakan komputer papan tungggal dengan arstitektur ARM seperti Raspberry Pi. [Ethereum di ARM](https://twitter.com/EthereumOnARM) menyediakan gambar dari klien Geth, Parity, Nethermind, dan Besu. Ini adalah tutorial sederhana tentang [bagaimana menyusun dan menyiapkan klien ARM](/developers/tutorials/run-node-raspberry-pi/).
-
-Perangkat kecil, terjangkau dan efisien seperti ini, ideal untuk menjalankan node di rumah.
+Lebih lanjut tentang [checkpoint sync](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Bacaan lebih lanjut {#further-reading}
 
-Ada banyak informasi tentang klien Ethereum di internet. Berikut adalah beberapa sumber daya yang mungkin bisa membantu.
-
 - [Ethereum 101 - Bagian 2 - Memahami Node](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 Februari 2019_
-- [Menjalankan Node Penuh Ethereum: Panduan bagi Mereka yang Hampir Tidak Termotivasi](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
-- [Menganalisis persyaratan perangkat keras untuk menjadi node tervalidasi penuh Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
-- [Menjalankan Node Hyperledger Besu di Jaringan Utama Ethereum: Keuntungan, Persyaratan, dan Penyiapan](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Mei 2020_
+- [Menjalankan Full Node Ethereum: Panduan untuk yang Kurang Termotivasi](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
 
 ## Topik terkait {#related-topics}
 
@@ -308,4 +316,4 @@ Ada banyak informasi tentang klien Ethereum di internet. Berikut adalah beberapa
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Ubah Raspberry Pi 4 Anda menjadi node validator cukup dengan mem-flash kartu MicroSD – Panduan instalasi](/developers/tutorials/run-node-raspberry-pi/) _– Flash Raspberry Pi 4, colokkan kabel ethernet, hubungkan SSD dan nyalakan perangkat untuk mengubah Raspberry Pi 4 menjadi node penuh Ethereum yang menjalankan lapisan eksekusi (Jaringan Utama) dan / atau lapisan konsensus (Rantai Suar / validator)._
+- [Ubah Raspberry Pi 4 Anda menjadi node validator hanya dengan mem-flash kartu MicroSD – Panduan instalasi](/developers/tutorials/run-node-raspberry-pi/) _– Flash Raspberry Pi 4 Anda, colokkan kabel ethernet, sambungkan disk SSD, dan nyalakan perangkat untuk mengubah Raspberry Pi 4 menjadi full node Ethereum yang menjalankan lapisan eksekusi (Mainnet) dan / atau lapisan konsensus (Beacon Chain / validator)._

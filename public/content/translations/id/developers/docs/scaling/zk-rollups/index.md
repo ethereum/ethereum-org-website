@@ -225,6 +225,17 @@ Tonton Finematics menjelaskan ZK-rollup:
 
 ## Siapa yang sedang mengerjakan zkEVM? {#zkevm-projects}
 
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>zkEVM untuk L2 vs L1</AlertTitle>
+<AlertDescription>
+Proyek-proyek di bawah ini menggunakan teknologi zkEVM para membangun rollup layer 2. Ada juga penelitian tentang penggunaan zkEVM untuk verifikasi blok L1, yang akan memungkinkan validator memverifikasi blok Ethereum tanpa menjalankan kembali transaksi.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+
 Proyek yang mengerjakan zkEVM meliputi:
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM adalah proyek yang didanai oleh Ethereum Foundation untuk mengembangkan ZK-rollup yang kompatibel dengan EVM dan mekanisme untuk menghasilkan bukti validitas untuk blok Ethereum._

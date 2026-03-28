@@ -224,6 +224,17 @@ Tazama Finematics ikielezea unda-mpya za ZK:
 
 ## Nani anafanyia kazi zkEVM? {#zkevm-projects}
 
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>zkEVM kwa L2 dhidi ya L1</AlertTitle>
+<AlertDescription>
+Miradi iliyo hapa chini inatumia teknolojia ya zkEVM kuunda rollups za safu ya 2. Pia kuna utafiti wa kutumia zkEVM kwa uthibitishaji wa kitalu wa L1, ambao ungewezesha wathibitishaji kuthibitisha kitalu vya Ethereum bila kutekeleza tena miamala.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+
 Miradi inayofanyia kazi zkEVMs ni pamoja na:
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM ni mradi unaofadhiliwa na Msingi wa Ethereum kuendeleza unda-mpya ya ZK inayooana na EVM na utaratibu wa kuzalisha uthibitisho wa uhalali kwa bloku za Ethereum._

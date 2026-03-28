@@ -224,6 +224,17 @@ Xem Finematics giải thích về các rollup ZK:
 
 ## Ai đang làm việc trên một zkEVM? {#zkevm-projects}
 
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>zkEVM cho L2 so voi L1</AlertTitle>
+<AlertDescription>
+Cac du an duoi day su dung cong nghe zkEVM de xay dung lop 2 gop nhieu giao dich. Cung co nghien cuu ve viec su dung zkEVM de xac minh Khoi L1, dieu nay se cho phep trinh xac thuc xac minh cac Khoi Ethereum ma khong can thuc thi lai cac giao dich.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+
 Các dự án đang làm việc trên zkEVM bao gồm:
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM là một dự án được tài trợ bởi Ethereum Foundation để phát triển một rollup ZK tương thích với EVM và một cơ chế để tạo ra các bằng chứng hợp lệ cho các khối Ethereum._

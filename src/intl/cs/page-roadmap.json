@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "Předem mapuje závislosti pro rychlejší synchronizaci, paralelní spouštění a paralelní čtení z disku.",
   "page-roadmap-glamsterdam-bal-item-3": "Snižuje poplatky za plyn pro aplikace s vysokými nároky na stav a zlepšuje předvídatelnost nákladů na plyn.",
   "page-roadmap-hegota-discussed-title": "Plánováno pro Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Návrhy jsou v současné době předmětem diskuse."
+  "page-roadmap-hegota-discussed-item-1": "Návrhy jsou v současné době předmětem diskuse.",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "Důkazy s nulovým rozšířením znalostí by mohly validatorům umožnit ověřovat Ethereum bloky bez nutnosti znovu provádět transakce, což by umožnilo vyšší limit transakcnich poplatku bez zvýšení hardwarových nároků."
 }

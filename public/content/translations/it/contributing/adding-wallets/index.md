@@ -1,80 +1,81 @@
 ---
 title: Aggiungere portafogli
-description: La politica che applichiamo quando aggiungiamo un portafoglio a ethereum.org
+description: La politica che utilizziamo per aggiungere un portafoglio su ethereum.org
 lang: it
 ---
 
 # Aggiungere portafogli {#adding-wallets}
 
-Vogliamo assicurarci di mostrare una varietà di portafogli che coprano il panorama ricco di funzioni dei portafogli così che gli utenti possano navigare su Ethereum in sicurezza.
+Vogliamo assicurarci di mostrare una varietà di portafogli che coprano il panorama ricco di funzionalità dei portafogli, in modo che gli utenti possano navigare su Ethereum in modo sicuro.
 
-Tutti sono liberi di suggerire l'aggiunta di un portafoglio a ethereum.org. Se ci siamo dimenticati un portafoglio, ti preghiamo di suggerirlo!
+Chiunque è libero di suggerire l'aggiunta di un portafoglio su ethereum.org. Se c'è un portafoglio che ci è sfuggito, suggeriscilo!
 
-I portafogli sono attualmente elencati in:
+I portafogli sono attualmente elencati su:
 
 - [ethereum.org/wallets/find-wallet/](/wallets/find-wallet/)
 
-I portafogli sono in rapido cambiamento su Ethereum. Abbiamo provato a creare un meccanismo equo per la disamina su ethereum.org, ma i criteri elencati cambieranno ed evolveranno col tempo.
+I portafogli cambiano rapidamente in Ethereum. Abbiamo cercato di creare un quadro equo per la valutazione su ethereum.org, ma i criteri di inserimento cambieranno e si evolveranno nel tempo.
 
 ## Il quadro decisionale {#the-decision-framework}
 
-### Criteri per l'inclusione: gli elementi imprescindibili {#the-must-haves}
+### Criteri di inclusione: i requisiti fondamentali {#the-must-haves}
 
-- **Un prodotto testato per la sicurezza**: che sia tramite il controllo, un team di sicurezza interno, la codifica open source, o qualche altro metodo, la sicurezza del tuo portafoglio dev'essere attendibile. Questo riduce il rischio per gli utenti e ci dimostra che prendi la sicurezza sul serio.
-- **Un portafoglio dev'esser stato "attivo" per oltre sei mesi O rilasciato da un gruppo con una comprovata esperienza**; anche questa è un'indicazione di sicurezza. 6 mesi sono un buon periodo di tempo per individuare bug critici o utilizzi impropri. Chiediamo sei mesi per aiutare a filtrare le biforcazioni i cui progetti sono abbandonati rapidamente.
-- **Gestito da un team attivo**: ciò aiuta ad assicurare la qualità e che un utente riceverà supporto per le proprie richieste.
-- **Elenco d'informazioni oneste e accurate** - Ci si aspetta che ogni elenco suggerito dai progetti sia fornito con informazioni oneste e accurate. I prodotti che falsificano le informazioni in elenco, ad esempio dichiarando che il proprio prodotto è "open source" quando non lo è, saranno rimossi.
-- **Punto di contatto**: un punto di contatto per il portafoglio ci aiuterà molto a ottenere informazioni accurate quando sono apportate delle modifiche. Questo continuerà ad aggiornare ethereum in modo gestibile, raccogliendo le informazioni future.
-- **Transazioni EIP-1559 (tipo 2)**: il tuo portafoglio deve supportare le transazioni EIP-1559 (tipo 2) per le transazioni sulla Rete Principale di Ethereum.
-- **Buona esperienza dell'utente**: mentre l'UX è soggettiva, se svariati membri del team principale testano il prodotto e lo trovano difficile da utilizzare, ci riserviamo il diritto di rifiutare il portafoglio fornendo piuttosto utili suggerimenti per migliorarlo. Questo ha lo scopo di proteggere la nostra base di utenti, composta prevalentemente da principianti.
+- **Un prodotto testato per la sicurezza**: che sia tramite audit, un team di sicurezza interno, codice open source o qualche altro metodo, la sicurezza del tuo portafoglio deve essere affidabile. Questo riduce il rischio per i nostri utenti e ci dimostra che prendi la sicurezza sul serio.
+- **Un portafoglio che è "attivo" da oltre sei mesi OPPURE rilasciato da un gruppo con una comprovata esperienza**: questa è un'altra indicazione di sicurezza. Sei mesi sono un buon lasso di tempo per individuare bug critici e vulnerabilità. Chiediamo sei mesi per aiutare a filtrare le biforcazioni che vengono rapidamente abbandonate come progetti.
+- **Sviluppato da un team attivo**: questo aiuta a garantire la qualità e che un utente riceverà supporto per le proprie richieste.
+- **Informazioni di inserimento oneste e accurate**: ci si aspetta che qualsiasi inserimento suggerito dai progetti sia accompagnato da informazioni oneste e accurate. I prodotti che falsificano le informazioni di inserimento, come dichiarare che il prodotto è "open source" quando non lo è, verranno rimossi.
+- **Punto di contatto**: un punto di contatto per il portafoglio ci aiuterà notevolmente a ottenere informazioni accurate quando vengono apportate modifiche. Questo manterrà gestibile l'aggiornamento di ethereum.org durante la raccolta di informazioni future.
+- **Transazioni EIP-1559 (tipo 2)**: il tuo portafoglio deve supportare le transazioni EIP-1559 (tipo 2) per le transazioni sulla rete principale di Ethereum.
+- **Buona esperienza utente**: sebbene l'UX sia soggettiva, se diversi membri del team principale testano il prodotto e lo trovano difficile da usare, ci riserviamo il diritto di rifiutare il portafoglio e forniremo invece suggerimenti utili per migliorarlo. Questo viene fatto per proteggere la nostra base di utenti che è composta principalmente da principianti.
+- **Incentrato su Ethereum**: un portafoglio deve fornire un'esperienza incentrata principalmente su Ethereum. Ciò significa che Ethereum (o qualsiasi livello 2) è impostato come rete predefinita, gli asset ERC sono adeguatamente supportati e le funzionalità sono allineate con l'ecosistema di Ethereum. I portafogli che danno priorità nell'interfaccia utente a livelli 1 alternativi non verranno elencati. 
 
-### Rimozione di prodotti {#product-removals}
+### Rimozioni di prodotti {#product-removals}
 
-- **Informazioni aggiornate**: i fornitori di portafogli sono responsabili di inoltrare le informazioni aggiornate sul proprio portafoglio ogni 6 mesi per assicurare la validità e la rilevanza delle informazioni fornite (anche se non sono state apportate modifiche al loro prodotto). Se il team del prodotto non lo fa, ethereum.org potrebbe rimuovere il progetto dalla pagina.
+- **Informazioni aggiornate**: i fornitori di portafogli sono responsabili di inviare nuovamente le informazioni del proprio portafoglio ogni 6 mesi per garantire la validità e la pertinenza delle informazioni fornite (anche se non ci sono modifiche al loro prodotto). Se il team del prodotto non lo fa, ethereum.org potrebbe rimuovere il progetto dalla pagina. 
 
-### Altri criteri: gli aspetti preferibili {#the-nice-to-haves}
+### Altri criteri: i requisiti opzionali {#the-nice-to-haves}
 
-- **Accessibile globalmente**: il tuo portafoglio non presenta limitazioni geografiche o requisiti KYC che escludono certe persone dall'accedere al tuo servizio.
-- **Disponibile in più lingue**: il tuo portafoglio è tradotto in più lingue, il che consente agli utenti di tutto il mondo di accedervi.
-- **Open source**: l'intera base di codice del tuo progetto (non soltanto i moduli) dovrebbe essere accessibile e dovresti accettare PR dall'intera comunità.
-- **Non custodito** – Gli utenti controllano i propri fondi. Se il prodotto scompare, gli utenti potranno comunque accedere e spostare i propri fondi.
-- **Supporto al portafoglio hardware**: gli utenti possono connettere i propri portafogli hardware per firmare le transazioni.
-- **WalletConnect**: gli utenti possono connettersi alle dapp utilizzando WalletConnect.
-- **Importazione degli endpoint RPC di Ethereum**: gli utenti possono importare i dati RPC del nodo, consentendo loro di connettersi a un nodo di propria scelta o ad altre reti compatibili con EVM.
-- **NFT**: gli utenti possono visualizzare e interagire con i propri NFT nel portafoglio.
-- **Connessione alle applicazioni di Ethereum**: gli utenti possono connettersi e utilizzare le applicazioni di Ethereum.
-- **Staking**: gli utenti possono mettere direttamente in staking tramite il portafoglio.
-- **Scambi**: gli utenti possono scambiare i token tramite il portafoglio.
-- **Reti multicatena**: il tuo portafoglio supporta l'accesso degli utenti a più reti della blockchain per impostazione predefinita.
+- **Accessibile a livello globale**: il tuo portafoglio non ha limitazioni geografiche o requisiti KYC che escludono determinate persone dall'accesso al tuo servizio.
+- **Disponibile in più lingue**: il tuo portafoglio è tradotto in più lingue, consentendo agli utenti di tutto il mondo di accedervi.
+- **Open source**: l'intera base di codice del tuo progetto (non solo i moduli) dovrebbe essere accessibile e dovresti accettare PR dalla comunità più ampia.
+- **Non-custodial**: gli utenti controllano i propri fondi. Se il tuo prodotto scompare, gli utenti possono ancora accedere e spostare i propri fondi.
+- **Supporto per portafogli hardware**: gli utenti possono connettere il proprio portafoglio hardware per firmare le transazioni.
+- **WalletConnect**: gli utenti possono connettersi alle dApp utilizzando WalletConnect.
+- **Importazione di endpoint RPC di Ethereum**: gli utenti possono importare i dati RPC del nodo, consentendo loro di connettersi a un nodo di loro scelta o ad altre reti compatibili con l'EVM.
+- **NFT**: gli utenti sono in grado di visualizzare e interagire con i propri NFT nel portafoglio.
+- **Connessione alle applicazioni di Ethereum**: gli utenti sono in grado di connettersi e utilizzare le applicazioni di Ethereum.
+- **Staking**: gli utenti sono in grado di fare staking direttamente tramite il portafoglio.
+- **Scambi**: gli utenti sono in grado di scambiare token tramite il portafoglio.
+- **Reti multi-chain**: il tuo portafoglio supporta l'accesso degli utenti a più reti blockchain per impostazione predefinita.
 - **Reti di livello 2**: il tuo portafoglio supporta l'accesso degli utenti alle reti di livello 2 per impostazione predefinita.
-- **Personalizzazione delle commissioni sul gas**: il tuo portafoglio consente agli utenti di personalizzare le commissioni sul gas delle proprie transazioni (commissione di base, commissione di priorità, commissione massima).
-- **Supporto ENS**: il tuo portafoglio consente agli utenti di inviare le transazioni ai nomi ENS.
-- **Supporto ERC-20**: il tuo portafoglio consente agli utenti di importare i contratti del token ERC-20 o interroga automaticamente e mostra i token ERC-20.
-- **Acquistare criptovalute**: il tuo portafoglio supporta l'acquisto diretto e l'adesione alle criptovalute da parte degli utenti.
-- **Vendita per valuta legale**: il tuo portafoglio supporta la vendita e prelievo degli utenti in valuta legale direttamente su carta o conto bancario.
-- **Multifirma**: il tuo portafoglio supporta più firme per firmare una transazione.
-- **Recupero sociale**: il tuo portafoglio supporta i tutori e un utente può recuperarlo se perde la propria frase seed, utilizzando tali tutori.
-- **Team di supporto dedicato**: il tuo portafoglio ha un team di supporto dedicato a cui gli utenti possono rivolgersi quando si verificano problemi.
-- **Risorse/documentazione didattiche**: il tuo prodotto dovrebbe avere un'esperienza di adesione ben progettata per aiutare a istruire gli utenti. In alternativa, dovrebbe offrire contenuti di supporto come articoli o video.
+- **Personalizzazione delle commissioni del gas**: il tuo portafoglio consente agli utenti di personalizzare le commissioni del gas delle transazioni (commissione di base, commissione di priorità, commissione massima).
+- **Supporto ENS**: il tuo portafoglio consente agli utenti di inviare transazioni a nomi ENS.
+- **Supporto ERC-20**: il tuo portafoglio consente agli utenti di importare contratti di token ERC-20, o interroga e visualizza automaticamente i token ERC-20.
+- **Acquisto di criptovalute**: il tuo portafoglio supporta gli utenti nell'acquisto diretto e nell'avvicinamento alle criptovalute.
+- **Vendita per valuta fiat**: il tuo portafoglio supporta gli utenti nella vendita e nel prelievo in valuta fiat direttamente su carta o conto bancario.
+- **Multifirma**: il tuo portafoglio supporta firme multiple per firmare una transazione.
+- **Recupero sociale**: il tuo portafoglio supporta i guardiani e un utente può recuperare il proprio portafoglio se perde la propria frase di recupero utilizzando questi guardiani.
+- **Team di supporto dedicato**: il tuo portafoglio ha un team di supporto dedicato a cui gli utenti possono rivolgersi in caso di problemi.
+- **Risorse educative/documentazione**: il tuo prodotto dovrebbe avere un'esperienza di onboarding ben progettata per aiutare ed educare gli utenti. O prove di contenuti pratici come articoli o video.
 
 ## Aggiungere un portafoglio {#adding-a-wallet}
 
-Se desideri aggiungere un portafoglio a ethereum.org, crea un ticket su GitHub.
+Se vuoi aggiungere un portafoglio su ethereum.org, crea una issue su GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
-  Crea un ticket
+  Crea una issue
 </ButtonLink>
 
 ## Manutenzione {#maintenance}
 
-In linea con la natura fluida di Ethereum, team e prodotti vanno e vengono e l'innovazione avviene quotidianamente, quindi effettueremo controlli di routine dei nostri contenuti per:
+Data la natura fluida di Ethereum, team e prodotti vanno e vengono e l'innovazione avviene quotidianamente, quindi effettueremo controlli di routine dei nostri contenuti per:
 
-- garantire che tutti i portafogli e le dApp elencati soddisfino ancora i nostri criteri
+- assicurarci che tutti i portafogli e le dApp elencati soddisfino ancora i nostri criteri
 - verificare che non ci siano prodotti suggeriti che soddisfano più criteri rispetto a quelli attualmente elencati
 
-ethereum.org è mantenuto dalla sua community open source e si affida ad essa per tenere aggiornato questo elenco. Se noti che delle informazioni sui portafogli elencati devono essere aggiornate, sei pregato di [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) o una [richiesta di pull](https://github.com/ethereum/ethereum-org-website/pulls)!
+ethereum.org è mantenuto dalla comunità open source e ci affidiamo alla comunità per aiutarci a mantenerlo aggiornato. Se noti informazioni sui portafogli elencati che devono essere aggiornate, per favore [apri una issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) o una [pull request](https://github.com/ethereum/ethereum-org-website/pulls)!
 
 
-## Condizioni d'uso {#terms-of-use}
+## Termini di utilizzo {#terms-of-use}
 
-Sei anche pregato di fare riferimento ai [termini d'utilizzo](/terms-of-use/). Le informazioni su ethereum.org sono fornite esclusivamente a fini di informazione generale.
+Fai riferimento anche ai nostri [termini di utilizzo](/terms-of-use/). Le informazioni su ethereum.org sono fornite esclusivamente a scopo informativo generale.

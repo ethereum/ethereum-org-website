@@ -6,6 +6,8 @@ import { isValidDate } from "@/lib/utils/date"
 
 import { ATTESTANT_BLOG, BLOG_FEEDS } from "@/lib/constants"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_RSS_TASK_ID = "fetch-rss"
 
 /**
@@ -14,18 +16,12 @@ export const FETCH_RSS_TASK_ID = "fetch-rss"
  * Exported for use by other data-layer modules (e.g., fetchPosts)
  */
 export async function fetchXml(url: string): Promise<Record<string, unknown>> {
-  const response = await fetch(url, {
+  const response = await fetchRetry(url, {
     headers: { Cookie: "", DNT: "1" }, // Empty cookie header and do-not-track
     credentials: "omit", // Don't send or receive cookies
   })
 
   if (!response.ok) {
-    // Provide more specific error messages
-    if (response.status === 429) {
-      throw new Error(
-        `Rate limited (429) when fetching ${url}. The server is temporarily limiting requests.`
-      )
-    }
     throw new Error(`Failed to fetch XML from ${url}: ${response.status}`)
   }
 

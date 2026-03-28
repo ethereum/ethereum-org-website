@@ -1,96 +1,104 @@
 ---
-title: Einführung in Dapps
+title: "Technische Einführung in Dapps"
 description:
 lang: de
 ---
 
-Eine dezentralisierte Anwendung (dapp) ist eine Anwendung, die auf einem dezentralisierten Netzwerk aufgebaut ist. Dies kombiniert einen [Smart Contract](/developers/docs/smart-contracts/) und eine Frontend-Benutzeroberfläche. Beachte, dass Smart Contracts in Ethereum zugänglich und transparent sind – wie offene APIs –, also kann deine Dapp sogar einen Smart Contract enthalten, den eine andere Person geschrieben hat.
+Eine dezentralisierte Anwendung (Dapp) ist eine Anwendung, die auf einem dezentralisierten Netzwerk aufbaut und einen [Smart Contract](/developers/docs/smart-contracts/) mit einer Frontend-Benutzeroberfläche kombiniert. Auf [Ethereum](/) sind Smart Contracts zugänglich und transparent – wie offene APIs –, sodass Ihre Dapp sogar einen Smart Contract enthalten kann, den jemand anderes geschrieben hat.
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor du mehr über Dapps lernst, solltest du die [Blockchain-Basics](/developers/docs/intro-to-ethereum/) kennen und dir durchlesen, was das Ethereum-Netzwerk ist und wie es dezentralisiert wird.
+Bevor Sie sich mit Dapps befassen, sollten Sie die [Blockchain-Grundlagen](/developers/docs/intro-to-ethereum/) durchgehen und sich über das Ethereum-Netzwerk und dessen dezentralisierte Natur informieren.
 
 ## Definition einer Dapp {#definition-of-a-dapp}
 
-Eine Dapp hat ihren Backend-Code auf einem dezentralisierten Peer-to-Peer-Netzwerk laufen. Vergleiche das mit einer App, bei der der Backend-Code auf dezentralisierten Servern läuft.
+Der Backend-Code einer Dapp läuft auf einem dezentralisierten Peer-to-Peer-Netzwerk. Im Gegensatz dazu läuft der Backend-Code einer herkömmlichen App auf zentralisierten Servern.
 
-Eine Dapp kann Frontend-Code und eine Benutzeroberfläche in jeder beliebigen Sprache haben (genau wie eine App), die Aufrufe in ihrem Backend tätigen können. Darüber hinaus kann das Frontend auf dezentralisiertem Speicher wie [IPFS](https://ipfs.io/) gehostet werden.
+Eine Dapp kann Frontend-Code und Benutzeroberflächen haben, die in einer beliebigen Sprache geschrieben sind (genau wie eine App), um Aufrufe an ihr Backend zu tätigen. Darüber hinaus kann ihr Frontend auf dezentralisierten Speichern wie [IPFS](https://ipfs.io/) gehostet werden.
 
-- **Dezentralisiert** – Dapps arbeiten auf Ethereum, einer offenen, öffentlichen und dezentralen Plattform, auf der keine Person oder Gruppe die Kontrolle hat.
-- **Deterministisch** – Dapps führen dieselbe Funktion aus, unabhängig von der Umgebung, in der sie ausgeführt werden.
-- **Turing-Vollständigkeit** – Dapps können jede Aktion ausführen, wenn die erforderlichen Ressourcen vorhanden sind.
-- **Isoliert** – Dapps werden in einer virtuellen Umgebung ausgeführt, die als Ethereum Virtual Machine bekannt ist, so dass ein Fehler im Smart Contract die normale Funktion des Blockchain-Netzwerks nicht beeinträchtigt.
+- **Dezentralisiert** – Dapps laufen auf Ethereum, einer offenen, öffentlichen, dezentralisierten Plattform, bei der keine einzelne Person oder Gruppe die Kontrolle hat
+- **Deterministisch** – Dapps führen dieselbe Funktion aus, unabhängig von der Umgebung, in der sie ausgeführt werden
+- **Turing-vollständig** – Dapps können jede Aktion ausführen, sofern die erforderlichen Ressourcen vorhanden sind
+- **Isoliert** – Dapps werden in einer virtuellen Umgebung ausgeführt, die als Ethereum Virtual Machine bekannt ist. Wenn der Smart Contract also einen Fehler aufweist, beeinträchtigt dies nicht die normale Funktion des Blockchain-Netzwerks
 
-### Smart Contracts {#on-smart-contracts}
+### Über Smart Contracts {#on-smart-contracts}
 
-Um Dapps einzuführen, müssen wir auch Smart Contracts vorstellen – das Backend einer Dapp. Einen detaillierten Überblick findest du in unserem Abschnitt über [Smart Contracts](/developers/docs/smart-contracts/).
+Um Dapps vorzustellen, müssen wir Smart Contracts einführen – mangels eines besseren Begriffs das Backend einer Dapp. Für einen detaillierten Überblick besuchen Sie unseren Abschnitt über [Smart Contracts](/developers/docs/smart-contracts/).
 
-Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und genau wie programmiert abläuft. Sobald Smart Contracts im Netzwerk eingesetzt werden, kannst du sie nicht mehr ändern. Dapps können dezentralisiert sein, weil sie von der Logik kontrolliert werden, die in den Vertrag geschrieben ist, und nicht von einem Individuum oder einem Unternehmen. Das bedeutet auch, dass du deine Verträge sehr sorgfältig gestalten und gründlich testen musst.
+Ein Smart Contract ist Code, der auf der Ethereum-Blockchain existiert und genau wie programmiert ausgeführt wird. Sobald Smart Contracts im Netzwerk bereitgestellt wurden, können Sie sie nicht mehr ändern. Dapps können dezentralisiert sein, weil sie durch die im Vertrag geschriebene Logik gesteuert werden und nicht durch eine Einzelperson oder ein Unternehmen. Das bedeutet auch, dass Sie Ihre Verträge sehr sorgfältig entwerfen und gründlich testen müssen.
 
 ## Vorteile der Dapp-Entwicklung {#benefits-of-dapp-development}
 
-- **Zero downtime** - Sobald der Smart Contract auf der Blockchain implementiert ist, kann das gesamte Netzwerk jederzeit Kunden bedienen, die mit dem Vertrag interagieren wollen. Böswillige Akteure können daher keine "Denial-of-Service"-Angriffe starten, die auf einzelne Dapps abzielen.
-- **Privatsphäre** – Du musst keine echte Identität zur Verfügung stellen, um eine Dapp bereitzustellen oder mit einer zu interagieren.
-- **Resistenz gegen Zensur** - keine einzige Entität im Netzwerk kann Benutzer daran hindern, Transaktionen zu übertragen, Dapps bereitzustellen oder Daten der Blockchain auszulesen.
-- **Komplette Datenintegrität** – Daten, die auf der Blockchain gespeichert sind, sind unveränderbar und unbestreitbar, dank kryptographischer Primitivität. Böswillige Akteure können keine Transaktionen oder andere Daten, die bereits öffentlich gemacht wurden, fälschen.
-- **Vertrauenslose Berechnung/überprüfbares Verhalten** – Smart Contracts können analysiert werden und garantieren, dass sie auf vorhersehbare Weise ausgeführt werden, ohne dass dafür das Vertrauen in eine zentrale Autorität vorausgesetzt wird. Das ist bei traditionellen Modellen nicht der Fall. Wenn wir zum Beispiel Online-Banking-Systeme nutzen, müssen wir darauf vertrauen, dass die Finanzinstitute unsere Finanzdaten nicht missbrauchen, keine Aufzeichnungen manipulieren und uns nicht hacken.
+- **Keine Ausfallzeiten** – Sobald der Smart Contract auf der Blockchain bereitgestellt ist, wird das Netzwerk als Ganzes immer in der Lage sein, Anwendungen zu bedienen, die mit dem Vertrag interagieren möchten. Böswillige Akteure können daher keine Denial-of-Service-Angriffe auf einzelne Dapps starten.
+- **Datenschutz** – Sie müssen keine reale Identität angeben, um eine Dapp bereitzustellen oder mit ihr zu interagieren.
+- **Zensurresistenz** – Keine einzelne Entität im Netzwerk kann Benutzer daran hindern, Transaktionen einzureichen, Dapps bereitzustellen oder Daten aus der Blockchain zu lesen.
+- **Vollständige Datenintegrität** – Daten, die auf der Blockchain gespeichert sind, sind dank kryptografischer Primitive unveränderlich und unbestreitbar. Böswillige Akteure können keine Transaktionen oder andere Daten fälschen, die bereits veröffentlicht wurden.
+- **Vertrauenslose Berechnung/verifizierbares Verhalten** – Smart Contracts können analysiert werden und führen garantiert auf vorhersehbare Weise aus, ohne dass einer zentralen Autorität vertraut werden muss. Dies gilt nicht für traditionelle Modelle; wenn wir beispielsweise Online-Banking-Systeme nutzen, müssen wir darauf vertrauen, dass Finanzinstitute unsere Finanzdaten nicht missbrauchen, Aufzeichnungen nicht manipulieren oder gehackt werden.
 
 ## Nachteile der Dapp-Entwicklung {#drawbacks-of-dapp-development}
 
-- **Wartung** – Dapps können schwieriger zu warten sein, weil der Code und die Daten, die auf der Blockchain veröffentlicht werden, schwerer zu ändern sind. Für Entwickler ist es schwierig ihre dApps (oder die zugrunde liegenden Daten, die von einer dApp gespeichert werden) zu aktualisieren, sobald sie bereitgestellt wurden, selbst wenn in einer alten Version Fehler oder Sicherheitsrisiken festgestellt werden.
-- **Performance-Overhead** – Es gibt einen enormen Performance-Overhead und die Skalierung ist sehr schwierig. Um den Grad an Sicherheit, Integrität, Transparenz und Zuverlässigkeit zu erreichen, den Ethereum anstrebt, führt jeder Node jede Transaktion aus und speichert sie. Hinzu kommt, dass der Proof-of-Stake-Konsens ebenfalls Zeit benötigt.
-- **Netzüberlastung** – Wenn eine Dapp zu viele Rechenressourcen verbraucht, gerät das gesamte Netzwerk ins Stocken. Derzeit kann das Netzwerk nur etwa 10 bis 15 Transaktionen pro Sekunde verarbeiten; wenn Transaktionen schneller eingehen, kann der Pool an unbestätigten Transaktionen schnell anschwellen.
-- **Benutzererfahrung** – Es könnte schwieriger sein, eine benutzerfreundliche Erfahrung zu entwickeln, weil es für den durchschnittlichen Endbenutzer zu schwer sein könnte, die notwendigen Tools für eine wirklich sichere Interaktion mit der Blockchain einzurichten.
-- **Zentralisierung** – Benutzer- und entwicklerfreundliche Lösungen, die auf der Basisschicht von Ethereum aufgebaut sind, könnten am Ende ohnehin wie zentralisierte Dienste aussehen. Solche Dienste können zum Beispiel Schlüssel oder andere sensible Informationen serverseitig speichern, ein Frontend über einen zentralen Server bedienen oder wichtige Geschäftslogik auf einem zentralen Server ausführen, bevor sie in die Blockchain geschrieben werden. Durch die Zentralisierung werden viele (wenn nicht alle) Vorteile der Blockchain gegenüber dem traditionellen Modell aufgehoben.
+- **Wartung** – Dapps können schwerer zu warten sein, da der auf der Blockchain veröffentlichte Code und die Daten schwerer zu ändern sind. Es ist für Entwickler schwierig, Aktualisierungen an ihren Dapps (oder den zugrunde liegenden Daten, die von einer Dapp gespeichert werden) vorzunehmen, sobald sie bereitgestellt sind, selbst wenn Fehler oder Sicherheitsrisiken in einer alten Version identifiziert werden.
+- **Leistungsaufwand** – Es gibt einen enormen Leistungsaufwand, und die Skalierung ist wirklich schwierig. Um das Maß an Sicherheit, Integrität, Transparenz und Zuverlässigkeit zu erreichen, das Ethereum anstrebt, führt jeder Blockchain-Knoten jede Transaktion aus und speichert sie. Darüber hinaus nimmt auch der Proof-of-Stake-Konsens Zeit in Anspruch.
+- **Netzwerküberlastung** – Wenn eine Dapp zu viele Rechenressourcen verbraucht, staut sich das gesamte Netzwerk. Derzeit kann das Netzwerk nur etwa 10-15 Transaktionen pro Sekunde verarbeiten; wenn Transaktionen schneller gesendet werden, kann der Pool unbestätigter Transaktionen schnell anwachsen.
+- **Benutzererfahrung** – Es kann schwieriger sein, benutzerfreundliche Erlebnisse zu entwickeln, da der durchschnittliche Endbenutzer es möglicherweise zu schwierig findet, einen Tool-Stack einzurichten, der erforderlich ist, um auf wirklich sichere Weise mit der Blockchain zu interagieren.
+- **Zentralisierung** – Benutzerfreundliche und entwicklerfreundliche Lösungen, die auf der Basisschicht von Ethereum aufbauen, könnten am Ende ohnehin wie zentralisierte Dienste aussehen. Beispielsweise können solche Dienste Schlüssel oder andere sensible Informationen serverseitig speichern, ein Frontend über einen zentralisierten Server bereitstellen oder wichtige Geschäftslogik auf einem zentralisierten Server ausführen, bevor sie auf die Blockchain schreiben. Zentralisierung beseitigt viele (wenn nicht alle) Vorteile der Blockchain gegenüber dem traditionellen Modell.
 
-## Eher ein visueller Lerner? {#visual-learner}
+## Lernen Sie lieber visuell? {#visual-learner}
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Tools zum Erstellen von dApps {#dapp-tools}
+## Tools zur Erstellung von Dapps {#dapp-tools}
 
-**Scaffold-ETH _- Experimentiere schnell mit Solidity, indem du ein Frontend verwendest, das sich an deinen Smart Contract anpasst._**
+**Scaffold-ETH _– Experimentieren Sie schnell mit Solidity über ein Frontend, das sich an Ihren Smart Contract anpasst._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Beispiel-Dapp](https://punkwallet.io/)
 
-**Eth App erstellen _– Erstelle Ethereum-gestützte Apps mit einem Befehl._**
+**Create Eth App _– Erstellen Sie Ethereum-basierte Apps mit einem einzigen Befehl._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _– FOSS-Tool zur Erstellung von Dapp-Frontends aus einer [ABI](/glossary/#abi)._**
+**One Click Dapp _– FOSS-Tool zur Generierung von Dapp-Frontends aus einer [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _– FOSS-Tool für Ethereum-Entwickler, um ihre Nodes zu testen und RPC-Aufrufe vom Browser aus zu komponieren und zu debuggen._**
+**Etherflow _– FOSS-Tool für Ethereum-Entwickler, um ihren Blockchain-Knoten zu testen sowie RPC-Aufrufe im Browser zu erstellen und zu debuggen._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _- SDKs in jeder Sprache, Smart Contracts, Tools und Infrastruktur für die Web3-Entwicklung._**
+**thirdweb _– SDKs in jeder Sprache, Smart Contracts, Tools und Infrastruktur für die Web3-Entwicklung._**
 
-- [Website](https://thirdweb.com/)
+- [Startseite](https://thirdweb.com/)
 - [Dokumentation](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _– Eine Web3-Entwicklungsplattform auf Unternehmensniveau, die das Bereitstellen von Smart Contracts sowie Kreditkarten- und Cross-Chain-Zahlungen ermöglicht und APIs zu Erstellung, Verteilung, Verkauf, Speicherung und Bearbeitung von NFTs nutzt._**
+**Crossmint _– Web3-Entwicklungsplattform auf Unternehmensniveau zur Bereitstellung von Smart Contracts, zur Ermöglichung von Kreditkarten- und Cross-Chain-Zahlungen sowie zur Nutzung von APIs zum Erstellen, Verteilen, Verkaufen, Speichern und Bearbeiten von NFTs._**
 
 - [crossmint.com](https://www.crossmint.com)
 - [Dokumentation](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-- [Entdecken Sie dApps](/apps)
+- [Dapps entdecken](/apps)
 - [Die Architektur einer Web 3.0-Anwendung](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
-- [Ein Leitfaden für dezentrale Anwendungen aus dem Jahr 2021](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) – _LimeChain_
-- [Was sind dezentrale Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) – _Gemini_
+- [Ein Leitfaden zu dezentralisierten Anwendungen aus dem Jahr 2021](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) – _LimeChain_
+- [Was sind dezentralisierte Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) – _Gemini_
 - [Beliebte Dapps](https://www.alchemy.com/dapps) – _Alchemy_
 
-_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
+_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
 ## Verwandte Themen {#related-topics}
 
 - [Einführung in den Ethereum-Stack](/developers/docs/ethereum-stack/)
 - [Entwicklungs-Frameworks](/developers/docs/frameworks/)
+
+## Tutorials: Apps und Frontends auf Ethereum erstellen {#tutorials}
+
+- [Uniswap-v2 Contract Walk-Through](/developers/tutorials/uniswap-v2-annotated-code/) _– Ein kommentierter Durchgang durch die Uniswap v2 Core Contracts, der erklärt, wie der AMM funktioniert._
+- [Erstellen einer Benutzeroberfläche für Ihren Vertrag](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Wie man ein modernes React + wagmi Frontend erstellt, das sich mit Ihrem Smart Contract verbindet._
+- [Hello World Smart Contract für Anfänger – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– End-to-End-Tutorial: Schreiben, Bereitstellen und Erstellen eines Frontends für einen einfachen Smart Contract._
+- [Serverkomponenten und Agenten für Web3-Apps](/developers/tutorials/server-components/) _– Wie man TypeScript-Serverkomponenten schreibt, die auf Blockchain-Ereignisse hören und mit Transaktionen antworten._
+- [IPFS für dezentralisierte Benutzeroberflächen](/developers/tutorials/ipfs-decentralized-ui/) _– Wie Sie das Frontend Ihrer Dapp auf IPFS hosten, um Zensurresistenz zu gewährleisten._

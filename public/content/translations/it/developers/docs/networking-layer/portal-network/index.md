@@ -1,89 +1,89 @@
 ---
-title: La Rete Portal
-description: Una panoramica della Rete Portal, una rete in fase di sviluppo progettata per supportare i client con risorse limitate.
+title: La Portal Network
+description: Una panoramica della Portal Network - una rete in fase di sviluppo progettata per supportare i client con poche risorse.
 lang: it
 ---
 
-Ethereum è una rete composta da computer che eseguono il software client di Ethereum. Ciascuno di questi computer è chiamato "nodo". Il software client consente a un nodo di inviare e ricevere dati sulla rete Ethereum e verifica i dati in base alle regole del protocollo Ethereum. I nodi conservano molti dati storici nella loro memoria di archiviazione su disco e li aggiungono quando ricevono nuovi pacchetti di informazioni, noti come blocchi, da altri nodi della rete. Questo è necessario per verificare sempre che un nodo abbia informazioni coerenti con il resto della rete. Ciò significa che l'esecuzione di un nodo può richiedere molto spazio su disco. Alcune operazioni dei nodi possono richiedere anche molta RAM.
+[Ethereum](/) è una rete composta da computer che eseguono il software del client di Ethereum. Ognuno di questi computer è chiamato "nodo". Il software del client consente a un nodo di inviare e ricevere dati sulla rete di Ethereum e verifica i dati in base alle regole del protocollo di Ethereum. I nodi conservano molti dati storici nella memoria del proprio disco e vi aggiungono dati quando ricevono nuovi pacchetti di informazioni, noti come blocchi, da altri nodi sulla rete. Ciò è necessario per verificare sempre che un nodo disponga di informazioni coerenti con il resto della rete. Questo significa che l'esecuzione di un nodo può richiedere molto spazio su disco. Anche alcune operazioni del nodo possono richiedere molta RAM.
 
-Per ovviare al problema dell'archiviazione su disco, sono stati sviluppati nodi "leggeri" che richiedono informazioni ai nodi completi invece di memorizzare tutto da soli. Tuttavia, ciò significa che il nodo leggero non sta verificando in modo indipendente le informazioni e si sta invece fidando di un altro nodo. Ciò significa anche che i nodi completi devono svolgere del lavoro aggiuntivo per servire i nodi leggeri.
+Per aggirare questo problema di archiviazione su disco, sono stati sviluppati nodi "leggeri" che richiedono informazioni ai nodi completi invece di archiviarle tutte da soli. Tuttavia, questo significa che il nodo leggero non verifica le informazioni in modo indipendente e si fida invece di un altro nodo. Significa anche che i nodi completi sono tenuti a farsi carico di lavoro extra per servire quei nodi leggeri.
 
-La Rete Portal è un nuovo progetto di rete per Ethereum che mira a risolvere il problema della disponibilità dei dati per i nodi "leggeri" senza dover fare affidamento o sottoporre a ulteriori sforzi i nodi completi, condividendo i dati necessari in piccole porzioni attraverso la rete.
+La Portal Network è un nuovo design di rete per Ethereum che mira a risolvere il problema della disponibilità dei dati per i nodi "leggeri" senza dover fare affidamento o mettere a dura prova i nodi completi, condividendo i dati necessari in piccoli frammenti attraverso la rete.
 
 Maggiori informazioni su [nodi e client](/developers/docs/nodes-and-clients/)
 
-## Perché abbiamo bisogno della Rete Portal {#why-do-we-need-portal-network}
+## Perché abbiamo bisogno della Portal Network {#why-do-we-need-portal-network}
 
-I nodi di Ethereum memorizzano la propria copia completa o parziale della blockchain di Ethereum. Questa copia locale viene utilizzata per convalidare le transazioni e garantire che il nodo stia seguendo la catena corretta. Questi dati memorizzati localmente consentono ai nodi di verificare in modo indipendente che i dati in arrivo siano validi e corretti, senza doversi fidare di altre entità.
+I nodi di Ethereum archiviano la propria copia completa o parziale della blockchain di Ethereum. Questa copia locale viene utilizzata per convalidare le transazioni e garantire che il nodo stia seguendo la catena corretta. Questi dati archiviati localmente consentono ai nodi di verificare in modo indipendente che i dati in entrata siano validi e corretti senza dover fare affidamento su nessun'altra entità.
 
-Questa copia locale della blockchain e dei dati di stato e di ricezione associati occupa molto spazio sul disco rigido del nodo. Ad esempio, si consiglia un disco rigido da 2 TB per l'esecuzione di un nodo che utilizza [Geth](https://geth.ethereum.org) accoppiato a un client di consenso. Utilizzando la sincronizzazione snap, che memorizza solo i dati della catena da un insieme relativamente recente di blocchi, Geth occupa tipicamente circa 650 GB di spazio su disco, ma cresce di circa 14 GB a settimana (è possibile ridurre nuovamente il nodo a 650 GB periodicamente).
+Questa copia locale della blockchain e i dati associati allo stato e alle ricevute occupano molto spazio sul disco rigido del nodo. Ad esempio, si consiglia un disco rigido da 2 TB per eseguire un nodo utilizzando [Geth](https://geth.ethereum.org) associato a un client di consenso. Utilizzando la sincronizzazione snap, che archivia solo i dati della catena da un insieme di blocchi relativamente recente, Geth occupa in genere circa 650 GB di spazio su disco, ma cresce di circa 14 GB a settimana (è possibile sfoltire periodicamente il nodo per riportarlo a 650 GB).
 
-Ciò significa che la gestione dei nodi può essere costosa, perché una grande quantità di spazio su disco deve essere dedicata a Ethereum. Ci sono diverse soluzioni a questo problema nella tabella di marcia di Ethereum, tra cui la [scadenza dello storico](/roadmap/statelessness/#history-expiry), la [scadenza dello stato](/roadmap/statelessness/#state-expiry) e l'[assenza di stato](/roadmap/statelessness/). Tuttavia, è probabile che passino diversi anni prima che queste misure vengano implementate. Esistono anche [nodi leggeri](/developers/docs/nodes-and-clients/light-clients/) che non salvano la propria copia dei dati della catena, ma richiedono i dati di cui hanno bisogno ai nodi completi. Tuttavia, ciò significa che i nodi leggeri devono fidarsi del fatto che i nodi completi forniscano dati onesti e inoltre aumenta il carico di lavoro per i nodi completi, che devono fornire ai nodi leggeri i dati di cui hanno bisogno.
+Ciò significa che l'esecuzione dei nodi può essere costosa, perché una grande quantità di spazio su disco deve essere dedicata a Ethereum. Ci sono diverse soluzioni a questo problema nel piano d'azione di Ethereum, tra cui la [scadenza della cronologia](/roadmap/statelessness/#history-expiry), la [scadenza dello stato](/roadmap/statelessness/#state-expiry) e l'[assenza di stato](/roadmap/statelessness/). Tuttavia, è probabile che manchino ancora diversi anni alla loro implementazione. Ci sono anche [nodi leggeri](/developers/docs/nodes-and-clients/light-clients/) che non salvano la propria copia dei dati della catena, ma richiedono i dati di cui hanno bisogno ai nodi completi. Tuttavia, questo significa che i nodi leggeri devono fidarsi dei nodi completi affinché forniscano dati onesti e inoltre stressa i nodi completi che devono servire i dati di cui i nodi leggeri hanno bisogno.
 
-La Rete Portal mira a fornire un modo alternativo per i nodi leggeri di ottenere i loro dati che non richieda il fare affidamento sui nodi completi o l'aumento significativo del carico di lavoro di questi ultimi. Il modo in cui ciò avverrà consiste nell'introdurre un nuovo modo per i nodi di Ethereum di condividere i dati attraverso la rete.
+La Portal Network mira a fornire un modo alternativo per i nodi leggeri di ottenere i propri dati che non richieda di fidarsi o di aggiungere in modo significativo al lavoro che deve essere svolto dai nodi completi. Il modo in cui ciò verrà fatto è introdurre un nuovo modo per i nodi di Ethereum di condividere i dati attraverso la rete.
 
-## Come funziona la Rete Portal? {#how-does-portal-network-work}
+## Come funziona la Portal Network? {#how-does-portal-network-work}
 
-I nodi di Ethereum hanno protocolli rigorosi che definiscono come devono comunicare tra loro. I client di esecuzione comunicano utilizzando un insieme di sottoprotocolli noti come [DevP2P](/developers/docs/networking-layer/#devp2p), mentre i nodi di consenso utilizzano uno stack di sottoprotocolli differente chiamato [libP2P](/developers/docs/networking-layer/#libp2p). Questi definiscono i tipi di dati che possono essere trasferiti tra i nodi.
+I nodi di Ethereum hanno protocolli rigorosi che definiscono come comunicano tra loro. I client di esecuzione comunicano utilizzando un insieme di sottoprotocolli noti come [DevP2P](/developers/docs/networking-layer/#devp2p), mentre i client di consenso utilizzano uno stack diverso di sottoprotocolli chiamato [libP2P](/developers/docs/networking-layer/#libp2p). Questi definiscono i tipi di dati che possono essere passati tra i nodi.
 
-![devP2P and libP2P](portal-network-devp2p-libp2p.png)
+![devP2P e libP2P](portal-network-devp2p-libp2p.png)
 
-I nodi possono anche offrire dati specifici attraverso l'[API JSON-RPC](/developers/docs/apis/json-rpc/), che è la modalità utilizzata dalle applicazioni e dai portafogli per scambiare le informazioni con i nodi di Ethereum. Tuttavia, nessuno di questi protocolli è ideale per offrire dati ai client leggeri.
+I nodi possono anche servire dati specifici tramite l'[API JSON-RPC](/developers/docs/apis/json-rpc/), che è il modo in cui le app e i portafogli scambiano informazioni con i nodi di Ethereum. Tuttavia, nessuno di questi è un protocollo ideale per servire dati ai client leggeri.
 
-Attualmente i client leggeri non possono richiedere specifici pezzi di dati della catena tramite DevP2P o libP2p perché questi protocolli sono progettati solo per abilitare la sincronizzazione della catena, il gossip dei blocchi e le transazioni. I client leggeri non vogliono scaricare questa informazione perché questo impedirebbe loro di essere "leggeri".
+Attualmente i client leggeri non possono richiedere parti specifiche di dati della catena tramite DevP2P o libP2p perché tali protocolli sono progettati solo per consentire la sincronizzazione della catena e il gossip di blocchi e transazioni. I client leggeri non vogliono scaricare queste informazioni perché ciò impedirebbe loro di essere "leggeri".
 
-Nemmeno l'API JSON-RPC è la scelta ideale per le richieste dei dati da parte del client leggero, perché si basa su una connessione ad uno specifico nodo completo o ad un fornitore RPC centralizzato in grado di offrire i dati. Questo significa che il nodo leggero deve fidarsi dell'onestà dello specifico nodo/fornitore, e che il nodo completo potrebbe dover gestire molte richieste da molti client leggeri, aumentando i suoi requisiti di larghezza di banda.
+Anche l'API JSON-RPC non è una scelta ideale per le richieste di dati dei client leggeri, perché si basa su una connessione a un nodo completo specifico o a un fornitore RPC centralizzato che può servire i dati. Ciò significa che il client leggero deve fidarsi che quel nodo/fornitore specifico sia onesto, e inoltre il nodo completo potrebbe dover gestire molte richieste da molti client leggeri, aumentando i propri requisiti di larghezza di banda.
 
-L'obiettivo della Rete Portal è di ripensare l'intera progettazione, costruendola specificatamente per la leggerezza, fuori dai vincoli di progettazione dei client di Ethereum esistenti.
+Lo scopo della Portal Network è ripensare l'intero design, costruendo specificamente per la leggerezza, al di fuori dei vincoli di progettazione dei client di Ethereum esistenti.
 
-L'idea di base della Rete Portal è quella di prendere il meglio dell'attuale stack di rete consentendo di fornire le informazioni necessarie ai client leggeri, come i dati storici e l'identità dell'attuale testa della catena, attraverso una rete decentralizzata peer-to-peer leggera in stile DevP2P che utilizza un [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (simile a Bittorrent).
+L'idea centrale della Portal Network è prendere le parti migliori dell'attuale stack di rete consentendo alle informazioni necessarie ai client leggeri, come i dati storici e l'identità dell'attuale testa della catena, di essere servite attraverso una rete decentralizzata peer-to-peer leggera in stile DevP2P utilizzando una [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (simile a Bittorrent).
 
-L'idea è di aggiungere a ogni nodo piccole parti dei dati storici totali di Ethereum e alcune responsabilità specifiche per ciascun nodo. Quindi, le richieste vengono soddisfatte cercando i nodi che memorizzano i dati specifici richiesti e recuperandoli da essi.
+L'idea è di aggiungere piccole parti dei dati storici totali di Ethereum e alcune responsabilità specifiche del nodo a ciascun nodo. Quindi, le richieste vengono servite cercando i nodi che archiviano i dati specifici richiesti e recuperandoli da essi.
 
-In questo modo si inverte il modello normale in cui i nodi leggeri trovano un singolo nodo e gli chiedono di filtrare e servire grandi volumi di dati; invece, essi filtrano rapidamente una grande rete di nodi che gestiscono ciascuno piccole quantità di dati.
+Questo inverte il normale modello dei nodi leggeri che trovano un singolo nodo e gli richiedono di filtrare e servire grandi volumi di dati; invece, filtrano rapidamente una grande rete di nodi che gestiscono ciascuno piccole quantità di dati.
 
-L'obiettivo è quello di consentire a una rete decentralizzata di client Portal leggeri di:
+L'obiettivo è consentire a una rete decentralizzata di client Portal leggeri di:
 
-- tracciare della testa della catena
+- tracciare la testa della catena
 - sincronizzare i dati recenti e storici della catena
-- recuperare i dati dello stato
+- recuperare i dati di stato
 - trasmettere le transazioni
-- eseguire le transazioni utilizzando l'[EVM](/developers/docs/evm/)
+- eseguire le transazioni utilizzando la [EVM](/developers/docs/evm/)
 
-I vantaggi di questa progettazione della rete sono:
+I vantaggi di questo design di rete sono:
 
-- Ridurre la dipendenza da fornitori centralizzati
-- Ridurre l'utilizzo della larghezza di banda di Internet
-- Sincronizzazione ridotta o nulla
-- Accessibile a dispositivi con risorse limitate (\<1 GB di RAM, \<100 MB di spazio su disco, 1 CPU)
+- ridurre la dipendenza dai fornitori centralizzati
+- ridurre l'utilizzo della larghezza di banda di Internet
+- sincronizzazione ridotta al minimo o nulla
+- accessibile a dispositivi con risorse limitate (\<1 GB di RAM, \<100 MB di spazio su disco, 1 CPU)
 
-Il diagramma seguente mostra le funzioni dei client esistenti che possono essere fornite dalla Rete Portal, consentendo agli utenti di accedere a tali funzioni su dispositivi con risorse molto limitate.
+La tabella seguente mostra le funzioni dei client esistenti che possono essere fornite dalla Portal Network, consentendo agli utenti di accedere a queste funzioni su dispositivi con risorse molto limitate.
 
 ### Le Reti Portal
 
-| Client leggero della Beacon | Rete dello stato                    | Gossip della transazione | Rete dello storico |
-| --------------------------- | ----------------------------------- | ------------------------ | ------------------ |
-| Beacon chain leggera        | Conto e archiviazione del contratto | Mempool leggero          | Intestazioni       |
-| Dati del protocollo         |                                     |                          | Corpi del blocco   |
-|                             |                                     |                          | Ricevute           |
+| Client leggero Beacon | Rete di stato | Gossip delle transazioni | Rete storica |
+| ------------------- | ---------------------------- | ------------------- | --------------- |
+| Beacon chain leggera | Archiviazione di account e contratti | Mempool leggera | Intestazioni |
+| Dati del protocollo | | | Corpi dei blocchi |
+| | | | Ricevute |
 
 ## Diversità dei client per impostazione predefinita {#client-diversity-as-default}
 
-Nella loro progettazione, gli sviluppatori della Rete Portal hanno deciso di creare anche tre diversi client della Rete Portal fin dal primo giorno.
+Gli sviluppatori della Portal Network hanno anche fatto la scelta progettuale di costruire quattro client separati per la Portal Network fin dal primo giorno.
 
-I client della Rete Portal sono:
+I client della Portal Network sono:
 
 - [Trin](https://github.com/ethereum/trin): scritto in Rust
-- [Fluffy](https://nimbus.team/docs/fluffy.html): scritto in Nim
+- [Fluffy](https://fluffy.guide): scritto in Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight): scritto in Typescript
-- [Shisui](https://github.com/optimism-java/shisui): scritto in Go
+- [Shisui](https://github.com/zen-eth/shisui): scritto in Go
 
-La presenza di più implementazioni client indipendenti aumenta la resilienza e la decentralizzazione della rete Ethereum.
+Avere più implementazioni di client indipendenti migliora la resilienza e la decentralizzazione della rete di Ethereum.
 
-Se un client presenta problemi o vulnerabilità, gli altri client possono continuare a funzionare senza problemi, evitando un punto di errore singolo. Inoltre, le diverse implementazioni dei clienti favoriscono l'innovazione e la concorrenza, promuovendo miglioramenti e riducendo il rischio di monopolio all'interno dell'ecosistema.
+Se un client riscontra problemi o vulnerabilità, gli altri client possono continuare a funzionare senza problemi, prevenendo un singolo punto di guasto. Inoltre, le diverse implementazioni dei client favoriscono l'innovazione e la concorrenza, guidando i miglioramenti e riducendo il rischio di monocoltura all'interno dell'ecosistema.
 
-## Letture consigliate {#futher-reading}
+## Letture consigliate {#further-reading}
 
-- [La Rete Portal (Piper Merriam al Devcon di Bogotà)](https://www.youtube.com/watch?v=0stc9jnQLXA).
-- [Discord della Rete Portal](https://discord.gg/CFFnmE7Hbs)
-- [Sito web della Rete Portal](https://www.ethportal.net/)
+- [La Portal Network (Piper Merriam alla Devcon Bogotà)](https://www.youtube.com/watch?v=0stc9jnQLXA).
+- [Il Discord della Portal Network](https://discord.gg/CFFnmE7Hbs)
+- [Il sito web della Portal Network](https://www.ethportal.net/)

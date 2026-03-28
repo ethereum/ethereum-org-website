@@ -1,153 +1,152 @@
 ---
 title: Risorse linguistiche
-description: Risorse non in inglese per conoscere Ethereum
+description: Risorse non in inglese per imparare a conoscere Ethereum
 lang: it
 ---
 
 # Risorse linguistiche {#language-resources}
 
-La community Ethereum è globale e composta da milioni di persone che non parlano inglese.
+La community di Ethereum è globale ed è composta da milioni di persone che non parlano inglese.
 
-Il nostro obiettivo è quello di fornire contenuti educativi in tutte le lingue e aiutare a superare le barriere linguistiche che rendono l'onboarding di persone da tutto il mondo in Ethereum una sfida.
+Il nostro obiettivo è fornire contenuti educativi in tutte le lingue e aiutare a superare le barriere linguistiche che rendono l'avvicinamento a Ethereum una sfida per le persone di tutto il mondo.
 
-Se preferisci leggere nella tua lingua madre o conosci qualcuno che non parla inglese, puoi trovare una lista di risorse utili non in inglese qui sotto. Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum online per condividere notizie, parlare degli sviluppi recenti, confrontarsi su questioni tecniche ed immaginare il futuro.
+Se preferisci leggere nella tua lingua madre o conosci qualcuno che non parla inglese, di seguito puoi trovare un elenco di utili risorse non in inglese. Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum online per condividere notizie, parlare dei recenti sviluppi, dibattere su questioni tecniche e immaginare il futuro.
 
-Conosci una risorsa formativa nella tua lingua? [Apri una segnalazione](https://github.com/ethereum/ethereum-org-website/issues/new/choose) per aggiungerla alla lista!
+Conosci una risorsa educativa nella tua lingua? [Apri una issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) per aggiungerla all'elenco!
 
 ## Risorse di Ethereum.org {#ethereum-org}
 
-Ethereum.org è tradotto nativamente in oltre 40 lingue, che puoi trovare utilizzando il nostro menu di selezione della lingua, ubicato in cima a ogni pagina.
+Ethereum.org è tradotto nativamente in oltre 40 lingue che puoi trovare utilizzando il nostro menu di selezione delle lingue, situato nella parte superiore di ogni pagina.
 
 ![Menu di selezione della lingua](./language-selector-menu.png)
 
-Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere coinvolto nel [Programma di Traduzione ethereum.org](/contributing/translation-program/#translation-program) e aiutarci a tradurre il sito web.
+Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche partecipare al [Programma di traduzione di ethereum.org](/contributing/translation-program/#translation-program) e aiutarci a tradurre il sito web.
 
-## Risorse della Community {#community}
+## Risorse della community {#community}
 
-### Portoghese Brasiliano {#br-pt}
+### Portoghese brasiliano {#br-pt}
 
-**News**
+**Notizie**
 
-- [BeInCrypto](http://www.beincrypto.com.br) - notizie e articoli di criptovalute, tra cui un elenco di piattaforme di scambio, disponibili in Brasile
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Versione brasiliana di Cointelegraph, un importante outlet di notizie sulle criptovalute
+- [BeInCrypto](http://www.beincrypto.com.br) - notizie e articoli sulle criptovalute, incluso un elenco di exchange, disponibili in Brasile
+- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - versione brasiliana di Cointelegraph, un importante organo di informazione sulle criptovalute
 - [Livecoins](http://www.livecoins.com.br/ethereum) - notizie e strumenti sulle criptovalute
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - notizie e relazioni sulle criptovalute
-- [Modular Crypto](https://modularcrypto.xyz/): notizie sulle criptovalute e articoli educativi
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - notizie e report sulle criptovalute
+- [Modular Crypto](https://modularcrypto.xyz/) - notizie sulle criptovalute e articoli educativi
 
-**Educazione**
+**Formazione**
 
-- [web3dev](https://www.web3dev.com.br/) - Hub di contenuti e community Discord per sviluppatori web 3.
-- [Web3Brasil](https://github.com/web3brasil/web3brasil) - risorse per imparare Web3 e DeFi
-- [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - notizie e formazione sulle criptovalute, tra cui 'Ethereum per principianti' e 'DeFi' per principianti
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - informazioni sullo spazio delle criptovalute, istruzione e blog
+- [web3dev](https://www.web3dev.com.br/) - Hub di contenuti e community Discord per sviluppatori web3.
+- [Web3Brasil](https://github.com/web3brasil/web3brasil) - risorse per imparare il web3 e la DeFi
+- [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - notizie e formazione sulle criptovalute, inclusi 'Ethereum per principianti' e 'DeFi per principianti'
+- [CriptoAtivos](http://www.criptoativos.wiki.br/) - approfondimenti dallo spazio delle criptovalute, formazione e blog
 - [Cointimes](http://www.cointimes.com.br/) - notizie e formazione sulle criptovalute
-- [Pacchetto iniziale di Web3](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - una guida per rispondere alle domande frequenti e fondamentali sulle criptovalute
+- [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - una guida che risponde alle domande fondamentali e più frequenti sulle criptovalute
 
 ### Cinese {#zh}
 
 **Risorse generali**
 
-- [Ethereum.cn](https://www.ethereum.cn/) - contenuti mantenuti dalla community, che coprono l'aggiornamento del livello del consenso, tutte le note principali dell'incontro degli sviluppatori, livello 2, ecc.
-- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - impara qualsiasi cosa, dalle basi agli argomenti avanzati di Ethereum
-- [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - contenuti mantenuti dalla community, su Ethereum, DeFi, NFT, conoscenza correlata a Web3
-- [123ETH](https://123eth.org/) - un Portale per l'ecosistema di Ethereum
-- [Zhen Xiao](http://zhenxiao.com/blockchain/) - corsi online gratuiti sulle criptovalute e loro applicazioni
-- [Ethereum Whitepaper](https://ethereum.org/whitepaper//[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - Versione cinese del Whitepaper di Ethereum
+- [Ethereum.cn](https://www.ethereum.cn/) - contenuti gestiti dalla community, che coprono l'aggiornamento del livello di consenso, tutte le note delle riunioni dei core dev, il livello 2, ecc.
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - impara tutto, dalle basi agli argomenti avanzati su Ethereum
+- [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - contenuti gestiti dalla community, che coprono le conoscenze relative a Ethereum, DeFi, NFT e web3
+- [123ETH](https://123eth.org/) - un portale per l'ecosistema di Ethereum
+- [Zhen Xiao](http://zhenxiao.com/blockchain/) - corsi online gratuiti sulle criptovalute e le loro applicazioni
 
-**Ecosistema Ethereum**
+**Ecosistema di Ethereum**
 
-- [ETHPlanet](https://www.ethplanet.org/) - hackathon online e di persona, che offre formazione agli studenti universitari
-- [PrimitivesLane](https://www.primitiveslane.org/) - un gruppo di ricerca non-profit, focalizzato sulla tecnologia blockchain
-- [Ethereum Translation Community CN](https://www.notion.so/Ethereum-Translation-Community-CN-05375fe0a94c4214acaf90f42ba40171) - una community dedicata alla traduzione dei contenuti educativi di Ethereum
+- [ETHPlanet](https://www.ethplanet.org/) - hackathon online e in presenza, che offrono formazione agli studenti universitari
+- [PrimitivesLane](https://www.primitiveslane.org/) - un gruppo di ricerca senza scopo di lucro, focalizzato sulla tecnologia blockchain
+- [Ethereum Translation Community CN](https://www.notion.so/Ethereum-Translation-Community-CN-05375fe0a94c4214acaf90f42ba40171) - una community dedicata alla traduzione di contenuti educativi su Ethereum
 
 **Per gli sviluppatori**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - un gruppo di apprendimento per studiare i progetti delle dApp mainstream e condividere pensieri e commenti ogni settimana
-- [LearnBlockchain](https://learnblockchain.cn/) - una community per sviluppatori, che condivide informazioni sulla tecnologia delle blockchain
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - un gruppo di apprendimento per studiare i principali progetti di dApp e condividere pensieri e commenti ogni settimana
+- [LearnBlockchain](https://learnblockchain.cn/) - una community per sviluppatori, che condivide informazioni sulla tecnologia blockchain
 
 **Per i ricercatori di crittografia**
 
-- [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw): un profilo di WeChat, che spiega la crittografia, la sicurezza, etc.
-- [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ): un profilo di WeChat, che spiega la tecnologia zk
+- [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - un account WeChat che spiega la crittografia, la sicurezza, ecc.
+- [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - un account WeChat che spiega la tecnologia zk
 
 ### Ceco {#cs}
 
-- [Gwei.cz](https://gwei.cz) - community locale sul Web3, crea contenuti educativi, organizza eventi online e di persona
-- [Gwei.cz Příručka](https://prirucka.gwei.cz/) - Guida per principianti di Ethereum
+- [Gwei.cz](https://gwei.cz) - community locale incentrata sul web3, crea contenuti educativi, organizza eventi online e in presenza
+- [Gwei.cz Příručka](https://prirucka.gwei.cz/) - guida a Ethereum per principianti
 - [DAO Příručka](https://dao.gwei.cz/) - guida per principianti alle DAO
-- [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Padroneggiare Ethereum in ceco
+- [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Mastering Ethereum in ceco
 
 ### Francese {#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) - Ethereum France organizza eventi, crea contenuti e incoraggia le discussioni su Ethereum
-- [Ethereum.fr](https://ethereum.fr/) - Ethereum notizie e formazione
-- [BanklessFR](https://banklessfr.substack.com/) - Newsletter Bankless in francese
-- [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - forum di criptovalute con una sotto-pagina Ethereum
+- [Ethereum.fr](https://ethereum.fr/) - notizie e formazione su Ethereum
+- [BanklessFR](https://banklessfr.substack.com/) - newsletter di Bankless in francese
+- [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - forum sulle criptovalute con una sottopagina dedicata a Ethereum
 
 ### Tedesco {#de}
 
-- [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - utilizzo di Solidity
-- [Microsoft Learn (contratti intelligenti)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/): scrivere i contratti intelligenti di Ethereum con Solidity
-- [Microsoft Learn (reti di Ethereum)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - distribuisci e connettiti alle reti di Ethereum
-- [Microsoft Learn (blockchain)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - introduzione allo sviluppo della blockchain
+- [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - usare Solidity
+- [Microsoft Learn (smart contracts)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - scrivere contratti intelligenti di Ethereum con Solidity
+- [Microsoft Learn (Ethereum networks)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - connettersi e distribuire reti Ethereum
+- [Microsoft Learn (blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - introduzione allo sviluppo su blockchain
 
 ### Ebraico {#he}
 
 - [Udi Wertheimer - Cosa possono imparare i bitcoiner da Ethereum](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/)
-- [Omer Greismen (OpenZeppelin) - Come abbiamo impedito una violazione da 15 miliardi di dollari dei contratti intelligenti](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
-- [Shy Datika (INX) - Tokenizzazione e il futuro delle sicurezze; Ethereum è una sicurezza?](https://www.cryptojungle.co.il/shy-datika-tokenization/)
-- [Roy Confino (Lemonade) - Assicurazione su Ethereum](https://www.cryptojungle.co.il/roy-confino-insurance/)
+- [Omer Greismen (OpenZeppelin) - Come abbiamo sventato un attacco informatico da 15 miliardi di dollari a un contratto intelligente](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
+- [Shy Datika (INX) - La tokenizzazione e il futuro dei titoli, incluso se Ethereum è un titolo](https://www.cryptojungle.co.il/shy-datika-tokenization/)
+- [Roy Confino (Lemonade) - Assicurazioni @ Ethereum](https://www.cryptojungle.co.il/roy-confino-insurance/)
 - [Idan Ofrat (Fireblocks) - Adozione istituzionale](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
 - [Gal Weizman (MetaMask) - Cos'è MetaMask](https://www.cryptojungle.co.il/gal-weizman-metamask/)
 - [Dror Aviely (Consensys) - Il centro di Ethereum](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
 - [Nir Rozin - Essere un cryptopunk](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)
-- [Adan Kedem - Videogiochi e Metaverso](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
+- [Adan Kedem - Gaming e Metaverso](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
 - [Uri Kolodny (Starkware) - Ethereum e i livelli della blockchain](https://www.cryptojungle.co.il/uri-kolodny-starkware/)
-- [Udi Wertheimer - Ethereum 2.0 vs la concorrenza](https://www.cryptojungle.co.il/udi-on-eth2/)
-- [Ben Samocha (myself) - Ethereum 2.0: un'opportunità?](https://www.cryptojungle.co.il/etherurm2-week-summary/)
+- [Udi Wertheimer - Ethereum 2.0 vs concorrenza](https://www.cryptojungle.co.il/udi-on-eth2/)
+- [Ben Samocha (io stesso) - Ethereum 2.0 - un'opportunità?](https://www.cryptojungle.co.il/etherurm2-week-summary/)
 - [Alon Muroch (Bloxstaking) - Cos'è Ethereum 2.0?](https://www.cryptojungle.co.il/alon-moroch-eth2/)
 - [Eilon Aviv (Collider Ventures) - Cosa può andare storto con Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-eth2-0/)
 - [Eilon Aviv (Collider Ventures) - Perché abbiamo bisogno di Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/)
 
 ### Italiano {#it}
 
-- [Ethereum Italia](https://www.ethereum-italia.it/): istruzione, eventi e notizie su Ethereum, incentrati sui contratti intelligenti e la tecnologia della blockchain
-- [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - podcast di Ethereum in italiano
-- [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - imparare a utilizzare Solidity
-- [Microsoft Learn (contratti intelligenti)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/): impara a scrivere i contratti intelligenti usando Solidity
-- [Microsoft Learn (dApp)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - crea un'interfaccia utente con le applicazioni decentralizzate
+- [Ethereum Italia](https://www.ethereum-italia.it/) - formazione, eventi e notizie su Ethereum, con particolare attenzione ai contratti intelligenti e alla tecnologia blockchain
+- [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - podcast su Ethereum in italiano
+- [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - impara a usare Solidity
+- [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - impara a scrivere contratti intelligenti usando Solidity
+- [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - crea un'interfaccia utente con applicazioni decentralizzate
 
 ### Giapponese {#ja}
 
 - [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
-- [Inizia a sviluppare con la blockchain - Impara | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Questo percorso d'apprendimento introduce alla blockchain e allo sviluppo sulla piattaforma di Ethereum
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Padroneggiare Ethereum in giapponese
-- [Sviluppo Pratico di contratti intelligenti con Solidity ed Ethereum](https://www.oreilly.co.jp/books/9784873119342/): Sviluppo Pratico di contratti intelligenti con Solidity ed Ethereum in giapponese
+- [Inizia con lo sviluppo su blockchain - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Questo percorso di apprendimento ti introduce alla blockchain e allo sviluppo sulla piattaforma Ethereum
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Mastering Ethereum in giapponese
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract Development with Solidity and Ethereum in giapponese
 
 ### Russo {#ru}
 
-- [Cyber Academy](https://cyberacademy.dev): spazio educativo per creatori web3
-- [Forklog](https://forklog.com): notizie e articoli educativi sulle criptovalute in generale, le tecnologie esistenti e gli aggiornamenti futuri delle diverse blockchain
-- [BeInCrypto](https://ru.beincrypto.com): notizie, analisi dei prezzi delle criptovalute e articoli non tecnici con spiegazioni semplici su tutto ciò che riguarda le criptovalute
+- [Cyber Academy](https://cyberacademy.dev) - spazio educativo per i costruttori del web3
+- [Forklog](https://forklog.com) - notizie e articoli educativi sulle criptovalute in generale, sulle tecnologie esistenti e sui futuri aggiornamenti di diverse blockchain
+- [BeInCrypto](https://ru.beincrypto.com) - notizie, analisi dei prezzi delle criptovalute e articoli non tecnici con spiegazioni semplici su tutto ciò che riguarda le criptovalute
 
 ### Spagnolo {#es}
 
-- [Ethereum Madrid](https://ethereummadrid.com/) - blockchain, DeFi, e corsi di governance, eventi e blog
-- [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - guida di Ethereum per principianti in spagnolo
+- [Ethereum Madrid](https://ethereummadrid.com/) - corsi su blockchain, DeFi e governance, eventi e blog
+- [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - guida a Ethereum per principianti in spagnolo
 - [Tutoriales online](https://tutoriales.online/curso/solidity) - impara Solidity e la programmazione su Ethereum
-- [Corso Introduttivo allo Sviluppo su Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU): fondamenti di Solidity, test e distribuzione del tuo primo contratto intelligente
-- [Corso Introduttivo alla Sicurezza e l'Hacking su Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci): comprendere le vulnerabilità comuni e i problemi di sicurezza nei contratti intelligenti reali
-- [Corso Introduttivo allo Sviluppo della DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS): impara come funzionano i contratti intelligenti della DeFi in Solidity e crea il tuo Creatore di Mercati Automatizzati personale
-- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - formazione non tecnica sulla blockchain da principiante ad avanzata. Impara tutto sulle criptovalute ed Ethereum.
+- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - basi di Solidity, test e distribuzione del tuo primo contratto intelligente
+- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - comprendi le vulnerabilità comuni e i problemi di sicurezza nei contratti intelligenti reali
+- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - impara come funzionano i contratti intelligenti della DeFi in Solidity e crea il tuo Automated Market Maker
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - Formazione non tecnica sulla blockchain da principiante ad avanzato. Impara tutto sulle criptovalute e su Ethereum.
 
 ### Turco {#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - corso incentrato su blockchain e criptovalute
-- [La grande rinomina: cos'è successo a Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - Traduzione turca del post del blog sulla grande ridenominazione, che spiega il cambiamento rispetto alla terminologia di “Eth2”
+- [Il grande cambio di nome: cosa è successo a Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - traduzione in turco del post sul blog del grande cambio di nome, che spiega l'abbandono della terminologia 'Eth2'
 
 ### Vietnamita {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - panoramica su Ethereum, dApp, portafogli e FAQ
-- [Tocca Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - piattaforma web con sottopagine per notizie e formazione di Ethereum
-- [Coin68](https://coin68.com/ethereum-tieu-diem/) - portale sulle criptovalute con notizie e contenuti educativi riguardanti Ethereum
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - panoramica di Ethereum, dApp, portafogli e FAQ
+- [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - piattaforma web con sottopagine per notizie e formazione su Ethereum
+- [Coin68](https://coin68.com/ethereum-tieu-diem/) - portale di criptovalute con notizie e contenuti educativi su Ethereum
