@@ -4488,7 +4488,7 @@ export async function runSanitizer(
   }
 
   const changedFiles = [...mdChanged, ...jsonChanged].map((f) => ({
-    path: f.path,
+    path: path.relative(ROOT, f.path),
     content: f.content,
   }))
   return {
