@@ -81,8 +81,25 @@
         },
         "aliases": {
           "type": "array",
-          "description": "Alternative English forms that resolve to this concept (e.g., ['PoS', 'proof of stake'] for proof-of-stake)",
-          "items": { "type": "string" }
+          "description": "Alternative English forms that resolve to this concept. Each alias can be a plain string or an object with status metadata.",
+          "items": {
+            "oneOf": [
+              { "type": "string" },
+              {
+                "type": "object",
+                "required": ["term"],
+                "properties": {
+                  "term": { "type": "string", "description": "The alias form" },
+                  "status": {
+                    "type": "string",
+                    "description": "Whether this alias is preferred, accepted, or deprecated for new English content",
+                    "enum": ["preferred", "accepted", "deprecated"]
+                  },
+                  "note": { "type": "string", "description": "Context for the status (e.g., 'Pending style guide change per content lead')" }
+                }
+              }
+            ]
+          }
         },
         "related": {
           "type": "array",
