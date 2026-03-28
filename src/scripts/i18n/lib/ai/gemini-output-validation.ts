@@ -193,18 +193,29 @@ function extractFrontmatterField(
 /**
  * Check that key frontmatter fields (title, description) were actually
  * translated and not left identical to the English source.
+ *
+ * Only fails if BOTH title and description are identical to English.
+ * Technical titles (e.g., "Ethash", "JSON-RPC API", "PeerDAS") are
+ * legitimately kept in English, so a matching title alone is not a
+ * failure -- as long as the description was translated.
+ *
  * Returns an error string if untranslated, or undefined if OK.
  */
 function checkFrontmatterTranslated(
   translated: string,
   english: string
 ): string | undefined {
-  for (const field of ["title", "description"]) {
-    const enValue = extractFrontmatterField(english, field)
-    const trValue = extractFrontmatterField(translated, field)
-    if (enValue && trValue && enValue === trValue) {
-      return `Frontmatter "${field}" was not translated (identical to English)`
-    }
+  const enTitle = extractFrontmatterField(english, "title")
+  const trTitle = extractFrontmatterField(translated, "title")
+  const titleMatch = enTitle && trTitle && enTitle === trTitle
+
+  const enDesc = extractFrontmatterField(english, "description")
+  const trDesc = extractFrontmatterField(translated, "description")
+  const descMatch = enDesc && trDesc && enDesc === trDesc
+
+  if (titleMatch && descMatch) {
+    return `Frontmatter "title" and "description" were both not translated (identical to English)`
   }
+
   return undefined
 }
