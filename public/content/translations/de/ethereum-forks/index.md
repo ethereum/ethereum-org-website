@@ -1,6 +1,6 @@
 ---
 title: Zeitachse aller Ethereum-Forks (2014 bis heute)
-description: Eine Geschichte der Ethereum-Blockchain einschließlich wichtiger Meilensteine, Veröffentlichungen und Forks.
+description: "Eine Geschichte der Ethereum-Blockchain einschließlich wichtiger Meilensteine, Veröffentlichungen und Forks."
 lang: de
 sidebarDepth: 1
 ---
