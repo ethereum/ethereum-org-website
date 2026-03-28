@@ -152,6 +152,8 @@ Build a comprehensive, multilingual translation glossary for Ethereum terminolog
 | 2026-03-28 | Proper names stay in glossary | Mark as proper_noun, use script_rule for DNT/transliterate/translate guidance |
 | 2026-03-28 | City-named upgrades use localized city name | Shanghai -> localized in each language, with note it's the upgrade not the city |
 | 2026-03-28 | Publication titles: keep English for external links | Only translate free-text descriptions; keep original title for English-language destinations |
+| 2026-03-28 | Preferred alias flag on English entries | Useful for content generation (not just translation); e.g., "onchain" preferred over "on-chain" |
+| 2026-03-28 | Selective glossary injection for prompts | Filter glossary to only terms in source file; full dump decreases quality (see docs/selective-glossary-injection.md) |
 | 2026-03-27 | Collapse definition/translation Venn | All 453 terms are candidates for both; glossary_ref=null means "not yet" not "never" |
 | 2026-03-27 | Content occurrence threshold for priority | Terms with 5+ occurrences prioritized; low-occurrence terms (vesting, cliff) go to reference tier |
 | 2026-03-27 | Multi-definition dictionary design | Future task: redesign /glossary page to support multiple definitions per term (like standard dictionaries) |

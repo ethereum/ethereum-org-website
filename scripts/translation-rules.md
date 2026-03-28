@@ -51,6 +51,12 @@ Content inside angle brackets or square brackets in examples (e.g., `[your_addre
 ### Composite Names Rule
 Descriptive component names like "Beacon Chain", "Execution Layer", "Consensus Layer" are translated as concepts, even though they function as names of system components. The glossary provides the standard translation for each.
 
+### Gender-Neutral Language
+Use gender-neutral constructions where possible. Many languages default to masculine forms; prefer inclusive alternatives when the target language supports them.
+
+### Formal Address
+In languages with formal/informal address (French vous/tu, German Sie/du, Hindi aap/tum, Korean honorifics, Japanese keigo): use formal address unless the English source is explicitly casual. Formal address also helps maintain gender neutrality in some languages.
+
 ### Onchain / Offchain
 Write WITHOUT hyphens: "onchain", "offchain" (analogous to "online", "offline"). "On-chain" and "off-chain" are recognized aliases but not preferred in ethereum.org English content.
 
