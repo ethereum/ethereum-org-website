@@ -124,3 +124,35 @@
 **Complexity:** Low. Remove the Supabase `getGlossaryForLanguage()` call and the try/catch fallback in `gemini-translate-files.ts`. Clean up unused imports.
 
 **Prerequisite:** Quality sweep readiness. This is a pre-sweep cleanup item.
+
+---
+
+## Image Translation
+
+### 11. Translate Text in Diagrams and Infographics
+
+**Problem:** The site's text content is approaching full translation coverage across 24 languages, but figures, diagrams, and infographics containing English text remain untranslated. This creates a jarring experience -- a fully translated page with an English-only diagram in the middle.
+
+This is NOT about logos, decorative images, or screenshots. It's specifically about educational diagrams and infographics that contain translatable English words (labels, captions, flow chart text, etc.).
+
+**Scope:** Audit needed to determine the full inventory. The repo has some existing infrastructure for locale-specific image variants (needs investigation).
+
+**Proposed approach:**
+- Use Gemini's image generation capabilities (available via `@google/genai` SDK) to edit text within images, replacing English labels with translated equivalents
+- Build a pipeline similar to the text translation flow: identify images with translatable text, extract the text, translate via glossary + LLM, generate localized image variants
+- Store localized variants alongside originals using the existing locale-aware image infrastructure
+
+**Key challenges:**
+- **Text detection**: identifying which images contain translatable text vs. logos/decorations/screenshots
+- **Text extraction**: reading the English text from the image accurately
+- **Visual quality**: ensuring translated text fits, renders cleanly, and handles RTL scripts
+- **QA**: automated generation is feasible but visual quality checks are harder to automate than text validation
+- **Maintenance**: when an English diagram is updated, localized variants need regeneration
+
+**Prerequisites:**
+- Audit of existing locale-aware image infrastructure in the repo
+- Inventory of images with translatable English text
+- Evaluation of Gemini image generation API capabilities for text-in-image editing
+- Understanding of how the site currently resolves image paths per locale
+
+**Relationship to text translation pipeline:** This could eventually integrate with the same drift detection and automation infrastructure (gemini-v4). An image's "freshness" can be tracked the same way as a markdown file's -- by SHA of the source image.
