@@ -26,6 +26,11 @@ import {
   validateTranslatedMarkdown,
   type ValidationResult,
 } from "./gemini-output-validation"
+import {
+  mergeJsonBatches,
+  prepareJsonBatches,
+  restoreJsonBatch,
+} from "./json-batcher"
 import { buildTranslationPrompt } from "./prompt-builder"
 
 const GEMINI_MODELS = ["gemini-3.1-pro-preview", "gemini-3.1-pro"]
@@ -53,6 +58,8 @@ export interface TranslateFileOptions {
   fileType: "markdown" | "json"
   targetLanguage: string
   glossaryTerms: Map<string, string>
+  /** Set by JSON batching when HTML tags have been extracted to placeholders */
+  htmlExtracted?: boolean
 }
 
 export interface TranslateFileResult {
@@ -88,9 +95,9 @@ export async function translateFile(
   const { filePath, fileContent, fileType, targetLanguage, glossaryTerms } =
     options
 
-  // JSON files: translate directly, no extraction needed
+  // JSON files: batch large files, extract HTML from values
   if (fileType === "json") {
-    return callGemini({ ...options, fileContent }, { filePath, targetLanguage })
+    return translateJsonFile(options)
   }
 
   // Markdown: extract code blocks first
@@ -147,6 +154,95 @@ export async function translateFile(
     } catch (error) {
       console.warn(
         `  [comments] ${filePath}: comment translation failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
+      )
+    }
+  }
+
+  return {
+    translatedContent: finalContent,
+    tokensUsed: totalTokens,
+  }
+}
+
+/**
+ * Translate a JSON file with batching and HTML placeholder extraction.
+ *
+ * 1. Parse and split into ~100-key batches (if large)
+ * 2. Extract HTML tags from values into numbered placeholders
+ * 3. Translate each batch via Gemini
+ * 4. Restore HTML tags from placeholders
+ * 5. Merge batches and validate against full English source
+ */
+async function translateJsonFile(
+  options: TranslateFileOptions
+): Promise<TranslateFileResult> {
+  const { filePath, fileContent, targetLanguage } = options
+
+  const prepared = prepareJsonBatches(fileContent)
+  const totalTokens = { input: 0, output: 0 }
+
+  if (prepared.batchContents.length > 1) {
+    console.log(
+      `  [json-batch] ${filePath}: ${prepared.totalKeys} keys -> ${prepared.batchContents.length} batches (${prepared.batchSizes.join(", ")})`
+    )
+  }
+  if (prepared.htmlExtracted) {
+    console.log(`  [html-extract] ${filePath}: HTML tags replaced with placeholders`)
+  }
+
+  const translatedBatches: string[] = []
+
+  for (let i = 0; i < prepared.batchContents.length; i++) {
+    const batchContent = prepared.batchContents[i]
+    const isMultiBatch = prepared.batchContents.length > 1
+
+    // Translate this batch (callGemini handles retries and validation)
+    const result = await callGemini(
+      {
+        ...options,
+        fileContent: batchContent,
+        htmlExtracted: prepared.htmlExtracted,
+      },
+      {
+        filePath,
+        targetLanguage,
+        chunkIndex: isMultiBatch ? i : undefined,
+        totalChunks: isMultiBatch ? prepared.batchContents.length : undefined,
+        label: isMultiBatch ? "json-batch" : undefined,
+      }
+    )
+
+    totalTokens.input += result.tokensUsed.input
+    totalTokens.output += result.tokensUsed.output
+
+    // Restore HTML placeholders in translated output
+    const placeholderMap = prepared.placeholderMaps[i]
+    if (placeholderMap.size > 0) {
+      const { content, failures } = restoreJsonBatch(
+        result.translatedContent,
+        placeholderMap
+      )
+      if (failures.length > 0) {
+        console.warn(
+          `  [html-restore] ${filePath}${isMultiBatch ? ` batch ${i + 1}` : ""}: ${failures.length} placeholder(s) missing:\n` +
+            failures.map((f) => `    - ${f}`).join("\n")
+        )
+      }
+      translatedBatches.push(content)
+    } else {
+      translatedBatches.push(result.translatedContent)
+    }
+  }
+
+  // Merge batches into final JSON
+  const finalContent = mergeJsonBatches(translatedBatches)
+
+  // Final validation: merged result against original English
+  if (prepared.batchContents.length > 1) {
+    const validation = validateTranslatedJson(finalContent, fileContent)
+    if (!validation.valid) {
+      console.warn(
+        `  [json-batch] ${filePath}: merged validation warning: ${validation.error}`
       )
     }
   }
@@ -264,8 +360,14 @@ async function callGemini(
   options: TranslateFileOptions,
   metadata?: GeminiCallMetadata
 ): Promise<TranslateFileResult> {
-  const { filePath, fileContent, fileType, targetLanguage, glossaryTerms } =
-    options
+  const {
+    filePath,
+    fileContent,
+    fileType,
+    targetLanguage,
+    glossaryTerms,
+    htmlExtracted,
+  } = options
 
   const languageName = LANGUAGE_NAMES[targetLanguage] || targetLanguage
   const prompt = buildTranslationPrompt({
@@ -275,6 +377,7 @@ async function callGemini(
     targetLanguage,
     languageName,
     glossaryTerms,
+    htmlExtracted,
   })
 
   // Retry loop for validation failures (API call retries are in callGeminiRaw)

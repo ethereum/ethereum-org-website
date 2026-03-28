@@ -23,6 +23,8 @@ interface PromptOptions {
   targetLanguage: string
   languageName: string
   glossaryTerms: Map<string, string>
+  /** When true, HTML tags have been replaced with <!-- HTML_N --> placeholders */
+  htmlExtracted?: boolean
 }
 
 /**
@@ -36,12 +38,13 @@ export function buildTranslationPrompt(options: PromptOptions): string {
     targetLanguage,
     languageName,
     glossaryTerms,
+    htmlExtracted,
   } = options
 
   const group = getLanguageGroup(targetLanguage)
   const siteNotes = getSiteSpecificNotes(group)
   const glossarySection = formatGlossary(glossaryTerms)
-  const formatRules = getFormatRules(fileType, group, targetLanguage)
+  const formatRules = getFormatRules(fileType, group, targetLanguage, htmlExtracted)
   const sanitizerHints = getSanitizerHints()
 
   return `Translate this ${fileType} file from English to ${languageName} (${targetLanguage}).
@@ -66,13 +69,18 @@ Output ONLY the translated file content. No explanations, no markdown wrapping, 
 function getFormatRules(
   fileType: "markdown" | "json",
   group: LanguageGroup,
-  targetLanguage: string
+  targetLanguage: string,
+  htmlExtracted?: boolean
 ): string {
   if (fileType === "json") {
+    const htmlRule = htmlExtracted
+      ? `- \`<!-- HTML_N -->\` placeholders are stand-ins for HTML tags managed by our pipeline. You MUST preserve them EXACTLY as-is -- same text, same position, same numbering. Do NOT remove, translate, modify, or renumber them. They will be restored to HTML tags automatically after translation.`
+      : `- Preserve HTML tags within values exactly (<a href="...">, <strong>, etc.).`
+
     return `Format rules:
 - Output valid JSON with identical key structure.
 - Translate only string values. Never translate keys.
-- Preserve HTML tags within values exactly (<a href="...">, <strong>, etc.).
+${htmlRule}
 - Preserve interpolation variables exactly ({count}, {{name}}, etc.).
 - Internal href paths (/developers/docs/...) must stay in English.`
   }
