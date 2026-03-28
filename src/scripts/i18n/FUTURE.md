@@ -109,3 +109,18 @@
 - Catch up on any content changes merged to dev since the original full-repo translation round (PRs tagged "needs translations")
 
 **Scope:** This is a large batch operation. Should be planned per-language with the split PR feature (#6) to keep reviews manageable.
+
+### 10. Remove Supabase Glossary Fallback
+
+**Problem:** The pipeline currently has two glossary sources: the local enhanced glossary (from `src/scripts/i18n/data/glossary/`) and a legacy Supabase/Crowdin glossary loaded via `getGlossaryForLanguage()`. The local glossary is the intended canonical source, but a fallback to Supabase exists for backwards compatibility while the local glossary is being built out.
+
+**Goal:** Remove the Supabase fallback entirely so the pipeline queries one authoritative glossary source. The local glossary should be complete enough to be the sole source before the quality sweep (~$300-500 full retranslation).
+
+**Required before removal:**
+- Atlas confirms all Supabase/Crowdin glossary terms have been migrated to the enhanced glossary
+- Tier 2/3 translations are complete (or at least coverage is sufficient for all 24 languages)
+- The local glossary is validated as a superset of the Supabase glossary
+
+**Complexity:** Low. Remove the Supabase `getGlossaryForLanguage()` call and the try/catch fallback in `gemini-translate-files.ts`. Clean up unused imports.
+
+**Prerequisite:** Quality sweep readiness. This is a pre-sweep cleanup item.
