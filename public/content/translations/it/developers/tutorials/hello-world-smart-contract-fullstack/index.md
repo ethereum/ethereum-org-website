@@ -272,8 +272,9 @@ Finora abbiamo aggiunto diverse dipendenze e plugin, ora dobbiamo aggiornare `ha
 Aggiorna il tuo `hardhat.config.js` in modo che appaia così:
 
 ```javascript
-/* *
- * @type import('hardhat/config').HardhatUserConfig */
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
 
 require("dotenv").config()
 require("@nomiclabs/hardhat-ethers")
@@ -662,7 +663,7 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https: // goerli.etherscan.io/address/<contract-address>#contracts
+https://goerli.etherscan.io/address/<contract-address>#contracts
 ```
 
 Congratulazioni! Il codice del tuo contratto intelligente è su Etherscan!
@@ -922,7 +923,7 @@ Per la nostra dApp, **useremo la nostra chiave API Websockets** invece della nos
 Una volta che hai la tua chiave API, crea un file `.env` nella tua directory principale e aggiungi ad esso il tuo URL Websockets di Alchemy. Successivamente, il tuo file `.env` dovrebbe apparire così:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss: // eth-goerli.ws.alchemyapi.io/v2/<key>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
 Ora, siamo pronti per configurare il nostro endpoint di Alchemy Web3 nella nostra dApp! Torniamo al nostro `interact.js`, che è annidato all'interno della nostra cartella `util` e aggiungiamo il seguente codice all'inizio del file:
