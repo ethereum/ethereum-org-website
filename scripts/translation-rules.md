@@ -24,15 +24,16 @@ These rules cover WHEN NOT TO translate.
 - **Mathematical notations and formulas**: keep as-is
 
 ### Names & References
-- **Usernames / contributor names**: never translate or transliterate
+- **Usernames / contributor names**: never translate or transliterate (even in CJK/Arabic -- Latin form keeps them searchable)
 - **Email addresses**: always Latin
-- **URLs and domains**: always Latin
-- **Brand/product names**: MetaMask, Etherscan, Remix, Uniswap, etc.
-- **Client implementation names**: Geth, Prysm, Lighthouse, Teku, Nimbus, Besu, etc.
+- **URLs and domains**: always Latin (no exceptions, even with IDNs)
+- **Brand/product names**: NEVER translate the meaning. MetaMask stays MetaMask, not "Meta Mask" or local equivalent. In non-Latin scripts (Japanese, Arabic, Hindi, etc.), phonetic transliteration alongside the Latin name is acceptable for reading flow (e.g., メタマスク (MetaMask)).
+- **Client implementation names**: Same as brand names -- never translate meaning. "Lighthouse" must NOT become "Phare" (French) or equivalent. Transliteration acceptable in non-Latin scripts. Latin form remains primary identifier.
 - **Standards body acronyms**: W3C, IETF, NIST, IEEE
 
 ### External Content
-- **Publication/article titles**: Keep English when the destination content is English. Optionally add a localized note like [English] for reader expectation.
+- **Proper publication titles** (books, articles, blog posts): Keep English when the destination content is English. If an official translated edition exists, use the translated title followed by English in parentheses. Optionally add [English] for reader expectation.
+- **Descriptive titles/headers we wrote**: ALWAYS translate. These are content, not proper nouns (e.g., "A guide to running your own node" must be translated).
 
 ## Conditional Rules
 
