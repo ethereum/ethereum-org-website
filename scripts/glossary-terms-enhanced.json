@@ -926,8 +926,14 @@
         "base": "distributed validator technology"
       },
       "aliases": [
-        "distributed validator technology",
-        "dvt"
+        {
+          "term": "DVT",
+          "status": "preferred"
+        },
+        {
+          "term": "distributed validator technology",
+          "status": "accepted"
+        }
       ]
     },
     "effective balance": {
@@ -1183,11 +1189,28 @@
         "base": "liquid staking tokens"
       },
       "aliases": [
-        "liquid staking token",
-        "lst",
-        "liquid staking derivative",
-        "lsd",
-        "liquid staking tokens"
+        {
+          "term": "liquid staking token",
+          "status": "preferred"
+        },
+        {
+          "term": "LST",
+          "status": "accepted"
+        },
+        {
+          "term": "liquid staking tokens",
+          "status": "accepted"
+        },
+        {
+          "term": "liquid staking derivative",
+          "status": "deprecated",
+          "note": "LSD acronym avoided due to unfortunate connotation"
+        },
+        {
+          "term": "LSD",
+          "status": "deprecated",
+          "note": "Acronym avoided; use LST"
+        }
       ]
     },
     "lmd-ghost": {
@@ -1224,7 +1247,14 @@
         "base": "MaxEB"
       },
       "aliases": [
-        "EIP-7251"
+        {
+          "term": "MaxEB",
+          "status": "preferred"
+        },
+        {
+          "term": "EIP-7251",
+          "status": "accepted"
+        }
       ],
       "script_rule": "keep_latin",
       "note": "Max Effective Balance. Pectra feature (EIP-7251) raising validator balance cap."
@@ -1324,7 +1354,14 @@
         "base": "proof-of-authority (PoA)"
       },
       "aliases": [
-        "PoA"
+        {
+          "term": "proof-of-authority",
+          "status": "preferred"
+        },
+        {
+          "term": "PoA",
+          "status": "accepted"
+        }
       ],
       "script_rule": "translate",
       "note": "Consensus mechanism used in private/test networks. Not used on Ethereum mainnet."
@@ -1415,8 +1452,14 @@
         "nominalization": "proposer-builder separation"
       },
       "aliases": [
-        "proposer-builder separation",
-        "pbs"
+        {
+          "term": "PBS",
+          "status": "preferred"
+        },
+        {
+          "term": "proposer-builder separation",
+          "status": "accepted"
+        }
       ]
     },
     "re-org": {
@@ -1454,8 +1497,19 @@
         "base": "reorg"
       },
       "aliases": [
-        "chain reorganization",
-        "re-org"
+        {
+          "term": "reorg",
+          "status": "preferred"
+        },
+        {
+          "term": "chain reorganization",
+          "status": "accepted"
+        },
+        {
+          "term": "re-org",
+          "status": "deprecated",
+          "note": "Unhyphenated form preferred"
+        }
       ],
       "script_rule": "translate",
       "note": "When the canonical chain changes and previously included blocks are removed."
@@ -2489,8 +2543,14 @@
         "base": "automated market maker"
       },
       "aliases": [
-        "automated market maker",
-        "amm"
+        {
+          "term": "AMM",
+          "status": "preferred"
+        },
+        {
+          "term": "automated market maker",
+          "status": "accepted"
+        }
       ]
     },
     "blockchain oracle": {
@@ -3601,8 +3661,14 @@
         "base": "geth"
       },
       "aliases": [
-        "go ethereum",
-        "geth"
+        {
+          "term": "Geth",
+          "status": "preferred"
+        },
+        {
+          "term": "Go Ethereum",
+          "status": "accepted"
+        }
       ]
     },
     "wrapped ether (weth)": {
@@ -3622,8 +3688,14 @@
         "base": "wrapped ether"
       },
       "aliases": [
-        "wrapped ether",
-        "weth"
+        {
+          "term": "WETH",
+          "status": "preferred"
+        },
+        {
+          "term": "wrapped ether",
+          "status": "accepted"
+        }
       ]
     },
     "51% attack": {
@@ -4204,8 +4276,14 @@
         "base": "decentralized physical infrastructure"
       },
       "aliases": [
-        "decentralized physical infrastructure",
-        "depin"
+        {
+          "term": "DePIN",
+          "status": "preferred"
+        },
+        {
+          "term": "decentralized physical infrastructure",
+          "status": "accepted"
+        }
       ]
     },
     "decentralized science (desci)": {
@@ -4225,8 +4303,14 @@
         "base": "desci"
       },
       "aliases": [
-        "decentralized science",
-        "desci"
+        {
+          "term": "DeSci",
+          "status": "preferred"
+        },
+        {
+          "term": "decentralized science",
+          "status": "accepted"
+        }
       ]
     },
     "decryption": {
@@ -4688,8 +4772,14 @@
         "base": "layer 1"
       },
       "aliases": [
-        "layer 1",
-        "l1"
+        {
+          "term": "Layer 1",
+          "status": "preferred"
+        },
+        {
+          "term": "L1",
+          "status": "accepted"
+        }
       ]
     },
     "light client": {
@@ -5372,8 +5462,14 @@
         "base": "real world assets"
       },
       "aliases": [
-        "real world assets",
-        "rwa"
+        {
+          "term": "RWA",
+          "status": "preferred"
+        },
+        {
+          "term": "real world assets",
+          "status": "accepted"
+        }
       ]
     },
     "recursive length prefix (rlp)": {
@@ -5410,8 +5506,14 @@
         "base": "regenerative finance"
       },
       "aliases": [
-        "regenerative finance",
-        "refi"
+        {
+          "term": "ReFi",
+          "status": "preferred"
+        },
+        {
+          "term": "regenerative finance",
+          "status": "accepted"
+        }
       ]
     },
     "reth": {
@@ -5451,8 +5553,14 @@
         "gerund": "retroactive public goods funding"
       },
       "aliases": [
-        "retroactive public goods funding",
-        "rpgf"
+        {
+          "term": "retroactive public goods funding",
+          "status": "preferred"
+        },
+        {
+          "term": "RPGF",
+          "status": "accepted"
+        }
       ]
     },
     "reward": {
@@ -5796,8 +5904,14 @@
         "base": "total value locked"
       },
       "aliases": [
-        "total value locked",
-        "tvl"
+        {
+          "term": "TVL",
+          "status": "preferred"
+        },
+        {
+          "term": "total value locked",
+          "status": "accepted"
+        }
       ]
     },
     "trust assumptions": {
@@ -6297,8 +6411,14 @@
         "base": "decentralized identity"
       },
       "aliases": [
-        "decentralized identity",
-        "did"
+        {
+          "term": "decentralized identity",
+          "status": "preferred"
+        },
+        {
+          "term": "DID",
+          "status": "accepted"
+        }
       ]
     },
     "ethereum name service (ens)": {
@@ -6613,7 +6733,14 @@
         "base": "dencun"
       },
       "aliases": [
-        "dencun"
+        {
+          "term": "Dencun",
+          "status": "preferred"
+        },
+        {
+          "term": "dencun upgrade",
+          "status": "accepted"
+        }
       ]
     },
     "eip-7702": {
@@ -7076,7 +7203,14 @@
         "base": "data availability sampling"
       },
       "aliases": [
-        "DAS"
+        {
+          "term": "data availability sampling",
+          "status": "preferred"
+        },
+        {
+          "term": "DAS",
+          "status": "accepted"
+        }
       ],
       "script_rule": "translate",
       "note": "Technique allowing nodes to verify data availability without downloading entire blobs.",
@@ -7253,7 +7387,14 @@
         "base": "PeerDAS"
       },
       "aliases": [
-        "EIP-7594"
+        {
+          "term": "PeerDAS",
+          "status": "preferred"
+        },
+        {
+          "term": "EIP-7594",
+          "status": "accepted"
+        }
       ],
       "script_rule": "keep_latin",
       "note": "Peer Data Availability Sampling. Protocol name, do not translate."
@@ -8848,8 +8989,14 @@
         "base": "soulbound token"
       },
       "aliases": [
-        "soulbound token",
-        "sbt"
+        {
+          "term": "soulbound token",
+          "status": "preferred"
+        },
+        {
+          "term": "SBT",
+          "status": "accepted"
+        }
       ]
     },
     "token": {
