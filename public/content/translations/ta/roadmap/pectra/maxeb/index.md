@@ -1,6 +1,6 @@
 ---
-title: பெக்ட்ரா MaxEB
-description: பெக்ட்ரா வெளியீட்டில் MaxEB பற்றி மேலும் அறிக
+title: "பெக்ட்ரா MaxEB"
+description: "பெக்ட்ரா வெளியீட்டில் MaxEB பற்றி மேலும் அறிக"
 lang: ta
 ---
 
