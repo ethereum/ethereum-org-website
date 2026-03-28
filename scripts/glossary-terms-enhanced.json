@@ -1220,7 +1220,20 @@
       ],
       "forms": {
         "base": "proof-of-stake (pos)"
-      }
+      },
+      "aliases": [
+        {
+          "term": "proof-of-stake",
+          "status": "preferred",
+          "note": "Hyphenated form currently preferred"
+        },
+        {
+          "term": "proof of stake",
+          "status": "accepted",
+          "note": "May become preferred per content lead -- pending"
+        },
+        "PoS"
+      ]
     },
     "proposer": {
       "id": "proposer",
@@ -2263,8 +2276,13 @@
         "base": "defi"
       },
       "aliases": [
+        {
+          "term": "DeFi",
+          "status": "preferred",
+          "note": "Acronym strongly preferred in all contexts"
+        },
         "decentralized finance",
-        "defi"
+        "Decentralized Finance"
       ]
     },
     "flash loan": {
@@ -2690,8 +2708,15 @@
         "base": "dapp"
       },
       "aliases": [
-        "decentralized application",
-        "dapp"
+        "dapp",
+        "dApp",
+        "DApp",
+        {
+          "term": "dapps",
+          "status": "deprecated",
+          "note": "ethereum.org prefers 'apps' or 'Ethereum apps'"
+        },
+        "decentralized application"
       ]
     },
     "faucet": {
@@ -2933,7 +2958,9 @@
       ],
       "forms": {
         "base": "eth1"
-      }
+      },
+      "deprecated": true,
+      "note": "Legacy term. Preferred: 'execution layer'. Deprecated by ecosystem consensus; only used in historical context."
     },
     "eth2": {
       "id": "eth2",
@@ -2950,7 +2977,9 @@
       ],
       "forms": {
         "base": "eth2"
-      }
+      },
+      "deprecated": true,
+      "note": "Legacy term. Preferred: 'consensus layer'. Deprecated by ecosystem consensus; only used in historical context."
     },
     "ether": {
       "id": "ether",
@@ -4223,7 +4252,15 @@
       ],
       "forms": {
         "base": "offchain"
-      }
+      },
+      "aliases": [
+        {
+          "term": "off-chain",
+          "status": "deprecated",
+          "note": "ethereum.org prefers unhyphenated form, like online/offline"
+        },
+        "off chain"
+      ]
     },
     "ommer (uncle) block": {
       "id": "ommer",
@@ -4312,7 +4349,15 @@
       ],
       "forms": {
         "base": "onchain"
-      }
+      },
+      "aliases": [
+        {
+          "term": "on-chain",
+          "status": "deprecated",
+          "note": "ethereum.org prefers unhyphenated form, like online/offline"
+        },
+        "on chain"
+      ]
     },
     "peer": {
       "id": "peer",
@@ -4466,7 +4511,18 @@
       ],
       "forms": {
         "base": "proof-of-work (pow)"
-      }
+      },
+      "aliases": [
+        {
+          "term": "proof-of-work",
+          "status": "preferred"
+        },
+        {
+          "term": "proof of work",
+          "status": "accepted"
+        },
+        "PoW"
+      ]
     },
     "protocol": {
       "id": "protocol",
@@ -6084,8 +6140,13 @@
         "base": "layer 2"
       },
       "aliases": [
+        {
+          "term": "Layer 2",
+          "status": "preferred"
+        },
+        "L2",
         "layer 2",
-        "l2"
+        "layer-2"
       ]
     },
     "optimistic rollup": {
