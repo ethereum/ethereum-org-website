@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "تیز تر سنکس (syncs)، متوازی عمل درآمد، اور متوازی ڈسک ریڈز کے لیے انحصار کو پہلے سے میپ کرتا ہے",
   "page-roadmap-glamsterdam-bal-item-3": "سٹیٹ-ہیوی (state-heavy) ایپس کے لیے گیس کو کم کرتا ہے اور گیس کی لاگت کی پیشین گوئی کو بہتر بناتا ہے",
   "page-roadmap-hegota-discussed-title": "Hegotá کے لیے منصوبہ بندی",
-  "page-roadmap-hegota-discussed-item-1": "تجاویز فی الحال زیر بحث ہیں"
+  "page-roadmap-hegota-discussed-item-1": "تجاویز فی الحال زیر بحث ہیں",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "زیرو نالج ثبوت (Zero-knowledge proofs) تصدیق کنندگان کو ٹرانزیکشنز کو دوبارہ چلائے بغیر Ethereum بلاکس کی تصدیق کرنے کی اجازت دے سکتے ہیں، جس سے ہارڈویئر کی ضروریات کو بڑھائے بغیر گیس کی حد (gas limits) کو بڑھانا ممکن ہو جائے گا۔"
 }

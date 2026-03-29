@@ -99,6 +99,8 @@ Hapa ndipo hesabu inayoweza kuthibitishwa inapoingia. Wakati nodi inapotekeleza 
 
 [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) na [validiums](/developers/docs/scaling/validium/) ni suluhu mbili za upanuzi za nje ya mnyororo zinazotumia uthibitisho wa uhalali ili kutoa upanuzi salama. Itifaki hizi hutekeleza maelfu ya miamala nje ya mnyororo na kuwasilisha uthibitisho kwa ajili ya uhakiki kwenye Ethereum. Matokeo hayo yanaweza kutumika mara moja baada ya uthibitisho kuhakikiwa, na kuruhusu Ethereum kuchakata miamala zaidi bila kuongeza hesabu kwenye safu ya msingi.
 
+Zaidi ya upanuzi wa safu ya 2, uthibitisho wa kutojua kitu unaweza pia kuthibitisha utekelezaji wa kitalu wa Ethereum L1 wenyewe. zkEVM kwa uthibitishaji wa L1 ingeruhusu wathibitishaji kuthibitisha kitalu kwa kuangalia uthibitisho badala ya kutekeleza tena miamala yote -- kuwezesha kikomo cha gesi cha juu bila kuongeza mahitaji ya maunzi ya mthibitishaji.
+
 ### Kupunguza hongo na njama katika upigaji kura wa kwenye mnyororo {#secure-blockchain-voting}
 
 Miradi ya upigaji kura ya kiambajengo ina sifa nyingi zinazofaa: inaweza kukaguliwa kikamilifu, ni salama dhidi ya mashambulizi, ni sugu kwa udhibiti, na haina vikwazo vya kijiografia. Lakini hata mifumo ya upigaji kura ya kwenye mnyororo haiko salama kutokana na tatizo la **njama**.

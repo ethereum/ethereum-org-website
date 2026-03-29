@@ -12,6 +12,8 @@ import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
+import { numberFormat } from "@/lib/utils/numbers"
+
 import { Rollups } from "@/data/networks/networks"
 
 import useTranslation from "@/hooks/useTranslation"
@@ -126,12 +128,10 @@ const Layer2Hub = ({
                 <div className="max-w-[224px]">
                   <p className="text-5xl">
                     $
-                    {(
-                      growThePieData.dailyTxCosts["ethereum"] || 0
-                    ).toLocaleString(locale as Lang, {
+                    {numberFormat(locale, {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,
-                    })}
+                    }).format(growThePieData.dailyTxCosts["ethereum"] || 0)}
                   </p>
                   <p className="text-body-medium">
                     {t("page-layer-2-blockchain-transaction-cost")}
@@ -143,10 +143,12 @@ const Layer2Hub = ({
                 <div className="max-w-[224px]">
                   <p className="text-5xl">
                     $
-                    {medianTxCost.toLocaleString(locale as Lang, {
+                    {numberFormat(locale, {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 3,
-                    })}
+                    }).format(
+                      typeof medianTxCost === "number" ? medianTxCost : 0
+                    )}
                   </p>
                   <p className="text-body-medium">
                     {t("page-layer-2-networks-transaction-cost")}

@@ -79,6 +79,8 @@ Block-Vorschlagende verwenden die Zustandsdaten, um „Zeugen“ zu erstellen �
 
 Schwache Zustandslosigkeit befindet sich in einem fortgeschrittenen Forschungsstadium, beruht jedoch darauf, dass die Proposer-Builder-Trennung und Verkle-Bäume implementiert wurden, sodass kleine Zeugen zwischen Peers weitergegeben werden können. Das bedeutet, dass schwache Zustandslosigkeit wahrscheinlich noch einige Jahre vom Ethereum-Mainnet entfernt ist.
 
+zkEVM für die L1-Verifizierung ist eine ergänzende Technologie, die die staatenlose Verifizierung weiter verbessern könnte. Anstatt nur Zeugen zu prüfen, könnten Validatoren einen Zero-Knowledge-Beweis verifizieren, dass der gesamte Block korrekt ausgeführt wurde -- was kryptografische Gewissheit bietet, ohne Transaktionen erneut auszuführen.
+
 ### Starke Zustandslosigkeit {#strong-statelessness}
 
 Starke Zustandslosigkeit beseitigt die Notwendigkeit für jeden Blockchain-Knoten, Zustandsdaten zu speichern. Stattdessen werden Transaktionen mit Zeugen gesendet, die von Blockproduzenten aggregiert werden können. Die Blockproduzenten sind dann dafür verantwortlich, nur den Zustand zu speichern, der für die Generierung von Zeugen für relevante Konten benötigt wird. Die Verantwortung für den Zustand wird fast vollständig auf die Benutzer verlagert, da sie Zeugen und „Zugriffslisten“ senden, um zu deklarieren, mit welchen Konten und Speicherschlüsseln sie interagieren. Dies würde extrem leichtgewichtige Blockchain-Knoten ermöglichen, aber es gibt Kompromisse, einschließlich der Tatsache, dass es schwieriger wird, mit Smart Contracts zu interagieren.

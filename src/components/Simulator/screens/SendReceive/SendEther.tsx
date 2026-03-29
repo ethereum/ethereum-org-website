@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/buttons/Button"
 import { Flex, HStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { EthTokenIcon } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"
@@ -21,7 +22,7 @@ export const SendEther = ({
   setChosenAmount,
 }: SendEtherProps) => {
   const formatDollars = (amount: number): string =>
-    new Intl.NumberFormat("en-US", {
+    numberFormat("en-US", {
       style: "currency",
       currency: "USD",
       notation: "compact",
@@ -29,7 +30,7 @@ export const SendEther = ({
 
   const usdAmount = formatDollars(ethPrice * ethBalance)
 
-  const ethAmount = new Intl.NumberFormat("en", {
+  const ethAmount = numberFormat("en", {
     maximumFractionDigits: 5,
   }).format(ethBalance)
 
@@ -48,7 +49,7 @@ export const SendEther = ({
     if (amount === maxUsdAmount) return "Max"
     return formatDollars(amount)
   }
-  const formatChosenAmount = new Intl.NumberFormat("en", {
+  const formatChosenAmount = numberFormat("en", {
     style: "currency",
     currency: "USD",
     notation: "compact",

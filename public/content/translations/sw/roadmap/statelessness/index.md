@@ -79,6 +79,8 @@ Wapendekeza wa kuzuia hutumia data ya serikali kuunda "mashahidi" - seti ndogo y
 
 Ukosefu wa utaifa dhaifu uko katika hali ya juu ya utafiti, lakini inategemea utengano wa wajenzi wa mapendekezo na Miti ya Verkle kutekelezwa ili mashahidi wadogo waweze kupitishwa kati ya wenzao. Hii ina maana kutokuwa na hali dhaifu labda ni miaka michache mbali na Mtandao Mkuu wa Ethereum.
 
+zkEVM kwa uthibitishaji wa L1 ni teknolojia inayosaidiana ambayo inaweza kuboresha zaidi uthibitishaji usio na hali. Badala ya kuangalia tu mashahidi (witnesses), wathibitishaji wangeweza kuthibitisha uthibitisho wa kutojua kitu kwamba kitalu chote kilitekelezwa kwa usahihi -- ikitoa uhakika wa kielektroniki bila kutekeleza tena miamala.
+
 ### Kutokuwa na hali thabiti {#strong-statelessness}
 
 Kutokuwa na hali thabiti huondoa hitaji la nodi yoyote kuhifadhi data ya hali. Badala yake, miamala hutumwa na mashahidi ambayo yanaweza kujumlishwa na wazalishaji wa bloku. Wazalishaji wa vitalu basi wana jukumu la kuhifadhi tu hali ambayo inahitajika kwa ajili ya kuzalisha mashahidi kwa akaunti husika. Jukumu la serikali linakaribia kuhamishwa kwa watumiaji, wanapotuma mashahidi na 'orodha za ufikiaji' ili kutangaza ni akaunti zipi na funguo za hifadhi wanazotumia. Hii inaweza kuwezesha nodi nyepesi sana, lakini kuna mabadiliko ikiwa ni pamoja na kuifanya iwe ngumu zaidi kushughulikia na mikataba mahiri.

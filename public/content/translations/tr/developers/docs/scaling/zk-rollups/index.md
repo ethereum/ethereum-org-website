@@ -224,6 +224,17 @@ Finematics'in ZK-toplaması hakkındaki açıklamasını izleyin:
 
 ## zkEVM üzerinde kimler çalışıyor? zkEVM projeleri {#zkevm-projects}
 
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>L2 ve L1 için zkEVM karşılaştırması</AlertTitle>
+<AlertDescription>
+Aşağıdaki projeler Katman 2 toplamaları oluşturmak için zkEVM teknolojisini kullanır. Ayrıca işlemlerin yeniden yürütülmeden Ethereum bloklarının doğrulayıcılar tarafından doğrulanmasını sağlayacak olan, L1 blok doğrulaması için zkEVM kullanımı üzerine araştırmalar da bulunmaktadır.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+
 Şunlar zkEVM'ler üzerinde çalışan projeler arasındadır:
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM, EVM uyumlu bir ZK-toplaması ve Ethereum blokları için doğruluk kanıtları oluşturmaya yönelik bir mekanizma geliştirmek için Ethereum Foundation tarafından finanse edilen bir projedir._

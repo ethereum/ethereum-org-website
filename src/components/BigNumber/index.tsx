@@ -4,7 +4,7 @@ import { Info } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import { cn } from "@/lib/utils/cn"
-import { isValidDate } from "@/lib/utils/date"
+import { dateTimeFormat, isValidDate } from "@/lib/utils/date"
 
 import Tooltip from "../Tooltip"
 import Link from "../ui/Link"
@@ -68,7 +68,7 @@ const BigNumber = async ({
 
   const lastUpdatedDisplay =
     lastUpdated && isValidDate(lastUpdated)
-      ? new Intl.DateTimeFormat(locale, {
+      ? dateTimeFormat(locale, {
           dateStyle: "medium",
         }).format(new Date(lastUpdated))
       : ""

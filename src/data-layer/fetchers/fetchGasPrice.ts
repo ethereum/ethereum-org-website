@@ -1,3 +1,5 @@
+import { fetchRetry } from "./fetchRetry"
+
 export interface GasPriceData {
   gasPrice: number
   timestamp: number
@@ -8,7 +10,7 @@ export async function fetchGasPrice(): Promise<GasPriceData> {
 
   console.log("Starting gas price data fetch")
 
-  const response = await fetch(
+  const response = await fetchRetry(
     `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle&apikey=${etherscanApiKey}`
   )
 

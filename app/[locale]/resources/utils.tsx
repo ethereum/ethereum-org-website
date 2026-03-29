@@ -1,7 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
-
 import BigNumber from "@/components/BigNumber"
 import SectionIconArrowsFullscreen from "@/components/icons/arrows-fullscreen.svg"
 import SectionIconEthGlyph from "@/components/icons/eth-glyph.svg"
@@ -10,7 +8,6 @@ import SectionIconHeartPulse from "@/components/icons/heart-pulse.svg"
 import SectionIconPrivacy from "@/components/icons/privacy.svg"
 
 import { formatSmallUSD } from "@/lib/utils/numbers"
-import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import {
   SlotCountdownChart,
@@ -64,7 +61,6 @@ export const getResources = async ({
 }): Promise<DashboardSection[]> => {
   const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "page-resources" })
-  const localeForNumberFormat = getLocaleForNumberFormat(locale as Lang)
 
   // Fetch ETH price using the new data-layer function (already cached)
   const ethPrice = await getEthPrice()
@@ -82,7 +78,7 @@ export const getResources = async ({
           value: formatSmallUSD(
             // Converting value from wei to USD
             avgBlobFee * 1e-18 * ethPrice.value,
-            localeForNumberFormat
+            locale
           ),
         }
 
@@ -91,7 +87,7 @@ export const getResources = async ({
       ? { error: txCostsMedianUsd.error }
       : {
           ...txCostsMedianUsd,
-          value: formatSmallUSD(txCostsMedianUsd.value, localeForNumberFormat),
+          value: formatSmallUSD(txCostsMedianUsd.value, locale),
         }
 
   const networkBoxes: DashboardBox[] = [
