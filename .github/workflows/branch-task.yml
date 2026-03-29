@@ -1,10 +1,56 @@
+# TODO: REVERT ALL CHANGES TO THIS FILE PRIOR TO MERGING TO DEV
+# This file should be the empty stub from the branch-task PR commented out below
+# The job below is temporary for glossary translation generation only.
+
+# name: Branch Task
+
+# on:
+#   workflow_dispatch:
+
+# jobs:
+#   stub:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: echo "ok"
+
 name: Branch Task
 
 on:
   workflow_dispatch:
 
 jobs:
-  stub:
+  generate-translations:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     steps:
-      - run: echo "ok"
+      - uses: actions/checkout@v4
+        with:
+          ref: glossary-term-extraction
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Generate glossary translations
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: npx tsx scripts/generate-translations-sdk.ts
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/translations/
+          if git diff --staged --quiet; then
+            echo "No new translations to commit"
+          else
+            git commit -m "data: glossary translations via Gemini SDK
+
+          Co-Authored-By: Gemini <noreply@google.com>"
+            git push
+          fi
