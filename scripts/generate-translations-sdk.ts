@@ -417,6 +417,14 @@ interface FailedBatch {
   reason: string
 }
 
+// Token tracking for cost estimation
+// Gemini 3.1 Pro pricing (approximate as of 2026-03):
+// Input: ~$1.25 / 1M tokens, Output: ~$10.00 / 1M tokens
+const TOKEN_COST_INPUT_PER_M = 1.25
+const TOKEN_COST_OUTPUT_PER_M = 10.0
+let totalInputTokens = 0
+let totalOutputTokens = 0
+
 /**
  * Semaphore-based concurrency limiter.
  * All languages share one pool of CONCURRENCY slots.
@@ -491,7 +499,7 @@ async function processBatch(
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       try {
         const response = await ai.models.generateContent({
-          model: "gemini-2.5-pro",
+          model: "gemini-3.1-pro-preview",
           contents: prompt,
           config: {
             safetySettings: [
@@ -514,6 +522,13 @@ async function processBatch(
             ],
           },
         })
+
+        // Track token usage
+        const usage = response.usageMetadata
+        if (usage) {
+          totalInputTokens += usage.promptTokenCount ?? 0
+          totalOutputTokens += usage.candidatesTokenCount ?? 0
+        }
 
         const text = response.text ?? ""
 
@@ -703,6 +718,19 @@ async function main(): Promise<void> {
     }
   }
 
+  // Cost estimate
+  const inputCost = (totalInputTokens / 1_000_000) * TOKEN_COST_INPUT_PER_M
+  const outputCost = (totalOutputTokens / 1_000_000) * TOKEN_COST_OUTPUT_PER_M
+  const totalCost = inputCost + outputCost
+
+  log("")
+  log("TOKEN USAGE:")
+  log(`  Input tokens:  ${totalInputTokens.toLocaleString()}`)
+  log(`  Output tokens: ${totalOutputTokens.toLocaleString()}`)
+  log(
+    `  Estimated cost: $${totalCost.toFixed(2)} (input: $${inputCost.toFixed(2)}, output: $${outputCost.toFixed(2)})`
+  )
+
   // Write summary JSON
   const summary = {
     timestamp: new Date().toISOString(),
@@ -710,6 +738,11 @@ async function main(): Promise<void> {
     totalFailed,
     totalSkipped,
     failedBatches,
+    tokens: {
+      input: totalInputTokens,
+      output: totalOutputTokens,
+      estimatedCostUsd: Math.round(totalCost * 100) / 100,
+    },
     languageStatus: Object.fromEntries(
       LANGUAGES.map((l) => {
         const count = Object.keys(loadExistingTranslations(l.code)).length
