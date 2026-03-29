@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-03-29T06:07:49.039Z",
+  "totalGenerated": 12432,
+  "totalFailed": 0,
+  "totalSkipped": 0,
+  "failedBatches": [],
+  "tokens": {
+    "input": 1115020,
+    "output": 4748607,
+    "estimatedCostUsd": 48.88
+  },
+  "languageStatus": {
+    "ar": {
+      "translated": 518,
+      "total": 519
+    },
+    "bn": {
+      "translated": 518,
+      "total": 519
+    },
+    "cs": {
+      "translated": 518,
+      "total": 519
+    },
+    "de": {
+      "translated": 518,
+      "total": 519
+    },
+    "es": {
+      "translated": 518,
+      "total": 519
+    },
+    "fr": {
+      "translated": 518,
+      "total": 519
+    },
+    "hi": {
+      "translated": 518,
+      "total": 519
+    },
+    "id": {
+      "translated": 518,
+      "total": 519
+    },
+    "it": {
+      "translated": 518,
+      "total": 519
+    },
+    "ja": {
+      "translated": 518,
+      "total": 519
+    },
+    "ko": {
+      "translated": 518,
+      "total": 519
+    },
+    "mr": {
+      "translated": 518,
+      "total": 519
+    },
+    "pl": {
+      "translated": 518,
+      "total": 519
+    },
+    "pt-br": {
+      "translated": 518,
+      "total": 519
+    },
+    "ru": {
+      "translated": 518,
+      "total": 519
+    },
+    "sw": {
+      "translated": 518,
+      "total": 519
+    },
+    "ta": {
+      "translated": 518,
+      "total": 519
+    },
+    "te": {
+      "translated": 518,
+      "total": 519
+    },
+    "tr": {
+      "translated": 518,
+      "total": 519
+    },
+    "uk": {
+      "translated": 518,
+      "total": 519
+    },
+    "ur": {
+      "translated": 518,
+      "total": 519
+    },
+    "vi": {
+      "translated": 518,
+      "total": 519
+    },
+    "zh": {
+      "translated": 518,
+      "total": 519
+    },
+    "zh-tw": {
+      "translated": 518,
+      "total": 519
+    }
+  }
+}
