@@ -8,6 +8,7 @@ import {
 
 import {
   AppCategoryEnum,
+  type AppData,
   type Lang,
   type PageParams,
   type SectionNavDetails,
@@ -30,6 +31,7 @@ import { getHighlightedApps } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { slugify } from "@/lib/utils/url"
 
 import { appsCategories } from "@/data/apps/categories"
 
@@ -62,6 +64,10 @@ const Page = async (props: {
   }
 
   const t = await getTranslations({ locale, namespace: "page-apps" })
+  const tSubcategory = await getTranslations({
+    locale,
+    namespace: "app-subcategories",
+  })
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -84,6 +90,12 @@ const Page = async (props: {
 
   if (!isValidCategory(categoryEnum)) {
     notFound()
+  }
+
+  // Translate subcategory tags, falling back to the raw string
+  const translateSubcategories = (tag: string) => {
+    const key = `subcategory-${slugify(tag)}`
+    return tSubcategory.has(key) ? tSubcategory(key) : tag
   }
 
   // Get highlighted apps (apps with highlight=true)
@@ -160,13 +172,25 @@ const Page = async (props: {
             <div className="flex flex-col px-4 md:px-8">
               <h2>{t("page-apps-highlights-title")}</h2>
               <AppsHighlight
-                apps={highlightedApps}
+                apps={
+                  highlightedApps.map((app) => ({
+                    ...app,
+                    subCategory: app.subCategory.map(translateSubcategories),
+                  })) as AppData[]
+                }
                 matomoCategory={`category_page`}
               />
             </div>
 
             <div className="flex flex-col px-4 md:px-8">
-              <AppsTable apps={appsData[categoryEnum]} />
+              <AppsTable
+                apps={
+                  appsData[categoryEnum].map((app) => ({
+                    ...app,
+                    subCategory: app.subCategory.map(translateSubcategories),
+                  })) as AppData[]
+                }
+              />
             </div>
 
             <div className="flex flex-col px-4 md:px-8">
