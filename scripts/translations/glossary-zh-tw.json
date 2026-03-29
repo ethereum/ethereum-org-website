@@ -23941,5 +23941,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "EIP-1559 parameter representing the absolute maximum a user is willing to pay per unit of gas."
+  },
+  "constructor": {
+    "term": "建構函式",
+    "aliases": [],
+    "transliteration": "Jiàngòu hánshì",
+    "morphology": {
+      "noun": {
+        "singular": "建構函式"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "建構函式",
+        "example": "建構函式在智慧合約部署時執行一次。"
+      },
+      "heading": {
+        "term": "建構函式"
+      },
+      "tag": {
+        "term": "建構函式"
+      },
+      "ui": {
+        "term": "建構函式"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

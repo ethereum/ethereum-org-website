@@ -23693,5 +23693,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
+  },
+  "constructor": {
+    "term": "コンストラクタ",
+    "aliases": [],
+    "transliteration": "Konsutorakuta",
+    "morphology": {
+      "noun": {
+        "singular": "コンストラクタ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "コンストラクタ",
+        "example": "コンストラクタは、スマートコントラクトのデプロイ時に一度だけ実行されます。"
+      },
+      "heading": {
+        "term": "コンストラクタ"
+      },
+      "tag": {
+        "term": "コンストラクタ"
+      },
+      "ui": {
+        "term": "コンストラクタ"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

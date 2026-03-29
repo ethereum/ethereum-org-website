@@ -26961,5 +26961,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Standard EIP-1559 terminology. Often abbreviated in user interfaces as 'Макс. комиссия за газ'."
+  },
+  "constructor": {
+    "term": "конструктор",
+    "aliases": [],
+    "transliteration": "konstruktor",
+    "morphology": {
+      "noun": {
+        "singular": "конструктор"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "конструктор",
+        "example": "Конструктор запускается один раз при развертывании смарт-контракта."
+      },
+      "heading": {
+        "term": "Конструктор"
+      },
+      "tag": {
+        "term": "конструктор"
+      },
+      "ui": {
+        "term": "Конструктор"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

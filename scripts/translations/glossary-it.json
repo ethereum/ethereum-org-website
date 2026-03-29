@@ -26360,5 +26360,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Introdotta con l'EIP-1559, in italiano 'fee' è generalmente tradotto come 'commissione' nel contesto delle transazioni."
+  },
+  "constructor": {
+    "term": "costruttore",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "costruttore"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "costruttore",
+        "example": "Il costruttore viene eseguito una sola volta al momento del deployment del contratto."
+      },
+      "heading": {
+        "term": "Costruttore"
+      },
+      "tag": {
+        "term": "costruttore"
+      },
+      "ui": {
+        "term": "Costruttore"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

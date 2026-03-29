@@ -26488,5 +26488,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "'शुल्क' (fee) is a masculine noun. The term is widely translated literally in technical contexts."
+  },
+  "constructor": {
+    "term": "कंस्ट्रक्टर",
+    "aliases": [],
+    "transliteration": "Kanstrakṭar",
+    "morphology": {
+      "noun": {
+        "singular": "कंस्ट्रक्टर"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "कंस्ट्रक्टर",
+        "example": "स्मार्ट कॉन्ट्रैक्ट के परिनियोजन के समय कंस्ट्रक्टर एक बार चलता है।"
+      },
+      "heading": {
+        "term": "कंस्ट्रक्टर"
+      },
+      "tag": {
+        "term": "कंस्ट्रक्टर"
+      },
+      "ui": {
+        "term": "कंस्ट्रक्टर"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

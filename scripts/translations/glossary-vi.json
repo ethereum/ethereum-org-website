@@ -23893,5 +23893,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
+  },
+  "constructor": {
+    "term": "hàm khởi tạo",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "hàm khởi tạo"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "hàm khởi tạo",
+        "example": "Hàm khởi tạo chạy một lần khi hợp đồng thông minh được triển khai."
+      },
+      "heading": {
+        "term": "Hàm khởi tạo"
+      },
+      "tag": {
+        "term": "hàm khởi tạo"
+      },
+      "ui": {
+        "term": "Hàm khởi tạo"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

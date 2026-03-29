@@ -26661,5 +26661,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Often used as a fixed parameter name, making pluralization rare in practical use."
+  },
+  "constructor": {
+    "term": "مُنشئ",
+    "aliases": [],
+    "transliteration": "Munshi'",
+    "morphology": {
+      "noun": {
+        "singular": "مُنشئ"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "مُنشئ",
+        "example": "يتم تنفيذ المُنشئ مرة واحدة عند نشر العقد."
+      },
+      "heading": {
+        "term": "المُنشئ"
+      },
+      "tag": {
+        "term": "مُنشئ"
+      },
+      "ui": {
+        "term": "المُنشئ"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

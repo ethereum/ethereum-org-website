@@ -26670,5 +26670,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "The term 'gas' is often kept in English within the Czech crypto community as 'gas', however 'plyn' is the official literal translation used in localized documentation."
+  },
+  "constructor": {
+    "term": "konstruktor",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "konstruktor"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "konstruktor",
+        "example": "Konstruktor se spustí pouze jednou při nasazení kontraktu."
+      },
+      "heading": {
+        "term": "Konstruktor"
+      },
+      "tag": {
+        "term": "konstruktor"
+      },
+      "ui": {
+        "term": "Konstruktor"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

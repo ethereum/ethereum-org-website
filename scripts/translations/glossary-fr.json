@@ -26463,5 +26463,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Le mot 'frais' est syntaxiquement toujours au pluriel en français, même pour désigner une entité singulière."
+  },
+  "constructor": {
+    "term": "constructeur",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "constructeur"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "constructeur",
+        "example": "Le constructeur est exécuté une seule fois lors du déploiement du contrat."
+      },
+      "heading": {
+        "term": "Constructeur"
+      },
+      "tag": {
+        "term": "constructeur"
+      },
+      "ui": {
+        "term": "Constructeur"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

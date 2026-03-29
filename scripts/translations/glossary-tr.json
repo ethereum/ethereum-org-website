@@ -26228,5 +26228,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
+  },
+  "constructor": {
+    "term": "kurucu",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "kurucu"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "kurucu",
+        "example": "Kurucu fonksiyon, akıllı sözleşme dağıtıldığında bir kez çalışır."
+      },
+      "heading": {
+        "term": "Kurucu"
+      },
+      "tag": {
+        "term": "kurucu"
+      },
+      "ui": {
+        "term": "Kurucu"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

@@ -26658,5 +26658,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "An EIP-1559 transaction parameter defining the absolute maximum amount a user is willing to pay per unit of gas."
+  },
+  "constructor": {
+    "term": "konstruktor",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "konstruktor"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "konstruktor",
+        "example": "Konstruktor jest uruchamiany tylko raz podczas wdrażania kontraktu."
+      },
+      "heading": {
+        "term": "Konstruktor"
+      },
+      "tag": {
+        "term": "konstruktor"
+      },
+      "ui": {
+        "term": "Konstruktor"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

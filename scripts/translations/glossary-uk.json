@@ -26580,5 +26580,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
+  },
+  "constructor": {
+    "term": "конструктор",
+    "aliases": [],
+    "transliteration": "konstruktor",
+    "morphology": {
+      "noun": {
+        "singular": "конструктор"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "конструктор",
+        "example": "Конструктор запускається один раз під час розгортання смарт-контракту."
+      },
+      "heading": {
+        "term": "Конструктор"
+      },
+      "tag": {
+        "term": "конструктор"
+      },
+      "ui": {
+        "term": "Конструктор"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

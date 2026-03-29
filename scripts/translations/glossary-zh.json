@@ -23854,5 +23854,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Terminology introduced in EIP-1559."
+  },
+  "constructor": {
+    "term": "构造函数",
+    "aliases": [],
+    "transliteration": "Gòuzào hánshù",
+    "morphology": {
+      "noun": {
+        "singular": "构造函数"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "构造函数",
+        "example": "构造函数在智能合约部署时运行一次。"
+      },
+      "heading": {
+        "term": "构造函数"
+      },
+      "tag": {
+        "term": "构造函数"
+      },
+      "ui": {
+        "term": "构造函数"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

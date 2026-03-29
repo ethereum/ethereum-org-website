@@ -26933,5 +26933,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "In technischen Kontexten und bei vielen Wallets wird oft der englische Begriff 'Max Fee Per Gas' beibehalten."
+  },
+  "constructor": {
+    "term": "Konstruktor",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "Konstruktor"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "Konstruktor",
+        "example": "Der Konstruktor wird beim Deployment des Smart Contracts einmalig ausgeführt."
+      },
+      "heading": {
+        "term": "Konstruktor"
+      },
+      "tag": {
+        "term": "Konstruktor"
+      },
+      "ui": {
+        "term": "Konstruktor"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

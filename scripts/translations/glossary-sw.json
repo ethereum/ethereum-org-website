@@ -26192,5 +26192,48 @@
     "source": "llm",
     "confidence": "medium",
     "notes": "Ada follows the n-/n- noun class (Class 9/10)."
+  },
+  "constructor": {
+    "term": "konstrukta",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "konstrukta"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "konstrukta",
+        "example": "Konstrukta huendeshwa mara moja wakati mkataba mwerevu unapotumwa."
+      },
+      "heading": {
+        "term": "Konstrukta"
+      },
+      "tag": {
+        "term": "konstrukta"
+      },
+      "ui": {
+        "term": "Konstrukta"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

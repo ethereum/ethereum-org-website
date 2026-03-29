@@ -26326,5 +26326,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "También es muy común usar 'comisión' en lugar de 'tarifa' en varios países de América Latina."
+  },
+  "constructor": {
+    "term": "constructor",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "constructor"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "constructor",
+        "example": "El constructor se ejecuta una sola vez cuando se despliega el contrato."
+      },
+      "heading": {
+        "term": "Constructor"
+      },
+      "tag": {
+        "term": "constructor"
+      },
+      "ui": {
+        "term": "Constructor"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

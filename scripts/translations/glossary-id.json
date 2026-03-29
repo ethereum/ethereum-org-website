@@ -23543,5 +23543,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
+  },
+  "constructor": {
+    "term": "konstruktor",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "konstruktor"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "konstruktor",
+        "example": "Konstruktor dijalankan sekali saat kontrak pintar diterapkan."
+      },
+      "heading": {
+        "term": "Konstruktor"
+      },
+      "tag": {
+        "term": "konstruktor"
+      },
+      "ui": {
+        "term": "Konstruktor"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

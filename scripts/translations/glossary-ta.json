@@ -26542,5 +26542,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Gas is frequently transliterated as 'கேஸ்' (kēs) in colloquial tech Tamil, but 'எரிவாயு' (erivāyu) is the formal translation often used in localized Ethereum documentation."
+  },
+  "constructor": {
+    "term": "ஆக்கி",
+    "aliases": [],
+    "transliteration": "Aakki",
+    "morphology": {
+      "noun": {
+        "singular": "ஆக்கி"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "ஆக்கி",
+        "example": "ஸ்மார்ட் ஒப்பந்தம் பயன்படுத்தப்படும்போது ஆக்கி ஒரு முறை இயங்கும்."
+      },
+      "heading": {
+        "term": "ஆக்கி"
+      },
+      "tag": {
+        "term": "ஆக்கி"
+      },
+      "ui": {
+        "term": "ஆக்கி"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

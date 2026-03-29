@@ -23853,5 +23853,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
+  },
+  "constructor": {
+    "term": "생성자",
+    "aliases": [],
+    "transliteration": "Saengseongja",
+    "morphology": {
+      "noun": {
+        "singular": "생성자"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "생성자",
+        "example": "생성자는 스마트 컨트랙트가 배포될 때 한 번만 실행됩니다."
+      },
+      "heading": {
+        "term": "생성자"
+      },
+      "tag": {
+        "term": "생성자"
+      },
+      "ui": {
+        "term": "생성자"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": null,
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

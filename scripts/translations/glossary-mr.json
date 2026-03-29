@@ -26277,5 +26277,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
+  },
+  "constructor": {
+    "term": "कन्स्ट्रक्टर",
+    "aliases": [],
+    "transliteration": "Kanstrakṭar",
+    "morphology": {
+      "noun": {
+        "singular": "कन्स्ट्रक्टर"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "कन्स्ट्रक्टर",
+        "example": "स्मार्ट कॉन्ट्रॅक्ट तैनात करताना कन्स्ट्रक्टर एकदा चालतो."
+      },
+      "heading": {
+        "term": "कन्स्ट्रक्टर"
+      },
+      "tag": {
+        "term": "कन्स्ट्रक्टर"
+      },
+      "ui": {
+        "term": "कन्स्ट्रक्टर"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

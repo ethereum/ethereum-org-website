@@ -25154,5 +25154,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
+  },
+  "constructor": {
+    "term": "কনস্ট্রাক্টর",
+    "aliases": [],
+    "transliteration": "Konstrakṭar",
+    "morphology": {
+      "noun": {
+        "singular": "কনস্ট্রাক্টর"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "কনস্ট্রাক্টর",
+        "example": "স্মার্ট কন্ট্রাক্ট স্থাপনের সময় কনস্ট্রাক্টর একবার রান করে।"
+      },
+      "heading": {
+        "term": "কনস্ট্রাক্টর"
+      },
+      "tag": {
+        "term": "কনস্ট্রাক্টর"
+      },
+      "ui": {
+        "term": "কনস্ট্রাক্টর"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

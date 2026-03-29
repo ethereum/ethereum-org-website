@@ -26154,5 +26154,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": "A palavra 'gas' costuma ser grafada sem acento no contexto da comunidade Ethereum brasileira para acompanhar a terminologia do código, embora 'gás' também seja comum e aceitável."
+  },
+  "constructor": {
+    "term": "construtor",
+    "aliases": [],
+    "transliteration": null,
+    "morphology": {
+      "noun": {
+        "singular": "construtor"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "construtor",
+        "example": "O construtor é executado apenas uma vez quando o contrato inteligente é implantado."
+      },
+      "heading": {
+        "term": "Construtor"
+      },
+      "tag": {
+        "term": "construtor"
+      },
+      "ui": {
+        "term": "Construtor"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "masculine",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }

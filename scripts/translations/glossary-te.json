@@ -26020,5 +26020,48 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
+  },
+  "constructor": {
+    "term": "కన్స్ట్రక్టర్",
+    "aliases": [],
+    "transliteration": "Kanstrakṭar",
+    "morphology": {
+      "noun": {
+        "singular": "కన్స్ట్రక్టర్"
+      },
+      "verb": null,
+      "adjective": null,
+      "agent": null,
+      "negation": null,
+      "compounds": {}
+    },
+    "contexts": {
+      "prose": {
+        "term": "కన్స్ట్రక్టర్",
+        "example": "స్మార్ట్ కాంట్రాక్ట్ అమలు చేసినప్పుడు కన్స్ట్రక్టర్ ఒకసారి నడుస్తుంది."
+      },
+      "heading": {
+        "term": "కన్స్ట్రక్టర్"
+      },
+      "tag": {
+        "term": "కన్స్ట్రక్టర్"
+      },
+      "ui": {
+        "term": "కన్స్ట్రక్టర్"
+      },
+      "code": {
+        "term": "constructor"
+      }
+    },
+    "grammar": {
+      "gender": "neuter",
+      "animacy": "inanimate",
+      "part_of_speech": "noun",
+      "formality": "formal"
+    },
+    "plurals": null,
+    "source": "llm",
+    "confidence": "high",
+    "notes": null
   }
 }
