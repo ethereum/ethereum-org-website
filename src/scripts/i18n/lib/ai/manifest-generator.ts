@@ -11,8 +11,15 @@
  */
 
 import { createHash } from "crypto"
-import { readdirSync, readFileSync, statSync } from "fs"
-import { join, relative } from "path"
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  statSync,
+  writeFileSync,
+} from "fs"
+import { dirname, join, relative } from "path"
 
 // ---------------------------------------------------------------------------
 // Types
@@ -36,12 +43,72 @@ interface FileManifest {
   trie: Record<string, TrieNode>
 }
 
-/** The complete translation manifest */
+/** The complete translation manifest (used for full-repo generation) */
 export interface TranslationManifest {
   version: number
   generated: string
   fileCount: number
   files: Record<string, FileManifest>
+}
+
+/**
+ * Per-file manifest stored as .manifest.json sibling to translated index.md.
+ * Records the English source hashes this translation was made against.
+ */
+export interface PerFileManifest {
+  version: number
+  /** English source file path (relative to repo root) */
+  englishSource: string
+  /** When this translation was last generated */
+  translatedAt: string
+  /** Root hash of the English source at translation time */
+  englishHash: string
+  /** Per-section hashes from the English source trie */
+  sections: Record<string, string>
+}
+
+/**
+ * Per-locale JSON manifest stored as .manifest.json in src/intl/{locale}/.
+ * Records English source hashes for all JSON namespace files.
+ */
+export interface PerLocaleJsonManifest {
+  version: number
+  /** When this manifest was last updated */
+  updatedAt: string
+  /** Per-namespace file tracking */
+  files: Record<
+    string,
+    {
+      englishHash: string
+      translatedAt: string
+      keys: Record<string, string>
+    }
+  >
+}
+
+/** Result of a drift scan for a single file */
+export interface DriftResult {
+  /** English source file path */
+  englishPath: string
+  /** Translation file path */
+  translationPath: string
+  /** Whether any sections are stale */
+  isStale: boolean
+  /** Sections that changed (header IDs) */
+  staleSections: string[]
+  /** Whether no manifest exists (never translated or manifest missing) */
+  noManifest: boolean
+}
+
+/** Result of a full drift scan across a locale */
+export interface LocaleDriftReport {
+  locale: string
+  scannedAt: string
+  totalFiles: number
+  staleFiles: number
+  missingManifests: number
+  staleSections: number
+  files: DriftResult[]
 }
 
 // ---------------------------------------------------------------------------
@@ -389,5 +456,297 @@ export function generateFileManifest(
     type: fileType,
     hash: merkleHash(trie),
     trie,
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Per-file manifest I/O (markdown translations)
+// ---------------------------------------------------------------------------
+
+/** Flatten a trie into a flat map of section ID -> hash (for storage) */
+function flattenTrie(
+  trie: Record<string, TrieNode>,
+  prefix = ""
+): Record<string, string> {
+  const result: Record<string, string> = {}
+  for (const [key, node] of Object.entries(trie)) {
+    const path = prefix ? `${prefix}/${key}` : key
+    result[path] = node.hash
+    if (node.children) {
+      Object.assign(result, flattenTrie(node.children, path))
+    }
+  }
+  return result
+}
+
+/**
+ * Write a .manifest.json sibling next to a translated markdown file.
+ *
+ * Call this after translating a markdown file to record which English
+ * source version the translation was made against.
+ */
+export function writeMarkdownManifest(
+  translationPath: string,
+  englishSourcePath: string,
+  englishContent: string
+): void {
+  const fileManifest = generateFileManifest(englishContent, "markdown")
+  const manifestPath = join(dirname(translationPath), ".manifest.json")
+
+  const manifest: PerFileManifest = {
+    version: 1,
+    englishSource: englishSourcePath,
+    translatedAt: new Date().toISOString(),
+    englishHash: fileManifest.hash,
+    sections: flattenTrie(fileManifest.trie),
+  }
+
+  mkdirSync(dirname(manifestPath), { recursive: true })
+  writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + "\n")
+}
+
+/**
+ * Read a .manifest.json sibling from a translated markdown file.
+ * Returns null if no manifest exists.
+ */
+export function readMarkdownManifest(
+  translationPath: string
+): PerFileManifest | null {
+  const manifestPath = join(dirname(translationPath), ".manifest.json")
+  if (!existsSync(manifestPath)) return null
+
+  try {
+    return JSON.parse(readFileSync(manifestPath, "utf-8"))
+  } catch {
+    return null
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Per-locale JSON manifest I/O
+// ---------------------------------------------------------------------------
+
+/**
+ * Update the .manifest.json in a locale's intl directory after
+ * translating a JSON namespace file.
+ */
+export function updateJsonManifest(
+  localeDir: string,
+  englishFilePath: string,
+  englishContent: string
+): void {
+  const manifestPath = join(localeDir, ".manifest.json")
+  const fileManifest = generateFileManifest(englishContent, "json")
+
+  let manifest: PerLocaleJsonManifest
+  if (existsSync(manifestPath)) {
+    try {
+      manifest = JSON.parse(readFileSync(manifestPath, "utf-8"))
+    } catch {
+      manifest = { version: 1, updatedAt: "", files: {} }
+    }
+  } else {
+    manifest = { version: 1, updatedAt: "", files: {} }
+  }
+
+  manifest.updatedAt = new Date().toISOString()
+  manifest.files[englishFilePath] = {
+    englishHash: fileManifest.hash,
+    translatedAt: new Date().toISOString(),
+    keys: flattenTrie(fileManifest.trie),
+  }
+
+  writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + "\n")
+}
+
+/**
+ * Read the .manifest.json from a locale's intl directory.
+ * Returns null if no manifest exists.
+ */
+export function readJsonManifest(
+  localeDir: string
+): PerLocaleJsonManifest | null {
+  const manifestPath = join(localeDir, ".manifest.json")
+  if (!existsSync(manifestPath)) return null
+
+  try {
+    return JSON.parse(readFileSync(manifestPath, "utf-8"))
+  } catch {
+    return null
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Drift scanning
+// ---------------------------------------------------------------------------
+
+/**
+ * Check drift for a single markdown translation file.
+ *
+ * Regenerates English hashes on the fly, compares against the stored
+ * manifest, and reports which sections are stale.
+ */
+export function checkMarkdownDrift(
+  rootDir: string,
+  englishPath: string,
+  translationPath: string
+): DriftResult {
+  const manifest = readMarkdownManifest(join(rootDir, translationPath))
+
+  if (!manifest) {
+    return {
+      englishPath,
+      translationPath,
+      isStale: true,
+      staleSections: [],
+      noManifest: true,
+    }
+  }
+
+  // Regenerate current English hashes
+  const englishContent = readFileSync(join(rootDir, englishPath), "utf-8")
+  const currentManifest = generateFileManifest(englishContent, "markdown")
+
+  // Quick check: root hash match = fully up to date
+  if (currentManifest.hash === manifest.englishHash) {
+    return {
+      englishPath,
+      translationPath,
+      isStale: false,
+      staleSections: [],
+      noManifest: false,
+    }
+  }
+
+  // Drill into sections to find what changed
+  const currentSections = flattenTrie(currentManifest.trie)
+  const staleSections: string[] = []
+
+  for (const [sectionId, currentHash] of Object.entries(currentSections)) {
+    const storedHash = manifest.sections[sectionId]
+    if (!storedHash || storedHash !== currentHash) {
+      staleSections.push(sectionId)
+    }
+  }
+
+  // Also check for sections that were removed from English
+  for (const sectionId of Object.keys(manifest.sections)) {
+    if (!(sectionId in currentSections) && !staleSections.includes(sectionId)) {
+      staleSections.push(sectionId)
+    }
+  }
+
+  return {
+    englishPath,
+    translationPath,
+    isStale: staleSections.length > 0,
+    staleSections,
+    noManifest: false,
+  }
+}
+
+/**
+ * Check drift for a single JSON namespace file in a locale.
+ */
+export function checkJsonDrift(
+  rootDir: string,
+  englishPath: string,
+  localeDir: string
+): DriftResult {
+  const manifest = readJsonManifest(join(rootDir, localeDir))
+
+  if (!manifest || !manifest.files[englishPath]) {
+    return {
+      englishPath,
+      translationPath: localeDir,
+      isStale: true,
+      staleSections: [],
+      noManifest: true,
+    }
+  }
+
+  const tracked = manifest.files[englishPath]
+  const englishContent = readFileSync(join(rootDir, englishPath), "utf-8")
+  const currentManifest = generateFileManifest(englishContent, "json")
+
+  if (currentManifest.hash === tracked.englishHash) {
+    return {
+      englishPath,
+      translationPath: localeDir,
+      isStale: false,
+      staleSections: [],
+      noManifest: false,
+    }
+  }
+
+  const currentKeys = flattenTrie(currentManifest.trie)
+  const staleSections: string[] = []
+
+  for (const [key, currentHash] of Object.entries(currentKeys)) {
+    if (!tracked.keys[key] || tracked.keys[key] !== currentHash) {
+      staleSections.push(key)
+    }
+  }
+
+  for (const key of Object.keys(tracked.keys)) {
+    if (!(key in currentKeys) && !staleSections.includes(key)) {
+      staleSections.push(key)
+    }
+  }
+
+  return {
+    englishPath,
+    translationPath: localeDir,
+    isStale: staleSections.length > 0,
+    staleSections,
+    noManifest: false,
+  }
+}
+
+/**
+ * Scan all translations for a locale and report drift.
+ */
+export function scanLocaleDrift(
+  rootDir: string,
+  locale: string
+): LocaleDriftReport {
+  const results: DriftResult[] = []
+  const englishFiles = discoverEnglishFiles(rootDir)
+
+  for (const file of englishFiles) {
+    if (file.type === "markdown") {
+      // Derive translation path from English path
+      const translationPath = file.path.replace(
+        "public/content/",
+        `public/content/translations/${locale}/`
+      )
+      if (existsSync(join(rootDir, translationPath))) {
+        results.push(checkMarkdownDrift(rootDir, file.path, translationPath))
+      }
+    } else {
+      // JSON: check locale intl directory
+      const localeDir = `src/intl/${locale}`
+      const localePath = file.path.replace("src/intl/en/", `src/intl/${locale}/`)
+      if (existsSync(join(rootDir, localePath))) {
+        results.push(checkJsonDrift(rootDir, file.path, localeDir))
+      }
+    }
+  }
+
+  const staleFiles = results.filter((r) => r.isStale)
+  const missingManifests = results.filter((r) => r.noManifest)
+  const totalStaleSections = staleFiles.reduce(
+    (sum, r) => sum + r.staleSections.length,
+    0
+  )
+
+  return {
+    locale,
+    scannedAt: new Date().toISOString(),
+    totalFiles: results.length,
+    staleFiles: staleFiles.length,
+    missingManifests: missingManifests.length,
+    staleSections: totalStaleSections,
+    files: staleFiles,
   }
 }
