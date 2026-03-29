@@ -527,15 +527,27 @@ export function readMarkdownManifest(
 // ---------------------------------------------------------------------------
 
 /**
- * Update the .manifest.json in a locale's intl directory after
+ * Get the path to a locale's JSON tracking manifest.
+ *
+ * Stored OUTSIDE src/intl/ to avoid being picked up as an i18n namespace
+ * by loadMessages() which reads all .json files in the locale directory.
+ */
+function getJsonTrackingPath(rootDir: string, locale: string): string {
+  return join(rootDir, "src/scripts/i18n/data/tracking", `${locale}-json.json`)
+}
+
+/**
+ * Update the JSON tracking manifest for a locale after
  * translating a JSON namespace file.
  */
 export function updateJsonManifest(
-  localeDir: string,
+  rootDir: string,
+  locale: string,
   englishFilePath: string,
   englishContent: string
 ): void {
-  const manifestPath = join(localeDir, ".manifest.json")
+  const manifestPath = getJsonTrackingPath(rootDir, locale)
+  mkdirSync(dirname(manifestPath), { recursive: true })
   const fileManifest = generateFileManifest(englishContent, "json")
 
   let manifest: PerLocaleJsonManifest
@@ -560,13 +572,14 @@ export function updateJsonManifest(
 }
 
 /**
- * Read the .manifest.json from a locale's intl directory.
+ * Read the JSON tracking manifest for a locale.
  * Returns null if no manifest exists.
  */
 export function readJsonManifest(
-  localeDir: string
+  rootDir: string,
+  locale: string
 ): PerLocaleJsonManifest | null {
-  const manifestPath = join(localeDir, ".manifest.json")
+  const manifestPath = getJsonTrackingPath(rootDir, locale)
   if (!existsSync(manifestPath)) return null
 
   try {
@@ -651,9 +664,10 @@ export function checkMarkdownDrift(
 export function checkJsonDrift(
   rootDir: string,
   englishPath: string,
-  localeDir: string
+  locale: string
 ): DriftResult {
-  const manifest = readJsonManifest(join(rootDir, localeDir))
+  const manifest = readJsonManifest(rootDir, locale)
+  const localeDir = `src/intl/${locale}`
 
   if (!manifest || !manifest.files[englishPath]) {
     return {
@@ -725,10 +739,9 @@ export function scanLocaleDrift(
       }
     } else {
       // JSON: check locale intl directory
-      const localeDir = `src/intl/${locale}`
       const localePath = file.path.replace("src/intl/en/", `src/intl/${locale}/`)
       if (existsSync(join(rootDir, localePath))) {
-        results.push(checkJsonDrift(rootDir, file.path, localeDir))
+        results.push(checkJsonDrift(rootDir, file.path, locale))
       }
     }
   }
