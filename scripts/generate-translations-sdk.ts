@@ -19,7 +19,7 @@ import {
 } from "fs"
 import { join } from "path"
 
-import { GoogleGenAI } from "@google/genai"
+import { GoogleGenAI, HarmBlockThreshold, HarmCategory } from "@google/genai"
 
 const SCRIPTS_DIR = join(process.cwd(), "scripts")
 const TERMS_PATH = join(SCRIPTS_DIR, "glossary-terms-enhanced.json")
@@ -491,8 +491,28 @@ async function processBatch(
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       try {
         const response = await ai.models.generateContent({
-          model: "gemini-2.5-flash",
+          model: "gemini-2.5-pro",
           contents: prompt,
+          config: {
+            safetySettings: [
+              {
+                category: HarmCategory.HARM_CATEGORY_HARASSMENT,
+                threshold: HarmBlockThreshold.BLOCK_NONE,
+              },
+              {
+                category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+                threshold: HarmBlockThreshold.BLOCK_NONE,
+              },
+              {
+                category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+                threshold: HarmBlockThreshold.BLOCK_NONE,
+              },
+              {
+                category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+                threshold: HarmBlockThreshold.BLOCK_NONE,
+              },
+            ],
+          },
         })
 
         const text = response.text ?? ""
