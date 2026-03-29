@@ -25,9 +25,9 @@ const TERMS_PATH = join(SCRIPTS_DIR, "glossary-terms-enhanced.json")
 const TRANSLATIONS_DIR = join(SCRIPTS_DIR, "translations")
 
 const BATCH_SIZE = 10
-const PAUSE_MS = 1500
 const MAX_RETRIES = 3
-const RETRY_DELAY_MS = 5000
+const RETRY_DELAY_MS = 3000
+const CONCURRENCY = 16
 const LOG_PATH = join(SCRIPTS_DIR, "translations", "sdk-run.log")
 
 interface GlossaryTerm {
@@ -382,6 +382,200 @@ interface FailedBatch {
   reason: string
 }
 
+/**
+ * Semaphore-based concurrency limiter.
+ * All languages share one pool of CONCURRENCY slots.
+ */
+function createLimiter(maxConcurrent: number) {
+  let active = 0
+  const queue: Array<() => void> = []
+
+  return {
+    async acquire(): Promise<void> {
+      return new Promise((resolve) => {
+        const tryRun = () => {
+          if (active < maxConcurrent) {
+            active++
+            resolve()
+          } else {
+            queue.push(tryRun)
+          }
+        }
+        tryRun()
+      })
+    },
+    release() {
+      active--
+      const next = queue.shift()
+      if (next) next()
+    },
+  }
+}
+
+/**
+ * Process a single batch: call Gemini, parse, normalize, save.
+ * Returns count of successfully translated terms.
+ */
+async function processBatch(
+  ai: GoogleGenAI,
+  limiter: ReturnType<typeof createLimiter>,
+  allTerms: Record<string, GlossaryTerm>,
+  lang: (typeof LANGUAGES)[number],
+  batchKeys: string[],
+  batchIndex: number,
+  totalBatches: number,
+  existing: Record<string, unknown>,
+  failedBatches: FailedBatch[]
+): Promise<{ generated: number; failed: number }> {
+  const batchLabel = `${lang.code} batch ${batchIndex + 1}/${totalBatches}`
+
+  await limiter.acquire()
+
+  try {
+    log(
+      `  ${batchLabel} (${batchKeys.length} terms: ${batchKeys.slice(0, 3).join(", ")}${batchKeys.length > 3 ? "..." : ""})`
+    )
+
+    const termBlock = buildTermDescriptions(allTerms, batchKeys)
+
+    const prompt = [
+      `Produce Ethereum glossary translations for the following terms.`,
+      ``,
+      `TARGET LANGUAGE: ${lang.name} (${lang.code})`,
+      `Language notes: ${lang.notes}`,
+      ``,
+      SCHEMA_INSTRUCTIONS,
+      ``,
+      `THE TERMS:`,
+      ``,
+      termBlock,
+      ``,
+      `Output as a single JSON object. Keys: ${batchKeys.map((k) => `"${k}"`).join(", ")}`,
+    ].join("\n")
+
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+      try {
+        const response = await ai.models.generateContent({
+          model: "gemini-2.5-flash",
+          contents: prompt,
+        })
+
+        const text = response.text ?? ""
+
+        if (!text.trim()) {
+          log(
+            `    ${batchLabel} attempt ${attempt}/${MAX_RETRIES}: empty response`
+          )
+          if (attempt < MAX_RETRIES) await sleep(RETRY_DELAY_MS * attempt)
+          continue
+        }
+
+        const data = extractJson(text)
+
+        if (!data) {
+          log(
+            `    ${batchLabel} attempt ${attempt}/${MAX_RETRIES}: JSON parse failed (len: ${text.length})`
+          )
+          if (attempt < MAX_RETRIES) await sleep(RETRY_DELAY_MS * attempt)
+          continue
+        }
+
+        let batchOk = 0
+        const missing: string[] = []
+        for (const key of batchKeys) {
+          if (key in data) {
+            existing[key] = normalizeEntry(data[key] as Record<string, unknown>)
+            batchOk++
+          } else {
+            missing.push(key)
+          }
+        }
+
+        if (missing.length > 0) {
+          log(
+            `    ${batchLabel} OK: ${batchOk}/${batchKeys.length} (missing: ${missing.join(", ")})`
+          )
+        } else {
+          log(`    ${batchLabel} OK: ${batchOk}/${batchKeys.length}`)
+        }
+
+        return { generated: batchOk, failed: missing.length }
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err)
+        log(
+          `    ${batchLabel} attempt ${attempt}/${MAX_RETRIES} ERROR: ${msg.slice(0, 200)}`
+        )
+        if (attempt < MAX_RETRIES) await sleep(RETRY_DELAY_MS * attempt)
+      }
+    }
+
+    log(`    ${batchLabel} FAILED after ${MAX_RETRIES} attempts`)
+    failedBatches.push({
+      lang: lang.code,
+      batchIndex,
+      keys: batchKeys,
+      reason: "max retries exceeded",
+    })
+    return { generated: 0, failed: batchKeys.length }
+  } finally {
+    limiter.release()
+  }
+}
+
+/**
+ * Process all batches for a single language.
+ * Batches within a language run sequentially through the shared limiter.
+ */
+async function processLanguage(
+  ai: GoogleGenAI,
+  limiter: ReturnType<typeof createLimiter>,
+  allTerms: Record<string, GlossaryTerm>,
+  lang: (typeof LANGUAGES)[number],
+  failedBatches: FailedBatch[]
+): Promise<{ generated: number; failed: number; skipped: number }> {
+  const totalTerms = Object.keys(allTerms).length
+  const existing = loadExistingTranslations(lang.code)
+  const untranslated = getUntranslatedTerms(allTerms, existing)
+  const remaining = Object.keys(untranslated).length
+
+  if (remaining === 0) {
+    log(
+      `[${lang.code}] Complete (${Object.keys(existing).length}/${totalTerms})`
+    )
+    return { generated: 0, failed: 0, skipped: totalTerms }
+  }
+
+  log(`[${lang.code}] ${lang.name}: ${remaining} terms to translate`)
+
+  const batches = groupIntoBatches(untranslated, BATCH_SIZE)
+  let langGenerated = 0
+  let langFailed = 0
+
+  for (let bi = 0; bi < batches.length; bi++) {
+    const result = await processBatch(
+      ai,
+      limiter,
+      allTerms,
+      lang,
+      batches[bi],
+      bi,
+      batches.length,
+      existing,
+      failedBatches
+    )
+    langGenerated += result.generated
+    langFailed += result.failed
+
+    // Save after each batch (incremental)
+    saveTranslations(lang.code, existing)
+  }
+
+  const finalCount = Object.keys(existing).length
+  log(`[${lang.code}] Done: ${finalCount}/${totalTerms} terms`)
+
+  return { generated: langGenerated, failed: langFailed, skipped: 0 }
+}
+
 async function main(): Promise<void> {
   const apiKey = process.env.GEMINI_API_KEY
   if (!apiKey) {
@@ -389,143 +583,46 @@ async function main(): Promise<void> {
     process.exit(1)
   }
 
+  if (!existsSync(TRANSLATIONS_DIR))
+    mkdirSync(TRANSLATIONS_DIR, { recursive: true })
+
   const ai = new GoogleGenAI({ apiKey })
   const allTerms = loadTerms()
   const totalTerms = Object.keys(allTerms).length
   const failedBatches: FailedBatch[] = []
+  const limiter = createLimiter(CONCURRENCY)
 
   log("=".repeat(60))
   log("GLOSSARY TRANSLATION GENERATOR (SDK)")
   log("=".repeat(60))
   log(`Total terms: ${totalTerms}`)
   log(`Languages: ${LANGUAGES.length}`)
-  log(`Batch size: ${BATCH_SIZE}, Max retries: ${MAX_RETRIES}`)
+  log(
+    `Batch size: ${BATCH_SIZE}, Concurrency: ${CONCURRENCY}, Max retries: ${MAX_RETRIES}`
+  )
   log("")
 
+  // Dispatch all languages concurrently -- they share the limiter
+  const results = await Promise.allSettled(
+    LANGUAGES.map((lang) =>
+      processLanguage(ai, limiter, allTerms, lang, failedBatches)
+    )
+  )
+
+  // Aggregate results
   let totalGenerated = 0
   let totalFailed = 0
   let totalSkipped = 0
 
-  for (const lang of LANGUAGES) {
-    const existing = loadExistingTranslations(lang.code)
-    const untranslated = getUntranslatedTerms(allTerms, existing)
-    const remaining = Object.keys(untranslated).length
-
-    if (remaining === 0) {
-      log(
-        `[${lang.code}] Complete (${Object.keys(existing).length}/${totalTerms})`
-      )
-      totalSkipped += totalTerms
-      continue
+  for (const result of results) {
+    if (result.status === "fulfilled") {
+      totalGenerated += result.value.generated
+      totalFailed += result.value.failed
+      totalSkipped += result.value.skipped
+    } else {
+      log(`Language-level error: ${result.reason}`)
+      totalFailed++
     }
-
-    log(`[${lang.code}] ${lang.name}: ${remaining} terms to translate`)
-
-    const batches = groupIntoBatches(untranslated, BATCH_SIZE)
-
-    for (let bi = 0; bi < batches.length; bi++) {
-      const batchKeys = batches[bi]
-      const batchLabel = `${lang.code} batch ${bi + 1}/${batches.length}`
-      log(
-        `  ${batchLabel} (${batchKeys.length} terms: ${batchKeys.slice(0, 3).join(", ")}${batchKeys.length > 3 ? "..." : ""})`
-      )
-
-      const termBlock = buildTermDescriptions(allTerms, batchKeys)
-
-      const prompt = [
-        `Produce Ethereum glossary translations for the following terms.`,
-        ``,
-        `TARGET LANGUAGE: ${lang.name} (${lang.code})`,
-        `Language notes: ${lang.notes}`,
-        ``,
-        SCHEMA_INSTRUCTIONS,
-        ``,
-        `THE TERMS:`,
-        ``,
-        termBlock,
-        ``,
-        `Output as a single JSON object. Keys: ${batchKeys.map((k) => `"${k}"`).join(", ")}`,
-      ].join("\n")
-
-      let success = false
-
-      for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-        try {
-          const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
-            contents: prompt,
-          })
-
-          const text = response.text ?? ""
-
-          if (!text.trim()) {
-            log(`    Attempt ${attempt}/${MAX_RETRIES}: empty response`)
-            if (attempt < MAX_RETRIES) await sleep(RETRY_DELAY_MS * attempt)
-            continue
-          }
-
-          const data = extractJson(text)
-
-          if (!data) {
-            log(
-              `    Attempt ${attempt}/${MAX_RETRIES}: could not parse JSON (response length: ${text.length})`
-            )
-            if (attempt < MAX_RETRIES) await sleep(RETRY_DELAY_MS * attempt)
-            continue
-          }
-
-          let batchOk = 0
-          const missing: string[] = []
-          for (const key of batchKeys) {
-            if (key in data) {
-              const entry = normalizeEntry(data[key] as Record<string, unknown>)
-              existing[key] = entry
-              batchOk++
-            } else {
-              missing.push(key)
-            }
-          }
-
-          saveTranslations(lang.code, existing)
-          totalGenerated += batchOk
-
-          if (missing.length > 0) {
-            log(
-              `    OK: ${batchOk}/${batchKeys.length} terms (missing: ${missing.join(", ")})`
-            )
-            totalFailed += missing.length
-          } else {
-            log(`    OK: ${batchOk}/${batchKeys.length} terms`)
-          }
-
-          success = true
-          break
-        } catch (err) {
-          const msg = err instanceof Error ? err.message : String(err)
-          log(
-            `    Attempt ${attempt}/${MAX_RETRIES} ERROR: ${msg.slice(0, 200)}`
-          )
-          if (attempt < MAX_RETRIES) await sleep(RETRY_DELAY_MS * attempt)
-        }
-      }
-
-      if (!success) {
-        log(`    FAILED after ${MAX_RETRIES} attempts`)
-        totalFailed += batchKeys.length
-        failedBatches.push({
-          lang: lang.code,
-          batchIndex: bi,
-          keys: batchKeys,
-          reason: "max retries exceeded",
-        })
-      }
-
-      await sleep(PAUSE_MS)
-    }
-
-    // Log language completion
-    const finalCount = Object.keys(loadExistingTranslations(lang.code)).length
-    log(`[${lang.code}] Done: ${finalCount}/${totalTerms} terms`)
   }
 
   // Summary
@@ -548,7 +645,7 @@ async function main(): Promise<void> {
     }
   }
 
-  // Write summary JSON for easy parsing
+  // Write summary JSON
   const summary = {
     timestamp: new Date().toISOString(),
     totalGenerated,
