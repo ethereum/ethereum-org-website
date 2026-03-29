@@ -57,18 +57,11 @@ export function getSiteSpecificNotes(group: LanguageGroup): string {
   const common = `
 Site-specific rules for ethereum.org:
 - Frontmatter tags array: brand-name tags (Solidity, MetaMask, ERC-20) stay in Latin script. Concept tags (smart contracts, testing) should be translated.
-- Code blocks: never translate functional code. Code comments may be translated.
+- Code blocks: never translate functional code. Always translate code comments.
 - Internal links (href starting with /) must stay exactly as in English.
-- Ticker symbols (ETH, BTC, ERC, EIP, BLS) always stay in Latin script.
-- URLs and domain names always stay in Latin script.
-- Use community glossary terms exactly as provided (these are community-voted).
-- EVM opcodes (SSTORE, CALL, PUSH, DELEGATECALL, etc.) always stay in Latin.
-- Hexadecimal values and addresses (0x1234...) always stay in Latin.
-- Cryptographic primitive names (SHA-256, Keccak-256, ECDSA, zk-SNARKs, zk-STARKs) always stay in Latin.
-- Network and testnet names (Mainnet, Sepolia, Holesky, Goerli) always stay in Latin.
-- Client implementation names (Lighthouse, Prysm, Geth, Nethermind, Besu, Teku, Lodestar, Nimbus): never translate the meaning. In non-Latin scripts, phonetic transliteration alongside the Latin name is acceptable.
-- License identifiers (MIT, Apache-2.0) always stay in Latin.
-- Mathematical notations and formulas: keep as-is.`
+- Do not translate (keep in original Latin script): ticker symbols (ETH, BTC, ERC, EIP, BLS), URLs, domains, EVM opcodes (SSTORE, CALL, PUSH), hex values (0x...), cryptographic primitives (SHA-256, Keccak-256, ECDSA, zk-SNARKs), network names (Mainnet, Sepolia, Holesky, Goerli), license identifiers (MIT, Apache-2.0), mathematical notations and formulas.
+- Treat client implementation names (Lighthouse, Prysm, Geth, Nethermind, Besu, Teku, Lodestar, Nimbus) as proper nouns; do not translate them. In non-Latin scripts, phonetic transliteration alongside the Latin name is acceptable.
+- Use community glossary terms as provided. In languages with grammatical cases, decline glossary terms to fit the surrounding sentence naturally.`
 
   switch (group) {
     case "rtl":
@@ -76,14 +69,15 @@ Site-specific rules for ethereum.org:
 - Content inside backticks (\`inline code\`) is already rendered as LTR monospace. Do NOT wrap backtick content in <span dir="ltr"> -- this breaks MDX rendering. Use <span dir="ltr">...</span> ONLY for bare mathematical expressions or bare numeric dates that are NOT already inside backticks.
 - Wrap bare numeric dates (YYYY-MM-DD, DD/MM/YYYY) in <span dir="ltr">...</span> to prevent BiDi flipping.
 - Wrap mathematical equations with operators in <span dir="ltr">...</span>, but only when they are NOT inside backticks.
+- Ensure Markdown syntax (headers, links, bullet points, tables) and HTML tags remain in LTR formatting, even when wrapping RTL text.
 - Use Western Arabic numerals (1, 2, 3) for Arabic. Urdu uses native numerals for prose but Western for technical identifiers.
 - Never convert Gregorian dates to Hijri calendar.
 - The word "state" in blockchain context means computational state, not political state.`
 
     case "cjk-phonetic":
       return `${common}
-- Brand-name tags CAN be transliterated into native script (Katakana/Hangul) -- unlike other groups.
-- Global acronyms (DeFi, NFT, API) may stay in Latin.`
+- Override: brand-name tags should be transliterated into native script (Katakana/Hangul) for this language group, unlike other groups where they stay Latin.
+- Keep global acronyms (DeFi, NFT, API) in Latin.`
 
     case "cjk-semantic":
       return `${common}
@@ -98,11 +92,11 @@ Site-specific rules for ethereum.org:
     case "cyrillic":
       return `${common}
 - Use Western Arabic numerals (1, 2, 3) -- not native numeral scripts.
-- For plural forms, use the correct grammatical categories (one/few/many/other) as appropriate for the target language. English loanwords may need to be declined through grammatical cases.`
+- Use correct grammatical plural categories (one/few/many/other). Decline glossary terms and English loanwords according to the grammatical case of the surrounding sentence.`
 
     case "latin":
       return `${common}
 - Brand names must stay in English (do not translate Solidity, MetaMask, etc.).
-- For German, French, and other European languages: English technical loanwords (Staking, Slashing, Gas, Node) may be kept as-is when no natural translation exists in the community. Do not force awkward translations.`
+- If no natural translation exists in the community for a technical loanword (Staking, Slashing, Gas, Node), keep it in English. Do not force awkward translations. The glossary is authoritative for which terms have established translations.`
   }
 }
