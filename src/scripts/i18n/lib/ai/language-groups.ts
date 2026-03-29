@@ -61,7 +61,8 @@ Site-specific rules for ethereum.org:
 - Internal links (href starting with /) must stay exactly as in English.
 - Do not translate (keep in original Latin script): ticker symbols (ETH, BTC, ERC, EIP, BLS), URLs, domains, EVM opcodes (SSTORE, CALL, PUSH), hex values (0x...), cryptographic primitives (SHA-256, Keccak-256, ECDSA, zk-SNARKs), network names (Mainnet, Sepolia, Holesky, Goerli), license identifiers (MIT, Apache-2.0), mathematical notations and formulas.
 - Treat client implementation names (Lighthouse, Prysm, Geth, Nethermind, Besu, Teku, Lodestar, Nimbus) as proper nouns; do not translate them. In non-Latin scripts, phonetic transliteration alongside the Latin name is acceptable.
-- Use community glossary terms as provided. In languages with grammatical cases, decline glossary terms to fit the surrounding sentence naturally.`
+- Use community glossary terms as provided. In languages with grammatical cases, decline glossary terms to fit the surrounding sentence naturally.
+- Do not translate technical concepts or loanwords unless an exact translation is provided in the glossary. If a term is not in the glossary, leave it in English.`
 
   switch (group) {
     case "rtl":
@@ -96,7 +97,6 @@ Site-specific rules for ethereum.org:
 
     case "latin":
       return `${common}
-- Brand names must stay in English (do not translate Solidity, MetaMask, etc.).
-- If no natural translation exists in the community for a technical loanword (Staking, Slashing, Gas, Node), keep it in English. Do not force awkward translations. The glossary is authoritative for which terms have established translations.`
+- Brand names must stay in English (do not translate Solidity, MetaMask, etc.).`
   }
 }
