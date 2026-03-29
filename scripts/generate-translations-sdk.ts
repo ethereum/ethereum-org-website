@@ -9,6 +9,7 @@
  * Saves incrementally per language.
  */
 
+import { execSync } from "child_process"
 import {
   appendFileSync,
   existsSync,
@@ -364,6 +365,40 @@ async function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
+// Mutex for git operations (multiple languages finish concurrently)
+let gitLock = Promise.resolve()
+
+/**
+ * Commit and push current translation progress.
+ * Called after each language completes so work isn't lost.
+ * Serialized via gitLock to prevent concurrent git operations.
+ */
+function commitProgress(langCode: string): void {
+  gitLock = gitLock.then(() => commitProgressInner(langCode))
+}
+
+function commitProgressInner(langCode: string): void {
+  try {
+    execSync("git add scripts/translations/", { stdio: "pipe" })
+    try {
+      execSync("git diff --staged --quiet", { stdio: "pipe" })
+      // No changes staged -- nothing to commit
+      return
+    } catch {
+      // git diff --quiet exits non-zero when there ARE changes -- expected
+    }
+    execSync(
+      `git commit -m "data: glossary translations (${langCode})\n\nCo-Authored-By: Gemini <noreply@google.com>"`,
+      { stdio: "pipe" }
+    )
+    execSync("git push", { stdio: "pipe" })
+    log(`  [git] Committed and pushed ${langCode} translations`)
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err)
+    log(`  [git] Commit/push failed: ${msg.slice(0, 100)}`)
+  }
+}
+
 function log(msg: string): void {
   const ts = new Date().toISOString()
   const line = `[${ts}] ${msg}`
@@ -572,6 +607,9 @@ async function processLanguage(
 
   const finalCount = Object.keys(existing).length
   log(`[${lang.code}] Done: ${finalCount}/${totalTerms} terms`)
+
+  // Commit progress so work isn't lost if the action crashes
+  commitProgress(lang.code)
 
   return { generated: langGenerated, failed: langFailed, skipped: 0 }
 }
